@@ -1,5 +1,5 @@
 ---
-title: ICorDebugThreadEnum — Interfejs
+title: ICorDebugThreadEnum, interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugThreadEnum
@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: 796de687-7dd4-4b7b-a10b-8bf22dc7779f
 topic_type:
 - apiref
-ms.openlocfilehash: 6969c23bcf3ea19bf6e404996d477f669f0eee5b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6de2cb7c1a1423c5bd38a6f2e5d01c39166ab119
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122405"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791319"
 ---
-# <a name="icordebugthreadenum-interface"></a>ICorDebugThreadEnum — Interfejs
+# <a name="icordebugthreadenum-interface"></a>ICorDebugThreadEnum, interfejs
 Implementuje metody ICorDebugEnum i wylicza tablice ICorDebugThread.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[Next, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugthreadenum-next-method.md)|Pobiera określoną liczbę wystąpień `ICorDebugThread` z wyliczenia, rozpoczynając od bieżącego położenia.|  
+|[Next, metoda](icordebugthreadenum-next-method.md)|Pobiera określoną liczbę wystąpień `ICorDebugThread` z wyliczenia, rozpoczynając od bieżącego położenia.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -46,4 +46,4 @@ Implementuje metody ICorDebugEnum i wylicza tablice ICorDebugThread.
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

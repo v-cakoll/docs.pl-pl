@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: db9938f26f31506737eb0395fa389da01a1ee444
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: 6d8dedafd4ffc582b529289d3583f90d81779762
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76735069"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794039"
 ---
 # <a name="wpf-architecture"></a>Architektura WPF
 Ten temat zawiera Przewodnik dotyczący hierarchii klas Windows Presentation Foundation (WPF). Obejmuje to większość głównych podsystemów WPF i opisuje sposób ich działania. Zawiera również szczegóły niektórych opcji wykonanych przez architektów WPF.  
@@ -116,7 +116,7 @@ Ten temat zawiera Przewodnik dotyczący hierarchii klas Windows Presentation Fou
   
  Dwie najbardziej krytyczne elementy, które <xref:System.Windows.FrameworkElement> wprowadzają, to powiązanie danych i style.  
   
- Podsystem powiązań danych w platformie WPF powinien być relatywnie zaznajomiony z każdą osobą, która używa [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] lub ASP.NET do tworzenia [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]aplikacji. W każdym z tych systemów istnieje prosty sposób na określenie, że co najmniej jedna właściwość z danego elementu ma zostać powiązana z fragmentem danych. WPF ma pełną obsługę powiązań właściwości, transformacji i powiązania listy.  
+ Podsystem powiązań danych w platformie WPF powinien być relatywnie zaznajomiony z każdą osobą, która używa Windows Forms lub ASP.NET do tworzenia [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]aplikacji. W każdym z tych systemów istnieje prosty sposób na określenie, że co najmniej jedna właściwość z danego elementu ma zostać powiązana z fragmentem danych. WPF ma pełną obsługę powiązań właściwości, transformacji i powiązania listy.  
   
  Jedną z najbardziej interesujących funkcji powiązań danych w WPF jest wprowadzenie szablonów danych. Szablony danych umożliwiają deklaratywne Określanie sposobu wizualizacji danych. Zamiast tworzyć niestandardowy interfejs użytkownika, który można powiązać z danymi, możesz zamiast tego zmienić ten problem i pozwolić, aby dane mogły zostać utworzone.  
   
@@ -130,7 +130,7 @@ Ten temat zawiera Przewodnik dotyczący hierarchii klas Windows Presentation Fou
   
  Ten podział między modelem danych (właściwościami), modelem interakcji (poleceniami i zdarzeniami) oraz modelem wyświetlania (szablony) umożliwia pełne dostosowanie wyglądu i zachowania kontrolki.  
   
- Typowym aspektem modelu danych formantów jest model zawartości. Jeśli zobaczysz kontrolkę taką jak <xref:System.Windows.Controls.Button>, zobaczysz, że ma ona właściwość o nazwie "Content" typu <xref:System.Object>. W [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] i ASP.NET ta właściwość zwykle jest ciągiem, ale ogranicza typ zawartości, którą można umieścić w przycisku. Zawartość przycisku może być prostym ciągiem, złożonym obiektem danych lub całym drzewem elementu. W przypadku obiektu danych szablon danych służy do konstruowania wyświetlania.  
+ Typowym aspektem modelu danych formantów jest model zawartości. Jeśli zobaczysz kontrolkę taką jak <xref:System.Windows.Controls.Button>, zobaczysz, że ma ona właściwość o nazwie "Content" typu <xref:System.Object>. W Windows Forms i ASP.NET ta właściwość zwykle jest ciągiem, ale ogranicza typ zawartości, którą można umieścić w przycisku. Zawartość przycisku może być prostym ciągiem, złożonym obiektem danych lub całym drzewem elementu. W przypadku obiektu danych szablon danych służy do konstruowania wyświetlania.  
   
 <a name="Summary"></a>   
 ## <a name="summary"></a>Podsumowanie  
@@ -138,7 +138,7 @@ Ten temat zawiera Przewodnik dotyczący hierarchii klas Windows Presentation Fou
   
  Tradycyjne aplikacje tworzą ekran, a następnie wiążą się z danymi. W WPF wszystkie elementy dotyczące formantu są generowane przez niektóre typy powiązań danych. Tekst znaleziony wewnątrz przycisku jest wyświetlany przez utworzenie kontrolki złożonej wewnątrz przycisku i powiązanie jego wyświetlania z właściwością zawartość przycisku.  
   
- Po rozpoczęciu opracowywania aplikacji opartych na platformie WPF powinny one być bardzo znane. Można ustawić właściwości, używać obiektów i powiązania danych w taki sam sposób, w jaki można używać [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] lub ASP.NET. Dzięki szczegółowej analizie architektury WPF można się dowiedzieć, że istnieje możliwość tworzenia znacznie rozbudowanych aplikacji, które zasadniczo traktują dane jako podstawowy sterownik aplikacji.  
+ Po rozpoczęciu opracowywania aplikacji opartych na platformie WPF powinny one być bardzo znane. Można ustawić właściwości, używać obiektów i powiązania danych w taki sam sposób, w jaki można używać Windows Forms lub ASP.NET. Dzięki szczegółowej analizie architektury WPF można się dowiedzieć, że istnieje możliwość tworzenia znacznie rozbudowanych aplikacji, które zasadniczo traktują dane jako podstawowy sterownik aplikacji.  
   
 ## <a name="see-also"></a>Zobacz także
 

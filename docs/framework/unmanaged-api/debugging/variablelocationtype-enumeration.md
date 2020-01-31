@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8635ee3a-c84b-4626-876c-416bee54f787
 topic_type:
 - apiref
-ms.openlocfilehash: 861d5daa481132d3d6527e8d5fbccfab6436c5fe
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1aa59ee559abff8006f0ac63a812e4315aa48154
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139120"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790310"
 ---
 # <a name="variablelocationtype-enumeration"></a>VariableLocationType, wyliczenie
 Wskazuje typ lokalizacji natywnej zmiennej.  
@@ -44,7 +44,7 @@ typedef enum VariableLocationType
 |`VLT_INVALID`|Zmienna nie jest przechowywana w rejestrze ani w lokalizacji pamięci względnej dla rejestru.|  
   
 ## <a name="remarks"></a>Uwagi  
- Element członkowski wyliczenia `VariableLocationType` jest zwracany przez metodę [ICorDebugVariableHome:: Getlocationtype](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md) .  
+ Element członkowski wyliczenia `VariableLocationType` jest zwracany przez metodę [ICorDebugVariableHome:: Getlocationtype](icordebugvariablehome-getlocationtype-method.md) .  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -57,4 +57,4 @@ typedef enum VariableLocationType
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, wyliczenia](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Debugowanie, wyliczenia](debugging-enumerations.md)

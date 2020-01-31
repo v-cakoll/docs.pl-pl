@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 53d073c6-fa02-40d2-82e1-b9452bb6abaa
 topic_type:
 - apiref
-ms.openlocfilehash: a7eb2796de060b3a5dc8e8c08d07e6aeeb3daecb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0cc79c0a93fa4f05b8c793a8b7fb0b9b3f031b1a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131265"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791956"
 ---
 # <a name="icordebugremote-interface"></a>ICorDebugRemote — Interfejs
 Zapewnia zdalnemu procesowi docelowemu możliwość uruchamiania lub dołączenia zarządzanych debugerów.  
@@ -60,8 +60,8 @@ interface ICorDebugRemote : IUnknown
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[ICorDebugRemote::CreateProcessEx, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-createprocessex-method.md)|Tworzy proces na maszynie zdalnej na potrzeby debugowania zarządzanego.|  
-|[ICorDebugRemote::DebugActiveProcessEx, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-debugactiveprocessex-method.md)|Uruchamia proces na maszynie zdalnej pod debugerem.|  
+|[ICorDebugRemote::CreateProcessEx, metoda](icordebugremote-createprocessex-method.md)|Tworzy proces na maszynie zdalnej na potrzeby debugowania zarządzanego.|  
+|[ICorDebugRemote::DebugActiveProcessEx, metoda](icordebugremote-debugactiveprocessex-method.md)|Uruchamia proces na maszynie zdalnej pod debugerem.|  
   
 ## <a name="remarks"></a>Uwagi  
  Obecnie ta funkcja jest obsługiwana tylko w przypadku debugowania obiektu docelowego aplikacji opartego na technologii Silverlight, który jest uruchomiony na komputerze zdalnym Macintosh.  
@@ -77,7 +77,7 @@ interface ICorDebugRemote : IUnknown
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugRemoteTarget, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
-- [ICorDebug, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [ICorDebugRemoteTarget, interfejs](icordebugremotetarget-interface.md)
+- [ICorDebug, interfejs](icordebug-interface.md)
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

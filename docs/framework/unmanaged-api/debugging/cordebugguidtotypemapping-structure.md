@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 57dbccd9-b16d-4da3-ae25-7a2cf9adf679
 topic_type:
 - apiref
-ms.openlocfilehash: 313f6649448653ad630d616c7dbf739653e352dc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b855a53c9e4303138d7605bdf108d37bb345b917
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132841"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789332"
 ---
 # <a name="cordebugguidtotypemapping-structure"></a>CorDebugGuidToTypeMapping — Struktura
 Mapuje identyfikator GUID środowisko wykonawcze systemu Windows na odpowiedni obiekt ICorDebugType.  
@@ -53,5 +53,5 @@ typedef struct CorDebugGuidToTypeMapping {
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Struktury debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Struktury debugowania](debugging-structures.md)
+- [Debugowanie](index.md)

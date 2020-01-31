@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5e7885a6-d17a-4bfc-a4c6-23cbb7337ad5
 topic_type:
 - apiref
-ms.openlocfilehash: a8d651f19b7d4cb0cbe163c2fa59e1ef07ceb480
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c65ec69055b56b31a26ccf45e51ec43c4512a320
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140336"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790686"
 ---
 # <a name="icorpublishappdomain-interface"></a>ICorPublishAppDomain — Interfejs
 Reprezentuje i dostarcza informacje dotyczące domeny aplikacji.  
@@ -28,8 +28,8 @@ Reprezentuje i dostarcza informacje dotyczące domeny aplikacji.
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetID, metoda](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getid-method.md)|Pobiera unikatowy identyfikator dla tego `ICorPublishAppDomain`.|  
-|[GetName, metoda](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getname-method.md)|Pobiera nazwę domeny aplikacji, do której odwołuje się ten `ICorPublishAppDomain`.|  
+|[GetID, metoda](icorpublishappdomain-getid-method.md)|Pobiera unikatowy identyfikator dla tego `ICorPublishAppDomain`.|  
+|[GetName, metoda](icorpublishappdomain-getname-method.md)|Pobiera nazwę domeny aplikacji, do której odwołuje się ten `ICorPublishAppDomain`.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -42,5 +42,5 @@ Reprezentuje i dostarcza informacje dotyczące domeny aplikacji.
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [CorpubPublish, klasa coclass](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [CorpubPublish, klasa coclass](corpubpublish-coclass.md)

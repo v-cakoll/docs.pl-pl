@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 01aa1df27dccf41060083333588e04bc5ea88520
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 50b4de2de3e74a5835ee5706999892735269d4c2
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855929"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76861739"
 ---
 # <a name="icorprofilerinfo8isfunctiondynamic-method"></a>ICorProfilerInfo8:: IsFunctionDynamic, Metoda
 
@@ -29,28 +29,30 @@ HRESULT IsFunctionDynamic( [in]  FunctionID  functionId,
                            [out] BOOL        *isDynamic);
 ```
 
-#### <a name="parameters"></a>Parametry
+## <a name="parameters"></a>Parametry
 
-`functionId` \
-podczas  `FunctionID` Identyfikuje daną funkcję.
+- `functionId`
 
-`isDynamic` \
-określoną Wskaźnik do elementu `BOOL` , który będzie zawierał wartość wskazującą, czy funkcja nie ma metadanych.
+  \[w] `FunctionID`, który identyfikuje daną funkcję.
+
+- `isDynamic`
+
+  \[out] wskaźnik do `BOOL`, który będzie zawierać wartość wskazującą, czy funkcja nie ma metadanych.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja jest uznawana za dynamiczną, jeśli nie ma metadanych. Niektóre metody, takie jak elementy zastępcze IL lub metody LCG, nie mają skojarzonych metadanych, które można pobrać za pomocą interfejsów API IMetaDataImport. Te metody mogą być napotkane przez program do przechodzenia za pomocą wskaźników instrukcji lub przez nasłuchiwanie [ICorProfilerCallback::D ynamicmethodjitcompilationstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md).
+Funkcja jest uznawana za dynamiczną, jeśli nie ma metadanych. Niektóre metody, takie jak elementy zastępcze IL lub metody LCG, nie mają skojarzonych metadanych, które można pobrać za pomocą interfejsów API IMetaDataImport. Te metody mogą być napotkane przez program do przechodzenia za pomocą wskaźników instrukcji lub przez nasłuchiwanie [ICorProfilerCallback::D ynamicmethodjitcompilationstarted](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md).
 
 ## <a name="requirements"></a>Wymagania
 
-**Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
+**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
 
-**Nagłówki** CorProf. idl, CorProf. h
+**Nagłówek:** CorProf. idl, CorProf. h
 
-**Biblioteki** CorGuids.lib
+**Biblioteka:** CorGuids. lib
 
-**.NET Framework wersje:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**Wersje .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerInfo8, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo8-interface.md)
+- [ICorProfilerInfo8, interfejs](icorprofilerinfo8-interface.md)

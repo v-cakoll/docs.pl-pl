@@ -2,12 +2,12 @@
 title: ICorDebugMemoryBuffer, interfejs
 ms.date: 03/30/2017
 ms.assetid: 85dc2d65-3657-4b93-9f23-9feaa95d37ff
-ms.openlocfilehash: 9e43f9a2297eb56755c7a6bba73e994441cbfeaa
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fa1bbca1e771cbc2b3475891862875b97b9e7f90
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127980"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793142"
 ---
 # <a name="icordebugmemorybuffer-interface"></a>ICorDebugMemoryBuffer, interfejs
 Reprezentuje bufor w pamięci.  
@@ -16,8 +16,8 @@ Reprezentuje bufor w pamięci.
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetSize, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-getsize-method.md)|Pobiera rozmiar buforu pamięci w bajtach.|  
-|[GetStartAddress, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-getstartaddress-method.md)|Pobiera początkowy adres bufora pamięci.|  
+|[GetSize, metoda](icordebugmemorybuffer-getsize-method.md)|Pobiera rozmiar buforu pamięci w bajtach.|  
+|[GetStartAddress, metoda](icordebugmemorybuffer-getstartaddress-method.md)|Pobiera początkowy adres bufora pamięci.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -35,5 +35,5 @@ Reprezentuje bufor w pamięci.
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie](index.md)

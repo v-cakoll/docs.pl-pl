@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 189c36be-028c-4fba-a002-5edfb8fcd07f
 topic_type:
 - apiref
-ms.openlocfilehash: 8cebb66ecf298eaaca0e7af23a9b8c6a2932c23f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b76d17337408653d130ee0cb8594e759bdade37c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131827"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791870"
 ---
 # <a name="icordebugstackwalknext-method"></a>ICorDebugStackWalk::Next — Metoda
-Przenosi obiekt [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) do następnej ramki.  
+Przenosi obiekt [ICorDebugStackWalk](icordebugstackwalk-interface.md) do następnej ramki.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -31,7 +31,7 @@ Przenosi obiekt [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/de
 HRESULT Next();  
 ```  
   
-## <a name="return-value"></a>Wartość zwracana  
+## <a name="return-value"></a>Wartość zwrócona  
  Ta metoda zwraca następujące określone wartości HRESULT oraz błędy HRESULT wskazujące niepowodzenie metody.  
   
 |HRESULT|Opis|  
@@ -57,6 +57,6 @@ HRESULT Next();
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugStackWalk, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [ICorDebugStackWalk, interfejs](icordebugstackwalk-interface.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie](index.md)

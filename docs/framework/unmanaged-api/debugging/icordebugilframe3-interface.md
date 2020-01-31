@@ -10,12 +10,12 @@ api_type:
 ms.assetid: 15212cb5-93d4-4025-bec9-d4b9919eb1fe
 topic_type:
 - apiref
-ms.openlocfilehash: b3094eb6e3006be49cf17c1ca2a220b8ec58b673
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 739c648173d45a9c147ea2a4e469a3a4b518e893
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139057"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794332"
 ---
 # <a name="icordebugilframe3-interface"></a>ICorDebugILFrame3 — Interfejs
 Dostarcza metodę, która hermetyzuje wartość zwracaną przez funkcję. `ICorDebugILFrame3` jest logicznym rozszerzeniem interfejsów ICorDebugILFrame i ICorDebugILFrame2.  
@@ -24,7 +24,7 @@ Dostarcza metodę, która hermetyzuje wartość zwracaną przez funkcję. `ICorD
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetReturnValueForILOffset, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)|Pobiera obiekt ICorDebugValue, który hermetyzuje zwracaną wartość funkcji.|  
+|[GetReturnValueForILOffset, metoda](icordebugilframe3-getreturnvalueforiloffset-method.md)|Pobiera obiekt ICorDebugValue, który hermetyzuje zwracaną wartość funkcji.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -42,5 +42,5 @@ Dostarcza metodę, która hermetyzuje wartość zwracaną przez funkcję. `ICorD
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugCode3, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugCode3, interfejs](icordebugcode3-interface.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

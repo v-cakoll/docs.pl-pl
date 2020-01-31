@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 86f06245-9517-49be-8d8c-ca5deaf34c02
 topic_type:
 - apiref
-ms.openlocfilehash: 8fc2abd0728115edbbfae42958d8013029523ed1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d0c283232ff8eca1af9f3ff4448fb7f4c81d554f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73111362"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789031"
 ---
 # <a name="iclrdebugginglibraryproviderprovidelibrary-method"></a>ICLRDebuggingLibraryProvider::ProvideLibrary — Metoda
 
@@ -50,7 +50,7 @@ podczas Pole `SizeOfImage` przechowywane w nagłówku opcjonalnego pliku COFF dl
 `hModule` \
 określoną Uchwyt do żądanego modułu.
 
-## <a name="return-value"></a>Wartość zwracana
+## <a name="return-value"></a>Wartość zwrócona
 
 Ta metoda zwraca następujące określone wartości HRESULT oraz błędy HRESULT wskazujące niepowodzenie metody.
 
@@ -62,7 +62,7 @@ Ta metoda zwraca następujące określone wartości HRESULT oraz błędy HRESULT
 
 ## <a name="remarks"></a>Uwagi
 
-`ProvideLibrary` umożliwia debugerowi dostarczenie modułów, które są konieczne do debugowania określonych plików CLR, takich jak mscordbi. dll i mscordacwks. dll. Obsługa modułów musi pozostać ważna, dopóki wywołanie metody [ICLRDebugging:: CanUnloadNow —](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md) nie wskazuje, że mogą być zwolnione, a tym samym jest odpowiedzialnością wywołującą, aby zwolnić dojścia.
+`ProvideLibrary` umożliwia debugerowi dostarczenie modułów, które są konieczne do debugowania określonych plików CLR, takich jak mscordbi. dll i mscordacwks. dll. Obsługa modułów musi pozostać ważna, dopóki wywołanie metody [ICLRDebugging:: CanUnloadNow —](iclrdebugging-canunloadnow-method.md) nie wskazuje, że mogą być zwolnione, a tym samym jest odpowiedzialnością wywołującą, aby zwolnić dojścia.
 
 Debuger może używać dowolnego dostępnego środka do lokalizowania lub pozyskiwania modułu debugowania.
 
@@ -83,5 +83,5 @@ Debuger może używać dowolnego dostępnego środka do lokalizowania lub pozysk
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie](index.md)

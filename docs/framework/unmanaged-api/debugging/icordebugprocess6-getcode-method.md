@@ -2,12 +2,12 @@
 title: Metoda ICorDebugProcess6::GetCode
 ms.date: 03/30/2017
 ms.assetid: faa538c2-60c9-4064-b996-1b4c24ebd751
-ms.openlocfilehash: fc7fecc3f523d7992bd57e2f7d485648caa6df8e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1588728f486ffb3db583439de05aff34e3dc59f8
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123468"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792270"
 ---
 # <a name="icordebugprocess6getcode-method"></a>Metoda ICorDebugProcess6::GetCode
 Pobiera informacje o zarządzanym kodzie pod określonym adresem kodu.  
@@ -43,5 +43,5 @@ HRESULT GetCode(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugProcess6, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugProcess6, interfejs](icordebugprocess6-interface.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

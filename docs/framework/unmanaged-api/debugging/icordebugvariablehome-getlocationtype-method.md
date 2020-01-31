@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 88027c55-8ec6-4f1e-a55b-7eefdbbc3515
 topic_type:
 - apiref
-ms.openlocfilehash: 1dd4e9510831b4c878e9c1246dabe4add919130c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5d33c917ab814083ec2f3a3f3de6bdc264d90b77
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125113"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791010"
 ---
 # <a name="icordebugvariablehomegetlocationtype-method"></a>ICorDebugVariableHome:: getlocationtype — Metoda
 Pobiera typ lokalizacji natywnej zmiennej.  
@@ -35,7 +35,7 @@ HRESULT GetLocationType(
   
 ## <a name="parameters"></a>Parametry  
  `pLocationType`  
- określoną Wskaźnik do typu lokalizacji natywnej zmiennej.  Aby uzyskać więcej informacji, zobacz Wyliczenie [VariableLocationType](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md) .  
+ określoną Wskaźnik do typu lokalizacji natywnej zmiennej.  Aby uzyskać więcej informacji, zobacz Wyliczenie [VariableLocationType](variablelocationtype-enumeration.md) .  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -48,5 +48,5 @@ HRESULT GetLocationType(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugVariableHome, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
-- [VariableLocationType, wyliczenie](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md)
+- [ICorDebugVariableHome, interfejs](icordebugvariablehome-interface.md)
+- [VariableLocationType, wyliczenie](variablelocationtype-enumeration.md)

@@ -2,12 +2,12 @@
 title: Niestandardowy host usługi
 ms.date: 03/30/2017
 ms.assetid: fe16ff50-7156-4499-9c32-13d8a79dc100
-ms.openlocfilehash: 86dd8c5cebfb8ea6f9a2b95f7698362eb34c1a7c
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 271233015739024428a7a29815f66278c9d7aa04
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716799"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789926"
 ---
 # <a name="custom-service-host"></a>Niestandardowy host usługi
 Ten przykład pokazuje, jak używać niestandardowych pochodnych klasy <xref:System.ServiceModel.ServiceHost>, aby zmienić zachowanie usługi w czasie wykonywania. Takie podejście umożliwia użycie alternatywnej alternatywy do konfigurowania dużej liczby usług w typowy sposób. W przykładzie pokazano również, jak użyć klasy <xref:System.ServiceModel.Activation.ServiceHostFactory>, aby użyć niestandardowego ServiceHost w Internet Information Services (IIS) lub w usłudze aktywacji procesów systemu Windows (WAS).  
@@ -21,7 +21,7 @@ Ten przykład pokazuje, jak używać niestandardowych pochodnych klasy <xref:Sys
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Hosting\CustomServiceHost`  
   
-## <a name="about-the-scenario"></a>Informacje o tym scenariuszu  
+## <a name="about-the-scenario"></a>Informacje o tym scenariuszu
  Aby zapobiec przypadkowemu ujawnieniu potencjalnie poufnych metadanych usługi, konfiguracja domyślna dla usług Windows Communication Foundation (WCF) wyłącza Publikowanie metadanych. To zachowanie jest domyślnie bezpieczne, ale oznacza to, że nie można użyć narzędzia do importowania metadanych (takiego jak Svcutil. exe) w celu wygenerowania kodu klienta wymaganego do wywołania usługi, chyba że zachowanie publikowania metadanych usługi jest jawnie włączone w konfiguracji.  
   
  Włączenie publikowania metadanych dla dużej liczby usług obejmuje dodanie tych samych elementów konfiguracji do poszczególnych usług, co skutkuje znaczną ilością informacji o konfiguracji, które są zasadniczo takie same. Alternatywnie, aby skonfigurować poszczególne usługi indywidualnie, można napisać bezwzględny kod, który umożliwia Publikowanie metadanych jednokrotnie, a następnie ponownie wykorzystać ten kod dla kilku różnych usług. Jest to realizowane przez utworzenie nowej klasy, która pochodzi od <xref:System.ServiceModel.ServiceHost> i przesłania metodę `ApplyConfiguration`(), aby bezwzględnie dodać zachowanie publikowania metadanych.  
@@ -29,7 +29,7 @@ Ten przykład pokazuje, jak używać niestandardowych pochodnych klasy <xref:Sys
 > [!IMPORTANT]
 > Dla jasności ten przykład pokazuje, jak utworzyć niezabezpieczony punkt końcowy publikowania metadanych. Takie punkty końcowe są potencjalnie dostępne dla anonimowych użytkowników nieuwierzytelnionych i należy zachować ostrożność przed wdrożeniem takich punktów końcowych, aby upewnić się, że można publicznie odzamknąć metadane usługi.  
   
-## <a name="implementing-a-custom-servicehost"></a>Implementowanie niestandardowego ServiceHost  
+## <a name="implementing-a-custom-servicehost"></a>Implementowanie niestandardowego ServiceHost
  Klasa <xref:System.ServiceModel.ServiceHost> uwidacznia kilka przydatnych metod wirtualnych, które dziedziczą mogą przesłonić, aby zmienić zachowanie usługi w czasie wykonywania. Na przykład Metoda `ApplyConfiguration`() odczytuje informacje o konfiguracji usługi z magazynu konfiguracji i odpowiednio zmienia <xref:System.ServiceModel.Description.ServiceDescription> hosta. Domyślna implementacja odczytuje konfigurację z pliku konfiguracyjnego aplikacji. Implementacje niestandardowe mogą przesłonić `ApplyConfiguration`(), aby jeszcze bardziej zmienić <xref:System.ServiceModel.Description.ServiceDescription> przy użyciu kodu bezwzględnego, a nawet całkowicie zastąpić domyślny magazyn konfiguracji. Na przykład, aby odczytać konfigurację punktu końcowego usługi z bazy danych zamiast pliku konfiguracji aplikacji.  
   
  W tym przykładzie chcemy utworzyć niestandardowy ServiceHost, który dodaje ServiceMetadataBehavior (co umożliwia Publikowanie metadanych), nawet jeśli to zachowanie nie zostanie jawnie dodane w pliku konfiguracji usługi. Aby to osiągnąć, tworzymy nową klasę, która dziedziczy po <xref:System.ServiceModel.ServiceHost> i przesłania `ApplyConfiguration`().  
@@ -145,35 +145,35 @@ public class SelfDescribingServiceHostFactory : ServiceHostFactory
   
  Aby użyć fabryki niestandardowej z implementacją usługi, należy dodać dodatkowe metadane do pliku SVC usługi.  
   
-```  
-<%@ServiceHost Service="Microsoft.ServiceModel.Samples.CalculatorService"  
-               Factory="Microsoft.ServiceModel.Samples.SelfDescribingServiceHostFactory"  
-               language=c# Debug="true" %>  
-```  
+```xml
+<%@ServiceHost Service="Microsoft.ServiceModel.Samples.CalculatorService"
+               Factory="Microsoft.ServiceModel.Samples.SelfDescribingServiceHostFactory"
+               language=c# Debug="true" %>
+```
   
  W tym miejscu dodaliśmy do dyrektywy `@ServiceHost` dodatkowy atrybut `Factory` i przeszedł nazwę typu CLR fabryki niestandardowej jako wartość atrybutu. Gdy usługi IIS lub otrzymali komunikat dla tej usługi, infrastruktura hostingu WCF najpierw tworzy wystąpienie obiektu ServiceHostFactory, a następnie uruchamia samego hosta usługi przez wywołanie `ServiceHostFactory.CreateServiceHost()`.  
   
 ## <a name="running-the-sample"></a>Uruchamianie przykładu  
  Mimo że ten przykład zapewnia w pełni funkcjonalną implementację klienta i usługi, punkt przykładu ilustruje sposób zmiany zachowania w czasie wykonywania usługi za pomocą niestandardowego hosta. wykonaj następujące czynności:  
   
-#### <a name="to-observe-the-effect-of-the-custom-host"></a>Aby obserwować efekt niestandardowego hosta  
+### <a name="observe-the-effect-of-the-custom-host"></a>Obserwuj efekt hosta niestandardowego
   
 1. Otwórz plik Web. config usługi i sprawdź, czy nie ma konfiguracji jawnie włączającej metadane dla usługi.  
   
 2. Otwórz plik SVC usługi i sprawdź, czy jego dyrektywa @ServiceHost zawiera atrybut fabryki, który określa nazwę niestandardowego obiektu ServiceHostFactory.  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
+### <a name="set-up-build-and-run-the-sample"></a>Konfigurowanie, kompilowanie i uruchamianie przykładu
   
-1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
-  
-2. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
-  
-3. Po skompilowaniu rozwiązania Uruchom polecenie Setup. bat, aby skonfigurować aplikację ServiceModelSamples w usługach IIS 7,0. Katalog ServiceModelSamples powinien teraz pojawić się jako aplikacja usług IIS 7,0.  
-  
-4. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
-  
-5. Aby usunąć aplikację IIS 7,0, uruchom polecenie Oczyść. bat.  
-  
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
+
+2. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](building-the-samples.md).
+
+3. Po skompilowaniu rozwiązania Uruchom polecenie Setup. bat, aby skonfigurować aplikację ServiceModelSamples w usługach IIS 7,0. Katalog ServiceModelSamples powinien teraz pojawić się jako aplikacja usług IIS 7,0.
+
+4. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](running-the-samples.md).
+
+5. Aby usunąć aplikację IIS 7,0, uruchom polecenie *Oczyść. bat*.
+
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: hostowanie usługi WCF w programie IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
+- [Instrukcje: hostowanie usługi WCF w programie IIS](../feature-details/how-to-host-a-wcf-service-in-iis.md)

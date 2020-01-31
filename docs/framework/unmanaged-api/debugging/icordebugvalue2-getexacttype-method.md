@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8e9aae1b-d1b7-4b6e-b577-6faf36dcec85
 topic_type:
 - apiref
-ms.openlocfilehash: 441d225dadbbca09ab27c8ccd70debe32f4c12da
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6c5e5d1c9f734e097fc9e871d7a0cffdc9bb9138
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140254"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791122"
 ---
 # <a name="icordebugvalue2getexacttype-method"></a>ICorDebugValue2::GetExactType — Metoda
 Pobiera wskaźnik interfejsu do obiektu "ICorDebugType", który reprezentuje <xref:System.Type> tej wartości.  
@@ -38,7 +38,7 @@ HRESULT GetExactType (
  określoną Wskaźnik do adresu `ICorDebugType` obiektu, który reprezentuje <xref:System.Type> wartości reprezentowanej przez ten obiekt "ICorDebugValue2".  
   
 ## <a name="remarks"></a>Uwagi  
- Metoda `GetExactType` opartej na typach ogólnych zastępuje zarówno metody [ICorDebugObjectValue:: GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getclass-method.md) , jak i [ICorDebugValue:: GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-gettype-method.md) , z których każdy zwraca informacje o typie wartości.  
+ Metoda `GetExactType` opartej na typach ogólnych zastępuje zarówno metody [ICorDebugObjectValue:: GetClass](icordebugobjectvalue-getclass-method.md) , jak i [ICorDebugValue:: GetType](icordebugvalue-gettype-method.md) , z których każdy zwraca informacje o typie wartości.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  

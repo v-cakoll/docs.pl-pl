@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 16d695e8-975d-431b-8421-e9e6c3e3f476
 topic_type:
 - apiref
-ms.openlocfilehash: 48f1b485b6dfa8fd898f6ea00eee2d7b397deba6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a6283d699263dc9b79e457010f31923f77443129
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131858"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791880"
 ---
 # <a name="icordebugstackwalk-interface"></a>ICorDebugStackWalk — Interfejs
 Dostarcza metody pobierania zarządzanych metod, lub ramek, znajdujących się na stosie wątku.  
@@ -28,10 +28,10 @@ Dostarcza metody pobierania zarządzanych metod, lub ramek, znajdujących się n
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetContext, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md)|Zwraca kontekst dla bieżącej ramki w obiekcie `ICorDebugStackWalk`.|  
-|[SetContext, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md)|Ustawia bieżący kontekst obiektu `ICorDebugStackWalk` na prawidłowy kontekst dla wątku.|  
-|[Next, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-next-method.md)|Przenosi `ICorDebugStackWalk` obiektu do następnej ramki.|  
-|[GetFrame, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getframe-method.md)|Pobiera bieżącą ramkę w obiekcie `ICorDebugStackWalk`.|  
+|[GetContext, metoda](icordebugstackwalk-getcontext-method.md)|Zwraca kontekst dla bieżącej ramki w obiekcie `ICorDebugStackWalk`.|  
+|[SetContext, metoda](icordebugstackwalk-setcontext-method.md)|Ustawia bieżący kontekst obiektu `ICorDebugStackWalk` na prawidłowy kontekst dla wątku.|  
+|[Next, metoda](icordebugstackwalk-next-method.md)|Przenosi `ICorDebugStackWalk` obiektu do następnej ramki.|  
+|[GetFrame, metoda](icordebugstackwalk-getframe-method.md)|Pobiera bieżącą ramkę w obiekcie `ICorDebugStackWalk`.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -49,5 +49,5 @@ Dostarcza metody pobierania zarządzanych metod, lub ramek, znajdujących się n
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie](index.md)

@@ -2,12 +2,12 @@
 title: Przykład autonomicznego kanału diagnostycznego
 ms.date: 03/30/2017
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
-ms.openlocfilehash: 40e7e2b704204278e6a8754134a952b8235ee528
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 4520883b5db19c28544a5576ca600b83e37eede3
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716665"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76787928"
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>Przykład autonomicznego kanału diagnostycznego
 Ten przykład pokazuje, jak utworzyć kanał informacyjny RSS/Atom dla zespalania z Windows Communication Foundation (WCF). Jest to podstawowy program "Hello world", który zawiera podstawowe informacje dotyczące modelu obiektów i sposobu konfigurowania go w usłudze Windows Communication Foundation (WCF).  
@@ -45,55 +45,55 @@ WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http:/
   
  Alternatywnie można użyć <xref:System.ServiceModel.Activation.WebServiceHostFactory> z poziomu pliku SVC hostowanego przez usługi IIS w celu zapewnienia równoważnej funkcjonalności (Ta technika nie jest przedstawiona w tym przykładowym kodzie).  
   
-```  
-<%@ ServiceHost Language="C#|VB" Debug="true" Service="ProcessService" %>  
-```  
+```xml
+<%@ ServiceHost Language="C#|VB" Debug="true" Service="ProcessService" %>
+```
   
  Ponieważ ta usługa odbiera żądania przy użyciu standardowego protokołu HTTP GET, do uzyskiwania dostępu do usługi można użyć dowolnego klienta obsługującego technologię RSS lub ATOM. Na przykład możesz wyświetlić dane wyjściowe tej usługi, przechodząc do `http://localhost:8000/diagnostics/feed/?format=atom` lub `http://localhost:8000/diagnostics/feed/?format=rss` w przeglądarce obsługującej funkcję RSS.
   
  Możesz również użyć [modelu obiektów zespolonych WCF, który jest mapowany na Atom i RSS](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md) , aby odczytywać dane zespolone i przetwarzać je za pomocą kodu.  
   
-```csharp  
-XmlReader reader = XmlReader.Create( "http://localhost:8000/diagnostics/feed/?format=rss",  
-new XmlReaderSettings()  
-{  
-//MaxCharactersInDocument can be used to control the maximum amount of data   
-//read from the reader and helps prevent OutOfMemoryException  
-MaxCharactersInDocument = 1024 * 64  
-} );  
+```csharp
+XmlReader reader = XmlReader.Create( "http://localhost:8000/diagnostics/feed/?format=rss",
+    new XmlReaderSettings()
+    {
+        //MaxCharactersInDocument can be used to control the maximum amount of data
+        //read from the reader and helps prevent OutOfMemoryException
+        MaxCharactersInDocument = 1024 * 64
+    } );
+
+SyndicationFeed feed = SyndicationFeed.Load(reader);
+
+foreach (SyndicationItem i in feed.Items)
+{
+    XmlSyndicationContent content = i.Content as XmlSyndicationContent;
+    ProcessData pd = content.ReadContent<ProcessData>();
+
+    Console.WriteLine(i.Title.Text);
+    Console.WriteLine(pd.ToString());
+}
+```
   
-SyndicationFeed feed = SyndicationFeed.Load( reader );  
+## <a name="set-up-build-and-run-the-sample"></a>Konfigurowanie, kompilowanie i uruchamianie przykładu
   
-foreach (SyndicationItem i in feed.Items)  
-{  
-        XmlSyndicationContent content = i.Content as XmlSyndicationContent;  
-        ProcessData pd = content.ReadContent<ProcessData>();  
-  
-        Console.WriteLine(i.Title.Text);  
-        Console.WriteLine(pd.ToString());  
-}  
-```  
-  
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
-  
-1. Upewnij się, że masz odpowiednie uprawnienia do rejestracji adresów dla protokołów HTTP i HTTPS na komputerze, zgodnie z opisem w temacie Konfigurowanie instrukcji w jednorazowej [procedurze konfiguracyjnej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
-  
-2. Skompiluj rozwiązanie.  
-  
-3. Uruchom aplikację konsolową.  
-  
-4. Gdy aplikacja konsolowa jest uruchomiona, przejdź do `http://localhost:8000/diagnostics/feed/?format=atom` lub `http://localhost:8000/diagnostics/feed/?format=rss` przy użyciu przeglądarki obsługującej funkcję RSS.  
-  
+1. Upewnij się, że masz odpowiednie uprawnienia do rejestracji adresów dla protokołów HTTP i HTTPS na komputerze, zgodnie z opisem w temacie Konfigurowanie instrukcji w jednorazowej [procedurze konfiguracyjnej dla przykładów Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
+
+2. Skompiluj rozwiązanie.
+
+3. Uruchom aplikację konsolową.
+
+4. Gdy aplikacja konsolowa jest uruchomiona, przejdź do `http://localhost:8000/diagnostics/feed/?format=atom` lub `http://localhost:8000/diagnostics/feed/?format=rss` przy użyciu przeglądarki obsługującej funkcję RSS.
+
 > [!IMPORTANT]
-> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
->   
-> `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
->   
-> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\DiagnosticsFeed`  
-  
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).
+>
+> `<InstallDrive>:\WF_WCF_Samples`
+>
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.
+>
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\DiagnosticsFeed`
+
 ## <a name="see-also"></a>Zobacz także
 
-- [Model programowania protokołu HTTP sieci Web w programie WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
-- [Syndykacja programu WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)
+- [Model programowania protokołu HTTP sieci Web w programie WCF](../feature-details/wcf-web-http-programming-model.md)
+- [Syndykacja programu WCF](../feature-details/wcf-syndication.md)

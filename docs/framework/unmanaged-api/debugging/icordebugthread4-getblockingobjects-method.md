@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a7e6c54e-7be9-4e52-bbb4-95f52458e8e4
 topic_type:
 - apiref
-ms.openlocfilehash: e4d5582b7a3df16db58ea0ed001dcbffcdcaab79
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 39833b689f28437b4241d9cb15fb4a92b2f9bcc3
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122460"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791372"
 ---
 # <a name="icordebugthread4getblockingobjects-method"></a>ICorDebugThread4::GetBlockingObjects — Metoda
-Udostępnia uporządkowane Wyliczenie struktur [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) , które dostarczają informacje o blokowaniu wątku.  
+Udostępnia uporządkowane Wyliczenie struktur [CorDebugBlockingObject](cordebugblockingobject-structure.md) , które dostarczają informacje o blokowaniu wątku.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,7 +34,7 @@ HRESULT GetBlockingObjects (
   
 ## <a name="parameters"></a>Parametry  
  `ppBlockingObjectEnum`  
- określoną Wskaźnik do uporządkowanego wyliczania struktur [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) .  
+ określoną Wskaźnik do uporządkowanego wyliczania struktur [CorDebugBlockingObject](cordebugblockingobject-structure.md) .  
   
 ## <a name="remarks"></a>Uwagi  
  Pierwszy element w zwracanym wyliczeniu odpowiada pierwszej strukturze, która blokuje wątek. Drugi element odnosi się do bloku elementu, który jest napotkany podczas wykonywania wywołania procedury asynchronicznej (APC), gdy jest zablokowany w pierwszej i tak dalej.  
@@ -58,6 +58,6 @@ HRESULT GetBlockingObjects (
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugThread4, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [ICorDebugThread4, interfejs](icordebugthread4-interface.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie](index.md)

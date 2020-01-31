@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 12/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 04d7dedf9f882d9f0e0396949c71e4941c207fe3
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 6aaf5acc605067f378ff5d42f713fe1c63d91e46
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345022"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794627"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Samouczek: wykrywanie obiektów przy użyciu ONNX w ML.NET
 
@@ -50,8 +50,8 @@ Wykrywanie obiektów to problem z obsługą komputera. Chociaż ściśle powiąz
 Niektóre przypadki użycia dotyczące wykrywania obiektów obejmują:
 
 - Samochody samoobsługowe
-- Robotyka
-- Wykrywanie twarzy
+- Atrybut
+- wykrywanie twarzy
 - Bezpieczeństwo w miejscu pracy
 - Zliczanie obiektów
 - Rozpoznawanie działań
@@ -213,7 +213,7 @@ Dane wyjściowe przez model zawierają współrzędne i wymiary pól ograniczeni
 
     [!code-csharp [DimensionsBaseClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/DimensionsBase.cs#L3-L9)]
 
-    `DimensionsBase` ma następujące pola `float`:
+    `DimensionsBase` ma następujące właściwości `float`:
 
     - `X` zawiera pozycję obiektu wzdłuż osi x.
     - `Y` zawiera pozycję obiektu wzdłuż osi y.
@@ -237,7 +237,7 @@ Następnie Utwórz klasę dla pól ograniczenia.
 
     [!code-csharp [YoloBoundingBoxClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloBoundingBox.cs#L7-L21)]
 
-    `YoloBoundingBox` ma następujące pola:
+    `YoloBoundingBox` ma następujące właściwości:
 
     - `Dimensions` zawiera wymiary pola ograniczenia.
     - `Label` zawiera klasę obiektu wykryta w polu ograniczenia.

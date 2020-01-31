@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8c8ab5dc-557c-473a-82f2-6e403eca7dac
 topic_type:
 - apiref
-ms.openlocfilehash: 3f840154d472dbcea7dfef7ba93e38c80b836734
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e9cbf4551c2f8b183e9e6c37a74b13aff3a19ec1
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447549"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76860972"
 ---
 # <a name="imethodmalloc-interface"></a>IMethodMalloc — Interfejs
 Udostępnia metodę przydzielania pamięci dla nowej treści funkcji języka pośredniego (MSIL) firmy Microsoft.  
@@ -31,7 +31,7 @@ Udostępnia metodę przydzielania pamięci dla nowej treści funkcji języka po�
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[Alloc, metoda](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-alloc-method.md)|Próbuje przydzielić określoną ilość pamięci dla nowej treści funkcji MSIL.|  
+|[Alloc, metoda](imethodmalloc-alloc-method.md)|Próbuje przydzielić określoną ilość pamięci dla nowej treści funkcji MSIL.|  
   
 ## <a name="remarks"></a>Uwagi  
  Każdy Alokator jest specyficzny dla modułu i gwarantuje, że treść funkcji będzie naliczona pozytywnie od podstawy modułu. Pamięć powyżej podstawy modułu może być cenna, więc Alokator powinien być używany do przydzielania pamięci tylko dla treści funkcji.  
@@ -47,4 +47,4 @@ Udostępnia metodę przydzielania pamięci dla nowej treści funkcji języka po�
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Interfejsy profilowania](profiling-interfaces.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 43c944f4-406a-4df6-981e-0eabb33dd5d0
 topic_type:
 - apiref
-ms.openlocfilehash: ec92214e33cd1acda8b2702d93deba1f0fb2aaa2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 642391bce99328f3700d1783054943b6a450b22b
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73111030"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789017"
 ---
 # <a name="iclrmetadatalocator-interface"></a>ICLRMetadataLocator — Interfejs
 Używany przez warstwę usług dostępu do danych do lokalizowania metadanych zestawów w procesie docelowym.  
@@ -28,7 +28,7 @@ Używany przez warstwę usług dostępu do danych do lokalizowania metadanych ze
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetMetaData, metoda](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-getmetadata-method.md)|Pobiera metadane obrazu z procesu docelowego.|  
+|[GetMetaData, metoda](iclrmetadatalocator-getmetadata-method.md)|Pobiera metadane obrazu z procesu docelowego.|  
   
 ## <a name="remarks"></a>Uwagi  
  Klient API (tzn. debuger) musi implementować ten interfejs stosownie do określonego procesu docelowego. Na przykład implementacja procesu na żywo byłaby inna niż w przypadku zrzutu pamięci.  
@@ -44,4 +44,4 @@ Używany przez warstwę usług dostępu do danych do lokalizowania metadanych ze
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

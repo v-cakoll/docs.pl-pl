@@ -2,26 +2,26 @@
 title: ICorDebugMutableDataTarget, interfejs
 ms.date: 03/30/2017
 ms.assetid: 14aad5b3-84ab-4bbc-94e3-1eb92e258d10
-ms.openlocfilehash: 682e927388d3392d970338314f97d46c9e57e760
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e4601c24194404f943c8de8f320bf704efcc553e
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139334"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792858"
 ---
 # <a name="icordebugmutabledatatarget-interface"></a>ICorDebugMutableDataTarget, interfejs
-Rozszerza interfejs [ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md) w celu obsługi modyfikowalnych obiektów docelowych danych.  
+Rozszerza interfejs [ICorDebugDataTarget](icordebugdatatarget-interface.md) w celu obsługi modyfikowalnych obiektów docelowych danych.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[ContinueStatusChanged, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmutabledatatarget-continuestatuschanged-method.md)|Zmienia stan kontynuacji dla zaległego zdarzenia debugowania w określonym wątku.|  
-|[SetThreadContext, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmutabledatatarget-setthreadcontext-method.md)|Ustawia kontekst (wartości rejestru) dla wątku.|  
-|[WriteVirtual, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmutabledatatarget-writevirtual-method.md)|Zapisuje pamięć w przestrzeni adresowej procesu docelowego.|  
+|[ContinueStatusChanged, metoda](icordebugmutabledatatarget-continuestatuschanged-method.md)|Zmienia stan kontynuacji dla zaległego zdarzenia debugowania w określonym wątku.|  
+|[SetThreadContext, metoda](icordebugmutabledatatarget-setthreadcontext-method.md)|Ustawia kontekst (wartości rejestru) dla wątku.|  
+|[WriteVirtual, metoda](icordebugmutabledatatarget-writevirtual-method.md)|Zapisuje pamięć w przestrzeni adresowej procesu docelowego.|  
   
 ## <a name="remarks"></a>Uwagi  
- To rozszerzenie interfejsu [ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md) może zostać zaimplementowane przez narzędzia debugowania, które chcą zmodyfikować proces docelowy (na przykład w celu przeprowadzenia aktywnego debugowania).  
+ To rozszerzenie interfejsu [ICorDebugDataTarget](icordebugdatatarget-interface.md) może zostać zaimplementowane przez narzędzia debugowania, które chcą zmodyfikować proces docelowy (na przykład w celu przeprowadzenia aktywnego debugowania).  
   
  Wszystkie te metody są opcjonalne w tym sensie, że żadne podstawowe funkcje debugowania nie są tracone przez zaimplementowanie tego interfejsu lub niepowodzenie wywołań tych metod.  Wszystkie niepowodzenia `HRESULT` z tych metod będą propagowane jako `HRESULT` z wywołania metody ICorDebug.  
   
@@ -38,5 +38,5 @@ Rozszerza interfejs [ICorDebugDataTarget](../../../../docs/framework/unmanaged-a
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie](index.md)

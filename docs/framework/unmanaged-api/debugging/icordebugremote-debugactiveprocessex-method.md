@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b0df5c5d-9a2e-47bf-894c-6f8a9fe24a1f
 topic_type:
 - apiref
-ms.openlocfilehash: 83cc4eadca7c337c06c5fbf9f0e74306c2b9cb99
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b78bff2994cefc6c35a4bd59133338392c3a1b24
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131276"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791973"
 ---
 # <a name="icordebugremotedebugactiveprocessex-method"></a>ICorDebugRemote::DebugActiveProcessEx — Metoda
 Uruchamia proces na maszynie zdalnej pod debugerem.  
@@ -38,7 +38,7 @@ HRESULT DebugActiveProcessEx (
   
 ## <a name="parameters"></a>Parametry  
  `pRemoteTarget`  
- podczas Wskaźnik do [interfejsu ICorDebugRemoteTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md). Ten parametr służy do określania komputera, na którym jest uruchomiony proces.  
+ podczas Wskaźnik do [interfejsu ICorDebugRemoteTarget](icordebugremotetarget-interface.md). Ten parametr służy do określania komputera, na którym jest uruchomiony proces.  
   
  `id`  
  podczas Identyfikator procesu, do którego ma zostać dołączony debuger.  
@@ -49,7 +49,7 @@ HRESULT DebugActiveProcessEx (
  `ppProcess`  
  określoną Wskaźnik do adresu obiektu "ICorDebugProcess", który reprezentuje proces, do którego został podłączony debuger.  
   
-## <a name="return-value"></a>Wartość zwracana  
+## <a name="return-value"></a>Wartość zwrócona  
  S_OK  
  Pomyślnie dołączono do procesu na komputerze zdalnym.  
   
@@ -70,7 +70,7 @@ HRESULT DebugActiveProcessEx (
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugRemote, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
-- [ICorDebug, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [ICorDebugRemote, interfejs](icordebugremote-interface.md)
+- [ICorDebug, interfejs](icordebug-interface.md)
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

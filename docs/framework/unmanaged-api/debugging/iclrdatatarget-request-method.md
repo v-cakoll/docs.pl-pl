@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4723bd1c-eddb-4ed2-897a-010024a47e01
 topic_type:
 - apiref
-ms.openlocfilehash: e5d7a6b9826a734363d6beeb2e3fab8422964558
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0a7e764d89dd42bcaf81da5cf6a16991b6b8a16e
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73113352"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793705"
 ---
 # <a name="iclrdatatargetrequest-method"></a>ICLRDataTarget::Request — Metoda
 Wywoływane przez usługi dostępu do danych środowiska uruchomieniowego języka wspólnego (CLR) do żądania operacji zgodnie z definicją w implementacji.  
@@ -71,4 +71,4 @@ HRESULT Request (
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICLRDataTarget, interfejs](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+- [ICLRDataTarget, interfejs](iclrdatatarget-interface.md)

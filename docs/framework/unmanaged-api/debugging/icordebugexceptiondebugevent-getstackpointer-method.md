@@ -2,12 +2,12 @@
 title: 'ICorDebugExceptionDebugEvent:: GetStackPointer, Metoda'
 ms.date: 03/30/2017
 ms.assetid: d8f66a1c-16be-4264-afc5-bc2dfbb4a682
-ms.openlocfilehash: 688f5aec457298a43d95a35fdbc6e04e29a306a4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 657649b97262a12639117defe7a9c546f08cfef5
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73084672"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76782854"
 ---
 # <a name="icordebugexceptiondebugeventgetstackpointer-method"></a>ICorDebugExceptionDebugEvent:: GetStackPointer, Metoda
 Pobiera wskaźnik stosu dla tego zdarzenia debugowania wyjątku.  
@@ -29,15 +29,15 @@ HRESULT GetStackPointer(
   
 |Typ zdarzenia|Znaczenie wartości `pStackPointer`|  
 |----------------|--------------------------------------|  
-|[MANAGED_EXCEPTION_FIRST_CHANCE](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)|Wskaźnik stosu dla ramki, która wywołała wyjątek.|  
-|[MANAGED_EXCEPTION_USER_FIRST_CHANCE](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)|Wskaźnik stosu dla ramki kodu użytkownika znajdującej się najbliżej punktu zgłoszonego wyjątku.|  
-|[MANAGED_EXCEPTION_CATCH_HANDLER_FOUND](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)|Wskaźnik stosu dla ramki, która zawiera procedurę obsługi catch.|  
-|[MANAGED_EXCEPTION_UNHANDLED](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)|`pStackPointer` ma **wartość null**.|  
+|[MANAGED_EXCEPTION_FIRST_CHANCE](cordebugrecordformat-enumeration.md)|Wskaźnik stosu dla ramki, która wywołała wyjątek.|  
+|[MANAGED_EXCEPTION_USER_FIRST_CHANCE](cordebugrecordformat-enumeration.md)|Wskaźnik stosu dla ramki kodu użytkownika znajdującej się najbliżej punktu zgłoszonego wyjątku.|  
+|[MANAGED_EXCEPTION_CATCH_HANDLER_FOUND](cordebugrecordformat-enumeration.md)|Wskaźnik stosu dla ramki, która zawiera procedurę obsługi catch.|  
+|[MANAGED_EXCEPTION_UNHANDLED](cordebugrecordformat-enumeration.md)|`pStackPointer` ma **wartość null**.|  
   
 > [!NOTE]
 > Ta metoda jest dostępna tylko z .NET Native.  
   
- Typ zdarzenia jest dostępny w metodzie [ICorDebugDebugEvent:: GetEventKind](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md) .  
+ Typ zdarzenia jest dostępny w metodzie [ICorDebugDebugEvent:: GetEventKind](icordebugdebugevent-geteventkind-method.md) .  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -50,5 +50,5 @@ HRESULT GetStackPointer(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugExceptionDebugEvent, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugExceptionDebugEvent, interfejs](icordebugexceptiondebugevent-interface.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

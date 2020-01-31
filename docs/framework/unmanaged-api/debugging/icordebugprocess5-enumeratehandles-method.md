@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7d7fa796-0dc6-4ee8-9d56-40166246d91d
 topic_type:
 - apiref
-ms.openlocfilehash: e0e68dba1f4d9ac5fa618aa842b823dcc046e70e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2a1653055a3834ce1bed0e7de7877b255bea0c38
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129682"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792429"
 ---
 # <a name="icordebugprocess5enumeratehandles-method"></a>ICorDebugProcess5::EnumerateHandles — Metoda
 Pobiera moduł wyliczający dla dojść do obiektów w procesie.  
@@ -34,15 +34,15 @@ HRESULT EnumerateHandles(     [in] CorGCReferenceType types,
   
 ## <a name="parameters"></a>Parametry  
  `types`  
- podczas Bitowa kombinacja wartości [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) , która określa typ dojść do uwzględnienia w kolekcji.  
+ podczas Bitowa kombinacja wartości [CorGCReferenceType](corgcreferencetype-enumeration.md) , która określa typ dojść do uwzględnienia w kolekcji.  
   
  `ppENum`  
- określoną Wskaźnik na adres elementu [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) , który jest modułem wyliczającym dla obiektów, które mają być zbierane jako elementy bezużyteczne.  
+ określoną Wskaźnik na adres elementu [ICorDebugGCReferenceEnum](icordebuggcreferenceenum-interface.md) , który jest modułem wyliczającym dla obiektów, które mają być zbierane jako elementy bezużyteczne.  
   
 ## <a name="remarks"></a>Uwagi  
- `EnumerateHandles` jest funkcją pomocnika, która obsługuje inspekcję tabeli dojścia. Jest podobna do metody [ICorDebugProcess5:: EnumerateGCReferences —](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md) , z wyjątkiem tego, że zamiast wypełniania kolekcji [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) ze wszystkimi obiektami, które mają być zbierane jako elementy bezużyteczne, zawiera tylko te obiekty, które mają uchwyty tabela dojścia.  
+ `EnumerateHandles` jest funkcją pomocnika, która obsługuje inspekcję tabeli dojścia. Jest podobna do metody [ICorDebugProcess5:: EnumerateGCReferences —](icordebugprocess5-enumerategcreferences-method.md) , z wyjątkiem tego, że zamiast wypełniania kolekcji [ICorDebugGCReferenceEnum](icordebuggcreferenceenum-interface.md) wszystkie obiekty, które mają być zbierane jako elementy bezużyteczne, zawiera tylko te obiekty, które mają uchwyty z tabeli uchwytów.  
   
- `types` parametr określa typy dojść do uwzględnienia w kolekcji. `types` może być jednym z trzech następujących elementów członkowskich wyliczenia [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) :  
+ `types` parametr określa typy dojść do uwzględnienia w kolekcji. `types` może być jednym z trzech następujących elementów członkowskich wyliczenia [CorGCReferenceType](corgcreferencetype-enumeration.md) :  
   
 - `CorHandleStrongOnly` (obsługuje tylko silne odwołania).  
   
@@ -61,5 +61,5 @@ HRESULT EnumerateHandles(     [in] CorGCReferenceType types,
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Struktury debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Struktury debugowania](debugging-structures.md)
+- [Debugowanie](index.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3b9b6260-98ac-4cfd-88e5-5d7614f94a0c
 topic_type:
 - apiref
-ms.openlocfilehash: 3c62bd73b693322bd679b07b46e3549e1cfc8a56
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9793424e79ed878b04a5c51daad08b5d12d439e1
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133401"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791468"
 ---
 # <a name="icordebugthreadgetregisterset-method"></a>ICorDebugThread::GetRegisterSet — Metoda
 Pobiera wskaźnik interfejsu do zestawu rejestru, który jest skojarzony z aktywną częścią tego obiektu ICorDebugThread.  
@@ -35,7 +35,7 @@ HRESULT GetRegisterSet (
   
 ## <a name="parameters"></a>Parametry  
  `ppRegisters`  
- określoną Wskaźnik do adresu obiektu interfejsu [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) , który reprezentuje zestaw rejestru dla aktywnej części tego wątku.  
+ określoną Wskaźnik do adresu obiektu interfejsu [ICorDebugRegisterSet](icordebugregisterset-interface.md) , który reprezentuje zestaw rejestru dla aktywnej części tego wątku.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  

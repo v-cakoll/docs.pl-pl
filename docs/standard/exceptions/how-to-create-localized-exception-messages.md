@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 09/13/2019
-ms.openlocfilehash: 9360fccf27a0900d8380461e03baa5806ce1e0da
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 48e429a6379b0a13cb81f8db6fae27aa31409840
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75708921"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794608"
 ---
 # <a name="how-to-create-user-defined-exceptions-with-localized-exception-messages"></a>Jak utworzyć wyjątki zdefiniowane przez użytkownika przy użyciu zlokalizowanych komunikatów o wyjątkach
 
@@ -155,6 +155,11 @@ Aby utworzyć zlokalizowane komunikaty o wyjątkach:
     ```csharp
     var resourceManager = new ResourceManager("FULLY_QIALIFIED_NAME_OF_RESOURCE_FILE", Assembly.GetExecutingAssembly());
     throw new StudentNotFoundException(resourceManager.GetString("StudentNotFound"), "John");
+    ```
+
+    ```vb
+    Dim resourceManager As New ResourceManager("FULLY_QIALIFIED_NAME_OF_RESOURCE_FILE", Assembly.GetExecutingAssembly())
+    Throw New StudentNotFoundException(resourceManager.GetString("StudentNotFound"), "John")
     ```
 
     > [!NOTE]

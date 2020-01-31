@@ -2,12 +2,12 @@
 title: ICorDebugVariableSymbol, interfejs
 ms.date: 03/30/2017
 ms.assetid: 0e58b85e-69bd-41ff-bedb-8cdc8be6a7a2
-ms.openlocfilehash: 25ffa55eeeb82d6feaf5696ea96dae81774e3d70
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9d17bc92dcae9e906dfe18d7665fbf489d278234
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121914"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790869"
 ---
 # <a name="icordebugvariablesymbol-interface"></a>ICorDebugVariableSymbol, interfejs
 Pobiera informacje o symbolach debugowania dla zmiennej.  
@@ -16,11 +16,11 @@ Pobiera informacje o symbolach debugowania dla zmiennej.
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetName, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-getname-method.md)|Pobiera nazwę zmiennej.|  
-|[GetSize, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-getsize-method.md)|Pobiera rozmiar zmiennej w bajtach.|  
-|[GetSlotIndex, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-getslotindex-method.md)|Pobiera indeks gniazda zarządzanego zmiennej lokalnej.|  
-|[GetValue, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-getvalue-method.md)|Pobiera wartość zmiennej jako tablicę bajtów.|  
-|[SetValue, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-setvalue-method.md)|Przypisuje wartość tablicy bajtów do zmiennej.|  
+|[GetName, metoda](icordebugvariablesymbol-getname-method.md)|Pobiera nazwę zmiennej.|  
+|[GetSize, metoda](icordebugvariablesymbol-getsize-method.md)|Pobiera rozmiar zmiennej w bajtach.|  
+|[GetSlotIndex, metoda](icordebugvariablesymbol-getslotindex-method.md)|Pobiera indeks gniazda zarządzanego zmiennej lokalnej.|  
+|[GetValue, metoda](icordebugvariablesymbol-getvalue-method.md)|Pobiera wartość zmiennej jako tablicę bajtów.|  
+|[SetValue, metoda](icordebugvariablesymbol-setvalue-method.md)|Przypisuje wartość tablicy bajtów do zmiennej.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -38,5 +38,5 @@ Pobiera informacje o symbolach debugowania dla zmiennej.
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie](index.md)

@@ -1,5 +1,5 @@
 ---
-title: ICorDebugAssembly — Interfejs
+title: ICorDebugAssembly, interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugAssembly
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 9d657a28-6984-4c5e-8a54-89d20080baff
 topic_type:
 - apiref
-ms.openlocfilehash: dea3231e3bbb361b56254756c6d99b115f73e792
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ecd4ad31b8dad55e9538642a4dc652341bc84b97
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133969"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784673"
 ---
-# <a name="icordebugassembly-interface"></a>ICorDebugAssembly — Interfejs
+# <a name="icordebugassembly-interface"></a>ICorDebugAssembly, interfejs
 
 Reprezentuje zestaw.  
   
@@ -29,11 +29,11 @@ Reprezentuje zestaw.
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[EnumerateModules, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-enumeratemodules-method.md)|Pobiera moduł wyliczający dla modułów zawartych w zestawie.|  
-|[GetAppDomain, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-getappdomain-method.md)|Pobiera wskaźnik interfejsu do domeny aplikacji, która zawiera to wystąpienie `ICorDebugAssembly`.|  
-|[GetCodeBase, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-getcodebase-method.md)|Nie zaimplementowane w bieżącej wersji .NET Framework.|  
-|[GetName, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-getname-method.md)|Pobiera nazwę zestawu.|  
-|[GetProcess, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-getprocess-method.md)|Pobiera wystąpienie ICorDebugProcess, w którym jest uruchomiony zestaw.|  
+|[EnumerateModules, metoda](icordebugassembly-enumeratemodules-method.md)|Pobiera moduł wyliczający dla modułów zawartych w zestawie.|  
+|[GetAppDomain, metoda](icordebugassembly-getappdomain-method.md)|Pobiera wskaźnik interfejsu do domeny aplikacji, która zawiera to wystąpienie `ICorDebugAssembly`.|  
+|[GetCodeBase, metoda](icordebugassembly-getcodebase-method.md)|Nie zaimplementowane w bieżącej wersji .NET Framework.|  
+|[GetName, metoda](icordebugassembly-getname-method.md)|Pobiera nazwę zestawu.|  
+|[GetProcess, metoda](icordebugassembly-getprocess-method.md)|Pobiera wystąpienie ICorDebugProcess, w którym jest uruchomiony zestaw.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -51,4 +51,4 @@ Reprezentuje zestaw.
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

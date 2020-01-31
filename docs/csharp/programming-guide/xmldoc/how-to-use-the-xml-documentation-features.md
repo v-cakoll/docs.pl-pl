@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 5de94b1f1ab44f954b5bab9f8b5212c33325c19d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 57034fb835d4c82b5bf658e61ec78ef226c2551e
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75696717"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789772"
 ---
 # <a name="how-to-use-the-xml-documentation-features"></a>Używanie funkcji dokumentacji XML
 
@@ -20,7 +20,7 @@ Poniższy przykład zawiera podstawowe Omówienie typu, który został udokument
 
 [!code-csharp[csProgGuideDocComments#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#15)]
 
-Przykład generuje plik. XML o następującej zawartości:
+Przykład generuje plik *. XML* o następującej zawartości.
 
 ```xml
 <?xml version="1.0"?>
@@ -120,7 +120,7 @@ Dokumentacja XML zaczyna się od///. Podczas tworzenia nowego projektu kreatory 
 
 - Dokumentacja musi być poprawnie sformułowanym plikiem XML. Jeśli kod XML nie jest poprawnie sformułowany, generowane jest ostrzeżenie, a plik dokumentacji będzie zawierać komentarz informujący o wystąpieniu błędu.
 
-- Deweloperzy mogą bezpłatnie tworzyć własne zestawy tagów. Istnieje zalecany zestaw tagów (zobacz [zalecane Tagi dla komentarzy do dokumentacji](recommended-tags-for-documentation-comments.md)). Niektóre z zalecanych tagów mają specjalne znaczenie:
+- Deweloperzy mogą bezpłatnie tworzyć własne zestawy tagów. Istnieje [zalecany zestaw tagów](recommended-tags-for-documentation-comments.md). Niektóre z zalecanych tagów mają specjalne znaczenie:
 
   - Tag \<param > służy do opisywania parametrów. Jeśli jest używany, kompilator sprawdza, czy parametr istnieje i że wszystkie parametry zostały opisane w dokumentacji. Jeśli weryfikacja nie powiodła się, kompilator generuje ostrzeżenie.
 
@@ -133,7 +133,7 @@ Dokumentacja XML zaczyna się od///. Podczas tworzenia nowego projektu kreatory 
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../index.md)
+- [C#Przewodnik programowania](../index.md)
 - [-doc (C# opcje kompilatora)](../../language-reference/compiler-options/doc-compiler-option.md)
 - [Komentarze dokumentacji XML](./index.md)
 - [Procesor dokumentacji DocFX](https://dotnet.github.io/docfx/)

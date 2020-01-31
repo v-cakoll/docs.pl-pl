@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c3af1575-cbe6-457a-bc08-c53460edcbc8
 topic_type:
 - apiref
-ms.openlocfilehash: 0530ba742a739003bfa33079ad75cb1e6f5f5e59
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5e080e9aa89816b24aa2eb1b6b1be823922e86fb
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124017"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794518"
 ---
 # <a name="icordebugfunctiongetcurrentversionnumber-method"></a>ICorDebugFunction::GetCurrentVersionNumber — Metoda
 Pobiera numer wersji najnowszej edycji wykonanej do funkcji reprezentowanej przez ten obiekt ICorDebugFunction.  
@@ -38,7 +38,7 @@ HRESULT GetCurrentVersionNumber (
  określoną Wskaźnik do wartości całkowitej, która jest numerem wersji najnowszej edycji wykonanej w tej funkcji.  
   
 ## <a name="remarks"></a>Uwagi  
- Numer wersji najnowszej edycji tej funkcji może być większy niż numer wersji samej funkcji. Użyj metody [ICorDebugFunction2:: GetVersionNumber —](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-getversionnumber-method.md) lub [ICorDebugCode:: GetVersionNumber —](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getversionnumber-method.md) do pobrania numeru wersji funkcji.  
+ Numer wersji najnowszej edycji tej funkcji może być większy niż numer wersji samej funkcji. Użyj metody [ICorDebugFunction2:: GetVersionNumber —](icordebugfunction2-getversionnumber-method.md) lub [ICorDebugCode:: GetVersionNumber —](icordebugcode-getversionnumber-method.md) do pobrania numeru wersji funkcji.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  

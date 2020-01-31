@@ -8,16 +8,16 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: 92d267ee9e87e9d204fe76172ca7e0fe33cf1a1b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 1bb38436049e338ab6033ae3b6370732a457d520
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976578"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794226"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Wskazówki: powiązanie z danymi w aplikacjach hybrydowych
 
-Powiązanie źródła danych z kontrolką jest niezbędne do zapewnienia użytkownikom dostępu do danych źródłowych, niezależnie od tego, czy używasz [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], czy [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. W tym instruktażu pokazano, jak można używać powiązań danych w aplikacjach hybrydowych, które zawierają zarówno [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], jak i [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
+Powiązanie źródła danych z kontrolką jest niezbędne do zapewnienia użytkownikom dostępu do danych źródłowych, niezależnie od tego, czy używasz Windows Forms, czy [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. W tym instruktażu pokazano, jak można używać powiązań danych w aplikacjach hybrydowych, które zawierają zarówno Windows Forms, jak i [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
 
 Zadania przedstawione w tym instruktażu obejmują:
 
@@ -57,11 +57,11 @@ Następujące składniki są wymagane do przeprowadzenia tego instruktażu:
 
     - WindowsFormsIntegration
 
-    - System. Windows. Forms
+    - System.Windows.Forms
 
 3. Otwórz MainWindow. XAML w projektancie WPF.
 
-4. W <xref:System.Windows.Window> elementu Dodaj następujące [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] mapowania przestrzeni nazw.
+4. W <xref:System.Windows.Window> elementu Dodaj następujące Windows Forms mapowania przestrzeni nazw.
 
     ```xaml
     xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
@@ -113,7 +113,7 @@ Szczegóły każdego rekordu klienta są wyświetlane w kilku kontrolkach <xref:
 
 ## <a name="displaying-data-by-using-interoperation"></a>Wyświetlanie danych przy użyciu funkcji międzyoperacyjnych
 
-Zamówienia odpowiadające wybranemu klientowi są wyświetlane w kontrolce <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> o nazwie `dataGridView1`. Formant `dataGridView1` jest powiązany ze źródłem danych w pliku związanym z kodem. Formant <xref:System.Windows.Forms.Integration.WindowsFormsHost> jest elementem nadrzędnym tej kontrolki [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].
+Zamówienia odpowiadające wybranemu klientowi są wyświetlane w kontrolce <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> o nazwie `dataGridView1`. Formant `dataGridView1` jest powiązany ze źródłem danych w pliku związanym z kodem. Formant <xref:System.Windows.Forms.Integration.WindowsFormsHost> jest elementem nadrzędnym tej kontrolki Windows Forms.
 
 ### <a name="to-display-data-in-the-datagridview-control"></a>Aby wyświetlić dane w formancie DataGridView
 
@@ -157,7 +157,7 @@ Składnik <xref:System.Windows.Forms.BindingSource?displayProperty=nameWithType>
      [!code-csharp[WPFWithWFAndDatabinding#12](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#12)]
      [!code-vb[WPFWithWFAndDatabinding#12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#12)]
 
-4. Otwórz MainWindow. XAML.
+4. Open MainWindow.xaml.
 
 5. W widoku widok Projekt lub XAML wybierz element <xref:System.Windows.Window>.
 

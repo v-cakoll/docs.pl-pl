@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 41af93c7-e448-4251-8d4d-413d38c635f2
 topic_type:
 - apiref
-ms.openlocfilehash: 9e1a5ba65da09c90f33e5e8108c3bd91f3aee4a1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cfec84483d387630623f77c176c668171303dd0f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131293"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791991"
 ---
 # <a name="icordebugremotecreateprocessex-method"></a>ICorDebugRemote::CreateProcessEx — Metoda
 Uruchamia proces na maszynie zdalnej pod debugerem.  
@@ -47,7 +47,7 @@ HRESULT CreateProcessEx (
   
 ## <a name="parameters"></a>Parametry  
  `pRemoteTarget`  
- podczas Wskaźnik do [interfejsu ICorDebugRemoteTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md). Służy do określania komputera zdalnego, na którym zostanie uruchomiony proces.  
+ podczas Wskaźnik do [interfejsu ICorDebugRemoteTarget](icordebugremotetarget-interface.md). Służy do określania komputera zdalnego, na którym zostanie uruchomiony proces.  
   
  `lpApplicationName`  
  podczas Wskaźnik na ciąg zakończony znakiem null, który określa moduł, który ma zostać wykonany przez uruchomiony proces. Moduł jest wykonywany w kontekście zabezpieczeń procesu wywołującego.  
@@ -85,7 +85,7 @@ HRESULT CreateProcessEx (
  `ppProcess`  
  określoną Wskaźnik do adresu obiektu "ICorDebugProcess Interface", który reprezentuje proces.  
   
-## <a name="return-value"></a>Wartość zwracana  
+## <a name="return-value"></a>Wartość zwrócona  
  S_OK  
  Pomyślnie uruchomiono proces na maszynie zdalnej i zwróciło "interfejs ICorDebugProcess" do debugowania.  
   
@@ -106,7 +106,7 @@ HRESULT CreateProcessEx (
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugRemote, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
-- [ICorDebug, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [ICorDebugRemote, interfejs](icordebugremote-interface.md)
+- [ICorDebug, interfejs](icordebug-interface.md)
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

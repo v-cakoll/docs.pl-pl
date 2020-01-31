@@ -1,5 +1,5 @@
 ---
-title: ICorDebugModule2 — Interfejs
+title: ICorDebugModule2, interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugModule2
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 0847e64f-fdbe-4c96-8168-da20fdc84d80
 topic_type:
 - apiref
-ms.openlocfilehash: a3a1b658f4ab05c7029de907882fe5ab2513ccd8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 32774aacecf3e56510bc6f0670538a44fde794c9
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127885"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792990"
 ---
-# <a name="icordebugmodule2-interface"></a>ICorDebugModule2 — Interfejs
+# <a name="icordebugmodule2-interface"></a>ICorDebugModule2, interfejs
 
 Służy jako logiczne rozszerzenie interfejsu ICorDebugModule.  
   
@@ -29,11 +29,11 @@ Służy jako logiczne rozszerzenie interfejsu ICorDebugModule.
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[ApplyChanges, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-applychanges-method.md)|Stosuje zmiany w metadanych i zmiany w kodzie języka pośredniego firmy Microsoft (MSIL) do uruchomionego procesu.|  
-|[GetJITCompilerFlags, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-getjitcompilerflags-method.md)|Pobiera flagi kontrolujące kompilację just-in-Time (JIT) dla tego `ICorDebugModule2`.|  
-|[ResolveAssembly, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-resolveassembly-method.md)|Rozwiązuje zestaw, do którego odwołuje się określony token metadanych.|  
-|[SetJITCompilerFlags, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjitcompilerflags-method.md)|Ustawia flagi kontrolujące kompilację JIT dla tego `ICorDebugModule2`.|  
-|[SetJMCStatus, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjmcstatus-method.md)|Ustawia stan Tylko mój kod (JMC) dla wszystkich metod wszystkich klas w tym `ICorDebugModule2` do określonej wartości, z wyjątkiem tych w tablicy `pTokens`, która jest ustawiana na wartość odwrotną.|  
+|[ApplyChanges, metoda](icordebugmodule2-applychanges-method.md)|Stosuje zmiany w metadanych i zmiany w kodzie języka pośredniego firmy Microsoft (MSIL) do uruchomionego procesu.|  
+|[GetJITCompilerFlags, metoda](icordebugmodule2-getjitcompilerflags-method.md)|Pobiera flagi kontrolujące kompilację just-in-Time (JIT) dla tego `ICorDebugModule2`.|  
+|[ResolveAssembly, metoda](icordebugmodule2-resolveassembly-method.md)|Rozwiązuje zestaw, do którego odwołuje się określony token metadanych.|  
+|[SetJITCompilerFlags, metoda](icordebugmodule2-setjitcompilerflags-method.md)|Ustawia flagi kontrolujące kompilację JIT dla tego `ICorDebugModule2`.|  
+|[SetJMCStatus, metoda](icordebugmodule2-setjmcstatus-method.md)|Ustawia stan Tylko mój kod (JMC) dla wszystkich metod wszystkich klas w tym `ICorDebugModule2` do określonej wartości, z wyjątkiem tych w tablicy `pTokens`, która jest ustawiana na wartość odwrotną.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -51,4 +51,4 @@ Służy jako logiczne rozszerzenie interfejsu ICorDebugModule.
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

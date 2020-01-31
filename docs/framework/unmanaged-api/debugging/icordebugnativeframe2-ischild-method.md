@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e2aae09-49cb-4fbd-81e5-e29cd864a88b
 topic_type:
 - apiref
-ms.openlocfilehash: 539fa612234c4cc37bed5a8fd4b1e727a35b1d6f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 22722e4d602bdb9df9877b2199b4d4271a4d3105
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73096392"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792731"
 ---
 # <a name="icordebugnativeframe2ischild-method"></a>ICorDebugNativeFrame2::IsChild — Metoda
 Określa, czy bieżąca ramka jest ramką podrzędną.  
@@ -35,19 +35,19 @@ HRESULT IsChild([out] BOOL * pIsChild);
  `pIsChild`  
  określoną Wartość logiczna określająca, czy bieżąca ramka jest ramką podrzędną.  
   
-## <a name="return-value"></a>Wartość zwracana  
+## <a name="return-value"></a>Wartość zwrócona  
  Ta metoda zwraca następujące określone wartości HRESULT oraz błędy HRESULT wskazujące niepowodzenie metody.  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
 |S_OK|Pomyślnie zwrócono stan podrzędny.|  
 |E_FAIL|Nie można zwrócić stanu podrzędnego.|  
-|E_INVALIDARG|`pIsChild` ma wartość null.|  
+|E_INVALIDARG|Parametr `pIsChild` ma wartość null.|  
   
 ## <a name="exceptions"></a>Wyjątki  
   
 ## <a name="remarks"></a>Uwagi  
- Metoda `IsChild` zwraca `true`, jeśli obiekt ramki, dla którego wywoływana jest metoda, jest elementem podrzędnym innej ramki. W takim przypadku należy użyć metody [IsMatchingParentFrame —](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ismatchingparentframe-method.md) , aby sprawdzić, czy ramka jest nadrzędna.  
+ Metoda `IsChild` zwraca `true`, jeśli obiekt ramki, dla którego wywoływana jest metoda, jest elementem podrzędnym innej ramki. W takim przypadku należy użyć metody [IsMatchingParentFrame —](icordebugnativeframe2-ismatchingparentframe-method.md) , aby sprawdzić, czy ramka jest nadrzędna.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -60,6 +60,6 @@ HRESULT IsChild([out] BOOL * pIsChild);
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugNativeFrame2, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [ICorDebugNativeFrame2, interfejs](icordebugnativeframe2-interface.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie](index.md)

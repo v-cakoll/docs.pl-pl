@@ -5,12 +5,12 @@ helpviewer_keywords:
 - asynchronous calls [Visual Basic]
 - Web services [Visual Basic], accessing
 ms.assetid: ff8046f4-f1f2-4d8b-90b7-95e3f7415418
-ms.openlocfilehash: 0eeb358ba38836ba6302f98f9e3e0314b83510f0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d288cc1f2991a8f504dc9f1b206bba76fa378b75
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352120"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794563"
 ---
 # <a name="how-to-call-a-web-service-asynchronously-visual-basic"></a>Porady: asynchroniczne wywoływanie usługi sieci Web (Visual Basic)
 
@@ -23,11 +23,11 @@ Klasa proxy umożliwia synchroniczną wywoływanie metod usługi sieci Web, w kt
 > [!NOTE]
 > Ten kod nie działa w aplikacjach sieci Web, ponieważ ASP.NET nie obsługuje obiektu `My.WebServices`.
 
-### <a name="to-call-a-web-service-asynchronously"></a>Aby asynchronicznie wywołać usługę sieci Web
+## <a name="call-a-web-service-asynchronously"></a>Asynchroniczne wywoływanie usługi sieci Web
 
 1. Odwołuje się do usługi sieci Web DemoTemperatureService w `http://www.xmethods.net`. Adres to
 
-    ```
+    ```http
     http://www.xmethods.net/sd/2001/DemoTemperatureService.wsdl
     ```
 
@@ -68,5 +68,5 @@ Klasa proxy umożliwia synchroniczną wywoływanie metod usługi sieci Web, w kt
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Uzyskiwanie dostępu do usług sieci Web aplikacji](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)
-- [My.WebServices, obiekt](../../../visual-basic/language-reference/objects/my-webservices-object.md)
+- [Uzyskiwanie dostępu do usług sieci Web aplikacji](accessing-application-web-services.md)
+- [My.WebServices, obiekt](../../language-reference/objects/my-webservices-object.md)

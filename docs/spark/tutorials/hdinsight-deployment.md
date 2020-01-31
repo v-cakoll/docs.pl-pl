@@ -1,15 +1,15 @@
 ---
 title: Wdrażanie aplikacji platformy .NET dla Apache Spark w usłudze Azure HDInsight
 description: Dowiedz się, jak wdrożyć aplikację platformy .NET dla Apache Spark w usłudze HDInsight.
-ms.date: 05/17/2019
+ms.date: 01/23/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 3604aff5d1f138071c941ea85546af03185d722d
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 76a150879324640352aa36f753ec3d6e7342bcaf
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460720"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76860781"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>Samouczek: wdrażanie aplikacji .NET dla Apache Spark w usłudze Azure HDInsight
 
@@ -30,7 +30,7 @@ Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
 Przed rozpoczęciem wykonaj następujące zadania:
 
 * Jeśli nie masz subskrypcji platformy Azure, Utwórz [bezpłatne konto](https://azure.microsoft.com/free/).
-* Zaloguj się do [Azure Portal](https://portal.azure.com/).
+* Zaloguj się do [Portalu Azure](https://portal.azure.com/).
 * Zainstaluj Eksplorator usługi Azure Storage na komputerze z [systemem Windows](https://go.microsoft.com/fwlink/?LinkId=708343&clcid=0x409), [Linux](https://go.microsoft.com/fwlink/?LinkId=722418&clcid=0x409)lub [MacOS](https://go.microsoft.com/fwlink/?LinkId=708342&clcid=0x409) .
 * Ukończ [platformę .NET dla Apache Spark — Rozpocznij pracę w 10-minutowym](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro) samouczku.
 
@@ -59,8 +59,8 @@ Przed rozpoczęciem wykonaj następujące zadania:
 
     |Właściwość  |Opis  |
     |---------|---------|
-    |Ramach  | Z listy rozwijanej wybierz jedną z aktywnych subskrypcji platformy Azure. |
-    |Grupa zasobów | Określ, czy chcesz utworzyć nową grupę zasobów, czy użyć istniejącej. Grupa zasobów to kontener, który zawiera powiązane zasoby dla rozwiązania platformy Azure. |
+    |Subskrypcja usługi  | Z listy rozwijanej wybierz jedną z aktywnych subskrypcji platformy Azure. |
+    |Resource group | Określ, czy chcesz utworzyć nową grupę zasobów, czy użyć istniejącej. Grupa zasobów to kontener, który zawiera powiązane zasoby dla rozwiązania platformy Azure. |
     |Nazwa klastra | Nadaj nazwę klastrowi usługi HDInsight Spark.|
     |Lokalizacja   | Wybierz lokalizację grupy zasobów. Szablon używa tej lokalizacji do tworzenia klastra oraz domyślnego magazynu klastra. |
     |Typ klastra| Wybierz pozycję **Spark** jako typ klastra.|
@@ -76,7 +76,7 @@ Przed rozpoczęciem wykonaj następujące zadania:
     |Podstawowy typ magazynu|Użyj wartości domyślnej **usługi Azure Storage**.|
     |Metoda wyboru|Użyj wartości domyślnej **Wybierz z listy**.|
     |Podstawowe konto magazynu|Wybierz swoją subskrypcję i jedno z aktywnych kont magazynu w ramach tej subskrypcji.|
-    |wbudowane|Ten kontener to konkretny kontener obiektów BLOB na koncie magazynu, w którym klaster szuka plików do uruchomienia aplikacji w chmurze. Możesz nadać mu dowolną nazwę.|
+    |Container|Ten kontener to konkretny kontener obiektów BLOB na koncie magazynu, w którym klaster szuka plików do uruchomienia aplikacji w chmurze. Możesz nadać mu dowolną nazwę.|
 
 5. W obszarze **Recenzja + tworzenie**wybierz pozycję **Utwórz**. Utworzenie klastra trwa około 20 minut. Przed przejściem do następnego kroku należy utworzyć klaster.
 
@@ -86,7 +86,7 @@ Następnie opublikujesz *mySparkApp* utworzone w programie [.NET dla Apache Spar
 
 1. Uruchom następujące polecenia, aby opublikować *mySparkApp*:
 
-   **W systemie Windows:**
+   **Na Windows:**
 
    ```console
    cd mySparkApp
@@ -102,7 +102,7 @@ Następnie opublikujesz *mySparkApp* utworzone w programie [.NET dla Apache Spar
 
 2. Wykonaj następujące zadania w celu przesłania plików opublikowanych aplikacji, aby można je było łatwo przekazać do klastra usługi HDInsight.
 
-   **W systemie Windows:**
+   **Na Windows:**
 
    Przejdź do *mySparkApp/bin/Release/netcoreapp 3.0/Ubuntu. 16.04-x64*. Następnie kliknij prawym przyciskiem myszy folder **Publikowanie** i wybierz polecenie **Wyślij do > folder skompresowany (zip)** . Nadaj nowemu folderowi nazwę **Publish. zip**.
 
@@ -169,14 +169,14 @@ Po uruchomieniu klastra i przekazaniu plików na platformę Azure należy urucho
    ```bash
    $SPARK_HOME/bin/spark-submit \
    --master yarn \
-   --class org.apache.spark.deploy.DotnetRunner \
+   --class org.apache.spark.deploy.dotnet.DotnetRunner \
    wasbs://mycontainer@mystorageaccount.blob.core.windows.net/microsoft-spark-2.3.x-0.6.0.jar \
    wasbs://mycontainer@mystorageaccount.blob.core.windows.net/publish.zip mySparkApp
    ```
 
    Gdy aplikacja zostanie uruchomiona, zobaczysz tę samą tabelę Count wyrazów z uruchomienia lokalnego uruchamiania zarejestrowanego w konsoli programu. Gratulacje, uruchomiono pierwszą aplikację platformy .NET dla Apache Spark w chmurze!
 
-## <a name="clean-up-resources"></a>Czyszczenie zasobów
+## <a name="clean-up-resources"></a>Oczyszczanie zasobów
 
 Usługa HDInsight zapisuje dane w usłudze Azure Storage, dzięki czemu można bezpiecznie usunąć klaster, gdy nie jest używany. Opłaty są naliczone również za klaster usługi HDInsight, nawet wtedy, gdy nie jest on używany. Ze względu na to, że opłaty za klaster są dużo razy większe niż opłaty za magazyn, sprawia to, że należy usunąć klastry, gdy nie są używane.
 

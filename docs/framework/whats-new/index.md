@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: ab14e6cb7d9bd4c1571040280dc35233e9b89d43
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 538806627a31366d4b8597eb010a4bbe3f8f9202
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937976"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76860962"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Co nowego w programie .NET Framework
 
@@ -352,7 +352,7 @@ Obsługa dekompresji przy użyciu interfejsów API systemu Windows jest włączo
 
 .NET Framework 4.7.2 dodaje wiele nowych interfejsów API do typów <xref:System.Collections.Generic.SortedSet%601> i <xref:System.Collections.Generic.HashSet%601>. Należą do nich następujące elementy:
 
-- Metody `TryGetValue`, które zwiększają wzorzec try użyty w innych typach kolekcji do tych dwóch typów. Dostępne metody:
+- Metody `TryGetValue`, które zwiększają wzorzec try użyty w innych typach kolekcji do tych dwóch typów. Metody są następujące:
 
   - [Public bool HashSet —\<T >. TryGetValue (T equalValue, out T actualValue)](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
   - [Public bool SortedSet\<T >. TryGetValue (T equalValue, out T actualValue)](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
@@ -600,7 +600,7 @@ Ponadto najważniejszym fokusem w .NET Framework 4.7.1 jest ulepszony ułatwieni
 
 **Obsługa .NET Standard 2,0**
 
-[.NET Standard](../../standard/net-standard.md) definiuje zestaw interfejsów API, które muszą być dostępne dla każdej implementacji platformy .NET, która obsługuje tę wersję Standard. .NET Framework 4.7.1 w pełni obsługuje .NET Standard 2,0 i dodaje [około 200 interfejsów API](https://github.com/dotnet/standard/blob/master/netstandard/src/ApiCompatBaseline.net461.txt) , które są zdefiniowane w .NET Standard 2,0 i brakuje ich w .NET Framework 4.6.1, 4.6.2 i 4,7. (Należy zauważyć, że te wersje .NET Framework obsługują .NET Standard 2,0 tylko wtedy, gdy w systemie docelowym wdrożono również dodatkowe pliki obsługi .NET Standard). Aby uzyskać więcej informacji, zobacz "BCL-.NET Standard 2,0 Support" w blogu [.NET Framework środowiska uruchomieniowego 4.7.1 i kompilatora](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/) .
+[.NET Standard](../../standard/net-standard.md) definiuje zestaw interfejsów API, które muszą być dostępne dla każdej implementacji platformy .NET, która obsługuje tę wersję Standard. .NET Framework 4.7.1 w pełni obsługuje .NET Standard 2,0 i dodaje [około 200 interfejsów API](https://github.com/dotnet/standard/blob/master/src/netstandard/src/ApiCompatBaseline.net461.txt) , które są zdefiniowane w .NET Standard 2,0 i brakuje ich w .NET Framework 4.6.1, 4.6.2 i 4,7. (Należy zauważyć, że te wersje .NET Framework obsługują .NET Standard 2,0 tylko wtedy, gdy w systemie docelowym wdrożono również dodatkowe pliki obsługi .NET Standard). Aby uzyskać więcej informacji, zobacz "BCL-.NET Standard 2,0 Support" w blogu [.NET Framework środowiska uruchomieniowego 4.7.1 i kompilatora](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/) .
 
 **Obsługa konstruktorów konfiguracji**
 
@@ -784,7 +784,7 @@ Interfejsy API drukowania WPF w klasie <xref:System.Printing.PrintQueue?displayP
 
 - [Kategorie znaków](#Strings)
 
-- [Kryptografia](#Crypto462)
+- [Cryptography](#Crypto462)
 
 - [SqlClient](#SQLClient)
 
@@ -1033,7 +1033,7 @@ Po włączeniu puli połączeń i przekroczeniu limitu czasu lub innego błędu 
 
 To zachowanie nie jest pożądane podczas łączenia się z bazami danych Azure SQL, ponieważ próby połączenia mogą zakończyć się niepowodzeniem z błędami przejściowymi, które są zwykle przywracane szybko. Aby lepiej zoptymalizować środowisko ponownej próby połączenia, zachowanie w okresie blokowania puli połączeń zostanie usunięte w przypadku niepowodzenia połączeń z bazami danych SQL Azure.
 
-Dodanie nowego słowa kluczowego `PoolBlockingPeriod` umożliwia wybranie okresu blokowania najlepiej dopasowanego do Twojej aplikacji. Wartości są następujące:
+Dodanie nowego słowa kluczowego `PoolBlockingPeriod` umożliwia wybranie okresu blokowania najlepiej dopasowanego do Twojej aplikacji. Dostępne są następujące wartości:
 
 <xref:System.Data.SqlClient.PoolBlockingPeriod.Auto>
 
@@ -1248,7 +1248,7 @@ Skonwertowane aplikacje klasyczne uzyskują tożsamość aplikacji podobną do t
 
 .NET Framework 4.6.1 zawiera nowe funkcje w następujących obszarach:
 
-- [Kryptografia](#Crypto)
+- [Cryptography](#Crypto)
 
 - [ADO.NET](#ADO.NET461)
 
@@ -1468,7 +1468,7 @@ W programie .NET 2015 wprowadzono .NET Framework 4,6 i .NET Core. Niektóre nowe
 
 - **Udoskonalenia modułu ładującego zestawy**
 
-  Program ładujący zestawy wydajniej korzysta z pamięci dzięki usuwaniu z niej zestawów IL po załadowaniu odpowiadających im obrazów NGEN. Ta zmiana zmniejsza użycie pamięci wirtualnej, co jest szczególnie korzystne w przypadku dużych aplikacji 32-bitowych (takich jak Visual Studio), oraz powoduje mniejsze zużycie pamięci fizycznej.
+  Program ładujący zestawy zużywa teraz pamięć bardziej wydajnie, zwalniając zestawy IL po załadowaniu odpowiedniego obrazu NGEN. Ta zmiana zmniejsza ilość pamięci wirtualnej, co jest szczególnie przydatne w przypadku dużych aplikacji 32-bitowych (takich jak Visual Studio), a także umożliwia zapisanie pamięci fizycznej.
 
 - **Zmiany w bibliotece klas podstawowych**
 

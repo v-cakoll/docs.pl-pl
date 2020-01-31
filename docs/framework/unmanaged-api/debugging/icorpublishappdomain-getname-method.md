@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6ef8ac9b-9803-4b65-8b13-25f3e0b1bc6b
 topic_type:
 - apiref
-ms.openlocfilehash: 2f91891164f1f80617cab10347eb4a7a08762c10
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4325d61d12a66b17f88e5e368cbbc7806d0a3ec5
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140351"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790710"
 ---
 # <a name="icorpublishappdomaingetname-method"></a>ICorPublishAppDomain::GetName — Metoda
-Pobiera nazwę domeny aplikacji reprezentowanej przez ten [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md).  
+Pobiera nazwę domeny aplikacji reprezentowanej przez ten [ICorPublishAppDomain](icorpublishappdomain-interface.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -49,7 +49,7 @@ HRESULT GetName (
 ## <a name="remarks"></a>Uwagi  
  Jeśli `szName` ma wartość różną od null, Metoda `GetName` kopiuje do `szName`znaki `cchName` (w tym terminator wartości null). Jeśli w `pcchName`jest zwracana wartość inna niż null, rzeczywista liczba znaków w nazwie (łącznie z terminatorem wartości null) jest przechowywana w tablicy `szName`.  
   
- Metoda `GetName` zwraca wartość HRESULT S_OK, niezależnie od liczby skopiowanych znaków.  
+ Metoda `GetName` zwraca S_OK HRESULT, niezależnie od liczby skopiowanych znaków.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -62,4 +62,4 @@ HRESULT GetName (
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorPublishAppDomain, interfejs](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)
+- [ICorPublishAppDomain, interfejs](icorpublishappdomain-interface.md)

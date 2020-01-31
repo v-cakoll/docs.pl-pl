@@ -5,20 +5,20 @@ helpviewer_keywords:
 - localization [WPF interoperability]
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-ms.openlocfilehash: 281afad0c0de856ca67abc74c65aff0e7afc3e01
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b406d539f2446824027e9462c8ecbe20c18cfb27
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976502"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794129"
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>Wskazówki: lokalizacja aplikacji hybrydowej
 
-W tym instruktażu pokazano, jak lokalizować elementy [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] w aplikacji hybrydowej opartej na [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].
+W tym instruktażu pokazano, jak lokalizować elementy [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] w aplikacji hybrydowej opartej na Windows Forms.
 
 Zadania przedstawione w tym instruktażu obejmują:
 
-- Tworzenie projektu hosta [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].
+- Tworzenie projektu hosta Windows Forms.
 
 - Dodawanie lokalizowalnej zawartości.
 
@@ -40,7 +40,7 @@ Następujące składniki są wymagane do przeprowadzenia tego instruktażu:
 
 ## <a name="creating-the-windows-forms-host-project"></a>Tworzenie projektu hosta Windows Forms
 
-Pierwszym krokiem jest utworzenie projektu aplikacji [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] i dodanie elementu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] z zawartością, która zostanie zlokalizowana.
+Pierwszym krokiem jest utworzenie projektu aplikacji Windows Forms i dodanie elementu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] z zawartością, która zostanie zlokalizowana.
 
 ### <a name="to-create-the-host-project"></a>Aby utworzyć projekt hosta
 
@@ -52,7 +52,7 @@ Pierwszym krokiem jest utworzenie projektu aplikacji [!INCLUDE[TLA#tla_winforms]
 
 ## <a name="adding-localizable-content"></a>Dodawanie lokalizowalnej zawartości
 
-Następnie dodasz kontrolkę [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] etykieta i ustawisz zawartość elementu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] na Lokalizowalny ciąg.
+Następnie dodasz kontrolkę Windows Forms etykieta i ustawisz zawartość elementu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] na Lokalizowalny ciąg.
 
 ### <a name="to-add-localizable-content"></a>Aby dodać lokalizowalną zawartość
 

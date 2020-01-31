@@ -2,12 +2,12 @@
 title: 'ICorDebugSymbolProvider:: GetMethodProps —, Metoda'
 ms.date: 03/30/2017
 ms.assetid: 8f836b80-b7a5-460b-bf76-5f0e45652aea
-ms.openlocfilehash: 811106216e1e454ddf342af1578f74c80ba2acc9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 58642d0a9b1cfe1fd969f39fa7e5ab22a8dbfa05
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138832"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791584"
 ---
 # <a name="icordebugsymbolprovidergetmethodprops-method"></a>ICorDebugSymbolProvider:: GetMethodProps —, Metoda
 Zwraca informacje o właściwościach metody, takich jak token metadanych metody i informacje o jego ogólnych parametrach, w którym znajduje się względny adres wirtualny (RVA) w tej metodzie.  
@@ -61,6 +61,6 @@ HRESULT GetMethodProps(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [GetTypeProps, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-gettypeprops-method.md)
-- [ICorDebugSymbolProvider, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [GetTypeProps, metoda](icordebugsymbolprovider-gettypeprops-method.md)
+- [ICorDebugSymbolProvider, interfejs](icordebugsymbolprovider-interface.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

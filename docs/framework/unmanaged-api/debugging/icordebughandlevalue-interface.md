@@ -1,5 +1,5 @@
 ---
-title: ICorDebugHandleValue — Interfejs
+title: ICorDebugHandleValue, interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugHandleValue
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 66fcd2b8-ac66-414b-83a8-75a925e17772
 topic_type:
 - apiref
-ms.openlocfilehash: 94472e84b73cdffe09505088b1e7fbc20a209bc3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 406468fc6e2b68e8c8e1dfbd0f0f18cce3f013ab
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138483"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794457"
 ---
-# <a name="icordebughandlevalue-interface"></a>ICorDebugHandleValue — Interfejs
+# <a name="icordebughandlevalue-interface"></a>ICorDebugHandleValue, interfejs
 
 Podklasa elementu ICorDebugReferenceValue, która reprezentuje wartość odniesienia, do której debuger utworzył dojście do wyrzucania elementów bezużytecznych.  
   
@@ -29,8 +29,8 @@ Podklasa elementu ICorDebugReferenceValue, która reprezentuje wartość odniesi
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[Dispose, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebughandlevalue-dispose-method.md)|Zwalnia dojście, do którego odwołuje się ten obiekt `ICorDebugHandleValue` bez jawnego zwalniania wskaźnika interfejsu.|  
-|[GetHandleType, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebughandlevalue-gethandletype-method.md)|Pobiera wartość CorDebugHandleType —, która opisuje rodzaj dojścia, do którego odwołuje się ten `ICorDebugHandleValue`.|  
+|[Dispose, metoda](icordebughandlevalue-dispose-method.md)|Zwalnia dojście, do którego odwołuje się ten obiekt `ICorDebugHandleValue` bez jawnego zwalniania wskaźnika interfejsu.|  
+|[GetHandleType, metoda](icordebughandlevalue-gethandletype-method.md)|Pobiera wartość CorDebugHandleType —, która opisuje rodzaj dojścia, do którego odwołuje się ten `ICorDebugHandleValue`.|  
   
 ## <a name="remarks"></a>Uwagi  
  Obiekt `ICorDebugReferenceValue` jest unieważniony przez przerwanie w trakcie wykonywania debugowanego kodu. `ICorDebugHandleValue` utrzymuje odwołanie poprzez przerwy i kontynuacje, dopóki nie zostanie jawnie wydane.  
@@ -49,4 +49,4 @@ Podklasa elementu ICorDebugReferenceValue, która reprezentuje wartość odniesi
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

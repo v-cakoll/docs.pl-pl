@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 12/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4781e39a0c8827adb6ab0155d5215645242208a5
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: eb61ad85580310c7becc2a1a2237efe188fbecf0
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348154"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794582"
 ---
 # <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>Samouczek: automatyczne Inspekcja wizualizacji przy użyciu uczenia transferowego za pomocą interfejsu API klasyfikacji obrazów ML.NET
 
@@ -84,7 +84,7 @@ Teraz, gdy znasz już ogólną wiedzę o uczeniu przenoszenia i interfejsie API 
 1. Zainstaluj pakiet NuGet **Microsoft.ml** w wersji **1.4.0** :
     1. W Eksplorator rozwiązań kliknij prawym przyciskiem myszy projekt i wybierz polecenie **Zarządzaj pakietami NuGet**.
     1. Wybierz pozycję "nuget.org" jako źródło pakietu.
-    1. Wybierz kartę **Przeglądaj**.
+    1. Wybierz kartę **przeglądanie** .
     1. Zaznacz pole wyboru **Uwzględnij wersję wstępną** .
     1. Wyszukaj **Microsoft.ml**.
     1. Wybierz przycisk **Instaluj** .
@@ -140,10 +140,10 @@ W tym samouczku używane są tylko obrazy talii mostków.
 
         `ModelInput` zawiera następujące właściwości:
 
-        - `ImagePath` to w pełni kwalifikowana ścieżka, w której jest przechowywany obraz.
-        - `Label` to kategoria, do której należy obraz. Jest to wartość do przewidywania.
         - `Image` to `byte[]` reprezentacja obrazu. Model oczekuje, że dane obrazu mają być tego typu dla szkolenia.
         - `LabelAsKey` jest liczbową reprezentacją `Label`.
+        - `ImagePath` to w pełni kwalifikowana ścieżka, w której jest przechowywany obraz.
+        - `Label` to kategoria, do której należy obraz. Jest to wartość do przewidywania.
 
         Tylko `Image` i `LabelAsKey` są używane do uczenia modelu i podejmowania prognoz. Właściwości `ImagePath` i `Label` są przechowywane dla wygody dostępu do oryginalnej nazwy i kategorii pliku obrazu.
 
@@ -171,7 +171,7 @@ Gdy dane szkoleniowe i weryfikacyjne nie zmieniają się często, dobrym rozwią
 
     [!code-csharp [DefinePaths](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L15-L17)]
 
-1. Następnie zainicjuj zmienną `mlContext` z nowym wystąpieniem [MLContext](xref:Microsoft.ML.MLContext).
+1. Zainicjuj zmienną `mlContext` z nowym wystąpieniem [MLContext](xref:Microsoft.ML.MLContext).
 
     [!code-csharp [MLContext](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L19)]
 

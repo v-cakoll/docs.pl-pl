@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 704a8893-ac56-43b4-90ea-715f38ccb40e
 topic_type:
 - apiref
-ms.openlocfilehash: 1f28a4b4acd9d6050d33b9824aa49a9b9041b59b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 66b3934d000b4f000c368acb1f57c8fc82a5c453
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73111251"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793621"
 ---
 # <a name="iclrmetadatalocatorgetmetadata-method"></a>ICLRMetadataLocator::GetMetadata — Metoda
 Wywoływane przez usługi dostępu do danych środowiska uruchomieniowego języka wspólnego (CLR) do pobierania metadanych obrazu.  
@@ -84,4 +84,4 @@ HRESULT GetMetadata(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICLRMetadataLocator, interfejs](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-interface.md)
+- [ICLRMetadataLocator, interfejs](iclrmetadatalocator-interface.md)

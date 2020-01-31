@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: d6518612c213d21c2dc7d80878121ccd3b7e2abb
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7fd62e0d3d9173f3b75882131e57126075c0677f
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449852"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76863312"
 ---
 # <a name="icorprofilerinfo10enumerateobjectreferences-method"></a>ICorProfilerInfo10:: EnumerateObjectReferences, Metoda
 
@@ -30,20 +30,23 @@ HRESULT EnumerateObjectReferences( [in] ObjectID objectId,
                                    [in] void* clientData);
 ```
 
-#### <a name="parameters"></a>Parametry
+## <a name="parameters"></a>Parametry
 
-`objectId` \
-podczas Obiekt, na którym mają zostać wyliczone odwołania.
+- `objectId`
 
-`callback` \
-podczas Funkcja, która będzie wywoływana z odwołaniami dla obiektu.
+  \[w] obiekt, na którym mają zostać wyliczone odwołania.
 
-`clientData` \
-podczas Dane dostarczone przez profiler do przekazania do funkcji `callback`.
+- `callback`
+
+  \[w] funkcja, która zostanie wywołana z odwołaniami dla obiektu.
+
+- `clientData`
+
+  \[in] dane dostarczone przez profiler do przekazania do funkcji `callback`.
 
 ## <a name="remarks"></a>Uwagi
 
-Metoda `EnumerateObjectReferences` jest podobna do [ObjectReferences —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md), z tą różnicą, że wyszukuje odwołania na żądanie profilera, zamiast wstępnie przydzielić tablicę do przechowywania odwołań.
+Metoda `EnumerateObjectReferences` jest podobna do [ObjectReferences —](icorprofilercallback-objectreferences-method.md), z tą różnicą, że wyszukuje odwołania na żądanie profilera, zamiast wstępnie przydzielić tablicę do przechowywania odwołań.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -57,4 +60,4 @@ Metoda `EnumerateObjectReferences` jest podobna do [ObjectReferences —](../../
 
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerInfo10, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [ICorProfilerInfo10, interfejs](icorprofilerinfo10-interface.md)

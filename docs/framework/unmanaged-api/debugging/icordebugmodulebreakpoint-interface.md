@@ -1,5 +1,5 @@
 ---
-title: ICorDebugModuleBreakpoint — Interfejs
+title: ICorDebugModuleBreakpoint, interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugModuleBreakpoint
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 34667162-f314-475f-ae1b-ce9cb0fcbb83
 topic_type:
 - apiref
-ms.openlocfilehash: 2bc5c21d2e1256d0e79390bea10aafcdefbed0d3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: df3ad3fa4ef4eeee7e23ca1629da7a8b8ce09711
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73110334"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792923"
 ---
-# <a name="icordebugmodulebreakpoint-interface"></a>ICorDebugModuleBreakpoint — Interfejs
+# <a name="icordebugmodulebreakpoint-interface"></a>ICorDebugModuleBreakpoint, interfejs
 
 Zapewnia dostęp do określonych modułów. Ten interfejs jest podklasą interfejsu ICorDebugBreakpoint.  
   
@@ -29,7 +29,7 @@ Zapewnia dostęp do określonych modułów. Ten interfejs jest podklasą interfe
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetModule, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmodulebreakpoint-getmodule-method.md)|Pobiera wskaźnik interfejsu do ICorDebugModule, który odwołuje się do modułu, w którym ustawiony jest ten punkt przerwania.|  
+|[GetModule, metoda](icordebugmodulebreakpoint-getmodule-method.md)|Pobiera wskaźnik interfejsu do ICorDebugModule, który odwołuje się do modułu, w którym ustawiony jest ten punkt przerwania.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -47,4 +47,4 @@ Zapewnia dostęp do określonych modułów. Ten interfejs jest podklasą interfe
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

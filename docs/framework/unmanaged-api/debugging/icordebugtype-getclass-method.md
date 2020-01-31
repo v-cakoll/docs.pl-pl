@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2644f48b-db3c-429f-ae62-76f1c98a1af5
 topic_type:
 - apiref
-ms.openlocfilehash: 3a895f432ed640cc35a492df0c91cece34893062
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d403a8bfba3599a60d8af72307590f5a569480dd
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122366"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791294"
 ---
 # <a name="icordebugtypegetclass-method"></a>ICorDebugType::GetClass — Metoda
 Pobiera wskaźnik interfejsu do ICorDebugClass, który reprezentuje typ ogólny bez wystąpień.  
@@ -38,7 +38,7 @@ HRESULT GetClass (
  określoną Wskaźnik do adresu interfejsu `ICorDebugClass`, który reprezentuje typ ogólny bez wystąpień.  
   
 ## <a name="remarks"></a>Uwagi  
- `GetClass` można wywołać tylko w określonych warunkach. Wywołaj metodę [ICorDebugType:: GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) przed wywołaniem `GetClass`. Jeśli `ICorDebugType::GetType` zwraca wartość CorElementType —, która jest ELEMENT_TYPE_CLASS lub ELEMENT_TYPE_VALUETYPE, można wywołać `GetClass`, aby uzyskać typ nieskonkretyzowany dla typu ogólnego.  
+ `GetClass` można wywołać tylko w określonych warunkach. Wywołaj metodę [ICorDebugType:: GetType](icordebugtype-gettype-method.md) przed wywołaniem `GetClass`. Jeśli `ICorDebugType::GetType` zwraca wartość CorElementType —, która jest ELEMENT_TYPE_CLASS lub ELEMENT_TYPE_VALUETYPE, `GetClass` można wywołać, aby uzyskać typ nieskonkretyzowany dla typu ogólnego.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  

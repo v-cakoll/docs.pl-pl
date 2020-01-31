@@ -5,14 +5,14 @@ helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: 2c3ba0e12d0d7e6a568c4c3741d99b901fca2722
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: bc72cade9ce6edddb88d741a3424405bba0a7ad8
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75696522"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793395"
 ---
-# <a name="processing-the-xml-file-c-programming-guide"></a>Przetwarzanie pliku XML (Przewodnik programowania w języku C#)
+# <a name="processing-the-xml-file-c-programming-guide"></a>Przetwarzanie pliku XML (C# Przewodnik programowania)
 
 Kompilator generuje ciąg identyfikatora dla każdej konstrukcji w kodzie, który jest oznaczony do generowania dokumentacji. (Aby uzyskać informacje na temat znakowania kodu, zobacz [zalecane Tagi dla komentarzy do dokumentacji](./recommended-tags-for-documentation-comments.md)). Ciąg identyfikatora jednoznacznie identyfikuje konstrukcję. Programy, które przetwarzają plik XML, mogą używać ciągu identyfikatora do identyfikowania odpowiednich .NET Framework metadanych/elementu odbicia, do których odnosi się dokumentacja.
 
@@ -27,7 +27,7 @@ Podczas generowania ciągów identyfikatorów kompilator przestrzega następują
     |Znak|Opis|
     |---------------|-----------------|
     |N|{1&gt; — przestrzeń nazw&lt;1}<br /><br /> Nie można dodać komentarzy do dokumentacji do przestrzeni nazw, ale możesz wprowadzić do nich odwołania cref, jeśli są obsługiwane.|
-    |T|Typ: Klasa, interfejs, struktura, Wyliczenie, delegat|
+    |T|Typ: Klasa, interfejs, struktura, Wyliczenie lub delegat|
     |F|pole|
     |P|Właściwość (w tym indeksatory lub inne właściwości indeksowane)|
     |M|Metoda (łącznie z takimi metodami specjalnymi jak konstruktory, operatory itd.)|
@@ -84,6 +84,6 @@ W poniższych przykładach pokazano, jak generowane są ciągi identyfikatorów 
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../index.md)
+- [C#Przewodnik programowania](../index.md)
 - [-doc (C# opcje kompilatora)](../../language-reference/compiler-options/doc-compiler-option.md)
 - [Komentarze dokumentacji XML](./index.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9c421bb0-e647-4b2d-a986-f3d578cc7f20
 topic_type:
 - apiref
-ms.openlocfilehash: b062faffc22e444bd4d3b4a0c67f2a08d7af3560
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ddfe8cee8fdbca910ffa4f6989b1359ae5f7b11f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131105"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794380"
 ---
 # <a name="icordebugheapvalue3-interface"></a>ICorDebugHeapValue3 — Interfejs
 Udostępnia właściwości blokady monitora obiektów. Ten interfejs rozszerza interfejsy ICorDebugHeapValue i ICorDebugHeapValue2.  
@@ -28,8 +28,8 @@ Udostępnia właściwości blokady monitora obiektów. Ten interfejs rozszerza i
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetThreadOwningMonitorLock, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue3-getthreadowningmonitorlock-method.md)|Zwraca zarządzany wątek, który jest właścicielem blokady monitora dla tego obiektu.|  
-|[GetMonitorEventWaitList, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue3-getmonitoreventwaitlist-method.md)|Udostępnia uporządkowaną listę wątków, które są umieszczane w kolejce dla zdarzenia, które jest skojarzone z blokadą monitora.|  
+|[GetThreadOwningMonitorLock, metoda](icordebugheapvalue3-getthreadowningmonitorlock-method.md)|Zwraca zarządzany wątek, który jest właścicielem blokady monitora dla tego obiektu.|  
+|[GetMonitorEventWaitList, metoda](icordebugheapvalue3-getmonitoreventwaitlist-method.md)|Udostępnia uporządkowaną listę wątków, które są umieszczane w kolejce dla zdarzenia, które jest skojarzone z blokadą monitora.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -47,5 +47,5 @@ Udostępnia właściwości blokady monitora obiektów. Ten interfejs rozszerza i
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie](index.md)

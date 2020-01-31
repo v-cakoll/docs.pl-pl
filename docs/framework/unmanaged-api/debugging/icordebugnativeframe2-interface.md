@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 52a80838-af36-4399-bc97-d8a4c6d76df2
 topic_type:
 - apiref
-ms.openlocfilehash: bff6dea0e870cf62734fa583eefa481c594481b1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 22a3f39bc1f9b4e6cad1db4fd0a6480b7c04e8fa
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73096521"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792758"
 ---
 # <a name="icordebugnativeframe2-interface"></a>ICorDebugNativeFrame2 — Interfejs
 Dostarcza metody testowania relacji podrzędnych i nadrzędnych ramek.  
@@ -28,9 +28,9 @@ Dostarcza metody testowania relacji podrzędnych i nadrzędnych ramek.
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[IsChild, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ischild-method.md)|Określa, czy bieżąca ramka jest ramką podrzędną.|  
-|[IsMatchingParentFrame, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ismatchingparentframe-method.md)|Określa, czy określona ramka jest elementem nadrzędnym bieżącej ramki.|  
-|[GetStackParameterSize, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-getstackparametersize-method.md)|Zwraca skumulowany rozmiar parametrów na stosie w systemach operacyjnych x86.|  
+|[IsChild, metoda](icordebugnativeframe2-ischild-method.md)|Określa, czy bieżąca ramka jest ramką podrzędną.|  
+|[IsMatchingParentFrame, metoda](icordebugnativeframe2-ismatchingparentframe-method.md)|Określa, czy określona ramka jest elementem nadrzędnym bieżącej ramki.|  
+|[GetStackParameterSize, metoda](icordebugnativeframe2-getstackparametersize-method.md)|Zwraca skumulowany rozmiar parametrów na stosie w systemach operacyjnych x86.|  
   
 ## <a name="remarks"></a>Uwagi  
  Ten interfejs logicznie rozszerza interfejs "ICorDebugNativeFrame".  
@@ -49,5 +49,5 @@ Dostarcza metody testowania relacji podrzędnych i nadrzędnych ramek.
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie](index.md)

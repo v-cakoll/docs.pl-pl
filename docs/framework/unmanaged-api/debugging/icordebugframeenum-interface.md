@@ -1,5 +1,5 @@
 ---
-title: ICorDebugFrameEnum — Interfejs
+title: ICorDebugFrameEnum, interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugFrameEnum
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: ee3f85d3-044e-46b8-945c-93ebfa5d9e91
 topic_type:
 - apiref
-ms.openlocfilehash: 3a33d25ee13e12a2612d0132da1dc84c24f2f95b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6cc1ef5f778902efaa53156fbefe334046c82114
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73090540"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794539"
 ---
-# <a name="icordebugframeenum-interface"></a>ICorDebugFrameEnum — Interfejs
+# <a name="icordebugframeenum-interface"></a>ICorDebugFrameEnum, interfejs
 
 Implementuje metody ICorDebugEnum i wylicza tablice ICorDebugFrame.  
   
@@ -29,7 +29,7 @@ Implementuje metody ICorDebugEnum i wylicza tablice ICorDebugFrame.
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[Next, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugframeenum-next-method.md)|Pobiera określoną liczbę wystąpień `ICorDebugFrame` z wyliczenia, rozpoczynając od bieżącego położenia.|  
+|[Next, metoda](icordebugframeenum-next-method.md)|Pobiera określoną liczbę wystąpień `ICorDebugFrame` z wyliczenia, rozpoczynając od bieżącego położenia.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -47,4 +47,4 @@ Implementuje metody ICorDebugEnum i wylicza tablice ICorDebugFrame.
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

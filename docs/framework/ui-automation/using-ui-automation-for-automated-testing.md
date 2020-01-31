@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing, UI Automation
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
-ms.openlocfilehash: 59c4076712823faa1602448653680a31b8cd8c69
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 5668e14cd0aed33a29fd43661363131879419e61
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741068"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793921"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>Korzystanie z automatyzacji interfejsu użytkownika do testów automatycznych
 > [!NOTE]
@@ -37,7 +37,7 @@ ms.locfileid: "75741068"
 > W przypadku innych modeli ułatwień dostępu deweloperzy muszą zbierać informacje bezpośrednio z poszczególnych przycisków, menu lub innych kontrolek. Niestety, każdy typ kontrolki zawiera dziesiątki drobnych różnic. Innymi słowy, mimo że dziesięć odmian przycisku może działać w ten sam sposób i wykonać tę samą funkcję, muszą one być traktowane jako unikatowe formanty. Nie ma możliwości, aby wiedzieć, że te kontrolki są funkcjonalnie równoważne. Wzorce formantów zostały opracowane w celu reprezentowania tych typowych zachowań kontroli. Aby uzyskać więcej informacji, zobacz [Wzorce formantów automatyzacji interfejsu użytkownika — omówienie](ui-automation-control-patterns-overview.md).  
   
 ### <a name="implementing-ui-automation"></a>Implementowanie automatyzacji interfejsu użytkownika  
- Jak wspomniano wcześniej, bez jednolitego modelu zapewnianego przez [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], narzędzia testowe i deweloperzy muszą znać informacje specyficzne dla platformy, aby uwidocznić właściwości i zachowania kontroli w tej strukturze. Ponieważ w systemach operacyjnych Windows istnieje kilka różnych struktur interfejsu użytkownika, w tym Win32, [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]i Windows Presentation Foundation (WPF), może to być zadanie zniechęcające do testowania wielu aplikacji z kontrolkami, które wyglądają podobnie. Na przykład poniższa tabela zawiera opis nazw właściwości specyficznych dla platformy wymaganych do pobrania nazwy (lub tekstu) skojarzonej z kontrolką przycisku i pokazuje właściwość o pojedynczej równoważnej [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
+ Jak wspomniano wcześniej, bez jednolitego modelu zapewnianego przez [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], narzędzia testowe i deweloperzy muszą znać informacje specyficzne dla platformy, aby uwidocznić właściwości i zachowania kontroli w tej strukturze. Ponieważ w systemach operacyjnych Windows istnieje kilka różnych struktur interfejsu użytkownika, w tym Win32, Windows Forms i Windows Presentation Foundation (WPF), może to być zadanie zniechęcające do testowania wielu aplikacji z kontrolkami, które wygląda podobnie. Na przykład poniższa tabela zawiera opis nazw właściwości specyficznych dla platformy wymaganych do pobrania nazwy (lub tekstu) skojarzonej z kontrolką przycisku i pokazuje właściwość o pojedynczej równoważnej [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
   
 |Typ formantu automatyzacji interfejsu użytkownika|Struktura interfejsu użytkownika|Właściwość specyficzne dla platformy|Właściwość automatyzacji interfejsu użytkownika|  
 |--------------------------------|------------------|---------------------------------|----------------------------|  
@@ -54,7 +54,7 @@ ms.locfileid: "75741068"
   
  Komplikacja, która wynika z zautomatyzowanych aplikacji, jest trudna do synchronizowania testów z dynamicznym elementem docelowym. Na przykład kontrolka pole listy, taka jak zawarta w Menedżerze zadań systemu Windows, wyświetla listę aktualnie uruchomionych aplikacji. Ponieważ elementy w polu listy są aktualizowane dynamicznie poza kontrolą aplikacji testowej, próba powtórzenia wyboru określonego elementu w polu listy z jakąkolwiek spójnością jest niemożliwe. Podobne problemy mogą również wystąpić podczas próby powtórzenia prostych zmian fokusu w [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)], który jest poza kontrolą aplikacji testowej.  
   
-### <a name="programmatic-access"></a>Dostęp programowy  
+### <a name="programmatic-access"></a>Dostęp programistyczny  
  Dostęp programistyczny umożliwia imitację, poprzez kod, wszelką interakcję i środowisko udostępniane przez tradycyjne mysz i wprowadzanie z klawiatury. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] umożliwia programistyczny dostęp za poorednictwem pięciu składników:  
   
 - Drzewo [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ułatwia nawigację przez strukturę [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Drzewo jest kompilowane z kolekcji. Aby uzyskać więcej informacji, zobacz [drzewo automatyzacji interfejsu użytkownika — omówienie](ui-automation-tree-overview.md)  

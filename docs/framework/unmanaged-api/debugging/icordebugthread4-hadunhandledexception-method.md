@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 05558daa-39e2-4c38-aeaf-e2aec4a09468
 topic_type:
 - apiref
-ms.openlocfilehash: d9f0eff35dbe0058398d2d1c851ef85effa9cd28
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f558a4c94afeb69f58605958ddcb91e4be772c39
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122423"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791353"
 ---
 # <a name="icordebugthread4hadunhandledexception-method"></a>ICorDebugThread4::HadUnhandledException — Metoda
 Wskazuje, czy wątek kiedykolwiek miał nieobsługiwany wyjątek.  
@@ -35,9 +35,9 @@ HRESULT GetBlockingObjects (
   
 ## <a name="parameters"></a>Parametry  
  `ppBlockingObjectEnum`  
- określoną Wskaźnik na adres uporządkowanego wyliczania struktur [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) .  
+ określoną Wskaźnik na adres uporządkowanego wyliczania struktur [CorDebugBlockingObject](cordebugblockingobject-structure.md) .  
   
-## <a name="return-value"></a>Wartość zwracana  
+## <a name="return-value"></a>Wartość zwrócona  
  Ta metoda zwraca następujące określone wartości HRESULT oraz błędy HRESULT wskazujące niepowodzenie metody.  
   
 |HRESULT|Opis|  
@@ -46,7 +46,7 @@ HRESULT GetBlockingObjects (
 |S_FALSE|Wątek nigdy nie miał nieobsłużonego wyjątku.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ta metoda wskazuje, czy wątek kiedykolwiek miał nieobsługiwany wyjątek. Gdy wywołanie zwrotne nieobsłużonego wyjątku zostanie wyzwolone lub natywne dołączanie JIT jest inicjowane, ta metoda jest gwarantowana do zwrócenia S_OK. Nie ma gwarancji, że metoda [ICorDebugThread. GetCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getcurrentexception-method.md) zwróci wyjątek nieobsłużony; Jednak jeśli proces nie był jeszcze kontynuowany po otrzymaniu wywołania zwrotnego nieobsłużonego wyjątku lub po dołączeniu do natywnego kompilatora JIT. Ponadto jest możliwe (Chociaż mało prawdopodobne), aby mieć więcej niż jeden wątek z nieobsługiwanym wyjątkiem w czasie, gdy zostanie wyzwolone Natywne Dołączanie JIT. W takim przypadku nie ma możliwości ustalenia, który wyjątek wyzwalał dołączenie JIT.  
+ Ta metoda wskazuje, czy wątek kiedykolwiek miał nieobsługiwany wyjątek. Gdy wywołanie zwrotne nieobsłużonego wyjątku zostanie wyzwolone lub natywne dołączanie JIT jest inicjowane, ta metoda jest gwarantowana do zwrócenia S_OK. Nie ma gwarancji, że metoda [ICorDebugThread. GetCurrentException](icordebugthread-getcurrentexception-method.md) zwróci wyjątek nieobsłużony; Jednak jeśli proces nie był jeszcze kontynuowany po otrzymaniu wywołania zwrotnego nieobsłużonego wyjątku lub po dołączeniu do natywnego kompilatora JIT. Ponadto jest możliwe (Chociaż mało prawdopodobne), aby mieć więcej niż jeden wątek z nieobsługiwanym wyjątkiem w czasie, gdy zostanie wyzwolone Natywne Dołączanie JIT. W takim przypadku nie ma możliwości ustalenia, który wyjątek wyzwalał dołączenie JIT.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -59,6 +59,6 @@ HRESULT GetBlockingObjects (
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugThread4, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [ICorDebugThread4, interfejs](icordebugthread4-interface.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie](index.md)

@@ -128,11 +128,9 @@
           items:
             - name: Konfigurowanie w usługach IIS 5.0 oraz IIS 6.0 wdrażania aplikacji WPF
               href: how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md
-            - name: Konfigurowanie w programie Visual Studio debugowania aplikacji przeglądarki XAML w celu wywoływania usługi internetowej
+            - name: 'Konfiguruj Visual Studio, aby debugować aplikację przeglądarki XAML i wywołać usługę sieci Web'
               href: configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md
-            - name: Ustalanie zainstalowanej wersji WPF
-              href: how-to-determine-the-installed-version-of-wpf.md
-            - name: 'Wykrywanie, czy wtyczka .NET Framework 3.0 jest zainstalowana'
+            - name: 'Wykryj, czy wtyczka .NET Framework 3.0 jest zainstalowana'
               href: how-to-detect-whether-the-net-framework-3-0-is-installed.md
             - name: 'Wykrywanie, czy wtyczka .NET Framework 3.5 jest zainstalowana'
               href: how-to-detect-whether-the-net-framework-3-5-is-installed.md

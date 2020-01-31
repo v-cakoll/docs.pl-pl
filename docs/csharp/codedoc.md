@@ -1,15 +1,15 @@
 ---
 title: Dokumentowanie kodu za pomocą komentarzy XML
 description: Dowiedz się, jak udokumentować kod za pomocą komentarzy dokumentacji XML i generować plik dokumentacji XML w czasie kompilacji.
-ms.date: 02/14/2017
+ms.date: 01/21/2020
 ms.technology: csharp-fundamentals
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 6aa52030e20f61b26311347a57629658ebe0e609
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: ef0d22e0ee7faa3ba51da6b44cf1827f19baf4f1
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713941"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76787820"
 ---
 # <a name="document-your-code-with-xml-comments"></a>Dokumentowanie kodu za pomocą komentarzy XML
 
@@ -169,6 +169,12 @@ Utwórz nieuporządkowaną listę każdej operacji matematycznej obsługiwanej p
 [!code-csharp[List Tag](~/samples/snippets/csharp/concepts/codedoc/list-tag.cs)]
 
 Można utworzyć uporządkowaną listę lub tabelę, zmieniając atrybut `type` na odpowiednio `number` lub `table`.
+
+## <a name="inheritdoc"></a>\<inheritdoc >
+
+Możesz użyć znacznika `<inheritdoc>`, aby odziedziczyć Komentarze XML z klas bazowych, interfejsów i podobnych metod. Eliminuje to niechciane kopiowanie i wklejanie zduplikowanych komentarzy XML i automatycznie synchronizuje komentarze XML.
+
+[!code-csharp-interactive[InheritDoc Tag](~/samples/snippets/csharp/concepts/codedoc/inheritdoc-tag.cs)]
 
 ### <a name="put-it-all-together"></a>Zebranie wszystkich elementów
 

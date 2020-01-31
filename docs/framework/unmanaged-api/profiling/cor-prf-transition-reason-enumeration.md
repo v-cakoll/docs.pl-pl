@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: da941118-01b7-4197-ae5b-9f2f8adcd623
 topic_type:
 - apiref
-ms.openlocfilehash: 6d8b408675127cde399a8346f2b9734a0e038cb5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 1c3c311fd431b6c0b18af3d6516973b2471cfabd
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427138"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867064"
 ---
 # <a name="cor_prf_transition_reason-enumeration"></a>COR_PRF_TRANSITION_REASON — Wyliczenie
 Wskazuje przyczynę przejścia z zarządzanego do kodu niezarządzanego lub odwrotnie.  
@@ -33,7 +33,7 @@ typedef enum {
 } COR_PRF_TRANSITION_REASON;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Elementy członkowskie  
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
@@ -41,7 +41,7 @@ typedef enum {
 |`COR_PRF_TRANSITION_RETURN`|Przejście jest spowodowane zwracaniem z funkcji.|  
   
 ## <a name="remarks"></a>Uwagi  
- Gdy następuje przejście, profiler otrzymuje wywołanie [ICorProfilerCallback:: ManagedToUnmanagedTransition —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-managedtounmanagedtransition-method.md) lub [ICorProfilerCallback:: UnmanagedToManagedTransition —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md) , z którego każda zawiera wartość wyliczenia `COR_PRF_TRANSITION_REASON`, aby wskazać przyczynę przejścia.  
+ Gdy następuje przejście, profiler otrzymuje wywołanie [ICorProfilerCallback:: ManagedToUnmanagedTransition —](icorprofilercallback-managedtounmanagedtransition-method.md) lub [ICorProfilerCallback:: UnmanagedToManagedTransition —](icorprofilercallback-unmanagedtomanagedtransition-method.md) , z którego każda zawiera wartość wyliczenia `COR_PRF_TRANSITION_REASON`, aby wskazać przyczynę przejścia.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Header Item control type
 - control types, Header Item
 ms.assetid: 09ce1310-ee31-493c-a71e-010bafc42fcf
-ms.openlocfilehash: c67c357a0447cfa7ff3769fff2f8a67f90171635
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 17b28e17690d5a05440cae6b969617de1528fb41
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741235"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76778731"
 ---
 # <a name="ui-automation-support-for-the-headeritem-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla typu formantu HeaderItem
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "75741235"
   
  Typ formantu HeaderItem zawiera wizualną etykietę dla wiersza lub kolumny informacji.  
   
- Kontrolki elementu nagłówka to przykłady formantów implementujących typ formantu HeaderItem. Wymagania [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] w poniższych sekcjach dotyczą wszystkich formantów nagłówka, zarówno [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32, jak i [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ Kontrolki elementu nagłówka to przykłady formantów implementujących typ formantu HeaderItem. Wymagania [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] w poniższych sekcjach dotyczą wszystkich formantów nagłówka, zarówno [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32, jak i Windows Forms.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Wymagana struktura drzewa automatyzacji interfejsu użytkownika  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 06b1f7cc-acdf-47a6-9d53-d9dec2424152
 topic_type:
 - apiref
-ms.openlocfilehash: ad3a357a98cb5ed28a34e4076b5e145903ceaf91
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 68931ba16ea1f8f61176c6d6ed8300e762b61690
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73103496"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790525"
 ---
 # <a name="icorpublishprocessismanaged-method"></a>ICorPublishProcess::IsManaged — Metoda
-Pobiera wartość wskazującą, czy proces, do którego odwołuje się ten [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) , ma znany kod zarządzany.  
+Pobiera wartość wskazującą, czy proces, do którego odwołuje się ten [ICorPublishProcess](icorpublishprocess-interface.md) , ma znany kod zarządzany.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -51,4 +51,4 @@ HRESULT IsManaged (
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorPublishProcess, interfejs](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)
+- [ICorPublishProcess, interfejs](icorpublishprocess-interface.md)

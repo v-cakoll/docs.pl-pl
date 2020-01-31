@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: wyświetlanie obrazów w komórkach kontrolki DataGridView formularzy systemu Windows'
+title: Wyświetlanie obrazów w komórkach kontrolki DataGridView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,21 +10,21 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], displaying images
 - data grids [Windows Forms], displaying images in cells
 ms.assetid: 53b13d31-1b56-476d-9ab4-18bfac138a22
-ms.openlocfilehash: e3a4c395e86e4091d8344bebcf99ee04474f3295
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e0e125c816877875b80e0f20887d9beee443577a
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64609933"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740285"
 ---
-# <a name="how-to-display-images-in-cells-of-the-windows-forms-datagridview-control"></a>Instrukcje: wyświetlanie obrazów w komórkach kontrolki DataGridView formularzy systemu Windows
-Obraz lub element graficzny jest jedną z wartości, które można wyświetlić w wierszu danych. Często te grafiki formę fotografii pracownika lub logo firmy.  
+# <a name="how-to-display-images-in-cells-of-the-windows-forms-datagridview-control"></a>Porady: wyświetlanie obrazów w komórkach formantu DataGridView formularzy systemu Windows
+Obraz lub grafika to jedna z wartości, które można wyświetlić w wierszu danych. Często te grafiki przyjmują formę Zdjęcia pracownika lub logo firmy.  
   
- Dołączanie obrazów jest proste, podczas wyświetlania danych w ramach <xref:System.Windows.Forms.DataGridView> kontroli. <xref:System.Windows.Forms.DataGridView> Kontroli natywnie obsługuje format obrazu, wszystkie obsługiwane przez <xref:System.Drawing.Image> klasy, a także OLE obraz format używany przez niektóre bazy danych.  
+ Dołączanie obrazów jest proste, gdy wyświetlasz dane w kontrolce <xref:System.Windows.Forms.DataGridView>. Formant <xref:System.Windows.Forms.DataGridView> natywnie obsługuje dowolny format obrazu obsługiwany przez klasę <xref:System.Drawing.Image>, a także format obrazu OLE używany przez niektóre bazy danych.  
   
- Jeśli <xref:System.Windows.Forms.DataGridView> swojego źródła danych zawiera kolumnę obrazów, zostaną one wyświetlone automatycznie przez <xref:System.Windows.Forms.DataGridView> kontroli.  
+ Jeśli źródło danych kontrolki <xref:System.Windows.Forms.DataGridView> ma kolumnę obrazów, zostaną one automatycznie wyświetlone przez kontrolkę <xref:System.Windows.Forms.DataGridView>.  
   
- Poniższy przykład kodu demonstruje sposób wyodrębniania ikony z zasobu osadzonego i przekonwertować go do mapy bitowej do wyświetlenia w każdej komórce kolumny obrazu. Inny przykład zastępuje wartości tekstowej komórek przy użyciu odpowiedniego obrazów, zobacz [jak: Dostosowywanie formatowania danych w formancie DataGridView formularzy Windows](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md).  
+ Poniższy przykład kodu demonstruje, jak wyodrębnić ikonę z osadzonego zasobu i przekonwertować ją na mapę bitową do wyświetlania w każdej komórce kolumny obrazu. Aby uzyskać inny przykład, który zastępuje wartości komórki tekstowej odpowiednimi obrazami, zobacz [How to: Dostosowywanie formatowania danych w kontrolce DataGridView Windows Forms](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md).  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#050](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#050)]
@@ -33,14 +33,14 @@ Obraz lub element graficzny jest jedną z wartości, które można wyświetlić 
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
-- A <xref:System.Windows.Forms.DataGridView> formantu o nazwie `dataGridView1`.  
+- Kontrolka <xref:System.Windows.Forms.DataGridView> o nazwie `dataGridView1`.  
   
-- Zasób osadzony ikony o nazwie `tree.ico`.  
+- Osadzony zasób ikon o nazwie `tree.ico`.  
   
-- Odwołuje się do <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, i <xref:System.Drawing?displayProperty=nameWithType> zestawów.  
+- Odwołania do zestawów <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>i <xref:System.Drawing?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.DataGridView>
 - [Podstawowe funkcje komórek, wierszy i kolumn w kontrolce DataGridView formularzy Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)
-- [Instrukcje: Dostosowywanie formatowania danych w kontrolce DataGridView formularzy Windows Forms](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)
+- [Instrukcje: dostosowywanie formatowania danych w kontrolce DataGridView formularzy Windows Forms](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)

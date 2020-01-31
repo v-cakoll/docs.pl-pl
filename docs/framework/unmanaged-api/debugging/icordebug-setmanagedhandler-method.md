@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d079131b-685b-4869-95be-826b88d28bd2
 topic_type:
 - apiref
-ms.openlocfilehash: 88a007654646ba42ebcaf1b42e002282a1040c7f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 54ef1cab27a39de39b39996729be6b8160570745
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134062"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788970"
 ---
 # <a name="icordebugsetmanagedhandler-method"></a>ICorDebug::SetManagedHandler — Metoda
 Określa obiekt obsługi zdarzeń dla zdarzeń zarządzanych.  
@@ -35,12 +35,12 @@ HRESULT SetManagedHandler (
   
 ## <a name="parameters"></a>Parametry  
  `pCallback`  
- podczas Wskaźnik do obiektu [ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md) , który jest obiektem procedury obsługi zdarzeń.  
+ podczas Wskaźnik do obiektu [ICorDebugManagedCallback](icordebugmanagedcallback-interface.md) , który jest obiektem procedury obsługi zdarzeń.  
   
 ## <a name="remarks"></a>Uwagi  
  `SetManagedHandler` musi być wywoływana w czasie tworzenia.  
   
- Jeśli implementacja `ICorDebugManagedCallback` nie zawiera wystarczających interfejsów do obsługi zdarzeń debugowania dla debugowanej aplikacji, `SetManagedHandler` zwraca wartość HRESULT równą E_NOINTERFACE.  
+ Jeśli implementacja `ICorDebugManagedCallback` nie zawiera wystarczających interfejsów do obsługi zdarzeń debugowania dla debugowanej aplikacji, `SetManagedHandler` zwraca wynik HRESULT E_NOINTERFACE.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -53,4 +53,4 @@ HRESULT SetManagedHandler (
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebug, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [ICorDebug, interfejs](icordebug-interface.md)

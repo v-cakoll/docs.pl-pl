@@ -10,12 +10,12 @@ api_type:
 ms.assetid: 1e739183-3e05-49e5-846f-4075256e41de
 topic_type:
 - apiref
-ms.openlocfilehash: 010d73309ae21f9a593f72533691bdd95fbd4132
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7f1c5d7a6fdae3e4c5a66c9aa4a82911105f4597
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130852"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788505"
 ---
 # <a name="icordebugilframe4-interface"></a>Interfejs ICorDebugILFrame4
 [Obsługiwane w .NET Framework 4.5.2 i nowszych wersjach]  
@@ -26,12 +26,12 @@ ms.locfileid: "73130852"
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[EnumerateLocalVariablesEx, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-enumeratelocalvariablesex-method.md)|Zwraca listę zmiennych lokalnych dostępnych w bieżącej klatce.|  
-|[GetCodeEx, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getcodeex-method.md)|Zwraca kod, w którym jest uruchomiona ta ramka stosu.|  
-|[GetLocalVariableEx, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getlocalvariableex-method.md)|Zwraca wartość zmiennej lokalnej w ramce IL.|  
+|[EnumerateLocalVariablesEx, metoda](icordebugilframe4-enumeratelocalvariablesex-method.md)|Zwraca listę zmiennych lokalnych dostępnych w bieżącej klatce.|  
+|[GetCodeEx, metoda](icordebugilframe4-getcodeex-method.md)|Zwraca kod, w którym jest uruchomiona ta ramka stosu.|  
+|[GetLocalVariableEx, metoda](icordebugilframe4-getlocalvariableex-method.md)|Zwraca wartość zmiennej lokalnej w ramce IL.|  
   
 ## <a name="remarks"></a>Uwagi  
- Te metody oferują funkcje oprócz tych zapewnianych przez metody [EnumerateLocalVariables —](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-enumeratelocalvariables-method.md), [GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcode-method.md)i [GetLocalVariable —](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getlocalvariable-method.md) . Każda metoda zawiera parametr `flags`, który określa, czy są widoczne dodatkowe zmienne lokalne lub kod zdefiniowane przez żądanie ReJIT profilera.  
+ Te metody oferują funkcje oprócz tych zapewnianych przez metody [EnumerateLocalVariables —](icordebugilframe-enumeratelocalvariables-method.md), [GetCode](icordebugframe-getcode-method.md)i [GetLocalVariable —](icordebugilframe-getlocalvariable-method.md) . Każda metoda zawiera parametr `flags`, który określa, czy są widoczne dodatkowe zmienne lokalne lub kod zdefiniowane przez żądanie ReJIT profilera.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -44,5 +44,5 @@ ms.locfileid: "73130852"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie](index.md)

@@ -2,12 +2,12 @@
 title: ICorDebugVirtualUnwinder — interfejs
 ms.date: 03/30/2017
 ms.assetid: a09e9ccc-0b37-43e3-95c1-bc5fa7ee5f42
-ms.openlocfilehash: 532052aa4f869861fbdb40ba0126bfd800eba942
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 065f71e45c2a56dbaa16a45f70958ca3dea80c48
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121876"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790823"
 ---
 # <a name="icordebugvirtualunwinder-interface"></a>ICorDebugVirtualUnwinder — interfejs
 Zapewnia metody pomagające w rozwinięcia stosu.  
@@ -16,8 +16,8 @@ Zapewnia metody pomagające w rozwinięcia stosu.
   
 |Metoda|Nazwa|  
 |------------|----------|  
-|[GetContext, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugvirtualunwinder-getcontext-method.md)|Pobiera bieżący kontekst tego elementu unwiatrer.|  
-|[Next, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugvirtualunwinder-next-method.md)|Przechodzi do kontekstu obiektu wywołującego.|  
+|[GetContext, metoda](icordebugvirtualunwinder-getcontext-method.md)|Pobiera bieżący kontekst tego elementu unwiatrer.|  
+|[Next, metoda](icordebugvirtualunwinder-next-method.md)|Przechodzi do kontekstu obiektu wywołującego.|  
   
 ## <a name="remarks"></a>Uwagi  
  Elementy członkowskie interfejsu `ICorDebugVirtualUnwinder` są implementowane przez debuger, aby pomóc w rozwinięcia stosu.  
@@ -36,5 +36,5 @@ Zapewnia metody pomagające w rozwinięcia stosu.
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie](index.md)

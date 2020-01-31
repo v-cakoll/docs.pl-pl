@@ -2,12 +2,12 @@
 title: 'Samouczek: Tworzenie rozwiązania .NET Core w macOS przy użyciu Visual Studio Code'
 description: Ten dokument zawiera instrukcje i przepływ pracy służące do tworzenia rozwiązania platformy .NET Core przy użyciu Visual Studio Code.
 ms.date: 12/19/2019
-ms.openlocfilehash: 4dc44a0aa155dca3c106a7da68cf100ef644b58b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e3c210d4391c0e3c9c3455ecf23dd138abdb4363
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715306"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741543"
 ---
 # <a name="tutorial-create-a-net-core-solution-in-macos-using-visual-studio-code"></a>Samouczek: Tworzenie rozwiązania .NET Core w macOS przy użyciu Visual Studio Code
 
@@ -20,7 +20,7 @@ Ten dokument zawiera kroki i przepływ pracy służące do tworzenia rozwiązani
 
 Zainstaluj [zestaw .NET Core SDK](https://dotnet.microsoft.com/download). Zestaw .NET Core SDK zawiera najnowszą wersję programu .NET Core Framework i środowiska uruchomieniowego.
 
-Zainstalowanie programu [Visual Studio Code](https://code.visualstudio.com). W trakcie tego artykułu są również instalowane Visual Studio Code rozszerzenia, które zwiększają możliwości programistyczne programu .NET Core.
+Zainstaluj [Visual Studio Code](https://code.visualstudio.com). W trakcie tego artykułu są również instalowane Visual Studio Code rozszerzenia, które zwiększają możliwości programistyczne programu .NET Core.
 
 Zainstaluj rozszerzenie Visual Studio Code C# , otwierając Visual Studio Code i naciskając klawisz <kbd>Fn</kbd>+<kbd>F1</kbd> , aby otworzyć paletę Visual Studio Code. Wpisz **EXT Install** , aby wyświetlić listę rozszerzeń. Wybierz C# rozszerzenie. Uruchom ponownie Visual Studio Code, aby aktywować rozszerzenie. Aby uzyskać więcej informacji, zobacz [dokumentację C# rozszerzenia Visual Studio Code](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).
 
@@ -28,7 +28,7 @@ Zainstaluj rozszerzenie Visual Studio Code C# , otwierając Visual Studio Code i
 
 W tym samouczku utworzysz trzy projekty: projekt biblioteki, testy dla tego projektu biblioteki oraz aplikację konsolową, która używa biblioteki. Możesz [wyświetlić lub pobrać źródło](https://github.com/dotnet/samples/tree/master/core/getting-started/golden) tego artykułu w repozytorium dotnet/Samples w witrynie GitHub. Aby uzyskać instrukcje dotyczące pobierania, zobacz [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-Uruchom program Visual Studio Code. Naciśnij klawisz <kbd>Ctrl</kbd>+<kbd>\`</kbd> (znak cudzysłowu lub znaku nadmiarowy) lub wybierz pozycję **Wyświetl Terminal >** z menu, aby otworzyć osadzony terminal w Visual Studio Code. Można nadal otworzyć powłokę zewnętrzną za pomocą Eksploratora **Otwórz w wierszu polecenia** (**Otwórz w terminalu** na komputerach Mac lub Linux), jeśli wolisz pracować poza Visual Studio Code.
+Rozpocznij Visual Studio Code. Naciśnij klawisz <kbd>Ctrl</kbd> <kbd>\`</kbd> (znak cudzysłowu lub apostrofu) lub wybierz pozycję **Wyświetl** **Terminal** > z menu, aby otworzyć osadzony terminal w Visual Studio Code. Można nadal otworzyć powłokę zewnętrzną za pomocą Eksploratora **Otwórz w wierszu polecenia** (**Otwórz w terminalu** w systemie macOS lub Linux), jeśli wolisz pracować poza Visual Studio Code.
 
 Zacznij od utworzenia pliku rozwiązania, który służy jako kontener dla co najmniej jednego projektu .NET Core. W terminalu uruchom polecenie [`dotnet new`](../tools/dotnet-new.md) , aby utworzyć nowe rozwiązanie *złot. sln* w nowym folderze o nazwie *złota*:
 
@@ -142,7 +142,8 @@ namespace TestApp
     public class LibraryTests
     {
         [Fact]
-        public void TestThing() {
+        public void TestThing()
+        {
             Assert.NotEqual(42, new Thing().Get(19, 23));
         }
     }
@@ -211,7 +212,7 @@ dotnet run -p app/app.csproj
 
 Ustaw punkt przerwania w instrukcji `WriteLine` w metodzie `Main`. W tym celu należy nacisnąć klawisz <kbd>Fn</kbd>+<kbd>F9</kbd> , gdy kursor znajduje się nad linią `WriteLine` lub klikając myszą w lewym marginesie w wierszu, w którym ma zostać ustawiony punkt przerwania. Czerwony okrąg zostanie wyświetlony na marginesie obok wiersza kodu. Po osiągnięciu punktu przerwania wykonywanie kodu zostanie zatrzymane *przed* wykonaniem wiersza punktu przerwania.
 
-Otwórz kartę debuger, wybierając ikonę debugowania na pasku narzędzi Visual Studio Code, wybierając pozycję **wyświetl > Debuguj** z paska menu lub przy użyciu <kbd>polecenia</kbd> skrótu klawiaturowego+<kbd>SHIFT</kbd>+<kbd>D</kbd>:
+Otwórz kartę debuger, wybierając ikonę debugowania na pasku narzędzi Visual Studio Code, wybierając pozycję **Wyświetl** > **Debuguj** z paska menu lub przy użyciu skrótu <kbd>&#8679;</kbd> <kbd>&#8984;</kbd>klawiaturowego <kbd>D</kbd>:
 
 ![Visual Studio Code Debugger](./media/using-on-macos/visual-studio-code-debugger.png)
 

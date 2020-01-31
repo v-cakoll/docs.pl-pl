@@ -15,15 +15,15 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: 3f99b0e93e6b16ac66f6869c284c1119ddfc3751
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: de9f4b5c0a817d010c7510395b4e5c09ed0a9865
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740306"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794280"
 ---
 # <a name="printing-overview"></a>Przegląd Drukowanie
-W przypadku Microsoft .NET Framework deweloperzy aplikacji korzystający z Windows Presentation Foundation (WPF) mają bogaty nowy zestaw interfejsów API zarządzania systemem drukowania i drukowania. W systemie Windows Vista niektóre z tych ulepszeń systemu drukowania są również dostępne dla deweloperów tworzących [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] aplikacje i deweloperów korzystających z kodu niezarządzanego. Podstawą tej nowej funkcji jest nowy format XML Paper Specification (XPS) i ścieżka wydruku XPS.  
+W przypadku Microsoft .NET Framework deweloperzy aplikacji korzystający z Windows Presentation Foundation (WPF) mają bogaty nowy zestaw interfejsów API zarządzania systemem drukowania i drukowania. W systemie Windows Vista niektóre z tych ulepszeń systemu drukowania są również dostępne dla deweloperów tworzących Windows Forms aplikacje i deweloperów korzystających z kodu niezarządzanego. Podstawą tej nowej funkcji jest nowy format XML Paper Specification (XPS) i ścieżka wydruku XPS.  
   
  Ten temat zawiera następujące sekcje.  
   

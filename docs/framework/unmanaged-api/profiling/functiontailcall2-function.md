@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 249f9892-b5a9-41e1-b329-28a925904df6
 topic_type:
 - apiref
-ms.openlocfilehash: db3c3d38e0200f9849c84d7605a436816d56b813
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2d99c6d8bd2af02456c6a90143b524c337483868
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427423"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866898"
 ---
 # <a name="functiontailcall2-function"></a>FunctionTailcall2 — Funkcja
 Powiadamia profiler, że aktualnie wykonywana funkcja ma wykonać wywołanie tail do innej funkcji i zawiera informacje na temat ramki stosu.  
@@ -34,20 +34,24 @@ void __stdcall FunctionTailcall2 (
 );  
 ```  
   
-## <a name="parameters"></a>Parametry  
- `funcId`  
- podczas Identyfikator aktualnie wykonywanej funkcji, która ma na celu wykonanie wywołania tail.  
+## <a name="parameters"></a>Parametry
+
+- `funcId`
+
+  \[in) identyfikator aktualnie wykonywanej funkcji, która ma na celu wykonanie wywołania tail.
+
+- `clientData`
+
+  \[w] ponownie mapowany identyfikator funkcji, który Profiler wcześniej określił za pośrednictwem [FunctionIDMapper](functionidmapper-function.md), obecnie wykonywanej funkcji, która ma na celu wykonanie wywołania tail.
   
- `clientData`  
- podczas Identyfikator funkcji ponownie mapowanej, który Profiler wcześniej określił za pośrednictwem [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md), obecnie wykonywanej funkcji, która ma na celu wykonanie wywołania tail.  
-  
- `func`  
- podczas Wartość `COR_PRF_FRAME_INFO`, która wskazuje na informacje o ramce stosu.  
-  
- Profiler powinien być traktowany jako nieprzezroczysty uchwyt, który można przesłać z powrotem do aparatu wykonywania w metodzie [ICorProfilerInfo2:: GetFunctionInfo2 —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) .  
-  
+- `func`
+
+  \[w] `COR_PRF_FRAME_INFO` wartość, która wskazuje na informacje o ramce stosu.
+
+  Profiler powinien być traktowany jako nieprzezroczysty uchwyt, który można przesłać z powrotem do aparatu wykonywania w metodzie [ICorProfilerInfo2:: GetFunctionInfo2 —](icorprofilerinfo2-getfunctioninfo2-method.md) .
+
 ## <a name="remarks"></a>Uwagi  
- Funkcja Target wywołania tail będzie używać bieżącej ramki stosu i zwróci się bezpośrednio do obiektu wywołującego funkcji, która wykonał wywołanie tail. Oznacza to, że wywołanie zwrotne [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) nie zostanie wygenerowane dla funkcji, która jest elementem docelowym wywołania tail.  
+ Funkcja Target wywołania tail będzie używać bieżącej ramki stosu i zwróci się bezpośrednio do obiektu wywołującego funkcji, która wykonał wywołanie tail. Oznacza to, że wywołanie zwrotne [FunctionLeave2](functionleave2-function.md) nie zostanie wygenerowane dla funkcji, która jest elementem docelowym wywołania tail.  
   
  Wartość parametru `func` jest nieprawidłowa po powrocie funkcji `FunctionTailcall2`, ponieważ wartość może ulec zmianie lub zostać zniszczona.  
   
@@ -74,7 +78,7 @@ void __stdcall FunctionTailcall2 (
   
 ## <a name="see-also"></a>Zobacz także
 
-- [FunctionEnter2, funkcja](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
-- [FunctionLeave2, funkcja](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
-- [SetEnterLeaveFunctionHooks2, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [Profilowanie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [FunctionEnter2, funkcja](functionenter2-function.md)
+- [FunctionLeave2, funkcja](functionleave2-function.md)
+- [SetEnterLeaveFunctionHooks2, metoda](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [Profilowanie statycznych funkcji globalnych](profiling-global-static-functions.md)

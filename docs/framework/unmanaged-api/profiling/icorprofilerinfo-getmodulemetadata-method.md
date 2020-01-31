@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7a439d92-348a-44dd-b60f-cad7cba56379
 topic_type:
 - apiref
-ms.openlocfilehash: c7bf8e3ebedb17a4536b604909434c3e004fc828
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6e787de6287dc5b3091d3671d3da2f2154b12e88
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74439827"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76869927"
 ---
 # <a name="icorprofilerinfogetmodulemetadata-method"></a>ICorProfilerInfo::GetModuleMetaData — Metoda
 Pobiera wystąpienie interfejsu metadanych, które mapuje do określonego modułu.  
@@ -64,4 +64,4 @@ HRESULT GetModuleMetaData(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo, interfejs](icorprofilerinfo-interface.md)

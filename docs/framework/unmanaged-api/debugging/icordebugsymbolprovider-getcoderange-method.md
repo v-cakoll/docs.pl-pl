@@ -1,15 +1,15 @@
 ---
-title: 'ICorDebugSymbolProvider:: GetCodeRange, Metoda'
+title: ICorDebugSymbolProvider::GetCodeRange Method
 ms.date: 03/30/2017
 ms.assetid: 49a2451f-d250-4e73-aa96-9ff49d9f11c6
-ms.openlocfilehash: 84bf545fedf3a6c7915d94fd0c2630268585b6eb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: dbe042641cadae182efac30502a70631be359bbe
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138921"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791653"
 ---
-# <a name="icordebugsymbolprovidergetcoderange-method"></a>ICorDebugSymbolProvider:: GetCodeRange, Metoda
+# <a name="icordebugsymbolprovidergetcoderange-method"></a>ICorDebugSymbolProvider::GetCodeRange Method
 Pobiera adres początkowy i rozmiar metody z przyznanym adresem wirtualnym (RVA) w metodzie.  
   
 ## <a name="syntax"></a>Składnia  
@@ -48,5 +48,5 @@ HRESULT GetCodeRange(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugSymbolProvider, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugSymbolProvider, interfejs](icordebugsymbolprovider-interface.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

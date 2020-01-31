@@ -9,15 +9,15 @@ helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 - composite controls [WPF], hosting in WPF
 ms.assetid: 96fcd78d-1c77-4206-8928-3a0579476ef4
-ms.openlocfilehash: 16c09b4bb393fa830412385b4b405dd1fae9878b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 22eb323d1c1921832630d1d1b30463b4ecb7d1fd
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744995"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794230"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-composite-control-in-wpf"></a>Wskazówki: hosting złożonego formantu Windows Forms w WPF
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zapewnia rozbudowane środowisko do tworzenia aplikacji. Jeśli jednak masz znaczną inwestycję w kod [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], może być bardziej efektywne ponowne użycie co najmniej jednego kodu w aplikacji [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], a nie zapisanie go od podstaw. Najczęstszym scenariuszem jest to, że masz istniejące kontrolki Windows Forms. W niektórych przypadkach może nie mieć nawet dostępu do kodu źródłowego dla tych formantów. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zapewnia prostą procedurę hostingu takich kontrolek w aplikacji [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Na przykład można użyć [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] w większości programowania, jednocześnie udostępniając wyspecjalizowane kontrolki <xref:System.Windows.Forms.DataGridView>.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zapewnia rozbudowane środowisko do tworzenia aplikacji. Jeśli jednak masz znaczną inwestycję w kod Windows Forms, może być bardziej efektywne ponowne użycie co najmniej jednego kodu w aplikacji [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], a nie zapisanie go od podstaw. Najczęstszym scenariuszem jest to, że masz istniejące kontrolki Windows Forms. W niektórych przypadkach może nie mieć nawet dostępu do kodu źródłowego dla tych formantów. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zapewnia prostą procedurę hostingu takich kontrolek w aplikacji [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Na przykład można użyć [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] w większości programowania, jednocześnie udostępniając wyspecjalizowane kontrolki <xref:System.Windows.Forms.DataGridView>.  
   
  Ten Instruktaż przeprowadzi Cię przez aplikację, która hostuje Windows Forms formant złożony do wprowadzania danych w aplikacji [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Formant złożony jest spakowany w bibliotece DLL. Ta ogólna procedura może zostać rozszerzona na bardziej złożone aplikacje i kontrolki. Ten przewodnik został zaprojektowany tak, aby był niemal identyczny w wyglądzie i funkcjach do [przewodnika: hosting złożonego formantu WPF w Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md). Podstawowa różnica polega na tym, że scenariusz hostingu jest odwrócony.  
   

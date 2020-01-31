@@ -13,12 +13,12 @@ helpviewer_keywords:
 - JSON Serializer, JSON Reader, JSON Writer
 - Converter, JSON Converter, DateTime Converter
 - ISO, ISO 8601, ISO 8601-1:2019
-ms.openlocfilehash: 8198359e2c54c4ed098703fbcc070f7469b3362a
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: fb8836d9c556b317c50b6b34a9dde4e42c6486b5
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344653"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867350"
 ---
 # <a name="datetime-and-datetimeoffset-support-in-systemtextjson"></a>Obsługa elementów DateTime i DateTimeOffset w pliku System.Text.Json
 
@@ -126,7 +126,7 @@ Profil rozszerzonego ISO 8601-1:2019 zaimplementowany w <xref:System.Text.Json> 
 | Składnik       | Format                      | Opis                                                                     |
 |-----------------|-----------------------------|---------------------------------------------------------------------------------|
 | Rok            | „yyyy”                      | 0001-9999                                                                       |
-| Month           | „MM”                        | 01-12                                                                           |
+| Bieżącym           | „MM”                        | 01-12                                                                           |
 | Dzień             | „dd”                        | 01-28, 01-29, 01-30, 01-31 w oparciu o miesiąc/rok                                  |
 | Godzina            | „HH”                        | 00-23                                                                           |
 | Minuta          | „mm”                        | 00-59                                                                           |
@@ -199,4 +199,12 @@ Następujące poziomy szczegółowości są zdefiniowane na potrzeby formatowani
 
         Służy do formatowania <xref:System.DateTime> lub <xref:System.DateTimeOffset> za pomocą ułamków sekund i przesunięcia lokalnego.
 
-Jeśli jest obecny, zapisywana jest maksymalnie 7 cyfr ułamkowych. Jest to zgodne z implementacją <xref:System.DateTime>, która jest ograniczona do tego rozwiązania.
+Jeśli reprezentacja w [formacie rundy](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier) dla <xref:System.DateTime> lub <xref:System.DateTimeOffset> ma końcowe zera w ułamkach sekund, wówczas <xref:System.Text.Json.JsonSerializer> i <xref:System.Text.Json.Utf8JsonWriter> będą formatować reprezentację wystąpienia bez końcowych zer.
+Na przykład wystąpienie <xref:System.DateTime>, którego reprezentacja [formatu rundy](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier) jest `2019-04-24T14:50:17.1010000Z`, zostanie sformatowane jako `2019-04-24T14:50:17.101Z` przez <xref:System.Text.Json.JsonSerializer> i <xref:System.Text.Json.Utf8JsonWriter>.
+
+Jeśli reprezentacja w [formacie rundy](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier) <xref:System.DateTime> lub <xref:System.DateTimeOffset> ma wszystkie zera w ułamkach sekund, wówczas <xref:System.Text.Json.JsonSerializer> i <xref:System.Text.Json.Utf8JsonWriter> będą sformatować reprezentację wystąpienia bez ułamków sekund.
+Na przykład wystąpienie <xref:System.DateTime>, którego reprezentacja [formatu rundy](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier) jest `2019-04-24T14:50:17.0000000+02:00`, zostanie sformatowane jako `2019-04-24T14:50:17+02:00` przez <xref:System.Text.Json.JsonSerializer> i <xref:System.Text.Json.Utf8JsonWriter>.
+
+Obcinanie zer w cyfrach dziesiętnych umożliwia najmniejsze dane wyjściowe, które są konieczne, aby zachować informacje o liczbie, która ma być zapisywana.
+
+Zapisywane są maksymalnie 7 cyfr dziesiętnych. Jest to zgodne z implementacją <xref:System.DateTime>, która jest ograniczona do tego rozwiązania.

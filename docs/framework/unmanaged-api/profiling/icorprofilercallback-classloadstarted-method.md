@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f728de8-45c2-45a5-ac4a-45660bd36ecf
 topic_type:
 - apiref
-ms.openlocfilehash: c9faff2d616d03d823c80fb2d9cd71d5fd5759ae
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5b465216da39e8cf207f0614519720453c384ae9
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445083"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866588"
 ---
 # <a name="icorprofilercallbackclassloadstarted-method"></a>ICorProfilerCallback::ClassLoadStarted — Metoda
 Powiadamia program profilujący, że Klasa jest ładowana.  
@@ -32,12 +32,14 @@ HRESULT ClassLoadStarted(
     [in] ClassID classId);  
 ```  
   
-## <a name="parameters"></a>Parametry  
- `classId`  
- podczas Identyfikuje klasę, która jest ładowana.  
-  
+## <a name="parameters"></a>Parametry
+
+- `classId`
+
+  \[in] określa klasę, która jest ładowana.
+
 ## <a name="remarks"></a>Uwagi  
- Wartość `classId` nie jest prawidłowa dla żądania informacji, dopóki nie zostanie wywołana metoda [ICorProfilerCallback:: ClassLoadFinished —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md) .  
+ Wartość `classId` nie jest prawidłowa dla żądania informacji, dopóki nie zostanie wywołana metoda [ICorProfilerCallback:: ClassLoadFinished —](icorprofilercallback-classloadfinished-method.md) .  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -50,4 +52,4 @@ HRESULT ClassLoadStarted(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback, interfejs](icorprofilercallback-interface.md)

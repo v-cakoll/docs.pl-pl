@@ -2,12 +2,12 @@
 title: 'ICorDebugSymbolProvider:: GetInstanceFieldSymbols, Metoda'
 ms.date: 03/30/2017
 ms.assetid: a29b9233-ee67-4b53-b8bc-c00b281e7edb
-ms.openlocfilehash: 0ad8ddd78d963681c0b2f69bf0f211ad464dc7b7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9c55ce4d36681e173047cfb51515a74899c5a9fe
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138881"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791631"
 ---
 # <a name="icordebugsymbolprovidergetinstancefieldsymbols-method"></a>ICorDebugSymbolProvider:: GetInstanceFieldSymbols, Metoda
 Pobiera symbole pól wystąpienia, które odpowiadają sygnaturze elementu TypeSpec.  
@@ -38,7 +38,7 @@ HRESULT GetInstanceFieldSymbols(
  określoną Wskaźnik do liczby symboli pobranych przez metodę.  
   
  `pSymbols`  
- określoną Wskaźnik do tablicy [ICorDebugStaticFieldSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md) , która zawiera żądane symbole pola wystąpienia.  
+ określoną Wskaźnik do tablicy [ICorDebugStaticFieldSymbol](icordebugstaticfieldsymbol-interface.md) , która zawiera żądane symbole pola wystąpienia.  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -56,6 +56,6 @@ HRESULT GetInstanceFieldSymbols(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [GetStaticFieldSymbols, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-getstaticfieldsymbols-method.md)
-- [ICorDebugSymbolProvider, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [GetStaticFieldSymbols, metoda](icordebugsymbolprovider-getstaticfieldsymbols-method.md)
+- [ICorDebugSymbolProvider, interfejs](icordebugsymbolprovider-interface.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

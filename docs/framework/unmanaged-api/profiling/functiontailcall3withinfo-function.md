@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 46380fcc-0198-43ae-a1f5-2d4939425886
 topic_type:
 - apiref
-ms.openlocfilehash: 202aed64de78675c79f998afb4483e0d19b811de
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0aa43954c3e10d04524bf976d0dd3b29d2bc724c
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445969"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866833"
 ---
 # <a name="functiontailcall3withinfo-function"></a>FunctionTailcall3WithInfo — Funkcja
-Powiadamia program profilujący, że aktualnie wykonywana funkcja ma wykonać wywołanie tail do innej funkcji i udostępnia dojście, które może zostać przesłane do [metody ICorProfilerInfo3:: GetFunctionTailcall3Info —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md) w celu pobrania ramki stosu.  
+Powiadamia program profilujący, że aktualnie wykonywana funkcja ma wykonać wywołanie tail do innej funkcji i udostępnia dojście, które może zostać przesłane do [metody ICorProfilerInfo3:: GetFunctionTailcall3Info —](icorprofilerinfo3-getfunctiontailcall3info-method.md) w celu pobrania ramki stosu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -33,14 +33,17 @@ void __stdcall FunctionTailcall3WithInfo(
 ```  
   
 ## <a name="parameters"></a>Parametry  
- `functionIDOrClientID`  
- podczas Identyfikator aktualnie wykonywanej funkcji, która ma na celu wykonanie wywołania tail.  
-  
- `eltInfo`  
- podczas Nieprzezroczyste dojście, które reprezentuje informacje o danej klatce stosu. To dojście jest prawidłowe tylko w przypadku wywołania zwrotnego, do którego zostało przesłane.  
-  
+
+- `functionIDOrClientID`
+
+  \[in) identyfikator aktualnie wykonywanej funkcji, która ma na celu wykonanie wywołania tail.
+
+- `eltInfo`
+
+  \[w] nieprzezroczysty uchwyt reprezentujący informacje o danej klatce stosu. To dojście jest prawidłowe tylko w przypadku wywołania zwrotnego, do którego zostało przesłane.
+
 ## <a name="remarks"></a>Uwagi  
- Metoda wywołania zwrotnego `FunctionTailcall3WithInfo` powiadamia profiler w miarę wywoływania funkcji i umożliwia profilerowi użycie [metody ICorProfilerInfo3:: GetFunctionTailcall3Info —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md) w celu sprawdzenia ramki stosu. Aby uzyskać dostęp do informacji o ramce stosu, należy ustawić flagę `COR_PRF_ENABLE_FRAME_INFO`. Profiler może użyć [metody ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) , aby ustawić flagi zdarzeń, a następnie użyć [metody ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3WithInfo —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md) do zarejestrowania implementacji tej funkcji.  
+ Metoda wywołania zwrotnego `FunctionTailcall3WithInfo` powiadamia profiler w miarę wywoływania funkcji i umożliwia profilerowi użycie [metody ICorProfilerInfo3:: GetFunctionTailcall3Info —](icorprofilerinfo3-getfunctiontailcall3info-method.md) w celu sprawdzenia ramki stosu. Aby uzyskać dostęp do informacji o ramce stosu, należy ustawić flagę `COR_PRF_ENABLE_FRAME_INFO`. Profiler może użyć [metody ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) , aby ustawić flagi zdarzeń, a następnie użyć [metody ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3WithInfo —](icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md) do zarejestrowania implementacji tej funkcji.  
   
  Funkcja `FunctionTailcall3WithInfo` jest wywołaniem zwrotnym; należy zaimplementować go. Implementacja musi używać atrybutu klasy magazynu `__declspec(naked)`.  
   
@@ -65,13 +68,13 @@ void __stdcall FunctionTailcall3WithInfo(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [FunctionEnter3](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md)
-- [FunctionLeave3](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)
-- [FunctionTailcall3](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md)
-- [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md)
-- [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)
-- [Setenterleavefunctionhooks3 —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md)
-- [Setenterleavefunctionhooks3withinfo —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md)
-- [SetFunctionIDMapper —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setfunctionidmapper-method.md)
-- [Setfunctionidmapper2 —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setfunctionidmapper2-method.md)
-- [Profilowanie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [FunctionEnter3](functionenter3-function.md)
+- [FunctionLeave3](functionleave3-function.md)
+- [FunctionTailcall3](functiontailcall3-function.md)
+- [FunctionEnter3WithInfo](functiontailcall3-function.md)
+- [FunctionLeave3WithInfo](functionleave3withinfo-function.md)
+- [SetEnterLeaveFunctionHooks3](icorprofilerinfo3-setenterleavefunctionhooks3-method.md)
+- [SetEnterLeaveFunctionHooks3WithInfo](icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md)
+- [SetFunctionIDMapper](icorprofilerinfo-setfunctionidmapper-method.md)
+- [Setfunctionidmapper2 —](icorprofilerinfo3-setfunctionidmapper2-method.md)
+- [Profilowanie statycznych funkcji globalnych](profiling-global-static-functions.md)

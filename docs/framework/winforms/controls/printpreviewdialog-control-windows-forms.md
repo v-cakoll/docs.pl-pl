@@ -7,12 +7,12 @@ helpviewer_keywords:
 - printing [Windows Forms], print preview (using designer)
 - print preview [Windows Forms], default interface (using designer)
 ms.assetid: bfb5a3d7-021e-44f4-90f3-d435467f51d6
-ms.openlocfilehash: 459ff62c5645704d5cbf688af37302500f47e54a
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 784a099aa8e53d855bd134e5a557b976bf8c3708
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741356"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868060"
 ---
 # <a name="printpreviewdialog-control-windows-forms"></a>PrintPreviewDialog — Formant (Formularze systemu Windows)
 Kontrolka `PrintPreviewDialog` Windows Forms jest wstępnie skonfigurowanym oknem dialogowym używanym do wyświetlania wyglądu dokumentu po wydrukowaniu. Użyj go w aplikacji opartej na systemie Windows jako proste rozwiązanie zamiast konfigurować własne okno dialogowe. Kontrolka zawiera przyciski do drukowania, powiększania, wyświetlania jednej lub wielu stron i zamykania okna dialogowego.  
@@ -31,9 +31,6 @@ Kontrolka `PrintPreviewDialog` Windows Forms jest wstępnie skonfigurowanym okne
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)  
  Zawiera pełną listę kontrolek Windows Forms, z łączami do informacji o ich użyciu.  
-  
- [Zasadniczy kod dla okien dialogowych Windows Forms](https://go.microsoft.com/fwlink/?LinkID=102575)  
- W tym artykule omówiono kontrolki okna dialogowego Windows Forms i składniki oraz kod niezbędny do wykonywania ich podstawowych funkcji. (Artykuł techniczny biblioteki MSDN Online Library)  
   
  [Kontrolki i składniki okien dialogowych](dialog-box-controls-and-components-windows-forms.md)  
  Wyświetla różne kontrolki okna dialogowego dla Windows Forms.  

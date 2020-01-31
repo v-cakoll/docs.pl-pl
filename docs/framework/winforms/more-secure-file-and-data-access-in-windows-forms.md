@@ -1,5 +1,5 @@
 ---
-title: Bezpieczniejszy dostęp do plików i danych w formularzach systemu Windows
+title: Bezpieczniejszy dostęp do plików i danych
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-ms.openlocfilehash: 94b165757de636b2570798a21fd7c483264e37c5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 49ba1919f68f35e9d72b012540b785e05c307c39
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949951"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743750"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Bezpieczniejszy dostęp do plików i danych w formularzach systemu Windows
 .NET Framework używa uprawnień do ochrony zasobów i danych. Miejsce, w którym aplikacja może odczytywać lub zapisywać dane, zależy od uprawnień przyznanych aplikacji. Gdy aplikacja jest uruchamiana w środowisku częściowej relacji zaufania, może nie mieć dostępu do danych lub może zajść konieczność zmiany sposobu uzyskiwania dostępu do danych.  
@@ -29,27 +29,27 @@ ms.locfileid: "69949951"
 > Domyślnie narzędzia generujące wdrożenia ClickOnce domyślnie wdrażają te wdrożenia w celu żądania pełnego zaufania z komputerów, na których te komputery są uruchamiane. Jeśli zdecydujesz, że chcesz mieć dodatkowe korzyści z używania programu w częściowej relacji zaufania, musisz zmienić to ustawienie domyślne w Visual Studio lub jednym z narzędzi Windows SDK (Mage. exe lub MageUI. exe). Aby uzyskać więcej informacji o zabezpieczeniach Windows Forms i sposobach określania odpowiedniego poziomu zaufania dla aplikacji, zobacz [zabezpieczenia w Windows Forms Omówienie](security-in-windows-forms-overview.md).  
   
 ## <a name="file-access"></a>Dostęp do plików  
- <xref:System.Security.Permissions.FileIOPermission> Klasa kontroluje dostęp do plików i folderów w .NET Framework. Domyślnie system zabezpieczeń nie przyznaje do częściowych środowisk <xref:System.Security.Permissions.FileIOPermission> zaufania, takich jak lokalny intranet i strefy internetowe. Jednak aplikacja wymagająca dostępu do plików może nadal działać w tych środowiskach w przypadku modyfikacji projektu aplikacji lub do uzyskiwania dostępu do plików za pomocą różnych metod. Domyślnie lokalna strefa intranetowa ma dostęp do tego samego dostępu do lokacji i tego samego dostępu do katalogu, aby można było połączyć się z powrotem z lokacją jego pochodzenia i odczytać z katalogu instalacyjnego. Domyślnie strefa Internet ma przyznane prawo do nawiązywania połączenia z witryną źródłową.  
+ Klasa <xref:System.Security.Permissions.FileIOPermission> kontroluje dostęp do plików i folderów w .NET Framework. Domyślnie system zabezpieczeń nie udziela <xref:System.Security.Permissions.FileIOPermission> w środowiskach częściowej relacji zaufania, takich jak lokalny intranet i strefy internetowe. Jednak aplikacja wymagająca dostępu do plików może nadal działać w tych środowiskach w przypadku modyfikacji projektu aplikacji lub do uzyskiwania dostępu do plików za pomocą różnych metod. Domyślnie lokalna strefa intranetowa ma dostęp do tego samego dostępu do lokacji i tego samego dostępu do katalogu, aby można było połączyć się z powrotem z lokacją jego pochodzenia i odczytać z katalogu instalacyjnego. Domyślnie strefa Internet ma przyznane prawo do nawiązywania połączenia z witryną źródłową.  
   
 ### <a name="user-specified-files"></a>Pliki określone przez użytkownika  
- Jednym ze sposobów postępowania z brakiem uprawnień dostępu do plików jest wyświetlenie monitu o podanie określonych informacji o pliku przy <xref:System.Windows.Forms.OpenFileDialog> użyciu <xref:System.Windows.Forms.SaveFileDialog> klasy lub. Ta interakcja użytkownika pomaga zapewnić pewne gwarancje, że aplikacja nie może złośliwie ładować prywatnych plików ani zastępować ważnych plików. Metody <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> i<xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> zapewniają dostęp do odczytu i zapisu, otwierając strumień plików dla pliku określonego przez użytkownika. Metody pomagają również chronić plik użytkownika przez zaciemnienie ścieżki pliku.  
+ Jednym ze sposobów postępowania z brakiem uprawnień dostępu do plików jest wyświetlenie monitu o podanie określonych informacji o pliku przy użyciu klasy <xref:System.Windows.Forms.OpenFileDialog> lub <xref:System.Windows.Forms.SaveFileDialog>. Ta interakcja użytkownika pomaga zapewnić pewne gwarancje, że aplikacja nie może złośliwie ładować prywatnych plików ani zastępować ważnych plików. Metody <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> i <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> zapewniają dostęp do plików odczytu i zapisu, otwierając strumień plików dla pliku określonego przez użytkownika. Metody pomagają również chronić plik użytkownika przez zaciemnienie ścieżki pliku.  
   
 > [!NOTE]
-> Te uprawnienia różnią się w zależności od tego, czy aplikacja znajduje się w strefie Internet czy intranet. Aplikacje strefy internetowej mogą korzystać tylko z <xref:System.Windows.Forms.OpenFileDialog>, natomiast aplikacje intranetowe mają uprawnienia do okna dialogowego nieograniczonego pliku.  
+> Te uprawnienia różnią się w zależności od tego, czy aplikacja znajduje się w strefie Internet czy intranet. Aplikacje strefy internetowej mogą korzystać tylko z <xref:System.Windows.Forms.OpenFileDialog>, natomiast aplikacje intranetowe mają nieograniczone uprawnienia do okna dialogowego plików.  
   
- <xref:System.Security.Permissions.FileDialogPermission> Klasa określa typ okna dialogowego, który może być używany przez aplikację. W poniższej tabeli przedstawiono wartość, którą trzeba wykonać, aby użyć <xref:System.Windows.Forms.FileDialog> każdej klasy.  
+ Klasa <xref:System.Security.Permissions.FileDialogPermission> określa typ okna dialogowego, który może być używany przez aplikację. W poniższej tabeli przedstawiono wartość, którą należy wykonać, aby użyć każdej klasy <xref:System.Windows.Forms.FileDialog>.  
   
-|Class|Wymagana wartość dostępu|  
+|Klasa|Wymagana wartość dostępu|  
 |-----------|---------------------------|  
 |<xref:System.Windows.Forms.OpenFileDialog>|<xref:System.Security.Permissions.FileDialogPermissionAccess.Open>|  
 |<xref:System.Windows.Forms.SaveFileDialog>|<xref:System.Security.Permissions.FileDialogPermissionAccess.Save>|  
   
 > [!NOTE]
-> Nie żąda się określonego uprawnienia, dopóki <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> Metoda nie zostanie faktycznie wywołana.  
+> Nie jest wymagane odpowiednie uprawnienie, dopóki metoda <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> nie zostanie faktycznie wywołana.  
   
- Uprawnienie do wyświetlania pliku okno dialogowe nie przyznaje aplikacji pełnego dostępu do wszystkich elementów członkowskich <xref:System.Windows.Forms.FileDialog>klas, <xref:System.Windows.Forms.OpenFileDialog>i <xref:System.Windows.Forms.SaveFileDialog> . Aby uzyskać dokładne uprawnienia, które są wymagane do wywołania każdej metody, zobacz temat referencyjny dla tej metody w dokumentacji biblioteki klas .NET Framework.  
+ Uprawnienie do wyświetlania pliku okno dialogowe nie przyznaje aplikacji pełnego dostępu do wszystkich elementów członkowskich klas <xref:System.Windows.Forms.FileDialog>, <xref:System.Windows.Forms.OpenFileDialog>i <xref:System.Windows.Forms.SaveFileDialog>. Aby uzyskać dokładne uprawnienia, które są wymagane do wywołania każdej metody, zobacz temat referencyjny dla tej metody w dokumentacji biblioteki klas .NET Framework.  
   
- Poniższy przykład kodu używa <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> metody do otwierania pliku określonego przez użytkownika <xref:System.Windows.Forms.RichTextBox> w kontrolce. Przykład wymaga <xref:System.Security.Permissions.FileDialogPermission> i skojarzonej <xref:System.Security.Permissions.FileDialogPermissionAttribute.Open%2A> wartości wyliczenia. W przykładzie pokazano, jak obsłużyć, <xref:System.Security.SecurityException> aby określić, czy funkcja Save powinna być wyłączona. Ten przykład wymaga, aby <xref:System.Windows.Forms.Form> <xref:System.Windows.Forms.Button> miało <xref:System.Windows.Forms.RichTextBox> kontrolkę `ButtonOpen`o nazwie i kontrolkę `RtfBoxMain`o nazwie.  
+ Poniższy przykład kodu używa metody <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A>, aby otworzyć plik określony przez użytkownika w kontrolce <xref:System.Windows.Forms.RichTextBox>. Przykład wymaga <xref:System.Security.Permissions.FileDialogPermission> i skojarzonej wartości wyliczenia <xref:System.Security.Permissions.FileDialogPermissionAttribute.Open%2A>. W przykładzie pokazano, jak obsłużyć <xref:System.Security.SecurityException>, aby określić, czy funkcja Save powinna być wyłączona. Ten przykład wymaga, aby <xref:System.Windows.Forms.Form> ma kontrolkę <xref:System.Windows.Forms.Button> o nazwie `ButtonOpen`i formant <xref:System.Windows.Forms.RichTextBox> o nazwie `RtfBoxMain`.  
   
 > [!NOTE]
 > W przykładzie nie pokazano logiki programowania dla funkcji Zapisz.  
@@ -136,9 +136,9 @@ private void ButtonOpen_Click(object sender, System.EventArgs e)
 > W programie C#Visual należy dodać kod, aby włączyć obsługę zdarzeń. Używając kodu z poprzedniego przykładu, poniższy kod pokazuje, jak włączyć obsługę zdarzeń.`this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`  
   
 ### <a name="other-files"></a>Inne pliki  
- Czasami konieczne jest odczytanie lub zapisanie plików, które nie są określone przez użytkownika, na przykład w przypadku konieczności utrwalania ustawień aplikacji. W lokalnym intranecie i strefach internetowych aplikacja nie będzie miała uprawnienia do przechowywania danych w pliku lokalnym. Jednak aplikacja będzie mogła przechowywać dane w izolowanym magazynie. Magazyn izolowany jest abstrakcyjnym przedziałem danych (nie konkretną lokalizacją przechowywania), który zawiera jeden lub więcej izolowanych plików magazynu o nazwie Stores, które zawierają rzeczywiste lokalizacje katalogów, w których są przechowywane dane. Uprawnienia dostępu do plików <xref:System.Security.Permissions.FileIOPermission> , takie jak nie są wymagane; <xref:System.Security.Permissions.IsolatedStoragePermission> zamiast tego Klasa kontroluje uprawnienia do magazynu izolowanego. Domyślnie aplikacje działające w lokalnym intranecie i strefach internetowych mogą przechowywać dane przy użyciu magazynu izolowanego. Jednak ustawienia takie jak przydział dysku mogą się różnić. Aby uzyskać więcej informacji na temat izolowanego magazynu, zobacz [izolowany magazyn](../../standard/io/isolated-storage.md).  
+ Czasami konieczne jest odczytanie lub zapisanie plików, które nie są określone przez użytkownika, na przykład w przypadku konieczności utrwalania ustawień aplikacji. W lokalnym intranecie i strefach internetowych aplikacja nie będzie miała uprawnienia do przechowywania danych w pliku lokalnym. Jednak aplikacja będzie mogła przechowywać dane w izolowanym magazynie. Magazyn izolowany jest abstrakcyjnym przedziałem danych (nie konkretną lokalizacją przechowywania), który zawiera jeden lub więcej izolowanych plików magazynu o nazwie Stores, które zawierają rzeczywiste lokalizacje katalogów, w których są przechowywane dane. Uprawnienia dostępu do plików, takie jak <xref:System.Security.Permissions.FileIOPermission>, nie są wymagane; Zamiast tego Klasa <xref:System.Security.Permissions.IsolatedStoragePermission> kontroluje uprawnienia do magazynu izolowanego. Domyślnie aplikacje działające w lokalnym intranecie i strefach internetowych mogą przechowywać dane przy użyciu magazynu izolowanego. Jednak ustawienia takie jak przydział dysku mogą się różnić. Aby uzyskać więcej informacji na temat izolowanego magazynu, zobacz [izolowany magazyn](../../standard/io/isolated-storage.md).  
   
- Poniższy przykład używa wydzielonej pamięci masowej do zapisywania danych do pliku znajdującego się w sklepie. Przykład wymaga <xref:System.Security.Permissions.IsolatedStorageFilePermission> <xref:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByUser> i wartość wyliczenia. W przykładzie pokazano odczytywanie i zapisywanie określonych wartości <xref:System.Windows.Forms.Button> właściwości kontrolki do pliku w magazynie izolowanym. Funkcja zostałaby wywołana po uruchomieniu aplikacji `Write` , a funkcja zostałaby wywołana przed zakończeniem działania aplikacji. `Read` Przykład wymaga, aby `Read` funkcje i `Write` <xref:System.Windows.Forms.Form> istniały jako elementy członkowskie obiektu, który zawiera <xref:System.Windows.Forms.Button> kontrolkę `MainButton`o nazwie.  
+ Poniższy przykład używa wydzielonej pamięci masowej do zapisywania danych do pliku znajdującego się w sklepie. Przykład wymaga <xref:System.Security.Permissions.IsolatedStorageFilePermission> i <xref:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByUser> wartości wyliczenia. Przykład ilustruje odczytywanie i zapisywanie niektórych wartości właściwości kontrolki <xref:System.Windows.Forms.Button> do pliku w magazynie izolowanym. Funkcja `Read` zostanie wywołana po uruchomieniu aplikacji, a funkcja `Write` zostanie wywołana przed zakończeniem działania aplikacji. Przykład wymaga, aby funkcje `Read` i `Write` istniały jako elementy członkowskie <xref:System.Windows.Forms.Form>, który zawiera kontrolkę <xref:System.Windows.Forms.Button> o nazwie `MainButton`.  
   
 ```vb  
 ' Reads the button options from the isolated storage. Uses Default values   
@@ -354,7 +354,7 @@ public void Write()
  Jeśli nie możesz uzyskać bezpośredniego dostępu do bazy danych, ponieważ aplikacja ma działać w częściowej relacji zaufania, możesz użyć usługi sieci Web jako alternatywnej metody dostępu do danych. Usługa sieci Web to oprogramowanie, które można programowo uzyskać dostęp za pośrednictwem sieci. Dzięki usługom sieci Web aplikacje mogą udostępniać dane między strefami grup kodu. Domyślnie aplikacje w lokalnym intranecie i strefach internetowych uzyskują prawo dostępu do swoich witryn pochodzenia, co umożliwia im Wywoływanie usługi sieci Web hostowanej na tym samym serwerze. Aby uzyskać więcej informacji, zobacz [usługi sieci Web w ASP.NET AJAX](https://docs.microsoft.com/previous-versions/aspnet/bb398785(v=vs.100)) lub [Windows Communication Foundation](../wcf/index.md).  
   
 ## <a name="registry-access"></a>Dostęp do rejestru  
- <xref:System.Security.Permissions.RegistryPermission> Klasa kontroluje dostęp do rejestru systemu operacyjnego. Domyślnie tylko aplikacje, które są uruchomione lokalnie, mogą uzyskać dostęp do rejestru.  <xref:System.Security.Permissions.RegistryPermission>przyznaje aplikacji prawo do wypróbowania dostępu do rejestru; nie gwarantuje to, że dostęp powiedzie się, ponieważ system operacyjny nadal wymusza zabezpieczenia rejestru.  
+ Klasa <xref:System.Security.Permissions.RegistryPermission> kontroluje dostęp do rejestru systemu operacyjnego. Domyślnie tylko aplikacje, które są uruchomione lokalnie, mogą uzyskać dostęp do rejestru.  <xref:System.Security.Permissions.RegistryPermission> przyznaje aplikacji prawo do wypróbowania dostępu do rejestru; nie gwarantuje to, że dostęp powiedzie się, ponieważ system operacyjny nadal wymusza zabezpieczenia rejestru.  
   
  Ponieważ nie można uzyskać dostępu do rejestru w ramach częściowej relacji zaufania, może być konieczne znalezienie innych metod przechowywania danych. Podczas przechowywania ustawień aplikacji należy użyć izolowanego magazynu zamiast rejestru. Magazyn izolowany może być również używany do przechowywania innych plików specyficznych dla aplikacji. Możesz również przechowywać globalne informacje o aplikacji dotyczące serwera lub lokacji pochodzenia, ponieważ domyślnie aplikacja otrzymuje prawo dostępu do witryny jego pochodzenia.  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 13e1651c-9523-40ef-bfd7-87fb94519f8b
 topic_type:
 - apiref
-ms.openlocfilehash: 95dce47a65bd437525011d2c1588d7e13adac85b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fce89cc2b3b0104ba017b7df9105dea3f6ec4e91
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428186"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868229"
 ---
 # <a name="icorprofilerobjectenum-interface"></a>ICorProfilerObjectEnum — Interfejs
 Zapewnia metody sekwencyjnej iteracji przez kolekcję zamrożonych obiektów, które są generowane przez program [Ngen. exe (Generator obrazu natywnego)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md).  
@@ -28,16 +28,16 @@ Zapewnia metody sekwencyjnej iteracji przez kolekcję zamrożonych obiektów, kt
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[Clone, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-clone-method.md)|Pobiera wskaźnik interfejsu do kopii tego interfejsu `ICorProfilerObjectEnum`.|  
-|[GetCount, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-getcount-method.md)|Pobiera łączną liczbę zablokowanych obiektów w kolekcji.|  
-|[Next, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-next-method.md)|Pobiera określoną liczbę obiektów ciągłego z kolekcji sekwencyjnej obiektów, rozpoczynając od bieżącej pozycji modułu wyliczającego w sekwencji.|  
-|[Reset, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-reset-method.md)|Przenosi ten wskaźnik modułu wyliczającego do początkowego położenia sekwencji.|  
-|[Skip, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-skip-method.md)|Przesuwa kursor tego modułu wyliczającego z jego bieżącej pozycji, tak aby określona liczba elementów została pominięta.|  
+|[Clone, metoda](icorprofilerobjectenum-clone-method.md)|Pobiera wskaźnik interfejsu do kopii tego interfejsu `ICorProfilerObjectEnum`.|  
+|[GetCount, metoda](icorprofilerobjectenum-getcount-method.md)|Pobiera łączną liczbę zablokowanych obiektów w kolekcji.|  
+|[Next, metoda](icorprofilerobjectenum-next-method.md)|Pobiera określoną liczbę obiektów ciągłego z kolekcji sekwencyjnej obiektów, rozpoczynając od bieżącej pozycji modułu wyliczającego w sekwencji.|  
+|[Reset, metoda](icorprofilerobjectenum-reset-method.md)|Przenosi ten wskaźnik modułu wyliczającego do początkowego położenia sekwencji.|  
+|[Skip, metoda](icorprofilerobjectenum-skip-method.md)|Przesuwa kursor tego modułu wyliczającego z jego bieżącej pozycji, tak aby określona liczba elementów została pominięta.|  
   
 ## <a name="remarks"></a>Uwagi  
  Interfejs `ICorProfilerObjectEnum` jest modułem wyliczającym. Umożliwia odbiorcom tablicy ściąganie elementów od nadawcy według stawki, która jest odpowiednia dla odbiornika. Innymi słowy, odbiorca może jawnie kontrolować przepływ elementów tablicy, co pozwala uniknąć problemów związanych z przekazywaniem dużych tablic jako parametrów metody.  
   
- Użyj [ICorProfilerInfo2:: EnumModuleFrozenObjects —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-enummodulefrozenobjects-method.md) , aby uzyskać wskaźnik do interfejsu `ICorProfilerObjectEnum`.  
+ Użyj [ICorProfilerInfo2:: EnumModuleFrozenObjects —](icorprofilerinfo2-enummodulefrozenobjects-method.md) , aby uzyskać wskaźnik do interfejsu `ICorProfilerObjectEnum`.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -50,5 +50,5 @@ Zapewnia metody sekwencyjnej iteracji przez kolekcję zamrożonych obiektów, kt
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [EnumModuleFrozenObjects, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-enummodulefrozenobjects-method.md)
+- [Interfejsy profilowania](profiling-interfaces.md)
+- [EnumModuleFrozenObjects, metoda](icorprofilerinfo2-enummodulefrozenobjects-method.md)

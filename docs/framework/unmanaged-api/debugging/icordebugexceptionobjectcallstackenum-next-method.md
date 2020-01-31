@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3328a2c0-1e48-4a54-802a-9b474cf82c21
 topic_type:
 - apiref
-ms.openlocfilehash: 6c742f541b358b40e6e2fd44ca437b0dd72e29b8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 38de810509f15cf93475eb000837892b99684fc9
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73091083"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76782750"
 ---
 # <a name="icordebugexceptionobjectcallstackenumnext-method"></a>ICorDebugExceptionObjectCallStackEnum::Next — Metoda
-Pobiera określoną liczbę wystąpień [CorDebugExceptionObjectStackFrame —](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md) , które zawierają informacje z stosu wywołań obiektu wyjątku.  
+Pobiera określoną liczbę wystąpień [CorDebugExceptionObjectStackFrame —](cordebugexceptionobjectstackframe-structure.md) , które zawierają informacje z stosu wywołań obiektu wyjątku.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,13 +37,13 @@ HRESULT Next(
   
 ## <a name="parameters"></a>Parametry  
  `celt`  
- podczas Liczba wystąpień [CorDebugExceptionObjectStackFrame —](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md) do pobrania.  
+ podczas Liczba wystąpień [CorDebugExceptionObjectStackFrame —](cordebugexceptionobjectstackframe-structure.md) do pobrania.  
   
  `values`  
- określoną Tablica wskaźników, z których każdy wskazuje obiekt [CorDebugExceptionObjectStackFrame —](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md) .  
+ określoną Tablica wskaźników, z których każdy wskazuje obiekt [CorDebugExceptionObjectStackFrame —](cordebugexceptionobjectstackframe-structure.md) .  
   
  `pceltFetched`  
- określoną Wskaźnik do liczby zwróconych wystąpień [CorDebugExceptionObjectStackFrame —](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md) .  
+ określoną Wskaźnik do liczby zwróconych wystąpień [CorDebugExceptionObjectStackFrame —](cordebugexceptionobjectstackframe-structure.md) .  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -58,5 +58,5 @@ HRESULT Next(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugExceptionObjectCallStackEnum, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugExceptionObjectCallStackEnum, interfejs](icordebugexceptionobjectcallstackenum-interface.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

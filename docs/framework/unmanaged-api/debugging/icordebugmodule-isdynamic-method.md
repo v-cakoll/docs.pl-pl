@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5eefe716-5025-4a4c-970c-c823cdc7bb87
 topic_type:
 - apiref
-ms.openlocfilehash: 5774b40178ce0d7c2ef5d063a37b9011fc2630df
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 45b1d0c0a3199227ab644ba8732198dd14b1cb4c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127950"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792996"
 ---
 # <a name="icordebugmoduleisdynamic-method"></a>ICorDebugModule::IsDynamic — Metoda
 Pobiera wartość wskazującą, czy ten moduł jest dynamiczny.  
@@ -38,7 +38,7 @@ HRESULT IsDynamic(
  [out] `true`, jeśli ten moduł jest dynamiczny; w przeciwnym razie `false`.  
   
 ## <a name="remarks"></a>Uwagi  
- Moduł dynamiczny może dodawać nowe klasy i usuwać istniejące klasy nawet po załadowaniu modułu. Wywołania zwrotne [ICorDebugManagedCallback:: LoadClass —](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) i [ICorDebugManagedCallback:: UnloadClass —](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md) informują debuger po dodaniu lub usunięciu klasy.  
+ Moduł dynamiczny może dodawać nowe klasy i usuwać istniejące klasy nawet po załadowaniu modułu. Wywołania zwrotne [ICorDebugManagedCallback:: LoadClass —](icordebugmanagedcallback-loadclass-method.md) i [ICorDebugManagedCallback:: UnloadClass —](icordebugmanagedcallback-unloadclass-method.md) informują debuger po dodaniu lub usunięciu klasy.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 00c64533-15dd-47f4-bb97-fe80a1ebadef
 topic_type:
 - apiref
-ms.openlocfilehash: 9f54fdfe16bc24394503ba6f5a9b906a32ec2c8b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 57eb284bfe39ce92b2d6c03a2aeb4ae84d6aba91
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73091102"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788669"
 ---
 # <a name="icordebugexceptionobjectvalueenumerateexceptioncallstack-method"></a>ICorDebugExceptionObjectValue::EnumerateExceptionCallStack — Metoda
 Pobiera moduł wyliczający w stosie wywołań osadzonym w obiekcie wyjątku.  
@@ -35,12 +35,12 @@ HRESULT EnumerateExceptionCallStack(
   
 ## <a name="parameters"></a>Parametry  
  ppCallStackEnum  
- określoną Wskaźnik do adresu obiektu interfejsu [ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md) , który jest modułem wyliczania śladu stosu dla obiektu wyjątku zarządzanego.  
+ określoną Wskaźnik do adresu obiektu interfejsu [ICorDebugExceptionObjectCallStackEnum](icordebugexceptionobjectcallstackenum-interface.md) , który jest modułem wyliczania śladu stosu dla obiektu wyjątku zarządzanego.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli żadne informacje stosu wywołań nie są dostępne, metoda zwraca `S_OK`, a [ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md) jest prawidłowym modułem wyliczającym o długości 0. Jeśli metoda nie może pobrać informacji o śledzeniu stosu, zwracana wartość jest `E_FAIL` i żaden moduł wyliczający nie jest zwracany.  
+ Jeśli żadne informacje stosu wywołań nie są dostępne, metoda zwraca `S_OK`, a [ICorDebugExceptionObjectCallStackEnum](icordebugexceptionobjectcallstackenum-interface.md) jest prawidłowym modułem wyliczającym o długości 0. Jeśli metoda nie może pobrać informacji o śledzeniu stosu, zwracana wartość jest `E_FAIL` i żaden moduł wyliczający nie jest zwracany.  
   
- Obiekt [ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md) jest odpowiedzialny za dekodowanie danych śledzenia stosu z pola `_stackTrace` obiektu Exception.  
+ Obiekt [ICorDebugExceptionObjectCallStackEnum](icordebugexceptionobjectcallstackenum-interface.md) jest odpowiedzialny za dekodowanie danych śledzenia stosu z pola `_stackTrace` obiektu Exception.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -53,5 +53,5 @@ HRESULT EnumerateExceptionCallStack(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugExceptionObjectValue, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectvalue-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugExceptionObjectValue, interfejs](icordebugexceptionobjectvalue-interface.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

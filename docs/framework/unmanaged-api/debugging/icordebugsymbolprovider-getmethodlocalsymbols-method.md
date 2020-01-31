@@ -2,12 +2,12 @@
 title: 'ICorDebugSymbolProvider:: GetMethodLocalSymbols, Metoda'
 ms.date: 03/30/2017
 ms.assetid: 8b989e38-e779-49d1-9e90-f1f920484b08
-ms.openlocfilehash: 6cd04ea7f83fb7ae96d9ffd1beba39530511ec25
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 41fc8e94ec8a5c8794674bebb32494bb3806e69d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138891"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791605"
 ---
 # <a name="icordebugsymbolprovidergetmethodlocalsymbols-method"></a>ICorDebugSymbolProvider:: GetMethodLocalSymbols, Metoda
 Pobiera symbole lokalne metody z uwzględnieniem względnego adresu wirtualnego (RVA) tej metody.  
@@ -34,7 +34,7 @@ HRESULT GetMethodLocalSymbols(
  określoną Wskaźnik do liczby symboli pobranych przez metodę.  
   
  `pcFetchedSymbols`  
- określoną Wskaźnik do tablicy [ICorDebugVariableSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md) zawierającej symbole lokalne metody.  
+ określoną Wskaźnik do tablicy [ICorDebugVariableSymbol](icordebugvariablesymbol-interface.md) zawierającej symbole lokalne metody.  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -52,6 +52,6 @@ HRESULT GetMethodLocalSymbols(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [GetMethodParameterSymbols, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-getmethodparametersymbols-method.md)
-- [ICorDebugSymbolProvider, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [GetMethodParameterSymbols, metoda](icordebugsymbolprovider-getmethodparametersymbols-method.md)
+- [ICorDebugSymbolProvider, interfejs](icordebugsymbolprovider-interface.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

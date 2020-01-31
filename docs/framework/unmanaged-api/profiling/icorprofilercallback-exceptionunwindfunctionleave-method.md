@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ebaad1d5-ee0a-4cb0-96bc-8ba5d371b747
 topic_type:
 - apiref
-ms.openlocfilehash: 645c9dd9319dfdf9cb070366d2c389f879e1b1d2
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9d3e39cd910240b965896f1b866b0c21de616a57
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448047"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866341"
 ---
 # <a name="icorprofilercallbackexceptionunwindfunctionleave-method"></a>ICorProfilerCallback::ExceptionUnwindFunctionLeave — Metoda
 Powiadamia profiler, że faza unwind dla obsługi wyjątków zakończyła odwinięcie funkcji.  
@@ -49,5 +49,5 @@ HRESULT ExceptionUnwindFunctionLeave();
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ExceptionUnwindFunctionEnter, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfunctionenter-method.md)
+- [ICorProfilerCallback, interfejs](icorprofilercallback-interface.md)
+- [ExceptionUnwindFunctionEnter, metoda](icorprofilercallback-exceptionunwindfunctionenter-method.md)

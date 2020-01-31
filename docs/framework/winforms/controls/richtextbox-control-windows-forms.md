@@ -1,56 +1,56 @@
 ---
-title: RichTextBox — Formant (Formularze systemu Windows)
+title: RichTextBox, kontrolka
 ms.date: 03/30/2017
 helpviewer_keywords:
 - text boxes
 - RichTextBox control [Windows Forms]
 - rich edit controls
 ms.assetid: 3225f2ef-c6d9-4bd4-9d3e-2219e58edbf2
-ms.openlocfilehash: 2b1a6604df3979e83e4a815cdb4a9397ab4e67ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d26ec7bfc4d75b304bbc9dc98dbbeaed64effe7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012467"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743130"
 ---
 # <a name="richtextbox-control-windows-forms"></a>RichTextBox — Formant (Formularze systemu Windows)
-Formularze Windows `RichTextBox` formant jest używany do wyświetlania, wprowadzania i manipulowanie formatowanie tekstu. `RichTextBox` Kontroli działanie jest <xref:System.Windows.Forms.TextBox> kontroli jest, ale można również wyświetlić czcionki, kolory i łączy; załadować z pliku; cofania i ponawiania operacji; edycji tekstu i obrazów osadzonych i znaleźć określonych znaków. `RichTextBox` Kontroli zazwyczaj służy do zapewnienia manipulacja tekstem i wyświetlić funkcje podobne do aplikacji edytora tekstów, takiego jak Microsoft Word. Podobnie jak <xref:System.Windows.Forms.TextBox> kontrolki, `RichTextBox` formant może wyświetlić paski przewijania; ale w przeciwieństwie do <xref:System.Windows.Forms.TextBox> kontrolki, domyślnie wyświetla zarówno poziome i pionowe paski przewijania i ma ustawienia dodatkowe paska przewijania.  
+Kontrolka `RichTextBox` Windows Forms służy do wyświetlania, wprowadzania i manipulowania tekstem z formatowaniem. Formant `RichTextBox` wykonuje wszystko kontrolkę <xref:System.Windows.Forms.TextBox>, ale może również wyświetlać czcionki, kolory i linki; Ładowanie tekstu i osadzonych obrazów z pliku; operacje cofania i ponawiania edycji; i Znajdź określone znaki. Formant `RichTextBox` jest zazwyczaj używany do udostępniania tekstu i funkcji wyświetlania, podobnie jak w przypadku aplikacji do przetwarzania tekstów, takich jak Microsoft Word. Podobnie jak w przypadku kontrolki <xref:System.Windows.Forms.TextBox> kontrolka `RichTextBox` może wyświetlać paski przewijania. ale w przeciwieństwie do kontrolki <xref:System.Windows.Forms.TextBox>, domyślnie wyświetla poziome i pionowe paski przewijania i ma dodatkowe ustawienia paska przewijania.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [RichTextBoxm kontrolka — omówienie](richtextbox-control-overview-windows-forms.md)  
- Ogólne pojęcia związane z `RichTextBox` formant, który umożliwia użytkownikom wprowadzanie, wyświetlania i manipulowania tekstem przy użyciu opcji formatowania.  
+ Wprowadza ogólne koncepcje `RichTextBox` formantu, który umożliwia użytkownikom wprowadzanie, wyświetlanie i manipulowanie tekstem przy użyciu opcji formatowania.  
   
- [Instrukcje: Określić, kiedy formatowanie zmiany atrybutów w formancie RichTextBox formularzy Windows](determine-when-formatting-attributes-change-wf-richtextbox-control.md)  
- Wyjaśnia, jak do śledzenia zmian w czcionki i formatowanie akapitu w `RichTextBox` kontroli.  
+ [Instrukcje: ustalenie, kiedy zmieniono atrybuty formatowania w kontrolce RichTextBox formularzy Windows Forms](determine-when-formatting-attributes-change-wf-richtextbox-control.md)  
+ Wyjaśnia, jak śledzić zmiany w czcionkach i formatowaniu akapitu w kontrolce `RichTextBox`.  
   
- [Instrukcje: Wyświetlanie pasków przewijania w Windows formantu RichTextBox formularzy](how-to-display-scroll-bars-in-the-windows-forms-richtextbox-control.md)  
- W tym artykule opisano wiele opcji dotyczących pasków przewijania w `RichTextBox` kontroli.  
+ [Instrukcje: wyświetlanie pasków przewijania w komórkach kontrolki RichTextBox formularzy Windows Forms](how-to-display-scroll-bars-in-the-windows-forms-richtextbox-control.md)  
+ Opisuje wiele opcji dostępnych dla pasków przewijania w kontrolce `RichTextBox`.  
   
- [Instrukcje: Wyświetlanie łączy stylu sieci Web za pomocą formantu RichTextBox formularzy Windows](how-to-display-web-style-links-with-the-windows-forms-richtextbox-control.md)  
- Wyjaśnia, jak połączyć z witryny sieci Web z `RichTextBox` kontroli.  
+ [Instrukcje: wyświetlanie linków w stylu internetowym za pomocą kontrolki RichTextBox formularzy Windows Forms](how-to-display-web-style-links-with-the-windows-forms-richtextbox-control.md)  
+ Wyjaśnia, jak łączyć się z witrynami sieci Web za pomocą kontrolki `RichTextBox`.  
   
- [Instrukcje: Włącz operacje przeciągania i upuszczania za pomocą formantu RichTextBox formularzy Windows](enable-drag-and-drop-operations-with-wf-richtextbox-control.md)  
- Zawiera instrukcje dotyczące przeciągania dane `RichTextBox` kontroli.  
+ [Instrukcje: włączenie operacji przeciągania i upuszczania za pomocą kontrolki RichTextBox formularzy Windows Forms](enable-drag-and-drop-operations-with-wf-richtextbox-control.md)  
+ Zawiera instrukcje dotyczące przeciągania danych do kontrolki `RichTextBox`.  
   
- [Instrukcje: Ładowanie plików do formantu RichTextBox formularzy Windows](how-to-load-files-into-the-windows-forms-richtextbox-control.md)  
- Zawiera instrukcje dotyczące ładowania istniejący plik do `RichTextBox` kontroli.  
+ [Instrukcje: ładowanie plików do kontrolki RichTextBox formularzy Windows Forms](how-to-load-files-into-the-windows-forms-richtextbox-control.md)  
+ Zawiera instrukcje dotyczące ładowania istniejącego pliku do kontrolki `RichTextBox`.  
   
- [Instrukcje: Zapisywanie plików za pomocą formantu RichTextBox formularzy Windows](how-to-save-files-with-the-windows-forms-richtextbox-control.md)  
- Zawiera instrukcje dotyczące zapisywania zawartości pamięci `RichTextBox` formantu w pliku.  
+ [Instrukcje: zapisywanie plików za pomocą kontrolki RichTextBox formularzy Windows Forms](how-to-save-files-with-the-windows-forms-richtextbox-control.md)  
+ Zawiera instrukcje dotyczące zapisywania zawartości formantu `RichTextBox` w pliku.  
   
- [Instrukcje: Ustawianie atrybutów czcionki dla formantu RichTextBox formularzy Windows](how-to-set-font-attributes-for-the-windows-forms-richtextbox-control.md)  
- W tym artykule opisano sposób ustawiania rodzinę czcionek, rozmiar, styl i kolor tekstu w `RichTextBox` kontroli.  
+ [Instrukcje: ustawianie atrybutów czcionki dla kontrolki RichTextBox formularzy Windows Forms](how-to-set-font-attributes-for-the-windows-forms-richtextbox-control.md)  
+ Opisuje sposób ustawiania rodziny czcionek, rozmiaru, stylu i koloru tekstu w kontrolce `RichTextBox`.  
   
- [Instrukcje: Ustawianie wcięć, wysunięć i akapitów punktowanych za pomocą formantu RichTextBox formularzy Windows](set-indents-hanging-indents-bulleted-paragraphs-with-wf-richtextbox.md)  
- W tym artykule opisano sposób formatowania akapitów `RichTextBox` kontroli.  
+ [Instrukcje: ustawianie wcięć, wysunięć i akapitów punktowanych za pomocą kontrolki RichTextBox formularzy Windows Forms](set-indents-hanging-indents-bulleted-paragraphs-with-wf-richtextbox.md)  
+ Opisuje sposób formatowania akapitów w kontrolce `RichTextBox`.  
   
 ## <a name="reference"></a>Tematy pomocy  
- <xref:System.Windows.Forms.RichTextBox> Klasa  
- Zawiera opis tej klasy i zawiera linki do wszystkich jej członków.  
+ Klasa <xref:System.Windows.Forms.RichTextBox>  
+ Opisuje tę klasę i zawiera linki do wszystkich jej elementów członkowskich.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)  
- Zawiera listę wszystkich kontrolek Windows Forms, wraz z łączami do informacji na temat ich używania.  
+ Zawiera pełną listę kontrolek Windows Forms, z łączami do informacji o ich użyciu.  
   
  [TextBox, kontrolka](textbox-control-windows-forms.md)  
- Ogólne pojęcia związane z <xref:System.Windows.Forms.TextBox> formant, który zezwala na wielowierszowy, które można edytować dane wejściowe od użytkownika.
+ Wprowadza ogólne koncepcje <xref:System.Windows.Forms.TextBox> kontrolki, które umożliwiają edytowalne, wielowierszowe wprowadzanie danych przez użytkownika.

@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 18e89f45-e068-426a-be16-9f53a4346860
 topic_type:
 - apiref
-ms.openlocfilehash: 774a5d4e48f00ea8c28977f3f685dcd5a8da3199
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a9ab8c81c995bbec41db217c904e03dd70351aee
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440588"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866887"
 ---
 # <a name="functionleave-function"></a>FunctionLeave — Funkcja
 Powiadamia profiler, że funkcja ma zwrócić do obiektu wywołującego.  
   
 > [!NOTE]
-> Funkcja `FunctionLeave` jest przestarzała w .NET Framework 2,0. Będzie ona nadal działała, ale nastąpi spadek wydajności. Zamiast tego użyj funkcji [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) .  
+> Funkcja `FunctionLeave` jest przestarzała w .NET Framework 2,0. Będzie ona nadal działała, ale nastąpi spadek wydajności. Zamiast tego użyj funkcji [FunctionLeave2](functionleave2-function.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,10 +35,12 @@ void __stdcall FunctionLeave (
 );  
 ```  
   
-## <a name="parameters"></a>Parametry  
- `funcID`  
- podczas Identyfikator zwracanej funkcji.  
-  
+## <a name="parameters"></a>Parametry
+
+- `funcID`
+
+  \[in) identyfikator funkcji, która zwraca.
+
 ## <a name="remarks"></a>Uwagi  
  Funkcja `FunctionLeave` jest wywołaniem zwrotnym; należy zaimplementować go. Implementacja musi używać atrybutu klasy magazynu `__declspec`(`naked`).  
   
@@ -63,8 +65,8 @@ void __stdcall FunctionLeave (
   
 ## <a name="see-also"></a>Zobacz także
 
-- [FunctionEnter2, funkcja](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
-- [FunctionLeave2, funkcja](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
-- [FunctionTailcall2, funkcja](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
-- [SetEnterLeaveFunctionHooks2, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [Profilowanie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [FunctionEnter2, funkcja](functionenter2-function.md)
+- [FunctionLeave2, funkcja](functionleave2-function.md)
+- [FunctionTailcall2, funkcja](functiontailcall2-function.md)
+- [SetEnterLeaveFunctionHooks2, metoda](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [Profilowanie statycznych funkcji globalnych](profiling-global-static-functions.md)

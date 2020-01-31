@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7d5385d3-f4a5-47c4-8478-a3513b5e9406
 topic_type:
 - apiref
-ms.openlocfilehash: 1f46866a1b975455acd294221e38ef3b4c358660
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5fa042223e47961dad0a6799ab8ca999ef76e285
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140204"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791093"
 ---
 # <a name="icordebugvalue3-interface"></a>ICorDebugValue3 — Interfejs
 Rozszerza interfejsy "ICorDebugValue" i "ICorDebugValue2", aby zapewnić obsługę tablic o rozmiarze większym niż 2 GB.  
@@ -28,10 +28,10 @@ Rozszerza interfejsy "ICorDebugValue" i "ICorDebugValue2", aby zapewnić obsług
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetSize64, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md)|Pobiera rozmiar (w bajtach) tego obiektu `ICorDebugValue3`.|  
+|[GetSize64, metoda](icordebugvalue3-getsize64-method.md)|Pobiera rozmiar (w bajtach) tego obiektu `ICorDebugValue3`.|  
   
 ## <a name="remarks"></a>Uwagi  
- Metoda [ICorDebugValue:: GetSize](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md) zwraca rozmiar obiektu, który mieści się w zakresie od 0 do 2 147 483 647 bajtów. W .NET Framework 4,5 rozmiar tablic może przekroczyć 2 GB. Interfejs `ICorDebugValue3` umożliwia określenie rozmiaru tych tablic.  
+ Metoda [ICorDebugValue:: GetSize](icordebugvalue3-getsize64-method.md) zwraca rozmiar obiektu, który mieści się w zakresie od 0 do 2 147 483 647 bajtów. W .NET Framework 4,5 rozmiar tablic może przekroczyć 2 GB. Interfejs `ICorDebugValue3` umożliwia określenie rozmiaru tych tablic.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -44,5 +44,5 @@ Rozszerza interfejsy "ICorDebugValue" i "ICorDebugValue2", aby zapewnić obsług
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie](index.md)

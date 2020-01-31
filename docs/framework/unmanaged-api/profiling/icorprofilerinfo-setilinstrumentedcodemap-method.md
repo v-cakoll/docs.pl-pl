@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bce1dcf8-b4ec-4e73-a917-f2df1ad49c8a
 topic_type:
 - apiref
-ms.openlocfilehash: 32e63a6d2b6f739025d4c5558c16fe2d74fde73c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 99e473268fd0d5bb8ce120b97576277949b86508
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449866"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76869000"
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a>ICorProfilerInfo::SetILInstrumentedCodeMap — Metoda
 
@@ -55,7 +55,7 @@ podczas Tablica struktur COR_IL_MAP, z których każdy Określa przesunięcie MS
 
 ## <a name="remarks"></a>Uwagi
 
-Profiler często wstawia instrukcje w kodzie źródłowym metody w celu instrumentowania tej metody (na przykład w celu powiadomienia po osiągnięciu podanych linii źródłowej). `SetILInstrumentedCodeMap` umożliwia programowi Profiler zamapowanie oryginalnych instrukcji MSIL na nowe lokalizacje. Profiler może użyć metody [ICorProfilerInfo:: GetILToNativeMapping —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) , aby uzyskać początkowe przesunięcie MSIL dla danego przesunięcia natywnego.
+Profiler często wstawia instrukcje w kodzie źródłowym metody w celu instrumentowania tej metody (na przykład w celu powiadomienia po osiągnięciu podanych linii źródłowej). `SetILInstrumentedCodeMap` umożliwia programowi Profiler zamapowanie oryginalnych instrukcji MSIL na nowe lokalizacje. Profiler może użyć metody [ICorProfilerInfo:: GetILToNativeMapping —](icorprofilerinfo-getiltonativemapping-method.md) , aby uzyskać początkowe przesunięcie MSIL dla danego przesunięcia natywnego.
 
 Debuger przyjmie, że każde Stare przesunięcie odwołuje się do przesunięcia MSIL w oryginalnym, niezmodyfikowanym kodzie MSIL i że każde nowe przesunięcie odwołuje się do przesunięcia MSIL w nowym, przyrządowym kodzie. Mapa powinna być posortowana w kolejności rosnącej. Aby krok po kroku działał prawidłowo, postępuj zgodnie z następującymi wskazówkami:
 
@@ -97,4 +97,4 @@ W .NET Framework 3,5 i poprzednich wersjach przypisujesz tablicę `rgILMapEntrie
 
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo, interfejs](icorprofilerinfo-interface.md)

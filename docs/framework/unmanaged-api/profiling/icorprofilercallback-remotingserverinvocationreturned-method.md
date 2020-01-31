@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a4de6805-e159-4280-99e5-3390c86166d0
 topic_type:
 - apiref
-ms.openlocfilehash: c121e403d116581ce3fa823d5d8cadbb2a58e296
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 4b82a334d8c64dde824802fcf2a7d0ad17457af0
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445786"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866003"
 ---
 # <a name="icorprofilercallbackremotingserverinvocationreturned-method"></a>ICorProfilerCallback::RemotingServerInvocationReturned — Metoda
 Powiadamia program profilujący, że proces zakończył wywoływanie metody w odpowiedzi na żądanie wywołania metody zdalnej.  
@@ -42,4 +42,4 @@ HRESULT RemotingServerInvocationReturned();
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback, interfejs](icorprofilercallback-interface.md)

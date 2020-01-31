@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 41462329-a648-46f0-ae6d-728b94c31aa9
 topic_type:
 - apiref
-ms.openlocfilehash: 9c9cd0b042dc22f35c38e349ab8881dafc602731
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 534e0672820cc2509f32765274ad970fda69ec5d
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445013"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866510"
 ---
 # <a name="icorprofilercallbackexceptioncatcherenter-method"></a>ICorProfilerCallback::ExceptionCatcherEnter — Metoda
 Powiadamia profiler, że sterowanie jest przesyłane do odpowiedniego bloku `catch`.  
@@ -33,13 +33,16 @@ HRESULT ExceptionCatcherEnter(
     [in] ObjectID   objectId);  
 ```  
   
-## <a name="parameters"></a>Parametry  
- `functionId`  
- podczas Identyfikator funkcji zawierającej blok `catch`.  
+## <a name="parameters"></a>Parametry
+
+- `functionId`
+
+  \[in) identyfikator funkcji zawierającej blok `catch`.
   
- `objectId`  
- podczas Identyfikator obsługiwanego wyjątku.  
-  
+- `objectId`
+
+  \[w] Identyfikator obsługiwanego wyjątku.
+
 ## <a name="remarks"></a>Uwagi  
  Metoda `ExceptionCatcherEnter` jest wywoływana tylko wtedy, gdy punkt catch jest w kodzie skompilowanym za pomocą kompilatora just-in-Time (JIT). Wyjątek przechwytywany w kodzie niezarządzanym lub w kodzie wewnętrznym środowiska uruchomieniowego nie wywoła tego powiadomienia. Wartość `objectId` jest przenoszona ponownie, ponieważ wyrzucanie elementów bezużytecznych mogło przenieść obiekt od momentu powiadomienia `ExceptionThrown`.  
   
@@ -58,5 +61,5 @@ HRESULT ExceptionCatcherEnter(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ExceptionCatcherLeave, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherleave-method.md)
+- [ICorProfilerCallback, interfejs](icorprofilercallback-interface.md)
+- [ExceptionCatcherLeave, metoda](icorprofilercallback-exceptioncatcherleave-method.md)

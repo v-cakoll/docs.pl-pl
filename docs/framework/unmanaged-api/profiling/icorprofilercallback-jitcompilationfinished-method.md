@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8dcd7537-d0c6-498c-8a56-2c060310ef65
 topic_type:
 - apiref
-ms.openlocfilehash: 1bbdfa93913b9fdf8aa164c8ca6c35cd33a228df
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f1cfef464569b577923fbb16624c99358998d29c
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449918"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866250"
 ---
 # <a name="icorprofilercallbackjitcompilationfinished-method"></a>ICorProfilerCallback::JITCompilationFinished — Metoda
 Powiadamia profiler, że kompilator just-in-Time (JIT) zakończył Kompilowanie funkcji.  
@@ -34,18 +34,22 @@ HRESULT JITCompilationFinished(
     [in] BOOL       fIsSafeToBlock);  
 ```  
   
-## <a name="parameters"></a>Parametry  
- `functionId`  
- podczas Identyfikator funkcji, która została skompilowana.  
-  
- `hrStatus`  
- podczas Wartość wskazująca, czy kompilacja zakończyła się pomyślnie.  
-  
- `fIsSafeToBlock`  
- podczas Wartość wskazująca, czy blokowanie będzie miało wpływ na działanie środowiska uruchomieniowego. Wartość jest `true`, jeśli blokowanie może spowodować, że środowisko uruchomieniowe będzie oczekiwać na zwrócenie przez wątek wywołujący z tego wywołania zwrotnego; w przeciwnym razie `false`.  
-  
- Mimo że wartość `true` nie będzie szkodliwe dla środowiska uruchomieniowego, może pochylić wyniki profilowania.  
-  
+## <a name="parameters"></a>Parametry
+
+- `functionId`
+
+  \[in) identyfikator funkcji, która została skompilowana.
+
+- `hrStatus`
+
+  \[w] wartość wskazującą, czy kompilacja zakończyła się pomyślnie.
+
+- `fIsSafeToBlock`
+
+  \[w] wartość wskazująca Profiler, czy blokowanie będzie miało wpływ na działanie środowiska uruchomieniowego. Wartość jest `true`, jeśli blokowanie może spowodować, że środowisko uruchomieniowe będzie oczekiwać na zwrócenie przez wątek wywołujący z tego wywołania zwrotnego; w przeciwnym razie `false`.
+
+  Mimo że wartość `true` nie będzie szkodliwe dla środowiska uruchomieniowego, może pochylić wyniki profilowania.
+
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
@@ -57,5 +61,5 @@ HRESULT JITCompilationFinished(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [JITCompilationStarted, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)
+- [ICorProfilerCallback, interfejs](icorprofilercallback-interface.md)
+- [JITCompilationStarted, metoda](icorprofilercallback-jitcompilationstarted-method.md)

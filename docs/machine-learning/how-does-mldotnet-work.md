@@ -4,16 +4,16 @@ description: ML.NET umożliwia dodawanie uczenia maszynowego do aplikacji .NET, 
 ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
-ms.openlocfilehash: 98251c39a4bdaba8203c26c6a781a86efc46efa4
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: bc157b22201c66bceecf78aaa36b9c653fe6a131
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740080"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794573"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>Co to jest ML.NET i jak to działa?
 
-ML.NET umożliwia dodawanie uczenia maszynowego do aplikacji .NET, w scenariuszach w trybie online lub offline. Dzięki tej możliwości można dokonać automatycznych prognoz przy użyciu danych dostępnych dla aplikacji.
+ML.NET umożliwia dodawanie uczenia maszynowego do aplikacji .NET, w scenariuszach w trybie online lub offline. Dzięki tej możliwości można dokonać automatycznych prognoz przy użyciu danych dostępnych dla aplikacji. Aplikacje do uczenia maszynowego wykorzystują wzorce w danych, aby tworzyć przewidywania, a nie muszą być jawnie programowane.
 
 Central do ML.NET to **model**uczenia maszynowego. Model określa kroki niezbędne do przekształcenia danych wejściowych w prognozowanie. Za pomocą ML.NET można uczenie niestandardowego modelu przez określenie algorytmu lub zaimportować wstępnie szkolonych modeli TensorFlow i ONNX.
 
@@ -30,7 +30,7 @@ Przykłady typu przewidywania, które można wprowadzić przy użyciu ML.NET:
 |Wykrywanie anomalii|Wykrywanie fałszywych transakcji bankowych |
 |Zalecenia|Sugeruj produkty, które kupujący online może chcieć kupić, w oparciu o ich poprzednie zakupy|
 |Szeregi czasowe/dane sekwencyjne|Prognoza pogody/sprzedaż produktu|
-|Klasyfikacja obrazów|Kategoryzacja pathologies w obrazach medycznych|
+|Klasyfikacja obrazu|Kategoryzacja pathologies w obrazach medycznych|
 
 ## <a name="hello-mlnet-world"></a>Witaj w świecie ML.NET
 
@@ -179,7 +179,7 @@ Aplikacja ML.NET rozpoczyna się od obiektu <xref:Microsoft.ML.MLContext>. Ten o
 ||Wykrywanie anomalii|<xref:Microsoft.ML.AnomalyDetectionCatalog>||
 ||Obsługa klastrów|<xref:Microsoft.ML.ClusteringCatalog>||
 ||Prognozowanie|<xref:Microsoft.ML.ForecastingCatalog>||
-||Klasyfikacja|<xref:Microsoft.ML.RankingCatalog>||
+||Określania|<xref:Microsoft.ML.RankingCatalog>||
 ||Regresji|<xref:Microsoft.ML.RegressionCatalog>||
 ||Zalecenie|<xref:Microsoft.ML.RecommendationCatalog>|Dodaj `Microsoft.ML.Recommender` pakiet NuGet|
 ||Szeregów czasowych|<xref:Microsoft.ML.TimeSeriesCatalog>|Dodaj `Microsoft.ML.TimeSeries` pakiet NuGet|

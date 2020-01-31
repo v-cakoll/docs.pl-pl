@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b0192104-6073-4089-a4df-dc29ee033074
 topic_type:
 - apiref
-ms.openlocfilehash: c8cfc9cdf6580a002f6ac15080012a9e8c63be20
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 780f9eb0984e35c4487d770b5e7ff33917cf07ed
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129646"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792416"
 ---
 # <a name="icordebugprocess5enumerateheap-method"></a>ICorDebugProcess5::EnumerateHeap — Metoda
 Pobiera moduł wyliczający dla obiektów na zarządzanym stosie.  
@@ -35,12 +35,12 @@ HRESULT EnumerateHeap(
   
 ## <a name="parameters"></a>Parametry  
  `ppObject`  
- określoną Wskaźnik do adresu obiektu interfejsu [ICorDebugHeapEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md) , który jest modułem wyliczającym dla obiektów, które znajdują się na zarządzanym stosie.  
+ określoną Wskaźnik do adresu obiektu interfejsu [ICorDebugHeapEnum](icordebugheapenum-interface.md) , który jest modułem wyliczającym dla obiektów, które znajdują się na zarządzanym stosie.  
   
 ## <a name="remarks"></a>Uwagi  
- Przed wywołaniem metody `ICorDebugProcess5::EnumerateHeap` należy wywołać metodę [ICorDebugProcess5:: GetGCHeapInformation —](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md) i sprawdzić wartość pola `areGCStructuresValid` zwróconego obiektu [COR_HEAPINFO](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md) , aby upewnić się, że sterta wyrzucania elementów bezużytecznych w jej bieżący stan jest wyliczalny. Ponadto `ICorDebugProcess5::EnumerateHeap` zwraca `E_FAIL`, jeśli dołączysz zbyt wcześnie w okresie istnienia procesu, przed przydzieleniem pamięci dla zarządzanej sterty.  
+ Przed wywołaniem metody `ICorDebugProcess5::EnumerateHeap` należy wywołać metodę [ICorDebugProcess5:: GetGCHeapInformation —](icordebugprocess5-getgcheapinformation-method.md) i sprawdzić wartość pola `areGCStructuresValid` zwróconego obiektu [COR_HEAPINFO](cor-heapinfo-structure.md) , aby upewnić się, że sterta wyrzucania elementów bezużytecznych w bieżącym stanie jest wyliczalna. Ponadto `ICorDebugProcess5::EnumerateHeap` zwraca `E_FAIL`, jeśli dołączysz zbyt wcześnie w okresie istnienia procesu, przed przydzieleniem pamięci dla zarządzanej sterty.  
   
- Obiekt interfejsu [ICorDebugHeapEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md) to standardowy moduł wyliczający pochodzący z interfejsu ICorDebugEnum, który umożliwia Wyliczenie obiektów [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) . Ta metoda wypełnia obiekt kolekcji [ICorDebugHeapEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md) z wystąpieniami [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) , które zawierają informacje o wszystkich obiektach. Kolekcja może zawierać również wystąpienia [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) , które dostarczają informacji o obiektach, które nie zostały odblokowane przez żaden obiekt, ale jeszcze nie zostały zebrane przez moduł wyrzucania elementów bezużytecznych.  
+ Obiekt interfejsu [ICorDebugHeapEnum](icordebugheapenum-interface.md) to standardowy moduł wyliczający pochodzący z interfejsu ICorDebugEnum, który umożliwia Wyliczenie [COR_HEAPOBJECT](cor-heapobject-structure.md) obiektów. Ta metoda wypełnia obiekt kolekcji [ICorDebugHeapEnum](icordebugheapenum-interface.md) z wystąpieniami [COR_HEAPOBJECT](cor-heapobject-structure.md) , które zawierają informacje o wszystkich obiektach. Kolekcja może również zawierać [COR_HEAPOBJECT](cor-heapobject-structure.md) wystąpienia, które dostarczają informacji o obiektach, które nie są odblokowane przez żaden obiekt, ale nie zostały jeszcze zebrane przez moduł wyrzucania elementów bezużytecznych.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -53,5 +53,5 @@ HRESULT EnumerateHeap(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugProcess5, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugProcess5, interfejs](icordebugprocess5-interface.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

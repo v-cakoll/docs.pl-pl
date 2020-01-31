@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3ff2ad2a-da5a-461b-8627-1a8eba49df9c
 topic_type:
 - apiref
-ms.openlocfilehash: ab5adabe868c245ed7a773d9b4206b25d9e9a4f0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c6f20b0f7927d79ee56b5b6962137d668dc048d1
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140247"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791115"
 ---
 # <a name="icordebugvalue2-interface"></a>ICorDebugValue2 — Interfejs
 Rozszerza interfejs "ICorDebugValue", aby zapewnić obsługę obiektów "ICorDebugType".  
@@ -28,7 +28,7 @@ Rozszerza interfejs "ICorDebugValue", aby zapewnić obsługę obiektów "ICorDeb
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetExactType, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md)|Pobiera wskaźnik interfejsu do obiektu `ICorDebugType`, który reprezentuje <xref:System.Type> tej wartości.|  
+|[GetExactType, metoda](icordebugvalue2-getexacttype-method.md)|Pobiera wskaźnik interfejsu do obiektu `ICorDebugType`, który reprezentuje <xref:System.Type> tej wartości.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -46,6 +46,6 @@ Rozszerza interfejs "ICorDebugValue", aby zapewnić obsługę obiektów "ICorDeb
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)
 
-- [ICorDebugValue3, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md)
+- [ICorDebugValue3, interfejs](icordebugvalue3-interface.md)

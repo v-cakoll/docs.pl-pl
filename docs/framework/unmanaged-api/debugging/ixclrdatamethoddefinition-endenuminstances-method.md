@@ -1,5 +1,5 @@
 ---
-title: Metoda IXCLRDataMethodDefinition::EndEnumInstances
+title: 'IXCLRDataMethodDefinition:: EndEnumInstances, Metoda'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataMethodDefinition::EndEnumInstances Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 3d9e3ca31eddff9d08607c4d6d37ca76139bf5d2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 605a4244d20ef6c0b7af3c2b26b65ff2a63fa9dd
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756306"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790447"
 ---
-# <a name="ixclrdatamethoddefinitionendenuminstances-method"></a>Metoda IXCLRDataMethodDefinition::EndEnumInstances
+# <a name="ixclrdatamethoddefinitionendenuminstances-method"></a>IXCLRDataMethodDefinition:: EndEnumInstances, Metoda
 
-Zwalnia zasoby używane przez Iteratory wewnętrzny używany podczas wyliczania wystąpień.
+Zwalnia zasoby używane przez Iteratory wewnętrzne używane podczas wyliczania wystąpień.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -39,20 +39,20 @@ HRESULT EndEnumInstances(
 ## <a name="parameters"></a>Parametry
 
 `handle`\
-[out] Dojście do wyliczania wystąpień.
+określoną Dojście do wyliczania wystąpień.
 
 ## <a name="remarks"></a>Uwagi
 
-Podana metoda jest częścią `IXCLRDataMethodDefinition` interfejs i odnosi się do piątego gniazda tabeli metod wirtualnych.
+Podana metoda jest częścią interfejsu `IXCLRDataMethodDefinition` i odpowiada piątemu gnieździe tabeli metody wirtualnej.
 
 ## <a name="requirements"></a>Wymagania
 
 **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
-**Nagłówek:** Brak  
-**Biblioteka:** Brak  
-**Wersje programu .NET framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Nagłówek:** Dawaj  
+**Biblioteka:** Dawaj  
+**Wersje .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Interfejs IXCLRDataMethodDefinition](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethoddefinition-interface.md)
+- [Debugowanie](index.md)
+- [IXCLRDataMethodDefinition, interfejs](ixclrdatamethoddefinition-interface.md)

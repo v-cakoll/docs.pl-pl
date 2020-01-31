@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aa32b12b-05fc-4ea8-a904-adae25034269
 topic_type:
 - apiref
-ms.openlocfilehash: da921644c4d967efb0d88060ada0332c5eb63965
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2663e5604cdd55472cc148b2d2b38599df81f11e
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138532"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794440"
 ---
 # <a name="icordebugguidtotypeenum-interface"></a>ICorDebugGuidToTypeEnum — Interfejs
 Dostarcza moduł wyliczający, który definiuje mapowanie między zestawem identyfikatorów GUID i odpowiadającymi im typami, które są reprezentowane przez wystąpienia ICorDebugType. Ten interfejs dziedziczy metody z interfejsu ICorDebugEnum.  
@@ -28,10 +28,10 @@ Dostarcza moduł wyliczający, który definiuje mapowanie między zestawem ident
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[ICorDebugGuidToTypeEnum:: Next](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-next-method.md)|Pobiera określoną liczbę wystąpień [CorDebugGuidToTypeMapping —](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) , które MAPUJĄ identyfikatory GUID na informacje o typie.|  
+|[ICorDebugGuidToTypeEnum:: Next](icordebugguidtotypeenum-next-method.md)|Pobiera określoną liczbę wystąpień [CorDebugGuidToTypeMapping —](cordebugguidtotypemapping-structure.md) , które MAPUJĄ identyfikatory GUID na informacje o typie.|  
   
 ## <a name="remarks"></a>Uwagi  
- Obiekt interfejsu `ICorDebugGuidToTypeEnum` można pobrać, wywołując metodę [ICorDebugAppDomain3:: GetCachedWinRTTypes —](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypes-method.md) . Debuger może wywołać [kolejną](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-next-method.md) metodę tego interfejsu, aby pobrać obiekty [CorDebugGuidToTypeMapping —](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) reprezentujące mapowania zarządzanych reprezentacji typów środowisko wykonawcze systemu Windows załadowanych w domenie aplikacji używanej do wywołania [ ICorDebugAppDomain3:: GetCachedWinRTTypes —](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypes-method.md) , metoda.  
+ Obiekt interfejsu `ICorDebugGuidToTypeEnum` można pobrać, wywołując metodę [ICorDebugAppDomain3:: GetCachedWinRTTypes —](icordebugappdomain3-getcachedwinrttypes-method.md) . Debuger może wywołać [kolejną](icordebugguidtotypeenum-next-method.md) metodę tego interfejsu, aby pobrać obiekty [CorDebugGuidToTypeMapping —](cordebugguidtotypemapping-structure.md) reprezentujące mapowania zarządzanych reprezentacji typów środowisko wykonawcze systemu Windows załadowanych w domenie aplikacji używanej do wywołania metody [ICorDebugAppDomain3:: GetCachedWinRTTypes —](icordebugappdomain3-getcachedwinrttypes-method.md) .  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** środowisko wykonawcze systemu Windows  
@@ -44,4 +44,4 @@ Dostarcza moduł wyliczający, który definiuje mapowanie między zestawem ident
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

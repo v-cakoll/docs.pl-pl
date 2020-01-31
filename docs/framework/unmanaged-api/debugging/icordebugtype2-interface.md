@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 376fb03f-f1ef-4107-baa4-4d9d55884862
 topic_type:
 - apiref
-ms.openlocfilehash: 7b56f0f3ba62efb48ac8d79aad4480b5f22771ba
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e90952a92c408762a98a2bfcb91b6aeb72052df1
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73110213"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791220"
 ---
 # <a name="icordebugtype2-interface"></a>ICorDebugType2, interfejs
 Rozszerza interfejs ICorDebugType w celu pobrania identyfikatora typu podstawowego lub złożonego (zdefiniowanego przez użytkownika).  
@@ -28,7 +28,7 @@ Rozszerza interfejs ICorDebugType w celu pobrania identyfikatora typu podstawowe
   
 |Metoda||  
 |------------|-|  
-|[GetTypeID, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md)|Pobiera [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) dla tego typu.|  
+|[GetTypeID, metoda](icordebugtype2-gettypeid-method.md)|Pobiera [COR_TYPEID](cor-typeid-structure.md) dla tego typu.|  
   
 ## <a name="remarks"></a>Uwagi  
  Ten interfejs jest logicznym rozszerzeniem interfejsu ICorDebugType.  
@@ -37,7 +37,7 @@ Rozszerza interfejs ICorDebugType w celu pobrania identyfikatora typu podstawowe
 > Ten interfejs nie obsługuje wywoływania zdalnego na wielu maszynach ani wielu procesów.  
   
 ## <a name="example"></a>Przykład  
- Poniższy fragment kodu ilustruje użycie metody [ICorDebugType2:: GetTypeId](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md) .  
+ Poniższy fragment kodu ilustruje użycie metody [ICorDebugType2:: GetTypeId](icordebugtype2-gettypeid-method.md) .  
   
 ```cpp  
 // (error checking omitted for brevity)  
@@ -63,4 +63,4 @@ pType2->GetTypeID(&id);
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 35449514-333f-4918-9c60-7aa198d655d2
 topic_type:
 - apiref
-ms.openlocfilehash: 26948261c571dbe963811e8e9631551685a63bdb
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c1767e718e597918ef59b72a4b7acc3589421de0
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450368"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867059"
 ---
 # <a name="cor_prf_runtime_type-enumeration"></a>COR_PRF_RUNTIME_TYPE — Wyliczenie
 Zawiera wartości wskazujące wersję środowiska uruchomieniowego języka wspólnego (CLR): Desktop lub CoreCLR, która jest używana w programie Silverlight.  
@@ -34,7 +34,7 @@ typedef enum
 } COR_PRF_RUNTIME_TYPE;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Elementy członkowskie  
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
@@ -54,4 +54,4 @@ typedef enum
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Profilowanie — wyliczenia](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [Profilowanie — wyliczenia](profiling-enumerations.md)

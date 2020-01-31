@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 77ef2c65157df4a033700bb8d0295875ede46554
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 46031f29da6916eeaeea863ebef6924a720d7155
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739111"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793817"
 ---
 # <a name="dacprejitdata-structure"></a>DacpReJitData, struktura
 
-Definiuje podstawowe informacje o danej metody Instrumentacji profilera.
+Definiuje podstawowe informacje o danej metodzie Instrumentacji.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -52,20 +52,20 @@ struct MSLAYOUT DacpReJitData
 | Element członkowski           | Opis                                                                                      |
 | ---------------- | ------------------------------------------------------------------------------------------------ |
 | `rejitID`        | Numer poprawki ReJit dla metody.                                                          |
-| `flags`          | Flaga wskazująca bieżący stan metody ReJit instrumentacji dla danej wersji. |
+| `flags`          | Flaga wskazująca bieżący stan Instrumentacji ReJit metody dla danej wersji. |
 | `NativeCodeAddr` | Adres podstawowy implementacji rejitted metody.                                         |
 
 ## <a name="remarks"></a>Uwagi
 
-Ta struktura znajduje się wewnątrz środowiska uruchomieniowego i nie jest dostępna za pośrednictwem wszystkich nagłówków lub pliki biblioteki. Aby go użyć, definiują strukturę, jak określono powyżej. Struktura również musi być zdefiniowane przy użyciu `ms_struct` pakowania, jeśli nie za pomocą kompilatorów Microsoft.
+Ta struktura jest w czasie wykonywania i nie jest udostępniana za pomocą żadnych plików nagłówkowych ani bibliotek. Aby go użyć, Zdefiniuj strukturę zgodnie z powyższym opisem. Strukturę należy również zdefiniować przy użyciu `ms_struct` pakowania, jeśli nie używa kompilatorów firmy Microsoft.
 
 ## <a name="requirements"></a>Wymagania
 **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
-**Nagłówek:** Brak  
-**Biblioteka:** Brak  
-**Wersje programu .NET framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Nagłówek:** Dawaj  
+**Biblioteka:** Dawaj  
+**Wersje .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Struktury debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Debugowanie](index.md)
+- [Struktury debugowania](debugging-structures.md)

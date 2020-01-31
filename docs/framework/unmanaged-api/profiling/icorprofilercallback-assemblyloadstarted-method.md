@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 67e8209d-a0ca-4118-a6e6-c1ee0abc2221
 topic_type:
 - apiref
-ms.openlocfilehash: 34744132442440ef160841db5a50bf75355f2410
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b83be5e79c533e7e5a2468a12a0793d300700428
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445159"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866643"
 ---
 # <a name="icorprofilercallbackassemblyloadstarted-method"></a>ICorProfilerCallback::AssemblyLoadStarted — Metoda
 Powiadamia program profilujący, że zestaw jest ładowany.  
@@ -32,12 +32,14 @@ HRESULT AssemblyLoadStarted(
     [in] AssemblyID assemblyId);  
 ```  
   
-## <a name="parameters"></a>Parametry  
- `assemblyId`  
- podczas Identyfikuje zestaw, który jest ładowany.  
-  
+## <a name="parameters"></a>Parametry
+
+- `assemblyId`
+
+  \[in] określa ładowany zestaw.
+
 ## <a name="remarks"></a>Uwagi  
- Wartość `assemblyId` nie jest prawidłowa dla żądania informacji, dopóki nie zostanie wywołana metoda [ICorProfilerCallback:: AssemblyLoadFinished —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyloadfinished-method.md) .  
+ Wartość `assemblyId` nie jest prawidłowa dla żądania informacji, dopóki nie zostanie wywołana metoda [ICorProfilerCallback:: AssemblyLoadFinished —](icorprofilercallback-assemblyloadfinished-method.md) .  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -50,4 +52,4 @@ HRESULT AssemblyLoadStarted(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback, interfejs](icorprofilercallback-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: określanie trybu edycji dla kontrolki DataGridView formularzy systemu Windows'
+title: Określ tryb edycji kontrolki DataGridView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,31 +8,31 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], edit mode
 - data grids [Windows Forms], edit mode
 ms.assetid: 93e117e8-94c4-411b-ba31-645e475ed85c
-ms.openlocfilehash: a999582aeb629646fa1843f973b10a039c29e1a3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c0318202a80f9a43f1b656201732ef032f430b5b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630525"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743764"
 ---
-# <a name="how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control"></a>Instrukcje: określanie trybu edycji dla kontrolki DataGridView formularzy systemu Windows
-Domyślnie użytkownicy mogą edytować zawartość bieżącego <xref:System.Windows.Forms.DataGridView> komórka pole tekstu, wpisując ją lub naciskając klawisz F2. Komórka to umieszczenie w trybie edycji, jeśli są spełnione wszystkie następujące warunki:  
+# <a name="how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control"></a>Porady: określanie trybu edycji dla formantu DataGridView formularzy systemu Windows
+Domyślnie użytkownicy mogą edytować zawartość bieżącej <xref:System.Windows.Forms.DataGridView> komórce pola tekstowego, wpisując ją lub naciskając klawisz F2. Spowoduje to umieszczenie komórki w trybie edycji, jeśli spełnione są wszystkie z następujących warunków:  
   
-- Źródła danych obsługuje edycję.  
+- Bazowe źródło danych obsługuje edytowanie.  
   
-- <xref:System.Windows.Forms.DataGridView> Kontrolka jest włączona.  
+- Kontrolka <xref:System.Windows.Forms.DataGridView> jest włączona.  
   
-- <xref:System.Windows.Forms.DataGridView.EditMode%2A> Wartość właściwości jest <xref:System.Windows.Forms.DataGridViewEditMode.EditProgrammatically>.  
+- Wartość właściwości <xref:System.Windows.Forms.DataGridView.EditMode%2A> nie jest <xref:System.Windows.Forms.DataGridViewEditMode.EditProgrammatically>.  
   
-- `ReadOnly` Właściwości komórek, wierszy, kolumny i kontrolki są gotowi do `false`.  
+- Właściwości `ReadOnly` komórki, wiersza, kolumny i kontrolki są ustawione na `false`.  
   
- W trybie edycji użytkownik może zmienić wartość komórki i naciśnij klawisz ENTER, aby zatwierdzić zmiany lub ESC, aby przywrócić komórki do oryginalnej wartości.  
+ W trybie edycji użytkownik może zmienić wartość komórki i nacisnąć klawisz ENTER, aby zatwierdzić zmianę lub ESC, aby przywrócić oryginalną wartość komórki.  
   
- Można skonfigurować <xref:System.Windows.Forms.DataGridView> kontrolki komórki przejdzie do trybu edycji tak szybko, jak staje się bieżącej komórki. W tym przypadku zachowanie klawisze ENTER i ESC jest bez zmian, ale komórki pozostaje w trybie edycji po wartość nie zostanie przekazana lub przywrócić. Można również skonfigurować kontrolkę tak, aby komórek trybu edycji tylko wtedy, gdy użytkownicy wpisują się w komórce lub tylko gdy użytkownicy naciśnij klawisz F2. Na koniec można zapobiec komórek do trybu edycji z wyjątkiem sytuacji, gdy zostanie wywołana <xref:System.Windows.Forms.DataGridView.BeginEdit%2A> metody.  
+ Można skonfigurować kontrolkę <xref:System.Windows.Forms.DataGridView> tak, aby komórka przejdzie do trybu edycji, gdy tylko stanie się bieżącą komórką. Zachowanie klawiszy ENTER i ESC jest niezmienione w tym przypadku, ale komórka pozostaje w trybie edycji po zatwierdzeniu lub wycofaniu wartości. Można również skonfigurować kontrolkę tak, aby komórki były w trybie edycji tylko wtedy, gdy użytkownik naciśnie w komórce lub tylko wtedy, gdy użytkownicy naciśnij F2. Na koniec można uniemożliwić komórkom wprowadzanie trybu edycji z wyjątkiem wywołania metody <xref:System.Windows.Forms.DataGridView.BeginEdit%2A>.  
   
 ### <a name="to-change-the-edit-mode-of-a-datagridview-control"></a>Aby zmienić tryb edycji kontrolki DataGridView  
   
-- Ustaw <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType> właściwości do odpowiednich <xref:System.Windows.Forms.DataGridViewEditMode> wyliczenia.  
+- Ustaw właściwość <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType> na odpowiednie Wyliczenie <xref:System.Windows.Forms.DataGridViewEditMode>.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#067](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#067)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#067](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#067)]  
@@ -40,9 +40,9 @@ Domyślnie użytkownicy mogą edytować zawartość bieżącego <xref:System.Win
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
-- A <xref:System.Windows.Forms.DataGridView> formantu o nazwie `dataGridView1`.  
+- Kontrolka <xref:System.Windows.Forms.DataGridView> o nazwie `dataGridView1`.  
   
-- Odwołuje się do <xref:System> i <xref:System.Windows.Forms> zestawów.  
+- Odwołania do zestawów <xref:System> i <xref:System.Windows.Forms>.  
   
 ## <a name="see-also"></a>Zobacz także
 

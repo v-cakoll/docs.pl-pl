@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f1a23f3b-ac21-4905-8abf-8ea59f15af53
 topic_type:
 - apiref
-ms.openlocfilehash: 4ecbe0ef3c3021c5633b9380da2eb31cf22aa4b1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b1799472c4923aaccfabeae459ad72f6ae94c80d
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445327"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866380"
 ---
 # <a name="icorprofilercallbackexceptionthrown-method"></a>ICorProfilerCallback::ExceptionThrown — Metoda
 Powiadamia profiler o zgłoszonym wyjątku.  
@@ -35,9 +35,11 @@ HRESULT ExceptionThrown(
     [in] ObjectID thrownObjectId);  
 ```  
   
-## <a name="parameters"></a>Parametry  
- `thrownObjectId`  
- podczas Identyfikator obiektu, który spowodował wyjątek.  
+## <a name="parameters"></a>Parametry
+
+- `thrownObjectId`
+
+  \[in) identyfikator obiektu, który spowodował wyjątek.
   
 ## <a name="remarks"></a>Uwagi  
  Profiler nie powinien blokować swojej implementacji tej metody, ponieważ stos może nie znajdować się w stanie, który zezwala na wyrzucanie elementów bezużytecznych i dlatego nie można włączyć zastępujący elementów bezużytecznych. Jeśli profiler blokuje tutaj i zostanie podjęta próba wyrzucania elementów bezużytecznych, środowisko uruchomieniowe zostanie zablokowane do momentu wywołania zwrotnego.  
@@ -55,4 +57,4 @@ HRESULT ExceptionThrown(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback, interfejs](icorprofilercallback-interface.md)

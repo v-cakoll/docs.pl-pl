@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 535a6839-c443-405b-a6f4-e2af90725d5b
 topic_type:
 - apiref
-ms.openlocfilehash: 25c208c98802be540bde7532c53798e6f7b35446
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 29aecd530d18b931420467e9127bcbf96d3a4a5f
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445947"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866767"
 ---
 # <a name="iclrprofilingattachprofiler-method"></a>ICLRProfiling::AttachProfiler — Metoda
 Dołącza określony Profiler do określonego procesu.  
@@ -37,26 +37,33 @@ HRESULT AttachProfiler(
   [in] UINT cbClientData);                          // optional  
 ```  
   
-## <a name="parameters"></a>Parametry  
- `dwProfileeProcessID`  
- podczas Identyfikator procesu, do którego ma zostać dołączony Profiler. Na komputerze 64-bitowym profilowana liczba bitów procesu PROFILOWANEGO musi być zgodna z bitową procesu wyzwalacza, który wywołuje `AttachProfiler`. Jeśli konto użytkownika, pod którym jest wywoływane `AttachProfiler` ma uprawnienia administracyjne, proces docelowy może być dowolnym procesem w systemie. W przeciwnym razie proces docelowy musi należeć do tego samego konta użytkownika.  
+## <a name="parameters"></a>Parametry
+
+- `dwProfileeProcessID`
+
+  \[] Identyfikator procesu, do którego ma zostać dołączony Profiler. Na komputerze 64-bitowym profilowana liczba bitów procesu PROFILOWANEGO musi być zgodna z bitową procesu wyzwalacza, który wywołuje `AttachProfiler`. Jeśli konto użytkownika, pod którym jest wywoływane `AttachProfiler` ma uprawnienia administracyjne, proces docelowy może być dowolnym procesem w systemie. W przeciwnym razie proces docelowy musi należeć do tego samego konta użytkownika.
+
+- `dwMillisecondsMax`
+
+  \[] czas trwania (w milisekundach) dla `AttachProfiler` do ukończenia. Proces wyzwalacza powinien przekroczyć limit czasu, który jest znany jako wystarczający dla danego profilera, aby zakończyć jego inicjalizację.
   
- `dwMillisecondsMax`  
- podczas Czas trwania (w milisekundach), aby można było wykonać `AttachProfiler`. Proces wyzwalacza powinien przekroczyć limit czasu, który jest znany jako wystarczający dla danego profilera, aby zakończyć jego inicjalizację.  
-  
- `pClsidProfiler`  
- podczas Wskaźnik do identyfikatora CLSID profilera do załadowania. Proces wyzwalacza może ponownie użyć tej pamięci po powrocie `AttachProfiler`.  
-  
- `wszProfilerPath`  
- podczas Pełna ścieżka do pliku DLL profilera do załadowania. Ten ciąg nie może zawierać więcej niż 260 znaków, łącznie z terminatorem o wartości null. Jeśli `wszProfilerPath` ma wartość null lub jest pustym ciągiem, środowisko uruchomieniowe języka wspólnego (CLR) spróbuje znaleźć lokalizację pliku DLL profilera, przeglądając rejestr dla identyfikatora CLSID, do którego `pClsidProfiler` wskazują.  
-  
- `pvClientData`  
- podczas Wskaźnik do danych do przesłania do profilera przez metodę [ICorProfilerCallback3:: InitializeForAttach —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) . Proces wyzwalacza może ponownie użyć tej pamięci po powrocie `AttachProfiler`. Jeśli `pvClientData` ma wartość null, `cbClientData` musi mieć wartość 0 (zero).  
-  
- `cbClientData`  
- podczas Rozmiar, w bajtach, danych, do których wskazuje `pvClientData`.  
-  
-## <a name="return-value"></a>Wartość zwracana  
+- `pClsidProfiler`
+
+  \[w] wskaźnik do identyfikatora CLSID profilera do załadowania. Proces wyzwalacza może ponownie użyć tej pamięci po powrocie `AttachProfiler`.
+
+- `wszProfilerPath`
+
+  \[w] pełna ścieżka do pliku DLL profilera do załadowania. Ten ciąg nie może zawierać więcej niż 260 znaków, łącznie z terminatorem o wartości null. Jeśli `wszProfilerPath` ma wartość null lub jest pustym ciągiem, środowisko uruchomieniowe języka wspólnego (CLR) spróbuje znaleźć lokalizację pliku DLL profilera, przeglądając rejestr dla identyfikatora CLSID, do którego `pClsidProfiler` wskazują.
+
+- `pvClientData`
+
+  \[] wskaźnik do danych, które mają zostać przesłane do profilera przez metodę [ICorProfilerCallback3:: InitializeForAttach —](icorprofilercallback3-initializeforattach-method.md) . Proces wyzwalacza może ponownie użyć tej pamięci po powrocie `AttachProfiler`. Jeśli `pvClientData` ma wartość null, `cbClientData` musi mieć wartość 0 (zero).
+
+- `cbClientData`
+
+  \[] rozmiar (w bajtach) danych, do których `pvClientData` wskazują.
+
+## <a name="return-value"></a>Wartość zwrócona  
  Ta metoda zwraca następujące HRESULTs.  
   
 |HRESULT|Opis|  
@@ -72,7 +79,7 @@ HRESULT AttachProfiler(
 |HRESULT_FROM_WIN32 (ERROR_TIMEOUT)|Upłynął limit czasu bez rozpoczęcia ładowania profilera. Można ponowić próbę wykonania operacji Attach. Limity czasu są wykonywane, gdy finalizator w procesie docelowym jest uruchamiany przez dłuższy czas niż wartość limitu czasu.|  
 |E_INVALIDARG|Co najmniej jeden parametr ma nieprawidłowe wartości.|  
 |E_FAIL|Wystąpił nieokreślony błąd.|  
-|Inne kody błędów|Jeśli metoda [ICorProfilerCallback3:: InitializeForAttach —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) profilera zwraca wartość HRESULT, która wskazuje błąd, `AttachProfiler` zwraca ten sam wynik HRESULT. W tym przypadku E_NOTIMPL jest konwertowany na CORPROF_E_PROFILER_NOT_ATTACHABLE.|  
+|Inne kody błędów|Jeśli metoda [ICorProfilerCallback3:: InitializeForAttach —](icorprofilercallback3-initializeforattach-method.md) profilera zwraca wartość HRESULT, która wskazuje błąd, `AttachProfiler` zwraca ten sam wynik HRESULT. W tym przypadku E_NOTIMPL jest konwertowany na CORPROF_E_PROFILER_NOT_ATTACHABLE.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -90,7 +97,7 @@ HRESULT AttachProfiler(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ICorProfilerInfo3, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [Profilowanie](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [ICorProfilerCallback, interfejs](icorprofilercallback-interface.md)
+- [ICorProfilerInfo3, interfejs](icorprofilerinfo3-interface.md)
+- [Interfejsy profilowania](profiling-interfaces.md)
+- [Profilowanie](index.md)

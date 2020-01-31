@@ -5,16 +5,16 @@ author: thraka
 ms.date: 12/10/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: a4723d6d63c5739123fad774bc75fae7c9fd6703
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 3a72f68f5634c9ee5b137baf12a279130861e61a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75340181"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76787840"
 ---
 # <a name="tutorial-create-a-template-pack"></a>Samouczek: Tworzenie pakietu szablonów
 
-Za pomocą platformy .NET Core można tworzyć i wdrażać szablony generujące projekty, pliki, nawet zasoby. Ten samouczek jest trzecią częścią serii, która uczy się, jak tworzyć, instalować i odinstalowywać szablony do użycia z poleceniem `dotnet new`.
+Za pomocą platformy .NET Core można tworzyć i wdrażać szablony generujące projekty, pliki, nawet zasoby. Ten samouczek jest trzecią częścią serii, która zawiera informacje na temat tworzenia, instalowania i odinstalowywania szablonów do użycia z poleceniem `dotnet new`.
 
 W tej części serii dowiesz się, jak:
 
@@ -49,7 +49,7 @@ W terminalu przejdź do folderu _roboczego_ . Utwórz nowy projekt i ustaw dla n
 dotnet new console -n templatepack -o .
 ```
 
-Parametr `-n` ustawia nazwę pliku _. csproj_ na _templatepack. csproj_ , a `-o` parametry tworzy pliki w bieżącym katalogu. Powinien zostać wyświetlony wynik podobny do następującego: dane wyjściowe.
+Parametr `-n` ustawia nazwę pliku _. csproj_ na _templatepack. csproj_. `-o` parametr tworzy pliki w bieżącym katalogu. Powinien zostać wyświetlony wynik podobny do następującego: dane wyjściowe.
 
 ```console
 C:\working> dotnet new console -n templatepack -o .
@@ -91,7 +91,7 @@ Następnie otwórz plik _templatepack. csproj_ w ulubionym edytorze i Zastąp za
 </Project>
 ```
 
-Ustawienia `<PropertyGroup>` w pliku XML powyżej są podzielone na trzy grupy. Pierwsza grupa zajmuje się właściwościami wymaganymi dla pakietu NuGet. Trzy `<Package` ustawienia muszą wykonać przy użyciu właściwości pakietu NuGet, aby zidentyfikować pakiet w źródle danych NuGet. W celu odinstalowania pakietu Template Pack o pojedynczej nazwie zamiast ścieżki do katalogu zostanie użyta wartość `<PacakgeId>`. Można go również użyć do zainstalowania pakietu Template Pack ze źródła danych NuGet. Pozostałe ustawienia, takie jak `<Title>` i `<Tags>`, muszą zrobić z metadanymi wyświetlanymi w źródle danych NuGet. Aby uzyskać więcej informacji na temat ustawień NuGet, zobacz [Właściwości narzędzia NuGet i programu MSBuild](/nuget/reference/msbuild-targets).
+Ustawienia `<PropertyGroup>` w pliku XML powyżej są podzielone na trzy grupy. Pierwsza grupa zajmuje się właściwościami wymaganymi dla pakietu NuGet. Trzy `<Package` ustawienia muszą wykonać przy użyciu właściwości pakietu NuGet, aby zidentyfikować pakiet w źródle danych NuGet. W celu odinstalowania pakietu Template Pack o pojedynczej nazwie zamiast ścieżki do katalogu zostanie użyta wartość `<PackageId>`. Można go również użyć do zainstalowania pakietu Template Pack ze źródła danych NuGet. Pozostałe ustawienia, takie jak `<Title>` i `<PackageTags>`, muszą zrobić z metadanymi wyświetlanymi w źródle danych NuGet. Aby uzyskać więcej informacji na temat ustawień NuGet, zobacz [Właściwości narzędzia NuGet i programu MSBuild](/nuget/reference/msbuild-targets).
 
 Ustawienie `<TargetFramework>` musi być ustawione tak, aby program MSBuild działał prawidłowo po uruchomieniu polecenia Pack w celu skompilowania i spakowania projektu.
 
@@ -178,7 +178,7 @@ Currently installed items:
 
 Uruchom `dotnet new -u AdatumCorporation.Utility.Templates`, aby odinstalować szablon. Polecenie `dotnet new` będzie wyprowadzać informacje pomocy, które powinny pominąć wcześniej zainstalowane szablony.
 
-Gratulacje! Pakiet szablonów został zainstalowany i odinstalowany. 
+Gratulacje! Pakiet szablonów został zainstalowany i odinstalowany.
 
 ## <a name="next-steps"></a>Następne kroki
 

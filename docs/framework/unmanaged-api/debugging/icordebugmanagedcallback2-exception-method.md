@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 78b0f14f-2fae-4e63-8412-4df119ee8468
 topic_type:
 - apiref
-ms.openlocfilehash: f40030a2034057e83de51a21655a686f30b9ee88
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e7125d923fb1d3757bb4ca53f5a7db806b241dd9
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137454"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76781532"
 ---
 # <a name="icordebugmanagedcallback2exception-method"></a>ICorDebugManagedCallback2::Exception — Metoda
 Powiadamia debugera o rozpoczęciu wyszukiwania programu obsługi wyjątków.  
@@ -55,7 +55,7 @@ HRESULT Exception (
  podczas Wartość wyliczenia CorDebugExceptionCallbackType —, która określa typ tego wywołania zwrotnego wyjątku.  
   
  `dwFlags`  
- podczas Wartość wyliczenia [CorDebugExceptionFlags —](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) , która określa dodatkowe informacje o wyjątku  
+ podczas Wartość wyliczenia [CorDebugExceptionFlags —](cordebugexceptionflags-enumeration.md) , która określa dodatkowe informacje o wyjątku  
   
 ## <a name="remarks"></a>Uwagi  
  Wywołanie zwrotne `Exception` jest wywoływane w różnych punktach w fazie wyszukiwania procesu obsługi wyjątków. Oznacza to, że może być wywoływana więcej niż jeden raz podczas odwinięcia wyjątku.  
@@ -82,5 +82,5 @@ HRESULT Exception (
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugManagedCallback2, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
-- [ICorDebugManagedCallback, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [ICorDebugManagedCallback2, interfejs](icordebugmanagedcallback2-interface.md)
+- [ICorDebugManagedCallback, interfejs](icordebugmanagedcallback-interface.md)

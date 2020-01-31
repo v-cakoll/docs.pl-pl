@@ -2,21 +2,21 @@
 title: ICorDebugDataTarget3 — interfejs
 ms.date: 03/30/2017
 ms.assetid: f477af85-994f-4df0-ae78-404ed252bf49
-ms.openlocfilehash: 5f91db291396589a916933bdc7c2a2390dd61a5d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 04e7b9a064d4a06a06b8a1518f06092ba79a3561
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136666"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783492"
 ---
 # <a name="icordebugdatatarget3-interface"></a>ICorDebugDataTarget3 — interfejs
-Logicznie rozszerza interfejs [ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md) w celu dostarczenia informacji o załadowanych modułach.  
+Logicznie rozszerza interfejs [ICorDebugDataTarget](icordebugdatatarget-interface.md) w celu dostarczenia informacji o załadowanych modułach.  
   
 ## <a name="method"></a>Metoda  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetLoadedModules, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget3-getloadedmodules-method.md)|Pobiera listę modułów, które zostały wcześniej załadowane.|  
+|[GetLoadedModules, metoda](icordebugdatatarget3-getloadedmodules-method.md)|Pobiera listę modułów, które zostały wcześniej załadowane.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -34,5 +34,5 @@ Logicznie rozszerza interfejs [ICorDebugDataTarget](../../../../docs/framework/u
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie](index.md)

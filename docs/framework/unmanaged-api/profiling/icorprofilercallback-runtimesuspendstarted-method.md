@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c8461cac-e31b-4efa-ad2c-26598173eb96
 topic_type:
 - apiref
-ms.openlocfilehash: 1777fa1f2537b6d28d771661ca463564d74d8550
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e88f6356c2e29a1d8a9e49527c5921e8155c3ce4
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433509"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865886"
 ---
 # <a name="icorprofilercallbackruntimesuspendstarted-method"></a>ICorProfilerCallback::RuntimeSuspendStarted — Metoda
 Powiadamia profiler, że środowisko uruchomieniowe ma wstrzymać wszystkie wątki środowiska uruchomieniowego.  
@@ -34,7 +34,7 @@ HRESULT RuntimeSuspendStarted(
   
 ## <a name="parameters"></a>Parametry  
  `suspendReason`  
- podczas Wartość wyliczenia [COR_PRF_SUSPEND_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-suspend-reason-enumeration.md) , która wskazuje przyczynę zawieszenia.  
+ podczas Wartość wyliczenia [COR_PRF_SUSPEND_REASON](cor-prf-suspend-reason-enumeration.md) , która wskazuje przyczynę zawieszenia.  
   
 ## <a name="remarks"></a>Uwagi  
  Wszystkie wątki środowiska uruchomieniowego, które znajdują się w kodzie niezarządzanym, mogą kontynuować działanie, dopóki nie spróbują ponownie wprowadzić środowiska uruchomieniowego. W tym momencie zostaną one również zawieszone do momentu wznowienia działania środowiska uruchomieniowego. Dotyczy to również nowych wątków, które wprowadzają środowisko uruchomieniowe. Wszystkie wątki w środowisku uruchomieniowym są zawieszane natychmiast, jeśli znajdują się już w kodzie przerywania lub są proszeni o zawieszenie, gdy osiągną kod przerywania.  
@@ -50,6 +50,6 @@ HRESULT RuntimeSuspendStarted(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [RuntimeSuspendAborted, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendaborted-method.md)
-- [RuntimeSuspendFinished, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md)
+- [ICorProfilerCallback, interfejs](icorprofilercallback-interface.md)
+- [RuntimeSuspendAborted, metoda](icorprofilercallback-runtimesuspendaborted-method.md)
+- [RuntimeSuspendFinished, metoda](icorprofilercallback-runtimesuspendfinished-method.md)

@@ -1,5 +1,5 @@
 ---
-title: Zabezpieczenia (WPF)
+title: Zabezpieczenia
 ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML files [WPF], sandbox behavior
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 612b99354310c18030cefce4e6f02fab8ed20f83
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: a49634fd955b0dc1f4cac5c785d49c24d16bbc60
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636775"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868047"
 ---
 # <a name="security-wpf"></a>Zabezpieczenia (WPF)
 <a name="introduction"></a>Podczas opracowywania aplikacji autonomicznych i hostowanych przez program Windows Presentation Foundation (WPF) należy wziąć pod uwagę model zabezpieczeń. Aplikacje autonomiczne WPF są wykonywane z nieograniczonymi uprawnieniami (zestaw uprawnień CAS**FullTrust** ), niezależnie od tego, czy wdrożono przy użyciu Instalator Windows (. msi), XCOPY lub ClickOnce. Wdrożenie częściowego zaufania, autonomiczne aplikacje WPF za pomocą technologii ClickOnce nie jest obsługiwane. Jednak w pełni zaufane aplikacje hosta mogą utworzyć <xref:System.AppDomain> relacji zaufania z użyciem .NET Framework modelu dodatków. Aby uzyskać więcej informacji, zobacz [Omówienie dodatków WPF](./app-development/wpf-add-ins-overview.md).  
@@ -62,7 +62,7 @@ ms.locfileid: "75636775"
 |Zasób|Pliki, które są dodawane do projektu z typem kompilacji **zasobu**.|`pack://application:,,,/MyResourceFile.xaml`|  
 |Zawartość|Pliki, które są dodawane do projektu z typem kompilacji **zawartości**.|`pack://application:,,,/MyContentFile.xaml`|  
 |Lokacja pochodzenia|Pliki, które są dodawane do projektu z typem kompilacji **Brak**.|`pack://siteoforigin:,,,/MySiteOfOriginFile.xaml`|  
-|Kod aplikacji|Zasoby XAML, które mają skompilowany kod w tle.<br /><br /> lub<br /><br /> Pliki XAML, które są dodawane do projektu z typem kompilacji **strony**.|`pack://application:,,,/MyResourceFile``.xaml`|  
+|Kod aplikacji|Zasoby XAML, które mają skompilowany kod w tle.<br /><br /> lub<br /><br /> Pliki XAML, które są dodawane do projektu z typem kompilacji **strony**.|`pack://application:,,,/MyResourceFile` `.xaml`|  
   
 > [!NOTE]
 > Aby uzyskać więcej informacji na temat plików danych aplikacji i identyfikatorów URI pakietów, zobacz artykuł [Aplikacja WPF, zawartość i pliki danych](./app-development/wpf-application-resource-content-and-data-files.md).  
@@ -184,7 +184,7 @@ ms.locfileid: "75636775"
  Kontrolki funkcji są stosowane przez proces tworzenia wystąpienia obiektu ActiveX WebBrowser. W związku z tym, jeśli tworzysz aplikację autonomiczną, która może nawigować do niezaufanej zawartości, należy rozważyć włączenie dodatkowych kontroli funkcji.  
   
 > [!NOTE]
-> To zalecenie jest oparte na ogólnych zaleceniach dotyczących zabezpieczeń hosta MSHTML i SHDOCVW. Aby uzyskać więcej informacji, zobacz sekcję dotyczącą [zabezpieczeń hosta MSHTML często zadawanych pytań: część I z II](https://msrc-blog.microsoft.com/archive/2009/04/02/the-mshtml-host-security-faq.aspx) i informacje o [zabezpieczeniach hosta MSHTML — często zadawane pytania: część II z II](https://msrc-blog.microsoft.com/archive/2009/04/03/the-mshtml-host-security-faq-part-ii-of-ii.aspx).  
+> To zalecenie jest oparte na ogólnych zaleceniach dotyczących zabezpieczeń hosta MSHTML i SHDOCVW. Aby uzyskać więcej informacji, zobacz sekcję dotyczącą [zabezpieczeń hosta MSHTML często zadawanych pytań: część I z II](https://msrc-blog.microsoft.com/2009/04/02/the-mshtml-host-security-faq-part-i-of-ii/) i informacje o [zabezpieczeniach hosta MSHTML — często zadawane pytania: część II z II](https://msrc-blog.microsoft.com/2009/04/03/the-mshtml-host-security-faq-part-ii-of-ii/).  
   
  W przypadku pliku wykonywalnego Rozważ włączenie następujących kontrolek funkcji przez ustawienie wartości rejestru na 1.  
   

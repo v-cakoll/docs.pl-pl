@@ -1,5 +1,5 @@
 ---
-title: ICorDebugTypeEnum — Interfejs
+title: ICorDebugTypeEnum, interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugTypeEnum
@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: 159ccfcf-b37c-4ad9-8e0d-a9a443262472
 topic_type:
 - apiref
-ms.openlocfilehash: a8fa4f2fbe576083658a934e30177bb7a48be06d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ed7bceec9bf6ea0cf69cbb57fff83a91093ba6c4
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73110232"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791208"
 ---
-# <a name="icordebugtypeenum-interface"></a>ICorDebugTypeEnum — Interfejs
+# <a name="icordebugtypeenum-interface"></a>ICorDebugTypeEnum, interfejs
 Implementuje metody "ICorDebugEnum" i wylicza tablice "ICorDebugType".  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[Next, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugtypeenum-next-method.md)|Pobiera określoną liczbę wystąpień `ICorDebugType` z wyliczenia, rozpoczynając od bieżącego położenia.|  
+|[Next, metoda](icordebugtypeenum-next-method.md)|Pobiera określoną liczbę wystąpień `ICorDebugType` z wyliczenia, rozpoczynając od bieżącego położenia.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -46,4 +46,4 @@ Implementuje metody "ICorDebugEnum" i wylicza tablice "ICorDebugType".
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie, interfejsy](debugging-interfaces.md)

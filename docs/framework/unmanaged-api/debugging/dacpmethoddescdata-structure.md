@@ -15,20 +15,20 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 97079b824dbd0e056374af4173e49304babd6c32
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cc54664ea8ad61005de3f3fae7407946d1c861b2
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739132"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793844"
 ---
-# <a name="dacpmethoddescdata-structure"></a><span data-ttu-id="b8343-102">DacpMethodDescData, struktura</span><span class="sxs-lookup"><span data-stu-id="b8343-102">DacpMethodDescData Structure</span></span>
+# <a name="dacpmethoddescdata-structure"></a><span data-ttu-id="1d918-102">DacpMethodDescData, struktura</span><span class="sxs-lookup"><span data-stu-id="1d918-102">DacpMethodDescData Structure</span></span>
 
-<span data-ttu-id="b8343-103">Definiuje bufora transportu dla metody środowiska uruchomieniowego informacje.</span><span class="sxs-lookup"><span data-stu-id="b8343-103">Defines a transport buffer for a method's runtime information.</span></span>
+<span data-ttu-id="1d918-103">Definiuje bufor transportu dla informacji o środowisku uruchomieniowym metody.</span><span class="sxs-lookup"><span data-stu-id="1d918-103">Defines a transport buffer for a method's runtime information.</span></span>
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
-## <a name="syntax"></a><span data-ttu-id="b8343-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="b8343-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="1d918-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="1d918-104">Syntax</span></span>
 
 ```cpp
 struct DacpMethodDescData
@@ -52,39 +52,39 @@ struct DacpMethodDescData
 };
 ```
 
-## <a name="members"></a><span data-ttu-id="b8343-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="b8343-105">Members</span></span>
+## <a name="members"></a><span data-ttu-id="1d918-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="1d918-105">Members</span></span>
 
-| <span data-ttu-id="b8343-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="b8343-106">Member</span></span>                       | <span data-ttu-id="b8343-107">Opis</span><span class="sxs-lookup"><span data-stu-id="b8343-107">Description</span></span>                                                                                     |
+| <span data-ttu-id="1d918-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="1d918-106">Member</span></span>                       | <span data-ttu-id="1d918-107">Opis</span><span class="sxs-lookup"><span data-stu-id="1d918-107">Description</span></span>                                                                                     |
 | ---------------------------- | ----------------------------------------------------------------------------------------------- |
-| `bHasNativeCode`             | <span data-ttu-id="b8343-108">Wskazuje, czy środowisko uruchomieniowe jest kodu natywnego, które są dostępne dla danego wystąpienia metody.</span><span class="sxs-lookup"><span data-stu-id="b8343-108">Indicates if the runtime has native code available for the given instantiation of the method.</span></span> |
-| `bIsDynamic`                 | <span data-ttu-id="b8343-109">Wskazuje, jeśli metoda jest generowany dynamicznie za pośrednictwem generowania kodu uproszczone.</span><span class="sxs-lookup"><span data-stu-id="b8343-109">Indicates if the method is generated dynamically through lightweight code generation.</span></span>           |
-| `wSlotNumber`                | <span data-ttu-id="b8343-110">Numer gniazda metody w tabeli metod.</span><span class="sxs-lookup"><span data-stu-id="b8343-110">The method's slot number in the method table.</span></span>                                                   |
-| `NativeCodeAddr`             | <span data-ttu-id="b8343-111">Metoda początkowej adresu natywnego.</span><span class="sxs-lookup"><span data-stu-id="b8343-111">The method's initial native address.</span></span>                                                            |
-| `data`                       | <span data-ttu-id="b8343-112">Wskaźnik do buforu używana wewnętrznie w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="b8343-112">Pointer to a buffer used internally by the runtime.</span></span>                                             |
-| `MethodDescPtr`              | <span data-ttu-id="b8343-113">Wskaźnik do `MethodDesc` w środowisku uruchomieniowym.</span><span class="sxs-lookup"><span data-stu-id="b8343-113">Pointer to the `MethodDesc` in the runtime.</span></span>                                                     |
-| `nativeCodeInfo`             | <span data-ttu-id="b8343-114">Wskaźnik do buforu używana wewnętrznie przez środowisko uruchomieniowe w celu śledzenia metody.</span><span class="sxs-lookup"><span data-stu-id="b8343-114">Pointer to a buffer used internally by the runtime to track methods.</span></span>                            |
-| `moduleInfo`                 | <span data-ttu-id="b8343-115">Wskaźnik do buforu używana wewnętrznie przez środowisko uruchomieniowe, aby uzyskać informacje o module.</span><span class="sxs-lookup"><span data-stu-id="b8343-115">Pointer to a buffer used internally by the runtime for module information.</span></span>                      |
-| `MDToken`                    | <span data-ttu-id="b8343-116">Token skojarzony z danej metody.</span><span class="sxs-lookup"><span data-stu-id="b8343-116">Token associated with the given method.</span></span>                                                         |
-| `payloadGC`                  | <span data-ttu-id="b8343-117">Wskaźnik do buforu kolekcji wyrzucania elementów używana wewnętrznie w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="b8343-117">Pointer to a garbage collection buffer used internally by the runtime.</span></span>                          |
-| `payloadGC2`                 | <span data-ttu-id="b8343-118">Wskaźnik do buforu kolekcji wyrzucania elementów używana wewnętrznie w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="b8343-118">Pointer to a garbage collection buffer used internally by the runtime.</span></span>                          |
-| `managedDynamicMethodObject` | <span data-ttu-id="b8343-119">Jeśli metoda jest dynamiczny, środowisko wykonawcze używa tego buforu wewnętrznie informacji śledzenia.</span><span class="sxs-lookup"><span data-stu-id="b8343-119">If the method is dynamic, the runtime uses this buffer internally for information tracking.</span></span>     |
-| `requestedIP`                | <span data-ttu-id="b8343-120">Używany do wypełniania struktury na żądanie, gdy podano adres kodu natywnego.</span><span class="sxs-lookup"><span data-stu-id="b8343-120">Used to populate the structure per request when given a native code address.</span></span>                    |
-| `rejitDataCurrent`           | <span data-ttu-id="b8343-121">Informacje o najnowszych instrumentowanej wersji metody.</span><span class="sxs-lookup"><span data-stu-id="b8343-121">Information about the latest instrumented version of the method.</span></span>                                   |
-| `rejitDataRequested`         | <span data-ttu-id="b8343-122">Rejit informacji dla żądanego adresu natywnego.</span><span class="sxs-lookup"><span data-stu-id="b8343-122">Rejit information for the requested native address.</span></span>                                             |
-| `cJittedRejitVersions`       | <span data-ttu-id="b8343-123">Liczba przypadków, gdy metoda została rejitted za pomocą Instrumentacji.</span><span class="sxs-lookup"><span data-stu-id="b8343-123">Number of times the method has been rejitted through instrumentation.</span></span>                           |
+| `bHasNativeCode`             | <span data-ttu-id="1d918-108">Wskazuje, czy środowisko uruchomieniowe ma kod natywny dla danego wystąpienia metody.</span><span class="sxs-lookup"><span data-stu-id="1d918-108">Indicates if the runtime has native code available for the given instantiation of the method.</span></span> |
+| `bIsDynamic`                 | <span data-ttu-id="1d918-109">Wskazuje, czy metoda jest generowana dynamicznie przy użyciu uproszczonego generowania kodu.</span><span class="sxs-lookup"><span data-stu-id="1d918-109">Indicates if the method is generated dynamically through lightweight code generation.</span></span>           |
+| `wSlotNumber`                | <span data-ttu-id="1d918-110">Numer gniazda metody w tabeli metod.</span><span class="sxs-lookup"><span data-stu-id="1d918-110">The method's slot number in the method table.</span></span>                                                   |
+| `NativeCodeAddr`             | <span data-ttu-id="1d918-111">Początkowy adres macierzysty metody.</span><span class="sxs-lookup"><span data-stu-id="1d918-111">The method's initial native address.</span></span>                                                            |
+| `data`                       | <span data-ttu-id="1d918-112">Wskaźnik do bufora używanego wewnętrznie przez środowisko uruchomieniowe.</span><span class="sxs-lookup"><span data-stu-id="1d918-112">Pointer to a buffer used internally by the runtime.</span></span>                                             |
+| `MethodDescPtr`              | <span data-ttu-id="1d918-113">Wskaźnik do `MethodDesc` w środowisku uruchomieniowym.</span><span class="sxs-lookup"><span data-stu-id="1d918-113">Pointer to the `MethodDesc` in the runtime.</span></span>                                                     |
+| `nativeCodeInfo`             | <span data-ttu-id="1d918-114">Wskaźnik do buforu używany wewnętrznie przez środowisko uruchomieniowe do śledzenia metod.</span><span class="sxs-lookup"><span data-stu-id="1d918-114">Pointer to a buffer used internally by the runtime to track methods.</span></span>                            |
+| `moduleInfo`                 | <span data-ttu-id="1d918-115">Wskaźnik do buforu używany wewnętrznie przez środowisko uruchomieniowe w celu uzyskania informacji o modułach.</span><span class="sxs-lookup"><span data-stu-id="1d918-115">Pointer to a buffer used internally by the runtime for module information.</span></span>                      |
+| `MDToken`                    | <span data-ttu-id="1d918-116">Token skojarzony z daną metodą.</span><span class="sxs-lookup"><span data-stu-id="1d918-116">Token associated with the given method.</span></span>                                                         |
+| `payloadGC`                  | <span data-ttu-id="1d918-117">Wskaźnik do buforu wyrzucania elementów bezużytecznych używanego wewnętrznie przez środowisko uruchomieniowe.</span><span class="sxs-lookup"><span data-stu-id="1d918-117">Pointer to a garbage collection buffer used internally by the runtime.</span></span>                          |
+| `payloadGC2`                 | <span data-ttu-id="1d918-118">Wskaźnik do buforu wyrzucania elementów bezużytecznych używanego wewnętrznie przez środowisko uruchomieniowe.</span><span class="sxs-lookup"><span data-stu-id="1d918-118">Pointer to a garbage collection buffer used internally by the runtime.</span></span>                          |
+| `managedDynamicMethodObject` | <span data-ttu-id="1d918-119">Jeśli metoda jest dynamiczna, środowisko uruchomieniowe używa tego buforu wewnętrznie do śledzenia informacji.</span><span class="sxs-lookup"><span data-stu-id="1d918-119">If the method is dynamic, the runtime uses this buffer internally for information tracking.</span></span>     |
+| `requestedIP`                | <span data-ttu-id="1d918-120">Służy do wypełniania struktury na żądanie, gdy zostanie udzielony adres kodu natywnego.</span><span class="sxs-lookup"><span data-stu-id="1d918-120">Used to populate the structure per request when given a native code address.</span></span>                    |
+| `rejitDataCurrent`           | <span data-ttu-id="1d918-121">Informacje o najnowszej wersji Instrumentacji metody.</span><span class="sxs-lookup"><span data-stu-id="1d918-121">Information about the latest instrumented version of the method.</span></span>                                   |
+| `rejitDataRequested`         | <span data-ttu-id="1d918-122">ReJIT informacje o żądanym adresie macierzystym.</span><span class="sxs-lookup"><span data-stu-id="1d918-122">Rejit information for the requested native address.</span></span>                                             |
+| `cJittedRejitVersions`       | <span data-ttu-id="1d918-123">Liczba przypadków, gdy metoda została rejitted przez instrumentację.</span><span class="sxs-lookup"><span data-stu-id="1d918-123">Number of times the method has been rejitted through instrumentation.</span></span>                           |
 
-## <a name="remarks"></a><span data-ttu-id="b8343-124">Uwagi</span><span class="sxs-lookup"><span data-stu-id="b8343-124">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="1d918-124">Uwagi</span><span class="sxs-lookup"><span data-stu-id="1d918-124">Remarks</span></span>
 
-<span data-ttu-id="b8343-125">Ta struktura znajduje się wewnątrz środowiska uruchomieniowego i nie jest dostępna za pośrednictwem wszystkich nagłówków lub pliki biblioteki.</span><span class="sxs-lookup"><span data-stu-id="b8343-125">This structure lives inside the runtime and is not exposed through any headers or library files.</span></span> <span data-ttu-id="b8343-126">Aby go użyć, definiują strukturę, jak określono powyżej.</span><span class="sxs-lookup"><span data-stu-id="b8343-126">To use it, define the structure as specified above.</span></span>
+<span data-ttu-id="1d918-125">Ta struktura jest w czasie wykonywania i nie jest udostępniana za pomocą żadnych plików nagłówkowych ani bibliotek.</span><span class="sxs-lookup"><span data-stu-id="1d918-125">This structure lives inside the runtime and is not exposed through any headers or library files.</span></span> <span data-ttu-id="1d918-126">Aby go użyć, Zdefiniuj strukturę zgodnie z powyższym opisem.</span><span class="sxs-lookup"><span data-stu-id="1d918-126">To use it, define the structure as specified above.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="b8343-127">Wymagania</span><span class="sxs-lookup"><span data-stu-id="b8343-127">Requirements</span></span>
-<span data-ttu-id="b8343-128">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b8343-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
-<span data-ttu-id="b8343-129">**Nagłówek:** Brak</span><span class="sxs-lookup"><span data-stu-id="b8343-129">**Header:** None</span></span>  
-<span data-ttu-id="b8343-130">**Biblioteka:** Brak</span><span class="sxs-lookup"><span data-stu-id="b8343-130">**Library:** None</span></span>  
-<span data-ttu-id="b8343-131">**Wersje programu .NET framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span><span class="sxs-lookup"><span data-stu-id="b8343-131">**.NET Framework Versions:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1d918-127">Wymagania</span><span class="sxs-lookup"><span data-stu-id="1d918-127">Requirements</span></span>
+<span data-ttu-id="1d918-128">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1d918-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+<span data-ttu-id="1d918-129">**Nagłówek:** Dawaj</span><span class="sxs-lookup"><span data-stu-id="1d918-129">**Header:** None</span></span>  
+<span data-ttu-id="1d918-130">**Biblioteka:** Dawaj</span><span class="sxs-lookup"><span data-stu-id="1d918-130">**Library:** None</span></span>  
+<span data-ttu-id="1d918-131">**Wersje .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span><span class="sxs-lookup"><span data-stu-id="1d918-131">**.NET Framework Versions:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span></span>  
 
-## <a name="see-also"></a><span data-ttu-id="b8343-132">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="b8343-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1d918-132">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="1d918-132">See also</span></span>
 
-- [<span data-ttu-id="b8343-133">Debugowanie</span><span class="sxs-lookup"><span data-stu-id="b8343-133">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [<span data-ttu-id="b8343-134">Struktury debugowania</span><span class="sxs-lookup"><span data-stu-id="b8343-134">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [<span data-ttu-id="b8343-135">Standardowe typy danych</span><span class="sxs-lookup"><span data-stu-id="b8343-135">Common Data Types</span></span>](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)
+- [<span data-ttu-id="1d918-133">Debugowanie</span><span class="sxs-lookup"><span data-stu-id="1d918-133">Debugging</span></span>](index.md)
+- [<span data-ttu-id="1d918-134">Struktury debugowania</span><span class="sxs-lookup"><span data-stu-id="1d918-134">Debugging Structures</span></span>](debugging-structures.md)
+- [<span data-ttu-id="1d918-135">Standardowe typy danych</span><span class="sxs-lookup"><span data-stu-id="1d918-135">Common Data Types</span></span>](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)

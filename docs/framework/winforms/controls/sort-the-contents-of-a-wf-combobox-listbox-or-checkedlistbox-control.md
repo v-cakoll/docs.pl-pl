@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: sortowanie zawartości kontrolki ComboBox, ListBox lub CheckedListBox formularzy systemu Windows'
+title: Sortuj zawartość kontrolki ComboBox, ListBox lub CheckedListBox
 ms.date: 03/30/2017
 helpviewer_keywords:
 - CheckedListBox control [Windows Forms], sorting
@@ -8,30 +8,30 @@ helpviewer_keywords:
 - list boxes [Windows Forms], sorting contents
 - ListBox control [Windows Forms], sorting contents
 ms.assetid: c268e387-3d1d-4d86-a940-19f6673c8d06
-ms.openlocfilehash: bd26d396c238bfc53858320b8f4487df84b3436a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dee969d777edf76434622fe632f7e934987a1dc3
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902996"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742955"
 ---
-# <a name="how-to-sort-the-contents-of-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a><span data-ttu-id="74716-102">Instrukcje: sortowanie zawartości kontrolki ComboBox, ListBox lub CheckedListBox formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="74716-102">How to: Sort the Contents of a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>
-<span data-ttu-id="74716-103">Kontrolek formularzy Windows Forms bez sortowania, gdy są one powiązane z danymi.</span><span class="sxs-lookup"><span data-stu-id="74716-103">Windows Forms controls do not sort when they are data-bound.</span></span> <span data-ttu-id="74716-104">Aby wyświetlić posortowane dane, korzystanie ze źródła danych, który obsługuje sortowanie, a następnie ją posortować źródła danych.</span><span class="sxs-lookup"><span data-stu-id="74716-104">To display sorted data, use a data source that supports sorting and then have the data source sort it.</span></span> <span data-ttu-id="74716-105">Źródła danych, które obsługują sortowanie widoków danych, dane wyświetlić menedżerów i posortowane tablic.</span><span class="sxs-lookup"><span data-stu-id="74716-105">Data sources that support sorting are data views, data view managers, and sorted arrays.</span></span>  
+# <a name="how-to-sort-the-contents-of-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a><span data-ttu-id="848b6-102">Porady: sortowanie zawartości formantu ComboBox, ListBox lub CheckedListBox formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="848b6-102">How to: Sort the Contents of a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>
+<span data-ttu-id="848b6-103">Kontrolki Windows Forms nie sortują się, gdy są powiązane z danymi.</span><span class="sxs-lookup"><span data-stu-id="848b6-103">Windows Forms controls do not sort when they are data-bound.</span></span> <span data-ttu-id="848b6-104">Aby wyświetlić posortowane dane, użyj źródła danych, które obsługuje sortowanie, a następnie posortuj je ze źródłem danych.</span><span class="sxs-lookup"><span data-stu-id="848b6-104">To display sorted data, use a data source that supports sorting and then have the data source sort it.</span></span> <span data-ttu-id="848b6-105">Źródłami danych, które obsługują sortowanie, są widoki danych, menedżerów widoku danych i posortowane tablice.</span><span class="sxs-lookup"><span data-stu-id="848b6-105">Data sources that support sorting are data views, data view managers, and sorted arrays.</span></span>  
   
- <span data-ttu-id="74716-106">Jeśli formant nie jest powiązany z danymi, należy ją posortować.</span><span class="sxs-lookup"><span data-stu-id="74716-106">If the control is not data-bound, you can sort it.</span></span>  
+ <span data-ttu-id="848b6-106">Jeśli formant nie jest powiązany z danymi, można go posortować.</span><span class="sxs-lookup"><span data-stu-id="848b6-106">If the control is not data-bound, you can sort it.</span></span>  
   
-### <a name="to-sort-the-list"></a><span data-ttu-id="74716-107">Aby posortować listę</span><span class="sxs-lookup"><span data-stu-id="74716-107">To sort the list</span></span>  
+### <a name="to-sort-the-list"></a><span data-ttu-id="848b6-107">Aby posortować listę</span><span class="sxs-lookup"><span data-stu-id="848b6-107">To sort the list</span></span>  
   
-1. <span data-ttu-id="74716-108">Ustaw `Sorted` właściwość `true`.</span><span class="sxs-lookup"><span data-stu-id="74716-108">Set the `Sorted` property to `true`.</span></span>  
+1. <span data-ttu-id="848b6-108">Ustaw `Sorted` właściwość `true`.</span><span class="sxs-lookup"><span data-stu-id="848b6-108">Set the `Sorted` property to `true`.</span></span>  
   
-     <span data-ttu-id="74716-109">To ustawienie powoduje przeniesienie wszystkie istniejące elementy listy w kolejności posortowanej.</span><span class="sxs-lookup"><span data-stu-id="74716-109">This setting repositions all existing list items in sorted order.</span></span>  
+     <span data-ttu-id="848b6-109">To ustawienie zmienia położenie wszystkich istniejących elementów listy w kolejności sortowania.</span><span class="sxs-lookup"><span data-stu-id="848b6-109">This setting repositions all existing list items in sorted order.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="74716-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="74716-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="848b6-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="848b6-110">See also</span></span>
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
 - <xref:System.Windows.Forms.CheckedListBox>
-- [<span data-ttu-id="74716-111">Wiązanie danych formularzy Windows Forms</span><span class="sxs-lookup"><span data-stu-id="74716-111">Windows Forms Data Binding</span></span>](../windows-forms-data-binding.md)
-- [<span data-ttu-id="74716-112">Instrukcje: Dodawanie i usuwanie elementów z Windows Forms ComboBox, ListBox lub CheckedListBox, kontrolka</span><span class="sxs-lookup"><span data-stu-id="74716-112">How to: Add and Remove Items from a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>](add-and-remove-items-from-a-wf-combobox.md)
-- [<span data-ttu-id="74716-113">Kiedy należy używać kontrolki ComboBox formularzy Windows Forms zamiast ListBox</span><span class="sxs-lookup"><span data-stu-id="74716-113">When to Use a Windows Forms ComboBox Instead of a ListBox</span></span>](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
-- [<span data-ttu-id="74716-114">Kontrolki formularzy Windows Forms używane do obsługi opcji list</span><span class="sxs-lookup"><span data-stu-id="74716-114">Windows Forms Controls Used to List Options</span></span>](windows-forms-controls-used-to-list-options.md)
+- [<span data-ttu-id="848b6-111">Wiązanie danych formularzy Windows Forms</span><span class="sxs-lookup"><span data-stu-id="848b6-111">Windows Forms Data Binding</span></span>](../windows-forms-data-binding.md)
+- [<span data-ttu-id="848b6-112">Instrukcje: dodawanie i usuwanie elementów za pomocą kontrolki ComboBox, ListBox lub CheckedListBox formularzy Windows Forms</span><span class="sxs-lookup"><span data-stu-id="848b6-112">How to: Add and Remove Items from a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>](add-and-remove-items-from-a-wf-combobox.md)
+- [<span data-ttu-id="848b6-113">Kiedy należy używać kontrolki ComboBox formularzy Windows Forms zamiast ListBox</span><span class="sxs-lookup"><span data-stu-id="848b6-113">When to Use a Windows Forms ComboBox Instead of a ListBox</span></span>](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
+- [<span data-ttu-id="848b6-114">Kontrolki formularzy Windows Forms używane do obsługi opcji list</span><span class="sxs-lookup"><span data-stu-id="848b6-114">Windows Forms Controls Used to List Options</span></span>](windows-forms-controls-used-to-list-options.md)

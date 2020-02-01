@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach, parallel version
 - parallel programming, foreach
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
-ms.openlocfilehash: c2f2484f37c0e99f45b3f10951540c2bb3a4cb8d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 528e22d6b54179181d1479f4feaedfbf82933c58
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134177"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921216"
 ---
 # <a name="how-to-write-a-simple-parallelforeach-loop"></a>Instrukcje: zapisywanie prostej pętli Parallel. ForEach
 
@@ -47,7 +47,7 @@ Można skompilować kod jako aplikację konsolową dla .NET Framework lub jako a
 
 W programie Visual Studio istnieją Visual Basic i C# szablony aplikacji konsolowych dla systemów Windows Desktop i .NET Core.
 
-W wierszu polecenia można użyć programu .NET Core i jego narzędzi interfejsu wiersza polecenia (na przykład `dotnet new console` lub `dotnet new console -lang vb`) lub utworzyć plik i użyć kompilatora wiersza poleceń dla aplikacji .NET Framework.
+W wierszu polecenia można użyć poleceń interfejs wiersza polecenia platformy .NET Core (na przykład `dotnet new console` lub `dotnet new console -lang vb`) lub można utworzyć plik i użyć kompilatora wiersza polecenia dla aplikacji .NET Framework.
 
 W przypadku projektu .NET Core należy odwołać się do pakietu NuGet **System. Drawing. Common** . W programie Visual Studio Użyj Menedżera pakietów NuGet, aby zainstalować pakiet. Alternatywnie można dodać odwołanie do pakietu w pliku \*. csproj lub \*. vbproj:
  

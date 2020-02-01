@@ -2,12 +2,12 @@
 title: Przystawka programu MMC do konfigurowania elementu WS-AtomicTransaction
 ms.date: 03/30/2017
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
-ms.openlocfilehash: 9b6c7ecf112309b6c10414bfe506559e153911c2
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 0bcd08f9a3450c850ead941df6313526d076df2d
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900725"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921350"
 ---
 # <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>Przystawka programu MMC do konfiguracji protokołu WS-AtomicTransaction
 
@@ -15,11 +15,11 @@ Przystawka programu MMC Konfiguracja protokołu WS-AtomicTransaction służy do 
 
 ## <a name="remarks"></a>Uwagi
 
-W przypadku korzystania z programu [!INCLUDE[wxp](../../../includes/wxp-md.md)] lub Windows Server 2003 przystawka MMC można znaleźć, przechodząc do **Panelu sterowania/narzędzia administracyjne/Składniki usługi/** , klikając prawym przyciskiem myszy pozycję **mój komputer**, a następnie wybierając polecenie **Właściwości**. Jest to ta sama lokalizacja, w której można skonfigurować usługę MSDTC. Opcje dostępne dla konfiguracji są pogrupowane pod kartą **WS-AT** .
+W przypadku korzystania z systemu Windows XP lub Windows Server 2003 przystawka MMC można znaleźć, przechodząc do **Panelu sterowania/narzędzia administracyjne/usługi składowe/** , klikając prawym przyciskiem myszy pozycję **mój komputer**, a następnie wybierając polecenie **Właściwości**. Jest to ta sama lokalizacja, w której można skonfigurować usługę MSDTC. Opcje dostępne dla konfiguracji są pogrupowane pod kartą **WS-AT** .
 
  W przypadku korzystania z systemu Windows Vista lub Windows Server 2008 przystawkę MMC można znaleźć, klikając przycisk **Start** , a następnie wpisując `dcomcnfg.exe` w polu **wyszukiwania** . Po otwarciu programu MMC przejdź do węzła **My Computer\Distributed Transaction COORDINATOR\LOCAL DTC** , kliknij prawym przyciskiem myszy i wybierz pozycję **Właściwości**. Opcje dostępne dla konfiguracji są pogrupowane pod kartą **WS-AT** .
 
- Poprzednie kroki służą do uruchomienia przystawki do konfigurowania komputera lokalnego. Aby skonfigurować maszynę zdalną, należy zlokalizować nazwę maszyny zdalnej w **Panelu sterowania/narzędzia administracyjne/usługi składowe/** , a następnie wykonać podobne czynności, jeśli jest uruchomiony system [!INCLUDE[wxp](../../../includes/wxp-md.md)] lub Windows Server 2003. W przypadku korzystania z systemu Windows Vista lub Windows Server 2008 wykonaj poprzednie kroki dla systemów Vista i Windows Server 2008, ale Użyj węzła **usługi Distributed Transaction Coordinator\Local DTC** w węźle komputera zdalnego.
+ Poprzednie kroki służą do uruchomienia przystawki do konfigurowania komputera lokalnego. Aby skonfigurować maszynę zdalną, należy zlokalizować nazwę maszyny zdalnej w **Panelu sterowania/narzędzia administracyjne/usługi składowe/** , a następnie wykonać podobne kroki w przypadku korzystania z systemu Windows XP lub windows Server 2003. W przypadku korzystania z systemu Windows Vista lub Windows Server 2008 wykonaj poprzednie kroki dla systemów Vista i Windows Server 2008, ale Użyj węzła **usługi Distributed Transaction Coordinator\Local DTC** w węźle komputera zdalnego.
 
  Aby użyć interfejsu użytkownika dostarczonego przez narzędzie, należy zarejestrować plik WsatUI. dll, który znajduje się w następującej ścieżce:
 

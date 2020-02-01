@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 6116b2322ed2071b78bcd77de7c38ad07c327aa6
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 23dc0f691c8a8d80a0bd2a5d301ace0d129007af
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740836"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920890"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Wdrażanie aplikacji .NET Core za pomocą programu Visual Studio
 
@@ -28,11 +28,11 @@ Aby uzyskać informacje dotyczące korzystania z programu Visual Studio w celu t
 
 ## <a name="framework-dependent-deployment"></a>Wdrożenie zależny od struktury
 
-Wdrażanie wdrożenia zależnego od platformy bez zależności innych firm polega jedynie na kompilowaniu, testowaniu i publikowaniu aplikacji. Prosty przykład zapisaniem C# ilustruje proces.  
+Wdrażanie wdrożenia zależnego od platformy bez zależności innych firm polega jedynie na kompilowaniu, testowaniu i publikowaniu aplikacji. Prosty przykład zapisaniem C# ilustruje proces.
 
 1. Utwórz projekt.
 
-   Wybierz kolejno pozycje **Plik** > **Nowy** > **Projekt**. W oknie dialogowym **Nowy projekt** C# rozwiń kategorie projektu języka (lub Visual Basic) w okienku **zainstalowane** typy projektów, wybierz pozycję **.NET Core**, a następnie w środkowym okienku wybierz szablon **Aplikacja konsolowa (.NET Core)** . Wprowadź nazwę projektu, na przykład "FDD", w polu tekstowym **Nazwa** . Wybierz przycisk **OK**.
+   Wybierz pozycję **plik** > **Nowy** > **projekt**. W oknie dialogowym **Nowy projekt** C# rozwiń kategorie projektu języka (lub Visual Basic) w okienku **zainstalowane** typy projektów, wybierz pozycję **.NET Core**, a następnie w środkowym okienku wybierz szablon **Aplikacja konsolowa (.NET Core)** . Wprowadź nazwę projektu, na przykład "FDD", w polu tekstowym **Nazwa** . Wybierz przycisk **OK**.
 
 1. Dodaj kod źródłowy aplikacji.
 
@@ -83,7 +83,7 @@ Wdrożenie samodzielnego wdrożenia bez zależności innych firm polega na tworz
 
 1. Utwórz projekt.
 
-   Wybierz kolejno pozycje **Plik** > **Nowy** > **Projekt**. W oknie dialogowym **Nowy projekt** C# rozwiń kategorie projektu języka (lub Visual Basic) w okienku **zainstalowane** typy projektów, wybierz pozycję **.NET Core**, a następnie w środkowym okienku wybierz szablon **Aplikacja konsolowa (.NET Core)** . Wprowadź nazwę projektu, na przykład "SCD", w polu tekstowym **Nazwa** , a następnie wybierz przycisk **OK** .
+   Wybierz pozycję **plik** > **Nowy** > **projekt**. W oknie dialogowym **Nowy projekt** C# rozwiń kategorie projektu języka (lub Visual Basic) w okienku **zainstalowane** typy projektów, wybierz pozycję **.NET Core**, a następnie w środkowym okienku wybierz szablon **Aplikacja konsolowa (.NET Core)** . Wprowadź nazwę projektu, na przykład "SCD", w polu tekstowym **Nazwa** , a następnie wybierz przycisk **OK** .
 
 1. Dodaj kod źródłowy aplikacji.
 
@@ -189,7 +189,7 @@ Dla każdej platformy, która jest przeznaczona dla aplikacji, wykonaj następuj
    Jeśli utworzono już profil, kliknij prawym przyciskiem myszy projekt, aby otworzyć okno dialogowe **publikowania** , jeśli nie jest jeszcze otwarte. Następnie wybierz pozycję **Nowy profil**.
 
    Zostanie otwarte okno dialogowe **Wybieranie elementu docelowego publikowania** .
-  
+
 1. Wybierz lokalizację, w której program Visual Studio opublikuje aplikację.
 
    W przypadku publikowania tylko na jednej platformie można zaakceptować wartość domyślną w polu tekstowym **Wybierz folder** . spowoduje to opublikowanie wdrożenia aplikacji zależnej od platformy w katalogu *\<projektu > katalogu \bin\Release\netcoreapp2.1\publish* .
@@ -244,7 +244,7 @@ Ponadto program Visual Studio tworzy oddzielny profil publikacji (\*. pubxml) dl
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-https://go.microsoft.com/fwlink/?LinkID=208121. 
+https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>

@@ -2,12 +2,12 @@
 title: Obsługa komunikatów zanieczyszczonych
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-ms.openlocfilehash: ff1eaec99308b06250722b290b7005ac21731570
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 389d0651438036cd23d30cf7dd866956ac8e5dae
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337646"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921208"
 ---
 # <a name="poison-message-handling"></a>Obsługa komunikatów zanieczyszczonych
 *Trująca wiadomość* jest komunikatem, który przekroczył maksymalną liczbę prób dostarczenia do aplikacji. Taka sytuacja może wystąpić, gdy aplikacja oparta na kolejce nie może przetworzyć komunikatu z powodu błędów. Aby spełnić wymagania dotyczące niezawodności, aplikacja umieszczona w kolejce odbiera komunikaty w ramach transakcji. Przerwanie transakcji, w której otrzymano komunikat w kolejce, pozostawia komunikat w kolejce, aby komunikat został ponowiony w ramach nowej transakcji. Jeśli problem, który spowodował przerwanie transakcji, nie zostanie poprawiony, aplikacja otrzymująca może zostać zablokowana w pętli, która odbiera i przerywa ten sam komunikat do momentu przekroczenia maksymalnej liczby prób dostarczenia i zatrucia wyników komunikatów.  
@@ -21,7 +21,7 @@ ms.locfileid: "75337646"
   
 - `ReceiveRetryCount`. Wartość całkowita wskazująca maksymalną liczbę ponownych prób dostarczenia komunikatu z kolejki aplikacji do aplikacji. Wartość domyślna to 5. Jest to wystarczające w przypadkach, gdy natychmiastowa ponowna próba rozwiązuje problem, na przykład przez tymczasowe zakleszczenie w bazie danych.  
   
-- `MaxRetryCycles`. Wartość całkowita, która wskazuje maksymalną liczbę ponownych prób. Cykl ponowień polega na przesłaniu komunikatu z kolejki aplikacji do podrzędnej kolejki ponownych prób i po skonfigurowaniu opóźnienia z powrotem z kolejki ponownych prób w kolejce aplikacji w celu ponowienia próby dostarczenia. Wartość domyślna to 2. W systemie Windows Vista komunikat próbuje maksymalnie (`ReceiveRetryCount` + 1) * (`MaxRetryCycles` + 1) razy. `MaxRetryCycles` jest ignorowana w systemie Windows Server 2003 i [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+- `MaxRetryCycles`. Wartość całkowita, która wskazuje maksymalną liczbę ponownych prób. Cykl ponowień polega na przesłaniu komunikatu z kolejki aplikacji do podrzędnej kolejki ponownych prób i po skonfigurowaniu opóźnienia z powrotem z kolejki ponownych prób w kolejce aplikacji w celu ponowienia próby dostarczenia. Wartość domyślna to 2. W systemie Windows Vista komunikat próbuje maksymalnie (`ReceiveRetryCount` + 1) * (`MaxRetryCycles` + 1) razy. `MaxRetryCycles` jest ignorowany w systemach Windows Server 2003 i Windows XP.  
   
 - `RetryCycleDelay`. Opóźnienie między cyklami ponawiania prób. Wartość domyślna to 30 minut. `MaxRetryCycles` i `RetryCycleDelay` razem zapewniają mechanizm rozwiązywania problemu, gdy ponowna próba po okresowym opóźnieniu rozwiązuje problem. Na przykład obsługuje zablokowany zestaw wierszy w SQL Server oczekujące zatwierdzenie transakcji.  
   
@@ -39,12 +39,12 @@ ms.locfileid: "75337646"
   
 - ((ReceiveRetryCount + 1) * (MaxRetryCycles + 1)) w systemie Windows Vista.  
   
-- (ReceiveRetryCount + 1) w systemie Windows Server 2003 i [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+- (ReceiveRetryCount + 1) w systemie Windows Server 2003 i Windows XP.  
   
 > [!NOTE]
 > Nie wykonano żadnych ponownych prób dla wiadomości, która została dostarczona pomyślnie.  
   
- Aby śledzić liczbę prób odczytu komunikatu, system Windows Vista utrzymuje trwałą Właściwość komunikatu, która zlicza liczbę przerwań i Właściwość liczby przeniesień, która zlicza, ile razy komunikat przechodzi między kolejką aplikacji a podkolejkami. Kanał WCF używa tych funkcji do obliczenia liczby ponowień odbioru i liczby ponownych prób. W systemie Windows Server 2003 i [!INCLUDE[wxp](../../../../includes/wxp-md.md)]liczba przerwań jest utrzymywana w pamięci przez kanał WCF i zostanie zresetowana w przypadku niepowodzenia aplikacji. Ponadto kanał WCF może w dowolnym momencie przechowywać liczbę przerwań dla maksymalnie 256 komunikatów w pamięci. Jeśli zostanie odczytany komunikat 257th, licznik przerwań najstarszej wiadomości zostanie zresetowany.  
+ Aby śledzić liczbę prób odczytu komunikatu, system Windows Vista utrzymuje trwałą Właściwość komunikatu, która zlicza liczbę przerwań i Właściwość liczby przeniesień, która zlicza, ile razy komunikat przechodzi między kolejką aplikacji a podkolejkami. Kanał WCF używa tych funkcji do obliczenia liczby ponowień odbioru i liczby ponownych prób. W systemach Windows Server 2003 i Windows XP licznik przerwań jest zachowywany w pamięci przez kanał WCF i jest resetowany w przypadku niepowodzenia aplikacji. Ponadto kanał WCF może w dowolnym momencie przechowywać liczbę przerwań dla maksymalnie 256 komunikatów w pamięci. Jeśli zostanie odczytany komunikat 257th, licznik przerwań najstarszej wiadomości zostanie zresetowany.  
   
  Właściwości liczba przerwań i liczba operacji przenoszenia są dostępne dla operacji usługi za pomocą kontekstu operacji. Poniższy przykład kodu pokazuje, jak uzyskać do nich dostęp.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "75337646"
   
  Aplikacja może wymagać pewnego rodzaju automatycznej obsługi skażonych komunikatów, które przenosi trujące komunikaty do kolejki komunikatów trujących, aby usługa mogła uzyskać dostęp do pozostałych komunikatów w kolejce. Jedynym scenariuszem dotyczącym używania mechanizmu obsługi błędów do nasłuchiwania wyjątków komunikatów trujących jest ustawienie <xref:System.ServiceModel.Configuration.MsmqBindingElementBase.ReceiveErrorHandling%2A> <xref:System.ServiceModel.ReceiveErrorHandling.Fault>. Przykładowy komunikat zatrucia dla usługi kolejkowania komunikatów 3,0 pokazuje to zachowanie. Poniżej przedstawiono kroki, które należy wykonać, aby obsłużyć trujące komunikaty, w tym najlepsze rozwiązania:  
   
-1. Upewnij się, że ustawienia trujące odzwierciedlają wymagania aplikacji. Podczas pracy z ustawieniami upewnij się, że rozumiesz różnice między możliwościami usługi kolejkowania komunikatów w systemach Windows Vista, Windows Server 2003 i [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+1. Upewnij się, że ustawienia trujące odzwierciedlają wymagania aplikacji. Podczas pracy z ustawieniami upewnij się, że rozumiesz różnice między możliwościami usługi kolejkowania komunikatów w systemach Windows Vista, Windows Server 2003 i Windows XP.  
   
 2. W razie potrzeby Zaimplementuj `IErrorHandler`, aby obsługiwał błędy komunikatów trujących. Ponieważ ustawienie `ReceiveErrorHandling` `Fault` wymaga ręcznego mechanizmu przenoszenia skażonego komunikatu z kolejki lub do skorygowania zewnętrznego problemu zależnego, typowym użyciem jest zaimplementowanie `IErrorHandler`, gdy `ReceiveErrorHandling` jest ustawiona na `Fault`, jak pokazano w poniższym kodzie.  
   
@@ -95,13 +95,13 @@ ms.locfileid: "75337646"
  Obsługa komunikatów trujących nie kończy się, gdy wiadomość zostanie umieszczona w kolejce trujących komunikatów. Komunikaty w kolejce trujących komunikatów muszą być nadal odczytywane i obsługiwane. Można użyć podzestawu ustawień obsługi komunikatów trujących podczas odczytu komunikatów z podkolejki trującej. Odpowiednie ustawienia są `ReceiveRetryCount` i `ReceiveErrorHandling`. Możesz ustawić `ReceiveErrorHandling` do porzucenia, odrzucić lub błędu. `MaxRetryCycles` jest ignorowany i występuje wyjątek, jeśli `ReceiveErrorHandling` jest ustawiony do przenoszenia.  
   
 ## <a name="windows-vista-windows-server-2003-and-windows-xp-differences"></a>Różnice w systemach Windows Vista, Windows Server 2003 i Windows XP  
- Jak wspomniano wcześniej, nie wszystkie ustawienia obsługi komunikatów trujących dotyczą systemu Windows Server 2003 i [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. Następujące kluczowe różnice między usługą kolejkowania komunikatów w systemie Windows Server 2003, [!INCLUDE[wxp](../../../../includes/wxp-md.md)]i Windows Vista mają zastosowanie do obsługi komunikatów trujących:  
+ Jak wspomniano wcześniej, nie wszystkie ustawienia obsługi komunikatów trujących dotyczą systemu Windows Server 2003 i Windows XP. Następujące kluczowe różnice między usługą kolejkowania komunikatów w systemie Windows Server 2003, Windows XP i Windows Vista mają zastosowanie do obsługi komunikatów trujących:  
   
-- Usługa kolejkowania komunikatów w systemie Windows Vista obsługuje podkolejki, a systemy Windows Server 2003 i [!INCLUDE[wxp](../../../../includes/wxp-md.md)] nie obsługują kolejek. Kolejki podrzędne są używane w obsłudze komunikatów trujących. Kolejki ponawiania prób i kolejka Trująca są podkolejkami do kolejki aplikacji utworzonej na podstawie ustawień obsługi komunikatów trujących. `MaxRetryCycles` określa liczbę podkolejek ponowień do utworzenia. W związku z tym, gdy działa w systemie Windows Server 2003 lub [!INCLUDE[wxp](../../../../includes/wxp-md.md)], `MaxRetryCycles` są ignorowane i `ReceiveErrorHandling.Move` nie jest dozwolone.  
+- Usługa kolejkowania komunikatów w systemie Windows Vista obsługuje podkolejki, a systemy Windows Server 2003 i Windows XP nie obsługują kolejek. Kolejki podrzędne są używane w obsłudze komunikatów trujących. Kolejki ponawiania prób i kolejka Trująca są podkolejkami do kolejki aplikacji utworzonej na podstawie ustawień obsługi komunikatów trujących. `MaxRetryCycles` określa liczbę podkolejek ponowień do utworzenia. W związku z tym w przypadku uruchamiania w systemie Windows Server 2003 lub Windows XP `MaxRetryCycles` są ignorowane i `ReceiveErrorHandling.Move` jest niedozwolone.  
   
-- Usługa kolejkowania komunikatów w systemie Windows Vista obsługuje potwierdzenie negatywne, a systemy Windows Server 2003 i [!INCLUDE[wxp](../../../../includes/wxp-md.md)] nie. Negatywne potwierdzenie od Menedżera kolejki odbiorczej powoduje, że Menedżer kolejki wysyłania umieszcza odrzucony komunikat w kolejce utraconych wiadomości. W związku z tym `ReceiveErrorHandling.Reject` nie jest dozwolone w przypadku systemów Windows Server 2003 i [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+- Usługa kolejkowania komunikatów w systemie Windows Vista obsługuje potwierdzenie negatywne, a systemy Windows Server 2003 i Windows XP nie są. Negatywne potwierdzenie od Menedżera kolejki odbiorczej powoduje, że Menedżer kolejki wysyłania umieszcza odrzucony komunikat w kolejce utraconych wiadomości. W związku z tym `ReceiveErrorHandling.Reject` nie jest dozwolone w przypadku systemów Windows Server 2003 i Windows XP.  
   
-- Usługa kolejkowania komunikatów w systemie Windows Vista obsługuje Właściwość komunikatu, która zachowuje liczbę prób dostarczenia komunikatu. Ta właściwość liczby przerwań nie jest dostępna w systemie Windows Server 2003 i [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. Funkcja WCF zachowuje liczbę przerwań w pamięci, dlatego jest możliwe, że ta właściwość nie może zawierać dokładnej wartości, gdy ten sam komunikat jest odczytywany przez więcej niż jedną usługę WCF w farmie.  
+- Usługa kolejkowania komunikatów w systemie Windows Vista obsługuje Właściwość komunikatu, która zachowuje liczbę prób dostarczenia komunikatu. Ta właściwość liczby przerwań nie jest dostępna w systemach Windows Server 2003 i Windows XP. Funkcja WCF zachowuje liczbę przerwań w pamięci, dlatego jest możliwe, że ta właściwość nie może zawierać dokładnej wartości, gdy ten sam komunikat jest odczytywany przez więcej niż jedną usługę WCF w farmie.  
   
 ## <a name="see-also"></a>Zobacz także
 

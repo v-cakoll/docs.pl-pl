@@ -8,12 +8,12 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: 578957888daf7be20ab7418a46c533a011b3d2ac
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 3fd90cde16afdfe32b9bd0533ba04e35928d2706
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964163"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920202"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Delegowanie i personifikacja za pomocą programu WCF
 *Personifikacja* jest powszechną techniką używaną przez usługi do ograniczania dostępu klientów do zasobów domeny usługi. Zasoby domeny usługi mogą być zasobami maszynowymi, takimi jak pliki lokalne (personifikacja) lub zasobami na innej maszynie, takimi jak udział plików (delegowanie). Aby uzyskać przykładową aplikację, zobacz [Personifikowanie klienta](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Przykład korzystania z personifikacji można znaleźć [w temacie How to: Personifikuj klienta w usłudze](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
@@ -71,7 +71,7 @@ ms.locfileid: "75964163"
  Infrastruktura WCF może personifikować wywołującego tylko wtedy, gdy obiekt wywołujący jest uwierzytelniany przy użyciu poświadczeń, które mogą być mapowane na konto użytkownika systemu Windows. Jeśli usługa jest skonfigurowana do uwierzytelniania przy użyciu poświadczeń, których nie można zamapować na konto systemu Windows, metoda usługi nie jest wykonywana.  
   
 > [!NOTE]
-> W przypadku [!INCLUDE[wxp](../../../../includes/wxp-md.md)]personifikacja kończy się niepowodzeniem, jeśli zostanie utworzony stanowy SCT, co spowoduje <xref:System.InvalidOperationException>. Aby uzyskać więcej informacji, zobacz [scenariusze nieobsługiwane](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md).  
+> W systemie Windows XP personifikacja kończy się niepowodzeniem, jeśli zostanie utworzony stanowy SCT, co spowoduje wystąpienie <xref:System.InvalidOperationException>. Aby uzyskać więcej informacji, zobacz [scenariusze nieobsługiwane](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md).  
   
 ## <a name="impersonation-in-a-service-method-imperative-model"></a>Personifikacja w metodzie usługi: model bezwzględny  
  Czasami obiekt wywołujący nie musi personifikować całej metody usługi, aby działała, ale tylko dla jego części. W takim przypadku należy uzyskać tożsamość systemu Windows wywołującego w metodzie usługi i bezwzględnie przeprowadzić personifikację. W tym celu należy użyć właściwości <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> <xref:System.ServiceModel.ServiceSecurityContext>, aby zwrócić wystąpienie klasy <xref:System.Security.Principal.WindowsIdentity> i wywołać metodę <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> przed użyciem wystąpienia.  
@@ -93,8 +93,8 @@ ms.locfileid: "75964163"
 |`ImpersonationOption`|`ImpersonateCallerForAllServiceOperations`|Zachowanie|  
 |---------------------------|------------------------------------------------|--------------|  
 |Wymagane|n/d|Funkcja WCF personifikuje wywołującego|  
-|Dozwolone|{1&gt;false&lt;1}|Funkcja WCF nie personifikuje wywołującego|  
-|Dozwolone|true|Funkcja WCF personifikuje wywołującego|  
+|Występować|{1&gt;false&lt;1}|Funkcja WCF nie personifikuje wywołującego|  
+|Występować|true|Funkcja WCF personifikuje wywołującego|  
 |NotAllowed|{1&gt;false&lt;1}|Funkcja WCF nie personifikuje wywołującego|  
 |NotAllowed|true|Niedozwolone. (Zgłoszono <xref:System.InvalidOperationException>.)|  
   
@@ -118,16 +118,16 @@ ms.locfileid: "75964163"
 |Identification|n/d|n/d|Identification|  
 |Personifikacja|Tak|n/d|Personifikacja|  
 |Personifikacja|Nie|n/d|Identification|  
-|Delegacja|Tak|Tak|Delegacja|  
-|Delegacja|Tak|Nie|Personifikacja|  
-|Delegacja|Nie|n/d|Identification|  
+|Wierz|Tak|Tak|Wierz|  
+|Wierz|Tak|Nie|Personifikacja|  
+|Wierz|Nie|n/d|Identification|  
   
 ## <a name="impersonation-level-obtained-from-user-name-credentials-and-cached-token-impersonation"></a>Poziom personifikacji uzyskany na podstawie poświadczeń nazwy użytkownika i personifikacji tokenu w pamięci podręcznej  
  Przekazując usługę nazwę użytkownika i hasło, klient włącza funkcję WCF do logowania się jako ten użytkownik, który jest równoznaczny z ustawieniem właściwości `AllowedImpersonationLevel` na <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>. (`AllowedImpersonationLevel` jest dostępny w klasach <xref:System.ServiceModel.Security.WindowsClientCredential> i <xref:System.ServiceModel.Security.HttpDigestClientCredential>). Poniższa tabela zawiera poziom personifikacji uzyskany, gdy usługa otrzymuje poświadczenia nazwy użytkownika.  
   
 |`AllowedImpersonationLevel`|Usługa ma `SeImpersonatePrivilege`|Usługa i klient mogą przebudować|`ImpersonationLevel` tokenów w pamięci podręcznej|  
 |---------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|n/d|Tak|Tak|Delegacja|  
+|n/d|Tak|Tak|Wierz|  
 |n/d|Tak|Nie|Personifikacja|  
 |n/d|Nie|n/d|Identification|  
   
@@ -169,7 +169,7 @@ ServiceHost sh = new ServiceHost(typeof(HelloService), httpUri);
 sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAccount = true;  
 ```  
   
-## <a name="delegation"></a>Delegacja  
+## <a name="delegation"></a>Wierz  
  Aby delegować do usługi zaplecza, usługa musi wykonać wieloetapowe uwierzytelnianie Kerberos (SSPI bez powrotu NTLM) lub Kerberos Direct do usługi zaplecza przy użyciu tożsamości systemu Windows klienta. Aby delegować do usługi zaplecza, Utwórz <xref:System.ServiceModel.ChannelFactory%601> i kanał, a następnie przekomunikuj się za pośrednictwem kanału podczas personifikowania klienta. Dzięki tej formie delegowania odległość, z jaką usługa zaplecza może znajdować się w usłudze frontonu, zależy od poziomu personifikacji osiągniętego przez usługę frontonu. Gdy poziom personifikacji to <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>, usługi frontonu i zaplecza muszą być uruchomione na tym samym komputerze. Gdy poziom personifikacji to <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>, usługi frontonu i zaplecza mogą znajdować się na oddzielnych maszynach lub na tym samym komputerze. Włączenie personifikacji na poziomie delegowania wymaga skonfigurowania zasad domeny systemu Windows do zezwalania na delegowanie. Aby uzyskać więcej informacji o konfigurowaniu Active Directory na potrzeby obsługi delegowania, zobacz [Włączanie uwierzytelniania delegowanego](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc780217(v=ws.10)).  
   
 > [!NOTE]

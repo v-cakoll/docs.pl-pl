@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: 6505cc027b2983fd61ae53ca7ae43319024c74f7
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: e1c3e3d7697bf9a85cf0ab7df35a4755939d1df0
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964710"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921411"
 ---
 # <a name="auditing-security-events"></a>Inspekcja zdarzeń dotyczących zabezpieczeń
 Aplikacje utworzone za pomocą Windows Communication Foundation (WCF) mogą rejestrować zdarzenia zabezpieczeń (sukces, Niepowodzenie lub oba) przy użyciu funkcji inspekcji. Zdarzenia są zapisywane w dzienniku zdarzeń systemu Windows i można je zbadać przy użyciu Podgląd zdarzeń.  
@@ -32,7 +32,7 @@ Aplikacje utworzone za pomocą Windows Communication Foundation (WCF) mogą reje
   
  Aby można było zapisać w dzienniku zabezpieczeń, wymagany jest `SeAuditPrivilege`. Domyślnie tylko konta systemu lokalnego i usługi sieciowej mają to uprawnienie. Zarządzanie funkcjami dziennika zabezpieczeń `read` i `delete` wymaga `SeSecurityPrivilege`. Domyślnie tylko Administratorzy mają to uprawnienie.  
   
- Z drugiej strony uwierzytelnieni użytkownicy mogą odczytywać i zapisywać dane w dzienniku aplikacji. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] domyślnie zapisuje zdarzenia inspekcji w dzienniku aplikacji. Dziennik może również zawierać informacje osobiste, które są widoczne dla wszystkich uwierzytelnionych użytkowników.  
+ Z drugiej strony uwierzytelnieni użytkownicy mogą odczytywać i zapisywać dane w dzienniku aplikacji. System Windows XP zapisuje zdarzenia inspekcji domyślnie do dziennika aplikacji. Dziennik może również zawierać informacje osobiste, które są widoczne dla wszystkich uwierzytelnionych użytkowników.  
   
 ## <a name="suppressing-audit-failures"></a>Pomijanie błędów inspekcji  
  Inna opcja podczas inspekcji wskazuje, czy pomijać błędy inspekcji. Domyślnie Niepowodzenie inspekcji nie ma wpływu na aplikację. Jeśli jednak jest to wymagane, można ustawić opcję na `false`, co spowoduje zgłoszenie wyjątku.  
@@ -78,7 +78,7 @@ Aplikacje utworzone za pomocą Windows Communication Foundation (WCF) mogą reje
 ## <a name="security-considerations"></a>Zagadnienia dotyczące zabezpieczeń  
  Jeśli złośliwy użytkownik wie, że inspekcja jest włączona, osoba atakująca może wysłać nieprawidłowe komunikaty, które powodują zapisanie wpisów inspekcji. Jeśli dziennik inspekcji zostanie wypełniony w ten sposób, system inspekcji zakończy się niepowodzeniem. Aby rozwiązać ten problem, ustaw właściwość <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> na `true` i Użyj właściwości Podgląd zdarzeń, aby kontrolować zachowanie inspekcji.  
   
- Zdarzenia inspekcji, które są zapisywane w dzienniku aplikacji na [!INCLUDE[wxp](../../../../includes/wxp-md.md)] są widoczne dla każdego uwierzytelnionego użytkownika.  
+ Zdarzenia inspekcji, które są zapisywane w dzienniku aplikacji w systemie Windows XP, są widoczne dla każdego uwierzytelnionego użytkownika.  
   
 ## <a name="choosing-between-application-and-security-event-logs"></a>Wybieranie między aplikacjami a dziennikami zdarzeń zabezpieczeń  
  Poniższe tabele zawierają informacje ułatwiające określenie, czy należy zalogować się do aplikacji, czy dziennika zdarzeń zabezpieczeń.  
@@ -87,7 +87,7 @@ Aplikacje utworzone za pomocą Windows Communication Foundation (WCF) mogą reje
   
 |System|Dziennik aplikacji|Dziennik zabezpieczeń|  
 |------------|---------------------|------------------|  
-|[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] lub nowszy|Obsługiwana|Nieobsługiwane|  
+|Windows XP z dodatkiem SP2 lub nowszym|Obsługiwana|Nieobsługiwane|  
 |Windows Server 2003 z dodatkiem SP1 i Windows Vista|Obsługiwana|Kontekst wątku musi mieć `SeAuditPrivilege`|  
   
 #### <a name="other-factors"></a>Inne czynniki  

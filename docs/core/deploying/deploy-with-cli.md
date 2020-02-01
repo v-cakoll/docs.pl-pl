@@ -1,20 +1,20 @@
 ---
-title: Publikowanie aplikacji platformy .NET Core za pomocą interfejsu wiersza polecenia
-description: Dowiedz się, jak opublikować aplikację platformy .NET Core przy użyciu narzędzi interfejsu wiersza polecenia zestaw .NET Core SDK (CLI).
+title: Publikowanie aplikacji przy użyciu interfejs wiersza polecenia platformy .NET Core
+description: Dowiedz się, jak opublikować aplikację platformy .NET Core za pomocą poleceń interfejs wiersza polecenia platformy .NET Core.
 author: thraka
 ms.author: adegeo
 ms.date: 12/12/2019
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 98f1e96ac087727e711f9ebf3d3eaf86c4d4eec9
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: f4c2a4ccf551c53e4aa4e125cb5720d6f1cc9601
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740859"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920910"
 ---
-# <a name="publish-net-core-apps-with-the-cli"></a>Publikowanie aplikacji platformy .NET Core za pomocą interfejsu wiersza polecenia
+# <a name="publish-net-core-apps-with-the-net-core-cli"></a>Publikowanie aplikacji platformy .NET Core za pomocą interfejs wiersza polecenia platformy .NET Core
 
 W tym artykule pokazano, jak można opublikować aplikację .NET Core z poziomu wiersza polecenia. Platforma .NET Core oferuje trzy sposoby publikowania aplikacji. Wdrożenie zależne od platformy tworzy plik DLL dla wielu platform, który używa lokalnie zainstalowanego środowiska uruchomieniowego platformy .NET Core. Plik wykonywalny zależny od struktury tworzy plik wykonywalny specyficzny dla platformy, który używa zainstalowanego lokalnie środowiska uruchomieniowego platformy .NET Core. Samodzielny plik wykonywalny tworzy plik wykonywalny specyficzny dla platformy i zawiera kopię lokalną środowiska uruchomieniowego platformy .NET Core.
 

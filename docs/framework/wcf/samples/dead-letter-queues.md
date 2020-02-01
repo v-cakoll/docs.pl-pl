@@ -2,12 +2,12 @@
 title: Kolejki utraconych komunikatów
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: d493aba9a3f7a51824243fe8d06441ab563b2261
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 5025aa784817d1189f23918eacfef275abf968e1
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344539"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921438"
 ---
 # <a name="dead-letter-queues"></a>Kolejki utraconych komunikatów
 Ten przykład pokazuje, jak obsługiwać i przetwarzać komunikaty, których dostarczenie nie powiodło się. Jest on oparty na przykładowym [wiązaniem usługi MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) . Ten przykład używa powiązania `netMsmqBinding`. Usługa to samodzielna aplikacja konsolowa, która umożliwia obserwowanie usługi do odebrania komunikatów znajdujących się w kolejce.
@@ -16,7 +16,7 @@ Ten przykład pokazuje, jak obsługiwać i przetwarzać komunikaty, których dos
 > Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.
 
 > [!NOTE]
-> Ten przykład pokazuje każdą kolejkę utraconych wiadomości aplikacji, która jest dostępna tylko w systemie Windows Vista. Przykład można zmodyfikować w taki sposób, aby korzystał z domyślnych kolejek cały system dla usługi MSMQ 3,0 w systemie Windows Server 2003 i [!INCLUDE[wxp](../../../../includes/wxp-md.md)].
+> Ten przykład pokazuje każdą kolejkę utraconych wiadomości aplikacji, która jest dostępna tylko w systemie Windows Vista. Przykład można zmodyfikować w taki sposób, aby korzystał z domyślnych kolejek cały system dla usługi MSMQ 3,0 w systemie Windows Server 2003 i Windows XP.
 
  W kolejce komunikacja klient komunikuje się z usługą przy użyciu kolejki. Dokładniej, klient wysyła komunikaty do kolejki. Usługa odbiera komunikaty z kolejki. W związku z tym usługa i klient nie muszą być uruchomione w tym samym czasie w celu komunikowania się przy użyciu kolejki.
 

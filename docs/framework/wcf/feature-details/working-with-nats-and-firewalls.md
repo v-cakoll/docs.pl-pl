@@ -5,12 +5,12 @@ helpviewer_keywords:
 - firewalls [WCF]
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
-ms.openlocfilehash: b8be10740c8e92d3dac7094f07b3372e8d78a3d9
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 28360b8b5b07c7c532dd2406ca98604870b8335f
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743872"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921074"
 ---
 # <a name="working-with-nats-and-firewalls"></a>Praca z translatorami adresów sieciowych i zaporami
 Klient i serwer połączenia sieciowego często nie mają bezpośredniego i otwartej ścieżki do komunikacji. Pakiety są filtrowane, kierowane, analizowane i przekształcane zarówno na maszynach końcowych, jak i na maszynach pośrednich w sieci. Translacji adresów sieciowych (NAT) i zapory są typowymi przykładami aplikacji pośrednich, które mogą uczestniczyć w komunikacji sieciowej.  
@@ -25,7 +25,7 @@ Klient i serwer połączenia sieciowego często nie mają bezpośredniego i otwa
  Niektóre NAT obsługują konfigurację reguł przekazywania, aby umożliwić maszynom zewnętrznym łączenie się z konkretną maszyną wewnętrzną. Instrukcje dotyczące konfigurowania reguł przekazywania różnią się między różnymi translatorami adresów sieciowych i zaproszenie użytkowników końcowych o zmianę konfiguracji NAT nie są zalecane w przypadku większości aplikacji. Wielu użytkowników końcowych nie może lub nie chce zmieniać konfiguracji NAT dla określonej aplikacji.  
   
 ## <a name="how-firewalls-affect-communication"></a>Jak zapory wpływają na komunikację  
- *Zapora* to oprogramowanie lub sprzęt, które stosuje reguły do ruchu przechodzącego przez, aby zdecydować, czy zezwalać na przesyłanie lub odmawiać. Zapory można skonfigurować do badania strumieni ruchu przychodzącego i/lub wychodzącego. Zapora zapewnia granicę zabezpieczeń sieci na granicy sieci lub na hoście punktu końcowego. Użytkownicy biznesowi tradycyjnie zachowały swoje serwery za zaporą, aby zapobiec złośliwym atakom. Od momentu wprowadzenia zapory osobistej w [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)]liczba użytkowników domowych za zaporą została znacznie zwiększona. Dzięki temu jedno lub oba punkty końcowe połączenia mają zaporę sprawdzającą pakiety.  
+ *Zapora* to oprogramowanie lub sprzęt, które stosuje reguły do ruchu przechodzącego przez, aby zdecydować, czy zezwalać na przesyłanie lub odmawiać. Zapory można skonfigurować do badania strumieni ruchu przychodzącego i/lub wychodzącego. Zapora zapewnia granicę zabezpieczeń sieci na granicy sieci lub na hoście punktu końcowego. Użytkownicy biznesowi tradycyjnie zachowały swoje serwery za zaporą, aby zapobiec złośliwym atakom. Od momentu wprowadzenia zapory osobistej w systemie Windows XP z dodatkiem SP2 liczba użytkowników domowych znajdujących się za zaporą została znacznie zwiększona. Dzięki temu jedno lub oba punkty końcowe połączenia mają zaporę sprawdzającą pakiety.  
   
  Zapory różnią się znacznie pod względem ich złożoności i możliwości testowania pakietów. Proste zapory stosują reguły oparte na adresach źródłowych i docelowych oraz portach w pakietach. Inteligentne zapory mogą również sprawdzić zawartość pakietów, aby podejmować decyzje. Te zapory są dostępne w wielu różnych konfiguracjach i często są używane w przypadku wyspecjalizowanych aplikacji.  
   
@@ -33,7 +33,7 @@ Klient i serwer połączenia sieciowego często nie mają bezpośredniego i otwa
   
 ## <a name="using-teredo"></a>Korzystanie z protokołu Teredo  
 
- Teredo to technologia przejściowa IPv6, która umożliwia bezpośrednie adresowanie maszyn za translatorem adresów sieciowych. Teredo korzysta z serwera, który może być publicznie i globalnie kierowany do anonsowania potencjalnych połączeń. Serwer Teredo zapewnia klientowi aplikacji i serwerowi wspólny punkt spotkania, w którym mogą wymieniać informacje o połączeniu. Komputery następnie żądają tymczasowego adresu Teredo, a pakiety są tunelowane za pomocą istniejącej sieci. Obsługa protokołu Teredo w programie WCF wymaga włączenia obsługi protokołów IPv6 i Teredo w systemie operacyjnym. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] i nowsze systemy operacyjne obsługują protokół Teredo. System Windows Vista i nowsze systemy operacyjne obsługują protokół IPv6 domyślnie i wymagają, aby użytkownik mógł włączyć protokół Teredo. [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] i Windows Server 2003 wymagają, aby użytkownik włączył zarówno protokół IPv6, jak i Teredo. Aby uzyskać więcej informacji, zobacz [Omówienie protokołu Teredo](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-xp/bb457011(v%3dtechnet.10)).  
+ Teredo to technologia przejściowa IPv6, która umożliwia bezpośrednie adresowanie maszyn za translatorem adresów sieciowych. Teredo korzysta z serwera, który może być publicznie i globalnie kierowany do anonsowania potencjalnych połączeń. Serwer Teredo zapewnia klientowi aplikacji i serwerowi wspólny punkt spotkania, w którym mogą wymieniać informacje o połączeniu. Komputery następnie żądają tymczasowego adresu Teredo, a pakiety są tunelowane za pomocą istniejącej sieci. Obsługa protokołu Teredo w programie WCF wymaga włączenia obsługi protokołów IPv6 i Teredo w systemie operacyjnym. System Windows XP i nowsze systemy operacyjne obsługują protokół Teredo. System Windows Vista i nowsze systemy operacyjne obsługują protokół IPv6 domyślnie i wymagają, aby użytkownik mógł włączyć protokół Teredo. Systemy Windows XP z dodatkiem SP2 i Windows Server 2003 wymagają od użytkownika włączenia protokołów IPv6 i Teredo. Aby uzyskać więcej informacji, zobacz [Omówienie protokołu Teredo](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-xp/bb457011(v%3dtechnet.10)).  
   
 ## <a name="choosing-a-transport-and-message-exchange-pattern"></a>Wybór wzorca transportu i wymiany komunikatów  
  Wybór transportu i unikatowy MEP jest procesem trzech etapów:  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
-ms.openlocfilehash: 0be22fa1e81c85d82494bc4b93468a18f05d6423
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 48e3a080097aae2e539c238bfe33c3e107f81bf0
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345559"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921154"
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>Używanie utraconych kolejek na potrzeby obsługi transferów komunikatów zakończonych niepowodzeniem
 Komunikaty w kolejce mogą kończyć się niepowodzeniem. Te nieudane komunikaty są rejestrowane w kolejce utraconych wiadomości. Nieudane dostarczenie może być spowodowane przyczynami, takimi jak awarie sieci, kolejka usunięta, pełna kolejka, niepowodzenie uwierzytelniania lub niepowodzenie dostarczania na czas.  
@@ -23,7 +23,7 @@ Komunikaty w kolejce mogą kończyć się niepowodzeniem. Te nieudane komunikaty
   
  Niestandardowa Kolejka utraconych wiadomości zapewnia izolację między klientami, którzy korzystają z tej samej usługi MSMQ do wysyłania wiadomości.  
   
- W systemach Windows Server 2003 i [!INCLUDE[wxp](../../../../includes/wxp-md.md)], Windows Communication Foundation (WCF) zapewnia kolejkę utraconych wiadomości w całej systemie dla wszystkich aplikacji klienckich w kolejce. W systemie Windows Vista funkcja WCF udostępnia kolejkę utraconych wiadomości dla każdej Kolejkowanej aplikacji klienckiej.  
+ W systemach Windows Server 2003 i Windows XP Windows Communication Foundation (WCF) zapewnia kolejkę utraconych wiadomości w całej systemie dla wszystkich aplikacji klienckich umieszczonych w kolejce. W systemie Windows Vista funkcja WCF udostępnia kolejkę utraconych wiadomości dla każdej Kolejkowanej aplikacji klienckiej.  
   
 ## <a name="specifying-use-of-the-dead-letter-queue"></a>Określanie użycia kolejki utraconych wiadomości  
  Kolejka utraconych wiadomości znajduje się w Menedżerze kolejek aplikacji wysyłającej. Przechowuje komunikaty, które wygasły lub które nie powiodły się.  

@@ -2,12 +2,12 @@
 title: Informacje o platformie .NET Core
 description: Dowiedz się więcej o programie .NET Core.
 ms.date: 09/17/2019
-ms.openlocfilehash: 12611c2cd0b872a683d070ff17dcf9f111578627
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: e5460fd1d968a49478a1bdc5f18962de2c7cbbe0
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900619"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920958"
 ---
 # <a name="about-net-core"></a>Informacje o platformie .NET Core
 
@@ -52,20 +52,20 @@ W oparciu o platformę .NET Core zostały utworzone wiele platform:
 - [Platforma uniwersalna systemu Windows systemu Windows 10 (platformy UWP)](https://developer.microsoft.com/windows)
 - [Tizen](https://developer.tizen.org/development/training/.net-application)
 
-## <a name="composition"></a>Kompozycja
+## <a name="composition"></a>Budowa
 
 Platforma .NET Core składa się z następujących części:
 
 - [Środowisko uruchomieniowe platformy .NET Core](https://github.com/dotnet/runtime/tree/master/src/coreclr), które udostępnia system typów, ładowanie zestawu, Moduł wyrzucania elementów bezużytecznych, natywną międzyoperacyjność i inne podstawowe usługi. [Biblioteki .NET Core Framework](https://github.com/dotnet/runtime/tree/master/src/libraries) zapewniają typy danych pierwotnych, typy kompozycji aplikacji i podstawowe narzędzia.
 - [Środowisko uruchomieniowe ASP.NET Core](https://github.com/dotnet/aspnetcore), które zapewnia platformę do tworzenia nowoczesnych, opartych na chmurze aplikacji internetowych, takich jak aplikacje internetowe, aplikacje IoT i frontony mobilne.
-- [Narzędzia interfejs wiersza polecenia platformy .NET Core](https://github.com/dotnet/sdk) i kompilatory języka ([Roslyn](https://github.com/dotnet/roslyn) i [F#](https://github.com/microsoft/visualfsharp)), które umożliwiają środowisko deweloperskie platformy .NET Core.
-- [Narzędzie dotnet](https://github.com/dotnet/core-setup), które służy do uruchamiania aplikacji .NET Core i narzędzi interfejsu wiersza polecenia. Wybiera środowisko uruchomieniowe i obsługuje środowisko uruchomieniowe, zawiera zasady ładowania zestawu oraz uruchamia aplikacje i narzędzia.
+- [Zestaw .NET Core SDK](https://github.com/dotnet/sdk) i kompilatory języka ([Roslyn](https://github.com/dotnet/roslyn) i [F#](https://github.com/microsoft/visualfsharp)), które umożliwiają środowisko deweloperskie platformy .NET Core.
+- [Polecenie dotnet](./tools/dotnet.md), które służy do uruchamiania aplikacji .NET Core i poleceń interfejsu wiersza polecenia. Wybiera środowisko uruchomieniowe i obsługuje środowisko uruchomieniowe, zawiera zasady ładowania zestawu oraz uruchamia aplikacje i narzędzia.
 
 Te składniki są dystrybuowane w następujący sposób:
 
 - [Środowisko uruchomieniowe platformy .NET Core](https://dotnet.microsoft.com/download) — obejmuje środowisko uruchomieniowe programu .NET Core i biblioteki struktury.
 - [Środowisko uruchomieniowe ASP.NET Core](https://dotnet.microsoft.com/download) — obejmuje ASP.NET Core i środowisko uruchomieniowe platformy .NET Core oraz biblioteki struktury.
-- [Zestaw .NET Core SDK](https://dotnet.microsoft.com/download) — obejmuje narzędzia interfejsu wiersza polecenia platformy .NET, środowisko uruchomieniowe ASP.NET Core i środowisko uruchomieniowe platformy .NET Core.
+- [Zestaw .NET Core SDK](https://dotnet.microsoft.com/download) — obejmuje interfejs wiersza polecenia platformy .NET Core, środowisko uruchomieniowe ASP.NET Core oraz środowisko uruchomieniowe i Framework platformy .NET Core.
 
 ### <a name="open-source"></a>Kod open source
 

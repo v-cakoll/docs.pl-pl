@@ -3,12 +3,12 @@ title: Wprowadzenie do platformy Docker
 description: Ten artykuł zawiera wprowadzenie i Omówienie platformy Docker w kontekście aplikacji .NET Core.
 ms.date: 03/20/2019
 ms.custom: mvc
-ms.openlocfilehash: 278c921de83282d61b25f4d44e91535981285e83
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 40c8a3c8d81d23c621ccb83a283f49aa34a58ac1
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715551"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920824"
 ---
 # <a name="introduction-to-net-and-docker"></a>Wprowadzenie do platform .NET i Docker
 
@@ -18,7 +18,7 @@ Aby uzyskać więcej informacji na temat instalowania platformy Docker, zobacz s
 
 ## <a name="docker-basics"></a>Podstawy platformy Docker
 
-Istnieje kilka koncepcji, z którymi należy się zapoznać. Klient platformy Docker ma program interfejsu wiersza polecenia służący do zarządzania obrazami i kontenerami. Jak wspomniano wcześniej, należy zapoznać się z dokumentacją dotyczącą [omówienia platformy Docker](https://docs.docker.com/engine/docker-overview/) . 
+Istnieje kilka koncepcji, z którymi należy się zapoznać. Klient platformy Docker ma interfejs wiersza polecenia, którego można użyć do zarządzania obrazami i kontenerami. Jak wspomniano wcześniej, należy zapoznać się z dokumentacją dotyczącą [omówienia platformy Docker](https://docs.docker.com/engine/docker-overview/) . 
 
 ### <a name="images"></a>Obrazy
 
@@ -30,7 +30,7 @@ Ponieważ kontenery są tworzone na podstawie obrazów, obrazy mają zestaw para
 
 Kontener jest wystąpieniem możliwy do uruchomienia obrazu. Podczas kompilowania obrazu należy wdrożyć swoją aplikację i zależności. Następnie można utworzyć wystąpienie wielu kontenerów, każdy odizolowany od siebie nawzajem. Każde wystąpienie kontenera ma własny interfejs systemu plików, pamięci i interfejsu sieciowego.
 
-### <a name="registries"></a>Rejestry
+### <a name="registries"></a>wołuje
 
 Rejestry kontenerów to kolekcja repozytoriów obrazów. Obrazy można oprzeć na obrazie rejestru. Kontenery można tworzyć bezpośrednio z obrazu w rejestrze. [Relacja między kontenerami platformy Docker, obrazami i rejestrami](../../architecture/microservices/container-docker-introduction/docker-containers-images-registries.md) jest ważnym pojęciem podczas [tworzenia i kompilowania kontenerów aplikacji lub mikrousług](../../architecture/microservices/architect-microservice-container-applications/index.md). Takie podejście znacznie skraca czas między programowaniem i wdrażaniem.
 
@@ -68,7 +68,7 @@ Uruchamiaj powtarzające się zadania obliczeniowe przy użyciu kontenerów.
 Podnieś, Przenieś i unowocześnienie aplikacji .NET do mikrousług przy użyciu kontenerów systemu Windows Server.
 
 - [Azure Container Registry](https://azure.microsoft.com/services/container-registry/)\
-Przechowuj obrazy kontenerów i zarządzaj nimi w różnych typach wdrożeń platformy Azure.
+Przechowuj obrazy kontenerów i zarządzaj nimi we wszystkich typach wdrożeń platformy Azure.
 
 ## <a name="next-steps"></a>Następne kroki
 

@@ -9,19 +9,19 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: 1ea7680d092a4270b8c0969c50db8accf7c23d49
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 412aa2bb2a56fbe654b0d9ce5f4b9b5176fc5549
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75963308"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921302"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Instrukcje: Konfigurowanie portu z certyfikatem SSL
 Podczas tworzenia samohostowanej usługi Windows Communication Foundation (WCF) z klasą <xref:System.ServiceModel.WSHttpBinding>, która korzysta z zabezpieczeń transportu, należy również skonfigurować port za pomocą certyfikatu X. 509. Jeśli nie tworzysz usługi samodzielnej, możesz hostować usługę w Internet Information Services (IIS). Aby uzyskać więcej informacji, zobacz [zabezpieczenia transportu HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  Aby skonfigurować port, używane narzędzie zależy od systemu operacyjnego działającego na komputerze.  
   
- W przypadku korzystania z systemu Windows Server 2003 lub [!INCLUDE[wxp](../../../../includes/wxp-md.md)]należy użyć narzędzia HttpCfg. exe. W systemie Windows Server 2003 to narzędzie jest zainstalowane. Za pomocą [!INCLUDE[wxp](../../../../includes/wxp-md.md)]można pobrać narzędzie w [systemie Windows XP z dodatkiem Service Pack 2](https://go.microsoft.com/fwlink/?LinkId=88606). Aby uzyskać więcej informacji, zobacz [Httpcfg Overview (przegląd](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc787508(v=ws.10))). [Dokumentacja narzędzi pomocy technicznej systemu Windows](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc781601(v=ws.10)) objaśnia składnię dla narzędzia HttpCfg. exe.  
+ Jeśli korzystasz z systemu Windows Server 2003 lub Windows XP, użyj narzędzia HttpCfg. exe. W systemie Windows Server 2003 to narzędzie jest zainstalowane. W systemie Windows XP można pobrać narzędzie w [systemie Windows XP z dodatkiem Service Pack 2](https://go.microsoft.com/fwlink/?LinkId=88606). Aby uzyskać więcej informacji, zobacz [Httpcfg Overview (przegląd](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc787508(v=ws.10))). [Dokumentacja narzędzi pomocy technicznej systemu Windows](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc781601(v=ws.10)) objaśnia składnię dla narzędzia HttpCfg. exe.  
   
  Jeśli korzystasz z systemu Windows Vista, użyj narzędzia Netsh. exe, które jest już zainstalowane.  
   
@@ -41,7 +41,7 @@ Podczas tworzenia samohostowanej usługi Windows Communication Foundation (WCF) 
   
 ### <a name="to-determine-how-ports-are-configured"></a>Aby określić sposób konfiguracji portów  
   
-1. W systemie Windows Server 2003 lub [!INCLUDE[wxp](../../../../includes/wxp-md.md)]za pomocą narzędzia HttpCfg. exe można wyświetlić bieżącą konfigurację portu przy użyciu **zapytań** i przełączników **SSL** , jak pokazano w poniższym przykładzie.  
+1. W systemie Windows Server 2003 lub Windows XP Użyj narzędzia HttpCfg. exe, aby wyświetlić bieżącą konfigurację portu przy użyciu **zapytań** i przełączników **SSL** , jak pokazano w poniższym przykładzie.  
   
     ```console
     httpcfg query ssl  
@@ -57,7 +57,7 @@ Podczas tworzenia samohostowanej usługi Windows Communication Foundation (WCF) 
   
 1. Za pomocą przystawki MMC Certyfikaty Znajdź certyfikat X. 509, który ma zamierzony cel uwierzytelniania klientów. Aby uzyskać więcej informacji, zobacz [How to: View Certificates za pomocą przystawki MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
-2. Uzyskaj dostęp do odcisku palca certyfikatu. Aby uzyskać więcej informacji, zobacz [Instrukcje: Pobieranie odcisku palca certyfikatu](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
+2. Uzyskaj dostęp do odcisku palca certyfikatu. Aby uzyskać więcej informacji, zobacz [How to: Pobieranie odcisku palca certyfikatu](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
   
 3. Skopiuj odcisk palca certyfikatu do edytora tekstu, takiego jak Notatnik.  
   
@@ -65,7 +65,7 @@ Podczas tworzenia samohostowanej usługi Windows Communication Foundation (WCF) 
   
 ### <a name="to-bind-an-ssl-certificate-to-a-port-number"></a>Aby powiązać certyfikat protokołu SSL z numerem portu  
   
-1. W systemie Windows Server 2003 lub [!INCLUDE[wxp](../../../../includes/wxp-md.md)]Użyj narzędzia HttpCfg. exe w trybie "Set" w magazynie SSL (SSL), aby powiązać certyfikat z numerem portu. Narzędzie używa odcisku palca do identyfikowania certyfikatu, jak pokazano w poniższym przykładzie.  
+1. W systemie Windows Server 2003 lub Windows XP Użyj narzędzia HttpCfg. exe w trybie "Set" w magazynie SSL (SSL), aby powiązać certyfikat z numerem portu. Narzędzie używa odcisku palca do identyfikowania certyfikatu, jak pokazano w poniższym przykładzie.  
   
     ```console  
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
@@ -89,7 +89,7 @@ Podczas tworzenia samohostowanej usługi Windows Communication Foundation (WCF) 
   
 ### <a name="to-bind-an-ssl-certificate-to-a-port-number-and-support-client-certificates"></a>Aby powiązać certyfikat protokołu SSL z numerem portu i obsługiwać certyfikaty klienta  
   
-1. W systemie Windows Server 2003 lub [!INCLUDE[wxp](../../../../includes/wxp-md.md)]w celu obsługi klientów uwierzytelnianych przy użyciu certyfikatów X. 509 w warstwie transportowej wykonaj powyższą procedurę, ale Przekaż dodatkowy parametr wiersza polecenia do HttpCfg. exe, jak pokazano w poniższym przykładzie.  
+1. W systemie Windows Server 2003 lub Windows XP do obsługi klientów uwierzytelnianych za pomocą certyfikatów X. 509 w warstwie transportowej wykonaj powyższą procedurę, ale Przekaż dodatkowy parametr wiersza polecenia do HttpCfg. exe, jak pokazano w poniższym przykładzie.  
   
     ```console  
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6 -f 2  
@@ -111,7 +111,7 @@ Podczas tworzenia samohostowanej usługi Windows Communication Foundation (WCF) 
     httpcfg query ssl>myMachinePorts.txt  
     ```
   
-2. W systemie Windows Server 2003 lub [!INCLUDE[wxp](../../../../includes/wxp-md.md)]należy użyć narzędzia HttpCfg. exe ze słowami kluczowymi **delete** i **SSL** . Użyj przełącznika **-i** , aby określić `IP`: numer`port` i przełącznik **-h** , aby określić odcisk palca.  
+2. W systemie Windows Server 2003 lub Windows XP Użyj narzędzia HttpCfg. exe ze słowami kluczowymi **delete** i **SSL** . Użyj przełącznika **-i** , aby określić `IP`: numer`port` i przełącznik **-h** , aby określić odcisk palca.  
   
     ```console  
     httpcfg delete ssl -i 0.0.0.0:8005 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  

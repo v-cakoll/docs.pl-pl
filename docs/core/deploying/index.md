@@ -2,12 +2,12 @@
 title: Wdrażanie aplikacji .NET Core
 description: Dowiedz się więcej na temat sposobów wdrażania aplikacji .NET Core.
 ms.date: 12/03/2018
-ms.openlocfilehash: 41c5285f2a9ddf38e4be7326bd5cba1c58370fe7
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 425f0d5bf11fd0572825d2025005aacf65d7d2cd
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740808"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920877"
 ---
 # <a name="net-core-application-deployment"></a>Wdrażanie aplikacji .NET Core
 
@@ -91,11 +91,11 @@ Istnieją również pewne wady:
 
 ## <a name="step-by-step-examples"></a>Przykłady krok po kroku
 
-Aby zapoznać się z przykładami krok po kroku wdrażania aplikacji .NET Core za pomocą narzędzi interfejsu wiersza polecenia, zobacz [wdrażanie aplikacji .NET Core za pomocą narzędzi interfejsu wiersza polecenia](deploy-with-cli.md). Aby zapoznać się z przykładami krok po kroku wdrażania aplikacji .NET Core za pomocą programu Visual Studio, zobacz [wdrażanie aplikacji .NET Core za pomocą programu Visual Studio](deploy-with-vs.md). 
+Aby zapoznać się z przykładami krok po kroku wdrażania aplikacji .NET Core za pomocą interfejs wiersza polecenia platformy .NET Core, zobacz [publikowanie aplikacji .NET Core za pomocą interfejs wiersza polecenia platformy .NET Core](deploy-with-cli.md). Aby zapoznać się z przykładami krok po kroku wdrażania aplikacji .NET Core za pomocą programu Visual Studio, zobacz [wdrażanie aplikacji .NET Core za pomocą programu Visual Studio](deploy-with-vs.md). 
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Wdrażanie aplikacji .NET Core za pomocą narzędzi interfejsu wiersza polecenia](deploy-with-cli.md)
+- [Publikowanie aplikacji platformy .NET Core za pomocą interfejs wiersza polecenia platformy .NET Core](deploy-with-cli.md)
 - [Wdrażanie aplikacji .NET Core za pomocą programu Visual Studio](deploy-with-vs.md)
 - [Pakiety, metapakiety i struktury](../packages.md)
 - [Wykaz identyfikatorów środowiska uruchomieniowego platformy .NET Core (RID)](../rid-catalog.md)

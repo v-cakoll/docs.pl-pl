@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 10/10/2018
-ms.openlocfilehash: 603e7ae4ffb9e6a4bb477af9597d6948bd63f55e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 32784f7d4b9e3a93eb7f81b4829b39c1a06ef949
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73100751"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920397"
 ---
 # <a name="whats-new-in-net-core-21"></a>Co nowego w programie .NET Core 2.1
 
@@ -29,7 +29,7 @@ Zestaw .NET Core 2,1 SDK (v 2.1.300), narzędzia dołączone do programu .NET Co
 
 ### <a name="build-performance-improvements"></a>Ulepszenia wydajności kompilacji
 
-Głównym fokusem platformy .NET Core 2,1 jest poprawa wydajności czasu kompilacji, szczególnie w przypadku kompilacji przyrostowych. Te ulepszenia wydajności dotyczą zarówno kompilacji wiersza polecenia, jak i programu `dotnet build` oraz do kompilacji w programie Visual Studio. Niektóre indywidualne obszary poprawy obejmują:
+Głównym fokusem platformy .NET Core 2,1 jest poprawa wydajności czasu kompilacji, szczególnie w przypadku kompilacji przyrostowych. Te ulepszenia wydajności dotyczą zarówno `dotnet build` kompilacji wiersza polecenia, jak i kompilacji w programie Visual Studio. Niektóre indywidualne obszary poprawy obejmują:
 
 - W przypadku rozpoznawania zasobów pakietu, rozpoznawania tylko zasobów używanych przez kompilację, a nie wszystkich zasobów.
 
@@ -43,7 +43,7 @@ Głównym fokusem platformy .NET Core 2,1 jest poprawa wydajności czasu kompila
 
 ### <a name="new-cli-commands"></a>Polecenia nowej infrastruktury CLI
 
-Kilka narzędzi, które były dostępne tylko dla każdego projektu, przy użyciu [`DotnetCliToolReference`](../tools/extensibility.md) , są teraz dostępne jako część zestaw .NET Core SDK. Dostępne są następujące narzędzia:
+Kilka narzędzi, które były dostępne tylko dla poszczególnych projektów, przy użyciu [`DotnetCliToolReference`](../tools/extensibility.md) są teraz dostępne jako część zestaw .NET Core SDK. Dostępne są następujące narzędzia:
 
 - `dotnet watch` udostępnia obserwatora systemu plików, który czeka na zmianę pliku przed wykonaniem określonego zestawu poleceń. Na przykład następujące polecenie automatycznie ponownie kompiluje bieżący projekt i generuje pełne dane wyjściowe za każdym razem, gdy plik zostanie zmieniony:
 
@@ -51,7 +51,7 @@ Kilka narzędzi, które były dostępne tylko dla każdego projektu, przy użyci
    dotnet watch -- --verbose build
    ```
 
-   Zanotuj opcję `--`, która poprzedza opcję `--verbose`. Ogranicza opcje przekazane bezpośrednio do polecenia `dotnet watch` z argumentów, które są przekazane do procesu podrzędnego `dotnet`. Bez niej opcja `--verbose` dotyczy polecenia `dotnet watch`, a nie polecenia `dotnet build`.
+   Zwróć uwagę na `--` opcji, która poprzedza opcję `--verbose`. Ogranicza opcje przekazane bezpośrednio do `dotnet watch` polecenia z argumentów, które są przekazane do podrzędnego procesu `dotnet`. Bez niej opcja `--verbose` ma zastosowanie do polecenia `dotnet watch`, a nie polecenia `dotnet build`.
   
    Aby uzyskać więcej informacji, zobacz [opracowywanie aplikacji ASP.NET Core przy użyciu czujki dotnet](/aspnet/core/tutorials/dotnet-watch).
 
@@ -59,13 +59,13 @@ Kilka narzędzi, które były dostępne tylko dla każdego projektu, przy użyci
 
 - `dotnet user-secrets` zarządza wpisami tajnymi w magazynie kluczy tajnych użytkownika w aplikacjach ASP.NET Core.
 
-- `dotnet sql-cache` tworzy tabelę i indeksy w bazie danych Microsoft SQL Server, która ma być używana na potrzeby rozproszonej pamięci podręcznej.
+- `dotnet sql-cache` tworzy tabelę i indeksy w bazie danych Microsoft SQL Server, które mają być używane na potrzeby rozproszonej pamięci podręcznej.
 
 - `dotnet ef` to narzędzie do zarządzania bazami danych, obiektami <xref:Microsoft.EntityFrameworkCore.DbContext> i migracjami w aplikacjach Entity Framework Core. Aby uzyskać więcej informacji, zobacz [EF Core narzędzia wiersza polecenia programu .NET](/ef/core/miscellaneous/cli/dotnet).
 
 ### <a name="global-tools"></a>Narzędzia globalne
 
-Program .NET Core 2,1 obsługuje *Narzędzia globalne* — czyli narzędzia niestandardowe, które są dostępne globalnie w wierszu polecenia. Model rozszerzalności we wcześniejszych wersjach platformy .NET Core wykonał niestandardowe narzędzia dostępne dla każdego projektu, tylko przy użyciu [`DotnetCliToolReference`](../tools/extensibility.md#consuming-per-project-tools).
+Program .NET Core 2,1 obsługuje *Narzędzia globalne* — czyli narzędzia niestandardowe, które są dostępne globalnie w wierszu polecenia. Model rozszerzalności we wcześniejszych wersjach programu .NET Core wykonał niestandardowe narzędzia dostępne na podstawie projektu tylko przy użyciu [`DotnetCliToolReference`](../tools/extensibility.md#consuming-per-project-tools).
 
 Aby zainstalować narzędzie globalne, należy użyć polecenia [Narzędzia dotnet Install](../tools/dotnet-tool-install.md) . Na przykład:
 
@@ -77,15 +77,15 @@ Po zainstalowaniu narzędzie można uruchomić z wiersza polecenia, określając
 
 ### <a name="tool-management-with-the-dotnet-tool-command"></a>Zarządzanie narzędziem za pomocą polecenia `dotnet tool`
 
-W zestawie SDK platformy .NET Core 2,1 wszystkie operacje narzędzi używają `dotnet tool` polecenia. Dostępne są następujące opcje:
+W zestawie SDK platformy .NET Core 2,1 wszystkie operacje narzędzi używają `dotnet tool` polecenie. Dostępne są następujące opcje:
 
-- [`dotnet tool install`](../tools/dotnet-tool-install.md) , aby zainstalować narzędzie.
+- [`dotnet tool install`](../tools/dotnet-tool-install.md) zainstalować narzędzie.
 
-- [`dotnet tool update`](../tools/dotnet-tool-update.md) w celu odinstalowania i ponownego zainstalowania narzędzia, które efektywnie go aktualizuje.
+- [`dotnet tool update`](../tools/dotnet-tool-update.md) odinstalować i ponownie zainstalować narzędzie, które efektywnie go aktualizuje.
 
 - [`dotnet tool list`](../tools/dotnet-tool-list.md) , aby wyświetlić listę aktualnie zainstalowanych narzędzi.
 
-- [`dotnet tool uninstall`](../tools/dotnet-tool-uninstall.md) w celu odinstalowania aktualnie zainstalowanych narzędzi.
+- [`dotnet tool uninstall`](../tools/dotnet-tool-uninstall.md) odinstalować aktualnie zainstalowane narzędzia.
 
 ## <a name="roll-forward"></a>Przewinięcie do przodu
 
@@ -112,7 +112,7 @@ To ustawienie można zmienić na jeden z trzech sposobów:
    "rollForwardOnNoCandidateFx" : 0
    ```
 
-- Korzystając z [interfejs wiersza polecenia platformy .NET Core narzędzi](../tools/index.md), Dodaj następującą opcję z odpowiednią wartością do polecenia programu .NET Core, takiego jak `run`:
+- Korzystając z [interfejs wiersza polecenia platformy .NET Core](../tools/index.md), Dodaj następującą opcję z odpowiednią wartością do polecenia programu .NET Core, np. `run`:
 
    ```dotnetcli
    dotnet run --rollForwardOnNoCandidateFx=0
@@ -120,20 +120,20 @@ To ustawienie można zmienić na jeden z trzech sposobów:
 
 Wersja poprawki do przodu jest niezależna od tego ustawienia i jest wykonywana po zastosowaniu dowolnych dodatkowych lub głównych wersji do przodu.
 
-## <a name="deployment"></a>wdrażania
+## <a name="deployment"></a>Wdrażanie
 
 ### <a name="self-contained-application-servicing"></a>Obsługa aplikacji samodzielnych
 
-`dotnet publish` teraz publikuje aplikacje samodzielne przy użyciu wersji środowiska uruchomieniowego z obsługą. Po opublikowaniu aplikacji samodzielnej przy użyciu zestawu .NET Core 2,1 SDK (v 2.1.300) aplikacja zawiera najnowszą wersję środowiska uruchomieniowego, znaną przez ten zestaw SDK. Po uaktualnieniu do najnowszego zestawu SDK opublikujesz go przy użyciu najnowszej wersji środowiska uruchomieniowego platformy .NET Core. Dotyczy to środowiska uruchomieniowego .NET Core 1,0 i nowszych.
+`dotnet publish` teraz publikuje aplikacje samodzielne przy użyciu wersji środowiska uruchomieniowego z obsługą usługi. Po opublikowaniu aplikacji samodzielnej przy użyciu zestawu .NET Core 2,1 SDK (v 2.1.300) aplikacja zawiera najnowszą wersję środowiska uruchomieniowego, znaną przez ten zestaw SDK. Po uaktualnieniu do najnowszego zestawu SDK opublikujesz go przy użyciu najnowszej wersji środowiska uruchomieniowego platformy .NET Core. Dotyczy to środowiska uruchomieniowego .NET Core 1,0 i nowszych.
 
 Samodzielny publikowanie jest zależne od wersji środowiska uruchomieniowego w systemie NuGet.org. Na maszynie nie trzeba mieć obsługiwanego środowiska uruchomieniowego.
 
-Przy użyciu zestawu SDK platformy .NET Core 2,0 aplikacje samodzielne są publikowane przy użyciu środowiska uruchomieniowego 2.0.0 platformy .NET Core, chyba że inna wersja jest określona za pośrednictwem właściwości `RuntimeFrameworkVersion`. W przypadku tego nowego zachowania nie trzeba już ustawiać tej właściwości, aby wybrać nowszą wersję środowiska uruchomieniowego dla aplikacji samodzielnej. Najprostszym podejściem do przodu jest zawsze Publikowanie przy użyciu zestawu SDK platformy .NET Core 2,1 (v 2.1.300).
+Przy użyciu zestawu SDK platformy .NET Core 2,0 aplikacje samodzielne są publikowane przy użyciu środowiska uruchomieniowego 2.0.0 platformy .NET Core, chyba że inna wersja została określona za pośrednictwem właściwości `RuntimeFrameworkVersion`. W przypadku tego nowego zachowania nie trzeba już ustawiać tej właściwości, aby wybrać nowszą wersję środowiska uruchomieniowego dla aplikacji samodzielnej. Najprostszym podejściem do przodu jest zawsze Publikowanie przy użyciu zestawu SDK platformy .NET Core 2,1 (v 2.1.300).
 
 Aby uzyskać więcej informacji, zobacz [samodzielne wdrożenie środowiska uruchomieniowego wdrożenia](../deploying/runtime-patch-selection.md).
 ## <a name="windows-compatibility-pack"></a>Pakiet zgodności systemu Windows
 
-Podczas przenoszenia istniejącego kodu z .NET Framework do programu .NET Core można użyć [pakietu zgodności systemu Windows](https://www.nuget.org/packages/Microsoft.Windows.Compatibility). Zapewnia dostęp do 20 000 więcej interfejsów API, niż są dostępne w programie .NET Core. Te interfejsy API obejmują typy w przestrzeni nazw <xref:System.Drawing?displayProperty=nameWithType>, Klasa <xref:System.Diagnostics.EventLog>, WMI, liczniki wydajności, usługi systemu Windows oraz typy i składowe rejestru systemu Windows.
+Podczas przenoszenia istniejącego kodu z .NET Framework do programu .NET Core można użyć [pakietu zgodności systemu Windows](https://www.nuget.org/packages/Microsoft.Windows.Compatibility). Zapewnia dostęp do 20 000 więcej interfejsów API, niż są dostępne w programie .NET Core. Te interfejsy API obejmują typy w przestrzeni nazw <xref:System.Drawing?displayProperty=nameWithType>, klasy <xref:System.Diagnostics.EventLog>, WMI, liczniki wydajności, usługi systemu Windows oraz typy i składowe rejestru systemu Windows.
 
 ## <a name="jit-compiler-improvements"></a>Udoskonalenia kompilatora JIT
 
@@ -153,7 +153,7 @@ Możesz zdecydować się na kompilację warstwową na dwa sposoby.
   COMPlus_TieredCompilation="1"
   ```
 
-- Aby użyć kompilacji warstwowej dla każdego projektu, należy dodać właściwość `<TieredCompilation>` do `<PropertyGroup>` sekcji pliku projektu MSBuild, jak pokazano w poniższym przykładzie:
+- Aby użyć kompilacji warstwowej dla każdego projektu, Dodaj właściwość `<TieredCompilation>` do sekcji `<PropertyGroup>` pliku projektu MSBuild, jak pokazano na poniższym przykładzie:
 
    ```xml
    <PropertyGroup>
@@ -183,7 +183,7 @@ Poniższy przykład używa wystąpienia <xref:System.Span%601> i <xref:System.Me
 
 ### <a name="brotli-compression"></a>Kompresja Brotli
 
-Program .NET Core 2,1 dodaje obsługę kompresji i dekompresji Brotli. Brotli to algorytm kompresji bezstratnego ogólnego przeznaczenia, który jest zdefiniowany w [dokumencie RFC 7932](https://www.ietf.org/rfc/rfc7932.txt) i jest obsługiwany przez większość przeglądarek sieci Web i głównych serwerów sieci Web. Można użyć klasy <xref:System.IO.Compression.BrotliStream?displayProperty=nameWithType> opartej na strumieniu lub <xref:System.IO.Compression.BrotliEncoder?displayProperty=nameWithType> i <xref:System.IO.Compression.BrotliDecoder?displayProperty=nameWithType> klas. Poniższy przykład ilustruje kompresję z klasą <xref:System.IO.Compression.BrotliStream>:
+Program .NET Core 2,1 dodaje obsługę kompresji i dekompresji Brotli. Brotli to algorytm kompresji bezstratnego ogólnego przeznaczenia, który jest zdefiniowany w [dokumencie RFC 7932](https://www.ietf.org/rfc/rfc7932.txt) i jest obsługiwany przez większość przeglądarek sieci Web i głównych serwerów sieci Web. Można użyć klasy <xref:System.IO.Compression.BrotliStream?displayProperty=nameWithType> opartej na strumieniach lub <xref:System.IO.Compression.BrotliEncoder?displayProperty=nameWithType> i klas <xref:System.IO.Compression.BrotliDecoder?displayProperty=nameWithType> opartych na procesorze o wysokiej wydajności. Poniższy przykład ilustruje kompresję z klasą <xref:System.IO.Compression.BrotliStream>:
 
 [!code-csharp[Brotli compression](~/samples/core/whats-new/whats-new-in-21/cs/brotli.cs#1)]
 
@@ -213,13 +213,13 @@ Program .NET Core 2,1 zawiera liczne ulepszenia interfejsów API kryptografii:
 
 - <xref:System.Security.Cryptography.Pkcs.EnvelopedCms?displayProperty=nameWithType> jest teraz obsługiwana w systemach Linux i macOS.
 
-- Krzywa eliptyczna — Diffie-Hellmana (ECDH) jest teraz dostępna w rodzinie klasy <xref:System.Security.Cryptography.ECDiffieHellman?displayProperty=nameWithType>. Powierzchnia obszaru jest taka sama jak w .NET Framework.
+- Krzywa eliptyczna — Diffie-Hellmana (ECDH) jest teraz dostępna w rodzinie klas <xref:System.Security.Cryptography.ECDiffieHellman?displayProperty=nameWithType>. Powierzchnia obszaru jest taka sama jak w .NET Framework.
 
 - Wystąpienie zwrócone przez <xref:System.Security.Cryptography.RSA.Create%2A?displayProperty=nameWithType> może szyfrować lub odszyfrowywać za pomocą OAEP przy użyciu skrótu SHA-2, a także generować lub weryfikować podpisy przy użyciu RSA-PSS.
 
 ### <a name="sockets-improvements"></a>Ulepszenia gniazd
 
-Platforma .NET Core zawiera nowy typ, <xref:System.Net.Http.SocketsHttpHandler?displayProperty=nameWithType> i ponownie zapisany <xref:System.Net.Http.HttpMessageHandler?displayProperty=nameWithType>, który stanowi podstawę interfejsów API sieci wyższego poziomu.  na przykład <xref:System.Net.Http.SocketsHttpHandler?displayProperty=nameWithType> jest podstawą implementacji <xref:System.Net.Http.HttpClient>. W poprzednich wersjach programu .NET Core interfejsy API wyższego poziomu były oparte na natywnych implementacjach sieci.
+Platforma .NET Core zawiera nowy typ, <xref:System.Net.Http.SocketsHttpHandler?displayProperty=nameWithType>i ponownie zapisany <xref:System.Net.Http.HttpMessageHandler?displayProperty=nameWithType>, który stanowi podstawę interfejsów API sieci wyższego poziomu.  <xref:System.Net.Http.SocketsHttpHandler?displayProperty=nameWithType>, na przykład, jest podstawą implementacji <xref:System.Net.Http.HttpClient>. W poprzednich wersjach programu .NET Core interfejsy API wyższego poziomu były oparte na natywnych implementacjach sieci.
 
 Implementacja Sockets wprowadzona w programie .NET Core 2,1 ma wiele zalet:
 
@@ -241,7 +241,7 @@ AppContext.SetSwitch("System.Net.Http.UseSocketsHttpHandler", False)
 
 Można również użyć zmiennej środowiskowej, aby zrezygnować z użycia implementacji Sockets na podstawie <xref:System.Net.Http.SocketsHttpHandler>. W tym celu ustaw wartość `DOTNET_SYSTEM_NET_HTTP_USESOCKETSHTTPHANDLER` na `false` lub 0.
 
-W systemie Windows można również użyć opcji <xref:System.Net.Http.WinHttpHandler?displayProperty=nameWithType>, która opiera się na implementacji natywnej lub klasy <xref:System.Net.Http.SocketsHttpHandler> przez przekazanie wystąpienia klasy do konstruktora <xref:System.Net.Http.HttpClient>.
+W systemie Windows można również użyć <xref:System.Net.Http.WinHttpHandler?displayProperty=nameWithType>, który opiera się na implementacji natywnej lub klasy <xref:System.Net.Http.SocketsHttpHandler> przez przekazanie wystąpienia klasy do konstruktora <xref:System.Net.Http.HttpClient>.
 
 W systemie Linux i macOS można skonfigurować tylko <xref:System.Net.Http.HttpClient> dla poszczególnych procesów. W systemie Linux należy wdrożyć [libcurl](https://curl.haxx.se/libcurl/) , jeśli chcesz użyć starej implementacji <xref:System.Net.Http.HttpClient>. (Jest instalowany z platformą .NET Core 2,0).
 

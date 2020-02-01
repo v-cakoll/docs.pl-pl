@@ -4,12 +4,12 @@ description: Informacje na temat przykładów i samouczków dotyczących platfor
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: e64d0fdd02b28a1c9f21f06305f5ef278fb2827b
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 9a161d5325125fba8d4f4e53a0a306c989ed6bc5
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901036"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921392"
 ---
 # <a name="net-samples-and-tutorials"></a>Przykłady i samouczki dotyczące platformy .NET
 
@@ -25,13 +25,13 @@ W tym przewodniku pokazano, jak utworzyć aplikację sieci Web ASP.NET Core i po
 
 ### <a name="tutorials"></a>Samouczki
 
-**[Pisanie aplikacji konsolowych platformy .NET Core przy użyciu narzędzi interfejsu wiersza polecenia: Przewodnik krok po kroku](../core/tutorials/cli-create-console-app.md)**
+**[Pisanie aplikacji konsolowych platformy .NET Core przy użyciu interfejs wiersza polecenia platformy .NET Core: Przewodnik krok po kroku](../core/tutorials/cli-create-console-app.md)**
 
 W tym przewodniku pokazano, jak używać narzędzi interfejs wiersza polecenia platformy .NET Core do kompilowania aplikacji konsolowych dla wielu platform. Rozpoczyna się od podstawowej aplikacji konsolowej i ostatecznie obejmuje wiele projektów, w tym testowania. Możesz dodawać funkcje krok po kroku, tworząc swoją wiedzę. [Ukończony przykład](https://github.com/dotnet/samples/tree/master/core/console-apps) jest dostępny w repozytorium dotnet/Samples w witrynie GitHub.
 
 **[Pisanie bibliotek przy użyciu narzędzi międzyplatformowych](../core/tutorials/libraries.md)**
 
-Ten przykład obejmuje sposób pisania bibliotek dla platformy .NET przy użyciu międzyplatformowych narzędzi interfejsu wiersza polecenia. Narzędzia te zapewniają wydajne i niskie środowisko, które działa w ramach dowolnego obsługiwanego systemu operacyjnego. [Ukończony przykład](https://github.com/dotnet/samples/tree/master/framework/libraries/frameworks-library) jest dostępny w repozytorium dotnet/Samples w witrynie GitHub.
+Ten przykład obejmuje sposób pisania bibliotek dla platformy .NET przy użyciu interfejs wiersza polecenia platformy .NET Core. Narzędzia te zapewniają wydajne i niskie środowisko, które działa w ramach dowolnego obsługiwanego systemu operacyjnego. [Ukończony przykład](https://github.com/dotnet/samples/tree/master/framework/libraries/frameworks-library) jest dostępny w repozytorium dotnet/Samples w witrynie GitHub.
 
 ## <a name="aspnet-core"></a>ASP.NET Core
 
@@ -111,7 +111,7 @@ Wiele tematów pokazuje kod źródłowy i przykłady, które są dostępne do wy
    * Sklonuj repozytorium lokalnie. W przypadku sklonowania repozytorium dokumentów bezpośrednio do systemu lokalnego nie będzie można wprowadzać zatwierdzeń bezpośrednio do oficjalnego repozytorium, więc nie będzie można później wprowadzać wkładów do dokumentacji. Użyj opisanej wcześniej procedury rozwidlenia i klonowania, jeśli chcesz zachować możliwość późniejszego współtworzenia do dokumentacji.
 1. Nawigowanie w folderach repozytorium do lokalizacji przykładowej. Ścieżka względna do lokalizacji przykładu pojawia się na pasku adresu przeglądarki, gdy użyjesz linku do przykładu.
 1. Aby uruchomić przykład, masz kilka opcji:
-   * Użyj [narzędzi interfejsu wiersza polecenia dotnet](../core/tools/index.md): w oknie konsoli przejdź do folderu przykładowego i Użyj poleceń interfejsu wiersza polecenia dotnet.
+   * Użyj [interfejs wiersza polecenia platformy .NET Core](../core/tools/index.md): w oknie konsoli przejdź do folderu przykładowego i Użyj poleceń interfejsu wiersza polecenia dotnet.
    * Użyj [programu Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) lub [Visual Studio dla komputerów Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link): Otwórz przykład, wybierając pozycję **plik > Otwórz > projekt/rozwiązanie** na pasku menu, przejdź do folderu projektu przykładowego i wybierz plik projektu ( *. csproj* lub *. fsproj*).
    * Użyj [Visual Studio Code](https://code.visualstudio.com/): Otwórz przykład, wybierając pozycję **plik > Otwórz folder** z paska menu i wybierając folder projektu przykładu.
    * Użyj innego środowiska IDE, które obsługuje projekty platformy .NET Core.

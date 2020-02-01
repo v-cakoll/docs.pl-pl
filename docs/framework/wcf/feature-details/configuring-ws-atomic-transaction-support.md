@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: 068ddcab5cfb7bfb5f37a1858820195a5a05269f
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 6399d64746db158ba0569eaf0137127603973513
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964577"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919346"
 ---
 # <a name="configure-ws-atomic-transaction-support"></a>Konfigurowanie obsługi transakcji WS-AT
 
@@ -25,7 +25,7 @@ Dostęp do okna wiersza polecenia można uzyskać w lokalizacji instalacji Windo
 
 Aby uzyskać więcej informacji na temat narzędzia wiersza polecenia, zobacz [Narzędzie konfiguracji protokołu WS-AtomicTransaction (wsatConfig. exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md).
 
-Jeśli używasz systemu [!INCLUDE[wxp](../../../../includes/wxp-md.md)] lub Windows Server 2003, możesz uzyskać dostęp do przystawki programu MMC, przechodząc do **Panelu sterowania/narzędzia administracyjne/usługi składowe**, klikając prawym przyciskiem myszy pozycję **mój komputer**, a następnie wybierając polecenie **Właściwości**. Jest to ta sama lokalizacja, w której można skonfigurować usługę Microsoft Distributed Transaction Coordinator (MSDTC). Opcje dostępne dla konfiguracji są pogrupowane pod kartą **WS-AT** . W przypadku korzystania z systemu Windows Vista lub Windows Server 2008 przystawka MMC można znaleźć, klikając przycisk **Start** , a następnie wprowadzając `dcomcnfg.exe` w polu **wyszukiwania** . Po otwarciu programu MMC przejdź do węzła **My Computer\Distributed Transaction COORDINATOR\LOCAL DTC** , kliknij prawym przyciskiem myszy i wybierz pozycję **Właściwości**. Opcje dostępne dla konfiguracji są pogrupowane pod kartą **WS-AT** .
+Jeśli korzystasz z systemu Windows XP lub Windows Server 2003, możesz uzyskać dostęp do przystawki programu MMC, przechodząc do **Panelu sterowania/narzędzia administracyjne/usługi składowe**, klikając prawym przyciskiem myszy pozycję **mój komputer**, a następnie wybierając polecenie **Właściwości**. Jest to ta sama lokalizacja, w której można skonfigurować usługę Microsoft Distributed Transaction Coordinator (MSDTC). Opcje dostępne dla konfiguracji są pogrupowane pod kartą **WS-AT** . W przypadku korzystania z systemu Windows Vista lub Windows Server 2008 przystawka MMC można znaleźć, klikając przycisk **Start** , a następnie wprowadzając `dcomcnfg.exe` w polu **wyszukiwania** . Po otwarciu programu MMC przejdź do węzła **My Computer\Distributed Transaction COORDINATOR\LOCAL DTC** , kliknij prawym przyciskiem myszy i wybierz pozycję **Właściwości**. Opcje dostępne dla konfiguracji są pogrupowane pod kartą **WS-AT** .
 
 Aby uzyskać więcej informacji o przystawce, zobacz [Przystawka programu MMC Konfiguracja protokołu WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md).
 

@@ -2,12 +2,12 @@
 title: Rozwiązywanie problemów obsługi komunikatów kolejek
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: 3d2d48076fafe44687546ca27e4d8670b81ce433
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 5c039c34983647884561f33645f26e4a89280248
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742671"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921268"
 ---
 # <a name="troubleshooting-queued-messaging"></a>Rozwiązywanie problemów obsługi komunikatów kolejek
 
@@ -25,7 +25,7 @@ Odp **.:** Użyj <xref:System.ServiceModel.NetMsmqBinding>, jeśli chcesz użyć
 
 **P:** Czy muszę uaktualnić usługę MSMQ, aby używać powiązań <xref:System.ServiceModel.NetMsmqBinding> i `MsmqIntegration`?
 
-**Odp.:** Nie. Oba powiązania działają z usługą MSMQ 3,0 w systemach [!INCLUDE[wxp](../../../../includes/wxp-md.md)] i Windows Server 2003. Niektóre funkcje powiązań stają się dostępne po uaktualnieniu do usługi MSMQ 4,0 w systemie Windows Vista.
+**Odp.:** Nie. Oba powiązania działają z usługą MSMQ 3,0 w systemach Windows XP i Windows Server 2003. Niektóre funkcje powiązań stają się dostępne po uaktualnieniu do usługi MSMQ 4,0 w systemie Windows Vista.
 
 **P:** Jakie funkcje powiązań <xref:System.ServiceModel.NetMsmqBinding> i <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> są dostępne w usłudze MSMQ 4,0, ale nie w usłudze MSMQ 3,0?
 

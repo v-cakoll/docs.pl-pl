@@ -4,12 +4,12 @@ description: Postępuj zgodnie z samouczkami dotyczącymi uczenia się platformy
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
-ms.openlocfilehash: 7039d5877ecbd4477d64991321a7fc46cadc2848
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4e0acc357453d3bd3fb877e357264cc1aa715e4c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714044"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920430"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Poznaj narzędzia platformy .NET Core i zestaw .NET Core SDK, korzystając z tych samouczków
 
@@ -35,10 +35,10 @@ Poniższe samouczki są dostępne do uczenia się w programie .NET Core.
 - [Rozpoczynanie pracy z platformą .NET Core w systemie macOS przy użyciu programu Visual Studio dla komputerów Mac](using-on-mac-vs.md)
 - [Tworzenie kompletnego rozwiązania .NET Core w systemie macOS przy użyciu programu Visual Studio dla komputerów Mac](using-on-mac-vs-full-solution.md)
 
-## <a name="build-applications-with-the-net-core-cli-tools"></a>Tworzenie aplikacji za pomocą narzędzi interfejs wiersza polecenia platformy .NET Core
+## <a name="build-applications-with-the-net-core-cli"></a>Tworzenie aplikacji przy użyciu interfejs wiersza polecenia platformy .NET Core
 
-- [Rozpoczynanie pracy z platformą .NET Core w systemie Windows/Linux/macOS przy użyciu narzędzi interfejs wiersza polecenia platformy .NET Core](cli-create-console-app.md)
-- [Organizowanie i testowanie projektów przy użyciu narzędzi interfejs wiersza polecenia platformy .NET Core](testing-with-cli.md)
+- [Rozpoczynanie pracy z platformą .NET Core w systemie Windows/Linux/macOS przy użyciu interfejs wiersza polecenia platformy .NET Core](cli-create-console-app.md)
+- [Organizowanie i testowanie projektów przy użyciu interfejs wiersza polecenia platformy .NET Core](testing-with-cli.md)
 - [Wprowadzenie doF#](../../fsharp/get-started/get-started-command-line.md)
 
 ## <a name="other"></a>Inne

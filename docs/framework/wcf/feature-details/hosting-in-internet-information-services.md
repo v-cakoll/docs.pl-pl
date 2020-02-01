@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-ms.openlocfilehash: 108048f6bdd2c02a67e331bd7b07b724d0e86527
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 2e0fb579897797b732859692092665225a0d6168
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75963802"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919353"
 ---
 # <a name="host-in-internet-information-services"></a>Host w Internet Information Services
 
@@ -19,7 +19,7 @@ Jedna z opcji hostingu usług Windows Communication Foundation (WCF) znajduje si
 
 Środowisko WCF może być hostowane w następujących wersjach usług IIS w następujących systemach operacyjnych:
 
-- Usługi IIS 5,1 na [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)]. To środowisko jest przydatne do projektowania i opracowywania aplikacji hostowanych przez usługi IIS, które zostały później wdrożone w systemie operacyjnym serwera, takim jak Windows Server 2003.
+- Usługi IIS 5,1 w systemie Windows XP z dodatkiem SP2. To środowisko jest przydatne do projektowania i opracowywania aplikacji hostowanych przez usługi IIS, które zostały później wdrożone w systemie operacyjnym serwera, takim jak Windows Server 2003.
 
 - Usługi IIS 6,0 w systemie Windows Server 2003. Usługi IIS 6,0 oferują zaawansowany model procesów, który oferuje ulepszoną skalowalność, niezawodność i izolację aplikacji. To środowisko jest odpowiednie do wdrożenia produkcyjnego usług WCF, które używają wyłącznie komunikacji protokołu HTTP.
 

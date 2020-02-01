@@ -4,12 +4,12 @@ description: Przewodnik dotyczący implementacji platformy .NET, którą należy
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: b2b9e15cfdfd63d070ae94c29a9f2d1a5b5c87b2
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: c280e22341a45260a816a36c1148dc8c4f76db09
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75738672"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921416"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Wybieranie między programami .NET Core i .NET Framework na potrzeby aplikacji serwerowych
 
@@ -38,7 +38,7 @@ Poniższe sekcje zawierają bardziej szczegółowy opis powodów wyboru platform
 
 Jeśli aplikacja (sieć Web/usługa) musi działać na wielu platformach (Windows, Linux i macOS), użyj platformy .NET Core.
 
-Platforma .NET Core obsługuje wcześniej wymienione systemy operacyjne jako stacje robocze do tworzenia. Program Visual Studio udostępnia zintegrowane środowisko programistyczne (IDE) dla systemu Windows i macOS. Można również użyć Visual Studio Code, które działa w systemach macOS, Linux i Windows. Visual Studio Code obsługuje platformę .NET Core, w tym IntelliSense i debugowanie. Większość edytorów innych firm, takich jak subwapno, Emacs: i VI, pracują z platformą .NET Core. Te edytory innych firm uzyskują funkcję IntelliSense w edytorze przy użyciu [omnisharp](https://www.omnisharp.net/). Możesz również uniknąć dowolnego edytora kodu i bezpośrednio korzystać z [narzędzi interfejs wiersza polecenia platformy .NET Core](../core/tools/index.md)dostępnych dla wszystkich obsługiwanych platform.
+Platforma .NET Core obsługuje wcześniej wymienione systemy operacyjne jako stacje robocze do tworzenia. Program Visual Studio udostępnia zintegrowane środowisko programistyczne (IDE) dla systemu Windows i macOS. Można również użyć Visual Studio Code, które działa w systemach macOS, Linux i Windows. Visual Studio Code obsługuje platformę .NET Core, w tym IntelliSense i debugowanie. Większość edytorów innych firm, takich jak subwapno, Emacs: i VI, pracują z platformą .NET Core. Te edytory innych firm uzyskują funkcję IntelliSense w edytorze przy użyciu [omnisharp](https://www.omnisharp.net/). Można również uniknąć dowolnego edytora kodu i bezpośrednio używać [interfejs wiersza polecenia platformy .NET Core](../core/tools/index.md), dostępnego dla wszystkich obsługiwanych platform.
 
 ### <a name="microservices-architecture"></a>Architektura mikrousług
 

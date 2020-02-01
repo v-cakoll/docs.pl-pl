@@ -3,12 +3,12 @@ title: Słownik platformy .NET
 description: Sprawdź znaczenie wybranych terminów używanych w dokumentacji programu .NET.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 9bca68753a93721e48d1ff90aa7baf3a147da0ee
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 822d6c9513d49dcc6bc57421003441d9bcc7c281
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75708207"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921111"
 ---
 # <a name="net-glossary"></a>Słownik platformy .NET
 
@@ -167,9 +167,9 @@ Zobacz [.NET Core](../core/index.md).
 
 Międzyplatformowe łańcucha narzędzi do tworzenia aplikacji platformy .NET Core.
 
-Zobacz [Narzędzia interfejsu wiersza polecenia platformy .NET Core](../core/tools/index.md).
+Zobacz [interfejs wiersza polecenia platformy .NET Core](../core/tools/index.md).
 
-## <a name="net-core-sdk"></a>Zestaw .NET Core SDK
+## <a name="net-core-sdk"></a>zestaw .NET Core SDK
 
 Zestaw bibliotek i narzędzi umożliwiających deweloperom tworzenie aplikacji i bibliotek platformy .NET Core. Zawiera [interfejs wiersza polecenia platformy .NET Core](#net-core-cli) do kompilowania aplikacji, bibliotek .NET Core i środowiska uruchomieniowego na potrzeby kompilowania i uruchamiania aplikacji oraz plików wykonywalnych dotnet (*dotnet. exe*), które uruchamiają polecenia CLI i uruchamiają aplikacje.
 

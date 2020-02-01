@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: 45e4926905bbf3b5a24af15de153afc7bd2a4823
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 9dbf9eee6e4222f899d77a4457bc78132ec7f092
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964568"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920230"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Debugowanie błędów uwierzytelniania systemu Windows
 W przypadku korzystania z uwierzytelniania systemu Windows jako mechanizmu zabezpieczeń interfejs dostawcy obsługi zabezpieczeń (SSPI) obsługuje procesy zabezpieczeń. Gdy w warstwie SSPI wystąpią błędy zabezpieczeń, są one nałożone przez Windows Communication Foundation (WCF). Ten temat zawiera informacje o strukturze i zestawie pytań ułatwiających zdiagnozowanie błędów.  
@@ -139,7 +139,7 @@ W przypadku korzystania z uwierzytelniania systemu Windows jako mechanizmu zabez
  [!code-vb[C_DebuggingWindowsAuth#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#3)]  
   
 #### <a name="sspi-is-not-available"></a>Interfejs SSPI jest niedostępny  
- Następujące systemy operacyjne nie obsługują uwierzytelniania systemu Windows, gdy jest używany jako serwer: [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Media Center Edition i Windows Vista Home wersje.  
+ Następujące systemy operacyjne nie obsługują uwierzytelniania systemu Windows, gdy jest używany jako serwer: Windows XP Home Edition, Windows XP Media Center Edition i Windows Vista Home wersje.  
   
 #### <a name="developing-and-deploying-with-different-identities"></a>Opracowywanie i wdrażanie przy użyciu różnych tożsamości  
  Jeśli tworzysz aplikację na jednej maszynie i wdrażasz ją na innym serwerze i używasz innych typów kont do uwierzytelniania na każdej maszynie, może wystąpić inne zachowanie. Załóżmy na przykład, że tworzysz aplikację na komputerze z systemem Windows XP Pro przy użyciu trybu uwierzytelniania `SSPI Negotiated`. Jeśli używasz konta użytkownika lokalnego do uwierzytelniania za pomocą programu, zostanie użyty protokół NTLM. Po opracowaniu aplikacji należy wdrożyć usługę na komputerze z systemem Windows Server 2003, na którym działa w ramach konta domeny. W tym momencie klient nie będzie w stanie uwierzytelnić usługi, ponieważ będzie korzystać z protokołu Kerberos i kontrolera domeny.  

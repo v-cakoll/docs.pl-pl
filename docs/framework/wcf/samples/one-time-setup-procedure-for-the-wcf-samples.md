@@ -2,12 +2,12 @@
 title: Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: b75dd523d4c88eae70f8d21ac8b3c9f72ae055ed
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 1d7b5f6cb5922bde4b002611209ea3464f8e457c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744773"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921169"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation
 
@@ -63,7 +63,7 @@ Katalog wirtualny **servicemodelsamples** służy do kompilowania i uruchamiania
     > [!NOTE]
     > Jeśli ten krok nie zostanie ukończony, wszystkie przykłady hostowane przez usługi IIS zakończą się niepowodzeniem podczas kompilowania. Upewnij się, że uprawnienia zostały prawidłowo ustawione, lub Uruchom wiersz polecenia zestawu SDK i wiersz polecenia programu Visual Studio (2012) jako administrator.
 
-11. Utwórz katalog C:\LOGS na komputerze; Niektóre przykłady mogą oczekiwać. Upewnij się, że odpowiednie konto ma przyznany dostęp do zapisu dla tego folderu. W przypadku systemów Windows 7, Windows Vista i Windows Server 2008 R2 to konto jest **usługą sieciową**. W przypadku systemu Windows Server 2008 konto to NT Authority\Network Service. W przypadku [!INCLUDE[wxp](../../../../includes/wxp-md.md)] i systemu Windows Server 2003 konto jest ASPNET.
+11. Utwórz katalog C:\LOGS na komputerze; Niektóre przykłady mogą oczekiwać. Upewnij się, że odpowiednie konto ma przyznany dostęp do zapisu dla tego folderu. W przypadku systemów Windows 7, Windows Vista i Windows Server 2008 R2 to konto jest **usługą sieciową**. W przypadku systemu Windows Server 2008 konto to NT Authority\Network Service. W przypadku systemów Windows XP i Windows Server 2003 konto to ASPNET.
 
 12. Uruchom plik Setupcerttool. bat. Ten plik znajduje się w folderze \<InstallPath > \ WF_WCF_Samples \WCF\Setup\.  Ten skrypt wykona następujące zadania:
 

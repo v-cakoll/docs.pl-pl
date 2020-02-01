@@ -1,16 +1,16 @@
 ---
-title: Organizowanie i testowanie projektów przy użyciu wiersza polecenia platformy .NET Core
+title: Organizowanie i testowanie projektów przy użyciu interfejs wiersza polecenia platformy .NET Core
 description: W tym samouczku wyjaśniono sposób organizowania i testowania projektów programu .NET Core z poziomu wiersza polecenia.
 author: cartermp
 ms.date: 09/10/2018
-ms.openlocfilehash: fdaa42be4d3b8872a3119f97f253ce277564339e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 11d13ad1d74c69cdfe0626bda8823dd0609da85f
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715344"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920423"
 ---
-# <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>Organizowanie i testowanie projektów przy użyciu wiersza polecenia platformy .NET Core
+# <a name="organizing-and-testing-projects-with-the-net-core-cli"></a>Organizowanie i testowanie projektów przy użyciu interfejs wiersza polecenia platformy .NET Core
 
 Ten samouczek rozpoczyna [się od rozpoczęcia pracy z platformą .NET Core w systemie Windows/Linux/macOS przy użyciu wiersza polecenia, dzięki](cli-create-console-app.md)czemu nie utworzysz prostej aplikacji konsolowej do tworzenia zaawansowanych i dobrze zorganizowanych aplikacji. Po podaniu, jak używać folderów do organizowania kodu, w tym samouczku pokazano, jak zwiększyć aplikację konsolową za pomocą platformy testowania [xUnit](https://xunit.github.io/) .
 
@@ -96,7 +96,7 @@ Woof!
 Meow!
 ```
 
-Ćwiczenie opcjonalne: można dodać nowy typ PET, taki jak `Bird`, rozszerzając ten projekt. Nadaj metodu `TalkToOwner` ptakowi `Tweet!` do właściciela. Ponownie uruchom aplikację. Dane wyjściowe będą zawierać `Tweet!`
+Ćwiczenie opcjonalne: można dodać nowy typ PET, taki jak `Bird`, rozszerzając ten projekt. Nadaj metodu `TalkToOwner` ptakowi `Tweet!` do właściciela. Uruchom aplikację ponownie. Dane wyjściowe będą zawierać `Tweet!`
 
 ### <a name="testing-the-sample"></a>Testowanie przykładu
 

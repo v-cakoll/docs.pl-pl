@@ -2,12 +2,12 @@
 title: Narzędzie rejestracji usług przepływu pracy (WFServicesReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 9e92c87b-99c5-4e8d-9d53-7944cc2b47d3
-ms.openlocfilehash: 182bef75bff1785905d77d3bc497e0701e297912
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 5e7d39062a8ad016eebf949daa625a5ba7848328
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346590"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921228"
 ---
 # <a name="workflow-service-registration-tool-wfservicesregexe"></a>Narzędzie rejestracji usług przepływu pracy (WFServicesReg.exe)
 Narzędzie rejestracji usług przepływu pracy (WFServicesReg. exe) to autonomiczne narzędzie, które służy do dodawania, usuwania lub naprawiania elementów konfiguracji dla usług Windows Workflow Foundation (WF).  
@@ -56,7 +56,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
   
  Narzędzie rejestruje również właściwości xoml i. rules oraz programy obsługi w metabazie usług IIS.  
   
- Na komputerach z systemem Windows Server 2003 i [!INCLUDE[wxp](../../../includes/wxp-md.md)] (IIS 5,1 i IIS 6,0) jest rejestrowany jeden zestaw właściwości xoml i rules.  
+ Na komputerach z systemem Windows Server 2003 i Windows XP (IIS 5,1 i IIS 6,0) jest rejestrowany jeden zestaw właściwości xoml i. rules.  
   
  Na komputerach 64-bitowych narzędzie rejestruje w trybie WOW mapowania skryptów, jeśli przełącznik `Enable32BitAppOnWin64` jest włączony, lub natywnie 64-bitowe mapowania skryptów, jeśli przełącznik `Enable32BitAppOnWin64` jest wyłączony.  
   

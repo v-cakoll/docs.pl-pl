@@ -2,16 +2,16 @@
 title: Scenariusze nieobsługiwane
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: a963b46d22f2103cddcc8fd080feefc39070690c
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: b643e6df8a877860ce36fc6ee34c4e4ca08ec748
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901263"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921158"
 ---
 # <a name="unsupported-scenarios"></a>Nieobsługiwane scenariusze
 
-Z różnych powodów Windows Communication Foundation (WCF) nie obsługuje niektórych określonych scenariuszy zabezpieczeń. Na przykład [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition nie implementuje protokołów uwierzytelniania SSPI ani protokołu Kerberos, dlatego program WCF nie obsługuje uruchamiania usługi z uwierzytelnianiem systemu Windows na tej platformie. Inne mechanizmy uwierzytelniania, takie jak nazwa użytkownika i hasło oraz zintegrowane uwierzytelnianie HTTP/HTTPS, są obsługiwane w przypadku uruchamiania programu WCF w systemie Windows XP Home Edition.
+Z różnych powodów Windows Communication Foundation (WCF) nie obsługuje niektórych określonych scenariuszy zabezpieczeń. Na przykład system Windows XP Home Edition nie implementuje protokołów uwierzytelniania SSPI ani protokołu Kerberos, dlatego program WCF nie obsługuje uruchamiania usługi z uwierzytelnianiem systemu Windows na tej platformie. Inne mechanizmy uwierzytelniania, takie jak nazwa użytkownika i hasło oraz zintegrowane uwierzytelnianie HTTP/HTTPS, są obsługiwane w przypadku uruchamiania programu WCF w systemie Windows XP Home Edition.
 
 ## <a name="impersonation-scenarios"></a>Scenariusze personifikacji
 
@@ -22,7 +22,7 @@ Z różnych powodów Windows Communication Foundation (WCF) nie obsługuje niekt
 
 Funkcja WCF nie obsługuje personifikacji, a <xref:System.InvalidOperationException> jest zgłaszany, gdy istnieją następujące warunki:
 
-- System operacyjny jest [!INCLUDE[wxp](../../../../includes/wxp-md.md)].
+- System operacyjny to Windows XP.
 
 - Tryb uwierzytelniania powoduje tożsamość systemu Windows.
 
@@ -35,7 +35,7 @@ Funkcja WCF nie obsługuje personifikacji, a <xref:System.InvalidOperationExcept
  Alternatywnie, w konfiguracji, token jest włączony, tworząc <`customBinding`>, a następnie dodając <`security`> elementu i ustawiając atrybut `authenticationMode` na SecureConversation i `requireSecurityContextCancellation` `true`.
 
 > [!NOTE]
-> Powyższe wymagania są specyficzne. Na przykład <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> tworzy element powiązania, który powoduje tożsamość systemu Windows, ale nie ustanawia SCT. W związku z tym można go użyć z opcją `Required` w [!INCLUDE[wxp](../../../../includes/wxp-md.md)].
+> Powyższe wymagania są specyficzne. Na przykład <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> tworzy element powiązania, który powoduje tożsamość systemu Windows, ale nie ustanawia SCT. W związku z tym można go użyć z opcją `Required` w systemie Windows XP.
 
 ### <a name="possible-aspnet-conflict"></a>Możliwy konflikt ASP.NET
 

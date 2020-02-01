@@ -1,18 +1,18 @@
 ---
-title: Tworzenie bibliotek za pomocą narzędzi międzyplatformowych
-description: Dowiedz się, jak tworzyć biblioteki platformy .NET Core przy użyciu narzędzi interfejs wiersza polecenia platformy .NET Core. Utworzysz bibliotekę, która obsługuje wiele platform.
+title: Tworzenie bibliotek przy użyciu interfejs wiersza polecenia platformy .NET Core
+description: Dowiedz się, jak tworzyć biblioteki platformy .NET Core przy użyciu interfejs wiersza polecenia platformy .NET Core. Utworzysz bibliotekę, która obsługuje wiele platform.
 author: cartermp
 ms.date: 05/01/2017
-ms.openlocfilehash: 4132113037e6c5ec555d2d1859b8217a1a53d07f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: a7c0175d29f483571578b58d698dd790cf66f7f4
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714028"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920444"
 ---
-# <a name="develop-libraries-with-cross-platform-tools"></a>Tworzenie bibliotek za pomocą narzędzi dla wielu platform
+# <a name="develop-libraries-with-the-net-core-cli"></a>Tworzenie bibliotek przy użyciu interfejs wiersza polecenia platformy .NET Core
 
-W tym artykule opisano sposób pisania bibliotek dla platformy .NET przy użyciu międzyplatformowych narzędzi interfejsu wiersza polecenia. Interfejs wiersza polecenia zapewnia wydajne i niskie środowisko, które działa w ramach dowolnego obsługiwanego systemu operacyjnego. Nadal możesz tworzyć biblioteki za pomocą programu Visual Studio, a jeśli jest to preferowane środowisko, [zapoznaj się z przewodnikiem programu Visual Studio](library-with-visual-studio.md).
+W tym artykule opisano sposób pisania bibliotek dla platformy .NET przy użyciu interfejs wiersza polecenia platformy .NET Core. Interfejs wiersza polecenia zapewnia wydajne i niskie środowisko, które działa w ramach dowolnego obsługiwanego systemu operacyjnego. Nadal możesz tworzyć biblioteki za pomocą programu Visual Studio, a jeśli jest to preferowane środowisko, [zapoznaj się z przewodnikiem programu Visual Studio](library-with-visual-studio.md).
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -27,7 +27,7 @@ Ponadto, jeśli chcesz obsługiwać starsze elementy docelowe .NET Framework, mu
 | 4.6.1                  | .NET Framework 4.6.1                    |
 | 4.6                    | Pakiet docelowy .NET Framework 4,6                      |
 | 4.5.2                  | .NET Framework 4.5.2 — Pakiet dewelopera                    |
-| 4.5.1                  | .NET Framework 4.5.1 Developer Pack                    |
+| 4.5.1                  | .NET Framework 4.5.1 — pakiet dewelopera                    |
 | 4.5                    | Zestaw Windows Software Development Kit dla systemu Windows 8         |
 | 4.0                    | Windows SDK dla systemów Windows 7 i .NET Framework 4         |
 | 2,0, 3,0 i 3,5      | Środowisko uruchomieniowe .NET Framework 3,5 z dodatkiem SP1 (lub Windows 8 + wersja) |
@@ -96,7 +96,7 @@ Następnie należy wstawić ten TFM do sekcji `TargetFramework` w pliku projektu
 </Project>
 ```
 
-I to już wszystko! Chociaż jest to kompilowane tylko dla .NET Framework 4, można użyć biblioteki w nowszych wersjach .NET Framework.
+I to wszystko! Chociaż jest to kompilowane tylko dla .NET Framework 4, można użyć biblioteki w nowszych wersjach .NET Framework.
 
 ## <a name="how-to-multitarget"></a>Jak wieloelementowy
 
@@ -216,7 +216,7 @@ Każdy z nich zawiera pliki `.dll` dla każdego obiektu docelowego.
 Ważne jest, aby móc testować między platformami. Możesz użyć [xUnit](https://xunit.github.io/) lub MSTest z pola. Oba są doskonale odpowiednie do testowania jednostkowego biblioteki w programie .NET Core. Sposób konfigurowania rozwiązania przy użyciu projektów testowych będzie zależeć od [struktury rozwiązania](#structuring-a-solution). W poniższym przykładzie przyjęto założenie, że katalogi testowe i źródłowe znajdują się w tym samym katalogu najwyższego poziomu.
 
 > [!NOTE]
-> Spowoduje to użycie niektórych [poleceń interfejs wiersza polecenia platformy .NET Core](../tools/index.md). Aby uzyskać więcej informacji, zobacz temat [dotnet New](../tools/dotnet-new.md) i [dotnet sln](../tools/dotnet-sln.md) .
+> Spowoduje to użycie niektórych poleceń [interfejs wiersza polecenia platformy .NET Core](../tools/index.md) . Aby uzyskać więcej informacji, zobacz temat [dotnet New](../tools/dotnet-new.md) i [dotnet sln](../tools/dotnet-sln.md) .
 
 1. Skonfiguruj rozwiązanie. Można to zrobić za pomocą następujących poleceń:
 
@@ -257,7 +257,7 @@ Ważne jest, aby móc testować między platformami. Możesz użyć [xUnit](http
 
 1. Sprawdź, czy xUnit działa, wykonując polecenie `dotnet test`. W przypadku wybrania opcji używania MSTest, zamiast tego należy uruchomić moduł uruchamiający konsolę programu MSTest.
 
-I to już wszystko! Teraz można testować bibliotekę na wszystkich platformach przy użyciu narzędzi wiersza polecenia. Aby kontynuować testowanie teraz, gdy wszystko jest skonfigurowane, testowanie biblioteki jest bardzo proste:
+I to wszystko! Teraz można testować bibliotekę na wszystkich platformach przy użyciu narzędzi wiersza polecenia. Aby kontynuować testowanie teraz, gdy wszystko jest skonfigurowane, testowanie biblioteki jest bardzo proste:
 
 1. Wprowadź zmiany w bibliotece.
 1. Uruchom testy z wiersza polecenia w katalogu testowym przy użyciu polecenia `dotnet test`.

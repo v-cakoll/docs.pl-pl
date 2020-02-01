@@ -3,20 +3,20 @@ title: Omówienie narzędzia WCF Svcutil
 description: Omówienie narzędzia dotnet-Svcutil programu Microsoft WCF, które dodaje funkcje dla projektów .NET Core i ASP.NET Core, podobnie jak narzędzie WCF Svcutil dla projektów .NET Framework.
 author: mlacouture
 ms.date: 02/22/2019
-ms.openlocfilehash: d204576f27227ce6e65d61471f19cdf3ec4df37a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 0607c73935f319f2cc0d8d9f92d96a4c71c54edf
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714564"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920945"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>WCF dotnet-Svcutil Tool dla platformy .NET Core
 
-Windows Communication Foundation (WCF) **dotnet-Svcutil** Tool to narzędzie interfejs wiersza polecenia platformy .NET Core, które pobiera metadane z usługi sieci Web w lokalizacji sieciowej lub z pliku WSDL, i GENERUJE klasę WCF zawierającą metody serwera proxy klienta, które uzyskują dostęp do operacji usługi sieci Web.
+Windows Communication Foundation (WCF) **dotnet-Svcutil** jest narzędziem platformy .NET, które pobiera metadane z usługi sieci Web w lokalizacji sieciowej lub z pliku WSDL, i GENERUJE klasę WCF zawierającą metody serwera proxy klienta, które uzyskują dostęp do operacji usługi sieci Web.
 
 Podobnie jak w przypadku narzędzi [**metadanych Svcutil modelu usług**](../../framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) dla projektów .NET Framework, **dotnet-Svcutil** to narzędzie wiersza polecenia do generowania odwołania usługi internetowej zgodnej z projektami .NET Core i .NET Standard.
 
-Narzędzie **dotnet-Svcutil** jest alternatywną opcją dla [**usługi sieci Web programu WCF odwołującej**](wcf-web-service-reference-guide.md) się do dostawcy usługi połączonej programu Visual Studio, która jest najpierw dostarczana z programem Visual studio 2017 w wersji 15,5. Narzędzie **dotnet-Svcutil** jako narzędzie interfejs wiersza polecenia platformy .NET Core jest dostępne dla wielu platform w systemach Linux, MacOS i Windows.
+Narzędzie **dotnet-Svcutil** jest alternatywną opcją dla [**usługi sieci Web programu WCF odwołującej**](wcf-web-service-reference-guide.md) się do dostawcy usługi połączonej programu Visual Studio, która jest najpierw dostarczana z programem Visual studio 2017 w wersji 15,5. Narzędzie **dotnet-Svcutil** jako narzędzie .NET jest dostępne dla wielu platform w systemach Linux, MacOS i Windows.
 
 > [!IMPORTANT]
 > Należy tylko odwoływać się do usług z zaufanego źródła. Dodanie odwołań z niezaufanego źródła może spowodować naruszenie zabezpieczeń.

@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: 2482709abfadad0505a40f4c37fd58cee4a2634c
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 026421d7b1b2a0e39118ae712780ca7fc8f6e444
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73978201"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921256"
 ---
 # <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>Samouczek: prognozowanie popytu na usługę najmu roweru za pomocą analiz szeregów czasowych i ML.NET
 
@@ -29,7 +29,7 @@ Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-- [Program Visual Studio 2017 15,6 lub nowszy](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) z zainstalowanym obciążeniem "Programowanie dla wielu platform" platformy .NET Core.
+- [Program Visual Studio 2017 w wersji 15,6 lub nowszej](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) z zainstalowanym obciążeniem "Programowanie dla wielu platform w środowisku .NET Core".
 
 ## <a name="time-series-forecasting-sample-overview"></a>Omówienie przykładu prognozowania szeregów czasowych
 
@@ -245,7 +245,7 @@ Jeśli Twój model jest zadowalający, Zapisz go do późniejszego użycia w inn
 
     [!code-csharp [DisplayForecast](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L111-L116)]
 
-## <a name="run-the-application"></a>Uruchom aplikację
+## <a name="run-the-application"></a>Uruchamianie aplikacji
 
 1. Wewnątrz metody `Main` Wywołaj metodę `Forecast`.
 
@@ -280,7 +280,7 @@ Inspekcja wartości rzeczywistych i prognozowanych przedstawia następujące rel
 
 Przewidywane wartości nie przewidywalną dokładnej liczby wynajmu, ale zapewniają bardziej wąski zakres wartości, dzięki którym można przeprowadzić operację w celu zoptymalizowania użycia zasobów.
 
-Nabycia! Pomyślnie skompilowano model uczenia maszynowego w szeregach czasowych do prognozowania popytu na wypożyczenie roweru.
+Gratulacje! Pomyślnie skompilowano model uczenia maszynowego w szeregach czasowych do prognozowania popytu na wypożyczenie roweru.
 
 Kod źródłowy dla tego samouczka można znaleźć w repozytorium [dotnet/machinelearning-Samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand) .
 

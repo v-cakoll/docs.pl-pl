@@ -4,18 +4,18 @@ description: W tym samouczku przedstawiono szereg funkcji platformy .NET Core i 
 ms.date: 03/06/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: 921c8fc7824bdb48f08e4d9f5a276bf2284f8a17
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 09ce36e7a61f576dc4449976ce676701dc57c9cd
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714603"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921124"
 ---
 # <a name="console-app"></a>Aplikacja konsolowa
 
 W tym samouczku przedstawiono szereg funkcji platformy .NET Core i C# języka. W dokumencie omówiono następujące zagadnienia :
 
-- Podstawowe informacje o interfejsie wiersza polecenia platformy .NET Core (CLI)
+- Podstawowe informacje dotyczące interfejs wiersza polecenia platformy .NET Core
 - Struktura aplikacji C# konsolowej
 - We/wy konsoli
 - Podstawy interfejsów API we/wy plików w programie .NET
@@ -311,6 +311,6 @@ RunTeleprompter().Wait();
 
 ## <a name="conclusion"></a>Wniosek
 
-W tym samouczku przedstawiono szereg funkcji dotyczących C# języka i bibliotek .NET Core związanych z pracą w aplikacjach konsolowych. Możesz utworzyć tę wiedzę, aby dowiedzieć się więcej o języku i klasach wprowadzonych w tym miejscu. Przedstawiono podstawowe informacje na temat operacji we/wy plików i konsoli, blokowania i nieblokowania użycia programowania asynchronicznego opartego na zadaniach, samouczka dotyczącego C# języka i sposobu C# organizowania programów oraz interfejsu wiersza polecenia i narzędzi .NET Core.
+W tym samouczku przedstawiono szereg funkcji dotyczących C# języka i bibliotek .NET Core związanych z pracą w aplikacjach konsolowych. Możesz utworzyć tę wiedzę, aby dowiedzieć się więcej o języku i klasach wprowadzonych w tym miejscu. Przedstawiono podstawowe informacje na temat operacji we/wy plików i konsoli, blokowania i nieblokowania użycia programowania asynchronicznego opartego na zadaniach, samouczka dotyczącego C# języka i sposobu C# organizowania programów oraz interfejs wiersza polecenia platformy .NET Core.
 
 Aby uzyskać więcej informacji na temat operacji we/wy plików, zobacz temat [plik i strumień we/wy](../../standard/io/index.md) . Aby uzyskać więcej informacji o modelu programowania asynchronicznego używanym w tym samouczku, zapoznaj się z tematem [programowanie asynchroniczne oparte na zadaniach](../..//standard/parallel-programming/task-based-asynchronous-programming.md) i w temacie [programowanie asynchroniczne](../async.md) .

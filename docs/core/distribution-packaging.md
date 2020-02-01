@@ -3,12 +3,12 @@ title: Tworzenie pakietów dystrybucji platformy .NET Core
 description: Dowiedz się, jak spakować, nazwać i wersja .NET Core do dystrybucji.
 author: tmds
 ms.date: 10/09/2019
-ms.openlocfilehash: 1b5adf761a51e006f8309e1f326fc0a9c12aab7a
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: a345aeded29b3058c6c56abbff439ea26cbc7afb
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76748504"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920870"
 ---
 # <a name="net-core-distribution-packaging"></a>Tworzenie pakietów dystrybucji platformy .NET Core
 
@@ -69,7 +69,7 @@ W przypadku jednego hosta większość innych składników znajduje się w katal
 
 - (2) **host/FXR/\<> wersja FXR** zawiera logikę rozpoznawania architektury używaną przez hosta. Host używa najnowszej hostfxr, która jest zainstalowana. Hostfxr jest odpowiedzialny za wybór odpowiedniego środowiska uruchomieniowego podczas wykonywania aplikacji platformy .NET Core. Na przykład aplikacja skompilowana dla programu .NET Core 2.0.0 używa środowiska uruchomieniowego 2.0.5, gdy jest ono dostępne. Podobnie hostfxr wybiera odpowiedni zestaw SDK podczas opracowywania.
 
-- (3) **wersja zestawu SDK/\<sdk >** zestaw SDK (znany również jako "Narzędzie") to zestaw narzędzi zarządzanych, które są używane do pisania i kompilowania bibliotek i aplikacji platformy .NET Core. Zestaw SDK zawiera interfejs wiersza polecenia (CLI) platformy .NET Core, kompilator języków zarządzanych, program MSBuild oraz skojarzone zadania kompilacji i cele, narzędzia NuGet, nowe szablony projektów itd.
+- (3) **wersja zestawu SDK/\<sdk >** zestaw SDK (znany również jako "Narzędzie") to zestaw narzędzi zarządzanych, które są używane do pisania i kompilowania bibliotek i aplikacji platformy .NET Core. Zestaw SDK zawiera interfejs wiersza polecenia platformy .NET Core, kompilatory języków zarządzanych, program MSBuild oraz skojarzone zadania kompilacji i elementy docelowe, narzędzia NuGet, nowe szablony projektów itd.
 
 - (4) **zestaw SDK/NuGetFallbackFolder** zawiera pamięć podręczną pakietów NuGet używanych przez zestaw SDK podczas operacji przywracania, na przykład w przypadku uruchamiania `dotnet restore` lub `dotnet build`. Ten folder jest używany tylko przed platformą .NET Core 3,0. Nie można go skompilować ze źródła, ponieważ zawiera wstępnie skompilowane zasoby binarne z `nuget.org`.
 

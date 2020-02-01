@@ -1,19 +1,19 @@
 ---
-title: Dodatkowe narzędzia interfejsu wiersza polecenia
+title: Dodatkowe narzędzia
 description: Omówienie dodatkowych narzędzi, które można zainstalować, które obsługują i poszerzają funkcje platformy .NET Core.
 author: mlacouture
 ms.date: 12/02/2019
 ms.custom: mvc
-ms.openlocfilehash: 853633f5ef159eee39ed1a8682372d4291a752f5
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 23b94ceef729cdc3d83032e3897312eb1d1afd79
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76740710"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920934"
 ---
 # <a name="net-core-additional-tools-overview"></a>Dodatkowe narzędzia platformy .NET Core — Omówienie
 
-Ta sekcja zawiera kompilację listy narzędzi, które obsługują i poszerzają funkcje platformy .NET Core, a także narzędzia [interfejsu wiersza polecenia (CLI) platformy .NET Core](../tools/index.md) .
+W tej sekcji została skompilowana lista narzędzi, które obsługują i poszerzają funkcje programu .NET Core, a także interfejs wiersza polecenia platformy .NET Core.
 
 ## <a name="net-core-uninstall-tooluninstall-toolmd"></a>[Narzędzie do dezinstalacji programu .NET Core](uninstall-tool.md)
 
@@ -25,9 +25,9 @@ Odwołanie do usługi sieci Web WCF (Windows Communication Foundation) to Dostaw
 
 ## <a name="wcf-dotnet-svcutil-tooldotnet-svcutil-guidemd"></a>[WCF dotnet — narzędzie Svcutil](dotnet-svcutil-guide.md)
 
-Narzędzie WCF (Windows Communication Foundation) dotnet-Svcutil jest narzędziem interfejs wiersza polecenia platformy .NET Core, które pobiera metadane z usługi sieci Web w lokalizacji sieciowej lub z pliku WSDL. Generuje plik źródłowy zgodny z platformą .NET Core, definiując klasę serwera proxy WCF przy użyciu metod, których można użyć w celu uzyskania dostępu do operacji usługi sieci Web.
+Narzędzie WCF (Windows Communication Foundation) dotnet-Svcutil jest narzędziem platformy .NET, które pobiera metadane z usługi sieci Web w lokalizacji sieciowej lub z pliku WSDL. Generuje plik źródłowy zgodny z platformą .NET Core, definiując klasę serwera proxy WCF przy użyciu metod, których można użyć w celu uzyskania dostępu do operacji usługi sieci Web.
 
-Narzędzie **dotnet-Svcutil** jest alternatywną opcją dla [**referencyjnej usługi sieci Web programu WCF**](wcf-web-service-reference-guide.md) , która jest dostarczana z programem Visual studio 2017 w wersji 15,5. Narzędzie **dotnet-Svcutil** jako narzędzie interfejs wiersza polecenia platformy .NET Core jest dostępne dla wielu platform w systemach Linux, MacOS i Windows.
+Narzędzie **dotnet-Svcutil** jest alternatywną opcją dla [**referencyjnej usługi sieci Web programu WCF**](wcf-web-service-reference-guide.md) , która jest dostarczana z programem Visual studio 2017 w wersji 15,5. Narzędzie **dotnet-Svcutil** jako narzędzie .NET jest dostępne dla wielu platform w systemach Linux, MacOS i Windows.
 
 ## <a name="wcf-dotnet-svcutilxmlserializer-tooldotnet-svcutilxmlserializer-guidemd"></a>[WCF dotnet — narzędzie Svcutil. XmlSerializer](dotnet-svcutil.xmlserializer-guide.md)
 

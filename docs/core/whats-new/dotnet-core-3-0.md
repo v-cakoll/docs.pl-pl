@@ -5,13 +5,13 @@ dev_langs:
 - csharp
 author: thraka
 ms.author: adegeo
-ms.date: 10/22/2019
-ms.openlocfilehash: b8aa19a1d422fe7d6accd2b095f15843446599cd
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.date: 01/27/2020
+ms.openlocfilehash: 92d97ca3efe761c879d0940a02342edb5a8180f0
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789891"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920376"
 ---
 # <a name="whats-new-in-net-core-30"></a>Co nowego w programie .NET Core 3.0
 
@@ -180,7 +180,7 @@ Wyjątki dla wielu elementów docelowych:
 
 ## <a name="runtimesdk"></a>Środowisko uruchomieniowe/zestaw SDK
 
-### <a name="major-version-roll-forward"></a>Wersja główna — przekazanie do przodu
+### <a name="major-version-runtime-roll-forward"></a>Wersja główna — przewinięcie do przodu
 
 W programie .NET Core 3.0 wprowadzono funkcję wyboru, która pozwala aplikacji na przewinięcie do najnowszej wersji programu .NET Core. Ponadto zostało dodane nowe ustawienie służące do kontrolowania sposobu, w jaki przenoszone do przodu jest stosowane do aplikacji. Tę konfigurację można skonfigurować w następujący sposób:
 
@@ -226,6 +226,15 @@ Istnieją pewne operacje, takie jak łączenie i publikowanie stron Razor, któr
 Narzędzia lokalne są zależne od nazwy pliku manifestu `dotnet-tools.json` w bieżącym katalogu. Ten plik manifestu definiuje narzędzia do udostępnienia w tym folderze i poniżej. Plik manifestu można dystrybuować z kodem, aby upewnić się, że każda osoba, która współpracuje z kodem, będzie mogła przywrócić i korzystać z tych samych narzędzi.
 
 W przypadku narzędzi globalnych i lokalnych wymagana jest zgodna wersja środowiska uruchomieniowego. Wiele narzędzi obecnie na NuGet.org docelowym środowiska uruchomieniowego .NET Core 2.1. Aby zainstalować te narzędzia globalnie lub lokalnie, nadal trzeba zainstalować [środowisko uruchomieniowe NET Core 2.1](https://dotnet.microsoft.com/download/dotnet-core/2.1).
+
+### <a name="new-globaljson-options"></a>Nowe opcje globalne. JSON
+
+Plik *Global. JSON* zawiera nowe opcje, które zapewniają większą elastyczność podczas próby zdefiniowania używanej wersji zestaw .NET Core SDK. Nowe opcje są następujące:
+
+- `allowPrerelease`: wskazuje, czy program rozpoznawania SDK powinien wziąć pod uwagę wersje wstępne podczas wybierania wersji zestawu SDK do użycia.
+- `rollForward`: wskazuje zasady wycofywania, które mają być używane podczas wybierania wersji zestawu SDK, jako rezerwy w przypadku braku określonej wersji zestawu SDK lub jako dyrektywy do użycia wyższej wersji.
+
+Aby uzyskać więcej informacji na temat zmian, w tym wartości domyślnych, obsługiwanych wartości i nowych reguł dopasowania, zobacz [Global. JSON — Omówienie](../tools/global-json.md).
 
 ### <a name="smaller-garbage-collection-heap-sizes"></a>Mniejsze rozmiary sterty wyrzucania elementów bezużytecznych
 

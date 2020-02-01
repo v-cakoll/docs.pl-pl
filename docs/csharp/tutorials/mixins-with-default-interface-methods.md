@@ -3,12 +3,12 @@ title: Tworzenie typów domieszki przy użyciu domyślnych metod interfejsu
 description: Przy użyciu domyślnych elementów członkowskich interfejsu można rozciągnąć interfejsy z opcjonalnymi implementacjami domyślnymi dla realizatorów.
 ms.technology: csharp-advanced-concepts
 ms.date: 10/04/2019
-ms.openlocfilehash: fb8fc1f432bdf909bae4f54bb76d10d7619f71a3
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: f97410124a4ca5bbb10972ab5e7942fa4af68d72
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74140848"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921446"
 ---
 # <a name="tutorial-mix-functionality-in-when-creating-classes-using-interfaces-with-default-interface-methods"></a>Samouczek: mieszanie funkcji w przypadku tworzenia klas przy użyciu interfejsów z domyślnymi metodami interfejsu
 
@@ -24,7 +24,7 @@ W tym samouczku dowiesz się, jak:
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Musisz skonfigurować maszynę do uruchamiania programu .NET Core, w tym kompilatora C# 8,0. Kompilator C# 8,0 jest dostępny od wersji [Visual Studio 2019, 16,3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)lub [.NET Core 3,0 SDK](https://dotnet.microsoft.com/download/dotnet-core) lub nowszej.
+Musisz skonfigurować maszynę do uruchamiania programu .NET Core, w tym kompilatora C# 8,0. Kompilator C# 8,0 jest dostępny w programie [Visual Studio 2019 w wersji 16,3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)lub w [programie .NET Core 3,0 SDK](https://dotnet.microsoft.com/download/dotnet-core) lub nowszym.
 
 ## <a name="limitations-of-extension-methods"></a>Ograniczenia metod rozszerzających
 
@@ -45,7 +45,7 @@ Weź pod uwagę aplikację Automatyzacja domu. Prawdopodobnie masz wiele różny
 
 Niektóre z tych rozszerzonych możliwości mogą być emulowane na urządzeniach, które obsługują minimalny zestaw. Wskazuje to na podanie domyślnej implementacji. W przypadku urządzeń, które mają więcej funkcji wbudowanych, oprogramowanie urządzenia może korzystać z natywnych funkcji. W przypadku innych sygnalizatorów mogą oni wybrać implementację interfejsu i użyć domyślnej implementacji.
 
-Domyślnymi elementami członkowskimi interfejsu jest lepszym rozwiązaniem dla tego scenariusza niż metody rozszerzające. Autorzy klasy mogą kontrolować interfejsy, które wybierają do wdrożenia. Wybrane interfejsy są dostępne jako metody. Ponadto, ponieważ domyślne metody interfejsu są domyślnie wirtualne, metoda wysyłania zawsze wybiera implementację w klasie. 
+Domyślnymi elementami członkowskimi interfejsu jest lepszym rozwiązaniem dla tego scenariusza niż metody rozszerzające. Autorzy klasy mogą kontrolować interfejsy, które wybierają do wdrożenia. Wybrane interfejsy są dostępne jako metody. Ponadto, ponieważ domyślne metody interfejsu są domyślnie wirtualne, metoda wysyłania zawsze wybiera implementację w klasie.
 
 Utwórzmy kod, aby przedstawić te różnice.
 
@@ -79,7 +79,7 @@ Inny typ oświetlenia może obsługiwać bardziej zaawansowany protokół. Może
 
 [!code-csharp[Override the timer function](~/samples/csharp/tutorials/mixins-with-interfaces/HalogenLight.cs?name=SnippetHalogenLight)]
 
-W przeciwieństwie do zastępowania metod klasy wirtualnej, deklaracja `TurnOnFor` w klasie `HalogenLight` nie używa słowa kluczowego `override`. 
+W przeciwieństwie do zastępowania metod klasy wirtualnej, deklaracja `TurnOnFor` w klasie `HalogenLight` nie używa słowa kluczowego `override`.
 
 ## <a name="mix-and-match-capabilities"></a>Możliwości mieszania i dopasowywania
 

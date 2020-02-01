@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: dfbf5a9b437d0acea16a75236fd3d2861c0f2e06
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 2fef4c7b00fd6a1ed8f85a8bfa01ef9cfffa1bbb
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802368"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919940"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>Szybki start: rozwiązywanie problemów z architekturą WCF
 W tym temacie wymieniono kilka znanych problemów, z którymi klienci korzystali podczas opracowywania klientów i usług WCF. Jeśli problem, z którym korzystasz, nie znajduje się na liście, zalecamy skonfigurowanie śledzenia dla usługi. Spowoduje to wygenerowanie pliku śledzenia, który można wyświetlić za pomocą podglądu plików śledzenia i uzyskać szczegółowe informacje o wyjątkach, które mogą wystąpić w ramach usługi. Aby uzyskać więcej informacji na temat konfigurowania śledzenia, zobacz: [Konfigurowanie śledzenia](./diagnostics/tracing/configuring-tracing.md). Aby uzyskać więcej informacji na temat podglądu plików śledzenia, zobacz: [narzędzie Podgląd śledzenia usług (SvcTraceViewer. exe)](service-trace-viewer-tool-svctraceviewer-exe.md).  
@@ -158,7 +158,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q77"></a>   
 ## <a name="im-using-an-x509-certificate-with-my-service-and-i-get-a-systemsecuritycryptographycryptographicexception-whats-happening"></a>Używam certyfikatu X. 509 z moją usługą i otrzymuję system. Security. Cryptography. CryptographicException. Co się dzieje?  
- Jest to często spowodowane zmianą konta użytkownika, pod którym działa proces roboczy usług IIS. Na przykład w [!INCLUDE[wxp](../../../includes/wxp-md.md)], jeśli zmienisz domyślne konto użytkownika, na którym jest uruchamiany plik Aspnet_wp. exe, w obszarze od ASPNET do niestandardowego konta użytkownika, ten błąd może zostać wyświetlony. W przypadku korzystania z klucza prywatnego proces korzystający z niego musi mieć uprawnienia dostępu do pliku przechowującego ten klucz.  
+ Jest to często spowodowane zmianą konta użytkownika, pod którym działa proces roboczy usług IIS. Na przykład w systemie Windows XP, jeśli zmienisz domyślne konto użytkownika, na którym jest uruchamiane Aspnet_wp. exe, w obszarze od ASPNET do niestandardowego konta użytkownika, ten błąd może zostać wyświetlony. W przypadku korzystania z klucza prywatnego proces korzystający z niego musi mieć uprawnienia dostępu do pliku przechowującego ten klucz.  
   
  W takim przypadku należy nadać uprawnienia dostępu do odczytu kontu tego procesu dla pliku zawierającego klucz prywatny. Na przykład jeśli proces roboczy usług IIS jest uruchomiony na koncie Roberta, należy dać plikowi z dostępem do odczytu do pliku zawierającego klucz prywatny.  
   

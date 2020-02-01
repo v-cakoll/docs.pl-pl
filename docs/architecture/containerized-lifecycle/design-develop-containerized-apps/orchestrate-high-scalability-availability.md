@@ -2,12 +2,12 @@
 title: Organizowanie aplikacji mikrousług i aplikacji z wieloma kontenerami w celu zapewnienia wysokiej skalowalności i dostępności
 description: Rzeczywiste aplikacje produkcyjne muszą być wdrażane i zarządzane przy użyciu programu Orchestrator, które obsługują kondycję, obciążenie i cykle życia wszystkich kontenerów.
 ms.date: 02/15/2019
-ms.openlocfilehash: eb02a89a58b7df449edc05461e11fbeeec86b4a1
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: e548e6b3816dec1e56c273c53c9fd052443eb09b
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771093"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919542"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Organizowanie aplikacji mikrousług i aplikacji z wieloma kontenerami w celu zapewnienia wysokiej skalowalności i dostępności
 
@@ -21,7 +21,7 @@ Rysunek 4-6 ilustruje wdrożenie w klastrze aplikacji składającej się z wielu
 
 Wygląda podobnie do podejścia logicznego. Ale w jaki sposób obsługujesz Równoważenie obciążenia, Routing i organizowanie tych aplikacji złożonych?
 
-Interfejs wiersza polecenia platformy Docker (CLI) spełnia wymagania zarządzania jednym kontenerem na jednym hoście, ale jest on krótki, gdy przyjdzie do zarządzania wieloma kontenerami wdrożonymi na wielu hostach w celu uzyskania bardziej złożonych aplikacji rozproszonych. W większości przypadków potrzebna jest platforma zarządzania, która będzie automatycznie uruchamiać kontenery, skalować kontenery z wieloma wystąpieniami na obraz, wstrzymywać je lub wyłączać je w razie potrzeby i najlepiej kontrolować sposób uzyskiwania dostępu do zasobów, takich jak sieć i dane Chowan.
+Interfejs wiersza polecenia platformy Docker spełnia wymagania zarządzania jednym kontenerem na jednym hoście, ale jest on krótki, gdy przyjdzie do zarządzania wieloma kontenerami wdrożonymi na wielu hostach w celu uzyskania bardziej złożonych aplikacji rozproszonych. W większości przypadków potrzebna jest platforma zarządzania, która będzie automatycznie uruchamiać kontenery, skalować kontenery z wieloma wystąpieniami na obraz, wstrzymywać je lub wyłączać je w razie potrzeby i najlepiej kontrolować sposób uzyskiwania dostępu do zasobów, takich jak sieć i dane Chowan.
 
 Aby przekroczyć możliwości zarządzania indywidualnymi kontenerami lub prostymi aplikacjami złożonymi i przenieść się do większej liczby aplikacji przedsiębiorstwa przy użyciu mikrousług, musisz włączyć aranżację i klastrowanie platform.
 

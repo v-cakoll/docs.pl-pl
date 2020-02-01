@@ -2,12 +2,12 @@
 title: Terminologia platformy Docker
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Terminologia platformy Docker
 ms.date: 01/07/2019
-ms.openlocfilehash: 2735188c508a7bbb0101946429faec122b13a17b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 33f2918df5b63cc4bd54ddb84900c6bd91e9f77e
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73090055"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921004"
 ---
 # <a name="docker-terminology"></a>Terminologia platformy Docker
 
@@ -47,7 +47,7 @@ Obraz z obsługą **wielodostępności**: w przypadku architektury wieloarchitek
 
 **Klaster**: Kolekcja hostów platformy Docker uwidoczniona tak, jakby była jednym wirtualnym hostem platformy Docker, dzięki czemu aplikacja może być skalowana do wielu wystąpień usług rozmieszczonych na wielu hostach w klastrze. Klastry platformy Docker można tworzyć za pomocą Kubernetes, Azure Service Fabric, Docker Swarm i mesosphere DC/OS.
 
-**Orchestrator**: Narzędzie upraszczające Zarządzanie klastrami i hostami platformy Docker. Koordynatorzy umożliwiają zarządzanie obrazami, kontenerami i hostami za pomocą interfejsu wiersza polecenia (CLI) lub graficznego interfejsu użytkownika. Można zarządzać sieciami kontenera, konfiguracjami, równoważeniem obciążenia, odnajdywaniem usług, wysoką dostępnością, konfiguracją hosta platformy Docker i innymi. Koordynator jest odpowiedzialny za uruchamianie, dystrybuowanie, skalowanie i korygowanie obciążeń w kolekcji węzłów. Zazwyczaj produkty Orchestrator są tymi samymi produktami, które zapewniają infrastrukturę klastra, taką jak Kubernetes i Azure Service Fabric, między innymi ofertami na rynku.
+**Orchestrator**: Narzędzie upraszczające Zarządzanie klastrami i hostami platformy Docker. Koordynatorzy umożliwiają zarządzanie obrazami, kontenerami i hostami za pomocą interfejsu wiersza polecenia lub graficznego interfejsu użytkownika. Można zarządzać sieciami kontenera, konfiguracjami, równoważeniem obciążenia, odnajdywaniem usług, wysoką dostępnością, konfiguracją hosta platformy Docker i innymi. Koordynator jest odpowiedzialny za uruchamianie, dystrybuowanie, skalowanie i korygowanie obciążeń w kolekcji węzłów. Zazwyczaj produkty Orchestrator są tymi samymi produktami, które zapewniają infrastrukturę klastra, taką jak Kubernetes i Azure Service Fabric, między innymi ofertami na rynku.
 
 >[!div class="step-by-step"]
 >[Poprzedni](docker-defined.md)

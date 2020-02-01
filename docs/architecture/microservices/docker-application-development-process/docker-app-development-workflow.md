@@ -2,12 +2,12 @@
 title: Przepływ pracy tworzenia oprogramowania dla aplikacji platformy Docker
 description: Zapoznaj się ze szczegółami przepływu pracy dotyczącymi tworzenia aplikacji opartych na platformie Docker. Rozpocznij krok po kroku i przejdź do szczegółów, aby zoptymalizować wieloetapowe dockerfile i zakończyć pracę z uproszczonym przepływem pracy dostępnym w przypadku korzystania z programu Visual Studio.
 ms.date: 01/07/2019
-ms.openlocfilehash: 0c2789377bc388b8ac7373ee7fa46e3141f1b518
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 5df646ffaba67a016d2b18959b9873b52c3d5e4c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "73740357"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920327"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Przepływ pracy tworzenia oprogramowania dla aplikacji platformy Docker
 
@@ -66,7 +66,7 @@ Możesz rozpocząć kodowanie aplikacji w zwykłym środowisku .NET (zwykle w pr
 - **Wprowadzenie do Docker CE for Windows** \
   <https://docs.docker.com/docker-for-windows/>
 
--  \ **programu Visual Studio 2017**
+- **Visual Studio 2017** \
   [https://visualstudio.microsoft.com/downloads/](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)
 
 ![Obraz dla kroku 2.](./media/docker-app-development-workflow/step-2-write-dockerfile.png)
@@ -409,7 +409,7 @@ Będziemy ponownie odwiedzać plik Docker-Compose. yml w dalszej części, gdy b
 
 ### <a name="working-with-docker-composeyml-in-visual-studio-2017"></a>Praca z Docker-Compose. yml w programie Visual Studio 2017
 
-Oprócz dodania pliku dockerfile do projektu, jak wspomniano wcześniej, program Visual Studio 2017 (z 15,8 on) może dodać obsługę programu Orchestrator dla Docker Compose do rozwiązania.
+Oprócz dodania pliku dockerfile do projektu, jak wspomniano wcześniej, program Visual Studio 2017 (z wersji 15,8 na) może dodać obsługę programu Orchestrator dla Docker Compose do rozwiązania.
 
 Po dodaniu obsługi programu Orchestrator Container, jak pokazano na rysunku 5-7 po raz pierwszy, program Visual Studio tworzy pliku dockerfile dla projektu i tworzy nowy projekt (sekcja usługi) w rozwiązaniu z kilkoma globalnymi `docker-compose*.yml` plikami, a następnie dodaje projekt do tych plików. Następnie możesz otworzyć pliki Docker-Compose. yml i zaktualizować je za pomocą dodatkowych funkcji.
 
@@ -574,9 +574,9 @@ RUN powershell add-windowsfeature web-asp-net45
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **ASPNET-Docker/pliku dockerfile.** Przykładowe polecenia programu PowerShell do uruchomienia z wieloetapowe dockerfile w celu uwzględnienia funkcji systemu Windows. \
+- **aspnet-docker/Dockerfile.** Przykładowe polecenia programu PowerShell do uruchomienia z wieloetapowe dockerfile w celu uwzględnienia funkcji systemu Windows. \
   <https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-ltsc2016/runtime/Dockerfile>
 
 >[!div class="step-by-step"]
->[Poprzednie](index.md)
->[dalej](../multi-container-microservice-net-applications/index.md)
+>[Poprzedni](index.md)
+>[Następny](../multi-container-microservice-net-applications/index.md)

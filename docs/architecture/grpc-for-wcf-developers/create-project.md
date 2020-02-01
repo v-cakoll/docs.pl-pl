@@ -2,12 +2,12 @@
 title: Tworzenie nowego ASP.NET Core gRPC Project — gRPC dla deweloperów WCF
 description: Dowiedz się, jak utworzyć projekt gRPC za pomocą programu Visual Studio lub wiersza polecenia.
 ms.date: 09/02/2019
-ms.openlocfilehash: ea6d7658404f61fedb25d7de7ddedb7c51437383
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: fbcc598cf503a5baeca941803ff8fa0d5fc99671
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711447"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919414"
 ---
 # <a name="create-a-new-aspnet-core-grpc-project"></a>Tworzenie nowego projektu usługi gRPC ASP.NET Core
 
@@ -16,13 +16,13 @@ Zestaw .NET Core SDK udostępnia zaawansowane narzędzie interfejsu wiersza pole
 ## <a name="create-the-project-by-using-visual-studio"></a>Tworzenie projektu przy użyciu programu Visual Studio
 
 > [!IMPORTANT]
-> Do opracowania dowolnej aplikacji ASP.NET Core 3,0 wymagany jest program Visual Studio 2019 16,3 lub nowszy z zainstalowanym obciążeniem **programowanie ASP.NET i sieci Web** .
+> Do opracowania dowolnej aplikacji ASP.NET Core 3,0 wymagany jest program Visual Studio 2019 w wersji 16,3 lub nowszej z zainstalowanym obciążeniem **programowanie ASP.NET i sieci Web** .
 
 Utwórz puste rozwiązanie o nazwie **TraderSys** z *pustego szablonu rozwiązania* . Dodaj folder rozwiązania o nazwie `src`. Następnie kliknij prawym przyciskiem myszy folder, a następnie wybierz polecenie **dodaj** > **Nowy projekt**. Wprowadź `grpc` w polu wyszukiwania szablonu i powinien zostać wyświetlony szablon projektu o nazwie `gRPC Service`.
 
 ![Zrzut ekranu przedstawiający okno dialogowe Dodawanie nowego projektu](media/create-project/new-grpc-project.png)
 
-Wybierz pozycję **dalej** , aby przejść do okna dialogowego **Konfigurowanie nowego projektu** . Nadaj projektowi nazwę `TraderSys.Portfolios`i Dodaj `src` podkatalogu do **lokalizacji**.
+Wybierz pozycję **dalej** , aby przejść do okna dialogowego **Konfigurowanie nowego projektu** . Nadaj projektowi nazwę `TraderSys.Portfolios` i Dodaj `src` podkatalogu do **lokalizacji**.
 
 ![Zrzut ekranu przedstawiający okno dialogowe Konfigurowanie nowego projektu](media/create-project/configure-project.png)
 
@@ -125,5 +125,5 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 W następnej sekcji dodamy funkcjonalność do tej nowej usługi.
 
 >[!div class="step-by-step"]
->[Poprzednie](migrate-wcf-to-grpc.md)
->[dalej](migrate-request-reply.md)
+>[Poprzedni](migrate-wcf-to-grpc.md)
+>[Następny](migrate-request-reply.md)

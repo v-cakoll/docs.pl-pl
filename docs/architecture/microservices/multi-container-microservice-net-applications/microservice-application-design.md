@@ -2,12 +2,12 @@
 title: Projektowanie aplikacji opartej na mikrousługach
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Zapoznaj się z korzyściami i downsidesami aplikacji zorientowanych na mikrousługach, aby móc podejmować świadome decyzje.
 ms.date: 10/02/2018
-ms.openlocfilehash: a783d582f39d25be0123f410553a54af970a4f67
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 63c93f237172d80704c00472ef2d4cbf7c787ab0
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739538"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921023"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Projektowanie aplikacji opartej na mikrousługach
 

@@ -4,12 +4,12 @@ description: Usługa Azure Functions zapewnia bezserwerowe funkcje wC#wielu jęz
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 5e8187b3752a0f0d0bcf8e15f2ce440dc5a64e45
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 8764e6a33f3fdd53e60fa767d0fb584a9c07de7e
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "72522868"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920968"
 ---
 # <a name="azure-functions"></a>Azure Functions
 
@@ -37,16 +37,16 @@ Następujące języki są obsługiwane w ogólnej dostępności (GA), w wersji z
 
 |Język      |1.x         |2.x      |
 |--------------|------------|---------|
-|**C#**        |POWSZECHNE          |Wersja zapoznawcza  |
-|**JavaScript**|POWSZECHNE          |Wersja zapoznawcza  |
+|**C#**        |POWSZECHNE          |Zapoznawcza  |
+|**JavaScript**|POWSZECHNE          |Zapoznawcza  |
 |**F#**        |POWSZECHNE          |         |
-|**Java**      |            |Wersja zapoznawcza  |
+|**Java**      |            |Zapoznawcza  |
 |**Python**    |Eksperymentalne|         |
 |**PHP**       |Eksperymentalne|         |
 |**TypeScript**|Eksperymentalne|         |
 |**Sekwencja**     |Eksperymentalne|         |
 |**Bash**      |Eksperymentalne|         |
-|**Program PowerShell**|Eksperymentalne|         |
+|**PowerShell**|Eksperymentalne|         |
 
 Aby uzyskać więcej informacji, zobacz [obsługiwane języki](https://docs.microsoft.com/azure/azure-functions/supported-languages).
 
@@ -61,7 +61,7 @@ Aby uzyskać więcej informacji, zobacz [plany usługi App Service](https://docs
 Istnieją trzy typowe sposoby tworzenia aplikacji funkcji.
 
 - Funkcje skryptów w portalu.
-- Tworzenie niezbędnych zasobów przy użyciu interfejsu wiersza polecenia platformy Azure (CLI).
+- Tworzenie niezbędnych zasobów przy użyciu interfejsu wiersza polecenia platformy Azure.
 - Twórz funkcje lokalnie przy użyciu ulubionego środowiska IDE i publikuj je na platformie Azure.
 
 Aby uzyskać więcej informacji na temat tworzenia funkcji skryptowej w portalu, zobacz [Tworzenie pierwszej funkcji w Azure Portal](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function).

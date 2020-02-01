@@ -4,12 +4,12 @@ description: Tworzenie architektury nowoczesnych aplikacji sieci Web przy użyci
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 4dd747293fba4c18c2d10738d36f4d98cfd3f5b9
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: bf346825c7e29831111fc11c836ca6b4a05a18ce
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926501"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920995"
 ---
 # <a name="common-client-side-web-technologies"></a>Typowe technologie internetowe po stronie klienta
 
@@ -24,7 +24,7 @@ Chociaż język HTML i CSS są stosunkowo stabilne, JavaScript, za pomocą struk
 
 HTML (HyperText Markup Language) to standardowy język znaczników używany do tworzenia stron sieci Web i aplikacji sieci Web. Jego elementy tworzą bloki konstrukcyjne stron, reprezentujące sformatowany tekst, obrazy, wejścia formularzy i inne struktury. Gdy przeglądarka wysyła żądanie do adresu URL, niezależnie od tego, czy pobierana jest strona, czy aplikacja, pierwszy zwrócony element jest dokumentem HTML. Ten dokument HTML może odwoływać się do lub zawierać dodatkowe informacje na temat wyglądu i układu w formie CSS lub zachowania w formie języka JavaScript.
 
-## <a name="css"></a>CSS
+## <a name="css"></a>{1&gt;CSS&lt;1}
 
 CSS (kaskadowe arkusze stylów) służy do kontrolowania wyglądu i układu elementów HTML. Style CSS mogą być stosowane bezpośrednio do elementu HTML, zdefiniowane oddzielnie na tej samej stronie lub zdefiniowane w osobnym pliku i przywoływane przez stronę. Style kaskadowo na podstawie sposobu ich używania do wybierania danego elementu HTML. Na przykład styl może dotyczyć całego dokumentu, ale zostałby zastąpiony przez styl, który ma zastosowanie do określonego elementu. Analogicznie, styl specyficzny dla elementu zostałby zastąpiony przez styl stosowany do klasy CSS, która została zastosowana do elementu, który z kolei zostałby zastąpiony przez styl przeznaczony dla określonego wystąpienia tego elementu (za pośrednictwem jego identyfikatora). Rysunek 6-1
 
@@ -98,7 +98,7 @@ Składniki są definiowane przy użyciu funkcji dekoratora @Component, która po
 
 Pracując ze składnikami i szablonami, a nie elementami modelu DOM, aplikacje kątowe mogą działać na wyższym poziomie abstrakcji i z mniej ogólnym kodem niż aplikacje zapisywane przy użyciu tylko języka JavaScript (nazywanego również "Wanili JS") lub jQuery. Kątowy nakłada również pewne kolejność organizowania plików skryptów po stronie klienta. Zgodnie z Konwencją aplikacje kątowe używają wspólnej struktury folderów z plikami skryptów modułów i składników znajdującymi się w folderze aplikacji. Skrypty kątowe związane z kompilowaniem, wdrażaniem i testowaniem aplikacji zwykle znajdują się w folderze wyższego poziomu.
 
-Kątowy sprawia również doskonałe użycie narzędzi interfejsu wiersza polecenia (CLI). Wprowadzenie do programowania kątowego lokalnie (przy założeniu, że masz już zainstalowaną usługę git i npm), składa się z prostego klonowania repozytorium z usługi GitHub i uruchamiania `npm install` i `npm start`. Poza tym, kątowy dostarcza własne narzędzie interfejsu wiersza polecenia, które może tworzyć projekty, dodawać pliki i pomagać w testowaniu, tworzeniu i wdrażaniu zadań. Ta wygodę dla narzędzi interfejsu wiersza polecenia sprawia, że jest to kątowe szczególnie zgodne z ASP.NET Core, które również oferuje doskonałą obsługę interfejsu wiersza polecenia.
+Aplikacje kątowe można opracowywać przy użyciu interfejsu wiersza polecenia. Wprowadzenie do programowania kątowego lokalnie (przy założeniu, że masz już zainstalowaną usługę git i npm), składa się z prostego klonowania repozytorium z usługi GitHub i uruchamiania `npm install` i `npm start`. Poza tym, kątowy udostępnia własny interfejs wiersza polecenia, który może tworzyć projekty, dodawać pliki i pomagać w testowaniu, tworzeniu i wdrażaniu zadań. Ten interfejs wiersza polecenia wygodę dla sprawia, że jest to szczególnie zgodne z ASP.NET Core, które również oferuje doskonałą obsługę interfejsu wiersza polecenia.
 
 Firma Microsoft opracowała aplikację referencyjną [eShopOnContainers](https://aka.ms/MicroservicesArchitecture), która obejmuje implementację spa. Ta aplikacja obejmuje moduły kątowe służące do zarządzania koszykiem zakupów online, ładowania i wyświetlania elementów z wykazu oraz do obsługi tworzenia zamówień. Przykładową aplikację można wyświetlić i pobrać z witryny [GitHub](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Web/WebSPA).
 

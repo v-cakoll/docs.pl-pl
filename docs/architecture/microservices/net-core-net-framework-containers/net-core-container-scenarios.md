@@ -2,12 +2,12 @@
 title: Kiedy należy wybrać oprogramowanie .NET Core dla kontenerów Docker
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Kiedy należy wybrać platformę .NET Core dla kontenerów platformy Docker
 ms.date: 09/11/2018
-ms.openlocfilehash: 54ed1b4bbb16352b8c99204383f85ffb25d62be7
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d17b6b7620f485f09f8f18ac792418a48ae40037
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296501"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920981"
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>Kiedy należy wybrać oprogramowanie .NET Core dla kontenerów Docker
 
@@ -27,9 +27,9 @@ Program .NET Core obsługuje również macOS jako platformę programistyczną. J
 
 [Visual Studio dla komputerów Mac](https://www.visualstudio.com/vs/visual-studio-mac/) to IDE, ewolucja Xamarin Studio, która działa w macOS i obsługuje tworzenie aplikacji opartych na platformie Docker. Powinno to być preferowany wybór dla deweloperów pracujących na komputerach Mac, którzy chcą również korzystać z zaawansowanego środowiska IDE.
 
-Możesz również użyć [Visual Studio Code](https://code.visualstudio.com/) (vs Code) w systemach MacOS, Linux i Windows. VS Code w pełni obsługuje platformę .NET Core, w tym IntelliSense i debugowanie. Ponieważ VS Code jest lekkim edytorem, można go użyć do tworzenia kontenerów aplikacji na komputerach Mac w połączeniu z [interfejsem wiersza polecenia platformy](../../../core/tools/index.md)Docker i .NET Core. Możesz również wskazać platformę .NET Core za pomocą większości edytorów innych firm, takich jak subwapno, Emacs:, VI i projekt typu open source OmniSharp, który oferuje również obsługę technologii IntelliSense.
+Możesz również użyć [Visual Studio Code](https://code.visualstudio.com/) w systemach MacOS, Linux i Windows. Visual Studio Code w pełni obsługuje platformę .NET Core, w tym IntelliSense i debugowanie. Ponieważ VS Code jest lekkim edytorem, można go użyć do tworzenia kontenerów aplikacji na komputerach Mac w połączeniu z interfejsem wiersza polecenia platformy Docker i [interfejs wiersza polecenia platformy .NET Core](../../../core/tools/index.md). Możesz również wskazać platformę .NET Core za pomocą większości edytorów innych firm, takich jak subwapno, Emacs:, VI i projekt typu open source OmniSharp, który oferuje również obsługę technologii IntelliSense.
 
-Oprócz środowisk IDE i edytorów, można użyć narzędzi [interfejs wiersza polecenia platformy .NET Core](../../../core/tools/index.md) dla wszystkich obsługiwanych platform.
+Oprócz środowisk IDE i edytorów, można użyć [interfejs wiersza polecenia platformy .NET Core](../../../core/tools/index.md) dla wszystkich obsługiwanych platform.
 
 ## <a name="using-containers-for-new-green-field-projects"></a>Używanie kontenerów dla nowych projektów ("zielony-pole")
 

@@ -2,12 +2,12 @@
 title: Obsługa zanieczyszczonych komunikatów w usłudze MSMQ 4.0
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: 71ce6d3df69164aa0d565539bad5e843a7ed6a47
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: cc4da0deea0de2cd8b3bb8e8f2ba9b8a17e3cc60
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337500"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919396"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Obsługa zanieczyszczonych komunikatów w usłudze MSMQ 4.0
 Ten przykład pokazuje, jak przeprowadzić obsługę skażonych komunikatów w usłudze. Ten przykład jest oparty na przykładowym [wiązaniem usługi MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) . Ten przykład używa `netMsmqBinding`. Usługa to samodzielna aplikacja konsolowa, która umożliwia obserwowanie usługi do odebrania komunikatów znajdujących się w kolejce.
@@ -18,7 +18,7 @@ Ten przykład pokazuje, jak przeprowadzić obsługę skażonych komunikatów w u
 
  Na podstawie wersji usługi MSMQ, usługa msmqbinding obsługuje ograniczone wykrywanie do pełnego wykrywania skażonych komunikatów. Po wykryciu komunikatu jako trującego można go obsłużyć na kilka sposobów. Ponownie na podstawie wersji usługi MSMQ, usługa msmqbinding obsługuje ograniczoną obsługę do pełnej obsługi skażonych komunikatów.
 
- Ten przykład ilustruje ograniczone obiekty trujące zapewniane w systemie Windows Server 2003 i na platformie [!INCLUDE[wxp](../../../../includes/wxp-md.md)] oraz w ramach kompleksowych obiektów trujących zapewnianych w systemie Windows Vista. W obu przykładach celem jest przeniesienie skażonego komunikatu z kolejki do innej kolejki, która następnie może być serwisowana przez trującą usługę komunikatów.
+ Ten przykład ilustruje ograniczoną liczbę trujących obiektów zapewnianych na platformie Windows Server 2003 i Windows XP oraz w pełnych obiektach trujących zapewnianych w systemie Windows Vista. W obu przykładach celem jest przeniesienie skażonego komunikatu z kolejki do innej kolejki, która następnie może być serwisowana przez trującą usługę komunikatów.
 
 ## <a name="msmq-v40-poison-handling-sample"></a>Przykład obsługi trującej usługi MSMQ v 4.0
  W systemie Windows Vista usługa MSMQ udostępnia funkcję podkolejki trującej, która może być używana do przechowywania skażonych komunikatów. Ten przykład ilustruje najlepsze rozwiązanie w zakresie postępowania z skażonymi komunikatami przy użyciu systemu Windows Vista.

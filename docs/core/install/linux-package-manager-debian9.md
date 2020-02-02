@@ -4,12 +4,12 @@ description: Zainstaluj zestaw .NET Core SDK i środowisko uruchomieniowe w prog
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 7a9d4524661e1230af7d1d50a4d8a60ad7774a68
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 32b152ff9be5135cf0ca7f8914bc9ee4f78000be
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740708"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920851"
 ---
 # <a name="debian-9-package-manager---install-net-core"></a>Menedżer pakietów Debian 9 — Instalowanie programu .NET Core
 
@@ -17,7 +17,7 @@ ms.locfileid: "75740708"
 
 W tym artykule opisano, jak za pomocą Menedżera pakietów zainstalować platformę .NET Core w systemie Debian 9. Jeśli instalujesz środowisko uruchomieniowe, zalecamy zainstalowanie [ASP.NET Core środowiska uruchomieniowego](#install-the-aspnet-core-runtime), ponieważ zawiera on zarówno środowisko uruchomieniowe programu .NET Core, jak i ASP.NET Core.
 
-## <a name="register-microsoft-key-and-feed"></a>Rejestrowanie klucza firmy Microsoft i źródła danych
+## <a name="register-microsoft-key-and-feed"></a>Zarejestruj klucz i źródło danych firmy Microsoft
 
 Przed zainstalowaniem programu .NET należy:
 
@@ -25,7 +25,7 @@ Przed zainstalowaniem programu .NET należy:
 - Zarejestruj repozytorium produktów.
 - Zainstaluj wymagane zależności.
 
-Te operacje należy wykonać tylko jeden raz na każdej maszynie.
+Należy to zrobić tylko raz dla każdego komputera.
 
 Otwórz Terminal i uruchom następujące polecenia.
 
@@ -74,3 +74,11 @@ sudo apt-get install dotnet-runtime-3.1
 ## <a name="how-to-install-other-versions"></a>Jak zainstalować inne wersje
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
+
+## <a name="troubleshoot-the-package-manager"></a>Rozwiązywanie problemów z menedżerem pakietów
+
+Ta sekcja zawiera informacje o typowych błędach, które mogą wystąpić podczas korzystania z Menedżera pakietów w celu zainstalowania platformy .NET Core.
+
+### <a name="failed-to-fetch"></a>Nie można pobrać
+
+[!INCLUDE [package-manager-failed-to-fetch-deb](includes/package-manager-failed-to-fetch-deb.md)]

@@ -1,23 +1,23 @@
 ---
-title: Rozpoczynanie pracy z platformą .NET Core przy użyciu interfejsu wiersza polecenia interfejs wiersza polecenia platformy .NET Core
-description: Samouczek krok po kroku pokazujący, jak rozpocząć pracę z platformą .NET Core w systemie Windows, Linux lub macOS przy użyciu interfejsu wiersza polecenia (CLI) platformy .NET Core.
+title: Rozpoczynanie pracy z platformą .NET Core przy użyciu interfejsu wiersza polecenia
+description: Samouczek krok po kroku pokazujący, jak rozpocząć pracę z platformą .NET Core w systemie Windows, Linux lub macOS przy użyciu interfejs wiersza polecenia platformy .NET Core.
 author: thraka
 ms.author: adegeo
 ms.date: 12/05/2019
 ms.technology: dotnet-cli
 ms.custom: updateeachrelease
-ms.openlocfilehash: 4285ed3c0488ea615ca89b0b771bf09c8c29b318
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 6e1c7881aa415ea54307d80214001a2f0fe5b4a6
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76739127"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920466"
 ---
-# <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Rozpoczynanie pracy z platformą .NET Core w systemie Windows/Linux/macOS przy użyciu wiersza polecenia
+# <a name="get-started-with-net-core-using-the-net-core-cli"></a>Rozpoczynanie pracy z platformą .NET Core przy użyciu interfejs wiersza polecenia platformy .NET Core
 
-W tym artykule pokazano, jak rozpocząć tworzenie aplikacji dla wielu platform na maszynie przy użyciu narzędzi interfejs wiersza polecenia platformy .NET Core.
+W tym artykule opisano sposób rozpoczynania opracowywania aplikacji .NET Core, które działają w systemach Windows, Linux i macOS przy użyciu interfejs wiersza polecenia platformy .NET Core.
 
-Jeśli nie znasz zestawu narzędzi interfejs wiersza polecenia platformy .NET Core, zapoznaj się z tematem [zestaw .NET Core SDK Omówienie](../tools/index.md).
+Jeśli nie znasz interfejs wiersza polecenia platformy .NET Core, zapoznaj się z tematem [interfejs wiersza polecenia platformy .NET Core Omówienie](../tools/index.md).
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -194,6 +194,6 @@ I to wszystko! Teraz możesz zacząć korzystać z podstawowych pojęć zamieszc
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Organizowanie i testowanie projektów przy użyciu narzędzi interfejs wiersza polecenia platformy .NET Core](testing-with-cli.md)
-- [Publikowanie aplikacji platformy .NET Core za pomocą interfejsu wiersza polecenia](../deploying/deploy-with-cli.md)
-- [Dowiedz się więcej o wdrażaniu aplikacji](../deploying/index.md)
+- [Organizowanie i testowanie projektów przy użyciu interfejs wiersza polecenia platformy .NET Core](testing-with-cli.md)
+- [Publikowanie aplikacji platformy .NET Core za pomocą interfejs wiersza polecenia platformy .NET Core](../deploying/deploy-with-cli.md)
+- [Wdrażanie aplikacji .NET core](../deploying/index.md)

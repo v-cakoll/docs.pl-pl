@@ -2,12 +2,12 @@
 title: Migrowanie z środowiska DNX do interfejs wiersza polecenia platformy .NET Core
 description: Przeprowadź migrację z używania narzędzi środowiska DNX, aby interfejs wiersza polecenia platformy .NET Core narzędzia.
 ms.date: 06/20/2016
-ms.openlocfilehash: 91a43ffda31b34332d2e545a90c857221aa162c4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e15e7ce10bb7a36deb2acd2abb9a0bd4ec8cd4a9
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715526"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920623"
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>Migrowanie z środowiska DNX do interfejs wiersza polecenia platformy .NET Core (Project. JSON)
 
@@ -30,9 +30,9 @@ Istnieją pewne ogólne zmiany w narzędziach, które powinny być opisane w pie
 ### <a name="no-more-dnvm"></a>Nie ma więcej DNVM
 DNVM, Short for *dotnet Version Manager* to skrypt bash/PowerShell służący do instalowania środowiska DNX na komputerze. Umożliwia to użytkownikom uzyskanie potrzebnych przez nich środowiska DNX z określonych przez siebie kanałów informacyjnych (lub ich domyślnych), a także oznaczenie niektórych środowiska DNX "Active", co spowodowałoby umieszczenie go w $PATH dla danej sesji. Pozwoli to na korzystanie z różnych narzędzi.
 
-DNVM została wycofana, ponieważ jej zestaw funkcji został nadmiarowy przez zmiany wprowadzone w narzędziach interfejs wiersza polecenia platformy .NET Core.
+DNVM została wycofana, ponieważ jej zestaw funkcji został wykonany nadmiarowy przez zmiany wprowadzone w interfejs wiersza polecenia platformy .NET Core.
 
-Narzędzia interfejsu wiersza polecenia są spakowane na dwa główne sposoby:
+Interfejs wiersza polecenia jest spakowany na dwa sposoby:
 
 1. Natywne Instalatory dla danej platformy
 2. Skrypt instalacji dla innych sytuacji (takich jak serwery CI)
@@ -69,7 +69,7 @@ DNU został dostarczony z koncepcją o nazwie "polecenia globalne". Są to głó
 Interfejs wiersza polecenia nie obsługuje tego pojęcia. Jednak jest to obsługiwane przez Dodawanie poleceń dla projektu, które mogą być wywoływane przy użyciu znanej składni `dotnet <command>`.
 
 ### <a name="installing-dependencies"></a>Instalowanie zależności
-Począwszy od wersji 1 narzędzia interfejs wiersza polecenia platformy .NET Core nie mają polecenia `install` do instalowania zależności. Aby można było zainstalować pakiet z programu NuGet, należy go dodać jako zależność do pliku `project.json`, a następnie uruchomić `dotnet restore` ([patrz Uwaga](#dotnet-restore-note)).
+Począwszy od wersji 1 interfejs wiersza polecenia platformy .NET Core nie ma `install` polecenia do instalowania zależności. Aby można było zainstalować pakiet z programu NuGet, należy go dodać jako zależność do pliku `project.json`, a następnie uruchomić `dotnet restore` ([patrz Uwaga](#dotnet-restore-note)).
 
 ### <a name="running-your-code"></a>Uruchamianie kodu
 Istnieją dwa podstawowe sposoby uruchamiania kodu. Jeden z nich pochodzi ze źródła z `dotnet run`. W przeciwieństwie do `dnx run`, nie będzie to żadnej kompilacji w pamięci. Faktycznie wywoła `dotnet build`, aby skompilować kod, a następnie uruchomić skompilowany plik binarny.
@@ -84,7 +84,7 @@ Oprócz korzystania z nowych poleceń podczas pracy z kodem, istnieją trzy gł�
 3. Migrowanie dowolnych interfejsów API środowiska DNX do ich odpowiedników BCL.
 
 ### <a name="changing-the-globaljson-file"></a>Zmiana pliku Global. JSON
-Plik `global.json` działa jak plik rozwiązania dla projektów RC1 i RC2 (lub nowszych). Aby narzędzia interfejsu wiersza polecenia (a także program Visual Studio) rozróżniać między wersjami RC1 i nowszymi, używają właściwości `"sdk": { "version" }`, aby ustalić, który projekt jest w wersji RC1 lub nowszej. Jeśli `global.json` nie ma tego węzła, zakłada się, że jest to najnowsza wartość.
+Plik `global.json` działa jak plik rozwiązania dla projektów RC1 i RC2 (lub nowszych). Aby interfejs wiersza polecenia platformy .NET Core (jak również program Visual Studio) do rozróżniania między wersjami RC1 i nowszymi, używają właściwości `"sdk": { "version" }`, aby ustalić, który projekt jest w wersji RC1 lub nowszej. Jeśli `global.json` nie ma tego węzła, zakłada się, że jest to najnowsza wartość.
 
 Aby zaktualizować plik `global.json`, Usuń właściwość lub ustaw ją na dokładną wersję narzędzi, których chcesz użyć, w tym przypadku **1.0.0-preview2-003121**:
 

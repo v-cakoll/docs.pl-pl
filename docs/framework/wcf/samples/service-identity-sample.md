@@ -2,12 +2,12 @@
 title: Tożsamość usług — przykład
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
-ms.openlocfilehash: 375246127b6b39440360f48fc7b24bd0388a35e5
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 868bd6e0ac7429224462c973c1c48132ec3860ba
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347924"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919363"
 ---
 # <a name="service-identity-sample"></a>Tożsamość usług — przykład
 Ta przykładowa tożsamość usługi pokazuje, jak ustawić tożsamość dla usługi. W czasie projektowania klient może pobrać tożsamość przy użyciu metadanych usługi, a następnie w czasie wykonywania klient może uwierzytelnić tożsamość usługi. Pojęcie tożsamości usługi polega na umożliwieniu klientowi uwierzytelnienia usługi przed wywołaniem jakiejkolwiek z jej operacji, co chroni klienta przed nieuwierzytelnionymi wywołaniami. W przypadku bezpiecznego połączenia usługa uwierzytelnia także poświadczenia klienta przed zezwoleniem na dostęp do niego, ale nie jest to fokus tego przykładu. Zapoznaj się z przykładami w [kliencie](../../../../docs/framework/wcf/samples/client.md) , który pokazuje uwierzytelnianie serwera.
@@ -115,7 +115,7 @@ class CustomIdentityVerifier : IdentityVerifier
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>Aby uruchomić przykład na tym samym komputerze
 
-1. W systemie [!INCLUDE[wxp](../../../../includes/wxp-md.md)] lub Windows Vista Zaimportuj plik certyfikatu Identity. pfx w folderze rozwiązania tożsamości do magazynu certyfikatów LocalMachine/my (Personal) za pomocą narzędzia przystawek programu MMC. Ten plik jest chroniony hasłem. Podczas importowania zostanie wyświetlony monit o podanie hasła. Wpisz `xyz` w polu hasło. Aby uzyskać więcej informacji, zobacz temat [How to: View Certificates with MMC przystawka](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md) . Po wykonaniu tej czynności uruchom setup. bat w wiersz polecenia dla deweloperów dla programu Visual Studio z uprawnieniami administratora, które kopiuje ten certyfikat do magazynu CurrentUser/zaufane osoby do użytku na kliencie.
+1. W systemie Windows XP lub Windows Vista Zaimportuj plik certyfikatu Identity. pfx w folderze rozwiązania tożsamości do magazynu certyfikatów LocalMachine/my (Personal) za pomocą narzędzia przystawek programu MMC. Ten plik jest chroniony hasłem. Podczas importowania zostanie wyświetlony monit o podanie hasła. Wpisz `xyz` w polu hasło. Aby uzyskać więcej informacji, zobacz temat [How to: View Certificates with MMC przystawka](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md) . Po wykonaniu tej czynności uruchom setup. bat w wiersz polecenia dla deweloperów dla programu Visual Studio z uprawnieniami administratora, które kopiuje ten certyfikat do magazynu CurrentUser/zaufane osoby do użytku na kliencie.
 
 2. W systemie Windows Server 2003 uruchom setup. bat z przykładowego folderu instalacyjnego w wierszu polecenia programu Visual Studio 2012 z uprawnieniami administratora. Spowoduje to zainstalowanie wszystkich certyfikatów wymaganych do uruchomienia przykładu.
 

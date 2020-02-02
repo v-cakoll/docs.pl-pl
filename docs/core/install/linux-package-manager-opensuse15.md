@@ -4,12 +4,12 @@ description: Zainstaluj zestaw .NET Core SDK i środowisko uruchomieniowe na ope
 author: thraka
 ms.author: adegeo
 ms.date: 12/26/2019
-ms.openlocfilehash: ae0f6664c0545ceb047cd9b110fe3f26740e5816
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: aaece5e3554ab567cf82c23265c8fba1656298d8
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116165"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920774"
 ---
 # <a name="opensuse-15-package-manager---install-net-core"></a>openSUSE 15 Package Manager — Instalowanie programu .NET Core
 
@@ -17,7 +17,7 @@ ms.locfileid: "76116165"
 
 W tym artykule opisano, jak za pomocą Menedżera pakietów zainstalować platformę .NET Core w systemie openSUSE 15. Jeśli instalujesz środowisko uruchomieniowe, zalecamy zainstalowanie [ASP.NET Core środowiska uruchomieniowego](#install-the-aspnet-core-runtime), ponieważ zawiera on zarówno środowisko uruchomieniowe programu .NET Core, jak i ASP.NET Core.
 
-## <a name="register-microsoft-key-and-feed"></a>Rejestrowanie klucza firmy Microsoft i źródła danych
+## <a name="register-microsoft-key-and-feed"></a>Zarejestruj klucz i źródło danych firmy Microsoft
 
 Przed zainstalowaniem programu .NET należy:
 
@@ -25,7 +25,7 @@ Przed zainstalowaniem programu .NET należy:
 - Zarejestruj repozytorium produktów.
 - Zainstaluj wymagane zależności.
 
-Te operacje należy wykonać tylko jeden raz na każdej maszynie.
+Należy to zrobić tylko raz dla każdego komputera.
 
 Otwórz Terminal i uruchom następujące polecenia.
 
@@ -64,3 +64,11 @@ sudo zypper install dotnet-runtime-3.1
 ## <a name="how-to-install-other-versions"></a>Jak zainstalować inne wersje
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
+
+## <a name="troubleshoot-the-package-manager"></a>Rozwiązywanie problemów z menedżerem pakietów
+
+Ta sekcja zawiera informacje o typowych błędach, które mogą wystąpić podczas korzystania z Menedżera pakietów w celu zainstalowania platformy .NET Core.
+
+### <a name="failed-to-fetch"></a>Nie można pobrać
+
+[!INCLUDE [package-manager-failed-to-fetch-rpm](includes/package-manager-failed-to-fetch-rpm.md)]

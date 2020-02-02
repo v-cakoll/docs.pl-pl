@@ -1,21 +1,21 @@
 ---
 title: Interfejs wiersza polecenia platformy .NET Core model rozszerzalności
-description: Dowiedz się, jak można rozłożyć narzędzia interfejsu wiersza polecenia (CLI).
+description: Dowiedz się, w jaki sposób można rozciągnąć interfejs wiersza polecenia platformy .NET Core.
 ms.date: 04/12/2017
-ms.openlocfilehash: 4f49735fa94b2a7ee32e0d80590f9e680edeff16
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 74da895fb3a3f6c77640a2b9a64acdb2894a954b
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714182"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920516"
 ---
-# <a name="net-core-cli-tools-extensibility-model"></a>Model rozszerzalności narzędzi interfejs wiersza polecenia platformy .NET Core
+# <a name="net-core-cli-extensibility-model"></a>Interfejs wiersza polecenia platformy .NET Core model rozszerzalności
 
-W tym dokumencie opisano różne sposoby rozszerzone narzędzia interfejsu wiersza polecenia (CLI) platformy .NET Core oraz wyjaśniono scenariusze, które obejmują każdy z nich.
+W tym artykule opisano różne sposoby, w których można zwiększyć interfejs wiersza polecenia platformy .NET Core i wyjaśnić scenariusze, które obejmują każdy z nich.
 Zobaczysz, jak korzystać z narzędzi, a także jak tworzyć różne typy narzędzi.
 
-## <a name="how-to-extend-cli-tools"></a>Jak rozciągnąć narzędzia interfejsu wiersza polecenia
-Narzędzia interfejsu wiersza polecenia można rozszerzyć na trzy główne sposoby:
+## <a name="how-to-extend-the-cli"></a>Jak zwiększyć interfejs wiersza polecenia
+Interfejs wiersza polecenia można rozszerzyć na trzy główne sposoby:
 
 1. [Za pośrednictwem pakietów NuGet dla poszczególnych projektów](#per-project-based-extensibility)
 
@@ -79,7 +79,7 @@ Możesz również zobaczyć [implementację narzędzi używanych](https://github
 
 ## <a name="custom-targets"></a>Niestandardowe elementy docelowe
 
-Pakiet NuGet ma możliwość [spakowania niestandardowych obiektów docelowych programu MSBuild i plików props](/nuget/create-packages/creating-a-package#include-msbuild-props-and-targets-in-a-package). Dzięki przenoszeniu narzędzi interfejs wiersza polecenia platformy .NET Core do korzystania z programu MSBuild ten sam mechanizm rozszerzania ma teraz zastosowanie do projektów .NET Core. Tego typu rozszerzalność należy użyć, gdy chcesz rozszerzać proces kompilacji lub Kiedy chcesz uzyskać dostęp do dowolnego artefaktu w procesie kompilacji, na przykład wygenerowanych plików, lub chcesz sprawdzić konfigurację, w której jest wywoływana kompilacja. itd.
+Pakiet NuGet ma możliwość [spakowania niestandardowych obiektów docelowych programu MSBuild i plików props](/nuget/create-packages/creating-a-package#include-msbuild-props-and-targets-in-a-package). Po przeniesieniu środowiska .NET Core do korzystania z programu MSBuild ten sam mechanizm rozszerzania ma teraz zastosowanie do projektów .NET Core. Tego typu rozszerzalność należy użyć, gdy chcesz rozszerzać proces kompilacji lub Kiedy chcesz uzyskać dostęp do dowolnego artefaktu w procesie kompilacji, na przykład wygenerowanych plików, lub chcesz sprawdzić konfigurację, w której jest wywoływana kompilacja. itd.
 
 W poniższym przykładzie można zobaczyć docelowy plik projektu przy użyciu składni `csproj`. Powoduje to nadanie [`dotnet pack`](dotnet-pack.md) polecenia do pakowania, umieszczenia plików docelowych oraz zestawów w folderze *kompilacji* wewnątrz pakietu. Zwróć uwagę na element `<ItemGroup>`, który ma właściwość `Label` ustawioną na `dotnet pack instructions`, i element docelowy zdefiniowany poniżej.
 

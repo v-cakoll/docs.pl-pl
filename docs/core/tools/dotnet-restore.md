@@ -2,12 +2,12 @@
 title: polecenie dotnet restore
 description: Informacje o sposobie przywracania zależności i narzędzi specyficznych dla projektu przy użyciu polecenia dotnet restore.
 ms.date: 05/29/2018
-ms.openlocfilehash: 82dd85e340a4cb520f781d977b0798b0f532a088
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: dc73b7b2482d25872be922e68103fb86067146f7
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75340435"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920561"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -45,7 +45,7 @@ Polecenie `dotnet restore` używa narzędzia NuGet do przywracania zależności 
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-Aby przywrócić zależności, program NuGet potrzebuje kanałów informacyjnych, w których znajdują się pakiety. Kanały informacyjne są zazwyczaj udostępniane za pośrednictwem pliku konfiguracyjnego *NuGet. config* . Domyślny plik konfiguracji jest dostarczany podczas instalacji narzędzi interfejsu wiersza polecenia. Możesz określić dodatkowe źródła danych, tworząc własny plik *NuGet. config* w katalogu projektu. Można zastąpić źródła danych *NuGet. config* opcją `-s`.
+Aby przywrócić zależności, program NuGet potrzebuje kanałów informacyjnych, w których znajdują się pakiety. Kanały informacyjne są zazwyczaj udostępniane za pośrednictwem pliku konfiguracyjnego *NuGet. config* . Domyślny plik konfiguracji jest dostarczany, gdy zainstalowano zestaw .NET Core SDK. Możesz określić dodatkowe źródła danych, tworząc własny plik *NuGet. config* w katalogu projektu. Można zastąpić źródła danych *NuGet. config* opcją `-s`.
 
 W przypadku zależności należy określić miejsce, w którym przywrócone pakiety są umieszczane podczas operacji przywracania przy użyciu argumentu `--packages`. Jeśli nie zostanie określony, zostanie użyta domyślna pamięć podręczna pakietów NuGet, która znajduje się w katalogu `.nuget/packages` w katalogu macierzystym użytkownika we wszystkich systemach operacyjnych. Na przykład */home/user1* na system Linux lub *C:\Users\user1* w systemie Windows.
 

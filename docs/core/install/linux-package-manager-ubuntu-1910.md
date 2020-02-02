@@ -4,12 +4,12 @@ description: Zainstaluj zestaw .NET Core SDK i środowisko uruchomieniowe w syst
 author: thraka
 ms.author: adegeo
 ms.date: 01/16/2020
-ms.openlocfilehash: afba761e2237ed84528157841e538a9b44d9a966
-ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
+ms.openlocfilehash: b8fec2afa6f03e3dabbf1ff449431759087163ba
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76164085"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920651"
 ---
 # <a name="ubuntu-1910-package-manager---install-net-core"></a>Menedżer pakietów Ubuntu 19,10 — Instalowanie programu .NET Core
 
@@ -17,7 +17,7 @@ ms.locfileid: "76164085"
 
 W tym artykule opisano sposób użycia Menedżera pakietów do zainstalowania programu .NET Core w systemie Ubuntu 19,10. Jeśli instalujesz środowisko uruchomieniowe, zalecamy zainstalowanie [ASP.NET Core środowiska uruchomieniowego](#install-the-aspnet-core-runtime), ponieważ zawiera on zarówno środowisko uruchomieniowe programu .NET Core, jak i ASP.NET Core.
 
-## <a name="register-microsoft-key-and-feed"></a>Rejestrowanie klucza firmy Microsoft i źródła danych
+## <a name="register-microsoft-key-and-feed"></a>Zarejestruj klucz i źródło danych firmy Microsoft
 
 Przed zainstalowaniem programu .NET należy:
 
@@ -25,7 +25,7 @@ Przed zainstalowaniem programu .NET należy:
 - Zarejestruj repozytorium produktów.
 - Zainstaluj wymagane zależności.
 
-Te operacje należy wykonać tylko jeden raz na każdej maszynie.
+Należy to zrobić tylko raz dla każdego komputera.
 
 Otwórz Terminal i uruchom następujące polecenia.
 
@@ -82,6 +82,10 @@ sudo apt-get install dotnet-runtime-3.1
 
 ## <a name="troubleshoot-the-package-manager"></a>Rozwiązywanie problemów z menedżerem pakietów
 
+Ta sekcja zawiera informacje o typowych błędach, które mogą wystąpić podczas korzystania z Menedżera pakietów w celu zainstalowania platformy .NET Core.
+
+### <a name="unable-to-locate"></a>Nie można zlokalizować
+
 Jeśli zostanie wyświetlony komunikat o błędzie podobny do następującego: **nie można zlokalizować pakietu {pakiet .NET Core}** , uruchom następujące polecenia.
 
 ```bash
@@ -104,3 +108,7 @@ sudo apt-get install -y apt-transport-https
 sudo apt-get update
 sudo apt-get install {the .NET Core package}
 ```
+
+### <a name="failed-to-fetch"></a>Nie można pobrać
+
+[!INCLUDE [package-manager-failed-to-fetch-deb](includes/package-manager-failed-to-fetch-deb.md)]

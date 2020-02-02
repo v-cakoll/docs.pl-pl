@@ -4,14 +4,14 @@ description: W tym artykule opisano, jak włączyć uzupełnianie kart dla inter
 author: thraka
 ms.author: adegeo
 ms.date: 11/03/2019
-ms.openlocfilehash: 8c5d6a254db5ba21417ba45122ed0d7cb093c7c3
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 649b723c2abfa74443a16914594284a77e0eafc0
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739316"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920532"
 ---
-# <a name="how-to-enable-tab-completion-for-net-core-cli"></a>Jak włączyć uzupełnianie kart dla interfejs wiersza polecenia platformy .NET Core
+# <a name="how-to-enable-tab-completion-for-the-net-core-cli"></a>Jak włączyć uzupełnianie kart dla interfejs wiersza polecenia platformy .NET Core
 
 Począwszy od zestawu SDK platformy .NET Core 2,0, interfejs wiersza polecenia platformy .NET Core obsługuje uzupełnianie kart. W tym artykule opisano sposób konfigurowania uzupełniania tabulatorów dla trzech powłok, programu PowerShell, bash i ZSH. Inne powłoki mogą obsługiwać Autouzupełnianie. Zapoznaj się z dokumentacją dotyczącą sposobu konfigurowania automatycznego uzupełniania, kroki powinny być podobne do kroków opisanych w tym artykule.
 

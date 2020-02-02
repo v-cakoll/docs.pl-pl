@@ -2,12 +2,12 @@
 title: Mechanizmy rozpoznawania elementów równorzędnych
 ms.date: 03/30/2017
 ms.assetid: d86d12a1-7358-450f-9727-b6afb95adb9c
-ms.openlocfilehash: 33afffcbf11d757dfd003d1fd2bc9a17a3047a69
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 3bcdeffac3673c1c464a35d8b6e089efd7394907
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837379"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919241"
 ---
 # <a name="peer-resolvers"></a>Mechanizmy rozpoznawania elementów równorzędnych
 Aby można było połączyć się z siatką, węzeł równorzędny wymaga adresów IP innych węzłów. Adresy IP można uzyskać, kontaktując się z usługą rozpoznawania nazw, która pobiera identyfikator sieci i zwraca listę adresów odpowiadającą węzłom zarejestrowanym w określonym IDENTYFIKATORze sieci. Mechanizm rozwiązywania konfliktów zachowuje listę zarejestrowanych adresów tworzonych przez każdy węzeł sieci w rejestrze w usłudze.  
@@ -20,7 +20,7 @@ Aby można było połączyć się z siatką, węzeł równorzędny wymaga adres�
  Domyślnie kanał równorzędny używa usługi rozpoznawania równorzędnego PNRP do odnajdywania elementów równorzędnych i sąsiadów w sieci. W przypadku sytuacji/platform, w których usługa PNRP jest niedostępna lub możliwe, Windows Communication Foundation (WCF) stanowi alternatywną, opartą na serwerze usługę odnajdywania — <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>. Możesz również jawnie zdefiniować niestandardową usługę programu rozpoznawania nazw, pisząc klasę implementującą interfejs <xref:System.ServiceModel.PeerResolvers.IPeerResolverContract>.  
   
 ### <a name="peer-name-resolution-protocol-pnrp"></a>Protokół rozpoznawania nazw równorzędnych (PNRP)  
- Protokół PNRP, domyślny program rozpoznawania nazw dla systemu Windows Vista, to dystrybuowana, bezserwerowa usługa resolvera. Protokołu PNRP można także używać na [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] przez zainstalowanie zaawansowanego pakietu sieciowego. Każdy klient z uruchomioną tą samą wersją protokołu PNRP może zlokalizować siebie nawzajem, pod warunkiem, że spełniają określone warunki (na przykład brak interwencji firmowej zapory). Należy zauważyć, że wersja protokołu PNRP dostarczana z systemem Windows Vista jest nowsza niż wersja zawarta w zaawansowanym pakiecie sieciowym. Zapoznaj się z centrum pobierania Microsoft, aby uzyskać aktualizacje protokołu PNRP dla [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)].  
+ Protokół PNRP, domyślny program rozpoznawania nazw dla systemu Windows Vista, to dystrybuowana, bezserwerowa usługa resolvera. Protokołu PNRP można także używać w systemie Windows XP z dodatkiem SP2 przez zainstalowanie zaawansowanego pakietu sieciowego. Każdy klient z uruchomioną tą samą wersją protokołu PNRP może zlokalizować siebie nawzajem, pod warunkiem, że spełniają określone warunki (na przykład brak interwencji firmowej zapory). Należy zauważyć, że wersja protokołu PNRP dostarczana z systemem Windows Vista jest nowsza niż wersja zawarta w zaawansowanym pakiecie sieciowym. Zapoznaj się z centrum pobierania Microsoft, aby uzyskać aktualizacje protokołu PNRP dla systemu Windows XP z dodatkiem SP2.  
   
 ### <a name="custom-resolver-services"></a>Niestandardowe usługi rozpoznawania nazw  
  Gdy usługa PNRP jest niedostępna lub chcesz uzyskać pełną kontrolę nad kształtami siatki, możesz użyć niestandardowej, opartej na serwerze usługi rozpoznawania nazw. Tę usługę można jawnie zdefiniować, pisząc klasę resolvera implementującą interfejs <xref:System.ServiceModel.PeerResolvers.IPeerResolverContract> lub używając domyślnej implementacji wbudowanej <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>.  

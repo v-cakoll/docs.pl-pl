@@ -1,22 +1,22 @@
 ---
-title: Przegląd zestaw .NET Core SDK
+title: Omówienie zestawu .NET Core SDK
 description: Dowiedz się więcej na temat zestaw .NET Core SDK, czyli zestawu bibliotek i narzędzi służących do tworzenia projektów platformy .NET Core.
 ms.date: 07/31/2019
 ms.technology: dotnet-cli
-ms.openlocfilehash: f4c4982bacaf58c1b8c7db6c5319bd314e89b7ed
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 09b32b0065326af54da935a810764f93248618af
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566242"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920598"
 ---
-# <a name="net-core-sdk-overview"></a>Przegląd zestaw .NET Core SDK
+# <a name="net-core-sdk-overview"></a>Omówienie zestawu .NET Core SDK
 
 Zestaw .NET Core SDK to zestaw bibliotek i narzędzi umożliwiających deweloperom tworzenie aplikacji i bibliotek platformy .NET Core. Zawiera następujące składniki, które są używane do kompilowania i uruchamiania aplikacji:
 
-- Narzędzia interfejs wiersza polecenia platformy .NET Core.
+- Interfejs wiersza polecenia platformy .NET Core.
 - Biblioteki i środowisko uruchomieniowe platformy .NET Core.
-- `dotnet` [Sterownik](tools/index.md#driver).
+- [Sterownik](tools/index.md#driver)`dotnet`.
 
 ## <a name="acquiring-the-net-core-sdk"></a>Uzyskiwanie zestaw .NET Core SDK
 
@@ -29,11 +29,11 @@ Natywne Instalatory są przeznaczone głównie dla maszyn dewelopera. Zestaw SDK
 
 Zainstaluj skrypty, z drugiej strony, nie wymagaj uprawnień administracyjnych. Jednak nie instalują one również wymagań wstępnych dotyczących maszyny; należy ręcznie zainstalować wszystkie wymagania wstępne. Skrypty są przeznaczone głównie do konfigurowania serwerów kompilacji lub instalowania narzędzi bez uprawnień administratora (należy zanotować powyższe zastrzeżenie dotyczące wymagań wstępnych). Więcej informacji można znaleźć w artykule [Informacje o skrypcie instalacji](tools/dotnet-install-script.md) . Jeśli interesuje Cię sposób konfigurowania zestawu SDK na serwerze kompilacji CI, zobacz artykuł [Using zestaw .NET Core SDK and Tools in Continuous Integration (ci)](tools/using-ci-with-cli.md) .
 
-Domyślnie zestaw SDK jest instalowany w sposób "Side-by-side" (SxS), co oznacza, że wiele wersji narzędzi interfejsu wiersza polecenia może współistnieć w danym momencie na pojedynczym komputerze. Sposób pobierania wersji podczas uruchamiania poleceń interfejsu wiersza polecenia znajduje się bardziej szczegółowo w artykule [Wybieranie wersji .NET Core do użycia](versions/selection.md) .
+Domyślnie zestaw SDK jest instalowany w sposób "Side-by-side" (SxS), co oznacza, że wiele wersji może współistnieć w danym momencie na pojedynczym komputerze. Sposób pobierania wersji podczas uruchamiania poleceń interfejsu wiersza polecenia znajduje się bardziej szczegółowo w artykule [Wybieranie wersji .NET Core do użycia](versions/selection.md) .
 
 ## <a name="see-also"></a>Zobacz także
 
-- [.NET Core CLI](tools/index.md)
+- [Przegląd interfejs wiersza polecenia platformy .NET Core](tools/index.md)
 - [Omówienie wersji platformy .NET Core](versions/index.md)
 - [Jak usunąć środowisko uruchomieniowe programu .NET Core i zestaw SDK](versions/remove-runtime-sdk-versions.md)
 - [Wybierz wersję platformy .NET Core do użycia](versions/selection.md)

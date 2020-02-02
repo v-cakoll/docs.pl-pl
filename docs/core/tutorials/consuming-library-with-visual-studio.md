@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: ec9c6f992bcd4a76e2f70018f3facca42b7b660c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4eb75f23359334ea483cba1498f1804c4b24c80c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714068"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920454"
 ---
 # <a name="consume-a-net-standard-library-in-visual-studio"></a>Korzystanie z biblioteki .NET Standard w programie Visual Studio
 
@@ -86,4 +86,4 @@ Bibliotekę klas można udostępnić publicznie, publikując ją jako pakiet NuG
    > [!TIP]
    > Jeśli katalog zawierający program *dotnet. exe* nie znajduje się w ścieżce, można znaleźć jego lokalizację, wprowadzając `where dotnet.exe` w oknie konsoli.
 
-Aby uzyskać więcej informacji na temat tworzenia pakietów NuGet, zobacz [jak utworzyć pakiet NuGet za pomocą narzędzi międzyplatformowych](../deploying/creating-nuget-packages.md).
+Aby uzyskać więcej informacji na temat tworzenia pakietów NuGet, zobacz [jak utworzyć pakiet NuGet przy użyciu interfejs wiersza polecenia platformy .NET Core](../deploying/creating-nuget-packages.md).

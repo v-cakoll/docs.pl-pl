@@ -2,12 +2,12 @@
 title: dotnet-install scripts
 description: Więcej informacji na temat skryptów programu dotnet-Install w celu zainstalowania zestaw .NET Core SDK i udostępnionego środowiska uruchomieniowego.
 ms.date: 01/23/2020
-ms.openlocfilehash: 169991ac4cd24ccab90634ff265c3ae5b603f8e9
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 76055627c6b2016396209c9594dba36e56eb841c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734204"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920572"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet — informacje o skryptach instalacji
 
@@ -35,7 +35,7 @@ dotnet-install.sh [--channel] [--version] [--jsonfile] [--install-dir] [--archit
 
 ## <a name="description"></a>Opis
 
-Skrypty `dotnet-install` są używane do przeprowadzania instalacji nieadministratora zestaw .NET Core SDK, która obejmuje narzędzia interfejs wiersza polecenia platformy .NET Core i udostępnione środowisko uruchomieniowe.
+Skrypty `dotnet-install` są używane do przeprowadzania instalacji nieadministratora zestaw .NET Core SDK, która obejmuje interfejs wiersza polecenia platformy .NET Core i udostępnione środowisko uruchomieniowe.
 
 Zalecamy użycie stabilnej wersji skryptów:
 
@@ -108,7 +108,7 @@ Określoną wersję można zainstalować przy użyciu argumentu `-Version|--vers
 
 - **`-NoPath|--no-path`**
 
-  W przypadku ustawienia folder instalacyjny nie zostanie wyeksportowany do ścieżki bieżącej sesji. Domyślnie skrypt modyfikuje ścieżkę, co sprawia, że narzędzia interfejsu wiersza polecenia są dostępne natychmiast po instalacji.
+  W przypadku ustawienia folder instalacyjny nie zostanie wyeksportowany do ścieżki bieżącej sesji. Domyślnie skrypt modyfikuje ścieżkę, co sprawia, że interfejs wiersza polecenia platformy .NET Core dostępne natychmiast po instalacji.
 
 - **`-Verbose|--verbose`**
 

@@ -1,26 +1,20 @@
 ---
-title: Narzędzia interfejsu wiersza polecenia (CLI) platformy .NET Core
-description: Omówienie narzędzi i funkcji interfejsu wiersza polecenia (CLI) platformy .NET Core.
+title: Interfejs wiersza polecenia platformy .NET Core
+titleSuffix: ''
+description: Przegląd interfejs wiersza polecenia platformy .NET Core i jego funkcji.
 ms.date: 08/14/2017
-ms.openlocfilehash: f19dcb19fb9d0203b3d3795c3fdc0b026c4c60e3
-ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
+ms.openlocfilehash: b0a8e0dd8cf77bb6f7567c27e9972f62515ec0f2
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76163218"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920483"
 ---
-# <a name="net-core-command-line-interface-cli-tools"></a>Narzędzia interfejsu wiersza polecenia (CLI) platformy .NET Core
+# <a name="net-core-cli-overview"></a>Przegląd interfejs wiersza polecenia platformy .NET Core
 
-Interfejs wiersza polecenia (CLI) platformy .NET Core to Międzyplatformowy łańcucha narzędzi służący do tworzenia aplikacji platformy .NET. Interfejs wiersza polecenia jest podstawą, na której można zawiesić narzędzia wyższego poziomu, takie jak zintegrowane środowiska deweloperskie (środowisk IDE), Edytory i koordynatorzy kompilacji.
+Interfejs wiersza polecenia (CLI) platformy .NET Core to Międzyplatformowy łańcucha narzędzi służący do tworzenia, kompilowania, uruchamiania i publikowania aplikacji platformy .NET Core.
 
-## <a name="installation"></a>Instalacja programu
-
-Użyj natywnych instalatorów lub użyj skryptów powłoki instalacji:
-
-- Natywne Instalatory są używane przede wszystkim na maszynach deweloperskich i używają natywnego mechanizmu instalacji na platformie, na przykład DEB pakiety w pakietach Ubuntu i MSI w systemie Windows. Te Instalatory instalują i konfigurują środowisko do natychmiastowego użytku przez dewelopera, ale wymagają uprawnień administracyjnych na komputerze. Instrukcje dotyczące instalacji można wyświetlić w [podręczniku instalacji programu .NET Core](https://aka.ms/dotnetcoregs).
-- Skrypty powłoki są używane głównie do konfigurowania serwerów kompilacji lub do instalowania narzędzi bez uprawnień administracyjnych. Skrypty instalacji nie instalują wstępnie wymaganych składników na komputerze, które należy zainstalować ręcznie. Aby uzyskać więcej informacji, zobacz [temat informacje o skrypcie instalacji](dotnet-install-script.md). Aby uzyskać informacje na temat sposobu konfigurowania interfejsu wiersza polecenia na serwerze kompilacji ciągłej integracji (CI), zobacz [używanie zestaw .NET Core SDK i narzędzi w ciągłej integracji (ci)](using-ci-with-cli.md).
-
-Domyślnie interfejs wiersza polecenia jest instalowany w sposób równoległy (SxS), dzięki czemu wiele wersji narzędzi interfejsu wiersza polecenia może współistnieć na jednej maszynie. Określanie, która wersja jest używana na komputerze, na którym zainstalowano wiele wersji, wyjaśniono bardziej szczegółowo w sekcji [sterownika](#driver) .
+Interfejs wiersza polecenia platformy .NET Core jest dołączona do [zestaw .NET Core SDK](../sdk.md). Aby dowiedzieć się, jak zainstalować zestaw .NET Core SDK, zobacz [Install the zestaw .NET Core SDK](../install/sdk.md).
 
 ## <a name="cli-commands"></a>Poleceń interfejsu wiersza polecenia
 
@@ -28,7 +22,7 @@ Następujące polecenia są instalowane domyślnie:
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2. x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 **Polecenia podstawowe**
 
@@ -36,11 +30,11 @@ Następujące polecenia są instalowane domyślnie:
 - [restore](dotnet-restore.md)
 - [utworzenia](dotnet-build.md)
 - [publish](dotnet-publish.md)
-- [wykonane](dotnet-run.md)
+- [run](dotnet-run.md)
 - [badan](dotnet-test.md)
 - [VSTest](dotnet-vstest.md)
 - [pakiet](dotnet-pack.md)
-- [migrowanie](dotnet-migrate.md)
+- [dokonać](dotnet-migrate.md)
 - [czyst](dotnet-clean.md)
 - [sln](dotnet-sln.md)
 - [Pomoc](dotnet-help.md)
@@ -59,10 +53,10 @@ Następujące polecenia są instalowane domyślnie:
 - [Usuwanie NuGet](dotnet-nuget-delete.md)
 - [Ustawienia regionalne NuGet](dotnet-nuget-locals.md)
 - [wypychanie NuGet](dotnet-nuget-push.md)
-- [MSBuild](dotnet-msbuild.md)
+- [msbuild](dotnet-msbuild.md)
 - [skrypt instalacji dotnet](dotnet-install-script.md)
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1. x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 **Polecenia podstawowe**
 
@@ -70,11 +64,11 @@ Następujące polecenia są instalowane domyślnie:
 - [restore](dotnet-restore.md)
 - [utworzenia](dotnet-build.md)
 - [publish](dotnet-publish.md)
-- [wykonane](dotnet-run.md)
+- [run](dotnet-run.md)
 - [badan](dotnet-test.md)
 - [VSTest](dotnet-vstest.md)
 - [pakiet](dotnet-pack.md)
-- [migrowanie](dotnet-migrate.md)
+- [dokonać](dotnet-migrate.md)
 - [czyst](dotnet-clean.md)
 - [sln](dotnet-sln.md)
 
@@ -91,7 +85,7 @@ Następujące polecenia są instalowane domyślnie:
 - [Usuwanie NuGet](dotnet-nuget-delete.md)
 - [Ustawienia regionalne NuGet](dotnet-nuget-locals.md)
 - [wypychanie NuGet](dotnet-nuget-push.md)
-- [MSBuild](dotnet-msbuild.md)
+- [msbuild](dotnet-msbuild.md)
 - [skrypt instalacji dotnet](dotnet-install-script.md)
 
 ---
@@ -102,7 +96,7 @@ Interfejs wiersza polecenia przyjmuje model rozszerzalności, który pozwala okr
 
 Struktura poleceń interfejsu wiersza polecenia składa się ze [sterownika ("dotnet")](#driver), [polecenia](#command)oraz możliwych [argumentów](#arguments) i [opcji](#options)polecenia. Ten wzorzec jest widoczny w większości operacji interfejsu wiersza polecenia, takich jak tworzenie nowej aplikacji konsolowej i uruchamianie jej z poziomu wiersza poleceń, ponieważ następujące polecenia pokazują, że są wykonywane z katalogu o nazwie *my_app*:
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2. x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 ```dotnetcli
 dotnet new console
@@ -110,7 +104,7 @@ dotnet build --output /build_output
 dotnet /build_output/my_app.dll
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1. x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 ```dotnetcli
 dotnet new console
@@ -153,5 +147,5 @@ Jeśli użyto narzędzi w wersji zapoznawczej 2 do tworzenia projektów opartych
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Repozytorium dotnet/CLI usługi GitHub](https://github.com/dotnet/cli/)
+- [repozytorium usługi dotnet/zestawu SDK usługi GitHub](https://github.com/dotnet/sdk/)
 - [Przewodnik instalacji programu .NET Core](https://aka.ms/dotnetcoregs)

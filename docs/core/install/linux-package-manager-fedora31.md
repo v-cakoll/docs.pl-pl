@@ -4,12 +4,12 @@ description: Zainstaluj zestaw .NET Core SDK i środowisko uruchomieniowe w syst
 author: thraka
 ms.author: adegeo
 ms.date: 12/17/2019
-ms.openlocfilehash: 25c670694ed2d9e89fe37cedf0b06efd8bc93293
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: 28bda3676f99037e565080e1ff3f9d89a67d0d69
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116967"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920782"
 ---
 # <a name="fedora-31-package-manager---install-net-core"></a>Menedżer pakietów Fedora 31 — Instalowanie programu .NET Core
 
@@ -17,7 +17,7 @@ ms.locfileid: "76116967"
 
 W tym artykule opisano sposób użycia Menedżera pakietów do zainstalowania platformy .NET Core w systemie Fedora 31. Jeśli instalujesz środowisko uruchomieniowe, zalecamy zainstalowanie [ASP.NET Core środowiska uruchomieniowego](#install-the-aspnet-core-runtime), ponieważ zawiera on zarówno środowisko uruchomieniowe programu .NET Core, jak i ASP.NET Core.
 
-## <a name="register-microsoft-key-and-feed"></a>Rejestrowanie klucza firmy Microsoft i źródła danych
+## <a name="register-microsoft-key-and-feed"></a>Zarejestruj klucz i źródło danych firmy Microsoft
 
 Przed zainstalowaniem programu .NET należy:
 
@@ -25,7 +25,7 @@ Przed zainstalowaniem programu .NET należy:
 - Zarejestruj repozytorium produktów.
 - Zainstaluj wymagane zależności.
 
-Te operacje należy wykonać tylko jeden raz na każdej maszynie.
+Należy to zrobić tylko raz dla każdego komputera.
 
 Otwórz Terminal i uruchom następujące polecenia.
 
@@ -61,3 +61,11 @@ sudo dnf install dotnet-runtime-3.1
 ## <a name="how-to-install-other-versions"></a>Jak zainstalować inne wersje
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
+
+## <a name="troubleshoot-the-package-manager"></a>Rozwiązywanie problemów z menedżerem pakietów
+
+Ta sekcja zawiera informacje o typowych błędach, które mogą wystąpić podczas korzystania z Menedżera pakietów w celu zainstalowania platformy .NET Core.
+
+### <a name="failed-to-fetch"></a>Nie można pobrać
+
+[!INCLUDE [package-manager-failed-to-fetch-rpm](includes/package-manager-failed-to-fetch-rpm.md)]

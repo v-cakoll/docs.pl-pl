@@ -65,7 +65,7 @@ Ten przykład pokazuje, że można zainicjować pole `static` przy użyciu inneg
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../index.md)
+- [C#Odwoła](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](index.md)
 - [Modyfikatory](index.md)

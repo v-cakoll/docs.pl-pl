@@ -138,7 +138,7 @@ Podczas opracowywania niestandardowego środowiska czasu projektowania konieczne
 
 3. W sekcji **Akcja początkowa** wybierz pozycję **Uruchom program zewnętrzny**. Będziesz debugować osobne wystąpienie programu Visual Studio, więc kliknij przycisk wielokropka (![przycisk wielokropka (...) na okno Właściwości przycisku programu Visual Studio](./media/visual-studio-ellipsis-button.png)), aby wyszukać środowisko IDE programu Visual Studio. Nazwa pliku wykonywalnego to devenv. exe, a jeśli została zainstalowana w lokalizacji domyślnej, jego ścieżka to *% ProgramFiles (x86)% \ Microsoft Visual Studio\2019\\\<edition > \Common7\IDE\devenv.exe*.
 
-4. Wybierz **przycisk OK** , aby zamknąć okno dialogowe.
+4. Wybierz przycisk **OK**, aby zamknąć okno dialogowe.
 
 5. Kliknij prawym przyciskiem myszy projekt MarqueeControlLibrary i wybierz pozycję **Ustaw jako projekt startowy** , aby włączyć tę konfigurację debugowania.
 
@@ -177,7 +177,7 @@ Jest to zakres dostosowań `MarqueeControl`. Funkcje czasu wykonywania są imple
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#260](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrol.cs#260)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#260](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrol.vb#260)]
 
-2. Zastąp <xref:System.Windows.Forms.Control.OnLayout%2A> metody.
+2. Zastąp metodę <xref:System.Windows.Forms.Control.OnLayout%2A>.
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#270](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrol.cs#270)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#270](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrol.vb#270)]
@@ -233,7 +233,7 @@ Aby zaimplementować funkcję okresowej animacji, użyjesz <xref:System.Componen
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#140](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueetext.cs#140)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#140](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueetext.vb#140)]
 
-10. Implementowanie `IMarqueeWidget` interfejsu.
+10. Zaimplementuj interfejs `IMarqueeWidget`.
 
     Metody `StartMarquee` i `StopMarquee` wywołują metody <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> i <xref:System.ComponentModel.BackgroundWorker.CancelAsync%2A> składnika <xref:System.ComponentModel.BackgroundWorker>, aby uruchomić i zatrzymać animację.
 
@@ -299,7 +299,7 @@ Ponieważ kontrolka `MarqueeBorder` może mieć kontrolki podrzędne, musi mieć
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#40](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#40)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#40](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#40)]
 
-9. Implementowanie `IMarqueeWidget` interfejsu.
+9. Zaimplementuj interfejs `IMarqueeWidget`.
 
     Metody `StartMarquee` i `StopMarquee` wywołują metody <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> i <xref:System.ComponentModel.BackgroundWorker.CancelAsync%2A> składnika <xref:System.ComponentModel.BackgroundWorker>, aby uruchomić i zatrzymać animację.
 
@@ -430,7 +430,7 @@ W przypadku klasy `MarqueeControlRootDesigner` należy wywołać metodę <xref:S
 
 ## <a name="add-designer-verbs-to-your-custom-designer"></a>Dodawanie zleceń projektanta do projektanta niestandardowego
 
-Zlecenie projektanta jest poleceniem menu połączonym z programem obsługi zdarzeń. Zlecenia projektanta są dodawane do menu skrótów składnika w czasie projektowania. Aby uzyskać więcej informacji, zobacz temat <xref:System.ComponentModel.Design.DesignerVerb>.
+Zlecenie projektanta jest poleceniem menu połączonym z programem obsługi zdarzeń. Zlecenia projektanta są dodawane do menu skrótów składnika w czasie projektowania. Aby uzyskać więcej informacji, zobacz <xref:System.ComponentModel.Design.DesignerVerb>.
 
 Do projektantów zostaną dodane dwa zlecenia projektanta: **Uruchom test** i **Zatrzymaj test**. Te czasowniki umożliwią wyświetlenie zachowania `MarqueeControl` w czasie wykonywania w czasie projektowania. Te zlecenia zostaną dodane do `MarqueeControlRootDesigner`.
 
@@ -468,12 +468,12 @@ Formant `MarqueeBorder` uwidacznia kilka właściwości w okno Właściwości. D
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#92](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#92)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#92](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#92)]
 
-4. Zastąp <xref:System.Drawing.Design.UITypeEditor.GetEditStyle%2A> metody. Ta implementacja zwraca <xref:System.Drawing.Design.UITypeEditorEditStyle.DropDown>, co informuje środowisko projektowe o sposobie wyświetlania `LightShapeEditor`.
+4. Zastąp metodę <xref:System.Drawing.Design.UITypeEditor.GetEditStyle%2A>. Ta implementacja zwraca <xref:System.Drawing.Design.UITypeEditorEditStyle.DropDown>, co informuje środowisko projektowe o sposobie wyświetlania `LightShapeEditor`.
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#93](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#93)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#93](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#93)]
 
-5. Zastąp <xref:System.Drawing.Design.UITypeEditor.EditValue%2A> metody. Ta implementacja wysyła zapytanie do środowiska projektowego dla obiektu <xref:System.Windows.Forms.Design.IWindowsFormsEditorService>. W przypadku pomyślnego utworzenia `LightShapeSelectionControl`. Metoda <xref:System.Windows.Forms.Design.IWindowsFormsEditorService.DropDownControl%2A> jest wywoływana w celu uruchomienia `LightShapeEditor`. Wartość zwracana z tego wywołania jest zwracana do środowiska projektowego.
+5. Zastąp metodę <xref:System.Drawing.Design.UITypeEditor.EditValue%2A>. Ta implementacja wysyła zapytanie do środowiska projektowego dla obiektu <xref:System.Windows.Forms.Design.IWindowsFormsEditorService>. W przypadku pomyślnego utworzenia `LightShapeSelectionControl`. Metoda <xref:System.Windows.Forms.Design.IWindowsFormsEditorService.DropDownControl%2A> jest wywoływana w celu uruchomienia `LightShapeEditor`. Wartość zwracana z tego wywołania jest zwracana do środowiska projektowego.
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#94](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#94)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#94](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#94)]
@@ -535,7 +535,7 @@ Właściwość `MarqueeLightShape` obsługuje dwa typy świateł: `Square` i `Ci
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#360](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/lightshapeselectioncontrol.cs#360)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#360](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/lightshapeselectioncontrol.vb#360)]
 
-11. Zastąp <xref:System.Windows.Forms.Control.OnPaint%2A> metody. Ta implementacja spowoduje narysowanie wypełnionego kwadratu i okręgu. Zostanie również wyświetlona wybrana wartość przez narysowanie obramowania wokół jednego kształtu lub drugiego.
+11. Zastąp metodę <xref:System.Windows.Forms.Control.OnPaint%2A>. Ta implementacja spowoduje narysowanie wypełnionego kwadratu i okręgu. Zostanie również wyświetlona wybrana wartość przez narysowanie obramowania wokół jednego kształtu lub drugiego.
 
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#380](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/lightshapeselectioncontrol.cs#380)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#380](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/lightshapeselectioncontrol.vb#380)]

@@ -1,5 +1,5 @@
 ---
-title: ContextMenu, składnik
+title: ContextMenu — Składnik
 ms.date: 03/30/2017
 helpviewer_keywords:
 - menus [Windows Forms], shortcut menus

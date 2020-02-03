@@ -1,5 +1,5 @@
 ---
-title: FlowLayoutPanel, kontrolka
+title: FlowLayoutPanel — Formant
 ms.date: 03/30/2017
 helpviewer_keywords:
 - FlowLayoutPanel control [Windows Forms]

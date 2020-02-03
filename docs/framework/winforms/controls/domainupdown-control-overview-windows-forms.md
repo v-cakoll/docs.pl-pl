@@ -1,5 +1,5 @@
 ---
-title: DomainUpDown — Informacje o formancie
+title: DomainUpDown, kontrolka — omówienie
 ms.date: 03/30/2017
 f1_keywords:
 - DomainUpDown

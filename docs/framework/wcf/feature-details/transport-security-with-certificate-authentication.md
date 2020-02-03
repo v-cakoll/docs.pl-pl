@@ -21,14 +21,14 @@ W tym artykule omówiono użycie certyfikatów X. 509 na potrzeby uwierzytelnian
   
  Aby uzyskać więcej informacji na temat korzystania z certyfikatu z usługą, zobacz [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) i [instrukcje: Konfigurowanie portu z certyfikatem SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md). W poniższej tabeli opisano różne cechy scenariusza.  
   
-|Charakterystyk|Opis|  
+|Charakterystyka|Opis|  
 |--------------------|-----------------|  
-|Tryb zabezpieczeń|Transportu|  
+|Tryb zabezpieczeń|Transport|  
 |Współdziałanie|Z istniejącymi klientami i usługami sieci Web.|  
 |Uwierzytelnianie (serwer)<br /><br /> Uwierzytelnianie (klient)|Tak (przy użyciu certyfikatu SSL)<br /><br /> Tak (przy użyciu certyfikatu X. 509)|  
 |Integralność danych|Tak|  
 |Poufność danych|Tak|  
-|Transportu|HTTPS|  
+|Transport|HTTPS|  
 |Wiązanie|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="configure-the-service"></a>Konfigurowanie usługi  

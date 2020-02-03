@@ -35,7 +35,7 @@ Możesz dodać elementy do kontrolki <xref:System.Windows.Forms.DomainUpDown> Wi
     domainUpDown1->Items->Add("noodles");  
     ```  
   
-     lub  
+     —lub—  
   
 2. Użyj metody <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A>, aby wstawić element do listy w określonym położeniu.  
   

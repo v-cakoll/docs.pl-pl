@@ -57,5 +57,5 @@ Za pomocą funkcji Widok kafelka kontrolki <xref:System.Windows.Forms.ListView> 
 
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.TileSize%2A>
-- [ListView, kontrolka](listview-control-windows-forms.md)
+- [Kontrolka ListView](listview-control-windows-forms.md)
 - [ListView, kontrolka — omówienie](listview-control-overview-windows-forms.md)

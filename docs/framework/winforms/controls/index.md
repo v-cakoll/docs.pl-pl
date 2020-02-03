@@ -13,7 +13,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76745300"
 ---
-# <a name="windows-forms-controls"></a>formanty Formularzy systemu Windows
+# <a name="windows-forms-controls"></a>Kontrolki Windows Forms
 
 Podczas projektowania i modyfikowania interfejsu użytkownika aplikacji Windows Forms należy dodać, wyrównać i pozycjonować kontrolki. Formanty są obiektami zawartymi w obiektach formularzy. Każdy typ kontrolki ma swój własny zestaw właściwości, metod i zdarzeń, które są odpowiednie do określonego celu. Można manipulować kontrolkami w Projektancie i pisać kod, aby dynamicznie dodawać kontrolki w czasie wykonywania.
 

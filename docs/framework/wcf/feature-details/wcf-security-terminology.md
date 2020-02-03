@@ -56,7 +56,7 @@ Niektóre terminologii używane podczas omawiania zabezpieczeń mogą być niezn
  podpis cyfrowy  
  Dane wiążące tożsamość nadawcy z wysyłanymi informacjami. Podpis cyfrowy może być powiązany z dowolnym komunikatem, plikiem lub innymi informacjami zakodowanymi cyfrowo lub przesyłane osobno. Podpisy cyfrowe są używane w środowiskach kluczy publicznych i zapewniają usługi uwierzytelniania i integralności.  
   
- {1&gt;encoding&lt;1}  
+ encoding  
  Proces przekształcania danych do strumienia bitów. Kodowanie jest częścią procesu serializacji, który konwertuje dane na strumień tych i zer.  
   
  para kluczy wymiany  
@@ -178,7 +178,7 @@ Niektóre terminologii używane podczas omawiania zabezpieczeń mogą być niezn
 > [!NOTE]
 > Oprócz standardowego formularza UPN, WCF akceptuje UPN w formularzu niskiego poziomu, na przykład cohowinery. com\someone.  
   
- X. 509  
+ X.509  
  Międzynarodowy, uznawany w międzynarodowym Standard dla certyfikatów, który definiuje ich wymagane części.  
   
 ## <a name="see-also"></a>Zobacz także

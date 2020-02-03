@@ -71,7 +71,7 @@ Aby uzyskać więcej informacji, zobacz sekcję [interfejsy](~/_csharplang/spec/
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../index.md)
+- [C#Odwoła](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](index.md)
 - [Typy odwołań](reference-types.md)

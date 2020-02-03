@@ -56,7 +56,7 @@ Form1.Width = 300;
 Form1->Width = 300;
 ```
 
-lub
+—lub—
 
 Zmień <xref:System.Drawing.Size.Width%2A> lub <xref:System.Drawing.Size.Height%2A>, ustawiając właściwość <xref:System.Windows.Forms.Form.Size%2A>.
 

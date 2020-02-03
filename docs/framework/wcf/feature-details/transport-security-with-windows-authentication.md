@@ -19,17 +19,17 @@ W poniższym scenariuszu przedstawiono klienta i usługę Windows Communication 
   
  ![Zabezpieczenia transportu z uwierzytelnianiem systemu Windows](./media/transport-security-with-windows-authentication/secured-windows-authentication.gif)  
   
-|Charakterystyk|Opis|  
+|Charakterystyka|Opis|  
 |--------------------|-----------------|  
-|Tryb zabezpieczeń|Transportu|  
+|Tryb zabezpieczeń|Transport|  
 |Współdziałanie|Tylko WCF|  
 |Uwierzytelnianie (serwer)<br /><br /> Uwierzytelnianie (klient)|Tak (przy użyciu zintegrowanego uwierzytelniania systemu Windows)<br /><br /> Tak (przy użyciu zintegrowanego uwierzytelniania systemu Windows)|  
-|Spójn|Tak|  
+|Integralność|Tak|  
 |Poufne|Tak|  
-|Transportu|NET.TCP|  
+|Transport|NET.TCP|  
 |Wiązanie|<xref:System.ServiceModel.NetTcpBinding>|  
   
-## <a name="service"></a>NDES  
+## <a name="service"></a>Usługa  
  Poniższy kod i konfiguracja są przeznaczone do niezależnego uruchamiania. Wykonaj jedną z następujących czynności:  
   
 - Tworzenie usługi autonomicznej przy użyciu kodu bez konfiguracji.  

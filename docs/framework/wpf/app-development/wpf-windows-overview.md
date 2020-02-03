@@ -325,13 +325,13 @@ Użytkownicy pracują z autonomicznymi aplikacjami Windows Presentation Foundati
   
  Jeśli chcesz, aby szerokość i wysokość okna miały rozmiar, który pasuje do rozmiaru zawartości okna, możesz użyć właściwości <xref:System.Windows.Window.SizeToContent%2A>, która ma następujące wartości:  
   
-- <xref:System.Windows.SizeToContent.Manual>. Brak efektu (wartość domyślna).  
+- <xref:System.Windows.SizeToContent.Manual>., Brak efektu (wartość domyślna).  
   
-- <xref:System.Windows.SizeToContent.Width>. Dopasuj do szerokości zawartości, która ma taki sam efekt jak ustawienie zarówno <xref:System.Windows.FrameworkElement.MinWidth%2A>, jak i <xref:System.Windows.FrameworkElement.MaxWidth%2A> do szerokości zawartości.  
+- <xref:System.Windows.SizeToContent.Width>., Dopasuj do szerokości zawartości, która ma taki sam efekt jak ustawienie zarówno <xref:System.Windows.FrameworkElement.MinWidth%2A>, jak i <xref:System.Windows.FrameworkElement.MaxWidth%2A> do szerokości zawartości.  
   
-- <xref:System.Windows.SizeToContent.Height>. Dopasuj do wysokości zawartości, która ma taki sam efekt jak ustawienie zarówno <xref:System.Windows.FrameworkElement.MinHeight%2A>, jak i <xref:System.Windows.FrameworkElement.MaxHeight%2A> do wysokości zawartości.  
+- <xref:System.Windows.SizeToContent.Height>., Dopasuj do wysokości zawartości, która ma taki sam efekt jak ustawienie zarówno <xref:System.Windows.FrameworkElement.MinHeight%2A>, jak i <xref:System.Windows.FrameworkElement.MaxHeight%2A> do wysokości zawartości.  
   
-- <xref:System.Windows.SizeToContent.WidthAndHeight>. Dopasuj do szerokości i wysokości zawartości, która ma taki sam skutek jak ustawienie zarówno <xref:System.Windows.FrameworkElement.MinHeight%2A>, jak i <xref:System.Windows.FrameworkElement.MaxHeight%2A> do wysokości zawartości, i Ustawianie zarówno <xref:System.Windows.FrameworkElement.MinWidth%2A>, jak i <xref:System.Windows.FrameworkElement.MaxWidth%2A> do szerokości zawartości.  
+- <xref:System.Windows.SizeToContent.WidthAndHeight>., Dopasuj do szerokości i wysokości zawartości, która ma taki sam skutek jak ustawienie zarówno <xref:System.Windows.FrameworkElement.MinHeight%2A>, jak i <xref:System.Windows.FrameworkElement.MaxHeight%2A> do wysokości zawartości, i Ustawianie zarówno <xref:System.Windows.FrameworkElement.MinWidth%2A>, jak i <xref:System.Windows.FrameworkElement.MaxWidth%2A> do szerokości zawartości.  
   
  W poniższym przykładzie pokazano okno, które automatycznie dopasowuje rozmiar do jego zawartości, zarówno w pionie, jak i w poziomie.  
   

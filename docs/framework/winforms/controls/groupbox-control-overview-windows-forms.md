@@ -1,5 +1,5 @@
 ---
-title: GroupBox — Informacje o formancie
+title: GroupBox, kontrolka — omówienie
 ms.date: 03/30/2017
 f1_keywords:
 - GroupBox

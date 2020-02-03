@@ -16,7 +16,7 @@ ms.lasthandoff: 01/24/2020
 ms.locfileid: "76739568"
 ---
 # <a name="how-to-change-the-borders-of-windows-forms"></a>Porady: zmienianie granic formularzy systemu Windows
-Istnieje kilka stylów obramowania, które można wybrać podczas określania wyglądu i zachowania Windows Forms. Zmieniając właściwość <xref:System.Windows.Forms.Form.FormBorderStyle%2A>, można kontrolować zachowanie zmiany rozmiarów formularza. Ponadto ustawienie <xref:System.Windows.Forms.Form.FormBorderStyle%2A> wpływa na sposób wyświetlania paska podpisu, a także jakie przyciski mogą być na nim widoczne. Aby uzyskać więcej informacji, zobacz temat <xref:System.Windows.Forms.FormBorderStyle>.  
+Istnieje kilka stylów obramowania, które można wybrać podczas określania wyglądu i zachowania Windows Forms. Zmieniając właściwość <xref:System.Windows.Forms.Form.FormBorderStyle%2A>, można kontrolować zachowanie zmiany rozmiarów formularza. Ponadto ustawienie <xref:System.Windows.Forms.Form.FormBorderStyle%2A> wpływa na sposób wyświetlania paska podpisu, a także jakie przyciski mogą być na nim widoczne. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Forms.FormBorderStyle>.  
   
  W programie Visual Studio jest dostępna szeroka pomoc techniczna dla tego zadania.  
   

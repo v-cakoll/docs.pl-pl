@@ -1,5 +1,5 @@
 ---
-title: '{1&gt;{2&gt;Atrybuty&lt;2}&lt;1}'
+title: Atrybuty
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -13,7 +13,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76741787"
 ---
-# <a name="attributes"></a>{1&gt;{2&gt;Atrybuty&lt;2}&lt;1}
+# <a name="attributes"></a>Atrybuty
 <xref:System.Attribute?displayProperty=nameWithType> jest klasą bazową służącą do definiowania atrybutów niestandardowych.
 
  Atrybuty są adnotacjami, które mogą być dodawane do elementów programistycznych, takich jak zestawy, typy, elementy członkowskie i parametry. Są one przechowywane w metadanych zestawu i dostępne w czasie wykonywania przy użyciu interfejsów API odbicia. Na przykład struktura definiuje <xref:System.ObsoleteAttribute>, które mogą być stosowane do typu lub elementu członkowskiego, aby wskazać, że typ lub element członkowski jest przestarzały.

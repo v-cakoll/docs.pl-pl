@@ -21,9 +21,9 @@ Główny pakiet Microsoft. Data. sqlite domyślnie znajduje się w SQLitePCLRaw.
 
 Aby użyć innego pakietu, zainstaluj pakiet `Microsoft.Data.Sqlite.Core` zamiast niego wraz z pakietem pakietu, którego chcesz użyć. Pakiety są automatycznie inicjowane przez firmę Microsoft. Data. sqlite.
 
-| Powiązane | Opis |
+| Pakiet | Opis |
 | --- | --- |
-| SQLitePCLRaw. bundle_e_sqlite3 | Zapewnia spójną wersję oprogramowania SQLite na wszystkich platformach. Obejmuje rozszerzenia drzewa FTS4, FTS5, JSON1 i R *. Jest to domyślne ustawienie. |
+| SQLitePCLRaw. bundle_e_sqlite3 | Zapewnia spójną wersję oprogramowania SQLite na wszystkich platformach. Obejmuje rozszerzenia drzewa FTS4, FTS5, JSON1 i R *. Domyślnie włączone. |
 | SQLitePCLRaw. bundle_green | Analogicznie jak bundle_e_sqlite3, z wyjątkiem systemu iOS, gdzie używa biblioteki oprogramowania SQLite. |
 | SQLitePCLRaw. bundle_zetetic | Używa oficjalnych kompilacji SQLCIPHER z Zetetic (nieuwzględnione). |
 | SQLitePCLRaw. bundle_winsqlite3 | Używa winsqlite3. dll, systemowej biblioteki oprogramowania SQLite w systemie Windows 10. |

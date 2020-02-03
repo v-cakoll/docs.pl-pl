@@ -1,5 +1,5 @@
 ---
-title: DataGridView, kontrolka — architektura
+title: DataGridView — Architektura formantu
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], architecture
@@ -24,7 +24,7 @@ Formant <xref:System.Windows.Forms.DataGridView> i powiązane z nim klasy zosta�
  W poniższych sekcjach opisano klasy pomocnika <xref:System.Windows.Forms.DataGridView> bardziej szczegółowo.  
   
 ### <a name="datagridviewelementstates"></a>DataGridViewElementStates  
- <xref:System.Windows.Forms.DataGridViewElementStates> Wyliczenie zawiera następujące wartości:  
+ Wyliczenie <xref:System.Windows.Forms.DataGridViewElementStates> zawiera następujące wartości:  
   
 - <xref:System.Windows.Forms.DataGridViewElementStates.None>  
   

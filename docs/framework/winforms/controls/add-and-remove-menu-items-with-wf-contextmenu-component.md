@@ -58,7 +58,7 @@ Wyjaśnia, jak dodawać i usuwać elementy menu skrótów w Windows Forms.
     contextMenu1->MenuItems->Remove(mnuItemNew);  
     ```  
   
-     lub  
+     —lub—  
   
 2. Aby usunąć wszystkie elementy z menu, należy użyć metody `Clear` `MenuItems` kolekcji składnika <xref:System.Windows.Forms.ContextMenu>.  
   

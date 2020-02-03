@@ -132,43 +132,43 @@ Zasady, które mogą być wyrażone przez [aplikację](application-element-net-n
 
 Elementy [Application](application-element-net-native.md), [Assembly](assembly-element-net-native.md), [AttributeImplies](attributeimplies-element-net-native.md), [Namespace](namespace-element-net-native.md), [podtyp](subtypes-element-net-native.md)i [Type](type-element-net-native.md) obsługują następujące typy zasad:
 
-- `Activate`. Kontroluje dostęp środowiska uruchomieniowego do konstruktorów, aby umożliwić aktywację wystąpień.
+- `Activate`., Kontroluje dostęp środowiska uruchomieniowego do konstruktorów, aby umożliwić aktywację wystąpień.
 
-- `Browse`. Steruje wykonywaniem zapytań dotyczących informacji o elementach programu, ale nie umożliwia dostępu do środowiska uruchomieniowego.
+- `Browse`., Steruje wykonywaniem zapytań dotyczących informacji o elementach programu, ale nie umożliwia dostępu do środowiska uruchomieniowego.
 
-- `Dynamic`. Kontroluje dostęp środowiska uruchomieniowego do wszystkich elementów członkowskich typu, takich jak konstruktory, metody, pola, właściwości i zdarzenia, aby umożliwić programowanie dynamiczne.
+- `Dynamic`., Kontroluje dostęp środowiska uruchomieniowego do wszystkich elementów członkowskich typu, takich jak konstruktory, metody, pola, właściwości i zdarzenia, aby umożliwić programowanie dynamiczne.
 
-- `Serialize`. Kontroluje dostęp środowiska uruchomieniowego do konstruktorów, pól i właściwości, aby umożliwić Serializowanie i Serializowanie wystąpień typu przez biblioteki innych firm, takie jak serializator JSON Newtonsoft.
+- `Serialize`., Kontroluje dostęp środowiska uruchomieniowego do konstruktorów, pól i właściwości, aby umożliwić Serializowanie i Serializowanie wystąpień typu przez biblioteki innych firm, takie jak serializator JSON Newtonsoft.
 
-- `DataContractSerializer`. Kontroluje zasady dla serializacji korzystającej z klasy <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.
+- `DataContractSerializer`., Kontroluje zasady dla serializacji korzystającej z klasy <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.
 
-- `DataContractJsonSerializer`. Kontroluje zasady dla serializacji JSON korzystającej z klasy <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.
+- `DataContractJsonSerializer`., Kontroluje zasady dla serializacji JSON korzystającej z klasy <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.
 
-- `XmlSerializer`. Kontroluje zasady dla serializacji XML, która używa klasy <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>.
+- `XmlSerializer`., Kontroluje zasady dla serializacji XML, która używa klasy <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>.
 
-- `MarshalObject`. Kontroluje zasady dotyczące organizowania typów odwołań do WinRT i COM.
+- `MarshalObject`., Kontroluje zasady dotyczące organizowania typów odwołań do WinRT i COM.
 
-- `MarshalDelegate`. Steruje zasadami organizowania typów delegatów jako wskaźników funkcji do kodu natywnego.
+- `MarshalDelegate`., Steruje zasadami organizowania typów delegatów jako wskaźników funkcji do kodu natywnego.
 
-- `MarshalStructure` . Steruje zasadami organizowania struktur w kodzie natywnym.
+- `MarshalStructure`. Steruje zasadami organizowania struktur w kodzie natywnym.
 
 Ustawienia skojarzone z tymi typami zasad są następujące:
 
-- `All`. Włącz zasady dla wszystkich typów i elementów członkowskich, które nie są usuwane przez łańcuch narzędzi.
+- `All`., Włącz zasady dla wszystkich typów i elementów członkowskich, które nie są usuwane przez łańcuch narzędzi.
 
-- `Auto`. Użyj zachowania domyślnego. (Nieokreślanie zasad jest równoznaczne z ustawieniem zasad do `Auto`, chyba że te zasady zostaną zastąpione, na przykład przez element nadrzędny).
+- `Auto`., Użyj zachowania domyślnego. (Nieokreślanie zasad jest równoznaczne z ustawieniem zasad do `Auto`, chyba że te zasady zostaną zastąpione, na przykład przez element nadrzędny).
 
-- `Excluded`. Wyłącz zasady dla elementu program.
+- `Excluded`., Wyłącz zasady dla elementu program.
 
-- `Public`. Włącz zasady dla typów publicznych lub członków, chyba że łańcuch narzędzi nie ustali, że element członkowski jest niepotrzebny i usuwa go. (W tym drugim przypadku należy użyć `Required Public`, aby upewnić się, że element członkowski jest przechowywany i ma możliwości odbicia).
+- `Public`., Włącz zasady dla typów publicznych lub członków, chyba że łańcuch narzędzi nie ustali, że element członkowski jest niepotrzebny i usuwa go. (W tym drugim przypadku należy użyć `Required Public`, aby upewnić się, że element członkowski jest przechowywany i ma możliwości odbicia).
 
-- `PublicAndInternal`. Włącz zasady dla typów publicznych i wewnętrznych lub członków, jeśli łańcuch narzędzi nie zostanie usunięty.
+- `PublicAndInternal`., Włącz zasady dla typów publicznych i wewnętrznych lub członków, jeśli łańcuch narzędzi nie zostanie usunięty.
 
-- `Required Public`. Należy wymagać łańcucha narzędzi, aby zachować publiczne typy i członków, niezależnie od tego, czy są one używane, i włączyć dla nich zasady.
+- `Required Public`., Należy wymagać łańcucha narzędzi, aby zachować publiczne typy i członków, niezależnie od tego, czy są one używane, i włączyć dla nich zasady.
 
-- `Required PublicAndInternal`. Wymagaj, aby łańcuch narzędzi zachował typy publiczne i wewnętrzne oraz członków, niezależnie od tego, czy są one używane, i Włącz dla nich zasady.
+- `Required PublicAndInternal`., Wymagaj, aby łańcuch narzędzi zachował typy publiczne i wewnętrzne oraz członków, niezależnie od tego, czy są one używane, i Włącz dla nich zasady.
 
-- `Required All`. Wymagaj łańcucha narzędzi, aby zachować wszystkie typy i członków, niezależnie od tego, czy są one używane, i Włącz dla nich zasady.
+- `Required All`., Wymagaj łańcucha narzędzi, aby zachować wszystkie typy i członków, niezależnie od tego, czy są one używane, i Włącz dla nich zasady.
 
 Na przykład następujące pliki dyrektywy środowiska uruchomieniowego definiują zasady dla wszystkich typów i elementów członkowskich w zestawie DataClasses. dll. Umożliwia odbicie dla serializacji wszystkich właściwości publicznych, umożliwia przeglądanie dla wszystkich typów i elementów członkowskich typu, umożliwia aktywację dla wszystkich typów (z powodu `Dynamic` atrybutu) i umożliwia odbicie dla wszystkich typów i członków publicznych.
 

@@ -37,7 +37,7 @@ Istnieją dwa rodzaje typów w języku C#: typy referencyjne i typy wartości. W
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../index.md)
+- [C#Odwoła](../index.md)
 - [Słowa kluczowe języka C#](index.md)
 - [Typy wskaźników](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Typy wartości](../builtin-types/value-types.md)

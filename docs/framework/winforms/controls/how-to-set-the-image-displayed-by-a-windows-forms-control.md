@@ -23,7 +23,7 @@ ms.locfileid: "76746872"
 
 Kilka kontrolek Windows Forms może wyświetlać obrazy. Te obrazy mogą być ikonami, które wyjaśniają przeznaczenie kontrolki, na przykład ikona dyskietki na przycisku oznaczającego polecenie Zapisz. Alternatywnie, ikony mogą być obrazami tła, aby nadać formantowi wygląd i zachowanie.
 
-## <a name="programmatic"></a>Program
+## <a name="programmatic"></a>Programowa
 
 Ustaw właściwość `Image` lub `BackgroundImage` kontrolki na obiekt typu <xref:System.Drawing.Image>. Ogólnie rzecz biorąc, zostanie załadowany obraz z pliku za pomocą metody <xref:System.Drawing.Image.FromFile%2A>.
 
@@ -54,7 +54,7 @@ pictureBox1->Image = Image::FromFile(String::Concat
    "\\Image.gif"));
 ```
 
-## <a name="designer"></a>Designer
+## <a name="designer"></a>Projektant
 
 1. W oknie **Właściwości** programu Visual Studio zaznacz właściwość **obraz** lub **BackgroundImage** kontrolki, a następnie wybierz przycisk wielokropka (![symbol wielokropka w programie Visual Studio](./media/visual-studio-ellipsis-button.png)), aby wyświetlić okno dialogowe **Wybieranie zasobu** .
 

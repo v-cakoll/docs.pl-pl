@@ -16,7 +16,7 @@ ms.locfileid: "76738503"
 
 Ustawienia zasad dyrektywy środowiska uruchomieniowego dla .NET Native określają dostępność metadanych dla typów i elementów członkowskich typu w czasie wykonywania. Bez wymaganych metadanych operacje, które polegają na odbiciu, serializacji i deserializacji lub kierowaniu typów .NET Framework do modelu COM lub środowisko wykonawcze systemu Windows mogą zakończyć się niepowodzeniem i zgłosić wyjątek. Najczęstszymi wyjątkami są [MissingMetadataException](missingmetadataexception-class-net-native.md) i (w przypadku współdziałania) [MissingInteropDataException](missinginteropdataexception-class-net-native.md).
 
-Ustawienia zasad środowiska uruchomieniowego są kontrolowane przez plik dyrektywy środowiska uruchomieniowego (. Rd. xml). Każda dyrektywa środowiska uruchomieniowego definiuje zasady dla określonego elementu programu, takie jak zestaw ( [\<zestawu >](assembly-element-net-native.md) elementu), typ ( [\<typ >](type-element-net-native.md) elementu) lub Metoda ( [\<](method-element-net-native.md) elementu). Dyrektywa zawiera jeden lub więcej atrybutów, które definiują typy zasad odbicia, typy zasad serializacji i typy zasad międzyoperacyjnych omówione w następnej sekcji. Wartość atrybutu definiuje ustawienie zasad.
+Ustawienia zasad środowiska uruchomieniowego są kontrolowane przez plik dyrektywy środowiska uruchomieniowego (. Rd. xml). Każda dyrektywa środowiska uruchomieniowego definiuje zasady dla określonego elementu programu, takie jak zestaw ( [\<zestawu >](assembly-element-net-native.md) elementu), typ ( [\<typ >](type-element-net-native.md) elementu) lub Metoda ( [\<>](method-element-net-native.md) elementu). Dyrektywa zawiera jeden lub więcej atrybutów, które definiują typy zasad odbicia, typy zasad serializacji i typy zasad międzyoperacyjnych omówione w następnej sekcji. Wartość atrybutu definiuje ustawienie zasad.
 
 ## <a name="policy-types"></a>Typy zasad
 
@@ -32,7 +32,7 @@ Pliki dyrektyw środowiska uruchomieniowego rozpoznają trzy kategorie typów za
 
   Poniższa tabela zawiera listę typów zasad odbicia i elementów programu, za pomocą których można ich używać.
 
-  |Element|Aktywacja|Przycisku|Dynamiczne|
+  |Element|Activate|Browse|Dynamiczny|
   |-------------|--------------|------------|-------------|
   |[\<> aplikacji](application-element-net-native.md)|✔️|✔️|✔️|
   |[\<zestawu >](assembly-element-net-native.md)|✔️|✔️|✔️|
@@ -43,12 +43,12 @@ Pliki dyrektyw środowiska uruchomieniowego rozpoznają trzy kategorie typów za
   |[\<ImpliesType >](impliestype-element-net-native.md)|✔️|✔️|✔️|
   |[> metody \<](method-element-net-native.md)||✔️|✔️|
   |[\<MethodInstantiation >](methodinstantiation-element-net-native.md)||✔️|✔️|
-  |[\<Namespace>](namespace-element-net-native.md)|✔️|✔️|✔️|
+  |[\<przestrzeni nazw >](namespace-element-net-native.md)|✔️|✔️|✔️|
   |[\<parametr >](parameter-element-net-native.md)|✔️|✔️|✔️|
   |[\<Właściwość >](property-element-net-native.md)||✔️|✔️|
-  |[podtypy \<](subtypes-element-net-native.md)|✔️|✔️|✔️|
-  |[\<Type>](type-element-net-native.md)|✔️|✔️|✔️|
-  |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|✔️|✔️|✔️|
+  |[podtypy \<>](subtypes-element-net-native.md)|✔️|✔️|✔️|
+  |[Typ \<>](type-element-net-native.md)|✔️|✔️|✔️|
+  |[\<TypeInstantiation >](typeinstantiation-element-net-native.md)|✔️|✔️|✔️|
   |[\<TypeParameter >](typeparameter-element-net-native.md)|✔️|✔️|✔️|
 
 - Typy zasad serializacji określają, które metadane są udostępniane w czasie wykonywania na potrzeby serializacji i deserializacji:
@@ -74,12 +74,12 @@ Pliki dyrektyw środowiska uruchomieniowego rozpoznają trzy kategorie typów za
   |[\<ImpliesType >](impliestype-element-net-native.md)|✔️|✔️|✔️|✔️|
   |[> metody \<](method-element-net-native.md)|||||
   |[\<MethodInstantiation >](methodinstantiation-element-net-native.md)|||||
-  |[\<Namespace>](namespace-element-net-native.md)|✔️|✔️|✔️|✔️|
+  |[\<przestrzeni nazw >](namespace-element-net-native.md)|✔️|✔️|✔️|✔️|
   |[\<parametr >](parameter-element-net-native.md)|✔️|✔️|✔️|✔️|
   |[\<Właściwość >](property-element-net-native.md)|✔️||||
-  |[podtypy \<](subtypes-element-net-native.md)|✔️|✔️|✔️|✔️|
-  |[\<Type>](type-element-net-native.md)|✔️|✔️|✔️|✔️|
-  |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|✔️|✔️|✔️|✔️|
+  |[podtypy \<>](subtypes-element-net-native.md)|✔️|✔️|✔️|✔️|
+  |[Typ \<>](type-element-net-native.md)|✔️|✔️|✔️|✔️|
+  |[\<TypeInstantiation >](typeinstantiation-element-net-native.md)|✔️|✔️|✔️|✔️|
   |[\<TypeParameter >](typeparameter-element-net-native.md)|✔️|✔️|✔️|✔️|
 
 - Typy zasad międzyoperacyjnych określają, które metadane są udostępniane w czasie wykonywania, aby przekazywać typy odwołań, typy wartości i wskaźniki funkcji do modelu COM i środowisko wykonawcze systemu Windows:
@@ -103,12 +103,12 @@ Pliki dyrektyw środowiska uruchomieniowego rozpoznają trzy kategorie typów za
   |[\<ImpliesType >](impliestype-element-net-native.md)|✔️|✔️|✔️|
   |[> metody \<](method-element-net-native.md)||||
   |[\<MethodInstantiation >](methodinstantiation-element-net-native.md)||||
-  |[\<Namespace>](namespace-element-net-native.md)|✔️|✔️|✔️|
+  |[\<przestrzeni nazw >](namespace-element-net-native.md)|✔️|✔️|✔️|
   |[\<parametr >](parameter-element-net-native.md)|✔️|✔️|✔️|
   |[\<Właściwość >](property-element-net-native.md)||||
-  |[podtypy \<](subtypes-element-net-native.md)|✔️|✔️|✔️|
-  |[\<Type>](type-element-net-native.md)|✔️|✔️|✔️|
-  |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|✔️|✔️|✔️|
+  |[podtypy \<>](subtypes-element-net-native.md)|✔️|✔️|✔️|
+  |[Typ \<>](type-element-net-native.md)|✔️|✔️|✔️|
+  |[\<TypeInstantiation >](typeinstantiation-element-net-native.md)|✔️|✔️|✔️|
   |[\<TypeParameter >](typeparameter-element-net-native.md)|✔️|✔️|✔️|
 
 ## <a name="policy-settings"></a>Ustawienia zasad

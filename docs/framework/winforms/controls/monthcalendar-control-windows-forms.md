@@ -1,5 +1,5 @@
 ---
-title: MonthCalendar, kontrolka
+title: MonthCalendar — Formant
 ms.date: 03/30/2017
 helpviewer_keywords:
 - calendar controls

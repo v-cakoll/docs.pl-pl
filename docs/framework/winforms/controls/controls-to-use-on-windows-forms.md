@@ -105,7 +105,7 @@ Poniżej znajduje się alfabetyczna lista formantów i składników, które mog�
  [ListBox, kontrolka](listbox-control-windows-forms.md)  
  Zezwala użytkownikowi na wybranie co najmniej jednego elementu ze wstępnie zdefiniowanej listy.  
   
- [ListView, kontrolka](listview-control-windows-forms.md)  
+ [Kontrolka ListView](listview-control-windows-forms.md)  
  Wyświetla listę elementów z ikonami w programie Windows Explorer.  
   
  [MainMenu, składnik](mainmenu-component-windows-forms.md)  

@@ -24,7 +24,7 @@ Gdy umieścisz kontrolkę <xref:System.Windows.Forms.TabControl> w formularzu, d
 
 - W tagu inteligentnym kontrolki kliknij przycisk **Dodaj kartę** lub **Usuń kartę**
 
-     lub
+     —lub—
 
      W oknie **Właściwości** kliknij przycisk **wielokropka** (![przycisk wielokropka (...) w okno właściwości programu Visual Studio.](./media/visual-studio-ellipsis-button.png)) obok właściwości <xref:System.Windows.Forms.TabControl.TabPages%2A>, aby otworzyć **Edytor kolekcji elementów TabPage**. Kliknij przycisk **Dodaj** lub **Usuń** .
 

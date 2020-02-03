@@ -1,5 +1,5 @@
 ---
-title: ProgressBar, kontrolka
+title: ProgressBar — Formant
 ms.date: 03/30/2017
 helpviewer_keywords:
 - progress controls

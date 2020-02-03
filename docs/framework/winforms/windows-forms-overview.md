@@ -26,7 +26,7 @@ W poniższych omówieniach omówiono zalety inteligentnych aplikacji klienckich,
 
  W Windows Forms *formularz* jest obszarem wizualnym, na którym są wyświetlane informacje dla użytkownika. Zazwyczaj tworzysz Windows Forms aplikacje przez dodanie formantów do formularzy i opracowywanie odpowiedzi do akcji użytkownika, takich jak kliknięcia myszą lub naciśnięcia klawiszy. *Kontrolka* to dyskretny element interfejsu użytkownika, który wyświetla dane lub akceptuje dane wejściowe.
 
- Gdy użytkownik robi coś w formularzu lub jednej z jego kontrolek, akcja generuje zdarzenie. Aplikacja reaguje na te zdarzenia za pomocą kodu i przetwarza zdarzenia, gdy wystąpią. Aby uzyskać więcej informacji, zobacz [tworzenie obsługi zdarzeń w formularzach Windows Forms](creating-event-handlers-in-windows-forms.md).
+ Gdy użytkownik robi coś w formularzu lub jednej z jego kontrolek, akcja generuje zdarzenie. Aplikacja reaguje na te zdarzenia za pomocą kodu i przetwarza zdarzenia, gdy wystąpią. Aby uzyskać więcej informacji, zobacz [Tworzenie programów obsługi zdarzeń w Windows Forms](creating-event-handlers-in-windows-forms.md).
 
  Windows Forms zawiera różne kontrolki, które można dodać do formularzy: kontrolki, które wyświetlają pola tekstowe, przyciski, pola rozwijane, przyciski radiowe, a nawet strony sieci Web. Aby uzyskać listę wszystkich kontrolek, których można użyć na formularzu, zobacz [kontrolki do użycia na Windows Forms](./controls/controls-to-use-on-windows-forms.md). Jeśli istniejący formant nie spełnia Twoich potrzeb, Windows Forms również obsługuje tworzenie własnych niestandardowych formantów przy użyciu klasy <xref:System.Windows.Forms.UserControl>.
 

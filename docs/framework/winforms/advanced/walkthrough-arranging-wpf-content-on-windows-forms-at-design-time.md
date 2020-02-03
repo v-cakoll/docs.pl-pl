@@ -99,7 +99,7 @@ Linii wyrównania umożliwia łatwe wyrównywanie kontrolek w formularzu. Możes
 
 Kontrolka WPF hostowana w formularzu ma takie samo zachowanie dotyczące zakotwiczania i dokowania jak inne kontrolki Windows Forms.
 
-1. Wybierz `elementHost1`.
+1. Wybierz pozycję `elementHost1`.
 
 2. W oknie **Właściwości** ustaw właściwość <xref:System.Windows.Forms.Control.Anchor%2A> na **Top, Bottom, Left, Right**.
 
@@ -107,7 +107,7 @@ Kontrolka WPF hostowana w formularzu ma takie samo zachowanie dotyczące zakotwi
 
    Formant `elementHost1` zmienia rozmiar, aby wypełnić komórkę.
 
-4. Wybierz `elementHost2`.
+4. Wybierz pozycję `elementHost2`.
 
 5. W oknie **Właściwości** ustaw wartość właściwości <xref:System.Windows.Forms.Control.Dock%2A> na <xref:System.Windows.Forms.DockStyle.Fill>.
 
@@ -117,7 +117,7 @@ Kontrolka WPF hostowana w formularzu ma takie samo zachowanie dotyczące zakotwi
 
 7. Ustaw wartość właściwości <xref:System.Windows.Forms.Control.Dock%2A> na <xref:System.Windows.Forms.DockStyle.Top>.
 
-8. Wybierz `elementHost3`.
+8. Wybierz pozycję `elementHost3`.
 
 9. Ustaw wartość właściwości <xref:System.Windows.Forms.Control.Dock%2A> na <xref:System.Windows.Forms.DockStyle.Fill>.
 

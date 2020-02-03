@@ -22,7 +22,7 @@ Można umożliwić użytkownikowi zmianę rozmieszczenia formantów <xref:System
   
 ### <a name="to-enable-toolstripitem-rearrangement-at-run-time"></a>Aby włączyć ponowne rozmieszczanie elementu ToolStripItem w czasie wykonywania  
   
-- Ustaw <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> właściwość `true`. Domyślnie <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> jest `false`.  
+- Ustaw właściwość <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> na `true`. Domyślnie <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> jest `false`.  
   
      W czasie wykonywania użytkownik ma wciśnięty klawisz ALT i lewy przycisk myszy, aby przeciągnąć <xref:System.Windows.Forms.ToolStripItem> do innej lokalizacji na <xref:System.Windows.Forms.ToolStrip>.  
   

@@ -323,7 +323,7 @@ Obsługa animacji WPF pozwala zwiększyć, wstrząsać, obracać i zanikać kont
 
 Aby uzyskać więcej informacji, zobacz [Omówienie animacji](graphics-multimedia/animation-overview.md).
 
-## <a name="media"></a>Nośnik
+## <a name="media"></a>Multimedia
 
 Jednym ze sposobów przekazywania rozbudowanej zawartości jest użycie multimediów audiowizualnych. WPF zapewnia specjalną obsługę obrazów, wideo i audio.
 

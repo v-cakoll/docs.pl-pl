@@ -22,7 +22,7 @@ Kontrolka <xref:System.Windows.Forms.DataGridView> używa kilku typów kolumn do
   
  W poniższej tabeli opisano różne klasy kolumn dostępne do użycia w kontrolce <xref:System.Windows.Forms.DataGridView>.  
   
-|Klasa|Opis|  
+|Class|Opis|  
 |-----------|-----------------|  
 |<xref:System.Windows.Forms.DataGridViewTextBoxColumn>|Używany z wartościami tekstowymi. Generowane automatycznie podczas wiązania z liczbami i ciągami.|  
 |<xref:System.Windows.Forms.DataGridViewCheckBoxColumn>|Używany z wartościami <xref:System.Boolean> i <xref:System.Windows.Forms.CheckState>. Generowane automatycznie podczas wiązania z wartościami tych typów.|  

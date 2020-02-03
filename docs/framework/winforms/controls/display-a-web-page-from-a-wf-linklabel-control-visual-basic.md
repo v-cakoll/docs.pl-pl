@@ -46,8 +46,8 @@ End Sub
   
 - Aktywne połączenie internetowe.  
   
-## <a name="net-framework-security"></a>Zabezpieczenia programu .NET Framework  
- Wywołanie metody <xref:System.Diagnostics.Process.Start%2A> wymaga pełnego zaufania. Aby uzyskać więcej informacji, zobacz temat <xref:System.Security.SecurityException>.  
+## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
+ Wywołanie metody <xref:System.Diagnostics.Process.Start%2A> wymaga pełnego zaufania. Aby uzyskać więcej informacji, zobacz <xref:System.Security.SecurityException>.  
   
 ## <a name="see-also"></a>Zobacz także
 

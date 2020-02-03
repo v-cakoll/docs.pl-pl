@@ -433,7 +433,7 @@ Poniższy przykład pokazuje, jak używać identyfikatora URI, aby określić ik
 
 [!code-xaml[WindowIconSnippets#WindowIconSetXAML](~/samples/snippets/xaml/VS_Snippets_Wpf/WindowIconSnippets/XAML/MainWindow.xaml#windowiconsetxaml)]
 
-Aby uzyskać więcej informacji, zobacz temat <xref:System.Windows.Window.Icon%2A>.
+Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Window.Icon%2A>.
 
 <a name="Loading_Image__Audio__and_Video_Files"></a>
 

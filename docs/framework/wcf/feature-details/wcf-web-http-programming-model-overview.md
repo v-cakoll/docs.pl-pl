@@ -127,7 +127,7 @@ interface ICustomer
 ## <a name="formats-and-the-wcf-web-http-programming-model"></a>Formaty i model programowania HTTP sieci WEB w programie WCF  
  Model programowania HTTP sieci WEB w programie WCF udostępnia nowe funkcje do pracy z wieloma różnymi formatami danych. W warstwie powiązań <xref:System.ServiceModel.WebHttpBinding> mogą odczytywać i zapisywać następujące różne rodzaje danych:  
   
-- {1&gt;XML&lt;1}  
+- XML  
   
 - JSON  
   

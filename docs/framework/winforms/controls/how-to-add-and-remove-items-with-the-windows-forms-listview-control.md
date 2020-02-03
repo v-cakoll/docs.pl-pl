@@ -36,5 +36,5 @@ Proces dodawania elementu do kontrolki <xref:System.Windows.Forms.ListView> Wind
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.ListView>
-- [ListView, kontrolka](listview-control-windows-forms.md)
+- [Kontrolka ListView](listview-control-windows-forms.md)
 - [ListView, kontrolka — omówienie](listview-control-overview-windows-forms.md)

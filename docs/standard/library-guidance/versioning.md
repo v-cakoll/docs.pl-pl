@@ -99,5 +99,5 @@ Informacje o wersji zestawu są używane do rejestrowania dodatkowych informacji
 > Zezwól programowi SourceLink na automatyczne generowanie wersji zawierającej metadane narzędzia NuGet i kontroli źródła.
 
 >[!div class="step-by-step"]
->[Poprzedni](publish-nuget-package.md)
->[Następny](breaking-changes.md)
+>[Poprzednie](publish-nuget-package.md)
+>[dalej](breaking-changes.md)

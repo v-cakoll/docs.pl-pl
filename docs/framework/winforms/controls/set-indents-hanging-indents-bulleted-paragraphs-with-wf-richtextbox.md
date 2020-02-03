@@ -25,7 +25,7 @@ Kontrolka <xref:System.Windows.Forms.RichTextBox> Windows Forms ma wiele opcji f
   
 ### <a name="to-format-a-paragraph-as-a-bulleted-list"></a>Aby sformatować akapit jako listę punktowaną  
   
-1. Ustaw <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> właściwość `true`.  
+1. Ustaw właściwość <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> na `true`.  
   
     ```vb  
     RichTextBox1.SelectionBullet = True  

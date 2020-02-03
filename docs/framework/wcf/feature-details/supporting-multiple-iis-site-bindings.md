@@ -10,7 +10,7 @@ ms.lasthandoff: 01/24/2020
 ms.locfileid: "76743445"
 ---
 # <a name="supporting-multiple-iis-site-bindings"></a>Obsługa wielu wiązań witryny usług IIS
-W przypadku hostowania usługi Windows Communication Foundation (WCF) w obszarze Internet Information Services (IIS) 7,0 możesz chcieć podać wiele adresów bazowych, które używają tego samego protokołu w tej samej lokacji. Dzięki temu ta sama usługa może odpowiadać na wiele różnych identyfikatorów URI. Jest to przydatne, gdy chcesz hostować usługę, która nasłuchuje na `http://www.contoso.com` i `http://contoso.com`. Warto również utworzyć usługę mającą adres podstawowy dla użytkowników wewnętrznych oraz oddzielny adres podstawowy dla użytkowników zewnętrznych. Na przykład: `http://internal.contoso.com` i `http://www.contoso.com`.  
+W przypadku hostowania usługi Windows Communication Foundation (WCF) w obszarze Internet Information Services (IIS) 7,0 możesz chcieć podać wiele adresów bazowych, które używają tego samego protokołu w tej samej lokacji. Dzięki temu ta sama usługa może odpowiadać na wiele różnych identyfikatorów URI. Jest to przydatne, gdy chcesz hostować usługę, która nasłuchuje na `http://www.contoso.com` i `http://contoso.com`. Warto również utworzyć usługę mającą adres podstawowy dla użytkowników wewnętrznych oraz oddzielny adres podstawowy dla użytkowników zewnętrznych. Przykład: `http://internal.contoso.com` i `http://www.contoso.com`.  
   
 > [!NOTE]
 > Ta funkcja jest dostępna tylko przy użyciu protokołu HTTP.  

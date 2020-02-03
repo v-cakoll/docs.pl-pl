@@ -1,5 +1,5 @@
 ---
-title: DataGridView, kontrolka — scenariusze
+title: Scenariusze formantu DataGridView
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data [Windows Forms], displaying in tabular format

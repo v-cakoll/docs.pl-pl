@@ -61,7 +61,7 @@ Aby zaimplementować opóźnione przewijanie, ustaw właściwość <xref:System.
 
 Poniższa tabela zawiera listę typowych kontrolek służących do wyświetlania danych i ich obsługi. Zapoznaj się z poprzednimi sekcjami, aby uzyskać informacje na temat włączania tych funkcji.
 
-|Kontrolka|Wirtualizacja|Odtwarzanie kontenera|Przewijanie odroczone|
+|formant|Wirtualizacja|Odtwarzanie kontenera|Przewijanie odroczone|
 |-------------|--------------------|-------------------------|------------------------|
 |<xref:System.Windows.Controls.ComboBox>|Można włączyć|Można włączyć|Można włączyć|
 |<xref:System.Windows.Controls.ContextMenu>|Można włączyć|Można włączyć|Można włączyć|

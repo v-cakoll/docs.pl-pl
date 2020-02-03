@@ -474,7 +474,7 @@ Na poniższej ilustracji przedstawiono obie strony aplikacji `ExpenseIt` z kontr
 > Ten przykład pokazuje konkretną funkcję WPF i nie jest zgodny ze wszystkimi najlepszymi rozwiązaniami dotyczącymi takich elementów, jak zabezpieczenia, lokalizacja i ułatwienia dostępu. Aby uzyskać kompleksową obsługę WPF i najlepszych rozwiązań programistycznych dotyczących projektowania aplikacji .NET, zobacz następujące tematy:
 >
 > - [Ułatwienia dostępu](../../ui-automation/accessibility-best-practices.md)
-> - [Zabezpieczenia](../security-wpf.md)
+> - [Security](../security-wpf.md)
 > - [Globalizacja i lokalizacja WPF](../advanced/wpf-globalization-and-localization-overview.md)
 > - [Wydajność WPF](../advanced/optimizing-wpf-application-performance.md)
 

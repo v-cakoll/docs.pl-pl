@@ -93,7 +93,7 @@ W programie istnieją różne rodzaje *zmiennych* , w C#tym pola, elementy tabli
   - Wartość tego dokładnego typu
 - Typ wartości null
   - Wartość `null` lub wartość tego dokładnego typu
-- Obiekt programu
+- object
   - Odwołanie `null`, odwołanie do obiektu dowolnego typu odwołania lub odwołanie do wartości opakowanej dowolnego typu wartości
 - Typ klasy
   - Odwołanie `null`, odwołanie do wystąpienia tego typu klasy lub odwołanie do wystąpienia klasy pochodzącej od tego typu klasy
@@ -105,5 +105,5 @@ W programie istnieją różne rodzaje *zmiennych* , w C#tym pola, elementy tabli
   - Odwołanie `null` lub odwołanie do wystąpienia zgodnego typu delegata
 
 > [!div class="step-by-step"]
-> [Poprzedni](program-structure.md)
-> [Następny](expressions.md)
+> [Poprzednie](program-structure.md)
+> [dalej](expressions.md)

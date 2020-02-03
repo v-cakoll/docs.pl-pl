@@ -96,10 +96,10 @@ Ta Trainer wyprowadza następujące dane:
 
 | Nazwa wyjściowa | Typ | Opis|
 | -- | -- | -- |
-| `Score` | Wektor <xref:System.Single> | Wyniki wszystkich klas. Wyższa wartość oznacza wyższe prawdopodobieństwo podzielenia się z klasą skojarzoną. Jeśli element i-ty ma największą wartość, przewidywany indeks etykiet będzie. Zwróć uwagę, że jest indeksem opartym na wartości zero. |
+| `Score` | wektor <xref:System.Single> | Wyniki wszystkich klas. Wyższa wartość oznacza wyższe prawdopodobieństwo podzielenia się z klasą skojarzoną. Jeśli element i-ty ma największą wartość, przewidywany indeks etykiet będzie. Zwróć uwagę, że jest indeksem opartym na wartości zero. |
 | `PredictedLabel` | Typ [klucza](xref:Microsoft.ML.Data.KeyDataViewType) | Indeks przewidywanej etykiety. Jeśli wartość jest równa i, rzeczywista etykieta będzie kategorią i, w typie etykiety wejściowej z wartościami klucza. |
 
-## <a name="regression"></a>Regresji
+## <a name="regression"></a>Regresja
 
 [Nadzorowane zadanie uczenia maszynowego](glossary.md#supervised-machine-learning) , które jest używane do przewidywania wartości etykiety z zestawu pokrewnych funkcji. Etykieta może być dowolną wartością rzeczywistą i nie pochodzi z skończonego zestawu wartości jako zadań klasyfikacji. Algorytmy regresji modelują zależność etykiety na jej powiązanych funkcjach, aby określić, w jaki sposób etykieta zostanie zmieniona, ponieważ wartości funkcji są różne. Wejście algorytmu regresji jest zestawem przykładów z etykietami znanych wartości. Wynikiem algorytmu regresji jest funkcja, której można użyć do przewidywania wartości etykiety dla każdego nowego zestawu funkcji wejściowych. Przykłady scenariuszy regresji obejmują:
 
@@ -131,7 +131,7 @@ Instruktorzy dla tego zadania wyprowadzają następujące dane wyjściowe:
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | Nieprzetworzony wynik, który został przewidywalny przez model |
 
-## <a name="clustering"></a>Obsługa klastrów
+## <a name="clustering"></a>Klastrowanie
 
 Nienadzorowane zadanie [uczenia maszynowego](glossary.md#unsupervised-machine-learning) , które jest używane do grupowania wystąpień danych w klastry zawierające podobne właściwości. Klastrowanie może również służyć do identyfikowania relacji w zestawie danych, które mogą nie być logicznie wyprowadzane przez przeglądanie lub prostą obserwację. Dane wejściowe i wyjściowe algorytmu klastrowania zależą od wybranej metodologii. Możesz skorzystać z metody dystrybucji, centroida, łączności lub opartej na gęstość. ML.NET obecnie obsługuje podejście oparte na centroida przy użyciu K-oznacza klastrowanie. Przykłady scenariuszy klastrowania obejmują:
 
@@ -153,7 +153,7 @@ Ta Trainer wyprowadza następujące dane:
 
 | Nazwa wyjściowa | Typ | Opis|
 | -- | -- | -- |
-| `Score` | Wektor <xref:System.Single> | Odległość danego punktu danych do wszystkich klastrów centriods |
+| `Score` | wektor <xref:System.Single> | Odległość danego punktu danych do wszystkich klastrów centriods |
 | `PredictedLabel` | Typ [klucza](xref:Microsoft.ML.Data.KeyDataViewType) | Indeks najbliższego klastra przewidziany przez model. |
 
 ## <a name="anomaly-detection"></a>Wykrywanie anomalii

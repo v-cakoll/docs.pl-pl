@@ -44,10 +44,10 @@ W niektórych aplikacjach rodzaj okna podrzędnego interfejsu wielu dokumentów 
     |Element menu Form2|MergeAction wartość|MergeIndex wartość|  
     |---------------------|-----------------------|----------------------|  
     |Plik|MatchOnly|-1|  
-    |Separator|Wstaw|2|  
-    |Zapisz|Wstaw|3|  
-    |Zapisz i Zamknij|Wstaw|4|  
-    |Separator|Wstaw|5|  
+    |Separator|Insert|2|  
+    |Zapisanie|Insert|3|  
+    |Zapisz i Zamknij|Insert|4|  
+    |Separator|Insert|5|  
   
 10. Utwórz procedurę obsługi zdarzeń dla zdarzenia <xref:System.Windows.Forms.Control.Click> <xref:System.Windows.Forms.ToolStripMenuItem>`&Open`.  
   

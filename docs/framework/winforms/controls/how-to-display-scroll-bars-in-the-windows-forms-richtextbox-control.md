@@ -18,7 +18,7 @@ Domyślnie formant Windows Forms <xref:System.Windows.Forms.RichTextBox> Wyświe
   
 ### <a name="to-display-scroll-bars-in-a-richtextbox-control"></a>Aby wyświetlić paski przewijania w kontrolce RichTextBox  
   
-1. Ustaw <xref:System.Windows.Forms.RichTextBox.Multiline%2A> właściwość `true`. Jeśli właściwość <xref:System.Windows.Forms.RichTextBox.Multiline%2A> jest ustawiona na `false`, nie ma żadnego typu paska przewijania, w tym w poziomie.  
+1. Ustaw właściwość <xref:System.Windows.Forms.RichTextBox.Multiline%2A> na `true`. Jeśli właściwość <xref:System.Windows.Forms.RichTextBox.Multiline%2A> jest ustawiona na `false`, nie ma żadnego typu paska przewijania, w tym w poziomie.  
   
 2. Ustaw właściwość <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> na odpowiednią wartość wyliczenia <xref:System.Windows.Forms.RichTextBoxScrollBars>.  
   

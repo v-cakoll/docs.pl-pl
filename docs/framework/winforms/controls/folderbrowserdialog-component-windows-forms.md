@@ -1,5 +1,5 @@
 ---
-title: FolderBrowserDialog, składnik
+title: FolderBrowserDialog — Składnik
 ms.date: 03/30/2017
 helpviewer_keywords:
 - folders [Windows Forms], browsing

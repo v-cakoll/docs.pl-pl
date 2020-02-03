@@ -1,5 +1,5 @@
 ---
-title: Metody rozszerzenia
+title: Metody rozszerzeń
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 5de945cb-88f4-49d7-b0e6-f098300cf357
@@ -10,7 +10,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76741624"
 ---
-# <a name="extension-methods"></a>Metody rozszerzenia
+# <a name="extension-methods"></a>Metody rozszerzeń
 Metody rozszerzające są funkcją języka, która umożliwia wywoływanie metod statycznych przy użyciu składni wywołania metody wystąpienia. Te metody muszą przyjmować co najmniej jeden parametr, który reprezentuje wystąpienie, na którym ma działać Metoda.
 
  Klasa, która definiuje takie metody rozszerzenia, jest określana jako Klasa "sponsora" i musi być zadeklarowana jako statyczna. Aby można było użyć metod rozszerzających, należy zaimportować przestrzeń nazw definiującą klasę sponsora.

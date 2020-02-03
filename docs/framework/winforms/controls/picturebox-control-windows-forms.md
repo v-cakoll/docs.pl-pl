@@ -1,5 +1,5 @@
 ---
-title: PictureBox — Formant
+title: PictureBox, kontrolka
 ms.date: 03/30/2017
 helpviewer_keywords:
 - PictureBox control [Windows Forms]

@@ -69,9 +69,9 @@ W poniższym przykładzie pokazano szesnastkowe odwołanie do znaku. Zwróć uwa
 
  Obecnie obsługiwane są następujące skrypty:
 
-- arabski
+- Arabski
 
-- Bengali
+- Bengalski
 
 - Devanagari
 
@@ -79,11 +79,11 @@ W poniższym przykładzie pokazano szesnastkowe odwołanie do znaku. Zwróć uwa
 
 - grecki
 
-- Gujarati
+- Gudżarati
 
 - Gurmukhi
 
-- hebrajski
+- Hebrajski
 
 - Skrypty ideograficzne
 
@@ -119,7 +119,7 @@ W poniższym przykładzie pokazano szesnastkowe odwołanie do znaku. Zwróć uwa
 
 - Stary Hangul koreański
 
-- Mjanma
+- Myanmar
 
 - Syngaleski
 

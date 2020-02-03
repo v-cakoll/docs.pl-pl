@@ -1,5 +1,5 @@
 ---
-title: ListView — Informacje o formancie
+title: ListView, kontrolka — omówienie
 ms.date: 03/30/2017
 f1_keywords:
 - ListView
@@ -27,7 +27,7 @@ Kontrolka <xref:System.Windows.Forms.ListView> Windows Forms wyświetla listę e
   
  W poniższej tabeli wymieniono niektóre elementy członkowskie <xref:System.Windows.Forms.ListView> i widoki, w których są one ważne.  
   
-|Element członkowski ListView|Zobacz .|  
+|Element członkowski ListView|Widok|  
 |---------------------|----------|  
 |<xref:System.Windows.Forms.ListView.Alignment%2A> Właściwość|<xref:System.Windows.Forms.View.SmallIcon> lub <xref:System.Windows.Forms.View.LargeIcon>|  
 |<xref:System.Windows.Forms.ListView.AutoArrange%2A> Właściwość|<xref:System.Windows.Forms.View.SmallIcon> lub <xref:System.Windows.Forms.View.LargeIcon>|  
@@ -38,7 +38,7 @@ Kontrolka <xref:System.Windows.Forms.ListView> Windows Forms wyświetla listę e
 |<xref:System.Windows.Forms.ListView.FindNearestItem%2A>, Metoda|<xref:System.Windows.Forms.View.SmallIcon> lub <xref:System.Windows.Forms.View.LargeIcon>|  
 |<xref:System.Windows.Forms.ListView.GetItemAt%2A>, Metoda|<xref:System.Windows.Forms.View.Details> lub <xref:System.Windows.Forms.View.Tile>|  
 |<xref:System.Windows.Forms.ListView.Groups%2A> Właściwość|Wszystkie widoki z wyjątkiem <xref:System.Windows.Forms.View.List>|  
-|<xref:System.Windows.Forms.ListView.HeaderStyle%2A> Właściwość|<xref:System.Windows.Forms.View.Details>.|  
+|<xref:System.Windows.Forms.ListView.HeaderStyle%2A> Właściwość|<xref:System.Windows.Forms.View.Details>.,|  
 |<xref:System.Windows.Forms.ListView.InsertionMark%2A> Właściwość|<xref:System.Windows.Forms.View.LargeIcon>, <xref:System.Windows.Forms.View.SmallIcon>lub <xref:System.Windows.Forms.View.Tile>|  
   
  Właściwość klucza kontrolki <xref:System.Windows.Forms.ListView> jest <xref:System.Windows.Forms.ListView.Items%2A>, która zawiera elementy wyświetlane przez formant. Właściwość <xref:System.Windows.Forms.ListView.SelectedItems%2A> zawiera kolekcję elementów aktualnie zaznaczonych w kontrolce. Użytkownik może wybrać wiele elementów, na przykład przeciągać i upuszczać kilka elementów jednocześnie do innej kontrolki, jeśli właściwość <xref:System.Windows.Forms.ListView.MultiSelect%2A> jest ustawiona na `true`. Kontrolka <xref:System.Windows.Forms.ListView> może wyświetlać pola wyboru obok elementów, jeśli właściwość <xref:System.Windows.Forms.ListView.CheckBoxes%2A> jest ustawiona na `true`.  
@@ -50,7 +50,7 @@ Kontrolka <xref:System.Windows.Forms.ListView> Windows Forms wyświetla listę e
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.ListView>
-- [ListView, kontrolka](listview-control-windows-forms.md)
+- [Kontrolka ListView](listview-control-windows-forms.md)
 - [Instrukcje: dodawanie i usuwanie elementów za pomocą kontrolki ListView formularzy Windows Forms](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
 - [Instrukcje: dodawanie kolumn do kontrolki ListView formularzy Windows Forms](how-to-add-columns-to-the-windows-forms-listview-control.md)
 - [Instrukcje: wyświetlanie ikon dla kontrolki ListView formularzy Windows Forms](how-to-display-icons-for-the-windows-forms-listview-control.md)

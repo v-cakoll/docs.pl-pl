@@ -39,7 +39,7 @@ ms.locfileid: "76743750"
   
  Klasa <xref:System.Security.Permissions.FileDialogPermission> określa typ okna dialogowego, który może być używany przez aplikację. W poniższej tabeli przedstawiono wartość, którą należy wykonać, aby użyć każdej klasy <xref:System.Windows.Forms.FileDialog>.  
   
-|Klasa|Wymagana wartość dostępu|  
+|Class|Wymagana wartość dostępu|  
 |-----------|---------------------------|  
 |<xref:System.Windows.Forms.OpenFileDialog>|<xref:System.Security.Permissions.FileDialogPermissionAccess.Open>|  
 |<xref:System.Windows.Forms.SaveFileDialog>|<xref:System.Security.Permissions.FileDialogPermissionAccess.Save>|  

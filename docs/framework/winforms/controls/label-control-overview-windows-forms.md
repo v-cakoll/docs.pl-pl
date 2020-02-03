@@ -1,5 +1,5 @@
 ---
-title: Label — Informacje o formancie
+title: Label, kontrolka — omówienie
 ms.date: 03/30/2017
 f1_keywords:
 - Label

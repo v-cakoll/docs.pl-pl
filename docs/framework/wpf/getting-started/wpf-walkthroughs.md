@@ -1,5 +1,5 @@
 ---
-title: Wskazówki
+title: Przewodniki
 ms.date: 03/30/2017
 helpviewer_keywords:
 - walkthroughs [WPF]
@@ -50,4 +50,4 @@ Instruktaże zawierają instrukcje krok po kroku dla typowych scenariuszy. Dzię
 
 |Tytuł|Opis|
 |-----------|-----------------|
-|[Visual Studio Walkthroughs](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/szatc41e(v=vs.100))|Zawiera powiązaną listę instruktażów dla wszystkich obszarów programowania w programie Visual Studio.|
+|[Przewodniki dotyczące programu Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/szatc41e(v=vs.100))|Zawiera powiązaną listę instruktażów dla wszystkich obszarów programowania w programie Visual Studio.|

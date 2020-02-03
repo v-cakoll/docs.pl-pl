@@ -19,11 +19,11 @@ Ten przykład pokazuje, jak hostować aplikacje w usłudze aktywacji procesów s
 > [!NOTE]
 > Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).
 >
-> \<InstallDrive>:\WF_WCF_Samples
+> \<InstallDrive >: \ WF_WCF_Samples
 >
 > Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie przykłady WCF i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.
 >
-> \<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.
+> \<InstallDrive >: \Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.
 
 Usługa aktywacji procesów systemu Windows (WAS), nowy mechanizm aktywacji procesu dla systemu Windows Server 2008, zapewnia funkcje podobne do usług IIS, które były wcześniej dostępne tylko dla aplikacji opartych na protokole HTTP, do aplikacji korzystających z protokołów innych niż HTTP. Windows Communication Foundation (WCF) używa interfejsu adaptera odbiornika do przekazywania żądań aktywacji odbieranych za pośrednictwem protokołów innych niż HTTP obsługiwanych przez funkcję WCF, takich jak TCP, nazwane potoki i MSMQ. Funkcja otrzymywania żądań za pośrednictwem protokołów innych niż HTTP jest hostowana przez zarządzane usługi systemu Windows działające w SMSvcHost. exe.
 

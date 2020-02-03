@@ -1,5 +1,5 @@
 ---
-title: TableLayoutPanel — kontrolka
+title: TableLayoutPanel — Formant
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms]

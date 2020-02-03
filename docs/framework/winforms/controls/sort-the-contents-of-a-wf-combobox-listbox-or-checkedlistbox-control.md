@@ -22,7 +22,7 @@ Kontrolki Windows Forms nie sortują się, gdy są powiązane z danymi. Aby wyś
   
 ### <a name="to-sort-the-list"></a>Aby posortować listę  
   
-1. Ustaw `Sorted` właściwość `true`.  
+1. Ustaw właściwość `Sorted` na `true`.  
   
      To ustawienie zmienia położenie wszystkich istniejących elementów listy w kolejności sortowania.  
   

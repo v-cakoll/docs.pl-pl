@@ -1,5 +1,5 @@
 ---
-title: ToolBar — Informacje o formancie
+title: ToolBar, kontrolka — omówienie
 ms.date: 03/30/2017
 f1_keywords:
 - ToolBar

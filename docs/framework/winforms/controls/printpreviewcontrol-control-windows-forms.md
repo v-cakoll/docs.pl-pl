@@ -1,5 +1,5 @@
 ---
-title: PrintPreviewControl, kontrolka
+title: PrintPreviewControl — Formant
 ms.date: 03/30/2017
 helpviewer_keywords:
 - printing [Windows Forms], print preview

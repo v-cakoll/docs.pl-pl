@@ -44,7 +44,7 @@ ms.locfileid: "76743340"
 |Obszar funkcji|Funkcja|  
 |------------------|-------------|  
 |Ogólne|Okno przeglądarki<br /><br /> Dostęp do lokacji pochodzenia<br /><br /> IsolatedStorage (limit 512 KB)<br /><br /> Dostawcy UIAutomation<br /><br /> Przegląd<br /><br /> Edytory Input Method Editor (IME)<br /><br /> Pióro i atrament<br /><br /> Symulowane przeciąganie/upuszczanie przy użyciu funkcji przechwytywania i przenoszenia myszy<br /><br /> OpenFileDialog<br /><br /> Deserializacja XAML (za pośrednictwem XamlReader. Load)|  
-|Integracja z siecią Web|Okno dialogowe pobierania przeglądarki<br /><br /> Nawigacja zainicjowana przez użytkownika najwyższego poziomu<br /><br /> mailto: linki<br /><br /> Parametry Uniform Resource Identifier<br /><br /> HTTPWebRequest<br /><br /> Zawartość WPF hostowana w elemencie IFRAME<br /><br /> Hosting stron HTML na tej samej stronie przy użyciu ramki<br /><br /> Hosting tych samych stron HTML witryny przy użyciu przeglądarki WebBrowser<br /><br /> Usługi sieci Web (ASMX)<br /><br /> Usługi sieci Web (przy użyciu Windows Communication Foundation)<br /><br /> Obsługa skryptów<br /><br /> Document Object Model|  
+|Integracja z siecią Web|Okno dialogowe pobierania przeglądarki<br /><br /> Nawigacja zainicjowana przez użytkownika najwyższego poziomu<br /><br /> mailto: linki<br /><br /> Parametry Uniform Resource Identifier<br /><br /> HTTPWebRequest<br /><br /> Zawartość WPF hostowana w elemencie IFRAME<br /><br /> Hosting stron HTML na tej samej stronie przy użyciu ramki<br /><br /> Hosting tych samych stron HTML witryny przy użyciu przeglądarki WebBrowser<br /><br /> Usługi sieci Web (ASMX)<br /><br /> Usługi sieci Web (przy użyciu Windows Communication Foundation)<br /><br /> Wykonywanie skryptów<br /><br /> Document Object Model|  
 |Wizualizacji|2D i 3W<br /><br /> Animacja<br /><br /> Nośnik (lokacja źródłowa i międzydomenowa)<br /><br /> Przetwarzanie obrazów/audio/wideo|  
 |Odczytu|FlowDocuments<br /><br /> Dokumenty XPS<br /><br /> Osadzone & czcionki systemowe<br /><br /> CFF & czcionki TrueType|  
 |Edytowanie|Sprawdzanie pisowni<br /><br /> RichTextBox<br /><br /> Obsługa przezroczystego tekstu i schowka<br /><br /> Wklej zainicjowany przez użytkownika<br /><br /> Kopiowanie wybranej zawartości|  
@@ -137,7 +137,7 @@ ms.locfileid: "76743340"
 |Izolowany magazyn|Izolacja zestawu przez użytkownika|Tak|Nie|  
 |Izolowany magazyn|Nieznana izolacja|Tak|Tak|  
 |Izolowany magazyn|Nieograniczony limit przydziału użytkowników|Tak|Nie|  
-|Nośnik|Bezpieczne audio, wideo i obrazy|Tak|Tak|  
+|Multimedia|Bezpieczne audio, wideo i obrazy|Tak|Tak|  
 |Drukowanie|Drukowanie domyślne|Tak|Nie|  
 |Drukowanie|Bezpieczne drukowanie|Tak|Tak|  
 |Odbicie|Wysyłać|Tak|Nie|  
@@ -146,7 +146,7 @@ ms.locfileid: "76743340"
 |Interfejs użytkownika|Nieograniczone|Tak|Nie|  
 |Interfejs użytkownika|Bezpieczne okna najwyższego poziomu|Tak|Tak|  
 |Interfejs użytkownika|Własny schowek|Tak|Tak|  
-|Przeglądarki sieci Web|Bezpieczne nawigowanie po ramce do kodu HTML|Tak|Tak|  
+|Przeglądarka internetowa|Bezpieczne nawigowanie po ramce do kodu HTML|Tak|Tak|  
   
 > [!NOTE]
 > Operacje wycinania i wklejania są dozwolone tylko w częściowej relacji zaufania po zainicjowaniu użytkownika.  
@@ -165,6 +165,6 @@ ms.locfileid: "76743340"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zabezpieczenia](security-wpf.md)
+- [Security](security-wpf.md)
 - [Strategia zabezpieczeń WPF — zabezpieczenia platformy](wpf-security-strategy-platform-security.md)
 - [Strategia zabezpieczeń WPF — projekt zabezpieczeń](wpf-security-strategy-security-engineering.md)

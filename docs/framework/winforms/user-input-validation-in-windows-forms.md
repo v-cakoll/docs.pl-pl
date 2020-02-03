@@ -67,7 +67,7 @@ Gdy użytkownicy wprowadzają dane do aplikacji, warto sprawdzić, czy dane są 
 #### <a name="default-implicit-validation-behavior-for-windows-forms-controls"></a>Domyślne zachowanie niejawnego sprawdzania poprawności dla formantów Windows Forms  
  Różne kontrolki Windows Forms mają różne wartości domyślne dla właściwości <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A>. W poniższej tabeli przedstawiono najczęściej używane kontrolki i ich ustawienia domyślne.  
   
-|Kontrolka|Domyślne zachowanie walidacji|  
+|formant|Domyślne zachowanie walidacji|  
 |-------------|---------------------------------|  
 |<xref:System.Windows.Forms.ContainerControl>|<xref:System.Windows.Forms.AutoValidate.Inherit>|  
 |<xref:System.Windows.Forms.Form>|<xref:System.Windows.Forms.AutoValidate.EnableAllowFocusChange>|  

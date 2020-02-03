@@ -1,5 +1,5 @@
 ---
-title: Timer, składnik
+title: Timer — Składnik
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Timer component [Windows Forms]

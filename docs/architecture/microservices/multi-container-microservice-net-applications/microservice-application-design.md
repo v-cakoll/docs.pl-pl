@@ -2,14 +2,14 @@
 title: Projektowanie aplikacji opartej na mikrousługach
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Zapoznaj się z korzyściami i downsidesami aplikacji zorientowanych na mikrousługach, aby móc podejmować świadome decyzje.
 ms.date: 10/02/2018
-ms.openlocfilehash: 63c93f237172d80704c00472ef2d4cbf7c787ab0
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 619440c02c1a82e05adb2cec9ddba933cd3e0a65
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921023"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965766"
 ---
-# <a name="designing-a-microservice-oriented-application"></a>Projektowanie aplikacji opartej na mikrousługach
+# <a name="design-a-microservice-oriented-application"></a>Projektowanie aplikacji zorientowanej na mikrousługach
 
 Ta sekcja koncentruje się na projektowaniu hipotetycznej aplikacji korporacyjnej po stronie serwera.
 
@@ -96,7 +96,7 @@ W związku z tym jednostki wdrożenia dla mikrousług (a nawet dla baz danych w 
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>Zalety rozwiązań opartych na mikrousługach
 
-Rozwiązanie oparte na mikrousługach, takie jak ta, ma wiele korzyści:
+Rozwiązanie oparte na mikrousługach, takie jak ta, ma wiele zalet:
 
 **Każda mikrousługa jest stosunkowo mała — łatwość zarządzania i rozwijania**. Opracowany
 
@@ -180,7 +180,7 @@ Wieloarchitekturowy wzorzec i mikrousługi Polyglot oznacza, że można mieszać
 
 Na przykład w przypadku prostej aplikacji do konserwacji CRUD może nie mieć sensu projektowania i implementowania wzorców DDD. Jednak w przypadku podstawowej domeny lub podstawowej firmy może być konieczne zastosowanie bardziej zaawansowanych wzorców w celu zajęcia się złożonością biznesową z ciągle zmieniającymi się regułami biznesowymi.
 
-Szczególnie w przypadku, gdy zajmujesz się dużymi aplikacjami składającymi się z wielu podsystemów, nie należy stosować jednej architektury najwyższego poziomu w oparciu o pojedynczy wzorzec architektury. Na przykład CQRS nie powinna być stosowana jako architektura najwyższego poziomu dla całej aplikacji, ale może być przydatna dla określonego zestawu usług.
+Szczególnie w przypadku, gdy zajmujesz się dużymi aplikacjami składającymi się z wielu podsystemów, nie należy stosować jednej architektury najwyższego poziomu w oparciu o jeden wzorzec architektury. Na przykład CQRS nie powinna być stosowana jako architektura najwyższego poziomu dla całej aplikacji, ale może być przydatna dla określonego zestawu usług.
 
 Dla każdego z tych przypadków nie ma punktora Silver lub odpowiedniego wzorca architektury. Nie można mieć "jednego wzorca architektury, aby była dla nich stosowana reguła". W zależności od priorytetów każdej mikrousługi należy wybrać różne podejście dla każdej z nich, jak wyjaśniono w poniższych sekcjach.
 

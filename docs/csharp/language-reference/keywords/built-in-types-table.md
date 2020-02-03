@@ -62,7 +62,7 @@ Console.WriteLine(doubleType.FullName);
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../index.md)
+- [C#Odwoła](../index.md)
 - [Słowa kluczowe języka C#](index.md)
 - [Typy wartości](../builtin-types/value-types.md)
 - [Typy odwołań](reference-types.md)

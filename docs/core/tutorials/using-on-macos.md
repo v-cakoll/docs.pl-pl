@@ -20,7 +20,7 @@ Ten dokument zawiera kroki i przepływ pracy służące do tworzenia rozwiązani
 
 Zainstaluj [zestaw .NET Core SDK](https://dotnet.microsoft.com/download). Zestaw .NET Core SDK zawiera najnowszą wersję programu .NET Core Framework i środowiska uruchomieniowego.
 
-Zainstaluj [Visual Studio Code](https://code.visualstudio.com). W trakcie tego artykułu są również instalowane Visual Studio Code rozszerzenia, które zwiększają możliwości programistyczne programu .NET Core.
+Zainstaluj narzędzie [Visual Studio Code](https://code.visualstudio.com). W trakcie tego artykułu są również instalowane Visual Studio Code rozszerzenia, które zwiększają możliwości programistyczne programu .NET Core.
 
 Zainstaluj rozszerzenie Visual Studio Code C# , otwierając Visual Studio Code i naciskając klawisz <kbd>Fn</kbd>+<kbd>F1</kbd> , aby otworzyć paletę Visual Studio Code. Wpisz **EXT Install** , aby wyświetlić listę rozszerzeń. Wybierz C# rozszerzenie. Uruchom ponownie Visual Studio Code, aby aktywować rozszerzenie. Aby uzyskać więcej informacji, zobacz [dokumentację C# rozszerzenia Visual Studio Code](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).
 
@@ -28,7 +28,7 @@ Zainstaluj rozszerzenie Visual Studio Code C# , otwierając Visual Studio Code i
 
 W tym samouczku utworzysz trzy projekty: projekt biblioteki, testy dla tego projektu biblioteki oraz aplikację konsolową, która używa biblioteki. Możesz [wyświetlić lub pobrać źródło](https://github.com/dotnet/samples/tree/master/core/getting-started/golden) tego artykułu w repozytorium dotnet/Samples w witrynie GitHub. Aby uzyskać instrukcje dotyczące pobierania, zobacz [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-Rozpocznij Visual Studio Code. Naciśnij klawisz <kbd>Ctrl</kbd> <kbd>\`</kbd> (znak cudzysłowu lub apostrofu) lub wybierz pozycję **Wyświetl** **Terminal** > z menu, aby otworzyć osadzony terminal w Visual Studio Code. Można nadal otworzyć powłokę zewnętrzną za pomocą Eksploratora **Otwórz w wierszu polecenia** (**Otwórz w terminalu** w systemie macOS lub Linux), jeśli wolisz pracować poza Visual Studio Code.
+Uruchom program Visual Studio Code. Naciśnij klawisz <kbd>Ctrl</kbd> <kbd>\`</kbd> (znak cudzysłowu lub apostrofu) lub wybierz pozycję **Wyświetl** **Terminal** > z menu, aby otworzyć osadzony terminal w Visual Studio Code. Można nadal otworzyć powłokę zewnętrzną za pomocą Eksploratora **Otwórz w wierszu polecenia** (**Otwórz w terminalu** w systemie macOS lub Linux), jeśli wolisz pracować poza Visual Studio Code.
 
 Zacznij od utworzenia pliku rozwiązania, który służy jako kontener dla co najmniej jednego projektu .NET Core. W terminalu uruchom polecenie [`dotnet new`](../tools/dotnet-new.md) , aby utworzyć nowe rozwiązanie *złot. sln* w nowym folderze o nazwie *złota*:
 

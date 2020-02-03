@@ -1,5 +1,5 @@
 ---
-title: FontDialog, składnik
+title: FontDialog — Składnik
 ms.date: 03/30/2017
 helpviewer_keywords:
 - fonts [Windows Forms], dialog box

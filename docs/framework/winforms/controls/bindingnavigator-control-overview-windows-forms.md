@@ -1,5 +1,5 @@
 ---
-title: BindingNavigator, kontrolka — omówienie
+title: BindingNavigator — Informacje o formancie
 ms.date: 03/30/2017
 f1_keywords:
 - DataNavigator
@@ -27,7 +27,7 @@ Za pomocą kontrolki <xref:System.Windows.Forms.BindingNavigator> można utworzy
   
  Poniższa tabela zawiera listę formantów i opis ich funkcji.  
   
-|Kontrolka|Funkcja|  
+|formant|Funkcja|  
 |-------------|--------------|  
 |przycisk <xref:System.Windows.Forms.BindingNavigator.AddNewItem%2A>|Wstawia nowy wiersz do bazowego źródła danych.|  
 |przycisk <xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A>|Usuwa bieżący wiersz z bazowego źródła danych.|  

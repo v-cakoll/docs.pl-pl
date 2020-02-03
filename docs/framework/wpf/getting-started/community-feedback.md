@@ -104,7 +104,7 @@ Usterki mogą dotyczyć narzędzi używanych do tworzenia i kompilowania aplikac
   - MSBuild
   - Projektant grafiki wyrażenia
   - Expression interactive — Projektant
-  - {1&gt;Visual Studio&lt;1}
+  - Visual Studio
 - Konfiguracja rozwiązania, taka jak:
   - Rozwiązanie
   - Pojedynczy projekt

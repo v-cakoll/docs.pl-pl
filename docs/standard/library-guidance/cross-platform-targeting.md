@@ -124,5 +124,5 @@ Platforma .NET obsługuje docelowe wersje .NET Framework, które są nieobsługi
 ❌ nie zawierają obiektów docelowych dla platform .NET, które nie są już obsługiwane. Na przykład `SL4`, `WP`.
 
 >[!div class="step-by-step"]
->[Poprzedni](get-started.md)
->[Następny](strong-naming.md)
+>[Poprzednie](get-started.md)
+>[dalej](strong-naming.md)

@@ -1,5 +1,5 @@
 ---
-title: ErrorProvider, składnik
+title: ErrorProvider — Składnik
 ms.date: 03/30/2017
 helpviewer_keywords:
 - error messages [Windows Forms], displaying

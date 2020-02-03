@@ -1,5 +1,5 @@
 ---
-title: SaveFileDialog, składnik — omówienie
+title: SaveFileDialog — Informacje o składniku
 ms.date: 03/30/2017
 f1_keywords:
 - SaveFileDialog

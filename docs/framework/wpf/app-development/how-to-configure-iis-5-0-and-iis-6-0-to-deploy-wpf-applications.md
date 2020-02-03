@@ -52,7 +52,7 @@ Ustawienie wygaśnięcia zawartości należy dostosować do 1 minuty. Poniższa 
 
 Należy zarejestrować kilka typów MIME i rozszerzeń plików, dzięki czemu przeglądarka w systemie klienta może załadować poprawną procedurę obsługi. Należy dodać następujące typy:
 
-|Rozszerzenie|Typ MIME|
+|Wewnętrzny|Typ MIME|
 |---------------|---------------|
 |. manifest|Aplikacja/manifest|
 |. XAML|Application/XAML + XML|

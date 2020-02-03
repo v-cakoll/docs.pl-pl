@@ -30,7 +30,7 @@ Windows Presentation Foundation (WPF) Host (PresentationHost. exe) to aplikacja,
   
  W tym temacie opisano parametry wiersza polecenia, które mogą być używane z PresentationHost. exe.  
   
-## <a name="usage"></a>Pomiar  
+## <a name="usage"></a>Użycie  
  `PresentationHost.exe [parameters] uri|filename`  
   
 ## <a name="parameters"></a>Parametry  
@@ -39,7 +39,7 @@ Windows Presentation Foundation (WPF) Host (PresentationHost. exe) to aplikacja,
 |---------------|-----------------|  
 |nazwa_pliku|Ścieżka pliku, który ma zostać aktywowany. Może również być identyfikatorem URI.|  
 |-debug|Podczas aktywowania aplikacji program nie zatwierdza jej ani nie uruchamia ze sklepu. Działa to tylko wtedy, gdy plik lokalny jest aktywowany.|  
-|-debugSecurityZoneURL \<url>|Używany z wartością adresu URL, aby wskazać PresentationHost. exe, że aplikacja powinna być debugowana tak, jakby została wdrożona z określonego adresu URL. Określa strefę wdrożenia i lokację źródłową.|  
+|-debugSecurityZoneURL \<adres URL >|Używany z wartością adresu URL, aby wskazać PresentationHost. exe, że aplikacja powinna być debugowana tak, jakby została wdrożona z określonego adresu URL. Określa strefę wdrożenia i lokację źródłową.|  
 |— Osadzanie|Wymagane przez OLE. Jeśli parametr `-event` lub `-debug` jest określony, nie trzeba określać `-embedding` parametru, ponieważ ten parametr jest ustawiony wewnętrznie.|  
 |-Event \<EventName >|Otwórz zdarzenie o tej nazwie i sygnalizuj go, gdy PresentationHost. exe zostanie zainicjowany i będzie gotowy do hostowania zawartości WPF. PresentationHost. exe zakończy się, jeśli wystąpił błąd podczas otwierania zdarzenia, na przykład jeśli nie został jeszcze utworzony.|  
 |-launchApplication \<adres URL >|Uruchamia autonomiczną aplikację ClickOnce z podanego adresu URL. Stosowane są zasady zabezpieczeń programu Internet Explorer i WinINet dotyczące aplikacji .NET.|  
@@ -60,4 +60,4 @@ Windows Presentation Foundation (WPF) Host (PresentationHost. exe) to aplikacja,
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zabezpieczenia](../security-wpf.md)
+- [Security](../security-wpf.md)

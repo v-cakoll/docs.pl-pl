@@ -1,5 +1,5 @@
 ---
-title: PrintDialog, składnik
+title: PrintDialog — Składnik
 ms.date: 03/30/2017
 helpviewer_keywords:
 - print options [Windows Forms], PrintDialog component (using designer)

@@ -12,7 +12,7 @@ ms.locfileid: "76730945"
 # <a name="security-behaviors-in-wcf"></a>Zachowania zabezpieczeń w programie WCF
 W Windows Communication Foundation (WCF), zachowania modyfikują zachowanie w czasie wykonywania na poziomie usługi lub na poziomie punktu końcowego. (Aby uzyskać więcej informacji na temat zachowań ogólnie, zobacz [Określanie zachowania usługi w czasie wykonywania](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)). *Zachowania zabezpieczeń* umożliwiają kontrolę nad poświadczeniami, uwierzytelnianiem, autoryzacją i dziennikami inspekcji. Można używać zachowań przez programowanie lub przez konfigurację. Ten temat koncentruje się na konfigurowaniu następujących zachowań związanych z funkcjami zabezpieczeń:  
   
-- [\<ServiceCredentials](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).  
+- [>\<ServiceCredentials](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).  
   
 - [\<obiekt clientcredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md).  
   
@@ -82,7 +82,7 @@ W Windows Communication Foundation (WCF), zachowania modyfikują zachowanie w cz
   
 - Określ zestaw prawidłowych identyfikatorów URI, dodając identyfikatory URI do tej kolekcji. Aby to zrobić, Wstaw [\<dodaj >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowedaudienceuris.md) dla każdego identyfikatora URI  
   
- Aby uzyskać więcej informacji, zobacz temat <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.  
+ Aby uzyskać więcej informacji, zobacz <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.  
   
  Aby uzyskać więcej informacji na temat używania tego elementu konfiguracji, zobacz [How to: Configure Credentials in a usługa federacyjna](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
   
@@ -117,13 +117,13 @@ W Windows Communication Foundation (WCF), zachowania modyfikują zachowanie w cz
 #### <a name="clientcertificate-element"></a>\<clientCertificate > element  
  Ustaw certyfikat używany do uwierzytelniania klienta przy użyciu tego elementu. Aby uzyskać więcej informacji, zobacz [How to: Określanie wartości poświadczeń klienta](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
-#### <a name="httpdigest"></a>\<httpDigest>  
+#### <a name="httpdigest"></a>\<httpDigest >  
  Ta funkcja musi być włączona z Active Directory w systemie Windows i Internet Information Services (IIS). Aby uzyskać więcej informacji, zobacz [uwierzytelnianie szyfrowane w usługach IIS 6,0](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc782661(v=ws.10)).  
   
 #### <a name="issuedtoken-element"></a>\<element > issuedToken  
  [\<issuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) zawiera elementy służące do konfigurowania lokalnego wystawcy tokenów lub zachowań używanych z usługą tokenu zabezpieczającego. Aby uzyskać instrukcje dotyczące konfigurowania klienta do korzystania z wystawcy lokalnego, zobacz [How to: Configure a Local wystawca](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
   
-#### <a name="localissueraddress"></a>\<localIssuerAddress>  
+#### <a name="localissueraddress"></a>\<localIssuerAddress >  
  Określa domyślny adres usługi tokenu zabezpieczającego. Ta wartość jest używana, gdy <xref:System.ServiceModel.WSFederationHttpBinding> nie poda adresu URL usługi tokenu zabezpieczającego lub gdy adres wystawcy powiązania federacyjnego jest `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` lub `null`. W takich przypadkach <xref:System.ServiceModel.Description.ClientCredentials> musi być skonfigurowany przy użyciu adresu wystawcy lokalnego i powiązania, które ma być używane do komunikacji z tym wystawcą.  
   
 #### <a name="issuerchannelbehaviors"></a>\<issuerChannelBehaviors >  
@@ -204,7 +204,7 @@ W Windows Communication Foundation (WCF), zachowania modyfikują zachowanie w cz
 ```  
   
 ## <a name="secure-metadata-exchange"></a>Bezpieczna wymiana metadanych  
- Eksportowanie metadanych do klientów jest wygodne w przypadku deweloperów usług i klientów, ponieważ umożliwia pobieranie konfiguracji i kodu klienta. Aby zmniejszyć narażenie usługi na złośliwych użytkowników, można zabezpieczyć transfer przy użyciu mechanizmu protokołu SSL przez HTTP (HTTPS). W tym celu należy najpierw powiązać odpowiedni certyfikat X. 509 z określonym portem na komputerze hostującym usługę. (Aby uzyskać więcej informacji, zobacz [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).) Następnie Dodaj [\<ServiceMetadata](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md) do konfiguracji usługi i ustaw atrybut `HttpsGetEnabled` na `true`. Na koniec ustaw atrybut `HttpsGetUrl` na adres URL punktu końcowego metadanych usługi, jak pokazano w poniższym przykładzie.  
+ Eksportowanie metadanych do klientów jest wygodne w przypadku deweloperów usług i klientów, ponieważ umożliwia pobieranie konfiguracji i kodu klienta. Aby zmniejszyć narażenie usługi na złośliwych użytkowników, można zabezpieczyć transfer przy użyciu mechanizmu protokołu SSL przez HTTP (HTTPS). W tym celu należy najpierw powiązać odpowiedni certyfikat X. 509 z określonym portem na komputerze hostującym usługę. (Aby uzyskać więcej informacji, zobacz [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).) Następnie Dodaj [>\<ServiceMetadata](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md) do konfiguracji usługi i ustaw atrybut `HttpsGetEnabled` na `true`. Na koniec ustaw atrybut `HttpsGetUrl` na adres URL punktu końcowego metadanych usługi, jak pokazano w poniższym przykładzie.  
   
 ```xml  
 <behaviors>  

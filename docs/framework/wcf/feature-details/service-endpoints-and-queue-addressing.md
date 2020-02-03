@@ -72,9 +72,9 @@ W tym temacie omówiono sposób, w jaki klienci adresów odczytywać z kolejek i
   
 |Adres kolejki oparty na identyfikatorze URI WCF|Użyj właściwości Active Directory|Właściwość protokołu transferu kolejki|Wypływające nazwy formatu usługi MSMQ|  
 |----------------------------------|-----------------------------------|--------------------------------------|---------------------------------|  
-|Net.msmq://\<machine-name>/private/abc|False (domyślnie)|Natywny (domyślny)|DIRECT=OS:machine-name\private$\abc|  
-|Net.msmq://\<machine-name>/private/abc|Fałsz|SRMP|DIRECT =http://machine/msmq/private $/ABC|  
-|Net.msmq://\<machine-name>/private/abc|Prawda|Natywne|PUBLIC = część-GUID (identyfikator GUID kolejki)|  
+|NET. MSMQ://\<Machine-Name >/Private/ABC|False (domyślnie)|Natywny (domyślny)|DIRECT=OS:machine-name\private$\abc|  
+|NET. MSMQ://\<Machine-Name >/Private/ABC|False|SRMP|DIRECT =http://machine/msmq/private$/ABC|  
+|NET. MSMQ://\<Machine-Name >/Private/ABC|True|Natywne|PUBLIC = część-GUID (identyfikator GUID kolejki)|  
   
 ### <a name="reading-messages-from-the-dead-letter-queue-or-the-poison-message-queue"></a>Odczytywanie wiadomości z kolejki utraconych wiadomości lub z kolejki trujących komunikatów  
  Aby odczytać wiadomości z kolejki komunikatów trujących, która jest podkolejką kolejki docelowej, Otwórz `ServiceHost` z adresem podkolejki.  
@@ -94,13 +94,13 @@ W tym temacie omówiono sposób, w jaki klienci adresów odczytywać z kolejek i
 ## <a name="msmqintegrationbinding-and-service-addressing"></a>MsmqIntegrationBinding i adresowanie usług  
  `MsmqIntegrationBinding` jest używany do komunikacji z tradycyjnymi aplikacjami usługi MSMQ. Aby ułatwić współdziałanie z istniejącą aplikacją MSMQ, WCF obsługuje tylko adresowanie nazw formatu. W ten sposób komunikaty wysyłane przy użyciu tego powiązania muszą być zgodne ze schematem identyfikatora URI:  
   
- msmq.formatname:\<*MSMQ-format-name*>>  
+ MSMQ. formatname:\<*MSMQ-format-name*>>  
   
  Nazwa MSMQ-format-name ma postać określoną przez usługę MSMQ w [temacie Informacje o kolejkach komunikatów](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms706032(v=vs.85)).  
   
  Należy pamiętać, że w przypadku otrzymywania wiadomości z kolejki przy użyciu `MsmqIntegrationBinding`można używać tylko bezpośrednich nazw formatu i nazw formatu publicznego i prywatnego (wymaga integracji Active Directory). Zaleca się jednak używanie bezpośrednich nazw formatu. Na przykład w systemie Windows Vista użycie dowolnej innej nazwy formatu powoduje błąd, ponieważ system próbuje otworzyć podkolejkę, która może być otwierana tylko z bezpośrednimi nazwami formatu.  
   
- W przypadku adresowania SRMP przy użyciu `MsmqIntegrationBinding`nie ma potrzeby dodawania/MSMQ/w nazwie formatu bezpośredniego, aby pomóc Internet Information Services (IIS) z wysyłaniem. Na przykład: podczas rozliczania kolejki ABC przy użyciu protokołu SRMP zamiast bezpośredniego =http://adatum.com/msmq/private $/ABC należy używać bezpośrednich =http://adatum.com/private $/ABC.  
+ W przypadku adresowania SRMP przy użyciu `MsmqIntegrationBinding`nie ma potrzeby dodawania/MSMQ/w nazwie formatu bezpośredniego, aby pomóc Internet Information Services (IIS) z wysyłaniem. Na przykład: podczas rozliczania kolejki ABC przy użyciu protokołu SRMP zamiast bezpośredniego =http://adatum.com/msmq/private$/ABC należy używać bezpośrednich =http://adatum.com/private$/ABC.  
   
  Należy pamiętać, że nie można użyć net. MSMQ://Addressing with `MsmqIntegrationBinding`. Ponieważ `MsmqIntegrationBinding` obsługuje adresowanie nazw formatu usługi MSMQ, można użyć usługi WCF, która używa tego powiązania do korzystania z funkcji listy multiemisji i dystrybucji w usłudze MSMQ. Jeden wyjątek określa `CustomDeadLetterQueue` podczas korzystania z `MsmqIntegrationBinding`. Musi mieć postać net. MSMQ://, podobnie jak w przypadku jej określenia przy użyciu `NetMsmqBinding`.  
   

@@ -41,5 +41,5 @@ Ważne jest, aby niektórym uczestnikom nie mógł uzyskać dostępu do konta Nu
 ✔️ włączyć powiadomienia e-mail po opublikowaniu pakietu.
 
 >[!div class="step-by-step"]
->[Poprzedni](sourcelink.md)
->[Następny](versioning.md)
+>[Poprzednie](sourcelink.md)
+>[dalej](versioning.md)

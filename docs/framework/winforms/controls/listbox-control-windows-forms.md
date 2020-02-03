@@ -1,5 +1,5 @@
 ---
-title: ListBox, kontrolka
+title: ListBox — Formant
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ListBox control [Windows Forms]

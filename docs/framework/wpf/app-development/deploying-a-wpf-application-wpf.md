@@ -124,4 +124,4 @@ Po skompilowaniu aplikacji Windows Presentation Foundation (WPF) muszą one zost
 ## <a name="see-also"></a>Zobacz także
 
 - [Kompilowanie aplikacji WPF](building-a-wpf-application-wpf.md)
-- [Zabezpieczenia](../security-wpf.md)
+- [Security](../security-wpf.md)

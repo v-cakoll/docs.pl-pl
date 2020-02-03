@@ -105,5 +105,5 @@ Wiele aplikacji natywnych w chmurze korzysta z interfejsów API po stronie serwe
 - [Klient JavaScript OIDC](http://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html)
 
 >[!div class="step-by-step"]
->[Poprzedni](azure-active-directory.md)
->[Następny](security.md)
+>[Poprzednie](azure-active-directory.md)
+>[dalej](security.md)

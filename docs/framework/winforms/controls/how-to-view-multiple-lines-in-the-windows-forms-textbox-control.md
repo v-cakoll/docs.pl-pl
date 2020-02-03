@@ -29,7 +29,7 @@ Domyślnie formant Windows Forms <xref:System.Windows.Forms.TextBox> wyświetla 
   
 ### <a name="to-view-multiple-lines-in-the-textbox-control"></a>Aby wyświetlić wiele wierszy w kontrolce TextBox  
   
-1. Ustaw <xref:System.Windows.Forms.TextBox.Multiline%2A> właściwość `true`. Jeśli <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> jest `true` (domyślnie), tekst w kontrolce będzie wyświetlany jako jeden lub więcej akapitów; w przeciwnym razie pojawi się jako lista, w której niektóre wiersze mogą być przycinane na krawędzi formantu.  
+1. Ustaw właściwość <xref:System.Windows.Forms.TextBox.Multiline%2A> na `true`. Jeśli <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> jest `true` (domyślnie), tekst w kontrolce będzie wyświetlany jako jeden lub więcej akapitów; w przeciwnym razie pojawi się jako lista, w której niektóre wiersze mogą być przycinane na krawędzi formantu.  
   
 2. Ustaw właściwość <xref:System.Windows.Forms.TextBox.ScrollBars%2A> na odpowiednią wartość.  
   

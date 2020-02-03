@@ -69,5 +69,5 @@ Należy silnej nazwy bibliotek .NET Open Source. Silne nazewnictwo zestawu zapew
 > Publikowanie dwóch pakietów rozwidlenia systemu dla deweloperów. Ponadto, jeśli aplikacja zostanie zakończona w zależności od obu pakietów, deweloper może napotkać konflikty nazw typów. W odniesieniu do platformy .NET są zainteresowane różne typy w różnych zestawach.
 
 >[!div class="step-by-step"]
->[Poprzedni](cross-platform-targeting.md)
->[Następny](nuget.md)
+>[Poprzednie](cross-platform-targeting.md)
+>[dalej](nuget.md)

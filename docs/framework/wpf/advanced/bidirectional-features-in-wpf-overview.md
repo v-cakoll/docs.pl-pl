@@ -198,7 +198,7 @@ Właściwość <xref:System.Windows.Media.NumberSubstitution.CultureOverride%2A>
 
 Ta właściwość określa typ podstawiania numerów do wykonania. Przyjmuje jedną z następujących <xref:System.Windows.Media.NumberSubstitutionMethod> wartości wyliczenia:
 
-- <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>: Metoda podstawienia jest określana na podstawie właściwości <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType> kultury liczbowej. Jest to domyślne ustawienie.
+- <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>: Metoda podstawienia jest określana na podstawie właściwości <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType> kultury liczbowej. Domyślnie włączone.
 
 - <xref:System.Windows.Media.NumberSubstitutionMethod.Context>: Jeśli kultura liczbowa jest kulturą arabską lub perski, określa, że cyfry są zależne od kontekstu.
 

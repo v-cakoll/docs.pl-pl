@@ -208,7 +208,7 @@ Poprzednie polecenie powoduje wyłączenie zdarzeń środowiska uruchomieniowego
 
 Środowisko uruchomieniowe platformy .NET Core obsługuje następujących dostawców platformy .NET. Program .NET Core używa tych samych słów kluczowych, aby umożliwić śledzenie zarówno `Event Tracing for Windows (ETW)`, jak i `EventPipe`.
 
-| Nazwa dostawcy                            | Informacje programu |
+| Nazwa dostawcy                            | Informacje |
 |------------------------------------------|-------------|
 | `Microsoft-Windows-DotNETRuntime`        | [Dostawca środowiska uruchomieniowego](../../framework/performance/clr-etw-providers.md#the-runtime-provider)<br>[Słowa kluczowe środowiska uruchomieniowego CLR](../../framework/performance/clr-etw-keywords-and-levels.md#runtime) |
 | `Microsoft-Windows-DotNETRuntimeRundown` | [Dostawca uwalniania](../../framework/performance/clr-etw-providers.md#the-rundown-provider)<br>[Słowa kluczowe uwalniania CLR](../../framework/performance/clr-etw-keywords-and-levels.md#rundown) |

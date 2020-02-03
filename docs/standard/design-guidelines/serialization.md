@@ -15,7 +15,7 @@ Serializacja jest procesem konwersji obiektu do formatu, który może być łatw
 
  .NET Framework oferuje trzy podstawowe technologie serializacji zoptymalizowane pod kątem różnych scenariuszy serializacji. W poniższej tabeli przedstawiono te technologie i typy struktury związane z tych technologii.
 
-|**Nazwa technologii**|**Typy główne**|**Sytuacji**|
+|**Nazwa technologii**|**Typy główne**|**Scenariusze**|
 |-------------------------|--------------------|-------------------|
 |**Serializacja kontraktu danych**|<xref:System.Runtime.Serialization.DataContractAttribute> <br /> <xref:System.Runtime.Serialization.DataMemberAttribute> <br /> <xref:System.Runtime.Serialization.DataContractSerializer> <br /> <xref:System.Runtime.Serialization.NetDataContractSerializer> <br /> <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> <br /> <xref:System.Runtime.Serialization.ISerializable>|Trwałość ogólne<br />Usługi sieci Web<br />JSON|
 |**Serializacja XML**|<xref:System.Xml.Serialization.XmlSerializer>|Format XML z pełną kontrolą nad kształtem XML|

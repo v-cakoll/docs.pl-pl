@@ -13,7 +13,7 @@ ms.locfileid: "76747001"
 
 Ten przykład pokazuje, jak używać funkcji anonsu funkcji odnajdywania. Anonsy umożliwiają usługom wysyłanie komunikatów anonsu zawierających metadane dotyczące usługi. Domyślnie anons powitalny jest wysyłany podczas uruchamiania usługi i wysyłany jest anons bye po zamknięciu usługi. Anonse mogą być multiemisje lub mogą być wysyłane jako punkt-punkt. Ten przykład składa się z dwóch projektów usługi i klienta.
 
-## <a name="service"></a>NDES
+## <a name="service"></a>Usługa
 
 Ten projekt zawiera samohostowaną usługę kalkulatora. W metodzie `Main` jest tworzony Host usługi i zostaje do niego dodany punkt końcowy usługi. Następnie zostanie utworzony <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>. Aby włączyć Anonsy, należy dodać punkt końcowy anonsu do <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>. W tym przypadku standardowym punktem końcowym przy użyciu multiemisji UDP jest dodawany jako punkt końcowy anonsu. Emituje anonse za pośrednictwem dobrze znanego adresu UDP.
 

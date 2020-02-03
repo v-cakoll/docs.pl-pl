@@ -2,12 +2,12 @@
 title: Przepływ pracy tworzenia oprogramowania dla aplikacji platformy Docker
 description: Zapoznaj się ze szczegółami przepływu pracy dotyczącymi tworzenia aplikacji opartych na platformie Docker. Rozpocznij krok po kroku i przejdź do szczegółów, aby zoptymalizować wieloetapowe dockerfile i zakończyć pracę z uproszczonym przepływem pracy dostępnym w przypadku korzystania z programu Visual Studio.
 ms.date: 01/07/2019
-ms.openlocfilehash: 5df646ffaba67a016d2b18959b9873b52c3d5e4c
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 53675bf974069e9052d6d03b2743314af6f13cf9
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920327"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965792"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Przepływ pracy tworzenia oprogramowania dla aplikacji platformy Docker
 
@@ -442,7 +442,7 @@ Jeśli aplikacja ma tylko jeden kontener, można uruchomić ją, wdrażając ją
 Kontener platformy Docker można uruchomić za pomocą polecenia `docker run`, jak pokazano na rysunku 5-9:
 
 ```console
-  docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
+docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
 ```
 
 Powyższe polecenie spowoduje utworzenie nowego wystąpienia kontenera z określonego obrazu przy każdym uruchomieniu. Można użyć parametru `--name`, aby nadać nazwę kontenerowi, a następnie użyć `docker start {name}` (lub użyć identyfikatora kontenera lub nazwy automatycznej) do uruchomienia istniejącego wystąpienia kontenera.
@@ -453,7 +453,7 @@ Powyższe polecenie spowoduje utworzenie nowego wystąpienia kontenera z określ
 
 W takim przypadku polecenie powiąże wewnętrzny port 5000 kontenera z portem 80 komputera hosta. Oznacza to, że host nasłuchuje na porcie 80 i przesyła dalej do portu 5000 w kontenerze.
 
-Wyświetlany skrót jest identyfikatorem kontenera i jest również przypisywany losowo czytelną nazwę, jeśli opcja `--name` nie jest używana.
+Wyświetlany skrót jest IDENTYFIKATORem kontenera i jest również przypisywany losowo czytelną nazwę, jeśli opcja `--name` nie jest używana.
 
 #### <a name="using-visual-studio"></a>Korzystanie z programu Visual Studio
 
@@ -500,7 +500,7 @@ Ważnym punktem jest to, jak pokazano na rysunku 5-12 w programie Visual Studio 
 
 ### <a name="a-note-about-testing-and-deploying-with-orchestrators"></a>Uwaga dotycząca testowania i wdrażania w programie Orchestrator
 
-Polecenia platformy Docker — tworzenie i Docker (lub uruchamianie i debugowanie kontenerów w programie Visual Studio) są odpowiednie do testowania kontenerów w środowisku deweloperskim. Nie należy jednak używać tej metody w przypadku wdrożeń produkcyjnych, w których należy kierować się koordynatorami, takimi jak [Kubernetes](https://kubernetes.io/) lub [Service Fabric](https://azure.microsoft.com/services/service-fabric/). Jeśli używasz programu Kubernetes, musisz użyć [zasobników](https://kubernetes.io/docs/concepts/workloads/pods/pod/) , aby organizować kontenery i [usługi](https://kubernetes.io/docs/concepts/services-networking/service/) w sieci. [Wdrożenia](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) są również używane do organizowania pod względem tworzenia i modyfikowania.
+Polecenia platformy Docker — tworzenie i Docker (lub uruchamianie i debugowanie kontenerów w programie Visual Studio) są odpowiednie do testowania kontenerów w środowisku deweloperskim. Nie należy jednak używać tej metody w przypadku wdrożeń produkcyjnych, w których należy kierować się koordynatorami, takimi jak [Kubernetes](https://kubernetes.io/) lub [Service Fabric](https://azure.microsoft.com/services/service-fabric/). Jeśli używasz programu Kubernetes, musisz używać [zasobników](https://kubernetes.io/docs/concepts/workloads/pods/pod/) , aby organizować kontenery i [usługi](https://kubernetes.io/docs/concepts/services-networking/service/) w sieci. [Wdrożenia](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) są również używane do organizowania pod względem tworzenia i modyfikowania.
 
 ![Obraz dla kroku 6.](./media/docker-app-development-workflow/step-6-test-app-microservices.png)
 

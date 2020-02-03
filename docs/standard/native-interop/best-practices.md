@@ -45,7 +45,7 @@ Pamiętaj, aby oznaczyć `[DllImport]` jako `Charset.Unicode`, chyba że jawnie 
 ❌ uniknąć `StringBuilder` parametrów. kierowanie `StringBuilder` *zawsze* tworzy natywną kopię buforu. W związku z tym może być wyjątkowo niewydajne. Zapoznaj się z typowym scenariuszem wywoływania interfejsu API systemu Windows, który pobiera ciąg:
 
 1. Utwórz SB o żądanej pojemności (przydzieli zarządzaną pojemność) **{1}**
-2. Wywołanie
+2. wywoływanie
    1. Przypisuje natywny bufor **{2}**
    2. Kopiuje zawartość, jeśli `[In]` _(wartość domyślna dla parametru `StringBuilder`)_
    3. Kopiuje bufor macierzysty do nowo przydzielonej tablicy zarządzanej, jeśli `[Out]` **{3}** _(domyślnie `StringBuilder`)_
@@ -161,7 +161,7 @@ Poniżej znajduje się lista typów danych używanych w interfejsach API systemu
 
 Następujące typy są takie same, jak w przypadku systemu Windows 32-bitowego i 64-bitowego, niezależnie od ich nazw.
 
-| Szerokość | Windows          | C (Windows)          | Język C#       | Różne                          |
+| Szerokość | Windows          | C (Windows)          | C#       | Różne                          |
 |:------|:-----------------|:---------------------|:---------|:-------------------------------------|
 | 32    | `BOOL`           | `int`                | `int`    | `bool`                               |
 | 8     | `BOOLEAN`        | `unsigned char`      | `byte`   | `[MarshalAs(UnmanagedType.U1)] bool` |

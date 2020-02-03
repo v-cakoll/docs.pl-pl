@@ -16,16 +16,16 @@ W poniższej tabeli przedstawiono wstępnie zdefiniowane konwersje niejawnych ws
   
 ## <a name="implicit-pointer-conversions"></a>Niejawne konwersje wskaźników  
   
-|Od|Do|  
+|Z|Do|  
 |----------|--------|  
 |Dowolny typ wskaźnika|pozycję|  
-|{1&gt;null&lt;1}|Dowolny typ wskaźnika|  
+|wartość null|Dowolny typ wskaźnika|  
   
  Jawna konwersja wskaźnika jest używana do przeprowadzania konwersji, dla których nie istnieje niejawna konwersja za pomocą wyrażenia Cast. W poniższej tabeli przedstawiono te konwersje.  
   
 ## <a name="explicit-pointer-conversions"></a>Jawne konwersje wskaźników  
   
-|Od|Do|  
+|Z|Do|  
 |----------|--------|  
 |Dowolny typ wskaźnika|Dowolny inny typ wskaźnika|  
 |bajty, Byte, Short, UShort, int, uint, Long lub ULONG|Dowolny typ wskaźnika|  

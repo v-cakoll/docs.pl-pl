@@ -35,7 +35,7 @@ Elementy można usunąć z kontrolki <xref:System.Windows.Forms.DomainUpDown> Wi
     domainUpDown1->Items->Remove("noodles");  
     ```  
   
-     lub  
+     —lub—  
   
 - Użyj metody <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A>, aby usunąć element według jego położenia.  
   

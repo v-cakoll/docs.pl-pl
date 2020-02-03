@@ -49,7 +49,7 @@ Za pomocą kontrolki <xref:System.Windows.Forms.DataGridView> można określić 
   
 - Odwołania do zestawów <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>i <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
-## <a name="robust-programming"></a>Skuteczne programowanie  
+## <a name="robust-programming"></a>Niezawodne programowanie  
  Aby osiągnąć maksymalną skalowalność podczas pracy z bardzo dużymi zestawami danych, należy udostępnić <xref:System.Windows.Forms.DataGridViewCellStyle> obiektów w wielu wierszach, kolumnach lub komórkach, które używają tych samych stylów, zamiast ustawiać właściwości stylu poszczególnych elementów osobno. Ponadto należy utworzyć wiersze udostępnione i uzyskać do nich dostęp przy użyciu właściwości <xref:System.Windows.Forms.DataGridViewRowCollection.SharedRow%2A?displayProperty=nameWithType>. Aby uzyskać więcej informacji, zobacz [najlepsze rozwiązania dotyczące skalowania Windows Forms formantu DataGridView](best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Zobacz także

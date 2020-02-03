@@ -1,5 +1,5 @@
 ---
-title: ComboBox — Formant
+title: ComboBox, kontrolka
 ms.date: 03/30/2017
 helpviewer_keywords:
 - drop-down lists [Windows Forms], Windows Forms

@@ -32,7 +32,7 @@ Poniższy przykład kodu ilustruje sposób używania kontrolki <xref:System.Wind
   
 - Odwołania do zestawów system, system. Data, system. Windows. Forms i system. XML.  
   
-## <a name="net-framework-security"></a>Zabezpieczenia programu .NET Framework  
+## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
  Przechowywanie poufnych informacji, takich jak hasło, w ciągu połączenia może wpłynąć na bezpieczeństwo aplikacji. Korzystanie z uwierzytelniania systemu Windows (znanego również jako zabezpieczenia zintegrowane) jest bezpieczniejszym sposobem na kontrolowanie dostępu do bazy danych. Aby uzyskać więcej informacji, zobacz [Ochrona informacji o połączeniu](../../data/adonet/protecting-connection-information.md).  
   
 ## <a name="see-also"></a>Zobacz także

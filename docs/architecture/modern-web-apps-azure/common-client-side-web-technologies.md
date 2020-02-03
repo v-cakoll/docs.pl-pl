@@ -1,24 +1,24 @@
 ---
-title: Typowe technologie internetowe po stronie klienta
+title: Typowe technologie sieci Web po stronie klienta
 description: Tworzenie architektury nowoczesnych aplikacji sieci Web przy użyciu ASP.NET Core i platformy Azure | Typowe technologie sieci Web po stronie klienta
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: bf346825c7e29831111fc11c836ca6b4a05a18ce
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 0e5f3578edc723e2e2a32b9b3a1d8a7dcabd2909
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920995"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965753"
 ---
-# <a name="common-client-side-web-technologies"></a>Typowe technologie internetowe po stronie klienta
+# <a name="common-client-side-web-technologies"></a>Typowe technologie sieci Web po stronie klienta
 
 > "Witryny sieci Web powinny wyglądać od wewnątrz do zewnątrz".  
 > _-Paul Cookson_
 
 Aplikacje ASP.NET Core są aplikacjami sieci Web, a zazwyczaj polegają na technologiach sieci Web po stronie klienta, takich jak HTML, CSS i JavaScript. Dzieląc zawartość strony (kod HTML) z układu i stylów (CSS) oraz jej zachowaniem (za pośrednictwem języka JavaScript), złożone aplikacje sieci Web mogą korzystać z oddzielenia zasad. Przyszłe zmiany struktury, projektu lub zachowania aplikacji mogą być łatwiejsze, gdy nie są intertwined te problemy.
 
-Chociaż język HTML i CSS są stosunkowo stabilne, JavaScript, za pomocą struktur aplikacji i narzędzi, deweloperzy współpracują z programem w celu kompilowania aplikacji opartych na sieci Web, rozwijając się z szybkością breakneck. W tym rozdziale przedstawiono kilka sposobów używania języka JavaScript przez deweloperów sieci Web w ramach opracowywania aplikacji, co stanowi ogólne omówienie wizualizacji i przereagowania na biblioteki po stronie klienta.
+Chociaż język HTML i CSS są stosunkowo stabilne, JavaScript, za pomocą struktur aplikacji i narzędzi, deweloperzy współpracują z programem w celu kompilowania aplikacji opartych na sieci Web, rozwijając się z szybkością breakneck. W tym rozdziale przedstawiono kilka sposobów używania języka JavaScript przez deweloperów sieci Web w ramach opracowywania aplikacji, co stanowi ogólne omówienie określania kątowych i reagowania na biblioteki po stronie klienta.
 
 ## <a name="html"></a>HTML
 
@@ -58,9 +58,9 @@ Wszystkie te zadania można wykonać wyłącznie JavaScript, ale wiele bibliotek
 
 ### <a name="legacy-web-apps-with-jquery"></a>Starsze aplikacje sieci Web za pomocą platformy jQuery
 
-Chociaż Ancient przez standardy języka JavaScript, platforma jQuery nadal jest bardzo używaną biblioteką do pracy z HTML/CSS i kompilowania aplikacji, które tworzą wywołania AJAX do interfejsów API sieci Web. Jednak system jQuery działa na poziomie modelu DOM (Document Object Model), a domyślnie oferuje tylko bezwzględny, a nie deklaratywny model.
+Chociaż Ancient przez standardy języka JavaScript, platforma jQuery nadal jest powszechnie używaną biblioteką do pracy z HTML/CSS i kompilowania aplikacji, które tworzą wywołania AJAX do interfejsów API sieci Web. Jednak system jQuery działa na poziomie modelu DOM (Document Object Model), a domyślnie oferuje tylko bezwzględny, a nie deklaratywny model.
 
-Załóżmy na przykład, że jeśli wartość pola tekstowego przekracza 10, element na stronie powinien być widoczny. W platformie jQuery zwykle jest to implementowane przez zapisanie obsługi zdarzeń z kodem, który sprawdzi wartość pola tekstowego i ustawi widoczność elementu docelowego na podstawie tej wartości. Jest to bezwzględne podejście oparte na kodzie. Inna platforma może zamiast tego użyć zapytania wiązania, aby powiązać widoczność elementu z wartością pola tekstowego. Nie wymaga to pisania żadnego kodu, ale tylko wymaga dekorowania nazwy elementów związanych z atrybutami powiązania danych. Gdy zachowania po stronie klienta zwiększają się bardziej złożone, podejścia do powiązań danych często powodują prostsze rozwiązania z mniejszą ilością kodu i złożoności warunkowej.
+Załóżmy na przykład, że jeśli wartość pola tekstowego przekracza 10, element na stronie powinien być widoczny. W platformie jQuery zwykle jest to implementowane przez zapisanie obsługi zdarzeń z kodem, który sprawdzi wartość pola tekstowego i ustawi widoczność elementu docelowego na podstawie tej wartości. Jest to bezwzględne podejście oparte na kodzie. Inna platforma może zamiast tego użyć zapytania wiązania, aby powiązać widoczność elementu z wartością pola tekstowego. Nie wymaga to pisania żadnego kodu, ale tylko wymaga dekorowania nazwy elementów związanych z atrybutami powiązania danych. Ponieważ zachowania po stronie klienta zwiększają się bardziej złożone, podejścia do powiązań danych często powodują prostsze rozwiązania z mniejszą ilością kodu i złożoności warunkowej.
 
 ### <a name="jquery-vs-a-spa-framework"></a>jQuery a platforma SPA
 
@@ -73,7 +73,7 @@ Załóżmy na przykład, że jeśli wartość pola tekstowego przekracza 10, ele
 | Tworzenia szablonów | **Znaleziono** | **Tak** |
 | Routing linków | **Znaleziono** | **Tak** |
 
-Większość funkcji jQuery nie może zostać dodana w sposób wewnętrzny z dodaniem innych bibliotek. Jednak mechanizm SPA, taki jak kątowy, udostępnia te funkcje w bardziej zintegrowany sposób, ponieważ został zaprojektowany ze wszystkimi z nich na myśli od samego początku. Ponadto jQuery jest bardzo bezwzględną biblioteką, co oznacza, że trzeba wywoływać funkcje jQuery w celu wykonywania jakichkolwiek czynności za pomocą jQuery. Większość pracy i funkcji, które zapewnia platforma SPA, może być wprowadzana w sposób deklaratywny, co nie wymaga faktycznego zapisania kodu.
+Większość funkcji jQuery nie może zostać dodana w sposób wewnętrzny z dodaniem innych bibliotek. Jednak mechanizm SPA, taki jak kątowy, udostępnia te funkcje w bardziej zintegrowany sposób, ponieważ został zaprojektowany ze wszystkimi z nich na myśli od samego początku. Ponadto jQuery jest bezwzględną biblioteką, co oznacza, że trzeba wywoływać funkcje jQuery w celu wykonywania jakichkolwiek czynności za pomocą jQuery. Większość pracy i funkcji, które zapewnia platforma SPA, może być wprowadzana w sposób deklaratywny, co nie wymaga faktycznego zapisania kodu.
 
 Powiązanie danych to doskonałe przykładowe rozwiązanie. W platformie jQuery zwykle przyjmuje tylko jeden wiersz kodu, aby uzyskać wartość elementu DOM lub ustawić wartość elementu. Jednak należy napisać ten kod w dowolnym momencie, gdy trzeba zmienić wartość elementu, a czasami występuje w wielu funkcjach na stronie. Innym typowym przykładem jest widoczność elementu. W platformie jQuery może istnieć wiele różnych miejsc, w których można napisać kod, aby kontrolować, czy niektóre elementy były widoczne. W każdym z tych przypadków, gdy korzystasz z powiązania danych, nie trzeba pisać kodu. Po prostu powiążesz wartość lub widoczność elementów na *ViewModel* na stronie, a zmiany w tym ViewModel zostaną automatycznie odzwierciedlone w elementach powiązanych.
 
@@ -134,7 +134,7 @@ Biorąc pod uwagę, która struktura języka JavaScript będzie najlepiej dział
 
 - Czy jest to dobrze udokumentowane?
 
-- Jak działa Twoja społeczność? Czy skompilowano nowe projekty?
+- Jak działa Twoja społeczność? Czy tworzone są nowe projekty?
 
 - Jak aktywny jest Twój rdzeń zespołu? Czy problemy są rozwiązywane i są regularnie wysyłane nowe wersje?
 

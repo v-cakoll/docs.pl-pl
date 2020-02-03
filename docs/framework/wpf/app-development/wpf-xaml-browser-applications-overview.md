@@ -101,7 +101,7 @@ ms.locfileid: "76742280"
 
 1. W programie Visual Studio Otwórz właściwości projektu.
 
-2. Na karcie **zabezpieczenia** kliknij przycisk **Zaawansowane**.
+2. Na karcie **Zabezpieczenia** kliknij pozycję **Zaawansowane**.
 
      Zostanie wyświetlone okno dialogowe Zaawansowane ustawienia zabezpieczeń.
 
@@ -113,7 +113,7 @@ ms.locfileid: "76742280"
 
      Zostanie wyświetlone okno dialogowe Opcje internetowe.
 
-6. Kliknij przycisk **zaawansowane** kartę.
+6. Kliknij kartę **Zaawansowane**.
 
 7. Na liście **Ustawienia** w obszarze **zabezpieczenia**zaznacz pole wyboru **Zezwalaj na uruchamianie aktywnej zawartości w plikach na moim komputerze** .
 

@@ -1,5 +1,5 @@
 ---
-title: ProgressBar — Informacje o formancie
+title: ProgressBar, kontrolka — omówienie
 ms.date: 03/30/2017
 f1_keywords:
 - ProgressBar

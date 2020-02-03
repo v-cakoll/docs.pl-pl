@@ -42,6 +42,6 @@ Znacznik wstawiania w kontrolce <xref:System.Windows.Forms.ListView> pokazuje u�
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.InsertionMark%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.ListViewInsertionMark>
-- [ListView, kontrolka](listview-control-windows-forms.md)
+- [Kontrolka ListView](listview-control-windows-forms.md)
 - [ListView, kontrolka — omówienie](listview-control-overview-windows-forms.md)
 - [Przewodnik: wykonywanie operacji przeciągania i upuszczania w formularzach Windows Forms](../advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)

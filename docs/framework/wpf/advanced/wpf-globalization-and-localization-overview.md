@@ -152,7 +152,7 @@ Zwróć uwagę, że [Obsługa języka XML: lang w języku XAML](../../../desktop
 
 **Kompilowanie zestawu zasobów satelitarnych**
 
-*In .csproj:*
+*W. csproj:*
 
 Edytuj plik `.csproj` i Dodaj następujący tag do niewarunkowego `<PropertyGroup>`:
 
@@ -204,7 +204,7 @@ Lokalizowanie aplikacji do wersji niemieckiej wymaga następujących tłumaczeń
 
 Ostatni krok lokalizacji obejmuje utworzenie nowo zlokalizowanego zestawu satelickiego. Można to zrobić za pomocą następującego polecenia LocBaml:
 
-**LocBaml.exe /generate RunDialog.resources.dll /trans:RunDialog.resources.dll.CSV /out: . /cul:de-DE**
+**LocBaml. exe/Generate RunDialog. resources. dll/Trans: RunDialog. resources. dll. CSV/out:. /CUL: de-DE**
 
 W przypadku okien niemieckich, jeśli ten plik resources. dll zostanie umieszczony w folderze de-DE obok zestawu głównego, ten zasób zostanie automatycznie załadowany zamiast tego w folderze en-US. Jeśli nie masz niemieckiej wersji systemu Windows do przetestowania, ustaw kulturę na dowolną kulturę systemu Windows, z której korzystasz (na przykład `en-US`), i Zastąp pierwotną bibliotekę DLL zasobów.
 
@@ -247,11 +247,11 @@ Zwróć uwagę na Właściwość <xref:System.Windows.FrameworkElement.FlowDirec
 
 Zwróć uwagę, że nawet pędzle gradientu tła są przerzucane prawidłowo po zmianie <xref:System.Windows.FrameworkElement.FlowDirection%2A> głównej:
 
-**FlowDirection="LeftToRight"**
+**FlowDirection = "LeftToRight"**
 
 ![Zrzut ekranu przedstawiający przepływ gradientu od lewej do prawej.](./media/wpf-globalization-and-localization-overview/gradient-flow-left-right.png)
 
-**FlowDirection="RightToLeft"**
+**FlowDirection = "RightToLeft"**
 
 ![Zrzut ekranu przedstawiający przepływ gradientu od prawej do lewej.](./media/wpf-globalization-and-localization-overview/gradient-flow-right-left.png)
 
@@ -277,7 +277,7 @@ Komentarze mogą być umieszczane na zawartości lub właściwości dowolnego el
 
 **Atrybuty lokalizacji**
 
-Często menedżerowie deweloperów lub lokalizacji wymagają kontroli, jakie lokalizatory mogą odczytywać i modyfikować. Na przykład możesz nie chcieć, aby lokalizator przetłumaczy nazwę firmy lub wyraz prawny. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawiera atrybuty, które umożliwiają ustawienie czytelności, modifiability i kategorii zawartości lub właściwości elementu, którego narzędzie lokalizacyjne może używać do blokowania, ukrywania i sortowania elementów. Aby uzyskać więcej informacji, zobacz temat <xref:System.Windows.Localization.Attributes%2A>. Na potrzeby tego przykładu narzędzie LocBaml jedynie wyprowadza wartości tych atrybutów. kontrolki [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wszystkie mają wartości domyślne dla tych atrybutów, ale można je zastąpić. Na przykład poniższy przykład zastępuje domyślne atrybuty lokalizacji `TextBlock_1` i ustawia zawartość do odczytu, ale nie można jej modyfikować dla lokalizatorów.
+Często menedżerowie deweloperów lub lokalizacji wymagają kontroli, jakie lokalizatory mogą odczytywać i modyfikować. Na przykład możesz nie chcieć, aby lokalizator przetłumaczy nazwę firmy lub wyraz prawny. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawiera atrybuty, które umożliwiają ustawienie czytelności, modifiability i kategorii zawartości lub właściwości elementu, którego narzędzie lokalizacyjne może używać do blokowania, ukrywania i sortowania elementów. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Localization.Attributes%2A>. Na potrzeby tego przykładu narzędzie LocBaml jedynie wyprowadza wartości tych atrybutów. kontrolki [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wszystkie mają wartości domyślne dla tych atrybutów, ale można je zastąpić. Na przykład poniższy przykład zastępuje domyślne atrybuty lokalizacji `TextBlock_1` i ustawia zawartość do odczytu, ale nie można jej modyfikować dla lokalizatorów.
 
 [!code-xaml[LocalizationComAtt#LocalizationAttributes](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributes)]
 

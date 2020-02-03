@@ -57,17 +57,17 @@ W tej sekcji opisano ogólne konwencje nazewnictwa, które odnoszą się do wybo
 
  Na przykład Metoda konwertowana na <xref:System.Int64> powinna mieć nazwę `ToInt64`, a nie `ToLong` (ponieważ <xref:System.Int64> jest nazwą środowiska CLR dla C#aliasu specyficznego `long`). W poniższej tabeli przedstawiono kilka podstawowych typów danych przy użyciu nazw typów CLR (a także odpowiednich nazw typów dla C#, Visual Basic i C++).
 
-|Język C#|Język Visual Basic|C++|CLR|
+|C#|Visual Basic|C++|CLR|
 |---------|------------------|-----------|---------|
 |**sbyte**|**SByte**|**char**|**SByte**|
-|**byte**|**Byte**|**znak bez znaku**|**Byte**|
-|**short**|**Short**|**short**|**Int16**|
+|**byte**|**Bajc**|**znak bez znaku**|**Bajc**|
+|**short**|**Wybierak**|**short**|**Int16**|
 |**ushort**|**UInt16**|**bez znaku Short**|**UInt16**|
-|**int**|**Integer**|**int**|**Int32**|
+|**int**|**Całkowitą**|**int**|**Elementem**|
 |**uint**|**Równ**|**niepodpisany int**|**Równ**|
-|**long**|**Long**|**__int64**|**Int64**|
+|**long**|**Długo**|**__int64**|**Int64**|
 |**ulong**|**UInt64**|**__int64 bez znaku**|**UInt64**|
-|**float**|**Single**|**float**|**Single**|
+|**float**|**Wiersz**|**float**|**Wiersz**|
 |**double**|**Double**|**double**|**Double**|
 |**bool**|**Wartość logiczna**|**bool**|**Wartość logiczna**|
 |**char**|**Delikatn**|**wchar_t**|**Delikatn**|

@@ -1,5 +1,5 @@
 ---
-title: MenuStrip — Informacje o formancie
+title: MenuStrip, kontrolka — omówienie
 ms.date: 03/30/2017
 f1_keywords:
 - MenuStrip
@@ -47,7 +47,7 @@ Menu uwidacznia funkcjonalność użytkownikom, umieszczając polecenia, które 
   
  W poniższej tabeli przedstawiono ważne klasy pomocników <xref:System.Windows.Forms.MenuStrip>.  
   
-|Klasa|Opis|  
+|Class|Opis|  
 |-----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStripMenuItem>|Reprezentuje wybraną opcję wyświetlaną w <xref:System.Windows.Forms.MenuStrip> lub <xref:System.Windows.Forms.ContextMenuStrip>.|  
 |<xref:System.Windows.Forms.ContextMenuStrip>|Reprezentuje menu skrótów.|  

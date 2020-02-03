@@ -1,5 +1,5 @@
 ---
-title: DataGridView, kontrolka — podsumowanie technologii
+title: Podsumowanie informacji o technologii formantów DataGridView
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], about DataGridView control
@@ -20,15 +20,15 @@ Ten temat zawiera podsumowanie informacji o kontrolce `DataGridView` i klasach, 
 ## <a name="keywords"></a>Słowa kluczowe  
  DataGridView, BindingSource, tabela, komórka, powiązanie danych, tryb wirtualny  
   
-## <a name="namespaces"></a>{1&gt;Przestrzenie nazw&lt;1}  
+## <a name="namespaces"></a>Namespaces  
  <xref:System.Windows.Forms?displayProperty=nameWithType>  
   
  <xref:System.Data?displayProperty=nameWithType>  
   
-## <a name="related-technologies"></a>Technologie pokrewne  
+## <a name="related-technologies"></a>Powiązane technologie  
  `BindingSource`  
   
-## <a name="background"></a>Informacje dodatkowe  
+## <a name="background"></a>Tło  
  Projektanci interfejsu użytkownika często szukają niezbędnych do wyświetlenia danych tabelarycznych dla użytkowników. .NET Framework zapewnia kilka sposobów wyświetlania danych w tabeli lub siatce. Formant `DataGridView` reprezentuje najnowszy rozwój tej technologii dla aplikacji Windows Forms.  
   
  Kontrolka `DataGridView` może wyświetlać wiersze danych z magazynu danych. Obsługiwane są wiele typów magazynów danych. Magazyn danych może przechowywać proste, nietypu dane, na przykład tablicę jednowymiarową, lub może przechowywać dane wpisane, takie jak <xref:System.Data.DataSet>. Aby uzyskać więcej informacji, zobacz [How to: bind Data w formancie DataGridView Windows Forms](how-to-bind-data-to-the-windows-forms-datagridview-control.md).  

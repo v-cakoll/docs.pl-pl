@@ -1,5 +1,5 @@
 ---
-title: TrackBar — Formant
+title: TrackBar, kontrolka
 ms.date: 03/30/2017
 helpviewer_keywords:
 - sliders

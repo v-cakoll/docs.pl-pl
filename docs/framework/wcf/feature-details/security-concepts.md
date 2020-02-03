@@ -38,6 +38,6 @@ W tej sekcji omówiono koncepcje związane z zabezpieczeniami Windows Communicat
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zabezpieczenia](../../../../docs/framework/wcf/feature-details/security.md)
+- [Security](../../../../docs/framework/wcf/feature-details/security.md)
 - [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Model zabezpieczeń dla sieci szkieletowej aplikacji systemu Windows Server](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

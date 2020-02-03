@@ -38,7 +38,7 @@ Domyślnie etykietki narzędzi są używane do wyświetlania wartości <xref:Sys
   
 - Odwołania do zestawów <xref:System?displayProperty=nameWithType> i <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
-## <a name="robust-programming"></a>Skuteczne programowanie  
+## <a name="robust-programming"></a>Niezawodne programowanie  
  Po powiązaniu formantu <xref:System.Windows.Forms.DataGridView> z zewnętrznym źródłem danych lub udostępnieniu własnego źródła danych przez implementację trybu wirtualnego mogą wystąpić problemy z wydajnością. Aby uniknąć pogorszenia wydajności podczas pracy z dużymi ilościami danych, należy obsłużyć <xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded> zdarzenia zamiast ustawiania właściwości <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> wielu komórek. Podczas obsługi tego zdarzenia pobieranie wartości właściwości <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> komórki wywołuje zdarzenie i zwraca wartość właściwości <xref:System.Windows.Forms.DataGridViewCellToolTipTextNeededEventArgs.ToolTipText%2A?displayProperty=nameWithType>, jak określono w obsłudze zdarzeń.  
   
 ## <a name="see-also"></a>Zobacz także

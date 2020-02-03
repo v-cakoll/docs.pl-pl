@@ -34,7 +34,7 @@ Kontrolki Windows Forms zwykle wyświetlają tekst, który jest powiązany z pod
 
 Możesz również ustawić tekst za pomocą [projektanta](#designer).
 
-## <a name="programmatic"></a>Program
+## <a name="programmatic"></a>Programowa
 
 1. Ustaw właściwość <xref:System.Windows.Forms.Control.Text%2A> na ciąg.
 
@@ -72,7 +72,7 @@ Możesz również ustawić tekst za pomocą [projektanta](#designer).
     mpMenuItem->Text = "&& Now For Something Completely Different";
     ```
 
-## <a name="designer"></a>Designer
+## <a name="designer"></a>Projektant
 
 1. W oknie **Właściwości** w programie Visual Studio ustaw właściwość **Text** kontrolki na odpowiedni ciąg.
 

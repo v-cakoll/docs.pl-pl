@@ -31,7 +31,7 @@ Kontrolki <xref:System.Windows.Forms.Label> Windows Forms mogą służyć do def
   
 1. Najpierw narysuj etykietę, a następnie narysuj drugą kontrolkę.  
   
-     lub  
+     —lub—  
   
      Narysuj kontrolki w dowolnej kolejności i ustaw właściwość <xref:System.Windows.Forms.Control.TabIndex%2A> etykiety na mniejszą niż inna kontrolka.  
   

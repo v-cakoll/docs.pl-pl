@@ -31,7 +31,7 @@ Składnik <xref:System.Windows.Forms.NotifyIcon> Windows Forms wyświetla pojedy
 
 1. Przypisz wartość do właściwości <xref:System.Windows.Forms.NotifyIcon.Icon%2A>. Wartość musi być typu `System.Drawing.Icon` i może zostać załadowana z pliku ICO. Możesz określić plik ikony w kodzie lub klikając przycisk wielokropka (![przycisk wielokropka (...) w okno Właściwości programu Visual Studio.](./media/visual-studio-ellipsis-button.png)) obok właściwości <xref:System.Windows.Forms.NotifyIcon.Icon%2A> w oknie **Właściwości** , a następnie wybierając plik w **otwartym** oknie dialogowym.
 
-2. Ustaw <xref:System.Windows.Forms.NotifyIcon.Visible%2A> właściwość `true`.
+2. Ustaw właściwość <xref:System.Windows.Forms.NotifyIcon.Visible%2A> na `true`.
 
 3. Ustaw właściwość <xref:System.Windows.Forms.NotifyIcon.Text%2A> na odpowiedni ciąg etykietki narzędzia.
 

@@ -26,7 +26,7 @@ Czasami warto wyświetlać dane w formacie przyjaznym dla użytkownika w formula
   
 ### <a name="orderdetailstable"></a>OrderDetailsTable  
   
-|Wartooć|Elementów|Zagregowan|  
+|Wartooć|Elementów|Liczba|  
 |-------------|------------|--------------|  
 |4085|12|1|  
 |4086|13|3|  

@@ -35,4 +35,4 @@ Wiele plików ma osadzone ikony, które zapewniają wizualną reprezentację sko
 ## <a name="see-also"></a>Zobacz także
 
 - [Obrazy, mapy bitowe i metapliki](images-bitmaps-and-metafiles.md)
-- [ListView, kontrolka](../controls/listview-control-windows-forms.md)
+- [Kontrolka ListView](../controls/listview-control-windows-forms.md)

@@ -28,7 +28,7 @@ Zestaw jest jednostką wdrożenia i tożsamością dla programów kodu zarządza
 
  gdzie `<Component>` zawiera jedną lub więcej klauzul rozdzielonych kropkami. Na przykład:
 
- `Litware.Controls.dll`.
+ `Litware.Controls.dll`.,
 
  *Fragmenty © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*
 

@@ -46,7 +46,7 @@ W niektórych aplikacjach rodzaj okna podrzędnego interfejsu wielu dokumentów 
     |---------------------|-----------------------|----------------------|  
     |Plik|MatchOnly|-1|  
     |Importuj z|MatchOnly|-1|  
-    |Word|Usuwanie|-1|  
+    |Word|Usuń|-1|  
   
 10. W `Form1`Utwórz procedurę obsługi zdarzeń dla zdarzenia <xref:System.Windows.Forms.Control.Click> `&Open`<xref:System.Windows.Forms.ToolStripMenuItem>.  
   

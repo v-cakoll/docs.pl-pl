@@ -91,7 +91,7 @@ Wiarygodne technologie obliczeniowe to inicjatywa firmy Microsoft do zapewnienia
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zabezpieczenia](security-wpf.md)
+- [Security](security-wpf.md)
 - [Zabezpieczenie częściowej relacji zaufania WPF](wpf-partial-trust-security.md)
 - [Strategia zabezpieczeń WPF — zabezpieczenia platformy](wpf-security-strategy-platform-security.md)
 - [Wiarygodne przetwarzanie](https://www.microsoft.com/mscorp/twc/default.mspx)

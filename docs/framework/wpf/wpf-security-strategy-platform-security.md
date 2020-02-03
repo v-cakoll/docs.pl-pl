@@ -189,6 +189,6 @@ Użytkownicy WPF w systemie Windows Vista będą korzystać z dodatkowych ulepsz
 ## <a name="see-also"></a>Zobacz także
 
 - [Zabezpieczenia dostępu kodu](../misc/code-access-security.md)
-- [Zabezpieczenia](security-wpf.md)
+- [Security](security-wpf.md)
 - [Zabezpieczenie częściowej relacji zaufania WPF](wpf-partial-trust-security.md)
 - [Strategia zabezpieczeń WPF — projekt zabezpieczeń](wpf-security-strategy-security-engineering.md)

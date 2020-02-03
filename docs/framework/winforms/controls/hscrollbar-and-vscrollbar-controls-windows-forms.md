@@ -1,5 +1,5 @@
 ---
-title: HScrollBar i VScrollBar, kontrolki
+title: HScrollBar i VScrollBar — Formanty
 ms.date: 03/30/2017
 helpviewer_keywords:
 - scroll bars

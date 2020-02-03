@@ -113,7 +113,7 @@ Aby debugować zachowanie w czasie projektowania kontrolki niestandardowej, nale
 
      W sekcji **Akcja początkowa** wybierz pozycję **Uruchom program zewnętrzny**. Będziesz debugować osobne wystąpienie programu Visual Studio, więc kliknij przycisk wielokropka (![przycisk wielokropka (...) na okno Właściwości przycisku programu Visual Studio](./media/visual-studio-ellipsis-button.png)), aby wyszukać środowisko IDE programu Visual Studio. Nazwa pliku wykonywalnego to **devenv. exe**, a jeśli została zainstalowana w lokalizacji domyślnej, jego ścieżka to *% ProgramFiles (x86)% \ Microsoft Visual Studio\2019\\\<Edition > \Common7\IDE*.
 
-3. Wybierz **przycisk OK** , aby zamknąć okno dialogowe.
+3. Wybierz przycisk **OK**, aby zamknąć okno dialogowe.
 
 4. Kliknij prawym przyciskiem myszy projekt **DebugControlLibrary** i wybierz pozycję **Ustaw jako projekt startowy** , aby włączyć tę konfigurację debugowania.
 

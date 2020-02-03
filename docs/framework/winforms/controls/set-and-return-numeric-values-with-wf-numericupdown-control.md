@@ -37,7 +37,7 @@ Wartość liczbowa kontrolki <xref:System.Windows.Forms.NumericUpDown> Windows F
     numericUpDown1->Value = 55;  
     ```  
   
-     lub  
+     —lub—  
   
 2. Wywołaj metodę <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> lub <xref:System.Windows.Forms.NumericUpDown.DownButton%2A>, aby zwiększyć lub zmniejszyć wartość o kwotę określoną we właściwości <xref:System.Windows.Forms.NumericUpDown.Increment%2A>.  
   

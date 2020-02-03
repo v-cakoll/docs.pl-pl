@@ -23,7 +23,7 @@ Formant <xref:System.Windows.Forms.DataGridView> może wyświetlać dane w trzec
   
  Aby zapoznać się z przykładem korzystającym z niepowiązanego <xref:System.Windows.Forms.DataGridView>tylko do odczytu, zobacz [How to: Create an unboundd Windows Forms DataGridView Control](how-to-create-an-unbound-windows-forms-datagridview-control.md).  
   
-## <a name="bound"></a>Obowiązując  
+## <a name="bound"></a>Bound  
  Tryb powiązania jest odpowiedni do zarządzania danymi przy użyciu interakcji automatycznej z magazynem danych. Możesz dołączyć formant <xref:System.Windows.Forms.DataGridView> bezpośrednio do źródła danych, ustawiając właściwość <xref:System.Windows.Forms.DataGridView.DataSource%2A>. Gdy formant jest powiązany z danymi, wiersze danych są wypychane i ściągane bez konieczności jawnego zarządzania. Gdy właściwość <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> jest `true`, każda kolumna w źródle danych spowoduje, że odpowiednia kolumna zostanie utworzona w formancie. Jeśli wolisz utworzyć własne kolumny, możesz ustawić tę właściwość na `false` i użyć właściwości <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A> do powiązania każdej kolumny podczas jej konfigurowania. Jest to przydatne, gdy chcesz użyć typu kolumny innego niż typy, które są generowane domyślnie. Aby uzyskać więcej informacji, zobacz [typy kolumn w kontrolce DataGridView Windows Forms](column-types-in-the-windows-forms-datagridview-control.md).  
   
  Aby zapoznać się z przykładem korzystającym z powiązanej kontrolki <xref:System.Windows.Forms.DataGridView>, zobacz [Przewodnik: sprawdzanie poprawności danych w kontrolce DataGridView Windows Forms](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md).  

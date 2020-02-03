@@ -51,11 +51,11 @@ Dim [ WithEvents ] variablelist
 
 - `attributelist`
 
-  Opcjonalny. Zobacz [Lista atrybutów](attribute-list.md).
+  Opcjonalny. Zobacz [listę atrybutów](attribute-list.md).
 
 - `accessmodifier`
 
-  Opcjonalny. Może to być jeden z następujących elementów:
+  Opcjonalny. Może to być jeden z następujących modyfikatorów dostępu:
 
   - [Public](../modifiers/public.md)
 
@@ -69,7 +69,7 @@ Dim [ WithEvents ] variablelist
 
   - [Private Protected](../modifiers/private-protected.md)
 
-  Zobacz [Poziomy dostępu w języku Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md).
+  Zobacz [poziomy dostępu w Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md).
 
 - `Shared`
 
@@ -103,7 +103,7 @@ Dim [ WithEvents ] variablelist
 
   |Części|Opis|
   |---|---|
-  |`variablename`|Wymagany. Nazwa zmiennej. Zobacz [Zadeklarowane nazwy elementów](../../programming-guide/language-features/declared-elements/declared-element-names.md).|
+  |`variablename`|Wymagany. Nazwa zmiennej. Zobacz [zadeklarowane nazwy elementów](../../programming-guide/language-features/declared-elements/declared-element-names.md).|
   |`boundslist`|Opcjonalny. Lista granic każdego wymiaru zmiennej tablicowej.|
   |`New`|Opcjonalny. Tworzy nowe wystąpienie klasy podczas uruchamiania instrukcji `Dim`.|
   |`datatype`|Opcjonalny. Typ danych zmiennej.|
@@ -133,11 +133,11 @@ Dla typu referencyjnego za pomocą słowa kluczowego `New` można utworzyć nowe
 Dim bottomLabel As New System.Windows.Forms.Label
 ```
 
-Można zadeklarować zmienną w procedurze, bloku, klasie, strukturze lub module. Nie można zadeklarować zmiennej w pliku źródłowym, przestrzeni nazw lub interfejsie. Aby uzyskać więcej informacji, zobacz [Konteksty deklaracji i domyślne poziomy dostępu](declaration-contexts-and-default-access-levels.md)
+Można zadeklarować zmienną w procedurze, bloku, klasie, strukturze lub module. Nie można zadeklarować zmiennej w pliku źródłowym, przestrzeni nazw lub interfejsie. Aby uzyskać więcej informacji, zobacz [konteksty deklaracji i domyślne poziomy dostępu](declaration-contexts-and-default-access-levels.md).
 
 Zmienna zadeklarowana na poziomie modułu, poza żadną procedurą, to zmienna lub *pole* *Członkowskie* . Zmienne składowe znajdują się w zakresie w całej klasy, strukturze lub module. Zmienna zadeklarowana na poziomie procedury jest *zmienną lokalną*. Zmienne lokalne znajdują się w zakresie tylko w obrębie procedury lub bloku.
 
-Poniższe Modyfikatory dostępu są używane do deklarowania zmiennych poza procedurą: `Public`, `Protected`, `Friend`, `Protected Friend`i `Private`. Aby uzyskać więcej informacji, zobacz temat [Poziomy dostępu w języku Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md).
+Poniższe Modyfikatory dostępu są używane do deklarowania zmiennych poza procedurą: `Public`, `Protected`, `Friend`, `Protected Friend`i `Private`. Aby uzyskać więcej informacji, zobacz [poziomy dostępu w Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md).
 
 Słowo kluczowe `Dim` jest opcjonalne i zwykle pomijane, jeśli określisz dowolny z następujących modyfikatorów: `Public`, `Protected`, `Friend`, `Protected Friend`, `Private`, `Shared`, `Shadows`, `Static`, `ReadOnly`lub `WithEvents`.
 
@@ -184,7 +184,7 @@ Aby uzyskać więcej informacji na temat inicjatorów obiektów, zobacz [How to:
 
 ## <a name="declaring-multiple-variables"></a>Deklarowanie wielu zmiennych
 
-Można zadeklarować kilka zmiennych w jednej instrukcji deklaracji, określając nazwę zmiennej dla każdej z nich i po każdej nazwie tablicy z nawiasami. W przypadku wielu zmiennych są one oddzielane przecinkami.
+Można zadeklarować kilka zmiennych w jednej instrukcji deklaracji, określając nazwę zmiennej dla każdej z nich i po każdej nazwie tablicy z nawiasami. Wiele zmiennych rozdziela się przecinkami.
 
 ```vb
 Dim lastTime, nextTime, allTimes() As Date
@@ -290,7 +290,7 @@ Atrybuty można stosować tylko do zmiennych składowych, nie do zmiennych lokal
 
 Na poziomie modułu nie można użyć modyfikatora `Static`, aby zadeklarować zmienne składowe. Na poziomie procedury nie można używać `Shared`, `Shadows`, `ReadOnly`, `WithEvents`ani modyfikatorów dostępu do deklarowania zmiennych lokalnych.
 
-Możesz określić, jaki kod może uzyskać dostęp do zmiennej, dostarczając `accessmodifier`. Zmienne składowe klasy i modułu (poza jakąkolwiek procedurą) domyślnie są dostępem prywatnym, a zmienne składowe struktury domyślnie mają dostęp publiczny. Możesz dostosować ich poziom dostępu za pomocą modyfikatorów dostępu. Nie można używać modyfikatorów dostępu dla zmiennych lokalnych (wewnątrz procedury).
+Możesz określić, jaki kod może uzyskać dostęp do zmiennej, dostarczając `accessmodifier`. Zmienne składowe klasy i modułu (poza jakąkolwiek procedurą) domyślnie są dostępem prywatnym, a zmienne składowe struktury domyślnie mają dostęp publiczny. Poziomy dostępu modułów można dostosować za pomocą modyfikatorów dostępu. Nie można używać modyfikatorów dostępu dla zmiennych lokalnych (wewnątrz procedury).
 
 Można określić `WithEvents` tylko w zmiennych składowych, a nie na zmiennych lokalnych wewnątrz procedury. Jeśli określisz `WithEvents`, typem danych zmiennej musi być określony typ klasy, a nie `Object`. Nie można zadeklarować tablicy przy użyciu `WithEvents`. Aby uzyskać więcej informacji na temat zdarzeń, zobacz [zdarzenia](../../programming-guide/language-features/events/index.md).
 

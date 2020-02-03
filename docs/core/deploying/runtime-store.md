@@ -145,5 +145,5 @@ Gdy wdrożenie zostanie *przycięte* po opublikowaniu, tylko określone wersje p
 
 ## <a name="see-also"></a>Zobacz także
 
-- [dotnet-publish](../tools/dotnet-publish.md)
-- [dotnet-store](../tools/dotnet-store.md)
+- [dotnet — publikowanie](../tools/dotnet-publish.md)
+- [dotnet — sklep](../tools/dotnet-store.md)

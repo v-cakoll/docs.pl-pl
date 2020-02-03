@@ -67,7 +67,7 @@ Ten temat zawiera omówienie warstwy wizualizacji [!INCLUDE[TLA2#tla_winclient](
 |Grafika wektorowa|Reprezentuje dane grafiki wektorowej oraz wszelkie skojarzone <xref:System.Windows.Media.Brush> i <xref:System.Windows.Media.Pen> informacje.|  
 |Obraz|Reprezentuje obraz w regionie zdefiniowanym przez <xref:System.Windows.Rect>.|  
 |Symbol|Reprezentuje rysunek, który renderuje <xref:System.Windows.Media.GlyphRun>, który jest sekwencją symboli z określonego zasobu czcionki. Jest to sposób reprezentowania tekstu.|  
-|Wideo|Reprezentuje rysunek, który renderuje wideo.|  
+|Połączenia wideo|Reprezentuje rysunek, który renderuje wideo.|  
   
  <xref:System.Windows.Media.DrawingContext> umożliwia wypełnienie <xref:System.Windows.Media.Visual> za pomocą zawartości wizualnej. W przypadku korzystania z poleceń rysowania obiektu <xref:System.Windows.Media.DrawingContext> w rzeczywistości przechowujesz zestaw danych renderowania, które będą później używane przez system grafiki; nie rysujesz na ekranie w czasie rzeczywistym.  
   

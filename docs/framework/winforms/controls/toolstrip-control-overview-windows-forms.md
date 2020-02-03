@@ -1,5 +1,5 @@
 ---
-title: ToolStrip — Informacje o formancie
+title: ToolStrip, kontrolka — omówienie
 ms.date: 03/30/2017
 f1_keywords:
 - Toolstrip

@@ -60,7 +60,7 @@ Buforowanie umożliwia przechowywanie danych w pamięci w celu szybkiego dostęp
 
 2. W menu **plik** kliknij pozycję **Nowy**, a następnie kliknij pozycję **Nowy projekt**.
 
-     **Nowy projekt** zostanie wyświetlone okno dialogowe.
+     Zostanie wyświetlone okno dialogowe **Nowy projekt** .
 
 3. W obszarze **zainstalowane szablony**wybierz język programowania, który ma być używany (**Visual Basic** lub **Wizualizacja C#** ).
 
@@ -101,7 +101,7 @@ Buforowanie umożliwia przechowywanie danych w pamięci w celu szybkiego dostęp
 
 5. Kliknij przycisk **OK**.
 
-     **Zmiana platformy docelowej** zostanie wyświetlone okno dialogowe.
+     Zostanie wyświetlone okno dialogowe **zmiana platformy docelowej** .
 
 6. W oknie dialogowym **zmiana platformy docelowej** kliknij przycisk **tak**.
 
@@ -288,7 +288,7 @@ Buforowanie umożliwia przechowywanie danych w pamięci w celu szybkiego dostęp
 
 #### <a name="to-test-caching-in-the-wpf-application"></a>Aby przetestować buforowanie w aplikacji WPF
 
-1. Naciśnij klawisze CTRL + F5, aby uruchomić aplikację.
+1. Naciśnij klawisze CTRL+F5, aby uruchomić aplikację.
 
      Zostanie wyświetlone okno `MainWindow`.
 

@@ -36,7 +36,7 @@ Kontrolka <xref:System.Windows.Forms.RichTextBox> Windows Forms może zapisywać
 
 - Zwykły tekst z reprezentacją tekstową obiektów OLE
 
-Aby zapisać plik, wywołaj metodę <xref:System.Windows.Forms.RichTextBox.SaveFile%2A>. Możesz również użyć metody **SaveFile** , aby zapisać dane w strumieniu. Aby uzyskać więcej informacji, zobacz temat <xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.
+Aby zapisać plik, wywołaj metodę <xref:System.Windows.Forms.RichTextBox.SaveFile%2A>. Możesz również użyć metody **SaveFile** , aby zapisać dane w strumieniu. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.
 
 ### <a name="to-save-the-contents-of-the-control-to-a-file"></a>Aby zapisać zawartość kontrolki do pliku
 

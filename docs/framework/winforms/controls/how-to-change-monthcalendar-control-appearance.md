@@ -46,7 +46,7 @@ Kontrolka <xref:System.Windows.Forms.MonthCalendar> Windows Forms umożliwia dos
   
 ### <a name="to-display-the-current-date-at-the-bottom-of-the-control"></a>Aby wyświetlić bieżącą datę w dolnej części kontrolki  
   
-- Ustaw <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> właściwość `true`. W poniższym przykładzie przełączają się do wyświetlania i pomijania dzisiejszej daty po dwukrotnym kliknięciu formularza.  
+- Ustaw właściwość <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> na `true`. W poniższym przykładzie przełączają się do wyświetlania i pomijania dzisiejszej daty po dwukrotnym kliknięciu formularza.  
   
     ```vb  
     Private Sub Form1_DoubleClick(ByVal sender As Object, _  
@@ -87,7 +87,7 @@ Kontrolka <xref:System.Windows.Forms.MonthCalendar> Windows Forms umożliwia dos
   
 ### <a name="to-display-week-numbers"></a>Aby wyświetlić numery tygodniowe  
   
-- Ustaw <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> właściwość `true`. Tę właściwość można ustawić w kodzie lub w okno Właściwości.  
+- Ustaw właściwość <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> na `true`. Tę właściwość można ustawić w kodzie lub w okno Właściwości.  
   
      Numery tygodni są wyświetlane w oddzielnej kolumnie z lewej strony pierwszego dnia tygodnia.  
   

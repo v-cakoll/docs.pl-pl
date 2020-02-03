@@ -205,7 +205,7 @@ Przykład:
 
 | | Nazwa ustawienia | Wartości | Wprowadzona wersja |
 | - | - | - | - |
-| **runtimeconfig. JSON** | N/D | N/D | N/D |
+| **runtimeconfig. JSON** | Brak | Brak | Brak |
 | **Zmienna środowiskowa** | `COMPlus_GCCpuGroup` | `0` — wyłączone<br/>`1` — włączono | .NET Core 1.0 |
 | **App. config dla .NET Framework** | [GCCpuGroup](../../framework/configure-apps/file-schema/runtime/gccpugroup-element.md) | `false` — wyłączone<br/>`true` — włączono |  |
 
@@ -331,7 +331,7 @@ Plik projektu:
 
 | | Nazwa ustawienia | Wartości | Wprowadzona wersja |
 | - | - | - | - |
-| **runtimeconfig. JSON** | N/D | N/D | N/D |
+| **runtimeconfig. JSON** | Brak | Brak | Brak |
 | **Zmienna środowiskowa** | `COMPlus_GCLargePages` | `0` — wyłączone<br/>`1` — włączono | .NET Core 3.0 |
 
 ## <a name="large-objects"></a>Duże obiekty
@@ -344,7 +344,7 @@ Plik projektu:
 
 | | Nazwa ustawienia | Wartości | Wprowadzona wersja |
 | - | - | - | - |
-| **runtimeconfig. JSON** | N/D | N/D | N/D |
+| **runtimeconfig. JSON** | Brak | Brak | Brak |
 | **Zmienna środowiskowa** | `COMPlus_gcAllowVeryLargeObjects` | `1` — włączono<br/> `0` — wyłączone | .NET Core 1.0 |
 | **App. config dla .NET Framework** | [gcAllowVeryLargeObjects](../../framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md) | `1` — włączono<br/> `0` — wyłączone | .NET Framework 4.5 |
 
@@ -386,5 +386,5 @@ Przykład:
 
 | | Nazwa ustawienia | Wartości | Wprowadzona wersja |
 | - | - | - | - |
-| **runtimeconfig. JSON** | N/D | N/D | N/D |
+| **runtimeconfig. JSON** | Brak | Brak | Brak |
 | **Zmienna środowiskowa** | `COMPlus_GCName` | *string_path* | .NET Core 2.0 |

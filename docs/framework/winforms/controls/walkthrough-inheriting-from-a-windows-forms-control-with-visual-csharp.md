@@ -87,7 +87,7 @@ Formanty nie są projektami autonomicznymi; muszą być hostowane w kontenerze. 
 
 ### <a name="to-build-your-control"></a>Aby skompilować swój formant
 
-Na **kompilacji** menu, kliknij przycisk **Kompiluj rozwiązanie**. Kompilacja powinna zakończyć się powodzeniem bez błędów lub ostrzeżeń kompilatora.
+W menu **Kompilacja** kliknij pozycję **Kompiluj rozwiązanie**. Kompilacja powinna zakończyć się powodzeniem bez błędów lub ostrzeżeń kompilatora.
 
 ### <a name="to-create-a-test-project"></a>Aby utworzyć projekt testowy
 
@@ -137,7 +137,7 @@ Na **kompilacji** menu, kliknij przycisk **Kompiluj rozwiązanie**. Kompilacja p
 
      pojawia się `Form1`.
 
-12. Kliknij `valueButton1`.
+12. Kliknij pozycję `valueButton1` (Dalej).
 
      Liczba "5" jest wyświetlana w `label1`, pokazując, że właściwość `ButtonValue` kontrolki dziedziczonej została przeniesiona do `label1` za pomocą metody `valueButton1_Click`. W ten sposób formant `ValueButton` dziedziczy wszystkie funkcje standardowego przycisku Windows Forms, ale uwidacznia dodatkową, niestandardową właściwość.
 

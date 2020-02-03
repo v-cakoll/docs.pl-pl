@@ -119,5 +119,5 @@ Minusem osadzania plików symboli polega na tym, że zwiększają rozmiar pakiet
 > Zastrzeżenie polega na tym, że użytkownicy mogą potrzebować znaleźć i skonfigurować serwer symboli NuGet w swoim środowisku IDE (jako jednorazową konfigurację), aby uzyskać pliki symboli. Program Visual Studio 2019 w wersji 16,1 dodał NuGet. serwer symboli organizacji do listy domyślnych serwerów symboli.
 
 >[!div class="step-by-step"]
->[Poprzedni](strong-naming.md)
->[Następny](dependencies.md)
+>[Poprzednie](strong-naming.md)
+>[dalej](dependencies.md)

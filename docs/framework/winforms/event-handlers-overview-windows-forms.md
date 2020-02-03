@@ -1,5 +1,5 @@
 ---
-title: Przegląd programów obsługi zdarzeń
+title: Przegląd obsługi zdarzeń
 ms.date: 03/30/2017
 dev_langs:
 - csharp

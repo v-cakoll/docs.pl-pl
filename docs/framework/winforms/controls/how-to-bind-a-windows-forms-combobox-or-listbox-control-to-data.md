@@ -31,7 +31,7 @@ Można powiązać <xref:System.Windows.Forms.ComboBox> i <xref:System.Windows.Fo
   
 2. Jeśli tworzysz powiązanie z tabelą, ustaw właściwość `DisplayMember` na nazwę kolumny w źródle danych.  
   
-     \- lub —  
+     \- lub-  
   
      Jeśli tworzysz powiązanie z <xref:System.Collections.IList>, Ustaw element członkowski wyświetlania na publiczną właściwość typu na liście.  
   

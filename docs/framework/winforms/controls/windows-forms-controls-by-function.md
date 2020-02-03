@@ -21,7 +21,7 @@ Windows Forms oferuje kontrolki i składniki, które wykonują szereg funkcji. P
   
 ## <a name="recommended-controls-and-components-by-function"></a>Zalecane formanty i składniki według funkcji  
   
-|Funkcja|Kontrolka|Opis|  
+|Funkcja|formant|Opis|  
 |--------------|-------------|-----------------|  
 |Wyświetlanie danych|Kontrolka <xref:System.Windows.Forms.DataGridView>|Formant <xref:System.Windows.Forms.DataGridView> zawiera dostosowywalną tabelę do wyświetlania danych. Klasa <xref:System.Windows.Forms.DataGridView> umożliwia dostosowanie komórek, wierszy, kolumn i obramowań. **Uwaga:**  Kontrolka <xref:System.Windows.Forms.DataGridView> udostępnia wiele podstawowych i zaawansowanych funkcji, których brakuje w kontrolce <xref:System.Windows.Forms.DataGrid>. Aby uzyskać więcej informacji, zobacz [różnice między kontrolkami DataGridView i DataGrid Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)|  
 |Powiązanie danych i nawigacja|<xref:System.Windows.Forms.BindingSource> cm6long|Upraszcza kontrolki wiązania w formularzu do danych, zapewniając zarządzanie walutą, powiadomienia o zmianach i inne usługi.|  
@@ -62,7 +62,7 @@ Windows Forms oferuje kontrolki i składniki, które wykonują szereg funkcji. P
 ||Kontrolka <xref:System.Windows.Forms.LinkLabel>|Wyświetla tekst jako łącze w stylu sieci Web i wyzwala zdarzenie po kliknięciu specjalnego tekstu przez użytkownika. Zazwyczaj tekst jest łączem do innego okna lub witryny sieci Web.|  
 ||Kontrolka <xref:System.Windows.Forms.NotifyIcon>|Wyświetla ikonę w obszarze powiadomień o stanie paska zadań, który reprezentuje aplikację działającą w tle.|  
 ||Kontrolka <xref:System.Windows.Forms.ToolStrip>|Tworzy paski narzędzi, które mogą mieć system Microsoft Windows XP, Microsoft Office, program Microsoft Internet Explorer lub niestandardowy wygląd i działanie, z lub bez motywów oraz z obsługą przepełnienia i zmiany kolejności elementów w czasie wykonywania. **Uwaga:**  Formant <xref:System.Windows.Forms.ToolStrip> zaprojektowano w celu zastąpienia kontrolki <xref:System.Windows.Forms.ToolBar>.|  
-|Pomoc użytkownika|<xref:System.Windows.Forms.HelpProvider> cm6long|Udostępnia okna podręczne lub pomoc online dla kontrolek.|  
+|Pomoc dla użytkowników|<xref:System.Windows.Forms.HelpProvider> cm6long|Udostępnia okna podręczne lub pomoc online dla kontrolek.|  
 ||<xref:System.Windows.Forms.ToolTip> cm6long|Udostępnia okno podręczne, które wyświetla Krótki opis przeznaczenie kontrolki, gdy użytkownik umieści wskaźnik na kontrolce.|  
 |Grupowanie innych kontrolek|Kontrolka <xref:System.Windows.Forms.Panel>|Grupuje zestaw kontrolek w ramce bez etykiet.|  
 ||Kontrolka <xref:System.Windows.Forms.GroupBox>|Grupuje zestaw kontrolek (takich jak przyciski radiowe) w ramce z etykietą nieprzewijalną.|  

@@ -59,7 +59,7 @@ Typy parametrów metod i zwracanych wartości są określone w podpisie metody. 
 
 Po zadeklarowaniu zmiennej nie można jej ponownie zadeklarować przy użyciu nowego typu i nie można przypisać do niej wartości, która nie jest zgodna z zadeklarowanym typem. Na przykład nie można zadeklarować [int](../../language-reference/builtin-types/integral-numeric-types.md) , a następnie przypisać mu wartości logicznej `true`. Jednak wartości mogą być konwertowane na inne typy, na przykład wtedy, gdy są przypisane do nowych zmiennych lub przekazane jako argumenty metody. *Konwersja typu* , która nie powoduje utraty danych, jest wykonywana automatycznie przez kompilator. Konwersja, która może spowodować utratę danych, wymaga *rzutowania* w kodzie źródłowym.
 
-Aby uzyskać więcej informacji, zobacz [Rzutowanie i konwersje typów](./casting-and-type-conversions.md).
+Aby uzyskać więcej informacji, zobacz [rzutowanie i konwersje typów](./casting-and-type-conversions.md).
 
 ## <a name="built-in-types"></a>Typy wbudowane
 
@@ -119,7 +119,7 @@ Druga kategoria typów wartości to [enum](../../language-reference/builtin-type
 
 [!code-csharp[csProgGuideTypes#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#44)]
 
-Stała `System.IO.FileMode.Create` ma wartość 2. Jednak nazwa jest znacznie bardziej zrozumiała dla ludzi odczytujących kod źródłowy. z tego powodu lepiej jest używać wyliczeń zamiast stałych liczb literałów. Aby uzyskać więcej informacji, zobacz temat <xref:System.IO.FileMode?displayProperty=nameWithType>.
+Stała `System.IO.FileMode.Create` ma wartość 2. Jednak nazwa jest znacznie bardziej zrozumiała dla ludzi odczytujących kod źródłowy. z tego powodu lepiej jest używać wyliczeń zamiast stałych liczb literałów. Aby uzyskać więcej informacji, zobacz <xref:System.IO.FileMode?displayProperty=nameWithType>.
 
 Wszystkie wyliczenia dziedziczą z <xref:System.Enum?displayProperty=nameWithType>, który dziedziczy z <xref:System.ValueType?displayProperty=nameWithType>. Wszystkie reguły, które mają zastosowanie do struktur, mają zastosowanie również do typów wyliczeniowych. Aby uzyskać więcej informacji na temat typów wyliczeniowych, zobacz [typy](../../language-reference/builtin-types/enum.md)wyliczeniowe.
 
@@ -201,7 +201,7 @@ Więcej informacji znajduje się w następujących tematach:
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../../language-reference/index.md)
+- [C#Odwoła](../../language-reference/index.md)
 - [Przewodnik programowania w języku C#](../index.md)
 - [Konwersja typów danych XML](../../../standard/data/xml/conversion-of-xml-data-types.md)
 - [Typy całkowite](../../language-reference/builtin-types/integral-numeric-types.md)

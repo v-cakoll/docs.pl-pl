@@ -1,5 +1,5 @@
 ---
-title: <cryptoClasses>, element
+title: <cryptoClasses> Element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/cryptoNameMapping/cryptoClasses
@@ -15,7 +15,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76732887"
 ---
-# <a name="cryptoclasses-element"></a>\<cryptoClasses> Element
+# <a name="cryptoclasses-element"></a>\<element > cryptoClasses
 Zawiera listę klas kryptograficznych, które mają mapowanie do przyjaznej nazwy w [\<nameEntry >](nameentry-element.md) elementu.  
   
 [ **> konfiguracji \<** ](../configuration-element.md)  
@@ -34,14 +34,14 @@ Zawiera listę klas kryptograficznych, które mają mapowanie do przyjaznej nazw
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
  W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.  
   
-### <a name="attributes"></a>{1&gt;{2&gt;Atrybuty&lt;2}&lt;1}  
+### <a name="attributes"></a>Atrybuty  
  Brak.  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<cryptoClass>](cryptoclass-element.md)|Zawiera klasę kryptografii, która ma mapowanie do przyjaznej nazwy w **\<nameEntry >** elementu.|  
+|[\<cryptoClass >](cryptoclass-element.md)|Zawiera klasę kryptografii, która ma mapowanie do przyjaznej nazwy w **\<nameEntry >** elementu.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
@@ -82,5 +82,5 @@ Zawiera listę klas kryptograficznych, które mają mapowanie do przyjaznej nazw
 - [Schemat pliku konfiguracji](../index.md)
 - [Schemat ustawień kryptografii](index.md)
 - [Usługi kryptograficzne](../../../../standard/security/cryptographic-services.md)
-- [System.Security.Cryptography.CryptoConfig.CreateFromName](xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A)
+- [System. Security. Cryptography. obiektu CryptoConfig. isfromname](xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A)
 - [Konfigurowanie klas kryptografii](../../configure-cryptography-classes.md)

@@ -1,5 +1,5 @@
 ---
-title: PictureBox — Informacje o formancie
+title: PictureBox, kontrolka — omówienie
 ms.date: 03/30/2017
 f1_keywords:
 - PictureBox

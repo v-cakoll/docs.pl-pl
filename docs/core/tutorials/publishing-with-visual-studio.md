@@ -50,11 +50,11 @@ W poniższych krokach zawarto Podgląd plików utworzonych przez proces publikow
 
    W miarę wyświetlania obrazu opublikowane dane wyjściowe zawierają następujące pliki:
 
-      * *HelloWorld.deps.json*
+      * *HelloWorld. deps. JSON*
 
          Jest to plik zależności środowiska uruchomieniowego aplikacji. Definiuje składniki programu .NET Core i biblioteki (w tym bibliotekę dołączaną dynamicznie, która zawiera aplikację) potrzebną do uruchomienia aplikacji. Aby uzyskać więcej informacji, zobacz [pliki konfiguracji środowiska uruchomieniowego](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).
 
-      * *HelloWorld.dll*
+      * *HelloWorld. dll*
 
          Jest to [zależna od platformy wersja wdrożenia](../deploying/deploy-with-cli.md#framework-dependent-deployment) aplikacji. Aby wykonać tę bibliotekę dołączaną dynamicznie, wprowadź `dotnet HelloWorld.dll` w wierszu polecenia.
 
@@ -66,10 +66,10 @@ W poniższych krokach zawarto Podgląd plików utworzonych przez proces publikow
 
          Jest to plik symboli debugowania. Nie musisz wdrażać tego pliku wraz z aplikacją, chociaż należy je zapisać w zdarzeniu, które trzeba debugować opublikowaną wersję aplikacji.
 
-      * *HelloWorld.runtimeconfig.json*
+      * *HelloWorld. runtimeconfig. JSON*
 
          To jest plik konfiguracji czasu wykonywania aplikacji. Identyfikuje wersję platformy .NET Core, w której aplikacja została skompilowana. Możesz również dodać do niej opcje konfiguracji. Aby uzyskać więcej informacji, zobacz [Ustawienia konfiguracji środowiska uruchomieniowego .NET Core](../run-time-config/index.md#runtimeconfigjson).
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
-- [Wdrażanie aplikacji .NET core](../deploying/index.md)
+- [Wdrażanie aplikacji .NET Core](../deploying/index.md)

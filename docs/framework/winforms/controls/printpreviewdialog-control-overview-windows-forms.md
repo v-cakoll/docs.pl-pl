@@ -1,5 +1,5 @@
 ---
-title: PrintPreviewDialog — Informacje o formancie
+title: PrintPreviewDialog, kontrolka — omówienie
 ms.date: 01/08/2018
 f1_keywords:
 - PrintPreviewDialog

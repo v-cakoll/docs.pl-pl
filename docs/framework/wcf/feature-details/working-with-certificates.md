@@ -72,7 +72,7 @@ Certyfikaty cyfrowe są używane do uwierzytelniania jednostki przy użyciu tej 
 
 Podczas tworzenia nowej usługi może być używany certyfikat, który nie jest wystawiony przez zaufany certyfikat główny, lub sam certyfikat wystawiający może nie znajdować się w magazynie zaufanych głównych urzędów certyfikacji. Tylko do celów programistycznych można tymczasowo wyłączyć mechanizm, który sprawdza łańcuch zaufania dla certyfikatu. W tym celu należy ustawić właściwość `CertificateValidationMode` na `PeerTrust` lub `PeerOrChainTrust`. Każdy tryb określa, że certyfikat może być wystawiony samodzielnie (relacja równorzędna) lub część łańcucha zaufania. Właściwość można ustawić dla dowolnej z następujących klas.
 
-|Klasa|Właściwość|
+|Class|Właściwość|
 |-----------|--------------|
 |<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>|<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
 |<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>|<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
@@ -85,7 +85,7 @@ Możesz również ustawić właściwość za pomocą konfiguracji. Następujące
 
 - [\<peerAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)
 
-- [\<messageSenderAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)
+- [\<messageSenderAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)
 
 ## <a name="custom-authentication"></a>Uwierzytelnianie niestandardowe
 
@@ -141,7 +141,7 @@ Można również ustawić tryb konfiguracji przy użyciu `revocationMode` atrybu
 
 W programie WCF należy często określić certyfikat lub zestaw certyfikatów, których usługa lub klient ma używać do uwierzytelniania, szyfrowania lub cyfrowego podpisywania wiadomości. Można to zrobić programowo przy użyciu metody `SetCertificate` różnych klas, które reprezentują certyfikaty X. 509. Poniższe klasy wykorzystują metodę `SetCertificate`, aby określić certyfikat.
 
-|Klasa|Metoda|
+|Class|Metoda|
 |-----------|------------|
 |<xref:System.ServiceModel.Security.PeerCredential>|<xref:System.ServiceModel.Security.PeerCredential.SetCertificate%2A>|
 |<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>|<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A>|
@@ -160,7 +160,7 @@ Magazyn może zawierać wiele certyfikatów o tej samej nazwie podmiotu. Oznacza
 
 ## <a name="certificates-in-configuration"></a>Certyfikaty w konfiguracji
 
-Można również ustawić certyfikaty przy użyciu opcji konfiguracja. Jeśli tworzysz usługę, poświadczenia, w tym certyfikaty, są określone w [\<serviceBehaviors](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md). Podczas programowania klienta certyfikaty są określane w [\<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md).
+Można również ustawić certyfikaty przy użyciu opcji konfiguracja. Jeśli tworzysz usługę, poświadczenia, w tym certyfikaty, są określone w [>\<serviceBehaviors](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md). Podczas programowania klienta certyfikaty są określane w [\<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md).
 
 ## <a name="mapping-a-certificate-to-a-user-account"></a>Mapowanie certyfikatu na konto użytkownika
 

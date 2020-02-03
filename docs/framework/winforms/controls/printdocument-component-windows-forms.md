@@ -1,5 +1,5 @@
 ---
-title: PrintDocument, składnik
+title: PrintDocument — Składnik
 ms.date: 03/30/2017
 helpviewer_keywords:
 - PrintDocument component [Windows Forms]

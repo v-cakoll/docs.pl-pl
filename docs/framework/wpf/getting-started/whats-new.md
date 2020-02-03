@@ -77,7 +77,7 @@ ms.locfileid: "76746923"
   
 <a name="INotifyDataErrorInfo"></a>   
 ## <a name="synchronously-and-asynchronously-validating-data"></a>Synchroniczne i asynchroniczne Weryfikowanie danych  
- Interfejs <xref:System.ComponentModel.INotifyDataErrorInfo> umożliwia klasom jednostek danych implementowanie niestandardowych reguł walidacji i ujawnianie wyników walidacji asynchronicznie. Ten interfejs obsługuje również niestandardowe obiekty błędów, wiele błędów na właściwość, błędy między właściwościami i błędy na poziomie jednostki.  Aby uzyskać więcej informacji, zobacz temat <xref:System.ComponentModel.INotifyDataErrorInfo>.  
+ Interfejs <xref:System.ComponentModel.INotifyDataErrorInfo> umożliwia klasom jednostek danych implementowanie niestandardowych reguł walidacji i ujawnianie wyników walidacji asynchronicznie. Ten interfejs obsługuje również niestandardowe obiekty błędów, wiele błędów na właściwość, błędy między właściwościami i błędy na poziomie jednostki.  Aby uzyskać więcej informacji, zobacz <xref:System.ComponentModel.INotifyDataErrorInfo>.  
   
 <a name="delay"></a>   
 ## <a name="automatically-updating-the-source-of-a-data-binding"></a>Automatyczne aktualizowanie źródła powiązania danych  

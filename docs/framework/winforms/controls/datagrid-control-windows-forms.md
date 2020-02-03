@@ -1,5 +1,5 @@
 ---
-title: DataGrid, kontrolka
+title: DataGrid — Formant
 ms.date: 03/30/2017
 helpviewer_keywords:
 - datasets [Windows Forms], user interface

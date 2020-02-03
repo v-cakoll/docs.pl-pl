@@ -30,7 +30,7 @@ Gdy użytkownicy będą wyświetlać dane wyświetlane w kontrolce <xref:System.
   
 ### <a name="to-freeze-a-column-programmatically"></a>Aby programowo zablokować kolumnę  
   
-- Ustaw <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A?displayProperty=nameWithType> właściwość `true`.  
+- Ustaw właściwość <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A?displayProperty=nameWithType> na `true`.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#061](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#061)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#061](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#061)]  

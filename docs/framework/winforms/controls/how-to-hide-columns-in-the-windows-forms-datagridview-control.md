@@ -25,7 +25,7 @@ Czasami chcesz wyświetlić tylko niektóre kolumny, które są dostępne w kont
   
 ### <a name="to-hide-a-column-programmatically"></a>Aby programowo ukryć kolumnę  
   
-- Ustaw <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A?displayProperty=nameWithType> właściwość `false`. Aby ukryć kolumnę `CustomerID`, która jest generowana automatycznie podczas tworzenia powiązania danych, należy umieścić Poniższy przykład kodu w programie obsługi zdarzeń <xref:System.Windows.Forms.DataGridView.DataBindingComplete>.  
+- Ustaw właściwość <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A?displayProperty=nameWithType> na `false`. Aby ukryć kolumnę `CustomerID`, która jest generowana automatycznie podczas tworzenia powiązania danych, należy umieścić Poniższy przykład kodu w programie obsługi zdarzeń <xref:System.Windows.Forms.DataGridView.DataBindingComplete>.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#063](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#063)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#063](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#063)]  

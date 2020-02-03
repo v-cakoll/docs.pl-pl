@@ -40,7 +40,7 @@ ms.locfileid: "76733647"
       | Typ zestawu SDK        | Ścieżka                               |
       | --------------- | ---------------------------------- |
       | .NET Core       | *Microsoft. servicecore. app. ref*        |
-      | System Windows Desktop | *Microsoft. WindowsDesktop. app. ref* |
+      | Pulpit systemu Windows | *Microsoft. WindowsDesktop. app. ref* |
       | .NET Standard   | *Standard. Library. ref*          |
    
    1. Przejdź do wersji, w której chcesz zainstalować zlokalizowaną funkcję IntelliSense. Na przykład *3.1.0*.
@@ -56,7 +56,7 @@ ms.locfileid: "76733647"
    | Portugalski (Brazylia)  | *pt-br*     |
    | Chiński (uproszczony)  | *zh-Hans*   |
    | Chiński (tradycyjny) | *zh-Hant*   |
-   | francuski                | *fr*        |
+   | Francuski                | *fr*        |
    | niemiecki                | *Ukryj*        |
    | Włoski               | *go*        |
    | japoński              | *Japonia*        |
@@ -79,7 +79,7 @@ Jeśli podczas instalacji nie został zainstalowany odpowiedni pakiet językowy,
 
 1. Znajdowanie Instalatora programu Visual Studio na komputerze.
 
-   Na przykład na komputerze z systemem Windows 10, wybierz pozycję **Start**, a następnie przewiń do list **V**, w którym znajduje się w **Instalatora programu Visual Studio**.
+   Na przykład na komputerze z systemem Windows 10 Wybierz pozycję **Start**, a następnie przewiń do litery **V**, gdzie jest ona wyświetlana jako **Instalator programu Visual Studio**.
 
    ![Otwórz Instalator programu Visual Studio z systemu Windows](./media/localized-intellisense/vs-installer-windows-start.png)
 
@@ -116,9 +116,9 @@ Po zainstalowaniu żądanych pakietów językowych zmodyfikuj ustawienia program
 
 1. W węźle **środowisko** wybierz pozycję **Ustawienia międzynarodowe**.
 
-1. Z listy rozwijanej **Język** wybierz odpowiedni język. Wybierz **OK**. 
+1. Z listy rozwijanej **Język** wybierz odpowiedni język. Wybierz pozycję **OK**. 
 
-1. Zostanie wyświetlone okno dialogowe z informacją, że musisz ponownie uruchomić program Visual Studio, aby zmiany zaczęły obowiązywać. Wybierz **OK**.
+1. Zostanie wyświetlone okno dialogowe z informacją, że musisz ponownie uruchomić program Visual Studio, aby zmiany zaczęły obowiązywać. Wybierz pozycję **OK**.
 
 1. Uruchom ponownie program Visual Studio.
 

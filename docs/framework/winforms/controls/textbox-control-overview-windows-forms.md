@@ -1,5 +1,5 @@
 ---
-title: TextBox — Informacje o formancie
+title: TextBox, kontrolka — omówienie
 ms.date: 03/30/2017
 dev_langs:
 - csharp

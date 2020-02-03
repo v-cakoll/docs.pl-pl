@@ -39,5 +39,5 @@ Możesz użyć [Eksploratora pakietów NuGet](https://github.com/NuGetPackageExp
 > W celu uzyskania najlepszego środowiska debugowania biblioteka powinna publikować pliki symboli, a także używać linku źródłowego. Aby uzyskać więcej informacji na temat plików symboli i pakietów symboli, zobacz [pakiety symboli](./nuget.md#symbol-packages).
 
 >[!div class="step-by-step"]
->[Poprzedni](dependencies.md)
->[Następny](publish-nuget-package.md)
+>[Poprzednie](dependencies.md)
+>[dalej](publish-nuget-package.md)

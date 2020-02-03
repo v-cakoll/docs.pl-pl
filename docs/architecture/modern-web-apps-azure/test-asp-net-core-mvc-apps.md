@@ -4,12 +4,12 @@ description: Tworzenie architektury nowoczesnych aplikacji sieci Web przy użyci
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 0cb5c5c604d4a82798d4af736ff278b096621588
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 5f63e350e2f1ba8699bb002a54492cbf9501948e
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777106"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965779"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Testowanie aplikacji ASP.NET Core MVC
 
@@ -78,7 +78,7 @@ Możesz użyć niezależnej platformy testowej. Środowisko xUnit Framework dzia
 
 ### <a name="test-naming"></a>Nazwa testu
 
-Należy nazwać testy w spójny sposób, z nazwami wskazującymi, co każdy test wykonuje. Jednym z metod, które mam doskonałe sukces, jest nazwa klasy testowej zgodnie z klasą i metodą, które są testowane. Powoduje to wykonanie wielu małych klas testowych, ale wyraźnie czyści, do czego każdy test jest odpowiedzialny. Przy użyciu nazwy klasy testowej skonfigurowanej do identyfikacji klasy i metody do przetestowania, nazwa metody testowej może służyć do określenia testowanego zachowania. Powinno to obejmować oczekiwane zachowanie oraz wszelkie dane wejściowe lub założeń, które powinny spowodować takie zachowanie. Przykładowe nazwy testów:
+Nazwij testy w spójny sposób, podając nazwy wskazujące, co każdy test wykonuje. Jednym z metod, które mam doskonałe sukces, jest nazwa klasy testowej zgodnie z klasą i metodą, które są testowane. Powoduje to wykonanie wielu małych klas testowych, ale wyraźnie czyści, do czego każdy test jest odpowiedzialny. Przy użyciu nazwy klasy testowej skonfigurowanej do identyfikacji klasy i metody do przetestowania, nazwa metody testowej może służyć do określenia testowanego zachowania. Powinno to obejmować oczekiwane zachowanie oraz wszelkie dane wejściowe lub założeń, które powinny spowodować takie zachowanie. Przykładowe nazwy testów:
 
 - `CatalogControllerGetImage.CallsImageServiceWithId`
 
@@ -143,7 +143,7 @@ public IActionResult GetImage(int id)
 }
 ```
 
-Rejestratory \_i \_imageService są wprowadzane jako zależności. Teraz można sprawdzić, czy ten sam identyfikator, który jest przesyłany do metody akcji jest przekazana do \_imageService i że wynikowe bajty są zwracane w ramach FileResult. Możesz również sprawdzić, czy rejestrowanie błędów odbywa się zgodnie z oczekiwaniami, i czy wynik NotFound jest zwracany, jeśli brakuje obrazu, przy założeniu, że jest to ważne zachowanie aplikacji (czyli nie tylko kod tymczasowy dodany przez dewelopera w celu zdiagnozowania problemu). Rzeczywista logika pliku została przeniesiona do oddzielnej usługi implementacji i została uzupełniona, aby zwracała wyjątek specyficzny dla aplikacji w przypadku brakujących plików. Tę implementację można przetestować niezależnie przy użyciu testu integracji.
+elementy `_logger` i `_imageService` są wstrzykiwane jako zależności. Teraz można sprawdzić, czy ten sam identyfikator, który jest przesyłany do metody akcji jest przekazana do `_imageService`i że wynikowe bajty są zwracane jako część FileResult. Możesz również sprawdzić, czy rejestrowanie błędów odbywa się zgodnie z oczekiwaniami, i czy `NotFound` wynik jest zwracany, jeśli brakuje obrazu, przy założeniu, że jest to ważne zachowanie aplikacji (czyli nie tylko kod tymczasowy dodany przez dewelopera w celu zdiagnozowania problemu). Rzeczywista logika pliku została przeniesiona do oddzielnej usługi implementacji i została uzupełniona, aby zwracała wyjątek specyficzny dla aplikacji w przypadku brakujących plików. Tę implementację można przetestować niezależnie przy użyciu testu integracji.
 
 W większości przypadków należy użyć globalnych programów obsługi wyjątków na kontrolerach, więc ilość logiki w nich powinna być minimalna i prawdopodobnie nie być testowana. Większość testów akcji kontrolera należy wykonywać przy użyciu testów funkcjonalnych i klasy `TestServer` opisanej poniżej.
 
@@ -153,7 +153,7 @@ Większość testów integracji w aplikacjach ASP.NET Core należy przetestować
 
 ## <a name="functional-testing-aspnet-core-apps"></a>Testowanie funkcjonalne ASP.NET Core aplikacji
 
-W przypadku aplikacji ASP.NET Core Klasa `TestServer` sprawia, że testy funkcjonalne są dość łatwe do zapisu. `TestServer` można skonfigurować przy użyciu `WebHostBuilder` bezpośrednio (jak zwykle w przypadku aplikacji) lub z typem `WebApplicationFactory` (dostępnym od wersji 2,1). Należy spróbować dokładnie dopasować hosta testowego do hosta produkcyjnego, aby testy były wykonywane podobnie jak w przypadku aplikacji w środowisku produkcyjnym. Klasa `WebApplicationFactory` jest przydatna do konfigurowania ContentRoot TestServer, który jest używany przez ASP.NET Core do lokalizowania zasobów statycznych, takich jak widoki.
+W przypadku aplikacji ASP.NET Core Klasa `TestServer` sprawia, że testy funkcjonalne są dość łatwe do zapisu. `TestServer` można skonfigurować przy użyciu `WebHostBuilder` bezpośrednio (jak zwykle w przypadku aplikacji) lub z typem `WebApplicationFactory` (dostępnym od wersji 2,1). Spróbuj dokładnie dopasować hosta testowego do hosta produkcyjnego, aby testy były wykonywane podobnie jak w przypadku aplikacji w środowisku produkcyjnym. Klasa `WebApplicationFactory` jest przydatna do konfigurowania ContentRoot TestServer, który jest używany przez ASP.NET Core do lokalizowania zasobów statycznych, takich jak widoki.
 
 Możesz utworzyć proste testy funkcjonalne, tworząc klasę testową implementującą IClassFixture\<WebApplicationFactory\<> >, gdzie namiot jest klasą początkową aplikacji sieci Web. W tym miejscu, armatura testowa może utworzyć klienta przy użyciu metody "ServiceClient" fabryki:
 

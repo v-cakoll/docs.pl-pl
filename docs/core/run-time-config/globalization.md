@@ -59,7 +59,7 @@ Plik projektu:
 | | Nazwa ustawienia | Wartości |
 | - | - | - |
 | **runtimeconfig. JSON** | `Switch.System.Globalization.EnforceJapaneseEraYearRanges` | kontrole zakresu swobodnego `false`<br/>`true` — nadprzepływy powodują wyjątek |
-| **Zmienna środowiskowa** | N/D | N/D |
+| **Zmienna środowiskowa** | Brak | Brak |
 
 ## <a name="japanese-date-parsing"></a>Japońska analiza daty
 
@@ -70,7 +70,7 @@ Plik projektu:
 | | Nazwa ustawienia | Wartości |
 | - | - | - |
 | **runtimeconfig. JSON** | `Switch.System.Globalization.EnforceLegacyJapaneseDateParsing` | `false` — obsługiwana jest wartość "Gannen" lub "1"<br/>Obsługiwane są tylko `true` "1" |
-| **Zmienna środowiskowa** | N/D | N/D |
+| **Zmienna środowiskowa** | Brak | Brak |
 
 ## <a name="japanese-year-format"></a>Japoński rok
 
@@ -81,4 +81,4 @@ Plik projektu:
 | | Nazwa ustawienia | Wartości |
 | - | - | - |
 | **runtimeconfig. JSON** | `Switch.System.Globalization.FormatJapaneseFirstYearAsANumber` | `false`-format jako "Gannen"<br/>`true` — formatowanie jako liczba |
-| **Zmienna środowiskowa** | N/D | N/D |
+| **Zmienna środowiskowa** | Brak | Brak |

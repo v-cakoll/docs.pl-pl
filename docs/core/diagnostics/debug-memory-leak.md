@@ -18,7 +18,7 @@ W tym samouczku przedstawiono narzędzia służące do analizowania przecieków 
 
 Ten samouczek korzysta z przykładowej aplikacji, która została zaprojektowana w celu celowego przecieku pamięci. Przykład jest udostępniany jako ćwiczenie. Można przeanalizować aplikację, która powoduje zbyt przypadkowe przecieki pamięci.
 
-W tym samouczku wykonasz następujące czynności:
+W tym samouczku zostaną wykonane następujące czynności:
 
 > [!div class="checklist"]
 >

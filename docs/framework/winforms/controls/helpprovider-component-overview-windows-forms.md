@@ -1,5 +1,5 @@
 ---
-title: HelpProvider — Informacje o składniku
+title: HelpProvider, składnik — omówienie
 ms.date: 03/30/2017
 f1_keywords:
 - HelpProvider

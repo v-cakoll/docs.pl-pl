@@ -72,7 +72,7 @@ Aby wyodrębnić pliki Apache Spark:
 * Kliknij prawym przyciskiem myszy **Spark-2.4.1-bin-Hadoop 2.7. tar** i wybierz **7-zip-> Wyodrębnianie plików...**
 * Wprowadź **C:\Bin** w polu **Wyodrębnij do** .
 * Usuń zaznaczenie pola wyboru pod polem **Wyodrębnij do** .
-* Wybierz **OK**.
+* Kliknij przycisk **OK**.
 * Pliki Apache Spark są wyodrębniane do C:\bin\spark-2.4.1-bin-hadoop2.7\
 
 ![Zainstaluj platformę Spark](https://dotnet.microsoft.com/static/images/spark-extract-with-7-zip.png?v=YvjUv54LIxI9FbALPC3h8zSQdyMtK2-NKbFOliG-f8M)
@@ -102,7 +102,7 @@ Aby wyodrębnić pakiet Microsoft. Spark. Worker:
 * Kliknij prawym przyciskiem myszy i wybierz **7-zip-> Wyodrębnianie plików.** ...
 * Wprowadź **C:\Bin** w polu **Wyodrębnij do** .
 * Usuń zaznaczenie pola wyboru pod polem **Wyodrębnij do** .
-* Wybierz **OK**.
+* Kliknij przycisk **OK**.
 
 ![Zainstaluj platformę .NET Spark](https://dotnet.microsoft.com/static/images/dotnet-for-spark-extract-with-7-zip.png?v=jwCyum9mL0mGIi4V5zC7yuvLfcj1_nL-QFFD8TClhZk)
 

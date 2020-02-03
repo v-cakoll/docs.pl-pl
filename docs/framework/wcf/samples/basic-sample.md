@@ -16,7 +16,7 @@ Ten przykład pokazuje, jak umożliwić odnajdywanie usługi i wyszukiwanie i wy
 > [!NOTE]
 > Ten przykład implementuje odnajdywanie w kodzie.  Aby uzyskać przykład, który implementuje odnajdywanie w konfiguracji, zobacz [Konfiguracja](../../../../docs/framework/wcf/samples/configuration-sample.md).
 
-## <a name="service"></a>NDES
+## <a name="service"></a>Usługa
 
 To jest prosta implementacja usługi kalkulatora. Kod związany z odnajdywaniem można znaleźć w `Main`, w którym <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> zostanie dodany do hosta usługi i zostanie dodana <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, jak pokazano w poniższym kodzie.
 

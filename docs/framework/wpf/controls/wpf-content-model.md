@@ -137,9 +137,9 @@ ms.locfileid: "76738280"
   
 - Ciąg.  
   
-- Element <xref:System.DateTime> obiektu.  
+- Obiekt <xref:System.DateTime>.  
   
-- A <xref:System.Windows.UIElement>.  
+- Klasa <xref:System.Windows.UIElement>.  
   
 - <xref:System.Windows.Controls.Panel>, który zawiera <xref:System.Windows.Shapes.Ellipse> i <xref:System.Windows.Controls.TextBlock>.  
   
@@ -221,7 +221,7 @@ TextBlock, który ma obramowanie
 ## <a name="classes-that-enable-users-to-enter-text"></a>Klasy, które umożliwiają użytkownikom wprowadzanie tekstu  
  WPF udostępnia trzy podstawowe kontrolki, które umożliwiają użytkownikom wprowadzanie tekstu. Każdy formant Wyświetla tekst inaczej. W poniższej tabeli wymieniono te trzy kontrolki związane z tekstem, ich możliwości podczas wyświetlania tekstu oraz ich właściwości, które zawierają tekst kontrolki.  
   
-|Kontrolka|Tekst jest wyświetlany jako|Właściwość zawartości|  
+|formant|Tekst jest wyświetlany jako|Właściwość zawartości|  
 |-------------|--------------------------|----------------------|  
 |<xref:System.Windows.Controls.TextBox>|Zwykły tekst|<xref:System.Windows.Controls.TextBox.Text%2A>|  
 |<xref:System.Windows.Controls.RichTextBox>|Tekst sformatowany|<xref:System.Windows.Controls.RichTextBox.Document%2A>|  
@@ -235,7 +235,7 @@ TextBlock, który ma obramowanie
   
  Poniższa tabela zawiera listę właściwości zawartości dla klas <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentPageViewer>i <xref:System.Windows.Controls.FlowDocumentScrollViewer>.  
   
-|Kontrolka|Właściwość zawartości|Typ właściwości zawartości|  
+|formant|Właściwość zawartości|Typ właściwości zawartości|  
 |-------------|----------------------|---------------------------|  
 |<xref:System.Windows.Controls.FlowDocumentPageViewer>|dokument|<xref:System.Windows.Documents.IDocumentPaginatorSource>|  
 |<xref:System.Windows.Controls.FlowDocumentReader>|dokument|<xref:System.Windows.Documents.FlowDocument>|  

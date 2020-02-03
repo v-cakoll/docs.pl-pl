@@ -33,7 +33,7 @@ ms.locfileid: "76731171"
 
 Kontrolki, które nie mogą odbierać fokusu, nie mogą mieć kluczy dostępu.
 
-## <a name="programmatic"></a>Program
+## <a name="programmatic"></a>Programowa
 
 Ustaw właściwość `Text` na ciąg, który zawiera znak handlowego "i" (&) przed literą, która będzie skrótem.
 
@@ -55,7 +55,7 @@ button1->Text = "&Print";
 > [!NOTE]
 > Aby użyć znaku handlowego "i" w podpisie bez tworzenia klucza dostępu, Uwzględnij dwa znaki handlowe (& &). W podpisie jest wyświetlany pojedynczy znak "i nie są podkreślane żadne znaki.
 
-## <a name="designer"></a>Designer
+## <a name="designer"></a>Projektant
 
 W oknie **Właściwości** programu Visual Studio ustaw właściwość **Text** na ciąg, który zawiera znak handlowego "i" ("&") przed literą, która będzie kluczem dostępu. Na przykład, aby ustawić literę "P" jako klucz dostępu, wprowadź **& Print**.
 

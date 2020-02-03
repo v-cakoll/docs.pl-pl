@@ -38,7 +38,7 @@ Można skonfigurować sposób wyświetlania wartości w kontrolce <xref:System.W
     numericUpDown1->ThousandsSeparator = true;  
     ```  
   
-     lub  
+     —lub—  
   
 - Wyświetl wartość szesnastkową, ustawiając właściwość <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> na `true`.  
   

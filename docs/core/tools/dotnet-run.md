@@ -33,7 +33,7 @@ dotnet run [-c|--configuration] [-f|--framework] [--force] [--interactive] [--la
 dotnet run [-h|--help]
 ```
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2,1](#tab/netcore21)
 
 ```dotnetcli
 dotnet run [-c|--configuration] [-f|--framework] [--force] [--launch-profile] [--no-build] [--no-dependencies]
@@ -49,7 +49,7 @@ dotnet run [-c|--configuration] [-f|--framework] [--force] [--launch-profile] [-
 dotnet run [-h|--help]
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1. x](#tab/netcore1x)
 
 ```dotnetcli
 dotnet run [-c|--configuration] [-f|--framework] [-p|--project] [[--] [application arguments]]
@@ -138,7 +138,7 @@ Określa docelowy środowisko uruchomieniowe, dla którego mają zostać przywr�
 
 Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`i `diag[nostic]`.
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2,1](#tab/netcore21)
 
 `--`
 
@@ -242,7 +242,7 @@ Określa ścieżkę do pliku projektu do uruchomienia (nazwa folderu lub pełna 
 
 Określa docelowy środowisko uruchomieniowe, dla którego mają zostać przywrócone pakiety. Aby uzyskać listę identyfikatorów środowiska uruchomieniowego (RID), zobacz [wykaz identyfikatorów RID](../rid-catalog.md).
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1. x](#tab/netcore1x)
 
 `--`
 

@@ -48,7 +48,7 @@ Czasami warto umieścić znaki cudzysłowu ("") w ciągu tekstu. Na przykład:
        }  
     ```  
   
-     lub  
+     —lub—  
   
 2. Wstaw znak ASCII lub Unicode dla znaku cudzysłowu. W Visual Basic Użyj znaku ASCII (34). W wizualizacji C#Użyj znaku Unicode (\u0022).  
   
@@ -67,7 +67,7 @@ Czasami warto umieścić znaki cudzysłowu ("") w ciągu tekstu. Na przykład:
     > [!NOTE]
     > W tym przykładzie nie można użyć \u0022, ponieważ nie można użyć uniwersalnej nazwy znaku, która określa znak w podstawowym zestawie znaków. W przeciwnym razie utworzysz C3851. Aby uzyskać więcej informacji, zobacz [błąd kompilatora C3851](/cpp/error-messages/compiler-errors-2/compiler-error-c3851).  
   
-     lub  
+     —lub—  
   
 3. Możesz również zdefiniować stałą dla znaku i użyć go w razie potrzeby.  
   

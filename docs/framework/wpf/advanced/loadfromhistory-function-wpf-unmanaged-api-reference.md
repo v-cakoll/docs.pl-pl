@@ -40,7 +40,7 @@ HRESULT LoadFromHistory_export(
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe .NET Framework](../../get-started/system-requirements.md).  
   
- **DLL:**  
+ **BIBLIOTECE**  
   
  W .NET Framework 3,0 i 3,5: PresentationHostDLL. dll  
   

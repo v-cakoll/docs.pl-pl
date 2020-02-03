@@ -27,54 +27,54 @@ Program Visual Studio umożliwia tworzenie aplikacji opartych na systemie Window
 
 |Formant/składnik|Efekt właściwości RightToLeft|Efekt właściwości RightToLeftLayout|Wymaga dublowania?|
 |------------------------|------------------------------------|------------------------------------------|-------------------------|
-|<xref:System.Windows.Forms.Button>|Ustawia kolejność odczytywania od prawej do lewej. Odwraca <xref:System.Windows.Forms.ButtonBase.TextAlign%2A>, <xref:System.Windows.Forms.ButtonBase.ImageAlign%2A>i <xref:System.Windows.Forms.ButtonBase.TextImageRelation%2A>|Brak efektu|Nie|
-|<xref:System.Windows.Forms.CheckBox>|To pole wyboru jest wyświetlane po prawej stronie tekstu|Brak efektu|Nie|
-|<xref:System.Windows.Forms.CheckedListBox>|Wszystkie pola wyboru są wyświetlane po prawej stronie tekstu.|Brak efektu|Nie|
-|<xref:System.Windows.Forms.ColorDialog>|Nie dotyczy; zależy od języka systemu operacyjnego|Brak efektu|Nie|
-|<xref:System.Windows.Forms.ComboBox>|Elementy w kontrolce pole kombi są wyrównane do prawej|Brak efektu|Nie|
-|<xref:System.Windows.Forms.ContextMenu>|Pojawia się wyrównane do prawej z kolejnością czytania od lewej|Brak efektu|Nie|
-|<xref:System.Windows.Forms.DataGrid>|Pojawia się wyrównane do prawej z kolejnością czytania od lewej|Brak efektu|Nie|
-|<xref:System.Windows.Forms.DataGridView>|Wpływa na kolejność odczytywania od prawej do lewej i układ kontroli|Brak efektu|Nie|
+|<xref:System.Windows.Forms.Button>|Ustawia kolejność odczytywania od prawej do lewej. Odwraca <xref:System.Windows.Forms.ButtonBase.TextAlign%2A>, <xref:System.Windows.Forms.ButtonBase.ImageAlign%2A>i <xref:System.Windows.Forms.ButtonBase.TextImageRelation%2A>|Brak wpływu|Nie|
+|<xref:System.Windows.Forms.CheckBox>|To pole wyboru jest wyświetlane po prawej stronie tekstu|Brak wpływu|Nie|
+|<xref:System.Windows.Forms.CheckedListBox>|Wszystkie pola wyboru są wyświetlane po prawej stronie tekstu.|Brak wpływu|Nie|
+|<xref:System.Windows.Forms.ColorDialog>|Nie dotyczy; zależy od języka systemu operacyjnego|Brak wpływu|Nie|
+|<xref:System.Windows.Forms.ComboBox>|Elementy w kontrolce pole kombi są wyrównane do prawej|Brak wpływu|Nie|
+|<xref:System.Windows.Forms.ContextMenu>|Pojawia się wyrównane do prawej z kolejnością czytania od lewej|Brak wpływu|Nie|
+|<xref:System.Windows.Forms.DataGrid>|Pojawia się wyrównane do prawej z kolejnością czytania od lewej|Brak wpływu|Nie|
+|<xref:System.Windows.Forms.DataGridView>|Wpływa na kolejność odczytywania od prawej do lewej i układ kontroli|Brak wpływu|Nie|
 |<xref:System.Windows.Forms.DateTimePicker>|Nie dotyczy; zależy od języka systemu operacyjnego|Odzwierciedla kontrolkę|Tak|
-|<xref:System.Windows.Forms.DomainUpDown>|Lewy i Wyrównaj przyciski w górę i w dół|Brak efektu|Nie|
-|<xref:System.Windows.Forms.ErrorProvider>|Nieobsługiwane|Brak efektu|Nie|
-|<xref:System.Windows.Forms.FontDialog>|Zależy od języka systemu operacyjnego|Brak efektu|Nie|
+|<xref:System.Windows.Forms.DomainUpDown>|Lewy i Wyrównaj przyciski w górę i w dół|Brak wpływu|Nie|
+|<xref:System.Windows.Forms.ErrorProvider>|Nieobsługiwane|Brak wpływu|Nie|
+|<xref:System.Windows.Forms.FontDialog>|Zależy od języka systemu operacyjnego|Brak wpływu|Nie|
 |<xref:System.Windows.Forms.Form>|Ustawia kolejność odczytywania od prawej i odwraca paski przewijania|Odzwierciedla formularz|Tak|
 |<xref:System.Windows.Forms.GroupBox>|Zostanie wyświetlony napis wyrównany do prawej. Formanty podrzędne mogą dziedziczyć tę właściwość.|Używanie <xref:System.Windows.Forms.TableLayoutPanel> w formancie do obsługi dublowania od prawej do lewej|Nie|
-|<xref:System.Windows.Forms.HScrollBar>|Rozpoczyna się od prawej strony pola przewijania (kciuka)|Brak efektu|Nie|
-|<xref:System.Windows.Forms.ImageList>|Niewymagane|Brak efektu|Nie|
-|<xref:System.Windows.Forms.Label>|Wyświetlane wyrównane do prawej. Odwraca <xref:System.Windows.Forms.Label.TextAlign%2A> i <xref:System.Windows.Forms.Label.ImageAlign%2A>|Brak efektu|Nie|
-|<xref:System.Windows.Forms.LinkLabel>|Wyświetlane wyrównane do prawej. Odwraca <xref:System.Windows.Forms.Label.TextAlign%2A> i <xref:System.Windows.Forms.Label.ImageAlign%2A>|Brak efektu|Nie|
-|<xref:System.Windows.Forms.ListBox>|Elementy są wyrównane do prawej|Brak efektu|Nie|
+|<xref:System.Windows.Forms.HScrollBar>|Rozpoczyna się od prawej strony pola przewijania (kciuka)|Brak wpływu|Nie|
+|<xref:System.Windows.Forms.ImageList>|Niewymagane|Brak wpływu|Nie|
+|<xref:System.Windows.Forms.Label>|Wyświetlane wyrównane do prawej. Odwraca <xref:System.Windows.Forms.Label.TextAlign%2A> i <xref:System.Windows.Forms.Label.ImageAlign%2A>|Brak wpływu|Nie|
+|<xref:System.Windows.Forms.LinkLabel>|Wyświetlane wyrównane do prawej. Odwraca <xref:System.Windows.Forms.Label.TextAlign%2A> i <xref:System.Windows.Forms.Label.ImageAlign%2A>|Brak wpływu|Nie|
+|<xref:System.Windows.Forms.ListBox>|Elementy są wyrównane do prawej|Brak wpływu|Nie|
 |<xref:System.Windows.Forms.ListView>|Ustawia kolejność odczytu na RTL; elementy pozostają wyrównane do lewej|Odzwierciedla kontrolkę|Tak|
-|<xref:System.Windows.Forms.MainMenu>|Wyświetlane wyrównane do prawej kolejność odczytu w czasie wykonywania (nie w czasie projektowania)|Brak efektu|Nie|
-|<xref:System.Windows.Forms.MaskedTextBox>|Wyświetla tekst od prawej do lewej.|Brak efektu|Nie|
+|<xref:System.Windows.Forms.MainMenu>|Wyświetlane wyrównane do prawej kolejność odczytu w czasie wykonywania (nie w czasie projektowania)|Brak wpływu|Nie|
+|<xref:System.Windows.Forms.MaskedTextBox>|Wyświetla tekst od prawej do lewej.|Brak wpływu|Nie|
 |<xref:System.Windows.Forms.MonthCalendar>|Nie dotyczy; zależy od języka systemu operacyjnego|Odzwierciedla kontrolkę|Tak|
 |<xref:System.Windows.Forms.NotifyIcon>|Nieobsługiwane|Nieobsługiwane|Nie|
-|<xref:System.Windows.Forms.NumericUpDown>|Przyciski w górę i w dół są wyrównane do lewej|Brak efektu|Nie|
-|<xref:System.Windows.Forms.OpenFileDialog>|W systemach operacyjnych pisanych od prawej do lewej, ustawienie właściwości <xref:System.Windows.Forms.Control.RightToLeft> formularza zawierającej <xref:System.Windows.Forms.RightToLeft.Yes?displayProperty=nameWithType> lokalizuje okno dialogowe |Brak efektu|Nie|
-|<xref:System.Windows.Forms.PageSetupDialog>|Nie dotyczy; zależy od języka systemu operacyjnego|Brak efektu|Nie|
+|<xref:System.Windows.Forms.NumericUpDown>|Przyciski w górę i w dół są wyrównane do lewej|Brak wpływu|Nie|
+|<xref:System.Windows.Forms.OpenFileDialog>|W systemach operacyjnych pisanych od prawej do lewej, ustawienie właściwości <xref:System.Windows.Forms.Control.RightToLeft> formularza zawierającej <xref:System.Windows.Forms.RightToLeft.Yes?displayProperty=nameWithType> lokalizuje okno dialogowe |Brak wpływu|Nie|
+|<xref:System.Windows.Forms.PageSetupDialog>|Nie dotyczy; zależy od języka systemu operacyjnego|Brak wpływu|Nie|
 |<xref:System.Windows.Forms.Panel>|Formanty podrzędne mogą dziedziczyć tę właściwość|Używanie <xref:System.Windows.Forms.TableLayoutPanel> w formancie do obsługi od prawej do lewej|Tak|
-|<xref:System.Windows.Forms.PictureBox>|Nieobsługiwane|Brak efektu|Nie|
-|<xref:System.Windows.Forms.PrintDialog>|Nie dotyczy; zależy od języka systemu operacyjnego|Brak efektu|Nie|
-|<xref:System.Drawing.Printing.PrintDocument>|Pionowy pasek przewijania staje się wyrównany do lewej, a poziomy pasek przewijania zaczyna się od lewej|Brak efektu|Nie|
+|<xref:System.Windows.Forms.PictureBox>|Nieobsługiwane|Brak wpływu|Nie|
+|<xref:System.Windows.Forms.PrintDialog>|Nie dotyczy; zależy od języka systemu operacyjnego|Brak wpływu|Nie|
+|<xref:System.Drawing.Printing.PrintDocument>|Pionowy pasek przewijania staje się wyrównany do lewej, a poziomy pasek przewijania zaczyna się od lewej|Brak wpływu|Nie|
 |<xref:System.Windows.Forms.PrintPreviewDialog>|Nieobsługiwane|Nieobsługiwane|Nie|
 |<xref:System.Windows.Forms.ProgressBar>|Nie dotyczy tej właściwości|Odzwierciedla kontrolkę|Tak|
-|<xref:System.Windows.Forms.RadioButton>|Przycisk radiowy jest wyświetlany po prawej stronie tekstu|Brak efektu|Nie|
-|<xref:System.Windows.Forms.RichTextBox>|Elementy kontrolne, które zawierają tekst, są wyświetlane od prawej do lewej z kolejnością czytania RTL|Brak efektu|Nie|
-|<xref:System.Windows.Forms.SaveFileDialog>|Nie dotyczy; zależy od języka systemu operacyjnego|Brak efektu|Nie|
+|<xref:System.Windows.Forms.RadioButton>|Przycisk radiowy jest wyświetlany po prawej stronie tekstu|Brak wpływu|Nie|
+|<xref:System.Windows.Forms.RichTextBox>|Elementy kontrolne, które zawierają tekst, są wyświetlane od prawej do lewej z kolejnością czytania RTL|Brak wpływu|Nie|
+|<xref:System.Windows.Forms.SaveFileDialog>|Nie dotyczy; zależy od języka systemu operacyjnego|Brak wpływu|Nie|
 |<xref:System.Windows.Forms.SplitContainer>|Układ panelu jest odwrócony; pionowy pasek przewijania pojawia się po lewej stronie; poziomy pasek przewijania zaczyna się z prawej strony|Używanie <xref:System.Windows.Forms.TableLayoutPanel> do dublowania kolejności formantów podrzędnych|Nie|
-|<xref:System.Windows.Forms.Splitter>|Nieobsługiwane|Brak efektu|Nie|
+|<xref:System.Windows.Forms.Splitter>|Nieobsługiwane|Brak wpływu|Nie|
 |<xref:System.Windows.Forms.StatusBar>|Nieobsługiwane; Zamiast tego użyj <xref:System.Windows.Forms.StatusStrip>|Brak efektu; Zamiast tego użyj <xref:System.Windows.Forms.StatusStrip>|Nie|
 |<xref:System.Windows.Forms.TabControl>|Nie dotyczy tej właściwości|Odzwierciedla kontrolkę|Tak|
-|<xref:System.Windows.Forms.TextBox>|Wyświetla tekst od prawej do lewej z kolejnością czytania RTL|Brak efektu|Nie|
+|<xref:System.Windows.Forms.TextBox>|Wyświetla tekst od prawej do lewej z kolejnością czytania RTL|Brak wpływu|Nie|
 |<xref:System.Windows.Forms.Timer>|Niewymagane|Niewymagane|Nie|
 |<xref:System.Windows.Forms.ToolBar>|Nie ma to wpływ na tę właściwość; Zamiast tego użyj <xref:System.Windows.Forms.ToolStrip>|Brak efektu; Zamiast tego użyj <xref:System.Windows.Forms.ToolStrip>|Tak|
-|<xref:System.Windows.Forms.ToolTip>|Ustawia kolejność odczytywania od prawej do lewej|Brak efektu|Nie|
-|<xref:System.Windows.Forms.TrackBar>|Przewijanie lub śledzenie zaczyna się od prawej strony; gdy <xref:System.Windows.Forms.TrackBar.Orientation%2A> jest pionowy, Takty występują po prawej stronie|Brak efektu|Nie|
+|<xref:System.Windows.Forms.ToolTip>|Ustawia kolejność odczytywania od prawej do lewej|Brak wpływu|Nie|
+|<xref:System.Windows.Forms.TrackBar>|Przewijanie lub śledzenie zaczyna się od prawej strony; gdy <xref:System.Windows.Forms.TrackBar.Orientation%2A> jest pionowy, Takty występują po prawej stronie|Brak wpływu|Nie|
 |<xref:System.Windows.Forms.TreeView>|Ustawia tylko kolejność odczytu RTL|Odzwierciedla kontrolkę|Tak|
 |<xref:System.Windows.Forms.UserControl>|Pionowy pasek przewijania pojawia się po lewej stronie; pasek przewijania w poziomie po prawej stronie|Brak bezpośredniej pomocy technicznej; Użyj <xref:System.Windows.Forms.TableLayoutPanel>|Nie|
-|<xref:System.Windows.Forms.VScrollBar>|Wyświetlane po lewej stronie zamiast po prawej stronie formantów przewijalnych|Brak efektu|Nie|
+|<xref:System.Windows.Forms.VScrollBar>|Wyświetlane po lewej stronie zamiast po prawej stronie formantów przewijalnych|Brak wpływu|Nie|
 
 ## <a name="encoding"></a>Kodowanie
  Windows Forms obsługiwać kod Unicode, dlatego można uwzględnić dowolny zestaw znaków podczas tworzenia aplikacji dwukierunkowych. Jednak nie wszystkie formanty Windows Forms obsługują standard Unicode na wszystkich platformach.

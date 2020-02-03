@@ -103,4 +103,4 @@ public class Document
 - [Reguły istotnej zmiany w programie .NET](https://github.com/dotnet/runtime/blob/master/docs/coding-guidelines/breaking-change-rules.md)
 
 >[!div class="step-by-step"]
->[Poprzednie](versioning.md)
+>[Wstecz](versioning.md)

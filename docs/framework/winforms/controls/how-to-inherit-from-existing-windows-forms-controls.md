@@ -28,7 +28,7 @@ Jeśli chcesz zwiększyć funkcjonalność istniejącej kontrolki, można utworz
 
 1. W menu **projekt** wybierz polecenie **Dodaj nowy element**.
 
-    **Dodaj nowy element** pojawi się okno dialogowe.
+    Zostanie wyświetlone okno dialogowe **Dodawanie nowego elementu**.
 
 1. W oknie dialogowym **Dodaj nowy element** kliknij dwukrotnie **kontrolkę niestandardową**.
 

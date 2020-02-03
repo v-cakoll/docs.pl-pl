@@ -49,7 +49,7 @@ Domyślnie formant <xref:System.Windows.Forms.TabControl> zawiera dwie kontrolki
   
 - Aby usunąć wybrane karty, użyj metody <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> właściwości <xref:System.Windows.Forms.TabControl.TabPages%2A>.  
   
-     lub  
+     —lub—  
   
 - Aby usunąć wszystkie karty, użyj metody <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> właściwości <xref:System.Windows.Forms.TabControl.TabPages%2A>.  
   

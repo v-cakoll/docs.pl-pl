@@ -133,4 +133,4 @@ Można utworzyć węzeł pochodny w kontrolce <xref:System.Windows.Forms.TreeVie
 ## <a name="see-also"></a>Zobacz także
 
 - [TreeView, kontrolka](treeview-control-windows-forms.md)
-- [ListView, kontrolka](listview-control-windows-forms.md)
+- [Kontrolka ListView](listview-control-windows-forms.md)

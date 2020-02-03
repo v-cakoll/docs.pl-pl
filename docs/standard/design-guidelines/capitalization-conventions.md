@@ -51,13 +51,13 @@ Wytyczne w tym rozdziale określają prostą metodę używania przypadku, która
 |----------------|------------|-------------|
 |Przestrzeń nazw|Pascal|`namespace System.Security { ... }`|
 |Typ|Pascal|`public class StreamReader { ... }`|
-|Interfejs|Pascal|`public interface IEnumerable { ... }`|
+|Interface|Pascal|`public interface IEnumerable { ... }`|
 |Metoda|Pascal|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|
 |Właściwość|Pascal|`public class String {` <br />  `public int Length { get; }` <br /> `}`|
 |Zdarzenie|Pascal|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|
 |Pole|Pascal|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|
 |Wartość wyliczenia|Pascal|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|
-|Parametr|Notacji CamelCase|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|
+|Parametr|Camel|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|
 
 ## <a name="capitalizing-compound-words-and-common-terms"></a>Wielkie litery słów i typowe terminy
  Większość postanowień złożonych jest traktowanych jako pojedyncze słowa do celów wielkich liter.
@@ -66,7 +66,7 @@ Wytyczne w tym rozdziale określają prostą metodę używania przypadku, która
 
  Są to wyrazy złożone zapisywane jako pojedyncze słowo, takie jak punkt końcowy. Aby zapoznać się z wytycznymi dotyczącymi wielkości liter, Traktuj zamknięty wyraz złożony jako pojedynczy wyraz. Użyj bieżącego słownika, aby określić, czy złożone słowo jest zapisywana w zamkniętym formularzu.
 
-|Pascal|Notacji CamelCase|nie|
+|Pascal|Camel|Not|
 |------------|-----------|---------|
 |`BitFlag`|`bitFlag`|`Bitflag`|
 |`Callback`|`callback`|`CallBack`|

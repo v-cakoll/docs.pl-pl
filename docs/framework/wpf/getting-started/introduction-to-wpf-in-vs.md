@@ -34,4 +34,4 @@ Windows Presentation Foundation (WPF) w programie Visual Studio oferuje dewelope
   
  [WPF w .NET Framework](../index.md)  
   
- [Get Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+ [Pobierz program Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)

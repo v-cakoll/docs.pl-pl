@@ -1,5 +1,5 @@
 ---
-title: Kontrolka przycisku
+title: Button — Formant
 ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons

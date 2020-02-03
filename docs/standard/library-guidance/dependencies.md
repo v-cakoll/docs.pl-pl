@@ -97,5 +97,5 @@ w publicznym interfejsie API ❌ nie mają udostępnionych typów pakietów źr�
 > Publikuj udostępnione pakiety źródłowe w [lokalnym kanale informacyjnym lub MyGet](./publish-nuget-package.md) , aby wykorzystać je wewnętrznie w ramach projektu.
 
 >[!div class="step-by-step"]
->[Poprzedni](nuget.md)
->[Następny](sourcelink.md)
+>[Poprzednie](nuget.md)
+>[dalej](sourcelink.md)

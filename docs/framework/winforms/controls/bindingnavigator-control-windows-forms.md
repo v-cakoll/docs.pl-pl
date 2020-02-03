@@ -1,5 +1,5 @@
 ---
-title: BindingNavigator — Kontrolka
+title: BindingNavigator — kontrolka
 ms.date: 03/30/2017
 helpviewer_keywords:
 - BindingNavigator control [Windows Forms]

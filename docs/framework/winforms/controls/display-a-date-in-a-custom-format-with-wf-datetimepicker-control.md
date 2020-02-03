@@ -22,7 +22,7 @@ Formant Windows Forms <xref:System.Windows.Forms.DateTimePicker> zapewnia elasty
   
 ### <a name="to-display-a-custom-format"></a>Aby wyświetlić niestandardowy format  
   
-1. Ustaw <xref:System.Windows.Forms.DateTimePicker.Format%2A> właściwość `DateTimePickerFormat.Custom`.  
+1. Ustaw właściwość <xref:System.Windows.Forms.DateTimePicker.Format%2A> na `DateTimePickerFormat.Custom`.  
   
 2. Ustaw właściwość <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> na ciąg formatu.  
   

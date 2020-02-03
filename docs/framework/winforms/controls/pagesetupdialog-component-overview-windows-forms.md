@@ -1,5 +1,5 @@
 ---
-title: PageSetupDialog — Informacje o składniku
+title: PageSetupDialog, składnik — omówienie
 ms.date: 03/30/2017
 f1_keywords:
 - PageSetupDialog

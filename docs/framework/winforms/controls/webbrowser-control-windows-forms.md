@@ -13,71 +13,71 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76739994"
 ---
-# <a name="webbrowser-control-windows-forms"></a><span data-ttu-id="b91db-102">WebBrowser — Formant (Formularze systemu Windows)</span><span class="sxs-lookup"><span data-stu-id="b91db-102">WebBrowser Control (Windows Forms)</span></span>
-<span data-ttu-id="b91db-103">Kontrolka `WebBrowser` Windows Forms obsługuje strony sieci Web i udostępnia funkcje przeglądania sieci Web aplikacji.</span><span class="sxs-lookup"><span data-stu-id="b91db-103">The Windows Forms `WebBrowser` control hosts Web pages and provides Web browsing capabilities to your application.</span></span>  
+# <a name="webbrowser-control-windows-forms"></a><span data-ttu-id="88c26-102">WebBrowser — Formant (Formularze systemu Windows)</span><span class="sxs-lookup"><span data-stu-id="88c26-102">WebBrowser Control (Windows Forms)</span></span>
+<span data-ttu-id="88c26-103">Kontrolka `WebBrowser` Windows Forms obsługuje strony sieci Web i udostępnia funkcje przeglądania sieci Web aplikacji.</span><span class="sxs-lookup"><span data-stu-id="88c26-103">The Windows Forms `WebBrowser` control hosts Web pages and provides Web browsing capabilities to your application.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="b91db-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="b91db-104">In This Section</span></span>  
- [<span data-ttu-id="b91db-105">WebBrowser, kontrolka — omówienie</span><span class="sxs-lookup"><span data-stu-id="b91db-105">WebBrowser Control Overview</span></span>](webbrowser-control-overview.md)  
- <span data-ttu-id="b91db-106">Wyjaśnia, czym jest ta kontrolka i jej najważniejsze funkcje i właściwości.</span><span class="sxs-lookup"><span data-stu-id="b91db-106">Explains what this control is and its key features and properties.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="88c26-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="88c26-104">In This Section</span></span>  
+ [<span data-ttu-id="88c26-105">WebBrowser, kontrolka — omówienie</span><span class="sxs-lookup"><span data-stu-id="88c26-105">WebBrowser Control Overview</span></span>](webbrowser-control-overview.md)  
+ <span data-ttu-id="88c26-106">Wyjaśnia, czym jest ta kontrolka i jej najważniejsze funkcje i właściwości.</span><span class="sxs-lookup"><span data-stu-id="88c26-106">Explains what this control is and its key features and properties.</span></span>  
   
- [<span data-ttu-id="b91db-107">Zabezpieczenia WebBrowser</span><span class="sxs-lookup"><span data-stu-id="b91db-107">WebBrowser Security</span></span>](webbrowser-security.md)  
- <span data-ttu-id="b91db-108">Opisuje problemy z zabezpieczeniami związane z formantem.</span><span class="sxs-lookup"><span data-stu-id="b91db-108">Explains security issues related to the control.</span></span>  
+ [<span data-ttu-id="88c26-107">Zabezpieczenia WebBrowser</span><span class="sxs-lookup"><span data-stu-id="88c26-107">WebBrowser Security</span></span>](webbrowser-security.md)  
+ <span data-ttu-id="88c26-108">Opisuje problemy z zabezpieczeniami związane z formantem.</span><span class="sxs-lookup"><span data-stu-id="88c26-108">Explains security issues related to the control.</span></span>  
   
- [<span data-ttu-id="b91db-109">Instrukcje: nawigowanie do adresu URL za pomocą kontrolki WebBrowser</span><span class="sxs-lookup"><span data-stu-id="b91db-109">How to: Navigate to a URL with the WebBrowser Control</span></span>](how-to-navigate-to-a-url-with-the-webbrowser-control.md)  
- <span data-ttu-id="b91db-110">Pokazuje, w jaki sposób używać kontrolki do przechodzenia do określonego adresu URL.</span><span class="sxs-lookup"><span data-stu-id="b91db-110">Demonstrates how to use the control to navigate to a specific URL.</span></span>  
+ [<span data-ttu-id="88c26-109">Instrukcje: nawigowanie do adresu URL za pomocą kontrolki WebBrowser</span><span class="sxs-lookup"><span data-stu-id="88c26-109">How to: Navigate to a URL with the WebBrowser Control</span></span>](how-to-navigate-to-a-url-with-the-webbrowser-control.md)  
+ <span data-ttu-id="88c26-110">Pokazuje, w jaki sposób używać kontrolki do przechodzenia do określonego adresu URL.</span><span class="sxs-lookup"><span data-stu-id="88c26-110">Demonstrates how to use the control to navigate to a specific URL.</span></span>  
   
- [<span data-ttu-id="b91db-111">Instrukcje: drukowanie za pomocą kontrolki WebBrowser</span><span class="sxs-lookup"><span data-stu-id="b91db-111">How to: Print with a WebBrowser Control</span></span>](how-to-print-with-a-webbrowser-control.md)  
- <span data-ttu-id="b91db-112">Pokazuje, jak drukować stronę sieci Web bez wyświetlania jej.</span><span class="sxs-lookup"><span data-stu-id="b91db-112">Demonstrates how to print a Web page without displaying it.</span></span>  
+ [<span data-ttu-id="88c26-111">Instrukcje: drukowanie za pomocą kontrolki WebBrowser</span><span class="sxs-lookup"><span data-stu-id="88c26-111">How to: Print with a WebBrowser Control</span></span>](how-to-print-with-a-webbrowser-control.md)  
+ <span data-ttu-id="88c26-112">Pokazuje, jak drukować stronę sieci Web bez wyświetlania jej.</span><span class="sxs-lookup"><span data-stu-id="88c26-112">Demonstrates how to print a Web page without displaying it.</span></span>  
   
- [<span data-ttu-id="b91db-113">Instrukcje: dodawanie funkcji przeglądarki internetowej do aplikacji Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b91db-113">How to: Add Web Browser Capabilities to a Windows Forms Application</span></span>](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)  
- <span data-ttu-id="b91db-114">Opisuje, jak zainicjować formant do użycia jako przeglądarka sieci Web.</span><span class="sxs-lookup"><span data-stu-id="b91db-114">Describes how to initialize the control for use as a Web browser.</span></span>  
+ [<span data-ttu-id="88c26-113">Instrukcje: dodawanie funkcji przeglądarki internetowej do aplikacji Windows Forms</span><span class="sxs-lookup"><span data-stu-id="88c26-113">How to: Add Web Browser Capabilities to a Windows Forms Application</span></span>](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)  
+ <span data-ttu-id="88c26-114">Opisuje, jak zainicjować formant do użycia jako przeglądarka sieci Web.</span><span class="sxs-lookup"><span data-stu-id="88c26-114">Describes how to initialize the control for use as a Web browser.</span></span>  
   
- [<span data-ttu-id="b91db-115">Instrukcje: tworzenie przeglądarki dokumentów HTML w aplikacji Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b91db-115">How to: Create an HTML Document Viewer in a Windows Forms Application</span></span>](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)  
- <span data-ttu-id="b91db-116">Opisuje, jak zainicjować formant do użycia jako przeglądarka HTML.</span><span class="sxs-lookup"><span data-stu-id="b91db-116">Describes how to initialize the control for use as an HTML viewer.</span></span>  
+ [<span data-ttu-id="88c26-115">Instrukcje: tworzenie przeglądarki dokumentów HTML w aplikacji Windows Forms</span><span class="sxs-lookup"><span data-stu-id="88c26-115">How to: Create an HTML Document Viewer in a Windows Forms Application</span></span>](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)  
+ <span data-ttu-id="88c26-116">Opisuje, jak zainicjować formant do użycia jako przeglądarka HTML.</span><span class="sxs-lookup"><span data-stu-id="88c26-116">Describes how to initialize the control for use as an HTML viewer.</span></span>  
   
- [<span data-ttu-id="b91db-117">Instrukcje: implementowanie dwukierunkowej komunikacji między kodem DHTML i kodem aplikacji klienta</span><span class="sxs-lookup"><span data-stu-id="b91db-117">How to: Implement Two-Way Communication Between DHTML Code and Client Application Code</span></span>](implement-two-way-com-between-dhtml-and-client.md)  
- <span data-ttu-id="b91db-118">Opisuje sposób konfigurowania dwukierunkowej komunikacji między kodem aplikacji i DHTML na stronie sieci Web hostowanej przez formant.</span><span class="sxs-lookup"><span data-stu-id="b91db-118">Describes how to set up two-way communication between your application code and DHTML in a Web page hosted by the control.</span></span>  
+ [<span data-ttu-id="88c26-117">Instrukcje: implementowanie dwukierunkowej komunikacji między kodem DHTML i kodem aplikacji klienta</span><span class="sxs-lookup"><span data-stu-id="88c26-117">How to: Implement Two-Way Communication Between DHTML Code and Client Application Code</span></span>](implement-two-way-com-between-dhtml-and-client.md)  
+ <span data-ttu-id="88c26-118">Opisuje sposób konfigurowania dwukierunkowej komunikacji między kodem aplikacji i DHTML na stronie sieci Web hostowanej przez formant.</span><span class="sxs-lookup"><span data-stu-id="88c26-118">Describes how to set up two-way communication between your application code and DHTML in a Web page hosted by the control.</span></span>  
   
- [<span data-ttu-id="b91db-119">Używanie modelu DOM (Document Object Model) zarządzanych dokumentów HTML</span><span class="sxs-lookup"><span data-stu-id="b91db-119">Using the Managed HTML Document Object Model</span></span>](using-the-managed-html-document-object-model.md)  
- <span data-ttu-id="b91db-120">Zawiera tematy opisujące sposób manipulowania lub tworzenia stron HTML hostowanych przez formant <xref:System.Windows.Forms.WebBrowser>.</span><span class="sxs-lookup"><span data-stu-id="b91db-120">Provides topics that describe how to manipulate or create HTML pages hosted by the <xref:System.Windows.Forms.WebBrowser> control.</span></span>  
+ [<span data-ttu-id="88c26-119">Używanie modelu DOM (Document Object Model) zarządzanych dokumentów HTML</span><span class="sxs-lookup"><span data-stu-id="88c26-119">Using the Managed HTML Document Object Model</span></span>](using-the-managed-html-document-object-model.md)  
+ <span data-ttu-id="88c26-120">Zawiera tematy opisujące sposób manipulowania lub tworzenia stron HTML hostowanych przez formant <xref:System.Windows.Forms.WebBrowser>.</span><span class="sxs-lookup"><span data-stu-id="88c26-120">Provides topics that describe how to manipulate or create HTML pages hosted by the <xref:System.Windows.Forms.WebBrowser> control.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="b91db-121">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="b91db-121">Reference</span></span>  
- <span data-ttu-id="b91db-122">Klasa <xref:System.Windows.Forms.WebBrowser></span><span class="sxs-lookup"><span data-stu-id="b91db-122"><xref:System.Windows.Forms.WebBrowser> class</span></span>  
- <span data-ttu-id="b91db-123">Opisuje tę klasę i zawiera linki do wszystkich jej elementów członkowskich.</span><span class="sxs-lookup"><span data-stu-id="b91db-123">Describes this class and has links to all its members.</span></span>  
+## <a name="reference"></a><span data-ttu-id="88c26-121">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="88c26-121">Reference</span></span>  
+ <span data-ttu-id="88c26-122">Klasa <xref:System.Windows.Forms.WebBrowser></span><span class="sxs-lookup"><span data-stu-id="88c26-122"><xref:System.Windows.Forms.WebBrowser> class</span></span>  
+ <span data-ttu-id="88c26-123">Opisuje tę klasę i zawiera linki do wszystkich jej elementów członkowskich.</span><span class="sxs-lookup"><span data-stu-id="88c26-123">Describes this class and has links to all its members.</span></span>  
   
  <xref:System.Windows.Forms.WebBrowserDocumentCompletedEventArgs>  
- <span data-ttu-id="b91db-124">Opisuje tę klasę i zawiera linki do wszystkich jej elementów członkowskich.</span><span class="sxs-lookup"><span data-stu-id="b91db-124">Describes this class and has links to all its members.</span></span>  
+ <span data-ttu-id="88c26-124">Opisuje tę klasę i zawiera linki do wszystkich jej elementów członkowskich.</span><span class="sxs-lookup"><span data-stu-id="88c26-124">Describes this class and has links to all its members.</span></span>  
   
  <xref:System.Windows.Forms.WebBrowserDocumentCompletedEventHandler>  
- <span data-ttu-id="b91db-125">Opisuje tego delegata.</span><span class="sxs-lookup"><span data-stu-id="b91db-125">Describes this delegate.</span></span>  
+ <span data-ttu-id="88c26-125">Opisuje tego delegata.</span><span class="sxs-lookup"><span data-stu-id="88c26-125">Describes this delegate.</span></span>  
   
  <xref:System.Windows.Forms.WebBrowserEncryptionLevel>  
- <span data-ttu-id="b91db-126">Opisuje to wyliczenie i wszystkie jego wartości.</span><span class="sxs-lookup"><span data-stu-id="b91db-126">Describes this enumeration and all its values.</span></span>  
+ <span data-ttu-id="88c26-126">Opisuje to wyliczenie i wszystkie jego wartości.</span><span class="sxs-lookup"><span data-stu-id="88c26-126">Describes this enumeration and all its values.</span></span>  
   
  <xref:System.Windows.Forms.WebBrowserNavigatedEventArgs>  
- <span data-ttu-id="b91db-127">Opisuje tę klasę i zawiera linki do wszystkich jej elementów członkowskich.</span><span class="sxs-lookup"><span data-stu-id="b91db-127">Describes this class and has links to all its members.</span></span>  
+ <span data-ttu-id="88c26-127">Opisuje tę klasę i zawiera linki do wszystkich jej elementów członkowskich.</span><span class="sxs-lookup"><span data-stu-id="88c26-127">Describes this class and has links to all its members.</span></span>  
   
  <xref:System.Windows.Forms.WebBrowserNavigatedEventHandler>  
- <span data-ttu-id="b91db-128">Opisuje tego delegata.</span><span class="sxs-lookup"><span data-stu-id="b91db-128">Describes this delegate.</span></span>  
+ <span data-ttu-id="88c26-128">Opisuje tego delegata.</span><span class="sxs-lookup"><span data-stu-id="88c26-128">Describes this delegate.</span></span>  
   
  <xref:System.Windows.Forms.WebBrowserNavigatingEventArgs>  
- <span data-ttu-id="b91db-129">Opisuje tę klasę i zawiera linki do wszystkich jej elementów członkowskich.</span><span class="sxs-lookup"><span data-stu-id="b91db-129">Describes this class and has links to all its members.</span></span>  
+ <span data-ttu-id="88c26-129">Opisuje tę klasę i zawiera linki do wszystkich jej elementów członkowskich.</span><span class="sxs-lookup"><span data-stu-id="88c26-129">Describes this class and has links to all its members.</span></span>  
   
  <xref:System.Windows.Forms.WebBrowserNavigatingEventHandler>  
- <span data-ttu-id="b91db-130">Opisuje tego delegata.</span><span class="sxs-lookup"><span data-stu-id="b91db-130">Describes this delegate.</span></span>  
+ <span data-ttu-id="88c26-130">Opisuje tego delegata.</span><span class="sxs-lookup"><span data-stu-id="88c26-130">Describes this delegate.</span></span>  
   
  <xref:System.Windows.Forms.WebBrowserProgressChangedEventArgs>  
- <span data-ttu-id="b91db-131">Opisuje tę klasę i zawiera linki do wszystkich jej elementów członkowskich.</span><span class="sxs-lookup"><span data-stu-id="b91db-131">Describes this class and has links to all its members.</span></span>  
+ <span data-ttu-id="88c26-131">Opisuje tę klasę i zawiera linki do wszystkich jej elementów członkowskich.</span><span class="sxs-lookup"><span data-stu-id="88c26-131">Describes this class and has links to all its members.</span></span>  
   
  <xref:System.Windows.Forms.WebBrowserProgressChangedEventHandler>  
- <span data-ttu-id="b91db-132">Opisuje tego delegata.</span><span class="sxs-lookup"><span data-stu-id="b91db-132">Describes this delegate.</span></span>  
+ <span data-ttu-id="88c26-132">Opisuje tego delegata.</span><span class="sxs-lookup"><span data-stu-id="88c26-132">Describes this delegate.</span></span>  
   
  <xref:System.Windows.Forms.WebBrowserReadyState>  
- <span data-ttu-id="b91db-133">Opisuje to wyliczenie i wszystkie jego wartości.</span><span class="sxs-lookup"><span data-stu-id="b91db-133">Describes this enumeration and all its values.</span></span>  
+ <span data-ttu-id="88c26-133">Opisuje to wyliczenie i wszystkie jego wartości.</span><span class="sxs-lookup"><span data-stu-id="88c26-133">Describes this enumeration and all its values.</span></span>  
   
  <xref:System.Windows.Forms.WebBrowserRefreshOption>  
- <span data-ttu-id="b91db-134">Opisuje to wyliczenie i wszystkie jego wartości.</span><span class="sxs-lookup"><span data-stu-id="b91db-134">Describes this enumeration and all its values.</span></span>  
+ <span data-ttu-id="88c26-134">Opisuje to wyliczenie i wszystkie jego wartości.</span><span class="sxs-lookup"><span data-stu-id="88c26-134">Describes this enumeration and all its values.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b91db-135">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="b91db-135">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="88c26-135">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="88c26-135">See also</span></span>
 
-- [<span data-ttu-id="b91db-136">Kontrolki do użycia w formularzach Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b91db-136">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)
+- [<span data-ttu-id="88c26-136">Kontrolki do użycia w formularzach Windows Forms</span><span class="sxs-lookup"><span data-stu-id="88c26-136">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)

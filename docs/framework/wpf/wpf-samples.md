@@ -12,6 +12,6 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76743309"
 ---
-# <a name="wpf-samples"></a><span data-ttu-id="dd75f-102">Przykłady interfejsów WPF</span><span class="sxs-lookup"><span data-stu-id="dd75f-102">WPF Samples</span></span>
+# <a name="wpf-samples"></a><span data-ttu-id="aa983-102">Przykłady interfejsów WPF</span><span class="sxs-lookup"><span data-stu-id="aa983-102">WPF Samples</span></span>
 
-<span data-ttu-id="dd75f-103">Przykłady demonstrujące Windows Presentation Foundation (WPF) można znaleźć w [repozytorium Microsoft/WPF-Samples](https://github.com/Microsoft/WPF-Samples) w witrynie GitHub.</span><span class="sxs-lookup"><span data-stu-id="dd75f-103">For samples that demonstrate Windows Presentation Foundation (WPF), see the [Microsoft/WPF-Samples repo](https://github.com/Microsoft/WPF-Samples) on GitHub.</span></span>
+<span data-ttu-id="aa983-103">Przykłady demonstrujące Windows Presentation Foundation (WPF) można znaleźć w [repozytorium Microsoft/WPF-Samples](https://github.com/Microsoft/WPF-Samples) w witrynie GitHub.</span><span class="sxs-lookup"><span data-stu-id="aa983-103">For samples that demonstrate Windows Presentation Foundation (WPF), see the [Microsoft/WPF-Samples repo](https://github.com/Microsoft/WPF-Samples) on GitHub.</span></span>

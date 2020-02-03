@@ -19,12 +19,12 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76732721"
 ---
-# <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol"></a><span data-ttu-id="ade7b-102">Porady: dodawanie i usuwanie kart za pomocą formantu TabControl formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="ade7b-102">How to: Add and Remove Tabs with the Windows Forms TabControl</span></span>
-<span data-ttu-id="ade7b-103">Domyślnie formant <xref:System.Windows.Forms.TabControl> zawiera dwie kontrolki <xref:System.Windows.Forms.TabPage>.</span><span class="sxs-lookup"><span data-stu-id="ade7b-103">By default, a <xref:System.Windows.Forms.TabControl> control contains two <xref:System.Windows.Forms.TabPage> controls.</span></span> <span data-ttu-id="ade7b-104">Dostęp do tych kart można uzyskać za pomocą właściwości <xref:System.Windows.Forms.TabControl.TabPages%2A>.</span><span class="sxs-lookup"><span data-stu-id="ade7b-104">You can access these tabs through the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
+# <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol"></a><span data-ttu-id="f219b-102">Porady: dodawanie i usuwanie kart za pomocą formantu TabControl formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="f219b-102">How to: Add and Remove Tabs with the Windows Forms TabControl</span></span>
+<span data-ttu-id="f219b-103">Domyślnie formant <xref:System.Windows.Forms.TabControl> zawiera dwie kontrolki <xref:System.Windows.Forms.TabPage>.</span><span class="sxs-lookup"><span data-stu-id="f219b-103">By default, a <xref:System.Windows.Forms.TabControl> control contains two <xref:System.Windows.Forms.TabPage> controls.</span></span> <span data-ttu-id="f219b-104">Dostęp do tych kart można uzyskać za pomocą właściwości <xref:System.Windows.Forms.TabControl.TabPages%2A>.</span><span class="sxs-lookup"><span data-stu-id="f219b-104">You can access these tabs through the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
   
-### <a name="to-add-a-tab-programmatically"></a><span data-ttu-id="ade7b-105">Aby programowo dodać kartę</span><span class="sxs-lookup"><span data-stu-id="ade7b-105">To add a tab programmatically</span></span>  
+### <a name="to-add-a-tab-programmatically"></a><span data-ttu-id="f219b-105">Aby programowo dodać kartę</span><span class="sxs-lookup"><span data-stu-id="f219b-105">To add a tab programmatically</span></span>  
   
-- <span data-ttu-id="ade7b-106">Użyj metody <xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A> właściwości <xref:System.Windows.Forms.TabControl.TabPages%2A>.</span><span class="sxs-lookup"><span data-stu-id="ade7b-106">Use the <xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A> method of the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
+- <span data-ttu-id="f219b-106">Użyj metody <xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A> właściwości <xref:System.Windows.Forms.TabControl.TabPages%2A>.</span><span class="sxs-lookup"><span data-stu-id="f219b-106">Use the <xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A> method of the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
   
     ```vb  
     Dim myTabPage As New TabPage()  
@@ -45,13 +45,13 @@ ms.locfileid: "76732721"
     tabControl1->TabPages->Add(myTabPage);  
     ```  
   
-### <a name="to-remove-a-tab-programmatically"></a><span data-ttu-id="ade7b-107">Aby programowo usunąć kartę</span><span class="sxs-lookup"><span data-stu-id="ade7b-107">To remove a tab programmatically</span></span>  
+### <a name="to-remove-a-tab-programmatically"></a><span data-ttu-id="f219b-107">Aby programowo usunąć kartę</span><span class="sxs-lookup"><span data-stu-id="f219b-107">To remove a tab programmatically</span></span>  
   
-- <span data-ttu-id="ade7b-108">Aby usunąć wybrane karty, użyj metody <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> właściwości <xref:System.Windows.Forms.TabControl.TabPages%2A>.</span><span class="sxs-lookup"><span data-stu-id="ade7b-108">To remove selected tabs, use the <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> method of the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
+- <span data-ttu-id="f219b-108">Aby usunąć wybrane karty, użyj metody <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> właściwości <xref:System.Windows.Forms.TabControl.TabPages%2A>.</span><span class="sxs-lookup"><span data-stu-id="f219b-108">To remove selected tabs, use the <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> method of the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
   
-     <span data-ttu-id="ade7b-109">lub</span><span class="sxs-lookup"><span data-stu-id="ade7b-109">-or-</span></span>  
+     <span data-ttu-id="f219b-109">—lub—</span><span class="sxs-lookup"><span data-stu-id="f219b-109">-or-</span></span>  
   
-- <span data-ttu-id="ade7b-110">Aby usunąć wszystkie karty, użyj metody <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> właściwości <xref:System.Windows.Forms.TabControl.TabPages%2A>.</span><span class="sxs-lookup"><span data-stu-id="ade7b-110">To remove all tabs, use the <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> method of the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
+- <span data-ttu-id="f219b-110">Aby usunąć wszystkie karty, użyj metody <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> właściwości <xref:System.Windows.Forms.TabControl.TabPages%2A>.</span><span class="sxs-lookup"><span data-stu-id="f219b-110">To remove all tabs, use the <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> method of the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
   
     ```vb  
     ' Removes the selected tab:  
@@ -74,9 +74,9 @@ ms.locfileid: "76732721"
     tabControl1->TabPages->Clear();  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="ade7b-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="ade7b-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f219b-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f219b-111">See also</span></span>
 
-- [<span data-ttu-id="ade7b-112">TabControl, kontrolka — omówienie</span><span class="sxs-lookup"><span data-stu-id="ade7b-112">TabControl Control Overview</span></span>](tabcontrol-control-overview-windows-forms.md)
-- [<span data-ttu-id="ade7b-113">Instrukcje: dodawanie kontrolki do karty</span><span class="sxs-lookup"><span data-stu-id="ade7b-113">How to: Add a Control to a Tab Page</span></span>](how-to-add-a-control-to-a-tab-page.md)
-- [<span data-ttu-id="ade7b-114">Instrukcje: wyłączanie kart</span><span class="sxs-lookup"><span data-stu-id="ade7b-114">How to: Disable Tab Pages</span></span>](how-to-disable-tab-pages.md)
-- [<span data-ttu-id="ade7b-115">Instrukcje: zmienianie wyglądu kontrolki TabControl formularzy Windows Forms</span><span class="sxs-lookup"><span data-stu-id="ade7b-115">How to: Change the Appearance of the Windows Forms TabControl</span></span>](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [<span data-ttu-id="f219b-112">TabControl, kontrolka — omówienie</span><span class="sxs-lookup"><span data-stu-id="f219b-112">TabControl Control Overview</span></span>](tabcontrol-control-overview-windows-forms.md)
+- [<span data-ttu-id="f219b-113">Instrukcje: dodawanie kontrolki do karty</span><span class="sxs-lookup"><span data-stu-id="f219b-113">How to: Add a Control to a Tab Page</span></span>](how-to-add-a-control-to-a-tab-page.md)
+- [<span data-ttu-id="f219b-114">Instrukcje: wyłączanie kart</span><span class="sxs-lookup"><span data-stu-id="f219b-114">How to: Disable Tab Pages</span></span>](how-to-disable-tab-pages.md)
+- [<span data-ttu-id="f219b-115">Instrukcje: zmienianie wyglądu kontrolki TabControl formularzy Windows Forms</span><span class="sxs-lookup"><span data-stu-id="f219b-115">How to: Change the Appearance of the Windows Forms TabControl</span></span>](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

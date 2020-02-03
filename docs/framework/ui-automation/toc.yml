@@ -241,5 +241,3 @@
           href: ui-automation-support-for-the-treeitem-control-type.md
         - name: Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu okno
           href: ui-automation-support-for-the-window-control-type.md
-    - name: Specyfikacja automatyzacji interfejsu użytkownika i obietnica dla społeczności
-      href: ui-automation-specification-and-community-promise.md

@@ -29,15 +29,15 @@ Klient uzyskuje dostęp do co najmniej jednej usługi sieci Web, która jest dys
   
 5. Zaufany podsystem przetwarza odpowiedź i emituje własną odpowiedź do klienta programu.  
   
-|Charakterystyk|Opis|  
+|Charakterystyka|Opis|  
 |--------------------|-----------------|  
 |Tryb zabezpieczeń|Komunikat|  
 |Współdziałanie|Tylko Windows Communication Foundation (WCF).|  
 |Uwierzytelnianie (usługa)|Usługa tokenu zabezpieczającego uwierzytelnia i autoryzuje klientów.|  
 |Uwierzytelnianie (klient)|Zaufany podsystem uwierzytelnia klienta, a zasób uwierzytelnia usługę zaufanego podsystemu.|  
-|Spójn|Tak|  
+|Integralność|Tak|  
 |Poufne|Tak|  
-|Transportu|Protokół HTTP między klientem a usługą zaufanego podsystemu.<br /><br /> Waga. TCP między usługą zaufanego podsystemu a zasobem (usługa zaplecza).|  
+|Transport|Protokół HTTP między klientem a usługą zaufanego podsystemu.<br /><br /> Waga. TCP między usługą zaufanego podsystemu a zasobem (usługa zaplecza).|  
 |Wiązanie|<xref:System.ServiceModel.WSHttpBinding> i <xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
   
 ## <a name="resource-back-end-service"></a>Zasób (usługa zaplecza)  

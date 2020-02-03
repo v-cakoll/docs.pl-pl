@@ -260,7 +260,7 @@ Zmiany w tej kategorii modyfikują publiczną powierzchnię typu. Większość z
 
 - niedozwolone ❌ **: usuwanie wyjątku w żadnym innym przypadku niewymienionym powyżej**
 
-### <a name="attributes"></a>{1&gt;{2&gt;Atrybuty&lt;2}&lt;1}
+### <a name="attributes"></a>Atrybuty
 
 - ✔️ **dozwolone: zmiana wartości atrybutu, który *nie* jest zauważalny**
 

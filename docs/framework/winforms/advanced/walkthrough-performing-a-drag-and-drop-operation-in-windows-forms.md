@@ -59,7 +59,7 @@ Aby wykonać operacje przeciągania i upuszczania w aplikacjach opartych na syst
   
 1. Ustaw właściwość <xref:System.Windows.Forms.Control.AllowDrop%2A> na wartość true.  
   
-2. W zdarzeniu `DragEnter` dla kontrolki, w której nastąpi upuszczenie, upewnij się, że przeciągane dane mają akceptowalny typ (w tym przypadku <xref:System.Windows.Forms.Control.Text%2A>). Następnie kod ustawia efekt, który zostanie wykonany, gdy porzucanie zostanie wykonane do wartości w wyliczeniu <xref:System.Windows.Forms.DragDropEffects>. Aby uzyskać więcej informacji, zobacz temat <xref:System.Windows.Forms.DragEventArgs.Effect%2A>.  
+2. W zdarzeniu `DragEnter` dla kontrolki, w której nastąpi upuszczenie, upewnij się, że przeciągane dane mają akceptowalny typ (w tym przypadku <xref:System.Windows.Forms.Control.Text%2A>). Następnie kod ustawia efekt, który zostanie wykonany, gdy porzucanie zostanie wykonane do wartości w wyliczeniu <xref:System.Windows.Forms.DragDropEffects>. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Forms.DragEventArgs.Effect%2A>.  
   
     ```vb  
     Private Sub TextBox1_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles TextBox1.DragEnter  
@@ -83,9 +83,9 @@ Aby wykonać operacje przeciągania i upuszczania w aplikacjach opartych na syst
     ```  
   
     > [!NOTE]
-    > Możesz zdefiniować własne <xref:System.Windows.Forms.DataFormats>, określając własny obiekt jako parametr <xref:System.Object> metody <xref:System.Windows.Forms.DataObject.SetData%2A>. Upewnij się, że w tym przypadku obiekt jest możliwy do serializacji. Aby uzyskać więcej informacji, zobacz temat <xref:System.Runtime.Serialization.ISerializable>.  
+    > Możesz zdefiniować własne <xref:System.Windows.Forms.DataFormats>, określając własny obiekt jako parametr <xref:System.Object> metody <xref:System.Windows.Forms.DataObject.SetData%2A>. Upewnij się, że w tym przypadku obiekt jest możliwy do serializacji. Aby uzyskać więcej informacji, zobacz <xref:System.Runtime.Serialization.ISerializable>.  
   
-3. W zdarzeniu <xref:System.Windows.Forms.Control.DragDrop> dla kontrolki, w której nastąpi upuszczenie, użyj metody <xref:System.Windows.Forms.DataObject.GetData%2A>, aby pobrać przeciągane dane. Aby uzyskać więcej informacji, zobacz temat <xref:System.Security.Cryptography.Xml.DataObject.Data%2A>.  
+3. W zdarzeniu <xref:System.Windows.Forms.Control.DragDrop> dla kontrolki, w której nastąpi upuszczenie, użyj metody <xref:System.Windows.Forms.DataObject.GetData%2A>, aby pobrać przeciągane dane. Aby uzyskać więcej informacji, zobacz <xref:System.Security.Cryptography.Xml.DataObject.Data%2A>.  
   
      W poniższym przykładzie formant <xref:System.Windows.Forms.TextBox> jest przeciągany do (w którym wystąpił spadek). Kod ustawia właściwość <xref:System.Windows.Forms.Control.Text%2A> kontrolki <xref:System.Windows.Forms.TextBox> równej przeciąganym danym.  
   

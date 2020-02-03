@@ -1,5 +1,5 @@
 ---
-title: Kontrolki i składniki okien dialogowych
+title: Formanty i składniki okien dialogowych
 ms.date: 03/30/2017
 helpviewer_keywords:
 - CommonDialog control

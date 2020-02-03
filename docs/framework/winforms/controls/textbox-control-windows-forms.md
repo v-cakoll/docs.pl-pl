@@ -1,5 +1,5 @@
 ---
-title: TextBox — Formant
+title: TextBox, kontrolka
 ms.date: 03/30/2017
 helpviewer_keywords:
 - text boxes

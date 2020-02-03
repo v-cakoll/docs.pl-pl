@@ -26,7 +26,7 @@ Przykłady pędzla
   
  Większość obiektów wizualnych umożliwia określenie sposobu, w jaki są rysowane. W poniższej tabeli wymieniono niektóre typowe obiekty i właściwości, których można użyć <xref:System.Windows.Media.Brush>.  
   
-|Klasa|Właściwości pędzla|  
+|Class|Właściwości pędzla|  
 |-----------|----------------------|  
 |<xref:System.Windows.Controls.Border>|<xref:System.Windows.Controls.Border.BorderBrush%2A>, <xref:System.Windows.Controls.Border.Background%2A>|  
 |<xref:System.Windows.Controls.Control>|<xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Foreground%2A>|  

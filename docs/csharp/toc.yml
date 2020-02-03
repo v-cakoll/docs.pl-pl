@@ -1209,7 +1209,7 @@
               href: programming-guide/xmldoc/code-inline.md
             - name: <code>
               href: programming-guide/xmldoc/code.md
-            - name: cref — Atrybut
+            - name: Atrybut cref
               href: programming-guide/xmldoc/cref-attribute.md
             - name: <example>
               href: programming-guide/xmldoc/example.md

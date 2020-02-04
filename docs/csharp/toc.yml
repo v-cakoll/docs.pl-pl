@@ -1337,7 +1337,7 @@
                 - name: Typów wyliczeniowych
                   href: language-reference/builtin-types/enum.md
                   displayName: 'enum, bit flags, bit field'
-                - name: struktura
+                - name: 'struktura '
                   href: language-reference/keywords/struct.md
                 - name: Typy wartości dopuszczające wartość null
                   href: language-reference/builtin-types/nullable-value-types.md
@@ -1398,7 +1398,7 @@
               displayName: await
             - name: const
               href: language-reference/keywords/const.md
-            - name: zdarzenie
+            - name: event
               href: language-reference/keywords/event.md
             - name: extern
               href: language-reference/keywords/extern.md
@@ -1430,13 +1430,13 @@
               items:
                 - name: if-else
                   href: language-reference/keywords/if-else.md
-                - name: — przełącznik
+                - name: switch
                   href: language-reference/keywords/switch.md
             - name: Instrukcje iteracji
               items:
                 - name: do
                   href: language-reference/keywords/do.md
-                - name: dla
+                - name: for
                   href: language-reference/keywords/for.md
                 - name: 'foreach, in'
                   href: language-reference/keywords/foreach-in.md
@@ -1489,9 +1489,9 @@
               href: language-reference/keywords/out-parameter-modifier.md
         - name: Słowa kluczowe przestrzeni nazw
           items:
-            - name: — przestrzeń nazw
+            - name: namespace
               href: language-reference/keywords/namespace.md
-            - name: korzystanie
+            - name: using
               items:
                 - name: Konteksty dyrektywy using
                   href: language-reference/keywords/using.md
@@ -1511,7 +1511,7 @@
           items:
             - name: 'new, ograniczenie'
               href: language-reference/keywords/new-constraint.md
-            - name: gdzie
+            - name: where
               href: language-reference/keywords/where-generic-type-constraint.md
         - name: Słowa kluczowe dostępu
           items:
@@ -1642,7 +1642,7 @@
         - name: await — operator
           href: language-reference/operators/await.md
           displayName: async
-        - name: operator domyślny
+        - name: 'default, operator'
           href: language-reference/operators/default.md
           displayName: 'default value, default literal, type default'
         - name: 'delegate, operator'

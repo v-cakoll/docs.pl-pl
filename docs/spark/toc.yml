@@ -31,6 +31,10 @@
       href: how-to-guides/databricks-deploy-methods.md
     - name: Wdrażanie procesu roboczego i plików binarnych UDF
       href: how-to-guides/deploy-worker-udf-binaries.md
+    - name: Tworzenie aplikacji w systemie Ubuntu
+      href: how-to-guides/ubuntu-instructions.md
+    - name: Tworzenie aplikacji w systemie Windows
+      href: how-to-guides/windows-instructions.md
 - name: Tematy pomocy
   items:
     - name: Odwołanie do biblioteki API

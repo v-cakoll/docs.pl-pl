@@ -2,12 +2,12 @@
 title: Byrefs
 description: Dowiedz się więcej o typach ByRef i ByRef F#, które są używane w programowaniu niskiego poziomu.
 ms.date: 11/04/2019
-ms.openlocfilehash: 5aaee1e4eac9ce0d7e9ba89a2ab5f745d31367a0
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 05a40059ad5b72829233b0c4135c76eb1cff4da5
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901308"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965818"
 ---
 # <a name="byrefs"></a>Byrefs
 
@@ -82,7 +82,7 @@ Jeśli chcesz tylko napisać wskaźnik zamiast odczytywania go, rozważ użycie 
 
 ### <a name="inref-semantics"></a>Semantyka Inref
 
-Spójrzmy na poniższy kod:
+Rozważmy następujący kod:
 
 ```fsharp
 let f (x: inref<SomeStruct>) = x.SomeField
@@ -121,10 +121,10 @@ W poniższej tabeli przedstawiono, F# co emituje:
 
 |F#Konstruuj|Wyemitowana konstrukcja|
 |------------|-----------------|
-|Argument `inref<'T>`|`[In]` atrybutu w argumencie|
+|`inref<'T>` argument|`[In]` atrybutu w argumencie|
 |`inref<'T>` Zwróć|`modreq` atrybutu wartości|
 |`inref<'T>` w nieabstrakcyjnym gnieździe lub implementacji|`modreq` argumentu lub Return|
-|Argument `outref<'T>`|`[Out]` atrybutu w argumencie|
+|`outref<'T>` argument|`[Out]` atrybutu w argumencie|
 
 ### <a name="type-inference-and-overloading-rules"></a>Wnioskowanie o typie i reguły przeciążania
 
@@ -182,14 +182,20 @@ Chociaż te reguły silnie ograniczają użycie, robią to w celu zapewnienia be
 Element ByRef Return F# from Functions lub memberss może być produkowany i zużywany. W przypadku używania metody zwracającej `byref`, wartość jest niejawnie wykorzystana. Na przykład:
 
 ```fsharp
-let safeSum(bytes: Span<byte>) =
-    let mutable sum = 0
+let squareAndPrint (data : byref<int>) = 
+    let squared = data*data    // data is implicitly dereferenced
+    printfn "%d" squared
+```
+
+Aby zwrócić wartość ByRef, zmienna, która zawiera wartość, musi znajdować się na żywo dłużej niż bieżący zakres.
+Ponadto, aby zwrócić element ByRef, użyj wartości & (gdzie Value jest zmienną, która jest dłuższa niż bieżący zakres).
+
+```fsharp
+let mutable sum = 0
+let safeSum (bytes: Span<byte>) =
     for i in 0 .. bytes.Length - 1 do
         sum <- sum + int bytes.[i]
-    sum
-
-let sum = safeSum(mySpanOfBytes)
-printfn "%d" sum // 'sum' is of type 'int'
+    &sum  // sum lives longer than the scope of this function.
 ```
 
 Aby uniknąć niejawnego odwołania, na przykład przekazywania odwołania przez wiele wywołań łańcucha, użyj `&x` (gdzie `x` jest wartością).

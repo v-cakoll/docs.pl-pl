@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 538806627a31366d4b8597eb010a4bbe3f8f9202
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: c38127281139d0c85b54a5d5077034804f1102a8
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76860962"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76966013"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Co nowego w programie .NET Framework
 
@@ -46,9 +46,9 @@ Ten artykuł nie zawiera wyczerpujących informacji o każdej nowej funkcji i mo
 
 .NET Framework 4,8 można pobrać z następujących lokalizacji:
 
-- [Instalator sieci Web .NET Framework 4,8](https://go.microsoft.com/fwlink/?LinkId=2085155)
+- [Instalator sieci Web .NET Framework 4,8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
-- [Instalator offline systemu .NET Framework 4,8](https://go.microsoft.com/fwlink/?linkid=2088631)
+- [Instalator offline systemu .NET Framework 4,8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
 .NET Framework 4,8 można zainstalować w systemie Windows 10, Windows 8.1, Windows 7 z dodatkiem SP1 i odpowiednich platformach serwera, począwszy od systemu Windows Server 2008 R2 z dodatkiem SP1. .NET Framework 4,8 można zainstalować przy użyciu Instalatora sieci Web lub Instalatora w trybie offline. Zalecanym sposobem większości użytkowników jest użycie Instalatora sieci Web.
 
@@ -2132,3 +2132,4 @@ Przenośna biblioteka klas w programie Visual Studio 2012 (i nowszych wersjach) 
 - [Co nowego w programie Visual Studio 2019](/visualstudio/ide/whats-new-visual-studio-2019)
 - [ASP.NET](/aspnet)
 - [Co nowego C++ w programie Visual Studio](/cpp/what-s-new-for-visual-cpp-in-visual-studio)
+ 

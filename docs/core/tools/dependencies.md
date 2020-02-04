@@ -2,12 +2,12 @@
 title: Zarządzanie zależnościami w narzędziu .NET Core
 description: Wyjaśnia, jak zarządzać zależnościami przy użyciu narzędzi programu .NET Core.
 ms.date: 03/06/2017
-ms.openlocfilehash: 28280dc05e746cdef4e90870cd4cb528382c45bd
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 916daca0240c10dc63ca96048590a426bc51d450
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76787862"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965623"
 ---
 # <a name="manage-dependencies-with-net-core-sdk-10"></a>Zarządzanie zależnościami przy użyciu zestaw .NET Core SDK 1,0
 
@@ -26,21 +26,21 @@ Ten dokument zawiera opis nowego typu odwołania. Pokazano również, jak dodać
 Jeśli znasz program MSBuild, zobaczysz znajome inne typy odwołań, które już istnieją. Klucz jest instrukcją `Include`, która określa identyfikator pakietu, który ma zostać dodany do projektu. Element podrzędny `<Version>` określa wersję do pobrania. Wersje są określone zgodnie z [regułami wersji programu NuGet](/nuget/create-packages/dependency-versions#version-ranges).
 
 > [!NOTE]
-> Jeśli nie znasz ogólnej składni `csproj`, zobacz dokumentację [referencyjną projektu MSBuild](/visualstudio/msbuild/msbuild-project-file-schema-reference) , aby uzyskać więcej informacji.
+> Jeśli nie znasz składni pliku projektu, zapoznaj się z dokumentacją projektu programu [MSBuild](/visualstudio/msbuild/msbuild-project-file-schema-reference) , aby uzyskać więcej informacji.
 
-Dodawanie zależności, która jest dostępna tylko w konkretnym miejscu docelowym, odbywa się przy użyciu warunków, takich jak w poniższym przykładzie:
+Użyj warunków, aby dodać zależność, która jest dostępna tylko w konkretnym miejscu docelowym, jak pokazano w następującym przykładzie:
 
 ```xml
 <PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" Condition="'$(TargetFramework)' == 'netcoreapp2.1'" />
 ```
 
-Powyższe oznacza, że zależność będzie prawidłowa tylko wtedy, gdy kompilacja ma miejsce dla danego elementu docelowego. `$(TargetFramework)` w warunku jest właściwością programu MSBuild, która jest ustawiana w projekcie. W przypadku najczęściej używanych aplikacji platformy .NET Core nie trzeba tego robić.
+Zależność będzie poprawna tylko wtedy, gdy kompilacja ma miejsce dla danego elementu docelowego. `$(TargetFramework)` w warunku jest właściwością programu MSBuild, która jest ustawiana w projekcie. W przypadku najczęściej używanych aplikacji platformy .NET Core nie trzeba tego robić.
 
 ## <a name="add-a-dependency-to-the-project"></a>Dodawanie zależności do projektu
 
 Dodawanie zależności do projektu jest proste. Oto przykład sposobu dodawania `9.0.1` w wersji Json.NET do projektu. Oczywiście ma zastosowanie do innych zależności NuGet.
 
-Gdy otworzysz plik projektu, zobaczysz co najmniej dwa węzły `<ItemGroup>`. Zobaczysz, że jeden z węzłów ma już elementy `<PackageReference>`. Możesz dodać nową zależność do tego węzła lub utworzyć nową. jest to możliwe, ponieważ wynik będzie taki sam.
+Plik projektu zawiera co najmniej dwa węzły `<ItemGroup>`. Jeden z węzłów ma już elementy `<PackageReference>`. Możesz dodać nową zależność do tego węzła lub utworzyć nową. wynik będzie taki sam.
 
 Poniższy przykład używa szablonu domyślnego, który został porzucony przez `dotnet new console`. Jest to prosta aplikacja konsolowa. Po otwarciu projektu znajdziesz `<ItemGroup>` z już istniejącymi `<PackageReference>`. Dodaj do niego następujące elementy:
 

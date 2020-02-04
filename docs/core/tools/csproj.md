@@ -2,12 +2,12 @@
 title: Dodatki do formatu csproj dla platformy .NET Core
 description: Dowiedz się więcej o różnicach między istniejącymi a plikami csproj programu .NET Core
 ms.date: 04/08/2019
-ms.openlocfilehash: 126f5b10999e65d9715e9b52cb54a2bf1dbd3933
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 202c1867ae6404db074e6196b28ffe5f453ef5bf
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76787877"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965610"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Dodatki do formatu csproj dla platformy .NET Core
 
@@ -145,7 +145,7 @@ Element `<PackageReference>` Item określa [zależność NuGet w projekcie](/nug
 
 #### <a name="version"></a>Wersja
 
-Wymagany atrybut `Version` określa wersję pakietu do przywrócenia. Ten atrybut przestrzega reguł schematu obsługi wersji programu [NuGet](/nuget/reference/package-versioning#version-ranges-and-wildcards) . Zachowanie domyślne jest dokładnym dopasowaniem wersji. Na przykład określenie `Version="1.2.3"` jest równoznaczne z notacją NuGet `[1.2.3]` dla dokładnej wersji 1.2.3 pakietu.
+Wymagany atrybut `Version` określa wersję pakietu do przywrócenia. Ten atrybut przestrzega reguł schematu obsługi wersji programu [NuGet](/nuget/reference/package-versioning#version-ranges-and-wildcards) . Domyślnym zachowaniem jest wersja minimalna, włącznie. Na przykład określenie `Version="1.2.3"` jest równoznaczne z notacją NuGet `[1.2.3, )` i oznacza, że rozpoznany pakiet będzie miał wersję 1.2.3, jeśli jest dostępny lub większy w inny sposób.
 
 #### <a name="includeassets-excludeassets-and-privateassets"></a>IncludeAssets, ExcludeAssets i PrivateAssets
 
@@ -184,7 +184,7 @@ Należy pamiętać, że `DotNetCliToolReference` jest [teraz przestarzałe](http
 
 #### <a name="version"></a>Wersja
 
-`Version` określa wersję pakietu do przywrócenia. Ten atrybut przestrzega reguł schematu obsługi wersji programu [NuGet](/nuget/create-packages/dependency-versions#version-ranges) . Zachowanie domyślne jest dokładnym dopasowaniem wersji. Na przykład określenie `Version="1.2.3"` jest równoznaczne z notacją NuGet `[1.2.3]` dla dokładnej wersji 1.2.3 pakietu.
+`Version` określa wersję pakietu do przywrócenia. Ten atrybut przestrzega reguł schematu obsługi wersji programu [NuGet](/nuget/create-packages/dependency-versions#version-ranges) . Domyślnym zachowaniem jest wersja minimalna, włącznie. Na przykład określenie `Version="1.2.3"` jest równoznaczne z notacją NuGet `[1.2.3, )` i oznacza, że rozpoznany pakiet będzie miał wersję 1.2.3, jeśli jest dostępny lub większy w inny sposób.
 
 ### <a name="runtimeidentifiers"></a>RuntimeIdentifiers
 

@@ -3,12 +3,12 @@ title: Instalowanie .NET Framework w systemie Windows 8
 ms.custom: updateeachrelease
 description: Dowiedz się, jak zainstalować .NET Framework w systemie Windows 8
 ms.date: 04/18/2019
-ms.openlocfilehash: 0d9afb30088256b6c5c1fd8c0b2c99e3a9760b89
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 1db8ac9837821eb7111b9d0015787509bc27b398
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716730"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76966000"
 ---
 # <a name="install-the-net-framework-on-windows-8-and-windows-server-2012"></a>Instalowanie programu .NET Framework w systemach Windows 8 i Windows Server 2012
 
@@ -21,7 +21,7 @@ Te instrukcje ułatwią zainstalowanie potrzebnych wersji .NET Framework. [.NET 
 ## <a name="net-framework-48"></a>.NET Framework 4,8
 
 > [!div class="button"]
-> [Pobierz program .NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+> [Pobierz .NET Framework 4,8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
 .NET Framework 4,8 jest obsługiwane w systemie Windows Server 2012. Nie jest on obsługiwany w systemie Windows 8.
 
@@ -29,7 +29,7 @@ Te instrukcje ułatwią zainstalowanie potrzebnych wersji .NET Framework. [.NET 
 
 ## <a name="net-framework-46"></a>.NET Framework 4.6
 
-[.NET Framework 4,6](https://www.microsoft.com/download/details.aspx?id=48130) to najnowsza obsługiwana wersja .NET Framework w systemie Windows 8.
+[.NET Framework 4,6](https://dotnet.microsoft.com/download/dotnet-framework/net46) to najnowsza obsługiwana wersja .NET Framework w systemie Windows 8.
 
 .NET Framework 4,6 obsługuje aplikacje skompilowane dla .NET Framework 4,0 do 4,6.
 

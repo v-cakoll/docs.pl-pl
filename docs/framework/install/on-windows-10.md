@@ -3,12 +3,12 @@ title: Instalowanie .NET Framework w systemie Windows 10
 description: Dowiedz się, jak zainstalować .NET Framework w systemie Windows 10 lub Windows Server 2016.
 ms.date: 04/18/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: c2b274bb85b6d4c496e7b6b6b62f05aa932202dd
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: eed15b9088d6ba46d8f5bc6d16ba779dd6115b0d
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716381"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965974"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a>Instalowanie .NET Framework w systemach Windows 10 i Windows Server 2016 i nowszych
 
@@ -25,7 +25,7 @@ Na tej stronie może nastąpić próba uruchomienia aplikacji i wyświetlenia ok
 - [Aktualizacja systemu Windows 10 maja 2019](https://support.microsoft.com/help/4028685/windows-10-get-the-update)
 
 > [!div class="button"]
-> [Pobierz program .NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+> [Pobierz .NET Framework 4,8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
 [.NET Framework 4,8](https://dotnet.microsoft.com/download/dotnet-framework/net48) może służyć do uruchamiania aplikacji skompilowanych dla .NET Framework 4,0 za pomocą 4.7.2.
 
@@ -50,7 +50,7 @@ Jeśli używasz systemu Windows 10 1507 lub 1511 i chcesz zainstalować .NET Fra
 
 ## <a name="net-framework-462"></a>.NET Framework 4.6.2
 
-[.NET Framework 4.6.2](https://www.microsoft.com/download/details.aspx?id=53345) to najnowsza obsługiwana wersja .NET Framework w systemach Windows 10 1507 i 1511.
+[.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462) to najnowsza obsługiwana wersja .NET Framework w systemach Windows 10 1507 i 1511.
 
 .NET Framework 4.6.2 obsługuje aplikacje skompilowane dla .NET Framework 4,0 do 4.6.2.
 

@@ -2,12 +2,12 @@
 title: Rozwiązywanie problemów — nie można uruchomić tej aplikacji
 description: Dowiedz się, co zrobić, Jeśli zobaczysz okno dialogowe "nie można uruchomić tej aplikacji".
 ms.date: 09/05/2019
-ms.openlocfilehash: 2140ab38c29d610634f71305c4337c324e0550d8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 864c6ea23e9a048f060eee39d904bd4377be5084
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73092051"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965909"
 ---
 # <a name="troubleshooting-a-this-application-could-not-be-started-error-message"></a>Rozwiązywanie problemów z komunikatem o błędzie "nie można uruchomić tej aplikacji"
 
@@ -44,11 +44,11 @@ Aby rozwiązać ten problem, możesz uruchomić aplikację, wykonując następuj
    |Wersja systemu Windows|Instalacja .NET Framework|
    |---|---|
    |Rocznicowa Aktualizacja systemu Windows 10 i nowsze wersje|[Środowisko uruchomieniowe .NET Framework 4,8](https://dotnet.microsoft.com/download/dotnet-framework/net48)|
-   |Aktualizacja systemu Windows 10, Windows 10 listopad|[.NET Framework 4.6.2](https://www.microsoft.com/download/details.aspx?id=53345)|
+   |Aktualizacja systemu Windows 10, Windows 10 listopad|[.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462)|
    |Windows 8.1|[Środowisko uruchomieniowe .NET Framework 4,8](https://dotnet.microsoft.com/download/dotnet-framework/net48)|
-   |Windows 8|[.NET Framework 4.6.1](https://www.microsoft.com/download/details.aspx?id=49981)|
+   |Windows 8|[.NET Framework 4.6.1](https://dotnet.microsoft.com/download/dotnet-framework/net461)|
    |Windows 7 z dodatkiem SP1|[Środowisko uruchomieniowe .NET Framework 4,8](https://dotnet.microsoft.com/download/dotnet-framework/net48)|
-   |Windows Vista z dodatkiem SP2|[.NET Framework 4,6](https://www.microsoft.com/download/details.aspx?id=48130)|
+   |Windows Vista z dodatkiem SP2|[.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46)|
 
    > [!NOTE]
    > .NET Framework 4,8 jest preinstalowany w systemie Windows 10 maja 2019 Update.

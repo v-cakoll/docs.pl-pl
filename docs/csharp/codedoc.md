@@ -4,12 +4,12 @@ description: Dowiedz się, jak udokumentować kod za pomocą komentarzy dokument
 ms.date: 01/21/2020
 ms.technology: csharp-fundamentals
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: ef0d22e0ee7faa3ba51da6b44cf1827f19baf4f1
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 1ec088db1de7c953bdb20b1129c5fd40f9e31454
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76787820"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965935"
 ---
 # <a name="document-your-code-with-xml-comments"></a>Dokumentowanie kodu za pomocą komentarzy XML
 
@@ -49,7 +49,7 @@ Oto kod dla prostej biblioteki matematycznej:
 
 [!code-csharp[Sample Library](../../samples/snippets/csharp/concepts/codedoc/sample-library.cs)]
 
-Biblioteka Przykładowa obsługuje cztery główne operacje arytmetyczne `add`, `subtract`, `multiply` i `divide` na `int` i `double` typy danych.
+Biblioteka Przykładowa obsługuje cztery główne operacje arytmetyczne (`add`, `subtract`, `multiply`i `divide`) na `int` i `double` typy danych.
 
 Teraz chcesz mieć możliwość utworzenia dokumentu odniesienia interfejsu API z kodu dla deweloperów innych firm, którzy korzystają z biblioteki, ale nie mają dostępu do kodu źródłowego.
 Jak wspomniano wcześniej Tagi dokumentacji XML, można użyć w tym celu. Teraz będziesz wprowadzać do standardowych tagów XML obsługiwanych przez C# kompilator.
@@ -61,7 +61,7 @@ Pokażę swoje użycie przez dodanie go do definicji klasy `Math` i pierwszej me
 
 [!code-csharp[Summary Tag](~/samples/snippets/csharp/concepts/codedoc/summary-tag.cs)]
 
-Tag `<summary>` jest bardzo istotny i zalecamy dołączenie go, ponieważ jego zawartość jest podstawowym źródłem informacji o typie lub elemencie członkowskim w technologii IntelliSense lub dokumentacji interfejsu API.
+Tag `<summary>` jest istotny, a firma Microsoft zaleca, aby uwzględnić go, ponieważ jego zawartość jest podstawowym źródłem informacji o typie lub elemencie członkowskim w technologii IntelliSense lub dokumentacji interfejsu API.
 
 ## <a name="remarks"></a>\<uwagi >
 
@@ -150,7 +150,7 @@ Dodaj szybką metodę rodzajową do klasy `Math`, aby sprawdzić, czy jedna ilo�
 
 ## <a name="paramref"></a>\<paramref>
 
-Czasami może być w środku opisującym opisywanie metody w tym, co może być tagiem `<summary>` i można utworzyć odwołanie do parametru. Tag `<paramref>` jest świetny dla samego siebie. Zaktualizujmy podsumowanie naszej metody `Add` opartej na podwójnej precyzji. Podobnie jak w przypadku znacznika `<param>` Nazwa parametru jest określona w **wymaganym** atrybucie `name`.
+Czasami może być w środku opisującym opisywanie metody w tym, co może być tagiem `<summary>` i można utworzyć odwołanie do parametru. Tag `<paramref>` jest świetny dla samego siebie. Zaktualizujmy podsumowanie naszej metody `Add` opartej na podwójnej precyzji. Podobnie jak w przypadku tagu `<param>`, nazwa parametru jest określona w **wymaganym** atrybucie `name`.
 
 [!code-csharp[Paramref Tag](~/samples/snippets/csharp/concepts/codedoc/paramref-tag.cs)]
 
@@ -163,8 +163,7 @@ Możesz użyć tej samej metody generycznej, która została wcześniej utworzon
 
 ## <a name="list"></a>\<list>
 
-Tag `<list>` służy do formatowania informacji dokumentacji jako listy uporządkowanej, nieuporządkowanej listy lub tabeli.
-Utwórz nieuporządkowaną listę każdej operacji matematycznej obsługiwanej przez bibliotekę `Math`.
+Tag `<list>` służy do formatowania informacji dokumentacji jako listy uporządkowanej, listy nieuporządkowanej lub tabeli. Utwórz nieuporządkowaną listę każdej operacji matematycznej obsługiwanej przez bibliotekę `Math`.
 
 [!code-csharp[List Tag](~/samples/snippets/csharp/concepts/codedoc/list-tag.cs)]
 
@@ -207,7 +206,7 @@ Atrybut `path` reprezentuje zapytanie [XPath](../standard/data/xml/xpath-queries
 
 Atrybut `name` reprezentuje specyfikator Name w tagu, który poprzedza Komentarze.
 
-Atrybut `id`, który może być użyty zamiast `name` reprezentuje identyfikator tagu, który poprzedza Komentarze.
+Atrybut `id`, który może być użyty zamiast `name`, reprezentuje identyfikator tagu, który poprzedza Komentarze.
 
 ### <a name="user-defined-tags"></a>Tagi zdefiniowane przez użytkownika
 

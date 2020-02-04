@@ -97,7 +97,7 @@
       href: tutorials/using-on-mac-vs.md
     - name: Tworzenie kompletnego rozwiązania .NET Core w systemie macOS
       href: tutorials/using-on-mac-vs-full-solution.md
-    - name: Rozpoczynanie pracy z platformą .NET Core przy użyciu narzędzi interfejsu wiersza polecenia
+    - name: Rozpoczynanie pracy z platformą .NET Core przy użyciu interfejsu wiersza polecenia
       href: tutorials/cli-create-console-app.md
     - name: Organizowanie i testowanie projektów przy użyciu interfejsu wiersza polecenia platformy .NET Core
       href: tutorials/testing-with-cli.md
@@ -151,11 +151,11 @@
 - name: Wdrażanie aplikacji
   href: deploying/index.md
   items:
-    - name: Wdrażanie aplikacji za pomocą narzędzi interfejsu wiersza polecenia
+    - name: Publikowanie aplikacji za pomocą interfejsu wiersza polecenia
       href: deploying/deploy-with-cli.md
     - name: Wdrażanie aplikacji za pomocą programu Visual Studio
       href: deploying/deploy-with-vs.md
-    - name: Tworzenie pakietu NuGet za pomocą narzędzi międzyplatformowych
+    - name: Tworzenie pakietu NuGet przy użyciu interfejsu wiersza polecenia
       href: deploying/creating-nuget-packages.md
     - name: Przenoszenie do przodu w czasie samodzielnego środowiska uruchomieniowego wdrożenia
       href: deploying/runtime-patch-selection.md

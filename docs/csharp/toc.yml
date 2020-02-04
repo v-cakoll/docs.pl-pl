@@ -1337,7 +1337,7 @@
                 - name: Typów wyliczeniowych
                   href: language-reference/builtin-types/enum.md
                   displayName: 'enum, bit flags, bit field'
-                - name: 'struktura '
+                - name: struktura
                   href: language-reference/keywords/struct.md
                 - name: Typy wartości dopuszczające wartość null
                   href: language-reference/builtin-types/nullable-value-types.md
@@ -1365,8 +1365,6 @@
               items:
                 - name: Tabela typów wbudowanych
                   href: language-reference/keywords/built-in-types-table.md
-                - name: Formatowanie tabeli wyników liczbowych
-                  href: language-reference/keywords/formatting-numeric-results-table.md
         - name: Modyfikatory
           items:
             - name: Modyfikatory dostępu

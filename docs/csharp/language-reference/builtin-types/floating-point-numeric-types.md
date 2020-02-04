@@ -18,12 +18,12 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 23aa33c6887db48a12f995efc5e1e2220d30216c
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 9fde2b28288b58d7da3a4d003ec50af7d7e7a965
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552278"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980174"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>Zmiennoprzecinkowe typy liczbowe (C# odwołanie)
 
@@ -120,7 +120,6 @@ Aby uzyskać więcej informacji, zobacz następujące sekcje [ C# specyfikacji j
 - [C#odwoła](../index.md)
 - [Tabela typów wbudowanych](../keywords/built-in-types-table.md)
 - [Typy całkowite](integral-numeric-types.md)
-- [Formatowanie tabeli wyników liczbowych](../keywords/formatting-numeric-results-table.md)
 - [Standardowe ciągi formatujące liczby](../../../standard/base-types/standard-numeric-format-strings.md)
 - [Wartości numeryczne na platformie .NET](../../../standard/numerics.md)
 - <xref:System.Numerics.Complex?displayProperty=nameWithType>

@@ -1,13 +1,13 @@
 ---
-title: Właściwość nawigacji — ADO.NET
+title: Właściwość nawigacji
 ms.date: 03/30/2017
 ms.assetid: d0bf1a6a-1d84-484c-b7c3-b410fd8dc0b1
-ms.openlocfilehash: afb2043abf70fa92ea7cdf8d1e8246d5cdfdba74
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: b6c286e63322a66be0407c864295a20685df2b7f
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738388"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980161"
 ---
 # <a name="navigation-property"></a>Właściwość nawigacji
 
@@ -35,7 +35,7 @@ Na poniższym diagramie przedstawiono model koncepcyjny z trzema typami jednoste
 
 [!code-xml[EDM_Example_Model#EntityExample](~/samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entityexample)]
 
-Należy zauważyć, że atrybuty XML są używane do przekazywania informacji niezbędnych do zdefiniowania właściwości nawigacji: atrybut `Name` zawiera nazwę właściwości, `Relationship` zawiera nazwę elementu, do którego prowadzi Nawigacja, a `FromRole` i `ToRole` zawierają koniec skojarzenia.
+Należy zauważyć, że atrybuty XML są używane do przekazywania informacji niezbędnych do zdefiniowania właściwości nawigacji: atrybut `Name` zawiera nazwę właściwości, `Relationship` zawiera nazwę skojarzenia, do którego prowadzi, i `FromRole` i `ToRole` zawierają zakończenia skojarzenia.
 
 ## <a name="see-also"></a>Zobacz także
 

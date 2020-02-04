@@ -32,12 +32,12 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: 058e75c81c18f0ec73140f6fc13a91f4e0012a61
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 2fb4d7185ac85b29f2cc2d2e7a29e192f91a0868
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036359"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980148"
 ---
 # <a name="integral-numeric-types--c-reference"></a>Całkowite typy liczbowe (C# odwołanie)
 
@@ -89,14 +89,14 @@ W powyższym przykładzie przedstawiono również użycie `_` jako *separatora c
 
 Typ literału liczby całkowitej jest określany na podstawie jego sufiksu w następujący sposób:
 
-- Jeśli literał nie ma sufiksu, jego typ to pierwszy z następujących typów, w którym można przedstawić jego wartość: `int`, `uint`, `long` `ulong`.
-- Jeśli literał jest sufiksem `U` lub `u`, jego typ jest pierwszym z następujących typów, w których można reprezentować wartość: `uint` `ulong`.
-- Jeśli literał jest sufiksem `L` lub `l`, jego typ jest pierwszym z następujących typów, w których można reprezentować wartość: `long` `ulong`.
+- Jeśli literał nie ma sufiksu, jego typ to pierwszy z następujących typów, w którym można przedstawić jego wartość: `int`, `uint`, `long``ulong`.
+- Jeśli literał jest sufiksem `U` lub `u`, jego typ jest pierwszym z następujących typów, w których można reprezentować wartość: `uint``ulong`.
+- Jeśli literał jest sufiksem `L` lub `l`, jego typ jest pierwszym z następujących typów, w których można reprezentować wartość: `long``ulong`.
 
   > [!NOTE]
   > Jako sufiksu można użyć małych liter `l`. Jednak spowoduje to wygenerowanie ostrzeżenia kompilatora, ponieważ `l` można mylić z cyfrą `1`. Użyj `L` do przejrzystości.
 
-- Jeśli literał jest sufiksem `UL`, `Ul`, `uL`, `ul`, `LU`, `Lu`, `lU` lub `lu`, jego typ to `ulong`.
+- Jeśli literał jest sufiksem `UL`, `Ul`, `uL`, `ul`, `LU`, `Lu`, `lU`lub `lu`, jego typ to `ulong`.
 
 Jeśli wartość reprezentowana przez literał liczby całkowitej przekracza <xref:System.UInt64.MaxValue?displayProperty=nameWithType>, wystąpi błąd kompilatora [CS1021](../../misc/cs1021.md) .
 
@@ -132,5 +132,5 @@ Aby uzyskać więcej informacji, zobacz następujące sekcje [ C# specyfikacji j
 - [C#odwoła](../index.md)
 - [Tabela typów wbudowanych](../keywords/built-in-types-table.md)
 - [Typy zmiennoprzecinkowe](floating-point-numeric-types.md)
-- [Formatowanie tabeli wyników liczbowych](../keywords/formatting-numeric-results-table.md)
+- [Standardowe ciągi formatujące liczby](../../../standard/base-types/standard-numeric-format-strings.md)
 - [Wartości numeryczne na platformie .NET](../../../standard/numerics.md)

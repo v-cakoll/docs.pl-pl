@@ -2,12 +2,12 @@
 title: Rozpoczynanie pracy z językiem F# w programie Visual Studio Code
 description: Dowiedz się, F# jak używać programu z Visual Studio Code i pakietem wtyczek Ionide.
 ms.date: 12/23/2018
-ms.openlocfilehash: 91265303c2954387df0f500940c9af68b3c97dac
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 2aa62bb1afc220348f884865e55c4d7de4359b7f
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559667"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980356"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Rozpoczynanie pracy z językiem F# w programie Visual Studio Code
 
@@ -74,7 +74,7 @@ Powinien zostać wyświetlony następujący wynik:
 val it : string = "ananabay"
 ```
 
-Teraz Wypróbujmy samogłosy jako pierwszą literę. Wprowadź następujące dane:
+Teraz Wypróbujmy samogłosy jako pierwszą literę. Wprowadź następujące elementy:
 
 ```fsharp
 toPigLatin "apple";;
@@ -121,7 +121,7 @@ Przepływ `toPigLatin` jest więc:
 
 Sprawdź, czy pierwszy znak wyrazu wejściowego to samogłoski. Jeśli tak, Dołącz "Yay" do końca wyrazu. W przeciwnym razie Przenieś ten pierwszy znak na koniec wyrazu i Dodaj do niego wartość "AY".
 
-Należy zwrócić uwagę na to, że nie ma żadnej bezpośredniej instrukcji zwracanej z funkcji, w przeciwieństwie do wielu innych języków. Wynika to z F# faktu, że jest oparte na wyrażeniach, a ostatnie wyrażenie w treści funkcji jest wartością zwracaną. Ponieważ `if..then..else` jest samym wyrażeniem, treść bloku `then` lub treść bloku `else` zostanie zwrócona w zależności od wartości wejściowej.
+Należy zwrócić uwagę na to F#, że nie ma żadnej bezpośredniej instrukcji zwracanej przez funkcję. Wynika to z F# faktu, że jest oparte na wyrażeniach, a ostatnie wyrażenie obliczane w treści funkcji określa wartość zwracaną przez tę funkcję. Ponieważ `if..then..else` jest samym wyrażeniem, obliczanie treści bloku `then` lub treści bloku `else` określa wartość zwracaną przez funkcję `toPigLatin`.
 
 ## <a name="turn-the-console-app-into-a-pig-latin-generator"></a>Przekształcanie aplikacji konsolowej w generator łaciński
 

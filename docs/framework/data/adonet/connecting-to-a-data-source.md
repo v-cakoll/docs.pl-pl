@@ -1,18 +1,18 @@
 ---
-title: Nawiązywanie połączenia ze źródłem danych w ADO.NET
+title: Nawiązywanie połączenia ze źródłem danych
 ms.date: 03/30/2017
 ms.assetid: 9abc3f92-1be3-4e1a-b360-762dc689650e
-ms.openlocfilehash: 01e4048fb9c7b53b1b1907d1965f822b9a4644a4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 84dc15c0965b7ac8209bd9115d611162e57d6dda
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786766"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980252"
 ---
 # <a name="connecting-to-a-data-source-in-adonet"></a>Nawiązywanie połączenia ze źródłem danych w ADO.NET
 W ADO.NET używasz obiektu **połączenia** do łączenia się z określonym źródłem danych, dostarczając wymagane informacje uwierzytelniania w parametrach połączenia. Używany obiekt **połączenia** zależy od typu źródła danych.  
   
- Każdy dostawca danych .NET Framework dołączony do .NET Framework ma <xref:System.Data.Common.DbConnection> obiekt: dostawca danych .NET Framework dla OLE DB <xref:System.Data.OleDb.OleDbConnection> zawiera obiekt, .NET Framework dostawca danych dla SQL Server zawiera <xref:System.Data.SqlClient.SqlConnection> obiekt,. Dostawca danych .NET Framework dla ODBC zawiera <xref:System.Data.Odbc.OdbcConnection> obiekt, a .NET Framework dostawca danych dla programu Oracle <xref:System.Data.OracleClient.OracleConnection> zawiera obiekt.  
+ Każdy dostawca danych .NET Framework dołączony do .NET Framework ma <xref:System.Data.Common.DbConnection> obiekt: .NET Framework Dostawca danych dla OLE DB zawiera obiekt <xref:System.Data.OleDb.OleDbConnection>, .NET Framework dostawca danych dla SQL Server zawiera obiekt <xref:System.Data.SqlClient.SqlConnection>, .NET Framework dostawca danych dla ODBC zawiera obiekt <xref:System.Data.Odbc.OdbcConnection>, a .NET Framework dostawca danych dla programu Oracle zawiera obiekt <xref:System.Data.OracleClient.OracleConnection>.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Nawiązywanie połączenia](establishing-the-connection.md)  

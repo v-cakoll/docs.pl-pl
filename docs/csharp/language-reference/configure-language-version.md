@@ -2,12 +2,12 @@
 title: C#Obsługa wersji języka — C# Przewodnik
 description: Dowiedz się, C# w jaki sposób wersja językowa jest określana na podstawie projektu, i różne wartości, które można dostosować ręcznie do programu.
 ms.date: 07/10/2019
-ms.openlocfilehash: 90624816a68de694cacd0017c6d3162f6a89431c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3c1035d983660ea0a945e4d4b7b72c69736c90cb
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713876"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980135"
 ---
 # <a name="c-language-versioning"></a>C#przechowywanie wersji języka
 
@@ -54,7 +54,7 @@ Wartość `preview` używa najnowszej dostępnej wersji języka zapoznawczej C# 
 
 ### <a name="configure-multiple-projects"></a>Konfigurowanie wielu projektów
 
-Można utworzyć plik **Directory. Build. props** zawierający element `<LangVersion>`, aby skonfigurować wiele katalogów. Zwykle jest to wykonywane w katalogu rozwiązania. Dodaj następujący element do pliku **Directory. Build. props** w katalogu rozwiązania:
+Aby skonfigurować wiele projektów, można utworzyć plik **Directory. Build. props** , który zawiera element `<LangVersion>`. Zwykle jest to wykonywane w katalogu rozwiązania. Dodaj następujący element do pliku **Directory. Build. props** w katalogu rozwiązania:
 
 ```xml
 <Project>
@@ -84,5 +84,5 @@ W poniższej tabeli przedstawiono wszystkie bieżące C# wersje językowe. Kompi
 |5|Kompilator akceptuje tylko składnię, która jest uwzględniona w C# 5,0 lub niższej.|
 |4|Kompilator akceptuje tylko składnię, która jest uwzględniona w C# 4,0 lub niższej.|
 |3|Kompilator akceptuje tylko składnię, która jest uwzględniona w C# 3,0 lub niższej.|
-|ISO-2|Kompilator akceptuje tylko składnię zawartą w ISO/IEC 23270:2006 C# (2,0) |
-|ISO-1|Kompilator akceptuje tylko składnię zawartą w ISO/IEC 23270:2003 C# (1.0/1.2) |
+|ISO-2|Kompilator akceptuje tylko składnię zawartą w normie ISO/ C# IEC 23270:2006 (2,0). |
+|ISO-1|Kompilator akceptuje tylko składnię zawartą w ISO/IEC 23270:2003 C# (1.0/1.2). |

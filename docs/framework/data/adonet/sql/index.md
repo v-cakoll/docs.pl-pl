@@ -1,21 +1,22 @@
 ---
 title: SQL Server i ADO.NET
+titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
-ms.openlocfilehash: b54725fa8dbff7db82ed197f4961e773a06895e4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6e88c35936de72f0d426c23493bbe5a08e707ee1
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782329"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76979979"
 ---
 # <a name="sql-server-and-adonet"></a>SQL Server i ADO.NET
-W tej sekcji opisano funkcje i zachowania, które są specyficzne dla Dostawca danych .NET Framework dla SQL Server<xref:System.Data.SqlClient>().  
+W tej sekcji opisano funkcje i zachowania, które są specyficzne dla Dostawca danych .NET Framework dla SQL Server (<xref:System.Data.SqlClient>).  
   
- <xref:System.Data.SqlClient>zapewnia dostęp do wersji SQL Server, które hermetyzują protokoły specyficzne dla bazy danych. Funkcja dostawcy danych została zaprojektowana tak, aby była podobna do .NET Framework dostawców danych dla OLE DB, ODBC i Oracle. <xref:System.Data.SqlClient>zawiera Analizator strumienia danych tabelarycznych (TDS) do bezpośredniego komunikowania się z SQL Server.  
+ <xref:System.Data.SqlClient> zapewnia dostęp do wersji SQL Server, które hermetyzują protokoły specyficzne dla bazy danych. Funkcja dostawcy danych została zaprojektowana tak, aby była podobna do .NET Framework dostawców danych dla OLE DB, ODBC i Oracle. <xref:System.Data.SqlClient> obejmuje Analizator strumienia danych tabelarycznych (TDS) do bezpośredniego komunikowania się z SQL Server.  
   
 > [!NOTE]
-> Aby można było użyć dostawca danych .NET Framework na potrzeby SQL Server, aplikacja musi odwoływać się do <xref:System.Data.SqlClient> przestrzeni nazw.  
+> Aby użyć Dostawca danych .NET Framework w przypadku SQL Server, aplikacja musi odwoływać się do przestrzeni nazw <xref:System.Data.SqlClient>.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Zabezpieczenia serwera SQL](sql-server-security.md)  

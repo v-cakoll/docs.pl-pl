@@ -1,13 +1,13 @@
 ---
-title: Śledzenie danych w ADO.NET
+title: Śledzenie danych
 ms.date: 03/30/2017
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-ms.openlocfilehash: f92a17374cf3df1281e51d54bae1a1dcf9e5ea03
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 2b2a33739619ba09e56d4cc9ce99c51423678918
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937626"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980226"
 ---
 # <a name="data-tracing-in-adonet"></a>Śledzenie danych w ADO.NET
 

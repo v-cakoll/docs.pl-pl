@@ -1,23 +1,23 @@
 ---
-title: Operacje danych serwera SQL w ADO.NET
+title: Operacje na danych SQL Server
 ms.date: 03/30/2017
 ms.assetid: b864ebc9-ed8e-4059-85fd-36d9198f5521
-ms.openlocfilehash: d2c6477630e5f4b5f25fcbbdd8ffb76109ff507b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 663d7eff5b5972c4fae070695a526e927aee311f
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791659"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76979888"
 ---
 # <a name="sql-server-data-operations-in-adonet"></a>Operacje danych serwera SQL w ADO.NET
-W tej sekcji opisano SQL Server funkcji i funkcji, które są specyficzne dla .NET Framework Dostawca danych dla SQL Server<xref:System.Data.SqlClient>().  
+W tej sekcji opisano SQL Server funkcji i funkcji, które są specyficzne dla .NET Framework Dostawca danych dla SQL Server (<xref:System.Data.SqlClient>).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Operacje kopiowania masowego w programie SQL Server](bulk-copy-operations-in-sql-server.md)  
  Opisuje funkcje kopiowania zbiorczego dla programu .NET Dostawca danych dla SQL Server.  
   
  [Wiele aktywnych zestawów wyników (MARS)](multiple-active-result-sets-mars.md)  
- Opisuje, jak ma być otwartych więcej <xref:System.Data.SqlClient.SqlDataReader> niż jeden element w połączeniu, gdy każde <xref:System.Data.SqlClient.SqlDataReader> wystąpienie jest uruchamiane z oddzielnego polecenia.  
+ Opisuje, jak ma być otwarty więcej niż jeden <xref:System.Data.SqlClient.SqlDataReader> w ramach połączenia, gdy każde wystąpienie <xref:System.Data.SqlClient.SqlDataReader> jest uruchamiane z oddzielnego polecenia.  
   
  [Operacje asynchroniczne](asynchronous-operations.md)  
  Opisuje sposób wykonywania asynchronicznych operacji na bazie danych przy użyciu interfejsu API, który jest modelowany po asynchronicznym modelu używanym przez .NET Framework.  

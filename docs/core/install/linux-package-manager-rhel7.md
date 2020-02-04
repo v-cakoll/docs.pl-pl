@@ -4,18 +4,18 @@ description: Zainstaluj zestaw .NET Core SDK i środowisko uruchomieniowe w syst
 author: thraka
 ms.author: adegeo
 ms.date: 12/03/2019
-ms.openlocfilehash: bcc41bfcd7c6d03038952e3faaf07952c3deb69d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4f85ed3da8a434fcd5b6ee88491daf623c3c8b31
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715537"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980187"
 ---
 # <a name="rhel-7-package-manager---install-net-core"></a>Menedżer pakietów RHEL 7 — Instalowanie programu .NET Core
 
 [!INCLUDE [package-manager-switcher](includes/package-manager-switcher.md)]
 
-W tym artykule opisano, jak za pomocą Menedżera pakietów zainstalować platformę .NET Core w systemie RHEL 7. Platforma .NET Core 3,1 nie jest jeszcze dostępna dla RHEL 7.
+W tym artykule opisano, jak za pomocą Menedżera pakietów zainstalować platformę .NET Core w systemie RHEL 7.
 
 ## <a name="register-your-red-hat-subscription"></a>Zarejestruj swoją subskrypcję Red Hat
 
@@ -27,8 +27,8 @@ Po zarejestrowaniu się w programie Subscription Manager można przystąpić do 
 
 ```bash
 subscription-manager repos --enable=rhel-7-server-dotnet-rpms
-yum install rh-dotnet30 -y
-scl enable rh-dotnet30 bash
+yum install rh-dotnet31 -y
+scl enable rh-dotnet31 bash
 ```
 
 ## <a name="install-the-aspnet-core-runtime"></a>Zainstaluj środowisko uruchomieniowe ASP.NET Core
@@ -37,8 +37,8 @@ Po zarejestrowaniu się w programie Subscription Manager można zainstalować i 
 
 ```bash
 subscription-manager repos --enable=rhel-7-server-dotnet-rpms
-yum install rh-dotnet30-aspnetcore-runtime-3.0 -y
-scl enable rh-dotnet30 bash
+yum install rh-dotnet31-aspnetcore-runtime-3.1 -y
+scl enable rh-dotnet31 bash
 ```
 
 ## <a name="install-the-net-core-runtime"></a>Instalowanie środowiska uruchomieniowego platformy .NET Core
@@ -47,10 +47,10 @@ Po zarejestrowaniu się w programie Subscription Manager można rozpocząć inst
 
 ```bash
 subscription-manager repos --enable=rhel-7-server-dotnet-rpms
-yum install rh-dotnet30-dotnet-runtime-3.0 -y
-scl enable rh-dotnet30 bash
+yum install rh-dotnet31-dotnet-runtime-3.1 -y
+scl enable rh-dotnet31 bash
 ```
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Korzystanie z platformy .NET Core 3,0 w Red Hat Enterprise Linux 7](https://access.redhat.com/documentation/en-us/net_core/3.0/html/getting_started_guide/gs_install_dotnet)
+- [Korzystanie z platformy .NET Core 3,1 w Red Hat Enterprise Linux 7](https://access.redhat.com/documentation/en-us/net_core/3.1/html/getting_started_guide/gs_install_dotnet)

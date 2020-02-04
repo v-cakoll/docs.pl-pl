@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 1ef705fcf046af1f4136ddcf1b29f417c0d72c83
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 4fa01922c5c3097adb124d67272b9f449b70ada3
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741849"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76979875"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Strategia zabezpieczeń WPF - zabezpieczenia platformy
 Chociaż Windows Presentation Foundation (WPF) oferuje różne usługi zabezpieczeń, wykorzystuje również funkcje zabezpieczeń podstawowej platformy, w tym system operacyjny, środowisko CLR i program Internet Explorer. Te warstwy są łączone w celu zapewnienia mocnego, kompleksowego modelu zabezpieczeń, który podejmuje próbę uniknięcia wszelkich single point of failure, jak pokazano na poniższej ilustracji:  
@@ -35,14 +35,14 @@ Chociaż Windows Presentation Foundation (WPF) oferuje różne usługi zabezpiec
 Rdzeń systemu Windows zawiera kilka funkcji zabezpieczeń, które tworzą podstawę zabezpieczeń dla wszystkich aplikacji systemu Windows, w tym tych utworzonych za pomocą WPF. W tym temacie omówiono zakres tych funkcji zabezpieczeń, które są ważne dla platformy WPF, a także sposób, w jaki WPF integrują się z nimi w celu zapewnienia dalszej ochrony szczegółowej.  
   
 ### <a name="microsoft-windows-xp-service-pack-2-sp2"></a>Microsoft Windows XP Service Pack 2 (SP2)  
- Oprócz ogólnego przeglądu i wzmocnienia systemu Windows, istnieją trzy kluczowe [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] funkcje, które można omawiać w tym temacie:  
+ Oprócz ogólnego przeglądu i wzmocnienia systemu Windows, istnieją trzy kluczowe funkcje systemu Windows XP z dodatkiem SP2, które będziemy omawiać w tym temacie:  
   
 - Kompilacja/GS  
   
 - Microsoft Windows Update.  
   
 #### <a name="gs-compilation"></a>Kompilacja/GS  
- [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] zapewnia ochronę przez ponowną kompilację wielu podstawowych bibliotek systemowych, w tym wszystkich zależności WPF, takich jak środowisko CLR, aby pomóc w ograniczeniu przekroczenia buforu. Jest to osiągane przy użyciu parametru/GS z kompilatorem wierszaC++ polecenia C/. Mimo że przepełnienia buforów należy jawnie uniknąć, kompilacja/GS oferuje przykład obrony przed potencjalnymi lukami, które są przypadkowo lub złośliwie tworzone przez nie.  
+ System Windows XP z dodatkiem SP2 zapewnia ochronę przez ponowną kompilację wielu podstawowych bibliotek systemowych, w tym wszystkich zależności WPF, takich jak CLR, aby pomóc w ograniczeniu przekroczenia buforu. Jest to osiągane przy użyciu parametru/GS z kompilatorem wierszaC++ polecenia C/. Mimo że przepełnienia buforów należy jawnie uniknąć, kompilacja/GS oferuje przykład obrony przed potencjalnymi lukami, które są przypadkowo lub złośliwie tworzone przez nie.  
   
  W przeszłości przekroczenia buforu były przyczyną wielu luk w zabezpieczeniach o dużym wpływie. Przepełnienie buforu występuje, gdy osoba atakująca korzysta z luki w zabezpieczeniach kodu, która pozwala na wstrzyknięcie złośliwego kodu, który zapisuje się poza granicami buforu. Dzięki temu osoba atakująca może przejąć proces, w którym wykonywany jest kod, zastępując adres zwrotny funkcji, aby spowodować wykonanie kodu osoby atakującej. Wynikiem jest złośliwy kod, który wykonuje dowolny kod z takimi samymi uprawnieniami co proces przejęty.  
   
@@ -189,6 +189,6 @@ Użytkownicy WPF w systemie Windows Vista będą korzystać z dodatkowych ulepsz
 ## <a name="see-also"></a>Zobacz także
 
 - [Zabezpieczenia dostępu kodu](../misc/code-access-security.md)
-- [Security](security-wpf.md)
+- [Zabezpieczenia](security-wpf.md)
 - [Zabezpieczenie częściowej relacji zaufania WPF](wpf-partial-trust-security.md)
 - [Strategia zabezpieczeń WPF — projekt zabezpieczeń](wpf-security-strategy-security-engineering.md)

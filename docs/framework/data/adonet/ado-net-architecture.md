@@ -1,13 +1,13 @@
 ---
-title: Architektura ADO.NET
+title: Architektura
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-ms.openlocfilehash: 2692959d5a3e12d503d91b55e19f744bb9abd112
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: de33c9964f3c03b18593b0df0607f941d2117be0
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568457"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980317"
 ---
 # <a name="adonet-architecture"></a>Architektura ADO.NET
 Przetwarzanie danych tradycyjnie opiera się głównie na modelu dwuwarstwowym opartym na połączeniu. Ponieważ przetwarzanie danych w coraz większym stopniu używa architektur wielowarstwowych, programiści przełączają się do rozłączonej metody w celu zapewnienia lepszej skalowalności aplikacji.  
@@ -49,7 +49,7 @@ Architektura ADO.NET
  ADO.NET Entity Framework jest zaprojektowana tak, aby umożliwić deweloperom tworzenie aplikacji do uzyskiwania dostępu do danych przez programowanie względem koncepcyjnego modelu aplikacji zamiast programowania bezpośrednio względem relacyjnego schematu magazynu. Celem jest zmniejszenie ilości kodu i konserwacji wymaganych przez aplikacje zorientowane na dane. Aby uzyskać więcej informacji, zobacz [ADO.NET Entity Framework](./ef/index.md).  
   
 ## <a name="wcf-data-services"></a>Usługi danych WCF  
- Usługi danych programu WCF służy do wdrażania usług danych w sieci Web lub intranecie. Dane są uporządkowane jako jednostki i relacje zgodnie ze specyfikacjami Entity Data Model. Dane wdrożone w tym modelu są adresowane przy użyciu standardowego protokołu HTTP. Aby uzyskać więcej informacji, zobacz [Usługi danych programu WCF 4,5](../wcf/index.md).  
+ Usługi danych programu WCF służy do wdrażania usług danych w sieci Web lub intranecie. Dane są uporządkowane jako jednostki i relacje zgodnie ze specyfikacjami Entity Data Model. Dane wdrożone w tym modelu są adresowane przy użyciu standardowego protokołu HTTP. Aby uzyskać więcej informacji, zobacz [4.5 usług danych WCF](../wcf/index.md).  
   
 ## <a name="xml-and-adonet"></a>XML i ADO.NET  
  ADO.NET wykorzystuje moc XML w celu zapewnienia nieprzerwanego dostępu do danych. ADO.NET została zaprojektowana z użyciem klas XML w .NET Framework; Oba są składnikami pojedynczej architektury.  

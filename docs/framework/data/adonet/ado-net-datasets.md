@@ -1,13 +1,13 @@
 ---
-title: Zestawy danych ADO.NET
+title: Zestawy danych
 ms.date: 03/30/2017
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
-ms.openlocfilehash: 85c0df88d7e919649eae8d2b4e551b26cc684dd8
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 86c14f516ff82e4d9acf7cc3078e04590971a8a1
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634940"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980304"
 ---
 # <a name="adonet-datasets"></a>Zestawy danych ADO.NET
 Obiekt <xref:System.Data.DataSet> jest centralną obsługą rozłączonych, rozproszonych scenariuszy danych za pomocą ADO.NET. **Zestaw danych** to reprezentacja danych będąca rezydentem pamięci, która zapewnia spójny relacyjny model programowania niezależnie od źródła danych. Może być używany z wieloma i różnymi źródłami danych, z danymi XML lub do zarządzania danymi lokalnymi w aplikacji. **Zestaw** danych reprezentuje kompletny zestaw danych, w tym powiązane tabele, ograniczenia i relacje między tabelami. Na poniższej ilustracji przedstawiono model obiektów **DataSet** .  

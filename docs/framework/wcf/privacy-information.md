@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: 7bd56d44eeb6af70b94cdde77d48e917ef8afb9a
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 30ea92f09bc655796b6bc268212b6d9e0e05bd9b
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347784"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919333"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Informacje o prywatności dotyczące architektury WCF (Windows Communication Foundation)
 Firma Microsoft jest zobowiązana do ochrony prywatności użytkowników końcowych. W przypadku kompilowania aplikacji przy użyciu programu Windows Communication Foundation (WCF) w wersji 3,0 Aplikacja może mieć wpływ na prywatność użytkowników końcowych. Na przykład aplikacja może jawnie zbierać informacje kontaktowe użytkownika lub może zażądać lub wysłać informacje przesyłane przez Internet do witryny sieci Web. Jeśli osadzisz technologię firmy Microsoft w aplikacji, ta technologia może mieć własne zachowanie, które może mieć wpływ na prywatność. Usługa WCF nie wysyła żadnych informacji do firmy Microsoft z aplikacji, chyba że użytkownik lub użytkownik końcowy zdecyduje się na wysłanie go do nas.  
@@ -21,7 +21,7 @@ Firma Microsoft jest zobowiązana do ochrony prywatności użytkowników końcow
   
  Nagłówki mogą zawierać routing wiadomości, informacje o zabezpieczeniach, transakcje i wiele więcej w zależności od usług używanych przez aplikację. Komunikaty są zwykle szyfrowane domyślnie. Jedynym wyjątkiem jest użycie `BasicHttpBinding`, który został zaprojektowany do użycia z niezabezpieczonymi, starszymi usługami sieci Web. Jako projektant aplikacji jest odpowiedzialny za końcowy projekt. Komunikaty w treści protokołu SOAP zawierają dane specyficzne dla aplikacji; Jednak te dane, takie jak zdefiniowane przez aplikację dane osobowe, mogą być chronione przy użyciu funkcji szyfrowania lub poufności programu WCF. W poniższych sekcjach opisano funkcje, które mogą mieć wpływ na prywatność.  
   
-## <a name="messaging"></a>Obsługa komunikatów  
+## <a name="messaging"></a>Obsługa wiadomości  
  Każdy komunikat WCF ma nagłówek adresu, który określa miejsce docelowe wiadomości i miejsce, w którym odpowiedź powinna zostać wysłana.  
   
  Składnik adresu punktu końcowego jest Uniform Resource Identifier (URI), który identyfikuje punkt końcowy. Adres może być adresem sieciowym lub adresem logicznym. Adres może zawierać nazwę komputera (nazwa hosta, w pełni kwalifikowaną nazwę domeny) i adres IP. Adres punktu końcowego może również zawierać unikatowy identyfikator globalny (GUID) lub kolekcję identyfikatorów GUID do tymczasowego adresowania służącego do rozpoznać każdego adresu. Każdy komunikat zawiera identyfikator, który jest identyfikatorem GUID. Ta funkcja jest zgodna ze standardem odwołania WS-Addressing.  
@@ -44,7 +44,7 @@ Firma Microsoft jest zobowiązana do ochrony prywatności użytkowników końcow
   
  Uwierzytelnianie może spowodować ustanowienie bezpiecznej sesji między komunikującymi się punktami końcowymi. Sesja jest identyfikowana przez identyfikator GUID, który jest okresem istnienia sesji zabezpieczeń. W poniższej tabeli przedstawiono informacje o zachowaniu i miejscu.  
   
-|Data|Magazyn|  
+|Dane|Magazyn|  
 |----------|-------------|  
 |Poświadczenia prezentacji, takie jak nazwa użytkownika, certyfikaty X. 509, tokeny protokołu Kerberos i odwołania do poświadczeń.|Standardowe mechanizmy zarządzania poświadczeniami systemu Windows, takie jak magazyn certyfikatów systemu Windows.|  
 |Informacje o członkostwie użytkowników, takie jak nazwy użytkowników i hasła.|ASP.NET dostawcy członkostwa.|  
@@ -54,7 +54,7 @@ Firma Microsoft jest zobowiązana do ochrony prywatności użytkowników końcow
 ## <a name="auditing"></a>Inspekcja  
  Inspekcja rejestruje sukces i niepowodzenie uwierzytelniania i zdarzeń autoryzacji. Rekordy inspekcji zawierają następujące dane: identyfikator URI usługi, identyfikator URI akcji i identyfikator obiektu wywołującego.  
   
- Inspekcja jest rejestrowana także wtedy, gdy administrator modyfikuje konfigurację rejestrowania komunikatów (Włączanie lub wyłączanie), ponieważ rejestrowanie komunikatów może rejestrować dane specyficzne dla aplikacji w nagłówkach i treściach. W przypadku [!INCLUDE[wxp](../../../includes/wxp-md.md)]rekord jest rejestrowany w dzienniku zdarzeń aplikacji. W systemach Windows Vista i Windows Server 2003 rekord jest rejestrowany w dzienniku zdarzeń zabezpieczeń.  
+ Inspekcja jest rejestrowana także wtedy, gdy administrator modyfikuje konfigurację rejestrowania komunikatów (Włączanie lub wyłączanie), ponieważ rejestrowanie komunikatów może rejestrować dane specyficzne dla aplikacji w nagłówkach i treściach. W przypadku systemu Windows XP rekord jest rejestrowany w dzienniku zdarzeń aplikacji. W systemach Windows Vista i Windows Server 2003 rekord jest rejestrowany w dzienniku zdarzeń zabezpieczeń.  
   
 ## <a name="transactions"></a>Transakcje  
  Funkcja transakcji zapewnia usługi transakcyjne w aplikacji WCF.  
@@ -95,7 +95,7 @@ Firma Microsoft jest zobowiązana do ochrony prywatności użytkowników końcow
 ### <a name="tracing"></a>Śledzenie  
  Funkcja diagnostyki infrastruktury WCF rejestruje komunikaty przekazywane przez warstwy transportu i modelu usług oraz działania i zdarzenia skojarzone z tymi komunikatami. Ta funkcja jest domyślnie wyłączona. Jest on włączony przy użyciu pliku konfiguracji aplikacji, a zachowanie śledzenia może być modyfikowane przy użyciu dostawcy WMI usługi WCF w czasie wykonywania. Po włączeniu infrastruktury śledzenia emituje śledzenie diagnostyczne zawierające komunikaty, działania i zdarzenia przetwarzania do skonfigurowanych odbiorników. Format i lokalizacja danych wyjściowych są określane przez opcje konfiguracji odbiorników administratora, ale zazwyczaj jest to plik w formacie XML. Administrator jest odpowiedzialny za ustawianie listy kontroli dostępu (ACL) dla plików śledzenia. W szczególności, gdy jest obsługiwany przez system aktywacji systemu Windows (WAS), administrator powinien upewnić się, że pliki nie są obsługiwane z publicznego wirtualnego katalogu głównego, jeśli nie jest to potrzebne.  
   
- Istnieją dwa typy śledzenia: Rejestrowanie komunikatów i śledzenie diagnostyki modelu usług, opisane w następnej sekcji. Każdy typ jest konfigurowany przy użyciu własnego źródła śledzenia: <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> i <xref:System.ServiceModel>. Oba te źródła śledzenia rejestrowania przechwytują dane, które są lokalne dla aplikacji.  
+ Istnieją dwa typy śledzenia: rejestrowanie komunikatów i śledzenie diagnostyki modelu usług, opisane w następnej sekcji. Każdy typ jest konfigurowany przy użyciu własnego źródła śledzenia: <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> i <xref:System.ServiceModel>. Oba te źródła śledzenia rejestrowania przechwytują dane, które są lokalne dla aplikacji.  
   
 ### <a name="message-logging"></a>Rejestrowanie komunikatów  
  Źródło śladu rejestrowania komunikatów (<xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>) umożliwia administratorowi zarejestrowanie komunikatów przesyłanych przez system. Za pomocą konfiguracji użytkownik może zdecydować się na zarejestrowanie całych komunikatów lub tylko nagłówków wiadomości, tylko to, czy należy rejestrować warstwy transportu i/lub modelu usług oraz czy mają być uwzględniane źle sformułowane komunikaty. Ponadto użytkownik może skonfigurować filtrowanie, aby ograniczyć liczbę rejestrowanych komunikatów.  
@@ -127,13 +127,13 @@ Firma Microsoft jest zobowiązana do ochrony prywatności użytkowników końcow
   
  Usunięte klucze:  
   
- \- dla xmlns: wst = "http://schemas.xmlsoap.org/ws/2004/04/trust" i xmlns: wst = "http://schemas.xmlsoap.org/ws/2005/02/trust"  
+ \- dla xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" i xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust"  
   
  wst:BinarySecret  
   
  wst: Entropia  
   
- \- dla xmlns: WSSE = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" i xmlns: WSSE = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- dla xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" i xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse: hasło  
   
@@ -141,7 +141,7 @@ Firma Microsoft jest zobowiązana do ochrony prywatności użytkowników końcow
   
  Potencjalnie usunięte informacje osobiste:  
   
- \- dla xmlns: WSSE = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" i xmlns: WSSE = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- dla  xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" i xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse: Nazwa użytkownika  
   
@@ -304,7 +304,7 @@ Firma Microsoft jest zobowiązana do ochrony prywatności użytkowników końcow
   
  Dla następujących przestrzeni nazw:  
   
- xmlns: wst = "http://schemas.xmlsoap.org/ws/2004/04/trust" i xmlns: wst = "http://schemas.xmlsoap.org/ws/2005/02/trust" (na przykład jeśli żadna akcja nie jest dostępna)  
+ xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" i xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust" (na przykład jeśli żadna akcja nie jest dostępna)  
   
  Informacje są usuwane dla tych elementów treści, które obejmują wymianę kluczy:  
   

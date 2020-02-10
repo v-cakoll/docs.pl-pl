@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Wyliczanie podzbioru kolejek drukowania'
+title: Jak wykazać podzbiór kolejek drukowania
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,32 +9,32 @@ helpviewer_keywords:
 - enumerating [WPF], subset of print queues
 - print queues [WPF], enumerating subset of
 ms.assetid: cc4a1b5b-d46f-4c5e-bc26-22c226e4bee0
-ms.openlocfilehash: adcfff0196bd0430ec1ae563fbd5489062de11f3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aae41931f012f6d34fc057fdd6ee9fc9baab6e7b
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61776067"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094543"
 ---
-# <a name="how-to-enumerate-a-subset-of-print-queues"></a><span data-ttu-id="bc16b-102">Instrukcje: Wyliczanie podzbioru kolejek drukowania</span><span class="sxs-lookup"><span data-stu-id="bc16b-102">How to: Enumerate a Subset of Print Queues</span></span>
-<span data-ttu-id="bc16b-103">Typowe sytuacji sterowaną przez specjalistów technologii informatycznych (IT), zarządzanie zbiór drukarek w firmie polega na generowaniu listę drukarek mające określoną wspólną charakterystykę.</span><span class="sxs-lookup"><span data-stu-id="bc16b-103">A common situation faced by information technology (IT) professionals managing a company-wide set of printers is to generate a list of printers having certain characteristics.</span></span> <span data-ttu-id="bc16b-104">Ta funkcjonalność jest dostarczana przez <xref:System.Printing.PrintServer.GetPrintQueues%2A> metody <xref:System.Printing.PrintServer> obiektu i <xref:System.Printing.EnumeratedPrintQueueTypes> wyliczenia.</span><span class="sxs-lookup"><span data-stu-id="bc16b-104">This functionality is provided by the <xref:System.Printing.PrintServer.GetPrintQueues%2A> method of a <xref:System.Printing.PrintServer> object and the <xref:System.Printing.EnumeratedPrintQueueTypes> enumeration.</span></span>  
+# <a name="how-to-enumerate-a-subset-of-print-queues"></a><span data-ttu-id="1d067-102">Jak wykazać podzbiór kolejek drukowania</span><span class="sxs-lookup"><span data-stu-id="1d067-102">How to: Enumerate a Subset of Print Queues</span></span>
+<span data-ttu-id="1d067-103">Powszechną sytuacją, jaką specjaliści z technologią informatyczną (IT) do zarządzania zestawem drukarek w całej firmie jest generowanie listy drukarek mających pewne cechy.</span><span class="sxs-lookup"><span data-stu-id="1d067-103">A common situation faced by information technology (IT) professionals managing a company-wide set of printers is to generate a list of printers having certain characteristics.</span></span> <span data-ttu-id="1d067-104">Ta funkcja jest udostępniana przez metodę <xref:System.Printing.PrintServer.GetPrintQueues%2A> obiektu <xref:System.Printing.PrintServer> i wyliczenia <xref:System.Printing.EnumeratedPrintQueueTypes>.</span><span class="sxs-lookup"><span data-stu-id="1d067-104">This functionality is provided by the <xref:System.Printing.PrintServer.GetPrintQueues%2A> method of a <xref:System.Printing.PrintServer> object and the <xref:System.Printing.EnumeratedPrintQueueTypes> enumeration.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="bc16b-105">Przykład</span><span class="sxs-lookup"><span data-stu-id="bc16b-105">Example</span></span>  
- <span data-ttu-id="bc16b-106">W poniższym przykładzie na początku kodu, tworząc tablicę flagi określające właściwości kolejki wydruku, którą chcemy, aby wyświetlić listę.</span><span class="sxs-lookup"><span data-stu-id="bc16b-106">In the example below, the code begins by creating an array of flags that specify the characteristics of the print queues we want to list.</span></span> <span data-ttu-id="bc16b-107">W tym przykładzie firma Microsoft szuka kolejki wydruku, są instalowane lokalnie na serwerze wydruku, które są udostępniane.</span><span class="sxs-lookup"><span data-stu-id="bc16b-107">In this example, we are looking for print queues that are installed locally on the print server and are shared.</span></span> <span data-ttu-id="bc16b-108"><xref:System.Printing.EnumeratedPrintQueueTypes> Wyliczenia zawiera wiele innych możliwości.</span><span class="sxs-lookup"><span data-stu-id="bc16b-108">The <xref:System.Printing.EnumeratedPrintQueueTypes> enumeration provides many other possibilities.</span></span>  
+## <a name="example"></a><span data-ttu-id="1d067-105">Przykład</span><span class="sxs-lookup"><span data-stu-id="1d067-105">Example</span></span>  
+ <span data-ttu-id="1d067-106">W poniższym przykładzie kod rozpoczyna się od utworzenia tablicy flag, które określają charakterystyki kolejek wydruku, które chcemy wyświetlić.</span><span class="sxs-lookup"><span data-stu-id="1d067-106">In the example below, the code begins by creating an array of flags that specify the characteristics of the print queues we want to list.</span></span> <span data-ttu-id="1d067-107">W tym przykładzie szukasz kolejek wydruku zainstalowanych lokalnie na serwerze wydruku i są one udostępnione.</span><span class="sxs-lookup"><span data-stu-id="1d067-107">In this example, we are looking for print queues that are installed locally on the print server and are shared.</span></span> <span data-ttu-id="1d067-108">Wyliczenie <xref:System.Printing.EnumeratedPrintQueueTypes> zapewnia wiele innych możliwości.</span><span class="sxs-lookup"><span data-stu-id="1d067-108">The <xref:System.Printing.EnumeratedPrintQueueTypes> enumeration provides many other possibilities.</span></span>  
   
- <span data-ttu-id="bc16b-109">Następnie kod tworzy <xref:System.Printing.LocalPrintServer> obiektu z klasą pochodną <xref:System.Printing.PrintServer>.</span><span class="sxs-lookup"><span data-stu-id="bc16b-109">The code then creates a <xref:System.Printing.LocalPrintServer> object, a class derived from <xref:System.Printing.PrintServer>.</span></span> <span data-ttu-id="bc16b-110">Lokalny serwer wydruku jest komputer, na którym działa aplikacja.</span><span class="sxs-lookup"><span data-stu-id="bc16b-110">The local print server is the computer on which the application is running.</span></span>  
+ <span data-ttu-id="1d067-109">Następnie kod tworzy obiekt <xref:System.Printing.LocalPrintServer>, klasy pochodnej z <xref:System.Printing.PrintServer>.</span><span class="sxs-lookup"><span data-stu-id="1d067-109">The code then creates a <xref:System.Printing.LocalPrintServer> object, a class derived from <xref:System.Printing.PrintServer>.</span></span> <span data-ttu-id="1d067-110">Lokalny serwer wydruku to komputer, na którym działa aplikacja.</span><span class="sxs-lookup"><span data-stu-id="1d067-110">The local print server is the computer on which the application is running.</span></span>  
   
- <span data-ttu-id="bc16b-111">Ostatnim krokiem znaczące służy do przekazywania macierzy <xref:System.Printing.PrintServer.GetPrintQueues%2A> metody.</span><span class="sxs-lookup"><span data-stu-id="bc16b-111">The last significant step is to pass the array to the <xref:System.Printing.PrintServer.GetPrintQueues%2A> method.</span></span>  
+ <span data-ttu-id="1d067-111">Ostatni znaczący krok polega na przejściu tablicy do metody <xref:System.Printing.PrintServer.GetPrintQueues%2A>.</span><span class="sxs-lookup"><span data-stu-id="1d067-111">The last significant step is to pass the array to the <xref:System.Printing.PrintServer.GetPrintQueues%2A> method.</span></span>  
   
- <span data-ttu-id="bc16b-112">Na koniec wyniki są prezentowane użytkownikowi.</span><span class="sxs-lookup"><span data-stu-id="bc16b-112">Finally, the results are presented to the user.</span></span>  
+ <span data-ttu-id="1d067-112">Na koniec wyniki są prezentowane użytkownikowi.</span><span class="sxs-lookup"><span data-stu-id="1d067-112">Finally, the results are presented to the user.</span></span>  
   
  [!code-cpp[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](~/samples/snippets/cpp/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/CPP/Program.cpp#listsubsetofprintqueues)]
  [!code-csharp[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](~/samples/snippets/csharp/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/CSharp/Program.cs#listsubsetofprintqueues)]
  [!code-vb[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/visualbasic/program.vb#listsubsetofprintqueues)]  
   
- <span data-ttu-id="bc16b-113">W tym przykładzie można rozszerzyć przez `foreach` pętli, który przeprowadza użytkownika przez proces każdej kolejki wydruku do dalszego kontroli.</span><span class="sxs-lookup"><span data-stu-id="bc16b-113">You could extend this example by having the `foreach` loop that steps through each print queue do further screening.</span></span> <span data-ttu-id="bc16b-114">Na przykład użytkownik może sprawia, drukarki, które nie obsługują drukowania dwustronnego przez wywołanie pętli każdej kolejki wydruku <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A> metody i testowania zwracanej wartości na obecność dupleksu.</span><span class="sxs-lookup"><span data-stu-id="bc16b-114">For example, you could screen out printers that do not support two-sided printing by having the loop call each print queue's <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A> method and test the returned value for the presence of duplexing.</span></span>  
+ <span data-ttu-id="1d067-113">Możesz rozszerzyć ten przykład, wykonując pętlę `foreach`, która przechodzi przez każdą kolejkę wydruku w celu dalszej kontroli.</span><span class="sxs-lookup"><span data-stu-id="1d067-113">You could extend this example by having the `foreach` loop that steps through each print queue do further screening.</span></span> <span data-ttu-id="1d067-114">Na przykład można wypróbować drukarki, które nie obsługują drukowania dwustronnego, ponieważ pętla wywołuje każdą metodę <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A> kolejki wydruku i testuje zwracaną wartość dla obecności dupleksu.</span><span class="sxs-lookup"><span data-stu-id="1d067-114">For example, you could screen out printers that do not support two-sided printing by having the loop call each print queue's <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A> method and test the returned value for the presence of duplexing.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bc16b-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="bc16b-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1d067-115">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="1d067-115">See also</span></span>
 
 - <xref:System.Printing.PrintServer.GetPrintQueues%2A>
 - <xref:System.Printing.PrintServer>
@@ -42,6 +42,6 @@ ms.locfileid: "61776067"
 - <xref:System.Printing.EnumeratedPrintQueueTypes>
 - <xref:System.Printing.PrintQueue>
 - <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>
-- [<span data-ttu-id="bc16b-116">Dokumenty w WPF</span><span class="sxs-lookup"><span data-stu-id="bc16b-116">Documents in WPF</span></span>](documents-in-wpf.md)
-- [<span data-ttu-id="bc16b-117">Przegląd drukowania</span><span class="sxs-lookup"><span data-stu-id="bc16b-117">Printing Overview</span></span>](printing-overview.md)
-- [<span data-ttu-id="bc16b-118">Microsoft XPS Document Writer</span><span class="sxs-lookup"><span data-stu-id="bc16b-118">Microsoft XPS Document Writer</span></span>](https://go.microsoft.com/fwlink/?LinkId=147319)
+- [<span data-ttu-id="1d067-116">Dokumenty w WPF</span><span class="sxs-lookup"><span data-stu-id="1d067-116">Documents in WPF</span></span>](documents-in-wpf.md)
+- [<span data-ttu-id="1d067-117">Przegląd drukowania</span><span class="sxs-lookup"><span data-stu-id="1d067-117">Printing Overview</span></span>](printing-overview.md)
+- [<span data-ttu-id="1d067-118">Moduł zapisywania dokumentów XPS firmy Microsoft</span><span class="sxs-lookup"><span data-stu-id="1d067-118">Microsoft XPS Document Writer</span></span>](/windows/win32/printdocs/microsoft-xps-document-writer)

@@ -1313,7 +1313,7 @@
         - name: Omówienie
           displayName: keywords
           href: language-reference/keywords/index.md
-        - name: Typy wbudowane
+        - name: Types
           items:
             - name: Typy wartości
               items:
@@ -1357,14 +1357,12 @@
               href: language-reference/keywords/void.md
             - name: var
               href: language-reference/keywords/var.md
+            - name: Typy wbudowane
+              href: language-reference/builtin-types/built-in-types.md
             - name: Typy niezarządzane
               href: language-reference/builtin-types/unmanaged-types.md
             - name: Wartości domyślne
               href: language-reference/builtin-types/default-values.md
-            - name: Tabele odwołań dla typów
-              items:
-                - name: Tabela typów wbudowanych
-                  href: language-reference/keywords/built-in-types-table.md
         - name: Modyfikatory
           items:
             - name: Modyfikatory dostępu

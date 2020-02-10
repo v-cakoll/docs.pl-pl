@@ -6,25 +6,25 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: a346a19400c1d2c536fff56ed7fb6dc27570df29
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 597bfd2c16f6289a2bcb931c3896918dcb6d9a4d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965831"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094140"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework Przewodnik wdrażania dla deweloperów
 Ten temat zawiera informacje dla deweloperów, którzy chcą zainstalować dowolną wersję .NET Framework z .NET Framework 4,5, aby [!INCLUDE[net_current](../../../includes/net-current-version.md)] z ich aplikacjami.
 
 Pakiety i pakiety językowe pakietu redystrybucyjnego można pobrać dla .NET Framework ze stron pobierania:
 
-- [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+- [.NET Framework 4,8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 - [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472)
 - [.NET Framework 4.7.1](https://dotnet.microsoft.com/download/dotnet-framework/net471)
-- [.NET Framework 4.7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
+- [.NET Framework 4,7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
 - [.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462)
 - [.NET Framework 4.6.1](https://dotnet.microsoft.com/download/dotnet-framework/net461)
-- [.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46)
+- [.NET Framework 4,6](https://dotnet.microsoft.com/download/dotnet-framework/net46)
 - [.NET Framework 4.5.2](https://dotnet.microsoft.com/download/dotnet-framework/net452)
 - [.NET Framework 4.5.1](https://dotnet.microsoft.com/download/dotnet-framework/net451)
 - [.NET Framework 4.5](https://dotnet.microsoft.com/download/dotnet-framework/net45)
@@ -65,7 +65,7 @@ Gdy wszystko będzie gotowe do opublikowania aplikacji na serwerze sieci Web lub
 
 ||Instalator sieci Web|Instalator w trybie offline|
 |-|-------------------|-----------------------|
-|Wymagane jest połączenie z Internetem?|Tak|Nie|
+|Wymagane jest połączenie z Internetem?|Yes|Nie|
 |Rozmiar pobieranych plików|Mniejsze (dotyczy tylko Instalatora platformy docelowej) *|Krocz|
 |Pakiety językowe|Included**|Należy [zainstalować oddzielnie](#chain_langpack), chyba że jest używany pakiet przeznaczony dla wszystkich systemów operacyjnych|
 |Metoda wdrażania|Obsługuje wszystkie metody:<br /><br />- [ClickOnce](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Instalator Windows XML (WiX)](#wix)<br />- [instalacji ręcznej](#installing_manually)<br />[Konfiguracja Niestandardowa - (tworzenie łańcuchów)](#chaining)|Obsługuje wszystkie metody:<br /><br /> - [ClickOnce](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Instalator Windows XML (WiX)](#wix)<br />- [instalacji ręcznej](#installing_manually)<br />[Konfiguracja Niestandardowa - (tworzenie łańcuchów)](#chaining)|
@@ -274,8 +274,8 @@ Na przykład w celu wykrycia, czy pełny japoński pakiet językowy (LCID = 1041
 
 | | |
 |-|-|
-| Key | HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041 |
-| Nazwa | Wydanie |
+| Klucz | HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041 |
+| Name (Nazwa) | Release |
 | Typ | DWORD |
 
 Aby określić, czy końcowa wersja pakietu językowego jest zainstalowana dla określonej wersji .NET Framework od 4,5 do 4.7.2, sprawdź wartość DWORD klucza wydania opisanej w poprzedniej sekcji, co [wykrywa .NET Framework](#detect_net).
@@ -286,13 +286,13 @@ Aby określić, czy końcowa wersja pakietu językowego jest zainstalowana dla o
 
 .NET Framework zawiera zestaw autonomicznych plików wykonywalnych pakietu językowego, które zawierają zlokalizowane zasoby dla określonych kultur. Pakiety językowe są dostępne na stronie pobierania .NET Framework:
 
-- [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+- [.NET Framework 4,8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 - [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472)
 - [.NET Framework 4.7.1](https://dotnet.microsoft.com/download/dotnet-framework/net471)
-- [.NET Framework 4.7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
+- [.NET Framework 4,7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
 - [.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462)
 - [.NET Framework 4.6.1](https://dotnet.microsoft.com/download/dotnet-framework/net461)
-- [.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46)
+- [.NET Framework 4,6](https://dotnet.microsoft.com/download/dotnet-framework/net46)
 - [.NET Framework 4.5.2](https://dotnet.microsoft.com/download/dotnet-framework/net452)
 - [.NET Framework 4.5.1](https://dotnet.microsoft.com/download/dotnet-framework/net451)
 - [.NET Framework 4.5](https://dotnet.microsoft.com/download/dotnet-framework/net45)
@@ -359,16 +359,16 @@ W poniższej tabeli wymieniono opcje, które można uwzględnić podczas tworzen
 |Opcja|Opis|
 |------------|-----------------|
 |**/CEIPConsent**|Zastępuje domyślne zachowanie i wysyła anonimowe Opinie do firmy Microsoft w celu poprawy przyszłych wdrożeń. Tej opcji można użyć tylko wtedy, gdy Instalator monituje o zgodę, a użytkownik udziela uprawnienia do wysyłania anonimowych opinii do firmy Microsoft.|
-|**/chainingpackage** `packageName`|Określa nazwę pliku wykonywalnego, który wykonuje łańcuch. Te informacje są wysyłane do firmy Microsoft jako anonimowe Opinie pomagające ulepszyć przyszłe wdrożenia.<br /><br /> Jeśli nazwa pakietu zawiera spacje, użyj podwójnych cudzysłowów jako ograniczników; na przykład: **/chainingpackage "Publishing"** . Aby zapoznać się z przykładem pakietu łańcucha, zobacz [pobieranie informacji o postępie z pakietu instalacyjnego](https://go.microsoft.com/fwlink/?LinkId=181926) w bibliotece MSDN.|
-|**/LCID**  `LCID`<br /><br /> gdzie `LCID` określa identyfikator ustawień regionalnych (zobacz [obsługiwane języki](#supported-languages))|Instaluje pakiet językowy określony przez `LCID` i wymusza wyświetlanie wyświetlanego interfejsu użytkownika w tym języku, chyba że jest ustawiony tryb cichy.<br /><br /> W przypadku Instalatora sieci Web Ta opcja powoduje zainstalowanie pakietu językowego z sieci Web. **Uwaga:**  Tej opcji należy użyć tylko w przypadku Instalatora sieci Web.|
+|**/chainingpackage** `packageName`|Określa nazwę pliku wykonywalnego, który wykonuje łańcuch. Te informacje są wysyłane do firmy Microsoft jako anonimowe Opinie pomagające ulepszyć przyszłe wdrożenia.<br /><br /> Jeśli nazwa pakietu zawiera spacje, użyj podwójnych cudzysłowów jako ograniczników; na przykład: **/chainingpackage "Publishing"** . Aby zapoznać się z przykładem pakietu łańcucha, zobacz [pobieranie informacji o postępie z pakietu instalacyjnego](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100)).|
+|**/LCID**`LCID`<br /><br /> gdzie `LCID` określa identyfikator ustawień regionalnych (zobacz [obsługiwane języki](#supported-languages))|Instaluje pakiet językowy określony przez `LCID` i wymusza wyświetlanie wyświetlanego interfejsu użytkownika w tym języku, chyba że jest ustawiony tryb cichy.<br /><br /> W przypadku Instalatora sieci Web Ta opcja powoduje zainstalowanie pakietu językowego z sieci Web. **Uwaga:**  Tej opcji należy użyć tylko w przypadku Instalatora sieci Web.|
 |`file` &#124; /log `folder`|Określa lokalizację pliku dziennika. Domyślnie jest to folder tymczasowy procesu, a domyślna nazwa pliku jest oparta na pakiecie. Jeśli rozszerzenie pliku to. txt, tworzony jest Dziennik tekstowy. Jeśli określisz dowolne inne rozszerzenie lub brak rozszerzenia, zostanie utworzony dziennik HTML.|
 |**/msioptions**|Określa opcje do przesłania dla elementów. msi i. msp; na przykład: `/msioptions "PROPERTY1='Value'"`.|
-|**/ norestart /**|Uniemożliwia automatyczne ponowne uruchomienie programu instalacyjnego. Jeśli używasz tej opcji, aplikacja łańcucha musi przechwycić Kod powrotu i obsłużyć ponowny rozruch (zobacz [pobieranie informacji o postępie z pakietu instalacyjnego](https://go.microsoft.com/fwlink/?LinkId=179606) w bibliotece MSDN).|
-|**/ passive**|Ustawia tryb pasywny. Wyświetla pasek postępu, aby wskazać, że instalacja jest w toku, ale nie wyświetla do użytkownika żadnych komunikatów o komunikatach lub komunikatach o błędach. W tym trybie, w przypadku łańcucha przez program instalacyjny, pakiet łańcucha musi obsługiwać [kody powrotne](#return-codes).|
+|**/norestart**|Uniemożliwia automatyczne ponowne uruchomienie programu instalacyjnego. Jeśli używasz tej opcji, aplikacja łańcucha musi przechwycić Kod powrotu i obsłużyć ponowny rozruch (zobacz [pobieranie informacji o postępie z pakietu instalacyjnego](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100))).|
+|**/Passive**|Ustawia tryb pasywny. Wyświetla pasek postępu, aby wskazać, że instalacja jest w toku, ale nie wyświetla do użytkownika żadnych komunikatów o komunikatach lub komunikatach o błędach. W tym trybie, w przypadku łańcucha przez program instalacyjny, pakiet łańcucha musi obsługiwać [kody powrotne](#return-codes).|
 |**/pipe**|Tworzy kanał komunikacyjny, aby umożliwić uzyskiwanie postępu przy użyciu pakietu łańcucha.|
 |**/promptrestart**|Tylko tryb pasywny, jeśli program instalacyjny wymaga ponownego uruchomienia systemu, monituje użytkownika. Ta opcja wymaga interakcji użytkownika, jeśli jest wymagane ponowne uruchomienie komputera.|
-|**/q**|Ustawia tryb cichy.|
-|**/ Repair**|Wyzwala funkcje naprawy.|
+|**parametru**|Ustawia tryb cichy.|
+|**/Repair**|Wyzwala funkcje naprawy.|
 |**/serialdownload**|Wymusza instalację dopiero po pobraniu pakietu.|
 |**/showfinalerror**|Ustawia tryb pasywny. Wyświetla błędy tylko wtedy, gdy instalacja nie powiedzie się. Ta opcja wymaga interakcji użytkownika, jeśli instalacja nie powiedzie się.|
 |**/showrmui**|Używane tylko z opcją **/Passive** . Wyświetla okno komunikatu, które monituje użytkowników o zamknięcie .NET Framework aktualnie uruchomionych aplikacji. To okno komunikatu działa tak samo w trybie pasywnym i niepasywnym.|
@@ -382,29 +382,29 @@ W poniższej tabeli wymieniono pakiety językowe .NET Framework dostępne dla .N
 |----------|--------------------------------|-------------|
 |1025|Arabski — Arabia Saudyjska|ty|
 |1028|Chiński (tradycyjny)|zh-Hant|
-|1029|czeski|Rejestr|
-|1030|duński|da|
+|1029|Czeski|Rejestr|
+|1030|Duński|da|
 |1031|Niemiecki (Niemcy)|Ukryj|
-|1032|grecki|el|
-|1035|fiński|fi|
+|1032|Grecki|el|
+|1035|Fiński|fi|
 |1036|Francuski (Francja)|fr|
-|1037|hebrajski|Przewodniczący|
-|1038|węgierski|hu|
+|1037|Hebrajski|Przewodniczący|
+|1038|Węgierski|hu|
 |1040|Włoski (Włochy)|go|
-|1041|japoński|ja|
-|1042|koreański|ko|
+|1041|Japoński|ja|
+|1042|Koreański|ko|
 |1043|Holenderski (Holandia)|nl|
-|1044|Norweski (bokmål)|Znaleziono|
-|1045|polski|pl|
+|1044|Norweski (bokmål)|nie|
+|1045|Polski|pl|
 |1046|Portugalski (Brazylia)|pt-BR|
-|1049|rosyjski|ru|
-|1053|szwedzki|sv|
-|1055|turecki|zdawczy|
+|1049|Rosyjski|ru|
+|1053|Szwedzki|sv|
+|1055|Turecki|zdawczy|
 |2052|Chiński (uproszczony)|zh-Hans|
 |2070|Portugalski (Portugalia)|pt-PT|
 |3082|Hiszpański — Hiszpania (nowoczesny)|AK|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Przewodnik wdrażania dla administratorów](guide-for-administrators.md)
 - [Wymagania systemowe](../get-started/system-requirements.md)

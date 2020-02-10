@@ -7,16 +7,16 @@ helpviewer_keywords:
 - WPF retargeting changes
 - WPF pointer-based touch and stylus stack
 ms.assetid: f99126b5-c396-48f9-8233-8f36b4c9e717
-ms.openlocfilehash: 6b3e8068be2f5ed82c483b760fe100ea0a751588
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 023c38f66611bd0022699d3f62d90c3923585012
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73457855"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094478"
 ---
 # <a name="mitigation-pointer-based-touch-and-stylus-support"></a>Środki zaradcze: Obsługa dotykowa i pióra oparta na wskaźnikach
 
-Aplikacje WPF, które są przeznaczone dla .NET Framework 4,7 i działają w systemach Windows, począwszy od aktualizacji systemu Windows 10 Creators, mogą włączyć opcjonalny stos dotykowy/pióra WPF oparty na `WM_POINTER`.
+Aplikacje WPF, które są przeznaczone dla .NET Framework 4,7 i działają w systemie Windows, począwszy od aktualizacji systemu Windows 10 Creators, mogą włączyć opcjonalny stos dotykowy/pióra WPF oparty na `WM_POINTER`.
 
 ## <a name="impact"></a>Wpływ
 
@@ -38,9 +38,9 @@ Poniżej znajdują się obecnie znane problemy z opcjonalnym stosem dotykowy/pi�
 
       Może to spowodować, że aplikacja przestanie odpowiadać, dopóki nie zostanie wykryta mysz. Zamiast tego deweloperzy powinni inicjować przeciąganie i upuszczanie ze zdarzeń myszy.
 
-## <a name="opting-in-to-wm_pointer-based-touchstylus-support"></a>Możliwość skorzystania z obsługi dotyku i pióra na WM_POINTER
+## <a name="opting-in-to-wm_pointer-based-touchstylus-support"></a>Możliwość wypróbowania obsługi dotyku i pióra opartego na WM_POINTER
 
-Deweloperzy, którzy chcą włączyć ten stos, mogą dodać następujące elementy do pliku App. config aplikacji:
+Deweloperzy, którzy chcą włączyć ten stos, mogą dodać następujące elementy do pliku *App. config* aplikacji.
 
 ```xml
 <configuration>
@@ -52,6 +52,6 @@ Deweloperzy, którzy chcą włączyć ten stos, mogą dodać następujące eleme
 
 Usunięcie tego wpisu lub ustawienie jego wartości `false` powoduje wyłączenie tego opcjonalnego stosu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Zgodność aplikacji](application-compatibility.md)

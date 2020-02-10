@@ -2,12 +2,12 @@
 title: Zewnętrzne przybornik zestawu reguł
 ms.date: 03/30/2017
 ms.assetid: a306d283-a031-475e-aa01-9ae86e7adcb0
-ms.openlocfilehash: b07d2b63d9f3d98b8f08eb697a8d688d8fac1962
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: eb59b02d469788b23126f4e02c5b7ae5a63081f0
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710899"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094673"
 ---
 # <a name="external-ruleset-toolkit"></a>Zewnętrzne przybornik zestawu reguł
 
@@ -16,7 +16,7 @@ Zwykle gdy reguły są używane w aplikacji przepływu pracy, reguły są częś
 Zewnętrzny zestaw narzędzi Toolkit zawiera narzędzie oparte na Windows Forms, które służy do zarządzania wersjami zestawów reguł w bazie danych i ich edytowania. Obejmuje ona również działanie i usługę hosta do wykonywania tych reguł.
 
 > [!NOTE]
-> Ten przykład wymaga [Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=96181).
+> Ten przykład wymaga [Microsoft SQL Server](/sql).
 
 Program Visual Studio udostępnia Edytor zestawu reguł w ramach Windows Workflow Foundation (WF). Możesz uruchomić tego edytora przez dwukrotne kliknięcie działania `Policy` w przepływie pracy; deserializacji zdefiniowanego obiektu zestawu reguł do pliku reguł skojarzonego z przepływem pracy (działanie `Policy` uruchamia wystąpienie zestawu reguł dla przepływu pracy). Plik. Rules jest kompilowany do zestawu jako zasób podczas budowania projektu przepływu pracy.
 

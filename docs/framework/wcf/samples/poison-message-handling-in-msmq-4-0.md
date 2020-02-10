@@ -2,28 +2,28 @@
 title: Obsługa zanieczyszczonych komunikatów w usłudze MSMQ 4.0
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: cc4da0deea0de2cd8b3bb8e8f2ba9b8a17e3cc60
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 0a9d4ec9657bacdbcb1273791dc7a593a9565c25
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76919396"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094959"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Obsługa zanieczyszczonych komunikatów w usłudze MSMQ 4.0
 Ten przykład pokazuje, jak przeprowadzić obsługę skażonych komunikatów w usłudze. Ten przykład jest oparty na przykładowym [wiązaniem usługi MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) . Ten przykład używa `netMsmqBinding`. Usługa to samodzielna aplikacja konsolowa, która umożliwia obserwowanie usługi do odebrania komunikatów znajdujących się w kolejce.
 
  W kolejce komunikacja klient komunikuje się z usługą przy użyciu kolejki. Dokładniej, klient wysyła komunikaty do kolejki. Usługa odbiera komunikaty z kolejki. W związku z tym usługa i klient nie muszą być uruchomione w tym samym czasie w celu komunikowania się przy użyciu kolejki.
 
- Trująca wiadomość jest komunikatem, który jest wielokrotnie odczytywany z kolejki, gdy usługa odczytująca wiadomość nie może przetworzyć komunikatu i w związku z tym kończy transakcję, w ramach której wiadomość jest odczytywana. W takich przypadkach komunikat zostanie ponowiony ponownie. Może to teoretycznie potrwać w razie wystąpienia problemu z komunikatem. Należy zauważyć, że może się to zdarzyć tylko w przypadku używania transakcji do odczytu z kolejki i wywołania operacji usługi.
+ Trująca wiadomość jest komunikatem, który jest wielokrotnie odczytywany z kolejki, gdy usługa odczytująca wiadomość nie może przetworzyć komunikatu i w związku z tym kończy transakcję, w ramach której wiadomość jest odczytywana. W takich przypadkach komunikat zostanie ponowiony ponownie. Może to teoretycznie potrwać w razie wystąpienia problemu z komunikatem. Ta sytuacja może wystąpić tylko w przypadku używania transakcji do odczytu z kolejki i wywołania operacji usługi.
 
  Na podstawie wersji usługi MSMQ, usługa msmqbinding obsługuje ograniczone wykrywanie do pełnego wykrywania skażonych komunikatów. Po wykryciu komunikatu jako trującego można go obsłużyć na kilka sposobów. Ponownie na podstawie wersji usługi MSMQ, usługa msmqbinding obsługuje ograniczoną obsługę do pełnej obsługi skażonych komunikatów.
 
- Ten przykład ilustruje ograniczoną liczbę trujących obiektów zapewnianych na platformie Windows Server 2003 i Windows XP oraz w pełnych obiektach trujących zapewnianych w systemie Windows Vista. W obu przykładach celem jest przeniesienie skażonego komunikatu z kolejki do innej kolejki, która następnie może być serwisowana przez trującą usługę komunikatów.
+ Ten przykład ilustruje ograniczoną liczbę trujących obiektów zapewnianych na platformie Windows Server 2003 i Windows XP oraz w pełnych obiektach trujących zapewnianych w systemie Windows Vista. W obu przykładach celem jest przeniesienie skażonego komunikatu z kolejki do innej kolejki. Kolejka może być następnie serwisowana przez trującą usługę komunikatów.
 
 ## <a name="msmq-v40-poison-handling-sample"></a>Przykład obsługi trującej usługi MSMQ v 4.0
  W systemie Windows Vista usługa MSMQ udostępnia funkcję podkolejki trującej, która może być używana do przechowywania skażonych komunikatów. Ten przykład ilustruje najlepsze rozwiązanie w zakresie postępowania z skażonymi komunikatami przy użyciu systemu Windows Vista.
 
- Wykrywanie skażonych komunikatów w systemie Windows Vista jest dość zaawansowane. Istnieją 3 właściwości, które pomagają w wykrywaniu. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> to liczba przypadków, w których dany komunikat jest ponownie odczytywany z kolejki i wysyłany do aplikacji w celu przetworzenia. Komunikat jest ponownie odczytywany z kolejki, gdy zostanie przywrócony do kolejki, ponieważ nie można wysłać komunikatu do aplikacji lub aplikacja Wycofuje transakcję w operacji usługi. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> to liczba przenoszonych komunikatów do kolejki ponownych prób. Po osiągnięciu <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> wiadomość zostanie przeniesiona do kolejki ponownych prób. Właściwość <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> jest opóźnieniem, po którym komunikat jest przenoszony z kolejki ponownych prób z powrotem do kolejki głównej. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> zostanie zresetowana do wartości 0. Wiadomość zostanie ponowiona. Jeśli wszystkie próby odczytu komunikatu zakończyły się niepowodzeniem, komunikat jest oznaczony jako trujący.
+ Wykrywanie skażonych komunikatów w systemie Windows Vista jest zaawansowana. Istnieją 3 właściwości, które pomagają w wykrywaniu. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> to liczba przypadków, w których dany komunikat jest ponownie odczytywany z kolejki i wysyłany do aplikacji w celu przetworzenia. Komunikat jest ponownie odczytywany z kolejki, gdy zostanie przywrócony do kolejki, ponieważ nie można wysłać komunikatu do aplikacji lub aplikacja Wycofuje transakcję w operacji usługi. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> to liczba przenoszonych komunikatów do kolejki ponownych prób. Po osiągnięciu <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> wiadomość zostanie przeniesiona do kolejki ponownych prób. Właściwość <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> jest opóźnieniem, po którym komunikat jest przenoszony z kolejki ponownych prób z powrotem do kolejki głównej. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> zostanie zresetowana do wartości 0. Wiadomość zostanie ponowiona. Jeśli wszystkie próby odczytu komunikatu zakończyły się niepowodzeniem, komunikat jest oznaczony jako trujący.
 
  Gdy wiadomość zostanie oznaczona jako trująca, komunikat jest rozpatrywany zgodnie z ustawieniami w <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> Wyliczenie. Aby ponownie powtórzyć możliwe wartości:
 
@@ -31,11 +31,11 @@ Ten przykład pokazuje, jak przeprowadzić obsługę skażonych komunikatów w u
 
 - Upuść:, aby usunąć komunikat.
 
-- Przenieś: Aby przenieść komunikat do podkolejki trujących komunikatów. Ta wartość jest dostępna tylko w systemie Windows Vista.
+- Przenieś: Aby przenieść komunikat do podkolejki trującej wiadomości. Ta wartość jest dostępna tylko w systemie Windows Vista.
 
 - Odrzuć: aby odrzucić komunikat, Wyślij komunikat z powrotem do kolejki utraconych wiadomości nadawcy. Ta wartość jest dostępna tylko w systemie Windows Vista.
 
- Przykład demonstruje użycie `Move` dyspozycji dla trującego komunikatu. `Move` powoduje, że komunikat przejdzie do podkolejki trującej.
+ Przykład demonstruje użycie `Move` dyspozycji dla trującego komunikatu. `Move` powoduje, że wiadomość zostanie przeniesiona do podrzędnej kolejki trującej.
 
  Kontrakt usługi jest `IOrderProcessor`, który definiuje usługę jednokierunkową, która jest odpowiednia do użycia z kolejkami.
 
@@ -48,7 +48,7 @@ public interface IOrderProcessor
 }
 ```
 
- Operacja usługi wyświetla komunikat informujący o przetwarzaniu zamówienia. Aby zademonstrować działanie trującej wiadomości, operacja usługi `SubmitPurchaseOrder` zgłasza wyjątek, aby wycofać transakcję w losowym wywołaniu usługi. Powoduje to, że komunikat zostanie umieszczony w kolejce. Ostatecznie wiadomość jest oznaczona jako trująca. Konfiguracja jest ustawiona tak, aby przenieść skażony komunikat do podkolejki trującej.
+ Operacja usługi wyświetla komunikat informujący o przetwarzaniu zamówienia. Aby zademonstrować działanie trującej wiadomości, operacja usługi `SubmitPurchaseOrder` zgłasza wyjątek, aby wycofać transakcję w losowym wywołaniu usługi. Powoduje to, że komunikat zostanie umieszczony w kolejce. Ostatecznie wiadomość jest oznaczona jako trująca. Konfiguracja jest ustawiana na przeniesienie skażonego komunikatu do podkolejki trującej.
 
 ```csharp
 // Service class that implements the service contract.
@@ -206,7 +206,7 @@ public class OrderProcessorService : IOrderProcessor
     }
 ```
 
- W przeciwieństwie do usługi przetwarzania zamówień, która odczytuje komunikaty z kolejki kolejności, usługa Trująca wiadomość odczytuje komunikaty z podkolejki trującej. Kolejka Trująca jest podkolejki kolejki głównej, nosi nazwę "Trująca" i jest generowana automatycznie przez usługę MSMQ. Aby uzyskać do niego dostęp, podaj nazwę kolejki głównej, po której następuje ";" i nazwę kolejki podrzędnej, w tym przypadku "trujące", jak pokazano w poniższej konfiguracji przykładowej.
+ W przeciwieństwie do usługi przetwarzania zamówień, która odczytuje komunikaty z kolejki kolejności, usługa Trująca wiadomość odczytuje komunikaty z podkolejki trującej. Kolejka Trująca jest podkolejką kolejki głównej, nosi nazwę "Trująca" i jest generowana automatycznie przez usługę MSMQ. Aby uzyskać do niego dostęp, podaj nazwę kolejki głównej, po której następuje ";" i nazwę kolejki podrzędnej, w tym przypadku "trujące", jak pokazano w poniższej konfiguracji przykładowej.
 
 > [!NOTE]
 > W przykładzie dla MSMQ v 3.0 nazwa kolejki trującej nie jest kolejką podrzędną, a nie kolejkę, do której przeniesiono komunikat.

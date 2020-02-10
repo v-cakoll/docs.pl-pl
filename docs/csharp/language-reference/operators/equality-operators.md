@@ -15,12 +15,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 6771edcca8159b0805018c16167b25c287d3152c
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 14bb8227a4a6c8beff6ab04c58d8e1a43db69856
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743742"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093139"
 ---
 # <a name="equality-operators-c-reference"></a>Operatory równości (C# odwołanie)
 
@@ -75,7 +75,7 @@ Delegaty wytwarzane z oceny semantycznie identycznych [wyrażeń lambda](../../p
 
 ## <a name="inequality-operator-"></a>Operator nierówności! =
 
-Operator nierówności `!=` zwraca `true`, jeśli jego operandy nie są równe, `false` w przeciwnym razie. Dla argumentów operacji [typu wbudowanego](../keywords/built-in-types-table.md)wyrażenie `x != y` daje ten sam wynik, co `!(x == y)`wyrażenia. Aby uzyskać więcej informacji na temat równości typów, zobacz sekcję [operator równości](#equality-operator-) .
+Operator nierówności `!=` zwraca `true`, jeśli jego operandy nie są równe, `false` w przeciwnym razie. Dla argumentów operacji [typu wbudowanego](../builtin-types/built-in-types.md)wyrażenie `x != y` daje ten sam wynik, co `!(x == y)`wyrażenia. Aby uzyskać więcej informacji na temat równości typów, zobacz sekcję [operator równości](#equality-operator-) .
 
 Poniższy przykład ilustruje użycie operatora `!=`:
 
@@ -89,7 +89,7 @@ Typ zdefiniowany przez użytkownika może [przeciążać](operator-overloading.m
 
 Aby uzyskać więcej informacji, zobacz sekcję [Operatory relacyjne i testowe typu](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators) w [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [C#odwoła](../index.md)
 - [Operatory języka C#](index.md)

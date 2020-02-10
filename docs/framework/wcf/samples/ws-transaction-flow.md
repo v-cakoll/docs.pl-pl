@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-ms.openlocfilehash: db23c250014006655fa51ee5a2e5b54e15e4f964
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 781934e9ab27f761e71841c2edc509f9b8022aa7
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714587"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094751"
 ---
 # <a name="ws-transaction-flow"></a>Przepływ transakcji WS
 Ten przykład ilustruje użycie transakcji skoordynowanej przez klienta oraz opcji klienta i serwera dla przepływu transakcji przy użyciu protokołu transakcji WS-lub OleTransactions. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) , który implementuje usługę kalkulatora, ale operacje są przypisane do zademonstrowania użycia `TransactionFlowAttribute` z wyliczeniem **parametru TransactionFlowOption** w celu określenia, jaki przepływ transakcji jest włączony. W ramach przetworzonej transakcji dziennik żądanych operacji jest zapisywana w bazie danych i utrzymuje się do momentu ukończenia transakcji skoordynowanej klienta — Jeśli transakcja klienta nie zostanie ukończona, transakcja usługi sieci Web gwarantuje, że odpowiednie aktualizacje bazy danych nie są zatwierdzone.  
@@ -230,7 +230,7 @@ Press <ENTER> to terminate the service.
 3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!NOTE]
-    > W przypadku konfiguracji między maszynami Włącz Distributed Transaction Coordinator przy użyciu poniższych instrukcji i użyj narzędzia WsatConfig. exe z Windows SDK, aby włączyć obsługę transakcji WCF w sieci. Zobacz [Konfigurowanie obsługi transakcji WS-AT](https://go.microsoft.com/fwlink/?LinkId=190370) , aby uzyskać informacje na temat konfigurowania programu wsatConfig. exe.  
+    > W przypadku konfiguracji między maszynami Włącz Distributed Transaction Coordinator przy użyciu poniższych instrukcji i użyj narzędzia WsatConfig. exe z Windows SDK, aby włączyć obsługę transakcji WCF w sieci. Aby uzyskać informacje na temat konfigurowania programu WsatConfig. exe, zobacz [Konfigurowanie obsługi transakcji WS-AT](../feature-details/configuring-ws-atomic-transaction-support.md).  
   
  Bez względu na to, czy uruchamiasz przykład na tym samym komputerze, czy na różnych komputerach, należy skonfigurować usługę Microsoft Distributed Transaction Coordinator (MSDTC) w celu włączenia przepływu transakcji sieci i użyć narzędzia WsatConfig. exe, aby włączyć obsługę sieci transakcji WCF.  
   
@@ -250,7 +250,7 @@ Press <ENTER> to terminate the service.
   
     6. Kliknij przycisk **OK**, a następnie kliknij przycisk **tak** , aby ponownie uruchomić usługę MSDTC.  
   
-    7. Kliknij przycisk **OK** , aby zamknąć okno dialogowe.  
+    7. Kliknij przycisk **OK**, aby zamknąć okno dialogowe.  
   
 2. Na maszynie usługi z systemem Windows Server 2008 lub Windows Vista Skonfiguruj usługę MSDTC tak, aby zezwalała na przychodzące transakcje sieciowe, wykonując te instrukcje.  
   
@@ -264,7 +264,7 @@ Press <ENTER> to terminate the service.
   
     5. Kliknij przycisk **OK**, a następnie kliknij przycisk **tak** , aby ponownie uruchomić usługę MSDTC.  
   
-    6. Kliknij przycisk **OK** , aby zamknąć okno dialogowe.  
+    6. Kliknij przycisk **OK**, aby zamknąć okno dialogowe.  
   
 3. Na komputerze klienckim Skonfiguruj usługę MSDTC tak, aby zezwalała na wychodzące transakcje sieciowe:  
   
@@ -278,7 +278,7 @@ Press <ENTER> to terminate the service.
   
     5. Kliknij przycisk **OK**, a następnie kliknij przycisk **tak** , aby ponownie uruchomić usługę MSDTC.  
   
-    6. Kliknij przycisk **OK** , aby zamknąć okno dialogowe.  
+    6. Kliknij przycisk **OK**, aby zamknąć okno dialogowe.  
   
 > [!IMPORTANT]
 > Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  

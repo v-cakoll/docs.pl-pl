@@ -18,22 +18,22 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 9fde2b28288b58d7da3a4d003ec50af7d7e7a965
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: 9c8b11f9337ee9de90f2d4d96b5be162713bfcbd
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980174"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093217"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>Zmiennoprzecinkowe typy liczbowe (C# odwołanie)
 
-**Typy zmiennoprzecinkowe** są podzbiorem **typów prostych** i mogą być inicjowane za pomocą [*literałów*](#real-literals). Wszystkie typy zmiennoprzecinkowe są również typami wartości. Wszystkie zmiennoprzecinkowe typy liczbowe obsługują operatory [arytmetyczne](../operators/arithmetic-operators.md), [porównania](../operators/comparison-operators.md)i [równości](../operators/equality-operators.md) .
+*Typy liczbowe zmiennoprzecinkowe* reprezentują liczby rzeczywiste. Wszystkie zmiennoprzecinkowe typy liczbowe to [typy wartości](value-types.md). Są one również [typami prostymi](value-types.md#built-in-value-types) i mogą być inicjowane za pomocą [literałów](#real-literals). Wszystkie zmiennoprzecinkowe typy liczbowe obsługują operatory [arytmetyczne](../operators/arithmetic-operators.md), [porównania](../operators/comparison-operators.md)i [równości](../operators/equality-operators.md) .
 
 ## <a name="characteristics-of-the-floating-point-types"></a>Charakterystyki typów zmiennoprzecinkowych
 
 C#obsługuje następujące wstępnie zdefiniowane typy zmiennoprzecinkowe:
   
-|C#Type/słowo kluczowe|Przybliżony zakres|Dokładność|Rozmiar|Typ .NET|
+|C#Type/słowo kluczowe|Przybliżony zakres|Precyzja|Rozmiar|Typ .NET|
 |----------|-----------------------|---------------|--------------|--------------|
 |`float`|± 1,5 x 10<sup>− 45</sup> do ± 3,4 x 10<sup>38</sup>|~ 6-9 cyfr|4 bajty|<xref:System.Single?displayProperty=nameWithType>|
 |`double`|± 5,0 × 10<sup>− 324</sup> do ± 1,7 × 10<sup>308</sup>|~ 15-17 cyfr|8 bajtów|<xref:System.Double?displayProperty=nameWithType>|
@@ -115,10 +115,10 @@ Aby uzyskać więcej informacji, zobacz następujące sekcje [ C# specyfikacji j
 - [Typ dziesiętny](~/_csharplang/spec/types.md#the-decimal-type)
 - [Literały prawdziwe](~/_csharplang/spec/lexical-structure.md#real-literals)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [C#odwoła](../index.md)
-- [Tabela typów wbudowanych](../keywords/built-in-types-table.md)
+- [Typy wartości](value-types.md)
 - [Typy całkowite](integral-numeric-types.md)
 - [Standardowe ciągi formatujące liczby](../../../standard/base-types/standard-numeric-format-strings.md)
 - [Wartości numeryczne na platformie .NET](../../../standard/numerics.md)

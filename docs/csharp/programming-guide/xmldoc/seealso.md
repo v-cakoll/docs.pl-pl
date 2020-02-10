@@ -12,12 +12,12 @@ helpviewer_keywords:
 - cross-references [C#], tags
 - <seealso> C# XML tag
 ms.assetid: 8e157f3f-f220-4fcf-9010-88905b080b18
-ms.openlocfilehash: ad22b423d085a152f47c4e34d7ee4247ef9836b8
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: e24d5910ab21f01aebb5a32ce7646cf56886a81a
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789682"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093464"
 ---
 # <a name="seealso-c-programming-guide"></a>\<seealso — > (C# Przewodnik programowania)
 
@@ -33,7 +33,7 @@ ms.locfileid: "76789682"
 
   Odwołanie do elementu członkowskiego lub pola, które jest dostępne do wywołania z bieżącego środowiska kompilacji. Kompilator sprawdza, czy dany element kodu istnieje i przekazuje `member` do nazwy elementu w wyjściowym kodzie XML.`member` musi znajdować się w podwójnym cudzysłowie ("").
 
-  Aby uzyskać informacje na temat sposobu tworzenia odwołania cref do typu ogólnego, zobacz [\<see >](./see.md).
+  Aby uzyskać informacje na temat sposobu tworzenia odwołania cref do typu ogólnego, zobacz [atrybut cref](./cref-attribute.md).
 
 ## <a name="remarks"></a>Uwagi
 
@@ -45,7 +45,7 @@ Kompiluj z [-doc](../../language-reference/compiler-options/doc-compiler-option.
 
 Zobacz [\<podsumowanie >](./summary.md) , aby uzyskać przykład użycia \<seealso — >.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [C#Przewodnik programowania](../index.md)
 - [Zalecane Tagi dla komentarzy dokumentacji](./recommended-tags-for-documentation-comments.md)

@@ -3,12 +3,12 @@ title: Rozpoczynanie pracy z usługą Azure Blob Storage przy użyciu języka F#
 description: Przechowuj dane niestrukturalne w chmurze za pomocą usługi Azure Blob Storage.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 90ec0d63b11ad00c53a1740211e9a6509582e863
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 79f6a559ac603b0544916764126a988d3f3f43d7
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75935504"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092632"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>Rozpoczynanie pracy z usługą Azure Blob Storage za pomocą języka F\#
 
@@ -16,11 +16,11 @@ Magazyn obiektów blob Azure jest usługą służącą do przechowywania danych 
 
 W tym artykule przedstawiono sposób wykonywania typowych zadań za pomocą usługi BLOB Storage. Przykłady są zapisywane przy użyciu F# biblioteki klienckiej usługi Azure Storage dla platformy .NET. Objęte zadaniami obejmują sposób przekazywania, wyświetlania, pobierania i usuwania obiektów BLOB.
 
-Ogólne omówienie usługi BLOB Storage można znaleźć [w przewodniku .NET dla usługi BLOB Storage](/azure/storage/storage-dotnet-how-to-use-blobs).
+Ogólne omówienie usługi BLOB Storage można znaleźć [w przewodniku .NET dla usługi BLOB Storage](/azure/storage/blobs/storage-quickstart-blobs-dotnet).
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Aby skorzystać z tego przewodnika, musisz najpierw [utworzyć konto usługi Azure Storage](/azure/storage/storage-create-storage-account). Wymagany jest również klucz dostępu do magazynu dla tego konta.
+Aby skorzystać z tego przewodnika, musisz najpierw [utworzyć konto usługi Azure Storage](/azure/storage/common/storage-account-create). Wymagany jest również klucz dostępu do magazynu dla tego konta.
 
 ## <a name="create-an-f-script-and-start-f-interactive"></a>Utwórz F# skrypt i uruchom F# interaktywny
 
@@ -34,7 +34,7 @@ Dodaj następujące instrukcje `open` na początku pliku `blobs.fsx`:
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L1-L5)]
 
-### <a name="get-your-connection-string"></a>Uzyskiwanie parametrów połączenia
+### <a name="get-your-connection-string"></a>Pobieranie parametrów połączenia
 
 Potrzebujesz parametrów połączenia usługi Azure Storage dla tego samouczka. Aby uzyskać więcej informacji dotyczących parametrów połączenia, zobacz [Konfigurowanie parametrów połączenia magazynu](/azure/storage/storage-configure-connection-string).
 
@@ -146,7 +146,7 @@ Możesz również użyć metody `DownloadToStream`, aby pobrać zawartość obie
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L103-L106)]
 
-## <a name="delete-blobs"></a>Usuwać obiekty blob
+## <a name="delete-blobs"></a>Usuwanie obiektów blob
 
 Aby usunąć obiekt BLOB, należy najpierw pobrać odwołanie do obiektu BLOB, a następnie wywołać metodę `Delete`.
 
@@ -182,7 +182,7 @@ Poniższy przykład tworzy nowy obiekt BLOB dołączania i dołącza do niego pe
 
 Aby uzyskać więcej informacji o różnicach między tymi trzema typami obiektów blob, zobacz [Understanding Block Blobs, Page Blobs, and Append Blobs](https://msdn.microsoft.com/library/azure/ee691964.aspx) (Omówienie blokowych i stronicowych obiektów blob oraz uzupełnialnych obiektów blob).
 
-## <a name="concurrent-access"></a>Równoczesny dostęp
+## <a name="concurrent-access"></a>Dostęp współbieżny
 
 Aby zapewnić obsługę współbieżnego dostępu do obiektu BLOB z wielu klientów lub wielu wystąpień procesów, można użyć elementów **ETags** lub **leases**.
 
@@ -196,8 +196,8 @@ Aby uzyskać więcej informacji, zobacz [Zarządzanie współbieżnością w Mic
 
 Każdy obiekt blob w usłudze Azure Storage musi znajdować się w kontenerze. Kontener jest częścią nazwy obiektu blob. Na przykład `mydata` to nazwa kontenera w następujących przykładowych identyfikatorach URI obiektów blob:
 
-- https://storagesample.blob.core.windows.net/mydata/blob1.txt
-- https://storagesample.blob.core.windows.net/mydata/photos/myphoto.jpg
+- `https://storagesample.blob.core.windows.net/mydata/blob1.txt`
+- `https://storagesample.blob.core.windows.net/mydata/photos/myphoto.jpg`
 
 Nazwa kontenera musi być prawidłową nazwą DNS zgodną z następującymi zasadami nazewnictwa:
 
@@ -229,7 +229,7 @@ Teraz, kiedy znasz już podstawy usługi Blob Storage, skorzystaj z poniższych 
 - [ F# AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/)\
 Dostawca F# typów, który może służyć do eksplorowania obiektów blob, tabel i kolejek zasobów usługi Azure Storage oraz łatwego zastosowania na nich CRUD operacji.
 
-- [FSharp.Azure.Storage](https://github.com/fsprojects/FSharp.Azure.Storage)\
+- [FSharp. Azure. Storage](https://github.com/fsprojects/FSharp.Azure.Storage)\
 F# Interfejs API służący do korzystania z usługi Microsoft Azure Table Storage
 
 - [Eksplorator usługi Microsoft Azure Storage (darmową)](/azure/vs-azure-tools-storage-manage-with-storage-explorer)\
@@ -238,13 +238,12 @@ Bezpłatna, autonomiczna aplikacja oferowana przez firmę Microsoft, która umo�
 ### <a name="blob-storage-reference"></a>Informacje o usłudze Blob Storage
 
 - [Interfejsy API usługi Azure Storage dla platformy .NET](/dotnet/api/overview/azure/storage)
-- [Dokumentacja interfejsu API REST usługi Azure Storage](/rest/api/storageservices/Azure-Storage-Services-REST-API-Reference)
+- [Dokumentacja interfejsu API REST usługi Azure Storage](/rest/api/storageservices/)
 
 ### <a name="related-guides"></a>Pokrewne prowadnice
 
-- [Wprowadzenie z usługą Azure Blob Storage wC#](https://azure.microsoft.com/resources/samples/storage-blob-dotnet-getting-started/)
-- [Transferowanie danych za pomocą narzędzia wiersza polecenia AzCopy w systemie Windows](/azure/storage/common/storage-use-azcopy)
-- [Transferowanie danych za pomocą narzędzia wiersza polecenia AzCopy w systemie Linux](/azure/storage/common/storage-use-azcopy-linux)
+- [Przykłady Blob Storage platformy Azure dla platformy .NET](https://docs.microsoft.com/samples/azure-samples/storage-blob-dotnet-getting-started/storage-blob-dotnet-getting-started/)
+- [Wprowadzenie do AzCopy](/azure/storage/common/storage-use-azcopy-v10)
 - [Konfiguracja parametrów połączenia usługi Azure Storage](/azure/storage/common/storage-configure-connection-string)
 - [Blog zespołu odpowiedzialnego za usługę Azure Storage](https://docs.microsoft.com/archive/blogs/windowsazurestorage/)
 - [Szybki Start: korzystanie z platformy .NET do tworzenia obiektów BLOB w magazynie obiektów](/azure/storage/blobs/storage-quickstart-blobs-dotnet)

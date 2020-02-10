@@ -2,14 +2,15 @@
 title: Narzędzie do konfiguracji elementu WS-AtomicTransaction (wsatConfig.exe)
 ms.date: 03/30/2017
 ms.assetid: 1c56cf98-3963-46d5-a4e1-482deae58c58
-ms.openlocfilehash: 3b37c271afa20de120682d093e40c0f30f4730de
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 009be8d4c25fd9db5b2f2df6e75fb046e92f389a
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921328"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094725"
 ---
 # <a name="ws-atomictransaction-configuration-utility-wsatconfigexe"></a>Narzędzie do konfiguracji elementu WS-AtomicTransaction (wsatConfig.exe)
+
 Narzędzie konfiguracji protokołu WS-AtomicTransaction służy do konfigurowania podstawowych ustawień obsługi WS-AtomicTransaction.  
   
 ## <a name="syntax"></a>Składnia  
@@ -38,18 +39,18 @@ wsatConfig [Options]
 |-accountsCerts:\<kciuk >&#124;"Issuer\SubjectName", >|Określa rozdzieloną przecinkami listę certyfikatów, które mogą uczestniczyć w usłudze WS-AtomicTransaction. Certyfikaty są wskazywane przez odcisk palca lub parę Issuer\SubjectName. Użyj {EMPTY} dla nazwy podmiotu, jeśli jest pusta.|  
 |-endpointCert: <&#124;\<>&#124;"Issuer\SubjectName" >|Używa certyfikatu komputera lub innego lokalnego certyfikatu punktu końcowego określonego za pomocą odcisku palca lub pary Issuer\SubjectName. Używa elementu {EMPTY} dla nazwy podmiotu, jeśli jest pusta.|  
 |-maxTimeout:\<sek >|Określa maksymalny limit czasu w sekundach. Prawidłowe wartości to od 0 do 3600.|  
-|-network:\<enable&#124;disable>|Włącza lub wyłącza obsługę sieci WS-AtomicTransaction.|  
+|-Sieć:\<Włącz&#124;opcję Wyłącz >|Włącza lub wyłącza obsługę sieci WS-AtomicTransaction.|  
 |-Port:\<portNum >|Ustawia port HTTPS dla protokołu WS-AtomicTransaction.<br /><br /> Jeśli Zapora została już włączona przed uruchomieniem tego narzędzia, port zostanie automatycznie zarejestrowany na liście wyjątków. Jeśli Zapora jest wyłączona przed uruchomieniem tego narzędzia, dla zapory nic nie skonfigurowano.<br /><br /> W przypadku włączenia zapory po skonfigurowaniu usługi WS-AT należy ponownie uruchomić to narzędzie i podać numer portu przy użyciu tego parametru. Jeśli po skonfigurowaniu Zapora zostanie wyłączona, Usługa WS-AT będzie nadal działała bez dodatkowych danych wejściowych.|  
 |-timeout:\<sek >|Określa domyślny limit czasu (w sekundach). Prawidłowe wartości to od 1 do 3600.|  
 |-traced:\<Enable&#124;Disable >|Włącza lub wyłącza śledzenie zdarzeń działania.|  
-|-traceLevel:\<Off&#124;Error&#124;Critical&#124;Warning&#124;Information&#124; Verbose&#124;All>}|Określa poziom śledzenia.|  
-|-tracePII:\<enable&#124;disable>|Włącza lub wyłącza śledzenie informacji umożliwiających identyfikację użytkownika.|  
-|-traceProp:\<enable&#124;disable>|Włącza lub wyłącza śledzenie zdarzeń propagacji.|  
+|-traceLevel:\<wyłączyć&#124;&#124;krytyczne&#124;informacje&#124;&#124; ostrzegawcze&#124;wszystkie >}|Określa poziom śledzenia.|  
+|-tracePII:\<Włącz&#124;opcję Disable >|Włącza lub wyłącza śledzenie informacji umożliwiających identyfikację użytkownika.|  
+|-traceProp:\<Włącz&#124;opcję Disable >|Włącza lub wyłącza śledzenie zdarzeń propagacji.|  
 |-Uruchom ponownie|Uruchamia ponownie usługę MSDTC, aby natychmiast aktywować zmiany. Jeśli ta wartość nie zostanie określona, zmiany zaczną obowiązywać po ponownym uruchomieniu usługi MSDTC.|  
 |-Pokaż|Wyświetla bieżące ustawienia protokołu WS-AtomicTransaction.|  
 |-virtualServer:\<virtualServer >|Określa nazwę klastra zasobów usługi DTC.|  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Używanie elementu WS-AtomicTransaction](./feature-details/using-ws-atomictransaction.md)
 - [Konfigurowanie obsługi protokołu WS-Atomic Transaction](./feature-details/configuring-ws-atomic-transaction-support.md)

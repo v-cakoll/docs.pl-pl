@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 26c09e547205e7819ebb43d6e34b6e18d6d9ff98
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 7e034e92e1ff2b9bec0eaf8e0f3330f7a832a7e5
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460841"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095171"
 ---
 # <a name="how-to-localize-an-application"></a>Jak lokalizować aplikację
 W tym samouczku wyjaśniono, jak utworzyć zlokalizowaną aplikację przy użyciu narzędzia LocBaml.  
@@ -81,7 +81,7 @@ W tym samouczku wyjaśniono, jak utworzyć zlokalizowaną aplikację przy użyci
 <a name="build_locbaml"></a>   
 ## <a name="build-the-locbaml-tool"></a>Tworzenie narzędzia LocBaml  
   
-1. Wszystkie pliki niezbędne do kompilowania LocBaml znajdują się w przykładach [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Pobierz C# pliki z [przykładu narzędzia LocBaml](https://go.microsoft.com/fwlink/?LinkID=160016).  
+1. Wszystkie pliki niezbędne do kompilowania LocBaml znajdują się w przykładach [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Pobierz C# pliki z [przykładu narzędzia LocBaml](https://github.com/microsoft/WPF-Samples/tree/master/Tools/LocBaml).  
   
 2. W wierszu polecenia Uruchom plik projektu (LocBaml. csproj) w celu skompilowania narzędzia:  
   
@@ -128,8 +128,8 @@ W tym samouczku wyjaśniono, jak utworzyć zlokalizowaną aplikację przy użyci
    | |
    |-|
    |HelloApp. g. pl-US. Resources: window1. BAML, Stack1: System. Windows. Controls. StackPanel. $Content, IGNORE, FALSE, FALSE,, #Text1; #Text2;|
-   |HelloApp. g. pl-US. Resources: window1. BAML, Tekst1: System. Windows. Controls. TextBlock. $Content, None, TRUE, TRUE,, Hello world|
-   |HelloApp. g. pl-US. Resources: window1. BAML, Tekst2: System. Windows. Controls. TextBlock. $Content, None, TRUE, TRUE,, pożegnanie świata|
+   |HelloApp.g.en-US.resources:window1.baml,Text1:System.Windows.Controls.TextBlock.$Content,None,TRUE, TRUE,,Hello World|
+   |HelloApp.g.en-US.resources:window1.baml,Text2:System.Windows.Controls.TextBlock.$Content,None,TRUE, TRUE,,Goodbye World|
 
    Siedem pól są następujące:  
   
@@ -151,9 +151,9 @@ W tym samouczku wyjaśniono, jak utworzyć zlokalizowaną aplikację przy użyci
   
    |Nazwa BAML|Klucz zasobu|Kategoria|Czytelność|Modifiability|Komentarze|Wartość|  
    |---------------|------------------|--------------|-----------------|-------------------|--------------|-----------|
-   |HelloApp. g. pl-US. Resources: window1. BAML|Stack1: System. Windows. Controls. StackPanel. $Content|Ignoruj|FAŁSZ|FAŁSZ||#Text1; #Text2|
-   |HelloApp. g. pl-US. Resources: window1. BAML|Tekst1: System. Windows. Controls. TextBlock. $Content|Brak|OZNACZA|OZNACZA||Witaj Świecie|
-   |HelloApp. g. pl-US. Resources: window1. BAML|Tekst2: System. Windows. Controls. TextBlock. $Content|Brak|OZNACZA|OZNACZA||Na świecie|
+   |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|Zignoruj|FAŁSZ|FAŁSZ||#Text1;#Text2|
+   |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|None|TRUE|TRUE||Witaj, świecie|
+   |HelloApp.g.en-US.resources:window1.baml|Text2:System.Windows.Controls.TextBlock.$Content|None|TRUE|TRUE||Na świecie|
   
    Zwróć uwagę, że wszystkie wartości pola **Komentarze** nie zawierają wartości; Jeśli pole nie ma wartości, jest puste. Zauważ również, że element w pierwszym wierszu nie jest możliwy do odczytania ani do zmodyfikowania, a jego wartość **kategorii** jest ignorowana, a wszystko wskazuje, że wartość nie jest lokalizowalna.  
   
@@ -209,7 +209,7 @@ W tym samouczku wyjaśniono, jak utworzyć zlokalizowaną aplikację przy użyci
 ## <a name="whats-next"></a>Co dalej  
  Teraz należy uzyskać podstawową wiedzę na temat sposobu korzystania z narzędzia LocBaml.  Powinno być możliwe tworzenie pliku, który zawiera identyfikatory UID. Za pomocą narzędzia LocBaml, powinno być możliwe przeanalizowanie pliku w celu wyodrębnienia zawartości lokalizowalnej i po przetłumaczeniu zawartości, powinno być możliwe wygenerowanie pliku. resources. dll, który scala przetłumaczoną zawartość. Ten temat nie zawiera wszystkich szczegółów, ale teraz masz wiedzę niezbędną do lokalizowania aplikacji za pomocą LocBaml.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Globalizacja dla WPF](globalization-for-wpf.md)
 - [Przegląd używania automatycznego układu](use-automatic-layout-overview.md)

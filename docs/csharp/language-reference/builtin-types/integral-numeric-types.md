@@ -32,16 +32,16 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: 2fb4d7185ac85b29f2cc2d2e7a29e192f91a0868
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: 394a809a9a2f45f4aee652d0eca892f62f0f2e54
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980148"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093204"
 ---
 # <a name="integral-numeric-types--c-reference"></a>Całkowite typy liczbowe (C# odwołanie)
 
-**Całkowite typy liczbowe** są podzbiorem **typów prostych** i mogą być inicjowane za pomocą [*literałów*](#integer-literals). Wszystkie typy całkowite są również typami wartości. Wszystkie typy liczbowe całkowite obsługują operatory [arytmetyczne](../operators/arithmetic-operators.md), [bitowe logiczne](../operators/bitwise-and-shift-operators.md), [porównania](../operators/comparison-operators.md)i [równości](../operators/equality-operators.md) .
+Całkowite *typy liczbowe* przedstawiają liczbę całkowitą. Wszystkie typy liczb całkowitych są [typami wartości](value-types.md). Są one również [typami prostymi](value-types.md#built-in-value-types) i mogą być inicjowane za pomocą [literałów](#integer-literals). Wszystkie typy liczbowe całkowite obsługują operatory [arytmetyczne](../operators/arithmetic-operators.md), [bitowe logiczne](../operators/bitwise-and-shift-operators.md), [porównania](../operators/comparison-operators.md)i [równości](../operators/equality-operators.md) .
 
 ## <a name="characteristics-of-the-integral-types"></a>Cechy typów całkowitych
 
@@ -127,10 +127,10 @@ Aby uzyskać więcej informacji, zobacz następujące sekcje [ C# specyfikacji j
 - [Typy całkowite](~/_csharplang/spec/types.md#integral-types)
 - [Literały całkowite](~/_csharplang/spec/lexical-structure.md#integer-literals)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [C#odwoła](../index.md)
-- [Tabela typów wbudowanych](../keywords/built-in-types-table.md)
+- [Typy wartości](value-types.md)
 - [Typy zmiennoprzecinkowe](floating-point-numeric-types.md)
 - [Standardowe ciągi formatujące liczby](../../../standard/base-types/standard-numeric-format-strings.md)
 - [Wartości numeryczne na platformie .NET](../../../standard/numerics.md)

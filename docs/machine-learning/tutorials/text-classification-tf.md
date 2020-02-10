@@ -1,15 +1,15 @@
 ---
-title: 'Samouczek: analizowanie tonacji przeglądów filmów przy użyciu wstępnie przeszkolonego modelu TensorFlow'
+title: 'Samouczek: analizowanie tonacji przeglądu przy użyciu modelu TensorFlow'
 description: W tym samouczku przedstawiono sposób użycia wstępnie przeszkolonego modelu TensorFlow do klasyfikowania tonacji w komentarzach w witrynie sieci Web. Tonacji klasyfikator binarny jest aplikacją C# konsolową opracowaną przy użyciu programu Visual Studio.
 ms.date: 11/15/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 0e80cdc6bb7dcc62a57466e909451da972c92db8
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 7a6043f56a2ecaca633ba5545170f27a85a22efc
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75738699"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092398"
 ---
 # <a name="tutorial-analyze-sentiment-of-movie-reviews-using-a-pre-trained-tensorflow-model-in-mlnet"></a>Samouczek: analizowanie tonacji przeglądów filmów przy użyciu wstępnie przeszkolonego modelu TensorFlow w ML.NET
 
@@ -17,7 +17,7 @@ W tym samouczku przedstawiono sposób użycia wstępnie przeszkolonego modelu Te
 
 Model TensorFlow używany w tym samouczku został przeszkolony przy użyciu recenzji filmów z bazy danych IMDB. Po zakończeniu opracowywania aplikacji będzie można dostarczyć tekst z recenzji filmu, a aplikacja poinformuje użytkownika o tym, czy przegląd ma pozytywne czy negatywne tonacji.
 
-Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
+Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]
 >
 > * Załaduj wstępnie szkolony model TensorFlow
@@ -30,7 +30,7 @@ Kod źródłowy dla tego samouczka można znaleźć w repozytorium [dotnet/Sampl
 
 * [Program Visual Studio 2017 w wersji 15,6 lub nowszej](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) z zainstalowanym obciążeniem "Programowanie dla wielu platform w środowisku .NET Core".
 
-## <a name="setup"></a>Konfiguracja
+## <a name="setup"></a>Konfigurowanie
 
 ### <a name="create-the-application"></a>Tworzenie aplikacji
 
@@ -81,14 +81,14 @@ Pierwszym jest podział tekstu na oddzielne słowa i użycie podanego pliku mapo
 
 |Właściwość| Wartość|Typ|
 |-------------|-----------------------|------|
-|ReviewText|Ta folia jest naprawdę dobra|string|
+|ReviewText|Ta folia jest naprawdę dobra|ciąg|
 |VariableLengthFeatures|14, 22, 9, 66, 78,... |int []|
 
 Rozmiar tablicy funkcji o zmiennej długości jest zmieniany na stałą długość wynoszącą 600. Jest to długość oczekiwana przez model TensorFlow.
 
 |Właściwość| Wartość|Typ|
 |-------------|-----------------------|------|
-|ReviewText|Ta folia jest naprawdę dobra|string|
+|ReviewText|Ta folia jest naprawdę dobra|ciąg|
 |VariableLengthFeatures|14, 22, 9, 66, 78,... |int []|
 |Funkcje|14, 22, 9, 66, 78,... |int [600]|
 

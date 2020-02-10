@@ -1,27 +1,27 @@
 ---
 title: 'Samouczek: kategoryzowanie problemów z pomocą techniczną — Klasyfikacja wieloklasowa'
 description: Dowiedz się, jak używać ML.NET w scenariuszu klasyfikacji wieloklasowej do klasyfikowania problemów z usługi GitHub w celu przypisywania ich do danego obszaru.
-ms.date: 11/15/2019
+ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 44e6234a56ae1890a7f485ffaca827945c1a33ff
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: d5d397cfa6475574b6d6cc6d8cbb48b51c2d0af1
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75739641"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092528"
 ---
-# <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-ml-net"></a>Samouczek: kategoryzowanie problemów z pomocą techniczną przy użyciu klasyfikacji wieloklasowej z .NET ML
+# <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-mlnet"></a>Samouczek: kategoryzowanie problemów pomocy technicznej przy użyciu klasyfikacji wieloklasowej z ML.NET
 
 Ten przykładowy samouczek ilustruje użycie ML.NET do utworzenia klasyfikatora problemu w usłudze GitHub w celu uczenia modelu, który klasyfikuje i przewidywalnuje etykietę obszaru dla problemu usługi GitHub za pośrednictwem aplikacji konsolowej .NET Core C# w programie Visual Studio.
 
-Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
+Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]
 >
 > * Przygotowywanie danych
 > * Przekształcanie danych
 > * Uczenie modelu
-> * Ocenianie modelu
+> * Oceń model
 > * Przewidywanie przy użyciu przeszkolonego modelu
 > * Wdrażanie i przewidywanie z załadowanym modelem
 
@@ -238,7 +238,7 @@ Zwróć model na końcu metody `BuildAndTrainModel`.
 
 [!code-csharp[ReturnModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#ReturnModel)]
 
-## <a name="evaluate-the-model"></a>Ocenianie modelu
+## <a name="evaluate-the-model"></a>Oceń model
 
 Teraz, gdy tworzysz i przeszkolony model, musisz go oszacować z innym zestawem danych w celu zapewnienia jakości i weryfikacji. W metodzie `Evaluate` model utworzony w `BuildAndTrainModel` jest przenoszona do oceny. Utwórz metodę `Evaluate` po `BuildAndTrainModel`, tak jak w poniższym kodzie:
 
@@ -382,7 +382,7 @@ W niniejszym samouczku zawarto informacje na temat wykonywania następujących c
 > * Przygotowywanie danych
 > * Przekształcanie danych
 > * Uczenie modelu
-> * Ocenianie modelu
+> * Oceń model
 > * Przewidywanie przy użyciu przeszkolonego modelu
 > * Wdrażanie i przewidywanie z załadowanym modelem
 

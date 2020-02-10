@@ -2,22 +2,22 @@
 title: dotnet-install scripts
 description: Więcej informacji na temat skryptów programu dotnet-Install w celu zainstalowania zestaw .NET Core SDK i udostępnionego środowiska uruchomieniowego.
 ms.date: 01/23/2020
-ms.openlocfilehash: 76055627c6b2016396209c9594dba36e56eb841c
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: bf28f872be3ac2b4115b1d5e5c06e32afec0b49e
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920572"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092866"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet — informacje o skryptach instalacji
 
-## <a name="name"></a>Nazwa
+## <a name="name"></a>Name (Nazwa)
 
 `dotnet-install.ps1` | `dotnet-install.sh` — skrypt służący do instalowania zestaw .NET Core SDK i udostępnionego środowiska uruchomieniowego.
 
 ## <a name="synopsis"></a>Streszczenie
 
-System Windows:
+W systemie Windows:
 
 ```powershell
 dotnet-install.ps1 [-Channel] [-Version] [-JSonFile] [-InstallDir] [-Architecture]
@@ -63,7 +63,7 @@ Określoną wersję można zainstalować przy użyciu argumentu `-Version|--vers
   - Dwuczęściowa wersja w formacie X. Y reprezentującym określoną wersję (na przykład `2.1` lub `3.0`).
   - Nazwa rozgałęzienia: na przykład `release/3.1.1xx` lub `master` (dla nocnych wydań). Użyj tej opcji, aby zainstalować wersję z kanału w wersji zapoznawczej. Użyj nazwy kanału wymienionej w [instalatorze i plikach binarnych](https://github.com/dotnet/core-sdk#installers-and-binaries).
 
-  Wartość domyślna to `LTS`. Aby uzyskać więcej informacji na temat kanałów pomocy technicznej platformy .NET, zobacz stronę [zasady pomocy technicznej platformy .NET](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) .
+  Wartością domyślną jest `LTS`. Aby uzyskać więcej informacji na temat kanałów pomocy technicznej platformy .NET, zobacz stronę [zasady pomocy technicznej platformy .NET](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) .
 
 - **`-Version|--version <VERSION>`**
 
@@ -116,7 +116,7 @@ Określoną wersję można zainstalować przy użyciu argumentu `-Version|--vers
 
 - **`-AzureFeed|--azure-feed`**
 
-  Określa adres URL źródła danych platformy Azure do Instalatora. Zaleca się, aby nie zmieniać tej wartości. Wartość domyślna to `https://dotnetcli.azureedge.net/dotnet`.
+  Określa adres URL źródła danych platformy Azure do Instalatora. Zaleca się, aby nie zmieniać tej wartości. Wartością domyślną jest `https://dotnetcli.azureedge.net/dotnet`.
 
 - **`-UncachedFeed|--uncached-feed`**
 
@@ -154,7 +154,7 @@ Określoną wersję można zainstalować przy użyciu argumentu `-Version|--vers
 
 - Zainstaluj najnowszą wersję długoterminową (LTS) w lokalizacji domyślnej:
 
-  System Windows:
+  W systemie Windows:
 
   ```powershell
   ./dotnet-install.ps1 -Channel LTS
@@ -168,7 +168,7 @@ Określoną wersję można zainstalować przy użyciu argumentu `-Version|--vers
 
 - Zainstaluj najnowszą wersję z kanału 3,1 do określonej lokalizacji:
 
-  System Windows:
+  W systemie Windows:
 
   ```powershell
   ./dotnet-install.ps1 -Channel 3.1 -InstallDir C:\cli
@@ -182,7 +182,7 @@ Określoną wersję można zainstalować przy użyciu argumentu `-Version|--vers
 
 - Zainstaluj wersję 3.0.0 udostępnionego środowiska uruchomieniowego:
 
-  System Windows:
+  W systemie Windows:
 
   ```powershell
   ./dotnet-install.ps1 -Runtime dotnet -Version 3.0.0
@@ -203,7 +203,7 @@ Określoną wersję można zainstalować przy użyciu argumentu `-Version|--vers
 
 - Uzyskaj skrypt i zainstaluj interfejs wiersza polecenia platformy .NET Core przykłady jednoliniowe:
 
-  System Windows:
+  W systemie Windows:
 
   ```powershell
   # Run a separate PowerShell process because the script calls exit, so it will end the current PowerShell session.
@@ -213,10 +213,10 @@ Określoną wersję można zainstalować przy użyciu argumentu `-Version|--vers
   macOS/Linux:
 
   ```bash
-  curl -ssl https://dot.net/v1/dotnet-install.sh | bash /dev/stdin <additional install-script args>
+  curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin <additional install-script args>
   ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Wersje platformy .NET Core](https://github.com/dotnet/core/releases)
 - [Środowisko uruchomieniowe programu .NET Core i archiwum pobierania zestawu SDK](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)

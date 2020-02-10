@@ -4,18 +4,18 @@ description: W tym zaawansowanym samouczku pokazano, jak migrować istniejący k
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: e480cfa7c041d18a2bdaf8caa2468165e855186e
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 4edeab7b2a4211d50c424f567ad7df6ced0bf4ce
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740465"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093308"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Samouczek: Migrowanie istniejącego kodu z typami referencyjnymi Nullable
 
 C#8 wprowadza **typy odwołań do wartości null**, które uzupełniają typy odwołań w taki sam sposób, jak typy wartości null uzupełniają typy wartości. Należy zadeklarować zmienną jako **typ referencyjny dopuszczający wartość null** poprzez dołączenie `?` do typu. Na przykład `string?` reprezentuje `string`dopuszczające wartość null. Możesz użyć tych nowych typów, aby dokładniej wyznaczać intencje projektowania: niektóre zmienne *muszą zawsze mieć wartość*, inne *mogą nie mieć wartości*. Wszystkie istniejące zmienne typu referencyjnego byłyby interpretowane jako typ referencyjny, który nie dopuszcza wartości null. 
 
-Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
+Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
 
 > [!div class="checklist"]
 >
@@ -40,7 +40,7 @@ Celem migrowania projektu powinna być skorzystanie z nowych funkcji języka, ab
 
 ## <a name="upgrade-the-projects-to-c-8"></a>Uaktualnij projekty do C# 8
 
-Dobrym pierwszym krokiem jest określenie zakresu zadania migracji. Zacznij od uaktualnienia projektu do C# 8,0 (lub nowszego). Dodaj element `LangVersion` do obu plików csproj dla projektu sieci Web i projektu testów jednostkowych:
+Dobrym pierwszym krokiem jest określenie zakresu zadania migracji. Zacznij od uaktualnienia projektu do C# 8,0 (lub nowszego). Dodaj element `LangVersion` do właściwości Property w obu plikach csproj dla projektu sieci Web i projektu testów jednostkowych:
 
 ```xml
 <LangVersion>8.0</LangVersion>
@@ -163,7 +163,7 @@ Wprowadzono zmiany w klasie `NewsService`, więc Włącz `#nullable enable` adno
 
 Parametr `IMapper` jest typem odwołania, które nie ma wartości null. Jest on wywoływany przez ASP.NET Core kod infrastruktury, więc kompilator nie wie, że `IMapper` nigdy nie będzie mieć wartości null. ASP.NET Core domyślny kontener iniekcji zależności (DI) zgłasza wyjątek, jeśli nie może rozpoznać wymaganej usługi, więc kod jest poprawny. Kompilator nie może sprawdzić poprawności wszystkich wywołań publicznych interfejsów API, nawet jeśli kod jest kompilowany z włączonym kontekstem adnotacji dopuszczający wartość null. Ponadto biblioteki mogą być używane przez projekty, które nie wybrały jeszcze użycia typów referencyjnych dopuszczających wartość null. Sprawdź poprawność danych wejściowych do publicznych interfejsów API, mimo że zostały zadeklarowane jako typy niemające wartości null.
 
-## <a name="get-the-code"></a>Uzyskaj kod
+## <a name="get-the-code"></a>Uzyskiwanie kodu
 
 Zostały naprawione ostrzeżenia, które zostały zidentyfikowane podczas wstępnego kompilowania testów, dlatego teraz można włączyć kontekst adnotacji dopuszczający wartości null dla obu projektów. Kompiluj ponownie projekty; Kompilator zgłasza Brak ostrzeżeń. Możesz uzyskać kod dla gotowego projektu w repozytorium GitHub [/Samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/nullable-reference-migration/finished)
 

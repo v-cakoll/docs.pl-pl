@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 2fef4c7b00fd6a1ed8f85a8bfa01ef9cfffa1bbb
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: d1cae7ad2ac0fdf963d11911484b1bd534cbc129
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76919940"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094738"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>Szybki start: rozwiązywanie problemów z architekturą WCF
 W tym temacie wymieniono kilka znanych problemów, z którymi klienci korzystali podczas opracowywania klientów i usług WCF. Jeśli problem, z którym korzystasz, nie znajduje się na liście, zalecamy skonfigurowanie śledzenia dla usługi. Spowoduje to wygenerowanie pliku śledzenia, który można wyświetlić za pomocą podglądu plików śledzenia i uzyskać szczegółowe informacje o wyjątkach, które mogą wystąpić w ramach usługi. Aby uzyskać więcej informacji na temat konfigurowania śledzenia, zobacz: [Konfigurowanie śledzenia](./diagnostics/tracing/configuring-tracing.md). Aby uzyskać więcej informacji na temat podglądu plików śledzenia, zobacz: [narzędzie Podgląd śledzenia usług (SvcTraceViewer. exe)](service-trace-viewer-tool-svctraceviewer-exe.md).  
@@ -59,7 +59,7 @@ W tym temacie wymieniono kilka znanych problemów, z którymi klienci korzystali
   
 <a name="BKMK_q3"></a>   
 ## <a name="can-i-load-my-service-configuration-from-somewhere-other-than-the-wcf-applications-configuration-file"></a>Czy mogę załadować moją konfigurację usługi z innej lokalizacji niż plik konfiguracyjny aplikacji WCF?  
- Tak, jednak trzeba utworzyć niestandardową klasę <xref:System.ServiceModel.ServiceHost>, która zastąpi metodę <xref:System.ServiceModel.ServiceHostBase.ApplyConfiguration%2A>. Wewnątrz tej metody można wywołać bazę, aby najpierw załadować konfigurację (Jeśli chcesz również załadować informacje o konfiguracji standardowej), ale możesz również całkowicie zastąpić system ładowania konfiguracji. Należy pamiętać, że jeśli chcesz załadować konfigurację z pliku konfiguracji, który jest inny niż plik konfiguracyjny aplikacji, musisz przeanalizować plik konfiguracji samodzielnie i załadować konfigurację.  
+ Tak, jednak trzeba utworzyć niestandardową klasę <xref:System.ServiceModel.ServiceHost>, która zastąpi metodę <xref:System.ServiceModel.ServiceHostBase.ApplyConfiguration%2A>. Wewnątrz tej metody można wywołać bazę, aby najpierw załadować konfigurację (Jeśli chcesz również załadować informacje o konfiguracji standardowej), ale możesz również całkowicie zastąpić system ładowania konfiguracji. Jeśli chcesz załadować konfigurację z pliku konfiguracyjnego, który jest inny niż plik konfiguracji aplikacji, musisz przeanalizować plik konfiguracji samodzielnie i załadować konfigurację.  
   
  Poniższy przykład kodu pokazuje, jak zastąpić metodę <xref:System.ServiceModel.ServiceHostBase.ApplyConfiguration%2A> i bezpośrednio skonfigurować punkt końcowy.  
   
@@ -130,7 +130,7 @@ public class MyServiceHost : ServiceHost
   
     3. Hostowanie usługi w obszarze Internet Information Services (IIS), która domyślnie używa konta głównej nazwy usługi (SPN).  
   
-    4. Zarejestruj nową nazwę SPN z domeną przy użyciu narzędzia SetSPN. Należy pamiętać, że aby to zrobić, musisz być administratorem domeny.  
+    4. Zarejestruj nową nazwę SPN z domeną przy użyciu narzędzia SetSPN. Aby to zrobić, musisz być administratorem domeny.  
   
  Aby uzyskać więcej informacji na temat protokołu Kerberos, zobacz [pojęcia dotyczące zabezpieczeń używane w programie WCF](./feature-details/security-concepts-used-in-wcf.md) i:  
   
@@ -166,7 +166,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q88"></a>   
 ## <a name="i-changed-the-first-parameter-of-an-operation-from-uppercase-to-lowercase-now-my-client-throws-an-exception-whats-happening"></a>Pierwszy parametr operacji został zmieniony z wielkich na małe litery; teraz mój klient zgłasza wyjątek. Co się dzieje?  
- Wartość nazw parametrów w sygnaturze operacji jest częścią kontraktu i jest uwzględniana wielkość liter. Użyj atrybutu <xref:System.ServiceModel.MessageParameterAttribute?displayProperty=nameWithType>, gdy musisz rozróżnić nazwę parametru lokalnego i metadane opisujące operację dla aplikacji klienckich.  
+ Wartości nazw parametrów w sygnaturze operacji są częścią kontraktu i uwzględniają wielkość liter. Użyj atrybutu <xref:System.ServiceModel.MessageParameterAttribute?displayProperty=nameWithType>, gdy musisz rozróżnić nazwę parametru lokalnego i metadane opisujące operację dla aplikacji klienckich.  
   
 <a name="BKMK_q99"></a>   
 ## <a name="im-using-one-of-my-tracing-tools-and-i-get-an-endpointnotfoundexception-whats-happening"></a>Używam jednego z narzędzi do śledzenia i otrzymuję EndpointNotFoundException. Co się dzieje?  
@@ -237,7 +237,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BK_MK99"></a>   
 ## <a name="when-calling-a-wcf-web-http-application-from-a-wcf-soap-application-the-service-returns-the-following-error-405-method-not-allowed"></a>Podczas wywoływania aplikacji HTTP sieci Web WCF z aplikacji SOAP WCF usługa zwraca następujący błąd: Metoda 405 nie jest dozwolona  
- Wywołanie aplikacji HTTP sieci Web w programie WCF (usługa, która używa <xref:System.ServiceModel.WebHttpBinding> i <xref:System.ServiceModel.Description.WebHttpBehavior>) z usługi WCF, może wygenerować następujący wyjątek: `Unhandled Exception: System.ServiceModel.FaultException`1 [System. ServiceModel. ExceptionDetail utworzony]: serwer zdalny zwrócił nieoczekiwaną odpowiedź: (405) Metoda niedozwolona. "ten wyjątek występuje, ponieważ program WCF zastępuje wychodzącą <xref:System.ServiceModel.OperationContext> z <xref:System.ServiceModel.OperationContext>przychodzącego. Aby rozwiązać ten problem, Utwórz <xref:System.ServiceModel.OperationContextScope> w ramach operacji usługi HTTP sieci Web w programie WCF. Na przykład:  
+ Wywołanie aplikacji HTTP sieci Web w programie WCF (usługa, która używa <xref:System.ServiceModel.WebHttpBinding> i <xref:System.ServiceModel.Description.WebHttpBehavior>) z usługi WCF, może wygenerować następujący wyjątek: ``Unhandled Exception: System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: The remote server returned an unexpected response: (405) Method Not Allowed.`` ten wyjątek występuje, ponieważ program WCF zastępuje wychodzącą <xref:System.ServiceModel.OperationContext> z <xref:System.ServiceModel.OperationContext>przychodzącego. Aby rozwiązać ten problem, Utwórz <xref:System.ServiceModel.OperationContextScope> w ramach operacji usługi HTTP sieci Web w programie WCF. Na przykład:  
   
 ```csharp
 public string Echo(string input)  
@@ -249,6 +249,6 @@ public string Echo(string input)
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Debugowanie błędów uwierzytelniania systemu Windows](./feature-details/debugging-windows-authentication-errors.md)

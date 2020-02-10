@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: be2af77f9680ab3285720525638bba8ef2041999
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: d277869809b7148a2c3d568c91fce15f9a83baa1
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745379"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093568"
 ---
 # <a name="types-c-programming-guide"></a>Typy (Przewodnik programowania w języku C#)
 
@@ -63,7 +63,7 @@ Aby uzyskać więcej informacji, zobacz [rzutowanie i konwersje typów](./castin
 
 ## <a name="built-in-types"></a>Typy wbudowane
 
-C#zawiera standardowy zestaw wbudowanych typów liczbowych reprezentujących liczby całkowite, wartości zmiennoprzecinkowe, wyrażenia logiczne, znaki tekstowe, wartości dziesiętne i inne typy danych. Istnieją również wbudowane typy `string` i `object`. Są one dostępne do użycia w dowolnym C# programie. Aby uzyskać więcej informacji na temat typów wbudowanych, zobacz [tabele odwołań dla typów wbudowanych](../../language-reference/keywords/built-in-types-table.md).
+C#zawiera standardowy zestaw wbudowanych typów liczbowych reprezentujących liczby całkowite, wartości zmiennoprzecinkowe, wyrażenia logiczne, znaki tekstowe, wartości dziesiętne i inne typy danych. Istnieją również wbudowane typy `string` i `object`. Są one dostępne do użycia w dowolnym C# programie. Aby zapoznać się z pełną listą typów wbudowanych, zobacz [typy wbudowane](../../language-reference/builtin-types/built-in-types.md).
 
 ## <a name="custom-types"></a>Typy niestandardowe
 
@@ -177,7 +177,7 @@ Typy wartości zwykłych nie mogą mieć wartości [null](../../language-referen
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
-Więcej informacji znajduje się w następujących tematach:
+Aby uzyskać więcej informacji, zobacz następujące tematy:
 
 - [Rzutowanie i konwersje typów](./casting-and-type-conversions.md)
 
@@ -199,7 +199,7 @@ Więcej informacji znajduje się w następujących tematach:
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [C#Odwoła](../../language-reference/index.md)
 - [Przewodnik programowania w języku C#](../index.md)

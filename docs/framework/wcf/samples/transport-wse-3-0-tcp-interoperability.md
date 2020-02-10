@@ -2,12 +2,12 @@
 title: 'Transport: Współdziałanie protokołu TCP z usługami WSE 3.0'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: 8166e1c378bc745eb8c9f37d6982642e754813cb
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 8e95d7e75ac49aea4b823ee3434f53ed5df11fb0
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544624"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094855"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Transport: Współdziałanie protokołu TCP z usługami WSE 3.0
 Przykład transportu współdziałania TCP w programie WSE 3,0 demonstruje sposób implementacji sesji dwustronnej TCP jako transportu niestandardowego Windows Communication Foundation (WCF). Przedstawiono w nim również, jak można użyć rozszerzalności warstwy kanału do interfejsu przez sieć z istniejącymi wdrożonymi systemami. Poniższe kroki pokazują, jak utworzyć niestandardowy transport WCF:  
@@ -37,7 +37,7 @@ Przykład transportu współdziałania TCP w programie WSE 3,0 demonstruje spos�
   
  `return encoder.WriteMessage(message, maxBufferSize, bufferManager);`  
   
- Gdy <xref:System.ServiceModel.Channels.Message> jest zakodowana w bajtach, musi być przesyłana w sieci. Wymaga to systemu do definiowania granic komunikatów. WSE 3,0 używa wersji [Dime](https://go.microsoft.com/fwlink/?LinkId=94999) jako protokołu szkieletu. `WriteData` hermetyzuje logikę ramek, aby otoczyć bajt [] do zestawu rekordów DIME.  
+ Gdy <xref:System.ServiceModel.Channels.Message> jest zakodowana w bajtach, musi być przesyłana w sieci. Wymaga to systemu do definiowania granic komunikatów. WSE 3,0 używa wersji [Dime](https://docs.microsoft.com/archive/msdn-magazine/2002/december/sending-files-attachments-and-soap-messages-via-dime) jako protokołu szkieletu. `WriteData` hermetyzuje logikę ramek, aby otoczyć bajt [] do zestawu rekordów DIME.  
   
  Logika wysyłania komunikatów jest bardzo podobna. Główna złożoność obsługuje fakt, że odczyt gniazda może zwrócić mniejszą liczbę bajtów niż zażądano. Aby odebrać komunikat, `WseTcpDuplexSessionChannel` odczytuje bajty z sieci, dekoduje ramkę DIME, a następnie używa <xref:System.ServiceModel.Channels.MessageEncoder> do przekształcania bajtu [] w <xref:System.ServiceModel.Channels.Message>.  
   
@@ -157,7 +157,7 @@ Received Body: to me.
 Press enter.  
 ```  
   
- Serwer:  
+ Server  
   
 ```console  
 Listening for messages at soap://stockservice.contoso.com/wse/samples/2003/06/TcpSyncStockService  

@@ -2,12 +2,12 @@
 title: Rozwiązywanie problemów obsługi komunikatów kolejek
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: 5c039c34983647884561f33645f26e4a89280248
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 7990d4b9847ee2f35b9fe6269bb211763c4c80b6
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921268"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095011"
 ---
 # <a name="troubleshooting-queued-messaging"></a>Rozwiązywanie problemów obsługi komunikatów kolejek
 
@@ -25,7 +25,7 @@ Odp **.:** Użyj <xref:System.ServiceModel.NetMsmqBinding>, jeśli chcesz użyć
 
 **P:** Czy muszę uaktualnić usługę MSMQ, aby używać powiązań <xref:System.ServiceModel.NetMsmqBinding> i `MsmqIntegration`?
 
-**Odp.:** Nie. Oba powiązania działają z usługą MSMQ 3,0 w systemach Windows XP i Windows Server 2003. Niektóre funkcje powiązań stają się dostępne po uaktualnieniu do usługi MSMQ 4,0 w systemie Windows Vista.
+**Odpowiedź:** Nie. Oba powiązania działają z usługą MSMQ 3,0 w systemach Windows XP i Windows Server 2003. Niektóre funkcje powiązań stają się dostępne po uaktualnieniu do usługi MSMQ 4,0 w systemie Windows Vista.
 
 **P:** Jakie funkcje powiązań <xref:System.ServiceModel.NetMsmqBinding> i <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> są dostępne w usłudze MSMQ 4,0, ale nie w usłudze MSMQ 3,0?
 
@@ -45,7 +45,7 @@ Aby uzyskać więcej informacji, zobacz [różnice w funkcjach kolejkowania w sy
 
 **P:** Chcę zintegrować istniejące aplikacje usługi MSMQ z nowymi klientami lub serwerami WCF. Czy muszę uaktualnić obie strony mojej infrastruktury usługi MSMQ?
 
-**Odp.:** Nie. Po obu stronach nie ma potrzeby uaktualniania do usługi MSMQ 4,0.
+**Odpowiedź:** Nie. Po obu stronach nie ma potrzeby uaktualniania do usługi MSMQ 4,0.
 
 ## <a name="troubleshooting"></a>Rozwiązywanie problemów
 
@@ -53,7 +53,7 @@ Ta sekcja zawiera odpowiedzi na najczęstsze problemy z rozwiązywaniem problem�
 
 **P:** Próbuję użyć kolejki prywatnej i otrzymuję następujący wyjątek: `System.InvalidOperationException`: adres URL jest nieprawidłowy. Adres URL kolejki nie może zawierać znaku "$". Użyj składni w usłudze net. MSMQ://machine/private/queueName, aby rozwiązać kolejkę prywatną.
 
-Odp **.:** Sprawdź Uniform Resource Identifier kolejki (URI) w konfiguracji i kodzie. Nie używaj znaku "$" w identyfikatorze URI. Na przykład, aby rozwiązać kolejkę prywatną o nazwie OrdersQueue, określ identyfikator URI w formacie net. MSMQ://localhost/private/ordersQueue.
+Odp **.:** Sprawdź Uniform Resource Identifier kolejki (URI) w konfiguracji i kodzie. Nie używaj znaku "$" w identyfikatorze URI. Na przykład, aby rozwiązać kolejkę prywatną o nazwie OrdersQueue, określ identyfikator URI jako `net.msmq://localhost/private/ordersQueue`.
 
 **P:** Wywołanie `ServiceHost.Open()` w Kolejkowanej aplikacji zgłasza następujący wyjątek: `System.ArgumentException`: adres podstawowy nie może zawierać ciągu zapytania identyfikatora URI. Dlaczego?
 
@@ -91,7 +91,7 @@ Jeśli program Assurances nie ma (<xref:System.ServiceModel.MsmqBindingBase.Exac
 
 A. Sprawdź kontrakt usługi. Być może zapomniano umieścić "IsOneWay =`true`" we wszystkich operacjach usługi. Kolejki obsługują tylko jednokierunkowe operacje usługi.
 
-**P:** W kolejce znajdują się komunikaty, ale nie jest wywoływana żadna operacja usługi. Jaki jest problem?
+**P:** W kolejce znajdują się komunikaty, ale nie jest wywoływana żadna operacja usługi. Na czym polega problem?
 
 Odp **.:** Ustal, czy wystąpił błąd hosta usługi. Możesz sprawdzić, patrząc na ślad lub implementując `IErrorHandler`. Błędy hosta usługi domyślnie, jeśli zostanie wykryty Trująca wiadomość.
 
@@ -132,7 +132,7 @@ Odp **.:** W przypadku korzystania z powiązania integracji usługi MSMQ należy
 
 **P:** Gdy używam nazwy formatu publicznego lub prywatnego i otworzysz hosta usługi w systemie Windows Vista, pojawia się błąd. Dlaczego?
 
-Odp **.:** Kanał integracji WCF w systemie Windows Vista sprawdza, czy podkolejka może być otwarta dla kolejki aplikacji głównej w celu obsługi skażonych komunikatów. Nazwa kolejki podrzędnej pochodzi od identyfikatora URI MSMQ. formatname przesłanego do odbiornika. Nazwa kolejki podrzędnej w usłudze MSMQ może być tylko nazwą formatu bezpośredniego. Zostanie wyświetlony komunikat o błędzie. Zmień identyfikator URI kolejki na nazwę formatu bezpośredniego.
+Odp **.:** Kanał integracji WCF w systemie Windows Vista umożliwia sprawdzenie, czy podkolejka może być otwarta dla kolejki aplikacji głównej w celu obsługi skażonych komunikatów. Nazwa kolejki podrzędnej pochodzi od identyfikatora URI MSMQ. formatname przesłanego do odbiornika. Nazwa kolejki podrzędnej w usłudze MSMQ może być tylko nazwą formatu bezpośredniego. Zostanie wyświetlony komunikat o błędzie. Zmień identyfikator URI kolejki na nazwę formatu bezpośredniego.
 
 **P:** W przypadku odebrania komunikatu z aplikacji MSMQ komunikat znajduje się w kolejce i nie jest odczytywany przez odebraną aplikację WCF. Dlaczego?
 
@@ -208,4 +208,4 @@ Odp **.:** Dostęp do odczytu usługi sieciowej należy dodać do listy ACL kole
 
 ## <a name="using-custom-msmq-bindings-with-receivecontext-enabled"></a>Używanie niestandardowych powiązań usługi MSMQ z włączonym użyciem funkcji ReceiveContext
 
-W przypadku używania niestandardowego powiązania usługi MSMQ z <xref:System.ServiceModel.Channels.ReceiveContext> włączonym przetwarzaniem komunikat przychodzący będzie używał wątku puli wątków, ponieważ natywna usługa MSMQ nie obsługuje kończenia operacji we/wy dla odbieranych <xref:System.ServiceModel.Channels.ReceiveContext> asynchronicznych. Wynika to z faktu, że przetwarzanie takich komunikatów używa transakcji wewnętrznych dla <xref:System.ServiceModel.Channels.ReceiveContext>, a usługa MSMQ nie obsługuje przetwarzania asynchronicznego. Aby obejść ten problem, można dodać <xref:System.ServiceModel.Description.SynchronousReceiveBehavior> do punktu końcowego w celu wymuszenia przetwarzania synchronicznego lub ustawienia <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.MaxPendingReceives%2A> na 1.
+W przypadku korzystania z niestandardowego powiązania usługi MSMQ z włączonym <xref:System.ServiceModel.Channels.ReceiveContext> przetwarzanie komunikatu przychodzącego korzysta z wątku puli wątków, ponieważ natywna usługa MSMQ nie obsługuje kończenia operacji we/wy dla odbieranych <xref:System.ServiceModel.Channels.ReceiveContext> asynchronicznych. Wynika to z faktu, że przetwarzanie takich komunikatów używa transakcji wewnętrznych dla <xref:System.ServiceModel.Channels.ReceiveContext>, a usługa MSMQ nie obsługuje przetwarzania asynchronicznego. Aby obejść ten problem, można dodać <xref:System.ServiceModel.Description.SynchronousReceiveBehavior> do punktu końcowego w celu wymuszenia przetwarzania synchronicznego lub ustawienia <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.MaxPendingReceives%2A> na 1.

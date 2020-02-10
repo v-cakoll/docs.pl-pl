@@ -2,41 +2,41 @@
 title: Niestandardowe działanie SendMail
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: b1e2d58a09362569d4d408f6e1c9e589aa6bda76
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 90b3192d931b216345b50ba49465455427e43a64
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715578"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094608"
 ---
 # <a name="sendmail-custom-activity"></a>Niestandardowe działanie SendMail
 Ten przykład pokazuje, jak utworzyć niestandardowe działanie, które pochodzi od <xref:System.Activities.AsyncCodeActivity> do wysyłania poczty przy użyciu protokołu SMTP do użycia w aplikacji przepływu pracy. Działanie niestandardowe używa możliwości <xref:System.Net.Mail.SmtpClient> do asynchronicznego wysyłania wiadomości e-mail i wysyłania wiadomości z uwierzytelnianiem. Zapewnia również pewne funkcje użytkownika końcowego, takie jak tryb testu, Zastępowanie tokenu, szablony plików i ścieżka do usuwania testów.  
   
  Poniższa tabela zawiera szczegółowe informacje o argumentach działania `SendMail`.  
   
-|Nazwa|Typ|Opis|  
+|Name (Nazwa)|Typ|Opis|  
 |-|-|-|  
-|Host|String|Adres hosta serwera SMTP.|  
-|Port|String|Port usługi SMTP na hoście.|  
-|enableSsl|bool|Określa, czy <xref:System.Net.Mail.SmtpClient> ma używać SSL (SSL) do szyfrowania połączenia.|  
-|UserName|String|Nazwa użytkownika, aby skonfigurować poświadczenia w celu uwierzytelnienia właściwości <xref:System.Net.Mail.SmtpClient.Credentials%2A> nadawcy.|  
-|Hasło|String|Hasło w celu skonfigurowania poświadczeń w celu uwierzytelnienia właściwości <xref:System.Net.Mail.SmtpClient.Credentials%2A> nadawcy.|  
-|Temat|ciąg \<<xref:System.Activities.InArgument%601>|Temat wiadomości.|  
-|jednostce|ciąg \<<xref:System.Activities.InArgument%601>|Treść wiadomości.|  
-|Załączniki|ciąg \<<xref:System.Activities.InArgument%601>|Kolekcja załączników służąca do przechowywania danych dołączonych do tej wiadomości e-mail.|  
-|Od|<xref:System.Net.Mail.MailAddress>|Adres od dla tej wiadomości e-mail.|  
+|Host|Ciąg|Adres hosta serwera SMTP.|  
+|Port|Ciąg|Port usługi SMTP na hoście.|  
+|EnableSsl|bool|Określa, czy <xref:System.Net.Mail.SmtpClient> ma używać SSL (SSL) do szyfrowania połączenia.|  
+|UserName|Ciąg|Nazwa użytkownika, aby skonfigurować poświadczenia w celu uwierzytelnienia właściwości <xref:System.Net.Mail.SmtpClient.Credentials%2A> nadawcy.|  
+|Hasło|Ciąg|Hasło w celu skonfigurowania poświadczeń w celu uwierzytelnienia właściwości <xref:System.Net.Mail.SmtpClient.Credentials%2A> nadawcy.|  
+|Podmiot|ciąg \<<xref:System.Activities.InArgument%601>>|Temat wiadomości.|  
+|Treść|ciąg \<<xref:System.Activities.InArgument%601>>|Treść wiadomości.|  
+|Załączniki|ciąg \<<xref:System.Activities.InArgument%601>>|Kolekcja załączników służąca do przechowywania danych dołączonych do tej wiadomości e-mail.|  
+|Z|<xref:System.Net.Mail.MailAddress>|Adres od dla tej wiadomości e-mail.|  
 |Do|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Kolekcja adresów zawierająca adresatów tej wiadomości e-mail.|  
 |CC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Kolekcja adresów zawierająca adresatów kopii wiadomości e-mail.|  
-|UDW|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Kolekcja adresów zawierająca adresatów (UDW) dla tej wiadomości e-mail.|  
+|BCC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Kolekcja adresów zawierająca adresatów (UDW) dla tej wiadomości e-mail.|  
 |Tokeny|<xref:System.Activities.InArgument%601>< IDictionary\<ciąg, ciąg > >|Tokeny do zamiany w treści. Ta funkcja umożliwia użytkownikom Określanie niektórych wartości w treści, niż można zastąpić je później za pomocą tokenów dostarczonych przy użyciu tej właściwości.|  
-|BodyTemplateFilePath|String|Ścieżka szablonu dla treści. Działanie `SendMail` kopiuje zawartość tego pliku do jego właściwości Body.<br /><br /> Szablon może zawierać tokeny, które są zastępowane przez zawartość właściwości tokens.|  
+|BodyTemplateFilePath|Ciąg|Ścieżka szablonu dla treści. Działanie `SendMail` kopiuje zawartość tego pliku do jego właściwości Body.<br /><br /> Szablon może zawierać tokeny, które są zastępowane przez zawartość właściwości tokens.|  
 |TestMailTo|<xref:System.Net.Mail.MailAddress>|Gdy ta właściwość jest ustawiona, wszystkie wiadomości e-mail są wysyłane na adres określony w tym polu.<br /><br /> Ta właściwość jest przeznaczona do użycia podczas testowania przepływów pracy. Na przykład jeśli chcesz upewnić się, że wszystkie wiadomości e-mail są wysyłane bez wysyłania ich do rzeczywistych adresatów.|  
-|TestDropPath|String|Gdy ta właściwość jest ustawiona, wszystkie wiadomości e-mail są również zapisywane w określonym pliku.<br /><br /> Ta właściwość jest przeznaczona do użycia podczas testowania lub debugowania przepływów pracy, aby upewnić się, że format i zawartość wychodzących wiadomości e-mail są odpowiednie.|  
+|TestDropPath|Ciąg|Gdy ta właściwość jest ustawiona, wszystkie wiadomości e-mail są również zapisywane w określonym pliku.<br /><br /> Ta właściwość jest przeznaczona do użycia podczas testowania lub debugowania przepływów pracy, aby upewnić się, że format i zawartość wychodzących wiadomości e-mail są odpowiednie.|  
   
 ## <a name="solution-contents"></a>Zawartość rozwiązania  
  Rozwiązanie zawiera dwa projekty.  
   
-|{1&gt;Projekt&lt;1}|Opis|Ważne pliki|  
+|Project|Opis|Ważne pliki|  
 |-------------|-----------------|---------------------|  
 |SendMail|Działanie SendMail|1. SendMail.cs: implementacja głównego działania<br />2. SendMailDesigner. XAML i SendMailDesigner.xaml.cs: Projektant dla działania SendMail<br />3. MailTemplateBody. htm: szablon wiadomości e-mail do wysłania.|  
 |SendMailTestClient|Klient do testowania działania SendMail.  Ten projekt przedstawia dwa sposoby wywoływania działania SendMail: deklaratywnie i programistyczne.|1. Sequence1. XAML: przepływ pracy, który wywołuje działanie SendMail.<br />2. Program.cs: wywołuje Sequence1, a także programowo tworzy przepływ pracy, który używa SendMail.|  
@@ -107,13 +107,11 @@ new SendMail
   
  Aby uzyskać więcej informacji na temat konfigurowania serwera SMTP, zobacz poniższe linki.  
   
-- [Microsoft TechNet](https://go.microsoft.com/fwlink/?LinkId=166060)  
+- [Konfigurowanie usługi SMTP (IIS 6,0)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784968(v=ws.10))  
   
-- [Konfigurowanie usługi SMTP (IIS 6,0)](https://go.microsoft.com/fwlink/?LinkId=150456)  
+- [IIS 7,0: Konfigurowanie poczty E-Mail SMTP](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772058(v=ws.10))  
   
-- [IIS 7,0: Konfigurowanie poczty E-Mail SMTP](https://go.microsoft.com/fwlink/?LinkId=150457)  
-  
-- [Jak zainstalować usługę SMTP](https://go.microsoft.com/fwlink/?LinkId=150458)  
+- [Jak zainstalować usługę SMTP](https://docs.microsoft.com/previous-versions/tn-archive/aa997480(v=exchg.65))  
   
  Emulatory SMTP udostępniane przez inne firmy są dostępne do pobrania.  
   

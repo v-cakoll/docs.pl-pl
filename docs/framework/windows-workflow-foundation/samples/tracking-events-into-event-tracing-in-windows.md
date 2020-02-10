@@ -2,12 +2,12 @@
 title: Zdarzenia śledzenia do śledzenia zdarzeń w systemie Windows
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: fe50476eedef505258c2e6818e75a32c06ed6fa6
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 2c397bcfa809a1306e9c31bf3f652b055d997f38
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715930"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094582"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Zdarzenia śledzenia do śledzenia zdarzeń w systemie Windows
 
@@ -151,6 +151,6 @@ Profil śledzenia monitorowania kondycji emituje rekordy wystąpień przepływu 
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\EtwTracking`
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Przykłady monitorowania oprogramowania AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [Przykłady monitorowania oprogramowania AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

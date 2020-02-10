@@ -1,13 +1,13 @@
 ---
-title: Podstawowe zmiany w programie .NET Core
+title: Zmiany powodujące niezgodność
 description: Dowiedz się więcej o istotnych zmianach w każdej wersji platformy .NET Core.
 ms.date: 11/27/2019
-ms.openlocfilehash: c03054972a5e1cd427e069c65fa8e8b601af5894
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 664d83f5bfa455764de8823c4bbdb4a2018e1875
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937336"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093074"
 ---
 # <a name="breaking-change-selectors"></a>Selektory zmiany przerywania
 
@@ -33,6 +33,6 @@ Można również wyświetlić poszczególne problemy, które opisują istotne zm
 - Dla ASP.NET Core, repozytorium [ASPNET/anonsów](https://github.com/aspnet/Announcements/issues?q=is%3Aissue+is%3Aopen+label%3A%22Breaking+change%22+label%3A3.0.0) .
 - W przypadku Entity Framework Core, repozytorium [dotnet/efcore](https://github.com/dotnet/efcore/issues?q=is%3Aopen+is%3Aissue+label%3Abreaking-change) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Migrowanie z .NET Framework do platformy .NET Core](../porting/index.md)

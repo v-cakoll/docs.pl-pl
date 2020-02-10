@@ -11,16 +11,16 @@ helpviewer_keywords:
 - enumeration type [C#]
 - bit flags [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 72bc867bf0a789279da9a01f97c85d96b78684ed
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: ac4dafef92bbc900d291a5b653c55ba295f1a6d6
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75444348"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093230"
 ---
 # <a name="enumeration-types-c-reference"></a>Typy wyliczeniowe (C# odwołanie)
 
-Typ wyliczenia (lub typ wyliczeniowy) jest typem wartości zdefiniowanym przez zestaw nazwanych stałych podstawowego typu [liczbowego](integral-numeric-types.md) . Aby zdefiniować typ wyliczeniowy, użyj słowa kluczowego `enum` i określ nazwy *elementów członkowskich wyliczenia*:
+*Typ wyliczenia* (lub *Typ wyliczeniowy*) jest [typem wartości](value-types.md) zdefiniowanym przez zestaw nazwanych stałych podstawowego typu [liczbowego](integral-numeric-types.md) . Aby zdefiniować typ wyliczeniowy, użyj słowa kluczowego `enum` i określ nazwy *elementów członkowskich wyliczenia*:
 
 ```csharp
 enum Season
@@ -85,7 +85,7 @@ Aby uzyskać więcej informacji, zobacz następujące sekcje [ C# specyfikacji j
 - [Jawne konwersje wyliczenia](~/_csharplang/spec/conversions.md#explicit-enumeration-conversions)
 - [Niejawne konwersje wyliczenia](~/_csharplang/spec/conversions.md#implicit-enumeration-conversions)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [C#odwoła](../index.md)
 - [Ciągi formatujące Wyliczenie](../../../standard/base-types/enumeration-format-strings.md)

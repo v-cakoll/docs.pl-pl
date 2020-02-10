@@ -2,12 +2,12 @@
 title: Blokada zabezpieczeń PII
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 63410ecc19e94e57f943e5d7dc13a6098bd91d51
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 56c8acbe53f1e0243f7c679da6ef04f7135bcd3a
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714629"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094972"
 ---
 # <a name="pii-security-lockdown"></a>Blokada zabezpieczeń PII
 Ten przykład pokazuje, jak kontrolować kilka funkcji związanych z zabezpieczeniami usługi Windows Communication Foundation (WCF) przez:  
@@ -47,7 +47,7 @@ Ten przykład pokazuje, jak kontrolować kilka funkcji związanych z zabezpiecze
   
 3. Zaszyfruj ustawienia konfiguracji appSettings w folderze Web. config, wydając następujące polecenie: `aspnet_regiis -pe "appSettings" -app "/servicemodelsamples" -prov "DataProtectionConfigurationProvider"`.  
   
- Więcej informacji na temat szyfrowania sekcji plików konfiguracji można znaleźć, odczytując instrukcje dotyczące interfejsu DPAPI w konfiguracji ASP.NET ([Tworzenie bezpiecznych aplikacji ASP.NET: uwierzytelnianie, autoryzacja i Bezpieczna komunikacja](https://go.microsoft.com/fwlink/?LinkId=95137)) oraz informacje o kluczu RSA w konfiguracji ASP.NET ([instrukcje: szyfrowanie sekcji konfiguracyjnych w ASP.NET 2,0 przy użyciu RSA](https://go.microsoft.com/fwlink/?LinkId=95138)).  
+ Więcej informacji na temat szyfrowania sekcji plików konfiguracji można znaleźć, odczytując instrukcje dotyczące interfejsu DPAPI w konfiguracji ASP.NET ([Tworzenie bezpiecznych aplikacji ASP.NET: uwierzytelnianie, autoryzacja i Bezpieczna komunikacja](https://docs.microsoft.com/previous-versions/msp-n-p/ff649248(v=pandp.10))) oraz informacje o kluczu RSA w konfiguracji ASP.NET ([instrukcje: szyfrowanie sekcji konfiguracyjnych w ASP.NET 2,0 przy użyciu RSA](https://docs.microsoft.com/previous-versions/msp-n-p/ff650304(v=pandp.10))).  
   
 ## <a name="locking-configuration-file-elements"></a>Blokowanie elementów pliku konfiguracji  
  W scenariuszach hostowanych w sieci Web możliwe jest posiadanie usług w podkatalogach usług. W takich sytuacjach wartości konfiguracyjne usługi w podkatalogu są obliczane przez badanie wartości w pliku Machine. config i ponowne scalanie z dowolnym plikami Web. config w katalogach nadrzędnych, przenosząc drzewo katalogów i wreszcie scalając Plik Web. config w katalogu zawierającym usługę. Domyślne zachowanie większości elementów konfiguracji polega na umożliwieniu plików konfiguracji w podkatalogach w celu zastąpienia wartości ustawionych w katalogach nadrzędnych. W niektórych sytuacjach może być wskazane, aby zapobiec zastępowaniu plików konfiguracji w podkatalogach przed zastępowaniem wartości ustawionych w konfiguracji katalogu nadrzędnego.  
@@ -122,11 +122,11 @@ Ten przykład pokazuje, jak kontrolować kilka funkcji związanych z zabezpiecze
 > [!IMPORTANT]
 > Do uruchomienia tego przykładu zawarto ręczną modyfikację pliku Machine. config. Należy zachować ostrożność podczas modyfikowania pliku Machine. config, ponieważ nieprawidłowe wartości lub Składnia mogą uniemożliwić uruchamianie wszystkich aplikacji .NET Framework.  
   
- Istnieje również możliwość szyfrowania elementów plików konfiguracji przy użyciu funkcji DPAPI i RSA. Aby uzyskać więcej informacji, zobacz następujące linki:  
+ Istnieje również możliwość szyfrowania elementów plików konfiguracji przy użyciu funkcji DPAPI i RSA. Aby uzyskać więcej informacji, skorzystaj z następujących linków:  
   
-- [Tworzenie bezpiecznych aplikacji ASP.NET: uwierzytelnianie, autoryzacja i Bezpieczna komunikacja](https://go.microsoft.com/fwlink/?LinkId=95137)  
+- [Tworzenie bezpiecznych aplikacji ASP.NET: uwierzytelnianie, autoryzacja i Bezpieczna komunikacja](https://docs.microsoft.com/previous-versions/msp-n-p/ff649248(v=pandp.10))  
   
-- [Instrukcje: szyfrowanie sekcji konfiguracyjnych w ASP.NET 2,0 przy użyciu RSA](https://go.microsoft.com/fwlink/?LinkId=95138)  
+- [Instrukcje: szyfrowanie sekcji konfiguracyjnych w ASP.NET 2,0 przy użyciu RSA](https://docs.microsoft.com/previous-versions/msp-n-p/ff650304(v=pandp.10))  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
@@ -142,6 +142,6 @@ Ten przykład pokazuje, jak kontrolować kilka funkcji związanych z zabezpiecze
   
 1. Edytuj plik Machine. config, aby ustawić atrybut `enableLoggingKnownPii` na `false`.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Przykłady monitorowania oprogramowania AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [Przykłady monitorowania oprogramowania AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

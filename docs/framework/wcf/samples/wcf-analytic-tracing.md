@@ -2,22 +2,22 @@
 title: Śledzenie danych analitycznych programu WCF
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: 52a6787f6c7d309b1ae3a932780e4dbcb2ec0792
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 3ed9c5f08e89d978f8290dcda5ab1ecfd8b9c56c
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715303"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094829"
 ---
 # <a name="wcf-analytic-tracing"></a>Śledzenie danych analitycznych programu WCF
 Ten przykład pokazuje, jak dodać własne zdarzenia śledzenia do strumienia śladów analitycznych, które Windows Communication Foundation (WCF) zapisu w usłudze ETW w [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Śledzenie analityczne ma na celu ułatwienie wglądu w swoje usługi bez konieczności ponoszenia dużej wydajności. Ten przykład pokazuje, jak używać interfejsów API <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> do zapisywania zdarzeń zintegrowanych z usługami WCF.  
   
  Aby uzyskać więcej informacji na temat <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> interfejsów API, zobacz <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>.  
   
- Aby dowiedzieć się więcej na temat śledzenia zdarzeń w systemie Windows, zobacz [ulepszanie debugowania i dostrajania wydajności za pomocą funkcji ETW](https://go.microsoft.com/fwlink/?LinkId=166488).  
+ Aby dowiedzieć się więcej na temat śledzenia zdarzeń w systemie Windows, zobacz [ulepszanie debugowania i dostrajania wydajności za pomocą funkcji ETW](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw).  
   
 ## <a name="disposing-eventprovider"></a>EventProvider usuwania  
- Ten przykład używa klasy <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType> implementującej <xref:System.IDisposable?displayProperty=nameWithType>. Podczas wdrażania śledzenia dla usługi WCF prawdopodobnie można używać zasobów <xref:System.Diagnostics.Eventing.EventProvider>przez okres istnienia usługi. Z tego powodu i dla czytelności ten przykład nigdy nie usuwa opakowanej <xref:System.Diagnostics.Eventing.EventProvider>. Jeśli z jakiegoś powodu usługa ma inne wymagania dotyczące śledzenia i musisz usunąć ten zasób, należy zmodyfikować ten przykład zgodnie z najlepszymi rozwiązaniami dotyczącymi usuwania niezarządzanych zasobów. Aby uzyskać więcej informacji o usuwaniu niezarządzanych zasobów, zobacz [implementowanie metody Dispose](https://go.microsoft.com/fwlink/?LinkId=166436).  
+ Ten przykład używa klasy <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType> implementującej <xref:System.IDisposable?displayProperty=nameWithType>. Podczas wdrażania śledzenia dla usługi WCF prawdopodobnie można używać zasobów <xref:System.Diagnostics.Eventing.EventProvider>przez okres istnienia usługi. Z tego powodu i dla czytelności ten przykład nigdy nie usuwa opakowanej <xref:System.Diagnostics.Eventing.EventProvider>. Jeśli z jakiegoś powodu usługa ma inne wymagania dotyczące śledzenia i musisz usunąć ten zasób, należy zmodyfikować ten przykład zgodnie z najlepszymi rozwiązaniami dotyczącymi usuwania niezarządzanych zasobów. Aby uzyskać więcej informacji o usuwaniu niezarządzanych zasobów, zobacz [implementowanie metody Dispose](https://docs.microsoft.com/dotnet/standard/garbage-collection/implementing-dispose).  
   
 ## <a name="self-hosting-vs-web-hosting"></a>Samodzielne hosting a hosting w sieci Web  
  W przypadku usług hostowanych w sieci Web dane śledzenia analityczne programu WCF zawierają pole o nazwie "HostReference", które służy do identyfikowania usługi emitującej dane śledzenia. Rozszerzone ślady użytkownika mogą uczestniczyć w tym modelu, a w tym przykładzie przedstawiono najlepsze rozwiązania w zakresie tego działania. Format odwołania do hosta sieci Web, gdy potoku "&#124;" rzeczywiście występuje w ciągu wynikiem może być jedną z następujących wartości:  
@@ -35,7 +35,7 @@ Ten przykład pokazuje, jak dodać własne zdarzenia śledzenia do strumienia ś
 ## <a name="custom-event-details"></a>Szczegóły zdarzenia niestandardowego  
  Manifest dostawcy zdarzeń ETW WCF definiuje trzy zdarzenia, które są przeznaczone do emitowania przez autorów usług WCF z poziomu kodu usługi. W poniższej tabeli przedstawiono podział trzech zdarzeń.  
   
-|Zdarzenie|Opis|Identyfikator zdarzenia|  
+|Wydarzenie|Opis|Identyfikator zdarzenia|  
 |-----------|-----------------|--------------|  
 |UserDefinedInformationEventOccurred|Emituj to zdarzenie, gdy coś uwagi wystąpi w usłudze, która nie jest problemem. Na przykład można wyemitować zdarzenie po pomyślnym wykonaniu wywołania do bazy danych.|301|  
 |UserDefinedWarningOccurred|Emituj to zdarzenie, gdy wystąpi problem, który może spowodować wystąpienie błędu w przyszłości. Można na przykład wyemitować zdarzenie ostrzeżenia, gdy wywołanie do bazy danych zakończy się niepowodzeniem, ale było możliwe odzyskanie ich przez powracanie do nadmiarowego magazynu danych.|302|  
@@ -117,6 +117,6 @@ Ten przykład pokazuje, jak dodać własne zdarzenia śledzenia do strumienia ś
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTrace`  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Przykłady monitorowania oprogramowania AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [Przykłady monitorowania oprogramowania AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

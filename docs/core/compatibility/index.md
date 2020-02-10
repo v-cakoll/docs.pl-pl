@@ -1,13 +1,13 @@
 ---
-title: Typy istotnych zmian — .NET Core
+title: Typy istotnych zmian
 description: Dowiedz się, jak platforma .NET Core próbuje zachować zgodność dla deweloperów w różnych wersjach programu .NET i jakiego rodzaju zmiana jest traktowana jako istotna zmiana.
 ms.date: 06/10/2019
-ms.openlocfilehash: 76d04504c4476f0f7517a633cfbf1c0aa9d5797e
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 1c5790e39754b91aacbde9e87ed99f9dcc36ce9f
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76738572"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092983"
 ---
 # <a name="changes-that-affect-compatibility"></a>Zmiany wpływające na zgodność
 
@@ -33,7 +33,7 @@ W poniższych sekcjach opisano kategorie zmian wprowadzonych w interfejsach API 
 
 Zmiany w tej kategorii modyfikują publiczną powierzchnię typu. Większość zmian w tej kategorii jest niedozwolona, ponieważ naruszają *zgodność z poprzednimi* wersjami (zdolność aplikacji, która została opracowana przy użyciu poprzedniej wersji interfejsu API do wykonania bez ponownej kompilacji w nowszej wersji).
 
-### <a name="types"></a>Types
+### <a name="types"></a>Typy
 
 - ✔️ **dozwolone: usuwanie implementacji interfejsu z typu, gdy interfejs jest już zaimplementowany przez typ podstawowy**
 
@@ -87,7 +87,7 @@ Zmiany w tej kategorii modyfikują publiczną powierzchnię typu. Większość z
 
    Jednak zwiększenie widoczności typu jest dozwolone.
 
-### <a name="members"></a>Elementy członkowskie
+### <a name="members"></a>Members
 
 - ✔️ **dozwolone: rozszerzanie widoczności elementu członkowskiego, który nie jest [wirtualny](../../csharp/language-reference/keywords/sealed.md)**
 

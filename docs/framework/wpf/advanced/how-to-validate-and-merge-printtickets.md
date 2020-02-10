@@ -10,15 +10,15 @@ helpviewer_keywords:
 - validation of PrintTickets [WPF]
 - PrintTicket [WPF], validation
 ms.assetid: 4fe2d501-d0b0-4fef-86af-6ffe6c162532
-ms.openlocfilehash: 15e328729886e0f1efc3b47705fcb4ce13013137
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: bd7f399555b343a52ec6f36aa3b8c706747d8b06
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035576"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094530"
 ---
 # <a name="how-to-validate-and-merge-printtickets"></a>Jak walidować i scalać PrintTickets
-[Schemat drukowania](https://go.microsoft.com/fwlink/?LinkId=186397) systemu Microsoft Windows zawiera elastyczne i rozszerzalne <xref:System.Printing.PrintCapabilities> i <xref:System.Printing.PrintTicket> elementy. Dawniej wyszczególniono możliwości urządzenia drukującego i te informacje określają, jak urządzenie powinno korzystać z tych funkcji w odniesieniu do określonej sekwencji dokumentów, pojedynczego dokumentu lub pojedynczej strony.  
+[Schemat drukowania](/windows/win32/printdocs/printschema) systemu Microsoft Windows zawiera elastyczne i rozszerzalne <xref:System.Printing.PrintCapabilities> i <xref:System.Printing.PrintTicket> elementy. Dawniej wyszczególniono możliwości urządzenia drukującego i te informacje określają, jak urządzenie powinno korzystać z tych funkcji w odniesieniu do określonej sekwencji dokumentów, pojedynczego dokumentu lub pojedynczej strony.  
   
  Typową sekwencją zadań dla aplikacji, która obsługuje drukowanie, będzie następująca.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "73035576"
  [!code-csharp[PrintTicketManagment#UIForMergeAndValidatePTUtility](~/samples/snippets/csharp/VS_Snippets_Wpf/PrintTicketManagment/CSharp/printticket.cs#uiformergeandvalidateptutility)]
  [!code-vb[PrintTicketManagment#UIForMergeAndValidatePTUtility](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#uiformergeandvalidateptutility)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Printing.PrintCapabilities>
 - <xref:System.Printing.PrintTicket>
@@ -67,4 +67,4 @@ ms.locfileid: "73035576"
 - <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>
 - [Dokumenty w WPF](documents-in-wpf.md)
 - [Przegląd drukowania](printing-overview.md)
-- [Drukuj schemat](https://go.microsoft.com/fwlink/?LinkId=186397)
+- [Drukuj schemat](/windows/win32/printdocs/printschema)

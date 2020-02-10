@@ -1,13 +1,13 @@
 ---
 title: Rozszerzenia typu
 description: Dowiedz F# się, jak rozszerzenia typów umożliwiają dodawanie nowych elementów członkowskich do wcześniej zdefiniowanego typu obiektu.
-ms.date: 11/04/2019
-ms.openlocfilehash: 3e2c6971156bd562ed5d5428e6b7ffdc520c4cf5
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.date: 02/05/2020
+ms.openlocfilehash: 9ab3a007783f67fd8d80cff840ac3085fdcd60f7
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75341571"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092684"
 ---
 # <a name="type-extensions"></a>Rozszerzenia typu
 
@@ -33,7 +33,8 @@ open System.Runtime.CompilerServices
 
 [<Extension>]
 type Extensions() =
-    [static] member self-identifier.extension-name (ty: typename, [args]) =
+    [<Extension>]
+    static member self-identifier.extension-name (ty: typename, [args]) =
         body
     ...
 ```
@@ -136,12 +137,21 @@ namespace Extensions
 open System.Runtime.CompilerServices
 
 [<Extension>]
-type IEnumerableExtensions() =
+type IEnumerableExtensions =
     [<Extension>]
     static member inline Sum(xs: IEnumerable<'T>) = Seq.sum xs
 ```
 
 Gdy jest używany, ten kod będzie wyglądać tak, jakby `Sum` jest zdefiniowany w <xref:System.Collections.Generic.IEnumerable%601>, tak długo, jak `Extensions` został otwarty lub znajduje się w zakresie.
+
+Aby rozszerzenie było dostępne dla kodu VB.NET, wymagany jest dodatkowy `ExtensionAttribute` na poziomie zestawu:
+
+```fsharp
+module AssemblyInfo
+open System.Runtime.CompilerServices
+[<assembly:Extension>]
+do ()
+```
 
 ## <a name="other-remarks"></a>Inne uwagi
 
@@ -166,7 +176,7 @@ Istnieją również następujące ograniczenia dotyczące rozszerzeń typów:
 
 Jeśli istnieje wiele rozszerzeń typu wewnętrznego dla jednego typu, wszystkie elementy członkowskie muszą być unikatowe. W przypadku opcjonalnych rozszerzeń typu elementy członkowskie w różnych rozszerzeniach typu tego samego typu mogą mieć takie same nazwy. Błędy niejednoznaczne występują tylko wtedy, gdy kod klienta otwiera dwa różne zakresy, które definiują te same nazwy elementów członkowskich.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Dokumentacja języka F#](index.md)
 - [Elementy członkowskie](./members/index.md)

@@ -4,12 +4,12 @@ description: Informacje o typach podstawowych (liczbowych, ciągach i obiektach)
 ms.date: 10/10/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: 7b6dec16b3fd84ced856a9f0e42f38189b1e03fd
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: ad496a9cbb0a654ec10ac38b374a76b042911302
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75339281"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093295"
 ---
 # <a name="types-variables-and-values"></a>Typy, zmienne i wartości
 
@@ -54,7 +54,7 @@ Aby uzyskać więcej informacji, zobacz [rzutowanie i konwersje typów](programm
 
 ## <a name="built-in-types"></a>Typy wbudowane
 
-C#zawiera standardowy zestaw wbudowanych typów liczbowych reprezentujących liczby całkowite, wartości zmiennoprzecinkowe, wyrażenia logiczne, znaki tekstowe, wartości dziesiętne i inne typy danych. Istnieją również wbudowane typy **ciągów** i **obiektów** . Są one dostępne do użycia w dowolnym C# programie. Aby uzyskać więcej informacji na temat typów wbudowanych, zobacz [Tablica referencyjna dla typów wbudowanych](language-reference/keywords/built-in-types-table.md).  
+C#zawiera standardowy zestaw wbudowanych typów liczbowych reprezentujących liczby całkowite, wartości zmiennoprzecinkowe, wyrażenia logiczne, znaki tekstowe, wartości dziesiętne i inne typy danych. Istnieją również wbudowane typy **ciągów** i **obiektów** . Są one dostępne do użycia w dowolnym C# programie. Aby zapoznać się z pełną listą typów wbudowanych, zobacz [typy wbudowane](language-reference/builtin-types/built-in-types.md).
   
 ## <a name="custom-types"></a>Typy niestandardowe
 
@@ -84,7 +84,7 @@ Ważne jest, aby zrozumieć dwa podstawowe punkty o systemie typów w .NET Frame
   
 - Każdy typ w CTS jest zdefiniowany jako *Typ wartości* lub *typ referencyjny*. Obejmuje to wszystkie niestandardowe typy w bibliotece klas .NET Framework, a także własne typy zdefiniowane przez użytkownika. Typy zdefiniowane za pomocą słowa kluczowego [struct](language-reference/keywords/struct.md) są typami wartości; wszystkie wbudowane typy liczbowe to **struktury**. Aby uzyskać więcej informacji na temat typów wartości, zobacz [struktury](structs.md). Typy zdefiniowane za pomocą słowa kluczowego [Class](language-reference/keywords/class.md) to typy odwołań. Aby uzyskać więcej informacji na temat typów referencyjnych, zobacz [klasy](programming-guide/classes-and-structs/classes.md). Typy odwołań i typy wartości mają różne reguły czasu kompilacji i inne zachowanie w czasie wykonywania.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Struktury](structs.md)
 - [Klasy](programming-guide/classes-and-structs/classes.md)

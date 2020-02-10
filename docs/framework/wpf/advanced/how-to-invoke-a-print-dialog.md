@@ -8,12 +8,12 @@ helpviewer_keywords:
 - invoking print dialogs [WPF]
 - print dialogs [WPF], invoking
 ms.assetid: e3a2c84c-74fe-45a4-8501-5813f9dbfed2
-ms.openlocfilehash: 6d7bc322079718d17a921ef34af79145b021e3a7
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: f7ef3312d876324b44b055d70fd22e3fba075ec6
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636097"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095180"
 ---
 # <a name="how-to-invoke-a-print-dialog"></a>Jak wywołać okno dialogowe drukowania
 Aby umożliwić drukowanie z poziomu aplikacji, można po prostu utworzyć i otworzyć obiekt <xref:System.Windows.Controls.PrintDialog>.  
@@ -24,16 +24,16 @@ Aby umożliwić drukowanie z poziomu aplikacji, można po prostu utworzyć i otw
  [!code-csharp[printdialog#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PrintDialog/CSharp/Window1.xaml.cs#1)]
  [!code-vb[printdialog#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintDialog/visualbasic/window1.xaml.vb#1)]  
   
- Po otwarciu okna dialogowego użytkownicy będą mogli wybierać spośród drukarek zainstalowanych na komputerze. Będą również mieć możliwość wyboru [składnika zapisywania dokumentów XPS firmy Microsoft](https://go.microsoft.com/fwlink/?LinkId=147319) w celu utworzenia pliku specyfikacji XML Paper Specification (XPS) zamiast drukowania.  
+ Po otwarciu okna dialogowego użytkownicy będą mogli wybierać spośród drukarek zainstalowanych na komputerze. Będą również mieć możliwość wyboru [składnika zapisywania dokumentów XPS firmy Microsoft](/windows/win32/printdocs/microsoft-xps-document-writer) w celu utworzenia pliku specyfikacji XML Paper Specification (XPS) zamiast drukowania.  
   
 > [!NOTE]
 > Formant <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> WPF, który został omówiony w tym temacie, nie należy mylić ze składnikiem <xref:System.Windows.Forms.PrintDialog?displayProperty=nameWithType> Windows Forms.  
   
  Dokładnie mówiąc, można użyć metody <xref:System.Windows.Controls.PrintDialog.PrintDocument%2A> bez konieczności otwierania okna dialogowego. W tym sensie formant może być używany jako niewidoczny składnik drukowania. Jednak ze względu na wydajność lepszym rozwiązaniem jest użycie metody <xref:System.Printing.PrintQueue.AddJob%2A> lub jednej z wielu <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> i <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> metod <xref:System.Windows.Xps.XpsDocumentWriter>. Aby uzyskać więcej informacji na ten temat, zobacz programowe [Drukowanie plików XPS](how-to-programmatically-print-xps-files.md) i.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Windows.Controls.PrintDialog>
 - [Dokumenty w WPF](documents-in-wpf.md)
 - [Przegląd drukowania](printing-overview.md)
-- [Moduł zapisywania dokumentów XPS firmy Microsoft](https://go.microsoft.com/fwlink/?LinkId=147319)
+- [Moduł zapisywania dokumentów XPS firmy Microsoft](/windows/win32/printdocs/microsoft-xps-document-writer)

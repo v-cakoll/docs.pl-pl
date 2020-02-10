@@ -2,16 +2,16 @@
 title: Działania dostępu do bazy danych
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-ms.openlocfilehash: eec368803eeacb2bab729bcd6d57cc7fc6107256
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: ed3f0ad3f2fd19f622c9cb0faf7d5cd864b81995
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710861"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094647"
 ---
 # <a name="database-access-activities"></a>Działania dostępu do bazy danych
 
-Działania dostępu do bazy danych umożliwiają dostęp do bazy danych w ramach przepływu pracy. Te działania umożliwiają dostęp do baz danych w celu pobierania lub modyfikowania informacji oraz korzystania z [ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081) w celu uzyskania dostępu do bazy danych.
+Działania dostępu do bazy danych umożliwiają dostęp do bazy danych w ramach przepływu pracy. Te działania umożliwiają dostęp do baz danych w celu pobierania lub modyfikowania informacji oraz korzystania z [ADO.NET](../../data/adonet/index.md) w celu uzyskania dostępu do bazy danych.
 
 > [!IMPORTANT]
 > Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).
@@ -78,7 +78,7 @@ Public class DbUpdate: AsyncCodeActivity
 |Przekształcon|Parametry połączenia w celu nawiązania połączenia z bazą danych. Jeśli ten argument jest ustawiony, należy również ustawić `ProviderName`.|
 |Konfiguracja pliku|Nazwa sekcji pliku konfiguracji, w której są przechowywane informacje o połączeniu. Gdy ten argument jest ustawiony `ProviderName` i `ConnectionString` nie są wymagane.|
 |CommandType|Typ <xref:System.Data.Common.DbCommand>, który ma zostać wykonany.|
-|Server|Polecenie SQL, które ma zostać wykonane.|
+|Sql|Polecenie SQL, które ma zostać wykonane.|
 |Parametry|Kolekcja parametrów zapytania SQL.|
 |AffectedRecords|Liczba rekordów, których dotyczy Ostatnia operacja.|
 
@@ -132,7 +132,7 @@ public class DbQueryScalar<TResult> : AsyncCodeActivity<TResult>
 |Przekształcon|Parametry połączenia w celu nawiązania połączenia z bazą danych. Jeśli ten argument jest ustawiony, należy również ustawić `ProviderName`.|
 |Konfiguracja pliku|Nazwa sekcji pliku konfiguracji, w której są przechowywane informacje o połączeniu. Gdy ten argument jest ustawiony `ProviderName` i `ConnectionString` nie są wymagane.|
 |CommandType|Typ <xref:System.Data.Common.DbCommand>, który ma zostać wykonany.|
-|Server|Polecenie SQL, które ma zostać wykonane.|
+|Sql|Polecenie SQL, które ma zostać wykonane.|
 |Parametry|Kolekcja parametrów zapytania SQL.|
 |Wynik|Wartość skalarna, która jest uzyskiwana po wykonaniu zapytania. Ten argument jest typu `TResult`.|
 
@@ -192,7 +192,7 @@ public class DbQuery<TResult> : AsyncCodeActivity<IList<TResult>> where TResult 
 |Przekształcon|Parametry połączenia w celu nawiązania połączenia z bazą danych. Jeśli ten argument jest ustawiony, należy również ustawić `ProviderName`.|
 |Konfiguracja pliku|Nazwa sekcji pliku konfiguracji, w której są przechowywane informacje o połączeniu. Gdy ten argument jest ustawiony `ProviderName` i `ConnectionString` nie są wymagane.|
 |CommandType|Typ <xref:System.Data.Common.DbCommand>, który ma zostać wykonany.|
-|Server|Polecenie SQL, które ma zostać wykonane.|
+|Sql|Polecenie SQL, które ma zostać wykonane.|
 |Parametry|Kolekcja parametrów zapytania SQL.|
 |wzor|Funkcja mapowania (<xref:System.Func%601><`DbDataReader`, `TResult`>), która pobiera rekord w `DataReader` uzyskany w wyniku wykonania zapytania i zwraca wystąpienie obiektu typu `TResult`, który zostanie dodany do kolekcji `Result`.<br /><br /> W takim przypadku mapowanie jest wykonywane w ramach pojedynczego impulsu wykonywania, ale nie można go utworzyć deklaratywnie przy użyciu projektanta.|
 |MapperFunc|Funkcja mapowania (<xref:System.Activities.ActivityFunc%601><`DbDataReader`, `TResult`>), która pobiera rekord w `DataReader` uzyskany w wyniku wykonania zapytania i zwraca wystąpienie obiektu typu `TResult`, który zostanie dodany do kolekcji `Result`.<br /><br /> W takim przypadku mapowanie jest wykonywane w wielu impulsach wykonania. Tę funkcję można serializować do języka XAML i utworzyć deklaratywnie (wszystkie istniejące działania mogą uczestniczyć w mapowaniu).|
@@ -246,7 +246,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 |Przekształcon|Parametry połączenia w celu nawiązania połączenia z bazą danych. Jeśli ten argument jest ustawiony, należy również ustawić `ProviderName`.|
 |Konfiguracja pliku|Nazwa sekcji pliku konfiguracji, w której są przechowywane informacje o połączeniu. Gdy ten argument jest ustawiony `ProviderName` i `ConnectionString` nie są wymagane.|
 |CommandType|Typ <xref:System.Data.Common.DbCommand>, który ma zostać wykonany.|
-|Server|Polecenie SQL, które ma zostać wykonane.|
+|Sql|Polecenie SQL, które ma zostać wykonane.|
 |Parametry|Kolekcja parametrów zapytania SQL.|
 |Wynik|<xref:System.Data.DataSet> uzyskiwany po wykonaniu zapytania.|
 

@@ -4,16 +4,16 @@ description: Dowiedz C# się więcej o typach wartości null i sposobach ich uż
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: 42673d16ac68bbf119e57e4c357b1b2b2a0b5c51
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: bd90a0b1b77349efe581eb8aae44c58802ba756d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76740950"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093191"
 ---
 # <a name="nullable-value-types-c-reference"></a>Typy wartości null (C# odwołanie)
 
-Typ wartości null `T?` reprezentuje wszystkie wartości jego bazowego [typu wartości](value-types.md) `T` i dodatkową wartość [null](../keywords/null.md) . Na przykład można przypisać jedną z następujących trzech wartości do zmiennej `bool?`: `true`, `false`lub `null`. Podstawowy typ wartości `T` nie może być samym typem wartości null.
+*Typ wartości null* `T?` reprezentuje wszystkie wartości jego bazowego [typu wartości](value-types.md) `T` i dodatkową wartość [null](../keywords/null.md) . Na przykład można przypisać jedną z następujących trzech wartości do zmiennej `bool?`: `true`, `false`lub `null`. Podstawowy typ wartości `T` nie może być samym typem wartości null.
 
 > [!NOTE]
 > C#8,0 wprowadza funkcję typów odwołań do wartości null. Aby uzyskać więcej informacji, zobacz [typy referencyjne dopuszczające wartość null](../../nullable-references.md). Typy wartości null są dostępne od C# 2.
@@ -68,7 +68,7 @@ Typ wartości niedopuszczający wartości null `T` jest niejawnie konwertowany n
 
 ## <a name="lifted-operators"></a>Podniesione operatory
 
-Wstępnie zdefiniowane operatory jednoargumentowe i binarne lub wszelkie przeciążone operatory obsługiwane przez typ wartości `T` są również obsługiwane przez odpowiedni typ wartości null `T?`. Te operatory, znane także jako *zniesione operatory*, tworzą `null`, jeśli jeden lub oba operandy są `null`; w przeciwnym razie operator używa zawartych wartości argumentów operacji, aby obliczyć wynik. Na przykład:
+Wstępnie zdefiniowane [Operatory](../operators/index.md) jednoargumentowe i binarne lub wszelkie przeciążone operatory obsługiwane przez typ wartości `T` są również obsługiwane przez odpowiedni typ wartości null `T?`. Te operatory, znane także jako *zniesione operatory*, tworzą `null`, jeśli jeden lub oba operandy są `null`; w przeciwnym razie operator używa zawartych wartości argumentów operacji, aby obliczyć wynik. Na przykład:
 
 [!code-csharp[lifted operators](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#LiftedOperator)]
 
@@ -82,7 +82,9 @@ Dla [operatorów porównania](../operators/comparison-operators.md) `<`, `>`, `<
 
 [!code-csharp-interactive[relational and equality operators](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#ComparisonOperators)]
 
-W powyższym przykładzie przedstawiono również, że porównanie równości dwóch wystąpień typu wartości null, które są jednocześnie `null` oblicza `true`.
+Dla [operatora równości](../operators/equality-operators.md#equality-operator-) `==`, jeśli oba operandy są `null`, wynik jest `true`, jeśli tylko jeden z operandów jest `null`, wynik jest `false`; w przeciwnym razie zawarte wartości argumentów operacji są porównywane.
+
+Dla [operatora nierówności](../operators/equality-operators.md#inequality-operator-) `!=`, jeśli oba operandy są `null`, wynik jest `false`, jeśli tylko jeden z operandów jest `null`, wynik jest `true`; w przeciwnym razie zawarte wartości argumentów operacji są porównywane.
 
 Jeśli istnieje [konwersja zdefiniowana przez użytkownika](../operators/user-defined-conversion-operators.md) między dwoma typami wartości, można także użyć tej samej konwersji między odpowiednimi typami wartości null.
 
@@ -130,7 +132,7 @@ Aby uzyskać więcej informacji, zobacz następujące sekcje [ C# specyfikacji j
 - [Jawne konwersje dopuszczające wartość null](~/_csharplang/spec/conversions.md#explicit-nullable-conversions)
 - [Przenoszone operatory konwersji](~/_csharplang/spec/conversions.md#lifted-conversion-operators)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [C#odwoła](../index.md)
 - [Co dokładnie ma znaczenie "zniesione"?](https://docs.microsoft.com/archive/blogs/ericlippert/what-exactly-does-lifted-mean)

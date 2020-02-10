@@ -8,21 +8,21 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: c38127281139d0c85b54a5d5077034804f1102a8
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 00026fee12e447b7fba56b42cd86699aba38cc52
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76966013"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094686"
 ---
-# <a name="whats-new-in-the-net-framework"></a>Co nowego w programie .NET Framework
+# <a name="whats-new-in-net-framework"></a>Co nowego w .NET Framework
 
 Ten artykuł podsumowuje najważniejsze nowe funkcje i ulepszenia w następujących wersjach .NET Framework:
 
-- [.NET Framework 4.8](#v48)
+- [.NET Framework 4,8](#v48)
 - [.NET Framework 4.7.2](#v472)
 - [.NET Framework 4.7.1](#v471)
-- [.NET Framework 4.7](#v47)
+- [.NET Framework 4,7](#v47)
 - [.NET Framework 4.6.2](#v462)
 - [.NET Framework 4.6.1](#v461)
 - [.NET 2015 i .NET Framework 4,6](#v46)
@@ -350,7 +350,7 @@ Obsługa dekompresji przy użyciu interfejsów API systemu Windows jest włączo
 
 **Dodatkowe interfejsy API kolekcji**
 
-.NET Framework 4.7.2 dodaje wiele nowych interfejsów API do typów <xref:System.Collections.Generic.SortedSet%601> i <xref:System.Collections.Generic.HashSet%601>. Należą do nich następujące elementy:
+.NET Framework 4.7.2 dodaje wiele nowych interfejsów API do typów <xref:System.Collections.Generic.SortedSet%601> i <xref:System.Collections.Generic.HashSet%601>. Należą do nich:
 
 - Metody `TryGetValue`, które zwiększają wzorzec try użyty w innych typach kolekcji do tych dwóch typów. Metody są następujące:
 
@@ -383,7 +383,7 @@ Public GetOrAdd(Of TArg)(key As TKey, valueFactory As Func(Of TKey, TArg, TValue
 
 <a name="asp-net472" />
 
-#### <a name="aspnet"></a>Platforma ASP.NET
+#### <a name="aspnet"></a>ASP.NET
 
 **Obsługa iniekcji zależności w formularzach sieci Web**
 
@@ -434,7 +434,7 @@ Można dodać SameSite dla plików cookie <xref:System.Web.Security.FormsAuthent
 
 <a name="net472" />
 
-#### <a name="networking"></a>Obsługa sieci
+#### <a name="networking"></a>Sieć
 
 **Implementacja właściwości HttpClientHandler**
 
@@ -630,7 +630,7 @@ Zmiany w wyrzucaniu elementów bezużytecznych (GC) w .NET Framework 4.7.1 popra
 
 <a name="net471"/>
 
-#### <a name="networking"></a>Obsługa sieci
+#### <a name="networking"></a>Sieć
 
 **Obsługa algorytmu SHA-2 dla komunikatu. algorytm**
 
@@ -638,7 +638,7 @@ W .NET Framework 4,7 i starszych wersjach Właściwość <xref:System.Messaging.
 
 <a name="asp-net471" />
 
-#### <a name="aspnet"></a>Platforma ASP.NET
+#### <a name="aspnet"></a>ASP.NET
 
 **Kroki wykonywania w aplikacjach ASP.NET**
 
@@ -677,7 +677,7 @@ W .NET Framework 4,7 i wcześniejszych wersjach ASP.NET zezwolenie deweloperom n
 - [Windows Forms](#wf47)
 - [Windows Presentation Foundation (WPF)](#WPF47)
 
-Aby uzyskać listę nowych interfejsów API dodanych do .NET Framework 4,7, zobacz [.NET Framework 4,7 zmiany interfejsu API](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-api-changes.md) w serwisie GitHub. Aby zapoznać się z listą ulepszeń funkcji i poprawek błędów w .NET Framework 4,7, zobacz [.NET Framework 4,7 Lista zmian](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-changes.md) w serwisie GitHub.  Aby uzyskać dodatkowe informacje, zobacz temat [ogłaszanie .NET Framework 4,7](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-7/) w blogu platformy .NET.
+Aby uzyskać listę nowych interfejsów API dodanych do .NET Framework 4,7, zobacz [.NET Framework 4,7 zmiany interfejsu API](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-api-changes.md) w serwisie GitHub. Aby zapoznać się z listą ulepszeń funkcji i poprawek błędów w .NET Framework 4,7, zobacz [.NET Framework 4,7 Lista zmian](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-changes.md) w serwisie GitHub. Aby uzyskać więcej informacji, zobacz temat [ogłaszanie .NET Framework 4,7](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-7/) w blogu platformy .NET.
 
 <a name="Core47" />
 
@@ -699,7 +699,7 @@ W .NET Framework 4,7 <xref:System.Runtime.Serialization.Json.DataContractJsonSer
 
 <a name="net47" />
 
-#### <a name="networking"></a>Obsługa sieci
+#### <a name="networking"></a>Sieć
 
 .NET Framework 4,7 dodaje następującą funkcję powiązaną z siecią:
 
@@ -709,7 +709,7 @@ Stos protokołu TLS używany przez <xref:System.Net.Security.SslStream?displayPr
 
 <a name="ASP-NET47" />
 
-#### <a name="aspnet"></a>Platforma ASP.NET
+#### <a name="aspnet"></a>ASP.NET
 
 W .NET Framework 4,7 ASP.NET zawiera następujące nowe funkcje:
 
@@ -741,7 +741,7 @@ Począwszy od .NET Framework 4,7, usługa WCF umożliwia skonfigurowanie program
 
 **Zwiększona niezawodność aplikacji WCF i serializacji WCF**
 
-Program WCF zawiera szereg zmian w kodzie, które eliminują sytuacje wyścigu, co poprawia wydajność i niezawodność opcji serializacji. Należą do nich następujące elementy:
+Program WCF zawiera szereg zmian w kodzie, które eliminują sytuacje wyścigu, co poprawia wydajność i niezawodność opcji serializacji. Należą do nich:
 
 - Lepsza obsługa mieszania kodu asynchronicznego i synchronicznego w wywołaniach **SocketConnection. BeginRead** i **SocketConnection. Read**.
 - Zwiększona niezawodność podczas przerywania połączenia z **SharedConnectionListener** i **DuplexChannelBinder**.
@@ -784,7 +784,7 @@ Interfejsy API drukowania WPF w klasie <xref:System.Printing.PrintQueue?displayP
 
 - [Kategorie znaków](#Strings)
 
-- [Cryptography](#Crypto462)
+- [Kryptografia](#Crypto462)
 
 - [SqlClient](#SQLClient)
 
@@ -800,11 +800,11 @@ Interfejsy API drukowania WPF w klasie <xref:System.Printing.PrintQueue?displayP
 
 - [Ulepszenia debugowania](#Debug462)
 
-Aby uzyskać listę nowych interfejsów API dodanych do .NET Framework 4.6.2, zobacz [.NET Framework zmiany interfejsu API 4.6.2](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-api-changes.md) w serwisie GitHub. Aby zapoznać się z listą ulepszeń funkcji i poprawek błędów w .NET Framework 4.6.2, zobacz [.NET Framework 4.6.2 list zmian](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-changes.md) w witrynie GitHub. Aby uzyskać dodatkowe informacje, zobacz temat [ogłaszanie .NET Framework 4.6.2](https://devblogs.microsoft.com/dotnet/announcing-net-framework-4-6-2/) w blogu platformy .NET.
+Aby uzyskać listę nowych interfejsów API dodanych do .NET Framework 4.6.2, zobacz [.NET Framework zmiany interfejsu API 4.6.2](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-api-changes.md) w serwisie GitHub. Aby zapoznać się z listą ulepszeń funkcji i poprawek błędów w .NET Framework 4.6.2, zobacz [.NET Framework 4.6.2 list zmian](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-changes.md) w witrynie GitHub. Aby uzyskać więcej informacji, zobacz temat [ogłaszanie .NET Framework 4.6.2](https://devblogs.microsoft.com/dotnet/announcing-net-framework-4-6-2/) w blogu platformy .NET.
 
 <a name="ASPNET462" />
 
-### <a name="aspnet"></a>Platforma ASP.NET
+### <a name="aspnet"></a>ASP.NET
 
 W .NET Framework 4.6.2 ASP.NET obejmuje następujące udoskonalenia:
 
@@ -841,7 +841,7 @@ End Class
 
 Następnie można utworzyć plik zasobów, DataAnnotation. lokalizacja. fr. resx, którego kluczem jest ciąg komunikatu o błędzie i którego wartość jest zlokalizowanym komunikatem o błędzie. Plik musi znajdować się w folderze `App.LocalResources`. Na przykład poniżej znajduje się klucz i jego wartość w zlokalizowanym komunikacie o błędzie języka francuskiego (fr):
 
-| Nazwa                                 | Wartość                                     |
+| Name (Nazwa)                                 | Wartość                                     |
 | ------------------------------------ | ----------------------------------------- |
 | Klasyfikacja musi zawierać się w przedziale od 1 do 10. | La uwagi doit être obejmuje Entre 1 et 10. |
 
@@ -1010,14 +1010,14 @@ End Function
 
 Stałe dla identyfikatora URI są uwidocznione na <xref:System.Security.Cryptography.Xml.SignedXml>:
 
-|Pole SignedXml|Stała|
+|Pole SignedXml|Stały|
 |---------------------|--------------|
-|<xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigSHA256Url>|"http://www.w3.org/2001/04/xmlenc#sha256"|
-|<xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigRSASHA256Url>|"http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"|
-|<xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigSHA384Url>|"http://www.w3.org/2001/04/xmldsig-more#sha384"|
-|<xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigRSASHA384Url>|"http://www.w3.org/2001/04/xmldsig-more#rsa-sha384"|
-|<xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigSHA512Url>|"http://www.w3.org/2001/04/xmlenc#sha512"|
-|<xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigRSASHA512Url>|"http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"|
+|<xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigSHA256Url>|„http://www.w3.org/2001/04/xmlenc#sha256”|
+|<xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigRSASHA256Url>|„http://www.w3.org/2001/04/xmldsig-more#rsa-sha256”|
+|<xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigSHA384Url>|„http://www.w3.org/2001/04/xmldsig-more#sha384”|
+|<xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigRSASHA384Url>|„http://www.w3.org/2001/04/xmldsig-more#rsa-sha384”|
+|<xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigSHA512Url>|„http://www.w3.org/2001/04/xmlenc#sha512”|
+|<xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigRSASHA512Url>|„http://www.w3.org/2001/04/xmldsig-more#rsa-sha512”|
 
  Wszystkie programy, w których zarejestrowano niestandardową procedurę obsługi <xref:System.Security.Cryptography.SignatureDescription> na <xref:System.Security.Cryptography.CryptoConfig> w celu dodania obsługi tych algorytmów, będą nadal działać tak samo jak w przeszłości, ale ponieważ teraz istnieją domyślne ustawienia platformy, rejestracja <xref:System.Security.Cryptography.CryptoConfig> nie jest już konieczna.
 
@@ -1029,7 +1029,7 @@ Stałe dla identyfikatora URI są uwidocznione na <xref:System.Security.Cryptogr
 
 **Buforowanie i limity czasu połączeń z bazami danych Azure SQL**
 
-Po włączeniu puli połączeń i przekroczeniu limitu czasu lub innego błędu logowania, wyjątek jest buforowany i zostanie zgłoszony wyjątek buforowany dla każdej kolejnej próby połączenia przez następne 5 sekund do 1 minuty.  Aby uzyskać więcej informacji, zobacz [SQL Servering pooling (ADO.NET)](../data/adonet/sql-server-connection-pooling.md).
+Po włączeniu puli połączeń i przekroczeniu limitu czasu lub innego błędu logowania, wyjątek jest buforowany i zostanie zgłoszony wyjątek buforowany dla każdej kolejnej próby połączenia przez następne 5 sekund do 1 minuty. Aby uzyskać więcej informacji, zobacz [SQL Servering pooling (ADO.NET)](../data/adonet/sql-server-connection-pooling.md).
 
 To zachowanie nie jest pożądane podczas łączenia się z bazami danych Azure SQL, ponieważ próby połączenia mogą zakończyć się niepowodzeniem z błędami przejściowymi, które są zwykle przywracane szybko. Aby lepiej zoptymalizować środowisko ponownej próby połączenia, zachowanie w okresie blokowania puli połączeń zostanie usunięte w przypadku niepowodzenia połączeń z bazami danych SQL Azure.
 
@@ -1168,11 +1168,11 @@ Na przykład poniższe dane grup XAML są uporządkowane według wieku, sortowan
 </SortDescriptions>
 ```
 
-**Obsługa klawiatury miękkiej**
+**Obsługa klawiatury dotykowej**
 
-Obsługa klawiatury miękkiej umożliwia śledzenie fokusu w aplikacjach WPF przez automatyczne wywoływanie i odrzucanie nowej miękkiej klawiatury w systemie Windows 10, gdy dane wejściowe dotyku są odbierane przez kontrolkę, która może przyjmować tekst.
+Obsługa klawiatury dotykowej umożliwia śledzenie fokusu w aplikacjach WPF przez automatyczne wywoływanie i odrzucanie klawiatury dotykowej w systemie Windows 10, gdy dane wejściowe dotyku są odbierane przez kontrolkę, która może przyjmować tekst.
 
-W poprzednich wersjach .NET Framework aplikacje WPF nie mogą należeć do śledzenia fokusu bez wyłączania obsługi gestu pióra WPF/dotknięcia.  W efekcie aplikacje WPF muszą wybierać między pełną obsługą technologii WPF touch lub korzystać z promocji myszy systemu Windows.
+W poprzednich wersjach .NET Framework aplikacje WPF nie mogą zrezygnować z śledzenia fokusu bez wyłączania obsługi gestu pióra WPF/dotknięcia. W efekcie aplikacje WPF muszą wybierać między pełną obsługą technologii WPF touch lub korzystać z promocji myszy systemu Windows.
 
 **DPI na monitor**
 
@@ -1194,11 +1194,11 @@ W przypadku aplikacji uruchamianych w ramach .NET Framework 4.6.2 można wyłąc
 
 W .NET Framework 4.6.2 Windows Workflow Foundation został ulepszony w następującym obszarze:
 
-**Obsługa C# wyrażeń i technologii IntelliSense w rehostowanym projektancie WF**
+**Obsługa C# wyrażeń i technologii IntelliSense w nieobsługiwanym projektancie WF**
 
-Począwszy od .NET Framework 4,5, WF obsługuje C# wyrażenia zarówno w projektancie programu Visual Studio, jak i w przepływach pracy w kodzie. Rehostowana Projektant przepływu pracy to kluczowa funkcja WF, która umożliwia Projektant przepływu pracy do aplikacji poza programem Visual Studio (na przykład w WPF).  Windows Workflow Foundation oferuje możliwość obsługi C# wyrażeń i technologii IntelliSense w przypadku ponownego hostowanej Projektant przepływu pracy. Aby uzyskać więcej informacji, zapoznaj się z [blogiem Windows Workflow Foundation](https://docs.microsoft.com/archive/blogs/workflowteam/building-c-expressions-support-and-intellisense-in-the-rehosted-workflow-designer).
+Począwszy od .NET Framework 4,5, WF obsługuje C# wyrażenia zarówno w projektancie programu Visual Studio, jak i w przepływach pracy w kodzie. Projektant przepływu pracy przeszukana jest kluczową cechą WF, która umożliwia Projektant przepływu pracy się w aplikacji poza programem Visual Studio (na przykład w WPF).  Windows Workflow Foundation zapewnia możliwość obsługi C# wyrażeń i technologii IntelliSense w przemieszczonych Projektant przepływu pracyach. Aby uzyskać więcej informacji, zapoznaj się z [blogiem Windows Workflow Foundation](https://docs.microsoft.com/archive/blogs/workflowteam/building-c-expressions-support-and-intellisense-in-the-rehosted-workflow-designer).
 
-`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` w wersjach .NET Framework przed .NET Framework 4.6.2, funkcja IntelliSense projektanta WF jest uszkodzona, gdy klient odbudowuje projekt przepływu pracy z programu Visual Studio. Gdy kompilacja projektu zakończy się pomyślnie, typy przepływu pracy nie są dostępne w projektancie, a w oknie **Lista błędów** są wyświetlane ostrzeżenia z funkcji IntelliSense dotyczące brakujących typów przepływów pracy. .NET Framework 4.6.2 rozwiązuje ten problem i udostępnia funkcję IntelliSense.
+`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` w wersjach .NET Framework przed 4.6.2, funkcja IntelliSense projektanta WF jest uszkodzona, gdy klient odbudowuje projekt przepływu pracy z programu Visual Studio. Gdy kompilacja projektu zakończy się pomyślnie, typy przepływu pracy nie są dostępne w projektancie, a w oknie **Lista błędów** są wyświetlane ostrzeżenia z funkcji IntelliSense dotyczące brakujących typów przepływów pracy. .NET Framework 4.6.2 rozwiązuje ten problem i udostępnia funkcję IntelliSense.
 
 **Aplikacje w wersji 1 z funkcją śledzenia przepływu pracy na teraz działaniu w trybie FIPS**
 
@@ -1248,7 +1248,7 @@ Skonwertowane aplikacje klasyczne uzyskują tożsamość aplikacji podobną do t
 
 .NET Framework 4.6.1 zawiera nowe funkcje w następujących obszarach:
 
-- [Cryptography](#Crypto)
+- [Kryptografia](#Crypto)
 
 - [ADO.NET](#ADO.NET461)
 
@@ -1324,7 +1324,7 @@ Podobnie jak w poprzednich wersjach .NET Framework, język dla bloku <xref:Syste
 
 - Bieżąca kultura wątku.
 
-Aby uzyskać dodatkowe informacje na temat obsługi języków w programie WPF, zobacz [wpis w blogu WPF w witrynie .NET Framework 4.6.1](https://devblogs.microsoft.com/wpf/wpf-in-net-4-6-1/).
+Aby uzyskać więcej informacji na temat obsługi języków w programie WPF, zobacz [wpis w blogu WPF w witrynie .NET Framework 4.6.1](https://devblogs.microsoft.com/wpf/wpf-in-net-4-6-1/).
 
 **Dodatkowa obsługa słowników niestandardowych dla poszczególnych użytkowników**
 
@@ -1405,7 +1405,7 @@ W programie .NET 2015 wprowadzono .NET Framework 4,6 i .NET Core. Niektóre nowe
 
   Aby uzyskać więcej informacji, zobacz [ASP.NET Core](/aspnet/core/).
 
-- **ASP.NET Updates**
+- **Aktualizacje ASP.NET**
 
   - **Interfejs API oparty na zadaniach dla opróżniania odpowiedzi asynchronicznej**
 
@@ -1462,7 +1462,7 @@ W programie .NET 2015 wprowadzono .NET Framework 4,6 i .NET Core. Niektóre nowe
 
 - **64-bitowy kompilator JIT dla kodu zarządzanego**
 
-  .NET Framework 4,6 zawiera nową wersję 64-bitowego kompilatora JIT (pierwotnie kod o nazwie RyuJIT). Nowy kompilator 64-bitowy zapewnia znaczące ulepszenia wydajności w porównaniu do starszego, 64-bitowego kompilatora JIT. Nowy kompilator 64-bitowy jest włączony dla procesów 64-bitowych uruchomionych w oparciu o .NET Framework 4,6. Aplikacja będzie działać w procesie 64-bitowym, jeśli zostanie skompilowana jako 64-bit lub AnyCPU i uruchomiona w 64-bitowym systemie operacyjnym. Należy zachować ostrożność, aby przechodzenie do nowego kompilatora było możliwie przejrzyste. zmiany w zachowaniu są możliwe. Chcemy bezpośrednio poznać wszelkie problemy, które wystąpiły podczas korzystania z nowego kompilatora JIT. Skontaktuj się z nami za pomocą [programu Microsoft Connect](https://connect.microsoft.com/) , jeśli wystąpi problem, który może być związany z nowym kompilatorem 64-bitowym JIT.
+  .NET Framework 4,6 zawiera nową wersję 64-bitowego kompilatora JIT (pierwotnie kod o nazwie RyuJIT). Nowy kompilator 64-bitowy zapewnia znaczące ulepszenia wydajności w porównaniu do starszego, 64-bitowego kompilatora JIT. Nowy kompilator 64-bitowy jest włączony dla procesów 64-bitowych uruchomionych w oparciu o .NET Framework 4,6. Aplikacja będzie działać w procesie 64-bitowym, jeśli zostanie skompilowana jako 64-bit lub AnyCPU i uruchomiona w 64-bitowym systemie operacyjnym. Należy zachować ostrożność, aby przechodzenie do nowego kompilatora było możliwie przejrzyste. zmiany w zachowaniu są możliwe.
 
   Nowy kompilator 64-bitowy JIT zawiera również funkcje przyspieszania sprzętowego SIMD, w połączeniu z typami z obsługą SIMD w przestrzeni nazw <xref:System.Numerics>, co może przynieść dobre ulepszenia wydajności.
 
@@ -1528,7 +1528,7 @@ W programie .NET 2015 wprowadzono .NET Framework 4,6 i .NET Core. Niektóre nowe
 
   - **Przełączniki zgodności**
 
-    Nowa Klasa <xref:System.AppContext> dodaje nową funkcję zgodności, która umożliwia autorom biblioteki zapewnia jednolity mechanizm rezygnacji dla nowych funkcji dla swoich użytkowników. Tworzy luźno rozłączoną umowę między składnikami w celu przekazywania żądania rezygnacji. Ta funkcja jest zwykle ważna w przypadku zmiany istniejącej funkcji. Z drugiej strony istnieje już niejawny wybór dla nowych funkcji.
+    Klasa <xref:System.AppContext> dodaje nową funkcję zgodności, która umożliwia autorom biblioteki zapewnienie jednolitego mechanizmu rezygnacji dla nowych funkcji dla użytkowników. Ustanawia luźno powiązane kontrakt między składnikami w celu przekazywania żądania rezygnacji. Ta funkcja jest zwykle ważna w przypadku zmiany istniejącej funkcji. Z drugiej strony istnieje już niejawny wybór dla nowych funkcji.
 
     W przypadku <xref:System.AppContext>biblioteki definiują i uwidaczniają przełączniki zgodności, podczas gdy kod, który zależy od nich, mogą ustawiać te przełączniki na wpływ na zachowanie biblioteki. Domyślnie biblioteki udostępniają nowe funkcje i zmieniają je (to oznacza, że zapewniają poprzednie funkcje), jeśli przełącznik jest ustawiony.
 
@@ -1665,7 +1665,7 @@ W programie .NET 2015 wprowadzono .NET Framework 4,6 i .NET Core. Niektóre nowe
 
   - **Wysyłanie komunikatów przy użyciu różnych połączeń HTTP**
 
-    Usługa WCF umożliwia teraz użytkownikom zapewnienie, że niektóre komunikaty są wysyłane przy użyciu różnych podstawowych połączeń HTTP. Istnieją dwa sposoby wykonania tej czynności:
+    Usługa WCF umożliwia teraz użytkownikom zapewnienie, że niektóre komunikaty są wysyłane przy użyciu różnych podstawowych połączeń HTTP. Istnieją dwa sposoby, w tym celu:
 
     - **Używanie prefiksu nazwy grupy połączeń**
 
@@ -1707,7 +1707,7 @@ W programie .NET 2015 wprowadzono .NET Framework 4,6 i .NET Core. Niektóre nowe
   <add key="Transactions:IncludeDistributedTransactionIdInExceptionMessage" value="true"/>
   ```
 
-  Wartość domyślna to `false`.
+  Wartością domyślną jest `false`.
 
 - **Sieć**
 
@@ -1715,7 +1715,7 @@ W programie .NET 2015 wprowadzono .NET Framework 4,6 i .NET Core. Niektóre nowe
 
     System Windows 10 zawiera nowy algorytm sieci o wysokiej skalowalności, który umożliwia lepsze wykorzystanie zasobów komputera przez ponowne użycie portów lokalnych dla wychodzących połączeń TCP. .NET Framework 4,6 obsługuje nowy algorytm, umożliwiając aplikacjom .NET korzystanie z nowych zachowań. W poprzednich wersjach systemu Windows istnieje sztuczny limit połączeń współbieżnych (zazwyczaj 16 384, domyślny rozmiar dynamicznego zakresu portów), który może ograniczyć skalowalność usługi, powodując wyczerpanie portów podczas ładowania.
 
-    W .NET Framework 4,6 dodano dwa nowe interfejsy API umożliwiające ponowne użycie portów, co skutecznie eliminuje limit 64 KB dla połączeń współbieżnych:
+    W .NET Framework 4,6 dodano dwa interfejsy API umożliwiające ponowne użycie portów, co skutecznie usuwa limit 64 KB dla połączeń współbieżnych:
 
     - Wartość wyliczenia <xref:System.Net.Sockets.SocketOptionName?displayProperty=nameWithType>.
 
@@ -1743,7 +1743,7 @@ W programie .NET 2015 wprowadzono .NET Framework 4,6 i .NET Core. Niektóre nowe
 
 - **Obsługa kodowania stron kodowych**
 
-  Program .NET Core obsługuje przede wszystkim kodowania Unicode i domyślnie udostępnia ograniczoną obsługę kodowania stron kodowych. Można dodać obsługę kodowania stron kodowych dostępnych w .NET Framework ale nieobsługiwane w programie .NET Core przez zarejestrowanie kodowania stron kodowych za pomocą metody <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType>. Aby uzyskać więcej informacji, zobacz temat <xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>.
+  Program .NET Core obsługuje przede wszystkim kodowania Unicode i domyślnie udostępnia ograniczoną obsługę kodowania stron kodowych. Można dodać obsługę kodowania stron kodowych dostępnych w .NET Framework ale nieobsługiwane w programie .NET Core przez zarejestrowanie kodowania stron kodowych za pomocą metody <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType>. Aby uzyskać więcej informacji, zobacz <xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>.
 
 - **.NET Native**
 
@@ -1755,7 +1755,7 @@ W programie .NET 2015 wprowadzono .NET Framework 4,6 i .NET Core. Niektóre nowe
 
 - **Pakiety .NET Framework Open Source**
 
-  Pakiety .NET Core, takie jak Niezmienne kolekcje, [interfejsy API SIMD](https://www.nuget.org/packages/Microsoft.Bcl.Simd)i interfejsy API sieci, takie jak te, które znajdują się w przestrzeni nazw <xref:System.Net.Http>, są teraz dostępne jako pakiety Open Source w serwisie [GitHub](https://github.com/). Aby uzyskać dostęp do kodu, zobacz [.NET w witrynie GitHub](https://github.com/dotnet/runtime). Aby uzyskać więcej informacji i dowiedzieć się, jak współtworzyć te pakiety, zobacz stronę główną platformy .NET [Core i Open Source](../get-started/net-core-and-open-source.md) [w witrynie GitHub](https://github.com/dotnet/home).
+  Pakiety .NET Core, takie jak Niezmienne kolekcje, [interfejsy API SIMD](https://www.nuget.org/packages/Microsoft.Bcl.Simd)i interfejsy API sieci, takie jak te, które znajdują się w przestrzeni nazw <xref:System.Net.Http>, są teraz dostępne jako pakiety typu open source w witrynie [GitHub](https://github.com/). Aby uzyskać dostęp do kodu, zobacz [.NET w witrynie GitHub](https://github.com/dotnet/runtime). Aby uzyskać więcej informacji i dowiedzieć się, jak współtworzyć te pakiety, zobacz stronę główną platformy .NET [Core i Open Source](../get-started/net-core-and-open-source.md) [w witrynie GitHub](https://github.com/dotnet/home).
 
 <a name="v452" />
 
@@ -1900,7 +1900,7 @@ Nowe funkcje w programie ASP.NET 4.5.1 można znaleźć w temacie [ASP.NET and W
 
 <a name="v45" />
 
-## <a name="whats-new-in-net-framework-45"></a>{1&gt;{2&gt;Co nowego w programie .NET Framework 4.5&lt;2}&lt;1}
+## <a name="whats-new-in-net-framework-45"></a>Co nowego w .NET Framework 4,5
 
 ### <a name="base-classes"></a>Klas podstawowych
 
@@ -1910,7 +1910,7 @@ Nowe funkcje w programie ASP.NET 4.5.1 można znaleźć w temacie [ASP.NET and W
 
 - Lepsza wydajność dzięki wyrzucaniu elementów bezużytecznych w tle dla serwerów. W przypadku używania wyrzucania elementów bezużytecznych serwera w .NET Framework 4,5, wyrzucanie elementów bezużytecznych w tle jest automatycznie włączone. Zobacz sekcję odzyskiwanie pamięci w tle w temacie Podstawowe informacje dotyczące [wyrzucania elementów bezużytecznych](../../standard/garbage-collection/fundamentals.md) .
 
-- Kompilacja just-in-Time (JIT) w tle, która jest opcjonalnie dostępna na wielordzeniowych procesorach, aby zwiększyć wydajność aplikacji. Zobacz <xref:System.Runtime.ProfileOptimization>.
+- Kompilacja just-in-Time (JIT) w tle, która jest opcjonalnie dostępna na wielordzeniowych procesorach, aby zwiększyć wydajność aplikacji. Zobacz: <xref:System.Runtime.ProfileOptimization>.
 
 - Możliwość ograniczenia czasu, przez który aparat wyrażeń regularnych podejmie próbę rozpoznania wyrażenia regularnego przed przekroczeniem limitu czasu. Zobacz Właściwość <xref:System.Text.RegularExpressions.Regex.MatchTimeout%2A?displayProperty=nameWithType>.
 
@@ -1968,9 +1968,9 @@ Optymalizacja z przewodnikiem zarządzanym profilem (Mpgo. exe) umożliwia skró
 
 <a name="web" />
 
-### <a name="web"></a>sieć Web
+### <a name="web"></a>Sieć Web
 
-ASP.NET 4,5 i 4.5.1 Dodawanie powiązania modelu dla formularzy sieci Web, obsługi protokołu WebSocket, obsługi asynchronicznych, ulepszeń wydajności i wielu innych funkcji. Więcej informacji można znaleźć w następujących zasobach:
+ASP.NET 4,5 i 4.5.1 Dodawanie powiązania modelu dla formularzy sieci Web, obsługi protokołu WebSocket, obsługi asynchronicznych, ulepszeń wydajności i wielu innych funkcji. Więcej informacji zawierają następujące zasoby:
 
 - [ASP.NET 4,5 i Visual Studio 2012](https://docs.microsoft.com/previous-versions/aspnet/hh420390(v=vs.110))
 
@@ -2124,7 +2124,7 @@ Aplikacje ze sklepu Windows 8. x są przeznaczone do określonych współczynnik
 
 Przenośna biblioteka klas w programie Visual Studio 2012 (i nowszych wersjach) umożliwia pisanie i kompilowanie zestawów zarządzanych, które działają na wielu platformach .NET Framework. Korzystając z projektu biblioteki klas przenośnych, należy wybrać platformy (takie jak Windows Phone i .NET dla systemu Windows 8. x aplikacji do sklepu). Dostępne typy i elementy członkowskie w projekcie są automatycznie ograniczone do wspólnych typów i elementów członkowskich na tych platformach. Aby uzyskać więcej informacji, zobacz [Przenośna biblioteka klas](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Program .NET Framework i wydania poza harmonogramem (OOB)](../get-started/the-net-framework-and-out-of-band-releases.md)
 - [Co nowego w ułatwieniach dostępu w .NET Framework](whats-new-in-accessibility.md)
@@ -2132,4 +2132,3 @@ Przenośna biblioteka klas w programie Visual Studio 2012 (i nowszych wersjach) 
 - [Co nowego w programie Visual Studio 2019](/visualstudio/ide/whats-new-visual-studio-2019)
 - [ASP.NET](/aspnet)
 - [Co nowego C++ w programie Visual Studio](/cpp/what-s-new-for-visual-cpp-in-visual-studio)
- 

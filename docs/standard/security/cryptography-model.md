@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cryptography [.NET Framework], model
 - encryption [.NET Framework], model
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
-ms.openlocfilehash: 964c63e01a6b09e63e305e9a10dca46e62c18648
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: f878f73497b83aaf31f2ba3b23cca1f685867b3e
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965961"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095271"
 ---
 # <a name="net-framework-cryptography-model"></a>Model kryptografii programu .NET Framework
 
@@ -41,7 +41,7 @@ Przykładem różnych implementacji dla algorytmu, należy wziąć pod uwagę Al
 
 <xref:System.Security.Cryptography.Aes> jest dziedziczona przez dwie klasy: <xref:System.Security.Cryptography.AesCryptoServiceProvider> i <xref:System.Security.Cryptography.AesManaged>. Klasa <xref:System.Security.Cryptography.AesCryptoServiceProvider> to otoka z implementacją algorytmu AES (Windows Cryptography API), natomiast Klasa <xref:System.Security.Cryptography.AesManaged> jest zapisywana w całości w kodzie zarządzanym. Oprócz implementacji zarządzanych i CAPI istnieje również trzeci typ implementacji, Kryptografia nowej generacji (CNG). Przykładem algorytmu CNG jest <xref:System.Security.Cryptography.ECDiffieHellmanCng>. Algorytmy CNG są dostępne w systemie Windows Vista i nowszych.
 
-Możesz wybrać, która implementacja jest dla Ciebie najlepsza.  Zarządzane wdrożenia są dostępne na wszystkich platformach, które obsługują .NET Framework.  Implementacje CAPI są dostępne w starszych systemach operacyjnych i nie są już opracowywane. CNG to bardzo Najnowsza implementacja, w której nastąpi nowe programowanie. Jednak implementacje zarządzane nie są certyfikowane przez standardy FIPS (Federal Information Processing Standards) i mogą być wolniejsze niż klasy otoki.
+Możesz wybrać, która implementacja jest dla Ciebie najlepsza. Zarządzane wdrożenia są dostępne na wszystkich platformach, które obsługują .NET Framework. Implementacje CAPI są dostępne w starszych systemach operacyjnych i nie są już opracowywane. CNG to najnowsza implementacja, w której nastąpi nowe programowanie. Jednak implementacje zarządzane nie są certyfikowane przez standardy FIPS (Federal Information Processing Standards) i mogą być wolniejsze niż klasy otoki.
 
 ## <a name="stream-design"></a>Projekt strumienia
 
@@ -73,7 +73,7 @@ Poniżej znajduje się lista zalecanych algorytmów według aplikacji:
 - Generowanie klucza przy użyciu hasła:
   - <xref:System.Security.Cryptography.Rfc2898DeriveBytes>
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Usługi kryptograficzne](../../../docs/standard/security/cryptographic-services.md)
 - [Zastosowano protokoły kryptografii, algorytmy i kod źródłowy w C, przez Bruce Schneier](https://www.schneier.com/books/applied_cryptography/)

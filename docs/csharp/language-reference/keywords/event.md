@@ -1,5 +1,5 @@
 ---
-title: C# informacje o zdarzeniu
+title: C# informacje o event
 ms.date: 07/20/2015
 f1_keywords:
 - event
@@ -16,7 +16,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75713554"
 ---
-# <a name="event-c-reference"></a>zdarzenie (C# odwołanie)
+# <a name="event-c-reference"></a>event (C# odwołanie)
 
 Słowo kluczowe `event` jest używane do deklarowania zdarzenia w klasie wydawcy.
 

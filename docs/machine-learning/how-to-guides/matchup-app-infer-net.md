@@ -1,14 +1,14 @@
 ---
-title: Tworzenie gry do aplikacji z listą z programowaniem Infer.NET i probabilistyczne
-description: Dowiedz się, w jaki sposób używać programowania probabilistyczne z Infer.NET do tworzenia aplikacji listy rozgrywki gry na podstawie uproszczonej wersji programu TrueSkill.
-ms.date: 05/06/2019
+title: Infer.NET dopasowanie gier — programowanie probabilistyczne aplikacji
+description: Dowiedz się, w jaki sposób używać programowania probabilistyczne z Infer.NET, aby utworzyć aplikację z listą dopasowaną do gier na podstawie uproszczonej wersji TrueSkill.
+ms.date: 01/30/2020
 ms.custom: mvc,how-to
-ms.openlocfilehash: 69515c7b3518c35bf84335c453408b1466f93f34
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 8e489d61c5e6cca53ba12b13fddd0b73c7f85ef9
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774544"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092606"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Tworzenie gry do aplikacji z listą z programowaniem Infer.NET i probabilistyczne
 
@@ -33,7 +33,7 @@ dotnet new console -o myApp
 cd myApp
 ```
 
-@No__t_0 polecenie tworzy `new` aplikacji typu `console`. Parametr `-o` tworzy katalog o nazwie `myApp`, w którym jest przechowywana aplikacja i wypełnia je wymaganymi plikami. Polecenie `cd myApp` przełączy Cię do nowo utworzonego katalogu aplikacji.
+`dotnet` polecenie tworzy `new` aplikacji typu `console`. Parametr `-o` tworzy katalog o nazwie `myApp`, w którym jest przechowywana aplikacja i wypełnia je wymaganymi plikami. Polecenie `cd myApp` przełączy Cię do nowo utworzonego katalogu aplikacji.
 
 ## <a name="install-infernet-package"></a>Zainstaluj pakiet Infer.NET
 

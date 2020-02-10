@@ -2,12 +2,12 @@
 title: Byrefs
 description: Dowiedz się więcej o typach ByRef i ByRef F#, które są używane w programowaniu niskiego poziomu.
 ms.date: 11/04/2019
-ms.openlocfilehash: 05a40059ad5b72829233b0c4135c76eb1cff4da5
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 2d98d325dc4ad26548fb2cc6aa5b872e152ee0a8
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965818"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092791"
 ---
 # <a name="byrefs"></a>Byrefs
 
@@ -121,10 +121,10 @@ W poniższej tabeli przedstawiono, F# co emituje:
 
 |F#Konstruuj|Wyemitowana konstrukcja|
 |------------|-----------------|
-|`inref<'T>` argument|`[In]` atrybutu w argumencie|
+|Argument `inref<'T>`|`[In]` atrybutu w argumencie|
 |`inref<'T>` Zwróć|`modreq` atrybutu wartości|
 |`inref<'T>` w nieabstrakcyjnym gnieździe lub implementacji|`modreq` argumentu lub Return|
-|`outref<'T>` argument|`[Out]` atrybutu w argumencie|
+|Argument `outref<'T>`|`[Out]` atrybutu w argumencie|
 
 ### <a name="type-inference-and-overloading-rules"></a>Wnioskowanie o typie i reguły przeciążania
 
@@ -188,7 +188,7 @@ let squareAndPrint (data : byref<int>) =
 ```
 
 Aby zwrócić wartość ByRef, zmienna, która zawiera wartość, musi znajdować się na żywo dłużej niż bieżący zakres.
-Ponadto, aby zwrócić element ByRef, użyj wartości & (gdzie Value jest zmienną, która jest dłuższa niż bieżący zakres).
+Ponadto, aby zwrócić element ByRef, użyj `&value` (gdzie Value jest zmienną, która jest dłuższa niż bieżący zakres).
 
 ```fsharp
 let mutable sum = 0
@@ -252,4 +252,4 @@ let test () =
     ()
 ```
 
-Dzięki temu można uzyskać różne wyniki w zależności od tego, czy kompilacja została skompilowana z optymalizacją.
+Dzięki temu można uzyskać różne wyniki w zależności od tego, czy kompilujesz z optymalizacją.

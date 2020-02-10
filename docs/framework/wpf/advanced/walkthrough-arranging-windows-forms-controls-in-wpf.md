@@ -9,12 +9,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
-ms.openlocfilehash: eee26165e17b3327166a160e7c4ee3726215dcfc
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 5cf48b347be2d0ca6a9b55f3e19affb8b471aa2b
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794244"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095102"
 ---
 # <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>Wskazówki: rozmieszczanie formantów Windows Forms w WPF
 
@@ -37,7 +37,7 @@ Zadania przedstawione w tym instruktażu obejmują:
 - Ustawianie uzupełniania i marginesów.
 - Korzystanie z kontenerów układów dynamicznych.
 
-Aby uzyskać pełną listę kodów zadań przedstawionych w tym instruktażu, zobacz [organizowanie Windows Forms formantów w przykładzie WPF](https://go.microsoft.com/fwlink/?LinkID=159971).
+Aby uzyskać pełną listę kodów zadań przedstawionych w tym instruktażu, zobacz [organizowanie Windows Forms formantów w przykładzie WPF](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WpfLayoutHostingWfWithXaml).
 
 Po zakończeniu uzyskasz informacje o funkcjach układu Windows Forms w aplikacjach opartych na [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
 
@@ -256,12 +256,12 @@ Aby użyć dynamicznego kontenera układu, wykonaj następujące kroki:
 
 4. Naciśnij klawisz <kbd>F5</kbd> , aby skompilować i uruchomić aplikację. Element <xref:System.Windows.Forms.Integration.WindowsFormsHost> wypełnia <xref:System.Windows.Controls.DockPanel>, a <xref:System.Windows.Forms.FlowLayoutPanel> układa jego kontrolki podrzędne w domyślnym <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Projektowanie XAML w programie Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
 - [Zagadnienia dotyczące układu dla elementu WindowsFormsHost](layout-considerations-for-the-windowsformshost-element.md)
-- [Rozmieszczanie formantów Windows Forms w przykładzie WPF](https://go.microsoft.com/fwlink/?LinkID=159971)
+- [Rozmieszczanie formantów Windows Forms w przykładzie WPF](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WpfLayoutHostingWfWithXaml)
 - [Przewodnik: hosting złożonej kontrolki Windows Forms w WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
 - [Przewodnik: hosting złożonej kontrolki WPF w Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

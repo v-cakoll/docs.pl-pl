@@ -10,12 +10,12 @@ helpviewer_keywords:
 - formatted text [WPF]
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
-ms.openlocfilehash: c786137a471e0199a8ac60f8d82b4ce440e33b7e
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: f23f54283849ddaa827a98f0f28a39a72305dc1d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740399"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095232"
 ---
 # <a name="drawing-formatted-text"></a>Rysowanie formatowanego tekstu
 Ten temat zawiera omówienie funkcji obiektu <xref:System.Windows.Media.FormattedText>. Ten obiekt udostępnia formant niskiego poziomu służący do rysowania tekstu w aplikacjach [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -33,7 +33,7 @@ Ten temat zawiera omówienie funkcji obiektu <xref:System.Windows.Media.Formatte
   
  Obiekt <xref:System.Windows.Media.FormattedText> zapewnia więcej funkcji formatowania tekstu niż kontrolki tekstu [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] i może być przydatny w przypadkach, gdy chcesz użyć tekstu jako elementu dekoracyjnego. Aby uzyskać więcej informacji, zobacz poniższą sekcję [konwertowanie sformatowanego tekstu na geometrię](#converting_formatted_text).  
   
- Ponadto obiekt <xref:System.Windows.Media.FormattedText> jest przydatny do tworzenia obiektów pochodnych <xref:System.Windows.Media.DrawingVisual>zorientowanych na tekst. <xref:System.Windows.Media.DrawingVisual> jest lekkim klasą rysowania, która jest używana do renderowania kształtów, obrazów lub tekstu. Aby uzyskać więcej informacji, zobacz [test trafień za pomocą przykładu DrawingVisuals](https://go.microsoft.com/fwlink/?LinkID=159994).  
+ Ponadto obiekt <xref:System.Windows.Media.FormattedText> jest przydatny do tworzenia obiektów pochodnych <xref:System.Windows.Media.DrawingVisual>zorientowanych na tekst. <xref:System.Windows.Media.DrawingVisual> jest lekkim klasą rysowania, która jest używana do renderowania kształtów, obrazów lub tekstu. Aby uzyskać więcej informacji, zobacz [test trafień za pomocą przykładu DrawingVisuals](https://github.com/Microsoft/WPF-Samples/tree/master/Visual%20Layer/DrawingVisual).  
   
 ## <a name="using-the-formattedtext-object"></a>Korzystanie z obiektu FormattedText  
  Aby utworzyć sformatowany tekst, Wywołaj konstruktora <xref:System.Windows.Media.FormattedText.%23ctor%2A>, aby utworzyć obiekt <xref:System.Windows.Media.FormattedText>. Po utworzeniu początkowego sformatowanego ciągu tekstowego można zastosować zakres stylów formatowania.  
@@ -93,29 +93,29 @@ Sfera po geometrii ścieżki tekstu
 |DT_BOTTOM|<xref:System.Windows.Media.FormattedText.Height%2A>|Użyj właściwości <xref:System.Windows.Media.FormattedText.Height%2A>, aby obliczyć odpowiednią pozycję "y" DrawText Win32.|  
 |DT_CALCRECT|<xref:System.Windows.Media.FormattedText.Height%2A>, <xref:System.Windows.Media.FormattedText.Width%2A>|Użyj właściwości <xref:System.Windows.Media.FormattedText.Height%2A> i <xref:System.Windows.Media.FormattedText.Width%2A>, aby obliczyć prostokąt wyjściowy.|  
 |DT_CENTER|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|Użyj właściwości <xref:System.Windows.Media.FormattedText.TextAlignment%2A> z wartością ustawioną na <xref:System.Windows.TextAlignment.Center>.|  
-|DT_EDITCONTROL|Brak|Nie jest wymagane. Szerokość obszaru i renderowanie ostatniego wiersza są takie same, jak w kontrolce Edycja struktury.|  
+|DT_EDITCONTROL|None|Nie jest wymagane. Szerokość obszaru i renderowanie ostatniego wiersza są takie same, jak w kontrolce Edycja struktury.|  
 |DT_END_ELLIPSIS|<xref:System.Windows.Media.FormattedText.Trimming%2A>|Użyj właściwości <xref:System.Windows.Media.FormattedText.Trimming%2A> z <xref:System.Windows.TextTrimming.CharacterEllipsis>wartością.<br /><br /> Użyj <xref:System.Windows.TextTrimming.WordEllipsis>, aby uzyskać DT_END_ELLIPSIS Win32 z wielokropkiem DT_WORD_ELIPSIS. w tym przypadku wielokropek znaków występuje tylko w przypadku wyrazów, które nie mieszczą się w pojedynczym wierszu.|  
-|DT_EXPAND_TABS|Brak|Nie jest wymagane. Karty są automatycznie rozszerzane, aby zatrzymać każde 4 EMS, które ma w przybliżeniu szerokość 8 znaków niezależnych od języka.|  
-|DT_EXTERNALLEADING|Brak|Nie jest wymagane. Interlinia zewnętrzna zawsze jest uwzględniana w odstępach między wierszami. Użyj właściwości <xref:System.Windows.Media.FormattedText.LineHeight%2A>, aby utworzyć zdefiniowane przez użytkownika interlinię.|  
-|DT_HIDEPREFIX|Brak|Nieobsługiwane. Przed konstruowaniem obiektu <xref:System.Windows.Media.FormattedText> Usuń "&" z ciągu.|  
+|DT_EXPAND_TABS|None|Nie jest wymagane. Karty są automatycznie rozszerzane, aby zatrzymać każde 4 EMS, które ma w przybliżeniu szerokość 8 znaków niezależnych od języka.|  
+|DT_EXTERNALLEADING|None|Nie jest wymagane. Interlinia zewnętrzna zawsze jest uwzględniana w odstępach między wierszami. Użyj właściwości <xref:System.Windows.Media.FormattedText.LineHeight%2A>, aby utworzyć zdefiniowane przez użytkownika interlinię.|  
+|DT_HIDEPREFIX|None|Nieobsługiwane. Przed konstruowaniem obiektu <xref:System.Windows.Media.FormattedText> Usuń "&" z ciągu.|  
 |DT_LEFT|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|Jest to domyślne wyrównanie tekstu. Użyj właściwości <xref:System.Windows.Media.FormattedText.TextAlignment%2A> z wartością ustawioną na <xref:System.Windows.TextAlignment.Left>. (Tylko WPF)|  
-|DT_MODIFYSTRING|Brak|Nieobsługiwane.|  
+|DT_MODIFYSTRING|None|Nieobsługiwane.|  
 |DT_NOCLIP|<xref:System.Windows.Media.Visual.VisualClip%2A>|Przycinanie nie odbywa się automatycznie. Jeśli chcesz wyciąć tekst, użyj właściwości <xref:System.Windows.Media.Visual.VisualClip%2A>.|  
-|DT_NOFULLWIDTHCHARBREAK|Brak|Nieobsługiwane.|  
-|DT_NOPREFIX|Brak|Nie jest wymagane. Znak "&" w ciągach jest zawsze traktowany jako zwykły znak.|  
-|DT_PATHELLIPSIS|Brak|Użyj właściwości <xref:System.Windows.Media.FormattedText.Trimming%2A> z <xref:System.Windows.TextTrimming.WordEllipsis>wartością.|  
-|DT_PREFIX|Brak|Nieobsługiwane. Jeśli chcesz używać podkreśleń dla tekstu, takich jak klawisz akceleratora lub łącze, użyj metody <xref:System.Windows.Media.FormattedText.SetTextDecorations%2A>.|  
-|DT_PREFIXONLY|Brak|Nieobsługiwane.|  
+|DT_NOFULLWIDTHCHARBREAK|None|Nieobsługiwane.|  
+|DT_NOPREFIX|None|Nie jest wymagane. Znak "&" w ciągach jest zawsze traktowany jako zwykły znak.|  
+|DT_PATHELLIPSIS|None|Użyj właściwości <xref:System.Windows.Media.FormattedText.Trimming%2A> z <xref:System.Windows.TextTrimming.WordEllipsis>wartością.|  
+|DT_PREFIX|None|Nieobsługiwane. Jeśli chcesz używać podkreśleń dla tekstu, takich jak klawisz akceleratora lub łącze, użyj metody <xref:System.Windows.Media.FormattedText.SetTextDecorations%2A>.|  
+|DT_PREFIXONLY|None|Nieobsługiwane.|  
 |DT_RIGHT|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|Użyj właściwości <xref:System.Windows.Media.FormattedText.TextAlignment%2A> z wartością ustawioną na <xref:System.Windows.TextAlignment.Right>. (Tylko WPF)|  
-|DT_RTLREADING|<xref:System.Windows.Media.FormattedText.FlowDirection%2A>|Ustaw <xref:System.Windows.Media.FormattedText.FlowDirection%2A> właściwość <xref:System.Windows.FlowDirection.RightToLeft>.|  
-|DT_SINGLELINE|Brak|Nie jest wymagane. obiekty <xref:System.Windows.Media.FormattedText> zachowują się jako jednowierszowe kontrolki, chyba że jest ustawiona właściwość <xref:System.Windows.Media.FormattedText.MaxTextWidth%2A> lub tekst zawiera znak powrotu karetki/wysuwu wiersza (CR/LF).|  
-|DT_TABSTOP|Brak|Brak obsługi dla pozycji tabulatora zdefiniowanego przez użytkownika.|  
+|DT_RTLREADING|<xref:System.Windows.Media.FormattedText.FlowDirection%2A>|Ustaw właściwość <xref:System.Windows.Media.FormattedText.FlowDirection%2A> na <xref:System.Windows.FlowDirection.RightToLeft>.|  
+|DT_SINGLELINE|None|Nie jest wymagane. obiekty <xref:System.Windows.Media.FormattedText> zachowują się jako jednowierszowe kontrolki, chyba że jest ustawiona właściwość <xref:System.Windows.Media.FormattedText.MaxTextWidth%2A> lub tekst zawiera znak powrotu karetki/wysuwu wiersza (CR/LF).|  
+|DT_TABSTOP|None|Brak obsługi dla pozycji tabulatora zdefiniowanego przez użytkownika.|  
 |DT_TOP|<xref:System.Windows.Media.FormattedText.Height%2A>|Nie jest wymagane. Najważniejszym uzasadnieniem jest wartość domyślna. Inne wartości pozycjonowania pionowego można zdefiniować za pomocą właściwości <xref:System.Windows.Media.FormattedText.Height%2A> do obliczenia odpowiedniej pozycji "y" DrawText Win32.|  
 |DT_VCENTER|<xref:System.Windows.Media.FormattedText.Height%2A>|Użyj właściwości <xref:System.Windows.Media.FormattedText.Height%2A>, aby obliczyć odpowiednią pozycję "y" DrawText Win32.|  
-|DT_WORDBREAK|Brak|Nie jest wymagane. Dzielenie wyrazów odbywa się automatycznie z <xref:System.Windows.Media.FormattedText> obiektami. Nie można go wyłączyć.|  
+|DT_WORDBREAK|None|Nie jest wymagane. Dzielenie wyrazów odbywa się automatycznie z <xref:System.Windows.Media.FormattedText> obiektami. Nie można go wyłączyć.|  
 |DT_WORD_ELLIPSIS|<xref:System.Windows.Media.FormattedText.Trimming%2A>|Użyj właściwości <xref:System.Windows.Media.FormattedText.Trimming%2A> z <xref:System.Windows.TextTrimming.WordEllipsis>wartością.|  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Windows.Media.FormattedText>
 - [Dokumenty w WPF](documents-in-wpf.md)

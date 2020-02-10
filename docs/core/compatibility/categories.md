@@ -1,13 +1,13 @@
 ---
-title: Istotne zmiany kategorii — .NET Core
+title: Kategorie zmian powodujących niezgodność
 description: Dowiedz się więcej na temat sposobu kategoryzowania istotnych zmian w programie .NET Core.
 ms.date: 06/10/2019
-ms.openlocfilehash: 32cf55dc3ba0b16bae8cfe6179211150b2c90e2c
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: b273ebbb82da803cde66ea34760aa1779c6c1ca5
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75343598"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093048"
 ---
 # <a name="breaking-change-categories"></a>Kategorie zmian powodujących niezgodność
 
@@ -52,6 +52,6 @@ Utrzymywanie zgodności w sposób niemal wyklucza wszelkie zmiany lub dodatki z 
 
 Utrzymanie zgodności nie jest celem platformy .NET Core.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Oszacowanie istotnych zmian w programie .NET Core](index.md)

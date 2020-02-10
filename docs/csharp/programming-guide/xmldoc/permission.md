@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <permission> C# XML tag
 - permission C# XML tag
 ms.assetid: 769e93fe-8404-443f-bf99-577aa42b6a49
-ms.openlocfilehash: 14abb5bd181f401a4e6834d110e20fa920566580
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 4f76d28d5531c1b9f01fa950589407934cc1244a
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789734"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093477"
 ---
 # <a name="permission-c-programming-guide"></a>> uprawnień \<(C# Przewodnik programowania)
 
@@ -29,7 +29,7 @@ ms.locfileid: "76789734"
 
   Odwołanie do elementu członkowskiego lub pola, które jest dostępne do wywołania z bieżącego środowiska kompilacji. Kompilator sprawdza, czy dany element kodu istnieje i tłumaczy `member` na nazwę elementu kanonicznego w wyjściowym kodzie XML. *składowa* musi znajdować się w podwójnym cudzysłowie ("").
 
-  Aby uzyskać informacje na temat sposobu tworzenia odwołania cref do typu ogólnego, zobacz [\<see >](./see.md).
+  Aby uzyskać informacje na temat sposobu tworzenia odwołania cref do typu ogólnego, zobacz [atrybut cref](./cref-attribute.md).
 
 - `description`
 
@@ -45,7 +45,7 @@ Kompiluj z [-doc](../../language-reference/compiler-options/doc-compiler-option.
 
 [!code-csharp[csProgGuideDocComments#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#8)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [C#Przewodnik programowania](../index.md)
 - [Zalecane Tagi dla komentarzy dokumentacji](./recommended-tags-for-documentation-comments.md)

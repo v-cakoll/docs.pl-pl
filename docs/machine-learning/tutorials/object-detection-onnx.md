@@ -1,17 +1,17 @@
 ---
-title: 'Samouczek: wykrywanie obiektów przy użyciu głębokiej nauki z ONNX i ML.NET'
+title: 'Samouczek: wykrywanie obiektów przy użyciu modelu uczenia głębokiego ONNX'
 description: W tym samouczku przedstawiono sposób użycia wstępnie przeszkolonego modelu uczenia głębokiego ONNX w ML.NET do wykrywania obiektów w obrazach.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 12/12/2019
+ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 6aaf5acc605067f378ff5d42f713fe1c63d91e46
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 7ff9986c09e39f5c4d24f52c351db6455ff63e77
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794627"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092723"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Samouczek: wykrywanie obiektów przy użyciu ONNX w ML.NET
 
@@ -19,7 +19,7 @@ Dowiedz się, jak używać wstępnie przeszkolonego modelu ONNX w programie ML.N
 
 Uczenie modelu wykrywania obiektów od podstaw wymaga ustawienia milionów parametrów, dużej ilości danych szkoleniowych i szerokiej ilości zasobów obliczeniowych (setki godzin procesora GPU). Korzystanie z wstępnie nauczonego modelu umożliwia podwyższenie poziomu procesu szkolenia.
 
-Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
+Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]
 >
 > - Omówienie problemu
@@ -51,7 +51,7 @@ Niektóre przypadki użycia dotyczące wykrywania obiektów obejmują:
 
 - Samochody samoobsługowe
 - Atrybut
-- wykrywanie twarzy
+- Wykrywanie twarzy
 - Bezpieczeństwo w miejscu pracy
 - Zliczanie obiektów
 - Rozpoznawanie działań
@@ -448,7 +448,7 @@ Na koniec, poza początkową pętlą for `FilterBoundingBoxes`, zwracają wyniki
 
 [!code-csharp [ReturnFilteredBBox](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L246)]
 
-Świetnie. Teraz czas na użycie tego kodu wraz z modelem oceniania.
+Wspaniale! Teraz czas na użycie tego kodu wraz z modelem oceniania.
 
 ## <a name="use-the-model-for-scoring"></a>Korzystanie z modelu oceniania
 
@@ -665,7 +665,7 @@ Po instrukcji try-catch Dodaj dodatkową logikę, aby wskazać, że proces jest 
 
 [!code-csharp [EndProcessLog](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L62-L63)]
 
-To wszystko!
+Gotowe.
 
 ## <a name="results"></a>Wyniki
 

@@ -4,12 +4,12 @@ description: Tworzenie architektury nowoczesnych aplikacji sieci Web przy użyci
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 0e5f3578edc723e2e2a32b9b3a1d8a7dcabd2909
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 7dd3765b1b71d8c1ef22d714a00be3e171fab523
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965753"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093126"
 ---
 # <a name="common-client-side-web-technologies"></a>Typowe technologie sieci Web po stronie klienta
 
@@ -18,13 +18,13 @@ ms.locfileid: "76965753"
 
 Aplikacje ASP.NET Core są aplikacjami sieci Web, a zazwyczaj polegają na technologiach sieci Web po stronie klienta, takich jak HTML, CSS i JavaScript. Dzieląc zawartość strony (kod HTML) z układu i stylów (CSS) oraz jej zachowaniem (za pośrednictwem języka JavaScript), złożone aplikacje sieci Web mogą korzystać z oddzielenia zasad. Przyszłe zmiany struktury, projektu lub zachowania aplikacji mogą być łatwiejsze, gdy nie są intertwined te problemy.
 
-Chociaż język HTML i CSS są stosunkowo stabilne, JavaScript, za pomocą struktur aplikacji i narzędzi, deweloperzy współpracują z programem w celu kompilowania aplikacji opartych na sieci Web, rozwijając się z szybkością breakneck. W tym rozdziale przedstawiono kilka sposobów używania języka JavaScript przez deweloperów sieci Web w ramach opracowywania aplikacji, co stanowi ogólne omówienie określania kątowych i reagowania na biblioteki po stronie klienta.
+Chociaż język HTML i CSS są stosunkowo stabilne, JavaScript, za pomocą struktur aplikacji i narzędzi, deweloperzy współpracują z programem w celu kompilowania aplikacji opartych na sieci Web, rozwijając się z szybkością breakneck. W tym rozdziale przedstawiono kilka sposobów używania języka JavaScript przez deweloperów sieci Web oraz ogólne omówienie określania wartości kątowych i reagowania na biblioteki po stronie klienta.
 
 ## <a name="html"></a>HTML
 
 HTML (HyperText Markup Language) to standardowy język znaczników używany do tworzenia stron sieci Web i aplikacji sieci Web. Jego elementy tworzą bloki konstrukcyjne stron, reprezentujące sformatowany tekst, obrazy, wejścia formularzy i inne struktury. Gdy przeglądarka wysyła żądanie do adresu URL, niezależnie od tego, czy pobierana jest strona, czy aplikacja, pierwszy zwrócony element jest dokumentem HTML. Ten dokument HTML może odwoływać się do lub zawierać dodatkowe informacje na temat wyglądu i układu w formie CSS lub zachowania w formie języka JavaScript.
 
-## <a name="css"></a>{1&gt;CSS&lt;1}
+## <a name="css"></a>CSS
 
 CSS (kaskadowe arkusze stylów) służy do kontrolowania wyglądu i układu elementów HTML. Style CSS mogą być stosowane bezpośrednio do elementu HTML, zdefiniowane oddzielnie na tej samej stronie lub zdefiniowane w osobnym pliku i przywoływane przez stronę. Style kaskadowo na podstawie sposobu ich używania do wybierania danego elementu HTML. Na przykład styl może dotyczyć całego dokumentu, ale zostałby zastąpiony przez styl, który ma zastosowanie do określonego elementu. Analogicznie, styl specyficzny dla elementu zostałby zastąpiony przez styl stosowany do klasy CSS, która została zastosowana do elementu, który z kolei zostałby zastąpiony przez styl przeznaczony dla określonego wystąpienia tego elementu (za pośrednictwem jego identyfikatora). Rysunek 6-1
 
@@ -68,14 +68,14 @@ Załóżmy na przykład, że jeśli wartość pola tekstowego przekracza 10, ele
 |--------------------------|------------|-------------|
 | Abstrakcyjny model DOM | **Tak** | **Tak** |
 | Obsługa technologii AJAX | **Tak** | **Tak** |
-| Deklaratywne powiązanie danych | **Znaleziono** | **Tak** |
-| Routing w stylu MVC | **Znaleziono** | **Tak** |
-| Tworzenia szablonów | **Znaleziono** | **Tak** |
-| Routing linków | **Znaleziono** | **Tak** |
+| Deklaratywne powiązanie danych | **Nie** | **Tak** |
+| Routing w stylu MVC | **Nie** | **Tak** |
+| Tworzenia szablonów | **Nie** | **Tak** |
+| Routing linków | **Nie** | **Tak** |
 
 Większość funkcji jQuery nie może zostać dodana w sposób wewnętrzny z dodaniem innych bibliotek. Jednak mechanizm SPA, taki jak kątowy, udostępnia te funkcje w bardziej zintegrowany sposób, ponieważ został zaprojektowany ze wszystkimi z nich na myśli od samego początku. Ponadto jQuery jest bezwzględną biblioteką, co oznacza, że trzeba wywoływać funkcje jQuery w celu wykonywania jakichkolwiek czynności za pomocą jQuery. Większość pracy i funkcji, które zapewnia platforma SPA, może być wprowadzana w sposób deklaratywny, co nie wymaga faktycznego zapisania kodu.
 
-Powiązanie danych to doskonałe przykładowe rozwiązanie. W platformie jQuery zwykle przyjmuje tylko jeden wiersz kodu, aby uzyskać wartość elementu DOM lub ustawić wartość elementu. Jednak należy napisać ten kod w dowolnym momencie, gdy trzeba zmienić wartość elementu, a czasami występuje w wielu funkcjach na stronie. Innym typowym przykładem jest widoczność elementu. W platformie jQuery może istnieć wiele różnych miejsc, w których można napisać kod, aby kontrolować, czy niektóre elementy były widoczne. W każdym z tych przypadków, gdy korzystasz z powiązania danych, nie trzeba pisać kodu. Po prostu powiążesz wartość lub widoczność elementów na *ViewModel* na stronie, a zmiany w tym ViewModel zostaną automatycznie odzwierciedlone w elementach powiązanych.
+Powiązanie danych to doskonałe przykładowe rozwiązanie. W platformie jQuery zwykle przyjmuje tylko jeden wiersz kodu do uzyskania wartości elementu DOM lub ustawienia wartości elementu. Jednak należy napisać ten kod w dowolnym momencie, gdy trzeba zmienić wartość elementu i czasami będzie miało miejsce w wielu funkcjach na stronie. Innym typowym przykładem jest widoczność elementu. W platformie jQuery może istnieć wiele różnych miejsc, w których można napisać kod, aby kontrolować, czy niektóre elementy były widoczne. W każdym z tych przypadków, gdy korzystasz z powiązania danych, nie trzeba pisać kodu. Wystarczy powiązać wartość lub widoczność elementów na *ViewModel* na stronie, a zmiany w tym ViewModel zostaną automatycznie odzwierciedlone w elementach powiązanych.
 
 ### <a name="angular-spas"></a>Aplikacji jednostronicowych kątowy
 
@@ -166,5 +166,5 @@ Struktury JavaScript w dalszym ciągu rozwijają się z szybkością breakneck. 
 > <https://hackernoon.com/5-best-javascript-frameworks-in-2017-7a63b3870282>
 
 >[!div class="step-by-step"]
->[Poprzedni](common-web-application-architectures.md)
->[Następny](develop-asp-net-core-mvc-apps.md)
+>[Poprzednie](common-web-application-architectures.md)
+>[dalej](develop-asp-net-core-mvc-apps.md)

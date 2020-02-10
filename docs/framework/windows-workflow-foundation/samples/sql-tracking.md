@@ -2,12 +2,12 @@
 title: Śledzenie SQL
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: c1bb4492695df3ff803dff893de24453d7c03dfb
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 88f44e5362684f755695aab154842fad2274134d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715566"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094595"
 ---
 # <a name="sql-tracking"></a>Śledzenie SQL
 Ten przykład pokazuje, jak napisać niestandardowego uczestnika śledzenia SQL, który zapisuje rekordy śledzenia do bazy danych SQL. Windows Workflow Foundation (WF) oferuje śledzenie przepływów pracy, aby uzyskać wgląd w wykonywanie wystąpienia przepływu pracy. Środowisko uruchomieniowe śledzenia emituje rekordy śledzenia przepływu pracy podczas wykonywania przepływu pracy. Aby uzyskać więcej informacji na temat śledzenia przepływu pracy, zobacz [śledzenie i śledzenie przepływu pracy](../workflow-tracking-and-tracing.md).
@@ -23,7 +23,7 @@ Ten przykład pokazuje, jak napisać niestandardowego uczestnika śledzenia SQL,
 
 3. Otwórz SqlTrackingSample. sln w programie Visual Studio 2010.
 
-4. Naciśnij kombinację klawiszy CTRL + SHIFT + B, aby skompilować rozwiązanie.
+4. Naciśnij kombinację klawiszy CTRL+SHIFT+B w celu skompilowania rozwiązania.
 
 5. Naciśnij klawisz F5, aby uruchomić aplikację.
 
@@ -41,7 +41,7 @@ Ten przykład pokazuje, jak napisać niestandardowego uczestnika śledzenia SQL,
 
 10. W kliencie testowym WCF kliknij dwukrotnie pozycję **GetStockPrice**. Spowoduje to otwarcie operacji `GetStockPrice`, która przyjmuje jeden parametr, wpisz wartość `Contoso`, a następnie kliknij pozycję **Wywołaj**.
 
-11. Wysyłane rekordy śledzenia są zapisywane w bazie danych SQL. Aby wyświetlić rekordy śledzenia, Otwórz bazę danych TrackingSample w programie SQL Management Studio i przejdź do tabel. Aby uzyskać więcej informacji na temat SQL Server Management Studio, zobacz [wprowadzenie SQL Server Management Studio](https://go.microsoft.com/fwlink/?LinkId=165645). SQL Server 2008 Management Studio Express można pobrać [tutaj](https://go.microsoft.com/fwlink/?LinkId=180520). Uruchomienie zapytania SELECT w tabelach wyświetla dane w rekordach śledzenia przechowywanych w odpowiednich tabelach.
+11. Wysyłane rekordy śledzenia są zapisywane w bazie danych SQL. Aby wyświetlić rekordy śledzenia, Otwórz bazę danych TrackingSample w programie SQL Management Studio i przejdź do tabel. Aby uzyskać więcej informacji na temat SQL Server Management Studio, zobacz [wprowadzenie SQL Server Management Studio](/sql/ssms/sql-server-management-studio-ssms). SQL Server 2008 Management Studio Express można pobrać [tutaj](https://www.microsoft.com/download/details.aspx?id=7593). Uruchomienie zapytania SELECT w tabelach wyświetla dane w rekordach śledzenia przechowywanych w odpowiednich tabelach.
 
 #### <a name="to-uninstall-the-sample"></a>Aby odinstalować przykład
 
@@ -59,6 +59,6 @@ Ten przykład pokazuje, jak napisać niestandardowego uczestnika śledzenia SQL,
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\SqlTracking`
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Przykłady monitorowania oprogramowania AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [Przykłady monitorowania oprogramowania AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

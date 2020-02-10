@@ -9,12 +9,12 @@ helpviewer_keywords:
 - typography [WPF], OpenType font technology
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
-ms.openlocfilehash: da8f3e592e47c9482d4395b81627c1582e2354f7
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 65ecfc4269ff894d45c9b4ee15e349b1a7ddbb73
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72005240"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094517"
 ---
 # <a name="opentype-font-features"></a>OpenType funkcje czcionki
 
@@ -39,7 +39,7 @@ Ten temat zawiera omówienie niektórych kluczowych funkcji technologii czcionek
 > [!NOTE]
 > Windows SDK zawiera zestaw przykładowych czcionek OpenType, których można używać z aplikacjami [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Czcionki te zawierają większość funkcji przedstawionych w pozostałej części tego tematu. Aby uzyskać więcej informacji, zobacz [przykładowy pakiet czcionek OpenType](sample-opentype-font-pack.md).  
   
- Zobacz [specyfikację OpenType](https://go.microsoft.com/fwlink/?LinkId=96731) , aby uzyskać szczegółowe informacje o formacie czcionki OpenType.  
+Aby uzyskać szczegółowe informacje na temat formatu czcionki OpenType, zobacz [specyfikację OpenType](https://docs.microsoft.com/typography/opentype/spec/).  
   
 ### <a name="advanced-typographic-extensions"></a>Zaawansowane rozszerzenia typograficzne  
  Zaawansowane tabele typograficzne (tabele układu OpenType) zwiększają funkcjonalność czcionek z konturami TrueType lub CFF. Czcionki układu OpenType zawierają dodatkowe informacje, które rozszerzają możliwości czcionek w celu zapewnienia obsługi wysokiej jakości międzynarodowej typografii. Większość czcionek OpenType uwidacznia tylko podzestaw łącznej liczby dostępnych funkcji OpenType. Czcionki OpenType zapewniają następujące funkcje.  
@@ -230,7 +230,7 @@ Ten temat zawiera omówienie niektórych kluczowych funkcji technologii czcionek
   
  ![Tekst przy użyciu ukośników OpenType i skumulowanych ułamkowych](./media/opentype-font-features/opentype-slashed-stacked-fractions.gif "Tekst przy użyciu ukośników OpenType i skumulowanych ułamkowych")  
    
- Poniższy przykład znacznika pokazuje, jak definiować style ułamków dla czcionki Linotype Palatino, używając właściwości obiektu <xref:System.Windows.Documents.Typography>.  
+ Poniższy przykład znacznika ilustruje sposób definiowania stylów ułamków dla czcionki Palatino Linotype, przy użyciu właściwości obiektu <xref:System.Windows.Documents.Typography>.  
   
  [!code-xaml[OpenTypeFontSamples#10](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#10)]  
   
@@ -271,7 +271,7 @@ Ten temat zawiera omówienie niektórych kluczowych funkcji technologii czcionek
   
 <a name="typography_class"></a>   
 ## <a name="typography-class"></a>Klasa typografii  
- Obiekt <xref:System.Windows.Documents.Typography> uwidacznia zestaw funkcji, które obsługuje czcionka OpenType. Ustawiając właściwości <xref:System.Windows.Documents.Typography> w znaczniku, można łatwo tworzyć dokumenty, które korzystają z funkcji OpenType.  
+ Obiekt <xref:System.Windows.Documents.Typography> uwidacznia zestaw funkcji obsługiwanych przez czcionkę OpenType. Ustawiając właściwości <xref:System.Windows.Documents.Typography> w znacznikach, można łatwo tworzyć dokumenty, które korzystają z funkcji OpenType.  
   
  Następujący tekst zawiera standardowe litery dla czcionki Pescadero, a następnie litery, które są pisane jako "SmallCaps" i "AllSmallCaps". W takim przypadku ten sam rozmiar czcionki jest używany dla wszystkich trzech wyrazów.  
   
@@ -292,7 +292,7 @@ Ten temat zawiera omówienie niektórych kluczowych funkcji technologii czcionek
 |Właściwość|Wartość (s)|Wartość domyślna|  
 |--------------|----------------|-------------------|  
 |<xref:System.Windows.Documents.Typography.AnnotationAlternates%2A>|Wartość liczbowa-bajt|0|  
-|<xref:System.Windows.Documents.Typography.Capitals%2A>|<xref:System.Windows.FontCapitals.AllPetiteCaps> &#124; <xref:System.Windows.FontCapitals.AllSmallCaps> &#124; <xref:System.Windows.FontCapitals.Normal> &#124; <xref:System.Windows.FontCapitals.PetiteCaps> &#124; <xref:System.Windows.FontCapitals.SmallCaps> &#124; 0 &#124; 2|<xref:System.Windows.FontCapitals.Normal?displayProperty=nameWithType>|  
+|<xref:System.Windows.Documents.Typography.Capitals%2A>|<xref:System.Windows.FontCapitals.AllPetiteCaps> &#124; <xref:System.Windows.FontCapitals.AllSmallCaps> &#124; <xref:System.Windows.FontCapitals.Normal> &#124; <xref:System.Windows.FontCapitals.PetiteCaps> &#124; <xref:System.Windows.FontCapitals.SmallCaps> &#124; &#124; <xref:System.Windows.FontCapitals.Titling> <xref:System.Windows.FontCapitals.Unicase>|<xref:System.Windows.FontCapitals.Normal?displayProperty=nameWithType>|  
 |<xref:System.Windows.Documents.Typography.CapitalSpacing%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.CaseSensitiveForms%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.ContextualAlternates%2A>|<xref:System.Boolean>|`true`|  
@@ -300,8 +300,8 @@ Ten temat zawiera omówienie niektórych kluczowych funkcji technologii czcionek
 |<xref:System.Windows.Documents.Typography.ContextualSwashes%2A>|Wartość liczbowa-bajt|0|  
 |<xref:System.Windows.Documents.Typography.DiscretionaryLigatures%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.EastAsianExpertForms%2A>|<xref:System.Boolean>|`false`|  
-|<xref:System.Windows.Documents.Typography.EastAsianLanguage%2A>|<xref:System.Windows.FontEastAsianLanguage.HojoKanji> &#124;<xref:System.Windows.FontEastAsianLanguage.Jis04>&#124;<xref:System.Windows.FontEastAsianLanguage.Jis78>&#124;<xref:System.Windows.FontEastAsianLanguage.Jis83>&#124;<xref:System.Windows.FontEastAsianLanguage.Jis90>&#124;<xref:System.Windows.FontEastAsianLanguage.NlcKanji>&#124; &#124;<xref:System.Windows.FontEastAsianLanguage.Normal><xref:System.Windows.FontEastAsianLanguage.Simplified><xref:System.Windows.FontEastAsianLanguage.Traditional>&#124; &#124;|<xref:System.Windows.FontEastAsianLanguage.Normal?displayProperty=nameWithType>|  
-|<xref:System.Windows.Documents.Typography.EastAsianWidths%2A>|<xref:System.Windows.FontEastAsianWidths.Full> &#124; <xref:System.Windows.FontEastAsianWidths.Half> &#124; <xref:System.Windows.FontEastAsianWidths.Normal> &#124; <xref:System.Windows.FontEastAsianWidths.Proportional> &#124; <xref:System.Windows.FontEastAsianWidths.Quarter> &#124; 0|<xref:System.Windows.FontEastAsianWidths.Normal?displayProperty=nameWithType>|  
+|<xref:System.Windows.Documents.Typography.EastAsianLanguage%2A>|<xref:System.Windows.FontEastAsianLanguage.HojoKanji> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis04> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis78> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis83> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis90> &#124; <xref:System.Windows.FontEastAsianLanguage.NlcKanji> &#124; &#124; <xref:System.Windows.FontEastAsianLanguage.Normal> <xref:System.Windows.FontEastAsianLanguage.Simplified> <xref:System.Windows.FontEastAsianLanguage.Traditional> &#124; &#124;<xref:System.Windows.FontEastAsianLanguage.TraditionalNames>|<xref:System.Windows.FontEastAsianLanguage.Normal?displayProperty=nameWithType>|  
+|<xref:System.Windows.Documents.Typography.EastAsianWidths%2A>|<xref:System.Windows.FontEastAsianWidths.Full> &#124; <xref:System.Windows.FontEastAsianWidths.Half> &#124; <xref:System.Windows.FontEastAsianWidths.Normal> &#124; <xref:System.Windows.FontEastAsianWidths.Proportional> &#124; <xref:System.Windows.FontEastAsianWidths.Quarter> &#124; <xref:System.Windows.FontEastAsianWidths.Third>|<xref:System.Windows.FontEastAsianWidths.Normal?displayProperty=nameWithType>|  
 |<xref:System.Windows.Documents.Typography.Fraction%2A>|<xref:System.Windows.FontFraction.Normal> &#124; <xref:System.Windows.FontFraction.Slashed> &#124; <xref:System.Windows.FontFraction.Stacked>|<xref:System.Windows.FontFraction.Normal?displayProperty=nameWithType>|  
 |<xref:System.Windows.Documents.Typography.HistoricalForms%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.HistoricalLigatures%2A>|<xref:System.Boolean>|`false`|  
@@ -333,12 +333,12 @@ Ten temat zawiera omówienie niektórych kluczowych funkcji technologii czcionek
 |<xref:System.Windows.Documents.Typography.StylisticSet18%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.StylisticSet19%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.StylisticSet20%2A>|<xref:System.Boolean>|`false`|  
-|<xref:System.Windows.Documents.Typography.Variants%2A>|<xref:System.Windows.FontVariants.Inferior> &#124; <xref:System.Windows.FontVariants.Normal> &#124; <xref:System.Windows.FontVariants.Ordinal> &#124; <xref:System.Windows.FontVariants.Ruby> &#124; <xref:System.Windows.FontVariants.Subscript> &#124; 0|<xref:System.Windows.FontVariants.Normal?displayProperty=nameWithType>|  
+|<xref:System.Windows.Documents.Typography.Variants%2A>|<xref:System.Windows.FontVariants.Inferior> &#124; <xref:System.Windows.FontVariants.Normal> &#124; <xref:System.Windows.FontVariants.Ordinal> &#124; <xref:System.Windows.FontVariants.Ruby> &#124; <xref:System.Windows.FontVariants.Subscript> &#124; <xref:System.Windows.FontVariants.Superscript>|<xref:System.Windows.FontVariants.Normal?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Windows.Documents.Typography>
-- [Specyfikacja OpenType](https://go.microsoft.com/fwlink/?LinkId=96731)
+- [Specyfikacja OpenType](https://docs.microsoft.com/typography/opentype/spec/)
 - [Typografia w WPF](typography-in-wpf.md)
 - [Przykład pakietu czcionek OpenType](sample-opentype-font-pack.md)
 - [Pakowanie czcionek z aplikacjami](packaging-fonts-with-applications.md)

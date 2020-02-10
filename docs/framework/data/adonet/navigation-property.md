@@ -2,12 +2,12 @@
 title: Właściwość nawigacji
 ms.date: 03/30/2017
 ms.assetid: d0bf1a6a-1d84-484c-b7c3-b410fd8dc0b1
-ms.openlocfilehash: b6c286e63322a66be0407c864295a20685df2b7f
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: eaf22ad4dd24b4bf046f14ccabd435a9ecd1776f
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980161"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094387"
 ---
 # <a name="navigation-property"></a>Właściwość nawigacji
 
@@ -21,23 +21,23 @@ Definicja właściwości nawigacji obejmuje następujące elementy:
 
 - Koniec skojarzenia, które przechodzi. Potrzeb
 
-Należy zauważyć, że właściwości nawigacji są opcjonalne na obu typach jednostek na końcu skojarzenia. Jeśli zdefiniujesz właściwość nawigacji na jednym typie jednostki na końcu skojarzenia, nie musisz definiować właściwości nawigacji dla typu jednostki na drugim końcu skojarzenia.
+Właściwości nawigacji są opcjonalne na obu typach jednostek na końcu skojarzenia. Jeśli zdefiniujesz właściwość nawigacji na jednym typie jednostki na końcu skojarzenia, nie musisz definiować właściwości nawigacji dla typu jednostki na drugim końcu skojarzenia.
 
 Typ danych właściwości nawigacji jest określany przez [liczebność](association-end-multiplicity.md) jego zdalnego [skojarzenia](association-end.md). Załóżmy na przykład, że właściwość nawigacji, `OrdersNavProp`, istnieje w typie jednostki `Customer` i przechodzi do skojarzenia jeden-do-wielu między `Customer` i `Order`. Ze względu na to, że zdalne skojarzenie dla właściwości nawigacji ma liczebność wielu (\*), jego typ danych jest kolekcją (`Order`). Podobnie, jeśli właściwość nawigacji, `CustomerNavProp`, istnieje w typie jednostki `Order`, jego typ danych będzie `Customer`, ponieważ liczebność elementu zdalnego kończy wynosi jeden (1).
 
 ## <a name="example"></a>Przykład
 
-Na poniższym diagramie przedstawiono model koncepcyjny z trzema typami jednostek: `Book`, `Publisher`i `Author`. Właściwości nawigacji, `Publisher` i `Authors`są zdefiniowane w typie jednostki książki. Właściwość nawigacji `Books` jest zdefiniowana zarówno dla typu jednostki wydawcy, jak i typu jednostki `Author`.
+Na poniższym diagramie przedstawiono model koncepcyjny z trzema typami jednostek: `Book`, `Publisher`i `Author`. Właściwości nawigacji `Publisher` i `Authors` są zdefiniowane w typie jednostki książki. Właściwość nawigacji `Books` jest zdefiniowana zarówno dla typu jednostki wydawcy, jak i typu jednostki `Author`.
 
- ![Diagram przedstawiający model koncepcyjny z trzema typami jednostek.](./media/navigation-property/conceptual-model-entity-types-associations.gif)  
+![Diagram przedstawiający model koncepcyjny z trzema typami jednostek.](./media/navigation-property/conceptual-model-entity-types-associations.gif)  
 
 [ADO.NET Entity Framework](./ef/index.md) używa języka specyficznego dla domeny (DSL) zwanego językiem definicji schematu koncepcyjnego ([CSDL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)) do definiowania modeli koncepcyjnych. Następujący identyfikator CSDL definiuje typ jednostki `Book` przedstawiony na poniższym diagramie:
 
 [!code-xml[EDM_Example_Model#EntityExample](~/samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entityexample)]
 
-Należy zauważyć, że atrybuty XML są używane do przekazywania informacji niezbędnych do zdefiniowania właściwości nawigacji: atrybut `Name` zawiera nazwę właściwości, `Relationship` zawiera nazwę skojarzenia, do którego prowadzi, i `FromRole` i `ToRole` zawierają zakończenia skojarzenia.
+Atrybuty XML są używane do przekazywania informacji niezbędnych do zdefiniowania właściwości nawigacji: atrybut `Name` zawiera nazwę właściwości, `Relationship` zawiera nazwę tego skojarzenia, a `FromRole` i `ToRole` zawierają zakończenia skojarzenia.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Kluczowe założenia modelu danych jednostki](entity-data-model-key-concepts.md)
 - [Model danych jednostki](entity-data-model.md)

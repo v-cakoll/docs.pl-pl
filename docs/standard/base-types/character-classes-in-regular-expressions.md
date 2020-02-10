@@ -12,12 +12,12 @@ helpviewer_keywords:
 - characters, matching syntax
 - .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-ms.openlocfilehash: cd9d3f69f8135b608ced91c34f747600352bafe1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 047d0ea7b3783f8cf45afde2a15470adda94cd6e
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711457"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095050"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Klasy znaków w wyrażeniach regularnych
 
@@ -71,7 +71,7 @@ Klasa znaków definiuje zestaw znaków, z którego każdy jeden znak może wyst�
 
 W poniższej tabeli wymieniono niektóre typowe wzorce wyrażeń regularnych zawierających klasy znaków pozytywnych.  
   
-|Wzorzec|Opis|  
+|Wzorce|Opis|  
 |-------------|-----------------|  
 |`[aeiou]`|Dopasowuje wszystkie samogłoski.|  
 |`[\p{P}\d]`|Dopasowuje wszystkie znaki interpunkcyjne oraz znaki cyfr dziesiętnych.|  
@@ -84,7 +84,7 @@ W poniższej tabeli wymieniono niektóre typowe wzorce wyrażeń regularnych zaw
   
  Wyrażenie regularne `gr[ae]y\s\S+?[\s|\p{P}]` jest zdefiniowane w następujący sposób:  
   
-|Wzorzec|Opis|  
+|Wzorce|Opis|  
 |-------------|-----------------|  
 |`gr`|Dopasowuje znaki literału „gr”.|  
 |`[ae]`|Dopasowuje znak „a” lub „e”.|  
@@ -99,7 +99,7 @@ W poniższej tabeli wymieniono niektóre typowe wzorce wyrażeń regularnych zaw
   
  Wyrażenie regularne `\b[A-Z]\w*\b` jest zdefiniowane, jak pokazano w poniższej tabeli.  
   
-|Wzorzec|Opis|  
+|Wzorce|Opis|  
 |-------------|-----------------|  
 |`\b`|Rozpoczyna na granicy wyrazu.|  
 |`[A-Z]`|Dopasowuje dowolny znak wielkiej litery z zakresu od A do Z.|  
@@ -127,14 +127,14 @@ gdzie *firstCharacter* jest znakiem, który rozpoczyna zakres, a *lastCharacter*
   
  Można połączyć co najmniej dwa zakresy znaków. Na przykład, aby określić zakres cyfr dziesiętnych od "0" do "9", zakres małych liter od "a" do "f" oraz zakres wielkich liter od "A" do "F", użyj `[0-9a-fA-F]`.  
   
- Wiodący znak daszka (`^`) w grupie znaków negatywnych jest obowiązkowy i wskazuje, że Grupa znaków jest grupą znaków negatywnych zamiast grupy znaków pozytywnych.  
+ Wiodący znak karetki (`^`) w grupie znaków negatywnych jest obowiązkowy i wskazuje, że Grupa znaków jest grupą znaków negatywnych zamiast grupy znaków pozytywnych.  
   
 > [!IMPORTANT]
 > Grupa znaków negatywnych w większym wzorcu wyrażenia regularnego nie jest asercją o zerowej szerokości. Czyli po dokonaniu oceny grupy znaków negatywnych aparat wyrażeń regularnych postępuje o jeden znak do przodu w ciągu wejściowym.  
   
  W poniższej tabeli wymieniono niektóre typowe wzorce wyrażeń regularnych zawierających grupy znaków negatywnych.  
   
-|Wzorzec|Opis|  
+|Wzorce|Opis|  
 |-------------|-----------------|  
 |`[^aeiou]`|Dopasowuje wszystkie znaki z wyjątkiem samogłosek.|  
 |`[^\p{P}\d]`|Dopasowuje wszystkie znaki z wyjątkiem znaków interpunkcyjnych oraz znaków cyfr dziesiętnych.|  
@@ -146,7 +146,7 @@ gdzie *firstCharacter* jest znakiem, który rozpoczyna zakres, a *lastCharacter*
   
  Wyrażenie regularne `\bth[^o]\w+\b` jest zdefiniowane, jak pokazano w poniższej tabeli.  
   
-|Wzorzec|Opis|  
+|Wzorce|Opis|  
 |-------------|-----------------|  
 |`\b`|Rozpoczyna na granicy wyrazu.|  
 |`th`|Dopasowuje znaki literału „th”.|  
@@ -193,7 +193,7 @@ gdzie *firstCharacter* jest znakiem, który rozpoczyna zakres, a *lastCharacter*
   
  Wyrażenie regularne `\b(\p{IsGreek}+(\s)?)+\p{Pd}\s(\p{IsBasicLatin}+(\s)?)+` jest zdefiniowane, jak pokazano w poniższej tabeli.  
   
-|Wzorzec|Opis|  
+|Wzorce|Opis|  
 |-------------|-----------------|  
 |`\b`|Rozpoczyna na granicy wyrazu.|  
 |`\p{IsGreek}+`|Dopasowuje jeden lub więcej znaków greckich.|  
@@ -439,7 +439,7 @@ Platforma .NET udostępnia nazwane bloki wymienione w poniższej tabeli. Zestaw 
 |0250–02AF|`IsIPAExtensions`|  
 |02B0–02FF|`IsSpacingModifierLetters`|  
 |0300–036F|`IsCombiningDiacriticalMarks`|  
-|0370–03FF|`IsGreek`<br /><br /> lub<br /><br /> `IsGreekandCoptic`|  
+|0370–03FF|`IsGreek`<br /><br /> — lub —<br /><br /> `IsGreekandCoptic`|  
 |0400–04FF|`IsCyrillic`|  
 |0500–052F|`IsCyrillicSupplement`|  
 |0530–058F|`IsArmenian`|  
@@ -483,7 +483,7 @@ Platforma .NET udostępnia nazwane bloki wymienione w poniższej tabeli. Zestaw 
 |2000–206F|`IsGeneralPunctuation`|  
 |2070–209F|`IsSuperscriptsandSubscripts`|  
 |20A0–20CF|`IsCurrencySymbols`|  
-|20D0–20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> lub<br /><br /> `IsCombiningMarksforSymbols`|  
+|20D0–20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> — lub —<br /><br /> `IsCombiningMarksforSymbols`|  
 |2100–214F|`IsLetterlikeSymbols`|  
 |2150–218F|`IsNumberForms`|  
 |2190–21FF|`IsArrows`|  
@@ -567,7 +567,7 @@ Platforma .NET udostępnia nazwane bloki wymienione w poniższej tabeli. Zestaw 
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/classsubtraction1.cs#15)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/classsubtraction1.vb#15)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Char.GetUnicodeCategory%2A>
 - [Język wyrażeń regularnych — podręczny wykaz](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

@@ -1,15 +1,15 @@
 ---
-title: 'Samouczek: Generowanie modelu klasyfikacji obrazów ML.NET na podstawie wstępnie nauczonego modelu TensorFlow'
+title: 'Samouczek: model klasyfikacji obrazów ML.NET z TensorFlow'
 description: Dowiedz się, jak przenieść wiedzę z istniejącego modelu TensorFlow do nowego modelu klasyfikacji obrazów ML.NET. Model TensorFlow został przeszkolony do klasyfikowania obrazów do tysięcy kategorii. Model ML.NET wykorzystuje uczenie transferu do klasyfikowania obrazów do mniejszej liczby szerszej kategorii.
-ms.date: 11/15/2019
+ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 5fe47c42d0cf24ebfdc33a937e1afbd11a976680
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: f5ec31f8bfdc089d275588b228c8ce6f28a44201
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75738951"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092554"
 ---
 # <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>Samouczek: Generowanie modelu klasyfikacji obrazów ML.NET na podstawie wstępnie nauczonego modelu TensorFlow
 
@@ -19,7 +19,7 @@ Model TensorFlow został przeszkolony do klasyfikowania obrazów do tysięcy kat
 
 Uczenie modelu [klasyfikacji obrazów](https://en.wikipedia.org/wiki/Outline_of_object_recognition) od podstaw wymaga ustawienia milionów parametrów, moc z etykietami danych szkoleniowych i ogromną ilość zasobów obliczeniowych (setki godzin procesora GPU). Chociaż nie jest tak wydajny, jak uczenie modelu niestandardowego od podstaw, uczenie przenoszenia pozwala na podjęcie tego procesu przez pracę z tysiącami obrazów i milionów obrazów z etykietami, a następnie szybko utworzyć dostosowany model (w ciągu godziny na maszynie bez PROCESOR GPU). Ten samouczek skaluje się jeszcze bardziej dokładnie przy użyciu dziesiątych obrazów szkoleniowych.
 
-Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
+Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]
 >
 > * Omówienie problemu
@@ -61,12 +61,12 @@ Klasyfikacja obrazu to typowe zadanie Machine Learning, które pozwala nam na au
 
 ![obraz Pizza](./media/image-classification/220px-Pepperoni_pizza.jpg)
 ![Teddy](./media/image-classification/119px-Nalle_-_a_small_brown_teddy_bear.jpg)
-obrazu ![
+obrazu ![](./media/image-classification/193px-Broodrooster.jpg)
 
 >[!Note]
 > Powyższe obrazy należą do Wikimedia Commons Attribution i są przypisywane w następujący sposób:
 >
-> * "220px-Pepperoni_pizza.jpg" Public Domain, https://commons.wikimedia.org/w/index.php?curid=79505,
+> * Domena publiczna "220px-Pepperoni_pizza. jpg", https://commons.wikimedia.org/w/index.php?curid=79505,
 > * "119px-Nalle_-_a_small_brown_teddy_bear. jpg" przez [Jonik](https://commons.wikimedia.org/wiki/User:Jonik) -własne grafy, CC przez-sa 2,0, https://commons.wikimedia.org/w/index.php?curid=48166.
 > * "193px-Broodrooster. jpg" według [M. Minderhoud](https://nl.wikipedia.org/wiki/Gebruiker:Michiel1972) — działania własne, CC według-sa 3,0, https://commons.wikimedia.org/w/index.php?curid=27403
 
@@ -112,7 +112,7 @@ toaster2.png    appliance
 Obrazy szkoleniowe i testowe znajdują się w folderach zasobów, które zostaną pobrane w pliku zip. Te obrazy należą do Wikimedia Commons Attribution.
 > *[Wikimedia Commons Attribution](https://commons.wikimedia.org/w/index.php?title=Main_Page&oldid=313158208), repozytorium wolnych nośników.* Pobrano 10:48, 17 października 2018 z: https://commons.wikimedia.org/wiki/Pizza https://commons.wikimedia.org/wiki/Toaster https://commons.wikimedia.org/wiki/Teddy_bear
 
-## <a name="setup"></a>Konfiguracja
+## <a name="setup"></a>Konfigurowanie
 
 ### <a name="create-a-project"></a>Tworzenie projektu
 
@@ -340,7 +340,7 @@ Potok modelu ML.NET jest łańcuchem szacowania. Należy pamiętać, że podczas
 
     [!code-csharp[SaveModel](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#ReturnModel)]
 
-## <a name="run-the-application"></a>Uruchom aplikację!
+## <a name="run-the-application"></a>Uruchom aplikację.
 
 1. Dodaj wywołanie do `GenerateModel` w metodzie `Main` po utworzeniu klasy MLContext:
 

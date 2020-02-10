@@ -2,12 +2,12 @@
 title: Dostawca WMI
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-ms.openlocfilehash: 4db8873397b0136de88d00ebe62c429aee260911
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: a170a20212791d789af589c1ff99dcd1abad1c9e
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715006"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094777"
 ---
 # <a name="wmi-provider"></a>Dostawca WMI
 Ten przykład pokazuje, jak zbierać dane z usług Windows Communication Foundation (WCF) w środowisku uruchomieniowym przy użyciu dostawcy Instrumentacja zarządzania Windows (WMI) wbudowanego w funkcję WCF. Ponadto w tym przykładzie pokazano, jak dodać obiekt usługi WMI zdefiniowany przez użytkownika do usługi. Przykład aktywuje dostawcę WMI dla [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) i pokazuje, jak zbierać dane z usługi `ICalculator` w czasie wykonywania.  
@@ -16,7 +16,7 @@ Ten przykład pokazuje, jak zbierać dane z usług Windows Communication Foundat
   
  Funkcja WCF implementuje dostawcę WMI, składnik, który udostępnia instrumentację w czasie wykonywania za pomocą interfejsu zgodnego z pakietem WBEM. Narzędzia do zarządzania programu mogą łączyć się z usługami za pomocą interfejsu w czasie wykonywania. Funkcja WCF udostępnia atrybuty usług, takie jak adresy, powiązania, zachowania i odbiorniki.  
   
- Wbudowany Dostawca usługi WMI jest aktywowany w pliku konfiguracji aplikacji. Odbywa się to za pomocą atrybutu `wmiProviderEnabled` [diagnostyki\<](../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) w sekcji [\<system. ServiceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) , jak pokazano w poniższej konfiguracji przykładowej:  
+ Wbudowany Dostawca usługi WMI jest aktywowany w pliku konfiguracji aplikacji. Odbywa się to za pomocą atrybutu `wmiProviderEnabled` [diagnostyki\<>](../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) w sekcji [\<system. ServiceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) , jak pokazano w poniższej konfiguracji przykładowej:  
   
 ```xml  
 <system.serviceModel>  
@@ -32,7 +32,8 @@ Ten przykład pokazuje, jak zbierać dane z usług Windows Communication Foundat
  Dodanie obiektów usługi WMI do usługi umożliwia ujawnienie informacji zdefiniowanych przez użytkownika oraz wbudowanych informacji o dostawcach WMI. Jest to realizowane przez opublikowanie schematu usługi w usłudze WMI przy użyciu aplikacji Installutil. exe. Instrukcje do osiągnięcia tego, a także więcej szczegółów można znaleźć w instrukcjach instalacji na końcu tematu.  
   
 ## <a name="accessing-wmi-information"></a>Uzyskiwanie dostępu do informacji WMI  
- Dostęp do danych usługi WMI można uzyskać na wiele różnych sposobów. Firma Microsoft udostępnia interfejsy API usługi WMI dla skryptów, C++ aplikacji Visual Basic, aplikacji i .NET Framework (https://docs.microsoft.com/windows/desktop/wmisdk/using-wmi).  
+
+Dostęp do danych usługi WMI można uzyskać na wiele różnych sposobów. Firma Microsoft udostępnia interfejsy API usługi WMI dla skryptów, C++ aplikacji Visual Basic, aplikacji i .NET Framework. Aby uzyskać więcej informacji, zobacz [Korzystanie z usługi WMI](/windows/desktop/wmisdk/using-wmi).
   
  W tym przykładzie zastosowano dwa skrypty Java: jeden do wyliczania usług działających na komputerze wraz z niektórymi właściwościami, a drugą, aby wyświetlić dane usługi WMI zdefiniowane przez użytkownika. Skrypt otwiera połączenie z dostawcą WMI, analizuje dane i wyświetla zebrane dane.  
   
@@ -143,6 +144,6 @@ cscript EnumerateCustomObjects.js
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\WMIProvider`  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Przykłady monitorowania oprogramowania AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [Przykłady monitorowania oprogramowania AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

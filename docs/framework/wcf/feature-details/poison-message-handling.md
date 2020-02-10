@@ -2,12 +2,12 @@
 title: Obsługa komunikatów zanieczyszczonych
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-ms.openlocfilehash: 389d0651438036cd23d30cf7dd866956ac8e5dae
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 378849815617f6556a7d9cc7e89c6697bfdd895d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921208"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094998"
 ---
 # <a name="poison-message-handling"></a>Obsługa komunikatów zanieczyszczonych
 *Trująca wiadomość* jest komunikatem, który przekroczył maksymalną liczbę prób dostarczenia do aplikacji. Taka sytuacja może wystąpić, gdy aplikacja oparta na kolejce nie może przetworzyć komunikatu z powodu błędów. Aby spełnić wymagania dotyczące niezawodności, aplikacja umieszczona w kolejce odbiera komunikaty w ramach transakcji. Przerwanie transakcji, w której otrzymano komunikat w kolejce, pozostawia komunikat w kolejce, aby komunikat został ponowiony w ramach nowej transakcji. Jeśli problem, który spowodował przerwanie transakcji, nie zostanie poprawiony, aplikacja otrzymująca może zostać zablokowana w pętli, która odbiera i przerywa ten sam komunikat do momentu przekroczenia maksymalnej liczby prób dostarczenia i zatrucia wyników komunikatów.  
@@ -17,7 +17,7 @@ ms.locfileid: "76921208"
  W rzadkich przypadkach komunikaty mogą nie być wysyłane do aplikacji. Warstwa Windows Communication Foundation (WCF) może znaleźć problem z komunikatem, na przykład jeśli komunikat ma złą ramkę, dołączono do niego nieprawidłowe poświadczenia wiadomości lub nieprawidłowy nagłówek akcji. W takich przypadkach aplikacja nigdy nie otrzymuje komunikatu; Jednak komunikat nadal może stać się skażony i być przetwarzany ręcznie.  
   
 ## <a name="handling-poison-messages"></a>Obsługa skażonych komunikatów  
- W programie WCF Obsługa skażonych komunikatów zapewnia mechanizm do otrzymywania aplikacji, które nie mogą zostać wysłane do aplikacji ani komunikatów wysyłanych do aplikacji, ale których nie można przetworzyć ze względu na specyficzne dla aplikacji powodów. Obsługa skażonych komunikatów jest konfigurowana przez następujące właściwości w każdym z dostępnych w kolejce powiązań:  
+ W programie WCF Obsługa skażonych komunikatów zapewnia mechanizm do otrzymywania aplikacji, które nie mogą być wysyłane do aplikacji lub komunikatów wysyłanych do aplikacji, ale nie można ich przetworzyć z powodu specyficznej dla aplikacji powodów. Skonfiguruj obsługę skażonych komunikatów z następującymi właściwościami w każdym z dostępnych w kolejce powiązań:  
   
 - `ReceiveRetryCount`. Wartość całkowita wskazująca maksymalną liczbę ponownych prób dostarczenia komunikatu z kolejki aplikacji do aplikacji. Wartość domyślna to 5. Jest to wystarczające w przypadkach, gdy natychmiastowa ponowna próba rozwiązuje problem, na przykład przez tymczasowe zakleszczenie w bazie danych.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "76921208"
   
 - Przenieś. Ta opcja jest dostępna tylko w systemie Windows Vista. Spowoduje to przeniesienie skażonego komunikatu do kolejki komunikatów trujących w celu późniejszego przetworzenia przez aplikację skażoną komunikatów. "Trująca-komunikat" jest podkolejką kolejki aplikacji. Aplikacja do obsługi komunikatów trujących może być usługą WCF, która odczytuje komunikaty z kolejki trującej. Kolejka Trująca jest podkolejką kolejki aplikacji i może być rozkierowane jako net. MSMQ://\<*Machine-name*>/*applicationQueue*;p Oison, gdzie *Machine-Name* to nazwa komputera, na którym znajduje się kolejka, a *applicationQueue* to nazwa kolejki specyficznej dla aplikacji.  
   
- Poniżej przedstawiono maksymalną liczbę prób dostarczenia komunikatu:  
+Poniżej przedstawiono maksymalną liczbę prób dostarczenia komunikatu:  
   
 - ((ReceiveRetryCount + 1) * (MaxRetryCycles + 1)) w systemie Windows Vista.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "76921208"
   
 1. Upewnij się, że ustawienia trujące odzwierciedlają wymagania aplikacji. Podczas pracy z ustawieniami upewnij się, że rozumiesz różnice między możliwościami usługi kolejkowania komunikatów w systemach Windows Vista, Windows Server 2003 i Windows XP.  
   
-2. W razie potrzeby Zaimplementuj `IErrorHandler`, aby obsługiwał błędy komunikatów trujących. Ponieważ ustawienie `ReceiveErrorHandling` `Fault` wymaga ręcznego mechanizmu przenoszenia skażonego komunikatu z kolejki lub do skorygowania zewnętrznego problemu zależnego, typowym użyciem jest zaimplementowanie `IErrorHandler`, gdy `ReceiveErrorHandling` jest ustawiona na `Fault`, jak pokazano w poniższym kodzie.  
+2. W razie potrzeby Zaimplementuj `IErrorHandler`, aby obsłużyć błędy komunikatów trujących. Ponieważ ustawienie `ReceiveErrorHandling` `Fault` wymaga ręcznego mechanizmu przenoszenia skażonego komunikatu z kolejki lub do skorygowania zewnętrznego problemu zależnego, typowym użyciem jest zaimplementowanie `IErrorHandler`, gdy `ReceiveErrorHandling` jest ustawiona na `Fault`, jak pokazano w poniższym kodzie.  
   
      [!code-csharp[S_UE_MSMQ_Poison#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/poisonerrorhandler.cs#2)]  
   
@@ -103,7 +103,7 @@ ms.locfileid: "76921208"
   
 - Usługa kolejkowania komunikatów w systemie Windows Vista obsługuje Właściwość komunikatu, która zachowuje liczbę prób dostarczenia komunikatu. Ta właściwość liczby przerwań nie jest dostępna w systemach Windows Server 2003 i Windows XP. Funkcja WCF zachowuje liczbę przerwań w pamięci, dlatego jest możliwe, że ta właściwość nie może zawierać dokładnej wartości, gdy ten sam komunikat jest odczytywany przez więcej niż jedną usługę WCF w farmie.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Omówienie kolejek](../../../../docs/framework/wcf/feature-details/queues-overview.md)
 - [Różnice w funkcjach kolejkowania w systemach Windows Vista, Windows Server 2003 i Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)

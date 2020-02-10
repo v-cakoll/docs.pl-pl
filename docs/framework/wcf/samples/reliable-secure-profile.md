@@ -2,15 +2,16 @@
 title: Niezawodny bezpieczny profil
 ms.date: 03/30/2017
 ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
-ms.openlocfilehash: ee94dc5be2c50f9e383a42d435996b2fd35df4a4
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: ef4680673f37655603a42f6da8aaf7eceaa01f56
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716500"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094946"
 ---
 # <a name="reliable-secure-profile"></a>Niezawodny bezpieczny profil
-Ten przykład pokazuje, jak utworzyć funkcję WCF i [niezawodny profil bezpieczny](https://go.microsoft.com/fwlink/?LinkId=178140) (RSP). W tym przykładzie przedstawiono implementację kanału [nawiązywania połączenia](https://go.microsoft.com/fwlink/?LinkId=178141) , który może składać się ze niezawodnej obsługi komunikatów i opcjonalnie bezpieczny kanał, aby utworzyć niezawodne bezpieczne powiązanie na podstawie specyfikacji RSP.  
+
+Ten przykład pokazuje, jak utworzyć funkcję WCF i [niezawodny profil bezpieczny (RSP)](http://www.ws-i.org/Profiles/ReliableSecureProfile-1.0.html). W tym przykładzie przedstawiono implementację kanału [tworzenia połączenia](http://docs.oasis-open.org/ws-rx/wsmc/200702/wsmc-1.0-spec-cs-01.pdf) , który może być połączony z niezawodnej obsługi komunikatów i opcjonalnie bezpiecznym kanałem do tworzenia niezawodnego bezpiecznego powiązania na podstawie specyfikacji RSP.  
   
 > [!IMPORTANT]
 > Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  

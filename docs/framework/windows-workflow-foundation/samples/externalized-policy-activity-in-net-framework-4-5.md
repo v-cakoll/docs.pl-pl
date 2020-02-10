@@ -2,16 +2,16 @@
 title: Działanie zasad zewnętrznych w programie .NET Framework 4.5
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-ms.openlocfilehash: 9184386751bb44e89dfdcedd34ab0ab84a27323e
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 8fd08c9c29f7a268170aaa101a9bdb85250157dc
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710925"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094634"
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>Działanie zasad zewnętrznych w programie .NET Framework 4.5
 
-Ten przykład pokazuje, jak działanie ExternalizedPolicy4 umożliwia wykonywanie istniejących .NET Framework 3,5 Windows Workflow Foundation (WF 3,5) <xref:System.Workflow.Activities.Rules.RuleSet> obiektów w [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Windows Workflow Foundation (WF 4,5) bezpośrednio przy użyciu aparatu reguł, który jest dostarczany w programie WF 3,5. Korzystając z tego działania, można otworzyć i wykonać dowolne istniejące <xref:System.Workflow.Activities.Rules.RuleSet>WF 3,5. Aby uzyskać więcej informacji o aparacie reguł WF 3,5 w ramach Windows Workflow Foundation, Przeczytaj [wprowadzenie do aparatu reguł Windows Workflow Foundation](https://go.microsoft.com/fwlink/?LinkId=166079). Aby uzyskać więcej informacji na temat migrowania reguł do [!INCLUDE[wf1](../../../../includes/wf1-md.md)] w [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)], zapoznaj się ze [wskazówkami dotyczącymi migracji](../migration-guidance.md).
+Ten przykład pokazuje, jak działanie ExternalizedPolicy4 umożliwia wykonywanie istniejących .NET Framework 3,5 Windows Workflow Foundation (WF 3,5) <xref:System.Workflow.Activities.Rules.RuleSet> obiektów w [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Windows Workflow Foundation (WF 4,5) bezpośrednio przy użyciu aparatu reguł, który jest dostarczany w programie WF 3,5. Korzystając z tego działania, można otworzyć i wykonać dowolne istniejące <xref:System.Workflow.Activities.Rules.RuleSet>WF 3,5. Aby uzyskać więcej informacji o aparacie reguł WF 3,5 w ramach Windows Workflow Foundation, Przeczytaj [wprowadzenie do aparatu reguł Windows Workflow Foundation](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480193(v=msdn.10)). Aby uzyskać więcej informacji na temat migrowania reguł do [!INCLUDE[wf1](../../../../includes/wf1-md.md)] w [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)], zapoznaj się ze [wskazówkami dotyczącymi migracji](../migration-guidance.md).
 
 ## <a name="projects-in-this-sample"></a>Projekty w tym przykładzie
 
@@ -47,7 +47,7 @@ public class ExternalizedPolicy4Activity<TResult>: CodeActivity
 |RuleSetFilePath|Ścieżka do pliku <xref:System.Workflow.Activities.Rules.RuleSet> .NET Framework 3,5 do oceny, gdy działanie zostanie wykonane.|
 |Zestaw reguł|Nazwa <xref:System.Workflow.Activities.Rules.RuleSet>, która ma być używana w pliku reguł.|
 |TargetObject|Obiekt, względem którego są oceniane obiekty <xref:System.Workflow.Activities.Rules.Rule> w <xref:System.Workflow.Activities.Rules.RuleSet>.|
-|Resultobject|Obiekt wynikowy po zastosowaniu reguł (na przykład reguły są stosowane względem argumentu wejściowego, a wynik jest przechowywany w argumencie wynik.|
+|ResultObject|Obiekt wynikowy po zastosowaniu reguł (na przykład reguły są stosowane względem argumentu wejściowego, a wynik jest przechowywany w argumencie wynik.|
 |ValidationError|Lista błędów walidacji zwróconych przez aparat reguł WF 3,5 podczas walidacji <xref:System.Workflow.Activities.Rules.RuleSet> względem obiektu docelowego przed wykonaniem.|
 
 ## <a name="externalizedpolicy4-activity-designer"></a>ExternalizedPolicy4, Projektant działań

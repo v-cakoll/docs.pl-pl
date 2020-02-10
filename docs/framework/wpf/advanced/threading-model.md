@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: 550ba74c7ceba16c2040932918364ae2a59ea665
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 87dcfa22bcce730c5a9b61721c3a846a08146475
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794272"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094504"
 ---
 # <a name="threading-model"></a>Model wątkowości
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zaprojektowano w celu zaoszczędzenia deweloperom trudności związanych z wątkami. W związku z tym większość deweloperów [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nie będzie musiała pisać interfejsu, który używa więcej niż jednego wątku. Ponieważ programy wielowątkowe są skomplikowane i trudne do debugowania, należy je unikać, gdy istnieją rozwiązania jednowątkowe.
@@ -99,7 +99,7 @@ ms.locfileid: "76794272"
 
  Ta metoda sprawdza, czy Następna liczba nieparzysta jest podstawowa. Jeśli jest to zapora, metoda bezpośrednio aktualizuje <xref:System.Windows.Controls.TextBlock> `bigPrime`, aby odzwierciedlała ich odnajdywanie. Można to zrobić, ponieważ obliczenia występują w tym samym wątku, który został użyty do utworzenia składnika. Wybrano, aby użyć oddzielnego wątku do obliczenia. będziemy musieli użyć bardziej skomplikowanego mechanizmu synchronizacji i wykonać aktualizację w wątku [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Zobaczymy tę sytuację dalej.
 
- Aby uzyskać pełny kod źródłowy dla tego przykładu, zobacz [jednowątkowa aplikacja z przykładowym obliczeniem długotrwałym](https://go.microsoft.com/fwlink/?LinkID=160038)
+ Aby uzyskać pełny kod źródłowy dla tego przykładu, zobacz [jednowątkowa aplikacja z przykładowym obliczeniem długotrwałym](https://github.com/Microsoft/WPF-Samples/tree/master/Threading/SingleThreadedApplication)
 
 <a name="weather_sim"></a>
 ### <a name="handling-a-blocking-operation-with-a-background-thread"></a>Obsługa operacji blokowania z wątkiem w tle
@@ -215,6 +215,6 @@ ms.locfileid: "76794272"
 
  Zadaniem dla [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] jest uniknięcie nieoczekiwanej współużytkowania wątkowości bez konieczności podania wycieku pamięci, dlatego nie blokujemy współużytkowania wątkowości wszędzie.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Przykładowa aplikacja jednowątkowa o długim czasie wykonywania obliczeń](https://go.microsoft.com/fwlink/?LinkID=160038)
+- [Przykładowa aplikacja jednowątkowa o długim czasie wykonywania obliczeń](https://github.com/Microsoft/WPF-Samples/tree/master/Threading/SingleThreadedApplication)

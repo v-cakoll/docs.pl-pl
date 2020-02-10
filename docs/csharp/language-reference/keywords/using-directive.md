@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-ms.openlocfilehash: a2028ccce47de54b59323194a0ffab3a643d878c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4f7ddad8c3dc12391ef6bf345a73ebb384400b38
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712978"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093152"
 ---
 # <a name="using-directive-c-reference"></a>Using — dyrektywaC# (odwołanie)
 
@@ -68,7 +68,7 @@ Utwórz dyrektywę aliasu `using`, aby ułatwić kwalifikowanie identyfikatora d
 
 ```csharp
 using s = System.Text;
-using s.RegularExpressions;
+using s.RegularExpressions; // Generates a compiler error.
 ```
 
 Utwórz dyrektywę `using`, aby użyć typów w przestrzeni nazw bez konieczności określania przestrzeni nazw. Dyrektywa `using` nie zapewnia dostępu do żadnych przestrzeni nazw, które są zagnieżdżone w określonym obszarze nazw.
@@ -93,9 +93,9 @@ Poniższy przykład pokazuje, jak zdefiniować dyrektywę `using` i alias `using
 
 Aby uzyskać więcej informacji, zobacz [Używanie dyrektyw](~/_csharplang/spec/namespaces.md#using-directives) w [ C# specyfikacji języka](/dotnet/csharp/language-reference/language-specification/introduction). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Dokumentacja języka C#](../index.md)
+- [C#Odwoła](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Używanie przestrzeni nazw](../../programming-guide/namespaces/using-namespaces.md)
 - [Słowa kluczowe języka C#](index.md)

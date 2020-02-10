@@ -6,22 +6,22 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: 30ea92f09bc655796b6bc268212b6d9e0e05bd9b
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: b724ff1ce85442f64980fdc972188705992d5a4f
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76919333"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094985"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Informacje o prywatności dotyczące architektury WCF (Windows Communication Foundation)
-Firma Microsoft jest zobowiązana do ochrony prywatności użytkowników końcowych. W przypadku kompilowania aplikacji przy użyciu programu Windows Communication Foundation (WCF) w wersji 3,0 Aplikacja może mieć wpływ na prywatność użytkowników końcowych. Na przykład aplikacja może jawnie zbierać informacje kontaktowe użytkownika lub może zażądać lub wysłać informacje przesyłane przez Internet do witryny sieci Web. Jeśli osadzisz technologię firmy Microsoft w aplikacji, ta technologia może mieć własne zachowanie, które może mieć wpływ na prywatność. Usługa WCF nie wysyła żadnych informacji do firmy Microsoft z aplikacji, chyba że użytkownik lub użytkownik końcowy zdecyduje się na wysłanie go do nas.  
+Firma Microsoft jest zobowiązana do ochrony prywatności użytkowników końcowych. W przypadku kompilowania aplikacji przy użyciu programu Windows Communication Foundation (WCF) w wersji 3,0 Aplikacja może mieć wpływ na prywatność użytkowników końcowych. Na przykład aplikacja może jawnie zbierać informacje kontaktowe użytkownika lub może zażądać lub wysłać informacje przesyłane przez Internet do witryny sieci Web. Jeśli osadzisz technologię firmy Microsoft w aplikacji, ta technologia może mieć własne zachowanie, które może mieć wpływ na prywatność. Usługa WCF nie wysyła żadnych informacji do firmy Microsoft z aplikacji, chyba że użytkownik lub użytkownik końcowy zdecyduje się wysłać do nas.  
   
 ## <a name="wcf-in-brief"></a>WCF w skrócie  
  WCF to dystrybuowana struktura obsługi komunikatów przy użyciu platformy Microsoft .NET, która umożliwia deweloperom tworzenie aplikacji rozproszonych. Komunikaty przesyłane między dwiema aplikacjami zawierają informacje o nagłówku i treści.  
   
  Nagłówki mogą zawierać routing wiadomości, informacje o zabezpieczeniach, transakcje i wiele więcej w zależności od usług używanych przez aplikację. Komunikaty są zwykle szyfrowane domyślnie. Jedynym wyjątkiem jest użycie `BasicHttpBinding`, który został zaprojektowany do użycia z niezabezpieczonymi, starszymi usługami sieci Web. Jako projektant aplikacji jest odpowiedzialny za końcowy projekt. Komunikaty w treści protokołu SOAP zawierają dane specyficzne dla aplikacji; Jednak te dane, takie jak zdefiniowane przez aplikację dane osobowe, mogą być chronione przy użyciu funkcji szyfrowania lub poufności programu WCF. W poniższych sekcjach opisano funkcje, które mogą mieć wpływ na prywatność.  
   
-## <a name="messaging"></a>Obsługa wiadomości  
+## <a name="messaging"></a>Obsługa komunikatów  
  Każdy komunikat WCF ma nagłówek adresu, który określa miejsce docelowe wiadomości i miejsce, w którym odpowiedź powinna zostać wysłana.  
   
  Składnik adresu punktu końcowego jest Uniform Resource Identifier (URI), który identyfikuje punkt końcowy. Adres może być adresem sieciowym lub adresem logicznym. Adres może zawierać nazwę komputera (nazwa hosta, w pełni kwalifikowaną nazwę domeny) i adres IP. Adres punktu końcowego może również zawierać unikatowy identyfikator globalny (GUID) lub kolekcję identyfikatorów GUID do tymczasowego adresowania służącego do rozpoznać każdego adresu. Każdy komunikat zawiera identyfikator, który jest identyfikatorem GUID. Ta funkcja jest zgodna ze standardem odwołania WS-Addressing.  
@@ -44,7 +44,7 @@ Firma Microsoft jest zobowiązana do ochrony prywatności użytkowników końcow
   
  Uwierzytelnianie może spowodować ustanowienie bezpiecznej sesji między komunikującymi się punktami końcowymi. Sesja jest identyfikowana przez identyfikator GUID, który jest okresem istnienia sesji zabezpieczeń. W poniższej tabeli przedstawiono informacje o zachowaniu i miejscu.  
   
-|Dane|Magazyn|  
+|Dane|Storage|  
 |----------|-------------|  
 |Poświadczenia prezentacji, takie jak nazwa użytkownika, certyfikaty X. 509, tokeny protokołu Kerberos i odwołania do poświadczeń.|Standardowe mechanizmy zarządzania poświadczeniami systemu Windows, takie jak magazyn certyfikatów systemu Windows.|  
 |Informacje o członkostwie użytkowników, takie jak nazwy użytkowników i hasła.|ASP.NET dostawcy członkostwa.|  
@@ -80,7 +80,7 @@ Firma Microsoft jest zobowiązana do ochrony prywatności użytkowników końcow
  Funkcja kanałów umieszczonych w kolejce nie zachowuje żadnych informacji na komputerze użytkownika końcowego, ponieważ używa usługi kolejkowania komunikatów jako infrastruktury kolejkowania.  
   
 ## <a name="com-integration"></a>Integracja modelu COM+  
- Ta funkcja otacza istniejące funkcje COM i COM+ w celu tworzenia usług zgodnych z usługami WCF. Ta funkcja nie korzysta z określonych nagłówków i nie zachowuje danych na komputerze użytkownika końcowego.  
+ Ta funkcja otacza istniejące funkcje COM i COM+ w celu tworzenia usług zgodnych z usługami WCF. Ta funkcja nie korzysta z określonych nagłówków i nie przechowuje danych na komputerze użytkownika końcowego.  
   
 ## <a name="com-service-moniker"></a>Moniker usługi COM  
  Zapewnia to niezarządzaną otokę dla standardowego klienta WCF. Ta funkcja nie ma określonych nagłówków w sieci ani nie utrzymuje danych na komputerze.  
@@ -127,13 +127,13 @@ Firma Microsoft jest zobowiązana do ochrony prywatności użytkowników końcow
   
  Usunięte klucze:  
   
- \- dla xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" i xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust"  
+ \- dla xmlns: wst = "http://schemas.xmlsoap.org/ws/2004/04/trust" i xmlns: wst = "http://schemas.xmlsoap.org/ws/2005/02/trust"  
   
  wst:BinarySecret  
   
  wst: Entropia  
   
- \- dla xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" i xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- dla xmlns: WSSE = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" i xmlns: WSSE = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse: hasło  
   
@@ -141,7 +141,7 @@ Firma Microsoft jest zobowiązana do ochrony prywatności użytkowników końcow
   
  Potencjalnie usunięte informacje osobiste:  
   
- \- dla  xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" i xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- dla xmlns: WSSE = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" i xmlns: WSSE = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse: Nazwa użytkownika  
   
@@ -163,13 +163,13 @@ Firma Microsoft jest zobowiązana do ochrony prywatności użytkowników końcow
   
  >  
   
- \<Conditions NotBefore="[dateTime]" NotOnOrAfter="[dateTime]">  
+ Warunki \<NotBefore = "[dateTime]" NotOnOrAfter = "[dateTime]" >  
   
- \<AudienceRestrictionCondition>  
+ \<element AudienceRestrictionCondition >  
   
- \<Audience>[uri]\</Audience>+  
+ \<> odbiorców [URI]\</Audience > +  
   
- \</AudienceRestrictionCondition>*  
+ \</AudienceRestrictionCondition > *  
   
  \<DoNotCacheCondition/> *  
   
@@ -195,7 +195,7 @@ Firma Microsoft jest zobowiązana do ochrony prywatności użytkowników końcow
   
  \<instrukcja/> *  
   
- \<SubjectStatement>  
+ \<SubjectStatement >  
   
  \<podmiot >  
   
@@ -211,19 +211,19 @@ Firma Microsoft jest zobowiązana do ochrony prywatności użytkowników końcow
   
  `</NameIdentifier>?`  
   
- \<SubjectConfirmation>  
+ \<SubjectConfirmation >  
   
  \<ConfirmationMethod > [anyUri]\</ConfirmationMethod > +  
   
  \<danych SubjectConfirmationData > [any]\</SubjectConfirmationData >?  
   
- \<ds:KeyInfo>...\</ds:KeyInfo>?  
+ \<DS: KeyInfo >...\</DS: KeyInfo >?  
   
- \</SubjectConfirmation>?  
+ \</SubjectConfirmation >?  
   
- \</Subject>  
+ \</subject >  
   
- \</SubjectStatement>*  
+ \</SubjectStatement > *  
   
  -->  
   
@@ -255,9 +255,9 @@ Firma Microsoft jest zobowiązana do ochrony prywatności użytkowników końcow
   
  />*  
   
- \</AuthenticationStatement>*  
+ \</AuthenticationStatement > *  
   
- \<AttributeStatement>  
+ \<AttributeStatement >  
   
  Dawane  
   
@@ -271,9 +271,9 @@ Firma Microsoft jest zobowiązana do ochrony prywatności użytkowników końcow
   
  `<AttributeValue>[any]</AttributeValue>+`  
   
- \</Attribute>+  
+ \</Attribute > +  
   
- \</AttributeStatement>*  
+ \</AttributeStatement > *  
   
  \<AuthorizationDecisionStatement  
   
@@ -295,16 +295,16 @@ Firma Microsoft jest zobowiązana do ochrony prywatności użytkowników końcow
   
  \</Evidence >?  
   
- \</AuthorizationDecisionStatement>*  
+ \</AuthorizationDecisionStatement > *  
   
- \</Assertion>  
+ \</Assertion >  
   
 #### <a name="information-removed-from-message-bodies-when-logging-decryptedunencrypted-messages"></a>Informacje usunięte z treści komunikatów podczas rejestrowania odszyfrowanych/nieszyfrowanych wiadomości  
  Jak opisano wcześniej, usługa WCF usuwa klucze i znane potencjalnie dane osobowe z nagłówków komunikatów dla rejestrowanych, odszyfrowanych/nieszyfrowanych wiadomości. Ponadto WCF usuwa klucze i znane potencjalnie dane osobowe z treści wiadomości dla elementów treści i działań na poniższej liście, które opisują komunikaty zabezpieczeń związane z wymianą kluczy.  
   
  Dla następujących przestrzeni nazw:  
   
- xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" i xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust" (na przykład jeśli żadna akcja nie jest dostępna)  
+ xmlns: wst = "http://schemas.xmlsoap.org/ws/2004/04/trust" i xmlns: wst = "http://schemas.xmlsoap.org/ws/2005/02/trust" (na przykład jeśli żadna akcja nie jest dostępna)  
   
  Informacje są usuwane dla tych elementów treści, które obejmują wymianę kluczy:  
   
@@ -359,17 +359,17 @@ Firma Microsoft jest zobowiązana do ochrony prywatności użytkowników końcow
 #### <a name="no-information-is-removed-from-application-specific-headers-and-body-data"></a>Żadne informacje nie są usuwane z nagłówków i danych treści specyficznych dla aplikacji  
  Funkcja WCF nie śledzi informacji osobistych w nagłówkach specyficznych dla aplikacji (na przykład ciągi zapytań) ani danych treści (na przykład numeru karty kredytowej).  
   
- Po włączeniu rejestrowania komunikatów informacje osobiste w nagłówkach i informacjach o treściach specyficznych dla aplikacji mogą być widoczne w dziennikach. Ponownie program wdrażania aplikacji jest odpowiedzialny za ustawianie list kontroli dostępu w plikach konfiguracji i dziennika. Może również wyłączyć rejestrowanie, jeśli nie chcesz, aby te informacje były widoczne, lub może odfiltrować te informacje z plików dziennika po ich zarejestrowaniu.  
+ Po włączeniu rejestrowania komunikatów informacje osobiste w nagłówkach i informacjach o treściach specyficznych dla aplikacji mogą być widoczne w dziennikach. Ponownie program wdrażania aplikacji jest odpowiedzialny za ustawianie list kontroli dostępu w plikach konfiguracji i dziennika. Mogą oni również wyłączyć rejestrowanie, jeśli nie chcą, aby te informacje były widoczne, lub odfiltrować te informacje z plików dziennika po ich zarejestrowaniu.  
   
 ### <a name="service-model-tracing"></a>Śledzenie modelu usług  
  Źródło śledzenia modelu usług (<xref:System.ServiceModel>) umożliwia śledzenie działań i zdarzeń związanych z przetwarzaniem komunikatów. Ta funkcja używa funkcji diagnostyki .NET Framework z <xref:System.Diagnostics>. Podobnie jak w przypadku właściwości <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> lokalizacja i jej lista ACL są konfigurowane przez użytkownika przy użyciu plików konfiguracji aplikacji .NET Framework. Podobnie jak w przypadku rejestrowania komunikatów, lokalizacja pliku jest zawsze konfigurowana, gdy administrator włączy śledzenie; w tym celu administrator kontroluje listę ACL.  
   
- Ślady zawierają nagłówki wiadomości, gdy komunikat jest w zakresie. Te same reguły ukrywania potencjalnie osobistych informacji w nagłówkach wiadomości w poprzedniej sekcji dotyczą: informacje osobiste zidentyfikowane wcześniej są usuwane domyślnie z nagłówków śledzenia. Zarówno administrator komputera, jak i narzędzie wdrażania aplikacji muszą zmodyfikować konfigurację, aby rejestrować potencjalnie dane osobowe. Jednak dane osobowe zawarte w nagłówkach specyficznych dla aplikacji są rejestrowane w śladach. Narzędzie wdrażania aplikacji jest odpowiedzialne za ustawianie list kontroli dostępu dla plików konfiguracji i śledzenia. Może również wyłączyć śledzenie, jeśli nie chcesz, aby te informacje były widoczne, lub może odfiltrować te informacje z plików śledzenia po ich zarejestrowaniu.  
+ Ślady zawierają nagłówki wiadomości, gdy komunikat jest w zakresie. Te same reguły ukrywania potencjalnie osobistych informacji w nagłówkach wiadomości w poprzedniej sekcji dotyczą: informacje osobiste zidentyfikowane wcześniej są usuwane domyślnie z nagłówków śledzenia. Zarówno administrator komputera, jak i narzędzie wdrażania aplikacji muszą zmodyfikować konfigurację, aby rejestrować potencjalnie dane osobowe. Jednak dane osobowe zawarte w nagłówkach specyficznych dla aplikacji są rejestrowane w śladach. Narzędzie wdrażania aplikacji jest odpowiedzialne za ustawianie list kontroli dostępu dla plików konfiguracji i śledzenia. Mogą również wyłączyć śledzenie, aby ukryć te informacje lub odfiltrować te informacje z plików śledzenia po ich zarejestrowaniu.  
   
  W ramach śledzenia ServiceModel, unikatowe identyfikatory (nazywane identyfikatorami aktywności i zazwyczaj identyfikator GUID) łączą różne działania wraz z przepływem komunikatów przez różne części infrastruktury.  
   
 #### <a name="custom-trace-listeners"></a>Niestandardowa odbiorniki śledzenia  
- W przypadku rejestrowania i śledzenia komunikatów można skonfigurować odbiornik niestandardowego śledzenia, który może wysyłać ślady i komunikaty w sieci (na przykład do zdalnej bazy danych). Narzędzie wdrażania aplikacji jest odpowiedzialne za konfigurowanie odbiorników niestandardowych lub umożliwienie użytkownikom wykonania tej czynności. Jest on również odpowiedzialny za wszelkie informacje osobiste ujawniane w lokalizacji zdalnej oraz odpowiednie stosowanie list ACL do tej lokalizacji.  
+ W przypadku rejestrowania i śledzenia komunikatów można skonfigurować odbiornik niestandardowego śledzenia, który może wysyłać ślady i komunikaty w sieci (na przykład do zdalnej bazy danych). Narzędzie wdrażania aplikacji jest odpowiedzialne za konfigurowanie odbiorników niestandardowych lub umożliwienie użytkownikom wykonania tej czynności. Są one również odpowiedzialne za wszystkie dane osobowe ujawniane w lokalizacji zdalnej oraz odpowiednie stosowanie list ACL do tej lokalizacji.  
   
 ### <a name="other-features-for-it-professionals"></a>Inne funkcje dla specjalistów IT  
  Program WCF ma dostawcę WMI, który uwidacznia informacje o konfiguracji infrastruktury WCF za pomocą usługi WMI (dostarczanej z systemem Windows). Domyślnie interfejs usługi WMI jest dostępny dla administratorów.  
@@ -401,7 +401,7 @@ Firma Microsoft jest zobowiązana do ochrony prywatności użytkowników końcow
   
  Web Services Description Language (WSDL) zawiera definicję portu. Każdy port ma adres punktu końcowego i powiązanie, które reprezentuje usługi używane przez aplikację. Uwidacznianie WSDL można wyłączyć za pomocą konfiguracji. Na maszynie nie są przechowywane żadne informacje.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Windows Communication Foundation](index.md)
-- [Zabezpieczenia](./feature-details/security.md)
+- [Bezpieczeństwo](./feature-details/security.md)

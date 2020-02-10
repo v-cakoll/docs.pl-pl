@@ -3,14 +3,15 @@ title: ADO.NET
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: a803c0592cd44801c55a699b56a9a498781a6593
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: cca3075a73a7bb45fd6154f760adfcda9064345c
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980109"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094400"
 ---
 # <a name="adonet"></a>ADO.NET
+
 ADO.NET to zestaw klas, które uwidaczniają usługi dostępu do danych dla programistów .NET Framework. Usługa ADO.NET oferuje bogaty zestaw składników służących do tworzenia dystrybuowanych aplikacji do udostępniania danych. Jest to integralna część .NET Framework, zapewniająca dostęp do danych relacyjnych, XML i aplikacji. Program ADO.NET obsługuje różne potrzeby programistyczne, w tym tworzenie klientów baz danych frontonu oraz obiektów branżowych warstwy środkowej używanych przez aplikacje, narzędzia, Języki lub przeglądarki internetowe.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
@@ -36,7 +37,7 @@ ADO.NET to zestaw klas, które uwidaczniają usługi dostępu do danych dla prog
  Zawiera informacje dotyczące LINQ to DataSet, w tym przykładów programistycznych.  
   
  [Pobieranie i modyfikowanie danych ADO.NET](retrieving-and-modifying-data.md)  
- Opisuje sposób nawiązywania połączenia ze źródłem danych oraz sposobu pobierania i modyfikowania danych przy użyciu `Commands`, `DataReaders` i `DataAdapters`.  
+ Opisuje sposób nawiązywania połączenia ze źródłem danych oraz sposobu pobierania i modyfikowania danych przy użyciu `Commands`, `DataReaders`i `DataAdapters`.  
   
  [SQL Server i ADO.NET](./sql/index.md)  
  Opisuje sposób pracy z funkcjami i funkcjami, które są specyficzne dla SQL Server.  
@@ -60,7 +61,7 @@ ADO.NET to zestaw klas, które uwidaczniają usługi dostępu do danych dla prog
  [Przykłady i samouczki](../../../samples-and-tutorials/index.md)  
  Zawiera listę przykładów i samouczków dotyczących platformy .NET.
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Uzyskiwanie dostępu do danych w programie Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)
 - [Omówienie ADO.NET](ado-net-overview.md)

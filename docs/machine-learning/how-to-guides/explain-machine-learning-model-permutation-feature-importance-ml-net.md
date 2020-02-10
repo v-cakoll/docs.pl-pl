@@ -1,20 +1,20 @@
 ---
-title: Wyjaśnij przewidywania modelu przy użyciu ważności funkcji permutacji
+title: Interpretowanie modeli ML.NET z ważnością funkcji permutacji
 description: Zrozumienie znaczenia funkcji dla modeli o ważności funkcji permutacji w ML.NET
-ms.date: 08/29/2019
+ms.date: 01/30/2020
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 4bad8b0ed17a34ba290bf9c00d65cc3f000a2acf
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c1163a41cd2feb0e8785ae9d4c6a71dfbedf3f12
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976687"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092619"
 ---
-# <a name="explain-model-predictions-using-permutation-feature-importance"></a>Wyjaśnij przewidywania modelu przy użyciu ważności funkcji permutacji
+# <a name="interpret-model-predictions-using-permutation-feature-importance"></a>Interpretowanie prognoz modelu przy użyciu ważności funkcji permutacji
 
-Dowiedz się, jak wyjaśnić przewidywania modelu uczenia maszynowego ML.NET przez zrozumienie, jakie funkcje muszą być przewidywaniami przy użyciu funkcji permutacji (PFI).
+Korzystając z ważności funkcji permutacji (PFI), Dowiedz się, jak interpretować przewidywania modelu ML.NET Machine Learning. PFI daje względny wkład każda funkcja do prognozowania.
 
 Modele uczenia maszynowego często są uważane za czarne pola, które pobierają dane wyjściowe i generują wyjście. Pośrednie kroki lub interakcje między funkcjami, które mają wpływ na dane wyjściowe są rzadko zrozumiałe. Ponieważ uczenie maszynowe jest wprowadzane do większej liczby aspektów codziennego okresu istnienia, takiego jak opieka zdrowotna, ma największe znaczenie, aby zrozumieć, dlaczego model uczenia maszynowego podejmuje podejmowane decyzje. Na przykład jeśli diagnozy są dokonywane przez model uczenia maszynowego, specjaliści ds. opieki zdrowotnej muszą zapoznać się ze wskaźnikami, które zapoznają się w celu rozwiązania tego problemu. Zapewnienie właściwej diagnostyki może być świetnym rozwiązaniem w zakresie tego, czy pacjent ma szybkie odzyskiwanie, czy nie. W związku z tym wyższy poziom wyjaśnień w modelu, pracownicy służby zdrowia większego zaufania muszą zaakceptować lub odrzucić decyzje podjęte przez model.
 
@@ -26,7 +26,7 @@ Ponadto poprzez wyróżnienie najważniejszych funkcji konstruktory modeli mogą
 
 Funkcje w zestawie danych, które są używane na potrzeby tego przykładu, znajdują się w kolumnach 1-12. Celem jest przewidywanie `Price`.
 
-| Kolumna | Funkcja | Opis
+| Kolumna | Cecha | Opis
 | --- | --- | --- |
 | 1 | CrimeRate | Wskaźnik przestępczości na mieszkańca
 | 2 | ResidentialZones | Strefy mieszkalne w mieście
@@ -40,7 +40,7 @@ Funkcje w zestawie danych, które są używane na potrzeby tego przykładu, znaj
 | 10 | TaxRate | Stawka podatku własności
 | 11 | StudentTeacherRatio | Stosunek uczniów do nauczycieli
 | 12 | PercentPopulationBelowPoverty | Procent populacji zamieszkania poniżej ubóstwa
-| 13 | Koszt | Cena domu
+| 13 | Cena | Cena domu
 
 Poniżej przedstawiono przykład zestawu danych:
 
@@ -158,12 +158,12 @@ foreach (var feature in featureImportanceMetrics)
 
 Drukowanie wartości dla każdej z funkcji w `featureImportanceMetrics` generuje dane wyjściowe podobne do poniższych. Należy pamiętać, że powinny być widoczne różne wyniki, ponieważ te wartości różnią się w zależności od danych, które są podane.
 
-| Funkcja | Zmień na R-kwadratowy |
+| Cecha | Zmień na R-kwadratowy |
 |:--|:--:|
 HighwayAccess       |   -0,042731
 StudentTeacherRatio |   -0,012730
-BusinessCenterDistance| -0,010491
-TaxRate             |   -0,008545
+BusinessCenterDistance| -0.010491
+TaxRate             |   -0.008545
 AverageRoomNumber   |   -0,003949
 CrimeRate           |   -0,003665
 CommercialZones     |   0,002749

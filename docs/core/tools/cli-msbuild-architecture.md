@@ -2,12 +2,12 @@
 title: Architektura narzędzi wiersza polecenia platformy .NET Core
 description: Dowiedz się więcej o warstwach narzędzi programu .NET Core i zmianach w ostatnich wersjach.
 ms.date: 03/06/2017
-ms.openlocfilehash: 0064e7354f073be618bcf6a79962ab495927fadd
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: fde1a0acb6af9dd65aa3466b4ea37473b2eab6fb
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980213"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092918"
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>Ogólne omówienie zmian w narzędziach .NET Core
 
@@ -24,13 +24,13 @@ W ramach tego przenoszenia niestandardowy aparat kompilacji, który został opra
 
 ## <a name="the-tooling-layers"></a>Warstwy narzędzi
 
-Po przejściu z istniejącego systemu projektu, a także w przypadku tworzenia przełączników aparatu, pytanie, które w sposób naturalny następuje, zmieni ogólny "warstwowy" w całym ekosystemie narzędzi platformy .NET Core? Czy istnieją nowe bity i składniki?
+W przypadku zmiany aparatu kompilacji i przejścia z istniejącego systemu projektu niektóre pytania są w naturalny sposób stosowane. Czy którykolwiek z tych zmian zmieni ogólną "warstwową" ekosystemu narzędzi platformy .NET Core? Czy istnieją nowe bity i składniki?
 
 Zacznijmy od szybkiego odświeżacza w wersji zapoznawczej 2, jak pokazano na poniższej ilustracji:
 
 ![Wersja zapoznawcza 2 — architektura wysokiego poziomu](media/cli-msbuild-architecture/p2-arch.png)
 
-Warstwa narzędzi jest bardzo prosta. Na dole podstawą jest interfejs wiersza polecenia platformy .NET Core. Wszystkie inne narzędzia wyższego poziomu, takie jak Visual Studio lub Visual Studio Code, są zależne i polegają na interfejsie wiersza polecenia do kompilowania projektów, przywracania zależności i tak dalej. Na przykład jeśli program Visual Studio chciał wykonać operację przywracania, wywoła on polecenie `dotnet restore` ([patrz Uwaga](#dotnet-restore-note)) w interfejsie wiersza polecenia.
+Warstwa narzędzi w wersji zapoznawczej 2 jest prosta. Na dole podstawą jest interfejs wiersza polecenia platformy .NET Core. Wszystkie inne narzędzia wyższego poziomu, takie jak Visual Studio lub Visual Studio Code, są zależne i polegają na interfejsie wiersza polecenia do kompilowania projektów, przywracania zależności i tak dalej. Jeśli na przykład program Visual Studio chciał wykonać operację przywracania, może wywołać `dotnet restore` ([patrz Uwaga](#dotnet-restore-note)) w interfejsie wiersza polecenia.
 
 Po przejściu do nowego systemu projektu, poprzedni diagram zmienia się:
 

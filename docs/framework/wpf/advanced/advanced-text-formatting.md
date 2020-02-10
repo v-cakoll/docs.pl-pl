@@ -9,12 +9,12 @@ helpviewer_keywords:
 - text [WPF]
 - typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
-ms.openlocfilehash: d509de02cd1b3f645ee439c0b0eb33fd1ddbdb07
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 26ee3c2b8a431200c3dc04130deb2247b6c1446d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636110"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095245"
 ---
 # <a name="advanced-text-formatting"></a>Zaawansowane formatowanie tekstu
 Windows Presentation Foundation (WPF) oferuje niezawodny zestaw interfejsów API do dołączania tekstu w aplikacji. [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] układów i interfejsów API, takich jak <xref:System.Windows.Controls.TextBlock>, zapewniają najbardziej typowe i ogólne elementy do prezentacji tekstowej. Rysowanie interfejsów API, takich jak <xref:System.Windows.Media.GlyphRunDrawing> i <xref:System.Windows.Media.FormattedText>, zapewniają metodę dołączenia tekstu sformatowanego na rysunku. Na najbardziej zaawansowanym poziomie funkcja WPF udostępnia rozszerzalny aparat formatowania tekstu do kontrolowania każdego aspektu prezentacji tekstu, takiej jak zarządzanie magazynem tekstu, zarządzanie formatowaniem tekstu i zarządzanie obiektami osadzonymi.  
@@ -22,7 +22,7 @@ Windows Presentation Foundation (WPF) oferuje niezawodny zestaw interfejsów API
  Ten temat zawiera wprowadzenie do formatowania tekstu WPF. Koncentruje się na implementacji klienta i korzystaniu z aparatu formatowania tekstu WPF.  
   
 > [!NOTE]
-> Wszystkie przykłady kodu w tym dokumencie można znaleźć w [przykładowym formacie tekstu zaawansowanego](https://go.microsoft.com/fwlink/?LinkID=159965).  
+> Wszystkie przykłady kodu w tym dokumencie można znaleźć w [przykładowym formacie tekstu zaawansowanego](https://github.com/Microsoft/WPF-Samples/tree/master/PerMonitorDPI/TextFormatting).  
 
 <a name="prereq"></a>   
 ## <a name="prerequisites"></a>Wymagania wstępne  
@@ -67,7 +67,7 @@ Windows Presentation Foundation (WPF) oferuje niezawodny zestaw interfejsów API
   
  W poniższej tabeli przedstawiono niektóre wstępnie zdefiniowane obiekty <xref:System.Windows.Media.TextFormatting.TextRun>.  
   
-|Typ TextRun|Pomiar|  
+|Typ TextRun|Sposób użycia|  
 |------------------|-----------|  
 |<xref:System.Windows.Media.TextFormatting.TextCharacters>|Wyspecjalizowane uruchomienie tekstu używane do przekazywania reprezentacji symboli znaków z powrotem do programu formatującego tekstu.|  
 |<xref:System.Windows.Media.TextFormatting.TextEmbeddedObject>|Wyspecjalizowany przebieg tekstu służący do dostarczania zawartości, w której pomiary, testowanie trafień i Rysowanie odbywa się w całości, na przykład w postaci przycisku lub obrazu w tekście.|  
@@ -91,7 +91,7 @@ Windows Presentation Foundation (WPF) oferuje niezawodny zestaw interfejsów API
 ## <a name="specifying-formatting-properties"></a>Określanie właściwości formatowania  
  obiekty <xref:System.Windows.Media.TextFormatting.TextRun> są formatowane przy użyciu właściwości dostarczonych przez magazyn tekstu. Te właściwości są dostępne w dwóch typach, <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> i <xref:System.Windows.Media.TextFormatting.TextRunProperties>. <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> obsługiwać właściwości z uwzględnieniem akapitu, takie jak <xref:System.Windows.TextAlignment> i <xref:System.Windows.FlowDirection>. <xref:System.Windows.Media.TextFormatting.TextRunProperties> to właściwości, które mogą być różne dla każdego tekstu w akapicie, takie jak Pędzel pierwszego planu, <xref:System.Windows.Media.Typeface>i rozmiar czcionki. Aby zaimplementować niestandardowe typy właściwości akapitu i niestandardowego tekstu, aplikacja musi utworzyć klasy, które pochodzą od <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> i <xref:System.Windows.Media.TextFormatting.TextRunProperties> odpowiednio.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Typografia w WPF](typography-in-wpf.md)
 - [Dokumenty w WPF](documents-in-wpf.md)

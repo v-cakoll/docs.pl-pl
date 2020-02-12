@@ -1,19 +1,19 @@
 ---
 title: Przewodnik po środowisku F#
-description: Zapoznaj się z najważniejszymi funkcjami języka F# programowania w tym samouczku, korzystając z przykładów kodu.
-ms.date: 11/06/2018
-ms.openlocfilehash: cfea2827dcec65f9e3606e8528179029e1f2db84
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+description: Sprawdź, niektóre najważniejsze funkcje w języku programowania w ten samouczek przy użyciu przykładów kodu F#.
+ms.date: 02/09/2020
+ms.openlocfilehash: ac2eef40e2dbc494e41a9760f0a70edb0f7ce399
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423803"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124575"
 ---
 # <a name="tour-of-f"></a>Przewodnik po języku F\#
 
-Najlepszym sposobem na zapoznanie się z F# informacjami jest odczytywanie i F# pisanie kodu. Ten artykuł działa jak przewodnik po niektórych kluczowych funkcjach F# języka i zawiera fragmenty kodu, które można wykonać na komputerze. Aby dowiedzieć się więcej o konfigurowaniu środowiska programistycznego, zapoznaj się z [wprowadzenie](get-started/index.md).
+Najlepszym sposobem, aby dowiedzieć się więcej na temat języka F# jest do odczytu i zapisu w kodzie języka F#. Ten artykuł będzie pełnić rolę przez samouczek prowadzący przez niektóre kluczowe funkcje języka F# i zapewniają fragmenty kodu, które mogą być wykonywane na komputerze. Aby dowiedzieć się więcej o konfigurowaniu środowiska programistycznego, zapoznaj się z [wprowadzenie](get-started/index.md).
 
-Istnieją dwa podstawowe koncepcje w F#programie: funkcje i typy.  W tym samouczku zostaną wyróżnione funkcje języka, które dzielą się na te dwa pojęcia.
+Istnieją dwa podstawowe pojęcia języka F#: funkcji i typów.  W tym samouczku zostaną wyróżnione funkcje języka, które dzielą się na te dwa pojęcia.
 
 ## <a name="executing-the-code-online"></a>Wykonywanie kodu online
 
@@ -33,7 +33,7 @@ powiązania `let` to również sposób powiązania wartości z nazwą, podobnie 
 
 Jako język .NET F# obsługuje te same podstawowe [typy pierwotne](language-reference/basic-types.md) , które istnieją w programie .NET.
 
-Poniżej przedstawiono sposób reprezentowania różnych typów liczbowych w F#:
+Poniżej przedstawiono, jak różne typy liczbowe są reprezentowane w języku F#:
 
 [!code-fsharp[Numbers](~/samples/snippets/fsharp/tour.fs#L49-L68)]
 
@@ -51,7 +51,7 @@ A Oto podstawowe manipulowanie [ciągami](./language-reference/strings.md) :
 
 [!code-fsharp[Tuples](~/samples/snippets/fsharp/tour.fs#L186-L203)]
 
-Począwszy od F# 4,1, można również utworzyć `struct` krotek.  Są one również w pełni współdziałające z krotkami w języku C# 7/Visual Basic 15, które są również `struct` krotek:
+Możesz również utworzyć `struct` krotek.  Są one również w pełni współdziałające z krotkami w języku C# 7/Visual Basic 15, które są również `struct` krotek:
 
 [!code-fsharp[Tuples](~/samples/snippets/fsharp/tour.fs#L205-L218)]
 
@@ -67,13 +67,13 @@ Poprzedni przykład korzysta z wielu funkcji programu F#, w tym funkcji przetwar
 
 ## <a name="lists-arrays-and-sequences"></a>Listy, tablice i sekwencje
 
-Listy, tablice i sekwencje to trzy podstawowe typy kolekcji w bibliotece F# podstawowej.
+Są trzy typy kolekcji głównej w podstawowej biblioteki języka F#, list, tablic i sekwencji.
 
 [Listy](./language-reference/lists.md) są uporządkowane, niezmienne kolekcje elementów tego samego typu.  Są one pojedynczo połączonymi listami, co oznacza, że są przeznaczone do wyliczenia, ale niewłaściwy wybór dostępu losowego i łączenia, jeśli są duże.  W przeciwieństwie do list w innych popularnych językach, które zazwyczaj nie używają pojedynczej listy połączonej do reprezentowania list.
 
 [!code-fsharp[Lists](~/samples/snippets/fsharp/tour.fs#L309-L359)]
 
-[Tablice](./language-reference/arrays.md) są stałymi *kolekcjami* elementów tego samego typu.  Obsługują one szybki dostęp do elementów i są szybsze niż F# listy, ponieważ są tylko ciągłymi blokami pamięci.
+[Tablice](./language-reference/arrays.md) są stałymi *kolekcjami* elementów tego samego typu.  Obsługa szybkiego losowego dostępu do elementów i są realizowane szybciej, niż listy języka F#, ponieważ są one po prostu ciągłych bloków pamięci.
 
 [!code-fsharp[Arrays](~/samples/snippets/fsharp/tour.fs#L368-L407)]
 
@@ -83,24 +83,24 @@ Listy, tablice i sekwencje to trzy podstawowe typy kolekcji w bibliotece F# pods
 
 ## <a name="recursive-functions"></a>Funkcje rekursywne
 
-Przetwarzanie kolekcji lub sekwencji elementów jest zwykle wykonywane z [rekursją](./language-reference/functions/index.md#recursive-functions) w F#.  Chociaż F# program obsługuje pętle i bezwzględne programowanie, rekursja jest preferowana, ponieważ jest łatwiejsza do zagwarantowania poprawności.
+Przetwarzanie kolekcji lub sekwencji elementów jest zwykle wykonywane z [rekursją](./language-reference/functions/index.md#recursive-functions) w F#.  Mimo że F# obsługuje pętle for i programowanie imperatywne, rekursja jest preferowana, ponieważ jest łatwiejsza w celu zagwarantowania poprawności.
 
 > [!NOTE]
 > W poniższym przykładzie użyto dopasowania wzorca za pośrednictwem wyrażenia `match`.  Ta podstawowa konstrukcja została omówiona w dalszej części tego artykułu.
 
 [!code-fsharp[RecursiveFunctions](~/samples/snippets/fsharp/tour.fs#L461-L500)]
 
-F#ma także pełną obsługę optymalizacji wywołań końcowych, która jest sposobem na optymalizację wywołań cyklicznych, dzięki czemu są one równie szybkie jako konstrukcja pętli.
+F# ma również pełną obsługę optymalizację wywołania Tail, czyli sposób na optymalizację wywołania cykliczne, aby były one po prostu tak szybko, jak konstrukcję pętli.
 
 ## <a name="record-and-discriminated-union-types"></a>Rekordy i typy Unii rozłącznych
 
-Typy rekordów i Unii to dwa podstawowe typy danych używane w F# kodzie i są generalnie najlepszym sposobem reprezentowania danych w F# programie.  Chociaż sprawia to, że są one podobne do klas w innych językach, jedną z podstawowych różnic jest to, że mają semantykę równości strukturalnej.  Oznacza to, że są one "natywnie" porównywalne i równość są bezpośrednie — po prostu sprawdzaj, czy jeden z nich jest równy drugiemu.
+Rekord i typy Unii są dwa typy danych podstawowych używane w kodzie języka F# i ogólnie najlepszym sposobem reprezentowania danych w programie F#.  Chociaż sprawia to, że są one podobne do klas w innych językach, jedną z podstawowych różnic jest to, że mają semantykę równości strukturalnej.  Oznacza to, że są one "natywnie" porównywalne i równość są bezpośrednie — po prostu sprawdzaj, czy jeden z nich jest równy drugiemu.
 
 [Rekordy](./language-reference/records.md) są agregacją nazwanych wartości z opcjonalnymi elementami członkowskimi (takimi jak metody).  Jeśli znasz już program C# lub środowisko Java, powinny one być podobne do POCOs lub Pojo — po prostu z strukturalną równość i mniejszą procedury.
 
 [!code-fsharp[Records](~/samples/snippets/fsharp/tour.fs#L507-L559)]
 
-Od F# 4,1 można także reprezentować rekordy jako `struct`s.  Jest to realizowane z atrybutem `[<Struct>]`:
+Można również reprezentować rekordy jako struktury. Jest to realizowane z atrybutem `[<Struct>]`:
 
 [!code-fsharp[Records](~/samples/snippets/fsharp/tour.fs#L561-L568)]
 
@@ -139,13 +139,17 @@ Niewykonanie powyższych czynności spowoduje wystąpienie błędu kompilacji.
 
 Być może zauważono, że używasz wzorca `_`.  Jest to tzw. [symbol wieloznaczny](./language-reference/pattern-matching.md#wildcard-pattern), który jest sposobem wymawiania "nie wiemy, co coś jest".  Chociaż jest to wygodne, można przypadkowo ominąć dokładne dopasowanie do wzorca i nie korzystać z wymuszania w czasie kompilacji, jeśli nie jest to ważne w przypadku korzystania z `_`.  Najlepiej jest używać, gdy nie masz opieki nad niektórymi fragmentami typu rozłożonego w przypadku dopasowania do wzorca lub klauzuli końcowej, gdy wyliczane są wszystkie znaczące przypadki w wyrażeniu dopasowania do wzorca.
 
+W poniższym przykładzie przypadek `_` jest używany w przypadku niepowodzenia operacji analizy.
+
+[!code-fsharp[PatternMatching](~/samples/snippets/fsharp/tour.fs#L744-L762)]
+
 [Aktywne wzorce](./language-reference/active-patterns.md) to kolejna Zaawansowana konstrukcja do użycia z dopasowaniem do wzorca.  Umożliwiają one Partycjonowanie danych wejściowych w formularzach niestandardowych, a następnie ich tworzenie w lokacji wywołania dopasowania wzorca.  Mogą być również sparametryzowane, umożliwiając zdefiniowanie partycji jako funkcji.  Powiększanie poprzedniego przykładu w celu obsługi aktywnych wzorców wygląda następująco:
 
 [!code-fsharp[ActivePatterns](~/samples/snippets/fsharp/tour.fs#L764-L786)]
 
 ## <a name="optional-types"></a>Typy opcjonalne
 
-Pojedynczym szczególnym przypadkiem typów Unii rozłącznych jest typ opcji, co jest przydatne, że jest częścią biblioteki F# podstawowej.
+Jeden przypadek specjalne typy Unii rozłącznej jest typ opcji, co jest przydatne w tak, że jest częścią podstawowej biblioteki języka F#.
 
 [Typ opcji](./language-reference/options.md) jest typem, który reprezentuje jeden z dwóch przypadków: wartość lub nic wcale.  Jest on używany w każdym scenariuszu, w którym wartość może lub nie może wynikać z określonej operacji.  Oznacza to, że jest to konieczne dla obu tych przypadków, co sprawia, że nie jest to problem w czasie wykonywania.  Są one często używane w interfejsach API, gdzie `null` jest używany do reprezentowania wartości "Nothing", co eliminuje konieczność przejmowania się `NullReferenceException` w wielu sytuacjach.
 
@@ -153,13 +157,13 @@ Pojedynczym szczególnym przypadkiem typów Unii rozłącznych jest typ opcji, c
 
 ## <a name="units-of-measure"></a>Jednostki miary
 
-Jedną z unikatowych F#funkcji systemu typu jest możliwość zapewnienia kontekstu dla literałów numerycznych za pomocą jednostek miary.
+Jedna z unikatowych funkcji F# w systemie typów jest możliwość zapewnienia kontekstu literały numeryczne, za pośrednictwem jednostki miary.
 
 [Jednostki miary](./language-reference/units-of-measure.md) umożliwiają kojarzenie typu liczbowego z jednostką, taką jak liczniki, i mają funkcje, które wykonują prace w jednostkach, a nie literały numeryczne.  Dzięki temu kompilator może sprawdzić, czy typy literałów liczbowych, które przechodzą, mają sens w określonym kontekście, eliminując w ten sposób błędy środowiska uruchomieniowego związane z tym rodzajem pracy.
 
 [!code-fsharp[UnitsOfMeasure](~/samples/snippets/fsharp/tour.fs#L817-L842)]
 
-F# Podstawowa Biblioteka definiuje wiele typów jednostek SI i konwersje jednostek.  Aby dowiedzieć się więcej, zapoznaj się z [przestrzenią nazw Microsoft.FSharp.Data.UnitSystems.si](https://msdn.microsoft.com/visualfsharpdocs/conceptual/microsoft.fsharp.data.unitsystems.si-namespace-%5bfsharp%5d).
+Biblioteki podstawowej F# definiuje wiele typów jednostki SI i konwersje jednostek.  Aby dowiedzieć się więcej, zapoznaj się z [przestrzenią nazw Microsoft.FSharp.Data.UnitSystems.si](https://msdn.microsoft.com/visualfsharpdocs/conceptual/microsoft.fsharp.data.unitsystems.si-namespace-%5bfsharp%5d).
 
 ## <a name="classes-and-interfaces"></a>Klasy i interfejsy
 
@@ -191,8 +195,8 @@ Klasy są doskonałe dla dużej liczby powodów, takich jak w przypadku konieczn
 
 ## <a name="next-steps"></a>Następne kroki
 
-Teraz, gdy widzisz niektóre podstawowe funkcje języka, możesz zacząć pisać swoje pierwsze F# programy.  Zapoznaj się z [wprowadzenie](get-started/index.md) , aby dowiedzieć się, jak skonfigurować środowisko deweloperskie i napisać kod.
+Teraz, gdy wiesz, niektóre z podstawowych funkcji języka, powinno być gotowe do pisania pierwszego programów F#!  Zapoznaj się z [wprowadzenie](get-started/index.md) , aby dowiedzieć się, jak skonfigurować środowisko deweloperskie i napisać kod.
 
-Kolejne kroki dotyczące uczenia się nie mogą być takie same, ale zalecamy [wprowadzenie do programowania funkcjonalnego w F# programie w](./introduction-to-functional-programming/index.md) celu uzyskania komfortu podstawowych koncepcji programowania funkcjonalnego.  Są one niezbędne do tworzenia niezawodnych programów F#w programie.
+Kolejne kroki dotyczące uczenia się nie mogą być takie same, ale zalecamy [wprowadzenie do programowania funkcjonalnego w F# programie w](./introduction-to-functional-programming/index.md) celu uzyskania komfortu podstawowych koncepcji programowania funkcjonalnego.  Będą one niezbędne do tworzenia niezawodnych programów w języku F#.
 
 Zapoznaj się również z dokumentacją [ F# języka](./language-reference/index.md) , aby zobaczyć kompleksowy zbiór zawartości koncepcyjnej F#.

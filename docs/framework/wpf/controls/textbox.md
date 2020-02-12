@@ -7,21 +7,21 @@ helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF]
 ms.assetid: 2512a277-e9d8-4de8-a12f-2bd95e8e7b60
-ms.openlocfilehash: 5be472d0d4f27c7a9acc966e4d6ffbcf9d7a1b0d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3b1b15739b1ba1787ba160a9a4d829d83fb10db1
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790835"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123640"
 ---
 # <a name="textbox"></a>TextBox
-<xref:System.Windows.Controls.TextBox> Kontroli zapewnia obsługę wprowadzanie tekstu podstawowego w aplikacjach WPF.  
+Formant <xref:System.Windows.Controls.TextBox> zapewnia obsługę podstawowych danych wejściowych tekstowych w aplikacjach WPF.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [TextBox — omówienie](textbox-overview.md)  
  [Tematy z instrukcjami](textbox-how-to-topics.md)  
   
-## <a name="reference"></a>Tematy pomocy  
+## <a name="reference"></a>Dokumentacja  
  <xref:System.Windows.Controls.TextBox>  
   
  <xref:System.Windows.Controls.RichTextBox>  
@@ -30,7 +30,7 @@ ms.locfileid: "61790835"
   
  <xref:System.Windows.Controls.PasswordBox>  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Przykładu z galerii kontrolki WPF](https://go.microsoft.com/fwlink/?LinkID=160053)
+- [Przykład galerii formantów WPF](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/ControlsAndLayout)
 - [TextBox — style i szablony](textbox-styles-and-templates.md)

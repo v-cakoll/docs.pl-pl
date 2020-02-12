@@ -7,20 +7,20 @@ helpviewer_keywords:
 - browser hosting support [WPF]
 - WPF browser hosting support APIs [WPF]
 ms.assetid: 82c133a8-d760-45fb-a2b9-3a997537f1d4
-ms.openlocfilehash: 7e285b916b076fdf0fc0d6477fba47d946b95726
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 68981f30918b5fff346daa2fce94bbf4601ea2e9
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744219"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124510"
 ---
 # <a name="native-wpf-browser-hosting-support-apis"></a>Macierzysta przeglądarka WPF wsparcia API hostingu
 Hosting aplikacji WPF w przeglądarkach sieci Web jest ułatwiony przez aktywny serwer dokumentów (znany również jako DocObject) zarejestrowany z hosta WPF. Program Internet Explorer można bezpośrednio aktywować i zintegrować z aktywnym dokumentem. W przypadku hostowania aplikacji XBAP i luźnych dokumentów XAML w przeglądarkach firmy Mozilla funkcja WPF udostępnia wtyczkę NPAPI, która zapewnia podobne środowisko hostingu do serwera aktywnego dokumentu WPF, jak w przypadku programu Internet Explorer. Jednak Najprostszym sposobem hostowania aplikacji XBAP i dokumentów XAML w innych przeglądarkach i aplikacjach autonomicznych jest za pośrednictwem kontrolki przeglądarki sieci Web programu Internet Explorer. Kontrolka przeglądarka sieci Web udostępnia złożone środowisko hostingu aktywnego dokumentu, ale umożliwia jego własnemu hostowi Dostosowywanie i zwiększanie tego środowiska oraz komunikowanie się bezpośrednio z bieżącym obiektem aktywnego dokumentu.  
   
- Serwer aktywnego dokumentu WPF implementuje kilka popularnych interfejsów hostingu, w tym [IOleObject](https://go.microsoft.com/fwlink/?LinkId=162049), [IOleDocument](https://go.microsoft.com/fwlink/?LinkId=162050), [IOleInPlaceActiveObject](https://go.microsoft.com/fwlink/?LinkId=162051), [IPersistMoniker](https://go.microsoft.com/fwlink/?LinkId=162045), [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047). Gdy jest hostowany w kontrolce przeglądarki sieci Web, te interfejsy mogą być zapytania z obiektu zwróconego przez właściwość [IWebBrowser2::D stopkę](https://go.microsoft.com/fwlink/?LinkId=162048) .  
+ Serwer aktywnego dokumentu WPF implementuje kilka popularnych interfejsów hostingu, w tym [IOleObject](/windows/win32/api/oleidl/nn-oleidl-ioleobject), [IOleDocument](/windows/win32/api/docobj/nn-docobj-ioledocument), [IOleInPlaceActiveObject](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceactiveobject), [IPersistMoniker](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775042(v=vs.85)), [IOleCommandTarget](/windows/win32/api/docobj/nn-docobj-iolecommandtarget). Gdy jest hostowany w kontrolce przeglądarki sieci Web, te interfejsy mogą być zapytania z obiektu zwróconego przez właściwość [IWebBrowser2::D stopkę](https://docs.microsoft.com/previous-versions/aa752116(v=vs.85)) .  
   
 ## <a name="iolecommandtarget"></a>IOleCommandTarget  
- Implementacja programu [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047) serwera aktywnego dokumentu WPF obsługuje liczne polecenia związane z nawigacją i przeglądarką dla standardowej grupy poleceń OLE (z identyfikatorem GUID grupy poleceń o wartości null). Ponadto rozpoznaje niestandardową grupę poleceń o nazwie CGID_PresentationHost. Obecnie istnieje tylko jedno polecenie zdefiniowane w tej grupie.  
+ Implementacja programu [IOleCommandTarget](/windows/win32/api/docobj/nn-docobj-iolecommandtarget) serwera aktywnego dokumentu WPF obsługuje liczne polecenia związane z nawigacją i przeglądarką dla standardowej grupy poleceń OLE (z identyfikatorem GUID grupy poleceń o wartości null). Ponadto rozpoznaje niestandardową grupę poleceń o nazwie CGID_PresentationHost. Obecnie istnieje tylko jedno polecenie zdefiniowane w tej grupie.  
   
 ```cpp  
 DEFINE_GUID(CGID_PresentationHost, 0xd0288c55, 0xd6, 0x4f5e, 0xa8, 0x51, 0x79, 0xde, 0xc5, 0x1b, 0x10, 0xec);  

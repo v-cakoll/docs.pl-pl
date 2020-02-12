@@ -7,87 +7,85 @@ helpviewer_keywords:
 - targeting multiple platforms
 - multiple platforms, targeting
 ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e5b6a32aa465700fb316bf2269c4d057ff823443
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dd5e5612de15a499c0dce34dc30faa6fd5731c17
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64590333"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124536"
 ---
-# <a name="cross-platform-development-with-the-portable-class-library"></a>Programowanie dla wielu platform przy użyciu biblioteki klas przenośnych
+# <a name="cross-platform-development-with-the-portable-class-library"></a>Tworzenie aplikacji dla wielu platform za pomocą przenośnej biblioteki klas
 
-Typ projektu biblioteki klas przenośnych w programie Visual Studio pomaga w tworzeniu aplikacji dla wielu platform i bibliotek dla platform firmy Microsoft, szybkie i łatwe.
+Typ projektu Biblioteka klas przenośnych w programie Visual Studio ułatwia szybkie i łatwe tworzenie międzyplatformowych aplikacji i bibliotek dla platform firmy Microsoft.
 
 [!INCLUDE[standard](../../../includes/pcl-to-standard.md)]
 
-Biblioteki klas przenośnych mogą pomóc skrócić czas i koszt programowania oraz testowania kodu. Użyj tego typu projektu do zapisywania i tworzenia przenośnych zestawów .NET Framework, a następnie odwołuje się do tych zestawów z aplikacji przeznaczonych dla wielu platform, takich jak .NET Framework, iOS i komputerów Mac.
+Przenośne biblioteki klas mogą pomóc w skróceniu czasu i kosztów tworzenia i testowania kodu. Ten typ projektu służy do zapisywania i kompilowania przenośnych zestawów .NET Framework, a następnie odwoływania się do tych zestawów z aplikacji przeznaczonych dla wielu platform, takich jak .NET Framework, iOS lub Mac.
 
-Nawet po Utwórz projekt biblioteki klas przenośnych w programie Visual Studio i zacznij programować go, możesz zmienić platformy docelowe. Program Visual Studio kompiluje biblioteki za pomocą nowych zestawów, który pomaga zidentyfikować zmiany, które należy wprowadzić w kodzie.
+Nawet po utworzeniu projektu przenośnej biblioteki klas w programie Visual Studio i rozpoczęciu opracowywania go można zmienić platformę docelową. Program Visual Studio kompiluje bibliotekę z nowymi zestawami, co pomaga identyfikować zmiany, które należy wprowadzić w kodzie.
 
-## <a name="create-a-portable-class-library-project"></a>Utwórz projekt biblioteki klas przenośnych
+## <a name="create-a-portable-class-library-project"></a>Tworzenie projektu biblioteki klas przenośnych
 
-Aby utworzyć Portable Class Library, należy użyć szablonu dostępnego w programie Visual Studio. Utwórz nowy projekt (**pliku** > **nowy projekt**), a następnie w **nowy projekt** okna dialogowego Wybierz język programowania (Visual C# lub Visual Basic). Następnie wybierz **biblioteki klas (starsza wersja przenośny)** szablonu. Wprowadź nazwę dla projektu, a następnie wybierz **OK**.
+Aby utworzyć przenośną bibliotekę klas, użyj szablonu podanego w programie Visual Studio. Utwórz nowy projekt (**plik** > **Nowy projekt**), a następnie w oknie dialogowym **Nowy projekt** wybierz język programowania (Visual C# lub Visual Basic). Następnie wybierz szablon **Biblioteka klas (starsza wersja przenośna)** . Wprowadź nazwę projektu i wybierz **przycisk OK**.
 
-**Dodaj Portable Class Library** pojawi się okno dialogowe. Wybierz co najmniej dwa elementy docelowe, a następnie wybierz **OK**.
+Zostanie wyświetlone okno dialogowe **Dodawanie biblioteki klas przenośnych** . Wybierz co najmniej dwa elementy docelowe, a następnie wybierz przycisk **OK**.
 
-![Dodaj elementy docelowe biblioteki klas przenośnych w programie Visual Studio](media/add-portable-class-library.png)
+![Dodawanie obiektów docelowych biblioteki klas przenośnych w programie Visual Studio](media/add-portable-class-library.png)
 
-## <a name="change-targets"></a>Zmień cele
+## <a name="change-targets"></a>Zmień elementy docelowe
 
-Możesz zmienić platformy docelowe projektu biblioteki klas przenośnych podczas jej tworzenia lub po rozpoczęciu programowania. Jeśli chcesz zmienić elementy docelowe, po utworzeniu projektu w **Eksploratora rozwiązań**, otwórz menu skrótów dla projektu biblioteki klas przenośnych (nie rozwiązanie), a następnie wybierz **właściwości** . Na stronie właściwości projektu **biblioteki** karta przedstawia platformy projektu obecnie dotyczy.
+Można zmienić platformę docelową projektu przenośnej biblioteki klas podczas jego tworzenia lub po rozpoczęciu opracowywania. Jeśli chcesz zmienić obiekty docelowe po utworzeniu projektu, w **Eksplorator rozwiązań**Otwórz menu skrótów dla projektu biblioteki klas przenośnych (nie rozwiązanie), a następnie wybierz polecenie **Właściwości**. Na stronie właściwości projektu na karcie **Biblioteka** są wyświetlane platformy, dla których projekt jest obecnie docelowy.
 
-![Właściwości projektu biblioteki klas przenośnych w programie Visual Studio](media/pcl-project-properties.png)
+![Właściwości projektu dla przenośnej biblioteki klas w programie Visual Studio](media/pcl-project-properties.png)
 
-Aby dodać lub usunąć elementy docelowe, wybierz opcję **zmiany** przycisk, a następnie wybierz i usuń zaznaczenie pola wyboru.
+Aby dodać lub usunąć obiekty docelowe, wybierz przycisk **Zmień** , a następnie zaznacz i wyczyść odpowiednie pola wyboru.
 
-Jeśli zmienisz docelowe, interfejsów API, które są dostępne i umożliwiają tworzenie projektu zmieni się na dopasować wybór. Visual Studio zgłasza błędy i ostrzeżenia, które może wyniknąć z elementów docelowych, zmiana.
+Po zmianie obiektów docelowych interfejsy API, które są dostępne dla opracowywania projektu, zmienią się tak, aby pasowały do wybranego elementu. Program Visual Studio zgłasza błędy i ostrzeżenia, które mogą wystąpić w wyniku zmiany elementów docelowych.
 
-Jeśli chcesz przeprowadzić ocenę przenośność zestawy przed wprowadzić zmiany w programie Visual Studio, można użyć [narzędzia .NET Portability Analyzer](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b).
+Jeśli chcesz oszacować przenośność zestawów przed wprowadzeniem zmian w programie Visual Studio, możesz użyć [analizatora przenośności platformy .NET](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b).
 
 ## <a name="supported-types-and-members"></a>Obsługiwane typy i elementy członkowskie
 
-Typy i elementy członkowskie, które są dostępne w projektach Portable Class Library zależy od kilku czynników zgodności:
+Typy i elementy członkowskie, które są dostępne w przenośnych projektach bibliotek klas, są ograniczone przez kilka czynników zgodności:
 
-- Muszą one zostać udostępnione w lokalizacjach docelowych, które wybrano.
+- Muszą być współużytkowane przez wybrane obiekty docelowe.
 
-- Musi zachowywać się podobnie w tych lokalizacjach docelowych.
+- Musi zachowywać się podobnie dla tych obiektów docelowych.
 
 - Nie mogą być kandydatami do wycofania z użycia.
 
 - Muszą mieć sens w środowisku przenośnym, zwłaszcza gdy pomocnicze elementy członkowskie nie są przenośne.
 
-Jeśli członek jest obsługiwany, in Portable Class Library i wybrane elementy docelowe, pojawi się w projekcie w technologii IntelliSense. Należy jednak pamiętać, że interfejs API może być obsługiwana w Portable Class Library, ale czy można użyć interfejsu API zależy od celów wybierz.
+Jeśli element członkowski jest obsługiwany w bibliotece klas przenośnych i dla wybranych obiektów docelowych, pojawi się w projekcie w technologii IntelliSense. Należy jednak pamiętać, że interfejs API może być obsługiwany w bibliotece klas przenośnych, ale bez względu na to, czy można użyć interfejsu API, zależy od wybranych obiektów docelowych.
 
-## <a name="api-differences-in-the-portable-class-library"></a>Różnice interfejsu API w bibliotece klas przenośnych
+## <a name="api-differences-in-the-portable-class-library"></a>Różnice interfejsu API w przenośnej bibliotece klas
 
-Aby zestawy Portable Class Library zgodne na wszystkich obsługiwanych platformach, niektórzy członkowie nieznacznie zmieniono in Portable Class Library.
+Aby zestawy bibliotek klas przenośnych były zgodne ze wszystkimi obsługiwanymi platformami, niektóre elementy członkowskie zostały nieco zmienione w bibliotece klas przenośnych.
 
-## <a name="use-the-portable-class-library"></a>Korzystanie z biblioteki klas przenośnych
+## <a name="use-the-portable-class-library"></a>Korzystanie z przenośnej biblioteki klas
 
-Po skompilowaniu projektu Portable Class Library, możesz po prostu odwołanie do niego z innych projektów. Odwołanie może dotyczyć projektu lub określonych zestawów zawierających klasy, do których chce się uzyskać dostęp.
+Po skompilowaniu projektu biblioteki klas przenośnych należy tylko odwołać się do niego z innych projektów. Odwołanie może dotyczyć projektu lub określonych zestawów zawierających klasy, do których chce się uzyskać dostęp.
 
-Aby uruchomić aplikację, która odwołuje się do zestawu Portable Class Library, wymagana wersja (lub nowszym) platformy docelowej musi być zainstalowany na tym komputerze. Program Visual Studio zawiera wszystkie wymagane struktury, aby można było uruchomić aplikację bez dalszych modyfikacji na komputerze, który jest używany do tworzenia aplikacji.
+Aby uruchomić aplikację, która odwołuje się do zestawu biblioteki klas przenośnych, na komputerze musi być zainstalowana wymagana wersja (lub nowsza) platform. Program Visual Studio zawiera wszystkie wymagane platformy, dzięki czemu można uruchomić aplikację bez dalszych modyfikacji na komputerze, który został użyty do opracowania aplikacji.
 
-### <a name="deploy-a-universal-windows-app"></a>Wdrażanie aplikacji Windows Universal
+### <a name="deploy-a-universal-windows-app"></a>Wdrażanie aplikacji uniwersalnej systemu Windows
 
-Podczas tworzenia aplikacji Windows Universal odwołujący się do zestawu Portable Class Library, wszystko, czego potrzebujesz do wdrażania aplikacji znajduje się w pakiecie aplikacji i nie trzeba wykonywać dalszych czynności są wymagane.
+Podczas tworzenia aplikacji uniwersalnej systemu Windows, która odwołuje się do zestawu biblioteki klas przenośnych, wszystko, czego potrzebujesz do wdrożenia aplikacji, jest zawarte w pakiecie aplikacji i nie są wymagane żadne dalsze kroki.
 
-### <a name="deploy-a-net-framework-app"></a>Wdrażanie .NET Framework aplikacji
+### <a name="deploy-a-net-framework-app"></a>Wdrażanie aplikacji .NET Framework
 
-Podczas wdrażania aplikacji .NET Framework, która odwołuje się do zestawu Portable Class Library, należy określić zależność od prawidłowej wersji programu .NET Framework. Określenie tej zależności gwarantuje, że wymagana wersja będzie instalowana wraz z aplikacją.
+Podczas wdrażania aplikacji .NET Framework, która odwołuje się do zestawu biblioteki klas przenośnych, należy określić zależność od prawidłowej wersji .NET Framework. Określenie tej zależności gwarantuje, że wymagana wersja będzie instalowana wraz z aplikacją.
 
-- Aby utworzyć zależność z wdrożeniem ClickOnce: W **Eksploratora rozwiązań**, wybierz węzeł projektu dla projektu, który chcesz opublikować. (Jest to projekt, który odwołuje się do projektu Portable Class Library). Na pasku menu wybierz **projektu** > **właściwości**, a następnie wybierz **Publikuj** kartę. Na **Publikuj** wybierz **wymagania wstępne**. Jako wymaganie wstępne wybierz wymaganą wersję programu .NET Framework.
+- Aby utworzyć zależność z wdrożeniem ClickOnce: w **Eksplorator rozwiązań**wybierz węzeł projektu dla projektu, który chcesz opublikować. (Jest to projekt, który odwołuje się do projektu biblioteki klas przenośnych). Na pasku menu wybierz **projekt** > **Właściwości**, a następnie wybierz kartę **Publikowanie** . Na stronie **Publikowanie** wybierz opcję **wymagania wstępne**. Jako wymaganie wstępne wybierz wymaganą wersję programu .NET Framework.
 
-- Aby utworzyć zależność z projektem Instalatora: W **Eksploratora rozwiązań**, wybierz projekt Instalatora. Na pasku menu wybierz **projektu** > **właściwości** > **wymagania wstępne**. Jako wymaganie wstępne wybierz wymaganą wersję programu .NET Framework.
+- Aby utworzyć zależność z projektem Instalatora: w **Eksplorator rozwiązań**wybierz projekt Instalatora. Na pasku menu wybierz kolejno opcje **projekt** > **Właściwości** > **wymagania wstępne**. Jako wymaganie wstępne wybierz wymaganą wersję programu .NET Framework.
 
-Aby uzyskać więcej informacji na temat wdrażania aplikacji .NET Framework, zobacz [przewodnik wdrażania dla deweloperów](../../../docs/framework/deployment/deployment-guide-for-developers.md).
+Aby uzyskać więcej informacji na temat wdrażania aplikacji .NET Framework, zobacz [Przewodnik wdrażania dla deweloperów](../../../docs/framework/deployment/deployment-guide-for-developers.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Korzystanie z biblioteki klas przenośnych z modelem MVVM](../../../docs/standard/cross-platform/using-portable-class-library-with-model-view-view-model.md)
 - [Zasoby aplikacji dla bibliotek przeznaczonych do wielu platform](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md)
-- [Narzędzia .NET portability Analyzer](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)
+- [Analizator przenośności platformy .NET](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)
 - [Obsługa programu .NET Framework dla aplikacji ze Sklepu Windows i środowiska wykonawczego systemu Windows](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
-- [Wdrażanie](../../../docs/framework/deployment/net-framework-applications.md)
+- [Wdrożenie](../../../docs/framework/deployment/net-framework-applications.md)

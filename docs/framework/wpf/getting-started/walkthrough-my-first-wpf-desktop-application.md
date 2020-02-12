@@ -11,20 +11,18 @@ helpviewer_keywords:
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 ms.topic: tutorial
 ms.custom: mvc,vs-dotnet
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 232605850c65aebd9aafdc9b76c90af42f2c901c
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: bc47405636c4727f502caf1f6e27050367eda74a
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746975"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124341"
 ---
 # <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>Samouczek: Tworzenie pierwszej aplikacji WPF w programie Visual Studio 2019
 
 W tym artykule przedstawiono sposób tworzenia aplikacji klasycznych Windows Presentation Foundation (WPF), która zawiera elementy wspólne dla większości aplikacji WPF: znaczniki Extensible Application Markup Language (XAML), powiązane z kodem, definicje aplikacji, kontrolki, układ, powiązanie danych i style. Aby opracować aplikację, użyjesz programu Visual Studio. 
 
-Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
+Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]
 >
 > - Utwórz projekt WPF.
@@ -474,7 +472,7 @@ Na poniższej ilustracji przedstawiono obie strony aplikacji `ExpenseIt` z kontr
 > Ten przykład pokazuje konkretną funkcję WPF i nie jest zgodny ze wszystkimi najlepszymi rozwiązaniami dotyczącymi takich elementów, jak zabezpieczenia, lokalizacja i ułatwienia dostępu. Aby uzyskać kompleksową obsługę WPF i najlepszych rozwiązań programistycznych dotyczących projektowania aplikacji .NET, zobacz następujące tematy:
 >
 > - [Ułatwienia dostępu](../../ui-automation/accessibility-best-practices.md)
-> - [Security](../security-wpf.md)
+> - [Bezpieczeństwo](../security-wpf.md)
 > - [Globalizacja i lokalizacja WPF](../advanced/wpf-globalization-and-localization-overview.md)
 > - [Wydajność WPF](../advanced/optimizing-wpf-application-performance.md)
 
@@ -495,7 +493,7 @@ Aby uzyskać więcej informacji na temat tworzenia aplikacji, zobacz następują
 - [Grafika i multimedia](../graphics-multimedia/index.md)
 - [Dokumenty w WPF](../advanced/documents-in-wpf.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Panele — Omówienie](../controls/panels-overview.md)
 - [Tworzenia szablonów danych — omówienie](../data/data-templating-overview.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: 0fec72bdedbcc2c84d8bc65e72391366e42d82be
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: a98c97a4aa95fb956a2ca6d417e009a281a938b6
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76739161"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124484"
 ---
 # <a name="pack-uris-in-wpf"></a>Pakuj URI w WPF
 
@@ -44,7 +44,7 @@ Aby zapewnić spójny mechanizm do identyfikowania i ładowania tych typów plik
 
 ## <a name="the-pack-uri-scheme"></a>Schemat identyfikatora URI pakietu
 
-Schemat URI pakietu jest używany przez specyfikację [Open Pack Conventions](https://go.microsoft.com/fwlink/?LinkID=71255) (OPC), która opisuje model organizowania i identyfikowania zawartości. Kluczowymi elementami tego modelu są pakiety i części, w przypadku których *pakiet* jest kontenerem logicznym dla co najmniej jednej *części*logicznej. Poniższy rysunek ilustruje tę koncepcję.
+Schemat URI pakietu jest używany przez specyfikację [Open Pack Conventions](https://www.ecma-international.org/publications/standards/Ecma-376.htm) (OPC), która opisuje model organizowania i identyfikowania zawartości. Kluczowymi elementami tego modelu są pakiety i części, w przypadku których *pakiet* jest kontenerem logicznym dla co najmniej jednej *części*logicznej. Poniższy rysunek ilustruje tę koncepcję.
 
 ![Diagram pakietu i części](./media/pack-uris-in-wpf/wpf-package-parts-diagram.png)
 
@@ -459,6 +459,6 @@ Słowniki zasobów (<xref:System.Windows.ResourceDictionary>) mogą służyć do
 
 Aby zapoznać się z omówieniem motywów w WPF, zobacz [Style i tworzenia szablonów](../../../desktop-wpf/fundamentals/styles-templates-overview.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Zasoby aplikacji WPF, zawartość i pliki danych](wpf-application-resource-content-and-data-files.md)

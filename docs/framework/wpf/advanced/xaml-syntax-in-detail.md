@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 2c6a8662236b614545e7fb8545b7b60e1b08b6bd
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 38c77086075e79c0ec5b4b1564ed753eded23b34
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559836"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124497"
 ---
 # <a name="xaml-syntax-in-detail"></a>Szczegóły składni XAML
 Ten temat definiuje warunki, które są używane do opisywania elementów składni języka XAML. Te warunki są często używane w całej pozostałej części tej dokumentacji, zarówno w przypadku dokumentacji WPF, jak i dla innych struktur, które używają języka XAML lub podstawowych pojęć XAML włączonych przez obsługę języka XAML na poziomie system. XAML. W tym temacie opisano podstawową terminologię wprowadzoną w temacie [Omówienie języka XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md).  
@@ -43,7 +43,7 @@ Ten temat definiuje warunki, które są używane do opisywania elementów skład
 ## <a name="the-xaml-language-specification"></a>Specyfikacja języka XAML  
  Terminologia dotycząca składni XAML zdefiniowana tutaj jest również zdefiniowana lub przywoływana w specyfikacji języka XAML. XAML to język oparty na języku XML, który następuje lub rozwija reguły strukturalne XML. Niektóre terminologia są udostępniane z lub opierają się na terminologii często używanej podczas opisywania języka XML lub modelu obiektowego dokumentu XML.  
   
- Aby uzyskać więcej informacji na temat specyfikacji języka XAML, Pobierz [\[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525) z centrum pobierania Microsoft.  
+ Aby uzyskać więcej informacji na temat specyfikacji języka XAML, Pobierz [\[MS-XAML\]](https://download.microsoft.com/download/0/A/6/0A6F7755-9AF5-448B-907D-13985ACCF53E/[MS-XAML].pdf) z centrum pobierania Microsoft.  
   
 <a name="xaml_and_clr"></a>   
 ## <a name="xaml-and-clr"></a>XAML i CLR  
@@ -313,7 +313,7 @@ Ten temat definiuje warunki, które są używane do opisywania elementów skład
   
  Ale podobnie jak *TypeName*. formularz *MemberName* dla atrybutów, *basename*. *element MemberName* ma słabą styl w znacznikach i należy go unikać.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Przegląd XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [Przestrzeń nazw XAML (x:) — funkcje językowe](../../../desktop-wpf/xaml-services/namespace-language-features.md)

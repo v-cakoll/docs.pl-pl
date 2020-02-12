@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 555e55a7-0851-4ec8-b1c6-0acba7e9b648
-ms.openlocfilehash: 1fdc0c9ccf1464d7519a4c5935520de1206ca9bb
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 0aecde96d182e12ab72b1a6cba129ab1d8a28391
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794155"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123782"
 ---
 # <a name="walkthrough-host-a-wpf-clock-in-win32"></a>Przewodnik: hostowanie zegara WPF w Win32
 
@@ -24,7 +24,7 @@ Zobacz [WPF i Win32 — współdziałanie](wpf-and-win32-interoperation.md).
 
 ## <a name="how-to-use-this-tutorial"></a>Jak korzystać z tego samouczka
 
-Ten samouczek koncentruje się na ważnych krokach tworzenia aplikacji międzyoperacyjnej. Ten samouczek jest obsługiwany przez przykładową próbkę [Międzyoperacyjną z zegarem Win32](https://go.microsoft.com/fwlink/?LinkID=160051), ale ten przykład stanowi odbicie produktu końcowego. W tym samouczku przedstawiono kroki, tak jakby były uruchamiane z istniejącym projektem Win32, prawdopodobnie istniejącym projektem i dodano hostowaną [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] do aplikacji. Możesz porównać produkt końcowy z [próbką międzyoperacyjną zegara Win32](https://go.microsoft.com/fwlink/?LinkID=160051).
+Ten samouczek koncentruje się na ważnych krokach tworzenia aplikacji międzyoperacyjnej. Ten samouczek jest obsługiwany przez przykładową próbkę [Międzyoperacyjną z zegarem Win32](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/Win32Clock), ale ten przykład stanowi odbicie produktu końcowego. W tym samouczku przedstawiono kroki, tak jakby były uruchamiane z istniejącym projektem Win32, prawdopodobnie istniejącym projektem i dodano hostowaną [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] do aplikacji. Możesz porównać produkt końcowy z [próbką międzyoperacyjną zegara Win32](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/Win32Clock).
 
 ## <a name="a-walkthrough-of-windows-presentation-framework-inside-win32-hwndsource"></a>Przewodnik dotyczący struktury prezentacji systemu Windows w systemie Win32 (HwndSource)
 
@@ -232,10 +232,10 @@ Końcowy wynik wygląda następująco:
 
 ![Okno dialogowe Właściwości daty i godziny końcowego wyniku](./media/walkthrough-hosting-a-wpf-clock-in-win32/final-result-date-time-properties-dialog.png)
 
-Aby porównać wynik końcowy z kodem, który wygenerował ten zrzut ekranu, zobacz [przykład międzyoperacyjna](https://go.microsoft.com/fwlink/?LinkID=160051)w systemie Win32.
+Aby porównać wynik końcowy z kodem, który wygenerował ten zrzut ekranu, zobacz [przykład międzyoperacyjna](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/Win32Clock)w systemie Win32.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Windows.Interop.HwndSource>
 - [WPF i Win32 — współdziałanie](wpf-and-win32-interoperation.md)
-- [Przykład międzyoperacyjności zegara Win32](https://go.microsoft.com/fwlink/?LinkID=160051)
+- [Przykład międzyoperacyjności zegara Win32](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/Win32Clock)

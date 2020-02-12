@@ -10,12 +10,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-ms.openlocfilehash: cb1764d1a6f363f3011268eae5fbcb2c76d9cc89
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 9b09f5a2505888c6154a58a3512c94c51f89295b
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75938001"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124425"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Najlepsze rozwiązania dotyczące wyrażeń regularnych w programie .NET
 
@@ -102,7 +102,7 @@ Domyślnie buforowanych jest piętnaście ostatnio używanych statycznych wzorc�
 
 Wyrażenie regularne `\p{Sc}+\s*\d+`, które jest używane w tym przykładzie, sprawdza, czy ciąg wejściowy zawiera symbol waluty i co najmniej jedną cyfrę dziesiętną. Definicję wzorca pokazano w poniższej tabeli.
 
-|Wzorzec|Opis|
+|Wzorce|Opis|
 |-------------|-----------------|
 |`\p{Sc}+`|Dopasowanie do jednego lub większej liczby symboli Unicode w kategorii Waluta.|
 |`\s*`|Dopasowanie do zera lub większej liczby znaków odstępu.|
@@ -123,7 +123,7 @@ Poniższy przykład porównuje wydajność skompilowanych i interpretowanych wyr
 
 Wzorzec wyrażenia regularnego używany w przykładzie, `\b(\w+((\r?\n)|,?\s))*\w+[.?:;!]`, jest zdefiniowany, jak pokazano w poniższej tabeli.
 
-|Wzorzec|Opis|
+|Wzorce|Opis|
 |-------------|-----------------|
 |`\b`|Rozpoczyna dopasowanie na granicy wyrazu.|
 |`\w+`|Dopasowuje co najmniej jeden znak słowa.|
@@ -167,7 +167,7 @@ Obsługa wycofywania daje wyrażeniom regularnym duże możliwości i elastyczno
 
 Często efektem użycia wycofywania jest obniżenie wydajności w aplikacjach, mimo że używanie wycofywania nie jest niezbędne dla dopasowania. Na przykład wyrażenie regularne `\b\p{Lu}\w*\b` dopasowuje wszystkie wyrazy rozpoczynające się od wielkiej litery, jak pokazano w poniższej tabeli.
 
-|Wzorzec|Opis|
+|Wzorce|Opis|
 |-|-|
 |`\b`|Rozpoczyna dopasowanie na granicy wyrazu.|
 |`\p{Lu}`|Dopasowanie do dowolnej wielkiej litery.|
@@ -176,7 +176,7 @@ Często efektem użycia wycofywania jest obniżenie wydajności w aplikacjach, m
 
 Ponieważ granica wyrazu nie jest tym samym co znak słowa ani jego podzbiorem, nie ma możliwości, aby aparat wyrażeń regularnych przekroczył granicę wyrazu podczas dopasowywania znaków słowa. Oznacza to, że dla tego wyrażenia regularnego wycofywanie może nigdy nie przyczynić się do sukcesu jakiegokolwiek dopasowania, może za to obniżyć wydajność, ponieważ aparat wyrażeń regularnych musi zapisać swój stan podczas każdego pomyślnie zakończonego wstępnego dopasowania znaku słowa.
 
-Jeśli okaże się, że wycofywanie nie jest konieczne, można je wyłączyć za pomocą `(?>subexpression)` elementu języka. W poniższym przykładzie jest analizowana składnia ciągu wejściowego przy użyciu dwóch wyrażeń regularnych. Pierwszy, `\b\p{Lu}\w*\b`, zależy od wycofywania. Sekunda, `\b\p{Lu}(?>\w*)\b`, wyłącza wycofywanie. Jak wynika z przykładu, oba wyrażenia regularne dały ten sam wynik.
+Jeśli okaże się, że wycofywanie nie jest konieczne, można je wyłączyć za pomocą elementu języka `(?>subexpression)`, nazywanego grupą niepodzielną. W poniższym przykładzie jest analizowana składnia ciągu wejściowego przy użyciu dwóch wyrażeń regularnych. Pierwszy, `\b\p{Lu}\w*\b`, zależy od wycofywania. Sekunda, `\b\p{Lu}(?>\w*)\b`, wyłącza wycofywanie. Jak wynika z przykładu, oba wyrażenia regularne dały ten sam wynik.
 
 [!code-csharp[Conceptual.RegularExpressions.BestPractices#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/backtrack2.cs#10)]
 [!code-vb[Conceptual.RegularExpressions.BestPractices#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/backtrack2.vb#10)]
@@ -190,7 +190,7 @@ Na przykład wzorzec wyrażenia regularnego `^[0-9A-Z]([-.\w]*[0-9A-Z])*\$$` jes
 
 W takich przypadkach można zoptymalizować wydajność wyrażenia regularnego, usuwając zagnieżdżone kwantyfikatory i zastępując zewnętrzne podwyrażenie asercją wyprzedzającą lub wsteczną o zerowej szerokości. Asercje wyprzedzające i wsteczne są kotwicami; nie przesuwają wskaźnika w ciągu wejściowym, ale „patrzą” do przodu lub wstecz, aby sprawdzić, czy określony warunek został spełniony. Na przykład wyrażenie regularne numer części można zapisać jako `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])\$$`. Definicję tego wzorca wyrażenia regularnego pokazano w poniższej tabeli.
 
-|Wzorzec|Opis|
+|Wzorce|Opis|
 |-------------|-----------------|
 |`^`|Rozpoczyna dopasowanie na początku ciągu wejściowego.|
 |`[0-9A-Z]`|Dopasowuje znak alfanumeryczny. Numer części musi zawierać przynajmniej jeden znak.|
@@ -240,7 +240,7 @@ Jednak zastosowanie tych elementów języka jest kosztowne. Powodują, że obiek
 
 Często konstrukcje grupujące są używane w wyrażeniach regularnych tylko po to, aby można było zastosować do nich kwantyfikatory, i grupy przechwytywane przez te podwyrażenia nie są następnie używane. Na przykład wyrażenie regularne `\b(\w+[;,]?\s?)+[.?!]` jest przeznaczone do przechwytywania całego zdania. W poniższej tabeli opisano elementy języka w tym wzorcu wyrażenia regularnego i ich wpływ na <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> <xref:System.Text.RegularExpressions.Match> obiektu i kolekcje <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>.
 
-|Wzorzec|Opis|
+|Wzorce|Opis|
 |-------------|-----------------|
 |`\b`|Rozpoczyna dopasowanie na granicy wyrazu.|
 |`\w+`|Dopasowuje co najmniej jeden znak słowa.|
@@ -269,7 +269,7 @@ Przechwytywanie można wyłączyć na jeden z poniższych sposobów:
 
 - Użyj opcji `n` w `(?imnsx:subexpression)` element języka. Ta opcja wyłącza wszystkie nienazwane lub niejawne przechwycenia w `subexpression`. Przechwytywania przez jakiekolwiek nienazwane lub niejawne zagnieżdżone grupy przechwytywania również są wyłączone.
 
-## <a name="related-topics"></a>Tematy pokrewne
+## <a name="related-topics"></a>Powiązane tematy
 
 |Tytuł|Opis|
 |-----------|-----------------|

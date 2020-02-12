@@ -2,14 +2,13 @@
 title: Wybierz między platformą .NET Core i .NET Framework dla aplikacji serwerowych
 description: Przewodnik dotyczący implementacji platformy .NET, którą należy wziąć pod uwagę podczas kompilowania aplikacji serwera w programie .NET.
 author: cartermp
-ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: c280e22341a45260a816a36c1148dc8c4f76db09
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: c202e42a46c4a72bdceca1fb250170d381603a8d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921416"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124627"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Wybieranie między programami .NET Core i .NET Framework na potrzeby aplikacji serwerowych
 
@@ -48,7 +47,7 @@ Dostępnych jest wiele platform infrastruktury. [Usługa Azure Service Fabric](h
 
 Aby uzyskać więcej informacji o architekturze mikrousług, zobacz [.NET mikrousługi. Architektura dla kontenerów aplikacji .NET](../architecture/microservices/index.md).
 
-### <a name="containers"></a>Kontenery
+### <a name="containers"></a>Containers
 
 Kontenery są często używane w połączeniu z architekturą mikrousług. Kontenery mogą być również używane do konteneryzowanie aplikacji lub usług sieci Web, które są zgodne ze wzorcem architektury. .NET Framework można używać w kontenerach systemu Windows, ale modularność i lekki charakter platformy .NET Core ułatwia wybór dla kontenerów. Podczas tworzenia i wdrażania kontenera rozmiar jego obrazu jest znacznie mniejszy przy użyciu platformy .NET Core niż z .NET Framework. Ponieważ jest to platforma międzyplatformowa, można wdrożyć aplikacje serwera w kontenerach platformy Docker systemu Linux, na przykład.
 
@@ -101,7 +100,7 @@ Oprócz oficjalnych planów istnieją inne struktury, które można przenieść 
 
 Niektóre platformy firmy Microsoft lub innych firm nie obsługują platformy .NET Core. Niektóre usługi platformy Azure udostępniają zestaw SDK, który nie jest jeszcze dostępny do użycia w programie .NET Core. Jest to okoliczności przejściowe, ponieważ wszystkie usługi platformy Azure korzystają z platformy .NET Core. W międzyczasie zawsze możesz użyć równoważnego interfejsu API REST zamiast zestawu SDK klienta.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Wybierz między ASP.NET a ASP.NET Core](/aspnet/core/choose-aspnet-framework)
 - [ASP.NET Core określania celu .NET Framework](/aspnet/core#aspnet-core-targeting-net-framework)

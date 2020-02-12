@@ -6,14 +6,12 @@ helpviewer_keywords:
 - forums [WPF]
 - bug descriptions [WPF]
 ms.assetid: 468b060a-d54b-4900-a74a-9faccb554045
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a9e903045195d6f464659876334f7fedc5c695e9
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 0bb94626d4e97f55c89bf239fc298b6bce8fd870
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733807"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124679"
 ---
 # <a name="wpf-community-feedback"></a>Opinie społeczności WPF
 
@@ -118,6 +116,6 @@ Podaj informacje o scenariuszu, który manifestuje usterkę i jej wpływ. Te inf
 
 Zwykle scenariusze awarii i utraty danych mają duży wpływ i dlatego najłatwiej określić priorytety. Niektóre usterki są jednak wyświetlane tylko w nietypowych scenariuszach, które mogą również linii głównej scenariusze w niektórych przypadkach. Zapewnienie kontekstu wokół scenariusza i wpływu ułatwia zespołowi WPF podejmowanie właściwych decyzji.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Jak zgłosić problem w programie Visual Studio](/visualstudio/ide/how-to-report-a-problem-with-visual-studio)

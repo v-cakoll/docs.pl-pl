@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: d77ce78fe914bf300c5b33019d7cf67aa4ad74c3
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: d0962793854a6066112eb987fbdb3f703617787f
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291447"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124432"
 ---
 # <a name="panels-overview"></a>Przegląd Panele
 elementy <xref:System.Windows.Controls.Panel> to składniki kontrolujące renderowanie elementów — ich rozmiar i wymiary, ich położenie oraz układ zawartości podrzędnej. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] udostępnia wiele wstępnie zdefiniowanych elementów <xref:System.Windows.Controls.Panel>, a także możliwość konstruowania niestandardowych elementów <xref:System.Windows.Controls.Panel>.  
@@ -64,16 +64,16 @@ elementy <xref:System.Windows.Controls.Panel> to składniki kontrolujące render
   
 |Nazwa elementu|Panel interfejsu użytkownika?|Opis|  
 |------------------|---------------|-----------------|  
-|<xref:System.Windows.Controls.Canvas>|Tak|Definiuje obszar, w obrębie którego możesz jawnie pozycjonować elementy podrzędne według współrzędnych względem obszaru <xref:System.Windows.Controls.Canvas>.|  
-|<xref:System.Windows.Controls.DockPanel>|Tak|Definiuje obszar, w którym można rozmieścić elementy podrzędne w poziomie lub w pionie względem siebie.|  
-|<xref:System.Windows.Controls.Grid>|Tak|Definiuje elastyczny obszar siatki składający się z kolumn i wierszy. Elementy podrzędne <xref:System.Windows.Controls.Grid> można umieścić precyzyjnie przy użyciu właściwości <xref:System.Windows.FrameworkElement.Margin%2A>.|  
-|<xref:System.Windows.Controls.StackPanel>|Tak|Rozmieszcza elementy podrzędne w pojedynczym wierszu, który może być zorientowany w poziomie lub w pionie.|  
+|<xref:System.Windows.Controls.Canvas>|Yes|Definiuje obszar, w obrębie którego możesz jawnie pozycjonować elementy podrzędne według współrzędnych względem obszaru <xref:System.Windows.Controls.Canvas>.|  
+|<xref:System.Windows.Controls.DockPanel>|Yes|Definiuje obszar, w którym można rozmieścić elementy podrzędne w poziomie lub w pionie względem siebie.|  
+|<xref:System.Windows.Controls.Grid>|Yes|Definiuje elastyczny obszar siatki składający się z kolumn i wierszy. Elementy podrzędne <xref:System.Windows.Controls.Grid> można umieścić precyzyjnie przy użyciu właściwości <xref:System.Windows.FrameworkElement.Margin%2A>.|  
+|<xref:System.Windows.Controls.StackPanel>|Yes|Rozmieszcza elementy podrzędne w pojedynczym wierszu, który może być zorientowany w poziomie lub w pionie.|  
 |<xref:System.Windows.Controls.Primitives.TabPanel>|Nie|Obsługuje układ przycisków karty w <xref:System.Windows.Controls.TabControl>.|  
 |<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|Nie|Rozmieszcza zawartość w kontrolce <xref:System.Windows.Controls.ToolBar>.|  
 |<xref:System.Windows.Controls.Primitives.UniformGrid>|Nie|<xref:System.Windows.Controls.Primitives.UniformGrid> służy do rozmieszczania elementów podrzędnych w siatce ze wszystkimi równymi rozmiarach komórek.|  
 |<xref:System.Windows.Controls.VirtualizingPanel>|Nie|Udostępnia klasę bazową dla paneli, które mogą "Wirtualizacja" ich kolekcji podrzędnych.|  
-|<xref:System.Windows.Controls.VirtualizingStackPanel>|Tak|Rozmieszcza i wirtualizacji zawartość w jednym wierszu zorientowanym w poziomie lub w pionie.|  
-|<xref:System.Windows.Controls.WrapPanel>|Tak|<xref:System.Windows.Controls.WrapPanel> położenia elementów podrzędnych w kolejności od lewej do prawej, przerwanie zawartości do następnego wiersza na krawędzi pola zawierającego. Kolejne porządkowanie odbywa się sekwencyjnie od góry do dołu lub od prawej do lewej, w zależności od wartości właściwości <xref:System.Windows.Controls.WrapPanel.Orientation%2A>.|  
+|<xref:System.Windows.Controls.VirtualizingStackPanel>|Yes|Rozmieszcza i wirtualizacji zawartość w jednym wierszu zorientowanym w poziomie lub w pionie.|  
+|<xref:System.Windows.Controls.WrapPanel>|Yes|<xref:System.Windows.Controls.WrapPanel> położenia elementów podrzędnych w kolejności od lewej do prawej, przerwanie zawartości do następnego wiersza na krawędzi pola zawierającego. Kolejne porządkowanie odbywa się sekwencyjnie od góry do dołu lub od prawej do lewej, w zależności od wartości właściwości <xref:System.Windows.Controls.WrapPanel.Orientation%2A>.|  
   
 <a name="Panels_main_UI_elements"></a>   
 ## <a name="user-interface-panels"></a>Panele interfejsu użytkownika  
@@ -81,7 +81,7 @@ elementy <xref:System.Windows.Controls.Panel> to składniki kontrolujące render
   
  Każdy pochodny element <xref:System.Windows.Controls.Panel> traktuje ograniczenia zmiany wielkości inaczej. Zrozumienie, w jaki sposób <xref:System.Windows.Controls.Panel> obsługuje ograniczenia w poziomie lub w pionie, może bardziej przewidywalnać układ.  
   
-|**Nazwa panelu**|**x-Dimension**|**Wymiar y**|  
+|**Nazwa panelu**|**x — wymiar**|**Wymiar y**|  
 |--------------------|----------------------|----------------------|  
 |<xref:System.Windows.Controls.Canvas>|Ograniczone do zawartości|Ograniczone do zawartości|  
 |<xref:System.Windows.Controls.DockPanel>|Ograniczone|Ograniczone|  
@@ -94,14 +94,14 @@ elementy <xref:System.Windows.Controls.Panel> to składniki kontrolujące render
   
 <a name="Panels_overview_Canvas_subsection"></a>   
 ### <a name="canvas"></a>Kanwa  
- Element <xref:System.Windows.Controls.Canvas> umożliwia pozycjonowanie zawartości według absolutnych współrzędnych *x* i *y*. Elementy mogą być rysowane w unikatowej lokalizacji; lub, jeśli elementy zajmują te same współrzędne, kolejność, w której są wyświetlane w znaczniku, określa kolejność, w jakiej są rysowane elementy.  
+ Element <xref:System.Windows.Controls.Canvas> umożliwia pozycjonowanie zawartości według absolutnych współrzędnych *x* i *y* . Elementy mogą być rysowane w unikatowej lokalizacji; lub, jeśli elementy zajmują te same współrzędne, kolejność, w której są wyświetlane w znaczniku, określa kolejność, w jakiej są rysowane elementy.  
   
  <xref:System.Windows.Controls.Canvas> zapewnia optymalną obsługę układów dowolnych <xref:System.Windows.Controls.Panel>. Właściwości Height i Width są używane do definiowania obszaru kanwy, a elementy wewnątrz są przypisane bezwzględnych współrzędnych względem obszaru <xref:System.Windows.Controls.Canvas>nadrzędnego. Cztery dołączone właściwości, <xref:System.Windows.Controls.Canvas.Left%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.Canvas.Top%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.Canvas.Right%2A?displayProperty=nameWithType> i <xref:System.Windows.Controls.Canvas.Bottom%2A?displayProperty=nameWithType>, umożliwiają dokładniejszą kontrolę umieszczania obiektów w <xref:System.Windows.Controls.Canvas>, co umożliwia deweloperom pozycjonowanie i precyzyjne porządkowanie elementów na ekranie.  
   
 #### <a name="cliptobounds-within-a-canvas"></a>ClipToBounds na kanwie  
  <xref:System.Windows.Controls.Canvas> może pozycjonować elementy podrzędne w dowolnym miejscu na ekranie, nawet ze współrzędnymi, które znajdują się poza własnym zdefiniowanym <xref:System.Windows.FrameworkElement.Height%2A> i <xref:System.Windows.FrameworkElement.Width%2A>. Ponadto nie ma to wpływ na <xref:System.Windows.Controls.Canvas> rozmiaru jego elementów podrzędnych. W związku z tym jest możliwe, aby element podrzędny mógł narysować inne elementy poza prostokątem ograniczonym <xref:System.Windows.Controls.Canvas>nadrzędnego. Domyślne zachowanie <xref:System.Windows.Controls.Canvas> ma umożliwić narysowanie elementów podrzędnych poza granicami <xref:System.Windows.Controls.Canvas>nadrzędnego. Jeśli to zachowanie jest niepożądane, właściwość <xref:System.Windows.UIElement.ClipToBounds%2A> można ustawić na `true`. Powoduje to, że <xref:System.Windows.Controls.Canvas> być przycinania do własnego rozmiaru. <xref:System.Windows.Controls.Canvas> jest jedynym elementem układu, który umożliwia rysowanie elementów podrzędnych poza granicami.  
   
- To zachowanie jest graficznie zilustrowane w [próbce porównania właściwości Width](https://go.microsoft.com/fwlink/?LinkID=160050).  
+ To zachowanie jest graficznie zilustrowane w [próbce porównania właściwości Width](https://github.com/Microsoft/WPF-Samples/tree/master/Elements/WidthProperties).  
   
 #### <a name="defining-and-using-a-canvas"></a>Definiowanie i używanie kanwy  
  Można utworzyć wystąpienie <xref:System.Windows.Controls.Canvas> po prostu przy użyciu [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] lub kodu. Poniższy przykład ilustruje sposób użycia <xref:System.Windows.Controls.Canvas> do bezwzględnej pozycji zawartości. Ten kod tworzy 3 100-pikselowe kwadraty. Pierwszy kwadrat jest czerwony, a jego pozycja w lewym górnym rogu (*x, y*) jest określana jako (0, 0). Drugi kwadrat jest zielony, a jego pozycja w lewym górnym rogu wynosi (100, 100), poniżej i z prawej strony pierwszego kwadratu. Trzecia kwadra jest niebieska, a jego pozycja w lewym górnym rogu to (50, 50), co obejmuje dolną i prawą ćwiartkę pierwszego kwadratu i lewy górny Ćwiartka drugiego. Ponieważ trzeci kwadrat jest określany jako ostatni, wygląda na to, że znajduje się on na początku innych dwóch kwadratów — to znaczy, że nakładające się części zakładają kolor trzeciego pola.  
@@ -232,7 +232,7 @@ elementy <xref:System.Windows.Controls.Panel> to składniki kontrolujące render
   
  Podobnie niestandardowe zachowania układu oparte na klasach pochodnych (takich jak <xref:System.Windows.Controls.Canvas> lub <xref:System.Windows.Controls.Grid>) można definiować poprzez zastępowanie metod <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> i <xref:System.Windows.FrameworkElement.MeasureOverride%2A>.  
   
- Poniższy znacznik ilustruje sposób tworzenia niestandardowego elementu <xref:System.Windows.Controls.Panel>. Ten nowy <xref:System.Windows.Controls.Panel>, zdefiniowany jako `PlotPanel`, obsługuje Pozycjonowanie elementów podrzędnych za pomocą zakodowanych przez siebie współrzędnych *x* i *y*. W tym przykładzie element <xref:System.Windows.Shapes.Rectangle> (niepokazywany) jest umieszczony w punkcie kreolenia 50 (*x*) i 50 (*y*).  
+ Poniższy znacznik ilustruje sposób tworzenia niestandardowego elementu <xref:System.Windows.Controls.Panel>. Ten nowy <xref:System.Windows.Controls.Panel>, zdefiniowany jako `PlotPanel`, obsługuje Pozycjonowanie elementów podrzędnych za pomocą zakodowanych przez siebie współrzędnych *x* i *y* . W tym przykładzie element <xref:System.Windows.Shapes.Rectangle> (niepokazywany) jest umieszczony w punkcie kreolenia 50 (*x*) i 50 (*y*).  
   
  [!code-cpp[PlotPanel#1](~/samples/snippets/cpp/VS_Snippets_Wpf/PlotPanel/CPP/PlotPanel.cpp#1)]
  [!code-csharp[PlotPanel#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PlotPanel/CSharp/PlotPanel.cs#1)]
@@ -252,12 +252,12 @@ elementy <xref:System.Windows.Controls.Panel> to składniki kontrolujące render
   
  Aby uzyskać dodatkowe informacje na temat tworzenia [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji z lokalizowalnymi interfejsami użytkownika (interfejsów użytkownika), zobacz [Omówienie używania automatycznego układu](../advanced/use-automatic-layout-overview.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Przewodnik: moja pierwsza aplikacja klasyczna WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
 - [Przykład galerii układów WPF](https://go.microsoft.com/fwlink/?LinkID=160054)
 - [Układ](../advanced/layout.md)
-- [Przykład galerii formantów WPF](https://go.microsoft.com/fwlink/?LinkID=160053)
+- [Przykład galerii formantów WPF](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/ControlsAndLayout)
 - [Przegląd wyrównania, marginesów i wypełnień](../advanced/alignment-margins-and-padding-overview.md)
 - [Tworzenie niestandardowego przykładowego panelu zawijania zawartości](https://go.microsoft.com/fwlink/?LinkID=159979)
 - [Przegląd właściwości dołączonych](../advanced/attached-properties-overview.md)

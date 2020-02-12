@@ -1,18 +1,16 @@
 ---
 title: .NET Standard
 description: Dowiedz się więcej na temat .NET Standard, jej wersji i implementacji platformy .NET, które go obsługują.
-author: mairaw
-ms.author: mairaw
 ms.date: 09/23/2019
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 6a4406775056b76dfa789911b8bb14e84dbc8eea
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 25490d5063a1f6c31b76af30ac6d37de6cb8c07f
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75738659"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124640"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -88,7 +86,7 @@ Pakiety NuGet mają co najmniej jedną [platformę](frameworks.md). Pakiety .NET
 
 Pakiet [`NETStandard.Library`binding](https://www.nuget.org/packages/NETStandard.Library/) odwołuje się do kompletnego zestawu pakietów NuGet, które definiują .NET Standard.  Najbardziej typowym sposobem na `netstandard` jest odwołujące się do tego pakietu. Opisuje i zapewnia dostęp do bibliotek platformy .NET ~ 40 i skojarzonych z nimi interfejsów API, które definiują .NET Standard. Aby uzyskać dostęp do dodatkowych interfejsów API, można odwoływać się do dodatkowych pakietów, których celem jest `netstandard`.
 
-### <a name="versioning"></a>Przechowywanie wersji
+### <a name="versioning"></a>Obsługa wersji
 
 Specyfikacja nie jest pojedyncza, ale przyrostowo rośnie i liniowo zestaw interfejsów API. Pierwsza wersja standardu ustanawia zestaw bazowy interfejsów API. Kolejne wersje dodają interfejsy API i dziedziczą interfejsy API zdefiniowane przez poprzednie wersje. Nie ma ustanowionego udostępniania do usuwania interfejsów API ze standardu.
 
@@ -161,7 +159,7 @@ Można wyświetlić zestaw profilów PCL, które są zgodne z .NET Standard:
 | Profile157  | 1.0           | Windows 8.1, Windows Phone 8,1, Windows Phone Silverlight 8,1
 | Profile259  | 1.0           | .NET Framework 4,5, Windows 8, Windows Phone 8,1, Windows Phone Silverlight 8
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Wersje .NET Standard](https://github.com/dotnet/standard/blob/master/docs/versions.md)
 - [Kompilowanie biblioteki .NET Standard](../core/tutorials/library-with-visual-studio.md)

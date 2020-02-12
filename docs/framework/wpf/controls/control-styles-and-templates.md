@@ -10,28 +10,28 @@ helpviewer_keywords:
 - states [WPF]
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
-ms.openlocfilehash: 1c6d6b7beba03aaa5c978b5cb72c09ce625e0d7e
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 01b8dc50860757b0eddee477219db1e19d27f40f
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460410"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124406"
 ---
 # <a name="control-styles-and-templates"></a>Style i szablony formantu
 Kontrolki w Windows Presentation Foundation (WPF) mają <xref:System.Windows.Controls.ControlTemplate>, które zawierają drzewo wizualne tej kontrolki. Można zmienić strukturę i wygląd kontrolki, modyfikując <xref:System.Windows.Controls.ControlTemplate> tej kontrolki. Nie ma możliwości zastępowania tylko części drzewa wizualnego kontrolki; Aby zmienić drzewo wizualne kontrolki, należy ustawić właściwość <xref:System.Windows.Controls.Control.Template%2A> kontrolki na jej nową i kompletną <xref:System.Windows.Controls.ControlTemplate>.  
   
- Kompozycje pulpitu określają, który słownik zasobów jest używany. Aby uzyskać słowniki zasobów dla motywów pulpitu, zobacz [domyślne motywy WPF](https://go.microsoft.com/fwlink/?LinkID=158252).  
+ Kompozycje pulpitu określają, który słownik zasobów jest używany. Aby uzyskać słowniki zasobów dla motywów pulpitu, zobacz [domyślne motywy WPF](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms).  
   
  W poniższej tabeli opisano nazwy plików słownika zasobów i odpowiadające im motywy pulpitu.  
   
 |Plik motywu|Kompozycja pulpitu|  
 |----------------|-------------------|  
 |Klasyczny. XAML|Klasyczny wygląd systemu Windows (w systemach Windows 95, Windows 98 i Windows 2000) w systemie operacyjnym Windows XP.|  
-|Luna. NormalColor. XAML|Domyślny niebieski motyw w systemie Windows XP.|  
-|Luna. Homestead. XAML|Motyw oliwy w systemie Windows XP.|  
-|Luna. metaliczn. XAML|Motyw Silver w systemie Windows XP.|  
-|Royale. NormalColor. XAML|Motyw domyślny w systemie operacyjnym Windows XP Media Center Edition.|  
-|Aero. NormalColor. XAML|Motyw domyślny w systemie operacyjnym Windows Vista.|  
+|Luna.NormalColor.xaml|Domyślny niebieski motyw w systemie Windows XP.|  
+|Luna.Homestead.xaml|Motyw oliwy w systemie Windows XP.|  
+|Luna.Metallic.xaml|Motyw Silver w systemie Windows XP.|  
+|Royale.NormalColor.xaml|Motyw domyślny w systemie operacyjnym Windows XP Media Center Edition.|  
+|Aero.NormalColor.xaml|Motyw domyślny w systemie operacyjnym Windows Vista.|  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Style i szablony przycisków](button-styles-and-templates.md)  
@@ -67,7 +67,7 @@ Kontrolki w Windows Presentation Foundation (WPF) mają <xref:System.Windows.Con
  [TreeView — style i szablony](treeview-styles-and-templates.md)  
  [Style i szablony okien](window-styles-and-templates.md)  
   
-## <a name="reference"></a>Tematy pomocy  
+## <a name="reference"></a>Dokumentacja  
  <xref:System.Windows.Controls>  
   
  <xref:System.Windows.Controls.ControlTemplate>  

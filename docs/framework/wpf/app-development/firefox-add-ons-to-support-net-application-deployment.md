@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET application deployment [WPF], deploying with Firefox add-ons
 - .NET Framework Assistant for Firefox
 ms.assetid: 2403403b-9b14-48e9-b70d-fa288a3c9081
-ms.openlocfilehash: 687f61bd3ec7d10c6aa66c20cd5eb58fcc56f18a
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 56f5f633092d8aa0bfabdb0570ec26f14221838d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636370"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124614"
 ---
 # <a name="firefox-add-ons-to-support-net-application-deployment"></a>Dodatki Firefox wspierające wdrożenie aplikacji .NET
 Wtyczka Windows Presentation Foundation (WPF) dla programu Firefox i asystenta .NET Framework dla przeglądarki Firefox umożliwiają korzystanie z aplikacji przeglądarki XAML (XBAP), luźnych [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]i aplikacji ClickOnce do pracy z przeglądarką Mozilla Firefox.  
@@ -31,9 +31,9 @@ Wtyczka Windows Presentation Foundation (WPF) dla programu Firefox i asystenta .
   
 - Zgłoś wszystkie zainstalowane wersje .NET Framework lub tylko najnowszą wersję.  
   
- Asystent .NET Framework dla programu Firefox jest dołączony do .NET Framework 3,5 z dodatkiem SP1. Informacje o usuwaniu asystenta .NET Framework dla programu Firefox można znaleźć w temacie [How to remove the .NET Framework Assistant for Firefox](https://go.microsoft.com/fwlink/?LinkId=177944).  
+ Asystent .NET Framework dla programu Firefox jest dołączony do .NET Framework 3,5 z dodatkiem SP1. Informacje o usuwaniu asystenta .NET Framework dla programu Firefox można znaleźć w temacie [How to remove the .NET Framework Assistant for Firefox](https://support.microsoft.com/help/963707/how-to-remove-the-net-framework-assistant-for-firefox).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Wdrażanie aplikacji WPF](deploying-a-wpf-application-wpf.md)
 - [Aplikacje przeglądarek WPF XAML — omówienie](wpf-xaml-browser-applications-overview.md)

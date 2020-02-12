@@ -10,12 +10,12 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-ms.openlocfilehash: 9ec6716fefdc8de75d7e523c56ae0b3a02c8cf02
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: bce2eed5f0e78c16b85b399e588c3d0d68ce7cb7
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424642"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123717"
 ---
 # <a name="dialog-boxes-overview"></a>Okna dialogowe — Omówienie
 Aplikacje autonomiczne zwykle mają główne okno, które wyświetla główne dane, nad którymi działa aplikacja, i udostępnia funkcję przetwarzania tych danych za pomocą mechanizmów [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], takich jak paski menu, paski narzędzi i paski stanu. Nieuproszczona aplikacja może również wyświetlać dodatkowe okna, aby wykonać następujące czynności:  
@@ -32,7 +32,7 @@ Aplikacje autonomiczne zwykle mają główne okno, które wyświetla główne da
   
  *Niemodalne* okno dialogowe, z drugiej strony, nie uniemożliwia użytkownikowi aktywowania innych okien, gdy jest otwarty. Na przykład, jeśli użytkownik chce znaleźć wystąpienia określonego wyrazu w dokumencie, okno główne często otwiera okno dialogowe z monitem o wyszukanie użytkownika. Ponieważ znalezienie słowa nie zapobiega edytowaniu dokumentu przez użytkownika, okno dialogowe nie musi być modalne. Niemodalne okno dialogowe z co najmniej udostępnia przycisk **Zamknij** , aby zamknąć okno dialogowe i może udostępnić dodatkowe przyciski do wykonywania określonych funkcji, takich jak przycisk **Znajdź dalej** , aby znaleźć następny wyraz, który pasuje do kryteriów wyszukiwania szukanych wyrazów.  
   
- Windows Presentation Foundation (WPF) umożliwia tworzenie kilku typów okien dialogowych, w tym pól komunikatów, wspólnych okien dialogowych i niestandardowych okien dialogowych. W tym temacie omówiono każdy i [przykład okna dialogowego](https://go.microsoft.com/fwlink/?LinkID=159984) zawiera pasujące przykłady.  
+ Windows Presentation Foundation (WPF) umożliwia tworzenie kilku typów okien dialogowych, w tym pól komunikatów, wspólnych okien dialogowych i niestandardowych okien dialogowych. W tym temacie omówiono każdy i [przykład okna dialogowego](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/DialogBox) zawiera pasujące przykłady.  
 
 <a name="Message_Boxes"></a>   
 ## <a name="message-boxes"></a>Okna komunikatów  
@@ -55,9 +55,9 @@ Aplikacje autonomiczne zwykle mają główne okno, które wyświetla główne da
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxShowAndResultCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxshowandresultcodebehind1)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxShowAndResultCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxshowandresultcodebehind1)]  
   
- Aby uzyskać więcej informacji o korzystaniu z okien komunikatów, zobacz <xref:System.Windows.MessageBox>, [MessageBox Sample](https://go.microsoft.com/fwlink/?LinkID=160023)i [Box okna dialogowego](https://go.microsoft.com/fwlink/?LinkID=159984).  
+ Aby uzyskać więcej informacji o korzystaniu z okien komunikatów, zobacz <xref:System.Windows.MessageBox>, [MessageBox Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/MessageBox)i [Box okna dialogowego](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/DialogBox).  
   
- Mimo że <xref:System.Windows.MessageBox> mogą oferować proste środowisko użytkownika okna dialogowego, zaletą korzystania z <xref:System.Windows.MessageBox> jest to jedyny typ okna, który może być pokazywany przez aplikacje działające w obszarze piaskownicy zabezpieczeń częściowej relacji zaufania (zobacz [zabezpieczenia](../security-wpf.md)), np. przeglądarka XAML aplikacje (XBAP).  
+ Mimo że <xref:System.Windows.MessageBox> mogą oferować proste środowisko użytkownika okna dialogowego, zaletą korzystania z <xref:System.Windows.MessageBox> jest to jedyny typ okna, który może być pokazywany przez aplikacje działające w obszarze piaskownicy zabezpieczeń częściowej relacji zaufania (zobacz [zabezpieczenia](../security-wpf.md)), takie jak aplikacje przeglądarki XAML (XBAP).  
   
  Większość okien dialogowych wyświetla i zbiera bardziej złożone dane niż wynik okna komunikatu, w tym tekst, zaznaczenie (pola wyboru), wzajemnie wykluczające się zaznaczenie (przyciski radiowe) i wybór listy (pola listy, pola kombi, pola listy rozwijanej). Dla tych Windows Presentation Foundation (WPF) udostępnia kilka wspólnych okien dialogowych i umożliwia tworzenie własnych okien dialogowych, chociaż korzystanie z nich jest ograniczone do aplikacji działających z pełnym zaufaniem.  
   
@@ -118,7 +118,7 @@ Chociaż wspólne okna dialogowe są przydatne i powinny być używane, jeśli j
 <a name="Creating_a_Modal_Custom_Dialog_Box"></a>   
 ### <a name="creating-a-modal-custom-dialog-box"></a>Tworzenie modalnego niestandardowego okna dialogowego
 
-W tym temacie pokazano, jak używać <xref:System.Windows.Window> do tworzenia typowej implementacji modalnego okna dialogowego przy użyciu okna dialogowego `Margins` (Zobacz przykład [okna dialogowego](https://go.microsoft.com/fwlink/?LinkID=159984)). Okno dialogowe `Margins` jest pokazane na poniższym rysunku.  
+W tym temacie pokazano, jak używać <xref:System.Windows.Window> do tworzenia typowej implementacji modalnego okna dialogowego przy użyciu okna dialogowego `Margins` (Zobacz przykład [okna dialogowego](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/DialogBox)). Okno dialogowe `Margins` jest pokazane na poniższym rysunku.  
   
  ![Okno dialogowe marginesów z polami do definiowania lewego marginesu, górnego marginesu, prawego marginesu i dolnego marginesu.](./media/dialog-boxes-overview/margin-size-dialog-box.png)  
   
@@ -304,7 +304,7 @@ Alternatywnie kod może wywoływać <xref:System.Windows.Window.Close%2A> po kli
 [!code-csharp[Calling the Close method](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/FindDialogBox.xaml.cs?range=1-9,119-126)]
 [!code-vb[Calling the Close method](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/FindDialogBox.xaml.vb?range=1-9,99-103)]  
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Okno podręczne — omówienie](../controls/popup-overview.md)
-- [Przykład okna dialogowego](https://go.microsoft.com/fwlink/?LinkID=159984)
+- [Przykład okna dialogowego](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/DialogBox)

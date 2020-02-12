@@ -7,15 +7,15 @@ helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF], how-to topics
 ms.assetid: 006aa461-fe37-4cd8-860a-d38d76e8b9f7
-ms.openlocfilehash: d3d5116a2fa2198661050a1c1adbae9512cd078a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 82da07620135224b5f7353f2acce087d939c1855
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790887"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124237"
 ---
 # <a name="textbox-how-to-topics"></a>TextBox — Tematy porad
-Ta sekcja zawiera przykłady pokazujące, jak wykonywać typowe zadania za pomocą <xref:System.Windows.Controls.TextBox> kontroli.  
+Ta sekcja zawiera przykłady, które pokazują, jak wykonywać typowe zadania przy użyciu kontrolki <xref:System.Windows.Controls.TextBox>.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Tworzenie wielowierszowej kontrolki TextBox](how-to-create-a-multiline-textbox-control.md)  
@@ -32,7 +32,7 @@ Ta sekcja zawiera przykłady pokazujące, jak wykonywać typowe zadania za pomoc
  [Używanie sprawdzania pisowni z menu kontekstowym](how-to-use-spell-checking-with-a-context-menu.md)  
  [Dodawanie znaku wodnego do kontrolki TextBox](how-to-add-a-watermark-to-a-textbox.md)  
   
-## <a name="reference"></a>Tematy pomocy  
+## <a name="reference"></a>Dokumentacja  
  <xref:System.Windows.Controls.TextBox>  
   
  <xref:System.Windows.Controls.RichTextBox>  
@@ -41,7 +41,7 @@ Ta sekcja zawiera przykłady pokazujące, jak wykonywać typowe zadania za pomoc
   
  <xref:System.Windows.Controls.PasswordBox>  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Przykładu z galerii kontrolki WPF](https://go.microsoft.com/fwlink/?LinkID=160053)
+- [Przykład galerii formantów WPF](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/ControlsAndLayout)
 - [TextBox — style i szablony](textbox-styles-and-templates.md)

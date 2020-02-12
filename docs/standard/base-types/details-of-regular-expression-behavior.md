@@ -9,12 +9,12 @@ helpviewer_keywords:
 - regular expressions, behavior
 - .NET Framework regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-ms.openlocfilehash: af812e1e42d57c349e94b5992b768636857d2a0c
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 504e315dda4e76f56a88d97149b1515b6743668b
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348281"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124354"
 ---
 # <a name="details-of-regular-expression-behavior"></a>Szczegóły zachowania wyrażeń regularnych
 
@@ -46,7 +46,7 @@ Aparat wyrażeń regularnych .NET Framework to wsteczny odpowiednik wyrażenia r
 
      Wersje zachłanne i z opóźnieniem tego wyrażenia regularnego są zdefiniowane, jak pokazano w poniższej tabeli:
 
-    |Wzorzec|Opis|
+    |Wzorce|Opis|
     |-------------|-----------------|
     |`.+` (kwantyfikator zachłanne)|Dopasowuje co najmniej jedno wystąpienie dowolnego znaku. Powoduje to, że aparat wyrażeń regularnych dopasowuje cały ciąg, a następnie do nawrotu w razie potrzeby dopasowania do pozostałej części wzorca.|
     |`.+?` (kwantyfikator opóźniony)|Dopasowuje co najmniej jedno wystąpienie dowolnego znaku, ale dopasowanie jak najmniejszej liczby.|
@@ -62,7 +62,7 @@ Aparat wyrażeń regularnych .NET Framework to wsteczny odpowiednik wyrażenia r
 
      Wyrażenie regularne `\b[A-Z]+\b(?=\P{P})` jest zdefiniowane, jak pokazano w poniższej tabeli.
 
-    |Wzorzec|Opis|
+    |Wzorce|Opis|
     |-------------|-----------------|
     |`\b`|Rozpoczyna dopasowanie na granicy wyrazu.|
     |`[A-Z]+`|Dopasowuje dowolny znak alfabetyczny jeden lub więcej razy. Ponieważ metoda <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> jest wywoływana z opcją <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>, porównanie nie uwzględnia wielkości liter.|
@@ -78,7 +78,7 @@ Aparat wyrażeń regularnych .NET Framework to wsteczny odpowiednik wyrażenia r
 
      `\b(?!non)\w+\b` wzorzec wyrażenia regularnego jest zdefiniowany, jak pokazano w poniższej tabeli.
 
-    |Wzorzec|Opis|
+    |Wzorce|Opis|
     |-------------|-----------------|
     |`\b`|Rozpoczyna dopasowanie na granicy wyrazu.|
     |`(?!non)`|Sprawdź w przód, aby upewnić się, że bieżący ciąg nie zaczyna się od "non". W przeciwnym razie dopasowanie nie powiedzie się.|
@@ -94,7 +94,7 @@ Aparat wyrażeń regularnych .NET Framework to wsteczny odpowiednik wyrażenia r
 
      Wzorzec wyrażenia regularnego jest zdefiniowany, jak pokazano w poniższej tabeli.
 
-    |Wzorzec|Opis|
+    |Wzorce|Opis|
     |-------------|-----------------|
     |`^`|Rozpocznij dopasowanie na początku wiersza.|
     |`(?<Pvt>\<PRIVATE\>\s)?`|Dopasowanie do zera lub jednego wystąpienia ciągu `<PRIVATE>` po którym następuje znak odstępu. Przypisz dopasowanie do grupy przechwytywania o nazwie `Pvt`.|
@@ -106,7 +106,7 @@ Aparat wyrażeń regularnych .NET Framework to wsteczny odpowiednik wyrażenia r
 
 - Definicje grup równoważenia: `(?<`*name1*`-`*NAME2*`>` *podwyrażenia*`)`. Ta funkcja umożliwia aparatowi wyrażeń regularnych śledzenie zagnieżdżonych konstrukcji, takich jak nawiasy, otwierające i zamykające nawiasy klamrowe. Aby zapoznać się z przykładem, zobacz [grupowanie konstrukcji](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
 
-- Podwyrażenia Podwyrażenie (znane również jako zachłanne subexpressions): `(?>`*podwyrażeniem*`)`. Ta funkcja umożliwia aparatowi wycofywania w celu zagwarantowania, że Podwyrażenie dopasowuje tylko pierwsze dopasowanie znalezione dla tego podwyrażenia, tak jakby wyrażenie było uruchomione niezależnie od jego wyrażenia zawierającego. Jeśli ta konstrukcja nie jest używana, wyszukiwanie wsteczne z większego wyrażenia może zmienić zachowanie podwyrażenia. Na przykład wyrażenie regularne `(a+)\w` dopasowuje jeden lub więcej znaków "a", wraz ze znakiem słowa, które następuje po sekwencji znaków "a" i przypisuje sekwencję znaków "a" do pierwszej grupy przechwytywania, jednak jeśli końcowy znak ciągu wejściowego jest również "a", jest dopasowywany przez element języka `\w` i nie jest uwzględniony w przechwyconej grupie.
+- Grupy niepodzielne: `(?>`*podwyrażeniem*`)`. Ta funkcja umożliwia aparatowi wycofywania w celu zagwarantowania, że Podwyrażenie dopasowuje tylko pierwsze dopasowanie znalezione dla tego podwyrażenia, tak jakby wyrażenie było uruchomione niezależnie od jego wyrażenia zawierającego. Jeśli ta konstrukcja nie jest używana, wyszukiwanie wsteczne z większego wyrażenia może zmienić zachowanie podwyrażenia. Na przykład wyrażenie regularne `(a+)\w` dopasowuje jeden lub więcej znaków "a", wraz ze znakiem słowa, które następuje po sekwencji znaków "a" i przypisuje sekwencję znaków "a" do pierwszej grupy przechwytywania. Jeśli jednak końcowy znak ciągu wejściowego jest również "a", jest dopasowywany przez element języka `\w` i nie jest uwzględniony w przechwyconej grupie.
 
      [!code-csharp[Conceptual.RegularExpressions.Design#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/nonbacktracking2.cs#7)]
      [!code-vb[Conceptual.RegularExpressions.Design#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/nonbacktracking2.vb#7)]
@@ -116,7 +116,7 @@ Aparat wyrażeń regularnych .NET Framework to wsteczny odpowiednik wyrażenia r
      [!code-csharp[Conceptual.RegularExpressions.Design#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/nonbacktracking1.cs#8)]
      [!code-vb[Conceptual.RegularExpressions.Design#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/nonbacktracking1.vb#8)]
 
-     Aby uzyskać więcej informacji o podwyrażeniach Podwyrażenie, zobacz [Grouping konstrukcjes](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
+     Aby uzyskać więcej informacji na temat grup niepodzielnych, zobacz [Grouping konstrukcjes](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
 
 - Dopasowanie od prawej do lewej, które jest określone przez dostarczenie opcji <xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType> do konstruktora klasy <xref:System.Text.RegularExpressions.Regex> lub statycznej metody dopasowywania wystąpień. Ta funkcja jest przydatna podczas wyszukiwania od prawej do lewej zamiast od lewej do prawej lub w przypadkach, gdy jest bardziej wydajna, aby zacząć dopasowywanie do prawej części wzorca zamiast z lewej strony. Jak pokazano na poniższym przykładzie, użycie dopasowania od prawej do lewej może zmienić zachowanie kwantyfikatorów zachłanne. Przykład wykonuje dwa wyszukiwania zdania kończącego się na liczbie. Wyszukiwanie od lewej do prawej, które używa kwantyfikatora zachłanne `+` dopasowuje jeden z sześciu cyfr w zdaniu, podczas gdy wyszukiwanie od prawej do lewej jest zgodne ze wszystkimi sześcioma cyframi. Aby uzyskać opis wzorca wyrażenia regularnego, zobacz przykład, który ilustruje liczbę kwantyfikatorów opóźnionych wcześniej w tej sekcji.
 
@@ -125,14 +125,14 @@ Aparat wyrażeń regularnych .NET Framework to wsteczny odpowiednik wyrażenia r
 
      Aby uzyskać więcej informacji na temat dopasowywania do prawej strony, zobacz [Opcje wyrażenia regularnego](../../../docs/standard/base-types/regular-expression-options.md).
 
-- Dodatnie i ujemne asercja wsteczna: `(?<=`*Podwyrażenie*`)` dla dodatnich asercja wsteczna, i `(?<!`*podwyrażeniem*`)` dla negatywnej asercja wsteczna. Ta funkcja jest podobna do wyprzedzenia, która została omówiona wcześniej w tym temacie. Ponieważ aparat wyrażeń regularnych umożliwia pełne dopasowywanie do prawej strony, wyrażenia regularne zezwalają na nieograniczony lookbehinds. Można również użyć asercja wsteczna pozytywnej i ujemnej, aby uniknąć zagnieżdżania kwantyfikatorów, gdy zagnieżdżone Podwyrażenie jest nadzbiorem wyrażenia zewnętrznego. Wyrażenia regularne z takimi kwantyfikatorami zagnieżdżonymi często zapewniają niską wydajność. Na przykład poniższy przykład sprawdza, czy ciąg rozpoczyna się i zamyka znak alfanumeryczny, a każdy inny znak w ciągu jest jednym z większego podzbioru. Stanowi część wyrażenia regularnego służącego do sprawdzania poprawności adresów e-mail. Aby uzyskać więcej informacji, zobacz [How to: Sprawdź, czy ciągi są w prawidłowym formacie poczty E-mail](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md).
+- Dodatnie i ujemne asercja wsteczna: `(?<=`*Podwyrażenie*`)` dla dodatnich asercja wsteczna, i `(?<!`*podwyrażeniem*`)` dla negatywnej asercja wsteczna. Ta funkcja jest podobna do wyprzedzenia, która została omówiona wcześniej w tym temacie. Ponieważ aparat wyrażeń regularnych umożliwia pełne dopasowywanie do prawej strony, wyrażenia regularne zezwalają na nieograniczony lookbehinds. Można również użyć asercja wsteczna pozytywnej i ujemnej, aby uniknąć zagnieżdżania kwantyfikatorów, gdy zagnieżdżone Podwyrażenie jest nadzbiorem wyrażenia zewnętrznego. Wyrażenia regularne z takimi kwantyfikatorami zagnieżdżonymi często zapewniają niską wydajność. Na przykład poniższy przykład sprawdza, czy ciąg rozpoczyna się i zamyka znak alfanumeryczny, a każdy inny znak w ciągu jest jednym z większego podzbioru. Stanowi część wyrażenia regularnego służącego do sprawdzania poprawności adresów e-mail. Aby uzyskać więcej informacji, zobacz [How to: Verify, czy ciągi są w prawidłowym formacie poczty e-mail](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md).
 
      [!code-csharp[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookbehind1.cs#5)]
      [!code-vb[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookbehind1.vb#5)]
 
      Wyrażenie regularne ``^[A-Z0-9]([-!#$%&'.*+/=?^`{}|~\w])*(?<=[A-Z0-9])$`` jest zdefiniowane, jak pokazano w poniższej tabeli.
 
-    |Wzorzec|Opis|
+    |Wzorce|Opis|
     |-------------|-----------------|
     |`^`|Rozpocznij dopasowanie na początku ciągu.|
     |`[A-Z0-9]`|Dopasowuje dowolny znak liczbowy lub alfanumeryczny. (W porównaniu z rozróżnianiem wielkości liter).|
@@ -142,9 +142,9 @@ Aparat wyrażeń regularnych .NET Framework to wsteczny odpowiednik wyrażenia r
 
      Aby uzyskać więcej informacji na temat pozytywnych i negatywnych asercja wsteczna, zobacz [Grouping konstrukcjes](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
 
-## <a name="related-articles"></a>Pokrewne artykuły:
+## <a name="related-articles"></a>Pokrewne artykuły
 
-|Stanowisko|Opis|
+|Tytuł|Opis|
 |-----------|-----------------|
 |[Śledzenie wsteczne](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|Zawiera informacje dotyczące sposobu, w jaki rozgałęzienia wyrażenia regularnego do znajdowania alternatywnych dopasowań.|
 |[Kompilacja i ponowne używanie](../../../docs/standard/base-types/compilation-and-reuse-in-regular-expressions.md)|Zawiera informacje dotyczące kompilowania i ponownego używania wyrażeń regularnych w celu zwiększenia wydajności.|
@@ -154,6 +154,6 @@ Aparat wyrażeń regularnych .NET Framework to wsteczny odpowiednik wyrażenia r
 |[Przykłady wyrażeń regularnych](../../../docs/standard/base-types/regular-expression-examples.md)|Zawiera przykłady kodu, które ilustrują użycie wyrażeń regularnych we wspólnych aplikacjach.|
 |[Język wyrażeń regularnych — podręczny wykaz](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|Zawiera informacje dotyczące zestawu znaków, operatorów i konstrukcji, których można użyć do definiowania wyrażeń regularnych.|
 
-## <a name="reference"></a>Tematy pomocy
+## <a name="reference"></a>Dokumentacja
 
 - <xref:System.Text.RegularExpressions?displayProperty=nameWithType>

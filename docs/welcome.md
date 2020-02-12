@@ -1,16 +1,14 @@
 ---
 title: .NET — Zapraszamy!
 description: Wprowadzenie do rodziny .NET Technologies.
-author: mairaw
-ms.author: mairaw
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 15daaafed02ab1132a3c82c12efa6fad0e0a6db2
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 20332f4dcc0664287873a27e0064a4765b1ecde7
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838133"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124224"
 ---
 # <a name="welcome-to-net"></a>.NET — Zapraszamy!
 
@@ -18,7 +16,7 @@ Zobacz Rozpoczynanie [pracy z platformą .NET Core](core/get-started.md) , aby d
 
 Twórz wiele typów aplikacji za pomocą platformy .NET, takich jak chmura, IoT i gry, korzystając z bezpłatnych narzędzi międzyplatformowych. Aplikacje można uruchamiać w systemach Android, iOS, Linux, macOS i Windows. Wdrażaj aplikacje na serwerach lub komputerach stacjonarnych i Publikuj w sklepach z aplikacjami w celu wdrożenia na urządzeniach przenośnych. Platforma .NET jest dostępna dla studentów i hobby, a wszystkie są powitane w Lively międzynarodowej społeczności deweloperów i umożliwiają bezpośrednie tworzenie wielu technologii platformy .NET.
 
-## <a name="news"></a>Aktualności
+## <a name="news"></a>Wiadomości
 
 Aby uzyskać informacje na temat platformy .NET, zapoznaj się z następującymi blogami:
 
@@ -56,7 +54,7 @@ Ta dokumentacja obejmuje szeroki zakres platformy .NET dla różnych platform i 
 
 Ponadto można przeglądać [Informacje o interfejsie API platformy .NET](/dotnet/api).
 
-## <a name="videos"></a>Wideo
+## <a name="videos"></a>Filmy wideo
 
 Eksploruj wideo w sieci Web, na urządzeniach przenośnych C#, komputerach stacjonarnych, uczeniu maszynowym, kontenerach/platformie Docker, dostępie do danych i nie tylko:
 

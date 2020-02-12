@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: bec7e14ceed867e89c3117efbc245938356b9d78
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 825b689dea145d18035344cd902ea1b8a50e82c3
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742280"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124211"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Przegląd Aplikacje przeglądarek WPF XAML
 <a name="introduction"></a>Aplikacje przeglądarki XAML (XBAP) łączą funkcje aplikacji sieci Web i aplikacji z rozbudowanymi aplikacjami klienckimi. Na przykład aplikacje sieci Web XBAP mogą być wdrażane na serwerze sieci Web i uruchamiane z przeglądarki Internet Explorer lub Firefox. Podobnie jak w przypadku aplikacji z rozbudowanymi aplikacjami klienckimi, aplikacje XBAP mogą korzystać z możliwości platformy WPF. Tworzenie aplikacji XBAP jest również podobne do rozbudowanych wdrożeń klientów. Ten temat zawiera proste, górne wprowadzenie do programowania aplikacji XBAP i opisuje, gdzie Programowanie aplikacji XBAP różni się od standardowego rozbudowanego środowiska programistycznego.
@@ -91,7 +91,7 @@ ms.locfileid: "76742280"
 
 <a name="communicating_with_the_host_web_page"></a>
 ## <a name="communicating-with-the-host-web-page"></a>Komunikacja ze stroną sieci Web hosta
- Gdy aplikacja jest hostowana w ramce HTML, można komunikować się ze stroną sieci Web, która zawiera aplikację XBAP. Można to zrobić przez pobranie właściwości <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> <xref:System.Windows.Interop.BrowserInteropHelper>. Ta właściwość zwraca obiekt skryptu, który reprezentuje okno HTML. Następnie można uzyskać dostęp do właściwości, metod i zdarzeń w [obiekcie Window](https://go.microsoft.com/fwlink/?LinkId=160274) przy użyciu zwykłej składni z kropką. Możesz również uzyskać dostęp do metod skryptu i zmiennych globalnych. Poniższy przykład pokazuje, jak pobrać obiekt skryptu i zamknąć przeglądarkę.
+ Gdy aplikacja jest hostowana w ramce HTML, można komunikować się ze stroną sieci Web, która zawiera aplikację XBAP. Można to zrobić przez pobranie właściwości <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> <xref:System.Windows.Interop.BrowserInteropHelper>. Ta właściwość zwraca obiekt skryptu, który reprezentuje okno HTML. Następnie można uzyskać dostęp do właściwości, metod i zdarzeń w [obiekcie Window](https://developer.mozilla.org/en-US/docs/Web/API/Window) przy użyciu zwykłej składni z kropką. Możesz również uzyskać dostęp do metod skryptu i zmiennych globalnych. Poniższy przykład pokazuje, jak pobrać obiekt skryptu i zamknąć przeglądarkę.
 
  [!code-csharp[XbapBrowserInterop#10](~/samples/snippets/csharp/VS_Snippets_Wpf/xbapbrowserinterop/cs/page1.xaml.cs#10)]
  [!code-vb[XbapBrowserInterop#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/xbapbrowserinterop/vb/page1.xaml.vb#10)]
@@ -175,7 +175,7 @@ ms.locfileid: "76742280"
 > [!NOTE]
 > Zachowanie opisane w poprzedniej tabeli dotyczy w pełni zaufanych aplikacji XBAP, które nie są zgodne z zaufanym modelem wdrażania ClickOnce.
 
- Zaleca się użycie zaufanego modelu wdrażania ClickOnce do wdrażania pełnego zaufania XBAP. Ten model umożliwia aplikacji XBAP automatyczne przydzielanie pełnego zaufania, niezależnie od strefy zabezpieczeń, dzięki czemu użytkownik nie będzie monitowany. W ramach tego modelu należy podpisać aplikację z certyfikatem z zaufanego wydawcy. Aby uzyskać więcej informacji, zobacz [Omówienie wdrażania zaufanych aplikacji](/visualstudio/deployment/trusted-application-deployment-overview) i [wprowadzenie do podpisywania kodu](https://go.microsoft.com/fwlink/?LinkId=166327).
+ Zaleca się użycie zaufanego modelu wdrażania ClickOnce do wdrażania pełnego zaufania XBAP. Ten model umożliwia aplikacji XBAP automatyczne przydzielanie pełnego zaufania, niezależnie od strefy zabezpieczeń, dzięki czemu użytkownik nie będzie monitowany. W ramach tego modelu należy podpisać aplikację z certyfikatem z zaufanego wydawcy. Aby uzyskać więcej informacji, zobacz [Omówienie wdrażania zaufanych aplikacji](/visualstudio/deployment/trusted-application-deployment-overview) i [wprowadzenie do podpisywania kodu](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537361(v=vs.85)).
 
 <a name="xbap_start_time_performance_considerations"></a>
 ## <a name="xbap-start-time-performance-considerations"></a>Zagadnienia dotyczące wydajności w czasie uruchamiania aplikacji XBAP
@@ -185,7 +185,7 @@ ms.locfileid: "76742280"
 
  Ponadto ulepszone współbieżność sekwencji pobierania ClickOnce skraca czas rozpoczęcia do dziesięciu procent. Gdy ClickOnce pobiera i sprawdza poprawność manifestów, rozpocznie się pobieranie aplikacji, a pasek postępu zostanie zaktualizowany.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Konfigurowanie w programie Visual Studio debugowania aplikacji przeglądarki XAML w celu wywoływania usługi internetowej](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)
 - [Wdrażanie aplikacji WPF](deploying-a-wpf-application-wpf.md)

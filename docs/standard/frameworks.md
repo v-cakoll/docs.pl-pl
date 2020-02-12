@@ -1,17 +1,15 @@
 ---
 title: Platformy docelowe w projektach w stylu zestawu SDK — .NET
 description: Dowiedz się więcej na temat platform docelowych dla aplikacji i bibliotek platformy .NET Core.
-author: mairaw
-ms.author: mairaw
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 957671644ae333180b0c1ba4aae6d6e17ae6478b
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 33beb5606cbf857cc41b739f256482b0298f1fb1
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838221"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124601"
 ---
 # <a name="target-frameworks-in-sdk-style-projects"></a>Platformy docelowe w projektach w stylu zestawu SDK
 
@@ -31,7 +29,7 @@ Poniższa tabela zawiera definicje najpopularniejszych platform docelowych, spos
 
 | Struktura docelowa      | Najnowsza <br/> Stabilna wersja | Moniker platformy docelowej (TFM) | Realizowane <br/> Wersja .NET Standard |
 | :-------------------: | :-------------------------: | :----------------------------: | :-------------------------------------: |
-| .NET Standard         | 2.1                         | Standard 2.1                 | N/D                                     |
+| .NET Standard         | 2.1                         | Standard 2.1                 | Nie dotyczy                                     |
 | .NET Core             | 3.1                         | netcoreapp 3.1                  | 2.1                                     |
 | .NET Framework        | 4.8                         | net48                          | 2.0                                     |
 
@@ -44,7 +42,7 @@ Platforma docelowa jest zwykle przywoływana przez TFM. W poniższej tabeli prze
 | .NET Standard              | Standard 1.0<br>Standard 1.1<br>Standard 1.2<br>Standard 1.3<br>Standardowa 1.4<br>Standard 1.5<br>Standard 1.6<br>netstandard2.0<br>Standard 2.1 |
 | .NET Core                  | netcoreapp 1.0<br>netcoreapp 1.1<br>netcoreapp2.0<br>netcoreapp 2.1<br>netcoreapp 2.2<br>netcoreapp 3.0<br>netcoreapp 3.1 |
 | .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471<br>net472<br>net48 |
-| Sklep Windows              | Rdzeń [netcore45]<br>netcore45 [win] [Win8]<br>netcore451 [Win81] |
+| Windows Store              | Rdzeń [netcore45]<br>netcore45 [win] [Win8]<br>netcore451 [Win81] |
 | .NET Micro Framework       | netmf |
 | Silverlight                | sl4<br>sl5 |
 | Windows Phone              | WP [WP7]<br>wp7<br>wp75<br>wp8<br>wp81<br>wpa81 |
@@ -118,7 +116,7 @@ Kompletna lista symboli preprocesora dla platform .NET Core Target Framework to:
 
 Poniższe Platformy docelowe są przestarzałe. Pakiety przeznaczone dla tych platform docelowych powinny migrować do wskazanych elementów zastępczych.
 
-| Przestarzałe TFM                                                                             | Funkcja zastępująca |
+| Przestarzałe TFM                                                                             | Zastępc |
 | ------------------------------------------------------------------------------------------ | ----------- |
 | aspnet50<br>aspnetcore50<br>dnxcore50<br>dnx<br>dnx45<br>dnx451<br>dnx452                  | netcoreapp  |
 | dotnet<br>dotnet50<br>dotnet51<br>dotnet52<br>dotnet53<br>dotnet54<br>dotnet55<br>dotnet56 | netstandard |
@@ -129,7 +127,7 @@ Poniższe Platformy docelowe są przestarzałe. Pakiety przeznaczone dla tych pl
 | Win10                                                                                      | UAP 10.0     |
 | winrt                                                                                      | netcore45   |
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Pakiety, metapakiety i struktury](../core/packages.md)
 - [Tworzenie bibliotek za pomocą narzędzi międzyplatformowych](../core/tutorials/libraries.md)

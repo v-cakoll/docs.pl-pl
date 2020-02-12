@@ -5,20 +5,20 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: 9be6245d7429466490d9dac93c5b94d70bde30bd
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 665daa14b543a357b17747a7d9d34dac2224711d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744474"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124562"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>Przegląd Lokalizacja i globalizacja WPF
 
-Po ograniczeniu dostępności produktu tylko do jednego języka należy ograniczyć potencjalną bazę klientów do ułamka populacji na świecie 6 500 000 000. Jeśli chcesz, aby Twoje aplikacje miały dostęp do globalnej grupy odbiorców, to ekonomiczne i najbardziej ekonomiczne rozwiązanie do osiągnięcia większej liczby klientów.
+Po ograniczeniu dostępności produktu tylko do jednego języka należy ograniczyć potencjalną bazę klientów do ułamka populacji na świecie 7 500 000 000. Jeśli chcesz, aby Twoje aplikacje miały dostęp do globalnej grupy odbiorców, to ekonomiczne i najbardziej ekonomiczne rozwiązanie do osiągnięcia większej liczby klientów.
 
 W tym omówieniu przedstawiono globalizację i lokalizację w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Globalizacja to projekt i programowanie aplikacji, które działają w wielu lokalizacjach. Na przykład globalizacja obsługuje zlokalizowane interfejsy użytkownika i dane regionalne dla użytkowników w różnych kulturach. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] oferuje globalne funkcje projektowe, w tym automatyczne układy, zestawy satelickie i zlokalizowane atrybuty i komentowanie.
 
-Lokalizacja to tłumaczenie zasobów aplikacji na zlokalizowane wersje dla określonych kultur obsługiwanych przez aplikację. Podczas lokalizowania w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]należy używać interfejsów API w przestrzeni nazw <xref:System.Windows.Markup.Localizer>. Te interfejsy API służą do włączania narzędzia wiersza polecenia [Narzędzia LocBaml](https://go.microsoft.com/fwlink/?LinkID=160016) . Aby uzyskać informacje na temat sposobu kompilowania i używania LocBaml, zobacz [lokalizowanie aplikacji](how-to-localize-an-application.md).
+Lokalizacja to tłumaczenie zasobów aplikacji na zlokalizowane wersje dla określonych kultur obsługiwanych przez aplikację. Podczas lokalizowania w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]należy używać interfejsów API w przestrzeni nazw <xref:System.Windows.Markup.Localizer>. Te interfejsy API służą do włączania narzędzia wiersza polecenia [Narzędzia LocBaml](https://github.com/microsoft/WPF-Samples/tree/master/Tools/LocBaml) . Aby uzyskać informacje na temat sposobu kompilowania i używania LocBaml, zobacz [lokalizowanie aplikacji](how-to-localize-an-application.md).
 
 ## <a name="best-practices-for-globalization-and-localization-in-wpf"></a>Najlepsze rozwiązania dotyczące globalizacji i lokalizacji w WPF
 
@@ -48,7 +48,7 @@ Podczas projektowania [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-u
 
 - Podczas tworzenia aplikacji nawigacyjnych, które mogą być lokalizowane w kulturze, która przedstawia tekst w formacie od prawej do lewej, jawnie ustaw <xref:System.Windows.FlowDirection> każdej strony, aby upewnić się, że strona nie dziedziczy <xref:System.Windows.FlowDirection> z <xref:System.Windows.Navigation.NavigationWindow>.
 
-- Podczas tworzenia autonomicznych aplikacji nawigacyjnych, które są hostowane poza przeglądarką, należy ustawić <xref:System.Windows.Application.StartupUri%2A> dla początkowej aplikacji na <xref:System.Windows.Navigation.NavigationWindow> zamiast na stronie (na przykład `<Application StartupUri="NavigationWindow.xaml">`). Ten projekt umożliwia zmianę <xref:System.Windows.FlowDirection> okna i paska nawigacyjnego. Aby uzyskać więcej informacji, zobacz przykład [strony głównej globalizacji](https://go.microsoft.com/fwlink/?LinkID=159990).
+- Podczas tworzenia autonomicznych aplikacji nawigacyjnych, które są hostowane poza przeglądarką, należy ustawić <xref:System.Windows.Application.StartupUri%2A> dla początkowej aplikacji na <xref:System.Windows.Navigation.NavigationWindow> zamiast na stronie (na przykład `<Application StartupUri="NavigationWindow.xaml">`). Ten projekt umożliwia zmianę <xref:System.Windows.FlowDirection> okna i paska nawigacyjnego. Aby uzyskać więcej informacji, zobacz przykład [strony głównej globalizacji](https://github.com/microsoft/WPF-Samples/tree/master/Globalization%20and%20Localization/GlobalizationHomepage).
 
 ### <a name="best-practices-for-wpf-localization"></a>Najlepsze rozwiązania dotyczące lokalizacji WPF
 
@@ -64,7 +64,7 @@ Podczas lokalizowania aplikacji opartych na [!INCLUDE[TLA2#tla_winclient](../../
 
   - Nie używaj zduplikowanych właściwości <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> (należy pamiętać, że w przypadku korzystania z polecenia Kopiuj i wklej).
 
-  - Ustaw lokalizację `UltimateResourceFallback` w AssemblyInfo. *, aby określić odpowiedni język dla powrotu (na przykład `[assembly: NeutralResourcesLanguage("en-US",   UltimateResourceFallbackLocation.Satellite)]`).
+  - Ustaw lokalizację `UltimateResourceFallback` w AssemblyInfo.\*, aby określić odpowiedni język dla powrotu (na przykład `[assembly: NeutralResourcesLanguage("en-US",   UltimateResourceFallbackLocation.Satellite)]`).
 
     Jeśli użytkownik zdecyduje się na uwzględnienie języka źródłowego w zestawie głównym przez pominięcie znacznika `<UICulture>` w pliku projektu, należy ustawić lokalizację `UltimateResourceFallback` jako główny zestaw zamiast satelity (na przykład `[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.MainAssembly)]`).
 
@@ -102,7 +102,7 @@ Na poniższej ilustracji przedstawiono typowy przepływ pracy lokalizacji oparty
 
 Ta sekcja zawiera przykłady zlokalizowanych aplikacji, które ułatwiają zrozumienie sposobu kompilowania i lokalizowania aplikacji [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
 
-#### <a name="run-dialog-box-example"></a>Uruchom okno dialogowe przykład
+### <a name="run-dialog-box-example"></a>Uruchom okno dialogowe przykład
 
 Poniższa Grafika przedstawia dane wyjściowe okna dialogowego **uruchamiania** .
 
@@ -172,7 +172,7 @@ Zwróć uwagę na dodanie wartości `UICulture`. Gdy jest ustawiona na prawidło
 
 **Parse**
 
-Po skompilowaniu aplikacji pierwszy krok lokalizowania zasobów jest analizowany z zestawu satelickiego. Na potrzeby tego tematu Użyj przykładowego narzędzia LocBaml, które można znaleźć w [przykładowym narzędziu LocBaml](https://go.microsoft.com/fwlink/?LinkID=160016). Należy pamiętać, że LocBaml to tylko przykładowe narzędzie, które ułatwia rozpoczęcie pracy nad tworzeniem narzędzia lokalizacyjnego, które mieści się w procesie lokalizacji. Korzystając z LocBaml, uruchom następujące polecenie, aby przeanalizować: **LocBaml/Parse RunDialog. resources. dll/out:** aby wygenerować plik "RunDialog. resources. dll. csv".
+Po skompilowaniu aplikacji pierwszy krok lokalizowania zasobów jest analizowany z zestawu satelickiego. Na potrzeby tego tematu Użyj przykładowego narzędzia LocBaml, które można znaleźć w [przykładowym narzędziu LocBaml](https://github.com/microsoft/WPF-Samples/tree/master/Tools/LocBaml). Należy pamiętać, że LocBaml to tylko przykładowe narzędzie, które ułatwia rozpoczęcie pracy nad tworzeniem narzędzia lokalizacyjnego, które mieści się w procesie lokalizacji. Korzystając z LocBaml, uruchom następujące polecenie, aby przeanalizować: **LocBaml/Parse RunDialog. resources. dll/out:** aby wygenerować plik "RunDialog. resources. dll. csv".
 
 **Zlokalizować**
 
@@ -180,25 +180,25 @@ Użyj ulubionego edytora CSV, który obsługuje kodowanie Unicode, aby edytować
 
 |Klucz zasobu|Kategoria lokalizacji|Wartość|
 |-|-|-|
-|Button_1:System.Windows.Controls.Button.$Content|Przycisk|OK|
-|Button_2:System.Windows.Controls.Button.$Content|Przycisk|Anuluj|
-|Button_3:System.Windows.Controls.Button.$Content|Przycisk|Przeglądaj...|
+|Button_1:System.Windows.Controls.Button.$Content|Button|OK|
+|Button_2:System.Windows.Controls.Button.$Content|Button|Cancel|
+|Button_3:System.Windows.Controls.Button.$Content|Button|Przeglądaj...|
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
 |TextBlock_1:System.Windows.Controls.TextBlock.$Content|Tekst|Wpisz nazwę programu, folderu, dokumentu lub zasobu internetowego, a system Windows otworzy go.|
 |TextBlock_2:System.Windows.Controls.TextBlock.$Content|Tekst|Otwórz|
-|Window_1:System.Windows.Window.Title|Tytuł|Uruchom|
+|Window_1:System.Windows.Window.Title|Tytuł|Uruchom polecenie|
 
 Lokalizowanie aplikacji do wersji niemieckiej wymaga następujących tłumaczeń:
 
 |Klucz zasobu|Kategoria lokalizacji|Wartość|
 |-|-|-|
-|Button_1:System.Windows.Controls.Button.$Content|Przycisk|OK|
-|Button_2:System.Windows.Controls.Button.$Content|Przycisk|Abbrechen|
-|Button_3:System.Windows.Controls.Button.$Content|Przycisk|Durchsuchen...|
+|Button_1:System.Windows.Controls.Button.$Content|Button|OK|
+|Button_2:System.Windows.Controls.Button.$Content|Button|Abbrechen|
+|Button_3:System.Windows.Controls.Button.$Content|Button|Durchsuchen...|
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
 |TextBlock_1:System.Windows.Controls.TextBlock.$Content|Tekst|Geben sie Den Namen, eines, Ordners, Dokuments Oder einer Internetresource.|
 |TextBlock_2:System.Windows.Controls.TextBlock.$Content|Tekst|Öffnen:|
-|Window_1:System.Windows.Window.Title|Tytuł|Uruchom|
+|Window_1:System.Windows.Window.Title|Tytuł|Uruchom polecenie|
 
 **Utworzenie**
 
@@ -215,7 +215,7 @@ W przypadku okien niemieckich, jeśli ten plik resources. dll zostanie umieszczo
 |Kod|Oryginalna BAML|Zlokalizowana BAML|
 |Zasoby neutralne dla kultury|Inne zasoby w języku angielskim|Inne zasoby zlokalizowane do wersji niemieckiej|
 
-Program .NET Framework automatycznie wybiera, który zestaw zasobów satelitarnych ma zostać załadowany na podstawie `Thread.CurrentThread.CurrentUICulture`aplikacji. Ta wartość domyślna jest kulturą systemu operacyjnego Windows. W przypadku korzystania z systemu Windows w języku niemieckim de-DE\MyDialog.resources.dll ładuje się w przypadku korzystania z systemu Windows, a en-US\MyDialog.resources.dll ładuje. Możesz ustawić ostateczny rezerwowy zasób dla aplikacji, określając NeutralResourcesLanguage w AssemblyInfo projektu. Na przykład jeśli określisz:
+Program .NET Framework automatycznie wybiera, który zestaw zasobów satelitarnych ma zostać załadowany na podstawie `Thread.CurrentThread.CurrentUICulture`aplikacji. Ta wartość domyślna jest kulturą systemu operacyjnego Windows. W przypadku korzystania z systemu Windows w języku niemieckim de-DE\MyDialog.resources.dll ładuje się w przypadku korzystania z systemu Windows, a en-US\MyDialog.resources.dll ładuje. Możesz ustawić ostateczny rezerwowy zasób dla aplikacji, określając NeutralResourcesLanguage w AssemblyInfo projektu.\*. Na przykład jeśli określisz:
 
 `[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.Satellite)]`
 
@@ -223,7 +223,7 @@ następnie en-US\MyDialog.resources.dll będzie używany z niemieckimi oknami, j
 
 ### <a name="microsoft-saudi-arabia-homepage"></a>Microsoft Saudi Arabia Homepage
 
-Na poniższej grafice przedstawiono angielskie i arabskiej stronę główną. Aby zapoznać się z kompletnym przykładem, który tworzy te grafiki, zobacz sekcję dotyczącą [globalizacji strony głównej](https://go.microsoft.com/fwlink/?LinkID=159990).
+Na poniższej grafice przedstawiono angielskie i arabskiej stronę główną. Aby zapoznać się z kompletnym przykładem, który tworzy te grafiki, zobacz sekcję dotyczącą [globalizacji strony głównej](https://github.com/microsoft/WPF-Samples/tree/master/Globalization%20and%20Localization/GlobalizationHomepage).
 
 **Angielski:**
 
@@ -305,4 +305,4 @@ Aby uzyskać więcej informacji na temat czcionek kompozytowych, zobacz <xref:Sy
 
 **Lokalizowanie strony głównej firmy Microsoft**
 
-Aby zlokalizować tę aplikację, można wykonać te same czynności co w oknie dialogowym uruchamiania. Zlokalizowany plik CSV dla języka arabskiego jest dostępny dla Ciebie w [przykładowej stronie głównej globalizacji](https://go.microsoft.com/fwlink/?LinkID=159990).
+Aby zlokalizować tę aplikację, można wykonać te same czynności co w oknie dialogowym uruchamiania. Zlokalizowany plik CSV dla języka arabskiego jest dostępny dla Ciebie w [przykładowej stronie głównej globalizacji](https://github.com/microsoft/WPF-Samples/tree/master/Globalization%20and%20Localization/GlobalizationHomepage).

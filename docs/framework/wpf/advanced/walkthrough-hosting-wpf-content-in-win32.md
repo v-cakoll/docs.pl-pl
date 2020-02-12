@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
-ms.openlocfilehash: ff95b330ff67e916a4d27ef841e757998d847c8b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 418c5a4708a7842e5e441235738b73a009c9c956
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76735309"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124550"
 ---
 # <a name="walkthrough-hosting-wpf-content-in-win32"></a>Wskazówki: Hosting zawartości WPF w Win32
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zapewnia rozbudowane środowisko do tworzenia aplikacji. Jeśli jednak masz znaczną inwestycję w kod Win32, może być bardziej efektywne Dodawanie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] funkcji do aplikacji zamiast ponownego zapisywania oryginalnego kodu. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zapewnia bezpośredni mechanizm hostingu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości w oknie Win32.  
   
- W tym samouczku opisano sposób pisania przykładowej aplikacji, która udostępnia [zawartość WPF w przykładzie okna Win32](https://go.microsoft.com/fwlink/?LinkID=160004), która hostuje [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartość w oknie Win32. Ten przykład można rozwinąć, aby hostować dowolne okna Win32. Ponieważ obejmuje mieszanie kodu zarządzanego i niezarządzanego, aplikacja jest zapisywana C++w/CLI.  
+ W tym samouczku opisano sposób pisania przykładowej aplikacji, która udostępnia [zawartość WPF w przykładzie okna Win32](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/Win32HostingWPFPage), która hostuje [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartość w oknie Win32. Ten przykład można rozwinąć, aby hostować dowolne okna Win32. Ponieważ obejmuje mieszanie kodu zarządzanego i niezarządzanego, aplikacja jest zapisywana C++w/CLI.  
 
 <a name="requirements"></a>   
 ## <a name="requirements"></a>Wymagania  
@@ -26,7 +26,7 @@ ms.locfileid: "76735309"
  Ponieważ przykład, który obejmuje ten samouczek, jest zaimplementowany w C++/CLI, w tym samouczku założono, że korzystanie C++ z programu do obsługi interfejsu API systemu Windows oraz zrozumienie programowania kodu zarządzanego. Znajomość C++/CLI jest przydatna, ale nie jest istotna.  
   
 > [!NOTE]
-> Ten samouczek zawiera wiele przykładów kodu ze skojarzonego przykładu. Jednak w celu zapewnienia czytelności nie obejmuje kompletny kod przykładowy. Aby uzyskać kompletny przykładowy kod, zobacz [hosting zawartości WPF w przykładzie okna Win32](https://go.microsoft.com/fwlink/?LinkID=160004).  
+> Ten samouczek zawiera wiele przykładów kodu ze skojarzonego przykładu. Jednak w celu zapewnienia czytelności nie obejmuje kompletny kod przykładowy. Aby uzyskać kompletny przykładowy kod, zobacz [hosting zawartości WPF w przykładzie okna Win32](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/Win32HostingWPFPage).  
   
 <a name="basic_procedure"></a>   
 ## <a name="the-basic-procedure"></a>Podstawowa procedura  
@@ -225,7 +225,7 @@ ms.locfileid: "76735309"
 
  [!code-cpp[Win32HostingWPFPage#WPFPageSetFontFamily](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagesetfontfamily)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Windows.Interop.HwndSource>
 - [WPF i Win32 — współdziałanie](wpf-and-win32-interoperation.md)

@@ -12,14 +12,12 @@ helpviewer_keywords:
 - resources, for multiple platforms
 - targeting multiple platforms, resources for
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b32c2e354ea48e25ddb0aa561eb576cbfd89e3fb
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 3bf475117a85c2fced260dcc9460d55cd7007277
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204737"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123665"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>Zasoby aplikacji dla bibliotek przeznaczonych do wielu platform
 Można użyć typu projektu [Biblioteka klas przenośnych](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) .NET Framework, aby upewnić się, że zasoby w bibliotekach klas są dostępne z wielu platform. Ten typ projektu jest dostępny w programie Visual Studio 2012 i jest przeznaczony dla przenośnego podzestawu biblioteki klas .NET Framework. Za pomocą przenośnej biblioteki klas zapewnia dostęp do biblioteki z aplikacji klasycznych, aplikacji Silverlight, aplikacji Windows Phone i aplikacji ze sklepu Windows 8. x.
@@ -63,7 +61,7 @@ Można użyć typu projektu [Biblioteka klas przenośnych](../../../docs/standar
 |HiredLength|12|
 |ID|ID|
 |ID.Length|12|
-|Nazwa|Nazwa|
+|Name (Nazwa)|Name (Nazwa)|
 |NameLength|25|
 |Tytuł|Baza danych pracowników|
 
@@ -91,7 +89,7 @@ Można użyć typu projektu [Biblioteka klas przenośnych](../../../docs/standar
 |Hired|Date embauché|
 |HiredLength|16|
 |ID|ID|
-|Nazwa|Nom|
+|Name (Nazwa)|Nom|
 |Tytuł|Base de données des employés|
 
  Poniższy kod ilustruje sposób, w jaki Klasa `UILibrary` i jej zasoby są dostępne z poziomu aplikacji w trybie konsoli. Wymaga odwołania do UILibrary. dll, które ma zostać dodane do projektu aplikacji konsoli.
@@ -104,7 +102,7 @@ Można użyć typu projektu [Biblioteka klas przenośnych](../../../docs/standar
  [!code-csharp[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetroloc/cs/blankpage.xaml.cs#1)]
  [!code-vb[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portablemetroloc/vb/blankpage.xaml.vb#1)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Resources.ResourceManager>
 - [Zasoby w aplikacjach klasycznych](../../../docs/framework/resources/index.md)

@@ -10,14 +10,12 @@ helpviewer_keywords:
 - PInvokeStackImbalance MDA
 - managed debugging assistants (MDAs), platform invoke
 ms.assetid: 34ddc6bd-1675-4f35-86aa-de1645d5c631
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 117e0838f78d43bf9ffa555947bf8749830c9840
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: c789e8cb409bd4c59c91d6b646efe428afe7c86d
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74801994"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217240"
 ---
 # <a name="pinvokestackimbalance-mda"></a>PInvokeStackImbalance MDA
 
@@ -28,7 +26,7 @@ Asystent debugowania zarządzanego `PInvokeStackImbalance` (MDA) jest uaktywnian
 > [!NOTE]
 > `PInvokeStackImbalance` MDA jest domyślnie wyłączona. W programie Visual Studio 2017 i nowszych wersjach `PInvokeStackImbalance` MDA pojawia się na liście **asystentów debugowania zarządzanego** w oknie dialogowym **Ustawienia wyjątku** (wyświetlanym po wybraniu opcji **Debuguj** > **Windows** > **Ustawienia wyjątku**). Jednak zaznaczenie lub wyczyszczenie pola wyboru **Przerwij, gdy zostało zgłoszone** , nie powoduje włączenia ani wyłączenia MDA; kontroluje tylko, czy program Visual Studio zgłasza wyjątek podczas aktywowania MDA.
 
-## <a name="symptoms"></a>Symptomy
+## <a name="symptoms"></a>Objawy
 
 Aplikacja napotyka naruszenie zasad dostępu lub uszkodzenie pamięci podczas wykonywania lub po wywołaniu wywołania platformy.
 
@@ -60,7 +58,7 @@ Komunikat MDA zawiera nazwę wywołania metody wywoływanej przez platformę, kt
 </mdaConfig>
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](diagnosing-errors-with-managed-debugging-assistants.md)

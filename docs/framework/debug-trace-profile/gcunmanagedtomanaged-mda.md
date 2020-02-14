@@ -12,19 +12,17 @@ helpviewer_keywords:
 - garbage collection, run-time errors
 - unmanaged to managed garbage collection
 ms.assetid: 103eb3a3-1cf0-4406-8a9a-a7798fdc22d1
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1679f87276262a08f5717ea81d263f4600542971
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: dd4080870ae88da8d4e2055369cd36f3981f2eac
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052762"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216455"
 ---
 # <a name="gcunmanagedtomanaged-mda"></a>gcUnmanagedToManaged MDA
-Asystent `gcUnmanagedToManaged` debugowania zarządzanego (MDA) powoduje wyrzucanie elementów bezużytecznych za każdym razem, gdy wątek przechodzi z niezarządzanych do kodu zarządzanego.  
+Asystent debugowania zarządzanego `gcUnmanagedToManaged` (MDA) powoduje wyrzucanie elementów bezużytecznych za każdym razem, gdy wątek przechodzi z niezarządzanych do kodu zarządzanego.  
   
-## <a name="symptoms"></a>Symptomy  
+## <a name="symptoms"></a>Objawy  
  Aplikacja, która uruchamia niezarządzane składniki użytkownika przy użyciu modelu COM i wywołania platformy, powoduje niedeterministyczne naruszenie dostępu w środowisku CLR.  
   
 ## <a name="cause"></a>Przyczyna  
@@ -49,7 +47,7 @@ Asystent `gcUnmanagedToManaged` debugowania zarządzanego (MDA) powoduje wyrzuca
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](diagnosing-errors-with-managed-debugging-assistants.md)

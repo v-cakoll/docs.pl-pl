@@ -16,19 +16,17 @@ helpviewer_keywords:
 - permissions [.NET Framework], overriding security checks
 - permissions [.NET Framework], assertions
 ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f43ba2963ec447e5193da73452537b2539c51857
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 2bc46714a508990c5ae31b50e7d19a287da2c5c0
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206036"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215823"
 ---
 # <a name="using-the-assert-method"></a>Korzystanie z metody Assert
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- <xref:System.Security.CodeAccessPermission.Assert%2A>to metoda, która może być wywoływana dla klas uprawnień dostępu kodu i <xref:System.Security.PermissionSet> klasy. Za pomocą potwierdzeń można włączyć kod (i obiekty podrzędne wywołujące), aby wykonać akcje, do których Twój kod ma uprawnienia, ale jego obiekty wywołujące mogą nie mieć uprawnień do wykonania. Potwierdzenie zabezpieczeń zmienia normalny proces wykonywany przez środowisko uruchomieniowe podczas sprawdzania zabezpieczeń. Po podaniu uprawnienia Nakazuje systemowi zabezpieczeń, aby nie sprawdzać obiektów wywołujących kod dla potwierdzonego uprawnienia.  
+ <xref:System.Security.CodeAccessPermission.Assert%2A> to metoda, która może być wywoływana dla klas uprawnień dostępu kodu i klasy <xref:System.Security.PermissionSet>. Za pomocą **potwierdzeń** można włączyć kod (i obiekty podrzędne wywołujące), aby wykonać akcje, do których Twój kod ma uprawnienia, ale jego obiekty wywołujące mogą nie mieć uprawnień do wykonania. Potwierdzenie zabezpieczeń zmienia normalny proces wykonywany przez środowisko uruchomieniowe podczas sprawdzania zabezpieczeń. Po podaniu uprawnienia Nakazuje systemowi zabezpieczeń, aby nie sprawdzać obiektów wywołujących kod dla potwierdzonego uprawnienia.  
   
 > [!CAUTION]
 > Należy uważnie używać potwierdzeń, ponieważ mogą one otwierać otwory zabezpieczające i podważać mechanizm środowiska uruchomieniowego w celu wymuszenia ograniczeń zabezpieczeń.  
@@ -39,9 +37,9 @@ ms.locfileid: "70206036"
   
  Potwierdzenie ma wpływ na stos przeszukiwania tylko wtedy, gdy potwierdzone uprawnienie i uprawnienia, które są żądane przez obiekt wywołujący podrzędny, są tego samego typu, a żądanie z uprawnieniami jest podzbiorem potwierdzonego uprawnienia. Na przykład Jeśli postanowisz **FileIOPermission** o odczytaniu wszystkich plików na dysku C i przeniesieniu żądania podrzędnego dla **FileIOPermission** do odczytu plików w katalogu C:\Temp, potwierdzenie może wpłynąć na przechodzenie stosu; Jeśli jednak żądanie dotyczyło **FileIOPermission** zapisu na dysku C, potwierdzenie nie będzie miało żadnego wpływu.  
   
- Aby wykonać potwierdzenia, Twój kod musi mieć przyznane zarówno odpowiednie uprawnienia, jak i <xref:System.Security.Permissions.SecurityPermission> , które reprezentuje prawo do wykonywania potwierdzeń. Mimo że można potwierdzić, że nie przyznano kodu, potwierdzenie byłoby niemożliwe, ponieważ sprawdzenie zabezpieczeń zakończy się niepowodzeniem, aby potwierdzić pomyślne.  
+ Aby wykonać potwierdzenia, Twój kod musi mieć przyznane zarówno odpowiednie uprawnienia, jak i <xref:System.Security.Permissions.SecurityPermission>, które reprezentują prawo do wykonywania potwierdzeń. Mimo że można potwierdzić, że nie przyznano kodu, potwierdzenie byłoby niemożliwe, ponieważ sprawdzenie zabezpieczeń zakończy się niepowodzeniem, aby potwierdzić pomyślne.  
   
- Na poniższej ilustracji pokazano, co się dzieje wprzypadku użycia potwierdzeń. Załóżmy, że następujące instrukcje są prawdziwe o zestawach A, B, C, E i F oraz dwóch uprawnieniach, P1 i P1A:  
+ Na poniższej ilustracji pokazano, co się dzieje w przypadku użycia **potwierdzeń**. Załóżmy, że następujące instrukcje są prawdziwe o zestawach A, B, C, E i F oraz dwóch uprawnieniach, P1 i P1A:  
   
 - P1A reprezentuje prawo do odczytu plików txt na dysku C.  
   
@@ -61,16 +59,16 @@ ms.locfileid: "70206036"
   
  W tym scenariuszu Metoda A wywołuje wywołania B, B wywołuje C, C wywołuje E, i E wywołuje metodę F. Metoda C potwierdza uprawnienie do odczytu plików na dysku C (uprawnienie P1), a metoda E wymaga uprawnień do odczytu plików txt na dysku C (uprawnienia P1A). Gdy w czasie wykonywania zostanie napotkane żądanie w języku F, zostanie wykonane badanie stosu w celu sprawdzenia uprawnień wszystkich wywołujących F, zaczynając od E. E, przyznano uprawnienia P1A, więc stos przeprowadzi badanie uprawnień C, gdzie wykryto potwierdzenie języka C. Ponieważ uprawnienie żądanie (P1A) jest podzbiorem potwierdzonego uprawnienia (P1), przechodzenie przez stos zostanie zatrzymane i sprawdzanie zabezpieczeń zostanie automatycznie zakończone pomyślnie. Nie ma znaczenia, że zestawy A i B nie uzyskały uprawnień P1A. Przez poproszenie P1, metoda C zapewnia, że jej obiekty wywołujące mogą uzyskać dostęp do zasobów chronionych przez P1, nawet jeśli nie udzielono uprawnień dostępu do tego zasobu.  
   
- W przypadku projektowania biblioteki klas i uzyskiwania dostępu do chronionego zasobu należy w większości przypadków zapewnić zapotrzebowanie na zabezpieczenia wymagające, aby wywołujący klasę mieli odpowiednie uprawnienia. Jeśli klasa następnie wykonuje operację, dla której wiadomo, że większość jej obiektów wywołujących nie ma uprawnień, a jeśli wolisz podjąć odpowiedzialność za zezwolenie tym wywołującemu na wywoływanie kodu, możesz postanowić się, wywołując metodę **Assert** na Obiekt uprawnień, który reprezentuje operację wykonywaną przez kod. Użycie metody **Assert** w ten sposób umożliwia wywoływanie, że zwykle nie można to wywołać w kodzie. W związku z tym, jeśli zostanie potwierdzone uprawnienie, należy upewnić się, że odpowiednie sprawdzenia zabezpieczeń zostały wcześniej wykonane, aby zapobiec nieprawidłowemu użyciu składnika.  
+ W przypadku projektowania biblioteki klas i uzyskiwania dostępu do chronionego zasobu należy w większości przypadków zapewnić zapotrzebowanie na zabezpieczenia wymagające, aby wywołujący klasę mieli odpowiednie uprawnienia. Jeśli klasa następnie wykonuje operację, dla której wiadomo, że większość jej obiektów wywołujących nie ma uprawnień, a jeśli wolisz podjąć odpowiedzialność za zezwolenie tym wywołującemu na wywoływanie kodu, możesz postanowić się, wywołując metodę **Assert** w obiekcie uprawnień, który reprezentuje operację wykonywaną przez kod. Użycie metody **Assert** w ten sposób umożliwia wywoływanie, że zwykle nie można to wywołać w kodzie. W związku z tym, jeśli zostanie potwierdzone uprawnienie, należy upewnić się, że odpowiednie sprawdzenia zabezpieczeń zostały wcześniej wykonane, aby zapobiec nieprawidłowemu użyciu składnika.  
   
- Załóżmy na przykład, że Klasa wysoce zaufanej biblioteki ma metodę, która usuwa pliki. Uzyskuje dostęp do pliku, wywołując niezarządzaną funkcję Win32. Obiekt wywołujący wywołuje metodę **usuwania** kodu, przekazując nazwę pliku do usunięcia, C:\test.txt. W ramach metody **delete** kod tworzy <xref:System.Security.Permissions.FileIOPermission> obiekt reprezentujący dostęp do zapisu do C:\test.txt. (Dostęp do zapisu jest wymagany do usunięcia pliku). Kod następnie wywołuje bezwzględne sprawdzenie zabezpieczeń, wywołując metodę **żądania** obiektu **FileIOPermission** . Jeśli jeden z obiektów wywołujących w stosie wywołań nie ma tego uprawnienia, <xref:System.Security.SecurityException> jest zgłaszany. Jeśli żaden wyjątek nie zostanie zgłoszony, wiadomo, że wszyscy wywołujący mają prawo dostępu do C:\Test.txt. Ponieważ sądzisz, że większość obiektów wywołujących nie będzie miała uprawnień dostępu do kodu niezarządzanego, kod następnie tworzy <xref:System.Security.Permissions.SecurityPermission> obiekt, który reprezentuje prawo do wywoływania kodu niezarządzanego i wywołuje metodę **Assert** obiektu. Na koniec wywołuje niezarządzaną funkcję Win32 w celu usunięcia C:\Text.txt i zwraca kontrolę do obiektu wywołującego.  
+ Załóżmy na przykład, że Klasa wysoce zaufanej biblioteki ma metodę, która usuwa pliki. Uzyskuje dostęp do pliku, wywołując niezarządzaną funkcję Win32. Obiekt wywołujący wywołuje metodę **usuwania** kodu, przekazując nazwę pliku do usunięcia, C:\test.txt. W ramach metody **delete** kod tworzy obiekt <xref:System.Security.Permissions.FileIOPermission> reprezentujący dostęp do zapisu do C:\test.txt. (Dostęp do zapisu jest wymagany do usunięcia pliku). Kod następnie wywołuje bezwzględne sprawdzenie zabezpieczeń, wywołując metodę **żądania** obiektu **FileIOPermission** . Jeśli jeden z obiektów wywołujących w stosie wywołań nie ma tego uprawnienia, zostanie zgłoszony <xref:System.Security.SecurityException>. Jeśli żaden wyjątek nie zostanie zgłoszony, wiadomo, że wszyscy wywołujący mają prawo dostępu do C:\Test.txt. Ponieważ sądzisz, że większość obiektów wywołujących nie ma uprawnień dostępu do kodu niezarządzanego, kod następnie tworzy <xref:System.Security.Permissions.SecurityPermission> obiektu, który reprezentuje prawo do wywoływania kodu niezarządzanego i wywołuje metodę **Assert** obiektu. Na koniec wywołuje niezarządzaną funkcję Win32 w celu usunięcia C:\Text.txt i zwraca kontrolę do obiektu wywołującego.  
   
 > [!CAUTION]
 > Musisz się upewnić, że Twój kod nie używa potwierdzeń w sytuacjach, w których kod może być używany przez inny kod w celu uzyskania dostępu do zasobu chronionego przez żądane uprawnienie. Na przykład w kodzie, który zapisuje do pliku, którego nazwa jest określona przez obiekt wywołujący jako parametr, nie **FileIOPermission** do zapisu w plikach, ponieważ kod może być otwarty do niewłaściwego użycia przez inną firmę.  
   
  W przypadku użycia bezwzględnej składni zabezpieczenia wywoływanie metody **Assert** dla wielu uprawnień w tej samej metodzie powoduje zgłoszenie wyjątku zabezpieczeń. Zamiast tego należy utworzyć obiekt **PermissionSet** , przekazać mu poszczególne uprawnienia, które mają zostać wywołane, a następnie wywołać metodę **Assert** dla obiektu **PermissionSet** . Metodę **Assert** można wywołać więcej niż raz w przypadku użycia deklaratywnej składni zabezpieczenia.  
   
- Poniższy przykład pokazuje deklaratywną składnię zastępowania kontroli zabezpieczeń przy użyciu metody **Assert** . Należy zauważyć, że składnia **FileIOPermissionAttribute** przyjmuje dwie wartości: <xref:System.Security.Permissions.SecurityAction> Wyliczenie i lokalizację pliku lub katalogu, do którego ma zostać udzielone uprawnienie. Wywołanie metody **Assert** powoduje, że wymagania dostępu `C:\Log.txt` do programu powiodło się, nawet jeśli obiekty wywołujące nie są sprawdzane w celu uzyskania uprawnień dostępu do pliku.  
+ Poniższy przykład pokazuje deklaratywną składnię zastępowania kontroli zabezpieczeń przy użyciu metody **Assert** . Należy zauważyć, że składnia **FileIOPermissionAttribute** przyjmuje dwie wartości: Wyliczenie <xref:System.Security.Permissions.SecurityAction> i lokalizację pliku lub katalogu, do którego ma zostać udzielone uprawnienie. Wywołanie metody **Assert** powoduje, że wymagania dotyczące dostępu do `C:\Log.txt` powiodło się, nawet jeśli obiekty wywołujące nie są sprawdzane pod kątem uprawnień dostępu do pliku.  
   
 ```vb  
 Option Explicit  
@@ -167,7 +165,7 @@ namespace LogUtil
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Security.PermissionSet>
 - <xref:System.Security.Permissions.SecurityPermission>

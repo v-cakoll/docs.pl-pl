@@ -9,14 +9,12 @@ helpviewer_keywords:
 - secure coding, exception handling
 - exception handling, security
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 256d9c9b825081e3bcfafd6e0e09de825d046d20
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: e0465f2eb6be61e161f5e6b8cadf629a53f11906
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894542"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215784"
 ---
 # <a name="securing-exception-handling"></a>Zabezpieczanie obsługi wyjątków
 W wizualizacjach C++ i Visual Basic, wyrażenie filtru uzupełnia stos działa przed jakąkolwiek instrukcją **finally** . Blok **catch** skojarzony z tym filtrem jest uruchamiany po instrukcji **finally** . Aby uzyskać więcej informacji, zobacz [Używanie wyjątków filtrowanych przez użytkownika](../../standard/exceptions/using-user-filtered-exception-handlers.md). Ta sekcja analizuje implikacje związane z bezpieczeństwem tej kolejności. Rozważmy następujący przykład pseudokodzie, który ilustruje kolejność, w której są uruchamiane instrukcje filtru i **finally** .  
@@ -116,7 +114,7 @@ Thread.CurrentThread.CurrentUICulture)
 End Class  
 ```  
   
- Poprawna poprawka w tym przypadku polega na zawijaniu istniejącego bloku **try**/**finally** w bloku **try**/**catch** . Po prostu wprowadzenie klauzuli **catch-throw** do istniejącego bloku **try**/**finally** nie rozwiąże problemu, jak pokazano w poniższym przykładzie.  
+ Poprawna poprawka w tym przypadku polega na zawijaniu istniejących bloków **try**/**finally** w bloku **try**/**catch** . Po prostu wprowadzamy klauzulę **catch-throw** do istniejącej instrukcji **try**/blok **finally** nie rozwiąże problemu, jak pokazano w poniższym przykładzie.  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -136,7 +134,7 @@ YourObject.YourMethod()
 }  
 ```  
   
- Nie rozwiąże to problemu, ponieważ instrukcja **finally** nie została uruchomiona przed `FilterFunc` formantem get.  
+ Nie rozwiąże to problemu, ponieważ instrukcja **finally** nie została uruchomiona przed pobraniem kontroli przez `FilterFunc`.  
   
  Poniższy przykład rozwiązuje problem, upewniając się, że klauzula **finally** została wykonana przed wystąpieniem wyjątku filtru wyjątków wywołań.  
   
@@ -160,6 +158,6 @@ YourObject.YourMethod()
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Wytyczne dotyczące bezpiecznego programowania](../../standard/security/secure-coding-guidelines.md)

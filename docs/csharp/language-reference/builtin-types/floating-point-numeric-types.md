@@ -1,7 +1,7 @@
 ---
 title: Typy liczbowe zmiennoprzecinkowe — C# odwołanie
-description: Przegląd wbudowanych typów C# zmiennoprzecinkowych
-ms.date: 10/22/2019
+description: 'Poznaj wbudowane typy C# zmiennoprzecinkowe: float, Double i Decimal'
+ms.date: 02/10/2020
 f1_keywords:
 - float
 - float_CSharpKeyword
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 9c8b11f9337ee9de90f2d4d96b5be162713bfcbd
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 95b7f266654bbbcdcd0f81e3aa11cfc94af9f0e5
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093217"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215241"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>Zmiennoprzecinkowe typy liczbowe (C# odwołanie)
 
@@ -50,19 +50,21 @@ Wartość domyślna każdego typu zmiennoprzecinkowego wynosi zero, `0`. Każdy 
 
 Ponieważ typ `decimal` ma większą precyzję i mniejszy zakres niż `float` i `double`, jest on odpowiedni dla obliczeń finansowych i pieniężnych.
 
-W wyrażeniu można mieszać typy [całkowite](integral-numeric-types.md) i typy zmiennoprzecinkowe. W takim przypadku typy całkowite są konwertowane na typy zmiennoprzecinkowe. Obliczanie wyrażenia jest wykonywane zgodnie z następującymi regułami:
+Można mieszać typy [całkowite](integral-numeric-types.md) oraz `float` i `double` typy w wyrażeniu. W takim przypadku typy całkowite są niejawnie konwertowane na jeden z typów zmiennoprzecinkowych i, w razie potrzeby, typ `float` jest niejawnie konwertowany na `double`. Wyrażenie jest oceniane w następujący sposób:
 
-- Jeśli jeden z typów zmiennoprzecinkowych jest `double`, wyrażenie oblicza do `double`lub do wartości [logicznej](bool.md) w porównaniach relacyjnych i równości.
-- Jeśli w wyrażeniu nie ma `double` typu, wyrażenie zwróci `float`lub do wartości [logicznej](bool.md) w porównaniach relacyjnych i równości.
+- Jeśli w wyrażeniu występuje `double`, wyrażenie oblicza `double`lub, aby [`bool`](bool.md) porównania relacyjne i równość.
+- Jeśli w wyrażeniu nie ma `double` typu, wyrażenie oblicza `float`lub, aby `bool` porównania relacyjne i równość.
 
-Wyrażenie zmiennoprzecinkowe może zawierać następujące zestawy wartości:
+Można również mieszać typy całkowite i typ `decimal` w wyrażeniu. W takim przypadku typy całkowite są niejawnie konwertowane na typ `decimal`, a wyrażenie oblicza `decimal`lub do `bool` w porównaniach relacyjnych i równości.
 
-- Dodatnie i ujemne zero
-- Dodatnia i ujemna nieskończoność
-- Wartość niebędąca liczbą (NaN)
-- Skończoną zbiór niezerowych wartości
+Nie można mieszać typu `decimal` z typami `float` i `double` w wyrażeniu. W tym przypadku, jeśli chcesz wykonywać operacje arytmetyczne, porównania lub równości, musisz jawnie skonwertować operandy z lub do typu `decimal`, jak pokazano w poniższym przykładzie:
 
-Aby uzyskać więcej informacji na temat tych wartości, zobacz IEEE Standard for Binary-zmiennoprzecinkowej arytmetycznej, dostępny w witrynie sieci Web [IEEE](https://www.ieee.org) .
+```csharp-interactive
+double a = 1.0;
+decimal b = 2.1m;
+Console.WriteLine(a + (double)b);
+Console.WriteLine((decimal)a + b);
+```
 
 Aby sformatować wartość zmiennoprzecinkową, można użyć [standardowych ciągów formatu liczb](../../../standard/base-types/standard-numeric-format-strings.md) lub [niestandardowych ciągów formatu liczbowego](../../../standard/base-types/custom-numeric-format-strings.md) .
 

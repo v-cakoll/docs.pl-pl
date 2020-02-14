@@ -9,20 +9,18 @@ helpviewer_keywords:
 - context disconnections
 - managed debugging assistants (MDAs), disconnected context
 ms.assetid: 1887d31d-7006-4491-93b3-68fd5b05f71d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 670a32b4d198d2762e0bb51e41297836e471e05b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 3d04e304a6b30fe6fd4deeda5a97007f11ee7b13
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052845"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216549"
 ---
 # <a name="disconnectedcontext-mda"></a>disconnectedContext MDA
-Asystent `disconnectedContext` debugowania zarządzanego (MDA) jest uaktywniany, gdy środowisko CLR próbuje przejść do odłączonego apartamentu lub kontekstu podczas obsługi żądania dotyczącego obiektu com.  
+Asystent debugowania zarządzanego `disconnectedContext` (MDA) jest uaktywniany, gdy środowisko CLR próbuje przejść do odłączonego apartamentu lub kontekstu podczas obsługi żądania dotyczącego obiektu COM.  
   
-## <a name="symptoms"></a>Symptomy  
- Wywołania wywoływanej [otoki środowiska uruchomieniowego](../../standard/native-interop/runtime-callable-wrapper.md) (RCW) są dostarczane do źródłowego składnika COM w bieżącym elemencie Apartment lub Context, a nie na tym, w którym istnieją. Może to spowodować uszkodzenie lub utratę danych, jeśli składnik COM nie jest wielowątkowy, tak jak w przypadku składników jednowątkowego apartamentu (STA). Alternatywnie, jeśli otoka jest samodzielnym serwerem proxy, wywołanie może spowodować wyrzucanie <xref:System.Runtime.InteropServices.COMException> z wynikami HRESULT RPC_E_WRONG_THREAD.  
+## <a name="symptoms"></a>Objawy  
+ Wywołania wywoływanej [otoki środowiska uruchomieniowego](../../standard/native-interop/runtime-callable-wrapper.md) (RCW) są dostarczane do źródłowego składnika COM w bieżącym elemencie Apartment lub Context, a nie na tym, w którym istnieją. Może to spowodować uszkodzenie lub utratę danych, jeśli składnik COM nie jest wielowątkowy, tak jak w przypadku składników jednowątkowego apartamentu (STA). Alternatywnie, jeśli OTOKa jest sama serwerem proxy, wywołanie może spowodować wygenerowanie <xref:System.Runtime.InteropServices.COMException> z wartością HRESULT RPC_E_WRONG_THREAD.  
   
 ## <a name="cause"></a>Przyczyna  
  Obiekt OLE Apartment lub kontekst został zamknięty, gdy środowisko CLR podejmie próbę przejścia do niego. Jest to najczęściej spowodowane tym, że STA apartamentach jest zamykany zanim wszystkie składniki COM będące własnością elementu Apartment zostały całkowicie wydane, może się to zdarzyć w wyniku jawnego wywołania kodu użytkownika na otoki RCW lub gdy samo środowisko CLR operuje na składniku COM. na przykład gdy środowisko CLR zwalnia składnik COM, gdy skojarzona Otoka RCW została odtworzona.  
@@ -46,7 +44,7 @@ Asystent `disconnectedContext` debugowania zarządzanego (MDA) jest uaktywniany,
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](diagnosing-errors-with-managed-debugging-assistants.md)

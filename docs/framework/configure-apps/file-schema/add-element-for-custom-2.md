@@ -7,20 +7,18 @@ helpviewer_keywords:
 - add Element
 - <add> Element
 ms.assetid: 0d4ddb53-eb2b-49c0-9c33-a8dec5c39b46
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ac07fc9ba6f030209a5e0d0160689fab95bc1b4a
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 57722f3518fad12cb8e6e35d68f40bb8465bdd86
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088762"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215439"
 ---
 # <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<dodać elementu > dla NameValueSectionHandler i DictionarySectionHandler
 
 Dodaje niestandardowe ustawienia aplikacji. Każdy **\<Dodaj tag >** zawiera parę klucz/wartość.
 
-[ **\<configuration >** ](configuration-element.md) \
+[ **\<> konfiguracji**](configuration-element.md)\
 &nbsp;&nbsp;[ **\<sectionname >** ](custom-element-2.md)\
 &nbsp;&nbsp;&nbsp;&nbsp; **\<dodaj >**
 
@@ -34,7 +32,7 @@ Dodaje niestandardowe ustawienia aplikacji. Każdy **\<Dodaj tag >** zawiera par
 
 | Atrybut | Opis |
 | --------- | ----------- |
-| **głównych**   | Atrybut wymagany.<br><br>Określa nazwę ustawienia. |
+| **Klucz**   | Atrybut wymagany.<br><br>Określa nazwę ustawienia. |
 | **value** | Atrybut wymagany.<br><br>Określa wartość ustawienia. |
 
 ## <a name="parent-element"></a>Element nadrzędny
@@ -45,7 +43,7 @@ Dodaje niestandardowe ustawienia aplikacji. Każdy **\<Dodaj tag >** zawiera par
 
 ## <a name="child-elements"></a>Elementy podrzędne
 
-Brak
+None
 
 ## <a name="example"></a>Przykład
 
@@ -66,6 +64,6 @@ Poniższy przykład pokazuje, jak zdefiniować sekcję konfiguracji niestandardo
 
 Tego elementu można użyć w pliku konfiguracyjnym aplikacji, pliku konfiguracji komputera (*Machine. config*) i plikach *Web. config* , które nie znajdują się na poziomie katalogu aplikacji.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Schemat pliku konfiguracji dla .NET Framework](index.md)

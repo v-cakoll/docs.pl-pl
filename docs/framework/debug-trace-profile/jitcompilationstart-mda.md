@@ -7,19 +7,17 @@ helpviewer_keywords:
 - JitCompilationStart MDA
 - managed debugging assistants (MDAs), JIT compilation
 ms.assetid: 5ffd2857-d0ba-4342-9824-9ffe04ec135d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fa6d3832dcd842631d290e046b5e32908ce4bb7e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 9cae942bc01e9263720dbfe9acfb21bbb70bc548
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052525"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216261"
 ---
 # <a name="jitcompilationstart-mda"></a>jitCompilationStart MDA
-Asystent `jitCompilationStart` debugowania zarządzanego (MDA) jest aktywowany do raportowania, gdy kompilator just in Time (JIT) rozpocznie Kompilowanie funkcji.  
+Asystent debugowania zarządzanego `jitCompilationStart` (MDA) jest aktywowany w celu raportowania, gdy kompilator just in Time (JIT) rozpocznie Kompilowanie funkcji.  
   
-## <a name="symptoms"></a>Symptomy  
+## <a name="symptoms"></a>Objawy  
  Rozmiar zestawu roboczego rośnie dla programu, który jest już w formacie obrazu natywnego, ponieważ MSCORJIT. dll jest ładowany do procesu.  
   
 ## <a name="cause"></a>Przyczyna  
@@ -157,7 +155,7 @@ namespace ns2
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](diagnosing-errors-with-managed-debugging-assistants.md)

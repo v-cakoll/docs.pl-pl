@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Tworzenie i inicjowanie źródeł śledzenia'
+title: 'Porady: tworzenie i inicjowanie źródeł śledzenia'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,17 +9,15 @@ helpviewer_keywords:
 - initializing trace sources
 - configuration files [.NET Framework], trace sources
 ms.assetid: f88dda6f-5fda-45be-9b3c-745a9b708c4d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: cab9cc33bd5a4697cac5de85de8aa72e7eb4d6c6
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: ae5e98a1ebf3753b24127f96ed563eba27eea2fb
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052704"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217427"
 ---
-# <a name="how-to-create-and-initialize-trace-sources"></a>Instrukcje: Tworzenie i inicjowanie źródeł śledzenia
-<xref:System.Diagnostics.TraceSource> Klasa jest używana przez aplikacje do tworzenia śladów, które mogą być skojarzone z aplikacją. <xref:System.Diagnostics.TraceSource>oferuje metody śledzenia, które umożliwiają łatwe śledzenie zdarzeń, danych śledzenia i wystawianie śladów informacyjnych. Dane wyjściowe śledzenia <xref:System.Diagnostics.TraceSource> z można utworzyć i zainicjować przy użyciu plików konfiguracyjnych lub bez nich. Ten temat zawiera instrukcje dotyczące obu tych opcji. Zaleca się jednak używanie plików konfiguracji w celu ułatwienia ponownej konfiguracji śladów generowanych przez źródła śledzenia w czasie wykonywania.  
+# <a name="how-to-create-and-initialize-trace-sources"></a>Porady: tworzenie i inicjowanie źródeł śledzenia
+Klasa <xref:System.Diagnostics.TraceSource> jest używana przez aplikacje do tworzenia śladów, które mogą być skojarzone z aplikacją. <xref:System.Diagnostics.TraceSource> udostępnia metody śledzenia, które umożliwiają łatwe śledzenie zdarzeń, danych śledzenia i wystawianie śladów informacyjnych. Dane wyjściowe śledzenia z <xref:System.Diagnostics.TraceSource> mogą być tworzone i inicjowane przy użyciu plików konfiguracyjnych lub bez nich. Ten temat zawiera instrukcje dotyczące obu tych opcji. Zaleca się jednak używanie plików konfiguracji w celu ułatwienia ponownej konfiguracji śladów generowanych przez źródła śledzenia w czasie wykonywania.  
   
 ### <a name="to-create-and-initialize-a-trace-source-using-a-configuration-file"></a>Aby utworzyć i zainicjować Źródło śledzenia przy użyciu pliku konfiguracji  
   
@@ -69,7 +67,7 @@ ms.locfileid: "71052704"
   
      Plik konfiguracji inicjuje ustawienia dla źródła śledzenia w momencie zainicjowania aplikacji. Aplikacja może dynamicznie zmieniać właściwości ustawiane przez plik konfiguracji w celu zastąpienia wszelkich ustawień określonych przez użytkownika. Można na przykład upewnić się, że komunikaty krytyczne są zawsze wysyłane do pliku tekstowego, niezależnie od bieżących ustawień konfiguracji. Przykładowy kod demonstruje sposób przesłania ustawień pliku konfiguracji, aby zapewnić, że krytyczne komunikaty są wyprowadzane do odbiorników śledzenia.  
   
-     Zmiana ustawień pliku konfiguracji w trakcie wykonywania aplikacji nie powoduje zmiany ustawień początkowych. Aby zmienić ustawienia, należy ponownie uruchomić aplikację lub programowo odświeżyć aplikację przy użyciu <xref:System.Diagnostics.Trace.Refresh%2A?displayProperty=nameWithType> metody.  
+     Zmiana ustawień pliku konfiguracji w trakcie wykonywania aplikacji nie powoduje zmiany ustawień początkowych. Aby zmienić ustawienia, należy ponownie uruchomić aplikację lub programowo odświeżyć aplikację przy użyciu metody <xref:System.Diagnostics.Trace.Refresh%2A?displayProperty=nameWithType>.  
   
 ### <a name="to-initialize-trace-sources-listeners-and-filters-without-a-configuration-file"></a>Aby zainicjować źródła śledzenia, detektory i filtry bez pliku konfiguracji  
   
@@ -78,7 +76,7 @@ ms.locfileid: "71052704"
      [!code-csharp[TraceSourceExample2#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tracesourceexample2/cs/program.cs#1)]
      [!code-vb[TraceSourceExample2#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample2/vb/program.vb#1)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TextWriterTraceListener>

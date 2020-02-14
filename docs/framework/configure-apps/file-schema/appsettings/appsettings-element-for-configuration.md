@@ -7,21 +7,19 @@ helpviewer_keywords:
 - appSettings Element
 - <appSettings> Element
 ms.assetid: 39694cc4-6b84-45a6-9329-385a0d8b48fe
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6112d87afcca8b2f54508d03d3ea4c0781d7e475
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 47d7648aae08544890a4dd2e42cedbf68a8acc72
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119268"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214732"
 ---
 # <a name="appsettings-element-for-configuration"></a>\<appSettings > elementu \<Configuration >
 
 Zawiera niestandardowe ustawienia aplikacji. Jest to wstępnie zdefiniowana sekcja konfiguracji udostępniona przez .NET Framework.
 
 [ **\<> konfiguracji**](../configuration-element.md)   
-&nbsp;&nbsp; **\<appSettings>**
+&nbsp;&nbsp; **\<appSettings >**
 
 ## <a name="syntax"></a>Składnia
 
@@ -47,9 +45,9 @@ Zawiera niestandardowe ustawienia aplikacji. Jest to wstępnie zdefiniowana sekc
 
 |     | Opis |
 | --- | ----------- |
-| [ **\<add>** ](add-element-for-appsettings.md) | Dodaje niestandardowe ustawienie aplikacji. |
-| [ **\<clear>** ](clear-element-for-appsettings.md) | Czyści wszystkie wcześniej zdefiniowane ustawienia aplikacji. |
-| [ **\<remove>** ](remove-element-for-appsettings.md) | Usuwa poprzednio zdefiniowane ustawienie aplikacji. |
+| [ **\<Dodaj >** ](add-element-for-appsettings.md) | Dodaje niestandardowe ustawienie aplikacji. |
+| [ **\<Wyczyść >** ](clear-element-for-appsettings.md) | Czyści wszystkie wcześniej zdefiniowane ustawienia aplikacji. |
+| [ **\<Usuń >** ](remove-element-for-appsettings.md) | Usuwa poprzednio zdefiniowane ustawienie aplikacji. |
 
 ## <a name="remarks"></a>Uwagi
 
@@ -84,6 +82,6 @@ Poniższy przykład przedstawia plik konfiguracji aplikacji, który używa ustaw
 
 Tego elementu można użyć w pliku konfiguracyjnym aplikacji, pliku konfiguracji komputera (*Machine. config*) i plikach *Web. config* , które nie znajdują się na poziomie katalogu aplikacji.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Schemat pliku konfiguracji dla .NET Framework](../index.md)

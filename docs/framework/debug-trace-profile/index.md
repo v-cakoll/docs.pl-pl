@@ -13,14 +13,12 @@ helpviewer_keywords:
 - troubleshooting applications [.NET Framework]
 - application development [.NET Framework], profiling
 ms.assetid: 4a04863e-2475-46f4-bc3f-3c11510c2a4b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 43e9438ed2c1cd82bb4d89ff082545021b2d543e
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 1a43c7fbcb810b22ff9bc409c233d2b1da67370e
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73195343"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217406"
 ---
 # <a name="debugging-tracing-and-profiling"></a>Debugowanie, śledzenie i profilowanie
 Aby debugować aplikację .NET Framework, środowisko kompilatora i środowiska uruchomieniowego musi być skonfigurowane tak, aby umożliwić debugerowi dołączenie do aplikacji i tworzenie zarówno symboli, jak i map wierszy, jeśli jest to możliwe, dla aplikacji i jej odpowiadającego pośredniego firmy Microsoft język (MSIL). Po debugowaniu aplikacji zarządzanej można ją profilować w celu zwiększenia wydajności. Profilowanie szacuje i opisuje wiersze kodu źródłowego, które generują najczęściej wykonywany kod, oraz czas ich wykonania.  

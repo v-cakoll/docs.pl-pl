@@ -7,14 +7,12 @@ helpviewer_keywords:
 - security-transparent code
 - security-critical code
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ea782b346f6c53664a8aeb736c7d7a4509d83985
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 7ac5660c2c431505f4992f5e687974c2b9d06672
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974944"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216995"
 ---
 # <a name="security-transparent-code-level-2"></a>Kod o przezroczystym poziomie bezpieczeństwa, poziom 2
 
@@ -179,7 +177,7 @@ Możesz pominąć weryfikację dla w pełni zaufanych, przezroczystych zestawów
 
 Właściwość <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> jest `false` domyślnie, więc właściwość musi być ustawiona na `true`, aby pominąć weryfikację. Należy to zrobić tylko w celach optymalizacji. Upewnij się, że przezroczysty kod w zestawie jest możliwy do zweryfikowania przy użyciu opcji `transparent` w [narzędziu PEVerify](../tools/peverify-exe-peverify-tool.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Kod przezroczysty pod względem zabezpieczeń, poziom 1](security-transparent-code-level-1.md)
 - [Zmiany zabezpieczeń](../security/security-changes.md)

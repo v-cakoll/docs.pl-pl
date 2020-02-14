@@ -5,14 +5,12 @@ helpviewer_keywords:
 - transparent code
 - security-transparent code
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f90b64b5e9ab5a167333a594ace7f247b1b2b7e7
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ca251ec3084d40269b107e7bd8bef708e8d49622
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975529"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215835"
 ---
 # <a name="security-transparent-code"></a>Kod o przezroczystym poziomie bezpieczeństwa
 
@@ -96,7 +94,7 @@ Model przejrzystości poziomu 1 ma następujące ograniczenia:
 
 Reguły przezroczystości nie są wymuszane, dopóki nie zostanie obliczona przezroczystość. W tym czasie <xref:System.InvalidOperationException> jest zgłaszany w przypadku naruszenia reguły przezroczystości. Czas obliczania przejrzystości zależy od wielu czynników i nie może być przewidywany. Jest on obliczany możliwie najpóźniej. W .NET Framework 4, obliczanie przejrzystości na poziomie zestawu odbywa się szybciej, niż w .NET Framework 2,0. Jedyną gwarancją jest to, że Obliczanie przejrzystości będzie odbywać się przez czas, gdy jest to konieczne. Jest to podobne do sposobu, w jaki kompilator just-in-Time (JIT) może zmienić punkt po skompilowaniu metody i wykryciu wszelkich błędów w tej metodzie. Obliczanie przezroczystości jest niewidoczne, jeśli kod nie ma błędów przezroczystości.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Kod przezroczysty pod względem zabezpieczeń, poziom 1](security-transparent-code-level-1.md)
 - [Kod przezroczysty pod względem zabezpieczeń, poziom 2](security-transparent-code-level-2.md)

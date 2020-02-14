@@ -7,15 +7,13 @@ helpviewer_keywords:
 - .NET Framework out-of-band releases
 - out-of-band releases
 ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
-author: mairaw
-ms.author: mairaw
 ms.topic: conceptual
-ms.openlocfilehash: e1e2af584c73b1c0b2548cdd3fcbd8517dfa330d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3a5134aa4407598e223fd2c938bfaac02cf9178c
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429338"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215526"
 ---
 # <a name="additional-class-libraries-and-apis"></a>Dodatkowe biblioteki klas i interfejsy API
 
@@ -25,7 +23,7 @@ Ponadto niektóre biblioteki są przeznaczone dla określonych platform lub impl
   
 ## <a name="oob-projects"></a>Projekty OOB
   
-| Projekt | Opis |  
+| {1&gt;Projekt&lt;1} | Opis |  
 | ------- | ----------- |  
 | <xref:System.Collections.Immutable> | Zapewnia kolekcje, które są bezpieczne dla wątków i gwarantują, że nigdy nie zmieniają ich zawartości. |
 | <xref:System.Net.Http.WinHttpHandler> | Zapewnia obsługę komunikatów dla <xref:System.Net.Http.HttpClient> w oparciu o interfejs WinHTTP systemu Windows. |
@@ -34,7 +32,7 @@ Ponadto niektóre biblioteki są przeznaczone dla określonych platform lub impl
 
 ## <a name="platform-specific-libraries"></a>Biblioteki charakterystyczne dla platformy
   
-| Projekt | Opis |  
+| {1&gt;Projekt&lt;1} | Opis |  
 | ------- | ----------- |  
 | <xref:System.Text.CodePagesEncodingProvider> | Rozszerza klasę <xref:System.Text.EncodingProvider>, aby umożliwić dostęp do kodowania stron kodowych aplikacjom przeznaczonym dla platforma uniwersalna systemu Windows. |  
   
@@ -92,6 +90,6 @@ Te interfejsy API obsługują infrastrukturę produktu i nie są przeznaczone do
 * [stdole. StdFont, interfejs](stdole.stdfont.md)
 * [stdole. StdPicture, interfejs](stdole.stdpicture.md)
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 * [Program .NET Framework i wydania poza harmonogramem (OOB)](../get-started/the-net-framework-and-out-of-band-releases.md)

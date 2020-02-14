@@ -7,20 +7,18 @@ helpviewer_keywords:
 - add Element
 - <add> Element
 ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 865c693bf8f23bf050064ac097b72aa6fa3b371e
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 5c7de79ec626966e71d461dd3865b294a8979db2
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088745"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214816"
 ---
 # <a name="add-element-for-appsettings"></a>\<dodać > elementu \<appSettings >
 
 Dodaje niestandardowe ustawienie aplikacji.
 
-[ **\<configuration >** ](../configuration-element.md) \
+[ **\<> konfiguracji**](../configuration-element.md)\
 &nbsp;&nbsp;[ **\<appSettings >** ](appsettings-element-for-configuration.md)\
 &nbsp;&nbsp;&nbsp;&nbsp; **\<dodaj >**
 
@@ -36,7 +34,7 @@ Dodaje niestandardowe ustawienie aplikacji.
 
 |           | Opis |
 | --------- | ----------- |
-| **głównych**   | Atrybut wymagany.<br><br>Określa nazwę klucza do dodania. |
+| **Klucz**   | Atrybut wymagany.<br><br>Określa nazwę klucza do dodania. |
 | **value** | Atrybut wymagany.<br><br>Określa wartość klucza do dodania. |
 
 ## <a name="parent-element"></a>Element nadrzędny
@@ -47,7 +45,7 @@ Dodaje niestandardowe ustawienie aplikacji.
 
 ## <a name="child-elements"></a>Elementy podrzędne
 
-Brak
+None
 
 ## <a name="example"></a>Przykład
 
@@ -68,6 +66,6 @@ Poniższy przykład używa elementu `<add>`, aby zdefiniować dwa ustawienia zgo
 </appSettings>
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Schemat pliku konfiguracji dla .NET Framework](../index.md)

@@ -6,21 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - custom element
 ms.assetid: e62056c6-b351-40eb-afc0-cc13fc44e45e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ac2d01121e81b545556fb082fa7b82c31cccf9da
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1d0431085a04d3fb817dfe0883779acc4d693084
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73118835"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214783"
 ---
 # <a name="custom-element-for-singletagsectionhandler"></a>Element niestandardowy dla SingleTagSectionHandler
 
 Definiuje ustawienia w sekcji konfiguracji niestandardowej zdefiniowanej przez \<sekcję > elementu i używa klasy <xref:System.Configuration.SingleTagSectionHandler>.
 
 [ **\<> konfiguracji**](configuration-element.md)   
-&nbsp;&nbsp; *\<sectionName>*
+&nbsp;&nbsp; *\<sectionname >*
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,7 +38,7 @@ Atrybuty i wartości atrybutów są zdefiniowane przez użytkownika.
 
 ## <a name="child-elements"></a>Elementy podrzędne
 
-Brak
+None
 
 ## <a name="remarks"></a>Uwagi
 
@@ -66,6 +64,6 @@ Poniższy przykład deklaruje element niestandardowy o nazwie **\<sampleSection 
 
 Tego elementu można użyć w pliku konfiguracyjnym aplikacji, pliku konfiguracji komputera (*Machine. config*) i plikach *Web. config* , które nie znajdują się na poziomie katalogu aplikacji.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Schemat pliku konfiguracji dla .NET Framework](index.md)

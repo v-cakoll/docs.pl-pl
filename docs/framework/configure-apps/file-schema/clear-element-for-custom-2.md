@@ -7,20 +7,18 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: ff2294ec-fb82-4b0c-933e-ae185433fc7b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fff5a5c2a523480f2eaebb127ec98ff6e9908acf
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: f6d860f35d22002030ffa3d09dd0d8a96116bf5e
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088714"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214745"
 ---
 # <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<Wyczyść element > dla NameValueSectionHandler i DictionarySectionHandler
 
 Czyści wszystkie poprzednio zdefiniowane ustawienia w sekcji.
 
-[ **\<configuration >** ](configuration-element.md) \
+[ **\<> konfiguracji**](configuration-element.md)\
 &nbsp;&nbsp;[ **\<sectionname >** ](custom-element-2.md)\
 &nbsp;&nbsp;&nbsp;&nbsp; **\<wyczyść >**
 
@@ -32,7 +30,7 @@ Czyści wszystkie poprzednio zdefiniowane ustawienia w sekcji.
 
 ## <a name="attributes"></a>Atrybuty
 
-Brak
+None
 
 ## <a name="parent-element"></a>Element nadrzędny
 
@@ -42,7 +40,7 @@ Brak
 
 ## <a name="child-elements"></a>Elementy podrzędne
 
-Brak
+None
 
 ## <a name="remarks"></a>Uwagi
 
@@ -67,7 +65,7 @@ Następujący kod pliku konfiguracji komputera deklaruje sekcję **\<sekcji >** 
 </configuration>
 ```
 
-Następujący kod pliku konfiguracyjnego aplikacji usuwa wszystkie ustawienia z **\<sekcji >** . Aplikacja nie może pobrać z ustawień, które zostały zadeklarowane w sekcji **\<** sekcji w pliku konfiguracji maszyny.
+Następujący kod pliku konfiguracyjnego aplikacji usuwa wszystkie ustawienia z **\<sekcji >** . Aplikacja nie może pobrać z ustawień, które zostały zadeklarowane w sekcji **>\<** sekcji w pliku konfiguracji maszyny.
 
 ```xml
 <!-- Application configuration file -->
@@ -82,6 +80,6 @@ Następujący kod pliku konfiguracyjnego aplikacji usuwa wszystkie ustawienia z 
 
 Tego elementu można użyć w pliku konfiguracyjnym aplikacji, pliku konfiguracji komputera (*Machine. config*) i plikach *Web. config* , które nie znajdują się na poziomie katalogu aplikacji.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Schemat pliku konfiguracji dla .NET Framework](index.md)

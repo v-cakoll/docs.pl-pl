@@ -11,19 +11,17 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), marshaling
 - invalid function pointers
 ms.assetid: 99ae44f1-783e-49a9-9009-24f54bbd0f09
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6e3e64a720d12426fb066619b46c73402d1113e0
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 723f51e14c314bde40c34d629ba7fc4f6276c633
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052625"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217379"
 ---
 # <a name="invalidfunctionpointerindelegate-mda"></a>invalidFunctionPointerInDelegate MDA
-Asystent `invalidFunctionPointerInDelegate` debugowania zarządzanego (MDA) jest uaktywniany po przekazaniu nieprawidłowego wskaźnika funkcji do konstruowania delegata przez wskaźnik funkcji natywnej.  
+Asystent debugowania zarządzanego `invalidFunctionPointerInDelegate` (MDA) jest uaktywniany po przekazaniu nieprawidłowego wskaźnika funkcji do konstruowania delegata przez wskaźnik funkcji natywnej.  
   
-## <a name="symptoms"></a>Symptomy  
+## <a name="symptoms"></a>Objawy  
  Naruszenia zasad dostępu lub nieoczekiwane uszkodzenie pamięci podczas używania delegata na wskaźniku funkcji.  
   
 ## <a name="cause"></a>Przyczyna  
@@ -48,7 +46,7 @@ Asystent `invalidFunctionPointerInDelegate` debugowania zarządzanego (MDA) jest
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](diagnosing-errors-with-managed-debugging-assistants.md)

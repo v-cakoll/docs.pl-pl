@@ -1,14 +1,13 @@
 ---
 title: Ciągła integracja (CI) z zestaw .NET Core SDK i narzędziami
 description: Dowiedz się, jak używać zestaw .NET Core SDK i narzędzi na serwerze kompilacji z ciągłą integracją.
-author: mairaw
 ms.date: 05/18/2017
-ms.openlocfilehash: 65d062fce2f364932ebf8091bd9c6cdef561b633
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: bdb3913cbe588377d9fbee0f1c054e682629ac96
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714116"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215230"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>Używanie zestaw .NET Core SDK i narzędzi w ciągłej integracji (CI)
 
@@ -141,7 +140,7 @@ install:
   # See appveyor.yml example for install script
 ```
 
-### <a name="azure-devops-services"></a>Azure DevOps Services
+### <a name="azure-devops-services"></a>Usługa Azure DevOps Services
 
 Skonfiguruj Azure DevOps Services do kompilowania projektów .NET Core przy użyciu jednej z następujących metod:
 
@@ -174,6 +173,6 @@ W większości tego dokumentu opisano, jak uzyskać narzędzia .NET Core i skonf
 
 Dwa ogólne podejścia do tworzenia struktury procesu kompilacji dla kodu platformy .NET Core przy użyciu narzędzi .NET Core Tools używają programu MSBuild bezpośrednio lub przy użyciu poleceń wiersza polecenia programu .NET Core. Podejście, które należy podjąć, zależy od poziomu komfortu i podejść. Program MSBuild umożliwia wyrażanie procesu kompilacji jako zadań i obiektów docelowych, ale zawiera dodaną złożoność uczenia składni pliku projektu programu MSBuild. Korzystanie z narzędzi wiersza polecenia platformy .NET Core może być prostsze, ale wymaga to zapisania logiki aranżacji w języku skryptowym, takim jak `bash` lub PowerShell.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Pliki do pobrania dla platformy .NET — Linux](https://dotnet.microsoft.com/download?initial-os=linux)

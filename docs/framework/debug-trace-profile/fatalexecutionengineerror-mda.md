@@ -12,19 +12,17 @@ helpviewer_keywords:
 - FatalExecutionEngineError MDA
 - managed debugging assistants (MDAs), fatal errors
 ms.assetid: 8b559e44-2393-4e4e-8160-7558d37a4a89
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3fd58ae8f73fd932df641ea96a44ff618dd139e2
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e25c9ef6ec43089f1d85479d1afe301232ed1d4f
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052806"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217490"
 ---
 # <a name="fatalexecutionengineerror-mda"></a>fatalExecutionEngineError MDA
-Asystent `fatalExecutionEngineError` debugowania zarządzanego (MDA) jest uaktywniany w przypadku wykrycia błędu krytycznego w środowisku uruchomieniowym języka wspólnego (CLR). Proces zostanie zakończony.  
+Asystent debugowania zarządzanego `fatalExecutionEngineError` (MDA) jest uaktywniany w przypadku wykrycia błędu krytycznego w środowisku uruchomieniowym języka wspólnego (CLR). Proces zostanie zakończony.  
   
-## <a name="symptoms"></a>Symptomy  
+## <a name="symptoms"></a>Objawy  
  Nieoczekiwane zakończenie procesu. Nie można ustalić innych objawów, ponieważ awaria środowiska CLR może wystąpić z różnych powodów.  
   
 ## <a name="cause"></a>Przyczyna  
@@ -73,7 +71,7 @@ Asystent `fatalExecutionEngineError` debugowania zarządzanego (MDA) jest uaktyw
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
 - <xref:System.Runtime.ConstrainedExecution.Cer>

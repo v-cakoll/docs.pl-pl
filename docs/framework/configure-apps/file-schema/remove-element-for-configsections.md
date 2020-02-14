@@ -7,20 +7,18 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: ae4d82e0-e8fe-468c-81ab-46d63c4d66a8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: efc7208aa51cbf6abdb2fe151d48071c0aa95b5c
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 99d67bd621390789993caa4862e5ce379135eb92
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089052"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215390"
 ---
 # <a name="remove-element-for-configsections"></a>\<usunąć > elementu \<configSections >
 
 Usuwa wstępnie zdefiniowaną sekcję lub grupę sekcji.
 
-[ **\<configuration >** ](configuration-element.md) \
+[ **\<> konfiguracji**](configuration-element.md)\
 &nbsp;&nbsp;[ **\<configSections >** ](configsections-element-for-configuration.md)\
 &nbsp;&nbsp;&nbsp;&nbsp; **\<usuń >**
 
@@ -44,7 +42,7 @@ Usuwa wstępnie zdefiniowaną sekcję lub grupę sekcji.
 
 ## <a name="child-elements"></a>Elementy podrzędne
 
-Brak
+None
 
 ## <a name="remarks"></a>Uwagi
 
@@ -84,6 +82,6 @@ Poniższy kod pliku konfiguracji aplikacji usuwa sekcję **\<sampleSection >** .
 
 Tego elementu można użyć w pliku konfiguracyjnym aplikacji, pliku konfiguracji komputera (*Machine. config*) i plikach *Web. config* , które nie znajdują się na poziomie katalogu aplikacji.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Schemat pliku konfiguracji dla .NET Framework](index.md)

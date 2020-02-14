@@ -1,14 +1,13 @@
 ---
 title: Tworzenie kompletnego rozwiązania .NET Core przy użyciu Visual Studio dla komputerów Mac
 description: W tym artykule omówiono tworzenie rozwiązania .NET Core, które obejmuje biblioteki wielokrotnego użytku i testy jednostkowe.
-author: mairaw
 ms.date: 12/19/2019
-ms.openlocfilehash: f4284cd4c3c8b358b87c31c0fd5c067b1e7fb8a2
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: dea23da33912de849f0dcbe1e2f6fa3edb3a5e24
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715348"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215207"
 ---
 # <a name="build-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Tworzenie kompletnego rozwiązania .NET Core w systemie macOS przy użyciu Visual Studio dla komputerów Mac
 
@@ -36,7 +35,7 @@ Aby uzyskać więcej informacji na temat wymagań wstępnych, zobacz [zależnoś
    > [!div class="mx-imgBorder"]
    > okno dialogowe ![Visual Studio dla komputerów Mac nowego projektu](./media/using-on-mac-vs-full-solution/visual-studio-mac-new-project.png)
 
-1. Nadaj projektowi nazwę "textnarzędzis" (krótka nazwa "programów tekstowych") i rozwiązanie "WordCounter". Pozostaw pole wyboru **Utwórz katalog projektu w katalogu rozwiązania** . Wybierz **tworzenie**.
+1. Nadaj projektowi nazwę "textnarzędzis" (krótka nazwa "programów tekstowych") i rozwiązanie "WordCounter". Pozostaw pole wyboru **Utwórz katalog projektu w katalogu rozwiązania** . Wybierz pozycję **Utwórz**.
 
    > [!div class="mx-imgBorder"]
    > ![Visual Studio dla komputerów Mac opcje okna dialogowego Nowy projekt](./media/using-on-mac-vs-full-solution/visual-studio-mac-new-project-options.png)
@@ -208,6 +207,6 @@ Testy jednostkowe zapewniają zautomatyzowane testowanie oprogramowania podczas 
 
 Można użyć tego samego procesu do debugowania kodu przy użyciu projektu testu jednostkowego. Zamiast uruchamiać projekt aplikacji WordCount, kliknij pozycję projekt **biblioteki testowej** , a następnie wybierz pozycję **Rozpocznij debugowanie projektu** z menu kontekstowego. Visual Studio dla komputerów Mac uruchamia projekt testowy z dołączonym debugerem. Wykonanie zostanie zatrzymane na dowolnym punkcie przerwania, który został dodany do projektu testowego lub kodu biblioteki źródłowej.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Visual Studio 2019 dla komputerów Mac — Informacje o wersji](/visualstudio/releasenotes/vs2019-mac-relnotes)

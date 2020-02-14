@@ -1,7 +1,5 @@
 ---
 title: Exception. PrepForRemoting — Metoda (system)
-author: mairaw
-ms.author: mairaw
 ms.date: 10/08/2019
 topic_type:
 - apiref
@@ -11,14 +9,14 @@ api_location:
 - mscorlib.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 057390d64f70d3cb8eba7d4b29b94570fdca77e3
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: ce1c24578690a1643b7f5af0e44eaae95ed7b0a2
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72405033"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214898"
 ---
-# <a name="exceptionprepforremoting-method"></a>Exception. PrepForRemoting, Metoda
+# <a name="exceptionprepforremoting-method"></a>Metoda Exception.PrepForRemoting
 
 Zachowuje ślad stosu po stronie serwera, dołączając go do wiadomości przed ponownym wyrzucaniem wyjątku w lokacji wywołania klienta.
 
@@ -29,7 +27,7 @@ internal Exception PrepForRemoting();
 ## <a name="returns"></a>Zwraca
 
 <xref:System.Exception>  
-To <xref:System.Exception> wystąpienie.
+To wystąpienie <xref:System.Exception>.
 
 ## <a name="remarks"></a>Uwagi
 

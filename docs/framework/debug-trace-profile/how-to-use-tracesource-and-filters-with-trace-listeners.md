@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Użycie TraceSource i filtrów z obiektami nasłuchującymi śledzenia'
+title: 'Porady: użycie TraceSource i filtrów z obiektami nasłuchującymi śledzenia'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - initializing trace listeners
@@ -14,19 +14,17 @@ helpviewer_keywords:
 - trace listeners, filters
 - trace listeners, initializing
 ms.assetid: 21dc2169-947d-453a-b0e2-3dac3ba0cc9f
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a1e214266b66f390fecffe802270a4181a6d7a7f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 53cdce767d437c47aab94e883381954f8cf70653
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052686"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215923"
 ---
-# <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>Instrukcje: Użycie TraceSource i filtrów z obiektami nasłuchującymi śledzenia
-Jedną z nowych funkcji w .NET Framework wersja 2,0 to udoskonalony system śledzenia. Podstawowa lokalna jest niezmieniona: komunikaty śledzenia są wysyłane przez przełączniki do odbiorników, które raportują dane na skojarzonym nośniku wyjściowym. Podstawową różnicą w wersji 2,0 jest to, że ślady mogą być inicjowane <xref:System.Diagnostics.TraceSource> za pomocą wystąpień klasy. <xref:System.Diagnostics.TraceSource>jest przeznaczony do działania jako udoskonalony system śledzenia i może być używany zamiast metod statycznych starszych <xref:System.Diagnostics.Trace> i <xref:System.Diagnostics.Debug> śledzenia klas. Znane i <xref:System.Diagnostics.Trace> <xref:System.Diagnostics.Debug> podobne klasy nadal istnieją, ale zalecane jest użycie <xref:System.Diagnostics.TraceSource> klasy do śledzenia.  
+# <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>Porady: użycie TraceSource i filtrów z obiektami nasłuchującymi śledzenia
+Jedną z nowych funkcji w .NET Framework wersja 2,0 to udoskonalony system śledzenia. Podstawowa lokalna jest niezmieniona: komunikaty śledzenia są wysyłane przez przełączniki do odbiorników, które raportują dane na skojarzonym nośniku wyjściowym. Podstawową różnicą w wersji 2,0 jest to, że ślady mogą być inicjowane za pomocą wystąpień klasy <xref:System.Diagnostics.TraceSource>. <xref:System.Diagnostics.TraceSource> jest przeznaczony do działania jako udoskonalony system śledzenia i może służyć zamiast metod statycznych starszych <xref:System.Diagnostics.Trace> i <xref:System.Diagnostics.Debug>ych klas śledzenia. Znane <xref:System.Diagnostics.Trace> i <xref:System.Diagnostics.Debug> klasy nadal istnieją, ale zalecanym sposobem jest użycie klasy <xref:System.Diagnostics.TraceSource> do śledzenia.  
   
- W tym temacie opisano sposób <xref:System.Diagnostics.TraceSource> użycia programu w połączeniu z plikiem konfiguracji aplikacji.  Jest to możliwe, chociaż nie jest to zalecane, do śledzenia <xref:System.Diagnostics.TraceSource> przy użyciu a bez użycia pliku konfiguracji. Informacje dotyczące śledzenia bez pliku konfiguracji znajdują się w [temacie How to: Utwórz i zainicjuj źródła](how-to-create-and-initialize-trace-sources.md)śledzenia.  
+ W tym temacie opisano sposób użycia <xref:System.Diagnostics.TraceSource> połączonego z plikiem konfiguracji aplikacji.  Jest to możliwe, chociaż nie jest to zalecane, do śledzenia przy użyciu <xref:System.Diagnostics.TraceSource> bez użycia pliku konfiguracji. Informacje dotyczące śledzenia bez pliku konfiguracji znajdują się w temacie [How to: Create and Initialize Source TRACES](how-to-create-and-initialize-trace-sources.md).  
   
 ### <a name="to-create-and-initialize-your-trace-source"></a>Aby utworzyć i zainicjować Źródło śledzenia  
   
@@ -99,7 +97,7 @@ Jedną z nowych funkcji w .NET Framework wersja 2,0 to udoskonalony system śled
   
 ### <a name="to-change-the-level-at-which-a-listener-writes-a-trace-message"></a>Aby zmienić poziom, na którym odbiornik zapisuje komunikat śledzenia  
   
-1. Plik konfiguracji inicjuje ustawienia dla źródła śledzenia w momencie zainicjowania aplikacji. Aby zmienić te ustawienia, należy zmienić plik konfiguracji i ponownie uruchomić aplikację lub programowo odświeżyć aplikację przy użyciu <xref:System.Diagnostics.Trace.Refresh%2A?displayProperty=nameWithType> metody. Aplikacja może dynamicznie zmieniać właściwości ustawiane przez plik konfiguracji w celu zastąpienia wszelkich ustawień określonych przez użytkownika.  Na przykład możesz chcieć zapewnić, że komunikaty krytyczne są zawsze wysyłane do pliku tekstowego, niezależnie od bieżących ustawień konfiguracji.  
+1. Plik konfiguracji inicjuje ustawienia dla źródła śledzenia w momencie zainicjowania aplikacji. Aby zmienić te ustawienia, należy zmienić plik konfiguracji i ponownie uruchomić aplikację lub programowo odświeżyć aplikację przy użyciu metody <xref:System.Diagnostics.Trace.Refresh%2A?displayProperty=nameWithType>. Aplikacja może dynamicznie zmieniać właściwości ustawiane przez plik konfiguracji w celu zastąpienia wszelkich ustawień określonych przez użytkownika.  Na przykład możesz chcieć zapewnić, że komunikaty krytyczne są zawsze wysyłane do pliku tekstowego, niezależnie od bieżących ustawień konfiguracji.  
   
     ```csharp
     using System;  
@@ -163,7 +161,7 @@ Jedną z nowych funkcji w .NET Framework wersja 2,0 to udoskonalony system śled
     }  
     ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TextWriterTraceListener>

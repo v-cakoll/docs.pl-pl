@@ -7,14 +7,12 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: 77f1d761-ff45-4001-8f36-3a3e5c41fa63
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a45572d0dcb2737558e11f5c38ac2ccc338c754a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e8c9b0479bba839a74dff300f0766838b5d99c8d
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119085"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214836"
 ---
 # <a name="clear-element-for-configsections"></a>\<Wyczyść > elementu \<configSections >
 
@@ -22,7 +20,7 @@ Czyści wszystkie wcześniej zdefiniowane sekcje i grupy sekcji.
 
 [ **\<> konfiguracji**](configuration-element.md)   
 &nbsp;&nbsp;[ **\<configSections >** ](configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**
+&nbsp;&nbsp;&nbsp;&nbsp; **\<wyczyść >**
 
 ## <a name="syntax"></a>Składnia
 
@@ -34,7 +32,7 @@ Czyści wszystkie wcześniej zdefiniowane sekcje i grupy sekcji.
 
 |           | Opis |
 | --------- | ----------- |
-| **name**  | Atrybut wymagany.<br><br>Określa nazwę sekcji lub grupy sekcji do usunięcia. |
+| **Nazwij**  | Atrybut wymagany.<br><br>Określa nazwę sekcji lub grupy sekcji do usunięcia. |
 
 ## <a name="parent-element"></a>Element nadrzędny
 
@@ -44,7 +42,7 @@ Czyści wszystkie wcześniej zdefiniowane sekcje i grupy sekcji.
 
 ## <a name="child-elements"></a>Elementy podrzędne
 
-Brak
+None
 
 ## <a name="remarks"></a>Uwagi
 
@@ -91,6 +89,6 @@ Poniższy kod pliku konfiguracji aplikacji czyści wszystkie wcześniej zadeklar
 
 Tego elementu można użyć w pliku konfiguracyjnym aplikacji, pliku konfiguracji komputera (*Machine. config*) i plikach *Web. config* , które nie znajdują się na poziomie katalogu aplikacji.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Schemat pliku konfiguracji dla .NET Framework](index.md)

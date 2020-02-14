@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Dodawanie instrukcji śledzenia do kodu aplikacji'
+title: 'Porady: dodawanie instrukcji śledzenia do kodu aplikacji'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,17 +13,15 @@ helpviewer_keywords:
 - trace switches, conditional writes based on switches
 - WriteIf method
 ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4517da87603dcdd398d536cd9bf9e441430be375
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 21df0e8129505e50e6b7f29c4f4f5aea94f380e3
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052738"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217466"
 ---
-# <a name="how-to-add-trace-statements-to-application-code"></a>Instrukcje: Dodawanie instrukcji śledzenia do kodu aplikacji
-Metody używane najczęściej do śledzenia są metodami zapisywania danych wyjściowych w detektorach: **Write**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert**i **zakończony niepowodzeniem**. Te metody można podzielić na dwie kategorie: **Zapis**, **WriteLine**i **Niepowodzenie** wszystkie emitowanie danych wyjściowych bezwarunkowo, podczas gdy **WriteIf**, **WriteLineIf**i **Assert** testuje warunek logiczny i zapisują lub nie zapisu na podstawie wartości warunku. **WriteIf** i **WriteLineIf** Emituj dane wyjściowe, jeśli warunek `true`jest, i **Assert** emituje dane wyjściowe, jeśli `false`warunek to.  
+# <a name="how-to-add-trace-statements-to-application-code"></a>Porady: dodawanie instrukcji śledzenia do kodu aplikacji
+Metody używane najczęściej do śledzenia to metody zapisywania danych wyjściowych dla odbiorników: **Write**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert**i **niepowodzenia**. Te metody można podzielić na dwie kategorie: **zapis**, **WriteLine**i **Niepowodzenie** wszystkie dane wyjściowe Emituj bezwarunkowo, natomiast **WriteIf**, **WriteLineIf**i **Assert** testuje warunek logiczny, a następnie zapisują lub nie zapisu na podstawie wartości warunku. **WriteIf** i **WriteLineIf** Emituj dane wyjściowe, jeśli warunek jest `true`i **Assert** emituje dane wyjściowe, jeśli warunek jest `false`.  
   
  Podczas projektowania strategii śledzenia i debugowania należy zastanowić się, jak ma wyglądać dane wyjściowe. W przypadku wielu instrukcji **zapisu** zapełnione niepowiązane informacje spowodują utworzenie dziennika, który jest trudny do odczytania. Z drugiej strony, używanie funkcji **WriteLine** do umieszczania powiązanych instrukcji w osobnych wierszach może utrudnić odróżnienie informacji, jakie należą do siebie. Ogólnie rzecz biorąc, Użyj wielu instrukcji **Write** , jeśli chcesz połączyć informacje z wielu źródeł, aby utworzyć pojedynczy komunikat informacyjny, a następnie użyć instrukcji **WriteLine** , gdy chcesz utworzyć pojedynczy, kompletny komunikat.  
   
@@ -69,7 +67,7 @@ Metody używane najczęściej do śledzenia są metodami zapisywania danych wyj�
   
 ### <a name="to-verify-that-certain-conditions-exist-either-before-or-after-you-execute-a-method"></a>Aby sprawdzić, czy określone warunki istnieją przed lub po wykonaniu metody  
   
-1. Wywołaj <xref:System.Diagnostics.Trace.Assert%2A> metody.  
+1. Wywołaj metodę <xref:System.Diagnostics.Trace.Assert%2A>.  
   
     ```vb  
     Dim i As Integer = 4  
@@ -84,13 +82,13 @@ Metody używane najczęściej do śledzenia są metodami zapisywania danych wyj�
     > [!NOTE]
     > Można użyć metody **Assert** zarówno do śledzenia, jak i debugowania. Ten przykład wyprowadza stos wywołań do dowolnego odbiornika w kolekcji **odbiorników** . Aby uzyskać więcej informacji, zobacz [potwierdzenia w kodzie zarządzanym](/visualstudio/debugger/assertions-in-managed-code) i <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Diagnostics.Debug.WriteIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Debug.WriteLineIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Trace.WriteIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Trace.WriteLineIf%2A?displayProperty=nameWithType>
 - [Śledzenie i instrumentacja aplikacji](tracing-and-instrumenting-applications.md)
-- [Instrukcje: Tworzenie, inicjowanie i konfigurowanie przełączników śledzenia](how-to-create-initialize-and-configure-trace-switches.md)
+- [Instrukcje: tworzenie, inicjowanie i konfigurowanie przełączników śledzenia](how-to-create-initialize-and-configure-trace-switches.md)
 - [Przełączniki śledzenia](trace-switches.md)
 - [Obiekty nasłuchujące śledzenie](trace-listeners.md)

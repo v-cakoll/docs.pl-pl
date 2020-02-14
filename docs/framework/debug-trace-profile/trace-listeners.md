@@ -14,33 +14,31 @@ helpviewer_keywords:
 - tracing [.NET Framework], trace listeners
 - logs, trace listeners
 ms.assetid: 444b0d33-67ea-4c36-9e94-79c50f839025
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 752a6a5f9608aa260f192ee3e9e0709b7a10e27e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a51c046a296fbb62d21c7784cf7c1e78b700f3e9
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052287"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216139"
 ---
 # <a name="trace-listeners"></a>Obiekty nasłuchujące śledzenia
-W przypadku korzystania z **funkcji trace**, **Debug** i <xref:System.Diagnostics.TraceSource>, musisz mieć mechanizm zbierania i rejestrowania wysyłanych komunikatów. Komunikaty śledzenia są odbierane przez *odbiorniki*. Odbiornik ma na celu zbierania, przechowywania i komunikatów śledzenia, które trasy. Odbiorniki bezpośrednie dane wyjściowe śledzenia do odpowiedniego obiektu docelowego, takie jak dziennik, okno lub PLiku tekstowego.  
+W przypadku korzystania z **funkcji trace**, **Debug** i <xref:System.Diagnostics.TraceSource>należy mieć mechanizm zbierania i rejestrowania wysyłanych komunikatów. Komunikaty śledzenia są odbierane przez *odbiorniki*. Odbiornik ma na celu zbierania, przechowywania i komunikatów śledzenia, które trasy. Odbiorniki bezpośrednie dane wyjściowe śledzenia do odpowiedniego obiektu docelowego, takie jak dziennik, okno lub PLiku tekstowego.  
   
- Odbiorniki są dostępne dla **debugowania**, **śledzenia**i <xref:System.Diagnostics.TraceSource> klas, z których każdy może wysyłać dane wyjściowe do różnych obiektów odbiornika. Poniżej przedstawiono najczęściej używane wstępnie zdefiniowane detektory:  
+ Odbiorniki są dostępne dla klas **debugowania**, **śledzenia**i <xref:System.Diagnostics.TraceSource>, z których każdy może wysyłać dane wyjściowe do różnych obiektów odbiornika. Poniżej przedstawiono najczęściej używane wstępnie zdefiniowane detektory:  
   
-- Przekierowuje dane wyjściowe do wystąpienia <xref:System.IO.TextWriter> klasy lub do elementu <xref:System.IO.Stream> , który jest klasą. <xref:System.Diagnostics.TextWriterTraceListener> Może również zapisywać w konsoli lub w pliku, ponieważ są to <xref:System.IO.Stream> klasy.  
+- <xref:System.Diagnostics.TextWriterTraceListener> przekierowuje dane wyjściowe do wystąpienia klasy <xref:System.IO.TextWriter> lub do wszystkiego, który jest klasą <xref:System.IO.Stream>. Może również zapisywać w konsoli lub w pliku, ponieważ są to <xref:System.IO.Stream> klas.  
   
-- <xref:System.Diagnostics.EventLogTraceListener> Przekierowuje dane wyjściowe do dziennika zdarzeń.  
+- <xref:System.Diagnostics.EventLogTraceListener> przekierowuje dane wyjściowe do dziennika zdarzeń.  
   
-- Emituje komunikaty Write i WriteLine do funkcja OutputDebugString oraz do metody Debugger. log. <xref:System.Diagnostics.DefaultTraceListener> W programie Visual Studio powoduje to wyświetlenie komunikatów debugowania w oknie danych wyjściowych. Komunikaty **potwierdzenia** zakończone **niepowodzeniem** i niepowodzeniem EMITUJĄ również do interfejsu API systemu Windows **Funkcja OutputDebugString** oraz metody **Debugger. log** , a także powodują wyświetlenie okna komunikatu. To zachowanie jest zachowaniem domyślnym dla komunikatów **debugowania** i **śledzenia** , ponieważ **DefaultTraceListener** jest automatycznie dołączany `Listeners` do każdej kolekcji i jest jedynym odbiornikiem.  
+- <xref:System.Diagnostics.DefaultTraceListener> emituje komunikaty **Write** i **WriteLine** do **Funkcja OutputDebugString** i do metody **Debugger. log** . W programie Visual Studio powoduje to wyświetlenie komunikatów debugowania w oknie danych wyjściowych. Komunikaty **potwierdzenia** zakończone **niepowodzeniem** i niepowodzeniem EMITUJĄ również do interfejsu API systemu Windows **Funkcja OutputDebugString** oraz metody **Debugger. log** , a także powodują wyświetlenie okna komunikatu. To zachowanie jest zachowaniem domyślnym dla komunikatów **debugowania** i **śledzenia** , ponieważ **DefaultTraceListener** jest automatycznie dołączane do każdej kolekcji `Listeners` i jest jedynym odbiornikiem.  
   
-- <xref:System.Diagnostics.ConsoleTraceListener> Kieruje śledzenie lub debugowanie danych wyjściowych do standardowego wyjścia lub standardowego strumienia błędów.  
+- <xref:System.Diagnostics.ConsoleTraceListener> kieruje śledzenie lub debugowanie danych wyjściowych do standardowego wyjścia lub standardowego strumienia błędów.  
   
-- <xref:System.Diagnostics.DelimitedListTraceListener> Kierowanie kieruje lub debuguje dane wyjściowe do składnika zapisywania tekstu, takiego jak składnik zapisywania strumienia lub strumień, taki jak strumień pliku. Wynik śledzenia jest w rozdzielonym formacie tekstowym, który używa ogranicznika określonego przez <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> właściwość.  
+- <xref:System.Diagnostics.DelimitedListTraceListener> kieruje śledzenie lub debugowanie danych wyjściowych do składnika zapisywania tekstu, takiego jak składnik zapisywania strumienia lub strumień, taki jak strumień pliku. Wynik śledzenia jest w rozdzielonym formacie tekstowym, który używa ogranicznika określonego przez właściwość <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A>.  
   
-- Kieruje śledzenie lub debugowanie danych wyjściowych w formacie XML zakodowanym <xref:System.IO.TextWriter> do lub do <xref:System.IO.Stream>, takich jak <xref:System.IO.FileStream>. <xref:System.Diagnostics.XmlWriterTraceListener>  
+- <xref:System.Diagnostics.XmlWriterTraceListener> kieruje śledzenie lub debugowanie danych wyjściowych jako dane zakodowane w formacie XML do <xref:System.IO.TextWriter> lub do <xref:System.IO.Stream>, takich jak <xref:System.IO.FileStream>.  
   
- Jeśli chcesz <xref:System.Diagnostics.DefaultTraceListener> , aby każdy odbiornik oprócz do odbierania **debugowania**, **śledzenia** i <xref:System.Diagnostics.TraceSource> wyprowadzania, należy dodać go do `Listeners` kolekcji. Aby uzyskać więcej informacji, zobacz [jak: Utwórz i zainicjuj](how-to-create-and-initialize-trace-listeners.md) detektory [śledzenia i instrukcje: Używaj TraceSource i filtrów z odbiornikami](how-to-use-tracesource-and-filters-with-trace-listeners.md)śledzenia. Każdy odbiornik w kolekcji **odbiorników** pobiera te same komunikaty z metod danych wyjściowych śledzenia. Załóżmy na przykład, że skonfigurowano dwa odbiorniki: **TextWriterTraceListener** i **EventLogTraceListener**. Każdy odbiornik otrzymuje ten sam komunikat. **TextWriterTraceListener** przekierowuje dane wyjściowe do strumienia, a **EventLogTraceListener** przekieruje dane wyjściowe do dziennika zdarzeń.  
+ Jeśli chcesz, aby każdy odbiornik oprócz <xref:System.Diagnostics.DefaultTraceListener> odbierać **debugowanie**, **śledzenie** i <xref:System.Diagnostics.TraceSource> dane wyjściowe, należy dodać go do kolekcji `Listeners`. Aby uzyskać więcej informacji, zobacz [How to: Create and Initialize detektory śledzenia](how-to-create-and-initialize-trace-listeners.md) i [instrukcje: użycie TraceSource i filtrów z odbiornikami śledzenia](how-to-use-tracesource-and-filters-with-trace-listeners.md). Każdy odbiornik w kolekcji **odbiorników** pobiera te same komunikaty z metod danych wyjściowych śledzenia. Załóżmy na przykład, że skonfigurowano dwa odbiorniki: **TextWriterTraceListener** i **EventLogTraceListener**. Każdy odbiornik otrzymuje ten sam komunikat. **TextWriterTraceListener** przekierowuje dane wyjściowe do strumienia, a **EventLogTraceListener** przekieruje dane wyjściowe do dziennika zdarzeń.  
   
  Poniższy przykład pokazuje, jak wysyłać dane wyjściowe do kolekcji **odbiorników** .  
   
@@ -74,9 +72,9 @@ System.Diagnostics.Trace.Listeners.Add(
 ```  
   
 ## <a name="developer-defined-listeners"></a>Detektory zdefiniowane przez dewelopera  
- Można zdefiniować własne detektory, dziedzicząc klasę bazową **TraceListener** i zastępując jej metody przy użyciu dostosowanych metod. Aby uzyskać więcej informacji na temat tworzenia detektorów zdefiniowanych przez <xref:System.Diagnostics.TraceListener> dewelopera, zobacz sekcję w temacie .NET Framework Reference.  
+ Można zdefiniować własne detektory, dziedzicząc klasę bazową **TraceListener** i zastępując jej metody przy użyciu dostosowanych metod. Aby uzyskać więcej informacji na temat tworzenia detektorów zdefiniowanych przez dewelopera, zobacz <xref:System.Diagnostics.TraceListener> w .NET Framework Reference.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.EventLogTraceListener>

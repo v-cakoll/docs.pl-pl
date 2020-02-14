@@ -7,20 +7,18 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: 6d18c7be-27db-438b-8fb5-765d396b0b7b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d321f3169344e9aa40d65b1722a533549de5315a
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 266d32ccb8b322f0472e0f552f9c0fc877c9a78e
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088738"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214798"
 ---
 # <a name="clear-element-for-appsettings"></a>\<Wyczyść > elementu \<appSettings >
 
 Czyści niestandardowe ustawienia aplikacji.
 
-[ **\<configuration >** ](../configuration-element.md) \
+[ **\<> konfiguracji**](../configuration-element.md)\
 &nbsp;&nbsp;[ **\<appSettings >** ](appsettings-element-for-configuration.md)\
 &nbsp;&nbsp;&nbsp;&nbsp; **\<wyczyść >**
 
@@ -34,7 +32,7 @@ Czyści niestandardowe ustawienia aplikacji.
 
 ## <a name="attributes"></a>Atrybuty
 
-Brak
+None
 
 ## <a name="parent-element"></a>Element nadrzędny
 
@@ -44,7 +42,7 @@ Brak
 
 ## <a name="child-elements"></a>Elementy podrzędne
 
-Brak
+None
 
 ## <a name="example"></a>Przykład
 
@@ -56,6 +54,6 @@ Poniższy przykład pokazuje, jak wyczyścić niestandardowe ustawienia konfigur
 </appSettings>
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Schemat pliku konfiguracji dla .NET Framework](../index.md)

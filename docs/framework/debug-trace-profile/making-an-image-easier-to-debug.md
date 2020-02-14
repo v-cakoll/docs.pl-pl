@@ -7,14 +7,12 @@ helpviewer_keywords:
 - executable image for debugging
 - debugging [.NET Framework], executable images for
 ms.assetid: 7d90ea7a-150f-4f97-98a7-f9c26541b9a3
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1b64bd1e112932f394bb473a21642d37e28e39d3
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 44d512a8ebec0e21e33f51c07428331e5e22b7bf
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052503"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217340"
 ---
 # <a name="making-an-image-easier-to-debug-in-net"></a>Łatwiejsze debugowanie obrazu w programie .NET
 
@@ -42,7 +40,7 @@ AllowOptimize=0
 
 Dla każdej opcji można ustawić wartość 0 lub 1. Każda niezdefiniowana opcja domyślnie przyjmuje wartość 0. Ustawienie w opcji `GenerateTrackingInfo` wartości 1 i w opcji `AllowOptimize` wartości 0 zapewni najłatwiejsze debugowanie.
 
-Począwszy od .NET Framework w wersji 2,0, kompilator JIT zawsze generuje informacje o śledzeniu niezależnie od wartości `GenerateTrackingInfo`, jednak `AllowOptimize` nadal ma efekt. Przy użyciu programu [Ngen. exe (Generator obrazu natywnego)](../tools/ngen-exe-native-image-generator.md) do wstępnego kompilowania obrazu natywnego bez optymalizacji, plik. ini musi znajdować się w folderze `AllowOptimize=0` docelowym, gdy jest wykonywane polecenie Ngen. exe. Jeśli wstępnie skompilowano zestaw bez optymalizacji, przed ponownym uruchomieniem programu Ngen. exe należy usunąć wstępnie skompilowany kod przy użyciu opcji NGen. exe **/Uninstall** , aby wstępnie skompilować kod jako zoptymalizowany. Jeśli plik. ini nie znajduje się w folderze, domyślnie program Ngen. exe wstępnie kompiluje kod jako zoptymalizowany.
+Począwszy od .NET Framework w wersji 2,0, kompilator JIT zawsze generuje informacje o śledzeniu niezależnie od wartości `GenerateTrackingInfo`; Jednak wartość `AllowOptimize` nadal ma wpływ. Przy użyciu programu [Ngen. exe (Generator obrazu natywnego)](../tools/ngen-exe-native-image-generator.md) do wstępnego kompilowania obrazu natywnego bez optymalizacji plik. ini musi znajdować się w folderze docelowym z `AllowOptimize=0`, gdy program Ngen. exe wykonuje. Jeśli wstępnie skompilowano zestaw bez optymalizacji, przed ponownym uruchomieniem programu Ngen. exe należy usunąć wstępnie skompilowany kod przy użyciu opcji NGen. exe **/Uninstall** , aby wstępnie skompilować kod jako zoptymalizowany. Jeśli plik. ini nie znajduje się w folderze, domyślnie program Ngen. exe wstępnie kompiluje kod jako zoptymalizowany.
 
 Klasa <xref:System.Diagnostics.DebuggableAttribute?displayProperty=nameWithType> kontroluje ustawienia zestawu. **DebuggableAttribute** zawiera dwa pola, które kontrolują, czy kompilator JIT powinien optymalizować i/lub generować informacje śledzenia. Począwszy od .NET Framework w wersji 2,0 kompilator JIT zawsze generuje informacje o śledzeniu.
 
@@ -53,7 +51,7 @@ W przypadku kompilacji detalicznej kompilatory nie ustawiają żadnych **Debugga
 > [!NOTE]
 > W wersji C++ 1,0 .NET Framework, kompilator wizualny firmy Microsoft dodaje **DebuggableAttribute** , gdy są określone opcje kompilatora **/CLR** i **/Zi** . W wersji 1,1 .NET Framework należy ręcznie dodać **DebuggableAttribute** w kodzie lub użyć opcji konsolidatora **/ASSEMBLYDEBUG** .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Debugowanie, śledzenie i profilowanie](index.md)
 - [Włączanie debugowania dołączania JIT](enabling-jit-attach-debugging.md)

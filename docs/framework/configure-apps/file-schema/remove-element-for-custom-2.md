@@ -7,20 +7,18 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: 8d8af7f5-26c9-4db9-bbe4-b2a4e6949568
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6cdd5833e14da1ab5185e56dce1190adfee4a2bf
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: d1e4f3478f6afd6a20c01c6b57a137020ee88f5f
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089038"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214754"
 ---
 # <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<usunąć elementu > dla NameValueSectionHandler i DictionarySectionHandler
 
 Usuwa poprzednio zdefiniowane ustawienie.
 
-[ **\<configuration >** ](configuration-element.md) \
+[ **\<> konfiguracji**](configuration-element.md)\
 &nbsp;&nbsp;[ **\<sectionname >** ](custom-element-2.md)\
 &nbsp;&nbsp;&nbsp;&nbsp; **\<usuń >**
 
@@ -34,7 +32,7 @@ Usuwa poprzednio zdefiniowane ustawienie.
 
 |           | Opis |
 | --------- | ----------- |
-| **głównych**   | Atrybut wymagany.<br><br>Określa nazwę ustawienia do usunięcia. |
+| **Klucz**   | Atrybut wymagany.<br><br>Określa nazwę ustawienia do usunięcia. |
 
 ## <a name="parent-element"></a>Element nadrzędny
 
@@ -44,7 +42,7 @@ Usuwa poprzednio zdefiniowane ustawienie.
 
 ## <a name="child-elements"></a>Elementy podrzędne
 
-Brak
+None
 
 ## <a name="remarks"></a>Uwagi
 
@@ -84,6 +82,6 @@ Następujący kod pliku konfiguracji aplikacji usuwa ustawienie `key2` z **\<sek
 
 Tego elementu można użyć w pliku konfiguracyjnym aplikacji, pliku konfiguracji komputera (*Machine. config*) i plikach *Web. config* , które nie znajdują się na poziomie katalogu aplikacji.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Schemat pliku konfiguracji dla .NET Framework](index.md)

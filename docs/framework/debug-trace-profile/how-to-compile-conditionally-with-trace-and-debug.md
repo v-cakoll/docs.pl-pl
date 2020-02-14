@@ -10,14 +10,12 @@ helpviewer_keywords:
 - TRACE directive
 - conditional compilation, tracing code
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a2cb2ef473d6870da47e0e4c00fecf6bd60707f3
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 2c3ec54535319f4c7507563a5976038ca40d20aa
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975581"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217456"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Porady: kompilowanie warunkowe ze śledzeniem i debugowaniem
 Podczas debugowania aplikacji podczas opracowywania dane wyjściowe śledzenia i debugowania są przechodzą do okna danych wyjściowych w programie Visual Studio. Aby jednak uwzględnić funkcje śledzenia we wdrożonej aplikacji, należy skompilować aplikacje Instrumentacji przy włączonej dyrektywie kompilatora **śledzenia** . Pozwala to na skompilowanie kodu śledzenia w wydanej wersji aplikacji. Jeśli nie włączysz dyrektywy **Trace** , cały kod śledzenia zostanie zignorowany podczas kompilacji i nie zostanie uwzględniony w kodzie wykonywalnym, który zostanie wdrożony.  
@@ -59,7 +57,7 @@ Podczas debugowania aplikacji podczas opracowywania dane wyjściowe śledzenia i
   
      Znaczenie dyrektyw kompilacji warunkowej używanych w powyższych przykładach jest następujące:  
   
-    |Dyrektywę|Znaczenie|  
+    |— Dyrektywa|Znaczenie|  
     |---------------|-------------|  
     |`vbc`|kompilator Visual Basic|  
     |`csc`|C#Compiler|  
@@ -73,7 +71,7 @@ Podczas debugowania aplikacji podczas opracowywania dane wyjściowe śledzenia i
   
 1. Wpisz odpowiednią instrukcję dla języka programowania w górnej części pliku kodu źródłowego.  
   
-    |Język|Instrukcja|Wynik|  
+    |Język|Wyciąg|Wynik|  
     |--------------|---------------|------------|  
     |**Visual Basic**|**Śledzenie #CONST = true**|Włącza śledzenie|  
     ||**Śledzenie #CONST = FAŁSZ**|Wyłącza śledzenie|  
@@ -95,7 +93,7 @@ Dodaj komentarz do dyrektywy kompilatora.
 > [!NOTE]
 > Gdy wszystko będzie gotowe do skompilowania, możesz wybrać opcję **Kompiluj** z menu **kompilacja** lub użyć metody wiersza polecenia, ale bez wpisywania znaków **d:** , aby zdefiniować symbole kompilacji warunkowej.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Śledzenie i instrumentacja aplikacji](tracing-and-instrumenting-applications.md)
 - [Instrukcje: tworzenie, inicjowanie i konfigurowanie przełączników śledzenia](how-to-create-initialize-and-configure-trace-switches.md)

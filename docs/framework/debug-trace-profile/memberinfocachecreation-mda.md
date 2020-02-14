@@ -10,34 +10,32 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), cache
 - MemberInfo cache
 ms.assetid: 5abdad23-1335-4744-8acb-934002c0b6fe
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d3b65ecc226c1caf7b53d746f0583e1f57c7d8c1
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e5dbc769bd634afae06582ee614addafd611fad9
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052471"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217313"
 ---
 # <a name="memberinfocachecreation-mda"></a>memberInfoCacheCreation MDA
-Asystent debugowania <xref:System.Reflection.MemberInfo> zarządzanego (MDA) jest uaktywniany po utworzeniu pamięci podręcznej. `memberInfoCacheCreation` Jest to mocne wskazanie programu, który korzysta z funkcji odbicia kosztownych zasobów.  
+`memberInfoCacheCreation` Asystent debugowania zarządzanego (MDA) jest uaktywniany podczas tworzenia <xref:System.Reflection.MemberInfo> pamięci podręcznej. Jest to mocne wskazanie programu, który korzysta z funkcji odbicia kosztownych zasobów.  
   
-## <a name="symptoms"></a>Symptomy  
+## <a name="symptoms"></a>Objawy  
  Zestaw roboczy programu zostaje zwiększony, ponieważ program korzysta z bardziej kosztownego odbicia zasobów.  
   
 ## <a name="cause"></a>Przyczyna  
- Operacje odbicia obejmujące <xref:System.Reflection.MemberInfo> obiekty są uznawane za kosztowne, ponieważ muszą odczytywać metadane przechowywane na zimnych stronach i ogólnie wskazują, że program używa pewnego typu scenariusza z późnym wiązaniem.  
+ Operacje odbicia, które obejmują <xref:System.Reflection.MemberInfo> obiektów, są uznawane za zasoby kosztowne, ponieważ muszą odczytywać metadane przechowywane na zimnych stronach i ogólnie wskazują, że program używa pewnego typu scenariusza z późnym wiązaniem.  
   
 ## <a name="resolution"></a>Rozwiązanie  
- Możesz określić, gdzie odbicie jest używane w programie, włączając ten MDA, a następnie uruchamiając kod w debugerze lub dołączając debuger, gdy zostanie uaktywnione zdarzenie MDA. W ramach debugera uzyskasz śledzenie stosu pokazujące miejsce <xref:System.Reflection.MemberInfo> utworzenia pamięci podręcznej, a następnie można określić, gdzie program używa odbicia.  
+ Możesz określić, gdzie odbicie jest używane w programie, włączając ten MDA, a następnie uruchamiając kod w debugerze lub dołączając debuger, gdy zostanie uaktywnione zdarzenie MDA. W ramach debugera zostanie wyświetlony ślad stosu przedstawiający miejsce utworzenia pamięci podręcznej <xref:System.Reflection.MemberInfo>, a w tym miejscu można określić, gdzie program używa odbicia.  
   
  Rozwiązanie zależy od celów kodu. To zdarzenie MDA ostrzega o tym, że program ma scenariusz z późnym wiązaniem. Warto określić, czy można zastąpić scenariusz wczesny, czy też wziąć pod uwagę wydajność scenariusza z późnym wiązaniem.  
   
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
- To zdarzenie MDA jest aktywowane dla <xref:System.Reflection.MemberInfo> każdej tworzonej pamięci podręcznej. Wpływ na wydajność jest nieznaczny.  
+ To zdarzenie MDA jest aktywowane dla każdej tworzonej pamięci podręcznej <xref:System.Reflection.MemberInfo>. Wpływ na wydajność jest nieznaczny.  
   
 ## <a name="output"></a>Dane wyjściowe  
- Po utworzeniu pamięci podręcznej MDA <xref:System.Reflection.MemberInfo> zostanie wyświetlony komunikat wskazujący, że została utworzona. Użyj debugera, aby uzyskać ślad stosu pokazujący, gdzie program używa odbicia.  
+ W wyniku tego zostanie wyświetlony komunikat z informacją o utworzeniu pamięci podręcznej <xref:System.Reflection.MemberInfo>. Użyj debugera, aby uzyskać ślad stosu pokazujący, gdzie program używa odbicia.  
   
 ## <a name="configuration"></a>Konfiguracja  
   
@@ -50,7 +48,7 @@ Asystent debugowania <xref:System.Reflection.MemberInfo> zarządzanego (MDA) jes
 ```  
   
 ## <a name="example"></a>Przykład  
- Ten przykładowy kod spowoduje aktywowanie `memberInfoCacheCreation` MDA.  
+ Ten przykładowy kod aktywuje `memberInfoCacheCreation` MDA.  
   
 ```csharp
 using System;  
@@ -64,7 +62,7 @@ public class Exe
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Reflection.MemberInfo>
 - [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](diagnosing-errors-with-managed-debugging-assistants.md)

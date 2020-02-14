@@ -15,14 +15,12 @@ helpviewer_keywords:
 - user authentication, code access security
 - code access security
 ms.assetid: 859af632-c80d-4736-8d6f-1e01b09ce127
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: bdb4e84170d4d3b95b8b51f12e0787937aaaf961
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: a8021fade8df2c8bee5e3bf26da784a91526540f
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205648"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215896"
 ---
 # <a name="code-access-security"></a>Zabezpieczenia dostępu kodu
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -36,7 +34,7 @@ ms.locfileid: "70205648"
 > [!NOTE]
 > Wprowadzono istotne zmiany w zabezpieczeniach dostępu kodu w .NET Framework 4. Najbardziej istotną zmianą jest [przejrzystość zabezpieczeń](security-transparent-code.md), ale istnieją również inne istotne zmiany, które wpływają na zabezpieczenia dostępu kodu. Aby uzyskać informacje o tych zmianach, zobacz [zmiany zabezpieczeń](../security/security-changes.md).  
   
- Zabezpieczenia dostępu kodu mają głównie wpływ na kod biblioteki i częściowo zaufane aplikacje. Deweloperzy bibliotek muszą chronić swój kod przed nieautoryzowanym dostępem z częściowo zaufanych aplikacji. Częściowo zaufane aplikacje są aplikacjami, które są ładowane ze źródeł zewnętrznych, takich jak Internet. Aplikacje zainstalowane na pulpicie lub w lokalnym intranecie działają w trybie pełnego zaufania. Zabezpieczenia dostępu kodu nie wpływają na aplikacje mające pełne zaufanie, chyba że są oznaczone jako przezroczyste dla [zabezpieczeń](security-transparent-code.md), ponieważ są w pełni zaufane. Jedynym ograniczeniem dla aplikacji w pełnym zaufaniu jest to, że aplikacje oznaczone <xref:System.Security.SecurityTransparentAttribute> atrybutem nie mogą wywołać kodu, który jest oznaczony <xref:System.Security.SecurityCriticalAttribute> za pomocą atrybutu. Częściowo zaufane aplikacje muszą być uruchamiane w piaskownicy (na przykład w programie Internet Explorer), aby można było zastosować zabezpieczenia dostępu kodu. Jeśli pobierzesz aplikację z Internetu i spróbujesz uruchomić ją z poziomu pulpitu, <xref:System.NotSupportedException> otrzymasz komunikat o błędzie: "Podjęto próbę załadowania zestawu z lokalizacji sieciowej, która spowodowała przełączenie zestawu do piaskownicy w poprzednich wersjach .NET Framework. Ta wersja .NET Framework nie domyślnie włącza zasad CAS, więc to obciążenie może być niebezpieczne. Jeśli masz pewność, że aplikacja może być zaufana, możesz ją uruchomić jako pełne zaufanie, używając [ \<elementu loadFromRemoteSources >](../configure-apps/file-schema/runtime/loadfromremotesources-element.md). Aby uzyskać informacje na temat uruchamiania aplikacji w piaskownicy, [zobacz How to: Uruchom częściowo zaufany kod w piaskownicy](how-to-run-partially-trusted-code-in-a-sandbox.md).  
+ Zabezpieczenia dostępu kodu mają głównie wpływ na kod biblioteki i częściowo zaufane aplikacje. Deweloperzy bibliotek muszą chronić swój kod przed nieautoryzowanym dostępem z częściowo zaufanych aplikacji. Częściowo zaufane aplikacje są aplikacjami, które są ładowane ze źródeł zewnętrznych, takich jak Internet. Aplikacje zainstalowane na pulpicie lub w lokalnym intranecie działają w trybie pełnego zaufania. Zabezpieczenia dostępu kodu nie wpływają na aplikacje mające pełne zaufanie, chyba że są oznaczone jako [przezroczyste dla zabezpieczeń](security-transparent-code.md), ponieważ są w pełni zaufane. Jedynym ograniczeniem dla aplikacji w pełnym zaufaniu jest to, że aplikacje oznaczone atrybutem <xref:System.Security.SecurityTransparentAttribute> nie mogą wywołać kodu, który jest oznaczony atrybutem <xref:System.Security.SecurityCriticalAttribute>. Częściowo zaufane aplikacje muszą być uruchamiane w piaskownicy (na przykład w programie Internet Explorer), aby można było zastosować zabezpieczenia dostępu kodu. Jeśli pobrano aplikację z Internetu i spróbujesz uruchomić ją z poziomu pulpitu, uzyskasz <xref:System.NotSupportedException> z komunikatem: "podjęto próbę załadowania zestawu z lokalizacji sieciowej, która spowodowała przełączenie zestawu do piaskownicy we wcześniejszych wersjach .NET Framework. Ta wersja .NET Framework nie domyślnie włącza zasad CAS, więc to obciążenie może być niebezpieczne. Jeśli masz pewność, że aplikacja może być zaufana, możesz ją uruchomić jako pełne zaufanie, korzystając z [elementu\<loadFromRemoteSources >](../configure-apps/file-schema/runtime/loadfromremotesources-element.md). Aby uzyskać informacje na temat uruchamiania aplikacji w piaskownicy, zobacz [How to: Run a Untrusted Code w piaskownicy](how-to-run-partially-trusted-code-in-a-sandbox.md).  
   
  Cały kod zarządzany, który jest przeznaczony dla środowiska uruchomieniowego języka wspólnego, otrzymuje zalety zabezpieczenia dostępu kodu, nawet jeśli ten kod nie nawiąże wywołania zabezpieczeń pojedynczego kodu. Aby uzyskać więcej informacji, zobacz podstawowe informacje o [zabezpieczeniach dostępu kodu](code-access-security-basics.md).  
   

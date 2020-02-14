@@ -7,17 +7,15 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), marshaling
 - MDAs (managed debugging assistants), marshaling
 ms.assetid: 5433b1f8-b0e5-40c9-a49a-0e5bd213363d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6a6399828f934ad97cde9f36d75cfe3bfc410885
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f7bb630d3a1e832cf6bf083ce4cf603034248ceb
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052490"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217318"
 ---
 # <a name="marshaling-mda"></a>przekazywanie międzyprocesowe (marshaling) MDA
-Asystent `marshaling` debugowania zarządzanego (MDA) jest uaktywniany, gdy środowisko CLR konfiguruje informacje kierujące dla parametru metody lub pola struktury. To zdarzenie MDA nie działa w przypadku zestawów skompilowanych w trybie JIT.  
+Asystent debugowania zarządzanego `marshaling` (MDA) jest uaktywniany, gdy środowisko CLR konfiguruje informacje kierujące dla parametru metody lub pola struktury. To zdarzenie MDA nie działa w przypadku zestawów skompilowanych w trybie JIT.  
   
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
  To zdarzenie MDA nie ma wpływu na środowisko CLR.  
@@ -31,7 +29,7 @@ name="assembly!Namespace.Class::myChar
 ```  
   
 ## <a name="configuration"></a>Konfiguracja  
- Konfiguracja MDA umożliwia filtrowanie raportowanych informacji o kierowaniu na podstawie nazw pól lub metod.  W poniższym przykładzie pokazano użycie `methodFilter`, `fieldFilter`, i `match` elementów do określenia filtrów.  Ustawienie atrybutu na gwiazdkę (\*) będzie pasować do wszystkiego. `name`  
+ Konfiguracja MDA umożliwia filtrowanie raportowanych informacji o kierowaniu na podstawie nazw pól lub metod.  Poniższy przykład ilustruje użycie elementów `methodFilter`, `fieldFilter`i `match` do określenia filtrów.  Ustawienie atrybutu `name` na gwiazdkę (\*) będzie pasować do wszystkiego.  
   
 ```xml  
 <mdaConfig>  
@@ -50,7 +48,7 @@ name="assembly!Namespace.Class::myChar
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](diagnosing-errors-with-managed-debugging-assistants.md)

@@ -14,19 +14,17 @@ helpviewer_keywords:
 - garbage collection, run-time errors
 - delegates [.NET Framework], garbage collection
 ms.assetid: 398b0ce0-5cc9-4518-978d-b8263aa21e5b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f7f5a6ef2d4e8d4a987ed74a6a04e31f87cc46f3
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: eb14e0df5396d92eb223dde2e562684c4c318295
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052938"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217568"
 ---
 # <a name="callbackoncollecteddelegate-mda"></a>callbackOnCollectedDelegate MDA
-Asystent `callbackOnCollectedDelegate` debugowania zarządzanego (MDA) jest aktywowany, jeśli delegat jest zorganizowany z zarządzanego do niezarządzanego kodu jako wskaźnik funkcji, a wywołanie zwrotne jest umieszczane na tym wskaźniku funkcji, gdy delegat został pobrany jako bezużyteczny.  
+Asystent debugowania zarządzanego `callbackOnCollectedDelegate` (MDA) jest aktywowany, jeśli delegat jest zorganizowany z zarządzanego do niezarządzanego kodu jako wskaźnik funkcji, a wywołanie zwrotne jest umieszczane na tym wskaźniku funkcji po usunięciu elementu delegowanego.  
   
-## <a name="symptoms"></a>Symptomy  
+## <a name="symptoms"></a>Objawy  
  Podczas próby wywołania kodu zarządzanego za pomocą wskaźników funkcji uzyskanych z zarządzanych delegatów nastąpiły naruszenia zasad dostępu. Te błędy, podczas gdy nie występują usterki środowiska uruchomieniowego języka wspólnego (CLR), mogą wydawać się tak, ponieważ w kodzie CLR występuje naruszenie zasad dostępu.  
   
  Błąd nie jest spójny; Czasami wywołanie funkcji powiedzie się i czasami kończy się niepowodzeniem. Awaria może wystąpić tylko przy dużym obciążeniu lub losowej liczbie prób.  
@@ -39,10 +37,10 @@ Asystent `callbackOnCollectedDelegate` debugowania zarządzanego (MDA) jest akty
  Prawdopodobieństwo wystąpienia błędu zależy od czasu między kierowaniem delegata i wywołaniem zwrotnym na wskaźniku funkcji, a także częstotliwością wyrzucania elementów bezużytecznych. Awaria jest sporadyczna, jeśli czas między kierowaniem delegata i wynikający z wywołania zwrotnego jest krótki. Zwykle jest to przypadek, jeśli niezarządzana Metoda otrzymująca wskaźnik funkcji nie zapisuje wskaźnika funkcji do późniejszego użycia, ale zamiast tego ponownie wywołuje wskaźnik funkcji, aby zakończyć operację przed zwróceniem. Podobnie więcej wyrzucania elementów bezużytecznych występuje, gdy system jest mocno obciążony, co sprawia, że wyrzucanie elementów bezużytecznych zostanie przeprowadzone przed wywołaniem zwrotnym.  
   
 ## <a name="resolution"></a>Rozwiązanie  
- Gdy delegat został zorganizowany jako wskaźnik funkcji niezarządzanej, Moduł wyrzucania elementów bezużytecznych nie może śledzić swojego okresu istnienia. Zamiast tego kod musi przechowywać odwołanie do delegata dla okresu istnienia wskaźnika funkcji niezarządzanej. Jednak przed wykonaniem tej czynności należy najpierw określić, który delegat został zebrany. Gdy zdarzenie MDA zostanie aktywowane, zawiera nazwę typu delegata. Użyj tej nazwy, aby przeszukać swój kod dla wywołania platformy lub sygnatur COM, które są przekazywane przez delegata do kodu niezarządzanego. Nieprawidłowy delegat jest przepuszczany przez jedną z tych lokacji wywołań. Można również włączyć funkcję MDA `gcUnmanagedToManaged` , aby wymusić wyrzucanie elementów bezużytecznych przed każdym wywołaniem zwrotnym do środowiska uruchomieniowego. Spowoduje to usunięcie niepewności wprowadzonej przez wyrzucanie elementów bezużytecznych przez zapewnienie, że wyrzucanie elementów bezużytecznych zawsze występuje przed wywołaniem zwrotnym. Po uzyskaniu informacji o tym, który delegat został zebrany, Zmień kod, aby zachować odwołanie do tego delegata po stronie zarządzanej na potrzeby okresu istnienia organizowanego wskaźnika funkcji niezarządzanej.  
+ Gdy delegat został zorganizowany jako wskaźnik funkcji niezarządzanej, Moduł wyrzucania elementów bezużytecznych nie może śledzić swojego okresu istnienia. Zamiast tego kod musi przechowywać odwołanie do delegata dla okresu istnienia wskaźnika funkcji niezarządzanej. Jednak przed wykonaniem tej czynności należy najpierw określić, który delegat został zebrany. Gdy zdarzenie MDA zostanie aktywowane, zawiera nazwę typu delegata. Użyj tej nazwy, aby przeszukać swój kod dla wywołania platformy lub sygnatur COM, które są przekazywane przez delegata do kodu niezarządzanego. Nieprawidłowy delegat jest przepuszczany przez jedną z tych lokacji wywołań. Możesz również włączyć `gcUnmanagedToManaged` MDA, aby wymusić wyrzucanie elementów bezużytecznych przed każdym wywołaniem zwrotnym do środowiska uruchomieniowego. Spowoduje to usunięcie niepewności wprowadzonej przez wyrzucanie elementów bezużytecznych przez zapewnienie, że wyrzucanie elementów bezużytecznych zawsze występuje przed wywołaniem zwrotnym. Po uzyskaniu informacji o tym, który delegat został zebrany, Zmień kod, aby zachować odwołanie do tego delegata po stronie zarządzanej na potrzeby okresu istnienia organizowanego wskaźnika funkcji niezarządzanej.  
   
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
- Gdy Delegaty są organizowane jako wskaźniki funkcji, środowisko uruchomieniowe przydziela element thunk, który powoduje, że przejście z niezarządzanego do zarządzanego. Thunk jest to, co faktycznie wywołuje kod niezarządzany, zanim zarządzany delegat jest ostatecznie wywoływany. Bez włączonego `callbackOnCollectedDelegate` MDA, niezarządzany kod kierujący jest usuwany podczas zbierania delegata. Po włączeniu trybu MDA niezarządzany kod kierujący nie jest natychmiast usuwany po zebraniu delegata. `callbackOnCollectedDelegate` Zamiast tego ostatnie wystąpienia 1 000 są utrzymywane domyślnie i zmieniane w celu aktywowania MDA po wywołaniu. Thunk jest ostatecznie usuwana po 1 001 większej liczby delegatów zorganizowanych.  
+ Gdy Delegaty są organizowane jako wskaźniki funkcji, środowisko uruchomieniowe przydziela element thunk, który powoduje, że przejście z niezarządzanego do zarządzanego. Thunk jest to, co faktycznie wywołuje kod niezarządzany, zanim zarządzany delegat jest ostatecznie wywoływany. Bez włączonej `callbackOnCollectedDelegate` MDA, niezarządzany kod kierujący jest usuwany podczas zbierania delegata. Po włączeniu `callbackOnCollectedDelegate` MDA, niezarządzany kod kierujący nie zostanie natychmiast usunięty po zebraniu delegata. Zamiast tego ostatnie wystąpienia 1 000 są utrzymywane domyślnie i zmieniane w celu aktywowania MDA po wywołaniu. Thunk jest ostatecznie usuwana po 1 001 większej liczby delegatów zorganizowanych.  
   
 ## <a name="output"></a>Dane wyjściowe  
  Zdarzenie MDA raportuje nazwę typu delegata, który został zebrany przed podjęciem próby wywołania zwrotnego na niezarządzanym wskaźniku funkcji.  
@@ -111,7 +109,7 @@ public class Entry
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](diagnosing-errors-with-managed-debugging-assistants.md)

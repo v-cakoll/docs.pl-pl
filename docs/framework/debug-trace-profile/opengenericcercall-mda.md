@@ -10,20 +10,18 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), CER calls
 - generics [.NET Framework], open generic CER calls
 ms.assetid: da3e4ff3-2e67-4668-9720-fa776c97407e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 44b6ee3e4f74a523c1e902a4eb48a64b11eb3937
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: de1735103314dfedbabe27623f579ce2c1e728af
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72960898"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217277"
 ---
 # <a name="opengenericcercall-mda"></a>openGenericCERCall MDA
 
-Asystent debugowania zarządzanego `openGenericCERCall` został aktywowany, aby ostrzec, że wykres ograniczonego regionu wykonania (CER) z zmiennymi typu ogólnego w metodzie głównej jest przetwarzany podczas kompilacji JIT lub czasu generowania obrazu natywnego, a co najmniej jeden typ ogólny zmienne to typ odwołania do obiektu.
+Asystent debugowania zarządzanego `openGenericCERCall` został aktywowany, aby ostrzec, że wykres ograniczonego regionu wykonywania (CER) z zmiennymi typu ogólnego w metodzie głównej jest przetwarzany podczas kompilacji JIT lub czasu generowania obrazu natywnego, a co najmniej jedna z zmiennych typu ogólnego jest typem odwołania do obiektu.
 
-## <a name="symptoms"></a>Symptomy
+## <a name="symptoms"></a>Objawy
 
 Kod CER nie jest uruchamiany, gdy wątek zostanie przerwany lub gdy domena aplikacji zostanie zwolniona.
 
@@ -112,7 +110,7 @@ class MyClass
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
 - <xref:System.Runtime.ConstrainedExecution>

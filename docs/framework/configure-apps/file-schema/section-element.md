@@ -8,24 +8,22 @@ helpviewer_keywords:
 - section Element
 - <section> Element
 ms.assetid: ec7d4110-2403-47ac-8218-499bfe9d5ddb
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8c1675540df6844f98572c11cfb140bff23b31a8
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 8785523d664294e3ca3792fb0f84d739d1f1a376
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089019"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215729"
 ---
 # <a name="section-element"></a>\<sekcja >
 
 Zawiera deklarację sekcji konfiguracyjnej.
 
-[ **\<configuration >** ](configuration-element.md) \
+[ **\<> konfiguracji**](configuration-element.md)\
 &nbsp;&nbsp;[ **\<configSections >** ](configsections-element-for-configuration.md)\
 &nbsp;&nbsp;&nbsp;&nbsp; **\<**
 
-[ **\<configuration >** ](configuration-element.md) \
+[ **\<> konfiguracji**](configuration-element.md)\
 &nbsp;&nbsp;[ **\<configSections >** ](configsections-element-for-configuration.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[ **\<sekcja**](sectiongroup-element-for-configsections.md) >\
 &nbsp;&nbsp;&nbsp;&nbsp; **&nbsp;&nbsp;\<** >
@@ -44,7 +42,7 @@ Zawiera deklarację sekcji konfiguracyjnej.
 |           | Opis |
 | --------- | ----------- |
 | **Nazwij**  | Określa nazwę sekcji konfiguracji. |
-| **Wprowadź**  | Określa nazwę klasy procedury obsługi sekcji konfiguracji, która odczytuje sekcję z pliku konfiguracyjnego. Wartość typu ma składnię "w pełni kwalifikowana-sekcja-Handler-class-name, Simple-Assembly-Name". Prosta nazwa zestawu to główna nazwa pliku bez rozszerzenia pliku *dll* . |
+| **type**  | Określa nazwę klasy procedury obsługi sekcji konfiguracji, która odczytuje sekcję z pliku konfiguracyjnego. Wartość typu ma składnię "w pełni kwalifikowana-sekcja-Handler-class-name, Simple-Assembly-Name". Prosta nazwa zestawu to główna nazwa pliku bez rozszerzenia pliku *dll* . |
 
 ## <a name="optional-attributes"></a>Atrybuty opcjonalne
 
@@ -67,7 +65,7 @@ Następujące atrybuty są stosowane tylko w przypadku aplikacji ASP.NET. System
 
 ## <a name="child-elements"></a>Elementy podrzędne
 
-Brak
+None
 
 ## <a name="remarks"></a>Uwagi
 
@@ -96,6 +94,6 @@ Poniższy przykład pokazuje, jak zdefiniować sekcję konfiguracyjną i zdefini
 
 Tego elementu można użyć w pliku konfiguracyjnym aplikacji, pliku konfiguracji komputera (*Machine. config*) i plikach *Web. config* , które nie znajdują się na poziomie katalogu aplikacji.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Schemat pliku konfiguracji dla .NET Framework](index.md)

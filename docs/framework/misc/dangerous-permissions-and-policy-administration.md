@@ -8,14 +8,12 @@ helpviewer_keywords:
 - secure coding, dangerous permissions
 - permissions [.NET Framework], dangerous
 ms.assetid: 1929e854-23a0-4bb1-94be-e8aa3b609e32
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ffe4f3e000c80610d5a105dddef90f9cfd51f0dc
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 026697feec7afe950628639c5e595ba0a0220b97
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205586"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217143"
 ---
 # <a name="dangerous-permissions-and-policy-administration"></a>Niebezpieczne uprawnienia i administrowanie zasadami
 Kilka operacji chronionych, dla których .NET Framework zapewnia uprawnienia, mogą potencjalnie pozwolić na obejście systemu zabezpieczeń. Te niebezpieczne uprawnienia powinny być przyznawane tylko do wiarygodnego kodu, a następnie tylko w razie potrzeby. W przypadku przyznania tych uprawnień zwykle nie ma obrony przed złośliwym kodem.  
@@ -38,6 +36,6 @@ Kilka operacji chronionych, dla których .NET Framework zapewnia uprawnienia, mo
 |<xref:System.Security.Permissions.ReflectionPermission>||  
 |<xref:System.MemberAccessException>|Może używać prywatnych elementów członkowskich do pokonania mechanizmów ułatwień dostępu.|  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Wytyczne dotyczące bezpiecznego programowania](../../standard/security/secure-coding-guidelines.md)

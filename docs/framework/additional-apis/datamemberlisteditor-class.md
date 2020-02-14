@@ -1,5 +1,5 @@
 ---
-title: Datamemberfieldeditor, klasa
+title: Klasa Datamemberfieldeditor
 ms.date: 03/30/2017
 ms.technology: dotnet-winforms
 api_name:
@@ -11,18 +11,16 @@ api_type:
 ms.assetid: c11d5231-78f2-45a7-9210-3b2d0969370e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7b79da7832a797cce0163de42363f0d3812a2376
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d0f8063dd85537f81a1ae145b4526e10ad90b77e
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675393"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215608"
 ---
-# <a name="datamemberlisteditor-class"></a>Datamemberfieldeditor, klasa
+# <a name="datamemberlisteditor-class"></a>Klasa Datamemberfieldeditor
 
-Udostępnia interfejs użytkownika z listy rozwijanej do edytowania właściwości obiektów powiązanych z danymi (obiektów, które mają inną niż null `DataSource` właściwości), wyświetlając listę wszystkich właściwości `DataSource` wybierz źródło wartości z obiektu.  
+Udostępnia interfejs użytkownika listy rozwijanej służący do edytowania właściwości obiektów powiązanych z danymi (obiektów mających Właściwość `DataSource` o wartości innej niż null) przez wystawienie wszystkich właściwości obiektu `DataSource`, z którego ma zostać wybrana wartość źródło wartości.  
   
 ## <a name="syntax"></a>Składnia
   
@@ -31,18 +29,18 @@ internal class DataMemberListEditor : UITypeEditor
 ```
 
 > [!WARNING]
-> `DataMemberListEditor` Klasy jest wewnętrzna i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+> Klasa `DataMemberListEditor` jest wewnętrzna i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 > 
-> Firma Microsoft nie obsługuje użycia tej klasy w aplikacji produkcyjnej w żadnym wypadku.
+> Firma Microsoft nie obsługuje korzystania z tej klasy w aplikacji produkcyjnej w żadnej sytuacji.
   
 ## <a name="requirements"></a>Wymagania
 
-**Namespace:** <xref:System.Windows.Forms.Design?displayProperty=nameWithType>  
+**Przestrzeń nazw:** <xref:System.Windows.Forms.Design?displayProperty=nameWithType>  
   
-**Zestaw:** System.Design (in System.Design.dll)  
+**Zestaw:** System. Design (w pliku System. Design. dll)  
   
-**Wersje programu .NET framework:** Dostępne od wersji 2.0.  
+**.NET Framework wersje:** Dostępne od 2,0.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Windows.Forms.Design?displayProperty=nameWithType>

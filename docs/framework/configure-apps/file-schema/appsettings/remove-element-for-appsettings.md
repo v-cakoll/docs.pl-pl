@@ -7,20 +7,18 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: 218c4464-e007-4539-803f-7c8b0a909fd8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a0fcdb75aa733a9d7634ec1c3b31dcbbb87e090e
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 83abbdbf0d3e4dfd16c0e8c649200c4ecc7329f7
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088719"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215494"
 ---
 # <a name="remove-element-for-appsettings"></a>\<usunąć > elementu \<appSettings >
 
 Usuwa niestandardowe ustawienia aplikacji.
 
-[ **\<configuration >** ](../configuration-element.md) \
+[ **\<> konfiguracji**](../configuration-element.md)\
 &nbsp;&nbsp;[ **\<appSettings >** ](appsettings-element-for-configuration.md)\
 &nbsp;&nbsp;&nbsp;&nbsp; **\<usuń >**
 
@@ -36,7 +34,7 @@ Usuwa niestandardowe ustawienia aplikacji.
 
 |         | Opis |
 | ------- | ----------- |
-| **głównych** | Atrybut wymagany.<br><br>Określa nazwę klucza do usunięcia. |
+| **Klucz** | Atrybut wymagany.<br><br>Określa nazwę klucza do usunięcia. |
 
 ### <a name="parent-element"></a>Element nadrzędny
 
@@ -46,7 +44,7 @@ Usuwa niestandardowe ustawienia aplikacji.
 
 ## <a name="child-elements"></a>Elementy podrzędne
 
-Brak
+None
 
 ## <a name="example"></a>Przykład
 
@@ -58,6 +56,6 @@ Poniższy przykład przedstawia sposób usuwania niestandardowego ustawienia kon
 </appSettings>
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Schemat pliku konfiguracji dla .NET Framework](../index.md)

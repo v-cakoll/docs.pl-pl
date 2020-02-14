@@ -8,32 +8,30 @@ helpviewer_keywords:
 - IllegalPrepareConstrainedRegions MDA
 - MDAs (managed debugging assistants), illegal PrepareConstrainedRegions
 ms.assetid: 2f9b5031-f910-4e01-a196-f89eab313eaf
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 623aff91eb801b4b32fc180bd97ed3822ad7f163
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: b80d6160876834b22e8d9d1eb7112b8b67c15fcc
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052678"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216461"
 ---
 # <a name="illegalprepareconstrainedregion-mda"></a>illegalPrepareConstrainedRegion MDA
-Asystent `illegalPrepareConstrainedRegion` debugowania zarządzanego (MDA) jest uaktywniany, <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A?displayProperty=nameWithType> gdy wywołanie metody nie poprzedza `try` bezpośrednio instrukcji programu obsługi wyjątków. To ograniczenie jest na poziomie MSIL, dlatego można mieć źródło `try`, które nie umożliwia generowania kodu między wywołaniem i, takimi jak komentarze.  
+Asystent debugowania zarządzanego `illegalPrepareConstrainedRegion` (MDA) jest uaktywniany, gdy wywołanie metody <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A?displayProperty=nameWithType> nie poprzedza bezpośrednio instrukcji `try` programu obsługi wyjątków. To ograniczenie jest na poziomie MSIL, dlatego można mieć źródło, które nie umożliwia generowania kodu między wywołaniem i `try`, takie jak komentarze.  
   
-## <a name="symptoms"></a>Symptomy  
+## <a name="symptoms"></a>Objawy  
  Ograniczony region wykonywania (CER), który nigdy nie jest traktowany jak taki, ale jako prosty blok obsługi wyjątków (`finally` lub `catch`). W związku z tym region nie jest uruchamiany w przypadku warunku braku pamięci lub przerwania wątku.  
   
 ## <a name="cause"></a>Przyczyna  
- Wzorzec przygotowania dla programu CER nie działa poprawnie.  Jest to zdarzenie błędu. / / `catch` `filter` `finally` / `fault` Wywołanie metody używane do oznaczania procedur obsługi wyjątków, które wprowadza CER w swoich blokach, musi być używane bezpośrednio przed <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> `try` instrukcja.  
+ Wzorzec przygotowania dla programu CER nie działa poprawnie.  Jest to zdarzenie błędu. Wywołanie metody <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> używane do oznaczania procedur obsługi wyjątków jako przedstawiające CER w ich `catch`/`finally`/`fault`/`filter` bloków należy używać bezpośrednio przed instrukcją `try`.  
   
 ## <a name="resolution"></a>Rozwiązanie  
- Upewnij się, że wywołanie <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> jest wykonywane bezpośrednio `try` przed instrukcją.  
+ Upewnij się, że wywołanie <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> następuje bezpośrednio przed instrukcją `try`.  
   
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
  To zdarzenie MDA nie ma wpływu na środowisko CLR.  
   
 ## <a name="output"></a>Dane wyjściowe  
- MDA Wyświetla nazwę metody wywołującej <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> metodę, przesunięcie MSIL i komunikat wskazujący, że wywołanie nie następuje bezpośrednio przed początkiem bloku try.  
+ MDA Wyświetla nazwę metody wywołującej metodę <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>, przesunięcie MSIL i komunikat wskazujący, że wywołanie nie następuje bezpośrednio przed początkiem bloku try.  
   
 ## <a name="configuration"></a>Konfiguracja  
   
@@ -64,7 +62,7 @@ void MethodWithInvalidPCR()
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>

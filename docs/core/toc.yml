@@ -2,7 +2,7 @@
   href: index.md
 - name: Informacje o platformie .NET Core
   href: about.md
-- name: Zainstaluj
+- name: Instalowanie
   items:
     - name: Omówienie
       href: install/index.md
@@ -48,9 +48,10 @@
           href: install/linux-package-manager-sles12.md
     - name: Instalowanie zlokalizowanej technologii IntelliSense
       href: install/localized-intellisense.md
-- name: Wprowadzenie
-  href: get-started.md
+- name: Rozpoczęcie pracy
   items:
+    - name: Rozpoczęcie pracy
+      href: get-started.md
     - name: 'Wprowadzenie do języka C# i programu Visual Studio Code'
       href: tutorials/with-visual-studio-code.md
     - name: Rozpoczynanie pracy z platformą .NET Core w systemie macOS przy użyciu programu Visual Studio Code
@@ -79,20 +80,13 @@
       href: whats-new/dotnet-core-2-1.md
     - name: Co nowego w programie .NET Core 2.0
       href: whats-new/dotnet-core-2-0.md
-- name: Fundamentalne zmiany
+- name: Zmiany powodujące niezgodność
   displayName: app compatibility
   href: compatibility/
 - name: Samouczki
-  href: tutorials/index.md
   items:
-    - name: Szablony dla interfejsu wiersza polecenia
-      items:
-        - name: 1 — Tworzenie szablonu elementu
-          href: tutorials/cli-templates-create-item-template.md
-        - name: 2 — Tworzenie szablonu projektu
-          href: tutorials/cli-templates-create-project-template.md
-        - name: 3 — Tworzenie pakietu szablonów
-          href: tutorials/cli-templates-create-template-pack.md
+    - name: Omówienie
+      href: tutorials/index.md
     - name: Rozpoczynanie pracy z platformą .NET Core przy użyciu programu Visual Studio dla komputerów Mac
       href: tutorials/using-on-mac-vs.md
     - name: Tworzenie kompletnego rozwiązania .NET Core w systemie macOS
@@ -109,6 +103,14 @@
       href: tutorials/aspnet-core.md
     - name: Hostowanie platformy .NET Core z kodu natywnego
       href: tutorials/netcore-hosting.md
+    - name: Tworzenie szablonów dla interfejsu wiersza polecenia
+      items:
+        - name: 1 — Tworzenie szablonu elementu
+          href: tutorials/cli-templates-create-item-template.md
+        - name: 2 — Tworzenie szablonu projektu
+          href: tutorials/cli-templates-create-project-template.md
+        - name: 3 — Tworzenie pakietu szablonów
+          href: tutorials/cli-templates-create-template-pack.md
 - name: Konfiguracja środowiska uruchomieniowego
   items:
     - name: Ustawienia
@@ -131,13 +133,6 @@
       href: native-interop/expose-components-to-com.md
 - name: 'Pakiety, metapakiety i struktury'
   href: packages.md
-- name: Zmiany w interfejsie wiersza polecenia — omówienie
-  href: tools/cli-msbuild-architecture.md
-  items:
-    - name: Zarządzanie zależnościami
-      href: tools/dependencies.md
-    - name: Dodatki do formatu csproj
-      href: tools/csproj.md
 - name: Migracja
   items:
     - name: Program .NET Core 2.0 do 2.1
@@ -146,11 +141,16 @@
       href: migration/index.md
     - name: Mapowanie między formatami project.json i csproj
       href: tools/project-json-to-csproj.md
+    - name: Zmiany w interfejsie wiersza polecenia — omówienie
+      href: tools/cli-msbuild-architecture.md
+    - name: Dodatki do formatu csproj
+      href: tools/csproj.md
     - name: Migrowanie z rozwiązania DNX
       href: migration/from-dnx.md
 - name: Wdrażanie aplikacji
-  href: deploying/index.md
   items:
+    - name: Omówienie
+      href: deploying/index.md
     - name: Publikowanie aplikacji za pomocą interfejsu wiersza polecenia
       href: deploying/deploy-with-cli.md
     - name: Wdrażanie aplikacji za pomocą programu Visual Studio
@@ -189,9 +189,11 @@
       items:
         - name: Debugowanie przecieku pamięci
           href: diagnostics/debug-memory-leak.md
-- name: Testowanie jednostek
+- name: Testy jednostkowe
   href: testing/index.md
   items:
+    - name: Omówienie
+      href: testing/index.md
     - name: Najlepsze rozwiązania dotyczące testów jednostkowych
       href: testing/unit-testing-best-practices.md
     - name: 'Testy jednostkowe C# w narzędziu xUnit'
@@ -220,9 +222,10 @@
       href: /visualstudio/test/live-unit-testing-start
 - name: Ciągła integracja
   href: tools/using-ci-with-cli.md
-- name: Przechowywanie wersji
-  href: versions/index.md
+- name: Obsługa wersji
   items:
+    - name: Omówienie
+      href: versions/index.md
     - name: Wybieranie wersji platformy .NET Core
       href: versions/selection.md
     - name: Usuwanie nieaktualnych środowisk uruchomieniowych i zestawów SDK
@@ -235,7 +238,7 @@
   items:
     - name: Omówienie
       href: tools/index.md
-    - name: Narzędzia
+    - name: narzędzia
       expanded: true
       items:
         - name: Narzędzia globalne
@@ -259,7 +262,7 @@
       href: tools/telemetry.md
     - name: global.json — omówienie
       href: tools/global-json.md
-    - name: Tematy pomocy
+    - name: Dokumentacja
       items:
         - name: dotnet
           href: tools/dotnet.md
@@ -330,8 +333,9 @@
             - name: dotnet remove package
               href: tools/dotnet-remove-package.md
 - name: Narzędzia dodatkowe platformy .NET Core
-  href: additional-tools/index.md
   items:
+    - name: Omówienie
+      href: additional-tools/index.md
     - name: Narzędzie do dezinstalacji platformy .NET Core
       href: additional-tools/uninstall-tool.md
     - name: WCF Web Service Reference Provider
@@ -354,7 +358,7 @@
       href: porting/project-structure.md
     - name: Niedostępne technologie
       href: porting/net-framework-tech-unavailable.md
-    - name: Narzędzia
+    - name: narzędzia
       href: porting/tools.md
     - name: Korzystanie z pakietu zgodności systemu Windows
       href: porting/windows-compat-pack.md
@@ -364,13 +368,15 @@
       href: porting/wpf.md
     - name: Przenoszenie projektów C++/CLI
       href: porting/cpp-cli.md
-- name: Ładowanie zależności
+- name: Zarządzanie zależnościami i ładowanie ich
   items:
-    - name: Omówienie
+    - name: Zarządzanie zależnościami
+      href: tools/dependencies.md
+    - name: Ładowanie zależności
       href: dependency-loading/overview.md
     - name: Informacje o elemencie AssemblyLoadContext
       href: dependency-loading/understanding-assemblyloadcontext.md
-    - name: Ładowanie szczegółów
+    - name: Szczegóły ładowania zależności
       items:
         - name: Domyślne sondowanie zależności
           href: dependency-loading/default-probing.md
@@ -387,6 +393,4 @@
         - name: Sposób używania i debugowania funkcji zwolnienia zestawu w programie .NET Core
           href: ../standard/assembly/unloadability-howto.md
 - name: Tworzenie pakietów dystrybucji platformy .NET Core
-  items:
-    - name: Omówienie
-      href: distribution-packaging.md
+  href: distribution-packaging.md

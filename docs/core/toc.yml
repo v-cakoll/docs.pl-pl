@@ -2,7 +2,7 @@
   href: index.md
 - name: Informacje o platformie .NET Core
   href: about.md
-- name: Instalowanie
+- name: Zainstaluj
   items:
     - name: Omówienie
       href: install/index.md
@@ -48,9 +48,9 @@
           href: install/linux-package-manager-sles12.md
     - name: Instalowanie zlokalizowanej technologii IntelliSense
       href: install/localized-intellisense.md
-- name: Rozpoczęcie pracy
+- name: Wprowadzenie
   items:
-    - name: Rozpoczęcie pracy
+    - name: Wprowadzenie
       href: get-started.md
     - name: 'Wprowadzenie do języka C# i programu Visual Studio Code'
       href: tutorials/with-visual-studio-code.md
@@ -80,7 +80,7 @@
       href: whats-new/dotnet-core-2-1.md
     - name: Co nowego w programie .NET Core 2.0
       href: whats-new/dotnet-core-2-0.md
-- name: Zmiany powodujące niezgodność
+- name: Fundamentalne zmiany
   displayName: app compatibility
   href: compatibility/
 - name: Samouczki
@@ -189,7 +189,7 @@
       items:
         - name: Debugowanie przecieku pamięci
           href: diagnostics/debug-memory-leak.md
-- name: Testy jednostkowe
+- name: Testowanie jednostek
   href: testing/index.md
   items:
     - name: Omówienie
@@ -222,7 +222,7 @@
       href: /visualstudio/test/live-unit-testing-start
 - name: Ciągła integracja
   href: tools/using-ci-with-cli.md
-- name: Obsługa wersji
+- name: Przechowywanie wersji
   items:
     - name: Omówienie
       href: versions/index.md
@@ -238,7 +238,7 @@
   items:
     - name: Omówienie
       href: tools/index.md
-    - name: narzędzia
+    - name: Narzędzia
       expanded: true
       items:
         - name: Narzędzia globalne
@@ -262,7 +262,7 @@
       href: tools/telemetry.md
     - name: global.json — omówienie
       href: tools/global-json.md
-    - name: Dokumentacja
+    - name: Tematy pomocy
       items:
         - name: dotnet
           href: tools/dotnet.md
@@ -358,7 +358,7 @@
       href: porting/project-structure.md
     - name: Niedostępne technologie
       href: porting/net-framework-tech-unavailable.md
-    - name: narzędzia
+    - name: Narzędzia
       href: porting/tools.md
     - name: Korzystanie z pakietu zgodności systemu Windows
       href: porting/windows-compat-pack.md

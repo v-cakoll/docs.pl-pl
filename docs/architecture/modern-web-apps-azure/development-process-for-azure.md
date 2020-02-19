@@ -4,19 +4,19 @@ description: Tworzenie architektury nowoczesnych aplikacji sieci Web przy użyci
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 830271d76e5a87ed782d81fa9491328c580f0f87
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 7a641c1b6665af6e9e78ef182174b360041d74aa
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849590"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450049"
 ---
 # <a name="development-process-for-azure"></a>Proces programistyczny dla platformy Azure
 
 > _"Dzięki chmurze użytkownicy indywidualni i małe firmy mogą przyciągnąć swoje palce i natychmiast skonfigurować usługi klasy korporacyjnej"._  
 > _-Roy posta Stephan_
 
-## <a name="vision"></a>Obraz
+## <a name="vision"></a>Wizja
 
 > *Opracowuj dobrze zaprojektowane aplikacje ASP .NET Core w odpowiedni sposób, korzystając z programu Visual Studio lub interfejsu wiersza polecenia dotnet i Visual Studio Code lub dowolnego edytora.*
 
@@ -26,13 +26,9 @@ ms.locfileid: "70849590"
 
 Bez względu na to, czy wolisz pełną i wydajną platformę IDE, czy też Edytor uproszczony i Agile, firma Microsoft połączyła się z tworzeniem aplikacji ASP.NET Core
 
-**Visual Studio 2017.** Jeśli używasz *programu Visual Studio 2017* , możesz tworzyć ASP.NET Core aplikacje, o ile masz zainstalowaną *Międzyplatformowe* obciążenie dla platformy .NET Core. Rysunek 10-1 pokazuje wymagane obciążenie w oknie dialogowym Instalatora programu Visual Studio 2017.
+**Program Visual Studio 2019.** Program Visual Studio 2019 to najlepsze w swojej klasie środowisko IDE do tworzenia aplikacji do ASP.NET Core. Oferuje ona hosta funkcji, które zwiększają produktywność deweloperów. Można go używać do tworzenia aplikacji, a następnie analizowania jej wydajności i innych właściwości. Zintegrowany debuger umożliwia wstrzymywanie wykonywania kodu i wykonywanie kroków z powrotem i w górę za pomocą kodu na bieżąco, gdy jest uruchomiony. Wbudowany moduł uruchamiający testy pozwala organizować testy i ich wyniki, a także wykonywać testy jednostkowe na żywo podczas kodowania. Korzystając z Live Share, możesz współpracować w czasie rzeczywistym z innymi programistami i bezproblemowo udostępniać swoją sesję kodu za pośrednictwem sieci. Gdy wszystko będzie gotowe, program Visual Studio zawiera wszystko, co jest potrzebne do opublikowania aplikacji na platformie Azure lub wszędzie tam, gdzie można je hostować.
 
-![Instalowanie obciążenia .NET Core w programie Visual Studio 2017](./media/image10-1.png)
-
-**Rysunek 10-1.** Instalowanie obciążenia .NET Core w programie Visual Studio 2017.
-
-[Pobierz program Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+[Pobierz program Visual Studio 2019](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
 
 **Interfejs wiersza polecenia Visual Studio Code i dotnet** (międzyplatformowe narzędzia dla systemów Mac, Linux i Windows). Jeśli wolisz uproszczony i Międzyplatformowy Edytor obsługujący dowolny język programowania, możesz użyć kodu Microsoft Visual Studio i interfejsu wiersza polecenia dotnet. Te produkty zapewniają proste, a jeszcze niezawodne środowisko, które usprawnia przepływ pracy dewelopera. Ponadto Visual Studio Code obsługuje rozszerzenia dla programu C\# i programowania w sieci Web, które udostępnia funkcje IntelliSense i skróty w edytorze.
 
@@ -58,7 +54,7 @@ Utwórz Azure App Service, w którym zostanie wdrożona aplikacja. Utwórz aplik
 
 ![AzureWebApp](./media/image10-2.png)
 
-**Rysunek 10-2.** Tworzenie nowej aplikacji sieci Web Azure App Service w witrynie Azure Portal.
+**Rysunek 10-1.** Tworzenie nowej aplikacji sieci Web Azure App Service w witrynie Azure Portal.
 
 Proces kompilacji CI wykonuje zautomatyzowaną kompilację za każdym razem, gdy nowy kod zostanie przekazany do repozytorium kontroli źródła projektu. Dzięki temu można natychmiast uzyskać informacje o tym, że kod kompiluje (i najlepiej przekazuje testy automatyczne) i może zostać wdrożony. Ta kompilacja elementu konfiguracji spowoduje utworzenie artefaktu pakietu Narzędzia Web Deploy i opublikowanie go do użycia przez proces tworzenia dysku CD.
 
@@ -74,11 +70,11 @@ Po skonfigurowaniu potoku ciągłej integracji/ciągłego wdrażania możesz po 
 
 ### <a name="workflow-for-developing-azure-hosted-aspnet-core-applications"></a>Przepływ pracy służący do tworzenia aplikacji ASP.NET Core hostowanych na platformie Azure
 
-Po skonfigurowaniu konta platformy Azure i procesu ciągłej integracji/ciągłego opracowywania aplikacji ASP.NET Core hostowanych na platformie Azure jest prosta. Poniżej przedstawiono podstawowe kroki, które zwykle są wykonywane podczas kompilowania aplikacji ASP.NET Core hostowanej w Azure App Service jako aplikacja internetowa, jak pokazano na rysunku 10-3.
+Po skonfigurowaniu konta platformy Azure i procesu ciągłej integracji/ciągłego opracowywania aplikacji ASP.NET Core hostowanych na platformie Azure jest prosta. Poniżej przedstawiono podstawowe kroki, które zwykle są wykonywane podczas kompilowania aplikacji ASP.NET Core hostowanej w Azure App Service jako aplikacja internetowa, jak pokazano na rysunku 10-2.
 
 ![EndToEndDevDeployWorkflow](./media/image10-3.png)
 
-**Rysunek 10-3.** Przepływ pracy krok po kroku służący do kompilowania aplikacji ASP.NET Core i hostowania ich na platformie Azure
+**Rysunek 10-2.** Przepływ pracy krok po kroku służący do kompilowania aplikacji ASP.NET Core i hostowania ich na platformie Azure
 
 #### <a name="step-1-local-dev-environment-inner-loop"></a>Krok 1. Pętla wewnętrzna lokalnego środowiska deweloperskiego
 
@@ -96,7 +92,7 @@ Nowa kompilacja jest wyzwalana na serwerze kompilacji za każdym razem, gdy w re
 
 Gdy kompilacja zakończyła się powodzeniem, proces tworzenia dysków CD zostanie pobrany z utworzonych artefaktów kompilacji. Obejmie to pakiet Web Deploy. Serwer kompilacji wdroży ten pakiet w Azure App Service, zastępując istniejącą usługę nowo utworzoną. Zazwyczaj ten krok jest przeznaczony dla środowiska przejściowego, ale niektóre aplikacje wdrażają bezpośrednio w środowisku produkcyjnym przez proces CD.
 
-#### <a name="step-5-azure-app-service-web-app"></a>Krok 5. Aplikacja sieci Web Azure App Service
+#### <a name="step-5-azure-app-service-web-app"></a>Krok 5. Aplikacja internetowa usługi Azure App Service
 
 Po wdrożeniu aplikacja ASP.NET Core działa w kontekście aplikacji internetowej Azure App Service. Tę aplikację sieci Web można monitorować i konfigurować przy użyciu witryny Azure Portal.
 
@@ -110,5 +106,5 @@ Gdy aplikacja sieci Web jest uruchomiona, można monitorować kondycję aplikacj
 <https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core>
 
 >[!div class="step-by-step"]
->[Poprzedni](test-asp-net-core-mvc-apps.md)
->[Następny](azure-hosting-recommendations-for-asp-net-web-apps.md)
+>[Poprzednie](test-asp-net-core-mvc-apps.md)
+>[dalej](azure-hosting-recommendations-for-asp-net-web-apps.md)

@@ -3,13 +3,13 @@ title: Pracuj z danymi w aplikacjach ASP.NET Core
 description: Tworzenie architektury nowoczesnych aplikacji sieci Web przy użyciu ASP.NET Core i platformy Azure | Praca z danymi w aplikacjach ASP.NET Core
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: d3c91f594eedd2636cbf08285f0dee352bc4835a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.date: 12/04/2019
+ms.openlocfilehash: f37bdca688559236d9b07b97f7ee7459b3be4f39
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777118"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449351"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Praca z danymi w aplikacjach ASP.NET Core
 
@@ -200,9 +200,9 @@ private void ConfigureOrder(EntityTypeBuilder<Order> builder)
 }
 ```
 
-W tym przykładzie właściwość `ShipToAddress` jest typu `Address`. `Address` jest obiektem wartości z kilkoma właściwościami, takimi jak `Street` i `City`. EF Core mapuje obiekt `Order` na tabelę z jedną kolumną dla właściwości `Address`, co oznacza, że każda nazwa kolumny jest poprzed nazwą właściwości. W tym przykładzie tabela `Order` będzie zawierać kolumny, takie jak `ShipToAddress_Street` i `ShipToAddress_City`.
+W tym przykładzie właściwość `ShipToAddress` jest typu `Address`. `Address` jest obiektem wartości z kilkoma właściwościami, takimi jak `Street` i `City`. EF Core mapuje obiekt `Order` na tabelę z jedną kolumną dla właściwości `Address`, co oznacza, że każda nazwa kolumny jest poprzed nazwą właściwości. W tym przykładzie tabela `Order` będzie zawierać kolumny, takie jak `ShipToAddress_Street` i `ShipToAddress_City`. Istnieje również możliwość przechowywania typów posiadanych w oddzielnych tabelach, w razie potrzeby.
 
-[EF Core 2,2 wprowadza obsługę kolekcji jednostek będących własnością](https://docs.microsoft.com/ef/core/what-is-new/ef-core-2.2#collections-of-owned-entities)
+Dowiedz się więcej o [obsłudze jednostek należących do EF Core](/ef/core/modeling/owned-entities).
 
 ### <a name="resilient-connections"></a>Odporne połączenia
 
@@ -242,7 +242,7 @@ Jeśli jednak kod inicjuje transakcję przy użyciu BeginTransaction, definiujes
 
 System. InvalidOperationException: skonfigurowana strategia wykonywania "SqlServerRetryingExecutionStrategy" nie obsługuje transakcji inicjowanych przez użytkownika. Użyj strategii wykonywania zwróconej przez obiekt "DbContext. Database. CreateExecutionStrategy ()", aby wykonać wszystkie operacje w transakcji jako jednostkę, którą można ponowić.
 
-Rozwiązaniem jest ręczne Wywołaj strategię wykonywania EF z delegatem reprezentującym wszystkie elementy, które należy wykonać. Jeśli wystąpi błąd przejściowy, strategia wykonywania wywoła ponownie delegata. Poniższy kod przedstawia sposób wdrożenia tego podejścia:
+Rozwiązaniem jest ręczne Wywołaj strategię wykonywania EF z delegatem reprezentującym wszystkie elementy, które należy wykonać. Jeśli wystąpi błąd przejściowy, strategia wykonywania ponownie wywoła delegata. Poniższy kod przedstawia sposób wdrożenia tego podejścia:
 
 ```csharp
 // Use of an EF Core resiliency strategy when using multiple DbContexts
@@ -350,7 +350,7 @@ Azure Cosmos DB to w pełni zarządzana usługa bazy danych NoSQL, która oferuj
 
 **Rysunek 8-2.** Organizacja zasobów Azure Cosmos DB.
 
-Język zapytań Azure Cosmos DB to prosty, jeszcze zaawansowany interfejs do wykonywania zapytań w dokumentach JSON. Język obsługuje podzbiór gramatyki SQL ANSI i dodaje głębokiej integracji obiektów JavaScript, tablic, konstrukcji obiektów i wywołania funkcji.
+Język zapytań Azure Cosmos DB to prosty, jeszcze zaawansowany interfejs do wykonywania zapytań w dokumentach JSON. Język obsługuje podzbiór gramatyki ANSI SQL i dodaje głęboką integrację obiektów, tablic, konstrukcji obiektów i wywoływania funkcji języka JavaScript.
 
 **Odwołania — Azure Cosmos DB**
 
@@ -509,5 +509,5 @@ _cache.Get<CancellationTokenSource>("cts").Cancel();
 Buforowanie może znacząco poprawić wydajność stron sieci Web, które wielokrotnie żądają tych samych wartości z bazy danych. Należy pamiętać, aby zmierzyć dostęp do danych i wydajność stron przed zastosowaniem buforowania, i zastosować buforowanie tylko w przypadku, gdy zobaczysz potrzebę ulepszenia. Buforowanie zużywa zasoby pamięci serwera sieci Web i zwiększa złożoność aplikacji, dlatego ważne jest, aby nie zoptymalizować się za pomocą tej techniki.
 
 >[!div class="step-by-step"]
->[Poprzedni](develop-asp-net-core-mvc-apps.md)
->[Następny](test-asp-net-core-mvc-apps.md)
+>[Poprzednie](develop-asp-net-core-mvc-apps.md)
+>[dalej](test-asp-net-core-mvc-apps.md)

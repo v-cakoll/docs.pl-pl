@@ -3,13 +3,13 @@ title: Zasady dotyczące architektury
 description: Tworzenie architektury nowoczesnych aplikacji sieci Web przy użyciu ASP.NET Core i platformy Azure | Zasady architektury
 author: ardalis
 ms.author: wiwagn
-ms.date: 02/16/2019
-ms.openlocfilehash: 656c92c417283366e4bb757489c189ecbc0ea815
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.date: 12/04/2019
+ms.openlocfilehash: ffc890bf8cd6b07bd70d8fc7b2b8cfeaf474ae35
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73416685"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450274"
 ---
 # <a name="architectural-principles"></a>Zasady dotyczące architektury
 
@@ -34,7 +34,7 @@ W klasach hermetyzacja jest realizowana przez ograniczenie poza dostępem do sta
 
 ### <a name="dependency-inversion"></a>Niewersja zależności
 
-Kierunek zależności w aplikacji powinien mieć kierunek abstrakcji, a nie szczegóły implementacji. Większość aplikacji jest zapisywana w taki sposób, że przepływy zależności czasu kompilacji w kierunku wykonywania środowiska uruchomieniowego. Spowoduje to utworzenie grafu zależności bezpośredniej. Oznacza to, że jeśli moduł A wywołuje funkcję w module B, która wywołuje funkcję w module C, a następnie w czasie kompilacji A będzie zależeć od B, która będzie zależeć od dysku C, jak pokazano na rysunku 4-1.
+Kierunek zależności w aplikacji powinien mieć kierunek abstrakcji, a nie szczegóły implementacji. Większość aplikacji jest zapisywana w taki sposób, że przepływy zależności czasu kompilacji w kierunku wykonywania środowiska uruchomieniowego. Spowoduje to utworzenie grafu zależności bezpośredniej. Oznacza to, że jeśli moduł A wywołuje funkcję w module B, która wywołuje funkcję w module C, a następnie w czasie kompilacji A będzie zależeć od B, która będzie zależeć od C, jak pokazano na rysunku 4-1.
 
 ![Wykres zależności bezpośredniej](./media/image4-1.png)
 
@@ -50,13 +50,13 @@ Zastosowanie zasady odróżniania zależności umożliwia wywoływanie metod w r
 
 ### <a name="explicit-dependencies"></a>Jawne zależności
 
-**Metody i klasy powinny jawnie wymagać wszelkich obiektów współpracy, które są potrzebne do poprawnego działania.** Konstruktory klas zapewniają szansę dla klas, aby identyfikować elementy, których potrzebują, aby były w prawidłowym stanie i działać prawidłowo. Jeśli zdefiniujesz klasy, które mogą być skonstruowane i wywoływane, ale które będą działać prawidłowo, jeśli są używane pewne składniki globalne lub infrastruktury, te klasy są *DISHONEST* z klientami. Kontrakt konstruktora mówi klientowi, że potrzebuje tylko określonych elementów (prawdopodobnie nic nie tylko wtedy, gdy Klasa korzysta tylko z konstruktora bez parametrów), ale w czasie wykonywania obiekt naprawdę nie wymaga czegoś innego.
+**Metody i klasy powinny jawnie wymagać wszelkich obiektów współpracy, które są potrzebne do poprawnego działania.** Konstruktory klas zapewniają szansę dla klas, aby identyfikować elementy, których potrzebują, aby były w prawidłowym stanie i działać prawidłowo. W przypadku zdefiniowania klas, które mogą być skonstruowane i wywoływane, ale które będą działać prawidłowo tylko wtedy, gdy są używane pewne składniki globalne lub infrastruktury, te klasy są *DISHONEST* z klientami. Kontrakt konstruktora mówi klientowi, że potrzebuje tylko określonych elementów (prawdopodobnie nic nie tylko wtedy, gdy Klasa korzysta tylko z konstruktora bez parametrów), ale w czasie wykonywania obiekt naprawdę nie wymaga czegoś innego.
 
 Zgodnie z zasadą jawnych zależności, klasy i metody są uczciwie związane z klientami na temat tego, czego potrzebują do działania. Dzięki temu kod może być bardziej czytelny, a kontrakty związane z kodowaniem są bardziej przyjazne dla użytkownika, ponieważ użytkownicy będą mieli zaufanie, o ile są one wymagane w formie parametrów metody lub konstruktora, obiekty, z których pracują. prawidłowo w czasie wykonywania.
 
 ### <a name="single-responsibility"></a>Pojedyncza odpowiedzialność
 
-Zasada pojedynczej odpowiedzialności dotyczy projektowania zorientowanego obiektowo, ale można ją również traktować jako zasadę architektoniczną podobną do rozdzielenia obaw. Pozwala to na to, że obiekty powinny mieć tylko jedną odpowiedzialność i mieć tylko jedną przyczynę do zmiany. Jedyną sytuacją, w której obiekt powinien zostać zmieniony, jest to, że w sposób, w jaki wykonuje swoją odpowiedzialność, należy zaktualizować. Zgodnie z tą zasadą, można utworzyć bardziej luźno rozłączone i modularne systemy, ponieważ wiele rodzajów nowych zachowań może być implementowane jako nowe klasy, a nie przez dodanie dodatkowej odpowiedzialności do istniejących klas. Dodawanie nowych klas jest zawsze bezpieczniejsze niż zmiana istniejących klas, ponieważ żaden kod nie zależy jeszcze od nowych klas.
+Zasada pojedynczej odpowiedzialności dotyczy projektowania zorientowanego obiektowo, ale można ją również traktować jako zasadę architektoniczną podobną do rozdzielenia obaw. Pozwala to na to, że obiekty powinny mieć tylko jedną odpowiedzialność i mieć tylko jedną przyczynę do zmiany. Jedyną sytuacją, w której obiekt powinien zostać zmieniony, jest to, że w sposób, w jaki wykonuje swoją odpowiedzialność, należy zaktualizować. Zgodnie z tą zasadą, można utworzyć bardziej luźno powiązane systemy i moduły, ponieważ wiele rodzajów nowych zachowań może być implementowane jako nowe klasy, a nie przez dodanie dodatkowej odpowiedzialności do istniejących klas. Dodawanie nowych klas jest zawsze bezpieczniejsze niż zmiana istniejących klas, ponieważ żaden kod nie zależy jeszcze od nowych klas.
 
 W aplikacji monolitycznej możemy zastosować pojedynczą regułę odpowiedzialności na wysokim poziomie do warstw w aplikacji. Odpowiedzialność za prezentację powinna pozostawać w projekcie interfejsu użytkownika, a odpowiedzialność za dostęp do danych powinna być przechowywana w ramach projektu infrastruktury. Logika biznesowa powinna być przechowywana w podstawowym projekcie aplikacji, w którym można ją łatwo przetestować i może się rozwijać niezależnie od innych obowiązków.
 
@@ -105,5 +105,5 @@ Co najmniej poszczególne aplikacje sieci Web powinny dążyć do własnego kont
 - [Ograniczony kontekst](https://martinfowler.com/bliki/BoundedContext.html)
 
 >[!div class="step-by-step"]
->[Poprzedni](choose-between-traditional-web-and-single-page-apps.md)
->[Następny](common-web-application-architectures.md)
+>[Poprzednie](choose-between-traditional-web-and-single-page-apps.md)
+>[dalej](common-web-application-architectures.md)

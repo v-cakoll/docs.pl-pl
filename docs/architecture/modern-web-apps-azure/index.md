@@ -3,17 +3,19 @@ title: Tworzenie architektury nowoczesnych aplikacji sieci Web przy użyciu ASP.
 description: Przewodnik, który oferuje kompleksowe wskazówki dotyczące tworzenia monolitycznych aplikacji sieci Web przy użyciu ASP.NET Core i platformy Azure.
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: 739dd607aaa45f73e777a30c6495e329236fee17
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.date: 12/4/2019
+ms.openlocfilehash: c19e5e90cfb96463f744cfb064abe72ee5db2e9f
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296293"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449334"
 ---
-# <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>Tworzenie architektury nowoczesnych aplikacji sieci Web przy użyciu ASP.NET Core i platformy Azure
+# <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>Tworzenie architektury nowoczesnych aplikacji internetowych za pomocą platformy ASP.NET Core i platformy Azure
 
-![Obraz okładki przewodnika nowoczesnej aplikacji sieci Web.](./media/index/web-application-guide-cover-image.png)
+![Obraz okładki książki nowoczesnej aplikacji sieci Web.](./media/index/web-application-guide-cover-image.png)
+
+**Edition w wersji 3.1** — zaktualizowany do ASP.NET Core 3,1
 
 OPUBLIKOWANO PRZEZ
 
@@ -25,7 +27,7 @@ One Microsoft Way
 
 Redmond, Waszyngton 98052-6399
 
-Prawa autorskie © 2019 przez firmę Microsoft Corporation
+Prawa autorskie © 2020 przez firmę Microsoft Corporation
 
 Wszelkie prawa zastrzeżone. Żadna część zawartości tej księgi nie może być odtwarzana ani przekazywana w żadnej formie ani za pomocą jakichkolwiek środków bez zgody na wydawcę.
 
@@ -33,15 +35,15 @@ Ta książka jest świadczona w postaci "AS-IS" i zawiera widoki i opinie autora
 
 Niektóre przykłady opisane w niniejszym dokumencie są dostępne tylko dla ilustracji i są fikcyjne. Żadne prawdziwe skojarzenie lub połączenie nie jest zamierzone ani nie powinno zostać wywnioskowane.
 
-Firma Microsoft i znaki towarowe https://www.microsoft.com wymienione na stronie "znaki towarowe" są znakami towarowymi grupy firm Microsoft.
+Firma Microsoft i znaki towarowe wymienione w https://www.microsoft.com na stronie "znaki towarowe" są znakami towarowymi grupy firm Microsoft.
 
 Komputery Mac i macOS są znakami towarowymi firmy Apple Inc.
 
-Logo Docker Whale jest zastrzeżonym znakiem towarowym platformy Docker, Inc. Używane przez uprawnienie.
+Logo Docker Whale jest zastrzeżonym znakiem towarowym platformy Docker, Inc. używanym przez uprawnienie.
 
 Wszystkie inne znaczniki i logo są własnością odpowiednich właścicieli.
 
-Tworzone
+Autor:
 
 > **Steve "ardalis" Smith** — architekt oprogramowania i Trainer- [Ardalis.com](https://ardalis.com)
 
@@ -83,11 +85,11 @@ Tworzenie aplikacji sieci Web za pomocą ASP.NET Core hostowanych na platformie 
 
 Ten przewodnik zawiera kompleksowe wskazówki dotyczące tworzenia *monolitycznych* aplikacji sieci Web przy użyciu ASP.NET Core i platformy Azure. W tym kontekście "monolityczne" odnosi się do faktu, że te aplikacje są wdrażane jako pojedyncza jednostka, nie jako kolekcja współpracujących usług i aplikacji.
 
-Ten przewodnik uzupełnia ["mikrousługi platformy _.NET". Architektura dla kontenerów aplikacji_](../microservices/index.md) .NET, które koncentrują się na platformie Docker, mikrousług i wdrażaniu kontenerów w celu hostowania aplikacji dla przedsiębiorstw.
+Ten przewodnik uzupełnia ["_mikrousługi platformy .NET". Architektura dla kontenerów aplikacji .NET_](../microservices/index.md) , które koncentrują się na platformie Docker, mikrousług i wdrażaniu kontenerów w celu hostowania aplikacji dla przedsiębiorstw.
 
 ### <a name="net-microservices-architecture-for-containerized-net-applications"></a>Mikrousługi platformy .NET. architektura konteneryzowanych aplikacji .NET
 
-- **e-book**  
+- **książka elektroniczna**  
   <https://aka.ms/MicroservicesEbook>
 - **Przykładowa aplikacja**  
   <https://aka.ms/microservicesarchitecture>

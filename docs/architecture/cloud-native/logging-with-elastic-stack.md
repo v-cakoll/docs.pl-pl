@@ -1,20 +1,37 @@
 ---
 title: Rejestrowanie przy użyciu elastycznego stosu
 description: Rejestrowanie przy użyciu Elastic Stack, logstash i Kibana
-ms.date: 09/23/2019
-ms.openlocfilehash: 989834925bc08541bf484e1a4567a56ac324872f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.date: 02/05/2020
+ms.openlocfilehash: 6863c66b63854fe3ecaabe2919beded2926ea64c
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73087066"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77448926"
 ---
 # <a name="logging-with-elastic-stack"></a>Rejestrowanie przy użyciu elastycznego stosu
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Istnieje wiele dobrych narzędzi do rejestrowania, które różnią się kosztami od bezpłatnych, dostępnych narzędzi "open source" do bardziej kosztownych opcji. W wielu przypadkach bezpłatne narzędzia są tak dobre, jak w przypadku płatnych ofert. Jedno z tych narzędzi jest kombinacją trzech składników typu "open source": Elastic Search, logstash i Kibana.
+
 Zbiorowo te narzędzia są nazywane stosem elastycznym lub stosem ELK.
+
+## <a name="elastic-stack"></a>Elastyczny stos
+
+Elastyczny stos to zaawansowana opcja zbierania informacji z klastra Kubernetes. Kubernetes obsługuje wysyłanie dzienników do punktu końcowego Elasticsearch, a w [większości](https://kubernetes.io/docs/tasks/debug-application-cluster/logging-elasticsearch-kibana/), wszystko, co musisz zrobić, to ustawienie zmiennych środowiskowych, jak pokazano na rysunku 7-5:
+
+```kubernetes
+KUBE_LOGGING_DESTINATION=elasticsearch
+KUBE_ENABLE_NODE_LOGGING=true
+```
+
+**Rysunek 7-5**. Zmienne konfiguracyjne dla Kubernetes
+
+Spowoduje to zainstalowanie Elasticsearch w klastrze i skierowanie do niego wszystkich dzienników klastra.
+
+![przykładu pulpitu nawigacyjnego Kibana, pokazującego wyniki zapytania względem dzienników pozyskanych z Kubernetes](./media/kibana-dashboard.png)
+**rysunek 7-6**. Przykład pulpitu nawigacyjnego Kibana, pokazujący wyniki zapytania względem dzienników, które są pozyskiwane z Kubernetes
 
 ## <a name="what-are-the-advantages-of-elastic-stack"></a>Jakie są zalety elastycznego stosu?
 
@@ -24,7 +41,7 @@ Elastyczny stos umożliwia scentralizowane rejestrowanie w niedrogim, skalowalny
 
 Pierwszy składnik to [logstash](https://www.elastic.co/products/logstash). To narzędzie służy do zbierania informacji o dziennikach z wielu różnych źródeł. Na przykład logstash może odczytywać dzienniki z dysku, a także odbierać komunikaty z bibliotek rejestrowania, takich jak [Serilog](https://serilog.net/). Logstash może wykonywać pewne podstawowe filtrowanie i rozszerzanie dzienników w miarę ich odbierania. Na przykład, Jeśli dzienniki zawierają adresy IP, logstash może być skonfigurowany do przeszukiwania geograficznego i uzyskania kraju lub nawet miejscowości pochodzenia dla tego komunikatu.
 
-Serilog to biblioteka rejestrowania dla języków .NET, która umożliwia rejestrowanie sparametryzowane. Zamiast generowania komunikatu dziennika tekstowego, który osadza pola, parametry są przechowywane oddzielnie. Pozwala to na bardziej inteligentne filtrowanie i wyszukiwanie. Przykładowa konfiguracja Serilog do zapisu do logstash pojawia się na rysunku 7-2.
+Serilog to biblioteka rejestrowania dla języków .NET, która umożliwia rejestrowanie sparametryzowane. Zamiast generowania komunikatu dziennika tekstowego, który osadza pola, parametry są przechowywane oddzielnie. Pozwala to na bardziej inteligentne filtrowanie i wyszukiwanie. Przykładowa konfiguracja Serilog do zapisu do logstash pojawia się na rysunku 7-7.
 
 ```csharp
 var log = new LoggerConfiguration()
@@ -32,9 +49,9 @@ var log = new LoggerConfiguration()
          .CreateLogger();
 ```
 
-**Rysunek 7-2** Serilog konfiguracja do zapisywania informacji dziennika bezpośrednio do logstash za pośrednictwem protokołu HTTP
+**Rysunek 7-7**. Serilog konfiguracja do zapisywania informacji dziennika bezpośrednio do logstash za pośrednictwem protokołu HTTP
 
-Logstash użyje konfiguracji podobnej do przedstawionej na rysunku 7-3.
+Logstash użyje konfiguracji podobnej do przedstawionej na rysunku 7-8.
 
 ```
 input {
@@ -52,7 +69,7 @@ output {
 }
 ```
 
-**Rysunek 7-3** — konfiguracja logstash do konsumowania dzienników z Serilog
+**Rysunek 7-8**. Konfiguracja logstash do konsumowania dzienników z Serilog
 
 W przypadku scenariuszy, w których nie jest wymagana obszerne manipulowanie dziennikiem, istnieje alternatywa dla logstash znany jako [uderzeń](https://www.elastic.co/products/beats). Uderzeń to rodzina narzędzi, która umożliwia gromadzenie różnorodnych danych z dzienników do danych sieciowych i informacji o przestoju. Wiele aplikacji będzie używać zarówno logstash, jak i uderzeń.
 
@@ -64,7 +81,7 @@ Wyszukiwanie elastyczne to zaawansowany aparat wyszukiwania, który umożliwia i
 
 Komunikaty dziennika, które zostały spreparowane w celu zawierają parametry lub które zostały poddane podzielenia między nimi za pośrednictwem przetwarzania logstash, można zbadać bezpośrednio, ponieważ Elasticsearch zachowuje te informacje.
 
-Zapytanie wyszukujące 10 najważniejszych stron odwiedzonych przez `jill@example.com`znajduje się na rysunku 7-4.
+Zapytanie wyszukujące 10 najważniejszych stron odwiedzonych przez `jill@example.com`znajduje się na rysunku 7-9.
 
 ```
 "query": {
@@ -82,7 +99,7 @@ Zapytanie wyszukujące 10 najważniejszych stron odwiedzonych przez `jill@exampl
   }
 ```
 
-**Rysunek 7-4** . zapytanie Elasticsearch do znajdowania 10 najważniejszych stron odwiedzonych przez użytkownika
+**Rysunek 7-9**. Zapytanie Elasticsearch do znajdowania 10 najważniejszych stron odwiedzonych przez użytkownika
 
 ## <a name="visualizing-information-with-kibana-web-dashboards"></a>Wizualizacja informacji przy użyciu pulpitów nawigacyjnych sieci Web Kibana
 
@@ -101,5 +118,5 @@ Kolejną opcją jest [niedawna ogłoszona oferta Elk jako usługa](https://devop
 - [Instalowanie elastycznego stosu na platformie Azure](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-elasticsearch)
 
 >[!div class="step-by-step"]
->[Poprzedni](observability-patterns.md)
->[Następny](monitoring-azure-kubernetes.md)
+>[Poprzednie](observability-patterns.md)
+>[dalej](monitoring-azure-kubernetes.md)

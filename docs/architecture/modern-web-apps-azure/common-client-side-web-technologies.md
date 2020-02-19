@@ -3,13 +3,13 @@ title: Typowe technologie sieci Web po stronie klienta
 description: Tworzenie architektury nowoczesnych aplikacji sieci Web przy użyciu ASP.NET Core i platformy Azure | Typowe technologie sieci Web po stronie klienta
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: 7dd3765b1b71d8c1ef22d714a00be3e171fab523
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.date: 12/04/2019
+ms.openlocfilehash: 2809c8539b42e8e2250039dceed1389b3cbdcd8a
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093126"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449377"
 ---
 # <a name="common-client-side-web-technologies"></a>Typowe technologie sieci Web po stronie klienta
 
@@ -18,11 +18,14 @@ ms.locfileid: "77093126"
 
 Aplikacje ASP.NET Core są aplikacjami sieci Web, a zazwyczaj polegają na technologiach sieci Web po stronie klienta, takich jak HTML, CSS i JavaScript. Dzieląc zawartość strony (kod HTML) z układu i stylów (CSS) oraz jej zachowaniem (za pośrednictwem języka JavaScript), złożone aplikacje sieci Web mogą korzystać z oddzielenia zasad. Przyszłe zmiany struktury, projektu lub zachowania aplikacji mogą być łatwiejsze, gdy nie są intertwined te problemy.
 
-Chociaż język HTML i CSS są stosunkowo stabilne, JavaScript, za pomocą struktur aplikacji i narzędzi, deweloperzy współpracują z programem w celu kompilowania aplikacji opartych na sieci Web, rozwijając się z szybkością breakneck. W tym rozdziale przedstawiono kilka sposobów używania języka JavaScript przez deweloperów sieci Web oraz ogólne omówienie określania wartości kątowych i reagowania na biblioteki po stronie klienta.
+Chociaż język HTML i CSS są stosunkowo stabilne, JavaScript, za pomocą struktur aplikacji i narzędzi, deweloperzy współpracują z programem w celu kompilowania aplikacji opartych na sieci Web, rozwijając się z szybkością breakneck. W tym rozdziale przedstawiono kilka sposobów używania języka JavaScript przez deweloperów sieci Web oraz ogólne omówienie wizualizacji i przereagowania na biblioteki po stronie klienta.
+
+> [!NOTE]
+> Blazor stanowi alternatywę dla platform języka JavaScript do tworzenia rozbudowanych, interaktywnych interfejsów użytkownika klienta. Obsługa Blazor po stronie klienta jest nadal w wersji zapoznawczej, więc dla tego rozdziału jest już poza zakresem.
 
 ## <a name="html"></a>HTML
 
-HTML (HyperText Markup Language) to standardowy język znaczników używany do tworzenia stron sieci Web i aplikacji sieci Web. Jego elementy tworzą bloki konstrukcyjne stron, reprezentujące sformatowany tekst, obrazy, wejścia formularzy i inne struktury. Gdy przeglądarka wysyła żądanie do adresu URL, niezależnie od tego, czy pobierana jest strona, czy aplikacja, pierwszy zwrócony element jest dokumentem HTML. Ten dokument HTML może odwoływać się do lub zawierać dodatkowe informacje na temat wyglądu i układu w formie CSS lub zachowania w formie języka JavaScript.
+HTML jest standardowym językiem znaczników używanym do tworzenia stron sieci Web i aplikacji sieci Web. Jego elementy tworzą bloki konstrukcyjne stron, reprezentujące sformatowany tekst, obrazy, wejścia formularzy i inne struktury. Gdy przeglądarka wysyła żądanie do adresu URL, niezależnie od tego, czy pobierana jest strona, czy aplikacja, pierwszy zwrócony element jest dokumentem HTML. Ten dokument HTML może odwoływać się do lub zawierać dodatkowe informacje na temat wyglądu i układu w formie CSS lub zachowania w formie języka JavaScript.
 
 ## <a name="css"></a>CSS
 
@@ -36,13 +39,13 @@ Najlepiej zachować style w swoich oddzielnych plikach arkusza stylów, a nastę
 
 ### <a name="css-preprocessors"></a>Preprocesora CSS
 
-Arkusze stylów CSS nie obsługują logiki warunkowej, zmiennych i innych funkcji języka programowania. W ten sposób duże arkusze stylów często zawierają wiele powtórzeń, tak samo jak kolor, czcionka lub inne ustawienie jest stosowane do wielu różnych odmian elementów HTML i klas CSS. Preprocesora CSS mogą ułatwić arkuszom stylów zastosowanie [suchej zasady](https://deviq.com/don-t-repeat-yourself/) przez dodanie obsługi zmiennych i logiki.
+Arkusze stylów CSS nie obsługują logiki warunkowej, zmiennych i innych funkcji języka programowania. W ten sposób duże arkusze stylów często zawierają dość dużo powtórzeń, ponieważ ten sam kolor, czcionka lub inne ustawienie są stosowane do wielu różnych odmian elementów HTML i klas CSS. Preprocesora CSS mogą ułatwić arkuszom stylów zastosowanie [suchej zasady](https://deviq.com/don-t-repeat-yourself/) przez dodanie obsługi zmiennych i logiki.
 
 Najpopularniejsze preprocesora CSS to Sass i mniejsze. Zarówno w przypadku rozszerzeń CSS, jak i są zgodne z poprzednimi wersjami, co oznacza, że zwykły plik CSS jest prawidłowym plikiem Sass lub LESS. Sass jest oparty na języku Ruby i mniej jest oparty na kodzie JavaScript, a oba są zwykle uruchamiane jako część lokalnego procesu tworzenia. Dostępne są zarówno narzędzia wiersza polecenia, jak i wbudowana obsługa programu Visual Studio do uruchamiania ich przy użyciu zadań Gulp lub grunt.
 
 ## <a name="javascript"></a>JavaScript
 
-JavaScript to dynamiczny, interpretowany język programowania, który został znormalizowany w specyfikacji języka ECMAScript. Jest to język programowania w sieci Web. Podobnie jak w przypadku CSS, skrypty JavaScript można definiować jako atrybuty wewnątrz elementów HTML, jako bloki skryptu na stronie lub w oddzielnych plikach. Podobnie jak w przypadku CSS, zazwyczaj zaleca się zorganizowanie kodu JavaScript w osobnych plikach, tak jak to możliwe, z poziomu kodu HTML znalezionego na poszczególnych stronach sieci Web lub w widokach aplikacji.
+JavaScript to dynamiczny, interpretowany język programowania, który został znormalizowany w specyfikacji języka ECMAScript. Jest to język programowania w sieci Web. Podobnie jak w przypadku CSS, skrypty JavaScript można definiować jako atrybuty wewnątrz elementów HTML, jako bloki skryptu na stronie lub w oddzielnych plikach. Podobnie jak w przypadku CSS, zaleca się, aby zorganizować JavaScript w osobnych plikach, tak jak to możliwe, z poziomu kodu HTML znalezionego na poszczególnych stronach sieci Web lub w widokach aplikacji.
 
 Podczas pracy z JavaScript w aplikacji sieci Web, istnieje kilka zadań, które zwykle trzeba wykonać:
 
@@ -79,7 +82,7 @@ Powiązanie danych to doskonałe przykładowe rozwiązanie. W platformie jQuery 
 
 ### <a name="angular-spas"></a>Aplikacji jednostronicowych kątowy
 
-AngularJS szybko stało się jednym z najpopularniejszych platform języka JavaScript. W przypadku wystąpienia kątowego 2 zespół odbudował strukturę od podstaw (przy użyciu języka [TypeScript](https://www.typescriptlang.org/)) i od AngularJS do samego kątowego. Obecnie w wersji 4, kątowy nadal jest solidną strukturą do tworzenia aplikacji jednostronicowych.
+Wartość kątowa pozostaje jednym z najpopularniejszych struktur języka JavaScript. Ze względu na to, że zespół odbudował strukturę od podstaw (przy użyciu języka [TypeScript](https://www.typescriptlang.org/)) i pociąga z oryginalnej nazwy AngularJS do zwykłego kątowego. Teraz w ciągu kilku lat przeprojektowany element skośny nadal jest niezawodną strukturą do tworzenia aplikacji jednostronicowych.
 
 Aplikacje kątowe są kompilowane ze składników. Składniki łączą szablony HTML z obiektami specjalnymi i kontrolują część strony. Poniżej przedstawiono prosty składnik z dokumentów o skośności:
 
@@ -104,7 +107,7 @@ Firma Microsoft opracowała aplikację referencyjną [eShopOnContainers](https:/
 
 ### <a name="react"></a>React
 
-W przeciwieństwie do elementu kątowego, który oferuje pełną implementację wzorca typu Model-View-Controller, reagowanie dotyczy tylko widoków. Nie jest to struktura, tylko biblioteka, więc aby utworzyć SPA, należy użyć dodatkowych bibliotek.
+W przeciwieństwie do elementu kątowego, który oferuje pełną implementację wzorca typu Model-View-Controller, reagowanie dotyczy tylko widoków. Nie jest to struktura, tylko biblioteka, więc aby utworzyć SPA, należy użyć dodatkowych bibliotek. Istnieje wiele bibliotek, które są przeznaczone do użycia z reagują na tworzenie rozbudowanych aplikacji jednostronicowych.
 
 Jedną z najważniejszych funkcji reakcji jest użycie wirtualnego modelu DOM. Wirtualny DOM zapewnia kilka korzyści, w tym wydajność (wirtualny DOM, można zoptymalizować, które części rzeczywistego modelu DOM wymagają aktualizacji) i możliwość testowania (nie trzeba mieć przeglądarki do testowania reakcji i interakcji z jej wirtualnym modelem DOM).
 
@@ -121,6 +124,40 @@ Reagowanie jest również nietypowe w sposobie działania z kodem HTML. Zamiast 
 Jeśli znasz już język JavaScript, reagowanie na uczenie powinno być proste. Nie ma niemal dużej krzywej szkoleniowej lub specjalnej składni, która jest powiązana ze kątową lub innymi popularnymi bibliotekami.
 
 Ponieważ reagowanie nie jest pełną strukturą, zazwyczaj chcesz, aby inne biblioteki obsługiwały takie elementy, jak routing, wywołania interfejsu API sieci Web i zarządzanie zależnościami. W tym celu można wybrać najlepszą bibliotekę dla każdej z nich, ale wadą jest to, że należy podjąć wszystkie te decyzje i sprawdzić, czy wszystkie wybrane biblioteki działają prawidłowo, gdy wszystko będzie gotowe. Jeśli chcesz uzyskać dobry punkt początkowy, możesz użyć zestawu startowego, takiego jak Slingshot reaguje, który składa się z zestawu zgodnych bibliotek wraz z reagowaniem.
+
+### <a name="vue"></a>VUE
+
+W przewodniku z wprowadzeniem "Vue jest platformą progresywną do kompilowania interfejsów użytkownika. W przeciwieństwie do innych struktur monolitycznych Vue jest zaprojektowana od podstaw, aby można ją było stopniowo wdrożyć. Biblioteka podstawowa jest skoncentrowana tylko na warstwie widoku i można ją łatwo pobrać i zintegrować z innymi bibliotekami lub istniejącymi projektami. Z drugiej strony Vue doskonale nadaje się do korzystania z zaawansowanych aplikacji jednostronicowych w połączeniu z nowoczesne narzędzia i biblioteki pomocnicze.
+
+Wprowadzenie do Vue po prostu wymaga uwzględnienia jego skryptu w pliku HTML:
+
+```html
+<!-- development version, includes helpful console warnings -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+```
+
+Po dodaniu platformy można w sposób deklaratywny renderować dane do modelu DOM przy użyciu prostej składni tworzenia szablonów VUE:
+
+```html
+<div id="app">
+  {{ message }}
+</div>
+```
+
+a następnie Dodaj następujący skrypt:
+
+```js
+var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!'
+  }
+})
+```
+
+Jest to wystarczające, aby renderować "Hello Vue!" na stronie. Należy jednak pamiętać, że VUE nie po prostu renderuje komunikat do DIV. Obsługuje powiązania między danymi i aktualizacjami dynamicznymi, dzięki czemu w przypadku zmiany wartości `message` wartość w `<div>` jest natychmiast aktualizowana w celu odzwierciedlenia tego elementu.
+
+Oczywiście oznacza to jedynie powierzchnię, z jaką Vue. W ciągu kilku ostatnich lat uzyskano bardzo duże rozbudowanie popularności i jest to duża społeczność. Istnieje [ogromna i rosnąca lista składników pomocniczych i bibliotek](https://github.com/vuejs/awesome-vue#redux) , które współdziałają z Vue. Jeśli chcesz dodać zachowanie po stronie klienta do aplikacji sieci Web lub rozważać Kompilowanie pełnego SPA, Vue jest badanie.
 
 ### <a name="choosing-a-spa-framework"></a>Wybieranie struktury SPA
 
@@ -157,13 +194,13 @@ Struktury JavaScript w dalszym ciągu rozwijają się z szybkością breakneck. 
 > - **Angular**  
 > <https://angular.io/>
 > - **React**  
-> <https://facebook.github.io/react/>
-> - **Slingshot Reaguj**  
-> <https://github.com/coryhouse/react-slingshot>
-> - **Odreaguj a porównanie kątowe 2**  
-> <https://www.codementor.io/codementorteam/react-vs-angular-2-comparison-beginners-guide-lvz5710ha>
-> - **5 najlepszych platform JavaScript 2017**  
-> <https://hackernoon.com/5-best-javascript-frameworks-in-2017-7a63b3870282>
+> <https://reactjs.org/>
+> - **VUE**  
+> <https://vuejs.org/>
+> - **Kątowy a reagowanie vs VUE: jakie platformy należy wybrać w 2020**
+> <https://www.codeinwp.com/blog/angular-vs-vue-vs-react/>
+> - **Najpopularniejsze struktury języka JavaScript na potrzeby tworzenia aplikacji frontonu w 2020**  
+> <https://www.freecodecamp.org/news/complete-guide-for-front-end-developers-javascript-frameworks-2019/>
 
 >[!div class="step-by-step"]
 >[Poprzednie](common-web-application-architectures.md)

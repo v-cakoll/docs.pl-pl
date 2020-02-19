@@ -3,13 +3,13 @@ title: Typowe architektury aplikacji internetowych
 description: Tworzenie architektury nowoczesnych aplikacji sieci Web przy użyciu ASP.NET Core i platformy Azure | Poznaj typowe architektury aplikacji sieci Web
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: 6a4e971c1cb19a12710ad7893378a49758b4016e
-ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
+ms.date: 12/04/2019
+ms.openlocfilehash: 7ec0d9cece40ba8a99e8ab5e028f7ac491ed6f4d
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74884244"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450189"
 ---
 # <a name="common-web-application-architectures"></a>Typowe architektury aplikacji internetowych
 
@@ -38,9 +38,9 @@ Chociaż proste, jednoprojektowe rozwiązanie monolityczne ma pewne wady. Wraz z
 
 Aby rozwiązać te problemy, aplikacje często są rozłożone na rozwiązania obejmujące wiele projektów, w których każdy projekt jest traktowany jako znajdujący się w określonej _warstwie_ aplikacji.
 
-## <a name="what-are-layers"></a>Co to są warstwy logiczne?
+## <a name="what-are-layers"></a>Co to są warstwy?
 
-W miarę wzrostu złożoności aplikacji jeden ze sposobów zarządzania tą złożonością polega na rozdzieleniu aplikacji zależnie od jej obowiązków lub obaw. Jest to zgodne z regułą separacji i może pomóc w utrzymaniu zorganizowanej bazy kodu w taki sposób, aby deweloperzy mogli łatwo znajdować określone funkcje. Architektura warstwowa oferuje wiele korzyści poza organizacją kodu, chociaż.
+W miarę wzrostu złożoności aplikacji jeden ze sposobów zarządzania tą złożonością polega na rozdzieleniu aplikacji zależnie od jej obowiązków lub obaw. Jest to zgodne z zasadami separacji i mogą pomóc w utrzymaniu zorganizowanej bazy kodu, dzięki czemu deweloperzy mogą łatwo znaleźć, gdzie są zaimplementowane pewne funkcje. Architektura warstwowa oferuje wiele korzyści poza organizacją kodu, chociaż.
 
 Organizując kod na warstwy, typowe funkcje niskiego poziomu mogą być ponownie używane w całej aplikacji. To ponowne użycie jest korzystne, ponieważ oznacza to, że nie trzeba pisać kodu i ponieważ może on umożliwić standaryzację aplikacji w ramach jednej implementacji, zgodnie z zasadą [nie powtarzaj siebie (sucha)](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) .
 
@@ -99,8 +99,7 @@ Najprostszym podejściem do skalowania aplikacji sieci Web na platformie Azure j
 
 Aplikacje, które są zgodne z zasadą niezależności zależności, a także zasady projektowania opartego na domenie (DDD), mają do nich zastosowanie w podobnej architekturze. Ta architektura została przełączona przez wiele nazw w latach. Jedna z pierwszych nazw była architekturą sześciokątną, a po niej porty i karty. Niedawno jest to zacytowane jako [Architektura cebuli](https://jeffreypalermo.com/blog/the-onion-architecture-part-1/) lub [czysta architektura](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html). Ta druga nazwa, czysta architektura, jest używana jako nazwa tej architektury w tej książce elektronicznej.
 
-> [!NOTE]
-> Termin czystej architektury można zastosować do aplikacji, które są kompilowane przy użyciu zasad DDD, a także do tych, które nie zostały skompilowane przy użyciu DDD. W przypadku dawna kombinacja ta może być określana jako "czysta architektura".
+Aplikacja referencyjna eShopOnWeb korzysta z metody czystego architektury w organizowaniu kodu do projektów. Możesz znaleźć szablon rozwiązania, którego można użyć jako punktu wyjścia dla własnego ASP.NET Core w repozytorium GitHub [ardalis/cleanarchitecture](https://github.com/ardalis/cleanarchitecture) .
 
 Czysty architektura powoduje umieszczenie logiki biznesowej i modelu aplikacji w centrum aplikacji. Zamiast mieć logikę biznesową zależą od dostępu do danych lub innych problemów związanych z infrastrukturą, ta zależność jest odwrócona: szczegóły infrastruktury i implementacji zależą od rdzenia aplikacji. Jest to osiągane przez zdefiniowanie abstrakcji lub interfejsów w rdzeń aplikacji, które następnie są implementowane przez typy zdefiniowane w warstwie infrastruktury. Typowym sposobem wizualizacji tej architektury jest użycie serii okręgów koncentrycznych, podobnie jak w przypadku cebuli. Rysunek 5-7 pokazuje przykład tego stylu reprezentacji architektury.
 
@@ -212,7 +211,7 @@ Wdrażanie aktualizacji jako obrazów platformy Docker odbywa się znacznie szyb
 
 Ponieważ kontenery są z natury niezmienne przez zaprojektowanie, nigdy nie trzeba martwić się o uszkodzone maszyny wirtualne, natomiast skrypty aktualizacji mogą ulec zapomnieć na potrzeby konkretnej konfiguracji lub pliku pozostawionego na dysku.
 
-Kontenerów platformy Docker można używać do monolitycznego wdrażania prostszych aplikacji sieci Web. Pozwala to zwiększyć ciągłą integrację i ciągłe wdrażanie potoków oraz zapewnić pomyślne wdrożenie do produkcji. Nie ma więcej "działa w mojej maszynie, dlaczego nie działa w środowisku produkcyjnym?"
+Kontenerów platformy Docker można używać do monolitycznego wdrażania prostszych aplikacji sieci Web. Pozwala to zwiększyć ciągłą integrację i ciągłe wdrażanie potoków oraz zapewnić pomyślne wdrożenie do produkcji. Nie ma więcej "działa na mojej maszynie, dlaczego nie działa w środowisku produkcyjnym?"
 
 Architektura oparta na mikrousługach ma wiele korzyści, ale te korzyści mają na celu zwiększenie złożoności. W niektórych przypadkach koszty te zwiększają korzyści, więc jest to lepsza aplikacja do wdrożenia działająca w jednym kontenerze lub w zaledwie kilku kontenerach.
 
@@ -263,21 +262,19 @@ networks:
 Plik `docker-compose.yml` odwołuje się do `Dockerfile` w projekcie `Web`. `Dockerfile` służy do określenia, który kontener bazowy będzie używany, oraz sposobu ich konfiguracji. `Dockerfile``Web`:
 
 ```Dockerfile
-FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
 WORKDIR /app
 
+COPY *.sln .
 COPY . .
 WORKDIR /app/src/Web
 RUN dotnet restore
 
 RUN dotnet publish -c Release -o out
 
-FROM mcr.microsoft.com/dotnet/core/aspnet:2.2 AS runtime
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS runtime
 WORKDIR /app
 COPY --from=build /app/src/Web/out ./
-
-# Optional: Set this here if not setting it from docker-compose.yml
-# ENV ASPNETCORE_ENVIRONMENT Development
 
 ENTRYPOINT ["dotnet", "Web.dll"]
 ```
@@ -298,7 +295,7 @@ Jeśli chcesz dodać obsługę platformy Docker do aplikacji przy użyciu progra
   <https://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
 - **Wzorzec repozytorium**  
   <https://deviq.com/repository-pattern/>
-- **Przykład czystego rozwiązania architektury**  
+- **Szablon rozwiązania czystego architektury**  
   <https://github.com/ardalis/cleanarchitecture>
 - **Tworzenie architektury książki elektronicznej mikrousług**  
   <https://aka.ms/MicroservicesEbook>
@@ -306,5 +303,5 @@ Jeśli chcesz dodać obsługę platformy Docker do aplikacji przy użyciu progra
   <https://docs.microsoft.com/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/>
 
 >[!div class="step-by-step"]
->[Poprzedni](architectural-principles.md)
->[Następny](common-client-side-web-technologies.md)
+>[Poprzednie](architectural-principles.md)
+>[dalej](common-client-side-web-technologies.md)

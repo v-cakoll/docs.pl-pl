@@ -3,13 +3,13 @@ title: Opracowywanie aplikacji ASP.NET Core MVC
 description: Tworzenie architektury nowoczesnych aplikacji sieci Web przy użyciu ASP.NET Core i platformy Azure | opracowywanie aplikacji ASP.NET Core MVC
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: 7bc30db084f361e6c4654b89e69230b379b0136c
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.date: 12/04/2019
+ms.openlocfilehash: 3b1409fbb924638f0148c74a678d482aeb732357
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116530"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449452"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Opracowywanie aplikacji ASP.NET Core MVC
 
@@ -26,7 +26,7 @@ Podczas tworzenia nowej aplikacji ASP.NET Core należy mieć plan na uwadze dla 
 
 ### <a name="why-razor-pages"></a>Dlaczego Razor Pages?
 
-Razor Pages to domyślne podejście do nowych aplikacji sieci Web w programie Visual Studio. Razor Pages oferuje prostszy sposób tworzenia funkcji aplikacji opartych na stronach, takich jak formularze niespa. Korzystanie z kontrolerów i widoków było powszechne dla aplikacji, które mają bardzo duże kontrolery, które pracowały z wieloma różnymi zależnościami, i wyświetlają wiele różnych widoków. Wynika to z dużej złożoności i często wynika z kontrolerów, które nie były zgodne z pojedynczą zasadą odpowiedzialności lub zasad otwartych/zamkniętych. Razor Pages rozwiązuje ten problem przez hermetyzację logiki po stronie serwera dla danej logicznej "strony" w aplikacji sieci Web z oznaczeniem Razor. Strona Razor, która nie ma logiki po stronie serwera, może po prostu składać się z pliku Razor (na przykład "index. cshtml"). Jednak większość nieuproszczonych Razor Pages będzie miała skojarzoną klasę modelu strony, która jest taka sama jak nazwa pliku Razor z rozszerzeniem ". cs" (na przykład "Index.cshtml.cs").
+Razor Pages to domyślne podejście do nowych aplikacji sieci Web w programie Visual Studio. Razor Pages oferuje prostszy sposób tworzenia funkcji aplikacji opartych na stronach, takich jak formularze niespa. Korzystanie z kontrolerów i widoków było powszechne dla aplikacji, które mają bardzo duże kontrolery, które pracowały z wieloma różnymi zależnościami, i wyświetlają wiele różnych widoków. Spowodowało to zwiększenie złożoności i często wynika z tego, że kontrolery, które nie były zgodne z pojedynczą zasadą odpowiedzialności lub zasady otwarte/zamknięte w praktyce. Razor Pages rozwiązuje ten problem przez hermetyzację logiki po stronie serwera dla danej logicznej "strony" w aplikacji sieci Web z oznaczeniem Razor. Strona Razor, która nie ma logiki po stronie serwera, może po prostu składać się z pliku Razor (na przykład "index. cshtml"). Jednak większość nieuproszczonych Razor Pages będzie miała skojarzoną klasę modelu strony, która jest taka sama jak nazwa pliku Razor z rozszerzeniem ". cs" (na przykład "Index.cshtml.cs").
 
 Model strony strony Razor łączy obowiązki kontrolera MVC i ViewModel. Zamiast obsługi żądań z metodami akcji kontrolera, programy obsługi modelu strony, takie jak "OnGet ()", są wykonywane, domyślnie renderuje ich skojarzone strony. Razor Pages upraszcza proces kompilowania poszczególnych stron w aplikacji ASP.NET Core, zapewniając jednocześnie wszystkie funkcje architektury ASP.NET Core MVC. Są to dobry wybór domyślny dla nowych funkcji opartych na stronach.
 
@@ -43,9 +43,9 @@ W swoich serca ASP.NET Core aplikacje mapują przychodzące żądania na odpowie
 Aplikacje ASP.NET Core MVC mogą używać tras konwencjonalnych, tras atrybutów lub obu. Trasy konwencjonalne są zdefiniowane w kodzie, określając _konwencje_ routingu przy użyciu składni podobnej do poniższego przykładu:
 
 ```csharp
-app.UseMvc(routes =>
+app.UseEndpoints(endpoints =>
 {
-    routes.MapRoute("default","{controller=Home}/{action=Index}/{id?}");
+    endpoints.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
 });
 ```
 
@@ -129,9 +129,9 @@ public class Startup
     public Startup(IHostingEnvironment env)
     {
         var builder = new ConfigurationBuilder()
-        .SetBasePath(env.ContentRootPath)
-        .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-        .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
+            .SetBasePath(env.ContentRootPath)
+            .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+            .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
     }
 }
 ```
@@ -152,7 +152,7 @@ public void Configure(IApplicationBuilder app,
 Metoda ConfigureServices to wyjątek dla tego zachowania; musi on mieć tylko jeden parametr typu IServiceCollection. Nie ma potrzeby obsługi iniekcji zależności, ponieważ z jednej strony jest odpowiedzialny za Dodawanie obiektów do kontenera usługi, a w drugiej, ma dostęp do wszystkich aktualnie skonfigurowanych usług za pośrednictwem parametru IServiceCollection. Z tego względu można pracować z zależnościami zdefiniowanymi w kolekcji usług ASP.NET Core Services w każdej części klasy uruchomieniowej, żądając wymaganej usługi jako parametru lub przez pracę z IServiceCollection w ConfigureServices.
 
 > [!NOTE]
-> Jeśli musisz upewnić się, że niektóre usługi są dostępne dla klasy startowej, możesz je skonfigurować przy użyciu WebHostBuilder i jego metody ConfigureServices.
+> Jeśli musisz upewnić się, że niektóre usługi są dostępne dla klasy startowej, możesz je skonfigurować przy użyciu metody IWebHostBuilder i ConfigureServices w wywołaniu CreateDefaultBuilder.
 
 Klasa startowa to model służący do tworzenia struktury innych części aplikacji ASP.NET Core, od kontrolerów do oprogramowania pośredniczącego, do filtrów do własnych usług. W każdym przypadku należy postępować zgodnie z [zasadami jawnych zależności](https://deviq.com/explicit-dependencies-principle/), żądając zależności, a nie ich bezpośrednio tworzyć i wykorzystując iniekcję zależności w całej aplikacji. Należy zachować ostrożność, gdzie i w jaki sposób bezpośrednio utworzyć wystąpienia implementacji, szczególnie usług i obiektów, które pracują z infrastrukturą, lub mieć skutki uboczne. Preferuj pracę z abstrakcyjnymi definicjami w rdzeńu aplikacji i przekazane jako argumenty do zakodowana odwołań do określonych typów implementacji.
 
@@ -191,15 +191,10 @@ public class HomeController
 Musisz również dodać obsługę obszaru do swoich tras:
 
 ```csharp
-app.UseMvc(routes =>
+app.UseEndpoints(endpoints =>
 {
-    // Areas support
-    routes.MapRoute(
-    name: "areaRoute",
-    template: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
-    routes.MapRoute(
-    name: "default",
-    template: "{controller=Home}/{action=Index}/{id?}");
+    endpoints.MapControllerRoute(name: "areaRoute", pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+    endpoints.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
 });
 ```
 
@@ -237,7 +232,7 @@ Następnie należy określić tę Konwencję jako opcję po dodaniu obsługi MVC
 services.AddMvc(o => o.Conventions.Add(new FeatureConvention()));
 ```
 
-ASP.NET Core MVC używa również Konwencji do lokalizowania widoków. Można zastąpić go Konwencją niestandardową, aby widoki znajdowały się w folderach funkcji (przy użyciu nazwy funkcji dostarczonej przez FeatureConvention). Aby dowiedzieć się więcej na temat tego podejścia i pobrać przykład roboczy z artykułu MSDN, [wycinki funkcji dla ASP.NET Core MVC](https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc).
+ASP.NET Core MVC używa również Konwencji do lokalizowania widoków. Można zastąpić go Konwencją niestandardową, aby widoki znajdowały się w folderach funkcji (przy użyciu nazwy funkcji dostarczonej przez FeatureConvention). Możesz dowiedzieć się więcej o tym podejściu i pobrać przykład roboczy z artykułu magazynowego MSDN, [wycinki funkcji dla ASP.NET Core MVC](https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc).
 
 ### <a name="cross-cutting-concerns"></a>Zagadnienia ogólne
 
@@ -311,7 +306,7 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 }
 ```
 
-Aby dowiedzieć się więcej na temat implementowania filtrów i pobrać przykład roboczy z artykułu MSDN, [rzeczywistych filtrów ASP.NET Core MVC](https://docs.microsoft.com/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters).
+Aby dowiedzieć się więcej na temat implementowania filtrów i pobrać przykład roboczy z magazynu MSDN, zobacz [Real-World ASP.NET Core filters MVC](https://docs.microsoft.com/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters).
 
 > ### <a name="references--structuring-applications"></a>References — Tworzenie struktury aplikacji
 >
@@ -321,7 +316,7 @@ Aby dowiedzieć się więcej na temat implementowania filtrów i pobrać przykł
 >   <https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc>
 > - **Filtry**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
-> - **MSDN — Real World ASP.NET Core Filters**  
+> - **MSDN Magazine — Real World ASP.NET Core Filters**  
 >   <https://docs.microsoft.com/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters>
 
 ## <a name="security"></a>Zabezpieczenia
@@ -356,11 +351,9 @@ public void Configure(IApplicationBuilder app)
 {
     app.UseStaticFiles();
     app.UseIdentity();
-    app.UseMvc(routes =>
+    app.UseEndpoints(endpoints =>
     {
-        routes.MapRoute(
-        name: "default",
-        template: "{controller=Home}/{action=Index}/{id?}");
+        endpoints.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
     });
 }
 ```
@@ -395,7 +388,7 @@ public IActionResult ExecutiveSalaryReport()
 
 Korzystając z zasad w ten sposób, można oddzielić rodzaje akcji, które są ograniczone z określonych ról lub reguł, które mają zastosowanie. Później, jeśli utworzysz nową rolę, która musi mieć dostęp do określonych zasobów, można po prostu zaktualizować zasady, zamiast aktualizować każdą listę ról na każdej \[Autoryzuj atrybut\].
 
-#### <a name="claims"></a>Oświadczenia
+#### <a name="claims"></a>Oświadczeń
 
 Oświadczenia są parami wartości nazw, które reprezentują właściwości uwierzytelnionego użytkownika. Na przykład użytkownik może przechowywać numer pracownika jako roszczeń. Oświadczenia mogą być następnie używane jako część zasad autoryzacji. Można utworzyć zasady o nazwie "EmployeeOnly", które wymagają istnienia żądania o nazwie "EmployeeNumber", jak pokazano w poniższym przykładzie:
 
@@ -444,8 +437,6 @@ Należy zwrócić szczególną uwagę na "wycofywanie własnych" implementacji k
 ## <a name="client-communication"></a>Komunikacja z klientem
 
 Oprócz obsługi stron i reagowania na żądania danych za pośrednictwem interfejsów API sieci Web aplikacje ASP.NET Core mogą komunikować się bezpośrednio z połączonymi klientami. Ta komunikacja wychodząca może korzystać z różnych technologii transportu, najczęściej używanych przez obiekty WebSockets. ASP.NET Core sygnalizujący to biblioteka, która ułatwia dodawanie funkcji komunikacji między klientami w czasie rzeczywistym do aplikacji. Program sygnalizujący obsługuje różne technologie transportowe, w tym elementy WebSockets, i dzieli wiele szczegółów implementacji od dewelopera.
-
-Program ASP.NET Core sygnalizujący jest dostępny z ASP.NET Core od wersji 2,1.
 
 Komunikacja klientów w czasie rzeczywistym, bez względu na to, czy używanie funkcji WebSockets bezpośrednio czy z innymi technikami jest przydatne w różnych scenariuszach aplikacji. Oto niektóre przykłady:
 
@@ -520,7 +511,7 @@ Model domeny składa się z obiektów, które współdziałają ze sobą, aby re
 
 - [Zdarzenia domeny](https://martinfowler.com/eaaDev/DomainEvent.html), które reprezentują rzeczy wykonywane w systemie, które są istotne dla innych części systemu.
 
-Należy zauważyć, że model domeny DDD powinien hermetyzować złożone zachowanie w modelu. Jednostki, w szczególności nie powinny być kolekcjami właściwości. Gdy model domeny nie ma zachowania i jedynie reprezentuje stan systemu, jest on uznawany za [model Anemic](https://deviq.com/anemic-model/), który jest NIEPOŻĄDANY w DDD.
+Model domeny DDD powinien hermetyzować złożone zachowanie w modelu. Jednostki, w szczególności nie powinny być kolekcjami właściwości. Gdy model domeny nie ma zachowania i jedynie reprezentuje stan systemu, jest on uznawany za [model Anemic](https://deviq.com/anemic-model/), który jest NIEPOŻĄDANY w DDD.
 
 Oprócz tych typów modeli DDD zazwyczaj wykorzystuje różne wzorce:
 
@@ -553,13 +544,13 @@ Podejście hybrydowe będzie używać DDD tylko dla transakcyjnych lub bardziej 
 > - **DDD w zwykłym języku angielskim (odpowiedź StackOverflow)**  
 >   <https://stackoverflow.com/questions/1222392/can-someone-explain-domain-driven-design-ddd-in-plain-english-please/1222488#1222488>
 
-## <a name="deployment"></a>Wdrażanie
+## <a name="deployment"></a>wdrażania
 
 W procesie wdrażania aplikacji ASP.NET Core należy wykonać kilka kroków, bez względu na to, gdzie będzie ona hostowana. Pierwszym krokiem jest opublikowanie aplikacji, którą można wykonać przy użyciu dotnet publish interfejsu wiersza polecenia. Spowoduje to skompilowanie aplikacji i umieszczenie wszystkich plików wymaganych do uruchomienia aplikacji w wydzielonym folderze. W przypadku wdrażania z programu Visual Studio ten krok jest wykonywany automatycznie. Folder publikowania zawiera pliki. exe i. dll dla aplikacji i jej zależności. Aplikacja samodzielna zawiera również wersję środowiska uruchomieniowego .NET. Aplikacje ASP.NET Core zawierają również pliki konfiguracji, statyczne zasoby klienta i widoki MVC.
 
 Aplikacje ASP.NET Core są aplikacjami konsolowymi, które należy uruchomić, gdy serwer jest uruchamiany i uruchamiany ponownie, jeśli wystąpi awaria aplikacji (lub serwera). Za pomocą Menedżera procesów można zautomatyzować ten proces. Najbardziej typowymi menedżerami procesów dla ASP.NET Core są Nginx i Apache w systemach Linux i IIS lub Windows Service w systemie Windows.
 
-Oprócz Menedżera procesów ASP.NET Core aplikacje hostowane na serwerze sieci Web Kestrel muszą używać serwera zwrotnego serwera proxy. Odwrotny serwer proxy odbiera żądania HTTP z Internetu i przekazuje je do Kestrel po pewnej wstępnej obsłudze. Odwrotne serwery proxy zapewniają warstwę zabezpieczeń dla aplikacji i są wymagane dla wdrożeń brzegowych (narażonych na ruch z Internetu). Kestrel jest stosunkowo nowy i nie oferuje jeszcze obrony przed niektórymi atakami. Kestrel również nie obsługuje hostowania wielu aplikacji na tym samym porcie, dlatego nie można używać technik takich jak nagłówki hosta, aby umożliwić hostowanie wielu aplikacji na tym samym porcie i adresie IP.
+Oprócz Menedżera procesów aplikacje ASP.NET Core mogą korzystać z serwera proxy zwrotnego. Odwrotny serwer proxy odbiera żądania HTTP z Internetu i przekazuje je do Kestrel po pewnej wstępnej obsłudze. Odwrotne serwery proxy zapewniają warstwę zabezpieczeń aplikacji. Kestrel również nie obsługuje hostowania wielu aplikacji na tym samym porcie, dlatego nie można używać technik takich jak nagłówki hosta, aby umożliwić hostowanie wielu aplikacji na tym samym porcie i adresie IP.
 
 ![Kestrel z Internetem](./media/image7-5.png)
 
@@ -603,5 +594,5 @@ _Dowiedz się więcej o opcjach wdrażania platformy Azure w [rozdziale 10](deve
 >   <https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction>
 
 >[!div class="step-by-step"]
->[Poprzedni](common-client-side-web-technologies.md)
->[Następny](work-with-data-in-asp-net-core-apps.md)
+>[Poprzednie](common-client-side-web-technologies.md)
+>[dalej](work-with-data-in-asp-net-core-apps.md)

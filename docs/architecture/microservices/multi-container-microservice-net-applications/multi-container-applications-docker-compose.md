@@ -2,12 +2,12 @@
 title: Definiowanie aplikacji z wieloma kontenerami za pomocą pliku docker-compose.yml
 description: Jak określić kompozycję mikrousług dla aplikacji wielokontenera z Docker-Compose. yml.
 ms.date: 10/02/2018
-ms.openlocfilehash: f9cab35ac8e11ca89a83f646c29bf72f84e66ef4
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: 26b7362112c12583377db9f8fa516ee8ce3b1ac2
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116544"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450703"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definiowanie aplikacji z wieloma kontenerami za pomocą pliku docker-compose.yml
 
@@ -463,7 +463,7 @@ Aby to osiągnąć, zespół .NET udostępnia cztery podstawowe warianty w techn
 1. **zestaw SDK**: na potrzeby scenariuszy tworzenia i kompilowania
 1. **ASPNET**: for ASP.NET — scenariusze produkcji
 1. **środowisko uruchomieniowe**: dla scenariuszy produkcyjnych programu .NET
-1. **środowisko uruchomieniowe — deps**: dla scenariuszy produkcyjnych [aplikacji samodzielnych](../../../core/deploying/index.md#self-contained-deployments-scd).
+1. **środowisko uruchomieniowe — deps**: dla scenariuszy produkcyjnych [aplikacji samodzielnych](../../../core/deploying/index.md#publish-self-contained).
 
 W celu przyspieszenia uruchamiania obrazy środowiska uruchomieniowego są również automatycznie ustawiane\_adresy URL aspnetcore na port 80 i używanie narzędzia NGen do tworzenia pamięci podręcznej obrazów natywnych zestawów.
 
@@ -476,5 +476,5 @@ W celu przyspieszenia uruchamiania obrazy środowiska uruchomieniowego są równ
   [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
 
 > [!div class="step-by-step"]
-> [Poprzedni](data-driven-crud-microservice.md)
-> [Następny](database-server-container.md)
+> [Poprzednie](data-driven-crud-microservice.md)
+> [dalej](database-server-container.md)

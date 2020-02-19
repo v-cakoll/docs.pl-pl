@@ -2,16 +2,16 @@
 title: Dokumentacja poleceń interfejsu wiersza polecenia ML.NET
 description: Przegląd, przykłady i dokumentacja polecenia autouczenie w narzędziu CLI ML.NET.
 ms.date: 12/18/2019
-ms.openlocfilehash: 5e59eba91721b26622360818a73adb07a654dc28
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 537f8d361c170378f5fe8cf454320831d7c8cbf2
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636123"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449702"
 ---
 # <a name="the-mlnet-cli-command-reference"></a>Dokumentacja poleceń interfejsu wiersza polecenia ML.NET
 
-Polecenie `auto-train` jest głównym poleceniem udostępnianym przez narzędzie interfejsu wiersza polecenia ML.NET. Polecenie umożliwia wygenerowanie dobrego modelu ML.NET jakości przy użyciu funkcji automatycznego uczenia maszynowego (AutoML) oraz przykładowego C# kodu do uruchomienia/oceny modelu. Ponadto C# kod służący do uczenia modelu jest generowany, aby przeanalizować algorytm i ustawienia modelu.
+Polecenie `auto-train` jest głównym poleceniem udostępnianym przez narzędzie interfejsu wiersza polecenia ML.NET. Polecenie pozwala wygenerować dobry model ML.NET jakości za pomocą zautomatyzowanego uczenia maszynowego (AutoML) oraz przykładowego C# kodu do uruchomienia/oceny modelu. Ponadto C# kod służący do uczenia modelu jest generowany, aby przeanalizować algorytm i ustawienia modelu.
 
 > [!NOTE]
 > Ten temat dotyczy ML.NET interfejsu wiersza polecenia i ML.NET AutoML, które są obecnie dostępne w wersji zapoznawczej, a materiał może ulec zmianie.
@@ -188,7 +188,7 @@ Przykład:
 `--has-header | -h` (bool)
 
 Określ, czy pliki zestawu danych mają wiersz nagłówka.
-Możliwe wartości to:
+Możliwe wartości:
 
 - `true`
 - `false`
@@ -225,7 +225,7 @@ Można określić następujące wartości:
 
 Jeśli nie określisz parametru `--cache`, zostanie użyta domyślna konfiguracja `auto` pamięci podręcznej.
 
-## <a name="name"></a>Nazwa
+## <a name="name"></a>Name (Nazwa)
 
 `--name | -N` (ciąg)
 
@@ -259,7 +259,7 @@ Domyślnie narzędzie interfejsu wiersza polecenia powinno pokazać pewną minim
 
 Drukuje pomoc dla polecenia z opisem dla każdego parametru polecenia.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Jak zainstalować narzędzie interfejsu wiersza polecenia ML.NET](../how-to-guides/install-ml-net-cli.md)
 - [Przegląd interfejsu wiersza polecenia ML.NET](../automate-training-with-cli.md)

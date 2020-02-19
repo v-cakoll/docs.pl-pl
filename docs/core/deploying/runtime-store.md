@@ -2,12 +2,12 @@
 title: Magazyn pakietu środowiska uruchomieniowego
 description: Dowiedz się, jak używać magazynu pakietów środowiska uruchomieniowego do manifestów docelowych używanych przez platformę .NET Core.
 ms.date: 08/12/2017
-ms.openlocfilehash: 8c58ccdb90e5ae9830313f52c19f58629ea5b0a2
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 7a833ed95147608c6fb403f8f0dec179d2a73833
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76737790"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77448961"
 ---
 # <a name="runtime-package-store"></a>Magazyn pakietu środowiska uruchomieniowego
 
@@ -122,11 +122,11 @@ Określ docelowe manifesty w pliku projektu tylko wtedy, gdy Środowisko docelow
 
 Niejawny magazyn ASP.NET Core ma zastosowanie tylko do ASP.NET Core 2,0. Zdecydowanie zalecamy stosowanie aplikacji ASP.NET Core 2,1 i nowszych, które **nie** korzystają z magazynu niejawnego. ASP.NET Core 2,1 i później używają udostępnionej platformy.
 
-Funkcja magazynu pakietów środowiska uruchomieniowego jest używana niejawnie przez aplikację ASP.NET Core, gdy aplikacja jest wdrażana jako aplikacja [wdrożenia zależnego od platformy (FDD)](index.md#framework-dependent-deployments-fdd) . Elementy docelowe w [`Microsoft.NET.Sdk.Web`](https://github.com/aspnet/websdk) zawierają manifesty odwołujące się do niejawnego magazynu pakietów w systemie docelowym. Ponadto każda aplikacja FDD, która zależy od pakietu `Microsoft.AspNetCore.All`, spowoduje opublikowanie aplikacji, która zawiera tylko aplikację i jej zasoby, a nie pakiety wymienione w pakiecie `Microsoft.AspNetCore.All`. Przyjęto założenie, że te pakiety znajdują się w systemie docelowym.
+Funkcja magazynu pakietów środowiska uruchomieniowego jest używana niejawnie przez aplikację ASP.NET Core, gdy aplikacja jest wdrażana jako aplikacja [wdrożenia zależnego od platformy (FDD)](index.md#publish-runtime-dependent) . Elementy docelowe w [`Microsoft.NET.Sdk.Web`](https://github.com/aspnet/websdk) zawierają manifesty odwołujące się do niejawnego magazynu pakietów w systemie docelowym. Ponadto każda aplikacja FDD, która zależy od pakietu `Microsoft.AspNetCore.All`, spowoduje opublikowanie aplikacji, która zawiera tylko aplikację i jej zasoby, a nie pakiety wymienione w pakiecie `Microsoft.AspNetCore.All`. Przyjęto założenie, że te pakiety znajdują się w systemie docelowym.
 
 Magazyn pakietów środowiska uruchomieniowego jest instalowany na hoście, gdy zainstalowano zestaw .NET Core SDK. Inne Instalatory mogą dostarczyć magazyn pakietów środowiska uruchomieniowego, w tym instalacje zip/plik tar zestaw .NET Core SDK, `apt-get`, Red Hat yum, pakiet hostingu platformy .NET Core systemu Windows Server i ręczne instalacje magazynu pakietów w środowisku uruchomieniowym.
 
-Podczas wdrażania aplikacji [wdrożenia zależnego od platformy (FDD)](index.md#framework-dependent-deployments-fdd) upewnij się, że w środowisku docelowym jest zainstalowane zestaw .NET Core SDK. Jeśli aplikacja jest wdrażana w środowisku, które nie zawiera ASP.NET Core, można zrezygnować z niejawnego magazynu przez określenie **\<PublishWithAspNetCoreTargetManifest >** ustawione na `false` w pliku projektu, jak w poniższym przykładzie:
+Podczas wdrażania aplikacji [wdrożenia zależnego od platformy (FDD)](index.md#publish-runtime-dependent) upewnij się, że w środowisku docelowym jest zainstalowane zestaw .NET Core SDK. Jeśli aplikacja jest wdrażana w środowisku, które nie zawiera ASP.NET Core, można zrezygnować z niejawnego magazynu przez określenie **\<PublishWithAspNetCoreTargetManifest >** ustawione na `false` w pliku projektu, jak w poniższym przykładzie:
 
 ```xml
 <PropertyGroup>
@@ -135,7 +135,7 @@ Podczas wdrażania aplikacji [wdrożenia zależnego od platformy (FDD)](index.md
 ```
 
 > [!NOTE]
-> W przypadku aplikacji do [samodzielnego wdrażania (SCD)](index.md#self-contained-deployments-scd) zakłada się, że system docelowy nie musi zawierać wymaganych pakietów manifestu. W związku z tym **\<PublishWithAspNetCoreTargetManifest >** nie można ustawić na `true` dla aplikacji SCD.
+> W przypadku aplikacji do [samodzielnego wdrażania (SCD)](index.md#publish-self-contained) zakłada się, że system docelowy nie musi zawierać wymaganych pakietów manifestu. W związku z tym **\<PublishWithAspNetCoreTargetManifest >** nie można ustawić na `true` dla aplikacji SCD.
 
 W przypadku wdrożenia aplikacji z zależnością manifestu, która znajduje się we wdrożeniu (zestaw jest obecny w folderze *bin* ), magazyn pakietów środowiska uruchomieniowego *nie jest używany* na hoście dla tego zestawu. Zestaw folderu *bin* jest używany niezależnie od jego obecności w magazynie pakietów środowiska uruchomieniowego na hoście.
 
@@ -143,7 +143,7 @@ Wersja zależności wskazanej w manifeście musi być zgodna z wersją zależno�
 
 Gdy wdrożenie zostanie *przycięte* po opublikowaniu, tylko określone wersje pakietów manifestu są potrącane z publikowanych danych wyjściowych. Pakiety na wskazanych wersjach muszą być obecne na hoście, aby można było uruchomić aplikację.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [dotnet — publikowanie](../tools/dotnet-publish.md)
 - [dotnet — sklep](../tools/dotnet-store.md)

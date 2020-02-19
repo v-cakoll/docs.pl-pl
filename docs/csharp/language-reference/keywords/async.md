@@ -8,12 +8,12 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: 3d3f045eed3bad3624ed4994aebb862c52a4e196
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 30ee13a4174a137481fbcd36ccef721958b94a12
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713784"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450859"
 ---
 # <a name="async-c-reference"></a>async (odwołanie w C#)
 
@@ -71,7 +71,7 @@ Metoda asynchroniczna może mieć następujące zwracane typy:
 
 - <xref:System.Threading.Tasks.Task>
 - <xref:System.Threading.Tasks.Task%601>
-- [typ void](./void.md). Metody `async void` są generalnie odradzane w przypadku kodu innego niż programy obsługi zdarzeń, ponieważ obiekty wywołujące nie mogą `await` tych metod i muszą implementować inny mechanizm do zgłaszania pomyślnych warunków ukończenia lub błędów.
+- [typ void](../builtin-types/void.md). Metody `async void` są generalnie odradzane w przypadku kodu innego niż programy obsługi zdarzeń, ponieważ obiekty wywołujące nie mogą `await` tych metod i muszą implementować inny mechanizm do zgłaszania pomyślnych warunków ukończenia lub błędów.
 - Począwszy od C# 7,0, dowolnego typu, który ma dostępną metodę `GetAwaiter`. Typ `System.Threading.Tasks.ValueTask<TResult>` to taka implementacja. Jest on dostępny przez dodanie pakietu NuGet `System.Threading.Tasks.Extensions`. 
 
 Metoda async nie może deklarować żadnych parametrów [in](./in-parameter-modifier.md), [ref](./ref.md) ani [out](./out-parameter-modifier.md) ani nie może mieć [wartości zwracanej przez odwołanie](../../programming-guide/classes-and-structs/ref-returns.md), ale może wywoływać metody, które mają takie parametry.  
@@ -84,7 +84,7 @@ Począwszy od C# 7,0, zwracany jest inny typ, zazwyczaj typ wartości, który ma
 
 Aby uzyskać więcej informacji i przykładów, zobacz [asynchroniczne typy zwracane](../../programming-guide/concepts/async/async-return-types.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>
 - [await](../operators/await.md)

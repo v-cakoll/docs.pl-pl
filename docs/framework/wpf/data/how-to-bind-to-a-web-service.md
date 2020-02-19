@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-ms.openlocfilehash: 76fa13d4a12362d04c832fd59ee69db5a6811029
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 3a3f6edc974448ddab9fe30e97bdc1130d3b97dc
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454459"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449975"
 ---
 # <a name="how-to-bind-to-a-web-service"></a>Jak powiązać z usługą sieci Web
 Ten przykład pokazuje, jak powiązać z obiektami zwracanymi przez wywołania metody usługi sieci Web.  
   
 ## <a name="example"></a>Przykład  
- Ten przykład używa [usługi zawartości MSDN/TechNet Publishing System (MTPS)](https://go.microsoft.com/fwlink/?LinkId=95677) w celu pobrania listy języków obsługiwanych przez określony dokument.  
+ Ten przykład używa usługi zawartości MSDN/TechNet Publishing System (MTPS) w celu pobrania listy języków obsługiwanych przez określony dokument.  
   
  Przed wywołaniem usługi sieci Web należy utworzyć odwołanie do niej. Aby utworzyć odwołanie sieci Web do usługi MTPS przy użyciu programu Visual Studio, wykonaj następujące czynności:  
   
@@ -45,7 +45,7 @@ Ten przykład pokazuje, jak powiązać z obiektami zwracanymi przez wywołania m
   
  Aby uzyskać informacje na temat struktury `getContentResponse`, zobacz [dokumentację usługi zawartości](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Powiązanie danych — omówienie](../../../desktop-wpf/data/data-binding-overview.md)
 - [Wiązanie źródeł — omówienie](binding-sources-overview.md)

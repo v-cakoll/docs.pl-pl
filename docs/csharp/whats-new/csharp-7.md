@@ -3,12 +3,12 @@ title: Co nowego w C# 7,0 — C# Przewodnik
 description: Zapoznaj się z omówieniem nowych funkcji w wersji 7,0 C# języka.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 73563a04dea04c942a6326d6a04ddd54bb80b0ed
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: a6ac5c00ceb2ce8e5e56e2a86a8cde937d5108e2
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75694585"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77448637"
 ---
 # <a name="whats-new-in-c-70"></a>Co nowego w C# 7,0
 
@@ -236,7 +236,7 @@ To dodanie ułatwia zapisanie więcej kodu opartego na wyrażeniach. Nie potrzeb
 
 Zwrócenie obiektu `Task` z metod asynchronicznych może spowodować wąskie gardła wydajności w określonych ścieżkach. `Task` to typ referencyjny, dlatego użycie go oznacza przydzielenie obiektu. W przypadkach, gdy metoda zadeklarowana za pomocą modyfikatora `async` zwraca zbuforowany wynik lub zostanie zakończona synchronicznie, dodatkowe alokacje mogą stać się ważnym kosztem w przypadku krytycznych sekcji kodu. Może być kosztowna, jeśli te przydziały występują w ścisłych pętlach.
 
-Nowa funkcja języka oznacza, że typy zwracające metodę asynchroniczną nie są ograniczone do `Task`, `Task<T>`i `void`. Zwracany typ musi nadal spełniać wzorzec asynchroniczny, co oznacza, że metoda `GetAwaiter` musi być dostępna. W jednym z konkretnych przykładów typ `ValueTask` został dodany do programu .NET Framework, aby można było korzystać z tej nowej funkcji języka:
+Nowa funkcja języka oznacza, że typy zwracające metodę asynchroniczną nie są ograniczone do `Task`, `Task<T>`i `void`. Zwracany typ musi nadal spełniać wzorzec asynchroniczny, co oznacza, że metoda `GetAwaiter` musi być dostępna. W jednym z konkretnych przykładów typ `ValueTask` został dodany do platformy .NET, aby można było korzystać z tej nowej funkcji języka:
 
 [!code-csharp[UsingValueTask](~/samples/snippets/csharp/new-in-7/AsyncWork.cs#UsingValueTask "Using ValueTask")]
 

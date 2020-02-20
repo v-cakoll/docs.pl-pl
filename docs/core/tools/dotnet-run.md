@@ -1,62 +1,30 @@
 ---
 title: polecenie dotnet Run
 description: Polecenie dotnet Run udostępnia wygodną opcję uruchamiania aplikacji z kodu źródłowego.
-ms.date: 10/31/2019
-ms.openlocfilehash: 5920f0d1f04204b286fdf6f51f5fd13644846390
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/19/2020
+ms.openlocfilehash: 415d7079db6a3da80c4fcf2074307ea760e84982
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734105"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503611"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
-**Ten artykuł ma zastosowanie do:** ✔️ .NET Core 1. x SDK i nowszych wersji
+**Ten artykuł ma zastosowanie do:** ✔️ .NET Core 2. x SDK i nowszych wersji
 
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
-
-## <a name="name"></a>Nazwa
+## <a name="name"></a>Name (Nazwa)
 
 `dotnet run` — uruchamia kod źródłowy bez żadnych jawnych poleceń kompilacji lub uruchamiania.
 
 ## <a name="synopsis"></a>Streszczenie
 
-<!-- markdownlint-disable MD025 -->
-
-# <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
-
 ```dotnetcli
-dotnet run [-c|--configuration] [-f|--framework] [--force] [--interactive] [--launch-profile] [--no-build] [--no-dependencies]
-    [--no-launch-profile] [--no-restore] [-p|--project] [-r|--runtime] [-v|--verbosity] [[--] [application arguments]]
+dotnet run [-c|--configuration] [-f|--framework] [--force] [--interactive] [--launch-profile] 
+    [--no-build] [--no-dependencies] [--no-launch-profile] [--no-restore] [-p|--project] 
+    [-r|--runtime] [-v|--verbosity] [[--] [application arguments]]
 dotnet run [-h|--help]
 ```
-
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2,1](#tab/netcore21)
-
-```dotnetcli
-dotnet run [-c|--configuration] [-f|--framework] [--force] [--launch-profile] [--no-build] [--no-dependencies]
-    [--no-launch-profile] [--no-restore] [-p|--project] [--runtime] [-v|--verbosity] [[--] [application arguments]]
-dotnet run [-h|--help]
-```
-
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
-
-```dotnetcli
-dotnet run [-c|--configuration] [-f|--framework] [--force] [--launch-profile] [--no-build] [--no-dependencies]
-    [--no-launch-profile] [--no-restore] [-p|--project] [--runtime] [[--] [application arguments]]
-dotnet run [-h|--help]
-```
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1. x](#tab/netcore1x)
-
-```dotnetcli
-dotnet run [-c|--configuration] [-f|--framework] [-p|--project] [[--] [application arguments]]
-dotnet run [-h|--help]
-```
-
----
 
 ## <a name="description"></a>Opis
 
@@ -80,209 +48,84 @@ Aby uruchomić aplikację, polecenie `dotnet run` rozwiązuje zależności aplik
 
 ## <a name="options"></a>Opcje
 
-# <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
+- **`--`**
 
-`--`
+  Ogranicza argumenty do `dotnet run` z argumentów dla uruchamianej aplikacji. Wszystkie argumenty po tym ograniczniku są przesyłane do uruchomienia aplikacji.
 
-Ogranicza argumenty do `dotnet run` z argumentów dla uruchamianej aplikacji. Wszystkie argumenty po tym ograniczniku są przesyłane do uruchomienia aplikacji.
+- **`-c|--configuration <CONFIGURATION>`**
 
-`-c|--configuration {Debug|Release}`
+  Definiuje konfigurację kompilacji. Wartość domyślna dla większości projektów jest `Debug`, ale można zastąpić ustawienia konfiguracji kompilacji w projekcie.
 
-Definiuje konfigurację kompilacji. Wartość domyślna dla większości projektów jest `Debug`.
+- **`-f|--framework <FRAMEWORK>`**
 
-`-f|--framework <FRAMEWORK>`
+  Kompiluje i uruchamia aplikację przy użyciu określonej [struktury](../../standard/frameworks.md). Struktura musi być określona w pliku projektu.
 
-Kompiluje i uruchamia aplikację przy użyciu określonej [struktury](../../standard/frameworks.md). Struktura musi być określona w pliku projektu.
+- **`--force`**
 
-`--force`
+  Wymusza rozpoznanie wszystkich zależności, nawet jeśli ostatnie przywracanie zakończyło się pomyślnie. Określenie tej flagi jest takie samo jak usuwanie pliku *Project. assets. JSON* .
 
-Wymusza rozpoznanie wszystkich zależności, nawet jeśli ostatnie przywracanie zakończyło się pomyślnie. Określenie tej flagi jest takie samo jak usuwanie pliku *Project. assets. JSON* .
+- **`-h|--help`**
 
-`-h|--help`
+  Drukuje krótką pomoc dla polecenia.
 
-Drukuje krótką pomoc dla polecenia.
+- **`--interactive`**
 
-`--interactive`
+  Zezwala na zatrzymanie polecenia i oczekiwanie na dane wejściowe użytkownika lub akcję (na przykład w celu ukończenia uwierzytelniania). Dostępne od wersji .NET Core 3,0 SDK.
 
-Zezwala na zatrzymanie polecenia i oczekiwanie na dane wejściowe użytkownika lub akcję (na przykład w celu ukończenia uwierzytelniania).
+- **`--launch-profile <NAME>`**
 
-`--launch-profile <NAME>`
+  Nazwa profilu uruchamiania (jeśli istnieje) do użycia podczas uruchamiania aplikacji. Profile uruchamiania są zdefiniowane w pliku *profilu launchsettings. JSON* i są zwykle nazywane `Development`, `Staging`i `Production`. Aby uzyskać więcej informacji, zobacz [Praca z wieloma środowiskami](/aspnet/core/fundamentals/environments).
 
-Nazwa profilu uruchamiania (jeśli istnieje) do użycia podczas uruchamiania aplikacji. Profile uruchamiania są zdefiniowane w pliku *profilu launchsettings. JSON* i są zwykle nazywane `Development`, `Staging`i `Production`. Aby uzyskać więcej informacji, zobacz [Praca z wieloma środowiskami](/aspnet/core/fundamentals/environments).
+- **`--no-build`**
 
-`--no-build`
+  Nie kompiluje projektu przed uruchomieniem. Również niejawne ustawia flagę `--no-restore`.
 
-Nie kompiluje projektu przed uruchomieniem. Również niejawne ustawia flagę `--no-restore`.
+- **`--no-dependencies`**
 
-`--no-dependencies`
+  W przypadku przywracania projektu z odwołaniami do projektu (P2P) program przywraca projekt główny, a nie odwołania.
 
-W przypadku przywracania projektu z odwołaniami do projektu (P2P) program przywraca projekt główny, a nie odwołania.
+- **`--no-launch-profile`**
 
-`--no-launch-profile`
+  Nie próbuje skonfigurować aplikacji przy użyciu pliku *profilu launchsettings. JSON* .
 
-Nie próbuje skonfigurować aplikacji przy użyciu pliku *profilu launchsettings. JSON* .
+- **`--no-restore`**
 
-`--no-restore`
+  Nie wykonuje przywracania niejawnego podczas wykonywania polecenia.
 
-Nie wykonuje przywracania niejawnego podczas wykonywania polecenia.
+- **`-p|--project <PATH>`**
 
-`-p|--project <PATH>`
+  Określa ścieżkę do pliku projektu do uruchomienia (nazwa folderu lub pełna ścieżka). Jeśli nie zostanie określony, domyślnie jest bieżącym katalogiem.
 
-Określa ścieżkę do pliku projektu do uruchomienia (nazwa folderu lub pełna ścieżka). Jeśli nie zostanie określony, domyślnie jest bieżącym katalogiem.
+- **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-`--runtime <RUNTIME_IDENTIFIER>`
+  Określa docelowy środowisko uruchomieniowe, dla którego mają zostać przywrócone pakiety. Aby uzyskać listę identyfikatorów środowiska uruchomieniowego (RID), zobacz [wykaz identyfikatorów RID](../rid-catalog.md). `-r` krótka opcja dostępna od wersji .NET Core 3,0 SDK.
 
-Określa docelowy środowisko uruchomieniowe, dla którego mają zostać przywrócone pakiety. Aby uzyskać listę identyfikatorów środowiska uruchomieniowego (RID), zobacz [wykaz identyfikatorów RID](../rid-catalog.md).
+- **`-v|--verbosity <LEVEL>`**
 
-`-v|--verbosity <LEVEL>`
-
-Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`i `diag[nostic]`.
-
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2,1](#tab/netcore21)
-
-`--`
-
-Ogranicza argumenty do `dotnet run` z argumentów dla uruchamianej aplikacji. Wszystkie argumenty po tym ograniczniku są przesyłane do uruchomienia aplikacji.
-
-`-c|--configuration {Debug|Release}`
-
-Definiuje konfigurację kompilacji. Wartość domyślna dla większości projektów jest `Debug`.
-
-`-f|--framework <FRAMEWORK>`
-
-Kompiluje i uruchamia aplikację przy użyciu określonej [struktury](../../standard/frameworks.md). Struktura musi być określona w pliku projektu.
-
-`--force`
-
-Wymusza rozpoznanie wszystkich zależności, nawet jeśli ostatnie przywracanie zakończyło się pomyślnie. Określenie tej flagi jest takie samo jak usuwanie pliku *Project. assets. JSON* .
-
-`-h|--help`
-
-Drukuje krótką pomoc dla polecenia.
-
-`--launch-profile <NAME>`
-
-Nazwa profilu uruchamiania (jeśli istnieje) do użycia podczas uruchamiania aplikacji. Profile uruchamiania są zdefiniowane w pliku *profilu launchsettings. JSON* i są zwykle nazywane `Development`, `Staging`i `Production`. Aby uzyskać więcej informacji, zobacz [Praca z wieloma środowiskami](/aspnet/core/fundamentals/environments).
-
-`--no-build`
-
-Nie kompiluje projektu przed uruchomieniem. Również niejawne ustawia flagę `--no-restore`.
-
-`--no-dependencies`
-
-W przypadku przywracania projektu z odwołaniami do projektu (P2P) program przywraca projekt główny, a nie odwołania.
-
-`--no-launch-profile`
-
-Nie próbuje skonfigurować aplikacji przy użyciu pliku *profilu launchsettings. JSON* .
-
-`--no-restore`
-
-Nie wykonuje przywracania niejawnego podczas wykonywania polecenia.
-
-`-p|--project <PATH>`
-
-Określa ścieżkę do pliku projektu do uruchomienia (nazwa folderu lub pełna ścieżka). Jeśli nie zostanie określony, domyślnie jest bieżącym katalogiem.
-
-`--runtime <RUNTIME_IDENTIFIER>`
-
-Określa docelowy środowisko uruchomieniowe, dla którego mają zostać przywrócone pakiety. Aby uzyskać listę identyfikatorów środowiska uruchomieniowego (RID), zobacz [wykaz identyfikatorów RID](../rid-catalog.md).
-
-`-v|--verbosity <LEVEL>`
-
-Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`i `diag[nostic]`.
-
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
-
-`--`
-
-Ogranicza argumenty do `dotnet run` z argumentów dla uruchamianej aplikacji. Wszystkie argumenty po tym ograniczniku są przesyłane do uruchomienia aplikacji.
-
-`-c|--configuration {Debug|Release}`
-
-Definiuje konfigurację kompilacji. Wartość domyślna dla większości projektów jest `Debug`.
-
-`-f|--framework <FRAMEWORK>`
-
-Kompiluje i uruchamia aplikację przy użyciu określonej [struktury](../../standard/frameworks.md). Struktura musi być określona w pliku projektu.
-
-`--force`
-
-Wymusza rozpoznanie wszystkich zależności, nawet jeśli ostatnie przywracanie zakończyło się pomyślnie. Określenie tej flagi jest takie samo jak usuwanie pliku *Project. assets. JSON* .
-
-`-h|--help`
-
-Drukuje krótką pomoc dla polecenia.
-
-`--launch-profile <NAME>`
-
-Nazwa profilu uruchamiania (jeśli istnieje) do użycia podczas uruchamiania aplikacji. Profile uruchamiania są zdefiniowane w pliku *profilu launchsettings. JSON* i są zwykle nazywane `Development`, `Staging`i `Production`. Aby uzyskać więcej informacji, zobacz [Praca z wieloma środowiskami](/aspnet/core/fundamentals/environments).
-
-`--no-build`
-
-Nie kompiluje projektu przed uruchomieniem. Również niejawne ustawia flagę `--no-restore`.
-
-`--no-dependencies`
-
-W przypadku przywracania projektu z odwołaniami do projektu (P2P) program przywraca projekt główny, a nie odwołania.
-
-`--no-launch-profile`
-
-Nie próbuje skonfigurować aplikacji przy użyciu pliku *profilu launchsettings. JSON* .
-
-`--no-restore`
-
-Nie wykonuje przywracania niejawnego podczas wykonywania polecenia.
-
-`-p|--project <PATH>`
-
-Określa ścieżkę do pliku projektu do uruchomienia (nazwa folderu lub pełna ścieżka). Jeśli nie zostanie określony, domyślnie jest bieżącym katalogiem.
-
-`--runtime <RUNTIME_IDENTIFIER>`
-
-Określa docelowy środowisko uruchomieniowe, dla którego mają zostać przywrócone pakiety. Aby uzyskać listę identyfikatorów środowiska uruchomieniowego (RID), zobacz [wykaz identyfikatorów RID](../rid-catalog.md).
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1. x](#tab/netcore1x)
-
-`--`
-
-Ogranicza argumenty do `dotnet run` z argumentów dla uruchamianej aplikacji. Wszystkie argumenty po tym ograniczniku są przesyłane do uruchomienia aplikacji.
-
-`-c|--configuration {Debug|Release}`
-
-Definiuje konfigurację kompilacji. Wartość domyślna dla większości projektów jest `Debug`.
-
-`-f|--framework <FRAMEWORK>`
-
-Kompiluje i uruchamia aplikację przy użyciu określonej [struktury](../../standard/frameworks.md). Struktura musi być określona w pliku projektu.
-
-`-h|--help`
-
-Drukuje krótką pomoc dla polecenia.
-
-`-p|--project <PATH/PROJECT.csproj>`
-
-Określa ścieżkę i nazwę pliku projektu. (Zobacz uwagi). Jeśli nie zostanie określony, domyślnie jest bieżącym katalogiem.
-
-> [!NOTE]
-> Użyj ścieżki i nazwy pliku projektu z opcją `-p|--project`. Regresja w interfejsie wiersza polecenia uniemożliwia podanie ścieżki folderu z zestaw .NET Core SDK 1. x. Aby uzyskać więcej informacji o tym problemie, zobacz polecenie [dotnet Run-p, nie można uruchomić projektu (#5992 dotnet/CLI)](https://github.com/dotnet/cli/issues/5992).
-
----
+  Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`i `diag[nostic]`. Wartością domyślną jest `m`. Dostępne od wersji .NET Core 2,1 SDK. 
 
 ## <a name="examples"></a>Przykłady
 
-Uruchom projekt w bieżącym katalogu:
+- Uruchom projekt w bieżącym katalogu:
 
-`dotnet run`
+  ```dotnetcli
+  dotnet run
+  ```
 
-Uruchom określony projekt:
+- Uruchom określony projekt:
 
-`dotnet run --project ./projects/proj1/proj1.csproj`
+  ```dotnetcli
+  dotnet run --project ./projects/proj1/proj1.csproj
+  ```
 
-Uruchom projekt w bieżącym katalogu (`--help` argument w tym przykładzie jest przesyłany do aplikacji, ponieważ jest używana opcja pustej `--`):
+- Uruchom projekt w bieżącym katalogu (`--help` argument w tym przykładzie jest przesyłany do aplikacji, ponieważ jest używana opcja pustej `--`):
 
-`dotnet run --configuration Release -- --help`
+  ```dotnetcli
+  dotnet run --configuration Release -- --help
+  ```
 
-Przywróć zależności i narzędzia dla projektu w bieżącym katalogu, wyświetlając tylko minimalne dane wyjściowe, a następnie Uruchom projekt: (zestaw .NET Core SDK 2,0 i nowsze wersje):
+- Przywróć zależności i narzędzia dla projektu w bieżącym katalogu, wyświetlając tylko minimalne dane wyjściowe, a następnie Uruchom projekt: (zestaw .NET Core SDK 2,0 i nowsze wersje):
 
-`dotnet run --verbosity m`
+  ```dotnetcli
+  dotnet run --verbosity m
+  ```

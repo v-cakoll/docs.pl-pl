@@ -1,21 +1,17 @@
 ---
 title: polecenie "isclean" dotnet
 description: Polecenie "Wyczyść" programu dotnet czyści bieżący katalog.
-ms.date: 06/26/2019
-ms.openlocfilehash: 715a33a8a1aa13a2a76f9d4522413dcc72e4b4aa
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.date: 02/14/2020
+ms.openlocfilehash: 186f1ea07718a8e178f88c3d079cf6e2f1f8660b
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451359"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503755"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
-**Ten artykuł ma zastosowanie do:** ✔️ .NET Core 1. x SDK i nowszych wersji
-
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
+**Ten artykuł ma zastosowanie do:** ✔️ .NET Core 2. x SDK i nowszych wersji
 
 ## <a name="name"></a>Name (Nazwa)
 
@@ -41,9 +37,9 @@ Projekt programu MSBuild lub rozwiązanie do czyszczenia. Jeśli plik projektu l
 
 ## <a name="options"></a>Opcje
 
-* **`-c|--configuration {Debug|Release}`**
+* **`-c|--configuration <CONFIGURATION>`**
 
-  Definiuje konfigurację kompilacji. Wartością domyślną jest `Debug`. Ta opcja jest wymagana tylko w przypadku czyszczenia, jeśli została określona w czasie kompilacji.
+  Definiuje konfigurację kompilacji. Wartość domyślna dla większości projektów jest `Debug`, ale można zastąpić ustawienia konfiguracji kompilacji w projekcie. Ta opcja jest wymagana tylko w przypadku czyszczenia, jeśli została określona w czasie kompilacji.
 
 * **`-f|--framework <FRAMEWORK>`**
 
@@ -67,7 +63,7 @@ Projekt programu MSBuild lub rozwiązanie do czyszczenia. Jeśli plik projektu l
 
 * **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-  Czyści folder wyjściowy określonego środowiska uruchomieniowego. Ta funkcja jest używana podczas tworzenia wdrożenia z dowolnego [siebie](../deploying/index.md#publish-self-contained) . Opcja dostępna od wersji .NET Core 2,0 SDK.
+  Czyści folder wyjściowy określonego środowiska uruchomieniowego. Ta funkcja jest używana podczas tworzenia wdrożenia z dowolnego [siebie](../deploying/index.md#publish-self-contained) .
 
 * **`-v|--verbosity <LEVEL>`**
 

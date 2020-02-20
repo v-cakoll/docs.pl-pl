@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR ETW events, logging
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
-ms.openlocfilehash: 180cce516a1209711430429a46cb5b718b29f1d9
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e7d7d6e60b2f582a579f5811225f4027c37c7876
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716111"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504099"
 ---
 # <a name="controlling-net-framework-logging"></a>Kontrolowanie logowania w programie .NET Framework
 
@@ -17,7 +17,7 @@ ms.locfileid: "75716111"
 
 - Narzędzia wiersza polecenia [logman](/windows-server/administration/windows-commands/logman) i [tracerpt](/windows-server/administration/windows-commands/tracerpt_1) dołączone do systemu operacyjnego Windows.
 
-- Narzędzia [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) w zestawie narzędzi [wydajności systemu Windows](/windows-hardware/test/wpt/). Aby uzyskać więcej informacji na temat Xperf, zobacz [blog wydajności systemu Windows](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/).
+- Narzędzia [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) w zestawie narzędzi [wydajności systemu Windows](/windows-hardware/test/wpt/). Aby uzyskać więcej informacji na temat Xperf, zobacz [blog wydajności systemu Windows](https://docs.microsoft.com/archive/blogs/pigscanfly/).
 
 Aby można było przechwytywać informacje o zdarzeniu CLR, dostawca CLR musi być zainstalowany na komputerze. Aby upewnić się, że dostawca jest zainstalowany, wpisz `logman query providers` w wierszu polecenia. Zostanie wyświetlona lista dostawców. Ta lista powinna zawierać następujący wpis dla dostawcy CLR.
 
@@ -45,7 +45,7 @@ Aby włączyć rejestrowanie, użytkownik musi określić trzy rzeczy:
 
 ### <a name="to-capture-clr-etw-events-using-logman"></a>Aby przechwytywać zdarzenia CLR ETW przy użyciu narzędzia Logman
 
-1. W wierszu polecenia wpisz:
+1. W wierszu polecenia wpisz polecenie:
 
      `logman start clrevents -p {e13c0d23-ccbc-4e12-931b-d9cc2eee27e4} 0x1CCBD 0x5 -ets -ct perf`
 
@@ -69,7 +69,7 @@ Aby włączyć rejestrowanie, użytkownik musi określić trzy rzeczy:
 
 ### <a name="to-capture-clr-etw-events-using-xperf"></a>Aby przechwytywać zdarzenia CLR ETW przy użyciu narzędzia Xperf
 
-1. W wierszu polecenia wpisz:
+1. W wierszu polecenia wpisz polecenie:
 
      `xperf -start clr -on e13c0d23-ccbc-4e12-931b-d9cc2eee27e4:0x1CCBD:5 -f clrevents.etl`
 
@@ -87,7 +87,7 @@ Aby wyświetlić zdarzenia CLR ETW, należy użyć poleceń wymienionych poniże
 
 ### <a name="to-view-clr-etw-events-using-tracerpt"></a>Aby wyświetlić zdarzenia CLR ETW przy użyciu narzędzia Tracerpt
 
-- W wierszu polecenia wpisz:
+- W wierszu polecenia wpisz polecenie:
 
      `tracerpt clrevents.etl`
 
@@ -95,7 +95,7 @@ Aby wyświetlić zdarzenia CLR ETW, należy użyć poleceń wymienionych poniże
 
 ### <a name="to-view-clr-etw-events-using-xperf"></a>Aby wyświetlić zdarzenia CLR ETW przy użyciu narzędzia Xperf
 
-- W wierszu polecenia wpisz:
+- W wierszu polecenia wpisz polecenie:
 
      `xperf clrevents.etl`
 
@@ -103,13 +103,13 @@ Aby wyświetlić zdarzenia CLR ETW, należy użyć poleceń wymienionych poniże
 
 ### <a name="to-convert-the-etl-file-to-a-comma-separated-value-file"></a>Aby przekonwertować plik etl na plik z wartościami rozdzielanymi przecinkami
 
-- W wierszu polecenia wpisz:
+- W wierszu polecenia wpisz polecenie:
 
      `xperf -i clrevents.etl -f clrevents.csv`
 
      To polecenie powoduje zrzucenie przez narzędzie XPerf zdarzeń do pliku z wartościami rozdzielanymi przecinkami (CSV), który można wyświetlać. Różne zdarzenia mają różne pola, więc ten plik CSV zawiera więcej niż jeden wiersz nagłówka przed danymi. Pierwsze pole w każdym wierszu jest typem zdarzenia wskazującym, który nagłówek powinien być używany do określenia pozostałych pól.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Zestaw narzędzi wydajności systemu Windows](/windows-hardware/test/wpt/)
 - [Zdarzenia ETW w środowisku CLR](etw-events-in-the-common-language-runtime.md)

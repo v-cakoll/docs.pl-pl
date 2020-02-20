@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 64b029f87135c3424d01a6833619f0aec3833883
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: f53f4037f832265a35f65bf2e5096c7e5a37bcf1
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75340362"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503537"
 ---
 # <a name="tutorial-create-a-project-template"></a>Samouczek: Tworzenie szablonu projektu
 
@@ -47,7 +47,7 @@ working
 
 ## <a name="modify-programcs"></a>Modyfikuj Program.cs
 
-Otwórz plik _program.cs_ . Projekt konsoli nie używa asynchronicznego punktu wejścia, więc Dodajmy ten element. Zmień kod na następujący i Zapisz plik:
+Otwórz plik _program.cs_ . Projekt konsoli nie używa asynchronicznego punktu wejścia, więc Dodajmy ten element. Zmień kod na następujący i Zapisz plik.
 
 ```csharp
 using System;
@@ -83,12 +83,19 @@ Zaktualizujmy wersję C# językową używaną przez ten projekt do wersji 8,0. E
 </Project>
 ```
 
-## <a name="build-the-project"></a>Skompiluj projekt
+## <a name="build-the-project"></a>Kompilowanie projektu
 
-Przed ukończeniem szablonu projektu należy go przetestować, aby upewnić się, że kompiluje i działa poprawnie. W terminalu uruchom polecenie `dotnet run` i zobaczysz następujące dane wyjściowe:
+Przed ukończeniem szablonu projektu należy go przetestować, aby upewnić się, że kompiluje i działa poprawnie.
+
+W terminalu uruchom następujące polecenie.
+
+```dotnetcli
+dotnet run
+```
+
+Otrzymujesz następujące dane wyjściowe.
 
 ```console
-C:\working\templates\consoleasync> dotnet run
 Hello World with C# 8.0!
 ```
 
@@ -102,7 +109,7 @@ Szablony są rozpoznawane w programie .NET Core za pomocą specjalnego folderu i
 
 Podczas tworzenia szablonu wszystkie pliki i foldery znajdujące się w folderze szablonów są uwzględniane jako część szablonu, z wyjątkiem folderu specjalnej konfiguracji. Ten folder konfiguracji ma nazwę _. Template. config_.
 
-Najpierw utwórz nowy podfolder o nazwie _. Template. config_, a następnie wprowadź go. Następnie utwórz nowy plik o nazwie _Template. JSON_. Struktura folderów powinna wyglądać następująco:
+Najpierw utwórz nowy podfolder o nazwie _. Template. config_, a następnie wprowadź go. Następnie utwórz nowy plik o nazwie _Template. JSON_. Struktura folderów powinna wyglądać następująco.
 
 ```console
 working
@@ -112,7 +119,7 @@ working
                 template.json
 ```
 
-Otwórz plik _Template. JSON_ przy użyciu ulubionego edytora tekstu i wklej go w poniższym kodzie JSON i Zapisz go:
+Otwórz plik _Template. JSON_ przy użyciu ulubionego edytora tekstu i wklej go w poniższym kodzie JSON i Zapisz go.
 
 ```json
 {
@@ -133,12 +140,17 @@ Ten plik konfiguracji zawiera wszystkie ustawienia szablonu. Można zobaczyć po
 
 Element `classifications` reprezentuje kolumnę **Tagi** , która pojawia się po uruchomieniu `dotnet new` i wyświetleniu listy szablonów. Użytkownicy mogą również wyszukiwać w oparciu o znaczniki klasyfikacji. Nie należy mylić właściwości `tags` w pliku JSON z listą tagów `classifications`. Te dwa różne rzeczy są uważane za podobne. Pełny Schemat pliku *Template. JSON* znajduje się w [magazynie schematów JSON](http://json.schemastore.org/template). Aby uzyskać więcej informacji na temat pliku *Template. JSON* , zobacz stronę [typu tworzenia szablonów programu dotnet](https://github.com/dotnet/templating/wiki).
 
-Teraz, gdy masz prawidłowy plik _Template. config/Template. JSON_ , szablon jest gotowy do zainstalowania. Przed zainstalowaniem szablonu upewnij się, że usunięto wszystkie foldery i pliki dodatkowe pliki, które nie mają być dołączone do szablonu, takie jak foldery _bin_ lub _obj_ . W terminalu przejdź do folderu _consoleasync_ i uruchom `dotnet new -i .\`, aby zainstalować szablon znajdujący się w bieżącym folderze. Jeśli używasz systemu operacyjnego Linux lub MacOS, użyj ukośnika: `dotnet new -i ./`.
+Teraz, gdy masz prawidłowy plik _Template. config/Template. JSON_ , szablon jest gotowy do zainstalowania. Przed zainstalowaniem szablonu upewnij się, że usunięto wszystkie foldery i pliki dodatkowe pliki, które nie mają być dołączone do szablonu, takie jak foldery _bin_ lub _obj_ . W terminalu przejdź do folderu _consoleasync_ i uruchom `dotnet new -i .\`, aby zainstalować szablon znajdujący się w bieżącym folderze. Jeśli używasz systemu operacyjnego Linux lub macOS, użyj ukośnika: `dotnet new -i ./`.
 
 To polecenie wyświetla listę zainstalowanych szablonów, które powinny obejmować użytkownika.
 
+```dotnetcli
+dotnet new -i .\
+```
+
+Dane wyjściowe są podobne do poniższych.
+
 ```console
-C:\working\templates\consoleasync> dotnet new -i .\
 Usage: new [options]
 
 Options:
@@ -159,17 +171,33 @@ Worker Service                                    worker                [C#]    
 
 ### <a name="test-the-project-template"></a>Testowanie szablonu projektu
 
-Teraz, gdy masz zainstalowany szablon elementu, przetestuj go. Przejdź do folderu _test_ i Utwórz nową aplikację konsolową z `dotnet new consoleasync`. Spowoduje to wygenerowanie projektu roboczego, który można łatwo przetestować przy użyciu polecenia `dotnet run`.
+Teraz, gdy masz zainstalowany szablon elementu, przetestuj go.
 
-```console
-C:\test> dotnet new consoleasync
-The template "Example templates: async project" was created successfully.
-```
+1. Przejdź do folderu _testowego_
 
-```console
-C:\test> dotnet run
-Hello World with C# 8.0!
-```
+1. Utwórz nową aplikację konsolową przy użyciu następującego polecenia, które generuje projekt roboczy, który można łatwo przetestować przy użyciu polecenia `dotnet run`.
+
+    ```dotnetcli
+    dotnet new consoleasync
+    ```
+
+    Otrzymujesz następujące dane wyjściowe.
+
+    ```console
+    The template "Example templates: async project" was created successfully.
+    ```
+
+1. Uruchom projekt przy użyciu następującego polecenia.
+
+    ```dotnetcli
+    dotnet run
+    ```
+
+    Otrzymujesz następujące dane wyjściowe.
+
+    ```console
+    Hello World with C# 8.0!
+    ```
 
 Gratulacje! Szablon projektu został utworzony i wdrożony za pomocą platformy .NET Core. W ramach przygotowania do następnej części tej serii samouczków należy odinstalować utworzony szablon. Pamiętaj, aby usunąć wszystkie pliki z folderu _testowego_ . Spowoduje to powrót do stanu czystego gotowego do następnej głównej sekcji tego samouczka.
 
@@ -177,8 +205,13 @@ Gratulacje! Szablon projektu został utworzony i wdrożony za pomocą platformy 
 
 Ponieważ szablon został zainstalowany przy użyciu ścieżki pliku, należy go odinstalować z **bezwzględną** ścieżką pliku. Listę zainstalowanych szablonów można wyświetlić, uruchamiając polecenie `dotnet new -u`. Szablon powinien zostać wyświetlony jako ostatni. Użyj podanej ścieżki, aby odinstalować szablon przy użyciu polecenia `dotnet new -u <ABSOLUTE PATH TO TEMPLATE DIRECTORY>`.
 
+```dotnetcli
+dotnet new -u
+```
+
+Dane wyjściowe są podobne do poniższych.
+
 ```console
-C:\working> dotnet new -u
 Template Instantiation Commands for .NET Core CLI
 
 Currently installed items:
@@ -206,8 +239,10 @@ Currently installed items:
       Example templates: async project (consoleasync) C#
 ```
 
-```console
-C:\working> dotnet new -u C:\working\templates\consoleasync
+Aby odinstalować szablon, uruchom następujące polecenie.
+
+```dotnetcli
+dotnet new -u C:\working\templates\consoleasync
 ```
 
 ## <a name="next-steps"></a>Następne kroki

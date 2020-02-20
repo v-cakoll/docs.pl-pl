@@ -3,12 +3,12 @@ title: Tworzenie bibliotek przy użyciu interfejs wiersza polecenia platformy .N
 description: Dowiedz się, jak tworzyć biblioteki platformy .NET Core przy użyciu interfejs wiersza polecenia platformy .NET Core. Utworzysz bibliotekę, która obsługuje wiele platform.
 author: cartermp
 ms.date: 05/01/2017
-ms.openlocfilehash: a7c0175d29f483571578b58d698dd790cf66f7f4
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: c23c1f027b4d6d09c50eb2257d34f72ec56302f4
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920444"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503505"
 ---
 # <a name="develop-libraries-with-the-net-core-cli"></a>Tworzenie bibliotek przy użyciu interfejs wiersza polecenia platformy .NET Core
 
@@ -75,12 +75,12 @@ Jeśli chcesz osiągnąć maksymalną liczbę deweloperów i projektów, użyj .
 | ---------------------- | -------- |
 | .NET Framework 2.0     | `net20`  |
 | .NET Framework 3.0     | `net30`  |
-| .NET Framework 3.5     | `net35`  |
+| Program .NET Framework 3,5     | `net35`  |
 | .NET Framework 4.0     | `net40`  |
 | .NET Framework 4.5     | `net45`  |
 | .NET Framework 4.5.1   | `net451` |
 | .NET Framework 4.5.2   | `net452` |
-| .NET Framework 4.6     | `net46`  |
+| Program .NET Framework 4.6     | `net46`  |
 | .NET Framework 4.6.1   | `net461` |
 | .NET Framework 4.6.2   | `net462` |
 | .NET framework 4.7     | `net47`  |
@@ -96,7 +96,7 @@ Następnie należy wstawić ten TFM do sekcji `TargetFramework` w pliku projektu
 </Project>
 ```
 
-I to wszystko! Chociaż jest to kompilowane tylko dla .NET Framework 4, można użyć biblioteki w nowszych wersjach .NET Framework.
+I to wszystko. Chociaż jest to kompilowane tylko dla .NET Framework 4, można użyć biblioteki w nowszych wersjach .NET Framework.
 
 ## <a name="how-to-multitarget"></a>Jak wieloelementowy
 
@@ -220,7 +220,7 @@ Ważne jest, aby móc testować między platformami. Możesz użyć [xUnit](http
 
 1. Skonfiguruj rozwiązanie. Można to zrobić za pomocą następujących poleceń:
 
-   ```bash
+   ```dotnetcli
    mkdir SolutionWithSrcAndTest
    cd SolutionWithSrcAndTest
    dotnet new sln
@@ -241,7 +241,7 @@ Ważne jest, aby móc testować między platformami. Możesz użyć [xUnit](http
 
 1. Przejdź do katalogu projektu testowego i Dodaj odwołanie do `MyProject.Test` z `MyProject`.
 
-   ```bash
+   ```dotnetcli
    cd MyProject.Test
    dotnet add reference ../MyProject/MyProject.csproj
    ```
@@ -257,7 +257,7 @@ Ważne jest, aby móc testować między platformami. Możesz użyć [xUnit](http
 
 1. Sprawdź, czy xUnit działa, wykonując polecenie `dotnet test`. W przypadku wybrania opcji używania MSTest, zamiast tego należy uruchomić moduł uruchamiający konsolę programu MSTest.
 
-I to wszystko! Teraz można testować bibliotekę na wszystkich platformach przy użyciu narzędzi wiersza polecenia. Aby kontynuować testowanie teraz, gdy wszystko jest skonfigurowane, testowanie biblioteki jest bardzo proste:
+I to wszystko. Teraz można testować bibliotekę na wszystkich platformach przy użyciu narzędzi wiersza polecenia. Aby kontynuować testowanie teraz, gdy wszystko jest skonfigurowane, testowanie biblioteki jest bardzo proste:
 
 1. Wprowadź zmiany w bibliotece.
 1. Uruchom testy z wiersza polecenia w katalogu testowym przy użyciu polecenia `dotnet test`.
@@ -300,7 +300,7 @@ Scenariusze użycia, takie jak to znaczy, że dostępne interfejsy API muszą mi
 
 W terminalu można uruchomić następujące polecenia, aby utworzyć tę samą strukturę co ten przewodnik:
 
-```console
+```dotnetcli
 mkdir AwesomeLibrary && cd AwesomeLibrary
 dotnet new sln
 mkdir AwesomeLibrary.Core && cd AwesomeLibrary.Core && dotnet new classlib

@@ -2,12 +2,12 @@
 title: Migrowanie z środowiska DNX do interfejs wiersza polecenia platformy .NET Core
 description: Przeprowadź migrację z używania narzędzi środowiska DNX, aby interfejs wiersza polecenia platformy .NET Core narzędzia.
 ms.date: 06/20/2016
-ms.openlocfilehash: e15e7ce10bb7a36deb2acd2abb9a0bd4ec8cd4a9
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 31317f110ae1e8586b78becd757d0a8ff07f1459
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920623"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503818"
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>Migrowanie z środowiska DNX do interfejs wiersza polecenia platformy .NET Core (Project. JSON)
 
@@ -48,13 +48,13 @@ W poniższej tabeli przedstawiono mapowanie między poleceniami środowiska DNX/
 
 | ŚRODOWISKA DNX — polecenie                    | Interfejs wiersza polecenia    | Opis                                                                                                     |
 |--------------------------------|----------------|-----------------------------------------------------------------------------------------------------------------|
-| środowiska DNX                        | dotnet run     | Uruchom kod ze źródła.                                                                                           |
-| Kompilacja dnu                      | dotnet build   | Kompiluj plik binarny IL w kodzie.                                                                                |
-| Pakiet dnu                       | dotnet pack    | Pakuj pakiet NuGet kodu.                                                                        |
+| środowiska DNX                        | `dotnet run`     | Uruchom kod ze źródła.                                                                                           |
+| Kompilacja dnu                      | `dotnet build`   | Kompiluj plik binarny IL w kodzie.                                                                                |
+| Pakiet dnu                       | `dotnet pack`    | Pakuj pakiet NuGet kodu.                                                                        |
 | środowiska DNX \[polecenie] (na przykład "środowiska DNX Web") | Nie dotyczy\*          | W środowiska DNX świecie Uruchom polecenie zgodnie z definicją w pliku Project. JSON.                                                     |
 | dnu Zainstaluj                    | Nie dotyczy\*          | Na świecie środowiska DNX Zainstaluj pakiet jako zależność.                                                            |
-| dnu przywracanie                    | dotnet restore | Przywróć zależności określone w pliku Project. JSON. ([Zobacz Uwaga](#dotnet-restore-note))                                                            |
-| dnu publikowanie                    | dotnet publish | Publikowanie aplikacji do wdrożenia w jednej z trzech formularzy (przenośne, przenośne z natywną i autonomiczną). |
+| dnu przywracanie                    | `dotnet restore` | Przywróć zależności określone w pliku Project. JSON. ([Zobacz Uwaga](#dotnet-restore-note))                                                            |
+| dnu publikowanie                    | `dotnet publish` | Publikowanie aplikacji do wdrożenia w jednej z trzech formularzy (przenośne, przenośne z natywną i autonomiczną). |
 | Zawijanie dnu                       | Nie dotyczy\*          | W środowiska DNX świecie zawiń plik Project. JSON w csproj.                                                                    |
 | polecenia dnu                   | Nie dotyczy\*          | W środowiska DNX świecie Zarządzaj poleceniami zainstalowanymi globalnie.                                                           |
 

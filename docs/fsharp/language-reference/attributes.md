@@ -2,12 +2,12 @@
 title: Atrybuty
 description: Dowiedz F# się, jak atrybuty umożliwiają stosowanie metadanych do konstrukcji programistycznej.
 ms.date: 05/16/2016
-ms.openlocfilehash: 223263f5789b0fc7eb2b3ef2905f6436980bd14a
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 1e42dc61d44f31930a7b34799f28a68a2db69c8c
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424796"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504112"
 ---
 # <a name="attributes"></a>Atrybuty
 
@@ -39,7 +39,7 @@ W tym przykładzie atrybut jest `DllImportAttribute`w tym miejscu używany w skr
 
 Atrybuty to konstrukcja programistyczna platformy .NET, która umożliwia obiektowi znanemu jako *atrybut* , który ma być skojarzony z typem lub innym elementem programu. Element programu, do którego zastosowano atrybut, jest określany jako *element docelowy atrybutu*. Ten atrybut zwykle zawiera metadane dotyczące jego obiektu docelowego. W tym kontekście metadane mogą zawierać dowolne dane dotyczące typu innego niż jego pola i elementy członkowskie.
 
-Atrybuty w F# programie można stosować do następujących konstrukcji programistycznych: funkcji, metod, zestawów, modułów, typów (klas, rekordów, struktur, interfejsów, delegatów, wyliczeń, Unii itd.), konstruktorów, właściwości, pól parametry, parametry typu i wartości zwracane. Atrybuty nie są dozwolone dla powiązań `let` wewnątrz klas, wyrażeń ani wyrażeń przepływu pracy.
+Atrybuty w F# programie można stosować do następujących konstrukcji programistycznych: funkcji, metod, zestawów, modułów, typów (klas, rekordów, struktur, interfejsów, delegatów, wyliczeń, Unii itd.), konstruktorów, właściwości, pól, parametrów, parametrów typu i wartości zwracanych. Atrybuty nie są dozwolone dla powiązań `let` wewnątrz klas, wyrażeń ani wyrażeń przepływu pracy.
 
 Zwykle deklaracja atrybutu pojawia się bezpośrednio przed deklaracją obiektu docelowego atrybutu. Deklaracje wielu atrybutów mogą być używane razem w następujący sposób:
 
@@ -85,23 +85,23 @@ Mimo że zwykle nie trzeba określać obiektu docelowego atrybutu, prawidłowe w
     <td><pre lang="fsharp"><code>[&lt;property: Obsolete&gt;] this.MyProperty = x</code></pre></td>
   </tr>
   <tr>
-    <td>Param</td>
+    <td>param</td>
     <td><pre lang="fsharp"><code>member this.MyMethod([&lt;param: Out&gt;] x : ref&lt;int&gt;) = x := 10</code></pre></td>
   </tr>
   <tr>
-    <td>— typ</td>
+    <td>type</td>
     <td>
         <pre lang="fsharp"><code>
-[&lt;type: StructLayout(Sequential)&gt;]
+[&lt;type: StructLayout(LayoutKind.Sequential)&gt;]
 type MyStruct =
-struct
-x : byte
-y : int
-end</code></pre>
+  struct
+    val x : byte
+    val y : int
+  end</code></pre>
     </td>
   </tr>
 </table>
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Dokumentacja języka F#](index.md)

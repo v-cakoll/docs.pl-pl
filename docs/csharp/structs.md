@@ -4,12 +4,12 @@ description: Dowiedz się więcej na temat typu struktury i sposobu ich tworzeni
 ms.date: 10/12/2016
 ms.technology: csharp-fundamentals
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: cdfe2a763058b8f568ede2ff93c918c2dae874f7
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 540742ea6a215e09f0cc31b218ac10fbf6192352
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346901"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503992"
 ---
 # <a name="structs"></a>Struktury
 
@@ -47,9 +47,6 @@ Struktury współużytkują większość tej samej składni co klasy, chociaż s
 
 - W przeciwieństwie do klas, struktury mogą być tworzone bez użycia operatora `new`.
 
-   > [!NOTE]
-   > W przypadku platformy .NET Core 2,1 i nowszych należy utworzyć wystąpienie typu struktury przy użyciu [operatora new](language-reference/operators/new-operator.md) lub [literału domyślnego](language-reference/operators/default.md#default-literal)lub przez zainicjowanie każdego z jego pól prywatnych. Aby uzyskać więcej informacji, zobacz istotne [zmiany dotyczące migracji z wersji 2,0 do 2,1](../core/compatibility/2.0-2.1.md#corefx).
-
 - Struktury mogą deklarować konstruktory z parametrami.
 
 - Struktura nie może dziedziczyć z innej struktury lub klasy i nie może być podstawą klasy. Wszystkie struktury dziedziczą bezpośrednio z <xref:System.ValueType>, które dziedziczą z <xref:System.Object>.
@@ -60,7 +57,7 @@ Struktury współużytkują większość tej samej składni co klasy, chociaż s
 
 Typy wartości zwykłych nie mogą mieć wartości [null](language-reference/keywords/null.md). Można jednak utworzyć typy wartości null, umieszczając `?` po typie. Na przykład `int?` jest typem `int`, który może mieć również wartość [null](./language-reference/keywords/null.md). Typy wartości null są wystąpieniami typu struktury generycznej <xref:System.Nullable%601>. Typy wartości null są szczególnie przydatne podczas przekazywania danych do i z baz danych, w których wartości liczbowe mogą mieć wartość null lub być niezdefiniowane. Aby uzyskać więcej informacji, zobacz [typy wartości null](language-reference/builtin-types/nullable-value-types.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Klasy](programming-guide/classes-and-structs/classes.md)
 - [Typy podstawowe](basic-types.md)

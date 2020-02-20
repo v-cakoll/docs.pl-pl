@@ -1,19 +1,19 @@
 ---
 title: polecenie migracji dotnet
 description: Polecenie Migruj z programu dotnet migruje projekt i wszystkie jego zależności.
-ms.date: 01/07/2020
-ms.openlocfilehash: b81669d3e4cffeaf10bea39639410d5f06579d84
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 6148048c469c43320cc4459352fd2fb62f101740
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734143"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503699"
 ---
 # <a name="dotnet-migrate"></a>dotnet migrate
 
-**Ten artykuł ma zastosowanie do:** ✔️ .NET Core 1. x SDK ✔️ .NET Core 2. x SDK
+**Ten artykuł ma zastosowanie do:** ✔️ .NET Core 2. x SDK
 
-## <a name="name"></a>Nazwa
+## <a name="name"></a>Name (Nazwa)
 
 `dotnet migrate` — migruje projekt programu .NET Core w wersji zapoznawczej 2 do projektu w stylu zestaw .NET Core SDK.
 

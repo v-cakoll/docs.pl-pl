@@ -1,19 +1,19 @@
 ---
 title: polecenie programu MSBuild programu dotnet
 description: Polecenie MSBuild programu dotnet umożliwia dostęp do wiersza polecenia MSBuild.
-ms.date: 12/03/2018
-ms.openlocfilehash: dae1e9f0ca355166d41c11fbafb80c7c9fb29748
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 28a32a460d644d3e22f16b5dd9416222ae466e2e
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733196"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503675"
 ---
 # <a name="dotnet-msbuild"></a>dotnet msbuild
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+**Ten artykuł ma zastosowanie do:** ✔️ .NET Core 2. x SDK i nowszych wersji
 
-## <a name="name"></a>Nazwa
+## <a name="name"></a>Name (Nazwa)
 
 `dotnet msbuild` — kompiluje projekt i wszystkie jego zależności.
 
@@ -31,25 +31,25 @@ Polecenie [budowania dotnet](dotnet-build.md) jest równoważne `dotnet msbuild 
 
 ## <a name="examples"></a>Przykłady
 
-* Kompiluj projekt i jego zależności:
+- Kompiluj projekt i jego zależności:
 
   ```dotnetcli
   dotnet msbuild
   ```
 
-* Kompilowanie projektu i jego zależności przy użyciu konfiguracji wydania:
+- Kompilowanie projektu i jego zależności przy użyciu konfiguracji wydania:
 
   ```dotnetcli
   dotnet msbuild -property:Configuration=Release
   ```
 
-* Uruchom element docelowy publikowania i Opublikuj dla `osx.10.11-x64` RID:
+- Uruchom element docelowy publikowania i Opublikuj dla `osx.10.11-x64` RID:
 
   ```dotnetcli
   dotnet msbuild -target:Publish -property:RuntimeIdentifiers=osx.10.11-x64
   ```
 
-* Zobacz cały projekt ze wszystkimi obiektami docelowymi zawartymi w zestawie SDK:
+- Zobacz cały projekt ze wszystkimi obiektami docelowymi zawartymi w zestawie SDK:
 
   ```dotnetcli
   dotnet msbuild -preprocess

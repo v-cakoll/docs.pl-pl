@@ -4,12 +4,12 @@ description: Dowiedz się więcej na temat wyrażeń dopasowania wzorców wC#
 ms.date: 04/10/2019
 ms.technology: csharp-fundamentals
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: ff84ddd4f07fb77dc9fe648a495a441ed8f9198b
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: db509a0ebf1e205e9996ba8102757fe8c0b9ea3a
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039369"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501626"
 ---
 # <a name="pattern-matching"></a>Dopasowanie wzorca
 
@@ -33,7 +33,7 @@ Z tych struktur Napiszmy metodę, która oblicza obszar pewnego kształtu.
 
 ## <a name="the-is-type-pattern-expression"></a>Wyrażenie wzorca typu `is`
 
-Przed C# 7,0 należy przetestować każdy typ w serii`if`i`is`instrukcji:
+Przed C# 7,0 należy przetestować każdy typ w serii `if` i `is` instrukcji:
 
 [!code-csharp[ClassicIsExpression](../../samples/csharp/PatternMatching/GeometricUtilities.cs#02_ClassicIsExpression "Classic type pattern using is")]
 
@@ -136,3 +136,7 @@ Jest to jeden przykład, w którym warto rozważyć wyrażenie CASE `var`, któr
 Dopasowanie wzorca współdziała z dowolnym typem danych. Można pisać wyrażenia, które badają obiekt, i podejmować decyzje dotyczące przepływu sterowania na podstawie tych warunków.
 
 Porównaj kod z tego przykładu z projektem, który byłby następujący po utworzeniu hierarchii klas dla abstrakcyjnej `Shape` i określonych kształtów pochodnych z własnym implementacją metody wirtualnej w celu obliczenia obszaru. Często należy zauważyć, że wyrażenia dopasowania wzorców mogą być bardzo użytecznym narzędziem podczas pracy z danymi i chcą oddzielić problemy związane z przechowywaniem danych od problemów z zachowaniem.
+
+## <a name="see-also"></a>Zobacz też
+
+- [Samouczek: Używanie funkcji dopasowania wzorców do zwiększania typów danych](tutorials/pattern-matching.md)

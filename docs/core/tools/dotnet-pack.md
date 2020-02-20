@@ -1,23 +1,19 @@
 ---
 title: polecenie dotnet Pack
 description: Polecenie programu dotnet Pack tworzy pakiety NuGet dla projektu .NET Core.
-ms.date: 08/08/2019
-ms.openlocfilehash: 057d1029e5c933912c43c178b6db8a8498f2ed57
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 865262f1eb314f9b7e8ee713c573a965e89ded93
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734120"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503644"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
-**Ten artykuł ma zastosowanie do:** ✔️ .NET Core 1. x SDK i nowszych wersji
+**Ten artykuł ma zastosowanie do:** ✔️ .NET Core 2. x SDK i nowszych wersji
 
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
-
-## <a name="name"></a>Nazwa
+## <a name="name"></a>Name (Nazwa)
 
 `dotnet pack` — pakuje kod do pakietu NuGet.
 
@@ -63,13 +59,13 @@ Projekty sieci Web nie są domyślnie objęte pakietem. Aby zastąpić zachowani
 
 ## <a name="options"></a>Opcje
 
-- **`-c|--configuration {Debug|Release}`**
+- **`-c|--configuration <CONFIGURATION>`**
 
-  Definiuje konfigurację kompilacji. Wartość domyślna to `Debug`.
+  Definiuje konfigurację kompilacji. Wartość domyślna dla większości projektów jest `Debug`, ale można zastąpić ustawienia konfiguracji kompilacji w projekcie.
 
 - **`--force`**
 
-  Wymusza rozpoznanie wszystkich zależności, nawet jeśli ostatnie przywracanie zakończyło się pomyślnie. Określenie tej flagi jest takie samo jak usuwanie pliku *Project. assets. JSON* . Opcja dostępna od wersji .NET Core 2,0 SDK.
+  Wymusza rozpoznanie wszystkich zależności, nawet jeśli ostatnie przywracanie zakończyło się pomyślnie. Określenie tej flagi jest takie samo jak usuwanie pliku *Project. assets. JSON* .
 
 - **`-h|--help`**
 
@@ -93,11 +89,11 @@ Projekty sieci Web nie są domyślnie objęte pakietem. Aby zastąpić zachowani
 
 - **`--no-dependencies`**
 
-  Ignoruje odwołania projektu do projektu i przywraca tylko projekt główny. Opcja dostępna od wersji .NET Core 2,0 SDK.
+  Ignoruje odwołania projektu do projektu i przywraca tylko projekt główny.
 
 - **`--no-restore`**
 
-  Nie wykonuje przywracania niejawnego podczas wykonywania polecenia. Opcja dostępna od wersji .NET Core 2,0 SDK.
+  Nie wykonuje przywracania niejawnego podczas wykonywania polecenia.
 
 - **`--nologo`**
 
@@ -109,7 +105,7 @@ Projekty sieci Web nie są domyślnie objęte pakietem. Aby zastąpić zachowani
 
 - **`--runtime <RUNTIME_IDENTIFIER>`**
 
-  Określa docelowy środowisko uruchomieniowe, dla którego mają zostać przywrócone pakiety. Aby uzyskać listę identyfikatorów środowiska uruchomieniowego (RID), zobacz [wykaz identyfikatorów RID](../rid-catalog.md). Opcja dostępna od wersji .NET Core 2,0 SDK.
+  Określa docelowy środowisko uruchomieniowe, dla którego mają zostać przywrócone pakiety. Aby uzyskać listę identyfikatorów środowiska uruchomieniowego (RID), zobacz [wykaz identyfikatorów RID](../rid-catalog.md).
 
 - **`-s|--serviceable`**
 
@@ -167,7 +163,7 @@ Projekty sieci Web nie są domyślnie objęte pakietem. Aby zastąpić zachowani
   dotnet pack -p:TargetFrameworks=net45
   ```
 
-- Pakowanie projektu i użycie określonego środowiska uruchomieniowego (Windows 10) dla operacji przywracania (zestaw .NET Core SDK 2,0 i nowsze wersje):
+- Pakowanie projektu i użycie określonego środowiska uruchomieniowego (Windows 10) dla operacji przywracania:
 
   ```dotnetcli
   dotnet pack --runtime win10-x64

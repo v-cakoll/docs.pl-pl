@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: fa0ae18221c33d196960239411f8860a561b20ee
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 5f4038e863d9bb59df470d3516c08fd2ad29c078
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75340373"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503556"
 ---
 # <a name="tutorial-create-an-item-template"></a>Samouczek: Tworzenie szablonu elementu
 
@@ -41,7 +41,7 @@ Ta seria używa "folderu roboczego", w którym znajduje się źródło szablonu,
 
 Najpierw utwórz folder nadrzędny, a nazwa nie ma znaczenia. Następnie utwórz podfolder o nazwie _Work_. W folderze _roboczym_ utwórz podfolder o nazwie _templates_.
 
-Następnie utwórz folder w folderze nadrzędnym o nazwie _test_. Struktura folderów powinna wyglądać następująco:
+Następnie utwórz folder w folderze nadrzędnym o nazwie _test_. Struktura folderów powinna wyglądać następująco.
 
 ```console
 parent_folder
@@ -99,7 +99,7 @@ working
                 template.json
 ```
 
-Otwórz plik _Template. JSON_ przy użyciu ulubionego edytora tekstu i wklej go w poniższym kodzie JSON i Zapisz go:
+Otwórz plik _Template. JSON_ przy użyciu ulubionego edytora tekstu i wklej go w poniższym kodzie JSON i Zapisz go.
 
 ```json
 {
@@ -151,8 +151,13 @@ Worker Service                                    worker                [C#]    
 
 Teraz, gdy masz zainstalowany szablon elementu, przetestuj go. Przejdź do folderu _test/_ folder i Utwórz nową aplikację konsolową z `dotnet new console`. Spowoduje to wygenerowanie projektu roboczego, który można łatwo przetestować przy użyciu polecenia `dotnet run`.
 
+```dotnetcli
+dotnet new console
+```
+
+Dane wyjściowe są podobne do poniższych.
+
 ```console
-C:\test> dotnet new console
 The template "Console Application" was created successfully.
 
 Processing post-creation actions...
@@ -162,15 +167,27 @@ Running 'dotnet restore' on C:\test\test.csproj...
 Restore succeeded.
 ```
 
+Uruchom projekt przy użyciu.
+
+```dotnetcli
+dotnet run
+```
+
+Otrzymujesz następujące dane wyjściowe.
+
 ```console
-C:\test> dotnet run
 Hello World!
 ```
 
 Następnie uruchom `dotnet new stringext`, aby wygenerować _CommonExtensions.cs_ na podstawie szablonu.
 
+```dotnetcli
+dotnet new stringext
+```
+
+Otrzymujesz następujące dane wyjściowe.
+
 ```console
-C:\test> dotnet new stringext
 The template "Example templates: string extensions" was created successfully.
 ```
 
@@ -182,8 +199,13 @@ Console.WriteLine("Hello World!".Reverse());
 
 Ponownie uruchom program i zobaczysz, że wynik jest odwrócony.
 
+```dotnetcli
+dotnet run
+```
+
+Otrzymujesz następujące dane wyjściowe.
+
 ```console
-C:\test> dotnet run
 !dlroW olleH
 ```
 
@@ -193,8 +215,13 @@ Gratulacje! Utworzono i wdrożono szablon elementu z platformą .NET Core. W ram
 
 Ponieważ szablon został zainstalowany według ścieżki pliku, należy go odinstalować z **bezwzględną** ścieżką pliku. Listę zainstalowanych szablonów można wyświetlić, uruchamiając polecenie `dotnet new -u`. Szablon powinien zostać wyświetlony jako ostatni. Użyj podanej ścieżki, aby odinstalować szablon przy użyciu polecenia `dotnet new -u <ABSOLUTE PATH TO TEMPLATE DIRECTORY>`.
 
+```dotnetcli
+dotnet new -u
+```
+
+Dane wyjściowe są podobne do poniższych.
+
 ```console
-C:\working> dotnet new -u
 Template Instantiation Commands for .NET Core CLI
 
 Currently installed items:
@@ -222,8 +249,10 @@ Currently installed items:
       Example templates: string extensions (stringext) C#
 ```
 
-```console
-C:\working> dotnet new -u C:\working\templates\extensions
+Aby odinstalować szablon, uruchom następujące polecenie.
+
+```dotnetcli
+dotnet new -u C:\working\templates\extensions
 ```
 
 ## <a name="next-steps"></a>Następne kroki

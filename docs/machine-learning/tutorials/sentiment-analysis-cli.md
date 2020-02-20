@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 12/23/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: caf12296b208b3d2e57c3a74300cced225e4db66
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 38ca93f62a066bade988a89b704fca26368b0b2b
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75738761"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504156"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>Analizowanie tonacji przy użyciu interfejsu wiersza polecenia platformy ML.NET
 
@@ -48,7 +48,7 @@ Zamierzamy użyć istniejącego zestawu danych, który będzie używany dla scen
 1. Pobierz [tonacji z oznaczeniem "UCI" (zobacz Cytaty w poniższej notatce)](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)i rozpakuj go do wybranego folderu.
 
     > [!NOTE]
-    > Zestawy danych, w tym samouczku, korzystają z zestawu DataSet z grupy "from" do poszczególnych etykiet przy użyciu funkcji głębokiej, Kotzias et al,. KDD 2015 i hostowana w repozytorium Machine Learning/Dua, D. i Karra Taniskidou, E. (2017). /Na Machine Learning repozytorium [http://archive.ics.uci.edu/ml ]. Irvine, CA: University of Kalifornii, szkolna informacja i nauka komputera.
+    > Zestawy danych, w tym samouczku, korzystają z zestawu DataSet z grupy "from" do poszczególnych etykiet przy użyciu funkcji głębokiej, Kotzias et al,. KDD 2015 i hostowana w repozytorium Machine Learning/Dua, D. i Karra Taniskidou, E. (2017). /Na Machine Learning repozytorium [http://archive.ics.uci.edu/ml]. Irvine, CA: University of Kalifornii, szkolna informacja i nauka komputera.
 
 2. Skopiuj plik `yelp_labelled.txt` do dowolnego utworzonego wcześniej folderu (na przykład `/cli-test`).
 
@@ -83,7 +83,7 @@ Zamierzamy użyć istniejącego zestawu danych, który będzie używany dla scen
 1. Uruchom następujące polecenie interfejsu wiersza polecenia ML.NET:
 
     ```console
-    mlnet auto-train --task binary-classification --dataset "yelp_labelled.txt" --label-column-index 1 --has-header false --max-exploration-time 10
+    mlnet auto-train --task binary-classification --dataset "yelp_labelled.txt" --label-column-index 1 --has-header false --max-exploration-time 10
     ```
 
     To polecenie uruchamia **`mlnet auto-train` polecenie**:
@@ -97,11 +97,11 @@ Zamierzamy użyć istniejącego zestawu danych, który będzie używany dla scen
 
     <!-- markdownlint-disable MD023 MD025 -->
 
-    # <a name="windowstabwindows"></a>[Windows](#tab/windows)
+    # <a name="windows"></a>[Windows](#tab/windows)
 
     ![Funkcja autouczenia interfejsu wiersza polecenia ML.NET w programie PowerShell](./media/mlnet-cli/mlnet-auto-train-binary-classification-powershell.gif)
 
-    # <a name="macos-bashtabmacosbash"></a>[macOS bash](#tab/macosbash)
+    # <a name="macos-bash"></a>[macOS bash](#tab/macosbash)
 
     ![Funkcja autouczenia interfejsu wiersza polecenia ML.NET w programie PowerShell](./media/mlnet-cli/mlnet-auto-train-binary-classification-bash.gif)
 
@@ -174,44 +174,44 @@ Te wyliczane zasoby zostały wyjaśnione w poniższych krokach samouczka.
     }
     ```
 
-- Pierwszy wiersz kodu po prostu tworzy obiekt `MLContext` wymagany przy każdym uruchomieniu kodu ML.NET.
+    - Pierwszy wiersz kodu po prostu tworzy obiekt `MLContext` wymagany przy każdym uruchomieniu kodu ML.NET.
 
-- Drugi wiersz kodu jest oznaczony jako komentarz, ponieważ nie ma potrzeby uczenia modelu, ponieważ został on już przeszkolony przez narzędzie interfejsu wiersza polecenia i zapisany w serializowanym modelu. Plik ZIP. Jeśli jednak chcesz zobaczyć *"jak model został przeszkolony"* za pomocą interfejsu wiersza polecenia, możesz usunąć komentarz tego wiersza i uruchomić/debugować kod szkoleniowy używany dla danego modelu ml.
+    - Drugi wiersz kodu jest oznaczony jako komentarz, ponieważ nie ma potrzeby uczenia modelu, ponieważ został on już przeszkolony przez narzędzie interfejsu wiersza polecenia i zapisany w serializowanym modelu. Plik ZIP. Jeśli jednak chcesz zobaczyć *"jak model został przeszkolony"* za pomocą interfejsu wiersza polecenia, możesz usunąć komentarz tego wiersza i uruchomić/debugować kod szkoleniowy używany dla danego modelu ml.
 
-- W trzecim wierszu kodu ładujesz model z serializowanego modelu. Plik ZIP z interfejsem API `mlContext.Model.Load()`, podając ścieżkę do tego modelu. Plik ZIP.
+    - W trzecim wierszu kodu ładujesz model z serializowanego modelu. Plik ZIP z interfejsem API `mlContext.Model.Load()`, podając ścieżkę do tego modelu. Plik ZIP.
 
-- W czwartym wierszu kodu ładowania należy utworzyć obiekt `PredictionEngine` za pomocą interfejsu API `mlContext.Model.CreatePredictionEngine<TSrc,TDst>(ITransformer mlModel)`. Obiekt `PredictionEngine` jest potrzebny, gdy chcesz, aby Prognoza była ukierunkowana na pojedynczą próbkę danych (w tym przypadku pojedynczy fragment tekstu do przewidywania jego tonacji).
+    - W czwartym wierszu kodu ładowania należy utworzyć obiekt `PredictionEngine` za pomocą interfejsu API `mlContext.Model.CreatePredictionEngine<TSrc,TDst>(ITransformer mlModel)`. Obiekt `PredictionEngine` jest potrzebny, gdy chcesz, aby Prognoza była ukierunkowana na pojedynczą próbkę danych (w tym przypadku pojedynczy fragment tekstu do przewidywania jego tonacji).
 
-- Piąty wiersz kodu to miejsce, w którym tworzysz *pojedyncze przykładowe dane* , które mają być używane do prognozowania przez wywołanie funkcji `CreateSingleDataSample()`. Ponieważ narzędzie interfejsu wiersza polecenia nie wie jakiego rodzaju przykładowych danych do użycia w ramach tej funkcji, ładuje pierwszy wiersz zestawu danych. Jednak w takim przypadku można także utworzyć własne "kodowane" dane zamiast bieżącej implementacji funkcji `CreateSingleDataSample()`, aktualizując ten prostszy kod implementujący tę funkcję:
+    - Piąty wiersz kodu to miejsce, w którym tworzysz *pojedyncze przykładowe dane* , które mają być używane do prognozowania przez wywołanie funkcji `CreateSingleDataSample()`. Ponieważ narzędzie interfejsu wiersza polecenia nie wie jakiego rodzaju przykładowych danych do użycia w ramach tej funkcji, ładuje pierwszy wiersz zestawu danych. Jednak w takim przypadku można także utworzyć własne "kodowane" dane zamiast bieżącej implementacji funkcji `CreateSingleDataSample()`, aktualizując ten prostszy kod implementujący tę funkcję:
 
-    ```csharp
-    private static ModelInput CreateSingleDataSample()
-    {
-        ModelInput sampleForPrediction = new ModelInput() { Col0 = "The ML.NET CLI is great for getting started. Very cool!", Label = true };
-        return sampleForPrediction;
-    }
-    ```
+        ```csharp
+        private static ModelInput CreateSingleDataSample()
+        {
+            ModelInput sampleForPrediction = new ModelInput() { Col0 = "The ML.NET CLI is great for getting started. Very cool!", Label = true };
+            return sampleForPrediction;
+        }
+        ```
 
 1. Uruchom projekt, używając oryginalnych danych przykładowych załadowanych z pierwszego wiersza zestawu danych lub dostarczając własne, zakodowane Przykładowo dane. Należy uzyskać prognozę, która jest porównywalna z:
 
-    # <a name="windowstabwindows"></a>[Windows](#tab/windows)
+    # <a name="windows"></a>[Windows](#tab/windows)
 
     Uruchom aplikację konsolową z programu Visual Studio, naciskając klawisz F5 (przycisk odtwarzania):
 
-    ![Funkcja autouczenia interfejsu wiersza polecenia ML.NET w programie PowerShell](./media/mlnet-cli/sample-cli-prediction-execution.png)).
+    ![Funkcja autouczenia interfejsu wiersza polecenia ML.NET w programie PowerShell](./media/mlnet-cli/sample-cli-prediction-execution.png))
 
-    # <a name="macos-bashtabmacosbash"></a>[macOS bash](#tab/macosbash)
+    # <a name="macos-bash"></a>[macOS bash](#tab/macosbash)
 
     Uruchom aplikację konsolową z poziomu wiersza polecenia, wpisując następujące polecenia:
 
-     ```bash
-     cd SampleBinaryClassification
-     cd SampleBinaryClassification.ConsoleApp
+    ```dotnetcli
+    cd SampleBinaryClassification
+    cd SampleBinaryClassification.ConsoleApp
 
-     dotnet run
-     ```
+    dotnet run
+    ```
 
-    ![Funkcja autouczenia interfejsu wiersza polecenia ML.NET w programie PowerShell](./media/mlnet-cli/sample-cli-prediction-execution-bash.png)).
+    ![Funkcja autouczenia interfejsu wiersza polecenia ML.NET w programie PowerShell](./media/mlnet-cli/sample-cli-prediction-execution-bash.png))
 
     ---
 
@@ -257,7 +257,7 @@ W niniejszym samouczku zawarto informacje na temat wykonywania następujących c
 > - Poznaj wygenerowany C# kod, aby uruchomić model (kod do użycia w aplikacji użytkownika końcowego)
 > - Eksploruj wygenerowany C# kod, który został użyty do uczenia modelu "Najlepsza jakość" (cele uczenia)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Automatyzacja szkoleń modeli przy użyciu interfejsu wiersza polecenia ML.NET](../automate-training-with-cli.md)
 - [Samouczek: uruchamianie modeli ML.NET na skalowalnych aplikacjach internetowych i interfejsach API ASP.NET Core](https://aka.ms/mlnet-tutorial-netcoreintegrationpkg)

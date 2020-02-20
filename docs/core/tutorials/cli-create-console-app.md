@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/05/2019
 ms.technology: dotnet-cli
 ms.custom: updateeachrelease
-ms.openlocfilehash: 6e1c7881aa415ea54307d80214001a2f0fe5b4a6
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: af1b374cd14d5070194c035024ce2328c9016646
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920466"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503542"
 ---
 # <a name="get-started-with-net-core-using-the-net-core-cli"></a>Rozpoczynanie pracy z platformą .NET Core przy użyciu interfejs wiersza polecenia platformy .NET Core
 
@@ -22,13 +22,13 @@ Jeśli nie znasz interfejs wiersza polecenia platformy .NET Core, zapoznaj się 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
 - [Zestaw .NET Core SDK 3,1](https://dotnet.microsoft.com/download) lub nowszymi wersjami.
-- Edytor tekstu lub Edytor kodu.
+- Wybrany edytor tekstu lub edytor kodu.
 
 ## <a name="hello-console-app"></a>Witaj, Aplikacja konsolowa!
 
 [Przykładowy kod można wyświetlić lub pobrać](https://github.com/dotnet/samples/tree/master/core/console-apps/HelloMsBuild) z repozytorium usługi GitHub/przykłady Aby uzyskać instrukcje dotyczące pobierania, zobacz [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-Otwórz wiersz polecenia i Utwórz folder o nazwie *Hello*. Przejdź do utworzonego folderu i wpisz następujące:
+Otwórz wiersz polecenia i Utwórz folder o nazwie *Hello*. Przejdź do utworzonego folderu i wpisz następujące.
 
 ```dotnetcli
 dotnet new console
@@ -64,17 +64,25 @@ Wykonajmy szybkie wskazówki:
 
     [uruchomienia](../tools/dotnet-run.md) programu dotnet [Kompiluj kompilacje dotnet](../tools/dotnet-build.md) , aby upewnić się, że cele kompilacji zostały skompilowane, a następnie wywoła `dotnet <assembly.dll>`, aby uruchomić aplikację docelową.
     
-    ```console
+    ```dotnetcli
     dotnet run
+    ```
 
+    Otrzymujesz następujące dane wyjściowe.
+
+    ```console
     Hello World!
     ```
     
     Alternatywnie można również uruchomić `dotnet build`, aby skompilować kod bez uruchamiania aplikacji konsolowej kompilacji. Powoduje to skompilowaną aplikację jako plik DLL, na podstawie nazwy projektu. W takim przypadku utworzony plik ma nazwę *Hello. dll*. Ta aplikacja może być uruchamiana z `dotnet bin\Debug\netcoreapp3.1\Hello.dll` w systemie Windows (Użyj `/` dla systemów innych niż Windows).
     
-    ```console
+    ```dotnetcli
     dotnet bin\Debug\netcoreapp3.1\Hello.dll
+    ```
 
+    Otrzymujesz następujące dane wyjściowe.
+
+    ```console
     Hello World!
     ```
     
@@ -98,8 +106,13 @@ Zmieńmy program na bit. Liczby Fibonacci są przyjemne, więc Dodajmy ten argum
 
 03. Uruchom program, przekazując do aplikacji parametr. Korzystając z `dotnet` polecenia, aby uruchomić aplikację, Dodaj `--` do końca. Wszystkie elementy z prawej strony `--` zostaną przesłane jako parametr do aplikacji. W poniższym przykładzie wartość `John` jest przenoszona do aplikacji.
 
+    ```dotnetcli
+    dotnet run -- John
+    ```
+
+    Otrzymujesz następujące dane wyjściowe.
+
     ```console
-    $ dotnet run -- John
     Hello John!
     Fibonacci Numbers 1-15:
     1: 0
@@ -119,7 +132,7 @@ Zmieńmy program na bit. Liczby Fibonacci są przyjemne, więc Dodajmy ten argum
     15: 377
     ```
 
-I to wszystko! Możesz zmodyfikować *program.cs* w dowolny sposób.
+I to wszystko. Możesz zmodyfikować *program.cs* w dowolny sposób.
 
 ## <a name="working-with-multiple-files"></a>Praca z wieloma plikami
 
@@ -135,10 +148,15 @@ Pojedyncze pliki są ograniczone do prostych programów jednostronnych, ale jeś
 
 03. Uruchom [kompilację dotnet](../tools/dotnet-build.md) , aby skompilować zmiany.
 
-04. Uruchom aplikację, wykonując [uruchomienie programu dotnet](../tools/dotnet-run.md). Poniżej przedstawiono dane wyjściowe programu:
+04. Uruchom aplikację, wykonując [uruchomienie programu dotnet](../tools/dotnet-run.md).
+
+    ```dotnetcli
+    dotnet run
+    ```
+
+    Otrzymujesz następujące dane wyjściowe.
 
     ```console
-    $ dotnet run
     0
     1
     1
@@ -160,8 +178,13 @@ Pojedyncze pliki są ograniczone do prostych programów jednostronnych, ale jeś
 
 Gdy wszystko będzie gotowe do dystrybucji swojej aplikacji, użyj polecenia [dotnet Publish](../tools/dotnet-publish.md) w celu wygenerowania folderu _publikowania_ w _bin\\Debuguj\\netcoreapp 3.1\\publikowania\\_ (Użyj `/` w przypadku systemów innych niż Windows). Zawartość folderu _publikowania_ można dystrybuować na inne platformy, o ile już zainstalowano środowisko uruchomieniowe dotnet.
 
-```console
+```dotnetcli
 dotnet publish
+```
+
+Dane wyjściowe są podobne do poniższych.
+
+```console
 Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Core
 Copyright (C) Microsoft Corporation. All rights reserved.
 
@@ -174,9 +197,13 @@ Powyższe dane wyjściowe mogą się różnić w zależności od bieżącego fol
 
 Opublikowaną aplikację można uruchomić za pomocą polecenia [dotnet](../tools/dotnet.md) :
 
-```console
+```dotnetcli
 dotnet bin\Debug\netcoreapp3.1\publish\Hello.dll
+```
 
+Otrzymujesz następujące dane wyjściowe.
+
+```console
 Hello World!
 ```
 
@@ -188,12 +215,12 @@ Jak wspomniano na początku tego artykułu, tworzony jest plik wykonywalny specy
 Hello World!
 ```
 
-## <a name="conclusion"></a>Wniosek
+## <a name="conclusion"></a>Podsumowanie
 
-I to wszystko! Teraz możesz zacząć korzystać z podstawowych pojęć zamieszczonych w tym miejscu, aby utworzyć własne programy.
+I to wszystko. Teraz możesz zacząć korzystać z podstawowych pojęć zamieszczonych w tym miejscu, aby utworzyć własne programy.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Organizowanie i testowanie projektów przy użyciu interfejs wiersza polecenia platformy .NET Core](testing-with-cli.md)
 - [Publikowanie aplikacji platformy .NET Core za pomocą interfejs wiersza polecenia platformy .NET Core](../deploying/deploy-with-cli.md)
-- [Wdrażanie aplikacji .NET core](../deploying/index.md)
+- [Wdrażanie aplikacji .NET Core](../deploying/index.md)

@@ -3,12 +3,12 @@ title: Dostęp z podwyższonym poziomem uprawnień dla poleceń dotnet
 description: Zapoznaj się z najlepszymi rozwiązaniami dotyczącymi poleceń dotnet wymagających podwyższonego poziomu dostępu.
 author: wli3
 ms.date: 06/26/2019
-ms.openlocfilehash: cf7c93a0adcae7092a61a6fc6046cd45cf00bf58
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 1cf29012736e5b6d858ca22dc2a9b97e7e8e33ef
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216306"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503571"
 ---
 # <a name="elevated-access-for-dotnet-commands"></a>Dostęp z podwyższonym poziomem uprawnień dla poleceń dotnet
 
@@ -16,7 +16,7 @@ Wskazówki dotyczące tworzenia oprogramowania — Przewodnik po tworzeniu oprog
 
 Następujące polecenia można uruchomić z podwyższonym poziomem uprawnień:
 
-- `dotnet tool`polecenia, takie jak [Instalacja narzędzia dotnet](dotnet-tool-install.md).
+- `dotnet tool` polecenia, takie jak [Instalacja narzędzia dotnet](dotnet-tool-install.md).
 - `dotnet run --no-build`
 
 Nie zalecamy uruchamiania innych poleceń z podwyższonym poziomem uprawnień. W szczególności nie zaleca się podniesienia uprawnień za pomocą poleceń korzystających z programu MSBuild, takich jak [dotnet Restore](dotnet-restore.md), [kompilacja dotnet](dotnet-build.md)i [uruchomienie dotnet](dotnet-run.md). Podstawowym problemem jest problemy z zarządzaniem uprawnieniami, gdy użytkownik przechodzi między głównym i ograniczonym kontem po wydaniu polecenia dotnet. Może się okazać, że użytkownik z ograniczeniami nie ma dostępu do pliku skompilowanego przez użytkownika root. Istnieją sposoby rozwiązania tej sytuacji, ale nie są one potrzebne do pierwszego miejsca.
@@ -29,13 +29,13 @@ Poniższe instrukcje przedstawiają zalecaną metodę instalowania, uruchamiania
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="windowstabwindows"></a>[Windows](#tab/windows)
+# <a name="windows"></a>[Windows](#tab/windows)
 
 ### <a name="install-the-global-tool"></a>Instalowanie narzędzia globalnego
 
 Jeśli folder `%ProgramFiles%\dotnet-tools` już istnieje, wykonaj poniższe czynności, aby sprawdzić, czy grupa "Użytkownicy" ma uprawnienia do zapisywania lub modyfikowania tego katalogu:
 
-- Kliknij prawym przyciskiem `%ProgramFiles%\dotnet-tools` myszy folder i wybierz polecenie **Właściwości**. Zostanie otwarte okno dialogowe **wspólne właściwości** . 
+- Kliknij prawym przyciskiem myszy folder `%ProgramFiles%\dotnet-tools` i wybierz polecenie **Właściwości**. Zostanie otwarte okno dialogowe **wspólne właściwości** . 
 - Wybierz kartę **zabezpieczenia** . W obszarze **nazwy grup lub użytkowników**Sprawdź, czy grupa "Użytkownicy" ma uprawnienia do zapisywania lub modyfikowania katalogu. 
 - Jeśli grupa "Użytkownicy" może zapisywać lub modyfikować katalog, użyj innej nazwy katalogu podczas instalowania narzędzi, a nie *narzędzi dotnet*.
 
@@ -53,7 +53,7 @@ dotnet tool install PACKAGEID --tool-path "%ProgramFiles%\dotnet-tools".
 "%ProgramFiles%\dotnet-tools\TOOLCOMMAND"
 ```
 
-**Opcja 2** Dodaj nowo utworzony folder do `%Path%`programu. Tę operację należy wykonać tylko raz.
+**Opcja 2** Dodaj nowo utworzony folder do `%Path%`. Tę operację należy wykonać tylko raz.
 
 ```cmd
 setx Path "%Path%;%ProgramFiles%\dotnet-tools\"
@@ -73,11 +73,11 @@ W wierszu polecenia z podwyższonym poziomem uprawnień wpisz następujące pole
 dotnet tool uninstall PACKAGEID --tool-path "%ProgramFiles%\dotnet-tools"
 ```
 
-# <a name="linuxtablinux"></a>[Linux](#tab/linux)
+# <a name="linux"></a>[Linux](#tab/linux)
 
 [!INCLUDE [elevated-access-unix](../../../includes/elevated-access-unix.md)]
 
-# <a name="macostabmacos"></a>[macOS](#tab/macos)
+# <a name="macos"></a>[macOS](#tab/macos)
 
 [!INCLUDE [elevated-access-unix](../../../includes/elevated-access-unix.md)]
 
@@ -85,7 +85,7 @@ dotnet tool uninstall PACKAGEID --tool-path "%ProgramFiles%\dotnet-tools"
 
 ## <a name="local-tools"></a>Narzędzia lokalne
 
-Narzędzia lokalne są objęte zakresem drzewa dla każdego użytkownika. W przypadku korzystania z podwyższonego poziomu uprawnień narzędzia lokalne udostępniają środowisko użytkownika z ograniczeniami do środowiska z podwyższonym poziomem uprawnień. W systemie Linux i macOS w wyniku tego są ustawiane pliki z dostępem tylko do użytkownika root. Jeśli użytkownik przełączy się z powrotem do konta z ograniczeniami, użytkownik nie będzie mógł uzyskać dostępu do plików ani zapisywać do nich. Instalowanie narzędzi wymagających podniesienia uprawnień jako lokalnych narzędzi nie jest zalecane. Zamiast tego należy użyć `--tool-path` opcji i poprzednich wytycznych dla narzędzi globalnych.
+Narzędzia lokalne są objęte zakresem drzewa dla każdego użytkownika. W przypadku korzystania z podwyższonego poziomu uprawnień narzędzia lokalne udostępniają środowisko użytkownika z ograniczeniami do środowiska z podwyższonym poziomem uprawnień. W systemie Linux i macOS w wyniku tego są ustawiane pliki z dostępem tylko do użytkownika root. Jeśli użytkownik przełączy się z powrotem do konta z ograniczeniami, użytkownik nie będzie mógł uzyskać dostępu do plików ani zapisywać do nich. Instalowanie narzędzi wymagających podniesienia uprawnień jako lokalnych narzędzi nie jest zalecane. Zamiast tego należy użyć opcji `--tool-path` i wcześniejszych wytycznych dla narzędzi globalnych.
 
 ## <a name="elevation-during-development"></a>Podniesienie uprawnień podczas opracowywania
 
@@ -93,18 +93,18 @@ Podczas programowania może być potrzebny podwyższony poziom dostępu do testo
 
 - Przy użyciu wygenerowanego pliku wykonywalnego (zapewnia najlepszą wydajność uruchamiania):
 
-   ```bash
+   ```dotnetcli
    dotnet build
    sudo ./bin/Debug/netcoreapp3.0/APPLICATIONNAME
    ```
     
-- Za pomocą polecenia [dotnet Run](dotnet-run.md) z `—no-build` flagą, aby uniknąć generowania nowych plików binarnych:
+- Za pomocą polecenia [dotnet Run](dotnet-run.md) z flagą `—no-build`, aby uniknąć generowania nowych plików binarnych:
 
-   ```bash
+   ```dotnetcli
    dotnet build
    sudo dotnet run --no-build
    ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Globalne narzędzia platformy .NET Core — Omówienie](global-tools.md)

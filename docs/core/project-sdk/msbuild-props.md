@@ -1,14 +1,14 @@
 ---
 title: Właściwości programu MSBuild dla Microsoft. NET. Sdk
 description: Odwołanie do właściwości programu MSBuild, które są zrozumiałe dla zestaw .NET Core SDK.
-ms.date: 02/02/2020
+ms.date: 02/14/2020
 ms.topic: reference
-ms.openlocfilehash: f5dc2079bc313b8dd9fa5556cd941521a597ae38
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 00d9152d864ac0727a511f4c3c15abba82aab904
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77453812"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503812"
 ---
 # <a name="msbuild-properties-for-net-core-sdk-projects"></a>Właściwości programu MSBuild dla projektów zestaw .NET Core SDK
 
@@ -19,25 +19,9 @@ Na tej stronie opisano właściwości programu MSBuild służące do konfigurowa
 
 ## <a name="framework-properties"></a>Właściwości struktury
 
-- [NetStandardImplicitPackageVersion](#netstandardimplicitpackageversion)
 - [TargetFramework](#targetframework)
 - [TargetFrameworks](#targetframeworks)
-
-### <a name="netstandardimplicitpackageversion"></a>NetStandardImplicitPackageVersion
-
-> [!NOTE]
-> Ta właściwość ma zastosowanie tylko do projektów korzystających z `netstandard1.x`. Nie dotyczy to projektów, które używają `netstandard2` i nowszych.
-
-Użyj właściwości `NetStandardImplicitPackageVersion`, aby określić wersję platformy, która jest starsza niż wersja [pakietu](../packages.md#metapackages) . Plik projektu w poniższym przykładzie jest docelowy `netstandard1.3` ale używa wersji 1.6.0 `NETStandard.Library`.
-
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>netstandard1.3</TargetFramework>
-    <NetStandardImplicitPackageVersion>1.6.0</NetStandardImplicitPackageVersion>
-  </PropertyGroup>
-</Project>
-```
+- [NetStandardImplicitPackageVersion](#netstandardimplicitpackageversion)
 
 ### <a name="targetframework"></a>TargetFramework
 
@@ -69,6 +53,22 @@ Użyj właściwości `TargetFrameworks`, jeśli chcesz, aby aplikacja była prze
 ```
 
 Aby uzyskać więcej informacji, zobacz [Platformy docelowe w projektach w stylu zestawu SDK](../../standard/frameworks.md).
+
+### <a name="netstandardimplicitpackageversion"></a>NetStandardImplicitPackageVersion
+
+> [!NOTE]
+> Ta właściwość ma zastosowanie tylko do projektów korzystających z `netstandard1.x`. Nie dotyczy to projektów, które używają `netstandard2.x`.
+
+Użyj właściwości `NetStandardImplicitPackageVersion`, aby określić wersję platformy, która jest starsza niż wersja [pakietu](../packages.md#metapackages) . Plik projektu w poniższym przykładzie jest docelowy `netstandard1.3` ale używa wersji 1.6.0 `NETStandard.Library`.
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard1.3</TargetFramework>
+    <NetStandardImplicitPackageVersion>1.6.0</NetStandardImplicitPackageVersion>
+  </PropertyGroup>
+</Project>
+```
 
 ## <a name="publish-properties"></a>Właściwości publikowania
 

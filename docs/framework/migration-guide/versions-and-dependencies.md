@@ -5,12 +5,12 @@ ms.date: 01/17/2020
 helpviewer_keywords:
 - versions, .NET Framework
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
-ms.openlocfilehash: 62ec1e21fd8e95991af6e2f8fa6f99c17249c761
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 486b320ca30323684d301630ad29f8f4615764ee
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452724"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504049"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework wersje i zależności
 
@@ -184,7 +184,7 @@ Poniższe tabele podsumowują historię wersji .NET Framework i skorelowania pos
 |**Wersje systemu Windows Server**|➕ 2008 R2 Z DODATKIEM SP1<br />➕ 2008 Z DODATKIEM SP2<br />➕ 2003|
 |**Aby określić zainstalowaną wersję programu .NET**|Zobacz [instrukcje](how-to-determine-which-versions-are-installed.md)|
 
-### <a name="net-framework-35"></a>.NET Framework 3.5
+### <a name="net-framework-35"></a>Program .NET Framework 3,5
 
 [Nowe funkcje](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ms171868\(v=vs.90\)):
 
@@ -237,7 +237,7 @@ Poniższe tabele podsumowują historię wersji .NET Framework i skorelowania pos
 |**Wersja środowiska CLR**|2.0|
 |**Uwzględnione w wersji programu Visual Studio**|2005|
 |**Wersje systemu Windows**|Nie dotyczy|
-|**Wersje systemu Windows Server**|✔️ 2008 R2 Z DODATKIEM SP1<br />✔️ 2008 Z DODATKIEM SP2<br />✔️ 200|
+|**Wersje systemu Windows Server**|✔️ 2008 R2 Z DODATKIEM SP1<br />✔️ 2008 Z DODATKIEM SP2<br />✔️ 2003|
 |**Aby określić zainstalowaną wersję programu .NET**|Zobacz [instrukcje](how-to-determine-which-versions-are-installed.md)|
 
 ### <a name="net-framework-11"></a>.NET Framework 1.1

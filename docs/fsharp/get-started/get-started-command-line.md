@@ -2,12 +2,12 @@
 title: Wprowadzenie do F# narzędzia wiersza polecenia
 description: Dowiedz się, jak utworzyć proste rozwiązanie z obsługą F# kilku projektów przy użyciu interfejs wiersza polecenia platformy .NET Core w dowolnym systemie operacyjnym (Windows, MacOS lub Linux).
 ms.date: 03/26/2018
-ms.openlocfilehash: aa3ed84660a951eeafc11a00ea3831f587b6d876
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 6f67314f49150e20b18734f21f24daa3ce856922
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559490"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504146"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>Wprowadzenie do programu F# z interfejs wiersza polecenia platformy .NET Core
 
@@ -135,7 +135,7 @@ Przywróć zależności NuGet, `dotnet restore` i uruchom `dotnet build` w celu 
 
 Zmień katalog na projekt konsoli `src/App` i Uruchom projekt przekazywać `Hello World` jako argumenty:
 
-```console
+```dotnetcli
 cd src/App
 dotnet run Hello World
 ```

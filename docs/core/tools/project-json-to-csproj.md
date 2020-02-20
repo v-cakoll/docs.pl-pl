@@ -3,12 +3,12 @@ title: Porównanie Project. JSON i csproj
 description: Zobacz mapowanie między elementami Project. JSON i csproj.
 author: natemcmaster
 ms.date: 03/13/2017
-ms.openlocfilehash: c31590cf34990867b81af4d073846c2952928798
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: abe515007b47b415ac33e3350a29edced1784d68
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714131"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451108"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>Mapowanie między właściwościami Project. JSON i csproj
 
@@ -30,7 +30,7 @@ Nowy format, \*. csproj, jest formatem opartym na formacie XML. Poniższy przyk�
 
 ## <a name="common-top-level-properties"></a>Wspólne właściwości najwyższego poziomu
 
-### <a name="name"></a>{1&gt;nazwa&lt;1}
+### <a name="name"></a>name
 
 ```json
 {
@@ -52,7 +52,7 @@ Domyślnie nazwa pliku projektu określa również wartość właściwości `<As
 `<AssemblyName>` będzie miała inną wartość niż `<PackageId>`, jeśli właściwość `buildOptions\outputName` została zdefiniowana w pliku Project. JSON.
 Aby uzyskać więcej informacji, zobacz [inne typowe opcje kompilacji](#other-common-build-options).
 
-### <a name="version"></a>Wersja programu
+### <a name="version"></a>version
 
 ```json
 {
@@ -337,7 +337,7 @@ W programie MSBuild wszystkie projekty są *przenośne* podczas kompilacji, ale 
 
 `dotnet publish --framework netcoreapp1.0 --runtime osx.10.11-x64`
 
-Aby uzyskać więcej informacji, zobacz artykuły [z obsługą prewartą (SCD)](../deploying/index.md#self-contained-deployments-scd).
+Aby uzyskać więcej informacji, zobacz artykuły [z obsługą prewartą (SCD)](../deploying/index.md#publish-self-contained).
 
 ## <a name="tools"></a>narzędzia
 
@@ -572,7 +572,7 @@ Można jednak ustawić wszystkie te wartości w csproj, a także właściwości 
 Nieobsługiwane w csproj. Zamiast tego należy utworzyć Dołączanie plików zawartości w pliku *. nuspec* .
 Aby uzyskać więcej informacji, zobacz [Dołączanie plików zawartości](/nuget/schema/nuspec#including-content-files).
 
-## <a name="files"></a>— pliki
+## <a name="files"></a>files
 
 W pliku *Project. JSON*można rozszerzyć kompilację i pakiet, aby kompilować i osadzać z różnych folderów.
 W programie MSBuild odbywa się to za pomocą [elementów](/visualstudio/msbuild/common-msbuild-project-items). Poniższy przykład jest wspólną konwersją:
@@ -673,6 +673,6 @@ Aby uzyskać więcej informacji, zobacz temat [uwzględnianie zawartości w paki
 </ItemGroup>
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Ogólne omówienie zmian w interfejsie wiersza polecenia](../tools/cli-msbuild-architecture.md)

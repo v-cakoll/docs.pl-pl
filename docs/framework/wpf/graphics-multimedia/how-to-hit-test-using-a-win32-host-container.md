@@ -9,12 +9,12 @@ helpviewer_keywords:
 - visual objects [WPF], hit tests on
 - Win32 host containers [WPF], hit tests using
 ms.assetid: 9491f7f3-d8ba-4573-a888-2f064d1349dc
-ms.openlocfilehash: b71783f2d061c9139de4449d8e0106eb00345894
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: a86c1c36f75fa232d52731959371268a8b2593d7
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740178"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452808"
 ---
 # <a name="how-to-hit-test-using-a-win32-host-container"></a>Jak przeprowadzić test trafień za pomocą konteneru hosta Win32
 Obiekty wizualne można tworzyć w oknie Win32, dostarczając kontener okna hosta dla obiektów wizualnych. Aby zapewnić obsługę zdarzeń dla zawartych obiektów wizualizacji, przetwarzasz komunikaty przesyłane do pętli filtru komunikatów kontenera okna hosta. Zapoznaj się z [samouczkiem: hosting obiektów wizualnych w aplikacji Win32,](tutorial-hosting-visual-objects-in-a-win32-application.md) Aby uzyskać więcej informacji na temat hostowania obiektów wizualizacji w oknie Win32.  
@@ -32,9 +32,9 @@ Obiekty wizualne można tworzyć w oknie Win32, dostarczając kontener okna host
   
  Obiekt <xref:System.Windows.Interop.HwndSource> prezentuje [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zawartość w oknie Win32. Wartość właściwości <xref:System.Windows.Interop.HwndSource.RootVisual%2A> obiektu <xref:System.Windows.Interop.HwndSource> reprezentuje węzeł najwyższego poziomu w hierarchii drzewa wizualnego.  
   
- Aby zapoznać się z kompletnym przykładem przy testowaniu obiektów przy użyciu kontenera hosta Win32, zobacz [test trafień z funkcją międzyoperacyjności Win32](https://go.microsoft.com/fwlink/?LinkID=159995).  
+ Aby zapoznać się z kompletnym przykładem przy testowaniu obiektów przy użyciu kontenera hosta Win32, zobacz [test trafień z funkcją międzyoperacyjności Win32](https://github.com/microsoft/WPF-Samples/tree/master/Visual%20Layer/VisualsHitTesting).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Windows.Interop.HwndSource>
 - [Test trafienia w warstwie wizualizacji](hit-testing-in-the-visual-layer.md)

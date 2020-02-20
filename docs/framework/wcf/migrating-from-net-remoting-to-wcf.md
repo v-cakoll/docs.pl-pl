@@ -2,12 +2,12 @@
 title: Migrowanie z programu .NET Remoting do programu WCF
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: 926ccee49c7a445c724cecd72015ec5a5307cf58
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 4b6996b01da6312486649482ffbb812fcb021306
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990182"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452555"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>Migrowanie z programu .NET Remoting do programu WCF
 W tym artykule opisano sposób migracji aplikacji, która używa usług komunikacji zdalnej .NET do korzystania z Windows Communication Foundation (WCF). Porównuje podobne koncepcje tych produktów, a następnie opisuje sposób wykonywania kilku typowych scenariuszy komunikacji zdalnej w programie WCF.  
@@ -23,9 +23,9 @@ W tym artykule opisano sposób migracji aplikacji, która używa usług komunika
 |Operacje usługi|Metody publiczne na serwerze typu|Oznacz przy użyciu atrybutu [OperationContract]|  
 |Serializacja|ISerializable lub [Serializable]|DataContractSerializer lub XmlSerializer|  
 |Obiekty zakończone|Według wartości lub według odwołania|Tylko według wartości|  
-|Błędy/wyjątki|Dowolny wyjątek możliwy do serializacji|FaultContract\<TDetail>|  
-|Obiekty serwera proxy klienta|Przezroczyste obiekty pośredniczące o jednoznacznie określonym typie są tworzone automatycznie z MarshalByRefObjects|Serwery proxy o jednoznacznie określonym typie są generowane na żądanie przy\<użyciu elementu ChannelFactory TChannel >|  
-|Wymagana platforma|Zarówno klient, jak i serwer muszą korzystać z systemów operacyjnych Microsoft i .NET|wiele platform|  
+|Błędy/wyjątki|Dowolny wyjątek możliwy do serializacji|FaultContract\<TDetail >|  
+|Obiekty serwera proxy klienta|Przezroczyste obiekty pośredniczące o jednoznacznie określonym typie są tworzone automatycznie z MarshalByRefObjects|Serwery proxy o jednoznacznie określonym typie są generowane na żądanie przy użyciu elementu ChannelFactory\<TChannel >|  
+|Wymagana platforma|Zarówno klient, jak i serwer muszą korzystać z systemów operacyjnych Microsoft i .NET|Wieloplatformowość|  
 |Format wiadomości|Private|Standardy branżowe (SOAP, WS-* itp.)|  
   
 ### <a name="server-implementation-comparison"></a>Porównanie implementacji serwera  
@@ -99,9 +99,9 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(WCFServer), baseAddress)
 > [!NOTE]
 > Protokół TCP jest używany w obu przykładach, aby zachować je tak jak to możliwe. Zapoznaj się z tematami dotyczącymi scenariusza w dalszej części tego tematu, aby poznać przykłady użycia protokołu HTTP.  
   
- Istnieje wiele sposobów konfigurowania i hostowania usług WCF. Jest to tylko jeden przykład, znany jako "samodzielny". Więcej informacji znajduje się w następujących tematach:  
+ Istnieje wiele sposobów konfigurowania i hostowania usług WCF. Jest to tylko jeden przykład, znany jako "samodzielny". Aby uzyskać więcej informacji, zobacz następujące tematy:  
   
-- [Instrukcje: Definiowanie kontraktu usługi](how-to-define-a-wcf-service-contract.md)  
+- [Instrukcje: definiowanie kontraktu usługi](how-to-define-a-wcf-service-contract.md)  
   
 - [Konfigurowanie usług za pomocą plików konfiguracji](configuring-services-using-configuration-files.md)  
   
@@ -140,7 +140,7 @@ Customer customer = server.GetCustomer(42);
 Console.WriteLine($"  Customer {customer.FirstName} {customer.LastName} received.");
 ```  
   
- W tym przykładzie przedstawiono Programowanie na poziomie kanału, ponieważ jest ono najbardziej podobne do przykładu komunikacji zdalnej. Dostępna jest również Metoda **Dodaj odwołanie do usługi** w programie Visual Studio, która generuje kod upraszczający programowanie klientów. Więcej informacji znajduje się w następujących tematach:  
+ W tym przykładzie przedstawiono Programowanie na poziomie kanału, ponieważ jest ono najbardziej podobne do przykładu komunikacji zdalnej. Dostępna jest również Metoda **Dodaj odwołanie do usługi** w programie Visual Studio, która generuje kod upraszczający programowanie klientów. Aby uzyskać więcej informacji, zobacz następujące tematy:  
   
 - [Programowanie na poziomie kanału klienta](./extending/client-channel-level-programming.md)  
   
@@ -266,17 +266,17 @@ catch (FaultException<CustomerServiceFault> fault)
 }  
 ```  
   
- Aby uzyskać więcej informacji na temat umów dotyczących <xref:System.ServiceModel.FaultException>błędów, zobacz.  
+ Aby uzyskać więcej informacji na temat umów dotyczących błędów, zobacz <xref:System.ServiceModel.FaultException>.  
   
-### <a name="security-considerations"></a>Zagadnienia dotyczące zabezpieczeń  
+### <a name="security-considerations"></a>Zagadnienia związane z zabezpieczeniami  
   
 #### <a name="security-in-net-remoting"></a>Zabezpieczenia w komunikacji zdalnej .NET  
  Niektóre kanały komunikacji zdalnej .NET obsługują funkcje zabezpieczeń, takie jak uwierzytelnianie i szyfrowanie, w warstwie kanału (IPC i TCP). Kanał HTTP opiera się na Internet Information Services (IIS) do uwierzytelniania i szyfrowania. Pomimo tego wsparcia należy rozważyć użycie przez program .NET zdalnej protokołu komunikacyjnego i używanie go tylko w środowiskach w pełni zaufanych. Nigdy nie ujawniaj publicznego punktu końcowego komunikacji zdalnej dla Internetu lub niezaufanych klientów.  
   
 #### <a name="security-in-wcf"></a>Zabezpieczenia w programie WCF  
- Funkcja WCF została zaprojektowana z myślą o bezpieczeństwie, w części dotyczącej rodzaju luk w zabezpieczeniach platformy .NET. Usługa WCF oferuje zabezpieczenia zarówno na poziomie transportu, jak i komunikatów, a ponadto oferuje wiele opcji uwierzytelniania, autoryzacji, szyfrowania i tak dalej. Więcej informacji znajduje się w następujących tematach:  
+ Funkcja WCF została zaprojektowana z myślą o bezpieczeństwie, w części dotyczącej rodzaju luk w zabezpieczeniach platformy .NET. Usługa WCF oferuje zabezpieczenia zarówno na poziomie transportu, jak i komunikatów, a ponadto oferuje wiele opcji uwierzytelniania, autoryzacji, szyfrowania i tak dalej. Aby uzyskać więcej informacji, zobacz następujące tematy:  
   
-- [Zabezpieczenia](./feature-details/security.md)  
+- [Bezpieczeństwo](./feature-details/security.md)  
   
 - [Wskazówki dotyczące zabezpieczeń programu WCF](./feature-details/security-guidance-and-best-practices.md)  
   
@@ -286,7 +286,7 @@ catch (FaultException<CustomerServiceFault> fault)
   
 - **Komunikacja zdalna .NET to starszy produkt.** Zgodnie z opisem w [komunikacji zdalnej .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507%28v=vs.100%29), jest uznawany za starszy produkt i nie jest zalecany w przypadku nowych rozwiązań programistycznych. W przypadku nowych i istniejących aplikacji zaleca się używanie interfejsu API sieci Web WCF lub ASP.NET.  
   
-- **Funkcja WCF stosuje standardy dla wielu platform.** Program WCF został zaprojektowany z myślą o współdziałaniu między platformami i obsługuje wiele standardów branżowych (SOAP, WS-Security, WS-Trust itp.). Usługa WCF może współpracować z klientami uruchomionymi w systemach operacyjnych innych niż Windows. Komunikacja zdalna została zaprojektowana głównie dla środowisk, w których zarówno serwer, jak i aplikacje klienckie działają przy użyciu programu .NET Framework w systemie operacyjnym Windows.  
+- **Funkcja WCF stosuje standardy dla wielu platform.** Program WCF został zaprojektowany z myślą o współdziałaniu między platformami i obsługuje wiele standardów branżowych (SOAP, WS-Security, WS-Trust itp.). Usługa WCF może współpracować z klientami uruchomionymi w systemach operacyjnych innych niż Windows. Komunikacja zdalna została zaprojektowana głównie dla środowisk, w których aplikacje serwerowe i klienckie działają za pomocą .NET Framework w systemie operacyjnym Windows.
   
 - **Funkcja WCF ma wbudowane zabezpieczenia.** Funkcja WCF została zaprojektowana z myślą o bezpieczeństwie i oferuje wiele opcji uwierzytelniania, zabezpieczeń na poziomie transportu, zabezpieczeń na poziomie komunikatów itp. Komunikacja zdalna została zaprojektowana w celu ułatwienia współpracy aplikacji, ale nie została zaprojektowana w taki sposób, aby była zabezpieczona w środowiskach niezaufanych. Funkcja WCF została zaprojektowana tak, aby działała zarówno w środowiskach zaufanych, jak i niezaufanych.  
   
@@ -299,7 +299,7 @@ catch (FaultException<CustomerServiceFault> fault)
   
 - **Utwórz kontrakt błędu (opcjonalnie).** Utwórz typy, które będą wymieniane między serwerem a klientem po napotkaniu błędów. Oznacz te typy elementami [DataContract] i [DataMember], aby je serializować. Dla wszystkich operacji usługi, które zostały oznaczone za pomocą elementu [OperationContract], należy również oznaczyć je jako [FaultContract], aby wskazać, które błędy mogą zostać zwrócone.  
   
-- **Skonfigurowanie i Hostowanie usługi.** Po utworzeniu kontraktu usługi następnym krokiem jest skonfigurowanie powiązania, aby uwidocznić usługę w punkcie końcowym. Aby uzyskać więcej informacji, [Zobacz punkty końcowe: Adresy, powiązania i kontrakty](./feature-details/endpoints-addresses-bindings-and-contracts.md).  
+- **Skonfigurowanie i Hostowanie usługi.** Po utworzeniu kontraktu usługi następnym krokiem jest skonfigurowanie powiązania, aby uwidocznić usługę w punkcie końcowym. Aby uzyskać więcej informacji, zobacz [punkty końcowe: adresy, powiązania i kontrakty](./feature-details/endpoints-addresses-bindings-and-contracts.md).  
   
  Po przeprowadzeniu migracji aplikacji zdalnej do programu WCF nadal trzeba usunąć zależności dotyczące komunikacji zdalnej platformy .NET. Dzięki temu wszystkie luki w zabezpieczeniach zdalnych zostaną usunięte z aplikacji. Następujące kroki obejmują:  
   
@@ -335,7 +335,7 @@ public class RemotingServer : MarshalByRefObject
 }  
 ```  
   
-#### <a name="scenario-1-service-returns-an-object-by-value"></a>Scenariusz 1: Usługa zwraca obiekt przez wartość  
+#### <a name="scenario-1-service-returns-an-object-by-value"></a>Scenariusz 1: usługa zwraca obiekt przez wartość  
  W tym scenariuszu zademonstrowano serwer zwracający obiekt do klienta przez wartość. Program WCF zawsze zwraca obiekty z serwera według wartości, dlatego w następujących krokach opisano sposób tworzenia normalnej usługi WCF.  
   
 1. Zacznij od zdefiniowania interfejsu publicznego dla usługi WCF i oznacz go atrybutem [ServiceContract]. Używamy [OperationContract], aby identyfikować metody po stronie serwera, które będą wywoływane przez klienta.  
@@ -434,7 +434,7 @@ public class RemotingServer : MarshalByRefObject
     </configuration>  
     ```  
   
-     Aby uzyskać więcej informacji okorzystaniu z [Dodaj odwołanie do usługi, zobacz How to: Dodaj, zaktualizuj lub usuń odwołanie](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)do usługi.  
+     Aby uzyskać więcej informacji o korzystaniu z **Dodaj odwołanie do usługi**, zobacz [How to: Add, Update lub Remove a Service Reference](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference).  
   
 7. Teraz możemy wywołać usługę WCF od klienta. Możemy to zrobić, tworząc fabrykę kanałów dla tej usługi, zwracając ją na kanał i bezpośrednio wywołując metodę, którą chcemy w tym kanale. Można to zrobić, ponieważ kanał implementuje interfejs usługi i obsługuje podstawową logikę żądania/odpowiedzi. Wartością zwracaną z tego wywołania metody jest deserializowana kopia odpowiedzi serwera.  
   
@@ -448,8 +448,8 @@ public class RemotingServer : MarshalByRefObject
   
  Obiekty zwracane przez WCF z serwera do klienta są zawsze przez wartość. Obiekty są deserializowanymi kopiami danych wysyłanych przez serwer. Klient może wywoływać metody dla tych kopii lokalnych bez jakichkolwiek zagrożeń związanych z wywoływaniem kodu serwera za pomocą wywołań zwrotnych.  
   
-#### <a name="scenario-2-server-returns-an-object-by-reference"></a>Scenariusz 2: Serwer zwraca obiekt przez odwołanie  
- W tym scenariuszu pokazano serwer dostarczający obiekt do klienta przez odwołanie. W przypadku komunikacji zdalnej .NET jest to obsługiwane automatycznie dla dowolnego typu pochodnego od MarshalByRefObject, który jest serializowany przez odwołanie. Przykładem tego scenariusza jest umożliwienie wielu klientom niezależnych obiektów po stronie serwera. Jak wspomniano wcześniej, obiekty zwrócone przez usługę WCF są zawsze przez wartość, więc nie istnieje bezpośredni odpowiednik obiektu przez odwołanie, ale możliwe jest osiągnięcie czegoś podobnego do semantyki odniesienia przy użyciu <xref:System.ServiceModel.EndpointAddress10> obiektu. Jest to obiekt możliwy do serializacji przez wartość, który może być używany przez klienta w celu uzyskania na serwerze sesji na podstawie obiektu referencyjnego. Dzięki temu scenariusz ma wiele klientów z niezależnymi obiektami po stronie serwera.  
+#### <a name="scenario-2-server-returns-an-object-by-reference"></a>Scenariusz 2. serwer zwraca obiekt przez odwołanie  
+ W tym scenariuszu pokazano serwer dostarczający obiekt do klienta przez odwołanie. W przypadku komunikacji zdalnej .NET jest to obsługiwane automatycznie dla dowolnego typu pochodnego od MarshalByRefObject, który jest serializowany przez odwołanie. Przykładem tego scenariusza jest umożliwienie wielu klientom niezależnych obiektów po stronie serwera. Jak wspomniano wcześniej, obiekty zwrócone przez usługę WCF są zawsze przez wartość, więc nie istnieje bezpośredni odpowiednik obiektu przez odwołanie, ale możliwe jest osiągnięcie czegoś podobnego do semantyki odniesienia przy użyciu obiektu <xref:System.ServiceModel.EndpointAddress10>. Jest to obiekt możliwy do serializacji przez wartość, który może być używany przez klienta w celu uzyskania na serwerze sesji na podstawie obiektu referencyjnego. Dzięki temu scenariusz ma wiele klientów z niezależnymi obiektami po stronie serwera.  
   
 1. Najpierw należy zdefiniować kontrakt usługi WCF, który odpowiada obiektowi sesji.  
   
@@ -524,7 +524,7 @@ public class RemotingServer : MarshalByRefObject
   
 4. Musimy zmodyfikować plik konfiguracji serwera, wykonując następujące dwie czynności, jak pokazano w poniższym przykładzie:  
   
-    1. Zadeklaruj sekcję > klienta opisującą punkt końcowy dla obiektu sesji. \< Jest to konieczne, ponieważ serwer działa również jako klient w takiej sytuacji.  
+    1. Zadeklaruj sekcję > klienta \<, która opisuje punkt końcowy dla obiektu sesji. Jest to konieczne, ponieważ serwer działa również jako klient w takiej sytuacji.  
   
     2. Zadeklaruj punkty końcowe dla obiektu fabryki i sesji. Jest to konieczne, aby umożliwić klientowi komunikowanie się z punktami końcowymi usługi w celu uzyskania EndpointAddress10 i utworzenia kanału sesji.  
   
@@ -631,7 +631,7 @@ public class RemotingServer : MarshalByRefObject
   
  Funkcja WCF zawsze zwraca obiekty według wartości, ale istnieje możliwość obsługi równoważnej semantyki przez odwołanie za pomocą EndpointAddress10. Pozwala to klientowi na zażądanie wystąpienia usługi WCF, po którym może ona współistnieć z nim, podobnie jak w przypadku każdej innej usługi WCF.  
   
-#### <a name="scenario-3-client-sends-server-a-by-value-instance"></a>Scenariusz 3: Klient wysyła serwer a wystąpienie przez wartość  
+#### <a name="scenario-3-client-sends-server-a-by-value-instance"></a>Scenariusz 3: klient wysyła serwer a wystąpienie przez wartość  
  W tym scenariuszu przedstawiono klienta wysyłającego wystąpienie obiektu niepierwotnego do serwera przez wartość. Ponieważ WCF wysyła tylko obiekty według wartości, w tym scenariuszu pokazano normalne użycie programu WCF.  
   
 1. Użyj tej samej usługi WCF w scenariuszu 1.  

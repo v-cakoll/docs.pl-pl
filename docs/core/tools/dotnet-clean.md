@@ -2,12 +2,12 @@
 title: polecenie "isclean" dotnet
 description: Polecenie "Wyczyść" programu dotnet czyści bieżący katalog.
 ms.date: 06/26/2019
-ms.openlocfilehash: 736c0bba5d156e919534f1ad811641e815b3ffac
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 715a33a8a1aa13a2a76f9d4522413dcc72e4b4aa
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734255"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451359"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
@@ -17,7 +17,7 @@ ms.locfileid: "76734255"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>Nazwa
+## <a name="name"></a>Name (Nazwa)
 
 `dotnet clean` — czyści dane wyjściowe projektu.
 
@@ -43,7 +43,7 @@ Projekt programu MSBuild lub rozwiązanie do czyszczenia. Jeśli plik projektu l
 
 * **`-c|--configuration {Debug|Release}`**
 
-  Definiuje konfigurację kompilacji. Wartość domyślna to `Debug`. Ta opcja jest wymagana tylko w przypadku czyszczenia, jeśli została określona w czasie kompilacji.
+  Definiuje konfigurację kompilacji. Wartością domyślną jest `Debug`. Ta opcja jest wymagana tylko w przypadku czyszczenia, jeśli została określona w czasie kompilacji.
 
 * **`-f|--framework <FRAMEWORK>`**
 
@@ -67,7 +67,7 @@ Projekt programu MSBuild lub rozwiązanie do czyszczenia. Jeśli plik projektu l
 
 * **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-  Czyści folder wyjściowy określonego środowiska uruchomieniowego. Ta funkcja jest używana podczas tworzenia wdrożenia z dowolnego [siebie](../deploying/index.md#self-contained-deployments-scd) . Opcja dostępna od wersji .NET Core 2,0 SDK.
+  Czyści folder wyjściowy określonego środowiska uruchomieniowego. Ta funkcja jest używana podczas tworzenia wdrożenia z dowolnego [siebie](../deploying/index.md#publish-self-contained) . Opcja dostępna od wersji .NET Core 2,0 SDK.
 
 * **`-v|--verbosity <LEVEL>`**
 

@@ -6,15 +6,16 @@ helpviewer_keywords:
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-ms.openlocfilehash: c56d673de958f49a9ace60350442e89039e1d69f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 77b173a420f26834855e0bdca3c8d04406ac65d4
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712107"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452009"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>konwencje kodowania C# (Przewodnik programowania w języku C#)
- Konwencje kodowania mają następujące cele:  
+
+Konwencje kodowania mają następujące cele:  
   
 - Tworzą one spójny wygląd kodu, dzięki czemu czytelnicy mogą skupić się na zawartości, a nie w układzie.  
   
@@ -24,7 +25,7 @@ ms.locfileid: "75712107"
   
 - Przedstawiają C# one najlepsze rozwiązania.  
 
- Wskazówki zawarte w tym temacie są używane przez firmę Microsoft do tworzenia przykładów i dokumentacji.  
+Wskazówki zawarte w tym artykule są używane przez firmę Microsoft do tworzenia przykładów i dokumentacji.  
   
 ## <a name="naming-conventions"></a>Konwencje nazewnictwa  
   
@@ -35,7 +36,8 @@ ms.locfileid: "75712107"
 - Nie trzeba zmieniać nazw obiektów, które zostały utworzone przy użyciu narzędzi projektanta programu Visual Studio, aby dopasować je do innych wytycznych.  
   
 ## <a name="layout-conventions"></a>Konwencje układu  
- Dobry układ używa formatowania, aby wyróżnić strukturę kodu i ułatwić odczytywanie kodu. Przykłady i próbki firmy Microsoft są zgodne z następującymi konwencjami:  
+
+Dobry układ używa formatowania, aby wyróżnić strukturę kodu i ułatwić odczytywanie kodu. Przykłady i próbki firmy Microsoft są zgodne z następującymi konwencjami:  
   
 - Użyj domyślnych ustawień edytora kodu (inteligentne wcięcia, cztery znaki wcięcia, karty zapisane jako spacje). Aby uzyskać więcej informacji, zobacz [Opcje, Edytor tekstu C#, formatowanie](/visualstudio/ide/reference/options-text-editor-csharp-formatting).  
   
@@ -66,7 +68,8 @@ ms.locfileid: "75712107"
 - Nie twórz sformatowanych bloków gwiazdek wokół komentarzy.  
   
 ## <a name="language-guidelines"></a>Wytyczne dotyczące języka  
- W poniższych sekcjach opisano sposób, C# w jaki zespół postępuje zgodnie z przygotowaniem przykładów i przykładów kodu.  
+
+W poniższych sekcjach opisano sposób, C# w jaki zespół postępuje zgodnie z przygotowaniem przykładów i przykładów kodu.  
   
 ### <a name="string-data-type"></a>Typ danych ciągu  
   
@@ -94,33 +97,38 @@ ms.locfileid: "75712107"
   
 - Unikaj stosowania `var` zamiast [dynamicznych](../../language-reference/builtin-types/reference-types.md).  
   
-- Użyj niejawnego wpisywania, aby określić typ zmiennej pętli w pętlach [for](../../language-reference/keywords/for.md) i [foreach](../../language-reference/keywords/foreach-in.md) .  
+- Użyj niejawnego wpisywania, aby określić typ zmiennej pętli w pętli [for](../../language-reference/keywords/for.md) .  
   
      Poniższy przykład używa niejawnego wpisywania w instrukcji `for`.  
   
      [!code-csharp[csProgGuideCodingConventions#7](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#7)]  
-  
-     Poniższy przykład używa niejawnego wpisywania w instrukcji `foreach`.  
-  
-     [!code-csharp[csProgGuideCodingConventions#12](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#12)]  
-  
+
+- Nie używaj niejawnego wpisywania, aby określić typ zmiennej pętli w pętlach [foreach](../../language-reference/keywords/foreach-in.md) .
+
+     Poniższy przykład używa jawnego wpisywania w instrukcji `foreach`.
+
+     [!code-csharp[csProgGuideCodingConventions#12](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#12)]
+
+     > [!NOTE]
+     > Należy zachować ostrożność, aby nie zmieniać przypadkowo typu elementu kolekcji możliwej do iterowania. Na przykład można łatwo przełączać się z <xref:System.Linq.IQueryable?displayProperty=nameWithType> do <xref:System.Collections.IEnumerable?displayProperty=nameWithType> w instrukcji `foreach`, która zmienia wykonanie zapytania.
+
 ### <a name="unsigned-data-type"></a>Typ danych bez znaku  
   
-- Ogólnie rzecz biorąc, użyj `int`, a nie niepodpisanych typów. Korzystanie z `int` jest wspólne w całym C#systemie i ułatwia korzystanie z innych bibliotek przy użyciu `int`.  
+Ogólnie rzecz biorąc, użyj `int`, a nie niepodpisanych typów. Korzystanie z `int` jest wspólne w całym C#systemie i ułatwia korzystanie z innych bibliotek przy użyciu `int`.  
   
 ### <a name="arrays"></a>Tablice  
   
-- Użyj zwięzłej składni podczas inicjowania tablic w wierszu deklaracji.  
+Użyj zwięzłej składni podczas inicjowania tablic w wierszu deklaracji.  
   
-     [!code-csharp[csProgGuideCodingConventions#13](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#13)]  
+[!code-csharp[csProgGuideCodingConventions#13](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#13)]  
   
 ### <a name="delegates"></a>Delegaty  
   
-- Użyj zwięzłej składni, aby utworzyć wystąpienia typu delegata.  
+Użyj zwięzłej składni, aby utworzyć wystąpienia typu delegata.  
   
-     [!code-csharp[csProgGuideCodingConventions#14](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#14)]  
+[!code-csharp[csProgGuideCodingConventions#14](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#14)]  
   
-     [!code-csharp[csProgGuideCodingConventions#15](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#15)]  
+[!code-csharp[csProgGuideCodingConventions#15](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#15)]  
   
 ### <a name="try-catch-and-using-statements-in-exception-handling"></a>Blok try-catch i przy użyciu instrukcji obsługi wyjątków  
   
@@ -134,9 +142,9 @@ ms.locfileid: "75712107"
   
 ### <a name="-and-124124-operators"></a>& & i &#124; &#124; operatory  
   
-- Aby uniknąć wyjątków i zwiększyć wydajność przez pominięcie niepotrzebnych porównań [](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) , użyj&&[](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-) zamiast&[ &#124; ](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) i zamiast [&#124;](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-) przeprowadzania porównań, jak pokazano w poniższym przykładzie.  
+Aby uniknąć wyjątków i zwiększyć wydajność przez pominięcie niepotrzebnych porównań [](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) , użyj&&[](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-) zamiast&[ &#124; ](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) i zamiast [&#124;](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-) przeprowadzania porównań, jak pokazano w poniższym przykładzie.  
   
-     [!code-csharp[csProgGuideCodingConventions#18](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#18)]  
+[!code-csharp[csProgGuideCodingConventions#18](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#18)]  
   
 ### <a name="new-operator"></a>Nowy operator  
   
@@ -154,15 +162,15 @@ ms.locfileid: "75712107"
   
 ### <a name="event-handling"></a>Obsługa zdarzeń  
   
-- W przypadku definiowania programu obsługi zdarzeń, którego nie trzeba później usuwać, należy użyć wyrażenia lambda.  
+W przypadku definiowania programu obsługi zdarzeń, którego nie trzeba później usuwać, należy użyć wyrażenia lambda.  
   
-     [!code-csharp[csProgGuideCodingConventions#22](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#22)]  
+[!code-csharp[csProgGuideCodingConventions#22](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#22)]  
   
-     [!code-csharp[csProgGuideCodingConventions#23](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#23)]  
+[!code-csharp[csProgGuideCodingConventions#23](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#23)]  
   
 ### <a name="static-members"></a>Statyczne elementy członkowskie  
   
-- Wywołaj [statyczne](../../language-reference/keywords/static.md) elementy członkowskie przy użyciu nazwy klasy: *ClassName. StaticMember*. Dzięki temu kod jest bardziej czytelny, co oznacza, że statyczny dostęp jest czyszczony.  Nie kwalifikuj statycznej składowej zdefiniowanej w klasie bazowej z nazwą klasy pochodnej.  Podczas kompilowania kodu, czytelność kodu jest myląca, a kod może ulec przerwie w przyszłości, jeśli dodasz statyczną składową o tej samej nazwie do klasy pochodnej.  
+Wywołaj [statyczne](../../language-reference/keywords/static.md) elementy członkowskie przy użyciu nazwy klasy: *ClassName. StaticMember*. Dzięki temu kod jest bardziej czytelny, co oznacza, że statyczny dostęp jest czyszczony.  Nie kwalifikuj statycznej składowej zdefiniowanej w klasie bazowej z nazwą klasy pochodnej.  Podczas kompilowania kodu, czytelność kodu jest myląca, a kod może ulec przerwie w przyszłości, jeśli dodasz statyczną składową o tej samej nazwie do klasy pochodnej.  
   
 ### <a name="linq-queries"></a>Zapytania LINQ  
   
@@ -192,10 +200,11 @@ ms.locfileid: "75712107"
   
      [!code-csharp[csProgGuideCodingConventions#30](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#30)]  
   
-## <a name="security"></a>Zabezpieczenia  
- Postępuj zgodnie z wytycznymi w temacie [zasady bezpiecznego kodowania](../../../standard/security/secure-coding-guidelines.md).  
+## <a name="security"></a>Bezpieczeństwo  
+
+Postępuj zgodnie z wytycznymi w temacie [zasady bezpiecznego kodowania](../../../standard/security/secure-coding-guidelines.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Visual Basic konwencji kodowania](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)
 - [Wytyczne dotyczące bezpiecznego programowania](../../../standard/security/secure-coding-guidelines.md)

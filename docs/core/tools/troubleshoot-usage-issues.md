@@ -3,12 +3,12 @@ title: Rozwiązywanie problemów z użyciem narzędzia .NET Core
 description: Poznaj typowe problemy występujące podczas uruchamiania narzędzi .NET Core i możliwych rozwiązań.
 author: kdollard
 ms.date: 09/23/2019
-ms.openlocfilehash: df896405a122050acba220923eee58e87e0b75b6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 45139c3441b84964b937d5d1cc63a018f8d1f0fb
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74282500"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451080"
 ---
 # <a name="troubleshoot-net-core-tool-usage-issues"></a>Rozwiązywanie problemów z użyciem narzędzia .NET Core
 
@@ -44,10 +44,10 @@ Nazwa pliku wykonywalnego określa sposób wywołania narzędzia. W poniższej t
 
     Narzędzia globalne można zainstalować w katalogu domyślnym lub w określonej lokalizacji. Domyślne katalogi są następujące:
 
-    | OS          | Ścieżka                          |
+    | System operacyjny          | Ścieżka                          |
     |-------------|-------------------------------|
     | Linux/macOS | `$HOME/.dotnet/tools`         |
-    | Windows     | `%USERPROFILE%\.dotnet\tools` |
+    | System Windows     | `%USERPROFILE%\.dotnet\tools` |
 
     Jeśli próbujesz uruchomić narzędzie globalne, sprawdź, czy zmienna środowiskowa `PATH` na komputerze zawiera ścieżkę, w której zainstalowano narzędzie globalne i czy plik wykonywalny znajduje się w tej ścieżce.
 
@@ -73,7 +73,7 @@ Nazwa pliku wykonywalnego określa sposób wywołania narzędzia. W poniższej t
 
 ### <a name="runtime-not-found"></a>Nie znaleziono środowiska uruchomieniowego
 
-Narzędzia .NET Core są [aplikacjami zależnymi od](../deploying/index.md#framework-dependent-deployments-fdd)platformy, co oznacza, że korzystają z środowiska uruchomieniowego .NET Core zainstalowanego na komputerze. Jeśli oczekiwane środowisko uruchomieniowe nie zostanie znalezione, są one zgodne z normalnymi regułami przetaczania w czasie wykonywania w środowisku .NET Core
+Narzędzia .NET Core są [aplikacjami zależnymi od](../deploying/index.md#publish-runtime-dependent)platformy, co oznacza, że korzystają z środowiska uruchomieniowego .NET Core zainstalowanego na komputerze. Jeśli oczekiwane środowisko uruchomieniowe nie zostanie znalezione, są one zgodne z normalnymi regułami przetaczania w czasie wykonywania w środowisku .NET Core
 
 * Aplikacja przenosi do przodu do najwyższej wersji poprawki określonej głównej i pomocniczej.
 * Jeśli nie ma pasującego środowiska uruchomieniowego z odpowiadającym mu numerem wersji głównej i pomocniczej, używana jest kolejna wyższa wersja pomocnicza.
@@ -160,6 +160,6 @@ Instalacja narzędzia wymaga dostępu do źródła danych NuGet zawierającego p
 
 Typową przyczyną błędu jest to, że nazwa narzędzia nie jest poprawna. Może się to zdarzyć z powodu błędnego wpisania lub, ponieważ narzędzie zostało przeniesione lub zostało zaniechane. W przypadku narzędzi w systemie NuGet.org należy upewnić się, że nazwa jest poprawna, aby wyszukać narzędzie pod adresem NuGet.org i skopiować polecenie instalacji.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 * [Globalne narzędzia platformy .NET Core — Omówienie](global-tools.md)

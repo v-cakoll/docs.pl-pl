@@ -2,12 +2,12 @@
 title: Zagadnienia dotyczące zabezpieczeń (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 9a560db5dbcb7a87a1c933febfb8bf676cc8816b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: e2e1fc75049d41b50aa59092fe1aa21e8cdab659
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73968414"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452490"
 ---
 # <a name="security-considerations-entity-framework"></a>Zagadnienia dotyczące zabezpieczeń (Entity Framework)
 W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficzne dla opracowywania, wdrażania i uruchamiania aplikacji Entity Framework. Należy również postępować zgodnie z zaleceniami dotyczącymi tworzenia bezpiecznych aplikacji .NET Framework. Aby uzyskać więcej informacji, zobacz [Omówienie zabezpieczeń](../security-overview.md).  
@@ -27,7 +27,7 @@ W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficz
  Podczas operacji logowania informacje oparte na haśle użytkownika są przesyłane do serwera za pośrednictwem bibliotek sieciowych bazowego źródła danych. Złośliwy dostawca może ukraść poświadczenia użytkownika, generować złośliwe zapytania lub naruszać zestaw wyników.  
   
 #### <a name="encrypt-your-connection-to-protect-sensitive-data"></a>Szyfruj połączenie, aby chronić poufne dane.  
- Entity Framework nie obsługuje bezpośrednio szyfrowania danych. Jeśli użytkownicy uzyskują dostęp do danych za pośrednictwem sieci publicznej, aplikacja powinna ustanowić szyfrowane połączenie ze źródłem danych, aby zwiększyć bezpieczeństwo. Aby uzyskać więcej informacji, zobacz dokumentację dotyczącą zabezpieczeń dla źródła danych. Aby uzyskać SQL Server źródło danych, zobacz [szyfrowanie połączeń do SQL Server](https://go.microsoft.com/fwlink/?LinkId=119544).  
+ Entity Framework nie obsługuje bezpośrednio szyfrowania danych. Jeśli użytkownicy uzyskują dostęp do danych za pośrednictwem sieci publicznej, aplikacja powinna ustanowić szyfrowane połączenie ze źródłem danych, aby zwiększyć bezpieczeństwo. Aby uzyskać więcej informacji, zobacz dokumentację dotyczącą zabezpieczeń dla źródła danych. Aby uzyskać SQL Server źródło danych, zobacz [szyfrowanie połączeń do SQL Server](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189067(v=sql.105)).  
   
 #### <a name="secure-the-connection-string"></a>Zabezpiecz parametry połączenia.  
  Ochrona dostępu do źródła danych jest jednym z najważniejszych celów związanych z zabezpieczaniem aplikacji. Parametry połączenia przedstawiają potencjalną lukę w zabezpieczeniach, jeśli nie została zabezpieczona lub nieprawidłowo skonstruowana. Gdy przechowujesz informacje o połączeniu w postaci zwykłego tekstu lub utrwalasz je w pamięci, grozi sobie naruszeniem całego systemu. Poniżej przedstawiono zalecane metody zabezpieczania parametrów połączenia:  
@@ -69,7 +69,7 @@ W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficz
   
 - <xref:System.Security.Permissions.ReflectionPermission>: <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> do obsługi zapytań LINQ to Entities.  
   
-- <xref:System.Transactions.DistributedTransactionPermission>: <xref:System.Security.Permissions.PermissionState.Unrestricted> do rejestracji w<xref:System.Transactions.Transaction><xref:System.Transactions>.  
+- <xref:System.Transactions.DistributedTransactionPermission>: <xref:System.Security.Permissions.PermissionState.Unrestricted> do rejestracji w <xref:System.Transactions.Transaction><xref:System.Transactions>.  
   
 - <xref:System.Security.Permissions.SecurityPermission>: <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> do serializacji wyjątków przy użyciu interfejsu <xref:System.Runtime.Serialization.ISerializable>.  
   
@@ -81,7 +81,7 @@ W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficz
  Entity Framework nie wymusza żadnych uprawnień zabezpieczeń i wywoła kod obiektu danych podany przez użytkownika w procesie niezależnie od tego, czy jest on zaufany, czy nie. Upewnij się, że uwierzytelnianie i autoryzacja klienta są wykonywane przez magazyn danych i aplikację.  
   
 #### <a name="restrict-access-to-all-configuration-files"></a>Ogranicz dostęp do wszystkich plików konfiguracji.  
- Administrator musi ograniczyć dostęp do zapisu do wszystkich plików, które określają konfigurację dla aplikacji, w tym do enterprisesec. config, Security. config, Machine. conf i pliku konfiguracji aplikacji \<> *aplikacji*. plik exe. config.  
+ Administrator musi ograniczyć dostęp do zapisu do wszystkich plików, które określają konfigurację dla aplikacji, w tym do enterprisesec. config, Security. config, Machine. conf i pliku konfiguracji aplikacji \<*aplikacji*>. exe. config.  
   
  Niezmienna nazwa dostawcy jest modyfikowalna w pliku App. config. Aplikacja kliencka musi mieć obowiązek uzyskiwania dostępu do podstawowego dostawcy za pośrednictwem standardowego modelu fabryki dostawców przy użyciu silnej nazwy.  
   
@@ -162,7 +162,7 @@ Składniki usługi metadanych ADO.NET nie rejestrują żadnych prywatnych inform
 #### <a name="do-not-accept-metadataworkspace-objects-from-untrusted-sources"></a>Nie Akceptuj obiektów MetadataWorkspace z niezaufanych źródeł.  
  Aplikacje nie powinny akceptować wystąpień klasy <xref:System.Data.Metadata.Edm.MetadataWorkspace> z niezaufanych źródeł. Zamiast tego należy jawnie utworzyć i wypełnić obszar roboczy z takiego źródła.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Zabezpieczanie aplikacji ADO.NET](../securing-ado-net-applications.md)
 - [Zagadnienia dotyczące wdrażania](deployment-considerations.md)

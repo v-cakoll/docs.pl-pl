@@ -6,12 +6,12 @@ helpviewer_keywords:
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-ms.openlocfilehash: 5f4697ea518e7fe03df4ecac9d748386a8ac6313
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d873f626b660bb6bd94710add4543e21e11823d6
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705408"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452022"
 ---
 # <a name="using-properties-c-programming-guide"></a>Używanie właściwości (Przewodnik programowania w języku C#)
 
@@ -53,7 +53,7 @@ W poprzednim segmencie kodu, jeśli wartość nie zostanie przypisana do właśc
 
 ## <a name="the-set-accessor"></a>Metoda dostępu set
 
-Metoda dostępu `set` jest podobna do metody, której typem zwracanym jest [void](../../language-reference/keywords/void.md). Używa niejawnego parametru o nazwie `value`, którego typ jest typem właściwości. W poniższym przykładzie do właściwości `Name` zostanie dodana metoda dostępu `set`:
+Metoda dostępu `set` jest podobna do metody, której typem zwracanym jest [void](../../language-reference/builtin-types/void.md). Używa niejawnego parametru o nazwie `value`, którego typ jest typem właściwości. W poniższym przykładzie do właściwości `Name` zostanie dodana metoda dostępu `set`:
 
 [!code-csharp[csProgGuideProperties#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#12)]
 
@@ -106,7 +106,7 @@ W tym przykładzie dwie klasy, `Cube` i `Square`, implementują klasę abstrakcy
 
 [!code-csharp[csProgGuideProperties#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#6)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Przewodnik programowania w języku C#](../index.md)
 - [Właściwości](properties.md)

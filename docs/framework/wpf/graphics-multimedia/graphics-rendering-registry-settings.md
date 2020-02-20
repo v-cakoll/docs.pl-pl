@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: 53f25be3bc38d88aa7723f6a0858317ee5ce6143
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 04bf2d2ec78a02e8fd3d71200c64a807b874bc97
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559654"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452607"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Ustawienie rejestru renderowania grafiki
 Ten temat zawiera omówienie ustawień rejestru renderowania grafiki [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], które mają wpływ na aplikacje [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -24,7 +24,7 @@ Ten temat zawiera omówienie ustawień rejestru renderowania grafiki [!INCLUDE[T
   
 <a name="xpdmandwddm"></a>   
 ## <a name="what-are-xpdm-and-wddm"></a>Co to są XPDM i WDDM?  
- Niektóre ustawienia rejestru renderowania grafiki mają różne wartości domyślne, w zależności od tego, czy karta wideo korzysta ze sterownika XPDM czy WDDM. XPDM to model sterownika wyświetlania systemu Microsoft Windows XP, a WDDM to model sterownika Windows Display. WDDM jest dostępny na komputerach z systemem Windows Vista i Windows 7. XPDM jest dostępna na komputerach z systemem Windows Vista, Microsoft Windows XP i Microsoft Windows Server 2003. Aby uzyskać więcej informacji na temat usługi WDDM, zobacz [Przewodnik dotyczący projektowania modelu sterownika wyświetlania systemu Windows Vista](https://go.microsoft.com/fwlink/?LinkId=178394).  
+ Niektóre ustawienia rejestru renderowania grafiki mają różne wartości domyślne, w zależności od tego, czy karta wideo korzysta ze sterownika XPDM czy WDDM. XPDM to model sterownika wyświetlania systemu Microsoft Windows XP, a WDDM to model sterownika Windows Display. WDDM jest dostępny na komputerach z systemem Windows Vista i Windows 7. XPDM jest dostępna na komputerach z systemem Windows Vista, Microsoft Windows XP i Microsoft Windows Server 2003. Aby uzyskać więcej informacji na temat usługi WDDM, zobacz [Przewodnik dotyczący projektowania Windows Display Driver Model (WDDM)](/windows-hardware/drivers/display/windows-vista-display-driver-model-design-guide).  
   
 <a name="registry_settings"></a>   
 ## <a name="registry-settings"></a>Ustawienia rejestru  
@@ -68,7 +68,7 @@ Ten temat zawiera omówienie ustawień rejestru renderowania grafiki [!INCLUDE[T
   
 |Klucz rejestru|Typ wartości|  
 |------------------|----------------|  
-|`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\RequiredVideoDriverDate`|String|  
+|`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\RequiredVideoDriverDate`|Ciąg|  
   
  W listopadzie 2004 firma Microsoft opublikowała nową wersję wytycznych dotyczących testowania sterowników; Sterowniki zapisywane po tej dacie oferują lepszą stabilność. Domyślnie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] będzie używać potoku przyspieszania sprzętowego dla tych sterowników i wróci do renderowania oprogramowania dla sterowników XPDM opublikowanych przed tą datą.  
   
@@ -95,7 +95,7 @@ Ten temat zawiera omówienie ustawień rejestru renderowania grafiki [!INCLUDE[T
   
  **Opcja Użyj rasteryzacji odwołań** przyjmuje wartość typu DWORD. Wartość 0 oznacza, że Rasteryzacja odwołania nie jest używana. Wszystkie inne wartości niezerowe wymuszają [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] do korzystania z rasteryzatora referencyjnego.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Warstwy renderowania grafiki](../advanced/graphics-rendering-tiers.md)
 - [Renderowanie grafiki WPF — przegląd](wpf-graphics-rendering-overview.md)

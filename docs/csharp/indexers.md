@@ -1,17 +1,17 @@
 ---
-title: Indeksatory
+title: Indexers (Indeksatory)
 description: Dowiedz C# się więcej na temat indeksatorów i sposobu implementowania właściwości indeksowanych, które są właściwościami, do których odwołuje się jeden lub więcej argumentów.
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: 86e646b341cf098d8621f095d4bfc9ea2191940d
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 966483e80d8dd0421dce1b7fabdb0d443d73a0fc
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039116"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450885"
 ---
-# <a name="indexers"></a>Indeksatory
+# <a name="indexers"></a>Indexers (Indeksatory)
 
 *Indeksatory* są podobne do właściwości. Na wiele sposobów Indeksatory są kompilowane przy użyciu tych samych funkcji językowych, co [Właściwości](properties.md). Indeksatory włączają *indeksowane* właściwości: właściwości, których dotyczy odwołanie, przy użyciu co najmniej jednego argumentu. Te argumenty zapewniają indeks do pewnej kolekcji wartości.
 
@@ -175,7 +175,7 @@ public class DataSamples
 
 Można postępować zgodnie z idiom projektu, aby modelować dowolne sortowanie kolekcji, w której istnieją dobre powody, aby nie ładować całego zestawu danych do kolekcji w pamięci. Należy zauważyć, że Klasa `Page` jest prywatną klasą zagnieżdżoną, która nie jest częścią interfejsu publicznego. Te szczegóły są ukryte dla wszystkich użytkowników tej klasy.
 
-### <a name="dictionaries"></a>słownik
+### <a name="dictionaries"></a>Słowniki
 
 Inny typowy scenariusz jest konieczny do modelowania słownika lub mapy. Ten scenariusz polega na tym, że typ przechowuje wartości w oparciu o klucz, zazwyczaj klucze tekstowe. W tym przykładzie tworzony jest słownik, który mapuje argumenty wiersza polecenia na [wyrażenia lambda](delegates-overview.md) , które zarządzają tymi opcjami. Poniższy przykład przedstawia dwie klasy: Klasa `ArgsActions`, która mapuje opcję wiersza polecenia do delegata `Action`, a `ArgsProcessor`, który używa `ArgsActions` do wykonywania każdego `Action`, gdy napotka tę opcję.
 
@@ -321,7 +321,7 @@ using CityDataMeasurements = System.Collections.Generic.Dictionary<string, Syste
 
 Utwórz *alias* dla konstruowanego typu ogólnego. Te instrukcje umożliwiają późniejsze użycie bardziej opisowych `DateMeasurements` i nazw `CityDateMeasurements` zamiast ogólnej konstrukcji `Dictionary<DateTime, Measurements>` i `Dictionary<string, Dictionary<DateTime, Measurements> >`. Ta konstrukcja wymaga używania w pełni kwalifikowanych nazw typów po prawej stronie znaku `=`.
 
-Druga Technika polega na rozdzieleniu części czasu dowolnego obiektu `DateTime` używanego do indeksowania kolekcji. .NET Framework nie zawiera typu daty.
+Druga Technika polega na rozdzieleniu części czasu dowolnego obiektu `DateTime` używanego do indeksowania kolekcji. Platforma .NET nie zawiera typu tylko daty.
 Deweloperzy używają typu `DateTime`, ale używają właściwości `Date`, aby upewnić się, że każdy obiekt `DateTime` z tego dnia będzie równy.
 
 ## <a name="summing-up"></a>Sumowanie

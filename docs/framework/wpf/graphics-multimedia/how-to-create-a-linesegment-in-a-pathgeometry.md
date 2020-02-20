@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Tworzenie obiektu LineSegment w elemencie PathGeometry'
+title: Jak utworzyć obiekt LineSegment w PathGeometry
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,24 +8,24 @@ helpviewer_keywords:
 - line segments [WPF], creating
 - graphics [WPF], line segments
 ms.assetid: 0155ed47-a20d-49a7-a306-186d8e07fbc4
-ms.openlocfilehash: a50c98ccc3f6d517e0917cb774af4d49d2bfa7a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fc7fbad1e534988a36d85c55c1b6a8249692ad67
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054552"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452087"
 ---
-# <a name="how-to-create-a-linesegment-in-a-pathgeometry"></a>Instrukcje: Tworzenie obiektu LineSegment w elemencie PathGeometry
+# <a name="how-to-create-a-linesegment-in-a-pathgeometry"></a>Jak utworzyć obiekt LineSegment w PathGeometry
 
-Ten przykład przedstawia sposób tworzenia segment linii. Aby utworzyć segment linii, użyj <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, i <xref:System.Windows.Media.LineSegment> klasy.
+Ten przykład pokazuje, jak utworzyć segment linii. Aby utworzyć segment linii, użyj klas <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>i <xref:System.Windows.Media.LineSegment>.
 
 ## <a name="example"></a>Przykład
 
-Rysowanie w poniższych przykładach <xref:System.Windows.Media.LineSegment> z (10, 50) do (200, 70). Na poniższej ilustracji przedstawiono wynikowe <xref:System.Windows.Media.LineSegment>; tło siatki został dodany do wyświetlenia w układzie współrzędnych.
+Poniższe przykłady ilustrują <xref:System.Windows.Media.LineSegment> od (10, 50) do (200, 70). Na poniższej ilustracji przedstawiono wyniki <xref:System.Windows.Media.LineSegment>; dodano tło siatki w celu wyświetlenia układu współrzędnych.
 
-![Obiekt LineSegment w PathFigure](./media/graphicsmm-pathgeometrylinesegment.png "graphicsmm_pathgeometrylinesegment") LineSegment rysowane z (10,50) (200,70)
+![LineSegment w PathFigure](./media/graphicsmm-pathgeometrylinesegment.png "graphicsmm_pathgeometrylinesegment") LineSegment rysowany od (10, 50) do (200, 70)
 
-[xaml]
+formatu
 
 W [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], można użyć składni atrybutów do opisania ścieżki.
 
@@ -34,11 +34,11 @@ W [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], można 
   Data="M 10,50 L 200,70" />
 ```
 
-[xaml]
+formatu
 
-(Należy pamiętać, że ta składnia atrybutu faktycznie tworzy <xref:System.Windows.Media.StreamGeometry>, lekki wersję <xref:System.Windows.Media.PathGeometry>. Aby uzyskać więcej informacji, zobacz [składni znacznikowania ścieżki](path-markup-syntax.md) strony.)
+(Należy zauważyć, że ta składnia atrybutu w rzeczywistości tworzy <xref:System.Windows.Media.StreamGeometry>, a jaśniejszą wersję wagi <xref:System.Windows.Media.PathGeometry>. Aby uzyskać więcej informacji, zobacz stronę [składnia znaczników ścieżki](path-markup-syntax.md) .)
 
-W [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], może również zwracać segment linii przy użyciu składni elementu obiektu. Poniżej przedstawiono odpowiednikiem poprzedniego [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] przykład.
+W [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]można również narysować segment linii przy użyciu składni elementu obiektu. Poniżej znajduje się odpowiednik powyższego przykładu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].
 
 ```xaml
 <Path Stroke="Black" StrokeThickness="1">
@@ -100,9 +100,9 @@ myPath.StrokeThickness = 1
 myPath.Data = myPathGeometry
 ```
 
-W tym przykładzie jest częścią większego przykładu; Aby uzyskać pełny przykład, zobacz [przykładowe geometrii](https://go.microsoft.com/fwlink/?LinkID=159989).
+Ten przykład jest częścią większego przykładu; Aby uzyskać kompletny przykład, zobacz [przykład geometrie](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/Geometry).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Windows.Media.PathFigure>
 - <xref:System.Windows.Media.PathGeometry>

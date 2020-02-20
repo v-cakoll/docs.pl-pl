@@ -5,12 +5,12 @@ helpviewer_keywords:
 - loadFromRemoteSources element
 - <loadFromRemoteSources> element
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
-ms.openlocfilehash: a4dbcd0a0b848e5ef57965b5b3f4fcee9161b724
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 454314bf1002a9648f669cc708c8ac42461fccaf
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73116567"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452269"
 ---
 # <a name="loadfromremotesources-element"></a>\<element > loadFromRemoteSources
 Określa, czy zestawy ładowane ze źródeł zdalnych powinny mieć przyznane pełne zaufanie w .NET Framework 4 i nowszych.
@@ -18,7 +18,7 @@ Określa, czy zestawy ładowane ze źródeł zdalnych powinny mieć przyznane pe
 > [!NOTE]
 > Jeśli nastąpiło przekierowanie do tego artykułu ze względu na komunikat o błędzie na liście błędów projektu programu Visual Studio lub błąd kompilacji, zobacz [How to: use a Assembly from a Web w Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ee890038(v=vs.100)).  
   
-[ **\<configuration >** ](../configuration-element.md) \
+[ **\<> konfiguracji**](../configuration-element.md)\
 &nbsp;&nbsp;[ **\<środowiska uruchomieniowego >** ](runtime-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp; **\<loadFromRemoteSources >**  
   
@@ -95,11 +95,11 @@ Ustawienie elementu `<loadFromRemoteSources>` na `true` uniemożliwia wyrzucanie
 
 - Jeśli aplikacja została skopiowana z sieci Web, jest oflagowana przez system Windows jako aplikacja sieci Web, nawet jeśli znajduje się na komputerze lokalnym. Można zmienić to oznaczenie poprzez zmianę jego właściwości pliku lub użyć elementu `<loadFromRemoteSources>`, aby nadać zestawowi pełne zaufanie. Alternatywnie można użyć metody <xref:System.Reflection.Assembly.UnsafeLoadFrom%2A> do załadowania lokalnego zestawu, który został oflagowany przez system operacyjny jako załadowany z sieci Web.
 
-- Możesz uzyskać <xref:System.IO.FileLoadException> w aplikacji działającej w aplikacji na komputerze wirtualnym z systemem Windows. Taka sytuacja może wystąpić podczas próby załadowania pliku z folderów połączonych na komputerze hostującym. Może również wystąpić podczas próby załadowania pliku z folderu połączonego za pośrednictwem [usługi pulpitu zdalnego](https://go.microsoft.com/fwlink/?LinkId=182775) (usługi terminalowe). Aby uniknąć wyjątku, należy ustawić `enabled` na `true`.
+- Możesz uzyskać <xref:System.IO.FileLoadException> w aplikacji działającej w aplikacji na komputerze wirtualnym z systemem Windows. Taka sytuacja może wystąpić podczas próby załadowania pliku z folderów połączonych na komputerze hostującym. Może również wystąpić podczas próby załadowania pliku z folderu połączonego za pośrednictwem [usługi pulpitu zdalnego](/windows/win32/termserv/terminal-services-portal) (usługi terminalowe). Aby uniknąć wyjątku, należy ustawić `enabled` na `true`.
 
 ## <a name="configuration-file"></a>Plik konfiguracji
 
-Ten element jest zazwyczaj używany w pliku konfiguracyjnym aplikacji, ale może być używany w innych plikach konfiguracji w zależności od kontekstu. Aby uzyskać więcej informacji, zobacz artykuł [bardziej niejawne zastosowania zasad CAS: loadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839) w blogu dotyczącym zabezpieczeń programu .NET.  
+Ten element jest zazwyczaj używany w pliku konfiguracyjnym aplikacji, ale może być używany w innych plikach konfiguracji w zależności od kontekstu. Aby uzyskać więcej informacji, zobacz artykuł [bardziej niejawne zastosowania zasad CAS: loadFromRemoteSources](https://docs.microsoft.com/archive/blogs/shawnfa/more-implicit-uses-of-cas-policy-loadfromremotesources) w blogu dotyczącym zabezpieczeń programu .NET.  
 
 ## <a name="example"></a>Przykład
 
@@ -113,9 +113,9 @@ Poniższy przykład pokazuje, jak udzielić pełnego zaufania do zestawów łado
 </configuration>  
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Bardziej niejawne zastosowania zasad CAS: loadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839)
+- [Bardziej niejawne zastosowania zasad CAS: loadFromRemoteSources](https://docs.microsoft.com/archive/blogs/shawnfa/more-implicit-uses-of-cas-policy-loadfromremotesources)
 - [Instrukcje: uruchamianie częściowo zaufanego kodu w piaskownicy](../../../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
 - [Schemat ustawień środowiska uruchomieniowego](index.md)
 - [Schemat pliku konfiguracji](../index.md)

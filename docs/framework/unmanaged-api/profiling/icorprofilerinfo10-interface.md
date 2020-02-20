@@ -3,12 +3,12 @@ title: ICorProfilerInfo10, interfejs
 ms.date: 08/06/2019
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: e90a1ffbc037636e4296bbd4f4c3c5082885e9f3
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 30179c7c198a343baa3fa01ae64f6d580a3f9e7e
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76863247"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452204"
 ---
 # <a name="icorprofilerinfo10-interface"></a>ICorProfilerInfo10, interfejs
 
@@ -26,10 +26,10 @@ Podklasa elementu [ICorProfilerInfo9](icorprofilerinfo9-interface.md) , która u
 |[ResumeRuntime, Metoda](icorprofilerinfo10-resumeruntime-method.md)| Wznawia środowisko uruchomieniowe bez wykonywania operacji GC. |
 
 ## <a name="requirements"></a>Wymagania  
-**Platformy:** Zobacz [obsługiwane systemy operacyjne .NET Core](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).  
+**Platformy:** Zobacz [obsługiwane systemy operacyjne .NET Core](../../../core/install/dependencies.md?pivots=os-windows).  
 **Nagłówek:** CorProf. idl, CorProf. h  
 **Wersje .NET:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)] 
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Interfejsy profilowania](profiling-interfaces.md)

@@ -2,12 +2,12 @@
 title: Obsługa współużytkowania wątkowości w aplikacjach asynchronicznychC#()
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: 9a6189624eff988ec6b0ac8a93330d591ed46a8c
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 67fbbd294ffe6219b58065f974543b2dd483a92c
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72772037"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451866"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>Obsługa współużytkowania wątkowości w aplikacjach asynchronicznychC#()
 
@@ -31,7 +31,7 @@ Po dołączeniu kodu asynchronicznego do aplikacji należy rozważyć i prawdopo
 > Aby uruchomić przykład, musisz mieć zainstalowany na komputerze program Visual Studio 2012 lub nowszy oraz .NET Framework 4,5 lub nowszy.
 
 > [!NOTE]
-> Transport Layer Security (TLS) w wersji 1,2 jest teraz minimalną wersją do użycia podczas opracowywania aplikacji. Jeśli aplikacja jest przeznaczona dla programu .NET Framework w wersji wcześniejszej niż 4,7, zapoznaj się z poniższym artykułem dotyczącym [Transport Layer Security (TLS) Best Practices with the .NET Framework](../../../../framework/network-programming/tls.md) 
+> Transport Layer Security (TLS) w wersji 1,2 jest teraz minimalną wersją do użycia podczas opracowywania aplikacji. Jeśli aplikacja jest przeznaczona dla .NET Framework wersji wcześniejszej niż 4,7, zapoznaj się z poniższym artykułem dotyczącym [Transport Layer Security (TLS) najlepszymi rozwiązaniami](../../../../framework/network-programming/tls.md)dotyczącymi .NET Framework.
 
 ## <a name="BKMK_RecognizingReentrancy"></a>Rozpoznawanie współużytkowania wątkowości
 
@@ -157,7 +157,7 @@ Aby skonfigurować ten scenariusz, wprowadź następujące zmiany w kodzie podst
         CancellationTokenSource cts;
     ```
 
-2. W `StartButton_Click` Ustal, czy operacja jest już w toku. Jeśli wartość `cts` ma wartość null, żadna operacja nie jest już aktywna. Jeśli wartość nie jest równa null, operacja, która jest już uruchomiona, została anulowana.
+2. W `StartButton_Click`Ustal, czy operacja jest już w toku. Jeśli wartość `cts` ma wartość null, żadna operacja nie jest już aktywna. Jeśli wartość nie jest równa null, operacja, która jest już uruchomiona, została anulowana.
 
     ```csharp
     // *** If a download process is already underway, cancel it.
@@ -176,7 +176,7 @@ Aby skonfigurować ten scenariusz, wprowadź następujące zmiany w kodzie podst
     cts = newCTS;
     ```
 
-4. Na końcu `StartButton_Click` bieżący proces jest zakończony, więc ustaw wartość `cts` z powrotem na wartość null.
+4. Na końcu `StartButton_Click`bieżący proces jest zakończony, więc ustaw wartość `cts` z powrotem na wartość null.
 
     ```csharp
     // *** When the process is complete, signal that another process can begin.
@@ -223,7 +223,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-W `AccessTheWebAsync` wprowadź następujące zmiany.
+W `AccessTheWebAsync`wprowadź następujące zmiany.
 
 - Dodaj parametr, aby zaakceptować token anulowania z `StartButton_Click`.
 
@@ -431,7 +431,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-#### <a name="the-accessthewebasync-method"></a>Metoda AccessTheWebAsync
+#### <a name="the-accessthewebasync-method"></a>The AccessTheWebAsync Method
 
 Ten przykład dzieli `AccessTheWebAsync` na dwie metody. Pierwsza metoda, `AccessTheWebAsync`, uruchamia wszystkie zadania pobierania dla grupy i konfiguruje `pendingWork` w celu sterowania procesem wyświetlania. Metoda używa języka Integrated Query (zapytanie LINQ) i <xref:System.Linq.Enumerable.ToArray%2A> do uruchamiania wszystkich zadań pobierania w tym samym czasie.
 
@@ -536,7 +536,7 @@ Dane wyjściowe przedstawiają następujące wzorce.
     TOTAL bytes returned:  915908
     ```
 
-- Zadanie `pendingWork` ma wartość null na początku `FinishOneGroupAsync` tylko dla grupy A, która rozpoczęła się w pierwszej kolejności. Grupa A jeszcze nie ukończyła wyrażenia await, gdy osiągnie `FinishOneGroupAsync`. W związku z tym formant nie został zwrócony do `AccessTheWebAsync` i pierwsze przypisanie do `pendingWork` nie miało.
+- Zadanie `pendingWork` ma wartość null na początku `FinishOneGroupAsync` tylko dla grupy A, która rozpoczęła się w pierwszej kolejności. Grupa A jeszcze nie ukończyła wyrażenia await, gdy osiągnie `FinishOneGroupAsync`. W związku z tym formant nie został zwrócony do `AccessTheWebAsync`i pierwsze przypisanie do `pendingWork` nie miało.
 
 - Dwa następujące wiersze są zawsze wyświetlane razem w danych wyjściowych. Kod nigdy nie zostanie przerwany między rozpoczęciem operacji grupy w `StartButton_Click` i przypisaniem zadania dla grupy do `pendingWork`.
 
@@ -728,7 +728,7 @@ Poniższa sekcja zawiera kod służący do kompilowania przykładu jako aplikacj
 
 12. Wprowadź zmiany, aby [wyłączyć przycisk Start](#BKMK_DisableTheStartButton), [anulować i ponownie uruchomić operację](#BKMK_CancelAndRestart)albo [uruchomić wiele operacji i kolejkować dane wyjściowe](#BKMK_RunMultipleOperations) , aby obsłużyć współużytkowania wątkowości.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Przewodnik: uzyskiwanie dostępu do sieci Web za pomocą AsyncC#i Await ()](./walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Programowanie asynchroniczne z Async i Await (C#)](./index.md)

@@ -2,12 +2,12 @@
 title: Ciągła integracja (CI) z zestaw .NET Core SDK i narzędziami
 description: Dowiedz się, jak używać zestaw .NET Core SDK i narzędzi na serwerze kompilacji z ciągłą integracją.
 ms.date: 05/18/2017
-ms.openlocfilehash: bdb3913cbe588377d9fbee0f1c054e682629ac96
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 6e23a21dd36422a095e56519c9aa28ce2549f7b2
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215230"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451041"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>Używanie zestaw .NET Core SDK i narzędzi w ciągłej integracji (CI)
 
@@ -32,7 +32,7 @@ Skrypt Instalatora jest zautomatyzowany do uruchomienia na początku kompilacji,
 > [!NOTE]
 > **Azure DevOps Services**
 >
-> W przypadku korzystania z skryptu Instalatora zależności natywne nie są instalowane automatycznie. Jeśli system operacyjny ich nie ma, należy zainstalować zależności natywne. Aby uzyskać więcej informacji, zobacz [zależności i wymagania dotyczące platformy .NET Core](../install/dependencies.md?tabs=netcore30&pivots=os-linux).
+> W przypadku korzystania z skryptu Instalatora zależności natywne nie są instalowane automatycznie. Jeśli system operacyjny ich nie ma, należy zainstalować zależności natywne. Aby uzyskać więcej informacji, zobacz [zależności i wymagania dotyczące platformy .NET Core](../install/dependencies.md).
 
 ## <a name="ci-setup-examples"></a>Przykłady konfiguracji elementu konfiguracji
 

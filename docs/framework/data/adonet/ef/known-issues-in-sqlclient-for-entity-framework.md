@@ -2,12 +2,12 @@
 title: Znane problemy klienta SQL dla programu Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-ms.openlocfilehash: f42ef8dfa1c3041faf7179665cced3c2b9fcf3a6
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 32a1dd22111498ab5b3b75940f5485b2957367e8
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039972"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452503"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Znane problemy klienta SQL dla programu Entity Framework
 W tej sekcji opisano znane problemy związane z .NET Framework Dostawca danych dla SQL Server (SqlClient).  
@@ -43,9 +43,9 @@ SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP
 ```  
   
 ## <a name="targeting-the-correct-sql-server-version"></a>Kierowanie do poprawnej wersji SQL Server  
- Entity Framework jest celem zapytania Transact-SQL na podstawie wersji SQL Server określonej w atrybucie `ProviderManifestToken` elementu Schema w pliku modelu magazynu (. ssdl). Ta wersja może różnić się od wersji rzeczywistego SQL Server, z którą nawiązano połączenie. Na przykład jeśli używasz SQL Server 2005, ale atrybut `ProviderManifestToken` jest ustawiony na 2008, wygenerowane zapytanie Transact-SQL może nie zostać wykonane na serwerze. Na przykład zapytanie korzystające z nowych typów dat, które zostały wprowadzone w SQL Server 2008, nie będzie wykonywane we wcześniejszych wersjach SQL Server. Jeśli używasz SQL Server 2005, ale atrybut `ProviderManifestToken` ma wartość 2000, wygenerowana kwerenda Transact-SQL może być mniej zoptymalizowana lub można uzyskać wyjątek informujący, że zapytanie nie jest obsługiwane. Aby uzyskać więcej informacji, zobacz sekcję operatory zastosowania krzyżowe i zewnętrzne we wcześniejszej części tego tematu.  
+ Entity Framework jest celem zapytania Transact-SQL na podstawie wersji SQL Server określonej w atrybucie `ProviderManifestToken` elementu schematu w pliku modelu magazynu (. ssdl). Ta wersja może różnić się od wersji rzeczywistego SQL Server, z którą nawiązano połączenie. Na przykład jeśli używasz SQL Server 2005, ale atrybut `ProviderManifestToken` ma wartość 2008, wygenerowane zapytanie Transact-SQL może nie zostać wykonane na serwerze. Na przykład zapytanie korzystające z nowych typów dat, które zostały wprowadzone w SQL Server 2008, nie będzie wykonywane we wcześniejszych wersjach SQL Server. Jeśli używasz SQL Server 2005, ale atrybut `ProviderManifestToken` jest ustawiony na 2000, wygenerowane zapytanie Transact-SQL może być mniej zoptymalizowane lub może zostać wyświetlony wyjątek informujący, że zapytanie nie jest obsługiwane. Aby uzyskać więcej informacji, zobacz sekcję operatory zastosowania krzyżowe i zewnętrzne we wcześniejszej części tego tematu.  
   
- Niektóre zachowania bazy danych zależą od poziomu zgodności ustawionego na bazę danych. Jeśli atrybut `ProviderManifestToken` jest ustawiony na 2005, a wersja SQL Server to 2005, ale poziom zgodności bazy danych jest ustawiony na "80" (SQL Server 2000), wygenerowany język Transact-SQL będzie ukierunkowany na SQL Server 2005, ale może nie działać zgodnie z oczekiwaniami ze względu na ustawienie poziomu zgodności. Na przykład można utracić informacje o uporządkowaniu, jeśli nazwa kolumny na liście ORDER BY jest zgodna z nazwą kolumny w selektorze.  
+ Niektóre zachowania bazy danych zależą od poziomu zgodności ustawionego na bazę danych. Jeśli atrybut `ProviderManifestToken` jest ustawiony na 2005, a wersja SQL Server to 2005, ale poziom zgodności bazy danych jest ustawiony na "80" (SQL Server 2000), wygenerowany język Transact-SQL będzie docelowy SQL Server 2005, ale może nie działać zgodnie z oczekiwaniami z powodu ustawienia poziomu zgodności. Na przykład można utracić informacje o uporządkowaniu, jeśli nazwa kolumny na liście ORDER BY jest zgodna z nazwą kolumny w selektorze.  
   
 ## <a name="nested-queries-in-projection"></a>Zagnieżdżone zapytania w projekcji  
  Zagnieżdżone zapytania w klauzuli projekcji mogą zostać przetłumaczone na zapytania o produkty kartezjańskiego na serwerze. Na niektórych serwerach zaplecza, w tym SQL Server, może to spowodować, że tabela TempDB będzie bardzo duża. Może to zmniejszyć wydajność serwera.  
@@ -57,9 +57,9 @@ SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2
 ```  
   
 ## <a name="server-generated-guid-identity-values"></a>Wartości tożsamości identyfikatorów GUID generowanych przez serwer  
- Entity Framework obsługuje wartości tożsamości typu GUID generowany przez serwer, ale dostawca musi obsługiwać zwracanie wartości tożsamości generowanej przez serwer po wstawieniu wiersza. Począwszy od SQL Server 2005, można zwrócić typ GUID wygenerowany przez serwer w bazie danych SQL Server za pomocą [klauzuli OUTPUT](https://go.microsoft.com/fwlink/?LinkId=169400) .  
+ Entity Framework obsługuje wartości tożsamości typu GUID generowany przez serwer, ale dostawca musi obsługiwać zwracanie wartości tożsamości generowanej przez serwer po wstawieniu wiersza. Począwszy od SQL Server 2005, można zwrócić typ GUID wygenerowany przez serwer w bazie danych SQL Server za pomocą [klauzuli OUTPUT](/sql/t-sql/queries/output-clause-transact-sql).
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Element SqlClient programu Entity Framework](sqlclient-for-the-entity-framework.md)
 - [Znane problemy i zagadnienia dotyczące w składniku LINQ to Entities](./language-reference/known-issues-and-considerations-in-linq-to-entities.md)

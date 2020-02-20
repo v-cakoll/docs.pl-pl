@@ -1,23 +1,23 @@
 ---
 title: System. Delegate i słowo kluczowe `delegate`
-description: Dowiedz się więcej na temat klas w .NET Framework, które obsługują delegatów i jak te są mapowane na słowo kluczowe "Delegate".
+description: Dowiedz się więcej na temat klas w programie .NET, które obsługują delegatów i jak te są mapowane na słowo kluczowe "Delegate".
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: f4635ff623feec9407021792cabd1677184b4d34
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 3cfc9925be0f191dc3fc93c02f4a8f9a40b71895
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420365"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450924"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System. Delegate i słowo kluczowe `delegate`
 
-[Ubiegł](delegates-overview.md)
+[Wstecz](delegates-overview.md)
 
-W tym artykule opisano klasy w programie .NET Framework, które obsługują delegatów i jak te są mapowane na `delegate` słowo kluczowe.
+W tym artykule opisano klasy w programie .NET, które obsługują delegatów, oraz sposób ich mapowania na słowo kluczowe `delegate`.
 
-## <a name="defining-delegate-types"></a>Definiowanie typów delegatów
+## <a name="define-delegate-types"></a>Definiowanie typów delegatów
 
 Zacznijmy od słowa kluczowego "Delegate", ponieważ jest to przede wszystkim, czego będziesz używać podczas pracy z delegatami. Kod generowany przez kompilator, gdy użycie słowa kluczowego `delegate` zostanie zmapowane na wywołania metody, które wywołują elementy członkowskie klas <xref:System.Delegate> i <xref:System.MulticastDelegate>. 
 
@@ -41,7 +41,7 @@ Zauważ, że składnia może wyglądać tak, jakby deklaruje zmienną, ale fakty
 
 Kompilator generuje również procedury obsługi dodawania i usuwania dla tego nowego typu, tak aby klienci tej klasy mogli dodawać i usuwać metody z listy wywołań wystąpienia. Kompilator wymusza, że podpis metody dodawanej lub usuwanej jest zgodny z podpisem używanym podczas deklarowania metody. 
 
-## <a name="declaring-instances-of-delegates"></a>Deklarowanie wystąpień delegatów
+## <a name="declare-instances-of-delegates"></a>Deklarowanie wystąpień delegatów
 
 Po zdefiniowaniu delegata można utworzyć wystąpienie tego typu.
 Podobnie jak w przypadku C#wszystkich zmiennych w, nie można zadeklarować wystąpień delegatów bezpośrednio w przestrzeni nazw lub w globalnej przestrzeni nazw.
@@ -57,7 +57,7 @@ Typ zmiennej to `Comparison<T>`, zdefiniowany wcześniej typ delegata. Nazwa zmi
  
  Ten fragment kodu jest zadeklarowany jako zmienna członkowska wewnątrz klasy. Można również zadeklarować zmienne delegatów, które są zmiennymi lokalnymi lub argumenty metod.
 
-## <a name="invoking-delegates"></a>Wywoływanie delegatów
+## <a name="invoke-delegates"></a>Wywołaj delegatów
 
 Metody, które znajdują się na liście wywołań delegata, są wywoływane przez wywołanie tego delegata. Wewnątrz metody `Sort()` kod wywoła metodę porównania, aby określić, która kolejność umieszczania obiektów:
 
@@ -70,7 +70,7 @@ Zmienna jest traktowana jako nazwa metody i wywołuje ją przy użyciu standardo
 
 Ten wiersz kodu powoduje niebezpieczne założenie: nie ma gwarancji, że element docelowy został dodany do delegata. Jeśli nie dołączono żadnych elementów docelowych, wiersz powyżej mógłby spowodować zgłoszenie `NullReferenceException`. Idiomy używany do rozwiązywania tego problemu są bardziej skomplikowane niż proste sprawdzenie wartości null i zostały omówione w dalszej części tej [serii](delegates-patterns.md).
 
-## <a name="assigning-adding-and-removing-invocation-targets"></a>Przypisywanie, Dodawanie i usuwanie elementów docelowych wywołań
+## <a name="assign-add-and-remove-invocation-targets"></a>Przypisywanie, Dodawanie i usuwanie elementów docelowych wywołań
 
 Jest to sposób definiowania typu delegata oraz sposobu deklarowania i wywołania delegatów.
 
@@ -115,11 +115,11 @@ Przykład Sort () zazwyczaj dołącza jedną metodę docelową do delegata. Obie
 
 Opisana powyżej obsługa języka udostępnia funkcje i pomoc techniczną, które zwykle muszą współpracować z delegatami. Te funkcje są oparte na dwóch klasach w programie .NET Core Framework: <xref:System.Delegate> i <xref:System.MulticastDelegate>.
 
-Klasa `System.Delegate` i jej pojedynczej klasy podrzędnej bezpośredniej, `System.MulticastDelegate`, zapewniają obsługę struktury tworzenia delegatów, rejestrowania metod jako obiektów docelowych delegatów i wywoływania wszystkich metod, które są zarejestrowane jako obiekt docelowy delegata. 
+Klasa `System.Delegate` i jej pojedynczej podklasa bezpośrednie, `System.MulticastDelegate`, zapewniają obsługę platformy do tworzenia delegatów, rejestrowania metod jako obiektów docelowych delegatów i wywoływania wszystkich metod, które są zarejestrowane jako obiekt docelowy delegata. 
 
 Interesujące klasy `System.Delegate` i `System.MulticastDelegate` nie są typami delegatów. Zapewniają one podstawę dla wszystkich określonych typów delegatów. Ten sam proces projektowania języka nie może zadeklarować klasy, która pochodzi od `Delegate` lub `MulticastDelegate`. Reguły C# języka zabraniają tego.
  
-Zamiast tego C# kompilator tworzy wystąpienia klasy pochodzącej od `MulticastDelegate`w przypadku użycia słowa kluczowego C# Language do deklarowania typów delegatów.
+Zamiast tego C# kompilator tworzy wystąpienia klasy pochodzącej od `MulticastDelegate` w przypadku użycia słowa kluczowego C# Language do deklarowania typów delegatów.
 
 Ten projekt zawiera elementy główne w pierwszej wersji programu C# i .NET. Jednym z celów zespołu projektowego jest upewnienie się, że język wymusza bezpieczeństwo typów podczas korzystania z delegatów. Ma to na celu zapewnienie, że Delegaty zostały wywołane z odpowiednim typem i liczbą argumentów. I, że każdy typ zwracany został prawidłowo wskazany w czasie kompilacji. Delegaty były częścią wersji 1,0 .NET, która była wcześniejsza niż ogólna.
 
@@ -131,6 +131,6 @@ Pierwszym, najważniejszym faktem, że każdy delegat, z którym pracujesz, poch
 
 Metody, które będą używane najbardziej z delegatów, są `Invoke()` i `BeginInvoke()` / `EndInvoke()`. `Invoke()` wywoła wszystkie metody, które zostały dołączone do określonego wystąpienia delegata. Jak wspomniano powyżej, zazwyczaj wywołuje się delegatów przy użyciu składni wywołania metody w zmiennej delegat. Jak widać [w dalszej części tej serii](delegates-patterns.md), istnieją wzorce, które współpracują bezpośrednio z tymi metodami.
 
-Teraz, gdy znasz składnię języka i klasy obsługujące delegatów, sprawdźmy, jak są używane, tworzone i wywoływane delegatów o jednoznacznie określonym typie.
+Teraz, gdy znasz składnię języka i klasy, które obsługują delegatów, sprawdźmy, jak są używane, tworzone i wywoływane delegatów o jednoznacznie określonym typie.
 
-[Next](delegates-strongly-typed.md)
+[Dalej](delegates-strongly-typed.md)

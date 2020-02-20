@@ -2,12 +2,12 @@
 title: Sumy rozłączne
 description: Dowiedz się, F# jak używać związków rozłącznych.
 ms.date: 05/16/2016
-ms.openlocfilehash: 79da6c6ff9d3699818014d86f6c95edc3e43b4c1
-ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
+ms.openlocfilehash: 539e2843c0bbc8c5ac9c0597ffc5443f8cd127f8
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71083044"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452646"
 ---
 # <a name="discriminated-unions"></a>Sumy rozłączne
 
@@ -28,7 +28,7 @@ type [accessibility-modifier] type-name =
 
 Związki rozłączne są podobne do typów Unii w innych językach, ale istnieją różnice. Podobnie jak w przypadku typu złożenia C++ w lub typu wariantu w Visual Basic, dane przechowywane w wartości nie są naprawione; może to być jedna z kilku odrębnych opcji. Jednak w przeciwieństwie do Unii w tych innych językach, każda z możliwych opcji ma *Identyfikator przypadku*. Identyfikatory przypadków są nazwami różnych możliwych typów wartości, które obiekty tego typu mogą być; wartości są opcjonalne. Jeśli wartości nie są obecne, sprawa jest równoważna z wielkością liter wyliczenia. Jeśli wartości są obecne, każda wartość może być pojedynczą wartością określonego typu lub krotką agregującą wiele pól tego samego lub różnych typów. Można nadać pojedynczemu polu nazwę, ale nazwa jest opcjonalna, nawet jeśli inne pola w tym samym przypadku mają nazwę.
 
-Dostępność dla Unii rozłącznych jest domyślnie ustawiona `public`na.
+Dostępność dla Unii rozłącznych jest domyślnie `public`.
 
 Rozważmy na przykład następującą deklarację typu kształtu.
 
@@ -39,7 +39,7 @@ type Shape =
     | Prism of width : float * float * height : float
 ```
 
-Poprzedni kod deklaruje kształt Unii rozłącznej, który może mieć wartości z jednego z trzech przypadków: Prostokąt, okrąg i biblioteki Prism. Każdy przypadek ma inny zestaw pól. Przypadek prostokąta ma dwa nazwane pola, oba typy `float`, które mają szerokość i długość. Przypadek okręgu ma tylko jedno nazwane pole, promień. Przypadek biblioteki Prism ma trzy pola, dwa z których (szerokość i wysokość) są nazwanymi polami. Pola nienazwane są określane jako pola anonimowe.
+Poprzedni kod deklaruje kształt Unii rozłącznej, który może mieć wartości z trzech przypadków: prostokąt, okrąg i biblioteki Prism. Każdy przypadek ma inny zestaw pól. Przypadek prostokąta ma dwa nazwane pola, obu typu `float`, które mają szerokość i długość. Przypadek okręgu ma tylko jedno nazwane pole, promień. Przypadek biblioteki Prism ma trzy pola, dwa z których (szerokość i wysokość) są nazwanymi polami. Pola nienazwane są określane jako pola anonimowe.
 
 Obiekty są konstruowane przez podanie wartości pól nazwanych i anonimowych zgodnie z poniższymi przykładami.
 
@@ -49,9 +49,9 @@ let circ = Circle (1.0)
 let prism = Prism(5., 2.0, height = 3.0)
 ```
 
-Ten kod pokazuje, że można użyć nazwanych pól w inicjalizacji lub można polegać na kolejności pól w deklaracji i po prostu podać wartości dla każdego pola. Wywołanie konstruktora dla `rect` w poprzednim kodzie używa nazwanych pól, ale `circ` wywołanie konstruktora używa kolejności. Można mieszać pola uporządkowane i nazwane pola, jak w konstrukcji `prism`.
+Ten kod pokazuje, że można użyć nazwanych pól w inicjalizacji lub można polegać na kolejności pól w deklaracji i po prostu podać wartości dla każdego pola. Wywołanie konstruktora dla `rect` w poprzednim kodzie używa nazwanych pól, ale wywołanie konstruktora dla `circ` używa kolejności. Można mieszać pola uporządkowane i pola nazwane, jak w przygotowaniu `prism`.
 
-Typ jest prostym związkiem rozłącznych w bibliotece F# podstawowej. `option` `option` Typ jest zadeklarowany w następujący sposób.
+Typ `option` jest prostym związkiem rozłącznych w bibliotece F# podstawowej. Typ `option` jest zadeklarowany w następujący sposób.
 
 ```fsharp
 // The option type is a discriminated union.
@@ -60,24 +60,24 @@ type Option<'a> =
     | None
 ```
 
-Poprzedni kod określa, że typ `Option` jest Unią rozłącznych, która ma dwa `Some` przypadki i `None`. Przypadek ma skojarzoną wartość, która składa się z jednego pola anonimowego, którego typ jest reprezentowany `'a`przez parametr typu. `Some` `None` Przypadek nie ma skojarzonej wartości. W tym `option` celu typ określa typ ogólny, który ma wartość pewnego typu lub nie ma wartości. Typ `Option` ma również `option`alias typu małe litery, który jest częściej często używany.
+Poprzedni kod określa, że typ `Option` jest Unią rozłącznych, która ma dwa przypadki, `Some` i `None`. Przypadek `Some` ma skojarzoną wartość, która składa się z jednego anonimowego pola, którego typ jest reprezentowany przez parametr typu `'a`. Przypadek `None` nie ma skojarzonej wartości. W tym celu typ `option` określa typ ogólny, który ma wartość pewnego typu lub nie ma wartości. Typ `Option` ma również alias typu małe litery, `option`, który jest bardziej często używany.
 
-Identyfikatory przypadków mogą służyć jako konstruktory dla typu Unii rozłącznej. Na przykład poniższy kod służy do tworzenia wartości `option` typu.
+Identyfikatory przypadków mogą służyć jako konstruktory dla typu Unii rozłącznej. Na przykład poniższy kod służy do tworzenia wartości typu `option`.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2001.fs)]
 
-Identyfikatory przypadków są również używane w wyrażeniach dopasowania wzorców. W wyrażeniu dopasowania do wzorca identyfikatory są udostępniane dla wartości skojarzonych z indywidualnymi przypadkami. Na przykład, w poniższym kodzie, `x` jest identyfikatorem, który ma wartość, która jest skojarzona `Some` z wielkością liter `option` typu.
+Identyfikatory przypadków są również używane w wyrażeniach dopasowania wzorców. W wyrażeniu dopasowania do wzorca identyfikatory są udostępniane dla wartości skojarzonych z indywidualnymi przypadkami. Na przykład, w poniższym kodzie, `x` jest identyfikatorem, który ma wartość skojarzoną z `Some` przypadku typu `option`.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2002.fs)]
 
 W wyrażeniach dopasowania do wzorca można użyć nazwanych pól do określenia dopasowania złożenia rozłącznych. Dla typu kształtu, który został zadeklarowany wcześniej, można użyć nazwanych pól, jak pokazano w poniższym kodzie, aby wyodrębnić wartości pól.
 
 ```fsharp
-let getShapeHeight shape =
+let getShapeWidth shape =
     match shape with
-    | Rectangle(height = h) -> h
+    | Rectangle(width = w) -> w
     | Circle(radius = r) -> 2. * r
-    | Prism(height = h) -> h
+    | Prism(width = w) -> w
 ```
 
 Zwykle identyfikatory przypadków mogą być używane bez kwalifikowania ich do nazwy związku. Jeśli chcesz, aby nazwa była zawsze kwalifikowana nazwą Unii, możesz zastosować atrybut [RequireQualifiedAccess](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.requirequalifiedaccessattribute-class-[fsharp]) do definicji typu Unii.
@@ -111,7 +111,7 @@ let someFunctionUsingShaderProgram (ShaderProgram id) =
 
 ## <a name="struct-discriminated-unions"></a>Związki rozłącznych struktur
 
-Można również reprezentować związki rozłączne jako struktury.  Jest to realizowane przy użyciu `[<Struct>]` atrybutu.
+Można również reprezentować związki rozłączne jako struktury.  Jest to realizowane z atrybutem `[<Struct>]`.
 
 ```fsharp
 [<Struct>]
@@ -132,7 +132,7 @@ Ponieważ są to typy wartości i nie są typami odwołań, istnieją dodatkowe 
 
 ## <a name="using-discriminated-unions-instead-of-object-hierarchies"></a>Używanie Unii rozłącznych zamiast hierarchii obiektów
 
-W przypadku niewielkiej alternatywy dla hierarchii obiektów często można użyć Unii rozłącznej. Na przykład, można użyć poniższego związku rozłącznych zamiast `Shape` klasy bazowej, która ma typy pochodne dla okręgu, kwadratu itd.
+W przypadku niewielkiej alternatywy dla hierarchii obiektów często można użyć Unii rozłącznej. Na przykład można użyć poniższego związku rozłącznych zamiast `Shape` klasy bazowej, która ma typy pochodne dla okręgu, kwadratu i tak dalej.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2003.fs)]
 
@@ -150,19 +150,19 @@ Area of rectangle that has height 5.000000 and width 10.000000 is 50.000000
 
 ## <a name="using-discriminated-unions-for-tree-data-structures"></a>Używanie związków rozłącznych dla struktur danych drzewa
 
-Związki rozłączne mogą być cykliczne, co oznacza, że sama Unia może być uwzględniona w typie jednego lub więcej przypadków. Cykliczne związki rozłącznych mogą służyć do tworzenia struktur drzewa, które są używane do modelowania wyrażeń w językach programowania. W poniższym kodzie rekursywny związek rozłącznych służy do tworzenia struktury danych drzewa binarnego. Unia składa się z dwóch przypadków `Node`,, który jest węzłem z wartością całkowitą oraz poddrzewami z lewej i prawej strony `Tip`, i, który kończy drzewo.
+Związki rozłączne mogą być cykliczne, co oznacza, że sama Unia może być uwzględniona w typie jednego lub więcej przypadków. Cykliczne związki rozłącznych mogą służyć do tworzenia struktur drzewa, które są używane do modelowania wyrażeń w językach programowania. W poniższym kodzie rekursywny związek rozłącznych służy do tworzenia struktury danych drzewa binarnego. Unia składa się z dwóch przypadków, `Node`, który jest węzłem z wartością całkowitą oraz poddrzewami z lewej i prawej strony, i `Tip`, który kończy działanie drzewa.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2005.fs)]
 
-W poprzednim kodzie `resultSumTree` ma wartość 10. Na poniższej ilustracji przedstawiono strukturę drzewa dla programu `myTree`.
+W poprzednim kodzie `resultSumTree` ma wartość 10. Na poniższej ilustracji przedstawiono strukturę drzewa dla `myTree`.
 
 ![Diagram przedstawiający strukturę drzewa dla drzewa.](../media/discriminated-unions/tree-structure-mytree.png)
 
-Związki rozłączne działają prawidłowo, jeśli węzły w drzewie są heterogeniczne. W poniższym kodzie typ `Expression` reprezentuje drzewo abstrakcyjnej składni wyrażenia w prostym języku programowania, który obsługuje dodawanie i mnożenie liczb i zmiennych. Niektóre przypadki Unii nie są cykliczne i reprezentują liczby (`Number`) lub zmienne (`Variable`). Inne przypadki są cykliczne i reprezentują operacje (`Add` i `Multiply`), gdzie operandy są również wyrażeniami. `Evaluate` Funkcja używa wyrażenia dopasowania, aby rekursywnie przetworzyć drzewo składni.
+Związki rozłączne działają prawidłowo, jeśli węzły w drzewie są heterogeniczne. W poniższym kodzie typ `Expression` reprezentuje drzewo abstrakcyjnej składni wyrażenia w prostym języku programowania, który obsługuje dodawanie i mnożenie liczb i zmiennych. Niektóre przypadki Unii nie są cykliczne i reprezentują liczby (`Number`) lub zmienne (`Variable`). Inne przypadki są cykliczne i reprezentują operacje (`Add` i `Multiply`), gdzie operandy są również wyrażeniami. Funkcja `Evaluate` używa wyrażenia Match do rekursywnego przetwarzania drzewa składni.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2006.fs)]
 
-Gdy ten kod jest wykonywany, wartość `result` jest równa 5.
+Gdy ten kod jest wykonywany, wartość `result` wynosi 5.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -205,6 +205,6 @@ Następujące atrybuty są często obserwowane w Unii rozłącznych:
 - `[<NoComparison>]`
 - `[<Struct>]`
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Dokumentacja języka F#](index.md)

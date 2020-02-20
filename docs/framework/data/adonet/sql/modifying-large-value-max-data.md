@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-ms.openlocfilehash: cb37fdb85d323d4f0816a3667a4624da8ec75e65
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: 7ed036f5ad3a1c042ee277ecd2145f72746ef420
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76979849"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451840"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>Modyfikowanie dużej wartości (wartość maksymalna) danych w ADO.NET
 Typy danych dużego obiektu (LOB) to te, które przekraczają maksymalny rozmiar wiersza wynoszący 8 kilobajtów (KB). SQL Server zawiera specyfikator `max` dla typów danych `varchar`, `nvarchar`i `varbinary`, aby zezwolić na przechowywanie wartości tak dużych, jak 2 ^ 32 bajtów. Kolumny tabeli i zmienne języka Transact-SQL mogą określać typy danych `varchar(max)`, `nvarchar(max)`lub `varbinary(max)`. W ADO.NET typy danych `max` mogą być pobierane przez `DataReader`i można je określić jako wartości parametrów wejściowych i wyjściowych bez żadnej specjalnej obsługi. W przypadku dużych `varchar` typów danych można pobrać i zaktualizować dane przyrostowo.  
@@ -19,9 +19,9 @@ Typy danych dużego obiektu (LOB) to te, które przekraczają maksymalny rozmiar
   
  Poniższa tabela zawiera linki do dokumentacji w SQL Server książki online.  
   
- **Książka SQL Server online**  
+ **SQL Server documentation (Dokumentacja programu SQL Server)**  
   
-1. [Korzystanie z typów danych o dużej wartości](https://go.microsoft.com/fwlink/?LinkId=120498)  
+1. [Korzystanie z typów danych o dużej wartości](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms178158(v=sql.100))  
   
 ## <a name="large-value-type-restrictions"></a>Ograniczenia typu dużej wartości  
  Poniższe ograniczenia dotyczą typów danych `max`, które nie istnieją dla mniejszych typów danych:  
@@ -65,7 +65,7 @@ FROM OPENROWSET
   
  Metoda WRITE określa, że sekcja wartości *column_name* zostanie zmodyfikowana. Wyrażenie jest wartością, która zostanie skopiowana do *column_name*, `@Offset` jest punktem początkowym, w którym zostanie zapisany wyrażenie, a argument `@Length` jest długością sekcji w kolumnie.  
   
-|Jeśli węzeł|Następnie|  
+|Jeśli użytkownik|Następnie|  
 |--------|----------|  
 |Wyrażenie jest ustawione na wartość NULL.|`@Length` jest ignorowana, a wartość w *column_name* zostanie obcięta w określonym `@Offset`.|  
 |`@Offset` ma wartość NULL|Operacja Update dołącza wyrażenie na końcu istniejącej wartości *column_name* i `@Length` jest ignorowane.|  
@@ -249,7 +249,7 @@ WHERE   DocumentID=@DocumentID
  [!code-csharp[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/CS/source.cs#1)]
  [!code-vb[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/VB/source.vb#1)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Dane binarne i dużej wartości w programie SQL Server](sql-server-binary-and-large-value-data.md)
 - [Mapowanie typu danych serwera SQL](../sql-server-data-type-mappings.md)

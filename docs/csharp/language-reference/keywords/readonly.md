@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: f9fa6f893e7f999564c4dcb43d40755547d3c793
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c3db8f7791e510768608e834339526fb82771979
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713121"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451944"
 ---
 # <a name="readonly-c-reference"></a>readonly (odwołanie w C#)
 
@@ -54,7 +54,7 @@ Wartość można przypisać do pola `readonly` tylko w następujących konteksta
 Te konteksty konstruktorów są również jedynymi kontekstami, w których są poprawne do przekazywania pola `readonly` jako parametru [out](out-parameter-modifier.md) lub [ref](ref.md) .
 
 > [!NOTE]
-> Słowo kluczowe `readonly` różni się od słowa kluczowego [const](const.md) . Pole `const` można zainicjować tylko w deklaracji pola. Pole `readonly` można przypisać wiele razy w deklaracji pola i w konstruktorze. W związku z tym pola `readonly` mogą mieć różne wartości w zależności od użytego konstruktora. Ponadto, chociaż `const` pole jest stałą czasu kompilacji, pole `readonly` może być używane dla stałych środowiska uruchomieniowego, jak w poniższym przykładzie:
+> Słowo kluczowe `readonly` różni się od słowa kluczowego [const](const.md) . Pole `const` można zainicjować tylko w deklaracji pola. Pole `readonly` można przypisać wiele razy w deklaracji pola i w konstruktorze. W związku z tym pola `readonly` mogą mieć różne wartości w zależności od użytego konstruktora. Ponadto, chociaż `const` pole jest stałą czasu kompilacji, pole `readonly` może być używane dla stałych w czasie wykonywania, jak w poniższym przykładzie:
 >
 > ```csharp
 > public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;
@@ -70,7 +70,7 @@ p2.y = 66;        // Error
 
 zostanie wyświetlony komunikat o błędzie kompilatora:
 
-`A readonly field cannot be assigned to (except in a constructor or a variable initializer)`
+**Nie można przypisać do pola tylko do odczytu (z wyjątkiem w konstruktorze lub inicjatorze zmiennych).**
 
 ## <a name="readonly-struct-example"></a>Przykład struktury ReadOnly
 
@@ -155,9 +155,9 @@ Możesz również zobaczyć propozycje specyfikacji języka:
 - [Typ ref i tylko do odczytu](~/_csharplang/proposals/csharp-7.2/readonly-ref.md)
 - [elementy członkowskie struktury tylko do odczytu](~/_csharplang/proposals/csharp-8.0/readonly-instance-members.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Dokumentacja języka C#](../index.md)
+- [C#Odwoła](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](index.md)
 - [Modyfikatory](index.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: ea8d95c41df236897761ace1062ec325a069d52b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e359913aad4b8cea001a894d4ba5720fab54d42b
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714742"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451918"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Klasy częściowe i metody (Przewodnik programowania w języku C#)
 
@@ -70,7 +70,7 @@ Są one równoważne z następującymi deklaracjami:
 
 [!code-csharp[csProgGuideObjects#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#22)]
 
-### <a name="restrictions"></a>{1&gt;Ograniczenia&lt;1}
+### <a name="restrictions"></a>Ograniczenia
 
 Istnieje kilka reguł, które należy wykonać podczas pracy ze częściowymi definicjami klas:
 
@@ -151,7 +151,7 @@ partial void onNameChanged()
 }
 ```
 
-- Deklaracje metody częściowej muszą zaczynać się od kontekstowego słowa kluczowego [częściowego](../../language-reference/keywords/partial-type.md) , a metoda musi zwracać [typ void](../../language-reference/keywords/void.md).
+- Deklaracje metody częściowej muszą zaczynać się od kontekstowego słowa kluczowego [częściowego](../../language-reference/keywords/partial-type.md) , a metoda musi zwracać [typ void](../../language-reference/builtin-types/void.md).
 
 - Metody częściowe mogą mieć parametry [in](../../language-reference/keywords/in-parameter-modifier.md) lub [ref](../../language-reference/keywords/ref.md) , ale nie [out](../../language-reference/keywords/out-parameter-modifier.md) .
 
@@ -169,7 +169,7 @@ partial void onNameChanged()
 
 Aby uzyskać więcej informacji, zobacz [typy częściowe](~/_csharplang/spec/classes.md#partial-types) w [ C# specyfikacji języka](/dotnet/csharp/language-reference/language-specification/introduction). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Przewodnik programowania w języku C#](../index.md)
 - [Klasy](./classes.md)

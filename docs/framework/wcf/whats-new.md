@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-ms.openlocfilehash: e01b3a39a004e963e5bb66c5fa71433cb4e7204a
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: b22266efe2e775acd04c400cf9da50bffab28183
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802378"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449507"
 ---
 # <a name="whats-new-in-windows-communication-foundation-45"></a>Co nowego w wersji 4.5 programu WCF (Windows Communication Foundation)?
 
@@ -36,7 +36,7 @@ Usługa WCF obsługuje teraz programowanie w pierwszej kolejności. Svcutil. exe
 
 ### <a name="add-service-reference-from-a-portable-subset-project"></a>Dodaj odwołanie do usługi z projektu podzestawu przenośnego
 
-Przenośne projekty podzestawów umożliwiają programistom zestawu .NET utrzymywanie jednego drzewa źródłowego i systemu kompilacji przy zachowaniu obsługi wielu platform .NET (klasycznych, Silverlight, Windows Phone i XBOX). Przenośne projekty podzestawów odwołują się tylko do przenośnych bibliotek platformy .NET, które są zestawami programu .NET Framework, które mogą być używane na dowolnej platformie .NET. Środowisko programistyczne jest takie samo jak dodanie odwołania do usługi w ramach dowolnej innej aplikacji klienckiej WCF. Aby uzyskać więcej informacji, zobacz [Dodaj odwołanie do usługi w projekcie podzestawu przenośnego](add-service-reference-in-a-portable-subset-project.md).
+Przenośne projekty podzestawów umożliwiają programistom zestawu .NET utrzymywanie jednego drzewa źródłowego i systemu kompilacji przy zachowaniu obsługi wielu platform .NET (klasycznych, Silverlight, Windows Phone i Xbox). Przenośne projekty podzestawów odwołują się tylko do przenośnych bibliotek .NET, które są zestawami, których można używać na dowolnej platformie .NET. Środowisko programistyczne jest takie samo jak dodanie odwołania do usługi w ramach dowolnej innej aplikacji klienckiej WCF. Aby uzyskać więcej informacji, zobacz [Dodaj odwołanie do usługi w projekcie podzestawu przenośnego](add-service-reference-in-a-portable-subset-project.md).
 
 ### <a name="aspnet-compatibility-mode-default-changed"></a>Domyślne zmiany trybu zgodności ASP.NET
 
@@ -78,7 +78,7 @@ WebSockets to technologia, która zapewnia prawdziwą komunikację dwukierunkow�
 
 W poniższej tabeli opisano ustawienia, które zostały zmienione i gdzie można znaleźć dodatkowe informacje.
 
-|Właściwość|On|Nowe domyślne|Więcej informacji znajduje się w temacie .|
+|Właściwość|Włączone|Nowe domyślne|Aby uzyskać więcej informacji, zobacz|
 |--------------|--------|-----------------|------------------------------|
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 sekund|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|12 * liczba procesorów|<xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|
@@ -114,7 +114,7 @@ Począwszy od programu WCF 4,5 koder binarny WCF dodaje obsługę kompresji. Typ
 
 ## <a name="udp"></a>UDP
 
-Dodano obsługę transportu UDP, która pozwala deweloperom pisać usługi korzystające z komunikatów "Fire i zapomnij". Klient wysyła komunikat do usługi i nie oczekuje od niej odpowiedzi.
+Dodano obsługę transportu UDP, która pozwala deweloperom pisać usługi korzystające z komunikatów "Fire i zapomnij". Klient wysyła komunikat do usługi i oczekuje braku odpowiedzi z usługi.
 
 ## <a name="multiple-authentication-support"></a>Obsługa wielu uwierzytelnień
 

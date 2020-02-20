@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: 92d97ca3efe761c879d0940a02342edb5a8180f0
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 60794c4f8a5f9aeb7a4b3cd58c0c9f00e03fa9e7
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920376"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450983"
 ---
 # <a name="whats-new-in-net-core-30"></a>Co nowego w programie .NET Core 3.0
 
@@ -19,15 +19,15 @@ W tym artykule opisano nowości w programie .NET Core 3.0. Jednym z największyc
 
 Program .NET Core 3.0 dodaje obsługę C# 8.0. Zdecydowanie zaleca się używanie [programu Visual Studio 2019 w wersji 16,3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) lub nowszej, [Visual Studio dla komputerów Mac 8,3](/visualstudio/mac/install-preview) lub nowszego lub [Visual Studio Code](https://code.visualstudio.com/) z najnowszym  **C# rozszerzeniem**.
 
-[Pobierz i Rozpocznij pracę z platformą .NET Core 3.0](https://aka.ms/netcore3download) teraz w systemie Windows, MacOS lub Linux.
+[Pobierz i Rozpocznij pracę z platformą .NET Core 3,0](https://aka.ms/netcore3download) teraz w systemie Windows, MacOS lub Linux.
 
-Aby uzyskać więcej informacji o wersji, zobacz [anons programu .NET Core 3.0](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0/).
+Aby uzyskać więcej informacji o wersji, zobacz [anons programu .NET Core 3,0](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0/).
 
 Środowisko .NET Core RC1 zostało uznane za gotowe do produkcji przez firmę Microsoft i zostało w pełni obsługiwane. Jeśli korzystasz z wersji zapoznawczej, musisz przejść do wersji RTM, aby uzyskać pomoc techniczną.
 
 ## <a name="language-improvements-c-80"></a>Udoskonalenia C# języka 8,0
 
-C#8,0 jest również częścią tej wersji, która obejmuje funkcję [typów referencyjnych dopuszczających wartość null](../../csharp/tutorials/nullable-reference-types.md) , [strumienie asynchroniczne](../../csharp/tutorials/generate-consume-asynchronous-stream.md)i [więcej wzorców](../../csharp/tutorials/pattern-matching.md). Aby uzyskać więcej informacji C# o funkcjach 8.0, zobacz [co nowego C# w programie 8.0](../../csharp/whats-new/csharp-8.md).
+C#8,0 jest również częścią tej wersji, która obejmuje funkcję [typów referencyjnych dopuszczających wartość null](../../csharp/tutorials/nullable-reference-types.md) , [strumienie asynchroniczne](../../csharp/tutorials/generate-consume-asynchronous-stream.md)i [więcej wzorców](../../csharp/tutorials/pattern-matching.md). Aby uzyskać więcej informacji C# o funkcjach 8,0, zobacz [co nowego C# w programie 8,0](../../csharp/whats-new/csharp-8.md).
 
 Wprowadzono ulepszenia dotyczące języka w celu obsługi następujących funkcji API poniżej:
 
@@ -36,7 +36,7 @@ Wprowadzono ulepszenia dotyczące języka w celu obsługi następujących funkcj
 
 ## <a name="net-standard-21"></a>.NET Standard 2.1
 
-Platforma .NET Core 3,0 implementuje **.NET Standard 2,1**. Jednak domyślny szablon `dotnet new classlib` generuje projekt, który nadal jest przeznaczony dla **.NET Standard 2,0**. Aby docelowa **.NET Standard 2.1**, edytuj plik projektu i Zmień `TargetFramework` właściwość na `netstandard2.1`:
+Platforma .NET Core 3,0 implementuje **.NET Standard 2,1**. Jednak domyślny szablon `dotnet new classlib` generuje projekt, który nadal jest przeznaczony dla **.NET Standard 2,0**. Aby docelowa **.NET Standard 2,1**, edytuj plik projektu i zmień właściwość `TargetFramework` na `netstandard2.1`:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -48,13 +48,13 @@ Platforma .NET Core 3,0 implementuje **.NET Standard 2,1**. Jednak domyślny sza
 </Project>
 ```
 
-Jeśli używasz programu Visual Studio, potrzebujesz [programu Visual studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019), ponieważ program visual Studio 2017 nie obsługuje **.NET Standard 2.1** ani **.NET Core 3.0**.
+Jeśli używasz programu Visual Studio, potrzebujesz [programu Visual studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019), ponieważ program visual Studio 2017 nie obsługuje **.NET Standard 2,1** ani **.NET Core 3,0**.
 
 ## <a name="compiledeploy"></a>Kompiluj/Wdróż
 
 ### <a name="default-executables"></a>Domyślne pliki wykonywalne
 
-Platforma .NET Core teraz domyślnie kompiluje [pliki wykonywalne zależne od platformy](../deploying/index.md#framework-dependent-executables-fde) . To zachowanie jest nowe w przypadku aplikacji korzystających z zainstalowanej globalnie wersji platformy .NET Core. Wcześniej tylko [wstępnie zawarte wdrożenia](../deploying/index.md#self-contained-deployments-scd) spowodują utworzenie pliku wykonywalnego.
+Platforma .NET Core teraz domyślnie kompiluje [pliki wykonywalne zależne od platformy](../deploying/index.md#publish-runtime-dependent) . To zachowanie jest nowe w przypadku aplikacji korzystających z zainstalowanej globalnie wersji platformy .NET Core. Wcześniej tylko [wstępnie zawarte wdrożenia](../deploying/index.md#publish-self-contained) spowodują utworzenie pliku wykonywalnego.
 
 W trakcie `dotnet build` lub `dotnet publish`, tworzony jest plik wykonywalny zgodny ze środowiskiem i platformą używanego zestawu SDK. Można oczekiwać, że te same elementy wykonywalne są takie same jak w przypadku innych natywnych plików wykonywalnych, takich jak:
 
@@ -74,7 +74,7 @@ Aby opublikować plik wykonywalny pojedynczego pliku, ustaw `PublishSingleFile` 
 </PropertyGroup>
 ```
 
-lub
+— lub —
 
 ```dotnetcli
 dotnet publish -r win10-x64 -p:PublishSingleFile=true
@@ -112,7 +112,7 @@ Aby uzyskać więcej informacji na temat narzędzia konsolidatora IL, zapoznaj s
 
 ### <a name="tiered-compilation"></a>Kompilacja warstwowa
 
-[Kompilacja warstwowa](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation-guide.md) (TC) jest domyślnie włączona z platformą .NET Core 3.0. Ta funkcja umożliwia środowisku uruchomieniowemu wydajniejsze używanie kompilatora just-in-Time (JIT) w celu uzyskania lepszej wydajności.
+[Kompilacja warstwowa](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation-guide.md) (TC) jest domyślnie włączona z platformą .net Core 3,0. Ta funkcja umożliwia środowisku uruchomieniowemu wydajniejsze używanie kompilatora just-in-Time (JIT) w celu uzyskania lepszej wydajności.
 
 Główną zaletą kompilacji warstwowej jest zapewnienie dwóch sposobów jitting metod: w warstwach o niższej jakości lub szybszych lub wyższych warstwach. Jakość odnosi się do tego, jak dobrze jest zoptymalizowana Metoda. TC ułatwia zwiększenie wydajności aplikacji w miarę przechodzenia przez różne etapy wykonywania — od uruchomienia do stanu stałego. Gdy kompilacja warstwowa jest wyłączona, każda metoda jest kompilowana w jednym ze sposobów, która jest obciążona wydajnością o stałej kondycji w porównaniu z wydajnością uruchamiania.
 
@@ -217,7 +217,7 @@ Istnieją pewne operacje, takie jak łączenie i publikowanie stron Razor, któr
 Środowisko .NET Core 3.0 zawiera wprowadzenie do narzędzi lokalnych. Narzędzia lokalne są podobne do [narzędzi globalnych](../tools/global-tools.md) , ale są skojarzone z konkretną lokalizacją na dysku. Narzędzia lokalne nie są dostępne globalnie i są dystrybuowane jako pakiety NuGet.
 
 > [!WARNING]
-> Jeśli podjęto próbę skorzystania z narzędzi lokalnych w programie .NET Core 3.0 `dotnet tool restore` w `dotnet tool install`wersji zapoznawczej 1, takiej jak uruchamianie lub, Usuń folder pamięci podręcznej narzędzi lokalnych W przeciwnym razie narzędzia lokalne nie będą działały w żadnej nowszej wersji. Ten folder znajduje się w lokalizacji:
+> Jeśli podjęto próbę skorzystania z narzędzi lokalnych w programie .NET Core 3,0 w wersji zapoznawczej 1, takiej jak uruchamianie `dotnet tool restore` lub `dotnet tool install`, Usuń folder pamięci podręcznej lokalnych narzędzi W przeciwnym razie narzędzia lokalne nie będą działały w żadnej nowszej wersji. Ten folder znajduje się w lokalizacji:
 >
 > W systemie macOS, Linux: `rm -r $HOME/.dotnet/toolResolverCache`
 >
@@ -225,7 +225,7 @@ Istnieją pewne operacje, takie jak łączenie i publikowanie stron Razor, któr
 
 Narzędzia lokalne są zależne od nazwy pliku manifestu `dotnet-tools.json` w bieżącym katalogu. Ten plik manifestu definiuje narzędzia do udostępnienia w tym folderze i poniżej. Plik manifestu można dystrybuować z kodem, aby upewnić się, że każda osoba, która współpracuje z kodem, będzie mogła przywrócić i korzystać z tych samych narzędzi.
 
-W przypadku narzędzi globalnych i lokalnych wymagana jest zgodna wersja środowiska uruchomieniowego. Wiele narzędzi obecnie na NuGet.org docelowym środowiska uruchomieniowego .NET Core 2.1. Aby zainstalować te narzędzia globalnie lub lokalnie, nadal trzeba zainstalować [środowisko uruchomieniowe NET Core 2.1](https://dotnet.microsoft.com/download/dotnet-core/2.1).
+W przypadku narzędzi globalnych i lokalnych wymagana jest zgodna wersja środowiska uruchomieniowego. Wiele narzędzi obecnie na NuGet.org docelowym środowiska uruchomieniowego .NET Core 2.1. Aby zainstalować te narzędzia globalnie lub lokalnie, nadal trzeba zainstalować [środowisko uruchomieniowe NET Core 2,1](https://dotnet.microsoft.com/download/dotnet-core/2.1).
 
 ### <a name="new-globaljson-options"></a>Nowe opcje globalne. JSON
 
@@ -250,7 +250,7 @@ Moduł wyrzucania elementów bezużytecznych można teraz skonfigurować przy u�
 
 ### <a name="net-core-sdk-windows-installer"></a>Zestaw .NET Core SDK Instalator Windows
 
-Instalator MSI dla systemu Windows został zmieniony począwszy od platformy .NET Core 3.0. Instalatorzy zestawu SDK teraz uaktualniają wersje funkcji zestawu SDK na miejscu. Paski funkcji są zdefiniowane w grupach *setek* w sekcji *poprawka* numeru wersji. Na przykład **3.0. _101_**  i **3.0. _201_**  są wersje w dwóch różnych warstwach funkcji podczas **3.0. _101_**  i **3.0. _199_**  znajdują się w tej samej paśmie funkcji. I, w przypadku zestaw .NET Core SDK **3.0. _101_**  jest zainstalowana, zestaw .NET Core SDK **3.0. _100_**  zostanie usunięta z komputera, jeśli istnieje. Gdy zestaw .NET Core SDK **3.0. _200_**  jest zainstalowana na tym samym komputerze, zestaw .NET Core SDK **3.0. _101_**  nie zostanie usunięta.
+Instalator MSI dla systemu Windows został zmieniony począwszy od platformy .NET Core 3.0. Instalatorzy zestawu SDK teraz uaktualniają wersje funkcji zestawu SDK na miejscu. Paski funkcji są zdefiniowane w grupach *setek* w sekcji *poprawka* numeru wersji. Na przykład **3,0. _101_**  i **3,0. _201_**  są wersje w dwóch różnych warstwach funkcji podczas **3,0. _101_**  i **3,0. _199_**  znajdują się w tej samej paśmie funkcji. I, w przypadku zestaw .NET Core SDK **3,0. _101_**  jest zainstalowana, zestaw .NET Core SDK **3,0. _100_**  zostanie usunięta z komputera, jeśli istnieje. Gdy zestaw .NET Core SDK **3,0. _200_**  jest zainstalowana na tym samym komputerze, zestaw .NET Core SDK **3,0. _101_**  nie zostanie usunięta.
 
 Aby uzyskać więcej informacji na temat przechowywania wersji, zobacz [Omówienie wersji platformy .NET Core](../versions/index.md).
 
@@ -267,7 +267,7 @@ dotnet new wpf
 dotnet new winforms
 ```
 
-Program Visual Studio 2019 dodaje **nowe szablony projektów** dla platformy .NET Core 3.0 Windows Forms i WPF.
+Program Visual Studio 2019 dodaje **nowe szablony projektów** dla platformy .net Core 3,0 Windows Forms i WPF.
 
 Aby uzyskać więcej informacji na temat sposobu przenoszenia istniejącej aplikacji .NET Framework, zobacz [port WPF projekty](../../desktop-wpf/migration/convert-project-from-net-framework.md) i [projekty Windows Forms portów](../porting/winforms.md).
 
@@ -295,13 +295,13 @@ Przykład sposobu tworzenia składnika modelu COM i korzystania z niego można z
 
 ### <a name="windows-native-interop"></a>Windows Native Interop
 
-System Windows oferuje bogaty natywny interfejs API w postaci prostych interfejsów API języka C, COM i WinRT. Podczas gdy platforma .NET Core obsługuje funkcję **P/Invoke**, program .NET Core 3.0 dodaje możliwość **CoCreate interfejsów API modelu COM** i **aktywowania interfejsów API WinRT**. Aby zapoznać się z przykładem kodu, zobacz [Demonstracja programu Excel](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo).
+System Windows oferuje bogaty natywny interfejs API w postaci prostych interfejsów API języka C, COM i WinRT. Podczas gdy platforma .NET Core obsługuje funkcję **P/Invoke**, program .net Core 3,0 dodaje możliwość **CoCreate interfejsów API modelu COM** i **aktywowania interfejsów API WinRT**. Aby zapoznać się z przykładem kodu, zobacz [Demonstracja programu Excel](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo).
 
 ### <a name="msix-deployment"></a>Wdrożenie MSIX
 
 [MSIX](https://docs.microsoft.com/windows/msix/) to nowy format pakietu aplikacji systemu Windows. Można go użyć do wdrożenia aplikacji klasycznych platformy .NET Core 3.0 w systemie Windows 10.
 
-[Projekt pakietu aplikacji systemu Windows](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net), dostępny w programie Visual Studio 2019, umożliwia tworzenie pakietów MSIX przy użyciu [samodzielnych](../deploying/index.md#self-contained-deployments-scd) aplikacji .NET Core.
+[Projekt pakietu aplikacji systemu Windows](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net), dostępny w programie Visual Studio 2019, umożliwia tworzenie pakietów MSIX przy użyciu [samodzielnych](../deploying/index.md#publish-self-contained) aplikacji .NET Core.
 
 Plik projektu .NET Core musi określać obsługiwane środowiska uruchomieniowe we właściwości `<RuntimeIdentifiers>`:
 
@@ -313,7 +313,7 @@ Plik projektu .NET Core musi określać obsługiwane środowiska uruchomieniowe 
 
 ### <a name="serialport-for-linux"></a>Klasy SerialPort dla systemu Linux
 
-Program .NET Core 3.0 zapewnia podstawową pomoc <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> techniczną dla systemu Linux.
+Program .NET Core 3,0 zapewnia podstawową pomoc techniczną dla <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> w systemie Linux.
 
 Wcześniej platforma .NET Core była obsługiwana tylko przy użyciu `SerialPort` w systemie Windows.
 
@@ -331,7 +331,7 @@ Uruchamianie programu .NET Core 3.0 w systemie Linux przy użyciu platformy Dock
 
 Do programu NuGet zostały wydane dwa pakiety, których można użyć do programowania interfejsu GPIO:
 
-- [System.Device.Gpio](https://www.nuget.org/packages/System.Device.Gpio)
+- [System. Device. GPIO](https://www.nuget.org/packages/System.Device.Gpio)
 - [IoT. Device. bindings](https://www.nuget.org/packages/Iot.Device.Bindings)
 
 Pakiety GPIO obejmują interfejsy API dla urządzeń z interfejsem *GPIO*, *SPI*, *I2C*i *PWM* . Pakiet powiązań IoT obejmuje powiązania urządzeń. Aby uzyskać więcej informacji, zobacz [repozytorium GitHub](https://github.com/dotnet/iot/blob/master/src/devices/).
@@ -345,27 +345,27 @@ Program .NET Core 3.0 dodaje obsługę ARM64 dla systemu Linux. Podstawowy przyp
 > [!NOTE]
 > **Arm64** Obsługa systemu Windows nie jest jeszcze dostępna.
 
-## <a name="security"></a>Zabezpieczenia
+## <a name="security"></a>Bezpieczeństwo
 
 ### <a name="tls-13--openssl-111-on-linux"></a>TLS 1.3 & OpenSSL 1.1.1 w systemie Linux
 
-Platforma .NET Core wykorzystuje teraz zalety [protokołu TLS 1.3 w OpenSSL 1.1.1](https://www.openssl.org/blog/blog/2018/09/11/release111/), gdy jest on dostępny w danym środowisku. Z protokołem TLS 1.3:
+Platforma .NET Core wykorzystuje teraz zalety [protokołu TLS 1,3 w OpenSSL 1.1.1](https://www.openssl.org/blog/blog/2018/09/11/release111/), gdy jest on dostępny w danym środowisku. Z protokołem TLS 1.3:
 
 - Czas połączenia jest ulepszony ze zredukowanymi przedziałami rundy między klientem i serwerem.
 - Ulepszone zabezpieczenia spowodowane usuwaniem różnych przestarzałych i niezabezpieczonych algorytmów kryptograficznych.
 
-Jeśli jest dostępny, program .NET Core 3.0 używa **OpenSSL 1.1.1**, **OpenSSL 1.1.0**lub **OpenSSL 1.0.2** w systemie Linux. Gdy **OpenSSL 1.1.1** jest dostępny, oba <xref:System.Net.Security.SslStream?displayProperty=nameWithType> typy <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> i używają **protokołu TLS 1.3** (przy założeniu, że zarówno klient, jak i serwer obsługują **protokół TLS 1.3**).
+Jeśli jest dostępny, program .NET Core 3,0 używa **OpenSSL 1.1.1**, **OpenSSL 1.1.0**lub **OpenSSL 1.0.2** w systemie Linux. Gdy **OpenSSL 1.1.1** jest dostępny, typy <xref:System.Net.Security.SslStream?displayProperty=nameWithType> i <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> będą używały **protokołu TLS 1,3** (przy założeniu, że zarówno klient, jak i serwer obsługują **protokół TLS 1,3**).
 
 > [!IMPORTANT]
-> Systemy Windows i macOS nie obsługują jeszcze **protokołu TLS 1.3**. Platforma .NET Core 3.0 będzie obsługiwać **protokół TLS 1.3** w tych systemach operacyjnych, gdy będzie dostępna pomoc techniczna.
+> Systemy Windows i macOS nie obsługują jeszcze **protokołu TLS 1,3**. Platforma .NET Core 3,0 będzie obsługiwać **protokół TLS 1,3** w tych systemach operacyjnych, gdy będzie dostępna pomoc techniczna.
 
-Poniższy C# przykład 8,0 ilustruje platformę .NET Core 3.0 na Ubuntu 18.10 <https://www.cloudflare.com>z:
+Poniższy C# przykład 8,0 ilustruje platformę .net Core 3,0 na Ubuntu 18,10 z <https://www.cloudflare.com>:
 
 [!code-csharp[TLSExample](~/samples/snippets/core/whats-new/whats-new-in-30/cs/TLS.cs#TLS)]
 
 ### <a name="cryptography-ciphers"></a>Szyfrowanie kryptografii
 
-Program .NET 3.0 dodaje obsługę szyfrów **AES-GCM** i **AES-CCM** , implementowanych <xref:System.Security.Cryptography.AesGcm?displayProperty=nameWithType> za <xref:System.Security.Cryptography.AesCcm?displayProperty=nameWithType> pomocą i odpowiednio. Te algorytmy są [uwierzytelnianiem uwierzytelnianym przy użyciu algorytmów danych skojarzenia (AEAD)](https://en.wikipedia.org/wiki/Authenticated_encryption).
+Program .NET 3,0 dodaje obsługę szyfrów **AES-GCM** i **AES-CCM** , wdrożonych odpowiednio przy użyciu <xref:System.Security.Cryptography.AesGcm?displayProperty=nameWithType> i <xref:System.Security.Cryptography.AesCcm?displayProperty=nameWithType>. Te algorytmy są [uwierzytelnianiem uwierzytelnianym przy użyciu algorytmów danych skojarzenia (AEAD)](https://en.wikipedia.org/wiki/Authenticated_encryption).
 
 Poniższy kod ilustruje użycie szyfru `AesGcm` do szyfrowania i odszyfrowywania danych losowych.
 

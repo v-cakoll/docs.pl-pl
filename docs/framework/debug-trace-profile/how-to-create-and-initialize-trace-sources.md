@@ -9,19 +9,19 @@ helpviewer_keywords:
 - initializing trace sources
 - configuration files [.NET Framework], trace sources
 ms.assetid: f88dda6f-5fda-45be-9b3c-745a9b708c4d
-ms.openlocfilehash: ae5e98a1ebf3753b24127f96ed563eba27eea2fb
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: cc2987499aa094960c08d220940fe1aed5440b2d
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217427"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449962"
 ---
 # <a name="how-to-create-and-initialize-trace-sources"></a>Porady: tworzenie i inicjowanie źródeł śledzenia
 Klasa <xref:System.Diagnostics.TraceSource> jest używana przez aplikacje do tworzenia śladów, które mogą być skojarzone z aplikacją. <xref:System.Diagnostics.TraceSource> udostępnia metody śledzenia, które umożliwiają łatwe śledzenie zdarzeń, danych śledzenia i wystawianie śladów informacyjnych. Dane wyjściowe śledzenia z <xref:System.Diagnostics.TraceSource> mogą być tworzone i inicjowane przy użyciu plików konfiguracyjnych lub bez nich. Ten temat zawiera instrukcje dotyczące obu tych opcji. Zaleca się jednak używanie plików konfiguracji w celu ułatwienia ponownej konfiguracji śladów generowanych przez źródła śledzenia w czasie wykonywania.  
   
 ### <a name="to-create-and-initialize-a-trace-source-using-a-configuration-file"></a>Aby utworzyć i zainicjować Źródło śledzenia przy użyciu pliku konfiguracji  
   
-1. Utwórz projekt aplikacji konsolowej programu Visual Studio i Zastąp podany kod następującym kodem. Ten kod rejestruje błędy i ostrzeżenia i wyprowadza niektóre z nich do konsoli programu, a niektóre z nich do pliku, który jest tworzony przez wpisy w pliku konfiguracji.  
+1. Utwórz projekt aplikacji konsolowej programu Visual Studio (.NET Framework) i Zastąp podany kod następującym kodem. Ten kod rejestruje błędy i ostrzeżenia i wyprowadza niektóre z nich do konsoli programu, a niektóre z nich do pliku, który jest tworzony przez wpisy w pliku konfiguracji.  
   
      [!code-csharp[TraceSourceExample1#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tracesourceexample1/cs/program.cs#1)]
      [!code-vb[TraceSourceExample1#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample1/vb/program.vb#1)]  

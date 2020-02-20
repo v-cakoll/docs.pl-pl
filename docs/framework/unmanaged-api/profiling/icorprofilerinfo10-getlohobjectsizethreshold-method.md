@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 95473a8ce8d5fd7540228ecd9767448e51b5b326
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 7a0f6f6bea5bc919ebfe9c9acc3b02a31eaa7cd0
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868987"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452217"
 ---
 # <a name="icorprofilerinfo10getlohobjectsizethreshold-method"></a>ICorProfilerInfo10:: GetLOHObjectSizeThreshold, Metoda
 
@@ -40,7 +40,7 @@ Obiekty większe niż próg sterty dużego obiektu zostaną przydzieloną na ste
 
 ## <a name="requirements"></a>Wymagania
 
-**Platformy:** Zobacz [obsługiwane systemy operacyjne .NET Core](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
+**Platformy:** Zobacz [obsługiwane systemy operacyjne .NET Core](../../../core/install/dependencies.md?pivots=os-windows).
 
 **Nagłówek:** CorProf. idl, CorProf. h
 
@@ -48,6 +48,6 @@ Obiekty większe niż próg sterty dużego obiektu zostaną przydzieloną na ste
 
 **Wersje .NET:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [ICorProfilerInfo10, interfejs](icorprofilerinfo10-interface.md)

@@ -4,12 +4,12 @@ description: Dowiedz się, jak platforma .NET Core automatycznie wyszukuje i wyb
 author: thraka
 ms.author: adegeo
 ms.date: 06/26/2019
-ms.openlocfilehash: 546725db907937dea6fe0739656fb585a8855644
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 55f04ce81f63753831fca8fa2e44811c44049733
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713970"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451002"
 ---
 # <a name="select-the-net-core-version-to-use"></a>Wybierz wersję platformy .NET Core do użycia
 
@@ -78,7 +78,7 @@ Platformy docelowe .NET Standard są również ograniczone do docelowej struktur
 
 ## <a name="framework-dependent-apps-roll-forward"></a>Aplikacje zależne od platformy przekazują
 
-Gdy uruchamiasz aplikację ze źródła z [`dotnet run`](../tools/dotnet-run.md), z [**wdrożenia zależnego od platformy**](../deploying/index.md#framework-dependent-deployments-fdd) z [`dotnet myapp.dll`](../tools/dotnet.md#description)lub z [**pliku wykonywalnego zależnego od platformy**](../deploying/index.md#framework-dependent-executables-fde) z `myapp.exe`, `dotnet` plik wykonywalny jest **hostem** aplikacji.
+Gdy uruchamiasz aplikację ze źródła z [`dotnet run`](../tools/dotnet-run.md), z [**wdrożenia zależnego od platformy**](../deploying/index.md#publish-runtime-dependent) z [`dotnet myapp.dll`](../tools/dotnet.md#description)lub z [**pliku wykonywalnego zależnego od platformy**](../deploying/index.md#publish-runtime-dependent) z `myapp.exe`, `dotnet` plik wykonywalny jest **hostem** aplikacji.
 
 Na hoście wybierana jest Najnowsza wersja poprawki zainstalowana na maszynie. Na przykład jeśli w pliku projektu określono `netcoreapp2.0`, a `2.0.4` to Najnowsza wersja środowiska uruchomieniowego platformy .NET, zostanie użyte środowisko uruchomieniowe `2.0.4`.
 
@@ -91,7 +91,7 @@ Kilka przykładów użycia przedstawia zachowanie, jeśli celem jest 2,0:
 - 2,0 został określony. Nie zainstalowano żadnych wersji 2,0. *. 2.2.2 to najwyższa zainstalowana wersja środowiska uruchomieniowego 2. x. 2.2.2 jest używany.
 - 2,0 został określony. Nie ma zainstalowanych wersji 2. x. 3.0.0 jest zainstalowany. Zostanie wyświetlony komunikat o błędzie.
 
-Wersja pomocnicza — do przodu ma jeden efekt uboczny, który może mieć wpływ na użytkowników końcowych. Rozważmy następujący scenariusz:
+Wersja pomocnicza — do przodu ma jeden efekt uboczny, który może mieć wpływ na użytkowników końcowych. Poniżej przedstawiono przykładowy scenariusz:
 
 1. Aplikacja określa, że 2,0 jest wymagana.
 2. W przypadku uruchomienia w wersji 2,0. * nie jest zainstalowana, natomiast 2.2.2 jest. Zostanie użyta wersja 2.2.2.
@@ -101,7 +101,7 @@ Możliwe jest, że 2.0.5 i 2.2.2 działają inaczej, szczególnie w przypadku sc
 
 ## <a name="self-contained-deployments-include-the-selected-runtime"></a>Wdrożenia z własnym uwzględnieniem obejmują wybrane środowisko uruchomieniowe
 
-Aplikację można opublikować jako samodzielną [**dystrybucję**](../deploying/index.md#self-contained-deployments-scd). To podejście służy do łączenia środowiska uruchomieniowego i bibliotek platformy .NET Core z aplikacją. Wdrożenia samodzielne nie mają zależności w środowiskach środowiska uruchomieniowego. Wybór wersji środowiska uruchomieniowego występuje w czasie publikowania, a nie w czasie wykonywania.
+Aplikację można opublikować jako samodzielną [**dystrybucję**](../deploying/index.md#publish-self-contained). To podejście służy do łączenia środowiska uruchomieniowego i bibliotek platformy .NET Core z aplikacją. Wdrożenia samodzielne nie mają zależności w środowiskach środowiska uruchomieniowego. Wybór wersji środowiska uruchomieniowego występuje w czasie publikowania, a nie w czasie wykonywania.
 
 Proces publikowania wybiera najnowszą wersję poprawki danej rodziny środowiska uruchomieniowego. Na przykład `dotnet publish` wybierze pozycję .NET Core 2.0.4, jeśli jest to Najnowsza wersja poprawki w rodzinie środowiska uruchomieniowego programu .NET Core 2,0. Platforma docelowa (łącznie z najnowszymi zainstalowanymi poprawkami zabezpieczeń) jest spakowana z aplikacją.
 

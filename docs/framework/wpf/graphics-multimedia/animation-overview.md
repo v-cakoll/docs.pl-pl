@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-ms.openlocfilehash: f0f55c948d10c61ebab57f47e3461531ccf5f610
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 00f01b63cdf9397fe25f28fff08767dfc3a83e69
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559719"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77453120"
 ---
 # <a name="animation-overview"></a>Przegląd Animacja
 
@@ -223,7 +223,7 @@ Ponieważ animacje generują wartości właściwości, istnieją różne typy an
 
 - *typ*\<> Podstawy animacji
 
-  Klasa abstrakcyjna, która podczas jej implementowania Animuj > wartość *typu*\<. Ta klasa służy jako klasa bazowa dla *typu*\<> Animacja i *typ*\<> klasy AnimationUsingKeyFrames. Musisz poradzić sobie bezpośrednio z tymi klasami tylko wtedy, gdy chcesz utworzyć własne animacje niestandardowe. W przeciwnym razie użyj *typu*\<> Animacja lub klatka *kluczowa\<* animacji.
+  Klasa abstrakcyjna, która podczas jej implementowania Animuj > wartość *typu*\<. Ta klasa służy jako klasa bazowa dla *typu*\<> Animacja i *typ*\<> klasy AnimationUsingKeyFrames. Musisz poradzić sobie bezpośrednio z tymi klasami tylko wtedy, gdy chcesz utworzyć własne animacje niestandardowe. W przeciwnym razie użyj *typu*\<> Animacja lub klatka *kluczowa\<>* animacji.
 
 W większości przypadków należy użyć \<*typu*> klas animacji, takich jak <xref:System.Windows.Media.Animation.DoubleAnimation> i <xref:System.Windows.Media.Animation.ColorAnimation>.
 
@@ -231,10 +231,10 @@ W poniższej tabeli przedstawiono kilka typowych typów animacji oraz niektóre 
 
 |Typ właściwości|Odpowiadająca animacja podstawowa (od/do/z)|Animacja odpowiedniej ramki klucza|Animacja odpowiedniej ścieżki|Przykład użycia|
 |-------------------|----------------------------------------------------|---------------------------------------|----------------------------------|-------------------|
-|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|Brak|Animuj <xref:System.Windows.Media.SolidColorBrush.Color%2A> <xref:System.Windows.Media.SolidColorBrush> lub <xref:System.Windows.Media.GradientStop>.|
+|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|None|Animuj <xref:System.Windows.Media.SolidColorBrush.Color%2A> <xref:System.Windows.Media.SolidColorBrush> lub <xref:System.Windows.Media.GradientStop>.|
 |<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimation>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|Animuj <xref:System.Windows.FrameworkElement.Width%2A> <xref:System.Windows.Controls.DockPanel> lub <xref:System.Windows.FrameworkElement.Height%2A> <xref:System.Windows.Controls.Button>.|
 |<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimation>|<xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.PointAnimationUsingPath>|Animuj <xref:System.Windows.Media.EllipseGeometry.Center%2A> pozycję <xref:System.Windows.Media.EllipseGeometry>.|
-|<xref:System.String>|Brak|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|Brak|Animuj <xref:System.Windows.Controls.TextBlock.Text%2A> <xref:System.Windows.Controls.TextBlock> lub <xref:System.Windows.Controls.ContentControl.Content%2A> <xref:System.Windows.Controls.Button>.|
+|<xref:System.String>|None|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|None|Animuj <xref:System.Windows.Controls.TextBlock.Text%2A> <xref:System.Windows.Controls.TextBlock> lub <xref:System.Windows.Controls.ContentControl.Content%2A> <xref:System.Windows.Controls.Button>.|
 
 <a name="animationsaretimelines"></a>
 
@@ -341,7 +341,7 @@ Chociaż zegar jest tworzony również dla <xref:System.Windows.Media.Animation.
 
 Aby animacja odzwierciedlała powiązanie danych lub zmiany animacji, należy ponownie wygenerować zegar. Zegary nie są ponownie generowane automatycznie. Aby animacja odzwierciedlała zmiany, Zastosuj ponownie scenorys przy użyciu <xref:System.Windows.Media.Animation.BeginStoryboard> lub metody <xref:System.Windows.Media.Animation.Storyboard.Begin%2A>. W przypadku korzystania z jednej z tych metod animacja jest uruchamiana ponownie. W kodzie można użyć metody <xref:System.Windows.Media.Animation.Storyboard.Seek%2A>, aby przesunąć scenorys z powrotem do poprzedniej pozycji.
 
-Aby zapoznać się z przykładem animacji powiązanej z danymi, zobacz [przykład animacji z kluczem krzywej łamanej](https://go.microsoft.com/fwlink/?LinkID=160011). Aby uzyskać więcej informacji o tym, jak działa animacja i system chronometrażu, zobacz [Omówienie animacji i systemu chronometrażu](animation-and-timing-system-overview.md).
+Aby zapoznać się z przykładem animacji powiązanej z danymi, zobacz [przykład animacji z kluczem krzywej łamanej](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/KeySplineAnimations). Aby uzyskać więcej informacji o tym, jak działa animacja i system chronometrażu, zobacz [Omówienie animacji i systemu chronometrażu](animation-and-timing-system-overview.md).
 
 <a name="otherWaysToAnimateSection"></a>
 
@@ -355,11 +355,11 @@ Przykłady w tym omówieniu przedstawiają sposób animacji przy użyciu scenory
 
 Poniższe przykłady ułatwiają rozpoczęcie dodawania animacji do aplikacji.
 
-- [Przykładowe wartości docelowe od, do i według animacji](https://go.microsoft.com/fwlink/?LinkID=159988)
+- [Przykładowe wartości docelowe od, do i według animacji](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/TargetValues)
 
   Pokazuje różne ustawienia od/do/z.
 
-- [Przykład zachowania chronometrażu animacji](https://go.microsoft.com/fwlink/?LinkID=159970)
+- [Przykład zachowania chronometrażu animacji](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/AnimationTiming)
 
   Pokazuje różne sposoby sterowania zachowaniem chronometrażu animacji. Ten przykład pokazuje również, jak dane powiązać wartość docelową animacji.
 
@@ -387,7 +387,7 @@ Poniższe przykłady ułatwiają rozpoczęcie dodawania animacji do aplikacji.
 
 <a name="reference"></a>
 
-## <a name="reference"></a>Tematy pomocy
+## <a name="reference"></a>Dokumentacja
 
 - <xref:System.Windows.Media.Animation.Timeline>
 

@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 3e3e3afc221d153ff3573126ff10014d39af761a
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: f65cebff912adeb7afc34434467cf7be72f9be32
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868307"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449767"
 ---
 # <a name="icorprofilerinfo9getcodeinfo4-method"></a>ICorProfilerInfo9:: GetCodeInfo4, Metoda
 
@@ -64,7 +64,7 @@ Alternatywnie można najpierw wywołać `GetCodeInfo4` z buforem `codeInfos` o z
 
 ## <a name="requirements"></a>Wymagania
 
-**Platformy:** Zobacz [obsługiwane systemy operacyjne .NET Core](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
+**Platformy:** Zobacz [obsługiwane systemy operacyjne .NET Core](../../../core/install/dependencies.md?pivots=os-windows).
 
 **Nagłówek:** CorProf. idl, CorProf. h
 
@@ -72,6 +72,6 @@ Alternatywnie można najpierw wywołać `GetCodeInfo4` z buforem `codeInfos` o z
 
 **Wersje .NET:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [ICorProfilerInfo9, interfejs](ICorProfilerInfo9-interface.md)

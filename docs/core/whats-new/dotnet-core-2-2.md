@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 12/04/2018
-ms.openlocfilehash: 917b51e0cf36cca45135fda4a084eb2bca62e835
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9495288658fa102df8f0fbd643e2fcdf49d8f3b3
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73100691"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451983"
 ---
 # <a name="whats-new-in-net-core-22"></a>Co nowego w programie .NET Core 2.2
 
@@ -18,11 +18,11 @@ Program .NET Core 2,2 zawiera usprawnienia wdrażania aplikacji, obsługi zdarze
 
 ## <a name="new-deployment-mode"></a>Nowy tryb wdrażania
 
-Począwszy od platformy .NET Core 2,2, można wdrożyć pliki [wykonywalne zależne od platformy](../deploying/index.md#framework-dependent-executables-fde), które są plikami **exe** zamiast plików **dll** . Funkcje podobne do wdrożeń zależnych od platformy, zależne od struktury pliki wykonywalne (całego) nadal polegają na obecności udostępnionej wersji systemu .NET Core do uruchomienia. Aplikacja zawiera tylko kod i wszystkie zależności innych firm. W przeciwieństwie do wdrożeń zależnych od struktury FDEs są specyficzne dla platformy.
+Począwszy od platformy .NET Core 2,2, można wdrożyć pliki [wykonywalne zależne od platformy](../deploying/index.md#publish-runtime-dependent), które są plikami **exe** zamiast plików **dll** . Funkcje podobne do wdrożeń zależnych od platformy, zależne od struktury pliki wykonywalne (całego) nadal polegają na obecności udostępnionej wersji systemu .NET Core do uruchomienia. Aplikacja zawiera tylko kod i wszystkie zależności innych firm. W przeciwieństwie do wdrożeń zależnych od struktury FDEs są specyficzne dla platformy.
 
 Ten nowy tryb wdrożenia ma odrębną zaletę kompilowania pliku wykonywalnego zamiast biblioteki, co oznacza, że można uruchomić aplikację bezpośrednio bez wywoływania `dotnet`.
 
-## <a name="core"></a>Core
+## <a name="core"></a>Podstawowe
 
 **Obsługa zdarzeń w usługach środowiska uruchomieniowego**
 
@@ -94,7 +94,7 @@ Oczekujemy, że dostawcy hostingu definiują niestandardową konfigurację i zas
 
 Aby uzyskać więcej informacji, zobacz punkt [zaczepienia uruchamiania hosta](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/host-startup-hook.md) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Co nowego w programie .NET Core](index.md)
 - [Co nowego w ASP.NET Core 2,2](/aspnet/core/release-notes/aspnetcore-2.2)

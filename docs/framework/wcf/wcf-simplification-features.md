@@ -2,12 +2,12 @@
 title: Funkcje upraszczania programu WCF
 ms.date: 03/30/2017
 ms.assetid: 4535a511-6064-4da0-b361-80262a891663
-ms.openlocfilehash: dd944ad2963e29fd3aa9254f3a37f2c2b98ce70d
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 28a05053fda8380b55a1a9eee20119b8c4cfccfe
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802391"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452659"
 ---
 # <a name="wcf-simplification-features"></a>Funkcje upraszczania programu WCF
 
@@ -78,7 +78,7 @@ Usługa WCF obsługuje teraz programowanie w pierwszej kolejności. Narzędzie S
 
 ## <a name="add-service-reference-from-a-portable-subset-project"></a>Dodaj odwołanie do usługi z projektu podzestawu przenośnego
 
-Przenośne projekty podzestawów umożliwiają programistom zestawu .NET utrzymywanie jednego drzewa źródłowego i systemu kompilacji przy zachowaniu obsługi wielu implementacji platformy .NET (Desktop, Silverlight, Windows Phone i XBOX). Przenośne projekty podzestawów odwołują się tylko do przenośnych bibliotek platformy .NET, które są zestawami programu .NET Framework, które mogą być używane w dowolnej implementacji platformy .NET. Środowisko programistyczne jest takie samo jak dodanie odwołania do usługi w ramach dowolnej innej aplikacji klienckiej WCF. Aby uzyskać więcej informacji, zobacz [Dodaj odwołanie do usługi w projekcie podzestawu przenośnego](add-service-reference-in-a-portable-subset-project.md).
+Przenośne projekty podzestawów umożliwiają programistom zestawu .NET utrzymywanie jednego drzewa źródłowego i systemu kompilacji przy zachowaniu obsługi wielu implementacji platformy .NET (Desktop, Silverlight, Windows Phone i Xbox). Przenośne projekty podzestawów odwołują się tylko do przenośnych bibliotek .NET, które są zestawami, które mogą być używane w dowolnej implementacji platformy .NET. Środowisko programistyczne jest takie samo jak dodanie odwołania do usługi w ramach dowolnej innej aplikacji klienckiej WCF. Aby uzyskać więcej informacji, zobacz [Dodaj odwołanie do usługi w projekcie podzestawu przenośnego](add-service-reference-in-a-portable-subset-project.md).
 
 ## <a name="aspnet-compatibility-mode-default-changed"></a>Domyślne zmiany trybu zgodności ASP.NET
 
@@ -94,7 +94,7 @@ Funkcja WCF oferuje tryb zgodności ASP.NET, który umożliwia deweloperom pełe
 
 W poniższej tabeli opisano ustawienia, które zostały zmienione i gdzie można znaleźć dodatkowe informacje.
 
-|Właściwość|On|Nowe domyślne|Więcej informacji|
+|Właściwość|Włączone|Nowe domyślne|Więcej informacji|
 |--------------|--------|-----------------|----------------------|
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 sekund|Ta właściwość określa, jak długo może upłynąć połączenie TCP w celu samodzielnego uwierzytelnienia przy użyciu protokołu szkieletowego platformy .NET. Klient musi wysłać pewne dane początkowe, zanim serwer będzie miał wystarczającą ilość informacji do przeprowadzenia uwierzytelniania. Ten limit czasu jest celowo mniejszy niż ReceiveTimeout (10 min), dzięki czemu złośliwi klienci nieuwierzytelniony nie zachowują połączeń na serwerze przez długi czas. Wartość domyślna to 30 sekund. Aby uzyskać więcej informacji na temat <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|16 * liczba procesorów|Ta właściwość na poziomie gniazda opisuje liczbę żądań oczekujących na przyłączenie do kolejki. Jeśli kolejka zaległości nasłuchiwania zostanie wypełniania, nowe żądania gniazda zostaną odrzucone. Aby uzyskać więcej informacji na temat <xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|

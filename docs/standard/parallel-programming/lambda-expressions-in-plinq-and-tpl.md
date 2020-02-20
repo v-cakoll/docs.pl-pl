@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Action delegate, creating with lambda expression
 - lambda expressions, with Action and Func
 ms.assetid: 645b2c17-29d0-4ffa-8684-430743cc2f2d
-ms.openlocfilehash: d1b716e977702d03db176da70be00a1e5c789a4b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4e5be295a52edc1a7f0a0a3aa98f55335ae3e31b
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129031"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77453003"
 ---
 # <a name="lambda-expressions-in-plinq-and-tpl"></a>Wyrażenia Lambda w PLINQ i TPL
 
@@ -26,11 +26,11 @@ Biblioteka zadań równoległych (TPL) zawiera wiele metod, które przyjmują je
 
 ## <a name="func-delegate"></a>Obiekt delegowany Func
 
-Delegat `Func` hermetyzuje metodę, która zwraca wartość. W sygnaturze Func, ostatni lub skrajny prawy parametr typu zawsze określa typ zwracany. Jedną z typowych przyczyn błędów kompilatora jest próba przekazania dwóch parametrów wejściowych do <xref:System.Func%602?displayProperty=nameWithType>; w rzeczywistości ten typ przyjmuje tylko jeden parametr wejściowy. Biblioteka klas struktury definiuje 17 wersji `Func`: <xref:System.Func%601?displayProperty=nameWithType>, <xref:System.Func%602?displayProperty=nameWithType>, <xref:System.Func%603?displayProperty=nameWithType>i tak dalej w <xref:System.Func%6017?displayProperty=nameWithType>.
+Delegat `Func` hermetyzuje metodę, która zwraca wartość. W podpisie `Func`, ostatni lub po prawej stronie, parametr typu zawsze określa typ zwracany. Jedną z typowych przyczyn błędów kompilatora jest próba przekazania dwóch parametrów wejściowych do <xref:System.Func%602?displayProperty=nameWithType>; w rzeczywistości ten typ przyjmuje tylko jeden parametr wejściowy. Platforma .NET definiuje 17 wersji `Func`: <xref:System.Func%601?displayProperty=nameWithType>, <xref:System.Func%602?displayProperty=nameWithType>, <xref:System.Func%603?displayProperty=nameWithType>i tak dalej w <xref:System.Func%6017?displayProperty=nameWithType>.
 
 ## <a name="action-delegate"></a>Delegat akcji
 
-Delegat <xref:System.Action?displayProperty=nameWithType> hermetyzuje metodę (sub in Visual Basic), która nie zwraca wartości ani nie zwraca typu [void](../../csharp/language-reference/keywords/void.md). W sygnaturze typu akcji parametry typu reprezentują tylko parametry wejściowe. Podobnie jak w przypadku funkcji Func Biblioteka klas Framework definiuje 17 wersji akcji, z wersji, która nie ma parametrów typu w górę za pośrednictwem wersji, która ma 16 parametrów typu.
+Delegat <xref:System.Action?displayProperty=nameWithType> hermetyzuje metodę (sub in Visual Basic), która nie zwraca wartości. W sygnaturze typu `Action`, parametry typu reprezentują tylko parametry wejściowe. Podobnie jak `Func`, platforma .NET definiuje 17 wersji `Action`z wersji, która nie ma parametrów typu w górę za pośrednictwem wersji, która ma 16 parametrów typu.
 
 ## <a name="example"></a>Przykład
 
@@ -39,6 +39,6 @@ Poniższy przykład metody <xref:System.Threading.Tasks.Parallel.ForEach%60%602%
 [!code-csharp[System.Threading.Tasks.Parallel#02](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.parallel/cs/parallelforeach.cs#02)]
 [!code-vb[System.Threading.Tasks.Parallel#02](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.parallel/vb/parallelforeach.vb#02)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Programowanie równoległe](../../../docs/standard/parallel-programming/index.md)

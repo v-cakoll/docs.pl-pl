@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 23dc0f691c8a8d80a0bd2a5d301ace0d129007af
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 11a322278ce3ff38964fe2fa389e0b4a58897ec4
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920890"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449026"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Wdrażanie aplikacji .NET Core za pomocą programu Visual Studio
 
@@ -24,7 +24,7 @@ W poniższych sekcjach pokazano, jak używać Microsoft Visual Studio do tworzen
 - Niezależne wdrożenia
 - Samodzielne wdrożenie z zależnościami innych firm
 
-Aby uzyskać informacje dotyczące korzystania z programu Visual Studio w celu tworzenia aplikacji platformy .NET Core, zobacz [zależności i wymagania dotyczące platformy .NET Core](../install/dependencies.md?tabs=netcore30&pivots=os-windows).
+Aby uzyskać informacje dotyczące korzystania z programu Visual Studio w celu tworzenia aplikacji platformy .NET Core, zobacz [zależności i wymagania dotyczące platformy .NET Core](../install/dependencies.md?pivots=os-windows).
 
 ## <a name="framework-dependent-deployment"></a>Wdrożenie zależny od struktury
 
@@ -32,7 +32,7 @@ Wdrażanie wdrożenia zależnego od platformy bez zależności innych firm poleg
 
 1. Utwórz projekt.
 
-   Wybierz pozycję **plik** > **Nowy** > **projekt**. W oknie dialogowym **Nowy projekt** C# rozwiń kategorie projektu języka (lub Visual Basic) w okienku **zainstalowane** typy projektów, wybierz pozycję **.NET Core**, a następnie w środkowym okienku wybierz szablon **Aplikacja konsolowa (.NET Core)** . Wprowadź nazwę projektu, na przykład "FDD", w polu tekstowym **Nazwa** . Wybierz przycisk **OK**.
+   Wybierz kolejno pozycje **Plik** > **Nowy** > **Projekt**. W oknie dialogowym **Nowy projekt** C# rozwiń kategorie projektu języka (lub Visual Basic) w okienku **zainstalowane** typy projektów, wybierz pozycję **.NET Core**, a następnie w środkowym okienku wybierz szablon **Aplikacja konsolowa (.NET Core)** . Wprowadź nazwę projektu, na przykład "FDD", w polu tekstowym **Nazwa** . Wybierz przycisk **OK**.
 
 1. Dodaj kod źródłowy aplikacji.
 
@@ -83,7 +83,7 @@ Wdrożenie samodzielnego wdrożenia bez zależności innych firm polega na tworz
 
 1. Utwórz projekt.
 
-   Wybierz pozycję **plik** > **Nowy** > **projekt**. W oknie dialogowym **Nowy projekt** C# rozwiń kategorie projektu języka (lub Visual Basic) w okienku **zainstalowane** typy projektów, wybierz pozycję **.NET Core**, a następnie w środkowym okienku wybierz szablon **Aplikacja konsolowa (.NET Core)** . Wprowadź nazwę projektu, na przykład "SCD", w polu tekstowym **Nazwa** , a następnie wybierz przycisk **OK** .
+   Wybierz kolejno pozycje **Plik** > **Nowy** > **Projekt**. W oknie dialogowym **Nowy projekt** C# rozwiń kategorie projektu języka (lub Visual Basic) w okienku **zainstalowane** typy projektów, wybierz pozycję **.NET Core**, a następnie w środkowym okienku wybierz szablon **Aplikacja konsolowa (.NET Core)** . Wprowadź nazwę projektu, na przykład "SCD", w polu tekstowym **Nazwa** , a następnie wybierz przycisk **OK** .
 
 1. Dodaj kod źródłowy aplikacji.
 
@@ -110,7 +110,7 @@ Po zakończeniu debugowania można opublikować własne wdrożenie:
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="visual-studio-156-and-earliertabvs156"></a>[Visual Studio 15,6 i starsze](#tab/vs156)
+# <a name="visual-studio-156-and-earlier"></a>[Visual Studio 15,6 i starsze](#tab/vs156)
 
 Po debugowaniu i przetestowaniu programu Utwórz pliki, które mają zostać wdrożone wraz z aplikacją dla każdej platformy, do której się odwołuje.
 
@@ -150,7 +150,7 @@ Aby opublikować aplikację z poziomu programu Visual Studio, wykonaj następuj�
 
          1. Wybierz pozycję **Utwórz nowy profil** w oknie dialogowym **publikowania** .
 
-         1. W oknie dialogowym **Wybieranie elementu docelowego publikowania** Zmień lokalizację **Wybieranie lokalizacji folderu** na *bin\Release\PublishOutput\win10-x64*. Wybierz **OK**.
+         1. W oknie dialogowym **Wybieranie elementu docelowego publikowania** Zmień lokalizację **Wybieranie lokalizacji folderu** na *bin\Release\PublishOutput\win10-x64*. Kliknij przycisk **OK**.
 
          1. Wybierz nowy profil (**FolderProfile1**) na liście profilów i upewnij się, że **docelowe środowisko uruchomieniowe** jest `win10-x64`. Jeśli nie, wybierz pozycję **Ustawienia**. W oknie dialogowym **Ustawienia profilu** Zmień **docelowy środowisko uruchomieniowe** na `win10-x64` i wybierz pozycję **Zapisz**. W przeciwnym razie wybierz pozycję **Anuluj**.
 
@@ -176,7 +176,7 @@ Poniżej znajduje się kompletny plik *csproj* dla tego projektu.
 </Project>
 ```
 
-# <a name="visual-studio-157-and-latertabvs157"></a>[Program Visual Studio 15,7 lub nowszy](#tab/vs157)
+# <a name="visual-studio-157-and-later"></a>[Program Visual Studio 15,7 lub nowszy](#tab/vs157)
 
 Po debugowaniu i przetestowaniu programu Utwórz pliki, które mają zostać wdrożone wraz z aplikacją dla każdej platformy, do której się odwołuje. Obejmuje to utworzenie osobnego profilu dla każdej platformy docelowej.
 
@@ -274,7 +274,7 @@ Wdrożenie samodzielnego wdrożenia z co najmniej jedną zależnością innych f
 
 Poniżej znajduje się kompletny plik *csproj* dla tego projektu:
 
-# <a name="visual-studio-156-and-earliertabvs156"></a>[Visual Studio 15,6 i starsze](#tab/vs156)
+# <a name="visual-studio-156-and-earlier"></a>[Visual Studio 15,6 i starsze](#tab/vs156)
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -289,7 +289,7 @@ Poniżej znajduje się kompletny plik *csproj* dla tego projektu:
 </Project>
 ```
 
-# <a name="visual-studio-157-and-latertabvs157"></a>[Program Visual Studio 15,7 lub nowszy](#tab/vs157)
+# <a name="visual-studio-157-and-later"></a>[Program Visual Studio 15,7 lub nowszy](#tab/vs157)
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -309,7 +309,7 @@ Podczas wdrażania aplikacji wszystkie zależności innych firm używane w aplik
 
 Można wdrożyć tylko własne wdrożenie z biblioteką innej firmy na platformach obsługiwanych przez tę bibliotekę. Jest to podobne do występowania zależności innych firm z natywnymi zależnościami w ramach wdrożenia zależnego od platformy, w przypadku których natywne zależności nie będą istniały na platformie docelowej, chyba że zostały wcześniej zainstalowane.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Wdrażanie aplikacji .NET Core](index.md)
 - [Wykaz identyfikatorów środowiska uruchomieniowego platformy .NET Core (RID)](../rid-catalog.md)

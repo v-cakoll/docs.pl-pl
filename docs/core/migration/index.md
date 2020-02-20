@@ -2,12 +2,12 @@
 title: Migracja platformy .NET Core z pliku Project. JSON
 description: Dowiedz się, jak przeprowadzić migrację starszego projektu .NET Core przy użyciu pliku Project. JSON
 ms.date: 07/19/2017
-ms.openlocfilehash: f81d01c052c3632c48a5f961be86eab686c2074e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8a9dc05c82fd5476a70ee36a294a287abbfb68c4
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714358"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450690"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>Migrowanie projektów .NET Core z pliku Project. JSON
 
@@ -28,7 +28,7 @@ Migracja z pliku *Project. JSON* do *. csproj* można wykonać przy użyciu jedn
 
 Obie metody używają tego samego aparatu podstawowego do migrowania projektów, dlatego wyniki będą takie same dla obu tych metod. W większości przypadków użycie jednego z tych dwóch metod migracji pliku *Project. JSON* do *csproj* jest jedyną potrzebną operacją i nie jest konieczne dalsze ręczne edytowanie plików projektu. Utworzony plik *csproj* będzie taki sam jak nazwa katalogu zawierającego.
 
-### <a name="visual-studio"></a>{1&gt;Visual Studio&lt;1}
+### <a name="visual-studio"></a>Visual Studio
 
 Po otwarciu pliku *. xproj* lub pliku rozwiązania, który odwołuje się do plików *. Xproj* w programie Visual Studio 2017 lub Visual studio 2019 w wersji 16,2 i starszej, zostanie wyświetlone okno dialogowe **uaktualnianie jednokierunkowe** . W oknie dialogowym zostaną wyświetlone projekty do migracji. Jeśli otworzysz plik rozwiązania, zostaną wyświetlone wszystkie projekty określone w pliku rozwiązania. Przejrzyj listę projektów do migracji i wybierz **przycisk OK**.
 
@@ -65,7 +65,7 @@ Ten błąd występuje, jeśli masz plik *Global. JSON* w bieżącym lub nadrzęd
 Jeśli nadal używasz programu środowiska DNX do programowania w środowisku .NET Core, proces migracji powinien odbywać się w dwóch etapach:
 
 1. Użyj [istniejących wskazówek dotyczących migracji środowiska DNX](from-dnx.md) , aby przeprowadzić migrację z środowiska DNX do interfejsu wiersza polecenia z włączonym kodem JSON.
-2. Postępuj zgodnie z instrukcjami z poprzedniej sekcji, aby przeprowadzić migrację z pliku *Project. JSON* do pliku *. csproj*.  
+2. Postępuj zgodnie z instrukcjami z poprzedniej sekcji, aby przeprowadzić migrację z pliku *Project. JSON* do pliku *. csproj*.
 
 > [!NOTE]
 > ŚRODOWISKA DNX jest oficjalnie przestarzałe w wersji zapoznawczej 1 interfejs wiersza polecenia platformy .NET Core.
@@ -80,12 +80,12 @@ Format programu .NET Core csproj został zmieniony i rozwijający się za pomoc�
 - Usuń instrukcje `<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />` i `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` z góry i u dołu projektu. Te instrukcje importu są implikowane przez zestaw SDK, więc nie ma potrzeby, aby były one w projekcie.
 - Jeśli masz `Microsoft.NETCore.App` lub `NETStandard.Library` `<PackageReference>` elementy w projekcie, usuń je. Te odwołania do pakietów są [implikowane przez zestaw SDK](https://aka.ms/sdkimplicitrefs).
 - Usuń element `<PackageReference>` `Microsoft.NET.Sdk`, jeśli istnieje. Odwołanie do zestawu SDK znajduje się w atrybucie `Sdk` elementu `<Project>`.
-- Usuń [elementy globalne](https://en.wikipedia.org/wiki/Glob_(programming)) , które są [implikowane przez zestaw SDK](../tools/csproj.md#default-compilation-includes-in-net-core-projects). Pozostawienie tych elementy globalne w projekcie spowoduje wystąpienie błędu podczas kompilacji, ponieważ elementy kompilacji zostaną zduplikowane.
+- Usuń [elementy globalne](https://en.wikipedia.org/wiki/Glob_(programming)) , które są [implikowane przez zestaw SDK](../project-sdk/overview.md#default-compilation-includes). Pozostawienie tych elementy globalne w projekcie spowoduje wystąpienie błędu podczas kompilacji, ponieważ elementy kompilacji zostaną zduplikowane.
 
 Po wykonaniu tych kroków projekt powinien być w pełni zgodny z formatem CSPROJ RTM platformy .NET Core.
 
 Aby zapoznać się z przykładami przed i po migracji ze starego formatu csproj do nowego, zobacz artykuł [Aktualizacja programu Visual Studio 2017 RC — udoskonalenia narzędzi dla programu .NET Core](https://devblogs.microsoft.com/dotnet/updating-visual-studio-2017-rc-net-core-tooling-improvements/) w blogu platformy .NET.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Przenoszenie, migrowanie i uaktualnianie projektów programu Visual Studio](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects)

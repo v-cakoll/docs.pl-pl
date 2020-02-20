@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: a4c875f6aae996271dee9ac193768ef6981efc19
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 8d00718579f44a164cd83e2b05d41f70f1c65785
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76863039"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452152"
 ---
 # <a name="icorprofilerinfo10suspendruntime-method"></a>ICorProfilerInfo10:: SuspendRuntime, Metoda
 
@@ -30,7 +30,7 @@ HRESULT SuspendRuntime();
 
 ## <a name="requirements"></a>Wymagania
 
-**Platformy:** Zobacz [obsługiwane systemy operacyjne .NET Core](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
+**Platformy:** Zobacz [obsługiwane systemy operacyjne .NET Core](../../../core/install/dependencies.md?pivots=os-windows).
 
 **Nagłówek:** CorProf. idl, CorProf. h
 
@@ -38,6 +38,6 @@ HRESULT SuspendRuntime();
 
 **Wersje .NET:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [ICorProfilerInfo10, interfejs](icorprofilerinfo10-interface.md)

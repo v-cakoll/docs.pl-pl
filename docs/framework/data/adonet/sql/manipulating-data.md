@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 51096a2e-8b38-4c4d-a523-799bfdb7ec69
-ms.openlocfilehash: 322325b765f62d04e5713557f2ef9c97e1746ae0
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a84f74bde8da9ca7e40184b76efe51cea129b66a
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792059"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451853"
 ---
 # <a name="manipulating-data"></a>Manipulowanie danymi
 Przed wprowadzeniem wielu aktywnych zestawów wyników (MARS) deweloperzy musieli użyć wielu połączeń lub kursorów po stronie serwera, aby rozwiązać niektóre scenariusze. Ponadto, jeśli w sytuacji transakcyjnej użyto wielu połączeń, wymagane są połączenia powiązane (z **sp_getbindtoken** i **sp_bindsession**). W poniższych scenariuszach pokazano, jak używać połączenia z obsługą MARS zamiast wielu połączeń.  
   
 ## <a name="using-multiple-commands-with-mars"></a>Używanie wielu poleceń z usługą MARS  
- W poniższej aplikacji konsolowej pokazano, jak używać <xref:System.Data.SqlClient.SqlDataReader> dwóch obiektów z <xref:System.Data.SqlClient.SqlCommand> dwoma obiektami i <xref:System.Data.SqlClient.SqlConnection> z włączonym obiektem Mars.  
+ W poniższej aplikacji konsolowej pokazano, jak używać dwóch <xref:System.Data.SqlClient.SqlDataReader> obiektów z dwoma obiektami <xref:System.Data.SqlClient.SqlCommand> i pojedynczym obiektem <xref:System.Data.SqlClient.SqlConnection> z włączonym MARS.  
   
 ### <a name="example"></a>Przykład  
- Przykład otwiera pojedyncze połączenie z bazą danych **AdventureWorks** . <xref:System.Data.SqlClient.SqlDataReader> Zostanie utworzony <xref:System.Data.SqlClient.SqlCommand> obiekt, a. Gdy czytnik jest używany, zostanie otwarta druga <xref:System.Data.SqlClient.SqlDataReader> , przy użyciu danych z pierwszego <xref:System.Data.SqlClient.SqlDataReader> jako dane wejściowe do klauzuli WHERE dla drugiego czytnika.  
+ Przykład otwiera pojedyncze połączenie z bazą danych **AdventureWorks** . Przy użyciu <xref:System.Data.SqlClient.SqlCommand> obiektu tworzony jest <xref:System.Data.SqlClient.SqlDataReader>. Gdy czytnik jest używany, zostanie otwarta druga <xref:System.Data.SqlClient.SqlDataReader>, przy użyciu danych z pierwszej <xref:System.Data.SqlClient.SqlDataReader> jako dane wejściowe do klauzuli WHERE dla drugiego czytnika.  
   
 > [!NOTE]
 > Poniższy przykład używa przykładowej bazy danych **AdventureWorks** dołączonej do SQL Server. Parametry połączenia podane w przykładowym kodzie założono, że baza danych jest zainstalowana i dostępna na komputerze lokalnym. Zmodyfikuj parametry połączenia jako niezbędne dla danego środowiska.  
@@ -164,10 +164,10 @@ static void Main()
 ```  
   
 ## <a name="reading-and-updating-data-with-mars"></a>Odczytywanie i aktualizowanie danych za pomocą MARS  
- Usługa MARS pozwala na używanie połączenia zarówno dla operacji odczytu, jak i języka manipulowania danymi (DML) z więcej niż jedną oczekującą operacją. Ta funkcja eliminuje konieczność, aby aplikacja mogła zająć się błędami zajętymi w połączeniu. Ponadto usługa MARS może zastąpić użytkownika kursorów po stronie serwera, co zazwyczaj zużywa więcej zasobów. Na koniec, ponieważ wiele operacji może działać na jednym połączeniu, mogą współużytkować ten sam kontekst transakcji, eliminując konieczność korzystania z procedur składowanych w systemie **sp_getbindtoken** i **sp_bindsession** .  
+ Usługa MARS pozwala na używanie połączenia zarówno dla operacji odczytu, jak i języka manipulowania danymi (DML) z więcej niż jedną oczekującą operacją. Ta funkcja eliminuje konieczność, aby aplikacja mogła zająć się błędami zajętymi w połączeniu. Ponadto usługa MARS może zastąpić użycie kursorów po stronie serwera, co zazwyczaj zużywa więcej zasobów. Na koniec, ponieważ wiele operacji może działać na jednym połączeniu, mogą współużytkować ten sam kontekst transakcji, eliminując konieczność używania **sp_getbindtoken** i **sp_bindsession** procedur składowanych w systemie.  
   
 ### <a name="example"></a>Przykład  
- W poniższej aplikacji konsolowej pokazano, jak używać <xref:System.Data.SqlClient.SqlDataReader> dwóch obiektów z <xref:System.Data.SqlClient.SqlCommand> trzema obiektami i <xref:System.Data.SqlClient.SqlConnection> jednym obiektem z włączonym Mars. Pierwszy obiekt polecenia pobiera listę dostawców, których ocena kredytowa wynosi 5. Drugi obiekt polecenia używa identyfikatora dostawcy podanego od a <xref:System.Data.SqlClient.SqlDataReader> do załadowania drugiej <xref:System.Data.SqlClient.SqlDataReader> ze wszystkich produktów dla danego dostawcy. Każdy rekord produktu jest odwiedzany przez <xref:System.Data.SqlClient.SqlDataReader>drugi. Obliczenia są wykonywane w celu określenia, co powinno być nowe **OnOrderQty** . Trzeci obiekt polecenia służy następnie do aktualizowania tabeli **ProductVendor** przy użyciu nowej wartości. Cały proces odbywa się w ramach jednej transakcji, która jest wycofywana na końcu.  
+ W poniższej aplikacji konsolowej pokazano, jak używać dwóch <xref:System.Data.SqlClient.SqlDataReader> obiektów z trzema obiektami <xref:System.Data.SqlClient.SqlCommand> i pojedynczym obiektem <xref:System.Data.SqlClient.SqlConnection> z włączonym usługą MARS. Pierwszy obiekt polecenia pobiera listę dostawców, których ocena kredytowa wynosi 5. Drugi obiekt polecenia używa identyfikatora dostawcy podanego w <xref:System.Data.SqlClient.SqlDataReader> do załadowania drugiej <xref:System.Data.SqlClient.SqlDataReader> wszystkich produktów dla danego dostawcy. Każdy rekord produktu jest odwiedzany przez drugi <xref:System.Data.SqlClient.SqlDataReader>. Obliczenia są wykonywane w celu określenia, co powinno być nowe **OnOrderQty** . Trzeci obiekt polecenia służy następnie do aktualizowania tabeli **ProductVendor** przy użyciu nowej wartości. Cały proces odbywa się w ramach jednej transakcji, która jest wycofywana na końcu.  
   
 > [!NOTE]
 > Poniższy przykład używa przykładowej bazy danych **AdventureWorks** dołączonej do SQL Server. Parametry połączenia podane w przykładowym kodzie założono, że baza danych jest zainstalowana i dostępna na komputerze lokalnym. Zmodyfikuj parametry połączenia jako niezbędne dla danego środowiska.  
@@ -402,7 +402,7 @@ private static string GetConnectionString()
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Wiele aktywnych zestawów wyników (MARS)](multiple-active-result-sets-mars.md)
 - [Omówienie ADO.NET](../ado-net-overview.md)

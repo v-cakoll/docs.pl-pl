@@ -2,12 +2,12 @@
 title: Interfejs wiersza polecenia platformy .NET Core model rozszerzalności
 description: Dowiedz się, w jaki sposób można rozciągnąć interfejs wiersza polecenia platformy .NET Core.
 ms.date: 04/12/2017
-ms.openlocfilehash: 74da895fb3a3f6c77640a2b9a64acdb2894a954b
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 56a9cedc090ddca446c0ee1a60f2ca49590e7635
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920516"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451158"
 ---
 # <a name="net-core-cli-extensibility-model"></a>Interfejs wiersza polecenia platformy .NET Core model rozszerzalności
 
@@ -32,7 +32,7 @@ Interfejs wiersza polecenia można rozszerzyć na trzy główne sposoby:
 Trzy opisane powyżej mechanizmy rozszerzalności nie są wyłączne. Można użyć jednej lub wszystkiego lub kombinacji tych elementów. Który z nich należy wybrać, zależy głównie od celu, który próbujesz osiągnąć przy użyciu rozszerzenia.
 
 ## <a name="per-project-based-extensibility"></a>Rozszerzalność na podstawie projektu
-Narzędzia dla poszczególnych projektów są [wdrożeniami zależnymi od platformy](../deploying/index.md#framework-dependent-deployments-fdd) , które są dystrybuowane jako pakiety NuGet. Narzędzia są dostępne tylko w kontekście projektu, który odwołuje się do nich i dla którego są przywracane. Wywołanie poza kontekstem projektu (na przykład poza katalogiem zawierającym projekt) zakończy się niepowodzeniem, ponieważ nie można odnaleźć polecenia.
+Narzędzia dla poszczególnych projektów są [wdrożeniami zależnymi od platformy](../deploying/index.md#publish-runtime-dependent) , które są dystrybuowane jako pakiety NuGet. Narzędzia są dostępne tylko w kontekście projektu, który odwołuje się do nich i dla którego są przywracane. Wywołanie poza kontekstem projektu (na przykład poza katalogiem zawierającym projekt) zakończy się niepowodzeniem, ponieważ nie można odnaleźć polecenia.
 
 Narzędzia te są idealnym rozwiązaniem dla serwerów kompilacji, ponieważ nie jest wymagany żaden poza plikiem projektu. Proces kompilacji uruchamia przywracanie dla projektu, który kompiluje i dostępne są narzędzia. Projekty języka, takie jak F#, są również w tej kategorii, ponieważ każdy projekt może być zapisany tylko w jednym określonym języku.
 

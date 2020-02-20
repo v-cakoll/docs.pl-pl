@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Rysowanie kształtu zamkniętego przy użyciu elementu wielobocznego'
+title: Jak narysować kształt zamknięty przy użyciu elementu wielobocznego
 ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [WPF], Polygon elements
@@ -7,21 +7,21 @@ helpviewer_keywords:
 - Polygon elements [WPF]
 - drawing [WPF], closed shapes with Polygon elements
 ms.assetid: 4b0ca008-29ce-48dd-8bc3-f3a20ffca6a6
-ms.openlocfilehash: 533c341e2fae528ec896bf38bafa13974af1d127
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 324a5623ee658789b8600a43a89ce26cab7cd6cd
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62003239"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452977"
 ---
-# <a name="how-to-draw-a-closed-shape-by-using-the-polygon-element"></a>Instrukcje: Rysowanie kształtu zamkniętego przy użyciu elementu wielobocznego
-W tym przykładzie pokazano, jak narysować kształt zamknięty przy użyciu <xref:System.Windows.Shapes.Polygon> elementu. Aby narysować kształt zamknięty, należy utworzyć <xref:System.Windows.Shapes.Polygon> element i użyj jej <xref:System.Windows.Shapes.Polygon.Points%2A> właściwości w celu określenia wierzchołków kształtu. Wiersz jest automatycznie pobierane łączącej punkty imię i nazwisko. Ponadto określ <xref:System.Windows.Shapes.Shape.Fill%2A>, <xref:System.Windows.Shapes.Shape.Stroke%2A>, lub obu.  
+# <a name="how-to-draw-a-closed-shape-by-using-the-polygon-element"></a>Jak narysować kształt zamknięty przy użyciu elementu wielobocznego
+Ten przykład pokazuje, jak narysować zamknięty kształt przy użyciu elementu <xref:System.Windows.Shapes.Polygon>. Aby narysować zamknięty kształt, Utwórz element <xref:System.Windows.Shapes.Polygon> i użyj jego właściwości <xref:System.Windows.Shapes.Polygon.Points%2A>, aby określić wierzchołki kształtu. Zostanie automatycznie narysowana linia łącząca pierwszy i ostatni punkt. Na koniec Określ <xref:System.Windows.Shapes.Shape.Fill%2A>, <xref:System.Windows.Shapes.Shape.Stroke%2A>lub oba te elementy.  
   
 ## <a name="example"></a>Przykład  
- W [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], prawidłowej składni dla punktów znajduje się lista rozdzielonych przecinkami x - i współrzędne y pary rozdzielonych spacjami.  
+ W [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]prawidłowa składnia dla punktów to rozdzielana spacjami lista par współrzędnych x i y oddzielanych przecinkami.  
   
  [!code-xaml[drawingwithshapeelements#PolygonExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/polygonexample.xaml#polygonexample1)]  
   
- Chociaż w przykładzie użyto <xref:System.Windows.Controls.Canvas> aby zawierają wielokąty, można użyć elementów wielokąta (i wszystkie inne elementy kształtu) ze wszystkimi <xref:System.Windows.Controls.Panel> lub <xref:System.Windows.Controls.Control> , która obsługuje zawartość nietekstową.  
+ Chociaż w przykładzie użyto <xref:System.Windows.Controls.Canvas>, aby zawierać wielokąty, można użyć elementów wielokąt (i wszystkich innych elementów kształtu) z dowolnym <xref:System.Windows.Controls.Panel> lub <xref:System.Windows.Controls.Control>, który obsługuje zawartość nietekstową.  
   
- W tym przykładzie jest częścią większego przykładu; Aby uzyskać pełny przykład, zobacz [przykładowe elementy kształtu](https://go.microsoft.com/fwlink/?LinkID=160037).
+ Ten przykład jest częścią większego przykładu; Aby uzyskać pełną próbkę, zobacz [Przykładowe elementy Shape](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/ShapeElements).

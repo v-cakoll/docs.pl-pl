@@ -2,12 +2,12 @@
 title: Obsługa ponownego rozpoczęcia w aplikacjach asynchronicznych
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: cd8b43aa9b2373b5ce038e5007678778201f0746
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 44c2cdbadd02aef6b2bbb32bde8bcb9b19f8360d
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74354263"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452581"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Obsługa współużytkowania wątkowości w aplikacjach asynchronicznych (Visual Basic)
 
@@ -17,7 +17,7 @@ Po dołączeniu kodu asynchronicznego do aplikacji należy rozważyć i prawdopo
 > Aby uruchomić przykład, musisz mieć zainstalowany na komputerze program Visual Studio 2012 lub nowszy oraz .NET Framework 4,5 lub nowszy.
 
 > [!NOTE]
-> Transport Layer Security (TLS) w wersji 1,2 jest teraz minimalną wersją do użycia podczas opracowywania aplikacji. Jeśli aplikacja jest przeznaczona dla programu .NET Framework w wersji wcześniejszej niż 4,7, zapoznaj się z poniższym artykułem dotyczącym [Transport Layer Security (TLS) Best Practices with the .NET Framework](../../../../framework/network-programming/tls.md) 
+> Transport Layer Security (TLS) w wersji 1,2 jest teraz minimalną wersją do użycia podczas opracowywania aplikacji. Jeśli aplikacja jest przeznaczona dla .NET Framework wersji wcześniejszej niż 4,7, zapoznaj się z poniższym artykułem dotyczącym [Transport Layer Security (TLS) najlepszymi rozwiązaniami](../../../../framework/network-programming/tls.md)dotyczącymi .NET Framework.
 
 ## <a name="BKMK_RecognizingReentrancy"></a>Rozpoznawanie współużytkowania wątkowości
 
@@ -682,7 +682,7 @@ Poniższa sekcja zawiera kod służący do kompilowania przykładu jako aplikacj
 
 12. Wprowadź zmiany, aby [wyłączyć przycisk Start](#BKMK_DisableTheStartButton), [anulować i ponownie uruchomić operację](#BKMK_CancelAndRestart)albo [uruchomić wiele operacji i kolejkować dane wyjściowe](#BKMK_RunMultipleOperations) , aby obsłużyć współużytkowania wątkowości.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Przewodnik: uzyskiwanie dostępu do sieci Web za pomocą Async i Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Programowanie asynchroniczne z Async i Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)

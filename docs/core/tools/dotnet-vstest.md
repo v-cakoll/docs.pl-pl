@@ -2,12 +2,12 @@
 title: dotnet VSTest — polecenie
 description: Polecenie dotnet VSTest kompiluje projekt i wszystkie jego zależności.
 ms.date: 05/30/2018
-ms.openlocfilehash: c3838617ed539cf56f2840b826e9de58833820fd
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 3fdb5443d6d0cfbe1e7e88bc824cbb930f211260
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215310"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451184"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
@@ -21,7 +21,7 @@ ms.locfileid: "77215310"
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2,1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2,1](#tab/netcore21)
 
 ```dotnetcli
 dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--TestAdapterPath|/TestAdapterPath]
@@ -30,7 +30,7 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
     [[--] <args>...]] [-?|--Help|/?|/Help]
 ```
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
 ```dotnetcli
 dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--TestAdapterPath|/TestAdapterPath] 
@@ -38,7 +38,7 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
     [-lt|--ListTests|/lt|/ListTests] [--ParentProcessId|/ParentProcessId] [--Port|/Port] [--Diag|/Diag] [[--] <args>...]] [-?|--Help|/?|/Help]
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1. x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1. x](#tab/netcore1x)
 
 ```dotnetcli
 dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--TestAdapterPath|/TestAdapterPath]
@@ -60,7 +60,7 @@ Uruchom testy z określonych zestawów. Oddziel wiele nazw zestawów testowych s
 
 ## <a name="options"></a>Opcje
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2,1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2,1](#tab/netcore21)
 
 `--Settings|/Settings:<Settings File>`
 
@@ -88,7 +88,7 @@ Wykonaj testy równolegle. Domyślnie wszystkie dostępne rdzenie na komputerze 
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 
-Uruchom testy zgodne z podanym wyrażeniem. `<Expression>` ma format `<property>Operator<value>[|&<Expression>]`, gdzie operator jest jednym z `=`, `!=`lub `~`. `~` operatora ma semantykę "Contains" i ma zastosowanie do właściwości ciągów, takich jak `DisplayName`. `()` nawiasów są używane do grupowania wyrażeń podrzędnych.
+Uruchom testy zgodne z podanym wyrażeniem. `<Expression>` ma format `<property>Operator<value>[|&<Expression>]`, gdzie operator jest jednym z `=`, `!=`lub `~`. `~` operatora ma semantykę "Contains" i ma zastosowanie do właściwości ciągów, takich jak `DisplayName`. `()` nawiasów są używane do grupowania podwyrażeń.
 
 `-?|--Help|/?|/Help`
 
@@ -148,7 +148,7 @@ Odczytuje plik odpowiedzi w celu uzyskania dodatkowych opcji.
 
 Określa dodatkowe argumenty do przekazania do adaptera. Argumenty są określane jako pary nazwa-wartość w formularzu `<n>=<v>`, gdzie `<n>` jest nazwą argumentu, a `<v>` to wartość argumentu. Użyj spacji, aby rozdzielić wiele argumentów.
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
 `--Settings|/Settings:<Settings File>`
 
@@ -176,7 +176,7 @@ Wykonaj testy równolegle. Domyślnie wszystkie dostępne rdzenie na komputerze 
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 
-Uruchom testy zgodne z podanym wyrażeniem. `<Expression>` ma format `<property>Operator<value>[|&<Expression>]`, gdzie operator jest jednym z `=`, `!=`lub `~`. `~` operatora ma semantykę "Contains" i ma zastosowanie do właściwości ciągów, takich jak `DisplayName`. `()` nawiasów są używane do grupowania wyrażeń podrzędnych.
+Uruchom testy zgodne z podanym wyrażeniem. `<Expression>` ma format `<property>Operator<value>[|&<Expression>]`, gdzie operator jest jednym z `=`, `!=`lub `~`. `~` operatora ma semantykę "Contains" i ma zastosowanie do właściwości ciągów, takich jak `DisplayName`. `()` nawiasów są używane do grupowania podwyrażeń.
 
 `-?|--Help|/?|/Help`
 
@@ -224,7 +224,7 @@ Włącza pełne dzienniki dla platformy testowej. Dzienniki są zapisywane do po
 
 Określa dodatkowe argumenty do przekazania do adaptera. Argumenty są określane jako pary nazwa-wartość w formularzu `<n>=<v>`, gdzie `<n>` jest nazwą argumentu, a `<v>` to wartość argumentu. Użyj spacji, aby rozdzielić wiele argumentów.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1. x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1. x](#tab/netcore1x)
 
 `--Settings|/Settings:<Settings File>`
 
@@ -252,7 +252,7 @@ Wykonaj testy równolegle. Domyślnie wszystkie dostępne rdzenie na komputerze 
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 
-Uruchom testy zgodne z podanym wyrażeniem. `<Expression>` ma format `<property>Operator<value>[|&<Expression>]`, gdzie operator jest jednym z `=`, `!=`lub `~`. `~` operatora ma semantykę "Contains" i ma zastosowanie do właściwości ciągów, takich jak `DisplayName`. `()` nawiasów są używane do grupowania wyrażeń podrzędnych.
+Uruchom testy zgodne z podanym wyrażeniem. `<Expression>` ma format `<property>Operator<value>[|&<Expression>]`, gdzie operator jest jednym z `=`, `!=`lub `~`. `~` operatora ma semantykę "Contains" i ma zastosowanie do właściwości ciągów, takich jak `DisplayName`. `()` nawiasów są używane do grupowania podwyrażeń.
 
 `-?|--Help|/?|/Help`
 

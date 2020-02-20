@@ -4,16 +4,16 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-ms.openlocfilehash: 643e2fad1fd07ecb48c66452533cd80af7557be0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: dcc73aba738d6296a44c48aad8b66cd6fc7f4a7b
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712354"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77448442"
 ---
 # <a name="using-delegates-c-programming-guide"></a>Używanie delegatów (Przewodnik programowania w języku C#)
 
-[Delegat](../../language-reference/builtin-types/reference-types.md) jest typem, który bezpiecznie hermetyzuje metodę, podobną do wskaźnika funkcji w C i C++. W przeciwieństwie do wskaźników funkcji języka C, Delegaty są zorientowane obiektowo, typu bezpieczne i bezpieczne. Typ delegata jest definiowany przy użyciu nazwy delegata. Poniższy przykład deklaruje delegata o nazwie `Del`, który może hermetyzować metodę, która pobiera [ciąg](../../language-reference/builtin-types/reference-types.md) jako argument i zwraca wartość [void](../../language-reference/keywords/void.md):
+[Delegat](../../language-reference/builtin-types/reference-types.md) jest typem, który bezpiecznie hermetyzuje metodę, podobną do wskaźnika funkcji w C i C++. W przeciwieństwie do wskaźników funkcji języka C, Delegaty są zorientowane obiektowo, typu bezpieczne i bezpieczne. Typ delegata jest definiowany przy użyciu nazwy delegata. Poniższy przykład deklaruje delegata o nazwie `Del`, który może hermetyzować metodę, która pobiera [ciąg](../../language-reference/builtin-types/reference-types.md) jako argument i zwraca wartość [void](../../language-reference/builtin-types/void.md):
 
 [!code-csharp[csProgGuideDelegates#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#21)]
 
@@ -67,7 +67,7 @@ Porównywanie delegatów dwóch różnych typów przypisanych w czasie kompilacj
 
 [!code-csharp[csProgGuideDelegates#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#30)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Przewodnik programowania w języku C#](../index.md)
 - [Delegaci](./index.md)

@@ -9,49 +9,49 @@ helpviewer_keywords:
 - properties [WPF], transformation
 - transformation properties of brushes [WPF]
 ms.assetid: 8b9bfc09-12fd-4cd5-b445-99949f27bc39
-ms.openlocfilehash: 39b3ad9bebfc56002f77ad6e9026a4446c95455b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1d3a56014e0975f3616b7f90021b4290ced5daab
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020677"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77453133"
 ---
 # <a name="brush-transformation-overview"></a>Przegląd Przekształcanie pędzla
-Klasa pędzla udostępnia dwie właściwości transformacji: <xref:System.Windows.Media.Brush.Transform%2A> i <xref:System.Windows.Media.Brush.RelativeTransform%2A>. Właściwości umożliwiają obracanie, skalowanie, pochylanie i tłumaczenie zawartość pędzla. W tym temacie opisano różnice między te dwie właściwości i przykłady ich użycia.  
+Klasa pędzla udostępnia dwie właściwości transformacji: <xref:System.Windows.Media.Brush.Transform%2A> i <xref:System.Windows.Media.Brush.RelativeTransform%2A>. Właściwości umożliwiają obracanie, skalowanie, pochylanie i tłumaczenie zawartości pędzla. W tym temacie opisano różnice między tymi dwiema właściwościami i przedstawiono przykłady ich użycia.  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Wymagania wstępne  
- Aby zrozumieć, w tym temacie, musisz zrozumieć funkcje pędzla, który jest przekształcany. Aby uzyskać <xref:System.Windows.Media.LinearGradientBrush> i <xref:System.Windows.Media.RadialGradientBrush>, zobacz [malowanie jednolitymi kolorami i gradientami — Przegląd](painting-with-solid-colors-and-gradients-overview.md). Aby uzyskać <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, lub <xref:System.Windows.Media.VisualBrush>, zobacz [malowanie obrazami, rysowaniem i Visual](painting-with-images-drawings-and-visuals.md). Należy także zapoznać się z przekształceń 2D, opisanego w [przekształca Przegląd](transforms-overview.md).  
+ Aby zrozumieć ten temat, należy zapoznać się z funkcjami danego pędzla. Aby uzyskać <xref:System.Windows.Media.LinearGradientBrush> i <xref:System.Windows.Media.RadialGradientBrush>, zobacz [malowanie przy użyciu pełnych kolorów i gradientów — Omówienie](painting-with-solid-colors-and-gradients-overview.md). Aby uzyskać <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>lub <xref:System.Windows.Media.VisualBrush>, zobacz [malowanie przy użyciu obrazów, rysunków i wizualizacji](painting-with-images-drawings-and-visuals.md). Należy również zapoznać się z transformacjemi 2D opisanymi w [Przegląd przekształceń](transforms-overview.md).  
   
 <a name="transformversusrelativetransform"></a>   
-## <a name="differences-between-the-transform-and-relativetransform-properties"></a>Różnice między właściwości RelativeTransform i przekształcenia  
- Jeżeli zastosujesz przekształcenia pędzla <xref:System.Windows.Media.Brush.Transform%2A> właściwość, należy sprawdzić rozmiar malowanego obszaru, czy chcesz przekształcić zawartość pędzla o jej środka. Załóżmy, że malowanego obszaru jest 200 szerokiego pikselach niezależnych od urządzenia i 150 wysoka.  Jeśli użyto <xref:System.Windows.Media.RotateTransform> celu Obróć pędzel danych wyjściowych 45 stopni, o jej środka, można udzielić <xref:System.Windows.Media.RotateTransform> <xref:System.Windows.Media.RotateTransform.CenterX%2A> 100 i <xref:System.Windows.Media.RotateTransform.CenterY%2A> 75.  
+## <a name="differences-between-the-transform-and-relativetransform-properties"></a>Różnice między właściwościami Transform i RelativeTransform  
+ Po zastosowaniu przekształcenia do właściwości <xref:System.Windows.Media.Brush.Transform%2A> pędzla musisz znać rozmiar pomalowanego obszaru, jeśli chcesz przekształcić zawartość pędzla na centrum. Załóżmy, że obszar malowany to 200 urządzenia niezależne od szerokości i 150.  Jeśli użyto <xref:System.Windows.Media.RotateTransform>, aby obrócić dane wyjściowe pędzla 45 stopni o centrum, należy dać <xref:System.Windows.Media.RotateTransform> <xref:System.Windows.Media.RotateTransform.CenterX%2A> 100 i <xref:System.Windows.Media.RotateTransform.CenterY%2A> 75.  
   
- Jeżeli zastosujesz przekształcenia pędzla <xref:System.Windows.Media.Brush.RelativeTransform%2A> właściwości tej transformacji jest stosowany do pędzla, przed jego danych wyjściowych jest mapowany do malowanego obszaru. Poniższa lista zawiera opis kolejności, w którym przetwarzane i przekształcić pędzel zawartość.  
+ Po zastosowaniu transformacji do właściwości <xref:System.Windows.Media.Brush.RelativeTransform%2A> pędzla, transformacja zostanie zastosowana do pędzla, zanim jego wyjście zostanie zamapowane na obszar malowany. Poniższa lista zawiera opis kolejności przetwarzania i przekształcania zawartości pędzla.  
   
-1. Przetwarzanie zawartości pędzla. Aby uzyskać <xref:System.Windows.Media.GradientBrush>, oznacza to, że określenie obszaru gradientu. Aby uzyskać <xref:System.Windows.Media.TileBrush>, <xref:System.Windows.Media.TileBrush.Viewbox%2A> jest mapowany na <xref:System.Windows.Media.TileBrush.Viewport%2A>. Ten staje się dane wyjściowe pędzla.  
+1. Przetwórz zawartość pędzla. W przypadku <xref:System.Windows.Media.GradientBrush>oznacza to określenie obszaru gradientu. W przypadku <xref:System.Windows.Media.TileBrush><xref:System.Windows.Media.TileBrush.Viewbox%2A> jest mapowany na <xref:System.Windows.Media.TileBrush.Viewport%2A>. To będzie wynik pędzla.  
   
-2. Projekt pędzel danych wyjściowych na prostokąt przekształcenia 1 x 1.  
+2. Zaprojektuj dane wyjściowe pędzla na prostokąt przekształcenia 1 x 1.  
   
-3. Stosowanie pędzla <xref:System.Windows.Media.Brush.RelativeTransform%2A>, jeśli taki istnieje.  
+3. Zastosuj <xref:System.Windows.Media.Brush.RelativeTransform%2A>pędzla, jeśli go zawiera.  
   
-4. Projekt przekształcone dane wyjściowe do obszaru do malowania.  
+4. Zaprojektuj przekształcone dane wyjściowe w obszarze do malowania.  
   
-5. Stosowanie pędzla <xref:System.Windows.Media.Transform>, jeśli taki istnieje.  
+5. Zastosuj <xref:System.Windows.Media.Transform>pędzla, jeśli go zawiera.  
   
- Ponieważ <xref:System.Windows.Media.Brush.RelativeTransform%2A> jest stosowany, natomiast pędzla danych wyjściowych jest mapowany do prostokąta 1 x 1, przekształcenie Centrum wartości przesunięcia wydaje się być względny. Na przykład, jeśli użyto <xref:System.Windows.Media.RotateTransform> celu Obróć pędzel danych wyjściowych 45 stopni, o jej środka, można udzielić <xref:System.Windows.Media.RotateTransform> <xref:System.Windows.Media.RotateTransform.CenterX%2A> wynosi 0,5 i <xref:System.Windows.Media.RotateTransform.CenterY%2A> wynosi 0,5.  
+ Ponieważ <xref:System.Windows.Media.Brush.RelativeTransform%2A> jest stosowany, podczas gdy dane wyjściowe pędzla są mapowane do prostokąta 1 x 1, przekształcenie i przesunięcia są widoczne jako względne. Na przykład, jeśli użyto <xref:System.Windows.Media.RotateTransform>, aby obrócić dane wyjściowe pędzla 45 stopni o centrum, należy dać <xref:System.Windows.Media.RotateTransform> <xref:System.Windows.Media.RotateTransform.CenterX%2A> 0,5 i <xref:System.Windows.Media.RotateTransform.CenterY%2A> 0,5.  
   
- Na poniższej ilustracji przedstawiono dane wyjściowe zostaną przesunięte o 45 stopni przy użyciu pędzli kilka <xref:System.Windows.Media.Brush.RelativeTransform%2A> i <xref:System.Windows.Media.Brush.Transform%2A> właściwości.  
+ Na poniższej ilustracji przedstawiono dane wyjściowe kilku pędzli obróconych o 45 stopni przy użyciu właściwości <xref:System.Windows.Media.Brush.RelativeTransform%2A> i <xref:System.Windows.Media.Brush.Transform%2A>.  
   
  ![Właściwości RelativeTransform i Transform](./media/graphicsmm-brushrelativetransform-transform-small.png "graphicsmm_brushrelativetransform_transform_small")  
   
 <a name="relativetransformandtilebrush"></a>   
-## <a name="using-relativetransform-with-a-tilebrush"></a>Za pomocą RelativeTransform z użyciem TileBrush  
- Ponieważ pędzle kafelka są bardziej skomplikowane niż inne pędzle, stosując <xref:System.Windows.Media.Brush.RelativeTransform%2A> do jednego może dawać nieoczekiwane wyniki. Za przykład niech posłuży poniższej ilustracji.  
+## <a name="using-relativetransform-with-a-tilebrush"></a>Używanie RelativeTransform z obiektem TileBrush  
+ Ponieważ pędzle kafelków są bardziej złożone niż inne pędzle, zastosowanie <xref:System.Windows.Media.Brush.RelativeTransform%2A> do jednego może dać nieoczekiwane wyniki. Na przykład wykonaj poniższą ilustrację.  
   
- ![Obraz źródłowy](./media/graphicsmm-reltransform-1-original-image.jpg "graphicsmm_reltransform_1_original_image")  
+ ![Obraz źródła](./media/graphicsmm-reltransform-1-original-image.jpg "graphicsmm_reltransform_1_original_image")  
   
- W poniższym przykładzie użyto <xref:System.Windows.Media.ImageBrush> namalować prostokątny obszar za pomocą wcześniejszej ilustracji. Ma to zastosowanie <xref:System.Windows.Media.RotateTransform> do <xref:System.Windows.Media.ImageBrush> obiektu <xref:System.Windows.Media.Brush.RelativeTransform%2A> właściwość i zestawach jego <xref:System.Windows.Media.TileBrush.Stretch%2A> właściwości <xref:System.Windows.Media.Stretch.UniformToFill>, który powinno zachować współczynnik proporcji obrazu, po jego jest rozciągany tak, aby wypełnić prostokąt.  
+ Poniższy przykład używa <xref:System.Windows.Media.ImageBrush>, aby malować prostokątny obszar z powyższym obrazem. Stosuje <xref:System.Windows.Media.RotateTransform> do właściwości <xref:System.Windows.Media.Brush.RelativeTransform%2A> obiektu <xref:System.Windows.Media.ImageBrush> i ustawia jej Właściwość <xref:System.Windows.Media.TileBrush.Stretch%2A> na <xref:System.Windows.Media.Stretch.UniformToFill>, która powinna zachować współczynnik proporcji obrazu, gdy zostanie on rozciągnięty w celu całkowitego wypełnienia prostokąta.  
   
  [!code-xaml[BrushOverviewExamples_snip#GraphicsMMRelativeTransformExample2Inline](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/RelativeTransformIllustration.xaml#graphicsmmrelativetransformexample2inline)]  
   
@@ -59,45 +59,45 @@ Klasa pędzla udostępnia dwie właściwości transformacji: <xref:System.Window
   
  ![Przekształcone dane wyjściowe](./media/graphicsmm-reltransform-6-output.png "graphicsmm_reltransform_6_output")  
   
- Należy zauważyć, że obraz jest zniekształcony, nawet jeśli pędzla <xref:System.Windows.Media.TileBrush.Stretch%2A> została ustawiona na <xref:System.Windows.Media.Stretch.UniformToFill>. To dlatego przekształcenie względne są stosowane po pędzla <xref:System.Windows.Media.TileBrush.Viewbox%2A> jest mapowany na jego <xref:System.Windows.Media.TileBrush.Viewport%2A>. Na poniższej liście opisano każdy etap procesu:  
+ Zauważ, że obraz jest zniekształcony, mimo że <xref:System.Windows.Media.TileBrush.Stretch%2A> pędzla został ustawiony na <xref:System.Windows.Media.Stretch.UniformToFill>. Dzieje się tak, ponieważ Przekształć względne jest stosowane po zamapowaniu <xref:System.Windows.Media.TileBrush.Viewbox%2A> pędzla do jego <xref:System.Windows.Media.TileBrush.Viewport%2A>. Poniższa lista zawiera opis poszczególnych etapów procesu:  
   
-1. Projekt pędzla zawartość (<xref:System.Windows.Media.TileBrush.Viewbox%2A>) na jego podstawowy Kafelek (<xref:System.Windows.Media.TileBrush.Viewport%2A>) przy użyciu pędzli <xref:System.Windows.Media.TileBrush.Stretch%2A> ustawienie.  
+1. Zaprojektuj zawartość pędzla (<xref:System.Windows.Media.TileBrush.Viewbox%2A>) na kafelku podstawowym (<xref:System.Windows.Media.TileBrush.Viewport%2A>) przy użyciu ustawienia <xref:System.Windows.Media.TileBrush.Stretch%2A> pędzla.  
   
-     ![Rozciąganie Viewbox, aby dopasować okienka ekranu](./media/graphicsmm-reltransform-2-viewbox-to-viewport.png "graphicsmm_reltransform_2_viewbox_to_viewport")  
+     ![Rozciągnij Viewbox w celu dopasowania do okienka ekranu](./media/graphicsmm-reltransform-2-viewbox-to-viewport.png "graphicsmm_reltransform_2_viewbox_to_viewport")  
   
-2. Projekt podstawowy Kafelek na prostokąt przekształcenia 1 x 1.  
+2. Utwórz projekt kafelka podstawowego na 1 x 1.  
   
-     ![Okienko ekranu mapy na prostokąt przekształcenia](./media/graphicsmm-reltransform-3-output-to-transform.png "graphicsmm_reltransform_3_output_to_transform")  
+     ![Mapuj okienko ekranu na prostokąt przekształcenia](./media/graphicsmm-reltransform-3-output-to-transform.png "graphicsmm_reltransform_3_output_to_transform")  
   
 3. Zastosuj <xref:System.Windows.Media.RotateTransform>.  
   
      ![Zastosuj przekształcenie względne](./media/graphicsmm-reltransform-4-transform-rotate.png "graphicsmm_reltransform_4_transform_rotate")  
   
-4. Projekt po przekształceniu podstawowy Kafelek do obszaru do malowania.  
+4. Zaprojektuj przekształcony kafelek podstawowy na obszar do malowania.  
   
-     ![Projekt po przekształceniu pędzla do obszaru wyjściowego](./media/graphicsmm-reltransform-5-transform-to-output.png "graphicsmm_reltransform_5_transform_to_output")  
+     ![Zaprojektuj przekształcony pędzel na obszar wyjściowy](./media/graphicsmm-reltransform-5-transform-to-output.png "graphicsmm_reltransform_5_transform_to_output")  
   
 <a name="rotateexample"></a>   
-## <a name="example-rotate-an-imagebrush-45-degrees"></a>Przykład: Obróć ImageBrush 45 stopni  
- Następujący przykład dotyczy <xref:System.Windows.Media.RotateTransform> do <xref:System.Windows.Media.Brush.RelativeTransform%2A> właściwość <xref:System.Windows.Media.ImageBrush>. <xref:System.Windows.Media.RotateTransform> Obiektu <xref:System.Windows.Media.RotateTransform.CenterX%2A> i <xref:System.Windows.Media.RotateTransform.CenterY%2A> właściwości są ustawione na 0,5 punktu współrzędnych względnych Centrum zawartości. W rezultacie zawartość pędzla są obracane o jej środka.  
+## <a name="example-rotate-an-imagebrush-45-degrees"></a>Przykład: obracanie ImageBrush 45 stopni  
+ Poniższy przykład stosuje <xref:System.Windows.Media.RotateTransform> do właściwości <xref:System.Windows.Media.Brush.RelativeTransform%2A> <xref:System.Windows.Media.ImageBrush>. Właściwości <xref:System.Windows.Media.RotateTransform.CenterX%2A> i <xref:System.Windows.Media.RotateTransform.CenterY%2A> obiektu <xref:System.Windows.Media.RotateTransform> są ustawiane na 0,5, względnych współrzędnych punktu centralnego zawartości. W efekcie zawartość pędzla zostanie obrócona na centrum.  
   
  [!code-csharp[BrushesIntroduction_snip#ImageBrushRelativeTransformExample](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTransformExample.cs#imagebrushrelativetransformexample)]
  [!code-vb[BrushesIntroduction_snip#ImageBrushRelativeTransformExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtransformexample.vb#imagebrushrelativetransformexample)]
  [!code-xaml[BrushesIntroduction_snip#ImageBrushRelativeTransformExample](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTransformExample.xaml#imagebrushrelativetransformexample)]  
   
- Dotyczy również w następnym przykładzie <xref:System.Windows.Media.RotateTransform> do <xref:System.Windows.Media.ImageBrush>, ale używa <xref:System.Windows.Media.Brush.Transform%2A> właściwości zamiast <xref:System.Windows.Media.Brush.RelativeTransform%2A> właściwości. Aby obrócić pędzla o jej środka <xref:System.Windows.Media.RotateTransform> obiektu <xref:System.Windows.Media.RotateTransform.CenterX%2A> i <xref:System.Windows.Media.RotateTransform.CenterY%2A> musi być ustawione na współrzędne bezwzględne. Ponieważ prostokąta jest malowane przez pędzel 175 pikseli 90, jest jego punktu centralnego (87.5, 45).  
+ W następnym przykładzie zastosowano również <xref:System.Windows.Media.RotateTransform> do <xref:System.Windows.Media.ImageBrush>, ale zamiast właściwości <xref:System.Windows.Media.Brush.RelativeTransform%2A> zostanie użyta Właściwość <xref:System.Windows.Media.Brush.Transform%2A>. Aby obrócić pędzel o centrum, <xref:System.Windows.Media.RotateTransform.CenterX%2A> i <xref:System.Windows.Media.RotateTransform.CenterY%2A> obiektu <xref:System.Windows.Media.RotateTransform> muszą być ustawione na współrzędne bezwzględne. Ponieważ prostokąt malowany przez pędzel jest 175 o 90 pikseli, jego punkt środkowy to (87,5, 45).  
   
  [!code-csharp[BrushesIntroduction_snip#ImageBrushTransformExample](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTransformExample.cs#imagebrushtransformexample)]
  [!code-vb[BrushesIntroduction_snip#ImageBrushTransformExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtransformexample.vb#imagebrushtransformexample)]
  [!code-xaml[BrushesIntroduction_snip#ImageBrushTransformExample](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTransformExample.xaml#imagebrushtransformexample)]  
   
- Na poniższej ilustracji przedstawiono pędzli bez transformacji, z zadaniami transformacji stosowane do <xref:System.Windows.Media.Brush.RelativeTransform%2A> właściwości i przekształcenie zastosowane do <xref:System.Windows.Media.Brush.Transform%2A> właściwości.  
+ Na poniższej ilustracji przedstawiono pędzel bez przekształcenia, z przekształceniem stosowanym do właściwości <xref:System.Windows.Media.Brush.RelativeTransform%2A> i przekształceniem stosowanym do właściwości <xref:System.Windows.Media.Brush.Transform%2A>.  
   
- ![Pędzel RelativeTransform i przekształcać ustawienia](./media/wcpsdk-graphicsmm-transformandrelativetransform.png "wcpsdk_graphicsmm_transformandrelativetransform")  
+ ![Ustawienia RelativeTransform i przekształcenia pędzla](./media/wcpsdk-graphicsmm-transformandrelativetransform.png "wcpsdk_graphicsmm_transformandrelativetransform")  
   
- W tym przykładzie jest częścią większego przykładu. Aby uzyskać pełny przykład, zobacz [przykład pędzle](https://go.microsoft.com/fwlink/?LinkID=159973). Aby uzyskać więcej informacji na temat pędzle, zobacz [pędzle WPF — Przegląd](wpf-brushes-overview.md).  
+ Ten przykład jest częścią większego przykładu. Pełny przykład można znaleźć w [przykładzie pędzli](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/Brushes). Aby uzyskać więcej informacji na temat pędzli, zobacz [Omówienie pędzli WPF](wpf-brushes-overview.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Windows.Media.Brush.Transform%2A>
 - <xref:System.Windows.Media.Brush.RelativeTransform%2A>

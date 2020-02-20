@@ -3,12 +3,12 @@ title: Typy danych programu SQL Server i ADO.NET
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: 81b43550-23e8-43bb-b460-7eb8ac825c33
-ms.openlocfilehash: 9baffc7a439c851ead7ec0e12899adf418174e22
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: f727c69b1dd5c23c6a89911005256de70255fd4c
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76979862"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452334"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>Typy danych programu SQL Server i ADO.NET
 SQL Server i .NET Framework są oparte na różnych systemach typu, co może spowodować utratę danych. Aby zachować integralność danych, Dostawca danych .NET Framework dla SQL Server (<xref:System.Data.SqlClient>) zapewnia metody dostępu typu Type do pracy z SQL Server danymi. Możesz użyć wyliczeń z klas <xref:System.Data.SqlDbType>, aby określić <xref:System.Data.SqlClient.SqlParameter> typy danych.  
@@ -19,9 +19,9 @@ SQL Server i .NET Framework są oparte na różnych systemach typu, co może spo
   
  SQL Server typy danych, które są dostępne do użycia w aplikacji, zależą od używanej wersji programu SQL Server. Aby uzyskać więcej informacji, zobacz odpowiednią wersję dokumentacji SQL Server Books Online w poniższej tabeli.  
   
- **Książka SQL Server online**  
+ **SQL Server documentation (Dokumentacja programu SQL Server)**  
   
-1. [Typy danych (aparat bazy danych)](https://go.microsoft.com/fwlink/?LinkID=107468)  
+1. [Typy danych (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql)  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Właściwość SqlTypes i zestaw danych](sqltypes-and-the-dataset.md)  
@@ -42,7 +42,7 @@ SQL Server i .NET Framework są oparte na różnych systemach typu, co może spo
  [Dane XML w programie SQL Server](xml-data-in-sql-server.md)  
  Opisuje sposób pracy z danymi XML pobranymi z SQL Server.  
   
-## <a name="reference"></a>Tematy pomocy  
+## <a name="reference"></a>Dokumentacja  
  <xref:System.Data.DataSet>  
  Opisuje klasę `DataSet` i wszystkich jej elementów członkowskich.  
   
@@ -55,7 +55,7 @@ SQL Server i .NET Framework są oparte na różnych systemach typu, co może spo
  <xref:System.Data.DbType>  
  Opisuje Wyliczenie `DbType` i wszystkie jego elementy członkowskie.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Mapowanie typu danych serwera SQL](../sql-server-data-type-mappings.md)
 - [Konfigurowanie parametrów i typów danych parametrów](../configuring-parameters-and-parameter-data-types.md)

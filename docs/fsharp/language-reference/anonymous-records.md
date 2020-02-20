@@ -2,12 +2,12 @@
 title: Rekordy anonimowe
 description: Dowiedz się, jak korzystać z metod tworzenia i używania rekordów anonimowych oraz funkcji języka, która ułatwia manipulowanie danymi.
 ms.date: 06/12/2019
-ms.openlocfilehash: 0a7a819cc471c6579feacd621ed15aa89a6423ba
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 061fd3279c84b9a3161c687d9392947ee7ce9c83
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569468"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77453029"
 ---
 # <a name="anonymous-records"></a>Rekordy anonimowe
 
@@ -229,10 +229,10 @@ Rekordy anonimowe można serializować tak samo jak z nazwanymi rekordami. Oto p
 ```fsharp
 open Newtonsoft.Json
 
-let phillip = {| name="Phillip"; age=28 |}
-JsonConvert.SerializeObject(phillip)
+let phillip' = {| name="Phillip"; age=28 |}
+let philStr = JsonConvert.SerializeObject(phillip') 
 
-let phillip = JsonConvert.DeserializeObject<{|name: string; age: int|}>(str)
+let phillip = JsonConvert.DeserializeObject<{|name: string; age: int|}>(philStr)
 printfn "Name: %s Age: %d" phillip.name phillip.age
 ```
 

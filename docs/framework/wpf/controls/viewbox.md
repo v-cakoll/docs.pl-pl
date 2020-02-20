@@ -9,24 +9,24 @@ helpviewer_keywords:
 - Viewbox control [WPF]
 - scaling elements [WPF], Viewbox control
 ms.assetid: 00fc0a16-1078-4d55-9849-ffaf7da96531
-ms.openlocfilehash: 707375230acea3558b060f398add919370d352b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b99bf4cc4ff6288501279730a47c2e9e57662fdd
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761198"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452139"
 ---
-# <a name="viewbox"></a><span data-ttu-id="da41c-102">Okno widoku</span><span class="sxs-lookup"><span data-stu-id="da41c-102">Viewbox</span></span>
-<span data-ttu-id="da41c-103"><xref:System.Windows.Controls.Viewbox> Formant jest używany do rozciąganie lub skalowanie elementu podrzędnego.</span><span class="sxs-lookup"><span data-stu-id="da41c-103">The <xref:System.Windows.Controls.Viewbox> control is used to stretch or scale a child element.</span></span>  
+# <a name="viewbox"></a><span data-ttu-id="78f05-102">Okno widoku</span><span class="sxs-lookup"><span data-stu-id="78f05-102">Viewbox</span></span>
+<span data-ttu-id="78f05-103">Formant <xref:System.Windows.Controls.Viewbox> służy do rozciągnięcia lub skalowania elementu podrzędnego.</span><span class="sxs-lookup"><span data-stu-id="78f05-103">The <xref:System.Windows.Controls.Viewbox> control is used to stretch or scale a child element.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="da41c-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="da41c-104">In This Section</span></span>  
- [<span data-ttu-id="da41c-105">Stosowanie właściwości rozciągania do zawartości okna widoku</span><span class="sxs-lookup"><span data-stu-id="da41c-105">Apply Stretch Properties to the Contents of a Viewbox</span></span>](how-to-apply-stretch-properties-to-the-contents-of-a-viewbox.md)  
+## <a name="in-this-section"></a><span data-ttu-id="78f05-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="78f05-104">In This Section</span></span>  
+ [<span data-ttu-id="78f05-105">Stosowanie właściwości rozciągania do zawartości okna widoku</span><span class="sxs-lookup"><span data-stu-id="78f05-105">Apply Stretch Properties to the Contents of a Viewbox</span></span>](how-to-apply-stretch-properties-to-the-contents-of-a-viewbox.md)  
   
-## <a name="reference"></a><span data-ttu-id="da41c-106">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="da41c-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="78f05-106">Dokumentacja</span><span class="sxs-lookup"><span data-stu-id="78f05-106">Reference</span></span>  
  <xref:System.Windows.Controls.Viewbox>  
   
  <xref:System.Windows.Controls.Image>  
   
-## <a name="see-also"></a><span data-ttu-id="da41c-107">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="da41c-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="78f05-107">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="78f05-107">See also</span></span>
 
-- [<span data-ttu-id="da41c-108">Przykładu z galerii kontrolki WPF</span><span class="sxs-lookup"><span data-stu-id="da41c-108">WPF Controls Gallery Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=160053)
+- [<span data-ttu-id="78f05-108">Przykład galerii formantów WPF</span><span class="sxs-lookup"><span data-stu-id="78f05-108">WPF Controls Gallery Sample</span></span>](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/ControlsAndLayout)

@@ -2,20 +2,20 @@
 title: Rekordy anonimowe
 description: Dowiedz się, jak korzystać z metod tworzenia i używania rekordów anonimowych oraz funkcji języka, która ułatwia manipulowanie danymi.
 ms.date: 06/12/2019
-ms.openlocfilehash: 0a7a819cc471c6579feacd621ed15aa89a6423ba
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 061fd3279c84b9a3161c687d9392947ee7ce9c83
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569468"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77453029"
 ---
-# <a name="anonymous-records"></a><span data-ttu-id="2c102-103">Rekordy anonimowe</span><span class="sxs-lookup"><span data-stu-id="2c102-103">Anonymous Records</span></span>
+# <a name="anonymous-records"></a><span data-ttu-id="6002f-103">Rekordy anonimowe</span><span class="sxs-lookup"><span data-stu-id="6002f-103">Anonymous Records</span></span>
 
-<span data-ttu-id="2c102-104">Rekordy anonimowe to proste Agregowanie wartości nazwanych, które nie muszą być deklarowane przed użyciem.</span><span class="sxs-lookup"><span data-stu-id="2c102-104">Anonymous records are simple aggregates of named values that don't need to be declared before use.</span></span> <span data-ttu-id="2c102-105">Można zadeklarować je jako struktury lub typy referencyjne.</span><span class="sxs-lookup"><span data-stu-id="2c102-105">You can declare them as either structs or reference types.</span></span> <span data-ttu-id="2c102-106">Domyślnie są to typy odwołań.</span><span class="sxs-lookup"><span data-stu-id="2c102-106">They're reference types by default.</span></span>
+<span data-ttu-id="6002f-104">Rekordy anonimowe to proste Agregowanie wartości nazwanych, które nie muszą być deklarowane przed użyciem.</span><span class="sxs-lookup"><span data-stu-id="6002f-104">Anonymous records are simple aggregates of named values that don't need to be declared before use.</span></span> <span data-ttu-id="6002f-105">Można zadeklarować je jako struktury lub typy referencyjne.</span><span class="sxs-lookup"><span data-stu-id="6002f-105">You can declare them as either structs or reference types.</span></span> <span data-ttu-id="6002f-106">Domyślnie są to typy odwołań.</span><span class="sxs-lookup"><span data-stu-id="6002f-106">They're reference types by default.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="2c102-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="2c102-107">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="6002f-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="6002f-107">Syntax</span></span>
 
-<span data-ttu-id="2c102-108">W poniższych przykładach przedstawiono składnię rekordu anonimowego.</span><span class="sxs-lookup"><span data-stu-id="2c102-108">The following examples demonstrate the anonymous record syntax.</span></span> <span data-ttu-id="2c102-109">Elementy rozdzielane jako `[item]` są opcjonalne.</span><span class="sxs-lookup"><span data-stu-id="2c102-109">Items delimited as `[item]` are optional.</span></span>
+<span data-ttu-id="6002f-108">W poniższych przykładach przedstawiono składnię rekordu anonimowego.</span><span class="sxs-lookup"><span data-stu-id="6002f-108">The following examples demonstrate the anonymous record syntax.</span></span> <span data-ttu-id="6002f-109">Elementy rozdzielane jako `[item]` są opcjonalne.</span><span class="sxs-lookup"><span data-stu-id="6002f-109">Items delimited as `[item]` are optional.</span></span>
 
 ```fsharp
 // Construct an anonymous record
@@ -28,11 +28,11 @@ let value-name = Type-Name<[struct] {| Label1: Type1; Label2: Type2; ...|}>
 let function-name (arg-name: [struct] {| Label1: Type1; Label2: Type2; ...|}) ...
 ```
 
-## <a name="basic-usage"></a><span data-ttu-id="2c102-110">Podstawowe użycie</span><span class="sxs-lookup"><span data-stu-id="2c102-110">Basic usage</span></span>
+## <a name="basic-usage"></a><span data-ttu-id="6002f-110">Podstawowe użycie</span><span class="sxs-lookup"><span data-stu-id="6002f-110">Basic usage</span></span>
 
-<span data-ttu-id="2c102-111">Rekordy anonimowe najlepiej rozumieją się F# jako typy rekordów, które nie muszą być zadeklarowane przed utworzeniem wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="2c102-111">Anonymous records are best thought of as F# record types that don't need to be declared before instantiation.</span></span>
+<span data-ttu-id="6002f-111">Rekordy anonimowe najlepiej rozumieją się F# jako typy rekordów, które nie muszą być zadeklarowane przed utworzeniem wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="6002f-111">Anonymous records are best thought of as F# record types that don't need to be declared before instantiation.</span></span>
 
-<span data-ttu-id="2c102-112">Na przykład, w jaki sposób można korzystać z funkcji, która generuje rekord anonimowy:</span><span class="sxs-lookup"><span data-stu-id="2c102-112">For example, here how you can interact with a function that produces an anonymous record:</span></span>
+<span data-ttu-id="6002f-112">Na przykład, w jaki sposób można korzystać z funkcji, która generuje rekord anonimowy:</span><span class="sxs-lookup"><span data-stu-id="6002f-112">For example, here how you can interact with a function that produces an anonymous record:</span></span>
 
 ```fsharp
 open System
@@ -50,7 +50,7 @@ printfn "Circle with radius: %f has diameter %f, area %f, and circumference %f"
     r stats.Diameter stats.Area stats.Circumference
 ```
 
-<span data-ttu-id="2c102-113">Poniższy przykład rozszerza na poprzednią wartość za pomocą funkcji `printCircleStats`, która pobiera rekord anonimowy jako dane wejściowe:</span><span class="sxs-lookup"><span data-stu-id="2c102-113">The following example expands on the previous one with a `printCircleStats` function that takes an anonymous record as input:</span></span>
+<span data-ttu-id="6002f-113">Poniższy przykład rozszerza na poprzednią wartość za pomocą funkcji `printCircleStats`, która pobiera rekord anonimowy jako dane wejściowe:</span><span class="sxs-lookup"><span data-stu-id="6002f-113">The following example expands on the previous one with a `printCircleStats` function that takes an anonymous record as input:</span></span>
 
 ```fsharp
 open System
@@ -71,7 +71,7 @@ let stats = getCircleStats r
 printCircleStats r stats
 ```
 
-<span data-ttu-id="2c102-114">Wywoływanie `printCircleStats` z dowolnym typem rekordu anonimowego, który nie ma tego samego "kształtu", ponieważ typ danych wejściowych nie zostanie skompilowany:</span><span class="sxs-lookup"><span data-stu-id="2c102-114">Calling `printCircleStats` with any anonymous record type that doesn't have the same "shape" as the input type will fail to compile:</span></span>
+<span data-ttu-id="6002f-114">Wywoływanie `printCircleStats` z dowolnym typem rekordu anonimowego, który nie ma tego samego "kształtu", ponieważ typ danych wejściowych nie zostanie skompilowany:</span><span class="sxs-lookup"><span data-stu-id="6002f-114">Calling `printCircleStats` with any anonymous record type that doesn't have the same "shape" as the input type will fail to compile:</span></span>
 
 ```fsharp
 printCircleStats r {| Diameter = 2.0; Area = 4.0; MyCircumference = 12.566371 |}
@@ -79,9 +79,9 @@ printCircleStats r {| Diameter = 2.0; Area = 4.0; MyCircumference = 12.566371 |}
 // '["Area"; "Circumference"; "Diameter"]' and '["Area"; "Diameter"; "MyCircumference"]'
 ```
 
-## <a name="struct-anonymous-records"></a><span data-ttu-id="2c102-115">Anonimowe rekordy struktury</span><span class="sxs-lookup"><span data-stu-id="2c102-115">Struct anonymous records</span></span>
+## <a name="struct-anonymous-records"></a><span data-ttu-id="6002f-115">Anonimowe rekordy struktury</span><span class="sxs-lookup"><span data-stu-id="6002f-115">Struct anonymous records</span></span>
 
-<span data-ttu-id="2c102-116">Rekordy anonimowe można także definiować jako struktury za pomocą opcjonalnego słowa kluczowego `struct`.</span><span class="sxs-lookup"><span data-stu-id="2c102-116">Anonymous records can also be defined as struct with the optional `struct` keyword.</span></span> <span data-ttu-id="2c102-117">Poniższy przykład rozszerza poprzednią wartość przez produkowanie i zużywanie anonimowego rekordu struktury:</span><span class="sxs-lookup"><span data-stu-id="2c102-117">The following example augments the previous one by producing and consuming a struct anonymous record:</span></span>
+<span data-ttu-id="6002f-116">Rekordy anonimowe można także definiować jako struktury za pomocą opcjonalnego słowa kluczowego `struct`.</span><span class="sxs-lookup"><span data-stu-id="6002f-116">Anonymous records can also be defined as struct with the optional `struct` keyword.</span></span> <span data-ttu-id="6002f-117">Poniższy przykład rozszerza poprzednią wartość przez produkowanie i zużywanie anonimowego rekordu struktury:</span><span class="sxs-lookup"><span data-stu-id="6002f-117">The following example augments the previous one by producing and consuming a struct anonymous record:</span></span>
 
 ```fsharp
 open System
@@ -104,9 +104,9 @@ let stats = getCircleStats r
 printCircleStats r stats
 ```
 
-### <a name="structness-inference"></a><span data-ttu-id="2c102-118">Wnioskowanie o strukturze</span><span class="sxs-lookup"><span data-stu-id="2c102-118">Structness inference</span></span>
+### <a name="structness-inference"></a><span data-ttu-id="6002f-118">Wnioskowanie o strukturze</span><span class="sxs-lookup"><span data-stu-id="6002f-118">Structness inference</span></span>
 
-<span data-ttu-id="2c102-119">Anonimowe rekordy struktury pozwalają również na "wnioskowanie o strukturze", gdzie nie trzeba określać słowa kluczowego `struct` w witrynie wywołania.</span><span class="sxs-lookup"><span data-stu-id="2c102-119">Struct anonymous records also allow for "structness inference" where you do not need to specify the `struct` keyword at the call site.</span></span> <span data-ttu-id="2c102-120">W tym przykładzie Elide słowo kluczowe `struct` podczas wywoływania `printCircleStats`:</span><span class="sxs-lookup"><span data-stu-id="2c102-120">In this example, you elide the `struct` keyword when calling `printCircleStats`:</span></span>
+<span data-ttu-id="6002f-119">Anonimowe rekordy struktury pozwalają również na "wnioskowanie o strukturze", gdzie nie trzeba określać słowa kluczowego `struct` w witrynie wywołania.</span><span class="sxs-lookup"><span data-stu-id="6002f-119">Struct anonymous records also allow for "structness inference" where you do not need to specify the `struct` keyword at the call site.</span></span> <span data-ttu-id="6002f-120">W tym przykładzie Elide słowo kluczowe `struct` podczas wywoływania `printCircleStats`:</span><span class="sxs-lookup"><span data-stu-id="6002f-120">In this example, you elide the `struct` keyword when calling `printCircleStats`:</span></span>
 
 ```fsharp
 
@@ -117,11 +117,11 @@ let printCircleStats r (stats: struct {| Area: float; Circumference: float; Diam
 printCircleStats r {| Area = 4.0; Circumference = 12.6; Diameter = 12.6 |}
 ```
 
-<span data-ttu-id="2c102-121">Wzorzec odwrotny — Określanie `struct`, gdy typ danych wejściowych nie jest rekordem anonimowym struktury — kompilacja nie zostanie ukończona.</span><span class="sxs-lookup"><span data-stu-id="2c102-121">The reverse pattern - specifying `struct` when the input type is not a struct anonymous record - will fail to compile.</span></span>
+<span data-ttu-id="6002f-121">Wzorzec odwrotny — Określanie `struct`, gdy typ danych wejściowych nie jest rekordem anonimowym struktury — kompilacja nie zostanie ukończona.</span><span class="sxs-lookup"><span data-stu-id="6002f-121">The reverse pattern - specifying `struct` when the input type is not a struct anonymous record - will fail to compile.</span></span>
 
-## <a name="embedding-anonymous-records-within-other-types"></a><span data-ttu-id="2c102-122">Osadzanie rekordów anonimowych w innych typach</span><span class="sxs-lookup"><span data-stu-id="2c102-122">Embedding anonymous records within other types</span></span>
+## <a name="embedding-anonymous-records-within-other-types"></a><span data-ttu-id="6002f-122">Osadzanie rekordów anonimowych w innych typach</span><span class="sxs-lookup"><span data-stu-id="6002f-122">Embedding anonymous records within other types</span></span>
 
-<span data-ttu-id="2c102-123">Jest to przydatne do deklarowania [związków rozłącznych](discriminated-unions.md) , których przypadki są rekordami.</span><span class="sxs-lookup"><span data-stu-id="2c102-123">It's useful to declare [discriminated unions](discriminated-unions.md) whose cases are records.</span></span> <span data-ttu-id="2c102-124">Ale jeśli dane w rekordach są tego samego typu co związek rozłącznych, należy zdefiniować wszystkie typy jako wzajemnie cykliczne.</span><span class="sxs-lookup"><span data-stu-id="2c102-124">But if the data in the records is the same type as the discriminated union, you must define all types as mutually recursive.</span></span> <span data-ttu-id="2c102-125">Korzystanie z rekordów anonimowych pozwala uniknąć tego ograniczenia.</span><span class="sxs-lookup"><span data-stu-id="2c102-125">Using anonymous records avoids this restriction.</span></span> <span data-ttu-id="2c102-126">Poniżej znajduje się przykładowy typ i funkcja, która pasuje do wzorca:</span><span class="sxs-lookup"><span data-stu-id="2c102-126">What follows is an example type and function that pattern matches over it:</span></span>
+<span data-ttu-id="6002f-123">Jest to przydatne do deklarowania [związków rozłącznych](discriminated-unions.md) , których przypadki są rekordami.</span><span class="sxs-lookup"><span data-stu-id="6002f-123">It's useful to declare [discriminated unions](discriminated-unions.md) whose cases are records.</span></span> <span data-ttu-id="6002f-124">Ale jeśli dane w rekordach są tego samego typu co związek rozłącznych, należy zdefiniować wszystkie typy jako wzajemnie cykliczne.</span><span class="sxs-lookup"><span data-stu-id="6002f-124">But if the data in the records is the same type as the discriminated union, you must define all types as mutually recursive.</span></span> <span data-ttu-id="6002f-125">Korzystanie z rekordów anonimowych pozwala uniknąć tego ograniczenia.</span><span class="sxs-lookup"><span data-stu-id="6002f-125">Using anonymous records avoids this restriction.</span></span> <span data-ttu-id="6002f-126">Poniżej znajduje się przykładowy typ i funkcja, która pasuje do wzorca:</span><span class="sxs-lookup"><span data-stu-id="6002f-126">What follows is an example type and function that pattern matches over it:</span></span>
 
 ```fsharp
 type FullName = { FirstName: string; LastName: string }
@@ -139,23 +139,23 @@ let getFirstName e =
     | Executive ex -> ex.Name.FirstName
 ```
 
-## <a name="copy-and-update-expressions"></a><span data-ttu-id="2c102-127">Kopiuj i Aktualizuj wyrażenia</span><span class="sxs-lookup"><span data-stu-id="2c102-127">Copy and update expressions</span></span>
+## <a name="copy-and-update-expressions"></a><span data-ttu-id="6002f-127">Kopiuj i Aktualizuj wyrażenia</span><span class="sxs-lookup"><span data-stu-id="6002f-127">Copy and update expressions</span></span>
 
-<span data-ttu-id="2c102-128">Rekordy anonimowe obsługują tworzenie z [wyrażeniami kopiowania i aktualizowania](copy-and-update-record-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="2c102-128">Anonymous records support construction with [copy and update expressions](copy-and-update-record-expressions.md).</span></span> <span data-ttu-id="2c102-129">Można na przykład utworzyć nowe wystąpienie rekordu anonimowego, który kopiuje istniejące dane:</span><span class="sxs-lookup"><span data-stu-id="2c102-129">For example, here's how you can construct a new instance of an anonymous record that copies an existing one's data:</span></span>
+<span data-ttu-id="6002f-128">Rekordy anonimowe obsługują tworzenie z [wyrażeniami kopiowania i aktualizowania](copy-and-update-record-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="6002f-128">Anonymous records support construction with [copy and update expressions](copy-and-update-record-expressions.md).</span></span> <span data-ttu-id="6002f-129">Można na przykład utworzyć nowe wystąpienie rekordu anonimowego, który kopiuje istniejące dane:</span><span class="sxs-lookup"><span data-stu-id="6002f-129">For example, here's how you can construct a new instance of an anonymous record that copies an existing one's data:</span></span>
 
 ```fsharp
 let data = {| X = 1; Y = 2 |}
 let data' = {| data with Y = 3 |}
 ```
 
-<span data-ttu-id="2c102-130">Jednak w przeciwieństwie do nazwanych rekordów, anonimowe rekordy umożliwiają konstruowanie zupełnie różnych formularzy z wyrażeniami Copy i Update.</span><span class="sxs-lookup"><span data-stu-id="2c102-130">However, unlike named records, anonymous records allow you to construct entirely different forms with copy and update expressions.</span></span> <span data-ttu-id="2c102-131">W poniższym przykładzie ten sam rekord anonimowy jest pobierany z poprzedniego przykładu i rozszerzany do nowego rekordu anonimowego:</span><span class="sxs-lookup"><span data-stu-id="2c102-131">The follow example takes the same anonymous record from the previous example and expands it into a new anonymous record:</span></span>
+<span data-ttu-id="6002f-130">Jednak w przeciwieństwie do nazwanych rekordów, anonimowe rekordy umożliwiają konstruowanie zupełnie różnych formularzy z wyrażeniami Copy i Update.</span><span class="sxs-lookup"><span data-stu-id="6002f-130">However, unlike named records, anonymous records allow you to construct entirely different forms with copy and update expressions.</span></span> <span data-ttu-id="6002f-131">W poniższym przykładzie ten sam rekord anonimowy jest pobierany z poprzedniego przykładu i rozszerzany do nowego rekordu anonimowego:</span><span class="sxs-lookup"><span data-stu-id="6002f-131">The follow example takes the same anonymous record from the previous example and expands it into a new anonymous record:</span></span>
 
 ```fsharp
 let data = {| X = 1; Y = 2 |}
 let expandedData = {| data with Z = 3 |} // Gives {| X=1; Y=2; Z=3 |}
 ```
 
-<span data-ttu-id="2c102-132">Istnieje również możliwość konstruowania rekordów anonimowych z wystąpień nazwanych rekordów:</span><span class="sxs-lookup"><span data-stu-id="2c102-132">It is also possible to construct anonymous records from instances of named records:</span></span>
+<span data-ttu-id="6002f-132">Istnieje również możliwość konstruowania rekordów anonimowych z wystąpień nazwanych rekordów:</span><span class="sxs-lookup"><span data-stu-id="6002f-132">It is also possible to construct anonymous records from instances of named records:</span></span>
 
 ```fsharp
 type R = { X: int }
@@ -163,7 +163,7 @@ let data = { X = 1 }
 let data' = {| data with Y = 2 |} // Gives {| X=1; Y=2 |}
 ```
 
-<span data-ttu-id="2c102-133">Możesz również kopiować dane do i z odwołań do rekordów i struktury anonimowe:</span><span class="sxs-lookup"><span data-stu-id="2c102-133">You can also copy data to and from reference and struct anonymous records:</span></span>
+<span data-ttu-id="6002f-133">Możesz również kopiować dane do i z odwołań do rekordów i struktury anonimowe:</span><span class="sxs-lookup"><span data-stu-id="6002f-133">You can also copy data to and from reference and struct anonymous records:</span></span>
 
 ```fsharp
 // Copy data from a reference record into a struct anonymous record
@@ -183,22 +183,22 @@ let data2 = {| r1 with Y = 1 |}
 let data3 = struct {| data2 with Z = r2.X |}
 ```
 
-## <a name="properties-of-anonymous-records"></a><span data-ttu-id="2c102-134">Właściwości rekordów anonimowych</span><span class="sxs-lookup"><span data-stu-id="2c102-134">Properties of anonymous records</span></span>
+## <a name="properties-of-anonymous-records"></a><span data-ttu-id="6002f-134">Właściwości rekordów anonimowych</span><span class="sxs-lookup"><span data-stu-id="6002f-134">Properties of anonymous records</span></span>
 
-<span data-ttu-id="2c102-135">Rekordy anonimowe mają wiele cech, które są niezbędne do pełnego poznania sposobu ich używania.</span><span class="sxs-lookup"><span data-stu-id="2c102-135">Anonymous records have a number of characteristics that are essential to fully understanding how they can be used.</span></span>
+<span data-ttu-id="6002f-135">Rekordy anonimowe mają wiele cech, które są niezbędne do pełnego poznania sposobu ich używania.</span><span class="sxs-lookup"><span data-stu-id="6002f-135">Anonymous records have a number of characteristics that are essential to fully understanding how they can be used.</span></span>
 
-### <a name="anonymous-records-are-nominal"></a><span data-ttu-id="2c102-136">Rekordy anonimowe są nominalne</span><span class="sxs-lookup"><span data-stu-id="2c102-136">Anonymous records are nominal</span></span>
+### <a name="anonymous-records-are-nominal"></a><span data-ttu-id="6002f-136">Rekordy anonimowe są nominalne</span><span class="sxs-lookup"><span data-stu-id="6002f-136">Anonymous records are nominal</span></span>
 
-<span data-ttu-id="2c102-137">Rekordy anonimowe są [typami nominalnymi](https://en.wikipedia.org/wiki/Nominal_type_system).</span><span class="sxs-lookup"><span data-stu-id="2c102-137">Anonymous records are [nominal types](https://en.wikipedia.org/wiki/Nominal_type_system).</span></span> <span data-ttu-id="2c102-138">Są one najlepiej przemyślane jako nazwane typy [rekordów](records.md) (które są również nominalne), które nie wymagają deklaracji z góry.</span><span class="sxs-lookup"><span data-stu-id="2c102-138">They are best thought as named [record](records.md) types (which are also nominal) that do not require an up-front declaration.</span></span>
+<span data-ttu-id="6002f-137">Rekordy anonimowe są [typami nominalnymi](https://en.wikipedia.org/wiki/Nominal_type_system).</span><span class="sxs-lookup"><span data-stu-id="6002f-137">Anonymous records are [nominal types](https://en.wikipedia.org/wiki/Nominal_type_system).</span></span> <span data-ttu-id="6002f-138">Są one najlepiej przemyślane jako nazwane typy [rekordów](records.md) (które są również nominalne), które nie wymagają deklaracji z góry.</span><span class="sxs-lookup"><span data-stu-id="6002f-138">They are best thought as named [record](records.md) types (which are also nominal) that do not require an up-front declaration.</span></span>
 
-<span data-ttu-id="2c102-139">Rozważmy następujący przykład z dwiema deklaracjami rekordów anonimowych:</span><span class="sxs-lookup"><span data-stu-id="2c102-139">Consider the following example with two anonymous record declarations:</span></span>
+<span data-ttu-id="6002f-139">Rozważmy następujący przykład z dwiema deklaracjami rekordów anonimowych:</span><span class="sxs-lookup"><span data-stu-id="6002f-139">Consider the following example with two anonymous record declarations:</span></span>
 
 ```fsharp
 let x = {| X = 1 |}
 let y = {| Y = 1 |}
 ```
 
-<span data-ttu-id="2c102-140">Wartości `x` i `y` mają różne typy i nie są zgodne ze sobą.</span><span class="sxs-lookup"><span data-stu-id="2c102-140">The `x` and `y` values have different types and are not compatible with one another.</span></span> <span data-ttu-id="2c102-141">Nie są one równe i nie są porównywalne.</span><span class="sxs-lookup"><span data-stu-id="2c102-141">They are not equatable and they are not comparable.</span></span> <span data-ttu-id="2c102-142">Aby to zilustrować, należy wziąć pod uwagę nazwany rekord odpowiedni:</span><span class="sxs-lookup"><span data-stu-id="2c102-142">To illustrate this, consider a named record equivalent:</span></span>
+<span data-ttu-id="6002f-140">Wartości `x` i `y` mają różne typy i nie są zgodne ze sobą.</span><span class="sxs-lookup"><span data-stu-id="6002f-140">The `x` and `y` values have different types and are not compatible with one another.</span></span> <span data-ttu-id="6002f-141">Nie są one równe i nie są porównywalne.</span><span class="sxs-lookup"><span data-stu-id="6002f-141">They are not equatable and they are not comparable.</span></span> <span data-ttu-id="6002f-142">Aby to zilustrować, należy wziąć pod uwagę nazwany rekord odpowiedni:</span><span class="sxs-lookup"><span data-stu-id="6002f-142">To illustrate this, consider a named record equivalent:</span></span>
 
 ```fsharp
 type X = { X: int }
@@ -208,11 +208,11 @@ let x = { X = 1 }
 let y = { Y = 1 }
 ```
 
-<span data-ttu-id="2c102-143">W porównaniu z odpowiadającymi im odpowiednikami typów lub porównaniem nie ma niczego inaczej niż w przypadku rekordów anonimowych.</span><span class="sxs-lookup"><span data-stu-id="2c102-143">There isn't anything inherently different about anonymous records when compared with their named record equivalents when concerning type equivalency or comparison.</span></span>
+<span data-ttu-id="6002f-143">W porównaniu z odpowiadającymi im odpowiednikami typów lub porównaniem nie ma niczego inaczej niż w przypadku rekordów anonimowych.</span><span class="sxs-lookup"><span data-stu-id="6002f-143">There isn't anything inherently different about anonymous records when compared with their named record equivalents when concerning type equivalency or comparison.</span></span>
 
-### <a name="anonymous-records-use-structural-equality-and-comparison"></a><span data-ttu-id="2c102-144">Rekordy anonimowe wykorzystują równość i porównanie strukturalne</span><span class="sxs-lookup"><span data-stu-id="2c102-144">Anonymous records use structural equality and comparison</span></span>
+### <a name="anonymous-records-use-structural-equality-and-comparison"></a><span data-ttu-id="6002f-144">Rekordy anonimowe wykorzystują równość i porównanie strukturalne</span><span class="sxs-lookup"><span data-stu-id="6002f-144">Anonymous records use structural equality and comparison</span></span>
 
-<span data-ttu-id="2c102-145">Podobnie jak w przypadku typów rekordów anonimowe rekordy są strukturalnie równe i porównywalne.</span><span class="sxs-lookup"><span data-stu-id="2c102-145">Like record types, anonymous records are structurally equatable and comparable.</span></span> <span data-ttu-id="2c102-146">Jest to możliwe tylko wtedy, gdy wszystkie typy składników obsługują równość i porównanie, podobnie jak w przypadku typów rekordów.</span><span class="sxs-lookup"><span data-stu-id="2c102-146">This is only true if all constituent types support equality and comparison, like with record types.</span></span> <span data-ttu-id="2c102-147">Aby obsłużyć równość lub porównanie, dwa rekordy anonimowe muszą mieć ten sam "kształt".</span><span class="sxs-lookup"><span data-stu-id="2c102-147">To support equality or comparison, two anonymous records must have the same "shape".</span></span>
+<span data-ttu-id="6002f-145">Podobnie jak w przypadku typów rekordów anonimowe rekordy są strukturalnie równe i porównywalne.</span><span class="sxs-lookup"><span data-stu-id="6002f-145">Like record types, anonymous records are structurally equatable and comparable.</span></span> <span data-ttu-id="6002f-146">Jest to możliwe tylko wtedy, gdy wszystkie typy składników obsługują równość i porównanie, podobnie jak w przypadku typów rekordów.</span><span class="sxs-lookup"><span data-stu-id="6002f-146">This is only true if all constituent types support equality and comparison, like with record types.</span></span> <span data-ttu-id="6002f-147">Aby obsłużyć równość lub porównanie, dwa rekordy anonimowe muszą mieć ten sam "kształt".</span><span class="sxs-lookup"><span data-stu-id="6002f-147">To support equality or comparison, two anonymous records must have the same "shape".</span></span>
 
 ```fsharp
 {| a = 1+1 |} = {| a = 2 |} // true
@@ -222,25 +222,25 @@ let y = { Y = 1 }
 {| a = 1 + 1 |} = {| a = 2;  b = 1|}
 ```
 
-### <a name="anonymous-records-are-serializable"></a><span data-ttu-id="2c102-148">Rekordy anonimowe są możliwe do serializacji</span><span class="sxs-lookup"><span data-stu-id="2c102-148">Anonymous records are serializable</span></span>
+### <a name="anonymous-records-are-serializable"></a><span data-ttu-id="6002f-148">Rekordy anonimowe są możliwe do serializacji</span><span class="sxs-lookup"><span data-stu-id="6002f-148">Anonymous records are serializable</span></span>
 
-<span data-ttu-id="2c102-149">Rekordy anonimowe można serializować tak samo jak z nazwanymi rekordami.</span><span class="sxs-lookup"><span data-stu-id="2c102-149">You can serialize anonymous records just as you can with named records.</span></span> <span data-ttu-id="2c102-150">Oto przykład użycia [Newtonsoft. JSON](https://www.nuget.org/packages/Newtonsoft.Json/):</span><span class="sxs-lookup"><span data-stu-id="2c102-150">Here is an example using [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/):</span></span>
+<span data-ttu-id="6002f-149">Rekordy anonimowe można serializować tak samo jak z nazwanymi rekordami.</span><span class="sxs-lookup"><span data-stu-id="6002f-149">You can serialize anonymous records just as you can with named records.</span></span> <span data-ttu-id="6002f-150">Oto przykład użycia [Newtonsoft. JSON](https://www.nuget.org/packages/Newtonsoft.Json/):</span><span class="sxs-lookup"><span data-stu-id="6002f-150">Here is an example using [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/):</span></span>
 
 ```fsharp
 open Newtonsoft.Json
 
-let phillip = {| name="Phillip"; age=28 |}
-JsonConvert.SerializeObject(phillip)
+let phillip' = {| name="Phillip"; age=28 |}
+let philStr = JsonConvert.SerializeObject(phillip') 
 
-let phillip = JsonConvert.DeserializeObject<{|name: string; age: int|}>(str)
+let phillip = JsonConvert.DeserializeObject<{|name: string; age: int|}>(philStr)
 printfn "Name: %s Age: %d" phillip.name phillip.age
 ```
 
-<span data-ttu-id="2c102-151">Rekordy anonimowe są przydatne do przesyłania danych lekkich za pośrednictwem sieci bez konieczności definiowania domeny dla serializowanych i deserializowanych typów z góry.</span><span class="sxs-lookup"><span data-stu-id="2c102-151">Anonymous records are useful for sending lightweight data over a network without the need to define a domain for your serialized/deserialized types up front.</span></span>
+<span data-ttu-id="6002f-151">Rekordy anonimowe są przydatne do przesyłania danych lekkich za pośrednictwem sieci bez konieczności definiowania domeny dla serializowanych i deserializowanych typów z góry.</span><span class="sxs-lookup"><span data-stu-id="6002f-151">Anonymous records are useful for sending lightweight data over a network without the need to define a domain for your serialized/deserialized types up front.</span></span>
 
-### <a name="anonymous-records-interoperate-with-c-anonymous-types"></a><span data-ttu-id="2c102-152">Rekordy anonimowe współdziałają z C# typami anonimowymi</span><span class="sxs-lookup"><span data-stu-id="2c102-152">Anonymous records interoperate with C# anonymous types</span></span>
+### <a name="anonymous-records-interoperate-with-c-anonymous-types"></a><span data-ttu-id="6002f-152">Rekordy anonimowe współdziałają z C# typami anonimowymi</span><span class="sxs-lookup"><span data-stu-id="6002f-152">Anonymous records interoperate with C# anonymous types</span></span>
 
-<span data-ttu-id="2c102-153">Możliwe jest użycie interfejsu API platformy .NET, który wymaga użycia [ C# typów anonimowych](../../csharp/programming-guide/classes-and-structs/anonymous-types.md).</span><span class="sxs-lookup"><span data-stu-id="2c102-153">It is possible to use a .NET API that requires the use of [C# anonymous types](../../csharp/programming-guide/classes-and-structs/anonymous-types.md).</span></span> <span data-ttu-id="2c102-154">C#Typy anonimowe mogą współdziałać z wykorzystaniem anonimowych rekordów.</span><span class="sxs-lookup"><span data-stu-id="2c102-154">C# anonymous types are trivial to interoperate with by using anonymous records.</span></span> <span data-ttu-id="2c102-155">Poniższy przykład pokazuje, jak używać rekordów anonimowych do wywoływania przeciążenia [LINQ](../../csharp/programming-guide/concepts/linq/index.md) , które wymaga typu anonimowego:</span><span class="sxs-lookup"><span data-stu-id="2c102-155">The following example shows how to use anonymous records to call a [LINQ](../../csharp/programming-guide/concepts/linq/index.md) overload that requires an anonymous type:</span></span>
+<span data-ttu-id="6002f-153">Możliwe jest użycie interfejsu API platformy .NET, który wymaga użycia [ C# typów anonimowych](../../csharp/programming-guide/classes-and-structs/anonymous-types.md).</span><span class="sxs-lookup"><span data-stu-id="6002f-153">It is possible to use a .NET API that requires the use of [C# anonymous types](../../csharp/programming-guide/classes-and-structs/anonymous-types.md).</span></span> <span data-ttu-id="6002f-154">C#Typy anonimowe mogą współdziałać z wykorzystaniem anonimowych rekordów.</span><span class="sxs-lookup"><span data-stu-id="6002f-154">C# anonymous types are trivial to interoperate with by using anonymous records.</span></span> <span data-ttu-id="6002f-155">Poniższy przykład pokazuje, jak używać rekordów anonimowych do wywoływania przeciążenia [LINQ](../../csharp/programming-guide/concepts/linq/index.md) , które wymaga typu anonimowego:</span><span class="sxs-lookup"><span data-stu-id="6002f-155">The following example shows how to use anonymous records to call a [LINQ](../../csharp/programming-guide/concepts/linq/index.md) overload that requires an anonymous type:</span></span>
 
 ```fsharp
 open System.Linq
@@ -251,26 +251,26 @@ for ng in nameGrouping do
     printfn "%s has first letter %c" ng.Name ng.FirstLetter
 ```
 
-<span data-ttu-id="2c102-156">Istnieje wiele innych interfejsów API używanych w środowisku .NET, które wymagają użycia przekazywania w typie anonimowym.</span><span class="sxs-lookup"><span data-stu-id="2c102-156">There are a multitude of other APIs used throughout .NET that require the use of passing in an anonymous type.</span></span> <span data-ttu-id="2c102-157">Rekordy anonimowe to narzędzie do pracy z nimi.</span><span class="sxs-lookup"><span data-stu-id="2c102-157">Anonymous records are your tool for working with them.</span></span>
+<span data-ttu-id="6002f-156">Istnieje wiele innych interfejsów API używanych w środowisku .NET, które wymagają użycia przekazywania w typie anonimowym.</span><span class="sxs-lookup"><span data-stu-id="6002f-156">There are a multitude of other APIs used throughout .NET that require the use of passing in an anonymous type.</span></span> <span data-ttu-id="6002f-157">Rekordy anonimowe to narzędzie do pracy z nimi.</span><span class="sxs-lookup"><span data-stu-id="6002f-157">Anonymous records are your tool for working with them.</span></span>
 
-## <a name="limitations"></a><span data-ttu-id="2c102-158">Ograniczenia</span><span class="sxs-lookup"><span data-stu-id="2c102-158">Limitations</span></span>
+## <a name="limitations"></a><span data-ttu-id="6002f-158">Ograniczenia</span><span class="sxs-lookup"><span data-stu-id="6002f-158">Limitations</span></span>
 
-<span data-ttu-id="2c102-159">Rekordy anonimowe mają pewne ograniczenia w ich użyciu.</span><span class="sxs-lookup"><span data-stu-id="2c102-159">Anonymous records have some restrictions in their usage.</span></span> <span data-ttu-id="2c102-160">Niektóre z nich są związane z projektem, ale inne mogą ulec zmianie.</span><span class="sxs-lookup"><span data-stu-id="2c102-160">Some are inherent to their design, but others are amenable to change.</span></span>
+<span data-ttu-id="6002f-159">Rekordy anonimowe mają pewne ograniczenia w ich użyciu.</span><span class="sxs-lookup"><span data-stu-id="6002f-159">Anonymous records have some restrictions in their usage.</span></span> <span data-ttu-id="6002f-160">Niektóre z nich są związane z projektem, ale inne mogą ulec zmianie.</span><span class="sxs-lookup"><span data-stu-id="6002f-160">Some are inherent to their design, but others are amenable to change.</span></span>
 
-### <a name="limitations-with-pattern-matching"></a><span data-ttu-id="2c102-161">Ograniczenia z dopasowaniem do wzorca</span><span class="sxs-lookup"><span data-stu-id="2c102-161">Limitations with pattern matching</span></span>
+### <a name="limitations-with-pattern-matching"></a><span data-ttu-id="6002f-161">Ograniczenia z dopasowaniem do wzorca</span><span class="sxs-lookup"><span data-stu-id="6002f-161">Limitations with pattern matching</span></span>
 
-<span data-ttu-id="2c102-162">Rekordy anonimowe nie obsługują dopasowywania do wzorców, w przeciwieństwie do nazwanych rekordów.</span><span class="sxs-lookup"><span data-stu-id="2c102-162">Anonymous records do not support pattern matching, unlike named records.</span></span> <span data-ttu-id="2c102-163">Istnieją trzy przyczyny:</span><span class="sxs-lookup"><span data-stu-id="2c102-163">There are three reasons:</span></span>
+<span data-ttu-id="6002f-162">Rekordy anonimowe nie obsługują dopasowywania do wzorców, w przeciwieństwie do nazwanych rekordów.</span><span class="sxs-lookup"><span data-stu-id="6002f-162">Anonymous records do not support pattern matching, unlike named records.</span></span> <span data-ttu-id="6002f-163">Istnieją trzy przyczyny:</span><span class="sxs-lookup"><span data-stu-id="6002f-163">There are three reasons:</span></span>
 
-1. <span data-ttu-id="2c102-164">Wzorzec będzie musiał uwzględnić każde pole rekordu anonimowego, w przeciwieństwie do typów rekordów nazwanych.</span><span class="sxs-lookup"><span data-stu-id="2c102-164">A pattern would have to account for every field of an anonymous record, unlike named record types.</span></span> <span data-ttu-id="2c102-165">Wynika to z faktu, że rekordy anonimowe nie obsługują podpisywania strukturalnego — są to typy nominalne.</span><span class="sxs-lookup"><span data-stu-id="2c102-165">This is because anonymous records do not support structural subtyping – they are nominal types.</span></span>
-2. <span data-ttu-id="2c102-166">Ze względu na (1) nie ma możliwości posiadania dodatkowych wzorców w wyrażeniu dopasowania do wzorca, ponieważ każdy unikatowy wzorzec będzie oznaczać inny typ rekordu anonimowego.</span><span class="sxs-lookup"><span data-stu-id="2c102-166">Because of (1), there is no ability to have additional patterns in a pattern match expression, as each distinct pattern would imply a different anonymous record type.</span></span>
-3. <span data-ttu-id="2c102-167">Ze względu na (3) każdy wzorzec rekordu anonimowego będzie bardziej pełny niż użycie notacji "kropka".</span><span class="sxs-lookup"><span data-stu-id="2c102-167">Because of (3), any anonymous record pattern would be more verbose than the use of “dot” notation.</span></span>
+1. <span data-ttu-id="6002f-164">Wzorzec będzie musiał uwzględnić każde pole rekordu anonimowego, w przeciwieństwie do typów rekordów nazwanych.</span><span class="sxs-lookup"><span data-stu-id="6002f-164">A pattern would have to account for every field of an anonymous record, unlike named record types.</span></span> <span data-ttu-id="6002f-165">Wynika to z faktu, że rekordy anonimowe nie obsługują podpisywania strukturalnego — są to typy nominalne.</span><span class="sxs-lookup"><span data-stu-id="6002f-165">This is because anonymous records do not support structural subtyping – they are nominal types.</span></span>
+2. <span data-ttu-id="6002f-166">Ze względu na (1) nie ma możliwości posiadania dodatkowych wzorców w wyrażeniu dopasowania do wzorca, ponieważ każdy unikatowy wzorzec będzie oznaczać inny typ rekordu anonimowego.</span><span class="sxs-lookup"><span data-stu-id="6002f-166">Because of (1), there is no ability to have additional patterns in a pattern match expression, as each distinct pattern would imply a different anonymous record type.</span></span>
+3. <span data-ttu-id="6002f-167">Ze względu na (3) każdy wzorzec rekordu anonimowego będzie bardziej pełny niż użycie notacji "kropka".</span><span class="sxs-lookup"><span data-stu-id="6002f-167">Because of (3), any anonymous record pattern would be more verbose than the use of “dot” notation.</span></span>
 
-<span data-ttu-id="2c102-168">Jest dostępna sugestia języka umożliwiająca [Dopasowywanie wzorców w ograniczonych kontekstach](https://github.com/fsharp/fslang-suggestions/issues/713).</span><span class="sxs-lookup"><span data-stu-id="2c102-168">There is an open language suggestion to [allow pattern matching in limited contexts](https://github.com/fsharp/fslang-suggestions/issues/713).</span></span>
+<span data-ttu-id="6002f-168">Jest dostępna sugestia języka umożliwiająca [Dopasowywanie wzorców w ograniczonych kontekstach](https://github.com/fsharp/fslang-suggestions/issues/713).</span><span class="sxs-lookup"><span data-stu-id="6002f-168">There is an open language suggestion to [allow pattern matching in limited contexts](https://github.com/fsharp/fslang-suggestions/issues/713).</span></span>
 
-### <a name="limitations-with-mutability"></a><span data-ttu-id="2c102-169">Ograniczenia dotyczące zmienność</span><span class="sxs-lookup"><span data-stu-id="2c102-169">Limitations with mutability</span></span>
+### <a name="limitations-with-mutability"></a><span data-ttu-id="6002f-169">Ograniczenia dotyczące zmienność</span><span class="sxs-lookup"><span data-stu-id="6002f-169">Limitations with mutability</span></span>
 
-<span data-ttu-id="2c102-170">Obecnie nie jest możliwe Definiowanie rekordu anonimowego za pomocą danych `mutable`.</span><span class="sxs-lookup"><span data-stu-id="2c102-170">It is not currently possible to define an anonymous record with `mutable` data.</span></span> <span data-ttu-id="2c102-171">Jest dostępna [sugestia języka](https://github.com/fsharp/fslang-suggestions/issues/732) , w której można zezwolić na modyfikowalne dane.</span><span class="sxs-lookup"><span data-stu-id="2c102-171">There is an [open language suggestion](https://github.com/fsharp/fslang-suggestions/issues/732) to allow mutable data.</span></span>
+<span data-ttu-id="6002f-170">Obecnie nie jest możliwe Definiowanie rekordu anonimowego za pomocą danych `mutable`.</span><span class="sxs-lookup"><span data-stu-id="6002f-170">It is not currently possible to define an anonymous record with `mutable` data.</span></span> <span data-ttu-id="6002f-171">Jest dostępna [sugestia języka](https://github.com/fsharp/fslang-suggestions/issues/732) , w której można zezwolić na modyfikowalne dane.</span><span class="sxs-lookup"><span data-stu-id="6002f-171">There is an [open language suggestion](https://github.com/fsharp/fslang-suggestions/issues/732) to allow mutable data.</span></span>
 
-### <a name="limitations-with-struct-anonymous-records"></a><span data-ttu-id="2c102-172">Ograniczenia z anonimowymi rekordami struktury</span><span class="sxs-lookup"><span data-stu-id="2c102-172">Limitations with struct anonymous records</span></span>
+### <a name="limitations-with-struct-anonymous-records"></a><span data-ttu-id="6002f-172">Ograniczenia z anonimowymi rekordami struktury</span><span class="sxs-lookup"><span data-stu-id="6002f-172">Limitations with struct anonymous records</span></span>
 
-<span data-ttu-id="2c102-173">Nie można zadeklarować anonimowych rekordów struktury jako `IsByRefLike` ani `IsReadOnly`.</span><span class="sxs-lookup"><span data-stu-id="2c102-173">It is not possible to declare struct anonymous records as `IsByRefLike` or `IsReadOnly`.</span></span> <span data-ttu-id="2c102-174">Istnieje [otwarta sugestia językowa](https://github.com/fsharp/fslang-suggestions/issues/712) dla `IsByRefLike` i `IsReadOnly` rekordów anonimowych.</span><span class="sxs-lookup"><span data-stu-id="2c102-174">There is an [open language suggestion](https://github.com/fsharp/fslang-suggestions/issues/712) to for `IsByRefLike` and `IsReadOnly` anonymous records.</span></span>
+<span data-ttu-id="6002f-173">Nie można zadeklarować anonimowych rekordów struktury jako `IsByRefLike` ani `IsReadOnly`.</span><span class="sxs-lookup"><span data-stu-id="6002f-173">It is not possible to declare struct anonymous records as `IsByRefLike` or `IsReadOnly`.</span></span> <span data-ttu-id="6002f-174">Istnieje [otwarta sugestia językowa](https://github.com/fsharp/fslang-suggestions/issues/712) dla `IsByRefLike` i `IsReadOnly` rekordów anonimowych.</span><span class="sxs-lookup"><span data-stu-id="6002f-174">There is an [open language suggestion](https://github.com/fsharp/fslang-suggestions/issues/712) to for `IsByRefLike` and `IsReadOnly` anonymous records.</span></span>

@@ -154,6 +154,9 @@
             - name: Przechowywanie wersji
               tocHref: /dotnet/core/versions/
               topicHref: /dotnet/core/versions/index
+            - name: Projekty zestawu SDK
+              tocHref: /dotnet/core/project-sdk/
+              topicHref: /dotnet/core/project-sdk/overview
             - name: Narzędzia
               tocHref: /dotnet/core/tools/
               topicHref: /dotnet/core/tools/index

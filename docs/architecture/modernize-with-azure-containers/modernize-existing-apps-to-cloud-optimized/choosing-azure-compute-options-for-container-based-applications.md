@@ -1,13 +1,13 @@
 ---
 title: Wybieranie platform obliczeniowych platformy Azure dla aplikacji opartych na kontenerach
 description: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows | Wybieranie platform obliczeniowych platformy Azure dla aplikacji opartych na kontenerach
-ms.date: 05/04/2018
-ms.openlocfilehash: 079c9c5ca02b6dc75214d63cb59afdead03d3190
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 02/18/2020
+ms.openlocfilehash: 52e7cf1c5dd3a5850564bdb33ac7a4ac4904f432
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73736998"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503888"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>Wybieranie platform obliczeniowych platformy Azure dla aplikacji opartych na kontenerach
 
@@ -25,10 +25,20 @@ Jednakże to zalecenie powinno być podjęte z szczypania soli, ponieważ wybór
 
 Po dokładniejszej analizie potrzeb aplikacji wybrany produkt może być inny. Jednak jako punkt początkowy warto uzyskać wstępne wskazówki, w których można rozpocząć ocenianie i testowanie w oparciu o określony priorytet.
 
-Na rysunku 1 można zobaczyć podział różnych rodzajów aplikacji i ich idealne scenariusze hostingu platformy Azure.
+W poniższej tabeli przedstawiono podział różnych rodzajów aplikacji oraz ich możliwe i zalecane scenariusze hostingu platformy Azure.
 
-![Tabela, w której scenariusze hostingu platformy Azure są najlepsze dla różnych aplikacji.](./media/choosing-azure-compute-options-for-container-based-applications/azure-hosting-scenarios-for-apps.png)
+| Architektura aplikacji | Maszyny wirtualne — Virtual Machines platformy Azure | ACI — Azure Container Instances | Azure App Service (w-m/wy) | AKS — usługa Azure Kubernetes Services | Azure Functions | Azure Batch |
+|:------------------------:|:--:|:--:|:--:|:--:|:--:|:--:|
+| **Aplikacje sieci Web (monolityczne)**         | ![Możliwe z maszynami wirtualnymi](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![Możliwe z ACI](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![Zalecane w przypadku App Service](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) | ![Możliwe z AKS](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | | |
+| **Aplikacje N-warstwowe (usługi)**        | ![Możliwe z maszynami wirtualnymi](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![Możliwe z ACI](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![Zalecane w przypadku App Service](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) | ![Możliwe z AKS](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![Możliwe za pomocą usługi Azure fuctions](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | |
+| **Chmura — natywne (mikrousługi)**  | | ![Możliwe z ACI](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | | ![Zalecane z AKS](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) <br/> (&nbsp;kontenery systemu Linux)| ![Zalecane w przypadku Azure Functions](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) <br/> (Sterowane zdarzeniami&#x2011;) | |
+| **Partia/zadania (zadania w tle)** | ![Możliwe z maszynami wirtualnymi](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![Możliwe z ACI](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![Możliwe z App Service](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![Możliwe z AKS](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![Zalecane w przypadku Azure Functions](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) <br/> (Zadania&nbsp;w tle) | ![Zalecane w przypadku Azure Batch](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) <br/> (Duża&#x2011;skala) |
+
+**Legendy**
+
+![Zalecana ikona](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) Rekomendowane
+![Możliwa ikona](media/choosing-azure-compute-options-for-container-based-applications/possible.png) Najmniejszy
 
 > [!div class="step-by-step"]
-> [Poprzedni](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
-> [Następny](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)
+> [Poprzednie](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
+> [dalej](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)

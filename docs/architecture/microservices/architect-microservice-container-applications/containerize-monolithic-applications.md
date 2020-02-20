@@ -1,13 +1,13 @@
 ---
 title: Umieszczanie aplikacji monolitycznych w kontenerze
 description: Konteneryzowania monolityczne aplikacje, chociaż nie uzyskują wszystkich korzyści z architektury mikrousług, mają ważne korzyści z wdrożenia, które mogą być od razu dostarczone.
-ms.date: 09/20/2018
-ms.openlocfilehash: e02aa4ff644fc26b7f15721866f8862f6a175cf2
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: 0e6f7504a91d2b1a89193471746168fc34f50956
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738013"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503288"
 ---
 # <a name="containerizing-monolithic-applications"></a>Umieszczanie aplikacji monolitycznych w kontenerze
 
@@ -61,7 +61,7 @@ Bez względu na to, czy chcesz uzyskać walidację kontenera wdrożonego na plat
 
 ![Zrzut ekranu przedstawiający okno dialogowe Tworzenie App Service z Container Registry.](./media/containerize-monolithic-applications/publish-azure-app-service-container.png)
 
-**Rysunek 4-4**. Publikowanie aplikacji z jednym kontenerem w celu Azure App Service z programu Visual Studio
+**Rysunek 4-4**. Publikowanie aplikacji z jednym kontenerem w celu Azure App Service z programu Visual Studio 2019
 
 Bez platformy Docker, jeśli potrzebujesz innych możliwości, struktur lub zależności, które nie są obsługiwane w Azure App Service, musisz poczekać, aż zespół platformy Azure zaktualizował te zależności w programie App Service. Lub trzeba przełączać się do innych usług, takich jak Azure Cloud Services lub VM, w których można było kontynuować kontrolę i zainstalować wymagany składnik lub platformę dla aplikacji.
 
@@ -70,5 +70,5 @@ Obsługa kontenerów w programie Visual Studio 2017 i nowszych umożliwia dołą
 Jak pokazano również na rysunku 4-4, przepływ publikowania wypychanie obrazu za pomocą rejestru kontenerów. Może to być Azure Container Registry (rejestr blisko wdrożeń na platformie Azure i zabezpieczony przez Azure Active Directory grup i kont) lub dowolny inny rejestr platformy Docker, taki jak Docker Hub lub rejestr lokalny.
 
 >[!div class="step-by-step"]
->[Poprzedni](index.md)
->[Następny](docker-application-state-data.md)
+>[Poprzednie](index.md)
+>[dalej](docker-application-state-data.md)

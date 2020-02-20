@@ -1,13 +1,13 @@
 ---
 title: Komunikacja w ramach architektury mikrousługi
 description: Poznaj różne sposoby komunikacji między mikrousługami, opisując implikacje synchronicznych i asynchronicznych metod.
-ms.date: 09/20/2018
-ms.openlocfilehash: 7bd45e0b8f8ea3330cf8d2b613e54111cc72f14f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.date: 01/30/2020
+ms.openlocfilehash: f2d6e78966bb7d5f481de6db0ab1dcfe2812a1b5
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966976"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503314"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>Komunikacja w ramach architektury mikrousługi
 
@@ -47,7 +47,7 @@ Jak wspomniano, ważnym punktem podczas kompilowania aplikacji opartych na mikro
 
 Jeśli to możliwe, nigdy nie zależą od komunikacji synchronicznej (żądanie/odpowiedź) między wieloma mikrousługami, nawet w przypadku zapytań. Celem każdej mikrousługi jest autonomiczna i dostępna dla konsumenta klienta, nawet jeśli inne usługi, które są częścią kompleksowej aplikacji, są wyłączone lub w złej kondycji. Jeśli uważasz, że musisz wykonać wywołanie z jednej mikrousługi do innych mikrousług (takich jak wykonywanie żądania HTTP dla zapytania dotyczącego danych), aby zapewnić odpowiedź do aplikacji klienckiej, masz architekturę, która nie będzie odporna na awarie niektórych mikrousług.
 
-Ponadto, jeśli istnieją zależności HTTP między mikrousługami, takie jak podczas tworzenia cykli długotrwałych żądań/odpowiedzi z łańcuchami żądań HTTP, jak pokazano w pierwszej części rysunku 4-15, nie tylko mikrousługi są NIEAUTONOMICZNE, ale również ich wydajność jest wpływ na to, jak tylko jedna z usług w tym łańcuchu nie działa prawidłowo.
+Ponadto, jeśli istnieją zależności HTTP między mikrousługami, takie jak podczas tworzenia cykli długotrwałych żądań/odpowiedzi z łańcuchami żądań HTTP, jak pokazano w pierwszej części rysunku 4-15, nie tylko mikrousługi są niezależne, ale również ich wydajność ma wpływ, gdy tylko jedna z usług w tym łańcuchu nie działa prawidłowo.
 
 Im większa jest liczba synchronicznych zależności między mikrousługami, takimi jak żądania zapytań, tym gorszy jest całkowity czas odpowiedzi dla aplikacji klienckich.
 
@@ -61,7 +61,7 @@ Jeśli mikrousługa musi podnieść dodatkową akcję w innej mikrousłudze, je�
 
 A wreszcie (w przypadku, gdy większość problemów występuje podczas tworzenia mikrousług), jeśli początkowa mikrousługa wymaga danych, które są pierwotnie własnością innych mikrousług, nie należy polegać na przesyłaniu żądań synchronicznych dla tych danych. Zamiast tego należy replikować lub propagować te dane (tylko potrzebne atrybuty) do bazy danych usługi początkowej przy użyciu spójności ostatecznej (zazwyczaj przy użyciu zdarzeń integracji, jak wyjaśniono w kolejnych sekcjach).
 
-Jak wspomniano wcześniej w sekcji [Identyfikowanie granic modelu domeny dla każdej mikrousługi](identify-microservice-domain-model-boundaries.md), duplikowanie niektórych danych z kilku mikrousług nie jest niewłaściwym projektem — w przeciwieństwie do tego, że można przetłumaczyć dane do określonego języka lub warunków tej dodatkowej domeny lub kontekstu ograniczonego. Na przykład w [aplikacji eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) masz mikrousługę o nazwie Identity. API, która jest odpowiedzialna za większość danych użytkownika z jednostką o nazwie user. Jednak w przypadku konieczności przechowywania danych o użytkowniku w ramach mikrousługi porządkowania należy przechowywać ją jako inną jednostkę o nazwie kupc. Jednostka kupca udostępnia taką samą tożsamość z oryginalną jednostką użytkownika, ale może mieć tylko kilka atrybutów wymaganych przez domenę kolejności, a nie cały profil użytkownika.
+Jak wspomniano wcześniej w sekcji [Identyfikowanie modeli domen dla każdej mikrousług](identify-microservice-domain-model-boundaries.md) , duplikowanie niektórych danych z kilku mikrousług nie jest niewłaściwym projektem — w przeciwieństwie do tego, że można przetłumaczyć dane na określony język lub warunki tej dodatkowej domeny lub kontekstu ograniczonego. Na przykład w [aplikacji eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) masz mikrousługę o nazwie `identity-api`, która jest w pełni obciążona większością danych użytkownika jednostką o nazwie `User`. Jednak w przypadku konieczności przechowywania danych o użytkowniku w `Ordering` mikrousługi należy je zapisać jako inną jednostkę o nazwie `Buyer`. Jednostka `Buyer` współużytkuje tę samą tożsamość z oryginalną jednostką `User`, ale może mieć tylko kilka atrybutów wymaganych przez domenę `Ordering`, a nie cały profil użytkownika.
 
 Można użyć dowolnego protokołu do komunikacji i propagowania danych asynchronicznie w mikrousługach w celu zapewnienia spójności ostatecznej. Jak wspomniano, można użyć zdarzeń integracji przy użyciu magistrali zdarzeń lub brokera komunikatów lub można nawet użyć protokołu HTTP przez sondowanie innych usług. Nie ma znaczenia. Ważna zasada polega na tym, że nie można utworzyć synchronicznych zależności między mikrousługami.
 
@@ -108,5 +108,5 @@ Jak pokazano na rysunku 4-17, komunikacja HTTP w czasie rzeczywistym oznacza, ż
 Sygnalizujący to dobry sposób na osiągnięcie komunikacji w czasie rzeczywistym na potrzeby wypychania zawartości do klientów z serwera zaplecza. Ze względu na to, że komunikacja jest w czasie rzeczywistym, aplikacje klienckie pokazują zmiany niemal natychmiast. Jest to zwykle obsługiwane przez protokół, taki jak WebSockets, przy użyciu wielu połączeń usługi WebSockets (jeden na klienta). Typowym przykładem jest to, że usługa komunikuje się ze zmianą w wyniku gry sportowe z wieloma aplikacjami sieci Web klienta jednocześnie.
 
 >[!div class="step-by-step"]
->[Poprzedni](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md)
->[Następny](asynchronous-message-based-communication.md)
+>[Poprzednie](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md)
+>[dalej](asynchronous-message-based-communication.md)

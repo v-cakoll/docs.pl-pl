@@ -1,13 +1,13 @@
 ---
 title: Terminologia platformy Docker
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Terminologia platformy Docker
-ms.date: 01/07/2019
-ms.openlocfilehash: 33f2918df5b63cc4bd54ddb84900c6bd91e9f77e
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.date: 01/30/2020
+ms.openlocfilehash: 5ffc7e791df8cbc999c6ababf62670bae46e1d5e
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921004"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502836"
 ---
 # <a name="docker-terminology"></a>Terminologia platformy Docker
 
@@ -31,7 +31,7 @@ W tej sekcji przedstawiono terminy i definicje, z którymi należy zapoznać si�
 
 **Rejestr**: usługa, która zapewnia dostęp do repozytoriów. Domyślnym rejestrem większości obrazów publicznych jest [centrum platformy Docker](https://hub.docker.com/) (należące do platformy Docker jako organizacja). Rejestr zawiera zwykle repozytoria z wielu zespołów. Firmy często mają prywatne rejestry do przechowywania utworzonych przez siebie obrazów i zarządzania nimi. Azure Container Registry jest kolejnym przykładem.
 
-Obraz z obsługą **wielodostępności**: w przypadku architektury wieloarchitekturowej jest funkcją, która upraszcza wybór odpowiedniego obrazu. zgodnie z platformą, w której działa system Docker, na przykład gdy pliku dockerfile żąda obrazu podstawowego **z MCR.Microsoft.com/dotnet/Core/SDK:2.2** z rejestru, faktycznie otrzymuje **2,2-SDK-nanoserver-1709**, **2,2-SDK-nanoserver-1803**, **2,2-SDK-nanoserver-1809** lub **2,2-SDK-rozciąga**, w zależności od systemu operacyjnego i wersji, na których działa program Docker.
+**Obraz**z obsługą wielu rozwiązań: w przypadku wielu architektur jest to funkcja, która upraszcza wybór odpowiedniego obrazu, zgodnie z platformą, na której działa platforma Docker. Na przykład gdy pliku dockerfile żąda obrazu podstawowego **z MCR.Microsoft.com/dotnet/Core/SDK:3.1** z rejestru, faktycznie otrzymuje **3,1-SDK-nanoserver-1909**, **3,1-SDK-nanoserver-1809** lub **3,1-SDK-Buster-Slim**, w zależności od systemu operacyjnego i wersji, w której działa program Docker.
 
 **Centrum platformy Docker**: Rejestr publiczny służący do przekazywania obrazów i pracy z nimi. Centrum platformy Docker zapewnia hosting obrazów platformy Docker, rejestry publiczne lub prywatne, wyzwalacze kompilacji i elementy webhook oraz integrację z usługą GitHub i Bitbucket.
 
@@ -50,5 +50,5 @@ Obraz z obsługą **wielodostępności**: w przypadku architektury wieloarchitek
 **Orchestrator**: Narzędzie upraszczające Zarządzanie klastrami i hostami platformy Docker. Koordynatorzy umożliwiają zarządzanie obrazami, kontenerami i hostami za pomocą interfejsu wiersza polecenia lub graficznego interfejsu użytkownika. Można zarządzać sieciami kontenera, konfiguracjami, równoważeniem obciążenia, odnajdywaniem usług, wysoką dostępnością, konfiguracją hosta platformy Docker i innymi. Koordynator jest odpowiedzialny za uruchamianie, dystrybuowanie, skalowanie i korygowanie obciążeń w kolekcji węzłów. Zazwyczaj produkty Orchestrator są tymi samymi produktami, które zapewniają infrastrukturę klastra, taką jak Kubernetes i Azure Service Fabric, między innymi ofertami na rynku.
 
 >[!div class="step-by-step"]
->[Poprzedni](docker-defined.md)
->[Następny](docker-containers-images-registries.md)
+>[Poprzednie](docker-defined.md)
+>[dalej](docker-containers-images-registries.md)

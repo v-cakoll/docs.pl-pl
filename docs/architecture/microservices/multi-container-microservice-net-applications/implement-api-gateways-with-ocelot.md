@@ -1,26 +1,24 @@
 ---
 title: Wdrażanie bram interfejsu API za pomocą rozwiązania Ocelot
 description: Dowiedz się, jak zaimplementować bramy interfejsu API za pomocą Ocelot oraz jak używać Ocelot w środowisku opartym na kontenerach.
-ms.date: 10/02/2018
-ms.openlocfilehash: c0bcd240b6bd190dd02266c7faaf9fd668eb23bb
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.date: 01/30/2020
+ms.openlocfilehash: 0eb834829a418cfa1ccdf13c5fc8849f6855c4ba
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777304"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502416"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Implementowanie bram interfejsu API za pomocą Ocelot
 
-Aplikacja mikrousługi referencyjnej [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) korzysta z [Ocelot](https://github.com/ThreeMammals/Ocelot), prostej i uproszczonej bramy interfejsu API, którą można wdrożyć w dowolnym miejscu wraz z mikrousługami/kontenerami, takimi jak w przypadku dowolnego z następujących środowisk, które są używane przez usługę eShopOnContainers:
-
-- Host platformy Docker na lokalnym komputerze deweloperskim, lokalnie lub w chmurze.
-- Klaster Kubernetes, lokalny lub w chmurze zarządzanej, taki jak usługa Azure Kubernetes Service (AKS).
-- Service Fabric klastra, lokalnie lub w chmurze.
-- Service Fabric mesh, jako niePaaSy/serwer na platformie Azure.
+> [!IMPORTANT]
+> [EShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) aplikacji mikrousługi referencyjnej używa obecnie funkcji dostarczonych przez [wysłannika](https://www.envoyproxy.io/) do implementowania bramy interfejsu API zamiast wcześniejszego odwołania do [Ocelot](https://github.com/ThreeMammals/Ocelot).
+> Ten wybór projektu został dokonany z powodu wbudowanej obsługi protokołu WebSocket w programie wysłannika, wymaganej przez nową komunikację między usługami gRPC zaimplementowaną w eShopOnContainers.
+> Ta sekcja w przewodniku została jednak zachowana, dlatego można rozważyć Ocelot jako prostą, łatwą i uproszczoną bramę interfejsu API odpowiednią do scenariuszy klasy produkcyjnej.
 
 ## <a name="architect-and-design-your-api-gateways"></a>Architekt i projektowanie bram interfejsu API
 
-Na poniższym diagramie architektury pokazano, w jaki sposób bramy interfejsu API są implementowane za pomocą Ocelot w eShopOnContainers.
+Poniższy diagram architektury przedstawia sposób implementacji bram interfejsu API z Ocelot w eShopOnContainers.
 
 ![Diagram przedstawiający architekturę eShopOnContainers.](./media/implement-api-gateways-with-ocelot/eshoponcontainers-architecture.png)
 
@@ -89,7 +87,7 @@ public async Task<IActionResult> GetItemById(int id)
 W przypadku adresu URL mikrousług, gdy kontenery są wdrażane na lokalnym komputerze deweloperskim (lokalny Host platformy Docker), każdy kontener mikrousług ma zawsze port wewnętrzny (zazwyczaj port 80) określony w pliku dockerfile, jak w poniższym pliku dockerfile:
 
 ```Dockerfile
-FROM microsoft/aspnetcore:2.0.5 AS base
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base
 WORKDIR /app
 EXPOSE 80
 ```
@@ -105,7 +103,7 @@ Jednak podczas tworzenia programu chcesz bezpośrednio uzyskać dostęp do mikro
 Oto przykład pliku `docker-compose.override.yml` dla mikrousługi katalogu:
 
 ```yml
-catalog.api:
+catalog-api:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
     - ASPNETCORE_URLS=http://0.0.0.0:80
@@ -123,10 +121,10 @@ Zwykle nie jest wdrażana przy użyciu platformy Docker — tworzenie w środowi
 Uruchom mikrousługę katalogu na lokalnym hoście platformy Docker. Uruchom pełne rozwiązanie eShopOnContainers z programu Visual Studio (uruchamia wszystkie usługi w plikach do redagowania w systemie Docker) lub Uruchom mikrousługę za pomocą następującego polecenia Docker-Zredaguj w programie CMD lub programie PowerShell umieszczonym w folderze, w którym znajdują się `docker-compose.yml` i `docker-compose.override.yml`.
 
 ```console
-docker-compose run --service-ports catalog.api
+docker-compose run --service-ports catalog-api
 ```
 
-To polecenie uruchamia tylko wykaz. kontener usługi API i zależności, które są określone w Docker-Compose. yml. W tym przypadku kontener SQL Server i kontener RabbitMQ.
+To polecenie uruchamia tylko kontener usługi Catalog-API i zależności, które są określone w Docker-Compose. yml. W tym przypadku kontener SQL Server i kontener RabbitMQ.
 
 Następnie można bezpośrednio uzyskać dostęp do mikrousługi katalogu i wyświetlić jej metody za pomocą interfejsu użytkownika programu Swagger, uzyskując dostęp bezpośrednio przez ten port "zewnętrzny", w tym przypadku `http://localhost:5101/swagger`:
 
@@ -142,7 +140,7 @@ Jednak bezpośredni dostęp do mikrousługi, w tym przypadku przez port zewnętr
 
 Ocelot jest zasadniczo zestawem middlewares, który można zastosować w określonej kolejności.
 
-Ocelot jest przeznaczona do pracy tylko z ASP.NET Core. Jest on przeznaczony dla programu .NET Standard 2.0, dzięki czemu można go używać wszędzie .NET Standard 2,0 jest obsługiwane, w tym środowisko uruchomieniowe .NET Core 2,0 i środowisko uruchomieniowe i .NET Framework 4.6.1.
+Ocelot jest przeznaczona do pracy tylko z ASP.NET Core. Jest ona przeznaczona do `netstandard2.0`, dzięki czemu można jej używać wszędzie .NET Standard 2,0 jest obsługiwane, w tym środowisko uruchomieniowe programu .NET Core 2,0 i środowisko uruchomieniowe w .NET Framework 4.6.1.
 
 Program Visual Studio umożliwia zainstalowanie Ocelot i jego zależności w projekcie ASP.NET Core z [pakietem NuGet Ocelot](https://www.nuget.org/packages/Ocelot/).
 
@@ -150,7 +148,7 @@ Program Visual Studio umożliwia zainstalowanie Ocelot i jego zależności w pro
 Install-Package Ocelot
 ```
 
-W eShopOnContainers, jej implementacja bramy interfejsu API to ASP.NET Core prosty projekt usługi WebHost, a middlewares Ocelot obsługują wszystkie funkcje bramy interfejsu API, jak pokazano na poniższej ilustracji:
+W eShopOnContainers, jej implementacja bramy interfejsu API to ASP.NET Core prosty projekt usługi WebHost, a Ocelot oprogramowanie pośredniczące obsługuje wszystkie funkcje bramy interfejsu API, jak pokazano na poniższej ilustracji:
 
 ![Zrzut ekranu przedstawiający Eksplorator rozwiązań pokazujący projekt bramy interfejsu API Ocelot.](./media/implement-api-gateways-with-ocelot/ocelotapigw-base-project.png)
 
@@ -207,7 +205,7 @@ Poniżej przedstawiono uproszczony przykład [retrasy pliku konfiguracji](https:
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "catalog.api",
+          "Host": "catalog-api",
           "Port": 80
         }
       ],
@@ -219,7 +217,7 @@ Poniżej przedstawiono uproszczony przykład [retrasy pliku konfiguracji](https:
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "basket.api",
+          "Host": "basket-api",
           "Port": 80
         }
       ],
@@ -249,7 +247,7 @@ Na przykład należy skoncentrować się na jednej z przekierowania w pliku Conf
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "basket.api",
+          "Host": "basket-api",
           "Port": 80
         }
       ],
@@ -318,7 +316,7 @@ Ponadto, jak widać w poniższym pliku Docker-Compose. override. yml, jedyną r�
 mobileshoppingapigw:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
-    - IdentityUrl=http://identity.api
+    - IdentityUrl=http://identity-api
   ports:
     - "5200:80"
   volumes:
@@ -327,7 +325,7 @@ mobileshoppingapigw:
 mobilemarketingapigw:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
-    - IdentityUrl=http://identity.api
+    - IdentityUrl=http://identity-api
   ports:
     - "5201:80"
   volumes:
@@ -336,7 +334,7 @@ mobilemarketingapigw:
 webshoppingapigw:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
-    - IdentityUrl=http://identity.api
+    - IdentityUrl=http://identity-api
   ports:
     - "5202:80"
   volumes:
@@ -345,7 +343,7 @@ webshoppingapigw:
 webmarketingapigw:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
-    - IdentityUrl=http://identity.api
+    - IdentityUrl=http://identity-api
   ports:
     - "5203:80"
   volumes:
@@ -362,13 +360,13 @@ Dzieląc bramę interfejsu API na wiele bram interfejsu API, różne zespoły pr
 
 Teraz, jeśli uruchomisz eShopOnContainers z bramami interfejsu API (zawartymi domyślnie w programie VS podczas otwierania rozwiązania eShopOnContainers-ServicesAndWebApps. sln lub w przypadku uruchamiania funkcji "Docker-Zredaguj up"), zostaną wykonane następujące przykładowe trasy.
 
-Na przykład podczas odwiedzania adresu URL nadrzędnego `http://localhost:5202/api/v1/c/catalog/items/2/` obsługiwanego przez bramę interfejsu API webshoppingapigw można uzyskać ten sam wynik z wewnętrznego podrzędnego adresu URL `http://catalog.api/api/v1/2` na hoście platformy Docker, jak w poniższej przeglądarce.
+Na przykład podczas odwiedzania adresu URL nadrzędnego `http://localhost:5202/api/v1/c/catalog/items/2/` obsługiwanego przez bramę interfejsu API webshoppingapigw można uzyskać ten sam wynik z wewnętrznego podrzędnego adresu URL `http://catalog-api/api/v1/2` na hoście platformy Docker, jak w poniższej przeglądarce.
 
 ![Zrzut ekranu przeglądarki wyświetlającej odpowiedź przechodzącą przez bramę interfejsu API.](./media/implement-api-gateways-with-ocelot/access-microservice-through-url.png)
 
 **Rysunek 6-35**. Uzyskiwanie dostępu do mikrousługi za pomocą adresu URL dostarczonego przez bramę interfejsu API
 
-Ze względu na testowanie lub debugowanie, jeśli chcesz uzyskać bezpośredni dostęp do kontenera Docker katalogu (tylko w środowisku programistycznym) bez przechodzenia przez bramę interfejsu API, ponieważ element "Catalog. API" jest wewnętrznym rozpoznawaniem nazw DNS dla hosta platformy Docker (Odnajdywanie usług obsługiwane przez nazwy usług platformy Docker), jedynym sposobem bezpośredniego dostępu do kontenera jest port zewnętrzny opublikowany w Docker-Compose. override. yml, który jest dostępny tylko dla testów programistycznych, takich jak `http://localhost:5101/api/v1/Catalog/items/1` w poniższej przeglądarce.
+Ze względu na testowanie lub debugowanie, jeśli chcesz uzyskać bezpośredni dostęp do kontenera Docker katalogu (tylko w środowisku programistycznym) bez przechodzenia przez bramę interfejsu API, ponieważ "Catalog-API" to rozpoznawanie nazw DNS wewnętrznie dla hosta platformy Docker (Odnajdywanie usług obsługiwane przez nazwy usług platformy Docker), jedynym sposobem bezpośredniego dostępu do kontenera jest użycie portu zewnętrznego opublikowanego w Docker-Compose. override. yml, który jest dostępny tylko dla testów programistycznych, takich jak `http://localhost:5101/api/v1/Catalog/items/1` w poniższej przeglądarce.
 
 ![Zrzut ekranu przeglądarki wyświetlającej bezpośrednią odpowiedź do katalogu. API.](./media/implement-api-gateways-with-ocelot/direct-access-microservice-testing.png)
 
@@ -426,7 +424,7 @@ Sposób zabezpieczania przy użyciu uwierzytelniania każdej usługi na poziomie
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "basket.api",
+          "Host": "basket-api",
           "Port": 80
         }
       ],
@@ -578,5 +576,5 @@ W przypadku korzystania z bramy interfejsu API Ocelot, która została opisana w
   [https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html](https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html )
 
 > [!div class="step-by-step"]
-> [Poprzedni](background-tasks-with-ihostedservice.md)
-> [Następny](../microservice-ddd-cqrs-patterns/index.md)
+> [Poprzednie](background-tasks-with-ihostedservice.md)
+> [dalej](../microservice-ddd-cqrs-patterns/index.md)

@@ -2,12 +2,12 @@
 title: Modernizowanie cyklu życia aplikacji za pomocą potoków ciągłej integracji/ciągłego wdrażania i metodyki DevOps w chmurze
 description: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows | Modernizacja cyklu życia aplikacji za pomocą potoków ciągłej integracji i ciągłego wdrażania oraz narzędzi DevOps w chmurze
 ms.date: 04/30/2018
-ms.openlocfilehash: d1aa2e156e87cafe99fb994233786f67bf7a81a1
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 17a78c108bfc61471128a34191ec7a5d7cc28289
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "72396216"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503848"
 ---
 # <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>Modernizowanie cyklu życia aplikacji za pomocą potoków ciągłej integracji/ciągłego wdrażania i metodyki DevOps w chmurze
 
@@ -21,7 +21,7 @@ Azure DevOps Services obsługuje ciągłą integrację i wdrażanie aplikacji z 
 
 - [Wdróż w usłudze Azure Kubernetes Service](https://docs.microsoft.com/azure/devops/pipelines/apps/cd/deploy-aks?tabs=dotnet-core)
 
-Możesz również wdrożyć program [Docker Swarm](https://blogs.msdn.microsoft.com/jcorioland/2016/11/29/full-ci-cd-pipeline-to-deploy-multi-containers-application-on-azure-container-service-docker-swarm-using-visual-studio-team-services/) lub DC/OS przy użyciu Azure DevOps Services zadań opartych na skryptach.
+Możesz również wdrożyć program [Docker Swarm](https://blog.jcorioland.io/archives/2016/11/29/full-ci-cd-pipeline-to-deploy-multi-containers-application-on-azure-container-service-docker-swarm-using-visual-studio-team-services.html) lub DC/OS przy użyciu Azure DevOps Services zadań opartych na skryptach.
 
 Aby nadal ułatwiać elastyczność wdrażania, narzędzia te zapewniają doskonałe środowisko wdrażania z zakresu tworzenia i testowania do produkcji w przypadku obciążeń kontenerów, z możliwością wyboru rozwiązań programistycznych i ciągłej integracji.
 
@@ -32,5 +32,5 @@ Rysunek 4-12 przedstawia potok ciągłego wdrażania, który jest wdrażany w kl
 **Rysunek 4-12.** Azure DevOps Services potok ciągłego wdrażania, wdrażanie w klastrze Kubernetes
 
 >[!div class="step-by-step"]
->[Poprzedni](modernize-your-apps-with-monitoring-and-telemetry.md)
->[Następny](migrate-to-hybrid-cloud-scenarios.md)
+>[Poprzednie](modernize-your-apps-with-monitoring-and-telemetry.md)
+>[dalej](migrate-to-hybrid-cloud-scenarios.md)

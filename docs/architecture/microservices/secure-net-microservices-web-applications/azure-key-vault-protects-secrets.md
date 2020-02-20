@@ -2,14 +2,13 @@
 title: Korzystanie z usługi Azure Key Vault w celu ochrony kluczy tajnych w czasie tworzenia
 description: Zabezpieczenia w mikrousługach .NET i aplikacjach sieci Web — Azure Key Vault jest doskonałym sposobem obsługi wpisów tajnych aplikacji, które są w pełni kontrolowane przez administratorów. Administratorzy mogą nawet przypisywać i odwoływać wartości deweloperskie bez deweloperów, którzy muszą je obsłużyć.
 author: mjrousos
-ms.author: wiwagn
-ms.date: 10/19/2018
-ms.openlocfilehash: 4d121f584188c5d5fa9ddf0d91bea5e107eff0cb
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.date: 01/30/2020
+ms.openlocfilehash: cc95d491136c945255408cec2bd49d4d6579e29a
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899657"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501750"
 ---
 # <a name="use-azure-key-vault-to-protect-secrets-at-production-time"></a>Użyj Azure Key Vault, aby chronić wpisy tajne w czasie produkcji
 
@@ -53,5 +52,5 @@ Pakiet **Microsoft. Extensions. Configuration. AzureKeyVault** umożliwia aplika
   <https://github.com/dotnet/extensions/tree/master/src/Configuration/Config.KeyPerFile>
 
 >[!div class="step-by-step"]
->[Poprzedni](developer-app-secrets-storage.md)
->[Następny](../key-takeaways.md)
+>[Poprzednie](developer-app-secrets-storage.md)
+>[dalej](../key-takeaways.md)

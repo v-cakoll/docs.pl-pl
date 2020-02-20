@@ -1,13 +1,13 @@
 ---
 title: Testowanie aplikacji internetowych i usług ASP.NET Core
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Poznaj architekturę testowania ASP.NET Core usług i aplikacji sieci Web w kontenerach.
-ms.date: 10/02/2018
-ms.openlocfilehash: 324b71d830bca43be71e8847fe2dd1b8b1593556
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: ab3ae6276ea4e4c741731f050913d956046271ca
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739477"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501985"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Testowanie aplikacji internetowych i usług ASP.NET Core
 
@@ -68,7 +68,7 @@ W przeciwieństwie do testów jednostkowych, testy integracji często obejmują 
 
 Ponieważ testy integracji wykonują większe segmenty kodu niż testy jednostkowe, a ponieważ testy integracji korzystają z elementów infrastruktury, są one w porządku o wielkości wolniej niż testy jednostkowe. Z tego względu dobrym pomysłem jest ograniczenie liczby wykonywanych i uruchamianych testów integracji.
 
-ASP.NET Core obejmuje wbudowanego hosta sieci Web, który może służyć do obsługi żądań HTTP bez narzutu sieciowego, co oznacza, że można uruchamiać te testy szybciej przy użyciu rzeczywistego hosta sieci Web. Test hosta sieci Web (TestServer) jest dostępny w składniku NuGet jako Microsoft. AspNetCore. TestHost. Można go dodać do projektów testów integracji i używać do hostowania aplikacji ASP.NET Core.
+ASP.NET Core obejmuje wbudowanego hosta sieci Web, który może służyć do obsługi żądań HTTP bez obciążenia sieci, co oznacza, że można uruchamiać te testy szybciej niż w przypadku korzystania z rzeczywistego hosta sieci Web. Test hosta sieci Web (TestServer) jest dostępny w składniku NuGet jako Microsoft. AspNetCore. TestHost. Można go dodać do projektów testów integracji i używać do hostowania aplikacji ASP.NET Core.
 
 Jak widać w poniższym kodzie, podczas tworzenia testów integracji dla kontrolerów ASP.NET Core należy utworzyć wystąpienia kontrolerów za pomocą hosta testowego. Jest to porównywalne do żądania HTTP, ale działa szybciej.
 
@@ -110,16 +110,16 @@ public class PrimeWebDefaultRequestShould
 - **Testowanie jednostkowe w programie .NET Core przy użyciu testu dotnet** \
     [https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test](../../../core/testing/unit-testing-with-dotnet-test.md)
 
-- **xUnit.net**. Oficjalna lokacja. \
+- **xUnit.NET**. Oficjalna lokacja. \
     <https://xunit.github.io/>
 
 - **Podstawowe informacje o teście jednostkowym.** \
     [https://docs.microsoft.com/visualstudio/test/unit-test-basics](/visualstudio/test/unit-test-basics)
 
-- **Moq**. Repozytorium GitHub. \
+- **MOQ**. Repozytorium GitHub. \
     <https://github.com/moq/moq>
 
-- **NUnit**. Oficjalna lokacja. \
+- **Nunit**. Oficjalna lokacja. \
     <https://www.nunit.org/>
 
 ### <a name="implementing-service-tests-on-a-multi-container-application"></a>Implementowanie testów usługi w aplikacji wielokontenera
@@ -140,8 +140,6 @@ Testy aplikacji referencyjnych (eShopOnContainers) zostały niedawno rozbudowane
 
 3. **Testy funkcjonalne/integracji aplikacji**, które koncentrują się na integracji mikrousług, z przypadkami testowymi, które wywierają kilka mikrousług. Te testy znajdują się w projekcie **Application. FunctionalTests**.
 
-4. **Testy obciążenia**, które koncentrują się na czasy odpowiedzi dla każdej mikrousługi. Testy te znajdują się w projekcie **LoadTest** i wymagają programu Visual Studio 2017 Enterprise Edition.
-
 Test jednostkowy i integracji na mikrousług są zawarte w folderze testowym w każdej mikrousłudze i aplikacji testy obciążenia są zawarte w folderze testowym w folderze rozwiązania, jak pokazano na rysunku 6-25.
 
 ![Zrzut ekranu przedstawiający a wskazujący niektóre projekty testowe w rozwiązaniu.](./media/test-aspnet-core-services-web-apps/eshoponcontainers-test-folder-structure.png)
@@ -160,13 +158,13 @@ services:
     image: redis:alpine
   rabbitmq:
     image: rabbitmq:3-management-alpine
-  sql.data:
-    image: microsoft/mssql-server-linux:2017-latest
-  nosql.data:
+  sqldata:
+    image: mcr.microsoft.com/mssql/server:2017-latest
+  nosqldata:
     image: mongo
 ```
 
-**docker-compose-test.override.yml**
+**Docker-Compose-test. override. yml**
 
 ```yml
 version: '3.4'
@@ -179,13 +177,13 @@ services:
     ports:
       - "15672:15672"
       - "5672:5672"
-  sql.data:
+  sqldata:
     environment:
       - SA_PASSWORD=Pass@word
       - ACCEPT_EULA=Y
     ports:
       - "5433:1433"
-  nosql.data:
+  nosqldata:
     ports:
       - "27017:27017"
 ```
@@ -207,5 +205,5 @@ Jak widać, te pliki tworzące platformę Docker umożliwiają uruchamianie tylk
     <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/>
 
 > [!div class="step-by-step"]
-> [Poprzedni](subscribe-events.md)
-> [Następny](background-tasks-with-ihostedservice.md)
+> [Poprzednie](subscribe-events.md)
+> [dalej](background-tasks-with-ihostedservice.md)

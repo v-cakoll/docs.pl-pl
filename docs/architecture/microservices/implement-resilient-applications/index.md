@@ -1,13 +1,13 @@
 ---
-title: Implementowanie aplikacji odpornych na błędy
-description: Dowiedz się więcej o odporności, podstawowej koncepcji w architekturze mikrousług. Musisz wiedzieć, jak bezpiecznie obsługiwać błędy przejściowe, ponieważ wystąpią.
-ms.date: 10/16/2018
-ms.openlocfilehash: 766349e72389f848b0a741b020707cc7acf3410d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+title: Implementuj aplikacje odporne
+description: Dowiedz się więcej o odporności, podstawowej koncepcji w architekturze mikrousług. Należy wiedzieć, jak bezpiecznie obsługiwać błędy przejściowe.
+ms.date: 01/30/2020
+ms.openlocfilehash: ccdb2470c727ad4bd89c4e0634da8564b8010e63
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296061"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502656"
 ---
 # <a name="implement-resilient-applications"></a>Implementuj aplikacje odporne
 
@@ -19,6 +19,16 @@ Jest to trudne do zaprojektowania i wdrożenia aplikacji opartej na mikrousługa
 
 Wiele pojedynczych składników aplikacji powinna również zawierać funkcje monitorowania kondycji. Postępując zgodnie z wytycznymi w tym rozdziale, można utworzyć aplikację, która może działać bezproblemowo pomimo przejściowego przestoju lub normalnego hiccupsu w przypadku wdrożeń złożonych i opartych na chmurze.
 
+>[!IMPORTANT]
+> eShopOnContainer użyto [biblioteki Polly](http://www.thepollyproject.org/) w celu zaimplementowania odporności przy użyciu [wpisanych klientów](./use-httpclientfactory-to-implement-resilient-http-requests.md) do momentu wydania 3.0.0.
+>
+> Począwszy od wersji 3.0.0, odporność wywołań HTTP jest implementowana za pomocą [konsolidatora siatki](https://linkerd.io/), która obsługuje ponowne próby w sposób przezroczysty i konfigurowalny w klastrze Kubernetes, bez konieczności obsługi tych problemów w kodzie.
+>
+> Biblioteka Polly jest nadal używana do dodawania odporności do połączeń z bazą danych, szczególnie podczas uruchamiania usług.
+
+>[!WARNING]
+> Wszystkie przykłady kodu w tej sekcji były prawidłowe przed użyciem konsolidatora i nie są aktualizowane w celu odzwierciedlenia bieżącego rzeczywistego kodu. Dlatego mają sens w kontekście tej sekcji.
+
 >[!div class="step-by-step"]
->[Poprzedni](../microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md)
->[Następny](handle-partial-failure.md)
+>[Poprzednie](../microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md)
+>[dalej](handle-partial-failure.md)

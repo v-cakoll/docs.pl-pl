@@ -1,19 +1,19 @@
 ---
 title: Subskrybowanie zdarzeń
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Zapoznaj się ze szczegółami dotyczącymi publikowania i subskrypcji zdarzeń integracji.
-ms.date: 10/02/2018
-ms.openlocfilehash: facbb04d322c5df03498a0313556dd9b5b3161d2
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.date: 01/30/2020
+ms.openlocfilehash: 544af8035ed23dd6507dfed4944b0c327c81d943
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937144"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501810"
 ---
 # <a name="subscribing-to-events"></a>Subskrybowanie zdarzeń
 
 Pierwszym krokiem przy korzystaniu z magistrali zdarzeń jest subskrybowanie mikrousług do zdarzeń, które chcą odebrać. Należy to zrobić w mikrousługach odbiornika.
 
-Poniższy prosty kod pokazuje, co każda mikrousługa odbiornika musi zaimplementować podczas uruchamiania usługi (czyli w klasie `Startup`), dzięki czemu subskrybuje potrzebne zdarzenia. W takim przypadku `basket.api` mikrousługa musi subskrybować `ProductPriceChangedIntegrationEvent` i wiadomości `OrderStartedIntegrationEvent`.
+Poniższy prosty kod pokazuje, co każda mikrousługa odbiornika musi zaimplementować podczas uruchamiania usługi (czyli w klasie `Startup`), dzięki czemu subskrybuje potrzebne zdarzenia. W takim przypadku `basket-api` mikrousługa musi subskrybować `ProductPriceChangedIntegrationEvent` i wiadomości `OrderStartedIntegrationEvent`.
 
 Na przykład podczas subskrybowania zdarzenia `ProductPriceChangedIntegrationEvent`, dzięki czemu usługa koszyka wie o wszelkich zmianach w cenie produktu i umożliwia mu ostrzeganie użytkownika o zmianie, jeśli ten produkt znajduje się w koszyku użytkownika.
 
@@ -107,7 +107,7 @@ Jak wspomniano wcześniej w sekcji architektura, można mieć kilka metod postę
 
 - Przy użyciu [wzorca skrzynki nadawczej](https://www.kamilgrzybek.com/design/the-outbox-pattern/). Jest to tabela transakcyjna do przechowywania zdarzeń integracji (rozszerzających transakcję lokalną).
 
-W tym scenariuszu przy użyciu pełnej wzorca określania źródła zdarzeń (ES) jest jednym z najlepszych metod, jeśli *nie* najlepsze. Jednak w wielu scenariuszach aplikacji może nie być możliwe zaimplementowanie systemu całkowitego ES. ES oznacza przechowywanie tylko zdarzeń domeny w transakcyjnej bazie danych, a nie przechowywanie bieżących danych stanu. Przechowywanie tylko zdarzeń domeny może mieć znakomite korzyści, takie jak udostępnienie historii systemu i możliwość ustalenia stanu systemu w dowolnym momencie w przeszłości. Jednak wdrożenie systemu Full ES wymaga przeprowadzenia ponownej architektury większości systemów i wprowadzono wiele innych złożoności i wymagań. Można na przykład użyć bazy danych przeznaczonej do określania źródła zdarzeń, takich jak [Magazyn zdarzeń](https://eventstore.org/), lub bazy danych zorientowanej na dokumenty, takiej jak Azure Cosmos DB, MongoDB, Cassandra, CouchDB lub RavenDB. ES to doskonałe rozwiązanie tego problemu, ale nie najłatwiej, chyba że masz już doświadczenie ze źródłem zdarzeń.
+W tym scenariuszu należy użyć wzorca źródeł pełnych zdarzeń, *Jeśli nie jest to najlepsze rozwiązanie.* Jednak w wielu scenariuszach aplikacji może nie być możliwe zaimplementowanie systemu całkowitego ES. ES oznacza przechowywanie tylko zdarzeń domeny w transakcyjnej bazie danych, a nie przechowywanie bieżących danych stanu. Przechowywanie tylko zdarzeń domeny może mieć znakomite korzyści, takie jak udostępnienie historii systemu i możliwość ustalenia stanu systemu w dowolnym momencie w przeszłości. Jednak wdrożenie systemu Full ES wymaga przeprowadzenia ponownej architektury większości systemów i wprowadzono wiele innych złożoności i wymagań. Można na przykład użyć bazy danych przeznaczonej do określania źródła zdarzeń, takich jak [Magazyn zdarzeń](https://eventstore.org/), lub bazy danych zorientowanej na dokumenty, takiej jak Azure Cosmos DB, MongoDB, Cassandra, CouchDB lub RavenDB. ES to doskonałe rozwiązanie tego problemu, ale nie najłatwiej, chyba że masz już doświadczenie ze źródłem zdarzeń.
 
 Opcja korzystania z wyszukiwania w dzienniku transakcji początkowo wygląda bardzo przejrzysta. Aby jednak korzystać z tego podejścia, mikrousługa musi być dołączona do dziennika transakcji RDBMS, na przykład dziennika transakcji SQL Server. Prawdopodobnie nie jest to pożądane. Kolejną wadą jest to, że aktualizacje niskiego poziomu rejestrowane w dzienniku transakcji mogą nie znajdować się na tym samym poziomie co zdarzenia integracji wysokiego poziomu. W takim przypadku proces odtwarzania tych operacji dziennika transakcji może być trudny.
 
@@ -301,7 +301,7 @@ Niektóre przetwarzanie komunikatów jest z natury idempotentne. Na przykład je
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **Uznawanie wiadomości idempotentności**  
+- **Uznawanie \ komunikatów idempotentności**
   <https://docs.microsoft.com/previous-versions/msp-n-p/jj591565(v=pandp.10)#honoring-message-idempotency>
 
 ## <a name="deduplicating-integration-event-messages"></a>Deduplikowanie komunikatów zdarzeń integracji
@@ -338,7 +338,7 @@ Jeśli ustawiono flagę "redostarczony", odbiorca musi uwzględnić to konto, po
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
 
 -  \ **spójności ostatecznej**
-    [https://en.wikipedia.org/wiki/Eventual\_consistency](https://en.wikipedia.org/wiki/Eventual_consistency)
+    <https://en.wikipedia.org/wiki/Eventual_consistency>
 
 - **Philip brązowy. Strategie integracji ograniczonych kontekstów** \
     <https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/>
@@ -359,7 +359,7 @@ Jeśli ustawiono flagę "redostarczony", odbiorca musi uwzględnić to konto, po
     <https://dzone.com/articles/event-driven-data-management-for-microservices-1>
 
 -  \ **zakończenia theorem**
-    [https://en.wikipedia.org/wiki/CAP\_theorem](https://en.wikipedia.org/wiki/CAP_theorem)
+    <https://en.wikipedia.org/wiki/CAP_theorem>
 
 - **Co to jest theorem CAP?** \
     <https://www.quora.com/What-Is-CAP-Theorem-1>
@@ -377,8 +377,8 @@ Jeśli ustawiono flagę "redostarczony", odbiorca musi uwzględnić to konto, po
     <https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25>
 
 - **Przewodnik dotyczący niezawodności** (dokumentacja RabbitMQ) \
-    [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html#consumer)
+    <https://www.rabbitmq.com/reliability.html#consumer>
 
 > [!div class="step-by-step"]
-> [Poprzedni](rabbitmq-event-bus-development-test-environment.md)
-> [Następny](test-aspnet-core-services-web-apps.md)
+> [Poprzednie](rabbitmq-event-bus-development-test-environment.md)
+> [dalej](test-aspnet-core-services-web-apps.md)

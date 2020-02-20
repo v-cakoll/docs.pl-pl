@@ -1,13 +1,13 @@
 ---
 title: Implementowanie warstwy trwałości infrastruktury za pomocą programu Entity Framework Core
-description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Zapoznaj się ze szczegółami implementacji warstwy utrwalania infrastruktury przy użyciu Entity Framework Core.
-ms.date: 10/08/2018
-ms.openlocfilehash: b70ede6b47cbf990d0435aef841416c68f6439b4
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Zapoznaj się ze szczegółami implementacji warstwy trwałości infrastruktury przy użyciu Entity Framework Core.
+ms.date: 01/30/2020
+ms.openlocfilehash: 63579dc74ba52551bc1ee02a57337c1b17fdf396
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737918"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502494"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Zaimplementuj warstwę trwałości infrastruktury za pomocą Entity Framework Core
 
@@ -32,7 +32,7 @@ Ponieważ wprowadzenie do EF Core jest już dostępne w dokumentacji firmy Micro
 - **Klasa DbContext** \
   [https://docs.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext](xref:Microsoft.EntityFrameworkCore.DbContext)
 
-- **Porównanie \ EF Core & Ef6. x**
+- **Porównanie \ EF Core &AMP; Ef6. x**
   [https://docs.microsoft.com/ef/efcore-and-ef6/index](/ef/efcore-and-ef6/index)
 
 ## <a name="infrastructure-in-entity-framework-core-from-a-ddd-perspective"></a>Infrastruktura w Entity Framework Core z perspektywy DDD
@@ -273,49 +273,73 @@ class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
 {
     public void Configure(EntityTypeBuilder<Order> orderConfiguration)
     {
-            orderConfiguration.ToTable("orders", OrderingContext.DEFAULT_SCHEMA);
+        orderConfiguration.ToTable("orders", OrderingContext.DEFAULT_SCHEMA);
 
-            orderConfiguration.HasKey(o => o.Id);
+        orderConfiguration.HasKey(o => o.Id);
 
-            orderConfiguration.Ignore(b => b.DomainEvents);
+        orderConfiguration.Ignore(b => b.DomainEvents);
 
-            orderConfiguration.Property(o => o.Id)
-                .ForSqlServerUseSequenceHiLo("orderseq", OrderingContext.DEFAULT_SCHEMA);
+        orderConfiguration.Property(o => o.Id)
+            .UseHiLo("orderseq", OrderingContext.DEFAULT_SCHEMA);
 
-            //Address Value Object persisted as owned entity type supported since EF Core 2.0
-            orderConfiguration.OwnsOne(o => o.Address);
+        //Address value object persisted as owned entity type supported since EF Core 2.0
+        orderConfiguration
+            .OwnsOne(o => o.Address, a =>
+            {
+                a.WithOwner();
+            });
 
-            orderConfiguration.Property<DateTime>("OrderDate").IsRequired();
-            orderConfiguration.Property<int?>("BuyerId").IsRequired(false);
-            orderConfiguration.Property<int>("OrderStatusId").IsRequired();
-            orderConfiguration.Property<int?>("PaymentMethodId").IsRequired(false);
-            orderConfiguration.Property<string>("Description").IsRequired(false);
+        orderConfiguration
+            .Property<int?>("_buyerId")
+            .UsePropertyAccessMode(PropertyAccessMode.Field)
+            .HasColumnName("BuyerId")
+            .IsRequired(false);
 
-            var navigation = orderConfiguration.Metadata.FindNavigation(nameof(Order.OrderItems));
+        orderConfiguration
+            .Property<DateTime>("_orderDate")
+            .UsePropertyAccessMode(PropertyAccessMode.Field)
+            .HasColumnName("OrderDate")
+            .IsRequired();
 
-            // DDD Patterns comment:
-            //Set as field (New since EF 1.1) to access the OrderItem collection property through its field
-            navigation.SetPropertyAccessMode(PropertyAccessMode.Field);
+        orderConfiguration
+            .Property<int>("_orderStatusId")
+            .UsePropertyAccessMode(PropertyAccessMode.Field)
+            .HasColumnName("OrderStatusId")
+            .IsRequired();
 
-            orderConfiguration.HasOne<PaymentMethod>()
-                .WithMany()
-                .HasForeignKey("PaymentMethodId")
-                .IsRequired(false)
-                .OnDelete(DeleteBehavior.Restrict);
+        orderConfiguration
+            .Property<int?>("_paymentMethodId")
+            .UsePropertyAccessMode(PropertyAccessMode.Field)
+            .HasColumnName("PaymentMethodId")
+            .IsRequired(false);
 
-            orderConfiguration.HasOne<Buyer>()
-                .WithMany()
-                .IsRequired(false)
-                .HasForeignKey("BuyerId");
+        orderConfiguration.Property<string>("Description").IsRequired(false);
 
-            orderConfiguration.HasOne(o => o.OrderStatus)
-                .WithMany()
-                .HasForeignKey("OrderStatusId");
+        var navigation = orderConfiguration.Metadata.FindNavigation(nameof(Order.OrderItems));
+
+        // DDD Patterns comment:
+        //Set as field (New since EF 1.1) to access the OrderItem collection property through its field
+        navigation.SetPropertyAccessMode(PropertyAccessMode.Field);
+
+        orderConfiguration.HasOne<PaymentMethod>()
+            .WithMany()
+            .HasForeignKey("_paymentMethodId")
+            .IsRequired(false)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        orderConfiguration.HasOne<Buyer>()
+            .WithMany()
+            .IsRequired(false)
+            .HasForeignKey("_buyerId");
+
+        orderConfiguration.HasOne(o => o.OrderStatus)
+            .WithMany()
+            .HasForeignKey("_orderStatusId");
     }
 }
 ```
 
-Można ustawić wszystkie mapowania interfejsu API Fluent w ramach tej samej metody OnModelCreating, ale zaleca się, aby podzielić ten kod i mieć wiele klas konfiguracji, jeden na jednostkę, jak pokazano w przykładzie. Szczególnie w przypadku dużych modeli zaleca się posiadanie oddzielnych klas konfiguracji do konfigurowania różnych typów jednostek.
+Można ustawić wszystkie mapowania interfejsu API Fluent w ramach tej samej metody `OnModelCreating`, ale zaleca się, aby podzielić ten kod i mieć wiele klas konfiguracji, jeden na jednostkę, jak pokazano w przykładzie. Szczególnie w przypadku dużych modeli zaleca się posiadanie oddzielnych klas konfiguracji do konfigurowania różnych typów jednostek.
 
 Kod w przykładzie pokazuje kilka jawnych deklaracji i mapowania. Jednakże konwencje EF Core automatycznie wykonują wiele mapowań, więc rzeczywisty kod, który będzie potrzebny w przypadku, może być mniejszy.
 
@@ -333,7 +357,7 @@ Algorytm Hi/Lo opisuje mechanizm pobierania partii unikatowych identyfikatorów 
 
 - Generuje on czytelny dla człowieka identyfikator, w przeciwieństwie do technik, które używają identyfikatorów GUID.
 
-EF Core obsługuje [Hilo](https://stackoverflow.com/questions/282099/whats-the-hi-lo-algorithm) za pomocą metody ForSqlServerUseSequenceHiLo, jak pokazano w powyższym przykładzie.
+EF Core obsługuje [Hilo](https://stackoverflow.com/questions/282099/whats-the-hi-lo-algorithm) za pomocą metody `UseHiLo`, jak pokazano w powyższym przykładzie.
 
 ### <a name="map-fields-instead-of-properties"></a>Mapuj pola zamiast właściwości
 
@@ -410,6 +434,7 @@ public class BasketWithItemsSpecification : BaseSpecification<Basket>
     {
         AddInclude(b => b.Items);
     }
+
     public BasketWithItemsSpecification(string buyerId)
         : base(b => b.BuyerId == buyerId)
     {
@@ -445,7 +470,7 @@ public IEnumerable<T> List(ISpecification<T> spec)
 
 Oprócz hermetyzacji logiki filtrowania, Specyfikacja może określić kształt danych do zwrócenia, w tym właściwości do wypełnienia.
 
-Chociaż nie zaleca się zwracania platformy IQueryable z repozytorium, w celu utworzenia zestawu wyników doskonale dobrze jest używać ich w ramach repozytorium. To podejście można zobaczyć w powyższej metodzie list, która używa pośrednich wyrażeń IQueryable, aby utworzyć listę instrukcji include przed wykonaniem zapytania przy użyciu kryteriów specyfikacji w ostatnim wierszu.
+Chociaż nie zaleca się zwracania `IQueryable` z repozytorium, w celu utworzenia zestawu wyników idealnie dobrze jest używać ich w ramach repozytorium. To podejście można zobaczyć w powyższej metodzie list, która używa pośrednich wyrażeń `IQueryable`, aby utworzyć listę instrukcji include przed wykonaniem zapytania przy użyciu kryteriów specyfikacji w ostatnim wierszu.
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
@@ -468,5 +493,5 @@ Chociaż nie zaleca się zwracania platformy IQueryable z repozytorium, w celu u
   <https://deviq.com/specification-pattern/>
 
 > [!div class="step-by-step"]
-> [Poprzedni](infrastructure-persistence-layer-design.md)
-> [Następny](nosql-database-persistence-infrastructure.md)
+> [Poprzednie](infrastructure-persistence-layer-design.md)
+> [dalej](nosql-database-persistence-infrastructure.md)

@@ -1,13 +1,13 @@
 ---
 title: Projektowanie modelu domeny mikrousługi
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Zapoznaj się z najważniejszymi pojęciami dotyczącymi projektowania zorientowanej na siebie modelu domeny.
-ms.date: 10/08/2018
-ms.openlocfilehash: 3a02059064305ca148b7909923e2f51e60ee54d5
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: 628fb5c76362ec8f48367b3d69d16ea6ebd24f09
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737386"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502333"
 ---
 # <a name="design-a-microservice-domain-model"></a>Projektowanie modelu domeny mikrousługi
 
@@ -74,9 +74,9 @@ Coś, co jest jednostką w mikrousłudze, może nie być jednostką w innej mikr
 
 Osoba o nazwisku i nazwisku jest zazwyczaj jednostką, ponieważ osoba ma tożsamość, nawet jeśli nazwa i nazwisko pokrywają się z innym zestawem wartości, takich jak te nazwy również odnoszą się do innej osoby.
 
-Obiekty wartości są trudne do zarządzania w relacyjnych bazach danych i ORMs takich jak EF, natomiast w przypadku baz danych zorientowanych na dokumenty, które są łatwiejsze do wdrożenia i użycia.
+Obiekty wartości są trudne do zarządzania w relacyjnych bazach danych i ORMs takich jak Entity Framework (EF), natomiast w bazach danych zorientowanych na dokumenty są one łatwiejsze do zaimplementowania i użycia.
 
-EF Core 2,0 zawiera funkcję [jednostek będących własnością](https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting) , która ułatwia obsługę obiektów wartości, co opisano w dalszej części artykułu.
+EF Core 2,0 i nowsze wersje zawierają funkcję [jednostek należących](https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting) do elementów, które ułatwiają obsługę obiektów wartości, co opisano w dalszej części artykułu.
 
 #### <a name="additional-resources"></a>Dodatkowe zasoby
 
@@ -152,5 +152,5 @@ Identyfikowanie i praca z agregacjami wymaga badań i środowiska. Aby uzyskać 
   <https://deviq.com/aggregate-pattern/>
 
 >[!div class="step-by-step"]
->[Poprzedni](ddd-oriented-microservice.md)
->[Następny](net-core-microservice-domain-model.md)
+>[Poprzednie](ddd-oriented-microservice.md)
+>[dalej](net-core-microservice-domain-model.md)

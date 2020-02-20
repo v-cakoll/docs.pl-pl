@@ -2,14 +2,13 @@
 title: Informacje o autoryzacji w mikrousługach .NET i aplikacjach internetowych
 description: Zabezpieczenia w mikrousługach .NET i aplikacjach sieci Web — zapoznaj się z głównymi opcjami autoryzacji w ASP.NET Core aplikacje — oparta na rolach i oparta na zasadach.
 author: mjrousos
-ms.author: wiwagn
-ms.date: 10/19/2018
-ms.openlocfilehash: 36cd8eaf7ffe78a29762398044dc1803adc1b200
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.date: 01/30/2020
+ms.openlocfilehash: f6b69faceac9a9b4819212cc04f89080f3ddad56
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296469"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501766"
 ---
 # <a name="about-authorization-in-net-microservices-and-web-applications"></a>Informacje o autoryzacji w mikrousługach .NET i aplikacjach internetowych
 
@@ -86,8 +85,10 @@ services.AddAuthorization(options =>
 {
     options.AddPolicy("AdministratorsOnly", policy =>
         policy.RequireRole("Administrator"));
+
     options.AddPolicy("EmployeesOnly", policy =>
         policy.RequireClaim("EmployeeNumber"));
+
     options.AddPolicy("Over21", policy =>
         policy.Requirements.Add(new MinimumAgeRequirement(21)));
 });
@@ -126,5 +127,5 @@ Przykładem niestandardowego wymagania dotyczącego autoryzacji i obsługi spraw
   [https://docs.microsoft.com/aspnet/core/security/authorization/policies](/aspnet/core/security/authorization/policies)
 
 >[!div class="step-by-step"]
->[Poprzedni](index.md)
->[Następny](developer-app-secrets-storage.md)
+>[Poprzednie](index.md)
+>[dalej](developer-app-secrets-storage.md)

@@ -1,13 +1,13 @@
 ---
 title: Implementowanie obiektów wartości
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Zapoznaj się z informacjami i opcjami dotyczącymi implementowania obiektów wartości przy użyciu nowych funkcji Entity Framework.
-ms.date: 10/08/2018
-ms.openlocfilehash: 70c92fe86fda20ed4e909b945b843e8e71092f09
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.date: 01/30/2020
+ms.openlocfilehash: 4ace5c141b1cbd2dcfefb7ea7165a4006b130479
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899777"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502516"
 ---
 # <a name="implement-value-objects"></a>Implementowanie obiektów wartości
 
@@ -131,13 +131,13 @@ public class Address : ValueObject
 
 Można zobaczyć, jak ta implementacja obiektu wartości nie ma tożsamości i w związku z tym nie ma pola identyfikatora ani w klasie adresowej, a nie nawet w klasie Valueobject.
 
-Brak pola identyfikatora w klasie, która ma być używana przez Entity Framework, nie było możliwe do EF Core 2,0, co znacznie pomaga zaimplementować lepsze obiekty wartości bez identyfikatora. Jest to dokładne wyjaśnienie następnej sekcji.
+Brak pola identyfikatora w klasie, która ma być używana przez Entity Framework (EF), nie jest możliwe do momentu EF Core 2,0, co znacznie pomaga zaimplementować lepsze obiekty wartości bez identyfikatora. Jest to dokładne wyjaśnienie następnej sekcji.
 
-Może być Argumentowano, że obiekty wartości, które są niezmienne, powinny być tylko do odczytu (tj. właściwości tylko do pobrania) i faktycznie prawdziwe. Jednak obiekty wartości są zwykle serializowane i deserializowane w celu przechodzenia przez kolejki komunikatów i są w trybie tylko do odczytu uniemożliwiają przypisanie wartości, dlatego po prostu pozostawiamy je jako zestaw prywatny, który jest wystarczająco duży, aby był praktyczny.
+Może być Argumentowano, że obiekty wartości, które są niezmienne, powinny być tylko do odczytu (to oznacza, że mają właściwości tylko do pobrania) i są faktycznie prawdziwe. Jednak obiekty wartości są zwykle serializowane i deserializowane w celu przechodzenia przez kolejki komunikatów i są w trybie tylko do odczytu uniemożliwiają przypisanie wartości, dlatego po prostu pozostawiamy je jako zestaw prywatny, który jest wystarczająco duży, aby był praktyczny.
 
-## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20"></a>Jak utrwalać obiekty wartości w bazie danych za pomocą EF Core 2,0
+## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20-and-later"></a>Jak utrwalać obiekty wartości w bazie danych przy użyciu EF Core 2,0 i nowszych
 
-Właśnie pokazano, jak zdefiniować obiekt wartości w modelu domeny. Ale w jaki sposób można w rzeczywistości zachować ją w bazie danych za pomocą rdzenia Entity Framework (EF), które zwykle są obiektami docelowymi tożsamości?
+Właśnie pokazano, jak zdefiniować obiekt wartości w modelu domeny. Ale jak można je w rzeczywistości utrwalać w bazie danych przy użyciu Entity Framework Core, ponieważ zazwyczaj wskazuje ona jednostki z tożsamością?
 
 ### <a name="background-and-older-approaches-using-ef-core-11"></a>W tle i starszych podejściach korzystających z EF Core 1,1
 
@@ -160,11 +160,11 @@ void ConfigureAddress(EntityTypeBuilder<Address> addressConfiguration)
 
 Jednak trwałość tego obiektu wartości do bazy danych była przeprowadzona jak zwykła jednostka w innej tabeli.
 
-W EF Core 2,0 istnieją nowe i lepsze metody utrwalania obiektów wartości.
+W EF Core 2,0 i nowszych są nowe i lepsze metody utrwalania obiektów wartości.
 
-## <a name="persist-value-objects-as-owned-entity-types-in-ef-core-20"></a>Utrwalaj obiekty wartości jako należące do nich typy jednostek w EF Core 2,0
+## <a name="persist-value-objects-as-owned-entity-types-in-ef-core-20-and-later"></a>Utrwalaj obiekty wartości jako należące do nich typy jednostek w EF Core 2,0 i nowszych
 
-Nawet w przypadku niektórych luk między wzorcem obiektu wartości kanonicznych w DDD i typ jednostki należącej do EF Core, obecnie najlepszym sposobem utrwalania obiektów wartości jest EF Core 2,0. Ograniczenia można zobaczyć na końcu tej sekcji.
+Nawet z niektórymi przerwy między wzorcem obiektu wartości kanonicznych w DDD i typ jednostki należącej do EF Core, obecnie najlepszym sposobem utrwalania obiektów wartości jest EF Core 2,0 i nowszych. Ograniczenia można zobaczyć na końcu tej sekcji.
 
 Funkcja typu jednostki będąca własnością została dodana do EF Core od wersji 2,0.
 
@@ -178,7 +178,7 @@ Tożsamość wystąpień posiadanych typów nie jest całkowicie własna. Skład
 
 - Właściwość nawigacji wskazująca na siebie
 
-- W przypadku kolekcji typów posiadanych, składnik niezależny (nie jest jeszcze obsługiwany w EF Core 2,0, w dniu 2,2).
+- W przypadku kolekcji typów posiadanych, składnik niezależny (obsługiwany w EF Core 2,2 i nowszych).
 
 Na przykład w modelu domeny uporządkowanej pod adresem eShopOnContainers, jako część jednostki Order, obiekt wartości adresu jest implementowany jako typ jednostki należącej do jednostki właściciela, która jest jednostką Order. Adres jest typem bez właściwości Identity zdefiniowanej w modelu domeny. Jest ona używana jako właściwość typu zamówienia, aby określić adres wysyłkowy dla konkretnej kolejności.
 
@@ -275,7 +275,7 @@ public class Address
 
 - Tożsamość (klucz) wystąpienia należącego do typu w naszym stosie to złożona tożsamość typu właściciela i definicja typu będącego własnością.
 
-#### <a name="owned-entities-capabilities"></a>Możliwości jednostek należących do firmy:
+#### <a name="owned-entities-capabilities"></a>Możliwości jednostek należących do użytkownika
 
 - Typy posiadane mogą odwoływać się do innych jednostek, należących do (zagnieżdżonych typów będących własnością) lub nienależących do siebie (regularne właściwości nawigacji odwołań do innych jednostek).
 
@@ -283,27 +283,27 @@ public class Address
 
 - Podział tabeli jest konfiguracją według Konwencji, ale można zrezygnować z mapowania typu należącego do innej tabeli przy użyciu ToTable.
 
-- Ładowanie eager jest wykonywane automatycznie w typach posiadanych, tzn. nie ma potrzeby wywoływania dyrektywy include () w zapytaniu.
+- Ładowanie eager jest wykonywane automatycznie w typach posiadanych, czyli nie ma potrzeby wywoływania `.Include()` w zapytaniu.
 
-- Można skonfigurować z atrybutami \[własnością\], w EF Core 2,1
+- Można skonfigurować przy użyciu `[Owned]`atrybutów, używając EF Core 2,1 i nowszych.
 
-#### <a name="owned-entities-limitations"></a>Ograniczenia jednostek będących własnością:
+- Może obsługiwać kolekcje typów posiadanych (przy użyciu wersji 2,2 i nowszych).
 
-- Nie można utworzyć Nieogólnymi\<T\> należącego do typu (zgodnie z projektem).
+#### <a name="owned-entities-limitations"></a>Ograniczenia jednostek będących własnością
 
-- Nie można wywołać metody element modelbuilder. Entity\<T\>() dla typów posiadanych (obecnie według projektu).
+- Nie można utworzyć `DbSet<T>` należącego do typu (według projektu).
 
-- Nie ma jeszcze kolekcji posiadanych typów (w EF Core 2,1, ale będą one obsługiwane w 2,2).
+- Nie można wywołać `ModelBuilder.Entity<T>()` w typach posiadanych (obecnie według projektu).
 
-- Brak obsługi opcjonalnych (dopuszczających wartości null) typów, które są mapowane przy użyciu właściciela w tej samej tabeli (tj. przy użyciu dzielenia tabeli). Wynika to z faktu, że mapowanie jest wykonywane dla każdej właściwości. nie mamy oddzielnej kontrolki dla wartości złożonej o wartości null a jako całości.
+- Brak obsługi opcjonalnych (dopuszczających wartość null) typów, które są mapowane przy użyciu właściciela w tej samej tabeli (czyli przy użyciu dzielenia tabeli). Wynika to z faktu, że mapowanie jest wykonywane dla każdej właściwości. nie mamy oddzielnej kontrolki dla wartości złożonej o wartości null a jako całości.
 
 - Brak obsługi mapowania dziedziczenia dla typów posiadanych, ale powinno być możliwe mapowanie dwóch typów liści tych samych hierarchii dziedziczenia co różne typy należące do użytkownika. EF Core nie będzie przyczyną faktu, że są one częścią tej samej hierarchii.
 
 #### <a name="main-differences-with-ef6s-complex-types"></a>Główne różnice w EF6's typach złożonych
 
-- Dzielenie tabeli jest opcjonalne, tzn. mogą być opcjonalnie mapowane do oddzielnej tabeli i nadal są typami własnością.
+- Dzielenie tabeli jest opcjonalne, to oznacza, że mogą być opcjonalnie mapowane do oddzielnej tabeli i nadal są typami własnością.
 
-- Mogą odwoływać się do innych jednostek (tj. mogą działać jako strona zależna od relacji z innymi typami niebędącymi własnością).
+- Mogą odwoływać się do innych jednostek (oznacza to, że mogą działać jako strona zależna od relacji z innymi typami niebędącymi własnością).
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
@@ -316,8 +316,11 @@ public class Address
 - **Vaughn Vernon. Implementowanie projektu opartego na domenie.** (Książka; zawiera omówienie obiektów wartości) \
   <https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/>
 
+- **Typy jednostek należących do** \
+  <https://docs.microsoft.com/ef/core/modeling/owned-entities>
+
 - **Właściwości cienia** \
-  [https://docs.microsoft.com/ef/core/modeling/shadow-properties](/ef/core/modeling/shadow-properties)
+  <https://docs.microsoft.com/ef/core/modeling/shadow-properties>
 
 - **Typy złożone i/lub obiekty wartości**. Dyskusje w repozytorium EF Core GitHub (karta problemy) \
   <https://github.com/dotnet/efcore/issues/246>
@@ -329,5 +332,5 @@ public class Address
   <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs>
 
 > [!div class="step-by-step"]
-> [Poprzedni](seedwork-domain-model-base-classes-interfaces.md)
-> [Następny](enumeration-classes-over-enum-types.md)
+> [Poprzednie](seedwork-domain-model-base-classes-interfaces.md)
+> [dalej](enumeration-classes-over-enum-types.md)

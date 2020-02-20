@@ -1,13 +1,13 @@
 ---
 title: Jakiego systemu operacyjnego należy używać docelowo z kontenerami .NET
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | System operacyjny, który ma być przeznaczony dla kontenerów platformy .NET
-ms.date: 01/07/2019
-ms.openlocfilehash: dcf91f5ab808a8704201979f6bab1140c3343bce
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: a09e3981ece478a9795c0f27acc98d604864cdd5
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73736908"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501863"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>Jakiego systemu operacyjnego należy używać docelowo z kontenerami .NET
 
@@ -32,12 +32,12 @@ Możesz również utworzyć własny obraz platformy Docker w przypadku, gdy chce
 
 Po dodaniu nazwy obrazu do pliku pliku dockerfile można wybrać system operacyjny i wersję w zależności od użytego tagu, jak w następujących przykładach:
 
-| Obraz | Komentarze |
+| Image (Obraz) | Komentarze |
 |-------|----------|
-| mcr.microsoft.com/dotnet/core/runtime:2.2 | Architektura .NET Core 2,2 — Obsługa systemu Linux i Windows nano Server w zależności od hosta platformy Docker. |
-| mcr.microsoft.com/dotnet/core/aspnet:2.2 | Wieloarchitektura ASP.NET Core 2,2: obsługuje systemy Linux i Windows nano Server w zależności od hosta platformy Docker. <br/> Obraz aspnetcore ma kilka optymalizacji dla ASP.NET Core. |
-| mcr.microsoft.com/dotnet/core/aspnet:2.2-alpine | Środowisko uruchomieniowe programu .NET Core 2,2 — tylko w systemie Linux Alpine dystrybucji |
-| mcr.microsoft.com/dotnet/core/aspnet:2.2-nanoserver-1803 | Środowisko uruchomieniowe programu .NET Core 2,2 — tylko w systemie Windows nano Server (system Windows Server w wersji 1803) |
+| mcr.microsoft.com/dotnet/core/runtime:3.1 | Architektura .NET Core 3,1 — Obsługa systemu Linux i Windows nano Server w zależności od hosta platformy Docker. |
+| mcr.microsoft.com/dotnet/core/aspnet:3.1 | Wieloarchitektura ASP.NET Core 3,1: obsługuje systemy Linux i Windows nano Server w zależności od hosta platformy Docker. <br/> Obraz aspnetcore ma kilka optymalizacji dla ASP.NET Core. |
+| mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim | Środowisko uruchomieniowe programu .NET Core 3,1 — tylko w systemie Linux Debian dystrybucji |
+| mcr.microsoft.com/dotnet/core/aspnet:3.1-nanoserver-1809 | Środowisko uruchomieniowe programu .NET Core 3,1 — tylko w systemie Windows nano Server (system Windows Server w wersji 1809) |
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
@@ -45,5 +45,5 @@ Po dodaniu nazwy obrazu do pliku pliku dockerfile można wybrać system operacyj
   <https://github.com/microsoft/dotnet-framework-docker/issues/299>
 
 > [!div class="step-by-step"]
-> [Poprzedni](container-framework-choice-factors.md)
-> [Następny](official-net-docker-images.md)
+> [Poprzednie](container-framework-choice-factors.md)
+> [dalej](official-net-docker-images.md)

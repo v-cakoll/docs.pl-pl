@@ -1,13 +1,13 @@
 ---
 title: Kiedy należy wybrać oprogramowanie .NET Core dla kontenerów Docker
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Kiedy należy wybrać platformę .NET Core dla kontenerów platformy Docker
-ms.date: 09/11/2018
-ms.openlocfilehash: d17b6b7620f485f09f8f18ac792418a48ae40037
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.date: 01/30/2020
+ms.openlocfilehash: b3cb1eefe739b4ffdbbdd0bdcb3c74b51862704b
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920981"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501852"
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>Kiedy należy wybrać oprogramowanie .NET Core dla kontenerów Docker
 
@@ -35,11 +35,11 @@ Oprócz środowisk IDE i edytorów, można użyć [interfejs wiersza polecenia p
 
 Kontenery są często używane w połączeniu z architekturą mikrousług, chociaż mogą być również używane do konteneryzowanie aplikacji lub usług sieci Web, które są zgodne z dowolnym wzorcem architektury. .NET Framework w kontenerach systemu Windows, ale modularność i lekki charakter platformy .NET Core sprawia, że jest idealnym rozwiązaniem w przypadku kontenerów i architektur mikrousług. Po utworzeniu i wdrożeniu kontenera jego obraz jest znacznie mniejszy przy użyciu platformy .NET Core niż z .NET Framework.
 
-## <a name="creating-and-deploying-microservices-on-containers"></a>Tworzenie i wdrażanie mikrousług w kontenerach
+## <a name="create-and-deploy-microservices-on-containers"></a>Tworzenie i wdrażanie mikrousług na kontenerach
 
-Można użyć tradycyjnego .NET Framework do tworzenia aplikacji opartych na mikrousługach (bez kontenerów) za pomocą zwykłych procesów. Dzięki temu, ponieważ .NET Framework są już zainstalowane i udostępniane między procesami, procesy są jasne i szybkie, aby rozpocząć. Jeśli jednak korzystasz z kontenerów, obraz dla tradycyjnych .NET Framework jest również oparty na systemie Windows Server Core i sprawia, że jest zbyt ciężki dla podejścia mikrousługowego na kontenery.
+Można użyć tradycyjnego .NET Framework do tworzenia aplikacji opartych na mikrousługach (bez kontenerów) za pomocą zwykłych procesów. Dzięki temu, ponieważ .NET Framework są już zainstalowane i udostępniane między procesami, procesy są jasne i szybkie, aby rozpocząć. Jeśli jednak korzystasz z kontenerów, obraz dla tradycyjnych .NET Framework jest również oparty na systemie Windows Server Core i sprawia, że jest zbyt ciężki dla podejścia mikrousługowego na kontenery. Jednak zespoły poszukują możliwości poprawy środowiska .NET Framework użytkowników. Ostatnio rozmiar [obrazów kontenerów systemu Windows Server Core został skrócony do > mniejszej niż 40%](https://devblogs.microsoft.com/dotnet/we-made-windows-server-core-container-images-40-smaller). 
 
-W przeciwieństwie do programu .NET Core jest najlepszym kandydatem, jeśli korzystasz z systemu opartego na mikrousługach opartych na kontenerach, ponieważ .NET Core jest lekki. Ponadto powiązane z nimi obrazy kontenerów, obraz systemu Linux lub obraz Windows nano, to oszczędne i małe tworzenie pojemników, jasne i szybkie.
+Z drugiej strony, program .NET Core jest najlepszym kandydatem, jeśli korzystasz z systemu opartego na mikrousługach, który jest oparty na kontenerach, ponieważ program .NET Core jest lekki. Ponadto powiązane z nimi obrazy kontenerów dla systemu Linux lub Windows nano Server są oszczędne i małe, co sprawia, że pojemniki są jasne i szybkie.
 
 Mikrousługa powinna być możliwie najmniejsza, jak to możliwe, aby było jasne, aby mieć niewielki wpływ na niewielką część (sprawdzanie DDD, [Projektowanie oparte na domenie](https://en.wikipedia.org/wiki/Domain-driven_design)), aby reprezentować mały obszar wątpliwości i mieć możliwość szybkiego uruchamiania i zatrzymywania. W przypadku tych wymagań należy użyć małych i szybkich obrazów kontenerów, takich jak obraz kontenera .NET Core.
 
@@ -52,5 +52,5 @@ Gdy system oparty na kontenerach wymaga najlepszej możliwej gęstości, szczeg�
 Jest to szczególnie istotne w przypadku architektury mikrousług, w których można korzystać z setek mikrousług (kontenerów). W przypadku obrazów ASP.NET Core (opartych na środowisku uruchomieniowym .NET Core) w systemie Linux lub Windows nano można uruchomić system z znacznie mniejszą liczbą serwerów lub maszyn wirtualnych, co ostatecznie oszczędza koszty infrastruktury i hostingu.
 
 >[!div class="step-by-step"]
->[Poprzedni](general-guidance.md)
->[Następny](net-framework-container-scenarios.md)
+>[Poprzednie](general-guidance.md)
+>[dalej](net-framework-container-scenarios.md)

@@ -2,14 +2,13 @@
 title: Zabezpieczanie mikrousług i aplikacji sieci Web platformy .NET
 description: Zabezpieczenia w mikrousługach .NET i aplikacjach sieci Web — Uzyskaj informacje na temat opcji uwierzytelniania w ASP.NET Core aplikacji sieci Web.
 author: mjrousos
-ms.author: wiwagn
-ms.date: 10/19/2018
-ms.openlocfilehash: 6d318f4efc6958610947f164d6ca63634f3d7db5
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.date: 01/30/2020
+ms.openlocfilehash: f82212956f5492a51ec99d092e1a5131d1b31313
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777216"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501651"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>Tworzenie bezpiecznych mikrousług i aplikacji sieci Web platformy .NET
 
@@ -37,17 +36,48 @@ W przypadku bezpośredniego dostępu do mikrousług relacja zaufania, która obe
 
 Podstawowym mechanizmem w ASP.NET Core do identyfikowania użytkowników aplikacji jest system członkostwa [tożsamości ASP.NET Core](/aspnet/core/security/authentication/identity) . ASP.NET Core Identity przechowuje informacje o użytkowniku (w tym informacje dotyczące logowania, role i oświadczenia) w magazynie danych skonfigurowanym przez dewelopera. Zwykle magazyn danych tożsamości ASP.NET Core jest magazynem Entity Framework udostępnionym w pakiecie `Microsoft.AspNetCore.Identity.EntityFrameworkCore`. Jednak magazyny niestandardowe lub inne pakiety innych firm mogą służyć do przechowywania informacji o tożsamościach w usłudze Azure Table Storage, CosmosDB lub innych lokalizacjach.
 
-Poniższy kod jest pobierany z szablonu projektu aplikacji sieci Web ASP.NET Core z wybranym indywidualnym uwierzytelnianiem konta użytkownika. Przedstawiono w nim sposób konfigurowania tożsamości ASP.NET Core przy użyciu EntityFramework. Core w metodzie Startup. ConfigureServices.
+> [!TIP]
+> ASP.NET Core 2,1 i nowsze zapewniają [ASP.NET Core tożsamość](/aspnet/core/security/authentication/identity) jako [bibliotekę klas Razor](/aspnet/core/razor-pages/ui-class), więc nie zobaczysz wielu niezbędnych kodów w projekcie, tak jak w przypadku poprzednich wersji. Aby uzyskać szczegółowe informacje na temat sposobu dostosowywania kodu tożsamości do własnych potrzeb, zobacz temat [tożsamość szkieletowa w projektach ASP.NET Core](/aspnet/core/security/authentication/scaffold-identity).
+
+Poniższy kod jest pobierany z szablonu projektu ASP.NET Core Web Application MVC 3,1 z wybranym indywidualnym uwierzytelnianiem konta użytkownika. Przedstawiono w nim sposób konfigurowania tożsamości ASP.NET Core przy użyciu Entity Framework Core w metodzie `Startup.ConfigureServices`.
 
 ```csharp
-services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-    services.AddIdentity<ApplicationUser, IdentityRole>()
-        .AddEntityFrameworkStores<ApplicationDbContext>()
-        .AddDefaultTokenProviders();
+public void ConfigureServices(IServiceCollection services)
+{
+    //...
+    services.AddDbContext<ApplicationDbContext>(options =>
+        options.UseSqlServer(
+            Configuration.GetConnectionString("DefaultConnection")));
+
+    services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+        .AddEntityFrameworkStores<ApplicationDbContext>();
+
+    services.AddRazorPages();
+    //...
+}
 ```
 
-Po skonfigurowaniu tożsamości ASP.NET Core można ją włączyć, wywołując aplikację. UseIdentity w metodzie `Startup.Configure` usługi.
+Po skonfigurowaniu tożsamości ASP.NET Core można ją włączyć poprzez dodanie `app.UseAuthentication()` i `endpoints.MapRazorPages()` jak pokazano w poniższym kodzie w metodzie `Startup.Configure` usługi:
+
+```csharp
+public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+{
+    //...
+    app.UseRouting();
+
+    app.UseAuthentication();
+    app.UseAuthorization();
+
+    app.UseEndpoints(endpoints =>
+    {
+        endpoints.MapRazorPages();
+    });
+    //...
+}
+```
+
+> [!IMPORTANT]
+> Wiersze poprzedzające kod **muszą być w kolejności POkazanej** do poprawnego działania tożsamości.
 
 Korzystanie z ASP.NET Core Identity umożliwia wykonywanie kilku scenariuszy:
 
@@ -65,69 +95,54 @@ W przypadku scenariuszy uwierzytelniania, które wykorzystują magazyn danych u�
 
 ASP.NET Core obsługuje również korzystanie z [zewnętrznych dostawców uwierzytelniania](/aspnet/core/security/authentication/social/) , aby umożliwić użytkownikom logowanie za pomocą przepływów [OAuth 2,0](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2) . Oznacza to, że użytkownicy mogą logować się przy użyciu istniejących procesów uwierzytelniania od dostawców, takich jak Microsoft, Google, Facebook lub Twitter, i kojarzyć te tożsamości z tożsamością ASP.NET Core w aplikacji.
 
-Aby można było korzystać z uwierzytelniania zewnętrznego, należy uwzględnić odpowiednie oprogramowanie pośredniczące uwierzytelniania w potoku przetwarzania żądań HTTP aplikacji. To oprogramowanie pośredniczące jest odpowiedzialne za obsługę żądań zwrócenia tras URI z dostawcy uwierzytelniania, Przechwytywanie informacji o tożsamości i udostępnianie ich za pośrednictwem metody SignInManager. GetExternalLoginInfo.
+Aby można było korzystać z uwierzytelniania zewnętrznego, między innymi oprogramowania pośredniczącego uwierzytelniania wspomnianego przed, przy użyciu metody `app.UseAuthentication()`, należy również zarejestrować zewnętrznego dostawcę w `Startup`, jak pokazano w następującym przykładzie:
+
+```csharp
+public void ConfigureServices(IServiceCollection services)
+{
+    //...
+    services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+        .AddEntityFrameworkStores<ApplicationDbContext>();
+
+    services.AddAuthentication()
+        .AddMicrosoftAccount(microsoftOptions =>
+        {
+            microsoftOptions.ClientId = Configuration["Authentication:Microsoft:ClientId"];
+            microsoftOptions.ClientSecret = Configuration["Authentication:Microsoft:ClientSecret"];
+        })
+        .AddGoogle(googleOptions => { ... })
+        .AddTwitter(twitterOptions => { ... })
+        .AddFacebook(facebookOptions => { ... });
+    //...
+}
+```
 
 W poniższej tabeli przedstawiono popularne zewnętrzne dostawcy uwierzytelniania i powiązane z nimi pakiety NuGet.
 
 | **Dostawca**  | **Pakiet**                                          |
 | ------------- | ---------------------------------------------------- |
-| **Microsoft** | **Microsoft.AspNetCore.Authentication.MicrosoftAccount** |
-| **Google**    | **Microsoft.AspNetCore.Authentication.Google**           |
-| **Facebook**  | **Microsoft.AspNetCore.Authentication.Facebook**         |
-| **Twitter**   | **Microsoft.AspNetCore.Authentication.Twitter**          |
+| **Programu** | **Microsoft. AspNetCore. Authentication. MicrosoftAccount** |
+| **Google**    | **Microsoft. AspNetCore. Authentication. Google**           |
+| **Facebook**  | **Microsoft. AspNetCore. Authentication. Facebook**         |
+| **Twitter**   | **Microsoft. AspNetCore. Authentication. Twitter**          |
 
-We wszystkich przypadkach oprogramowanie pośredniczące jest zarejestrowane z wywołaniem metody rejestracji podobnej do `app.Use{ExternalProvider}Authentication` w `Startup.Configure`. Te metody rejestracji przyjmują obiekt Options, który zawiera identyfikator aplikacji i informacje o kluczu tajnym (na przykład hasło), zgodnie z wymaganiami dostawcy. Zewnętrzni dostawcy uwierzytelniania wymagają rejestracji aplikacji (zgodnie z opisem w [dokumentacji ASP.NET Core](/aspnet/core/security/authentication/social/)), dzięki czemu mogą poinformować użytkownika, jakie aplikacje żąda dostępu do ich tożsamości.
+We wszystkich przypadkach należy wykonać procedurę rejestracji aplikacji, która jest zależna od dostawcy i która zazwyczaj obejmuje:
 
-Po zarejestrowaniu oprogramowania pośredniczącego w `Startup.Configure`możesz monitować użytkowników o zalogowanie się z dowolnego działania kontrolera. W tym celu należy utworzyć obiekt `AuthenticationProperties`, który zawiera nazwę dostawcy uwierzytelniania i adres URL przekierowania. Następnie zwracasz odpowiedź wyzwania, która przekazuje obiekt `AuthenticationProperties`. Poniższy kod przedstawia przykład tego elementu.
+1. Pobieranie identyfikatora aplikacji klienckiej.
+2. Pobieranie klucza tajnego aplikacji klienckiej.
+3. Konfigurowanie adresu URL przekierowania, który jest obsługiwany przez oprogramowanie pośredniczące autoryzacji i zarejestrowany dostawca
+4. Opcjonalnie można skonfigurować adres URL wylogowania, aby prawidłowo obsługiwać wylogowywanie w scenariuszu logowania jednokrotnego (SSO).
 
-```csharp
-var properties = _signInManager.ConfigureExternalAuthenticationProperties(provider,
-    redirectUrl);
-return Challenge(properties, provider);
-```
+Aby uzyskać szczegółowe informacje na temat konfigurowania aplikacji dla dostawcy zewnętrznego, zobacz [uwierzytelnianie dostawcy zewnętrznego w dokumentacji ASP.NET Core](/aspnet/core/security/authentication/social/).
 
-Parametr redirectUrl zawiera adres URL, do którego dostawca zewnętrzny powinien przekierować po uwierzytelnieniu użytkownika. Adres URL powinien reprezentować akcję, która będzie podpisywać użytkownika w oparciu o informacje o tożsamości zewnętrznej, jak w poniższym przykładzie uproszczonym:
+> [!TIP]
+Wszystkie szczegóły są obsługiwane przez oprogramowanie pośredniczące i wspomniane wcześniej usługi autoryzacji. W związku z tym po utworzeniu projektu aplikacji sieci Web ASP.NET Code w programie Visual Studio wystarczy wybrać opcję uwierzytelniania **poszczególnych kont użytkowników** , jak pokazano na rysunku 9-3, oprócz rejestrowania wyżej wymienionych dostawców uwierzytelniania.
 
-```csharp
-// Sign in the user with this external login provider if the user
-// already has a login.
-var result = await _signInManager.ExternalLoginSignInAsync(info.LoginProvider, info.ProviderKey, isPersistent: false);
+![Zrzut ekranu przedstawiający okno dialogowe Nowa aplikacja sieci Web ASP.NET Core.](./media/index/select-individual-user-account-authentication-option.png)
 
-if (result.Succeeded)
-{
-    return RedirectToLocal(returnUrl);
-}
-else
-{
-    ApplicationUser newUser = new ApplicationUser
-    {
-        // The user object can be constructed with claims from the
-        // external authentication provider, combined with information
-        // supplied by the user after they have authenticated with
-        // the external provider.
-        UserName = info.Principal.FindFirstValue(ClaimTypes.Name),
-        Email = info.Principal.FindFirstValue(ClaimTypes.Email)
-    };
-    var identityResult = await _userManager.CreateAsync(newUser);
-    if (identityResult.Succeeded)
-    {
-        identityResult = await _userManager.AddLoginAsync(newUser, info);
-        if (identityResult.Succeeded)
-        {
-            await _signInManager.SignInAsync(newUser, isPersistent: false);
-        }
-        return RedirectToLocal(returnUrl);
-    }
-}
-```
+**Rysunek 9-3**. Podczas tworzenia projektu aplikacji sieci Web w programie Visual Studio 2019 wybierz opcję konta poszczególnych użytkowników, aby korzystać z uwierzytelniania zewnętrznego.
 
-Jeśli wybierzesz opcję uwierzytelniania **poszczególnych kont użytkowników** podczas tworzenia projektu aplikacji sieci Web ASP.NET Core w programie Visual Studio, wszystkie kody niezbędne do zalogowania się z dostawcą zewnętrznym są już w projekcie, jak pokazano na rysunku 9-3.
-
-![Zrzut ekranu przedstawiający okno dialogowe Nowa aplikacja sieci Web ASP.NET Core.](./media/index/select-external-authentication-option.png)
-
-**Rysunek 9-3**. Wybieranie opcji używania uwierzytelniania zewnętrznego podczas tworzenia projektu aplikacji sieci Web
-
-Oprócz zewnętrznych dostawców uwierzytelniania wymienionych wcześniej pakiety innych firm są dostępne, które zapewniają oprogramowanie pośredniczące do korzystania z wielu innych zewnętrznych dostawców uwierzytelniania. Aby uzyskać listę, zobacz " [ASPNET. Security. OAuth. Providers](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src) " w witrynie GitHub.
+Oprócz zewnętrznych dostawców uwierzytelniania wymienionych wcześniej pakiety innych firm są dostępne, które zapewniają oprogramowanie pośredniczące do korzystania z wielu innych zewnętrznych dostawców uwierzytelniania. Aby uzyskać listę, zobacz repozytorium [ASPNET. Security. OAuth. Providers](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src) w witrynie GitHub.
 
 Możesz również utworzyć własne oprogramowanie pośredniczące uwierzytelniania zewnętrznego, aby rozwiązać pewne szczególne potrzeby.
 
@@ -147,31 +162,36 @@ Jeśli informacje o użytkowniku są przechowywane w Azure Active Directory lub 
 public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 {
     //…
-    // Configure the pipeline to use authentication
     app.UseAuthentication();
     //…
-    app.UseMvc();
+    app.UseEndpoints(endpoints =>
+    {
+        //...
+    });
 }
 
 public void ConfigureServices(IServiceCollection services)
 {
     var identityUrl = Configuration.GetValue<string>("IdentityUrl");
     var callBackUrl = Configuration.GetValue<string>("CallBackUrl");
+    var sessionCookieLifetime = configuration.GetValue("SessionCookieLifetimeMinutes", 60);
 
     // Add Authentication services
 
     services.AddAuthentication(options =>
     {
         options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-        options.DefaultChallengeScheme = OpenIdConnectDefaults.AuthenticationScheme;
+        options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
     })
-    .AddCookie()
+    .AddCookie(setup => setup.ExpireTimeSpan = TimeSpan.FromMinutes(sessionCookieLifetime))
     .AddOpenIdConnect(options =>
     {
         options.SignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-        options.Authority = identityUrl;
-        options.SignedOutRedirectUri = callBackUrl;
+        options.Authority = identityUrl.ToString();
+        options.SignedOutRedirectUri = callBackUrl.ToString();
+        options.ClientId = useLoadTest ? "mvctest" : "mvc";
         options.ClientSecret = "secret";
+        options.ResponseType = useLoadTest ? "code id_token token" : "code id_token";
         options.SaveTokens = true;
         options.GetClaimsFromUserInfoEndpoint = true;
         options.RequireHttpsMetadata = false;
@@ -218,12 +238,16 @@ Po określeniu klientów i zasobów do użycia przez usługi identityserver4 mo�
 Przykładowa konfiguracja usługi identityserver4 do używania zasobów w pamięci i klientów dostarczanych przez niestandardowy typ IClientStore może wyglądać podobnie do poniższego przykładu:
 
 ```csharp
-// Add IdentityServer services
-services.AddSingleton<IClientStore, CustomClientStore>();
-services.AddIdentityServer()
-    .AddSigningCredential("CN=sts")
-    .AddInMemoryApiResources(MyApiResourceProvider.GetAllResources())
-    .AddAspNetIdentity<ApplicationUser>();
+public IServiceProvider ConfigureServices(IServiceCollection services)
+{
+    //...
+    services.AddSingleton<IClientStore, CustomClientStore>();
+    services.AddIdentityServer()
+        .AddSigningCredential("CN=sts")
+        .AddInMemoryApiResources(MyApiResourceProvider.GetAllResources())
+        .AddAspNetIdentity<ApplicationUser>();
+    //...
+}
 ```
 
 ### <a name="consume-security-tokens"></a>Korzystanie z tokenów zabezpieczających
@@ -241,7 +265,10 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
     // Configure the pipeline to use authentication
     app.UseAuthentication();
     //…
-    app.UseMvc();
+    app.UseEndpoints(endpoints =>
+    {
+        //...
+    });
 }
 
 public void ConfigureServices(IServiceCollection services)
@@ -252,8 +279,8 @@ public void ConfigureServices(IServiceCollection services)
 
     services.AddAuthentication(options =>
     {
-        options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-        options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+        options.DefaultAuthenticateScheme = AspNetCore.Authentication.JwtBearer.JwtBearerDefaults.AuthenticationScheme;
+        options.DefaultChallengeScheme = AspNetCore.Authentication.JwtBearer.JwtBearerDefaults.AuthenticationScheme;
 
     }).AddJwtBearer(options =>
     {
@@ -300,5 +327,5 @@ Oprogramowanie pośredniczące uwierzytelniania okaziciela JWT może również o
   <https://identityserver4.readthedocs.io/en/latest/>
 
 >[!div class="step-by-step"]
->[Poprzedni](../implement-resilient-applications/monitor-app-health.md)
->[Następny](authorization-net-microservices-web-applications.md)
+>[Poprzednie](../implement-resilient-applications/monitor-app-health.md)
+>[dalej](authorization-net-microservices-web-applications.md)

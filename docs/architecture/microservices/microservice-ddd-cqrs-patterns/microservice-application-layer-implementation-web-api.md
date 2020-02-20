@@ -1,13 +1,13 @@
 ---
 title: Implementowanie warstwy aplikacji mikrousług za pomocą internetowego interfejsu API
-description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Zapoznaj się z iniekcją zależności i wzorcami mediator oraz ich szczegóły implementacji w warstwie aplikacji internetowego interfejsu API.
-ms.date: 10/08/2018
-ms.openlocfilehash: 08cb409b06a54c6b30afa393a817e14bd64fbcbf
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+description: Zapoznaj się z iniekcją zależności i wzorcami mediator oraz ich szczegóły implementacji w warstwie aplikacji internetowego interfejsu API.
+ms.date: 01/30/2020
+ms.openlocfilehash: a88f3bfd11ea06df085ca82ed7265cb37006fc31
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "73737536"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502447"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementowanie warstwy aplikacji mikrousług za pomocą internetowego interfejsu API
 
@@ -92,11 +92,9 @@ public void ConfigureServices(IServiceCollection services)
 {
     // Register out-of-the-box framework services.
     services.AddDbContext<CatalogContext>(c =>
-    {
-        c.UseSqlServer(Configuration["ConnectionString"]);
-    },
-    ServiceLifetime.Scoped
-    );
+        c.UseSqlServer(Configuration["ConnectionString"]),
+        ServiceLifetime.Scoped);
+
     services.AddMvc();
     // Register custom application dependencies.
     services.AddScoped<IMyCustomRepository, MyCustomSQLRepository>();
@@ -289,7 +287,7 @@ Zasadniczo Klasa Command zawiera wszystkie dane potrzebne do wykonania transakcj
 
 Jako dodatkową cechą polecenia są niezmienne, ponieważ oczekiwane użycie polega na tym, że są przetwarzane bezpośrednio przez model domeny. Nie trzeba zmieniać ich w przewidywanym okresie istnienia. W C# klasie niezmienności można osiągnąć, nie mając żadnych metod ustawiających ani innych, które zmieniają stan wewnętrzny.
 
-Należy pamiętać, że jeśli zamierzasz lub oczekiwać, że polecenia będą przechodzą przez proces serializacji/deserializacji, właściwości muszą mieć prywatną metodę ustawiającą i atrybut `[DataMember]` (lub `[JsonProperty]`), w przeciwnym razie Deserializator nie będzie w stanie odtworzyć obiektu w miejscu docelowym z wymaganymi wartościami.
+Należy pamiętać, że jeśli planujesz lub oczekujesz, że polecenia przechodzą przez proces serializacji/deserializacji, właściwości muszą mieć prywatną metodę ustawiającą oraz atrybut `[DataMember]` (lub `[JsonProperty]`). W przeciwnym razie Deserializator nie będzie w stanie odtworzyć obiektu w miejscu docelowym z wymaganymi wartościami. Można również użyć prawdziwie właściwości tylko do odczytu, jeśli klasa ma Konstruktor z parametrami dla wszystkich właściwości, z normalną konwencją nazewnictwa camelCase, i Adnotuj konstruktora jako `[JsonConstructor]`. Jednak ta opcja wymaga więcej kodu.
 
 Na przykład Klasa poleceń do tworzenia zamówienia jest prawdopodobnie podobna pod względem danych do zamówienia, które chcesz utworzyć, ale prawdopodobnie nie potrzebujesz tych samych atrybutów. Na przykład `CreateOrderCommand` nie ma identyfikatora zamówienia, ponieważ zamówienie nie zostało jeszcze utworzone.
 
@@ -315,7 +313,7 @@ Niektórzy deweloperzy sprawiają, że obiekty żądania interfejsu użytkownika
 
 ### <a name="the-command-handler-class"></a>Klasa procedury obsługi poleceń
 
-Należy zaimplementować konkretną klasę programu obsługi poleceń dla każdego polecenia. Jest to sposób działania wzorca i wskazuje, że będziesz używać obiektu polecenia, obiektów domeny i obiektów repozytorium infrastruktury. Program obsługi poleceń jest w rzeczywistości sercem warstwy aplikacji pod kątem CQRS i DDD. Jednak cała Logika domeny powinna być zawarta w klasach domeny — w ramach agregacji głównych (jednostek głównych), jednostek podrzędnych lub [usług domenowych](https://lostechies.com/jimmybogard/2008/08/21/services-in-domain-driven-design/), ale nie w ramach procedury obsługi poleceń, która jest klasą z warstwy aplikacji.
+Należy zaimplementować konkretną klasę programu obsługi poleceń dla każdego polecenia. To w jaki sposób działa wzorzec oraz miejsce użycia obiektu polecenia, obiektów domeny i obiektów repozytorium infrastruktury. Program obsługi poleceń jest w rzeczywistości sercem warstwy aplikacji pod kątem CQRS i DDD. Jednak cała Logika domeny powinna być zawarta w klasach domeny — w ramach agregacji głównych (jednostek głównych), jednostek podrzędnych lub [usług domenowych](https://lostechies.com/jimmybogard/2008/08/21/services-in-domain-driven-design/), ale nie w ramach procedury obsługi poleceń, która jest klasą z warstwy aplikacji.
 
 Klasa procedury obsługi poleceń oferuje silny punkt taktowania w celu osiągnięcia jednej zasady odpowiedzialności (SRP) wymienionej w poprzedniej sekcji.
 
@@ -843,5 +841,5 @@ W podobny sposób można zaimplementować inne zachowania dla dodatkowych aspekt
   <https://github.com/JeremySkinner/FluentValidation>
 
 > [!div class="step-by-step"]
-> [Poprzedni](microservice-application-layer-web-api-design.md)
-> [Następny](../implement-resilient-applications/index.md)
+> [Poprzednie](microservice-application-layer-web-api-design.md)
+> [dalej](../implement-resilient-applications/index.md)

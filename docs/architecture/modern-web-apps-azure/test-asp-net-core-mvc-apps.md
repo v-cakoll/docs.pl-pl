@@ -4,12 +4,12 @@ description: Tworzenie architektury nowoczesnych aplikacji sieci Web przy użyci
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: d83f7fca10aed6301c170b7b6c5651da6f02be08
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 164e820ffa6030b3dcb9180d56e57ce39bb03143
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77449364"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503936"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Testowanie aplikacji ASP.NET Core MVC
 
@@ -70,7 +70,7 @@ Typowym podejściem jest organizowanie projektów aplikacji w folderze "src" i p
 
 **Rysunek 9-2**. Testowanie organizacji w rozwiązaniu
 
-Możesz użyć niezależnej platformy testowej. Środowisko xUnit Framework działa prawidłowo i jest zapisywana wszystkie ASP.NET Core i EF Core testy. Możesz dodać projekt testu xUnit w programie Visual Studio przy użyciu szablonu pokazanego na rysunku 9-3 lub interfejsu wiersza polecenia przy użyciu polecenia dotnet New xUnit.
+Możesz użyć niezależnej platformy testowej. Środowisko xUnit Framework działa prawidłowo i jest zapisywana wszystkie ASP.NET Core i EF Core testy. Możesz dodać projekt testu xUnit w programie Visual Studio przy użyciu szablonu pokazanego na rysunku 9-3 lub interfejsu wiersza polecenia przy użyciu `dotnet new xunit`.
 
 ![Dodawanie projektu testowego xUnit w programie Visual Studio](./media/image9-3.png)
 

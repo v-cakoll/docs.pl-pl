@@ -2,16 +2,16 @@
 title: Porównanie funkcji WCF z gRPC-gRPC dla deweloperów WCF
 description: Porównanie struktur WCF i gRPC na potrzeby tworzenia aplikacji rozproszonych.
 ms.date: 09/02/2019
-ms.openlocfilehash: 312492dcce4bdef61feff0bf924c6df287b9c676
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4f54db76c9512b770b4dd993496d95437dd89753
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966949"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503337"
 ---
 # <a name="comparing-wcf-to-grpc"></a>Porównywanie WCF z gRPC
 
-Poprzedni rozdział powinien mieć zapewnioną dobrą postać protobuf oraz sposób, w jaki gRPC obsługuje komunikaty. Przed rozpoczęciem pracy w ramach szczegółowej konwersji z programu WCF do gRPC należy zwrócić uwagę na to, jak zakres funkcji dostępnych obecnie w programie WCF jest obsługiwany w gRPC i jakie obejścia, których można użyć, gdy nie wydaje się, że nie jest odpowiednikiem gRPC. W szczególności ten rozdział będzie obejmować następujące tematy:
+Poprzedni rozdział udzielił Ci dobrego wyglądu protobuf oraz sposobu, w jaki gRPC obsługuje komunikaty. Przed rozpoczęciem pracy w ramach szczegółowej konwersji z Windows Communication Foundation (WCF) na gRPC, ważne jest, aby wiedzieć, jak funkcje dostępne w ramach usługi WCF są obsługiwane w gRPC i jakie obejścia, których można użyć, gdy nie ma żadnego odpowiednika gRPC. W szczególności ten rozdział będzie obejmować następujące tematy:
 
 - Operacje i metody
 - Powiązania i transporty
@@ -37,12 +37,12 @@ service Greeter {
   rpc SayHello (HelloRequest) returns (HelloReply);
 }
 
-// The request message containing the user's name.
+// The request message that contains the user's name.
 message HelloRequest {
   string name = 1;
 }
 
-// The response message containing the greetings.
+// The response message that contains the greetings.
 message HelloReply {
   string message = 1;
 }
@@ -77,5 +77,5 @@ namespace HelloGrpc
 Ten rozdział odnosi się do tego przykładowego kodu przy objaśnianiu różnych koncepcji i funkcji gRPC.
 
 >[!div class="step-by-step"]
->[Poprzedni](protobuf-maps.md)
->[Następny](wcf-endpoints-grpc-methods.md)
+>[Poprzednie](protobuf-maps.md)
+>[dalej](wcf-endpoints-grpc-methods.md)

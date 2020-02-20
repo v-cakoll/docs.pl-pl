@@ -2,14 +2,13 @@
 title: Bezpieczne przechowywanie kluczy tajnych aplikacji podczas jej tworzenia
 description: Zabezpieczenia w mikrousługach .NET i aplikacjach sieci Web — nie przechowuj wpisów tajnych aplikacji, takich jak hasła, parametry połączenia lub klucze interfejsu API w kontroli źródła, Poznaj opcje, których można użyć w ASP.NET Core, w szczególności musisz zrozumieć, jak obsługiwać "użytkownika wpisy tajne ".
 author: mjrousos
-ms.author: wiwagn
-ms.date: 10/19/2018
-ms.openlocfilehash: fe8e7fa11c9a4f4cae133c2e09f9e4b4dd40a546
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.date: 01/30/2020
+ms.openlocfilehash: 1ef2246746b9165f1564fa7be64ff7eb28eb1d32
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296485"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501799"
 ---
 # <a name="store-application-secrets-safely-during-development"></a>Bezpieczne przechowywanie wpisów tajnych aplikacji podczas opracowywania
 
@@ -39,7 +38,7 @@ Należy pamiętać, że zmienne środowiskowe są zwykle przechowywane jako zwyk
 
 ## <a name="store-secrets-with-the-aspnet-core-secret-manager"></a>Przechowywanie wpisów tajnych za pomocą programu ASP.NET Core Secret Manager
 
-Narzędzie ASP.NET Core [Secret Manager](/aspnet/core/security/app-secrets#secret-manager) zapewnia kolejną metodę utrzymywania wpisów tajnych z kodu źródłowego. Aby użyć narzędzia Secret Manager, zainstaluj pakiet **Microsoft. Extensions. Configuration. SecretManager** w pliku projektu. Gdy ta zależność jest obecna i przywrócona, polecenie `dotnet user-secrets` może służyć do ustawiania wartości wpisów tajnych z wiersza polecenia. Te wpisy tajne będą przechowywane w pliku JSON w katalogu profilu użytkownika (szczegóły różnią się w zależności od systemu operacyjnego), a nie od kodu źródłowego.
+Narzędzie ASP.NET Core [Secret Manager](/aspnet/core/security/app-secrets#secret-manager) zapewnia kolejną metodę przechowywania wpisów tajnych z kodu źródłowego **podczas opracowywania**. Aby użyć narzędzia Secret Manager, zainstaluj pakiet **Microsoft. Extensions. Configuration. SecretManager** w pliku projektu. Gdy ta zależność jest obecna i przywrócona, polecenie `dotnet user-secrets` może służyć do ustawiania wartości wpisów tajnych z wiersza polecenia. Te wpisy tajne będą przechowywane w pliku JSON w katalogu profilu użytkownika (szczegóły różnią się w zależności od systemu operacyjnego), a nie od kodu źródłowego.
 
 Wpisy tajne ustawiane przez narzędzie tajnego Menedżera są zorganizowane według właściwości `UserSecretsId` projektu, który używa wpisów tajnych. W związku z tym należy ustawić właściwość UserSecretsId w pliku projektu, jak pokazano w poniższym fragmencie kodu. Wartość domyślna to identyfikator GUID przypisany przez program Visual Studio, ale rzeczywisty ciąg nie jest ważny, o ile jest unikatowy na komputerze.
 
@@ -54,5 +53,5 @@ Korzystanie z wpisów tajnych przechowywanych w ramach Menedżera wpisów tajnyc
 `AddUserSecrets<Startup>()` jest uwzględniona w domyślnych opcjach środowiska programistycznego w przypadku używania metody `CreateDefaultBuilder` w *program.cs*.
 
 >[!div class="step-by-step"]
->[Poprzedni](authorization-net-microservices-web-applications.md)
->[Następny](azure-key-vault-protects-secrets.md)
+>[Poprzednie](authorization-net-microservices-web-applications.md)
+>[dalej](azure-key-vault-protects-secrets.md)

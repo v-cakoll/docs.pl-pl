@@ -1,13 +1,13 @@
 ---
 title: Monitorowanie kondycji
 description: Poznaj jeden ze sposobów implementacji monitorowania kondycji.
-ms.date: 01/07/2019
-ms.openlocfilehash: f1d63e04bbea95fcf0a9f9d3b50aef0e7d4a830e
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: a91e51af66049f9774365cd56b90ab792a4dd4fc
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73732896"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502684"
 ---
 # <a name="health-monitoring"></a>Monitorowanie kondycji
 
@@ -19,7 +19,7 @@ W typowym modelu usługi wysyłają raporty dotyczące ich stanu, a informacje t
 
 ## <a name="implement-health-checks-in-aspnet-core-services"></a>Implementowanie kontroli kondycji w usługach ASP.NET Core Services
 
-Podczas tworzenia ASP.NET Core mikrousług lub aplikacji sieci Web można użyć wbudowanej funkcji kontroli kondycji wydanej w ASP .NET Core 2,2. Podobnie jak w przypadku wielu funkcji ASP.NET Core, sprawdzanie kondycji obejmuje zestaw usług i oprogramowanie pośredniczące.
+Podczas tworzenia ASP.NET Core mikrousług lub aplikacji sieci Web można użyć wbudowanej funkcji kontroli kondycji wydanej w ASP .NET Core 3,1 ([Microsoft. Extensions. Diagnostics. HealthChecks](https://www.nuget.org/packages/Microsoft.Extensions.Diagnostics.HealthChecks)). Podobnie jak w przypadku wielu funkcji ASP.NET Core, sprawdzanie kondycji obejmuje zestaw usług i oprogramowanie pośredniczące.
 
 Usługi sprawdzania kondycji i oprogramowanie pośredniczące są łatwe w użyciu i zapewniają możliwości umożliwiające sprawdzenie, czy dowolny zasób zewnętrzny wymagany dla aplikacji (na przykład baza danych SQL Server lub zdalny interfejs API) działa poprawnie. Korzystając z tej funkcji, można także zdecydować, co oznacza, że zasób jest w dobrej kondycji, jak wyjaśniono w przyszłości.
 
@@ -27,20 +27,23 @@ Aby efektywnie korzystać z tej funkcji, należy najpierw skonfigurować usługi
 
 ### <a name="use-the-healthchecks-feature-in-your-back-end-aspnet-microservices"></a>Korzystanie z funkcji HealthChecks w mikrousługach ASP.NET zaplecza
 
-W tej sekcji dowiesz się, jak funkcja HealthChecks jest używana w przykładowej aplikacji interfejsu API sieci Web w ASP.NET Core 2,2. Implementacja tej funkcji w dużych mikrousługach skalowania, takich jak eShopOnContainers, została omówiona w dalszej części. Aby rozpocząć, należy określić, co stanowi prawidłowy stan dla każdej mikrousługi. W przykładowej aplikacji mikrousługi są w dobrej kondycji, jeśli interfejs API mikrousług jest dostępny za pośrednictwem protokołu HTTP i powiązana SQL Server baza danych jest również dostępna.
+W tej sekcji dowiesz się, jak funkcja HealthChecks, zaimplementowana w [AspNetCore. Diagnostics. HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks), jest używana w przykładowej aplikacji internetowego interfejsu API ASP.NET Core 3,1. Implementacja tej funkcji w mikrousługach o dużej skali, podobnie jak eShopOnContainers, została omówiona w dalszej części. Aby rozpocząć, należy określić, co stanowi prawidłowy stan dla każdej mikrousługi. W przykładowej aplikacji mikrousługi są w dobrej kondycji, jeśli interfejs API mikrousług jest dostępny za pośrednictwem protokołu HTTP i powiązana SQL Server baza danych jest również dostępna.
 
-W programie .NET Core 2,2 z wbudowanymi interfejsami API można skonfigurować usługi, dodać kontrolę kondycji dla mikrousługi i jej zależną SQL Server bazę danych w następujący sposób:
+W programie .NET Core 3,1 z wbudowanymi interfejsami API można skonfigurować usługi, dodać kontrolę kondycji dla mikrousługi i jej zależną SQL Server bazę danych w następujący sposób:
 
 ```csharp
-// Startup.cs from .NET Core 2.2 Web Api sample
+// Startup.cs from .NET Core 3.1 Web API sample
 //
 public void ConfigureServices(IServiceCollection services)
 {
     //...
     // Registers required services for health checks
     services.AddHealthChecks()
-    // Add a health check for a SQL database
-    .AddCheck("MyDatabase", new SqlConnectionHealthCheck(Configuration["ConnectionStrings:DefaultConnection"]));
+        // Add a health check for a SQL Server database
+        .AddSqlServer(
+            configuration["ConnectionString"],
+            name: "OrderingDB-check",
+            tags: new string[] { "orderingdb" });
 }
 ```
 
@@ -98,17 +101,26 @@ public class SqlConnectionHealthCheck : IHealthCheck
 }
 ```
 
-Należy pamiętać, że w poprzednim kodzie `Select 1` jest zapytaniem używanym do sprawdzania kondycji bazy danych. Aby monitorować dostępność mikrousług, program Orchestrator, taki jak Kubernetes, i Service Fabric okresowo przeprowadza kontrolę kondycji, wysyłając żądania przetestowania mikrousług. Ważne jest, aby zachować wydajność zapytań bazy danych, aby te operacje były szybkie i nie powodowały większego użycia zasobów.
+Należy pamiętać, że w poprzednim kodzie `Select 1` jest zapytaniem używanym do sprawdzania kondycji bazy danych. Aby monitorować dostępność mikrousług, program Orchestrator, taki jak Kubernetes okresowo przeprowadza kontrolę kondycji, wysyłając żądania przetestowania mikrousług. Ważne jest, aby zachować wydajność zapytań bazy danych, aby te operacje były szybkie i nie powodowały większego użycia zasobów.
 
-Na koniec Utwórz oprogramowanie pośredniczące odpowiadające ścieżce URL "/HC":
+Na koniec Dodaj oprogramowanie pośredniczące, które odpowiada na ścieżkę URL `/hc`:
 
 ```csharp
-// Startup.cs from .NET Core 2.2 Web Api sample
+// Startup.cs from .NET Core 3.1 Web Api sample
 //
 public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 {
     //…
-    app.UseHealthChecks("/hc");
+    app.UseEndpoints(endpoints =>
+    {
+        //...
+        endpoints.MapHealthChecks("/hc", new HealthCheckOptions()
+        {
+            Predicate = _ => true,
+            ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+        });
+        //...
+    });
     //…
 }
 ```
@@ -119,7 +131,7 @@ Po wywołaniu `<yourmicroservice>/hc` punktu końcowego program uruchamia wszyst
 
 Mikrousługi w eShopOnContainers polegają na wielu usługach do wykonywania zadań. Na przykład `Catalog.API` mikrousługa z eShopOnContainers zależy od wielu usług, takich jak Azure Blob Storage, SQL Server i RabbitMQ. W związku z tym ma kilka testów kondycji dodanych za pomocą metody `AddCheck()`. Dla każdej usługi zależnej należy dodać niestandardową implementację `IHealthCheck`, która definiuje jej odpowiedni stan kondycji.
 
-Projekt Open Source [AspNetCore. Diagnostics. HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) rozwiązuje ten problem, dostarczając niestandardowe implementacje sprawdzania kondycji dla każdej z tych usług przedsiębiorstwa, które są oparte na platformie .net Core 2,2. Każde Sprawdzanie kondycji jest dostępne jako pojedynczy pakiet NuGet, który można łatwo dodać do projektu. eShopOnContainers wykorzystują je w szerokim stopniu we wszystkich mikrousługach.
+Projekt Open Source [AspNetCore. Diagnostics. HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) rozwiązuje ten problem, dostarczając niestandardowe implementacje sprawdzania kondycji dla każdej z tych usług przedsiębiorstwa, które są oparte na platformie .net Core 3,1. Każde Sprawdzanie kondycji jest dostępne jako pojedynczy pakiet NuGet, który można łatwo dodać do projektu. eShopOnContainers używa ich w szerokim stopniu we wszystkich mikrousługach.
 
 Na przykład w mikrousłudze `Catalog.API` dodano następujące pakiety NuGet:
 
@@ -175,7 +187,7 @@ public static IServiceCollection AddCustomHealthCheck(this IServiceCollection se
 }
 ```
 
-Na koniec dodamy oprogramowanie HealthChecker do nasłuchiwania punktu końcowego "/HC":
+Na koniec Dodaj oprogramowanie pośredniczące HealthCheck, aby nasłuchiwać punktu końcowego "/HC":
 
 ```csharp
 // HealthCheck middleware
@@ -279,9 +291,9 @@ Na koniec, Jeśli przechowujesz wszystkie strumienie zdarzeń, możesz użyć pr
 - **Wprowadzenie do Service Fabric monitorowania kondycji** \
   [https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction](/azure/service-fabric/service-fabric-health-introduction)
 
-- **Azure Monitor**  
+- **Azure Monitor** \
   <https://azure.microsoft.com/services/monitor/>
 
 >[!div class="step-by-step"]
->[Poprzedni](implement-circuit-breaker-pattern.md)
->[Następny](../secure-net-microservices-web-applications/index.md)
+>[Poprzednie](implement-circuit-breaker-pattern.md)
+>[dalej](../secure-net-microservices-web-applications/index.md)

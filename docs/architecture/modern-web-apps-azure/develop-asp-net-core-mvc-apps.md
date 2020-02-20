@@ -4,12 +4,12 @@ description: Tworzenie architektury nowoczesnych aplikacji sieci Web przy użyci
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 3b1409fbb924638f0148c74a678d482aeb732357
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: a18b4dfc60c7d3971136f73f333b7225735710b3
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77449452"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503945"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Opracowywanie aplikacji ASP.NET Core MVC
 
@@ -319,7 +319,7 @@ Aby dowiedzieć się więcej na temat implementowania filtrów i pobrać przykł
 > - **MSDN Magazine — Real World ASP.NET Core Filters**  
 >   <https://docs.microsoft.com/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters>
 
-## <a name="security"></a>Zabezpieczenia
+## <a name="security"></a>Bezpieczeństwo
 
 Zabezpieczanie aplikacji sieci Web to duży temat z wieloma kwestiami. Na najbardziej podstawowym poziomie zabezpieczenia polegają na tym, że wiesz, z kogo pochodzi żądanie, a następnie upewniając się, że żądanie ma tylko dostęp do zasobów, które powinny. Uwierzytelnianie to proces porównujący poświadczenia dostarczone z żądaniem do tych w zaufanym magazynie danych, aby sprawdzić, czy żądanie powinno być traktowane jako pochodzące ze znanej jednostki. Autoryzacja to proces ograniczania dostępu do określonych zasobów na podstawie tożsamości użytkownika. Trzeci problem dotyczący zabezpieczeń chroni żądania przed podsłuchiwaniem przez inne osoby, dla którego należy [upewnić się, że protokół SSL jest używany przez aplikację](/aspnet/core/security/enforcing-ssl).
 
@@ -544,9 +544,9 @@ Podejście hybrydowe będzie używać DDD tylko dla transakcyjnych lub bardziej 
 > - **DDD w zwykłym języku angielskim (odpowiedź StackOverflow)**  
 >   <https://stackoverflow.com/questions/1222392/can-someone-explain-domain-driven-design-ddd-in-plain-english-please/1222488#1222488>
 
-## <a name="deployment"></a>wdrażania
+## <a name="deployment"></a>Wdrożenie
 
-W procesie wdrażania aplikacji ASP.NET Core należy wykonać kilka kroków, bez względu na to, gdzie będzie ona hostowana. Pierwszym krokiem jest opublikowanie aplikacji, którą można wykonać przy użyciu dotnet publish interfejsu wiersza polecenia. Spowoduje to skompilowanie aplikacji i umieszczenie wszystkich plików wymaganych do uruchomienia aplikacji w wydzielonym folderze. W przypadku wdrażania z programu Visual Studio ten krok jest wykonywany automatycznie. Folder publikowania zawiera pliki. exe i. dll dla aplikacji i jej zależności. Aplikacja samodzielna zawiera również wersję środowiska uruchomieniowego .NET. Aplikacje ASP.NET Core zawierają również pliki konfiguracji, statyczne zasoby klienta i widoki MVC.
+W procesie wdrażania aplikacji ASP.NET Core należy wykonać kilka kroków, bez względu na to, gdzie będzie ona hostowana. Pierwszym krokiem jest opublikowanie aplikacji, którą można wykonać przy użyciu `dotnet publish` interfejsu wiersza polecenia. Spowoduje to skompilowanie aplikacji i umieszczenie wszystkich plików wymaganych do uruchomienia aplikacji w wydzielonym folderze. W przypadku wdrażania z programu Visual Studio ten krok jest wykonywany automatycznie. Folder publikowania zawiera pliki. exe i. dll dla aplikacji i jej zależności. Aplikacja samodzielna zawiera również wersję środowiska uruchomieniowego .NET. Aplikacje ASP.NET Core zawierają również pliki konfiguracji, statyczne zasoby klienta i widoki MVC.
 
 Aplikacje ASP.NET Core są aplikacjami konsolowymi, które należy uruchomić, gdy serwer jest uruchamiany i uruchamiany ponownie, jeśli wystąpi awaria aplikacji (lub serwera). Za pomocą Menedżera procesów można zautomatyzować ten proces. Najbardziej typowymi menedżerami procesów dla ASP.NET Core są Nginx i Apache w systemach Linux i IIS lub Windows Service w systemie Windows.
 

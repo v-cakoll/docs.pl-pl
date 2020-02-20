@@ -1,13 +1,13 @@
 ---
 title: Implementowanie ponownych prób wywołania HTTP wykonywanych przy użyciu wycofywania wykładniczego usługi Polly
 description: Dowiedz się, jak obsługiwać błędy HTTP za pomocą Polly i HttpClientFactory.
-ms.date: 01/07/2019
-ms.openlocfilehash: 551cd1230c565b30c81090c984747e726680b9ed
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.date: 01/30/2020
+ms.openlocfilehash: 60943360c9674f93b246b37b2667b48dab659e0e
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089957"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502669"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>Zaimplementuj ponowne próby wywołania HTTP przy użyciu wykładniczej wycofywania z zasadami HttpClientFactory i Polly
 
@@ -19,9 +19,9 @@ Jednak zapisanie własnego niestandardowego kodu do używania biblioteki Polly z
 
 W poniższych krokach pokazano, jak można użyć ponownych prób http z Polly zintegrowanym z HttpClientFactory, co zostało wyjaśnione w poprzedniej sekcji.
 
-**Odwoływanie się do pakietów ASP.NET Core 2,2**
+**Odwoływanie się do pakietów ASP.NET Core 3,1**
 
-`HttpClientFactory` jest dostępna od platformy .NET Core 2,1, ale zalecamy korzystanie z najnowszych pakietów ASP.NET Core 2,2 z narzędzia NuGet w projekcie. Zwykle potrzebny jest pakiet `AspNetCore`, a pakiet rozszerzenia `Microsoft.Extensions.Http.Polly`.
+`HttpClientFactory` jest dostępna od platformy .NET Core 2,1, ale zalecamy korzystanie z najnowszych pakietów ASP.NET Core 3,1 z narzędzia NuGet w projekcie. Zwykle trzeba również odwoływać się do `Microsoft.Extensions.Http.Polly`pakietu rozszerzenia.
 
 **Konfigurowanie klienta przy użyciu zasad ponawiania Polly w programie startowym**
 
@@ -86,5 +86,5 @@ Polly zapewnia algorytmy wahania produkcji w środowisku produkcyjnym za pośred
   <https://brooker.co.za/blog/2015/03/21/backoff.html>
 
 >[!div class="step-by-step"]
->[Poprzedni](explore-custom-http-call-retries-exponential-backoff.md)
->[Następny](implement-circuit-breaker-pattern.md)
+>[Poprzednie](explore-custom-http-call-retries-exponential-backoff.md)
+>[dalej](implement-circuit-breaker-pattern.md)

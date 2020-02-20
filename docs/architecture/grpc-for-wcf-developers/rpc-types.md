@@ -2,35 +2,35 @@
 title: Typy RPC-gRPC dla deweloperów WCF
 description: Przegląd typów zdalnego wywołania procedury obsługiwanego przez program WCF i ich odpowiedników w gRPC
 ms.date: 09/02/2019
-ms.openlocfilehash: 64375236da17c0aedbafe1cb441e72a144203358
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 58f097bac61395e6810155e8ae9a6bbf2219ec5e
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73967267"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503442"
 ---
-# <a name="types-of-rpc"></a><span data-ttu-id="c4191-103">Typy zdalnych wywołań procedur</span><span class="sxs-lookup"><span data-stu-id="c4191-103">Types of RPC</span></span>
+# <a name="types-of-rpc"></a><span data-ttu-id="16cba-103">Typy zdalnych wywołań procedur</span><span class="sxs-lookup"><span data-stu-id="16cba-103">Types of RPC</span></span>
 
-<span data-ttu-id="c4191-104">Jako deweloper Windows Communication Foundation (WCF) prawdopodobnie używasz następujących typów zdalnego wywołania procedury (RPC):</span><span class="sxs-lookup"><span data-stu-id="c4191-104">As a Windows Communication Foundation (WCF) developer, you're probably used to dealing with the following types of Remote Procedure Call (RPC):</span></span>
+<span data-ttu-id="16cba-104">Jako deweloper Windows Communication Foundation (WCF) prawdopodobnie używasz następujących typów zdalnego wywołania procedury (RPC):</span><span class="sxs-lookup"><span data-stu-id="16cba-104">As a Windows Communication Foundation (WCF) developer, you're probably used to dealing with the following types of remote procedure call (RPC):</span></span>
 
-- <span data-ttu-id="c4191-105">Żądanie/odpowiedź</span><span class="sxs-lookup"><span data-stu-id="c4191-105">Request/Reply</span></span>
-- <span data-ttu-id="c4191-106">Stron</span><span class="sxs-lookup"><span data-stu-id="c4191-106">Duplex:</span></span>
-  - <span data-ttu-id="c4191-107">Jednokierunkowa dupleks z sesją</span><span class="sxs-lookup"><span data-stu-id="c4191-107">One-way duplex with session</span></span>
-  - <span data-ttu-id="c4191-108">Pełny dupleks z sesją</span><span class="sxs-lookup"><span data-stu-id="c4191-108">Full duplex with session</span></span>
-- <span data-ttu-id="c4191-109">Jednokierunkowe</span><span class="sxs-lookup"><span data-stu-id="c4191-109">One-way</span></span>
+- <span data-ttu-id="16cba-105">Żądanie/odpowiedź</span><span class="sxs-lookup"><span data-stu-id="16cba-105">Request/reply</span></span>
+- <span data-ttu-id="16cba-106">Stron</span><span class="sxs-lookup"><span data-stu-id="16cba-106">Duplex:</span></span>
+  - <span data-ttu-id="16cba-107">Jednokierunkowa dupleks z sesją</span><span class="sxs-lookup"><span data-stu-id="16cba-107">One-way duplex with session</span></span>
+  - <span data-ttu-id="16cba-108">Pełny dupleks z sesją</span><span class="sxs-lookup"><span data-stu-id="16cba-108">Full duplex with session</span></span>
+- <span data-ttu-id="16cba-109">Jednokierunkowe</span><span class="sxs-lookup"><span data-stu-id="16cba-109">One-way</span></span>
 
-<span data-ttu-id="c4191-110">Istnieje możliwość mapowania tych typów RPC w sposób naturalny do istniejących koncepcji gRPC, a ten rozdział będzie wyglądać na każdej z tych obszarów z kolei.</span><span class="sxs-lookup"><span data-stu-id="c4191-110">It's possible to map these RPC types fairly naturally to existing gRPC concepts and this chapter will look at each of these areas in turn.</span></span> <span data-ttu-id="c4191-111">Podobne przykłady zostaną omówione na znacznie większej głębokości w [rozdziale 5](migrate-wcf-to-grpc.md).</span><span class="sxs-lookup"><span data-stu-id="c4191-111">Similar examples will be explored in much greater depth in [Chapter 5](migrate-wcf-to-grpc.md).</span></span>
+<span data-ttu-id="16cba-110">Istnieje możliwość mapowania tych typów RPC w sposób naturalny do istniejących koncepcji gRPC.</span><span class="sxs-lookup"><span data-stu-id="16cba-110">It's possible to map these RPC types fairly naturally to existing gRPC concepts.</span></span> <span data-ttu-id="16cba-111">W tym rozdziale zaobserwuje się każdy z tych obszarów z kolei.</span><span class="sxs-lookup"><span data-stu-id="16cba-111">This chapter will look at each of these areas in turn.</span></span> <span data-ttu-id="16cba-112">[Rozdział 5](migrate-wcf-to-grpc.md) będzie eksplorować podobne przykłady na większym poziomie.</span><span class="sxs-lookup"><span data-stu-id="16cba-112">[Chapter 5](migrate-wcf-to-grpc.md) will explore similar examples in greater depth.</span></span>
 
-| <span data-ttu-id="c4191-112">WCF</span><span class="sxs-lookup"><span data-stu-id="c4191-112">WCF</span></span> | <span data-ttu-id="c4191-113">gRPC</span><span class="sxs-lookup"><span data-stu-id="c4191-113">gRPC</span></span> |
+| <span data-ttu-id="16cba-113">WCF</span><span class="sxs-lookup"><span data-stu-id="16cba-113">WCF</span></span> | <span data-ttu-id="16cba-114">gRPC</span><span class="sxs-lookup"><span data-stu-id="16cba-114">gRPC</span></span> |
 | --- | ---- |
-| <span data-ttu-id="c4191-114">Regularne żądanie/odpowiedź</span><span class="sxs-lookup"><span data-stu-id="c4191-114">Regular request/reply</span></span> | <span data-ttu-id="c4191-115">Jednostk</span><span class="sxs-lookup"><span data-stu-id="c4191-115">Unary</span></span> |
-| <span data-ttu-id="c4191-116">Usługa dupleksowa z sesją przy użyciu interfejsu wywołania zwrotnego klienta</span><span class="sxs-lookup"><span data-stu-id="c4191-116">Duplex service with session using a client callback interface</span></span> | <span data-ttu-id="c4191-117">Przesyłanie strumieniowe serwera</span><span class="sxs-lookup"><span data-stu-id="c4191-117">Server streaming</span></span> |
-| <span data-ttu-id="c4191-118">Usługa pełnego dupleksu z sesją</span><span class="sxs-lookup"><span data-stu-id="c4191-118">Full duplex service with session</span></span> | <span data-ttu-id="c4191-119">Przesyłanie strumieniowe dwukierunkowe</span><span class="sxs-lookup"><span data-stu-id="c4191-119">Bidirectional streaming</span></span> |
-| <span data-ttu-id="c4191-120">Operacje jednokierunkowe</span><span class="sxs-lookup"><span data-stu-id="c4191-120">One-way operations</span></span> | <span data-ttu-id="c4191-121">Przesyłanie strumieniowe klienta</span><span class="sxs-lookup"><span data-stu-id="c4191-121">Client streaming</span></span> |
+| <span data-ttu-id="16cba-115">Regularne żądanie/odpowiedź</span><span class="sxs-lookup"><span data-stu-id="16cba-115">Regular request/reply</span></span> | <span data-ttu-id="16cba-116">Jednostk</span><span class="sxs-lookup"><span data-stu-id="16cba-116">Unary</span></span> |
+| <span data-ttu-id="16cba-117">Usługa dupleksowa z sesją przy użyciu interfejsu wywołania zwrotnego klienta</span><span class="sxs-lookup"><span data-stu-id="16cba-117">Duplex service with session using a client callback interface</span></span> | <span data-ttu-id="16cba-118">Przesyłanie strumieniowe serwera</span><span class="sxs-lookup"><span data-stu-id="16cba-118">Server streaming</span></span> |
+| <span data-ttu-id="16cba-119">Usługa pełnego dupleksu z sesją</span><span class="sxs-lookup"><span data-stu-id="16cba-119">Full duplex service with session</span></span> | <span data-ttu-id="16cba-120">Przesyłanie strumieniowe dwukierunkowe</span><span class="sxs-lookup"><span data-stu-id="16cba-120">Bidirectional streaming</span></span> |
+| <span data-ttu-id="16cba-121">Operacje jednokierunkowe</span><span class="sxs-lookup"><span data-stu-id="16cba-121">One-way operations</span></span> | <span data-ttu-id="16cba-122">Przesyłanie strumieniowe klienta</span><span class="sxs-lookup"><span data-stu-id="16cba-122">Client streaming</span></span> |
 
-## <a name="requestreply"></a><span data-ttu-id="c4191-122">Żądanie/odpowiedź</span><span class="sxs-lookup"><span data-stu-id="c4191-122">Request/reply</span></span>
+## <a name="requestreply"></a><span data-ttu-id="16cba-123">Żądanie/odpowiedź</span><span class="sxs-lookup"><span data-stu-id="16cba-123">Request/reply</span></span>
 
-<span data-ttu-id="c4191-123">W przypadku prostych metod żądania/odpowiedzi, które pobierają i zwracają małe ilości danych, należy użyć najprostszego wzorca gRPC, jednoargumentowego wywołania RPC.</span><span class="sxs-lookup"><span data-stu-id="c4191-123">For simple request/reply methods that take and return small amounts of data, use the simplest gRPC pattern, the unary RPC.</span></span>
+<span data-ttu-id="16cba-124">W przypadku prostych metod żądania/odpowiedzi, które pobierają i zwracają małe ilości danych, należy użyć najprostszego wzorca gRPC, jednoargumentowego wywołania RPC.</span><span class="sxs-lookup"><span data-stu-id="16cba-124">For simple request/reply methods that take and return small amounts of data, use the simplest gRPC pattern, the unary RPC.</span></span>
 
 ```protobuf
 service Things {
@@ -57,19 +57,21 @@ public async Task ShowThing(int thingId)
 }
 ```
 
-<span data-ttu-id="c4191-124">Jak widać, implementacja metody gRPC jednoargumentowej usługi RPC jest bardzo podobna do implementowania operacji WCF, z wyjątkiem tego, że z gRPC przesłonić metodę klasy bazowej zamiast implementować interfejs.</span><span class="sxs-lookup"><span data-stu-id="c4191-124">As you can see, implementing a gRPC unary RPC service method is very similar to implementing a WCF operation, except that with gRPC you override a base class method instead of implementing an interface.</span></span> <span data-ttu-id="c4191-125">Należy pamiętać, że na serwerze gRPC metody podstawowe zawsze zwracają <xref:System.Threading.Tasks.Task%601>, chociaż klient zapewnia metody asynchroniczne i blokujące do wywoływania usługi.</span><span class="sxs-lookup"><span data-stu-id="c4191-125">Note that on the server, gRPC base methods always return a <xref:System.Threading.Tasks.Task%601>, although the client provides both async and blocking methods to call the service.</span></span>
+<span data-ttu-id="16cba-125">Jak widać, implementacja metody gRPC jednoargumentowej usługi RPC jest podobna do implementowania operacji WCF.</span><span class="sxs-lookup"><span data-stu-id="16cba-125">As you can see, implementing a gRPC unary RPC service method is similar to implementing a WCF operation.</span></span> <span data-ttu-id="16cba-126">Różnica polega na tym, że za pomocą gRPC zastępuje metodę klasy bazowej zamiast implementować interfejs.</span><span class="sxs-lookup"><span data-stu-id="16cba-126">The difference is that with gRPC, you override a base class method instead of implementing an interface.</span></span> <span data-ttu-id="16cba-127">Na serwerze gRPC metody podstawowe zawsze zwracają <xref:System.Threading.Tasks.Task%601>, chociaż klient zapewnia metody asynchroniczne i blokowane do wywoływania usługi.</span><span class="sxs-lookup"><span data-stu-id="16cba-127">On the server, gRPC base methods always return <xref:System.Threading.Tasks.Task%601>, although the client provides both async and blocking methods to call the service.</span></span>
 
-## <a name="wcf-duplex-one-way-to-client"></a><span data-ttu-id="c4191-126">Tryb dupleksu WCF — jednokierunkowe dla klienta</span><span class="sxs-lookup"><span data-stu-id="c4191-126">WCF duplex, one-way to client</span></span>
+## <a name="wcf-duplex-one-way-to-client"></a><span data-ttu-id="16cba-128">Technologia WCF — wiele sposobów na klienta</span><span class="sxs-lookup"><span data-stu-id="16cba-128">WCF duplex, one way to client</span></span>
 
-<span data-ttu-id="c4191-127">Aplikacje WCF (z określonymi powiązaniami) mogą utworzyć trwałe połączenie między klientem i serwerem, a serwer może wysyłać dane do klienta do momentu zamknięcia połączenia przy użyciu *interfejsu wywołania zwrotnego* określonego we właściwości <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="c4191-127">WCF applications (with certain bindings) can create a persistent connection between client and server, and the server can asynchronously send data to the client until the connection is closed, using a *callback interface* specified in the <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> property.</span></span>
+<span data-ttu-id="16cba-129">Aplikacje WCF (z określonymi powiązaniami) mogą utworzyć trwałe połączenie między klientem a serwerem.</span><span class="sxs-lookup"><span data-stu-id="16cba-129">WCF applications (with certain bindings) can create a persistent connection between client and server.</span></span> <span data-ttu-id="16cba-130">Serwer może asynchronicznie wysyłać dane do klienta do momentu zamknięcia połączenia przy użyciu *interfejsu wywołania zwrotnego* określonego we właściwości <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="16cba-130">The server can asynchronously send data to the client until the connection is closed, by using a *callback interface* specified in the <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> property.</span></span>
 
-<span data-ttu-id="c4191-128">usługi gRPC Services zapewniają podobną funkcjonalność przy użyciu strumieni komunikatów.</span><span class="sxs-lookup"><span data-stu-id="c4191-128">gRPC services provide similar functionality with message streams.</span></span> <span data-ttu-id="c4191-129">Strumienie nie mapują *dokładnie* na usługi WCF w warunkach implementacji, ale można osiągnąć te same wyniki.</span><span class="sxs-lookup"><span data-stu-id="c4191-129">Streams don't map *exactly* to WCF duplex services in terms of implementation, but the same results can be achieved.</span></span>
+<span data-ttu-id="16cba-131">usługi gRPC Services zapewniają podobną funkcjonalność przy użyciu strumieni komunikatów.</span><span class="sxs-lookup"><span data-stu-id="16cba-131">gRPC services provide similar functionality with message streams.</span></span> <span data-ttu-id="16cba-132">Strumienie nie mapują *dokładnie* na usługi WCF w warunkach implementacji, ale można osiągnąć te same wyniki.</span><span class="sxs-lookup"><span data-stu-id="16cba-132">Streams don't map *exactly* to WCF duplex services in terms of implementation, but you can achieve the same results.</span></span>
 
-### <a name="grpc-streaming"></a><span data-ttu-id="c4191-130">gRPC Streaming</span><span class="sxs-lookup"><span data-stu-id="c4191-130">gRPC streaming</span></span>
+### <a name="grpc-streaming"></a><span data-ttu-id="16cba-133">gRPC Streaming</span><span class="sxs-lookup"><span data-stu-id="16cba-133">gRPC streaming</span></span>
 
-<span data-ttu-id="c4191-131">Program gRPC obsługuje tworzenie strumieni trwałych z klienta na serwer oraz z serwera na klienta.</span><span class="sxs-lookup"><span data-stu-id="c4191-131">gRPC supports the creation of persistent streams from client to server, and from server to client.</span></span> <span data-ttu-id="c4191-132">Oba typy strumieni mogą być aktywne współbieżnie; jest to nazywane dwukierunkową transmisją.</span><span class="sxs-lookup"><span data-stu-id="c4191-132">Both types of stream may be active concurrently; this is called bidirectional streaming.</span></span> <span data-ttu-id="c4191-133">Strumienie mogą służyć do dowolnych, asynchronicznych komunikatów w czasie lub do przekazywania dużych zestawów danych, które są zbyt duże, aby generować i wysyłać w ramach pojedynczego żądania lub odpowiedzi.</span><span class="sxs-lookup"><span data-stu-id="c4191-133">Streams can be used for arbitrary, asynchronous messaging over time, or for passing large datasets that are too big to generate and send in a single request or response.</span></span>
+<span data-ttu-id="16cba-134">Program gRPC obsługuje tworzenie strumieni trwałych z klienta na serwer oraz z serwera na klienta.</span><span class="sxs-lookup"><span data-stu-id="16cba-134">gRPC supports the creation of persistent streams from client to server, and from server to client.</span></span> <span data-ttu-id="16cba-135">Oba typy strumieni mogą być jednocześnie aktywne.</span><span class="sxs-lookup"><span data-stu-id="16cba-135">Both types of stream can be active concurrently.</span></span> <span data-ttu-id="16cba-136">Ta możliwość nazywa się przesyłaniem dwukierunkowym.</span><span class="sxs-lookup"><span data-stu-id="16cba-136">This ability is called bidirectional streaming.</span></span> 
 
-<span data-ttu-id="c4191-134">Poniższy przykład przedstawia serwer RPC przesyłania strumieniowego serwera.</span><span class="sxs-lookup"><span data-stu-id="c4191-134">The following example shows a server streaming RPC.</span></span>
+<span data-ttu-id="16cba-137">Strumieni można używać w przypadku dowolnej asynchronicznej obsługi komunikatów w czasie.</span><span class="sxs-lookup"><span data-stu-id="16cba-137">You can use streams for arbitrary, asynchronous messaging over time.</span></span> <span data-ttu-id="16cba-138">Można też użyć ich do przekazywania dużych zestawów danych, które są zbyt duże, aby generować i wysyłać w ramach pojedynczego żądania lub odpowiedzi.</span><span class="sxs-lookup"><span data-stu-id="16cba-138">Or you can use them for passing large datasets that are too big to generate and send in a single request or response.</span></span>
+
+<span data-ttu-id="16cba-139">W poniższym przykładzie pokazano serwer-Streaming RPC.</span><span class="sxs-lookup"><span data-stu-id="16cba-139">The following example shows a server-streaming RPC.</span></span>
 
 ```protobuf
 service ClockStreamer {
@@ -94,7 +96,7 @@ public class ClockStreamerService : ClockStreamer.ClockStreamerBase
 }
 ```
 
-<span data-ttu-id="c4191-135">Ten strumień serwera może być wykorzystany z aplikacji klienckiej, jak pokazano w poniższym kodzie:</span><span class="sxs-lookup"><span data-stu-id="c4191-135">This server stream could be consumed from a client application as shown in the following code:</span></span>
+<span data-ttu-id="16cba-140">Ten strumień serwera może być używany z aplikacji klienckiej, jak pokazano w poniższym kodzie:</span><span class="sxs-lookup"><span data-stu-id="16cba-140">This server stream can be consumed from a client application, as shown in the following code:</span></span>
 
 ```csharp
 public async Task TellTheTimeAsync(CancellationToken token)
@@ -113,19 +115,19 @@ public async Task TellTheTimeAsync(CancellationToken token)
 ```
 
 > [!NOTE]
-> <span data-ttu-id="c4191-136">Wywołania RPC przesyłania strumieniowego serwera są przydatne w przypadku usług w stylu subskrypcji, a także do wysyłania bardzo dużych zestawów danych, gdy byłyby one niewydajne lub niemożliwe do skompilowania całego DataSet w pamięci.</span><span class="sxs-lookup"><span data-stu-id="c4191-136">Server streaming RPCs are useful for subscription-style services, and also for sending very large datasets when it would be inefficient or impossible to build the entire dataset in memory.</span></span> <span data-ttu-id="c4191-137">Jednak odpowiedzi na przesyłanie strumieniowe nie są tak szybkie jak wysyłanie `repeated` pól w pojedynczym komunikacie, więc w przypadku małych zestawów danych nie należy używać przesyłania strumieniowego.</span><span class="sxs-lookup"><span data-stu-id="c4191-137">However, streaming responses isn't as fast as sending `repeated` fields in a single message, so as a rule streaming shouldn't be used for small datasets.</span></span>
+> <span data-ttu-id="16cba-141">Serwer — wywołania RPC przesyłania strumieniowego są przydatne w przypadku usług w stylu subskrypcji.</span><span class="sxs-lookup"><span data-stu-id="16cba-141">Server-streaming RPCs are useful for subscription-style services.</span></span> <span data-ttu-id="16cba-142">Są one również przydatne do wysyłania dużych zestawów danych, gdy byłyby one niewydajne lub niemożliwe do skompilowania całego DataSet w pamięci.</span><span class="sxs-lookup"><span data-stu-id="16cba-142">They're also useful for sending large datasets when it would be inefficient or impossible to build the entire dataset in memory.</span></span> <span data-ttu-id="16cba-143">Jednak odpowiedzi na przesyłanie strumieniowe nie są tak szybkie jak wysyłanie `repeated` pól w pojedynczym komunikacie.</span><span class="sxs-lookup"><span data-stu-id="16cba-143">However, streaming responses isn't as fast as sending `repeated` fields in a single message.</span></span> <span data-ttu-id="16cba-144">Jako reguła nie należy używać przesyłania strumieniowego dla małych zestawów danych.</span><span class="sxs-lookup"><span data-stu-id="16cba-144">As a rule, streaming shouldn't be used for small datasets.</span></span>
 
-### <a name="differences-to-wcf"></a><span data-ttu-id="c4191-138">Różnice w programie WCF</span><span class="sxs-lookup"><span data-stu-id="c4191-138">Differences to WCF</span></span>
+### <a name="differences-from-wcf"></a><span data-ttu-id="16cba-145">Różnice w programie WCF</span><span class="sxs-lookup"><span data-stu-id="16cba-145">Differences from WCF</span></span>
 
-<span data-ttu-id="c4191-139">Usługa WCF Duplex korzysta z interfejsu wywołania zwrotnego klienta, który może mieć wiele metod.</span><span class="sxs-lookup"><span data-stu-id="c4191-139">A WCF duplex service uses a client callback interface that can have multiple methods.</span></span> <span data-ttu-id="c4191-140">Usługa przesyłania strumieniowego serwera gRPC może wysyłać komunikaty tylko przez jeden strumień.</span><span class="sxs-lookup"><span data-stu-id="c4191-140">A gRPC server streaming service can only send messages over a single stream.</span></span> <span data-ttu-id="c4191-141">Jeśli potrzebujesz wielu metod, użyj typu komunikatu z [dowolnym polem lub jednym z pól](protobuf-any-oneof.md) , aby wysłać różne komunikaty, a następnie napisz kod w kliencie, aby je obsłużyć.</span><span class="sxs-lookup"><span data-stu-id="c4191-141">If you need multiple methods, use a message type with either [an Any field or a oneof field](protobuf-any-oneof.md) to send different messages, and write code in the client to handle them.</span></span>
+<span data-ttu-id="16cba-146">Usługa WCF Duplex korzysta z interfejsu wywołania zwrotnego klienta, który może mieć wiele metod.</span><span class="sxs-lookup"><span data-stu-id="16cba-146">A WCF duplex service uses a client callback interface that can have multiple methods.</span></span> <span data-ttu-id="16cba-147">Serwer gRPC — usługa przesyłania strumieniowego może wysyłać komunikaty tylko przez jeden strumień.</span><span class="sxs-lookup"><span data-stu-id="16cba-147">A gRPC server-streaming service can only send messages over a single stream.</span></span> <span data-ttu-id="16cba-148">Jeśli potrzebujesz wielu metod, użyj typu komunikatu z [dowolnym polem lub jednym z pól](protobuf-any-oneof.md) , aby wysłać różne komunikaty, a następnie napisz kod w kliencie, aby je obsłużyć.</span><span class="sxs-lookup"><span data-stu-id="16cba-148">If you need multiple methods, use a message type with either [an Any field or a oneof field](protobuf-any-oneof.md) to send different messages, and write code in the client to handle them.</span></span>
 
-<span data-ttu-id="c4191-142">W programie WCF Klasa [ServiceContract](xref:System.ServiceModel.ServiceContractAttribute) z sesją jest utrzymywana, dopóki połączenie nie zostanie zamknięte, a wiele metod może być wywoływanych w ramach sesji.</span><span class="sxs-lookup"><span data-stu-id="c4191-142">In WCF, the [ServiceContract](xref:System.ServiceModel.ServiceContractAttribute) class with the session is kept alive until the connection is closed, and multiple methods may be called within the session.</span></span> <span data-ttu-id="c4191-143">W gRPC `Task` zwrócone przez metodę implementacji nie powinny zostać ukończone do momentu zamknięcia połączenia.</span><span class="sxs-lookup"><span data-stu-id="c4191-143">In gRPC, the `Task` returned by the implementation method shouldn't complete until the connection is closed.</span></span>
+<span data-ttu-id="16cba-149">W programie WCF Klasa [ServiceContract](xref:System.ServiceModel.ServiceContractAttribute) z sesją jest utrzymywana do momentu zamknięcia połączenia.</span><span class="sxs-lookup"><span data-stu-id="16cba-149">In WCF, the [ServiceContract](xref:System.ServiceModel.ServiceContractAttribute) class with the session is kept alive until the connection is closed.</span></span> <span data-ttu-id="16cba-150">W ramach sesji można wywołać wiele metod.</span><span class="sxs-lookup"><span data-stu-id="16cba-150">Multiple methods can be called within the session.</span></span> <span data-ttu-id="16cba-151">W gRPC, `Task`, że metoda implementacji zwraca nie należy kończyć do momentu zamknięcia połączenia.</span><span class="sxs-lookup"><span data-stu-id="16cba-151">In gRPC, the `Task` that the implementation method returns shouldn't finish until the connection is closed.</span></span>
 
-## <a name="wcf-one-way-operations-and-grpc-client-streaming"></a><span data-ttu-id="c4191-144">Operacje jednokierunkowe w programie WCF i gRPC Streaming klienta</span><span class="sxs-lookup"><span data-stu-id="c4191-144">WCF one-way operations and gRPC client streaming</span></span>
+## <a name="wcf-one-way-operations-and-grpc-client-streaming"></a><span data-ttu-id="16cba-152">Operacje jednokierunkowe w programie WCF i gRPC Streaming klienta</span><span class="sxs-lookup"><span data-stu-id="16cba-152">WCF one-way operations and gRPC client streaming</span></span>
 
-<span data-ttu-id="c4191-145">Funkcja WCF oferuje jednokierunkowe operacje (oznaczone `[OperationContract(IsOneWay = true)]`), które zwracają potwierdzenie specyficzne dla transportu.</span><span class="sxs-lookup"><span data-stu-id="c4191-145">WCF provides one-way operations (marked with `[OperationContract(IsOneWay = true)]`) that return a transport-specific acknowledgement.</span></span> <span data-ttu-id="c4191-146">metody usługi gRPC zawsze zwracają odpowiedź, nawet jeśli są puste, a klient zawsze powinien oczekiwać na tę odpowiedź.</span><span class="sxs-lookup"><span data-stu-id="c4191-146">gRPC service methods always return a response, even if it's empty, and the client should always await that response.</span></span> <span data-ttu-id="c4191-147">W przypadku komunikatów w stylu "Uruchom i zapomnij" w programie gRPC można utworzyć usługę przesyłania strumieniowego klienta.</span><span class="sxs-lookup"><span data-stu-id="c4191-147">For "fire-and-forget" style messaging in gRPC, you can create a client streaming service.</span></span>
+<span data-ttu-id="16cba-153">Funkcja WCF oferuje jednokierunkowe operacje (oznaczone `[OperationContract(IsOneWay = true)]`), które zwracają potwierdzenie specyficzne dla transportu.</span><span class="sxs-lookup"><span data-stu-id="16cba-153">WCF provides one-way operations (marked with `[OperationContract(IsOneWay = true)]`) that return a transport-specific acknowledgement.</span></span> <span data-ttu-id="16cba-154">metody usługi gRPC zawsze zwracają odpowiedź, nawet jeśli są puste.</span><span class="sxs-lookup"><span data-stu-id="16cba-154">gRPC service methods always return a response, even if it's empty.</span></span> <span data-ttu-id="16cba-155">Klient zawsze powinien oczekiwać na tę odpowiedź.</span><span class="sxs-lookup"><span data-stu-id="16cba-155">The client should always await that response.</span></span> <span data-ttu-id="16cba-156">W przypadku stylu "Uruchom i zapomnij" komunikatów w programie gRPC można utworzyć usługę przesyłania strumieniowego klienta.</span><span class="sxs-lookup"><span data-stu-id="16cba-156">For the "fire-and-forget" style of messaging in gRPC, you can create a client streaming service.</span></span>
 
-### <a name="thing_logproto"></a><span data-ttu-id="c4191-148">thing_log. proto</span><span class="sxs-lookup"><span data-stu-id="c4191-148">thing_log.proto</span></span>
+### <a name="thing_logproto"></a><span data-ttu-id="16cba-157">thing_log. proto</span><span class="sxs-lookup"><span data-stu-id="16cba-157">thing_log.proto</span></span>
 
 ```protobuf
 service ThingLog {
@@ -133,7 +135,7 @@ service ThingLog {
 }
 ```
 
-### <a name="thinglogservicecs"></a><span data-ttu-id="c4191-149">ThingLogService.cs</span><span class="sxs-lookup"><span data-stu-id="c4191-149">ThingLogService.cs</span></span>
+### <a name="thinglogservicecs"></a><span data-ttu-id="16cba-158">ThingLogService.cs</span><span class="sxs-lookup"><span data-stu-id="16cba-158">ThingLogService.cs</span></span>
 
 ```csharp
 public class ThingLogService : Protos.ThingLog.ThingLogBase
@@ -156,7 +158,7 @@ public class ThingLogService : Protos.ThingLog.ThingLogBase
 }
 ```
 
-### <a name="thinglog-client-example"></a><span data-ttu-id="c4191-150">Przykład klienta ThingLog</span><span class="sxs-lookup"><span data-stu-id="c4191-150">ThingLog client example</span></span>
+### <a name="thinglog-client-example"></a><span data-ttu-id="16cba-159">Przykład klienta ThingLog</span><span class="sxs-lookup"><span data-stu-id="16cba-159">ThingLog client example</span></span>
 
 ```csharp
 public class ThingLogger : IAsyncDisposable
@@ -187,13 +189,13 @@ public class ThingLogger : IAsyncDisposable
 }
 ```
 
-<span data-ttu-id="c4191-151">Ponownie wywołania RPC przesyłania strumieniowego klientów mogą być używane do obsługi komunikatów na potrzeby uruchamiania i zapomnień, jak pokazano w poprzednim przykładzie, ale również do wysyłania bardzo dużych zestawów danych do serwera.</span><span class="sxs-lookup"><span data-stu-id="c4191-151">Again, client streaming RPCs can be used for fire-and-forget messaging as shown in the previous example, but also for sending very large datasets to the server.</span></span> <span data-ttu-id="c4191-152">To samo ostrzeżenie o wydajności dotyczy: w przypadku mniejszych zestawów danych Użyj `repeated` pól w zwykłych wiadomościach.</span><span class="sxs-lookup"><span data-stu-id="c4191-152">The same warning about performance applies: for smaller datasets, use `repeated` fields in regular messages.</span></span>
+<span data-ttu-id="16cba-160">Możesz użyć wywołań RPC przesyłania strumieniowego klienta na potrzeby obsługi komunikatów w przypadku uruchamiania i zapomnień, jak pokazano w poprzednim przykładzie.</span><span class="sxs-lookup"><span data-stu-id="16cba-160">You can use client-streaming RPCs for fire-and-forget messaging, as shown in the previous example.</span></span> <span data-ttu-id="16cba-161">Można ich również użyć do wysyłania bardzo dużych zestawów danych do serwera.</span><span class="sxs-lookup"><span data-stu-id="16cba-161">You can also use them for sending very large datasets to the server.</span></span> <span data-ttu-id="16cba-162">To samo ostrzeżenie o wydajności dotyczy: w przypadku mniejszych zestawów danych Użyj `repeated` pól w zwykłych wiadomościach.</span><span class="sxs-lookup"><span data-stu-id="16cba-162">The same warning about performance applies: for smaller datasets, use `repeated` fields in regular messages.</span></span>
 
-## <a name="wcf-full-duplex-services"></a><span data-ttu-id="c4191-153">Usługi WCF Full Duplex</span><span class="sxs-lookup"><span data-stu-id="c4191-153">WCF full duplex services</span></span>
+## <a name="wcf-full-duplex-services"></a><span data-ttu-id="16cba-163">Usługi WCF Full-Duplex</span><span class="sxs-lookup"><span data-stu-id="16cba-163">WCF full-duplex services</span></span>
 
-<span data-ttu-id="c4191-154">Powiązanie dupleksowe WCF obsługuje wiele operacji jednokierunkowych w interfejsie usługi i interfejsie wywołania zwrotnego klienta, co pozwala na ciągłe konwersacje między klientem i serwerem.</span><span class="sxs-lookup"><span data-stu-id="c4191-154">WCF duplex binding supports multiple one-way operations on both the service interface and the client callback interface, allowing ongoing conversations between client and server.</span></span> <span data-ttu-id="c4191-155">gRPC obsługuje coś podobnego do dwukierunkowych wywołań RPC przesyłania strumieniowego, gdzie oba parametry są oznaczone modyfikatorem `stream`.</span><span class="sxs-lookup"><span data-stu-id="c4191-155">gRPC supports something similar with bidirectional streaming RPCs, where both parameters are marked with the `stream` modifier.</span></span>
+<span data-ttu-id="16cba-164">Powiązanie dupleksowe WCF obsługuje wiele operacji jednokierunkowych w interfejsie usługi i interfejsie wywołania zwrotnego klienta.</span><span class="sxs-lookup"><span data-stu-id="16cba-164">WCF duplex binding supports multiple one-way operations on both the service interface and the client callback interface.</span></span> <span data-ttu-id="16cba-165">Ta obsługa umożliwia ciągłe konwersacje między klientem i serwerem.</span><span class="sxs-lookup"><span data-stu-id="16cba-165">This support allows ongoing conversations between client and server.</span></span> <span data-ttu-id="16cba-166">gRPC obsługuje coś podobnego do dwukierunkowych wywołań RPC przesyłania strumieniowego, gdzie oba parametry są oznaczone modyfikatorem `stream`.</span><span class="sxs-lookup"><span data-stu-id="16cba-166">gRPC supports something similar with bidirectional streaming RPCs, where both parameters are marked with the `stream` modifier.</span></span>
 
-### <a name="chatproto"></a><span data-ttu-id="c4191-156">Chat. proto</span><span class="sxs-lookup"><span data-stu-id="c4191-156">chat.proto</span></span>
+### <a name="chatproto"></a><span data-ttu-id="16cba-167">Chat. proto</span><span class="sxs-lookup"><span data-stu-id="16cba-167">chat.proto</span></span>
 
 ```protobuf
 service Chatter {
@@ -201,7 +203,7 @@ service Chatter {
 }
 ```
 
-### <a name="chatterservicecs"></a><span data-ttu-id="c4191-157">ChatterService.cs</span><span class="sxs-lookup"><span data-stu-id="c4191-157">ChatterService.cs</span></span>
+### <a name="chatterservicecs"></a><span data-ttu-id="16cba-168">ChatterService.cs</span><span class="sxs-lookup"><span data-stu-id="16cba-168">ChatterService.cs</span></span>
 
 ```csharp
 public class ChatterService : Chatter.ChatterBase
@@ -226,9 +228,9 @@ public class ChatterService : Chatter.ChatterBase
 }
 ```
 
-<span data-ttu-id="c4191-158">W poprzednim przykładzie widać, że metoda implementacji odbiera strumień żądania (`IAsyncStreamReader<MessageRequest>`) i strumień odpowiedzi (`IServerStreamWriter<MessageResponse>`) i może odczytywać i zapisywać komunikaty do momentu zamknięcia połączenia.</span><span class="sxs-lookup"><span data-stu-id="c4191-158">In the previous example, you can see that the implementation method receives both a request stream (`IAsyncStreamReader<MessageRequest>`) and a response stream (`IServerStreamWriter<MessageResponse>`), and can read and write messages until the connection is closed.</span></span>
+<span data-ttu-id="16cba-169">W poprzednim przykładzie widać, że metoda implementacji odbiera strumień żądania (`IAsyncStreamReader<MessageRequest>`) i strumień odpowiedzi (`IServerStreamWriter<MessageResponse>`).</span><span class="sxs-lookup"><span data-stu-id="16cba-169">In the previous example, you can see that the implementation method receives both a request stream (`IAsyncStreamReader<MessageRequest>`) and a response stream (`IServerStreamWriter<MessageResponse>`).</span></span> <span data-ttu-id="16cba-170">Metoda może odczytywać i zapisywać komunikaty do momentu zamknięcia połączenia.</span><span class="sxs-lookup"><span data-stu-id="16cba-170">The method can read and write messages until the connection is closed.</span></span>
 
-### <a name="chatter-client"></a><span data-ttu-id="c4191-159">Klient rozmawiający</span><span class="sxs-lookup"><span data-stu-id="c4191-159">Chatter client</span></span>
+### <a name="chatter-client"></a><span data-ttu-id="16cba-171">Klient rozmawiający</span><span class="sxs-lookup"><span data-stu-id="16cba-171">Chatter client</span></span>
 
 ```csharp
 public class Chat : IAsyncDisposable
@@ -269,6 +271,6 @@ public class Chat : IAsyncDisposable
 ```
 
 >[!div class="step-by-step"]
-><span data-ttu-id="c4191-160">[Poprzedni](wcf-bindings.md)
->[Następny](metadata.md)</span><span class="sxs-lookup"><span data-stu-id="c4191-160">[Previous](wcf-bindings.md)
+><span data-ttu-id="16cba-172">[Poprzednie](wcf-bindings.md)
+>[dalej](metadata.md)</span><span class="sxs-lookup"><span data-stu-id="16cba-172">[Previous](wcf-bindings.md)
 [Next](metadata.md)</span></span>

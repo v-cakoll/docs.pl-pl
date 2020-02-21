@@ -145,14 +145,14 @@ Zazwyczaj gdy daty i godziny są wyświetlane w interfejsie użytkownika, należ
 
 - Funkcja [formatowania złożonego](../../../docs/standard/base-types/composite-formatting.md) , gdy jest używana z datami
 
-Poniższy przykład wyświetla dane o wschód i wschód słońca dwa razy dla 11 października 2012. Najpierw ustawia bieżącą kulturę na chorwacki (Chorwacja), a następnie na angielski (Wielka Brytania). W każdym przypadku daty i godziny są wyświetlane w formacie, który jest odpowiedni dla tej kultury.
+Poniższy przykład wyświetla dane o wschód i wschód słońca dwa razy dla 11 października 2012. Najpierw ustawia bieżącą kulturę na chorwacki (Chorwacja), a następnie na angielski (Zjednoczone Królestwo). W każdym przypadku daty i godziny są wyświetlane w formacie, który jest odpowiedni dla tej kultury.
 
 [!code-csharp[Conceptual.Globalization#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates1.cs#2)]
 [!code-vb[Conceptual.Globalization#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates1.vb#2)]
 
 ### <a name="persist-dates-and-times"></a>Utrwalanie dat i godzin
 
-Nigdy nie należy utrwalać danych daty i godziny w formacie, który może się różnić w zależności od kultury. Jest to typowy błąd programistyczny, który powoduje uszkodzenie danych lub wyjątek czasu wykonywania. Poniższy przykład serializacji dwóch dat, 9 stycznia 2013 i 18 sierpnia 2013 jako ciągów przy użyciu Konwencji formatowania kultury angielskiej (Stany Zjednoczone). Gdy dane są pobierane i analizowane przy użyciu Konwencji kultury angielskiej (Stany Zjednoczone), zostanie ona pomyślnie przywrócona. Jednak po pobraniu i przeanalizowaniu przy użyciu Konwencji kultury angielskiej (Wielka Brytania) pierwsza data jest błędnie interpretowana jako 1 września, a druga nie można przeanalizować, ponieważ kalendarz gregoriański nie ma osiemnastegoego miesiąca.
+Nigdy nie należy utrwalać danych daty i godziny w formacie, który może się różnić w zależności od kultury. Jest to typowy błąd programistyczny, który powoduje uszkodzenie danych lub wyjątek czasu wykonywania. Poniższy przykład serializacji dwóch dat, 9 stycznia 2013 i 18 sierpnia 2013 jako ciągów przy użyciu Konwencji formatowania kultury angielskiej (Stany Zjednoczone). Gdy dane są pobierane i analizowane przy użyciu Konwencji kultury angielskiej (Stany Zjednoczone), zostanie ona pomyślnie przywrócona. Jednak po pobraniu i przeanalizowaniu przy użyciu Konwencji kultury angielskiej (Zjednoczone Królestwo) pierwsza data jest błędnie interpretowana jako 1 września, a druga nie można przeanalizować, ponieważ kalendarz gregoriański nie ma osiemnastegoego miesiąca.
 
 [!code-csharp[Conceptual.Globalization#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates2.cs#3)]
 [!code-vb[Conceptual.Globalization#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates2.vb#3)]

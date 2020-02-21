@@ -150,7 +150,7 @@ Głównym powodem wyboru Ocelot [aplikacji referencyjnej eShopOnContainers](http
 
 Poprzednie diagramy pokazujące niestandardowe bramy interfejsu API działające w kontenerach są precyzyjnie, jak można także uruchomić Ocelot w aplikacji opartej na kontenerach i mikrousługach.
 
-Ponadto istnieje wiele innych produktów na rynku oferujących funkcje bram interfejsu API, takie jak Apigee, Hongkong, MuleSoft, WSO2 i inne produkty, takie jak konsolidator i Istio dla funkcji kontrolera usług transferu danych w sieci.
+Ponadto istnieje wiele innych produktów na rynku oferujących funkcje bram interfejsu API, takie jak Apigee, SRA Hongkong, MuleSoft, WSO2 i inne produkty, takie jak konsolidator i Istio dla funkcji kontrolera usług transferu danych w sieci.
 
 Po wstępnym rozpoczęciu architektury i wzorców sekcjach w następnych sekcjach opisano sposób implementacji bram interfejsu API w programie [Ocelot](https://github.com/ThreeMammals/Ocelot).
 

@@ -268,7 +268,7 @@ Możesz również sformatować wartość numeryczną dla określonej kultury, wy
 
 - Obiekt <xref:System.Globalization.NumberFormatInfo>, który definiuje konwencje formatowania specyficzne dla kultury, które mają być używane. Metoda <xref:System.Globalization.NumberFormatInfo.GetFormat%2A> zwraca wystąpienie samego siebie.
 
-W poniższym przykładzie używane są <xref:System.Globalization.NumberFormatInfo> obiektów, które reprezentują kultury angielskie (Stany Zjednoczone) i angielskie (Wielka Brytania) oraz kultury neutralne w języku francuskim i rosyjskim, aby sformatować liczbę zmiennoprzecinkową.
+W poniższym przykładzie używane są <xref:System.Globalization.NumberFormatInfo> obiektów, które reprezentują kultury angielskie (Stany Zjednoczone) i angielskie (Zjednoczone Królestwo) oraz kultury neutralne w języku francuskim i rosyjskim, aby sformatować liczbę zmiennoprzecinkową.
 
 [!code-csharp[Conceptual.Formatting.Overview#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/culturespecific4.cs#20)]
 [!code-vb[Conceptual.Formatting.Overview#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/culturespecific4.vb#20)]
@@ -286,7 +286,7 @@ Możesz również sformatować wartość daty i godziny dla określonej kultury 
 
 - Obiekt <xref:System.Globalization.DateTimeFormatInfo>, który definiuje konwencje formatowania specyficzne dla kultury, które mają być używane. Metoda <xref:System.Globalization.DateTimeFormatInfo.GetFormat%2A> zwraca wystąpienie samego siebie.
 
-W poniższym przykładzie zastosowano <xref:System.Globalization.DateTimeFormatInfo> obiektów, które reprezentują kultury angielskie (Stany Zjednoczone) i angielskie (Wielka Brytania) oraz kulturę neutralną w języku francuskim i rosyjskim do formatowania daty.
+W poniższym przykładzie zastosowano <xref:System.Globalization.DateTimeFormatInfo> obiektów, które reprezentują kultury angielskie (Stany Zjednoczone) i angielskie (Zjednoczone Królestwo) oraz kulturę neutralną w języku francuskim i rosyjskim do formatowania daty.
 
 [!code-csharp[Conceptual.Formatting.Overview#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/culturespecific2.cs#18)]
 [!code-vb[Conceptual.Formatting.Overview#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/culturespecific2.vb#18)]

@@ -2,12 +2,12 @@
 title: Mikrousługi platformy .NET. architektura konteneryzowanych aplikacji .NET
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Mikrousługi są modularne i niezależnie do wdrożenia usługi. Kontenery platformy Docker (dla systemów Linux i Windows) upraszczają wdrażanie i testowanie poprzez zgrupowanie usługi i jej zależności w pojedynczą jednostkę, która jest uruchamiana w środowisku izolowanym.
 ms.date: 01/30/2020
-ms.openlocfilehash: 5da167de1ffd2169aea44b9872281e71c87927b1
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 1337fe56e78e03a85627737bd52a089fd946b842
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77502634"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543537"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>Mikrousługi platformy .NET: architektura dla kontenerów aplikacji .NET
 
@@ -21,7 +21,7 @@ Aby ułatwić rozpoczęcie pracy, przewodnik koncentruje się na odniesieniu do 
 
 ## <a name="action-links"></a>Linki akcji
 
-- Pobierz tę książkę elektroniczną w wybranym formacie (tylko w języku angielskim): | [PDF](https://aka.ms/microservicesebook) | [MOBI](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-mobi) | [EPUB](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-epub) |
+- Ta książka elektroniczna jest również dostępna w formacie PDF (tylko wersja w języku angielskim [).](https://aka.ms/microservicesebook)
 
 - Klonowanie/rozwidlenie aplikacji referencyjnej [eShopOnContainers w witrynie GitHub](https://github.com/dotnet-architecture/eShopOnContainers)
 
@@ -78,9 +78,7 @@ Celem aplikacji jest zaprezentowanie wzorców architektonicznych. **Nie jest to 
 
 ## <a name="send-us-your-feedback"></a>Wyślij nam swoją opinię.
 
-Utworzyliśmy ten przewodnik, aby ułatwić zrozumienie architektury aplikacji i mikrousług w programie .NET. Przewodnik i powiązana aplikacja referencyjna będą rozwijane, więc będziemy nam powitać Twoją opinię. Jeśli masz komentarze dotyczące tego, jak można ulepszyć ten przewodnik, wyślij je do:
-
-[dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com)
+Utworzyliśmy ten przewodnik, aby ułatwić zrozumienie architektury aplikacji i mikrousług w programie .NET. Przewodnik i powiązana aplikacja referencyjna będą rozwijane, więc będziemy nam powitać Twoją opinię. Jeśli masz komentarze dotyczące sposobu, w jaki można ulepszyć ten przewodnik, Prześlij opinię na <https://aka.ms/ebookfeedback>.
 
 ## <a name="credits"></a>Środki
 
@@ -149,8 +147,6 @@ Uczestnicy i recenzenci:
 > **Miguel Veloso**, inżynier ds. opracowywania oprogramowania z zwykłymi pojęciami
 
 ## <a name="copyright"></a>Prawo
-
-Pobieranie dostępne o: <https://aka.ms/microservicesebook>
 
 OPUBLIKOWANO PRZEZ
 

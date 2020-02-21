@@ -1,17 +1,17 @@
 ---
 title: Mapy protobuf dla słowników — gRPC dla deweloperów WCF
-description: Dowiedz się, jak reprezentować za pomocą map protobuf. Typy słowników netto.
+description: Zapoznaj się z tematem jak używać map protobuf do reprezentowania typów słowników w programie .NET.
 ms.date: 09/09/2019
-ms.openlocfilehash: 8b4f29daa263f329dc533d3ddc596d0f47c1b6e0
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: bf848bbc7e3618f6d78e280fcd85d5eb88d5cfae
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73967413"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543134"
 ---
 # <a name="protobuf-maps-for-dictionaries"></a>Mapy Protobuf dla słowników
 
-Ważne jest, aby reprezentować dowolne kolekcje nazwanych wartości w komunikatach. W programie .NET jest to często obsługiwane przy użyciu typów słowników. Protobuf jest odpowiednikiem typu `map<key_type, value_type>` na platformie .NET <xref:System.Collections.Generic.IDictionary%602>. W tej sekcji pokazano, jak zadeklarować `map` w protobuf i jak używać wygenerowanego kodu.
+Ważne jest, aby reprezentować dowolne kolekcje nazwanych wartości w komunikatach. W programie .NET jest to często obsługiwane przez typy słowników. Odpowiednikiem typu <xref:System.Collections.Generic.IDictionary%602> .NET w buforze protokołu (protobuf) jest typ `map<key_type, value_type>`. W tej sekcji pokazano, jak zadeklarować typ `map` w protobuf i jak używać wygenerowanego kodu.
 
 ```protobuf
 message StockPrices {
@@ -19,9 +19,9 @@ message StockPrices {
 }
 ```
 
-W wygenerowanym kodzie `map` pola używają klasy `Google.Protobuf.Collections.MapField<TKey, TValue>`, która implementuje standardowe interfejsy kolekcji .NET, w tym <xref:System.Collections.Generic.IDictionary%602>.
+W wygenerowanym kodzie `map` pola używają klasy `Google.Protobuf.Collections.MapField<TKey, TValue>`. Ta klasa implementuje standardowe interfejsy kolekcji .NET, w tym <xref:System.Collections.Generic.IDictionary%602>.
 
-Nie można bezpośrednio powtarzać pól mapy w definicji komunikatu, ale można utworzyć zagnieżdżony komunikat zawierający mapę i użyć `repeated` na typ komunikatu, jak w poniższym przykładzie:
+Nie można bezpośrednio powtarzać pól mapy w definicji komunikatu. Można jednak utworzyć zagnieżdżony komunikat zawierający mapę i użyć `repeated` w przypadku typu komunikatu, jak w poniższym przykładzie:
 
 ```protobuf
 message Order {
@@ -45,10 +45,10 @@ public Order CreateOrder(Dictionary<string, string> attributes)
 }
 ```
 
-## <a name="further-reading"></a>Dalsze odczytywanie
+## <a name="further-reading"></a>Dalsze informacje
 
 Aby uzyskać więcej informacji na temat protobuf, zobacz oficjalną [dokumentację protobuf](https://developers.google.com/protocol-buffers/docs/overview).
 
 >[!div class="step-by-step"]
->[Poprzedni](protobuf-enums.md)
->[Następny](wcf-services-to-grpc-comparison.md)
+>[Poprzednie](protobuf-enums.md)
+>[dalej](wcf-services-to-grpc-comparison.md)

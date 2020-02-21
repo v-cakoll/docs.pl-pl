@@ -2,12 +2,12 @@
 title: A może natywne aplikacje w chmurze?
 description: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows | Co z aplikacjami natywnymi w chmurze?
 ms.date: 04/28/2018
-ms.openlocfilehash: cf4c3b24a4eeb62ed84a5fccb294b675d38fcc36
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: d2a7f89e347d75ddbdae84c8eb57e32447b83297
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "72318437"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543550"
 ---
 # <a name="what-about-cloud-native-applications"></a>A może natywne aplikacje w chmurze?
 
@@ -41,7 +41,10 @@ Chmura w chmurze to bardziej zaawansowany lub dojrzały stan dla aplikacji o du�
 
 [Natywna platforma obliczeniowa w chmurze (CNCF)](https://www.cncf.io/) to podstawowy stymulator zasad natywnych w chmurze. Firma Microsoft jest [członkiem CNCF](https://azure.microsoft.com/blog/announcing-cncf/).
 
-Aby zapoznać się z przykładową definicją i uzyskać więcej informacji na temat cech aplikacji natywnych w chmurze, zobacz artykuł [dotyczący tworzenia i projektowania aplikacji natywnych dla chmury](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications). Aby uzyskać szczegółowe wskazówki od firmy Microsoft dotyczące implementowania aplikacji natywnej w chmurze, zobacz [.NET mikrousługi: architektura dla kontenerów aplikacji .NET](https://aka.ms/microservicesebook).
+Aby uzyskać szczegółowe wskazówki dotyczące projektowania i opracowywania aplikacji natywnych w chmurze, przeczytaj następujące bezpłatne książki elektroniczne:
+
+* [Tworzenie architektury natywnych aplikacji .NET w chmurze dla platformy Azure](../../cloud-native/introduction.md)
+* [Mikrousługi platformy .NET: architektura dla kontenerów aplikacji .NET](../../microservices/index.md).
 
 Najważniejszym czynnikiem, które należy wziąć pod uwagę w przypadku migrowania pełnej aplikacji do modelu natywnego w chmurze, jest konieczność przeprowadzenia ponownej architektury na architekturę opartą na mikrousługach. To wyraźnie wymaga znaczących inwestycji w rozwój z powodu dużego procesu refaktoryzacji. Ta opcja jest zwykle wybierana dla aplikacji o krytycznym znaczeniu, które wymagają nowych poziomów skalowalności i długoterminowej elastyczności. Można jednak zacząć poruszać się w chmurze, dodając mikrousługi dla zaledwie kilku nowych scenariuszy, a ostatecznie refaktoryzację aplikacji w pełni jako mikrousługi. Jest to przyrostowe podejście, które jest najlepszą opcją dla niektórych scenariuszy.
 
@@ -66,5 +69,5 @@ W ostatecznej uwadze, nawet w przypadku ryzyka powtarzania tego pojęcia, nie na
 W każdym przypadku pozostała część niniejszych wskazówek koncentruje się na większości wszystkich "aplikacji opartych na mikrousługach", ponieważ te wskazówki odnoszą się głównie do modernizacji istniejących aplikacji, które zwykle mają warstwy monolityczne lub N-warstwowe.
 
 > [!div class="step-by-step"]
-> [Poprzedni](microsoft-technologies-in-cloud-optimized-applications.md)
-> [Następny](deploy-existing-net-apps-as-windows-containers.md)
+> [Poprzednie](microsoft-technologies-in-cloud-optimized-applications.md)
+> [dalej](deploy-existing-net-apps-as-windows-containers.md)

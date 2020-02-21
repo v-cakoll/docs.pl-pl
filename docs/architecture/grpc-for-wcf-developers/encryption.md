@@ -2,20 +2,20 @@
 title: Szyfrowanie i zabezpieczenia sieci — gRPC dla deweloperów WCF
 description: Niektóre uwagi dotyczące zabezpieczeń sieci i szyfrowania w programie gRPC
 ms.date: 09/02/2019
-ms.openlocfilehash: fd993a2d75e97011c6c92cee02c24c5358a211ad
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: f8a7aeaf2a65e4ff56ac33d728e40f09a436f7a6
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73967777"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77542774"
 ---
 # <a name="encryption-and-network-security"></a>Szyfrowanie i zabezpieczenia sieci
 
-Model zabezpieczeń sieci WCF jest obszerny i skomplikowany, w tym zabezpieczenia na poziomie transportu za pośrednictwem protokołu HTTPS lub TLS-over-TCP i zabezpieczenia na poziomie komunikatów przy użyciu specyfikacji WS-Security do szyfrowania poszczególnych komunikatów.
+Model zabezpieczeń sieci dla Windows Communication Foundation (WCF) jest obszerny i skomplikowany. Obejmuje to zabezpieczenia na poziomie transportu przy użyciu protokołu HTTPS lub TLS-over-TCP oraz zabezpieczeń na poziomie komunikatów przy użyciu specyfikacji WS-Security do szyfrowania poszczególnych komunikatów.
 
-gRPC pozostawia zabezpieczone sieci do podstawowego protokołu HTTP/2, który można zabezpieczyć przy użyciu zwykłych certyfikatów TLS.
+gRPC pozostawia zabezpieczenia sieciowe do podstawowego protokołu HTTP/2, który można zabezpieczyć przy użyciu certyfikatów TLS.
 
-Przeglądarki sieci Web Niemniej korzystają z połączeń TLS dla protokołu HTTP/2, ale większość klientów programistycznych, w tym. `HttpClient`sieci, mogą używać protokołu HTTP/2 za pośrednictwem nieszyfrowanych połączeń. `HttpClient` *Domyślnie* wymaga szyfrowania, ale można je zastąpić przy użyciu przełącznika <xref:System.AppContext>.
+Przeglądarki sieci Web Niemniej korzystają z połączeń TLS dla protokołu HTTP/2, ale większość klientów programistycznych, w tym. `HttpClient`sieci, mogą używać protokołu HTTP/2 za pośrednictwem nieszyfrowanych połączeń. `HttpClient` domyślnie wymaga szyfrowania, ale można je zastąpić przy użyciu przełącznika <xref:System.AppContext>.
 
 ```csharp
 AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
@@ -25,10 +25,8 @@ W przypadku publicznych interfejsów API należy zawsze używać połączeń TLS
 
 W przypadku usług wewnętrznych w sieci firmowej należy rozważyć użycie protokołu TLS do zabezpieczenia ruchu sieciowego do i z usług gRPC.
 
-Komunikacja między mikrousługami w klastrze, takim jak Kubernetes, lub Docker Swarm, jest ogólnie automatycznie szyfrowana przez warstwę sieciową kontenera, więc implementacja protokołu TLS w usługach działających wyłącznie w takim klastrze nie jest konieczna. Więcej informacji na ten temat znajduje się w sekcji "siatka usług" w następnym rozdziale.
-
-Jeśli konieczne jest użycie jawnej protokołu TLS między usługami działającymi w Kubernetes, należy rozważyć użycie urzędu certyfikacji w klastrze i kontrolera Menedżera certyfikatów, takiego jak [Menedżer](https://docs.cert-manager.io/en/latest/) certyfikatów, do przypisywania automatycznie certyfikatów do usług w czasie wdrażania.
+Jeśli konieczne jest użycie jawnej protokołu TLS między usługami działającymi w Kubernetes, należy rozważyć użycie urzędu certyfikacji w klastrze i kontrolera Menedżera certyfikatów, takiego jak [Menedżer](https://docs.cert-manager.io/en/latest/)certyfikatów. Następnie można automatycznie przypisywać certyfikaty do usług w czasie wdrażania.
 
 >[!div class="step-by-step"]
->[Poprzedni](channel-credentials.md)
->[Następny](grpc-in-production.md)
+>[Poprzednie](channel-credentials.md)
+>[dalej](grpc-in-production.md)

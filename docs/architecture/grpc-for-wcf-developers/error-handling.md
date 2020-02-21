@@ -1,19 +1,19 @@
 ---
 title: Obsługa błędów — gRPC dla deweloperów WCF
-description: DO ZAPISANIA
+description: Tematy dotyczące obsługi błędów w gRPC. Zawiera tabelę zawierającą najczęściej używane kody stanu.
 ms.date: 09/02/2019
-ms.openlocfilehash: 2c44bd9264c877a7c7a86c115b6da9f759006016
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c380c651f854adc97e8b2ead36d30c3b83662aac
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73967791"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77542796"
 ---
 # <a name="error-handling"></a>Obsługa błędów
 
-Usługa WCF używa `FaultException<T>` i `FaultContract` do udostępniania szczegółowych informacji o błędach, w tym obsługi standardu SOAP Fault.
+Windows Communication Foundation (WCF) używa <xref:System.ServiceModel.FaultException%601> i [FaultContract](xref:System.ServiceModel.FaultContractAttribute) w celu zapewnienia szczegółowych informacji o błędzie, w tym obsługi standardu SOAP Fault.
 
-Niestety bieżąca wersja gRPC nie ma złożoności znalezionej w programie WCF i ma ograniczoną wbudowaną obsługę błędów na podstawie prostych kodów stanu i metadanych. Poniższa tabela zawiera krótki przewodnik po najczęściej używanych kodach stanu:
+Niestety, bieżąca wersja gRPC nie ma złożoności znalezionej w programie WCF i ma ograniczoną wbudowaną obsługę błędów na podstawie prostych kodów stanu i metadanych. Poniższa tabela zawiera krótki przewodnik po najczęściej używanych kodach stanu:
 
 | Kod stanu | Problem |
 | ----------- | ------- |
@@ -25,9 +25,9 @@ Niestety bieżąca wersja gRPC nie ma złożoności znalezionej w programie WCF 
 | `GRPC_STATUS_PERMISSION_DENIED` | Autoryzacja nie powiodła się. |
 | `GRPC_STATUS_CANCELLED` | Wywołanie zostało anulowane, zazwyczaj przez wywołującego. |
 
-## <a name="raising-errors-in-aspnet-core-grpc"></a>Wywoływanie błędów w ASP.NET Core gRPC
+## <a name="raise-errors-in-aspnet-core-grpc"></a>Zgłoś błędy w ASP.NET Core gRPC
 
-Usługa ASP.NET Core gRPC może wysłać odpowiedź z błędami, zgłaszając `RpcException`, które mogą zostać przechwycone przez klienta tak, jakby były w tym samym procesie. `RpcException` musi zawierać kod stanu i opis, a opcjonalnie może zawierać metadane i dłuższy komunikat wyjątku. Metadane mogą służyć do wysyłania danych pomocniczych, podobnie jak obiekty `FaultContract` mogą zawierać dodatkowe dane dla błędów WCF.
+Usługa ASP.NET Core gRPC może wysłać odpowiedź z błędami, zgłaszając `RpcException`, które mogą zostać przechwycone przez klienta tak, jakby były w tym samym procesie. `RpcException` musi zawierać kod stanu i opis, a opcjonalnie może zawierać metadane i dłuższy komunikat wyjątku. Metadane mogą służyć do wysyłania danych pomocniczych, podobnie jak obiekty `FaultContract` mogą przenosić dodatkowe dane dla błędów WCF.
 
 ```csharp
 public async Task<GetPortfolioResponse> GetPortfolio(GetPortfolioRequest request, ServerCallContext context)
@@ -44,9 +44,9 @@ public async Task<GetPortfolioResponse> GetPortfolio(GetPortfolioRequest request
 }
 ```
 
-## <a name="catching-errors-in-grpc-clients"></a>Przechwytywanie błędów w klientach gRPC
+## <a name="catch-errors-in-grpc-clients"></a>Błędy przechwytywania w klientach gRPC
 
-Podobnie jak klienci WCF mogą przechwytywać <xref:System.ServiceModel.FaultException%601> błędów, klient gRPC może przechwycić `RpcException`, aby obsłużyć błędy. Ponieważ `RpcException` nie jest typem ogólnym, nie można przechwytywać różnych typów błędów w różnych blokach, ale C#można użyć funkcji *filtrów wyjątków* , aby zadeklarować oddzielne bloki `catch` dla różnych kodów stanu, jak pokazano w następującym przykładzie:
+Podobnie jak klienci WCF mogą przechwytywać <xref:System.ServiceModel.FaultException%601> błędów, klient gRPC może przechwycić `RpcException`, aby obsłużyć błędy. Ponieważ `RpcException` nie jest typem ogólnym, nie można przechwytywać różnych typów błędów w różnych blokach. Można jednak użyć C#funkcji *filtry wyjątków* , aby zadeklarować oddzielne bloki `catch` dla różnych kodów stanu, jak pokazano w następującym przykładzie:
 
 ```csharp
 try
@@ -69,8 +69,8 @@ catch (RpcException)
 
 ## <a name="grpc-richer-error-model"></a>gRPC bogatszy model błędów
 
-Od tej C# pory firma Google opracowała [bogatszy model błędów](https://cloud.google.com/apis/design/errors#error_model) , który jest bardziej podobny do [FaultContract](xref:System.ServiceModel.FaultContractAttribute)WCF, ale nie jest jeszcze obsługiwany. Obecnie jest ona dostępna tylko dla języka go, Java, Python i C++, ale obsługa C# jest oczekiwana w następnym roku.
+Firma Google opracowała [bogatszy model błędów](https://cloud.google.com/apis/design/errors#error_model) , który jest bardziej podobny do [FaultContract](xref:System.ServiceModel.FaultContractAttribute)WCF, ale ten model nie jest C# jeszcze obsługiwany. Obecnie jest ona dostępna tylko dla języka go, Java, Python i C++.
 
 >[!div class="step-by-step"]
->[Poprzedni](metadata.md)
->[Następny](ws-protocols.md)
+>[Poprzednie](metadata.md)
+>[dalej](ws-protocols.md)

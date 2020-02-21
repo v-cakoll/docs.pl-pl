@@ -2,18 +2,20 @@
 title: Wyliczenia protobuf — gRPC dla deweloperów WCF
 description: Dowiedz się, jak deklarować wyliczenia i korzystać z nich w protobuf.
 ms.date: 09/09/2019
-ms.openlocfilehash: 4ea4d03bede2a9ebfd1f2c3ee56f299e918800e9
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 01cf4a4e5e0eda1e7ddff2a6780119fcb3120dad
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73971574"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543147"
 ---
 # <a name="protobuf-enumerations"></a>Wyliczenia Protobuf
 
-Protobuf obsługuje typy wyliczeniowe, jak pokazano w poprzedniej sekcji, w której Wyliczenie zostało użyte do określenia typu pola `oneof`. Można zdefiniować własne typy wyliczeniowe, a protobuf będzie kompilować je C# do typów wyliczeniowych. Ponieważ protobuf można używać w różnych językach, konwencje nazewnictwa dla wyliczeń różnią się C# od konwencji. Jednak generator kodu jest sprytne i konwertuje nazwy do tradycyjnego C# przypadku. Jeśli odpowiednik w przypadku języka Pascala nazwy pola rozpoczyna się od nazwy wyliczenia, zostanie usunięty.
+Protobuf obsługuje typy wyliczeniowe. Ta obsługa jest obsługiwana w poprzedniej sekcji, gdzie Wyliczenie zostało użyte do określenia typu pola `Oneof`. Można zdefiniować własne typy wyliczeniowe, a protobuf będzie kompilować je do C# typów wyliczeniowych. 
 
-Na przykład w tym wyliczeniu protobuf pola są poprzedzone `ACCOUNT_STATUS`, co jest równoznaczne z nazwą wyliczenia przypadku w języku Pascal: `AccountStatus`.
+Ponieważ można używać protobuf z różnymi językami, konwencje nazewnictwa dla wyliczeń różnią C# się od konwencji. Jednak generator kodu konwertuje nazwy do tradycyjnego C# przypadku. Jeśli odpowiednik w przypadku języka Pascala nazwy pola rozpoczyna się od nazwy wyliczenia, zostanie usunięty.
+
+Na przykład w poniższym wyliczeniu protobuf pola są poprzedzone prefiksem `ACCOUNT_STATUS`. Ten prefiks jest równoważny z nazwą wyliczenia przypadku w języku Pascal, `AccountStatus`.
 
 ```protobuf
 enum AccountStatus {
@@ -25,7 +27,7 @@ enum AccountStatus {
 }
 ```
 
-W ten sposób Generator tworzy C# równoważność następującego kodu:
+Generator tworzy C# odpowiednik w następującym kodzie:
 
 ```csharp
 public enum AccountStatus
@@ -38,7 +40,7 @@ public enum AccountStatus
 }
 ```
 
-Definicje wyliczenia protobuf **muszą** mieć stałą zero jako swoje pierwsze pole. Podobnie jak C#w programie, można zadeklarować wiele pól o tej samej wartości, ale należy jawnie włączyć tę opcję przy użyciu opcji `allow_alias` w wyliczeniu:
+Definicje wyliczenia protobuf *muszą* mieć stałą zero jako swoje pierwsze pole. Podobnie jak C#w programie, można zadeklarować wiele pól o tej samej wartości. Należy jednak jawnie włączyć tę opcję przy użyciu opcji `allow_alias` w wyliczeniu:
 
 ```protobuf
 enum AccountStatus {
@@ -70,10 +72,10 @@ message Product {
 }
 ```
 
-Jeśli ustawisz `product.AvailableIn` na `Region.NorthAmerica | Region.SouthAmerica`, zostanie ona zserializowana jako wartość całkowita `3`. Gdy klient lub serwer próbuje zdeserializować wartości, nie znajdzie dopasowania w definicji wyliczenia dla `3`, a wynik zostanie `Region.None`.
+Jeśli ustawisz `product.AvailableIn` na `Region.NorthAmerica | Region.SouthAmerica`, zostanie ona zserializowana jako wartość całkowita `3`. Gdy klient lub serwer próbuje zdeserializować wartości, nie znajdzie dopasowania w definicji wyliczenia dla `3`. Wynik zostanie `Region.None`.
 
 Najlepszym sposobem pracy z wieloma wartościami wyliczenia w protobuf jest użycie pola `repeated` typu wyliczeniowego.
 
 >[!div class="step-by-step"]
->[Poprzedni](protobuf-any-oneof.md)
->[Następny](protobuf-maps.md)
+>[Poprzednie](protobuf-any-oneof.md)
+>[dalej](protobuf-maps.md)

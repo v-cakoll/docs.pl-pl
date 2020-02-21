@@ -2,12 +2,12 @@
 title: ASP.NET Core gRPC for WCF Developers — gRPC dla deweloperów WCF
 description: Wprowadzenie do tworzenia usług gRPC w ASP.NET Core 3,0 dla deweloperów WCF
 ms.date: 09/02/2019
-ms.openlocfilehash: 3ef513d2397b6f282591dfe6c9b25cd178372a28
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 40307124c521659a00339884bacf48881fa3e048
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73967747"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543238"
 ---
 # <a name="aspnet-core-grpc-for-wcf-developers"></a>Usługa gRPC platformy ASP.NET Core dla deweloperów WCF
 
@@ -37,36 +37,36 @@ Logo Docker Whale jest zastrzeżonym znakiem towarowym platformy Docker, Inc. u�
 
 Wszystkie inne znaczniki i logo są własnością odpowiednich właścicieli.
 
-Tworzone
+Autorzy:
 
 > **Mark The Rendle** -dyrektor ds. technicznych — [Visual firmy Recode](https://visualrecode.com)
 >
 > **Miranda Steiner** — autor techniczny
 
-Edytory
+Edytor
 
-> **Maira Wenzel** — deweloper zawartości SR — Microsoft
+> **Maira Wenzel** — SR. Content Developer — Microsoft
 
 ## <a name="introduction"></a>Wprowadzenie
 
-gRPC to nowoczesne środowisko do tworzenia usług sieciowych i aplikacji rozproszonych. Wyobraź sobie wydajność powiązań NetTCP w programie WCF dzięki międzyplatformowej współdziałaniu protokołu SOAP. gRPC kompiluje na HTTP/2 i protokół kodowania komunikatów protobuf, aby zapewnić wysoką wydajność, komunikację o niskiej przepustowości między aplikacjami i usługami. Obsługuje ona generowanie kodu serwera i klienta w większości popularnych języków programowania i platform, w tym .NET, Java, Python, Node. js, go C++ i innych. Dzięki pierwszej klasie obsługi gRPC w ASP.NET Core 3,0 wraz z istniejącymi narzędziami i bibliotekami gRPC dla platformy .NET 4. x uważamy, że jest to znakomita alternatywa dla usługi WCF dla zespołów programistycznych, które chcą przyjąć platformę .NET Core w swoich organizacjach.
+gRPC to nowoczesne środowisko do tworzenia usług sieciowych i aplikacji rozproszonych. Wyobraź sobie Windows Communication Foundation wydajność powiązań NetTCP (WCF) w połączeniu z międzyplatformowym współdziałaniem protokołu SOAP. gRPC kompiluje na HTTP/2 i protokół kodowania komunikatów protobuf, aby zapewnić wysoką wydajność, komunikację o niskiej przepustowości między aplikacjami i usługami. Obsługuje ona generowanie kodu serwera i klienta w większości popularnych języków programowania i platform, w tym .NET, Java, Python, Node. js, go i C++. Dzięki pierwszej klasie wsparcia dla gRPC w ASP.NET Core 3,0 wraz z istniejącymi narzędziami i bibliotekami gRPC dla platformy .NET 4. x jest to świetna alternatywa dla usług WCF dla zespołów programistycznych, które chcą przyjąć platformę .NET Core w swoich organizacjach.
 
 ## <a name="who-should-use-this-guide"></a>Kto powinien korzystać z tego przewodnika
 
-Ten przewodnik został utworzony dla deweloperów pracujących w .NET Framework lub .NET Core, którzy wcześniej korzystali z usług WCF i chcący migrować swoje aplikacje do nowoczesnego środowiska RPC dla programu .NET Core 3,0 i jego nowszych wersji. Przewodnik może być również bardziej używany w przypadku deweloperów uaktualniających lub rozważających uaktualnienie do programu .NET Core 3,0, którzy chcą korzystać z wbudowanych narzędzi gRPC.
+Ten przewodnik został utworzony dla deweloperów pracujących w .NET Framework lub .NET Core, którzy wcześniej korzystali z usług WCF, i którzy chcą migrować swoje aplikacje do nowoczesnego środowiska RPC dla programu .NET Core 3,0 i jego nowszych wersji. Ogólnie rzecz biorąc, Jeśli uaktualniasz lub rozważasz uaktualnienie do programu .NET Core 3,0 i chcesz korzystać z wbudowanych narzędzi gRPC, ten przewodnik jest również przydatny.
 
 ## <a name="how-you-can-use-this-guide"></a>Jak można użyć tego przewodnika
 
-Jest to krótkie wprowadzenie do tworzenia usług gRPC w ASP.NET Core 3,0 z konkretnym odwołaniem do programu WCF jako analogicznej platformy. Wyjaśniono zasady gRPC, odnoszące się do poszczególnych koncepcji funkcji WCF i oferuje wskazówki dotyczące migrowania istniejącej aplikacji WCF do gRPC. Jest on również przydatny dla deweloperów, którzy korzystają z programu WCF i poszukują gRPC w tworzeniu nowych usług. Przykładowe aplikacje mogą służyć jako szablon lub odwołanie do własnych projektów, a ty możesz kopiować i ponownie używać kodu z książki lub jej przykładów.
+Jest to krótkie wprowadzenie do tworzenia usług gRPC w ASP.NET Core 3,0, z uwzględnieniem programu WCF jako analogicznej platformy. Wyjaśniono zasady gRPC, odnoszące się do poszczególnych koncepcji funkcji WCF i oferuje wskazówki dotyczące migrowania istniejącej aplikacji WCF do gRPC. Jest on również przydatny dla deweloperów, którzy korzystają z WCF i chcą uczyć się gRPC w tworzeniu nowych usług. Przykładowymi aplikacjami można używać jako szablonu lub odwołania do własnych projektów i możesz kopiować i ponownie używać kodu z książki lub jej przykładów.
 
-Możesz przesłać dalej ten przewodnik do zespołu, aby pomóc w zapewnieniu powszechnej wiedzy na temat tych zagadnień i możliwości. Korzystanie ze wspólnego zestawu terminologii i podstawowych zasad pomaga zapewnić spójne stosowanie wzorców i praktyk architektury.
+Możesz przesłać dalej ten przewodnik do zespołu, aby pomóc w zapewnieniu powszechnej wiedzy na temat tych zagadnień i możliwości. Korzystanie ze wspólnego zestawu warunków i podstawowych zasad ułatwia zapewnienie spójnego stosowania wzorców i praktyk architektury.
 
-## <a name="references"></a>Odwołania
+## <a name="references"></a>Dokumentacja
 
-- **Witryna sieci Web gRPC**  
-  <https://grpc.io>
-- **Wybieranie między programami .NET Core i .NET Framework na potrzeby aplikacji serwerowych**  
+- 
+  **witryny sieci Web gRPC** <https://grpc.io>
+- **Wybieranie między programami .NET Core i .NET Framework dla aplikacji serwerowych**
   <https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server>
 
 >[!div class="step-by-step"]
->[Next](introduction.md)
+>[Dalej](introduction.md)

@@ -1,193 +1,211 @@
 ---
-title: Jak utworzyć narzędzie globalne platformy .NET Core
-description: Opisuje sposób tworzenia narzędzia globalnego. Narzędzie globalne jest aplikacją konsolową, która jest instalowana za pomocą interfejs wiersza polecenia platformy .NET Core.
-author: Thraka
-ms.author: adegeo
-ms.date: 08/22/2018
-ms.openlocfilehash: 1daecf7234f02a5fe0dcf25cf7edbb0af327b8c1
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+title: 'Samouczek: Tworzenie narzędzia platformy .NET Core'
+description: Dowiedz się, jak utworzyć narzędzie .NET Core. Narzędzie jest aplikacją konsolową, która jest instalowana przy użyciu interfejs wiersza polecenia platformy .NET Core.
+ms.date: 02/12/2020
+ms.openlocfilehash: 558bf9e37efc8de68a61f1384fababe342ab7d66
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75343522"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543407"
 ---
-# <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>Tworzenie globalnego narzędzia platformy .NET Core przy użyciu interfejs wiersza polecenia platformy .NET Core
+# <a name="tutorial-create-a-net-core-tool-using-the-net-core-cli"></a>Samouczek: Tworzenie narzędzia platformy .NET Core przy użyciu interfejs wiersza polecenia platformy .NET Core
 
-W tym artykule przedstawiono sposób tworzenia i pakowania globalnego narzędzia platformy .NET Core. Interfejs wiersza polecenia platformy .NET Core pozwala utworzyć aplikację konsolową jako narzędzie globalne, którą mogą łatwo instalować i uruchamiać inne osoby. Narzędzia globalne platformy .NET Core są pakietami NuGet, które są instalowane z interfejs wiersza polecenia platformy .NET Core. Aby uzyskać więcej informacji na temat narzędzi globalnych, zobacz [Omówienie narzędzi globalnych platformy .NET Core](global-tools.md).
+**Ten artykuł ma zastosowanie do:** ✔️ .net Core 2,1 SDK i nowszych wersjach
 
-[!INCLUDE [topic-appliesto-net-core-21plus.md](../../../includes/topic-appliesto-net-core-21plus.md)]
+W tym samouczku przedstawiono sposób tworzenia i pakowania narzędzia platformy .NET Core. Interfejs wiersza polecenia platformy .NET Core pozwala utworzyć aplikację konsolową jako narzędzie, którą mogą instalować i uruchamiać inne osoby. Narzędzia .NET Core są pakietami NuGet, które są instalowane z interfejs wiersza polecenia platformy .NET Core. Aby uzyskać więcej informacji na temat narzędzi, zobacz [Narzędzia .NET Core Tools — Omówienie](global-tools.md).
+
+Tworzone narzędzie jest aplikacją konsolową, która przyjmuje komunikat jako dane wejściowe i wyświetla komunikat wraz z wierszami tekstu, które tworzą obraz robota.
+
+Jest to pierwsza z serii trzech samouczków. Ten samouczek obejmuje tworzenie i pakowanie narzędzi. W następnych dwóch samouczkach [użyjesz narzędzia jako narzędzia globalnego](global-tools-how-to-use.md) i [Użyj tego narzędzia jako narzędzia lokalnego](local-tools-how-to-use.md).
+
+## <a name="prerequisites"></a>Wymagania wstępne
+
+- [Zestaw .NET Core SDK 3,1](https://dotnet.microsoft.com/download) lub nowsza wersja.
+
+  Ten samouczek i Poniższy samouczek dotyczący [narzędzi globalnych](global-tools-how-to-use.md) mają zastosowanie do zestaw .NET Core SDK 2,1 i nowszych wersji, ponieważ narzędzia globalne są dostępne w tej wersji. Jednak w tym samouczku założono, że zainstalowano program 3,1 lub nowszy, aby można było kontynuować korzystanie z [samouczka narzędzi lokalnych](local-tools-how-to-use.md). Narzędzia lokalne są dostępne począwszy od zestaw .NET Core SDK 3,0. Procedury tworzenia narzędzia są takie same, niezależnie od tego, czy są używane jako narzędzie globalne, czy jako narzędzie lokalne.
+  
+- Wybrany edytor tekstu lub edytor kodu.
 
 ## <a name="create-a-project"></a>Tworzenie projektu
 
-W tym artykule interfejs wiersza polecenia platformy .NET Core tworzenia projektu i zarządzania nim.
+1. Otwórz wiersz polecenia i Utwórz folder o nazwie *Repository*.
 
-Nasze przykładowe narzędzie będzie aplikacją konsolową, która generuje bot ASCII i drukuje komunikat. Najpierw utwórz nową aplikację konsolową platformy .NET Core.
+1. Przejdź do folderu *repozytorium* i wprowadź następujące polecenie, zastępując `<name>` unikatową wartością, aby nazwa projektu była unikatowa. 
 
-```dotnetcli
-dotnet new console -o botsay
-```
+   ```dotnetcli
+   dotnet new console -n botsay-<name>
+   ```
 
-Przejdź do katalogu `botsay` utworzonego przez poprzednie polecenie.
+   Można na przykład uruchomić następujące polecenie:
+
+   ```dotnetcli
+   dotnet new console -n botsay-nancydavolio
+   ```
+
+   Polecenie tworzy nowy folder o nazwie *botsay-\<name >* w folderze *repozytorium* .
+
+1. Przejdź do folderu *botsay\<name >* .
+
+   ```console
+   cd botsay-<name>
+   ```
 
 ## <a name="add-the-code"></a>Dodawanie kodu
 
-Otwórz plik `Program.cs` za pomocą ulubionego edytora tekstu, takiego jak `vim` lub [Visual Studio Code](https://code.visualstudio.com/).
+1. Otwórz plik `Program.cs` z edytorem kodu.
 
-Dodaj następującą `using` dyrektywę na początku pliku, co pomaga skrócić kod w celu wyświetlenia informacji o wersji aplikacji.
+1. Dodaj następującą `using` dyrektywę na początku pliku:
 
-```csharp
-using System.Reflection;
-```
+   ```csharp
+   using System.Reflection;
+   ```
 
-Następnie przejdź w dół do metody `Main`. Zastąp metodę poniższym kodem, aby przetworzyć argumenty wiersza polecenia dla aplikacji. Jeśli nie przekazano żadnych argumentów, zostanie wyświetlony krótki komunikat pomocy. W przeciwnym razie wszystkie te argumenty są przekształcane w ciąg i drukowane przy użyciu bot.
+1. Zastąp metodę `Main` poniższym kodem, aby przetworzyć argumenty wiersza polecenia dla aplikacji.
 
-```csharp
-static void Main(string[] args)
-{
-    if (args.Length == 0)
-    {
-        var versionString = Assembly.GetEntryAssembly()
-                                .GetCustomAttribute<AssemblyInformationalVersionAttribute>()
-                                .InformationalVersion
-                                .ToString();
+   ```csharp
+   static void Main(string[] args)
+   {
+       if (args.Length == 0)
+       {
+           var versionString = Assembly.GetEntryAssembly()
+                                   .GetCustomAttribute<AssemblyInformationalVersionAttribute>()
+                                   .InformationalVersion
+                                   .ToString();
 
-        Console.WriteLine($"botsay v{versionString}");
-        Console.WriteLine("-------------");
-        Console.WriteLine("\nUsage:");
-        Console.WriteLine("  botsay <message>");
-        return;
-    }
+           Console.WriteLine($"botsay v{versionString}");
+           Console.WriteLine("-------------");
+           Console.WriteLine("\nUsage:");
+           Console.WriteLine("  botsay <message>");
+           return;
+       }
 
-    ShowBot(string.Join(' ', args));
-}
-```
+       ShowBot(string.Join(' ', args));
+   }
+   ```
 
-### <a name="create-the-bot"></a>Tworzenie bot
+   Jeśli nie przechodzą żadnych argumentów, zostanie wyświetlony krótki komunikat pomocy. W przeciwnym razie wszystkie argumenty są łączone w jeden ciąg i drukowane przez wywołanie metody `ShowBot` utworzonej w następnym kroku.
 
-Następnie Dodaj nową metodę o nazwie `ShowBot`, która przyjmuje parametr ciągu. Ta metoda drukuje komunikat i bot ASCII. Kod bot ASCII został pobrany z przykładu [dotnetbot](https://github.com/dotnet/core/blob/master/samples/dotnetsay/Program.cs) .
+1. Dodaj nową metodę o nazwie `ShowBot`, która przyjmuje parametr ciągu. Metoda drukuje komunikat i obraz robota przy użyciu wierszy tekstu.
 
-```csharp
-static void ShowBot(string message)
-{
-    string bot = $"\n        {message}";
-    bot += @"
-    __________________
-                      \
-                       \
-                          ....
-                          ....'
-                           ....
-                        ..........
-                    .............'..'..
-                 ................'..'.....
-               .......'..........'..'..'....
-              ........'..........'..'..'.....
-             .'....'..'..........'..'.......'.
-             .'..................'...   ......
-             .  ......'.........         .....
-             .    _            __        ......
-            ..    #            ##        ......
-           ....       .                 .......
-           ......  .......          ............
-            ................  ......................
-            ........................'................
-           ......................'..'......    .......
-        .........................'..'.....       .......
-     ........    ..'.............'..'....      ..........
-   ..'..'...      ...............'.......      ..........
-  ...'......     ...... ..........  ......         .......
- ...........   .......              ........        ......
-.......        '...'.'.              '.'.'.'         ....
-.......       .....'..               ..'.....
-   ..       ..........               ..'........
-          ............               ..............
-         .............               '..............
-        ...........'..              .'.'............
-       ...............              .'.'.............
-      .............'..               ..'..'...........
-      ...............                 .'..............
-       .........                        ..............
-        .....
-";
-    Console.WriteLine(bot);
-}
-```
+   ```csharp
+   static void ShowBot(string message)
+   {
+       string bot = $"\n        {message}";
+       bot += @"
+       __________________
+                         \
+                          \
+                             ....
+                             ....'
+                              ....
+                           ..........
+                       .............'..'..
+                    ................'..'.....
+                  .......'..........'..'..'....
+                 ........'..........'..'..'.....
+                .'....'..'..........'..'.......'.
+                .'..................'...   ......
+                .  ......'.........         .....
+                .    _            __        ......
+               ..    #            ##        ......
+              ....       .                 .......
+              ......  .......          ............
+               ................  ......................
+               ........................'................
+              ......................'..'......    .......
+           .........................'..'.....       .......
+        ........    ..'.............'..'....      ..........
+      ..'..'...      ...............'.......      ..........
+     ...'......     ...... ..........  ......         .......
+    ...........   .......              ........        ......
+   .......        '...'.'.              '.'.'.'         ....
+   .......       .....'..               ..'.....
+      ..       ..........               ..'........
+             ............               ..............
+            .............               '..............
+           ...........'..              .'.'............
+          ...............              .'.'.............
+         .............'..               ..'..'...........
+         ...............                 .'..............
+          .........                        ..............
+           .....
+   ";
+       Console.WriteLine(bot);
+   }
+   ```
 
-### <a name="test-the-tool"></a>Testowanie narzędzia
+1. Zapisz zmiany.
+
+## <a name="test-the-application"></a>Testowanie aplikacji
 
 Uruchom projekt i zobacz dane wyjściowe. Wypróbuj te Wariacje w wierszu polecenia, aby zobaczyć różne wyniki:
 
 ```dotnetcli
 dotnet run
 dotnet run -- "Hello from the bot"
-dotnet run -- hello from the bot
+dotnet run -- Hello from the bot
 ```
 
 Wszystkie argumenty po przekroczeniu ogranicznika `--` są przesyłane do aplikacji.
 
-## <a name="set-up-the-global-tool"></a>Konfigurowanie narzędzia globalnego
+## <a name="package-the-tool"></a>Pakowanie narzędzia
 
-Przed spakowaniem i dystrybucją aplikacji jako narzędzia globalnego należy zmodyfikować plik projektu. Otwórz plik `botsay.csproj` i Dodaj trzy nowe węzły XML do węzła `<Project><PropertyGroup>`:
+Przed spakowaniem i dystrybucją aplikacji jako narzędzia należy zmodyfikować plik projektu. 
 
-- `<PackAsTool>`\
-POTRZEB Wskazuje, że aplikacja zostanie spakowana do zainstalowania jako narzędzie globalne.
+1. Otwórz plik *botsay\<>. csproj* i Dodaj trzy nowe węzły XML na końcu węzła `<PropertyGroup>`:
 
-- `<ToolCommandName>`\
-OBOWIĄZKOWE Alternatywna nazwa narzędzia, w przeciwnym razie nazwa polecenia dla narzędzia będzie nazywana po pliku projektu. W pakiecie można korzystać z wielu narzędzi, ale wybór unikatowej i przyjaznej nazwy ułatwia odróżnienie od innych narzędzi w tym samym pakiecie.
+   ```xml
+   <PackAsTool>true</PackAsTool>
+   <ToolCommandName>botsay</ToolCommandName>
+   <PackageOutputPath>./nupkg</PackageOutputPath>
+   ```
 
-- `<PackageOutputPath>`\
-OBOWIĄZKOWE Miejsce, w którym zostanie utworzony pakiet NuGet. Pakiet NuGet jest używany przez narzędzia globalne interfejs wiersza polecenia platformy .NET Core do instalowania narzędzia.
+   `<ToolCommandName>` to opcjonalny element określający polecenie, które spowoduje wywołanie narzędzia po jego zainstalowaniu. Jeśli ten element nie zostanie podany, nazwa polecenia dla narzędzia jest nazwą pliku projektu bez rozszerzenia *. csproj* .
 
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
+   `<PackageOutputPath>` to opcjonalny element określający, gdzie zostanie utworzony pakiet NuGet. Pakiet NuGet jest używany przez interfejs wiersza polecenia platformy .NET Core do instalowania narzędzia.
 
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+   Plik projektu wygląda teraz tak, jak w poniższym przykładzie:
 
-    <PackAsTool>true</PackAsTool>
-    <ToolCommandName>botsay</ToolCommandName>
-    <PackageOutputPath>./nupkg</PackageOutputPath>
+   ```xml
+   <Project Sdk="Microsoft.NET.Sdk">
+  
+     <PropertyGroup>
 
-  </PropertyGroup>
+       <OutputType>Exe</OutputType>
+       <TargetFramework>netcoreapp3.1</TargetFramework>
+  
+       <PackAsTool>true</PackAsTool>
+       <ToolCommandName>botsay</ToolCommandName>
+       <PackageOutputPath>./nupkg</PackageOutputPath>
+  
+     </PropertyGroup>
 
-</Project>
-```
+   </Project>
+   ```
 
-Mimo że `<PackageOutputPath>` jest opcjonalne, użyj go w tym przykładzie. Upewnij się, że została ustawiona: `<PackageOutputPath>./nupkg</PackageOutputPath>`.
+1. Utwórz pakiet NuGet, uruchamiając polecenie [dotnet Pack](dotnet-pack.md) :
 
-Następnie Utwórz pakiet NuGet dla swojej aplikacji.
+   ```dotnetcli
+   dotnet pack
+   ```
 
-```dotnetcli
-dotnet pack
-```
+   *Nazwa botsay\<>. 1.0.0. nupkg* zostanie utworzona w folderze identyfikowanym przez `<PackageOutputPath>` wartość z pliku *botsay-\<nazwa >. csproj* , który w tym przykładzie jest folderem *./nupkg* .
+  
+   Aby publicznie wydać narzędzie, można przekazać je do `https://www.nuget.org`. Po udostępnieniu narzędzia w narzędziu NuGet deweloperzy mogą zainstalować narzędzie za pomocą polecenia [Install narzędzia dotnet](dotnet-tool-install.md) . Na potrzeby tego samouczka zainstalujesz pakiet bezpośrednio z lokalnego folderu *NUPKG* , więc nie ma potrzeby przekazywania pakietu do narzędzia NuGet.
 
-Plik `botsay.1.0.0.nupkg` jest tworzony w folderze identyfikowanym przez `<PackageOutputPath>` wartość XML z pliku `botsay.csproj`, który w tym przykładzie jest folderem `./nupkg`. Ułatwia to Instalowanie i testowanie. Jeśli chcesz publicznie wydać narzędzie, przekaż je do <https://www.nuget.org>. Po udostępnieniu narzędzia w narzędziu NuGet deweloperzy mogą wykonać instalację narzędzia przy użyciu opcji `--global` narzędzia [dotnet](dotnet-tool-install.md) .
+## <a name="troubleshoot"></a>Rozwiązywanie problemów
 
-Teraz, gdy masz pakiet, zainstaluj narzędzie z tego pakietu:
+Jeśli podczas wykonywania samouczka zostanie wyświetlony komunikat o błędzie, zobacz [Rozwiązywanie problemów z użyciem narzędzia .NET Core](troubleshoot-usage-issues.md).
 
-```dotnetcli
-dotnet tool install --global --add-source ./nupkg botsay
-```
+## <a name="next-steps"></a>Następne kroki
 
-`--add-source` parametr informuje interfejs wiersza polecenia platformy .NET Core o tymczasowym użyciu folderu `./nupkg` (nasz folder `<PackageOutputPath>`) jako dodatkowego źródła strumieniowego dla pakietów NuGet. Aby uzyskać więcej informacji na temat instalowania narzędzi globalnych, zobacz [Omówienie narzędzi globalnych platformy .NET Core](global-tools.md).
+W tym samouczku utworzysz aplikację konsolową i spakowano ją jako narzędzie. Aby dowiedzieć się, jak używać narzędzia jako narzędzia globalnego, przejdź do następnego samouczka.
 
-Jeśli instalacja zakończy się pomyślnie, zostanie wyświetlony komunikat z poleceniem, które służy do wywoływania narzędzia i zainstalowanej wersji, podobnie jak w poniższym przykładzie:
+> [!div class="nextstepaction"]
+> [Instalowanie i używanie narzędzia globalnego](global-tools-how-to-use.md)
 
-```output
-You can invoke the tool using the following command: botsay
-Tool 'botsay' (version '1.0.0') was successfully installed.
-```
+Jeśli wolisz, możesz pominąć samouczek dotyczący narzędzi globalnych i przejść bezpośrednio do samouczka dotyczącego narzędzi lokalnych.
 
-Teraz powinno być możliwe wpisanie `botsay` i uzyskanie odpowiedzi z narzędzia.
-
-> [!NOTE]
-> Jeśli instalacja zakończyła się pomyślnie, ale nie można użyć `botsay` polecenia, może być konieczne otwarcie nowego terminalu w celu odświeżenia ścieżki.
-
-## <a name="remove-the-tool"></a>Usuń narzędzie
-
-Po zakończeniu eksperymentowania z narzędziem można je usunąć za pomocą następującego polecenia:
-
-```dotnetcli
-dotnet tool uninstall -g botsay
-```
+> [!div class="nextstepaction"]
+> [Instalowanie i używanie narzędzia lokalnego](local-tools-how-to-use.md)

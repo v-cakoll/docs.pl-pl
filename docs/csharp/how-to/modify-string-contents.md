@@ -3,12 +3,12 @@ title: Jak zmodyfikować zawartość ciągu — C# Przewodnik
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 539e313173d46c2c92399cefe94207c8beed03b4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ecedd9a9027aa925c753f8e187d611b19d3db991
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973257"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543264"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>Jak zmodyfikować zawartość ciągu w języku C\#
 
@@ -62,16 +62,17 @@ Poniższy przykład pokazuje, jak zastąpić zestaw znaków w ciągu. Najpierw u
 
 [!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#6)]
 
-## <a name="unsafe-modifications-to-string"></a>Niebezpieczne modyfikacje ciągu
+## <a name="programmatically-build-up-string-content"></a>Programowo Kompiluj zawartość ciągu
 
-Korzystając z **niebezpiecznego** kodu, można zmodyfikować ciąg "w miejscu" po jego utworzeniu. Kod niebezpieczny pozwala pominąć wiele funkcji platformy .NET zaprojektowanych w celu zminimalizowania niektórych typów błędów w kodzie. Aby zmodyfikować ciąg w miejscu, należy użyć niebezpiecznego kodu, ponieważ Klasa String jest zaprojektowana jako **niezmienny** typ. Jego wartość nie zmienia się po utworzeniu. Niebezpieczny kod omija tę właściwość, uzyskując dostęp do pamięci używanej przez `string` i modyfikując ją, korzystając z metod `string` zwykłych.
-Poniższy przykład jest dostępny dla tych rzadkich sytuacji, w których należy zmodyfikować ciąg w miejscu przy użyciu niebezpiecznego kodu. W przykładzie pokazano, jak używać słowa kluczowego `fixed`. Słowo kluczowe `fixed` uniemożliwia przemieszczenie obiektu String w pamięci przez moduł wyrzucania elementów bezużytecznych (GC), gdy kod uzyskuje dostęp do pamięci za pomocą niebezpiecznego wskaźnika. Przedstawiono w nim również jeden możliwy efekt uboczny niezabezpieczonych operacji na ciągach, które wynikają z sposobu, w jaki C# kompilatory przechowują wewnętrznie ciągi (InterNIC). Ogólnie rzecz biorąc nie należy używać tej techniki, chyba że jest to absolutnie konieczne. Więcej informacji można znaleźć w artykułach dotyczących [niebezpiecznych](../language-reference/keywords/unsafe.md) i [stałych](../language-reference/keywords/fixed-statement.md). Dokumentacja interfejsu API dla <xref:System.String.Intern%2A> zawiera informacje na temat informowania o ciągach.
+Ponieważ ciągi są niezmienne, poprzednie przykłady tworzą tymczasowe ciągi lub tablice znakowe. W scenariuszach o wysokiej wydajności może być wskazane uniknięcie tego przydziału sterty. Platforma .NET Core udostępnia metodę <xref:System.String.Create%2A?displayProperty=nameWithType>, która pozwala programistycznie wprowadzać zawartość znaku ciągu za pośrednictwem wywołania zwrotnego, unikając pośrednich tymczasowych alokacji ciągu.
 
-[!code-csharp[unsafe ways to create a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
+[!code-csharp[using string.Create to programmatically build the string content for a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
+
+Można zmodyfikować ciąg w stałym bloku z niebezpiecznym kodem, ale **zdecydowanie** odradza się modyfikowanie zawartości ciągu po utworzeniu ciągu. Wykonanie tej czynności spowoduje uszkodzenie elementów na nieprzewidywalny sposób. Na przykład, jeśli ktoś internił ciąg o tej samej zawartości, otrzyma kopię i nie będzie oczekiwać, że w ogóle modyfikujesz ciąg.
 
 Możesz wypróbować te przykłady, przeglądając kod w naszym [repozytorium GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Możesz też pobrać przykłady [jako plik zip](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [.NET Framework wyrażeń regularnych](../../standard/base-types/regular-expressions.md)
 - [Język wyrażeń regularnych — podręczny wykaz](../../standard/base-types/regular-expression-language-quick-reference.md)

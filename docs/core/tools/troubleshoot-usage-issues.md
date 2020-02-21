@@ -2,13 +2,13 @@
 title: Rozwiązywanie problemów z użyciem narzędzia .NET Core
 description: Poznaj typowe problemy występujące podczas uruchamiania narzędzi .NET Core i możliwych rozwiązań.
 author: kdollard
-ms.date: 09/23/2019
-ms.openlocfilehash: 45139c3441b84964b937d5d1cc63a018f8d1f0fb
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.date: 02/14/2020
+ms.openlocfilehash: ab5d1be8f201ea283f8537f18886feab46157127
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451080"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543277"
 ---
 # <a name="troubleshoot-net-core-tool-usage-issues"></a>Rozwiązywanie problemów z użyciem narzędzia .NET Core
 
@@ -59,7 +59,7 @@ Nazwa pliku wykonywalnego określa sposób wywołania narzędzia. W poniższej t
   * Jeśli zainstalowano zestaw SDK programu .NET Core 3,0 i ustawisz zmienną środowiskową `DOTNET_ADD_GLOBAL_TOOLS_TO_PATH` na `false`.
   * Jeśli zainstalowano zestaw .NET Core 2,2 SDK lub wcześniejsze wersje i ustawisz zmienną środowiskową `DOTNET_SKIP_FIRST_TIME_EXPERIENCE` na `true`.
 
-  Aby uzyskać więcej informacji na temat narzędzi globalnych, zobacz [Omówienie narzędzi globalnych platformy .NET Core](global-tools.md).
+  Aby uzyskać więcej informacji, zobacz [Narzędzia platformy .NET Core](global-tools.md).
 
 * Narzędzia lokalne
 
@@ -137,9 +137,6 @@ Narzędzia .NET Core, które są w wersji zapoznawczej, muszą być określone p
 dotnet tool install -g --version 1.1.0-pre <toolName>
 ```
 
-> [!NOTE]
-> Zespół interfejs wiersza polecenia platformy .NET Core planuje dodanie przełącznika `--preview` w przyszłych wydaniach, aby to ułatwić.
-
 ### <a name="package-isnt-a-net-core-tool"></a>Pakiet nie jest narzędziem platformy .NET Core
 
 * Znaleziono pakiet NuGet o tej nazwie, ale nie jest to narzędzie .NET Core.
@@ -162,4 +159,4 @@ Typową przyczyną błędu jest to, że nazwa narzędzia nie jest poprawna. Moż
 
 ## <a name="see-also"></a>Zobacz też
 
-* [Globalne narzędzia platformy .NET Core — Omówienie](global-tools.md)
+* [Narzędzia .NET Core](global-tools.md)

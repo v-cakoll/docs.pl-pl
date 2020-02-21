@@ -5,12 +5,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: 8c90f06bfadc528bd9575ead30e6b01263055fe8
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 8348e080d833e79dd364aee511ac7d05fb53d1cc
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743903"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543563"
 ---
 # <a name="methods-c-programming-guide"></a>Metody (Przewodnik programowania w języku C#)
 
@@ -21,7 +21,7 @@ Metoda jest blokiem kodu, który zawiera serie instrukcji. Program powoduje wyko
 
 ## <a name="method-signatures"></a>Sygnatury metod
 
-Metody są zadeklarowane w [klasie](../../language-reference/keywords/class.md) lub [strukturze](../../language-reference/keywords/struct.md) przez określenie poziomu dostępu, takiego jak `public` lub `private`, Modyfikatory opcjonalne, takie jak `abstract` lub `sealed`, wartość zwracana, nazwa metody i wszystkie parametry metody. Te części razem są sygnaturą metody.
+Metody są zadeklarowane w [klasie](../../language-reference/keywords/class.md), [strukturze](../../language-reference/keywords/struct.md)lub [interfejsie](../interfaces/index.md) przez określenie poziomu dostępu, takiego jak `public` lub `private`, modyfikatory opcjonalne, takie jak `abstract` lub `sealed`, wartość zwracana, nazwa metody i wszelkie parametry metody. Te części razem są sygnaturą metody.
 
 > [!NOTE]
 > Zwracany typ metody nie jest częścią podpisu metody do celów przeciążania metody. Jednakże jest częścią podpisu metody podczas określania zgodności między delegatem a metodą, do której wskazuje.
@@ -165,7 +165,7 @@ Aby uzyskać więcej informacji, zobacz [Iteratory](../concepts/iterators.md).
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Przewodnik programowania w języku C#](../index.md)
 - [Klasy i struktury](index.md)

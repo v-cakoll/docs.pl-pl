@@ -3,16 +3,20 @@ title: Uruchamianie selektywnych testów jednostkowych
 description: Jak używać wyrażenia filtru do uruchamiania selektywnych testów jednostkowych za pomocą polecenia Test dotnet w programie .NET Core.
 author: smadala
 ms.date: 03/22/2017
-ms.openlocfilehash: 57428dad2de6c2507ca2cdc42e3df9e83a1edd69
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b9156300587215e68c01c609e298dbc1a2c53d11
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715461"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543511"
 ---
 # <a name="running-selective-unit-tests"></a>Uruchamianie selektywnych testów jednostkowych
 
 Za pomocą polecenia `dotnet test` w programie .NET Core można użyć wyrażenia filtru, aby uruchomić testy selektywne. W tym artykule pokazano, jak odfiltrować, który test jest uruchamiany. W poniższych przykładach użyto `dotnet test`. Jeśli używasz `vstest.console.exe`, Zastąp `--filter` `--testcasefilter:`.
+
+> [!NOTE]
+> Użycie filtrów, które zawierają znak wykrzyknika (!) na `*nix` wymaga ucieczki, ponieważ `!` jest zarezerwowany. Na przykład ten filtr pomija wszystkie testy, jeśli przestrzeń nazw zawiera IntegrationTests: `dotnet test --filter FullyQualifiedName\!~IntegrationTests`.
+> Zwróć uwagę na ukośnik odwrotny poprzedzający wykrzyknik.
 
 ## <a name="mstest"></a>MSTest
 

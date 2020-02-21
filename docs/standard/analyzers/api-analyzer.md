@@ -2,14 +2,14 @@
 title: Analizator interfejsów API platformy .NET
 description: Dowiedz się, jak Analizator interfejsu API platformy .NET może pomóc w wykrywaniu przestarzałych interfejsów API i problemów ze zgodnością platformy.
 author: oliag
-ms.date: 04/26/2019
+ms.date: 02/20/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: efbfa89f431bd02cdf86b8eff8704aec63a29b6c
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: f6cf2d8109c564447972afd18c6d6d587711304b
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124250"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77542627"
 ---
 # <a name="net-api-analyzer"></a>Analizator interfejsów API platformy .NET
 
@@ -24,7 +24,7 @@ Analizator interfejsu API jest dostarczany jako pakiet NuGet [Microsoft. dotnet.
 
 - Program Visual Studio 2017 lub jego nowsze wersje lub Visual Studio dla komputerów Mac (wszystkie wersje).
 
-## <a name="discovering-deprecated-apis"></a>Odnajdywanie przestarzałych interfejsów API
+## <a name="discover-deprecated-apis"></a>Odkryj przestarzałe interfejsy API
 
 ### <a name="what-are-deprecated-apis"></a>Co to są przestarzałe interfejsy API?
 
@@ -36,7 +36,21 @@ Rodzina .NET to zestaw dużych produktów, które są stale uaktualniane, aby le
 
 Analizator interfejsu API korzysta z kodów błędów specyficznych dla interfejsu API, które zaczynają się od DE (co oznacza błąd zaniechania), co umożliwia kontrolę nad wyświetlaniem indywidualnych ostrzeżeń. Przestarzałe interfejsy API identyfikowane przez analizator są zdefiniowane w repozytorium [dotnet/platform-COMPAT](https://github.com/dotnet/platform-compat) .
 
-### <a name="using-the-api-analyzer"></a>Korzystanie z analizatora interfejsu API
+### <a name="add-the-api-analyzer-to-your-project"></a>Dodawanie analizatora interfejsu API do projektu
+
+1. Otwórz program Visual Studio.
+2. Otwórz projekt, w którym chcesz uruchomić Analizator.
+3. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt i wybierz polecenie **Zarządzaj pakietami NuGet**. (Ta opcja jest również dostępna w menu **projekt** ).
+4. Na karcie Menedżer pakietów NuGet:
+   1. Wybierz pozycję "nuget.org" jako źródło pakietu.
+   2. Przejdź do karty **przeglądanie** .
+   3. Wybierz pozycję **Uwzględnij wersję wstępną**.
+   4. Wyszukaj element **Microsoft. dotnet. analizatory. zgodność**.
+   5. Wybierz ten pakiet z listy.
+   6. Wybierz przycisk **Instaluj** . 
+   7. Wybierz przycisk **OK** w oknie dialogowym **Podgląd zmian** , a następnie **Wybierz przycisk** Akceptuję w oknie dialogowym **akceptacji licencji** , jeśli zgadzasz się z postanowieniami licencyjnymi dotyczącymi wymienionych pakietów.
+
+### <a name="use-the-api-analyzer"></a>Korzystanie z analizatora interfejsu API
 
 Gdy przestarzały interfejs API, taki jak <xref:System.Net.WebClient>, jest używany w kodzie, Analizator interfejsu API podświetla go przy użyciu zielonej linii falistej. Po umieszczeniu wskaźnika myszy na wywołaniu interfejsu API żarówka jest wyświetlana z informacjami o zaniechaniu interfejsu API, jak w poniższym przykładzie:
 
@@ -50,14 +64,14 @@ Klikając identyfikator, przejdź do strony sieci Web ze szczegółowymi informa
 
 Wszystkie ostrzeżenia można pominąć przez kliknięcie prawym przyciskiem myszy wyróżnionego elementu członkowskiego i wybranie opcji **pomiń \<identyfikator diagnostyczny >** . Istnieją dwa sposoby pomijania ostrzeżeń: 
 
-- [lokalnie (w źródle)](#suppressing-warnings-locally)
-- [globalnie (w pliku pominięć)](#suppressing-warnings-globally) — zalecane
+- [lokalnie (w źródle)](#suppress-warnings-locally)
+- [globalnie (w pliku pominięć)](#suppress-warnings-globally) — zalecane
 
-### <a name="suppressing-warnings-locally"></a>Pomijanie ostrzeżeń lokalnie
+### <a name="suppress-warnings-locally"></a>Pomijaj ostrzeżenia lokalnie
 
 Aby pominąć ostrzeżenia lokalnie, kliknij prawym przyciskiem myszy element członkowski, dla którego chcesz pominąć ostrzeżenia, a następnie wybierz polecenie **szybkie akcje i refaktoryzacje** > **Pomiń *Identyfikator diagnostyczny*\<identyfikator diagnostyczny >**  > **w źródle**. Dyrektywa preprocesora ostrzeżeń [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) jest dodawana do kodu źródłowego w określonym zakresie: !["zrzut ekranu kodu z ramką #pragma wyłączyć"](media/api-analyzer/suppress-in-source.jpg)
 
-### <a name="suppressing-warnings-globally"></a>Pomijanie ostrzeżeń globalnie
+### <a name="suppress-warnings-globally"></a>Pomijaj ostrzeżenia globalnie
 
 Aby pominąć ostrzeżenia globalnie, kliknij prawym przyciskiem myszy element członkowski, dla którego chcesz pominąć ostrzeżenia, a następnie wybierz polecenie **szybkie akcje i refaktoryzacje** > **pominąć *Identyfikator diagnostyczny*\<identyfikator diagnostyczny >**  > **w pliku**pominięć.
 
@@ -69,7 +83,7 @@ Plik *GlobalSuppressions.cs* jest dodawany do projektu po pierwszym pominięciu.
 
 Globalne pomijanie jest zalecanym sposobem zapewnienia spójności użycia interfejsu API między projektami.
 
-## <a name="discovering-cross-platform-issues"></a>Wykrywanie problemów na wielu platformach
+## <a name="discover-cross-platform-issues"></a>Odkryj problemy dotyczące wielu platform
 
 Podobnie jak w przypadku przestarzałych interfejsów API, Analizator identyfikuje wszystkie interfejsy API, które nie są dla wielu platform. Na przykład <xref:System.Console.WindowWidth?displayProperty=nameWithType> działa w systemie Windows, ale nie w systemie Linux i macOS. Identyfikator diagnostyki jest wyświetlany w oknie **Lista błędów** . Możesz pominąć to ostrzeżenie, klikając prawym przyciskiem myszy i wybierając polecenie **szybkie akcje i refaktoryzacje**. W przeciwieństwie do przypadków wycofania, w których są dostępne dwie opcje (można nadal korzystać z przestarzałego elementu członkowskiego i pomijać ostrzeżenia lub nie używać ich wcale), tutaj jeśli tworzysz kod tylko dla niektórych platform, możesz pominąć wszystkie ostrzeżenia dla wszystkich innych platform, które nie są Zaplanuj, aby uruchomić swój kod. Aby to zrobić, wystarczy edytować plik projektu i dodać właściwość `PlatformCompatIgnore`, która wyświetla listę wszystkich platform do zignorowania. Akceptowane są następujące wartości: `Linux`, `macOS`i `Windows`.
 

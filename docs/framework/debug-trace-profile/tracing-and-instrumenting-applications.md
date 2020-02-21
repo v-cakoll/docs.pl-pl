@@ -13,12 +13,12 @@ helpviewer_keywords:
 - performance monitoring, tracing code
 - Trace class, instrumentation for .NET applications
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
-ms.openlocfilehash: 1dd7317e38b6bee44dda75319c9f7c2a6567e3b4
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 2dcdbaf50ed053d43fc2df2c80fe7688e7b3e51f
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216038"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77542614"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>Śledzenie i instrumentacja aplikacji
 Śledzenie służy do monitorowania wykonywania aplikacji w trakcie jej działania. Możesz dodać instrumentację śledzenia i debugowania do aplikacji .NET Framework podczas jej opracowywania i można używać jej zarówno podczas tworzenia aplikacji, jak i po jej wdrożeniu. Korzystając z klas <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType>i <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType>, można rejestrować informacje o błędach i wykonywaniu aplikacji w dziennikach, plikach tekstowych lub innych urządzeniach w celu późniejszej analizy.  
@@ -97,7 +97,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 7. Jeśli w czasie wykonywania wystąpi problem, Włącz odpowiedni przełącznik śledzenia. Aby uzyskać więcej informacji, zobacz [Konfigurowanie przełączników śledzenia](how-to-create-initialize-and-configure-trace-switches.md).  
   
-     Kod śledzenia zapisuje komunikaty śledzenia do określonego celu, na przykład ekran, plik tekstowy lub dziennik zdarzeń. Typ odbiornika, który został uwzględniony w kolekcji **Trace.** Listeners określa element docelowy.  
+     Kod śledzenia zapisuje komunikaty śledzenia do określonego celu, na przykład ekran, plik tekstowy lub dziennik zdarzeń. Typ odbiornika dołączonego do kolekcji <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> określa element docelowy.  
   
 8. Analizowanie komunikatów śledzenia w celu zidentyfikowania i zrozumienia problemu w aplikacji.  
   
@@ -120,18 +120,18 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 |Metoda|Dane wyjściowe|  
 |------------|------------|  
-|**Stanowcz**|Określony tekst; lub, jeśli nie jest określony, stos wywołań. Dane wyjściowe są zapisywane tylko wtedy, gdy warunek określony jako argument w instrukcji **Assert** ma **wartość false**.|  
-|**Udało**|Określony tekst; lub, jeśli nie jest określony, stos wywołań.|  
-|**Zapis**|Określony tekst.|  
-|**WriteIf**|Określony tekst, jeśli warunek określony jako argument w instrukcji **WriteIf** jest spełniony.|  
-|**WriteLine**|Określony tekst i znak powrotu karetki.|  
-|**WriteLineIf**|Określony tekst i znak powrotu karetki, jeśli warunek określony jako argument w instrukcji **WriteLineIf** jest spełniony.|  
+|`Assert`|Określony tekst; lub, jeśli nie jest określony, stos wywołań. Dane wyjściowe są zapisywane tylko wtedy, gdy warunek określony jako argument w instrukcji `Assert` ma **wartość false**.|  
+|`Fail`|Określony tekst; lub, jeśli nie jest określony, stos wywołań.|  
+|`Write`|Określony tekst.|  
+|`WriteIf`|Określony tekst, jeśli warunek określony jako argument w instrukcji `WriteIf` jest spełniony.|  
+|`WriteLine`|Określony tekst i znak powrotu karetki.|  
+|`WriteLineIf`|Określony tekst i znak powrotu karetki, jeśli warunek określony jako argument w instrukcji `WriteLineIf` jest spełniony.|  
   
- Wszystkie odbiorniki w kolekcji <xref:System.Diagnostics.Trace.Listeners%2A> odbierają komunikaty opisane w powyższej tabeli, ale wykonane akcje mogą się różnić w zależności od tego, jakiego rodzaju odbiornik odbiera komunikat. Na przykład <xref:System.Diagnostics.DefaultTraceListener> wyświetla okno dialogowe potwierdzenia po odebraniu powiadomienia o **niepowodzeniu** lub niepowodzeniu **potwierdzenia** , ale <xref:System.Diagnostics.TextWriterTraceListener> po prostu zapisuje dane wyjściowe w strumieniu.  
+ Wszystkie odbiorniki w kolekcji <xref:System.Diagnostics.Trace.Listeners%2A> odbierają komunikaty opisane w powyższej tabeli, ale wykonane akcje mogą się różnić w zależności od tego, jakiego rodzaju odbiornik odbiera komunikat. Na przykład <xref:System.Diagnostics.DefaultTraceListener> wyświetla okno dialogowe potwierdzenia, gdy odbierze `Fail` lub nieudane powiadomienie `Assert`, ale <xref:System.Diagnostics.TextWriterTraceListener> po prostu zapisuje dane wyjściowe do strumienia.  
   
  Możesz tworzyć niestandardowe wyniki, implementując własny odbiornik. Niestandardowy odbiornik śledzenia może na przykład wyświetlić komunikaty w oknie komunikatu lub połączyć się z bazą danych w celu dodania komunikatów do tabeli. Wszystkie odbiorniki niestandardowe powinny obsługiwać sześć metod wymienionych powyżej. Aby uzyskać więcej informacji na temat tworzenia detektorów zdefiniowanych przez dewelopera, zobacz <xref:System.Diagnostics.TraceListener> w .NET Framework Reference.  
   
- Metody **Write** i **WriteLine** zawsze zapisują określony tekst. **Assert**, **WriteIf**i **WriteLineIf** wymagają argumentu logicznego, który kontroluje, czy piszą określony tekst; piszą określony tekst tylko wtedy, gdy wyrażenie ma **wartość true** (dla **WriteIf** i **WriteLineIf**) lub **false** (dla **potwierdzenia**). Metoda **FAIL** zawsze zapisuje określony tekst. Aby uzyskać więcej informacji, zobacz [jak: dodać instrukcje śledzenia do kodu aplikacji](how-to-add-trace-statements-to-application-code.md) i odwołania .NET Framework.  
+ Metody `Write` i `WriteLine` zawsze zapisują określony tekst. `Assert`, `WriteIf`i `WriteLineIf` wymagają argumentu logicznego, który kontroluje, czy piszą określony tekst; piszą określony tekst tylko wtedy, gdy wyrażenie ma **wartość true** (dla `WriteIf` i `WriteLineIf`) lub **false** (dla `Assert`). Metoda `Fail` zawsze zapisuje określony tekst. Aby uzyskać więcej informacji, zobacz [jak: dodać instrukcje śledzenia do kodu aplikacji](how-to-add-trace-statements-to-application-code.md) i odwołania .NET Framework.  
   
 ## <a name="security-concerns"></a>Zagadnienia dotyczące zabezpieczeń  
  Jeśli nie wyłączysz śledzenia i debugowania przed wdrożeniem aplikacji ASP.NET, aplikacja może ujawnić informacje o sobie, które mogą zostać wykorzystane przez złośliwy program. Aby uzyskać więcej informacji, zobacz [jak: kompilowanie warunkowo z użyciem śledzenia i debugowania](how-to-compile-conditionally-with-trace-and-debug.md), [kompilowania i kompilowania](/visualstudio/ide/compiling-and-building-in-visual-studio)oraz [instrukcje: Tworzenie, inicjowanie i konfigurowanie przełączników śledzenia](how-to-create-initialize-and-configure-trace-switches.md). Debugowanie można również skonfigurować za poorednictwem Internet Information Services (IIS).  

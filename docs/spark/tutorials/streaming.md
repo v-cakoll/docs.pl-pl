@@ -5,18 +5,18 @@ author: mamccrea
 ms.author: mamccrea
 ms.date: 12/04/2019
 ms.topic: tutorial
-ms.openlocfilehash: d0fe79ef79125c06be9acd8ba80001a33e150adb
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 83d44af080d95ab6f9311ddd3ca4860806757436
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802848"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504045"
 ---
 # <a name="tutorial-structured-streaming-with-net-for-apache-spark"></a>Samouczek: strukturalne przesyłanie strumieniowe za pomocą platformy .NET dla Apache Spark 
 
 W tym samouczku pokazano, jak wywoływać strukturalne przesyłanie strumieniowe platformy Spark przy użyciu platformy .NET dla Apache Spark. Przetwarzanie strumieni danych w czasie rzeczywistym jest obsługiwane Apache Spark. Przetwarzanie strumieniowe oznacza analizowanie danych na żywo w miarę ich produkcji.
 
-Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
+Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
 
 > [!div class="checklist"]
 >
@@ -32,7 +32,7 @@ Jeśli jest to pierwsza aplikacja .NET dla Apache Spark, Zacznij od [samouczka W
 
 1. W wierszu polecenia Uruchom następujące polecenia, aby utworzyć nową aplikację konsolową:
 
-   ```console
+   ```dotnetcli
    dotnet new console -o mySparkStreamingApp
    cd mySparkStreamingApp
    ```
@@ -41,7 +41,7 @@ Jeśli jest to pierwsza aplikacja .NET dla Apache Spark, Zacznij od [samouczka W
 
 1. Aby używać platformy .NET do Apache Spark w aplikacji, zainstaluj pakiet Microsoft. Spark. W konsoli programu uruchom następujące polecenie:
 
-   ```console
+   ```dotnetcli
    dotnet add package Microsoft.Spark
    ```
 
@@ -158,7 +158,7 @@ spark-submit --class org.apache.spark.deploy.dotnet.DotnetRunner --master local 
 > [!NOTE]
 > Pamiętaj, aby zaktualizować powyższe polecenie z rzeczywistą ścieżką do pliku JAR Microsoft Spark. Powyższe polecenie zakłada również, że serwer netcat jest uruchomiony na porcie lokalnym hosta 9999.
 
-## <a name="get-the-code"></a>Uzyskaj kod
+## <a name="get-the-code"></a>Uzyskiwanie kodu
 
 Ten samouczek używa przykładu [StructuredNetworkCharacterCount.cs](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkCharacterCount.cs) , ale istnieją trzy inne przykłady przetwarzania pełnego strumienia w witrynie GitHub:
 

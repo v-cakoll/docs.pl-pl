@@ -250,17 +250,23 @@
   items:
     - name: Omówienie
       href: tools/index.md
-    - name: Narzędzia
+    - name: Narzędzia globalne i lokalne
       expanded: true
       items:
-        - name: Narzędzia globalne
-          expanded: true
+        - name: Jak zarządzać narzędziami
+          href: tools/global-tools.md
+        - name: Samouczki
           items:
-            - name: Omówienie
-              href: tools/global-tools.md
-            - name: Tworzenie narzędzia globalnego
+            - name: Tworzenie narzędzia
+              displayName: tools
               href: tools/global-tools-how-to-create.md
-        - name: Rozwiązywanie problemów dotyczących użycia narzędzi
+            - name: Instalowanie i używanie narzędzia globalnego
+              displayName: tools
+              href: tools/global-tools-how-to-use.md
+            - name: Instalowanie i używanie narzędzia lokalnego
+              displayName: tools
+              href: tools/local-tools-how-to-use.md
+        - name: Rozwiązywanie problemów z narzędziami
           href: tools/troubleshoot-usage-issues.md
     - name: Podwyższony poziom dostępu
       href: tools/elevated-access.md
@@ -320,6 +326,10 @@
               href: tools/dotnet-tool-install.md
             - name: dotnet tool list
               href: tools/dotnet-tool-list.md
+            - name: dotnet tool restore
+              href: tools/dotnet-tool-restore.md
+            - name: dotnet tool run
+              href: tools/dotnet-tool-run.md
             - name: dotnet tool uninstall
               href: tools/dotnet-tool-uninstall.md
             - name: dotnet tool update

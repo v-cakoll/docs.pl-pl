@@ -8,16 +8,16 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 6b96d65f657f2af1af5c9a245e956640ee06260e
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 76f4a3ed929e3ac8e3e6cc74158e75af7a6c8cf2
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76748518"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625950"
 ---
 # <a name="value-types-c-reference"></a>Typy wartości (C# odwołanie)
 
-*Typy wartości* i [typy odwołań](../keywords/reference-types.md) to dwie główne kategorie C# typów. Zmienna typu wartości zawiera wystąpienie typu. Różni się to od zmiennej typu referencyjnego, która zawiera odwołanie do wystąpienia typu. Domyślnie podczas [przypisywania](../operators/assignment-operator.md), przekazywania argumentu do metody lub zwracając wynik metody, kopiowane są wartości zmiennych. W przypadku zmiennych typu wartość są kopiowane odpowiednie wystąpienia typu. Poniższy przykład ilustruje takie zachowanie:
+*Typy wartości* i [typy odwołań](../keywords/reference-types.md) to dwie główne kategorie C# typów. Zmienna typu wartości zawiera wystąpienie typu. Różni się to od zmiennej typu referencyjnego, która zawiera odwołanie do wystąpienia typu. Domyślnie przy [przypisywaniu](../operators/assignment-operator.md)przekazywanie argumentu do metody i zwracanie wyniku metody powoduje skopiowanie wartości zmiennych. W przypadku zmiennych typu wartość są kopiowane odpowiednie wystąpienia typu. Poniższy przykład ilustruje takie zachowanie:
 
 [!code-csharp[copy of values](~/samples/csharp/language-reference/builtin-types/ValueTypes.cs#ValueTypeCopied)]
 
@@ -34,7 +34,7 @@ Jeśli typ wartości zawiera element członkowski danych typu referencyjnego, po
 
 Typ wartości może być jednym z dwóch następujących rodzajów:
 
-- [Typ struktury](../keywords/struct.md), który hermetyzuje dane i powiązane funkcje
+- [Typ struktury](struct.md), który hermetyzuje dane i powiązane funkcje
 - [Typ wyliczeniowy](enum.md), który jest zdefiniowany przez zestaw nazwanych stałych i reprezentuje wybór lub kombinację opcji
 
 [Typ wartości null](nullable-value-types.md) `T?` reprezentuje wszystkie wartości jego bazowego typu wartości `T` i dodatkową wartość [null](../keywords/null.md) . Nie można przypisać `null` do zmiennej typu wartości, chyba że jest to typ wartości null.
@@ -66,7 +66,7 @@ Aby uzyskać więcej informacji, zobacz następujące sekcje [ C# specyfikacji j
 - [Typy proste](~/_csharplang/spec/types.md#simple-types)
 - [Zmienne](~/_csharplang/spec/variables.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [C#odwoła](../index.md)
 - <xref:System.ValueType?displayProperty=nameWithType>

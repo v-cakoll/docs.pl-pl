@@ -7,12 +7,12 @@ helpviewer_keywords:
 - I/O [.NET], buffers
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: e42f165bfedec3b1fa54615ee7e2a2028f40aadb
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 5b98e3e2d41d3e49a28db6393f15f13c3579b06d
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960496"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628081"
 ---
 # <a name="work-with-buffers-in-net"></a>Korzystanie z buforów w środowisku .NET
 
@@ -51,13 +51,13 @@ Ta metoda pisania używa `Memory<T>`/`Span<T>` buforu dostarczonego przez `IBuff
 
 <xref:System.Buffers.ReadOnlySequence%601> to struktura, która może reprezentować ciągłą lub nieciągłą sekwencję `T`. Można ją skonstruować z:
 
-1. A `T[]`
-1. A `ReadOnlyMemory<T>`
+1. Element `T[]`.
+1. Element `ReadOnlyMemory<T>`.
 1. Para węzła połączonej listy <xref:System.Buffers.ReadOnlySequenceSegment%601> i indeks reprezentujący początkową i końcową pozycję sekwencji.
 
 Trzecia reprezentacja jest najbardziej interesująca, ponieważ ma wpływ na wydajność różnych operacji na `ReadOnlySequence<T>`:
 
-|Reprezentacja|Operacja|Stopień złożoności|
+|Reprezentowana|Operacja|Stopień złożoności|
 ---|---|---|
 |`T[]`/`ReadOnlyMemory<T>`|`Length`|`O(1)`|
 |`T[]`/`ReadOnlyMemory<T>`|`GetPosition(long)`|`O(1)`|
@@ -105,7 +105,7 @@ Istnieje kilka metod, których można użyć do przetwarzania danych w sekwencja
 - Skopiuj `ReadOnlySequence<T>` do tabeli ciągłej i Traktuj ją jak pojedynczy bufor:
   - Jeśli rozmiar `ReadOnlySequence<T>` jest mały, może być uzasadnione, aby skopiować dane do buforu przydzielonego przez stos przy użyciu operatora [stackalloc](../../csharp/language-reference/operators/stackalloc.md) .
   - Skopiuj `ReadOnlySequence<T>` do tablicy w puli przy użyciu <xref:System.Buffers.ArrayPool%601.Shared%2A?displayProperty=nameWithType>.
-  - Użyj [ `ReadOnlySequence<T>.ToArray()` ](xref:System.Buffers.BuffersExtensions.ToArray%2A). Nie jest to zalecane w przypadku ścieżek gorąca, ponieważ przypisuje nowe `T[]` na stosie.
+  - Użyj witryny [`ReadOnlySequence<T>.ToArray()`](xref:System.Buffers.BuffersExtensions.ToArray%2A). Nie jest to zalecane w przypadku ścieżek gorąca, ponieważ przypisuje nowe `T[]` na stosie.
 
 W poniższych przykładach przedstawiono niektóre typowe przypadki przetwarzania `ReadOnlySequence<byte>`:
 
@@ -114,6 +114,8 @@ W poniższych przykładach przedstawiono niektóre typowe przypadki przetwarzani
 Poniższy przykład analizuje długość 4-bajtową liczby całkowitej big-endian od początku `ReadOnlySequence<byte>`.
 
 [!code-csharp[](~/samples/snippets/csharp/buffers/MyClass.cs?name=snippet5)]
+
+[!INCLUDE [localized code comments](../../../includes/code-comments-loc.md)]
 
 ##### <a name="process-text-data"></a>Przetwarzanie danych tekstowych
 
@@ -146,7 +148,7 @@ Istnieje kilka nietypowych rezultatów podczas pracy z `ReadOnlySequence<T>`/`Se
 - Nie można porównać dwóch `SequencePosition`, co utrudnia:
   - Sprawdź, czy jedna pozycja jest większa lub mniejsza od innej pozycji.
   - Napisz niektóre algorytmy analizy.
-- `ReadOnlySequence<T>` jest większe niż odwołanie do obiektu i powinno być przesyłane przez [lub](../../csharp/language-reference/keywords/in-parameter-modifier.md) [ref](../../csharp/language-reference/keywords/ref.md) , gdzie to możliwe. Przekazywanie `ReadOnlySequence<T>` przez `in` lub `ref` zmniejsza liczbę kopii [struktury](../../csharp/language-reference/keywords/struct.md).
+- `ReadOnlySequence<T>` jest większe niż odwołanie do obiektu i powinno być przesyłane przez [lub](../../csharp/language-reference/keywords/in-parameter-modifier.md) [ref](../../csharp/language-reference/keywords/ref.md) , gdzie to możliwe. Przekazywanie `ReadOnlySequence<T>` przez `in` lub `ref` zmniejsza liczbę kopii [struktury](../../csharp/language-reference/builtin-types/struct.md).
 - Puste segmenty:
   - Są prawidłowe w ramach `ReadOnlySequence<T>`.
   - Może być wyświetlany podczas iteracji przy użyciu metody `ReadOnlySequence<T>.TryGet`.

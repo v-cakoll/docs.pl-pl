@@ -5,12 +5,12 @@ ms.date: 12/18/2019
 helpviewer_keywords:
 - default [C#]
 - parameterless constructor [C#]
-ms.openlocfilehash: 2447db25e837cdcd6d67847b8677d7d44da551a9
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 93b6079b9a3bbf6d537094cab9dfb305ace7f6bf
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964945"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625868"
 ---
 # <a name="default-values-of-c-types-c-reference"></a>Wartości domyślne C# typów (C# odwołanie)
 
@@ -24,7 +24,7 @@ W poniższej tabeli przedstawiono wartości domyślne C# typów:
 |[bool](bool.md)|`false`|
 |[char](char.md)|`'\0'` (U + 0000)|
 |[enum](enum.md)|Wartość wygenerowana przez wyrażenie `(E)0`, gdzie `E` jest identyfikatorem wyliczenia.|
-|[struct](../keywords/struct.md)|Wartość wygenerowana przez ustawienie wszystkich pól typu wartość na wartości domyślne i wszystkie pola typu odwołania do `null`.|
+|[struct](struct.md)|Wartość wygenerowana przez ustawienie wszystkich pól typu wartość na wartości domyślne i wszystkie pola typu odwołania do `null`.|
 |Dowolny [Typ wartości null](nullable-value-types.md)|Wystąpienie, dla którego właściwość <xref:System.Nullable%601.HasValue%2A> jest `false` i Właściwość <xref:System.Nullable%601.Value%2A> jest niezdefiniowana. Ta wartość domyślna jest również znana jako wartość *null* typu wartości null.|
 
 Użyj [operatora domyślnego](../operators/default.md) , aby utworzyć wartość domyślną typu, jak pokazano w poniższym przykładzie:
@@ -55,7 +55,7 @@ Aby uzyskać więcej informacji, zobacz następujące sekcje [ C# specyfikacji j
 - [Wartości domyślne](~/_csharplang/spec/variables.md#default-values)
 - [Konstruktory domyślne](~/_csharplang/spec/types.md#default-constructors)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [C#odwoła](../index.md)
 - [Konstruktory](../../programming-guide/classes-and-structs/constructors.md)

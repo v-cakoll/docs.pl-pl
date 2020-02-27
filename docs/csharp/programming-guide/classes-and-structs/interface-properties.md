@@ -1,24 +1,24 @@
 ---
 title: Właściwości interfejsu — C# Przewodnik programowania
-ms.date: 07/20/2015
+ms.date: 01/31/2020
 helpviewer_keywords:
 - properties [C#], on interfaces
 - interfaces [C#], properties
 ms.assetid: 6503e9ed-33d7-44ec-b4c1-cc16c084b795
-ms.openlocfilehash: ff892a35f4be6600c00bc0c72c2f789ef6eb4408
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 5798b80526f34e923e2eaab43847b98f6c64e14b
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705538"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626623"
 ---
 # <a name="interface-properties-c-programming-guide"></a>Właściwości interfejsu (Przewodnik programowania w języku C#)
 
-Właściwości można zadeklarować w [interfejsie](../../language-reference/keywords/interface.md). Oto przykład metody dostępu do właściwości interfejsu:
+Właściwości można zadeklarować w [interfejsie](../../language-reference/keywords/interface.md). Poniższy przykład deklaruje metodę dostępu do właściwości interfejsu:
 
-[!code-csharp[csProgGuideProperties#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#14)]
+[!code-csharp[DeclareProperties](~/samples/snippets/csharp/interfaces/properties.cs#DeclareInterfaceProperties)]
 
-Metoda dostępu do właściwości interfejsu nie ma treści. W tym celu metody dostępu wskazują, czy właściwość jest tylko do odczytu i zapisu, tylko do odczytu, czy tylko do zapisu.
+Właściwości interfejsu zazwyczaj nie mają treści. Metody dostępu wskazują, czy właściwość jest tylko do odczytu i zapisu, tylko do odczytu lub tylko do zapisu. W przeciwieństwie do klas i struktur, deklarując metody dostępu bez treści nie deklaruje właściwości, która jest [implementowana](auto-implemented-properties.md). Począwszy od C# 8,0, interfejs może definiować domyślną implementację elementów członkowskich, w tym właściwości. Definiowanie domyślnej implementacji właściwości w interfejsie jest rzadkie, ponieważ interfejsy nie mogą definiować pól danych wystąpienia.
 
 ## <a name="example"></a>Przykład
 
@@ -26,19 +26,20 @@ W tym przykładzie interfejs `IEmployee` ma właściwość do odczytu i zapisu, 
 
 Można użyć w pełni kwalifikowanej nazwy właściwości, która odwołuje się do interfejsu, w którym jest zadeklarowany element członkowski. Na przykład:
 
-[!code-csharp[csProgGuideProperties#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#16)]
+[!code-csharp[ExplicitProperties](~/samples/snippets/csharp/interfaces/properties.cs#ExplicitImplementation)]
 
-Ta nazwa jest nazywana [jawnym implementacją interfejsu](../interfaces/explicit-interface-implementation.md). Na przykład jeśli Klasa `Employee` implementuje dwa interfejsy `ICitizen` i `IEmployee` i oba interfejsy mają właściwość `Name`, wymagana jest Jawna implementacja elementów członkowskich interfejsu. Oznacza to, że następująca deklaracja właściwości:
+W powyższym przykładzie przedstawiono [jawną implementację interfejsu](../interfaces/explicit-interface-implementation.md). Na przykład jeśli Klasa `Employee` implementuje dwa interfejsy `ICitizen` i `IEmployee` i oba interfejsy mają właściwość `Name`, wymagana jest Jawna implementacja elementów członkowskich interfejsu. Oznacza to, że następująca deklaracja właściwości:
 
-[!code-csharp[csProgGuideProperties#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#16)]
+[!code-csharp[ExplicitProperties](~/samples/snippets/csharp/interfaces/properties.cs#ExplicitImplementation)]
 
 implementuje Właściwość `Name` w interfejsie `IEmployee`, podczas gdy następująca deklaracja:
 
-[!code-csharp[csProgGuideProperties#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#17)]
+[!code-csharp[ExplicitProperties](~/samples/snippets/csharp/interfaces/properties.cs#CitizenImplementation)]
 
 implementuje Właściwość `Name` w interfejsie `ICitizen`.
 
-[!code-csharp[csProgGuideProperties#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#15)]
+[!code-csharp[Example](~/samples/snippets/csharp/interfaces/properties.cs#PropertyExample)]
+[!code-csharp[Example](~/samples/snippets/csharp/interfaces/properties.cs#UseProperty)]
 
 **`210 Hazem Abolrous`**
 
@@ -52,11 +53,11 @@ Employee number: 211
 Employee name: Hazem Abolrous
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Przewodnik programowania w języku C#](../index.md)
 - [Właściwości](./properties.md)
 - [Używanie właściwości](./using-properties.md)
 - [Porównanie właściwości i indeksatorów](../indexers/comparison-between-properties-and-indexers.md)
-- [Indeksatory](../indexers/index.md)
+- [Indexers](../indexers/index.md) (Indeksatory)
 - [Interfejsy](../interfaces/index.md)

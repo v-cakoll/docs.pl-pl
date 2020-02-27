@@ -1,25 +1,25 @@
 ---
 title: Metadata — gRPC dla deweloperów WCF
-description: Jak metadane są używane w gRPC do przekazywania dodatkowego kontekstu między klientami i serwerami
+description: Jak metadane są używane w programie gRPC, aby przekazać dodatkowy kontekst między klientami i serwerami.
 ms.date: 09/02/2019
-ms.openlocfilehash: 723d877bfbf0c2b0785949ff15939aedbac4d4e9
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 64fa94d1e63af480cbc7363631de161c5b8b8fb8
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73971975"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628582"
 ---
 # <a name="metadata"></a>Metadane
 
-"Metadane" to dodatkowe dane, które mogą być przydatne podczas przetwarzania żądań i odpowiedzi, ale nie są częścią rzeczywistych danych aplikacji. Metadane mogą obejmować tokeny uwierzytelniania, identyfikatory żądań i Tagi do celów monitorowania lub informacje o danych, takie jak liczba rekordów w zestawie danych.
+*Metadane* dotyczą dodatkowych danych, które mogą być przydatne podczas przetwarzania żądań i odpowiedzi, ale nie są częścią rzeczywistych danych aplikacji. Metadane mogą obejmować tokeny uwierzytelniania, identyfikatory żądań i Tagi do celów monitorowania oraz informacje o danych, takie jak liczba rekordów w zestawie danych.
 
-Istnieje możliwość dodania ogólnych nagłówków klucz/wartość do komunikatów WCF przy użyciu <xref:System.ServiceModel.OperationContextScope> i właściwości <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders?displayProperty=nameWithType> i obsłużenia ich przy użyciu <xref:System.ServiceModel.Channels.MessageProperties>.
+Istnieje możliwość dodania ogólnych nagłówków klucz/wartość do komunikatów Windows Communication Foundation (WCF) przy użyciu <xref:System.ServiceModel.OperationContextScope> i właściwości <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders?displayProperty=nameWithType> i obsłużenia ich przy użyciu <xref:System.ServiceModel.Channels.MessageProperties>.
 
-wywołania gRPC i odpowiedzi mogą również zawierać metadane podobne do nagłówków HTTP. Są one w większości niewidoczne do gRPC i są przenoszone przez program w celu przetworzenia przez kod aplikacji lub oprogramowanie pośredniczące. Metadane są reprezentowane jako pary klucz/wartość, gdzie klucz jest ciągiem, a wartością jest ciąg lub dane binarne. Nie musisz określać metadanych w pliku `.proto`.
+wywołania gRPC i odpowiedzi mogą również zawierać metadane podobne do nagłówków HTTP. Te metadane są w większości niewidoczne do gRPC i są przesyłane przez program, aby były przetwarzane przez kod aplikacji lub oprogramowanie pośredniczące. Metadane są reprezentowane jako pary klucz/wartość, gdzie klucz jest ciągiem, a wartością jest ciąg lub dane binarne. Nie musisz określać metadanych w pliku `.proto`.
 
-Metadane są obsługiwane za pomocą klasy `Metadata` z pakietu NuGet [GRPC. Core. API](https://www.nuget.org/packages/Grpc.Core.Api/) . Ta klasa może być używana z składnią inicjatora kolekcji.
+Metadane są obsługiwane przez klasę `Metadata` pakietu NuGet [GRPC. Core. API](https://www.nuget.org/packages/Grpc.Core.Api/) . Ta klasa może być używana z składnią inicjatora kolekcji.
 
-Poniższy przykład pokazuje, jak dodać metadane do wywołania z C# klienta:
+Ten przykład pokazuje, jak dodać metadane do wywołania z C# klienta:
 
 ```csharp
 var metadata = new Metadata
@@ -49,7 +49,7 @@ public async Task<GetPortfolioResponse> GetPortfolio(GetPortfolioRequest request
 }
 ```
 
-Usługi mogą wysyłać metadane do klientów przy użyciu właściwości `ResponseTrailers` `ServerCallContext`:
+Usługi mogą wysyłać metadane do klientów za pomocą właściwości `ResponseTrailers` `ServerCallContext`:
 
 ```csharp
 public async Task<GetPortfolioResponse> GetPortfolio(GetPortfolioRequest request, ServerCallContext context)
@@ -61,5 +61,5 @@ public async Task<GetPortfolioResponse> GetPortfolio(GetPortfolioRequest request
 ```
 
 >[!div class="step-by-step"]
->[Poprzedni](rpc-types.md)
->[Następny](error-handling.md)
+>[Poprzednie](rpc-types.md)
+>[dalej](error-handling.md)

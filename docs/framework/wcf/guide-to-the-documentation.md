@@ -5,17 +5,15 @@ helpviewer_keywords:
 - WCF [WCF], documentation
 - Windows Communication Foundation [WCF], documentation
 ms.assetid: 2aa18c85-a4fd-4bb9-986a-a8249e4f8e0e
-ms.openlocfilehash: 12408bd9f10e7ed147a6c1adc0497d3b8d797e42
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 705e571e11fa7c8276fcb48d15ed0160fbda2bc5
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319820"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628764"
 ---
 # <a name="guide-to-the-documentation"></a>Przewodnik po dokumentacji
 W tym miejscu przedstawiono wskazówki dotyczące dokumentacji Windows Communication Foundation (WCF). Połączone dokumenty są zalecanymi punktami początkowymi pogrupowanymi według określonych zainteresowań i poziomów wiedzy.  
-  
- Aby zainstalować autonomiczną wersję dokumentacji i podgląd pomocy, Pobierz [Microsoft Windows SDK v 7,1](https://go.microsoft.com/fwlink/?LinkID=194146&clcid=0x409).  
   
 ## <a name="new-to-windows-communication-foundation-programming"></a>Nowość w celu Windows Communication Foundation programowania  
   
@@ -61,7 +59,7 @@ W tym miejscu przedstawiono wskazówki dotyczące dokumentacji Windows Communica
 ## <a name="ws--protocols-supported-in-windows-communication-foundation"></a>Protokoły WS-* obsługiwane w Windows Communication Foundation  
  Aby wyświetlić listę protokołów obsługiwanych przez powiązania dostarczone przez system, zobacz [Protokoły usług sieci Web obsługiwane przez powiązania współdziałania dostarczone przez system](./feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md). Aby wyświetlić listę powiązań dostarczanych przez system, zobacz [powiązania dostarczone przez system](system-provided-bindings.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Windows Communication Foundation — przykłady](./samples/index.md)
 - [Omówienie pojęć](conceptual-overview.md)

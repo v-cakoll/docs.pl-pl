@@ -2,16 +2,18 @@
 title: Opcje kompilatora
 description: Użyj F# opcji wiersza polecenia kompilatora, aby kontrolować kompilację F# aplikacji i bibliotek.
 ms.date: 12/10/2018
-ms.openlocfilehash: d0f4d1ca5ae45af25d6c304a2920d5c457700b1a
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: ecaae538a5db2f5dfefa79cb8e7b8b51d39c440d
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424761"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628881"
 ---
 # <a name="compiler-options"></a>Opcje kompilatora
 
-W tym temacie opisano opcje wiersza polecenia kompilatora dla F# kompilatora, Urząd nadzoru. exe. Środowisko kompilacji może być również kontrolowane przez ustawienie właściwości projektu.
+W tym temacie opisano opcje wiersza polecenia kompilatora dla F# kompilatora, Urząd nadzoru. exe.
+
+Środowisko kompilacji może być również kontrolowane przez ustawienie właściwości projektu. W przypadku projektów przeznaczonych dla platformy .NET Core Właściwość "Other flags" `<OtherFlags>...</OtherFlags>` w `.fsproj`jest używana do określania dodatkowych opcji wiersza polecenia.
 
 ## <a name="compiler-options-listed-alphabetically"></a>Opcje kompilatora w porządku alfabetycznym
 
@@ -26,7 +28,7 @@ W poniższej tabeli przedstawiono opcje kompilatora w kolejności alfabetycznej.
 |`--crossoptimize[+|-]`|Włącza lub wyłącza optymalizacje między modułami.|
 |<code>--delaysign[+&#124;-]</code>|Delay-podpisuje zestaw tylko za pomocą publicznej części klucza silnej nazwy.<br /><br />Ta opcja kompilatora jest równoważna z C# opcją kompilatora o tej samej nazwie. Aby uzyskać więcej informacji, [ &#47;zobacz &#40;opcje&#35; &#41;kompilatora delaysign języka C](https://msdn.microsoft.com/library/ta1sxwy8.aspx).|
 |<code>--checked[+&#124;-]</code>|Włącza lub wyłącza generowanie sprawdzania przepełnienia.<br /><br />Ta opcja kompilatora jest równoważna z C# opcją kompilatora o tej samej nazwie. Aby uzyskać więcej informacji, [ &#47;zobacz &#40;sprawdzone&#35; &#41;opcje kompilatora języka C](https://msdn.microsoft.com/library/h25wtyxf.aspx).|
-|<code>--debug[+&#124;-]</code><br /><br /><code>-g[+&#124;-]</code><br /><br /><code>--debug:[full&#124;pdbonly]</code><br /><br /><code>-g: [full&#124;pdbonly]</code>|Włącza lub wyłącza generowanie informacji o debugowaniu lub określa typ informacji o debugowaniu do wygenerowania. Wartość domyślna to pełna, która umożliwia dołączanie do uruchomionego programu. Wybierz pozycję **pdbonly** , aby uzyskać ograniczone informacje o debugowaniu przechowywane w pliku PDB (program bazy danych).<br /><br />Odpowiednik opcji C# kompilatora o tej samej nazwie. Aby uzyskać więcej informacji, zobacz artykuł<br /><br />[Debuguj opcje kompilatora języka C&#35; &#40; &#47;&#41;](https://msdn.microsoft.com/library/8cw0bt21.aspx)|
+|<code>--debug[+&#124;-]</code><br /><br /><code>-g[+&#124;-]</code><br /><br /><code>--debug:[full&#124;pdbonly]</code><br /><br /><code>-g: [full&#124;pdbonly]</code>|Włącza lub wyłącza generowanie informacji o debugowaniu lub określa typ informacji o debugowaniu do wygenerowania. Wartość domyślna to pełna, która umożliwia dołączanie do uruchomionego programu. Wybierz pozycję **pdbonly** , aby uzyskać ograniczone informacje o debugowaniu przechowywane w pliku PDB (program bazy danych).<br /><br />Odpowiednik opcji C# kompilatora o tej samej nazwie. Aby uzyskać więcej informacji, zobacz<br /><br />[Debuguj opcje kompilatora języka C&#35; &#40; &#47;&#41;](https://msdn.microsoft.com/library/8cw0bt21.aspx)|
 |`--define:symbol`<br /><br />`-d:symbol`|Definiuje symbol do użycia w kompilacji warunkowej.|
 |<code>--deterministic[+&#124;-]</code>|Tworzy deterministyczny zestaw (w tym identyfikator GUID i sygnaturę czasową wersji modułu). Tej opcji nie można używać z wieloznacznymi numerami wersji i obsługuje tylko typy debugowania osadzone i przenośne|
 |`--doc:xmldoc-filename`|Nakazuje kompilatorowi Generowanie komentarzy dokumentacji XML do określonego pliku. Aby uzyskać więcej informacji, zobacz [dokumentację XML](xml-documentation.md).<br /><br />Ta opcja kompilatora jest równoważna z C# opcją kompilatora o tej samej nazwie. Aby uzyskać więcej informacji, [ &#47;zobacz &#40;doc&#35; C —&#41;opcje kompilatora](https://msdn.microsoft.com/library/3260k4x7.aspx).|
@@ -67,7 +69,7 @@ W poniższej tabeli przedstawiono opcje kompilatora w kolejności alfabetycznej.
 |`--win32manifest:manifest-filename`|Dodaje plik manifestu Win32 do kompilacji. Ta opcja kompilatora jest równoważna z C# opcją kompilatora o tej samej nazwie. Aby uzyskać więcej informacji, [ &#47;zobacz &#40;opcje&#35; &#41;kompilatora WIN32MANIFEST języka C](https://msdn.microsoft.com/library/bb545961.aspx).|
 |`--win32res:resource-filename`|Dodaje plik zasobów Win32 do kompilacji.<br /><br />Ta opcja kompilatora jest równoważna z C# opcją kompilatora o tej samej nazwie. Aby uzyskać więcej informacji, zobacz [ &#47;opcje&#40;&#41;kompilatora&#35;win32res — (C)](https://msdn.microsoft.com/library/8f2f5x2e.aspx).|
 
-## <a name="related-articles"></a>Powiązane artykuły
+## <a name="related-articles"></a>Pokrewne artykuły
 
 |Tytuł|Opis|
 |-----|-----------|

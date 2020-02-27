@@ -4,16 +4,16 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: faab6ac57629db11c60ee5b563ea95ebb90016dd
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 7c227b61c6d5b4ead00fced0dba046b90683fde1
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964359"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626415"
 ---
 # <a name="using-constructors-c-programming-guide"></a>Używanie konstruktorów (Przewodnik programowania w języku C#)
 
-Gdy tworzona jest [Klasa](../../language-reference/keywords/class.md) lub [Struktura](../../language-reference/keywords/struct.md) , jego Konstruktor jest wywoływany. Konstruktory mają taką samą nazwę jak Klasa lub struktura i zazwyczaj inicjują elementy członkowskie danych nowego obiektu.  
+Gdy tworzona jest [Klasa](../../language-reference/keywords/class.md) lub [Struktura](../../language-reference/builtin-types/struct.md) , jego Konstruktor jest wywoływany. Konstruktory mają taką samą nazwę jak Klasa lub struktura i zazwyczaj inicjują elementy członkowskie danych nowego obiektu.  
   
  W poniższym przykładzie Klasa o nazwie `Taxi` jest definiowana przy użyciu prostego konstruktora. Ta klasa jest następnie tworzona przy użyciu operatora [New](../../language-reference/operators/new-operator.md) . Konstruktor `Taxi` jest wywoływany przez operatora `new` natychmiast po przydzieleniu pamięci dla nowego obiektu.  
   
@@ -29,7 +29,7 @@ Gdy tworzona jest [Klasa](../../language-reference/keywords/class.md) lub [Struk
   
  Aby uzyskać więcej informacji, zobacz [prywatne konstruktory](./private-constructors.md).  
   
- Konstruktory dla typów [struktur](../../language-reference/keywords/struct.md) przypominają konstruktory klas, ale `structs` nie może zawierać jawnego konstruktora bez parametrów, ponieważ jeden jest dostarczany automatycznie przez kompilator. Ten konstruktor inicjuje każde pole w `struct` do [wartości domyślnej](../../language-reference/builtin-types/default-values.md). Jednak ten konstruktor bez parametrów jest wywoływany tylko wtedy, gdy `struct` jest tworzona przy użyciu `new`. Na przykład, ten kod używa konstruktora bez parametrów dla <xref:System.Int32>, aby mieć pewność, że liczba całkowita została zainicjowana:  
+ Konstruktory dla typów [struktur](../../language-reference/builtin-types/struct.md) przypominają konstruktory klas, ale `structs` nie może zawierać jawnego konstruktora bez parametrów, ponieważ jeden jest dostarczany automatycznie przez kompilator. Ten konstruktor inicjuje każde pole w `struct` do [wartości domyślnej](../../language-reference/builtin-types/default-values.md). Jednak ten konstruktor bez parametrów jest wywoływany tylko wtedy, gdy `struct` jest tworzona przy użyciu `new`. Na przykład, ten kod używa konstruktora bez parametrów dla <xref:System.Int32>, aby mieć pewność, że liczba całkowita została zainicjowana:  
   
 ```csharp  
 int i = new int();  
@@ -92,7 +92,7 @@ Console.WriteLine("{0}, {1}", a, b);
 
 Aby uzyskać więcej informacji, zobacz [konstruktory wystąpień](~/_csharplang/spec/classes.md#instance-constructors) i [konstruktory statyczne](~/_csharplang/spec/classes.md#static-constructors) w [ C# specyfikacji języka](/dotnet/csharp/language-reference/language-specification/introduction). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Przewodnik programowania w języku C#](../index.md)
 - [Klasy i struktury](./index.md)

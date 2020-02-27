@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [Windows Forms], manipulating
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
-ms.openlocfilehash: ac862d163f1bd8b66f29160d836bc459e4bf4081
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 0305df5e7566f9441ce09fa3346a8b2dc67c8943
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745126"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77627971"
 ---
 # <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>Porady: dodawanie przycisków załaduj, zapisz i anuluj do kontrolki BindingNavigator formularzy systemu Windows
 
@@ -35,7 +35,7 @@ W poniższej procedurze formant <xref:System.Windows.Forms.TextBox> jest powiąz
 
 5. Wybierz kontrolkę <xref:System.Windows.Forms.BindingNavigator>.
 
-6. Kliknij symbol taga inteligentnego (![tag inteligentny](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")), aby otworzyć okno dialogowe **zadania BindingNavigator** , a następnie wybierz pozycję **Edytuj elementy**.
+6. Kliknij symbol akcji projektanta (![małą czarną strzałkę](./media/designer-actions-glyph.gif)), a następnie wyświetlenie okna dialogowego **zadania BindingNavigator** i wybierz pozycję **Edytuj elementy**.
 
      Zostanie wyświetlony **Edytor kolekcji Items** .
 
@@ -49,7 +49,7 @@ W poniższej procedurze formant <xref:System.Windows.Forms.TextBox> jest powiąz
 
     4. Ustaw właściwość <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> dla każdego przycisku na **tekst**. Alternatywnie możesz ustawić tę właściwość na **Image** lub **ImageAndText**i ustawić obraz, który ma być wyświetlany we właściwości <xref:System.Windows.Forms.ToolStripItem.Image%2A>.
 
-    5. Kliknij przycisk **OK** , aby zamknąć okno dialogowe. Przyciski są dodawane do <xref:System.Windows.Forms.ToolStrip>.
+    5. Kliknij przycisk **OK**, aby zamknąć okno dialogowe. Przyciski są dodawane do <xref:System.Windows.Forms.ToolStrip>.
 
 8. Kliknij prawym przyciskiem myszy formularz i wybierz polecenie **Wyświetl kod**.
 
@@ -110,7 +110,7 @@ W poniższej procedurze formant <xref:System.Windows.Forms.TextBox> jest powiąz
     > [!NOTE]
     > Metoda <xref:System.Windows.Forms.BindingSource.CancelEdit%2A> jest objęta zakresem wierszy danych. Zapisz wszelkie zmiany wprowadzone podczas wyświetlania danego rekordu przed przejściem do następnego rekordu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.BindingSource>

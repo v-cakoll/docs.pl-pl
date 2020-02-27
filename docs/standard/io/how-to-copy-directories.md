@@ -12,12 +12,12 @@ helpviewer_keywords:
 - copying directories
 - directories [.NET Framework], copying
 ms.assetid: 5a969765-e5f8-4b4e-977e-90e2b0a1fe3c
-ms.openlocfilehash: 223e83a5ff6a73825985ec4e3b6b601fb196fe5e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 132ce0b887f7c314311e294567c546bded9a89a0
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75707903"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77627400"
 ---
 # <a name="how-to-copy-directories"></a>Instrukcje: kopiowanie katalogów
 W tym temacie pokazano, jak używać klas we/wy do synchronicznego kopiowania zawartości katalogu do innej lokalizacji. 
@@ -30,7 +30,9 @@ Ten przykład kopiuje podkatalogi przez ustawienie `copySubDirs` metody `Directo
  [!code-csharp[System.IO.Directory_Copy#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Directory_Copy/cs/program.cs#1)]
  [!code-vb[System.IO.Directory_Copy#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Directory_Copy/vb/Program.vb#1)]  
   
-## <a name="see-also"></a>Zobacz także
+[!INCLUDE [localized code comments](../../../includes/code-comments-loc.md)]
+
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.IO.FileInfo>
 - <xref:System.IO.DirectoryInfo>

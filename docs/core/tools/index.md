@@ -3,12 +3,12 @@ title: Interfejs wiersza polecenia platformy .NET Core
 titleSuffix: ''
 description: Przegląd interfejs wiersza polecenia platformy .NET Core i jego funkcji.
 ms.date: 02/13/2020
-ms.openlocfilehash: 1078d68ddc088274fa14b0094a81765f7af69dad
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: c491088f26a9aa1c065414e76fb0b80d554380b4
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543317"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625985"
 ---
 # <a name="net-core-cli-overview"></a>Przegląd interfejs wiersza polecenia platformy .NET Core
 
@@ -87,7 +87,7 @@ Gdy podasz polecenie do sterownika, `dotnet.exe` uruchamia proces wykonywania po
 dotnet build
 ```
 
-Najpierw sterownik Określa wersję zestawu SDK do użycia. Jeśli nie ma pliku ["Global. JSON"](global-json.md), używana jest Najnowsza wersja zestawu SDK. Może to być wersja zapoznawcza lub stabilna, w zależności od tego, co jest najnowsze na komputerze.  Po ustaleniu wersji zestawu SDK wykonuje polecenie.
+Najpierw sterownik Określa wersję zestawu SDK do użycia. Jeśli nie ma pliku [Global. JSON](global-json.md) , używana jest Najnowsza wersja zestawu SDK. Może to być wersja zapoznawcza lub stabilna, w zależności od tego, co jest najnowsze na komputerze.  Po ustaleniu wersji zestawu SDK wykonuje polecenie.
 
 ### <a name="command"></a>Polecenie
 

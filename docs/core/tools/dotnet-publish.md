@@ -2,12 +2,12 @@
 title: polecenie dotnet publish
 description: Dotnet publish polecenie publikuje projekt platformy .NET Core w katalogu.
 ms.date: 05/29/2018
-ms.openlocfilehash: 0653a7b1e1abd6d7ffd3d21a0410279235b43a28
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 88dc53d6c45bc18f630d8a7137704e813ad4f0e3
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451295"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626076"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -70,9 +70,9 @@ Projekt do opublikowania. Jest to ścieżka i nazwa pliku [C#](csproj.md)projekt
 
 # <a name="net-core-21"></a>[.NET Core 2,1](#tab/netcore21)
 
-`-c|--configuration {Debug|Release}`
+`-c|--configuration <CONFIGURATION>`
 
-Definiuje konfigurację kompilacji. Wartością domyślną jest `Debug`.
+Definiuje konfigurację kompilacji. Wartość domyślna dla większości projektów jest `Debug`, ale można zastąpić ustawienia konfiguracji kompilacji w projekcie.
 
 `-f|--framework <FRAMEWORK>`
 
@@ -125,9 +125,9 @@ Definiuje sufiks wersji, aby zastąpić gwiazdkę (`*`) w polu wersja pliku proj
 
 # <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
-`-c|--configuration {Debug|Release}`
+`-c|--configuration <CONFIGURATION>`
 
-Definiuje konfigurację kompilacji. Wartością domyślną jest `Debug`.
+Definiuje konfigurację kompilacji. Wartość domyślna dla większości projektów jest `Debug`, ale można zastąpić ustawienia konfiguracji kompilacji w projekcie.
 
 `-f|--framework <FRAMEWORK>`
 
@@ -176,9 +176,9 @@ Definiuje sufiks wersji, aby zastąpić gwiazdkę (`*`) w polu wersja pliku proj
 
 # <a name="net-core-1x"></a>[.NET Core 1. x](#tab/netcore1x)
 
-`-c|--configuration {Debug|Release}`
+`-c|--configuration <CONFIGURATION>`
 
-Definiuje konfigurację kompilacji. Wartością domyślną jest `Debug`.
+Definiuje konfigurację kompilacji. Wartość domyślna dla większości projektów jest `Debug`, ale można zastąpić ustawienia konfiguracji kompilacji w projekcie.
 
 `-f|--framework <FRAMEWORK>`
 

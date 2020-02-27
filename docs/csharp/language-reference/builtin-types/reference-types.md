@@ -20,12 +20,12 @@ helpviewer_keywords:
 - '@ string literal'
 - string literals [C#]
 - string keyword [C#]
-ms.openlocfilehash: d5ca0593d802d331d980cf35c701e0a79d54abee
-ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
+ms.openlocfilehash: 6b65d7e79e4eac30171eb0aad650f7c1e3880e30
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76163101"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77627273"
 ---
 # <a name="built-in-reference-types-c-reference"></a>Wbudowane typy odwołań (C# odwołanie)
 
@@ -97,9 +97,9 @@ Literały ciągu mogą zawierać dowolny literał znakowy. Sekwencje ucieczki s�
 ```csharp-interactive
 string a = "\\\u0066\n F";
 Console.WriteLine(a);
-\\ Output:
-\\ \f
-\\  F
+// Output:
+// \f
+//  F
 ```
 
 > [!NOTE]
@@ -148,7 +148,7 @@ Poniższy przykład kontrastuje zmienną typu `dynamic` do zmiennej typu `object
 
 [!code-csharp[csrefKeywordsTypes#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/dynamic1.cs#21)]
 
-Instrukcje <xref:System.Console.WriteLine%2A> wyświetlają typy czasu wykonywania `dyn` i `obj`. W tym momencie oba mają ten sam typ, liczba całkowita. Zostaną wyświetlone następujące dane wyjściowe:
+Instrukcje <xref:System.Console.WriteLine%2A> wyświetlają typy czasu wykonywania `dyn` i `obj`. W tym momencie oba mają ten sam typ, liczba całkowita. Generowane są następujące dane wyjściowe:
 
 ```console
 System.Int32
@@ -168,7 +168,7 @@ Poniższy przykład używa `dynamic` w kilku deklaracjach. Metoda `Main` równie
 
 [!code-csharp[csrefKeywordsTypes#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/dynamic2.cs#25)]
 
-### <a name="see-also"></a>Zobacz także
+### <a name="see-also"></a>Zobacz też
 
 - [C#Odwoła](../index.md)
 - [Słowa kluczowe języka C#](../keywords/index.md)

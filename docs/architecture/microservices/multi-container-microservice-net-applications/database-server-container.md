@@ -2,12 +2,12 @@
 title: Korzystanie z serwera bazy danych działającego jako kontener
 description: Zapoznaj się z ważnością korzystania z serwera bazy danych działającego jako kontener tylko do celów deweloperskich. Nigdy nie do produkcji.
 ms.date: 01/30/2020
-ms.openlocfilehash: 816ac196636f78a368a9f20e8eedcc6a22567fa7
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 0cbc933003aac10970814378c27e88b5cb0ddbe5
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77502291"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628530"
 ---
 # <a name="use-a-database-server-running-as-a-container"></a>Korzystanie z serwera bazy danych działającego jako kontener
 
@@ -48,10 +48,10 @@ Posiadanie SQL Server działającego jako kontenera nie jest samo przydatne w pr
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **Uruchamianie obrazu SQL Server Docker w systemie Linux, Mac lub Windows** \
-    <https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker>
+  <https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker>
 
 - **Łączenie i SQL Server on Linux zapytań przy użyciu narzędzia sqlcmd** \
-    <https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd>
+  <https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd>
 
 ## <a name="seeding-with-test-data-on-web-application-startup"></a>Umieszczanie danych testowych przy uruchamianiu aplikacji sieci Web
 

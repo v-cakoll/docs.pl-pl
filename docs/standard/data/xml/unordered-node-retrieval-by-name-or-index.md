@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2038a90b-92af-4a0a-baaa-08e688d95194
-ms.openlocfilehash: 8c6819b4c1628d9e09a9bbf96ae8d5edbb6c643d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 577de6b60e579b37eb54ea69de72f3534f1d23ac
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710079"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628907"
 ---
 # <a name="unordered-node-retrieval-by-name-or-index"></a>Pobieranie nieuporządkowanych węzłów na podstawie nazwy lub indeksu
 **XmlNamedNodeMap** jest opisany w specyfikacji organizacja World Wide Web Consortium (W3C) jako NamedNodeMap i jest wymagany do obsługi nieuporządkowanego zestawu węzłów z możliwością odwoływania się do węzłów według ich nazwy lub indeksu. Jedynym sposobem, w jaki masz dostęp do elementu **XmlNamedNodeMap** , jest to, że **XmlNamedNodeMap** jest zwracany przez metodę lub właściwość. Istnieją trzy metody lub właściwości, które zwracają **XmlNamedNodeMap**:  
@@ -115,8 +115,8 @@ class test {
 }  
 ```  
   
- Aby wyświetlić dodatkowy przykład kodu, który pokazuje usuwany atrybut z **atrybutucollection**, zobacz [XmlNamedNodeMap. RemoveNamedItem](Overload:System.Xml.XmlNamedNodeMap.RemoveNamedItem). Aby uzyskać więcej informacji na temat metod i właściwości, zobacz [XmlNamedNodeMap Members](AllMembers.T:System.Xml.XmlNamedNodeMap).  
+ Aby wyświetlić dodatkowy przykład kodu, który pokazuje usuwany atrybut z **atrybutucollection**, zobacz [XmlNamedNodeMap. RemoveNamedItem](xref:System.Xml.XmlNamedNodeMap.RemoveNamedItem%2A). Aby uzyskać więcej informacji na temat metod i właściwości, zobacz [XmlNamedNodeMap Members](xref:System.Xml.XmlNamedNodeMap).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

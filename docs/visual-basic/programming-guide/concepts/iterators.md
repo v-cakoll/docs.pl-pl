@@ -2,12 +2,12 @@
 title: Iteratory
 ms.date: 07/20/2015
 ms.assetid: f26b5c1e-fe9d-4004-b287-da7919d717ae
-ms.openlocfilehash: 465a8e6650c3d015520164030a146c9502ebe603
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2789ac66690ebfd472b9bae5ccf08b1bdfaa0922
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353737"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628738"
 ---
 # <a name="iterators-visual-basic"></a>Iteratory (Visual Basic)
 
@@ -435,7 +435,7 @@ Chociaż należy napisać iterator jako metodę, kompilator tłumaczy go na zagn
 
 Aby zobaczyć, co robi kompilator, możesz użyć narzędzia Ildasm. exe, aby wyświetlić kod języka pośredniego firmy Microsoft, który jest generowany dla metody iterator.
 
-Podczas tworzenia iteratora dla [klasy](../../../csharp/language-reference/keywords/class.md) lub [struktury](../../../csharp/language-reference/keywords/struct.md)nie trzeba implementować całego interfejsu <xref:System.Collections.IEnumerator>. Gdy kompilator wykryje iterator, automatycznie generuje metody `Current`, `MoveNext`i `Dispose` interfejsu <xref:System.Collections.IEnumerator> lub <xref:System.Collections.Generic.IEnumerator%601>.
+Podczas tworzenia iteratora dla [klasy](../../language-reference/statements/class-statement.md) lub [struktury](../../language-reference/statements/structure-statement.md)nie trzeba implementować całego interfejsu <xref:System.Collections.IEnumerator>. Gdy kompilator wykryje iterator, automatycznie generuje metody `Current`, `MoveNext`i `Dispose` interfejsu <xref:System.Collections.IEnumerator> lub <xref:System.Collections.Generic.IEnumerator%601>.
 
 Dla każdej kolejnej iteracji pętli `For Each…Next` (lub bezpośredniego wywołania do `IEnumerator.MoveNext`) Następna treść kodu iteratora zostanie wznowiona po poprzedniej instrukcji `Yield`. Następnie przechodzi do następnej instrukcji `Yield` do momentu osiągnięcia końca treści iteratora lub do momentu napotkania instrukcji `Exit Function` lub `Return`.
 
@@ -453,7 +453,7 @@ Iteratory umożliwiają zachowanie prostoty pętli `For Each`, gdy trzeba użyć
 
 - Hermetyzuje Kompilowanie listy w iterator. W metodzie iteratora można skompilować listę, a następnie dać każdy wynik w pętli.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Collections.Generic>
 - <xref:System.Collections.Generic.IEnumerable%601>

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: d277869809b7148a2c3d568c91fce15f9a83baa1
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: ade2cba857a1a32039f8fd07881f13f63f0dbe1a
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093568"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628140"
 ---
 # <a name="types-c-programming-guide"></a>Typy (Przewodnik programowania w języku C#)
 
@@ -67,7 +67,7 @@ C#zawiera standardowy zestaw wbudowanych typów liczbowych reprezentujących lic
 
 ## <a name="custom-types"></a>Typy niestandardowe
 
-Do tworzenia własnych typów niestandardowych służy konstrukcja [struct](../../language-reference/keywords/struct.md), [Class](../../language-reference/keywords/class.md), [Interface](../../language-reference/keywords/interface.md)i [enum](../../language-reference/builtin-types/enum.md) . Sama Biblioteka klas .NET jest kolekcją typów niestandardowych dostarczanych przez firmę Microsoft, których można używać w własnych aplikacjach. Domyślnie najczęściej używane typy w bibliotece klas są dostępne w dowolnym C# programie. Inne stają się dostępne tylko wtedy, gdy jawnie dodasz odwołanie do projektu do zestawu, w którym są zdefiniowane. Gdy kompilator ma odwołanie do zestawu, można zadeklarować zmienne (i stałe) typów zadeklarowanych w tym zestawie w kodzie źródłowym. Aby uzyskać więcej informacji, zobacz [Biblioteka klas .NET](../../../standard/class-library-overview.md).
+Do tworzenia własnych typów niestandardowych służy konstrukcja [struct](../../language-reference/builtin-types/struct.md), [Class](../../language-reference/keywords/class.md), [Interface](../../language-reference/keywords/interface.md)i [enum](../../language-reference/builtin-types/enum.md) . Sama Biblioteka klas .NET jest kolekcją typów niestandardowych dostarczanych przez firmę Microsoft, których można używać w własnych aplikacjach. Domyślnie najczęściej używane typy w bibliotece klas są dostępne w dowolnym C# programie. Inne stają się dostępne tylko wtedy, gdy jawnie dodasz odwołanie do projektu do zestawu, w którym są zdefiniowane. Gdy kompilator ma odwołanie do zestawu, można zadeklarować zmienne (i stałe) typów zadeklarowanych w tym zestawie w kodzie źródłowym. Aby uzyskać więcej informacji, zobacz [Biblioteka klas .NET](../../../standard/class-library-overview.md).
 
 ## <a name="the-common-type-system"></a>Wspólny system typów
 
@@ -75,7 +75,7 @@ Ważne jest, aby zrozumieć dwa podstawowe punkty o systemie typów w programie 
 
 - Obsługuje zasady dziedziczenia. Typy mogą pochodzić od innych typów, nazywanych *typami podstawowymi*. Typ pochodny dziedziczy (z pewnymi ograniczeniami) metody, właściwości i inne elementy członkowskie typu podstawowego. Typ podstawowy może być pochodny od innego typu, w tym przypadku typ pochodny dziedziczy elementy członkowskie obu typów podstawowych w hierarchii dziedziczenia. Wszystkie typy, w tym wbudowane typy liczbowe, takie jak <xref:System.Int32?displayProperty=nameWithType> (C# słowo kluczowe: [int](../../language-reference/builtin-types/integral-numeric-types.md)), pochodzą ostatecznie od pojedynczego typu podstawowego, który jest <xref:System.Object?displayProperty=nameWithType> (C# słowo kluczowe: [Object](../../language-reference/builtin-types/reference-types.md)). Ta ujednolicona hierarchia typów jest nazywana [systemem common Type System](../../../standard/base-types/common-type-system.md) (CTS). Aby uzyskać więcej informacji na temat C#dziedziczenia w programie, zobacz [dziedziczenie](../classes-and-structs/inheritance.md).
 
-- Każdy typ w CTS jest zdefiniowany jako *Typ wartości* lub *typ referencyjny*. Obejmuje to wszystkie niestandardowe typy w bibliotece klas .NET, a także własne typy zdefiniowane przez użytkownika. Typy zdefiniowane za pomocą słowa kluczowego [struct](../../language-reference/keywords/struct.md) są typami wartości; wszystkie wbudowane typy liczbowe są `structs`. Typy zdefiniowane za pomocą słowa kluczowego [Class](../../language-reference/keywords/class.md) to typy odwołań. Typy odwołań i typy wartości mają różne reguły czasu kompilacji i inne zachowanie w czasie wykonywania.
+- Każdy typ w CTS jest zdefiniowany jako *Typ wartości* lub *typ referencyjny*. Obejmuje to wszystkie niestandardowe typy w bibliotece klas .NET, a także własne typy zdefiniowane przez użytkownika. Typy zdefiniowane za pomocą słowa kluczowego [struct](../../language-reference/builtin-types/struct.md) są typami wartości; wszystkie wbudowane typy liczbowe są `structs`. Typy zdefiniowane za pomocą słowa kluczowego [Class](../../language-reference/keywords/class.md) to typy odwołań. Typy odwołań i typy wartości mają różne reguły czasu kompilacji i inne zachowanie w czasie wykonywania.
 
 Na poniższej ilustracji przedstawiono relacje między typami wartości i typami odwołań w CTS.
 
@@ -90,7 +90,7 @@ Na poniższej ilustracji przedstawiono typy wartości i typy odwołań w CTS:
 
 Typy wartości pochodne od <xref:System.ValueType?displayProperty=nameWithType>, które pochodzą z <xref:System.Object?displayProperty=nameWithType>. Typy, które pochodzą od <xref:System.ValueType?displayProperty=nameWithType> mają specjalne zachowanie w środowisku CLR. Zmienne typu wartości bezpośrednio zawierają swoje wartości, co oznacza, że pamięć jest alokowana w dowolnym kontekście, w którym jest zadeklarowana zmienna. Nie ma oddzielnego przydziału sterty lub wyrzucania elementów bezużytecznych dla zmiennych typu wartości.
 
-Istnieją dwie kategorie typów wartości: [struct](../../language-reference/keywords/struct.md) i [enum](../../language-reference/builtin-types/enum.md).
+Istnieją dwie kategorie typów wartości: [struct](../../language-reference/builtin-types/struct.md) i [enum](../../language-reference/builtin-types/enum.md).
 
 Wbudowane typy liczbowe to struktury i mają właściwości i metody, do których można uzyskać dostęp:
 
@@ -109,7 +109,7 @@ char c = 'Z';
 
 Typy wartości są *zapieczętowane*, co oznacza, że na przykład nie można utworzyć typu z <xref:System.Int32?displayProperty=nameWithType>i nie można zdefiniować struktury dziedziczonej z żadnej klasy lub struktury zdefiniowanej przez użytkownika, ponieważ struktura może dziedziczyć tylko po <xref:System.ValueType?displayProperty=nameWithType>. Jednak struktura może zaimplementować jeden lub więcej interfejsów. Typ struktury można rzutować na dowolny typ interfejsu, który implementuje; powoduje *to, że operacja opakowywania* otacza strukturę wewnątrz obiektu typu odwołania na zarządzanym stosie. Operacje pakowania są wykonywane w przypadku przekazania typu wartości do metody, która przyjmuje <xref:System.Object?displayProperty=nameWithType> lub dowolny typ interfejsu jako parametr wejściowy. Aby uzyskać więcej informacji, zobacz [opakowanie i rozpakowywanie](./boxing-and-unboxing.md).
 
-Za pomocą słowa kluczowego [struct](../../language-reference/keywords/struct.md) można tworzyć własne niestandardowe typy wartości. Zazwyczaj struktura jest używana jako kontener dla małego zestawu powiązanych zmiennych, jak pokazano w następującym przykładzie:
+Za pomocą słowa kluczowego [struct](../../language-reference/builtin-types/struct.md) można tworzyć własne niestandardowe typy wartości. Zazwyczaj struktura jest używana jako kontener dla małego zestawu powiązanych zmiennych, jak pokazano w następującym przykładzie:
 
 [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]
 

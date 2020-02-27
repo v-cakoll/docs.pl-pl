@@ -5,12 +5,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: 8348e080d833e79dd364aee511ac7d05fb53d1cc
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 114fa2973c50be9a4199db9729e3cd9ea6122866
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543563"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626532"
 ---
 # <a name="methods-c-programming-guide"></a>Metody (Przewodnik programowania w języku C#)
 
@@ -21,7 +21,7 @@ Metoda jest blokiem kodu, który zawiera serie instrukcji. Program powoduje wyko
 
 ## <a name="method-signatures"></a>Sygnatury metod
 
-Metody są zadeklarowane w [klasie](../../language-reference/keywords/class.md), [strukturze](../../language-reference/keywords/struct.md)lub [interfejsie](../interfaces/index.md) przez określenie poziomu dostępu, takiego jak `public` lub `private`, modyfikatory opcjonalne, takie jak `abstract` lub `sealed`, wartość zwracana, nazwa metody i wszelkie parametry metody. Te części razem są sygnaturą metody.
+Metody są zadeklarowane w [klasie](../../language-reference/keywords/class.md), [strukturze](../../language-reference/builtin-types/struct.md)lub [interfejsie](../interfaces/index.md) przez określenie poziomu dostępu, takiego jak `public` lub `private`, modyfikatory opcjonalne, takie jak `abstract` lub `sealed`, wartość zwracana, nazwa metody i wszelkie parametry metody. Te części razem są sygnaturą metody.
 
 > [!NOTE]
 > Zwracany typ metody nie jest częścią podpisu metody do celów przeciążania metody. Jednakże jest częścią podpisu metody podczas określania zgodności między delegatem a metodą, do której wskazuje.

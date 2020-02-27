@@ -12,12 +12,12 @@ ms.assetid: e5a8e088-7ec8-4fd9-bcb3-9078fd134829
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: dac049ea6a51037daa0e23dc93476e4410b2df06
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 7626e1efbb30ef3bfe9b5b1278c0adb18dd5944b
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745985"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628712"
 ---
 # <a name="develop-windows-forms-controls-at-design-time"></a>Opracowywanie formantów Windows Forms w czasie projektowania
 
@@ -36,7 +36,7 @@ Pokazuje, jak utworzyć prosty formant złożony w C#.
 [Przewodnik: dziedziczenie z kontrolki Windows Forms](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)\
 Pokazuje, jak utworzyć prostą kontrolkę Windows Forms przy użyciu C#dziedziczenia w programie.
 
-[Przewodnik: wykonywanie typowych zadań przy użyciu tagów inteligentnych w kontrolkach Windows Forms](performing-common-tasks-using-smart-tags-on-wf-controls.md)\
+[Przewodnik: wykonywanie typowych zadań przy użyciu akcji projektanta](perform-common-tasks-design-actions.md)\
 Pokazuje, jak używać funkcji tagów inteligentnych w kontrolkach Windows Forms.
 
 [Przewodnik: Serializowanie kolekcji typów standardowych przy użyciu\ za pomocą DesignerSerializationVisibilityAttribute](serializing-collections-designerserializationvisibilityattribute.md)
@@ -81,7 +81,7 @@ Wyjaśnia znaczenie i użycie Lista błędów czasu projektowania, które pojawi
 [Kontrola rozwiązywania problemów i\ tworzenia składników](troubleshooting-control-and-component-authoring.md)
 Pokazuje, jak diagnozować i rozwiązywać typowe problemy, które mogą wystąpić podczas tworzenia niestandardowego składnika lub kontrolki.
 
-## <a name="reference"></a>Tematy pomocy
+## <a name="reference"></a>Dokumentacja
 
 - <xref:System.Windows.Forms.Control?displayProperty=nameWithType>
 

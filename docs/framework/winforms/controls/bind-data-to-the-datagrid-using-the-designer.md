@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data sources [Windows Forms], binding to Windows Forms controls
 - DataGridView control [Windows Forms], data binding
 ms.assetid: f4f46009-cec2-441b-8668-6b5af057558b
-ms.openlocfilehash: d5fab6acc53e5b8be247e958bdba78f0d3647fdc
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: d49a718e42a989c731cdf748fb63a6305ee096bf
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744115"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626333"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>Porady: powiązywanie danych z formantem DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant
 Za pomocą projektanta można połączyć kontrolę <xref:System.Windows.Forms.DataGridView> ze źródłami danych różnych odmian, w tym bazami danych, obiektami biznesowymi lub usługami sieci Web. Po powiązaniu formantu ze źródłem danych przy użyciu projektanta, formant jest automatycznie powiązany ze składnikiem <xref:System.Windows.Forms.BindingSource>, który reprezentuje źródło danych. Ponadto kolumny są generowane automatycznie w formancie, aby odpowiadały informacje o schemacie dostarczone przez źródło danych.
@@ -24,7 +24,7 @@ Za pomocą projektanta można połączyć kontrolę <xref:System.Windows.Forms.D
 
 ## <a name="to-bind-the-control-to-a-data-source"></a>Aby powiązać formant ze źródłem danych
 
-1. Kliknij symbol tagu inteligentnego (![symbol tagu inteligentnego](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) w prawym górnym rogu kontrolki <xref:System.Windows.Forms.DataGridView>.
+1. Kliknij symbol akcji projektanta (![małą czarną strzałkę](./media/designer-actions-glyph.gif)) w prawym górnym rogu kontrolki <xref:System.Windows.Forms.DataGridView>.
 
 2. Kliknij strzałkę listy rozwijanej dla opcji **Wybierz źródło danych** .
 
@@ -41,7 +41,7 @@ Za pomocą projektanta można połączyć kontrolę <xref:System.Windows.Forms.D
     > [!NOTE]
     > Jeśli projekt ma już źródło danych, możesz również użyć okna **źródła danych** , aby utworzyć formularz danych. Aby uzyskać więcej informacji, zobacz [okno źródła danych](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120)).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>

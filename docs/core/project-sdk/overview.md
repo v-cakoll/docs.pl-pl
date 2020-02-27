@@ -3,12 +3,12 @@ title: Omówienie zestawu SDK programu .NET Core
 description: Dowiedz się więcej o zestawach SDK projektu .NET Core.
 ms.date: 02/02/2020
 ms.topic: conceptual
-ms.openlocfilehash: b1b839f81b1b4a8d20dbb34d3d2fc000c64acb8a
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: c41b25bf7933e7b1f6cb50da5e52dc0b312f5c74
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77453805"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626250"
 ---
 # <a name="net-core-project-sdks"></a>Zestawy SDK projektu .NET Core
 
@@ -32,7 +32,7 @@ Możesz również utworzyć własny zestaw SDK, który może być dystrybuowany 
 
 ## <a name="project-files"></a>Pliki projektu
 
-Projekty .NET Core są oparte na formacie programu [MSBuild](/visualstudio/msbuild/msbuild) . Pliki projektu, które mają rozszerzenia, takie jak *. csproj* dla C# projektów i *. fsproj* dla F# projektów, są w formacie XML. Głównym elementem pliku projektu MSBuild jest element [projektu](/msbuild/project-element-msbuild) . Element `Project` ma opcjonalny atrybut `Sdk`, który określa zestaw SDK (i wersję), który ma być używany. Aby użyć narzędzi .NET Core i skompilować swój kod, ustaw atrybut `Sdk` na jeden z identyfikatorów w tabeli [dostępnych zestawów SDK](#available-sdks) .
+Projekty .NET Core są oparte na formacie programu [MSBuild](/visualstudio/msbuild/msbuild) . Pliki projektu, które mają rozszerzenia, takie jak *. csproj* dla C# projektów i *. fsproj* dla F# projektów, są w formacie XML. Głównym elementem pliku projektu MSBuild jest element [projektu](/visualstudio/msbuild/project-element-msbuild) . Element `Project` ma opcjonalny atrybut `Sdk`, który określa zestaw SDK (i wersję), który ma być używany. Aby użyć narzędzi .NET Core i skompilować swój kod, ustaw atrybut `Sdk` na jeden z identyfikatorów w tabeli [dostępnych zestawów SDK](#available-sdks) .
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">

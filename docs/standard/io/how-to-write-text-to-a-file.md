@@ -11,12 +11,12 @@ helpviewer_keywords:
 - streams, writing text to files
 - data streams, writing text to files
 ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
-ms.openlocfilehash: 42b758eeb36a4c319c3e1f24676cb600d580902e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: db0b7719105c9f6d42633df6c029a7a94f940908
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706611"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77627984"
 ---
 # <a name="how-to-write-text-to-a-file"></a>Instrukcje: wpisywanie tekstu do pliku
 W tym temacie przedstawiono różne sposoby zapisywania tekstu do pliku dla aplikacji .NET. 
@@ -39,6 +39,8 @@ Poniższy przykład pokazuje, jak używać klasy <xref:System.IO.StreamWriter> d
 [!code-csharp[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/write.cs)] 
 [!code-vb[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/write.vb)]  
 
+[!INCLUDE [localized code comments](../../../includes/code-comments-loc.md)]
+
 ## <a name="example-synchronously-append-text-with-streamwriter"></a>Przykład: synchronicznie dołączanie tekstu do StreamWriter —
 
 Poniższy przykład pokazuje, jak używać klasy <xref:System.IO.StreamWriter> do synchronicznego dołączania tekstu do pliku tekstowego utworzonego w pierwszym przykładzie.   
@@ -60,7 +62,7 @@ Poniższy przykład pokazuje, jak napisać tekst do nowego pliku i dołączyć n
 [!code-csharp[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/file.cs)] 
 [!code-vb[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/file.vb)]  
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.IO.StreamWriter>
 - <xref:System.IO.Path>

@@ -1,5 +1,5 @@
 ---
-title: 'Przewodnik: tworzenie formularza MDI ze scalaniem menu i kontrolkami ToolStrip'
+title: 'Wskazówki: tworzenie formularza MDI ze scalaniem menu i formantami ToolStrip'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,188 +14,188 @@ helpviewer_keywords:
 - MDI forms [Windows Forms], creating
 - MDI forms [Windows Forms], walkthroughs
 ms.assetid: fbab4221-74af-42d0-bbf4-3c97f7b2e544
-ms.openlocfilehash: 5853760231cbece27805923c009d83e16c9b0a5e
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: e0343b98cb71521b35418e70550a93e0bfe20fa8
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211558"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628790"
 ---
-# <a name="walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>Przewodnik: tworzenie formularza MDI ze scalaniem menu i kontrolkami ToolStrip
+# <a name="walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>Wskazówki: tworzenie formularza MDI ze scalaniem menu i formantami ToolStrip
 
-<xref:System.Windows.Forms?displayProperty=nameWithType> Przestrzeń nazw obsługuje wiele aplikacji interfejsu (MDI) dokumentu i <xref:System.Windows.Forms.MenuStrip> kontrolka obsługuje scalania menu. Formularze MDI może również <xref:System.Windows.Forms.ToolStrip> kontrolki.
+Przestrzeń nazw <xref:System.Windows.Forms?displayProperty=nameWithType> obsługuje aplikacje interfejsu wielu dokumentów (MDI), a kontrolka <xref:System.Windows.Forms.MenuStrip> obsługuje scalanie menu. Formularze MDI mogą również <xref:System.Windows.Forms.ToolStrip> kontrolki.
 
-W tym instruktażu przedstawiono sposób użycia <xref:System.Windows.Forms.ToolStripPanel> formanty z formularza MDI. Formularz obsługuje także menu scalanie z menu podrzędne. Następujące zadania są przedstawione w niniejszym przewodniku:
+W tym instruktażu pokazano, jak używać formantów <xref:System.Windows.Forms.ToolStripPanel> z formularzem MDI. Formularz obsługuje również scalanie menu z menu podrzędnymi. W tym instruktażu przedstawiono następujące zadania:
 
 - Tworzenie projektu Windows Forms.
 
-- Tworzenie menu głównego dla formularza użytkownika. Rzeczywista nazwa menu będą się różnić.
+- Tworzenie menu głównego formularza. Rzeczywista nazwa menu będzie się różnić.
 
-- Dodawanie <xref:System.Windows.Forms.ToolStripPanel> kontrolę **przybornika**.
+- Dodawanie kontrolki <xref:System.Windows.Forms.ToolStripPanel> do **przybornika**.
 
 - Tworzenie formularza podrzędnego.
 
-- Rozmieszczanie <xref:System.Windows.Forms.ToolStripPanel> formanty według porządku osi z.
+- Rozmieszczanie kontrolek <xref:System.Windows.Forms.ToolStripPanel> według kolejności z.
 
-Po zakończeniu będziesz mieć formularza MDI, która obsługuje scalania menu i ruchome <xref:System.Windows.Forms.ToolStrip> kontrolki.
+Po zakończeniu będziesz mieć formularz MDI obsługujący scalanie menu i ruchome kontrolki <xref:System.Windows.Forms.ToolStrip>.
 
-Aby skopiować kod, w tym temacie na jednej liście, zobacz [jak: Tworzenie formularza MDI za pomocą scalania Menu i formantów ToolStrip](how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).
+Aby skopiować kod w tym temacie jako pojedynczą listę, zobacz [How to: Create a MDI form with menu Scales and ToolStrip Controls](how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Visual Studio w celu przeprowadzenia tego instruktażu jest konieczne.
+Aby ukończyć ten przewodnik, musisz mieć program Visual Studio.
 
-## <a name="create-the-project"></a>Utwórz projekt
+## <a name="create-the-project"></a>Tworzenie projektu
 
-1. W programie Visual Studio Utwórz projekt aplikacji Windows o nazwie **MdiForm** (**pliku** > **New** > **projektu**  >  **Visual C#**  lub **języka Visual Basic** > **Classic Desktop**  >   **Windows Forms aplikacji**).
+1. W programie Visual Studio Utwórz projekt aplikacji systemu Windows o **nazwie MdiForm** (**plik** > **New** > **Project** > **Visual C#**  lub **Visual Basic** > **klasycznego pulpitu** > Windows Forms **aplikacji**).
 
-2. W programie Windows Forms Designer wybierz formularz.
+2. W Projektant formularzy systemu Windows wybierz formularz.
 
-3. W oknie właściwości ustaw wartość <xref:System.Windows.Forms.Form.IsMdiContainer%2A> do `true`.
+3. W okno Właściwości ustaw wartość <xref:System.Windows.Forms.Form.IsMdiContainer%2A> do `true`.
 
-## <a name="create-the-main-menu"></a>Tworzenie menu głównego
+## <a name="create-the-main-menu"></a>Utwórz menu główne
 
-Formularza nadrzędnego MDI zawiera menu głównego. Menu główne ma jeden element menu o nazwie **okna**. Za pomocą **okna** element menu może tworzenie formularzy podrzędnych. Elementy menu z formularze podrzędne są scalane w menu głównym.
+Nadrzędny formularz MDI zawiera menu główne. Menu główne ma jeden element menu o nazwie **window**. Za pomocą elementu menu **okno** można tworzyć formularze podrzędne. Elementy menu z formularzy podrzędnych są scalane z menu głównym.
 
-1. Z **przybornika**, przeciągnij <xref:System.Windows.Forms.MenuStrip> formant na formularzu.
+1. Z **przybornika**przeciągnij kontrolkę <xref:System.Windows.Forms.MenuStrip> na formularz.
 
-2. Dodaj <xref:System.Windows.Forms.ToolStripMenuItem> do <xref:System.Windows.Forms.MenuStrip> kontroli i nadaj mu nazwę **okna**.
+2. Dodaj <xref:System.Windows.Forms.ToolStripMenuItem> do kontrolki <xref:System.Windows.Forms.MenuStrip> i nadaj jej nazwę **okno**.
 
-3. Wybierz <xref:System.Windows.Forms.MenuStrip> kontroli.
+3. Wybierz kontrolkę <xref:System.Windows.Forms.MenuStrip>.
 
-4. W oknie właściwości ustaw wartość <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> właściwość `ToolStripMenuItem1`.
+4. W okno Właściwości ustaw wartość właściwości <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> na `ToolStripMenuItem1`.
 
-5. Dodaj podelement do **okna** element menu, a następnie nazwę podelement **New**.
+5. Dodaj element SubItem do elementu menu **okno** , a następnie nadaj mu nazwę **Nowy**.
 
-6. W oknie dialogowym właściwości kliknij **zdarzenia**.
+6. W okno Właściwości kliknij pozycję **zdarzenia**.
 
-7. Kliknij dwukrotnie <xref:System.Windows.Forms.ToolStripItem.Click> zdarzeń.
+7. Kliknij dwukrotnie zdarzenie <xref:System.Windows.Forms.ToolStripItem.Click>.
 
-     Windows Forms Designer generuje moduł obsługi zdarzenia <xref:System.Windows.Forms.ToolStripItem.Click> zdarzeń.
+     Projektant formularzy systemu Windows generuje procedurę obsługi zdarzeń dla zdarzenia <xref:System.Windows.Forms.ToolStripItem.Click>.
 
-8. Wstaw następujący kod do obsługi zdarzeń.
+8. Wstaw następujący kod do programu obsługi zdarzeń.
 
      [!code-csharp[System.Windows.Forms.ToolStrip.MdiForm#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.MdiForm/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.ToolStrip.MdiForm#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.MdiForm/VB/Form1.vb#2)]
 
-## <a name="add-the-toolstrippanel-control-to-the-toolbox"></a>Dodawanie ToolStripPanel, kontrolka do przybornika
+## <a name="add-the-toolstrippanel-control-to-the-toolbox"></a>Dodaj kontrolkę ToolStripPanel do przybornika
 
-Kiedy używasz <xref:System.Windows.Forms.MenuStrip> formanty z formularza MDI konieczne jest posiadanie <xref:System.Windows.Forms.ToolStripPanel> kontroli. Należy dodać <xref:System.Windows.Forms.ToolStripPanel> kontrolę **przybornika** Tworzenie formularza MDI w programie Windows Forms Designer.
+W przypadku używania formantów <xref:System.Windows.Forms.MenuStrip> z formularzem MDI należy mieć kontrolkę <xref:System.Windows.Forms.ToolStripPanel>. Musisz dodać formant <xref:System.Windows.Forms.ToolStripPanel> do **przybornika** , aby skompilować formularz MDI w Projektant formularzy systemu Windows.
 
-1. Otwórz **przybornika**, a następnie kliknij przycisk **wszystkie formularze Windows** kartę, aby wyświetlić dostępne kontrolki Windows Forms.
+1. Otwórz **Przybornik**, a następnie kliknij kartę **wszystkie Windows Forms** , aby wyświetlić dostępne kontrolki Windows Forms.
 
-2. Kliknij prawym przyciskiem myszy, aby otworzyć menu skrótów i wybierz **wybierz elementy**.
+2. Kliknij prawym przyciskiem myszy, aby otworzyć menu skrótów, a następnie wybierz pozycję **Wybierz elementy**.
 
-3. W **wybierz elementy przybornika** okno dialogowe, przewiń w dół **nazwa** kolumny, aż znajdziesz **ToolStripPanel**.
+3. W oknie dialogowym **Wybierz elementy przybornika** przewiń w dół kolumnę **Nazwa** do momentu znalezienia **ToolStripPanel**.
 
-4. Zaznacz pole wyboru przy **ToolStripPanel**, a następnie kliknij przycisk **OK**.
+4. Zaznacz pole wyboru przez **ToolStripPanel**, a następnie kliknij przycisk **OK**.
 
-     <xref:System.Windows.Forms.ToolStripPanel> Formant jest widoczny w **przybornika**.
+     Kontrolka <xref:System.Windows.Forms.ToolStripPanel> zostanie wyświetlona w **przyborniku**.
 
 ## <a name="create-a-child-form"></a>Tworzenie formularza podrzędnego
 
-W tej procedurze, zdefiniujesz klasę formularza oddzielny podrzędną, który ma swój własny <xref:System.Windows.Forms.MenuStrip> kontroli. Elementy menu dla tego formularza są scalane z tymi z formularza nadrzędnego.
+W tej procedurze zdefiniujesz osobną klasę formularza podrzędnego, która ma własną kontrolkę <xref:System.Windows.Forms.MenuStrip>. Elementy menu dla tego formularza są scalone z formularzami nadrzędnymi.
 
 1. Dodaj nowy formularz o nazwie `ChildForm` do projektu.
 
-     Aby uzyskać więcej informacji, zobacz [jak: Dodawanie formularzy Windows do projektu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/y2xxdce3(v=vs.100)).
+     Aby uzyskać więcej informacji, zobacz [How to: Add Windows Forms to a Project](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/y2xxdce3(v=vs.100)).
 
-2. Z **przybornika**, przeciągnij <xref:System.Windows.Forms.MenuStrip> formant na formularzu podrzędnym.
+2. Z **przybornika**przeciągnij kontrolkę <xref:System.Windows.Forms.MenuStrip> na formularz podrzędny.
 
-3. Kliknij przycisk <xref:System.Windows.Forms.MenuStrip> symbol tagu inteligentnego kontrolki (![symbol tagu inteligentnego](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")), a następnie wybierz pozycję **Edytuj elementy**.
+3. Kliknij symbol akcji projektanta <xref:System.Windows.Forms.MenuStrip> kontrolki (![małą czarną strzałkę](./media/designer-actions-glyph.gif)), a następnie wybierz pozycję **Edytuj elementy**.
 
-4. W **Edytor kolekcji elementów** okna dialogowego Dodaj nowy <xref:System.Windows.Forms.ToolStripMenuItem> o nazwie **ChildMenuItem** do menu podrzędne.
+4. W oknie dialogowym **Edytor kolekcji elementów** dodaj nowe <xref:System.Windows.Forms.ToolStripMenuItem> o nazwie **ChildMenuItem** do menu podrzędnego.
 
      Aby uzyskać więcej informacji, zobacz [Edytor kolekcji elementów ToolStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233643(v=vs.100)).
 
-## <a name="test-the-form"></a>Przetestuj formularz
+## <a name="test-the-form"></a>Testowanie formularza
 
-1. Naciśnij klawisz **F5** Aby skompilować i uruchomić formularz.
+1. Naciśnij klawisz **F5** , aby skompilować i uruchomić formularz.
 
-2. Kliknij przycisk **okna** element menu, aby otworzyć menu, a następnie kliknij przycisk **New**.
+2. Kliknij element menu **okno** , aby otworzyć menu, a następnie kliknij przycisk **Nowy**.
 
-     Nowy formularz podrzędny jest tworzony w obszar klienta MDI formularza. Menu formularz podrzędny jest scalany z menu głównego.
+     W obszarze klienta MDI formularza zostanie utworzony nowy formularz podrzędny. Menu podrzędny formularz zostanie scalone z menu głównym.
 
 3. Zamknij formularz podrzędny.
 
-     Formularz podrzędny menu zostanie usunięty z menu głównego.
+     Menu podrzędne formularza zostanie usunięte z menu głównego.
 
-4. Kliknij przycisk **New** kilka razy.
+4. Kliknij przycisk **nowe** kilka razy.
 
-     Formularze podrzędne są automatycznie wyświetlane w obszarze **okna** element menu, ponieważ <xref:System.Windows.Forms.MenuStrip> kontrolki <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> właściwość jest przypisana.
+     Formularze podrzędne są automatycznie wyświetlane w elemencie menu **okna** , ponieważ właściwość <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> formantu <xref:System.Windows.Forms.MenuStrip> jest przypisana.
 
-## <a name="add-toolstrip-support"></a>Dodanie obsługi elementu ToolStrip
+## <a name="add-toolstrip-support"></a>Dodaj obsługę elementu ToolStrip
 
-W ramach tej procedury dodasz cztery <xref:System.Windows.Forms.ToolStrip> formantów do formularza nadrzędnego MDI. Każdy <xref:System.Windows.Forms.ToolStrip> formant jest dodawany wewnątrz <xref:System.Windows.Forms.ToolStripPanel> formant, który jest zadokowany do krawędzi formularza.
+W ramach tej procedury dodasz cztery <xref:System.Windows.Forms.ToolStrip> kontrolki do formularza nadrzędnego MDI. Każda kontrolka <xref:System.Windows.Forms.ToolStrip> jest dodawana wewnątrz kontrolki <xref:System.Windows.Forms.ToolStripPanel>, która jest zadokowana do krawędzi formularza.
 
-1. Z **przybornika**, przeciągnij <xref:System.Windows.Forms.ToolStripPanel> formant na formularzu.
+1. Z **przybornika**przeciągnij kontrolkę <xref:System.Windows.Forms.ToolStripPanel> na formularz.
 
-2. Za pomocą <xref:System.Windows.Forms.ToolStripPanel> zaznaczony formant, kliknij dwukrotnie <xref:System.Windows.Forms.ToolStrip> w kontrolce **przybornika**.
+2. Po wybraniu kontrolki <xref:System.Windows.Forms.ToolStripPanel> kliknij dwukrotnie kontrolkę <xref:System.Windows.Forms.ToolStrip> w **przyborniku**.
 
-     A <xref:System.Windows.Forms.ToolStrip> formant zostanie utworzony w <xref:System.Windows.Forms.ToolStripPanel> kontroli.
+     Formant <xref:System.Windows.Forms.ToolStrip> jest tworzony w kontrolce <xref:System.Windows.Forms.ToolStripPanel>.
 
-3. Wybierz <xref:System.Windows.Forms.ToolStripPanel> kontroli.
+3. Wybierz kontrolkę <xref:System.Windows.Forms.ToolStripPanel>.
 
-4. W oknie Właściwości zmień wartość kontrolki <xref:System.Windows.Forms.Control.Dock%2A> właściwość <xref:System.Windows.Forms.DockStyle.Left>.
+4. W okno Właściwości zmień wartość właściwości <xref:System.Windows.Forms.Control.Dock%2A> kontrolki na <xref:System.Windows.Forms.DockStyle.Left>.
 
-     <xref:System.Windows.Forms.ToolStripPanel> Kontrolować doków do formularza, pod menu głównego po lewej stronie. Obszar klienta MDI dopasowuje się do rozmiaru <xref:System.Windows.Forms.ToolStripPanel> kontroli.
+     Formant <xref:System.Windows.Forms.ToolStripPanel> jest zadokowany do lewej strony formularza, pod menu głównym. Rozmiar obszaru klienta MDI dopasowuje się do kontrolki <xref:System.Windows.Forms.ToolStripPanel>.
 
 5. Powtórz kroki od 1 do 4.
 
-     Dokowanie nowy <xref:System.Windows.Forms.ToolStripPanel> kontrolki w górnej części formularza.
+     Zadokuj nową kontrolkę <xref:System.Windows.Forms.ToolStripPanel> w górnej części formularza.
 
-     <xref:System.Windows.Forms.ToolStripPanel> Kontroli jest zadokowany pod menu głównego, ale po prawej stronie pierwszej <xref:System.Windows.Forms.ToolStripPanel> kontroli. W tym kroku przedstawiono znaczenie porządek poprawnie pozycjonowania <xref:System.Windows.Forms.ToolStripPanel> kontrolki.
+     Kontrolka <xref:System.Windows.Forms.ToolStripPanel> jest zadokowana pod menu głównym, ale z prawej strony pierwszej kontrolki <xref:System.Windows.Forms.ToolStripPanel>. Ten krok przedstawia ważność porządku osi z w prawidłowym rozmieszczeniem <xref:System.Windows.Forms.ToolStripPanel> kontrolek.
 
-6. Powtórz kroki od 1 do 4 dla dwóch więcej <xref:System.Windows.Forms.ToolStripPanel> kontrolki.
+6. Powtórz kroki od 1 do 4 dla dwóch kolejnych kontrolek <xref:System.Windows.Forms.ToolStripPanel>.
 
-     Dokowanie nowy <xref:System.Windows.Forms.ToolStripPanel> kontrolek w prawo i w dolnej części formularza.
+     Zadokuj nowe kontrolki <xref:System.Windows.Forms.ToolStripPanel> w prawo i u dołu formularza.
 
-## <a name="arrange-toolstrippanel-controls-by-z-order"></a>Rozmieść według porządku osi Z pomocą kontrolek ToolStripPanel
+## <a name="arrange-toolstrippanel-controls-by-z-order"></a>Rozmieść kontrolki ToolStripPanel według kolejności Z
 
-Położenie zadokowanego <xref:System.Windows.Forms.ToolStripPanel> kontrolkę w formularzu MDI jest określana przez położenie formantu w porządku osi z. Łatwo można rozmieścić porządek formantów w okno konspektu dokumentu.
+Pozycja formantu <xref:System.Windows.Forms.ToolStripPanel> zadokowanego w formularzu MDI jest określana na podstawie położenia kontrolki w kolejności z. Można łatwo rozmieścić porządek osi z kontrolek w oknie konspektu dokumentu.
 
-1. W **widoku** menu, kliknij przycisk **Windows inne**, a następnie kliknij przycisk **konspekt dokumentu**.
+1. W menu **Widok** kliknij pozycję **inne okna**, a następnie kliknij pozycję **Konspekt dokumentu**.
 
-     Rozmieszczenie swoje <xref:System.Windows.Forms.ToolStripPanel> kontrolek z poprzedniej procedury jest niestandardowy. Jest to spowodowane porządku osi jest nieprawidłowy. Okno konspektu dokumentu do zmiany kolejności z formantów.
+     Układ formantów <xref:System.Windows.Forms.ToolStripPanel> z poprzedniej procedury jest niestandardowy. Wynika to z faktu, że porządek osi z jest niepoprawny. Użyj okna Konspekt dokumentu, aby zmienić porządek osi z kontrolek.
 
-2. W oknie konspekt dokumentu wybierz **ToolStripPanel4**.
+2. W oknie Konspekt dokumentu wybierz pozycję **ToolStripPanel4**.
 
-3. Kliknij przycisk strzałki w dół wielokrotnie, dopóki **ToolStripPanel4** znajduje się w dolnej części listy.
+3. Klikaj ponownie przycisk strzałki w dół, aż **ToolStripPanel4** znajduje się w dolnej części listy.
 
-     **ToolStripPanel4** kontroli jest zadokowana do dolnej części formularza, poniżej innych kontrolek.
+     Formant **ToolStripPanel4** jest zadokowany w dolnej części formularza, pod innymi kontrolkami.
 
-4. Wybierz **ToolStripPanel2**.
+4. Wybierz pozycję **ToolStripPanel2**.
 
-5. Kliknij jeden raz przycisk strzałki w dół, aby położenie formantu trzeci na liście.
+5. Kliknij przycisk strzałki w dół, aby umieścić formant trzeci na liście.
 
-     **ToolStripPanel2** kontroli jest zadokowany do górnej części formularza, pod menu głównego i nowszych innych kontrolek.
+     Kontrolka **ToolStripPanel2** jest zadokowana w górnej części formularza, pod menu głównym i nad innymi kontrolkami.
 
-6. Wybierz różne formanty w **konspekt dokumentu** okna i przenoszenia ich do różnych pozycji w porządku osi z. Należy pamiętać, efekt porządku osi z o rozmieszczaniu zadokowanych formantów. Użyj klawiszy CTRL-Z lub **Cofnij** na **Edytuj** menu, aby cofnąć zmiany.
+6. Wybierz różne kontrolki w oknie **konspektu dokumentu** i przenieś je do różnych pozycji w kolejności z. Zwróć uwagę na efekt porządku osi z na rozłożeniu zadokowanych kontrolek. Aby cofnąć zmiany, użyj klawiszy CTRL-Z lub **Cofnij** w menu **Edycja** .
 
 ## <a name="checkpoint---test-your-form"></a>Punkt kontrolny — testowanie formularza
 
-1. Naciśnij klawisz **F5** Aby skompilować i uruchomić formularz.
+1. Naciśnij klawisz **F5** , aby skompilować i uruchomić formularz.
 
-2. Kliknij przycisk uchwyt zmiany z <xref:System.Windows.Forms.ToolStrip> kontroli i przeciągnij formant w różnych miejscach na formularzu.
+2. Kliknij uchwyt kontrolki <xref:System.Windows.Forms.ToolStrip> i przeciągnij formant do różnych pozycji w formularzu.
 
-     Można przeciągnąć <xref:System.Windows.Forms.ToolStrip> formant z jednej <xref:System.Windows.Forms.ToolStripPanel> formantu do innego.
+     Kontrolkę <xref:System.Windows.Forms.ToolStrip> można przeciągnąć z jednej kontrolki <xref:System.Windows.Forms.ToolStripPanel> do innej.
 
 ## <a name="next-steps"></a>Następne kroki
 
-W tym przewodniku zostały utworzone za pomocą formularza nadrzędnego MDI <xref:System.Windows.Forms.ToolStrip> kontrolek i scalanie menu. Możesz użyć <xref:System.Windows.Forms.ToolStrip> rodziny formantów do innych celów:
+W tym instruktażu utworzono formularz nadrzędny MDI z kontrolkami <xref:System.Windows.Forms.ToolStrip> i scalaniem menu. W wielu innych celach można użyć <xref:System.Windows.Forms.ToolStrip>ej rodziny formantów:
 
-- Tworzenie menu skrótów dla formantów z <xref:System.Windows.Forms.ContextMenuStrip>. Aby uzyskać więcej informacji, zobacz [— informacje o składniku ContextMenu](contextmenu-component-overview-windows-forms.md).
+- Utwórz menu skrótów dla kontrolek z <xref:System.Windows.Forms.ContextMenuStrip>. Aby uzyskać więcej informacji, zobacz temat [Omówienie składnika](contextmenu-component-overview-windows-forms.md)usługi.
 
-- Formularz utworzony za pomocą automatycznie wypełnione standardowe menu. Aby uzyskać więcej informacji, zobacz [instruktażu: Zapewnianie elementów Menu standardowego dla formularza](walkthrough-providing-standard-menu-items-to-a-form.md).
+- Utworzono formularz z automatycznie wypełnionym menu standardowym. Aby uzyskać więcej informacji, zobacz [Przewodnik: zapewnianie elementów menu standardowego w formularzu](walkthrough-providing-standard-menu-items-to-a-form.md).
 
-- Nadaj swojej <xref:System.Windows.Forms.ToolStrip> profesjonalny wygląd kontrolki. Aby uzyskać więcej informacji, zobacz [jak: Ustawienie modułu renderowania ToolStrip dla aplikacji](how-to-set-the-toolstrip-renderer-for-an-application.md).
+- Nadaj <xref:System.Windows.Forms.ToolStrip> kontrolę nad profesjonalnym wyglądem. Aby uzyskać więcej informacji, zobacz [jak to zrobić: Ustawianie modułu renderowania ToolStrip dla aplikacji](how-to-set-the-toolstrip-renderer-for-an-application.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.StatusStrip>
-- [Instrukcje: Tworzenie formularzy nadrzędnych MDI](../advanced/how-to-create-mdi-parent-forms.md)
-- [Instrukcje: Tworzenie formularzy podrzędnych MDI](../advanced/how-to-create-mdi-child-forms.md)
-- [Instrukcje: Wstawianie elementu MenuStrip do Menu rozwijanego MDI](how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md)
+- [Instrukcje: tworzenie formularzy nadrzędnych MDI](../advanced/how-to-create-mdi-parent-forms.md)
+- [Instrukcje: tworzenie formularzy podrzędnych MDI](../advanced/how-to-create-mdi-child-forms.md)
+- [Instrukcje: wstawianie kontrolki MenuStrip do menu rozwijanego MDI](how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md)
 - [ToolStrip, kontrolka](toolstrip-control-windows-forms.md)

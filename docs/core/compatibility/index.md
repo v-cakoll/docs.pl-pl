@@ -2,12 +2,12 @@
 title: Typy istotnych zmian
 description: Dowiedz się, jak platforma .NET Core próbuje zachować zgodność dla deweloperów w różnych wersjach programu .NET i jakiego rodzaju zmiana jest traktowana jako istotna zmiana.
 ms.date: 06/10/2019
-ms.openlocfilehash: 1c5790e39754b91aacbde9e87ed99f9dcc36ce9f
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: bf0cc35d69e6bb501640455604a99a1f48962c4a
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77092983"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628595"
 ---
 # <a name="changes-that-affect-compatibility"></a>Zmiany wpływające na zgodność
 
@@ -49,7 +49,7 @@ Zmiany w tej kategorii modyfikują publiczną powierzchnię typu. Większość z
 
   *Stary* zestaw musi być oznaczony <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>, który wskazuje na nowy zestaw.
 
-- ✔️ **dozwolone: zmiana typu [struktury](../../csharp/language-reference/keywords/struct.md) na typ `readonly struct`**
+- ✔️ **dozwolone: zmiana typu [struktury](../../csharp/language-reference/builtin-types/struct.md) na typ `readonly struct`**
 
   Zmiana typu `readonly struct` na typ `struct` jest niedozwolona.
 
@@ -77,17 +77,17 @@ Zmiany w tej kategorii modyfikują publiczną powierzchnię typu. Większość z
 
   Istnieje jeden wyjątek dla reguły usuwania interfejsu: można dodać implementację interfejsu, która pochodzi od usuniętego interfejsu. Na przykład można usunąć <xref:System.IDisposable>, jeśli typ lub interfejs implementuje teraz <xref:System.ComponentModel.IComponent>, który implementuje <xref:System.IDisposable>.
 
-- niedozwolone ❌ **: zmiana typu `readonly struct` na typ [struktury](../../csharp/language-reference/keywords/struct.md)**
+- niedozwolone ❌ **: zmiana typu `readonly struct` na typ [struktury](../../csharp/language-reference/builtin-types/struct.md)**
 
   Istnieje jednak możliwość zmiany typu `struct` typu `readonly struct`.
 
-- niedozwolone ❌ **: zmiana typu [struktury](../../csharp/language-reference/keywords/struct.md) na typ `ref struct` i odwrotnie**
+- niedozwolone ❌ **: zmiana typu [struktury](../../csharp/language-reference/builtin-types/struct.md) na typ `ref struct` i odwrotnie**
 
 - niedozwolone ❌ **: zmniejszanie widoczności typu**
 
    Jednak zwiększenie widoczności typu jest dozwolone.
 
-### <a name="members"></a>Members
+### <a name="members"></a>Elementy członkowskie
 
 - ✔️ **dozwolone: rozszerzanie widoczności elementu członkowskiego, który nie jest [wirtualny](../../csharp/language-reference/keywords/sealed.md)**
 
@@ -300,7 +300,7 @@ Zmiany w tej kategorii modyfikują publiczną powierzchnię typu. Większość z
 
 - ✔️ **dozwolone: Dodawanie [parametrów](../../csharp/language-reference/keywords/params.md) do parametru**
 
-- ❌ **niedozwolone: zmiana [struktury](../../csharp/language-reference/keywords/struct.md) na [klasę](../../csharp/language-reference/keywords/class.md) i odwrotnie**
+- ❌ **niedozwolone: zmiana [struktury](../../csharp/language-reference/builtin-types/struct.md) na [klasę](../../csharp/language-reference/keywords/class.md) i odwrotnie**
 
 - niedozwolone ❌ **: Dodawanie słowa kluczowego [Checked](../../csharp/language-reference/keywords/virtual.md) do bloku kodu**
 

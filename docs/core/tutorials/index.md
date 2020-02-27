@@ -4,12 +4,12 @@ description: Postępuj zgodnie z samouczkami dotyczącymi uczenia się platformy
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
-ms.openlocfilehash: e9fc5544904fc5a1304dcce135e01b1895d3446b
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 84784787465bec43cc460d34ca84e4baa5a15d7d
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215184"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625937"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Poznaj narzędzia platformy .NET Core i zestaw .NET Core SDK, korzystając z tych samouczków
 
@@ -48,5 +48,6 @@ Poniższe samouczki są dostępne do uczenia się w programie .NET Core.
 - [Tworzenie bibliotek za pomocą narzędzi międzyplatformowych](libraries.md)
 - [Hostowanie platformy .NET Core z kodu natywnego](netcore-hosting.md)
 - [Tworzenie szablonów dla interfejsu wiersza polecenia](cli-templates-create-item-template.md)
+- [Tworzenie i używanie narzędzi dla interfejsu wiersza polecenia](../tools/global-tools-how-to-create.md)
 
 Samouczki dotyczące projektowania ASP.NET Core aplikacji sieci Web znajdują się w [dokumentacji ASP.NET Core](/aspnet/core/).

@@ -10,12 +10,12 @@ ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 3b88f64fca8d3f11308f1cbfde97de2e6c2f22cc
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 0b68a70b55cbf03d480fd388a637a4caf78b6eaa
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76740216"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628803"
 ---
 # <a name="walkthrough-arrange-controls-on-windows-forms-using-snaplines"></a>Przewodnik: porządkowanie formantów na Windows Forms przy użyciu linii wyrównania
 
@@ -25,7 +25,7 @@ Linii wyrównania pokazują precyzyjną lokalizację kontrolek z innymi kontrolk
 
 Linii wyrównania ułatwiają wyrównywanie kontrolek w celu wyraźnego, profesjonalnego wyglądu i zachowania (wyglądu i działania).
 
-## <a name="create-the-project"></a>Utwórz projekt
+## <a name="create-the-project"></a>Tworzenie projektu
 
 1. W programie Visual Studio Utwórz projekt aplikacji oparty na systemie Windows o nazwie "SnaplineExample".
 
@@ -124,7 +124,7 @@ Możesz użyć linii wyrównania, aby wyrównać zgrupowane kontrolki, a także 
 
 ## <a name="align-a-label-to-a-controls-text"></a>Wyrównywanie etykiety do tekstu kontrolki
 
-1. Przeciągnij kontrolkę <xref:System.Windows.Forms.TextBox> z **przybornika** na formularz. Gdy porzucasz kontrolkę <xref:System.Windows.Forms.TextBox> na formularzu, kliknij symbol inteligentny i wybierz opcję **Ustaw tekst na TextBox1** . Aby uzyskać szczegółowe informacje, zobacz [Przewodnik: wykonywanie typowych zadań przy użyciu tagów inteligentnych w kontrolkach Windows Forms](performing-common-tasks-using-smart-tags-on-wf-controls.md).
+1. Przeciągnij kontrolkę <xref:System.Windows.Forms.TextBox> z **przybornika** na formularz. Gdy porzucasz kontrolkę <xref:System.Windows.Forms.TextBox> na formularzu, kliknij symbol inteligentny i wybierz opcję **Ustaw tekst na TextBox1** . Aby uzyskać szczegółowe informacje, zobacz [Przewodnik: wykonywanie typowych zadań przy użyciu akcji projektanta](perform-common-tasks-design-actions.md).
 
 2. Przeciągnij kontrolkę <xref:System.Windows.Forms.Label> z **przybornika** na formularz.
 
@@ -188,7 +188,7 @@ Linii wyrównania oferują intuicyjny sposób wyrównywania kontrolek w formular
 
 - Utwórz kolumnę formantów <xref:System.Windows.Forms.TextBox> i odpowiadającą jej kolumnę formantów <xref:System.Windows.Forms.Label>. Ustaw wartość właściwości <xref:System.Windows.Forms.Control.AutoSize%2A> formantów <xref:System.Windows.Forms.Label> na `true`. Użyj linii wyrównania, aby przenieść kontrolki <xref:System.Windows.Forms.Label> tak, aby ich wyświetlany tekst był wyrównany do tekstu w kontrolkach <xref:System.Windows.Forms.TextBox>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Windows.Forms.Design.Behavior.SnapLine>
 - [Przewodnik: rozmieszczanie kontrolek w formularzach Windows Forms za pomocą kontrolki FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)

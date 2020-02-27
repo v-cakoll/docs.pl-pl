@@ -2,12 +2,12 @@
 title: Używanie klas wyliczeń zamiast typów wyliczeń
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Wyczyść, w jaki sposób można używać klas wyliczenia, zamiast wyliczeniowych, w celu rozwiązania niektórych ograniczeń dotyczących tego ostatniego.
 ms.date: 10/08/2018
-ms.openlocfilehash: 6752adb28b1bd0982c66fa2d021b04b999447c6e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 82bd80d19b3b73eb2f45ede8cc7ad4593c688277
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337680"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628465"
 ---
 # <a name="use-enumeration-classes-instead-of-enum-types"></a>Użyj klas wyliczenia zamiast typów wyliczeniowych
 
@@ -82,12 +82,6 @@ public class CardType : Enumeration
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **Wyliczenia to akcja — aktualizacja** \
-  <https://www.planetgeek.ch/2009/07/01/enums-are-evil/>
-
-- **Daniel. Jak są rozłożone choroby i jak można ją wyznaczyć** \
-  <https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/>
-
 - **Jimmy Bogard. Klasy wyliczeniowe** \
   <https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/>
 
@@ -104,5 +98,5 @@ public class CardType : Enumeration
   <https://www.nuget.org/packages/Ardalis.SmartEnum/>
 
 >[!div class="step-by-step"]
->[Poprzedni](implement-value-objects.md)
->[Następny](domain-model-layer-validations.md)
+>[Poprzednie](implement-value-objects.md)
+>[dalej](domain-model-layer-validations.md)

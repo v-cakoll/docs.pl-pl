@@ -5,12 +5,12 @@ helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: c2d4fbd2f9e8a343a81d88bacc54a53335e170ec
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: e9b2ab32fb79b80649305843abdd935b8c582bc0
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76867389"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628218"
 ---
 # <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Jak zaimplementować klasę uproszczoną z zaimplementowanymi właściwościami (C# Przewodnik programowania)
 
@@ -145,8 +145,8 @@ public class Program
 
 Kompilator tworzy pola kopii zapasowej dla każdej automatycznie zaimplementowanej właściwości. Pola są niedostępne bezpośrednio z kodu źródłowego.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Właściwości](./properties.md)
-- [struct](../../language-reference/keywords/struct.md)
+- [struct](../../language-reference/builtin-types/struct.md)
 - [Inicjatory obiektów i kolekcji](./object-and-collection-initializers.md)

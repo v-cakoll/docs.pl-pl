@@ -6,12 +6,12 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 597bfd2c16f6289a2bcb931c3896918dcb6d9a4d
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 26c168040b0fa5e975e64a7518b0d0bf250c4711
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094140"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628127"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework Przewodnik wdrażania dla deweloperów
 Ten temat zawiera informacje dla deweloperów, którzy chcą zainstalować dowolną wersję .NET Framework z .NET Framework 4,5, aby [!INCLUDE[net_current](../../../includes/net-current-version.md)] z ich aplikacjami.
@@ -134,21 +134,7 @@ InstallAware kompiluje aplikacje systemu Windows (APPX), Instalator Windows (MSI
 
 ### <a name="installshield-deployment"></a>Wdrożenie InstallShield
 
-W programie Visual Studio, aby wybrać wdrożenie InstallShield i dodać zależność od .NET Framework:
-
-1. Na pasku menu programu Visual Studio wybierz kolejno opcje **plik**, **Nowy**, **projekt**.
-
-2. W lewym okienku okna dialogowego **Nowy projekt** wybierz kolejno pozycje **Inne typy projektów**, **Instalacja i wdrożenie**, **InstallShield Le**.
-
-3. W polu **Nazwa** wpisz nazwę projektu, a następnie wybierz przycisk **OK**.
-
-4. Jeśli tworzysz projekt instalacji i wdrożenia po raz pierwszy, wybierz opcję **Przejdź do InstallShield** lub **Włącz InstallShield Limited Edition** , aby pobrać InstallShield Limited Edition dla używanej wersji programu Microsoft Visual Studio. Uruchom ponownie program Visual Studio.
-
-5. Przejdź do kreatora **Asystenta projektu** i wybierz pozycję **pliki aplikacji** , aby dodać dane wyjściowe projektu. Można skonfigurować inne atrybuty projektu za pomocą tego kreatora.
-
-6. Przejdź do pozycji **wymagania dotyczące instalacji** i wybierz systemy operacyjne oraz wersję .NET Framework chcesz zainstalować.
-
-7. Otwórz menu skrótów dla projektu Instalatora i wybierz polecenie **Kompiluj**.
+Program InstallShield kompiluje pakiety aplikacji systemu Windows (MSIX, APPX), Instalator Windows pakiety (MSI) i instalatorów kodu natywnego (EXE). Program InstallShield oferuje także integrację z programem Visual Studio. Aby uzyskać więcej informacji, zobacz witrynę sieci Web [InstallShield](https://www.flexerasoftware.com/install/products/installshield.html) .
 
 <a name="wix"></a>
 
@@ -383,13 +369,13 @@ W poniższej tabeli wymieniono pakiety językowe .NET Framework dostępne dla .N
 |1025|Arabski — Arabia Saudyjska|ty|
 |1028|Chiński (tradycyjny)|zh-Hant|
 |1029|Czeski|Rejestr|
-|1030|Duński|da|
+|1030|duński|da|
 |1031|Niemiecki (Niemcy)|Ukryj|
-|1032|Grecki|el|
-|1035|Fiński|fi|
+|1032|grecki|el|
+|1035|fiński|fi|
 |1036|Francuski (Francja)|fr|
 |1037|Hebrajski|Przewodniczący|
-|1038|Węgierski|hu|
+|1038|węgierski|hu|
 |1040|Włoski (Włochy)|go|
 |1041|Japoński|ja|
 |1042|Koreański|ko|
@@ -398,7 +384,7 @@ W poniższej tabeli wymieniono pakiety językowe .NET Framework dostępne dla .N
 |1045|Polski|pl|
 |1046|Portugalski (Brazylia)|pt-BR|
 |1049|Rosyjski|ru|
-|1053|Szwedzki|sv|
+|1053|szwedzki|sv|
 |1055|Turecki|zdawczy|
 |2052|Chiński (uproszczony)|zh-Hans|
 |2070|Portugalski (Portugalia)|pt-PT|

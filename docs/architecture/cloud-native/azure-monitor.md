@@ -2,12 +2,12 @@
 title: Azure Monitor
 description: Korzystanie z Azure Monitor w celu uzyskania wglądu w system działa.
 ms.date: 02/05/2020
-ms.openlocfilehash: 961331011db4e59583438a2dbdf366bbe0e34261
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 87ffca186346c3356c0277809d1d67145d1dd17b
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77448930"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628036"
 ---
 # <a name="azure-monitor"></a>Azure Monitor
 
@@ -75,10 +75,10 @@ W miarę identyfikowania typowych przyczyn alertów można rozszerzyć alerty z 
 
 Azure Monitor automatycznie wykorzystuje Uczenie maszynowe do zrozumienia normalnych parametrów operacyjnych wdrożonych aplikacji. Dzięki temu można wykryć usługi, które działają poza ich normalnymi parametrami. Na przykład typowy ruch w dniu tygodnia w witrynie może wynosić 10 000 żądań na minutę. A następnie w danym tygodniu nagle liczba żądań trafi o wysoce nietypowe żądania 20 000 na minutę. [Inteligentne wykrywanie](https://docs.microsoft.com/azure/azure-monitor/app/proactive-diagnostics) będzie zauważyć takie odróżnienie od normy i wyzwolenie alertu. W tym samym czasie analiza trendu jest na tyle inteligentna, aby uniknąć zapłonu fałszywych wartości dodatnich, gdy oczekiwane jest obciążenie ruchem.
 
-## <a name="references"></a>Odwołania
+## <a name="references"></a>Dokumentacja
 
 - [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview)
-- [Inteligentne Alert Management — MS zapłon — wideo](https://oxfordcomputergroup.com/resourceso365-security-native-cloud-authentication/)
+- [Inteligentne Alert Management — MS zapłon — wideo](https://oxfordcomputergroup.com/resources/o365-security-native-cloud-authentication/)
 
 >[!div class="step-by-step"]
 >[Poprzednie](monitoring-azure-kubernetes.md)

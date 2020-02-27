@@ -4,16 +4,16 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-ms.openlocfilehash: 665c99302887c51c69b4d818619dd6bedd43b644
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 46d4f77a4a490b2acdb5da20b9a477f27c38d410
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714936"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628244"
 ---
 # <a name="fields-c-programming-guide"></a>Pola (Przewodnik programowania w języku C#)
 
-*Pole* jest zmienną dowolnego typu, który jest zadeklarowany bezpośrednio w [klasie](../../language-reference/keywords/class.md) lub [strukturze](../../language-reference/keywords/struct.md). Pola są *elementami członkowskimi* typu zawierającego.
+*Pole* jest zmienną dowolnego typu, który jest zadeklarowany bezpośrednio w [klasie](../../language-reference/keywords/class.md) lub [strukturze](../../language-reference/builtin-types/struct.md). Pola są *elementami członkowskimi* typu zawierającego.
 
 Klasa lub struktura może mieć pola wystąpienia, pola statyczne lub oba te elementy. Pola wystąpienia są specyficzne dla wystąpienia typu. Jeśli masz klasę T z polem wystąpienia F, możesz utworzyć dwa obiekty typu T i zmodyfikować wartość F w każdym obiekcie bez wpływu na wartość w innym obiekcie. Z kolei pole statyczne należy do samej klasy i jest współużytkowane przez wszystkie wystąpienia tej klasy. Możesz uzyskać dostęp do pola statycznego tylko przy użyciu nazwy klasy. Jeśli uzyskujesz dostęp do pola statycznego za pomocą nazwy wystąpienia, zostanie wyświetlony błąd czasu kompilacji [CS0176](../../misc/cs0176.md) .
 
@@ -48,7 +48,7 @@ Pole można zadeklarować jako [tylko do odczytu](../../language-reference/keywo
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Przewodnik programowania w języku C#](../index.md)
 - [Klasy i struktury](./index.md)

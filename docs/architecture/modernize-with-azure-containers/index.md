@@ -2,24 +2,24 @@
 title: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows (wersja 2)
 description: Dowiedz się, jak Podnieś i przenieść istniejące aplikacje do chmury platformy Azure i kontenerów z tą książką elektroniczną.
 ms.date: 04/28/2018
-ms.openlocfilehash: fa20e606c9a1364fbdf8c9a58c8703420d9e65a9
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9439de84dd46ac3153d951378764d10184c33a52
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714569"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628455"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows (wersja 2)
 
 ![Obraz okładki przewodnika dotyczącego modernizacji aplikacji .NET.](./media/index/web-application-guide-cover-image.png)
 
-OPUBLIKOWANA PRZEZ  
+OPUBLIKOWANO PRZEZ  
 Microsoft Press i Microsoft DevDiv  
 Działy firmy Microsoft Corporation  
 One Microsoft Way  
 Redmond, Waszyngton 98052-6399  
 
-Prawa autorskie © 2018 przez firmę Microsoft Corporation  
+Prawa autorskie © 2020 przez firmę Microsoft Corporation  
 
 Wszelkie prawa zastrzeżone. Żadna część zawartości tej księgi nie może zostać odgotowana w żadnej formie ani za pomocą jakichkolwiek środków bez zgody na wydawcę.
 
@@ -29,7 +29,7 @@ Jeśli masz pytania związane z tą książką, Wyślij wiadomość e-mail na ad
 
 Ta książka jest świadczona w postaci "AS-IS" i zawiera widoki i opinie autora. Widoki, opinie i informacje wyrażone w tej książce, w tym adresy URL i inne odwołania do witryn internetowych, mogą ulec zmianie bez powiadomienia.
 
-Niektóre przedstawione przykłady są fikcyjne i pełnią wyłącznie rolę ilustracyjną. Skojarzenie lub powiązanie z rzeczywistością nie jest zamierzone ani nie powinno być wnioskowane.
+Niektóre przykłady opisane w niniejszym dokumencie są dostępne tylko dla ilustracji i są fikcyjne. Żadne prawdziwe skojarzenie lub połączenie nie jest zamierzone ani nie powinno zostać wywnioskowane.
 
 Firma Microsoft i znaki towarowe wymienione w <https://www.microsoft.com> na stronie "znaki towarowe" są znakami towarowymi grupy firm Microsoft. Wszystkie inne znaczniki są własnością odpowiednich właścicieli.
 
@@ -89,7 +89,7 @@ Trzeci poziom dojrzałości jest ostatecznym celem w chmurze, ale jest on opcjon
 
 W tabeli 1-1 opisano główne zalety i przyczyny wyboru każdej metody migracji lub modernizacji.
 
-| **Infrastruktura chmury — gotowe** <br /> *Unieś i Przenieś* | **Zoptymalizowane pod kątem chmury** <br /> *Modernizowanie* | **Cloud-Native** <br /> *Modernizacja, ponowne tworzenie architektury i ponowne zapisywanie* |
+| **Infrastruktura chmury — gotowe** <br /> *Unieś i Przenieś* | **Zoptymalizowane pod kątem chmury** <br /> *Modernizowanie* | **Chmura — natywna** <br /> *Modernizacja, ponowne tworzenie architektury i ponowne zapisywanie* |
 |---|---|---|
 | **Obiekt docelowy obliczeń aplikacji** |
 | Aplikacje wdrożone na maszynach wirtualnych na platformie Azure | Aplikacje monolityczne lub N-warstwowe wdrożone w celu Azure App Service, Azure Container Instance (ACI), maszyn wirtualnych z kontenerami lub AKS (usługa Azure Kubernetes Service) | Mikrousługi z kontenerami w usłudze Azure Kubernetes Service (AKS) i/lub mikrousługi bezserwerowe oparte na Azure Functions. |
@@ -202,4 +202,4 @@ Te przykładowe aplikacje mają drugą wersję, z nowoczesnym kodem i które są
 Ten przewodnik został zapisany, aby ułatwić zrozumienie opcji ulepszania i modernizacji istniejących aplikacji sieci Web platformy .NET. Przewodnik i powiązane przykładowe aplikacje są rozwijane. Chętnie poznamy Twoją opinię! Jeśli masz komentarze dotyczące tego, jak ten przewodnik może być bardziej przydatny, wyślij je do [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book).
 
 >[!div class="step-by-step"]
->[Next](lift-and-shift-existing-apps-azure-iaas.md) <!-- Next Chapter -->
+>[Dalej](lift-and-shift-existing-apps-azure-iaas.md) <!-- Next Chapter -->

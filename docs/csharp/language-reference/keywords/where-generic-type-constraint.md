@@ -6,12 +6,12 @@ f1_keywords:
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: 19bf7682916336173ed93619fb6f0ff1242a1b30
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d236420c5019f7529b729155b13df50807dc1dab
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712809"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626714"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where — Ograniczenie typu ogólnego (odwołanie w C#)
 
@@ -32,7 +32,7 @@ Klauzula `where` może określać, że typ jest `class` lub `struct`. Ograniczen
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#3)]
 
-Klauzula `where` może zawierać ograniczenie `notnull`. Ograniczenie `notnull` ogranicza parametr typu do typów niedopuszczających wartości null. Ten typ może być typem [wartości](struct.md) lub typem referencyjnym, który nie dopuszcza wartości null. Ograniczenie `notnull` jest dostępne począwszy od C# 8,0 dla kodu skompilowanego w [kontekście`nullable enable`](../../nullable-references.md#nullable-contexts). W przeciwieństwie do innych ograniczeń, jeśli argument typu narusza ograniczenie `notnull`, kompilator generuje ostrzeżenie, a nie błąd. Ostrzeżenia są generowane tylko w kontekście `nullable enable`. 
+Klauzula `where` może zawierać ograniczenie `notnull`. Ograniczenie `notnull` ogranicza parametr typu do typów niedopuszczających wartości null. Ten typ może być typem [wartości](../builtin-types/value-types.md) lub typem referencyjnym, który nie dopuszcza wartości null. Ograniczenie `notnull` jest dostępne począwszy od C# 8,0 dla kodu skompilowanego w [kontekście`nullable enable`](../../nullable-references.md#nullable-contexts). W przeciwieństwie do innych ograniczeń, jeśli argument typu narusza ograniczenie `notnull`, kompilator generuje ostrzeżenie, a nie błąd. Ostrzeżenia są generowane tylko w kontekście `nullable enable`.
 
 > [!IMPORTANT]
 > Deklaracje ogólne zawierające ograniczenie `notnull` mogą być używane w kontekście dopuszczającym wartość null, ale kompilator nie wymusza ograniczenia.
@@ -69,9 +69,9 @@ Aby uzyskać szczegółowe informacje na temat składni i użycia ograniczeń, z
 
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Dokumentacja języka C#](../index.md)
+- [C#Odwoła](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Wprowadzenie do typów ogólnych](../../programming-guide/generics/index.md)
 - [new, ograniczenie](./new-constraint.md)

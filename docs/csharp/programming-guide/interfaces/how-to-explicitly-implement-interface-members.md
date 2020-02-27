@@ -4,20 +4,20 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [C#], explicitly implementing
 ms.assetid: 514cde76-f981-474e-8b40-9493619f899c
-ms.openlocfilehash: d006db2a7501a3273f5cd11e82bc589b21e1ce9f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: dff094aca237ed6146bd9b52813c40549bc99b9b
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712094"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77627788"
 ---
 # <a name="how-to-explicitly-implement-interface-members-c-programming-guide"></a>Jak jawnie zaimplementować członków interfejsu (C# Przewodnik programowania)
-Ten przykład deklaruje [interfejs](../../language-reference/keywords/interface.md), `IDimensions`i klasę `Box`, która jawnie implementuje elementy członkowskie interfejsu `getLength` i `getWidth`. Dostęp do członków uzyskuje się za pomocą wystąpienia interfejsu `dimensions`.  
+Ten przykład deklaruje [interfejs](../../language-reference/keywords/interface.md), `IDimensions`i klasę `Box`, która jawnie implementuje elementy członkowskie interfejsu `GetLength` i `GetWidth`. Dostęp do członków uzyskuje się za pomocą wystąpienia interfejsu `dimensions`.  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[csProgGuideInheritance#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#8)]  
   
-## <a name="robust-programming"></a>Skuteczne programowanie  
+## <a name="robust-programming"></a>Niezawodne programowanie  
   
 - Zwróć uwagę, że następujące wiersze w metodzie `Main` są oznaczane jako komentarze, ponieważ spowodują błędy kompilacji. Nie można uzyskać dostępu do elementu członkowskiego interfejsu, który jest jawnie zaimplementowany z wystąpienia [klasy](../../language-reference/keywords/class.md) :  
   
@@ -27,7 +27,7 @@ Ten przykład deklaruje [interfejs](../../language-reference/keywords/interface.
   
      [!code-csharp[csProgGuideInheritance#46](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#46)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Przewodnik programowania w języku C#](../index.md)
 - [Klasy i struktury](../classes-and-structs/index.md)

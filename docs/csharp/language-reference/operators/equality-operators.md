@@ -15,12 +15,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 14bb8227a4a6c8beff6ab04c58d8e1a43db69856
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 578413b053fc1daab0c3162d9032f4d64d3e470d
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093139"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626701"
 ---
 # <a name="equality-operators-c-reference"></a>Operatory równości (C# odwołanie)
 
@@ -41,7 +41,7 @@ Argumenty operacji [wbudowanych typów wartości](../builtin-types/value-types.m
 
 Dwa operandy tego samego typu [wyliczeniowego](../builtin-types/enum.md) są równe, jeśli odpowiadające wartości bazowego typu całkowitego są równe.
 
-Zdefiniowane przez użytkownika typy [struktur](../keywords/struct.md) nie obsługują domyślnie operatora `==`. Aby zapewnić obsługę operatora `==`, struktura zdefiniowana przez użytkownika musi [przeciążać](operator-overloading.md) ją.
+Zdefiniowane przez użytkownika typy [struktur](../builtin-types/struct.md) nie obsługują domyślnie operatora `==`. Aby zapewnić obsługę operatora `==`, struktura zdefiniowana przez użytkownika musi [przeciążać](operator-overloading.md) ją.
 
 Począwszy od C# 7,3 operatory `==` i `!=` są obsługiwane przez C# [krotki](../../tuples.md). Aby uzyskać więcej informacji, zobacz sekcję [równości i krotek](../../tuples.md#equality-and-tuples) w artykule [ C# typy krotek](../../tuples.md) .
 

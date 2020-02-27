@@ -1,16 +1,16 @@
 ---
 title: Wdrażanie modelu w usłudze Azure Functions
 description: Obsłużymy model uczenia maszynowego ML.NET tonacji Analysis na potrzeby przewidywania przez Internet przy użyciu Azure Functions
-ms.date: 11/07/2019
+ms.date: 02/21/2020
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 5ef6331950845b2900e33b2c51c308644ba17fd6
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 33afd568bb12b855a3888bec31f2e9bbc3c720da
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733352"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628673"
 ---
 # <a name="deploy-a-model-to-azure-functions"></a>Wdrażanie modelu w usłudze Azure Functions
 
@@ -23,7 +23,7 @@ Dowiedz się, jak wdrożyć wstępnie szkolony model uczenia maszynowego ML.NET 
 
 - [Program Visual Studio 2017 w wersji 15,6 lub nowszej](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) z zainstalowaną funkcją "Programowanie dla wielu platform w środowisku .NET Core" i "Programowanie na platformie Azure".
 - [Narzędzia Azure Functions](/azure/azure-functions/functions-develop-vs#check-your-tools-version)
-- Narzędzia
+- PowerShell
 - Model wstępnie szkolony. Użyj [samouczka analiza tonacji ml.NET](../tutorials/sentiment-analysis.md) , aby skompilować własny model lub pobrać ten [wstępnie szkolony model uczenia maszynowego analizy tonacji](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip)
 
 ## <a name="azure-functions-sample-overview"></a>Przykład Azure Functions — Omówienie
@@ -36,7 +36,7 @@ Ten przykład jest  **C# wyzwalaczem http Azure Functions aplikacji** , która u
 1. W oknie dialogowym **Nowy projekt** Otwórz listę rozwijaną nad opcjami projektu i wybierz pozycję **Azure Functions v2 (.NET Core)** . Następnie wybierz projekt **wyzwalacza http** , a następnie wybierz przycisk **OK** .
 1. Utwórz katalog o nazwie *MLModels* w projekcie, aby zapisać model:
 
-    W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt i wybierz polecenie **dodaj** **Nowy folder** > . Wpisz "MLModels" i naciśnij klawisz ENTER.
+    W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt i wybierz polecenie **Dodaj** > **Nowy folder**. Wpisz "MLModels" i naciśnij klawisz ENTER.
 
 1. Zainstaluj **pakiet NuGet Microsoft.ml** w wersji **1.3.1**:
 
@@ -50,9 +50,9 @@ Ten przykład jest  **C# wyzwalaczem http Azure Functions aplikacji** , która u
 
     W Eksplorator rozwiązań kliknij prawym przyciskiem myszy projekt i wybierz polecenie **Zarządzaj pakietami NuGet**. Wybierz pozycję "nuget.org" jako źródło pakietu, wybierz kartę Przeglądaj, Wyszukaj pozycję **Microsoft.Extensions.ml**, wybierz ten pakiet z listy, a następnie wybierz przycisk **Instaluj** . Wybierz przycisk **OK** w oknie dialogowym **Podgląd zmian** , a następnie **Wybierz przycisk** Akceptuję w oknie dialogowym **akceptacji licencji** , jeśli zgadzasz się z postanowieniami licencyjnymi dotyczącymi wymienionych pakietów.
 
-1. Zainstaluj **pakiet NuGet Microsoft. NET. Sdk. Functions** w wersji **1.0.28 +** :
+1. Zainstaluj **pakiet NuGet Microsoft. NET. Sdk. Functions** w wersji **1.0.31**:
 
-    W Eksplorator rozwiązań kliknij prawym przyciskiem myszy projekt i wybierz polecenie **Zarządzaj pakietami NuGet**. Wybierz pozycję "nuget.org" jako źródło pakietu, wybierz kartę zainstalowane, Wyszukaj pozycję **Microsoft. NET. Sdk. Functions**, zaznacz ten pakiet na liście, wybierz pozycję **1.0.28 lub nowszy** z listy rozwijanej wersja i wybierz przycisk **Aktualizuj** . Wybierz przycisk **OK** w oknie dialogowym **Podgląd zmian** , a następnie **Wybierz przycisk** Akceptuję w oknie dialogowym **akceptacji licencji** , jeśli zgadzasz się z postanowieniami licencyjnymi dotyczącymi wymienionych pakietów.
+    W Eksplorator rozwiązań kliknij prawym przyciskiem myszy projekt i wybierz polecenie **Zarządzaj pakietami NuGet**. Wybierz pozycję "nuget.org" jako źródło pakietu, wybierz kartę zainstalowane, Wyszukaj pozycję **Microsoft. NET. Sdk. Functions**, zaznacz ten pakiet na liście, wybierz pozycję **1.0.31** z listy rozwijanej wersja i wybierz przycisk **Aktualizuj** . Wybierz przycisk **OK** w oknie dialogowym **Podgląd zmian** , a następnie **Wybierz przycisk** Akceptuję w oknie dialogowym **akceptacji licencji** , jeśli zgadzasz się z postanowieniami licencyjnymi dotyczącymi wymienionych pakietów.
 
 ## <a name="add-pre-trained-model-to-project"></a>Dodaj wstępnie szkolony model do projektu
 
@@ -73,7 +73,7 @@ Utwórz klasę do przewidywania tonacji. Dodaj nową klasę do projektu:
 
     [!code-csharp [AnalyzeUsings](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/AnalyzeSentiment.cs#L1-L11)]
 
-    Domyślnie Klasa `AnalyzeSentiment` jest `static`. Upewnij się, że usunięto słowo kluczowe `static` z definicji klasy.
+    Domyślnie Klasa `AnalyzeSentiment` jest `static`. Upewnij się, że słowo kluczowe `static` zostało usunięte z definicji klasy.
 
     ```csharp
     public class AnalyzeSentiment
@@ -111,7 +111,7 @@ Należy utworzyć klasy dla danych wejściowych i prognoz. Dodaj nową klasę do
 
 ## <a name="register-predictionenginepool-service"></a>Zarejestruj usługę PredictionEnginePool
 
-Aby wykonać pojedyncze prognozowanie, należy utworzyć [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602). [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) nie jest bezpieczny wątkowo. Ponadto należy utworzyć wystąpienie go wszędzie tam, gdzie jest to potrzebne w aplikacji. Gdy aplikacja zostanie powiększona, ten proces może być niezarządzany. Aby zwiększyć wydajność i bezpieczeństwo wątków, użyj kombinacji iniekcji zależności i usługi `PredictionEnginePool`, która tworzy [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) obiektów do użycia w całej aplikacji.
+Aby wykonać pojedyncze prognozowanie, należy utworzyć [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602). [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) nie jest bezpieczna wątkowo. Ponadto należy utworzyć wystąpienie go wszędzie tam, gdzie jest to potrzebne w aplikacji. Gdy aplikacja zostanie powiększona, ten proces może być niezarządzany. Aby zwiększyć wydajność i bezpieczeństwo wątków, należy użyć kombinacji iniekcji zależności i usługi `PredictionEnginePool`, która tworzy [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) obiektów do użycia w całej aplikacji.
 
 Poniższy link zawiera więcej informacji, jeśli chcesz dowiedzieć się więcej o [iniekcji zależności](https://en.wikipedia.org/wiki/Dependency_injection).
 
@@ -148,11 +148,11 @@ Poniższy link zawiera więcej informacji, jeśli chcesz dowiedzieć się więce
 
 Na wysokim poziomie ten kod inicjuje automatycznie obiekty i usługi do późniejszego użycia, gdy żądanie jest wymagane przez aplikację, a nie trzeba jej wykonać ręcznie.
 
-Modele uczenia maszynowego nie są statyczne. Po udostępnieniu nowych danych szkoleniowych model zostanie ponownie przeszkolony i wdrożony ponownie. Jednym ze sposobów uzyskania najnowszej wersji modelu do aplikacji jest ponowne wdrożenie całej aplikacji. Powoduje to jednak wprowadzenie przestojów aplikacji. Usługa `PredictionEnginePool` udostępnia mechanizm ponownego ładowania zaktualizowanego modelu bez konieczności podłączania aplikacji.
+Modele uczenia maszynowego nie są statyczne. Po udostępnieniu nowych danych szkoleniowych model zostanie ponownie przeszkolony i wdrożony ponownie. Jednym ze sposobów uzyskania najnowszej wersji modelu do aplikacji jest ponowne wdrożenie całej aplikacji. Powoduje to jednak wprowadzenie przestojów aplikacji. Usługa `PredictionEnginePool` udostępnia mechanizm umożliwiający ponowne załadowanie zaktualizowanego modelu bez przełączania aplikacji.
 
 Ustaw parametr `watchForChanges` na `true`, a `PredictionEnginePool` uruchamia [`FileSystemWatcher`](xref:System.IO.FileSystemWatcher) , który nasłuchuje powiadomień o zmianie systemu plików i zgłasza zdarzenia w przypadku zmiany pliku. Spowoduje to wypróbowanie `PredictionEnginePool` w celu automatycznego ponownego załadowania modelu.
 
-Model jest identyfikowany przez parametr `modelName`, dzięki czemu można ponownie załadować więcej niż jeden model dla aplikacji po zmianie.
+Model jest identyfikowany przez parametr `modelName`, dzięki czemu można ponownie załadować więcej niż jeden model na aplikację w przypadku zmiany.
 
 > [!TIP]
 > Alternatywnie można użyć metody `FromUri` podczas pracy z modelami przechowywanymi zdalnie. Zamiast oglądać zdarzenia ze zmienionymi plikami, `FromUri` sonduje lokalizację zdalną pod kątem zmian. Interwał sondowania jest wartością domyślną 5 minut. Interwał sondowania można zwiększyć lub zmniejszyć w zależności od wymagań aplikacji. W poniższym przykładzie kodu `PredictionEnginePool` sonduje model przechowywany w określonym identyfikatorze URI co minutę.
@@ -179,13 +179,13 @@ Zastąp istniejącą implementację metody *Run* w klasie *AnalyzeSentiment* nas
 
 [!code-csharp [AnalyzeRunMethod](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/AnalyzeSentiment.cs#L26-L45)]
 
-Gdy metoda `Run` jest wykonywana, dane przychodzące z żądania HTTP są deserializowane i używane jako dane wejściowe dla `PredictionEnginePool`. Metoda `Predict` jest następnie wywoływana w celu przeprowadzenia prognoz przy użyciu `SentimentAnalysisModel` zarejestrowanego w klasie `Startup` i zwraca wyniki z powrotem do użytkownika, jeśli się to powiedzie.
+Gdy metoda `Run` jest wykonywana, dane przychodzące z żądania HTTP są deserializowane i używane jako dane wejściowe dla `PredictionEnginePool`. Metoda `Predict` jest następnie wywoływana w celu przeprowadzenia prognoz przy użyciu `SentimentAnalysisModel` zarejestrowanych w klasie `Startup` i zwraca wyniki z powrotem do użytkownika, jeśli to się powiedzie.
 
 ## <a name="test-locally"></a>Testuj lokalnie
 
 Teraz, gdy wszystko jest skonfigurowane, czas na przetestowanie aplikacji:
 
-1. Uruchom aplikację
+1. Uruchamianie aplikacji
 1. Otwórz program PowerShell i wprowadź kod w wierszu, w którym PORT jest portem, na którym działa aplikacja. Zazwyczaj port jest 7071.
 
     ```powershell
@@ -198,7 +198,7 @@ Teraz, gdy wszystko jest skonfigurowane, czas na przetestowanie aplikacji:
     Negative
     ```
 
-Nabycia! Udało Ci się pomyślnie obsłużyć model, aby przekonywać prognoz przez Internet przy użyciu funkcji platformy Azure.
+Gratulacje! Udało Ci się pomyślnie obsłużyć model, aby przekonywać prognoz przez Internet przy użyciu funkcji platformy Azure.
 
 ## <a name="next-steps"></a>Następne kroki
 

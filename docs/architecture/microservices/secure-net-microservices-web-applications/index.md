@@ -3,12 +3,12 @@ title: Zabezpieczanie mikrousług i aplikacji sieci Web platformy .NET
 description: Zabezpieczenia w mikrousługach .NET i aplikacjach sieci Web — Uzyskaj informacje na temat opcji uwierzytelniania w ASP.NET Core aplikacji sieci Web.
 author: mjrousos
 ms.date: 01/30/2020
-ms.openlocfilehash: f82212956f5492a51ec99d092e1a5131d1b31313
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 0ac2591f8650e9f8cf29560735a9ec803d29ee4f
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77501651"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628335"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>Tworzenie bezpiecznych mikrousług i aplikacji sieci Web platformy .NET
 
@@ -135,8 +135,8 @@ We wszystkich przypadkach należy wykonać procedurę rejestracji aplikacji, kt�
 
 Aby uzyskać szczegółowe informacje na temat konfigurowania aplikacji dla dostawcy zewnętrznego, zobacz [uwierzytelnianie dostawcy zewnętrznego w dokumentacji ASP.NET Core](/aspnet/core/security/authentication/social/).
 
-> [!TIP]
-Wszystkie szczegóły są obsługiwane przez oprogramowanie pośredniczące i wspomniane wcześniej usługi autoryzacji. W związku z tym po utworzeniu projektu aplikacji sieci Web ASP.NET Code w programie Visual Studio wystarczy wybrać opcję uwierzytelniania **poszczególnych kont użytkowników** , jak pokazano na rysunku 9-3, oprócz rejestrowania wyżej wymienionych dostawców uwierzytelniania.
+>[!TIP]
+>Wszystkie szczegóły są obsługiwane przez oprogramowanie pośredniczące i wspomniane wcześniej usługi autoryzacji. W związku z tym po utworzeniu projektu aplikacji sieci Web ASP.NET Code w programie Visual Studio wystarczy wybrać opcję uwierzytelniania **poszczególnych kont użytkowników** , jak pokazano na rysunku 9-3, oprócz rejestrowania wyżej wymienionych dostawców uwierzytelniania.
 
 ![Zrzut ekranu przedstawiający okno dialogowe Nowa aplikacja sieci Web ASP.NET Core.](./media/index/select-individual-user-account-authentication-option.png)
 

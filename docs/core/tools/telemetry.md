@@ -3,12 +3,12 @@ title: Dane telemetryczne zestaw .NET Core SDK
 description: Odkryj zestaw .NET Core SDK funkcje telemetrii, które zbierają informacje o użyciu analizy, zbierane dane i jak je wyłączyć.
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.openlocfilehash: 8bde344ee393e113502a0895ee55c241cbf24c57
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: abc9f8e1ef134ebfb5ec9acacb629d5180aaf83b
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714105"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625920"
 ---
 # <a name="net-core-sdk-telemetry"></a>Dane telemetryczne zestaw .NET Core SDK
 
@@ -56,13 +56,13 @@ Funkcja telemetrii zbiera następujące dane:
 
 | Wersje zestawu SDK | Dane |
 |--------------|------|
-| Wszystkie          | Sygnatura czasowa wywołania. |
-| Wszystkie          | Wywołano polecenie (na przykład "Kompilacja"), wartość skrótu rozpoczynająca się w 2,1. |
-| Wszystkie          | Trzy adresy IP używane do określenia lokalizacji geograficznej. |
-| Wszystkie          | System operacyjny i wersja. |
-| Wszystkie          | Identyfikator środowiska uruchomieniowego (RID), na którym jest uruchomiony zestaw SDK. |
-| Wszystkie          | Wersja zestaw .NET Core SDK. |
-| Wszystkie          | Profil telemetrii: opcjonalna wartość używana tylko z jawnym zapytaniem użytkownika i używana wewnętrznie w firmie Microsoft. |
+| Wszyscy          | Sygnatura czasowa wywołania. |
+| Wszyscy          | Wywołano polecenie (na przykład "Kompilacja"), wartość skrótu rozpoczynająca się w 2,1. |
+| Wszyscy          | Trzy adresy IP używane do określenia lokalizacji geograficznej. |
+| Wszyscy          | System operacyjny i wersja. |
+| Wszyscy          | Identyfikator środowiska uruchomieniowego (RID), na którym jest uruchomiony zestaw SDK. |
+| Wszyscy          | Wersja zestaw .NET Core SDK. |
+| Wszyscy          | Profil telemetrii: opcjonalna wartość używana tylko z jawnym zapytaniem użytkownika i używana wewnętrznie w firmie Microsoft. |
 | > = 2.0        | Argumenty polecenia i opcje: zbierane są kilka argumentów i opcji (nie dowolnych ciągów). Zobacz [zebrane opcje](#collected-options). Skrót po 2.1.300. |
 | > = 2.0         | Czy zestaw SDK działa w kontenerze. |
 | > = 2.0         | Platformy docelowe (ze zdarzenia `TargetFramework`), które są zmieszane, począwszy od 2,1. |
@@ -95,7 +95,7 @@ Podzbiór poleceń wysyła wybrane opcje, jeśli są używane, wraz z ich warto�
 | `--verbosity`           | Wszystkie polecenia                                                                                   |
 | `--language`            | `dotnet new`                                                                                   |
 | `--configuration`       | `dotnet build`, `dotnet clean`, `dotnet publish`, `dotnet run`, `dotnet test`                  |
-| `--framework`           | `dotnet build`, `dotnet clean`, `dotnet publish`, `dotnet run`, `dotnet test`, `dotnet vstest` |
+| `--framework`           | `dotnet build`, `dotnet clean`, `dotnet publish`, `dotnet run`, `dotnet test``dotnet vstest` |
 | `--runtime`             | `dotnet build`, `dotnet publish`                                                              |
 | `--platform`            | `dotnet vstest`                                                                                |
 | `--logger`              | `dotnet vstest`                                                                                |
@@ -128,13 +128,13 @@ at Microsoft.DotNet.Cli.Program.ProcessArgs(String[] args, ITelemetry telemetryC
 at Microsoft.DotNet.Cli.Program.Main(String[] args)
 ```
 
-### <a name="avoid-inadvertent-disclosure-information"></a>Unikaj nieumyślnego ujawniania informacji
+### <a name="avoid-inadvertent-disclosure-of-information"></a>Unikaj przypadkowego ujawnienia informacji
 
 Współautorzy platformy .NET Core i inne osoby, na których jest uruchomiona wersja zestaw .NET Core SDK należy wziąć pod uwagę ścieżkę do kodu źródłowego zestawu SDK. Jeśli wystąpi awaria podczas korzystania z zestaw .NET Core SDK, który jest kompilacją niestandardową lub skonfigurowaną za pomocą niestandardowych plików symboli kompilacji, ścieżka pliku źródłowego zestawu SDK z maszyny kompilacji jest zbierana jako część śladu stosu i nie ma wartości skrótu.
 
 Z tego powodu niestandardowe kompilacje zestaw .NET Core SDK nie powinny znajdować się w katalogach, których nazwy ścieżek ujawniają osobiste lub poufne informacje. 
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Dane telemetryczne interfejs wiersza polecenia platformy .NET Core-2019 Q2](https://dotnet.microsoft.com/platform/telemetry/dotnet-core-cli-2019q2)
 - [Źródło odwołania telemetrii (repozytorium dotnet/CLI)](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry)

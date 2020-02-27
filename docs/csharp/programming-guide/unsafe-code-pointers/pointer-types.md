@@ -4,12 +4,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: ad6e6f17f9a8c30339a74b8ab41af3a99e716d3f
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: dc03744559a87a2548c5bee9452c22cd20f337b8
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745347"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77627713"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Typy wskaźników (Przewodnik programowania w języku C#)
 
@@ -31,7 +31,7 @@ int* p1, p2, p3;   // Ok
 int *p1, *p2, *p3;   // Invalid in C#
 ```
 
-Wskaźnik nie może wskazywać odwołania lub [struktury](../../language-reference/keywords/struct.md) , która zawiera odwołania, ponieważ odwołanie do obiektu może być odzyskiwane nawet wtedy, gdy wskaźnik wskazuje go. Moduł odśmiecania pamięci nie sprawdza, czy obiekt jest wskazywany przez jakiś wskaźnik.
+Wskaźnik nie może wskazywać odwołania lub [struktury](../../language-reference/builtin-types/struct.md) , która zawiera odwołania, ponieważ odwołanie do obiektu może być odzyskiwane nawet wtedy, gdy wskaźnik wskazuje go. Moduł odśmiecania pamięci nie sprawdza, czy obiekt jest wskazywany przez jakiś wskaźnik.
 
 Wartość zmiennej wskaźnika typu `myType*` jest adresem zmiennej typu `myType`. Poniżej przedstawiono przykłady deklaracji typów wskaźnika:
 
@@ -63,7 +63,7 @@ Przekazywanie wskaźników między metodami może spowodować niezdefiniowane za
 
 W poniższej tabeli wymieniono operatory i instrukcje, które mogą wykonywać operacje na wskaźnikach w kontekście słowa kluczowego „unsafe”:
 
-|Operator/instrukcja|Zastosowanie|
+|Operator/instrukcja|Użycie|
 |-------------------------|---------|
 |`*`|Wykonuje operację wskaźnika pośredniego.|
 |`->`|Uzyskuje dostęp do elementu członkowskiego struktury za pomocą wskaźnika.|
@@ -81,7 +81,7 @@ Aby uzyskać więcej informacji na temat operatorów powiązanych ze wskaźnikie
 
 Aby uzyskać więcej informacji, zobacz sekcję [typy wskaźników](~/_csharplang/spec/unsafe-code.md#pointer-types) [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Przewodnik programowania w języku C#](../index.md)
 - [Niebezpieczny kod i wskaźniki](index.md)

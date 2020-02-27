@@ -1,36 +1,39 @@
 ---
 title: C#Obsługa wersji języka — C# Przewodnik
-description: Dowiedz się, C# w jaki sposób wersja językowa jest określana na podstawie projektu, i różne wartości, które można dostosować ręcznie do programu.
-ms.date: 07/10/2019
-ms.openlocfilehash: 3c1035d983660ea0a945e4d4b7b72c69736c90cb
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+description: Dowiedz się, C# w jaki sposób wersja językowa jest określana na podstawie projektu i przyczyn związanych z tym wyborem. Dowiedz się, jak ręcznie przesłonić wartość domyślną.
+ms.date: 02/21/2020
+ms.openlocfilehash: 2be76fdac471a7175b661d896b0da2910b3609f3
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980135"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626767"
 ---
 # <a name="c-language-versioning"></a>C#przechowywanie wersji języka
 
-Najnowszy C# kompilator Określa domyślną wersję językową opartą na docelowej platformie lub strukturach projektu. Jest to spowodowane tym C# , że język może mieć funkcje, które są zależne od typów lub składników środowiska uruchomieniowego, które nie są dostępne w każdej implementacji platformy .NET. Zapewnia to również, że dla każdego elementu docelowego projektu jest tworzona z myślą o największej zgodnej wersji językowej.
+Najnowszy C# kompilator Określa domyślną wersję językową opartą na docelowej platformie lub strukturach projektu. Program Visual Studio nie udostępnia interfejsu użytkownika do zmiany wartości, ale można go zmienić, edytując plik *csproj* . Wybór domyślny zapewnia, że jest używana najnowsza wersja językowa zgodna z platformą docelową. Korzystasz z dostępu do najnowszych funkcji języka zgodnych z celem projektu. To ustawienie domyślne gwarantuje również, że nie używasz języka wymagającego typów lub zachowania środowiska uruchomieniowego, które nie jest dostępne w platformie docelowej. Wybranie wersji językowej nowszej niż domyślna może spowodować trudne zdiagnozowanie błędów kompilacji i czasu wykonywania.
 
-Reguły w tym artykule mają zastosowanie do kompilatora dostarczonego z programem Visual Studio 2019 lub zestawem SDK programu .NET Core 3,0. C# Kompilatory, które są częścią instalacji programu Visual Studio 2017 lub starszej wersji zestaw .NET Core SDK C# wersje Target 7,0 domyślnie. 
+C#8,0 (i nowsze) jest obsługiwana tylko w programie .NET Core 3. x i nowszych wersjach. Wiele najnowszych funkcji wymaga funkcji biblioteki i środowiska uruchomieniowego wprowadzonych w programie .NET Core 3. x:
+
+- Implementacja domyślnego elementu członkowskiego interfejsu wymaga nowych funkcji w środowisku CLR programu .NET Core 3,0.
+- Strumienie asynchroniczne wymagają nowych typów <xref:System.IAsyncDisposable?displayProperty=nameWithType>, <xref:System.Collections.Generic.IAsyncEnumerable%601?displayProperty=nameWithType>i <xref:System.Collections.Generic.IAsyncEnumerator%601?displayProperty=nameWithType>.
+- Indeksy i zakresy wymagają nowych typów <xref:System.Index?displayProperty=nameWithType> i <xref:System.Range?displayProperty=nameWithType>.
+- Typy odwołań dopuszczających wartości null wykorzystują kilka [atrybutów](../nullable-attributes.md) w celu zapewnienia lepszych ostrzeżeń. Te atrybuty zostały dodane w programie .NET Core 3,0. Inne platformy docelowe nie zostały opatrzone adnotacją z żadnym z tych atrybutów. Oznacza to, że ostrzeżenia dopuszczające wartość null mogą nie odzwierciedlać dokładnie potencjalnych problemów.
 
 ## <a name="defaults"></a>Wartość domyślna
 
 Kompilator określa wartość domyślną na podstawie następujących reguł:
 
-|Platforma docelowa|Wersja programu|C#domyślna wersja języka|
+|Platforma docelowa|version|C#domyślna wersja języka|
 |----------------|-------|---------------------------|
 |.NET Core|wersji|C# 8.0|
 |.NET Core|2.x|C# 7.3|
 |.NET Standard|2.1|C# 8.0|
 |.NET Standard|2.0|C# 7.3|
 |.NET Standard|1.x|C# 7.3|
-|.NET Framework|wszystkie|C# 7.3|
+|.NET Framework|all|C# 7.3|
 
-## <a name="default-for-previews"></a>Domyślnie dla wersji zapoznawczych
-
-Jeśli projekt jest przeznaczony dla platformy wersji zapoznawczej, która ma odpowiednią wersję języka wersji zapoznawczej, używana jest wersja języka w wersji zapoznawczej. Dzięki temu można korzystać z najnowszych funkcji, które są gwarantowane do pracy z tą wersją zapoznawczą w dowolnym środowisku bez wpływu na projekty przeznaczone dla wydanej wersji platformy .NET Core.
+Jeśli projekt jest przeznaczony dla platformy wersji zapoznawczej, która ma odpowiednią wersję języka wersji zapoznawczej, używana jest wersja języka w wersji zapoznawczej. Należy używać najnowszych funkcji w wersji zapoznawczej w dowolnym środowisku, bez wywierania wpływu na projekty przeznaczone do wydania .NET Core.
 
 ## <a name="override-a-default"></a>Zastąp wartość domyślną
 
@@ -64,16 +67,16 @@ Aby skonfigurować wiele projektów, można utworzyć plik **Directory. Build. p
 </Project>
 ```
 
-Teraz kompilacje w każdym podkatalogu katalogu zawierającego ten plik będą korzystać z wersji zapoznawczej C# . Aby uzyskać więcej informacji, zobacz artykuł na temat [dostosowywania kompilacji](/visualstudio/msbuild/customize-your-build).
+Kompilacje we wszystkich podkatalogach katalogu zawierającego ten plik będą korzystać z wersji zapoznawczej C# . Aby uzyskać więcej informacji, zobacz artykuł na temat [dostosowywania kompilacji](/visualstudio/msbuild/customize-your-build).
 
 ## <a name="c-language-version-reference"></a>C#dokumentacja wersji języka
 
-W poniższej tabeli przedstawiono wszystkie bieżące C# wersje językowe. Kompilator może niekoniecznie zrozumieć każdą wartość, jeśli jest starszy. Jeśli zainstalujesz program .NET Core 3,0, będziesz mieć dostęp do wszystkich elementów na liście.
+W poniższej tabeli przedstawiono wszystkie bieżące C# wersje językowe. Kompilator może niekoniecznie zrozumieć każdą wartość, jeśli jest starszy. Jeśli zainstalujesz program .NET Core 3,0 lub nowszy, masz dostęp do wszystkich elementów na liście.
 
 |Wartość|Znaczenie|
 |------------|-------------|
 |wersja zapoznawcza|Kompilator akceptuje całą poprawną składnię języka od najnowszej wersji zapoznawczej.|
-|latest|Kompilator akceptuje składnię z najnowszej wydanej wersji kompilatora (w tym wersji pomocniczej).|
+|najnowsza|Kompilator akceptuje składnię z najnowszej wydanej wersji kompilatora (w tym wersji pomocniczej).|
 |latestMajor|Kompilator akceptuje składnię z najnowszej wydanej wersji głównej kompilatora.|
 |8.0|Kompilator akceptuje tylko składnię, która jest uwzględniona w C# 8,0 lub niższej.|
 |7.3|Kompilator akceptuje tylko składnię, która jest uwzględniona w C# 7,3 lub niższej.|

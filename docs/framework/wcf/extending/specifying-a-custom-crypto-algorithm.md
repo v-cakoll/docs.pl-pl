@@ -2,24 +2,24 @@
 title: Określanie niestandardowego algorytmu kryptograficznego
 ms.date: 03/30/2017
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-ms.openlocfilehash: 55200732b392c15a25853af28ecdf9e32d092da4
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 0bfa6c46f4db1171eb314625e36c267000a0ec12
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849106"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628686"
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>Określanie niestandardowego algorytmu kryptograficznego
 Usługa WCF umożliwia określenie niestandardowego algorytmu kryptograficznego, który ma być używany podczas szyfrowania danych lub przetwarzania podpisów cyfrowych. W tym celu należy wykonać następujące czynności:  
   
-1. Utwórz klasę z<xref:System.ServiceModel.Security.SecurityAlgorithmSuite>  
+1. Utwórz klasę z <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>  
   
 2. Rejestrowanie algorytmu  
   
-3. Skonfiguruj powiązanie z <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>klasą pochodną.  
+3. Skonfiguruj powiązanie z klasą pochodną <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>.  
   
 ## <a name="derive-a-class-from-securityalgorithmsuite"></a>Utwórz klasę z SecurityAlgorithmSuite  
- <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> Jest abstrakcyjną klasą bazową, która pozwala określić algorytm, który ma być używany podczas wykonywania różnych operacji związanych z zabezpieczeniami. Na przykład Obliczanie skrótu podpisu cyfrowego lub szyfrowanie wiadomości. Poniższy kod przedstawia sposób wygenerowania klasy z <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>:  
+ <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> jest abstrakcyjną klasą bazową, która pozwala określić algorytm używany podczas wykonywania różnych operacji związanych z zabezpieczeniami. Na przykład Obliczanie skrótu podpisu cyfrowego lub szyfrowanie wiadomości. Poniższy kod przedstawia sposób wygenerowania klasy z <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>:  
   
 ```csharp  
 public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite  
@@ -105,9 +105,9 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
 </configuration>  
 ```  
   
- Sekcja w <`cryptoClasses`elementu > tworzy mapowanie między SHA256CryptoServiceProvider i aliasem "SHA256CSP". <`nameEntry`Element > tworzy mapowanie między aliasem "SHA256CSP" i określonym adresem URL (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm ).  
+ Sekcja w <`cryptoClasses`> elementu tworzy mapowanie między SHA256CryptoServiceProvider i aliasem "SHA256CSP". Element <`nameEntry`> tworzy mapowanie między aliasem "SHA256CSP" i określonym adresem URL `http://constoso.com/CustomAlgorithms/CustomHashAlgorithm`.  
   
- Aby zarejestrować niestandardowy algorytm w kodzie, <xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm(System.Type,System.String[])> Użyj metody. Ta metoda powoduje utworzenie obu mapowań. Poniższy przykład pokazuje, jak wywołać tę metodę:  
+ Aby zarejestrować niestandardowy algorytm w kodzie, użyj metody <xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm(System.Type,System.String[])>. Ta metoda powoduje utworzenie obu mapowań. Poniższy przykład pokazuje, jak wywołać tę metodę:  
   
 ```csharp
 // Register the custom URI string defined for the hashAlgorithm in MyCustomAlgorithmSuite class to create the   
@@ -116,7 +116,7 @@ CryptoConfig.AddAlgorithm(typeof(SHA256CryptoServiceProvider), "http://constoso.
 ```  
   
 ## <a name="configure-the-binding"></a>Konfigurowanie powiązania  
- Powiązanie można skonfigurować przez określenie klasy pochodnej niestandardowej <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>w ustawieniach powiązań, jak pokazano w poniższym fragmencie kodu:  
+ Powiązanie można skonfigurować przez określenie niestandardowej klasy <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>w ustawieniach powiązań, jak pokazano w poniższym fragmencie kodu:  
   
 ```csharp  
 WSHttpBinding binding = new WSHttpBinding();  
@@ -125,7 +125,7 @@ WSHttpBinding binding = new WSHttpBinding();
   
  Aby uzyskać kompletny przykład kodu, zobacz [elastyczność kryptograficzną w przykładowym zabezpieczeniu WCF](../samples/cryptographic-agility-in-wcf-security.md) .  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Zabezpieczanie usług i klientów](../feature-details/securing-services-and-clients.md)
 - [Zabezpieczanie usług](../securing-services.md)

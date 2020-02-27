@@ -3,12 +3,12 @@ title: Typy niezarządzane — C# odwołanie
 ms.date: 09/06/2019
 helpviewer_keywords:
 - unmanaged type [C#]
-ms.openlocfilehash: 97aa4dd629e385dbe9641d82a7da21a0aaa63e92
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 042cf382879cc4010a388fb75f41099b4342c9d9
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75342579"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626948"
 ---
 # <a name="unmanaged-types-c-reference"></a>Typy niezarządzane (C# odwołanie)
 
@@ -17,7 +17,7 @@ Typ jest **typem niezarządzanym** , jeśli jest dowolnego z następujących typ
 - `sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float`, `double`, `decimal`lub `bool`
 - Dowolny typ [wyliczeniowy](enum.md)
 - Dowolny typ [wskaźnika](../../programming-guide/unsafe-code-pointers/pointer-types.md)
-- Dowolny zdefiniowany przez użytkownika typ [struktury](../keywords/struct.md) , który zawiera pola tylko typy niezarządzane i, w C# 7,3 i wcześniejszych, nie jest typem skonstruowanym (typ, który zawiera co najmniej jeden argument typu)
+- Dowolny zdefiniowany przez użytkownika typ [struktury](struct.md) , który zawiera pola tylko typy niezarządzane i, w C# 7,3 i wcześniejszych, nie jest typem skonstruowanym (typ, który zawiera co najmniej jeden argument typu)
 
 Począwszy od C# 7,3, można użyć [ograniczenia`unmanaged`](../../programming-guide/generics/constraints-on-type-parameters.md#unmanaged-constraint) , aby określić, że parametr typu jest niewskaźnikiem niebędącym typem niepuszczającym wartości null.
 
@@ -33,7 +33,7 @@ Struktura generyczna może być źródłem zarówno typów niezarządzanych, jak
 
 Aby uzyskać więcej informacji, zobacz sekcję [typy wskaźników](~/_csharplang/spec/unsafe-code.md#pointer-types) [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [C#odwoła](../index.md)
 - [Typy wskaźników](../../programming-guide/unsafe-code-pointers/pointer-types.md)

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - interface keyword [C#]
 ms.assetid: 7da38e81-4f99-4bc5-b07d-c986b687eeba
-ms.openlocfilehash: b315d1f04c9e74700afba8ee7871b23ab4b2fd28
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 473f5f8e226f0a144746ac943afcffdccd4777c7
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744689"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625855"
 ---
 # <a name="no-loc-textinterface-c-reference"></a>:::no-loc text="interface"::: (C# odwołanie)
 
-Interfejs definiuje kontrakt. Wszelkie [`class`](class.md) lub [`struct`](struct.md) implementujące ten kontrakt muszą zawierać implementację elementów członkowskich zdefiniowanych w interfejsie. Począwszy od C# 8,0, interfejs może definiować domyślną implementację elementów członkowskich. Może również definiować [`static`](static.md) składowe w celu zapewnienia pojedynczej implementacji dla typowych funkcji.
+Interfejs definiuje kontrakt. Wszelkie [`class`](class.md) lub [`struct`](../builtin-types/struct.md) implementujące ten kontrakt muszą zawierać implementację elementów członkowskich zdefiniowanych w interfejsie. Począwszy od C# 8,0, interfejs może definiować domyślną implementację elementów członkowskich. Może również definiować [`static`](static.md) składowe w celu zapewnienia pojedynczej implementacji dla typowych funkcji.
 
 W poniższym przykładzie Klasa `ImplementationClass` musi implementować metodę o nazwie `SampleMethod`, która nie ma parametrów i zwraca `void`.
 
@@ -29,7 +29,7 @@ Interfejs może być elementem członkowskim przestrzeni nazw lub klasy. Deklara
 
 - [Metody](../../programming-guide/classes-and-structs/methods.md)
 - [Właściwości](../../programming-guide/classes-and-structs/using-properties.md)
-- [Indeksatory](../../programming-guide/indexers/using-indexers.md)
+- [Indexers](../../programming-guide/indexers/using-indexers.md) (Indeksatory)
 - [Zdarzenia](event.md)
 
 Te poprzedzające deklaracje składowych zwykle nie zawierają treści. Począwszy od C# 8,0, element członkowski interfejsu może deklarować treść. Ta nazwa jest nazywana *implementacją domyślną*. Elementy członkowskie z organami umożliwiają interfejsowi określenie "domyślnej" implementacji klas i struktur, które nie zapewniają zastępowania implementacji. Ponadto począwszy od C# 8,0, interfejs może obejmować:
@@ -69,7 +69,7 @@ Poniższy przykład ilustruje implementację interfejsu. W tym przykładzie inte
 
 Aby uzyskać więcej informacji, zobacz sekcję [interfejsy](~/_csharplang/spec/interfaces.md) [ C# specyfikacji języka](~/_csharplang/spec/introduction.md) i Specyfikacja funkcji dla [domyślnych członków interfejsu C# — 8,0](~/_csharplang/proposals/csharp-8.0/default-interface-methods.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [C#Odwoła](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
@@ -78,6 +78,4 @@ Aby uzyskać więcej informacji, zobacz sekcję [interfejsy](~/_csharplang/spec/
 - [Interfejsy](../../programming-guide/interfaces/index.md)
 - [Używanie właściwości](../../programming-guide/classes-and-structs/using-properties.md)
 - [Używanie indeksatorów](../../programming-guide/indexers/using-indexers.md)
-- [class](class.md)
-- [struct](struct.md)
 - [Interfejsy](../../programming-guide/interfaces/index.md)

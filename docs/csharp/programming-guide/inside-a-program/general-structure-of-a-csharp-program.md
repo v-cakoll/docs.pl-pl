@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, program structure
 ms.assetid: 5ae964a5-0ef0-40fe-88fb-6d1793371d0d
-ms.openlocfilehash: cdb739b585722ca5988192d288a7ef4fbcfe7d8c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4a2340c29527ac09ba53daee03e06420b269df56
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75702580"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673345"
 ---
 # <a name="general-structure-of-a-c-program-c-programming-guide"></a>Ogólna struktura programu w języku C# (Przewodnik programowania w języku C#)
 C#programy mogą składać się z co najmniej jednego pliku. Każdy plik może zawierać zero lub więcej przestrzeni nazw. Przestrzeń nazw może zawierać typy takie jak klasy, struktury, interfejsy, wyliczenia i Delegaty, a także inne przestrzenie nazw. Poniżej przedstawiono szkielet C# programu zawierającego wszystkie te elementy.  
@@ -17,11 +17,11 @@ C#programy mogą składać się z co najmniej jednego pliku. Każdy plik może z
  [!code-csharp[csProgGuide#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/class2.cs#34)]  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- Informacje dodatkowe:  
+ Więcej informacji:  
   
 - [Klasy](../classes-and-structs/classes.md)  
   
-- [Struktury](../classes-and-structs/structs.md)  
+- [Struktury](../../language-reference/builtin-types/struct.md)  
   
 - [Przestrzenie nazw](../namespaces/index.md)  
   
@@ -33,8 +33,8 @@ C#programy mogą składać się z co najmniej jednego pliku. Każdy plik może z
 
 Aby uzyskać więcej informacji, zobacz [podstawowe pojęcia](~/_csharplang/spec/basic-concepts.md) w [ C# specyfikacji języka](/dotnet/csharp/language-reference/language-specification/introduction). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Przewodnik programowania w języku C#](../index.md)
 - [Konstrukcja programu C#](./index.md)
-- [Dokumentacja języka C#](../../language-reference/index.md)
+- [C#Odwoła](../../language-reference/index.md)

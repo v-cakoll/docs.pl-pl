@@ -13,12 +13,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: 6afa8a2bd2dfee8d7c36b58342036d18241317a8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3685482caebd892c460a3cc2ecf3a22acbe3c9ec
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714799"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673410"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Argumenty nazwane i opcjonalne (Przewodnik programowania w języku C#)
 C#4 wprowadza argumenty nazwane i opcjonalne. *Nazwane argumenty* umożliwiają określenie argumentu dla określonego parametru przez skojarzenie argumentu z nazwą parametru, a nie z pozycją parametru na liście parametrów. *Argumenty opcjonalne* umożliwiają pominięcie argumentów dla niektórych parametrów. Obie techniki mogą być używane z metodami, indeksatorami, konstruktorami i delegatami.  
@@ -69,7 +69,7 @@ C#4 wprowadza argumenty nazwane i opcjonalne. *Nazwane argumenty* umożliwiają 
   
 - wyrażenie stałe;  
   
-- wyrażenie `new ValType()`, gdzie `ValType` jest typem wartości, na przykład [wyliczeniem](../../language-reference/builtin-types/enum.md) lub [strukturą](structs.md);  
+- wyrażenie `new ValType()`, gdzie `ValType` jest typem wartości, na przykład [wyliczeniem](../../language-reference/builtin-types/enum.md) lub [strukturą](../../language-reference/builtin-types/struct.md);  
   
 - wyrażenie [domyślne (ValType)](../../language-reference/operators/default.md), gdzie `ValType` jest typem wartości.  
   
@@ -126,7 +126,7 @@ C#4 wprowadza argumenty nazwane i opcjonalne. *Nazwane argumenty* umożliwiają 
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Jak używać argumentów nazwanych i opcjonalnych w programowaniu pakietu Office](./how-to-use-named-and-optional-arguments-in-office-programming.md)
 - [Używanie typu dynamicznego](../types/using-type-dynamic.md)

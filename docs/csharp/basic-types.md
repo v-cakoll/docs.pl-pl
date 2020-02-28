@@ -4,12 +4,12 @@ description: Informacje o typach podstawowych (liczbowych, ciągach i obiektach)
 ms.date: 10/10/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: 10230394ece27a2a34be1075abcdbd3765995aeb
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: bb2177026afb2eef2e14ece0c306bfd3ffe7af39
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77628569"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673267"
 ---
 # <a name="types-variables-and-values"></a>Typy, zmienne i wartości
 
@@ -82,9 +82,10 @@ Ważne jest, aby zrozumieć dwa podstawowe punkty o systemie typów w .NET Frame
   
 - Obsługuje zasady dziedziczenia. Typy mogą pochodzić od innych typów, nazywanych *typami podstawowymi*. Typ pochodny dziedziczy (z pewnymi ograniczeniami) metody, właściwości i inne elementy członkowskie typu podstawowego. Typ podstawowy może być pochodny od innego typu, w tym przypadku typ pochodny dziedziczy elementy członkowskie obu typów podstawowych w hierarchii dziedziczenia. Wszystkie typy, w tym wbudowane typy liczbowe, takie jak <xref:System.Int32> (C# słowo kluczowe: `int`), uzyskują ostatecznie z jednego typu podstawowego, który jest <xref:System.Object>C# (słowo kluczowe: `object`). Ta ujednolicona hierarchia typów jest nazywana [systemem common Type System](../standard/common-type-system.md) (CTS). Aby uzyskać więcej informacji na temat C#dziedziczenia w programie, zobacz [dziedziczenie](programming-guide/classes-and-structs/inheritance.md).  
   
-- Każdy typ w CTS jest zdefiniowany jako *Typ wartości* lub *typ referencyjny*. Obejmuje to wszystkie niestandardowe typy w bibliotece klas .NET Framework, a także własne typy zdefiniowane przez użytkownika. Typy zdefiniowane za pomocą słowa kluczowego [struct](language-reference/builtin-types/struct.md) są typami wartości; wszystkie wbudowane typy liczbowe to **struktury**. Aby uzyskać więcej informacji na temat typów wartości, zobacz [struktury](structs.md). Typy zdefiniowane za pomocą słowa kluczowego [Class](language-reference/keywords/class.md) to typy odwołań. Aby uzyskać więcej informacji na temat typów referencyjnych, zobacz [klasy](programming-guide/classes-and-structs/classes.md). Typy odwołań i typy wartości mają różne reguły czasu kompilacji i inne zachowanie w czasie wykonywania.
+- Każdy typ w CTS jest zdefiniowany jako *Typ wartości* lub *typ referencyjny*. Obejmuje to wszystkie niestandardowe typy w bibliotece klas .NET, a także własne typy zdefiniowane przez użytkownika. Typy, które definiujesz za pomocą słowa kluczowego `struct` lub `enum`, są typami wartości. Aby uzyskać więcej informacji na temat typów wartości, zobacz [typy wartości](language-reference/builtin-types/value-types.md). Typy zdefiniowane za pomocą słowa kluczowego [Class](language-reference/keywords/class.md) to typy odwołań. Aby uzyskać więcej informacji na temat typów referencyjnych, zobacz [klasy](programming-guide/classes-and-structs/classes.md). Typy odwołań i typy wartości mają różne reguły czasu kompilacji i inne zachowanie w czasie wykonywania.
 
 ## <a name="see-also"></a>Zobacz też
 
-- [Struktury](structs.md)
+- [Typy struktur](language-reference/builtin-types/struct.md)
+- [Typy wyliczeniowe](language-reference/builtin-types/enum.md)
 - [Klasy](programming-guide/classes-and-structs/classes.md)

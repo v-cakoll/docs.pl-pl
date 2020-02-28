@@ -10,12 +10,12 @@ helpviewer_keywords:
 - objects [C#]
 - C# language, classes
 ms.assetid: cc39dbda-8754-423e-b5b1-16a1db0734c0
-ms.openlocfilehash: 301ba292010470208e92a225c1014bcb50497106
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: afd9e688bd716375bafb370fad4af082a9498411
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714820"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673423"
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>Klasy i struktury (Przewodnik programowania w języku C#)
 Klasy i struktury są dwoma podstawowymi konstrukcjami systemu wspólnego typu w .NET Framework. Każda z nich jest zasadniczo strukturą danych, która hermetyzuje zestaw danych i zachowań, które należą do jednostki logicznej. Dane i zachowania są *elementami członkowskimi* klasy lub struktury, a także zawierają metody, właściwości i zdarzenia itd., jak opisano w dalszej części tego tematu.  
@@ -28,7 +28,7 @@ Klasy i struktury są dwoma podstawowymi konstrukcjami systemu wspólnego typu w
   
  Ogólnie rzecz biorąc, klasy są używane do modelowania bardziej złożonej zachowań lub dane, które mają być modyfikowane po utworzeniu obiektu klasy. Struktury są najlepiej dostosowane do małych struktur danych, które zawierają głównie dane, które nie są przeznaczone do modyfikacji po utworzeniu struktury.  
   
- Aby uzyskać więcej informacji, zobacz [klasy](./classes.md), [obiekty](./objects.md)i [struktury](./structs.md).  
+ Aby uzyskać więcej informacji, zobacz [klasy](./classes.md), [obiekty](./objects.md)i [typy struktur](../../language-reference/builtin-types/struct.md).  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie `CustomClass` w przestrzeni nazw `ProgrammingGuide` ma trzy składowe: Konstruktor wystąpienia, właściwość o nazwie `Number`i metodę o nazwie `Multiply`. Metoda `Main` w klasie `Program` tworzy wystąpienie (obiekt) `CustomClass`, a metoda i właściwość obiektu są dostępne przy użyciu notacji kropkowej.
@@ -57,7 +57,7 @@ Klasy i struktury są dwoma podstawowymi konstrukcjami systemu wspólnego typu w
   
 - [Finalizatory](./destructors.md)  
   
-- [Indeksatory](../indexers/index.md)  
+- [Indexers](../indexers/index.md) (Indeksatory)  
   
 - [Operatory](../../language-reference/operators/index.md)  
   
@@ -72,7 +72,7 @@ Klasy i struktury są dwoma podstawowymi konstrukcjami systemu wspólnego typu w
  Klasy mogą być deklarowane jako [abstrakcyjne](../../language-reference/keywords/abstract.md), co oznacza, że co najmniej jedna z tych metod nie ma implementacji. Chociaż klasy abstrakcyjne nie mogą być tworzone bezpośrednio, mogą służyć jako klasy bazowe dla innych klas, które zapewniają brakującą implementację. Klasy mogą być również zadeklarowane jako [zapieczętowane](../../language-reference/keywords/sealed.md) , aby uniemożliwić innym klasom dziedziczenie z nich. Aby uzyskać więcej informacji, zobacz [klasy abstrakcyjne i zapieczętowane oraz składowe klas](./abstract-and-sealed-classes-and-class-members.md).  
   
 ### <a name="interfaces"></a>Interfejsy  
- Klasy i struktury mogą dziedziczyć wiele interfejsów. Aby dziedziczyć z interfejsu, oznacza, że typ implementuje wszystkie metody zdefiniowane w interfejsie. Więcej informacji znajdziesz w artykule [Interfejsy](../interfaces/index.md).  
+ Klasy i struktury mogą dziedziczyć wiele interfejsów. Aby dziedziczyć z interfejsu, oznacza, że typ implementuje wszystkie metody zdefiniowane w interfejsie. Aby uzyskać więcej informacji, zobacz [interfejsy](../interfaces/index.md).  
   
 ### <a name="generic-types"></a>Typy ogólne  
  Klasy i struktury można definiować przy użyciu co najmniej jednego parametru typu. Kod klienta dostarcza typ podczas tworzenia wystąpienia typu. Na przykład Klasa <xref:System.Collections.Generic.List%601> w przestrzeni nazw <xref:System.Collections.Generic> jest zdefiniowana z jednym parametrem typu. Kod klienta tworzy wystąpienie `List<string>` lub `List<int>`, aby określić typ, który będzie przechowywany na liście. Aby uzyskać więcej informacji, zobacz [Ogólne](../generics/index.md).  
@@ -81,7 +81,7 @@ Klasy i struktury są dwoma podstawowymi konstrukcjami systemu wspólnego typu w
  Klasy (ale nie struktury) mogą być deklarowane jako [statyczne](../../language-reference/keywords/static.md). Klasa statyczna może zawierać tylko statyczne elementy członkowskie i nie można utworzyć wystąpienia z nowym słowem kluczowym. Jedna kopia klasy jest ładowana do pamięci podczas ładowania programu, a jej elementy członkowskie są dostępne za pomocą nazwy klasy. Obie klasy i struktury mogą zawierać statyczne składowe. Aby uzyskać więcej informacji, zobacz [klasy statyczne i statyczne elementy członkowskie klas](./static-classes-and-static-class-members.md).  
   
 ### <a name="nested-types"></a>Zagnieżdżone typy  
- Klasa lub struktura może być zagnieżdżona w innej klasie lub strukturze. Aby uzyskać więcej informacji, zobacz [Typy zagnieżdżone](./nested-types.md).  
+ Klasa lub struktura może być zagnieżdżona w innej klasie lub strukturze. Aby uzyskać więcej informacji, zobacz [typy zagnieżdżone](./nested-types.md).  
   
 ### <a name="partial-types"></a>Typy częściowe  
  Można zdefiniować część klasy, struktury lub metody w jednym pliku kodu i innej części w osobnym pliku kodu. Aby uzyskać więcej informacji, zobacz [częściowe klasy i metody](./partial-classes-and-methods.md).  
@@ -101,6 +101,6 @@ Klasy i struktury są dwoma podstawowymi konstrukcjami systemu wspólnego typu w
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Przewodnik programowania w języku C#](../index.md)

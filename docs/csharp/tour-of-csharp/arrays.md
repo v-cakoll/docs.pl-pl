@@ -1,48 +1,48 @@
 ---
-title: C#Tablice — Przewodnik po przykładzie C# języka
-description: Tablice są najbardziej podstawowym typem kolekcji w C# języka
+title: C#Tablice — Przewodnik po C# języku
+description: Tablice są najbardziej podstawowym typem kolekcji w C# języku
 ms.date: 08/10/2016
 ms.assetid: a440704c-9e88-4c75-97dd-bfe30ca0fb97
-ms.openlocfilehash: 56a053ac8525d4c6c34592d6092f3f162cb04247
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 195df1f31c71ee7a202a3b57076775c4f717d399
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634602"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673319"
 ---
 # <a name="arrays"></a>Tablice
 
-***Tablica*** to struktura danych zawierająca pewną liczbę zmiennych, do których dostęp jest uzyskiwany za pomocą obliczonych indeksów. Zmienne zawartych w tablicy, jest określana skrótem ***elementy*** tablicy, są wszystkie tego samego typu, a tego typu jest nazywana ***typ elementu*** tablicy.
+***Tablica*** to struktura danych zawierająca wiele zmiennych, do których można uzyskać dostęp za pomocą obliczanych indeksów. Zmienne zawarte w tablicy, nazywane również ***elementami*** tablicy, są tego samego typu, a ten typ jest nazywany ***typem elementu*** tablicy.
 
-Typy tablicowe są typami odwołań, a deklaracja zmiennej tablicy po prostu rezerwuje miejsce dla odwołania do wystąpienia tablicy. Wystąpienia bieżącej tablicy są tworzone dynamicznie w czasie wykonywania za pomocą nowego operatora. Określa nową operację ***długość*** nowego wystąpienia tablicy naprawiliśmy dla okresu istnienia wystąpienia. Indeksy elementów z zakresu tablicy `0` do `Length - 1`. `new` Operator automatycznie inicjuje elementy tablicy, aby przywrócić wartości domyślne, na przykład są to wartości zero dla wszystkich typów liczbowych i `null` dla wszystkich typów odniesienia.
+Typy tablic są typami odwołań, a deklaracja zmiennej tablicowej po prostu ustawia miejsce na odwołanie do wystąpienia tablicy. Rzeczywiste wystąpienia tablicy są tworzone dynamicznie w czasie wykonywania przy użyciu operatora new. Nowa operacja określa ***Długość*** nowego wystąpienia tablicy, które jest następnie naprawione dla okresu istnienia wystąpienia. Indeksy elementów z zakresu tablicy od `0` do `Length - 1`. Operator `new` automatycznie inicjuje elementy tablicy do ich wartości domyślnej, co na przykład ma wartość zero dla wszystkich typów liczbowych i `null` dla wszystkich typów referencyjnych.
 
-Poniższy przykład tworzy tablicę `int` elementów, inicjuje tablicy i wyświetla zawartość tablicy.
+Poniższy przykład tworzy tablicę elementów `int`, Inicjuje tablicę i drukuje zawartość tablicy.
 
 [!code-csharp[ArraySample](../../../samples/snippets/csharp/tour/arrays/Program.cs#L3-L18)]
 
-W tym przykładzie tworzy i działa na ***tablicy jednowymiarowej***. C# obsługuje również ***Wielowymiarowe tablice***. Wpisz liczbę wymiarów tablicy, znany także jako ***ranga*** typ tablicy jest jedną przesunięta liczbę przecinkami zapisywane między nawiasami kwadratowymi typu tablicy. Poniższy przykład przydziela odpowiednio jednowymiarowe dwuwymiarowym i tablicą trójwymiarową.
+Ten przykład tworzy i działa na ***tablicy jednowymiarowej***. C#obsługuje również ***tablice***wielowymiarowe. Liczba wymiarów typu tablicy, znana również jako ***ranga*** typu tablicy, jest taka, a liczba przecinkiów zapisywana między nawiasami kwadratowymi typu tablicy. Poniższy przykład przydziela odpowiednio jednowymiarowe, dwuwymiarowe i trójwymiarowe tablice.
 
 [!code-csharp[ArrayRank](../../../samples/snippets/csharp/tour/arrays/Program.cs#L24-L26)]
 
-`a1` Tablica zawiera 10 elementów `a2` tablica zawiera 50 (10 x 5) elementów, a `a3` tablica zawiera 100 (10 x 5 x 2) elementów.
-Typ elementu tablicy może być dowolnego typu, w tym typu tablicowego. Tablicę z elementami typu tablicowego jest czasami nazywane ***tablicy nieregularnej*** ponieważ długości tablic elementu nie wszystkie muszą być takie same. Poniższy przykład przydziela tablicy tablic `int`:
+Tablica `a1` zawiera 10 elementów, tablica `a2` zawiera 50 (10 × 5) elementów, a tablica `a3` zawiera 100 (10 × 5 × 2) elementów.
+Typ elementu tablicy może być dowolnego typu, łącznie z typem tablicy. Tablica z elementami typu tablicy jest czasami nazywana ***tablicą nieregularną*** , ponieważ długości tablic elementów nie wszystkie muszą być takie same. W poniższym przykładzie przypisuje tablicę tablic `int`:
 
 [!code-csharp[ArrayAllocation](../../../samples/snippets/csharp/tour/arrays/Program.cs#L31-L34)]
 
-Pierwszy wiersz tworzy tablicę z trzech elementów, z których każdy typ `int[]` , a każdy z wartości początkowej `null`. Kolejne wiersze następnie zainicjowanie trzech elementów z odwołaniami do wystąpień poszczególnych tablicy o różnej długości.
+Pierwszy wiersz tworzy tablicę z trzema elementami, każdy z typów `int[]` i każdy z początkową wartością `null`. Kolejne wiersze inicjują następnie trzy elementy z odwołaniami do poszczególnych wystąpień tablicy o różnej długości.
 
-Nowy operator zezwala na wartość początkową elementów tablicy, należy określić przy użyciu ***inicjatora tablicy***, który znajduje się lista wyrażeń zapisywane między ogranicznikami `{` i `}`. Poniższy przykład przydziela i inicjuje `int[]` za pomocą trzech elementów.
+Operator new pozwala na określenie początkowych wartości elementów tablicy przy użyciu ***inicjatora tablicy***, który jest listą wyrażeń pisanych między ogranicznikami `{` i `}`. Poniższy przykład przydziela i inicjuje `int[]` z trzema elementami.
 
 [!code-csharp[ArrayInitialization](../../../samples/snippets/csharp/tour/arrays/Program.cs#L39-L39)]
 
-Należy pamiętać, że długość tablicy jest wnioskowany z liczba wyrażeń między {i}. Zmienna lokalna i deklaracji pól można skrócony dalsze taki sposób, że typ tablicy nie ma być przekształcone.
+Należy zauważyć, że długość tablicy jest wywnioskowana na podstawie liczby wyrażeń między {i}. Deklaracje zmiennej lokalnej i pola mogą być skrócone w taki sposób, aby nie trzeba było przestawiać tego typu tablicy.
 
 [!code-csharp[ArrayInitialization](../../../samples/snippets/csharp/tour/arrays/Program.cs#L44-L44)]
 
-W poprzednich przykładach są odpowiednikiem następujących czynności:
+Oba poprzednie przykłady są równoważne z następującymi:
 
 [!code-csharp[ArrayAssignment](../../../samples/snippets/csharp/tour/arrays/Program.cs#L49-L53)]
 
 >[!div class="step-by-step"]
->[Poprzednie](structs.md)
+>[Poprzednie](classes-and-objects.md)
 >[dalej](interfaces.md)

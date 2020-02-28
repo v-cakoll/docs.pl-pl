@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 187a49131e903e00cab54d9db43b6cd8eb359a3a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 500160d3bc9280b866e5f5ba24c5edc623e752c1
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713690"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673098"
 ---
 # <a name="class-c-reference"></a>class (odwołanie w C#)
 
@@ -32,10 +32,10 @@ W programie C#można używać tylko jednego dziedziczenia. Innymi słowy, Klasa 
 
 |Dziedziczenie|Przykład|
 |-----------------|-------------|
-|Brak|`class ClassA { }`|
-|Single|`class DerivedClass: BaseClass { }`|
-|Brak, implementuje dwa interfejsy|`class ImplClass: IFace1, IFace2 { }`|
-|Single, implementuje jeden interfejs|`class ImplDerivedClass: BaseClass, IFace1 { }`|
+|None|`class ClassA { }`|
+|Single|`class DerivedClass : BaseClass { }`|
+|Brak, implementuje dwa interfejsy|`class ImplClass : IFace1, IFace2 { }`|
+|Single, implementuje jeden interfejs|`class ImplDerivedClass : BaseClass, IFace1 { }`|
 
 Klasy zadeklarowane bezpośrednio w przestrzeni nazw, a nie zagnieżdżone w innych klasach, mogą być [publiczne](./public.md) lub [wewnętrzne](./internal.md). Klasy są domyślnie `internal`.
 
@@ -59,7 +59,7 @@ Klasa może zawierać deklaracje następujących elementów członkowskich:
 
 - [Właściwości](../../programming-guide/classes-and-structs/properties.md)
 
-- [Indeksatory](../../programming-guide/indexers/index.md)
+- [Indexers](../../programming-guide/indexers/index.md) (Indeksatory)
 
 - [Operatory](../operators/index.md)
 
@@ -71,9 +71,9 @@ Klasa może zawierać deklaracje następujących elementów członkowskich:
 
 - [Interfejsy](../../programming-guide/interfaces/index.md)
 
-- [Struktury](../../programming-guide/classes-and-structs/structs.md)
+- [Typy struktur](../builtin-types/struct.md)
 
-- [Wyliczenia](../builtin-types/enum.md)
+- [Typy wyliczeniowe](../builtin-types/enum.md)
 
 ## <a name="example"></a>Przykład
 
@@ -99,9 +99,9 @@ Na koniec należy zauważyć, że dla obiektu utworzonego przy użyciu konstrukt
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Dokumentacja języka C#](../index.md)
+- [C#Odwoła](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](./index.md)
 - [Typy odwołań](./reference-types.md)

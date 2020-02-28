@@ -3,12 +3,12 @@ title: Klasy i obiekty w C# przewodniku dotyczące C# języka
 description: Jesteś nowym C#? Przeczytaj ten przegląd klas, obiektów i dziedziczenia
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: be8e760b19b7ca5305918ecfdbf9ad797d7e76b2
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: e5078135ab22445ac636c6edc3d46570be8fcaf5
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105634"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673306"
 ---
 # <a name="classes-and-objects"></a>Klasy i obiekty
 
@@ -26,7 +26,7 @@ Wystąpienia klas są tworzone za pomocą operatora `new`, który przydziela pam
 
 Pamięć zajęta przez obiekt jest automatycznie odzyskiwana, gdy obiekt nie jest już dostępny. Nie jest to konieczne ani możliwe, aby jawnie cofnąć alokację obiektów w programie C#.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 Elementy członkowskie klasy są statycznymi elementami członkowskimi lub wystąpieniami. Statyczne składowe należą do klas, a elementy członkowskie wystąpienia należą do obiektów (wystąpień klas).
 
@@ -40,7 +40,7 @@ Poniżej przedstawiono omówienie rodzajów elementów członkowskich, które mo
   - Obliczenia i akcje, które mogą być wykonywane przez klasę
 - Właściwości
   - Akcje skojarzone z odczytem i pisaniem nazwanych właściwości klasy
-- Indeksatory
+- Indexers (Indeksatory)
   - Akcje skojarzone z wystąpieniami indeksowania klasy, takimi jak tablica
 - Zdarzenia
   - Powiadomienia, które mogą zostać wygenerowane przez klasę
@@ -50,7 +50,7 @@ Poniżej przedstawiono omówienie rodzajów elementów członkowskich, które mo
   - Akcje wymagane do zainicjowania wystąpień klasy lub samej klasy
 - Finalizatory
   - Akcje do wykonania przed trwałe odrzuceniem wystąpień klasy
-- Types
+- Typy
   - Zagnieżdżone typy zadeklarowane przez klasę
 
 ## <a name="accessibility"></a>Ułatwienia dostępu
@@ -254,7 +254,7 @@ Podobnie jak pola i metody, C# obsługuje zarówno właściwości wystąpienia, 
 
 Metody dostępu właściwości mogą być wirtualne. Gdy Deklaracja właściwości zawiera modyfikator `virtual`, `abstract`lub `override`, ma zastosowanie do akcesorów właściwości.
 
-### <a name="indexers"></a>Indeksatory
+### <a name="indexers"></a>Indexers (Indeksatory)
 
 *Indeksator* jest członkiem, który umożliwia indeksowanie obiektów w taki sam sposób jak w przypadku tablicy. Indeksator jest zadeklarowany jak właściwość, z tą różnicą, że nazwa elementu członkowskiego jest `this` po którym następuje lista parametrów zapisywana między ogranicznikami `[` i `]`. Parametry są dostępne w metodach dostępu indeksatora. Podobnie jak w przypadku właściwości, indeksatory mogą być tylko do odczytu i zapisu, tylko do odczytu i do zapisu, a Akcesory dla indeksatora mogą być wirtualne.
 
@@ -297,5 +297,5 @@ Moduł wyrzucania elementów bezużytecznych jest dozwolony w przypadku podejmow
 Instrukcja `using` zapewnia lepsze podejście do niszczenia obiektów.
 
 > [!div class="step-by-step"]
-> [Poprzedni](statements.md)
-> [Następny](structs.md)
+> [Poprzednie](statements.md)
+> [dalej](arrays.md)

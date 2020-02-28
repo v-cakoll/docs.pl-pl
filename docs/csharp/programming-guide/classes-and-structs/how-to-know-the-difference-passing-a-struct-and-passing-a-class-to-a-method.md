@@ -6,12 +6,12 @@ helpviewer_keywords:
 - passing parameters [C#], structs vs. classes
 - methods [C#], passing classes vs. structs
 ms.assetid: 9c1313a6-32a8-4ea7-a59f-450f66af628b
-ms.openlocfilehash: 258001ae8ed3591bf75aeb040d1a63118196455a
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: a280a6df873d7c03c204bc5c86468e7e7298d723
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77628205"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673436"
 ---
 # <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a>Jak poznać różnicę między przekazaniem struktury i przekazaniem odwołania do klasy do metody (C# Przewodnik programowania)
 Poniższy przykład ilustruje sposób przekazywania [struktury](../../language-reference/builtin-types/struct.md) do metody różni się od przekazywania wystąpienia [klasy](../../language-reference/keywords/class.md) do metody. W przykładzie oba argumenty (wystąpienie struktury i klasy) są przekazane przez wartość, a obie te metody zmieniają wartość jednego pola argumentu. Jednak wyniki dwóch metod nie są takie same, ponieważ co jest przekazywane w przypadku przekazania struktury różni się od tego, co jest przekazywane podczas przekazywania wystąpienia klasy.  
@@ -29,5 +29,5 @@ Poniższy przykład ilustruje sposób przekazywania [struktury](../../language-r
 
 - [Przewodnik programowania w języku C#](../index.md)
 - [Klasy](./classes.md)
-- [Struktury](./structs.md)
+- [Typy struktur](../../language-reference/builtin-types/struct.md)
 - [Przekazywanie parametrów](./passing-parameters.md)

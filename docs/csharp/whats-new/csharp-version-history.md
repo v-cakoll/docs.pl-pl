@@ -3,12 +3,12 @@ title: Historia C# - C# Przewodnik
 description: Jak wygląda ten język we wcześniejszych wersjach i jak został on rozwijający od?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 83934d9c8194d5109cea0e847d287c01c32a2955
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 9114395a5c6cfd8df5da18024921c35828947e0b
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739106"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673280"
 ---
 # <a name="the-history-of-c"></a>Historia języka C\#
 
@@ -37,7 +37,7 @@ C#w wersji 1,0 zostały wyszukane funkcje, w porównaniu do dzisiaj. Znajdziesz 
 Główne funkcje C# 1,0 obejmują:
 
 - [Klasy](../programming-guide/classes-and-structs/classes.md)
-- [Struktury](../programming-guide/classes-and-structs/structs.md)
+- [Struktury](../language-reference/builtin-types/struct.md)
 - [Interfejsy](../programming-guide/interfaces/index.md)
 - [Zdarzenia](../events-overview.md)
 - [Właściwości](../properties.md)

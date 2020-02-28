@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: ade2cba857a1a32039f8fd07881f13f63f0dbe1a
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: a094e6e8ab9094fb14ce9a2ca8a180cbf9b273cb
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77628140"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673397"
 ---
 # <a name="types-c-programming-guide"></a>Typy (Przewodnik programowania w języku C#)
 
@@ -113,7 +113,7 @@ Za pomocą słowa kluczowego [struct](../../language-reference/builtin-types/str
 
 [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]
 
-Aby uzyskać więcej informacji na temat struktur, zobacz [struktury](../classes-and-structs/structs.md). Aby uzyskać więcej informacji na temat typów wartości, zobacz [typy wartości](../../language-reference/builtin-types/value-types.md).
+Aby uzyskać więcej informacji na temat struktur, zobacz [typy struktury](../../language-reference/builtin-types/struct.md). Aby uzyskać więcej informacji na temat typów wartości, zobacz [typy wartości](../../language-reference/builtin-types/value-types.md).
 
 Druga kategoria typów wartości to [enum](../../language-reference/builtin-types/enum.md). Wyliczenie definiuje zestaw nazwanych stałych całkowitych. Na przykład Wyliczenie <xref:System.IO.FileMode?displayProperty=nameWithType> w bibliotece klas .NET zawiera zestaw nazwanych stałych liczb całkowitych, które określają, jak plik powinien być otwarty. Jest on zdefiniowany, jak pokazano w następującym przykładzie:
 
@@ -205,3 +205,4 @@ Aby uzyskać więcej informacji, zobacz następujące tematy:
 - [Przewodnik programowania w języku C#](../index.md)
 - [Konwersja typów danych XML](../../../standard/data/xml/conversion-of-xml-data-types.md)
 - [Typy całkowite](../../language-reference/builtin-types/integral-numeric-types.md)
+ 

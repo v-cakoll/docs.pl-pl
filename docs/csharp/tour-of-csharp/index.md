@@ -2,12 +2,12 @@
 title: C# C# poradniku
 description: Jesteś nowym C#? Poznaj podstawy języka.
 ms.date: 04/05/2019
-ms.openlocfilehash: e2d7af3a35dc9d4fdeddf9eb742d155ab33094b4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b510342f957a259a6c7763441778461b3dd4ef1e
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711665"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673293"
 ---
 # <a name="a-tour-of-the-c-language"></a>Przewodnik po C# języku
 
@@ -23,7 +23,7 @@ C#ma ***ujednolicony system typów***. Wszystkie C# typy, w tym typy pierwotne, 
 
 Aby upewnić C# się, że programy i biblioteki mogą się rozwijać w czasie w zgodnym zakresie, przeznaczenie ma duże znaczenie C#w projekcie ***wersji*** . W wielu językach programowania jest mało uwagi na ten problem, a w efekcie programy w tych językach są częściej częściej niż to konieczne, gdy są wprowadzane nowsze wersje bibliotek zależnych. C#Zagadnienia dotyczące projektu, które miały bezpośredni wpływ na wersje, obejmują osobne modyfikatory `virtual` i `override`, reguły rozpoznawania przeciążenia metod i obsługę jawnych deklaracji elementów członkowskich interfejsu.
 
-## <a name="hello-world"></a>Hello world
+## <a name="hello-world"></a>Witaj świecie
 
 Program "Hello, World" jest tradycyjnie używany do wprowadzania języka programowania. W tym miejscu znajduje C#się w:
 
@@ -57,17 +57,15 @@ Dowiedz się więcej o tym, jak C#to zrobić. W poniższych tematach przedstawio
 - [Struktura programu](program-structure.md)
   - Poznaj kluczowe koncepcje organizacyjne w C# języku: ***programy***, ***przestrzenie nazw***, ***typy***, ***elementy członkowskie***i ***zestawy***.
 - [Typy i zmienne](types-and-variables.md)
-  - Dowiedz się więcej o ***typach wartości***, ***typach referencyjnych***, i ***zmiennych*** w języku C#.
+  - Dowiedz się więcej o ***typach wartości***, ***typach odwołań***i ***zmiennych*** w C# języku.
 - [Wyrażenia](expressions.md)
-  - ***Wyrażenia*** są tworzone przy użyciu ***operandów*** (argumentów operacji) i ***operatorów***. Wyrażenia zwracają wartość.
+  - ***Wyrażenia*** są zbudowane z ***argumentów operacji*** i ***operatorów***. Wyrażenia zwracają wartość.
 - [Instrukcje](statements.md)
-  - ***Instrukcje*** służą do przekazywania programowi informacji o tym, co ma on wykonać.
+  - ***Instrukcje*** służą do wyrażenia działania programu.
 - [Klasy i obiekty](classes-and-objects.md)
-  - ***Klasy*** są najbardziej podstawowym typem w języku C#. ***Obiekty*** są wystąpieniami klasy. Klasy są tworzone przy użyciu ***składowych***, które także opisano w tym temacie.
-- [Struktury](structs.md)
-  - ***Struktury*** to struktury danych, które (w przeciwieństwie do klas) są typami wartości.
+  - ***Klasy*** są najbardziej zasadniczymi C#typami. ***Obiekty*** są wystąpieniami klasy. Klasy są kompilowane przy użyciu ***elementów członkowskich***, które również zostały omówione w tym temacie.
 - [Tablice](arrays.md)
-  - ***Tablica*** to struktura danych zawierająca pewną liczbę zmiennych, do których dostęp jest uzyskiwany za pomocą obliczonych indeksów.
+  - ***Tablica*** to struktura danych zawierająca wiele zmiennych, do których można uzyskać dostęp za pomocą obliczanych indeksów.
 - [Interfejsy](interfaces.md)
   - ***Interfejs*** definiuje kontrakt, który może być zaimplementowany przez klasy i struktury. Interfejs może zawierać metody, właściwości, zdarzenia i indeksatory. Interfejs nie dostarcza implementacji elementów członkowskich, które definiuje — tylko określa elementy członkowskie, które muszą być dostarczone przez klasy lub struktury, które implementują interfejs.
 - [Delegaci](delegates.md)
@@ -79,4 +77,4 @@ Dowiedz się więcej o tym, jak C#to zrobić. W poniższych tematach przedstawio
 > Te artykuły mają zastosowanie C# do 7,0 i nowszych. Niektóre funkcje mogą nie być dostępne we wcześniejszych wersjach.
 
 > [!div class="step-by-step"]
-> [Next](program-structure.md)
+> [Dalej](program-structure.md)

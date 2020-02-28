@@ -5,12 +5,12 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: a2f5300f9647823cf2c9ac2a4a5c7c888c7dd245
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 09b290713f3bc2a7a7824bb19c98138943ad5b2c
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77626584"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673384"
 ---
 # <a name="objects-c-programming-guide"></a>Obiekty (Przewodnik programowania w języku C#)
 Definicja klasy lub struktury jest taka sama jak w przypadku planu, który określa, jaki typ może być wykonywany. Obiekt jest w zasadzie blok pamięci, który został przydzielony i skonfigurowany zgodnie z planem. Program może utworzyć wiele obiektów tej samej klasy. Obiekty są również nazywane wystąpieniami i mogą być przechowywane w zmiennej nazwanej lub w tablicy lub kolekcji. Kod klienta to kod, który używa tych zmiennych do wywoływania metod i uzyskiwania dostępu do właściwości publicznych obiektu. W języku zorientowanym obiektowo, takim jak C#, typowy program składa się z wielu obiektów, które współpracują dynamicznie.  
@@ -52,8 +52,6 @@ Definicja klasy lub struktury jest taka sama jak w przypadku planu, który okre�
   
 - [Klasy](./classes.md)  
   
-- [Struktury](./structs.md)  
-  
 - [Konstruktory](./constructors.md)  
   
 - [Finalizatory](./destructors.md)  
@@ -66,6 +64,6 @@ Definicja klasy lub struktury jest taka sama jak w przypadku planu, który okre�
 - [object](../../language-reference/builtin-types/reference-types.md)
 - [Dziedziczenie](./inheritance.md)
 - [class](../../language-reference/keywords/class.md)
-- [struct](../../language-reference/builtin-types/struct.md)
+- [Typy struktur](../../language-reference/builtin-types/struct.md)
 - [Operator new](../../language-reference/operators/new-operator.md)
 - [System typu wspólnego](../../../standard/base-types/common-type-system.md)

@@ -49,25 +49,7 @@
     - name: Instalowanie zlokalizowanej technologii IntelliSense
       href: install/localized-intellisense.md
 - name: Wprowadzenie
-  items:
-    - name: Wprowadzenie
-      href: get-started.md
-    - name: 'Wprowadzenie do języka C# i programu Visual Studio Code'
-      href: tutorials/with-visual-studio-code.md
-    - name: Rozpoczynanie pracy z platformą .NET Core w systemie macOS przy użyciu programu Visual Studio Code
-      href: tutorials/using-on-macos.md
-    - name: Tworzenie pierwszej aplikacji konsolowej w programie Visual Studio
-      href: tutorials/with-visual-studio.md
-    - name: Debugowanie aplikacji za pomocą programu Visual Studio
-      href: tutorials/debugging-with-visual-studio.md
-    - name: Publikowanie aplikacji za pomocą programu Visual Studio
-      href: tutorials/publishing-with-visual-studio.md
-    - name: Tworzenie biblioteki .NET Standard w programie Visual Studio
-      href: tutorials/library-with-visual-studio.md
-    - name: Testowanie biblioteki .NET Standard w programie Visual Studio
-      href: tutorials/testing-library-with-visual-studio.md
-    - name: Korzystanie z biblioteki .NET Standard w programie Visual Studio
-      href: tutorials/consuming-library-with-visual-studio.md
+  href: get-started.md
 - name: Co nowego w programie .NET Core
   items:
     - name: Co nowego w programie .NET Core 3.1
@@ -87,12 +69,28 @@
   items:
     - name: Omówienie
       href: tutorials/index.md
-    - name: Rozpoczynanie pracy z platformą .NET Core przy użyciu programu Visual Studio dla komputerów Mac
-      href: tutorials/using-on-mac-vs.md
-    - name: Tworzenie kompletnego rozwiązania .NET Core w systemie macOS
-      href: tutorials/using-on-mac-vs-full-solution.md
+    - name: Rozpoczynanie pracy z platformą .NET Core przy użyciu programu Visual Studio
+      href: tutorials/with-visual-studio.md
+    - name: Rozpoczynanie pracy z platformą .NET Core przy użyciu programu Visual Studio Code
+      href: tutorials/with-visual-studio-code.md
     - name: Rozpoczynanie pracy z platformą .NET Core przy użyciu interfejsu wiersza polecenia
       href: tutorials/cli-create-console-app.md
+    - name: Rozpoczynanie pracy z platformą .NET Core przy użyciu programu Visual Studio Code w systemie macOS
+      href: tutorials/using-on-macos.md
+    - name: Rozpoczynanie pracy z platformą .NET Core przy użyciu programu Visual Studio dla komputerów Mac
+      href: tutorials/using-on-mac-vs.md
+    - name: Debugowanie aplikacji za pomocą programu Visual Studio
+      href: tutorials/debugging-with-visual-studio.md
+    - name: Publikowanie aplikacji za pomocą programu Visual Studio
+      href: tutorials/publishing-with-visual-studio.md
+    - name: Tworzenie biblioteki .NET Standard w programie Visual Studio
+      href: tutorials/library-with-visual-studio.md
+    - name: Testowanie biblioteki .NET Standard w programie Visual Studio
+      href: tutorials/testing-library-with-visual-studio.md
+    - name: Korzystanie z biblioteki .NET Standard w programie Visual Studio
+      href: tutorials/consuming-library-with-visual-studio.md
+    - name: Tworzenie kompletnego rozwiązania .NET Core w systemie macOS
+      href: tutorials/using-on-mac-vs-full-solution.md
     - name: Organizowanie i testowanie projektów przy użyciu interfejsu wiersza polecenia platformy .NET Core
       href: tutorials/testing-with-cli.md
     - name: Tworzenie bibliotek za pomocą narzędzi dla wielu platform

@@ -82,8 +82,6 @@
       href: tour-of-csharp/statements.md
     - name: Klasy i obiekty
       href: tour-of-csharp/classes-and-objects.md
-    - name: Struktury
-      href: tour-of-csharp/structs.md
     - name: Tablice
       href: tour-of-csharp/arrays.md
     - name: Interfejsy
@@ -129,8 +127,6 @@
       href: basic-types.md
     - name: Klasy
       href: programming-guide/classes-and-structs/classes.md
-    - name: Struktury
-      href: structs.md
     - name: Krotki
       href: tuples.md
     - name: Dekonstrukcja krotek i innych typów
@@ -941,19 +937,12 @@
     - name: Klasy i struktury
       items:
         - name: Omówienie
-          displayName: classes structs
+          displayName: classes
           href: programming-guide/classes-and-structs/index.md
         - name: Klasy
           href: programming-guide/classes-and-structs/classes.md
         - name: Obiekty
           href: programming-guide/classes-and-structs/objects.md
-        - name: Struktury
-          items:
-            - name: Omówienie
-              displayName: structs
-              href: programming-guide/classes-and-structs/structs.md
-            - name: Korzystanie ze struktur
-              href: programming-guide/classes-and-structs/using-structs.md
         - name: Dziedziczenie
           href: programming-guide/classes-and-structs/inheritance.md
         - name: Polimorfizm
@@ -1337,8 +1326,9 @@
                 - name: Typów wyliczeniowych
                   href: language-reference/builtin-types/enum.md
                   displayName: 'enum, bit flags, bit field'
-                - name: struktura
-                  href: language-reference/keywords/struct.md
+                - name: Typy struktur
+                  href: language-reference/builtin-types/struct.md
+                  displayName: struct type
                 - name: Typy wartości dopuszczające wartość null
                   href: language-reference/builtin-types/nullable-value-types.md
                   displayName: '? token, ? symbol'

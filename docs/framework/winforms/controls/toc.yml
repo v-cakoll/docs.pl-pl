@@ -1181,7 +1181,7 @@
           href: walkthrough-authoring-a-composite-control-with-visual-csharp.md
         - name: 'Przewodnik: dziedziczenie z kontrolki'
           href: walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md
-        - name: 'Przewodnik: wykonywanie typowych zadań przy użyciu tagów inteligentnych'
+        - name: 'Przewodnik: Wykonywanie typowych zadań przy użyciu akcji projektowania'
           href: perform-common-tasks-design-actions.md
         - name: 'Przewodnik: serializowanie kolekcji typów standardowych'
           href: serializing-collections-designerserializationvisibilityattribute.md

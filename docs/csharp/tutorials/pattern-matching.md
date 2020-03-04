@@ -4,18 +4,18 @@ description: W tym zaawansowanym samouczku pokazano, jak używać technik dopaso
 ms.date: 03/13/2019
 ms-technology: csharp-whats-new
 ms.custom: mvc
-ms.openlocfilehash: ca7ae63a038fce0b2569e7a4bd1805765bc23d44
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: fd08e707402bfcd552997111a9c3fa58841a5466
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039195"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240057"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Samouczek: Używanie funkcji dopasowania wzorców do zwiększania typów danych
 
 C#7 wprowadzono podstawowe funkcje dopasowania do wzorca. Te funkcje są rozszerzane C# w 8 przy użyciu nowych wyrażeń i wzorców. Można napisać funkcję, która zachowuje się tak, jakby rozszerzone typy, które mogą znajdować się w innych bibliotekach. Innym zastosowaniem wzorców jest tworzenie funkcji wymaganych przez aplikację, która nie jest podstawową funkcją rozszerzania typu.
 
-W tym samouczku dowiesz się, jak:
+Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
 
 > [!div class="checklist"]
 >
@@ -41,7 +41,7 @@ Rozważmy główny obszar metropolitalnych, który korzysta z opłat i cen w cza
 
 Z tego krótkiego opisu można szybko szkicować hierarchię obiektów, aby modelować ten system. Jednak dane pochodzą z wielu źródeł, takich jak inne systemy zarządzania rejestracją pojazdów. Te systemy zapewniają różne klasy do modelowania danych i nie masz modelu pojedynczego obiektu, którego można użyć. W tym samouczku zostaną użyte te uproszczone klasy do modelowania danych pojazdu z tych systemów zewnętrznych, jak pokazano w poniższym kodzie:
 
-[!code-csharp[ExternalSystems](~/samples/csharp/tutorials/patterns/start/toll-calculator/ExternalSystems.cs)]
+[!code-csharp[ExternalSystems](~/samples/snippets/csharp/tutorials/patterns/start/toll-calculator/ExternalSystems.cs)]
 
 Możesz pobrać kod początkowy z repozytorium usługi GitHub [/przykłady](https://github.com/dotnet/samples/tree/master/csharp/tutorials/patterns/start) . Można zobaczyć, że klasy pojazdu pochodzą z różnych systemów i znajdują się w różnych przestrzeniach nazw. Nie można wykorzystać żadnej wspólnej klasy bazowej, innej niż `System.Object`.
 
@@ -298,7 +298,7 @@ Użyjesz dopasowania do wzorca dla tej funkcji, ale będziesz zintegrować ją z
 
 W poniższej tabeli przedstawiono kombinacje wartości wejściowych i mnożnik cen szczytowych:
 
-| Dzień        | Godzina         | Kierunek | Tytułu |
+| Day        | Time         | Kierunek | Premium |
 | ---------- | ------------ | --------- |--------:|
 | Dzień tygodnia    | rano szczytu | dotycząc   | x 2,00  |
 | Dzień tygodnia    | rano szczytu | wyjściowy  | x 1,00  |
@@ -337,17 +337,17 @@ private static bool IsWeekDay(DateTime timeOfToll) =>
 
 Ta metoda działa, ale jest repetitious. Można uprościć ten sposób, jak pokazano w poniższym kodzie:
 
-[!code-csharp[IsWeekDay](~/samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#IsWeekDay)]
+[!code-csharp[IsWeekDay](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#IsWeekDay)]
 
 Następnie Dodaj podobną funkcję, aby przydzielić czas do bloków:
 
-[!code-csharp[GetTimeBand](~/samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#GetTimeBand)]
+[!code-csharp[GetTimeBand](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#GetTimeBand)]
 
 Poprzednia metoda nie używa dopasowania do wzorca. Jest to wyraźniejsze użycie znanych kaskadowych instrukcji `if`. Należy dodać prywatny `enum`, aby przekonwertować każdy zakres czasu na wartość dyskretną.
 
 Po utworzeniu tych metod można użyć innego wyrażenia `switch` ze **wzorcem spójności** , aby obliczyć cenę Premium. Można utworzyć wyrażenie `switch` ze wszystkimi 16 bronią:
 
-[!code-csharp[FullTuplePattern](~/samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#TuplePatternOne)]
+[!code-csharp[FullTuplePattern](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#TuplePatternOne)]
 
 Powyższy kod działa, ale można go uprościć. Wszystkie osiem kombinacji dla weekendu mają te same opłaty za połączenie płatne. Można zastąpić wszystkie osiem następującymi wierszami:
 
@@ -380,7 +380,7 @@ public decimal PeakTimePremium(DateTime timeOfToll, bool inbound) =>
 
 Na koniec możesz usunąć dwie szczytu godziny, które będą obciążane stałą cenę. Po usunięciu tych broni można zastąpić `false` odrzucanie (`_`) w końcowej aktywacji. Następująca metoda została zakończona:
 
-[!code-csharp[SimplifiedTuplePattern](../../../samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#FinalTuplePattern)]
+[!code-csharp[SimplifiedTuplePattern](../../../samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#FinalTuplePattern)]
 
 Ten przykład wyróżnia jedną z zalet dopasowania do wzorca: gałęzie wzorców są oceniane w kolejności. W przypadku zmiany rozmieszczenia w taki sposób, aby wcześniejsza gałąź obsługiwała jeden z przyszłych przypadków, kompilator ostrzega o nieosiągalnym kodzie. Te reguły języka ułatwiają wykonywanie powyższych uproszczeń bez obaw, że kod nie uległ zmianie.
 

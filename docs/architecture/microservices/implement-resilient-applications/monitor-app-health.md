@@ -1,13 +1,13 @@
 ---
 title: Monitorowanie kondycji
 description: Poznaj jeden ze sposobów implementacji monitorowania kondycji.
-ms.date: 01/30/2020
-ms.openlocfilehash: a91e51af66049f9774365cd56b90ab792a4dd4fc
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.date: 03/02/2020
+ms.openlocfilehash: 3b8ba57149061e629bee441672718eba8a79da63
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77502684"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78241159"
 ---
 # <a name="health-monitoring"></a>Monitorowanie kondycji
 
@@ -19,7 +19,7 @@ W typowym modelu usługi wysyłają raporty dotyczące ich stanu, a informacje t
 
 ## <a name="implement-health-checks-in-aspnet-core-services"></a>Implementowanie kontroli kondycji w usługach ASP.NET Core Services
 
-Podczas tworzenia ASP.NET Core mikrousług lub aplikacji sieci Web można użyć wbudowanej funkcji kontroli kondycji wydanej w ASP .NET Core 3,1 ([Microsoft. Extensions. Diagnostics. HealthChecks](https://www.nuget.org/packages/Microsoft.Extensions.Diagnostics.HealthChecks)). Podobnie jak w przypadku wielu funkcji ASP.NET Core, sprawdzanie kondycji obejmuje zestaw usług i oprogramowanie pośredniczące.
+Podczas tworzenia ASP.NET Core mikrousług lub aplikacji sieci Web można użyć wbudowanej funkcji kontroli kondycji wydanej w ASP .NET Core 2,2 ([Microsoft. Extensions. Diagnostics. HealthChecks](https://www.nuget.org/packages/Microsoft.Extensions.Diagnostics.HealthChecks)). Podobnie jak w przypadku wielu funkcji ASP.NET Core, sprawdzanie kondycji obejmuje zestaw usług i oprogramowanie pośredniczące.
 
 Usługi sprawdzania kondycji i oprogramowanie pośredniczące są łatwe w użyciu i zapewniają możliwości umożliwiające sprawdzenie, czy dowolny zasób zewnętrzny wymagany dla aplikacji (na przykład baza danych SQL Server lub zdalny interfejs API) działa poprawnie. Korzystając z tej funkcji, można także zdecydować, co oznacza, że zasób jest w dobrej kondycji, jak wyjaśniono w przyszłości.
 
@@ -27,7 +27,9 @@ Aby efektywnie korzystać z tej funkcji, należy najpierw skonfigurować usługi
 
 ### <a name="use-the-healthchecks-feature-in-your-back-end-aspnet-microservices"></a>Korzystanie z funkcji HealthChecks w mikrousługach ASP.NET zaplecza
 
-W tej sekcji dowiesz się, jak funkcja HealthChecks, zaimplementowana w [AspNetCore. Diagnostics. HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks), jest używana w przykładowej aplikacji internetowego interfejsu API ASP.NET Core 3,1. Implementacja tej funkcji w mikrousługach o dużej skali, podobnie jak eShopOnContainers, została omówiona w dalszej części. Aby rozpocząć, należy określić, co stanowi prawidłowy stan dla każdej mikrousługi. W przykładowej aplikacji mikrousługi są w dobrej kondycji, jeśli interfejs API mikrousług jest dostępny za pośrednictwem protokołu HTTP i powiązana SQL Server baza danych jest również dostępna.
+W tej sekcji dowiesz się, jak zaimplementować funkcję HealthChecks w przykładowej aplikacji internetowego interfejsu API ASP.NET Core 3,1 podczas korzystania z pakietu [Microsoft. Extensions. Diagnostics. HealthChecks](https://www.nuget.org/packages/Microsoft.Extensions.Diagnostics.HealthChecks) . Implementacja tej funkcji w mikrousługach o dużej skali, podobnie jak eShopOnContainers, została opisana w następnej sekcji.
+
+Aby rozpocząć, należy określić, co stanowi prawidłowy stan dla każdej mikrousługi. W przykładowej aplikacji definiujemy, że mikrousługa jest w dobrej kondycji, jeśli jej interfejs API jest dostępny za pośrednictwem protokołu HTTP, a jego powiązana SQL Server baza danych jest również dostępna.
 
 W programie .NET Core 3,1 z wbudowanymi interfejsami API można skonfigurować usługi, dodać kontrolę kondycji dla mikrousługi i jej zależną SQL Server bazę danych w następujący sposób:
 
@@ -40,10 +42,11 @@ public void ConfigureServices(IServiceCollection services)
     // Registers required services for health checks
     services.AddHealthChecks()
         // Add a health check for a SQL Server database
-        .AddSqlServer(
-            configuration["ConnectionString"],
-            name: "OrderingDB-check",
-            tags: new string[] { "orderingdb" });
+        .AddCheck(
+            "OrderingDB-check", 
+            new SqlConnectionHealthCheck(Configuration["ConnectionString"]), 
+            HealthStatus.Unhealthy, 
+            new string[] { "orderingdb" });
 }
 ```
 
@@ -114,11 +117,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
     app.UseEndpoints(endpoints =>
     {
         //...
-        endpoints.MapHealthChecks("/hc", new HealthCheckOptions()
-        {
-            Predicate = _ => true,
-            ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
-        });
+        endpoints.MapHealthChecks("/hc");
         //...
     });
     //…

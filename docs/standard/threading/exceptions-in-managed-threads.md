@@ -8,12 +8,12 @@ helpviewer_keywords:
 - threading [.NET Framework],exceptions in managed threads
 - managed threading
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
-ms.openlocfilehash: 2c3215fd42e8cf6d6427d23f94c14db4230ddd02
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6c14c60b30f8f70aa5e888ed45d6f867154e18d8
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138060"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159653"
 ---
 # <a name="exceptions-in-managed-threads"></a>Wyjątki w zarządzanych wątkach
 Począwszy od .NET Framework w wersji 2,0, środowisko uruchomieniowe języka wspólnego pozwala na wykonywanie większości nieobsługiwanych wyjątków w wątkach. W większości przypadków, nieobsłużony wyjątek powoduje przerwanie działania aplikacji.  
@@ -41,7 +41,7 @@ Począwszy od .NET Framework w wersji 2,0, środowisko uruchomieniowe języka ws
   
  Zezwalanie na Nieobsłużone wyjątki w wątkach w sposób naturalny, dopóki system operacyjny nie zakończy działania programu, ujawnia takie problemy podczas tworzenia i testowania. Raporty o błędach programu obsługują debugowanie.  
   
-<a name="ChangeFromPreviousVersions"></a>   
+<a name="ChangeFromPreviousVersions"></a>
 ## <a name="change-from-previous-versions"></a>Zmień z poprzednich wersji  
  Najbardziej znaczące zmiany odnoszą się do zarządzanych wątków. W .NET Framework wersje 1,0 i 1,1 środowisko uruchomieniowe języka wspólnego zapewnia Nieobsłużone wyjątki w następujących sytuacjach:  
   
@@ -76,6 +76,6 @@ Począwszy od .NET Framework w wersji 2,0, środowisko uruchomieniowe języka ws
 ## <a name="host-override"></a>Zastąpienie hosta  
  W .NET Framework w wersji 2,0 Host niezarządzany może użyć interfejsu [ICLRPolicyManager](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) w interfejsie API hostingu, aby zastąpić domyślne zasady nieobsłużonego wyjątku środowiska uruchomieniowego języka wspólnego. Funkcja [ICLRPolicyManager:: SetUnhandledExceptionPolicy —](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md) służy do ustawiania zasad dla nieobsłużonych wyjątków.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Zarządzana wątkowość — podstawy](../../../docs/standard/threading/managed-threading-basics.md)

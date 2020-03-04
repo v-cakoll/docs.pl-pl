@@ -6,19 +6,19 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38e9d9-8284-46ee-a15f-199adc4f26f4
-ms.openlocfilehash: 1570909b7b416eff81dd90a936ff5ed10aad94f1
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: d649bc3a92d3bb834b3bc4f7d3c1bcb0f9417375
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346084"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159731"
 ---
 # <a name="async-overview"></a>Przegląd Async
 
-Tak długo aplikacje były szybsze po prostu przez zakup nowszego komputera lub serwera, a następnie ten trend został zatrzymany. W rzeczywistości została odwrócona. Pojawiły się telefony komórkowe z 1ghzą pojedyncze podstawowe wióry ARM i obciążenia serwera przenoszone do maszyn wirtualnych. Użytkownicy nadal chcą, aby właściciele interfejsu użytkownika i biznesowe chcą, aby serwery były skalowane wraz z ich działalnością biznesową. Przejście do urządzeń przenośnych i chmurowych oraz połączona z Internetem populacja > 3B użytkowników spowodowało powstanie nowego zestawu wzorców oprogramowania. 
+Tak długo aplikacje były szybsze po prostu przez zakup nowszego komputera lub serwera, a następnie ten trend został zatrzymany. W rzeczywistości została odwrócona. Pojawiły się telefony komórkowe z 1ghzą pojedyncze podstawowe wióry ARM i obciążenia serwera przenoszone do maszyn wirtualnych. Użytkownicy nadal chcą, aby właściciele interfejsu użytkownika i biznesowe chcą, aby serwery były skalowane wraz z ich działalnością biznesową. Przejście do urządzeń przenośnych i chmurowych oraz połączona z Internetem populacja > 3B użytkowników spowodowało powstanie nowego zestawu wzorców oprogramowania.
 
 - Aplikacje klienckie powinny być zawsze włączone, zawsze połączone i stale reagować na interakcję z użytkownikiem (na przykład Touch) ze wszystkimi klasyfikacjami w sklepie App Store.
-- Usługi powinny obsłużyć wzrost ruchu przez bezpieczne skalowanie w górę i w dół. 
+- Usługi powinny obsłużyć wzrost ruchu przez bezpieczne skalowanie w górę i w dół.
 
 Programowanie asynchroniczne to kluczowa technika, która ułatwia obsługę blokowania operacji we/wy i współbieżnych na wielu rdzeniach. Platforma .NET oferuje możliwość, aby aplikacje i usługi były w stanie reagować i elastycznie korzystać z łatwych w użyciu modeli programów asynchronicznych na C#poziomie języka w programie F#, Visual Basic i.
 

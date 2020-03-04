@@ -11,12 +11,12 @@ helpviewer_keywords:
 - enumeration type [C#]
 - bit flags [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 4377d113a18d23c8a0f9a669e6112f1a8223cc79
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 77c7b7bd7f3e59fbe782755c829f18cf1cefc725
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77450872"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239823"
 ---
 # <a name="enumeration-types-c-reference"></a>Typy wyliczeniowe (C# odwołanie)
 
@@ -54,7 +54,7 @@ Typ wyliczenia służy do reprezentowania wyboru z zestawu wzajemnie wykluczają
 
 Jeśli chcesz, aby typ wyliczeniowy reprezentował kombinację opcji, Zdefiniuj elementy członkowskie wyliczenia dla tych opcji, tak że pojedynczy wybór jest polem bitowym. Oznacza to, że skojarzone wartości tych elementów członkowskich wyliczenia powinny być potęgami dwóch. Następnie można użyć [bitowe operatory logiczne `|` lub `&`](../operators/bitwise-and-shift-operators.md#enumeration-logical-operators) do łączenia opcji lub przecinających się kombinacji opcji. Aby wskazać, że typ wyliczeniowy deklaruje pola bitowe, Zastosuj do niego atrybut [flags](xref:System.FlagsAttribute) . Jak pokazano na poniższym przykładzie, można również uwzględnić niektóre typowe kombinacje w definicji typu wyliczenia.
 
-[!code-csharp[enum flags](~/samples/csharp/language-reference/builtin-types/EnumType.cs#Flags)]
+[!code-csharp[enum flags](~/samples/snippets/csharp/language-reference/builtin-types/EnumType.cs#Flags)]
 
 Aby uzyskać więcej informacji i przykładów, zobacz stronę referencyjną API <xref:System.FlagsAttribute?displayProperty=nameWithType> i [niewyłączne elementy członkowskie i atrybuty flag](/dotnet/api/system.enum#non-exclusive-members-and-the-flags-attribute) na stronie Dokumentacja interfejsu API <xref:System.Enum?displayProperty=nameWithType>.
 
@@ -68,7 +68,7 @@ Począwszy od C# 7,3, można użyć `System.Enum` w ograniczeniu klasy bazowej (
 
 Dla dowolnego typu wyliczenia istnieją jawne konwersje między typem wyliczenia i jego podstawowym typem całkowitym. W przypadku [rzutowania](../operators/type-testing-and-cast.md#cast-operator-) wartości wyliczenia na jej typ podstawowy wynik jest skojarzoną wartością całkowitą elementu członkowskiego wyliczenia.
 
-[!code-csharp[enum conversions](~/samples/csharp/language-reference/builtin-types/EnumType.cs#Conversions)]
+[!code-csharp[enum conversions](~/samples/snippets/csharp/language-reference/builtin-types/EnumType.cs#Conversions)]
 
 Użyj metody <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType>, aby określić, czy typ wyliczeniowy zawiera element członkowski wyliczenia z określoną wartością skojarzoną.
 

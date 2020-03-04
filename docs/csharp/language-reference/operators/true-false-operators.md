@@ -5,12 +5,12 @@ helpviewer_keywords:
 - false operator [C#]
 - true operator [C#]
 ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
-ms.openlocfilehash: 498f8698401e91845b14ee1dbcda84ba7166bd14
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9924009ef4f0f8c512ea9b3da2b0dedeaa97bb9d
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712601"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239030"
 ---
 # <a name="true-and-false-operators-c-reference"></a>Operatory true i false (C# odwołanie)
 
@@ -31,7 +31,7 @@ Jeśli typ ze zdefiniowanymi `true` i operatory `false` [przeciążą](operator-
 
 Poniższy przykład przedstawia typ, który definiuje operatory `true` i `false`. Typ powoduje również przeciążenia operatora logicznego i `&` w taki sposób, że operator `&&` również może być obliczany dla operandów tego typu.
 
-[!code-csharp[true and false operators example](~/samples/csharp/language-reference/operators/TrueFalseOperators.cs)]
+[!code-csharp[true and false operators example](~/samples/snippets/csharp/language-reference/operators/TrueFalseOperators.cs)]
 
 Zwróć uwagę na zachowanie krótkiego obwodu operatora `&&`. Gdy metoda `GetFuelLaunchStatus` zwraca `LaunchStatus.Red`, nie jest oceniany operand z prawej strony operatora `&&`. Wynika to z faktu, że `LaunchStatus.Red` ma wartość false. Następnie wynik logiczny i nie zależy od wartości operandu po prawej stronie. Dane wyjściowe przykładu są następujące:
 
@@ -40,7 +40,7 @@ Getting fuel launch status...
 Wait!
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [C#odwoła](../index.md)
 - [Operatory języka C#](index.md)

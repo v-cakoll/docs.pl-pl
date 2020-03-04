@@ -14,17 +14,17 @@ helpviewer_keywords:
 - uppercase
 - lowercase
 ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
-ms.openlocfilehash: 91fc0022eae3f036e0ec046ea12446871926ab27
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 135cfa815c10d1a9dd9056604a4601678da9d5c4
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711470"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159354"
 ---
 # <a name="changing-case-in-net"></a>Zmiana wielkości liter w programie .NET
 Jeśli napiszesz aplikację, która akceptuje dane wejściowe od użytkownika, możesz nigdy nie mieć pewności, co ma być używane do wprowadzania danych. Często w przypadku ciągów ma być uwzględniana wielkość liter, szczególnie jeśli są one wyświetlane w interfejsie użytkownika. W poniższej tabeli opisano trzy metody zmiany wielkości liter. Dwie pierwsze metody zapewniają Przeciążenie, które akceptuje kulturę.  
   
-|Nazwa metody|Zastosowanie|  
+|Nazwa metody|Użycie|  
 |-----------------|---------|  
 |<xref:System.String.ToUpper%2A?displayProperty=nameWithType>|Konwertuje wszystkie znaki w ciągu na wielkie litery.|  
 |<xref:System.String.ToLower%2A?displayProperty=nameWithType>|Konwertuje wszystkie znaki w ciągu na małe litery.|  
@@ -33,7 +33,7 @@ Jeśli napiszesz aplikację, która akceptuje dane wejściowe od użytkownika, m
 > [!WARNING]
 > Należy zauważyć, że metody <xref:System.String.ToUpper%2A?displayProperty=nameWithType> i <xref:System.String.ToLower%2A?displayProperty=nameWithType> nie powinny być używane do konwertowania ciągów w celu ich porównania lub testowania pod kątem równości. Aby uzyskać więcej informacji, zobacz [Porównywanie ciągów w przypadku mieszanego przypadku](#Comparing) .  
   
-<a name="Comparing"></a>   
+<a name="Comparing"></a>
 ## <a name="comparing-strings-of-mixed-case"></a>Porównywanie ciągów z przypadku mieszanego  
  Aby porównać ciągi o mieszanym przypadku w celu określenia ich kolejności, wywołaj jedno z przeciążeń metody <xref:System.String.CompareTo%2A?displayProperty=nameWithType> z parametrem `comparisonType` i podaj wartość <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType>, <xref:System.StringComparison.InvariantCultureIgnoreCase?displayProperty=nameWithType>lub <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> dla argumentu `comparisonType`. W celu porównania przy użyciu określonej kultury innej niż bieżąca kultura Wywołaj Przeciążenie metody <xref:System.String.CompareTo%2A?displayProperty=nameWithType> z parametrami `culture` i `options` i podaj wartość <xref:System.Globalization.CompareOptions.IgnoreCase?displayProperty=nameWithType> jako argument `options`.  
   
@@ -69,7 +69,7 @@ Jeśli napiszesz aplikację, która akceptuje dane wejściowe od użytkownika, m
   
  Należy pamiętać, że chociaż jest to zależne od kultury, Metoda <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType> nie zapewnia odpowiednich do języka reguł dotyczących wielkości liter. Na przykład w poprzednim przykładzie metoda konwertuje "wskaźnik z dwóch miast" na "wskaźnik o dwóch miejscowości". Niemniej jednak w języku z tytułami dla kultury en-US jest to "wskaźnik dwóch miast".  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Podstawowe operacje na ciągach](../../../docs/standard/base-types/basic-string-operations.md)
 - [Wykonywanie niezależnych od kultury operacji na ciągach](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

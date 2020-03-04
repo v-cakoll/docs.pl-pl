@@ -13,12 +13,12 @@ helpviewer_keywords:
 - constructs, grouping
 - grouping constructs
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
-ms.openlocfilehash: 87cc3d53cf06457191d9c87020c4151e3f848c51
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 5b2ea110837d9d5b905f97ab706af52a594f1c43
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124328"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159224"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Konstrukcje grupujące w wyrażeniach regularnych
 Konstrukcje grupujące odróżnić podwyrażenia wyrażenia regularnego i przechwytuje podciągi ciągu wejściowego. Można użyć konstrukcji grupowania, aby wykonać następujące czynności:  
@@ -48,7 +48,7 @@ Konstrukcje grupujące odróżnić podwyrażenia wyrażenia regularnego i przech
   
  Aby uzyskać informacje na temat grup i modelu obiektów wyrażeń regularnych, zobacz [Grouping konstrukcjes and Regular Expression Objects](#Objects).  
   
-<a name="matched_subexpression"></a>   
+<a name="matched_subexpression"></a>
 ## <a name="matched-subexpressions"></a>Dopasowane podwyrażenie  
  Następująca konstrukcja grupująca przechwytuje Dopasowane Podwyrażenie:  
   
@@ -87,7 +87,7 @@ Konstrukcje grupujące odróżnić podwyrażenia wyrażenia regularnego i przech
 |`(\1)`|Dopasowuje ciąg w pierwszej przechwyconej grupie. Jest to druga grupa przechwytywania. Przykład przypisuje go do przechwyconej grupy, aby można było pobrać początkową pozycję zduplikowanego słowa z właściwości `Match.Index`.|  
 |`\W`|Dopasowuje znak niebędący słowem, w tym odstępy i znaki interpunkcyjne. Zapobiega to, aby wzorzec wyrażenia regularnego był zgodny z wyrazem rozpoczynającym się od pierwszej przechwyconej grupy.|  
   
-<a name="named_matched_subexpression"></a>   
+<a name="named_matched_subexpression"></a>
 ## <a name="named-matched-subexpressions"></a>O nazwie dopasowane podwyrażenia  
  Następująca konstrukcja grupująca przechwytuje Dopasowane Podwyrażenie i umożliwia dostęp do niego według nazwy lub liczby:  
   
@@ -161,7 +161,7 @@ Konstrukcje grupujące odróżnić podwyrażenia wyrażenia regularnego i przech
 |`\D+`|Dopasowuje co najmniej jeden znak niebędący cyfrą dziesiętną.|  
 |`(?<digit>\d+)?`|Dopasowanie do zera lub jednego wystąpienia co najmniej jednego znaku cyfry dziesiętnej. Przypisz dopasowanie do `digit` nazwanej grupy.|  
   
-<a name="balancing_group_definition"></a>   
+<a name="balancing_group_definition"></a>
 ## <a name="balancing-group-definitions"></a>Równoważenie definicji grup  
  Definicja grupy równoważenia usuwa definicję wcześniej zdefiniowanej grupy i magazynów w bieżącej grupie, interwał między wcześniej zdefiniowaną grupą a bieżącą grupą. Ta konstrukcja grupująca ma następujący format:  
   
@@ -234,7 +234,7 @@ Konstrukcje grupujące odróżnić podwyrażenia wyrażenia regularnego i przech
 |23|`(?(Open)(?!))`|Grupa `Open` nie jest zdefiniowana, więc nie podjęto próby dopasowania.|  
 |24|`$`|Dopasowuje koniec ciągu wejściowego.|  
   
-<a name="noncapturing_group"></a>   
+<a name="noncapturing_group"></a>
 ## <a name="noncapturing-groups"></a>Grupy niezapamiętywane  
  Następująca konstrukcja grupująca nie przechwytuje podciągu, który jest dopasowany przez Podwyrażenie:  
   
@@ -260,7 +260,7 @@ Konstrukcje grupujące odróżnić podwyrażenia wyrażenia regularnego i przech
 |`(?:\b(?:\w+)\W*)+`|Dopasowuje wzorzec jednego lub więcej znaków słowa, zaczynając od granicy słowa, po którym następuje zero lub więcej znaków niebędących wyrazami (jeden lub więcej razy). Nie przypisuj dopasowanego tekstu do przechwyconej grupy.|  
 |`\.`|Dopasowuje okres.|  
   
-<a name="group_options"></a>   
+<a name="group_options"></a>
 ## <a name="group-options"></a>Opcje grupy  
  Następująca konstrukcja grupująca stosuje lub wyłącza określone opcje w ramach podwyrażenia:  
   
@@ -284,7 +284,7 @@ Konstrukcje grupujące odróżnić podwyrażenia wyrażenia regularnego i przech
  [!code-csharp[Conceptual.Regex.Language.Options#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#8)]
  [!code-vb[Conceptual.Regex.Language.Options#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#8)]  
   
-<a name="zerowidth_positive_lookahead_assertion"></a>   
+<a name="zerowidth_positive_lookahead_assertion"></a>
 ## <a name="zero-width-positive-lookahead-assertions"></a>Dodatnie asercje z patrzeniem w przód o zerowej szerokości  
  Następująca konstrukcja grupująca definiuje pozytywne potwierdzenie o zerowej szerokości:  
   
@@ -307,7 +307,7 @@ Konstrukcje grupujące odróżnić podwyrażenia wyrażenia regularnego i przech
 |`\w+`|Dopasowuje co najmniej jeden znak słowa.|  
 |`(?=\sis\b)`|Ustal, czy znaki słowa są poprzedzone znakiem odstępu, a ciąg "is", który jest kończący się na granicy słowa. Jeśli tak, dopasowanie zostanie wykonane pomyślnie.|  
   
-<a name="zerowidth_negative_lookahead_assertion"></a>   
+<a name="zerowidth_negative_lookahead_assertion"></a>
 ## <a name="zero-width-negative-lookahead-assertions"></a>Ujemne asercje z patrzeniem w przód o zerowej szerokości  
  Następująca konstrukcja grupująca definiuje negatywną Poprzednia wartość zerowej szerokości:  
   
@@ -345,7 +345,7 @@ Konstrukcje grupujące odróżnić podwyrażenia wyrażenia regularnego i przech
 |`\b`|Kończy dopasowanie na granicy wyrazu.|  
 |`\p{P})`|Jeśli następny znak nie jest symbolem interpunkcji (na przykład kropką lub przecinkiem), dopasowanie powiedzie się.|  
   
-<a name="zerowidth_positive_lookbehind_assertion"></a>   
+<a name="zerowidth_positive_lookbehind_assertion"></a>
 ## <a name="zero-width-positive-lookbehind-assertions"></a>Dodatnie asercje wsteczne o zerowej szerokości  
  Następująca konstrukcja grupująca definiuje asercja wsteczna pozytywnej o zerowej szerokości:  
   
@@ -370,7 +370,7 @@ Konstrukcje grupujące odróżnić podwyrażenia wyrażenia regularnego i przech
   
  Pozytywne potwierdzenia asercja wsteczna o zerowej szerokości są również używane do ograniczania wycofywania, gdy ostatni znak lub znaki w przechwyconej grupie muszą być podzbiorem znaków, które pasują do wzorca wyrażenia regularnego tej grupy. Na przykład jeśli grupa przechwytuje wszystkie kolejne znaki wyrazu, można użyć pozytywnej asercja wsteczna o zerowej szerokości, aby wymagać, aby ostatni znak był alfabetyczny.  
   
-<a name="zerowidth_negative_lookbehind_assertion"></a>   
+<a name="zerowidth_negative_lookbehind_assertion"></a>
 ## <a name="zero-width-negative-lookbehind-assertions"></a>Ujemne asercje wsteczne o zerowej szerokości  
  Następująca konstrukcja grupująca definiuje negatywną asercja wstecznaą o zerowej szerokości:  
   
@@ -395,7 +395,7 @@ Konstrukcje grupujące odróżnić podwyrażenia wyrażenia regularnego i przech
 |`\d{4}\b`|Dopasowuje cztery cyfry dziesiętne i kończy dopasowanie na granicy wyrazu.|  
 |<code>(?<!(Saturday&#124;Sunday) )</code>|Jeśli dopasowanie jest poprzedzone znakiem innym niż ciągi "Sobota" lub "Niedziela", po którym następuje spacja, dopasowanie zostanie wykonane pomyślnie.|  
   
-<a name="atomic_groups"></a>   
+<a name="atomic_groups"></a>
 ## <a name="atomic-groups"></a>Grupy niepodzielne  
  Następująca konstrukcja grupująca reprezentuje niepodzielną grupę (znaną w innych aparatach wyrażeń regularnych jako Podwyrażenie Podwyrażenie, dwuwyrażenie cząstkowe lub Podwyrażenie tylko raz):
   
@@ -424,7 +424,7 @@ Konstrukcje grupujące odróżnić podwyrażenia wyrażenia regularnego i przech
 |`\b`|Zakończ dopasowanie na granicy słowa.|  
 |`(?>(\w)\1+)`|Dopasowuje jedno lub więcej wystąpień zduplikowanego znaku słowa, ale nie nawrotu się w celu dopasowania do ostatniego znaku na granicy słowa.|  
   
-<a name="Objects"></a>   
+<a name="Objects"></a>
 ## <a name="grouping-constructs-and-regular-expression-objects"></a>Konstrukty grupujące i obiekty wyrażeń regularnych  
  Podciągi dopasowane przez grupę przechwyconą wyrażeń regularnych są reprezentowane przez <xref:System.Text.RegularExpressions.Group?displayProperty=nameWithType> obiektów, które można pobrać z obiektu <xref:System.Text.RegularExpressions.GroupCollection?displayProperty=nameWithType>, który jest zwracany przez właściwość <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>. Obiekt <xref:System.Text.RegularExpressions.GroupCollection> jest wypełniany w następujący sposób:  
   

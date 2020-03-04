@@ -14,12 +14,12 @@ helpviewer_keywords:
 - events [.NET Core]
 - events [.NET Framework]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-ms.openlocfilehash: a53a8123db64948503bd6d2da9a27fc414dc1e1f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: b8ed028bc1edabf14d7b2dd67d94b28d574d2eb4
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423524"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159627"
 ---
 # <a name="handling-and-raising-events"></a>Obsługa i wywoływanie zdarzeń
 
@@ -68,7 +68,7 @@ Poniższy przykład pokazuje klasę danych zdarzenia o nazwie `ThresholdReachedE
 [!code-csharp[EventsOverview#3](~/samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#3)]
 [!code-vb[EventsOverview#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#3)]  
   
-## <a name="event-handlers"></a>Programy obsługi zdarzeń
+## <a name="event-handlers"></a>Procedury obsługi zdarzeń
 
 Aby odpowiedzieć na zdarzenie, należy zdefiniować metodę obsługi zdarzeń w odbiorcy zdarzeń. Ta metoda musi być zgodna z sygnaturą delegata dla zdarzenia, które jest obsługiwane. W programie obsługi zdarzeń wykonywane są akcje, które są wymagane w przypadku zgłoszenia zdarzenia, takie jak zbieranie danych wejściowych przez użytkownika po kliknięciu przycisku. Aby otrzymywać powiadomienia, gdy wystąpi zdarzenie, metoda obsługi zdarzeń musi subskrybować zdarzenie.  
   
@@ -78,7 +78,7 @@ Poniższy przykład przedstawia metodę procedury obsługi zdarzeń o nazwie `c_
 [!code-vb[EventsOverview#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#2)]  
   
 ## <a name="static-and-dynamic-event-handlers"></a>Procedury obsługi zdarzeń statycznych i dynamicznych  
- 
+
 Platforma .NET umożliwia subskrybentom rejestrację powiadomień o zdarzeniach statycznie lub dynamicznie. Procedury obsługi zdarzeń statycznych są stosowane dla całego okresu istnienia klasy, której zdarzenia obsługują. Procedury obsługi zdarzeń dynamicznych są jawnie uaktywniane i dezaktywowane podczas wykonywania programu, zazwyczaj w odpowiedzi na niektóre logiki programu warunkowego. Można na przykład użyć ich w przypadku, gdy powiadomienia o zdarzeniach są wymagane tylko w określonych warunkach lub jeśli aplikacja zawiera wiele programów obsługi zdarzeń, a warunki czasu wykonywania definiują odpowiednią wartość do użycia. W przykładzie w poprzedniej sekcji pokazano, jak dynamicznie dodać program obsługi zdarzeń. Aby uzyskać więcej informacji, zobacz [zdarzenia](../../visual-basic/programming-guide/language-features/events/index.md) (w Visual Basic) i [zdarzenia](../../csharp/programming-guide/events/index.md) ( C#w programie).  
   
 ## <a name="raising-multiple-events"></a>Wywoływanie wielu zdarzeń  
@@ -86,7 +86,7 @@ Platforma .NET umożliwia subskrybentom rejestrację powiadomień o zdarzeniach 
   
  Właściwości zdarzenia składają się z deklaracji zdarzeń, które towarzyszą metodom dostępu do zdarzeń. Metody dostępu zdarzeń są zdefiniowane w celu dodawania lub usuwania wystąpień delegatów zdarzeń ze struktury danych magazynu. Należy pamiętać, że właściwości zdarzeń są wolniejsze od pól zdarzeń, ponieważ każdy delegat zdarzenia musi zostać pobrany, aby można było go wywołać. Handel jest między pamięcią a szybkością. Jeśli klasa definiuje wiele zdarzeń, które są rzadko zgłaszane, należy zaimplementować właściwości zdarzenia. Aby uzyskać więcej informacji, zobacz [How to: obsługa wielu zdarzeń przy użyciu właściwości zdarzenia](how-to-handle-multiple-events-using-event-properties.md).  
   
-## <a name="related-topics"></a>Tematy pokrewne  
+## <a name="related-topics"></a>Powiązane tematy  
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
@@ -95,7 +95,7 @@ Platforma .NET umożliwia subskrybentom rejestrację powiadomień o zdarzeniach 
 |[Wzorzec projektowy obserwatora](observer-design-pattern.md)|Opisuje Wzorzec projektowy, który umożliwia subskrybentowi zarejestrowanie się w usłudze i otrzymywanie powiadomień od dostawcy.|  
 |[Instrukcje: Korzystanie ze zdarzeń w aplikacjach formularzy internetowych](how-to-consume-events-in-a-web-forms-application.md)|Pokazuje, jak obsłużyć zdarzenie, które jest wywoływane przez formant formularzy sieci Web.|  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.EventHandler>
 - <xref:System.EventHandler%601>

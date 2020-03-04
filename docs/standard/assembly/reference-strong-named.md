@@ -11,12 +11,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 427550e1fbeb38cefbb4afe97d80e198ac2d6cb0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: adda4ed2ab5c59e3518b8e724044529a79840ad0
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127633"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156481"
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a>Instrukcje: odwoływanie się do zestawu o silnej nazwie
 Proces odwoływania się do typów lub zasobów w zestawie o silnej nazwie jest zwykle niewidoczny. Odwołanie można wykonać w czasie kompilacji (wczesne wiązanie) lub w czasie wykonywania.  
@@ -30,7 +30,7 @@ Odwołanie w czasie kompilacji odbywa się po wskazaniu kompilatora, który zest
 
 W wierszu polecenia wpisz następujące polecenie:  
 
-\<*polecenia kompilatora*>  **/Reference:** \<*Nazwa zestawu*>  
+\<*polecenia kompilatora*> **/Reference:**\<*Nazwa zestawu*>  
 
 W tym poleceniu *kompilator* jest poleceniem kompilatora dla używanego języka, a *Nazwa zestawu* to nazwa zestawu o silnej nazwie. Można również użyć innych opcji kompilatora, takich jak opcja **/t: Library** do tworzenia zestawu biblioteki.  
 
@@ -44,12 +44,12 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
 Po wprowadzeniu odwołania w czasie wykonywania do zestawu o silnej nazwie, na przykład przy użyciu metody <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> lub <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>, należy użyć nazwy wyświetlanej zestawu o silnej nazwie. Składnia nazwy wyświetlanej jest następująca:  
 
-\<*nazwę zestawu*> **,** \<*numer wersji*> **,** \<>*kulturowe* **,** \<*token klucza publicznego*>  
+\<*nazwę zestawu*>**,** \<*numer wersji*>**,** \<>*kulturowe* **,** \<*token klucza publicznego*>  
 
 Na przykład:  
 
 ```console
-myDll, Version=1.1.0.0, Culture=en, PublicKeyToken=03689116d3a4ae33   
+myDll, Version=1.1.0.0, Culture=en, PublicKeyToken=03689116d3a4ae33
 ```  
 
 W tym przykładzie `PublicKeyToken` jest szesnastkową formą tokenu klucza publicznego. Jeśli nie ma żadnej wartości kulturowej, użyj `Culture=neutral`.  
@@ -79,6 +79,6 @@ Jeśli masz plik klucza publicznego, możesz użyć poniższego polecenia (nale�
 
 **SN-tp \<** *pliku klucza publicznego* **>**  
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Tworzenie i używanie zestawów o silnych nazwach](create-use-strong-named.md)

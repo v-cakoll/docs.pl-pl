@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d5c87cbe-4d69-429f-aad5-3103c2ca2770
-ms.openlocfilehash: e6b811d58ef9d98c51e9a45a46a1965c4fa12b55
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b1df520d00d3a98b2e518092d4eff51b5d0b7741
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711119"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78158028"
 ---
 # <a name="changing-namespace-prefix-properties"></a>Zmienianie właściwości prefiksu przestrzeni nazw
 Klasa **XmlNode** pozwala zmienić prefiks przestrzeni nazw skojarzony z danym węzłem. Na przykład poniższy kod ilustruje prefiks elementu, który jest zmieniany.  
@@ -27,12 +27,12 @@ Console.WriteLine(doc.InnerXml)
 ```csharp  
 XmlDocument doc = new XmlDocument();  
 doc.LoadXml("<a:test xmlns:a='123' xmlns:b='456'/>");  
-XmlElement e = doc.DocumentElement;         
+XmlElement e = doc.DocumentElement;
 e.Prefix = "b";  
 Console.WriteLine(doc.InnerXml);  
 ```  
   
- **Output**  
+ **Dane wyjściowe**  
   
 ```xml  
 <b:test xmlns:a="123" xmlns:b="456" />  
@@ -51,12 +51,12 @@ Console.WriteLine(doc.InnerXml)
 ```csharp  
 XmlDocument doc = new XmlDocument();  
 doc.LoadXml("<test xmlns='123'/>");  
-XmlElement e = doc.DocumentElement;         
+XmlElement e = doc.DocumentElement;
 e.Prefix = "a";  
 Console.WriteLine(doc.InnerXml);  
 ```  
   
- **Output**  
+ **Dane wyjściowe**  
   
 ```xml  
 <a:test xmlns="123" xmlns:a="123" />  
@@ -64,6 +64,6 @@ Console.WriteLine(doc.InnerXml);
   
  Gdy drzewo zostało utrwalone jako ciąg w wyniku wywołania metody **doc. InnerXml**, atrybut `xmlns:a='123'` został dodany w celu zachowania przestrzeni nazw elementu `test`. Była `'123'`i pozostawała `'123'`.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

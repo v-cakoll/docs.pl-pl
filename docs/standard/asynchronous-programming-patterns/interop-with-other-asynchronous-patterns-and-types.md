@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: f120a5d9-933b-4d1d-acb6-f034a57c3749
-ms.openlocfilehash: f9fe33bb46f0ba78756c4172032dfbaf45d6fc89
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 981c13c68eaf1eb0c19f95eb1b097935ea02a16d
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123979"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159757"
 ---
 # <a name="interop-with-other-asynchronous-patterns-and-types"></a>Współdziałanie z innymi wzorcami asynchronicznymi i typami
 W .NET Framework 1,0 wprowadzono wzorzec <xref:System.IAsyncResult>, w przeciwnym razie znany jako [asynchroniczny model programowania (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)lub wzorzec `Begin/End`.  .NET Framework 2,0 został dodany [wzorzec asynchroniczny oparty na zdarzeniach (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  Począwszy od .NET Framework 4, [wzorzec asynchroniczny oparty na zadaniach (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) zastępuje zarówno APM, jak i EAP, ale umożliwia łatwe tworzenie procedur migracji z wcześniejszych wzorców.  
@@ -30,10 +30,10 @@ W .NET Framework 1,0 wprowadzono wzorzec <xref:System.IAsyncResult>, w przeciwny
   
 - [Zadania i uchwyty oczekiwania](#WaitHandles) ([od dojścia oczekiwania do naciśnięcia](#WHToTap) lub [od naciśnij do uchwytów](#TapToWH)oczekiwania)  
   
-<a name="APM"></a>   
+<a name="APM"></a>
 ## <a name="tasks-and-the-asynchronous-programming-model-apm"></a>Zadania i model programowania asynchronicznego (APM)  
   
-<a name="ApmToTap"></a>   
+<a name="ApmToTap"></a>
 ### <a name="from-apm-to-tap"></a>Z usługi APM do NACIŚNIĘCIa  
  Ze względu na to, że wzorzec [modelu programowania asynchronicznego (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) jest bardzo strukturalny, można łatwo utworzyć otokę, aby uwidocznić implementację APM jako implementację TAP. W rzeczywistości .NET Framework, zaczynając od .NET Framework 4, zawiera procedury pomocnika w postaci przeciążeń metody <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> w celu zapewnienia tego tłumaczenia.  
   
@@ -56,7 +56,7 @@ W .NET Framework 1,0 wprowadzono wzorzec <xref:System.IAsyncResult>, w przeciwny
  [!code-csharp[Conceptual.AsyncInterop#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Wrap2.cs#5)]
  [!code-vb[Conceptual.AsyncInterop#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/Wrap2.vb#5)]  
   
-<a name="TapToApm"></a>   
+<a name="TapToApm"></a>
 ### <a name="from-tap-to-apm"></a>Od TAP do APM  
  Jeśli istniejąca infrastruktura oczekuje wzorca APM, należy również wykonać implementację TAP i użyć jej, w której oczekiwana jest implementacja APM.  Ponieważ zadania mogą być złożone, a Klasa <xref:System.Threading.Tasks.Task> implementuje <xref:System.IAsyncResult>, można użyć prostej funkcji pomocnika. Poniższy kod używa rozszerzenia klasy <xref:System.Threading.Tasks.Task%601>, ale można użyć prawie identycznej funkcji dla zadań innych niż ogólne.  
   
@@ -80,17 +80,17 @@ W .NET Framework 1,0 wprowadzono wzorzec <xref:System.IAsyncResult>, w przeciwny
  [!code-csharp[Conceptual.AsyncInterop#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/APM2.cs#10)]
  [!code-vb[Conceptual.AsyncInterop#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/APM2.vb#10)]  
   
-<a name="EAP"></a>   
+<a name="EAP"></a>
 ## <a name="tasks-and-the-event-based-asynchronous-pattern-eap"></a>Zadania i wzorzec asynchroniczny oparty na zdarzeniach (EAP)  
  Otoka implementacji [wzorca asynchronicznego opartego na zdarzeniach (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) jest większa niż otoka wzorca APM, ponieważ wzorzec protokołu EAP ma większą odmianę i mniejszą strukturę niż wzorzec APM.  Aby przedstawić, poniższy kod otacza metodę `DownloadStringAsync`.  `DownloadStringAsync` akceptuje identyfikator URI, wywołuje zdarzenie `DownloadProgressChanged` podczas pobierania, aby raportować wiele statystyk w toku i wywołuje zdarzenie `DownloadStringCompleted` po jego zakończeniu.  Końcowy wynik jest ciągiem zawierającym zawartość strony o określonym identyfikatorze URI.  
   
  [!code-csharp[Conceptual.AsyncInterop#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/EAP1.cs#11)]
  [!code-vb[Conceptual.AsyncInterop#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/EAP1.vb#11)]  
   
-<a name="WaitHandles"></a>   
+<a name="WaitHandles"></a>
 ## <a name="tasks-and-wait-handles"></a>Zadania i uchwyty oczekiwania  
   
-<a name="WHToTap"></a>   
+<a name="WHToTap"></a>
 ### <a name="from-wait-handles-to-tap"></a>Z uchwytów oczekiwania na NACIŚNIĘCIe  
  Chociaż uchwyty oczekiwania nie implementują wzorca asynchronicznego, zaawansowani deweloperzy mogą używać klasy <xref:System.Threading.WaitHandle> i metody <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> na potrzeby powiadomień asynchronicznych po ustawieniu dojścia oczekiwania.  Możesz zawinąć metodę <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A>, aby włączyć alternatywną dla zadań funkcję dla dowolnego synchronicznego oczekiwania na dojście oczekiwania:  
   
@@ -104,14 +104,14 @@ W .NET Framework 1,0 wprowadzono wzorzec <xref:System.IAsyncResult>, w przeciwny
   
  Można również utworzyć semafor asynchroniczny, który nie bazuje na dojściach oczekiwania i zamiast tego działa całkowicie z zadaniami. Aby to zrobić, można użyć technik takich jak omówione w temacie [konsumowanie wzorca asynchronicznego opartego na zadaniach](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md) w celu kompilowania struktur danych na <xref:System.Threading.Tasks.Task>.  
   
-<a name="TapToWH"></a>   
+<a name="TapToWH"></a>
 ### <a name="from-tap-to-wait-handles"></a>Od NACIŚNIĘCIa do uchwytów oczekiwania  
  Jak wspomniano wcześniej, Klasa <xref:System.Threading.Tasks.Task> implementuje <xref:System.IAsyncResult>, a ta implementacja ujawnia Właściwość <xref:System.Threading.Tasks.Task.System%23IAsyncResult%23AsyncWaitHandle%2A>, która zwraca dojście oczekiwania, który zostanie ustawiony po zakończeniu <xref:System.Threading.Tasks.Task>.  <xref:System.Threading.WaitHandle> <xref:System.Threading.Tasks.Task> można uzyskać w następujący sposób:  
   
  [!code-csharp[Conceptual.AsyncInterop#14](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Wait1.cs#14)]
  [!code-vb[Conceptual.AsyncInterop#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/Wait1.vb#14)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Wzorzec asynchroniczny oparty na zadaniach (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)
 - [Implementowanie wzorca asynchronicznego opartego na zadaniach](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - Windows Forms, and TPL
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
-ms.openlocfilehash: b6f4b933f76834f48d522d9c97fb0c9b5c24e13d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 794253514edf63f02276e1ece21c60a85c534390
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139918"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159770"
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Wskazówki: Korzystanie z przepływu danych w Aplikacji formularzy systemu Windows
 W tym dokumencie przedstawiono sposób tworzenia sieci bloków przepływu danych, które wykonują przetwarzanie obrazów w aplikacji Windows Forms.  
@@ -35,7 +35,7 @@ W tym dokumencie przedstawiono sposób tworzenia sieci bloków przepływu danych
   
 - [Kompletny przykład](#complete)  
   
-<a name="winforms"></a>   
+<a name="winforms"></a>
 ## <a name="creating-the-windows-forms-application"></a>Tworzenie aplikacji Windows Forms  
  W tej sekcji opisano, jak utworzyć podstawową aplikację Windows Forms i dodać kontrolki do formularza głównego.  
   
@@ -51,7 +51,7 @@ W tym dokumencie przedstawiono sposób tworzenia sieci bloków przepływu danych
   
 5. Dodaj obiekt <xref:System.Windows.Forms.PictureBox> do formularza głównego. Ustaw właściwość <xref:System.Windows.Forms.Control.Dock%2A> na <xref:System.Windows.Forms.DockStyle.Fill>.  
   
-<a name="network"></a>   
+<a name="network"></a>
 ## <a name="creating-the-dataflow-network"></a>Tworzenie sieci przepływu danych  
  W tej sekcji opisano sposób tworzenia sieci przepływu danych, która wykonuje przetwarzanie obrazu.  
   
@@ -84,7 +84,7 @@ W tym dokumencie przedstawiono sposób tworzenia sieci bloków przepływu danych
   
  W poniższej tabeli opisano elementy członkowskie sieci.  
   
-|Element członkowski|Typ|Opis|  
+|Członek|Typ|Opis|  
 |------------|----------|-----------------|  
 |`loadBitmaps`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Pobiera ścieżkę folderu jako dane wejściowe i tworzy kolekcję <xref:System.Drawing.Bitmap> obiektów jako dane wyjściowe.|  
 |`createCompositeBitmap`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Pobiera kolekcję obiektów <xref:System.Drawing.Bitmap> jako dane wejściowe i tworzy kompozytową mapę bitową jako dane wyjściowe.|  
@@ -101,7 +101,7 @@ W tym dokumencie przedstawiono sposób tworzenia sieci bloków przepływu danych
   
  W tym przykładzie używa udostępnionego tokenu anulowania zamiast ustawiania właściwości <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A>, ponieważ właściwość <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> trwale anuluje wykonywanie bloku przepływu danych. Token anulowania umożliwia korzystanie z tej samej sieci przepływu danych wiele razy, nawet jeśli użytkownik anuluje jedną lub więcej operacji. Przykład, który używa <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> do trwałego anulowania wykonywania bloku przepływu danych, można znaleźć w temacie [How to: Cancel a przepływu danych Block](../../../docs/standard/parallel-programming/how-to-cancel-a-dataflow-block.md).  
   
-<a name="ui"></a>   
+<a name="ui"></a>
 ## <a name="connecting-the-dataflow-network-to-the-user-interface"></a>Łączenie sieci przepływu danych z interfejsem użytkownika  
  W tej sekcji opisano sposób łączenia sieci przepływu danych z interfejsem użytkownika. Tworzenie obrazu złożonego i anulowanie operacji są inicjowane z przycisków **Wybierz folder** i **Anuluj** . Gdy użytkownik wybierze jeden z tych przycisków, odpowiednia akcja zostanie zainicjowana w sposób asynchroniczny.  
   
@@ -119,7 +119,7 @@ W tym dokumencie przedstawiono sposób tworzenia sieci bloków przepływu danych
   
      [!code-csharp[TPLDataflow_CompositeImages#7](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#7)]  
   
-<a name="complete"></a>   
+<a name="complete"></a>
 ## <a name="the-complete-example"></a>Kompletny przykład  
  Poniższy przykład pokazuje kompletny kod dla tego przewodnika.  
   
@@ -129,6 +129,6 @@ W tym dokumencie przedstawiono sposób tworzenia sieci bloków przepływu danych
   
  ![Aplikacja Windows Forms](../../../docs/standard/parallel-programming/media/tpldataflow-compositeimages.gif "TPLDataflow_CompositeImages")  
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Przepływ danych](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

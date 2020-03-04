@@ -12,12 +12,12 @@ helpviewer_keywords:
 - converting times
 - local time conversions
 ms.assetid: a51e1a3b-c983-4320-b31a-1f9fa3cf824a
-ms.openlocfilehash: d0b38523f054598ba6fb1f05a0183bc4ccff2120
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fbb59dbe364763209f44a4e2241d1d5275036c40
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132567"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156026"
 ---
 # <a name="converting-times-between-time-zones"></a>Konwertowanie czasów między strefami czasowymi
 
@@ -109,7 +109,7 @@ Wartości daty i godziny reprezentowane przez <xref:System.DateTimeOffset> obiek
 Jeśli na przykład data i godzina żądania użytkownika dla strony sieci Web jest znana i jest serializowana jako ciąg w formacie MM/dd/rrrr hh: mm: SS zzzz, Poniższa metoda `ReturnTimeOnServer` konwertuje tę datę i godzinę na serwer sieci Web.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.OffsetConversions#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/cs/TimeConversions.cs#1)]
-[!code-vb[System.DateTimeOffset.Conceptual.OffsetConversions#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/vb/TimeConversions.vb#1)] 
+[!code-vb[System.DateTimeOffset.Conceptual.OffsetConversions#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/vb/TimeConversions.vb#1)]
 
 Jeśli metoda jest przenoszona jako ciąg "9/1/2007 5:32:07 -05:00", który reprezentuje datę i godzinę w strefie czasowej 5 godzin wcześniejszą niż UTC, zwraca 9/1/2007 3:32:07 AM-07:00 dla serwera znajdującego się w strefie czasowej w Stanach Zjednoczonych w warstwie Standardowa.
 
@@ -118,7 +118,7 @@ Klasa <xref:System.TimeZoneInfo> obejmuje również Przeciążenie metody <xref:
 [!code-csharp[System.DateTimeOffset.Conceptual.OffsetConversions#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/cs/timeconversions2.cs#2)]
 [!code-vb[System.DateTimeOffset.Conceptual.OffsetConversions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/vb/TimeConversions2.vb#2)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.TimeZoneInfo>
 - [Daty, godziny i strefy czasowe](../../../docs/standard/datetime/index.md)

@@ -3,12 +3,12 @@ title: Integracja XML z danymi relacyjnymi i sterownikiem ADO.NET
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: f6ebb1a1-f2ca-49b9-92c9-0150940cf6e6
-ms.openlocfilehash: 373e28d1fffd8c47acb4acb70271db056aa3a27b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 30b788c77a2352d0d02ee772ab3f428381facd9f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709936"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78155623"
 ---
 # <a name="xml-integration-with-relational-data-and-adonet"></a>Integracja XML z danymi relacyjnymi i sterownikiem ADO.NET
 Klasa **XmlDataDocument** jest klasą pochodną elementu **XmlDocument**i zawiera dane XML. Zaletą **XmlDataDocument** jest to, że zapewnia ona Most między danymi relacyjnymi i hierarchicznymi. Jest to **dokument XmlDocument** , który może być powiązany z **zestawem danych** , a obie klasy mogą synchronizować zmiany wprowadzone w danych znajdujących się w dwóch klasach. Element **XmlDocument** , który jest powiązany z **zestawem danych** , umożliwia integrację XML z danymi relacyjnymi, a dane nie muszą być reprezentowane jako XML lub w formacie relacyjnym. Można jednocześnie i nie ograniczyć się do pojedynczej reprezentacji danych.  
@@ -27,7 +27,7 @@ Klasa **XmlDataDocument** jest klasą pochodną elementu **XmlDocument**i zawier
   
  Ponieważ **XmlDataDocument** jest Dziedziczony z **XmlDocument**, zapewnia implementację W3C dom. Fakt, że **XmlDataDocument** jest skojarzona z, i przechowuje podzestaw danych w ramach, **zestaw danych** nie ogranicza ani nie zmienia jego użycia jako **XmlDocument** w jakikolwiek sposób. Kod zapisany w celu użycia **dokumentu XmlDocument** nie jest zmieniany na **XmlDataDocument**. **Zestaw** danych udostępnia widok relacyjny tych samych danych przez Definiowanie tabel, kolumn, relacji i ograniczeń oraz jest autonomicznym magazynem danych użytkownika w pamięci.  
   
- Na poniższej ilustracji przedstawiono różne skojarzenia danych XML z **zestawem** danych i **XmlDataDocument**: 
+ Na poniższej ilustracji przedstawiono różne skojarzenia danych XML z **zestawem** danych i **XmlDataDocument**:
   
  ![Diagram przedstawiający różne skojarzenia z zestawem danych XML.](./media/xml-integration-with-relational-data-and-adonet/xml-integration-relational-data-adodotnet.gif)  
   
@@ -45,6 +45,6 @@ Klasa **XmlDataDocument** jest klasą pochodną elementu **XmlDocument**i zawier
   
  Jeśli załadowanie **zestawu danych** z **XmlDataDocument** do Twoich potrzeb, zobacz [synchronizowanie zestawu danych z dokumentem XML](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Używanie języka XML w elemencie DataSet](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)

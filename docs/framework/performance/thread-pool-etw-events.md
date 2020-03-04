@@ -5,12 +5,12 @@ helpviewer_keywords:
 - thread pool events [.NET Framework]
 - ETW, thread pool events (CLR)
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
-ms.openlocfilehash: e1deb17dfdfea4c8b66eb8d836a10bf888727e1a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 249d0607ddd280bcb4e9cf3ef34b28ff8ada3b04
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715898"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240496"
 ---
 # <a name="thread-pool-etw-events"></a>Zdarzenia ETW puli wątków
 Te zdarzenia zbierają informacje o wątkach procesów roboczych i we/wy.  
@@ -33,7 +33,7 @@ Te zdarzenia zbierają informacje o wątkach procesów roboczych i we/wy.
   
  W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   
-|Zdarzenie|Identyfikator zdarzenia|Wywoływane, gdy|  
+|Wydarzenie|Identyfikator zdarzenia|Wywoływane, gdy|  
 |-|-|-|  
 |`ThreadPoolWorkerThreadStart`|50|Tworzony jest wątek roboczy.|  
 |`ThreadPoolWorkerThreadStop`|51|Wątek roboczy został zatrzymany.|  
@@ -60,7 +60,7 @@ Te zdarzenia zbierają informacje o wątkach procesów roboczych i we/wy.
   
  W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   
-|Zdarzenie|Identyfikator zdarzenia|Opis|  
+|Wydarzenie|Identyfikator zdarzenia|Opis|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentSample`|54|Odnosi się do kolekcji informacji dla jednej próbki; oznacza to, że pomiar przepływności z pewnym poziomem współbieżności w czasie.|  
   
@@ -80,7 +80,7 @@ Te zdarzenia zbierają informacje o wątkach procesów roboczych i we/wy.
   
  W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   
-|Zdarzenie|Identyfikator zdarzenia|Opis|  
+|Wydarzenie|Identyfikator zdarzenia|Opis|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentAdjustment`|55|Rejestruje zmianę w kontrolce, gdy algorytm iniekcji wątku (Hill-wspinanie się) określa, że zmiana na poziomie współbieżności jest na miejscu.|  
   
@@ -102,7 +102,7 @@ Te zdarzenia zbierają informacje o wątkach procesów roboczych i we/wy.
   
  W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   
-|Zdarzenie|Identyfikator zdarzenia|Opis|  
+|Wydarzenie|Identyfikator zdarzenia|Opis|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentStats`|56|Zbiera dane w puli wątków.|  
   
@@ -110,14 +110,14 @@ Te zdarzenia zbierają informacje o wątkach procesów roboczych i we/wy.
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|Duration|win: Double|Czas (w sekundach), w którym te statystyki zostały zebrane.|  
+|Czas trwania|win: Double|Czas (w sekundach), w którym te statystyki zostały zebrane.|  
 |Przepływność|win: Double|Średnia liczba zaawansowanych na sekundę w tym interwale.|  
 |ThreadWave|win: Double|Przeznaczone do użytku wewnętrznego.|  
 |ThroughputWave|win: Double|Przeznaczone do użytku wewnętrznego.|  
 |ThroughputErrorEstimate|win: Double|Przeznaczone do użytku wewnętrznego.|  
 |AverageThroughputErrorEstimate|win: Double|Przeznaczone do użytku wewnętrznego.|  
 |ThroughputRatio|win: Double|Względne ulepszenie przepływności spowodowane przez różnice w liczbie wątków roboczych w tym interwale.|  
-|Ufność|win: Double|Miara ważności pola ThroughputRatio.|  
+|Confidence|win: Double|Miara ważności pola ThroughputRatio.|  
 |NewcontrolSetting|win: Double|Liczba aktywnych wątków roboczych, które będą stanowić podstawę dla przyszłych różnic w aktywnej liczbie wątków.|  
 |NewThreadWaveMagnitude|Win: UInt16|Wielkość przyszłych wariantów w aktywnej liczbie wątków.|  
 |ClrInstanceID|Win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
@@ -134,7 +134,7 @@ Te zdarzenia zbierają informacje o wątkach procesów roboczych i we/wy.
   
  W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   
-|Zdarzenie|Identyfikator zdarzenia|Wywoływane, gdy|  
+|Wydarzenie|Identyfikator zdarzenia|Wywoływane, gdy|  
 |-|-|-|  
 |`IOThreadCreate_V1`|44|W puli wątków tworzony jest wątek we/wy.|  
   
@@ -142,7 +142,7 @@ Te zdarzenia zbierają informacje o wątkach procesów roboczych i we/wy.
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|Count|win: UInt64|Liczba wątków we/wy, łącznie z nowo utworzonym wątkiem.|  
+|Licznik|win: UInt64|Liczba wątków we/wy, łącznie z nowo utworzonym wątkiem.|  
 |NumRetired|win: UInt64|Liczba wycofanych wątków roboczych.|  
 |ClrInstanceID|Win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
   
@@ -155,7 +155,7 @@ Te zdarzenia zbierają informacje o wątkach procesów roboczych i we/wy.
   
  W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   
-|Zdarzenie|Identyfikator zdarzenia|Wywoływane, gdy|  
+|Wydarzenie|Identyfikator zdarzenia|Wywoływane, gdy|  
 |-----------|--------------|-----------------|  
 |`IOThreadRetire_V1`|46|Wątek we/wy zostaje kandydatem do wycofania.|  
   
@@ -163,7 +163,7 @@ Te zdarzenia zbierają informacje o wątkach procesów roboczych i we/wy.
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|Count|win: UInt64|Liczba wątków we/wy pozostałych w puli wątków.|  
+|Licznik|win: UInt64|Liczba wątków we/wy pozostałych w puli wątków.|  
 |NumRetired|win: UInt64|Liczba wycofanych wątków we/wy.|  
 |ClrInstanceID|Win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
   
@@ -176,7 +176,7 @@ Te zdarzenia zbierają informacje o wątkach procesów roboczych i we/wy.
   
  W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   
-|Zdarzenie|Identyfikator zdarzenia|Wywoływane, gdy|  
+|Wydarzenie|Identyfikator zdarzenia|Wywoływane, gdy|  
 |-----------|--------------|-----------------|  
 |`IOThreadUnretire_V1`|47|Wątek we/wy jest wycofywany ze względu na liczbę operacji we/wy, która dotarła w czasie oczekiwania, gdy wątek stanie się kandydatem wycofania.|  
   
@@ -184,7 +184,7 @@ Te zdarzenia zbierają informacje o wątkach procesów roboczych i we/wy.
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|Count|win: UInt64|Liczba wątków we/wy w puli wątków, z uwzględnieniem tego.|  
+|Licznik|win: UInt64|Liczba wątków we/wy w puli wątków, z uwzględnieniem tego.|  
 |NumRetired|win: UInt64|Liczba wycofanych wątków we/wy.|  
 |ClrInstanceID|Win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
   
@@ -197,18 +197,18 @@ Te zdarzenia zbierają informacje o wątkach procesów roboczych i we/wy.
   
  W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   
-|Zdarzenie|Identyfikator zdarzenia|Wywoływane, gdy|  
+|Wydarzenie|Identyfikator zdarzenia|Wywoływane, gdy|  
 |-----------|--------------|-----------------|  
-|`IOThreadTerminate`|45|W puli wątków tworzony jest wątek we/wy.|  
+|`IOThreadTerminate`|45|Wątek we/wy zostanie przerwany w puli wątków.|  
   
  W poniższej tabeli przedstawiono dane zdarzenia.  
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|Count|win: UInt64|Liczba wątków we/wy pozostałych w puli wątków.|  
+|Licznik|win: UInt64|Liczba wątków we/wy pozostałych w puli wątków.|  
 |NumRetired|win: UInt64|Liczba wycofanych wątków we/wy.|  
 |ClrInstanceID|Win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Zdarzenia CLR ETW](clr-etw-events.md)

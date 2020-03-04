@@ -10,12 +10,12 @@ helpviewer_keywords:
 - threading [.NET Framework], best practices
 - managed threading
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
-ms.openlocfilehash: 26b0535fa918a802dd0922554ae197ba10396d56
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a76cc40f308ac2f636a650cd4a17da0e94e23a34
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129566"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160264"
 ---
 # <a name="managed-threading-best-practices"></a>Zarządzane wątki z najlepszymi rozwiązaniami
 Wielowątkowość wymaga starannego programowania. W przypadku większości zadań można zmniejszyć złożoność przez kolejkowanie żądań na potrzeby wykonywania przez wątki puli wątków. Ten temat dotyczy trudniejszych sytuacji, takich jak koordynacja pracy wielu wątków lub obsługa wątków, które blokują.  
@@ -107,7 +107,7 @@ Użyj właściwości <xref:System.Environment.ProcessorCount?displayProperty=nam
     ```  
   
     ```csharp  
-    lock(lockObject)   
+    lock(lockObject)
     {  
         myField++;  
     }  
@@ -172,7 +172,7 @@ Użyj właściwości <xref:System.Environment.ProcessorCount?displayProperty=nam
   
 - Unikaj udostępniania metod statycznych, które zmieniają stan statyczny. W typowych scenariuszach serwera stan statyczny jest współużytkowany między żądaniami, co oznacza, że wiele wątków może wykonać ten kod w tym samym czasie. Spowoduje to otwarcie możliwości występowania błędów wątków. Rozważ użycie wzorca projektowego, który hermetyzuje dane w wystąpieniach, które nie są współużytkowane przez żądania. Ponadto jeśli dane statyczne są synchronizowane, wywołania między metodami statycznymi, które zmieniają stan, mogą spowodować zakleszczenia lub nadmiarowa synchronizacja, niekorzystnie wpływając na wydajność.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Wątkowość](../../../docs/standard/threading/index.md)
 - [Wątki i wątkowość](../../../docs/standard/threading/threads-and-threading.md)

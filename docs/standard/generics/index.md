@@ -26,12 +26,12 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-ms.openlocfilehash: f04b6fcd1641a53efe75d38ab7122967bff6a58d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7f20e5108ad8bff602f5b761e65f093d987f2608
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75708374"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156312"
 ---
 # <a name="generics-in-net"></a>Typy ogólne w .NET
 
@@ -124,7 +124,7 @@ Typy ogólne umożliwiają dostosowanie metody, klasy, struktury lub interfejsu 
   
  Środowisko uruchomieniowe języka wspólnego udostępnia nowe opcode i prefiksy do obsługi typów ogólnych w języku pośrednim firmy Microsoft (MSIL), w tym <xref:System.Reflection.Emit.OpCodes.Stelem>, <xref:System.Reflection.Emit.OpCodes.Ldelem>, <xref:System.Reflection.Emit.OpCodes.Unbox_Any>, <xref:System.Reflection.Emit.OpCodes.Constrained>i <xref:System.Reflection.Emit.OpCodes.Readonly>.  
   
- C++Wizualizacja C#, i Visual Basic wszystkie zapewniają pełną obsługę definiowania i używania typów ogólnych. Aby uzyskać więcej informacji na temat obsługi języków, zobacz [typy ogólne w Visual Basic](../../visual-basic/programming-guide/language-features/data-types/generic-types.md), [wprowadzenie do rodzajów ogólnych](../../csharp/programming-guide/generics/index.md)i [Omówienie typów ogólnych w C++wizualizacji ](/cpp/windows/overview-of-generics-in-visual-cpp). 
+ C++Wizualizacja C#, i Visual Basic wszystkie zapewniają pełną obsługę definiowania i używania typów ogólnych. Aby uzyskać więcej informacji na temat obsługi języków, zobacz [typy ogólne w Visual Basic](../../visual-basic/programming-guide/language-features/data-types/generic-types.md), [wprowadzenie do rodzajów ogólnych](../../csharp/programming-guide/generics/index.md)i [Omówienie typów ogólnych w C++wizualizacji ](/cpp/windows/overview-of-generics-in-visual-cpp).
 
 ## <a name="nested-types-and-generics"></a>Typy zagnieżdżone i generyczne  
  Typ, który jest zagnieżdżony w typie ogólnym, może zależeć od parametrów typu otaczającego typu ogólnego. Środowisko uruchomieniowe języka wspólnego traktuje zagnieżdżone typy jako ogólne, nawet jeśli nie mają własnych parametrów typu ogólnego. Podczas tworzenia wystąpienia typu zagnieżdżonego należy określić argumenty typu dla wszystkich typów ogólnych.  
@@ -144,7 +144,7 @@ Typy ogólne umożliwiają dostosowanie metody, klasy, struktury lub interfejsu 
 |[Wprowadzenie do typów ogólnych](../../csharp/programming-guide/generics/index.md)|Zawiera omówienie definiowania typów ogólnych dla C# użytkowników i korzystania z nich.|  
 |[Przegląd typów ogólnych w Visual C++](/cpp/windows/overview-of-generics-in-visual-cpp)|Zawiera opis funkcji ogólnych dla C++ użytkowników, w tym różnice między rodzajami i szablonami.|  
 
-## <a name="reference"></a>Tematy pomocy  
+## <a name="reference"></a>Dokumentacja  
  <xref:System.Collections.Generic>  
   
  <xref:System.Collections.ObjectModel>  

@@ -8,17 +8,17 @@ dev_langs:
 helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-ms.openlocfilehash: bf8a1c028b7b987cb9a7340597087d799dfd4321
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7de8c4e44e1866e3df36c666c9ecc210dc6a7d83
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123175"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159367"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>Tworzenie łańcuchów zadań przy użyciu zadań kontynuacji
 W programowaniu asynchronicznym, jest wspólne dla jednej operacji asynchronicznej po zakończeniu, aby wywołać drugą operację i przekazać do niej dane. Tradycyjnie, kontynuacje zostały wykonane przy użyciu metod wywołania zwrotnego. W bibliotece zadań równoległych te same funkcje są udostępniane przez *zadania kontynuacji*. Zadanie kontynuacji (znane również jako kontynuacja) to asynchroniczne zadanie, które jest wywoływane przez inne zadanie, znane jako *poprzedzające*, po zakończeniu poprzedzającego.  
   
- Kontynuacje są stosunkowo łatwe w użyciu, ale są jednak zaawansowane i elastyczne. Możesz na przykład:  
+ Kontynuacje są stosunkowo łatwe w użyciu, ale są jednak zaawansowane i elastyczne. Można na przykład:  
   
 - Przekaż dane z Antecedent do kontynuacji.  
   
@@ -42,7 +42,7 @@ W programowaniu asynchronicznym, jest wspólne dla jednej operacji asynchroniczn
  Kontynuacja jest sama <xref:System.Threading.Tasks.Task> i nie blokuje wątku, w którym jest uruchomiona. Wywołaj metodę <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>, aby zablokować do momentu zakończenia zadania kontynuacji.  
   
 ## <a name="creating-a-continuation-for-a-single-antecedent"></a>Tworzenie kontynuacji dla pojedynczego poprzedzającego  
- Należy utworzyć kontynuację, która jest wykonywana po zakończeniu poprzedzającego, wywołując metodę <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType>. W poniższym przykładzie pokazano wzorzec podstawowy (dla jasności, obsługa wyjątków jest pomijana). Wykonuje zadanie poprzedzające, `taskA`, które zwraca obiekt <xref:System.DayOfWeek>, który wskazuje nazwę bieżącego dnia tygodnia. Po zakończeniu poprzedzającego, zadanie kontynuacji, `continuation`, jest przenoszona poprzedzające i wyświetla ciąg, który zawiera jego wynik. 
+ Należy utworzyć kontynuację, która jest wykonywana po zakończeniu poprzedzającego, wywołując metodę <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType>. W poniższym przykładzie pokazano wzorzec podstawowy (dla jasności, obsługa wyjątków jest pomijana). Wykonuje zadanie poprzedzające, `taskA`, które zwraca obiekt <xref:System.DayOfWeek>, który wskazuje nazwę bieżącego dnia tygodnia. Po zakończeniu poprzedzającego, zadanie kontynuacji, `continuation`, jest przenoszona poprzedzające i wyświetla ciąg, który zawiera jego wynik.
 
 > [!NOTE]
 > W C# przykładach w tym artykule użyto modyfikatora `async` na `Main` metodzie. Ta funkcja jest dostępna w C# 7,1 i nowszych. Poprzednie wersje generują [`CS5001`](../../csharp/misc/cs5001.md) podczas kompilowania tego przykładowego kodu. Należy ustawić wersję językową na C# 7,1 lub nowszą. Możesz dowiedzieć się, jak skonfigurować wersję języka w artykule dotyczącym [konfigurowania wersji językowej](../../csharp/language-reference/configure-language-version.md).
@@ -150,6 +150,6 @@ W programowaniu asynchronicznym, jest wspólne dla jednej operacji asynchroniczn
   
 - Jeśli kontynuacja jest dołączonym zadaniem podrzędnym, które zostało utworzone przy użyciu opcji <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType>, jego wyjątki będą propagowane przez nadrzędny z powrotem do wątku wywołującego, podobnie jak w przypadku dowolnego innego dołączonego elementu podrzędnego. Aby uzyskać więcej informacji, zobacz [dołączone i odłączone zadania podrzędne](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Biblioteka zadań równoległych (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

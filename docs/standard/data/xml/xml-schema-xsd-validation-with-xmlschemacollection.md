@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ad0b5717-3d32-41ad-a4d7-072c3e492b82
-ms.openlocfilehash: 1ab6dec2b99b01db04333c5d47176e40ed033fa7
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 994153ba93848ebb120f23bdf6a979462a65142d
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709897"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159484"
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemacollection"></a>Weryfikacja schematu XML (XSD) przy użyciu klasy XmlSchemaCollection
 Za pomocą <xref:System.Xml.Schema.XmlSchemaCollection> można sprawdzić poprawność dokumentu XML względem schematów języka definicji schematu XML (XSD). <xref:System.Xml.Schema.XmlSchemaCollection> zwiększa wydajność przez przechowywanie schematów w kolekcji, dzięki czemu nie są one ładowane do pamięci po każdym wystąpieniu walidacji. Jeśli schemat istnieje w kolekcji schematów, atrybut `schemaLocation` jest używany do wyszukania schematu w kolekcji.  
@@ -35,7 +35,7 @@ Za pomocą <xref:System.Xml.Schema.XmlSchemaCollection> można sprawdzić popraw
 ```vb  
 Dim xsc As New XmlSchemaCollection()  
 ' XML Schema.  
-xsc.Add("urn:bookstore-schema", schema)   
+xsc.Add("urn:bookstore-schema", schema)
 reader = New XmlTextReader(filename)  
 vreader = New XmlValidatingReader(reader)  
 vreader.Schemas.Add(xsc)  
@@ -184,9 +184,9 @@ while(vr.Read()) {
  Poniżej przedstawiono zawartość pliku schematu XML, sample4. xsd, aby sprawdzić poprawność.  
   
 ```xml  
-<xs:schema   
-    xmlns:xs="http://www.w3.org/2001/XMLSchema"   
-    xmlns:tns="datatypesTest"   
+<xs:schema
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:tns="datatypesTest"
     targetNamespace="datatypesTest"  
     elementFormDefault="qualified">  
   
@@ -206,7 +206,7 @@ while(vr.Read()) {
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Xml.XmlParserContext>
 - <xref:System.Xml.XmlValidatingReader.ValidationEventHandler?displayProperty=nameWithType>

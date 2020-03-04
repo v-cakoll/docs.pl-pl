@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
-ms.openlocfilehash: 9fd8656594730f29d28cbfdd130d322bfc000614
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 447cf18c7a9d24addf9d0a4ad523f46a45a5d27a
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710833"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78155978"
 ---
 # <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>Instrukcje: wykonywanie transformacji XSLT przy użyciu zestawu
 Kompilator XSLT (xsltc. exe) kompiluje arkusze stylów XSLT i generuje zestaw. Zestaw można przesłać bezpośrednio do metody <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>.  
@@ -171,15 +171,15 @@ Aby dynamicznie połączyć się z skompilowanym zestawem, Zastąp
 xslt.Load(typeof(Transform));  
 ```  
   
-Program  z usługą  
+elementem  
   
-```csharp 
+```csharp
 xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"));  
-``` 
+```
   
 w powyższym przykładzie. Aby uzyskać więcej informacji na temat metody Assembly. Load, zobacz <xref:System.Reflection.Assembly.Load%2A>.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Xml.Xsl.XslCompiledTransform>
 - [Kompilator XSLT (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)

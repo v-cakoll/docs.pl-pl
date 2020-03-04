@@ -3,12 +3,12 @@ title: Debugowanie aplikacji Hello world .NET Core za pomocą programu Visual St
 description: Dowiedz się, jak debugować aplikację Hello world w C# programie lub Visual Basic za pomocą programu Visual Studio.
 ms.date: 12/05/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: bc2736165ec827c1f2670605f23f549ceed4e83a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b2ee1401fc89f990c5f930d80d1a510a117e63a0
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714055"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156676"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio"></a>Debuguj aplikację C# Hello World .NET Core lub Visual Basic przy użyciu programu Visual Studio
 
@@ -22,13 +22,13 @@ Do tej pory wykonano kroki opisane w temacie [Tworzenie pierwszej aplikacji kons
 
 Zacznij od uruchomienia wersji debugowania aplikacji. Konfiguracja kompilacji debugowania powoduje wyłączenie większości optymalizacji kompilatora i zapewnia bogatsze informacje podczas procesu kompilacji.
 
-## <a name="set-a-breakpoint"></a>Ustaw punkt przerwania
+## <a name="set-a-breakpoint"></a>Ustawianie punktu przerwania
 
 Uruchom program i wypróbuj kilka funkcji debugowania:
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 1. Ustaw *punkt przerwania* w wierszu, który odczytuje `Console.WriteLine($"\nHello, {name}, on {date:d} at {date:t}!");`, klikając na lewym marginesie okna kod w tym wierszu. Możesz również ustawić punkt przerwania, umieszczając karetkę w wierszu kodu, a następnie naciskając klawisz **F9** lub wybierając pozycję **Debuguj** > **Przełącz punkt przerwania** z paska menu.
 
@@ -64,12 +64,12 @@ Uruchom program i wypróbuj kilka funkcji debugowania:
 
 1. Naciśnij dowolny klawisz, aby zamknąć aplikację i zatrzymać debugowanie.
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 1. Ustaw *punkt przerwania* w wierszu, który odczytuje `Console.WriteLine($"{vbCrLf}Hello, {name}, on {currentDate:d} at {currentDate:t}!")`, klikając na lewym marginesie okna kod w tym wierszu. Możesz również ustawić punkt przerwania, umieszczając karetkę w żądanym wierszu, a następnie wybierając pozycję **debuguj** > **Przełącz punkt przerwania** z paska menu.
 
    Punkt przerwania tymczasowo przerywa wykonywanie aplikacji *przed* wykonaniem wiersza z punktem przerwania.
-   
+
    Jak widać na poniższej ilustracji, program Visual Studio wskazuje wiersz, w którym jest ustawiony punkt przerwania, zaznaczając go i wyświetlając czerwony okrąg na lewym marginesie.
 
    ![Okno programu Visual Studio z ustawionym punktem przerwania](./media/debugging-with-visual-studio/vb/set-breakpoint-in-editor.png)
@@ -104,7 +104,7 @@ Program wyświetla ciąg wprowadzony przez użytkownika. Co się stanie, jeśli 
 
 Aby ustawić warunkowy punkt przerwania i sprawdzić, co się dzieje, gdy użytkownik nie może wprowadzić ciągu, wykonaj następujące czynności:
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 1. Kliknij prawym przyciskiem myszy czerwoną kropkę reprezentującą punkt przerwania. W menu kontekstowym wybierz pozycję **warunki** , aby otworzyć okno dialogowe **Ustawienia punktu przerwania** . Zaznacz pole wyboru **warunki** , jeśli nie zostało ono jeszcze wybrane.
 
@@ -142,7 +142,7 @@ Aby ustawić warunkowy punkt przerwania i sprawdzić, co się dzieje, gdy użytk
 
 1. Wyczyść punkt przerwania, klikając kropkę na lewym marginesie okna kod lub wybierając polecenie **debuguj > Przełącz punkt przerwania** , gdy zostanie wybrany wiersz kodu.
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 1. Kliknij prawym przyciskiem myszy czerwoną kropkę reprezentującą punkt przerwania. W menu kontekstowym wybierz pozycję **warunki** , aby otworzyć okno dialogowe **Ustawienia punktu przerwania** . Zaznacz pole **warunki**.
 
@@ -185,7 +185,7 @@ Aby ustawić warunkowy punkt przerwania i sprawdzić, co się dzieje, gdy użytk
 
 Program Visual Studio umożliwia również krok po kroku w wierszu przez program i monitorowanie jego wykonania. Zwykle ustawiasz punkt przerwania i użyjesz tej funkcji do obserwowania przepływu programu za pomocą niewielkiej części kodu programu. Ponieważ program jest mały, możesz przejść przez cały program:
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 1. Na pasku menu wybierz **debuguj** > **Wkrocz do** lub naciśnij klawisz **F11**. Program Visual Studio podświetla i wyświetli strzałkę obok następnego wiersza wykonania.
 
@@ -211,7 +211,7 @@ Program Visual Studio umożliwia również krok po kroku w wierszu przez program
 
 1. Naciśnij dowolny klawisz, aby zamknąć okno konsoli i zatrzymać debugowanie.
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 1. Na pasku menu wybierz **debuguj** > **Wkrocz do** lub naciśnij klawisz **F11**. Program Visual Studio podświetla i wyświetli strzałkę obok następnego wiersza wykonania.
 

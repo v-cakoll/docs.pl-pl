@@ -13,25 +13,25 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-ms.openlocfilehash: ae0ba0bf15b6a02df5130d34d277322897826697
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: b1ec8cfc0f8c6e660d716c51bf3c3387b73a278f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75338509"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159315"
 ---
 # <a name="composite-formatting"></a>Formatowanie złożone
 
 Funkcja formatowania złożonego .NET przyjmuje listę obiektów i ciąg formatu złożonego jako dane wejściowe. Ciąg formatu złożonego składa się ze stałego tekstu zmieszanego z indeksowanymi symbolami zastępczymi (nazywanymi też elementami formatu), które odpowiadają obiektom na liście. Operacja formatowania zwraca ciąg wynikowy, który składa się z oryginalnego stałego tekstu zmieszanego z ciągiem reprezentującym obiekty na liście.  
   
 > [!IMPORTANT]
-> Zamiast korzystać z ciągów formatu złożonego, można użyć *interpolowanych ciągów* , jeśli używany język i wersja językowa są obsługiwane. Ciąg interpolowany jest ciąg zawierający *wyrażeń interpolowanych*. Każde wyrażenie interpolowane jest rozwiązany wartość wyrażenia i uwzględnione w ciągu wynikowym, jeśli ciąg jest przypisany. Aby uzyskać więcej informacji, zobacz [Interpolacja ciągówC# (odwołanie)](../../csharp/language-reference/tokens/interpolated.md) i [ciągi interpolowane (odwołanie Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md).
+> Zamiast korzystać z ciągów formatu złożonego, można użyć *interpolowanych ciągów* , jeśli używany język i wersja językowa są obsługiwane. Ciąg interpolowany jest ciągiem, który zawiera *interpolowane wyrażenia*. Każde wyrażenie interpolowane jest rozwiązany wartość wyrażenia i uwzględnione w ciągu wynikowym, jeśli ciąg jest przypisany. Aby uzyskać więcej informacji, zobacz [Interpolacja ciągówC# (odwołanie)](../../csharp/language-reference/tokens/interpolated.md) i [ciągi interpolowane (odwołanie Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md).
 
 Funkcja formatowania złożonego jest obsługiwana przez metody, takie jak:  
   
 - <xref:System.String.Format%2A?displayProperty=nameWithType>, która zwraca sformatowany ciąg wynikowy.  
   
-- <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>, która dołącza sformatowany ciąg wyniku do obiektu <xref:System.Text.StringBuilder>.   
+- <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>, która dołącza sformatowany ciąg wyniku do obiektu <xref:System.Text.StringBuilder>.
 - Niektóre przeciążenia metody <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, które wyświetlają sformatowany ciąg wynikowy w konsoli programu.  
   
 - Niektóre przeciążenia metody <xref:System.IO.TextWriter.WriteLine%2A?displayProperty=nameWithType>, które zapisują sformatowany ciąg wynikowy do strumienia lub pliku. Klasy pochodzące z <xref:System.IO.TextWriter>, takie jak <xref:System.IO.StreamWriter> i <xref:System.Web.UI.HtmlTextWriter>, również udostępniają tę funkcję.  
@@ -157,7 +157,7 @@ Funkcja formatowania złożonego jest obsługiwana przez metody, takie jak:
  [!code-csharp[Formatting.Composite#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#6)]
  [!code-vb[Formatting.Composite#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Composite1.vb#6)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Console.WriteLine%2A>
 - <xref:System.String.Format%2A?displayProperty=nameWithType>

@@ -3,12 +3,12 @@ title: Słownik platformy .NET
 description: Sprawdź znaczenie wybranych terminów używanych w dokumentacji programu .NET.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 822d6c9513d49dcc6bc57421003441d9bcc7c281
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 8da1d858835210590a80a624fb8989fbfe8e0a91
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921111"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160095"
 ---
 # <a name="net-glossary"></a>Słownik platformy .NET
 
@@ -22,11 +22,11 @@ Podobnie jak w przypadku [JIT](#jit), ten kompilator tłumaczy również [Il](#i
 
 Zobacz [CoreRT](#corert) i [.NET Native](#net-native).
 
-## <a name="aspnet"></a>Platforma ASP.NET 
+## <a name="aspnet"></a>ASP.NET
 
 Oryginalna implementacja ASP.NET, która jest dostarczana z .NET Framework.
 
-Czasami ASP.NET jest terminem parasola, który odwołuje się do obu implementacji ASP.NET, w tym ASP.NET Core. Oznacza to, że termin odbywa się w każdym podanym wystąpieniu jest określony przez kontekstu. Zapoznaj się z ASP.NET 4. x, jeśli chcesz, aby było jasne, że nie używasz ASP.NET do oznaczania obu implementacji. 
+Czasami ASP.NET jest terminem parasola, który odwołuje się do obu implementacji ASP.NET, w tym ASP.NET Core. Oznacza to, że termin odbywa się w każdym podanym wystąpieniu jest określony przez kontekstu. Zapoznaj się z ASP.NET 4. x, jeśli chcesz, aby było jasne, że nie używasz ASP.NET do oznaczania obu implementacji.
 
 Zobacz [dokumentację ASP.NET](/aspnet/#pivot=aspnet).
 
@@ -38,7 +38,7 @@ Zobacz [dokumentację ASP.NET Core](/aspnet/#pivot=core).
 
 ## <a name="assembly"></a>zestaw
 
-Plik *. dll*/ *. exe* , który może zawierać kolekcję interfejsów API, które mogą być wywoływane przez aplikacje lub inne zestawy.
+Plik *. dll*/*. exe* , który może zawierać kolekcję interfejsów API, które mogą być wywoływane przez aplikacje lub inne zestawy.
 
 Zestaw może zawierać typy, takie jak interfejsy, klasy, struktury, wyliczenia i Delegaty. Zestawy w folderze *bin* projektu są czasami określane jako *pliki binarne*. Zobacz również [Biblioteka](#library).
 
@@ -78,7 +78,7 @@ Wszystkie oprogramowanie środowiska uruchomieniowego, narzędzia programistyczn
 
 Termin "ekosystem .NET" różni się od podobnych warunków, takich jak "stos .NET" w ramach dołączania do aplikacji i bibliotek innych firm. Oto przykład w zdaniu:
 
-- "Motywacja za [.NET Standard](#net-standard) polega na ustanowieniu większej jednorodności w ekosystemie .NET". 
+- "Motywacja za [.NET Standard](#net-standard) polega na ustanowieniu większej jednorodności w ekosystemie .NET".
 
 ## <a name="framework"></a>szablon
 
@@ -96,7 +96,7 @@ W istniejącej dokumentacji "struktura" czasami odnosi się do [implementacji pl
 
 Moduł zbierający elementy bezużyteczne.
 
-Moduł wyrzucania elementów bezużytecznych jest implementacją automatycznego zarządzania pamięcią.  GC zwalnia pamięć zajętą przez obiekty, które nie są już używane. 
+Moduł wyrzucania elementów bezużytecznych jest implementacją automatycznego zarządzania pamięcią.  GC zwalnia pamięć zajętą przez obiekty, które nie są już używane.
 
 Zobacz [odzyskiwanie pamięci](garbage-collection/index.md).
 
@@ -157,7 +157,7 @@ Termin parasol dla [.NET Standard](#net-standard) i wszystkie [implementacje i o
 
 Zobacz [Przewodnik po platformie .NET](index.md)
 
-## <a name="net-core"></a>.NET Core 
+## <a name="net-core"></a>.NET Core
 
 Implementacja platformy .NET na wielu platformach i o wysokiej wydajności. Obejmuje podstawowe środowisko uruchomieniowe języka wspólnego (CoreCLR), podstawowe środowisko uruchomieniowe AOT (CoreRT, w programowaniu), podstawową bibliotekę klas podstawowych i podstawowy zestaw SDK.
 
@@ -169,7 +169,7 @@ Międzyplatformowe łańcucha narzędzi do tworzenia aplikacji platformy .NET Co
 
 Zobacz [interfejs wiersza polecenia platformy .NET Core](../core/tools/index.md).
 
-## <a name="net-core-sdk"></a>zestaw .NET Core SDK
+## <a name="net-core-sdk"></a>Zestaw .NET Core SDK
 
 Zestaw bibliotek i narzędzi umożliwiających deweloperom tworzenie aplikacji i bibliotek platformy .NET Core. Zawiera [interfejs wiersza polecenia platformy .NET Core](#net-core-cli) do kompilowania aplikacji, bibliotek .NET Core i środowiska uruchomieniowego na potrzeby kompilowania i uruchamiania aplikacji oraz plików wykonywalnych dotnet (*dotnet. exe*), które uruchamiają polecenia CLI i uruchamiają aplikacje.
 
@@ -217,7 +217,7 @@ System operacyjny i sprzęt, na którym działa program, na przykład Windows, m
 
 Poniżej przedstawiono przykłady użycia w zdaniach:
 
-- ".NET Core to wieloplatformowa implementacja platformy .NET". 
+- ".NET Core to wieloplatformowa implementacja platformy .NET".
 - "Profile PCL reprezentują platformy firmy Microsoft, podczas gdy .NET Standard jest niezależny od na platformę".
 
 Dokumentacja platformy .NET często używa "platformy .NET" do oznaczania implementacji platformy .NET lub stosu .NET, w tym wszystkich implementacji. Oba te sposoby użycia mają na celu pomylić z podstawowym (system operacyjny/sprzętowy) znaczeniem, dlatego planujemy wyeliminować te zastosowania z dokumentacji.
@@ -239,13 +239,13 @@ Dokumentacja platformy .NET czasami używa "środowiska uruchomieniowego" do ozn
 - "Biblioteki, które są przeznaczone do uruchamiania w wielu środowiskach uruchomieniowych, powinny być ukierunkowane na tę platformę". (odwołujące się do .NET Standard)
 - "Różne środowiska uruchomieniowe platformy .NET implementują określone wersje .NET Standard. … Każda wersja środowiska uruchomieniowego .NET anonsuje najwyższą wersję .NET Standard obsługiwaną przez program... "
 
-Planujemy wyeliminować to niespójne użycie. 
+Planujemy wyeliminować to niespójne użycie.
 
 ## <a name="stack"></a>stack
 
 Zestaw technologii programistycznych, które są używane razem do kompilowania i uruchamiania aplikacji.
 
-"Stos .NET" odnosi się do .NET Standard i wszystkich implementacji platformy .NET. Fraza "stos platformy .NET" może odnosić się do jednej implementacji platformy .NET. 
+"Stos .NET" odnosi się do .NET Standard i wszystkich implementacji platformy .NET. Fraza "stos platformy .NET" może odnosić się do jednej implementacji platformy .NET.
 
 ## <a name="target-framework"></a>Platforma docelowa
 
@@ -271,7 +271,7 @@ platforma uniwersalna systemu Windows.
 
 Implementacja platformy .NET, która jest używana do tworzenia nowoczesnych aplikacji i oprogramowania systemu Windows z obsługą dotykową dla Internet rzeczy (IoT). Ma ona na celu ujednolicenie różnych typów urządzeń, które mogą być ukierunkowane, w tym komputerów, tabletów, phablets, telefonów, a nawet z konsoli Xbox. Usługa platformy UWP udostępnia wiele usług, takich jak scentralizowany magazyn aplikacji, środowisko wykonawcze i zestaw interfejsów API systemu Windows, które mają być używane zamiast Win32 (WinRT). Aplikacje mogą być zapisywane w C++, C#, Visual Basic i JavaScript. W przypadku C# korzystania z i Visual Basic interfejsy API platformy .NET są udostępniane przez platformę .NET Core.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [.NET — przewodnik](index.md)
 - [.NET framework — przewodnik](../framework/index.md)

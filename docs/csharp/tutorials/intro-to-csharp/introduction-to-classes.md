@@ -3,12 +3,12 @@ title: Klasy i obiekty — wprowadzenie do C# samouczka
 description: Utwórz pierwszy C# program i Eksploruj koncepcje zorientowane obiektowo
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 06d1a30abc0d031badcba4ec60f7deb3c670a3ae
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 5715124a307c7b7fe41b584df82dd328c873ae29
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634953"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240083"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>Eksploruj programowanie zorientowane obiektowo przy użyciu klas i obiektów
 
@@ -16,7 +16,7 @@ Ten samouczek oczekuje, że masz maszynę, której możesz użyć do programowan
 
 ## <a name="create-your-application"></a>Tworzenie aplikacji
 
-Za pomocą okna terminalu Utwórz katalog o nazwie *Classes*. W tym miejscu utworzysz aplikację. Przejdź do tego katalogu i wpisz `dotnet new console` w oknie konsoli. To polecenie tworzy aplikację. Otwórz *program.cs*. Jego powinien wyglądać następująco:
+Za pomocą okna terminalu Utwórz katalog o nazwie *Classes*. W tym miejscu utworzysz aplikację. Przejdź do tego katalogu i wpisz `dotnet new console` w oknie konsoli. To polecenie tworzy aplikację. Otwórz *program.cs*. Powinny wyglądać następująco:
 
 ```csharp
 using System;
@@ -121,11 +121,11 @@ Twoja Klasa konta bankowego musi akceptować depozyty i wycofywania, aby działa
 
 Zacznijmy od utworzenia nowego typu do reprezentowania transakcji. Jest to prosty typ, który nie ma żadnych obowiązków. Potrzebuje on kilku właściwości. Utwórz nowy plik o nazwie *Transaction.cs*. Dodaj do niej następujący kod:
 
-[!code-csharp[Transaction](~/samples/csharp/classes-quickstart/Transaction.cs)]
+[!code-csharp[Transaction](~/samples/snippets/csharp/classes-quickstart/Transaction.cs)]
 
 Teraz Dodajmy <xref:System.Collections.Generic.List%601> obiektów `Transaction` do klasy `BankAccount`. Dodaj następującą deklarację:
 
-[!code-csharp[TransactionDecl](~/samples/csharp/classes-quickstart/BankAccount.cs#TransactionDeclaration)]
+[!code-csharp[TransactionDecl](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#TransactionDeclaration)]
 
 Klasa <xref:System.Collections.Generic.List%601> wymaga zaimportowania innej przestrzeni nazw. Dodaj następujące elementy na początku *BankAccount.cs*:
 
@@ -135,7 +135,7 @@ using System.Collections.Generic;
 
 Teraz Zmieńmy sposób zgłaszania `Balance`.  Można go znaleźć, sumując wartości wszystkich transakcji. Zmodyfikuj deklarację `Balance` w klasie `BankAccount` w następujący sposób:
 
-[!code-csharp[BalanceComputation](~/samples/csharp/classes-quickstart/BankAccount.cs#BalanceComputation)]
+[!code-csharp[BalanceComputation](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#BalanceComputation)]
 
 Ten przykład pokazuje istotny aspekt ***Właściwości***. Teraz trwa obliczanie salda, gdy inny programista pyta o wartość. Wyliczenie wylicza wszystkie transakcje i zawiera sumę jako bieżące saldo.
 
@@ -143,13 +143,13 @@ Następnie Zaimplementuj metody `MakeDeposit` i `MakeWithdrawal`. Te metody wymu
 
 Wprowadza to koncepcję ***wyjątków***. Standardowy sposób wskazujący, że metoda nie może zakończyć pracy, to zgłosić wyjątek. Typ wyjątku i komunikat skojarzony z nim opisują błąd. W tym miejscu Metoda `MakeDeposit` zgłasza wyjątek, jeśli kwota depozytu jest ujemna. Metoda `MakeWithdrawal` zgłasza wyjątek, jeśli kwota wycofania jest ujemna lub w przypadku zastosowania wycofania powoduje ujemne saldo:
 
-[!code-csharp[DepositAndWithdrawal](~/samples/csharp/classes-quickstart/BankAccount.cs#DepositAndWithdrawal)]
+[!code-csharp[DepositAndWithdrawal](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#DepositAndWithdrawal)]
 
 Instrukcja [`throw`](../../language-reference/keywords/throw.md) **zgłasza** wyjątek. Wykonanie bieżącego bloku i sterowanie transferami do pierwszego pasującego bloku `catch` znalezionego w stosie wywołań. Dodasz blok `catch`, aby przetestować ten kod nieco później.
 
 Konstruktor powinien otrzymać jedną zmianę, aby dodać początkową transakcję zamiast bezpośrednio aktualizować saldo. Ponieważ zapisałeś już metodę `MakeDeposit`, wywołaj ją z konstruktora. Gotowy Konstruktor powinien wyglądać następująco:
 
-[!code-csharp[Constructor](~/samples/csharp/classes-quickstart/BankAccount.cs#Constructor)]
+[!code-csharp[Constructor](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#Constructor)]
 
 <xref:System.DateTime.Now?displayProperty=nameWithType> to właściwość zwracająca bieżącą datę i godzinę. Przetestuj to poprzez dodanie kilku depozytów i wycofaeń w metodzie `Main`:
 
@@ -196,7 +196,7 @@ Zapisz plik i wpisz `dotnet run`, aby go wypróbować.
 
 Aby ukończyć ten samouczek, można napisać metodę `GetAccountHistory`, która tworzy `string` dla historii transakcji. Dodaj tę metodę do typu `BankAccount`:
 
-[!code-csharp[History](~/samples/csharp/classes-quickstart/BankAccount.cs#History)]
+[!code-csharp[History](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#History)]
 
 Używa klasy <xref:System.Text.StringBuilder> do formatowania ciągu, który zawiera jeden wiersz dla każdej transakcji. W tych samouczkach pojawił się kod formatowania ciągu. Jeden nowy znak jest `\t`. Spowoduje to wstawienie karty w celu sformatowania danych wyjściowych.
 

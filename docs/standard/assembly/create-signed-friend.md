@@ -5,12 +5,12 @@ ms.assetid: bab62063-61e6-453f-905f-77673df9534e
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 52ecfbae11c7be125d0e60a0fce6a05182e2db9e
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 9912fa70014a8828e994cf528644aaa7cb351fea
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774362"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159497"
 ---
 # <a name="how-to-create-signed-friend-assemblies"></a>Instrukcje: Tworzenie podpisanych zestawów zaprzyjaźnionych
 Ten przykład pokazuje, jak używać zespołów zaprzyjaźnionych z zestawami o silnych nazwach. Oba zestawy muszą mieć silną nazwę. Chociaż oba zestawy w tym przykładzie używają tych samych kluczy, można użyć różnych kluczy dla dwóch zestawów.  
@@ -34,15 +34,15 @@ Ten przykład pokazuje, jak używać zespołów zaprzyjaźnionych z zestawami o 
          `sn -tp FriendAssemblies.publickey`  
   
 3. Utwórz plik C# lub Visual Basic o nazwie *friend_signed_A* , który zawiera poniższy kod. Kod używa atrybutu <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>, aby zadeklarować *friend_signed_B* jako zestaw zaprzyjaźniony.  
-   
+
    Narzędzie silnej nazwy generuje nowy klucz publiczny przy każdym uruchomieniu. W związku z tym należy zastąpić klucz publiczny w poniższym kodzie kluczem publicznym, który został właśnie wygenerowany, jak pokazano w poniższym przykładzie.  
-   
+
    ```csharp  
    // friend_signed_A.cs  
-   // Compile with:   
+   // Compile with:
    // csc /target:library /keyfile:FriendAssemblies.snk friend_signed_A.cs  
    using System.Runtime.CompilerServices;  
-   
+
    [assembly: InternalsVisibleTo("friend_signed_B, PublicKey=0024000004800000940000000602000000240000525341310004000001000100e3aedce99b7e10823920206f8e46cd5558b4ec7345bd1a5b201ffe71660625dcb8f9a08687d881c8f65a0dcf042f81475d2e88f3e3e273c8311ee40f952db306c02fbfc5d8bc6ee1e924e6ec8fe8c01932e0648a0d3e5695134af3bb7fab370d3012d083fa6b83179dd3d031053f72fc1f7da8459140b0af5afc4d2804deccb6")]  
    class Class1  
    {  
@@ -53,14 +53,14 @@ Ten przykład pokazuje, jak używać zespołów zaprzyjaźnionych z zestawami o 
        }  
    }  
    ```  
-   
+
    ```vb  
    ' friend_signed_A.vb  
-   ' Compile with:   
+   ' Compile with:
    ' Vbc -target:library -keyfile:FriendAssemblies.snk friend_signed_A.vb  
    Imports System.Runtime.CompilerServices  
-   
-   <Assembly: InternalsVisibleTo("friend_signed_B, PublicKey=0024000004800000940000000602000000240000525341310004000001000100e3aedce99b7e10823920206f8e46cd5558b4ec7345bd1a5b201ffe71660625dcb8f9a08687d881c8f65a0dcf042f81475d2e88f3e3e273c8311ee40f952db306c02fbfc5d8bc6ee1e924e6ec8fe8c01932e0648a0d3e5695134af3bb7fab370d3012d083fa6b83179dd3d031053f72fc1f7da8459140b0af5afc4d2804deccb6")>   
+
+   <Assembly: InternalsVisibleTo("friend_signed_B, PublicKey=0024000004800000940000000602000000240000525341310004000001000100e3aedce99b7e10823920206f8e46cd5558b4ec7345bd1a5b201ffe71660625dcb8f9a08687d881c8f65a0dcf042f81475d2e88f3e3e273c8311ee40f952db306c02fbfc5d8bc6ee1e924e6ec8fe8c01932e0648a0d3e5695134af3bb7fab370d3012d083fa6b83179dd3d031053f72fc1f7da8459140b0af5afc4d2804deccb6")>
    Public Class Class1  
        Public Sub Test()  
            System.Console.WriteLine("Class1.Test")  
@@ -68,22 +68,22 @@ Ten przykład pokazuje, jak używać zespołów zaprzyjaźnionych z zestawami o 
        End Sub  
    End Class  
    ```  
-   
-4. Kompiluj i podpisz *friend_signed_A* za pomocą następującego polecenia.  
-   
+
+4. Kompiluj i podpisz *friend_signed_A* przy użyciu następującego polecenia.  
+
    ```csharp
    csc /target:library /keyfile:FriendAssemblies.snk friend_signed_A.cs  
    ```  
-   
+
    ```vb
    Vbc -target:library -keyfile:FriendAssemblies.snk friend_signed_A.vb  
    ```  
-   
-5. Utwórz plik C# lub Visual Basic o nazwie *friend_signed_B* , który zawiera poniższy kod. Ponieważ *friend_signed_A* określa *friend_signed_B* jako zestaw zaprzyjaźniony, kod w *friend_signed_B* ma dostęp do `internal` (C#) lub `Friend` (Visual Basic) typów i członków z *friend_signed_A*. Plik zawiera poniższy kod.  
-   
+
+5. Utwórz plik C# lub Visual Basic o nazwie *friend_signed_B* , który zawiera poniższy kod. Ponieważ *friend_signed_A* określa *friend_signed_B* jako zestaw zaprzyjaźniony, kod w *friend_signed_B* może uzyskać dostęp do `internal`C#() lub `Friend` (Visual Basic) typów i członków z *friend_signed_A*. Plik zawiera poniższy kod.  
+
    ```csharp  
    // friend_signed_B.cs  
-   // Compile with:   
+   // Compile with:
    // csc /keyfile:FriendAssemblies.snk /r:friend_signed_A.dll /out:friend_signed_B.exe friend_signed_B.cs  
    public class Program  
    {  
@@ -94,10 +94,10 @@ Ten przykład pokazuje, jak używać zespołów zaprzyjaźnionych z zestawami o 
        }  
    }  
    ```  
-   
+
    ```vb  
    ' friend_signed_B.vb  
-   ' Compile with:   
+   ' Compile with:
    ' Vbc -keyfile:FriendAssemblies.snk -r:friend_signed_A.dll friend_signed_B.vb  
    Module Sample  
        Public Sub Main()  
@@ -106,27 +106,27 @@ Ten przykład pokazuje, jak używać zespołów zaprzyjaźnionych z zestawami o 
        End Sub  
    End Module  
    ```  
-   
-6. Kompiluj i podpisz *friend_signed_B* za pomocą następującego polecenia.  
-   
+
+6. Kompiluj i podpisz *friend_signed_B* przy użyciu następującego polecenia.  
+
    ```csharp
    csc /keyfile:FriendAssemblies.snk /r:friend_signed_A.dll /out:friend_signed_B.exe friend_signed_B.cs  
    ```  
-   
+
    ```vb
    vbc -keyfile:FriendAssemblies.snk -r:friend_signed_A.dll friend_signed_B.vb  
    ```  
-   
-   Nazwa zestawu wygenerowanego przez kompilator musi być zgodna z nazwą znajomego zestawu przekazaną do atrybutu <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. Należy jawnie określić nazwę zestawu wyjściowego ( *. exe* lub *. dll*) przy użyciu opcji kompilatora `-out`. Aby uzyskać więcej informacji, zobacz [-outC# (opcje kompilatora)](../../csharp/language-reference/compiler-options/out-compiler-option.md) lub [-out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md).  
-   
+
+   Nazwa zestawu wygenerowanego przez kompilator musi być zgodna z nazwą znajomego zestawu przekazaną do atrybutu <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. Należy jawnie określić nazwę zestawu wyjściowego (*. exe* lub *. dll*) przy użyciu opcji kompilatora `-out`. Aby uzyskać więcej informacji, zobacz [-outC# (opcje kompilatora)](../../csharp/language-reference/compiler-options/out-compiler-option.md) lub [-out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md).  
+
 7. Uruchom plik *friend_signed_B. exe* .  
-   
+
    Program wyprowadza ciąg **Class1. test**.  
   
 ## <a name="net-security"></a>Zabezpieczenia platformy .NET  
  Istnieją podobieństwa między atrybutem <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> a klasą <xref:System.Security.Permissions.StrongNameIdentityPermission>. Główną różnicą jest to, że <xref:System.Security.Permissions.StrongNameIdentityPermission> mogą wymagać uprawnień zabezpieczeń do uruchamiania określonej sekcji kodu, natomiast atrybut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> kontroluje widoczność typów i składowych `internal`C#() lub `Friend` (Visual Basic).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [Zestawy w środowisku .NET](index.md)

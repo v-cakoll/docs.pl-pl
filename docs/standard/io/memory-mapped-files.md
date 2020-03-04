@@ -9,12 +9,12 @@ helpviewer_keywords:
 - memory-mapped files
 - inter-process communication
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
-ms.openlocfilehash: 7d80099fcfcba58cd863004ba7faf0bafa3abd09
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 004da94bc7345bdc294562f0e1bedf6f1735adec
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77628023"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159718"
 ---
 # <a name="memory-mapped-files"></a>Pliki mapowane w pamięci
 Plik mapowany w pamięci zawiera zawartość pliku w pamięci wirtualnej. To mapowanie między plikiem a miejscem pamięci umożliwia aplikacji, w tym wiele procesów, zmodyfikowanie pliku przez odczyt i zapis bezpośrednio do pamięci. Począwszy od .NET Framework 4, można użyć kodu zarządzanego, aby uzyskać dostęp do plików mapowanych w pamięci w taki sam sposób, jak natywne funkcje systemu Windows uzyskują dostęp do plików mapowanych w pamięci, zgodnie z opisem w temacie [Zarządzanie plikami mapowanymi w pamięci](https://docs.microsoft.com/previous-versions/ms810613(v=msdn.10)).  
@@ -83,7 +83,7 @@ Plik mapowany w pamięci zawiera zawartość pliku w pamięci wirtualnej. To map
   
  [!code-csharp[MemoryMappedFiles.MemoryMappedFile.CreateFromFile#1](../../../samples/snippets/csharp/VS_Snippets_CLR/memorymappedfiles.memorymappedfile.createfromfile/cs/program.cs#1)]
  [!code-vb[MemoryMappedFiles.MemoryMappedFile.CreateFromFile#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/memorymappedfiles.memorymappedfile.createfromfile/vb/program.vb#1)]  
- 
+
 [!INCLUDE [localized code comments](../../../includes/code-comments-loc.md)]
 
  Poniższy przykład powoduje otwarcie tego samego pliku mapowanego na pamięć dla innego procesu.  

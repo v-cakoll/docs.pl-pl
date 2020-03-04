@@ -9,12 +9,12 @@ helpviewer_keywords:
 - time zones [.NET Framework], enumerating
 - enumerating time zones [.NET Framework]
 ms.assetid: bb7a42ab-6bd9-4c5c-b734-5546d51f8669
-ms.openlocfilehash: 662e389f4fecc77244e378f1c0672935403fa456
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: aa8962c8aea208778983610041937dc3f75c1f1e
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129123"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159445"
 ---
 # <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>Instrukcje: Wyliczanie stref czasowych na komputerze
 
@@ -55,7 +55,7 @@ Przykład uruchamia aplikację systemu Windows, która wyświetla strefy czasowe
 Większość formantów list (takich jak <xref:System.Windows.Forms.ListBox?displayProperty=nameWithType> lub kontrolka <xref:System.Web.UI.WebControls.BulletedList?displayProperty=nameWithType>) umożliwia przypisanie kolekcji zmiennych obiektów do ich właściwości `DataSource`, o ile ta kolekcja implementuje interfejs <xref:System.Collections.IEnumerable>. (Ogólna Klasa <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>.) Aby wyświetlić pojedynczy obiekt w kolekcji, formant wywołuje metodę `ToString` tego obiektu w celu wyodrębnienia ciągu, który jest używany do reprezentowania obiektu. W przypadku <xref:System.TimeZoneInfo> obiektów Metoda `ToString` zwraca nazwę wyświetlaną obiektu <xref:System.TimeZoneInfo> (wartość właściwości <xref:System.TimeZoneInfo.DisplayName%2A>).
 
 > [!NOTE]
-> Ponieważ formanty list wywołują metodę `ToString` obiektu, można przypisać kolekcję obiektów <xref:System.TimeZoneInfo> do kontrolki, mieć formant, aby wyświetlał zrozumiałą nazwę dla każdego obiektu i pobrać obiekt <xref:System.TimeZoneInfo> wybrany przez użytkownika. Eliminuje to potrzebę wyodrębnienia ciągu dla każdego obiektu w kolekcji, przypisanie ciągu do kolekcji, która jest przypisana do właściwości `DataSource` kontrolki, pobranie ciągu wybranego przez użytkownika, a następnie użycie tego ciągu do wyodrębnienia obiektu, który Opisuje. 
+> Ponieważ formanty list wywołują metodę `ToString` obiektu, można przypisać kolekcję obiektów <xref:System.TimeZoneInfo> do kontrolki, mieć formant, aby wyświetlał zrozumiałą nazwę dla każdego obiektu i pobrać obiekt <xref:System.TimeZoneInfo> wybrany przez użytkownika. Eliminuje to potrzebę wyodrębnienia ciągu dla każdego obiektu w kolekcji, przypisanie ciągu do kolekcji, która jest przypisana do właściwości `DataSource` kontrolki, pobranie ciągu wybranego przez użytkownika, a następnie użycie tego ciągu do wyodrębnienia obiektu, który opisuje.
 
 ## <a name="compiling-the-code"></a>Kompilowanie kodu
 
@@ -67,7 +67,7 @@ Ten przykład wymaga:
 
   <xref:System.Collections.ObjectModel>
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Daty, godziny i strefy czasowe](../../../docs/standard/datetime/index.md)
 - [Instrukcje: Zapisywanie stref czasowych w zasobie osadzonym](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - managed heap
 - runtime, automatic memory management
 ms.assetid: d4850de5-fa63-4936-a250-5678d118acba
-ms.openlocfilehash: d112bf6d145893bd7b0f99e2b233fc83e72fe227
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1038f16dca507e58005189c9558a9ec8dae4b34f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140570"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159705"
 ---
 # <a name="automatic-memory-management"></a>Automatyczne zarządzanie pamięcią
 Automatyczne zarządzanie pamięcią jest jedną z usług udostępnianych przez środowisko uruchomieniowe języka wspólnego podczas [wykonywania zarządzanego](../../docs/standard/managed-execution-process.md). Moduł zbierający elementy bezużyteczne środowiska uruchomieniowego języka wspólnego zarządza alokacją i ilością pamięci dla aplikacji. Z perspektywy deweloperów oznacza to, że podczas tworzenia zarządzanych aplikacji nie trzeba pisać kodu wykonującego zadania zarządzania pamięcią. Funkcjonalność automatycznego zarządzania pamięcią może wyeliminować typowe problemy, takie jak zapominanie o zwalnianiu obiektów z pamięci, powodowanie przecieków pamięci czy próba uzyskania dostępu do pamięci dla obiektu, który został już zwolniony z pamięci. W tej części opisano, jak moduł odśmiecania pamięci przydziela i zwalnia pamięć.  
@@ -27,7 +27,7 @@ Automatyczne zarządzanie pamięcią jest jedną z usług udostępnianych przez 
   
  Przydzielanie pamięci z zarządzanego stosu jest szybsze niż niezarządzane przydzielanie pamięci. Ponieważ środowisko uruchomieniowe przydziela obiektowi pamięć poprzez dodanie wartości do wskaźnika, operacja przebiega niemal tak samo szybko jak alokacja pamięci ze stosu. Ponadto nowe obiekty, którym system przydziela kolejne sekcje pamięci, są zapisywane kolejno w sposób ciągły w zarządzanym stosie, dlatego aplikacja ma do nich błyskawiczny dostęp.  
   
-<a name="cpconautomaticmemorymanagementreleasingmemoryanchor1"></a>   
+<a name="cpconautomaticmemorymanagementreleasingmemoryanchor1"></a>
 ## <a name="releasing-memory"></a>Zwalnianie pamięci  
  Aparat optymalizacji w module odśmiecania pamięci ustala najlepszy moment na wykonanie procesu wyrzucania w oparciu o dokonywane przydziały. Gdy moduł odśmiecania wykonuje ten proces, zwalnia pamięć zajmowaną przez obiekty, które nie są już używane przez aplikację. Ustalenia, które obiekty są bezużyteczne, dokonuje poprzez analizę głównych obiektów aplikacji. Każda aplikacja ma zbiór obiektów głównych. Każdy obiekt główny odwołuje się do obiektu w zarządzanym stosie albo przyjmuje wartość null. Elementy główne aplikacji obejmują pola statyczne, zmienne lokalne i parametry stosu wątku oraz rejestry procesora. Moduł wyrzucania elementów bezużytecznych ma dostęp do listy aktywnych katalogów głównych, które utrzymuje [kompilator just-in-Time (JIT)](../../docs/standard/managed-execution-process.md) i środowisko uruchomieniowe. Za pomocą tej listy sprawdza obiekty główne aplikacji i generuje wykres przedstawiający wszystkie obiekty dostępne z obiektów głównych.  
   
@@ -49,7 +49,7 @@ Automatyczne zarządzanie pamięcią jest jedną z usług udostępnianych przez 
 ## <a name="releasing-memory-for-unmanaged-resources"></a>Zwalnianie pamięci dla niezarządzanych zasobów  
  W przypadku większości obiektów tworzonych przez aplikację moduł odśmiecania pamięci potrafi automatycznie wykonywać niezbędne zadania zarządzania pamięcią. Zasoby niezarządzane wymagają jednak jawnego usuwania z pamięci. Najpopularniejszym typem niezarządzanego zasobu jest obiekt opakowujący zasób systemu operacyjnego, taki jak dojście do pliku, uchwyt okna lub połączenie sieciowe. Mimo iż moduł odśmiecania pamięci jest w stanie śledzić okres istnienia zarządzanego obiektu hermetyzującego niezarządzany zasób, nie wie, jak dokładnie ma usuwać ten zasób z pamięci. Podczas tworzenia obiektu, który hermetyzuje niezarządzany zasób, zaleca się podanie kodu niezbędnego do oczyszczenia niezarządzanego zasobu w publicznej metodzie **Dispose** . Dostarczając metodę **Dispose** , można umożliwić użytkownikom obiektu jawne zwalnianie pamięci po zakończeniu pracy z obiektem. W przypadku **korzystania z obiektu** , który hermetyzuje niezarządzany zasób, należy pamiętać o usunięciu i wywoływać w razie potrzeby. Aby uzyskać więcej informacji na temat oczyszczania zasobów niezarządzanych i przykładu wzorca projektowego do implementowania metody **Dispose**, zobacz [odzyskiwanie pamięci](../../docs/standard/garbage-collection/index.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.GC>
 - [Odzyskiwanie pamięci](../../docs/standard/garbage-collection/index.md)

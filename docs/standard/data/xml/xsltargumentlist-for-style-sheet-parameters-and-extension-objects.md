@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
-ms.openlocfilehash: 5cd733d557dabe66145fdbb848c473411d63c62b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 34ffb9923337bbad90b2170a16d610d26c7f6f23
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709624"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160199"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>Klasa XsltArgumentList — parametry arkusza stylów i obiekty rozszerzeń
 Klasa <xref:System.Xml.Xsl.XsltArgumentList> zawiera parametry Extensible Stylesheet Language for Transformations (XSLT) i obiekty rozszerzeń XSLT. Po przekazaniu do metody <xref:System.Xml.Xsl.XslTransform.Transform%2A> te parametry i obiekty rozszerzeń mogą być wywoływane z arkuszy stylów.  
@@ -38,11 +38,11 @@ Klasa <xref:System.Xml.Xsl.XsltArgumentList> zawiera parametry Extensible Styles
   
 |Typ W3C|Równoważna Klasa .NET Framework (typ)|Typ XPath lub typ XSLT|  
 |--------------|----------------------------------------------|-----------------------------|  
-|String|System.String|{1&gt;XPath&lt;1}|  
-|Boolean|System.Boolean|{1&gt;XPath&lt;1}|  
-|Wartość liczbowa|System.Double|{1&gt;XPath&lt;1}|  
+|Ciąg|System.String|XPath|  
+|Wartość logiczna|System.Boolean|XPath|  
+|Liczba|System.Double|XPath|  
 |Fragment drzewa wyników|System.Xml.XPath.XPathNavigator|XSLT|  
-|Zestaw węzłów|System.Xml.XPath.XPathNodeIterator|{1&gt;XPath&lt;1}|  
+|Zestaw węzłów|System.Xml.XPath.XPathNodeIterator|XPath|  
   
  Jeśli obiekt parametru nie jest jedną z powyższych klas, wymuszony jest podwójny lub ciąg, zgodnie z potrzebami. Wartości Int16, UInt16, Int32, UInt32, Int64, UInt64, Single i Decimal są wymuszane jako Double. Wszystkie inne typy są wymuszane jako ciąg za pomocą metody `ToString`.  
   
@@ -173,8 +173,8 @@ public class Sample
   
 ```xml  
 <order>  
-   <total>36.9</total>   
-   15% discount if paid by: 5/6/2001 5:01:15 PM   
+   <total>36.9</total>
+   15% discount if paid by: 5/6/2001 5:01:15 PM
 </order>  
 ```  
   
@@ -317,7 +317,7 @@ public class Sample
   <circle>  
     <radius>37.5</radius>  
   </circle>  
-</data>    
+</data>
 ```  
   
  Circle. xsl  
@@ -332,7 +332,7 @@ public class Sample
     <circle>  
     <xsl:copy-of select="node()"/>  
        <circumference>  
-          <xsl:value-of select="myObj:Circumference(radius)"/>          
+          <xsl:value-of select="myObj:Circumference(radius)"/>
        </circumference>  
     </circle>  
   </xsl:for-each>  
@@ -362,6 +362,6 @@ public class Sample
   
  `</circles>`  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Implementowanie procesora XSLT przy użyciu klasy XslTransform](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

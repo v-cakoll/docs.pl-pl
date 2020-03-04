@@ -3,16 +3,16 @@ title: Wspólne wzorce dla delegatów
 description: Zapoznaj się z typowymi wzorcami dotyczącymi używania delegatów w kodzie, aby uniknąć silnego sprzężenia między składnikami.
 ms.date: 06/20/2016
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.openlocfilehash: 174ae4129464c9d2e787048793cec764121ca4aa
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 40e6ced7337e32d6e9b67b12a15ad7e03a77c4b6
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454082"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239875"
 ---
 # <a name="common-patterns-for-delegates"></a>Wspólne wzorce dla delegatów
 
-[Ubiegł](delegates-strongly-typed.md)
+[Wstecz](delegates-strongly-typed.md)
 
 Delegaty zapewniają mechanizm, który umożliwia projekty oprogramowania, które obejmują minimalny sprzężenie między składnikami.
 
@@ -54,15 +54,15 @@ W ramach tego projektu podstawowy składnik dziennika może być niewirtualną, 
 
 Zacznijmy od początku: początkowa implementacja przyjmie nowe komunikaty i zapisze je przy użyciu dowolnego dołączonego delegata. Możesz rozpocząć od jednego delegata, który zapisuje komunikaty w konsoli programu.
 
-[!code-csharp[LoggerImplementation](../../samples/csharp/delegates-and-events/Logger.cs#FirstImplementation "A first Logger implementation.")]
+[!code-csharp[LoggerImplementation](../../samples/snippets/csharp/delegates-and-events/Logger.cs#FirstImplementation "A first Logger implementation.")]
 
 Powyższa Klasa statyczna jest najprostszą czynnością, którą można obsłużyć. Musimy napisać pojedynczą implementację metody, która zapisuje komunikaty w konsoli: 
 
-[!code-csharp[LogToConsole](../../samples/csharp/delegates-and-events/LoggingMethods.cs#LogToConsole "A Console logger.")]
+[!code-csharp[LogToConsole](../../samples/snippets/csharp/delegates-and-events/LoggingMethods.cs#LogToConsole "A Console logger.")]
 
 Na koniec należy podłączyć delegata, dołączając go do delegata WriteMessage zadeklarowanego w rejestratorze:
 
-[!code-csharp[ConnectDelegate](../../samples/csharp/delegates-and-events/Program.cs#ConnectDelegate "Connect to the delegate")]
+[!code-csharp[ConnectDelegate](../../samples/snippets/csharp/delegates-and-events/Program.cs#ConnectDelegate "Connect to the delegate")]
 
 ## <a name="practices"></a>Procedur
 
@@ -78,12 +78,12 @@ Przypuśćmy, że ta pierwsza wersja jest nieco bardziej niezawodna, a następni
 
 Następnie Dodajmy kilka argumentów do metody `LogMessage()`, aby Klasa log tworzyła bardziej uporządkowane komunikaty:
 
-[!code-csharp[Severity](../../samples/csharp/delegates-and-events/Logger.cs#Severity "Define severities")]
-[!code-csharp[NextLogger](../../samples/csharp/delegates-and-events/Logger.cs#LoggerTwo "Refine the Logger")]
+[!code-csharp[Severity](../../samples/snippets/csharp/delegates-and-events/Logger.cs#Severity "Define severities")]
+[!code-csharp[NextLogger](../../samples/snippets/csharp/delegates-and-events/Logger.cs#LoggerTwo "Refine the Logger")]
 
 Następnie Użyjmy tego argumentu `Severity`, aby odfiltrować komunikaty wysyłane do danych wyjściowych dziennika. 
 
-[!code-csharp[FinalLogger](../../samples/csharp/delegates-and-events/Logger.cs#LoggerFinal "Finish the Logger")]
+[!code-csharp[FinalLogger](../../samples/snippets/csharp/delegates-and-events/Logger.cs#LoggerFinal "Finish the Logger")]
 
 ## <a name="practices"></a>Procedur
 
@@ -97,11 +97,11 @@ Składnik dziennika jest również dobrze. Dodajmy do jednego aparatu wyjściowe
 
 Oto ten Rejestrator oparty na plikach:
 
-[!code-csharp[FileLogger](../../samples/csharp/delegates-and-events/FileLogger.cs#FileLogger "Log to files")]
+[!code-csharp[FileLogger](../../samples/snippets/csharp/delegates-and-events/FileLogger.cs#FileLogger "Log to files")]
 
 Po utworzeniu tej klasy można utworzyć jej wystąpienie i dołączyć jej metodę LogMessage do składnika rejestratora:
 
-[!code-csharp[FileLogger](../../samples/csharp/delegates-and-events/Program.cs#FileLogger "Log to files")]
+[!code-csharp[FileLogger](../../samples/snippets/csharp/delegates-and-events/Program.cs#FileLogger "Log to files")]
 
 Te dwa nie wykluczają się wzajemnie. Można dołączyć zarówno metody rejestrowania, jak i generować komunikaty do konsoli programu i pliku:
 
@@ -153,4 +153,4 @@ Pojawiły się początek składnika dziennika, który można rozszerzyć za pomo
 
 Klasa rejestratora może wprowadzać dowolną liczbę ulepszeń lub zmian bez wprowadzania istotnych zmian. Podobnie jak w przypadku każdej klasy, nie można zmodyfikować publicznego interfejsu API bez ryzyka naruszenia zmian. Jednak ponieważ sprzężenie między rejestratorem a wszystkimi aparatami wyjściowymi odbywa się tylko za pomocą delegata, nie są wykorzystywane żadne inne typy (takie jak interfejsy lub klasy bazowe). Sprzęganie jest tak małe, jak to możliwe.
 
-[Next](events-overview.md)
+[Dalej](events-overview.md)

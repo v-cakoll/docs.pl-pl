@@ -14,12 +14,12 @@ helpviewer_keywords:
 - base types, parsing strings
 - DateTime object
 - time strings
-ms.openlocfilehash: 16daa0ef3133b6cd04dc48b7f79fd365098e4bdf
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 9555304e570226b2ed3b040735cf099b5a018f93
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348072"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156546"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>Analizowanie ciągów daty i godziny w programie .NET
 
@@ -48,7 +48,7 @@ Oprócz daty i składnika czasu, Reprezentacja ciągu daty i godziny może zawie
   
 Dostawca formatu jest również używany do interpretowania niejednoznacznej daty liczbowej. Nie jest jasne, które składniki daty reprezentowanej przez ciąg "02/03/04" to miesiąc, dzień i rok. Składniki są interpretowane zgodnie z kolejnością podobnych formatów daty w dostawcy formatu.
 
-## <a name="parse"></a>Analizuj
+## <a name="parse"></a>Przetwarzania
 
 Poniższy przykład ilustruje użycie metody <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>, aby skonwertować `string` do <xref:System.DateTime>. W tym przykładzie zastosowano kulturę skojarzoną z bieżącym wątkiem. Jeśli <xref:System.Globalization.CultureInfo> skojarzona z bieżącą kulturą nie może przeanalizować ciągu wejściowego, zostanie zgłoszony <xref:System.FormatException>.
 
@@ -72,7 +72,7 @@ Jednak chociaż można użyć przeciążenia metody <xref:System.DateTime.Parse%
 
 [!code-csharp[Parsing.DateAndTime#3](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#3)]
 [!code-vb[Parsing.DateAndTime#3](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#3)]
- 
+
 ## <a name="parseexact"></a>ParseExact
 
 Metoda <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> konwertuje ciąg na obiekt <xref:System.DateTime>, jeśli jest zgodny z jednym z określonych wzorców ciągu. Gdy ciąg, który nie jest jednym z określonych formularzy jest przenoszona do tej metody, zostanie zgłoszony <xref:System.FormatException>. Można określić jeden z standardowych specyfikatorów formatu daty i godziny lub kombinację niestandardowych specyfikatorów formatu. Przy użyciu specyfikatorów formatu niestandardowego można utworzyć niestandardowy ciąg rozpoznawania. Aby uzyskać wyjaśnienie specyfikatorów, zobacz tematy dotyczące [standardowych ciągów formatu daty i godziny](standard-date-and-time-format-strings.md) oraz [niestandardowych ciągów formatu daty i godziny](custom-date-and-time-format-strings.md).  
@@ -84,7 +84,7 @@ W poniższym przykładzie metoda <xref:System.DateTime.ParseExact%2A?displayProp
 
 Każde Przeciążenie metod <xref:System.DateTime.Parse%2A> i <xref:System.DateTime.ParseExact%2A> również ma <xref:System.IFormatProvider> parametr, który zawiera informacje specyficzne dla kultury dotyczące formatowania ciągu. Ten obiekt <xref:System.IFormatProvider> jest obiektem <xref:System.Globalization.CultureInfo>, który reprezentuje kulturę standardową lub obiekt <xref:System.Globalization.DateTimeFormatInfo>, który jest zwracany przez właściwość <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>.  <xref:System.DateTime.ParseExact%2A> używa również dodatkowego argumentu ciągu lub tablicy ciągów, który definiuje jeden lub więcej niestandardowych formatów daty i godziny.  
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Analizowanie ciągów](parsing-strings.md)
 - [Formatowanie typów](formatting-types.md)

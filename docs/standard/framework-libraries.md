@@ -5,12 +5,12 @@ author: richlander
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: bfa9c24ef4cd2c418c91e00318aa47b889078d40
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: d4444b6d080afa92a4e7fd9f30c5f9358f02f0ef
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552654"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159237"
 ---
 # <a name="framework-libraries"></a>Biblioteki platformy
 
@@ -52,7 +52,7 @@ Platforma .NET zawiera zestaw interfejsów API narzędzi, które udostępniają 
 
 * <xref:System.Net.Http.HttpClient> — interfejs API służący do wysyłania żądań HTTP i otrzymywania odpowiedzi HTTP z zasobu identyfikowanego przez identyfikator URI.
 * <xref:System.Xml.Linq.XDocument> — interfejs API służący do ładowania i wykonywania zapytań o dokumenty XML za pomocą LINQ.
-* <xref:System.IO.StreamReader> — interfejs API służący do odczytywania plików. 
+* <xref:System.IO.StreamReader> — interfejs API służący do odczytywania plików.
 * <xref:System.IO.StreamWriter> — interfejs API służący do zapisywania plików.
 
 ## <a name="app-model-apis"></a>Interfejsy API modelu aplikacji

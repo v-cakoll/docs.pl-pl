@@ -4,25 +4,25 @@ description: W tym samouczku przedstawiono sposób tworzenia modelu regresji prz
 ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: e4014dbdfb81af65c35d2f7693ef2c57885303ff
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 51cef97178c2dbc6a5b572a7045bdad4bc382ba0
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711626"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240990"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>Samouczek: prognozowanie cen przy użyciu regresji z ML.NET
 
 W tym samouczku przedstawiono sposób tworzenia [modelu regresji](../resources/glossary.md#regression) przy użyciu ml.NET do przewidywania cen, w oddziałach, w oddziałach, w oddziałach
 
-Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
+Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]
 >
 > * Przygotuj i poznanie danych
 > * Załaduj i Przekształć dane
 > * Wybierz algorytm uczenia
 > * Uczenie modelu
-> * Ocenianie modelu
+> * Oceń model
 > * Używanie modelu dla prognoz
 
 ## <a name="prerequisites"></a>Wymagania wstępne
@@ -67,11 +67,11 @@ Utwórz klasy dla danych wejściowych i prognoz:
 1. W oknie dialogowym **Dodaj nowy element** wybierz pozycję **Klasa** i zmień wartość pola **Nazwa** na *TaxiTrip.cs*. Następnie wybierz przycisk **Dodaj** .
 1. Dodaj następujące dyrektywy `using` do nowego pliku:
 
-   [!code-csharp[AddUsings](~/samples/machine-learning/tutorials/TaxiFarePrediction/TaxiTrip.cs#1 "Add necessary usings")]
+   [!code-csharp[AddUsings](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/TaxiTrip.cs#1 "Add necessary usings")]
 
 Usuń istniejącą definicję klasy i Dodaj następujący kod, który ma dwie klasy `TaxiTrip` i `TaxiTripFarePrediction`, do pliku *TaxiTrip.cs* :
 
-[!code-csharp[DefineTaxiTrip](~/samples/machine-learning/tutorials/TaxiFarePrediction/TaxiTrip.cs#2 "Define the taxi trip and fare predictions classes")]
+[!code-csharp[DefineTaxiTrip](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/TaxiTrip.cs#2 "Define the taxi trip and fare predictions classes")]
 
 `TaxiTrip` jest klasą danych wejściowych i zawiera definicje dla każdej z kolumn zestawu danych. Użyj atrybutu <xref:Microsoft.ML.Data.LoadColumnAttribute>, aby określić indeksy kolumn źródłowych w zestawie danych.
 
@@ -84,7 +84,7 @@ Klasa `TaxiTripFarePrediction` reprezentuje przewidywane wyniki. Ma pojedyncze p
 
 Dodaj następujące dodatkowe instrukcje `using` na początku pliku *program.cs* :
 
-[!code-csharp[AddUsings](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#1 "Add necessary usings")]
+[!code-csharp[AddUsings](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#1 "Add necessary usings")]
 
 Należy utworzyć trzy pola do przechowywania ścieżek do plików z zestawami danych i plik, aby zapisać model:
 
@@ -94,7 +94,7 @@ Należy utworzyć trzy pola do przechowywania ścieżek do plików z zestawami d
 
 Dodaj następujący kod bezpośrednio powyżej metody `Main`, aby określić te ścieżki i dla zmiennej `_textLoader`:
 
-[!code-csharp[InitializePaths](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#2 "Define variables to store the data file paths")]
+[!code-csharp[InitializePaths](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#2 "Define variables to store the data file paths")]
 
 Wszystkie operacje ML.NET są uruchamiane w [klasie MLContext](xref:Microsoft.ML.MLContext). Inicjowanie `mlContext` tworzy nowe środowisko ML.NET, które może być współużytkowane przez obiekty przepływu pracy tworzenia modelu. Jest to podobne, pojęciowo, aby `DBContext` w Entity Framework.
 
@@ -102,11 +102,11 @@ Wszystkie operacje ML.NET są uruchamiane w [klasie MLContext](xref:Microsoft.ML
 
 Zastąp wiersz `Console.WriteLine("Hello World!")` w metodzie `Main` następującym kodem, aby zadeklarować i zainicjować zmienną `mlContext`:
 
-[!code-csharp[CreateMLContext](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#3 "Create the ML Context")]
+[!code-csharp[CreateMLContext](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#3 "Create the ML Context")]
 
 Dodaj następujący kod jako następny wiersz kodu w metodzie `Main`, aby wywołać metodę `Train`:
 
-[!code-csharp[Train](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#5 "Train your model")]
+[!code-csharp[Train](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#5 "Train your model")]
 
 Metoda `Train()` wykonuje następujące zadania:
 
@@ -128,19 +128,19 @@ public static ITransformer Train(MLContext mlContext, string dataPath)
 
 ML.NET używa [klasy IDataView](xref:Microsoft.ML.IDataView) jako elastycznej, wydajnej metody opisywania danych tabelarycznych lub tekstowych. `IDataView` może ładować pliki tekstowe lub w czasie rzeczywistym (na przykład bazy danych SQL lub pliki dzienników). Dodaj następujący kod jako pierwszy wiersz metody `Train()`:
 
-[!code-csharp[LoadTrainData](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#6 "loading training dataset")]
+[!code-csharp[LoadTrainData](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#6 "loading training dataset")]
 
 W miarę jak ma być przewidywana taryfa za podróż, kolumna `FareAmount` jest `Label`, który zostanie przewidywalny (dane wyjściowe modelu). Użyj klasy transformacji `CopyColumnsEstimator`, aby skopiować `FareAmount`, i Dodaj następujący kod:
 
-[!code-csharp[CopyColumnsEstimator](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#7 "Use the CopyColumnsEstimator")]
+[!code-csharp[CopyColumnsEstimator](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#7 "Use the CopyColumnsEstimator")]
 
 Algorytm łączący model wymaga funkcji **liczbowych** , dlatego należy przekształcić wartości kategorii (`VendorId`, `RateCode`i `PaymentType`) na liczby (`VendorIdEncoded`, `RateCodeEncoded`i `PaymentTypeEncoded`). W tym celu należy użyć klasy transformacji [OneHotEncodingTransformer](xref:Microsoft.ML.Transforms.OneHotEncodingTransformer) , która przypisuje różne wartości klucza liczbowego do różnych wartości w każdej z kolumn, a następnie Dodaj następujący kod:
 
-[!code-csharp[OneHotEncodingEstimator](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#8 "Use the OneHotEncodingEstimator")]
+[!code-csharp[OneHotEncodingEstimator](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#8 "Use the OneHotEncodingEstimator")]
 
 Ostatnim krokiem w przygotowaniu danych jest połączenie wszystkich kolumn funkcji w kolumnie **funkcje** przy użyciu klasy transformacji `mlContext.Transforms.Concatenate`. Domyślnie algorytm uczenia przetwarza tylko funkcje z kolumny **Features** . Dodaj następujący kod:
 
-[!code-csharp[ColumnConcatenatingEstimator](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#9 "Use the ColumnConcatenatingEstimator")]
+[!code-csharp[ColumnConcatenatingEstimator](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#9 "Use the ColumnConcatenatingEstimator")]
 
 ## <a name="choose-a-learning-algorithm"></a>Wybierz algorytm uczenia
 
@@ -148,21 +148,21 @@ Ten problem polega na przewidywaniu opłaty za podróż z taksówką w Nowym Jor
 
 Dołącz zadanie uczenia maszynowego [FastTreeRegressionTrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer) do definicji transformacji danych, dodając następujący kod jako następny wiersz kodu w `Train()`:
 
-[!code-csharp[FastTreeRegressionTrainer](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#10 "Add the FastTreeRegressionTrainer")]
+[!code-csharp[FastTreeRegressionTrainer](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#10 "Add the FastTreeRegressionTrainer")]
 
 ## <a name="train-the-model"></a>Uczenie modelu
 
 Dopasuj model do `dataview` szkoleniowego i zwróć przeszkolony model, dodając następujący wiersz kodu do metody `Train()`:
 
-[!code-csharp[TrainModel](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#11 "Train the model")]
+[!code-csharp[TrainModel](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#11 "Train the model")]
 
 Metoda [dopasowywania ()](xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer.Fit%28Microsoft.ML.IDataView,Microsoft.ML.IDataView%29) pociąga za siebie model poprzez transformowanie zestawu danych i zastosowanie szkolenia.
 
 Zwróć przeszkolony model z następującym wierszem kodu w metodzie `Train()`:
 
-[!code-csharp[ReturnModel](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#12 "Return the model")]
+[!code-csharp[ReturnModel](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#12 "Return the model")]
 
-## <a name="evaluate-the-model"></a>Ocenianie modelu
+## <a name="evaluate-the-model"></a>Oceń model
 
 Następnie Oceń wydajność modelu z danymi testowymi w celu zapewnienia jakości i weryfikacji. Utwórz metodę `Evaluate()`, zaraz po `Train()`, przy użyciu następującego kodu:
 
@@ -182,15 +182,15 @@ Metoda `Evaluate` wykonuje następujące zadania:
 
 Dodaj wywołanie do nowej metody z metody `Main`, bezpośrednio pod wywołaniem metody `Train`, przy użyciu następującego kodu:
 
-[!code-csharp[CallEvaluate](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#14 "Call the Evaluate method")]
+[!code-csharp[CallEvaluate](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#14 "Call the Evaluate method")]
 
 Załaduj zestaw danych testowych przy użyciu metody [LoadFromTextFile ()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%2A) . Oceń model przy użyciu tego zestawu danych jako sprawdzenie jakości, dodając następujący kod w metodzie `Evaluate`:
 
-[!code-csharp[LoadTestDataset](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#15 "Load the test dataset")]
+[!code-csharp[LoadTestDataset](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#15 "Load the test dataset")]
 
 Następnie Przekształć `Test` dane, dodając następujący kod do `Evaluate()`:
 
-[!code-csharp[PredictWithTransformer](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#16 "Predict using the Transformer")]
+[!code-csharp[PredictWithTransformer](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#16 "Predict using the Transformer")]
 
 Metoda [Transform ()](xref:Microsoft.ML.ITransformer.Transform%2A) umożliwia prognozowanie wierszy wejściowych zestawu danych testowych.
 
@@ -198,7 +198,7 @@ Metoda `RegressionContext.Evaluate` oblicza metryki jakości dla `PredictionMode
 
 Aby wyświetlić je w celu określenia jakości modelu, należy najpierw uzyskać metryki. Dodaj następujący kod jako następny wiersz w `Evaluate` metodzie:
 
-[!code-csharp[ComputeMetrics](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#17 "Compute Metrics")]
+[!code-csharp[ComputeMetrics](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#17 "Compute Metrics")]
 
 Po zestawie prognoz Metoda [oceny ()](xref:Microsoft.ML.RegressionCatalog.Evaluate%2A) ocenia model, który porównuje wartości przewidywane z rzeczywistym `Labels` w testowym zestawie danych i zwraca metryki dotyczące sposobu działania modelu.
 
@@ -213,11 +213,11 @@ Console.WriteLine($"*------------------------------------------------");
 
 [RSquared](../resources/glossary.md#coefficient-of-determination) jest kolejną metryką oceny dla modeli regresji. RSquared przyjmuje wartości z zakresu od 0 do 1. Im bliżej wartości jest 1, tym lepszy jest model. Dodaj następujący kod do metody `Evaluate`, aby wyświetlić wartość RSquared:
 
-[!code-csharp[DisplayRSquared](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#18 "Display the RSquared metric.")]
+[!code-csharp[DisplayRSquared](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#18 "Display the RSquared metric.")]
 
 [RMS](../resources/glossary.md#root-of-mean-squared-error-rmse) jest jedną z metryk oceny modelu regresji. Im niższa wartość, tym lepszy jest model. Dodaj następujący kod do metody `Evaluate`, aby wyświetlić wartość RMS:
 
-[!code-csharp[DisplayRMS](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#19 "Display the RMS metric.")]
+[!code-csharp[DisplayRMS](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#19 "Display the RMS metric.")]
 
 ## <a name="use-the-model-for-predictions"></a>Używanie modelu dla prognoz
 
@@ -239,11 +239,11 @@ Metoda `TestSinglePrediction` wykonuje następujące zadania:
 
 Dodaj wywołanie do nowej metody z metody `Main`, bezpośrednio pod wywołaniem metody `Evaluate`, przy użyciu następującego kodu:
 
-[!code-csharp[CallTestSinglePrediction](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#20 "Call the TestSinglePrediction method")]
+[!code-csharp[CallTestSinglePrediction](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#20 "Call the TestSinglePrediction method")]
 
 Użyj `PredictionEngine` do przewidywania taryfy, dodając następujący kod do `TestSinglePrediction()`:
 
-[!code-csharp[MakePredictionEngine](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#22 "Create the PredictionFunction")]
+[!code-csharp[MakePredictionEngine](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#22 "Create the PredictionFunction")]
 
 [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) jest WYGODNYm interfejsem API, który umożliwia prognozowanie jednego wystąpienia danych. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) nie jest bezpieczna wątkowo. Jest to możliwe do użycia w środowiskach wielowątkowych lub prototypowych. Aby zwiększyć wydajność i bezpieczeństwo wątków w środowiskach produkcyjnych, Użyj usługi `PredictionEnginePool`, która tworzy [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) obiektów do użycia w całej aplikacji. Zapoznaj się z tym przewodnikiem dotyczącym [korzystania z `PredictionEnginePool` w ASP.NET Core Web API](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application).
 
@@ -252,17 +252,17 @@ Użyj `PredictionEngine` do przewidywania taryfy, dodając następujący kod do 
 
 Ten samouczek używa jednej podróży testowej w tej klasie. Później możesz dodać inne scenariusze, aby eksperymentować z modelem. Dodaj podróż w celu przetestowania przeszkolonego modelu kosztów w metodzie `TestSinglePrediction()` przez utworzenie wystąpienia `TaxiTrip`:
 
-[!code-csharp[PredictionData](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#23 "Create test data for single prediction")]
+[!code-csharp[PredictionData](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#23 "Create test data for single prediction")]
 
 Następnie należy przewidzieć opłaty za pośrednictwem jednego wystąpienia danych podróży z taksówką i przekazać je do `PredictionEngine` przez dodanie następujących elementów jako następnych wierszy kodu w metodzie `TestSinglePrediction()`:
 
-[!code-csharp[Predict](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#24 "Create a prediction of taxi fare")]
+[!code-csharp[Predict](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#24 "Create a prediction of taxi fare")]
 
 Funkcja [przewidywania ()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) dokonuje prognozowania dla pojedynczego wystąpienia danych.
 
 Aby wyświetlić przewidywaną opłatę za określoną podróż, Dodaj następujący kod do metody `TestSinglePrediction`:
 
-[!code-csharp[Predict](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#25 "Display the prediction.")]
+[!code-csharp[Predict](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#25 "Display the prediction.")]
 
 Uruchom program, aby zobaczyć przewidywalną opłatę za taksówkę w przypadku testowym.
 
@@ -279,7 +279,7 @@ W niniejszym samouczku zawarto informacje na temat wykonywania następujących c
 > * Załaduj i Przekształć dane
 > * Wybierz algorytm uczenia
 > * Uczenie modelu
-> * Ocenianie modelu
+> * Oceń model
 > * Używanie modelu dla prognoz
 
 Przejdź do następnego samouczka, aby dowiedzieć się więcej.

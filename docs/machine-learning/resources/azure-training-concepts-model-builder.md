@@ -2,15 +2,15 @@
 title: Model Builder — zasoby szkoleniowe platformy Azure
 description: Przewodnik po zasobach dla Azure Machine Learning
 ms.topic: reference
-ms.date: 02/25/2020
+ms.date: 02/27/2020
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: a0a75283cdc7402c67b6bfb0799189fa34cd39a7
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.openlocfilehash: 866fd5a90d13f85f2f8a1aa45ff0e1efb0096642
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77675206"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159302"
 ---
 # <a name="model-builder-azure-training-resources"></a>Model Builder — zasoby szkoleniowe platformy Azure
 
@@ -52,7 +52,7 @@ Aby utworzyć obszar roboczy Azure Machine Learning, wymagane są następujące 
 
 ## <a name="training"></a>Szkolenia
 
-Szkolenie na platformie Azure jest dostępne tylko dla scenariusza klasyfikacji obrazu konstruktora modeli. Algorytm używany do uczenia tych modeli jest głębokiej sieci neuronowych na podstawie architektury ResNet50. Podczas szkoleń zasoby wymagane do uczenia modelu są obsługiwane i model jest szkolony. Ten proces trwa kilka minut, a ilość czasu może się różnić w zależności od rozmiaru wybranych obliczeń oraz ilości danych. Postęp przebiegów można śledzić, wybierając link "Monitoruj bieżące uruchomienia w Azure Portal" w programie Visual Studio.
+Szkolenie na platformie Azure jest dostępne tylko dla scenariusza klasyfikacji obrazu konstruktora modeli. Algorytm używany do uczenia tych modeli jest głębokiej sieci neuronowych na podstawie architektury ResNet50. Proces uczenia zajmuje trochę czasu, a ilość czasu może się różnić w zależności od rozmiaru wybranych obliczeń oraz ilości danych. Przy pierwszym szkoleniu modelu można oczekiwać nieco dłuższego czasu uczenia się, ponieważ zasoby muszą być inicjowane. Postęp przebiegów można śledzić, wybierając link "Monitoruj bieżące uruchomienia w Azure Portal" w programie Visual Studio.
 
 ## <a name="results"></a>Wyniki
 
@@ -64,12 +64,26 @@ Po zakończeniu szkolenia dwa projekty są dodawane do rozwiązania przy użyciu
   - bestModel. Onnx: serializowana wersja modelu w formacie Open neuronowych Network Exchange (ONNX). ONNX to format typu open source dla modeli AI, który obsługuje współdziałanie między strukturami, takimi jak ML.NET, PyTorch i TensorFlow.
   - bestModelMap. JSON: Lista kategorii używanych podczas prognozowania w celu mapowania danych wyjściowych modelu do kategorii tekstu.
   - MLModel. zip: szeregowana wersja potoku prognozowania ML.NET, która używa serializowanej wersji modelu *bestModel. Onnx* , aby tworzyć prognozy i mapy dane wyjściowe przy użyciu pliku `bestModelMap.json`.
-  
+
+## <a name="use-the-machine-learning-model"></a>Korzystanie z modelu uczenia maszynowego
+
+Klasy `ModelInput` i `ModelOutput` w projekcie *modelu* definiują odpowiednio dane wejściowe i wyjściowe modelu.
+
+W scenariuszu klasyfikacji obrazu `ModelInput` zawiera dwie kolumny:
+
+- `ImageSource`: ścieżka ciągu lokalizacji obrazu.
+- `Label`: rzeczywista Kategoria, do której należy obraz. `Label` jest używany tylko jako dane wejściowe w przypadku szkolenia i nie muszą być dostarczane podczas tworzenia prognoz.
+
+`ModelOutput` zawiera dwie kolumny:
+
+- `Prediction`: prognozowana Kategoria obrazu.
+- `Score`: Lista prawdopodobieństwa dla wszystkich kategorii (najwyższa należy do `Prediction`).
+
 ## <a name="troubleshooting"></a>Rozwiązywanie problemów
 
 ### <a name="cannot-create-compute"></a>Nie można utworzyć obliczeń
 
 Jeśli wystąpi błąd podczas tworzenia Azure Machine Learning obliczeń, zasób obliczeniowy może nadal istnieć w stanie błędu. Jeśli spróbujesz ponownie utworzyć zasób obliczeniowy o tej samej nazwie, operacja zakończy się niepowodzeniem. Aby naprawić ten błąd, należy:
 
-* Utwórz nowe obliczenie przy użyciu innej nazwy
-* Przejdź do Azure Portal i Usuń oryginalny zasób obliczeniowy
+- Utwórz nowe obliczenie przy użyciu innej nazwy
+- Przejdź do Azure Portal i Usuń oryginalny zasób obliczeniowy

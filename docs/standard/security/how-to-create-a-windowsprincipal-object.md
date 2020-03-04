@@ -11,12 +11,12 @@ helpviewer_keywords:
 - security [.NET Framework], principals
 - principal objects, creating
 ms.assetid: 56eb10ca-e61d-4ed2-af7a-555fc4c25a25
-ms.openlocfilehash: d409c0e9a2a6564e5fb16e4e2c72ab661ae2d5ce
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 30af18b7d7b86621586c7da66eda1b37356d5565
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706165"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159783"
 ---
 # <a name="how-to-create-a-windowsprincipal-object"></a>Porady: tworzenie obiektu WindowsPrincipal
 Istnieją dwa sposoby tworzenia obiektu <xref:System.Security.Principal.WindowsPrincipal>, w zależności od tego, czy kod musi wielokrotnie wykonywać walidację opartą na rolach, czy też musi wykonać tę operację tylko raz.  
@@ -40,13 +40,13 @@ Istnieją dwa sposoby tworzenia obiektu <xref:System.Security.Principal.WindowsP
 2. Mając zestaw zasad, użyj statycznej właściwości <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> do pobrania podmiotu zabezpieczeń, który hermetyzuje bieżącego użytkownika systemu Windows. Ponieważ typem zwracanym właściwości jest <xref:System.Security.Principal.IPrincipal>, należy rzutować wynik na typ <xref:System.Security.Principal.WindowsPrincipal>. Poniższy kod inicjuje nowy obiekt <xref:System.Security.Principal.WindowsPrincipal> do wartości podmiotu zabezpieczeń skojarzonego z bieżącym wątkiem.  
   
     ```csharp  
-    WindowsPrincipal myPrincipal =   
+    WindowsPrincipal myPrincipal =
         (WindowsPrincipal) Thread.CurrentPrincipal;  
     ```  
   
     ```vb  
     Dim myPrincipal As WindowsPrincipal = _  
-        CType(Thread.CurrentPrincipal, WindowsPrincipal)   
+        CType(Thread.CurrentPrincipal, WindowsPrincipal)
     ```  
   
 3. Po utworzeniu obiektu podmiotu zabezpieczeń można użyć jednej z kilku metod weryfikacji.  
@@ -75,6 +75,6 @@ Istnieją dwa sposoby tworzenia obiektu <xref:System.Security.Principal.WindowsP
   
 3. Po utworzeniu obiektu podmiotu zabezpieczeń można użyć jednej z kilku metod weryfikacji.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Obiekty główne i obiekty tożsamości](../../../docs/standard/security/principal-and-identity-objects.md)

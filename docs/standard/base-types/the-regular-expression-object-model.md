@@ -35,12 +35,12 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, classes
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
-ms.openlocfilehash: e637b2527ce0f7e1b48b713549cb87b2c13881db
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8956be3cf8f96a8dd255f378d4927404c172c908
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124816"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160004"
 ---
 # <a name="the-regular-expression-object-model"></a>Model obiektów wyrażeń regularnych
 <a name="introduction"></a>W tym temacie opisano model obiektów używany w pracy z wyrażeniami regularnymi programu .NET. Ten temat zawiera następujące sekcje:  
@@ -57,7 +57,7 @@ ms.locfileid: "73124816"
   
 - [Pojedyncze przechwycenie](#the_individual_capture)  
   
-<a name="Engine"></a>   
+<a name="Engine"></a>
 ## <a name="the-regular-expression-engine"></a>Aparat wyrażeń regularnych  
  Aparat wyrażeń regularnych w programie .NET jest reprezentowany przez klasę <xref:System.Text.RegularExpressions.Regex>. Aparat wyrażeń regularnych jest odpowiedzialny za analizowanie i kompilowanie wyrażenia regularnego oraz wykonywanie operacji, które pasują do wzorca wyrażenia regularnego z ciągiem wejściowym. Aparat jest centralnym składnikiem w modelu obiektów wyrażeń regularnych programu .NET.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "73124816"
   
  `^\d{3}-\d{2}-\d{4}$` wzorzec wyrażenia regularnego jest interpretowany jak pokazano w poniższej tabeli.  
   
-|Wzorzec|Opis|  
+|Wzorce|Opis|  
 |-------------|-----------------|  
 |`^`|Dopasowuje początek ciągu wejściowego.|  
 |`\d{3}`|Dopasowuje trzy cyfry dziesiętne.|  
@@ -107,7 +107,7 @@ ms.locfileid: "73124816"
   
  `\b(\w+)\W+(\1)\b` wzorzec wyrażenia regularnego jest interpretowany jak pokazano w poniższej tabeli.  
   
-|Wzorzec|Opis|  
+|Wzorce|Opis|  
 |-------------|-----------------|  
 |`\b`|Rozpocznij dopasowanie na granicy słowa.|  
 |`(\w+)`|Dopasowuje co najmniej jeden znak słowa. Jest to pierwsza grupa przechwytywania.|  
@@ -129,7 +129,7 @@ ms.locfileid: "73124816"
   
  `\b\d+\.\d{2}\b` wzorzec wyrażenia regularnego jest interpretowany jak pokazano w poniższej tabeli.  
   
-|Wzorzec|Opis|  
+|Wzorce|Opis|  
 |-------------|-----------------|  
 |`\b`|Rozpoczyna dopasowanie na granicy wyrazu.|  
 |`\d+`|Dopasowanie do co najmniej jednej cyfry dziesiętnej.|  
@@ -139,7 +139,7 @@ ms.locfileid: "73124816"
   
  `$$$&` Wzorzec zamieniania jest interpretowany jak pokazano w poniższej tabeli.  
   
-|Wzorzec|Ciąg zamienny|  
+|Wzorce|Ciąg zamienny|  
 |-------------|------------------------|  
 |`$$`|Znak dolara ($).|  
 |`$&`|Cały dopasowany podciąg.|  
@@ -152,18 +152,18 @@ ms.locfileid: "73124816"
   
  `\b\d{1,2}\.\s` wzorzec wyrażenia regularnego jest interpretowany jak pokazano w poniższej tabeli.  
   
-|Wzorzec|Opis|  
+|Wzorce|Opis|  
 |-------------|-----------------|  
 |`\b`|Rozpoczyna dopasowanie na granicy wyrazu.|  
 |`\d{1,2}`|Dopasowuje jedną lub dwie cyfry dziesiętne.|  
 |`\.`|Dopasowuje okres.|  
 |`\s`|Dopasowuje znak odstępu.|  
   
-<a name="Match_and_MCollection"></a>   
+<a name="Match_and_MCollection"></a>
 ## <a name="the-matchcollection-and-match-objects"></a>MatchCollection i Match Objects  
  Metody wyrażenia regularnego zwracają dwa obiekty, które są częścią modelu obiektu wyrażenia regularnego: obiekt <xref:System.Text.RegularExpressions.MatchCollection> i <xref:System.Text.RegularExpressions.Match> obiektu.  
   
-<a name="the_match_collection"></a>   
+<a name="the_match_collection"></a>
 ### <a name="the-match-collection"></a>Kolekcja dopasowania  
  Metoda <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> zwraca obiekt <xref:System.Text.RegularExpressions.MatchCollection>, który zawiera <xref:System.Text.RegularExpressions.Match> obiekty, które reprezentują wszystkie dopasowania wykryte przez aparat wyrażeń regularnych w kolejności, w jakiej występują w ciągu wejściowym. Jeśli nie ma żadnych dopasowań, metoda zwraca obiekt <xref:System.Text.RegularExpressions.MatchCollection> bez elementów członkowskich. Właściwość <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> umożliwia dostęp do poszczególnych elementów członkowskich kolekcji przez indeks, od zera do jednego mniejszego niż wartość właściwości <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType>. <xref:System.Text.RegularExpressions.MatchCollection.Item%2A> to indeksator kolekcji (w programie C#) i domyślna właściwość (w Visual Basic).  
   
@@ -174,7 +174,7 @@ ms.locfileid: "73124816"
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/matchcollection1.cs#6)]
  [!code-vb[Conceptual.RegularExpressions.ObjectModel#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/matchcollection1.vb#6)]  
   
-<a name="the_match"></a>   
+<a name="the_match"></a>
 ### <a name="the-match"></a>Dopasowanie  
  Klasa <xref:System.Text.RegularExpressions.Match> reprezentuje wynik pojedynczego wyrażenia regularnego dopasowania. Dostęp do <xref:System.Text.RegularExpressions.Match> obiektów można uzyskać na dwa sposoby:  
   
@@ -215,7 +215,7 @@ ms.locfileid: "73124816"
   
  `\b\d+(,\d{3})*\.\d{2}\b` wzorzec wyrażenia regularnego jest zdefiniowany, jak pokazano w poniższej tabeli.  
   
-|Wzorzec|Opis|  
+|Wzorce|Opis|  
 |-------------|-----------------|  
 |`\b`|Rozpoczyna dopasowanie na granicy wyrazu.|  
 |`\d+`|Dopasowanie do co najmniej jednej cyfry dziesiętnej.|  
@@ -228,7 +228,7 @@ ms.locfileid: "73124816"
   
  [Powrót do początku](#introduction)  
   
-<a name="GroupCollection"></a>   
+<a name="GroupCollection"></a>
 ## <a name="the-group-collection"></a>Kolekcja grup  
  Właściwość <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> zwraca obiekt <xref:System.Text.RegularExpressions.GroupCollection>, który zawiera <xref:System.Text.RegularExpressions.Group> obiekty reprezentujące przechwycone grupy w jednym dopasowaniu. Pierwszy obiekt <xref:System.Text.RegularExpressions.Group> w kolekcji (pod indeksem 0) reprezentuje cały odpowiednik. Każdy obiekt, który następuje, reprezentuje wyniki pojedynczej grupy przechwytywania.  
   
@@ -246,7 +246,7 @@ ms.locfileid: "73124816"
   
  `\b(\w+)\s(\d{1,2}),\s(\d{4})\b` wzorzec wyrażenia regularnego jest zdefiniowany, jak pokazano w poniższej tabeli.  
   
-|Wzorzec|Opis|  
+|Wzorce|Opis|  
 |-------------|-----------------|  
 |`\b`|Rozpoczyna dopasowanie na granicy wyrazu.|  
 |`(\w+)`|Dopasowuje co najmniej jeden znak słowa. Jest to pierwsza grupa przechwytywania.|  
@@ -259,7 +259,7 @@ ms.locfileid: "73124816"
   
  [Powrót do początku](#introduction)  
   
-<a name="the_captured_group"></a>   
+<a name="the_captured_group"></a>
 ## <a name="the-captured-group"></a>Przechwycona Grupa  
  Klasa <xref:System.Text.RegularExpressions.Group> reprezentuje wynik z pojedynczej grupy przechwytywania. Obiekty grupy reprezentujące grupy przechwytywania zdefiniowane w wyrażeniu regularnym są zwracane przez właściwość <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> obiektu <xref:System.Text.RegularExpressions.GroupCollection> zwróconego przez właściwość <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>. Właściwość <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> jest indeksatorem (in C#) i właściwością domyślną (w Visual Basic) klasy <xref:System.Text.RegularExpressions.Group>. Możesz również pobrać poszczególnych członków, wykonując iterację kolekcji przy użyciu konstrukcji `foreach` lub `For Each`. Aby zapoznać się z przykładem, zobacz poprzednią sekcję.  
   
@@ -275,14 +275,14 @@ ms.locfileid: "73124816"
   
  `^(?<name>\w+):(?<value>\w+)` wzorzec wyrażenia regularnego jest zdefiniowany, jak pokazano w poniższej tabeli.  
   
-|Wzorzec|Opis|  
+|Wzorce|Opis|  
 |-------------|-----------------|  
 |`^`|Rozpoczyna dopasowanie na początku ciągu wejściowego.|  
 |`(?<name>\w+)`|Dopasowuje co najmniej jeden znak słowa. Nazwa tej grupy przechwytywania jest `name`.|  
 |`:`|Dopasowuje dwukropek.|  
 |`(?<value>\w+)`|Dopasowuje co najmniej jeden znak słowa. Nazwa tej grupy przechwytywania jest `value`.|  
   
- Właściwości klasy <xref:System.Text.RegularExpressions.Group> zawierają informacje o przechwyconej grupie: Właściwość `Group.Value` zawiera przechwycony podciąg, właściwość `Group.Index` wskazuje pozycję początkową przechwyconej grupy w tekście wejściowym, właściwość `Group.Length` zawiera długość przechwyconego tekstu, a właściwość `Group.Success` wskazuje, czy podciąg pasuje do wzorca zdefiniowanego przez grupę przechwytywania.  
+ Właściwości klasy <xref:System.Text.RegularExpressions.Group> zawierają informacje o przechwyconej grupie: Właściwość `Group.Value` zawiera przechwycony podciąg, właściwość `Group.Index` wskazuje pozycję początkową przechwyconej grupy w tekście wejściowym, właściwość `Group.Length` zawiera długość przechwyconego tekstu, a właściwość `Group.Success` wskazuje, czy podciąg jest zgodny ze wzorcem zdefiniowanym przez grupę przechwytywania.  
   
  Stosowanie kwantyfikatorów do grupy (Aby uzyskać więcej informacji, zobacz [Kwantyfikatory](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)) modyfikują relację jednego przechwytywania na grupę przechwytywania na dwa sposoby:  
   
@@ -306,7 +306,7 @@ ms.locfileid: "73124816"
   
  [Powrót do początku](#introduction)  
   
-<a name="CaptureCollection"></a>   
+<a name="CaptureCollection"></a>
 ## <a name="the-capture-collection"></a>Kolekcja przechwytywania  
  Obiekt <xref:System.Text.RegularExpressions.Group> zawiera informacje dotyczące ostatniego przechwycenia. Jednak cały zestaw przechwytywania wykonany przez grupę przechwytywania nadal jest dostępny z obiektu <xref:System.Text.RegularExpressions.CaptureCollection>, który jest zwracany przez właściwość <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>. Każdy element członkowski kolekcji jest obiektem <xref:System.Text.RegularExpressions.Capture>, który reprezentuje przechwytywanie wykonane przez tę grupę przechwytywania, w kolejności, w której zostały przechwycone (i w związku z tym w kolejności, w której przechwycone ciągi zostały dopasowane od lewej do prawej w ciągu wejściowym). Poszczególne obiekty <xref:System.Text.RegularExpressions.Capture> można pobrać z kolekcji na jeden z dwóch sposobów:  
   
@@ -328,7 +328,7 @@ ms.locfileid: "73124816"
   
  [Powrót do początku](#introduction)  
   
-<a name="the_individual_capture"></a>   
+<a name="the_individual_capture"></a>
 ## <a name="the-individual-capture"></a>Pojedyncze przechwycenie  
  Klasa <xref:System.Text.RegularExpressions.Capture> zawiera wyniki przechwycenia pojedynczego podwyrażenia. Właściwość <xref:System.Text.RegularExpressions.Capture.Value%2A?displayProperty=nameWithType> zawiera dopasowany tekst, a właściwość <xref:System.Text.RegularExpressions.Capture.Index%2A?displayProperty=nameWithType> wskazuje pozycję od zera w ciągu wejściowym, w którym rozpoczyna się dopasowany podciąg.  
   
@@ -339,7 +339,7 @@ ms.locfileid: "73124816"
   
  Wyrażenie regularne jest zdefiniowane, jak pokazano w poniższej tabeli.  
   
-|Wzorzec|Opis|  
+|Wzorce|Opis|  
 |-------------|-----------------|  
 |`\w+`|Dopasowuje co najmniej jeden znak słowa.|  
 |`(\s\w+)*`|Dopasowuje zero lub więcej wystąpień znaku odstępu, po którym następuje jeden lub więcej znaków wyrazu. Ten wzorzec pasuje do nazw miast wielowyrazowych. Jest to trzecia grupa przechwytywania.|  
@@ -349,7 +349,7 @@ ms.locfileid: "73124816"
 |`;`|Dopasowuje średnika.|  
 |`((\w+(\s\w+)*),(\d+);)+`|Dopasowuje wzorzec wyrazu, po którym następuje wszelkie dodatkowe słowa, po których następuje przecinek, jedna lub więcej cyfr i średnik, jeden lub więcej razy. Jest to pierwsza grupa przechwytywania.|  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Text.RegularExpressions>
 - [Wyrażenia regularne .NET](../../../docs/standard/base-types/regular-expressions.md)

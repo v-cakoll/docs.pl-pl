@@ -10,23 +10,23 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: f72d2d83d701b20648140900d65c9098a8abb721
-ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
+ms.openlocfilehash: 310967f39c3aa7a46d79087bcbf0cb016f7d7284
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76164063"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159575"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>Jak pisać konwertery niestandardowe na potrzeby serializacji JSON (kierowanie) w programie .NET
 
-W tym artykule pokazano, jak utworzyć niestandardowe konwertery dla klas serializacji JSON, które są dostępne w przestrzeni nazw <xref:System.Text.Json>. Aby zapoznać się z wprowadzeniem do `System.Text.Json`, zobacz [jak serializować i deserializować kod JSON w programie .NET](system-text-json-how-to.md).
+W tym artykule pokazano, jak utworzyć niestandardowe konwertery dla klas serializacji JSON, które są dostępne w przestrzeni nazw <xref:[!OP.NO-LOC(System.Text.Json)]>. Aby zapoznać się z wprowadzeniem do `[!OP.NO-LOC(System.Text.Json)]`, zobacz [jak serializować i deserializować kod JSON w programie .NET](system-text-json-how-to.md).
 
-*Konwerter* jest klasą, która konwertuje obiekt lub wartość do i z formatu JSON. Przestrzeń nazw `System.Text.Json` zawiera wbudowane konwertery dla większości typów pierwotnych, które są mapowane na elementy pierwotne języka JavaScript. Możesz pisać niestandardowe konwertery:
+*Konwerter* jest klasą, która konwertuje obiekt lub wartość do i z formatu JSON. Przestrzeń nazw `[!OP.NO-LOC(System.Text.Json)]` zawiera wbudowane konwertery dla większości typów pierwotnych, które są mapowane na elementy pierwotne języka JavaScript. Możesz pisać niestandardowe konwertery:
 
 * Aby zastąpić domyślne zachowanie konwertera wbudowanego. Na przykład możesz chcieć, aby wartości `DateTime` były reprezentowane w formacie mm/dd/rrrr zamiast domyślnego formatu ISO 8601-1:2019.
 * Do obsługi niestandardowego typu wartości. Na przykład struktura `PhoneNumber`.
 
-Możesz również napisać niestandardowe konwertery, aby dostosować lub zwiększyć `System.Text.Json` z funkcjami niezawartymi w bieżącej wersji. Poniższe scenariusze zostały omówione w dalszej części tego artykułu:
+Możesz również napisać niestandardowe konwertery, aby dostosować lub zwiększyć `[!OP.NO-LOC(System.Text.Json)]` z funkcjami niezawartymi w bieżącej wersji. Poniższe scenariusze zostały omówione w dalszej części tego artykułu:
 
 * [Deserializacja wywnioskowanych typów do właściwości obiektu](#deserialize-inferred-types-to-object-properties).
 * [Obsługa słownika z kluczem niebędącym ciągiem](#support-dictionary-with-non-string-key).
@@ -58,7 +58,7 @@ Poniższy przykład to konwerter, który zastąpi domyślną serializację dla i
 
 ## <a name="sample-factory-pattern-converter"></a>Przykładowy konwerter wzorców fabryki
 
-Poniższy kod przedstawia niestandardowy konwerter, który działa z `Dictionary<Enum,TValue>`. Kod jest zgodny ze wzorcem fabryki, ponieważ pierwszy parametr typu ogólnego to `Enum`, a drugi jest otwarty. Metoda `CanConvert` zwraca `true` tylko dla `Dictionary` z dwoma parametrami ogólnymi, z których pierwszy jest typem `Enum`. Wewnętrzny konwerter pobiera istniejący konwerter do obsługi dowolnego typu w czasie wykonywania dla `TValue`. 
+Poniższy kod przedstawia niestandardowy konwerter, który działa z `Dictionary<Enum,TValue>`. Kod jest zgodny ze wzorcem fabryki, ponieważ pierwszy parametr typu ogólnego to `Enum`, a drugi jest otwarty. Metoda `CanConvert` zwraca `true` tylko dla `Dictionary` z dwoma parametrami ogólnymi, z których pierwszy jest typem `Enum`. Wewnętrzny konwerter pobiera istniejący konwerter do obsługi dowolnego typu w czasie wykonywania dla `TValue`.
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/DictionaryTKeyEnumTValueConverter.cs)]
 
@@ -68,47 +68,47 @@ Poprzedni kod jest taki sam jak w [słowniku pomocy technicznej z kluczem innym 
 
 Poniższe kroki wyjaśniają, jak utworzyć konwerter, wykonując następujące czynności:
 
-* Utwórz klasę, która pochodzi od <xref:System.Text.Json.Serialization.JsonConverter%601>, gdzie `T` jest typem, który ma być serializowany i deserializowany.
-* Zastąp metodę `Read`, aby deserializować przychodzącego pliku JSON i przekonwertować go na `T`typu. Użyj <xref:System.Text.Json.Utf8JsonReader>, który jest przesyłany do metody, aby odczytać kod JSON.
-* Zastąp metodę `Write`, aby serializować obiekt przychodzący typu `T`. Użyj <xref:System.Text.Json.Utf8JsonWriter>, który jest przesyłany do metody, aby zapisać kod JSON.
+* Utwórz klasę, która pochodzi od <xref:[!OP.NO-LOC(System.Text.Json)].Serialization.JsonConverter%601>, gdzie `T` jest typem, który ma być serializowany i deserializowany.
+* Zastąp metodę `Read`, aby deserializować przychodzącego pliku JSON i przekonwertować go na `T`typu. Użyj <xref:[!OP.NO-LOC(System.Text.Json)].Utf8JsonReader>, który jest przesyłany do metody, aby odczytać kod JSON.
+* Zastąp metodę `Write`, aby serializować obiekt przychodzący typu `T`. Użyj <xref:[!OP.NO-LOC(System.Text.Json)].Utf8JsonWriter>, który jest przesyłany do metody, aby zapisać kod JSON.
 * Zastąp metodę `CanConvert` tylko w razie potrzeby. Domyślna implementacja zwraca `true`, gdy typ do przekonwertowania jest typu `T`. W związku z tym konwertery obsługujące tylko typ `T` nie muszą przesłaniać tej metody. Aby zapoznać się z przykładem konwertera, który musi przesłonić tę metodę, zobacz sekcję [deserializacji polimorficzną](#support-polymorphic-deserialization) w dalszej części tego artykułu.
 
-Możesz odwołać się do [wbudowanego kodu źródłowego konwerterów](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters/) jako implementacji odwołań do pisania konwerterów niestandardowych.
+Możesz odwołać się do [wbudowanego kodu źródłowego konwerterów](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/[!OP.NO-LOC(System.Text.Json)]/src/[!OP.NO-LOC(System/Text/Json)]/Serialization/Converters/) jako implementacji odwołań do pisania konwerterów niestandardowych.
 
 ## <a name="steps-to-follow-the-factory-pattern"></a>Kroki prowadzące do wzorca fabryki
 
 Poniższe kroki wyjaśniają, jak utworzyć konwerter, postępując zgodnie z wzorcem fabryki:
 
-* Utwórz klasę pochodzącą z <xref:System.Text.Json.Serialization.JsonConverterFactory>.
-* Zastąp metodę `CanConvert`, aby zwracał wartość true, gdy typ do przekonwertowania jest taki, który może obsłużyć konwerter. Na przykład, jeśli konwerter jest przeznaczony dla `List<T>` może obsłużyć tylko `List<int>`, `List<string>`i `List<DateTime>`. 
+* Utwórz klasę pochodzącą z <xref:[!OP.NO-LOC(System.Text.Json)].Serialization.JsonConverterFactory>.
+* Zastąp metodę `CanConvert`, aby zwracał wartość true, gdy typ do przekonwertowania jest taki, który może obsłużyć konwerter. Na przykład, jeśli konwerter jest przeznaczony dla `List<T>` może obsłużyć tylko `List<int>`, `List<string>`i `List<DateTime>`.
 * Zastąp metodę `CreateConverter`, aby zwracała wystąpienie klasy konwertera, która będzie obsługiwała typ do konwersji, który jest dostarczany w czasie wykonywania.
-* Utwórz klasę konwertera, którą tworzy instancja metody `CreateConverter`. 
+* Utwórz klasę konwertera, którą tworzy instancja metody `CreateConverter`.
 
 Wzorzec fabryki jest wymagany do otwierania typów ogólnych, ponieważ kod do konwersji obiektu na i z ciągu nie jest taki sam dla wszystkich typów. Konwerter dla otwartego typu ogólnego (na przykład`List<T>`) musi utworzyć konwerter dla zamkniętego typu ogólnego (na przykład`List<DateTime>`) w tle. Kod musi być zapisany, aby obsługiwał każdy zamknięty typ ogólny, który może obsłużyć konwerter.
 
-Typ `Enum` jest podobny do otwartego typu ogólnego: konwerter dla `Enum` musi utworzyć konwerter dla konkretnej `Enum``WeekdaysEnum`(na przykład) w tle. 
+Typ `Enum` jest podobny do otwartego typu ogólnego: konwerter dla `Enum` musi utworzyć konwerter dla konkretnej `Enum``WeekdaysEnum`(na przykład) w tle.
 
 ## <a name="error-handling"></a>Obsługa błędów
 
-Jeśli musisz zgłosić wyjątek w kodzie obsługi błędu, rozważ przegenerowanie <xref:System.Text.Json.JsonException> bez komunikatu. Ten typ wyjątku powoduje automatyczne utworzenie komunikatu zawierającego ścieżkę do części JSON, która spowodowała błąd. Na przykład instrukcja `throw new JsonException();` generuje komunikat o błędzie, jak w poniższym przykładzie:
+Jeśli musisz zgłosić wyjątek w kodzie obsługi błędu, rozważ przegenerowanie <xref:[!OP.NO-LOC(System.Text.Json)].JsonException> bez komunikatu. Ten typ wyjątku powoduje automatyczne utworzenie komunikatu zawierającego ścieżkę do części JSON, która spowodowała błąd. Na przykład instrukcja `throw new JsonException();` generuje komunikat o błędzie, jak w poniższym przykładzie:
 
 ```
-Unhandled exception. System.Text.Json.JsonException: 
-The JSON value could not be converted to System.Object. 
+Unhandled exception. [!OP.NO-LOC(System.Text.Json)].JsonException:
+The JSON value could not be converted to System.Object.
 Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 ```
 
-Jeśli zostanie wyświetlony komunikat (na przykład `throw new JsonException("Error occurred")`, wyjątek nadal udostępnia ścieżkę we właściwości <xref:System.Text.Json.JsonException.Path>.
+Jeśli zostanie wyświetlony komunikat (na przykład `throw new JsonException("Error occurred")`, wyjątek nadal udostępnia ścieżkę we właściwości <xref:[!OP.NO-LOC(System.Text.Json)].JsonException.Path>.
 
 ## <a name="register-a-custom-converter"></a>Rejestrowanie niestandardowego konwertera
 
 *Zarejestruj* konwerter niestandardowy, aby zastosować `Serialize` i `Deserialize` metody. Wybierz jedną z następujących metod:
 
-* Dodaj wystąpienie klasy Converter do kolekcji <xref:System.Text.Json.JsonSerializerOptions.Converters?displayProperty=nameWithType>.
-* Zastosuj atrybut [[JsonConverter]](xref:System.Text.Json.Serialization.JsonConverterAttribute) do właściwości, które wymagają konwertera niestandardowego.
-* Zastosuj atrybut [[JsonConverter]](xref:System.Text.Json.Serialization.JsonConverterAttribute) do klasy lub struktury, która reprezentuje niestandardowy typ wartości.
+* Dodaj wystąpienie klasy Converter do kolekcji <xref:[!OP.NO-LOC(System.Text.Json)].JsonSerializerOptions.Converters?displayProperty=nameWithType>.
+* Zastosuj atrybut [[JsonConverter]](xref:[!OP.NO-LOC(System.Text.Json)].Serialization.JsonConverterAttribute) do właściwości, które wymagają konwertera niestandardowego.
+* Zastosuj atrybut [[JsonConverter]](xref:[!OP.NO-LOC(System.Text.Json)].Serialization.JsonConverterAttribute) do klasy lub struktury, która reprezentuje niestandardowy typ wartości.
 
-## <a name="registration-sample---converters-collection"></a>Przykład rejestracji — kolekcja konwerterów 
+## <a name="registration-sample---converters-collection"></a>Przykład rejestracji — kolekcja konwerterów
 
 Oto przykład, który sprawia, że <xref:System.ComponentModel.DateTimeOffsetConverter> domyślny dla właściwości typu <xref:System.DateTimeOffset>:
 
@@ -296,7 +296,7 @@ Kod konwertera w poprzednim przykładzie odczytuje i zapisuje każdą właściwo
 * [Konwerter Int32, który zezwala na wartości typu String i Number przy deserializacji](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Int32.cs)
 * [Konwerter wyliczenia](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Enum.cs)
 * [Listowy konwerter\<T > akceptujący dane zewnętrzne](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.List.cs)
-* [Długi konwerter [], który działa z rozdzielaną przecinkami listą liczb](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Array.cs) 
+* [Długi konwerter [], który działa z rozdzielaną przecinkami listą liczb](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Array.cs)
 
 Jeśli musisz utworzyć konwerter, który modyfikuje zachowanie istniejącego wbudowanego konwertera, możesz uzyskać [kod źródłowy istniejącego konwertera](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters) , który będzie używany jako punkt wyjścia do dostosowania.
 

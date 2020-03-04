@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 0154910b91df0b2f72daebe802e4c75bbca964bb
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 61d4792b1f1b92dd59442ee38810da96c6cf63bd
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337578"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78241146"
 ---
 # <a name="tour-of-net"></a>Przewodnik po środowisku .NET
 
@@ -21,13 +21,13 @@ Ten artykuł zawiera Przewodnik po kilku najważniejszych funkcjach platformy .N
 
 ## <a name="how-to-run-the-code-samples"></a>Jak uruchomić przykłady kodu
 
-Aby dowiedzieć się, jak skonfigurować środowisko programistyczne do uruchamiania przykładów kodu, zapoznaj się z tematem [wprowadzenie](get-started.md) . Skopiuj i wklej przykłady kodu z tej strony do środowiska, aby je uruchomić. 
+Aby dowiedzieć się, jak skonfigurować środowisko programistyczne do uruchamiania przykładów kodu, zapoznaj się z tematem [wprowadzenie](get-started.md) . Skopiuj i wklej przykłady kodu z tej strony do środowiska, aby je uruchomić.
 
 ## <a name="programming-languages"></a>Języki programowania
 
 Platforma .NET obsługuje wiele języków programowania. Implementacje platformy .NET implementują [Common Language Infrastructure (CLI)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/), które między innymi określają środowisko uruchomieniowe niezależne od języka i współdziałanie języków. Oznacza to, że wybierasz dowolny język .NET do kompilowania aplikacji i usług na platformie .NET.
 
-Firma Microsoft aktywnie opracowuje i obsługuje trzy języki .NET C#: F#, i Visual Basic. 
+Firma Microsoft aktywnie opracowuje i obsługuje trzy języki .NET C#: F#, i Visual Basic.
 
 * C# to prosta, wydajna, bezpieczne i zorientowane obiektowo, przy zachowaniu wyrazistości i elegancji stylów języka c. Każda osoba znająca język C i podobne Języki odnajduje kilka problemów w C#dostosowywaniu do programu. Zapoznaj się z [ C# przewodnikiem](../csharp/index.yml) , aby C#dowiedzieć się więcej.
 
@@ -41,7 +41,7 @@ Platforma .NET używa [wyrzucania elementów bezużytecznych (GC)](garbage-colle
 
 Oba te dwa wiersze przydzielą pamięć:
 
-[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L1-L2)]
+[!code-csharp[MemoryManagement](../../samples/snippets/csharp/snippets/tour/MemoryManagement.csx#L1-L2)]
 
 Nie istnieje podobne słowo kluczowe do cofnięcia przydzielenia pamięci, ponieważ cofnięcie przydziału odbywa się automatycznie, gdy moduł zbierający elementy bezużyteczne ponownie przejmuje pamięć za pomocą zaplanowanego uruchomienia.
 
@@ -49,7 +49,7 @@ Moduł wyrzucania elementów bezużytecznych jest jedną z usług, które zapewn
 
 W poniższym przykładzie środowisko uruchomieniowe zgłasza wyjątek <xref:System.IndexOutOfRangeException>, aby wymusić bezpieczeństwo pamięci:
 
-[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
+[!code-csharp[MemoryManagement](../../samples/snippets/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
 
 ## <a name="working-with-unmanaged-resources"></a>Praca z niezarządzanymi zasobami
 
@@ -57,7 +57,7 @@ Niektóre obiekty odwołują się do *niezarządzanych zasobów*. Zasoby niezarz
 
 W programie .NET obiekty odwołujące się do niezarządzanych zasobów implementują interfejs <xref:System.IDisposable>. Gdy skończysz korzystać z obiektu, wywołasz metodę <xref:System.IDisposable.Dispose> obiektu, która jest odpowiedzialna za zwolnienie niezarządzanych zasobów. Języki .NET udostępniają wygodną [instrukcję`using`](../csharp/language-reference/keywords/using.md) dla takich obiektów, jak pokazano w poniższym przykładzie:
 
-[!code-csharp[UnmanagedResources](../../samples/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
+[!code-csharp[UnmanagedResources](../../samples/snippets/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
 
 Po zakończeniu `using` bloku środowisko uruchomieniowe platformy .NET automatycznie wywoła metodę <xref:System.IDisposable.Dispose> obiektu `stream`, która zwalnia dojście do pliku. Środowisko uruchomieniowe robi to również wtedy, gdy wyjątek powoduje opuszczenie bloku.
 
@@ -73,15 +73,15 @@ Obiekt jest wystąpieniem określonego typu. Jedyną operacją dozwoloną dla da
 
 Języki .NET są zorientowane obiektowo z hierarchiami klas podstawowych i pochodnych. Środowisko uruchomieniowe platformy .NET zezwala tylko na rzutowanie obiektów i wywołania, które są wyrównane z hierarchią obiektów. Należy pamiętać, że każdy typ zdefiniowany w dowolnym języku .NET pochodzi od podstawowego typu <xref:System.Object>.
 
-[!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L19-L23)]
+[!code-csharp[TypeSafety](../../samples/snippets/csharp/snippets/tour/TypeSafety.csx#L19-L23)]
 
 Zabezpieczenia typu są również używane do wymuszania hermetyzacji przez zagwarantowanie dokładności słów kluczowych metody dostępu. Słowa kluczowe metody dostępu to artefakty kontrolujące dostęp do elementów członkowskich danego typu przez inny kod. Są one zwykle używane w przypadku różnych rodzajów danych w ramach typu, który jest używany do zarządzania zachowaniem.
 
-[!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L3-L3)]
+[!code-csharp[TypeSafety](../../samples/snippets/csharp/snippets/tour/TypeSafety.csx#L3-L3)]
 
 C#, Visual Basic i F# obsługują *wnioskowanie o typie*lokalnym. Wnioskowanie o typie oznacza, że kompilator określa typ wyrażenia po lewej stronie wyrażenia po prawej stronie. Nie oznacza to, że bezpieczeństwo typu jest zerwane lub nieuniknione. Typ wynikowy ma silny typ z wszystko, co oznacza. W poprzednim przykładzie `dog` jest zapisywana w celu wprowadzenia wnioskowania o typie, a pozostała część tego przykładu nie jest zmieniona:
 
-[!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L28-L34)]
+[!code-csharp[TypeSafety](../../samples/snippets/csharp/snippets/tour/TypeSafety.csx#L28-L34)]
 
 F#ma jeszcze więcej możliwości wnioskowania o typie niż w metodzie C# i Visual Basic. Aby dowiedzieć się więcej, zobacz [wnioskowanie o typie](../fsharp/language-reference/type-inference.md).
 
@@ -101,7 +101,7 @@ Typy ogólne zostały dodane w celu ułatwienia deweloperom implementowania ogó
 
 Poniższy przykład pokazuje program podstawowy uruchomiony przy użyciu wystąpienia <xref:System.Collections.Generic.List%601> typów:
 
-[!code-csharp[GenericsShort](../../samples/csharp/snippets/tour/GenericsShort.csx)]
+[!code-csharp[GenericsShort](../../samples/snippets/csharp/snippets/tour/GenericsShort.csx)]
 
 Aby uzyskać więcej informacji, zobacz temat [Omówienie typów ogólnych (Generics)](generics.md) .
 
@@ -133,7 +133,7 @@ W zależności od obsługi języków środowisko CLR umożliwia dostęp do pami�
 
 Poniższy przykład jest zmodyfikowaną wersją metody `ToString()` z klasy `StringBuilder`. Ilustruje on sposób używania kodu `unsafe` może efektywnie zaimplementować algorytm przez bezpośrednie przechodzenie między fragmentami pamięci:
 
-[!code-csharp[Unsafe](../../samples/csharp/snippets/tour/Unsafe.csx)]
+[!code-csharp[Unsafe](../../samples/snippets/csharp/snippets/tour/Unsafe.csx)]
 
 ## <a name="next-steps"></a>Następne kroki
 

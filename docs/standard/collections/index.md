@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Collections classes
 - collections [.NET Framework]
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
-ms.openlocfilehash: 9b868bd5ed77788cd9b44c11623ae38eba58153c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3ca340e19d7340d7bea133fa62c6d8bbc3c0512a
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711366"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160394"
 ---
 # <a name="collections-and-data-structures"></a>Kolekcje i struktury danych
 Podobne dane często można obsługiwać wydajniej, gdy są przechowywane i przetwarzane jako kolekcja. Można użyć klasy <xref:System.Array?displayProperty=nameWithType> lub klas w przestrzeniach nazw <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent>, system. Collections. niezmienne, aby dodawać, usuwać i modyfikować pojedyncze elementy lub zakres elementów w kolekcji.  
@@ -24,7 +24,7 @@ Podobne dane często można obsługiwać wydajniej, gdy są przechowywane i prze
   
  Począwszy od .NET Framework 4, kolekcje w przestrzeni nazw <xref:System.Collections.Concurrent> zapewniają wydajne, bezpieczne dla wątków operacje umożliwiające dostęp do elementów kolekcji z wielu wątków. Niezmienne klasy kolekcji w System. Collections. niezmienna przestrzeń nazw ([pakiet NuGet](https://www.nuget.org/packages/System.Collections.Immutable)) są z natury bezpieczne wątkowo, ponieważ operacje są wykonywane na kopii oryginalnej kolekcji, a oryginalna kolekcja nie może być modyfikowana.  
 
-<a name="BKMK_Commoncollectionfeatures"></a>   
+<a name="BKMK_Commoncollectionfeatures"></a>
 ## <a name="common-collection-features"></a>Wspólne funkcje kolekcji  
  Wszystkie kolekcje zapewniają metody dodawania, usuwania lub znajdowania elementów w kolekcji. Ponadto wszystkie kolekcje, które bezpośrednio lub pośrednio implementują interfejs <xref:System.Collections.ICollection> lub interfejs <xref:System.Collections.Generic.ICollection%601>, udostępniają następujące funkcje:  
   
@@ -54,22 +54,22 @@ Podobne dane często można obsługiwać wydajniej, gdy są przechowywane i prze
   
      Typy kolekcji nieogólnej w przestrzeni nazw <xref:System.Collections> zapewniają bezpieczeństwo wątku z synchronizacją; zwykle uwidaczniane przez <xref:System.Collections.ICollection.SyncRoot%2A> i <xref:System.Collections.ICollection.IsSynchronized%2A> członków. Kolekcje te nie są domyślnie bezpieczne dla wątków. Jeśli jest wymagany skalowalny i wydajny dostęp wielowątkowy do kolekcji, użyj jednej z klas w przestrzeni nazw <xref:System.Collections.Concurrent> lub Rozważ użycie niezmiennej kolekcji. Aby uzyskać więcej informacji, zobacz [kolekcje bezpieczne dla wątków](../../../docs/standard/collections/thread-safe/index.md).  
   
-<a name="BKMK_Choosingacollection"></a>   
+<a name="BKMK_Choosingacollection"></a>
 ## <a name="choosing-a-collection"></a>Wybieranie kolekcji  
  Ogólnie rzecz biorąc, należy używać kolekcji ogólnych. W poniższej tabeli opisano niektóre typowe scenariusze zbierania danych oraz klasy kolekcji, których można użyć w tych scenariuszach. Jeśli dopiero zaczynasz kolekcje ogólne, ta tabela ułatwi wybór ogólnej kolekcji, która działa najlepiej dla danego zadania.  
- 
+
 |Chcę...|Ogólne opcje kolekcji|Opcje kolekcji inne niż ogólne|Opcje kolekcji bezpieczne dla wątków lub niemodyfikowalne|  
 |-|-|-|-|  
 |Przechowywanie elementów jako par klucz/wartość na potrzeby szybkiego wyszukiwania według klucza|<xref:System.Collections.Generic.Dictionary%602>|<xref:System.Collections.Hashtable><br /><br /> (Kolekcja par klucz/wartość, które są zorganizowane na podstawie kodu skrótu klucza).|<xref:System.Collections.Concurrent.ConcurrentDictionary%602><br /><br /> <xref:System.Collections.ObjectModel.ReadOnlyDictionary%602><br /><br /> <xref:System.Collections.Immutable.ImmutableDictionary%602>|  
 |Dostęp do elementów według indeksu|<xref:System.Collections.Generic.List%601>|<xref:System.Array><br /><br /> <xref:System.Collections.ArrayList>|<xref:System.Collections.Immutable.ImmutableList%601><br /><br /> <xref:System.Collections.Immutable.ImmutableArray>|  
 |Korzystanie z elementów First-In-First-Out (FIFO)|<xref:System.Collections.Generic.Queue%601>|<xref:System.Collections.Queue>|<xref:System.Collections.Concurrent.ConcurrentQueue%601><br /><br /> <xref:System.Collections.Immutable.ImmutableQueue%601>|  
 |Korzystanie z danych — Data ostatniej realizacji (LIFO)|<xref:System.Collections.Generic.Stack%601>|<xref:System.Collections.Stack>|<xref:System.Collections.Concurrent.ConcurrentStack%601><br /><br /> <xref:System.Collections.Immutable.ImmutableStack%601>|  
-|Uzyskuj dostęp do elementów sekwencyjnie|<xref:System.Collections.Generic.LinkedList%601>|Brak zaleceń|Brak zaleceń|  
-|Otrzymuj powiadomienia, gdy elementy są usuwane lub dodawane do kolekcji. (implementuje <xref:System.ComponentModel.INotifyPropertyChanged> i <xref:System.Collections.Specialized.INotifyCollectionChanged>)|<xref:System.Collections.ObjectModel.ObservableCollection%601>|Brak zaleceń|Brak zaleceń|  
+|Uzyskuj dostęp do elementów sekwencyjnie|<xref:System.Collections.Generic.LinkedList%601>|Brak rekomendacji|Brak rekomendacji|  
+|Otrzymuj powiadomienia, gdy elementy są usuwane lub dodawane do kolekcji. (implementuje <xref:System.ComponentModel.INotifyPropertyChanged> i <xref:System.Collections.Specialized.INotifyCollectionChanged>)|<xref:System.Collections.ObjectModel.ObservableCollection%601>|Brak rekomendacji|Brak rekomendacji|  
 |Posortowana kolekcja|<xref:System.Collections.Generic.SortedList%602>|<xref:System.Collections.SortedList>|<xref:System.Collections.Immutable.ImmutableSortedDictionary%602><br /><br /> <xref:System.Collections.Immutable.ImmutableSortedSet%601>|  
-|Zestaw funkcji matematycznych|<xref:System.Collections.Generic.HashSet%601><br /><br /> <xref:System.Collections.Generic.SortedSet%601>|Brak zaleceń|<xref:System.Collections.Immutable.ImmutableHashSet%601><br /><br /> <xref:System.Collections.Immutable.ImmutableSortedSet%601>|  
+|Zestaw funkcji matematycznych|<xref:System.Collections.Generic.HashSet%601><br /><br /> <xref:System.Collections.Generic.SortedSet%601>|Brak rekomendacji|<xref:System.Collections.Immutable.ImmutableHashSet%601><br /><br /> <xref:System.Collections.Immutable.ImmutableSortedSet%601>|  
   
-<a name="BKMK_RelatedTopics"></a>   
+<a name="BKMK_RelatedTopics"></a>
 ## <a name="related-topics"></a>Tematy pokrewne  
   
 |Tytuł|Opis|  
@@ -83,8 +83,8 @@ Podobne dane często można obsługiwać wydajniej, gdy są przechowywane i prze
 |[Kolekcje bezpieczne wątkowo](../../../docs/standard/collections/thread-safe/index.md)|Opisuje typy kolekcji, takie jak <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> i <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType>, które obsługują bezpieczny i wydajny dostęp współbieżny z wielu wątków.|  
 |System.Collections.Immutable|Wprowadza Niezmienne kolekcje i oferuje linki do typów kolekcji.|  
   
-<a name="BKMK_Reference"></a>   
-## <a name="reference"></a>Tematy pomocy  
+<a name="BKMK_Reference"></a>
+## <a name="reference"></a>Dokumentacja  
  <xref:System.Array?displayProperty=nameWithType>  
  <xref:System.Collections?displayProperty=nameWithType>  
  <xref:System.Collections.Concurrent?displayProperty=nameWithType>  

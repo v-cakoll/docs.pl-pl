@@ -15,17 +15,17 @@ helpviewer_keywords:
 - TrimStart method
 - removing characters
 ms.assetid: ab248dab-70d4-4413-81c6-542d153fd195
-ms.openlocfilehash: 66a4945f536c2f30d61a878e6449a6b0f6b45f22
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bdbe267bb178e90c0008422e6543a23178c2c4d8
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132887"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159991"
 ---
 # <a name="trimming-and-removing-characters-from-strings-in-net"></a>Przycinanie i usuwanie znaków z ciągów w programie .NET
 Jeśli analizujesz zdanie w poszczególnych słowach, możesz kończyć się wyrazami z pustymi spacjami (nazywanymi również białymi spacjami) na dowolnym końcu słowa. W takiej sytuacji można użyć jednej z metod przycinania w klasie **System. String** , aby usunąć dowolną liczbę spacji lub innych znaków z określonej pozycji w ciągu. W poniższej tabeli opisano dostępne metody przycinania.  
   
-|Nazwa metody|Zastosowanie|  
+|Nazwa metody|Użycie|  
 |-----------------|---------|  
 |<xref:System.String.Trim%2A?displayProperty=nameWithType>|Usuwa spacje lub znaki określone w tablicy znaków od początku i końca ciągu.|  
 |<xref:System.String.TrimEnd%2A?displayProperty=nameWithType>|Usuwa znaki określone w tablicy znaków od końca ciągu.|  
@@ -77,7 +77,7 @@ Jeśli analizujesz zdanie w poszczególnych słowach, możesz kończyć się wyr
   
  Ten kod wyświetla `World!` konsoli programu.  
   
-## <a name="remove"></a>Usuń 
+## <a name="remove"></a>Remove
 
  Metoda <xref:System.String.Remove%2A?displayProperty=nameWithType> usuwa określoną liczbę znaków, zaczynając od określonej pozycji w istniejącym ciągu. Ta metoda przyjmuje indeks oparty na wartości zero.  
   
@@ -87,13 +87,13 @@ Jeśli analizujesz zdanie w poszczególnych słowach, możesz kończyć się wyr
  [!code-csharp[Conceptual.String.BasicOps#21](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/trimming.cs#21)]
  [!code-vb[Conceptual.String.BasicOps#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/trimming.vb#21)]  
   
-## <a name="replace"></a>stępować
+## <a name="replace"></a>Replace
 
  Można również usunąć określony znak lub podciąg z ciągu, wywołując metodę <xref:System.String.Replace%28System.String%2CSystem.String%29?displayProperty=nameWithType> i określając pusty ciąg (<xref:System.String.Empty?displayProperty=nameWithType>) jako zamiennik. Poniższy przykład usuwa wszystkie przecinki z ciągu.  
   
  [!code-csharp[Conceptual.String.BasicOps#23](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/replace1.cs#23)]
  [!code-vb[Conceptual.String.BasicOps#23](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/replace1.vb#23)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Podstawowe operacje na ciągach](../../../docs/standard/base-types/basic-string-operations.md)

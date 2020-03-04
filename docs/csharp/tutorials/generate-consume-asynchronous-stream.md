@@ -4,18 +4,18 @@ description: Ten zaawansowany samouczek ilustruje scenariusze, w których genero
 ms.date: 02/10/2019
 ms.technology: csharp-async
 ms.custom: mvc
-ms.openlocfilehash: 412e5de5d9d73846fe2af36e3def383364389c75
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 2fab2917a26a1774ad73866fa0448dbf47c94583
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039222"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240096"
 ---
 # <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>Samouczek: generowanie i używanie strumieni asynchronicznych C# przy użyciu 8,0 i .net Core 3,0
 
 C#8,0 wprowadza **strumienie asynchroniczne**, które modelują Źródło strumieni danych, gdy elementy w strumieniu danych mogą być pobierane lub generowane asynchronicznie. Strumienie asynchroniczne korzystają z nowych interfejsów wprowadzonych w .NET Standard 2,1 i wdrożonych w środowisku .NET Core 3,0 w celu zapewnienia naturalnego modelu programowania dla asynchronicznych źródeł danych strumieniowych.
 
-W tym samouczku dowiesz się, jak:
+Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
 
 > [!div class="checklist"]
 >
@@ -45,7 +45,7 @@ Możesz uzyskać kod dla aplikacji startowej używanej w tym samouczku w repozyt
 
 Aplikacja startowa to Aplikacja konsolowa korzystająca z interfejsu [GraphQL GitHub](https://developer.github.com/v4/) do pobierania ostatnich problemów pisanych w repozytorium [dotnet/docs](https://github.com/dotnet/docs) . Zacznij od przejrzenia następującego kodu dla metody `Main` aplikacji Starter:
 
-[!code-csharp[StarterAppMain](~/samples/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#StarterAppMain)]
+[!code-csharp[StarterAppMain](~/samples/snippets/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#StarterAppMain)]
 
 Można ustawić zmienną środowiskową `GitHubKey` na osobisty token dostępu lub zastąpić ostatni argument w wywołaniu `GenEnvVariable` przy użyciu osobistego tokenu dostępu. Nie umieszczaj kodu dostępu w kodzie źródłowym, jeśli zapiszesz Źródło innym osobom lub umieścisz je w udostępnionym repozytorium źródłowym.
 
@@ -57,7 +57,7 @@ Po uruchomieniu aplikacji Starter możesz wprowadzić pewne ważne uwagi dotycz�
 
 Implementacja pokazuje, dlaczego zaobserwowano zachowanie omówione w poprzedniej sekcji. Przejrzyj kod dla `runPagedQueryAsync`:
 
-[!code-csharp[RunPagedQueryStarter](~/samples/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#RunPagedQuery)]
+[!code-csharp[RunPagedQueryStarter](~/samples/snippets/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#RunPagedQuery)]
 
 Skoncentrujemy się na algorytmie stronicowania i strukturze asynchronicznej poprzedniego kodu. (Szczegółowe informacje o interfejsie API usługi GitHub GraphQL można znaleźć w [dokumentacji usługi GitHub GraphQL](https://developer.github.com/v4/guides/) ). Metoda `runPagedQueryAsync` wylicza problemy od najnowszych do najstarszych. Żąda 25 problemów na stronę i analizuje strukturę `pageInfo` odpowiedzi, aby kontynuować z poprzednią stroną. Jest to zgodne ze standardową obsługą stronicowania GraphQL dla odpowiedzi na wiele stron. Odpowiedź zawiera `pageInfo` obiektu, który zawiera wartość `hasPreviousPages` i `startCursor` wartość użytą do żądania poprzedniej strony. Te problemy znajdują się w tablicy `nodes`. Metoda `runPagedQueryAsync` dołącza te węzły do tablicy, która zawiera wszystkie wyniki ze wszystkich stron.
 
@@ -108,35 +108,35 @@ Jednym z typów, które mogą być nieznane, jest <xref:System.Threading.Tasks.V
 
 Następnie Skonwertuj metodę `runPagedQueryAsync`, aby wygenerować strumień asynchroniczny. Najpierw Zmień sygnaturę `runPagedQueryAsync`, aby zwracała `IAsyncEnumerable<JToken>`, i Usuń tokeny anulowania i obiekty postępu z listy parametrów, jak pokazano w poniższym kodzie:
 
-[!code-csharp[FinishedSignature](~/samples/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#UpdateSignature)]
+[!code-csharp[FinishedSignature](~/samples/snippets/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#UpdateSignature)]
 
 Kod początkowy przetwarza każdą stronę w miarę pobierania strony, jak pokazano w poniższym kodzie:
 
-[!code-csharp[StarterPaging](~/samples/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#ProcessPage)]
+[!code-csharp[StarterPaging](~/samples/snippets/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#ProcessPage)]
 
 Zastąp te trzy wiersze następującym kodem:
 
-[!code-csharp[FinishedPaging](~/samples/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#YieldReturnPage)]
+[!code-csharp[FinishedPaging](~/samples/snippets/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#YieldReturnPage)]
 
 Można również usunąć deklarację `finalResults` wcześniej w tej metodzie i instrukcji `return`, która następuje po zmodyfikowanej pętli.
 
 Zakończono wprowadzanie zmian w celu wygenerowania strumienia asynchronicznego. Metoda Final powinna wyglądać podobnie do poniższego kodu:
 
-[!code-csharp[FinishedGenerate](~/samples/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#GenerateAsyncStream)]
+[!code-csharp[FinishedGenerate](~/samples/snippets/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#GenerateAsyncStream)]
 
 Następnie należy zmienić kod, który używa kolekcji, aby wykorzystać strumień asynchroniczny. Znajdź następujący kod w `Main`, który przetwarza zbieranie problemów:
 
-[!code-csharp[EnumerateOldStyle](~/samples/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#EnumerateOldStyle)]
+[!code-csharp[EnumerateOldStyle](~/samples/snippets/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#EnumerateOldStyle)]
 
 Zastąp ten kod następującym `await foreach` pętlą:
 
-[!code-csharp[FinishedEnumerateAsyncStream](~/samples/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#EnumerateAsyncStream)]
+[!code-csharp[FinishedEnumerateAsyncStream](~/samples/snippets/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#EnumerateAsyncStream)]
 
 Kod gotowego samouczka można uzyskać z repozytorium [dotnet/Samples](https://github.com/dotnet/samples) w folderze [CSharp/samouczki/AsyncStreams](https://github.com/dotnet/samples/tree/master/csharp/tutorials/AsyncStreams/finished) .
 
 ## <a name="run-the-finished-application"></a>Uruchamianie gotowej aplikacji
 
-Uruchom aplikację ponownie. Poróżnij swoje zachowanie z zachowaniem aplikacji startowej. Pierwsza Strona wyników jest wyliczana zaraz po jej udostępnieniu. Po zażądaniu i pobraniu każdej nowej strony istnieje zauważalne wstrzymanie, a następnie wyniki następnej strony są szybko wyliczane. Blok `try`  /  `catch` nie jest wymagany do obsługi anulowania: obiekt wywołujący może zatrzymać Wyliczanie kolekcji. Postęp jest jasno raportowany, ponieważ strumień asynchroniczny generuje wyniki po pobraniu każdej strony. Stan każdego zwróconego problemu jest bezproblemowo uwzględniony w pętli `await foreach`. Obiekt wywołania zwrotnego nie jest potrzebny do śledzenia postępu.
+Uruchom ponownie aplikację. Poróżnij swoje zachowanie z zachowaniem aplikacji startowej. Pierwsza Strona wyników jest wyliczana zaraz po jej udostępnieniu. Po zażądaniu i pobraniu każdej nowej strony istnieje zauważalne wstrzymanie, a następnie wyniki następnej strony są szybko wyliczane. Blok `try` / `catch` nie jest wymagany do obsługi anulowania: obiekt wywołujący może zatrzymać Wyliczanie kolekcji. Postęp jest jasno raportowany, ponieważ strumień asynchroniczny generuje wyniki po pobraniu każdej strony. Stan każdego zwróconego problemu jest bezproblemowo uwzględniony w pętli `await foreach`. Obiekt wywołania zwrotnego nie jest potrzebny do śledzenia postępu.
 
 Aby zobaczyć ulepszenia wykorzystania pamięci, zbadając kod. Nie trzeba już przydzielać kolekcji do przechowywania wszystkich wyników przed ich wyliczeniem. Obiekt wywołujący może określić, jak zużywać wyniki i czy wymagana jest kolekcja magazynu.
 

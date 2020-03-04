@@ -5,12 +5,12 @@ f1_keywords:
 - stackalloc_CSharpKeyword
 helpviewer_keywords:
 - stackalloc operator [C#]
-ms.openlocfilehash: 5654cae622cd94c8dad7e58fbc8a99fcf48391a9
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b2188bc94db42ab6d581c339f046ed81eb42d297
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712627"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239004"
 ---
 # <a name="stackalloc-operator-c-reference"></a>stackalloc — operatorC# (odwołanie)
 
@@ -20,24 +20,24 @@ Wynik operatora `stackalloc` można przypisać do zmiennej jednego z następują
 
 - Począwszy od C# 7,2, <xref:System.Span%601?displayProperty=nameWithType> lub <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>, jak pokazano na poniższym przykładzie:
 
-  [!code-csharp[stackalloc span](~/samples/csharp/language-reference/operators/StackallocOperator.cs#AssignToSpan)]
+  [!code-csharp[stackalloc span](~/samples/snippets/csharp/language-reference/operators/StackallocOperator.cs#AssignToSpan)]
 
   Nie trzeba używać [niebezpiecznego](../keywords/unsafe.md) kontekstu, gdy przypiszesz blok pamięci przydzielony przez stos do zmiennej <xref:System.Span%601> lub <xref:System.ReadOnlySpan%601>.
 
   Podczas pracy z tymi typami można użyć wyrażenia `stackalloc` w wyrażeniach [warunkowych](conditional-operator.md) lub przypisywania, jak pokazano w poniższym przykładzie:
 
-  [!code-csharp[stackalloc expression](~/samples/csharp/language-reference/operators/StackallocOperator.cs#AsExpression)]
+  [!code-csharp[stackalloc expression](~/samples/snippets/csharp/language-reference/operators/StackallocOperator.cs#AsExpression)]
 
   Począwszy od C# 8,0, można użyć wyrażenia `stackalloc` w innych wyrażeniach za każdym razem, gdy zmienna <xref:System.Span%601> lub <xref:System.ReadOnlySpan%601> jest dozwolona, jak pokazano na poniższym przykładzie:
 
-  [!code-csharp[stackalloc in nested expressions](~/samples/csharp/language-reference/operators/StackallocOperator.cs#Nested)]
+  [!code-csharp[stackalloc in nested expressions](~/samples/snippets/csharp/language-reference/operators/StackallocOperator.cs#Nested)]
 
   > [!NOTE]
   > Zaleca się używanie typów <xref:System.Span%601> lub <xref:System.ReadOnlySpan%601> do pracy z przydzieloną pamięcią, jeśli to możliwe.
 
 - [Typ wskaźnika](../../programming-guide/unsafe-code-pointers/pointer-types.md), jak pokazano na poniższym przykładzie:
 
-  [!code-csharp[stackalloc pointer](~/samples/csharp/language-reference/operators/StackallocOperator.cs#AssignToPointer)]
+  [!code-csharp[stackalloc pointer](~/samples/snippets/csharp/language-reference/operators/StackallocOperator.cs#AssignToPointer)]
 
   Jak pokazano w powyższym przykładzie, należy użyć kontekstu `unsafe` podczas pracy z typami wskaźników.
 
@@ -45,11 +45,11 @@ Wynik operatora `stackalloc` można przypisać do zmiennej jednego z następują
 
 Zawartość nowo przydzieloną pamięci jest niezdefiniowana. Począwszy od C# 7,3, można użyć składni inicjatora tablicy do zdefiniowania zawartości nowo przydzieloną pamięć. Poniższy przykład ilustruje różne sposoby, aby to zrobić:
 
-[!code-csharp[stackalloc initialization](~/samples/csharp/language-reference/operators/StackallocOperator.cs#StackallocInit)]
+[!code-csharp[stackalloc initialization](~/samples/snippets/csharp/language-reference/operators/StackallocOperator.cs#StackallocInit)]
 
 W `stackalloc T[E]`Expression `T` musi być [typem niezarządzanym](../builtin-types/unmanaged-types.md) , a `E` musi być wyrażeniem typu [int](../builtin-types/integral-numeric-types.md).
 
-## <a name="security"></a>Zabezpieczenia
+## <a name="security"></a>Bezpieczeństwo
 
 Użycie `stackalloc` powoduje automatyczne włączenie funkcji wykrywania przepełnienia buforu w środowisku uruchomieniowym języka wspólnego (CLR). Jeśli wykryto przepełnienie buforu, proces zostaje zakończony jak najszybciej, aby zminimalizować prawdopodobieństwo wykonania złośliwego kodu.
 
@@ -57,7 +57,7 @@ Użycie `stackalloc` powoduje automatyczne włączenie funkcji wykrywania przepe
 
 Aby uzyskać więcej informacji, zapoznaj się z sekcją [Alokacja stosu](~/_csharplang/spec/unsafe-code.md#stack-allocation) w temacie [ C# Specyfikacja języka](~/_csharplang/spec/introduction.md) i opcja [Zezwalaj `stackalloc` w przypadku zagnieżdżonych kontekstów](~/_csharplang/proposals/csharp-8.0/nested-stackalloc.md) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [C#odwoła](../index.md)
 - [Operatory języka C#](index.md)

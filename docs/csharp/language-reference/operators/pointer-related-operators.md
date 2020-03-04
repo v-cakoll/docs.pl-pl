@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 9851fcd056eeee33b8f3d7e9d541f9fa43b36d29
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 51e6aeda7699d9e2fe3c46ced93e1783a52e6743
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036154"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78238965"
 ---
 # <a name="pointer-related-operators-c-reference"></a>Operatory powiązane z wskaźnikiem (C# odwołanie)
 
@@ -46,11 +46,11 @@ Aby uzyskać informacje na temat typów wskaźnikowych, zobacz [typy wskaźnika]
 
 Jednoargumentowy operator `&` zwraca adres tego operandu:
 
-[!code-csharp[address of local](~/samples/csharp/language-reference/operators/PointerOperators.cs#AddressOf)]
+[!code-csharp[address of local](~/samples/snippets/csharp/language-reference/operators/PointerOperators.cs#AddressOf)]
 
 Argument operacji operatora `&` musi być zmienną stałą. Zmienne *stałe* są zmiennymi, które znajdują się w lokalizacjach magazynu, które nie mają wpływ na działanie [modułu wyrzucania elementów bezużytecznych](../../../standard/garbage-collection/index.md). W poprzednim przykładzie zmienna lokalna `number` to stała zmienna, ponieważ znajduje się ona na stosie. Zmienne, które znajdują się w lokalizacjach magazynu, na które może mieć wpływ Moduł wyrzucania elementów bezużytecznych (na przykład rezlokalizowane), *są nazywane* zmiennymi zmiennych. Pola obiektów i elementy tablicy to przykłady ruchomych zmiennych. Adres ruchomej zmiennej można pobrać, jeśli "Napraw" lub "PIN", za pomocą [instrukcji`fixed`](../keywords/fixed-statement.md). Uzyskany adres jest prawidłowy tylko wewnątrz bloku instrukcji `fixed`. Poniższy przykład pokazuje, jak używać instrukcji `fixed` i operatora `&`:
 
-[!code-csharp[address of fixed](~/samples/csharp/language-reference/operators/PointerOperators.cs#AddressOfFixed)]
+[!code-csharp[address of fixed](~/samples/snippets/csharp/language-reference/operators/PointerOperators.cs#AddressOfFixed)]
 
 Nie można uzyskać adresu stałej ani wartości.
 
@@ -62,7 +62,7 @@ Operator `&` binarny oblicza wartość [logiczną i](boolean-logical-operators.m
 
 Operator jednoargumentowy pośredni wskaźnika, `*` uzyskuje zmienną, do której wskazuje operand. Jest on również znany jako operator dereferencji. Argument operacji operatora `*` musi być typu wskaźnika.
 
-[!code-csharp[pointer indirection](~/samples/csharp/language-reference/operators/PointerOperators.cs#PointerIndirection)]
+[!code-csharp[pointer indirection](~/samples/snippets/csharp/language-reference/operators/PointerOperators.cs#PointerIndirection)]
 
 Nie można zastosować operatora `*` do wyrażenia typu `void*`.
 
@@ -76,7 +76,7 @@ Operator `->` łączy [pośredni wskaźnik](#pointer-indirection-operator-) i [d
 x->y
 ```
 
-jest równoważny
+odpowiada wyrażeniu
 
 ```csharp
 (*x).y
@@ -84,7 +84,7 @@ jest równoważny
 
 Poniższy przykład ilustruje użycie operatora `->`:
 
-[!code-csharp[pointer member access](~/samples/csharp/language-reference/operators/PointerOperators.cs#MemberAccess)]
+[!code-csharp[pointer member access](~/samples/snippets/csharp/language-reference/operators/PointerOperators.cs#MemberAccess)]
 
 Nie można zastosować operatora `->` do wyrażenia typu `void*`.
 
@@ -94,7 +94,7 @@ Dla wyrażenia `p` typu wskaźnika, dostęp elementu wskaźnika do formularza `p
 
 W poniższym przykładzie pokazano, jak uzyskać dostęp do elementów tablicy za pomocą wskaźnika i operatora `[]`:
 
-[!code-csharp[pointer element access](~/samples/csharp/language-reference/operators/PointerOperators.cs#ElementAccess)]
+[!code-csharp[pointer element access](~/samples/snippets/csharp/language-reference/operators/PointerOperators.cs#ElementAccess)]
 
 W przykładzie używa [operatora`stackalloc`](stackalloc.md) , aby przydzielić blok pamięci na stosie.
 
@@ -128,7 +128,7 @@ Dla wskaźnika `p` typu `T*` i `n` wyrażenia typu niejawnie przekonwertowany na
 
 Poniższy przykład ilustruje użycie operatora `+` ze wskaźnikiem:
 
-[!code-csharp[pointer addition](~/samples/csharp/language-reference/operators/PointerOperators.cs#AddNumber)]
+[!code-csharp[pointer addition](~/samples/snippets/csharp/language-reference/operators/PointerOperators.cs#AddNumber)]
 
 ### <a name="pointer-subtraction"></a>Odejmowanie wskaźnika
 
@@ -136,7 +136,7 @@ W przypadku dwóch wskaźników `p1` i `p2` typu `T*`wyrażenie `p1 - p2` powodu
 
 Poniższy przykład ilustruje odejmowanie wskaźnika:
 
-[!code-csharp[pointer subtraction](~/samples/csharp/language-reference/operators/PointerOperators.cs#SubtractPointers)]
+[!code-csharp[pointer subtraction](~/samples/snippets/csharp/language-reference/operators/PointerOperators.cs#SubtractPointers)]
 
 ### <a name="pointer-increment-and-decrement"></a>Zwiększenie i zmniejszenie wskaźnika
 
@@ -146,7 +146,7 @@ Oba operatory są obsługiwane w dwóch formach: przyrostki (`p++` i `p--`) oraz
 
 W poniższym przykładzie przedstawiono zachowanie operatorów przyrostu przyrostkowego i powiększania:
 
-[!code-csharp[pointer increment](~/samples/csharp/language-reference/operators/PointerOperators.cs#Increment)]
+[!code-csharp[pointer increment](~/samples/snippets/csharp/language-reference/operators/PointerOperators.cs#Increment)]
 
 ## <a name="pointer-comparison-operators"></a>Operatory porównania wskaźnika
 
@@ -185,7 +185,7 @@ Aby uzyskać więcej informacji, zobacz następujące sekcje [ C# specyfikacji j
 - [Zwiększenie i zmniejszenie wskaźnika](~/_csharplang/spec/unsafe-code.md#pointer-increment-and-decrement)
 - [Porównanie wskaźników](~/_csharplang/spec/unsafe-code.md#pointer-comparison)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [C#odwoła](../index.md)
 - [Operatory języka C#](index.md)

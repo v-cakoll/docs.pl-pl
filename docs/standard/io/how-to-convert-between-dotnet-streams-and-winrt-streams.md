@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
-ms.openlocfilehash: 3b44b981a65dee5d216f882198a74b5fb61adfad
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7413c3fae7d7189ec8dca43b0c77f6b56158f416
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75708045"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159471"
 ---
 # <a name="how-to-convert-between-net-framework-and-windows-runtime-streams-windows-only"></a>Instrukcje: konwertowanie między strumieniami .NET Framework i środowisko wykonawcze systemu Windows (tylko system Windows)
 
@@ -28,7 +28,7 @@ Aby przekonwertować strumień środowisko wykonawcze systemu Windows do strumie
   
 - <xref:System.IO.WindowsRuntimeStreamExtensions.AsStreamForRead%2A?displayProperty=nameWithType> Konwertuje strumień wejściowy w środowisko wykonawcze systemu Windows na strumień zarządzany w programie .NET dla aplikacji platformy UWP.
 
-Środowisko wykonawcze systemu Windows oferuje typy strumieni obsługujące tylko odczyt, tylko do zapisu i odczytywanie i zapisywanie. Te funkcje są utrzymywane podczas konwertowania strumienia środowisko wykonawcze systemu Windows do strumienia .NET Framework. Co więcej, po przekonwertowaniu strumienia środowiska wykonawczego systemu Windows na strumień programu .NET Framework i z powrotem jest przywracane oryginalne wystąpienie strumienia środowiska wykonawczego systemu Windows. 
+Środowisko wykonawcze systemu Windows oferuje typy strumieni obsługujące tylko odczyt, tylko do zapisu i odczytywanie i zapisywanie. Te funkcje są utrzymywane podczas konwertowania strumienia środowisko wykonawcze systemu Windows do strumienia .NET Framework. Co więcej, po przekonwertowaniu strumienia środowiska wykonawczego systemu Windows na strumień programu .NET Framework i z powrotem jest przywracane oryginalne wystąpienie strumienia środowiska wykonawczego systemu Windows.
 
 Najlepszym rozwiązaniem jest użycie metody konwersji, która jest zgodna z możliwościami strumienia środowisko wykonawcze systemu Windows, które chcesz skonwertować. Jednak ponieważ <xref:Windows.Storage.Streams.IRandomAccessStream> można odczytać i zapisywalny (implementuje zarówno <xref:Windows.Storage.Streams.IOutputStream> i <xref:Windows.Storage.Streams.IInputStream>), metody konwersji zachowują możliwości oryginalnego strumienia. Na przykład użycie <xref:System.IO.WindowsRuntimeStreamExtensions.AsStreamForRead%2A?displayProperty=nameWithType> do przekonwertowania <xref:Windows.Storage.Streams.IRandomAccessStream> nie ogranicza przekonwertowanego strumienia .NET Framework, aby można było go odczytać. Jest również zapisywalny.
 
@@ -67,7 +67,7 @@ Aby uruchomić ten przykład, należy utworzyć aplikację XAML platformy UWP, k
   [!code-csharp[System.IO.WindowsRuntimeStreamExtensionsEx#Imports](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/cs/mainpage2.xaml.cs)]
   [!code-vb[System.IO.WindowsRuntimeStreamExtensionsEx#Imports](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/vb/mainpage2.xaml.vb)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Szybki Start: odczytywanie i zapisywanie pliku (Windows)](https://docs.microsoft.com/previous-versions/windows/apps/hh464978(v=win.10))  
 - [Omówienie programu .NET dla aplikacji do sklepu Windows](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))  

@@ -4,12 +4,12 @@ description: Użyj operatora domyślnego, aby utworzyć wartość domyślną typ
 ms.date: 08/01/2019
 helpviewer_keywords:
 - default keyword [C#]
-ms.openlocfilehash: 651c4698514aee8cf4dab75ea32c98493e19a30b
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: ba4c02caa53a9d532be4012a4543a25cd41b6023
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964622"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239316"
 ---
 # <a name="default-operator-c-reference"></a>Default — operatorC# (odwołanie)
 
@@ -17,7 +17,7 @@ Operator `default` generuje [wartość domyślną](../builtin-types/default-valu
 
 Poniższy przykład pokazuje użycie operatora `default`:
 
-[!code-csharp-interactive[default of T](~/samples/csharp/language-reference/operators/DefaultOperator.cs#WithOperand)]
+[!code-csharp-interactive[default of T](~/samples/snippets/csharp/language-reference/operators/DefaultOperator.cs#WithOperand)]
 
 Możesz również użyć słowa kluczowego `default` jako domyślnej etykiety case w [instrukcji`switch`](../keywords/switch.md).
 
@@ -32,7 +32,7 @@ Począwszy od C# 7,1, można użyć literału `default`, aby utworzyć wartość
 
 Poniższy przykład pokazuje użycie literału `default`:
 
-[!code-csharp-interactive[default literal](~/samples/csharp/language-reference/operators/DefaultOperator.cs#DefaultLiteral)]
+[!code-csharp-interactive[default literal](~/samples/snippets/csharp/language-reference/operators/DefaultOperator.cs#DefaultLiteral)]
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
@@ -40,7 +40,7 @@ Aby uzyskać więcej informacji, zobacz sekcję [wyrażenia wartości domyślnej
 
 Aby uzyskać więcej informacji na temat literału `default`, zobacz [Uwaga dotycząca oferty funkcji](~/_csharplang/proposals/csharp-7.1/target-typed-default.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [C#odwoła](../index.md)
 - [Operatory języka C#](index.md)

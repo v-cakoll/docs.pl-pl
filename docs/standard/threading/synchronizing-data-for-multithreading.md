@@ -7,12 +7,12 @@ helpviewer_keywords:
 - threading [.NET], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-ms.openlocfilehash: ecc1e234b03cb45075c40ff6698f71f8ce18d0de
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a70bd3070d8b1dcd06e55d330a01d29071293f6c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128979"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159393"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Synchronizowanie danych na potrzeby wielowątkowości
 
@@ -33,7 +33,7 @@ Platforma .NET udostępnia kilka strategii do synchronizowania dostępu do wyst�
 |Kategoria|Pola globalne|Pola statyczne|Metody statyczne|Pola wystąpienia|Metody wystąpień|Określone bloki kodu|  
 |--------------|-------------------|-------------------|--------------------|---------------------|----------------------|--------------------------|  
 |Brak synchronizacji|Nie|Nie|Nie|Nie|Nie|Nie|  
-|Zsynchronizowany kontekst|Nie|Nie|Nie|Tak|Tak|Nie|  
+|Zsynchronizowany kontekst|Nie|Nie|Nie|Yes|Yes|Nie|  
 |Zsynchronizowane regiony kodu|Nie|Nie|Tylko wtedy, gdy oznaczono|Nie|Tylko wtedy, gdy oznaczono|Tylko wtedy, gdy oznaczono|  
 |Synchronizacja ręczna|Ręcznie|Ręcznie|Ręcznie|Ręcznie|Ręcznie|Ręcznie|  
   
@@ -64,10 +64,10 @@ Platforma .NET udostępnia kilka strategii do synchronizowania dostępu do wyst�
  W obu przypadkach, jeśli wyjątek jest zgłaszany w bloku kodu, blokada uzyskana przez **blokadę** lub **SyncLock** jest automatycznie wydawana. Kompilatory C# i Visual Basic emitują blok **try**/**finally** z **monitorem. Wprowadź** na początku try, a **monitor. Exit** w bloku **finally** . Jeśli w bloku **blokady** lub **SyncLock** zostanie zgłoszony wyjątek, program obsługi **finally** zostanie uruchomiony w celu umożliwienia wykonania wszelkich operacji oczyszczania.  
   
 ## <a name="synchronized-context"></a>Zsynchronizowany kontekst  
- 
+
 Tylko w przypadku aplikacji .NET Framework i Xamarin, można użyć <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> na dowolnym <xref:System.ContextBoundObject> do synchronizowania wszystkich metod i pól wystąpień. Wszystkie obiekty w tej samej domenie kontekstu mają tę samą blokadę. Wiele wątków może uzyskać dostęp do metod i pól, ale tylko jeden wątek jest dozwolony w dowolnym momencie.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>
 - [Wątki i wątkowość](../../../docs/standard/threading/threads-and-threading.md)

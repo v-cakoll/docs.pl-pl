@@ -14,12 +14,12 @@ helpviewer_keywords:
 - quantifiers
 - lazy quantifiers
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
-ms.openlocfilehash: a7a870ac32385bf5015f1a95c0246fed6a5c9c05
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f1627248cbed0f03c6fb76ce660f9b2bf7764781
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73084233"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160017"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>Kwantyfikatory w wyrażeniach regularnych
 Kwantyfikatory określają, ile wystąpień znaku, grupy lub klasy znaków musi być obecne w danych wejściowych, aby można było znaleźć dopasowanie.  W poniższej tabeli wymieniono Kwantyfikatory obsługiwane przez platformę .NET.  
@@ -54,7 +54,7 @@ Kwantyfikatory określają, ile wystąpień znaku, grupy lub klasy znaków musi 
   
  Wzorzec wyrażenia regularnego jest zdefiniowany, jak pokazano w poniższej tabeli.  
   
-|Wzorzec|Opis|  
+|Wzorce|Opis|  
 |-------------|-----------------|  
 |`\b`|Rozpoczyna na granicy wyrazu.|  
 |`91*`|Dopasowuje "9", po którym następuje zero lub więcej znaków "1".|  
@@ -71,7 +71,7 @@ Kwantyfikatory określają, ile wystąpień znaku, grupy lub klasy znaków musi 
   
  Wzorzec wyrażenia regularnego jest zdefiniowany, jak pokazano w poniższej tabeli.  
   
-|Wzorzec|Opis|  
+|Wzorce|Opis|  
 |-------------|-----------------|  
 |`\b`|Rozpoczyna na granicy wyrazu.|  
 |`an+`|Dopasowuje "a", po którym następuje co najmniej jeden znak "n".|  
@@ -88,7 +88,7 @@ Kwantyfikatory określają, ile wystąpień znaku, grupy lub klasy znaków musi 
   
  Wzorzec wyrażenia regularnego jest zdefiniowany, jak pokazano w poniższej tabeli.  
   
-|Wzorzec|Opis|  
+|Wzorce|Opis|  
 |-------------|-----------------|  
 |`\b`|Rozpoczyna na granicy wyrazu.|  
 |`an?`|Dopasowuje "a", po którym następuje zero lub jeden znak "n".|  
@@ -104,7 +104,7 @@ Kwantyfikatory określają, ile wystąpień znaku, grupy lub klasy znaków musi 
   
  Wzorzec wyrażenia regularnego jest zdefiniowany, jak pokazano w poniższej tabeli.  
   
-|Wzorzec|Opis|  
+|Wzorce|Opis|  
 |-------------|-----------------|  
 |`\b`|Rozpoczyna na granicy wyrazu.|  
 |`\d+`|Dopasowanie do co najmniej jednej cyfry dziesiętnej.|  
@@ -122,7 +122,7 @@ Kwantyfikatory określają, ile wystąpień znaku, grupy lub klasy znaków musi 
   
  Wzorzec wyrażenia regularnego jest zdefiniowany, jak pokazano w poniższej tabeli.  
   
-|Wzorzec|Opis|  
+|Wzorce|Opis|  
 |-------------|-----------------|  
 |`\b`|Rozpoczyna na granicy wyrazu.|  
 |`\d{2,}`|Dopasowuje co najmniej dwie cyfry dziesiętne.|  
@@ -147,7 +147,7 @@ Kwantyfikatory określają, ile wystąpień znaku, grupy lub klasy znaków musi 
   
  Wzorzec wyrażenia regularnego jest zdefiniowany, jak pokazano w poniższej tabeli.  
   
-|Wzorzec|Opis|  
+|Wzorce|Opis|  
 |-------------|-----------------|  
 |`\b`|Rozpoczyna na granicy wyrazu.|  
 |`\w*?`|Dopasowuje zero lub więcej znaków słowa, ale jak najmniejsza liczba znaków.|  
@@ -173,7 +173,7 @@ Kwantyfikatory określają, ile wystąpień znaku, grupy lub klasy znaków musi 
   
  Wzorzec wyrażenia regularnego jest zdefiniowany, jak pokazano w poniższej tabeli.  
   
-|Wzorzec|Opis|  
+|Wzorce|Opis|  
 |-------------|-----------------|  
 |`^`|Dopasowuje początek strumienia wejściowego.|  
 |`\s*`|Dopasowanie do zera lub większej liczby znaków odstępu.|  
@@ -192,7 +192,7 @@ Kwantyfikatory określają, ile wystąpień znaku, grupy lub klasy znaków musi 
   
  Wzorzec wyrażenia regularnego jest zdefiniowany, jak pokazano w poniższej tabeli.  
   
-|Wzorzec|Opis|  
+|Wzorce|Opis|  
 |-------------|-----------------|  
 |`\b`|Rozpoczyna na granicy wyrazu.|  
 |`(\w{3,}?\.)`|Dopasowuje co najmniej 3 znaki słowa, ale jak najmniejsza liczba znaków, po których następuje znak kropki lub kropki. Jest to pierwsza grupa przechwytywania.|  
@@ -214,7 +214,7 @@ Kwantyfikatory określają, ile wystąpień znaku, grupy lub klasy znaków musi 
   
  Wzorzec wyrażenia regularnego jest zdefiniowany, jak pokazano w poniższej tabeli.  
   
-|Wzorzec|Opis|  
+|Wzorce|Opis|  
 |-------------|-----------------|  
 |`\b`|Rozpoczyna na granicy wyrazu.|  
 |`[A-Z]`|Dopasowuje wielką literę od A do Z.|  
@@ -222,7 +222,7 @@ Kwantyfikatory określają, ile wystąpień znaku, grupy lub klasy znaków musi 
 |`{1,10}`|Dopasowuje poprzedni wzorzec od 1 do 10 razy.|  
 |`[.!?]`|Dopasowuje dowolny z tych znaków interpunkcyjnych ".", "!" lub "?".|  
   
-<a name="Greedy"></a>   
+<a name="Greedy"></a>
 ## <a name="greedy-and-lazy-quantifiers"></a>Zachłanne i Kwantyfikatory z opóźnieniem  
  Liczba kwantyfikatorów ma dwie wersje:  
   
@@ -258,10 +258,10 @@ Kwantyfikatory określają, ile wystąpień znaku, grupy lub klasy znaków musi 
   
  Aby wyświetlić praktyczne różnice między grupą przechwytywania, która definiuje minimalną i maksymalną liczbę przechwytywania, i jeden, który definiuje stałą liczbę przechwytywania, należy wziąć pod uwagę wzorce wyrażeń regularnych `(a\1|(?(1)\1)){0,2}` i `(a\1|(?(1)\1)){2}`. Oba wyrażenia regularne składają się z pojedynczej grupy przechwytywania, która jest zdefiniowana w poniższej tabeli.  
   
-|Wzorzec|Opis|  
+|Wzorce|Opis|  
 |-------------|-----------------|  
 |`(a\1`|Dopasowuje wartość "a" wraz z wartością pierwszej przechwyconej grupy...|  
-|<code>&#124;(?(1)</code>|... lub Przetestuj, czy pierwsza przechwycona Grupa została zdefiniowana. (Należy zauważyć, że konstrukcja `(?(1)` nie definiuje grupy przechwytywania).|  
+|<code>&#124;(?(1)</code>|… lub Przetestuj, czy pierwsza przechwycona Grupa została zdefiniowana. (Należy zauważyć, że konstrukcja `(?(1)` nie definiuje grupy przechwytywania).|  
 |`\1))`|W przypadku istnienia pierwszej przechwyconej grupy Dopasuj jej wartość. Jeśli grupa nie istnieje, grupa będzie pasować do <xref:System.String.Empty?displayProperty=nameWithType>.|  
   
  Pierwsze wyrażenie regularne próbuje dopasować ten wzorzec od zera do dwóch razy; sekunda, dokładnie dwa razy. Ze względu na to, że pierwszy wzorzec osiągnie swoją minimalną liczbę przechwycenia przy użyciu pierwszego przechwycenia <xref:System.String.Empty?displayProperty=nameWithType>, nigdy nie powtarza się, aby spróbować dopasować `a\1`; Kwantyfikator `{0,2}` zezwala tylko na puste dopasowania w ostatniej iteracji. Natomiast drugie wyrażenie regularne dopasowuje się do "a", ponieważ oblicza `a\1` sekundowo; Minimalna liczba iteracji, 2, wymusza powtarzanie aparatu po pustym dopasowaniu.  
@@ -269,7 +269,7 @@ Kwantyfikatory określają, ile wystąpień znaku, grupy lub klasy znaków musi 
  [!code-csharp[RegularExpressions.Quantifiers.EmptyMatch#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.quantifiers.emptymatch/cs/emptymatch4.cs#2)]
  [!code-vb[RegularExpressions.Quantifiers.EmptyMatch#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.quantifiers.emptymatch/vb/emptymatch4.vb#2)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Język wyrażeń regularnych — podręczny wykaz](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
 - [Śledzenie wsteczne](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)

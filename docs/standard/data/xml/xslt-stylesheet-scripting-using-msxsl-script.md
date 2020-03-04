@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
-ms.openlocfilehash: 01e11ed62b0855b9027dfd7999f8b787c075028a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9bf57e0f74a353fb6512a24214e9479c1d813aab
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709676"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160212"
 ---
 # <a name="xslt-stylesheet-scripting-using-msxslscript"></a>Obsługa skryptów arkusza stylów XSLT przy użyciu \<msxsl: skrypt >
 Klasa <xref:System.Xml.Xsl.XslTransform> obsługuje osadzone skrypty przy użyciu elementu `script`.  
@@ -64,11 +64,11 @@ Klasa <xref:System.Xml.Xsl.XslTransform> obsługuje osadzone skrypty przy użyci
   
 |Typ|Równoważna Klasa .NET Framework (typ)|Typ XPath lub typ XSLT|  
 |----------|----------------------------------------------|-----------------------------|  
-|String|System.String|{1&gt;XPath&lt;1}|  
-|Boolean|System.Boolean|{1&gt;XPath&lt;1}|  
-|Wartość liczbowa|System.Double|{1&gt;XPath&lt;1}|  
+|Ciąg|System.String|XPath|  
+|Wartość logiczna|System.Boolean|XPath|  
+|Liczba|System.Double|XPath|  
 |Fragment drzewa wyników|System.Xml.XPath.XPathNavigator|XSLT|  
-|Zestaw węzłów|System.Xml.XPath.XPathNodeIterator|{1&gt;XPath&lt;1}|  
+|Zestaw węzłów|System.Xml.XPath.XPathNodeIterator|XPath|  
   
  Jeśli funkcja skryptu używa jednego z następujących typów liczbowych: Int16, UInt16, Int32, UInt32, Int64, UInt64, Single lub decimal, są one wymuszane jako podwójne, które mapuje do typu W3C XPath. Wszystkie inne typy są wymuszane jako ciąg wywołujący metodę `ToString`.  
   
@@ -122,14 +122,14 @@ Public Class Sample
     'Load the XML data file.  
     Dim doc As XPathDocument = New XPathDocument(filename)  
   
-    'Create an XmlTextWriter to output to the console.               
+    'Create an XmlTextWriter to output to the console.
     Dim writer As XmlTextWriter = New XmlTextWriter(Console.Out)  
     writer.Formatting = Formatting.Indented  
   
     'Transform the file.  
     xslt.Transform(doc, Nothing, writer, Nothing)  
     writer.Close()  
-  End Sub   
+  End Sub
 End Class  
 ```  
   
@@ -154,7 +154,7 @@ public class Sample
     //Load the XML data file.  
     XPathDocument doc = new XPathDocument(filename);  
   
-    //Create an XmlTextWriter to output to the console.               
+    //Create an XmlTextWriter to output to the console.
     XmlTextWriter writer = new XmlTextWriter(Console.Out);  
     writer.Formatting = Formatting.Indented;  
   
@@ -198,14 +198,14 @@ public class Sample
       ]]>  
    </msxsl:script>  
   
-  <xsl:template match="data">    
+  <xsl:template match="data">
   <circles>  
   
   <xsl:for-each select="circle">  
     <circle>  
     <xsl:copy-of select="node()"/>  
        <circumference>  
-          <xsl:value-of select="user:circumference(radius)"/>   
+          <xsl:value-of select="user:circumference(radius)"/>
        </circumference>  
     </circle>  
   </xsl:for-each>  
@@ -226,9 +226,9 @@ public class Sample
     <radius>37.5</radius>  
     <circumference>235.5</circumference>  
   </circle>  
-</circles>    
+</circles>
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Implementowanie procesora XSLT przy użyciu klasy XslTransform](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

@@ -4,16 +4,16 @@ description: Dowiedz się, jak utworzyć aplikację platformy .NET Core, która 
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 10/16/2019
-ms.openlocfilehash: 32205a507bc95b2f8a2f75368aab3fde710249ee
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: eae792ddaa6655bfdcd932d3cb695f9dafa68130
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76787854"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240847"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>Tworzenie aplikacji platformy .NET Core za pomocą wtyczek
 
-W tym samouczku pokazano, jak utworzyć niestandardowy <xref:System.Runtime.Loader.AssemblyLoadContext> do ładowania wtyczek. <xref:System.Runtime.Loader.AssemblyDependencyResolver> jest używany do rozpoznawania zależności wtyczki. Samouczek prawidłowo izoluje zależności wtyczki od aplikacji hostingowej. Dowiesz się, jak:
+W tym samouczku pokazano, jak utworzyć niestandardowy <xref:System.Runtime.Loader.AssemblyLoadContext> do ładowania wtyczek. <xref:System.Runtime.Loader.AssemblyDependencyResolver> jest używany do rozpoznawania zależności wtyczki. Samouczek prawidłowo izoluje zależności wtyczki od aplikacji hostingowej. Omawiane tematy:
 
 - Tworzenie struktury projektu do obsługi wtyczek.
 - Utwórz niestandardową <xref:System.Runtime.Loader.AssemblyLoadContext>, aby załadować każdą wtyczkę.
@@ -105,7 +105,7 @@ Następnym krokiem tworzenia aplikacji z wtyczkami jest zdefiniowanie interfejsu
 
 W folderze głównym projektu uruchom `dotnet new classlib -o PluginBase`. Ponadto Uruchom `dotnet sln add PluginBase/PluginBase.csproj`, aby dodać projekt do pliku rozwiązania. Usuń plik `PluginBase/Class1.cs` i Utwórz nowy plik w folderze `PluginBase` o nazwie `ICommand.cs` z następującą definicją interfejsu:
 
-[!code-csharp[the-plugin-interface](~/samples/core/extensions/AppWithPlugin/PluginBase/ICommand.cs)]
+[!code-csharp[the-plugin-interface](~/samples/snippets/core/tutorials/creating-app-with-plugin-support/csharp/PluginBase/ICommand.cs)]
 
 Ten interfejs `ICommand` jest interfejsem, który implementuje wszystkie wtyczki.
 
@@ -187,7 +187,7 @@ static IEnumerable<ICommand> CreateCommands(Assembly assembly)
 
 Teraz aplikacja może prawidłowo załadować i utworzyć wystąpienia poleceń z załadowanych zestawów wtyczek, ale nadal nie można załadować zestawów wtyczek. Utwórz plik o nazwie *PluginLoadContext.cs* w folderze *AppWithPlugin* o następującej zawartości:
 
-[!code-csharp[loading-plugins](~/samples/core/extensions/AppWithPlugin/AppWithPlugin/PluginLoadContext.cs)]
+[!code-csharp[loading-plugins](~/samples/snippets/core/tutorials/creating-app-with-plugin-support/csharp/AppWithPlugin/PluginLoadContext.cs)]
 
 Typ `PluginLoadContext` pochodzi od <xref:System.Runtime.Loader.AssemblyLoadContext>. Typ `AssemblyLoadContext` jest specjalnym typem w środowisku uruchomieniowym, który umożliwia deweloperom izolowanie załadowanych zestawów w różnych grupach, aby upewnić się, że wersje zestawu nie powodują konfliktu. Ponadto niestandardowe `AssemblyLoadContext` mogą wybrać różne ścieżki, z których mają zostać załadowane zestawy, i zastąpić zachowanie domyślne. `PluginLoadContext` używa wystąpienia typu `AssemblyDependencyResolver` wprowadzonego w środowisku .NET Core 3,0 w celu rozpoznania nazw zestawów w ścieżkach. Obiekt `AssemblyDependencyResolver` jest skonstruowany ze ścieżką do biblioteki klas .NET. Rozpoznaje zestawy i biblioteki natywne do ich ścieżek względnych opartych na pliku *. deps. JSON* dla biblioteki klas, której ścieżka została przeniesiona do konstruktora `AssemblyDependencyResolver`. `AssemblyLoadContext` niestandardowe umożliwia dodatkiom własne zależności, a `AssemblyDependencyResolver` ułatwia prawidłowe ładowanie zależności.
 
@@ -218,7 +218,7 @@ Przy użyciu innego wystąpienia `PluginLoadContext` dla każdej wtyczki wtyczki
 W folderze głównym wykonaj następujące czynności:
 
 1. Uruchom następujące polecenie, aby utworzyć nowy projekt biblioteki klas o nazwie `HelloPlugin`:
-    
+
     ```dotnetcli
     dotnet new classlib -o HelloPlugin
     ```
@@ -231,9 +231,9 @@ W folderze głównym wykonaj następujące czynności:
 
 3. Zastąp plik *HelloPlugin/Class1. cs* plikiem o nazwie *HelloCommand.cs* następującym zawartością:
 
-[!code-csharp[the-hello-plugin](~/samples/core/extensions/AppWithPlugin/HelloPlugin/HelloCommand.cs)]
+[!code-csharp[the-hello-plugin](~/samples/snippets/core/tutorials/creating-app-with-plugin-support/csharp/HelloPlugin/HelloCommand.cs)]
 
-Teraz otwórz plik *HelloPlugin. csproj* . Powinien wyglądać podobnie do poniższego:
+Teraz otwórz plik *HelloPlugin. csproj* . Zawartość okna powinna wyglądać mniej więcej tak:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">

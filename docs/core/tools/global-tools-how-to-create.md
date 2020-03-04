@@ -2,12 +2,12 @@
 title: 'Samouczek: Tworzenie narzędzia platformy .NET Core'
 description: Dowiedz się, jak utworzyć narzędzie .NET Core. Narzędzie jest aplikacją konsolową, która jest instalowana przy użyciu interfejs wiersza polecenia platformy .NET Core.
 ms.date: 02/12/2020
-ms.openlocfilehash: 558bf9e37efc8de68a61f1384fababe342ab7d66
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 88cc3be7b149834ace0c5f3ba8ac8c039199908f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543407"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156728"
 ---
 # <a name="tutorial-create-a-net-core-tool-using-the-net-core-cli"></a>Samouczek: Tworzenie narzędzia platformy .NET Core przy użyciu interfejs wiersza polecenia platformy .NET Core
 
@@ -31,24 +31,18 @@ Jest to pierwsza z serii trzech samouczków. Ten samouczek obejmuje tworzenie i 
 
 1. Otwórz wiersz polecenia i Utwórz folder o nazwie *Repository*.
 
-1. Przejdź do folderu *repozytorium* i wprowadź następujące polecenie, zastępując `<name>` unikatową wartością, aby nazwa projektu była unikatowa. 
+1. Przejdź do folderu *repozytorium* i wprowadź następujące polecenie:
 
    ```dotnetcli
-   dotnet new console -n botsay-<name>
+   dotnet new console -n microsoft.botsay
    ```
 
-   Można na przykład uruchomić następujące polecenie:
+   Polecenie tworzy nowy folder o nazwie *Microsoft. botsay* w folderze *repozytorium* .
 
-   ```dotnetcli
-   dotnet new console -n botsay-nancydavolio
-   ```
-
-   Polecenie tworzy nowy folder o nazwie *botsay-\<name >* w folderze *repozytorium* .
-
-1. Przejdź do folderu *botsay\<name >* .
+1. Przejdź do folderu *Microsoft. botsay* .
 
    ```console
-   cd botsay-<name>
+   cd microsoft.botsay
    ```
 
 ## <a name="add-the-code"></a>Dodawanie kodu
@@ -151,9 +145,9 @@ Wszystkie argumenty po przekroczeniu ogranicznika `--` są przesyłane do aplika
 
 ## <a name="package-the-tool"></a>Pakowanie narzędzia
 
-Przed spakowaniem i dystrybucją aplikacji jako narzędzia należy zmodyfikować plik projektu. 
+Przed spakowaniem i dystrybucją aplikacji jako narzędzia należy zmodyfikować plik projektu.
 
-1. Otwórz plik *botsay\<>. csproj* i Dodaj trzy nowe węzły XML na końcu węzła `<PropertyGroup>`:
+1. Otwórz plik *Microsoft. botsay. csproj* i Dodaj trzy nowe węzły XML na końcu węzła `<PropertyGroup>`:
 
    ```xml
    <PackAsTool>true</PackAsTool>
@@ -190,7 +184,7 @@ Przed spakowaniem i dystrybucją aplikacji jako narzędzia należy zmodyfikować
    dotnet pack
    ```
 
-   *Nazwa botsay\<>. 1.0.0. nupkg* zostanie utworzona w folderze identyfikowanym przez `<PackageOutputPath>` wartość z pliku *botsay-\<nazwa >. csproj* , który w tym przykładzie jest folderem *./nupkg* .
+   Plik *Microsoft. botsay. 1.0.0. nupkg* jest tworzony w folderze identyfikowanym przez wartość `<PackageOutputPath>` z pliku *Microsoft. botsay. csproj* , który w tym przykładzie jest folderem *./nupkg* .
   
    Aby publicznie wydać narzędzie, można przekazać je do `https://www.nuget.org`. Po udostępnieniu narzędzia w narzędziu NuGet deweloperzy mogą zainstalować narzędzie za pomocą polecenia [Install narzędzia dotnet](dotnet-tool-install.md) . Na potrzeby tego samouczka zainstalujesz pakiet bezpośrednio z lokalnego folderu *NUPKG* , więc nie ma potrzeby przekazywania pakietu do narzędzia NuGet.
 

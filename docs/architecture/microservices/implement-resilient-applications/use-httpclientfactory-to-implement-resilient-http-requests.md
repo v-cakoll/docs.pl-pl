@@ -2,12 +2,12 @@
 title: Używanie elementu HttpClientFactory do implementowania odpornych na błędy żądań HTTP
 description: Dowiedz się, jak korzystać z HttpClientFactory, dostępnego od platformy .NET Core 2,1, do tworzenia wystąpień `HttpClient`, ułatwiając korzystanie z nich w aplikacjach.
 ms.date: 08/08/2019
-ms.openlocfilehash: 1a6d65509d669166e73ad907b506bae7fa26536d
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 7028a23a8945802d7ec0129b70b2840d03acfba1
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900324"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78241055"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Używanie elementu HttpClientFactory do implementowania odpornych na błędy żądań HTTP
 
@@ -33,7 +33,7 @@ Aby rozwiązać wspomniane problemy i ułatwić zarządzanie wystąpieniami `Htt
 
 - Podaj centralną lokalizację do nazywania i konfigurowania obiektów `HttpClient` logicznych. Można na przykład skonfigurować klienta (agenta usługi), który jest wstępnie skonfigurowany w celu uzyskania dostępu do konkretnej mikrousługi.
 - Codify koncepcji wychodzącego oprogramowania pośredniczącego przez delegowanie programów obsługi w `HttpClient` i implementowanie oprogramowania pośredniczącego opartego na Pollyach, aby wykorzystać zasady dotyczące odporności Polly.
-- Klasa `HttpClient` ma już pojęcie delegowania programów obsługi, które można połączyć ze sobą dla wychodzących żądań HTTP. Klienci HTTP są rejestrowani w fabryce i można użyć procedury obsługi Polly, aby używać zasad Polly do ponawiania, CircuitBreakers itd.
+- `HttpClient` już ma koncepcję delegowania programów obsługi, które mogą być połączone ze sobą w przypadku wychodzących żądań HTTP. Klienci HTTP są rejestrowani w fabryce i można użyć procedury obsługi Polly, aby używać zasad Polly do ponawiania, CircuitBreakers itd.
 - Zarządzaj okresem istnienia `HttpClientMessageHandlers`, aby uniknąć wspomnianych problemów i problemów, które mogą wystąpić podczas samodzielnego zarządzania `HttpClient` okresów istnienia.
 
 > [!NOTE]
@@ -198,5 +198,5 @@ Do tego momentu pokazany kod właśnie wykonuje zwykłe żądania HTTP, ale "Mag
   <https://github.com/dotnet/extensions/issues/1345>
 
 >[!div class="step-by-step"]
->[Poprzedni](explore-custom-http-call-retries-exponential-backoff.md)
->[Następny](implement-http-call-retries-exponential-backoff-polly.md)
+>[Poprzednie](implement-resilient-entity-framework-core-sql-connections.md)
+>[dalej](implement-http-call-retries-exponential-backoff-polly.md)

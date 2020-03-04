@@ -3,18 +3,18 @@ title: Tworzenie typów domieszki przy użyciu domyślnych metod interfejsu
 description: Przy użyciu domyślnych elementów członkowskich interfejsu można rozciągnąć interfejsy z opcjonalnymi implementacjami domyślnymi dla realizatorów.
 ms.technology: csharp-advanced-concepts
 ms.date: 10/04/2019
-ms.openlocfilehash: f97410124a4ca5bbb10972ab5e7942fa4af68d72
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: aaf8d34e27c9c56d95560656eb7a7b24b152c053
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921446"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240109"
 ---
 # <a name="tutorial-mix-functionality-in-when-creating-classes-using-interfaces-with-default-interface-methods"></a>Samouczek: mieszanie funkcji w przypadku tworzenia klas przy użyciu interfejsów z domyślnymi metodami interfejsu
 
 Począwszy od C# 8,0 na platformie .net Core 3,0, można zdefiniować implementację w przypadku deklarowania elementu członkowskiego interfejsu. Ta funkcja udostępnia nowe możliwości, w których można definiować domyślne implementacje funkcji zadeklarowanych w interfejsach. Klasy mogą być wybierane podczas przesłonięcia funkcji, kiedy używać funkcji domyślnych i gdy nie należy deklarować obsługi funkcji dyskretnych.
 
-W tym samouczku dowiesz się, jak:
+Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
 
 > [!div class="checklist"]
 >
@@ -53,21 +53,21 @@ Utwórzmy kod, aby przedstawić te różnice.
 
 Zacznij od utworzenia interfejsu, który definiuje zachowanie dla wszystkich świateł:
 
-[!code-csharp[Declare base interface](~/samples/csharp/tutorials/mixins-with-interfaces/UnusedExampleCode.cs?name=SnippetILightInterfaceV1)]
+[!code-csharp[Declare base interface](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/UnusedExampleCode.cs?name=SnippetILightInterfaceV1)]
 
 W przypadku podstawowego narzutu, armatura uproszczona może zaimplementować ten interfejs, jak pokazano w poniższym kodzie:
 
-[!code-csharp[First overhead light](~/samples/csharp/tutorials/mixins-with-interfaces/UnusedExampleCode.cs?name=SnippetOverheadLightV1)]
+[!code-csharp[First overhead light](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/UnusedExampleCode.cs?name=SnippetOverheadLightV1)]
 
 W tym samouczku kod nie obejmuje urządzeń IoT, ale emuluje te działania przez zapisanie komunikatów do konsoli. Możesz eksplorować kod bez automatyzowania domu.
 
 Następnie zdefiniujemy interfejs dla światła, który może być automatycznie wyłączany po upływie limitu czasu:
 
-[!code-csharp[pure Timer interface](~/samples/csharp/tutorials/mixins-with-interfaces/UnusedExampleCode.cs?name=SnippetPureTimerInterface)]
+[!code-csharp[pure Timer interface](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/UnusedExampleCode.cs?name=SnippetPureTimerInterface)]
 
 Można dodać podstawową implementację do światła narzutowego, ale lepszym rozwiązaniem jest zmodyfikowanie tej definicji interfejsu w celu udostępnienia `virtual` domyślnej implementacji:
 
-[!code-csharp[Timer interface](~/samples/csharp/tutorials/mixins-with-interfaces/ITimerLight.cs?name=SnippetTimerLightFinal)]
+[!code-csharp[Timer interface](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/ITimerLight.cs?name=SnippetTimerLightFinal)]
 
 Dodając tę zmianę, Klasa `OverheadLight` może zaimplementować funkcję Timer, deklarując obsługę interfejsu:
 
@@ -77,7 +77,7 @@ public class OverheadLight : ITimerLight { }
 
 Inny typ oświetlenia może obsługiwać bardziej zaawansowany protokół. Może ona zapewnić własną implementację `TurnOnFor`, jak pokazano w poniższym kodzie:
 
-[!code-csharp[Override the timer function](~/samples/csharp/tutorials/mixins-with-interfaces/HalogenLight.cs?name=SnippetHalogenLight)]
+[!code-csharp[Override the timer function](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/HalogenLight.cs?name=SnippetHalogenLight)]
 
 W przeciwieństwie do zastępowania metod klasy wirtualnej, deklaracja `TurnOnFor` w klasie `HalogenLight` nie używa słowa kluczowego `override`.
 
@@ -85,19 +85,19 @@ W przeciwieństwie do zastępowania metod klasy wirtualnej, deklaracja `TurnOnFo
 
 Zalety domyślnych metod interfejsu stają się wyraźniejsze, ponieważ wprowadzasz bardziej zaawansowane możliwości. Używanie interfejsów umożliwia mieszanie i dopasowywanie funkcji. Umożliwia również każdemu autorowi klasy wybór między implementacją domyślną a implementacją niestandardową. Dodajmy interfejs z domyślną implementacją dla migających świateł:
 
-[!code-csharp[Define the blinking light interface](~/samples/csharp/tutorials/mixins-with-interfaces/IBlinkingLight.cs?name=SnippetBlinkingLight)]
+[!code-csharp[Define the blinking light interface](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/IBlinkingLight.cs?name=SnippetBlinkingLight)]
 
 Domyślna implementacja umożliwia migotanie. Światełko narzutu można dodać czasomierz i migające możliwości przy użyciu domyślnej implementacji:
 
-[!code-csharp[Use the default blink function](~/samples/csharp/tutorials/mixins-with-interfaces/OverheadLight.cs?name=SnippetOverheadLight)]
+[!code-csharp[Use the default blink function](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/OverheadLight.cs?name=SnippetOverheadLight)]
 
 Nowy typ światła, `LEDLight` obsługuje zarówno funkcję Timer, jak i funkcję Blink. Ten styl jasny implementuje interfejsy `ITimerLight` i `IBlinkingLight` i zastępuje metodę `Blink`:
 
-[!code-csharp[Override the blink function](~/samples/csharp/tutorials/mixins-with-interfaces/LEDLight.cs?name=SnippetLEDLight)]
+[!code-csharp[Override the blink function](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/LEDLight.cs?name=SnippetLEDLight)]
 
 `ExtraFancyLight` może obsługiwać jednocześnie funkcje migotania i czasomierza:
 
-[!code-csharp[Override the blink and timer function](~/samples/csharp/tutorials/mixins-with-interfaces/ExtraFancyLight.cs?name=SnippetExtraFancyLight)]
+[!code-csharp[Override the blink and timer function](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/ExtraFancyLight.cs?name=SnippetExtraFancyLight)]
 
 Utworzone wcześniej `HalogenLight` nie obsługują migania. Dlatego nie należy dodawać `IBlinkingLight` do listy obsługiwanych interfejsów.
 
@@ -105,21 +105,21 @@ Utworzone wcześniej `HalogenLight` nie obsługują migania. Dlatego nie należy
 
 Następnie Napiszmy kod testowy. Możesz użyć C#funkcji [dopasowania do wzorca](../pattern-matching.md) , aby określić możliwości światła, sprawdzając, które interfejsy obsługuje.  Poniższa metoda korzysta z obsługiwanych funkcji poszczególnych świateł:
 
-[!code-csharp[Test a light's capabilities](~/samples/csharp/tutorials/mixins-with-interfaces/Program.cs?name=SnippetTestLightFunctions)]
+[!code-csharp[Test a light's capabilities](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/Program.cs?name=SnippetTestLightFunctions)]
 
 Poniższy kod w metodzie `Main` tworzy każdy typ światła w sekwencji i sprawdza, czy jest to jasne:
 
-[!code-csharp[Test a light's capabilities](~/samples/csharp/tutorials/mixins-with-interfaces/Program.cs?name=SnippetMainMethod)]
+[!code-csharp[Test a light's capabilities](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/Program.cs?name=SnippetMainMethod)]
 
 ## <a name="how-the-compiler-determines-best-implementation"></a>Jak kompilator określa najlepszą implementację
 
 W tym scenariuszu przedstawiono interfejs podstawowy bez żadnych implementacji. Dodanie metody do interfejsu `ILight` wprowadza nowe złożoności. Reguły języka rządzące domyślnymi metodami interfejsu minimalizują wpływ konkretnych klas, które implementują wiele interfejsów pochodnych. Zwiększmy oryginalny interfejs za pomocą nowej metody, aby zobaczyć, jak zmienia się jej użycie. Każdy sygnalizator wskaźnika może zgłosić swój stan mocy jako wartość wyliczaną:
 
-[!code-csharp[Enumeration for power status](~/samples/csharp/tutorials/mixins-with-interfaces/ILight.cs?name=SnippetPowerStatus)]
+[!code-csharp[Enumeration for power status](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/ILight.cs?name=SnippetPowerStatus)]
 
 Domyślna implementacja zakłada zasilanie AC:
 
-[!code-csharp[Report a default power status](~/samples/csharp/tutorials/mixins-with-interfaces/ILight.cs?name=SnippetILightInterface)]
+[!code-csharp[Report a default power status](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/ILight.cs?name=SnippetILightInterface)]
 
 Te zmiany kompilują się w sposób przejrzysty, mimo że `ExtraFancyLight` deklaruje obsługę interfejsu `ILight` i zarówno interfejsów pochodnych, `ITimerLight` i `IBlinkingLight`. W interfejsie `ILight` istnieje tylko jedna "najbliżej" implementacja. Każda klasa, która zadeklarowała przesłonięcie, stanie się jedną "najbliższą" implementacją. Przykłady z poprzednich klas, które overrodeą elementy członkowskie innych interfejsów pochodnych.
 

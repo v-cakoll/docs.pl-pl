@@ -5,20 +5,20 @@ helpviewer_keywords:
 - XML serialization, configuration
 - <add> element for <schemaImporterExtensions> element
 ms.assetid: c828a558-094b-441e-9065-790b87315fa0
-ms.openlocfilehash: 89196b094d5631c9e243a51a718e53f9c06db20d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f47623aa305ae6e98625acc3d199a76e27d2ea5
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794982"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159939"
 ---
-# <a name="add-element-for-schemaimporterextensions"></a>\<add> Element for \<schemaImporterExtensions>
-Dodaje typy używane przez <xref:System.Xml.Serialization.XmlSchemaImporter> do mapowania typów XSD typów programu .NET Framework. Aby uzyskać więcej informacji na temat plików konfiguracyjnych, zobacz [schemat pliku konfiguracji](../../../docs/framework/configure-apps/file-schema/index.md).  
+# <a name="add-element-for-schemaimporterextensions"></a>\<dodać > elementu \<schemaImporterExtensions >
+Dodaje typy używane przez <xref:System.Xml.Serialization.XmlSchemaImporter> do mapowania typów XSD typów programu .NET Framework. Aby uzyskać więcej informacji na temat plików konfiguracji, zobacz [Schemat pliku konfiguracji](../../../docs/framework/configure-apps/file-schema/index.md).  
   
- \<Konfiguracja >  
-\<system.xml.serialization>  
-\<schemaImporterExtensions>  
-\<add>  
+ > konfiguracji \<  
+> \<system. XML. Serialization  
+\<schemaImporterExtensions >  
+\<Dodaj >  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -33,8 +33,8 @@ Dodaje typy używane przez <xref:System.Xml.Serialization.XmlSchemaImporter> do 
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|**Nazwa**|Prosta nazwa jest używana do znajdowania wystąpienia.|  
-|**type**|Wymagana. Określa klasę rozszerzenia schematu do dodania. **Typu** wartość atrybutu musi być w jednym wierszu i zawierać w pełni kwalifikowana nazwa typu. Gdy zestawu znajduje się w globalnej pamięci podręcznej zestawów (GAC), to również obejmować wersji, kulturę i token klucza publicznego zestawu podpisem.|  
+|**Nazwij**|Prosta nazwa używana do znajdowania wystąpienia.|  
+|**type**|Wymagany. Określa klasę rozszerzenia schematu do dodania. Wartość atrybutu **typu** musi znajdować się w jednym wierszu i zawierać w pełni kwalifikowaną nazwę typu. Gdy zestaw znajduje się w globalnej pamięci podręcznej zestawów (GAC), musi również zawierać wersję, kulturę i token klucza publicznego podpisanego zestawu.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -43,25 +43,25 @@ Dodaje typy używane przez <xref:System.Xml.Serialization.XmlSchemaImporter> do 
   
 |Element|Opis|  
 |-------------|-----------------|  
-|\<schemaImporterExtensions>|Zawiera typy, które są używane przez <xref:System.Xml.Serialization.XmlSchemaImporter>.|  
+|\<schemaImporterExtensions >|Zawiera typy, które są używane przez <xref:System.Xml.Serialization.XmlSchemaImporter>.|  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu dodaje typ rozszerzenia, które XmlSchemaImporter można używać podczas mapowania typów.  
+ Poniższy przykład kodu dodaje typ rozszerzenia, którego XmlSchemaImporter może używać podczas mapowania typów.  
   
 ```xml  
 <configuration>  
   <system.xml.serialization>  
     <schemaImporterExtensions>  
-       <add name="contoso" type="System.Web.Mobile.MobileCapabilities,   
-       System.Web.Mobile, Version=2.0.0.0, Culture=neutral,   
-       PublicKeyToken=b03f5f7f11d50a3a" />   
+       <add name="contoso" type="System.Web.Mobile.MobileCapabilities,
+       System.Web.Mobile, Version=2.0.0.0, Culture=neutral,
+       PublicKeyToken=b03f5f7f11d50a3a" />
     </schemaImporterExtensions>  
   </system.xml.serialization>  
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Xml.Serialization.XmlSchemaImporter>
-- [\<system.xml.serialization> Element](../../../docs/standard/serialization/system-xml-serialization-element.md)
-- [\<schemaImporterExtensions> Element](../../../docs/standard/serialization/schemaimporterextensions-element.md)
+- [\<element > System. XML. Serialization](../../../docs/standard/serialization/system-xml-serialization-element.md)
+- [\<element > schemaImporterExtensions](../../../docs/standard/serialization/schemaimporterextensions-element.md)

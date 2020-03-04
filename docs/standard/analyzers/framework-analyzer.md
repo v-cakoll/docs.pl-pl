@@ -5,12 +5,12 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 01/25/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: 7e64b00eb6fd2c2dbb12c54a2c725590b4d22e15
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: dd69671e709549fe0ad0f582e4d09b43f7321df2
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345951"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156000"
 ---
 # <a name="the-net-framework-analyzer"></a>Analizator .NET Framework
 
@@ -22,7 +22,8 @@ Analizator działa interaktywnie w programie Visual Studio podczas pisania kodu 
 
 Analizatory .NET Framework muszą być zainstalowane jako pakiet NuGet w każdym projekcie, w którym mają być uruchamiane. Tylko jeden Deweloper musi dodać je do projektu. Pakiet analizatora jest zależnością projektu i będzie działać na każdym komputerze dewelopera, gdy ma zaktualizowane rozwiązanie.
 
-Analizator .NET Framework jest dostarczany w pakiecie NuGet [Microsoft. NETFramework. analizators](https://www.nuget.org/packages/Microsoft.NetFramework.Analyzers/) . Ten pakiet zawiera tylko analizatory charakterystyczne dla .NET Framework, które obejmują analizatory zabezpieczeń. W większości przypadków należy użyć pakietu NuGet [Microsoft. CodeAnalysis. FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) . Pakiet zagregowany FxCopAnalyzers zawiera wszystkie analizatory struktury zawarte w pakiecie Framework. analizatory, a także następujące analizatory:
+Analizator .NET Framework jest dostarczany w pakiecie NuGet [Microsoft. NETFramework. analizators](https://www.nuget.org/packages/Microsoft.NetFramework.Analyzers/) . Ten pakiet zawiera tylko analizatory charakterystyczne dla .NET Framework, które obejmują analizatory zabezpieczeń. W większości przypadków należy użyć pakietu NuGet [Microsoft. CodeAnalysis. FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) .
+Pakiet zagregowany FxCopAnalyzers zawiera wszystkie analizatory struktury zawarte w pakiecie Framework. analizatory, a także następujące analizatory:
 
 - [Microsoft. CodeQuality. analizatory](https://www.nuget.org/packages/Microsoft.CodeQuality.Analyzers): zawiera ogólne wskazówki i wskazówki dotyczące .NET Standard interfejsów API
 - [Microsoft. rdzeń. analizatory](https://www.nuget.org/packages/Microsoft.NetCore.Analyzers): udostępnia analizatory charakterystyczne dla interfejsów API platformy .NET Core.
@@ -46,7 +47,7 @@ Analizatory sprawdzają kod w rozwiązaniu i zapewniają listę ostrzeżeń dla 
 
 ### <a name="ca1058-types-should-not-extend-certain-base-types"></a>CA1058: Typy nie powinny rozszerzać pewnych typów bazowych
 
-Istnieje niewielka liczba typów w .NET Framework, które nie powinny być bezpośrednio wyprowadzane. 
+Istnieje niewielka liczba typów w .NET Framework, które nie powinny być bezpośrednio wyprowadzane.
 
 **Kategoria:** Zdefiniowanych
 

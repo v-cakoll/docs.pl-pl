@@ -8,15 +8,15 @@ helpviewer_keywords:
 - -checked compiler option [C#]
 - /checked compiler option [C#]
 ms.assetid: fb7475d3-e6a6-4e6d-b86c-69e7a74c854b
-ms.openlocfilehash: 4e07698e7abdad00983b61412fa2a57e651d4d46
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 44dc0fc8f50e5248ce2fca17c36f7309a6aca8d1
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606988"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239695"
 ---
 # <a name="-checked-c-compiler-options"></a>— zaznaczone (C# opcje kompilatora)
-Opcja **-** Check określa, czy instrukcja arytmetyczna liczb całkowitych, która skutkuje wartością, która jest poza zakresem danych, i która nie jest w zakresie [zaznaczonego](../keywords/checked.md) lub niesprawdzonego słowa [](../keywords/unchecked.md) kluczowego, powoduje wyjątek czasu wykonywania.  
+Opcja **-** Check określa, czy instrukcja arytmetyczna liczb całkowitych, która skutkuje wartością, która jest poza zakresem danych, i która nie jest w zakresie [zaznaczonego](../keywords/checked.md) lub [niesprawdzonego](../keywords/unchecked.md) słowa kluczowego, powoduje wyjątek czasu wykonywania.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -25,11 +25,11 @@ Opcja **-** Check określa, czy instrukcja arytmetyczna liczb całkowitych, któ
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Instrukcja arytmetyczna liczb całkowitych, która znajduje się w `checked` zakresie `unchecked` słowa kluczowego or, nie podlega wpływowi opcji **-Checked** .  
+ Instrukcja arytmetyczna liczb całkowitych, która znajduje się w zakresie słowa kluczowego `checked` lub `unchecked`, nie podlega wpływowi opcji **-Checked** .  
   
- Jeśli instrukcja arytmetyczna liczb całkowitych, która nie znajduje się w `checked` zakresie `unchecked` słowa kluczowego lub, powoduje użycie wartości spoza zakresu typu danych i **-Checked +** (lub **-Checked**) jest używana w kompilacji, ta instrukcja powoduje wyjątek w czasie wykonywania. Jeśli jest używana w kompilacji, ta instrukcja nie powoduje wyjątku w czasie wykonywania.  
+ Jeśli instrukcja arytmetyczna liczb całkowitych, która nie znajduje się w zakresie słowa kluczowego `checked` lub `unchecked`, daje w wyniku wartość spoza zakresu typu danych i **-Checked +** (lub **-Checked**) jest używana w kompilacji, ta instrukcja powoduje wyjątek w czasie wykonywania. Jeśli **jest** używana w kompilacji, ta instrukcja nie powoduje wyjątku w czasie wykonywania.  
   
- Wartość domyślna dla tej opcji to **-Checked-** ; Sprawdzanie przepełnienia jest wyłączone.
+ Wartość domyślna dla tej opcji to **-Checked-**; Sprawdzanie przepełnienia jest wyłączone.
  
  Czasami zautomatyzowane narzędzia, które są używane do kompilowania zestawu dużych aplikacji, są sprawdzane w programie +. Jednym z scenariuszy użycia-checked-jest zastąpienie globalnego domyślnego narzędzia przez określenie-checked-.
  
@@ -39,20 +39,20 @@ Opcja **-** Check określa, czy instrukcja arytmetyczna liczb całkowitych, któ
   
 2. Kliknij stronę właściwości **kompilacja** .  
   
-3. Kliknij przycisk **Zaawansowane** .  
+3. Kliknij przycisk **Zaawansowane**.  
   
-4. Zmodyfikuj **Sprawdzanie dla właściwości przeciążenia/** niedopełnienie.  
+4. Zmodyfikuj właściwość **sprawdzania przepełnienia arytmetycznego** .  
   
- Aby programowo uzyskać dostęp do tej opcji kompilatora <xref:VSLangProj80.CSharpProjectConfigurationProperties3.CheckForOverflowUnderflow%2A>, zobacz.  
+ Aby programowo uzyskać dostęp do tej opcji kompilatora, zobacz <xref:VSLangProj80.CSharpProjectConfigurationProperties3.CheckForOverflowUnderflow%2A>.  
   
 ## <a name="example"></a>Przykład  
- Następujące polecenie kompiluje `t2.cs`. Użycie `-checked` w poleceniu określa, że wszystkie liczby całkowite arytmetyczne w pliku, który nie znajduje się w zakresie `checked` słowa kluczowego `unchecked` or, i powoduje, że wartość jest poza zakresem typu danych, powoduje wyjątek w uruchomieniu pierwszym.  
+ Poniższe polecenie kompiluje `t2.cs`. Użycie `-checked` w poleceniu określa, że jakakolwiek instrukcja arytmetyczna liczb całkowitych w pliku, który nie jest w zakresie `checked` lub `unchecked` słowa kluczowego, i spowoduje, że wartość jest spoza zakresu typu danych, powoduje wyjątek w czasie wykonywania.  
   
 ```console  
 csc t2.cs -checked  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Opcje kompilatora C#](./index.md)
 - [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)

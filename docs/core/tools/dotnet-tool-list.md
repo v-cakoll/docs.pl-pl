@@ -2,12 +2,12 @@
 title: polecenie listy narzędzi dotnet
 description: Polecenie Lista narzędzi dotnet zawiera listę narzędzi .NET Core zainstalowanych na komputerze.
 ms.date: 02/14/2020
-ms.openlocfilehash: bb74cfeaf441cf8a1a030d97d16655f85d8267d1
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: f231dcfe64a925f75f948d508e7a2d83befd9a00
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543459"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156988"
 ---
 # <a name="dotnet-tool-list"></a>dotnet tool list
 
@@ -40,7 +40,7 @@ dotnet tool list <-h|--help>
 
 - **`-g|--global`**
 
-  Wyświetla narzędzia globalne dla całego użytkownika. Nie można łączyć z opcją `--tool-path`. Pominięcie obu `--global` i `--tool-path` powoduje wyświetlenie listy lokalnych narzędzi. 
+  Wyświetla narzędzia globalne dla całego użytkownika. Nie można łączyć z opcją `--tool-path`. Pominięcie obu `--global` i `--tool-path` powoduje wyświetlenie listy lokalnych narzędzi.
 
 - **`-h|--help`**
 
@@ -48,7 +48,7 @@ dotnet tool list <-h|--help>
 
 - **`--tool-path <PATH>`**
 
-  Określa niestandardową lokalizację, w której mają zostać znalezione narzędzia globalne. ŚCIEŻKA może być bezwzględna lub względna. Nie można łączyć z opcją `--global`. Pominięcie obu `--global` i `--tool-path` powoduje wyświetlenie listy lokalnych narzędzi. 
+  Określa niestandardową lokalizację, w której mają zostać znalezione narzędzia globalne. ŚCIEŻKA może być bezwzględna lub względna. Nie można łączyć z opcją `--global`. Pominięcie obu `--global` i `--tool-path` powoduje wyświetlenie listy lokalnych narzędzi.
 
 ## <a name="examples"></a>Przykłady
 

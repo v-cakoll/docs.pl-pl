@@ -1,5 +1,5 @@
 ---
-title: '\- C# odwołanie'
+title: '- C# odwołanie'
 ms.date: 06/21/2019
 f1_keywords:
 - is_CSharpKeyword
@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 1a1f539e80f8d843f40640fa798cf6122f316a9f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: a72f3b87e7558c594ef8a94bd0eadcc4664206b9
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715236"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239654"
 ---
 # <a name="is-c-reference"></a>is (odwołanie w C#)
 
@@ -36,7 +36,7 @@ W przypadku używania wzorca typu do dopasowania do wzorca, `is` sprawdza, czy w
    expr is type varname
 ```
 
-gdzie *Expr* jest wyrażeniem, którego wynikiem jest wystąpienie pewnego typu, *Typ* jest nazwą typu, do którego zostanie przekonwertowany wynik *wyrażenia* , a *nazwa_zmiennej* jest obiektem, do którego jest konwertowany wynik *wyrażenia* , jeśli test `is` jest `true`. 
+Gdzie *Expr* jest wyrażeniem, którego wynikiem jest wystąpienie pewnego typu, *Typ* jest nazwą typu, do którego zostanie przekonwertowany wynik *wyrażenia* , a *nazwa_zmiennej* jest obiektem, do którego jest konwertowany wynik *wyrażenia* , jeśli test `is` jest `true`. 
 
 Wyrażenie `is` jest `true` Jeśli *wyrażenie* nie jest `null`i spełnione są wszystkie następujące warunki:
 
@@ -106,15 +106,21 @@ Poniższy przykład przedstawia porównanie `null` sprawdzenia:
 
 ### <a name="var-pattern"></a>wzorzec wariancji
 
-Wzorzec `var` jest wartością przechwycenia dla dowolnego typu lub wartości. Wartość *wyrażenia* jest zawsze przypisywana do zmiennej lokalnej tego samego typu co typ czasu kompilacji *wyrażenia*. Wynik wyrażenia `is` jest zawsze `true`. Jego składnia to:
+Dopasowanie wzorca ze wzorcem `var` zawsze powiedzie się. Jego składnia to:
 
 ```csharp
    expr is var varname
 ```
 
-Poniższy przykład używa wzorca wariancji do przypisania wyrażenia do zmiennej o nazwie `obj`. Następnie zostanie wyświetlona wartość i typ `obj`.
+Gdzie wartość *wyrażenia* jest zawsze przypisana do zmiennej lokalnej o nazwie *nazwa_zmiennej*. *nazwa_zmiennej* jest zmienną tego samego typu co typ *wyrażenia*w czasie kompilacji. 
+
+Jeśli *wyrażenie* zwróci wartość `null`, wyrażenie `is` generuje `true` i przypisuje `null` do *nazwa_zmiennej*. Wzorzec var jest jednym z kilku zastosowania `is`, które wytwarza `true` dla wartości `null`.
+
+Możesz użyć wzorca `var`, aby utworzyć zmienną tymczasową w ramach wyrażenia logicznego, jak pokazano na poniższym przykładzie:
 
 [!code-csharp[is#8](../../../../samples/snippets/csharp/language-reference/keywords/is/is-var-pattern8.cs#8)]
+
+W poprzednim przykładzie zmienna tymczasowa jest używana do przechowywania wyniku kosztownej operacji. Zmienna może być używana wiele razy.
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
   
@@ -123,7 +129,7 @@ Aby uzyskać więcej informacji, zapoznaj się z sekcją [operatora is](~/_cshar
 - [Dopasowanie do wzorca](~/_csharplang/proposals/csharp-7.0/pattern-matching.md)
 - [Dopasowywanie wzorca do typów ogólnych](~/_csharplang/proposals/csharp-7.1/generics-pattern-match.md)
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [C#odwoła](../index.md)
 - [Słowa kluczowe języka C#](index.md)

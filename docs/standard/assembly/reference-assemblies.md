@@ -4,12 +4,12 @@ description: Dowiedz się więcej na temat zestawów referencyjnych, specjalnego
 author: MSDN-WhiteKnight
 ms.date: 09/12/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 7d2cc01861e8a3fdc260a2990ca0652878c386b0
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 3b85e51a015cca1e53ee2503c7bfa58c504fc718
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089269"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156468"
 ---
 # <a name="reference-assemblies"></a>Odwoływanie się do zestawów
 
@@ -27,7 +27,7 @@ Aby używać niektórych interfejsów API z projektu, należy dodać odwołania 
 
 Zestawy referencyjne dla bibliotek .NET Framework są dystrybuowane z pakietami docelowymi. Można je uzyskać, pobierając Autonomiczny Instalator lub wybierając składnik w Instalatorze programu Visual Studio. Aby uzyskać więcej informacji, zobacz [Install the .NET Framework for Developers](../../framework/install/guide-for-developers.md). W przypadku platformy .NET Core i .NET Standard zestawy odwołań są automatycznie pobierane zgodnie z potrzebami (za pośrednictwem NuGet) i przywoływane. W przypadku platformy .NET Core 3,0 lub nowszej zestawy referencyjne dla podstawowej platformy są w pakiecie [Microsoft. servicecore. app. ref](https://www.nuget.org/packages/Microsoft.NETCore.App.Ref) (w zamian jest używany pakiet [Microsoft. servicecore. app](https://www.nuget.org/packages/Microsoft.NETCore.App) ) dla wersji przed 3,0. Aby uzyskać więcej informacji, zobacz [pakiety, aplikacje i struktury](../../core/packages.md) w przewodniku .NET Core.
 
-Po dodaniu odwołań do zestawów .NET Framework w programie Visual Studio przy użyciu okna dialogowego **Dodawanie odwołania** można wybrać zestaw z listy, a program Visual Studio automatycznie odnajdzie zestawy referencyjne odpowiadające wersji platformy docelowej wybrane w projekcie. To samo dotyczy dodawania odwołań bezpośrednio do projektu MSBuild przy użyciu elementu projektu [referencyjnego](/visualstudio/msbuild/common-msbuild-project-items#reference) : należy określić tylko nazwę zestawu, a nie pełną ścieżkę pliku. Po dodaniu odwołań do tych zestawów w wierszu polecenia przy użyciu opcji kompilatora `-reference` ([w C# ](../../csharp/language-reference/compiler-options/reference-compiler-option.md) i w [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md)) lub przy użyciu metody <xref:Microsoft.CodeAnalysis.Compilation.AddReferences%2A?displayProperty=nameWithType> w interfejsie API Roslyn należy ręcznie określić pliki zestawu odwołań dla prawidłowej wersji platformy docelowej. Pliki zestawu odwołań .NET Framework znajdują się w *zestawach referencyjnych% ProgramFiles (x86)%\\\\Microsoft\\Framework\\. Katalog NETFramework* . W przypadku platformy .NET Core można wymusić operację publikowania, aby skopiować zestawy referencyjne dla platformy docelowej do podkatalogu *Publish/ReFS* w katalogu wyjściowym przez ustawienie właściwości projektu `PreserveCompilationContext` na `true`. Następnie można przekazać te pliki zestawu odwołań do kompilatora. Używanie `DependencyContext` z pakietu [Microsoft. Extensions. DependencyModel](https://www.nuget.org/packages/Microsoft.Extensions.DependencyModel/) może pomóc w znalezieniu ich ścieżek.
+Po dodaniu odwołań do zestawów .NET Framework w programie Visual Studio przy użyciu okna dialogowego **Dodawanie odwołania** można wybrać zestaw z listy, a program Visual Studio automatycznie odnajdzie zestawy referencyjne, które odpowiadają wersji platformy docelowej wybranej w projekcie. To samo dotyczy dodawania odwołań bezpośrednio do projektu MSBuild przy użyciu elementu projektu [referencyjnego](/visualstudio/msbuild/common-msbuild-project-items#reference) : należy określić tylko nazwę zestawu, a nie pełną ścieżkę pliku. Po dodaniu odwołań do tych zestawów w wierszu polecenia przy użyciu opcji kompilatora `-reference` ([w C# ](../../csharp/language-reference/compiler-options/reference-compiler-option.md) i w [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md)) lub przy użyciu metody <xref:Microsoft.CodeAnalysis.Compilation.AddReferences%2A?displayProperty=nameWithType> w interfejsie API Roslyn należy ręcznie określić pliki zestawu odwołań dla prawidłowej wersji platformy docelowej. Pliki zestawu odwołań .NET Framework znajdują się w *zestawach referencyjnych% ProgramFiles (x86)%\\\\Microsoft\\Framework\\. Katalog NETFramework* . W przypadku platformy .NET Core można wymusić operację publikowania, aby skopiować zestawy referencyjne dla platformy docelowej do podkatalogu *Publish/ReFS* w katalogu wyjściowym przez ustawienie właściwości projektu `PreserveCompilationContext` na `true`. Następnie można przekazać te pliki zestawu odwołań do kompilatora. Używanie `DependencyContext` z pakietu [Microsoft. Extensions. DependencyModel](https://www.nuget.org/packages/Microsoft.Extensions.DependencyModel/) może pomóc w znalezieniu ich ścieżek.
 
 Ponieważ nie zawierają one implementacji, nie można załadować zestawów odwołań do wykonania; podjęto próbę wykonania tej czynności w <xref:System.BadImageFormatException?displayProperty=nameWithType>. Jednak nadal mogą być ładowane do kontekstu tylko odbicie (przy użyciu metody <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType>), jeśli trzeba będzie przeanalizować ich zawartość.
 
@@ -39,11 +39,11 @@ Narzędzia środowisk IDE i Build Tools mogą również korzystać z zestawów r
 
 Można generować zestawy referencyjne:
 
-- W projekcie MSBuild, przy użyciu [właściwości projektu `ProduceReferenceAssembly`](/visualstudio/msbuild/common-msbuild-project-properties).
+- W projekcie MSBuild, przy użyciu [właściwości projektu`ProduceReferenceAssembly`](/visualstudio/msbuild/common-msbuild-project-properties).
 - Podczas kompilowania programu z wiersza polecenia, przez specifiying `-refonly`[C#](../../csharp/language-reference/compiler-options/refonly-compiler-option.md) ( / [Visual Basic](../../visual-basic/reference/command-line-compiler/refonly-compiler-option.md) ) lub `-refout`[C#](../../csharp/language-reference/compiler-options/refout-compiler-option.md) ( / [Visual Basic](../../visual-basic/reference/command-line-compiler/refout-compiler-option.md)) opcji kompilatora.
 - W przypadku korzystania z interfejsu API Roslyn przez ustawienie <xref:Microsoft.CodeAnalysis.Emit.EmitOptions.EmitMetadataOnly?displayProperty=nameWithType> na `true` i <xref:Microsoft.CodeAnalysis.Emit.EmitOptions.IncludePrivateMembers?displayProperty=nameWithType> do `false` w obiekcie przekazaną do metody <xref:Microsoft.CodeAnalysis.Compilation.Emit%2A?displayProperty=nameWithType>.
 
-Jeśli chcesz dystrybuować zestawy referencyjne z pakietami NuGet, musisz uwzględnić je w podkatalogu *ref \\* w katalogu pakietu, a nie w podkatalogu *lib \\* używanym do zestawów implementacji.
+Jeśli chcesz dystrybuować zestawy referencyjne z pakietami NuGet, musisz uwzględnić je w podkatalogu *ref\\* w katalogu pakietu, a nie w podkatalogu *lib\\* używanym do zestawów implementacji.
 
 ## <a name="reference-assemblies-structure"></a>Struktura zestawów odwołań
 
@@ -70,7 +70,7 @@ Dokładne szczegóły struktury zestawu odwołań zależą od wersji kompilatora
 > [!NOTE]
 > Informacje w tej sekcji dotyczą tylko zestawów referencyjnych wygenerowanych przez kompilatory Roslyn zaczynające się od C# wersji 7,1 lub Visual Basic wersji 15,3. Struktura zestawów referencyjnych dla bibliotek .NET Framework i .NET Core może różnić się w niektórych szczegółach, ponieważ korzystają z własnego mechanizmu generowania zestawów odwołań. Na przykład mogą mieć całkowicie puste treści metody zamiast treści `throw null`. Jednak ogólna zasada nadal stosuje się: nie mają one przydatnych implementacji metod i zawierają tylko metadane dla elementów członkowskich, które mają zauważalny wpływ z perspektywy publicznego interfejsu API.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Zestawy w środowisku .NET](index.md)
 - [Omówienie określania celu platformy](/visualstudio/ide/visual-studio-multi-targeting-overview)

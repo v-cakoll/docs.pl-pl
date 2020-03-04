@@ -2,12 +2,12 @@
 title: Dostosowywanie organizowania parametrów — .NET
 description: Dowiedz się, jak dostosować sposób organizowania parametrów przez platformę .NET do natywnej reprezentacji.
 ms.date: 01/18/2019
-ms.openlocfilehash: 36fb8c105a8836d77b862095a616de3ba641073c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: ff646ad942cf051ce90cd75b24c8562e536182d9
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706364"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159614"
 ---
 # <a name="customizing-parameter-marshaling"></a>Dostosowywanie marshalingu parametrów
 
@@ -24,7 +24,7 @@ Każdy z tych formatów przekazuje ciąg zakończony znakiem null do kodu natywn
 | wartość `System.Runtime.InteropServices.UnmanagedType` | Kodowanie |
 |------------------------------------------------------|----------|
 | LPStr | ANSI |
-| LPUTF8Str | UTF-8 | 
+| LPUTF8Str | UTF-8 |
 | LPWStr | UTF-16 |
 | LPTStr | UTF-16 |
 

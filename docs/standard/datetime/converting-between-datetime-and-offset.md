@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Date data type, converting
 - local time conversions
 ms.assetid: b605ff97-0c45-4c24-833f-4c6a3e8be64c
-ms.openlocfilehash: 428553f75db2cca6705ac72873e86e120e94d134
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5c19296f75e9e002e88263c5e5efa9917e185ebc
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132592"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156039"
 ---
 # <a name="converting-between-datetime-and-datetimeoffset"></a>Konwertowanie pomiędzy DateTime i DateTimeOffset
 
@@ -99,7 +99,7 @@ Aby wskazać, że wartość <xref:System.DateTimeOffset> reprezentuje czas lokal
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#7](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#7)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#7)]
 
-Można również użyć właściwości <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> do przekonwertowania wartości <xref:System.DateTimeOffset> na wartość lokalną <xref:System.DateTime>. Właściwość <xref:System.DateTime.Kind%2A> zwracanej wartości <xref:System.DateTime> jest <xref:System.DateTimeKind.Local>. Poniższy kod używa właściwości <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> podczas konwertowania wartości <xref:System.DateTimeOffset>, której przesunięcie odnosi się do numeru lokalnej strefy czasowej. 
+Można również użyć właściwości <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> do przekonwertowania wartości <xref:System.DateTimeOffset> na wartość lokalną <xref:System.DateTime>. Właściwość <xref:System.DateTime.Kind%2A> zwracanej wartości <xref:System.DateTime> jest <xref:System.DateTimeKind.Local>. Poniższy kod używa właściwości <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> podczas konwertowania wartości <xref:System.DateTimeOffset>, której przesunięcie odnosi się do numeru lokalnej strefy czasowej.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#10](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#10)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#10)]
@@ -127,6 +127,6 @@ Należy zauważyć, że ten kod tworzy dwa założenia, które w zależności od
 
 - Przyjęto założenie, że data i godzina, o której przesunięcie jest równe, dla lokalnej strefy czasowej reprezentuje lokalną strefę czasową. Ponieważ wartości daty i godziny są odłączone od oryginalnej strefy czasowej, może to nie być przypadek; Data i godzina mogą pochodzić z innej strefy czasowej z tym samym przesunięciem.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Daty, godziny i strefy czasowe](../../../docs/standard/datetime/index.md)

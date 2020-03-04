@@ -5,12 +5,12 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: 692a0f8ad933f3ba4bef50681cb3487fa0a7eea9
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d39e4c4dd180ba35b7555d61211a34d696b04f50
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714834"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78241003"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>Niejawnie wpisane zmienne lokalneC# (Przewodnik programowania)
 
@@ -68,7 +68,7 @@ Następujące ograniczenia dotyczą deklaracji zmiennej o typie określonym niej
 
 - Jeśli typ o nazwie `var` znajduje się w zakresie, wówczas słowo kluczowe `var` zostanie rozpoznane jako nazwa tego typu i nie będzie traktowane jako część niejawnie wpisanej deklaracji zmiennej lokalnej.
 
-Niejawne wpisywanie za pomocą słowa kluczowego `var` może być stosowane tylko do zmiennych w zakresie metody lokalnej. Niejawne wpisywanie nie jest dostępne w przypadku C# pól klas, ponieważ kompilator napotyka logiczną Paradox w miarę przetwarzania kodu: kompilator musi znać typ pola, ale nie może ustalić typu do czasu przeanalizowania wyrażenia przypisania, a wyrażenia nie można ocenić bez znajomości typu. Spójrzmy na poniższy kod:
+Niejawne wpisywanie za pomocą słowa kluczowego `var` może być stosowane tylko do zmiennych w zakresie metody lokalnej. Niejawne wpisywanie nie jest dostępne w przypadku C# pól klas, ponieważ kompilator napotyka logiczną Paradox w miarę przetwarzania kodu: kompilator musi znać typ pola, ale nie może ustalić typu do czasu przeanalizowania wyrażenia przypisania, a wyrażenia nie można ocenić bez znajomości typu. Rozważmy następujący kod:
 
 ```csharp
 private var bookTitles;
@@ -88,11 +88,11 @@ Słowo kluczowe `var` może być również przydatne, gdy określony typ zmienne
 
 [!code-csharp[cscsrefQueryKeywords#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#13)]
 
-Jednak użycie `var` ma co najmniej potencjał, aby kod był trudniejszy do zrozumienia dla innych deweloperów. Z tego powodu dokumentacja zazwyczaj C# używa `var` tylko wtedy, gdy jest to wymagane.
+Użycie `var` pomaga uprościć kod, ale jego użycie powinno być ograniczone do przypadków, w których jest wymagane, lub gdy ułatwia odczytywanie kodu. Aby uzyskać więcej informacji o tym, kiedy należy prawidłowo używać `var`, zobacz sekcję " [niejawnie wpisane zmienne lokalne](../inside-a-program/coding-conventions.md#implicitly-typed-local-variables) " w artykule z instrukcjami dotyczącymi C# kodowania.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Dokumentacja języka C#](../../language-reference/index.md)
+- [C#Odwoła](../../language-reference/index.md)
 - [Niejawnie wpisane tablice](../arrays/implicitly-typed-arrays.md)
 - [Jak używać niejawnie wpisanych zmiennych lokalnych i tablic w wyrażeniu zapytania](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)
 - [Typy anonimowe](anonymous-types.md)

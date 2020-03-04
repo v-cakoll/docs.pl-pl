@@ -2,12 +2,12 @@
 title: Narzędzie generatora serializatora XML (Sgen.exe)
 ms.date: 03/30/2017
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
-ms.openlocfilehash: 492337973f71b10dc061353b7083f596b402ae29
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: d67ab634279c4f8e06d609950932e2422bc43395
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392708"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159523"
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>Narzędzie generatora serializatora XML (Sgen.exe)
 Generator serializatora XML tworzy zestawu serializacji XML dla typów w określonym zestawie w celu zwiększenia wydajności uruchamiania <xref:System.Xml.Serialization.XmlSerializer> po serializuje lub deserializuje obiektów określonego typu.  
@@ -22,18 +22,18 @@ sgen [options]
   
 |Opcja|Opis|  
 |------------|-----------------|  
-|**/a\[ssembly\]:** _filename_|Generuje kod serializacji dla wszystkich typów zawartych w zestawie lub pliku wykonywalnym określonym przez *filename*. Można uwzględnić tylko jeden PLik. Jeśli ten argument jest powtarzany, nazwisko PLik jest używany.|  
-|**/c\[ompiler\]:** _Opcje_|Określa opcje do przekazania do kompilatora C#. Wszystkie opcje csc.exe są obsługiwane, gdy przekazywane do kompilator. To może posłużyć do określenia zestawu powinny być podpisane i określ PLik klucza.|  
+|**/a\[ssembly\]:**_filename_|Generuje kod serializacji dla wszystkich typów zawartych w zestawie lub pliku wykonywalnym określonym przez *filename*. Można uwzględnić tylko jeden PLik. Jeśli ten argument jest powtarzany, nazwisko PLik jest używany.|  
+|**/c\[ompiler\]:**_Opcje_|Określa opcje do przekazania do kompilatora C#. Wszystkie opcje csc.exe są obsługiwane, gdy przekazywane do kompilator. To może posłużyć do określenia zestawu powinny być podpisane i określ PLik klucza.|  
 |**/d\[ebug\]**|Generuje obrazu, który może być używany z debugera.|  
 |**/f\[Orce\]**|Wymusza zastępowanie istniejącego zestawu o tej samej nazwie. Wartość domyślna to **false**.|  
 |**/help lub/?**|Wyświetla składnię polecenia i opcje narzędzia.|  
 |**/k\[achowaj\]**|Pomija usuwanie wygenerowanych PLików źródłowych i innych PLików tymczasowych po zostały skompilowane do zestawu serializacji. To może posłużyć do określenia, czy to narzędzie jest generowania kodu serializacji dla danego typu.|  
 |**/n\[ologo\]**|Pomija wyświetlanie transparentu startowego firmy Microsoft.|  
-|**/o\[ut\]:** _ścieżka_|Określa katalog, w którym chcesz zapisać wygenerowanego zestawu. **Uwaga:**  Nazwa wygenerowanego zestawu składa się z nazwy zestawu wejściowego i "XmlSerializers. dll".|  
+|**/o\[ut\]:**_ścieżka_|Określa katalog, w którym chcesz zapisać wygenerowanego zestawu. **Uwaga:**  Nazwa wygenerowanego zestawu składa się z nazwy zestawu wejściowego i "XmlSerializers. dll".|  
 |**/p\[roxytypes\]**|Generuje kod serializacji tylko dla typów serwera proxy usług sieci Web XML.|  
-|**/r\[eference\]:** _assemblyfiles_|Określa zestawy, które są określone przez typy wymagające serializacji XML. Akceptuje wiele plików zestawów rozdzielonych przecinkami.|  
+|**/r\[eference\]:**_assemblyfiles_|Określa zestawy, które są określone przez typy wymagające serializacji XML. Akceptuje wiele plików zestawów rozdzielonych przecinkami.|  
 |**/s\[ilent\]**|Pomija wyświetlanie komunikatów o sukcesie.|  
-|**/t\[typ\]:** _Typ_|Generuje kod serializacji tylko dla określonego typu.|  
+|**/t\[typ\]:**_Typ_|Generuje kod serializacji tylko dla określonego typu.|  
 |**/v\[erbose\]**|Wyświetla pełne dane wyjściowe dla debugowania. Wyświetla listę typów z zestawu docelowego, który nie może być serializowany z <xref:System.Xml.Serialization.XmlSerializer>.|  
 |**/?**|Wyświetla składnię polecenia i opcje narzędzia.|  
   
@@ -50,12 +50,12 @@ sgen [options]
  Następujące polecenie tworzy zestaw o nazwie Data.XmlSerializers.dll dla wszystkich typów, które są zawarte w zestawie o nazwie Data.dll serializacji.  
   
 ```console  
-sgen Data.dll   
+sgen Data.dll
 ```  
   
  Zestaw Data.XmlSerializers.dll można odwoływać się z kodu, który musi serializacji i deserializacji typów w Data.dll.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Narzędzia](../../../docs/framework/tools/index.md)
 - [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

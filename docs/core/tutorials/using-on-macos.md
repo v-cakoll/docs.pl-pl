@@ -2,12 +2,12 @@
 title: 'Samouczek: Tworzenie rozwiązania .NET Core w macOS przy użyciu Visual Studio Code'
 description: Ten dokument zawiera instrukcje i przepływ pracy służące do tworzenia rozwiązania platformy .NET Core przy użyciu Visual Studio Code.
 ms.date: 12/19/2019
-ms.openlocfilehash: e3c210d4391c0e3c9c3455ecf23dd138abdb4363
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: f5da16d413ddc25587ff35550fe9f308dc87f4bb
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741543"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156598"
 ---
 # <a name="tutorial-create-a-net-core-solution-in-macos-using-visual-studio-code"></a>Samouczek: Tworzenie rozwiązania .NET Core w macOS przy użyciu Visual Studio Code
 
@@ -24,7 +24,7 @@ Zainstaluj narzędzie [Visual Studio Code](https://code.visualstudio.com). W tra
 
 Zainstaluj rozszerzenie Visual Studio Code C# , otwierając Visual Studio Code i naciskając klawisz <kbd>Fn</kbd>+<kbd>F1</kbd> , aby otworzyć paletę Visual Studio Code. Wpisz **EXT Install** , aby wyświetlić listę rozszerzeń. Wybierz C# rozszerzenie. Uruchom ponownie Visual Studio Code, aby aktywować rozszerzenie. Aby uzyskać więcej informacji, zobacz [dokumentację C# rozszerzenia Visual Studio Code](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).
 
-## <a name="get-started"></a>Wprowadzenie
+## <a name="get-started"></a>Rozpoczynanie pracy
 
 W tym samouczku utworzysz trzy projekty: projekt biblioteki, testy dla tego projektu biblioteki oraz aplikację konsolową, która używa biblioteki. Możesz [wyświetlić lub pobrać źródło](https://github.com/dotnet/samples/tree/master/core/getting-started/golden) tego artykułu w repozytorium dotnet/Samples w witrynie GitHub. Aby uzyskać instrukcje dotyczące pobierania, zobacz [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
@@ -155,7 +155,7 @@ Należy pamiętać, że wartość 42 nie jest równa 19 + 23 (lub 42) podczas pi
 W folderze *złota* wykonaj następujące polecenia:
 
 ```dotnetcli
-dotnet restore 
+dotnet restore
 dotnet test test-library/test-library.csproj
 ```
 

@@ -4,12 +4,12 @@ description: Ten artykuł zawiera krótkie omówienie testów jednostkowych dla 
 author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
-ms.openlocfilehash: 41f4457e636ca495b78109803ca66680e72d007e
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 1263bfe337b9d6609c0ca7df70aa299a61a7f1a0
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899888"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157404"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Testy jednostkowe w .NET Core i .NET Standard
 
@@ -23,9 +23,9 @@ Możesz użyć wbudowanych szablonów projektu testów jednostkowych .NET Core 2
 
 ## <a name="what-are-unit-tests"></a>Co to są testy jednostkowe?
 
-Posiadanie zautomatyzowanych testów to doskonały sposób, aby upewnić się, że aplikacja oprogramowania wykonuje działania wykonywane przez jego autorów. Istnieje wiele typów testów dla aplikacji oprogramowania. Obejmują one testy integracji, testy sieci Web, testy obciążenia i inne. **Testy jednostkowe** testują poszczególne składniki oprogramowania i metody. Testy jednostkowe powinny tylko testować kod w formancie dewelopera. Nie powinni testować obaw związanych z infrastrukturą. Zagadnienia dotyczące infrastruktury obejmują bazy danych, systemy plików i zasoby sieciowe. 
+Posiadanie zautomatyzowanych testów to doskonały sposób, aby upewnić się, że aplikacja oprogramowania wykonuje działania wykonywane przez jego autorów. Istnieje wiele typów testów dla aplikacji oprogramowania. Obejmują one testy integracji, testy sieci Web, testy obciążenia i inne. **Testy jednostkowe** testują poszczególne składniki oprogramowania i metody. Testy jednostkowe powinny tylko testować kod w formancie dewelopera. Nie powinni testować obaw związanych z infrastrukturą. Zagadnienia dotyczące infrastruktury obejmują bazy danych, systemy plików i zasoby sieciowe.
 
-Należy również pamiętać o najlepszych rozwiązaniach dotyczących pisania testów. Na przykład [programowanie sterowane testami (TDD)](https://deviq.com/test-driven-development/) to gdy test jednostkowy jest zapisywana przed kodem, który ma zostać sprawdzona. TDD przypomina Tworzenie konspektu dla książki, zanim zapiszemy ją. Jest to pomocne, aby deweloperzy mogli pisać łatwiejszy, czytelny i wydajny kod. 
+Należy również pamiętać o najlepszych rozwiązaniach dotyczących pisania testów. Na przykład [programowanie sterowane testami (TDD)](https://deviq.com/test-driven-development/) to gdy test jednostkowy jest zapisywana przed kodem, który ma zostać sprawdzona. TDD przypomina Tworzenie konspektu dla książki, zanim zapiszemy ją. Jest to pomocne, aby deweloperzy mogli pisać łatwiejszy, czytelny i wydajny kod.
 
 > [!NOTE]
 > Zespół ASP.NET stosuje [te konwencje](https://github.com/dotnet/aspnetcore/wiki/Engineering-guidelines#unit-tests-and-functional-tests) , aby ułatwić deweloperom tworzenie dobrych nazw dla klas i metod testowych.
@@ -40,11 +40,11 @@ Projekty testów jednostkowych programu .NET Core są obsługiwane w przypadku:
 
 - [C#](../../csharp/index.yml)
 - [F#](../../fsharp/index.yml)
-- [Visual Basic](../../visual-basic/index.yml) 
+- [Visual Basic](../../visual-basic/index.yml)
 
 Możesz również wybrać między:
 
-- [xUnit](https://xunit.github.io) 
+- [xUnit](https://xunit.github.io)
 - [NUnit](https://nunit.org)
 - [MSTest](https://github.com/Microsoft/testfx-docs)
 

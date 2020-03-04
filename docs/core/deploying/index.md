@@ -2,18 +2,18 @@
 title: Publikowanie aplikacji
 description: Dowiedz się więcej na temat sposobów publikowania aplikacji platformy .NET Core. Platforma .NET Core może publikować aplikacje zależne od platformy lub dla wielu platform. Aplikację można opublikować jako samodzielny lub jako zależny od środowiska uruchomieniowego. Każdy tryb ma wpływ na sposób uruchamiania aplikacji przez użytkownika.
 ms.date: 01/31/2020
-ms.openlocfilehash: 696cca436c73601a3e7825033152d43a659a7dce
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 3b9c3b7f29af12477874b7a31ef0de4750719de0
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77448987"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157938"
 ---
 # <a name="net-core-application-publishing-overview"></a>Omówienie publikowania aplikacji .NET Core
 
 Aplikacje tworzone za pomocą platformy .NET Core mogą być publikowane w dwóch różnych trybach, a tryb ma wpływ na sposób uruchamiania aplikacji przez użytkownika.
 
-Opublikowanie aplikacji jako *samodzielny* powoduje utworzenie aplikacji obejmującej środowisko uruchomieniowe i biblioteki platformy .NET Core oraz aplikację i jej zależności. Użytkownicy aplikacji mogą uruchomić ją na komputerze, na którym nie zainstalowano środowiska uruchomieniowego .NET Core. 
+Opublikowanie aplikacji jako *samodzielny* powoduje utworzenie aplikacji obejmującej środowisko uruchomieniowe i biblioteki platformy .NET Core oraz aplikację i jej zależności. Użytkownicy aplikacji mogą uruchomić ją na komputerze, na którym nie zainstalowano środowiska uruchomieniowego .NET Core.
 
 Opublikowanie aplikacji jako *zależnej od środowiska uruchomieniowego* powoduje utworzenie aplikacji zawierającej tylko samą aplikację i jej zależności. Użytkownicy aplikacji muszą oddzielnie zainstalować środowisko uruchomieniowe programu .NET Core.
 
@@ -132,7 +132,7 @@ Ponieważ aplikacja zawiera środowisko uruchomieniowe platformy .NET Core i wsz
   > Możesz zmniejszyć rozmiar wdrożenia w systemach Linux o około 28 MB przy użyciu [*trybu niezmiennej globalizacji*](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)platformy .NET Core. Wymusza to aplikacji traktowanie wszystkich kultur, takich jak [Niezmienna kultura](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType).
 
 - **Trudniejsze do zaktualizowania wersji .NET Core**\
-Środowisko uruchomieniowe platformy .NET Core (dystrybuowane z aplikacją) można uaktualnić tylko przez wydanie nowej wersji aplikacji. Użytkownik jest odpowiedzialny za dostarczanie zaktualizowanej wersji aplikacji na potrzeby poprawek zabezpieczeń do środowiska uruchomieniowego .NET Core. 
+Środowisko uruchomieniowe platformy .NET Core (dystrybuowane z aplikacją) można uaktualnić tylko przez wydanie nowej wersji aplikacji. Użytkownik jest odpowiedzialny za dostarczanie zaktualizowanej wersji aplikacji na potrzeby poprawek zabezpieczeń do środowiska uruchomieniowego .NET Core.
 
 ### <a name="examples"></a>Przykłady
 

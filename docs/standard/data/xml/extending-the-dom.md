@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b5489c96-4afd-439a-a25d-fc82eb4a148d
-ms.openlocfilehash: 41b6959843e866b89da46a9cedfb54a2f5ed001a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 11c7e8c8d2ea3b49fe73ab4dde4e2ccc8bc917ff
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710885"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159679"
 ---
 # <a name="extending-the-dom"></a>Rozszerzanie modelu DOM
 
@@ -42,9 +42,9 @@ End Class 'LineInfoDocument
 ```
 
 ```csharp
-class LineInfoDocument : XmlDocument 
+class LineInfoDocument : XmlDocument
 {
-    public override XmlElement CreateElement(string prefix, string localname, string nsURI) 
+    public override XmlElement CreateElement(string prefix, string localname, string nsURI)
     {
         LineInfoElement elem = new LineInfoElement(prefix, localname, nsURI, this);
         return elem;
@@ -250,6 +250,6 @@ Aby uzyskać więcej informacji na temat obsługi zdarzeń węzłów, zobacz [zd
 
 Jeśli zastępujesz metodę <xref:System.Xml.XmlDocument.CreateElement%2A> w klasie pochodnej, atrybuty domyślne nie są dodawane podczas tworzenia nowych elementów podczas edytowania dokumentu. Jest to problem tylko podczas edycji. Ponieważ metoda <xref:System.Xml.XmlDocument.CreateElement%2A> jest odpowiedzialna za dodawanie atrybutów domyślnych do <xref:System.Xml.XmlDocument>, należy zakodować tę funkcję w metodzie <xref:System.Xml.XmlDocument.CreateElement%2A>. W przypadku ładowania <xref:System.Xml.XmlDocument> zawierającego atrybuty domyślne zostaną one obsłużone prawidłowo. Aby uzyskać więcej informacji na temat atrybutów domyślnych, zobacz [Tworzenie nowych atrybutów dla elementów w modelu dom](creating-new-attributes-for-elements-in-the-dom.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Model DOM (XML Document Object Model)](xml-document-object-model-dom.md)

@@ -2,12 +2,12 @@
 title: polecenie aktualizacji narzędzia dotnet
 description: Polecenie aktualizacji narzędzia dotnet umożliwia zaktualizowanie określonego narzędzia .NET Core na komputerze.
 ms.date: 02/14/2020
-ms.openlocfilehash: 50bb366fedfb0ea69b8b6007ff89e366b4f689de
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 80e807a0fc06ad762334f888e701f6d9c448369a
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543420"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156949"
 ---
 # <a name="dotnet-tool-update"></a>dotnet tool update
 
@@ -58,7 +58,7 @@ dotnet tool update <-h|--help>
 
 - **`-g|--global`**
 
-  Określa, że aktualizacja dotyczy narzędzia dla całego użytkownika. Nie można łączyć z opcją `--tool-path`. Pominięcie obu `--global` i `--tool-path` oznacza, że narzędzie, które ma zostać zaktualizowane, jest narzędziem lokalnym. 
+  Określa, że aktualizacja dotyczy narzędzia dla całego użytkownika. Nie można łączyć z opcją `--tool-path`. Pominięcie obu `--global` i `--tool-path` oznacza, że narzędzie, które ma zostać zaktualizowane, jest narzędziem lokalnym.
 
 - **`-h|--help`**
 
@@ -66,7 +66,7 @@ dotnet tool update <-h|--help>
 
 - **`--tool-path <PATH>`**
 
-  Określa lokalizację, w której zainstalowano narzędzie globalne. ŚCIEŻKA może być bezwzględna lub względna. Nie można łączyć z opcją `--global`. Pominięcie obu `--global` i `--tool-path` oznacza, że narzędzie, które ma zostać zaktualizowane, jest narzędziem lokalnym. 
+  Określa lokalizację, w której zainstalowano narzędzie globalne. ŚCIEŻKA może być bezwzględna lub względna. Nie można łączyć z opcją `--global`. Pominięcie obu `--global` i `--tool-path` oznacza, że narzędzie, które ma zostać zaktualizowane, jest narzędziem lokalnym.
 
 - **`-v|--verbosity <LEVEL>`**
 

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 12/04/2018
-ms.openlocfilehash: 9495288658fa102df8f0fbd643e2fcdf49d8f3b3
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: e045c39240c99777d05ca86ee0a8cd1fa4309c4f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451983"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156585"
 ---
 # <a name="whats-new-in-net-core-22"></a>Co nowego w programie .NET Core 2.2
 
@@ -26,9 +26,9 @@ Ten nowy tryb wdrożenia ma odrębną zaletę kompilowania pliku wykonywalnego z
 
 **Obsługa zdarzeń w usługach środowiska uruchomieniowego**
 
-Często warto monitorować użycie usług środowiska uruchomieniowego w aplikacji, takich jak GC, JIT i wątków, aby zrozumieć, jak wpływają na aplikację. W systemach Windows jest to zwykle wykonywane przez monitorowanie zdarzeń ETW bieżącego procesu. Mimo że ta funkcja nadal działa, nie zawsze jest możliwe korzystanie z funkcji ETW, jeśli jest uruchomiona w środowisku z niskim poziomem uprawnień lub w systemie Linux lub macOS. 
+Często warto monitorować użycie usług środowiska uruchomieniowego w aplikacji, takich jak GC, JIT i wątków, aby zrozumieć, jak wpływają na aplikację.W systemach Windows jest to zwykle wykonywane przez monitorowanie zdarzeń ETW bieżącego procesu.Mimo że ta funkcja nadal działa, nie zawsze jest możliwe korzystanie z funkcji ETW, jeśli jest uruchomiona w środowisku z niskim poziomem uprawnień lub w systemie Linux lub macOS.
 
-Począwszy od platformy .NET Core 2,2, zdarzenia CoreCLR można teraz wykorzystać przy użyciu klasy <xref:System.Diagnostics.Tracing.EventListener?displayProperty=nameWithType>. Te zdarzenia opisują zachowanie takich usług w czasie wykonywania jak GC, JIT, wątków i międzyoperacyjności. Są to te same zdarzenia, które są ujawniane w ramach dostawcy ETW CoreCLR.  Dzięki temu aplikacje mogą zużywać te zdarzenia lub korzystać z mechanizmu transportu w celu wysyłania ich do usługi agregacji telemetrii. Możesz zobaczyć, jak subskrybować zdarzenia w następującym przykładzie kodu:
+Począwszy od platformy .NET Core 2,2, zdarzenia CoreCLR można teraz wykorzystać przy użyciu klasy <xref:System.Diagnostics.Tracing.EventListener?displayProperty=nameWithType>. Te zdarzenia opisują zachowanie takich usług w czasie wykonywania jak GC, JIT, wątków i międzyoperacyjności. Są to te same zdarzenia, które są ujawniane w ramach dostawcy ETW CoreCLR.Dzięki temu aplikacje mogą zużywać te zdarzenia lub korzystać z mechanizmu transportu w celu wysyłania ich do usługi agregacji telemetrii. Możesz zobaczyć, jak subskrybować zdarzenia w następującym przykładzie kodu:
 
 ```csharp
 internal sealed class SimpleEventListener : EventListener

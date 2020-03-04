@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach, parallel version
 - parallel programming, foreach
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
-ms.openlocfilehash: 528e22d6b54179181d1479f4feaedfbf82933c58
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 02b94b673dc4468e68a1dadd83aab0e3bfcfaa16
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921216"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160303"
 ---
 # <a name="how-to-write-a-simple-parallelforeach-loop"></a>Instrukcje: zapisywanie prostej pętli Parallel. ForEach
 
@@ -50,7 +50,7 @@ W programie Visual Studio istnieją Visual Basic i C# szablony aplikacji konsolo
 W wierszu polecenia można użyć poleceń interfejs wiersza polecenia platformy .NET Core (na przykład `dotnet new console` lub `dotnet new console -lang vb`) lub można utworzyć plik i użyć kompilatora wiersza polecenia dla aplikacji .NET Framework.
 
 W przypadku projektu .NET Core należy odwołać się do pakietu NuGet **System. Drawing. Common** . W programie Visual Studio Użyj Menedżera pakietów NuGet, aby zainstalować pakiet. Alternatywnie można dodać odwołanie do pakietu w pliku \*. csproj lub \*. vbproj:
- 
+
 ```xml
 <ItemGroup>
      <PackageReference Include="System.Drawing.Common" Version="4.5.1" />
@@ -61,7 +61,7 @@ Aby uruchomić aplikację konsolową .NET Core z poziomu wiersza polecenia, nale
 
 Aby uruchomić aplikację konsolową z poziomu programu Visual Studio, naciśnij klawisz **F5**.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Równoległość danych](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
 - [Programowanie równoległe](../../../docs/standard/parallel-programming/index.md)

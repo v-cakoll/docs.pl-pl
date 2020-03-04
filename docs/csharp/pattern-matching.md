@@ -4,12 +4,12 @@ description: Dowiedz się więcej na temat wyrażeń dopasowania wzorców wC#
 ms.date: 04/10/2019
 ms.technology: csharp-fundamentals
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: db509a0ebf1e205e9996ba8102757fe8c0b9ea3a
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: ffa59d073ad891fd93e0f8d7ad8889de0499b106
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77501626"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78241016"
 ---
 # <a name="pattern-matching"></a>Dopasowanie wzorca
 
@@ -27,7 +27,7 @@ Korzystając z tego przykładu, należy pokontraście ten kod, tak aby był on s
 
 Zamiast rozpoczynać się od definicji kształtu abstrakcyjnego i dodawać różne klasy kształtów, zacznijmy zamiast od prostych definicji zawierających tylko dane dla każdego z kształtów geometrycznych:
 
-[!code-csharp[ShapeDefinitions](../../samples/csharp/PatternMatching/Shapes.cs#01_ShapeDefinitions "Shape definitions")]
+[!code-csharp[ShapeDefinitions](../../samples/snippets/csharp/PatternMatching/Shapes.cs#01_ShapeDefinitions "Shape definitions")]
 
 Z tych struktur Napiszmy metodę, która oblicza obszar pewnego kształtu.
 
@@ -35,13 +35,13 @@ Z tych struktur Napiszmy metodę, która oblicza obszar pewnego kształtu.
 
 Przed C# 7,0 należy przetestować każdy typ w serii `if` i `is` instrukcji:
 
-[!code-csharp[ClassicIsExpression](../../samples/csharp/PatternMatching/GeometricUtilities.cs#02_ClassicIsExpression "Classic type pattern using is")]
+[!code-csharp[ClassicIsExpression](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#02_ClassicIsExpression "Classic type pattern using is")]
 
 Ten kod powyżej jest wyrażeniem klasycznym *wzorca typu*: testujesz zmienną, aby określić jej typ i wykonując inną akcję na podstawie tego typu.
 
 Ten kod będzie prostszy przy użyciu rozszerzeń wyrażenia `is`, aby przypisać zmienną, jeśli test zakończy się pomyślnie:
 
-[!code-csharp[IsPatternExpression](../../samples/csharp/PatternMatching/GeometricUtilities.cs#03_IsPatternExpression "is pattern expression")]
+[!code-csharp[IsPatternExpression](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#03_IsPatternExpression "is pattern expression")]
 
 W tej zaktualizowanej wersji wyrażenie `is` obydwu testuje zmienną i przypisuje ją do nowej zmiennej odpowiedniego typu. Należy również zauważyć, że ta wersja zawiera typ `Rectangle`, który jest `struct`. Nowe wyrażenie `is` działa z typami wartości, a także typami referencyjnymi.
 
@@ -64,12 +64,12 @@ Gdy przejdzie czas, może być konieczne obsługę innych typów kształtów. W 
 Tradycyjna instrukcja `switch` była wyrażeniem wzorca: obsługuje stałe wzorce.
 Można porównać zmienną z dowolną stałą używaną w instrukcji `case`:
 
-[!code-csharp[ClassicSwitch](../../samples/csharp/PatternMatching/GeometricUtilities.cs#04_ClassicSwitch "Classic switch statement")]
+[!code-csharp[ClassicSwitch](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#04_ClassicSwitch "Classic switch statement")]
 
 Jedynym wzorcem obsługiwanym przez instrukcję `switch` była stała wzorca. Jest on bardziej ograniczony do typów liczbowych i typu `string`.
 Te ograniczenia zostały usunięte i można teraz napisać instrukcję `switch` przy użyciu wzorca typu:
 
-[!code-csharp[Switch Type Pattern](../../samples/csharp/PatternMatching/GeometricUtilities.cs#05_SwitchTypePattern "Compute with `switch` expression")]
+[!code-csharp[Switch Type Pattern](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#05_SwitchTypePattern "Compute with `switch` expression")]
 
 Składnia zgodna ze wzorcem `switch` używa znanej składni dla deweloperów, którzy używali tradycyjnej instrukcji `switch` języka C. Poszczególne `case` są oceniane i kod pod warunkiem, który pasuje do zmiennej wejściowej jest wykonywany. Wykonanie kodu nie może "przechodzenie" z jednego wyrażenia case do następnego; Składnia instrukcji `case` wymaga, aby każdy `case` kończyć się `break`, `return`lub `goto`.
 
@@ -87,7 +87,7 @@ Przypadek `default` będzie wykonywany tylko wtedy, gdy żadne inne etykiety cas
 
 Można tworzyć specjalne przypadki dla tych kształtów, które mają 0 obszarów, używając klauzuli `when` w etykiecie `case`. Kwadrat o długości bocznej 0 lub Okręg o promieniu 0 ma powierzchnię 0. Należy określić warunek przy użyciu klauzuli `when` w etykiecie `case`:  
 
-[!code-csharp[ComputeDegenerateShapes](../../samples/csharp/PatternMatching/GeometricUtilities.cs#07_ComputeDegenerateShapes "Compute shapes with 0 area")]
+[!code-csharp[ComputeDegenerateShapes](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#07_ComputeDegenerateShapes "Compute shapes with 0 area")]
 
 Ta zmiana pokazuje kilka ważnych punktów dotyczących nowej składni. Najpierw do jednej sekcji `switch` można zastosować wiele etykiet `case`. Blok instrukcji jest wykonywany, gdy dowolna z tych etykiet jest `true`. W tym przypadku, jeśli wyrażenie `switch` jest okrąg lub kwadrat z 0 obszaru, metoda zwraca stałą 0.
 
@@ -98,13 +98,13 @@ Nie jest jednak możliwe informowanie, *które* zostało przypisane w czasie kom
 
 Po dodaniu tych kształtów w obszarze 0 Dodajmy kilka typów kształtów: prostokąt i Trójkąt:
 
-[!code-csharp[AddRectangleAndTriangle](../../samples/csharp/PatternMatching/GeometricUtilities.cs#09_AddRectangleAndTriangle "Add rectangle and triangle")]
+[!code-csharp[AddRectangleAndTriangle](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#09_AddRectangleAndTriangle "Add rectangle and triangle")]
 
  Ten zestaw zmian dodaje `case` etykiety dla przypadku degeneracji, a następnie etykiety i bloki dla każdego nowego kształtu. 
 
 Na koniec możesz dodać przypadek `null`, aby upewnić się, że argument nie jest `null`:
 
-[!code-csharp[NullCase](../../samples/csharp/PatternMatching/GeometricUtilities.cs#10_NullCase "Add null case")]
+[!code-csharp[NullCase](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#10_NullCase "Add null case")]
 
 Specjalne zachowanie wzorca `null` jest interesujące, ponieważ stała `null` we wzorcu nie ma typu, ale można ją przekonwertować na dowolny typ referencyjny lub typ dopuszczający wartość null. Zamiast konwersji `null` do dowolnego typu, język definiuje, że `null` wartość nie będzie zgodna ze wzorcem typu, niezależnie od typu czasu kompilowania zmiennej. To zachowanie powoduje, że nowy wzorzec typu oparty na `switch` jest spójny z instrukcją `is`: instrukcje `is` zawsze zwracają `false`, gdy sprawdzana wartość jest `null`. Jest również prostsze: po sprawdzeniu typu nie jest wymagane dodatkowe sprawdzenie wartości null. Można sprawdzić, czy nie ma żadnych testów null w żadnym z bloków Case powyższych przykładów: nie jest to konieczne, ponieważ dopasowanie wzorca typu gwarantuje wartość różną od null.
 
@@ -124,7 +124,7 @@ Ze względu na to, że przypadek inny niż domyślny jest preferowany w przypadk
 
 Trzecia reguła wprowadza użycie w przypadku, gdy `var` może być przydatne. Załóżmy, że wykonujesz dopasowanie do wzorca, gdzie dane wejściowe są ciągiem i wyszukujesz znane wartości poleceń. Można napisać coś takiego jak:
 
-[!code-csharp[VarCaseExpression](../../samples/csharp/PatternMatching/Program.cs#VarCaseExpression "use a var case expression to filter white space")]
+[!code-csharp[VarCaseExpression](../../samples/snippets/csharp/PatternMatching/Program.cs#VarCaseExpression "use a var case expression to filter white space")]
 
 Wielkość liter `var` jest zgodna z `null`, ciągiem pustym lub dowolnym ciągiem zawierającym tylko biały znak. Zwróć uwagę, że poprzedni kod używa operatora `?.`, aby upewnić się, że nie przypadkowo zgłosił <xref:System.NullReferenceException>. Przypadek `default` obsługuje wszelkie inne wartości ciągów, które nie są zrozumiałe dla tego analizatora poleceń.
 

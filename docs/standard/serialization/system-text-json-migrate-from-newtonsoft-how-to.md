@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 221d19ee6441614324d375b66e8b13a90f683890
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: e0a6912c10baa0be4a8ef9f6536948ae27f235c7
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921274"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159562"
 ---
 # <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>Jak przeprowadzić migrację z Newtonsoft. JSON do System. Text. JSON
 
@@ -54,7 +54,7 @@ W poniższej tabeli wymieniono funkcje `Newtonsoft.Json` i `System.Text.Json` od
 | Zdeserializować typu wywnioskowanego do właściwości `object`      | Nieobsługiwane ⚠️ [, obejście, przykład](#deserialization-of-object-properties) |
 | Deserializacja literału `null` JSON do typów niedopuszczających wartości null | Nieobsługiwane ⚠️ [, obejście, przykład](#deserialize-null-to-non-nullable-type) |
 | Deserializacja do niemodyfikowalnych klas i struktur          | Nieobsługiwane ⚠️ [, obejście, przykład](#deserialize-to-immutable-classes-and-structs) |
-| Atrybut `[JsonConstructor]`                         | Nieobsługiwane ⚠️ [, obejście, przykład](#specify-constructor-to-use) |
+| atrybut `[JsonConstructor]`                         | Nieobsługiwane ⚠️ [, obejście, przykład](#specify-constructor-to-use) |
 | ustawienie `Required` w atrybucie `[JsonProperty]`        | Nieobsługiwane ⚠️ [, obejście, przykład](#required-properties) |
 | ustawienie `NullValueHandling` w atrybucie `[JsonProperty]` | Nieobsługiwane ⚠️ [, obejście, przykład](#conditionally-ignore-a-property)  |
 | ustawienie `DefaultValueHandling` w atrybucie `[JsonProperty]` | Nieobsługiwane ⚠️ [, obejście, przykład](#conditionally-ignore-a-property)  |
@@ -81,7 +81,7 @@ Nie jest to pełna lista funkcji `Newtonsoft.Json`. Lista zawiera wiele scenariu
 
 <xref:System.Text.Json> jest domyślnie rygorystyczne i pozwala uniknąć wszelkich odgadnąć lub interpretacji w imieniu wywołującego, podkreślając deterministyczne zachowanie. Biblioteka jest celowo zaprojektowana w taki sposób, aby uzyskać wydajność i bezpieczeństwo. Domyślnie `Newtonsoft.Json` jest elastyczny. Ta podstawowa różnica w projekcie jest zbyt wiele z poniższych konkretnych różnic w domyślnym zachowaniu.
 
-### <a name="case-insensitive-deserialization"></a>Deserializacja bez uwzględniania wielkości liter 
+### <a name="case-insensitive-deserialization"></a>Deserializacja bez uwzględniania wielkości liter
 
 Podczas deserializacji `Newtonsoft.Json` domyślnie dopasowywania nazw właściwości bez uwzględniania wielkości liter. W <xref:System.Text.Json> domyślnym rozróżniana jest wielkość liter, co zapewnia lepszą wydajność, ponieważ jest to dokładne dopasowanie. Aby uzyskać informacje o sposobie dopasowywania wielkości liter, zobacz dopasowanie do [wielkości](system-text-json-how-to.md#case-insensitive-property-matching)liter.
 
@@ -194,7 +194,7 @@ Konwertery niestandardowe można zaimplementować dla typów, które nie mają w
 
 `Newtonsoft.Json` może serializować lub deserializować liczby reprezentowane przez ciągi JSON (ujęte w cudzysłowy). Na przykład może akceptować: `{"DegreesCelsius":"23"}`, a nie `{"DegreesCelsius":23}`. Aby włączyć to zachowanie w <xref:System.Text.Json>, zaimplementuj niestandardowy konwerter, jak w poniższym przykładzie. Konwerter obsługuje właściwości zdefiniowane jako `long`:
 
-* Serializować je jako ciągi JSON. 
+* Serializować je jako ciągi JSON.
 * Akceptuje liczby i cyfry JSON w cudzysłowie podczas deserializacji.
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/LongToStringConverter.cs)]
@@ -238,7 +238,7 @@ Jednakże `System.Text.Json` traktuje `null` tak samo jak `Newtonsoft.Json` i zw
 
 Aby zaimplementować wnioskowanie o właściwościach `object`, Utwórz konwerter jak przykład w temacie [How to Write Custom Converters](system-text-json-converters-how-to.md#deserialize-inferred-types-to-object-properties).
 
-### <a name="deserialize-null-to-non-nullable-type"></a>Deserializacja wartości null na typ niedopuszczający wartości null 
+### <a name="deserialize-null-to-non-nullable-type"></a>Deserializacja wartości null na typ niedopuszczający wartości null
 
 `Newtonsoft.Json` nie zgłasza wyjątku w następującym scenariuszu:
 
@@ -326,7 +326,7 @@ Poprzedni kod konwertera to uproszczony przykład. Dodatkowa logika powinna być
 
 `Newtonsoft.Json` ma kilka sposobów, aby warunkowo ignorować właściwość podczas serializacji lub deserializacji:
 
-* `DefaultContractResolver` umożliwia wybranie właściwości, które mają zostać dołączone lub wykluczone w oparciu o dowolne kryteria. 
+* `DefaultContractResolver` umożliwia wybranie właściwości, które mają zostać dołączone lub wykluczone w oparciu o dowolne kryteria.
 * Ustawienia `NullValueHandling` i `DefaultValueHandling` na `JsonSerializerSettings` pozwalają określić, że wszystkie właściwości null-value lub wartość domyślna wartości powinny być ignorowane.
 * Ustawienia `NullValueHandling` i `DefaultValueHandling` w atrybucie `[JsonProperty]` umożliwiają określanie poszczególnych właściwości, które mają być ignorowane, gdy wartość jest równa null lub wartości domyślnej.
 
@@ -341,7 +341,7 @@ Te opcje **nie** pozwalają:
 * Zignoruj wszystkie właściwości, które mają wartość domyślną dla tego typu.
 * Ignoruj wybrane właściwości, które mają wartość domyślną dla tego typu.
 * Ignoruj wybrane właściwości, jeśli ich wartość jest równa null.
-* Ignoruj wybrane właściwości na podstawie arbitralnych kryteriów ocenionych w czasie wykonywania. 
+* Ignoruj wybrane właściwości na podstawie arbitralnych kryteriów ocenionych w czasie wykonywania.
 
 W przypadku tej funkcji można napisać konwerter niestandardowy. Oto przykład POCO i niestandardowy konwerter dla niego, który ilustruje następujące podejście:
 
@@ -349,7 +349,7 @@ W przypadku tej funkcji można napisać konwerter niestandardowy. Oto przykład 
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecastRuntimeIgnoreConverter.cs)]
 
-Konwerter powoduje pominięcie właściwości `Summary` z serializacji, jeśli jej wartość jest równa null, pusty ciąg lub "N/A". 
+Konwerter powoduje pominięcie właściwości `Summary` z serializacji, jeśli jej wartość jest równa null, pusty ciąg lub "N/A".
 
 Zarejestrowanie tego konwertera niestandardowego przy [użyciu atrybutu klasy](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-type) lub przez [dodanie konwertera](system-text-json-converters-how-to.md#registration-sample---converters-collection) do kolekcji <xref:System.Text.Json.JsonSerializerOptions.Converters>.
 
@@ -446,7 +446,7 @@ Domyślnie `Newtonsoft.Json` serializacji według wartości. Na przykład jeśli
 
 ### <a name="jsondocument-is-idisposable"></a>JsonDocument jest interfejs IDisposable
 
-`JsonDocument` kompiluje widok danych w pamięci w buforze puli. W związku z tym, w przeciwieństwie do `JObject` lub `JArray` z `Newtonsoft.Json`, typ `JsonDocument` implementuje `IDisposable` i musi być używany wewnątrz bloku using. 
+`JsonDocument` kompiluje widok danych w pamięci w buforze puli. W związku z tym, w przeciwieństwie do `JObject` lub `JArray` z `Newtonsoft.Json`, typ `JsonDocument` implementuje `IDisposable` i musi być używany wewnątrz bloku using.
 
 Zwróć `JsonDocument` z interfejsu API, jeśli chcesz przenieść własność okresu istnienia i usunąć odpowiedzialność do obiektu wywołującego. W większości przypadków nie jest to konieczne. Jeśli obiekt wywołujący musi współdziałać z całym dokumentem JSON, zwróć <xref:System.Text.Json.JsonElement.Clone%2A> <xref:System.Text.Json.JsonDocument.RootElement%2A>, który jest <xref:System.Text.Json.JsonElement>. Jeśli obiekt wywołujący musi pracować z określonym elementem w dokumencie JSON, zwróć <xref:System.Text.Json.JsonElement.Clone%2A> tego <xref:System.Text.Json.JsonElement>. Jeśli powrócisz `RootElement` lub element podrzędny bezpośrednio bez tworzenia `Clone`, obiekt wywołujący nie będzie w stanie uzyskać dostępu do zwróconej `JsonElement` po usunięciu `JsonDocument`, do którego należy.
 
@@ -456,7 +456,7 @@ Oto przykład, który wymaga wprowadzenia `Clone`:
 public JsonElement LookAndLoad(JsonElement source)
 {
     string json = File.ReadAllText(source.GetProperty("fileName").GetString());
-   
+
     using (JsonDocument doc = JsonDocument.Parse(json))
     {
         return doc.RootElement.Clone();
@@ -464,7 +464,7 @@ public JsonElement LookAndLoad(JsonElement source)
 }
 ```
 
-Poprzedni kod oczekuje `JsonElement`, który zawiera właściwość `fileName`. Otwiera plik JSON i tworzy `JsonDocument`. Metoda zakłada, że obiekt wywołujący chce współpracować z całym dokumentem, dlatego zwraca `Clone` `RootElement`. 
+Poprzedni kod oczekuje `JsonElement`, który zawiera właściwość `fileName`. Otwiera plik JSON i tworzy `JsonDocument`. Metoda zakłada, że obiekt wywołujący chce współpracować z całym dokumentem, dlatego zwraca `Clone` `RootElement`.
 
 Jeśli zostanie wyświetlony `JsonElement` i zwróci element podrzędny, nie trzeba zwracać `Clone` elementu podrzędnego. Obiekt wywołujący jest odpowiedzialny za utrzymanie aktywności `JsonDocument`, do której należy `JsonElement` zakończono. Na przykład:
 
@@ -514,7 +514,7 @@ Aby osiągnąć najlepszą możliwą wydajność przy użyciu `Utf8JsonReader`, 
 
 `Utf8JsonReader` obsługuje odczytywanie z zakodowanego w formacie UTF-8 [ReadOnlySpan\<bajt >](xref:System.ReadOnlySpan%601) lub [ReadOnlySequence\<bajt >](xref:System.Buffers.ReadOnlySequence%601) (który jest wynikiem odczytu z <xref:System.IO.Pipelines.PipeReader>).
 
-W przypadku odczytu synchronicznego można odczytać ładunek JSON do końca strumienia w tablicy bajtów i przekazać go do czytnika. Do odczytywania z ciągu (zakodowanego jako UTF-16) Wywołaj <xref:System.Text.Encoding.UTF8>.<xref:System.Text.Encoding.GetBytes%2A> Aby najpierw transkodowanie ciąg do tablicy bajtów zakodowanych w formacie UTF-8. Następnie Przekaż go do `Utf8JsonReader`. 
+W przypadku odczytu synchronicznego można odczytać ładunek JSON do końca strumienia w tablicy bajtów i przekazać go do czytnika. Do odczytywania z ciągu (zakodowanego jako UTF-16) Wywołaj <xref:System.Text.Encoding.UTF8>.<xref:System.Text.Encoding.GetBytes%2A> Aby najpierw transkodowanie ciąg do tablicy bajtów zakodowanych w formacie UTF-8. Następnie Przekaż go do `Utf8JsonReader`.
 
 Ponieważ `Utf8JsonReader` traktuje dane wejściowe jako tekst JSON, znacznik kolejności bajtów UTF-8 jest uznawany za nieprawidłowy kod JSON. Obiekt wywołujący musi odfiltrować to wyjście przed przekazaniem danych do czytnika.
 

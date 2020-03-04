@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/05/2019
 ms.technology: dotnet-cli
 ms.custom: updateeachrelease
-ms.openlocfilehash: af1b374cd14d5070194c035024ce2328c9016646
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: fe69521a6ac88055e3e8c8502a7e19a72667dbef
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503542"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240860"
 ---
 # <a name="get-started-with-net-core-using-the-net-core-cli"></a>Rozpoczynanie pracy z platformą .NET Core przy użyciu interfejs wiersza polecenia platformy .NET Core
 
@@ -40,30 +40,30 @@ Wykonajmy szybkie wskazówki:
 01. `dotnet new console`
 
     Program [dotnet New](../tools/dotnet-new.md) tworzy aktualny plik projektu *Hello. csproj* z zależnościami niezbędnymi do skompilowania aplikacji konsolowej. Tworzy również *program.cs*, podstawowy plik zawierający punkt wejścia dla aplikacji.
-    
+
     *Witaj. csproj*:
-    
-    [!code-xml[Hello.csproj](~/samples/core/console-apps/HelloMsBuild/Hello.csproj)]
-    
+
+    [!code-xml[Hello.csproj](~/samples/snippets/core/tutorials/cli-create-console-app/HelloMsBuild/csharp/Hello.csproj)]
+
     Plik projektu określa wszystko, co jest potrzebne do przywrócenia zależności i skompilowania programu.
-    
+
     - `<OutputType>` element określa, że tworzysz plik wykonywalny, innymi słowy, Aplikacja konsolowa.
     - `<TargetFramework>` element określa, która implementacja platformy .NET jest celem. W zaawansowanym scenariuszu można określić wiele platform docelowych i skompilować je do wszystkich w ramach jednej operacji. W tym samouczku dojdziemy do kompilowania tylko dla platformy .NET Core 3,1.
-    
+
     *Program.cs*:
-    
-    [!code-csharp[Program.cs](~/samples/core/console-apps/HelloMsBuild/Program.cs)]
-    
+
+    [!code-csharp[Program.cs](~/samples/snippets/core/tutorials/cli-create-console-app/HelloMsBuild/csharp/Program.cs)]
+
     Program jest uruchamiany przez `using System`, co oznacza, że w zakresie dla tego pliku można przenieść wszystko w przestrzeni nazw `System`. Przestrzeń nazw `System` zawiera klasę `Console`.
-    
+
     Następnie zdefiniujemy przestrzeń nazw o nazwie `Hello`. Możesz to zmienić w dowolny sposób. Klasa o nazwie `Program` jest zdefiniowana w tej przestrzeni nazw, z metodą `Main`, która pobiera tablicę ciągów o nazwie `args`. Ta tablica zawiera listę argumentów przekazaną podczas uruchamiania programu. W takim przypadku tablica nie jest używana, a program po prostu zapisuje tekst "Hello world!" do konsoli programu. Później wprowadzimy zmiany w kodzie, który będzie korzystał z tego argumentu.
-    
+
     wywołania `dotnet new` [dotnet Restore](../tools/dotnet-restore.md) niejawnie. `dotnet restore` wywołania [NuGet](https://www.nuget.org/) (Menedżer pakietów .NET) w celu przywrócenia drzewa zależności. Pakiet NuGet analizuje plik *Hello. csproj* , pobiera zależności zdefiniowane w pliku (lub zbiera je z pamięci podręcznej na maszynie) i zapisuje plik *obj/Project. assets. JSON* , który jest niezbędny do skompilowania i uruchomienia przykładu.
 
 02. `dotnet run`
 
     [uruchomienia](../tools/dotnet-run.md) programu dotnet [Kompiluj kompilacje dotnet](../tools/dotnet-build.md) , aby upewnić się, że cele kompilacji zostały skompilowane, a następnie wywoła `dotnet <assembly.dll>`, aby uruchomić aplikację docelową.
-    
+
     ```dotnetcli
     dotnet run
     ```
@@ -73,9 +73,9 @@ Wykonajmy szybkie wskazówki:
     ```console
     Hello World!
     ```
-    
+
     Alternatywnie można również uruchomić `dotnet build`, aby skompilować kod bez uruchamiania aplikacji konsolowej kompilacji. Powoduje to skompilowaną aplikację jako plik DLL, na podstawie nazwy projektu. W takim przypadku utworzony plik ma nazwę *Hello. dll*. Ta aplikacja może być uruchamiana z `dotnet bin\Debug\netcoreapp3.1\Hello.dll` w systemie Windows (Użyj `/` dla systemów innych niż Windows).
-    
+
     ```dotnetcli
     dotnet bin\Debug\netcoreapp3.1\Hello.dll
     ```
@@ -85,7 +85,7 @@ Wykonajmy szybkie wskazówki:
     ```console
     Hello World!
     ```
-    
+
     Po skompilowaniu aplikacji tworzony jest plik wykonywalny specyficzny dla systemu operacyjnego wraz z `Hello.dll`. W systemie Windows `Hello.exe`; w systemie Linux lub macOS `hello`. W powyższym przykładzie plik ma nazwę z `Hello.exe` lub `Hello`. Można uruchomić ten plik wykonywalny bezpośrednio.
 
     ```console
@@ -100,7 +100,7 @@ Zmieńmy program na bit. Liczby Fibonacci są przyjemne, więc Dodajmy ten argum
 
 01. Zastąp zawartość pliku *program.cs* następującym kodem:
 
-    [!code-csharp[Fibonacci](~/samples/core/console-apps/fibonacci-msbuild/Program.cs)]
+    [!code-csharp[Fibonacci](~/samples/snippets/core/tutorials/cli-create-console-app/fibonacci-msbuild/csharp/Program.cs)]
 
 02. Uruchom [kompilację dotnet](../tools/dotnet-build.md) , aby skompilować zmiany.
 
@@ -140,11 +140,11 @@ Pojedyncze pliki są ograniczone do prostych programów jednostronnych, ale jeś
 
 01. Dodaj nowy plik w katalogu *Hello* o nazwie *FibonacciGenerator.cs* przy użyciu następującego kodu:
 
-    [!code-csharp[Fibonacci Generator](~/samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]
+    [!code-csharp[Fibonacci Generator](~/samples/snippets/core/tutorials/cli-create-console-app/FibonacciBetterMsBuild/csharp/FibonacciGenerator.cs)]
 
 02. Zmień metodę `Main` w pliku *program.cs* , aby utworzyć wystąpienie nowej klasy i wywołać jej metodę, tak jak w poniższym przykładzie:
 
-    [!code-csharp[New Program.cs](~/samples/core/console-apps/FibonacciBetterMsBuild/Program.cs)]
+    [!code-csharp[New Program.cs](~/samples/snippets/core/tutorials/cli-create-console-app/FibonacciBetterMsBuild/csharp/Program.cs)]
 
 03. Uruchom [kompilację dotnet](../tools/dotnet-build.md) , aby skompilować zmiany.
 

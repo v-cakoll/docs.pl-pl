@@ -2,12 +2,12 @@
 title: Tworzenie kompletnego rozwiązania .NET Core przy użyciu Visual Studio dla komputerów Mac
 description: W tym artykule omówiono tworzenie rozwiązania .NET Core, które obejmuje biblioteki wielokrotnego użytku i testy jednostkowe.
 ms.date: 12/19/2019
-ms.openlocfilehash: dea23da33912de849f0dcbe1e2f6fa3edb3a5e24
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 8c9fcca404a3875b6bb7f9cf20551a017ff553c5
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215207"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239966"
 ---
 # <a name="build-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Tworzenie kompletnego rozwiązania .NET Core w systemie macOS przy użyciu Visual Studio dla komputerów Mac
 
@@ -42,7 +42,7 @@ Aby uzyskać więcej informacji na temat wymagań wstępnych, zobacz [zależnoś
 
 1. W konsoli **rozwiązania** rozwiń węzeł `TextUtils`, aby odsłonić plik klasy dostarczony przez szablon, *Class1.cs*. Naciśnij klawisz Ctrl i kliknij plik, wybierz polecenie **Zmień nazwę** z menu kontekstowego, a następnie zmień nazwę pliku na *WORDCOUNT.cs*. Otwórz plik i Zastąp jego zawartość następującym kodem:
 
-   [!code-csharp[Main](../../../samples/core/tutorials/using-on-mac-vs-full-solution/WordCounter/TextUtils/WordCount.cs)]
+   [!code-csharp[Main](../../../samples/snippets/core/tutorials/using-on-mac-vs-full-solution/csharp/TextUtils/WordCount.cs)]
 
 1. Zapisz plik przy użyciu jednej z trzech różnych metod <kbd>&#8984;</kbd> : Użyj skrótu klawiaturowego+<kbd>s</kbd>, wybierz pozycję **plik** > **Zapisz** z menu lub kliknij przycisk CTRL-kliknięcie na karcie plik i wybierz pozycję **Zapisz** z menu kontekstowego. Na poniższej ilustracji przedstawiono okno środowiska IDE:
 
@@ -175,7 +175,7 @@ Testy jednostkowe zapewniają zautomatyzowane testowanie oprogramowania podczas 
 
 1. Otwórz plik *program.cs* . Zastąp kod następującym kodem:
 
-   [!code-csharp[Main](../../../samples/core/tutorials/using-on-mac-vs-full-solution/WordCounter/WordCounterApp/Program.cs)]
+   [!code-csharp[Main](../../../samples/snippets/core/tutorials/using-on-mac-vs-full-solution/csharp/WordCounterApp/Program.cs)]
 
 1. Naciśnij klawisz Ctrl i kliknij projekt `WordCounterApp` i wybierz polecenie **Uruchom projekt** z menu kontekstowego. Po uruchomieniu aplikacji podaj wartości dla wyrazu wyszukiwania i ciąg wejściowy na monitach w oknie konsoli. Aplikacja wskazuje, ile razy słowo wyszukiwania ma być wyświetlane w ciągu.
 

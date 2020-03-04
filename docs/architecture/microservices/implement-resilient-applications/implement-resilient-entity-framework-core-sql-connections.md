@@ -2,12 +2,12 @@
 title: Zaimplementuj odporne Entity Framework Core połączenia SQL
 description: Dowiedz się, jak zaimplementować odporne Entity Framework Core połączenia SQL. Ta technika jest szczególnie ważna w przypadku korzystania z Azure SQL Database w chmurze.
 ms.date: 10/16/2018
-ms.openlocfilehash: 0ded30469bb4985fed7b60938756046531c8feea
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 7a047edca21d63a451e90f407b23f3358d461330
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777060"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78241068"
 ---
 # <a name="implement-resilient-entity-framework-core-sql-connections"></a>Zaimplementuj odporne Entity Framework Core połączenia SQL
 
@@ -49,7 +49,7 @@ Jeśli spróbujesz wykonać tę transakcję przy użyciu strategii wykonywania E
 
 > System. InvalidOperationException: skonfigurowana strategia wykonywania "SqlServerRetryingExecutionStrategy" nie obsługuje transakcji inicjowanych przez użytkownika. Użyj strategii wykonywania zwróconej przez obiekt "DbContext. Database. CreateExecutionStrategy ()", aby wykonać wszystkie operacje w transakcji jako jednostkę wywołały.
 
-Rozwiązaniem jest ręczne Wywołaj strategię wykonywania EF z delegatem reprezentującym wszystkie elementy, które należy wykonać. Jeśli wystąpi błąd przejściowy, strategia wykonywania wywoła ponownie delegata. Na przykład poniższy kod pokazuje, w jaki sposób jest implementowany w eShopOnContainers przy użyciu dwóch wielu dbcontexts (\_catalogContext i IntegrationEventLogContext) podczas aktualizowania produktu, a następnie zapisywania obiektu ProductPriceChangedIntegrationEvent, który musi korzystać z innego DbContext.
+Rozwiązaniem jest ręczne Wywołaj strategię wykonywania EF z delegatem reprezentującym wszystkie elementy, które należy wykonać. Jeśli wystąpi błąd przejściowy, strategia wykonywania ponownie wywoła delegata. Na przykład poniższy kod pokazuje, w jaki sposób jest implementowany w eShopOnContainers przy użyciu dwóch wielu dbcontexts (\_catalogContext i IntegrationEventLogContext) podczas aktualizowania produktu, a następnie zapisywania obiektu ProductPriceChangedIntegrationEvent, który musi korzystać z innego DbContext.
 
 ```csharp
 public async Task<IActionResult> UpdateProduct(
@@ -153,5 +153,5 @@ public class ResilientTransaction
   <https://devblogs.microsoft.com/cesardelatorre/using-resilient-entity-framework-core-sql-connections-and-transactions-retries-with-exponential-backoff/>
 
 >[!div class="step-by-step"]
->[Poprzedni](implement-retries-exponential-backoff.md)
->[Następny](explore-custom-http-call-retries-exponential-backoff.md)
+>[Poprzednie](implement-retries-exponential-backoff.md)
+>[dalej](use-httpclientfactory-to-implement-resilient-http-requests.md)

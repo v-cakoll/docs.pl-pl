@@ -3,12 +3,12 @@ title: Wprowadzenie do języka C# i programu Visual Studio Code
 description: Dowiedz się, jak utworzyć i debugować pierwszą aplikację platformy .NET C# Core w programie przy użyciu Visual Studio Code.
 author: kendrahavens
 ms.date: 12/05/2018
-ms.openlocfilehash: acd1c300545bc6c107552576180afd7dec6b7382
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: ef7134e26c1ded3926faa51748c1b6d4a461008f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503520"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156611"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Wprowadzenie do języka C# i programu Visual Studio Code
 
@@ -113,7 +113,7 @@ Możesz również obejrzeć krótki samouczek wideo dotyczący dalszej instalacj
 
     ```csharp
     using System;
-    
+
     namespace HelloWorld
     {
         class Program

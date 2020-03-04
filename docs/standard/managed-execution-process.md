@@ -10,12 +10,12 @@ helpviewer_keywords:
 - managed execution process
 - common language runtime, managed execution process
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
-ms.openlocfilehash: 0ce7182af33a795188d01ac457b9d45b8ad305dd
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 46a266849f137076170287aeb10becedf83ccf78
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960388"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160225"
 ---
 # <a name="managed-execution-process"></a>Proces zarządzanego wykonania
 <a name="introduction"></a>Zarządzany proces wykonywania obejmuje następujące kroki, które opisano szczegółowo w dalszej części tego tematu:  
@@ -36,7 +36,7 @@ ms.locfileid: "74960388"
   
      Środowisko uruchomieniowe języka wspólnego zapewnia infrastrukturę, która umożliwia wykonywanie i korzystanie z usług, których można użyć podczas wykonywania.  
   
-<a name="choosing_a_compiler"></a>   
+<a name="choosing_a_compiler"></a>
 ## <a name="choosing-a-compiler"></a>Wybieranie kompilatora  
  Aby uzyskać korzyści zapewniane przez środowisko uruchomieniowe języka wspólnego (CLR), należy użyć co najmniej jednego kompilatora języka, który jest przeznaczony dla środowiska uruchomieniowego, takiego C#jak Visual Basic C++, F#, Wizualizacja lub jeden z wielu kompilatorów innych firm, takich jak Eiffel, Perl lub COBOL.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "74960388"
   
  [Powrót do początku](#introduction)  
   
-<a name="compiling_to_msil"></a>   
+<a name="compiling_to_msil"></a>
 ## <a name="compiling-to-msil"></a>Kompilowanie do MSIL  
  Podczas kompilowania do kodu zarządzanego kompilator tłumaczy kod źródłowy do języka pośredniego firmy Microsoft (MSIL), który jest zestawem instrukcji zależnych od procesora CPU, które mogą być efektywnie konwertowane na kod natywny. MSIL zawiera instrukcje dotyczące ładowania, przechowywania, inicjowania i wywoływania metod dla obiektów, a także instrukcje dotyczące operacji arytmetycznych i logicznych, przepływu sterowania, bezpośredniego dostępu do pamięci, obsługi wyjątków i innych operacji. Aby można było uruchomić kod, MSIL musi być konwertowany na kod specyficzny dla procesora CPU, zazwyczaj przez [kompilator just-in-Time (JIT)](#compiling_msil_to_native_code). Ponieważ środowisko uruchomieniowe języka wspólnego dostarcza co najmniej jeden kompilator JIT dla każdej obsługiwanej architektury komputera, ten sam zestaw MSIL może być skompilowany w sposób JIT i uruchamiany w dowolnej z obsługiwanych architektur.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "74960388"
   
  [Powrót do początku](#introduction)  
   
-<a name="compiling_msil_to_native_code"></a>   
+<a name="compiling_msil_to_native_code"></a>
 ## <a name="compiling-msil-to-native-code"></a>Kompilowanie MSIL do kodu natywnego  
  Zanim będzie możliwe uruchomienie języka pośredniego firmy Microsoft (MSIL), należy go skompilować względem środowiska uruchomieniowego języka wspólnego do kodu natywnego dla architektury maszyny docelowej. .NET Framework zapewnia dwa sposoby przeprowadzenia tej konwersji:  
   
@@ -89,7 +89,7 @@ ms.locfileid: "74960388"
   
  [Powrót do początku](#introduction)  
   
-<a name="running_code"></a>   
+<a name="running_code"></a>
 ## <a name="running-code"></a>Uruchamianie kodu  
  Środowisko uruchomieniowe języka wspólnego udostępnia infrastrukturę, która umożliwia zarządzanie wykonywaniem i usługami, które mogą być używane podczas wykonywania. Aby można było uruchomić metodę, należy ją skompilować do kodu specyficznego dla procesora. Każda metoda, dla której Wygenerowano MSIL, jest skompilowana w trybie JIT, gdy jest wywoływana po raz pierwszy, a następnie uruchamiana. Przy następnym uruchomieniu metody zostanie uruchomiony istniejący kod natywny skompilowany przez JIT. Proces kompilowania JIT i uruchamiania kodu jest powtarzany, dopóki wykonywanie nie zostanie ukończone.  
   
@@ -105,14 +105,14 @@ ms.locfileid: "74960388"
   
  [Powrót do początku](#introduction)  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Omówienie](../../docs/framework/get-started/overview.md)
 - [Niezależność od języka i składniki niezależne od języka](../../docs/standard/language-independence-and-language-independent-components.md)
 - [Składniki samoopisujące się i metadane](../../docs/standard/metadata-and-self-describing-components.md)
 - [Ilasm.exe (asembler IL)](../../docs/framework/tools/ilasm-exe-il-assembler.md)
-- [Security](../../docs/standard/security/index.md)
+- [Bezpieczeństwo](../../docs/standard/security/index.md)
 - [Współdziałanie z kodem niezarządzanym](../../docs/framework/interop/index.md)
-- [Wdrażanie](../../docs/framework/deployment/net-framework-applications.md)
+- [Wdrożenie](../../docs/framework/deployment/net-framework-applications.md)
 - [Zestawy w środowisku .NET](assembly/index.md)
 - [Domeny aplikacji](../../docs/framework/app-domains/application-domains.md)

@@ -4,12 +4,12 @@ description: Poznaj koncepcje testów jednostkowych w C# oprogramowaniu i .NET C
 author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
-ms.openlocfilehash: 2d432f5efd6f8de3593f939abbd488f9fe68b73e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: bd7891243d84277a7578089f8b4629ff5bada577
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715397"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240912"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>Testowanie C# jednostkowe za pomocą MSTest i .NET Core
 
@@ -36,15 +36,15 @@ namespace Prime.Services
 {
     public class PrimeService
     {
-        public bool IsPrime(int candidate) 
+        public bool IsPrime(int candidate)
         {
             throw new NotImplementedException("Please create a test first.");
-        } 
+        }
     }
 }
 ```
 
-Zmień katalog z powrotem do katalogu *testowego MSTest* . Uruchom [`dotnet sln add PrimeService/PrimeService.csproj`](../tools/dotnet-sln.md) , aby dodać projekt biblioteki klas do rozwiązania. 
+Zmień katalog z powrotem do katalogu *testowego MSTest* . Uruchom [`dotnet sln add PrimeService/PrimeService.csproj`](../tools/dotnet-sln.md) , aby dodać projekt biblioteki klas do rozwiązania.
 
 ## <a name="create-the-test-project"></a>Utwórz projekt testu
 
@@ -90,7 +90,7 @@ W poniższym konspekcie przedstawiono końcowy układ rozwiązania:
         PrimeServiceTests.csproj
 ```
 
-Wykonaj [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj`](../tools/dotnet-sln.md) w katalogu *testowania jednostkowego-using-MSTest* . 
+Wykonaj [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj`](../tools/dotnet-sln.md) w katalogu *testowania jednostkowego-using-MSTest* .
 
 ## <a name="create-the-first-test"></a>Tworzenie pierwszego testu
 
@@ -123,7 +123,7 @@ namespace Prime.UnitTests.Services
 }
 ```
 
-[Atrybut TestClass](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute) oznacza klasę, która zawiera testy jednostkowe. [Atrybut TestMethod](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute) wskazuje, że metoda jest metodą testową. 
+[Atrybut TestClass](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute) oznacza klasę, która zawiera testy jednostkowe. [Atrybut TestMethod](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute) wskazuje, że metoda jest metodą testową.
 
 Zapisz ten plik i wykonaj [`dotnet test`](../tools/dotnet-test.md) , aby skompilować testy i bibliotekę klas, a następnie uruchom testy. Program MSTest Test Runner zawiera punkt wejścia programu do uruchamiania testów. `dotnet test` uruchamia program Test Runner przy użyciu utworzonego projektu testu jednostkowego.
 
@@ -148,7 +148,7 @@ Teraz, po wykonaniu jednego przebiegu testowego, należy napisać więcej. Istni
 
 Zamiast tworzyć nowe testy, Zastosuj te dwa atrybuty w celu utworzenia pojedynczego testu opartego na danych. Test oparty na danych to metoda, która sprawdza kilka wartości mniejszej niż dwa, co jest najniższym numerem:
 
-[!code-csharp[Sample_TestCode](../../../samples/core/getting-started/unit-testing-using-mstest/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
+[!code-csharp[Sample_TestCode](../../../samples/snippets/core/testing/unit-testing-using-mstest/csharp/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
 
 Uruchom `dotnet test`i dwa z tych testów zakończą się niepowodzeniem. Aby wszystkie testy zostały zakończone pomyślnie, należy zmienić klauzulę `if` na początku metody:
 
@@ -160,8 +160,8 @@ Kontynuuj iteracje, dodając więcej testów, więcej teorie i więcej kodu w bi
 
 Utworzono niewielką bibliotekę i zestaw testów jednostkowych dla tej biblioteki. Rozbudowane rozwiązanie jest przeznaczone do dodawania nowych pakietów i testów jest częścią normalnego przepływu pracy. Zbyt najwięcej czasu i wysiłku na rozwiązywanie celów aplikacji.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting>
-- [Użyj struktury MSTest w testach jednostkowych](/visualstudio/test/using-microsoft-visualstudio-testtools-unittesting-members-in-unit-tests)
+- [Używanie struktury MSTest w testach jednostkowych](/visualstudio/test/using-microsoft-visualstudio-testtools-unittesting-members-in-unit-tests)
 - [Dokumentacja platformy testowej MSTest v2](https://github.com/Microsoft/testfx-docs)

@@ -4,16 +4,16 @@ description: Dowiedz się więcej o wzorcach zdarzeń .NET i sposobach tworzenia
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: a050dc9a11470ff3b71488ce2ab4b92e607aa9b0
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 517e46ffec163a9bd49baa58fc0b37b54b2b2809
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037171"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239862"
 ---
 # <a name="standard-net-event-patterns"></a>Standardowe wzorce zdarzeń platformy .NET
 
-[Ubiegł](events-overview.md)
+[Wstecz](events-overview.md)
 
 Zdarzenia platformy .NET zwykle są zgodne z kilkoma znanymi wzorcami. Ujednolicenie tych wzorców oznacza, że deweloperzy mogą korzystać z wiedzy o standardowych wzorcach, które można zastosować do dowolnego programu zdarzeń platformy .NET.
 
@@ -40,7 +40,7 @@ Korzystanie z modelu zdarzeń zapewnia pewne zalety projektowania. Można utworz
 
 Oto początkowa deklaracja argumentu zdarzenia do znajdowania szukanego pliku: 
 
-[!code-csharp[EventArgs](../../samples/csharp/events/Program.cs#EventArgsV1 "Define event arguments")]
+[!code-csharp[EventArgs](../../samples/snippets/csharp/events/Program.cs#EventArgsV1 "Define event arguments")]
 
 Mimo że ten typ wygląda jak mały typ danych, należy przestrzegać Konwencji i wprowadzić jako typ odwołania (`class`). Oznacza to, że obiekt argumentu zostanie przesłany przez odwołanie, a wszystkie aktualizacje danych będą widoczne dla wszystkich subskrybentów. Pierwsza wersja jest niezmiennym obiektem. Należy preferować, aby właściwości w typie argumentu zdarzenia były niezmienne. Dzięki temu jeden subskrybent nie może zmienić wartości przed ich wyświetleniem przez innego subskrybenta. (Istnieją wyjątki dotyczące tego, jak pokazano poniżej).  
 
@@ -48,21 +48,21 @@ Następnie musimy utworzyć deklarację zdarzenia w klasie FileSearcher. Korzyst
 
 Wypełnijmy klasę FileSearcher, aby wyszukać pliki pasujące do wzorca, i podnieść poprawne zdarzenie, gdy zostanie odnalezione dopasowanie.
 
-[!code-csharp[FileSearcher](../../samples/csharp/events/Program.cs#FileSearcherV1 "Create the initial file searcher")]
+[!code-csharp[FileSearcher](../../samples/snippets/csharp/events/Program.cs#FileSearcherV1 "Create the initial file searcher")]
 
 ## <a name="defining-and-raising-field-like-events"></a>Definiowanie i podnoszenie zdarzeń przypominających pola
 
 Najprostszym sposobem dodania zdarzenia do klasy jest zadeklarowanie tego zdarzenia jako pola publicznego, jak w poprzednim przykładzie:
 
-[!code-csharp[DeclareEvent](../../samples/csharp/events/Program.cs#DeclareEvent "Declare the file found event")]
+[!code-csharp[DeclareEvent](../../samples/snippets/csharp/events/Program.cs#DeclareEvent "Declare the file found event")]
 
 Wygląda na to, że deklaruje pole publiczne, które wydaje się być niewłaściwym sposobem postępowania zorientowanego obiektowo. Chcesz chronić dostęp do danych za poorednictwem właściwości lub metod. Chociaż może to wyglądać jak niewłaściwe rozwiązanie, kod wygenerowany przez kompilator tworzy otoki, tak aby obiekty zdarzeń były dostępne tylko w bezpieczny sposób. Jedyne operacje dostępne na zdarzeniu podobnym do pola to procedura obsługi dodawania:
 
-[!code-csharp[DeclareEventHandler](../../samples/csharp/events/Program.cs#DeclareEventHandler "Declare the file found event handler")]
+[!code-csharp[DeclareEventHandler](../../samples/snippets/csharp/events/Program.cs#DeclareEventHandler "Declare the file found event handler")]
 
 i Usuń procedurę obsługi:
 
-[!code-csharp[RemoveEventHandler](../../samples/csharp/events/Program.cs#RemoveHandler "Remove the event handler")]
+[!code-csharp[RemoveEventHandler](../../samples/snippets/csharp/events/Program.cs#RemoveHandler "Remove the event handler")]
 
 Należy zauważyć, że dla programu obsługi istnieje zmienna lokalna. Jeśli użyto treści wyrażenia lambda, usuwanie nie będzie działało poprawnie. Będzie ono innym wystąpieniem delegata i w trybie dyskretnym nic nie rób.
 
@@ -86,7 +86,7 @@ Gdy Wszyscy subskrybenci napotkają zgłoszone zdarzenie, składnik FileSearcher
 
 Zaimplementujmy pierwszą wersję dla tego przykładu. Należy dodać pole Boolean o nazwie `CancelRequested` do typu `FileFoundArgs`:
 
-[!code-csharp[EventArgs](../../samples/csharp/events/Program.cs#EventArgs "Update event arguments")]
+[!code-csharp[EventArgs](../../samples/snippets/csharp/events/Program.cs#EventArgs "Update event arguments")]
 
 To nowe pole jest automatycznie inicjowane w celu `false`, wartości domyślnej pola Boolean, więc nie można go anulować przypadkowo. Jedyną inną zmianą w składniku jest sprawdzenie flagi po podniesieniu zdarzenia, aby sprawdzić, czy którykolwiek z subskrybentów zażądał anulowania:
 
@@ -124,29 +124,29 @@ Może to być długotrwała operacja w katalogu z wieloma katalogami podrzędnym
 
 Zacznij od utworzenia nowej klasy pochodnej EventArgs na potrzeby raportowania nowego katalogu i postępu. 
 
-[!code-csharp[DirEventArgs](../../samples/csharp/events/Program.cs#SearchDirEventArgs "Define search directory event arguments")]
+[!code-csharp[DirEventArgs](../../samples/snippets/csharp/events/Program.cs#SearchDirEventArgs "Define search directory event arguments")]
 
 Ponownie można postępować zgodnie z zaleceniami, aby utworzyć niezmienny typ referencyjny dla argumentów zdarzeń.
 
 Następnie zdefiniuj zdarzenie. Tym razem użyjesz innej składni. Oprócz używania składni pola można jawnie utworzyć właściwość z obsługą dodawania i usuwania. W tym przykładzie nie będzie potrzebny dodatkowy kod w tych procedurach obsługi, ale pokazano, jak je utworzyć.
 
-[!code-csharp[Declare event with add and remove handlers](../../samples/csharp/events/Program.cs#DeclareSearchEvent "Declare the event with add and remove handlers")]
+[!code-csharp[Declare event with add and remove handlers](../../samples/snippets/csharp/events/Program.cs#DeclareSearchEvent "Declare the event with add and remove handlers")]
 
 Na wiele sposobów kod napisany w tym miejscu odzwierciedla kod wygenerowany przez kompilator dla definicji zdarzenia pól, które wcześniej były widoczne. Tworzysz wydarzenie przy użyciu składni podobnej do tej, która jest używana do [Właściwości](properties.md). Należy zauważyć, że programy obsługi mają różne nazwy: `add` i `remove`. Są one wywoływane, aby subskrybować zdarzenie lub anulować subskrypcję zdarzenia. Zwróć uwagę, że należy również zadeklarować prywatne pole zapasowe do przechowywania zmiennej zdarzenia. Jest ona zainicjowana na wartość null.
 
 Następnie Dodajmy Przeciążenie metody `Search`, która przechodzi podkatalogi i wywołuje oba zdarzenia. Najprostszym sposobem osiągnięcia tego celu jest użycie domyślnego argumentu w celu określenia, czy chcesz przeszukać wszystkie katalogi:
 
-[!code-csharp[SearchImplementation](../../samples/csharp/events/Program.cs#FinalImplementation "Implementation to search directories")]
+[!code-csharp[SearchImplementation](../../samples/snippets/csharp/events/Program.cs#FinalImplementation "Implementation to search directories")]
 
 W tym momencie można uruchomić aplikację wywołującą Przeciążenie do przeszukiwania wszystkich podkatalogów. Nie ma subskrybentów nowego zdarzenia `ChangeDirectory`, ale użycie `?.Invoke()` idiom gwarantuje, że działa poprawnie.
 
  Dodajmy procedurę obsługi, aby napisać wiersz pokazujący postęp w oknie konsoli. 
 
-[!code-csharp[Search](../../samples/csharp/events/Program.cs#Search "Declare event handler")]
+[!code-csharp[Search](../../samples/snippets/csharp/events/Program.cs#Search "Declare event handler")]
 
 Pojawiły się wzorce, które są obserwowane w całym ekosystemie platformy .NET.
 Poznanie tych wzorców i Konwencji umożliwia szybkie pisanie idiomatyczne C# i platformy .NET.
 
 Następnie zobaczysz pewne zmiany w tych wzorcach w najnowszej wersji programu .NET.
 
-[Next](modern-events.md)
+[Dalej](modern-events.md)

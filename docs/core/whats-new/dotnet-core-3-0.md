@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: 60794c4f8a5f9aeb7a4b3cd58c0c9f00e03fa9e7
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 6e85c2c3e796ae59a13f944bd4913e4b7316c56a
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77450983"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156572"
 ---
 # <a name="whats-new-in-net-core-30"></a>Co nowego w programie .NET Core 3.0
 
@@ -54,12 +54,40 @@ Jeśli używasz programu Visual Studio, potrzebujesz [programu Visual studio 201
 
 ### <a name="default-executables"></a>Domyślne pliki wykonywalne
 
-Platforma .NET Core teraz domyślnie kompiluje [pliki wykonywalne zależne od platformy](../deploying/index.md#publish-runtime-dependent) . To zachowanie jest nowe w przypadku aplikacji korzystających z zainstalowanej globalnie wersji platformy .NET Core. Wcześniej tylko [wstępnie zawarte wdrożenia](../deploying/index.md#publish-self-contained) spowodują utworzenie pliku wykonywalnego.
+Platforma .NET Core teraz domyślnie kompiluje [pliki wykonywalne zależne od środowiska uruchomieniowego](../deploying/index.md#publish-runtime-dependent) . To zachowanie jest nowe w przypadku aplikacji korzystających z zainstalowanej globalnie wersji platformy .NET Core. Wcześniej tylko [wstępnie zawarte wdrożenia](../deploying/index.md#publish-self-contained) spowodują utworzenie pliku wykonywalnego.
 
-W trakcie `dotnet build` lub `dotnet publish`, tworzony jest plik wykonywalny zgodny ze środowiskiem i platformą używanego zestawu SDK. Można oczekiwać, że te same elementy wykonywalne są takie same jak w przypadku innych natywnych plików wykonywalnych, takich jak:
+Podczas `dotnet build` lub `dotnet publish`, tworzony jest plik wykonywalny (znany jako **appHost**), który odpowiada środowisku i platformie zestawu SDK, którego używasz. Można oczekiwać, że te same elementy wykonywalne są takie same jak w przypadku innych natywnych plików wykonywalnych, takich jak:
 
 - Możesz kliknąć dwukrotnie plik wykonywalny.
 - Aplikację można uruchomić bezpośrednio z poziomu wiersza polecenia, na przykład `myapp.exe` w systemie Windows i `./myapp` w systemie Linux i macOS.
+
+### <a name="macos-apphost-and-notarization"></a>macOS appHost i notarization
+
+*tylko macOS*
+
+Począwszy od zestaw .NET Core SDK 3,0 dla usługi macOS, ustawienie służące do tworzenia domyślnego pliku wykonywalnego (znanego jako appHost) jest domyślnie wyłączone. Aby uzyskać więcej informacji, zobacz [MacOS Catalina Notarization i wpływ na pobieranie i projekty platformy .NET Core](../install/macos-notarization-issues.md).
+
+Gdy ustawienie appHost jest włączone, program .NET Core generuje natywny plik konfiguracji Mach-O podczas kompilowania lub publikowania. Twoja aplikacja jest uruchamiana w kontekście appHost, gdy jest uruchamiana z kodu źródłowego za pomocą polecenia `dotnet run` lub bezpośrednio uruchamiając plik wykonywalny "Mach-O".
+
+Bez appHost jedynym sposobem uruchomienia aplikacji [zależnej od środowiska uruchomieniowego](../deploying/index.md#publish-runtime-dependent) jest polecenie `dotnet <filename.dll>`. AppHost jest zawsze tworzona przy publikowaniu [własnej aplikacji.](../deploying/index.md#publish-self-contained)
+
+Można skonfigurować appHost na poziomie projektu lub przełączać appHost dla określonego polecenia `dotnet` z parametrem `-p:UseAppHost`:
+
+- Plik projektu
+
+  ```xml
+  <PropertyGroup>
+    <UseAppHost>true</UseAppHost>
+  </PropertyGroup>
+  ```
+
+- Parametr wiersza polecenia
+
+  ```dotnetcli
+  dotnet run -p:UseAppHost=true
+  ```
+
+Aby uzyskać więcej informacji na temat ustawienia `UseAppHost`, zobacz [Właściwości programu MSBuild dla Microsoft. NET. SDK](../project-sdk/msbuild-props.md#useapphost).
 
 ### <a name="single-file-executables"></a>Pliki wykonywalne pojedynczego pliku
 

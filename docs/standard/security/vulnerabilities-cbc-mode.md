@@ -3,16 +3,16 @@ title: Luka w zabezpieczeniach odszyfrowywania CBC
 description: Dowiedz się, jak wykrywać i ograniczać luki w zabezpieczeniach dotyczące chronometrażu przy użyciu szyfrowania symetrycznego trybu łańcucha (CBC).
 ms.date: 06/12/2018
 author: blowdart
-ms.openlocfilehash: 87f8e3c53e4d06f6a4edc7670891ac83ec8d65ab
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4616ef9015b47ff232a17f058c7a0f1449f42e81
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705850"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159965"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Luki w zabezpieczeniach chronometrażu z odszyfrowywaniem symetrycznym w trybie CBC przy użyciu uzupełnienia
 
-Firma Microsoft uważa, że nie jest już bezpiecznie odszyfrowywać dane zaszyfrowane przy użyciu trybu szyfr-blocking (CBC) szyfrowania symetrycznego, gdy stosowane jest dopełnienie, bez uprzedniego zapewnienia integralności tekstu szyfrowanego, z wyjątkiem bardzo szczególnych rodzin. Jest to orzeczenie oparte na aktualnie znanych badaniach kryptograficznych. 
+Firma Microsoft uważa, że nie jest już bezpiecznie odszyfrowywać dane zaszyfrowane przy użyciu trybu szyfr-blocking (CBC) szyfrowania symetrycznego, gdy stosowane jest dopełnienie, bez uprzedniego zapewnienia integralności tekstu szyfrowanego, z wyjątkiem bardzo szczególnych rodzin. Jest to orzeczenie oparte na aktualnie znanych badaniach kryptograficznych.
 
 ## <a name="introduction"></a>Wprowadzenie
 
@@ -28,7 +28,7 @@ Szyfry oparte na blokach mają inną właściwość o nazwie Mode, która okreś
 
 Osoba atakująca może korzystać z uzupełniania oprogramowania Oracle, w połączeniu z CBC danych, w celu wysyłania nieco zmienionych komunikatów do kodu, który ujawnia oprogramowanie Oracle, a także do wysyłania danych do momentu, gdy firma Oracle poinformuje ich, że dane są poprawne. Z tej odpowiedzi osoba atakująca może odszyfrować bajt komunikatu według bajtu.
 
-Nowoczesne sieci komputerowe mają taką wysoką jakość, którą atakujący może wykryć bardzo małe (mniej niż 0,1 ms) różnice w czasie wykonywania w systemach zdalnych. Aplikacje, które zakładają, że pomyślne odszyfrowywanie może wystąpić tylko wtedy, gdy dane nie zostały naruszone, mogą być narażone na ataki z narzędzi, które są przeznaczone do zaobserwowania różnic w przypadku pomyślnego i nieudanego odszyfrowania. Chociaż różnica czasu może być bardziej znacząca w niektórych językach lub bibliotekach niż inne, uważa się, że jest to praktyczne zagrożenie dla wszystkich języków i bibliotek, gdy odpowiedź aplikacji do awarii jest brana pod uwagę.
+Nowoczesne sieci komputerowe mają taką wysoką jakość, którą atakujący może wykryć bardzo małe (mniej niż 0,1 ms) różnice w czasie wykonywania w systemach zdalnych.Aplikacje, które zakładają, że pomyślne odszyfrowywanie może wystąpić tylko wtedy, gdy dane nie zostały naruszone, mogą być narażone na ataki z narzędzi, które są przeznaczone do zaobserwowania różnic w przypadku pomyślnego i nieudanego odszyfrowania. Chociaż różnica czasu może być bardziej znacząca w niektórych językach lub bibliotekach niż inne, uważa się, że jest to praktyczne zagrożenie dla wszystkich języków i bibliotek, gdy odpowiedź aplikacji do awarii jest brana pod uwagę.
 
 Ten atak polega na możliwości zmiany zaszyfrowanych danych i przetestowania wyniku przy użyciu programu Oracle. Jedynym sposobem na całkowite ograniczenie ataku jest wykrycie zmian zaszyfrowanych danych i odrzucenie wykonywania jakichkolwiek działań na nim. Standardowy sposób to utworzenie podpisu dla danych i zweryfikowanie podpisu przed wykonaniem jakiejkolwiek operacji. Podpis musi być możliwy do zweryfikowania, nie może być utworzony przez osobę atakującą, w przeciwnym razie zmienia zaszyfrowane dane, a następnie oblicza nowy podpis na podstawie zmienionych danych. Jeden wspólny typ odpowiedniej sygnatury jest znany jako kod uwierzytelniania wiadomości podwyższego poziomu (HMAC). HMAC różni się od sumy kontrolnej w tym, że przyjmuje klucz tajny znany tylko osobie wytwarzającej kod HMAC i osobie sprawdzającej ją. Bez posiadania klucza nie można utworzyć poprawnego algorytmu HMAC. Po otrzymaniu danych można wykonać zaszyfrowane dane, niezależnie od obliczenia algorytmu HMAC przy użyciu klucza tajnego i udziału nadawcy, a następnie porównać kod HMAC, który został wysłany na obliczony. To porównanie musi być stałą godziną, w przeciwnym razie dodaliśmy kolejną wykrywalną wersję Oracle, co pozwala na atak innego typu.
 

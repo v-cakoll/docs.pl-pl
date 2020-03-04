@@ -4,12 +4,12 @@ description: W tym artykule opisano, jak włączyć uzupełnianie kart dla inter
 author: thraka
 ms.author: adegeo
 ms.date: 11/03/2019
-ms.openlocfilehash: 6614f11a9c4eb1b1aac4dd8dac8d05d15262bd0c
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 31328be14811760bc8d7fb527e0d55abfe6b1493
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77626011"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156754"
 ---
 # <a name="how-to-enable-tab-completion-for-the-net-core-cli"></a>Jak włączyć uzupełnianie kart dla interfejs wiersza polecenia platformy .NET Core
 
@@ -38,18 +38,18 @@ Dane wejściowe                                | stanowi                        
 :------------------------------------|:----------------------------------------------------------------------------|:--------------------------------
 `dotnet a⇥`                          | `dotnet add`                                                                 | `add` to pierwszy podpolecenie, alfabetycznie.
 `dotnet add p⇥`                      | `dotnet add --help`                                                          | Uzupełnianie tabulacji dopasowuje podciągi, a `--help` są w kolejności alfabetycznej.
-`dotnet add p⇥⇥`                    | `dotnet add package`                                                          | Naciśnięcie klawisza Tab drugi raz spowoduje wyświetlenie następnej sugestii.      
+`dotnet add p⇥⇥`                    | `dotnet add package`                                                          | Naciśnięcie klawisza Tab drugi raz spowoduje wyświetlenie następnej sugestii.
 `dotnet add package Microsoft⇥`      | `dotnet add package Microsoft.ApplicationInsights.Web`                      | Wyniki są zwracane w porządku alfabetycznym.
 `dotnet remove reference ⇥`          | `dotnet remove reference ..\..\src\OmniSharp.DotNet\OmniSharp.DotNet.csproj` | Uzupełnianie karty jest świadome pliku projektu.
 
 ## <a name="powershell"></a>Program PowerShell
 
-Aby dodać uzupełnianie tabulatorów do **programu PowerShell** dla interfejs wiersza polecenia platformy .NET Core, Utwórz lub Edytuj profil zapisany w zmiennej `$PROFILE`. Aby uzyskać więcej informacji, zobacz [jak utworzyć profil](/powershell/module/microsoft.powershell.core/about/about_profiles#how-to-create-a-profile) i [zasady wykonywania](/powershell/module/microsoft.powershell.core/about/about_profiles#profiles-and-execution-policy). 
+Aby dodać uzupełnianie tabulatorów do **programu PowerShell** dla interfejs wiersza polecenia platformy .NET Core, Utwórz lub Edytuj profil zapisany w zmiennej `$PROFILE`. Aby uzyskać więcej informacji, zobacz [jak utworzyć profil](/powershell/module/microsoft.powershell.core/about/about_profiles#how-to-create-a-profile) i [zasady wykonywania](/powershell/module/microsoft.powershell.core/about/about_profiles#profiles-and-execution-policy).
 
 Dodaj następujący kod do swojego profilu:
 
 ```powershell
-# PowerShell parameter completion shim for the dotnet CLI 
+# PowerShell parameter completion shim for the dotnet CLI
 Register-ArgumentCompleter -Native -CommandName dotnet -ScriptBlock {
      param($commandName, $wordToComplete, $cursorPosition)
          dotnet complete --position $cursorPosition "$wordToComplete" | ForEach-Object {
@@ -88,7 +88,7 @@ Aby dodać uzupełnianie karty do powłoki **ZSH** dla interfejs wiersza polecen
 ```zsh
 # zsh parameter completion for the dotnet CLI
 
-_dotnet_zsh_complete() 
+_dotnet_zsh_complete()
 {
   local completions=("$(dotnet complete "$words")")
 

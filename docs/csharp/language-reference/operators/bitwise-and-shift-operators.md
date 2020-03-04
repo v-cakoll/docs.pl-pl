@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: a9f507ecdfced5b044b9d6338f723f53b1b4c4b7
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: a6319cbbbe8a691f5d2a01a13a5abfa2550b3705
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76115829"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239524"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>Operatory bitowe i przesunięciaC# (odwołanie)
 
@@ -54,7 +54,7 @@ Operacje bitowe i przesunięcia nigdy nie powodują przepełnienia i tworzą te 
 
 Operator `~` generuje bitowe uzupełnienie jego operandu przez odwrócenie każdego bitu:
 
-[!code-csharp-interactive[bitwise NOT](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseComplement)]
+[!code-csharp-interactive[bitwise NOT](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseComplement)]
 
 Można również użyć symbolu `~`, aby zadeklarować finalizatory. Aby uzyskać więcej informacji, zobacz [finalizatory](../../programming-guide/classes-and-structs/destructors.md).
 
@@ -64,11 +64,11 @@ Operator `<<` przesuwa swój lewy argument operacji w lewo o [liczbę bitów okr
 
 Operacja przesunięcia w lewo odrzuca bity o wysokim stopniu, które znajdują się poza zakresem wyników, i ustawia puste pozycje bitu w porządku o wartości zero, jak pokazano w poniższym przykładzie:
 
-[!code-csharp-interactive[left shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShift)]
+[!code-csharp-interactive[left shift](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShift)]
 
 Ponieważ operatory przesunięcia są zdefiniowane tylko dla typów `int`, `uint`, `long`i `ulong`, wynik operacji zawsze zawiera co najmniej 32 bitów. Jeśli argument operacji po lewej stronie jest innego typu całkowitego (`sbyte`, `byte`, `short`, `ushort`lub `char`), jego wartość jest konwertowana na typ `int`, jak pokazano na poniższym przykładzie:
 
-[!code-csharp-interactive[left shift with promotion](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShiftPromoted)]
+[!code-csharp-interactive[left shift with promotion](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShiftPromoted)]
 
 Aby uzyskać informacje o tym, jak argument operacji po prawej stronie operatora `<<` definiuje liczbę przesunięć, zobacz [Liczba przesunięć w sekcji operatory przesunięcia](#shift-count-of-the-shift-operators) .
 
@@ -78,17 +78,17 @@ Operator `>>` przesuwa swój lewy argument operacji bezpośrednio przez [liczbę
 
 Operacja przesunięcia w prawo powoduje odrzucenie bitów o niskiej kolejności, jak pokazano w poniższym przykładzie:
 
-[!code-csharp-interactive[right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#RightShift)]
+[!code-csharp-interactive[right shift](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#RightShift)]
 
 Puste pozycje w dużej kolejności są ustawiane na podstawie typu operandu po lewej stronie w następujący sposób:
 
 - Jeśli argument operacji po lewej stronie jest typu `int` lub `long`, operator przesunięcia w prawo wykonuje *arytmetyczne* przesunięcie: wartość najbardziej znaczącego bitu (bit znaku) operandu po lewej stronie jest propagowana do pustych pozycji o dużej liczbie bitów. Oznacza to, że puste pozycje bitu o wysokim stopniu kolejności są ustawione na zero, jeśli argument operacji po lewej stronie jest nieujemny i ustawiony na jeden, jeśli jest ujemny.
 
-  [!code-csharp-interactive[arithmetic right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ArithmeticRightShift)]
+  [!code-csharp-interactive[arithmetic right shift](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ArithmeticRightShift)]
 
 - Jeśli argument operacji po lewej stronie jest typu `uint` lub `ulong`, operator przesunięcia w prawo wykonuje *logiczne* przesunięcie: wartość pustych pozycji w kolejności pustej jest zawsze równa zero.
 
-  [!code-csharp-interactive[logical right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LogicalRightShift)]
+  [!code-csharp-interactive[logical right shift](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LogicalRightShift)]
 
 Aby uzyskać informacje o tym, jak argument operacji po prawej stronie operatora `>>` definiuje liczbę przesunięć, zobacz [Liczba przesunięć w sekcji operatory przesunięcia](#shift-count-of-the-shift-operators) .
 
@@ -96,7 +96,7 @@ Aby uzyskać informacje o tym, jak argument operacji po prawej stronie operatora
 
 Operator `&` oblicza koniunkcję bitową i jej operandy:
 
-[!code-csharp-interactive[bitwise AND](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseAnd)]
+[!code-csharp-interactive[bitwise AND](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseAnd)]
 
 Dla argumentów operacji `bool` operator `&` oblicza wartość [logiczną i](boolean-logical-operators.md#logical-and-operator-) jej operandów. Jednoargumentowy operator `&` jest [operatorem address-of](pointer-related-operators.md#address-of-operator-).
 
@@ -104,7 +104,7 @@ Dla argumentów operacji `bool` operator `&` oblicza wartość [logiczną i](boo
 
 Operator `^` oblicza koniunkcję bitową na wyłączność lub, znaną również jako bitowe koniunkcja logiczna XOR, argumentów operacji:
 
-[!code-csharp-interactive[bitwise XOR](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseXor)]
+[!code-csharp-interactive[bitwise XOR](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseXor)]
 
 Dla argumentów operacji `bool` operator `^` oblicza wartość [logiczną na wyłączność lub](boolean-logical-operators.md#logical-exclusive-or-operator-) z jej argumentów operacji.
 
@@ -112,7 +112,7 @@ Dla argumentów operacji `bool` operator `^` oblicza wartość [logiczną na wy�
 
 Operator `|` oblicza bitowe logiczne lub jego operandy:
 
-[!code-csharp-interactive[bitwise OR](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseOr)]
+[!code-csharp-interactive[bitwise OR](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseOr)]
 
 Dla argumentów operacji `bool` operator `|` oblicza wartość [logiczną lub](boolean-logical-operators.md#logical-or-operator-) argumentów operacji.
 
@@ -124,21 +124,21 @@ Dla operatora binarnego `op`wyrażenie złożonego przypisania formularza
 x op= y
 ```
 
-jest równoważny
+odpowiada wyrażeniu
 
 ```csharp
 x = x op y
 ```
 
-z tą różnicą, że `x` jest obliczone tylko raz.
+z tą różnicą, że `x` są oceniane tylko raz.
 
 Poniższy przykład ilustruje użycie przypisania złożonego z operatory bitowe i przesunięcia:
 
-[!code-csharp-interactive[compound assignment](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#CompoundAssignment)]
+[!code-csharp-interactive[compound assignment](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#CompoundAssignment)]
 
 Ze względu na [promocje liczbowe](~/_csharplang/spec/expressions.md#numeric-promotions)wynik operacji `op` może nie być niejawnie konwertowany na typ `T` `x`. W takim przypadku, jeśli `op` jest wstępnie zdefiniowanym operatorem, a wynik operacji jest jawnie konwertowany na typ `T` `x`, wyrażenie przypisania złożonego `x op= y` jest równoważne z `x = (T)(x op y)`, z tą różnicą, że `x` są oceniane tylko raz. Poniższy przykład ilustruje takie zachowanie:
 
-[!code-csharp-interactive[compound assignment with cast](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#CompoundAssignmentWithCast)]
+[!code-csharp-interactive[compound assignment with cast](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#CompoundAssignmentWithCast)]
 
 ## <a name="operator-precedence"></a>Pierwszeństwo operatorów
 
@@ -152,7 +152,7 @@ Poniższa lista porządkuje operatory bitowe i przesunięcia, rozpoczynając od 
 
 Użyj nawiasów `()`, aby zmienić kolejność oceny nałożona przez pierwszeństwo operatorów:
 
-[!code-csharp-interactive[operator precedence](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#Precedence)]
+[!code-csharp-interactive[operator precedence](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#Precedence)]
 
 Aby uzyskać pełną listę C# operatorów uporządkowanych według poziomu pierwszeństwa, zobacz sekcję [pierwszeństwo](index.md#operator-precedence) operatorów w artykule [ C# Operators](index.md) .
 
@@ -168,7 +168,7 @@ W przypadku wyrażeń `x << count` i `x >> count` rzeczywista liczba przesunię�
 
 Poniższy przykład ilustruje takie zachowanie:
 
-[!code-csharp-interactive[shift count example](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ShiftCount)]
+[!code-csharp-interactive[shift count example](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ShiftCount)]
 
 > [!NOTE]
 > Jak pokazano w powyższym przykładzie, wynik operacji przesunięcia może być różny od zera, nawet jeśli wartość operandu po prawej stronie jest większa niż liczba bitów w lewym operandzie.
@@ -195,7 +195,7 @@ Aby uzyskać więcej informacji, zobacz następujące sekcje [ C# specyfikacji j
 - [Przypisanie złożone](~/_csharplang/spec/expressions.md#compound-assignment)
 - [Promocje numeryczne](~/_csharplang/spec/expressions.md#numeric-promotions)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [C#odwoła](../index.md)
 - [Operatory języka C#](index.md)

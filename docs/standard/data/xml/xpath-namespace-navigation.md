@@ -3,12 +3,12 @@ title: Nawigacja po przestrzeni nazw XPath
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 06cc7abb-7416-415c-9dd6-67751b8cabd5
-ms.openlocfilehash: 37b9d3e04e075c7ef95420c70881ba9b34e031ce
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: f35318b1439b762bf7c87cff217ed1787e8d007c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709793"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156325"
 ---
 # <a name="xpath-namespace-navigation"></a>Nawigacja po przestrzeni nazw XPath
 Aby używać zapytań XPath z dokumentami XML, należy poprawnie adresować przestrzenie nazw XML i elementy zawarte w przestrzeni nazw. Przestrzenie nazw uniemożliwiają niejasności, które mogą wystąpić, gdy nazwy są używane w więcej niż jednym kontekście; na przykład nazwa `ID` może odnosić się do więcej niż jednego identyfikatora skojarzonego z różnymi elementami dokumentu XML. Składnia przestrzeni nazw Określa identyfikatory URI, nazwy i prefiksy odróżniające elementy dokumentu XML.  
@@ -18,7 +18,7 @@ Aby używać zapytań XPath z dokumentami XML, należy poprawnie adresować prze
 ## <a name="namespace-declarations"></a>Deklaracje przestrzeni nazw  
  Deklaracje przestrzeni nazw sprawiają, że elementy dokumentu XML są odróżniane i adresowane przy użyciu wystąpienia <xref:System.Xml.XPath.XPathNavigator>. Prefiksy przestrzeni nazw zawierają krótką składnię do adresowania przestrzeni nazw.  
   
- Prefiksy są definiowane przez formularz: `<e:Envelope>`e`" jest skrótem dla formalnego identyfikatora URI przestrzeni nazw. Element `Body` można zidentyfikować jako element członkowski `Envelope` przestrzeni nazw za pomocą składni: `e:Body`.  
+ Prefiksy są definiowane przez formularz: `<e:Envelope xmlns:e=http://schemas.xmlsoap.org/soap/envelope/>.` w tej składni prefiks "`e`" jest skrótem dla formalnego identyfikatora URI przestrzeni nazw. Element `Body` można zidentyfikować jako element członkowski `Envelope` przestrzeni nazw za pomocą składni: `e:Body`.  
   
  Następujący dokument XML zostanie przywoływany jako `response.xml` w przykładzie nawigacji w następnej sekcji.  
   
@@ -27,7 +27,7 @@ Aby używać zapytań XPath z dokumentami XML, należy poprawnie adresować prze
 <e:Envelope xmlns:e="http://schemas.xmlsoap.org/soap/envelope/">  
   <e:Body>  
     <s:Search xmlns:s="http://schemas.microsoft.com/v1/Search">  
-      <r:request xmlns:r="http://schemas.microsoft.com/v1/Search/metadata"   
+      <r:request xmlns:r="http://schemas.microsoft.com/v1/Search/metadata"
                  xmlns:i="http://www.w3.org/2001/XMLSchema-instance">  
       </r:request>  
     </s:Search>  
@@ -54,15 +54,15 @@ using (XmlReader reader = XmlReader.Create("response.xml"))
   
     XPathNavigator element = nav.SelectSingleNode(xpath, nsmgr);  
   
-    Console.WriteLine("Element Prefix:" + element.Prefix +   
+    Console.WriteLine("Element Prefix:" + element.Prefix +
     " Local name:" + element.LocalName);  
     Console.WriteLine("Namespace URI: " + element.NamespaceURI);  
 }  
 ```  
   
- Precyzja w pełni kwalifikujących się przestrzeni nazw i nazw jest większa niż wygoda. Niewielki eksperyment z definicją dokumentu i kodem w poprzednich przykładach sprawdzi, czy nawigacja bez w pełni kwalifikowanych nazw elementów zgłasza wyjątki. Na przykład definicja elementu: `<Search>`i zapytanie: ciąg `xpath = "/s:Envelope/s:Body/Search";` bez prefiksu przestrzeni nazw w elemencie `Search` zwraca `null` zamiast elementu `Search`.  
+ Precyzja w pełni kwalifikujących się przestrzeni nazw i nazw jest większa niż wygoda. Niewielki eksperyment z definicją dokumentu i kodem w poprzednich przykładach sprawdzi, czy nawigacja bez w pełni kwalifikowanych nazw elementów zgłasza wyjątki. Na przykład definicja elementu: `<Search xmlns="http://schemas.microsoft.com/v1/Search">`i zapytanie: ciąg `xpath = "/s:Envelope/s:Body/Search";` bez prefiksu przestrzeni nazw w elemencie `Search` zwraca `null` zamiast elementu `Search`.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Uzyskiwanie dostępu do danych XML przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)
 - [Wybieranie, obliczanie i dopasowywanie danych XML przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)

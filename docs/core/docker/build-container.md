@@ -4,12 +4,12 @@ description: W tym samouczku dowiesz się, jak konteneryzowanie aplikację .NET 
 ms.date: 01/09/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 17d3dfbe58770b19a75be1dad3ae03406584992c
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: e1904430a591b0e74a69d50a53869a130fc0a248
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900110"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157833"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Samouczek: Konteneryzowanie aplikacji .NET Core
 
@@ -21,7 +21,7 @@ Dowiesz się:
 >
 > - Tworzenie i publikowanie prostej aplikacji .NET Core
 > - Tworzenie i konfigurowanie pliku dockerfile dla platformy .NET Core
-> - Tworzenie obrazu platformy Docker
+> - Kompilowanie obrazu platformy Docker
 > - Tworzenie i uruchamianie kontenera platformy Docker
 
 Zapoznaj się z tematem tworzenie i wdrażanie kontenerów platformy Docker dla aplikacji platformy .NET Core. *Platforma Docker* korzysta z *aparatu platformy Docker* , aby szybko kompilować i spakować aplikacje jako *obrazy platformy Docker*. Te obrazy są zapisywane w formacie *pliku dockerfile* , który ma zostać wdrożony i uruchomiony w kontenerze warstwowym.
@@ -141,7 +141,7 @@ dotnet publish -c Release
 
 To polecenie kompiluje aplikację do folderu *Publikowanie* . Ścieżka do folderu *publikowania* z folderu roboczego powinna być `.\app\bin\Release\netcoreapp3.1\publish\`
 
-Aby sprawdzić, czy plik *MojaApl. dll* został utworzony, w folderze *App* należy uzyskać listę katalogów folderu publikacji. 
+Aby sprawdzić, czy plik *MojaApl. dll* został utworzony, w folderze *App* należy uzyskać listę katalogów folderu publikacji.
 
 ```console
 > dir bin\Release\netcoreapp3.1\publish
@@ -370,7 +370,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 `docker run` polecenie umożliwia również modyfikowanie polecenia `ENTRYPOINT` z *pliku dockerfile* i uruchamianie czegoś innego, ale tylko dla tego kontenera. Na przykład użyj następującego polecenia, aby uruchomić `bash` lub `cmd.exe`. W razie potrzeby zmodyfikuj polecenie.
 
-#### <a name="windows"></a>Windows
+#### <a name="windows"></a>System Windows
 
 W tym przykładzie `ENTRYPOINT` został zmieniony na `cmd.exe`. <kbd>Naciśnij klawisz CTRL</kbd>+<kbd>C</kbd> , aby zakończyć proces i zatrzymać kontener.
 

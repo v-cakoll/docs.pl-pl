@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: e69cc5a9634f0b5232562782557645894f94ce2e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: ab69514e324c632f546957b2ddb58e073ca0154e
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345303"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239253"
 ---
 # <a name="member-access-operators-c-reference"></a>Operatory dostępu do elementówC# członkowskich (odwołanie)
 
@@ -56,17 +56,17 @@ Token `.` służy do uzyskiwania dostępu do elementu członkowskiego przestrzen
 
 - Użyj `.`, aby uzyskać dostęp do zagnieżdżonej przestrzeni nazw w przestrzeni nazw, jak pokazano w poniższym przykładzie [dyrektywy`using`](../keywords/using-directive.md) :
 
-  [!code-csharp[nested namespaces](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#NestedNamespace)]
+  [!code-csharp[nested namespaces](~/samples/snippets/csharp/language-reference/operators/MemberAccessOperators.cs#NestedNamespace)]
 
 - Użyj `.`, aby utworzyć *kwalifikowaną nazwę* do uzyskania dostępu do typu w przestrzeni nazw, jak pokazano w poniższym kodzie:
 
-  [!code-csharp[qualified name](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#QualifiedName)]
+  [!code-csharp[qualified name](~/samples/snippets/csharp/language-reference/operators/MemberAccessOperators.cs#QualifiedName)]
 
   Użyj [dyrektywy`using`](../keywords/using-directive.md) , aby użyć kwalifikowanych nazw jako opcjonalnych.
 
 - Użyj `.`, aby uzyskać dostęp do [składowych typu](../../programming-guide/classes-and-structs/index.md#members)static i unstatic, jak pokazano w poniższym kodzie:
 
-  [!code-csharp-interactive[type members](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#TypeMemberAccess)]
+  [!code-csharp-interactive[type members](~/samples/snippets/csharp/language-reference/operators/MemberAccessOperators.cs#TypeMemberAccess)]
 
 Możesz również użyć `.`, aby uzyskać dostęp do [metody rozszerzenia](../../programming-guide/classes-and-structs/extension-methods.md).
 
@@ -78,7 +78,7 @@ Nawiasy kwadratowe, `[]`, są zwykle używane dla dostępu do elementu Array, in
 
 W poniższym przykładzie pokazano, jak uzyskać dostęp do elementów tablicy:
 
-[!code-csharp-interactive[array access](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Arrays)]
+[!code-csharp-interactive[array access](~/samples/snippets/csharp/language-reference/operators/MemberAccessOperators.cs#Arrays)]
 
 Jeśli indeks tablicy znajduje się poza granicami odpowiedniego wymiaru tablicy, zostanie zgłoszony <xref:System.IndexOutOfRangeException>.
 
@@ -90,7 +90,7 @@ Aby uzyskać więcej informacji na temat tablic, zobacz [tablice](../../programm
 
 Poniższy przykład używa typu <xref:System.Collections.Generic.Dictionary%602> .NET do zademonstrowania dostępu indeksatora:
 
-[!code-csharp-interactive[indexer access](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Indexers)]
+[!code-csharp-interactive[indexer access](~/samples/snippets/csharp/language-reference/operators/MemberAccessOperators.cs#Indexers)]
 
 Indeksatory umożliwiają indeksowanie wystąpień typu zdefiniowanego przez użytkownika w podobny sposób jak indeksowanie tablicy. W przeciwieństwie do indeksów tablicowych, które muszą być liczbami całkowitymi, parametry indeksatora mogą być zadeklarowane jako dowolnego typu.
 
@@ -126,7 +126,7 @@ A?.B?[C];
 
 Poniższy przykład ilustruje użycie operatorów `?.` i `?[]`:
 
-[!code-csharp-interactive[null-conditional operators](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#NullConditional)]
+[!code-csharp-interactive[null-conditional operators](~/samples/snippets/csharp/language-reference/operators/MemberAccessOperators.cs#NullConditional)]
 
 Powyższy przykład używa również [operatora łączenia wartości null `??`](null-coalescing-operator.md) , aby określić alternatywne wyrażenie do obliczenia w przypadku, gdy wynik operacji warunkowej o wartości null jest `null`.
 
@@ -156,7 +156,7 @@ Użyj nawiasów, `()`, aby wywołać [metodę](../../programming-guide/classes-a
 
 Poniższy przykład ilustruje sposób wywołania metody z argumentami lub bez nich i Wywołaj delegata:
 
-[!code-csharp-interactive[invocation with ()](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Invocation)]
+[!code-csharp-interactive[invocation with ()](~/samples/snippets/csharp/language-reference/operators/MemberAccessOperators.cs#Invocation)]
 
 Po wywołaniu [konstruktora](../../programming-guide/classes-and-structs/constructors.md) za pomocą operatora [`new`](new-operator.md) należy również użyć nawiasów.
 
@@ -170,7 +170,7 @@ Należy również użyć nawiasów, aby dostosować kolejność, w której mają
 
 Dostępne w C# 8,0 i nowszych `^` operator wskazuje położenie elementu od końca sekwencji. Dla sekwencji `^n` `length`długość wskazuje element z przesunięciem `length - n` od początku sekwencji. Na przykład `^1` wskazuje ostatni element sekwencji i `^length` wskazuje na pierwszy element sekwencji.
 
-[!code-csharp[index from end](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#IndexFromEnd)]
+[!code-csharp[index from end](~/samples/snippets/csharp/language-reference/operators/MemberAccessOperators.cs#IndexFromEnd)]
 
 Jak pokazano w poprzednim przykładzie, `^e` Expression jest typu <xref:System.Index?displayProperty=nameWithType>. W `^e`Expression wynik `e` musi być niejawnie konwertowany na `int`.
 
@@ -180,7 +180,7 @@ Można też użyć operatora `^` z [operatorem zakresu](#range-operator-) , aby 
 
 Dostępne w C# 8,0 i nowszych operator `..` określa początek i koniec zakresu indeksów jako operandy. Argument operacji po lewej stronie *jest początkową* częścią zakresu. Prawy operand jest *wyłącznym* końcem zakresu. Jeden z operandów może być indeksem od początku lub od końca sekwencji, jak pokazano w poniższym przykładzie:
 
-[!code-csharp[range examples](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Ranges)]
+[!code-csharp[range examples](~/samples/snippets/csharp/language-reference/operators/MemberAccessOperators.cs#Ranges)]
 
 Jak pokazano w poprzednim przykładzie, `a..b` Expression jest typu <xref:System.Range?displayProperty=nameWithType>. W `a..b`wyrażeń wyniki `a` i `b` muszą być niejawnie konwertowane na `int` lub <xref:System.Index>.
 
@@ -190,7 +190,7 @@ Możesz pominąć dowolny operand operatora `..`, aby uzyskać otwarty zakres:
 - `..b` jest równoznaczna z `0..b`
 - `..` jest równoznaczna z `0..^0`
 
-[!code-csharp[ranges with omitted operands](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#RangesOptional)]
+[!code-csharp[ranges with omitted operands](~/samples/snippets/csharp/language-reference/operators/MemberAccessOperators.cs#RangesOptional)]
 
 Aby uzyskać więcej informacji, zobacz [indeksy i zakresy](../../tutorials/ranges-indexes.md).
 
@@ -209,7 +209,7 @@ Aby uzyskać więcej informacji, zobacz następujące sekcje [ C# specyfikacji j
 
 Aby uzyskać więcej informacji na temat indeksów i zakresów, zobacz [Uwaga dotycząca oferty funkcji](~/_csharplang/proposals/csharp-8.0/ranges.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [C#odwoła](../index.md)
 - [Operatory języka C#](index.md)

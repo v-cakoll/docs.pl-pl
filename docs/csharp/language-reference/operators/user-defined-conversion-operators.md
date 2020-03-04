@@ -10,12 +10,12 @@ helpviewer_keywords:
 - implicit keyword [C#]
 - conversion operator [C#]
 - user-defined conversion [C#]
-ms.openlocfilehash: 379deb20243a13cc608cb7fe119b341065327c1e
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: cddb3139742329303989c6fed9e9b64474e6b1f9
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77450677"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78238861"
 ---
 # <a name="user-defined-conversion-operators-c-reference"></a>Operatory konwersji zdefiniowane przez użytkownika (C# odwołanie)
 
@@ -29,7 +29,7 @@ Użyj słów kluczowych `operator` i `implicit` lub `explicit`, aby zdefiniować
 
 Poniższy przykład ilustruje sposób definiowania konwersji niejawnej i jawnej:
 
-[!code-csharp[implicit an explicit conversions](~/samples/csharp/language-reference/operators/UserDefinedConversions.cs)]
+[!code-csharp[implicit an explicit conversions](~/samples/snippets/csharp/language-reference/operators/UserDefinedConversions.cs)]
 
 Możesz również użyć słowa kluczowego `operator` do przeciążenia wstępnie C# zdefiniowanego operatora. Aby uzyskać więcej informacji, zobacz [przeciążanie operatora](operator-overloading.md).
 

@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 4a6c8b27812e9f60e52132169dda0464c24abcc2
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 0aa323533dd9136372c2bbc330c9c3056fdf428c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740565"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157574"
 ---
 # <a name="install-the-net-core-sdk"></a>Zainstaluj zestaw .NET Core SDK
 
@@ -35,6 +35,19 @@ System Windows ma autonomiczne Instalatory, których można użyć do zainstalow
 macOS ma autonomiczne Instalatory, których można użyć do zainstalowania zestawu SDK programu .NET Core 3,1:
 
 - [Procesory x64 (64-bitowe)](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+
+## <a name="download-and-manually-install"></a>Pobierz i ręcznie zainstaluj
+
+Jako alternatywę dla instalatorów macOS dla platformy .NET Core można pobrać i ręcznie zainstalować zestaw SDK.
+
+Aby wyodrębnić zestaw SDK i udostępnić interfejs wiersza polecenia platformy .NET Core polecenia w terminalu, należy najpierw [pobrać](#all-net-core-downloads) wydanie binarne platformy .NET Core. Następnie otwórz Terminal i uruchom następujące polecenia. Przyjęto założenie, że środowisko uruchomieniowe jest pobierane do pliku `~/Downloads/dotnet-sdk.pkg`.
+
+```bash
+mkdir -p $HOME/dotnet
+sudo installer -pkg ~/Downloads/dotnet-sdk.pkg -target $HOME/dotnet
+export DOTNET_ROOT=$HOME/dotnet
+export PATH=$PATH:$HOME/dotnet
+```
 
 ::: zone-end
 
@@ -77,7 +90,7 @@ export PATH=$PATH:$HOME/dotnet
 
 Jeśli używasz programu Visual Studio do tworzenia aplikacji platformy .NET Core, w poniższej tabeli opisano minimalną wymaganą wersję programu Visual Studio opartą na docelowej wersji zestaw .NET Core SDK.
 
-| Wersja zestaw .NET Core SDK | Wersja programu Visual Studio                      |
+| Wersja zestaw .NET Core SDK | Visual Studio w wersji                      |
 | --------------------- | ------------------------------------------ |
 | 3.1                   | Program Visual Studio 2019 w wersji 16,4 lub nowszej. |
 | 3.0                   | Program Visual Studio 2019 w wersji 16,3 lub nowszej. |
@@ -104,6 +117,25 @@ Podczas instalowania lub modyfikowania programu Visual Studio wybierz co najmnie
 - Obciążenie **Programowanie aplikacji klasycznych na platformie .NET** znajduje się w sekcji **Desktop & Mobile** .
 
 [![Windows Visual Studio 2019 z obciążeniem platformy .NET Core](media/install-sdk/windows-install-visual-studio-2019.png)](media/install-sdk/windows-install-visual-studio-2019.png#lightbox)
+
+## <a name="download-and-manually-install"></a>Pobierz i ręcznie zainstaluj
+
+Aby wyodrębnić środowisko uruchomieniowe i udostępnić interfejs wiersza polecenia platformy .NET Core polecenia w terminalu, należy najpierw [pobrać](#all-net-core-downloads) wydanie binarne platformy .NET Core. Następnie Utwórz katalog, na którym chcesz zainstalować program, na przykład `%USERPROFILE%\dotnet`. Na koniec Wyodrębnij pobrany plik zip do tego katalogu.
+
+Domyślnie interfejs wiersza polecenia platformy .NET Core polecenia i aplikacje nie będą używać platformy .NET Core w ten sposób. Musisz jawnie wybrać tę opcję, aby jej używać. W tym celu Zmień zmienne środowiskowe, z którymi aplikacja jest uruchomiona:
+
+```console
+set DOTNET_ROOT=%USERPROFILE%\dotnet
+set PATH=%USERPROFILE%\dotnet;%PATH%
+```
+
+Takie podejście umożliwia zainstalowanie wielu wersji w oddzielnych lokalizacjach, a następnie jawne wybranie lokalizacji instalacji, która ma być używana przez aplikację, uruchamiając aplikację ze zmiennymi środowiskowymi wskazującymi w tej lokalizacji.
+
+Nawet jeśli są ustawione te zmienne środowiskowe, program .NET Core nadal uznaje domyślną lokalizację instalacji globalnej podczas wybierania najlepszej platformy do uruchamiania aplikacji. Wartość domyślna to zwykle `C:\Program Files\dotnet`, których instalatorzy używają. Można wydać instrukcje środowiska uruchomieniowego, aby używać niestandardowej lokalizacji instalacji przez ustawienie tej zmiennej środowiskowej również:
+
+```console
+set DOTNET_MULTILEVEL_LOOKUP=0
+```
 
 ::: zone-end
 
@@ -186,6 +218,7 @@ Aby uzyskać więcej informacji na temat korzystania z platformy .NET Core w kon
 
 ::: zone pivot="os-macos"
 
+- [Praca z MacOS Catalina notarization](macos-notarization-issues.md).
 - [Samouczek: Rozpoczynanie pracy w witrynie macOS](../tutorials/using-on-mac-vs.md).
 - [Samouczek: Tworzenie nowej aplikacji przy użyciu Visual Studio Code](../tutorials/with-visual-studio-code.md).
 - [Samouczek: konteneryzowanie aplikacji .NET Core](../docker/build-container.md).

@@ -2,12 +2,12 @@
 title: polecenie dotnet New
 description: Polecenie dotnet New umożliwia tworzenie nowych projektów platformy .NET Core na podstawie określonego szablonu.
 ms.date: 02/13/2020
-ms.openlocfilehash: f11512acf5a1fdc4bde49b3d1212ccf6335dff8b
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: d3c609419596b123f5bfb3ca85cf292a61154a70
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451333"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157222"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -20,7 +20,7 @@ ms.locfileid: "77451333"
 ## <a name="synopsis"></a>Streszczenie
 
 ```dotnetcli
-dotnet new <TEMPLATE> [--dry-run] [--force] [-i|--install] [-lang|--language] [-n|--name] 
+dotnet new <TEMPLATE> [--dry-run] [--force] [-i|--install] [-lang|--language] [-n|--name]
     [--nuget-source] [-o|--output] [-u|--uninstall] [--update-apply] [--update-check] [Template options]
 dotnet new <TEMPLATE> [-l|--list] [--type]
 dotnet new [-h|--help]
@@ -174,7 +174,7 @@ Każdy szablon projektu może mieć dodatkowe opcje dostępne. Szablony podstawo
 
   Listę wersji domyślnych C# można znaleźć w temacie [Defaults](../../csharp/language-reference/configure-language-version.md#defaults).
 
-- **`--no-restore`** 
+- **`--no-restore`**
 
   Jeśli określony, nie wykonuje przywracania niejawnego podczas tworzenia projektu. Dostępne od wersji .NET Core 2,2 SDK.
 
@@ -202,7 +202,7 @@ Każdy szablon projektu może mieć dodatkowe opcje dostępne. Szablony podstawo
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Określa [platformę](../../standard/frameworks.md) docelową. Wartością domyślną jest `netcoreapp3.1`. Dostępne od wersji .NET Core 3,1 SDK. 
+  Określa [platformę](../../standard/frameworks.md) docelową. Wartością domyślną jest `netcoreapp3.1`. Dostępne od wersji .NET Core 3,1 SDK.
 
 - **`--langVersion <VERSION_NUMBER>`**
 
@@ -234,7 +234,7 @@ Każdy szablon projektu może mieć dodatkowe opcje dostępne. Szablony podstawo
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Określa [platformę](../../standard/frameworks.md) docelową. Wartością domyślną jest `netcoreapp3.1`. Dostępne od wersji .NET Core 3,1 SDK. 
+  Określa [platformę](../../standard/frameworks.md) docelową. Wartością domyślną jest `netcoreapp3.1`. Dostępne od wersji .NET Core 3,1 SDK.
 
 - **`--exclude-launch-settings`**
 
@@ -503,7 +503,7 @@ Każdy szablon projektu może mieć dodatkowe opcje dostępne. Szablony podstawo
 
 - **`-au|--auth <AUTHENTICATION_TYPE>`**
 
-  Typ uwierzytelniania do użycia. Dostępne od wersji .NET Core 3,0 SDK. 
+  Typ uwierzytelniania do użycia. Dostępne od wersji .NET Core 3,0 SDK.
   
   Możliwe wartości to:
 
@@ -512,7 +512,7 @@ Każdy szablon projektu może mieć dodatkowe opcje dostępne. Szablony podstawo
 
 - **`--exclude-launch-settings`**
 
-  Wyklucza plik *profilu launchsettings. JSON* z wygenerowanego szablonu. 
+  Wyklucza plik *profilu launchsettings. JSON* z wygenerowanego szablonu.
 
 - **`--no-restore`**
 
@@ -544,7 +544,7 @@ Każdy szablon projektu może mieć dodatkowe opcje dostępne. Szablony podstawo
 
 - **`--exclude-launch-settings`**
 
-  Wyklucza plik *profilu launchsettings. JSON* z wygenerowanego szablonu. 
+  Wyklucza plik *profilu launchsettings. JSON* z wygenerowanego szablonu.
 
 - **`-f|--framework <FRAMEWORK>`**
 

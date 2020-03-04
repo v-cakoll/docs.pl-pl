@@ -3,12 +3,12 @@ title: Wybierz między platformą .NET Core i .NET Framework dla aplikacji serwe
 description: Przewodnik dotyczący implementacji platformy .NET, którą należy wziąć pod uwagę podczas kompilowania aplikacji serwera w programie .NET.
 author: cartermp
 ms.date: 06/19/2018
-ms.openlocfilehash: c202e42a46c4a72bdceca1fb250170d381603a8d
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 0b6bf4c2eb66aa4de497923a0a16b65a955ba6fc
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124627"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159978"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Wybieranie między programami .NET Core i .NET Framework na potrzeby aplikacji serwerowych
 
@@ -75,7 +75,7 @@ W większości przypadków nie trzeba migrować istniejących aplikacji do progr
 
 Biblioteki umożliwiają szybkie wdrażanie .NET Standard. .NET Standard umożliwia udostępnianie kodu we wszystkich implementacjach platformy .NET, w tym .NET Core. W .NET Standard 2,0 jest to jeszcze prostsze:
 
-- Powierzchnia interfejsu API stała się znacznie większa. 
+- Powierzchnia interfejsu API stała się znacznie większa.
 - Wprowadza .NET Framework tryb zgodności. Ten tryb zgodności zezwala na odwoływanie się do bibliotek .NET Framework przez projekty .NET Standard/. NET Core. Aby dowiedzieć się więcej o trybie zgodności, zobacz temat [ogłaszanie .NET Standard 2,0](https://devblogs.microsoft.com/dotnet/announcing-net-standard-2-0/).
 
 Tak więc w przypadku, gdy biblioteki lub pakiety NuGet używają technologii, które nie są dostępne w .NET Standard/. NET Core, należy użyć .NET Framework.
@@ -86,7 +86,7 @@ Niektóre technologie .NET Framework nie są dostępne w programie .NET Core. Ni
 
 - Aplikacje ASP.NET Web Forms: formularze sieci Web ASP.NET są dostępne tylko w .NET Framework. Nie można używać ASP.NET Core dla formularzy sieci Web ASP.NET. Nie istnieją plany dotyczące przenoszenia formularzy sieci Web ASP.NET do platformy .NET Core.
 
-- Aplikacje ASP.NET Web Pages: ASP.NET Web Pages nie są uwzględnione w ASP.NET Core. 
+- Aplikacje ASP.NET Web Pages: ASP.NET Web Pages nie są uwzględnione w ASP.NET Core.
 
 - Implementacja usług WCF. Nawet jeśli istnieje [Biblioteka klienta WCF](https://github.com/dotnet/wcf) , która umożliwia korzystanie z usług WCF z platformy .NET Core, implementacja serwera WCF jest obecnie dostępna tylko w .NET Framework. Ten scenariusz nie jest częścią bieżącego planu dla platformy .NET Core, ale jest brany pod uwagę w przyszłości.
 

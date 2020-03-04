@@ -13,12 +13,12 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-ms.openlocfilehash: 953d8d3055dff48cd943b748771f20803a4d6573
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1055b10d0e3e971a6b0963c1ed950fef903ac5bd
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120894"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239953"
 ---
 # <a name="globalization"></a>Globalizacja
 
@@ -66,7 +66,7 @@ Jeśli to możliwe, należy obsługiwać ciągi jako całe ciągi zamiast obsłu
 > [!TIP]
 > Klasy <xref:System.Globalization.StringInfo> można użyć do pracy z elementami tekstowymi, a nie pojedynczymi znakami w ciągu.
 
-W przypadku wyszukiwania i porównywania ciągów częstą pomyłką jest traktowanie ciągu jako kolekcji znaków, z których każdy jest reprezentowany przez obiekt <xref:System.Char>. W rzeczywistości pojedynczy znak może być tworzony przez jeden, dwa lub więcej obiektów <xref:System.Char>. Takie znaki są najczęściej używane w ciągach z kultur, których alfabety składają się z znaków spoza zakresu znaków łacińskich Unicode Basic (U + 0021 do U + 007E). Poniższy przykład próbuje znaleźć indeks wielkiej litery A ze znakiem akcentu słabego (U + 00C0) w ciągu. Jednak ten znak może być reprezentowany na dwa różne sposoby: jako jedna Jednostka kodu (U + 00C0) lub jako znak złożony (dwie jednostki kodu: U + 0021 i U + 007E). W tym przypadku znak jest reprezentowany w wystąpieniu ciągu przez dwa <xref:System.Char> obiektów, U + 0021 i U + 007E. Przykładowy kod wywołuje przeciążenia <xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType> i <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType>, aby znaleźć pozycję tego znaku w wystąpieniu ciągu, ale zwracają różne wyniki. Pierwsze wywołanie metody ma <xref:System.Char> argument; wykonuje porównanie porządkowe i w związku z tym nie może znaleźć dopasowania. Drugie wywołanie ma <xref:System.String> argument; wykonuje ono porównanie zależne od kultury i w związku z tym znajduje dopasowanie.
+W przypadku wyszukiwania i porównywania ciągów częstą pomyłką jest traktowanie ciągu jako kolekcji znaków, z których każdy jest reprezentowany przez obiekt <xref:System.Char>. W rzeczywistości pojedynczy znak może być tworzony przez jeden, dwa lub więcej obiektów <xref:System.Char>. Takie znaki są najczęściej używane w ciągach z kultur, których alfabety składają się z znaków spoza zakresu znaków łacińskich Unicode Basic (U + 0021 do U + 007E). Poniższy przykład próbuje znaleźć indeks wielkiej litery A ze znakiem akcentu słabego (U + 00C0) w ciągu. Jednak ten znak może być reprezentowany na dwa różne sposoby: jako jedna Jednostka kodu (U + 00C0) lub jako znak złożony (dwie jednostki kodu: U + 0041 i U + 0300). W tym przypadku znak jest reprezentowany w wystąpieniu ciągu przez dwa <xref:System.Char> obiektów, U + 0041 i U + 0300. Przykładowy kod wywołuje przeciążenia <xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType> i <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType>, aby znaleźć pozycję tego znaku w wystąpieniu ciągu, ale zwracają różne wyniki. Pierwsze wywołanie metody ma <xref:System.Char> argument; wykonuje porównanie porządkowe i w związku z tym nie może znaleźć dopasowania. Drugie wywołanie ma <xref:System.String> argument; wykonuje ono porównanie zależne od kultury i w związku z tym znajduje dopasowanie.
 
 [!code-csharp[Conceptual.Globalization#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/search1.cs#18)]
 [!code-vb[Conceptual.Globalization#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/search1.vb#18)]
@@ -108,11 +108,11 @@ Platforma .NET używa tabel do wykonywania sortowania z uwzględnieniem kultury 
 |----------------------------|----------------------|---------------------|
 |.NET Framework 2.0|Wszystkie systemy operacyjne|Unicode 4,1|
 |.NET Framework 3.0|Wszystkie systemy operacyjne|Unicode 4,1|
-|Program .NET Framework 3,5|Wszystkie systemy operacyjne|Unicode 4,1|
+|.NET Framework 3.5|Wszystkie systemy operacyjne|Unicode 4,1|
 |Program .NET Framework 4|Wszystkie systemy operacyjne|Unicode 5,0|
 |.NET Framework 4,5 i nowsze w systemie Windows 7|Unicode 5,0|
-|.NET Framework 4,5 i nowsze w systemach operacyjnych Windows 8 i nowszych|6\.3.0 Unicode|
-|.NET Core (wszystkie wersje)|Zależy od wersji standardu Unicode obsługiwanego przez podstawowy system operacyjny.|
+|.NET Framework 4,5 i nowsze w systemach operacyjnych Windows 8 i nowszych|6.3.0 Unicode|
+|.NET core (wszystkie wersje)|Zależy od wersji standardu Unicode obsługiwanego przez podstawowy system operacyjny.|
 
 Począwszy od .NET Framework 4,5 i we wszystkich wersjach programu .NET Core, Porównywanie ciągów i sortowanie zależy od systemu operacyjnego. .NET Framework 4,5 i późniejsze działania w systemie Windows 7 pobiera dane z własnych tabel, które implementują standard Unicode 5,0. .NET Framework 4,5 i późniejsze uruchomione w systemie Windows 8 i nowszych pobiera dane z tabel systemu operacyjnego, które implementują standard Unicode 6,3. W przypadku platformy .NET Core obsługiwana wersja standardu Unicode zależy od bazowego systemu operacyjnego. W przypadku serializacji posortowanych danych z uwzględnieniem kultury można użyć klasy <xref:System.Globalization.SortVersion>, aby określić, kiedy dane serializowane muszą być sortowane, aby były spójne z programem .NET i porządkiem sortowania systemu operacyjnego. Aby zapoznać się z przykładem, zobacz temat Klasa <xref:System.Globalization.SortVersion>.
 
@@ -145,14 +145,14 @@ Zazwyczaj gdy daty i godziny są wyświetlane w interfejsie użytkownika, należ
 
 - Funkcja [formatowania złożonego](../../../docs/standard/base-types/composite-formatting.md) , gdy jest używana z datami
 
-Poniższy przykład wyświetla dane o wschód i wschód słońca dwa razy dla 11 października 2012. Najpierw ustawia bieżącą kulturę na chorwacki (Chorwacja), a następnie na angielski (Zjednoczone Królestwo). W każdym przypadku daty i godziny są wyświetlane w formacie, który jest odpowiedni dla tej kultury.
+Poniższy przykład wyświetla dane o wschód i wschód słońca dwa razy dla 11 października 2012. Najpierw ustawia bieżącą kulturę na chorwacki (Chorwacja), a następnie na angielski (Wielka Brytania). W każdym przypadku daty i godziny są wyświetlane w formacie, który jest odpowiedni dla tej kultury.
 
 [!code-csharp[Conceptual.Globalization#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates1.cs#2)]
 [!code-vb[Conceptual.Globalization#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates1.vb#2)]
 
 ### <a name="persist-dates-and-times"></a>Utrwalanie dat i godzin
 
-Nigdy nie należy utrwalać danych daty i godziny w formacie, który może się różnić w zależności od kultury. Jest to typowy błąd programistyczny, który powoduje uszkodzenie danych lub wyjątek czasu wykonywania. Poniższy przykład serializacji dwóch dat, 9 stycznia 2013 i 18 sierpnia 2013 jako ciągów przy użyciu Konwencji formatowania kultury angielskiej (Stany Zjednoczone). Gdy dane są pobierane i analizowane przy użyciu Konwencji kultury angielskiej (Stany Zjednoczone), zostanie ona pomyślnie przywrócona. Jednak po pobraniu i przeanalizowaniu przy użyciu Konwencji kultury angielskiej (Zjednoczone Królestwo) pierwsza data jest błędnie interpretowana jako 1 września, a druga nie można przeanalizować, ponieważ kalendarz gregoriański nie ma osiemnastegoego miesiąca.
+Nigdy nie należy utrwalać danych daty i godziny w formacie, który może się różnić w zależności od kultury. Jest to typowy błąd programistyczny, który powoduje uszkodzenie danych lub wyjątek czasu wykonywania. Poniższy przykład serializacji dwóch dat, 9 stycznia 2013 i 18 sierpnia 2013 jako ciągów przy użyciu Konwencji formatowania kultury angielskiej (Stany Zjednoczone). Gdy dane są pobierane i analizowane przy użyciu Konwencji kultury angielskiej (Stany Zjednoczone), zostanie ona pomyślnie przywrócona. Jednak po pobraniu i przeanalizowaniu przy użyciu Konwencji kultury angielskiej (Wielka Brytania) pierwsza data jest błędnie interpretowana jako 1 września, a druga nie można przeanalizować, ponieważ kalendarz gregoriański nie ma osiemnastegoego miesiąca.
 
 [!code-csharp[Conceptual.Globalization#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates2.cs#3)]
 [!code-vb[Conceptual.Globalization#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates2.vb#3)]
@@ -281,7 +281,7 @@ Zazwyczaj gdy liczby są wyświetlane w interfejsie użytkownika, należy użyć
 
 - Funkcja [formatowania złożonego](../../../docs/standard/base-types/composite-formatting.md) , gdy jest używana z wartościami liczbowymi
 
-W poniższym przykładzie przedstawiono średnią temperaturę miesięcznie w Paryżu, Francja. Najpierw ustawia bieżącą kulturę na francuski (Francja) przed wyświetleniem danych, a następnie ustawia ją na angielski (Stany Zjednoczone). W każdym przypadku nazwy miesięcy i temperatury są wyświetlane w formacie, który jest odpowiedni dla tej kultury. Należy zauważyć, że dwie kultury używają różnych separatorów dziesiętnych w wartości temperatury. Należy również zauważyć, że w przykładzie jest stosowany niestandardowy ciąg formatu daty i godziny "MMMM", aby wyświetlić pełną nazwę miesiąca i przydzielić odpowiednią ilość miejsca dla nazwy miesiąca w ciągu wynikowym przez określenie długości najdłuższej nazwy miesiąca w <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A?displayProperty=nameWithType> a rray.
+W poniższym przykładzie przedstawiono średnią temperaturę miesięcznie w Paryżu, Francja. Najpierw ustawia bieżącą kulturę na francuski (Francja) przed wyświetleniem danych, a następnie ustawia ją na angielski (Stany Zjednoczone). W każdym przypadku nazwy miesięcy i temperatury są wyświetlane w formacie, który jest odpowiedni dla tej kultury. Należy zauważyć, że dwie kultury używają różnych separatorów dziesiętnych w wartości temperatury. Należy również zauważyć, że w przykładzie jest stosowany niestandardowy ciąg formatu daty i godziny "MMMM", aby wyświetlić pełną nazwę miesiąca i przydzielić odpowiednią ilość miejsca dla nazwy miesiąca w ciągu wynikowym przez określenie długości najdłuższej nazwy miesiąca w tablicy <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A?displayProperty=nameWithType>.
 
 [!code-csharp[Conceptual.Globalization#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/numbers1.cs#5)]
 [!code-vb[Conceptual.Globalization#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/numbers1.vb#5)]
@@ -338,7 +338,7 @@ Ogólnie rzecz biorąc nie należy wprowadzać żadnych założeń dotyczących 
 
 - W systemach Windows użytkownik może dostosować ustawienia specyficzne dla kultury przy użyciu aplikacji **region i język** w panelu sterowania. Podczas tworzenia wystąpienia obiektu <xref:System.Globalization.CultureInfo> można określić, czy ma on odzwierciedlać te dostosowania użytkownika przez wywołanie konstruktora <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>. Zazwyczaj w przypadku aplikacji użytkownika końcowego należy przestrzegać preferencji użytkownika, aby użytkownik mógł wyświetlić dane w formacie, którego oczekuje.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Globalizacja i lokalizacja](../../../docs/standard/globalization-localization/index.md)
 - [Najlepsze rozwiązania dotyczące używania ciągów](../../../docs/standard/base-types/best-practices-strings.md)

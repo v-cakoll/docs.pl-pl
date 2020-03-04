@@ -4,12 +4,12 @@ description: Informacje o C# działaniu wersji i programie .NET
 ms.date: 01/08/2017
 ms.technology: csharp-advanced-concepts
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: 3fadbc1257ae758fc220685fa074a4fa68b20ba1
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: ee123893ac8baa0a55bdf69ce49fb6fcb87601b4
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039655"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240005"
 ---
 # <a name="versioning-in-c"></a>Przechowywanie wersji w języku C\#
 
@@ -53,7 +53,7 @@ Dzięki temu użytkownicy będą mogli uaktualnić do nowej wersji biblioteki, i
 ### <a name="application-configuration-file"></a>Plik konfiguracji aplikacji
 
 Deweloperem platformy .NET jest bardzo wysoka szansa [, że plik `app.config`](../framework/configure-apps/file-schema/index.md) występuje w większości typów projektów.
-Ten prosty plik konfiguracji może być długim sposobem ulepszania wdrażania nowych aktualizacji. Zazwyczaj należy zaprojektować biblioteki w taki sposób, że informacje, które prawdopodobnie zmieniają się regularnie, są przechowywane w pliku `app.config`, w ten sposób, gdy takie informacje zostaną zaktualizowane, plik konfiguracyjny starszych wersji musi zostać zastąpiony nowym programem bez potrzeba ponownej kompilacji biblioteki.
+Ten prosty plik konfiguracji może być długim sposobem ulepszania wdrażania nowych aktualizacji. Zazwyczaj należy zaprojektować biblioteki w taki sposób, że informacje, które prawdopodobnie zmieniają się regularnie, są przechowywane w pliku `app.config`, w ten sposób, gdy takie informacje zostaną zaktualizowane, plik konfiguracyjny starszych wersji musi zostać zastąpiony nowym, bez konieczności ponownej kompilacji biblioteki.
 
 ## <a name="consuming-libraries"></a>Używanie bibliotek
 
@@ -82,9 +82,9 @@ Używasz modyfikatora `new`, aby ukryć dziedziczone elementy członkowskie klas
 
 Wykonaj następujące czynności:
 
-[!code-csharp[Sample usage of the 'new' modifier](~/samples/csharp/versioning/new/Program.cs#sample)]
+[!code-csharp[Sample usage of the 'new' modifier](~/samples/snippets/csharp/versioning/new/Program.cs#sample)]
 
-**Output**
+**Dane wyjściowe**
 
 ```console
 A base method
@@ -96,13 +96,13 @@ Oznacza to, że gdy klasa bazowa w nowej wersji biblioteki dodaje element człon
 
 Gdy nie jest określony modyfikator `new`, Klasa pochodna domyślnie ukrywa elementy członkowskie powodujące konflikt w klasie bazowej, mimo że zostanie wygenerowane Ostrzeżenie kompilatora, kod nadal zostanie skompilowany. Oznacza to, że po prostu dodanie nowych elementów członkowskich do istniejącej klasy powoduje, że nowa wersja biblioteki jest zgodna z kodem, który od niego zależy.
 
-### <a name="override"></a>override
+### <a name="override"></a>zastąpienie
 
 Modyfikator `override` oznacza, że implementacja pochodna rozszerza implementację składowej klasy bazowej, a nie ukrywa ją. Element członkowski klasy bazowej musi mieć zastosowany modyfikator `virtual`.
 
-[!code-csharp[Sample usage of the 'override' modifier](../../samples/csharp/versioning/override/Program.cs#sample)]
+[!code-csharp[Sample usage of the 'override' modifier](../../samples/snippets/csharp/versioning/override/Program.cs#sample)]
 
-**Output**
+**Dane wyjściowe**
 
 ```console
 Base Method One: Method One

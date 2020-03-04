@@ -11,29 +11,29 @@ helpviewer_keywords:
 - streams, writing characters to strings
 - I/O [.NET Framework], writing characters to strings
 ms.assetid: 1222cbeb-0760-44bf-9888-914a2a37174b
-ms.openlocfilehash: b53513ef0b373cdde7703eddcd182ab7fd15cb9b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: ecbfa2de2c21ff79df269f74eeddfa0738e7e25c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706624"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160286"
 ---
 # <a name="how-to-write-characters-to-a-string"></a>Instrukcje: Wpisywanie znaków do ciągu
 Poniższe przykłady kodu zapisują znaki synchronicznie lub asynchronicznie z tablicy znaków w ciągu.  
   
 ## <a name="example-write-characters-synchronously-in-a-console-app"></a>Przykład: zapisuj znaki synchronicznie w aplikacji konsolowej  
- Poniższy przykład używa <xref:System.IO.StringWriter>, aby synchronicznie napisać pięć znaków do <xref:System.Text.StringBuilder> obiektu. 
+ Poniższy przykład używa <xref:System.IO.StringWriter>, aby synchronicznie napisać pięć znaków do <xref:System.Text.StringBuilder> obiektu.
   
  [!code-csharp[Conceptual.StringBuilder#9](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/example2.cs#9)]
  [!code-vb[Conceptual.StringBuilder#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/example2.vb#9)]  
   
-## <a name="example-write-characters-asynchronously-in-a-wpf-app"></a>Przykład: zapisuj znaki asynchronicznie w aplikacji WPF 
+## <a name="example-write-characters-asynchronously-in-a-wpf-app"></a>Przykład: zapisuj znaki asynchronicznie w aplikacji WPF
  Następny przykład to kod związany z aplikacją WPF. W przypadku ładowania okna przykład Asynchronicznie odczytuje wszystkie znaki z kontrolki <xref:System.Windows.Controls.TextBox> i zapisuje je w tablicy. Następnie asynchronicznie zapisuje każdą literę lub biały znak w osobnym wierszu kontrolki <xref:System.Windows.Controls.TextBlock>.  
   
  [!code-csharp[StreamReaderWriter](../../../samples/snippets/csharp/VS_Snippets_Wpf/StringReaderWriter/MainWindow.xaml.cs)]
  [!code-vb[StreamReaderWriter](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StringReaderWriter/MainWindow.xaml.vb)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.IO.StringWriter>  
 - <xref:System.IO.StringWriter.Write%2A?displayProperty=nameWithType>  

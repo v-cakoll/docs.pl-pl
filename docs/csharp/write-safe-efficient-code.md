@@ -4,12 +4,12 @@ description: Najnowsze ulepszenia C# języka umożliwiają pisanie możliwego do
 ms.date: 10/23/2018
 ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: f590a338d35966e2cd3a507164057a49b8a5f6f8
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: d4a7916b80e15c7f00fa0a7da213ed0593e0959d
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346706"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239979"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Zapisz bezpieczny i wydajny C# kod
 
@@ -154,7 +154,7 @@ Zwrócenie `ref readonly` umożliwia zapisanie kopiowania większych struktur i 
 
 W odniesieniu do witryny wywołującej może być używana Właściwość `Origin` jako `ref readonly` lub jako wartość:
 
-[!code-csharp[AssignRefReadonly](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#AssignRefReadonly "Assigning a ref readonly")]
+[!code-csharp[AssignRefReadonly](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#AssignRefReadonly "Assigning a ref readonly")]
 
 Pierwsze przypisanie w poprzednim kodzie wykonuje kopię `Origin` stałej i przypisuje tę kopię. Drugi przypisuje odwołanie. Należy zauważyć, że modyfikator `readonly` musi być częścią deklaracji zmiennej. Nie można zmodyfikować odwołania, do którego się odwołuje. Próby wykonania tej operacji spowodują błąd czasu kompilacji.
 
@@ -180,7 +180,7 @@ To rozwiązanie często zwiększa wydajność dla typów wartości tylko do odcz
 
 Poniższy kod przedstawia przykład metody, która oblicza odległość między dwoma punktami w przestrzeni 3D.
 
-[!code-csharp[InArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgument "Specifying an in argument")]
+[!code-csharp[InArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgument "Specifying an in argument")]
 
 Argumenty to dwie struktury, które każda z nich zawiera trzy podwojone. Podwójna wartość to 8 bajtów, więc każdy argument ma 24 bajty. Określając modyfikator `in`, należy przekazać 4-bajtowy lub 8-bajtowy odwołanie do tych argumentów, w zależności od architektury maszyny. Różnica w rozmiarze jest mała, ale jest dodawana, gdy aplikacja wywołuje tę metodę w ścisłej pętli używającej wielu różnych wartości.
 
@@ -190,7 +190,7 @@ Modyfikator `in` może zostać zastosowany do każdego elementu członkowskiego,
 
 Inną funkcją `in` parametrów jest, że można użyć wartości literału lub stałych dla argumentu do `in` parametru. Ponadto, w przeciwieństwie do `ref` lub `out` parametru, nie trzeba stosować modyfikatora `in` w witrynie wywołania. Poniższy kod przedstawia dwa przykłady wywołania metody `CalculateDistance`. Pierwsze używa dwóch zmiennych lokalnych przekazaną przez odwołanie. Drugi zawiera zmienną tymczasową utworzoną w ramach wywołania metody.
 
-[!code-csharp[UseInArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#UseInArgument "Specifying an In argument")]
+[!code-csharp[UseInArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#UseInArgument "Specifying an In argument")]
 
 Istnieje kilka sposobów, w których kompilator wymusza charakter `in` tylko do odczytu.  Po pierwsze, wywołana metoda nie może bezpośrednio przypisywać do parametru `in`. Nie można bezpośrednio przypisać do żadnego pola `in` parametru, gdy ta wartość jest typu `struct`. Ponadto nie można przekazać `in` parametru do żadnej metody za pomocą modyfikatora `ref` lub `out`.
 Te reguły mają zastosowanie do każdego pola `in` parametru, pod warunkiem, że pole jest typu `struct`, a parametr jest również typem `struct`. W rzeczywistości te reguły mają zastosowanie w przypadku wielu warstw dostępu do elementów członkowskich, pod warunkiem `structs`typy na wszystkich poziomach dostępu do elementów członkowskich.
@@ -204,11 +204,11 @@ Użycie parametrów `in` może uniknąć potencjalnych kosztów tworzenia kopii.
 
 Te reguły są przydatne podczas aktualizowania istniejącego kodu w celu użycia argumentów odwołania tylko do odczytu. Wewnątrz metody wywoływanej można wywołać dowolną metodę wystąpienia używaną przez parametry wartości. W tych wystąpieniach zostanie utworzona kopia `in` parametru. Ponieważ kompilator może utworzyć zmienną tymczasową dla dowolnego parametru `in`, można także określić wartości domyślne dla dowolnego parametru `in`. Poniższy kod określa źródło (punkt 0, 0) jako wartość domyślną dla drugiego punktu:
 
-[!code-csharp[InArgumentDefault](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgumentDefault "Specifying defaults for an in parameter")]
+[!code-csharp[InArgumentDefault](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgumentDefault "Specifying defaults for an in parameter")]
 
 Aby wymusić przekazywanie przez kompilator argumentów tylko do odczytu przez odwołanie, określ modyfikator `in` dla argumentów w miejscu wywołania, jak pokazano w poniższym kodzie:
 
-[!code-csharp[UseInArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#ExplicitInArgument "Specifying an In argument")]
+[!code-csharp[UseInArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#ExplicitInArgument "Specifying an In argument")]
 
 To zachowanie ułatwia stosowanie parametrów `in` w czasie w dużych bazach kodu, w których możliwy jest wzrost wydajności. Aby najpierw dodać modyfikator `in` do podpisów metod. Następnie można dodać modyfikator `in` w lokacjach wywołań i utworzyć typy `readonly struct`, aby umożliwić kompilatorowi uniknięcie tworzenia w większej liczbie obronnych kopii `in` parametrów.
 
@@ -218,13 +218,13 @@ Wyznaczania parametru `in` można również użyć z typami referencyjnymi lub w
 
 Opisane powyżej techniki wyjaśniają, jak uniknąć kopiowania przez zwracanie odwołań i przekazywanie wartości przez odwołanie. Techniki te działają najlepiej, gdy typy argumentów są zadeklarowane jako typy `readonly struct`. W przeciwnym razie kompilator musi utworzyć **kopie** w wielu sytuacjach, aby wymusić stałość wszystkich argumentów. Rozważmy poniższy przykład, który oblicza odległość punktu 3W od źródła:
 
-[!code-csharp[InArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgument "Specifying an in argument")]
+[!code-csharp[InArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgument "Specifying an in argument")]
 
 Struktura `Point3D` *nie* jest strukturą tylko do odczytu. W treści tej metody istnieje sześć różnych wywołań dostępu do właściwości. Przy pierwszej analizie można uważać, że te dostępy były bezpieczne. Po wykonaniu tej operacji metoda dostępu `get` nie powinna modyfikować stanu obiektu. Nie istnieje jednak reguła języka, która wymusza ten. Jest to tylko Wspólna konwencja. Każdy typ może zaimplementować metodę dostępu `get`, która zmodyfikowała stan wewnętrzny. Bez gwarancji języka kompilator musi utworzyć tymczasową kopię argumentu przed wywołaniem dowolnego elementu członkowskiego. Magazyn tymczasowy jest tworzony na stosie, wartości argumentu są kopiowane do magazynu tymczasowego, a wartość jest kopiowana do stosu dla każdego elementu członkowskiego jako argument `this`. W wielu sytuacjach te kopie mają szkodliwy wpływ na wydajność, ponieważ przekazywanie przez wartość jest szybsze niż odwołanie przekazywane przez tylko do odczytu, gdy typ argumentu nie jest `readonly struct`.
 
 Zamiast tego, jeśli obliczenie odległości używa niezmiennej struktury, `ReadonlyPoint3D`, obiekty tymczasowe nie są potrzebne:
 
-[!code-csharp[readonlyInArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#ReadOnlyInArgument "Specifying a readonly in argument")]
+[!code-csharp[readonlyInArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#ReadOnlyInArgument "Specifying a readonly in argument")]
 
 Kompilator generuje bardziej wydajny kod podczas wywoływania elementów członkowskich `readonly struct`: odwołanie `this`, zamiast kopii odbiornika, jest zawsze `in` parametrem przekazaną przez odwołanie do metody członkowskiej. Ta optymalizacja zapisuje kopiowanie w przypadku używania `readonly struct` jako argumentu `in`.
 
@@ -238,7 +238,7 @@ Pokrewna funkcja języka jest możliwość zadeklarować typ wartości, który m
 
 Podobne wymagania mogą pracować z pamięcią utworzoną przy użyciu [`stackalloc`](language-reference/operators/stackalloc.md) lub w przypadku korzystania z pamięci z interfejsów API międzyoperacyjności. Dla tych potrzeb można definiować własne typy `ref struct`.
 
-## <a name="readonly-ref-struct-type"></a>Typ: `readonly ref struct`
+## <a name="readonly-ref-struct-type"></a>Typ `readonly ref struct`
 
 Deklarowanie struktury jako `readonly ref` łączy zalety i ograniczenia `ref struct` i deklaracji `readonly struct`. Pamięć używana przez zakres tylko do odczytu jest ograniczona do pojedynczej ramki stosu i nie można modyfikować pamięci używanej przez zakres tylko do odczytu.
 
@@ -262,7 +262,7 @@ Te kompromisy mają zwykle minimalny wpływ na wydajność. Jednak w przypadku d
 
 Te ulepszenia C# języka są przeznaczone dla krytycznych algorytmów wydajności, w których Minimalizacja alokacji pamięci jest głównym czynnikiem w celu osiągnięcia wymaganej wydajności. Może się okazać, że nie używasz często tych funkcji w kodzie, który napiszesz. Jednak te ulepszenia zostały przyjęte w całym środowisku .NET. Ponieważ więcej i więcej interfejsów API korzystających z tych funkcji, zobaczysz wydajność aplikacji.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [ref keyword](language-reference/keywords/ref.md)
+- [ref — słowo kluczowe](language-reference/keywords/ref.md)
 - [Wartości zwracane ref i zmienne lokalne ref](programming-guide/classes-and-structs/ref-returns.md)

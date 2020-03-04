@@ -3,12 +3,12 @@ title: Napisz niestandardowego hosta środowiska uruchomieniowego platformy .NET
 description: Dowiedz się, jak hostować środowisko uruchomieniowe platformy .NET Core z kodu natywnego, aby obsługiwać zaawansowane scenariusze, które wymagają kontrolowania sposobu działania środowiska uruchomieniowego .NET Core.
 author: mjrousos
 ms.date: 12/21/2018
-ms.openlocfilehash: 83012dd70c2480ce488c361e821694fb957d12d9
-ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
+ms.openlocfilehash: 46c7873a1865db04cf1c2b1bb2ded2b5dacbcc8d
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75777235"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239901"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Napisz niestandardowego hosta .NET Core, aby kontrolować środowisko uruchomieniowe platformy .NET z kodu natywnego
 
@@ -51,19 +51,19 @@ Biblioteka `nethost` udostępnia funkcję `get_hostfxr_path` do lokalizowania bi
 
 Biblioteka `hostfxr` zostanie znaleziona przy użyciu `get_hostfxr_path`. Następnie jest ładowany, a jego eksporty są pobierane.
 
-[!code-cpp[HostFxrHost#LoadHostFxr](~/samples/core/hosting/HostWithHostFxr/src/NativeHost/nativehost.cpp#LoadHostFxr)]
+[!code-cpp[HostFxrHost#LoadHostFxr](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithHostFxr/src/NativeHost/nativehost.cpp#LoadHostFxr)]
 
 ### <a name="step-2---initialize-and-start-the-net-core-runtime"></a>Krok 2 — Inicjowanie i uruchamianie środowiska uruchomieniowego platformy .NET Core
 
 Funkcje `hostfxr_initialize_for_runtime_config` i `hostfxr_get_runtime_delegate` inicjują i uruchamiają środowisko uruchomieniowe platformy .NET Core przy użyciu konfiguracji środowiska uruchomieniowego zarządzanego składnika, który zostanie załadowany. Funkcja `hostfxr_get_runtime_delegate` służy do uzyskiwania delegata środowiska uruchomieniowego, który umożliwia ładowanie zestawu zarządzanego i uzyskiwanie wskaźnika funkcji do statycznej metody w tym zestawie.
 
-[!code-cpp[HostFxrHost#Initialize](~/samples/core/hosting/HostWithHostFxr/src/NativeHost/nativehost.cpp#Initialize)]
+[!code-cpp[HostFxrHost#Initialize](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithHostFxr/src/NativeHost/nativehost.cpp#Initialize)]
 
 ### <a name="step-3---load-managed-assembly-and-get-function-pointer-to-a-managed-method"></a>Krok 3. Załaduj zestaw zarządzany i Pobierz wskaźnik funkcji do metody zarządzanej
 
 Delegat środowiska uruchomieniowego jest wywoływany, aby załadować zestaw zarządzany i uzyskać wskaźnik funkcji do metody zarządzanej. Delegat wymaga ścieżki zestawu, nazwy typu i nazwy metody jako danych wejściowych i zwraca wskaźnik funkcji, którego można użyć do wywołania metody zarządzanej.
 
-[!code-cpp[HostFxrHost#LoadAndGet](~/samples/core/hosting/HostWithHostFxr/src/NativeHost/nativehost.cpp#LoadAndGet)]
+[!code-cpp[HostFxrHost#LoadAndGet](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithHostFxr/src/NativeHost/nativehost.cpp#LoadAndGet)]
 
 Przekazując `nullptr` jako nazwę typu delegata podczas wywoływania delegata środowiska uruchomieniowego, przykład używa sygnatury domyślnej dla metody zarządzanej:
 
@@ -77,7 +77,7 @@ Można użyć innej sygnatury, określając nazwę typu delegata podczas wywoły
 
 Host macierzysty może teraz wywołać metodę zarządzaną i przekazać do niej odpowiednie parametry.
 
-[!code-cpp[HostFxrHost#CallManaged](~/samples/core/hosting/HostWithHostFxr/src/NativeHost/nativehost.cpp#CallManaged)]
+[!code-cpp[HostFxrHost#CallManaged](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithHostFxr/src/NativeHost/nativehost.cpp#CallManaged)]
 
 ## <a name="create-a-host-using-coreclrhosth"></a>Tworzenie hosta za pomocą CoreClrHost. h
 
@@ -91,7 +91,7 @@ Interfejsy API środowiska uruchomieniowego platformy .NET Core są w *CoreCLR. 
 
 Po znalezieniu biblioteka jest ładowana z `LoadLibraryEx` (w systemie Windows) lub `dlopen` (w systemie Linux/macOS).
 
-[!code-cpp[CoreClrHost#1](~/samples/core/hosting/HostWithCoreClrHost/src/SampleHost.cpp#1)]
+[!code-cpp[CoreClrHost#1](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithCoreClrHost/src/SampleHost.cpp#1)]
 
 ### <a name="step-2---get-net-core-hosting-functions"></a>Krok 2. Uzyskiwanie funkcji hostingu platformy .NET Core
 
@@ -105,7 +105,7 @@ CoreClrHost ma kilka ważnych metod, które są przydatne do hostowania programu
 
 Po załadowaniu biblioteki CoreCLR następnym krokiem jest uzyskanie odwołań do tych funkcji przy użyciu `GetProcAddress` (w systemie Windows) lub `dlsym` (w systemie Linux/macOS).
 
-[!code-cpp[CoreClrHost#2](~/samples/core/hosting/HostWithCoreClrHost/src/SampleHost.cpp#2)]
+[!code-cpp[CoreClrHost#2](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithCoreClrHost/src/SampleHost.cpp#2)]
 
 ### <a name="step-3---prepare-runtime-properties"></a>Krok 3 — Przygotowanie właściwości środowiska uruchomieniowego
 
@@ -121,23 +121,23 @@ Typowe właściwości obejmują:
 
 Na tym przykładowym hoście lista TPA jest tworzona przez wyświetlenie listy wszystkich bibliotek w bieżącym katalogu:
 
-[!code-cpp[CoreClrHost#7](~/samples/core/hosting/HostWithCoreClrHost/src/SampleHost.cpp#7)]
+[!code-cpp[CoreClrHost#7](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithCoreClrHost/src/SampleHost.cpp#7)]
 
 Ponieważ przykład jest prosty, potrzebuje tylko właściwości `TRUSTED_PLATFORM_ASSEMBLIES`:
 
-[!code-cpp[CoreClrHost#3](~/samples/core/hosting/HostWithCoreClrHost/src/SampleHost.cpp#3)]
+[!code-cpp[CoreClrHost#3](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithCoreClrHost/src/SampleHost.cpp#3)]
 
 ### <a name="step-4---start-the-runtime"></a>Krok 4. Uruchamianie środowiska uruchomieniowego
 
 W przeciwieństwie do interfejsu API hosta mscoree. h (opisanego poniżej), interfejsy API CoreCLRHost. h uruchamiają środowisko uruchomieniowe i tworzą domyślną domenę aplikacji w jednym wywołaniu. Funkcja `coreclr_initialize` przyjmuje ścieżkę bazową, nazwę i właściwości opisane wcześniej i zwraca dojście do hosta za pośrednictwem parametru `hostHandle`.
 
-[!code-cpp[CoreClrHost#4](~/samples/core/hosting/HostWithCoreClrHost/src/SampleHost.cpp#4)]
+[!code-cpp[CoreClrHost#4](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithCoreClrHost/src/SampleHost.cpp#4)]
 
 ### <a name="step-5---run-managed-code"></a>Krok 5 — uruchamianie kodu zarządzanego!
 
 Po uruchomieniu środowiska uruchomieniowego host może wywołać kod zarządzany. Można to zrobić na kilka różnych sposobów. Przykładowy kod połączony z tym samouczkiem używa funkcji `coreclr_create_delegate`, aby utworzyć delegata do statycznej metody zarządzanej. Ten interfejs API przyjmuje [nazwę zestawu](../../standard/assembly/names.md), nazwę typu kwalifikowanego przestrzeni nazw i nazwę metody jako dane wejściowe i zwraca delegat, którego można użyć do wywołania metody.
 
-[!code-cpp[CoreClrHost#5](~/samples/core/hosting/HostWithCoreClrHost/src/SampleHost.cpp#5)]
+[!code-cpp[CoreClrHost#5](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithCoreClrHost/src/SampleHost.cpp#5)]
 
 W tym przykładzie host może teraz wywołać `managedDelegate`, aby uruchomić metodę `ManagedWorker.DoWork`.
 
@@ -157,7 +157,7 @@ int hr = executeAssembly(
 
 Na koniec, gdy host wykonuje kod zarządzany, środowisko uruchomieniowe programu .NET Core jest zamykane przy użyciu `coreclr_shutdown` lub `coreclr_shutdown_2`.
 
-[!code-cpp[CoreClrHost#6](~/samples/core/hosting/HostWithCoreClrHost/src/SampleHost.cpp#6)]
+[!code-cpp[CoreClrHost#6](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithCoreClrHost/src/SampleHost.cpp#6)]
 
 CoreCLR nie obsługuje ponownego inicjowania ani zwalniania. Nie wywołuj `coreclr_initialize` ponownie lub Zwolnij bibliotekę CoreCLR.
 
@@ -173,7 +173,7 @@ Interfejs hostingu `ICLRRuntimeHost4` .NET Core jest zdefiniowany w [bibliotece 
 ### <a name="step-1---identify-the-managed-entry-point"></a>Krok 1. identyfikowanie zarządzanego punktu wejścia
 Po odwołującym się do niezbędnych nagłówków (na przykład,[mscoree. h](https://github.com/dotnet/runtime/blob/master/src/coreclr/src/pal/prebuilt/inc/mscoree.h) i stdio. h) jeden z pierwszych rzeczy hosta programu .NET Core musi znajdować się w tym zarządzanym punkcie wejścia, który będzie używany. W naszym przykładowym hoście jest to realizowane przez zaledwie przejęcie pierwszego argumentu wiersza polecenia do hosta jako ścieżki do zarządzanego pliku binarnego, którego Metoda `main` zostanie wykonana.
 
-[!code-cpp[NetCoreHost#1](~/samples/core/hosting/HostWithMscoree/host.cpp#1)]
+[!code-cpp[NetCoreHost#1](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithMscoree/host.cpp#1)]
 
 ### <a name="step-2---find-and-load-coreclr"></a>Krok 2 — Znajdowanie i ładowanie CoreCLR
 Interfejsy API środowiska uruchomieniowego platformy .NET Core są w *CoreCLR. dll* (w systemie Windows). Aby uzyskać nasz interfejs hostingu (`ICLRRuntimeHost4`), konieczne jest znalezienie i załadowanie *CoreCLR. dll*. W celu zdefiniowania Konwencji na potrzeby lokalizowania *biblioteki CoreCLR. dll*na hoście znajduje się na nim. Niektóre hosty oczekują, że plik jest obecny w dobrze znanej lokalizacji na całym komputerze (na przykład *%ProgramFiles%\dotnet\shared\Microsoft.NETCore.App\2.1.6*). Inne oczekują, że *CoreCLR. dll* zostanie załadowany z lokalizacji znajdującej się obok samego hosta lub aplikacji, która ma być hostowana. Nadal inne osoby mogą zapoznać się ze zmienną środowiskową, aby znaleźć bibliotekę.
@@ -182,17 +182,17 @@ W systemie Linux lub macOS podstawowa Biblioteka środowiska uruchomieniowego je
 
 Nasz przykładowy Host sonduje kilka typowych lokalizacji dla *CoreCLR. dll*. Po znalezieniu należy go załadować za pośrednictwem `LoadLibrary` (lub `dlopen` w systemie Linux/macOS).
 
-[!code-cpp[NetCoreHost#2](~/samples/core/hosting/HostWithMscoree/host.cpp#2)]
+[!code-cpp[NetCoreHost#2](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithMscoree/host.cpp#2)]
 
 ### <a name="step-3---get-an-iclrruntimehost4-instance"></a>Krok 3. Pobieranie wystąpienia ICLRRuntimeHost4
 Interfejs hosta `ICLRRuntimeHost4` jest pobierany przez wywoływanie `GetProcAddress` (lub `dlsym` w systemie Linux/macOS) na `GetCLRRuntimeHost`, a następnie wywołanie tej funkcji.
 
-[!code-cpp[NetCoreHost#3](~/samples/core/hosting/HostWithMscoree/host.cpp#3)]
+[!code-cpp[NetCoreHost#3](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithMscoree/host.cpp#3)]
 
 ### <a name="step-4---set-startup-flags-and-start-the-runtime"></a>Krok 4 — Ustawianie flag uruchamiania i uruchamianie środowiska uruchomieniowego
 Za pomocą `ICLRRuntimeHost4` można teraz określić flagi uruchamiania w poziomie środowiska uruchomieniowego i uruchomić środowisko uruchomieniowe. Flagi uruchamiania określają, które moduły odzyskiwania pamięci (GC) mają być używane (współbieżne lub serwerowe), niezależnie od tego, czy będziemy używać jednego elementu AppDomain, czy wielu domen aplikacji oraz jakich zasad optymalizacji modułu ładującego użyć (na potrzeby ładowania zestawów w przypadku neutralnych domen).
 
-[!code-cpp[NetCoreHost#4](~/samples/core/hosting/HostWithMscoree/host.cpp#4)]
+[!code-cpp[NetCoreHost#4](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithMscoree/host.cpp#4)]
 
 Środowisko uruchomieniowe jest uruchomione z wywołaniem funkcji `Start`.
 
@@ -205,7 +205,7 @@ Po uruchomieniu środowiska uruchomieniowego będziemy chcieć skonfigurować do
 
 Flagi AppDomain określają zachowania AppDomain związane z zabezpieczeniami i międzyoperacyjną. Starsze hosty Silverlight używały tych ustawień do kodu użytkownika piaskownicy, ale większość nowoczesnych hostów .NET Core uruchamia kod użytkownika jako pełne zaufanie i umożliwia międzyoperacyjność.
 
-[!code-cpp[NetCoreHost#5](~/samples/core/hosting/HostWithMscoree/host.cpp#5)]
+[!code-cpp[NetCoreHost#5](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithMscoree/host.cpp#5)]
 
 Po podjęciu decyzji o tym, które flagi domen aplikacji należy użyć, muszą być zdefiniowane właściwości elementu AppDomain. Właściwości to pary klucz/wartość ciągów. Wiele właściwości odnosi się do sposobu, w jaki element AppDomain będzie ładować zestawy.
 
@@ -219,17 +219,17 @@ Wspólne właściwości elementu AppDomain obejmują:
 
 W naszym [prostym przykładowym hoście](https://github.com/dotnet/samples/tree/master/core/hosting/HostWithMscoree)te właściwości są konfigurowane w następujący sposób:
 
-[!code-cpp[NetCoreHost#6](~/samples/core/hosting/HostWithMscoree/host.cpp#6)]
+[!code-cpp[NetCoreHost#6](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithMscoree/host.cpp#6)]
 
 ### <a name="step-6---create-the-appdomain"></a>Krok 6. Tworzenie domeny aplikacji
 Po przywróceniu wszystkich flag i właściwości obiektów AppDomain `ICLRRuntimeHost4::CreateAppDomainWithManager` można użyć do skonfigurowania domeny aplikacji. Ta funkcja opcjonalnie przyjmuje w pełni kwalifikowaną nazwę zestawu i nazwę typu, który ma być używany jako Menedżer domen domeny. Menedżer domeny aplikacji może zezwolić hostowi na kontrolę niektórych aspektów zachowania obiektu AppDomain i może zapewnić punkty wejścia do uruchamiania kodu zarządzanego, Jeśli host nie zamierza bezpośrednio wywołać kodu użytkownika.
 
-[!code-cpp[NetCoreHost#7](~/samples/core/hosting/HostWithMscoree/host.cpp#7)]
+[!code-cpp[NetCoreHost#7](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithMscoree/host.cpp#7)]
 
 ### <a name="step-7---run-managed-code"></a>Krok 7. uruchamianie kodu zarządzanego!
 W przypadku wystąpienia elementu AppDomain up i uruchomiona host może teraz rozpocząć wykonywanie kodu zarządzanego. Najprostszym sposobem jest użycie `ICLRRuntimeHost4::ExecuteAssembly` do wywołania metody punktu wejścia zestawu zarządzanego. Należy zauważyć, że ta funkcja działa tylko w scenariuszach z jedną domeną.
 
-[!code-cpp[NetCoreHost#8](~/samples/core/hosting/HostWithMscoree/host.cpp#8)]
+[!code-cpp[NetCoreHost#8](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithMscoree/host.cpp#8)]
 
 Inna opcja, jeśli `ExecuteAssembly` nie spełnia wymagań hosta, polega na użyciu `CreateDelegate`, aby utworzyć wskaźnik funkcji do statycznej metody zarządzanej. Wymaga to, aby Host wiedział sygnaturę metody, w której jest wywoływany (w celu utworzenia typu wskaźnika funkcji), ale umożliwia hostom elastyczność wywoływania kodu innego niż punkt wejścia zestawu. Nazwa zestawu podana w drugim parametrze jest [pełną zarządzaną nazwą zestawu](../../standard/assembly/names.md) biblioteki do załadowania.
 
@@ -248,11 +248,11 @@ hr = runtimeHost->CreateDelegate(
 ### <a name="step-8---clean-up"></a>Krok 8 — czyszczenie
 Na koniec host powinien oczyścić się po nim, zwalniając z nich domeny AppDomain, zatrzymując środowisko uruchomieniowe i zwalniając odwołanie `ICLRRuntimeHost4`.
 
-[!code-cpp[NetCoreHost#9](~/samples/core/hosting/HostWithMscoree/host.cpp#9)]
+[!code-cpp[NetCoreHost#9](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithMscoree/host.cpp#9)]
 
 CoreCLR nie obsługuje zwalniania. Nie zwalniaj biblioteki CoreCLR.
 
-## <a name="conclusion"></a>Wniosek
+## <a name="conclusion"></a>Podsumowanie
 Po skompilowaniu hosta może on być testowany przez uruchomienie go z wiersza polecenia i przekazaniem wszystkich argumentów oczekiwanych przez hosta (takich jak zarządzana aplikacja do uruchomienia dla przykładowego hosta mscoree). Podczas określania aplikacji .NET Core do uruchomienia hosta należy użyć pliku. dll, który jest generowany przez `dotnet build`. Pliki wykonywalne (. exe) tworzone przez `dotnet publish` dla aplikacji samodzielnych są w rzeczywistości domyślnym hostem platformy .NET Core (aby można było uruchomić aplikację bezpośrednio z wiersza polecenia w scenariuszach linii głównej); kod użytkownika jest kompilowany do biblioteki DLL o tej samej nazwie.
 
 Jeśli elementy nie działają na początku, należy sprawdzić, czy *CoreCLR. dll* jest dostępny w lokalizacji oczekiwanej przez hosta, że wszystkie niezbędne biblioteki struktury znajdują się na liście TPA, a CoreCLR bitów (32-bitowa lub 64-bitowa) jest zgodna z sposobem kompilowania hosta.

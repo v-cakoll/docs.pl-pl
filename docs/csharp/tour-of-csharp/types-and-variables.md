@@ -1,14 +1,14 @@
 ---
 title: C#Typy i zmienne — Przewodnik po C# języku
 description: Dowiedz się więcej na temat definiowania typów i deklarowania zmiennych wC#
-ms.date: 08/10/2016
+ms.date: 02/25/2020
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 571e346d1e46be798dca1b42cfcc2af3aa65e641
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: b2a5255a243c12543a1cd59b5724b6c826306e04
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77627568"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159094"
 ---
 # <a name="types-and-variables"></a>Typy i zmienne
 
@@ -16,7 +16,7 @@ Istnieją dwa rodzaje typów w C#: *typy wartości* i *typy odwołań*. Zmienne 
 
 C#typy wartości są dalej podzielone na *typy proste*, *typy wyliczeniowe*, *typy struktur*i *typy wartości null*. C#typy odwołań są dalej podzielone na *typy klas*, *typy interfejsów*, *Typy tablic*i *typy delegatów*.
 
-Poniżej przedstawiono omówienie C#systemu typu.
+Poniższy zarys zawiera przegląd C#systemu typu.
 
 - [Typy wartości][ValueTypes]
   - [Typy proste][SimpleTypes]
@@ -69,15 +69,15 @@ Typ `struct` jest podobny do typu klasy w tym, że reprezentuje strukturę z ele
 
 Typ `interface` definiuje kontrakt jako nazwany zestaw elementów członkowskich funkcji publicznych. `class` lub `struct` implementujące `interface` musi dostarczać implementacje składowych funkcji interfejsu. `interface` może dziedziczyć z wielu interfejsów podstawowych, a `class` lub `struct` może zaimplementować wiele interfejsów.
 
-Typ `delegate` reprezentuje odwołania do metod z określoną listą parametrów i zwracanym typem. Delegaty umożliwiają traktowanie metod jako jednostek, które mogą być przypisane do zmiennych i przekazane jako parametry. Delegaty są analogiczne do typów funkcji zapewnianych przez Języki funkcjonalne. Są one również podobne do koncepcji wskaźników funkcji, które znajdują się w innych językach, ale w przeciwieństwie do wskaźników funkcji, Delegaty są zorientowane obiektowo i są bezpieczne dla typów.
+Typ `delegate` reprezentuje odwołania do metod z określoną listą parametrów i zwracanym typem. Delegaty umożliwiają traktowanie metod jako jednostek, które mogą być przypisane do zmiennych i przekazane jako parametry. Delegaty są analogiczne do typów funkcji zapewnianych przez Języki funkcjonalne. Są one również podobne do koncepcji wskaźników funkcji, które znajdują się w innych językach. W przeciwieństwie do wskaźników funkcji Delegaty są zorientowane obiektowo i są bezpieczne dla typów.
 
-`class`, `struct`, `interface` i `delegate` obsługują typy ogólne, dzięki czemu można je sparametryzowane z innymi typami.
+`class`, `struct`, `interface`i `delegate` obsługują typy ogólne, dzięki czemu można je sparametryzowane z innymi typami.
 
 Typ `enum` jest typem odrębnym o nazwanych stałych. Każdy typ `enum` ma typ podstawowy, który musi być jednym z ośmiu typów całkowitych. Zestaw wartości typu `enum` jest taki sam jak zestaw wartości typu podstawowego.
 
 C#obsługuje tablice pojedynczych i wielowymiarowych dowolnego typu. W przeciwieństwie do typów wymienionych powyżej, typy tablicy nie muszą być zadeklarowane przed użyciem. Zamiast tego typy tablic są konstruowane przez następujące nazwy typu z nawiasami kwadratowymi. Na przykład `int[]` jest tablicą jednowymiarową `int`, `int[,]` jest dwuwymiarową tablicą `int`, a `int[][]` to Jednowymiarowa tablica jednowymiarowej tablicy `int`.
 
-Nie trzeba również deklarować typów wartości null, aby można było ich używać. Dla każdego typu wartości niedopuszczających wartości null `T` istnieje odpowiedni typ wartości null `T?`, który może zawierać dodatkową wartość, `null`. Na przykład `int?` jest typem, który może zawierać dowolną 32-bitową liczbę całkowitą lub `null`wartość.
+Nie trzeba również deklarować typów wartości dopuszczających wartość null, aby można było ich używać. Dla każdego typu wartości niedopuszczających wartości null `T`istnieje odpowiedni typ wartości null `T?`, który może zawierać dodatkową wartość, `null`. Na przykład `int?` jest typem, który może zawierać dowolną 32-bitową liczbę całkowitą lub `null`wartość.
 
 C#System typów jest jednorodny tak, że wartość dowolnego typu może być traktowana jako `object`. Każdy typ C# bezpośrednio lub pośrednio pochodzi od typu klasy `object`, a `object` jest ostateczną klasą bazową wszystkich typów. Wartości typów referencyjnych są traktowane jako obiekty po prostu przez wyświetlanie wartości jako typu `object`. Wartości typów wartości są traktowane jako obiekty *przez wykonywanie* *operacji pakowania*i rozpakowywania. W poniższym przykładzie wartość `int` jest konwertowana na `object` i z powrotem do `int`.
 

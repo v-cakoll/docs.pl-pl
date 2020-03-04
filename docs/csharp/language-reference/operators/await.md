@@ -7,12 +7,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 6dc058f3850e30d8c424d4372c47b127c7d361b6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 156c07561406caed6ebb4a354a5cc2b484c832db
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712744"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239511"
 ---
 # <a name="await-operator-c-reference"></a>await — operatorC# (odwołanie)
 
@@ -20,7 +20,7 @@ Operator `await` wstrzymuje Obliczanie otaczającej metody [asynchronicznej](../
 
 W poniższym przykładzie metoda <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A?displayProperty=nameWithType> zwraca wystąpienie `Task<byte[]>`, które reprezentuje operację asynchroniczną, która generuje tablicę bajtową po jej zakończeniu. Do momentu ukończenia operacji, operator `await` zawiesza metodę `DownloadDocsMainPageAsync`. Gdy `DownloadDocsMainPageAsync` jest wstrzymana, formant jest zwracany do metody `Main`, która jest obiektem wywołującym `DownloadDocsMainPageAsync`. Metoda `Main` jest wykonywana do momentu, gdy nie będzie potrzebowała wyniku operacji asynchronicznej wykonywanej przez metodę `DownloadDocsMainPageAsync`. Gdy <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> pobiera wszystkie bajty, zostanie oceniona pozostała część metody `DownloadDocsMainPageAsync`. Następnie zostanie oceniona pozostała część metody `Main`.
 
-[!code-csharp[await example](~/samples/csharp/language-reference/operators/AwaitOperator.cs)]
+[!code-csharp[await example](~/samples/snippets/csharp/language-reference/operators/AwaitOperator.cs)]
 
 Poprzedni przykład używa [metody `Main` asynchronicznej](../../programming-guide/main-and-command-args/index.md), która jest możliwa od C# 7,1. Aby uzyskać więcej informacji, zobacz [operator await w sekcji metody Main](#await-operator-in-the-main-method) .
 
@@ -45,7 +45,7 @@ Począwszy od C# 7,1, [Metoda`Main`](../../programming-guide/main-and-command-ar
 
 Aby uzyskać więcej informacji, zobacz sekcję [await Expressions](~/_csharplang/spec/expressions.md#await-expressions) [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [C#odwoła](../index.md)
 - [Operatory języka C#](index.md)

@@ -4,12 +4,12 @@ description: W tym samouczku przedstawiono sposób generowania sekwencji przy u�
 ms.date: 10/29/2018
 ms.technology: csharp-linq
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 8984fdf0ff26726b6d05e8bee8a9e8ae1c350ea7
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: ece001e82c0aa44a91999bea78d2fd695ff9362b
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345612"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240018"
 ---
 # <a name="work-with-language-integrated-query-linq"></a>Korzystanie z zapytań zintegrowanych z językiem (LINQ)
 
@@ -179,7 +179,7 @@ Interfejs <xref:System.Collections.Generic.IEnumerable%601> ma jedną metodę: <
 
 Oto implementacja tej metody:
 
-[!CODE-csharp[InterleaveSequenceWith](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet1)]
+[!CODE-csharp[InterleaveSequenceWith](../../../samples/snippets/csharp/getting-started/console-linq/extensions.cs?name=snippet1)]
 
 Teraz, po zapisaniu tej metody, Wróć do metody `Main` i przetwórz losowo talię:
 
@@ -213,7 +213,7 @@ Ile trwa losowo, aby ustawić pokład z powrotem do oryginalnej kolejności? Aby
 
 Pisanie metody w celu ustalenia, czy dwie sekwencje są równe, powinny być bezpośrednie. Jest to podobna struktura do metody, która została zapisana w celu rozdzielenia talii. Tylko ten czas, a nie `yield return`Wykorzystaj każdego elementu, porównano pasujące elementy każdej sekwencji. Gdy cała sekwencja została wyliczona, jeśli każdy element jest zgodny, sekwencje są takie same:
 
-[!CODE-csharp[SequenceEquals](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet2)]
+[!CODE-csharp[SequenceEquals](../../../samples/snippets/csharp/getting-started/console-linq/extensions.cs?name=snippet2)]
 
 Przedstawiono w nim drugą LINQ idiom: metody terminalowe. Przyjmuje sekwencję jako dane wejściowe (lub w tym przypadku dwie sekwencje) i zwracają pojedynczą wartość skalarną. W przypadku korzystania z metod terminalu są zawsze końcową metodą w łańcuchu metod dla zapytania LINQ, w związku z czym nazwa "Terminal".
 
@@ -267,7 +267,7 @@ Należy pamiętać, że wygenerowałeś oryginalne talie przy użyciu zapytania 
 
 W pliku `Extensions.cs` wpisz lub skopiuj metodę poniżej. Ta metoda rozszerzenia tworzy nowy plik o nazwie `debug.log` w katalogu projektu i rejestruje, jakie zapytanie jest aktualnie wykonywane w pliku dziennika. Tę metodę rozszerzenia można dołączyć do dowolnego zapytania, aby oznaczyć, że zapytanie zostało wykonane.
 
-[!CODE-csharp[LogQuery](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet3)]
+[!CODE-csharp[LogQuery](../../../samples/snippets/csharp/getting-started/console-linq/extensions.cs?name=snippet3)]
 
 Zostanie wyświetlona czerwona zygzakowata `File`, co oznacza, że nie istnieje. Nie kompiluje się, ponieważ kompilator nie wie, co `File`. Aby rozwiązać ten problem, pamiętaj, aby dodać następujący wiersz kodu poniżej pierwszego wiersza w `Extensions.cs`:
 
@@ -329,7 +329,7 @@ Należy zauważyć, że nie rejestruje się za każdym razem, gdy uzyskujesz dos
 
 W tym miejscu można poprawić wydajność kodu, aby zmniejszyć liczbę wykonanych wykonań. Prosta poprawka, którą można wprowadzić, to *buforowanie* wyników oryginalnego zapytania LINQ, które konstruuje talię kart. Obecnie wykonujesz zapytania ponownie i ponownie za każdym razem, gdy pętla do-while przechodzi przez iterację, należy ponownie skonstruować talię kart i reshuffling je za każdym razem. Aby buforować talię kart, można wykorzystać metody LINQ <xref:System.Linq.Enumerable.ToArray%2A> i <xref:System.Linq.Enumerable.ToList%2A>; Po dołączeniu ich do zapytań będą one wykonywały te same akcje, które zostały przez Ciebie zapamiętane, ale teraz przechowują wyniki w tablicy lub liście, w zależności od wybranej metody do wywołania. Dołącz metodę LINQ <xref:System.Linq.Enumerable.ToArray%2A> do obu zapytań i ponownie uruchom program:
 
-[!CODE-csharp[Main](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet1)]
+[!CODE-csharp[Main](../../../samples/snippets/csharp/getting-started/console-linq/Program.cs?name=snippet1)]
 
 Teraz wychodząca wartość jest wyłączana do 30 zapytań. Uruchom ponownie z użyciem funkcji losowej i zobaczysz podobne udoskonalenia: teraz wykonuje zapytania 162.
 
@@ -337,7 +337,7 @@ Należy pamiętać, że ten przykład został **zaprojektowany** w celu wyróżn
 
 W przypadku niektórych algorytmów działa dobrze przy użyciu oceny eager, a inne działają dobrze przy użyciu oceny z opóźnieniem. W przypadku codziennego użycia Ocena z opóźnieniem jest zazwyczaj lepszym wyborem, gdy źródło danych jest osobnym procesem, takim jak aparat bazy danych. W przypadku baz danych Ocena z opóźnieniem umożliwia bardziej skomplikowane zapytania wykonywanie tylko jednej rundy w procesie bazy danych i powrót do reszty kodu. LINQ jest elastyczne, niezależnie od tego, czy zdecydujesz się na użycie oceny z opóźnieniem, czy eager, więc Zmierz procesy i wybieraj niezależny rodzaj oceny zapewnia najlepszą wydajność.
 
-## <a name="conclusion"></a>Wniosek
+## <a name="conclusion"></a>Podsumowanie
 
 W tym projekcie omówiono następujące zagadnienia:
 

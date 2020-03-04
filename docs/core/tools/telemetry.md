@@ -3,18 +3,18 @@ title: Dane telemetryczne zestaw .NET Core SDK
 description: Odkryj zestaw .NET Core SDK funkcje telemetrii, które zbierają informacje o użyciu analizy, zbierane dane i jak je wyłączyć.
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.openlocfilehash: abc9f8e1ef134ebfb5ec9acacb629d5180aaf83b
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 9d5d7ff09ade89712f2fbbe35224851bb1c28b4c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77625920"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156689"
 ---
 # <a name="net-core-sdk-telemetry"></a>Dane telemetryczne zestaw .NET Core SDK
 
 [Zestaw .NET Core SDK](index.md) zawiera funkcję telemetrii, która zbiera dane dotyczące użycia i informacje o wyjątkach, gdy interfejs wiersza polecenia platformy .NET Core awarie. Interfejs wiersza polecenia platformy .NET Core zawiera zestaw .NET Core SDK i jest zestawem zleceń, które umożliwiają kompilowanie, testowanie i publikowanie aplikacji platformy .NET Core. Ważne jest, aby zespół .NET wiedział, w jaki sposób narzędzia są używane, aby można je było ulepszyć. Informacje o błędach ułatwiają zespołowi Rozwiązywanie problemów i rozwiązywanie usterek.
 
-Zebrane dane są anonimowe i publikowane jako zagregowane w ramach [licencji Creative Commons Attribution](https://creativecommons.org/licenses/by/4.0/). 
+Zebrane dane są anonimowe i publikowane jako zagregowane w ramach [licencji Creative Commons Attribution](https://creativecommons.org/licenses/by/4.0/).
 
 ## <a name="scope"></a>Zakres
 
@@ -30,7 +30,7 @@ Dane telemetryczne *są zbierane* przy użyciu dowolnego [polecenia interfejs wi
 
 ## <a name="how-to-opt-out"></a>Jak zrezygnować
 
-Funkcja telemetrii zestaw .NET Core SDK jest domyślnie włączona. Aby zrezygnować z funkcji telemetrii, Ustaw zmienną środowiskową `DOTNET_CLI_TELEMETRY_OPTOUT` na `1` lub `true`. 
+Funkcja telemetrii zestaw .NET Core SDK jest domyślnie włączona. Aby zrezygnować z funkcji telemetrii, Ustaw zmienną środowiskową `DOTNET_CLI_TELEMETRY_OPTOUT` na `1` lub `true`.
 
 W przypadku pomyślnej instalacji wysyłany jest również pojedynczy wpis telemetrii przez Instalatora zestaw .NET Core SDK. Aby zrezygnować z programu, przed zainstalowaniem zestaw .NET Core SDK należy ustawić zmienną środowiskową `DOTNET_CLI_TELEMETRY_OPTOUT`.
 
@@ -132,7 +132,7 @@ at Microsoft.DotNet.Cli.Program.Main(String[] args)
 
 Współautorzy platformy .NET Core i inne osoby, na których jest uruchomiona wersja zestaw .NET Core SDK należy wziąć pod uwagę ścieżkę do kodu źródłowego zestawu SDK. Jeśli wystąpi awaria podczas korzystania z zestaw .NET Core SDK, który jest kompilacją niestandardową lub skonfigurowaną za pomocą niestandardowych plików symboli kompilacji, ścieżka pliku źródłowego zestawu SDK z maszyny kompilacji jest zbierana jako część śladu stosu i nie ma wartości skrótu.
 
-Z tego powodu niestandardowe kompilacje zestaw .NET Core SDK nie powinny znajdować się w katalogach, których nazwy ścieżek ujawniają osobiste lub poufne informacje. 
+Z tego powodu niestandardowe kompilacje zestaw .NET Core SDK nie powinny znajdować się w katalogach, których nazwy ścieżek ujawniają osobiste lub poufne informacje.
 
 ## <a name="see-also"></a>Zobacz też
 

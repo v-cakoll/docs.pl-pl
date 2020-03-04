@@ -14,12 +14,12 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-ms.openlocfilehash: 87436b7d9e2041afb14b146ae0c16201c8593154
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: b33366922677b26f8fe99454206cacd5bb124f32
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348290"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159276"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Niestandardowe ciągi formatujące datę i godzinę
 
@@ -30,7 +30,7 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
 
 Niestandardowe ciągi formatujące datę i godzinę mogą być używane z wartościami <xref:System.DateTime> i <xref:System.DateTimeOffset>.
 
-[!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-utc-partial-note.md)] 
+[!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-utc-partial-note.md)]
 
 <a name="table"></a>W operacjach formatowania niestandardowe ciągi formatujące datę i czas mogą być używane z metodą `ToString` wystąpienia daty i godziny lub z metodą, która obsługuje formatowanie złożone. W poniższym przykładzie pokazano oba te zastosowania.
 
@@ -398,7 +398,7 @@ W poniższym przykładzie specyfikator formatu niestandardowego „M” jest uż
 [!code-csharp[Formatting.DateAndTime.Custom#11](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#11)]
 [!code-vb[Formatting.DateAndTime.Custom#11](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#11)]
 
-[Wróć do tabeli](#table) 
+[Wróć do tabeli](#table)
 
 ## <a name="MM_Specifier"></a>Specyfikator formatu niestandardowego "MM"
 
@@ -630,7 +630,7 @@ Następujące znaki w niestandardowym ciągu formatu daty i godziny są zastrze�
 |F|H|K|M|{1&gt;d&lt;1}|
 |f|g|h|m|s|
 |t|{1&gt;y&lt;1}|{1&gt;z&lt;1}|%|:|
-|/|"|'|&#92;||
+|/|”|'|&#92;||
 
 Wszystkie inne znaki są zawsze interpretowane jako literały znakowe, a w operacji formatowania są uwzględniane w niezmienionym ciągu wynikowym.  W operacji analizowania muszą one dokładnie pasować do znaków w ciągu wejściowym; w porównaniu z rozróżnianiem wielkości liter.
 
@@ -692,7 +692,7 @@ Na formatowanie mają wpływ właściwości bieżącego obiektu <xref:System.Glo
 
 Ciąg wynikowy utworzony przez wiele specyfikatorów niestandardowego formatu daty i godziny zależy również od właściwości bieżącego obiektu <xref:System.Globalization.DateTimeFormatInfo>. Aplikacja może zmienić wynik tworzony przez niektóre specyfikatory niestandardowego formatu daty i godziny przez zmianę odpowiedniej właściwości <xref:System.Globalization.DateTimeFormatInfo>. Na przykład specyfikator formatu "ddd" dodaje skróconą nazwę dnia tygodnia znalezioną w tablicy ciągów <xref:System.Globalization.DateTimeFormatInfo.AbbreviatedDayNames%2A> do ciągu wynikowego. Podobnie, specyfikator formatu "MMMM" dodaje pełną nazwę miesiąca znalezioną w <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A> tablicy ciągów do ciągu wynikowego.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.DateTime?displayProperty=nameWithType>
 - <xref:System.IFormatProvider?displayProperty=nameWithType>

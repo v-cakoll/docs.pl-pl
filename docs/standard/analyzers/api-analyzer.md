@@ -4,12 +4,12 @@ description: Dowiedz się, jak Analizator interfejsu API platformy .NET może po
 author: oliag
 ms.date: 02/20/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: f6cf2d8109c564447972afd18c6d6d587711304b
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: e214c91f2beebc7f3b3324f4879deba9a5623f86
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77542627"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156137"
 ---
 # <a name="net-api-analyzer"></a>Analizator interfejsów API platformy .NET
 
@@ -47,7 +47,7 @@ Analizator interfejsu API korzysta z kodów błędów specyficznych dla interfej
    3. Wybierz pozycję **Uwzględnij wersję wstępną**.
    4. Wyszukaj element **Microsoft. dotnet. analizatory. zgodność**.
    5. Wybierz ten pakiet z listy.
-   6. Wybierz przycisk **Instaluj** . 
+   6. Wybierz przycisk **Instaluj** .
    7. Wybierz przycisk **OK** w oknie dialogowym **Podgląd zmian** , a następnie **Wybierz przycisk** Akceptuję w oknie dialogowym **akceptacji licencji** , jeśli zgadzasz się z postanowieniami licencyjnymi dotyczącymi wymienionych pakietów.
 
 ### <a name="use-the-api-analyzer"></a>Korzystanie z analizatora interfejsu API
@@ -56,24 +56,24 @@ Gdy przestarzały interfejs API, taki jak <xref:System.Net.WebClient>, jest uży
 
 !["Zrzut ekranu interfejsu API WebClient z zieloną falistej linią i żarówką po lewej stronie"](media/api-analyzer/green-squiggle.jpg)
 
-Okno **Lista błędów** zawiera ostrzeżenia o UNIKATOWYm identyfikatorze na przestarzały interfejs API, jak pokazano w poniższym przykładzie (`DE004`): 
+Okno **Lista błędów** zawiera ostrzeżenia o UNIKATOWYm identyfikatorze na przestarzały interfejs API, jak pokazano w poniższym przykładzie (`DE004`):
 
 !["Zrzut ekranu okna Lista błędów przedstawiający identyfikator i opis ostrzeżenia"](media/api-analyzer/warnings-id-and-descriptions.jpg "Okno Lista błędów, które zawiera ostrzeżenia.")
 
 Klikając identyfikator, przejdź do strony sieci Web ze szczegółowymi informacjami o tym, dlaczego interfejs API był przestarzały i sugestie dotyczące alternatywnych interfejsów API, których można użyć.
 
-Wszystkie ostrzeżenia można pominąć przez kliknięcie prawym przyciskiem myszy wyróżnionego elementu członkowskiego i wybranie opcji **pomiń \<identyfikator diagnostyczny >** . Istnieją dwa sposoby pomijania ostrzeżeń: 
+Wszystkie ostrzeżenia można pominąć przez kliknięcie prawym przyciskiem myszy wyróżnionego elementu członkowskiego i wybranie opcji **pomiń \<identyfikator diagnostyczny >**. Istnieją dwa sposoby pomijania ostrzeżeń:
 
 - [lokalnie (w źródle)](#suppress-warnings-locally)
 - [globalnie (w pliku pominięć)](#suppress-warnings-globally) — zalecane
 
 ### <a name="suppress-warnings-locally"></a>Pomijaj ostrzeżenia lokalnie
 
-Aby pominąć ostrzeżenia lokalnie, kliknij prawym przyciskiem myszy element członkowski, dla którego chcesz pominąć ostrzeżenia, a następnie wybierz polecenie **szybkie akcje i refaktoryzacje** > **Pomiń *Identyfikator diagnostyczny*\<identyfikator diagnostyczny >**  > **w źródle**. Dyrektywa preprocesora ostrzeżeń [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) jest dodawana do kodu źródłowego w określonym zakresie: !["zrzut ekranu kodu z ramką #pragma wyłączyć"](media/api-analyzer/suppress-in-source.jpg)
+Aby pominąć ostrzeżenia lokalnie, kliknij prawym przyciskiem myszy element członkowski, dla którego chcesz pominąć ostrzeżenia, a następnie wybierz polecenie **szybkie akcje i refaktoryzacje** > **Pomiń *Identyfikator diagnostyczny*\<identyfikator diagnostyczny >** > **w źródle**. Dyrektywa preprocesora ostrzeżeń [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) jest dodawana do kodu źródłowego w określonym zakresie: !["zrzut ekranu kodu z ramką #pragma wyłączyć"](media/api-analyzer/suppress-in-source.jpg)
 
 ### <a name="suppress-warnings-globally"></a>Pomijaj ostrzeżenia globalnie
 
-Aby pominąć ostrzeżenia globalnie, kliknij prawym przyciskiem myszy element członkowski, dla którego chcesz pominąć ostrzeżenia, a następnie wybierz polecenie **szybkie akcje i refaktoryzacje** > **pominąć *Identyfikator diagnostyczny*\<identyfikator diagnostyczny >**  > **w pliku**pominięć.
+Aby pominąć ostrzeżenia globalnie, kliknij prawym przyciskiem myszy element członkowski, dla którego chcesz pominąć ostrzeżenia, a następnie wybierz polecenie **szybkie akcje i refaktoryzacje** > **pominąć *Identyfikator diagnostyczny*\<identyfikator diagnostyczny >** > **w pliku**pominięć.
 
 !["Zrzut ekranu interfejsu API WebClient z zieloną falistej linią i żarówką po lewej stronie"](media/api-analyzer/suppress-in-sup-file.jpg)
 

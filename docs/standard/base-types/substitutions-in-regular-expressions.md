@@ -13,12 +13,12 @@ helpviewer_keywords:
 - constructs, substitutions
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
-ms.openlocfilehash: db0e2234055c6869c4cf55196d9f3b62a6996c96
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 3562bd113ae4c9a3f721d8858a5d3625ef548d3a
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73972061"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160082"
 ---
 # <a name="substitutions-in-regular-expressions"></a>Podstawienia w wyrażeniach regularnych
 Podstawienia są elementami języka, które są rozpoznawane tylko we wzorcach zamieniania. Używają one wzorca wyrażenia regularnego w celu zdefiniowania całości lub części teksu, który ma zastąpić dopasowany tekst w ciągu wejściowym. Wzorzec zamieniania może składać się z co najmniej jednego podstawienia oraz znaków literału. Wzorce zastępujące są dostarczane do przeciążenia metody <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType>, która ma parametr `replacement` i metodę <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>. Metody zastępują pasujący wzorzec ze wzorcem zdefiniowanym przez parametr `replacement`.  
@@ -60,7 +60,7 @@ Podstawienia są elementami języka, które są rozpoznawane tylko we wzorcach z
   
  `\p{Sc}*(\s?\d+[.,]?\d*)\p{Sc}*` wzorzec wyrażenia regularnego jest zdefiniowany, jak pokazano w poniższej tabeli.  
   
-|Wzorzec|Opis|  
+|Wzorce|Opis|  
 |-------------|-----------------|  
 |`\p{Sc}*`|Dopasowanie do zera lub większej liczby znaków symbolu waluty.|  
 |`\s?`|Dopasowanie do zera lub jednego znaku odstępu.|  
@@ -83,7 +83,7 @@ Podstawienia są elementami języka, które są rozpoznawane tylko we wzorcach z
   
  `\p{Sc}*(?<amount>\s?\d[.,]?\d*)\p{Sc}*` wzorzec wyrażenia regularnego jest zdefiniowany, jak pokazano w poniższej tabeli.  
   
-|Wzorzec|Opis|  
+|Wzorce|Opis|  
 |-------------|-----------------|  
 |`\p{Sc}*`|Dopasowanie do zera lub większej liczby znaków symbolu waluty.|  
 |`\s?`|Dopasowanie do zera lub jednego znaku odstępu.|  
@@ -102,7 +102,7 @@ Podstawienia są elementami języka, które są rozpoznawane tylko we wzorcach z
   
  `\b(\d+)(\.(\d+))?` wzorzec wyrażenia regularnego jest zdefiniowany, jak pokazano w poniższej tabeli.  
   
-|Wzorzec|Opis|  
+|Wzorce|Opis|  
 |-------------|-----------------|  
 |`\b`|Rozpoczęcie dopasowywania na początku granicy wyrazu.|  
 |`(\d+)`|Dopasowanie do co najmniej jednej cyfry dziesiętnej. Jest to pierwsza grupa przechwytywania.|  
@@ -120,7 +120,7 @@ Podstawienia są elementami języka, które są rozpoznawane tylko we wzorcach z
   
  `^(\w+\s?)+$` wzorzec wyrażenia regularnego jest zdefiniowany, jak pokazano w poniższej tabeli.  
   
-|Wzorzec|Opis|  
+|Wzorce|Opis|  
 |-------------|-----------------|  
 |`^`|Rozpoczęcie dopasowywania na początku ciągu wejściowego.|  
 |`(\w+\s?)+`|Dopasowanie wzorca jednego lub większej liczby znaków słowa, po których co najmniej raz następuje zero lub jeden znak odstępu.|  
@@ -144,7 +144,7 @@ Podstawienia są elementami języka, które są rozpoznawane tylko we wzorcach z
 |2|5|aa1bb|aaaabb**aa1bb**cc3dd4ee5|  
 |3|8|aa1bb2cc|aaaabbaa1bbcc**aa1bb2cc**dd4ee5|  
 |4|11|aa1bb2cc3dd|aaaabbaa1bbccaa1bb2ccdd**aa1bb2cc3dd**EE5|  
-|5|14,5|aa1bb2cc3dd4ee|aaaabbaa1bbccaa1bb2ccddaa1bb2cc3ddee**aa1bb2cc3dd4ee**| 
+|5|14|aa1bb2cc3dd4ee|aaaabbaa1bbccaa1bb2ccddaa1bb2cc3ddee**aa1bb2cc3dd4ee**|
 
 ## <a name="substituting-the-text-after-the-match"></a>Podstawianie tekstu po dopasowaniu  
  Podstawienie `$'` zastępuje dopasowany ciąg, używając całego ciągu wejściowego po dopasowaniu. Oznacza to, że duplikuje ciąg wejściowy za dopasowaniem, a jednocześnie usuwa dopasowany tekst. Ciąg znajdujący się przed dopasowanym tekstem zostanie umieszczony w ciągu wynikowym bez zmian. Jeśli nie ma dopasowania, podstawianie `$'` nie ma żadnego wpływu.  
@@ -162,7 +162,7 @@ Podstawienia są elementami języka, które są rozpoznawane tylko we wzorcach z
 |2|5|cc3dd4ee5|aabb2cc3dd4ee5bb**cc3dd4ee5**cc3dd4ee5|  
 |3|8|dd4ee5|aabb2cc3dd4ee5bbcc3dd4ee5cc**dd4ee5**dd4ee5|  
 |4|11|ee5|aabb2cc3dd4ee5bbcc3dd4ee5ccdd4ee5dd**EE5**EE5|  
-|5|14,5|<xref:System.String.Empty?displayProperty=nameWithType>|aabb2cc3dd4ee5bbcc3dd4ee5ccdd4ee5ddee5ee|  
+|5|14|<xref:System.String.Empty?displayProperty=nameWithType>|aabb2cc3dd4ee5bbcc3dd4ee5ccdd4ee5ddee5ee|  
 
 ## <a name="substituting-the-last-captured-group"></a>Podstawianie ostatniej przechwyconej grupy  
  Podstawienie `$+` zamienia dopasowany ciąg na ostatnią przechwyconą grupę. Jeśli nie ma żadnych przechwyconych grup lub <xref:System.String.Empty?displayProperty=nameWithType>wartość ostatniej przechwyconej grupy, podstawianie `$+` nie ma żadnego skutku.  
@@ -174,7 +174,7 @@ Podstawienia są elementami języka, które są rozpoznawane tylko we wzorcach z
   
  `\b(\w+)\s\1\b` wzorzec wyrażenia regularnego jest zdefiniowany, jak pokazano w poniższej tabeli.  
   
-|Wzorzec|Opis|  
+|Wzorce|Opis|  
 |-------------|-----------------|  
 |`\b`|Rozpoczyna dopasowanie na granicy wyrazu.|  
 |`(\w+)`|Dopasowuje co najmniej jeden znak słowa. Jest to pierwsza grupa przechwytywania.|  
@@ -197,6 +197,6 @@ Podstawienia są elementami języka, które są rozpoznawane tylko we wzorcach z
 |1|3|123|**ABC123DEF456**ABC DEF456|  
 |2|5|456|ABCABC123DEF456DEF**ABC123DEF456**|  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Język wyrażeń regularnych — podręczny wykaz](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

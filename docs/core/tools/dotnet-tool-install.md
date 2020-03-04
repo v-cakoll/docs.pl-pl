@@ -2,12 +2,12 @@
 title: polecenie instalacji narzędzia dotnet
 description: Polecenie instalacji narzędzia dotnet służy do instalowania określonego narzędzia platformy .NET Core na komputerze.
 ms.date: 02/14/2020
-ms.openlocfilehash: 837d12bc807ad95ccdbd9c0e087c7d45418c6e74
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 641e6a2753b1cf3bfc334ba2495342f7c42421fc
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77626037"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156977"
 ---
 # <a name="dotnet-tool-install"></a>dotnet tool install
 
@@ -73,7 +73,7 @@ Aby uzyskać więcej informacji, zobacz [Instalowanie narzędzia lokalnego](glob
 
 - **`-g|--global`**
 
-  Określa, że instalacja jest szeroka. Nie można łączyć z opcją `--tool-path`. Pominięcie obu `--global` i `--tool-path` określa instalację narzędzia lokalnego. 
+  Określa, że instalacja jest szeroka. Nie można łączyć z opcją `--tool-path`. Pominięcie obu `--global` i `--tool-path` określa instalację narzędzia lokalnego.
 
 - **`-h|--help`**
 
@@ -81,7 +81,7 @@ Aby uzyskać więcej informacji, zobacz [Instalowanie narzędzia lokalnego](glob
 
 - **`tool-path <PATH>`**
 
-  Określa lokalizację, w której ma zostać zainstalowane narzędzie globalne. ŚCIEŻKA może być bezwzględna lub względna. Jeśli ścieżka nie istnieje, polecenie próbuje ją utworzyć. Pominięcie obu `--global` i `--tool-path` określa instalację narzędzia lokalnego. 
+  Określa lokalizację, w której ma zostać zainstalowane narzędzie globalne. ŚCIEŻKA może być bezwzględna lub względna. Jeśli ścieżka nie istnieje, polecenie próbuje ją utworzyć. Pominięcie obu `--global` i `--tool-path` określa instalację narzędzia lokalnego.
 
 - **`-v|--verbosity <LEVEL>`**
 

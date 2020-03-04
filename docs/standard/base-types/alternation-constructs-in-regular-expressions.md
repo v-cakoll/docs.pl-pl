@@ -15,12 +15,12 @@ helpviewer_keywords:
 - constructs, alternation
 - .NET Framework regular expressions, alternation constructs
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
-ms.openlocfilehash: 8db9ef72415f148aca2c975fc4e8b70421e3adc3
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 02664bd2812f89649ec933483161263bae530a75
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711561"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159692"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>Konstrukcje alternacyjne w wyrażeniach regularnych
 
@@ -42,7 +42,7 @@ Podobnie jak w przypadku klasy znaków pozytywnych, znak `|` może być używany
 
 Wyrażenie regularne używające znaku `|`, `\bgr(a|e)y\b`, jest interpretowane jak pokazano w poniższej tabeli:
 
-|Wzorzec|Opis|  
+|Wzorce|Opis|  
 |-------------|-----------------|  
 |`\b`|Rozpoczyna na granicy wyrazu.|  
 |`gr`|Dopasowuje znaki "gr".|  
@@ -56,13 +56,13 @@ Znaku `|` można również użyć do wykonania elementu/lub dopasowania z wielom
 
 Wyrażenie regularne `\b(\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` jest interpretowane jak pokazano w poniższej tabeli:
   
-|Wzorzec|Opis|  
+|Wzorce|Opis|  
 |-------------|-----------------|  
 |`\b`|Rozpoczyna na granicy wyrazu.|  
 |<code>(\d{2}-\d{7}&#124;\d{3}-\d{2}-\d{4})</code>|Dopasowuje jedną z następujących wartości: dwie cyfry dziesiętne, po których następuje łącznik, a po nich siedem cyfr dziesiętnych; lub trzy cyfry dziesiętne, łącznik, dwie cyfry dziesiętne, inny łącznik i cztery cyfry dziesiętne.|  
 |`\d`|Kończy dopasowanie na granicy wyrazu.|  
   
-<a name="Conditional_Expr"></a>   
+<a name="Conditional_Expr"></a>
 ## <a name="conditional-matching-with-an-expression"></a>Warunkowe dopasowanie z wyrażeniem
 
 Ten element języka próbuje dopasować jeden z dwóch wzorców w zależności od tego, czy może on pasować do wzorca początkowego. Jego składnia to:  
@@ -85,7 +85,7 @@ Poniższy przykład jest odmianą przykładu, który pojawia się w sekcji " [do
 
 `\b(?(\d{2}-)\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` wzorzec wyrażenia regularnego jest interpretowany jak pokazano w poniższej tabeli:
 
-|Wzorzec|Opis|  
+|Wzorce|Opis|  
 |-------------|-----------------|  
 |`\b`|Rozpoczyna na granicy wyrazu.|  
 |`(?(\d{2}-)`|Ustal, czy następne trzy znaki składają się z dwóch cyfr, po których następuje łącznik.|  
@@ -115,7 +115,7 @@ Poniższy przykład jest odmianą przykładu, który pojawia się w sekcji " [do
 
 `\b(?<n2>\d{2}-)?(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b` wzorzec wyrażenia regularnego jest interpretowany jak pokazano w poniższej tabeli:
 
-|Wzorzec|Opis|  
+|Wzorce|Opis|  
 |-------------|-----------------|  
 |`\b`|Rozpoczyna na granicy wyrazu.|  
 |`(?<n2>\d{2}-)?`|Dopasowanie do zera lub jednego wystąpienia dwóch cyfr, po których następuje łącznik. Nadaj nazwę tej grupie przechwytywania `n2`.|  
@@ -129,6 +129,6 @@ W poniższym przykładzie przedstawiono odmianę tego przykładu, która używa 
 [!code-csharp[RegularExpressions.Language.Alternation#5](~/samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation5.cs#5)]
 [!code-vb[RegularExpressions.Language.Alternation#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation5.vb#5)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Język wyrażeń regularnych — podręczny wykaz](regular-expression-language-quick-reference.md)

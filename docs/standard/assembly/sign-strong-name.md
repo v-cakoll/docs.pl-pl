@@ -11,12 +11,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 64f3a51b29a7116c736fea0e76465a4a73c640c2
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 9998e69e8bf1505bcfc7a9103e9d89616dad9633
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75738769"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160316"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Instrukcje: podpisywanie zestawu za pomocą silnej nazwy
 
@@ -52,7 +52,7 @@ Istnieje kilka metod podpisywania zestawu za pomocą silnej nazwy:
   
 W [wiersz polecenia dla deweloperów dla programu Visual Studio](../../framework/tools/developer-command-prompt-for-vs.md)wprowadź następujące polecenie:  
 
-**Al** **/out:** \<*assemblyName*>  *\<ModuleName >* **/keyfile:** \<*pliku*  
+**Al** **/out:**\<*assemblyName*> *\<ModuleName >* **/keyfile:**\<*pliku*>  
 
 Gdzie:  
 
@@ -73,9 +73,9 @@ Aby uzyskać więcej informacji na temat tego narzędzia, zobacz [konsolidator z
 ## <a name="sign-an-assembly-with-a-strong-name-by-using-attributes"></a>Podpisz zestaw silną nazwą przy użyciu atrybutów  
   
 1. Dodaj atrybut <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=nameWithType> lub <xref:System.Reflection.AssemblyKeyNameAttribute> do pliku kodu źródłowego i określ nazwę pliku lub kontenera zawierającego parę kluczy do użycia podczas podpisywania zestawu o silnej nazwie.  
-   
+
 2. Skompiluj w normalny sposób plik kodu źródłowego.  
-   
+
    > [!NOTE]
    > Kompilatory C# i Visual Basic generują ostrzeżenia kompilatora (odpowiednio CS1699 i BC41008), gdy napotkają atrybut <xref:System.Reflection.AssemblyKeyFileAttribute> lub <xref:System.Reflection.AssemblyKeyNameAttribute> w kodzie źródłowym. Można zignorować te ostrzeżenia.  
 
@@ -107,7 +107,7 @@ W poniższym przykładzie użyto C# kompilatora i podpisuje zestaw *UtilityLibra
 csc /t:library UtilityLibrary.cs /keyfile:sgKey.snk  
 ```  
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Tworzenie i używanie zestawów o silnych nazwach](create-use-strong-named.md)
 - [Instrukcje: Tworzenie pary kluczy publiczny-prywatny](create-public-private-key-pair.md)

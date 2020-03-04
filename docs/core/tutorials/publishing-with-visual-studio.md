@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 12/10/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: a82934fd2ea9568681a3bec82c3b15513decc926
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: bdd6e28713bdece2bd144e6763bd84d719e91449
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741569"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156637"
 ---
 # <a name="publish-your-net-core-hello-world-application-with-visual-studio"></a>Publikowanie aplikacji Hello world .NET Core przy użyciu programu Visual Studio
 
@@ -25,15 +25,15 @@ W obszarze [Tworzenie aplikacji Hello World przy użyciu platformy .NET Core w p
 1. Kliknij prawym przyciskiem myszy projekt **HelloWorld** (nie rozwiązanie HelloWorld) i wybierz polecenie **Publikuj** z menu. (Możesz również wybrać opcję **Publikuj HelloWorld** z głównego menu **kompilacji** ).
 
    ![Menu kontekstowe publikacji programu Visual Studio](media/publishing-with-visual-studio/publish-context-menu.png)
-   
+
 1. Na stronie **Wybierz miejsce docelowe publikowania** wybierz pozycję **folder**, a następnie wybierz pozycję **Utwórz profil**.
 
    ![Wybieranie elementu docelowego publikowania w programie Visual Studio](media/publishing-with-visual-studio/pick-publish-target.png)
-   
+
 1. Na stronie **Publikowanie** wybierz pozycję **Publikuj**.
 
    ![Okno publikowania programu Visual Studio](media/publishing-with-visual-studio/publish-page.png)
-   
+
 ## <a name="inspect-the-files"></a>Inspekcja plików
 
 Proces publikowania tworzy wdrożenie zależne od platformy, które jest typem wdrożenia, w którym opublikowana aplikacja działa na dowolnej platformie obsługiwanej przez platformę .NET Core z zainstalowanym systemem .NET Core. Użytkownicy mogą uruchamiać opublikowaną aplikację przez dwukrotne kliknięcie pliku wykonywalnego lub wydawanie `dotnet HelloWorld.dll` polecenia z wiersza polecenia.
@@ -59,7 +59,7 @@ W poniższych krokach zawarto Podgląd plików utworzonych przez proces publikow
          Jest to [zależna od platformy wersja wdrożenia](../deploying/deploy-with-cli.md#framework-dependent-deployment) aplikacji. Aby wykonać tę bibliotekę dołączaną dynamicznie, wprowadź `dotnet HelloWorld.dll` w wierszu polecenia.
 
       * *HelloWorld. exe*
-      
+
          Jest to [zależna od struktury wersja pliku wykonywalnego](../deploying/deploy-with-cli.md#framework-dependent-executable) aplikacji. Aby go uruchomić, wprowadź `HelloWorld.exe` w wierszu polecenia.
 
       * *HelloWorld. pdb* (opcjonalnie dla wdrożenia)

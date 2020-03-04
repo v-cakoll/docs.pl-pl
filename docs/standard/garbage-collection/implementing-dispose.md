@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: 0583329ae75fa54cf000212479895ccebdbd30d8
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: f3d3269ccf56954f963762503d2bc1c53b9e6b83
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74142054"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78238991"
 ---
 # <a name="implementing-a-dispose-method"></a>Implementowanie metody Dispose
 
@@ -33,7 +33,7 @@ Wzorzec usuwania ma dwa warianty:
   
 Aby zapewnić, że zasoby są zawsze odpowiednio czyszczone, Metoda <xref:System.IDisposable.Dispose%2A> powinna być wywoływana wiele razy bez zgłaszania wyjątku.  
   
-Przykład kodu podany dla metody <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> pokazuje, jak agresywne wyrzucanie elementów bezużytecznych może spowodować uruchomienie finalizatora w czasie, gdy element członkowski odzyskiwanego obiektu jest nadal wykonywany. Dobrym pomysłem jest wywołanie metody <xref:System.GC.KeepAlive%2A> na końcu długiej <xref:System.IDisposable.Dispose%2A>ej metody.  
+Przykład kodu podany dla metody <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> pokazuje, jak wyrzucanie elementów bezużytecznych może spowodować uruchomienie finalizatora, a niezarządzane odwołanie do obiektu lub jego członków jest nadal w użyciu. Warto użyć <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType>, aby obiekt niekwalifikujący się do wyrzucania elementów bezużytecznych od początku bieżącej procedury do punktu, w którym ta metoda jest wywoływana.
   
 <a name="Dispose2"></a>
 ## <a name="dispose-and-disposeboolean"></a>Metoda Dispose() a metoda Dispose(Boolean)  
@@ -70,7 +70,7 @@ Treść metody składa się z dwóch bloków kodu:
   
   **Zarządzane obiekty, które zużywają duże ilości pamięci lub zużywają niewystarczające zasoby.** Bezpośrednie zwalnianie tych obiektów w metodzie `Dispose` zwalnia je szybciej, niż gdyby były odzyskiwane niedeterministycznie przez moduł wyrzucania elementów bezużytecznych.  
   
-Jeśli wywołanie metody pochodzi od finalizatora (to oznacza, *że jeśli zostanie* `false`, zostanie wykonany tylko kod, który zwolni niezarządzane zasoby. Ponieważ kolejność, w której moduł wyrzucania elementów bezużytecznych niszczy obiekty zarządzane podczas finalizowania, nie jest zdefiniowana, wywołanie tego `Dispose` Przeciążenie z wartością `false` uniemożliwia finalizatorowi podejmowanie prób zwolnienia zarządzanych zasobów, które mogły już zostać odzyskać.  
+Jeśli wywołanie metody pochodzi od finalizatora (to oznacza, *że jeśli zostanie* `false`, zostanie wykonany tylko kod, który zwolni niezarządzane zasoby. Ponieważ kolejność, w której moduł wyrzucania elementów bezużytecznych niszczy obiekty zarządzane podczas finalizowania, nie jest zdefiniowana, wywołanie tego `Dispose` Przeciążenie z wartością `false` uniemożliwia finalizatorowi podejmowanie prób zwolnienia zarządzanych zasobów, które mogły już zostać odzyskane.  
   
 ## <a name="implementing-the-dispose-pattern-for-a-base-class"></a>Implementowanie wzorca usuwania dla klasy bazowej
 
@@ -125,7 +125,7 @@ Oto ogólny wzorzec implementowania wzorca usuwania dla klasy pochodnej, która 
 > [!NOTE]
 > W C#programie zastąpienie <xref:System.Object.Finalize%2A?displayProperty=nameWithType> przez zdefiniowanie [destruktora](../../csharp/programming-guide/classes-and-structs/destructors.md).  
   
-<a name="SafeHandles"></a>   
+<a name="SafeHandles"></a>
 ## <a name="using-safe-handles"></a>Używanie bezpiecznych dojść
 
 Pisanie kodu dla finalizatora obiektu to złożone zadanie, które może powodować problemy, jeśli nie zostanie wykonane prawidłowo. W związku z tym zaleca się Konstruowanie obiektów <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> zamiast implementowania finalizatora.  
@@ -142,7 +142,7 @@ Klasy pochodne klasy <xref:System.Runtime.InteropServices.SafeHandle?displayProp
   
 - Klasa <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle>, dla uchwytów oczekiwania.  
   
-<a name="base"></a>   
+<a name="base"></a>
 ## <a name="using-a-safe-handle-to-implement-the-dispose-pattern-for-a-base-class"></a>Używanie bezpiecznego dojścia w celu implementacji wzorca usuwania dla klasy bazowej
 
 Poniższy przykład ilustruje wzorzec Dispose dla klasy bazowej, `DisposableStreamResource`, który używa bezpiecznego dojścia do hermetyzowania niezarządzanych zasobów. Definiuje klasę `DisposableResource`, która używa <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> do otaczania <xref:System.IO.Stream> obiektu, który reprezentuje otwarty plik. Metoda `DisposableResource` zawiera również pojedynczą właściwość, `Size`, która zwraca łączną liczbę bajtów w strumieniu pliku.  
@@ -150,7 +150,7 @@ Poniższy przykład ilustruje wzorzec Dispose dla klasy bazowej, `DisposableStre
 [!code-csharp[Conceptual.Disposable#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/base1.cs#9)]
 [!code-vb[Conceptual.Disposable#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/base1.vb#9)]  
   
-<a name="derived"></a>   
+<a name="derived"></a>
 ## <a name="using-a-safe-handle-to-implement-the-dispose-pattern-for-a-derived-class"></a>Używanie bezpiecznego dojścia w celu implementacji wzorca usuwania dla klasy pochodnej
 
 Poniższy przykład ilustruje wzorzec Dispose dla klasy pochodnej, `DisposableStreamResource2`, która dziedziczy z klasy `DisposableStreamResource` przedstawionej w poprzednim przykładzie. Klasa dodaje dodatkową metodę, `WriteFileInfo`i używa obiektu <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> do zawijania uchwytu zapisywalnego pliku.  
@@ -158,7 +158,7 @@ Poniższy przykład ilustruje wzorzec Dispose dla klasy pochodnej, `DisposableSt
 [!code-csharp[Conceptual.Disposable#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/derived1.cs#10)]
 [!code-vb[Conceptual.Disposable#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/derived1.vb#10)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.GC.SuppressFinalize%2A>
 - <xref:System.IDisposable>

@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: 6a165c3e0f41603ef7233669d7148dd44b1d3ce6
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 1de231b01e3fa97e78a87ae6b0595a9b5536374e
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696765"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160173"
 ---
 # <a name="best-practices-for-exceptions"></a>Najlepsze rozwiązania dotyczące wyjątków
 
@@ -56,7 +56,7 @@ Klasa może udostępniać metody lub właściwości, które umożliwiają unikni
 
 Inny sposób, aby uniknąć wyjątków, ma zwrócić wartość null (lub wartość domyślną) dla skrajnie typowych przypadków błędów zamiast zgłaszać wyjątek. Ekstremalnie częste przypadki błędów należy traktować jako normalny przepływ sterowania. Zwracając wartość null (lub domyślną) w takich przypadkach można zminimalizować wpływ na wydajność aplikacji.
 
-W przypadku typów wartości, czy ma być używana `Nullable<T>`, czy wartość domyślna, jako wskaźnik błędu należy wziąć pod uwagę konkretną aplikację. Za pomocą `Nullable<Guid>`, `default` zostanie `null` zamiast `Guid.Empty`. Czasami dodanie `Nullable<T>` może być bardziej zrozumiałe, gdy wartość jest obecna lub nieobecna. Czasami dodanie `Nullable<T>` może stworzyć dodatkowe przypadki, aby sprawdzić, czy nie są potrzebne, i służy tylko do tworzenia potencjalnych źródeł błędów. 
+W przypadku typów wartości, czy ma być używana `Nullable<T>`, czy wartość domyślna, jako wskaźnik błędu należy wziąć pod uwagę konkretną aplikację. Za pomocą `Nullable<Guid>`, `default` zostanie `null` zamiast `Guid.Empty`. Czasami dodanie `Nullable<T>` może być bardziej zrozumiałe, gdy wartość jest obecna lub nieobecna. Czasami dodanie `Nullable<T>` może stworzyć dodatkowe przypadki, aby sprawdzić, czy nie są potrzebne, i służy tylko do tworzenia potencjalnych źródeł błędów.
 
 ## <a name="throw-exceptions-instead-of-returning-an-error-code"></a>Zgłoś wyjątki zamiast zwracać kod błędu
 
@@ -98,7 +98,7 @@ Na przykład w przypadku implementacji platformy .NET obsługujących domeny apl
 
 - Umieszczając zestaw we wspólnej podstawie aplikacji współużytkowanej przez obie domeny aplikacji.
 
-    \- lub —
+    \- lub-
 
 - Jeśli domeny nie współużytkują podstawy aplikacji, można podpisać zestaw zawierający informacje o wyjątku, używając silnej nazwy, i wdrożyć ten zestaw w globalnej pamięci podręcznej zestawów.
 
@@ -113,7 +113,7 @@ Komunikat o błędzie, który widzi użytkownik, pochodzi od właściwości <xre
 W przypadku zlokalizowanych aplikacji należy podać zlokalizowany ciąg komunikatu dla każdego wyjątku, który aplikacja może zgłosić. Pliki zasobów są używane do udostępniania zlokalizowanych komunikatów o błędach. Aby uzyskać informacje na temat lokalizowania aplikacji i pobierania zlokalizowanych ciągów, zobacz następujące artykuły:
 
 - [Instrukcje: Tworzenie wyjątków zdefiniowanych przez użytkownika przy użyciu zlokalizowanych komunikatów o wyjątkach](how-to-create-localized-exception-messages.md)
-- [Zasoby w aplikacjach klasycznych](../../framework/resources/index.md) 
+- [Zasoby w aplikacjach klasycznych](../../framework/resources/index.md)
 - <xref:System.Resources.ResourceManager?displayProperty=nameWithType>
 
 ## <a name="in-custom-exceptions-provide-additional-properties-as-needed"></a>W niestandardowych wyjątkach podaj dodatkowe właściwości zgodnie z wymaganiami
@@ -214,6 +214,6 @@ Catch ex As Exception
 End Try
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Wyjątki](index.md)

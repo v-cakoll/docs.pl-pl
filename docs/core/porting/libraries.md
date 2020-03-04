@@ -3,12 +3,12 @@ title: Biblioteki portów do programu .NET Core
 description: Dowiedz się, jak przenieść projekty biblioteki z .NET Framework do programu .NET Core.
 author: cartermp
 ms.date: 12/07/2018
-ms.openlocfilehash: 646587120de2e51280c2af4de36bf3a6b0f60c2d
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 68fe36e543d949dc76bdb0c19ef3482936ad9e79
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920610"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157534"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>Porty .NET Framework biblioteki do programu .NET Core
 
@@ -97,7 +97,7 @@ Takie podejście może być najlepszym rozwiązaniem w przypadku większych i ba
 1. Czy warto napisać własną implementację niedostępnego interfejsu API .NET Framework?
    Można rozważyć możliwość kopiowania, modyfikowania i używania kodu ze [źródła odwołania .NET Framework](https://github.com/Microsoft/referencesource). Kod źródłowy odwołania jest licencjonowany w ramach [licencji MIT](https://github.com/Microsoft/referencesource/blob/master/LICENSE.txt), więc masz znaczną swobodę używania źródła jako podstawy dla własnego kodu. Upewnij się, że poprawnie pokoduje firmę Microsoft w kodzie.
 1. Powtórz ten proces zgodnie z wymaganiami dla różnych projektów.
- 
+
 Faza analizy może zająć trochę czasu w zależności od rozmiaru bazy kodu. Czas wydatków w tej fazie w celu dokładnego zrozumienia zakresu zmian, które są potrzebne, i opracowania planu zwykle oszczędza czas w długim przebiegu, szczególnie jeśli masz złożoną bazę kodu.
 
 Twój plan może polegać na wprowadzeniu znaczących zmian w bazie kodu, gdy nadal są dostępne .NET Framework 4.7.2, co sprawia, że jest to bardziej strukturalna wersja poprzedniego podejścia. Informacje o wykonywaniu planu są zależne od bazy kodu.

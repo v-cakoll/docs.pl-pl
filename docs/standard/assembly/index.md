@@ -12,16 +12,16 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: 968eaf2befb44eb893699d1114b315a4f5df3097
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: f85fef37ac952c91ac73570f26d80d8a46f4eedf
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921371"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156508"
 ---
 # <a name="assemblies-in-net"></a>Zestawy w środowisku .NET
 
-Zestawy stanowią podstawowe jednostki wdrożenia, kontroli wersji, ponownego użycia, zakresu aktywacji i uprawnień zabezpieczeń dla programu. Aplikacje oparte na sieci. Zestaw jest kolekcją typów i zasobów, które są tworzone w celu współdziałania i tworzą logiczną jednostkę funkcjonalności. Zestawy mają postać plików wykonywalnych (*exe*) lub bibliotek dołączanych dynamicznie ( *. dll*) i są blokami konstrukcyjnymi aplikacji .NET. Udostępniają one środowisko uruchomieniowe języka wspólnego z informacjami, które muszą być świadome implementacji typów.
+Zestawy stanowią podstawowe jednostki wdrożenia, kontroli wersji, ponownego użycia, zakresu aktywacji i uprawnień zabezpieczeń dla programu. Aplikacje oparte na sieci. Zestaw jest kolekcją typów i zasobów, które są tworzone w celu współdziałania i tworzą logiczną jednostkę funkcjonalności. Zestawy mają postać plików wykonywalnych (*exe*) lub bibliotek dołączanych dynamicznie (*. dll*) i są blokami konstrukcyjnymi aplikacji .NET. Udostępniają one środowisko uruchomieniowe języka wspólnego z informacjami, które muszą być świadome implementacji typów.
 
 W programie .NET Core i .NET Framework można skompilować zestaw z jednego lub większej liczby plików kodu źródłowego. W .NET Framework zestawy mogą zawierać co najmniej jeden moduł. Pozwala to na zaplanowanie większych projektów w taki sposób, aby kilku deweloperów mógł działać na oddzielnych plikach kodu źródłowego lub w modułach, które są łączone w celu utworzenia jednego zestawu. Aby uzyskać więcej informacji o modułach, zobacz [How to: Build a wieloplikowego zestawu](../../framework/app-domains/build-multifile-assembly.md).
 
@@ -85,7 +85,7 @@ Ponieważ zestawy zawierają informacje o zawartości, wersji i zależnościach,
 Aby użyć zestawu w aplikacji, należy dodać do niego odwołanie. Po przywoływaniu zestawu wszystkie dostępne typy, właściwości, metody i inne elementy członkowskie jego przestrzeni nazw są dostępne dla aplikacji, tak jakby ich kod był częścią pliku źródłowego.
 
 > [!NOTE]
-> Większość zestawów z biblioteki klas .NET jest przywoływana automatycznie. Jeśli zestaw systemowy nie jest automatycznie przywoływany, w przypadku platformy .NET Core można dodać odwołanie do pakietu NuGet, który zawiera zestaw. Użyj Menedżera pakietów NuGet w programie Visual Studio lub Dodaj element [\<PackageReference >](../../core/tools/dependencies.md#the-new-packagereference-element) dla zestawu do projektu *. csproj* lub *. vbproj* . W .NET Framework można dodać odwołanie do zestawu przy użyciu okna dialogowego **Dodawanie odwołania** w programie Visual Studio lub za pomocą `-reference` opcji wiersza polecenia dla kompilatorów [C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md) lub [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md) .
+> Większość zestawów z biblioteki klas .NET jest przywoływana automatycznie. Jeśli zestaw systemowy nie jest automatycznie przywoływany, w przypadku platformy .NET Core można dodać odwołanie do pakietu NuGet, który zawiera zestaw. Użyj Menedżera pakietów NuGet w programie Visual Studio lub Dodaj element [\<PackageReference >](../../core/tools/dependencies.md#the-packagereference-element) dla zestawu do projektu *. csproj* lub *. vbproj* . W .NET Framework można dodać odwołanie do zestawu przy użyciu okna dialogowego **Dodawanie odwołania** w programie Visual Studio lub za pomocą `-reference` opcji wiersza polecenia dla kompilatorów [C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md) lub [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md) .
 
 W C#programie można użyć dwóch wersji tego samego zestawu w pojedynczej aplikacji. Aby uzyskać więcej informacji, zobacz [alias zewnętrzny](../../csharp/language-reference/keywords/extern-alias.md).
 
@@ -104,11 +104,11 @@ W C#programie można użyć dwóch wersji tego samego zestawu w pojedynczej apli
 |[Emituj metody dynamiczne i zestawy](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|Tworzenie zestawów dynamicznych.|
 |[Jak środowisko uruchomieniowe lokalizuje zestawy](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|Jak .NET Framework rozwiązuje odwołania do zestawów w czasie wykonywania.|
 
-## <a name="reference"></a>Tematy pomocy
+## <a name="reference"></a>Dokumentacja
 
 <xref:System.Reflection.Assembly?displayProperty=nameWithType>
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Format pliku zestawu .NET](file-format.md)
 - [Zaprzyjaźnione zestawy](friend.md)

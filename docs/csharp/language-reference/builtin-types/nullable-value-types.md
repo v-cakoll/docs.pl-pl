@@ -4,12 +4,12 @@ description: Dowiedz C# się więcej o typach wartości null i sposobach ich uż
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: bd90a0b1b77349efe581eb8aae44c58802ba756d
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 9b7a1e7e639608248b4b465bd440247b4061f52e
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093191"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239797"
 ---
 # <a name="nullable-value-types-c-reference"></a>Typy wartości null (C# odwołanie)
 
@@ -26,7 +26,7 @@ Typ wartości null jest zazwyczaj używany, gdy trzeba reprezentować niezdefini
 
 Ponieważ typ wartości jest niejawnie konwertowany do odpowiadającego typu wartości null, można przypisać wartość do zmiennej typu wartości null, tak jak w przypadku jego bazowego typu wartości. Możesz również przypisać wartość `null`. Na przykład:
 
-[!code-csharp[declare and assign](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#Declaration)]
+[!code-csharp[declare and assign](~/samples/snippets/csharp/language-reference/builtin-types/NullableValueTypes.cs#Declaration)]
 
 Wartość domyślna typu wartości null reprezentuje `null`, czyli jest to wystąpienie, którego właściwość <xref:System.Nullable%601.HasValue%2A?displayProperty=nameWithType> zwraca `false`.
 
@@ -34,7 +34,7 @@ Wartość domyślna typu wartości null reprezentuje `null`, czyli jest to wyst�
 
 Począwszy od C# 7,0, można użyć [operatora`is` ze wzorcem typu](../operators/type-testing-and-cast.md#type-testing-with-pattern-matching) do obu badań wystąpienie typu wartości null dla `null` i pobrać wartość typu podstawowego:
 
-[!code-csharp-interactive[use pattern matching](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#PatternMatching)]
+[!code-csharp-interactive[use pattern matching](~/samples/snippets/csharp/language-reference/builtin-types/NullableValueTypes.cs#PatternMatching)]
 
 Aby sprawdzać i pobierać wartość zmiennej typu wartości null, zawsze można użyć następujących właściwości tylko do odczytu:
 
@@ -44,23 +44,23 @@ Aby sprawdzać i pobierać wartość zmiennej typu wartości null, zawsze można
 
 W poniższym przykładzie zastosowano Właściwość `HasValue`, aby sprawdzić, czy zmienna zawiera wartość przed wyświetleniem:
 
-[!code-csharp-interactive[use HasValue](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#HasValue)]
+[!code-csharp-interactive[use HasValue](~/samples/snippets/csharp/language-reference/builtin-types/NullableValueTypes.cs#HasValue)]
 
 Można także porównać zmienną typu wartości null z `null` zamiast korzystać z właściwości `HasValue`, jak pokazano w poniższym przykładzie:
 
-[!code-csharp-interactive[use comparison with null](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#CompareWithNull)]
+[!code-csharp-interactive[use comparison with null](~/samples/snippets/csharp/language-reference/builtin-types/NullableValueTypes.cs#CompareWithNull)]
 
 ## <a name="conversion-from-a-nullable-value-type-to-an-underlying-type"></a>Konwersja z typu wartości null na typ podstawowy
 
 Jeśli chcesz przypisać wartość typu wartości null do zmiennej typu wartości, która nie dopuszcza wartości null, może być konieczne określenie wartości, która ma zostać przypisana zamiast `null`. Użyj [`??`operatora łączenia wartości null](../operators/null-coalescing-operator.md) , aby to zrobić (można również użyć metody <xref:System.Nullable%601.GetValueOrDefault(%600)?displayProperty=nameWithType> do tego samego celu):
 
-[!code-csharp-interactive[?? operator](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#NullCoalescing)]
+[!code-csharp-interactive[?? operator](~/samples/snippets/csharp/language-reference/builtin-types/NullableValueTypes.cs#NullCoalescing)]
 
 Jeśli chcesz użyć [domyślnej](default-values.md) wartości bazowego typu wartości zamiast `null`, użyj metody <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType>.
 
 Można również jawnie rzutować typ wartości null na typ niedopuszczający wartości null, co ilustruje poniższy przykład:
 
-[!code-csharp[explicit cast](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#Cast)]
+[!code-csharp[explicit cast](~/samples/snippets/csharp/language-reference/builtin-types/NullableValueTypes.cs#Cast)]
 
 W czasie wykonywania, jeśli wartość typu wartości null jest `null`, jawne rzutowanie zgłosi <xref:System.InvalidOperationException>.
 
@@ -70,7 +70,7 @@ Typ wartości niedopuszczający wartości null `T` jest niejawnie konwertowany n
 
 Wstępnie zdefiniowane [Operatory](../operators/index.md) jednoargumentowe i binarne lub wszelkie przeciążone operatory obsługiwane przez typ wartości `T` są również obsługiwane przez odpowiedni typ wartości null `T?`. Te operatory, znane także jako *zniesione operatory*, tworzą `null`, jeśli jeden lub oba operandy są `null`; w przeciwnym razie operator używa zawartych wartości argumentów operacji, aby obliczyć wynik. Na przykład:
 
-[!code-csharp[lifted operators](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#LiftedOperator)]
+[!code-csharp[lifted operators](~/samples/snippets/csharp/language-reference/builtin-types/NullableValueTypes.cs#LiftedOperator)]
 
 > [!NOTE]
 > Dla typu `bool?` wstępnie zdefiniowane operatory `&` i `|` nie są zgodne z regułami opisanymi w tej sekcji: wynik oceny operatora może być inny niż null, nawet jeśli jeden z operandów jest `null`. Aby uzyskać więcej informacji, zobacz sekcję [Operatory logiczne wartości null](../operators/boolean-logical-operators.md#nullable-boolean-logical-operators) w artykule [Operatory logiczne Boolean](../operators/boolean-logical-operators.md) .
@@ -80,7 +80,7 @@ Dla [operatorów porównania](../operators/comparison-operators.md) `<`, `>`, `<
 - nie większe niż ani równe `null`
 - ani nie mniejsze niż `null`
 
-[!code-csharp-interactive[relational and equality operators](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#ComparisonOperators)]
+[!code-csharp-interactive[relational and equality operators](~/samples/snippets/csharp/language-reference/builtin-types/NullableValueTypes.cs#ComparisonOperators)]
 
 Dla [operatora równości](../operators/equality-operators.md#equality-operator-) `==`, jeśli oba operandy są `null`, wynik jest `true`, jeśli tylko jeden z operandów jest `null`, wynik jest `false`; w przeciwnym razie zawarte wartości argumentów operacji są porównywane.
 
@@ -97,27 +97,27 @@ Wystąpienie typu wartości null `T?` jest [opakowane](../../programming-guide/t
 
 Można Unbox wartość opakowaną typu wartości `T` do odpowiadającego typu wartości null `T?`, jak pokazano na poniższym przykładzie:
 
-[!code-csharp-interactive[boxing and unboxing](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#Boxing)]
+[!code-csharp-interactive[boxing and unboxing](~/samples/snippets/csharp/language-reference/builtin-types/NullableValueTypes.cs#Boxing)]
 
 ## <a name="how-to-identify-a-nullable-value-type"></a>Jak zidentyfikować typ wartości null
 
 Poniższy przykład pokazuje, jak ustalić, czy wystąpienie <xref:System.Type?displayProperty=nameWithType> reprezentuje skonstruowany typ wartości null, czyli typ <xref:System.Nullable%601?displayProperty=nameWithType> z określonym parametrem typu `T`:
 
-[!code-csharp-interactive[whether Type is nullable](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#IsTypeNullable)]
+[!code-csharp-interactive[whether Type is nullable](~/samples/snippets/csharp/language-reference/builtin-types/NullableValueTypes.cs#IsTypeNullable)]
 
 Jak pokazano w przykładzie, należy użyć operatora [typeof](../operators/type-testing-and-cast.md#typeof-operator) , aby utworzyć wystąpienie <xref:System.Type?displayProperty=nameWithType>.
 
 Aby określić, czy wystąpienie ma typ wartości null, nie należy używać metody <xref:System.Object.GetType%2A?displayProperty=nameWithType>, aby uzyskać <xref:System.Type> wystąpienie do przetestowania przy użyciu poprzedniego kodu. Po wywołaniu metody <xref:System.Object.GetType%2A?displayProperty=nameWithType> w wystąpieniu typu wartości null wystąpienie jest [opakowane](#boxing-and-unboxing) do <xref:System.Object>. Jako opakowanie niezerowego typu wartości null jest równoważne z opakowaniem wartości typu podstawowego, <xref:System.Object.GetType%2A> zwraca wystąpienie <xref:System.Type> reprezentujące typ podstawowy typu wartości null:
 
-[!code-csharp-interactive[GetType example](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#GetType)]
+[!code-csharp-interactive[GetType example](~/samples/snippets/csharp/language-reference/builtin-types/NullableValueTypes.cs#GetType)]
 
 Ponadto nie należy używać operatora [is](../operators/type-testing-and-cast.md#is-operator) , aby określić, czy wystąpienie ma typ wartości null. Jak pokazano na poniższym przykładzie, nie można rozróżnić typów wystąpienia typu wartości null i jego wystąpienia podstawowego z operatorem `is`:
 
-[!code-csharp-interactive[is operator example](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#IsOperator)]
+[!code-csharp-interactive[is operator example](~/samples/snippets/csharp/language-reference/builtin-types/NullableValueTypes.cs#IsOperator)]
 
 Możesz użyć kodu przedstawionego w poniższym przykładzie, aby określić, czy wystąpienie ma typ wartości null:
 
-[!code-csharp-interactive[whether an instance is of a nullable type](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#IsInstanceNullable)]
+[!code-csharp-interactive[whether an instance is of a nullable type](~/samples/snippets/csharp/language-reference/builtin-types/NullableValueTypes.cs#IsInstanceNullable)]
 
 > [!NOTE]
 > Metody opisane w tej sekcji nie mają zastosowania w przypadku [typów referencyjnych dopuszczających wartość null](../../nullable-references.md).

@@ -1,14 +1,14 @@
 ---
 title: Klasy i obiekty w C# przewodniku dotyczące C# języka
 description: Jesteś nowym C#? Przeczytaj ten przegląd klas, obiektów i dziedziczenia
-ms.date: 08/10/2016
+ms.date: 02/27/2020
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: e5078135ab22445ac636c6edc3d46570be8fcaf5
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.openlocfilehash: c178e11b5667905f75538555c8a309e2fdb4a9ef
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77673306"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159185"
 ---
 # <a name="classes-and-objects"></a>Klasy i obiekty
 
@@ -16,7 +16,7 @@ ms.locfileid: "77673306"
 
 Nowe klasy są tworzone za pomocą deklaracji klasy. Deklaracja klasy rozpoczyna się od nagłówka, który określa atrybuty i Modyfikatory klasy, nazwę klasy, klasę bazową (jeśli ma to zastosowanie) i interfejsy zaimplementowane przez klasę. Po tym nagłówku następuje treść klasy, która składa się z listy deklaracji elementów członkowskich, które są zapisywane między ogranicznikami `{` i `}`.
 
-Poniżej znajduje się deklaracja klasy prostej o nazwie `Point`:
+Poniższy kod przedstawia deklarację klasy prostej o nazwie `Point`:
 
 [!code-csharp[PointClass](~/samples/snippets/csharp/tour/classes-and-objects/Point.cs#L3-L11)]
 
@@ -30,7 +30,7 @@ Pamięć zajęta przez obiekt jest automatycznie odzyskiwana, gdy obiekt nie jes
 
 Elementy członkowskie klasy są statycznymi elementami członkowskimi lub wystąpieniami. Statyczne składowe należą do klas, a elementy członkowskie wystąpienia należą do obiektów (wystąpień klas).
 
-Poniżej przedstawiono omówienie rodzajów elementów członkowskich, które może zawierać Klasa.
+Poniższa lista zawiera przegląd rodzajów elementów członkowskich, które może zawierać Klasa.
 
 - Stałe
   - Wartości stałe skojarzone z klasą
@@ -55,20 +55,20 @@ Poniżej przedstawiono omówienie rodzajów elementów członkowskich, które mo
 
 ## <a name="accessibility"></a>Ułatwienia dostępu
 
-Każdy element członkowski klasy ma skojarzoną dostępność, która kontroluje regiony tekstu programu, które mogą uzyskać dostęp do elementu członkowskiego. Istnieje sześć możliwych form ułatwień dostępu. Poniżej przedstawiono podsumowanie tych informacji.
+Każdy element członkowski klasy ma skojarzoną dostępność, która kontroluje regiony tekstu programu, które mogą uzyskać dostęp do elementu członkowskiego. Istnieje sześć możliwych form ułatwień dostępu. Modyfikatory dostępu są zestawione poniżej.
 
 - `public`
-  - Dostęp nie jest ograniczony
+  - Dostęp nie jest ograniczony.
 - `protected`
-  - Dostęp ograniczony do tej klasy lub klas pochodnych od tej klasy
+  - Dostęp jest ograniczony do tej klasy lub klas pochodzących od tej klasy.
 - `internal`
-  - Dostęp ograniczony do bieżącego zestawu (. exe,. dll itp.)
+  - Dostęp jest ograniczony do bieżącego zestawu (. exe,. dll itd.).
 - `protected internal`
-  - Dostęp ograniczony do klasy zawierającej, klasy pochodne z klasą zawierającą lub klasy w tym samym zestawie
+  - Dostęp jest ograniczony do klasy zawierającej, klas pochodnych klasy zawierającej lub klas w tym samym zestawie.
 - `private`
-  - Dostęp ograniczony do tej klasy
+  - Dostęp jest ograniczony do tej klasy.
 - `private protected`
-  - Dostęp ograniczony do zawierającej klasy lub klas pochodnych z typu zawierającego w tym samym zestawie
+  - Dostęp jest ograniczony do zawierającej klasy lub klas pochodnych z typu zawierającego w ramach tego samego zestawu.
 
 ## <a name="type-parameters"></a>Parametry typu
 
@@ -89,9 +89,9 @@ Deklaracja klasy może określać klasę bazową, postępując według nazwy kla
 
 [!code-csharp[Point3DClass](~/samples/snippets/csharp/tour/classes-and-objects/Point.cs#L3-L20)]
 
-Klasa dziedziczy elementy członkowskie swojej klasy bazowej. Dziedziczenie oznacza, że Klasa niejawnie zawiera wszystkie elementy członkowskie swojej klasy podstawowej, z wyjątkiem dla wystąpienia i konstruktorów statycznych i finalizatorów klasy bazowej. Klasa pochodna może dodawać nowych członków do tych, które dziedziczy, ale nie może usunąć definicji dziedziczonego elementu członkowskiego. W poprzednim przykładzie `Point3D` dziedziczy pola `x` i `y` z `Point`, a każde `Point3D` wystąpienie zawiera trzy pola, `x`, `y`i `z`.
+Klasa dziedziczy elementy członkowskie swojej klasy bazowej. Dziedziczenie oznacza, że Klasa niejawnie zawiera wszystkie elementy członkowskie swojej klasy podstawowej, z wyjątkiem dla wystąpienia i konstruktorów statycznych i finalizatorów klasy bazowej. Klasa pochodna może dodawać nowych członków do tych elementów, które dziedziczy, ale nie może usunąć definicji dziedziczonego elementu członkowskiego. W poprzednim przykładzie `Point3D` dziedziczy pola `x` i `y` z `Point`, a każde `Point3D` wystąpienie zawiera trzy pola, `x`, `y`i `z`.
 
-Niejawna konwersja istnieje z typu klasy do dowolnego z jego typów klas podstawowych. W związku z tym zmienna typu klasy może odwoływać się do wystąpienia tej klasy lub wystąpienia dowolnej klasy pochodnej. Na przykład uwzględniając poprzednie deklaracje klas, zmienna typu `Point` może odwoływać się do `Point` lub `Point3D`:
+Niejawna konwersja istnieje z typu klasy do dowolnego z jego typów klas podstawowych. Zmienna typu klasy może odwoływać się do wystąpienia tej klasy lub wystąpienia dowolnej klasy pochodnej. Na przykład uwzględniając poprzednie deklaracje klas, zmienna typu `Point` może odwoływać się do `Point` lub `Point3D`:
 
 [!code-csharp[Point3DExample](~/samples/snippets/csharp/tour/classes-and-objects/Program.cs#L22-L23)]
 
@@ -139,7 +139,7 @@ Parametry wartości mogą być opcjonalne, określając wartość domyślną, ab
 
 [!code-csharp[ConsoleExample](~/samples/snippets/csharp/tour/classes-and-objects/Program.cs#L78-L83)]
 
-W metodzie, która używa tablicy parametrów, tablica parametrów zachowuje się dokładnie tak jak zwykły parametr typu tablicy. Jednak w wywołaniu metody z tablicą parametrów możliwe jest przekazanie jednego argumentu typu tablicy parametrów lub dowolnej liczby argumentów typu elementu tablicy parametrów w parametrze. W tym drugim przypadku wystąpienie tablicy jest automatycznie tworzone i inicjowane z podanym argumentami. Przykład:
+W metodzie, która używa tablicy parametrów, tablica parametrów zachowuje się dokładnie tak jak zwykły parametr typu tablicy. Jednak w wywołaniu metody z tablicą parametrów, możliwe jest przekazanie jednego argumentu typu tablicy parametrów lub dowolnej liczby argumentów typu elementu tablicy parametrów w postaci. W tym drugim przypadku wystąpienie tablicy jest automatycznie tworzone i inicjowane z podanym argumentami. Przykład:
 
 [!code-csharp[StringFormat](~/samples/snippets/csharp/tour/classes-and-objects/Program.cs#L55-L55)]
 
@@ -155,7 +155,7 @@ Treść metody może deklarować zmienne, które są specyficzne dla wywołania 
 
 [!code-csharp[Squares](~/samples/snippets/csharp/tour/classes-and-objects/Squares.cs#L3-L17)]
 
-C#wymaga, aby zmienna lokalna była *przypisana ostatecznie* przed uzyskaniem jej wartości. Na przykład jeśli deklaracja poprzedniego `i` nie zawierała wartości początkowej, kompilator zgłosi błąd dla kolejnych zastosowań `i`, ponieważ `i` nie będzie ostatecznie przypisana w tych punktach w programie.
+C#wymaga, aby zmienna lokalna była *przypisana ostatecznie* przed uzyskaniem jej wartości. Na przykład, jeśli deklaracja poprzedniego `i` nie zawierała wartości początkowej, kompilator zgłosi błąd dla kolejnych zastosowań `i`, ponieważ `i` nie był ostatecznie przypisany w tych punktach w programie.
 
 Metoda może użyć instrukcji `return` do zwrócenia kontroli do obiektu wywołującego. W metodzie zwracającej `void`, instrukcje `return` nie mogą określać wyrażenia. W metodzie zwracającej wartości inne niż void instrukcje `return` muszą zawierać wyrażenie, które oblicza wartość zwracaną.
 
@@ -177,7 +177,7 @@ Poniższy przykład pokazuje użycie klasy Entity.
 
 [!code-csharp[EntityExample](~/samples/snippets/csharp/tour/classes-and-objects/Entity.cs#L3-L15)]
 
-Należy zauważyć, że `SetNextSerialNo` i `GetNextSerialNo` metody statyczne są wywoływane dla klasy, podczas gdy metoda wystąpienia `GetSerialNo` jest wywoływana w wystąpieniach klasy.
+Metody static `SetNextSerialNo` i `GetNextSerialNo` są wywoływane w klasie, podczas gdy metoda wystąpienia `GetSerialNo` jest wywoływana w wystąpieniach klasy.
 
 ### <a name="virtual-override-and-abstract-methods"></a>Metody wirtualne, przesłonięcia i abstrakcyjne
 
@@ -189,7 +189,7 @@ Metoda wirtualna może zostać *przesłonięta* w klasie pochodnej. Gdy deklarac
 
 *Metoda abstrakcyjna* jest metodą wirtualną bez implementacji. Metoda abstrakcyjna jest zadeklarowana przy użyciu modyfikatora abstract i jest dozwolona tylko w klasie, która również jest zadeklarowana jako abstract. Metoda abstrakcyjna musi zostać przesłonięta w każdej nieabstrakcyjnej klasie pochodnej.
 
-Poniższy przykład deklaruje klasę abstrakcyjną, `Expression`, która reprezentuje węzeł drzewa wyrażeń, oraz trzy klasy pochodne, `Constant`, `VariableReference`i `Operation`, które implementują węzły drzewa wyrażeń dla stałych, odwołań do zmiennych i operacji arytmetycznych. (Jest to podobne do, ale nie należy mylić z typami drzewa wyrażeń).
+Poniższy przykład deklaruje klasę abstrakcyjną, `Expression`, która reprezentuje węzeł drzewa wyrażeń, oraz trzy klasy pochodne, `Constant`, `VariableReference`i `Operation`, które implementują węzły drzewa wyrażeń dla stałych, odwołań do zmiennych i operacji arytmetycznych. (Ten przykład jest podobny do, ale nie należy mylić z typami drzewa wyrażeń).
 
 [!code-csharp[ExpressionClass](~/samples/snippets/csharp/tour/classes-and-objects/Expressions.cs#L3-L61)]
 
@@ -207,7 +207,7 @@ Poniższy program używa `Expression` klas do obliczania wyrażenia `x * (y + 2)
 
 ### <a name="method-overloading"></a>Przeciążanie metody
 
-*Przeciążanie* metod pozwala wielu metodom w tej samej klasie mieć taką samą nazwę, o ile mają unikatowe podpisy. Podczas kompilowania wywołania przeciążonej metody kompilator używa *rozdzielczości przeciążenia* do określenia konkretnej metody do wywołania. Rozpoznanie przeciążenia umożliwia znalezienie jednej metody, która najlepiej pasuje do argumentów lub zgłasza błąd, jeśli nie można znaleźć pojedynczego najlepszego dopasowania. W poniższym przykładzie przedstawiono sposób rozwiązywania przeciążenia. Komentarz dla każdego wywołania w metodzie `UsageExample` wskazuje, która metoda jest faktycznie wywoływana.
+*Przeciążanie* metod pozwala wielu metodom w tej samej klasie mieć taką samą nazwę, o ile mają unikatowe podpisy. Podczas kompilowania wywołania przeciążonej metody kompilator używa *rozdzielczości przeciążenia* do określenia konkretnej metody do wywołania. Rozpoznanie przeciążenia umożliwia znalezienie jednej metody, która najlepiej pasuje do argumentów lub zgłasza błąd, jeśli nie można znaleźć pojedynczego najlepszego dopasowania. W poniższym przykładzie przedstawiono sposób rozwiązywania przeciążenia. Komentarz dla każdego wywołania w metodzie `UsageExample` wskazuje, która metoda jest wywoływana.
 
 [!code-csharp[OverloadUsage](~/samples/snippets/csharp/tour/classes-and-objects/Overloading.cs#L3-L41)]
 
@@ -215,9 +215,9 @@ Jak pokazano w przykładzie, dana metoda może być zawsze wybierana przez jawne
 
 ## <a name="other-function-members"></a>Inne elementy członkowskie funkcji
 
-Elementy członkowskie, które zawierają kod wykonywalny, są określane zbiorczo jako *elementy członkowskie* klasy. W poprzedniej sekcji opisano metody, które są podstawowym rodzajem elementów członkowskich funkcji. W tej sekcji opisano inne rodzaje składowych funkcji obsługiwane przez C#: konstruktory, właściwości, indeksatory, zdarzenia, operatory i finalizatory.
+Elementy członkowskie, które zawierają kod wykonywalny, są określane zbiorczo jako *elementy członkowskie* klasy. W poprzedniej sekcji opisano metody, które stanowią podstawowe typy elementów członkowskich funkcji. W tej sekcji opisano inne rodzaje składowych funkcji obsługiwane przez C#: konstruktory, właściwości, indeksatory, zdarzenia, operatory i finalizatory.
 
-Poniżej przedstawiono klasę generyczną o nazwie `MyList<T>`, która implementuje rozwijaną listę obiektów. Klasa zawiera kilka przykładów typowych rodzajów elementów członkowskich funkcji.
+W poniższym przykładzie pokazano klasę generyczną o nazwie `MyList<T>`, która implementuje rozwijaną listę obiektów. Klasa zawiera kilka przykładów typowych rodzajów elementów członkowskich funkcji.
 
 > [!NOTE]
 > Ten przykład tworzy klasę `MyList`, która nie jest taka sama jak <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>.NET Standard. Przedstawia koncepcje niezbędne do tego samouczka, ale nie zastępuje tej klasy.
@@ -234,7 +234,7 @@ Konstruktory wystąpień mogą być przeciążone i mogą mieć parametry opcjon
 
 [!code-csharp[ListExample1](~/samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L95-L96)]
 
-W przeciwieństwie do innych elementów członkowskich, konstruktory wystąpień nie są dziedziczone, a Klasa nie ma konstruktorów wystąpień innych niż zadeklarowane w klasie. Jeśli nie podano konstruktora wystąpienia dla klasy, zostanie automatycznie podana pusta wartość bez parametrów.
+W przeciwieństwie do innych elementów członkowskich, konstruktory wystąpień nie są dziedziczone, a Klasa nie ma konstruktorów wystąpień innych niż te konstruktory faktycznie zadeklarowane w klasie. Jeśli nie podano konstruktora wystąpienia dla klasy, zostanie automatycznie podana pusta wartość bez parametrów.
 
 ### <a name="properties"></a>Właściwości
 
@@ -246,7 +246,7 @@ Metoda dostępu get odpowiada metodzie bez parametrów z wartością zwracaną t
 
 Metoda dostępu zestawu odpowiada metodzie z pojedynczym parametrem o nazwie Value i bez zwracanego typu. Gdy właściwość jest przywoływana jako element docelowy przypisania lub jako operand + + lub--, metoda dostępu set jest wywoływana z argumentem, który udostępnia nową wartość.
 
-Klasa `MyList<T>` deklaruje dwie właściwości, `Count` i `Capacity`, które są tylko do odczytu i odczytu i zapisu. Poniżej przedstawiono przykład zastosowania tych właściwości:
+Klasa `MyList<T>` deklaruje dwie właściwości, `Count` i `Capacity`, które są tylko do odczytu i odczytu i zapisu. Poniższy kod stanowi przykład użycia tych właściwości:
 
 [!code-csharp[ListExample2](~/samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L101-L104)]
 
@@ -276,7 +276,7 @@ Klienci reagują na zdarzenia za poorednictwem *programów obsługi zdarzeń*. P
 
 [!code-csharp[EventExample](~/samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L132-L148)]
 
-W przypadku zaawansowanych scenariuszy, w których wymagana jest kontrola bazowego magazynu zdarzenia, deklaracja zdarzenia może jawnie dostarczyć `add` i `remove` metod dostępu, które są nieco podobne do `set` metoda dostępu do właściwości.
+W przypadku zaawansowanych scenariuszy, w których wymagana jest kontrola bazowego magazynu zdarzenia, deklaracja zdarzenia może jawnie dostarczyć `add` i `remove` metod dostępu, które są podobne do `set` metoda dostępu do właściwości.
 
 ### <a name="operators"></a>Operatory
 
@@ -292,7 +292,7 @@ Pierwsze `Console.WriteLine` dane wyjściowe `True` ponieważ dwie listy zawiera
 
 *Finalizator* jest członkiem, który implementuje akcje wymagane do sfinalizowania wystąpienia klasy. Finalizatory nie mogą mieć parametrów, nie mogą mieć modyfikatorów dostępności i nie mogą być wywoływane jawnie. Finalizator dla wystąpienia jest wywoływany automatycznie podczas wyrzucania elementów bezużytecznych.
 
-Moduł wyrzucania elementów bezużytecznych jest dozwolony w przypadku podejmowania decyzji podczas zbierania obiektów i uruchamiania finalizatorów. W odróżnieniu od chronometrażu wywołań finalizatora nie jest deterministyczna, a finalizatory mogą być wykonywane na dowolnym wątku. Z tych i innych powodów klasy powinny implementować finalizatory tylko wtedy, gdy żadne inne rozwiązania nie są możliwe.
+Moduł wyrzucania elementów bezużytecznych jest dozwolony w przypadku podejmowania decyzji podczas zbierania obiektów i uruchamiania finalizatorów. W odniesieniu do chronometrażu wywołań finalizatora nie jest deterministyczna, a finalizatory mogą być wykonywane na dowolnym wątku. Z tych i innych powodów klasy powinny implementować finalizatory tylko wtedy, gdy żadne inne rozwiązania nie są możliwe.
 
 Instrukcja `using` zapewnia lepsze podejście do niszczenia obiektów.
 

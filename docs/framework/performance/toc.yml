@@ -8,7 +8,7 @@
     - name: Inicjalizacja z opóźnieniem
       href: lazy-initialization.md
       items:
-        - name: 'Instrukcje: wykonywanie inicjalizacji obiektów z opóźnieniem'
+        - name: 'Porady: wykonywanie incjalizacji obiektów z opóźnieniem'
           href: how-to-perform-lazy-initialization-of-objects.md
     - name: Zdarzenia ETW w programie .NET Framework
       href: etw-events.md

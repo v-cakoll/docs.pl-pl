@@ -1,78 +1,78 @@
 ---
-title: Algorytm ładowania zestawu satelitarnego — .NET Core
-description: Opis szczegółów algorytmu ładowania zestawu satelickiego w programie .NET Core
+title: Algorytm ładowania zestawu satelitarnego - .NET Core
+description: Opis szczegółów algorytmu ładowania zestawu satelitarnego w .NET Core
 ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
 ms.openlocfilehash: bfdc1d8179d46a13b3d137a87397fa3e573da33c
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70105315"
 ---
 # <a name="satellite-assembly-loading-algorithm"></a>Algorytm ładowania zestawu satelitarnego
 
-Zestawy satelickie są używane do przechowywania zlokalizowanych zasobów dostosowane do języka i kultury.
+Zestawy satelickie są używane do przechowywania zlokalizowanych zasobów dostosowanych do języka i kultury.
 
 Zestawy satelickie używają innego algorytmu ładowania niż ogólne zestawy zarządzane.
 
-## <a name="when-are-satellite-assemblies-loaded"></a>Kiedy są ładowane zestawy satelickie?
+## <a name="when-are-satellite-assemblies-loaded"></a>Kiedy są ładowane zespoły satelickie?
 
 Zestawy satelickie są ładowane podczas ładowania zlokalizowanego zasobu.
 
-Podstawowy interfejs API do załadowania zlokalizowanych zasobów <xref:System.Resources.ResourceManager?displayProperty=fullName> jest klasą. Ostatecznie Klasa wywoła <xref:System.Reflection.Assembly.GetSatelliteAssembly%2A> metodę dla każdej z nich <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType>. <xref:System.Resources.ResourceManager>
+Podstawowy interfejs API do ładowania <xref:System.Resources.ResourceManager?displayProperty=fullName> zlokalizowanych zasobów jest klasą. Ostatecznie <xref:System.Resources.ResourceManager> klasa wywoła <xref:System.Reflection.Assembly.GetSatelliteAssembly%2A> metodę dla <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType>każdego .
 
-Interfejsy API wyższego poziomu mogą być abstrakcyjne dla interfejsu API niskiego poziomu.
+Interfejsy API wyższego poziomu mogą abstrakcyjne interfejsu API niskiego poziomu.
 
 ## <a name="algorithm"></a>Algorytm
 
-Proces rezerwowy zasobów platformy .NET Core obejmuje następujące kroki:
+Proces rezerwowy zasobu .NET Core obejmuje następujące kroki:
 
-1. `active` Określ<xref:System.Runtime.Loader.AssemblyLoadContext> wystąpienie. We wszystkich przypadkach `active` wystąpienie jest <xref:System.Runtime.Loader.AssemblyLoadContext>zestawem wykonawczym.
+1. `active` <xref:System.Runtime.Loader.AssemblyLoadContext> Określ wystąpienie. We wszystkich przypadkach `active` wystąpienie jest zestawu wykonującego <xref:System.Runtime.Loader.AssemblyLoadContext>.
 
-2. `active` Wystąpienie próbuje załadować zestaw satelicki dla wymaganej kultury w kolejności priorytetu przez:
+2. Wystąpienie `active` próbuje załadować zestaw satelicki dla żądanej kultury w kolejności priorytetowej przez:
     - Sprawdzanie jego pamięci podręcznej.
-    - Sprawdzanie katalogu aktualnie wykonywanego zestawu dla podkatalogu zgodnego z żądanym <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType> (na przykład `es-MX`).
+    - Sprawdzanie katalogu aktualnie wykonywanego zestawu dla podkatalogu <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType> zgodnego `es-MX`z żądanym (na przykład).
 
         > [!NOTE]
-        > Ta funkcja nie została zaimplementowana w środowisku .NET Core przed 3,0.
+        > Ta funkcja nie została zaimplementowana w .NET Core przed 3.0.
         >
         > [!NOTE]
-        > W przypadku systemu Linux i macOS w podkatalogu jest rozróżniana wielkość liter i musi to być:
-        > - Dokładnie dopasowanie wielkości liter.
-        > - Małymi literami.
+        > W systemie Linux i macOS podkatalog jest rozróżniany i musi:
+        > - Dokładnie pasuje do przypadku.
+        > - Bądź w małych liter.
 
-    - `active` Jeśli<xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType> jest wystąpieniem, uruchamiając domyślną logikę [sondowania zestawu dla satelity (zasobu)](default-probing.md#satellite-resource-assembly-probing) .
+    - Jeśli `active` jest <xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType> wystąpieniem, uruchamiając domyślną logikę [sondowania zestawu satelity (zasobu).](default-probing.md#satellite-resource-assembly-probing)
 
-    - Wywoływanie <xref:System.Runtime.Loader.AssemblyLoadContext.Load%2A?displayProperty=nameWithType> funkcji.
+    - Wywołanie <xref:System.Runtime.Loader.AssemblyLoadContext.Load%2A?displayProperty=nameWithType> funkcji.
 
-    - Podnoszenie <xref:System.Runtime.Loader.AssemblyLoadContext.Resolving?displayProperty=nameWithType> poziomu zdarzenia.
+    - Podnoszenie <xref:System.Runtime.Loader.AssemblyLoadContext.Resolving?displayProperty=nameWithType> zdarzenia.
 
-    - Podnoszenie <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> poziomu zdarzenia.
+    - Podnoszenie <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> zdarzenia.
 
-3. Jeśli jest ładowany zestaw satelicki:
-   - <xref:System.AppDomain.AssemblyLoad?displayProperty=nameWithType> Zdarzenie jest zgłaszane.
-   - Zestaw jest przeszukiwany dla żądanego zasobu. Jeśli środowisko uruchomieniowe odnajdzie zasób w zestawie, użyje go. Jeśli zasób nie zostanie znaleziony, będzie kontynuował wyszukiwanie.
+3. Jeśli zespół satelitarny jest załadowany:
+   - Zdarzenie <xref:System.AppDomain.AssemblyLoad?displayProperty=nameWithType> jest wywoływane.
+   - Zestaw jest przeszukiwany w poszukiwaniu żądanego zasobu. Jeśli czas wykonywania znajdzie zasób w zestawie, używa go. Jeśli nie znajdzie zasobu, kontynuuje wyszukiwanie.
 
     > [!NOTE]
-    > Aby znaleźć zasób w ramach zestawu satelickiego, środowisko uruchomieniowe wyszukuje plik zasobów żądany przez <xref:System.Resources.ResourceManager> dla bieżącego. <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType> W pliku zasobów szuka żądanej nazwy zasobu. Jeśli nie zostanie znaleziony, zasób jest traktowany jako nieodnaleziony.
+    > Aby znaleźć zasób w zestawie satelickim, czas <xref:System.Resources.ResourceManager> uruchomieniwy wyszukuje plik zasobu wymagany przez bieżącego <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType>pliku . W pliku zasobu wyszukuje żądana nazwa zasobu. Jeśli którykolwiek z nich nie zostanie znaleziony, zasób jest traktowany jako nieznaleziony.
 
-4. Środowisko uruchomieniowe następnym szuka zestawów kultur nadrzędnych za pomocą wielu możliwych poziomów, za każdym razem, gdy powtarzają się kroki 2 & 3.
+4. W czasie wykonywania obok przeszukuje zestawy kultury nadrzędnej za pośrednictwem wielu potencjalnych poziomów, za każdym razem powtarzając kroki 2 & 3.
 
     Każda kultura ma tylko jeden element nadrzędny, który jest zdefiniowany przez <xref:System.Globalization.CultureInfo.Parent%2A?displayProperty=nameWithType> właściwość.
 
-    Wyszukiwanie kultur nadrzędnych jest zatrzymywane, gdy <xref:System.Globalization.CultureInfo.Parent%2A> właściwość kultury to. <xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType>
+    Wyszukiwanie kultur nadrzędnych zatrzymuje się, <xref:System.Globalization.CultureInfo.Parent%2A> gdy <xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType>właściwość kultury jest .
 
-    Dla programu <xref:System.Globalization.CultureInfo.InvariantCulture>nie powrócimy do kroków 2 & 3, ale należy kontynuować krok 5.
+    Dla <xref:System.Globalization.CultureInfo.InvariantCulture>, nie wracamy do kroków 2 & 3, ale raczej kontynuować krok 5.
 
-5. Jeśli zasób nadal nie zostanie znaleziony, zostanie użyta domyślna kultura (rezerwowa).
+5. Jeśli zasób nadal nie zostanie znaleziony, używany jest zasób dla domyślnej (rezerwowej) kultury.
 
-   Zazwyczaj zasoby dla kultury domyślnej są zawarte w głównym zestawie aplikacji. Można jednak określić <xref:System.Resources.UltimateResourceFallbackLocation.Satellite?displayProperty=nameWithType> <xref:System.Resources.NeutralResourcesLanguageAttribute.Location?displayProperty=nameWithType> właściwość. Ta wartość wskazuje, że ostateczna lokalizacja rezerwowa dla zasobów jest zestawem satelity, a nie głównym zestawem.
+   Zazwyczaj zasoby dla kultury domyślnej są uwzględniane w głównym zestawie aplikacji. Można jednak określić <xref:System.Resources.UltimateResourceFallbackLocation.Satellite?displayProperty=nameWithType> dla <xref:System.Resources.NeutralResourcesLanguageAttribute.Location?displayProperty=nameWithType> właściwości. Ta wartość wskazuje, że ostateczna lokalizacja rezerwowa dla zasobów jest zestawem satelickim, a nie głównym.
 
     > [!NOTE]
-    > Domyślna kultura to ostateczna rezerwa. Dlatego zaleca się, aby zawsze obejmować pełny zestaw zasobów w domyślnym pliku zasobów. Pomaga to zapobiegać zgłaszaniu wyjątków. Mając pełny zestaw, należy podać rezerwę dla wszystkich zasobów i upewnić się, że co najmniej jeden zasób jest zawsze obecny dla użytkownika, nawet jeśli nie jest specyficzny dla kultury.
+    > Domyślna kultura jest ostatecznym rezerwowym. W związku z tym zaleca się, aby zawsze uwzględnić wyczerpujący zestaw zasobów w domyślnym pliku zasobów. Pomaga to zapobiec zgłaszaniu wyjątków. Mając wyczerpujący zestaw, należy podać rezerwowy dla wszystkich zasobów i upewnij się, że co najmniej jeden zasób jest zawsze obecny dla użytkownika, nawet jeśli nie jest specyficzne dla kultury.
 
-6. Ostateczny
-   - Jeśli środowisko wykonawcze nie odnajdzie pliku zasobów dla kultury domyślnej (rezerwowej), <xref:System.Resources.MissingManifestResourceException> zostanie zgłoszony wyjątek lub. <xref:System.Resources.MissingSatelliteAssemblyException>
-   - Jeśli plik zasobów zostanie znaleziony, ale żądany zasób nie istnieje, żądanie zwróci wartość `null`.
+6. Wreszcie
+   - Jeśli czas wykonywania nie znajdzie pliku zasobów dla domyślnej (rezerwowej) kultury, zgłaszany jest wyjątek <xref:System.Resources.MissingManifestResourceException> lub <xref:System.Resources.MissingSatelliteAssemblyException> wyjątek.
+   - Jeśli plik zasobu zostanie znaleziony, ale żądany zasób nie jest obecny, żądanie zwraca `null`.

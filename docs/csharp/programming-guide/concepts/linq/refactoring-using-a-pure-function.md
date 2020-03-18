@@ -3,21 +3,21 @@ title: Refaktoryzacja przy użyciu czystej funkcji (C#)
 ms.date: 07/20/2015
 ms.assetid: a3416a45-9e12-4e4a-9747-897f06eef510
 ms.openlocfilehash: f264a0028ed265a5a4fbe1dc32f430c648724c20
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70253080"
 ---
 # <a name="refactoring-using-a-pure-function-c"></a>Refaktoryzacja przy użyciu czystej funkcji (C#)
-Poniższy przykład refaktoryzacji w poprzednim przykładzie, [refaktoryzacji przy użyciu metody rozszerzeniaC#()](./refactoring-using-an-extension-method.md), aby użyć czystej funkcji w tym przykładzie, kod, aby znaleźć tekst akapitu, jest przenoszony do czystej metody `ParagraphText`statycznej.  
+Poniższy przykład refaktoryzuje poprzedni przykład [Refaktoryzacja przy użyciu metody rozszerzenia (C#),](./refactoring-using-an-extension-method.md)aby użyć czystej funkcji W tym przykładzie `ParagraphText`kod, aby znaleźć tekst akapitu, jest przenoszony do czystej metody statycznej .  
   
 ## <a name="example"></a>Przykład  
- Ten przykład przetwarza dokument WordprocessingML, pobierając węzły akapitu z dokumentu WordprocessingML. Identyfikuje także styl każdego akapitu. Ten przykład kompiluje się zgodnie z poprzednimi przykładami w tym samouczku. Kod refaktoryzacji jest wywoływany w komentarzach w kodzie poniżej.  
+ W tym przykładzie przetwarza dokument WordprocessingML, pobierając węzły akapitu z dokumentu WordprocessingML. Identyfikuje również styl każdego akapitu. W tym przykładzie opiera się na poprzednich przykładach w tym samouczku. Refaktoryzowany kod jest wywoływany w komentarzach w poniższym kodzie.  
   
- Aby uzyskać instrukcje dotyczące tworzenia dokumentu źródłowego dla tego przykładu, zobacz [Tworzenie źródłowego dokumentu Office Open XML (C#)](./creating-the-source-office-open-xml-document.md).  
+ Aby uzyskać instrukcje dotyczące tworzenia dokumentu źródłowego dla tego [przykładu, zobacz Tworzenie dokumentu XML open pakietu Source Office (C#).](./creating-the-source-office-open-xml-document.md)  
   
- W tym przykładzie zastosowano klasy z zestawu 'Windowsbase. Używa typów w <xref:System.IO.Packaging?displayProperty=nameWithType> przestrzeni nazw.  
+ W tym przykładzie użyto klas z zestawu WindowsBase. Używa typów w <xref:System.IO.Packaging?displayProperty=nameWithType> obszarze nazw.  
   
 ```csharp  
 public static class LocalExtensions  
@@ -154,7 +154,7 @@ class Program
 }  
 ```  
   
- Ten przykład generuje te same dane wyjściowe, co przed refaktoryzacją:  
+ W tym przykładzie daje takie same dane wyjściowe, jak przed refaktoryzacji:  
   
 ```output  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -175,12 +175,12 @@ StyleName:Code >Hello World<
 ```  
   
 ### <a name="next-steps"></a>Następne kroki  
- W następnym przykładzie pokazano, jak projektować XML w innym kształcie:  
+ W następnym przykładzie pokazano, jak projektować kod XML w inny kształt:  
   
-- [Projekcja XML w innym kształcie (C#)](./projecting-xml-in-a-different-shape.md)  
+- [Projekcja xml w innym kształcie (C#)](./projecting-xml-in-a-different-shape.md)  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Samouczek: Manipulowanie zawartością w dokumencie WordprocessingML (C#)](./shape-of-wordprocessingml-documents.md)
-- [Refaktoryzacja przy użyciu metody rozszerzającej (C#)](./refactoring-using-an-extension-method.md)
+- [Samouczek: manipulowanie zawartością w dokumencie WordprocessingML (C#)](./shape-of-wordprocessingml-documents.md)
+- [Refaktoryzacja przy użyciu metody rozszerzenia (C#)](./refactoring-using-an-extension-method.md)
 - [Refaktoryzacja do czystych funkcji (C#)](./refactoring-into-pure-functions.md)

@@ -1,69 +1,69 @@
 ---
-title: AttributeUsage (C#)
+title: Użycie atrybutu (C#)
 ms.date: 04/25/2018
 ms.openlocfilehash: a3a82e33d7259ec56ec3e907bc3d4d9f8a01167d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "61668721"
 ---
-# <a name="attributeusage-c"></a>AttributeUsage (C#)
+# <a name="attributeusage-c"></a>Użycie atrybutu (C#)
 
-Określa, jak używać klasy atrybutu niestandardowego. <xref:System.AttributeUsageAttribute> jest atrybutem stosowanych do definicji atrybutu niestandardowego. `AttributeUsage` Atrybut umożliwia kontrolowanie:
+Określa sposób użycia niestandardowej klasy atrybutów. <xref:System.AttributeUsageAttribute>jest atrybutem stosowanym do definicji atrybutów niestandardowych. Atrybut `AttributeUsage` umożliwia sterowanie:
 
-- Atrybut elementy programu, którego można stosować do. Chyba, że możesz ograniczyć jego użycia, atrybut można stosować do dowolnej z następujących elementów programu:
+- Do którego atrybutu elementów programu można zastosować. O ile nie ograniczysz jego użycia, atrybut może zostać zastosowany do jednego z następujących elementów programu:
   - zestaw
   - moduł
   - pole
-  - zdarzenie
-  - — metoda
-  - param
+  - event
+  - method
+  - Param
   - property
   - return
-  - — typ
-- Czy atrybut można stosować do jednego elementu programu wiele razy.
+  - type
+- Czy atrybut może być stosowany do jednego elementu programu wiele razy.
 - Czy atrybuty są dziedziczone przez klasy pochodne.
 
-Ustawienia domyślne wyglądać jak w poniższym przykładzie, po zastosowaniu jawnie:
+Ustawienia domyślne wyglądają jak w poniższym przykładzie po zastosowaniu jawnie:
 
 [!code-csharp[Define a new attribute](../../../../../samples/snippets/csharp/attributes/NewAttribute.cs#1)]
 
-W tym przykładzie `NewAttribute` klasy mogą być stosowane do dowolnego elementu obsługiwany program. Ale można go zastosować tylko raz do każdej jednostki. Ten atrybut jest dziedziczone przez klasy pochodne, gdy jest stosowany do klasy bazowej.
+W tym przykładzie `NewAttribute` klasy można zastosować do dowolnego obsługiwanego elementu programu. Ale może być stosowany tylko raz do każdej jednostki. Atrybut jest dziedziczony przez klasy pochodne po zastosowaniu do klasy podstawowej.
 
-<xref:System.AttributeUsageAttribute.AllowMultiple> i <xref:System.AttributeUsageAttribute.Inherited> argumenty są opcjonalne, więc poniższy kod działa tak samo:
+<xref:System.AttributeUsageAttribute.AllowMultiple> Argumenty <xref:System.AttributeUsageAttribute.Inherited> i są opcjonalne, więc następujący kod ma ten sam efekt:
 
 [!code-csharp[Omit optional attributes](../../../../../samples/snippets/csharp/attributes/NewAttribute.cs#2)]
 
-Pierwszy <xref:System.AttributeUsageAttribute> argument musi być jeden lub więcej elementów <xref:System.AttributeTargets> wyliczenia. Wiele typów docelowych, mogą być połączone wraz z operatorem OR, podobnie jak w poniższym przykładzie pokazano:
+Pierwszy <xref:System.AttributeUsageAttribute> argument musi być jeden lub <xref:System.AttributeTargets> więcej elementów wyliczenia. Wiele typów docelowych można połączyć razem z operatorem OR, jak pokazano w poniższym przykładzie:
 
 [!code-csharp[Create an attribute for fields or properties](../../../../../samples/snippets/csharp/attributes/NewPropertyOrFieldAttribute.cs#1)]
 
-Począwszy od języka C# 7.3 można można zastosować atrybutów do właściwość lub pole zapasowe dla automatycznie implementowanej właściwości. Ten atrybut ma zastosowanie do właściwości, chyba że określisz `field` specyfikator w atrybucie. Oba są wyświetlane w następującym przykładzie:
+Począwszy od języka C# 7.3 atrybuty mogą być stosowane do właściwości lub pola zapasowego dla właściwości auto implemented. Atrybut ma zastosowanie do właściwości, chyba `field` że określono specyfikator w atrybucie. Oba przedstawiono w poniższym przykładzie:
 
 [!code-csharp[Create an attribute for fields or properties](../../../../../samples/snippets/csharp/attributes/NewPropertyOrFieldAttribute.cs#2)]
 
-Jeśli <xref:System.AttributeUsageAttribute.AllowMultiple> argument jest `true`, a następnie wynikowy atrybut można stosować więcej niż jeden raz do jednej jednostki, jak pokazano w poniższym przykładzie:
+Jeśli <xref:System.AttributeUsageAttribute.AllowMultiple> argument `true`jest , a następnie wynikowy atrybut można zastosować więcej niż jeden raz do jednej jednostki, jak pokazano w poniższym przykładzie:
 
 [!code-csharp[Create and use an attribute that can be applied multiple times](../../../../../samples/snippets/csharp/attributes/MultiUseAttribute.cs#1)]
 
-W tym przypadku `MultiUseAttribute` mogą być stosowane wielokrotnie, ponieważ `AllowMultiple` ustawiono `true`. Obu formatów pokazano stosowania wiele atrybutów są prawidłowe.
+W takim `MultiUseAttribute` przypadku można stosować wielokrotnie, `AllowMultiple` ponieważ `true`jest ustawiona na . Oba formaty wyświetlane do stosowania wielu atrybutów są prawidłowe.
 
-Jeśli <xref:System.AttributeUsageAttribute.Inherited> jest `false`, a następnie ten atrybut nie jest dziedziczone przez klasy pochodne od klas opartego na atrybutach. Na przykład:
+Jeśli <xref:System.AttributeUsageAttribute.Inherited> `false`jest , a następnie atrybut nie jest dziedziczony przez klasy pochodzące z klasy przypisanej. Przykład:
 
 [!code-csharp[Create and use an attribute that can be applied multiple times](../../../../../samples/snippets/csharp/attributes/NonInheritedAttribute.cs#1)]
 
-W tym przypadku `NonInheritedAttribute` nie jest stosowane do `DClass` za pomocą dziedziczenia.
+W tym `NonInheritedAttribute` przypadku nie jest `DClass` stosowany do poprzez dziedziczenie.
 
 ## <a name="remarks"></a>Uwagi
 
-`AttributeUsage` Atrybut jest atrybutem jednorazowy — nie można zastosować w więcej niż jeden raz do tej samej klasy. `AttributeUsage` jest aliasem <xref:System.AttributeUsageAttribute>.
+Atrybut `AttributeUsage` jest atrybutem jednorazowego użytku — nie można go zastosować więcej niż jeden raz do tej samej klasy. `AttributeUsage`jest aliasem <xref:System.AttributeUsageAttribute>dla .
 
-Aby uzyskać więcej informacji, zobacz [uzyskiwania dostępu do atrybutów przy użyciu odbicia (C#)](accessing-attributes-by-using-reflection.md).
+Aby uzyskać więcej informacji, zobacz [Uzyskiwanie dostępu do atrybutów przy użyciu odbicia (C#)](accessing-attributes-by-using-reflection.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład ilustruje efekt <xref:System.AttributeUsageAttribute.Inherited> i <xref:System.AttributeUsageAttribute.AllowMultiple> argumenty <xref:System.AttributeUsageAttribute> atrybut i jak mogą być wyliczane atrybuty niestandardowe zastosowane do klasy.
+W poniższym przykładzie przedstawiono <xref:System.AttributeUsageAttribute.Inherited> wpływ <xref:System.AttributeUsageAttribute.AllowMultiple> i <xref:System.AttributeUsageAttribute> argumenty do atrybutu i jak można wyliczyć atrybuty niestandardowe stosowane do klasy.
 
 [!code-csharp[Applying and querying attributes](../../../../../samples/snippets/csharp/attributes/Program.cs#1)]
 
@@ -79,11 +79,11 @@ ThirdAttribute
 SecondAttribute
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Attribute>
 - <xref:System.Reflection>
-- [Przewodnik programowania w języku C#](../..//index.md)
+- [Przewodnik programowania języka C#](../..//index.md)
 - [Atrybuty](../../../..//standard/attributes/index.md)
 - [Odbicie (C#)](../reflection.md)
 - [Atrybuty](index.md)

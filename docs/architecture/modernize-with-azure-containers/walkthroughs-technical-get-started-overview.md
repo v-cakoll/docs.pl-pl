@@ -1,311 +1,311 @@
 ---
 title: Omówienie przewodników i wprowadzającej dokumentacji technicznej
-description: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows | Przewodniki i przegląd wprowadzenie techniczne
+description: Modernizacja istniejących aplikacji .NET za pomocą usługi Azure Cloud i kontenerów systemu Windows | Instruktaży i przegląd początku technicznego
 ms.date: 04/28/2018
 ms.openlocfilehash: 190b33c4307b09bab0543d481e66ac9328074a0d
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69660885"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>Omówienie przewodników i wprowadzającej dokumentacji technicznej
 
-Aby ograniczyć rozmiar tej książki elektronicznej, w repozytorium GitHub udostępniono dodatkową dokumentację techniczną i pełne instruktaże. Serie online przewodników, które opisano w tym rozdziale, obejmują konfigurację krok po kroku dla wielu środowisk opartych na kontenerach systemu Windows oraz wdrażanie na platformie Azure.
+Aby ograniczyć rozmiar tej e-booka, w repozytorium Usługi GitHub udostępniono dodatkową dokumentację techniczną i pełne rozwiązania. Seria instruktażu online opisana w tym rozdziale obejmuje konfigurację krok po kroku wielu środowisk opartych na kontenerach systemu Windows i wdrażanie na platformie Azure.
 
-W poniższych sekcjach wyjaśniono, czym są poszczególne instruktaże, ich cele i wizja wysokiego poziomu, a także przedstawiono diagram zadań, które są związane. Instruktaże można uzyskać w witrynie typu wiki repozytorium *eShopModernizing* aplikacje w witrynie GitHub na <https://github.com/dotnet-architecture/eShopModernizing/wiki>.
+W poniższych sekcjach wyjaśniono, o co chodzi w każdym instruktażu, jego celach i wizji wysokiego poziomu, a także przedstawiono diagram zadań, które są zaangażowane. Możesz uzyskać same instruktaże w *eShopModernizing* aplikacji GitHub repo wiki w . <https://github.com/dotnet-architecture/eShopModernizing/wiki>
 
-## <a name="technical-walkthrough-list"></a>Lista przewodników technicznych
+## <a name="technical-walkthrough-list"></a>Lista instruktażów technicznych
 
-Poniższe przewodniki Get-Started zapewniają spójne i kompleksowe wskazówki techniczne dotyczące przykładowych aplikacji, które można dołączać i przenosić przy użyciu kontenerów, a następnie przełączać się za pomocą wielu opcji wdrożenia na platformie Azure.
+Poniższe wskazówki dotyczące początku zawierają spójne i kompleksowe wskazówki techniczne dotyczące przykładowych aplikacji, które można podnieść i zmienić przy użyciu kontenerów, a następnie przenieść przy użyciu wielu opcji wdrażania na platformie Azure.
 
-W każdym z poniższych instruktażów są wykorzystywane nowe przykładowe aplikacje eShopLegacy i eShopModernizing, które są dostępne w witrynie GitHub w <https://github.com/dotnet-architecture/eShopModernizing>.
+Każdy z poniższych instruktaże używa nowego przykładowego eShopLegacy i eShopModernizing aplikacji, które są dostępne w GitHub w . <https://github.com/dotnet-architecture/eShopModernizing>
 
-- **Przewodnik po eShop starszych aplikacji (aplikacje podstawowe do modernizacji)**
+- **Przewodnik po starszych aplikacjach sklepu eShop (aplikacje bazowe do modernizacji)**
 
-- **Konteneryzowanie istniejące aplikacje sieci Web ASP.NET (WebForms & MVC) z kontenerami systemu Windows**
+- **Konteneryzuj istniejące ASP.NET aplikacje sieci Web (WebForms & MVC) za pomocą kontenerów systemu Windows**
 
-- **Konteneryzowanie istniejące usługi WCF (aplikacje N-warstwowe) za pomocą kontenerów systemu Windows**
+- **Konteneryzuj istniejące usługi WCF (aplikacje n-warstwowe) za pomocą kontenerów systemu Windows**
 
-- **Wdrażanie aplikacji opartych na kontenerach systemu Windows na maszynach wirtualnych platformy Azure**
+- **Wdrażanie aplikacji opartej na kontenerach systemu Windows na maszynach wirtualnych platformy Azure**
 
-- **Wdróż aplikacje oparte na kontenerach systemu Windows w usłudze Kubernetes w Azure Container Service**
+- **Wdrażanie aplikacji opartych na kontenerach systemu Windows w programie Kubernetes w usłudze Azure Container Service**
 
-## <a name="walkthrough-1-tour-of-eshop-legacy-apps"></a>Przewodnik 1: Przewodnik po starszych aplikacjach eShop
+## <a name="walkthrough-1-tour-of-eshop-legacy-apps"></a>Przewodnik 1: Zwiedzanie starszych aplikacji sklepu eShop
 
-### <a name="technical-walkthrough-availability"></a>Dostępność przewodnika technicznego
+### <a name="technical-walkthrough-availability"></a>Dostępność instruktażetechnicznym
 
-Pełny przewodnik techniczny jest dostępny na stronie wiki repozytorium eShopModernizing GitHub:
+Pełny instruktaż techniczny jest dostępny w eShopModernizing GitHub repo wiki:
 
-[Wskazówki dotyczące eShopModernizing wiki](https://github.com/dotnet-architecture/eShopModernizing/wiki)
+[eShopModernizing wiki instruktaże](https://github.com/dotnet-architecture/eShopModernizing/wiki)
 
 ### <a name="overview"></a>Omówienie
 
-W tym instruktażu można poznać początkową implementację trzech przykładowych starszych aplikacji. Pierwsze dwie przykładowe aplikacje internetowe mają niemonolityczną architekturę i zostały utworzone przy użyciu klasycznego ASP.NET. Jedna aplikacja jest oparta na ASP.NET 4. x MVC; Druga aplikacja jest oparta na formularzach sieci Web ASP.NET 4. x.
-Trzecia aplikacja to 3-warstwowa aplikacja, która składa się z aplikacji WinForms klienta i usługi Windows Communication Foundation po stronie serwera [(WCF)](../../framework/wcf/whats-wcf.md) .
+W tym instruktażem można eksplorować wstępną implementację trzech przykładowych starszych aplikacji. Pierwsze dwie przykładowe aplikacje internetowe mają monolityczną architekturę i zostały utworzone przy użyciu klasycznych ASP.NET. Jedna aplikacja jest oparta na ASP.NET 4.x MVC; druga aplikacja jest oparta na ASP.NET 4.x Web Forms.
+Trzecia aplikacja to aplikacja 3-warstwowa skomponowana przez aplikację WinForms klienta i usługę [WCF (Windows Communication Foundation)](../../framework/wcf/whats-wcf.md) po stronie serwera.
 
-Wszystkie te aplikacje są dostępne w [repozytorium GitHub eShopModernizing](https://github.com/dotnet-architecture/eShopModernizing).
+Wszystkie te aplikacje są dostępne w [eShopModernizing GitHub repo](https://github.com/dotnet-architecture/eShopModernizing).
 
 ### <a name="goals"></a>Cele
 
-Głównym celem tego przewodnika jest po prostu zaznajomienie się z tymi aplikacjami oraz ich kodem i konfiguracją. Aplikacje można skonfigurować w taki sposób, aby generowały i używały danych makiety bez używania bazy danych SQL do celów testowych. Ta opcjonalna konfiguracja jest oparta na iniekcji zależności w oddzielnym sposobie.
+Głównym celem tego instruktażu jest po prostu zapoznanie się z tymi aplikacjami oraz z ich kodem i konfiguracją. Aplikacje można skonfigurować tak, aby generowały i używały makiet danych bez używania bazy danych SQL do celów testowych. Ta opcjonalna konfiguracja jest oparta na iniekcji zależności, w sposób niesparzony.
 
-### <a name="scenario-1-aspnet-web-apps"></a>Scenariusz 1: ASP.NET Web Apps
+### <a name="scenario-1-aspnet-web-apps"></a>Scenariusz 1: ASP.NET aplikacje sieci Web
 
-Na poniższym rysunku przedstawiono prosty scenariusz oryginalnych starszych aplikacji sieci Web ASP.NET.
+Poniższy rysunek przedstawia prosty scenariusz oryginalnego starszego ASP.NET aplikacji sieci Web.
 
-![Prosty scenariusz architektury dla oryginalnych starszych aplikacji sieci Web ASP.NET](./media/image5-1.png)
+![Prosty scenariusz architektury oryginalnej starszej ASP.NET aplikacji sieci Web](./media/image5-1.png)
 
-W perspektywie domeny biznesowej obie aplikacje oferują te same funkcje zarządzania katalogami. Członkowie zespołu eShop Enterprise używają aplikacji do wyświetlania i edytowania wykazu produktów.
+Z punktu widzenia domeny biznesowej obie aplikacje oferują te same funkcje zarządzania katalogami. Członkowie zespołu przedsiębiorstwa sklepu internetowego będą używać aplikacji do wyświetlania i edytowania katalogu produktów.
 
-Następny rysunek przedstawia początkowe zrzuty ekranu aplikacji.
+Na następnej ilustracji przedstawiono początkowe zrzuty ekranu aplikacji.
 
-![Aplikacje ASP.NET MVC i ASP.NET Web Forms (istniejące/starsze technologie)](./media/image5-2.png)
+![ASP.NET mvc i ASP.NET web forms (istniejące/starsze technologie)](./media/image5-2.png)
 
-Zależności w ASP.NET 4. x lub starszych wersjach (w przypadku wersji MVC lub for Web Forms) oznacza, że te aplikacje nie będą działać w programie .NET Core, chyba że kod jest w pełni zapisany przy użyciu ASP.NET Core MVC.
+Zależności w ASP.NET wersji 4.x lub wcześniejszych (dla MVC lub dla formularzy sieci Web) oznacza, że te aplikacje nie będą działać na .NET Core, chyba że kod jest w pełni przepisany przy użyciu ASP.NET Core MVC.
 
-### <a name="scenario-2-wcf-service-and-winforms-client-app-3-tier-app"></a>Scenariusz 2. aplikacja kliencka usługi WCF i WinForms (aplikacja 3-warstwowa)
+### <a name="scenario-2-wcf-service-and-winforms-client-app-3-tier-app"></a>Scenariusz 2: Usługa WCF i aplikacja kliencz WinForms (aplikacja 3-warstwowa)
 
-Na poniższej ilustracji przedstawiono prosty scenariusz oryginalnej starszej aplikacji 3-warstwowej.
+Poniższy rysunek przedstawia prosty scenariusz oryginalnej 3-warstwowej starszej aplikacji.
 
 ![Prosty scenariusz architektury oryginalnej starszej aplikacji 3-warstwowej z usługą WCF i aplikacją kliencką WinForms](./media/image5-1.5.png)
 
 ### <a name="benefits"></a>Korzyści
 
-Zalety tego instruktażu są proste: po prostu zapoznaj się z kodem i początkowymi aplikacjami.
+Zalety tego instruktażu są proste: Wystarczy zapoznać się z kodem i początkowymi aplikacjami.
 
 ### <a name="next-steps"></a>Następne kroki
 
-Więcej szczegółowych informacji na ten temat znajduje się w witrynie GitHub wiki:
+Poznaj tę zawartość bardziej szczegółowo na wiki GitHub:
 
-- [Przewodnik po aplikacjach podstawowych ASP.NET MVC i Web Forms "starsze"](https://github.com/dotnet-architecture/eShopModernizing/wiki/01.-Tour-on-the-ASP.NET-MVC-and-WebForms-apps-implementation-code)
-- [Samouczek dotyczący podstawowej usługi WCF i WinForms (3-warstwowej) "starszej" aplikacji](https://github.com/dotnet-architecture/eShopModernizing/wiki/21.-Tour-on-the-WCF-service-and-WinForms-apps)
+- [Przewodnik po podstawowych ASP.NET MVC i starszych aplikacji formularzy sieci Web](https://github.com/dotnet-architecture/eShopModernizing/wiki/01.-Tour-on-the-ASP.NET-MVC-and-WebForms-apps-implementation-code)
+- [Przewodnik po podstawowej usłudze WCF i aplikacji "legacy" WinForms (3-warstwowej)](https://github.com/dotnet-architecture/eShopModernizing/wiki/21.-Tour-on-the-WCF-service-and-WinForms-apps)
 
-## <a name="walkthrough-2-containerize-your-existing-net-applications-with-windows-containers"></a>Przewodnik 2: Konteneryzowanie istniejących aplikacji .NET za pomocą kontenerów systemu Windows
+## <a name="walkthrough-2-containerize-your-existing-net-applications-with-windows-containers"></a>Instruktaż 2: Konteneryzuj istniejące aplikacje .NET za pomocą kontenerów systemu Windows
 
 ### <a name="overview"></a>Omówienie
 
-Użyj kontenerów systemu Windows, aby usprawnić wdrażanie istniejących aplikacji platformy .NET, takich jak te oparte na technologii MVC, Web Forms lub WCF, w środowiskach produkcyjnych, programistycznych i testowych.
+Użyj kontenerów systemu Windows, aby usprawnić wdrażanie istniejących aplikacji .NET, takich jak te oparte na MVC, Web Forms lub WCF, w środowiskach produkcyjnych, deweloperskich i testowych.
 
 ### <a name="goals"></a>Cele
 
-Celem tego instruktażu jest wyświetlenie kilku opcji konteneryzowania istniejącej aplikacji .NET Framework. Można:
+Celem tego instruktażejest pokazać kilka opcji konteneryzacji istniejącej aplikacji .NET Framework. Możesz:
 
-- Konteneryzowanie aplikację przy użyciu [narzędzi programu Visual studio 2017 dla platformy Docker](/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker) (Visual Studio 2017 lub nowsze wersje).
+- Konteneryzuj aplikację przy użyciu [programu Visual Studio 2017 Tools for Docker](/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker) (Visual Studio 2017 lub nowsze wersje).
 
-- Konteneryzowanie aplikację przez ręczne dodanie [pliku dockerfile](https://docs.docker.com/engine/reference/builder/), a następnie za pomocą [interfejsu wiersza polecenia platformy Docker](https://docs.docker.com/engine/reference/commandline/cli/).
+- Konteneryzuj aplikację ręcznie dodając [plik Dockerfile,](https://docs.docker.com/engine/reference/builder/)a następnie używając [interfejsu cli](https://docs.docker.com/engine/reference/commandline/cli/)platformy Docker .
 
-- Konteneryzowanie aplikację przy użyciu narzędzia [Img2Docker](https://github.com/docker/communitytools-image2docker-win) (narzędzia Open Source z platformy Docker).
+- Konteneryzuj aplikację za pomocą narzędzia [Img2Docker](https://github.com/docker/communitytools-image2docker-win) (narzędzia typu open source z platformy Docker).
 
-Ten przewodnik koncentruje się na rozdziałach Visual Studio 2017 Tools for Docker, ale inne dwa podejścia są dość podobne w odniesieniu do używania wieloetapowe dockerfile.
+Ten instruktaż koncentruje się na visual studio 2017 Narzędzia dla platformy Docker podejście, ale pozostałe dwa podejścia są dość podobne w odniesieniu do korzystania z plików dockerfiles.
 
-### <a name="scenario-1-containerized-aspnet-web-apps"></a>Scenariusz 1: kontenery ASP.NET Web Apps
+### <a name="scenario-1-containerized-aspnet-web-apps"></a>Scenariusz 1: konteneryzowane ASP.NET aplikacje sieci Web
 
-Na poniższej ilustracji przedstawiono scenariusz dla aplikacji kontenerów eShop starsze aplikacje sieci Web.
+Poniższy rysunek przedstawia scenariusz konteneryzowanych starszych aplikacji sieci web sklepu eShop.
 
-![Uproszczony diagram architektury aplikacji ASP.NET dla kontenerów w środowisku programistycznym](./media/image5-3.png)
+![Diagram architektury uproszczonej konteneryzowanych aplikacji ASP.NET w środowisku programistycznym](./media/image5-3.png)
 
-### <a name="scenario-2-containerized-wcf-service"></a>Scenariusz 2. kontener usługi WCF
+### <a name="scenario-2-containerized-wcf-service"></a>Scenariusz 2: Konteneryzowana usługa WCF
 
-Na poniższej ilustracji przedstawiono scenariusz dla aplikacji 3-warstwowej z użyciem kontenera usługi WCF.
+Poniższy rysunek przedstawia scenariusz dla aplikacji 3-warstwowej z konteneryzowaną usługą WCF.
 
-![Uproszczony diagram architektury usługi WCF w kontenerze w środowisku programistycznym](./media/image5-3.5.png)
+![Diagram architektury uproszczonej konteneryzowanej usługi WCF w środowisku programistycznym](./media/image5-3.5.png)
 
 ### <a name="benefits"></a>Korzyści
 
-Istnieją zalety uruchamiania aplikacji monolitycznej w kontenerze. Najpierw utworzysz obraz dla aplikacji. Od tego momentu każde wdrożenie jest uruchamiane w tym samym środowisku. Każdy kontener używa tej samej wersji systemu operacyjnego, ma taką samą wersję zależności, korzysta z tej samej wersji programu .NET Framework i został skompilowany przy użyciu tego samego procesu. W zasadzie można kontrolować zależności aplikacji przy użyciu obrazu platformy Docker. Zależności są przesyłane wraz z aplikacją podczas wdrażania kontenerów.
+Istnieją zalety uruchamiania aplikacji monolityczne w kontenerze. Najpierw należy utworzyć obraz dla aplikacji. Od tego momentu każde wdrożenie jest uruchamiane w tym samym środowisku. Każdy kontener używa tej samej wersji systemu operacyjnego, ma tę samą wersję zależności zainstalowane, używa tej samej wersji platformy .NET i jest zbudowany przy użyciu tego samego procesu. Zasadniczo można kontrolować zależności aplikacji przy użyciu obrazu platformy Docker. Zależności podróży z aplikacją podczas wdrażania kontenerów.
 
-Dodatkową korzyścią jest to, że deweloperzy mogą uruchamiać aplikację w spójnym środowisku dostarczanym przez kontenery systemu Windows. Problemy, które pojawiają się tylko w niektórych wersjach, można natychmiast wycofać, zamiast obsłużyć w środowisku przejściowym lub produkcyjnym. Różnice w środowiskach deweloperskich używanych przez członków zespołu deweloperskiego są mniejsze, gdy aplikacje działają w kontenerach.
+Dodatkową korzyścią jest to, że deweloperzy mogą uruchamiać aplikację w spójnym środowisku, które jest dostarczane przez kontenery systemu Windows. Problemy, które pojawiają się tylko w niektórych wersjach można wykryć natychmiast, zamiast pojawiać się w środowisku przejściowym lub produkcyjnym. Różnice w środowiskach programistycznych używanych przez członków zespołu programistycznego mają mniejsze znaczenie, gdy aplikacje są uruchamiane w kontenerach.
 
-Aplikacje kontenerowe mają również krzywą skalowania w poziomie Flatter. Aplikacje kontenerowe umożliwiają korzystanie z większej liczby wystąpień aplikacji i usług (opartych na kontenerach) w maszynie wirtualnej lub na komputerze fizycznym w porównaniu do zwykłych wdrożeń aplikacji na maszynę. Powoduje to przetłumaczenie na wyższą gęstość i mniejszą ilość wymaganych zasobów, zwłaszcza w przypadku korzystania z programu Orchestrator, takiego jak Kubernetes.
+Konteneryzowane aplikacje mają również bardziej płaską krzywą skalowania w skali. Konteneryzowane aplikacje umożliwiają więcej wystąpień aplikacji i usługi (na podstawie kontenerów) na maszynie wirtualnej lub komputerze fizycznym w porównaniu z regularnymi wdrożeniami aplikacji na komputerze. Przekłada się to na większą gęstość i mniej wymaganych zasobów, zwłaszcza w przypadku korzystania z koordynatorów, takich jak Kubernetes.
 
-Kontenerach w idealnych sytuacjach nie wymaga wprowadzania żadnych zmian w kodzie aplikacji (C\#). W większości scenariuszy wymagane są tylko pliki metadanych wdrożenia platformy Docker (pliki wieloetapowe dockerfile i Docker Compose).
+Konteneryzacja, w idealnych sytuacjach, nie wymaga wprowadzania\#żadnych zmian w kodzie aplikacji (C). W większości scenariuszy wystarczy pliki metadanych wdrażania platformy Docker (pliki dockerfiles i pliki docker Compose).
 
 ### <a name="next-steps"></a>Następne kroki
 
-Więcej szczegółowych informacji na ten temat znajduje się w witrynie GitHub wiki:
+Poznaj tę zawartość bardziej szczegółowo na wiki GitHub:
 
-- [Jak konteneryzowanie aplikacje sieci Web .NET Framework przy użyciu kontenerów systemu Windows i platformy Docker](https://github.com/dotnet-architecture/eShopModernizing/wiki/02.-How-to-containerize-the-.NET-Framework-web-apps-with-Windows-Containers-and-Docker)
+- [Jak konteneryzować aplikacje sieci web .NET Framework za pomocą kontenerów systemu Windows i platformy Docker](https://github.com/dotnet-architecture/eShopModernizing/wiki/02.-How-to-containerize-the-.NET-Framework-web-apps-with-Windows-Containers-and-Docker)
 - [Dodawanie obsługi platformy Docker do usługi WCF](https://github.com/dotnet-architecture/eShopModernizing/wiki/22.-Adding-Docker-Support)
 
-## <a name="walkthrough-3-deploy-your-windows-containers-based-app-to-azure-vms"></a>Przewodnik 3: wdrażanie aplikacji opartych na kontenerach systemu Windows na maszynach wirtualnych platformy Azure
+## <a name="walkthrough-3-deploy-your-windows-containers-based-app-to-azure-vms"></a>Instruktaż 3: Wdrażanie aplikacji opartej na kontenerach systemu Windows na maszynach wirtualnych platformy Azure
 
-### <a name="technical-walkthrough-availability"></a>Dostępność przewodnika technicznego
+### <a name="technical-walkthrough-availability"></a>Dostępność instruktażetechnicznym
 
-Pełny przewodnik techniczny jest dostępny na stronie wiki repozytorium eShopModernizing GitHub: <https://github.com/dotnet-architecture/eShopModernizing/wiki/06.-Deploying-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)>
+Pełny instruktaż techniczny jest dostępny w eShopModernizing GitHub repo wiki:<https://github.com/dotnet-architecture/eShopModernizing/wiki/06.-Deploying-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)>
 
 ### <a name="overview"></a>Omówienie
 
-Wdrożenie na hoście Docker na maszynie wirtualnej z systemem Windows Server 2016 (VM) na platformie Azure pozwala szybko skonfigurować środowisko deweloperskie/testowe/przejściowe. Zapewnia również typowe miejsce dla testerów lub użytkowników firmowych w celu zweryfikowania aplikacji. Maszyny wirtualne mogą również być prawidłowymi środowiskami produkcyjnymi infrastruktury jako usługi (IaaS).
+Wdrażanie na hoście platformy Docker na maszynie wirtualnej (VM) systemu Windows Server 2016 na platformie Azure umożliwia szybkie konfigurowanie środowisk deweloperskich/testowych/przemieszczania. Zapewnia również wspólne miejsce dla testerów lub użytkowników biznesowych do sprawdzania poprawności aplikacji. Maszyny wirtualne mogą być również prawidłową infrastrukturą jako środowiskami produkcyjnymi usługi (IaaS).
 
 ### <a name="goals"></a>Cele
 
-Celem tego przewodnika jest przedstawienie wielu alternatyw, które są używane podczas wdrażania kontenerów systemu Windows na maszynach wirtualnych platformy Azure, które są oparte na systemie Windows Server 2016 lub nowszym.
+Celem tego instruktażenia jest pokazanie wielu alternatyw, które masz podczas wdrażania kontenerów systemu Windows na maszynach wirtualnych platformy Azure, które są oparte na systemie Windows Server 2016 lub nowszych wersjach.
 
 ### <a name="scenarios"></a>Scenariusze
 
-W tym instruktażu omówiono kilka scenariuszy.
+W tym instruktacie uwzględniono kilka scenariuszy.
 
-#### <a name="scenario-a-deploy-to-an-azure-vm-from-a-dev-pc-through-docker-engine-connection"></a>Scenariusz A: wdrażanie na maszynie wirtualnej platformy Azure z komputera deweloperskiego za pośrednictwem połączenia aparatu platformy Docker
+#### <a name="scenario-a-deploy-to-an-azure-vm-from-a-dev-pc-through-docker-engine-connection"></a>Scenariusz A: Wdrażanie na maszynie wirtualnej platformy Azure z komputera dewelopera za pośrednictwem połączenia aparatu platformy Docker
 
-![Wdrażanie na maszynie wirtualnej platformy Azure z komputera deweloperskiego za pośrednictwem połączenia aparatu platformy Docker](./media/image5-4.png)
+![Wdrażanie na maszynie wirtualnej platformy Azure z komputera dewelopera za pośrednictwem połączenia aparatu platformy Docker](./media/image5-4.png)
 
-**Rysunek 5-4.** Wdrażanie na maszynie wirtualnej platformy Azure z komputera deweloperskiego za pośrednictwem połączenia aparatu platformy Docker
+**Rysunek 5-4.** Wdrażanie na maszynie wirtualnej platformy Azure z komputera dewelopera za pośrednictwem połączenia aparatu platformy Docker
 
-#### <a name="scenario-b-deploy-to-an-azure-vm-through-a-docker-registry"></a>Scenariusz B. wdrażanie na maszynie wirtualnej platformy Azure za pomocą rejestru platformy Docker
+#### <a name="scenario-b-deploy-to-an-azure-vm-through-a-docker-registry"></a>Scenariusz B: Wdrażanie na maszynie wirtualnej platformy Azure za pośrednictwem rejestru platformy Docker
 
-![Wdrażanie na maszynie wirtualnej platformy Azure przy użyciu rejestru platformy Docker](./media/image5-5.png)
+![Wdrażanie na maszynie wirtualnej platformy Azure za pośrednictwem rejestru platformy Docker](./media/image5-5.png)
 
-**Rysunek 5-5.** Wdrażanie na maszynie wirtualnej platformy Azure przy użyciu rejestru platformy Docker
+**Rysunek 5-5.** Wdrażanie na maszynie wirtualnej platformy Azure za pośrednictwem rejestru platformy Docker
 
-#### <a name="scenario-c-deploy-to-an-azure-vm-from-cicd-pipelines-in-azure-devops-services"></a>Scenariusz C: wdrażanie na maszynie wirtualnej platformy Azure z potoków ciągłej integracji/ciągłego wdrażania w Azure DevOps Services
+#### <a name="scenario-c-deploy-to-an-azure-vm-from-cicd-pipelines-in-azure-devops-services"></a>Scenariusz C: Wdrażanie na maszynie wirtualnej platformy Azure z potoków ciągłej integracji/ciągłego wdrażania w usługach Azure DevOps Services
 
-![Wdrażanie na maszynie wirtualnej platformy Azure z potoków ciągłej integracji/ciągłego wdrażania w Azure DevOps Services](./media/image5-6.png)
+![Wdrażanie na maszynie wirtualnej platformy Azure z potoków ciągłej integracji/ciągłego wdrażania w usługach Azure DevOps Services](./media/image5-6.png)
 
-**Rysunek 5-6.** Wdrażanie na maszynie wirtualnej platformy Azure z potoków ciągłej integracji/ciągłego wdrażania w Azure DevOps Services
+**Rysunek 5-6.** Wdrażanie na maszynie wirtualnej platformy Azure z potoków ciągłej integracji/ciągłego wdrażania w usługach Azure DevOps Services
 
 ### <a name="azure-vms-for-windows-containers"></a>Maszyny wirtualne platformy Azure dla kontenerów systemu Windows
 
-Maszyny wirtualne platformy Azure dla kontenerów systemu Windows są maszynami wirtualnymi opartymi na systemie Windows Server 2016, Windows 10 lub nowszym, zarówno z skonfigurowanym aparatem platformy Docker. W większości przypadków system Windows Server 2016 jest używany na maszynach wirtualnych platformy Azure.
+Maszyny wirtualne platformy Azure dla kontenerów systemu Windows to maszyny wirtualne oparte na wersjach systemu Windows Server 2016, Windows 10 lub nowszych, zarówno z skonfigurowaną przez aparat platformy Docker. W większości przypadków system Windows Server 2016 jest używany w maszynach wirtualnych platformy Azure.
 
-Platforma Azure udostępnia teraz maszynę wirtualną o nazwie **Windows Server 2016 z kontenerami**. Za pomocą tej maszyny wirtualnej można wypróbować nową funkcję kontenera systemu Windows Server z systemem Windows Server Core lub Windows nano Server. Obrazy systemu operacyjnego kontenera są zainstalowane, a następnie maszyna wirtualna jest gotowa do użycia z platformą Docker.
+Platforma Azure udostępnia obecnie maszynę wirtualną o nazwie **Windows Server 2016 z kontenerami**. Za pomocą tej maszyny Wirtualnej można wypróbować nową funkcję kontenera systemu Windows Server za pomocą systemu Windows Server Core lub systemu Windows Nano Server. Obrazy systemu operacyjnego kontenera są zainstalowane, a następnie maszyna wirtualna jest gotowa do użycia z platformą Docker.
 
 ### <a name="benefits"></a>Korzyści
 
-Chociaż kontenery systemu Windows można wdrażać na lokalnych maszynach wirtualnych z systemem Windows Server 2016, podczas wdrażania na platformie Azure można łatwiej rozpocząć pracę z gotowymi do użycia maszyn wirtualnych kontenerów systemu Windows Server. Możesz również uzyskać wspólną lokalizację online dostępną dla testerów oraz automatyczną skalowalność za pomocą zestawów skalowania maszyn wirtualnych platformy Azure.
+Mimo że kontenery systemu Windows można wdrożyć na lokalnych maszynach wirtualnych systemu Windows Server 2016, podczas wdrażania na platformie Azure można uzyskać łatwiejszy sposób, aby rozpocząć pracę, z gotowymi do użycia maszynami wirtualnymi kontenera systemu Windows Server. Możesz również uzyskać wspólną lokalizację online, która jest dostępna dla testerów i automatyczną skalowalność za pomocą zestawów skalowania maszyn wirtualnych platformy Azure.
 
 ### <a name="next-steps"></a>Następne kroki
 
-Więcej szczegółowych informacji na ten temat znajduje się w witrynie GitHub wiki:
+Poznaj tę zawartość bardziej szczegółowo na wiki GitHub:
 
 <https://github.com/dotnet-architecture/eShopModernizing/wiki/06.-Deploying-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)>
 
-## <a name="walkthrough-4-deploy-your-windows-containers-based-apps-to-azure-container-instances-aci"></a>Przewodnik 4. wdrażanie aplikacji opartych na kontenerach systemu Windows w celu Azure Container Instances (ACI)
+## <a name="walkthrough-4-deploy-your-windows-containers-based-apps-to-azure-container-instances-aci"></a>Instruktaż 4: Wdrażanie aplikacji opartych na kontenerach systemu Windows w wystąpieniach kontenerów platformy Azure (ACI)
 
-### <a name="technical-walkthrough-availability"></a>Dostępność przewodnika technicznego
+### <a name="technical-walkthrough-availability"></a>Dostępność instruktażetechnicznym
 
-Pełny przewodnik techniczny jest dostępny na stronie wiki repozytorium eShopModernizing GitHub:
+Pełny instruktaż techniczny jest dostępny w eShopModernizing GitHub repo wiki:
 
-[Wdrażanie aplikacji w usłudze ACI (Azure Container Instances)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances))
+[Wdrażanie aplikacji do usługi ACI (wystąpienia kontenera azure)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances))
 
 ### <a name="overview"></a>Omówienie
 
-[Azure Container Instances (ACI)](https://docs.microsoft.com/azure/container-instances/) to najszybszy sposób tworzenia kontenerów w środowisku deweloperskim/testowym/przejściowym, w którym można wdrożyć pojedyncze wystąpienia kontenerów.
+[Wystąpienia kontenera platformy Azure (ACI)](https://docs.microsoft.com/azure/container-instances/) jest najszybszym sposobem posiadania środowiska deweloperów/testów/przemieszczania kontenerów, w którym można wdrażać pojedyncze wystąpienia kontenerów.
 
 ### <a name="goals"></a>Cele
 
-W tym instruktażu przedstawiono główne scenariusze wdrażania kontenerów systemu Windows w programie Azure Container Instances (ACI) oraz sposobu wdrażania aplikacji eShopModernizing w programie ACI.
+W tym instruktażu przedstawiono główne scenariusze podczas wdrażania kontenerów systemu Windows w wystąpieniach kontenerów platformy Azure (ACI) i sposób wdrażania aplikacji eShopModernizing w usłudze ACI.
 
 ### <a name="scenarios"></a>Scenariusze
 
-Mogą istnieć różne odmiany dotyczące wdrażania aplikacji eShopModernizing w programie ACI, takie jak wdrażanie tylko jednej lub wszystkich aplikacji (aplikacja MVC, WebForms lub usługa WCF). W poniższym scenariuszu widocznym poniżej można zobaczyć aplikację ASP.NET MVC i kontener SQL Server obu wdrożonych jako kontenery w ACI (Azure Container Instances).
+Mogą istnieć różnice dotyczące wdrażania aplikacji eShopModernizing w aci, takich jak wdrażanie tylko jednej lub wszystkich aplikacji (aplikacja MVC, aplikacja WebForms lub usługa WCF). W poniższym scenariuszu przedstawiono ASP.NET aplikacji MVC oraz kontenera programu SQL Server, oba zostały wdrożone jako kontenery w usłudze ACI (wystąpienia kontenera Azure).
 
-![Wdrażanie w programie ACI z poziomu środowiska programistycznego](./media/image5-3.5.6.png)
+![Wdrażanie w aci ze środowiska programistycznego](./media/image5-3.5.6.png)
 
 ### <a name="benefits"></a>Korzyści
 
-Azure Container Instances ułatwia tworzenie kontenerów platformy Docker na platformie Azure i zarządzanie nimi bez konieczności aprowizacji maszyn wirtualnych ani wdrażania usług wyższego poziomu. Za pomocą ACI można bezpośrednio wdrożyć kontener systemu Windows na platformie Azure i uwidocznić go w Internecie za pomocą w pełni kwalifikowanej nazwy domeny (FQDN) w ciągu kilku sekund (pod warunkiem, że obraz kontenera systemu Windows jest gotowy do użycia w rejestrze Docker, np. w usłudze Docker Hub lub kontenera platformy Azure) Rejestr).
+Usługa Azure Container Instances ułatwia tworzenie kontenerów Docker na platformie Azure oraz zarządzanie nimi bez konieczności inicjowania obsługi maszyn wirtualnych czy adoptowania usługi wyższego poziomu. Za pomocą usługi ACI można bezpośrednio wdrożyć kontener systemu Windows na platformie Azure i udostępnić go w Internecie za pomocą w pełni kwalifikowanej nazwy domeny (FQDN) w ciągu kilku sekund (pod warunkiem, że obraz kontenera systemu Windows jest gotowy w rejestrze platformy Docker, takim jak Docker Hub lub Azure Container rejestru).
 
-### <a name="considerations"></a>Uwagi
+### <a name="considerations"></a>Zagadnienia do rozważenia
 
-Wdrażanie kontenerów systemu Windows z pełnymi .NET Framework/ASP.NET lub SQL Server do Azure Container Instances (ACI) nie jest równie szybkie, jak wdrażanie na zwykłych hostach platformy Docker (na przykład w systemie Windows Server 2016 z kontenerami systemu Windows), ponieważ Docker obraz musi zostać pobrany (ściągany z rejestru Docker) za każdym razem, a rozmiary obrazu kontenera SQL (15,1 GB) i obraz kontenera ASP.NET (13,9 GB) są znacznie duże. jest to jednak znacznie tańsze niż utrzymywanie własnego hosta platformy Docker (trwałe online systemu Windows) Serwer 2016 z maszyną wirtualną kontenerów systemu Windows na platformie Azure) nie powinien wymieniać całego programu Orchestrator, takiego jak Kubernetes na platformie Azure (AKS), który z drugiej strony stanowi doskonały wybór dla wdrożeń produkcyjnych.
+Wdrażanie kontenerów systemu Windows z pełną platformą .NET Framework / ASP.NET lub SQL Server w wystąpieniach kontenerów platformy Azure (ACI) nie jest tak szybkie, jak wdrażanie na zwykłym hoście platformy Docker (takim jak Windows Server 2016 z kontenerami systemu Windows), ponieważ obraz platformy Docker musi zostać pobrany (pobrany z rejestru platformy Docker) za każdym razem, a rozmiary obrazu kontenera SQL (15,1 GB) i obrazu kontenera ASP.NET (13,9 GB) są znacznie duże, a rozmiary obrazu kontenera SQL (15,1 GB) i obrazu kontenera ASP.NET (13,9 GB) są znacznie duże, jednak jest to znacznie tańsze niż utrzymanie własnego hosta docker (na stałe on-line Windows Serwer 2016 z maszyną wirtualną kontenerów systemu Windows na platformie Azure) nie wspominając o całym koordynatorze, takim jak Kubernetes na platformie Azure (AKS), który z drugiej strony jest doskonałym wyborem dla wdrożeń produkcyjnych.
 
-Jako główne rozwiązanie przy użyciu Azure Container Instances jest bardzo atrakcyjną opcją dla scenariuszy tworzenia i testowania oraz dla potoków ciągłej integracji/ciągłego wdrażania.
+Jako główny wniosek przy użyciu wystąpienia kontenera Azure jest bardzo atrakcyjną opcją dla scenariuszy deweloperskich/testowych i potoków ciągłej integracji/ciągłego dysku CD.
 
 ## <a name="next-steps"></a>Następne kroki
 
-Więcej szczegółowych informacji na ten temat znajduje się w witrynie GitHub wiki:
+Poznaj tę zawartość bardziej szczegółowo na wiki GitHub:
 
 [https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances))
 
-## <a name="walkthrough-5-deploy-your-windows-containers-based-apps-to-kubernetes-in-azure-container-service"></a>Przewodnik 5: wdrażanie aplikacji opartych na kontenerach systemu Windows w programie Kubernetes w Azure Container Service
+## <a name="walkthrough-5-deploy-your-windows-containers-based-apps-to-kubernetes-in-azure-container-service"></a>Instruktaż 5: Wdrażanie aplikacji opartych na kontenerach systemu Windows w programie Kubernetes w usłudze Azure Container Service
 
-### <a name="technical-walkthrough-availability"></a>Dostępność przewodnika technicznego
+### <a name="technical-walkthrough-availability"></a>Dostępność instruktażetechnicznym
 
-Pełny przewodnik techniczny jest dostępny na stronie wiki repozytorium eShopModernizing GitHub:
+Pełny instruktaż techniczny jest dostępny w eShopModernizing GitHub repo wiki:
 
 <https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-CI-CD)>
 
 ### <a name="overview"></a>Omówienie
 
-Aplikacja, która jest oparta na kontenerach systemu Windows, będzie szybko potrzebować do użycia Platform, a nawet dalej z maszyn wirtualnych IaaS. Jest to konieczne w celu łatwego osiągnięcia wysokiej skalowalności i lepszej automatycznej skalowalności oraz znaczących ulepszeń zautomatyzowanych wdrożeń i przechowywania wersji. Cele te można osiągnąć przy użyciu [Kubernetes](https://kubernetes.io/)programu Orchestrator, dostępnego w usłudze [Azure Container Services](https://azure.microsoft.com/services/container-service/).
+Aplikacja oparta na kontenerach systemu Windows będzie szybko musiała korzystać z platform, oddalając się jeszcze bardziej od maszyn wirtualnych IaaS. Jest to konieczne, aby łatwo osiągnąć wysoką skalowalność i lepszą skalowalność automatyczną oraz znacznie poprawić zautomatyzowane wdrożenia i przechowywanie wersji. Cele te można osiągnąć przy użyciu koordynatora [Kubernetes](https://kubernetes.io/), dostępne w [usłudze Azure Container Services](https://azure.microsoft.com/services/container-service/).
 
 ### <a name="goals"></a>Cele
 
-Celem tego instruktażu jest nauczenie się, jak wdrożyć aplikację opartą na kontenerach systemu Windows w usłudze Kubernetes (nazywanej również *K8s*) w Azure Container Service. Wdrażanie do Kubernetes od podstaw jest procesem dwuetapowym:
+Celem tego instruktażejest dowiedzieć się, jak wdrożyć aplikację opartą na kontenerze systemu Windows do kubernetes (nazywany także *K8s)* w usłudze Azure Container Service. Wdrażanie w kubernetes od podstaw jest procesem dwuetapowym:
 
-1. Wdróż klaster Kubernetes do Azure Container Service.
+1. Wdrażanie klastra Kubernetes w usłudze Azure Container Service.
 
-2. Wdróż aplikację i powiązane zasoby w klastrze Kubernetes.
+2. Wdrażanie aplikacji i powiązanych zasobów w klastrze Kubernetes.
 
 ### <a name="scenarios"></a>Scenariusze
 
-#### <a name="scenario-a-deploy-directly-to-a-kubernetes-cluster-from-a-dev-environment"></a>Scenariusz A: wdrażanie bezpośrednio w klastrze Kubernetes z poziomu środowiska deweloperskiego
+#### <a name="scenario-a-deploy-directly-to-a-kubernetes-cluster-from-a-dev-environment"></a>Scenariusz A: Wdrażanie bezpośrednio w klastrze Kubernetes ze środowiska deweloperów
 
-![Wdrażanie bezpośrednio w klastrze Kubernetes z poziomu środowiska deweloperskiego](./media/image5-7.png)
+![Wdrażanie bezpośrednio w klastrze Kubernetes ze środowiska programistycznego](./media/image5-7.png)
 
-**Rysunek 5-7.** Wdrażanie bezpośrednio w klastrze Kubernetes z poziomu środowiska deweloperskiego
+**Rysunek 5-7.** Wdrażanie bezpośrednio w klastrze Kubernetes ze środowiska programistycznego
 
-#### <a name="scenario-b-deploy-to-a-kubernetes-cluster-from-cicd-pipelines-in-azure-devops-services"></a>Scenariusz B: wdrażanie w klastrze Kubernetes z potoków ciągłej integracji/ciągłego wdrażania w Azure DevOps Services
+#### <a name="scenario-b-deploy-to-a-kubernetes-cluster-from-cicd-pipelines-in-azure-devops-services"></a>Scenariusz B: Wdrażanie w klastrze Kubernetes z potoków ciągłej integracji/ciągłego wdrażania w usługach Azure DevOps Services
 
-![Wdrażanie w klastrze Kubernetes z potoków ciągłej integracji/ciągłego wdrażania w Azure DevOps Services](./media/image5-8.png)
+![Wdrażanie w klastrze Kubernetes z potoków ciągłej integracji/ciągłego wdrażania w usługach Azure DevOps Services](./media/image5-8.png)
 
-**Rysunek 5-8.** Wdrażanie w klastrze Kubernetes z potoków ciągłej integracji/ciągłego wdrażania w Azure DevOps Services
+**Rysunek 5-8.** Wdrażanie w klastrze Kubernetes z potoków ciągłej integracji/ciągłego wdrażania w usługach Azure DevOps Services
 
 ### <a name="benefits"></a>Korzyści
 
-Wdrożenie w klastrze w programie Kubernetes ma wiele zalet. Największą korzyścią jest to, że możesz uzyskać gotowe do użycia środowisko produkcyjne, w którym można skalować aplikację na podstawie liczby wystąpień kontenerów, które mają być używane (skalowalność wewnętrzna w istniejących węzłach) i na podstawie liczby węzłów lub maszyn wirtualnych w klastrze ( globalna skalowalność klastra).
+Wdrażanie w klastrze w kubernetes ma wiele korzyści. Największą zaletą jest to, że można uzyskać środowisko gotowe do produkcji, w którym można skalować w sposób skalowalny aplikacji na podstawie liczby wystąpień kontenera, których chcesz użyć (skalowalność wewnętrzna w istniejących węzłach) i na podstawie liczby węzłów lub maszyn wirtualnych w klastrze ( globalnej skalowalności klastra).
 
-Azure Container Service optymalizuje popularne narzędzia i technologie "open source" przeznaczone dla platformy Azure. Uzyskasz otwarte rozwiązanie, które oferuje przenośność dla kontenerów i konfiguracji aplikacji. Wybierasz rozmiar, liczbę hostów i narzędzie Orchestrator Tools-Container Service obsługuje wszystko inne.
+Usługa Azure Container Service optymalizuje popularne narzędzia i technologie typu open source specjalnie dla platformy Azure. Otrzymujesz otwarte rozwiązanie, które oferuje przenośność, zarówno dla kontenerów, jak i konfiguracji aplikacji. Wybierz rozmiar, liczbę hostów i narzędzi koordynatora Container Service obsługuje wszystko inne.
 
-Dzięki Kubernetes deweloperzy mogą postępować nad maszynami fizycznymi i wirtualnymi, aby zaplanować infrastrukturę skoncentrowaną na kontenerach, która ułatwia między innymi następujące możliwości:
+Dzięki programom Kubernetes deweloperzy mogą przejść od myślenia o maszynach fizycznych i wirtualnych do planowania infrastruktury zorientowanej na kontenery, która ułatwia między innymi następujące możliwości:
 
 - Aplikacje oparte na wielu kontenerach
 
-- Replikowanie wystąpień kontenera i skalowanie w poziomie
+- Replikowanie wystąpień kontenera i skalowanie poziome
 
-- Nazewnictwo i odnajdywanie (na przykład wewnętrzny serwer DNS)
+- Nazewnictwo i odnajdywanie (na przykład wewnętrzny dns)
 
-- Równoważenie obciążenia
+- Obciążenia wyważające
 
 - Aktualizacje stopniowe
 
-- Dystrybuowanie wpisów tajnych
+- Rozpowszechnianie tajemnic
 
 - Kontrole kondycji aplikacji
 
 ## <a name="next-steps"></a>Następne kroki
 
-Więcej szczegółowych informacji na ten temat znajduje się w witrynie GitHub wiki: <https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-CI-CD)>
+Poznaj tę zawartość bardziej szczegółowo na wiki GitHub:<https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-CI-CD)>
 
-## <a name="walkthrough-6-deploy-your-windows-containers-based-apps-to-azure-app-service-for-containers"></a>Przewodnik 6. wdrażanie aplikacji opartych na kontenerach systemu Windows w celu Azure App Service dla kontenerów
+## <a name="walkthrough-6-deploy-your-windows-containers-based-apps-to-azure-app-service-for-containers"></a>Instruktaż 6: Wdrażanie aplikacji opartych na kontenerach systemu Windows w usłudze Azure App Service for Containers
 
-### <a name="technical-walkthrough-availability"></a>Dostępność przewodnika technicznego
+### <a name="technical-walkthrough-availability"></a>Dostępność instruktażetechnicznym
 
-Pełny przewodnik techniczny jest dostępny na stronie wiki repozytorium eShopModernizing GitHub:
+Pełny instruktaż techniczny jest dostępny w eShopModernizing GitHub repo wiki:
 
 <https://github.com/dotnet-architecture/eShopModernizing/wiki/Deploy-Windows-Container-to-Azure-App-Service>
 
 ### <a name="overview"></a>Omówienie
 
-Prostą aplikację kontenerową korzystającą z kontenerów systemu Windows można łatwo wdrożyć do Azure App Service dla kontenerów. Jest to zalecane podejście dla większości aplikacji opartych na kontenerach systemu Windows.
+Prostą aplikację konteneryzowaną przy użyciu kontenerów systemu Windows można łatwo wdrożyć w usłudze Azure App Service for Containers. Jest to zalecane podejście dla większości aplikacji opartych na kontenerze systemu Windows.
 
 ### <a name="goals"></a>Cele
 
-Celem tego instruktażu jest nauczenie się, jak wdrożyć aplikację opartą na kontenerach systemu Windows w celu Azure App Service kontenerów z rejestru (centrum Docker lub Azure Container Registry).
+Celem tego instruktażejest dowiedzieć się, jak wdrożyć aplikację opartą na kontenerze systemu Windows do usługi Azure App Service for Containers z rejestru (Docker Hub lub Azure Container Registry).
 
 ### <a name="scenario"></a>Scenariusz
 
-![Wdrażanie aplikacji opartej na kontenerze systemu Windows w celu Azure App Service dla kontenerów](./media/image5-11.png)
+![Wdrażanie aplikacji opartej na kontenerze systemu Windows w usłudze Azure App Service for Containers](./media/image5-11.png)
 
 ### <a name="benefits"></a>Korzyści
 
-Wdrożenie do Azure App Service for Containers oferuje zalety kontenerów sparowanych z zaletami Azure App Service. Usługa App Service może być łatwo skalowana w pionie i w poziomie i można ją skonfigurować do automatycznego skalowania w celu spełnienia zmienionych wymagań. Aktualizacje mogą być przeprowadzane z zerowym przestojem, a Konfiguracja ciągłego wdrażania z rejestru jest również łatwa do skonfigurowania.
+Wdrażanie w usłudze Azure App Service for Containers oferuje zalety kontenerów sparowanych z zaletami usługi Azure App Service platformy Azure. Usługę aplikacji można łatwo skalować zarówno w pionie, jak i w poziomie, i można ją skonfigurować do automatycznego skalowania w celu spełnienia zmieniających się wymagań. Aktualizacje można wykonywać przy zerowym przestoju, a konfiguracja ciągłego wdrażania z rejestru jest również łatwa w konfiguracji.
 
 ## <a name="next-steps"></a>Następne kroki
 
-Więcej szczegółowych informacji na ten temat znajduje się w witrynie GitHub wiki: <https://github.com/dotnet-architecture/eShopModernizing/wiki/Deploy-Windows-Container-to-Azure-App-Service>
+Poznaj tę zawartość bardziej szczegółowo na wiki GitHub:<https://github.com/dotnet-architecture/eShopModernizing/wiki/Deploy-Windows-Container-to-Azure-App-Service>
 
 > [!div class="step-by-step"]
 > [Poprzedni](modernize-existing-apps-to-cloud-optimized/migrate-to-hybrid-cloud-scenarios.md)
-> [Następny](conclusions.md) <!-- Next Chapter -->
+> [następny](conclusions.md) <!-- Next Chapter -->

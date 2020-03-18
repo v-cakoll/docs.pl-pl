@@ -1,35 +1,35 @@
 ---
-title: Relacja między funkcje języka i typy biblioteki | Dokumentacja firmy Microsoft
-description: Funkcje języka często zależy od biblioteki typów dla implementacji. Informacje o tej relacji.
+title: Relacja między funkcjami językowym a typami bibliotek | Dokumenty firmy Microsoft
+description: Funkcje języka często opierają się na typach bibliotek w celu wykonania. Zrozum tę relację.
 ms.date: 07/20/2017
 ms.openlocfilehash: dfae7972af0a251a92700d7d33bd6f971eb1870e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "61706029"
 ---
-# <a name="relationships-between-language-features-and-library-types"></a>Relacje między funkcjami języka i biblioteki typów
+# <a name="relationships-between-language-features-and-library-types"></a>Relacje między funkcjami języka a typami bibliotek
 
-C# Definicji języka wymaga biblioteki standardowej mieć pewne typy i niektóre dostępne elementy członkowskie dla tych typów. Kompilator generuje kod, który używa tych wymaganych typów i elementów członkowskich dla wielu funkcji językowych. Gdy jest to konieczne, istnieją pakiety NuGet, które zawierają typy służące do nowszych wersji języka podczas pisania kodu, dla których te typy lub elementy członkowskie nie wdrożono jeszcze środowisk.
+Definicja języka Języka C# wymaga standardowej biblioteki mieć pewne typy i niektórych dostępnych elementów członkowskich na tych typów. Kompilator generuje kod, który używa tych wymaganych typów i elementów członkowskich dla wielu różnych funkcji języka. W razie potrzeby istnieją pakiety NuGet, które zawierają typy potrzebne dla nowszych wersji języka podczas pisania kodu dla środowisk, w których te typy lub elementy członkowskie nie zostały jeszcze wdrożone.
 
-Ta zależność od funkcji biblioteki standardowej było częścią C# języka od swojej pierwszej wersji. Przykłady w tej wersji, dostępne:
+Ta zależność od funkcji biblioteki standardowej jest częścią języka C# od jego pierwszej wersji. W tej wersji przykłady obejmowały:
 
-* <xref:System.Exception> — używany dla wszystkich wyjątków wygenerowanego przez kompilator.
-* <xref:System.String> - C# `string` typ jest synonimem dla <xref:System.String>.
-* <xref:System.Int32> -synonim `int`.
+* <xref:System.Exception>- używany dla wszystkich kompilator generowane wyjątki.
+* <xref:System.String>- Typ `string` C# jest synonimem <xref:System.String>.
+* <xref:System.Int32>- synonim `int`.
 
-Tym pierwsza wersja została proste: kompilator i standardową bibliotekę dostarczane razem i była tylko jedną wersja każdego z nich.
+Ta pierwsza wersja była prosta: kompilator i standardowa biblioteka dostarczane razem i była tylko jedna wersja każdego.
 
-Kolejne wersje C# od czasu do czasu zostały dodane nowe typy lub elementy członkowskie do zależności. Przykłady: <xref:System.Runtime.CompilerServices.INotifyCompletion>, <xref:System.Runtime.CompilerServices.CallerFilePathAttribute> i <xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>. C#7.0 kontynuuje, to dodanie zależności na <xref:System.ValueTuple> do zaimplementowania [krotek](../tuples.md) funkcji języka.
+Kolejne wersje języka C# od czasu do czasu dodaje nowe typy lub elementy członkowskie do zależności. Przykłady obejmują: <xref:System.Runtime.CompilerServices.INotifyCompletion> <xref:System.Runtime.CompilerServices.CallerFilePathAttribute> , <xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>i . C# 7.0 kontynuuje to przez <xref:System.ValueTuple> dodanie zależności na zaimplementować funkcję języka [krotek.](../tuples.md)
 
-Zespół projektowy języka działa, aby zminimalizować obszar powierzchni typów i elementów członkowskich, wymagane w zgodne biblioteki standardowej. Ten cel jest równoważone względem przejrzysty, w którym nowe funkcje biblioteki są bezproblemowo włączone do języka. Nastąpi nowe funkcje w przyszłych wersjach C# wymagające nowych typów i elementów członkowskich w bibliotece standardowych. Należy zrozumieć, jak zarządzać tych zależności w pracy.
+Zespół projektu języka działa, aby zminimalizować powierzchnię typów i elementów członkowskich wymaganych w zgodnej standardowej bibliotece. Cel ten jest równoważony z czystym projektem, w którym nowe funkcje biblioteki są bezproblemowo włączane do języka. Pojawią się nowe funkcje w przyszłych wersjach języka C#, które wymagają nowych typów i elementów członkowskich w standardowej bibliotece. Ważne jest, aby zrozumieć, jak zarządzać tymi zależnościami w swojej pracy.
 
 ## <a name="managing-your-dependencies"></a>Zarządzanie zależnościami
 
-C#narzędzia kompilatora są teraz całkowicie niezależni od cyklu tworzenia wydań bibliotek .NET na obsługiwanych platformach. W rzeczywistości różnych bibliotek .NET mają cykle wydania różne: .NET Framework na Windows jest wydana jako aktualizacja Windows, platformy .NET Core jest dostarczana w oddzielnym harmonogramem i Xamarin wersje biblioteki dostarczanie aktualizacji za pomocą narzędzi platformy Xamarin dla każdej platformy docelowej.
+Narzędzia kompilatora Języka C# są teraz oddzielone od cyklu wydawniczy bibliotek .NET na obsługiwanych platformach. W rzeczywistości różne biblioteki .NET mają różne cykle wydania: .NET Framework w systemie Windows jest wydawana jako windows update, .NET Core jest dostarczany według oddzielnego harmonogramu, a wersje biblioteki Xamarin są dostarczane z narzędziami platformy Xamarin dla każdej platformy docelowej.
 
-Większość czasu nie będą zauważyć te zmiany. Jednak podczas pracy z nowszą wersją języka, który nie wymaga funkcji, ale w bibliotekach .NET na tej platformie, będziesz odwoływać się do pakietów NuGet, aby zapewnić te nowe typy.
-Jako platformy obsługiwanej przez aplikację zostaną zaktualizowane o nowe instalacje framework można usunąć odwołania dodatkowych.
+Przez większość czasu, nie zauważysz tych zmian. Jednak podczas pracy z nowszą wersją języka, który wymaga funkcji jeszcze w bibliotekach .NET na tej platformie, będzie odwoływać się do pakietów NuGet, aby zapewnić te nowe typy.
+Ponieważ platformy, które obsługuje aplikacja, są aktualizowane za pomocą nowych instalacji framework, można usunąć dodatkowe odwołanie.
 
-Ta separacja oznacza, że można użyć nowych funkcji języków, nawet wtedy, gdy są przeznaczone dla maszyn, które mogą nie mieć odpowiednich framework.
+Ta separacja oznacza, że można używać nowych funkcji języka, nawet jeśli są przeznaczone dla komputerów, które mogą nie mieć odpowiednich ramach.

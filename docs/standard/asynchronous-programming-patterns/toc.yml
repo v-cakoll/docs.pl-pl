@@ -21,11 +21,11 @@
           href: best-practices-for-implementing-the-event-based-asynchronous-pattern.md
         - name: Decydowanie o czasie implementacji klienta wzorca asynchronicznego opartego na zdarzeniach
           href: deciding-when-to-implement-the-event-based-asynchronous-pattern.md
-        - name: 'Instrukcje: Implementacja składnika obsługującego wzorzec asynchroniczny oparty na zdarzeniach'
+        - name: 'Porady: implementacja składnika obsługującego wzorzec asynchroniczny oparty na zdarzeniach'
           href: component-that-supports-the-event-based-asynchronous-pattern.md
-        - name: 'Instrukcje: Implementacja klienta wzorca asynchronicznego opartego na zdarzeniach'
+        - name: 'Porady: implementacja klienta wzorca asynchronicznego opartego na zdarzeniach'
           href: how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md
-        - name: 'Instrukcje: Używanie składników obsługujących wzorzec asynchroniczny oparty na zdarzeniach'
+        - name: 'Porady: używanie składnika obsługującego wzorzec asynchroniczny oparty na zdarzeniach'
           href: how-to-use-components-that-support-the-event-based-asynchronous-pattern.md
     - name: Model programowania asynchronicznego (APM)
       href: asynchronous-programming-model-apm.md

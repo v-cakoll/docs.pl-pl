@@ -6,9 +6,9 @@
     - name: Wprowadzenie
       href: getting-started-with-net-native.md
       items:
-        - name: 'Przykład: Rozwiązywanie problemów z programowaniem dynamicznym'
+        - name: 'Przykład: rozwiązywanie problemów z programowaniem dynamicznym'
           href: example-troubleshooting-dynamic-programming.md
-        - name: 'Przykład: Obsługa wyjątków podczas wiązania danych'
+        - name: 'Przykład: obsługa wyjątków podczas wiązania danych'
           href: example-handling-exceptions-when-binding-data.md
         - name: Wyjątki środowiska uruchomieniowego w aplikacjach .NET Native
           href: runtime-exceptions-in-net-native-apps.md

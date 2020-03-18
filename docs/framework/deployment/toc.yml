@@ -10,11 +10,11 @@
           href: guide-for-administrators.md
         - name: Zmniejszenie liczby ponownych uruchomień systemu podczas instalowania programu .NET Framework 4.5
           href: reducing-system-restarts.md
-        - name: 'Instrukcje: pobieranie danych o postępie z Instalatora .NET Framework 4.5'
+        - name: 'Porady: pobieranie danych o postępie z Instalatora .NET Framework 4.5'
           href: how-to-get-progress-from-the-dotnet-installer.md
-        - name: 'Błędy inicjowania programu .NET Framework: Zarządzanie środowiskiem użytkownika'
+        - name: 'Błędy inicjowania programu .NET Framework: zarządzanie wrażeniami użytkownika'
           href: initialization-errors-managing-the-user-experience.md
-        - name: 'Instrukcje: debugowanie problemów aktywacji środowiska CLR'
+        - name: 'Porady: debugowanie problemów aktywacji środowiska CLR'
           href: how-to-debug-clr-activation-issues.md
     - name: Wdrażanie aplikacji .NET Framework
       href: net-framework-applications.md

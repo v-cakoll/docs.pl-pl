@@ -1,17 +1,17 @@
 - name: Kowariancja i kontrawariancja
   href: index.md
   items:
-    - name: Wariancje w interfejsach ogólnych
+    - name: Wariancje w interfejsach
       href: variance-in-generic-interfaces.md
       items:
-        - name: Tworzenie interfejsów ogólnych typu Variant
+        - name: Tworzenie interfejsów typu Variant
           href: creating-variant-generic-interfaces.md
-        - name: Korzystanie z wariancji w interfejsach dla kolekcji ogólnych
+        - name: Korzystanie z wariancji w interfejsach dla kolekcji
           href: using-variance-in-interfaces-for-generic-collections.md
     - name: Wariancje w delegatach
       href: variance-in-delegates.md
       items:
         - name: Korzystanie z wariancji w delegatach
           href: using-variance-in-delegates.md
-        - name: Korzystanie z wariancji dla delegatów ogólnych Func i Action
+        - name: Korzystanie z wariancji dla delegatów Func i Action
           href: using-variance-for-func-and-action-generic-delegates.md

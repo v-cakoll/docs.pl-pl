@@ -16,27 +16,27 @@
           href: xml-literals-and-the-xml-1-0-specification.md
         - name: Biały znak w literałach XML
           href: white-space-in-xml-literals.md
-        - name: 'Instrukcje: tworzenie literałów XML'
+        - name: 'Porady: tworzenie literałów XML'
           href: how-to-create-xml-literals.md
-        - name: 'Instrukcje: osadzanie wyrażeń w literałach XML'
+        - name: 'Porady: osadzanie wyrażeń w literałach XML'
           href: how-to-embed-expressions-in-xml-literals.md
     - name: Manipulowanie XML
       href: manipulating-xml.md
       items:
-        - name: 'Instrukcje: ładowanie kodu XML z pliku, ciągu lub strumienia'
+        - name: 'Porady: ładowanie XML z pliku, ciągu lub strumienia'
           href: how-to-load-xml-from-a-file-string-or-stream.md
-        - name: 'Instrukcje: przekształcanie kodu XML za pomocą LINQ'
+        - name: 'Porady: przekształcanie XML za pomocą LINQ'
           href: how-to-transform-xml-by-using-linq.md
-        - name: 'Instrukcje: modyfikowanie literałów XML'
+        - name: 'Porady: modyfikowanie literałów XML'
           href: how-to-modify-xml-literals.md
     - name: Uzyskiwanie dostępu do kodu XML
       href: accessing-xml.md
       items:
-        - name: 'Instrukcje: dostęp do elementów potomnych XML'
+        - name: 'Porady: dostęp do elementów podrzędnych XML'
           href: how-to-access-xml-descendant-elements.md
-        - name: 'Instrukcje: dostęp do elementów podrzędnych XML'
+        - name: 'Porady: dostęp do elementów podrzędnych XML'
           href: how-to-access-xml-child-elements.md
-        - name: 'Instrukcje: dostęp do atrybutów XML'
+        - name: 'Porady: dostęp do atrybutów XML'
           href: how-to-access-xml-attributes.md
-        - name: 'Instrukcje: deklarowanie prefiksów przestrzeni nazw XML i korzystanie z nich'
+        - name: 'Porady: deklarowanie prefiksów przestrzeni nazw XML i korzystanie z nich'
           href: how-to-declare-and-use-xml-namespace-prefixes.md

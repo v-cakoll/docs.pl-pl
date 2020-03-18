@@ -1,11 +1,11 @@
 - name: Programowanie asynchroniczne z Async i Await
   href: index.md
   items:
-    - name: 'Przewodnik: Uzyskiwanie dostępu do sieci za pomocą Async i Await'
+    - name: 'Wskazówki: uzyskiwanie dostępu do sieci za pomocą Async i Await'
       href: walkthrough-accessing-the-web-by-using-async-and-await.md
-    - name: 'Instrukcje: Rozszerzanie wskazówek asynchronicznych za pomocą Task.WhenAll'
+    - name: 'Porady: rozszerzanie wskazówek asynchronicznych za pomocą Task.WhenAll'
       href: how-to-extend-the-async-walkthrough-by-using-task-whenall.md
-    - name: 'Instrukcje: Równoległe żądania internetowe za pomocą Async i Await'
+    - name: 'Porady: równoległe żądania sieci Web za pomocą Async i Await'
       href: how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md
     - name: Asynchroniczne typy zwracane
       href: async-return-types.md

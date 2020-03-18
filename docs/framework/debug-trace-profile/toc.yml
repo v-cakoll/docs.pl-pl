@@ -12,19 +12,19 @@
           href: code-contracts.md
         - name: Przełączniki śledzenia
           href: trace-switches.md
-        - name: 'Instrukcje: Tworzenie, inicjowanie i konfigurowanie przełączników śledzenia'
+        - name: 'Instrukcje: tworzenie, inicjowanie i konfigurowanie przełączników śledzenia'
           href: how-to-create-initialize-and-configure-trace-switches.md
         - name: Obiekty nasłuchujące śledzenia
           href: trace-listeners.md
-        - name: 'Instrukcje: Użycie TraceSource i filtrów z obiektami nasłuchującymi śledzenia'
+        - name: 'Porady: użycie TraceSource i filtrów z obiektami nasłuchującymi śledzenia'
           href: how-to-use-tracesource-and-filters-with-trace-listeners.md
-        - name: 'Instrukcje: Tworzenie i inicjowanie obiektów nasłuchujących śledzenia'
+        - name: 'Porady: tworzenie i inicjowanie obiektów nasłuchujących śledzenia'
           href: how-to-create-and-initialize-trace-listeners.md
-        - name: 'Instrukcje: Tworzenie i inicjowanie źródeł śledzenia'
+        - name: 'Porady: tworzenie i inicjowanie źródeł śledzenia'
           href: how-to-create-and-initialize-trace-sources.md
-        - name: 'Instrukcje: Dodawanie instrukcji śledzenia do kodu aplikacji'
+        - name: 'Porady: dodawanie instrukcji śledzenia do kodu aplikacji'
           href: how-to-add-trace-statements-to-application-code.md
-        - name: 'Instrukcje: Kompilowanie warunkowe ze śledzeniem i debugowaniem'
+        - name: 'Porady: kompilowanie warunkowe ze śledzeniem i debugowaniem'
           href: how-to-compile-conditionally-with-trace-and-debug.md
     - name: Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania
       href: diagnosing-errors-with-managed-debugging-assistants.md
@@ -83,7 +83,7 @@
           href: loadfromcontext-mda.md
         - name: marshalCleanupError
           href: marshalcleanuperror-mda.md
-        - name: marshaling
+        - name: przekazywanie międzyprocesowe (marshaling)
           href: marshaling-mda.md
         - name: memberInfoCacheCreation
           href: memberinfocachecreation-mda.md
@@ -103,7 +103,7 @@
           href: pinvokestackimbalance-mda.md
         - name: raceOnRCWCleanup
           href: raceonrcwcleanup-mda.md
-        - name: reentrancy
+        - name: wielobieżność
           href: reentrancy-mda.md
         - name: releaseHandleFailed
           href: releasehandlefailed-mda.md

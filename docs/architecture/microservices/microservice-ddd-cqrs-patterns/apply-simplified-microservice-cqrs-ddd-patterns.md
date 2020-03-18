@@ -1,45 +1,45 @@
 ---
 title: Stosowanie uproszczonych wzorców CQRS i DDD w mikrousługach
-description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Zapoznaj się z ogólną relacją między wzorcami CQRS i DDD.
+description: Architektura mikrousług .NET dla konteneryzowanych aplikacji .NET | Zrozumienie ogólnej relacji między wzorcami CQRS i DDD.
 ms.date: 10/08/2018
 ms.openlocfilehash: f42b553fd30fdffdc6e325b11740fe9162aab7c8
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "71834315"
 ---
-# <a name="apply-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a>Stosowanie uproszczonych wzorców CQRS i DDD w mikrousłudze
+# <a name="apply-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a>Stosowanie uproszczonych wzorców CQRS i DDD w mikrousługach
 
-CQRS to wzorzec architektoniczny, który oddziela modele umożliwiające odczytywanie i zapisywanie danych. Pokrewna funkcja [separacji zapytań (CQS)](https://martinfowler.com/bliki/CommandQuerySeparation.html) została pierwotnie zdefiniowana przez Bertrand Meyer w swojej *konstrukcji oprogramowania zorientowanego na oprogramowanie*. Podstawowy pomysł polega na tym, że operacje systemu można podzielić na dwie kategorie oddzielone od siebie:
+CQRS jest wzorcem architektury, który oddziela modele do odczytu i zapisu danych. Powiązany termin [Command Query Separation (CQS)](https://martinfowler.com/bliki/CommandQuerySeparation.html) został pierwotnie zdefiniowany przez Bertranda Meyera w jego książce *Object Oriented Software Construction*. Podstawową ideą jest to, że można podzielić operacje systemu na dwie ostro oddzielone kategorie:
 
-- Wybiera. Zwracają one wynik i nie zmieniają stanu systemu i są wolne od efektów ubocznych.
+- Kwerendy. Te zwracają wynik i nie zmieniają stanu systemu i są wolne od skutków ubocznych.
 
-- Polecenia. Zmiana stanu systemu.
+- Polecenia. Zmieniają one stan systemu.
 
-CQS jest prostą koncepcją — dotyczy to metod w ramach tego samego obiektu, które są zapytania lub polecenia. Każda metoda zwraca stan lub mutację, ale nie oba. Nawet obiekt wzorca pojedynczego repozytorium może być zgodny z CQS. CQS może być traktowana jako podstawowa zasada dla CQRS.
+CQS jest prosta koncepcja — chodzi o metody w tym samym obiekcie są zapytania lub polecenia. Każda metoda zwraca stan lub mutuje stan, ale nie oba. Nawet pojedynczy obiekt wzorca repozytorium może być zgodny z CQS. CQS można uznać za podstawową zasadę Dla CQRS.
 
-[Command and Query Responsibility Segregation (CQRS)](https://martinfowler.com/bliki/CQRS.html) zostało wprowadzone przez Grega młodych i silnie podwyższone przez UDI Dahan i inne. Jest on oparty na zasadzie CQS, chociaż jest bardziej szczegółowy. Może być traktowany jako wzorzec oparty na poleceniach i zdarzeniach oraz opcjonalnie w komunikatach asynchronicznych. W wielu przypadkach CQRS jest związany z bardziej zaawansowanymi scenariuszami, takimi jak posiadanie innej fizycznej bazy danych do odczytu (zapytania) niż w przypadku operacji zapisu (aktualizacje). Ponadto bardziej rozwijający się system CQRS może implementować [źródła zdarzeń](https://martinfowler.com/eaaDev/EventSourcing.html) dla bazy danych aktualizacji, dzięki czemu można przechowywać tylko zdarzenia w modelu domeny zamiast przechowywać bieżące dane stanu. Nie jest to jednak podejście użyte w tym przewodniku; Stosujemy najprostszą metodę CQRS, która składa się z tylko oddzielania zapytań od poleceń.
+[Command and Query Responsibility Segregation (CQRS)](https://martinfowler.com/bliki/CQRS.html) został wprowadzony przez Grega Younga i silnie promowany przez Udi Dahana i innych. Opiera się na zasadzie CQS, chociaż jest bardziej szczegółowy. Można go uznać za wzorzec na podstawie poleceń i zdarzeń oraz opcjonalnie na komunikatach asynchronicznych. W wielu przypadkach CQRS jest związane z bardziej zaawansowanych scenariuszy, takich jak posiadanie innej fizycznej bazy danych dla odczytów (kwerendy) niż dla zapisów (aktualizacje). Ponadto bardziej rozwinięty system CQRS może implementować [eventsourcing (ES)](https://martinfowler.com/eaaDev/EventSourcing.html) dla bazy danych aktualizacji, więc można przechowywać tylko zdarzenia w modelu domeny zamiast przechowywania danych o bieżącym stanie. Nie jest to jednak podejście zastosowane w tym przewodniku; używamy najprostszego podejścia CQRS, który polega tylko oddzielenie zapytań od poleceń.
 
-Aspekt separacji CQRS jest osiągany przez grupowanie operacji zapytania w jednej warstwie i polecenia w innej warstwie. Każda warstwa ma własny model danych (należy pamiętać, że model, niekoniecznie inną bazę danych) i jest zbudowany przy użyciu własnej kombinacji wzorców i technologii. Co więcej, dwie warstwy mogą znajdować się w tej samej warstwie lub mikrousługach, jak w przykładzie (porządkowanie mikrousługi) używanej w tym przewodniku. Lub mogą być implementowane w różnych mikrousługach lub procesach, dzięki czemu można je zoptymalizować i skalować niezależnie bez wpływania na siebie.
+Aspekt separacji CQRS jest osiągany przez grupowanie operacji kwerendy w jednej warstwie i poleceń w innej warstwie. Każda warstwa ma swój własny model danych (należy pamiętać, że mówimy modelu, niekoniecznie innej bazy danych) i jest zbudowany przy użyciu własnej kombinacji wzorców i technologii. Co ważniejsze dwie warstwy mogą znajdować się w tej samej warstwie lub mikrousługi, jak w przykładzie (mikrousługi zamawiania) używane dla tego przewodnika. Lub mogą być implementowane na różnych mikrousług lub procesów, dzięki czemu mogą być zoptymalizowane i skalowane w sposób oddzielnie bez wpływu na siebie nawzajem.
 
-CQRS oznacza, że istnieją dwa obiekty dla operacji odczytu/zapisu, gdzie w innych kontekstach. Istnieją powody, aby mieć nieznormalizowaną odczytywaną bazę danych, którą możesz poznać w bardziej zaawansowanych literaturach CQRS. Ale nie korzystamy z tego podejścia w tym miejscu, gdzie cel ma większą elastyczność w zapytaniach, zamiast ograniczać zapytania z ograniczeniami wzorców DDD, takimi jak agregaty.
+CQRS oznacza posiadanie dwóch obiektów dla operacji odczytu/zapisu, gdzie w innych kontekstach istnieje jeden. Istnieją powody, aby mieć nieznormalizowane odczyty bazy danych, które można dowiedzieć się o w bardziej zaawansowanej literaturze CQRS. Ale nie używamy tego podejścia w tym miejscu, gdzie celem jest mieć większą elastyczność w zapytaniach zamiast ograniczania zapytań z ograniczeniami z wzorców DDD, takich jak agregaty.
 
-Przykładem tego rodzaju usługi jest kolejność mikrousług z eShopOnContainers odwołania do aplikacji. Ta usługa implementuje mikrousługi na podstawie uproszczonego podejścia CQRS. Używa jednego źródła danych lub bazy danych, ale dwa modele logiczne Plus w przypadku domen transakcyjnych, jak pokazano na rysunku 7-2.
+Przykładem tego rodzaju usługi jest mikrousługi zamawiania z aplikacji referencyjnej eShopOnContainers. Ta usługa implementuje mikrousługi na podstawie uproszczonego podejścia CQRS. Używa jednego źródła danych lub bazy danych, ale dwa modele logiczne oraz wzorce DDD dla domeny transakcyjnej, jak pokazano na rysunku 7-2.
 
-![Diagram przedstawiający uproszczony CQRS i DDD mikrousług.](./media/apply-simplified-microservice-cqrs-ddd-patterns/simplified-cqrs-ddd-microservice.png)
+![Diagram przedstawiający wysoki poziom uproszczonego CQRS i mikrousługi DDD.](./media/apply-simplified-microservice-cqrs-ddd-patterns/simplified-cqrs-ddd-microservice.png)
 
 **Rysunek 7-2**. Uproszczona mikrousługa oparta na CQRS i DDD
 
-Mikrousługa logiczna "porządkowanie" obejmuje jej bazę danych porządkowania, która może być, ale nie musi być tym samym hostem platformy Docker. Baza danych znajdująca się na tym samym hoście platformy Docker jest dobrym rozwiązaniem do programowania, ale nie dla środowiska produkcyjnego.
+Logiczne "Zamawianie" Microservice zawiera jego uporządkowanie bazy danych, które mogą być, ale nie musi być, ten sam host platformy Docker. Posiadanie bazy danych w tym samym hoście platformy Docker jest dobre dla rozwoju, ale nie dla produkcji.
 
-Warstwa aplikacji może być interfejsem API sieci Web. Ważnym aspektem projektowym jest to, że mikrousługa dzieli zapytania i modele widoków (modele danych specjalnie utworzone dla aplikacji klienckich) z poleceń, modelu domeny i transakcji po wzorcu CQRS. Takie podejście utrzymuje zapytania niezależne od ograniczeń i ograniczeń pochodzących z wzorców DDD, które mają sens tylko w przypadku transakcji i aktualizacji, jak wyjaśniono w kolejnych sekcjach.
+Warstwą aplikacji może być sam interfejs API sieci Web. Ważnym aspektem projektu w tym miejscu jest to, że mikrousługa podzieliła zapytania i ViewModels (modele danych utworzone specjalnie dla aplikacji klienckich) z poleceń, modelu domeny i transakcji zgodnie z wzorcem CQRS. Takie podejście utrzymuje zapytania niezależne od ograniczeń i ograniczeń pochodzących z wzorców DDD, które mają sens tylko dla transakcji i aktualizacji, jak wyjaśniono w późniejszych sekcjach.
 
-## <a name="additional-resources"></a>Dodatkowe zasoby
+## <a name="additional-resources"></a>Zasoby dodatkowe
 
-- **Greg Young. Przechowywanie wersji w systemie źródła zdarzeń** (bezpłatny do odczytu online — książka elektroniczna) \
+- **Grzegorz Young. Przechowywanie wersji w systemie pochodzącym z eventu** (bezpłatnie czytać e-bookonline) \
    <https://leanpub.com/esversioning/read>
 
 >[!div class="step-by-step"]
 >[Poprzedni](index.md)
->[Następny](eshoponcontainers-cqrs-ddd-microservice.md)
+>[następny](eshoponcontainers-cqrs-ddd-microservice.md)

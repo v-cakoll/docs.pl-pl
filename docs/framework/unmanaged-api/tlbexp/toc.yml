@@ -1,4 +1,4 @@
-- name: 'Tlbexp, funkcje pomocy'
+- name: Tlbexp — funkcje pomocy
   href: index.md
   items:
     - name: GetTypeLibInfo — Funkcja

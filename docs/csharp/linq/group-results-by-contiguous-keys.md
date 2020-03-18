@@ -1,54 +1,54 @@
 ---
-title: Grupowanie wyników według ciągłych kluczy (LINQ w C#)
-description: Jak grupowanie wyników według ciągłych kluczy za pomocą LINQ w C#.
+title: Grupowanie wyników według ciągłych kluczy (LINQ w języku C#)
+description: Jak grupować wyniki według ciągłych kluczy przy użyciu LINQ w języku C#.
 ms.date: 08/14/2018
 ms.assetid: cbda9c08-151b-4c9e-82f7-c3d7f3dac66b
 ms.openlocfilehash: b5753c85bb07be4fc84b78a299eece961969ff9d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "61659907"
 ---
 # <a name="group-results-by-contiguous-keys"></a>Grupowanie wyników według ciągłych kluczy
 
-Poniższy przykład pokazuje, jak należy zgrupować elementy na fragmenty, które reprezentują podciągów ciągłych kluczy. Na przykład załóżmy, że podano następującej pary klucz wartość:
+W poniższym przykładzie pokazano, jak grupować elementy na fragmenty reprezentujące podsekwencje ciągłych kluczy. Załóżmy na przykład, że podano następującą sekwencję par klucz-wartość:
 
-|Key|Wartość|
+|Klucz|Wartość|
 |---------|-----------|
-|ELEMENT|Firma Microsoft|
-|ELEMENT|namysłu|
-|ELEMENT|który|
+|A|My|
+|A|Myśleć|
+|A|Że|
 |B|Linq|
 |C|is|
-|ELEMENT|tak naprawdę|
-|B|chłodna|
+|A|Naprawdę|
+|B|Cool|
 |B|!|
 
-Następujące grupy zostaną utworzone w następującej kolejności:
+W następującej kolejności zostaną utworzone następujące grupy:
 
-1. Uważamy, że
+1. My, myślimy, że
 
 2. Linq
 
 3. is
 
-4. tak naprawdę
+4. Naprawdę
 
-5. chłodna!
+5. Cool!
 
-Rozwiązanie jest implementowane jako metodę rozszerzenia, która jest bezpieczna dla wątków i który zwraca wyniki w sposób przesyłania strumieniowego. Innymi słowy tworzy jej grup kiedy przesuwa się on przez sekwencję źródłową. W odróżnieniu od `group` lub `orderby` operatorów, jego może rozpocząć zwracanie grup do obiektu wywołującego przed wszystkie sekwencji został odczytany.
+Rozwiązanie jest implementowane jako metoda rozszerzenia, która jest bezpieczna dla wątków i która zwraca jego wyniki w sposób przesyłania strumieniowego. Innymi słowy, tworzy swoje grupy, gdy porusza się po sekwencji źródłowej. W `group` przeciwieństwie `orderby` do lub operatorów można rozpocząć zwracanie grup do obiektu wywołującego przed wszystkie sekwencji został odczytany.
 
-Bezpieczeństwo wątków odbywa się przez utworzenie kopii każdej grupy lub fragmentów, jak sekwencja źródłowa jest postanowiliśmy, zgodnie z objaśnieniem w komentarzach do kodu źródłowego. Jeśli sekwencja źródłowa jest duże sekwencję elementów sąsiadujących, środowisko uruchomieniowe języka wspólnego może zgłaszać <xref:System.OutOfMemoryException>.
+Bezpieczeństwo wątków jest realizowane przez wykonanie kopii każdej grupy lub fragmentu jako sekwencji źródłowej jest iterowana, jak wyjaśniono w komentarzach kodu źródłowego. Jeśli sekwencja źródłowa ma dużą sekwencję sąsiadujących elementów, czas <xref:System.OutOfMemoryException>wykonywania języka wspólnego może zgłosić plik .
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod przedstawia metody rozszerzenia i kod klienta, który korzysta z niego:
+W poniższym przykładzie pokazano zarówno metodę rozszerzenia, jak i kod klienta, który go używa:
 
 [!code-csharp[cscsrefContiguousGroups#1](~/samples/snippets/csharp/concepts/linq/how-to-group-results-by-contiguous-keys_1.cs)]
 
-Aby użyć metody rozszerzenia w projekcie, skopiuj `MyExtensions` klasy statycznej do nowego lub istniejącego źródła plik kodu i jeśli jest to konieczne, należy dodać `using` dyrektywy dla przestrzeni nazw, w którym znajduje się.
+Aby użyć metody rozszerzenia w projekcie, skopiuj `MyExtensions` klasę statyczną do nowego lub `using` istniejącego pliku kodu źródłowego, a jeśli jest to wymagane, dodaj dyrektywę dla obszaru nazw, w którym się znajduje.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Language Integrated Query (LINQ)](index.md)

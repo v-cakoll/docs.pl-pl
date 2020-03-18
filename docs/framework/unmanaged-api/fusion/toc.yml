@@ -24,7 +24,7 @@
           items:
             - name: 'AbortItem, metoda'
               href: iassemblycacheitem-abortitem-method.md
-            - name: 'Commit, metoda'
+            - name: Commit — Metoda
               href: iassemblycacheitem-commit-method.md
             - name: 'CreateStream, metoda'
               href: iassemblycacheitem-createstream-method.md
@@ -44,7 +44,7 @@
               href: iassemblyname-clone-method.md
             - name: 'Finalize, metoda'
               href: iassemblyname-finalize-method.md
-            - name: 'GetDisplayName, metoda'
+            - name: GetDisplayName — Metoda
               href: iassemblyname-getdisplayname-method.md
             - name: 'GetName, metoda'
               href: iassemblyname-getname-method.md

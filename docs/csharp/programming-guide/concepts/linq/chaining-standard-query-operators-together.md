@@ -1,29 +1,29 @@
 ---
-title: Łączenie standardowych operatorów zapytań (C#)
+title: Łączenie standardowych operatorów zapytań razem (C#)
 ms.date: 07/20/2015
 ms.assetid: 66f2b0a9-2c23-4735-988e-bbc9dfb55c7b
 ms.openlocfilehash: 37df654b2bfdcc135460e5ded2ceec1eca33b35a
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70204203"
 ---
-# <a name="chaining-standard-query-operators-together-c"></a>Łączenie standardowych operatorów zapytań (C#)
-Jest to ostatni temat w [samouczku: Łączenie łańcuchowe zapytań (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md) — samouczek.  
+# <a name="chaining-standard-query-operators-together-c"></a>Łączenie standardowych operatorów zapytań razem (C#)
+Jest to ostatni temat w [samouczku: Łączenie zapytań razem (C#).](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)  
   
- Standardowe operatory zapytań można również łączyć ze sobą. Na przykład można interject <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> operator, a także działa w sposób opóźniony. Żadne wyniki pośrednie nie są dla niego materiałowe.  
+ Standardowe operatory zapytań mogą być również połączone ze sobą. Na przykład można interject <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> operatora, a także działa w sposób leniwy. Żadne wyniki pośrednie nie są przez nią zmaterializowane.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie <xref:System.Linq.Enumerable.Where%2A> Metoda jest wywoływana przed wywołaniem `ConvertCollectionToUpperCase`. Metoda działa w prawie dokładnie taki sam sposób, jak metody opóźnione używane w poprzednich przykładach w tym `ConvertCollectionToUpperCase` samouczku `AppendString`i. <xref:System.Linq.Enumerable.Where%2A>  
+ W tym przykładzie <xref:System.Linq.Enumerable.Where%2A> metoda jest `ConvertCollectionToUpperCase`wywoływana przed wywołaniem . Metoda <xref:System.Linq.Enumerable.Where%2A> działa prawie dokładnie w taki sam sposób, jak metody leniwe `ConvertCollectionToUpperCase` używane `AppendString`w poprzednich przykładach w tym samouczku i .  
   
- Jedną z różnic jest to, <xref:System.Linq.Enumerable.Where%2A> że w tym przypadku Metoda iteruje za pomocą kolekcji źródłowej, określa, że pierwszy element nie przekazuje predykatu, a następnie pobiera następny element, który jest przekazywany. Następnie zwraca drugi element.  
+ Jedną z różnic jest to, że w tym przypadku <xref:System.Linq.Enumerable.Where%2A> metoda iteruje za pośrednictwem jego kolekcji źródłowej, określa, że pierwszy element nie przekazuje predykatu, a następnie pobiera następny element, który przechodzi. Następnie daje drugi element.  
   
- Jednak podstawowe pomysły są takie same: Kolekcje pośrednie nie są materiałami, chyba że muszą być.  
+ Jednak podstawowa idea jest taka sama: kolekcje pośrednie nie są zmaterializowane, chyba że muszą być.  
   
- Gdy wyrażenia zapytania są używane, są konwertowane na wywołania do standardowych operatorów zapytań i obowiązują te same zasady.  
+ Gdy używane są wyrażenia kwerend, są konwertowane na wywołania do standardowych operatorów kwerend i mają zastosowanie te same zasady.  
   
- Wszystkie przykłady w tej sekcji, które wykonują zapytania o dokumenty w programie Office Open XML, używają tej samej zasady. Wykonywanie odroczone i Ocena z opóźnieniem to niektóre podstawowe koncepcje, które należy zrozumieć, aby skutecznie używać LINQ (i LINQ to XML).  
+ Wszystkie przykłady w tej sekcji, które są kwerendy Office Otwarte dokumenty XML używają tej samej zasady. Odroczone wykonanie i oceny z opóźnieniem są niektóre z podstawowych pojęć, które należy zrozumieć, aby skutecznie używać LINQ (i LINQ do XML).  
   
 ```csharp  
 public static class LocalExtensions  

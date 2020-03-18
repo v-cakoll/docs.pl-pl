@@ -8,20 +8,20 @@ helpviewer_keywords:
 - comparer parameter
 ms.assetid: f12922e1-6234-4165-8896-63f0653ab478
 ms.openlocfilehash: 051ee77ae5d6552e26e0216d58734d90188475f9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73120806"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-arrays"></a>Wykonywanie niezależnych od kultury operacji na ciągach w tablicach
 
-Przeciążenia metod <xref:System.Array.Sort%2A?displayProperty=nameWithType> i <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> wykonują domyślnie sortowanie zależne od kultury przy użyciu właściwości <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>. Wyniki wrażliwe na kulturę zwracane przez te metody mogą się różnić w zależności od różnic w kolejności sortowania. Aby wyeliminować zachowanie wrażliwe na kulturę, użyj jednego z przeciążeń tej metody, która akceptuje parametr `comparer`. `comparer` parametr określa implementację <xref:System.Collections.IComparer> do użycia podczas porównywania elementów w tablicy. Dla parametru należy określić niestandardową klasę niezmiennej porównującej, która używa <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>. Przykład niestandardowej klasy niezmiennej porównującej znajduje się w podrozdziale "Using the SortedList Class" w temacie [wykonywanie operacji na ciągach, które nie uwzględniają kultury w temacie kolekcje](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md) .
+Przeciążenia <xref:System.Array.Sort%2A?displayProperty=nameWithType> i <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> metody wykonywania sortowania zależne <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> od kultury domyślnie przy użyciu właściwości. Wyniki zależne od kultury zwracane przez te metody mogą się różnić w zależności od kultury ze względu na różnice w kolejność sortowania. Aby wyeliminować zachowanie zależne od kultury, należy użyć jednego z `comparer` przeciążeń tej metody, która akceptuje parametr. Parametr `comparer` określa <xref:System.Collections.IComparer> implementację do użycia podczas porównywania elementów w tablicy. Dla parametru określ niestandardową klasę <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>niezmiennego porównywarki, która używa . Przykład niezmiennej klasy porównania znajduje się w podtemacie "Using the SortedList Class" w temacie [Performing Culture-Insensitive String Operations in Collections.](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md)
 
 > [!NOTE]
-> Przekazywanie **CultureInfo. InvariantCulture** do metody porównania wykonuje porównanie nieuwzględniające kulturę. Nie powoduje to jednak porównania w języku innym niż język, na przykład w przypadku ścieżek plików, kluczy rejestru i zmiennych środowiskowych. Żadna z tych funkcji nie wspiera podejmowania decyzji dotyczących zabezpieczeń w oparciu o wynik porównania. W przypadku niezgodności z językiem lub pomocy technicznej dla decyzji o zabezpieczeniach opartych na wynikach aplikacja powinna używać metody porównania, która akceptuje wartość <xref:System.StringComparison>. Aplikacja powinna następnie przekazać <xref:System.StringComparison.Ordinal>.
+> Przekazywanie **CultureInfo.InvariantCulture** do metody porównania wykonuje porównanie niewrażliwe na kulturę. Jednak nie powoduje porównania nielingwistycznego, na przykład dla ścieżek plików, kluczy rejestru i zmiennych środowiskowych. Nie obsługuje również decyzji dotyczących zabezpieczeń na podstawie wyniku porównania. W przypadku porównania nielingwistycznego lub obsługi decyzji dotyczących zabezpieczeń opartych na <xref:System.StringComparison> wynikach aplikacja powinna używać metody porównywania, która akceptuje wartość. Aplikacja powinna następnie <xref:System.StringComparison.Ordinal>przejść .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Array.Sort%2A?displayProperty=nameWithType>
 - <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType>

@@ -10,105 +10,105 @@ helpviewer_keywords:
 - garbage collection, notifications
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
 ms.openlocfilehash: d5646c4969c95350ab4cd63b16f6f99ffba3a4ec
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73131534"
 ---
 # <a name="garbage-collection-notifications"></a>Powiadomienia dotyczące odzyskiwania pamięci
-Istnieją sytuacje, w których pełne odzyskiwanie pamięci (czyli kolekcja generacji 2) przez środowisko uruchomieniowe języka wspólnego może niekorzystnie wpłynąć na wydajność. Może to być problem szczególnie w przypadku serwerów, które przetwarzają duże ilości żądań; w takim przypadku długotrwałe wyrzucanie elementów bezużytecznych może spowodować przekroczenie limitu czasu żądania. Aby zapobiec występowaniu pełnej kolekcji w okresie krytycznym, można powiadomić o tym, że pełne odzyskiwanie pamięci zbliża się, a następnie podejmuje działania w celu przekierowania obciążenia do innego wystąpienia serwera. Istnieje również możliwość wywołania kolekcji samodzielnie, pod warunkiem, że bieżące wystąpienie serwera nie musi przetwarzać żądań.  
+Istnieją sytuacje, w których pełne wyrzucania elementów bezużytecznych (czyli kolekcji generacji 2) przez kod uruchomieniowy języka wspólnego może niekorzystnie wpłynąć na wydajność. Może to być problem szczególnie z serwerami, które przetwarzają duże ilości żądań; w takim przypadku długi wyrzucania elementów bezużytecznych może spowodować uchybienie żądania. Aby zapobiec wystąpieniu pełnej kolekcji w krytycznym okresie, można powiadomić, że zbliża się pełne wyrzucanie elementów bezużytecznych, a następnie podjąć działania, aby przekierować obciążenie do innego wystąpienia serwera. Można również wywołać kolekcji samodzielnie, pod warunkiem, że bieżące wystąpienie serwera nie trzeba przetwarzać żądania.  
   
- Metoda <xref:System.GC.RegisterForFullGCNotification%2A> rejestruje powiadomienie, które zostanie wywołane, gdy środowisko uruchomieniowe wskazuje, że zbliża się pełne odzyskiwanie pamięci. Istnieją dwie części tego powiadomienia: Kiedy pełne odzyskiwanie pamięci zbliża się i gdy pełne odzyskiwanie pamięci zostało zakończone.  
+ Metoda <xref:System.GC.RegisterForFullGCNotification%2A> rejestruje powiadomienie, które mają być wywoływane, gdy czas wykonywania wyczuwa, że zbliża się pełne wyrzucanie elementów bezużytecznych. Istnieją dwie części tego powiadomienia: gdy zbliża się pełna wyrzucania elementów bezużytecznych i po zakończeniu pełnego wyrzucania elementów bezużytecznych.  
   
 > [!WARNING]
-> Tylko blokowanie wyrzucania elementów bezużytecznych powiadomień. Po włączeniu elementu konfiguracji [\<gcConcurrent >](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) , wyrzucanie elementów bezużytecznych w tle nie spowoduje zgłoszenia powiadomień.  
+> Tylko blokowanie wyrzucania elementów bezużytecznych zgłaszapowiadomienia. Po włączeniu elementu konfiguracji [ \<gcConcurrent>](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) wyrzucanie elementów bezużytecznych w tle nie będzie zgłaszać powiadomień.  
   
- Aby określić, kiedy zostało zgłoszone powiadomienie, użyj metod <xref:System.GC.WaitForFullGCApproach%2A> i <xref:System.GC.WaitForFullGCComplete%2A>. Zwykle te metody są używane w pętli `while`, aby w sposób ciągły uzyskać <xref:System.GCNotificationStatus> Wyliczenie pokazujące stan powiadomienia. Jeśli ta wartość jest <xref:System.GCNotificationStatus.Succeeded>, można wykonać następujące czynności:  
+ Aby określić, kiedy powiadomienie zostało <xref:System.GC.WaitForFullGCApproach%2A> zgłoszone, należy użyć i <xref:System.GC.WaitForFullGCComplete%2A> metody. Zazwyczaj używasz tych metod w `while` pętli, aby stale <xref:System.GCNotificationStatus> uzyskiwać wyliczenie, które pokazuje stan powiadomienia. Jeśli ta <xref:System.GCNotificationStatus.Succeeded>wartość jest , można wykonać następujące czynności:  
   
-- W odpowiedzi na powiadomienie uzyskane przy użyciu metody <xref:System.GC.WaitForFullGCApproach%2A> można przekierować obciążenie i ewentualnie wywołać kolekcję.  
+- W odpowiedzi na powiadomienie <xref:System.GC.WaitForFullGCApproach%2A> uzyskane za pomocą metody można przekierować obciążenia i ewentualnie wywołać kolekcji samodzielnie.  
   
-- W odpowiedzi na powiadomienie uzyskane przy użyciu metody <xref:System.GC.WaitForFullGCComplete%2A> można sprawić, aby bieżące wystąpienie serwera było dostępne do ponownego przetwarzania żądań. Możesz również zebrać informacje. Na przykład można użyć metody <xref:System.GC.CollectionCount%2A>, aby zarejestrować liczbę kolekcji.  
+- W odpowiedzi na powiadomienie <xref:System.GC.WaitForFullGCComplete%2A> uzyskane za pomocą metody można udostępnić bieżące wystąpienie serwera do ponownego przetworzenia żądań. Można również zbierać informacje. Na przykład można użyć <xref:System.GC.CollectionCount%2A> metody do rejestrowania liczby kolekcji.  
   
- <xref:System.GC.WaitForFullGCApproach%2A> i metody <xref:System.GC.WaitForFullGCComplete%2A> zostały zaprojektowane tak, aby współdziałać ze sobą. Użycie jednego bez nich może spowodować uzyskanie nieokreślonych wyników.  
+ Metody <xref:System.GC.WaitForFullGCApproach%2A> i <xref:System.GC.WaitForFullGCComplete%2A> są przeznaczone do współpracy. Za pomocą jednego bez drugiego może produkować nieokreślone wyniki.  
   
-## <a name="full-garbage-collection"></a>Pełne odzyskiwanie pamięci  
- Środowisko uruchomieniowe powoduje pełne wyrzucanie elementów bezużytecznych, gdy spełnione są dowolne z następujących scenariuszy:  
+## <a name="full-garbage-collection"></a>Pełne wyrzucanie elementów bezużytecznych  
+ Środowiska uruchomieniowego powoduje pełne wyrzucanie elementów bezużytecznych, gdy którykolwiek z następujących scenariuszy są prawdziwe:  
   
-- Dostateczna ilość pamięci została podwyższona do generacji 2 w celu spowodowania nowej kolekcji generacji 2.  
+- Wystarczająca ilość pamięci została wyawansona do generacji 2, aby spowodować kolekcję następnej generacji 2.  
   
-- Zbyt mała ilość pamięci została podzielona na stertę dużego obiektu, aby spowodować wystąpienie następnej generacji 2.  
+- Wystarczająca ilość pamięci została wyawansona do sterty dużych obiektów, aby spowodować nowej generacji 2 kolekcji.  
   
-- Kolekcja generacji 1 jest eskalacją do kolekcji 2 generacji ze względu na inne czynniki.  
+- Kolekcja generacji 1 jest eskalowana do kolekcji generacji 2 ze względu na inne czynniki.  
   
- Progi określone w metodzie <xref:System.GC.RegisterForFullGCNotification%2A> mają zastosowanie do pierwszych dwóch scenariuszy. Jednak w pierwszym scenariuszu nie zawsze otrzymasz powiadomienie w czasie proporcjonalnym do wartości progowych określonych z dwóch powodów:  
+ Progi określone w <xref:System.GC.RegisterForFullGCNotification%2A> metodzie dotyczą dwóch pierwszych scenariuszy. Jednak w pierwszym scenariuszu nie zawsze otrzymasz powiadomienie w czasie proporcjonalnym do wartości progowych, które określisz z dwóch powodów:  
   
-- Środowisko uruchomieniowe nie sprawdza poszczególnych alokacji małych obiektów (ze względu na wydajność).  
+- Czas wykonywania nie sprawdza każdej alokacji małych obiektów (ze względu na wydajność).  
   
-- Tylko kolekcje generacji 1 promują pamięć do generacji 2.  
+- Tylko kolekcje 1 generacji promują pamięć w generacji 2.  
   
- Trzeci scenariusz przyczynia się również do niepewności, kiedy otrzymasz powiadomienie. Chociaż nie jest to gwarancja, warto zastanowić się, że jest to przydatny sposób na uniknięcie efektów inopportune pełnego odzyskiwania pamięci przez przekierowanie żądań w tym czasie lub wypróbowanie kolekcji, gdy będzie można lepiej obsłużyć.  
+ Trzeci scenariusz przyczynia się również do niepewności co do tego, kiedy otrzymasz powiadomienie. Mimo że nie jest to gwarancja, okaże się być przydatnym sposobem złagodzenia skutków nieodpowiedniego pełnego wyrzucania elementów bezużytecznych, przekierowując żądania w tym czasie lub wywołując kolekcję samodzielnie, gdy może być lepiej zakwaterowana.  
   
-## <a name="notification-threshold-parameters"></a>Parametry progu powiadomienia  
- Metoda <xref:System.GC.RegisterForFullGCNotification%2A> ma dwa parametry, aby określić wartości progowe obiektów generacji 2 i sterty dużego obiektu. Gdy te wartości są spełnione, powinno zostać zgłoszone powiadomienie o wyrzucaniu elementów bezużytecznych. W poniższej tabeli opisano te parametry.  
+## <a name="notification-threshold-parameters"></a>Parametry progu powiadomień  
+ Metoda <xref:System.GC.RegisterForFullGCNotification%2A> ma dwa parametry, aby określić wartości progowe obiektów generacji 2 i sterty dużych obiektów. Po spełnieniu tych wartości należy zgłaszać powiadomienie o wyrzucaniu elementów bezużytecznych. W poniższej tabeli opisano te parametry.  
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|`maxGenerationThreshold`|Liczba z zakresu od 1 do 99 określająca, kiedy powiadomienie powinno zostać zgłoszone na podstawie obiektów podniesionych w generacji 2.|  
-|`largeObjectHeapThreshold`|Liczba z zakresu od 1 do 99 określająca, kiedy powiadomienie powinno być zgłaszane na podstawie obiektów, które są przydzielane w stercie dużego obiektu.|  
+|`maxGenerationThreshold`|Liczba z lat 1-99 określająca, kiedy powiadomienie powinno być wywoływane na podstawie obiektów promowanych w generacji 2.|  
+|`largeObjectHeapThreshold`|Liczba z lat 1-99 określająca, kiedy powiadomienie powinno być wywoływane na podstawie obiektów przydzielonych w stercie dużego obiektu.|  
   
- Jeśli określisz zbyt wysoką wartość, istnieje wysokie prawdopodobieństwo, że otrzymasz powiadomienie, ale może to być zbyt długi czas oczekiwania przed wykonaniem przez środowisko uruchomieniowe kolekcji. Jeśli samodzielnie wywołująsz kolekcję, możesz odwoływać więcej obiektów, niż byłoby to odrzucane, jeśli środowisko uruchomieniowe powoduje wystąpienie tej kolekcji.  
+ Jeśli określisz wartość, która jest zbyt wysoka, istnieje duże prawdopodobieństwo, że otrzymasz powiadomienie, ale może to być zbyt długi okres oczekiwania, zanim środowiska uruchomieniowego powoduje kolekcję. Jeśli wywołasz kolekcji samodzielnie, można odzyskać więcej obiektów niż zostanie odzyskane, jeśli środowiska uruchomieniowego powoduje kolekcji.  
   
- Jeśli określisz zbyt niską wartość, środowisko uruchomieniowe może spowodować, że zbieranie danych będzie wymagało wystarczającej ilości czasu na powiadomienie.  
+ Jeśli określisz wartość, która jest zbyt niska, czas wykonywania może spowodować kolekcji, zanim masz wystarczająco dużo czasu, aby otrzymywać powiadomienia.  
   
 ## <a name="example"></a>Przykład  
   
 ### <a name="description"></a>Opis  
- W poniższym przykładzie Grupa serwerów obsługuje przychodzące żądania sieci Web. Aby symulować obciążenie żądań przetwarzania, tablice bajtowe są dodawane do kolekcji <xref:System.Collections.Generic.List%601>. Każdy serwer rejestruje do powiadomienia o wyrzucaniu elementów bezużytecznych, a następnie uruchamia wątek w metodzie `WaitForFullGCProc` użytkownika w celu ciągłego monitorowania <xref:System.GCNotificationStatus> wyliczeniem zwracanym przez <xref:System.GC.WaitForFullGCApproach%2A> i <xref:System.GC.WaitForFullGCComplete%2A> metod.  
+ W poniższym przykładzie grupa serwerów usługi przychodzących żądań sieci Web. Aby symulować obciążenie przetwarzania żądań, tablice <xref:System.Collections.Generic.List%601> bajtów są dodawane do kolekcji. Każdy serwer rejestruje się dla powiadomienia wyrzucania elementów `WaitForFullGCProc` bezużytecznych, a <xref:System.GCNotificationStatus> następnie uruchamia wątek na metodę <xref:System.GC.WaitForFullGCApproach%2A> użytkownika, aby stale monitorować wyliczenie, które jest zwracane przez i <xref:System.GC.WaitForFullGCComplete%2A> metody.  
   
- <xref:System.GC.WaitForFullGCApproach%2A> i metody <xref:System.GC.WaitForFullGCComplete%2A> wywołują odpowiednie metody użytkownika obsługujące zdarzenia, gdy zostanie zgłoszone powiadomienie:  
+ Metody <xref:System.GC.WaitForFullGCApproach%2A> i <xref:System.GC.WaitForFullGCComplete%2A> wywołać ich odpowiednich metod obsługi zdarzeń użytkownika, gdy powiadomienie jest wywoływane:  
   
 - `OnFullGCApproachNotify`  
   
-     Ta metoda wywołuje metodę użytkownika `RedirectRequests`, która instruuje serwer kolejkowania żądań, aby zawiesić wysyłanie żądań do serwera. Jest to symulowane przez ustawienie zmiennej na poziomie klasy `bAllocate` na `false` tak, aby nie przydzielono kolejnych obiektów.  
+     Ta metoda `RedirectRequests` wywołuje metodę użytkownika, która nakazuje serwerowi kolejki żądań zawieszenie wysyłania żądań do serwera. Jest to symulowane przez ustawienie `bAllocate` zmiennej na poziomie klasy tak, aby `false` nie więcej obiektów są przydzielane.  
   
-     Następnie Metoda `FinishExistingRequests` user jest wywoływana, aby zakończyć przetwarzanie oczekujących żądań serwera. Jest to symulowane przez wyczyszczenie kolekcji <xref:System.Collections.Generic.List%601>.  
+     Następnie metoda `FinishExistingRequests` użytkownika jest wywoływana, aby zakończyć przetwarzanie oczekujących żądań serwera. Jest to symulowane <xref:System.Collections.Generic.List%601> przez wyczyszczenie kolekcji.  
   
-     Na koniec wyrzucanie elementów bezużytecznych jest wywołane, ponieważ obciążenie jest jasne.  
+     Na koniec wyrzucanie elementów bezużytecznych jest indukowany, ponieważ obciążenie jest lekkie.  
   
 - `OnFullGCCompleteNotify`  
   
-     Ta metoda wywołuje metodę użytkownika `AcceptRequests`, aby wznowić akceptowanie żądań, ponieważ serwer nie jest już podatny na pełne odzyskiwanie pamięci. Ta akcja jest symulowana przez ustawienie zmiennej `bAllocate` na `true` w celu wznowienia dodawania obiektów do kolekcji <xref:System.Collections.Generic.List%601>.  
+     Ta metoda wywołuje `AcceptRequests` metodę użytkownika, aby wznowić akceptowanie żądań, ponieważ serwer nie jest już podatny na pełne wyrzucanie elementów bezużytecznych. Ta akcja jest symulowana `bAllocate` przez `true` ustawienie zmiennej tak, <xref:System.Collections.Generic.List%601> aby obiekty mogły zostać wznowione dodawane do kolekcji.  
   
- Poniższy kod zawiera metodę `Main` przykładu.  
+ Poniższy kod zawiera `Main` metodę przykładu.  
   
  [!code-cpp[GCNotification#2](../../../samples/snippets/cpp/VS_Snippets_CLR/GCNotification/cpp/program.cpp#2)]
  [!code-csharp[GCNotification#2](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#2)]
  [!code-vb[GCNotification#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#2)]  
   
- Poniższy kod zawiera metodę użytkownika `WaitForFullGCProc`, która zawiera ciągłą pętlę while, aby sprawdzić powiadomienia o wyrzucaniu elementów bezużytecznych.  
+ Poniższy kod zawiera `WaitForFullGCProc` metodę użytkownika, który zawiera ciągłe while pętli, aby sprawdzić, czy powiadomienia wyrzucania elementów bezużytecznych.  
   
  [!code-cpp[GCNotification#8](../../../samples/snippets/cpp/VS_Snippets_CLR/GCNotification/cpp/program.cpp#8)]
  [!code-csharp[GCNotification#8](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#8)]
  [!code-vb[GCNotification#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#8)]  
   
- Poniższy kod zawiera metodę `OnFullGCApproachNotify` wywołana z  
+ Poniższy kod zawiera `OnFullGCApproachNotify` metodę wywoływana z  
   
- Metoda `WaitForFullGCProc`.  
+ `WaitForFullGCProc`Metoda.  
   
  [!code-cpp[GCNotification#5](../../../samples/snippets/cpp/VS_Snippets_CLR/GCNotification/cpp/program.cpp#5)]
  [!code-csharp[GCNotification#5](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#5)]
  [!code-vb[GCNotification#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#5)]  
   
- Poniższy kod zawiera metodę `OnFullGCApproachComplete` wywołana z  
+ Poniższy kod zawiera `OnFullGCApproachComplete` metodę wywoływana z  
   
- Metoda `WaitForFullGCProc`.  
+ `WaitForFullGCProc`Metoda.  
   
  [!code-cpp[GCNotification#6](../../../samples/snippets/cpp/VS_Snippets_CLR/GCNotification/cpp/program.cpp#6)]
  [!code-csharp[GCNotification#6](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#6)]
  [!code-vb[GCNotification#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#6)]  
   
- Poniższy kod zawiera metody użytkownika, które są wywoływane z metod `OnFullGCApproachNotify` i `OnFullGCCompleteNotify`. Metody użytkownika przekierowują żądania, kończyć istniejące żądania, a następnie wznawiają żądania po wystąpieniu pełnego odzyskiwania pamięci.  
+ Poniższy kod zawiera metody użytkownika, które `OnFullGCApproachNotify` są `OnFullGCCompleteNotify` wywoływane z i metody. Metody użytkownika przekierowują żądania, kończą istniejące żądania, a następnie wznawiają żądania po wystąpieniu pełnego wyrzucania elementów bezużytecznych.  
   
  [!code-cpp[GCNotification#9](../../../samples/snippets/cpp/VS_Snippets_CLR/GCNotification/cpp/program.cpp#9)]
  [!code-csharp[GCNotification#9](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#9)]
@@ -120,6 +120,6 @@ Istnieją sytuacje, w których pełne odzyskiwanie pamięci (czyli kolekcja gene
  [!code-csharp[GCNotification#1](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#1)]
  [!code-vb[GCNotification#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#1)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Odzyskiwanie pamięci](../../../docs/standard/garbage-collection/index.md)

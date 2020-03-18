@@ -1,20 +1,20 @@
 ---
-ms.openlocfilehash: 375a6f57a867c2a11fe95753c1085d6d708db2bd
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: f5ae4669c85ae4f5d57d88ab55f6e1c758a625a6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568112"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79147591"
 ---
-### <a name="jsonencodedtextencode-methods-have-an-additional-javascriptencoder-argument"></a>Metody JsonEncodedText. Encode mają dodatkowy argument JavaScriptEncoder
+### <a name="jsonencodedtextencode-methods-have-an-additional-javascriptencoder-argument"></a>JsonEncodedText.Encode metody mają dodatkowy argument JavaScriptEncoder
 
-Począwszy od platformy .NET Core 3,0 w wersji zapoznawczej 8, metody <xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType> zawierają opcjonalny argument <xref:System.Text.Encodings.Web.JavaScriptEncoder>.
+Począwszy od .NET Core 3.0 Preview 8, <xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType> metody zawierają opcjonalny <xref:System.Text.Encodings.Web.JavaScriptEncoder> argument.
 
 #### <a name="change-description"></a>Zmień opis
 
-Program .NET Core 3,0 zawiera nowy typ linki XREF: System. Text. JSON. JsonEncodedText. Encode% 2A? displayProperty = nameWithType >. Począwszy od programu .NET Core 3,0 w wersji zapoznawczej 8, sygnatura wszystkich przeciążeń metod <xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType> została zmieniona w celu uwzględnienia opcjonalnego parametru <xref:System.Text.Encodings.Web.JavaScriptEncoder>. Ta zmiana została wprowadzona w celu zezwalania na inny lub niestandardowy koder.
+.NET Core 3.0 zawiera nowy typ, odnośnik:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType>. Począwszy od .NET Core 3.0 Preview <xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType> 8, podpis wszystkich przeciążeń metody został zmieniony w celu uwzględnienia parametru opcjonalnego. <xref:System.Text.Encodings.Web.JavaScriptEncoder> Ta zmiana została wmazana, aby umożliwić inny lub niestandardowy koder.
 
-Sygnatura `Encode` metod w programie .NET Core 3,0 Preview 7 to:
+Podpis metod `Encode` w wersji .NET Core 3.0 Preview 7 jest następujące:
 
 ```csharp
 namespace System.Text.Json
@@ -28,7 +28,7 @@ namespace System.Text.Json
 }
 ```
 
-Podpis tych samych metod `Encode` w programie .NET Core 3,0 w wersji zapoznawczej 8 i jego nowszych wersjach:
+Podpis tych samych `Encode` metod w wersji .NET Core 3.0 Preview 8 i nowszych jest:
 
 ```csharp
 namespace System.Text.Json
@@ -44,11 +44,11 @@ namespace System.Text.Json
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
-.NET Core 3,0 (wersja zapoznawcza 8)
+Podgląd .NET Core 3.0 8
 
-#### <a name="recommended-action"></a>Zalecane działanie
+#### <a name="recommended-action"></a>Zalecana akcja
 
-Jest to tylko zmiana w postaci binarnej. ponowna kompilacja względem programu .NET Core 3,0 w wersji zapoznawczej 8 lub nowszej spowoduje rozwiązanie wszelkich problemów w czasie wykonywania.
+Jest to tylko zmiana podziału binarnego; ponowna kompilacja względem wersji .NET Core 3.0 Preview 8 lub nowszej rozwiąże wszelkie problemy z wykonywaniem.
 
 #### <a name="category"></a>Kategoria
 
@@ -56,9 +56,9 @@ CoreFx
 
 #### <a name="affected-apis"></a>Dotyczy interfejsów API
 
-<xref:System.Text.Json.JsonEncodedText.Encode(System.ReadOnlySpan%7BSystem.Byte%7D,System.Text.Encodings.Web.JavaScriptEncoder)?displayProperty=nameWithType>
-<xref:System.Text.Json.JsonEncodedText.Encode(System.ReadOnlySpan%7BSystem.Char%7D,System.Text.Encodings.Web.JavaScriptEncoder)?displayProperty=nameWithType>
-<xref:System.Text.Json.JsonEncodedText.Encode(System.String,System.Text.Encodings.Web.JavaScriptEncoder)?displayProperty=nameWithType>
+- <xref:System.Text.Json.JsonEncodedText.Encode(System.ReadOnlySpan%7BSystem.Byte%7D,System.Text.Encodings.Web.JavaScriptEncoder)?displayProperty=nameWithType>
+- <xref:System.Text.Json.JsonEncodedText.Encode(System.ReadOnlySpan%7BSystem.Char%7D,System.Text.Encodings.Web.JavaScriptEncoder)?displayProperty=nameWithType>
+- <xref:System.Text.Json.JsonEncodedText.Encode(System.String,System.Text.Encodings.Web.JavaScriptEncoder)?displayProperty=nameWithType>
 
 <!--
 

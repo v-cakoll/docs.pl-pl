@@ -1,5 +1,5 @@
 ---
-title: C# informacje o event
+title: event - Odwołanie do języka C#
 ms.date: 07/20/2015
 f1_keywords:
 - event
@@ -10,51 +10,51 @@ helpviewer_keywords:
 - event keyword [C#]
 ms.assetid: 7858fd85-153b-4259-85d0-6aa13c35f174
 ms.openlocfilehash: eb1805ed55921497fea88e6b39989c876ef003d1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713554"
 ---
-# <a name="event-c-reference"></a>event (C# odwołanie)
+# <a name="event-c-reference"></a>zdarzenie (odwołanie do języka C#)
 
-Słowo kluczowe `event` jest używane do deklarowania zdarzenia w klasie wydawcy.
+Słowo `event` kluczowe służy do deklarowania zdarzenia w klasie wydawcy.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak zadeklarować i zgłosić zdarzenie, które używa <xref:System.EventHandler> jako bazowego typu delegata. Aby zapoznać się z kompletnym przykładem kodu, który pokazuje, jak używać ogólnego typu delegata <xref:System.EventHandler%601> i jak subskrybować zdarzenie i utworzyć metodę obsługi zdarzeń, zobacz [How to Publish Events, które są zgodne z wytycznymi .NET Framework](../../programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md).
+W poniższym przykładzie pokazano, jak <xref:System.EventHandler> zadeklarować i podnieść zdarzenie, które używa jako podstawowego typu delegata. W przypadku pełnego przykładu kodu, który <xref:System.EventHandler%601> pokazuje również, jak używać ogólnego typu delegata i jak subskrybować zdarzenie i utworzyć metodę obsługi zdarzeń, zobacz [Jak publikować zdarzenia zgodne z wytycznymi platformy .NET Framework](../../programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md).
 
 [!code-csharp[csrefKeywordsModifiers#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#7)]
 
-Zdarzenia są specjalnym rodzajem delegatów multiemisji, który można wywołać tylko z poziomu klasy lub struktury, w której są zadeklarowane (Klasa wydawcy). Jeśli inne klasy lub struktury subskrybują zdarzenie, ich metody obsługi zdarzeń będą wywoływane, gdy Klasa wydawcy zgłasza zdarzenie. Aby uzyskać więcej informacji i przykładów kodu, zobacz [Events](../../programming-guide/events/index.md) and [delegats](../../programming-guide/delegates/index.md).
+Zdarzenia są specjalny rodzaj delegata multiemisji, które mogą być wywoływane tylko z wewnątrz klasy lub struktury, gdzie są zadeklarowane (klasa wydawcy). Jeśli inne klasy lub struktury subskrybują zdarzenie, ich metody obsługi zdarzeń zostaną wywołane, gdy klasa wydawcy wywołuje zdarzenie. Aby uzyskać więcej informacji i przykłady kodu, zobacz [Zdarzenia](../../programming-guide/events/index.md) i [delegatów](../../programming-guide/delegates/index.md).
 
-Zdarzenia mogą być oznaczone jako [publiczne](./public.md), [prywatne](./private.md), [chronione](./protected.md), [wewnętrzne](./internal.md), [chronione wewnętrznie](./protected-internal.md)lub [chronione prywatnie](./private-protected.md). Te Modyfikatory dostępu definiują sposób, w jaki użytkownicy klasy mogą uzyskać dostęp do zdarzenia. Aby uzyskać więcej informacji, zobacz [Modyfikatory dostępu](../../programming-guide/classes-and-structs/access-modifiers.md).
+Zdarzenia mogą być oznaczone jako [publiczne,](./public.md) [prywatne,](./private.md) [chronione,](./protected.md) [wewnętrzne,](./internal.md) [chronione wewnętrzne](./protected-internal.md)lub [prywatne chronione.](./private-protected.md) Te modyfikatory dostępu definiują, w jaki sposób użytkownicy klasy mogą uzyskiwać dostęp do zdarzenia. Aby uzyskać więcej informacji, zobacz [Modyfikatory dostępu](../../programming-guide/classes-and-structs/access-modifiers.md).
 
-## <a name="keywords-and-events"></a>Słowa kluczowe i zdarzenia
+## <a name="keywords-and-events"></a>Słowa kluczowe i wydarzenia
 
-Poniższe słowa kluczowe mają zastosowanie do zdarzeń.
+Następujące słowa kluczowe mają zastosowanie do zdarzeń.
 
 |Słowo kluczowe|Opis|Więcej informacji|
 |-------------|-----------------|--------------------------|
-|[static](./static.md)|Sprawia, że zdarzenie jest dostępne dla wywoływania w dowolnym momencie, nawet jeśli nie istnieje żadne wystąpienie klasy.|[Klasy statyczne i statyczne elementy członkowskie klas](../../programming-guide/classes-and-structs/static-classes-and-static-class-members.md)|
-|[virtual](./virtual.md)|Umożliwia klasom pochodnym przesłonięcie zachowania zdarzenia za pomocą słowa kluczowego [override](./override.md) .|[Dziedziczenie](../../programming-guide/classes-and-structs/inheritance.md)|
-|[sealed](./sealed.md)|Określa, że dla klas pochodnych nie jest już wirtualna.||
-|[abstract](./abstract.md)|Kompilator nie będzie generował `add` i `remove` bloków dostępu zdarzeń, dlatego klasy pochodne muszą zapewnić własną implementację.||
+|[Statyczne](./static.md)|Udostępnia zdarzenie dla wywoływania w dowolnym momencie, nawet jeśli nie istnieje żadne wystąpienie klasy.|[Klasy statyczne i statyczni członkowie klas](../../programming-guide/classes-and-structs/static-classes-and-static-class-members.md)|
+|[virtual](./virtual.md)|Umożliwia klas pochodnych, aby zastąpić zachowanie zdarzenia przy użyciu [przesłonięcia](./override.md) słowa kluczowego.|[Dziedziczenie](../../programming-guide/classes-and-structs/inheritance.md)|
+|[sealed](./sealed.md)|Określa, że dla klas pochodnych nie jest już wirtualny.||
+|[Abstrakcja](./abstract.md)|Kompilator nie `add` będzie `remove` generować bloki akcesora i zdarzenia i dlatego klasy pochodne muszą zapewnić własną implementację.||
 
-Zdarzenie może być zadeklarowane jako zdarzenie statyczne za pomocą słowa kluczowego [static](./static.md) . To sprawia, że zdarzenie jest dostępne dla wywoływania w dowolnym momencie, nawet jeśli nie istnieje żadne wystąpienie klasy. Aby uzyskać więcej informacji, zobacz [klasy statyczne i statyczne elementy członkowskie klas](../../programming-guide/classes-and-structs/static-classes-and-static-class-members.md).
+Zdarzenie może być zadeklarowane jako zdarzenie statyczne przy użyciu słowa kluczowego [statycznego.](./static.md) Dzięki temu zdarzenie jest dostępne dla wywoływania w dowolnym momencie, nawet jeśli nie istnieje żadne wystąpienie klasy. Aby uzyskać więcej informacji, zobacz [Klasy statyczne i elementy członkowskie klasy statycznej](../../programming-guide/classes-and-structs/static-classes-and-static-class-members.md).
 
-Zdarzenie może być oznaczone jako zdarzenie wirtualne przy użyciu słowa kluczowego [Virtual](./virtual.md) . Dzięki temu klasy pochodne zastępują zachowanie zdarzeń za pomocą słowa kluczowego [override](./override.md) . Aby uzyskać więcej informacji, zobacz [dziedziczenie](../../programming-guide/classes-and-structs/inheritance.md). Zdarzenie przesłaniające zdarzenie wirtualne może być również [zapieczętowane](./sealed.md), które określa, że dla klas pochodnych nie jest już wirtualna. Na koniec zdarzenie może być zadeklarowane jako [abstract](./abstract.md), co oznacza, że kompilator nie generuje bloków dostępu do zdarzeń `add` i `remove`. W związku z tym klasy pochodne muszą dostarczać własne implementacje.
+Zdarzenie można oznaczyć jako zdarzenie wirtualne przy użyciu [wirtualnego](./virtual.md) słowa kluczowego. Dzięki temu klasy pochodne zastąpić zachowanie zdarzenia przy użyciu [przesłonięcia](./override.md) słowa kluczowego. Aby uzyskać więcej informacji, zobacz [Dziedziczenie](../../programming-guide/classes-and-structs/inheritance.md). Zdarzenie zastępujące zdarzenie wirtualne może być również [zapieczętowane,](./sealed.md)co określa, że dla klas pochodnych nie jest już wirtualny. Wreszcie zdarzenie może być [zadeklarowane jako abstrakcyjne](./abstract.md), co `add` `remove` oznacza, że kompilator nie wygeneruje bloków akcesora i zdarzenia. W związku z tym klasy pochodne muszą zapewnić własną implementację.
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Dokumentacja języka C#](../index.md)
-- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [Odwołanie do języka C#](../index.md)
+- [Przewodnik programowania języka C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](./index.md)
-- [add](./add.md)
-- [remove](./remove.md)
+- [Dodaj](./add.md)
+- [Usunąć](./remove.md)
 - [Modyfikatory](index.md)
-- [Jak łączyć delegatów (delegatów multiemisji)](../../programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)
+- [Jak połączyć delegatów (delegatów multiemisji)](../../programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)

@@ -9,29 +9,29 @@ helpviewer_keywords:
 - PLINQ queries, sample data
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
 ms.openlocfilehash: b13a2608df486f1de42514d4f8eaac49f04d345e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73140012"
 ---
 # <a name="plinq-data-sample"></a>Próbka danych PLINQ
-Ten przykład zawiera przykładowe dane w formacie CSV, a także metody, które przekształcają je na kolekcje klientów, produkty, zamówienia i szczegóły zamówienia. Aby dodatkowo eksperymentować z PLINQ, możesz wkleić przykłady kodu z niektórych innych tematów do kodu w tym temacie i wywoływać go z metody `Main`. Możesz również używać tych danych przy użyciu własnych zapytań PLINQ.  
+Ten przykład zawiera przykładowe dane w formacie csv wraz z metodami, które przekształcają je w kolekcje w pamięci klientów, produktów, zamówień i szczegółów zamówienia. Aby dalej eksperymentować z PLINQ, można wkleić przykłady kodu z niektórych innych `Main` tematów do kodu w tym temacie i wywołać go z metody. Można również użyć tych danych z własnych zapytań PLINQ.  
   
- Dane przedstawiają podzestaw bazy danych Northwind. 50 (50) rekordy klientów są uwzględniane, ale nie wszystkie pola. Uwzględniono podzestaw wierszy z zamówień i odpowiadające im dane Order_Detail dla każdego klienta. Wszystkie produkty są dołączone.  
+ Dane reprezentują podzbiór bazy danych Northwind. Uwzględniono pięćdziesiąt (50) rekordów klientów, ale nie wszystkie pola. Uwzględniono podzbiór wierszy z zamówienia i odpowiadające mu dane Order_Detail dla każdego Klienta. Wszystkie Produkty są wliczone w cenę.  
   
 > [!NOTE]
-> Zestaw danych nie jest wystarczająco duży, aby pokazać, że PLINQ jest szybsze niż LINQ to Objects dla zapytań, które zawierają tylko podstawowe `where` i klauzule `select`. Aby obsłużyć szybkość rośnie w przypadku małych zestawów danych, takich jak to, należy użyć zapytań, które zawierają obliczenia kosztownych operacji dla każdego elementu w zestawie danych.  
+> Zestaw danych nie jest wystarczająco duży, aby wykazać, że PLINQ jest `where` `select` szybszy niż LINQ do obiektów dla zapytań, które zawierają tylko podstawowe i klauzule. Aby obserwować wzrost prędkości dla małych zestawów danych, takich jak ten, należy użyć kwerend, które zawierają operacje kosztowne obliczeniowo na każdym elemencie w zestawie danych.  
   
 ### <a name="to-set-up-this-sample"></a>Aby skonfigurować ten przykład  
   
-1. Utwórz projekt aplikacji Visual Basic lub C# konsoli wizualnej.  
+1. Utwórz projekt aplikacji konsoli Visual Basic lub Visual C#.  
   
-2. Zastąp zawartość Module1. vb lub Program.cs przy użyciu kodu, który następuje po wykonaniu tych kroków.  
+2. Zastąp zawartość modułu Module1.vb lub Program.cs, używając kodu, który jest następujący.  
   
-3. W menu **projekt** kliknij polecenie **Dodaj nowy element**. Wybierz pozycję **plik tekstowy** , a następnie kliknij przycisk **OK**. Skopiuj dane z tego tematu, a następnie wklej je w nowym pliku tekstowym. W menu **plik** kliknij polecenie **Zapisz**, Nazwij plik Plinqdata. csv, a następnie zapisz go w folderze zawierającym pliki kodu źródłowego.  
+3. W menu **Projekt** kliknij polecenie **Dodaj nowy element**. Zaznacz **pozycję Plik tekstowy,** a następnie kliknij przycisk **OK**. Skopiuj dane w tym temacie, a następnie wklej je do nowego pliku tekstowego. W menu **Plik** kliknij polecenie **Zapisz**, nazwij plik Plinqdata.csv, a następnie zapisz go w folderze zawierającym pliki kodu źródłowego.  
   
-4. Naciśnij klawisz F5, aby sprawdzić, czy projekt jest poprawnie kompilowany i uruchamiany. Poniższe dane wyjściowe powinny być wyświetlane w oknie konsoli.  
+4. Naciśnij klawisz F5, aby sprawdzić, czy projekt jest poprawnie uruchamiany i działa. Następujące dane wyjściowe powinny być wyświetlane w oknie konsoli.  
   
     ```console  
     Customer count: 50  
@@ -860,6 +860,6 @@ PRODUCTS
 END PRODUCTS  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Równoległe LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

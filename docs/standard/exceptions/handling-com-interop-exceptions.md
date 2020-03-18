@@ -10,24 +10,24 @@ helpviewer_keywords:
 - COM interop, exceptions
 ms.assetid: e6104aa8-8e5f-4069-b864-def85579c96c
 ms.openlocfilehash: 17cd739ac40b43bdd4a93b83a4ab9d0d92400e2d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75708935"
 ---
 # <a name="handling-com-interop-exceptions"></a>Obsługa wyjątków międzyoperacyjności COM
-Kod zarządzany i niezarządzany może współdziałać ze sobą w celu obsługi wyjątków. Jeśli metoda zgłasza wyjątek w kodzie zarządzanym, środowisko uruchomieniowe języka wspólnego może przekazać wynik HRESULT do obiektu COM. Jeśli metoda zakończy się niepowodzeniem w kodzie niezarządzanym przez zwrócenie błędu HRESULT, środowisko uruchomieniowe zgłasza wyjątek, który może zostać przechwycony przez kod zarządzany.  
+Kod zarządzany i niezarządzany może współpracować w celu obsługi wyjątków. Jeśli metoda zgłasza wyjątek w kodzie zarządzanym, czas wykonywania języka wspólnego może przekazać HRESULT do obiektu COM. Jeśli metoda nie powiedzie się w kodzie niezarządzanym przez zwrócenie błędu HRESULT, czas wykonywania zgłasza wyjątek, który może zostać przechwycony przez kod zarządzany.  
   
- Środowisko uruchomieniowe automatycznie mapuje wynik HRESULT z międzyoperacyjności modelu COM do bardziej szczegółowych wyjątków. Na przykład E_ACCESSDENIED zostanie <xref:System.UnauthorizedAccessException>, E_OUTOFMEMORY <xref:System.OutOfMemoryException>i tak dalej.  
+ Czas wykonywania automatycznie mapuje HRESULT z com interop do bardziej szczegółowych wyjątków. Na przykład, E_ACCESSDENIED <xref:System.UnauthorizedAccessException>staje się <xref:System.OutOfMemoryException>, E_OUTOFMEMORY staje się , i tak dalej.  
   
- Jeśli HRESULT jest wynikiem niestandardowym lub jeśli jest nieznany dla środowiska uruchomieniowego, środowisko uruchomieniowe przekazuje do klienta ogólne <xref:System.Runtime.InteropServices.COMException>. Właściwość **ErrorCode** elementu **COMEXCEPTION** zawiera wartość HRESULT.  
+ Jeśli Wynik HRESULT jest wynikiem niestandardowym lub jeśli nie jest znany <xref:System.Runtime.InteropServices.COMException> do czasu wykonywania, czas wykonywania przekazuje ogólny do klienta. **Właściwość ErrorCode** **comexception** zawiera wartość HRESULT.  
   
 ## <a name="working-with-ierrorinfo"></a>Praca z IErrorInfo  
- Po przekazaniu błędu z modelu COM do kodu zarządzanego środowisko uruchomieniowe wypełnia obiekt wyjątku informacjami o błędzie. Obiekty COM obsługujące IErrorInfo i zwracają wartości HRESULT zawierają te informacje do wyjątków kodu zarządzanego. Na przykład środowisko uruchomieniowe mapuje opis z błędu COM na Właściwość <xref:System.Exception.Message%2A> wyjątku. Jeśli HRESULT nie zawiera żadnych dodatkowych informacji o błędzie, środowisko uruchomieniowe wypełnia wiele właściwości wyjątku z wartościami domyślnymi.  
+ Gdy błąd jest przekazywany z COM do kodu zarządzanego, czas wykonywania wypełnia obiekt wyjątku z informacjami o błędzie. Obiekty COM, które obsługują IErrorInfo i zwracają HRESULTS podać te informacje do wyjątków kodu zarządzanego. Na przykład czas wykonywania mapuje opis z błędu <xref:System.Exception.Message%2A> COM do właściwości wyjątku. Jeśli HRESULT nie zawiera żadnych dodatkowych informacji o błędzie, czas wykonywania wypełnia wiele właściwości wyjątku wartościami domyślnymi.  
   
- Jeśli metoda zakończy się niepowodzeniem w kodzie niezarządzanym, można przekazywać wyjątek do segmentu kodu zarządzanego. Temat [HResults i Exceptions](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md) zawiera tabelę przedstawiającą sposób, w jaki HRESULT są mapowane na obiekty wyjątków czasu wykonywania.  
+ Jeśli metoda nie powiedzie się w kodzie niezarządzanym, wyjątek można przekazać do segmentu kodu zarządzanego. Temat [HRESULTS i wyjątki](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md) zawiera tabelę pokazującą, jak Mapa HRESULTS do obiektów wyjątków w czasie wykonywania.  
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Wyjątki](index.md)

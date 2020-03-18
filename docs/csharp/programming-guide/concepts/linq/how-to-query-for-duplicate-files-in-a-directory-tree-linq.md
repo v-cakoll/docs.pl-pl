@@ -1,16 +1,16 @@
 ---
-title: Jak wykonać zapytanie o zduplikowane pliki w drzewie katalogów (LINQ) (C#)
+title: Jak wysyłać zapytania o zduplikowane pliki w drzewie katalogów (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 1ff5562b-0d30-46d1-b426-a04e8f78c840
-ms.openlocfilehash: 7c84dba3e87077077f28bc2e665ea3774cf44d3b
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 0578d6c85c7d2e38c840c278c7ad2775467ac741
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347876"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168885"
 ---
-# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a>Jak wykonać zapytanie o zduplikowane pliki w drzewie katalogów (LINQ) (C#)
-Czasami pliki o tej samej nazwie mogą znajdować się w więcej niż jednym folderze. Na przykład w folderze instalacyjnym programu Visual Studio kilka folderów zawiera plik Readme. htm. Ten przykład pokazuje, jak wykonać zapytanie o takie zduplikowane nazwy plików w określonym folderze głównym. Drugi przykład pokazuje, jak wykonywać zapytania dotyczące plików, których rozmiar i czas Ostatni zapis również są zgodne.  
+# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a>Jak wysyłać zapytania o zduplikowane pliki w drzewie katalogów (LINQ) (C#)
+Czasami pliki o tej samej nazwie mogą znajdować się w więcej niż jednym folderze. Na przykład w folderze instalacyjnym programu Visual Studio kilka folderów ma plik readme.htm. W tym przykładzie pokazano, jak wysyłać zapytania o takie zduplikowane nazwy plików w określonym folderze głównym. Drugi przykład pokazuje, jak zapytanie o pliki, których rozmiar i LastWrite czasy również pasują.  
   
 ## <a name="example"></a>Przykład  
   
@@ -99,7 +99,7 @@ class QueryDuplicateFileNames
         // A named type is used to enable the query to be  
         // passed to another method. Anonymous types can also be used  
         // for composite keys but cannot be passed across method boundaries  
-        //   
+        //
         var queryDupFiles =  
             from file in fileList  
             group file.FullName.Substring(charsToSkip) by  
@@ -167,12 +167,12 @@ class QueryDuplicateFileNames
 }  
 ```  
   
- Pierwsze zapytanie używa prostego klucza w celu określenia dopasowania; spowoduje to znalezienie plików o tej samej nazwie, ale których zawartość może się różnić. Drugie zapytanie używa klucza złożonego, aby dopasować się do trzech właściwości obiektu <xref:System.IO.FileInfo>. To zapytanie jest znacznie bardziej prawdopodobnie, aby znaleźć pliki o tej samej nazwie i podobnej lub identycznej zawartości.  
+ Pierwsza kwerenda używa prostego klucza do określenia dopasowania; spowoduje to znalezienie plików o tej samej nazwie, których zawartość może być inna. Druga kwerenda używa klucza złożonego, aby <xref:System.IO.FileInfo> dopasować się do trzech właściwości obiektu. Ta kwerenda jest znacznie bardziej prawdopodobne, aby znaleźć pliki, które mają taką samą nazwę i podobną lub identyczną zawartość.  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Utwórz projekt C# aplikacji konsolowej z `using` dyrektywami dotyczącymi przestrzeni nazw System. Linq i system.IO.  
+ Utwórz projekt aplikacji konsoli `using` C# z dyrektywami dla system.Linq i System.IO przestrzeni nazw.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [LINQ to Objects (C#)](./linq-to-objects.md)
+- [LINQ do obiektów (C#)](./linq-to-objects.md)
 - [LINQ i katalogi plików (C#)](./linq-and-file-directories.md)

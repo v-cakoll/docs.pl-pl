@@ -1,5 +1,5 @@
 ---
-title: '#undef — C# odwołanie'
+title: '#undef — odwołanie do języka C#'
 ms.date: 06/30/2018
 f1_keywords:
 - '#undef'
@@ -7,16 +7,16 @@ helpviewer_keywords:
 - '#undef directive [C#]'
 ms.assetid: 686c92d2-7194-4be4-b2f4-80091712d513
 ms.openlocfilehash: 21923412aa178c3b86e94a54bd911130e48e4deb
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712445"
 ---
 # <a name="undef-c-reference"></a>#undef (odwołanie w C#)
-Dyrektywa `#undef` umożliwia anulowanie definicji symbolu w taki sposób, że w przypadku użycia symbolu jako wyrażenia w dyrektywie [#if](./preprocessor-if.md) zostanie zwrócona wartość `false`.  
+`#undef`umożliwia oddefiniowanie symbolu, tak aby za pomocą symbolu jako wyrażenia w `false` [#if](./preprocessor-if.md) dyrektywy wyrażenie będzie obliczać .  
   
- Symbol można zdefiniować za pomocą dyrektywy [#define](./preprocessor-define.md) lub opcji [-define](../compiler-options/define-compiler-option.md) kompilatora. Dyrektywa `#undef` musi znajdować się w pliku przed użyciem jakichkolwiek instrukcji, które nie są również dyrektywami.  
+ Symbol można zdefiniować za pomocą [#define](./preprocessor-define.md) dyrektywy lub [opcji -define](../compiler-options/define-compiler-option.md) kompilatora. Dyrektywa `#undef` musi pojawić się w pliku przed użyciem żadnych instrukcji, które nie są również dyrektywy.  
   
 ## <a name="example"></a>Przykład  
 
@@ -38,10 +38,10 @@ class MyClass
 }  
 ```
 
-**Nie zdefiniowano debugowania**
+**DEBUG nie jest zdefiniowany**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Dokumentacja języka C#](../index.md)
-- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
-- [Dyrektywy preprocesora C#](./index.md)
+- [Odwołanie do języka C#](../index.md)
+- [Przewodnik programowania języka C#](../../programming-guide/index.md)
+- [Dyrektywy przedprocesorowe C#](./index.md)

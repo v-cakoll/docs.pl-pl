@@ -18,18 +18,18 @@ helpviewer_keywords:
 - deleting directories within isolated stage file
 ms.assetid: 8fcc0dea-435b-4d40-ba4d-ba056265c202
 ms.openlocfilehash: ec4de3e3a139cfcf66f1f6252c03c467f4ccfbc5
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75707860"
 ---
 # <a name="how-to-delete-files-and-directories-in-isolated-storage"></a>Porady: usuwanie plików i katalogów w izolowanym magazynie
-Można usunąć katalogi i pliki w izolowanym pliku magazynu. W magazynie nazwy plików i katalogów są zależne od systemu operacyjnego i są określane jako względne dla katalogu głównego wirtualnego systemu plików. W systemach operacyjnych Windows nie jest rozróżniana wielkość liter.  
+Katalogi i pliki można usuwać w izolowanym pliku magazynu. W magazynie nazwy plików i katalogów są zależne od systemu operacyjnego i są określone jako względem katalogu głównego wirtualnego systemu plików. W systemach operacyjnych Windows nie są one uwzględniane wielkości liter.  
   
- Klasa <xref:System.IO.IsolatedStorage.IsolatedStorageFile?displayProperty=nameWithType> udostępnia dwie metody usuwania katalogów i plików: <xref:System.IO.IsolatedStorage.IsolatedStorageFile.DeleteDirectory%2A> i <xref:System.IO.IsolatedStorage.IsolatedStorageFile.DeleteFile%2A>. Wyjątek <xref:System.IO.IsolatedStorage.IsolatedStorageException> jest generowany w przypadku próby usunięcia pliku lub katalogu, który nie istnieje. Jeśli w nazwie zostanie uwzględniony symbol wieloznaczny, <xref:System.IO.IsolatedStorage.IsolatedStorageFile.DeleteDirectory%2A> zgłasza wyjątek <xref:System.IO.IsolatedStorage.IsolatedStorageException>, a <xref:System.IO.IsolatedStorage.IsolatedStorageFile.DeleteFile%2A> zgłasza wyjątek <xref:System.ArgumentException>.  
+ Klasa <xref:System.IO.IsolatedStorage.IsolatedStorageFile?displayProperty=nameWithType> dostarcza dwie metody usuwania katalogów i <xref:System.IO.IsolatedStorage.IsolatedStorageFile.DeleteDirectory%2A> plików: i <xref:System.IO.IsolatedStorage.IsolatedStorageFile.DeleteFile%2A>. Wyjątek <xref:System.IO.IsolatedStorage.IsolatedStorageException> jest zgłaszany, jeśli spróbujesz usunąć plik lub katalog, który nie istnieje. Jeśli dodasz symbol wieloznaczny w <xref:System.IO.IsolatedStorage.IsolatedStorageFile.DeleteDirectory%2A> nazwie, <xref:System.IO.IsolatedStorage.IsolatedStorageException> zgłasza <xref:System.IO.IsolatedStorage.IsolatedStorageFile.DeleteFile%2A> wyjątek i <xref:System.ArgumentException> zgłasza wyjątek.  
   
- Metoda <xref:System.IO.IsolatedStorage.IsolatedStorageFile.DeleteDirectory%2A> kończy się niepowodzeniem, jeśli katalog zawiera jakiekolwiek pliki lub podkatalogi. Możesz użyć metod <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A> i <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A> do pobierania istniejących plików i katalogów. Aby uzyskać więcej informacji o przeszukiwaniu wirtualnego systemu plików w sklepie, zobacz [How to: find Existing Files i directorys in the izolowany magazyn](../../../docs/standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md).  
+ Metoda <xref:System.IO.IsolatedStorage.IsolatedStorageFile.DeleteDirectory%2A> nie powiedzie się, jeśli katalog zawiera jakiekolwiek pliki lub podkatalogi. Można użyć <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A> i <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A> metody, aby pobrać istniejące pliki i katalogi. Aby uzyskać więcej informacji na temat przeszukiwania wirtualnego systemu plików w magazynie, zobacz [Jak: Znajdowanie istniejących plików i katalogów w izolowanym magazynie](../../../docs/standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md).  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład kodu tworzy, a następnie usuwa kilka katalogów i plików.  
@@ -38,7 +38,7 @@ Można usunąć katalogi i pliki w izolowanym pliku magazynu. W magazynie nazwy 
  [!code-csharp[Conceptual.IsolatedStorage#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source4.cs#4)]
  [!code-vb[Conceptual.IsolatedStorage#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source4.vb#4)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile?displayProperty=nameWithType>
-- [Wydzielona pamięć masowa](../../../docs/standard/io/isolated-storage.md)
+- [Izolowany magazyn](../../../docs/standard/io/isolated-storage.md)

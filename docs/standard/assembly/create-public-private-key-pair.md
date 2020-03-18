@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Tworzenie pary kluczy publiczny-prywatny'
+title: 'Jak: Tworzenie pary kluczy publiczno-prywatnych'
 ms.date: 08/20/2019
 helpviewer_keywords:
 - key pairs for strong-named assemblies
@@ -16,34 +16,34 @@ dev_langs:
 - vb
 - cpp
 ms.openlocfilehash: 8a9845e3cd18ff86ec04216ad0e9c5606186b113
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73122519"
 ---
-# <a name="how-to-create-a-public-private-key-pair"></a>Instrukcje: Tworzenie pary kluczy publiczny-prywatny
+# <a name="how-to-create-a-public-private-key-pair"></a>Jak: Tworzenie pary kluczy publiczno-prywatnych
 
-Aby podpisać zestaw za pomocą silnej nazwy, musisz mieć parę kluczy publiczny/prywatny. Ta para publicznych i prywatnych kluczy kryptograficznych jest używana podczas kompilacji w celu utworzenia zestawu o silnej nazwie. Parę kluczy można utworzyć za pomocą [Narzędzia silnej nazwy (SN. exe)](../../framework/tools/sn-exe-strong-name-tool.md). Pliki pary kluczy zazwyczaj mają rozszerzenie *. snk* .
+Aby podpisać zestaw o silnej nazwie, musisz mieć parę kluczy publicznych/prywatnych. Ta publiczna i prywatna para kluczy kryptograficznych jest używana podczas kompilacji do tworzenia zestawu o silnej nazwie. Parę kluczy można utworzyć za pomocą [narzędzia Silna nazwa (Sn.exe)](../../framework/tools/sn-exe-strong-name-tool.md). Pliki pary kluczy mają zwykle rozszerzenie *.snk.*
 
 > [!NOTE]
-> W programie Visual Studio strony C# właściwości projektu i Visual Basic zawierają kartę **podpisywanie** , która umożliwia wybieranie istniejących plików kluczy lub generowanie nowych plików kluczy bez korzystania z *SN. exe*. W C++wizualizacji, możesz określić lokalizację istniejącego pliku klucza na stronie właściwości **Zaawansowane** w sekcji **konsolidator** w sekcji **Właściwości konfiguracji** w oknie **strony właściwości** . Użycie atrybutu <xref:System.Reflection.AssemblyKeyFileAttribute> do identyfikowania par plików kluczy było przestarzałe, począwszy od programu Visual Studio 2005.
+> W programie Visual Studio strony właściwości projektu Języka C# i Visual Basic zawierają kartę **Podpisywanie,** która umożliwia wybranie istniejących plików kluczy lub wygenerowanie nowych plików kluczy bez użycia *programu Sn.exe.* W programie Visual C++ można określić lokalizację istniejącego pliku klucza na stronie **właściwości Zaawansowane** w sekcji **Właściwości** **konfiguracji** w oknie **Strony właściwości.** Użycie atrybutu <xref:System.Reflection.AssemblyKeyFileAttribute> do identyfikowania par plików kluczy stało się przestarzałe począwszy od programu Visual Studio 2005.
 
 ## <a name="create-a-key-pair"></a>Tworzenie pary kluczy
 
 Aby utworzyć parę kluczy, w wierszu polecenia wpisz następujące polecenie:
 
-**SN —** *Nazwa pliku* \<k>
+*nazwa pliku* **sn –k** \<>
 
-W tym poleceniu *Nazwa pliku* jest nazwą pliku wyjściowego zawierającego parę kluczy.
+W tym poleceniu *nazwa pliku* jest nazwą pliku wyjściowego zawierającego parę kluczy.
 
-Poniższy przykład tworzy parę kluczy o nazwie *sgKey. snk*.
+Poniższy przykład tworzy parę kluczy o nazwie *sgKey.snk*.
 
 ```cmd
 sn -k sgKey.snk
 ```
 
-Jeśli zamierzasz opóźnić podpisywanie zestawu i kontrolować całą parę kluczy (najprawdopodobniej poza scenariuszami testowymi), możesz użyć poniższych poleceń, aby wygenerować parę kluczy, a następnie wyodrębnić z niej klucz publiczny do osobnego pliku. Najpierw Utwórz parę kluczy:
+Jeśli zamierzasz opóźnić podpisanie zestawu i kontrolować całą parę kluczy (co jest mało prawdopodobne, scenariusze testów zewnętrznych), można użyć następujących poleceń do wygenerowania pary kluczy, a następnie wyodrębnić klucz publiczny z niego do oddzielnego pliku. Najpierw utwórz parę kluczy:
 
 ```cmd
 sn -k keypair.snk
@@ -55,11 +55,11 @@ Następnie wyodrębnij klucz publiczny z pary kluczy i skopiuj go do oddzielnego
 sn -p keypair.snk public.snk
 ```
 
-Po utworzeniu pary kluczy należy umieścić w niej plik, w którym znajdują się narzędzia podpisywania silnej nazwy.
+Po utworzeniu pary kluczy należy umieścić plik, w którym można go znaleźć narzędzia do podpisywania silnej nazwy.
 
-Podczas podpisywania zestawu o silnej nazwie [konsolidator zestawu (Al. exe)](../../framework/tools/al-exe-assembly-linker.md) wyszukuje plik klucza względem bieżącego katalogu i do katalogu wyjściowego. Używając kompilatorów wiersza polecenia, można po prostu skopiować klucz do bieżącego katalogu zawierającego moduły kodu.
+Podczas podpisywania zestawu o silnej nazwie [konsolidator zestawu (Al.exe)](../../framework/tools/al-exe-assembly-linker.md) wyszbędzie plik klucza względem bieżącego katalogu i katalogu wyjściowego. Korzystając z kompilatorów wiersza polecenia, można po prostu skopiować klucz do bieżącego katalogu zawierającego moduły kodu.
 
-Jeśli używasz wcześniejszej wersji programu Visual Studio, która nie ma karty **podpisywanie** we właściwościach projektu, zalecana lokalizacja pliku klucza jest katalogiem projektu z atrybutem pliku określonym w następujący sposób:
+Jeśli używasz starszej wersji programu Visual Studio, która nie ma karty **Podpisywanie** we właściwościach projektu, zalecaną lokalizacją pliku klucza jest katalog projektu z atrybutem pliku określonym w następujący sposób:
 
 ```cpp
 [assembly:AssemblyKeyFileAttribute("keyfile.snk")];
@@ -73,6 +73,6 @@ Jeśli używasz wcześniejszej wersji programu Visual Studio, która nie ma kart
 <Assembly:AssemblyKeyFileAttribute("keyfile.snk")>
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Tworzenie i używanie zestawów o silnych nazwach](create-use-strong-named.md)
+- [Tworzenie i używanie zestawów o silnej nazwie](create-use-strong-named.md)

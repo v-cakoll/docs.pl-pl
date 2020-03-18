@@ -1,29 +1,29 @@
 ---
-title: Jak zaimplementować klasę uproszczoną przy użyciu właściwości, które są implementowane, przewodnik C# programowania
+title: Jak zaimplementować klasę lekkości z właściwościami implementowanymi automatycznie - Przewodnik programowania C#
 ms.date: 07/20/2015
 helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: e9b2ab32fb79b80649305843abdd935b8c582bc0
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 6d121f6be768d41d22ea01d871662913b2daae2b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77628218"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170276"
 ---
-# <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Jak zaimplementować klasę uproszczoną z zaimplementowanymi właściwościami (C# Przewodnik programowania)
+# <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Jak zaimplementować klasę lekkości z właściwościami implementowanymi automatycznie (Przewodnik programowania C#)
 
-Ten przykład przedstawia sposób tworzenia niezmiennej klasy lekkiej, która służy tylko do hermetyzacji zestawu właściwości, które są implementowane. Użyj tego rodzaju konstrukcji zamiast struktury, gdy musisz użyć semantyki typu odwołania.
+W tym przykładzie pokazano, jak utworzyć niezmienne klasy lekki, który służy tylko do hermetyzacji zestaw właściwości auto implementowane. Użyj tego rodzaju konstrukcji zamiast struktury, gdy należy użyć semantyki typu odwołania.
 
-Można wprowadzić niemodyfikowalną właściwość na dwa sposoby:
+Właściwość niezmienną można wykonać na dwa sposoby:
 
-- Można zadeklarować metodę dostępu [Set](../../language-reference/keywords/set.md) jako [prywatną](../../language-reference/keywords/private.md).  Właściwość jest tylko settable w obrębie typu, ale jest niezmienna dla odbiorców.
+- Można zadeklarować [set](../../language-reference/keywords/set.md) akcesor być [prywatny](../../language-reference/keywords/private.md).  Właściwość jest tylko settable w ramach typu, ale jest niezmienne dla konsumentów.
 
-  Po zadeklarowaniu metody dostępu prywatnego `set` nie można użyć inicjatora obiektów do zainicjowania właściwości. Musisz użyć konstruktora lub metody fabryki.
-- Można zadeklarować tylko metodę dostępu [Get](../../language-reference/keywords/get.md) , która sprawia, że właściwość jest niezmienna wszędzie z wyjątkiem konstruktora typu.
+  Podczas deklarowania `set` akcesor prywatny, nie można użyć inicjatora obiektu do zainicjowania właściwości. Należy użyć konstruktora lub metody fabrycznej.
+- Można zadeklarować tylko [get](../../language-reference/keywords/get.md) akcesor, co sprawia, że właściwość niezmienne wszędzie z wyjątkiem konstruktora typu.
 
-W poniższym przykładzie pokazano, w jaki sposób właściwość z akcesorem Get różni się od typu GET i Private.
+W poniższym przykładzie pokazano, jak właściwość z tylko get akcesor różni się niż jeden z get i zestaw prywatny.
 
 ```csharp
 class Contact
@@ -39,7 +39,7 @@ class Contact
     }
 
     // Name isn't assignable here. This will generate a compile error.
-    //public void ChangeName(string newName) => Name = newName; 
+    //public void ChangeName(string newName) => Name = newName;
 
     // Address is assignable here.
     public void ChangeAddress(string newAddress) => Address = newAddress
@@ -48,7 +48,7 @@ class Contact
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład przedstawia dwa sposoby implementacji niezmiennej klasy, która ma właściwości, które są implementowane. Każdy sposób deklaruje jedną z właściwości z prywatnym `set` i jedną z właściwości tylko z `get`.  Pierwsza klasa używa konstruktora tylko w celu zainicjowania właściwości, a druga Klasa używa metody fabryki statycznej, która wywołuje konstruktora.
+W poniższym przykładzie przedstawiono dwa sposoby implementowania niezmiennej klasy, która ma właściwości implementowane automatycznie. Każdy sposób deklaruje jedną z właściwości `set` z prywatną i jedną `get` z właściwości tylko.  Pierwsza klasa używa konstruktora tylko do inicjowania właściwości, a druga klasa używa statycznej metody fabrycznej, która wywołuje konstruktora.
 
 ```csharp
 // This class is immutable. After an object is created,
@@ -143,10 +143,10 @@ public class Program
 */
 ```
 
-Kompilator tworzy pola kopii zapasowej dla każdej automatycznie zaimplementowanej właściwości. Pola są niedostępne bezpośrednio z kodu źródłowego.
+Kompilator tworzy pola zapasowe dla każdej właściwości implementowane automatycznie. Pola nie są dostępne bezpośrednio z kodu źródłowego.
 
 ## <a name="see-also"></a>Zobacz też
 
 - [Właściwości](./properties.md)
-- [struct](../../language-reference/builtin-types/struct.md)
+- [Struct](../../language-reference/builtin-types/struct.md)
 - [Inicjatory obiektów i kolekcji](./object-and-collection-initializers.md)

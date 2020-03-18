@@ -7,56 +7,56 @@ helpviewer_keywords:
 - managed threading
 ms.assetid: 7b46a7d9-c6f1-46d1-a947-ae97471bba87
 ms.openlocfilehash: d6b8a0a4e16aa3169888958fa1376bfa61526dbd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73137929"
 ---
 # <a name="managed-threading"></a>Zarządzana wątkowość
-Niezależnie od tego, czy tworzysz komputery z jednym procesorem, czy kilka, chcesz, aby aplikacja zapewniała najbardziej reagującą interakcję z użytkownikiem, nawet jeśli aplikacja wykonuje obecnie inne czynności. Korzystanie z wielu wątków wykonywania to jeden z najbardziej zaawansowanych sposobów, aby aplikacja mogła reagować na użytkownika, i w tym samym czasie używa procesora w okresie między lub nawet podczas zdarzeń użytkownika. W tej sekcji przedstawiono podstawowe pojęcia związane z wątkami, które koncentrują się na zarządzanych pojęciach związanych z wątkami i korzystaniu z zarządzanych wątków.  
+Niezależnie od tego, czy tworzysz komputery z jednym procesorem, czy kilkoma, aplikacja ma zapewniać najbardziej responsywną interakcję z użytkownikiem, nawet jeśli aplikacja wykonuje obecnie inną pracę. Przy użyciu wielu wątków wykonywania jest jednym z najbardziej zaawansowanych sposobów, aby utrzymać aplikację reaguje na użytkownika i jednocześnie korzystać z procesora pomiędzy lub nawet podczas zdarzeń użytkownika. Podczas gdy w tej sekcji wprowadza podstawowe pojęcia wątków, koncentruje się na zarządzanych wątków i przy użyciu zarządzanych wątków.  
   
 > [!NOTE]
-> Począwszy od .NET Framework 4, programowanie wielowątkowe jest znacznie uproszczone przy użyciu klas <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md), nowych klas kolekcji współbieżnych w przestrzeni nazw <xref:System.Collections.Concurrent?displayProperty=nameWithType> i nowego modelu programowania na podstawie koncepcji zadań, a nie wątków. Aby uzyskać więcej informacji, zobacz [programowanie równoległe](../../../docs/standard/parallel-programming/index.md).  
+> Począwszy od .NET Framework 4, programowanie wielowątkowe <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> jest znacznie uproszczone za pomocą i klas, Parallel <xref:System.Collections.Concurrent?displayProperty=nameWithType> [LINQ (PLINQ),](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)nowych klas kolekcji równoczesnych w przestrzeni nazw i nowego modelu programowania, który jest oparty na koncepcji zadań, a nie wątków. Aby uzyskać więcej informacji, zobacz [Programowanie równoległe](../../../docs/standard/parallel-programming/index.md).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Zarządzana wątkowość — podstawy](../../../docs/standard/threading/managed-threading-basics.md)  
- Zawiera omówienie zarządzania wątkami i omówiono, kiedy należy używać wielu wątków.  
+ Zawiera omówienie zarządzanych wątków i omówiono, kiedy należy używać wielu wątków.  
   
- [Używanie wątków i wątkowości](../../../docs/standard/threading/using-threads-and-threading.md)  
- Wyjaśnia, jak tworzyć, uruchamiać, wstrzymywać, wznawiać i przerywać wątki.  
+ [Korzystanie z wątków i wątków](../../../docs/standard/threading/using-threads-and-threading.md)  
+ W tym artykule wyjaśniono, jak tworzyć, uruchamiać, wstrzymywać, wznawiać i przerywać wątki.  
   
  [Zarządzana wątkowość — najlepsze rozwiązania](../../../docs/standard/threading/managed-threading-best-practices.md)  
- Omawia poziomy synchronizacji, sposób unikania zakleszczenii i warunków wyścigu oraz inne problemy z wątkami.  
+ W tym artykule omówiono poziomy synchronizacji, jak uniknąć zakleszczenia i warunków wyścigu i innych problemów wątków.  
   
- [Wątkowość obiektów i funkcji](../../../docs/standard/threading/threading-objects-and-features.md)  
- Opisuje zarządzane klasy, których można użyć do synchronizowania działań wątków i danych obiektów, do których dostęp odbywa się w różnych wątkach i zawiera Omówienie wątków puli wątków.  
+ [Wątkowe obiekty i operacje](../../../docs/standard/threading/threading-objects-and-features.md)  
+ Opisuje klasy zarządzane, których można użyć do synchronizacji działań wątków i danych obiektów dostępnych w różnych wątkach i zawiera omówienie wątków puli wątków.  
   
-## <a name="reference"></a>Tematy pomocy  
+## <a name="reference"></a>Dokumentacja  
  <xref:System.Threading>  
- Zawiera klasy służące do korzystania z i synchronizowania zarządzanych wątków.  
+ Zawiera klasy do używania i synchronizowania wątków zarządzanych.  
   
  <xref:System.Collections.Concurrent>  
  Zawiera klasy kolekcji, które są bezpieczne do użytku z wieloma wątkami.  
   
  <xref:System.Threading.Tasks>  
- Zawiera klasy służące do tworzenia i planowania współbieżnych zadań przetwarzania.  
+ Zawiera klasy do tworzenia i planowania równoczesnych zadań przetwarzania.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Domeny aplikacji](../../../docs/framework/app-domains/application-domains.md)  
- Zawiera omówienie domen aplikacji i ich użycia przez Common Language Infrastructure.  
+ Zawiera omówienie domen aplikacji i ich używania przez infrastrukturę języka wspólnego.  
   
- [Asynchroniczne operacje We/Wy pliku](../../../docs/standard/io/asynchronous-file-i-o.md)  
+ [Asynchroniczne We/Wy pliku](../../../docs/standard/io/asynchronous-file-i-o.md)  
  Opis korzyści związanych z wydajnością oraz podstawowych asynchronicznych operacji We/Wy.  
   
  [Wzorzec asynchroniczny oparty na zadaniach (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)  
- Zawiera omówienie zalecanego wzorca dla programowania asynchronicznego w programie .NET.  
+ Zawiera omówienie zalecanego wzorca programowania asynchronicznego w programie .NET.  
   
- [Wywoływanie metod synchronicznych w sposób asynchroniczny](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)  
- Wyjaśnia, jak wywoływać metody w wątkach puli wątków przy użyciu wbudowanych funkcji delegatów.  
+ [Wywołanie metod synchronicznych w sposób asynchroniczny](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)  
+ W tym artykule wyjaśniono, jak wywoływać metody w wątkach puli wątków przy użyciu wbudowanych funkcji delegatów.  
   
  [Programowanie równoległe](../../../docs/standard/parallel-programming/index.md)  
- Opisuje równoległe biblioteki programistyczne, które upraszczają korzystanie z wielu wątków w aplikacjach.  
+ Opisuje równoległe biblioteki programowania, które upraszczają korzystanie z wielu wątków w aplikacjach.  
   
  [Równoległe LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
- Opisuje system uruchamiania zapytań równolegle, aby korzystać z wielu procesorów.
+ W tym artykule opisano system do uruchamiania kwerend równolegle, aby skorzystać z wielu procesorów.

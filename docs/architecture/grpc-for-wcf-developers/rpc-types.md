@@ -1,36 +1,36 @@
 ---
-title: Typy RPC-gRPC dla deweloperów WCF
-description: Przegląd typów zdalnego wywołania procedury obsługiwanego przez program WCF i ich odpowiedników w gRPC
+title: Rodzaje RPC - gRPC dla programistów WCF
+description: Przegląd rodzajów zdalnego wywołania procedury obsługiwane przez WCF i ich odpowiedniki w gRPC
 ms.date: 09/02/2019
-ms.openlocfilehash: 58f097bac61395e6810155e8ae9a6bbf2219ec5e
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: b9d4ce7cae693ed7904229483cbccfe3b299b640
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503442"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401684"
 ---
 # <a name="types-of-rpc"></a>Typy zdalnych wywołań procedur
 
-Jako deweloper Windows Communication Foundation (WCF) prawdopodobnie używasz następujących typów zdalnego wywołania procedury (RPC):
+Jako deweloper Windows Communication Foundation (WCF) prawdopodobnie jesteś przyzwyczajony do obsługi następujących typów wywołań procedury zdalnej (RPC):
 
-- Żądanie/odpowiedź
-- Stron
-  - Jednokierunkowa dupleks z sesją
+- Prośba/odpowiedź
+- Dupleksu:
+  - Dwupoziomowy sposób jednokierunkowy z sesją
   - Pełny dupleks z sesją
 - Jednokierunkowe
 
-Istnieje możliwość mapowania tych typów RPC w sposób naturalny do istniejących koncepcji gRPC. W tym rozdziale zaobserwuje się każdy z tych obszarów z kolei. [Rozdział 5](migrate-wcf-to-grpc.md) będzie eksplorować podobne przykłady na większym poziomie.
+Istnieje możliwość mapowania tych typów RPC dość naturalnie do istniejących koncepcji gRPC. W tym rozdziale przyjrzymy się z kolei każdemu z tych obszarów. [W rozdziale 5](migrate-wcf-to-grpc.md) zostaną szczegółowo zbadane podobne przykłady.
 
 | WCF | gRPC |
 | --- | ---- |
-| Regularne żądanie/odpowiedź | Jednostk |
-| Usługa dupleksowa z sesją przy użyciu interfejsu wywołania zwrotnego klienta | Przesyłanie strumieniowe serwera |
-| Usługa pełnego dupleksu z sesją | Przesyłanie strumieniowe dwukierunkowe |
+| Regularne żądanie/odpowiedź | Jednoargumentowy |
+| Usługa dupleksu z sesją przy użyciu interfejsu wywołania odwróconego klienta | Przesyłanie strumieniowe serwera |
+| Pełna usługa dupleksu z sesją | Dwukierunkowe przesyłanie strumieniowe |
 | Operacje jednokierunkowe | Przesyłanie strumieniowe klienta |
 
-## <a name="requestreply"></a>Żądanie/odpowiedź
+## <a name="requestreply"></a>Prośba/odpowiedź
 
-W przypadku prostych metod żądania/odpowiedzi, które pobierają i zwracają małe ilości danych, należy użyć najprostszego wzorca gRPC, jednoargumentowego wywołania RPC.
+W przypadku prostych metod żądania/odpowiedzi, które przyjmują i zwracają niewielkie ilości danych, użyj najprostszego wzorca gRPC, unary RPC.
 
 ```protobuf
 service Things {
@@ -57,21 +57,21 @@ public async Task ShowThing(int thingId)
 }
 ```
 
-Jak widać, implementacja metody gRPC jednoargumentowej usługi RPC jest podobna do implementowania operacji WCF. Różnica polega na tym, że za pomocą gRPC zastępuje metodę klasy bazowej zamiast implementować interfejs. Na serwerze gRPC metody podstawowe zawsze zwracają <xref:System.Threading.Tasks.Task%601>, chociaż klient zapewnia metody asynchroniczne i blokowane do wywoływania usługi.
+Jak widać, implementowanie metody usługi RPC unary gRPC jest podobny do implementowania operacji WCF. Różnica polega na tym, że w przypadku gRPC można zastąpić metodę klasy podstawowej zamiast implementować interfejs. Na serwerze metody podstawowe gRPC <xref:System.Threading.Tasks.Task%601>zawsze zwracają , chociaż klient udostępnia zarówno metody asynchroniczne, jak i blokujące wywołanie usługi.
 
-## <a name="wcf-duplex-one-way-to-client"></a>Technologia WCF — wiele sposobów na klienta
+## <a name="wcf-duplex-one-way-to-client"></a>Dupleks WCF, jeden sposób na klienta
 
-Aplikacje WCF (z określonymi powiązaniami) mogą utworzyć trwałe połączenie między klientem a serwerem. Serwer może asynchronicznie wysyłać dane do klienta do momentu zamknięcia połączenia przy użyciu *interfejsu wywołania zwrotnego* określonego we właściwości <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType>.
+Aplikacje WCF (z pewnymi powiązaniami) można utworzyć trwałe połączenie między klientem a serwerem. Serwer może asynchronicznie wysyłać dane do klienta, dopóki połączenie nie zostanie zamknięte, przy użyciu *interfejsu wywołania odwróconego* określonego we <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> właściwości.
 
-usługi gRPC Services zapewniają podobną funkcjonalność przy użyciu strumieni komunikatów. Strumienie nie mapują *dokładnie* na usługi WCF w warunkach implementacji, ale można osiągnąć te same wyniki.
+Usługi gRPC zapewniają podobną funkcjonalność ze strumieniami wiadomości. Strumienie nie *mapują dokładnie* do usług dupleksu WCF pod względem implementacji, ale można osiągnąć te same wyniki.
 
-### <a name="grpc-streaming"></a>gRPC Streaming
+### <a name="grpc-streaming"></a>przesyłanie strumieniowe gRPC
 
-Program gRPC obsługuje tworzenie strumieni trwałych z klienta na serwer oraz z serwera na klienta. Oba typy strumieni mogą być jednocześnie aktywne. Ta możliwość nazywa się przesyłaniem dwukierunkowym. 
+gRPC obsługuje tworzenie strumieni trwałych z klienta na serwer i z serwera na klienta. Oba typy strumienia mogą być aktywne jednocześnie. Ta zdolność jest nazywana dwukierunkowym przesyłaniem strumieniowym.
 
-Strumieni można używać w przypadku dowolnej asynchronicznej obsługi komunikatów w czasie. Można też użyć ich do przekazywania dużych zestawów danych, które są zbyt duże, aby generować i wysyłać w ramach pojedynczego żądania lub odpowiedzi.
+Strumieni można używać do dowolnego, asynchronicznego przesyłania wiadomości w czasie. Lub można ich używać do przekazywania dużych zestawów danych, które są zbyt duże, aby wygenerować i wysłać w jednym żądaniu lub odpowiedzi.
 
-W poniższym przykładzie pokazano serwer-Streaming RPC.
+W poniższym przykładzie przedstawiono serwer-streaming RPC.
 
 ```protobuf
 service ClockStreamer {
@@ -96,7 +96,7 @@ public class ClockStreamerService : ClockStreamer.ClockStreamerBase
 }
 ```
 
-Ten strumień serwera może być używany z aplikacji klienckiej, jak pokazano w poniższym kodzie:
+Ten strumień serwera może być używany z aplikacji klienckiej, jak pokazano w następującym kodzie:
 
 ```csharp
 public async Task TellTheTimeAsync(CancellationToken token)
@@ -115,19 +115,19 @@ public async Task TellTheTimeAsync(CancellationToken token)
 ```
 
 > [!NOTE]
-> Serwer — wywołania RPC przesyłania strumieniowego są przydatne w przypadku usług w stylu subskrypcji. Są one również przydatne do wysyłania dużych zestawów danych, gdy byłyby one niewydajne lub niemożliwe do skompilowania całego DataSet w pamięci. Jednak odpowiedzi na przesyłanie strumieniowe nie są tak szybkie jak wysyłanie `repeated` pól w pojedynczym komunikacie. Jako reguła nie należy używać przesyłania strumieniowego dla małych zestawów danych.
+> RPC przesyłania strumieniowego serwera są przydatne w przypadku usług w stylu subskrypcji. Są one również przydatne do wysyłania dużych zestawów danych, gdy byłoby nieefektywne lub niemożliwe do utworzenia całego zestawu danych w pamięci. Jednak odpowiedzi przesyłania strumieniowego nie `repeated` jest tak szybki, jak wysyłanie pól w jednej wiadomości. Z reguły przesyłania strumieniowego nie powinny być używane dla małych zestawów danych.
 
-### <a name="differences-from-wcf"></a>Różnice w programie WCF
+### <a name="differences-from-wcf"></a>Różnice od WCF
 
-Usługa WCF Duplex korzysta z interfejsu wywołania zwrotnego klienta, który może mieć wiele metod. Serwer gRPC — usługa przesyłania strumieniowego może wysyłać komunikaty tylko przez jeden strumień. Jeśli potrzebujesz wielu metod, użyj typu komunikatu z [dowolnym polem lub jednym z pól](protobuf-any-oneof.md) , aby wysłać różne komunikaty, a następnie napisz kod w kliencie, aby je obsłużyć.
+Usługa dupleksu WCF używa interfejsu wywołania odwróconego klienta, który może mieć wiele metod. Usługa przesyłania strumieniowego serwera gRPC może wysyłać wiadomości tylko za pomocą jednego strumienia. Jeśli potrzebujesz wielu metod, użyj typu wiadomości z [dowolnym polem lub jednym z pól,](protobuf-any-oneof.md) aby wysyłać różne wiadomości i napisać kod w kliencie, aby je obsłużyć.
 
-W programie WCF Klasa [ServiceContract](xref:System.ServiceModel.ServiceContractAttribute) z sesją jest utrzymywana do momentu zamknięcia połączenia. W ramach sesji można wywołać wiele metod. W gRPC, `Task`, że metoda implementacji zwraca nie należy kończyć do momentu zamknięcia połączenia.
+W WCF [ServiceContract](xref:System.ServiceModel.ServiceContractAttribute) klasy z sesji jest utrzymywana przy życiu, dopóki połączenie jest zamknięte. Wiele metod można wywołać w ramach sesji. W gRPC, `Task` że zwraca metodę implementacji nie należy kończyć, dopóki połączenie zostanie zamknięte.
 
-## <a name="wcf-one-way-operations-and-grpc-client-streaming"></a>Operacje jednokierunkowe w programie WCF i gRPC Streaming klienta
+## <a name="wcf-one-way-operations-and-grpc-client-streaming"></a>Operacje jednokierunkowe WCF i przesyłanie strumieniowe klienta gRPC
 
-Funkcja WCF oferuje jednokierunkowe operacje (oznaczone `[OperationContract(IsOneWay = true)]`), które zwracają potwierdzenie specyficzne dla transportu. metody usługi gRPC zawsze zwracają odpowiedź, nawet jeśli są puste. Klient zawsze powinien oczekiwać na tę odpowiedź. W przypadku stylu "Uruchom i zapomnij" komunikatów w programie gRPC można utworzyć usługę przesyłania strumieniowego klienta.
+WCF zapewnia operacje jednokierunkowe `[OperationContract(IsOneWay = true)]`(oznaczone) które zwracają potwierdzenie specyficzne dla transportu. Metody serwisu gRPC zawsze zwracają odpowiedź, nawet jeśli jest pusta. Klient powinien zawsze oczekiwać na tę odpowiedź. W przypadku stylu "fire-and-forget" wiadomości w gRPC można utworzyć usługę przesyłania strumieniowego klienta.
 
-### <a name="thing_logproto"></a>thing_log. proto
+### <a name="thing_logproto"></a>thing_log.proto
 
 ```protobuf
 service ThingLog {
@@ -189,13 +189,13 @@ public class ThingLogger : IAsyncDisposable
 }
 ```
 
-Możesz użyć wywołań RPC przesyłania strumieniowego klienta na potrzeby obsługi komunikatów w przypadku uruchamiania i zapomnień, jak pokazano w poprzednim przykładzie. Można ich również użyć do wysyłania bardzo dużych zestawów danych do serwera. To samo ostrzeżenie o wydajności dotyczy: w przypadku mniejszych zestawów danych Użyj `repeated` pól w zwykłych wiadomościach.
+Do obsługi komunikatów fire-and-forget można używać strumieniowania klientów do obsługi komunikatów fire-and-forget, jak pokazano w poprzednim przykładzie. Można ich również używać do wysyłania bardzo dużych zestawów danych do serwera. Dotyczy to samo ostrzeżenie dotyczące wydajności: w `repeated` przypadku mniejszych zestawów danych należy używać pól w zwykłych wiadomościach.
 
-## <a name="wcf-full-duplex-services"></a>Usługi WCF Full-Duplex
+## <a name="wcf-full-duplex-services"></a>Usługi pełnego dupleksu WCF
 
-Powiązanie dupleksowe WCF obsługuje wiele operacji jednokierunkowych w interfejsie usługi i interfejsie wywołania zwrotnego klienta. Ta obsługa umożliwia ciągłe konwersacje między klientem i serwerem. gRPC obsługuje coś podobnego do dwukierunkowych wywołań RPC przesyłania strumieniowego, gdzie oba parametry są oznaczone modyfikatorem `stream`.
+Powiązanie dupleksu WCF obsługuje wiele operacji jednokierunkowych zarówno w interfejsie usługi, jak i w interfejsie wywołania wywołania przez klienta. Ta obsługa umożliwia ciągłe konwersacje między klientem a serwerem. gRPC obsługuje coś podobnego z dwukierunkowymi strumieniowymi rpc, `stream` gdzie oba parametry są oznaczone modyfikatorem.
 
-### <a name="chatproto"></a>Chat. proto
+### <a name="chatproto"></a>czat.proto
 
 ```protobuf
 service Chatter {
@@ -228,9 +228,9 @@ public class ChatterService : Chatter.ChatterBase
 }
 ```
 
-W poprzednim przykładzie widać, że metoda implementacji odbiera strumień żądania (`IAsyncStreamReader<MessageRequest>`) i strumień odpowiedzi (`IServerStreamWriter<MessageResponse>`). Metoda może odczytywać i zapisywać komunikaty do momentu zamknięcia połączenia.
+W poprzednim przykładzie widać, że metoda implementacji odbiera`IAsyncStreamReader<MessageRequest>`zarówno strumień żądania`IServerStreamWriter<MessageResponse>`( ) i strumień odpowiedzi ( ). Metoda może odczytywać i zapisywać wiadomości, dopóki połączenie nie zostanie zamknięte.
 
-### <a name="chatter-client"></a>Klient rozmawiający
+### <a name="chatter-client"></a>Klient chatter
 
 ```csharp
 public class Chat : IAsyncDisposable
@@ -271,5 +271,5 @@ public class Chat : IAsyncDisposable
 ```
 
 >[!div class="step-by-step"]
->[Poprzednie](wcf-bindings.md)
->[dalej](metadata.md)
+>[Poprzedni](wcf-bindings.md)
+>[następny](metadata.md)

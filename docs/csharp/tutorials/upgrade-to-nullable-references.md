@@ -1,66 +1,66 @@
 ---
-title: Uaktualnij do typów referencyjnych dopuszczających wartość null
-description: W tym zaawansowanym samouczku pokazano, jak migrować istniejący kod z typami referencyjnymi nullable.
+title: Uaktualnianie do typów odwołań z możliwością null
+description: Ten zaawansowany samouczek pokazuje, jak przeprowadzić migrację istniejącego kodu za pomocą typów odwołań z możliwością null.
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: 38619f9efa5da1f9b3264b3d4240103f0869afea
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 9767493059623e770cc100b83b9284e8d0bdf0f8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78240031"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156457"
 ---
-# <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Samouczek: Migrowanie istniejącego kodu z typami referencyjnymi Nullable
+# <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Samouczek: Migracja istniejącego kodu za pomocą typów odwołań podlegających wartości null
 
-C#8 wprowadza **typy odwołań do wartości null**, które uzupełniają typy odwołań w taki sam sposób, jak typy wartości null uzupełniają typy wartości. Należy zadeklarować zmienną jako **typ referencyjny dopuszczający wartość null** poprzez dołączenie `?` do typu. Na przykład `string?` reprezentuje `string`dopuszczające wartość null. Możesz użyć tych nowych typów, aby dokładniej wyznaczać intencje projektowania: niektóre zmienne *muszą zawsze mieć wartość*, inne *mogą nie mieć wartości*. Wszystkie istniejące zmienne typu referencyjnego byłyby interpretowane jako typ referencyjny, który nie dopuszcza wartości null. 
+C# 8 wprowadza **typy odwołań nullable**, które uzupełniają typy odwołań w ten sam sposób typy wartości null douzupełnienia typów wartości. Deklarujesz zmienną jako typ odwołania z `?` **wartością null,** dołączając do typu. Na przykład `string?` reprezentuje nullable `string`. Można użyć tych nowych typów, aby wyraźniej wyrazić intencję projektu: niektóre zmienne *muszą zawsze mieć wartość,* inne *mogą brakować wartości.* Wszelkie istniejące zmienne typu odwołania będą interpretowane jako typ odwołania niepodlegający null.
 
 Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
 
 > [!div class="checklist"]
 >
-> - Włącz sprawdzanie odwołań o wartości null podczas pracy z kodem.
-> - Diagnozuj i popraw różne ostrzeżenia związane z wartościami null.
-> - Zarządzaj interfejsem pomiędzy włączonymi do dopuszczania wartości null a niedozwolonymi kontekstami.
-> - Kontrolowanie kontekstów adnotacji dopuszczających wartość null.
+> - Włącz sprawdzanie odwołań zerowych podczas pracy z kodem.
+> - Diagnozowanie i poprawianie różnych ostrzeżeń związanych z wartościami null.
+> - Zarządzanie interfejsem między kontekstami wyłączonymi z możliwością null a kontekstami wyłączonymi z możliwością null.
+> - Kontroluj konteksty adnotacji nullable.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Musisz skonfigurować maszynę do uruchamiania programu .NET Core, w tym kompilatora C# 8,0. C# 8 kompilator jest dostępny w programie [Visual Studio 2019 w wersji 16,3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) lub [.NET Core 3,0 SDK](https://dotnet.microsoft.com/download).
+Musisz skonfigurować komputer do uruchamiania .NET Core, w tym kompilator C# 8.0. Kompilator C# 8 jest dostępny począwszy od [programu Visual Studio 2019 w wersji 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) lub [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download).
 
-W C# tym samouczku założono, że wiesz już, jak i .NET, w tym Visual Studio lub interfejs wiersza polecenia platformy .NET Core.
+W tym samouczku przyjęto założenie, że znasz c# i .NET, w tym visual studio lub .NET Core CLI.
 
-## <a name="explore-the-sample-application"></a>Eksplorowanie przykładowej aplikacji
+## <a name="explore-the-sample-application"></a>Poznaj przykładową aplikację
 
-Przeprowadzona Przykładowa aplikacja jest aplikacją internetową czytnika kanału informacyjnego RSS. Odczytuje z pojedynczego kanału informacyjnego RSS i wyświetla podsumowania dla najnowszych artykułów. Aby odwiedzić witrynę, możesz wybrać dowolny z tych artykułów. Aplikacja jest stosunkowo nowa, ale została zapisywana przed udostępnieniem typów referencyjnych dopuszczających wartości null. Decyzje projektowe dotyczące zasad dotyczących dźwięku reprezentowane przez aplikację, ale nie korzystają z tej ważnej funkcji języka.
+Przykładowa aplikacja, która zostanie migrowana jest aplikacją sieci web czytnik aplikacyjny rss. Odczytuje z jednego kanału RSS i wyświetla podsumowania najnowszych artykułów. Możesz wybrać dowolny z artykułów, aby odwiedzić witrynę. Aplikacja jest stosunkowo nowy, ale został napisany przed nullable typy odwołań były dostępne. Decyzje projektowe dla aplikacji reprezentowały solidne zasady, ale nie korzystaj z tej ważnej funkcji języka.
 
-Przykładowa aplikacja zawiera bibliotekę testów jednostkowych, która sprawdza poprawność głównych funkcji aplikacji. Ten projekt ułatwi bezpieczne uaktualnienie, jeśli zmienisz dowolną implementację w oparciu o wygenerowane ostrzeżenia. Możesz pobrać kod początkowy z repozytorium usługi GitHub [/przykłady](https://github.com/dotnet/samples/tree/master/csharp/tutorials/nullable-reference-migration/start) .
+Przykładowa aplikacja zawiera bibliotekę testów jednostkowych, która sprawdza poprawność głównych funkcji aplikacji. Ten projekt ułatwi bezpieczne uaktualnienie, jeśli zmienisz dowolną implementację na podstawie wygenerowanych ostrzeżeń. Kod startowy można pobrać z repozytorium GitHub/sample.You can download the starter code from the [dotnet/samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/nullable-reference-migration/start) GitHub repository.
 
-Celem migrowania projektu powinna być skorzystanie z nowych funkcji języka, aby wyraźnie wyrażać intencję do wartości null zmiennych, a tym samym w taki sposób, aby kompilator nie generował ostrzeżeń w przypadku, gdy użytkownik ma kontekst adnotacji z wartością null i `enabled`kontekst ostrzeżenia dopuszczający wartość null.
+Celem migracji projektu powinno być wykorzystanie nowych funkcji języka, dzięki czemu wyraźnie wyrazić zamiar na nullability zmiennych i zrobić to w taki sposób, że kompilator nie generuje ostrzeżenia, gdy masz nullable kontekstu adnotacji i nullable kontekście ostrzeżenie ustawione na `enabled`.
 
-## <a name="upgrade-the-projects-to-c-8"></a>Uaktualnij projekty do C# 8
+## <a name="upgrade-the-projects-to-c-8"></a>Uaktualnianie projektów do języka C# 8
 
-Dobrym pierwszym krokiem jest określenie zakresu zadania migracji. Zacznij od uaktualnienia projektu do C# 8,0 (lub nowszego). Dodaj element `LangVersion` do właściwości Property w obu plikach csproj dla projektu sieci Web i projektu testów jednostkowych:
+Dobrym pierwszym krokiem jest określenie zakresu zadania migracji. Rozpocznij od uaktualnienia projektu do języka C# 8.0 (lub nowszego). Dodaj `LangVersion` element do PropertyGroup zarówno w plikach csproj dla projektu sieci web, jak i w projekcie testu jednostkowego:
 
 ```xml
 <LangVersion>8.0</LangVersion>
 ```
 
-Uaktualnienie wersji językowej powoduje C# wybranie 8,0, ale nie włączenie kontekstu adnotacji nullable ani kontekstu ostrzeżenia o wartości null. Skompiluj ponownie projekt, aby upewnić się, że kompiluje się bez ostrzeżeń.
+Uaktualnianie wersji językowej wybiera C# 8.0, ale nie włącza nullable kontekstu adnotacji lub nullable kontekście ostrzeżenia. Odbudować projekt, aby upewnić się, że buduje bez ostrzeżeń.
 
-Dobrym następnym krokiem jest włączenie kontekstu adnotacji nullable i zobacz, ile ostrzeżeń jest generowanych. Dodaj następujący element do obu plików csproj w rozwiązaniu bezpośrednio pod elementem `LangVersion`:
+Dobrym następnym krokiem jest włączenie kontekstu adnotacji nullable i zobaczyć, ile ostrzeżenia są generowane. Dodaj następujący element do obu plików csproj w `LangVersion` rozwiązaniu, bezpośrednio pod elementem:
 
 ```xml
 <Nullable>enable</Nullable>
 ```
 
-Wykonaj kompilację testową i zwróć uwagę na listę ostrzeżeń. W tej małej aplikacji kompilator generuje pięć ostrzeżeń, więc prawdopodobnie pozostawisz kontekst adnotacji z dopuszczaniem wartości null i Rozpocznij naprawianie ostrzeżeń dla całego projektu.
+Wykonaj kompilację testową i zwróć uwagę na listę ostrzeżeń. W tej małej aplikacji kompilator generuje pięć ostrzeżeń, więc prawdopodobnie pozostawisz włączony kontekst adnotacji z możliwością null i rozpocząć naprawianie ostrzeżeń dla całego projektu.
 
-Ta strategia działa tylko w przypadku mniejszych projektów. W przypadku większych projektów liczba ostrzeżeń generowanych przez włączenie kontekstu adnotacji dopuszczających wartość null dla całej bazy kodu utrudnia systematyczne Rozwiązywanie ostrzeżeń. W przypadku większych projektów przedsiębiorstwa często zajdzie potrzeba migracji jednego projektu jednocześnie. W każdym projekcie Przeprowadź migrację jednej klasy lub pliku jednocześnie.
+Strategia ta działa tylko w przypadku mniejszych projektów. Dla większych projektów liczba ostrzeżeń generowanych przez włączenie kontekstu adnotacji nullable dla całej bazy kodu utrudnia systematyczne naprawianie ostrzeżeń. W przypadku większych projektów korporacyjnych często chcesz przeprowadzić migrację jednego projektu naraz. W każdym projekcie migruj jedną klasę lub plik naraz.
 
-## <a name="warnings-help-discover-original-design-intent"></a>Ostrzeżenia ułatwiają odnajdywanie oryginalnego zamiaru projektu
+## <a name="warnings-help-discover-original-design-intent"></a>Ostrzeżenia pomagają odkryć oryginalne intencje projektu
 
-Istnieją dwie klasy, które generują wiele ostrzeżeń. Zacznij od klasy `NewsStoryViewModel`. Usuń element `Nullable` z obu plików csproj, aby ograniczyć zakres ostrzeżeń do sekcji kodu, z którym pracujesz. Otwórz plik *NewsStoryViewModel.cs* i Dodaj następujące dyrektywy, aby włączyć kontekst adnotacji dopuszczający wartość null dla `NewsStoryViewModel` i przywrócić go po tej definicji klasy:
+Istnieją dwie klasy, które generują wiele ostrzeżeń. Zacznij od `NewsStoryViewModel` klasy. Usuń `Nullable` element z obu plików csproj, dzięki czemu można ograniczyć zakres ostrzeżeń do sekcji kodu, z którymi pracujesz. Otwórz *plik NewsStoryViewModel.cs* i dodaj następujące dyrektywy, aby włączyć kontekst `NewsStoryViewModel` adnotacji nullable dla i przywrócić go zgodnie z tą definicją klasy:
 
 ```csharp
 #nullable enable
@@ -73,17 +73,17 @@ public class NewsStoryViewModel
 #nullable restore
 ```
 
-Te dwie dyrektywy pomagają skupić się na zadaniu migracji. Ostrzeżenia dopuszczające wartość null są generowane dla obszaru kodu, nad którym pracujesz. Pozostawisz je do momentu, aż wszystko będzie gotowe do włączenia ostrzeżeń dla całego projektu. Należy używać `restore`, a nie `disable` wartości, aby uniemożliwić przypadkowe wyłączenie tego kontekstu po włączeniu adnotacji do wartości null dla całego projektu. Po włączeniu kontekstu adnotacji do wartości null dla całego projektu można usunąć wszystkie `#nullable` pragm z tego projektu.
+Te dwie dyrektywy pomagają skoncentrować swoje wysiłki migracyjne. Ostrzeżenia nullable są generowane dla obszaru kodu, nad którym aktywnie pracujesz. Pozostawisz je włączone, dopóki nie będziesz gotowy do włączeniu ostrzeżeń dla całego projektu. Należy użyć `restore` `disable` wartości, aby nie przypadkowo wyłączyć kontekst później po włączeniu adnotacji nullable dla całego projektu. Po włączeniu kontekstu adnotacji nullable dla całego projektu, można `#nullable` usunąć wszystkie pragmy z tego projektu.
 
 Klasa `NewsStoryViewModel` jest obiektem transferu danych (DTO), a dwie właściwości są ciągami odczytu/zapisu:
 
 [!code-csharp[InitialViewModel](~/samples/snippets/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/ViewModels/NewsStoryViewModel.cs#StarterViewModel)]
 
-Te dwie właściwości powodują `CS8618`"Właściwość niebędąca dopuszczaniem wartości null jest niezainicjowana". Jest to wystarczająco jasne: obie `string` właściwości mają wartość domyślną `null` podczas konstruowania `NewsStoryViewModel`. Ważne do odnajdowania to sposób konstruowania obiektów `NewsStoryViewModel`. Patrząc na tę klasę, nie można stwierdzić, czy wartość `null` jest częścią projektu lub czy te obiekty są ustawione na wartości inne niż null, gdy zostanie utworzony jeden. Historie wiadomości są tworzone w metodzie `GetNews` klasy `NewsService`:
+Te dwie właściwości `CS8618`powodują , "Właściwość niepodlegająca null jest uninitialized". To dość jasne: `string` obie właściwości mają domyślną `null` `NewsStoryViewModel` wartość, gdy a jest skonstruowany. Ważne jest, aby odkryć, jak `NewsStoryViewModel` obiekty są konstruowane. Patrząc na tę klasę, nie można `null` stwierdzić, czy wartość jest częścią projektu lub jeśli te obiekty są ustawione na wartości inne niż null, gdy jest tworzony. Wiadomości są tworzone w `GetNews` metodzie `NewsService` klasy:
 
 [!code-csharp[StarterCreateNewsItem](~/samples/snippets/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Services/NewsService.cs#CreateNewsItem)]
 
-W poprzednim bloku kodu jest już w toku. Ta aplikacja używa pakietu NuGet [automapowania](https://automapper.org/) do konstruowania elementu wiadomości z `ISyndicationItem`. Wykryto, że są konstruowane elementy historii wiadomości i właściwości są ustawiane w jednej instrukcji. Oznacza to, że projekt `NewsStoryViewModel` wskazuje, że te właściwości nigdy nie powinny mieć wartości `null`. Te właściwości powinny mieć **niezerowe typy odwołań**. To najlepiej reprezentuje pierwotny cel projektowania. W rzeczywistości wszystkie `NewsStoryViewModel` *są* poprawnie tworzone przy użyciu wartości innych niż null. Powoduje to, że następujący kod inicjujący ma prawidłową poprawkę:
+W poprzednim bloku kodu dzieje się sporo. Ta aplikacja używa [automapper](https://automapper.org/) nuget pakiet do `ISyndicationItem`konstruowania elementu wiadomości z . Odkryto, że elementy wątku wiadomości są konstruowane i właściwości są ustawione w tej jednej instrukcji. Oznacza to, że `NewsStoryViewModel` projekt wskazuje, że te `null` właściwości nigdy nie powinny mieć wartość. Właściwości te powinny być **nieunieważnionymi typami odwołań**. To najlepiej wyraża pierwotny zamiar projektu. W rzeczywistości `NewsStoryViewModel` każdy *jest* poprawnie tworzone z wartościami innych niż null. To sprawia, że następujący kod inicjalizacji prawidłową poprawkę:
 
 ```csharp
 public class NewsStoryViewModel
@@ -94,77 +94,77 @@ public class NewsStoryViewModel
 }
 ```
 
-Przypisanie `Title` i `Uri` do `default` `null` dla typu `string` nie zmienia zachowania programu w czasie wykonywania. `NewsStoryViewModel` nadal jest zbudowana z wartościami null, ale teraz kompilator nie zgłasza ostrzeżeń. **Operator łagodniejszej o wartości null**, znak `!` po wyrażeniu `default` informuje kompilator, że poprzednie wyrażenie nie ma wartości null. Ta technika może być taka, gdy inne zmiany wymuszają znacznie większe zmiany w bazie kodu, ale w tej aplikacji istnieje stosunkowo szybkie i lepsze rozwiązanie: uczyń `NewsStoryViewModel` niezmiennym typem, gdzie wszystkie właściwości są ustawiane w konstruktorze. Wprowadź następujące zmiany w `NewsStoryViewModel`:
+Przypisanie `Title` i `Uri` `default` do `null` którego `string` jest dla typu nie zmienia zachowanie wykonywania programu. Nadal `NewsStoryViewModel` jest skonstruowany z wartościami null, ale teraz kompilator zgłasza żadnych ostrzeżeń. Operator **wyrozumiały**null `!` , `default` znak następujący po wyrażeniu informuje kompilator, że poprzednie wyrażenie nie jest null. Ta technika może być celowe, gdy inne zmiany wymuszają znacznie większe zmiany do bazy kodu, ale `NewsStoryViewModel` w tej aplikacji istnieje stosunkowo szybkie i lepsze rozwiązanie: Make niezmiennego typu, gdzie wszystkie właściwości są ustawione w konstruktorze. Wyconajmi `NewsStoryViewModel`w :
 
 [!code-csharp[FinishedViewModel](~/samples/snippets/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/ViewModels/NewsStoryViewModel.cs#FinishedViewModel)]
 
-Po wykonaniu tej czynności należy zaktualizować kod, który konfiguruje automapowanie, tak aby używał konstruktora zamiast ustawiania właściwości. Otwórz `NewsService.cs` i Wyszukaj następujący kod w dolnej części pliku:
+Gdy to zrobisz, należy zaktualizować kod, który konfiguruje AutoMapper tak, aby używa konstruktora, a nie ustawienie właściwości. Otwórz `NewsService.cs` i poszukaj następującego kodu u dołu pliku:
 
 [!code-csharp[StarterAutoMapper](~/samples/snippets/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Services/NewsService.cs#ConfigureAutoMapper)]
 
-Ten kod mapuje właściwości obiektu `ISyndicationItem` na właściwości `NewsStoryViewModel`. Chcesz, aby automapowanie zapewniało mapowanie przy użyciu konstruktora. Zastąp powyższy kod następującym konfiguracją automapowania:
+Ten kod mapuje `ISyndicationItem` właściwości obiektu `NewsStoryViewModel` do właściwości. Chcesz AutoMapper, aby zapewnić mapowanie przy użyciu konstruktora zamiast. Zamień powyższy kod na następującą konfigurację automapy:
 
 [!code-csharp[FinishedViewModel](~/samples/snippets/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Services/NewsService.cs#ConfigureAutoMapper)]
 
-Zwróć uwagę, że ponieważ ta klasa jest mała i uważnie sprawdzona, należy włączyć dyrektywę `#nullable enable` powyżej tej deklaracji klasy. Zmiana w konstruktorze mogła spowodować uszkodzenie elementu, więc jest wartościowa do uruchamiania wszystkich testów i testowania aplikacji przed przechodzeniem.
+Należy zauważyć, że ponieważ ta klasa jest mała i zostały `#nullable enable` dokładnie zbadane, należy włączyć dyrektywy powyżej tej deklaracji klasy. Zmiana konstruktora mogła coś ułamać, więc warto uruchomić wszystkie testy i przetestować aplikację przed przejściem dalej.
 
-Pierwszy zestaw zmian przedstawia sposób odnajdywania, gdy oryginalny projekt wskazał, że zmienne nie powinny być ustawione na `null`. Technika jest określana jako **poprawna przez konstrukcję**. Deklaruje, że obiekt i jego właściwości nie mogą być `null`, gdy jest konstruowany. Analiza przepływu kompilatora zapewnia gwarancję, że te właściwości nie są ustawione na `null` po przygotowaniu. Należy zauważyć, że ten konstruktor jest wywoływany przez kod zewnętrzny, a ten kod **dopuszcza wartość null Oblivious**. Nowa składnia nie zapewnia sprawdzania środowiska uruchomieniowego. Kod zewnętrzny może obejść analizę przepływu kompilatora. 
+Pierwszy zestaw zmian pokazał, jak odkryć, kiedy oryginalny projekt wskazał, że `null`zmienne nie powinny być ustawione na . Technika ta jest określana jako **poprawna przez konstrukcję**. Deklarujesz, że obiekt i `null` jego właściwości nie mogą być po skonstruowaniu. Analiza przepływu kompilatora zapewnia pewność, że `null` te właściwości nie są ustawione po zakończeniu budowy. Należy zauważyć, że ten konstruktor jest wywoływana przez kod zewnętrzny, a ten kod jest **nullable oblivious**. Nowa składnia nie zapewnia sprawdzania czasu wykonywania. Kod zewnętrzny może obejść analizę przepływu kompilatora.
 
-W innych przypadkach struktura klasy zawiera różne wskazówki dotyczące zamiaru. Otwórz plik *Error.cshtml.cs* w folderze *Pages* . `ErrorViewModel` zawiera następujący kod:
+Innym razem struktura klasy zapewnia różne wskazówki do intencji. Otwórz plik *Error.cshtml.cs* w folderze *Strony.* Zawiera `ErrorViewModel` następujący kod:
 
 [!code-csharp[StarterErrorModel](~/samples/snippets/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Pages/Error.cshtml.cs#StartErrorModel)]
 
-Dodaj dyrektywę `#nullable enable` przed deklaracją klasy i `#nullable restore` dyrektywą. Otrzymasz jedno ostrzeżenie, że `RequestId` nie zostanie zainicjowany. Przeglądając klasę, należy zdecydować, że w niektórych przypadkach Właściwość `RequestId` powinna mieć wartość null. Obecność właściwości `ShowRequestId` wskazuje, że brakujące wartości są możliwe. Ponieważ `null` jest prawidłowy, Dodaj `?` do typu `string`, aby wskazać, że właściwość `RequestId` jest *typem referencyjnym dopuszczającym wartość null*. Ostatnia Klasa wygląda podobnie do poniższego przykładu:
+Dodaj `#nullable enable` dyrektywy przed deklaracją `#nullable restore` klasy i dyrektywy po nim. Otrzymasz jedno ostrzeżenie, `RequestId` które nie jest inicjowane. Patrząc na klasę, należy zdecydować, że `RequestId` właściwość powinna być null w niektórych przypadkach. Istnienie `ShowRequestId` właściwości wskazuje, że brakujące wartości są możliwe. Ponieważ `null` jest `?` prawidłowy, `string` dodaj typ, `RequestId` aby wskazać, że właściwość jest *typem odwołania z wartością null*. Klasa końcowa wygląda jak w poniższym przykładzie:
 
 [!code-csharp[FinishedErrorModel](~/samples/snippets/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Pages/Error.cshtml.cs#ErrorModel)]
 
-Sprawdź, czy są używane właściwości i czy na skojarzonej stronie właściwość jest sprawdzana pod kątem wartości null przed renderowaniem w znaczniku. Jest to bezpieczne użycie typu referencyjnego dopuszczającego wartość null, więc należy wykonać tę klasę.
+Sprawdź, czy nie ma zastosowań właściwości, a zobaczysz, że na skojarzonej stronie właściwość jest sprawdzana pod kątem wartości null przed renderowaniem jej w znacznikach. Jest to bezpieczne użycie typu odwołania z wartością null, więc gotowe z tej klasy.
 
 ## <a name="fixing-nulls-causes-change"></a>Naprawianie wartości null powoduje zmianę
 
-Często poprawka jednego zestawu ostrzeżeń tworzy nowe ostrzeżenia w powiązanym kodzie. Zobaczmy ostrzeżenia w akcji, rozwiązując klasę `index.cshtml.cs`. Otwórz plik `index.cshtml.cs` i zapoznaj się z kodem. Ten plik zawiera kod związany ze stroną indeksu:
+Często poprawka dla jednego zestawu ostrzeżeń tworzy nowe ostrzeżenia w powiązanym kodzie. Zobaczmy ostrzeżenia w akcji, naprawiając `index.cshtml.cs` klasę. Otwórz `index.cshtml.cs` plik i sprawdź kod. Ten plik zawiera kod za dla strony indeksu:
 
 [!code-csharp[StarterIndexModel](~/samples/snippets/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Pages/Index.cshtml.cs#IndexModelStart)]
 
-Dodaj dyrektywę `#nullable enable`, a zobaczysz dwa ostrzeżenia. Nie zainicjowano ani właściwości `ErrorText`, ani właściwości `NewsItems`. Badanie tej klasy doprowadziłoby do tego, że obie właściwości powinny mieć typ referencyjny dopuszczający wartości null: oba mają prywatne metody ustawiające. W metodzie `OnGet` jest przypisywany dokładnie jeden. Przed wprowadzeniem zmian należy zapoznać się z użytkownikami obu właściwości. Na samej stronie `ErrorText` jest sprawdzana pod kątem wartości null przed wygenerowaniem znaczników pod kątem błędów. Kolekcje `NewsItems` są sprawdzane pod kątem `null`i sprawdzane, aby upewnić się, że kolekcja zawiera elementy. Szybką poprawką byłoby najęcie obu właściwości typów referencyjnych dopuszczających wartość null. Lepszym rozwiązaniem jest udostępnienie kolekcji jako typu referencyjnego, który nie ma wartości null, i dodanie elementów do istniejącej kolekcji przy pobieraniu wiadomości. Pierwszą poprawkę jest dodanie `?` do typu `string` dla `ErrorText`:
+Dodaj `#nullable enable` dyrektywę, a zobaczysz dwa ostrzeżenia. Ani właściwość, `ErrorText` ani `NewsItems` właściwość nie są inicjowane. Badanie tej klasy prowadzi do przekonania, że obie właściwości powinny być typy odwołań nullable: Oba mają private setters. Dokładnie jeden jest przypisany w metodzie. `OnGet` Przed wprowadzeniem zmian, spójrz na konsumentów obu właściwości. Na samej stronie `ErrorText` jest sprawdzana na null przed wygenerowaniem znaczników dla błędów. Kolekcja `NewsItems` jest sprawdzana `null`i sprawdzana, aby upewnić się, że kolekcja ma przedmioty. Szybka poprawka będzie, aby obie właściwości nullable typy odwołań. Lepszą poprawką byłoby uczynienie kolekcji typem odwołania nieunieważnialnym i dodawanie elementów do istniejącej kolekcji podczas pobierania wiadomości. Pierwszą poprawką jest `?` dodanie `string` do `ErrorText`typu :
 
 [!code-csharp[UpdateErrorText](~/samples/snippets/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Pages/Index.cshtml.cs#UpdateErrorText)]
 
-Ta zmiana nie będzie miała wpływu na inny kod, ponieważ każdy dostęp do właściwości `ErrorText` został już chroniony przez sprawdzanie wartości null. Następnie zainicjuj listę `NewsItems` i Usuń metodę ustawiającą właściwość, ustawiając ją jako właściwość tylko do odczytu:
+Ta zmiana nie będzie tętnić przez inny `ErrorText` kod, ponieważ każdy dostęp do właściwości był już strzeżony przez kontrole zerowe. Następnie zainicjować `NewsItems` listę i usunąć setter właściwości, co czyni go readonly właściwość:
 
 [!code-csharp[InitializeNewsItems](~/samples/snippets/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Pages/Index.cshtml.cs#InitializeNewsItems)]
 
-Naprawiono ostrzeżenie, ale wprowadzono błąd. Lista `NewsItems` jest teraz **poprawna przez konstrukcję**, ale kod ustawiający listę w `OnGet` musi ulec zmianie, aby pasował do nowego interfejsu API. Zamiast przypisania, wywołaj `AddRange`, aby dodać elementy wiadomości do istniejącej listy:
+To naprawił ostrzeżenie, ale wprowadzono błąd. Lista `NewsItems` jest teraz **poprawna według konstrukcji,** ale `OnGet` kod, który ustawia listę, musi zostać zmienił, aby pasował do nowego interfejsu API. Zamiast przypisania, `AddRange` zadzwoń, aby dodać elementy wiadomości do istniejącej listy:
 
 [!code-csharp[AddRange](~/samples/snippets/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Pages/Index.cshtml.cs#AddRange)]
 
-Użycie `AddRange` zamiast przypisania oznacza, że metoda `GetNews` może zwrócić `IEnumerable` zamiast `List`. Powoduje to zapisanie jednej alokacji. Zmień podpis metody i Usuń wywołanie `ToList`, jak pokazano w następującym przykładzie kodu:
+Użycie `AddRange` zamiast przypisania oznacza, że `GetNews` `IEnumerable` metoda może `List`zwrócić zamiast . To oszczędza jedną alokację. Zmień podpis metody i usuń `ToList` wywołanie, jak pokazano w poniższym przykładzie kodu:
 
 [!code-csharp[GetNews](~/samples/snippets/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Services/NewsService.cs#GetNewsFinished)]
 
-Zmiana podpisu spowoduje również przerwanie jednego z testów. Otwórz plik `NewsServiceTests.cs` w folderze `Services` projektu `SimpleFeedReader.Tests`. Przejdź do testu `Returns_News_Stories_Given_Valid_Uri` i Zmień typ zmiennej `result` na `IEnumerable<NewsItem>`. Zmiana typu oznacza, że właściwość `Count` nie jest już dostępna, więc Zastąp Właściwość `Count` w `Assert` z wywołaniem do `Any()`:
+Zmiana podpisu przerywa również jeden z testów. Otwórz `NewsServiceTests.cs` plik w `Services` folderze `SimpleFeedReader.Tests` projektu. Przejdź do `Returns_News_Stories_Given_Valid_Uri` testu i zmień `result` typ `IEnumerable<NewsItem>`zmiennej na . Zmiana typu `Count` oznacza, że właściwość nie jest `Count` już `Assert` dostępna, więc `Any()`zamień właściwość w wywołaniu:
 
 [!code-csharp[FixTests](~/samples/snippets/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader.Tests/Services/NewsServiceTests.cs#FixTestSignature)]
 
 Należy również dodać instrukcję `using System.Linq` na początku pliku.
 
-Ten zestaw zmian wyróżnia szczególną uwagę podczas aktualizowania kodu, który zawiera ogólne wystąpienia. Zarówno lista, jak i elementy na liście typów niedopuszczających wartości null. Oba typy mogą być dopuszczane do wartości null. Dozwolone są wszystkie następujące deklaracje:
+Ten zestaw zmian podkreśla szczególną uwagę podczas aktualizowania kodu, który zawiera ogólne wystąpienia. Zarówno lista, jak i elementy na liście typów niepodlegających zerwanym. Typy z możliwością odmienne lub oba mogą być typami z możliwością null. Dozwolone są wszystkie następujące deklaracje:
 
-- `List<NewsStoryViewModel>`: Lista niemająca wartości null dla modeli widoku nonullabled.
-- `List<NewsStoryViewModel?>`: niemożliwa do null lista modeli widoku dopuszczających wartości null.
-- `List<NewsStoryViewModel>?`: dopuszczająca wartość null lista niezerowych modeli widoku.
-- `List<NewsStoryViewModel?>?`: dopuszczająca wartość null lista modeli widoku dopuszczających wartość null.
+- `List<NewsStoryViewModel>`: nieunieważniona lista nieunieważnialnych modeli widoku.
+- `List<NewsStoryViewModel?>`: nieunieważnialna lista modeli widoku unieważnianego.
+- `List<NewsStoryViewModel>?`: lista widoków niepodlegających unieważnieniu.
+- `List<NewsStoryViewModel?>?`: lista widoków nullable.
 
 ## <a name="interfaces-with-external-code"></a>Interfejsy z kodem zewnętrznym
 
-Wprowadzono zmiany w klasie `NewsService`, więc Włącz `#nullable enable` adnotację dla tej klasy. Nie spowoduje to wygenerowania żadnych nowych ostrzeżeń. Jednak dokładne badanie klasy ułatwia zilustrowanie niektórych ograniczeń analizy przepływu kompilatora. Badanie konstruktora:
+Wprowadzono zmiany w `NewsService` klasie, więc włącz `#nullable enable` adnotację dla tej klasy. Nie spowoduje to wygenerowania żadnych nowych ostrzeżeń. Jednak dokładne zbadanie klasy pomaga zilustrować niektóre ograniczenia analizy przepływu kompilatora. Sprawdź konstruktora:
 
 [!code-csharp[ServiceConstructor](~/samples/snippets/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Services/NewsService.cs#ServiceConstructor)]
 
-Parametr `IMapper` jest typem odwołania, które nie ma wartości null. Jest on wywoływany przez ASP.NET Core kod infrastruktury, więc kompilator nie wie, że `IMapper` nigdy nie będzie mieć wartości null. ASP.NET Core domyślny kontener iniekcji zależności (DI) zgłasza wyjątek, jeśli nie może rozpoznać wymaganej usługi, więc kod jest poprawny. Kompilator nie może sprawdzić poprawności wszystkich wywołań publicznych interfejsów API, nawet jeśli kod jest kompilowany z włączonym kontekstem adnotacji dopuszczający wartość null. Ponadto biblioteki mogą być używane przez projekty, które nie wybrały jeszcze użycia typów referencyjnych dopuszczających wartość null. Sprawdź poprawność danych wejściowych do publicznych interfejsów API, mimo że zostały zadeklarowane jako typy niemające wartości null.
+Parametr `IMapper` jest wpisywany jako odwołanie niepodlegające unieważnieniu. Jest wywoływana przez ASP.NET core kod infrastruktury, więc kompilator tak naprawdę nie wie, że nigdy nie `IMapper` będzie null. Domyślny ASP.NET Core dependency injection (DI) kontener zgłasza wyjątek, jeśli nie można rozwiązać niezbędne usługi, więc kod jest poprawny. Kompilator nie może sprawdzić poprawności wszystkich wywołań publicznych interfejsów API, nawet jeśli kod jest kompilowany z włączonymi kontekstami adnotacji nullable. Ponadto biblioteki mogą być używane przez projekty, które nie zostały jeszcze włączone do używania typów odwołań nullable. Sprawdź poprawność danych wejściowych do publicznych interfejsów API, nawet jeśli zostały zadeklarowane jako typy niepodlegające unieważnieniu.
 
 ## <a name="get-the-code"></a>Uzyskiwanie kodu
 
-Zostały naprawione ostrzeżenia, które zostały zidentyfikowane podczas wstępnego kompilowania testów, dlatego teraz można włączyć kontekst adnotacji dopuszczający wartości null dla obu projektów. Kompiluj ponownie projekty; Kompilator zgłasza Brak ostrzeżeń. Możesz uzyskać kod dla gotowego projektu w repozytorium GitHub [/Samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/nullable-reference-migration/finished)
+Poprawiono ostrzeżenia zidentyfikowane w kompilacji testu początkowego, więc teraz można włączyć kontekst adnotacji nullable dla obu projektów. Odbudować projekty; kompilator nie zgłasza żadnych ostrzeżeń. Kod gotowego projektu można uzyskać w repozytorium [githubdodot/próbki dotnet/samples.](https://github.com/dotnet/samples/tree/master/csharp/tutorials/nullable-reference-migration/finished)
 
-Nowe funkcje, które obsługują typy referencyjne dopuszczające wartość null, ułatwiają znajdowanie i rozwiązywanie potencjalnych błędów w sposobie obsługi `null` wartości w kodzie. Włączenie kontekstu adnotacji z dopuszczaniem wartości null pozwala na wyrażenie zamiaru projektu: niektóre zmienne nigdy nie powinny mieć wartości null, inne zmienne mogą zawierać wartości null. Te funkcje ułatwiają deklarowanie zamiaru projektowania. Podobnie, kontekst ostrzegawczy wartości null instruuje kompilator, aby wydawał ostrzeżenia w przypadku naruszenia tego celu. Te ostrzeżenia przeprowadzą Cię przez proces aktualizacji, które sprawiają, że kod będzie bardziej odporny na błędy i mniej, co może spowodować wygenerowanie `NullReferenceException` podczas wykonywania. Można kontrolować zakres tych kontekstów, aby można było skupić się na lokalnych obszarach kodu do migracji, gdy pozostała baza kodu jest nienaruszona. W tym celu zadanie migracji jest częścią regularnej konserwacji klas. W tym samouczku przedstawiono proces migrowania aplikacji w celu używania typów referencyjnych dopuszczających wartość null. Możesz zapoznać się z większym rzeczywistym przykładem tego procesu, sprawdzając, czy element PR [Jan Skeet](https://github.com/jskeet) miał zostać uwzględniony w [NodaTime](https://github.com/nodatime/nodatime/pull/1240/commits). Możesz też dowiedzieć się więcej na temat technik używania typów referencyjnych dopuszczających wartości null, Entity Framework Core w [Entity Framework Core — pracy z typami referencyjnymi nullable](/ef/core/miscellaneous/nullable-reference-types).
+Nowe funkcje, które obsługują typy odwołań nullable pomóc `null` znaleźć i naprawić potencjalne błędy w sposobie obsługi wartości w kodzie. Włączenie kontekstu adnotacji nullable umożliwia wyrażenie intencji projektu: niektóre zmienne nigdy nie powinny być null, inne zmienne mogą zawierać wartości null. Te funkcje ułatwiają deklarowanie intencji projektu. Podobnie kontekst ostrzeżenia nullins kompilator do wydawania ostrzeżeń, gdy zostały naruszone tego zamiaru. Te ostrzeżenia prowadzą do tworzenia aktualizacji, które sprawiają, że `NullReferenceException` kod bardziej odporne i mniej prawdopodobne, aby zgłosić podczas wykonywania. Można kontrolować zakres tych kontekstów, dzięki czemu można skupić się na lokalnych obszarach kodu do migracji, podczas gdy pozostała baza kodu jest nietknięta. W praktyce można zrobić to zadanie migracji częścią regularnej konserwacji do klas. W tym samouczku pokazano proces migracji aplikacji do używania typów odwołań nullable. Można zbadać większy rzeczywisty przykład tego procesu, badając PR [Jon Skeet](https://github.com/jskeet) wykonane w celu włączenia typów odwołań nullable do [NodaTime](https://github.com/nodatime/nodatime/pull/1240/commits). Lub po prostu Ponadto można nauczyć się technik używania typów odwołań nullable z entity framework core w [jednostce Framework Core — praca z typami odwołań nullable](/ef/core/miscellaneous/nullable-reference-types).

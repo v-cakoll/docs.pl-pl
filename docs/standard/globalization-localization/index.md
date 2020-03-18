@@ -1,5 +1,5 @@
 ---
-title: Globalizacja i lokalizowanie aplikacji platformy .NET
+title: Globalizacja i lokalizowanie aplikacji .NET
 ms.date: 06/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -12,21 +12,21 @@ helpviewer_keywords:
 - multilingual application development
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
 ms.openlocfilehash: eae1c38c2383d13bfb4dab83f2fe9551970b39f4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73120886"
 ---
-# <a name="globalizing-and-localizing-net-applications"></a>Globalizacja i lokalizowanie aplikacji platformy .NET
+# <a name="globalizing-and-localizing-net-applications"></a>Globalizacja i lokalizowanie aplikacji .NET
 
-Tworzenie aplikacji gotowej do używania na świecie, w tym aplikacji, która może być lokalizowana do jednego lub kilku języków, obejmuje trzy kroki: globalizacja, przegląd możliwości zlokalizowania i lokalizacja.
+Opracowanie aplikacji gotowej na świat, w tym aplikacji, która może być zlokalizowana w jednym lub kilku językach, obejmuje trzy kroki: globalizację, przegląd możliwości lokalizowania i lokalizację.
 
 [Globalizacja](globalization.md)
 
 Ten krok obejmuje projektowanie i programowanie aplikacji neutralnej kulturowo i językowo, która obsługuje zlokalizowane interfejsy użytkownika i dane regionalne dla wszystkich użytkowników. Obejmuje to podejmowanie decyzji projektowych i programistycznych, które nie są oparte na założeniach specyficznych dla kultury. Aplikacja zglobalizowana nie jest zlokalizowana, ale została zaprojektowana i napisana tak, że jej lokalizacja w jednym lub kilku językach będzie stosunkowo łatwa.
 
-[Przegląd możliwości zlokalizowania](localizability-review.md)
+[Sprawdzenie możliwości lokalizacji](localizability-review.md)
 
 Ten krok obejmuje przegląd kodu i projektu aplikacji w celu upewnienia się, że można go łatwo zlokalizować i zidentyfikować potencjalne przeszkody dla lokalizacji, oraz potwierdzenia, że kod wykonywalny aplikacji jest oddzielony od jej zasobów. Jeśli etap globalizacji był skuteczny, przegląd możliwości zlokalizowania potwierdzi wybory dotyczące projektowania i kodowania dokonane podczas globalizacji. Na etapie przeglądu możliwości lokalizacji można również zidentyfikować pozostałe problemy, dzięki czemu nie trzeba będzie modyfikować kodu aplikacji na etapie lokalizacji.
 
@@ -40,7 +40,7 @@ Wykonanie tych trzech kroków ma dwie zalety:
 
 - Skutkuje zlokalizowanymi aplikacjami, które są stabilniejsze i zawierają mniej błędów.
 
-Platforma .NET zapewnia szeroką pomoc techniczną dla rozwoju aplikacji gotowych do użycia na całym świecie. W szczególności wiele elementów członkowskich typu w bibliotece klas .NET ułatwia globalizację przez zwrócenie wartości, które odzwierciedlają konwencje kultury bieżącego użytkownika lub określonej kultury. Ponadto platforma .NET obsługuje zestawy satelickie, które ułatwiają proces lokalizowania aplikacji.
+.NET zapewnia szerokie wsparcie dla rozwoju aplikacji gotowych na świat i zlokalizowanych. W szczególności wiele elementów członkowskich typu w bibliotece klasy .NET pomocy globalizacji przez zwracanie wartości, które odzwierciedlają konwencje kultury bieżącego użytkownika lub określonej kultury. Ponadto .NET obsługuje zestawy satelickie, które ułatwiają proces lokalizowania aplikacji.
 
 Aby uzyskać dodatkowe informacje, zobacz [dokumentację globalizacji](/globalization/).
 
@@ -50,7 +50,7 @@ Aby uzyskać dodatkowe informacje, zobacz [dokumentację globalizacji](/globaliz
 
 Omówienie pierwszego etapu tworzenia aplikacji gotowych do użycia na całym świecie, który obejmuje projektowanie i programowanie aplikacji neutralnej językowo i kulturowo.
 
-[Przegląd możliwości zlokalizowania](localizability-review.md)
+[Sprawdzenie możliwości lokalizacji](localizability-review.md)
 
 Omówienie drugiego etapu tworzenia zlokalizowanych aplikacji, który obejmuje określenie potencjalnych przeszkód w procesie lokalizacji.
 
@@ -58,25 +58,25 @@ Omówienie drugiego etapu tworzenia zlokalizowanych aplikacji, który obejmuje o
 
 Omówienie końcowego etapu tworzenia zlokalizowanych aplikacji, który polega na dostosowywaniu interfejsu użytkownika aplikacji dla określonych regionów lub kultur.
 
-[Operacje na ciągach nieuwzględniających kultur](culture-insensitive-string-operations.md)
+[Niezależne od kultury operacje na ciągach](culture-insensitive-string-operations.md)
 
-Opisuje sposób użycia metod i klas .NET, które domyślnie są zależne od kultury w celu uzyskania wyników niewrażliwych na kulturę.
+W tym artykule opisano, jak używać metod i klas .NET, które są domyślnie zależne od kultury, aby uzyskać wyniki niewrażliwe na kulturę.
 
-[Najlepsze rozwiązania dotyczące tworzenia aplikacji gotowych do użytku na całym świecie](best-practices-for-developing-world-ready-apps.md)
+[Najlepsze praktyki dotyczące tworzenia aplikacji gotowych do pracy na całym świecie](best-practices-for-developing-world-ready-apps.md)
 
 Opis najlepszych rozwiązań w zakresie globalizacji, lokalizacji i projektowania gotowych do użycia na całym świecie aplikacji ASP.NET.
 
-## <a name="reference"></a>Tematy pomocy
+## <a name="reference"></a>Dokumentacja
 
-- <xref:System.Globalization?displayProperty=nameWithType> przestrzeń nazw
+- <xref:System.Globalization?displayProperty=nameWithType>Namespace
 
    Zawiera klasy, które definiują informacje związane z kulturą, w tym język, kraj/region, używane kalendarze, wzorce formatu daty, waluty i liczb oraz kolejność sortowania dla ciągów.
 
-- <xref:System.Resources> przestrzeń nazw
+- <xref:System.Resources>Namespace
 
    Udostępnia klasy służące do tworzenia i używania zasobów oraz wykonywania na nich operacji.
 
-- <xref:System.Text> przestrzeń nazw
+- <xref:System.Text>Namespace
 
    Zawiera klasy reprezentujące kodowania znaków ASCII, ANSI, Unicode i inne.
 
@@ -84,6 +84,6 @@ Opis najlepszych rozwiązań w zakresie globalizacji, lokalizacji i projektowani
 
    Opis sposobu używania programu Resgen.exe w celu konwertowania plików z rozszerzeniem txt i zasobów opartych na formacie języka XML (resx) na pliki binarne resources środowiska uruchomieniowego języka wspólnego.
 
-- [Winres.exe (Edytor zasobów formularzy Windows Forms)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)
+- [Winres.exe (Edytor zasobów formularzy systemu Windows)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)
 
    Opis sposobu używania programu Winres.exe w celu lokalizowania formularzy programu Windows Forms.

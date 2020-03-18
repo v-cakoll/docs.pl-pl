@@ -1,28 +1,28 @@
 ---
-title: Zaktualizowany wzorzec zdarzeń platformy .NET Core
-description: Dowiedz się, w jaki sposób wzorzec zdarzeń platformy .NET Core umożliwia elastyczność z poprzednią zgodnością i jak zaimplementować bezpieczne przetwarzanie zdarzeń za pomocą subskrybentów asynchronicznych.
+title: Zaktualizowany wzorzec zdarzenia rdzenia .NET
+description: Dowiedz się, jak wzorzec zdarzenia .NET Core umożliwia elastyczność zgodności z poprzednimi wersjami i jak zaimplementować bezpieczne przetwarzanie zdarzeń z subskrybentami asynchronii.
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 9aa627c3-3222-4094-9ca8-7e88e1071e06
-ms.openlocfilehash: a916a09b622f8df9bf99fafe52f35c706220f484
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c8858158ede761db8a3002beb26e521880f77feb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039794"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170439"
 ---
-# <a name="the-updated-net-core-event-pattern"></a>Zaktualizowany wzorzec zdarzeń platformy .NET Core
+# <a name="the-updated-net-core-event-pattern"></a>Zaktualizowany wzorzec zdarzenia rdzenia .NET
 
-[Ubiegł](event-pattern.md)
+[Wstecz](event-pattern.md)
 
-W poprzednim artykule omówiono najczęstsze wzorce zdarzeń. Platforma .NET Core ma bardziej swobodny wzorzec. W tej wersji definicja `EventHandler<TEventArgs>` nie ma już ograniczenia, które `TEventArgs` musi być klasą pochodną `System.EventArgs`.
+W poprzednim artykule omówiono najczęstsze wzorce zdarzeń. .NET Core ma bardziej zrelaksowany wzór. W tej wersji `EventHandler<TEventArgs>` definicja nie ma już `TEventArgs` ograniczenia, które musi `System.EventArgs`być klasą wywodzącą się z .
 
-Zwiększa to elastyczność i jest zgodna z poprzednimi wersjami. Zacznijmy od elastyczności. Klasa System. EventArgs wprowadza jedną metodę: `MemberwiseClone()`, która tworzy skróconą kopię obiektu.
-Ta metoda musi używać odbicia w celu zaimplementowania jej funkcjonalności dla każdej klasy pochodnej z `EventArgs`. Ta funkcja jest łatwiejsza do utworzenia w określonej klasie pochodnej. To efektywnie oznacza, że pochodny from system. EventArgs to ograniczenie, które ogranicza Twoje projekty, ale nie zapewnia dodatkowej korzyści.
-W rzeczywistości można zmienić definicje `FileFoundArgs` i `SearchDirectoryArgs`, aby nie pochodzą one z `EventArgs`.
+Zwiększa to elastyczność i jest zgodne z poprzednimi wersjami. Zacznijmy od elastyczności. Klasa System.EventArgs wprowadza jedną `MemberwiseClone()`metodę: , która tworzy płytką kopię obiektu.
+Metoda ta musi używać odbicia w celu zaimplementowania `EventArgs`jego funkcji dla dowolnej klasy pochodzącej z . Ta funkcja jest łatwiejsze do utworzenia w określonej klasie pochodnej. Oznacza to, że wynikające z System.EventArgs jest ograniczeniem, które ogranicza projekty, ale nie zapewnia żadnych dodatkowych korzyści.
+W rzeczywistości można zmienić definicje `FileFoundArgs` `SearchDirectoryArgs` i tak, aby nie `EventArgs`pochodzą one z .
 Program będzie działał dokładnie tak samo.
 
-Możesz również zmienić `SearchDirectoryArgs` na strukturę, jeśli wprowadzisz nową zmianę:
+Można również zmienić `SearchDirectoryArgs` strukturę, jeśli włożysz jeszcze jedną zmianę:
 
 ```csharp
 internal struct SearchDirectoryArgs
@@ -40,26 +40,26 @@ internal struct SearchDirectoryArgs
 }
 ```
 
-Dodatkowa zmiana polega na wywołaniu konstruktora bez parametrów przed wprowadzeniem konstruktora, który inicjuje wszystkie pola. Bez tego dołączenia reguły C# będą zgłaszać dostęp do właściwości przed ich przypisaniem.
+Dodatkową zmianą jest wywołanie konstruktora bez parametrów przed wejściem do konstruktora, który inicjuje wszystkie pola. Bez tego dodatku reguły Języka C# zgłaszałyby, że właściwości są dostępne przed ich przypisaniem.
 
-Nie należy zmieniać `FileFoundArgs` z klasy (typ odwołania) do struktury (typ wartości). Wynika to z faktu, że protokół do obsługi anulowania wymaga, aby argumenty zdarzenia zostały przekazane przez odwołanie. Jeśli została wprowadzona taka sama zmiana, Klasa wyszukiwania plików nigdy nie zaobserwuje żadnych zmian dokonanych przez żadnego z subskrybentów zdarzeń. Nowa kopia struktury będzie używana dla każdego subskrybenta, a kopia będzie inną kopią niż ta, która jest widoczna dla obiektu wyszukiwanie plików.
+Nie należy zmieniać `FileFoundArgs` z klasy (typ odwołania) na strukturę (typ wartości). Dzieje się tak, ponieważ protokół do obsługi anulowania wymaga, aby argumenty zdarzenia były przekazywane przez odwołanie. Jeśli ta sama zmiana została wniesiona, klasa wyszukiwania plików nigdy nie będzie mogła zaobserwować żadnych zmian dokonanych przez subskrybentów zdarzeń. Nowa kopia struktury będzie używana dla każdego subskrybenta, a ta kopia będzie inną kopią niż ta widoczna dla obiektu wyszukiwania plików.
 
-Następnie Rozważmy, jak ta zmiana może być zgodna z poprzednimi wersjami.
-Usunięcie ograniczenia nie ma wpływu na żaden istniejący kod. Wszystkie istniejące typy argumentów zdarzeń nadal pochodzą z `System.EventArgs`.
-Zgodność z poprzednimi wersjami to jeden z głównych powodów, dla których nadal będą pochodzić z `System.EventArgs`. Wszyscy istniejący Subskrybenci zdarzeń będą subskrybentami zdarzeń, które przestrzegają wzorca klasycznego.
+Następnie zastanówmy się, jak ta zmiana może być wstecznie zgodna.
+Usunięcie ograniczenia nie ma wpływu na istniejący kod. Wszystkie istniejące typy argumentów zdarzeń nadal pochodzą z `System.EventArgs`.
+Wsteczna kompatybilność jest jednym z głównych powodów, `System.EventArgs`dla których będą nadal pochodzić z . Wszystkich istniejących subskrybentów zdarzeń będą subskrybentami zdarzenia, które następuje klasyczny wzorzec.
 
-Podobnie jak w przypadku podobnej logiki, każdy typ argumentu zdarzenia utworzony teraz nie może mieć żadnych subskrybentów w żadnej z istniejących baz kodu. Nowe typy zdarzeń, które nie pochodzą z `System.EventArgs`, nie spowodują przerwania tych baz kodu.
+Zgodnie z podobną logiką każdy typ argumentu zdarzenia utworzony teraz nie będzie miał żadnych subskrybentów w istniejących baz kodu. Nowe typy zdarzeń, które `System.EventArgs` nie pochodzą z nie spowoduje przerwania tych baz kodu.
 
-## <a name="events-with-async-subscribers"></a>Zdarzenia z subskrybentami asynchronicznymi
+## <a name="events-with-async-subscribers"></a>Wydarzenia z subskrybentami Async
 
-Masz jeden ostateczny wzorzec, aby dowiedzieć się: jak poprawnie napisać abonentów zdarzeń, które wywołują kod asynchroniczny. Wyzwanie zostało opisane w artykule dotyczącym [Async i await](async.md). Metody asynchroniczne mogą mieć typ zwracany void, ale nie jest to zdecydowanie odradzane. Gdy kod abonenta zdarzenia wywołuje metodę asynchroniczną, nie ma możliwości wyboru, ale do utworzenia metody `async void`. Podpis procedury obsługi zdarzeń wymaga tego.
+Masz jeden końcowy wzorzec, aby dowiedzieć się: Jak poprawnie napisać subskrybentów zdarzeń, które wywołają kod asynchronii. Wyzwanie jest opisane w artykule na [async i czekają](async.md). Metody asynchroniczne mogą mieć typ zwracania void, ale jest to zdecydowanie odradzane. Gdy kod subskrybenta zdarzenia wywołuje metodę asynchronia, nie `async void` masz wyboru, jak tylko utworzyć metodę. Wymaga tego podpis programu obsługi zdarzeń.
 
-Należy uzgodnić te przeciwstawne wskazówki. W dowolny sposób należy utworzyć bezpieczną metodę `async void`. Poniżej przedstawiono podstawowe informacje na temat wzorca, który należy zaimplementować:
+Musisz pogodzić to przeciwstawne wskazówki. W jakiś sposób musisz `async void` stworzyć bezpieczną metodę. Podstawy wzoru, który musisz zaimplementować, są poniżej:
 
 ```csharp
 worker.StartWorking += async (sender, eventArgs) =>
 {
-    try 
+    try
     {
         await DoWorkAsync();
     }
@@ -72,12 +72,12 @@ worker.StartWorking += async (sender, eventArgs) =>
 };
 ```
 
-Najpierw należy zauważyć, że program obsługi jest oznaczony jako procedura obsługi asynchronicznej. Ponieważ jest przypisywany do typu delegata programu obsługi zdarzeń, będzie miał typ zwracany void. Oznacza to, że należy postępować zgodnie z wzorcem wyświetlanym w obsłudze i nie zezwalać na wyrzucanie wyjątków z kontekstu procedury obsługi asynchronicznej. Ponieważ nie zwraca zadania, nie istnieje zadanie, które może zgłosić błąd, wprowadzając stan błędu. Ponieważ metoda jest asynchroniczna, metoda nie może po prostu zgłosić wyjątku. (Metoda wywołująca kontynuuje wykonywanie, ponieważ jest `async`.) Rzeczywiste zachowanie środowiska uruchomieniowego zostanie zdefiniowane inaczej dla różnych środowisk. Może zakończyć wątek lub proces, który jest właścicielem wątku, lub pozostawić proces w nieokreślonym stanie. Wszystkie te potencjalne wyniki są wysoce niepożądane.
+Po pierwsze należy zauważyć, że program obsługi jest oznaczony jako program obsługi asynchronicznej. Ponieważ jest on przypisany do typu delegata obsługi zdarzeń, będzie miał typ zwracany void. Oznacza to, że należy postępować zgodnie z wzorcem pokazano w programie obsługi i nie zezwalaj na wszelkie wyjątki, które mają być odrzucane z kontekstu programu obsługi asynchronicznej. Ponieważ nie zwraca zadania, nie ma żadnego zadania, które można zgłosić błąd, wprowadzając stan błędu. Ponieważ metoda jest async, metoda nie można po prostu zgłosić wyjątek. (Metoda wywołująca ma dalsze wykonywanie, ponieważ jest `async`.) Rzeczywiste zachowanie środowiska uruchomieniowego zostanie zdefiniowane inaczej dla różnych środowisk. Może zakończyć wątek lub proces, który jest właścicielem wątku lub pozostawić proces w stanie nieokreślony. Wszystkie te potencjalne wyniki są wysoce niepożądane.
 
-Dlatego należy zawinąć instrukcję await dla zadania asynchronicznego we własnym bloku try. Jeśli zadanie spowoduje wystąpienie błędu, można go zarejestrować. Jeśli jest to błąd, z którego aplikacja nie może odzyskać, można szybko i bezpiecznie zakończyć działanie programu
+Dlatego należy owinąć await instrukcji dla zadania asynchronicznego w swoim własnym bloku try. Jeśli powoduje to wadliwe zadanie, można rejestrować błąd. Jeśli jest to błąd, z którego aplikacja nie może odzyskać, można zamknąć program szybko i z wdziękiem
 
-Są to główne aktualizacje wzorca zdarzeń platformy .NET. Zobaczysz wiele przykładów wcześniejszych wersji w bibliotekach, z którymi pracujesz. Należy jednak zrozumieć, jakie są również Najnowsze wzorce.
+Są to główne aktualizacje wzorca zdarzeń .NET. Zobaczysz wiele przykładów wcześniejszych wersji w bibliotekach, z których pracujesz. Jednak należy zrozumieć, jakie są najnowsze wzorce, jak również.
 
-Następny artykuł z tej serii ułatwia rozróżnienie między `delegates`ami i `events` w projektach. Są to podobne koncepcje i ten artykuł pomoże Ci w podejmowaniu najlepszej decyzji dla programów.
+Następny artykuł z tej serii pomaga `delegates` `events` odróżnić użycie i w projektach. Są to podobne pojęcia, a ten artykuł pomoże Ci podjąć najlepszą decyzję dla twoich programów.
 
-[Next](distinguish-delegates-events.md)
+[Dalej](distinguish-delegates-events.md)

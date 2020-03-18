@@ -10,40 +10,40 @@ helpviewer_keywords:
 - TPL dataflow library, improving efficiency
 ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
 ms.openlocfilehash: 4b2b6a6124bf8cc0fb3b379607135283678e3268
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73091358"
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>Wskazówki: Poprawa wydajności z wykorzystaniem klas BatchBlock i BatchedJoinBlock
 
-Biblioteka TPL przepływu danych zawiera klasy <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType>, dzięki czemu można odbierać i buforować dane z jednego lub kilku źródeł, a następnie rozpowszechniać te dane w postaci danych w jednej kolekcji. Ten mechanizm przetwarzania wsadowego jest przydatny podczas zbierania danych z jednego lub kilku źródeł, a następnie przetwarzania wielu elementów danych jako partii. Rozważmy na przykład aplikację, która używa przepływu danych do wstawiania rekordów do bazy danych. Ta operacja może być wydajniejsza, jeśli w tym samym czasie wstawiono wiele elementów zamiast jednego z nich naraz. W tym dokumencie opisano sposób użycia klasy <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> w celu zwiększenia wydajności takich operacji wstawiania baz danych. Opisano w nim również, jak używać klasy <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602>, aby przechwycić zarówno wyniki, jak i wyjątki, które występują, gdy program odczytuje z bazy danych.
+Biblioteka przepływu danych TPL <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType> zapewnia i klas, dzięki czemu można odbierać i buforować dane z jednego lub więcej źródeł, a następnie propagować, że buforowane dane jako jedną kolekcję. Ten mechanizm przetwarzania wsadowego jest przydatne podczas zbierania danych z jednego lub więcej źródeł, a następnie przetwarzać wiele elementów danych jako partii. Rozważmy na przykład aplikację, która używa przepływu danych do wstawiania rekordów do bazy danych. Ta operacja może być bardziej efektywne, jeśli wiele elementów są wstawiane w tym samym czasie, a nie jeden na raz sekwencyjnie. W tym dokumencie opisano sposób używania <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> klasy w celu zwiększenia wydajności takich operacji wstawiania bazy danych. Opisano również, jak <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> używać klasy do przechwytywania zarówno wyniki i wszelkie wyjątki, które występują, gdy program odczytuje z bazy danych.
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-1. Przed rozpoczęciem tego instruktażu Przeczytaj sekcję Join Blocks w dokumencie [przepływu danych](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) .
+1. Przed rozpoczęciem tego instruktażenia przeczytaj sekcję Dołącz bloki w dokumencie [Przepływ danych.](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
 
-2. Upewnij się, że masz kopię bazy danych Northwind, Northwind. sdf, która jest dostępna na komputerze. Ten plik zazwyczaj znajduje się w folderze% Program Files%\Microsoft SQL Server Compact Edition\v3.5\Samples\\.
+2. Upewnij się, że masz kopię bazy danych Northwind, Northwind.sdf, dostępne na komputerze. Ten plik zazwyczaj znajduje się w folderze %Program Files%\Microsoft SQL Server\\Compact Edition\v3.5\Samples .
 
     > [!IMPORTANT]
-    > W niektórych wersjach systemu Windows nie można nawiązać połączenia z serwerem Northwind. sdf, jeśli program Visual Studio jest uruchomiony w trybie innym niż administrator. Aby połączyć się z Northwind. sdf, uruchom program Visual Studio lub wiersz polecenia dla deweloperów dla programu Visual Studio w trybie **Uruchom jako administrator** .
+    > W niektórych wersjach systemu Windows nie można połączyć się z northwind.sdf, jeśli program Visual Studio jest uruchomiony w trybie nieadministratora. Aby połączyć się z northwind.sdf, uruchom program Visual Studio lub wiersz polecenia dewelopera dla programu Visual Studio w trybie **Uruchom jako administrator.**
 
-Ten Instruktaż zawiera następujące sekcje:
+Ten instruktaż zawiera następujące sekcje:
 
-- [Tworzenie aplikacji konsolowej](#creating)
+- [Tworzenie aplikacji konsoli](#creating)
 
-- [Definiowanie klasy Employee](#employeeClass)
+- [Definiowanie klasy pracownika](#employeeClass)
 
-- [Definiowanie operacji w bazie danych pracowników](#operations)
+- [Definiowanie operacji bazy danych pracowników](#operations)
 
-- [Dodawanie danych pracownika do bazy danych bez używania buforowania](#nonBuffering)
+- [Dodawanie danych pracowników do bazy danych bez korzystania z buforowania](#nonBuffering)
 
-- [Używanie buforowania w celu dodania danych pracownika do bazy danych](#buffering)
+- [Używanie buforowania do dodawania danych pracowników do bazy danych](#buffering)
 
-- [Używanie buforowanego sprzężenia do odczytywania danych pracownika z bazy danych](#bufferedJoin)
+- [Używanie sprzężenia buforowego do odczytywania danych pracownika z bazy danych](#bufferedJoin)
 
 - [Kompletny przykład](#complete)
 
@@ -51,84 +51,84 @@ Ten Instruktaż zawiera następujące sekcje:
 
 ## <a name="creating-the-console-application"></a>Tworzenie aplikacji konsoli
 
-1. W programie Visual Studio Utwórz projekt C# **aplikacji konsolowej** wizualizacji lub Visual Basic. W tym dokumencie projekt ma nazwę `DataflowBatchDatabase`.
+1. W programie Visual Studio utwórz projekt aplikacji visual C# lub Visual Basic **Console Application.** W tym dokumencie projekt `DataflowBatchDatabase`nosi nazwę .
 
-2. W projekcie Dodaj odwołanie do System. Data. SqlServerCe. dll i odwołanie do System. Threading. Tasks. przepływu danych. dll.
+2. W projekcie dodaj odwołanie do pliku System.Data.SqlServerCe.dll i odwołanie do pliku System.Threading.Tasks.Dataflow.dll.
 
-3. Upewnij się, że Form1.cs (Form1. vb dla Visual Basic) zawiera następujące instrukcje `using` (`Imports` w Visual Basic).
+3. Upewnij się, że Form1.cs (Form1.vb `using` dla`Imports` języka Visual Basic) zawiera następujące instrukcje (w języku Visual Basic).
 
     [!code-csharp[TPLDataflow_BatchDatabase#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#1)]
     [!code-vb[TPLDataflow_BatchDatabase#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#1)]
 
-4. Dodaj następujące elementy członkowskie danych do klasy `Program`.
+4. Dodaj następujące elementy członkowskie `Program` danych do klasy.
 
     [!code-csharp[TPLDataflow_BatchDatabase#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#2)]
     [!code-vb[TPLDataflow_BatchDatabase#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#2)]
 
 <a name="employeeClass"></a>
 
-## <a name="defining-the-employee-class"></a>Definiowanie klasy Employee
+## <a name="defining-the-employee-class"></a>Definiowanie klasy pracownika
 
-Dodaj do klasy `Program` klasy `Employee`.
+Dodaj do `Program` klasy `Employee` klasy.
 
 [!code-csharp[TPLDataflow_BatchDatabase#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#3)]
 [!code-vb[TPLDataflow_BatchDatabase#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#3)]
 
-Klasa `Employee` zawiera trzy właściwości, `EmployeeID`, `LastName`i `FirstName`. Te właściwości odpowiadają kolumnom `Employee ID`, `Last Name`i `First Name` w tabeli `Employees` w bazie danych Northwind. Dla tej demonstracji Klasa `Employee` definiuje również metodę `Random`, która tworzy obiekt `Employee`, który ma losowo wartości właściwości.
+Klasa `Employee` zawiera trzy `EmployeeID`właściwości, `LastName`, `FirstName`, i . Właściwości te odpowiadają `Employee ID`, `Last Name`, `First Name` i `Employees` kolumny w tabeli w bazie danych Northwind. Dla tej demonstracji `Employee` klasa definiuje `Random` również metodę, `Employee` która tworzy obiekt, który ma losowe wartości dla jego właściwości.
 
 <a name="operations"></a>
 
-## <a name="defining-employee-database-operations"></a>Definiowanie operacji w bazie danych pracowników
+## <a name="defining-employee-database-operations"></a>Definiowanie operacji bazy danych pracowników
 
-Dodaj do klasy `Program` metod `InsertEmployees`, `GetEmployeeCount`i `GetEmployeeID`.
+Dodaj do `Program` klasy `InsertEmployees` `GetEmployeeCount`, `GetEmployeeID` , i metody.
 
 [!code-csharp[TPLDataflow_BatchDatabase#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#4)]
 [!code-vb[TPLDataflow_BatchDatabase#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#4)]
 
-Metoda `InsertEmployees` dodaje do bazy danych nowe rekordy pracowników. Metoda `GetEmployeeCount` Pobiera liczbę wpisów w tabeli `Employees`. Metoda `GetEmployeeID` Pobiera identyfikator pierwszego pracownika o podanej nazwie. Każda z tych metod przyjmuje parametry połączenia do bazy danych Northwind i używa funkcji w przestrzeni nazw `System.Data.SqlServerCe`, aby komunikować się z bazą danych.
+Metoda `InsertEmployees` dodaje nowe rekordy pracowników do bazy danych. Metoda `GetEmployeeCount` pobiera liczbę wpisów w `Employees` tabeli. Metoda `GetEmployeeID` pobiera identyfikator pierwszego pracownika, który ma podaną nazwę. Każda z tych metod pobiera parametry połączenia z bazą danych `System.Data.SqlServerCe` Northwind i używa funkcji w przestrzeni nazw do komunikowania się z bazą danych.
 
 <a name="nonBuffering"></a>
 
-## <a name="adding-employee-data-to-the-database-without-using-buffering"></a>Dodawanie danych pracownika do bazy danych bez używania buforowania
+## <a name="adding-employee-data-to-the-database-without-using-buffering"></a>Dodawanie danych pracowników do bazy danych bez użycia buforowania
 
-Dodaj do klasy `Program` metod `AddEmployees` i `PostRandomEmployees`.
+Dodaj do `Program` klasy `AddEmployees` `PostRandomEmployees` i metody.
 
 [!code-csharp[TPLDataflow_BatchDatabase#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#5)]
 [!code-vb[TPLDataflow_BatchDatabase#5](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#5)]
 
-Metoda `AddEmployees` dodaje losowo dane pracownika do bazy danych za pomocą przepływu danych. Tworzy obiekt <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>, który wywołuje metodę `InsertEmployees`, aby dodać wpis pracownika do bazy danych. Metoda `AddEmployees` następnie wywołuje metodę `PostRandomEmployees`, aby ogłosić wiele obiektów `Employee` do obiektu <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>. Metoda `AddEmployees` następnie czeka na zakończenie wszystkich operacji wstawiania.
+Metoda `AddEmployees` dodaje losowe dane pracownika do bazy danych przy użyciu przepływu danych. Tworzy <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> obiekt, który `InsertEmployees` wywołuje metodę, aby dodać wpis pracownika do bazy danych. Metoda `AddEmployees` następnie wywołuje `PostRandomEmployees` metodę, `Employee` aby zaksięgować wiele obiektów do <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> obiektu. Metoda `AddEmployees` następnie czeka na zakończenie wszystkich operacji wstawiania.
 
 <a name="buffering"></a>
 
-## <a name="using-buffering-to-add-employee-data-to-the-database"></a>Używanie buforowania w celu dodania danych pracownika do bazy danych
+## <a name="using-buffering-to-add-employee-data-to-the-database"></a>Używanie buforowania do dodawania danych pracowników do bazy danych
 
-Dodaj do klasy `Program` metody `AddEmployeesBatched`.
+Dodaj do `Program` klasy `AddEmployeesBatched` metodę.
 
 [!code-csharp[TPLDataflow_BatchDatabase#6](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#6)]
 [!code-vb[TPLDataflow_BatchDatabase#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#6)]
 
-Ta metoda przypomina `AddEmployees`, z tą różnicą, że używa również klasy <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> do buforowania wielu obiektów `Employee` przed wysłaniem tych obiektów do obiektu <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>. Ponieważ Klasa <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> propaguje wiele elementów jako kolekcja, obiekt <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> jest modyfikowany do działania na tablicy obiektów `Employee`. Podobnie jak w metodzie `AddEmployees`, `AddEmployeesBatched` wywołuje metodę `PostRandomEmployees`, aby ogłosić wiele obiektów `Employee`; jednak `AddEmployeesBatched` ogłasza te obiekty w obiekcie <xref:System.Threading.Tasks.Dataflow.BatchBlock%601>. Metoda `AddEmployeesBatched` czeka również na zakończenie wszystkich operacji wstawiania.
+Ta metoda `AddEmployees`przypomina , z tą <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> różnicą, `Employee` że używa również klasy <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> do buforowania wielu obiektów przed wysłaniem tych obiektów do obiektu. Ponieważ <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> klasa propaguje wiele elementów jako <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> kolekcji, obiekt jest modyfikowany do działania na tablicy `Employee` obiektów. Podobnie jak `AddEmployees` w `AddEmployeesBatched` metodzie wywołuje `PostRandomEmployees` `Employee` metodę do zaksięgowania wielu obiektów; jednak `AddEmployeesBatched` księguje te <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> obiekty do obiektu. Metoda `AddEmployeesBatched` czeka również na zakończenie wszystkich operacji wstawiania.
 
 <a name="bufferedJoin"></a>
 
-## <a name="using-buffered-join-to-read-employee-data-from-the-database"></a>Używanie buforowanego sprzężenia do odczytywania danych pracownika z bazy danych
+## <a name="using-buffered-join-to-read-employee-data-from-the-database"></a>Używanie sprzężenia buforowego do odczytywania danych pracownika z bazy danych
 
-Dodaj do klasy `Program` metody `GetRandomEmployees`.
+Dodaj do `Program` klasy `GetRandomEmployees` metodę.
 
 [!code-csharp[TPLDataflow_BatchDatabase#7](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#7)]
 [!code-vb[TPLDataflow_BatchDatabase#7](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#7)]
 
-Ta metoda drukuje informacje o losowych pracownikach w konsoli programu. Tworzy kilka losowo `Employee` obiektów i wywołuje metodę `GetEmployeeID`, aby pobrać unikatowy identyfikator dla każdego obiektu. Ponieważ metoda `GetEmployeeID` zgłasza wyjątek, jeśli nie ma pasującego pracownika z podanym imieniem i nazwiskiem, Metoda `GetRandomEmployees` używa klasy <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> do przechowywania obiektów `Employee` dla udanych wywołań do `GetEmployeeID` i <xref:System.Exception?displayProperty=nameWithType> obiektów dla wywołań zakończonych niepowodzeniem . Obiekt <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> w tym przykładzie działa na obiekcie <xref:System.Tuple%602>, który zawiera listę obiektów `Employee` i listę obiektów <xref:System.Exception>. Obiekt <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> propaguje te dane, gdy suma odebranych `Employee` i <xref:System.Exception> liczby obiektów jest równa rozmiarowi partii.
+Ta metoda drukuje informacje o losowych pracowników do konsoli. Tworzy kilka `Employee` losowych obiektów `GetEmployeeID` i wywołuje metodę, aby pobrać unikatowy identyfikator dla każdego obiektu. Ponieważ `GetEmployeeID` metoda zgłasza wyjątek, jeśli nie ma żadnego pasującego pracownika `GetRandomEmployees` z podanych imion i nazwisk, metoda <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> używa klasy do `Employee` przechowywania obiektów dla pomyślnych wywołań `GetEmployeeID` i <xref:System.Exception?displayProperty=nameWithType> obiektów dla wywołań, które kończą się niepowodzeniem. Obiekt <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> w tym przykładzie <xref:System.Tuple%602> działa na obiekt, `Employee` który zawiera <xref:System.Exception> listę obiektów i listę obiektów. Obiekt <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> propaguje te dane, gdy `Employee` suma <xref:System.Exception> odebranych i liczba obiektów jest równa rozmiarowi partii.
 
 <a name="complete"></a>
 
 ## <a name="the-complete-example"></a>Kompletny przykład
 
-Poniższy przykład pokazuje kompletny kod. Metoda `Main` porównuje czas wymagany do wykonania wsadowych wstawień bazy danych zamiast czasu na wykonanie wstawiania baz danych bez partii. Przedstawiono w nim także użycie buforowanego sprzężenia do odczytywania danych pracownika z bazy danych, a także zgłaszania błędów.
+W poniższym przykładzie przedstawiono kompletny kod. Metoda `Main` porównuje czas, który jest wymagany do wykonywania wsadowych wstawiania bazy danych w porównaniu do czasu do wykonywania wstawiania bazy danych niewsmażonych. Pokazuje również użycie sprzężenia buforowego do odczytu danych pracownika z bazy danych, a także do zgłaszania błędów.
 
 [!code-csharp[TPLDataflow_BatchDatabase#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#100)]
 [!code-vb[TPLDataflow_BatchDatabase#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#100)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Przepływ danych](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

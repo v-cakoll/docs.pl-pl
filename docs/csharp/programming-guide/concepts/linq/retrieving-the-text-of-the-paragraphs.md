@@ -2,30 +2,30 @@
 title: Pobieranie tekstu akapitów (C#)
 ms.date: 07/20/2015
 ms.assetid: 127d635e-e559-408f-90c8-2bb621ca50ac
-ms.openlocfilehash: cedca9df84ee687a9e304cde0015b46d07956364
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 7c47420045def3fe973169e01143646c0f60a8eb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423341"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168248"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-c"></a>Pobieranie tekstu akapitów (C#)
-Ten przykład kompiluje się w poprzednim przykładzie, [pobierając akapity i ich styleC#()](./retrieving-the-paragraphs-and-their-styles.md). Ten nowy przykład pobiera tekst każdego akapitu w postaci ciągu.  
+W tym przykładzie opiera się na poprzednim [przykładzie, Pobieranie akapity i ich style (C#)](./retrieving-the-paragraphs-and-their-styles.md). W tym nowym przykładzie pobiera tekst każdego akapitu jako ciąg.  
   
- Aby pobrać tekst, ten przykład dodaje dodatkowe zapytanie, które iteruje przez kolekcję typów anonimowych i projektów nowej kolekcji typu anonimowego z dodaniem nowego elementu członkowskiego `Text`. Używa standardowego operatora zapytań <xref:System.Linq.Enumerable.Aggregate%2A> do łączenia wielu ciągów w jeden ciąg.  
+ Aby pobrać tekst, w tym przykładzie dodaje dodatkowe zapytanie, które iteruje poprzez kolekcję typów anonimowych `Text`i projektów nowej kolekcji typu anonimowego z dodatkiem nowego elementu członkowskiego. Używa standardowego <xref:System.Linq.Enumerable.Aggregate%2A> operatora kwerendy do łączenia wielu ciągów w jeden ciąg.  
   
- Ta technika (czyli najpierw projekcja do kolekcji typu anonimowego, a następnie użycie tej kolekcji w celu utworzenia nowej kolekcji typu anonimowego) jest powszechną i użyteczną idiom. To zapytanie mogło zostać zapisaną bez projekcji pierwszego typu anonimowego. Jednak ze względu na ocenę z opóźnieniem nie jest używana znacznie dodatkowa moc obliczeniowa. Idiom tworzy więcej krótkich obiektów na stercie, ale nie zmniejsza to wydajności.  
+ Ta technika (czyli najpierw rzutowanie do kolekcji typu anonimowego, a następnie za pomocą tej kolekcji do projektu do nowej kolekcji typu anonimowego) jest typowyi i przydatne idiom. Ta kwerenda mogła zostać napisana bez rzutowania na pierwszy typ anonimowy. Jednak z powodu oceny z opóźnieniem, w ten sposób nie zużywa wiele dodatkowej mocy obliczeniowej. Idiom tworzy bardziej krótkotrwałe obiekty na stercie, ale nie obniża to znacznie wydajności.  
   
- Oczywiście można napisać pojedyncze zapytanie, które zawiera funkcje umożliwiające pobranie akapitów, stylu każdego akapitu i tekstu każdego akapitu. Często jednak warto rozdzielić bardziej skomplikowane zapytanie na wiele zapytań, ponieważ otrzymany kod jest bardziej modularny i łatwiejszy w obsłudze. Ponadto, jeśli konieczne jest ponowne użycie części zapytania, łatwiej jest refaktoryzację, jeśli zapytania są zapisywane w ten sposób.  
+ Oczywiście możliwe byłoby napisanie pojedynczej kwerendy zawierającej funkcje pobierania akapitów, styl każdego akapitu i tekst każdego akapitu. Jednak często jest przydatne do podziału bardziej skomplikowane zapytanie na wiele zapytań, ponieważ wynikowy kod jest bardziej modułowe i łatwiejsze w utrzymaniu. Ponadto jeśli trzeba ponownie użyć części kwerendy, łatwiej jest refaktoryzacji, jeśli zapytania są zapisywane w ten sposób.  
   
- Te zapytania, które są powiązane ze sobą, wykorzystują model przetwarzania, który jest szczegółowo rozpatrywany w [samouczku tematu: Łączenie łańcuchowe zapytańC#()](deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).  
+ Te zapytania, które są ze sobą połączone łańcuchem, używają modelu przetwarzania, który jest szczegółowo sprawdzany w temacie [Samouczek: Łączenie zapytań razem (C#)](deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).  
   
 ## <a name="example"></a>Przykład  
- Ten przykład przetwarza dokument WordprocessingML, określając węzeł elementu, nazwę stylu i tekst każdego akapitu. Ten przykład kompiluje się zgodnie z poprzednimi przykładami w tym samouczku. Nowe zapytanie jest wywoływane w komentarzach w poniższym kodzie.  
+ W tym przykładzie przetwarza dokument WordprocessingML, określając węzeł elementu, nazwę stylu i tekst każdego akapitu. W tym przykładzie opiera się na poprzednich przykładach w tym samouczku. Nowe zapytanie jest wywoływane w komentarzach w poniższym kodzie.  
   
- Aby uzyskać instrukcje dotyczące tworzenia dokumentu źródłowego dla tego przykładu, zobacz [Tworzenie źródłowego dokumentu Office Open XML (C#)](./creating-the-source-office-open-xml-document.md).  
+ Aby uzyskać instrukcje dotyczące tworzenia dokumentu źródłowego dla tego [przykładu, zobacz Tworzenie dokumentu XML open pakietu Source Office (C#).](./creating-the-source-office-open-xml-document.md)  
   
- W tym przykładzie zastosowano klasy z zestawu 'Windowsbase. Używa typów w przestrzeni nazw <xref:System.IO.Packaging?displayProperty=nameWithType>.  
+ W tym przykładzie użyto klas z zestawu WindowsBase. Używa typów w <xref:System.IO.Packaging?displayProperty=nameWithType> obszarze nazw.  
   
 ```csharp  
 const string fileName = "SampleDoc.docx";  
@@ -68,7 +68,7 @@ using (Package wdPackage = Package.Open(fileName, FileMode.Open, FileAccess.Read
     }  
 }  
   
-string defaultStyle =   
+string defaultStyle =
     (string)(  
         from style in styleDoc.Root.Elements(w + "style")  
         where (string)style.Attribute(w + "type") == "paragraph"&&  
@@ -117,7 +117,7 @@ foreach (var p in paraWithText)
     Console.WriteLine("StyleName:{0} >{1}<", p.StyleName, p.Text);  
 ```  
   
- Ten przykład generuje następujące dane wyjściowe w przypadku zastosowania do dokumentu opisanego w temacie [Tworzenie źródłowego dokumentu Office Open XML (C#)](./creating-the-source-office-open-xml-document.md).  
+ W tym przykładzie po zastosowaniu do dokumentu opisanego w [dokumencie Tworzenie dokumentu XML pakietu Source Office Open (C#).](./creating-the-source-office-open-xml-document.md)  
   
 ```output  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -138,11 +138,11 @@ StyleName:Code >Hello World<
 ```  
   
 ## <a name="next-steps"></a>Następne kroki  
- W następnym przykładzie pokazano, jak używać metody rozszerzenia zamiast <xref:System.Linq.Enumerable.Aggregate%2A>, aby połączyć wiele ciągów w jeden ciąg.  
+ W następnym przykładzie pokazano, jak używać <xref:System.Linq.Enumerable.Aggregate%2A>metody rozszerzenia, zamiast , połączyć wiele ciągów w jeden ciąg.  
   
-- [Refaktoryzacja przy użyciu metody rozszerzającej (C#)](./refactoring-using-an-extension-method.md)  
+- [Refaktoryzacja przy użyciu metody rozszerzenia (C#)](./refactoring-using-an-extension-method.md)  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Samouczek: manipulowanie zawartością w dokumencie WordprocessingML (C#)](shape-of-wordprocessingml-documents.md)
-- [Wykonywanie odroczone i Ocena z opóźnieniem w LINQ to XMLC#()](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [Odroczone wykonanie i ocena z opóźnieniem w LINQ do XML (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

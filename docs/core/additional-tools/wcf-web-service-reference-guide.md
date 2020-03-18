@@ -1,91 +1,91 @@
 ---
-title: Dodaj odwołanie do usługi sieci Web WCF
-description: Przegląd narzędzia Microsoft WCF Web Service Reference Provider, które dodaje funkcje dla projektów .NET Core i ASP.NET Core, podobnie jak Dodaj odwołanie do usługi dla projektów .NET Framework.
+title: Dodawanie odwołania do usługi sieci Web WCF
+description: Omówienie narzędzia dostawcy usług sieci Web Microsoft WCF, które dodaje funkcje dla projektów .NET Core i ASP.NET Core, podobne do dodawania dokumentacji usługi dla projektów .NET Framework.
 author: dasetser
 ms.date: 10/29/2019
 ms.custom: mvc
 ms.openlocfilehash: cdd6b457d289dd7b752c97c5645f0797f24b72aa
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75715685"
 ---
-# <a name="use-the-wcf-web-service-reference-provider-tool"></a>Korzystanie z narzędzia dostawcy odwołań usługi sieci Web programu WCF
+# <a name="use-the-wcf-web-service-reference-provider-tool"></a>Korzystanie z narzędzia Dostawcy informacji o usługach sieci Web WCF
 
-W ciągu lat wiele deweloperów programu Visual Studio korzystało z wydajności, którą zapewnia narzędzie [**Dodaj odwołanie do usługi**](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference) , gdy .NET Framework projekty potrzebują dostępu do usług sieci Web.  Narzędzie **referencyjne usługi sieci Web WCF** to rozszerzenie usługi połączonej z programem Visual Studio, które zapewnia środowisko, takie jak Dodaj odwołanie do usługi funkcje dla projektów .NET Core i ASP.NET Core. To narzędzie pobiera metadane z usługi sieci Web w bieżącym rozwiązaniu, w lokalizacji sieciowej lub z pliku WSDL i generuje plik źródłowy zgodny z programem .NET Core zawierający kod serwera proxy klienta Windows Communication Foundation (WCF), którego można użyć w celu uzyskania dostępu do sieci Web. usługi.
+Z biegiem lat wielu deweloperów programu Visual Studio cieszyło się produktywnością, jaką narzędzie [**Add Service Reference**](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference) zapewniało, gdy ich projekty .NET Framework były potrzebne do uzyskania dostępu do usług sieci web.  Narzędzie **WCF Web Service Reference** to rozszerzenie usługi połączonej z programami Visual Studio, które zapewnia środowisko, takie jak funkcja Dodaj odwołanie do usługi .NET Core i ASP.NET core. To narzędzie pobiera metadane z usługi sieci web w bieżącym rozwiązaniu, w lokalizacji sieciowej lub z pliku WSDL i generuje plik źródłowy zgodny z .NET Core zawierający kod proxy klienta Windows Communication Foundation (WCF), za pomocą którego można uzyskać dostęp do sieci Web Usługi.
 
 > [!IMPORTANT]
-> Należy tylko odwoływać się do usług z zaufanego źródła. Dodanie odwołań z niezaufanego źródła może spowodować naruszenie zabezpieczeń.
+> Należy odwoływać się tylko do usług z zaufanego źródła. Dodawanie odwołań z niezaufanego źródła może naruszyć bezpieczeństwo.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-- [Visual Studio 2017 w wersji 15,5](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) lub nowszej
+- [Visual Studio 2017 w wersji 15.5](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) lub nowszej
 
-## <a name="how-to-use-the-extension"></a>Jak używać rozszerzenia
+## <a name="how-to-use-the-extension"></a>Jak korzystać z rozszerzenia
 
 > [!NOTE]
-> Opcja **odwołania do usługi sieci Web programu WCF** ma zastosowanie do projektów utworzonych przy użyciu następujących szablonów projektu:
+> Opcja **Odwołanie do usługi sieci Web WCF** ma zastosowanie do projektów utworzonych przy użyciu następujących szablonów projektów:
 >
-> - **Visual C#**  >  **.NET Core**
-> - **Visual C#**  >  **.NET Standard**
-> - **Aplikacja internetowa**  **C# programu Visual** > **Web** > ASP.NET Core
+> - **Visual C#** > **.NET Core**
+> - **Visual C#** > **.NET Standard**
+> - **Wizualna aplikacja** > sieci Web ASP.NET**sieci Web** > języka**C#**
 
-Korzystając z szablonu projektu **ASP.NET Core aplikacji sieci Web** , w tym artykule opisano sposób dodawania do projektu odwołania do usługi WCF:
+Korzystając z szablonu projektu **ASP.NET Core Web Application** jako przykład, w tym artykule przeprowadzi Cię przez dodanie odwołania usługi WCF do projektu:
 
-1. W Eksplorator rozwiązań kliknij dwukrotnie węzeł **usługi połączone** w projekcie (dla projektu .NET Core lub .NET Standard, ta opcja jest dostępna po kliknięciu prawym przyciskiem myszy węzła **zależności** projektu w Eksplorator rozwiązań).
+1. W Eksploratorze rozwiązań kliknij dwukrotnie węzeł **Połączonych usług** projektu (dla projektu .NET Core lub .NET Standard ta opcja jest dostępna po kliknięciu prawym przyciskiem myszy węzła **Zależności** projektu w Eksploratorze rozwiązań).
 
-    Zostanie wyświetlona strona **połączone usługi** , jak pokazano na poniższej ilustracji:
+    Strona **Połączone usługi** jest wyświetlana w sposób pokazany na poniższej ilustracji:
 
-    ![Karta usługi połączone programu Visual Studio dla platformy .NET Core](./media/wcf-web-service-reference-guide/wcfcs-ConnectedServicesPage.png)
+    ![Karta Połączone usługi Visual Studio dla programu .NET Core](./media/wcf-web-service-reference-guide/wcfcs-ConnectedServicesPage.png)
 
-2. Na stronie **podłączone usługi** kliknij pozycję **Microsoft WCF Web Service Reference Provider**. Spowoduje to wyświetlenie kreatora **konfiguracji odwołania usługi sieci Web programu WCF** :
+2. Na stronie **Połączone usługi** kliknij pozycję **Dostawca dokumentacji usługi sieci Web firmy Microsoft WCF**. Spowoduje to **wyświetlenie kreatora Konfigurowanie usługi sieci Web WCF:**
 
-    ![Karta punktu końcowego usługi Visual Studio dla platformy .NET Core](./media/wcf-web-service-reference-guide/wcfcs-ServiceEndpointPage.png)
+    ![Karta Punkt końcowy usługi Visual Studio dla programu .NET Core](./media/wcf-web-service-reference-guide/wcfcs-ServiceEndpointPage.png)
 
 3. Wybierz usługę.
 
-    3a. W kreatorze **konfiguracji odwołania usługi sieci Web programu WCF** dostępne są kilka opcji wyszukiwania usług:
+    3a. Istnieje kilka opcji wyszukiwania usług dostępnych w kreatorze **Konfigurowanie odwołania do usługi sieci Web WCF:**
 
-     * Aby wyszukać usługi zdefiniowane w bieżącym rozwiązaniu, kliknij przycisk **odkryj** .
-     * Aby wyszukać usługi hostowane w określonym adresie, wprowadź adres URL usługi w polu **adres** , a następnie kliknij przycisk **Przejdź** .
-     * Aby wybrać plik WSDL zawierający informacje o metadanych usługi sieci Web, kliknij przycisk **Przeglądaj** .
+     * Aby wyszukać usługi zdefiniowane w bieżącym rozwiązaniu, kliknij przycisk **Odnajtzej.**
+     * Aby wyszukać usługi hostowane pod określonym adresem, wprowadź adres URL usługi w polu **Adres** i kliknij przycisk **Przejdź.**
+     * Aby wybrać plik WSDL zawierający informacje o metadanych usługi sieci Web, kliknij przycisk **Przeglądaj.**
 
-    3b. Wybierz usługę z listy wyników wyszukiwania w polu **usługi** . W razie potrzeby wprowadź przestrzeń nazw dla wygenerowanego kodu w polu tekstowym odpowiadające mu **przestrzeń nazw** .
+    3b. Wybierz usługę z listy wyników wyszukiwania w polu **Usługi.** W razie potrzeby wprowadź obszar nazw wygenerowanego kodu w odpowiednim polu tekstowym **Obszar nazw.**
 
-    3c. Kliknij przycisk **dalej** , aby otworzyć **Opcje typu danych** i strony **Opcje klienta** . Alternatywnie kliknij przycisk **Zakończ** , aby użyć opcji domyślnych.
+    3c. Kliknij przycisk **Dalej,** aby otworzyć **strony Opcje typu danych** i Opcje **klienta.** Alternatywnie kliknij przycisk **Zakończ,** aby użyć opcji domyślnych.
 
-4. Formularz **Opcje typu danych** umożliwia uściślenie ustawień konfiguracji wygenerowanych odwołań do usługi:
+4. Formularz **Opcje typu danych** umożliwia zawężenie wygenerowanych ustawień konfiguracji odwołania do usługi:
 
-    ![Karta Opcje typu danych programu Visual Studio dla platformy .NET Core](./media/wcf-web-service-reference-guide/wcfcs-DataTypesPage.png)
+    ![Karta Opcje typu danych programu Visual Studio dla programu .NET Core](./media/wcf-web-service-reference-guide/wcfcs-DataTypesPage.png)
 
     > [!NOTE]
-    > Opcja **Użyj ponownie typów w przywoływanych zestawach** jest przydatna, gdy typy danych potrzebne do generowania kodu odwołania do usługi są zdefiniowane w jednym z zestawów, do których się odwołuje.  Ważne jest, aby ponownie użyć istniejących typów danych, aby uniknąć konfliktów typu czas kompilacji lub problemów w czasie wykonywania.
+    > Opcja pola wyboru **Ponowne użycie w zestawach, do których istnieje odwołanie,** jest przydatna, gdy typy danych potrzebne do generowania kodu referencyjnego usługi są zdefiniowane w jednym z zestawów, do których odwołuje się projekt.  Ważne jest, aby ponownie użyć tych istniejących typów danych, aby uniknąć kolizji typu kompilacji lub problemy ze środowiska uruchomieniowego.
 
-    Podczas ładowania informacji o typie może wystąpić opóźnienie, w zależności od liczby zależności projektu i innych czynników wydajności systemu. Przycisk **Zakończ** jest wyłączony podczas ładowania, chyba że pole wyboru **ponowne używanie typów w przywoływanych zestawach** nie jest zaznaczone.
+    Może wystąpić opóźnienie podczas ładowania informacji o typie, w zależności od liczby zależności projektu i innych czynników wydajności systemu. Przycisk **Zakończ** jest wyłączony podczas ładowania, chyba że pole wyboru **Ponowne użycie w zestawach, do których istnieje** odwołanie, nie jest zaznaczone.
 
-5. Po zakończeniu kliknij przycisk **Zakończ** .
+5. Po zakończeniu kliknij **przycisk Zakończ.**
 
-Podczas wyświetlania postępu narzędzie:
+Podczas wyświetlania postępu, narzędzie:
 
 - Pobiera metadane z usługi WCF.
-- Generuje kod odwołania do usługi w pliku o nazwie *Reference.cs*i dodaje go do projektu w węźle **usługi połączone** .
-- Aktualizuje plik projektu (. csproj) odwołania do pakietów NuGet wymagane do kompilowania i uruchamiania na platformie docelowej.
+- Generuje kod odwołania do usługi w pliku o nazwie *reference.cs*i dodaje go do projektu w węźle **Połączone usługi.**
+- Aktualizuje plik projektu (csproj) z odwołaniami do pakietu NuGet wymaganymi do kompilacji i uruchamiania na platformie docelowej.
 
-![Okno postępu programu Visual Studio](./media/wcf-web-service-reference-guide/wcfcs-ProgressWindow.png)
+![Okno Postępu programu Visual Studio](./media/wcf-web-service-reference-guide/wcfcs-ProgressWindow.png)
 
 Po zakończeniu tych procesów można utworzyć wystąpienie wygenerowanego typu klienta WCF i wywołać operacje usługi.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Wprowadzenie do aplikacji Windows Communication Foundation](../../framework/wcf/getting-started-tutorial.md)
-- [Usługi Windows Communication Foundation i usługi danych programu WCF w programie Visual Studio](/visualstudio/data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio)
-- [Funkcje obsługiwane przez program WCF na platformie .NET Core](https://github.com/dotnet/wcf/blob/master/release-notes/SupportedFeatures-v2.1.0.md)
+- [Usługi Windows Communication Foundation i usługi danych WCF w programie Visual Studio](/visualstudio/data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio)
+- [Obsługiwane przez WCF funkcje programu .NET Core](https://github.com/dotnet/wcf/blob/master/release-notes/SupportedFeatures-v2.1.0.md)
 
 ## <a name="feedback--questions"></a>Opinie & pytania
 
-Jeśli masz jakieś pytania lub opinie, zgłoś je w [społeczności deweloperów](https://developercommunity.visualstudio.com/) za pomocą narzędzia [Zgłoś problem](/visualstudio/ide/how-to-report-a-problem-with-visual-studio) .
+Jeśli masz jakiekolwiek pytania lub opinie, zgłoś to w [społeczności deweloperów](https://developercommunity.visualstudio.com/) za pomocą narzędzia [Zgłoś problem.](/visualstudio/ide/how-to-report-a-problem-with-visual-studio)
 
-## <a name="release-notes"></a>Uwagi do wersji
+## <a name="release-notes"></a>Informacje o wersji
 
-- Zapoznaj się z informacjami o [wersji](https://github.com/dotnet/wcf/blob/master/release-notes/WCF-Web-Service-Reference-notes.md) dotyczącymi zaktualizowanych informacji o wersji, w tym znanych problemów.
+- Informacje o [wydaniu można znaleźć](https://github.com/dotnet/wcf/blob/master/release-notes/WCF-Web-Service-Reference-notes.md) w informacjach o wydaniu, w tym znanych problemach.

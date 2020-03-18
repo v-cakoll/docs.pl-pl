@@ -1,102 +1,102 @@
 ---
-title: Jak zainstalować program model Builder
-description: Dowiedz się, jak zainstalować narzędzie ML.NET model Builder
+title: Jak zainstalować Model Konstruktora
+description: Dowiedz się, jak zainstalować narzędzie ML.NET Model Builder
 author: luisquintanilla
 ms.author: luquinta
 ms.date: 11/21/2019
-ms.custom: mvc, how-to
-ms.openlocfilehash: b87f712ad7a8b2229c1d42db4bad1fe511475ac7
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.custom: mvc, how-to, mlnet-tooling
+ms.openlocfilehash: b944d7f6044553251132824e7e4213119e34500e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552943"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "78848655"
 ---
-# <a name="how-to-install-mlnet-model-builder"></a>Jak zainstalować program ML.NET model Builder
+# <a name="how-to-install-mlnet-model-builder"></a>Jak zainstalować ML.NET Model Builder
 
-Dowiedz się, jak zainstalować program ML.NET model Builder, aby dodać Uczenie maszynowe do aplikacji platformy .NET.
+Dowiedz się, jak zainstalować ML.NET Model Builder, aby dodać uczenie maszynowe do aplikacji .NET.
 
 > [!NOTE]
 > Konstruktor modeli jest obecnie w wersji zapoznawczej.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-- Visual Studio 2017 w wersji 15.9.12 lub nowszej/Visual Studio 2019
-- .NET Core 2,1 SDK lub nowszy.
+- Visual Studio 2017 w wersji 15.9.12 lub nowszej / Visual Studio 2019
+- SDK .NET Core 2.1 lub nowszy.
 
 > [!NOTE]
-> Zestaw SDK platformy .NET Core 3,0 nie jest obecnie obsługiwany.
+> Zestaw SDK .NET Core 3.0 nie jest obecnie obsługiwany.
 
 ## <a name="limitations"></a>Ograniczenia
 
-- Rozszerzenie konstruktora modelu ML.NET aktualnie działa tylko w programie Visual Studio w systemie Windows.
-- Limit zestawu danych szkolenia wynoszący 1 GB
-- SQL Server ma limit 100 000 wierszy na potrzeby szkolenia
-- Narzędzia Microsoft SQL Server Data Tools for Visual Studio 2017 nie są obsługiwane
+- ML.NET Rozszerzenie Konstruktora modeli działa obecnie tylko w programie Visual Studio w systemie Windows.
+- Limit zestawu danych szkoleniowych 1 GB
+- PROGRAM SQL Server ma limit 100 tysięcy wierszy na szkolenia
+- Narzędzia danych programu Microsoft SQL Server dla programu Visual Studio 2017 nie są obsługiwane
 
-## <a name="install"></a>Instalacja programu
+## <a name="install"></a>Instalowanie
 
-Konstruktora modelu ML.NET można zainstalować za pośrednictwem Visual Studio Marketplace lub z poziomu programu Visual Studio.
+ML.NET konstruktora modelu można zainstalować za pośrednictwem portalu Visual Studio Marketplace lub z poziomu programu Visual Studio.
 
-### <a name="visual-studio-marketplace"></a>Visual Studio Marketplace
+### <a name="visual-studio-marketplace"></a>Witryna Visual Studio Marketplace
 
-1. Pobierz z [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=MLNET.07)
-1. Postępuj zgodnie z monitami, aby zainstalować odpowiednie wersje programu Visual Studio
-
-### <a name="visual-studio-2017"></a>Visual Studio 2017
-
-1. Na pasku menu wybierz kolejno opcje **narzędzia** > **rozszerzenia i aktualizacje** .
-
-    ![Okno dialogowe Otwieranie Menedżera rozszerzeń program VS2017](./media/install-model-builder/vs2017-open-extensions-manager.png)
-
-1. W wierszu *rozszerzenia i aktualizacji* wybierz węzeł *online* .
-1. Na pasku wyszukiwania Wyszukaj pozycję *ml.NET model Builder* i z wyników wybierz pozycję ml.NET model Builder (wersja zapoznawcza).
-
-    ![Program VS2017 wyszukiwanie i Instalowanie rozszerzenia konstruktora modelu w oknie dialogowym Menedżera rozszerzeń](./media/install-model-builder/vs2017-install-model-builder.png)
-
-1. Postępuj zgodnie z monitami, aby zakończyć instalację.
-
-### <a name="visual-studio-2019"></a>Visual Studio 2019
-
-1. Na pasku menu wybierz pozycję **rozszerzenia** > **Zarządzanie rozszerzeniami**
-
-    ![Okno dialogowe Otwieranie Menedżera rozszerzeń VS2019](./media/install-model-builder/vs2019-open-extensions-manager.png)
-
-1. W wierszu *rozszerzenia i aktualizacji* wybierz węzeł *online* .
-1. Wpisz *ml.NET model Builder* na pasku wyszukiwania wybierz pozycję ml.NET model Builder (wersja zapoznawcza)
-
-    ![VS2019 wyszukiwanie i Instalowanie rozszerzenia konstruktora modelu w oknie dialogowym Menedżera rozszerzeń](./media/install-model-builder/vs2019-install-model-builder.png)
-
-1. Postępuj zgodnie z monitami, aby zakończyć instalację.
-
-## <a name="uninstall"></a>Odinstaluj
+1. Pobierz z [programu Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=MLNET.07)
+1. Postępuj zgodnie z monitami, aby zainstalować odpowiednią wersję programu Visual Studio
 
 ### <a name="visual-studio-2017"></a>Visual Studio 2017
 
-1. Na pasku menu wybierz kolejno opcje **narzędzia** > **rozszerzenia i aktualizacje** .
+1. Na pasku menu wybierz pozycję**Rozszerzenia i aktualizacje** **narzędzi** > 
 
-    ![Program VS2017 Otwórz okno dialogowe zarządzania rozszerzeniami](./media/install-model-builder/vs2017-open-extensions-manager.png)
+    ![Vs2017 otwórz menedżera rozszerzeń okno dialogowe](./media/install-model-builder/vs2017-open-extensions-manager.png)
 
-1. W wierszu *rozszerzenia i aktualizacji* rozwiń węzeł *zainstalowany* i wybierz pozycję *Narzędzia*
-1. Wybierz pozycję ML.NET model Builder (wersja zapoznawcza) z listy narzędzi, a następnie wybierz pozycję *Odinstaluj* .
+1. W wierszu *rozszerzenia i aktualizacji* wybierz węzeł *online.*
+1. Na pasku wyszukiwania wyszukaj *ML.NET Konstruktora modeli* i na podstawie wyników wybierz ML.NET Konstruktora modeli (wersja zapoznawcza)
 
-    ![Rozszerzenie program VS2017 wyszukiwanie i odinstalowywanie konstruktora modelu w oknie dialogowym Menedżer rozszerzeń](./media/install-model-builder/vs2017-uninstall-model-builder.png)
+    ![Vs2017 wyszukiwanie i instalowanie rozszerzenia Model Builder w oknie dialogowym Menedżera rozszerzeń](./media/install-model-builder/vs2017-install-model-builder.png)
 
-1. Postępuj zgodnie z monitami, aby ukończyć dezinstalację.
+1. Postępuj zgodnie z monitami, aby ukończyć instalację
 
 ### <a name="visual-studio-2019"></a>Visual Studio 2019
 
-1. Na pasku menu wybierz pozycję **rozszerzenia** > **Zarządzanie rozszerzeniami**
+1. Na pasku menu wybierz pozycję **Rozszerzenia** > **Zarządzaj rozszerzeniami**
 
-    ![VS2019 Otwórz okno dialogowe zarządzania rozszerzeniami](./media/install-model-builder/vs2019-open-extensions-manager.png)
+    ![Vs2019 otwórz menedżera rozszerzeń okno dialogowe](./media/install-model-builder/vs2019-open-extensions-manager.png)
 
-1. W wierszu *rozszerzenia i aktualizacji* rozwiń węzeł *zainstalowany* i wybierz pozycję *Narzędzia*
-1. Wybierz pozycję ML.NET model Builder (wersja zapoznawcza) z listy narzędzi, a następnie wybierz pozycję *Odinstaluj* .
+1. W wierszu *rozszerzenia i aktualizacji* wybierz węzeł *online.*
+1. Wpisz *ML.NET Konstruktora modeli* na pasku wyszukiwania wybierz pozycję ML.NET Konstruktor modeli (wersja zapoznawcza)
 
-    ![Rozszerzenie VS2019 wyszukiwanie i odinstalowywanie konstruktora modelu w oknie dialogowym Menedżer rozszerzeń](./media/install-model-builder/vs2019-uninstall-model-builder.png)
+    ![Vs2019 wyszukiwanie i instalowanie rozszerzenia Model Builder w oknie dialogowym Menedżera rozszerzeń](./media/install-model-builder/vs2019-install-model-builder.png)
 
-1. Postępuj zgodnie z monitami, aby ukończyć dezinstalację.
+1. Postępuj zgodnie z monitami, aby ukończyć instalację
 
-## <a name="upgrade"></a>Uaktualniony
+## <a name="uninstall"></a>Dezinstalacja
+
+### <a name="visual-studio-2017"></a>Visual Studio 2017
+
+1. Na pasku menu wybierz pozycję**Rozszerzenia i aktualizacje** **narzędzi** > 
+
+    ![Vs2017 otwórz zarządzanie rozszerzeniami, okno dialogowe](./media/install-model-builder/vs2017-open-extensions-manager.png)
+
+1. W wierszu *rozszerzenia i aktualizacji* rozwiń węzeł *Zainstalowane* i wybierz *pozycję Narzędzia*
+1. Wybierz ML.NET Konstruktora modeli (Podgląd) z listy narzędzi, a następnie wybierz pozycję *Odinstaluj*
+
+    ![Vs2017 wyszukiwanie i odinstalowywanie rozszerzenia Model Builder w oknie dialogowym Menedżera rozszerzeń](./media/install-model-builder/vs2017-uninstall-model-builder.png)
+
+1. Postępuj zgodnie z instrukcjami, aby zakończyć dezinstalację.
+
+### <a name="visual-studio-2019"></a>Visual Studio 2019
+
+1. Na pasku menu wybierz pozycję **Rozszerzenia** > **Zarządzaj rozszerzeniami**
+
+    ![Vs2019 otwórz zarządzanie rozszerzeniami, okno dialogowe](./media/install-model-builder/vs2019-open-extensions-manager.png)
+
+1. W wierszu *rozszerzenia i aktualizacji* rozwiń węzeł *Zainstalowane* i wybierz *pozycję Narzędzia*
+1. Wybierz ML.NET Konstruktora modeli (Podgląd) z listy narzędzi, a następnie wybierz pozycję *Odinstaluj*
+
+    ![Vs2019 wyszukiwanie i odinstalowywanie rozszerzenia Model Builder w oknie dialogowym Menedżera rozszerzeń](./media/install-model-builder/vs2019-uninstall-model-builder.png)
+
+1. Postępuj zgodnie z instrukcjami, aby zakończyć dezinstalację.
+
+## <a name="upgrade"></a>Uaktualnienie
 
 Proces uaktualniania jest podobny do procesu instalacji. Pobierz najnowszą wersję z programu Visual Studio Marketplace lub użyj Menedżera rozszerzeń w programie Visual Studio.

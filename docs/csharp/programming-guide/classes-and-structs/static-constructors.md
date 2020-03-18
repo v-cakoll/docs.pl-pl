@@ -1,69 +1,69 @@
 ---
-title: Konstruktory statyczne C# — Przewodnik programowania
+title: Konstruktory statyczne — przewodnik programowania C#
 ms.date: 07/20/2015
 helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: 7b8171e75bbd27a1079f2c6cc1b7aef6400d7419
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: 744bcacbc38299c0ef7d16e814c415ec5caf95dd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76115765"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170120"
 ---
 # <a name="static-constructors-c-programming-guide"></a>Konstruktory statyczne (Przewodnik programowania w języku C#)
-Statyczny Konstruktor jest używany do inicjowania wszelkich danych [statycznych](../../language-reference/keywords/static.md) lub wykonywania określonej akcji, która musi zostać wykonana tylko raz. Jest wywoływana automatycznie przed utworzeniem pierwszego wystąpienia lub odwołaniem do jakiegokolwiek statycznego członka.  
+Konstruktor statyczny służy do inicjowania wszelkich danych [statycznych](../../language-reference/keywords/static.md) lub do wykonania określonej akcji, która musi być wykonana tylko raz. Jest wywoływana automatycznie przed utworzeniem pierwszego wystąpienia lub odwołania się do żadnych elementów statycznych.  
   
  [!code-csharp[csProgGuideObjects#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#14)]  
- 
+
 ## <a name="remarks"></a>Uwagi
 Konstruktory statyczne mają następujące właściwości:  
   
-- Konstruktor statyczny nie przyjmuje modyfikatorów dostępu ani nie ma parametrów.  
+- Konstruktor statyczny nie ma modyfikatorów dostępu ani parametrów.  
 
-- Klasa lub struktura może mieć tylko jeden Konstruktor statyczny.
+- Klasa lub struktura może mieć tylko jeden konstruktor statyczny.
 
-- Konstruktory statyczne nie mogą być dziedziczone ani przeciążone.
+- Konstruktorów statycznych nie można dziedziczyć ani przeciążenia.
 
-- Statyczny Konstruktor nie może być wywoływany bezpośrednio i jest przeznaczony tylko do wywoływania przez środowisko uruchomieniowe języka wspólnego (CLR). Jest wywoływana automatycznie.
+- Konstruktora statycznego nie można wywołać bezpośrednio i jest przeznaczony tylko do wywoływania przez program runtime języka wspólnego (CLR). Jest wywoływana automatycznie.
 
-- Użytkownik nie ma kontroli nad tym, kiedy Konstruktor statyczny jest wykonywany w programie.
+- Użytkownik nie ma kontroli, gdy konstruktor statyczny jest wykonywany w programie.
   
-- Statyczny Konstruktor jest automatycznie wywoływany w celu zainicjowania [klasy](../../language-reference/keywords/class.md) przed utworzeniem pierwszego wystąpienia lub odwołania do jakichkolwiek statycznych elementów członkowskich. Statyczny Konstruktor zostanie uruchomiony przed konstruktorem wystąpienia. Statyczny Konstruktor typu jest wywoływany, gdy metoda statyczna przypisana do zdarzenia lub delegata jest wywoływana, a nie podczas przypisywania. Jeśli inicjatory zmiennych pól statycznych są obecne w klasie konstruktora statycznego, zostaną one wykonane w kolejności tekstowej, w której pojawiają się w deklaracji klasy bezpośrednio przed wykonaniem konstruktora statycznego.
+- Konstruktor statyczny jest wywoływana automatycznie do inicjowania [klasy](../../language-reference/keywords/class.md) przed pierwszym wystąpieniem jest tworzony lub żadnych elementów statycznych są przywoływani. Konstruktor statyczny zostanie uruchomiony przed konstruktorem wystąpienia. Konstruktora statycznego typu jest wywoływana, gdy metoda statyczna przypisana do zdarzenia lub delegata jest wywoływana, a nie, gdy jest przypisany. Jeśli statyczne inicjatory zmiennej pola są obecne w klasie konstruktora statycznego, będą one wykonywane w kolejności tekstowej, w której pojawiają się w deklaracji klasy bezpośrednio przed wykonaniem konstruktora statycznego.
 
-- Jeśli nie postanowisz statycznego konstruktora do zainicjowania pól statycznych, wszystkie pola statyczne są inicjowane do ich wartości domyślnej, jak wymieniono w [domyślnych wartości C# typów](../../language-reference/builtin-types/default-values.md).
+- Jeśli konstruktor statyczny nie zostanie zainicjowany przez konstruktora statycznego, wszystkie pola statyczne zostaną zainicjowane do wartości domyślnej wymienionej w [wartościach domyślnych typów C#.](../../language-reference/builtin-types/default-values.md)
   
-- Jeśli Konstruktor statyczny zgłosi wyjątek, środowisko uruchomieniowe nie wywołaje go po raz drugi, a typ pozostanie niezainicjowany przez okres istnienia domeny aplikacji, w której uruchomiono program. Najczęściej wyjątek <xref:System.TypeInitializationException> jest zgłaszany, gdy Konstruktor statyczny nie może utworzyć wystąpienia typu lub dla nieobsłużonego wyjątku w konstruktorze statycznym. W przypadku niejawnych konstruktorów statycznych, które nie są jawnie zdefiniowane w kodzie źródłowym, rozwiązywanie problemów może wymagać inspekcji kodu języka pośredniego (IL).
+- Jeśli konstruktor statyczny zgłasza wyjątek, czas wykonywania nie wywoła go po raz drugi, a typ pozostanie niezainicjowany przez okres istnienia domeny aplikacji, w którym program jest uruchomiony. Najczęściej <xref:System.TypeInitializationException> wyjątek jest generowany, gdy konstruktor statyczny nie może utworzyć wystąpienia typu lub dla nieobsługiwanego wyjątku występującego w konstruktorze statycznym. W przypadku niejawnych konstruktorów statycznych, które nie są jawnie zdefiniowane w kodzie źródłowym, rozwiązywanie problemów może wymagać inspekcji kodu języka pośredniego (IL).
 
-- Obecność konstruktora statycznego uniemożliwia dodanie atrybutu typu <xref:System.Reflection.TypeAttributes.BeforeFieldInit>. To ogranicza optymalizację środowiska uruchomieniowego.
+- Obecność konstruktora statycznego uniemożliwia dodanie <xref:System.Reflection.TypeAttributes.BeforeFieldInit> atrybutu typu. Ogranicza to optymalizację czasu wykonywania.
 
-- Pole zadeklarowane jako `static readonly` mogą być przypisywane tylko jako część swojej deklaracji lub w konstruktorze statycznym. Gdy jawny Konstruktor statyczny nie jest wymagany, zainicjuj pola statyczne w deklaracji, a nie za pomocą konstruktora statycznego w celu zapewnienia lepszej optymalizacji środowiska uruchomieniowego.
+- Pole zadeklarowane `static readonly` jako może być przypisane tylko jako część jego deklaracji lub w konstruktorze statycznym. Gdy jawny konstruktor statyczny nie jest wymagany, zainicjować pola statyczne w deklaracji, a nie za pośrednictwem konstruktora statycznego dla lepszej optymalizacji czasu wykonywania.
 
 > [!Note]
-> Chociaż nie jest to bezpośrednio dostępne, obecność jawnego konstruktora statycznego powinna zostać udokumentowana w celu ułatwienia rozwiązywania problemów z wyjątkami inicjalizacji.
+> Chociaż nie jest bezpośrednio dostępny, obecność jawnego konstruktora statycznego powinny być udokumentowane, aby pomóc w rozwiązywaniu problemów z wyjątkami inicjowania.
 
-### <a name="usage"></a>Pomiar
+### <a name="usage"></a>Sposób użycia
 
-- Typowym zastosowaniem konstruktorów statycznych jest użycie pliku dziennika przez klasę, a Konstruktor jest używany do zapisu wpisów do tego pliku.  
-- Konstruktory statyczne są również przydatne podczas tworzenia klas otoki dla niezarządzanego kodu, gdy Konstruktor może wywołać metodę `LoadLibrary`.  
+- Typowe użycie konstruktorów statycznych jest, gdy klasa używa pliku dziennika i konstruktora jest używany do zapisu wpisów do tego pliku.  
+- Konstruktory statyczne są również przydatne podczas tworzenia klas otoki dla `LoadLibrary` kodu niezarządzanego, gdy konstruktor może wywołać metodę.  
 
-- Konstruktory statyczne są również wygodnym miejscem do wymuszania sprawdzania w czasie wykonywania na parametrze typu, który nie może być sprawdzany w czasie kompilacji za pomocą ograniczeń (ograniczenia parametru typu).
+- Konstruktory statyczne są również wygodnym miejscem do wymuszania kontroli w czasie wykonywania parametru typu, który nie może być sprawdzany w czasie kompilacji za pomocą ograniczeń (Ograniczenia parametru Type).
 
 ## <a name="example"></a>Przykład
- W tym przykładzie Klasa `Bus` ma statyczny Konstruktor. Po utworzeniu pierwszego wystąpienia `Bus` (`bus1`), Konstruktor statyczny jest wywoływany w celu zainicjowania klasy. Przykładowe dane wyjściowe sprawdzają, czy statyczny Konstruktor działa tylko raz, nawet jeśli dwa wystąpienia `Bus` są tworzone i są uruchamiane przed uruchomieniem konstruktora wystąpień.  
+ W tym przykładzie `Bus` klasa ma konstruktora statycznego. Po utworzeniu `Bus` pierwszego wystąpienia`bus1`( ), konstruktor statyczny jest wywoływany w celu zainicjowania klasy. Przykładowe dane wyjściowe sprawdza, czy konstruktor statyczny `Bus` działa tylko jeden raz, mimo że dwa wystąpienia są tworzone i że jest uruchamiany przed wystąpieniem konstruktora uruchamia.  
   
  [!code-csharp[csProgGuideObjects#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#15)]
- 
-## <a name="c-language-specification"></a>specyfikacja języka C#
-Aby uzyskać więcej informacji, zobacz sekcję " [konstruktory statyczne](~/_csharplang/spec/classes.md#static-constructors) " [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).
-  
-## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../index.md)
+## <a name="c-language-specification"></a>specyfikacja języka C#
+Aby uzyskać więcej informacji, zobacz [static konstruktorów](~/_csharplang/spec/classes.md#static-constructors) sekcji [specyfikacji języka C#.](~/_csharplang/spec/introduction.md)
+  
+## <a name="see-also"></a>Zobacz też
+
+- [Przewodnik programowania języka C#](../index.md)
 - [Klasy i struktury](./index.md)
 - [Konstruktory](./constructors.md)
-- [Klasy statyczne i statyczne elementy członkowskie klas](./static-classes-and-static-class-members.md)
+- [Klasy statyczne i statyczni członkowie klas](./static-classes-and-static-class-members.md)
 - [Finalizatory](./destructors.md)
 - [Wytyczne dotyczące projektowania konstruktora](../../../standard/design-guidelines/constructor.md#type-constructor-guidelines)
-- [Ostrzeżenie o zabezpieczeniach — CA2121: konstruktory statyczne powinny być prywatne](https://docs.microsoft.com/visualstudio/code-quality/ca2121-static-constructors-should-be-private)
+- [Ostrzeżenie o zabezpieczeniach — CA2121: Konstruktory statyczne powinny być prywatne](https://docs.microsoft.com/visualstudio/code-quality/ca2121-static-constructors-should-be-private)

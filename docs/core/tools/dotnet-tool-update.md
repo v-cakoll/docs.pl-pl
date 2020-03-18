@@ -1,64 +1,73 @@
 ---
-title: polecenie aktualizacji narzędzia dotnet
-description: Polecenie aktualizacji narzędzia dotnet umożliwia zaktualizowanie określonego narzędzia .NET Core na komputerze.
+title: polecenie dotnet tool update
+description: Polecenie aktualizacji narzędzia dotnet aktualizuje określone narzędzie .NET Core na komputerze.
 ms.date: 02/14/2020
-ms.openlocfilehash: 80e807a0fc06ad762334f888e701f6d9c448369a
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 497b052a8b9cfa9dca8d80316075fe7565d6b35a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156949"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847823"
 ---
 # <a name="dotnet-tool-update"></a>dotnet tool update
 
-**Ten artykuł ma zastosowanie do:** ✔️ .net Core 2,1 SDK i nowszych wersjach
+**Ten artykuł dotyczy:** ✔️ .NET Core 2.1 SDK i nowszych wersji
 
-## <a name="name"></a>Name (Nazwa)
+## <a name="name"></a>Nazwa
 
-`dotnet tool update` — aktualizuje określone [Narzędzie .NET Core](global-tools.md) na komputerze.
+`dotnet tool update`- Aktualizuje określone [narzędzie .NET Core](global-tools.md) na komputerze.
 
 ## <a name="synopsis"></a>Streszczenie
 
 ```dotnetcli
-dotnet tool update <PACKAGE_NAME> <-g|--global> [--configfile] [--framework] [-v|--verbosity] [--add-source]
-dotnet tool update <PACKAGE_NAME> <--tool-path> [--configfile] [--framework] [-v|--verbosity] [--add-source]
-dotnet tool update <PACKAGE_NAME> [--configfile] [--framework] [-v|--verbosity] [--add-source]
+dotnet tool update <PACKAGE_NAME> <-g|--global>
+    [--configfile] [--framework] [-v|--verbosity]
+    [--add-source]
+
+dotnet tool update <PACKAGE_NAME> <--tool-path>
+    [--configfile] [--framework] [-v|--verbosity]
+    [--add-source]
+
+dotnet tool update <PACKAGE_NAME>
+    [--configfile] [--framework] [-v|--verbosity]
+    [--add-source]
+
 dotnet tool update <-h|--help>
 ```
 
 ## <a name="description"></a>Opis
 
-`dotnet tool update` polecenie umożliwia zaktualizowanie narzędzi platformy .NET Core na komputerze do najnowszej stabilnej wersji pakietu. Polecenie Odinstalowuje i ponownie instaluje narzędzie, co skutecznie aktualizuje go. Aby użyć polecenia, należy określić jedną z następujących opcji:
+Polecenie `dotnet tool update` umożliwia zaktualizowanie narzędzi .NET Core na komputerze do najnowszej stabilnej wersji pakietu. Polecenie odinstalowuje i ponownie instaluje narzędzie, skutecznie je aktualizując. Aby użyć polecenia, należy określić jedną z następujących opcji:
 
-* Aby zaktualizować narzędzie globalne, które zostało zainstalowane w lokalizacji domyślnej, użyj opcji `--global`
-* Aby zaktualizować narzędzie globalne, które zostało zainstalowane w niestandardowej lokalizacji, użyj opcji `--tool-path`.
-* Aby zaktualizować narzędzie lokalne, Pomiń opcje `--global` i `--tool-path`.
+* Aby zaktualizować narzędzie globalne zainstalowane w lokalizacji `--global` domyślnej, użyj opcji
+* Aby zaktualizować narzędzie globalne, które zostało zainstalowane `--tool-path` w lokalizacji niestandardowej, użyj tej opcji.
+* Aby zaktualizować narzędzie lokalne, `--global` `--tool-path` pomiń te opcje.
 
-**Narzędzia lokalne są dostępne począwszy od zestaw .NET Core SDK 3,0.**
+**Lokalne narzędzia są dostępne począwszy od .NET Core SDK 3.0.**
 
 ## <a name="arguments"></a>Argumenty
 
 - **`PACKAGE_NAME`**
 
-  Nazwa/identyfikator pakietu NuGet zawierającego narzędzie globalne programu .NET Core do zaktualizowania. Nazwę pakietu można znaleźć przy użyciu polecenia [listy narzędzi dotnet](dotnet-tool-list.md) .
+  Nazwa/identyfikator pakietu NuGet, który zawiera globalne narzędzie .NET Core do aktualizacji. Nazwę pakietu można znaleźć za pomocą polecenia [listy narzędzi dotnet.](dotnet-tool-list.md)
 
 ## <a name="options"></a>Opcje
 
 - **`--add-source <SOURCE>`**
 
-  Dodaje dodatkowe źródło pakietów NuGet do użycia podczas instalacji.
+  Dodaje dodatkowe źródło pakietu NuGet do użycia podczas instalacji.
 
 - **`--configfile <FILE>`**
 
-  Plik konfiguracji NuGet (*NuGet. config*) do użycia.
+  Plik konfiguracji NuGet *(nuget.config)* do użycia.
 
 - **`--framework <FRAMEWORK>`**
 
-  Określa [platformę docelową](../../standard/frameworks.md) do zaktualizowania narzędzia dla programu.
+  Określa [platformę docelową,](../../standard/frameworks.md) dla dla za pomocą platformy docelowej.
 
 - **`-g|--global`**
 
-  Określa, że aktualizacja dotyczy narzędzia dla całego użytkownika. Nie można łączyć z opcją `--tool-path`. Pominięcie obu `--global` i `--tool-path` oznacza, że narzędzie, które ma zostać zaktualizowane, jest narzędziem lokalnym.
+  Określa, że aktualizacja dotyczy narzędzia dla całego użytkownika. Nie można połączyć z `--tool-path` tą opcją. Pominięcie obu `--global` `--tool-path` i określa, że narzędzie, które ma zostać zaktualizowane, jest narzędziem lokalnym.
 
 - **`-h|--help`**
 
@@ -66,17 +75,17 @@ dotnet tool update <-h|--help>
 
 - **`--tool-path <PATH>`**
 
-  Określa lokalizację, w której zainstalowano narzędzie globalne. ŚCIEŻKA może być bezwzględna lub względna. Nie można łączyć z opcją `--global`. Pominięcie obu `--global` i `--tool-path` oznacza, że narzędzie, które ma zostać zaktualizowane, jest narzędziem lokalnym.
+  Określa lokalizację, w której jest zainstalowane narzędzie globalne. PATH może być bezwzględny lub względny. Nie można połączyć z `--global` tą opcją. Pominięcie obu `--global` `--tool-path` i określa, że narzędzie, które ma zostać zaktualizowane, jest narzędziem lokalnym.
 
 - **`-v|--verbosity <LEVEL>`**
 
-  Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`i `diag[nostic]`.
+  Ustawia poziom szczegółowości polecenia. Dozwolone wartości `q[uiet]` `m[inimal]`to `n[ormal]` `d[etailed]`, `diag[nostic]`, , i .
 
 ## <a name="examples"></a>Przykłady
 
 - **`dotnet tool update -g dotnetsay`**
 
-  Aktualizuje narzędzie globalne [dotnetsay](https://www.nuget.org/packages/dotnetsay/) .
+  Aktualizuje narzędzie globalne [dotnetsay.](https://www.nuget.org/packages/dotnetsay/)
 
 - **`dotnet tool update dotnetsay --tool-path c:\global-tools`**
 
@@ -84,7 +93,7 @@ dotnet tool update <-h|--help>
 
 - **`dotnet tool update dotnetsay --tool-path ~/bin`**
 
-  Aktualizuje narzędzie globalne [dotnetsay](https://www.nuget.org/packages/dotnetsay/) znajdujące się w określonym katalogu systemu Linux/macOS.
+  Aktualizuje globalne narzędzie [dotnetsay](https://www.nuget.org/packages/dotnetsay/) znajdujące się w określonym katalogu Linux/macOS.
 
 - **`dotnet tool update dotnetsay`**
 
@@ -93,3 +102,5 @@ dotnet tool update <-h|--help>
 ## <a name="see-also"></a>Zobacz też
 
 - [Narzędzia .NET Core](global-tools.md)
+- [Samouczek: Instalowanie i używanie globalnego narzędzia .NET Core przy użyciu procesora CLI .NET Core](global-tools-how-to-use.md)
+- [Samouczek: Instalowanie i używanie lokalnego narzędzia .NET Core przy użyciu procesora CLI .NET Core](local-tools-how-to-use.md)

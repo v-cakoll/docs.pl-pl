@@ -1,28 +1,28 @@
 ---
-title: Jak zbadać ArrayList za pomocą LINQ (C#)
+title: Jak zapytanie ArrayList z LINQ (C#)
 ms.date: 07/20/2015
 ms.assetid: 2bfb471c-6e9a-4e60-bd83-4a1778abde11
-ms.openlocfilehash: b8edb90d33c92324d4f76c7e6977641fe4499d9d
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: fa185ba3793b628b0d65e1f513a70ec68f6f2425
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345706"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168937"
 ---
-# <a name="how-to-query-an-arraylist-with-linq-c"></a>Jak zbadać ArrayList za pomocą LINQ (C#)
-W przypadku używania LINQ do wykonywania zapytań dotyczących nieogólnych kolekcji <xref:System.Collections.IEnumerable>, takich jak <xref:System.Collections.ArrayList>, należy jawnie zadeklarować typ zmiennej zakresu w celu odzwierciedlenia określonego typu obiektów w kolekcji. Na przykład jeśli masz <xref:System.Collections.ArrayList> obiektów `Student`, [klauzula FROM](../../../language-reference/keywords/from-clause.md) powinna wyglądać następująco:  
+# <a name="how-to-query-an-arraylist-with-linq-c"></a>Jak zapytanie ArrayList z LINQ (C#)
+Korzystając z LINQ do <xref:System.Collections.IEnumerable> wykonywania <xref:System.Collections.ArrayList>zapytań nieogólnych kolekcji, takich jak , należy jawnie zadeklarować typ zmiennej zakresu, aby odzwierciedlić określony typ obiektów w kolekcji. Na przykład jeśli masz <xref:System.Collections.ArrayList> `Student` obiektów, from [klauzula](../../../language-reference/keywords/from-clause.md) powinna wyglądać tak:  
   
 ```csharp
 var query = from Student s in arrList  
 //...
 ```  
   
- Określając typ zmiennej zakresu, rzutuje każdy element w <xref:System.Collections.ArrayList> na `Student`.  
+ Określając typ zmiennej zakresu, rzutujesz każdy element <xref:System.Collections.ArrayList> w `Student`pliku do .  
   
- Użycie jawnie wpisanej zmiennej zakresu w wyrażeniu zapytania jest równoważne wywołaniu metody <xref:System.Linq.Enumerable.Cast%2A>. <xref:System.Linq.Enumerable.Cast%2A> zgłasza wyjątek, jeśli nie można wykonać określonego rzutowania. <xref:System.Linq.Enumerable.Cast%2A> i <xref:System.Linq.Enumerable.OfType%2A> to dwie metody standardowego operatora zapytań, które działają na nieogólnych typach <xref:System.Collections.IEnumerable>. Aby uzyskać więcej informacji, zobacz temat [relacje typu w operacjach zapytań LINQ](./type-relationships-in-linq-query-operations.md).  
+ Użycie jawnie wpisanej zmiennej zakresu w wyrażeniu zapytania jest równoważne wywołaniu <xref:System.Linq.Enumerable.Cast%2A> metody. <xref:System.Linq.Enumerable.Cast%2A>zgłasza wyjątek, jeśli nie można wykonać określonej rzutnie. <xref:System.Linq.Enumerable.Cast%2A>i <xref:System.Linq.Enumerable.OfType%2A> są dwie metody Standardowego operatora kwerendy, które działają na typy nierodzajowe. <xref:System.Collections.IEnumerable> Aby uzyskać więcej informacji, zobacz [Wpisywanie relacji w operacjach kwerend LINQ](./type-relationships-in-linq-query-operations.md).  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano proste zapytanie dotyczące <xref:System.Collections.ArrayList>. Należy zauważyć, że w tym przykładzie są używane Inicjatory obiektów, gdy kod wywołuje metodę <xref:System.Collections.ArrayList.Add%2A>, ale nie jest to wymagane.  
+ W poniższym przykładzie przedstawiono <xref:System.Collections.ArrayList>proste zapytanie za pomocą pliku . Należy zauważyć, że w tym przykładzie używa <xref:System.Collections.ArrayList.Add%2A> inicjatorów obiektów, gdy kod wywołuje metodę, ale nie jest to wymagane.  
   
 ```csharp  
 using System;  
@@ -77,12 +77,12 @@ namespace NonGenericLINQ
         }  
     }  
 }  
-/* Output:   
+/* Output:
     Omelchenko: 98  
     Garcia: 97  
 */  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [LINQ to Objects (C#)](./linq-to-objects.md)
+- [LINQ do obiektów (C#)](./linq-to-objects.md)

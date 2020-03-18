@@ -1,5 +1,5 @@
 ---
-title: Jak przekonwertować ciąg na Przewodnik C# programowania w liczbie
+title: Jak przekonwertować ciąg na liczbę - Przewodnik programowania C#
 ms.date: 02/11/2019
 helpviewer_keywords:
 - conversions [C#]
@@ -7,36 +7,36 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: 21732acd65eb4522b19ce84600fd8b333fb8a705
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 54a4562a5cc493fc287bdf2f6bcf9723557f2a05
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711873"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79157042"
 ---
-# <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Konwertowanie ciągu na liczbę (C# Przewodnik programowania)
+# <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Jak przekonwertować ciąg na liczbę (Przewodnik programowania C#)
 
-Można przekonwertować [ciąg](../../language-reference/builtin-types/reference-types.md) na liczbę, wywołując metodę `Parse` lub `TryParse`, która znajduje się w różnych typach liczbowych (`int`, `long`, `double`itp.) lub przy użyciu metod w klasie <xref:System.Convert?displayProperty=nameWithType>.  
+[Ciąg](../../language-reference/builtin-types/reference-types.md) można przekonwertować na liczbę, wywołując `Parse` lub `TryParse` metody znalezione`int`na `long` `double`różnych typach liczbowych ( , <xref:System.Convert?displayProperty=nameWithType> , , itp.) lub za pomocą metod w klasie.  
   
- Jeśli masz ciąg, jest nieco bardziej wydajny i nieskomplikowany, aby wywołać metodę `TryParse` (na przykład [`int.TryParse("11", out number)`](xref:System.Int32.TryParse%2A)) lub metodę `Parse` (na przykład [`var number = int.Parse("11")`](xref:System.Int32.Parse%2A)).  Użycie metody <xref:System.Convert> jest bardziej przydatne w przypadku ogólnych obiektów, które implementują <xref:System.IConvertible>.  
+ Jeśli masz ciąg, jest nieco bardziej wydajne i `TryParse` proste do [`int.TryParse("11", out number)`](xref:System.Int32.TryParse%2A)wywołania `Parse` metody (na [`var number = int.Parse("11")`](xref:System.Int32.Parse%2A)przykład) lub metody (na przykład).  Korzystanie <xref:System.Convert> z metody jest bardziej przydatne <xref:System.IConvertible>dla obiektów ogólnych, które implementują .  
   
- Możesz użyć metod `Parse` lub `TryParse` w typie liczbowym, który powinien być ciągiem zawierającym, na przykład typem <xref:System.Int32?displayProperty=nameWithType>.  Metoda <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> używa <xref:System.Int32.Parse%2A> wewnętrznie.  Metoda `Parse` zwraca przekonwertowaną liczbę; Metoda `TryParse` zwraca wartość <xref:System.Boolean>, która wskazuje, czy konwersja powiodła się, i zwraca przekonwertowaną liczbę w [parametrze`out`](../../language-reference/keywords/out.md). Jeśli ciąg jest w nieprawidłowym formacie, `Parse` zgłasza wyjątek, a `TryParse` zwraca `false`. Podczas wywoływania metody `Parse` należy zawsze używać obsługi wyjątków, aby przechwytywać <xref:System.FormatException> w przypadku niepowodzenia operacji analizy.  
+ Można użyć `Parse` `TryParse` lub metody na typ liczbowy, który oczekujesz ciąg zawiera, takich jak <xref:System.Int32?displayProperty=nameWithType> typ.  Metoda <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> używa <xref:System.Int32.Parse%2A> wewnętrznie.  Metoda `Parse` zwraca przekonwertowaną liczbę; `TryParse` metoda zwraca <xref:System.Boolean> wartość, która wskazuje, czy konwersja zakończyła się pomyślnie, i zwraca przekonwertowaną liczbę w [ `out` parametrze](../../language-reference/keywords/out.md). Jeśli ciąg nie jest w `Parse` prawidłowym formacie, `TryParse` zgłasza `false`wyjątek, podczas gdy zwraca . Podczas wywoływania `Parse` metody, należy zawsze używać <xref:System.FormatException> obsługi wyjątków do połowu w przypadku, gdy operacja analizy nie powiedzie się.  
   
 ## <a name="calling-the-parse-and-tryparse-methods"></a>Wywoływanie metod Parse i TryParse
 
-Metody `Parse` i `TryParse` ignorują odstęp na początku i na końcu ciągu, ale wszystkie inne znaki muszą być znakami, które tworzą odpowiedni typ liczbowy (`int`, `long`, `ulong`, `float`, `decimal`itd.).  Dowolny biały znak w ciągu, który tworzy liczbę, powoduje błąd.  Na przykład można użyć `decimal.TryParse` do analizy "10", "10,3" lub "10", ale nie można użyć tej metody do przeanalizowania 10 z "10X", "1 0" (zanotuj osadzony obszar), "10 .3" (zanotuj przestrzeń osadzoną), "10e1" (`float.TryParse` działa tutaj) i tak dalej. Ponadto ciąg, którego wartość jest `null` lub <xref:System.String.Empty?displayProperty=nameWithType> nie można przeanalizować pomyślnie. Przed próbą przeanalizowania można sprawdzić, czy ciąg ma wartość null lub być pusty, wywołując metodę <xref:System.String.IsNullOrEmpty%2A?displayProperty=nameWithType>. 
+Metody `Parse` `TryParse` i ignorują biały znak na początku i na końcu ciągu, ale wszystkie inne znaki`int`muszą `long` `ulong`być `float` `decimal`znakami, które tworzą odpowiedni typ numeryczny ( , , , , itp.).  Każdy biały znak w ciągu, który tworzy liczbę powoduje błąd.  Na przykład można `decimal.TryParse` użyć do przeanalizowania "10", "10.3" lub " 10 ", ale nie można użyć tej metody do przeanalizowania 10 z "10X", "1 0" (uwaga`float.TryParse` osadzone miejsce), "10.3" (uwaga osadzone miejsce), "10e1" ( działa tutaj) i tak dalej. Ponadto ciąg, którego wartość `null` <xref:System.String.Empty?displayProperty=nameWithType> jest lub nie można pomyślnie przeanalizować. Można sprawdzić, czy ciąg zerowy lub pusty przed podjęciem <xref:System.String.IsNullOrEmpty%2A?displayProperty=nameWithType> próby przeanalizowania go przez wywołanie metody.
 
-W poniższym przykładzie pokazano zarówno udane, jak i nieudane wywołania do `Parse` i `TryParse`.  
+W poniższym przykładzie przedstawiono zarówno `Parse` pomyślne, jak i nieudane wywołania i `TryParse`.  
   
 [!code-csharp[Parse and TryParse](~/samples/snippets/csharp/programming-guide/string-to-number/parse-tryparse/program.cs)]  
 
-Poniższy przykład ilustruje jedno podejście do analizy ciągu, który powinien zawierać wiodące znaki numeryczne (w tym znaki szesnastkowe) i końcowe znaki niebędące numeryczne. Przypisuje prawidłowe znaki od początku ciągu do nowego ciągu przed wywołaniem metody <xref:System.Int32.TryParse%2A>. Ponieważ ciągi, które mają być analizowane, zawierają niewielką liczbę znaków, przykład wywołuje metodę <xref:System.String.Concat%2A?displayProperty=nameWithType>, aby przypisać prawidłowe znaki do nowego ciągu. W przypadku większego ciągu można użyć klasy <xref:System.Text.StringBuilder>. 
+W poniższym przykładzie przedstawiono podejście do analizowania ciągu, który ma zawierać wiodące znaki liczbowe (w tym znaki szesnastkowe) i końcowe znaki nieliczbowe. Przypisuje prawidłowe znaki od początku ciągu do nowego ciągu <xref:System.Int32.TryParse%2A> przed wywołaniem metody. Ponieważ ciągi do przeanalizowania zawierają niewielką liczbę znaków, <xref:System.String.Concat%2A?displayProperty=nameWithType> przykład wywołuje metodę przypisywania prawidłowych znaków do nowego ciągu. Dla większego ciągu <xref:System.Text.StringBuilder> zamiast tego można użyć klasy.
   
 [!code-csharp[Removing invalid characters](~/samples/snippets/csharp/programming-guide/string-to-number/parse-tryparse2/program.cs)]  
 
-## <a name="calling-the-convert-methods"></a>Wywoływanie metod konwersji
+## <a name="calling-the-convert-methods"></a>Wywoływanie metody konwertuj
 
-W poniższej tabeli wymieniono niektóre metody z klasy <xref:System.Convert>, których można użyć do przekonwertowania ciągu na liczbę.  
+W poniższej tabeli wymieniono <xref:System.Convert> niektóre metody z klasy, za pomocą których można przekonwertować ciąg na liczbę.  
   
 |Typ liczbowy|Metoda|  
 |------------------|------------|  
@@ -50,12 +50,12 @@ W poniższej tabeli wymieniono niektóre metody z klasy <xref:System.Convert>, k
 |`uint`|<xref:System.Convert.ToUInt32%28System.String%29>|  
 |`ulong`|<xref:System.Convert.ToUInt64%28System.String%29>|  
   
- Poniższy przykład wywołuje metodę <xref:System.Convert.ToInt32%28System.String%29?displayProperty=nameWithType>, aby przekonwertować ciąg wejściowy na [int](../../language-reference/builtin-types/integral-numeric-types.md). Przykład przechwytuje dwa najczęstsze wyjątki, które mogą być zgłaszane przez tę metodę, <xref:System.FormatException> i <xref:System.OverflowException>. Jeśli wynikowa liczba może być zwiększana bez przekroczenia <xref:System.Int32.MaxValue?displayProperty=nameWithType>, przykład dodaje 1 do wyniku i wyświetla dane wyjściowe.  
+ Poniższy przykład wywołuje <xref:System.Convert.ToInt32%28System.String%29?displayProperty=nameWithType> metodę do konwersji ciągu wejściowego do [int](../../language-reference/builtin-types/integral-numeric-types.md). W przykładzie przechwytuje dwa najczęstsze wyjątki, które <xref:System.FormatException> <xref:System.OverflowException>mogą być generowane przez tę metodę i . Jeśli wynikowy numer może być zwiększany <xref:System.Int32.MaxValue?displayProperty=nameWithType>bez przekraczania, przykład dodaje 1 do wyniku i wyświetla dane wyjściowe.  
   
 [!code-csharp[Parsing with Convert methods](~/samples/snippets/csharp/programming-guide/string-to-number/convert/program.cs)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Typy](./index.md)
-- [Jak ustalić, czy ciąg reprezentuje wartość liczbową](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
-- [Przykład: Narzędzie do formatowania narzędzi systemu .NET CoreC#()](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs)
+- [Określanie, czy ciąg reprezentuje wartość numeryczną](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
+- [Przykład: Narzędzie formatowania formularzy WinForms w ustonach .NET Core (C#)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs)

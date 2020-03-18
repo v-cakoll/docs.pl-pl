@@ -1,28 +1,28 @@
 ---
 ms.openlocfilehash: 5aca2b8b3ca6572194692888eae3c5614245b481
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75937022"
 ---
-### <a name="uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported"></a>Nieobsługiwany przełącznik zgodności UseLegacyContextMenuStripSourceControlValue
+### <a name="uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported"></a>UseLegacyContextMenuStripSourceControlValue przełącznik zgodności nie jest obsługiwany
 
-Przełącznik zgodności `Switch.System.Windows.Forms.UseLegacyContextMenuStripSourceControlValue`, który został wprowadzony w .NET Framework 4.7.2, nie jest obsługiwany w Windows Forms na platformie .NET Core 3,0.
+Przełącznik `Switch.System.Windows.Forms.UseLegacyContextMenuStripSourceControlValue` zgodności, który został wprowadzony w programie .NET Framework 4.7.2, nie jest obsługiwany w formularzach systemu Windows w programie .NET Core 3.0.
 
-#### <a name="change-description"></a>Opis zmiany
+#### <a name="change-description"></a>Zmień opis
 
-Począwszy od .NET Framework 4.7.2, przełącznik zgodności `Switch.System.Windows.Forms.UseLegacyContextMenuStripSourceControlValue` pozwala deweloperowi zrezygnować z nowego zachowania właściwości <xref:System.Windows.Forms.ContextMenuStrip.SourceControl?displayProperty=nameWithType>, która teraz zwraca odwołanie do kontroli źródła. Poprzednie zachowanie właściwości miało zwrócić `null`. Aby uzyskać więcej informacji, zobacz [\<AppContextSwitchOverrides > elementu](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md).
+Począwszy od .NET Framework 4.7.2, przełącznik `Switch.System.Windows.Forms.UseLegacyContextMenuStripSourceControlValue` zgodności umożliwia deweloperowi zrezygnować z nowego zachowania <xref:System.Windows.Forms.ContextMenuStrip.SourceControl?displayProperty=nameWithType> właściwości, która teraz zwraca odwołanie do kontroli źródła. Poprzednie zachowanie właściwości było powrót `null`. Aby uzyskać więcej informacji, zobacz [ \<AppContextSwitchOverrides> element](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md).
 
-W programie .NET Core przełącznik `Switch.System.Windows.Forms.UseLegacyContextMenuStripSourceControlValue` nie jest obsługiwany.
+W .NET Core `Switch.System.Windows.Forms.UseLegacyContextMenuStripSourceControlValue` przełącznik nie jest obsługiwany.
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
-3,0 wersja zapoznawcza 9
+3.0 Podgląd 9
 
-#### <a name="recommended-action"></a>Zalecane działanie
+#### <a name="recommended-action"></a>Zalecana akcja
 
-Usuń przełącznik. Przełącznik nie jest obsługiwany i żadna alternatywna funkcja nie jest dostępna.
+Wyjmij przełącznik. Przełącznik nie jest obsługiwany i nie jest dostępna żadna alternatywna funkcjonalność.
 
 #### <a name="category"></a>Kategoria
 

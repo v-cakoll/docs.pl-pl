@@ -8,46 +8,46 @@ helpviewer_keywords:
 - multifile assemblies
 ms.assetid: 54832ee9-dca8-4c8b-913c-c0b9d265e9a4
 ms.openlocfilehash: 81fffb2b2e1d56d6068bf6f663a13fad6968a383
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73740510"
 ---
 # <a name="create-assemblies"></a>Tworzenie zestawów
 
-Można tworzyć zestawy Jednoplikowe lub wieloplikowe za pomocą IDE, takie jak Visual Studio, lub kompilatory i narzędzia dostarczone przez Windows SDK. Najprostszym zestawem jest pojedynczy plik, który ma prostą nazwę i jest ładowany do pojedynczej domeny aplikacji. Ten zestaw nie może odwoływać się do innych zestawów poza katalogiem aplikacji i nie jest sprawdzany Sprawdzanie wersji. Aby odinstalować aplikację utworzoną z zestawu, wystarczy usunąć znajdujący się w niej katalog. W przypadku wielu deweloperów zestaw z tymi funkcjami jest wymagany do wdrożenia aplikacji.
+Można tworzyć zestawy jednoplikowe lub wieloplikowe przy użyciu ide, takich jak Visual Studio lub kompilatorów i narzędzi dostarczonych przez zestaw Windows SDK. Najprostszy zestaw jest pojedynczy plik, który ma prostą nazwę i jest ładowany do jednej domeny aplikacji. Do tego zestawu nie mogą odwoływać się inne zestawy poza katalogiem aplikacji i nie są poddawane sprawdzaniu wersji. Aby odinstalować aplikację składającą się z zestawu, wystarczy usunąć katalog, w którym się znajduje. Dla wielu deweloperów zestaw z tymi funkcjami jest wszystko, co jest potrzebne do wdrożenia aplikacji.
 
-Zestaw wieloplikowy można utworzyć z kilku modułów kodu i plików zasobów. Możesz również utworzyć zestaw, który może być współużytkowany przez wiele aplikacji. Zestaw współużytkowany musi mieć silną nazwę i można go wdrożyć w globalnej pamięci podręcznej zestawów.
+Można utworzyć zestaw wieloplikowy z kilku modułów kodu i plików zasobów. Można również utworzyć zestaw, który może być współużytkowany przez wiele aplikacji. Zestaw udostępniony musi mieć silną nazwę i może być wdrożony w globalnej pamięci podręcznej zestawów.
 
-Istnieje kilka opcji grupowania modułów kodu i zasobów w zestawy, w zależności od następujących czynników:
+Podczas grupowania modułów kodu i zasobów w zestawy dostępnych jest kilka opcji, w zależności od następujących czynników:
 
-- Przechowywanie wersji
+- Obsługa wersji
 
      Grupuj moduły, które powinny mieć te same informacje o wersji.
 
-- wdrażania
+- Wdrożenie
 
      Grupuj moduły kodu i zasoby, które obsługują model wdrażania.
 
-- Było
+- Ponowne użycie
 
-     Grupuj moduły, jeśli mogą być logicznie używane razem do pewnego celu. Na przykład zestaw składający się z typów i klas używanych rzadko do konserwacji programu można umieścić w tym samym zestawie. Ponadto typy, które mają być współużytkowane z wieloma aplikacjami, powinny być pogrupowane w zestaw, a zestaw powinien być podpisany za pomocą silnej nazwy.
+     Grupuj moduły, jeśli mogą być logicznie używane razem do pewnego celu. Na przykład zestaw składający się z typów i klas rzadko używanych do konserwacji programu można umieścić w tym samym zestawie. Ponadto typy, które mają być udostępniane z wieloma aplikacjami powinny być pogrupowane w zestaw i zestaw powinien być podpisany o silnej nazwie.
 
 - Zabezpieczenia
 
-     Moduły grupy zawierające typy, które wymagają tych samych uprawnień zabezpieczeń.
+     Grupuj moduły zawierające typy, które wymagają tych samych uprawnień zabezpieczeń.
 
-- Zakresów
+- Zakresu
 
-     Moduły grupy zawierające typy, których widoczność powinna być ograniczona do tego samego zestawu.
+     Grupuj moduły zawierające typy, których widoczność powinna być ograniczona do tego samego zestawu.
 
-Istnieją specjalne zagadnienia dotyczące tworzenia zestawów środowiska uruchomieniowego języka wspólnego dla niezarządzanych aplikacji COM. Aby uzyskać więcej informacji na temat pracy z kodem niezarządzanym, zobacz [udostępnianie .NET Framework składników do modelu COM](../../framework/interop/exposing-dotnet-components-to-com.md).
+Istnieją szczególne zagadnienia podczas udostępniania zestawów w czasie wykonywania języka wspólnego dla niezarządzanych aplikacji COM. Aby uzyskać więcej informacji na temat pracy z kodem niezarządzanym, zobacz [Udostępnianie składników .NET Framework do com](../../framework/interop/exposing-dotnet-components-to-com.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Przechowywanie wersji zestawu](versioning.md)
-- [Instrukcje: kompilowanie zestawu jednoplikowego](../../framework/app-domains/build-single-file-assembly.md)
-- [Instrukcje: kompilowanie zestawu wieloplikowego](../../framework/app-domains/build-multifile-assembly.md)
-- [Jak środowisko uruchomieniowe lokalizuje zestawy](../../framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Jak: Tworzenie zestawu pojedynczego pliku](../../framework/app-domains/build-single-file-assembly.md)
+- [Jak: Tworzenie zestawu wieloplikowego](../../framework/app-domains/build-multifile-assembly.md)
+- [Jak program runtime lokalizuje zestawy](../../framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Zestawy wieloplikowe](../../framework/app-domains/multifile-assemblies.md)

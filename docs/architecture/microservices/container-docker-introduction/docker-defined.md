@@ -1,87 +1,87 @@
 ---
 title: Co to jest Docker?
-description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Co to jest platforma Docker?
+description: Architektura mikrousług .NET dla konteneryzowanych aplikacji .NET | Co to jest docker?
 ms.date: 08/31/2018
 ms.openlocfilehash: a53845d3bbcf24f3eaeb98b9e08b6f35a023c30e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75337704"
 ---
 # <a name="what-is-docker"></a>Co to jest Docker?
 
-[Docker](https://www.docker.com/) to [projekt typu "open source"](https://github.com/docker/docker) służący do automatyzowania wdrażania aplikacji jako przenośne, samoobsługowe kontenery, które można uruchamiać w chmurze lub lokalnie. Platforma Docker to również [firma](https://www.docker.com/) , która wspiera i zmienia tę technologię, pracując w współpracy z dostawcami chmury, Linux i Windows, w tym z firmą Microsoft.
+[Platforma Docker](https://www.docker.com/) jest [projektem typu open source](https://github.com/docker/docker) do automatyzacji wdrażania aplikacji jako przenośnych, samowystarczalnych kontenerów, które można uruchamiać w chmurze lub lokalnie. Docker jest również [firmą,](https://www.docker.com/) która promuje i rozwija tę technologię, współpracując z dostawcami chmury, systemu Linux i Windows, w tym microsoft.
 
-![Diagram przedstawiający miejsca, w których można uruchamiać kontenery platformy Docker.](./media/docker-defined/docker-containers-run-anywhere.png)
+![Diagram przedstawiający miejsca, w których można uruchomić kontenery platformy Docker.](./media/docker-defined/docker-containers-run-anywhere.png)
 
-**Rysunek 2-2**. Platforma Docker wdraża kontenery we wszystkich warstwach chmury hybrydowej.
+**Rysunek 2-2**. Platforma Docker wdraża kontenery na wszystkich warstwach chmury hybrydowej.
 
-Kontenery platformy Docker mogą działać w dowolnym miejscu, lokalnie w centrum danych klienta, w zewnętrznym dostawcy usług lub w chmurze na platformie Azure. Kontenery obrazów platformy Docker mogą działać natywnie w systemach Linux i Windows. Jednak obrazy systemu Windows można uruchamiać tylko na hostach z systemem Windows, a obrazy systemu Linux można uruchamiać na hostach z systemem Linux i hostach Windows (do tej pory przy użyciu maszyny wirtualnej funkcji Hyper-V z systemem Linux), gdzie host oznacza serwer lub maszynę wirtualną.
+Kontenery platformy Docker można uruchamiać w dowolnym miejscu, lokalnie w centrum danych klienta, w zewnętrznym dostawcy usług lub w chmurze, na platformie Azure. Kontenery obrazów platformy Docker można uruchamiać natywnie w systemach Linux i Windows. Jednak obrazy systemu Windows można uruchamiać tylko na hostach systemu Windows, a obrazy systemu Linux mogą być uruchamiane na hostach systemu Linux i hostach systemu Windows (do tej pory przy użyciu maszyny Wirtualnej systemu Linux hyper-V), gdzie host oznacza serwer lub maszynę wirtualną.
 
-Deweloperzy mogą używać środowisk programistycznych w systemie Windows, Linux lub macOS. Na komputerze deweloperskim deweloper uruchamia Host platformy Docker, na którym są wdrażane obrazy platformy Docker, w tym aplikację i jej zależności. Deweloperzy pracujący w systemie Linux lub macOS używają hosta platformy Docker, który jest oparty na systemie Linux i mogą tworzyć obrazy tylko dla kontenerów systemu Linux. (Deweloperzy pracujący na macOS mogą edytować kod lub uruchamiać interfejs wiersza polecenia platformy Docker z macOS, ale w czasie tego pisania, kontenery nie są uruchamiane bezpośrednio na macOS). Deweloperzy, którzy pracują w systemie Windows, mogą tworzyć obrazy dla kontenerów systemu Linux lub Windows.
+Deweloperzy mogą korzystać ze środowisk programistycznych w systemach Windows, Linux lub macOS. Na komputerze deweloperskim deweloper uruchamia hosta platformy Docker, w którym są wdrażane obrazy platformy Docker, w tym aplikacji i jej zależności. Deweloperzy, którzy pracują w systemie Linux lub na macOS używać hosta Platformy Docker, który jest oparty na systemie Linux i mogą tworzyć obrazy tylko dla kontenerów systemu Linux. (Deweloperzy pracujący nad systemem macOS mogą edytować kod lub uruchamiać kod CLI platformy Docker z systemu macOS, ale od czasu pisania kontenery nie są uruchamiane bezpośrednio w systemie macOS). Deweloperzy, którzy pracują w systemie Windows, mogą tworzyć obrazy dla kontenerów systemu Linux lub Windows.
 
-Do hostowania kontenerów w środowiskach deweloperskich i dostarczania dodatkowych narzędzi programistycznych, Docker [Community Edition (CE)](https://www.docker.com/community-edition) dla systemu Windows lub dla macOS. Te produkty instalują niezbędną maszynę wirtualną (host platformy Docker) do hostowania kontenerów. Platforma Docker udostępnia również dostęp do [platformy Docker Enterprise Edition (EE)](https://www.docker.com/enterprise-edition), która jest przeznaczona do programowania w przedsiębiorstwie i jest używana przez zespoły IT, którzy tworzą, dostarczają i uruchamiają duże aplikacje o krytycznym znaczeniu dla firmy w środowisku produkcyjnym.
+Aby hostować kontenery w środowiskach programistycznych i udostępniać dodatkowe narzędzia deweloperskie, platforma Docker wysyła [platformę Docker Community Edition (CE)](https://www.docker.com/community-edition) dla systemu Windows lub systemu macOS. Te produkty instalują niezbędną maszynę wirtualną (host docker) do obsługi kontenerów. Platforma Docker udostępnia również [platformę Docker Enterprise Edition (EE),](https://www.docker.com/enterprise-edition)która jest przeznaczona do rozwoju przedsiębiorstw i jest używana przez zespoły IT, które tworzą, akcesorią i uruchamianiem dużych aplikacji o znaczeniu krytycznym dla firmy w środowisku produkcyjnym.
 
-Aby uruchamiać [kontenery systemu Windows](/virtualization/windowscontainers/about/), istnieją dwa typy środowiska uruchomieniowego:
+Aby uruchomić [kontenery systemu Windows,](/virtualization/windowscontainers/about/)istnieją dwa typy środowiska uruchomieniowego:
 
-- Kontenery systemu Windows Server zapewniają izolację aplikacji za poorednictwem technologii izolacji procesów i przestrzeni nazw. Kontener systemu Windows Server udostępnia jądro z hostem kontenera i ze wszystkimi kontenerami uruchomionymi na hoście.
+- Kontenery systemu Windows Server zapewniają izolację aplikacji za pomocą technologii izolacji procesów i przestrzeni nazw. Kontener systemu Windows Server udostępnia jądro z hostem kontenera i ze wszystkimi kontenerami uruchomionymi na hoście.
 
-- Kontenery funkcji Hyper-V rozszerzają się na izolację zapewnioną przez kontenery systemu Windows Server, uruchamiając każdy kontener w wysoce zoptymalizowanej maszynie wirtualnej. W tej konfiguracji jądro hosta kontenera nie jest udostępniane kontenerom funkcji Hyper-V, co zapewnia lepszą izolację.
+- Kontenery funkcji Hyper-V rozwiń izolacji dostarczonych przez kontenery systemu Windows Server, uruchamiając każdy kontener w wysoce zoptymalizowanej maszynie wirtualnej. W tej konfiguracji jądro hosta kontenera nie jest współużytkowane z kontenerami funkcji Hyper-V, zapewniając lepszą izolację.
 
-Obrazy dla tych kontenerów są tworzone w ten sam sposób i działają tak samo. Różnica polega na tym, jak kontener jest tworzony na podstawie obrazu z uruchomionym kontenerem funkcji Hyper-V, wymaga dodatkowego parametru. Aby uzyskać szczegółowe informacje, zobacz [kontenery funkcji Hyper-V](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/hyperv-container).
+Obrazy dla tych kontenerów są tworzone w ten sam sposób i działają tak samo. Różnica polega na tym, jak kontener jest tworzony z obrazu z uruchomionym kontenerem funkcji Hyper-V wymaga dodatkowego parametru. Aby uzyskać szczegółowe informacje, zobacz [Kontenery funkcji Hyper-V](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/hyperv-container).
 
 ## <a name="comparing-docker-containers-with-virtual-machines"></a>Porównywanie kontenerów platformy Docker z maszynami wirtualnymi
 
-Rysunek 2-3 przedstawia porównanie między maszynami wirtualnymi i kontenerami platformy Docker.
+Rysunek 2-3 przedstawia porównanie maszyn wirtualnych i kontenerów platformy Docker.
 
 | Maszyny wirtualne | Kontenery platformy Docker |
 | -----------------| ------------------|
-|![Diagram przedstawiający stos sprzętu/oprogramowania tradycyjnej maszyny wirtualnej.](./media/docker-defined/virtual-machine-hardware-software.png)|![Diagram przedstawiający stos sprzętu/oprogramowania dla kontenerów platformy Docker.](./media/docker-defined/docker-container-hardware-software.png)|
-|Maszyny wirtualne obejmują aplikację, wymagane biblioteki lub pliki binarne oraz pełny system operacyjny gościa. Pełna Wirtualizacja wymaga więcej zasobów niż kontenerach. | Kontenery obejmują aplikację i wszystkie jej zależności. Jednak współużytkują jądro systemu operacyjnego z innymi kontenerami, uruchamiając jako procesy izolowane w obszarze użytkownika w systemie operacyjnym hosta. (Z wyjątkiem kontenerów funkcji Hyper-V, gdzie każdy kontener jest uruchamiany wewnątrz specjalnej maszyny wirtualnej na kontener). |
+|![Diagram przedstawiający stos sprzętu/oprogramowania tradycyjnej maszyny Wirtualnej.](./media/docker-defined/virtual-machine-hardware-software.png)|![Diagram przedstawiający stos sprzętu/oprogramowania dla kontenerów platformy Docker.](./media/docker-defined/docker-container-hardware-software.png)|
+|Maszyny wirtualne obejmują aplikację, wymagane biblioteki lub pliki binarne oraz pełny system operacyjny gościa. Pełna wirtualizacja wymaga więcej zasobów niż konteneryzacji. | Kontenery obejmują aplikację i wszystkie jej zależności. Jednak współużytkują jądro systemu operacyjnego z innymi kontenerami, działa jako pojedyncze procesy w przestrzeni użytkownika w systemie operacyjnym hosta. (Z wyjątkiem kontenerów funkcji Hyper-V, gdzie każdy kontener jest uruchamiany wewnątrz specjalnej maszyny wirtualnej na kontener). |
 
 **Rysunek 2-3**. Porównanie tradycyjnych maszyn wirtualnych z kontenerami platformy Docker
 
-W przypadku maszyn wirtualnych istnieją trzy warstwy podstawowe na serwerze hosta, w dolnej części: infrastruktura, system operacyjny hosta i funkcja hypervisor oraz na wszystkich maszynach wirtualnych, które mają własny system operacyjny i wszystkie niezbędne biblioteki. W przypadku platformy Docker serwer hosta ma tylko infrastrukturę i system operacyjny oraz na tym, że aparat kontenera utrzymuje izolowany kontener, ale udostępnia podstawowe usługi systemu operacyjnego.
+W przypadku maszyn wirtualnych istnieją trzy warstwy podstawowe na serwerze hosta, od dołu do góry: infrastruktura, system operacyjny hosta i hypervisor, a na dodatek każda maszyna wirtualna ma własny system operacyjny i wszystkie niezbędne biblioteki. Dla platformy Docker serwer hosta ma tylko infrastrukturę i system operacyjny, a na dodatek aparat kontenera, który utrzymuje kontenera izolowane, ale udostępnianie podstawowych usług systemu operacyjnego.
 
-Ponieważ kontenery wymagają znacznie mniejszej ilości zasobów (na przykład nie potrzebują pełnego systemu operacyjnego), można je łatwo wdrażać i uruchamiać szybko. Dzięki temu można uzyskać większą gęstość, co oznacza, że umożliwia uruchamianie więcej usług w tej samej jednostce sprzętowej, co zmniejsza koszty.
+Ponieważ kontenery wymagają znacznie mniej zasobów (na przykład nie potrzebują pełnego systemu operacyjnego), są łatwe do wdrożenia i uruchamiają się szybko. Pozwala to na większą gęstość, co oznacza, że pozwala na uruchamianie większej liczby usług na tej samej jednostce sprzętowej, zmniejszając w ten sposób koszty.
 
-Efektem ubocznym uruchamiania na tym samym jądrze jest mniejsza izolacja niż maszyny wirtualne.
+Jako efekt uboczny uruchamiania na tym samym jądrze, otrzymujesz mniejszą izolację niż maszyny wirtualne.
 
-Głównym celem obrazu jest to, że środowisko (zależności) jest takie samo w różnych wdrożeniach. Oznacza to, że można debugować go na maszynie, a następnie wdrożyć na innym komputerze z gwarancją tego samego środowiska.
+Głównym celem obrazu jest, że sprawia, że środowisko (zależności) takie same w różnych wdrożeniach. Oznacza to, że można go debugować na komputerze, a następnie wdrożyć go na innym komputerze z tego samego środowiska gwarantowane.
 
-Obraz kontenera to sposób na spakowanie aplikacji lub usługi oraz wdrożenie jej w sposób niezawodny i powtarzalny. Można powiedzieć, że platforma Docker nie jest tylko technologią, ale również z wytwarzeniem i procesem.
+Obraz kontenera to sposób na spakowanie aplikacji lub usługi i wdrożenie jej w niezawodny i powtarzalny sposób. Można powiedzieć, że Docker to nie tylko technologia, ale także filozofia i proces.
 
-W przypadku korzystania z platformy Docker nie są nasłuchiwani deweloperzy, "działa na mojej maszynie, dlaczego nie w środowisku produkcyjnym?". Mogą oni po prostu powiedzieć "działa na platformie Docker", ponieważ spakowana aplikacja platformy Docker może być wykonywana na dowolnym obsługiwanym środowisku Docker i działa w taki sposób, aby była ona przeznaczona dla wszystkich obiektów docelowych wdrożenia (takich jak dev, pytań i odpowiedzi).
+Podczas korzystania z platformy Docker, nie usłyszysz deweloperzy mówią: "To działa na moim komputerze, dlaczego nie w środowisku produkcyjnym?" Mogą po prostu powiedzieć" Działa na platformie Docker", ponieważ spakowana aplikacja platformy Docker może być wykonywana w dowolnym obsługiwanym środowisku platformy Docker i działa tak, jak była przeznaczona dla wszystkich celów wdrażania (takich jak Dev, QA, staging i production).
 
-## <a name="a-simple-analogy"></a>Prosta analogowa
+## <a name="a-simple-analogy"></a>Prosta analogia
 
-Być może prosta analogowa może pomóc Ci w opanujesz podstawowej koncepcji platformy Docker.
+Być może prosta analogia może pomóc zrozumieć podstawową koncepcję Docker.
 
-Wróćmy w czasie do 1950s przez chwilę. Nie wykryto żadnych procesorów programu Word, a kopiarki były używane wszędzie (rodzaju).
+Cofniemy się na chwilę do lat 50. Nie było edytorów tekstu, a kserokopiarki były używane wszędzie (rodzaj).
 
-Wyobraź sobie, że użytkownik jest odpowiedzialny za szybkie wydawanie partii liter zgodnie z potrzebami, aby wysłać je do klientów za pomocą rzeczywistych dokumentów i kopert, aby dostarczyć fizycznie do adresu każdego klienta (nie wysłano jeszcze wiadomości e-mail).
+Wyobraź sobie, że jesteś odpowiedzialny za szybkie wydawanie partii listów zgodnie z wymaganiami, aby wysłać je do klientów, przy użyciu prawdziwego papieru i kopert, które mają być dostarczone fizycznie na adres każdego klienta (nie było wtedy wiadomości e-mail).
 
-W pewnym momencie należy pamiętać, że litery są tylko kompozycją dużego zestawu akapitów, które są wybierane i rozmieszczane w razie potrzeby zgodnie z przeznaczeniem. w tym celu należy opracować system do szybkiego wydawania listów, co oczekuje na pobranie Hefty.
+W pewnym momencie zdajesz sobie sprawę, że litery są tylko kompozycją dużego zestawu akapitów, które są zbierane i ułożone zgodnie z potrzebami, zgodnie z celem listu, więc opracujesz system szybkiego wydawania listów, spodziewając się potężnego podniesienia.
 
 System jest prosty:
 
-1. Zaczynasz od talii arkuszy przezroczystych zawierających jeden akapit każdy.
+1. Zaczynasz od talii przezroczystych arkuszy zawierających po jednym akapicie.
 
-2. Aby wystawić zestaw liter, należy wybrać arkusze z akapitami, które są potrzebne, a następnie przetworzyć je i wyrównać.
+2. Aby wydać zestaw liter, należy wybrać arkusze z akapitami, których potrzebujesz, a następnie ułożyć i wyrównać je tak, aby wyglądały i dobrze czytały.
 
-3. Na koniec należy umieścić zestaw w kopiarkach i nacisnąć przycisk Rozpocznij, aby utworzyć dowolną liczbę liter zgodnie z potrzebami.
+3. Na koniec umieszczasz zestaw w kserokopiarkai i naciśnij przycisk start, aby wyprodukować tyle liter, ile jest wymagane.
 
-Upraszcza to, że jest to podstawowy pomysł dotyczący platformy Docker.
+Tak więc, upraszczając, to jest podstawowa idea Docker.
 
-W programie Docker każda warstwa to powstały zestaw zmian, które przechodzą do systemu plików po wykonaniu polecenia, na przykład instalując program.
+W platformie Docker każda warstwa jest wynikowym zestawem zmian, które zachodzą w systemie plików po wykonaniu polecenia, na przykład o zainstalowaniu programu.
 
-W związku z tym, gdy po skopiowaniu warstwy zostanie "odszukasz", zobaczysz wszystkie pliki z uwzględnieniem warstwy podczas instalacji programu.
+Tak więc, gdy "patrzysz" na system plików po skopiowaniu warstwy, zobaczysz wszystkie pliki, w tym warstwę, gdy program został zainstalowany.
 
-Obraz można traktować jako pomocniczy dysk twardy tylko do odczytu gotowy do zainstalowania na komputerze, na którym jest już zainstalowany system operacyjny.
+Obraz można pomyśleć jako pomocniczy dysk twardy tylko do odczytu gotowy do zainstalowania na "komputerze", na którym system operacyjny jest już zainstalowany.
 
-Podobnie można traktować kontener jako "komputer" z zainstalowanym dyskiem twardym obrazu. Kontener, podobnie jak komputer, może być włączony lub wyłączony.
+Podobnie można myśleć o kontenerze jako "komputerze" z zainstalowanym dyskiem twardym obrazu. Kontener, podobnie jak komputer, może być włączony lub wyłączony.
 
 >[!div class="step-by-step"]
 >[Poprzedni](index.md)
->[Następny](docker-terminology.md)
+>[następny](docker-terminology.md)

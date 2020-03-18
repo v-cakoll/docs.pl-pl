@@ -1,21 +1,21 @@
 ---
-title: Jak wykonać zapytanie dotyczące metadanych zestawu z odbiciem (LINQ) (C#)
+title: Jak wysyłać zapytania do metadanych zestawu za pomocą odbicia (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: c4cdce49-b1c8-4420-b12a-9ff7e6671368
-ms.openlocfilehash: 65f27ae17d77553bfd7a78c1310febd337a55a6e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 6e68cfea2bf3e03aed9de3e4a18cf9941ece34e3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345688"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168924"
 ---
-# <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-c"></a><span data-ttu-id="2af00-102">Jak wykonać zapytanie dotyczące metadanych zestawu z odbiciem (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="2af00-102">How to query an assembly's metadata with Reflection (LINQ) (C#)</span></span>
+# <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-c"></a><span data-ttu-id="91c36-102">Jak wysyłać zapytania do metadanych zestawu za pomocą odbicia (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="91c36-102">How to query an assembly's metadata with Reflection (LINQ) (C#)</span></span>
 
-<span data-ttu-id="2af00-103">Interfejsy API odbicia w bibliotece klas .NET Framework mogą służyć do badania metadanych w zestawie .NET i tworzenia kolekcji typów, elementów członkowskich, parametrów i tak dalej, które znajdują się w tym zestawie.</span><span class="sxs-lookup"><span data-stu-id="2af00-103">The .NET Framework class library reflection APIs can be used to examine the metadata in a .NET assembly and create collections of types, type members, parameters, and so on that are in that assembly.</span></span> <span data-ttu-id="2af00-104">Ponieważ te kolekcje obsługują ogólny interfejs <xref:System.Collections.Generic.IEnumerable%601>, można je zbadać przy użyciu LINQ.</span><span class="sxs-lookup"><span data-stu-id="2af00-104">Because these collections support the generic <xref:System.Collections.Generic.IEnumerable%601> interface, they can be queried by using LINQ.</span></span>  
+<span data-ttu-id="91c36-103">Interfejsów API odbicia biblioteki klas .NET Framework może służyć do badania metadanych w zestawie .NET i tworzenia kolekcji typów, elementów członkowskich typu, parametrów i tak dalej, które znajdują się w tym zestawie.</span><span class="sxs-lookup"><span data-stu-id="91c36-103">The .NET Framework class library reflection APIs can be used to examine the metadata in a .NET assembly and create collections of types, type members, parameters, and so on that are in that assembly.</span></span> <span data-ttu-id="91c36-104">Ponieważ te kolekcje <xref:System.Collections.Generic.IEnumerable%601> obsługują ogólny interfejs, można ich zbadać za pomocą LINQ.</span><span class="sxs-lookup"><span data-stu-id="91c36-104">Because these collections support the generic <xref:System.Collections.Generic.IEnumerable%601> interface, they can be queried by using LINQ.</span></span>  
   
-<span data-ttu-id="2af00-105">Poniższy przykład pokazuje, w jaki sposób LINQ może być używane z odbiciem w celu pobrania określonych metadanych dotyczących metod, które pasują do określonego kryterium wyszukiwania.</span><span class="sxs-lookup"><span data-stu-id="2af00-105">The following example shows how LINQ can be used with reflection to retrieve specific metadata about methods that match a specified search criterion.</span></span> <span data-ttu-id="2af00-106">W takim przypadku zapytanie znajdzie nazwy wszystkich metod w zestawie, które zwracają wyliczalne typy, takie jak tablice.</span><span class="sxs-lookup"><span data-stu-id="2af00-106">In this case, the query will find the names of all the methods in the assembly that return enumerable types such as arrays.</span></span>  
+<span data-ttu-id="91c36-105">W poniższym przykładzie pokazano, jak LINQ może służyć z odbiciem do pobierania określonych metadanych dotyczących metod, które pasują do określonego kryterium wyszukiwania.</span><span class="sxs-lookup"><span data-stu-id="91c36-105">The following example shows how LINQ can be used with reflection to retrieve specific metadata about methods that match a specified search criterion.</span></span> <span data-ttu-id="91c36-106">W takim przypadku kwerenda znajdzie nazwy wszystkich metod w zestawie, które zwracają wyliczalne typy, takie jak tablice.</span><span class="sxs-lookup"><span data-stu-id="91c36-106">In this case, the query will find the names of all the methods in the assembly that return enumerable types such as arrays.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2af00-107">Przykład</span><span class="sxs-lookup"><span data-stu-id="2af00-107">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="91c36-107">Przykład</span><span class="sxs-lookup"><span data-stu-id="91c36-107">Example</span></span>  
   
 ```csharp  
 using System;
@@ -30,7 +30,7 @@ class ReflectionHowTO
         var pubTypesQuery = from type in assembly.GetTypes()  
                     where type.IsPublic  
                         from method in type.GetMethods()  
-                        where method.ReturnType.IsArray == true 
+                        where method.ReturnType.IsArray == true
                             || ( method.ReturnType.GetInterface(  
                                 typeof(System.Collections.Generic.IEnumerable<>).FullName ) != null  
                             && method.ReturnType.FullName != "System.String" )  
@@ -51,8 +51,8 @@ class ReflectionHowTO
 }
 ```  
 
-<span data-ttu-id="2af00-108">W przykładzie zastosowano metodę <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType>, aby zwrócić tablicę typów w określonym zestawie.</span><span class="sxs-lookup"><span data-stu-id="2af00-108">The example uses the <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> method to return an array of types in the specified assembly.</span></span> <span data-ttu-id="2af00-109">Filtr [WHERE](../../../language-reference/keywords/where-clause.md) jest stosowany, aby zwracane były tylko typy publiczne.</span><span class="sxs-lookup"><span data-stu-id="2af00-109">The [where](../../../language-reference/keywords/where-clause.md) filter is applied so that only public types are returned.</span></span> <span data-ttu-id="2af00-110">Dla każdego typu publicznego podzapytanie jest generowane przy użyciu tablicy <xref:System.Reflection.MethodInfo>, która jest zwracana z wywołania <xref:System.Type.GetMethods%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="2af00-110">For each public type, a subquery is generated by using the <xref:System.Reflection.MethodInfo> array that is returned from the <xref:System.Type.GetMethods%2A?displayProperty=nameWithType> call.</span></span> <span data-ttu-id="2af00-111">Te wyniki są filtrowane tak, aby zwracały tylko te metody, których typem zwracanym jest tablica lub inny typ, który implementuje <xref:System.Collections.Generic.IEnumerable%601>.</span><span class="sxs-lookup"><span data-stu-id="2af00-111">These results are filtered to return only those methods whose return type is an array or else a type that implements <xref:System.Collections.Generic.IEnumerable%601>.</span></span> <span data-ttu-id="2af00-112">Na koniec te wyniki są pogrupowane przy użyciu nazwy typu jako klucza.</span><span class="sxs-lookup"><span data-stu-id="2af00-112">Finally, these results are grouped by using the type name as a key.</span></span>  
+<span data-ttu-id="91c36-108">W przykładzie <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> użyto metody do zwrócenia tablicy typów w określonym zestawie.</span><span class="sxs-lookup"><span data-stu-id="91c36-108">The example uses the <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> method to return an array of types in the specified assembly.</span></span> <span data-ttu-id="91c36-109">Where [where](../../../language-reference/keywords/where-clause.md) filtr jest stosowany tak, że zwracane są tylko typy publiczne.</span><span class="sxs-lookup"><span data-stu-id="91c36-109">The [where](../../../language-reference/keywords/where-clause.md) filter is applied so that only public types are returned.</span></span> <span data-ttu-id="91c36-110">Dla każdego typu publicznego podkwerenda jest <xref:System.Reflection.MethodInfo> generowana przy użyciu <xref:System.Type.GetMethods%2A?displayProperty=nameWithType> tablicy, która jest zwracana z wywołania.</span><span class="sxs-lookup"><span data-stu-id="91c36-110">For each public type, a subquery is generated by using the <xref:System.Reflection.MethodInfo> array that is returned from the <xref:System.Type.GetMethods%2A?displayProperty=nameWithType> call.</span></span> <span data-ttu-id="91c36-111">Wyniki te są filtrowane, aby zwrócić tylko te metody, których zwracany typ jest tablicą lub typem, który implementuje <xref:System.Collections.Generic.IEnumerable%601>.</span><span class="sxs-lookup"><span data-stu-id="91c36-111">These results are filtered to return only those methods whose return type is an array or else a type that implements <xref:System.Collections.Generic.IEnumerable%601>.</span></span> <span data-ttu-id="91c36-112">Na koniec te wyniki są grupowane przy użyciu nazwy typu jako klucza.</span><span class="sxs-lookup"><span data-stu-id="91c36-112">Finally, these results are grouped by using the type name as a key.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2af00-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="2af00-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="91c36-113">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="91c36-113">See also</span></span>
 
-- [<span data-ttu-id="2af00-114">LINQ to Objects (C#)</span><span class="sxs-lookup"><span data-stu-id="2af00-114">LINQ to Objects (C#)</span></span>](./linq-to-objects.md)
+- [<span data-ttu-id="91c36-114">LINQ do obiektów (C#)</span><span class="sxs-lookup"><span data-stu-id="91c36-114">LINQ to Objects (C#)</span></span>](./linq-to-objects.md)

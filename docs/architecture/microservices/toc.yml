@@ -136,9 +136,7 @@
           href: implement-resilient-applications/implement-retries-exponential-backoff.md
         - name: Implementowanie odpornych na błędy połączeń SQL w programie Entity Framework Core
           href: implement-resilient-applications/implement-resilient-entity-framework-core-sql-connections.md
-        - name: Eksplorowanie ponownych prób niestandardowego wywołania HTTP wykonywanych przy użyciu wycofywania wykładniczego
-          href: implement-resilient-applications/explore-custom-http-call-retries-exponential-backoff.md
-        - name: Używanie elementu HttpClientFactory do implementowania odpornych na błędy żądań HTTP
+        - name: Używanie elementu IHttpClientFactory do implementowania odpornych na błędy żądań HTTP
           href: implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests.md
         - name: Implementowanie ponownych prób wywołania HTTP wykonywanych przy użyciu wycofywania wykładniczego usługi Polly
           href: implement-resilient-applications/implement-http-call-retries-exponential-backoff-polly.md

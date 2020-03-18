@@ -2,19 +2,19 @@
 title: Jak podzielić plik na wiele plików przy użyciu grup (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-ms.openlocfilehash: 934b6385a8634c23a4e29098367c9aaa7355f11c
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 654b444c26f2868c4e2b0e2893a639ebc6cacabf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347319"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168573"
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a><span data-ttu-id="65e5c-102">Jak podzielić plik na wiele plików przy użyciu grup (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="65e5c-102">How to split a file into many files by using groups (LINQ) (C#)</span></span>
-<span data-ttu-id="65e5c-103">Ten przykład pokazuje jeden ze sposobów, aby scalić zawartość dwóch plików, a następnie utworzyć zestaw nowych plików, które organizują dane w nowy sposób.</span><span class="sxs-lookup"><span data-stu-id="65e5c-103">This example shows one way to merge the contents of two files and then create a set of new files that organize the data in a new way.</span></span>  
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a><span data-ttu-id="56fed-102">Jak podzielić plik na wiele plików przy użyciu grup (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="56fed-102">How to split a file into many files by using groups (LINQ) (C#)</span></span>
+<span data-ttu-id="56fed-103">W tym przykładzie przedstawiono jeden sposób scalania zawartości dwóch plików, a następnie tworzenia zestawu nowych plików, które organizują dane w nowy sposób.</span><span class="sxs-lookup"><span data-stu-id="56fed-103">This example shows one way to merge the contents of two files and then create a set of new files that organize the data in a new way.</span></span>  
   
-### <a name="to-create-the-data-files"></a><span data-ttu-id="65e5c-104">Aby utworzyć pliki danych</span><span class="sxs-lookup"><span data-stu-id="65e5c-104">To create the data files</span></span>  
+### <a name="to-create-the-data-files"></a><span data-ttu-id="56fed-104">Aby utworzyć pliki danych</span><span class="sxs-lookup"><span data-stu-id="56fed-104">To create the data files</span></span>  
   
-1. <span data-ttu-id="65e5c-105">Skopiuj te nazwy do pliku tekstowego o nazwie names1. txt i Zapisz go w folderze projektu:</span><span class="sxs-lookup"><span data-stu-id="65e5c-105">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
+1. <span data-ttu-id="56fed-105">Skopiuj te nazwy do pliku tekstowego o nazwie names1.txt i zapisz je w folderze projektu:</span><span class="sxs-lookup"><span data-stu-id="56fed-105">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
   
     ```text  
     Bankov, Peter  
@@ -29,7 +29,7 @@ ms.locfileid: "75347319"
     Garcia, Debra  
     ```  
   
-2. <span data-ttu-id="65e5c-106">Skopiuj te nazwy do pliku tekstowego o nazwie names2. txt i Zapisz go w folderze projektu: należy pamiętać, że te dwa pliki mają nazwy wspólne.</span><span class="sxs-lookup"><span data-stu-id="65e5c-106">Copy these names into a text file that is named names2.txt and save it in your project folder: Note that the two files have some names in common.</span></span>  
+2. <span data-ttu-id="56fed-106">Skopiuj te nazwy do pliku tekstowego o nazwie names2.txt i zapisz je w folderze projektu: Należy pamiętać, że oba pliki mają kilka nazw wspólnych.</span><span class="sxs-lookup"><span data-stu-id="56fed-106">Copy these names into a text file that is named names2.txt and save it in your project folder: Note that the two files have some names in common.</span></span>  
   
     ```text  
     Liu, Jinghao  
@@ -44,7 +44,7 @@ ms.locfileid: "75347319"
     El Yassir, Mehdi  
     ```  
   
-## <a name="example"></a><span data-ttu-id="65e5c-107">Przykład</span><span class="sxs-lookup"><span data-stu-id="65e5c-107">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="56fed-107">Przykład</span><span class="sxs-lookup"><span data-stu-id="56fed-107">Example</span></span>  
   
 ```csharp  
 class SplitWithGroups  
@@ -92,7 +92,7 @@ class SplitWithGroups
         Console.ReadKey();  
     }  
 }  
-/* Output:   
+/* Output:
     A  
        Aw, Kam Foo  
     B  
@@ -122,13 +122,13 @@ class SplitWithGroups
  */  
 ```  
   
- <span data-ttu-id="65e5c-108">Program zapisuje oddzielny plik dla każdej grupy w tym samym folderze co pliki danych.</span><span class="sxs-lookup"><span data-stu-id="65e5c-108">The program writes a separate file for each group in the same folder as the data files.</span></span>  
+ <span data-ttu-id="56fed-108">Program zapisuje osobny plik dla każdej grupy w tym samym folderze co pliki danych.</span><span class="sxs-lookup"><span data-stu-id="56fed-108">The program writes a separate file for each group in the same folder as the data files.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="65e5c-109">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="65e5c-109">Compiling the Code</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="56fed-109">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="56fed-109">Compiling the Code</span></span>
 
-<span data-ttu-id="65e5c-110">Utwórz projekt C# aplikacji konsolowej z `using` dyrektywami dotyczącymi przestrzeni nazw System. Linq i system.IO.</span><span class="sxs-lookup"><span data-stu-id="65e5c-110">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>
+<span data-ttu-id="56fed-110">Utwórz projekt aplikacji konsoli `using` C# z dyrektywami dla system.Linq i System.IO przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="56fed-110">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="65e5c-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="65e5c-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="56fed-111">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="56fed-111">See also</span></span>
 
-- [<span data-ttu-id="65e5c-112">LINQ i ciągi (C#)</span><span class="sxs-lookup"><span data-stu-id="65e5c-112">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
-- [<span data-ttu-id="65e5c-113">LINQ i katalogi plików (C#)</span><span class="sxs-lookup"><span data-stu-id="65e5c-113">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)
+- [<span data-ttu-id="56fed-112">LINQ i ciągi (C#)</span><span class="sxs-lookup"><span data-stu-id="56fed-112">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
+- [<span data-ttu-id="56fed-113">LINQ i katalogi plików (C#)</span><span class="sxs-lookup"><span data-stu-id="56fed-113">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)

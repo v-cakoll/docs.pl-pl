@@ -7,9 +7,9 @@
       href: arithmetic-operators.md
     - name: Operatory porównania
       href: comparison-operators.md
-    - name: 'Instrukcje: Testowanie, czy dwa obiekty są takie same'
+    - name: 'Porady: testowanie, czy dwa obiekty są takie same'
       href: how-to-test-whether-two-objects-are-the-same.md
-    - name: 'Instrukcje: Dopasowywanie ciągu do wzorca'
+    - name: 'Porady: dopasowywanie ciągu do wzorca'
       href: how-to-match-a-string-against-a-pattern.md
     - name: Operatory łączenia
       href: concatenation-operators.md
@@ -17,7 +17,7 @@
       href: logical-and-bitwise-operators.md
     - name: Skuteczna kombinacja operatorów
       href: efficient-combination-of-operators.md
-    - name: 'Instrukcje: Obliczanie wartości liczbowych'
+    - name: 'Porady: obliczanie wartości liczbowych'
       href: how-to-calculate-numeric-values.md
     - name: Porównania wartości
       href: value-comparisons.md

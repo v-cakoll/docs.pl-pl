@@ -1,9 +1,9 @@
 - name: Zadeklarowane elementy
   href: index.md
   items:
-    - name: Nazwy zadeklarowanych elementów
+    - name: Zadeklarowane nazwy elementów
       href: declared-element-names.md
-    - name: Charakterystyka zadeklarowanych elementów
+    - name: Zadeklarowana charakterystyka elementów
       href: declared-element-characteristics.md
       items:
         - name: Okres istnienia
@@ -11,14 +11,14 @@
         - name: Zakres
           href: scope.md
           items:
-            - name: 'Instrukcje: Kontrolowanie zakresu zmiennej'
+            - name: 'Porady: kontrolowanie zakresu zmiennej'
               href: how-to-control-the-scope-of-a-variable.md
             - name: Promocja typu
               href: type-promotion.md
         - name: Poziomy dostępu
           href: access-levels.md
           items:
-            - name: 'Instrukcje: Kontrolowanie dostępności zmiennej'
+            - name: 'Porady: kontrolowanie dostępności zmiennej'
               href: how-to-control-the-availability-of-a-variable.md
         - name: Odwołania do elementów zadeklarowanych
           href: references-to-declared-elements.md
@@ -27,9 +27,9 @@
           items:
             - name: Różnice między zasłanianiem i przesłanianiem
               href: differences-between-shadowing-and-overriding.md
-            - name: 'Instrukcje: Ukrywanie zmiennej o tej samej nazwie jako zmiennej użytkownika'
+            - name: 'Porady: ukrywanie zmiennej o tej samej nazwie jako zmiennej użytkownika'
               href: how-to-hide-a-variable-with-the-same-name-as-your-variable.md
-            - name: 'Instrukcje: Ukrywanie dziedziczonej zmiennej'
+            - name: 'Porady: ukrywanie dziedziczonej zmiennej'
               href: how-to-hide-an-inherited-variable.md
-            - name: 'Instrukcje: Dostęp do zmiennej ukrytej przez klasę pochodną'
+            - name: 'Porady: dostęp do zmiennej ukrytej przez klasę pochodną'
               href: how-to-access-a-variable-hidden-by-a-derived-class.md

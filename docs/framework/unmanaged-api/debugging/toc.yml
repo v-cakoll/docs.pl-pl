@@ -12,396 +12,396 @@
         - name: ICLRDataEnumMemoryRegions — Interfejs
           href: iclrdataenummemoryregions-interface.md
           items:
-            - name: 'EnumMemoryRegions, metoda'
+            - name: EnumMemoryRegions — Metoda
               href: iclrdataenummemoryregions-enummemoryregions-method.md
         - name: ICLRDataEnumMemoryRegionsCallback — Interfejs
           href: iclrdataenummemoryregionscallback-interface.md
           items:
-            - name: 'EnumMemoryRegion, metoda'
+            - name: EnumMemoryRegion — Metoda
               href: iclrdataenummemoryregionscallback-enummemoryregion-method.md
         - name: ICLRDataTarget — Interfejs
           href: iclrdatatarget-interface.md
           items:
             - name: 'GetCurrentThreadID, metoda'
               href: iclrdatatarget-getcurrentthreadid-method.md
-            - name: 'GetImageBase, metoda'
+            - name: GetImageBase — Metoda
               href: iclrdatatarget-getimagebase-method.md
-            - name: 'GetMachineType, metoda'
+            - name: GetMachineType — Metoda
               href: iclrdatatarget-getmachinetype-method.md
-            - name: 'GetPointerSize, metoda'
+            - name: GetPointerSize — Metoda
               href: iclrdatatarget-getpointersize-method.md
             - name: 'GetThreadContext, metoda'
               href: iclrdatatarget-getthreadcontext-method.md
-            - name: 'GetTLSValue, metoda'
+            - name: GetTLSValue — Metoda
               href: iclrdatatarget-gettlsvalue-method.md
-            - name: 'ReadVirtual, metoda'
+            - name: ReadVirtual — Metoda
               href: iclrdatatarget-readvirtual-method.md
-            - name: 'Request, metoda'
+            - name: Request — Metoda
               href: iclrdatatarget-request-method.md
-            - name: 'SetThreadContext, metoda'
+            - name: SetThreadContext — Metoda
               href: iclrdatatarget-setthreadcontext-method.md
-            - name: 'SetTLSValue, metoda'
+            - name: SetTLSValue — Metoda
               href: iclrdatatarget-settlsvalue-method.md
-            - name: 'WriteVirtual, metoda'
+            - name: WriteVirtual — Metoda
               href: iclrdatatarget-writevirtual-method.md
         - name: ICLRDataTarget2 — Interfejs
           href: iclrdatatarget2-interface.md
           items:
-            - name: 'AllocVirtual, metoda'
+            - name: AllocVirtual — Metoda
               href: iclrdatatarget2-allocvirtual-method.md
-            - name: 'FreeVirtual, metoda'
+            - name: FreeVirtual — Metoda
               href: iclrdatatarget2-freevirtual-method.md
         - name: ICLRDataTarget3 — Interfejs
           href: iclrdatatarget3-interface.md
           items:
-            - name: 'GetExceptionRecord, metoda'
+            - name: GetExceptionRecord — Metoda
               href: iclrdatatarget3-getexceptionrecord-method.md
-            - name: 'GetExceptionContextRecord, metoda'
+            - name: Metoda GetExceptionContextRecord
               href: iclrdatatarget3-getexceptioncontextrecord-method.md
-            - name: 'GetExceptionThreadID, metoda'
+            - name: Metoda GetExceptionThreadID
               href: iclrdatatarget3-getexceptionthreadid-method.md
         - name: ICLRDebugging — Interfejs
           href: iclrdebugging-interface.md
           items:
-            - name: 'OpenVirtualProcess, metoda'
+            - name: OpenVirtualProcess — Metoda
               href: iclrdebugging-openvirtualprocess-method.md
-            - name: 'CanUnloadNow, metoda'
+            - name: CanUnloadNow — Metoda
               href: iclrdebugging-canunloadnow-method.md
         - name: ICLRDebuggingLibraryProvider — Interfejs
           href: iclrdebugginglibraryprovider-interface.md
           items:
-            - name: 'ProvideLibrary, metoda'
+            - name: ProvideLibrary — Metoda
               href: iclrdebugginglibraryprovider-providelibrary-method.md
         - name: ICLRMetadataLocator — Interfejs
           href: iclrmetadatalocator-interface.md
           items:
-            - name: 'GetMetadata, metoda'
+            - name: GetMetadata — Metoda
               href: iclrmetadatalocator-getmetadata-method.md
         - name: ICorDebug — Interfejs
           href: icordebug-interface.md
           items:
-            - name: 'CanLaunchOrAttach, metoda'
+            - name: CanLaunchOrAttach — Metoda
               href: icordebug-canlaunchorattach-method.md
-            - name: 'CreateProcess, metoda'
+            - name: CreateProcess — Metoda
               href: icordebug-createprocess-method.md
-            - name: 'DebugActiveProcess, metoda'
+            - name: DebugActiveProcess — Metoda
               href: icordebug-debugactiveprocess-method.md
-            - name: 'EnumerateProcesses, metoda'
+            - name: EnumerateProcesses — Metoda
               href: icordebug-enumerateprocesses-method.md
-            - name: 'GetProcess, metoda'
+            - name: GetProcess — Metoda
               href: icordebug-getprocess-method.md
             - name: 'Initialize, metoda'
               href: icordebug-initialize-method.md
-            - name: 'SetManagedHandler, metoda'
+            - name: SetManagedHandler — Metoda
               href: icordebug-setmanagedhandler-method.md
-            - name: 'SetUnmanagedHandler, metoda'
+            - name: SetUnmanagedHandler — Metoda
               href: icordebug-setunmanagedhandler-method.md
-            - name: 'Terminate, metoda'
+            - name: Terminate — Metoda
               href: icordebug-terminate-method.md
-        - name: 'ICorDebugAppDomain, interfejs'
+        - name: ICorDebugAppDomain — Interfejs
           href: icordebugappdomain-interface.md
           items:
-            - name: 'Attach, metoda'
+            - name: Attach — Metoda
               href: icordebugappdomain-attach-method.md
-            - name: 'EnumerateAssemblies, metoda'
+            - name: EnumerateAssemblies — Metoda
               href: icordebugappdomain-enumerateassemblies-method.md
-            - name: 'EnumerateBreakpoints, metoda'
+            - name: EnumerateBreakpoints — Metoda
               href: icordebugappdomain-enumeratebreakpoints-method.md
-            - name: 'EnumerateSteppers, metoda'
+            - name: EnumerateSteppers — Metoda
               href: icordebugappdomain-enumeratesteppers-method.md
             - name: 'GetId, metoda'
               href: icordebugappdomain-getid-method.md
-            - name: 'GetModuleFromMetaDataInterface, metoda'
+            - name: GetModuleFromMetaDataInterface — Metoda
               href: icordebugappdomain-getmodulefrommetadatainterface-method.md
             - name: 'GetName, metoda'
               href: icordebugappdomain-getname-method.md
             - name: GetObject — Metoda
               href: icordebugappdomain-getobject-method.md
-            - name: 'GetProcess, metoda'
+            - name: GetProcess — Metoda
               href: icordebugappdomain-getprocess-method.md
-            - name: 'IsAttached, metoda'
+            - name: IsAttached — Metoda
               href: icordebugappdomain-isattached-method.md
-        - name: 'ICorDebugAppDomain2, interfejs'
+        - name: ICorDebugAppDomain2 — Interfejs
           href: icordebugappdomain2-interface.md
           items:
-            - name: 'GetArrayOrPointerType, metoda'
+            - name: GetArrayOrPointerType — Metoda
               href: icordebugappdomain2-getarrayorpointertype-method.md
             - name: GetFunctionPointerType
               href: icordebugappdomain2-getfunctionpointertype-method.md
         - name: ICorDebugAppDomain3 — Interfejs
           href: icordebugappdomain3-interface.md
           items:
-            - name: 'GetCachedWinRTTypes, metoda'
+            - name: GetCachedWinRTTypes — Metoda
               href: icordebugappdomain3-getcachedwinrttypes-method.md
-            - name: 'GetCachedWinRTTypesForIIDs, metoda'
+            - name: GetCachedWinRTTypesForIIDs — Metoda
               href: icordebugappdomain3-getcachedwinrttypesforiids-method.md
         - name: ICorDebugAppDomain4 — interfejs
           href: icordebugappdomain4-interface.md
           items:
-            - name: 'GetObjectForCCW, metoda'
+            - name: GetObjectForCCW — metoda
               href: icordebugappdomain4-getobjectforccw-method.md
-        - name: 'ICorDebugAppDomainEnum, interfejs'
+        - name: ICorDebugAppDomainEnum — Interfejs
           href: icordebugappdomainenum-interface.md
           items:
-            - name: 'Next, metoda'
+            - name: Next — Metoda
               href: icordebugappdomainenum-next-method.md
-        - name: 'ICorDebugArrayValue, interfejs'
+        - name: ICorDebugArrayValue — Interfejs
           href: icordebugarrayvalue-interface.md
           items:
-            - name: 'GetBaseIndicies, metoda'
+            - name: GetBaseIndicies — Metoda
               href: icordebugarrayvalue-getbaseindicies-method.md
             - name: 'GetCount, metoda'
               href: icordebugarrayvalue-getcount-method.md
-            - name: 'GetDimensions, metoda'
+            - name: GetDimensions — Metoda
               href: icordebugarrayvalue-getdimensions-method.md
-            - name: 'GetElement, metoda'
+            - name: GetElement — Metoda
               href: icordebugarrayvalue-getelement-method.md
-            - name: 'GetElementAtPosition, metoda'
+            - name: GetElementAtPosition — Metoda
               href: icordebugarrayvalue-getelementatposition-method.md
-            - name: 'GetElementType, metoda'
+            - name: GetElementType — Metoda
               href: icordebugarrayvalue-getelementtype-method.md
-            - name: 'GetRank, metoda'
+            - name: GetRank — Metoda
               href: icordebugarrayvalue-getrank-method.md
-            - name: 'HasBaseIndicies, metoda'
+            - name: HasBaseIndicies — Metoda
               href: icordebugarrayvalue-hasbaseindicies-method.md
-        - name: 'ICorDebugAssembly, interfejs'
+        - name: ICorDebugAssembly — Interfejs
           href: icordebugassembly-interface.md
           items:
-            - name: 'EnumerateModules, metoda'
+            - name: EnumerateModules — Metoda
               href: icordebugassembly-enumeratemodules-method.md
-            - name: 'GetAppDomain, metoda'
+            - name: GetAppDomain — Metoda
               href: icordebugassembly-getappdomain-method.md
-            - name: 'GetCodeBase, metoda'
+            - name: GetCodeBase — Metoda
               href: icordebugassembly-getcodebase-method.md
             - name: 'GetName, metoda'
               href: icordebugassembly-getname-method.md
-            - name: 'GetProcess, metoda'
+            - name: GetProcess — Metoda
               href: icordebugassembly-getprocess-method.md
-        - name: 'ICorDebugAssembly2, interfejs'
+        - name: ICorDebugAssembly2 — Interfejs
           href: icordebugassembly2-interface.md
           items:
-            - name: 'IsFullyTrusted, metoda'
+            - name: IsFullyTrusted — Metoda
               href: icordebugassembly2-isfullytrusted-method.md
         - name: Interfejs ICorDebugAssembly3
           href: icordebugassembly3-interface.md
           items:
             - name: 'EnumerateContainedAssemblies, metoda'
               href: icordebugassembly3-enumeratecontainedassemblies-method.md
-            - name: 'GetContainerAssembly, metoda'
+            - name: Metoda GetContainerAssembly
               href: icordebugassembly3-getcontainerassembly-method.md
-        - name: 'ICorDebugAssemblyEnum, interfejs'
+        - name: ICorDebugAssemblyEnum — Interfejs
           href: icordebugassemblyenum-interface.md
           items:
-            - name: 'Next, metoda'
+            - name: Next — Metoda
               href: icordebugassemblyenum-next-method.md
         - name: ICorDebugBlockingObjectEnum — Interfejs
           href: icordebugblockingobjectenum-interface.md
           items:
-            - name: 'Next, metoda'
+            - name: Next — Metoda
               href: icordebugblockingobjectenum-next-method.md
-        - name: 'ICorDebugBoxValue, interfejs'
+        - name: ICorDebugBoxValue — Interfejs
           href: icordebugboxvalue-interface.md
           items:
             - name: GetObject — Metoda
               href: icordebugboxvalue-getobject-method.md
-        - name: 'ICorDebugBreakpoint, interfejs'
+        - name: ICorDebugBreakpoint — Interfejs
           href: icordebugbreakpoint-interface.md
           items:
-            - name: 'Activate, metoda'
+            - name: Activate — Metoda
               href: icordebugbreakpoint-activate-method.md
-            - name: 'IsActive, metoda'
+            - name: IsActive — Metoda
               href: icordebugbreakpoint-isactive-method.md
-        - name: 'ICorDebugBreakpointEnum, interfejs'
+        - name: ICorDebugBreakpointEnum — Interfejs
           href: icordebugbreakpointenum-interface.md
           items:
-            - name: 'Next, metoda'
+            - name: Next — Metoda
               href: icordebugbreakpointenum-next-method.md
-        - name: 'ICorDebugChain, interfejs'
+        - name: ICorDebugChain — Interfejs
           href: icordebugchain-interface.md
           items:
-            - name: 'EnumerateFrames, metoda'
+            - name: EnumerateFrames — Metoda
               href: icordebugchain-enumerateframes-method.md
-            - name: 'GetActiveFrame, metoda'
+            - name: GetActiveFrame — Metoda
               href: icordebugchain-getactiveframe-method.md
-            - name: 'GetCallee, metoda'
+            - name: GetCallee — Metoda
               href: icordebugchain-getcallee-method.md
-            - name: 'GetCaller, metoda'
+            - name: GetCaller — Metoda
               href: icordebugchain-getcaller-method.md
-            - name: 'GetContext, metoda'
+            - name: GetContext — Metoda
               href: icordebugchain-getcontext-method.md
-            - name: 'GetNext, metoda'
+            - name: GetNext — Metoda
               href: icordebugchain-getnext-method.md
-            - name: 'GetPrevious, metoda'
+            - name: GetPrevious — Metoda
               href: icordebugchain-getprevious-method.md
-            - name: 'GetReason, metoda'
+            - name: GetReason — Metoda
               href: icordebugchain-getreason-method.md
-            - name: 'GetRegisterSet, metoda'
+            - name: GetRegisterSet — Metoda
               href: icordebugchain-getregisterset-method.md
-            - name: 'GetStackRange, metoda'
+            - name: GetStackRange — Metoda
               href: icordebugchain-getstackrange-method.md
-            - name: 'GetThread, metoda'
+            - name: GetThread — Metoda
               href: icordebugchain-getthread-method.md
             - name: 'IsManaged, metoda'
               href: icordebugchain-ismanaged-method.md
-        - name: 'ICorDebugChainEnum, interfejs'
+        - name: ICorDebugChainEnum — Interfejs
           href: icordebugchainenum-interface.md
           items:
-            - name: 'Next, metoda'
+            - name: Next — Metoda
               href: icordebugchainenum-next-method.md
-        - name: 'ICorDebugClass, interfejs'
+        - name: ICorDebugClass — Interfejs
           href: icordebugclass-interface.md
           items:
-            - name: 'GetModule, metoda'
+            - name: GetModule — Metoda
               href: icordebugclass-getmodule-method.md
-            - name: 'GetStaticFieldValue, metoda'
+            - name: GetStaticFieldValue — Metoda
               href: icordebugclass-getstaticfieldvalue-method.md
             - name: 'GetToken, metoda'
               href: icordebugclass-gettoken-method.md
-        - name: 'ICorDebugClass2, interfejs'
+        - name: ICorDebugClass2 — Interfejs
           href: icordebugclass2-interface.md
           items:
-            - name: 'GetParameterizedType, metoda'
+            - name: GetParameterizedType — Metoda
               href: icordebugclass2-getparameterizedtype-method.md
-            - name: 'SetJMCStatus, metoda'
+            - name: SetJMCStatus — Metoda
               href: icordebugclass2-setjmcstatus-method.md
-        - name: 'ICorDebugCode, interfejs'
+        - name: ICorDebugCode — Interfejs
           href: icordebugcode-interface1.md
           items:
-            - name: 'CreateBreakpoint, metoda'
+            - name: CreateBreakpoint — Metoda
               href: icordebugcode-createbreakpoint-method.md
-            - name: 'GetAddress, metoda'
+            - name: GetAddress — Metoda
               href: icordebugcode-getaddress-method.md
-            - name: 'GetCode, metoda'
+            - name: GetCode — Metoda
               href: icordebugcode-getcode-method.md
-            - name: 'GetEnCRemapSequencePoints, metoda'
+            - name: GetEnCRemapSequencePoints — Metoda
               href: icordebugcode-getencremapsequencepoints-method.md
-            - name: 'GetFunction, metoda'
+            - name: GetFunction — Metoda
               href: icordebugcode-getfunction-method.md
             - name: 'GetILToNativeMapping, metoda'
               href: icordebugcode-getiltonativemapping-method.md
-            - name: 'GetSize, metoda'
+            - name: GetSize — Metoda
               href: icordebugcode-getsize-method.md
-            - name: 'GetVersionNumber, metoda'
+            - name: GetVersionNumber — Metoda
               href: icordebugcode-getversionnumber-method.md
-            - name: 'IsIL, metoda'
+            - name: IsIL — Metoda
               href: icordebugcode-isil-method.md
-        - name: 'ICorDebugCode2, interfejs'
+        - name: ICorDebugCode2 — Interfejs
           href: icordebugcode2-interface.md
           items:
-            - name: 'GetCodeChunks, metoda'
+            - name: GetCodeChunks — Metoda
               href: icordebugcode2-getcodechunks-method.md
-            - name: 'GetCompilerFlags, metoda'
+            - name: GetCompilerFlags — Metoda
               href: icordebugcode2-getcompilerflags-method.md
         - name: ICorDebugCode3 — Interfejs
           href: icordebugcode3-interface.md
           items:
-            - name: 'GetReturnValueLiveOffset, metoda'
+            - name: GetReturnValueLiveOffset — Metoda
               href: icordebugcode3-getreturnvalueliveoffset-method.md
         - name: 'ICorDebugCode4, interfejs'
           href: icordebugcode4-interface.md
           items:
             - name: 'EnumerateVariableHomes, metoda'
               href: icordebugcode4-enumeratevariablehomes-method.md
-        - name: 'ICorDebugCodeEnum, interfejs'
+        - name: ICorDebugCodeEnum — Interfejs
           href: icordebugcodeenum-interface.md
           items:
-            - name: 'Next, metoda'
+            - name: Next — Metoda
               href: icordebugcodeenum-next-method.md
         - name: ICorDebugComObjectValue — Interfejs
           href: icordebugcomobjectvalue-interface.md
           items:
-            - name: 'GetCachedInterfacePointers, metoda'
+            - name: GetCachedInterfacePointers — Metoda
               href: icordebugcomobjectvalue-getcachedinterfacepointers-method.md
-            - name: 'GetCachedInterfaceTypes, metoda'
+            - name: GetCachedInterfaceTypes — Metoda
               href: icordebugcomobjectvalue-getcachedinterfacetypes-method.md
-        - name: 'ICorDebugContext, interfejs'
+        - name: ICorDebugContext — Interfejs
           href: icordebugcontext-interface.md
-        - name: 'ICorDebugController, interfejs'
+        - name: ICorDebugController — Interfejs
           href: icordebugcontroller-interface.md
           items:
-            - name: 'CanCommitChanges, metoda'
+            - name: CanCommitChanges — Metoda
               href: icordebugcontroller-cancommitchanges-method.md
-            - name: 'CommitChanges, metoda'
+            - name: CommitChanges — Metoda
               href: icordebugcontroller-commitchanges-method.md
-            - name: 'Continue, metoda'
+            - name: Continue — Metoda
               href: icordebugcontroller-continue-method.md
-            - name: 'Detach, metoda'
+            - name: Detach — Metoda
               href: icordebugcontroller-detach-method.md
-            - name: 'EnumerateThreads, metoda'
+            - name: EnumerateThreads — Metoda
               href: icordebugcontroller-enumeratethreads-method.md
-            - name: 'HasQueuedCallbacks, metoda'
+            - name: HasQueuedCallbacks — Metoda
               href: icordebugcontroller-hasqueuedcallbacks-method.md
-            - name: 'IsRunning, metoda'
+            - name: IsRunning — Metoda
               href: icordebugcontroller-isrunning-method.md
-            - name: 'SetAllThreadsDebugState, metoda'
+            - name: SetAllThreadsDebugState — Metoda
               href: icordebugcontroller-setallthreadsdebugstate-method.md
-            - name: 'Stop, metoda'
+            - name: Stop — Metoda
               href: icordebugcontroller-stop-method.md
-            - name: 'Terminate, metoda'
+            - name: Terminate — Metoda
               href: icordebugcontroller-terminate-method.md
         - name: ICorDebugDataTarget — Interfejs
           href: icordebugdatatarget-interface.md
           items:
-            - name: 'GetPlatform, metoda'
+            - name: GetPlatform — Metoda
               href: icordebugdatatarget-getplatform-method.md
-            - name: 'ReadVirtual, metoda'
+            - name: ReadVirtual — Metoda
               href: icordebugdatatarget-readvirtual-method.md
             - name: 'GetThreadContext, metoda'
               href: icordebugdatatarget-getthreadcontext-method.md
         - name: Interfejs ICorDebugDataTarget2
           href: icordebugdatatarget2-interface.md
           items:
-            - name: 'CreateVirtualUnwinder, metoda'
+            - name: Metoda CreateVirtualUnwinder
               href: icordebugdatatarget2-createvirtualunwinder-method.md
-            - name: 'EnumerateThreadIDs, metoda'
+            - name: Metoda EnumerateThreadIDs
               href: icordebugdatatarget2-enumeratethreadids-method.md
             - name: 'GetImageFromPointer, metoda'
               href: icordebugdatatarget2-getimagefrompointer-method.md
-            - name: 'GetImageLocation, metoda'
+            - name: Metoda GetImageLocation
               href: icordebugdatatarget2-getimagelocation-method.md
-            - name: 'GetSymbolProviderForImage, metoda'
+            - name: Metoda GetSymbolProviderForImage
               href: icordebugdatatarget2-getsymbolproviderforimage-method.md
         - name: ICorDebugDataTarget3 — interfejs
           href: icordebugdatatarget3-interface.md
           items:
-            - name: 'GetLoadedModules, metoda'
+            - name: GetLoadedModules — metoda
               href: icordebugdatatarget3-getloadedmodules-method.md
         - name: Interfejs ICorDebugDebugEvent
           href: icordebugdebugevent-interface.md
           items:
-            - name: 'GetEventKind, metoda'
+            - name: Metoda GetEventKind
               href: icordebugdebugevent-geteventkind-method.md
-            - name: 'GetThread, metoda'
+            - name: GetThread — Metoda
               href: icordebugdebugevent-getthread-method.md
         - name: ICorDebugEditAndContinueErrorInfo — Interfejs
           href: icordebugeditandcontinueerrorinfo-interface.md
           items:
-            - name: 'GetErrorCode, metoda'
+            - name: GetErrorCode — Metoda
               href: icordebugeditandcontinueerrorinfo-geterrorcode-method.md
-            - name: 'GetModule, metoda'
+            - name: GetModule — Metoda
               href: icordebugeditandcontinueerrorinfo-getmodule-method.md
             - name: 'GetString, metoda'
               href: icordebugeditandcontinueerrorinfo-getstring-method.md
             - name: 'GetToken, metoda'
               href: icordebugeditandcontinueerrorinfo-gettoken-method.md
-        - name: 'ICorDebugEditAndContinueSnapshot, interfejs'
+        - name: ICorDebugEditAndContinueSnapshot — Interfejs
           href: icordebugeditandcontinuesnapshot-interface.md
           items:
-            - name: 'CopyMetaData, metoda'
+            - name: CopyMetaData — Metoda
               href: icordebugeditandcontinuesnapshot-copymetadata-method.md
-            - name: 'GetMvid, metoda'
+            - name: GetMvid — Metoda
               href: icordebugeditandcontinuesnapshot-getmvid-method.md
-            - name: 'GetRoDataRVA, metoda'
+            - name: GetRoDataRVA — Metoda
               href: icordebugeditandcontinuesnapshot-getrodatarva-method.md
-            - name: 'GetRwDataRVA, metoda'
+            - name: GetRwDataRVA — Metoda
               href: icordebugeditandcontinuesnapshot-getrwdatarva-method.md
-            - name: 'SetILMap, metoda'
+            - name: SetILMap — Metoda
               href: icordebugeditandcontinuesnapshot-setilmap-method.md
-            - name: 'SetPEBytes, metoda'
+            - name: SetPEBytes — Metoda
               href: icordebugeditandcontinuesnapshot-setpebytes-method.md
-            - name: 'SetPESymbolBytes, metoda'
+            - name: SetPESymbolBytes — Metoda
               href: icordebugeditandcontinuesnapshot-setpesymbolbytes-method.md
-        - name: 'ICorDebugEnum, interfejs'
+        - name: ICorDebugEnum — Interfejs
           href: icordebugenum-interface1.md
           items:
             - name: 'Clone, metoda'
@@ -412,55 +412,55 @@
               href: icordebugenum-reset-method.md
             - name: 'Skip, metoda'
               href: icordebugenum-skip-method.md
-        - name: 'ICorDebugErrorInfoEnum, interfejs'
+        - name: ICorDebugErrorInfoEnum — Interfejs
           href: icordebugerrorinfoenum-interface.md
           items:
-            - name: 'Next, metoda'
+            - name: Next — Metoda
               href: icordebugerrorinfoenum-next-method.md
-        - name: 'ICorDebugEval, interfejs'
+        - name: ICorDebugEval — Interfejs
           href: icordebugeval-interface.md
           items:
             - name: Abort — Metoda
               href: icordebugeval-abort-method.md
-            - name: 'CallFunction, metoda'
+            - name: CallFunction — Metoda
               href: icordebugeval-callfunction-method.md
-            - name: 'CreateValue, metoda'
+            - name: CreateValue — Metoda
               href: icordebugeval-createvalue-method.md
-            - name: 'GetResult, metoda'
+            - name: GetResult — Metoda
               href: icordebugeval-getresult-method.md
-            - name: 'GetThread, metoda'
+            - name: GetThread — Metoda
               href: icordebugeval-getthread-method.md
-            - name: 'IsActive, metoda'
+            - name: IsActive — Metoda
               href: icordebugeval-isactive-method.md
-            - name: 'NewArray, metoda'
+            - name: NewArray — Metoda
               href: icordebugeval-newarray-method.md
-            - name: 'NewObject, metoda'
+            - name: NewObject — Metoda
               href: icordebugeval-newobject-method.md
-            - name: 'NewObjectNoConstructor, metoda'
+            - name: NewObjectNoConstructor — Metoda
               href: icordebugeval-newobjectnoconstructor-method.md
-            - name: 'NewString, metoda'
+            - name: NewString — Metoda
               href: icordebugeval-newstring-method.md
-        - name: 'ICorDebugEval2, interfejs'
+        - name: ICorDebugEval2 — Interfejs
           href: icordebugeval2-interface.md
           items:
-            - name: 'CallParameterizedFunction, metoda'
+            - name: CallParameterizedFunction — Metoda
               href: icordebugeval2-callparameterizedfunction-method.md
-            - name: 'CreateValueForType, metoda'
+            - name: CreateValueForType — Metoda
               href: icordebugeval2-createvaluefortype-method.md
-            - name: 'NewParameterizedArray, metoda'
+            - name: NewParameterizedArray — Metoda
               href: icordebugeval2-newparameterizedarray-method.md
-            - name: 'NewParameterizedObject, metoda'
+            - name: NewParameterizedObject — Metoda
               href: icordebugeval2-newparameterizedobject-method.md
-            - name: 'NewParameterizedObjectNoConstructor, metoda'
+            - name: NewParameterizedObjectNoConstructor — Metoda
               href: icordebugeval2-newparameterizedobjectnoconstructor-method.md
-            - name: 'NewStringWithLength, metoda'
+            - name: NewStringWithLength — Metoda
               href: icordebugeval2-newstringwithlength-method.md
-            - name: 'RudeAbort, metoda'
+            - name: RudeAbort — Metoda
               href: icordebugeval2-rudeabort-method.md
         - name: Interfejs ICorDebugExceptionDebugEvent
           href: icordebugexceptiondebugevent-interface.md
           items:
-            - name: 'GetFlags, metoda'
+            - name: GetFlags — Metoda
               href: icordebugexceptiondebugevent-getflags-method.md
             - name: 'GetNativeIP, metoda'
               href: icordebugexceptiondebugevent-getnativeip-method.md
@@ -469,185 +469,185 @@
         - name: ICorDebugExceptionObjectCallStackEnum — Interfejs
           href: icordebugexceptionobjectcallstackenum-interface.md
           items:
-            - name: 'Next, metoda'
+            - name: Next — Metoda
               href: icordebugexceptionobjectcallstackenum-next-method.md
         - name: ICorDebugExceptionObjectValue — Interfejs
           href: icordebugexceptionobjectvalue-interface.md
           items:
-            - name: 'EnumerateExceptionCallStack, metoda'
+            - name: EnumerateExceptionCallStack — Metoda
               href: icordebugexceptionobjectvalue-enumerateexceptioncallstack-method.md
-        - name: 'ICorDebugFrame, interfejs'
+        - name: ICorDebugFrame — Interfejs
           href: icordebugframe-interface.md
           items:
-            - name: 'CreateStepper, metoda'
+            - name: CreateStepper — Metoda
               href: icordebugframe-createstepper-method.md
-            - name: 'GetCallee, metoda'
+            - name: GetCallee — Metoda
               href: icordebugframe-getcallee-method.md
-            - name: 'GetCaller, metoda'
+            - name: GetCaller — Metoda
               href: icordebugframe-getcaller-method.md
-            - name: 'GetChain, metoda'
+            - name: GetChain — Metoda
               href: icordebugframe-getchain-method.md
-            - name: 'GetCode, metoda'
+            - name: GetCode — Metoda
               href: icordebugframe-getcode-method.md
-            - name: 'GetFunction, metoda'
+            - name: GetFunction — Metoda
               href: icordebugframe-getfunction-method.md
-            - name: 'GetFunctionToken, metoda'
+            - name: GetFunctionToken — Metoda
               href: icordebugframe-getfunctiontoken-method.md
-            - name: 'GetStackRange, metoda'
+            - name: GetStackRange — Metoda
               href: icordebugframe-getstackrange-method.md
-        - name: 'ICorDebugFrameEnum, interfejs'
+        - name: ICorDebugFrameEnum — Interfejs
           href: icordebugframeenum-interface.md
           items:
-            - name: 'Next, metoda'
+            - name: Next — Metoda
               href: icordebugframeenum-next-method.md
-        - name: 'ICorDebugFunction, interfejs'
+        - name: ICorDebugFunction — Interfejs
           href: icordebugfunction-interface1.md
           items:
-            - name: 'CreateBreakpoint, metoda'
+            - name: CreateBreakpoint — Metoda
               href: icordebugfunction-createbreakpoint-method.md
-            - name: 'GetClass, metoda'
+            - name: GetClass — Metoda
               href: icordebugfunction-getclass-method.md
-            - name: 'GetCurrentVersionNumber, metoda'
+            - name: GetCurrentVersionNumber — Metoda
               href: icordebugfunction-getcurrentversionnumber-method.md
-            - name: 'GetILCode, metoda'
+            - name: GetILCode — Metoda
               href: icordebugfunction-getilcode-method.md
-            - name: 'GetLocalVarSigToken, metoda'
+            - name: GetLocalVarSigToken — Metoda
               href: icordebugfunction-getlocalvarsigtoken-method.md
-            - name: 'GetModule, metoda'
+            - name: GetModule — Metoda
               href: icordebugfunction-getmodule-method.md
-            - name: 'GetNativeCode, metoda'
+            - name: GetNativeCode — Metoda
               href: icordebugfunction-getnativecode-method.md
             - name: 'GetToken, metoda'
               href: icordebugfunction-gettoken-method.md
-        - name: 'ICorDebugFunction2, interfejs'
+        - name: ICorDebugFunction2 — Interfejs
           href: icordebugfunction2-interface.md
           items:
-            - name: 'EnumerateNativeCode, metoda'
+            - name: EnumerateNativeCode — Metoda
               href: icordebugfunction2-enumeratenativecode-method.md
-            - name: 'GetJMCStatus, metoda'
+            - name: GetJMCStatus — Metoda
               href: icordebugfunction2-getjmcstatus-method.md
-            - name: 'GetVersionNumber, metoda'
+            - name: GetVersionNumber — Metoda
               href: icordebugfunction2-getversionnumber-method.md
-            - name: 'SetJMCStatus, metoda'
+            - name: SetJMCStatus — Metoda
               href: icordebugfunction2-setjmcstatus-method.md
         - name: Interfejs ICorDebugFunction3
           href: icordebugfunction3-interface.md
           items:
-            - name: 'GetActiveReJitRequestILCode, metoda'
+            - name: Metoda GetActiveReJitRequestILCode
               href: icordebugfunction3-getactiverejitrequestilcode-method.md
-        - name: 'ICorDebugFunctionBreakpoint, interfejs'
+        - name: ICorDebugFunctionBreakpoint — Interfejs
           href: icordebugfunctionbreakpoint-interface.md
           items:
-            - name: 'GetFunction, metoda'
+            - name: GetFunction — Metoda
               href: icordebugfunctionbreakpoint-getfunction-method.md
             - name: 'GetOffset, metoda'
               href: icordebugfunctionbreakpoint-getoffset-method.md
         - name: ICorDebugGCReferenceEnum — Interfejs
           href: icordebuggcreferenceenum-interface.md
           items:
-            - name: 'Next, metoda'
+            - name: Next — Metoda
               href: icordebuggcreferenceenum-next-method.md
-        - name: 'ICorDebugGenericValue, interfejs'
+        - name: ICorDebugGenericValue — Interfejs
           href: icordebuggenericvalue-interface.md
           items:
             - name: 'GetValue, metoda'
               href: icordebuggenericvalue-getvalue-method.md
-            - name: 'SetValue, metoda'
+            - name: SetValue — Metoda
               href: icordebuggenericvalue-setvalue-method.md
         - name: ICorDebugGuidToTypeEnum — Interfejs
           href: icordebugguidtotypeenum-interface.md
           items:
-            - name: 'Next, metoda'
+            - name: Next — Metoda
               href: icordebugguidtotypeenum-next-method.md
-        - name: 'ICorDebugHandleValue, interfejs'
+        - name: ICorDebugHandleValue — Interfejs
           href: icordebughandlevalue-interface.md
           items:
             - name: Dispose — Metoda
               href: icordebughandlevalue-dispose-method.md
-            - name: 'GetHandleType, metoda'
+            - name: GetHandleType — Metoda
               href: icordebughandlevalue-gethandletype-method.md
         - name: ICorDebugHeapEnum — Interfejs
           href: icordebugheapenum-interface.md
           items:
-            - name: 'Next, metoda'
+            - name: Next — Metoda
               href: icordebugheapenum-next-method.md
         - name: ICorDebugHeapSegmentEnum — Interfejs
           href: icordebugheapsegmentenum-interface.md
           items:
-            - name: 'Next, metoda'
+            - name: Next — Metoda
               href: icordebugheapsegmentenum-next-method.md
-        - name: 'ICorDebugHeapValue, interfejs'
+        - name: ICorDebugHeapValue — Interfejs
           href: icordebugheapvalue-interface.md
           items:
-            - name: 'CreateRelocBreakpoint, metoda'
+            - name: CreateRelocBreakpoint — Metoda
               href: icordebugheapvalue-createrelocbreakpoint-method.md
-            - name: 'IsValid, metoda'
+            - name: IsValid — Metoda
               href: icordebugheapvalue-isvalid-method.md
-        - name: 'ICorDebugHeapValue2, interfejs'
+        - name: ICorDebugHeapValue2 — Interfejs
           href: icordebugheapvalue2-interface1.md
           items:
-            - name: 'CreateHandle, metoda'
+            - name: CreateHandle — Metoda
               href: icordebugheapvalue2-createhandle-method.md
         - name: ICorDebugHeapValue3 — Interfejs
           href: icordebugheapvalue3-interface.md
           items:
-            - name: 'GetThreadOwningMonitorLock, metoda'
+            - name: GetThreadOwningMonitorLock — Metoda
               href: icordebugheapvalue3-getthreadowningmonitorlock-method.md
-            - name: 'GetMonitorEventWaitList, metoda'
+            - name: GetMonitorEventWaitList — Metoda
               href: icordebugheapvalue3-getmonitoreventwaitlist-method.md
         - name: Interfejs ICorDebugILCode
           href: icordebugilcode-interface.md
           items:
-            - name: 'GetEHClauses, metoda'
+            - name: Metoda GetEHClauses
               href: icordebugilcode-getehclauses-method.md
         - name: Interfejs ICorDebugILCode2
           href: icordebugilcode2-interface.md
           items:
-            - name: 'GetInstrumentedILMap, metoda'
+            - name: Metoda GetInstrumentedILMap
               href: icordebugilcode2-getinstrumentedilmap-method.md
-            - name: 'GetLocalVarSigToken, metoda'
+            - name: GetLocalVarSigToken — Metoda
               href: icordebugilcode2-getlocalvarsigtoken-method.md
-        - name: 'ICorDebugILFrame, interfejs'
+        - name: ICorDebugILFrame — Interfejs
           href: icordebugilframe-interface.md
           items:
-            - name: 'CanSetIP, metoda'
+            - name: CanSetIP — Metoda
               href: icordebugilframe-cansetip-method.md
-            - name: 'EnumerateArguments, metoda'
+            - name: EnumerateArguments — Metoda
               href: icordebugilframe-enumeratearguments-method.md
-            - name: 'EnumerateLocalVariables, metoda'
+            - name: EnumerateLocalVariables — Metoda
               href: icordebugilframe-enumeratelocalvariables-method.md
-            - name: 'GetArgument, metoda'
+            - name: GetArgument — Metoda
               href: icordebugilframe-getargument-method.md
-            - name: 'GetIP, metoda'
+            - name: GetIP — Metoda
               href: icordebugilframe-getip-method.md
-            - name: 'GetLocalVariable, metoda'
+            - name: GetLocalVariable — Metoda
               href: icordebugilframe-getlocalvariable-method.md
-            - name: 'GetStackDepth, metoda'
+            - name: GetStackDepth — Metoda
               href: icordebugilframe-getstackdepth-method.md
-            - name: 'GetStackValue, metoda'
+            - name: GetStackValue — Metoda
               href: icordebugilframe-getstackvalue-method.md
-            - name: 'SetIP, metoda'
+            - name: SetIP — Metoda
               href: icordebugilframe-setip-method.md
-        - name: 'ICorDebugILFrame2, interfejs'
+        - name: ICorDebugILFrame2 — Interfejs
           href: icordebugilframe2-interface.md
           items:
             - name: 'EnumerateTypeParameters, metoda'
               href: icordebugilframe2-enumeratetypeparameters-method.md
-            - name: 'RemapFunction, metoda'
+            - name: RemapFunction — Metoda
               href: icordebugilframe2-remapfunction-method.md
         - name: ICorDebugILFrame3 — Interfejs
           href: icordebugilframe3-interface.md
           items:
-            - name: 'GetReturnValueForILOffset, metoda'
+            - name: GetReturnValueForILOffset — Metoda
               href: icordebugilframe3-getreturnvalueforiloffset-method.md
         - name: Interfejs ICorDebugILFrame4
           href: icordebugilframe4-interface.md
           items:
-            - name: 'EnumerateLocalVariablesEx, metoda'
+            - name: Metoda EnumerateLocalVariablesEx
               href: icordebugilframe4-enumeratelocalvariablesex-method.md
-            - name: 'GetCodeEx, metoda'
+            - name: Metoda GetCodeEx
               href: icordebugilframe4-getcodeex-method.md
-            - name: 'GetLocalVariableEx, metoda'
+            - name: Metoda GetLocalVariableEx
               href: icordebugilframe4-getlocalvariableex-method.md
         - name: 'ICorDebugInstanceFieldSymbol, interfejs'
           href: icordebuginstancefieldsymbol-interface.md
@@ -656,125 +656,125 @@
               href: icordebuginstancefieldsymbol-getname-method.md
             - name: 'GetOffset, metoda'
               href: icordebuginstancefieldsymbol-getoffset-method.md
-            - name: 'GetSize, metoda'
+            - name: GetSize — Metoda
               href: icordebuginstancefieldsymbol-getsize-method.md
-        - name: 'ICorDebugInternalFrame, interfejs'
+        - name: ICorDebugInternalFrame — Interfejs
           href: icordebuginternalframe-interface.md
           items:
-            - name: 'GetFrameType, metoda'
+            - name: GetFrameType — Metoda
               href: icordebuginternalframe-getframetype-method.md
         - name: ICorDebugInternalFrame2 — Interfejs
           href: icordebuginternalframe2-interface.md
           items:
-            - name: 'GetFrameAddress, metoda'
+            - name: GetFrameAddress — Metoda
               href: icordebuginternalframe2-getframeaddress-method.md
-            - name: 'IsCloserToLeaf, metoda'
+            - name: IsCloserToLeaf — Metoda
               href: icordebuginternalframe2-isclosertoleaf-method.md
         - name: ICorDebugLoadedModule — interfejs
           href: icordebugloadedmodule-interface.md
           items:
-            - name: 'GetBaseAddress, metoda'
+            - name: GetBaseAddress — Metoda
               href: icordebugloadedmodule-getbaseaddress-method.md
             - name: 'GetName, metoda'
               href: icordebugloadedmodule-getname-method.md
-            - name: 'GetSize, metoda'
+            - name: GetSize — Metoda
               href: icordebugloadedmodule-getsize-method.md
         - name: ICorDebugManagedCallback — Interfejs
           href: icordebugmanagedcallback-interface.md
           items:
-            - name: 'Break, metoda'
+            - name: Break — Metoda
               href: icordebugmanagedcallback-break-method.md
-            - name: 'Breakpoint, metoda'
+            - name: Breakpoint — Metoda
               href: icordebugmanagedcallback-breakpoint-method.md
-            - name: 'BreakpointSetError, metoda'
+            - name: BreakpointSetError — Metoda
               href: icordebugmanagedcallback-breakpointseterror-method.md
-            - name: 'ControlCTrap, metoda'
+            - name: ControlCTrap — Metoda
               href: icordebugmanagedcallback-controlctrap-method.md
-            - name: 'CreateAppDomain, metoda'
+            - name: CreateAppDomain — Metoda
               href: icordebugmanagedcallback-createappdomain-method.md
-            - name: 'CreateProcess, metoda'
+            - name: CreateProcess — Metoda
               href: icordebugmanagedcallback-createprocess-method.md
-            - name: 'CreateThread, metoda'
+            - name: CreateThread — Metoda
               href: icordebugmanagedcallback-createthread-method.md
-            - name: 'DebuggerError, metoda'
+            - name: DebuggerError — Metoda
               href: icordebugmanagedcallback-debuggererror-method.md
-            - name: 'EditAndContinueRemap, metoda'
+            - name: EditAndContinueRemap — Metoda
               href: icordebugmanagedcallback-editandcontinueremap-method.md
-            - name: 'EvalComplete, metoda'
+            - name: EvalComplete — Metoda
               href: icordebugmanagedcallback-evalcomplete-method.md
-            - name: 'EvalException, metoda'
+            - name: EvalException — Metoda
               href: icordebugmanagedcallback-evalexception-method.md
-            - name: 'Exception, metoda'
+            - name: Exception — Metoda
               href: icordebugmanagedcallback-exception-method.md
-            - name: 'ExitAppDomain, metoda'
+            - name: ExitAppDomain — Metoda
               href: icordebugmanagedcallback-exitappdomain-method.md
             - name: 'ExitProcess, metoda'
               href: icordebugmanagedcallback-exitprocess-method.md
-            - name: 'ExitThread, metoda'
+            - name: ExitThread — Metoda
               href: icordebugmanagedcallback-exitthread-method.md
-            - name: 'LoadAssembly, metoda'
+            - name: LoadAssembly — Metoda
               href: icordebugmanagedcallback-loadassembly-method.md
-            - name: 'LoadClass, metoda'
+            - name: LoadClass — Metoda
               href: icordebugmanagedcallback-loadclass-method.md
-            - name: 'LoadModule, metoda'
+            - name: LoadModule — Metoda
               href: icordebugmanagedcallback-loadmodule-method.md
-            - name: 'LogMessage, metoda'
+            - name: LogMessage — Metoda
               href: icordebugmanagedcallback-logmessage-method.md
-            - name: 'LogSwitch, metoda'
+            - name: LogSwitch — Metoda
               href: icordebugmanagedcallback-logswitch-method.md
-            - name: 'NameChange, metoda'
+            - name: NameChange — Metoda
               href: icordebugmanagedcallback-namechange-method.md
-            - name: 'StepComplete, metoda'
+            - name: StepComplete — Metoda
               href: icordebugmanagedcallback-stepcomplete-method.md
-            - name: 'UnloadAssembly, metoda'
+            - name: UnloadAssembly — Metoda
               href: icordebugmanagedcallback-unloadassembly-method.md
-            - name: 'UnloadClass, metoda'
+            - name: UnloadClass — Metoda
               href: icordebugmanagedcallback-unloadclass-method.md
-            - name: 'UnloadModule, metoda'
+            - name: UnloadModule — Metoda
               href: icordebugmanagedcallback-unloadmodule-method.md
-            - name: 'UpdateModuleSymbols, metoda'
+            - name: UpdateModuleSymbols — Metoda
               href: icordebugmanagedcallback-updatemodulesymbols-method.md
         - name: ICorDebugManagedCallback2 — Interfejs
           href: icordebugmanagedcallback2-interface.md
           items:
-            - name: 'ChangeConnection, metoda'
+            - name: ChangeConnection — Metoda
               href: icordebugmanagedcallback2-changeconnection-method.md
-            - name: 'CreateConnection, metoda'
+            - name: CreateConnection — Metoda
               href: icordebugmanagedcallback2-createconnection-method.md
-            - name: 'DestroyConnection, metoda'
+            - name: DestroyConnection — Metoda
               href: icordebugmanagedcallback2-destroyconnection-method.md
-            - name: 'Exception, metoda'
+            - name: Exception — Metoda
               href: icordebugmanagedcallback2-exception-method.md
-            - name: 'ExceptionUnwind, metoda'
+            - name: ExceptionUnwind — Metoda
               href: icordebugmanagedcallback2-exceptionunwind-method.md
-            - name: 'FunctionRemapComplete, metoda'
+            - name: FunctionRemapComplete — Metoda
               href: icordebugmanagedcallback2-functionremapcomplete-method.md
-            - name: 'FunctionRemapOpportunity, metoda'
+            - name: FunctionRemapOpportunity — Metoda
               href: icordebugmanagedcallback2-functionremapopportunity-method.md
-            - name: 'MDANotification, metoda'
+            - name: MDANotification — Metoda
               href: icordebugmanagedcallback2-mdanotification-method.md
         - name: ICorDebugManagedCallback3 — Interfejs
           href: icordebugmanagedcallback3-interface.md
           items:
-            - name: 'CustomNotification, metoda'
+            - name: CustomNotification — Metoda
               href: icordebugmanagedcallback3-customnotification-method.md
         - name: ICorDebugMDA — Interfejs
           href: icordebugmda-interface.md
           items:
-            - name: 'GetDescription, metoda'
+            - name: GetDescription — Metoda
               href: icordebugmda-getdescription-method.md
-            - name: 'GetFlags, metoda'
+            - name: GetFlags — Metoda
               href: icordebugmda-getflags-method.md
             - name: 'GetName, metoda'
               href: icordebugmda-getname-method.md
-            - name: 'GetOSThreadId, metoda'
+            - name: GetOSThreadId — Metoda
               href: icordebugmda-getosthreadid-method.md
-            - name: 'GetXML, metoda'
+            - name: GetXML — Metoda
               href: icordebugmda-getxml-method.md
         - name: 'ICorDebugMemoryBuffer, interfejs'
           href: icordebugmemorybuffer-interface.md
           items:
-            - name: 'GetSize, metoda'
+            - name: GetSize — Metoda
               href: icordebugmemorybuffer-getsize-method.md
             - name: 'GetStartAddress, metoda'
               href: icordebugmemorybuffer-getstartaddress-method.md
@@ -796,299 +796,299 @@
         - name: ICorDebugMetaDataLocator — Interfejs
           href: icordebugmetadatalocator-interface.md
           items:
-            - name: 'GetMetaData, metoda'
+            - name: GetMetaData — Metoda
               href: icordebugmetadatalocator-getmetadata-method.md
-        - name: 'ICorDebugModule, interfejs'
+        - name: ICorDebugModule — Interfejs
           href: icordebugmodule-interface.md
           items:
-            - name: 'CreateBreakpoint, metoda'
+            - name: CreateBreakpoint — Metoda
               href: icordebugmodule-createbreakpoint-method.md
-            - name: 'EnableClassLoadCallbacks, metoda'
+            - name: EnableClassLoadCallbacks — Metoda
               href: icordebugmodule-enableclassloadcallbacks-method.md
-            - name: 'EnableJITDebugging, metoda'
+            - name: EnableJITDebugging — Metoda
               href: icordebugmodule-enablejitdebugging-method.md
-            - name: 'GetAssembly, metoda'
+            - name: GetAssembly — Metoda
               href: icordebugmodule-getassembly-method.md
-            - name: 'GetBaseAddress, metoda'
+            - name: GetBaseAddress — Metoda
               href: icordebugmodule-getbaseaddress-method.md
             - name: 'GetClassFromToken, metoda'
               href: icordebugmodule-getclassfromtoken-method.md
-            - name: 'GetEditAndContinueSnapshot, metoda'
+            - name: GetEditAndContinueSnapshot — Metoda
               href: icordebugmodule-geteditandcontinuesnapshot-method.md
-            - name: 'GetFunctionFromRVA, metoda'
+            - name: GetFunctionFromRVA — Metoda
               href: icordebugmodule-getfunctionfromrva-method.md
             - name: 'GetFunctionFromToken, metoda'
               href: icordebugmodule-getfunctionfromtoken-method.md
-            - name: 'GetGlobalVariableValue, metoda'
+            - name: GetGlobalVariableValue — Metoda
               href: icordebugmodule-getglobalvariablevalue-method.md
-            - name: 'GetMetaDataInterface, metoda'
+            - name: GetMetaDataInterface — Metoda
               href: icordebugmodule-getmetadatainterface-method.md
             - name: 'GetName, metoda'
               href: icordebugmodule-getname-method.md
-            - name: 'GetProcess, metoda'
+            - name: GetProcess — Metoda
               href: icordebugmodule-getprocess-method.md
-            - name: 'GetSize, metoda'
+            - name: GetSize — Metoda
               href: icordebugmodule-getsize-method.md
             - name: 'GetToken, metoda'
               href: icordebugmodule-gettoken-method.md
-            - name: 'IsDynamic, metoda'
+            - name: IsDynamic — Metoda
               href: icordebugmodule-isdynamic-method.md
-            - name: 'IsInMemory, metoda'
+            - name: IsInMemory — Metoda
               href: icordebugmodule-isinmemory-method.md
-        - name: 'ICorDebugModule2, interfejs'
+        - name: ICorDebugModule2 — Interfejs
           href: icordebugmodule2-interface.md
           items:
-            - name: 'ApplyChanges, metoda'
+            - name: ApplyChanges — Metoda
               href: icordebugmodule2-applychanges-method.md
-            - name: 'GetJITCompilerFlags, metoda'
+            - name: GetJITCompilerFlags — Metoda
               href: icordebugmodule2-getjitcompilerflags-method.md
-            - name: 'ResolveAssembly, metoda'
+            - name: ResolveAssembly — Metoda
               href: icordebugmodule2-resolveassembly-method.md
-            - name: 'SetJITCompilerFlags, metoda'
+            - name: SetJITCompilerFlags — Metoda
               href: icordebugmodule2-setjitcompilerflags-method.md
-            - name: 'SetJMCStatus, metoda'
+            - name: SetJMCStatus — Metoda
               href: icordebugmodule2-setjmcstatus-method.md
         - name: ICorDebugModule3 — Interfejs
           href: icordebugmodule3-interface.md
           items:
             - name: 'ICorDebugModule3::CreateReaderForInMemorySymbols — Metoda'
               href: icordebugmodule3-createreaderforinmemorysymbols-method.md
-        - name: 'ICorDebugModuleBreakpoint, interfejs'
+        - name: ICorDebugModuleBreakpoint — Interfejs
           href: icordebugmodulebreakpoint-interface.md
           items:
-            - name: 'GetModule, metoda'
+            - name: GetModule — Metoda
               href: icordebugmodulebreakpoint-getmodule-method.md
         - name: 'ICorDebugModuleDebugEvent, interfejs'
           href: icordebugmoduledebugevent-interface.md
           items:
-            - name: 'GetModule, metoda'
+            - name: GetModule — Metoda
               href: icordebugmoduledebugevent-getmodule-method.md
-        - name: 'ICorDebugModuleEnum, interfejs'
+        - name: ICorDebugModuleEnum — Interfejs
           href: icordebugmoduleenum-interface.md
           items:
-            - name: 'Next, metoda'
+            - name: Next — Metoda
               href: icordebugmoduleenum-next-method.md
         - name: 'ICorDebugMutableDataTarget, interfejs'
           href: icordebugmutabledatatarget-interface.md
           items:
             - name: 'ContinueStatusChanged, metoda'
               href: icordebugmutabledatatarget-continuestatuschanged-method.md
-            - name: 'SetThreadContext, metoda'
+            - name: SetThreadContext — Metoda
               href: icordebugmutabledatatarget-setthreadcontext-method.md
-            - name: 'WriteVirtual, metoda'
+            - name: WriteVirtual — Metoda
               href: icordebugmutabledatatarget-writevirtual-method.md
-        - name: 'ICorDebugNativeFrame, interfejs'
+        - name: ICorDebugNativeFrame — Interfejs
           href: icordebugnativeframe-interface.md
           items:
-            - name: 'CanSetIP, metoda'
+            - name: CanSetIP — Metoda
               href: icordebugnativeframe-cansetip-method.md
-            - name: 'GetIP, metoda'
+            - name: GetIP — Metoda
               href: icordebugnativeframe-getip-method.md
-            - name: 'GetLocalDoubleRegisterValue, metoda'
+            - name: GetLocalDoubleRegisterValue — Metoda
               href: icordebugnativeframe-getlocaldoubleregistervalue-method.md
-            - name: 'GetLocalMemoryRegisterValue, metoda'
+            - name: GetLocalMemoryRegisterValue — Metoda
               href: icordebugnativeframe-getlocalmemoryregistervalue-method.md
-            - name: 'GetLocalMemoryValue, metoda'
+            - name: GetLocalMemoryValue — Metoda
               href: icordebugnativeframe-getlocalmemoryvalue-method.md
-            - name: 'GetLocalRegisterMemoryValue, metoda'
+            - name: GetLocalRegisterMemoryValue — Metoda
               href: icordebugnativeframe-getlocalregistermemoryvalue-method.md
-            - name: 'GetLocalRegisterValue, metoda'
+            - name: GetLocalRegisterValue — Metoda
               href: icordebugnativeframe-getlocalregistervalue-method.md
-            - name: 'GetRegisterSet, metoda'
+            - name: GetRegisterSet — Metoda
               href: icordebugnativeframe-getregisterset-method.md
-            - name: 'SetIP, metoda'
+            - name: SetIP — Metoda
               href: icordebugnativeframe-setip-method.md
         - name: ICorDebugNativeFrame2 — Interfejs
           href: icordebugnativeframe2-interface.md
           items:
-            - name: 'IsChild, metoda'
+            - name: IsChild — Metoda
               href: icordebugnativeframe2-ischild-method.md
-            - name: 'IsMatchingParentFrame, metoda'
+            - name: IsMatchingParentFrame — Metoda
               href: icordebugnativeframe2-ismatchingparentframe-method.md
-            - name: 'GetStackParameterSize, metoda'
+            - name: GetStackParameterSize — Metoda
               href: icordebugnativeframe2-getstackparametersize-method.md
-        - name: 'ICorDebugObjectEnum, interfejs'
+        - name: ICorDebugObjectEnum — Interfejs
           href: icordebugobjectenum-interface.md
           items:
-            - name: 'Next, metoda'
+            - name: Next — Metoda
               href: icordebugobjectenum-next-method.md
-        - name: 'ICorDebugObjectValue, interfejs'
+        - name: ICorDebugObjectValue — Interfejs
           href: icordebugobjectvalue-interface.md
           items:
-            - name: 'GetClass, metoda'
+            - name: GetClass — Metoda
               href: icordebugobjectvalue-getclass-method.md
-            - name: 'GetContext, metoda'
+            - name: GetContext — Metoda
               href: icordebugobjectvalue-getcontext-method.md
-            - name: 'GetFieldValue, metoda'
+            - name: GetFieldValue — Metoda
               href: icordebugobjectvalue-getfieldvalue-method.md
-            - name: 'GetManagedCopy, metoda'
+            - name: GetManagedCopy — Metoda
               href: icordebugobjectvalue-getmanagedcopy-method.md
-            - name: 'GetVirtualMethod, metoda'
+            - name: GetVirtualMethod — Metoda
               href: icordebugobjectvalue-getvirtualmethod-method.md
-            - name: 'IsValueClass, metoda'
+            - name: IsValueClass — Metoda
               href: icordebugobjectvalue-isvalueclass-method.md
-            - name: 'SetFromManagedCopy, metoda'
+            - name: SetFromManagedCopy — Metoda
               href: icordebugobjectvalue-setfrommanagedcopy-method.md
-        - name: 'ICorDebugObjectValue2, interfejs'
+        - name: ICorDebugObjectValue2 — Interfejs
           href: icordebugobjectvalue2-interface.md
           items:
-            - name: 'GetVirtualMethodAndType, metoda'
+            - name: GetVirtualMethodAndType — Metoda
               href: icordebugobjectvalue2-getvirtualmethodandtype-method.md
-        - name: 'ICorDebugProcess, interfejs'
+        - name: ICorDebugProcess — Interfejs
           href: icordebugprocess-interface.md
           items:
-            - name: 'ClearCurrentException, metoda'
+            - name: ClearCurrentException — Metoda
               href: icordebugprocess-clearcurrentexception-method.md
-            - name: 'EnableLogMessages, metoda'
+            - name: EnableLogMessages — Metoda
               href: icordebugprocess-enablelogmessages-method.md
-            - name: 'EnumerateAppDomains, metoda'
+            - name: EnumerateAppDomains — Metoda
               href: icordebugprocess-enumerateappdomains-method.md
-            - name: 'EnumerateObjects, metoda'
+            - name: EnumerateObjects — Metoda
               href: icordebugprocess-enumerateobjects-method.md
-            - name: 'GetHandle, metoda'
+            - name: GetHandle — Metoda
               href: icordebugprocess-gethandle-method.md
-            - name: 'GetHelperThreadID, metoda'
+            - name: GetHelperThreadID — Metoda
               href: icordebugprocess-gethelperthreadid-method.md
             - name: 'GetID, metoda'
               href: icordebugprocess-getid-method.md
             - name: GetObject — Metoda
               href: icordebugprocess-getobject-method.md
-            - name: 'GetThread, metoda'
+            - name: GetThread — Metoda
               href: icordebugprocess-getthread-method.md
             - name: 'GetThreadContext, metoda'
               href: icordebugprocess-getthreadcontext-method.md
-            - name: 'IsOSSuspended, metoda'
+            - name: IsOSSuspended — Metoda
               href: icordebugprocess-isossuspended-method.md
-            - name: 'IsTransitionStub, metoda'
+            - name: IsTransitionStub — Metoda
               href: icordebugprocess-istransitionstub-method.md
-            - name: 'ModifyLogSwitch, metoda'
+            - name: ModifyLogSwitch — Metoda
               href: icordebugprocess-modifylogswitch-method.md
-            - name: 'ReadMemory, metoda'
+            - name: ReadMemory — Metoda
               href: icordebugprocess-readmemory-method.md
-            - name: 'SetThreadContext, metoda'
+            - name: SetThreadContext — Metoda
               href: icordebugprocess-setthreadcontext-method.md
-            - name: 'ThreadForFiberCookie, metoda'
+            - name: ThreadForFiberCookie — Metoda
               href: icordebugprocess-threadforfibercookie-method.md
-            - name: 'WriteMemory, metoda'
+            - name: WriteMemory — Metoda
               href: icordebugprocess-writememory-method.md
-        - name: 'ICorDebugProcess2, interfejs'
+        - name: ICorDebugProcess2 — Interfejs
           href: icordebugprocess2-interface1.md
           items:
-            - name: 'ClearUnmanagedBreakpoint, metoda'
+            - name: ClearUnmanagedBreakpoint — Metoda
               href: icordebugprocess2-clearunmanagedbreakpoint-method.md
-            - name: 'GetDesiredNGENCompilerFlags, metoda'
+            - name: GetDesiredNGENCompilerFlags — Metoda
               href: icordebugprocess2-getdesiredngencompilerflags-method.md
-            - name: 'GetReferenceValueFromGCHandle, metoda'
+            - name: GetReferenceValueFromGCHandle — Metoda
               href: icordebugprocess2-getreferencevaluefromgchandle-method.md
-            - name: 'GetThreadForTaskID, metoda'
+            - name: GetThreadForTaskID — Metoda
               href: icordebugprocess2-getthreadfortaskid-method.md
             - name: 'GetVersion, metoda'
               href: icordebugprocess2-getversion-method.md
-            - name: 'SetDesiredNGENCompilerFlags, metoda'
+            - name: SetDesiredNGENCompilerFlags — Metoda
               href: icordebugprocess2-setdesiredngencompilerflags-method.md
-            - name: 'SetUnmanagedBreakpoint, metoda'
+            - name: SetUnmanagedBreakpoint — Metoda
               href: icordebugprocess2-setunmanagedbreakpoint-method.md
         - name: ICorDebugProcess3 — Interfejs
           href: icordebugprocess3-interface.md
           items:
-            - name: 'SetEnableCustomNotification, metoda'
+            - name: SetEnableCustomNotification — Metoda
               href: icordebugprocess3-setenablecustomnotification-method.md
         - name: 'ICorDebugProcess4, interfejs'
           href: icordebugprocess4-interface.md
           items:
-            - name: 'ProcessStateChanged, metoda'
+            - name: Metoda ProcessStateChanged
               href: icordebugprocess4-processstatechanged-method.md
         - name: ICorDebugProcess5 — Interfejs
           href: icordebugprocess5-interface.md
           items:
-            - name: 'EnableNGenPolicy, metoda'
+            - name: EnableNGenPolicy — Metoda
               href: icordebugprocess5-enablengenpolicy-method.md
-            - name: 'EnumerateGCReferences, metoda'
+            - name: EnumerateGCReferences — Metoda
               href: icordebugprocess5-enumerategcreferences-method.md
-            - name: 'EnumerateHandles, metoda'
+            - name: EnumerateHandles — Metoda
               href: icordebugprocess5-enumeratehandles-method.md
-            - name: 'EnumerateHeap, metoda'
+            - name: EnumerateHeap — Metoda
               href: icordebugprocess5-enumerateheap-method.md
-            - name: 'EnumerateHeapRegions, metoda'
+            - name: EnumerateHeapRegions — Metoda
               href: icordebugprocess5-enumerateheapregions-method.md
-            - name: 'GetArrayLayout, metoda'
+            - name: GetArrayLayout — Metoda
               href: icordebugprocess5-getarraylayout-method.md
-            - name: 'GetGCHeapInformation, metoda'
+            - name: GetGCHeapInformation — Metoda
               href: icordebugprocess5-getgcheapinformation-method.md
             - name: GetObject — Metoda
               href: icordebugprocess5-getobject-method.md
-            - name: 'GetTypeFields, metoda'
+            - name: GetTypeFields — Metoda
               href: icordebugprocess5-gettypefields-method.md
-            - name: 'GetTypeForTypeID, metoda'
+            - name: GetTypeForTypeID — Metoda
               href: icordebugprocess5-gettypefortypeid-method.md
-            - name: 'GetTypeID, metoda'
+            - name: GetTypeID — Metoda
               href: icordebugprocess5-gettypeid-method.md
-            - name: 'GetTypeLayout, metoda'
+            - name: GetTypeLayout — Metoda
               href: icordebugprocess5-gettypelayout-method.md
         - name: Interfejs ICorDebugProcess6
           href: icordebugprocess6-interface.md
           items:
             - name: 'DecodeEvent, metoda'
               href: icordebugprocess6-decodeevent-method.md
-            - name: 'EnableVirtualModuleSplitting, metoda'
+            - name: Metoda EnableVirtualModuleSplitting
               href: icordebugprocess6-enablevirtualmodulesplitting-method.md
-            - name: 'GetCode, metoda'
+            - name: GetCode — Metoda
               href: icordebugprocess6-getcode-method.md
-            - name: 'GetExportStepInfo, metoda'
+            - name: Metoda GetExportStepInfo
               href: icordebugprocess6-getexportstepinfo-method.md
             - name: 'MarkDebuggerAttached, metoda'
               href: icordebugprocess6-markdebuggerattached-method.md
-            - name: 'ProcessStateChanged, metoda'
+            - name: Metoda ProcessStateChanged
               href: icordebugprocess6-processstatechanged-method.md
         - name: Interfejs ICorDebugProcess7
           href: icordebugprocess7-interface.md
           items:
-            - name: 'SetWriteableMetadataUpdateMode, metoda'
+            - name: Metoda SetWriteableMetadataUpdateMode
               href: icordebugprocess7-setwriteablemetadataupdatemode-method.md
         - name: ICorDebugProcess8 — interfejs
           href: icordebugprocess8-interface.md
           items:
-            - name: 'EnableExceptionCallbacksOutsideOfMyCode, metoda'
+            - name: EnableExceptionCallbacksOutsideOfMyCode — metoda
               href: icordebugprocess8-enableexceptioncallbacksoutsideofmycode-method.md
-        - name: 'ICorDebugProcessEnum, interfejs'
+        - name: ICorDebugProcessEnum — Interfejs
           href: icordebugprocessenum-interface.md
           items:
-            - name: 'Next, metoda'
+            - name: Next — Metoda
               href: icordebugprocessenum-next-method.md
-        - name: 'ICorDebugReferenceValue, interfejs'
+        - name: ICorDebugReferenceValue — Interfejs
           href: icordebugreferencevalue-interface.md
           items:
-            - name: 'Dereference, metoda'
+            - name: Dereference — Metoda
               href: icordebugreferencevalue-dereference-method.md
-            - name: 'DereferenceStrong, metoda'
+            - name: DereferenceStrong — Metoda
               href: icordebugreferencevalue-dereferencestrong-method.md
             - name: 'GetValue, metoda'
               href: icordebugreferencevalue-getvalue-method.md
-            - name: 'IsNull, metoda'
+            - name: IsNull — Metoda
               href: icordebugreferencevalue-isnull-method.md
-            - name: 'SetValue, metoda'
+            - name: SetValue — Metoda
               href: icordebugreferencevalue-setvalue-method.md
         - name: ICorDebugRegisterSet — Interfejs
           href: icordebugregisterset-interface.md
           items:
-            - name: 'GetRegisters, metoda'
+            - name: GetRegisters — Metoda
               href: icordebugregisterset-getregisters-method.md
-            - name: 'GetRegistersAvailable, metoda'
+            - name: GetRegistersAvailable — Metoda
               href: icordebugregisterset-getregistersavailable-method.md
             - name: 'GetThreadContext, metoda'
               href: icordebugregisterset-getthreadcontext-method.md
-            - name: 'SetRegisters, metoda'
+            - name: SetRegisters — Metoda
               href: icordebugregisterset-setregisters-method.md
-            - name: 'SetThreadContext, metoda'
+            - name: SetThreadContext — Metoda
               href: icordebugregisterset-setthreadcontext-method.md
         - name: ICorDebugRegisterSet2 — Interfejs
           href: icordebugregisterset2-interface.md
           items:
-            - name: 'GetRegisters, metoda'
+            - name: GetRegisters — Metoda
               href: icordebugregisterset2-getregisters-method.md
-            - name: 'GetRegistersAvailable, metoda'
+            - name: GetRegistersAvailable — Metoda
               href: icordebugregisterset2-getregistersavailable-method.md
-            - name: 'SetRegisters, metoda'
+            - name: SetRegisters — Metoda
               href: icordebugregisterset2-setregisters-method.md
         - name: ICorDebugRemote — Interfejs
           href: icordebugremote-interface.md
@@ -1107,56 +1107,56 @@
         - name: ICorDebugStackWalk — Interfejs
           href: icordebugstackwalk-interface.md
           items:
-            - name: 'GetContext, metoda'
+            - name: GetContext — Metoda
               href: icordebugstackwalk-getcontext-method.md
-            - name: 'SetContext, metoda'
+            - name: SetContext — Metoda
               href: icordebugstackwalk-setcontext-method.md
-            - name: 'Next, metoda'
+            - name: Next — Metoda
               href: icordebugstackwalk-next-method.md
-            - name: 'GetFrame, metoda'
+            - name: GetFrame — Metoda
               href: icordebugstackwalk-getframe-method.md
         - name: 'ICorDebugStaticFieldSymbol, interfejs'
           href: icordebugstaticfieldsymbol-interface.md
           items:
-            - name: 'GetAddress, metoda'
+            - name: GetAddress — Metoda
               href: icordebugstaticfieldsymbol-getaddress-method.md
             - name: 'GetName, metoda'
               href: icordebugstaticfieldsymbol-getname-method.md
-            - name: 'GetSize, metoda'
+            - name: GetSize — Metoda
               href: icordebugstaticfieldsymbol-getsize-method.md
-        - name: 'ICorDebugStepper, interfejs'
+        - name: ICorDebugStepper — Interfejs
           href: icordebugstepper-interface.md
           items:
-            - name: 'Deactivate, metoda'
+            - name: Deactivate — Metoda
               href: icordebugstepper-deactivate-method.md
-            - name: 'IsActive, metoda'
+            - name: IsActive — Metoda
               href: icordebugstepper-isactive-method.md
-            - name: 'SetInterceptMask, metoda'
+            - name: SetInterceptMask — Metoda
               href: icordebugstepper-setinterceptmask-method.md
-            - name: 'SetRangeIL, metoda'
+            - name: SetRangeIL — Metoda
               href: icordebugstepper-setrangeil-method.md
-            - name: 'SetUnmappedStopMask, metoda'
+            - name: SetUnmappedStopMask — Metoda
               href: icordebugstepper-setunmappedstopmask-method.md
-            - name: 'Step, metoda'
+            - name: Step — Metoda
               href: icordebugstepper-step-method.md
-            - name: 'StepOut, metoda'
+            - name: StepOut — Metoda
               href: icordebugstepper-stepout-method.md
-            - name: 'StepRange, metoda'
+            - name: StepRange — Metoda
               href: icordebugstepper-steprange-method.md
-        - name: 'ICorDebugStepper2, interfejs'
+        - name: ICorDebugStepper2 — Interfejs
           href: icordebugstepper2-interface1.md
           items:
-            - name: 'SetJMC, metoda'
+            - name: SetJMC — Metoda
               href: icordebugstepper2-setjmc-method.md
-        - name: 'ICorDebugStepperEnum, interfejs'
+        - name: ICorDebugStepperEnum — Interfejs
           href: icordebugstepperenum-interface.md
           items:
-            - name: 'Next, metoda'
+            - name: Next — Metoda
               href: icordebugstepperenum-next-method.md
-        - name: 'ICorDebugStringValue, interfejs'
+        - name: ICorDebugStringValue — Interfejs
           href: icordebugstringvalue-interface.md
           items:
-            - name: 'GetLength, metoda'
+            - name: GetLength — Metoda
               href: icordebugstringvalue-getlength-method.md
             - name: 'GetString, metoda'
               href: icordebugstringvalue-getstring-method.md
@@ -1192,144 +1192,144 @@
               href: icordebugsymbolprovider2-getframeprops-method.md
             - name: 'GetGenericDictionaryInfo, metoda'
               href: icordebugsymbolprovider2-getgenericdictionaryinfo-method.md
-        - name: 'ICorDebugThread, interfejs'
+        - name: ICorDebugThread — Interfejs
           href: icordebugthread-interface.md
           items:
-            - name: 'ClearCurrentException, metoda'
+            - name: ClearCurrentException — Metoda
               href: icordebugthread-clearcurrentexception-method.md
-            - name: 'CreateEval, metoda'
+            - name: CreateEval — Metoda
               href: icordebugthread-createeval-method.md
-            - name: 'CreateStepper, metoda'
+            - name: CreateStepper — Metoda
               href: icordebugthread-createstepper-method.md
-            - name: 'EnumerateChains, metoda'
+            - name: EnumerateChains — Metoda
               href: icordebugthread-enumeratechains-method.md
-            - name: 'GetActiveChain, metoda'
+            - name: GetActiveChain — Metoda
               href: icordebugthread-getactivechain-method.md
-            - name: 'GetActiveFrame, metoda'
+            - name: GetActiveFrame — Metoda
               href: icordebugthread-getactiveframe-method.md
-            - name: 'GetAppDomain, metoda'
+            - name: GetAppDomain — Metoda
               href: icordebugthread-getappdomain-method.md
-            - name: 'GetCurrentException, metoda'
+            - name: GetCurrentException — Metoda
               href: icordebugthread-getcurrentexception-method.md
-            - name: 'GetDebugState, metoda'
+            - name: GetDebugState — Metoda
               href: icordebugthread-getdebugstate-method.md
-            - name: 'GetHandle, metoda'
+            - name: GetHandle — Metoda
               href: icordebugthread-gethandle-method.md
             - name: 'GetID, metoda'
               href: icordebugthread-getid-method.md
             - name: GetObject — Metoda
               href: icordebugthread-getobject-method.md
-            - name: 'GetProcess, metoda'
+            - name: GetProcess — Metoda
               href: icordebugthread-getprocess-method.md
-            - name: 'GetRegisterSet, metoda'
+            - name: GetRegisterSet — Metoda
               href: icordebugthread-getregisterset-method.md
-            - name: 'GetUserState, metoda'
+            - name: GetUserState — Metoda
               href: icordebugthread-getuserstate-method.md
-            - name: 'SetDebugState, metoda'
+            - name: SetDebugState — Metoda
               href: icordebugthread-setdebugstate-method.md
-        - name: 'ICorDebugThread2, interfejs'
+        - name: ICorDebugThread2 — Interfejs
           href: icordebugthread2-interface.md
           items:
-            - name: 'GetActiveFunctions, metoda'
+            - name: GetActiveFunctions — Metoda
               href: icordebugthread2-getactivefunctions-method.md
-            - name: 'GetConnectionID, metoda'
+            - name: GetConnectionID — Metoda
               href: icordebugthread2-getconnectionid-method.md
-            - name: 'GetTaskID, metoda'
+            - name: GetTaskID — Metoda
               href: icordebugthread2-gettaskid-method.md
-            - name: 'GetVolatileOSThreadID, metoda'
+            - name: GetVolatileOSThreadID — Metoda
               href: icordebugthread2-getvolatileosthreadid-method.md
-            - name: 'InterceptCurrentException, metoda'
+            - name: InterceptCurrentException — Metoda
               href: icordebugthread2-interceptcurrentexception-method.md
         - name: ICorDebugThread3 — Interfejs
           href: icordebugthread3-interface.md
           items:
-            - name: 'CreateStackWalk, metoda'
+            - name: CreateStackWalk — Metoda
               href: icordebugthread3-createstackwalk-method.md
-            - name: 'GetActiveInternalFrames, metoda'
+            - name: GetActiveInternalFrames — Metoda
               href: icordebugthread3-getactiveinternalframes-method.md
         - name: ICorDebugThread4 — Interfejs
           href: icordebugthread4-interface.md
           items:
-            - name: 'GetBlockingObjects, metoda'
+            - name: GetBlockingObjects — Metoda
               href: icordebugthread4-getblockingobjects-method.md
-            - name: 'HadUnhandledException, metoda'
+            - name: HadUnhandledException — Metoda
               href: icordebugthread4-hadunhandledexception-method.md
-            - name: 'GetCurrentCustomDebuggerNotification, metoda'
+            - name: GetCurrentCustomDebuggerNotification — Metoda
               href: icordebugthread4-getcurrentcustomdebuggernotification-method.md
-        - name: 'ICorDebugThreadEnum, interfejs'
+        - name: ICorDebugThreadEnum — Interfejs
           href: icordebugthreadenum-interface1.md
           items:
-            - name: 'Next, metoda'
+            - name: Next — Metoda
               href: icordebugthreadenum-next-method.md
-        - name: 'ICorDebugType, interfejs'
+        - name: ICorDebugType — Interfejs
           href: icordebugtype-interface.md
           items:
             - name: 'EnumerateTypeParameters, metoda'
               href: icordebugtype-enumeratetypeparameters-method.md
-            - name: 'GetBase, metoda'
+            - name: GetBase — Metoda
               href: icordebugtype-getbase-method.md
-            - name: 'GetClass, metoda'
+            - name: GetClass — Metoda
               href: icordebugtype-getclass-method.md
-            - name: 'GetFirstTypeParameter, metoda'
+            - name: GetFirstTypeParameter — Metoda
               href: icordebugtype-getfirsttypeparameter-method.md
-            - name: 'GetRank, metoda'
+            - name: GetRank — Metoda
               href: icordebugtype-getrank-method.md
-            - name: 'GetStaticFieldValue, metoda'
+            - name: GetStaticFieldValue — Metoda
               href: icordebugtype-getstaticfieldvalue-method.md
-            - name: 'GetType, metoda'
+            - name: GetType — Metoda
               href: icordebugtype-gettype-method.md
         - name: 'ICorDebugType2, interfejs'
           href: icordebugtype2-interface.md
           items:
-            - name: 'GetTypeID, metoda'
+            - name: GetTypeID — Metoda
               href: icordebugtype2-gettypeid-method.md
-        - name: 'ICorDebugTypeEnum, interfejs'
+        - name: ICorDebugTypeEnum — Interfejs
           href: icordebugtypeenum-interface.md
           items:
-            - name: 'Next, metoda'
+            - name: Next — Metoda
               href: icordebugtypeenum-next-method.md
         - name: ICorDebugUnmanagedCallback — Interfejs
           href: icordebugunmanagedcallback-interface.md
           items:
-            - name: 'DebugEvent, metoda'
+            - name: DebugEvent — Metoda
               href: icordebugunmanagedcallback-debugevent-method.md
-        - name: 'ICorDebugValue, interfejs'
+        - name: ICorDebugValue — Interfejs
           href: icordebugvalue-interface.md
           items:
-            - name: 'CreateBreakpoint, metoda'
+            - name: CreateBreakpoint — Metoda
               href: icordebugvalue-createbreakpoint-method.md
-            - name: 'GetAddress, metoda'
+            - name: GetAddress — Metoda
               href: icordebugvalue-getaddress-method.md
-            - name: 'GetSize, metoda'
+            - name: GetSize — Metoda
               href: icordebugvalue-getsize-method.md
-            - name: 'GetType, metoda'
+            - name: GetType — Metoda
               href: icordebugvalue-gettype-method.md
         - name: ICorDebugValue2 — Interfejs
           href: icordebugvalue2-interface.md
           items:
-            - name: 'GetExactType, metoda'
+            - name: GetExactType — Metoda
               href: icordebugvalue2-getexacttype-method.md
         - name: ICorDebugValue3 — Interfejs
           href: icordebugvalue3-interface.md
           items:
-            - name: 'GetSize64, metoda'
+            - name: GetSize64 — Metoda
               href: icordebugvalue3-getsize64-method.md
-        - name: 'ICorDebugValueBreakpoint, interfejs'
+        - name: ICorDebugValueBreakpoint — Interfejs
           href: icordebugvaluebreakpoint-interface.md
           items:
             - name: 'GetValue, metoda'
               href: icordebugvaluebreakpoint-getvalue-method.md
-        - name: 'ICorDebugValueEnum, interfejs'
+        - name: ICorDebugValueEnum — Interfejs
           href: icordebugvalueenum-interface.md
           items:
-            - name: 'Next, metoda'
+            - name: Next — Metoda
               href: icordebugvalueenum-next-method.md
         - name: 'ICorDebugVariableHome, interfejs'
           href: icordebugvariablehome-interface.md
           items:
             - name: 'GetArgumentIndex, metoda'
               href: icordebugvariablehome-getargumentindex-method.md
-            - name: 'GetCode, metoda'
+            - name: GetCode — Metoda
               href: icordebugvariablehome-getcode-method.md
             - name: 'GetLiveRange, metoda'
               href: icordebugvariablehome-getliverange-method.md
@@ -1344,34 +1344,34 @@
         - name: 'ICorDebugVariableHomeEnum, interfejs'
           href: icordebugvariablehomeenum-interface.md
           items:
-            - name: 'Next, metoda'
+            - name: Next — Metoda
               href: icordebugvariablehomeenum-next-method.md
         - name: 'ICorDebugVariableSymbol, interfejs'
           href: icordebugvariablesymbol-interface.md
           items:
             - name: 'GetName, metoda'
               href: icordebugvariablesymbol-getname-method.md
-            - name: 'GetSize, metoda'
+            - name: GetSize — Metoda
               href: icordebugvariablesymbol-getsize-method.md
             - name: 'GetSlotIndex, metoda'
               href: icordebugvariablesymbol-getslotindex-method.md
             - name: 'GetValue, metoda'
               href: icordebugvariablesymbol-getvalue-method.md
-            - name: 'SetValue, metoda'
+            - name: SetValue — Metoda
               href: icordebugvariablesymbol-setvalue-method.md
         - name: ICorDebugVirtualUnwinder — interfejs
           href: icordebugvirtualunwinder-interface.md
           items:
-            - name: 'GetContext, metoda'
+            - name: GetContext — Metoda
               href: icordebugvirtualunwinder-getcontext-method.md
-            - name: 'Next, metoda'
+            - name: Next — Metoda
               href: icordebugvirtualunwinder-next-method.md
         - name: ICorPublish — Interfejs
           href: icorpublish-interface.md
           items:
-            - name: 'EnumProcesses, metoda'
+            - name: EnumProcesses — Metoda
               href: icorpublish-enumprocesses-method.md
-            - name: 'GetProcess, metoda'
+            - name: GetProcess — Metoda
               href: icorpublish-getprocess-method.md
         - name: ICorPublishAppDomain — Interfejs
           href: icorpublishappdomain-interface.md
@@ -1383,7 +1383,7 @@
         - name: ICorPublishAppDomainEnum — Interfejs
           href: icorpublishappdomainenum-interface.md
           items:
-            - name: 'Next, metoda'
+            - name: Next — Metoda
               href: icorpublishappdomainenum-next-method.md
         - name: ICorPublishEnum — Interfejs
           href: icorpublishenum-interface.md
@@ -1399,18 +1399,18 @@
         - name: ICorPublishProcess — Interfejs
           href: icorpublishprocess-interface.md
           items:
-            - name: 'EnumAppDomains, metoda'
+            - name: EnumAppDomains — Metoda
               href: icorpublishprocess-enumappdomains-method.md
-            - name: 'GetDisplayName, metoda'
+            - name: GetDisplayName — Metoda
               href: icorpublishprocess-getdisplayname-method.md
-            - name: 'GetProcessID, metoda'
+            - name: GetProcessID — Metoda
               href: icorpublishprocess-getprocessid-method.md
             - name: 'IsManaged, metoda'
               href: icorpublishprocess-ismanaged-method.md
         - name: ICorPublishProcessEnum — Interfejs
           href: icorpublishprocessenum-interface.md
           items:
-            - name: 'Next, metoda'
+            - name: Next — Metoda
               href: icorpublishprocessenum-next-method.md
         - name: 'ISOSDacInterface, interfejs'
           href: isosdacinterface-interface.md
@@ -1572,7 +1572,7 @@
           href: clrdata-il-address-map-structure.md
         - name: CLR_DEBUGGING_VERSION — Struktura
           href: clr-debugging-version-structure.md
-        - name: 'CodeChunkInfo, struktura'
+        - name: CodeChunkInfo — Struktura
           href: codechunkinfo-structure.md
         - name: COR_ACTIVE_FUNCTION — Struktura
           href: cor-active-function-structure.md

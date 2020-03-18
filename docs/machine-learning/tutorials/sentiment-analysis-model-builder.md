@@ -1,142 +1,142 @@
 ---
-title: 'Samouczek: analizowanie klasyfikacji tonacji-Binary'
-description: W tym samouczku przedstawiono sposób tworzenia aplikacji Razor Pages, która klasyfikuje tonacji z komentarzy w witrynie sieci Web i podejmuje odpowiednie działania. Tonacji klasyfikator binarny używa konstruktora modelu w programie Visual Studio.
+title: 'Samouczek: Analizowanie nastrojów - klasyfikacja binarna'
+description: W tym samouczku pokazano, jak utworzyć aplikację Razor Pages, która klasyfikuje tonacji z komentarzy do witryny i podejmuje odpowiednie działania. Klasyfikator tonacji binarnych używa Konstruktora modeli w programie Visual Studio.
 ms.date: 11/21/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: 670c4dd1ac9da496f59d12d2e880cf269d64f309
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.custom: mvc,mlnet-tooling
+ms.openlocfilehash: 3419afb36d73599b8fdb0417a8c0cc4057f60089
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344966"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187635"
 ---
-# <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>Samouczek: analizowanie tonacji komentarzy witryny internetowej w aplikacji sieci Web przy użyciu konstruktora modelu ML.NET
+# <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>Samouczek: Analizowanie nastrojów komentarzy na stronie internetowej w aplikacji internetowej za pomocą ML.NET Model Builder
 
-Dowiedz się, jak analizować tonacji z komentarzy w czasie rzeczywistym w aplikacji sieci Web.
+Dowiedz się, jak analizować sentymentz komentarzy w czasie rzeczywistym w aplikacji sieci web.
 
-W tym samouczku pokazano, jak utworzyć aplikację Razor Pages ASP.NET Core, która klasyfikuje tonacji z komentarzy w witrynie sieci Web w czasie rzeczywistym.
+W tym samouczku pokazano, jak utworzyć aplikację ASP.NET Core Razor Pages, która klasyfikuje nastroje z komentarzy do witryny w czasie rzeczywistym.
 
-Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
+Niniejszy samouczek zawiera informacje na temat wykonywania następujących czynności:
 
 > [!div class="checklist"]
 >
-> - Tworzenie aplikacji Razor Pages ASP.NET Core
-> - Przygotuj i poznanie danych
+> - Tworzenie aplikacji ASP.NET Core Razor Pages
+> - Przygotowywanie i rozumienie danych
 > - Wybierz scenariusz
 > - Ładowanie danych
 > - Uczenie modelu
-> - Ocenianie modelu
-> - Używanie modelu dla prognoz
+> - Ocena modelu
+> - Użyj modelu dla prognoz
 
 > [!NOTE]
 > Konstruktor modeli jest obecnie w wersji zapoznawczej.
 
-Kod źródłowy dla tego samouczka można znaleźć w repozytorium [dotnet/machinelearning-Samples](https://github.com/dotnet/machinelearning-samples) .
+Kod źródłowy tego samouczka można znaleźć w repozytorium [dotnet/machinelearning-samples.](https://github.com/dotnet/machinelearning-samples)
 
 ## <a name="pre-requisites"></a>Wymagania wstępne
 
-Listę wymagań wstępnych i instrukcji instalacji można znaleźć w [podręczniku instalacji konstruktora modeli](../how-to-guides/install-model-builder.md).
+Aby uzyskać listę wymagań wstępnych i instrukcje instalacji, odwiedź [podręcznik instalacji konstruktora modeli](../how-to-guides/install-model-builder.md).
 
 ## <a name="create-a-razor-pages-application"></a>Tworzenie aplikacji Razor Pages
 
-1. Utwórz **aplikację Razor Pages ASP.NET Core**.
+1. Utwórz **ASP.NET Podstawową aplikację do stron razor**.
 
-    1. Otwórz program Visual Studio i wybierz pozycję **plik > nowy > projekt** na pasku menu.
-    1. W oknie dialogowym Nowy projekt wybierz węzeł **wizualizacji C#**  , a następnie węzeł **sieci Web** .
-    1. Następnie wybierz szablon projektu **aplikacji sieci Web ASP.NET Core** .
+    1. Otwórz program Visual Studio i wybierz **pozycję Plik > Nowy projekt >** z paska menu.
+    1. W oknie dialogowym Nowy projekt wybierz węzeł **Visual C#,** po którym następuje węzeł **sieci Web.**
+    1. Następnie wybierz szablon projektu **ASP.NET Core Web Application.**
     1. W polu tekstowym **Nazwa** wpisz "SentimentRazor".
-    1. Upewnij się, że w tym samym katalogu nie jest **zaznaczone pole wyboru** **Umieść rozwiązanie i projekt** (vs 2019) lub pozycję **Utwórz katalog dla rozwiązania** jest **zaznaczone** (vs 2017).
+    1. Upewnij się, że **rozwiązanie i projekt w tym samym katalogu** są **zaznaczone** (VS 2019) lub **Zaznacz akcesornie utwórz katalog dla rozwiązania** (VS 2017). **checked**
     1. Wybierz przycisk **OK**.
-    1. W oknie Wybierz **aplikację sieci Web** , która wyświetla różne typy projektów ASP.NET Core, a następnie wybierz przycisk **OK** .
+    1. Wybierz **pozycję Aplikacja sieci Web** w oknie, w których są wyświetlane różne typy ASP.NET projektów podstawowych, a następnie wybierz przycisk **OK.**
 
-## <a name="prepare-and-understand-the-data"></a>Przygotuj i poznanie danych
+## <a name="prepare-and-understand-the-data"></a>Przygotowywanie i rozumienie danych
 
-Pobierz [zestaw danych detox Wikipedia](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv). Gdy zostanie otwarta strona sieci Web, kliknij prawym przyciskiem myszy na stronie, wybierz polecenie **Zapisz jako** i Zapisz plik w dowolnym miejscu na komputerze.
+Pobierz [zestaw danych Detox Wikipedia](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv). Po otwarciu strony internetowej kliknij prawym przyciskiem myszy stronę, wybierz polecenie **Zapisz jako** i zapisz plik w dowolnym miejscu na komputerze.
 
-Każdy wiersz w zestawie danych *Wikipedia-detox-250-line-Data. tsv* reprezentuje inny przegląd, który został pozostawiony przez użytkownika w witrynie Wikipedia. Pierwsza kolumna reprezentuje tonacji tekstu (0 to nietoksyczne, 1 jest toksyczny), a druga kolumna reprezentuje komentarz, który został pozostawiony przez użytkownika. Kolumny są oddzielane znakami tabulacji. Dane wyglądają następująco:
+Każdy wiersz w *wikipedia-detox-250-line-data.tsv* zestaw danych reprezentuje inną recenzję pozostawioną przez użytkownika na Wikipedii. Pierwsza kolumna reprezentuje tonacji tekstu (0 jest nietoksyczny, 1 jest toksyczny), a druga kolumna reprezentuje komentarz pozostawiony przez użytkownika. Kolumny są oddzielone kartami. Dane wyglądają następująco:
 
-| Opinia | SentimentText |
+| Opinia | SentymentTekst |
 | :---: | :---: |
-1 | = = Prosta = = informatyku, prosta to Carl Picture lub else.
-1 | = = OK! = = BŁYSKAWICZNE PRZECHODZENIE DO VANDALIZE DZIKICH WITRYN TYPU WIKI, A NASTĘPNIE!!!
+1 | ==RUDE== Stary, jesteś niegrzeczny przesłać, że carl zdjęcie z powrotem, albo inaczej.
+1 | == OK! == IM ZAMIERZA VANDALIZE WILD ONES WIKI NASTĘPNIE!!!
 0 | Mam nadzieję, że to pomoże.
 
 ## <a name="choose-a-scenario"></a>Wybierz scenariusz
 
-![Kreator konstruktora modelu w programie Visual Studio](./media/sentiment-analysis-model-builder/model-builder-screen.png)
+![Kreator konstruktora modeli w programie Visual Studio](./media/sentiment-analysis-model-builder/model-builder-screen.png)
 
-Aby szkolić model, musisz wybrać z listy dostępnych scenariuszy uczenia maszynowego udostępnianych przez konstruktora modelu.
+Aby nabyć model, należy wybrać z listy dostępnych scenariuszy uczenia maszynowego dostarczonych przez Konstruktora modeli.
 
-1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt *SentimentRazor* i wybierz polecenie **Dodaj** > **Machine Learning**.
-1. Na potrzeby tego przykładu scenariusz jest tonacji analizy. W kroku *scenariusz* narzędzia model Builder wybierz scenariusz **Analiza tonacji** .
+1. W **Eksploratorze rozwiązań**kliknij prawym przyciskiem myszy projekt *SentimentRazor* i wybierz polecenie **Dodaj** > **uczenie maszynowe**.
+1. W tym przykładzie scenariusz jest analiza tonacji. W *kroku scenariusza* narzędzia Konstruktor modeli wybierz scenariusz **analizy tonacji.**
 
 ## <a name="load-the-data"></a>Ładowanie danych
 
-Konstruktor modelu akceptuje dane z dwóch źródeł, bazy danych SQL Server lub lokalnego pliku w formacie `csv` lub `tsv`.
+Program Konstruktor modeli akceptuje dane z dwóch źródeł: bazy danych programu SQL Server lub pliku lokalnego w `csv` formacie lub `tsv` formatu.
 
-1. W kroku dane narzędzia model Builder wybierz pozycję **plik** z listy rozwijanej Źródło danych.
-1. Wybierz przycisk obok pola tekstowego **Wybierz plik** i Użyj Eksploratora plików, aby przeglądać i wybrać plik *Wikipedia-detox-250-line-Data. tsv* .
-1. Wybierz pozycję **tonacji** w **kolumnie do przewidywania (etykieta)** listy rozwijanej.
-1. Pozostaw wartości domyślne dla listy rozwijanej **kolumny wejściowe (Features)** .
-1. Wybierz łącze **uczenie** , aby przejść do następnego kroku w narzędziu model Builder.
+1. W kroku danych narzędzia Konstruktor modeli wybierz pozycję **Plik** z listy rozwijanej źródła danych.
+1. Wybierz przycisk obok pola **tekstowego Wybierz plik** i użyj Eksploratora plików, aby przeglądać i wybrać plik *wikipedia-detox-250-line-data.tsv.*
+1. Wybierz **pozycję Toncjacja** w **kolumnie do przewidywania (etykieta).**
+1. Pozostaw wartości domyślne dla **listy rozwijanej Kolumny wejściowe (Funkcje).**
+1. Wybierz łącze **Pociąg,** aby przejść do następnego kroku narzędzia Konstruktor modeli.
 
 ## <a name="train-the-model"></a>Uczenie modelu
 
-Zadanie uczenia maszynowego używane do uczenia modelu analizy tonacji w tym samouczku jest klasyfikacją binarną. Podczas procesu uczenia modelowego, Konstruktor modelu pociąga za siebie różne modele przy użyciu różnych binarnych algorytmów klasyfikacji i ustawień, aby znaleźć najlepszy model dla zestawu danych.
+Zadanie uczenia maszynowego używane do uczenia modelu analizy tonacji w tym samouczku jest klasyfikacją binarną. Podczas procesu szkolenia modelu Model Builder pociągów oddzielnych modeli przy użyciu różnych algorytmów klasyfikacji binarnej i ustawień, aby znaleźć najlepszy model wydajności dla zestawu danych.
 
-Czas wymagany przez model do uczenia jest proporcjonalny do ilości danych. Konstruktor modelu automatycznie wybiera wartość domyślną dla **czasu do uczenia (w sekundach)** na podstawie rozmiaru źródła danych.
+Czas wymagany do przeszkolenia modelu jest proporcjonalny do ilości danych. Konstruktor modeli automatycznie wybiera wartość domyślną dla **time to train (seconds)** na podstawie rozmiaru źródła danych.
 
-1. Chociaż Konstruktor modelu ustawia wartość **czasu do uczenia (sekundy)** do 10 sekund, zwiększ go do 30 sekund. Szkolenie przez dłuższy czas umożliwia konstruktorowi modelu Eksplorowanie większej liczby algorytmów i kombinacji parametrów podczas wyszukiwania najlepszego modelu.
-1. Wybierz pozycję **Rozpocznij szkolenie**.
+1. Mimo że Konstruktor modeli ustawia wartość **Czasu do pociągu (sekundy)** na 10 sekund, zwiększ ją do 30 sekund. Szkolenie przez dłuższy czas umożliwia konstruktorowi modeli eksplorowanie większej liczby algorytmów i kombinacji parametrów w poszukiwaniu najlepszego modelu.
+1. Wybierz **pozycję Rozpocznij szkolenie**.
 
-    W trakcie całego procesu szkolenia dane o postępie są wyświetlane w sekcji `Progress` kroku uczenie.
+    W trakcie całego procesu szkolenia dane `Progress` postępu są wyświetlane w sekcji etapu pociągu.
 
-    - Stan przedstawia stan zakończenia procesu szkolenia.
-    - Najlepsza dokładność przedstawia dokładność najlepszego modelu, który został znaleziony przez konstruktora modelu do tej pory. Większa dokładność oznacza, że model przewidywalno dokładniej na danych testowych.
-    - Najlepszym algorytmem jest wyświetlana nazwa najlepszego wykonywania algorytmu, który został wykonany przez konstruktora modelu do tej pory.
+    - Stan wyświetla stan ukończenia procesu szkolenia.
+    - Najlepsza dokładność pokazuje dokładność najlepiej działającego modelu znalezionego do tej pory przez Model Builder. Większa dokładność oznacza, że model jest bardziej poprawnie przewidywany na danych testowych.
+    - Najlepszy algorytm wyświetla nazwę algorytmu o najlepszej wydajności, który został znaleziony do tej pory przez Konstruktora modeli.
     - Ostatni algorytm wyświetla nazwę algorytmu ostatnio używanego przez konstruktora modelu do uczenia modelu.
 
-1. Po zakończeniu szkolenia wybierz łącze **Oceń** , aby przejść do następnego kroku.
+1. Po zakończeniu szkolenia wybierz łącze **oceny,** aby przejść do następnego kroku.
 
-## <a name="evaluate-the-model"></a>Ocenianie modelu
+## <a name="evaluate-the-model"></a>Ocena modelu
 
-Wynikiem kroku szkolenia będzie jeden model, który miał najlepszą wydajność. W kroku szacowania narzędzia model Builder sekcja Output zawiera algorytm używany przez model najlepiej działający w najlepszym wpisie **modelu** oraz metryki o **najwyższej dokładności modelu**. Ponadto tabela podsumowująca zawierająca pięć najważniejszych modeli i ich metryki.
+Wynikiem etapu szkolenia będzie jeden model, który miał najlepszą wydajność. W kroku oceny narzędzia Konstruktor modeli sekcja danych wyjściowych będzie zawierać algorytm używany przez najlepiej działający model we wpisie **Najlepszy model** wraz z metrykami w **najlepszej dokładności modelu**. Ponadto tabela podsumowania zawierająca pięć najlepszych modeli i ich metryki.
 
-Jeśli Twoje metryki dokładności nie są zadowalające, niektóre proste sposoby wypróbowania i poprawienia dokładności modelu mają na celu zwiększenie ilości czasu na nauczenie modelu lub użycie większej ilości danych. W przeciwnym razie wybierz łącze **kod** , aby przejść do ostatniego kroku w narzędziu model Builder.
+Jeśli nie jesteś zadowolony z metryk dokładności, kilka prostych sposobów, aby spróbować poprawić dokładność modelu są zwiększenie czasu na szkolenie modelu lub użyć więcej danych. W przeciwnym razie wybierz łącze **kodu,** aby przejść do ostatniego kroku w narzędziu Konstruktor modeli.
 
-## <a name="add-the-code-to-make-predictions"></a>Dodaj kod, aby tworzyć przewidywania
+## <a name="add-the-code-to-make-predictions"></a>Dodawanie kodu do prognozowania
 
-W wyniku procesu szkolenia zostaną utworzone dwa projekty.
+W wyniku procesu szkoleniowego zostaną utworzone dwa projekty.
 
-### <a name="reference-the-trained-model"></a>Odwołuje się do przeszkolonego modelu
+### <a name="reference-the-trained-model"></a>Odwoływanie się do przeszkolonego modelu
 
-1. W kroku *Code* narzędzia model Builder wybierz pozycję **Dodaj projekty** , aby dodać automatycznie generowane projekty do rozwiązania.
+1. W kroku *kodu* narzędzia Konstruktor modeli wybierz pozycję **Dodaj projekty,** aby dodać projekty wygenerowane automatycznie do rozwiązania.
 
-    Następujące projekty powinny pojawić się w **Eksplorator rozwiązań**:
+    W **Eksploratorze rozwiązań**powinny pojawić się następujące projekty:
 
-    - *SentimentRazorML. ConsoleApp*: Aplikacja konsolowa platformy .NET Core, która zawiera model szkoleń i kodu przewidywania.
-    - *SentimentRazorML. model*: biblioteka klas .NET Standard zawierająca modele danych, które definiują schemat danych wejściowych i wyjściowych, a także zapisaną wersję najlepszego modelu podczas uczenia się.
+    - *SentimentRazorML.ConsoleApp:* Aplikacja .NET Core Console, która zawiera kod szkolenia i przewidywania modelu.
+    - *SentimentRazorML.Model:* Biblioteka klas .NET Standard zawierająca modele danych definiujące schemat danych modelu wejściowego i wyjściowego, a także zapisaną wersję modelu o najlepszej wydajności podczas szkolenia.
 
-    W tym samouczku używany jest tylko projekt *SentimentRazorML. model* , ponieważ przewidywania zostaną wykonane w aplikacji sieci Web *SentimentRazor* , a nie w konsoli programu. Chociaż *SentimentRazorML. ConsoleApp* nie będzie używany do oceniania, może służyć do ponownego uczenia modelu przy użyciu nowych danych w późniejszym czasie. W tym samouczku przeszkolenie zostało przeprowadzone poza zakresem.
+    W tym samouczku używany jest tylko projekt *SentimentRazorML.Model,* ponieważ prognozy będą dokonywane w aplikacji internetowej *SentimentRazor,* a nie w konsoli. Mimo że *SentimentRazorML.ConsoleApp* nie będzie używany do oceniania, może służyć do ponownego uczenia modelu przy użyciu nowych danych w późniejszym czasie. Ponowne szkolenie jest jednak poza zakresem tego samouczka.
 
 ### <a name="configure-the-predictionengine-pool"></a>Konfigurowanie puli PredictionEngine
 
-Aby wykonać pojedyncze prognozowanie, należy utworzyć [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602). [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) nie jest bezpieczna wątkowo. Ponadto należy utworzyć wystąpienie go wszędzie tam, gdzie jest to potrzebne w aplikacji. Gdy aplikacja zostanie powiększona, ten proces może być niezarządzany. Aby zwiększyć wydajność i bezpieczeństwo wątków, należy użyć kombinacji iniekcji zależności i usługi `PredictionEnginePool`, która tworzy [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) obiektów do użycia w całej aplikacji.
+Aby utworzyć pojedynczą prognozę, [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)musisz utworzyć plik . [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)nie jest bezpieczny dla nici. Ponadto należy utworzyć wystąpienie wszędzie tam, gdzie jest to potrzebne w aplikacji. Wraz ze wzrostem aplikacji ten proces może stać się niewykonalny. Aby zwiększyć wydajność i bezpieczeństwo wątków, należy `PredictionEnginePool` użyć kombinacji [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) iniekcji zależności i usługi, która tworzy obiektów [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) do użycia w całej aplikacji.
 
-1. Zainstaluj pakiet NuGet *Microsoft.Extensions.ml* :
+1. Zainstaluj *pakiet Microsoft.Extensions.ML* NuGet:
 
-    1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt i wybierz polecenie **Zarządzaj pakietami NuGet**.
-    1. Wybierz pozycję "nuget.org" jako źródło pakietu.
-    1. Wybierz kartę **Przeglądaj** i wyszukaj ciąg **Microsoft.Extensions.ml**.
-    1. Wybierz pakiet z listy, a następnie wybierz przycisk **Instaluj** .
-    1. Wybierz przycisk **OK** w oknie dialogowym **Podgląd zmian**
-    1. Jeśli zgadzasz się z postanowieniami licencyjnymi dotyczącymi wymienionych pakietów, **Wybierz przycisk Akceptuję w oknie** dialogowym **akceptacji licencji** .
+    1. W **Eksploratorze rozwiązań**kliknij prawym przyciskiem myszy projekt i wybierz polecenie **Zarządzaj pakietami NuGet**.
+    1. Wybierz "nuget.org" jako źródło pakietu.
+    1. Wybierz kartę **Przeglądaj** i wyszukaj **Microsoft.Extensions.ML**.
+    1. Wybierz pakiet na liście i wybierz przycisk **Zainstaluj.**
+    1. Wybieranie przycisku **OK** w oknie dialogowym **Podgląd zmian**
+    1. Wybierz przycisk **Akceptuję** w oknie dialogowym **Akceptacja licencji,** jeśli zgadzasz się z warunkami licencji dla wymienionych pakietów.
 
-1. Otwórz plik *Startup.cs* w projekcie *SentimentRazor* .
-1. Dodaj następujące instrukcje using, aby odwołać się do pakietu NuGet *Microsoft.Extensions.ml* i projektu *SentimentRazorML. model* :
+1. Otwórz *plik Startup.cs* w projekcie *SentimentRazor.*
+1. Dodaj następujące instrukcje używające do odwołania się do *Microsoft.Extensions.ML* nuget pakietu i *SentimentRazorML.Model* projektu:
 
     ```csharp
     using System.IO;
@@ -144,13 +144,13 @@ Aby wykonać pojedyncze prognozowanie, należy utworzyć [`PredictionEngine`](xr
     using SentimentRazorML.Model;
     ```
 
-1. Utwórz zmienną globalną do przechowywania lokalizacji pliku z przeszkolonym modelem.
+1. Utwórz zmienną globalną do przechowywania lokalizacji uczonego pliku modelu.
 
     ```csharp
     private readonly string _modelPath;
     ```
 
-1. Plik modelu jest przechowywany w katalogu kompilacji obok plików zestawu aplikacji. Aby ułatwić dostęp, należy utworzyć metodę pomocnika o nazwie `GetAbsolutePath` po metodzie `Configure`
+1. Plik modelu jest przechowywany w katalogu kompilacji wraz z plikami zestawu aplikacji. Aby ułatwić dostęp, utwórz metodę pomocnika `GetAbsolutePath` wywołaną po `Configure`
 
     ```csharp
     public static string GetAbsolutePath(string relativePath)
@@ -163,39 +163,39 @@ Aby wykonać pojedyncze prognozowanie, należy utworzyć [`PredictionEngine`](xr
     }
     ```
 
-1. Użyj metody `GetAbsolutePath` w konstruktorze klasy `Startup`, aby ustawić `_modelPath`.
+1. Użyj `GetAbsolutePath` metody w `Startup` konstruktorze `_modelPath`klasy, aby ustawić .
 
     ```csharp
     _modelPath = GetAbsolutePath("MLModel.zip");
     ```
 
-1. Skonfiguruj `PredictionEnginePool` aplikacji w metodzie `ConfigureServices`:
+1. Skonfiguruj `PredictionEnginePool` dla `ConfigureServices` swojej aplikacji w metodzie:
 
     ```csharp
     services.AddPredictionEnginePool<ModelInput, ModelOutput>()
             .FromFile(_modelPath);
     ```
 
-### <a name="create-sentiment-analysis-handler"></a>Utwórz procedurę obsługi analizy tonacji
+### <a name="create-sentiment-analysis-handler"></a>Tworzenie programu obsługi analizy tonacji
 
-Przewidywania zostaną wykonane wewnątrz strony głównej aplikacji. W związku z tym metoda, która pobiera dane wejściowe użytkownika i używa `PredictionEnginePool`, aby zwrócić prognozę, należy dodać.
+Prognozy będą dokonywane wewnątrz głównej strony aplikacji. W związku z tym metoda, która `PredictionEnginePool` pobiera dane wejściowe użytkownika i używa do zwrócenia przewidywanie należy dodać.
 
-1. Otwórz plik *index.cshtml.cs* znajdujący się w katalogu *Pages* i Dodaj następujące instrukcje using:
+1. Otwórz *plik Index.cshtml.cs* znajdujący się w katalogu *Pages* i dodaj następujące instrukcje:
 
     ```csharp
     using Microsoft.Extensions.ML;
     using SentimentRazorML.Model;
     ```
 
-    Aby można było używać `PredictionEnginePool` skonfigurowanych w klasie `Startup`, należy wstrzyknąć ją do konstruktora modelu, w którym ma być używany.
+    Aby użyć skonfigurowany `PredictionEnginePool` w `Startup` klasie, należy wstrzyknąć go do konstruktora modelu, w którym chcesz go używać.
 
-1. Dodaj zmienną, aby odwoływać się do `PredictionEnginePool` wewnątrz klasy `IndexModel`.
+1. Dodaj zmienną, `PredictionEnginePool` aby `IndexModel` odwołać się do wewnątrz klasy.
 
     ```csharp
     private readonly PredictionEnginePool<ModelInput, ModelOutput> _predictionEnginePool;
     ```
 
-1. Utwórz konstruktora w klasie `IndexModel` i wstrzyknąć do niego usługę `PredictionEnginePool`.
+1. Utwórz konstruktora w `IndexModel` `PredictionEnginePool` klasie i wstrzyknąć do niego usługi.
 
     ```csharp
     public IndexModel(PredictionEnginePool<ModelInput, ModelOutput> predictionEnginePool)
@@ -204,9 +204,9 @@ Przewidywania zostaną wykonane wewnątrz strony głównej aplikacji. W związku
     }
     ```
 
-1. Utwórz procedurę obsługi metody, która używa `PredictionEnginePool` do tworzenia prognoz z danych wejściowych użytkownika otrzymanych ze strony sieci Web.
+1. Utwórz program obsługi `PredictionEnginePool` metody, który używa do tworzenia prognoz z danych wejściowych użytkownika odebranych ze strony sieci web.
 
-    1. Poniżej metody `OnGet` Utwórz nową metodę o nazwie `OnGetAnalyzeSentiment`
+    1. Poniżej `OnGet` metody utwórz nową metodę o nazwie`OnGetAnalyzeSentiment`
 
         ```csharp
         public IActionResult OnGetAnalyzeSentiment([FromQuery] string text)
@@ -215,93 +215,93 @@ Przewidywania zostaną wykonane wewnątrz strony głównej aplikacji. W związku
         }
         ```
 
-    1. Wewnątrz metody `OnGetAnalyzeSentiment` Zwróć *neutralną* tonacji, jeśli dane wejściowe użytkownika są puste lub mają wartość null.
+    1. Wewnątrz `OnGetAnalyzeSentiment` metody zwraca *neutralne* tonacji, jeśli dane wejściowe od użytkownika jest puste lub null.
 
         ```csharp
         if (String.IsNullOrEmpty(text)) return Content("Neutral");
         ```
 
-    1. Uwzględniając prawidłowe dane wejściowe, Utwórz nowe wystąpienie `ModelInput`.
+    1. Biorąc pod uwagę prawidłowe dane `ModelInput`wejściowe, utwórz nowe wystąpienie .
 
         ```csharp
         var input = new ModelInput { SentimentText = text };
         ```
 
-    1. Użyj `PredictionEnginePool` do przewidywania tonacji.
+    1. Użyj `PredictionEnginePool` do przewidywania sentymentu.
 
         ```csharp
         var prediction = _predictionEnginePool.Predict(input);
         ```
 
-    1. Przekonwertuj przewidywaną wartość `bool` na toksyczne lub nietoksyczne przy użyciu poniższego kodu.
+    1. Przelicz przewidywaną `bool` wartość na toksyczną lub nietoksyczną za pomocą następującego kodu.
 
         ```csharp
         var sentiment = Convert.ToBoolean(prediction.Prediction) ? "Toxic" : "Not Toxic";
         ```
 
-    1. Na koniec Zwróć tonacji z powrotem do strony sieci Web.
+    1. Na koniec wróć do strony internetowej.
 
         ```csharp
         return Content(sentiment);
         ```
 
-### <a name="configure-the-web-page"></a>Skonfiguruj stronę sieci Web
+### <a name="configure-the-web-page"></a>Konfigurowanie strony sieci Web
 
-Wyniki zwrócone przez `OnGetAnalyzeSentiment` będą dynamicznie wyświetlane na stronie sieci Web `Index`.
+Wyniki zwracane przez `OnGetAnalyzeSentiment` wolę będą dynamicznie `Index` wyświetlane na stronie internetowej.
 
-1. Otwórz plik *index. cshtml* w katalogu *stron* i Zastąp jego zawartość następującym kodem:
+1. Otwórz plik *Index.cshtml* w katalogu *Pages* i zastąp jego zawartość następującym kodem:
 
     [!code-cshtml [IndexPage](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml)]
 
-1. Następnie Dodaj kod stylów CSS do końca strony *site. css* w katalogu *wwwroot\css* :
+1. Następnie dodaj kod do stylizacji css na końcu strony *site.css* w katalogu *wwwroot\css:*
 
     [!code-css [CssStyling](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/css/site.css#L61-L105)]
 
-1. Następnie Dodaj kod, aby wysłać dane wejściowe ze strony sieci Web do procedury obsługi `OnGetAnalyzeSentiment`.
+1. Następnie dodaj kod, aby wysłać dane wejściowe `OnGetAnalyzeSentiment` ze strony sieci web do programu obsługi.
 
-    1. W pliku *site. js* znajdującym się w katalogu *wwwroot\js* utwórz funkcję o nazwie `getSentiment`, aby wykonać żądanie Get http przy użyciu danych wejściowych użytkownika do procedury obsługi `OnGetAnalyzeSentiment`.
+    1. W pliku *site.js znajdującym* się w katalogu *wwwroot\js* utwórz funkcję wywoływaną `getSentiment` `OnGetAnalyzeSentiment` w celu utworzenia żądania HTTP get z danymi wejściowymi użytkownika do programu obsługi.
 
         [!code-javascript [GetSentimentMethod](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/js/site.js#L5-L10)]
 
-    1. Poniżej można dodać kolejną funkcję o nazwie `updateMarker`, aby dynamicznie aktualizować pozycję znacznika na stronie sieci Web w miarę przewidywania tonacji.
+    1. Poniżej dodaj inną funkcję `updateMarker` o nazwie dynamicznie aktualizować pozycję znacznika na stronie internetowej, jak prognozowano tonacji.
 
         [!code-javascript [UpdateMarkerMethod](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/js/site.js#L12-L15)]
 
-    1. Utwórz funkcję programu obsługi zdarzeń o nazwie `updateSentiment`, aby pobrać dane wejściowe od użytkownika, wyślij je do funkcji `OnGetAnalyzeSentiment` przy użyciu funkcji `getSentiment` i zaktualizuj znacznik za pomocą funkcji `updateMarker`.
+    1. Utwórz funkcję obsługi `updateSentiment` zdarzeń wywoływaną w celu uzyskania `OnGetAnalyzeSentiment` danych `getSentiment` wejściowych od użytkownika, `updateMarker` wyślij ją do funkcji za pomocą funkcji i zaktualizuj znacznik za pomocą funkcji.
 
         [!code-javascript [UpdateSentimentMethod](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/js/site.js#L17-L34)]
 
-    1. Na koniec Zarejestruj program obsługi zdarzeń i powiąż go z elementem `textarea` z atrybutem `id=Message`.
+    1. Na koniec zarejestruj program obsługi zdarzeń i powiąż go z elementem `textarea` z atrybutem. `id=Message`
 
         [!code-javascript [UpdateSentimentEvtHandler](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/js/site.js#L36)]
 
 ## <a name="run-the-application"></a>Uruchamianie aplikacji
 
-Teraz, gdy aplikacja jest skonfigurowana, uruchom aplikację, która powinna być uruchamiana w przeglądarce.
+Teraz, gdy aplikacja jest skonfigurowana, uruchom aplikację, która powinna zostać uruchomiona w przeglądarce.
 
-Po uruchomieniu aplikacji, wprowadź *wartość Konstruktor modeli jest chłodna!* w obszarze tekstu. Wyświetlona tonacji nie powinna być *toksyczna*.
+Po uruchomieniu aplikacji, wprowadź *Model Builder jest cool!* do obszaru tekstowego. Przewidywane wyświetlone nastroje nie powinny być *toksyczne.*
 
-![Uruchamianie okna z przewidywanym oknem tonacji](./media/sentiment-analysis-model-builder/web-app.png)
+![Okno uruchomione z przewidywanym oknem tonacji](./media/sentiment-analysis-model-builder/web-app.png)
 
-Jeśli musisz odwołać się do projektów wygenerowanych przez konstruktora modeli w późniejszym czasie w innym rozwiązaniu, możesz je znaleźć w katalogu `C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools`.
+Jeśli chcesz odwołać się do Konstruktora modeli wygenerowanych projektów w późniejszym `C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools` czasie wewnątrz innego rozwiązania, można je znaleźć wewnątrz katalogu.
 
 ## <a name="next-steps"></a>Następne kroki
 
 W niniejszym samouczku zawarto informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]
 >
-> - Tworzenie aplikacji Razor Pages ASP.NET Core
-> - Przygotuj i poznanie danych
+> - Tworzenie aplikacji ASP.NET Core Razor Pages
+> - Przygotowywanie i rozumienie danych
 > - Wybierz scenariusz
 > - Ładowanie danych
 > - Uczenie modelu
-> - Ocenianie modelu
-> - Używanie modelu dla prognoz
+> - Ocena modelu
+> - Użyj modelu dla prognoz
 
-### <a name="additional-resources"></a>Dodatkowe materiały
+### <a name="additional-resources"></a>Dodatkowe zasoby
 
-Aby dowiedzieć się więcej na temat tematów wymienionych w tym samouczku, odwiedź następujące zasoby:
+Aby dowiedzieć się więcej na tematy wymienione w tym samouczku, odwiedź następujące zasoby:
 
-- [Scenariusze konstruktora modelu](../automate-training-with-model-builder.md#scenarios)
+- [Scenariusze konstruktora modeli](../automate-training-with-model-builder.md#scenarios)
 - [Klasyfikacja binarna](../resources/glossary.md#binary-classification)
-- [Metryki binarnego modelu klasyfikacji](../resources/metrics.md#evaluation-metrics-for-binary-classification)
+- [Metryki modelu klasyfikacji binarnej](../resources/metrics.md#evaluation-metrics-for-binary-classification)

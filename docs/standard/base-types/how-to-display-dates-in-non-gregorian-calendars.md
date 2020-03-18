@@ -12,42 +12,42 @@ helpviewer_keywords:
 - displaying date and time data
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
 ms.openlocfilehash: 455996d091f92367667e7077a4524898cd8face6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138756"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Porady: wyświetlanie dat w kalendarzach innych niż gregoriański
-Typy <xref:System.DateTime> i <xref:System.DateTimeOffset> używają kalendarza gregoriańskiego jako kalendarza domyślnego. Oznacza to, że wywołanie metody `ToString` wartości daty i godziny powoduje wyświetlenie ciągu reprezentującego datę i godzinę w kalendarzu gregoriańskim, nawet jeśli ta data i godzina zostały utworzone przy użyciu innego kalendarza. Jest to zilustrowane w poniższym przykładzie, który używa dwóch różnych sposobów tworzenia wartości daty i godziny w kalendarzu perski, ale nadal wyświetla te wartości daty i godziny w kalendarzu gregoriańskim, gdy wywołuje metodę <xref:System.DateTime.ToString%2A>. W tym przykładzie przedstawiono dwa często używane, ale nieprawidłowe techniki wyświetlania daty w określonym kalendarzu.  
+<xref:System.DateTimeOffset> I <xref:System.DateTime> typy używają kalendarza gregoriańskiego jako kalendarza domyślnego. Oznacza to, że wywołanie `ToString` metody wartości daty i godziny wyświetla reprezentację ciągu tej daty i godziny w kalendarzu gregoriańskim, nawet jeśli ta data i godzina została utworzona przy użyciu innego kalendarza. Jest to zilustrowane w poniższym przykładzie, który używa dwóch różnych sposobów tworzenia wartości daty i godziny z kalendarzem perskim, ale <xref:System.DateTime.ToString%2A> nadal wyświetla te wartości daty i godziny w kalendarzu gregoriańskim podczas wywoływania metody. W tym przykładzie przedstawiono dwie powszechnie używane, ale niepoprawne techniki wyświetlania daty w określonym kalendarzu.  
   
  [!code-csharp[Formatting.HowTo.Calendar#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.Calendar/cs/Calendar1.cs#1)]
  [!code-vb[Formatting.HowTo.Calendar#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.Calendar/vb/Calendar1.vb#1)]  
   
- Do wyświetlania daty w określonym kalendarzu można użyć dwóch różnych technik. Pierwszy wymaga, aby kalendarz był kalendarzem domyślnym dla określonej kultury. Drugi może być używany z dowolnym kalendarzem.  
+ Dwie różne techniki mogą być używane do wyświetlania daty w określonym kalendarzu. Pierwszy wymaga, aby kalendarz był domyślnym kalendarzem dla określonej kultury. Drugi może być używany z dowolnym kalendarzem.  
   
 ### <a name="to-display-the-date-for-a-cultures-default-calendar"></a>Aby wyświetlić datę domyślnego kalendarza kultury  
   
-1. Utwórz wystąpienie obiektu Calendar pochodnego od klasy <xref:System.Globalization.Calendar>, która reprezentuje kalendarz do użycia.  
+1. Tworzenie wystąpienia obiektu kalendarza pochodzącego <xref:System.Globalization.Calendar> z klasy, która reprezentuje kalendarz, który ma być używany.  
   
-2. Utworzenie wystąpienia obiektu <xref:System.Globalization.CultureInfo> reprezentującego kulturę, której formatowanie będzie używane do wyświetlania daty.  
+2. Utworzyć wystąpienia <xref:System.Globalization.CultureInfo> obiektu reprezentującego kulturę, którego formatowanie będzie używane do wyświetlania daty.  
   
-3. Wywołaj metodę <xref:System.Array.Exists%2A?displayProperty=nameWithType>, aby określić, czy obiekt Calendar jest elementem członkowskim tablicy zwracanej przez właściwość <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType>. Oznacza to, że kalendarz może obsłużyć jako domyślny kalendarz dla obiektu <xref:System.Globalization.CultureInfo>. Jeśli nie jest elementem członkowskim tablicy, postępuj zgodnie z instrukcjami w sekcji "aby wyświetlić datę w dowolnym kalendarzu".  
+3. Wywołaj <xref:System.Array.Exists%2A?displayProperty=nameWithType> metodę, aby ustalić, czy obiekt kalendarza jest <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType> członkiem tablicy zwracanej przez właściwość. Oznacza to, że kalendarz może służyć <xref:System.Globalization.CultureInfo> jako domyślny kalendarz obiektu. Jeśli nie jest członkiem tablicy, postępuj zgodnie z instrukcjami w sekcji "Aby wyświetlić datę w dowolnym kalendarzu".  
   
-4. Przypisz obiekt Calendar do właściwości <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A> obiektu <xref:System.Globalization.DateTimeFormatInfo> zwróconego przez właściwość <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>.  
+4. Przypisz obiekt kalendarza <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A> do <xref:System.Globalization.DateTimeFormatInfo> właściwości obiektu <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> zwróconego przez właściwość.  
   
     > [!NOTE]
-    > Klasa <xref:System.Globalization.CultureInfo> ma również właściwość <xref:System.Globalization.CultureInfo.Calendar%2A>. Jest to jednak tylko do odczytu i stała; nie zmienia się w celu odzwierciedlenia nowego domyślnego kalendarza przypisanego do właściwości <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A?displayProperty=nameWithType>.  
+    > Klasa <xref:System.Globalization.CultureInfo> posiada również <xref:System.Globalization.CultureInfo.Calendar%2A> właściwość. Jednak jest tylko do odczytu i stała; nie zmienia się w celu odzwierciedlenia nowego kalendarza domyślnego przypisanego <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A?displayProperty=nameWithType> do właściwości.  
   
-5. Wywołaj metodę <xref:System.DateTime.ToString%2A> lub <xref:System.DateTime.ToString%2A> i przekaż ją do obiektu <xref:System.Globalization.CultureInfo>, którego domyślny kalendarz został zmodyfikowany w poprzednim kroku.  
+5. Wywołaj <xref:System.DateTime.ToString%2A> <xref:System.DateTime.ToString%2A> lub metody i przekazać <xref:System.Globalization.CultureInfo> go obiekt, którego domyślny kalendarz został zmodyfikowany w poprzednim kroku.  
   
 ### <a name="to-display-the-date-in-any-calendar"></a>Aby wyświetlić datę w dowolnym kalendarzu  
   
-1. Utwórz wystąpienie obiektu Calendar pochodnego od klasy <xref:System.Globalization.Calendar>, która reprezentuje kalendarz do użycia.  
+1. Tworzenie wystąpienia obiektu kalendarza pochodzącego <xref:System.Globalization.Calendar> z klasy, która reprezentuje kalendarz, który ma być używany.  
   
-2. Określ, które elementy daty i godziny mają być wyświetlane w ciągu reprezentującym wartość daty i godziny.  
+2. Określ, które elementy daty i godziny powinny pojawić się w reprezentacji ciągu wartości daty i godziny.  
   
-3. Dla każdego elementu daty i godziny, który chcesz wyświetlić, wywołaj `Get`obiektu kalendarza... Method. Dostępne są następujące metody:  
+3. Dla każdego elementu daty i godziny, który chcesz wyświetlić, wywołaj obiekt kalendarza `Get`... Metoda. Dostępne są następujące metody:  
   
     - <xref:System.Globalization.Calendar.GetYear%2A>, aby wyświetlić rok w odpowiednim kalendarzu.  
   
@@ -57,32 +57,32 @@ Typy <xref:System.DateTime> i <xref:System.DateTimeOffset> używają kalendarza 
   
     - <xref:System.Globalization.Calendar.GetHour%2A>, aby wyświetlić godzinę dnia w odpowiednim kalendarzu.  
   
-    - <xref:System.Globalization.Calendar.GetMinute%2A>, aby wyświetlić minuty w ciągu godziny w odpowiednim kalendarzu.  
+    - <xref:System.Globalization.Calendar.GetMinute%2A>, aby wyświetlić minuty w godzinie w odpowiednim kalendarzu.  
   
-    - <xref:System.Globalization.Calendar.GetSecond%2A>, aby wyświetlić sekundy w odpowiednim kalendarzu w ciągu minuty.  
+    - <xref:System.Globalization.Calendar.GetSecond%2A>, aby wyświetlić sekundy w minucie w odpowiednim kalendarzu.  
   
     - <xref:System.Globalization.Calendar.GetMilliseconds%2A>, aby wyświetlić milisekundy w drugim w odpowiednim kalendarzu.  
   
 ## <a name="example"></a>Przykład  
- Przykład wyświetla datę przy użyciu dwóch różnych kalendarzy. Wyświetla datę po zdefiniowaniu kalendarza Hidżry jako kalendarz domyślny dla kultury AR-JO i wyświetla datę przy użyciu kalendarza perskiego, który nie jest obsługiwany jako opcjonalny Kalendarz przez kulturę FA-IR.  
+ W przykładzie wyświetla datę przy użyciu dwóch różnych kalendarzy. Wyświetla datę po zdefiniowaniu kalendarza Hidżry jako kalendarza domyślnego dla kultury ar-JO i wyświetla datę przy użyciu kalendarza perskiego, który nie jest obsługiwany jako opcjonalny kalendarz przez kulturę fa-IR.  
   
  [!code-csharp[Formatting.HowTo.Calendar#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.Calendar/cs/Calendar1.cs#2)]
  [!code-vb[Formatting.HowTo.Calendar#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.Calendar/vb/Calendar1.vb#2)]  
   
- Każdy obiekt <xref:System.Globalization.CultureInfo> może obsługiwać jeden lub więcej kalendarzy, które są wskazywane przez właściwość <xref:System.Globalization.CultureInfo.OptionalCalendars%2A>. Jedna z nich jest oznaczona jako domyślny kalendarz kultury i zwracana przez właściwość <xref:System.Globalization.CultureInfo.Calendar%2A?displayProperty=nameWithType> tylko do odczytu. Kolejne kalendarze opcjonalne można wyznaczyć jako domyślne, przypisując <xref:System.Globalization.Calendar> obiekt, który reprezentuje ten kalendarz do właściwości <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A?displayProperty=nameWithType> zwróconej przez właściwość <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>. Jednak niektóre kalendarze, takie jak kalendarz Perski przedstawiony przez klasę <xref:System.Globalization.PersianCalendar>, nie są jako opcjonalne kalendarze dla żadnej kultury.  
+ Każdy <xref:System.Globalization.CultureInfo> obiekt może obsługiwać jeden lub więcej kalendarzy, które są oznaczone przez <xref:System.Globalization.CultureInfo.OptionalCalendars%2A> właściwość. Jeden z nich jest oznaczony jako domyślny kalendarz kultury i jest <xref:System.Globalization.CultureInfo.Calendar%2A?displayProperty=nameWithType> zwracany przez właściwość tylko do odczytu. Inny z opcjonalnych kalendarzy można wyznaczyć jako <xref:System.Globalization.Calendar> domyślny, przypisując obiekt, który reprezentuje ten kalendarz do <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A?displayProperty=nameWithType> właściwości zwróconej <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> przez właściwość. Jednak niektóre kalendarze, takie jak kalendarz perski <xref:System.Globalization.PersianCalendar> reprezentowany przez klasę, nie służą jako opcjonalne kalendarze dla żadnej kultury.  
   
- W przykładzie zdefiniowano klasę narzędzia kalendarza wielokrotnego użytku, `CalendarUtility`, aby obsłużyć wiele szczegółów generowania ciągu reprezentującego datę przy użyciu określonego kalendarza. Klasa `CalendarUtility` ma następujących członków:  
+ W przykładzie definiuje klasę narzędzia kalendarza `CalendarUtility`wielokrotnego użytku, aby obsłużyć wiele szczegółów generowania reprezentacji ciągu daty przy użyciu określonego kalendarza. Klasa `CalendarUtility` ma następujące elementy członkowskie:  
   
-- Sparametryzowany Konstruktor, którego pojedynczy parametr jest obiektem <xref:System.Globalization.Calendar>, w którym ma być reprezentowana Data. Jest to przypisane do prywatnego pola klasy.  
+- Sparametryzowany konstruktor, <xref:System.Globalization.Calendar> którego pojedynczy parametr jest obiektem, w którym ma być reprezentowana data. Jest to przypisane do prywatnego pola klasy.  
   
-- `CalendarExists`, Metoda prywatna zwracająca wartość logiczną wskazującą, czy Kalendarz reprezentowany przez obiekt `CalendarUtility` jest obsługiwany przez obiekt <xref:System.Globalization.CultureInfo>, który jest przesyłany do metody jako parametr. Metoda otacza wywołanie metody <xref:System.Array.Exists%2A?displayProperty=nameWithType>, do której przekazuje tablicę <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType>.  
+- `CalendarExists`, metoda prywatna, która zwraca wartość logiczną wskazującą, czy kalendarz reprezentowany przez `CalendarUtility` obiekt jest obsługiwany przez <xref:System.Globalization.CultureInfo> obiekt, który jest przekazywany do metody jako parametr. Metoda otacza wywołanie <xref:System.Array.Exists%2A?displayProperty=nameWithType> metody, do której przekazuje <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType> tablicy.  
   
-- `HasSameName`, prywatna Metoda przypisana do <xref:System.Predicate%601> delegata, który jest przesyłany jako parametr do metody <xref:System.Array.Exists%2A?displayProperty=nameWithType>. Każdy element członkowski tablicy jest przenoszona do metody do momentu, gdy metoda zwróci wartość `true`. Metoda określa, czy nazwa opcjonalnego kalendarza jest taka sama jak kalendarz reprezentowany przez obiekt `CalendarUtility`.  
+- `HasSameName`, prywatną metodę przypisaną <xref:System.Predicate%601> do pełnomocnika, <xref:System.Array.Exists%2A?displayProperty=nameWithType> która jest przekazywana jako parametr do metody. Każdy element członkowski tablicy jest przekazywany do metody, dopóki metoda nie zwróci . `true` Metoda określa, czy nazwa kalendarza opcjonalnego jest taka sama `CalendarUtility` jak kalendarz reprezentowany przez obiekt.  
   
-- `DisplayDate`, przeciążona metoda publiczna, która przekazała dwa parametry: <xref:System.DateTime> lub <xref:System.DateTimeOffset> wartość w kalendarzu reprezentowanego przez obiekt `CalendarUtility`; i kulturę, której reguły formatowania mają być używane. Zachowanie w celu zwrócenia ciągu reprezentującego datę jest zależne od tego, czy Kalendarz docelowy jest obsługiwany przez kulturę, której reguły formatowania mają być używane.  
+- `DisplayDate`, przeciążeni metody publicznej, która jest <xref:System.DateTime> przekazywana dwa parametry: a <xref:System.DateTimeOffset> lub `CalendarUtility` wartość do wyrażenia w kalendarzu reprezentowanym przez obiekt; i kultury, której mają być używane reguły formatowania. Jego zachowanie w zwracaniu reprezentacji ciągu daty zależy od tego, czy kalendarz docelowy jest obsługiwany przez kulturę, której reguły formatowania mają być używane.  
   
- Bez względu na kalendarz używany do tworzenia <xref:System.DateTime> lub <xref:System.DateTimeOffset> wartości w tym przykładzie ta wartość jest zwykle wyrażona jako data gregoriański. Dzieje się tak, ponieważ typy <xref:System.DateTime> i <xref:System.DateTimeOffset> nie zachowują żadnych informacji o kalendarzu. Wewnętrznie są one reprezentowane jako liczba taktów, które upłynęły od północy 1 stycznia 0,001. Interpretacja tego numeru zależy od kalendarza. W przypadku większości kultur domyślnym kalendarzem jest kalendarz gregoriański.  
+ Niezależnie od kalendarza użytego <xref:System.DateTime> <xref:System.DateTimeOffset> do utworzenia lub wartości w tym przykładzie ta wartość jest zwykle wyrażana jako data gregoriana. Dzieje się <xref:System.DateTime> tak, ponieważ typy i <xref:System.DateTimeOffset> typy nie zachowują żadnych informacji kalendarza. Wewnętrznie są one reprezentowane jako liczba kleszczy, które upłynęły od północy 1 stycznia 0001. Interpretacja tej liczby zależy od kalendarza. W przypadku większości kultur domyślnym kalendarzem jest kalendarz gregoriański.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Wykonywanie operacji formatowania](../../../docs/standard/base-types/performing-formatting-operations.md)

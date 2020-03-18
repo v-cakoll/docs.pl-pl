@@ -1,37 +1,37 @@
 ---
-title: Członkowie — C# Przewodnik programowania
+title: Członkowie - Przewodnik programowania C#
 ms.date: 07/20/2015
 helpviewer_keywords:
 - types [C#], nested types
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
 ms.openlocfilehash: 09802431d0a5954b67687e9878f572541eeaac79
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705512"
 ---
 # <a name="members-c-programming-guide"></a>Członkowie (Przewodnik programowania w języku C#)
 
-Klasy i struktury mają składowe reprezentujące ich dane i zachowanie. Elementy członkowskie klasy obejmują wszystkie elementy członkowskie zadeklarowane w klasie oraz wszystkie elementy członkowskie (z wyjątkiem konstruktorów i finalizatorów) zadeklarowane we wszystkich klasach w hierarchii dziedziczenia. Prywatne składowe w klasach bazowych są dziedziczone, ale nie są dostępne z klas pochodnych.  
+Klasy i struktury mają elementy członkowskie, które reprezentują ich danych i zachowania. Elementy członkowskie klasy obejmują wszystkie elementy członkowskie zadeklarowane w klasie, wraz ze wszystkimi członkami (z wyjątkiem konstruktorów i finalizatorów) zadeklarowanych we wszystkich klasach w hierarchii dziedziczenia. Prywatne elementy członkowskie w klasach podstawowych są dziedziczone, ale nie są dostępne z klas pochodnych.  
   
- Poniższa tabela zawiera listę rodzajów elementów członkowskich, które może zawierać Klasa lub struktura:  
+ W poniższej tabeli wymieniono rodzaje elementów członkowskich klasy lub struktury może zawierać:  
   
-|Element członkowski|Opis|  
+|Członek|Opis|  
 |------------|-----------------|  
-|[Pola](./fields.md)|Pola są zmiennymi zadeklarowanymi w zakresie klasy. Pole może być wbudowanym typem liczbowym lub wystąpieniem innej klasy. Na przykład Klasa kalendarza może mieć pole zawierające bieżącą datę.|  
-|[Stałe](./constants.md)|Stałe są polami, których wartość jest ustawiona w czasie kompilacji i nie można jej zmienić.|  
-|[Właściwości](./properties.md)|Właściwości są metodami klasy, które są dostępne, tak jakby były polami w tej klasie. Właściwość może zapewnić ochronę pola klasy, aby zachować jego zmianę bez znajomości obiektu.|  
-|[Metody](./methods.md)|Metody definiują akcje, które może wykonać Klasa. Metody mogą przyjmować parametry, które zapewniają dane wejściowe i mogą zwracać dane wyjściowe za poorednictwem parametrów. Metody mogą również zwracać wartość bezpośrednio, bez użycia parametru.|  
-|[Zdarzenia](../events/index.md)|Zdarzenia udostępniają powiadomienia o wystąpieniach, takie jak kliknięcia przycisków lub pomyślne zakończenie metody, do innych obiektów. Zdarzenia są definiowane i wyzwalane za pomocą delegatów.|  
-|[Operatory](../../language-reference/operators/index.md)|Przeciążone operatory są uznawane za składowe typu. Po przeciążeniu operatora należy go zdefiniować jako publiczną metodę statyczną w typie. Aby uzyskać więcej informacji, zobacz [przeciążanie operatora](../../language-reference/operators/operator-overloading.md).|  
-|[Indeksatory](../indexers/index.md)|Indeksatory umożliwiają indeksowanie obiektów w sposób podobny do tablic.|  
-|[Konstruktory](./constructors.md)|Konstruktory to metody, które są wywoływane, gdy obiekt jest tworzony po raz pierwszy. Są one często używane do inicjowania danych obiektu.|  
-|[Finalizatory](./destructors.md)|Finalizatory są używane bardzo rzadko w C#programie. Są to metody, które są wywoływane przez aparat wykonywania środowiska uruchomieniowego, gdy obiekt zostanie usunięty z pamięci. Są one zwykle używane do upewnienia się, że wszystkie zasoby, które muszą zostać wydane, są odpowiednio obsługiwane.|  
-|[Zagnieżdżone typy](./nested-types.md)|Typy zagnieżdżone są typami zadeklarowanymi w innym typie. Typy zagnieżdżone są często używane do opisywania obiektów, które są używane tylko przez typy, które je zawierają.|  
+|[Pola](./fields.md)|Pola są zmiennymi zadeklarowanymi w zakresie klasy. Pole może być wbudowanym typem liczbowym lub wystąpieniem innej klasy. Na przykład klasa kalendarza może mieć pole zawierające bieżącą datę.|  
+|[Stałe](./constants.md)|Stałe są pola, których wartość jest ustawiona w czasie kompilacji i nie można zmienić.|  
+|[Właściwości](./properties.md)|Właściwości są metody w klasie, które są dostępne tak, jakby były pola w tej klasie. Właściwość może zapewnić ochronę pola klasy, aby zaradzić jego przed zmianą bez znajomości obiektu.|  
+|[Metody](./methods.md)|Metody definiują akcje, które może wykonać klasa. Metody mogą przyjmować parametry, które dostarczają danych wejściowych i mogą zwracać dane wyjściowe za pomocą parametrów. Metody mogą również zwracać wartość bezpośrednio, bez użycia parametru.|  
+|[Zdarzenia](../events/index.md)|Zdarzenia zawierają powiadomienia o wystąpieniach, takie jak kliknięcia przycisków lub pomyślne ukończenie metody, do innych obiektów. Zdarzenia są definiowane i wyzwalane przy użyciu delegatów.|  
+|[Operatory](../../language-reference/operators/index.md)|Przeciążone operatory są uważane za elementy członkowskie typu. Podczas przeciążenia operatora, można zdefiniować go jako publiczną metodę statyczną w typie. Aby uzyskać więcej informacji, zobacz [Przeciążenie operatora](../../language-reference/operators/operator-overloading.md).|  
+|[Indexers](../indexers/index.md) (Indeksatory)|Indeksatory umożliwiają indeksowanie obiektu w sposób podobny do tablic.|  
+|[Konstruktory](./constructors.md)|Konstruktory są metody, które są wywoływane podczas tworzenia obiektu po raz pierwszy. Są one często używane do inicjowania danych obiektu.|  
+|[Finalizatory](./destructors.md)|Finalizatory są używane bardzo rzadko w języku C#. Są to metody, które są wywoływane przez aparat wykonywania wykonawczego, gdy obiekt ma zostać usunięty z pamięci. Są one zazwyczaj używane, aby upewnić się, że wszystkie zasoby, które muszą być zwolnione są obsługiwane odpowiednio.|  
+|[Zagnieżdżone typy](./nested-types.md)|Typy zagnieżdżone są typami zadeklarowanych w ramach innego typu. Typy zagnieżdżone są często używane do opisywania obiektów, które są używane tylko przez typy, które je zawierają.|  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Przewodnik programowania w języku C#](../index.md)
+- [Przewodnik programowania języka C#](../index.md)
 - [Klasy](./classes.md)

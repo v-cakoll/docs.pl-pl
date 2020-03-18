@@ -1,28 +1,28 @@
 ---
-title: Bufory protokołu — gRPC dla deweloperów WCF
-description: Wprowadzenie do formatu buforów protokołów używanych do obsługi sieci gRPC.
+title: Bufory protokołu - gRPC dla deweloperów WCF
+description: Wprowadzenie do formatu przewodu Bufory protokołu używane dla sieci gRPC.
 ms.date: 09/09/2019
-ms.openlocfilehash: cc4ff272a9912d6f2dd8f8ddb1972c7369f980fe
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 35319d299a8bc2866a87954b3e54bfda9314ffe8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503458"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79147935"
 ---
 # <a name="protocol-buffers"></a>Bufory protokołu
 
-usługi gRPC Services wysyłają i odbierają dane jako *komunikaty o buforze protokołu (protobuf)* , podobnie jak w przypadku kontraktów danych w programie Windows Communication Foundation (WCF). Protobuf to wydajny sposób serializowania danych strukturalnych dla maszyn w celu odczytu i zapisu, bez konieczności narzutu na to, że formaty, takie jak XML lub JSON, pozostały.
+Usługi gRPC wysyłają i odbierają dane jako *komunikaty buforu protokołu (Protobuf),* podobne do umów dotyczących danych w programie Windows Communication Foundation (WCF). Protobuf to skuteczny sposób serializacji danych strukturalnych dla maszyn do odczytu i zapisu, bez narzutów, które ponoszą formaty czytelne dla człowieka, takie jak XML lub JSON.
 
-W tym rozdziale opisano, jak działa protobuf oraz jak definiować własne wiadomości protobuf.
+W tym rozdziale opisano, jak działa protobuf i jak zdefiniować własne wiadomości Protobuf.
 
 ## <a name="how-protobuf-works"></a>Jak działa protobuf
 
-Większość technik serializacji obiektów .NET, w tym kontraktów danych WCF, działa przy użyciu odbicia w celu analizowania struktury obiektów w czasie wykonywania. Z kolei większość bibliotek protobuf wymaga zdefiniowania na początku struktury przy użyciu dedykowanego języka (*Język buforowania protokołu*) w pliku `.proto`. Kompilator używa tego pliku do wygenerowania kodu dla dowolnej z obsługiwanych platform. Obsługiwane platformy to .NET, Java, C/C++, JavaScript i wiele innych. 
+Większość technik serializacji obiektów .NET, w tym kontrakty danych WCF, działa przy użyciu odbicia do analizowania struktury obiektu w czasie wykonywania. Natomiast większość bibliotek Protobuf wymaga zdefiniowania struktury z góry przy użyciu dedykowanego `.proto` języka *(język buforu protokołu)* w pliku. Kompilator następnie używa tego pliku do generowania kodu dla dowolnej z obsługiwanych platform. Obsługiwane platformy obejmują .NET, Java, C/C++, JavaScript i wiele innych.
 
-Kompilator protobuf, `protoc`, jest obsługiwany przez firmę Google, chociaż dostępne są alternatywne implementacje. Wygenerowany kod jest wydajny i zoptymalizowany pod kątem szybkiej serializacji i deserializacji danych.
+Kompilator Protobuf, `protoc`, jest utrzymywany przez Google, chociaż dostępne są alternatywne implementacje. Wygenerowany kod jest wydajny i zoptymalizowany pod kątem szybkiej serializacji i deserializacji danych.
 
-Format sieci protobuf jest kodowaniem binarnym. Korzysta ona z sprytne lew, aby zminimalizować liczbę bajtów używanych do reprezentowania komunikatów. Znajomość formatu kodowania binarnego nie jest konieczna do korzystania z protobuf. Ale jeśli jesteś zainteresowany, możesz dowiedzieć się więcej na ten temat w [witrynie sieci Web bufory protokołu](https://developers.google.com/protocol-buffers/docs/encoding).
+Format przewodu Protobuf jest kodowaniem binarnym. Używa kilka sprytnych sztuczek, aby zminimalizować liczbę bajtów używanych do reprezentowania wiadomości. Znajomość formatu kodowania binarnego nie jest konieczna do korzystania z Protobuf. Ale jeśli jesteś zainteresowany, możesz dowiedzieć się więcej na ten temat [na stronie internetowej Bufory protokołu](https://developers.google.com/protocol-buffers/docs/encoding).
 
 >[!div class="step-by-step"]
->[Poprzednie](why-grpc.md)
->[dalej](protobuf-messages.md)
+>[Poprzedni](why-grpc.md)
+>[następny](protobuf-messages.md)

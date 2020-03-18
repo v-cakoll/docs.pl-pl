@@ -1,21 +1,21 @@
 ---
-title: Jak generować XML z plików CSV (C#)
+title: Jak wygenerować xml z plików CSV (C#)
 ms.date: 07/20/2015
 ms.assetid: 57b9ccde-f983-4a21-ae61-70ecede30307
 ms.openlocfilehash: 643c05cb440165c4461c3e9c80e69701241ab8d1
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635811"
 ---
-# <a name="how-to-generate-xml-from-csv-files-c"></a>Jak generować XML z plików CSV (C#)
-Ten przykład pokazuje, jak używać języka CLR (Language-Integrated Query) i [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] do generowania pliku XML z pliku z wartościami rozdzielanymi przecinkami (CSV).  
+# <a name="how-to-generate-xml-from-csv-files-c"></a>Jak wygenerować xml z plików CSV (C#)
+W tym przykładzie pokazano, jak używać kwerendy zintegrowanej językowo (LINQ) i [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] wygenerować plik XML z pliku wartości oddzielonej przecinkami (CSV).  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod wykonuje zapytanie LINQ na tablicy ciągów.  
+ Poniższy kod wykonuje kwerendę LINQ na tablicy ciągów.  
   
- Zapytanie używa klauzuli `let`, aby podzielić każdy ciąg na tablicę pól.  
+ Kwerenda używa `let` klauzuli, aby podzielić każdy ciąg na tablicę pól.  
   
 ```csharp  
 // Create the text file.  

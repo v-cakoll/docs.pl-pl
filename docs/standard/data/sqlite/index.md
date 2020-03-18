@@ -1,23 +1,23 @@
 ---
 title: Omówienie
 ms.date: 12/13/2019
-description: Omówienie programu Microsoft. Data. sqlite
+description: Omówienie pliku Microsoft.Data.Sqlite
 ms.openlocfilehash: e84c68f0615f187e8dea7ab87ac917c0ad796a1c
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77543602"
 ---
-# <a name="microsoftdatasqlite-overview"></a>Microsoft. Data. sqlite — Omówienie
+# <a name="microsoftdatasqlite-overview"></a>Omówienie programu Microsoft.Data.Sqlite
 
-Microsoft. Data. sqlite to lekki dostawca [ADO.NET](../../../framework/data/adonet/index.md) dla oprogramowania SQLite. Dostawca [Entity Framework Core](/ef/core/) dla oprogramowania SQLite został utworzony na podstawie tej biblioteki. Można go również używać niezależnie lub z innymi bibliotekami dostępu do danych.
+Microsoft.Data.Sqlite jest lekkim [dostawcą ADO.NET](../../../framework/data/adonet/index.md) dla SQLite. Dostawca [entity framework core](/ef/core/) dla SQLite jest zbudowany na tej bibliotece. Jednak może być również używany niezależnie lub z innymi bibliotekami dostępu do danych.
 
 ## <a name="installation"></a>Instalacja
 
-Najnowsza stabilna wersja jest dostępna w programie [NuGet](https://www.nuget.org/packages/Microsoft.Data.Sqlite).
+Najnowsza stabilna wersja jest dostępna na [NuGet](https://www.nuget.org/packages/Microsoft.Data.Sqlite).
 
-### <a name="net-core-cli"></a>[.NET Core CLI](#tab/netcore-cli)
+### <a name="net-core-cli"></a>[Interfejs wiersza polecenia platformy .NET Core](#tab/netcore-cli)
 
 ```dotnetcli
 dotnet add package Microsoft.Data.Sqlite
@@ -33,12 +33,12 @@ Install-Package Microsoft.Data.Sqlite
 
 ## <a name="usage"></a>Sposób użycia
 
-Ta biblioteka implementuje typowe abstrakcje ADO.NET dla połączeń, poleceń, czytników danych i tak dalej.
+Ta biblioteka implementuje wspólne abstrakcje ADO.NET dla połączeń, poleceń, czytników danych i tak dalej.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/HelloWorldSample/Program.cs?name=snippet_HelloWorld)]
 
 ## <a name="see-also"></a>Zobacz też
 
-* [Parametry połączenia](connection-strings.md)
+* [Parametry połączeń](connection-strings.md)
 * [Dokumentacja interfejsu API](/dotnet/api/?view=msdata-sqlite-3.0)
-* [Składnia języka SQL](https://www.sqlite.org/lang.html)
+* [Składnia SQL](https://www.sqlite.org/lang.html)

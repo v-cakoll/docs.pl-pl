@@ -14,22 +14,22 @@ helpviewer_keywords:
 - data stores, enumerating
 ms.assetid: 0fcf279a-f241-48f0-8034-2e3d331f1fcb
 ms.openlocfilehash: 3ba38093e9e978c89cdb2bb7a584ed9e04c1096d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75707531"
 ---
 # <a name="how-to-enumerate-stores-for-isolated-storage"></a>Porady: wykazywanie magazynów dla izolowanego magazynu
-Wszystkie magazyny izolowane dla bieżącego użytkownika można wyliczyć przy użyciu metody statycznej <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A?displayProperty=nameWithType>. Ta metoda przyjmuje wartość <xref:System.IO.IsolatedStorage.IsolatedStorageScope> i zwraca moduł wyliczający <xref:System.IO.IsolatedStorage.IsolatedStorageFile>. Aby wyliczyć magazyny, musisz mieć uprawnienie <xref:System.Security.Permissions.IsolatedStorageFilePermission>, które określa <xref:System.Security.Permissions.IsolatedStorageContainment.AdministerIsolatedStorageByUser> wartość. Jeśli wywołasz metodę <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A> z wartością <xref:System.IO.IsolatedStorage.IsolatedStorageScope.User>, zwróci ona tablicę <xref:System.IO.IsolatedStorage.IsolatedStorageFile> obiektów, które są zdefiniowane dla bieżącego użytkownika.  
+Można wyliczyć wszystkie izolowane magazyny dla <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A?displayProperty=nameWithType> bieżącego użytkownika przy użyciu metody statycznej. Ta metoda <xref:System.IO.IsolatedStorage.IsolatedStorageScope> przyjmuje wartość <xref:System.IO.IsolatedStorage.IsolatedStorageFile> i zwraca wyliczacz. Aby wyliczyć magazyny, musisz <xref:System.Security.Permissions.IsolatedStorageFilePermission> mieć uprawnienie, które określa <xref:System.Security.Permissions.IsolatedStorageContainment.AdministerIsolatedStorageByUser> wartość. Jeśli wywołasz <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A> metodę <xref:System.IO.IsolatedStorage.IsolatedStorageScope.User> z wartością, <xref:System.IO.IsolatedStorage.IsolatedStorageFile> zwraca tablicę obiektów, które są zdefiniowane dla bieżącego użytkownika.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu uzyskuje magazyn izolowany przez użytkownika i zestaw, tworzy kilka plików i pobiera te pliki przy użyciu metody <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A>.  
+ Poniższy przykład kodu uzyskuje magazyn, który jest izolowany przez użytkownika i zestawu, tworzy <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A> kilka plików i pobiera te pliki przy użyciu metody.  
   
  [!code-csharp[Conceptual.IsolatedStorage#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source2.cs#2)]
  [!code-vb[Conceptual.IsolatedStorage#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source2.vb#2)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
-- [Wydzielona pamięć masowa](../../../docs/standard/io/isolated-storage.md)
+- [Izolowany magazyn](../../../docs/standard/io/isolated-storage.md)

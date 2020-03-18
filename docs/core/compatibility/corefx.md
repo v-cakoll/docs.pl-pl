@@ -1,39 +1,40 @@
 ---
-title: Podstawowe zmiany w bibliotece klas podstawowych
-description: Wyświetla listę istotnych zmian w programie .NET CoreFx, biblioteki klas bazowych.
+title: Zmiany podziału biblioteki klas podstawowych
+description: Wyświetla listę zmian w .NET CoreFx, bibliotece klas podstawowych.
 ms.date: 09/20/2019
-ms.openlocfilehash: 7c59f2a96545e74e4099b6078ff52009740699c6
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 56a3cf4f4c00a79752d5a98bb086bb9f8c0614b1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77449564"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79147578"
 ---
-# <a name="corefx-breaking-changes"></a>CoreFx istotne zmiany
+# <a name="corefx-breaking-changes"></a>Przełomowe zmiany w CoreFx
 
-CoreFx zawiera elementy pierwotne i inne typy ogólne używane przez platformę .NET Core.
+CoreFx zapewnia elementy podstawowe i inne typy ogólne używane przez .NET Core.
 
-Następujące istotne zmiany zostały udokumentowane na tej stronie:
+Na tej stronie udokumentowane są następujące zmiany dotyczące zasad:
 
-| Zmiana podziału | Wprowadzona wersja |
+| Przełomowa zmiana | Wprowadzona wersja |
 | - | :-: |
-| [Interfejsy API służące do raportowania wersji teraz produktu i nie wersji](#apis-that-report-version-now-report-product-and-not-file-version) | 3.0 |
-| [Niestandardowe wystąpienia EncoderFallbackBuffer nie mogą podlegać rekursywnie](#custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively) | 3.0 |
-| [Zmiany zachowań formatowania zmiennoprzecinkowego i analizowania](#floating-point-formatting-and-parsing-behavior-changed) | 3.0 |
-| [Operacje analizowania zmiennoprzecinkowe nie będą już kończyć się niepowodzeniem lub nie generują wyjątku overflow](#floating-point-parsing-operations-no-longer-fail-or-throw-an-overflowexception) | 3.0 |
-| [InvalidAsynchronousStateException — przeniesiony do innego zestawu](#invalidasynchronousstateexception-moved-to-another-assembly) | 3.0 |
-| [.NET Core 3,0 stosuje się do najlepszych rozwiązań Unicode podczas zamiany nieprawidłowo sformułowanych sekwencji bajtów UTF-8](#net-core-30-follows-unicode-best-practices-when-replacing-ill-formed-utf-8-byte-sequences) | 3.0 |
-| [TypeDescriptionProviderAttribute przeniesiony do innego zestawu](#typedescriptionproviderattribute-moved-to-another-assembly) | 3.0 |
-| [Element ZipArchiveEntry nie obsługuje już archiwów z niespójnymi rozmiarami wpisów](#ziparchiveentry-no-longer-handles-archives-with-inconsistent-entry-sizes) | 3.0 |
-| [Typ wyjątku serializatora JSON został zmieniony z elementu Jsonexception na NotSupportedException](#json-serializer-exception-type-changed-from-jsonexception-to-notsupportedexception) | 3.0 |
-| [Zmień semantykę (String) na wartość null w Utf8JsonWriter](#change-in-semantics-of-stringnull-in-utf8jsonwriter) | 3.0 |
-| [Metody JsonEncodedText. Encode mają dodatkowy argument JavaScriptEncoder](#jsonencodedtextencode-methods-have-an-additional-javascriptencoder-argument) | 3.0 |
-| [Zmieniono sygnaturę JsonFactoryConverter. isconverter](#jsonfactoryconvertercreateconverter-signature-changed) | 3.0 |
-| [Zmiany interfejsu API jsonelement](#jsonelement-api-changes) | 3.0 |
-| [Element FieldInfo. SetValue zgłasza wyjątek dla pól static, tylko init](#fieldinfosetvalue-throws-exception-for-static-init-only-fields) | 3.0 |
+| [Interfejsy API, które zgłaszają wersję raportu teraz zgłosić produkt, a nie wersji pliku](#apis-that-report-version-now-report-product-and-not-file-version) | 3.0 |
+| [Niestandardowe wystąpienia Buforu ConerFallbackBuffer nie mogą wycofać się cyklicznie](#custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively) | 3.0 |
+| [Zmiany zachowania formatowania i analizowania zmiennoprzecinkowych](#floating-point-formatting-and-parsing-behavior-changed) | 3.0 |
+| [Operacje analizy zmiennoprzecinkowych nie są już inwakczliwe ani nie mogą być powodem do przepełnieniaWyjątek](#floating-point-parsing-operations-no-longer-fail-or-throw-an-overflowexception) | 3.0 |
+| [InvalidAsynchronousStateException przeniesiony do innego zestawu](#invalidasynchronousstateexception-moved-to-another-assembly) | 3.0 |
+| [NET Core 3.0 następuje unicode najlepszych rozwiązań podczas zastępowania nieprawidłowo sformułowane sekwencje bajtów UTF-8](#net-core-30-follows-unicode-best-practices-when-replacing-ill-formed-utf-8-byte-sequences) | 3.0 |
+| [Atrybut TypeDescriptionProviderAttribute przeniesiony do innego zestawu](#typedescriptionproviderattribute-moved-to-another-assembly) | 3.0 |
+| [ZipArchiveEntry nie obsługuje już archiwów z niespójnymi rozmiarami wejść](#ziparchiveentry-no-longer-handles-archives-with-inconsistent-entry-sizes) | 3.0 |
+| [JSON serializator typ wyjątku zmieniono z JsonException do NotSupportedException](#json-serializer-exception-type-changed-from-jsonexception-to-notsupportedexception) | 3.0 |
+| [Zmiana semantyki (ciągu)null w Utf8JsonWriter](#change-in-semantics-of-stringnull-in-utf8jsonwriter) | 3.0 |
+| [JsonEncodedText.Encode metody mają dodatkowy argument JavaScriptEncoder](#jsonencodedtextencode-methods-have-an-additional-javascriptencoder-argument) | 3.0 |
+| [Zmieniono podpis JsonFactoryConverter.CreateConverter](#jsonfactoryconvertercreateconverter-signature-changed) | 3.0 |
+| [Zmiany interfejsu API JsonElement](#jsonelement-api-changes) | 3.0 |
+| [FieldInfo.SetValue zgłasza wyjątek dla pól statycznych, tylko do init](#fieldinfosetvalue-throws-exception-for-static-init-only-fields) | 3.0 |
 | [Pola prywatne dodane do wbudowanych typów struktur](#private-fields-added-to-built-in-struct-types) | 2.1 |
-| [Zmień wartość domyślną UseShellExecute](#change-in-default-value-of-useshellexecute) | 2.1 |
-| [UnauthorizedAccessException zgłoszone przez FileSystemInfo. Attributes](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes) | 1.0 |
+| [Zmiana wartości domyślnej programu UseShellExecute](#change-in-default-value-of-useshellexecute) | 2.1 |
+| [Wersje OpenSSL w systemie macOS](#openssl-versions-on-macos) | 2.1 |
+| [UnauthorizedAccessException zgłoszony przez FileSystemInfo.Attributes](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes) | 1.0 |
 
 ## <a name="net-core-30"></a>.NET Core 3.0
 
@@ -100,6 +101,10 @@ Następujące istotne zmiany zostały udokumentowane na tej stronie:
 ***
 
 [!INCLUDE[Change in default value of UseShellExecute](~/includes/core-changes/corefx/2.1/process-start-changes.md)]
+
+***
+
+[!INCLUDE [OpenSSL versions on macOS](../../../includes/core-changes/corefx/openssl-dependencies-macos.md)]
 
 ***
 

@@ -1,5 +1,6 @@
 ---
 title: Zabezpieczenia i dane użytkownika
+description: Kod może przekazywać dane wprowadzone przez użytkownika jako parametry do innego kodu, co może mieć wpływ na bezpieczeństwo. Można wykonać sprawdzanie zakresu, aby odrzucić problematyczne dane wejściowe.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,55 +9,55 @@ helpviewer_keywords:
 - secure coding, user input
 - code security, user input
 ms.assetid: 9141076a-96c9-4b01-93de-366bb1d858bc
-ms.openlocfilehash: 0d34b06b44241feb7d6e3c8f76447b861563cfdc
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: fa9f8d4708e928c51e446d8369c9b4556fc6fb77
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705863"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186104"
 ---
 # <a name="security-and-user-input"></a>Zabezpieczenia i dane użytkownika
 
-Dane użytkownika, czyli dowolny rodzaj danych wejściowych (dane z żądania sieci Web lub adresu URL, dane wejściowe do kontrolek aplikacji Microsoft Windows Forms itd.), mogą mieć negatywny wpływ na kod, ponieważ często dane są używane bezpośrednio jako parametry wywołania innego kodu. Ta sytuacja jest analogiczna do złośliwego kodu wywołującego kod przy użyciu dziwnych parametrów i należy podjąć te same środki ostrożności. Dane wejściowe użytkownika są naprawdę trudniejsze do zagwarantowania, ponieważ nie ma ramki stosu do śledzenia obecności potencjalnie niezaufanych danych.
+Dane użytkownika, który jest wszelkiego rodzaju danych wejściowych (dane z żądania sieci Web lub adresu URL, dane wejściowe do formantów aplikacji Microsoft Windows Forms i tak dalej), może niekorzystnie wpływać na kod, ponieważ często te dane są używane bezpośrednio jako parametry do wywołania innego kodu. Ta sytuacja jest analogiczna do złośliwego kodu wywołującego kod z dziwnymi parametrami i należy podjąć te same środki ostrożności. Dane wejściowe użytkownika jest rzeczywiście trudniejsze do bezpiecznego, ponieważ nie ma ramki stosu do śledzenia obecności potencjalnie niezaufanych danych.
 
-Znajdują się one wśród delikatnych i najtrudniejszych usterek związanych z bezpieczeństwem, które mogą znajdować się w kodzie, który wydaje się niezwiązany z zabezpieczeniami, są bramą do przekazywania nieprawidłowych danych do innego kodu. Aby wyszukać te błędy, postępuj zgodnie z dowolnym rodzajem danych wejściowych, Wyobraź sobie, jakie może być zakres możliwych wartości, i rozważ, czy kod, który widzi te dane, może obsłużyć wszystkie te przypadki. Można naprawić te usterki poprzez sprawdzenie zakresu i odrzucenie wszelkich danych wejściowych, których kod nie może obsłużyć.
+Są to jedne z najsubtelniejszych i najtrudniejszych błędów zabezpieczeń do znalezienia, ponieważ chociaż mogą istnieć w kodzie, który pozornie nie ma związku z zabezpieczeniami, są bramą do przekazywania złych danych do innego kodu. Aby wyszukać te błędy, należy wykonać wszelkiego rodzaju danych wejściowych, wyobrazić sobie, jaki zakres możliwych wartości może być i zastanów się, czy kod widząc te dane może obsłużyć wszystkie te przypadki. Można naprawić te błędy poprzez sprawdzanie zakresu i odrzucanie wszelkich danych wejściowych kod nie może obsłużyć.
 
-Poniżej wymieniono istotne zagadnienia dotyczące danych użytkownika:
+Oto kilka ważnych kwestii związanych z danymi użytkownika:
 
-- Wszystkie dane użytkownika w odpowiedzi serwera są uruchamiane w kontekście lokacji serwera na kliencie programu. Jeśli serwer sieci Web pobiera dane użytkownika i wstawia je do zwróconej strony sieci Web, może na przykład uwzględnić tag **\<skryptu >** i uruchomić go z serwera.
+- Wszystkie dane użytkownika w odpowiedzi serwera są uruchamiane w kontekście lokacji serwera na kliencie. Jeśli serwer sieci Web pobiera dane użytkownika i wstawia je do zwróconej strony sieci Web, może na przykład zawierać ** \<skrypt>** tagu i uruchamiać tak, jakby z serwera.
 
-- Należy pamiętać, że klient może zażądać dowolnego adresu URL.
+- Pamiętaj, że klient może zażądać dowolnego adresu URL.
 
-- Weź pod uwagę lewę lub nieprawidłowe ścieżki:
+- Rozważ trudne lub nieprawidłowe ścieżki:
 
-  - .. \, bardzo długie ścieżki.
+  - .. \ , bardzo długie ścieżki.
 
-  - Użycie znaków wieloznacznych (*).
+  - Użycie symboli wieloznacznych (*).
 
-  - Rozszerzenie tokenu (% token%).
+  - Rozszerzanie tokenu (%token%).
 
-  - Nietypowe formy ścieżek o specjalnym znaczeniu.
+  - Dziwne formy ścieżek o szczególnym znaczeniu.
 
-  - Alternatywne nazwy strumieni systemu plików, takie jak `filename::$DATA`.
+  - Alternatywne nazwy strumienia `filename::$DATA`systemu plików, takie jak .
 
-  - Krótkie wersje plików, takie jak `longfi~1` `longfilename`.
+  - Krótkie wersje nazw `longfi~1` plików, takie jak dla `longfilename`.
 
-- Pamiętaj, że w ramach oceny (UserData) można wykonać dowolną czynność.
+- Pamiętaj, że Eval (userdata) może zrobić wszystko.
 
-- Uważaj na późne wiązanie do nazwy zawierającej pewne dane użytkownika.
+- Uważaj na późne powiązanie z nazwą, która zawiera pewne dane użytkownika.
 
-- W przypadku pracy z danymi w sieci Web należy wziąć pod uwagę różne formy ucieczki, takie jak:
+- Jeśli masz do czynienia z danymi sieci Web, należy wziąć pod uwagę różne formy ucieczki, które są dopuszczalne, w tym:
 
-  - Szesnastkowe znaki ucieczki (% nn).
+  - Szesnastkowa ucieczka (%nn).
 
-  - Ucieczki Unicode (% NNN).
+  - Unicode ucieka (%nnn).
 
-  - Nadlongowe sekwencje UTF-8 (% nn% nn).
+  - Overlong UTF-8 ucieka (%nn%nn).
 
-  - Podwójne ucieczki (% nn staną się% mmnn, gdzie% mm jest ucieczką dla "%").
+  - Podwójne ucieczki (%nn staje się %mmnn, gdzie %mm jest ucieczką dla '%').
 
-- Należy ostrożnie wymusić nazwy użytkowników, które mogą mieć więcej niż jeden format kanoniczny. Można na przykład użyć formularza\\*nazwy użytkownika* lub *nazwy użytkownika*@mydomain.example.com.
+- Uważaj na nazwy użytkowników, które mogą mieć więcej niż jeden format kanoniczny. Na przykład często można użyć formularza\\*nazwa użytkownika* MYDOMAIN lub formularza nazwy@mydomain.example.com *użytkownika.*
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Wytyczne dotyczące bezpiecznego programowania](../../../docs/standard/security/secure-coding-guidelines.md)

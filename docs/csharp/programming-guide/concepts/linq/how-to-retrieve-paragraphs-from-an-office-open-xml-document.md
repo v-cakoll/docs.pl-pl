@@ -1,27 +1,27 @@
 ---
-title: Jak pobrać akapity z dokumentu Office Open XML (C#)
+title: Jak pobierać akapity z dokumentu XML otwierania pakietu Office (C#)
 ms.date: 07/20/2015
 ms.assetid: cc2687cf-d648-451e-88ac-3847c6c967c8
 ms.openlocfilehash: 241bacc730f205bf501c1ab1ab47f6fda4c15d64
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75347458"
 ---
-# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-c"></a>Jak pobrać akapity z dokumentu Office Open XML (C#)
-W tym temacie przedstawiono przykład, który otwiera dokument Office Open XML i pobiera kolekcję wszystkich akapitów w dokumencie.  
+# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-c"></a>Jak pobierać akapity z dokumentu XML otwierania pakietu Office (C#)
+W tym temacie przedstawiono przykład, który otwiera dokument XML otwierania pakietu Office i pobiera kolekcję wszystkich akapitów w dokumencie.  
   
- Aby uzyskać więcej informacji na temat pakietu Office Open XML, zobacz [Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) i [www.ericwhite.com](http://ericwhite.com/).  
+ Aby uzyskać więcej informacji na temat języka XML otwierania pakietu Office, zobacz [Otwieranie sdk XML](https://github.com/OfficeDev/Open-XML-SDK) i [www.ericwhite.com](http://ericwhite.com/).  
   
 ## <a name="example"></a>Przykład  
- Ten przykład otwiera pakiet Office Open XML, używa relacji w otwartym pakiecie XML do znajdowania dokumentu i części stylu. Następnie wysyła zapytanie do dokumentu, projekcję kolekcji typu anonimowego, który zawiera akapit <xref:System.Xml.Linq.XElement> węzła, nazwę stylu każdego akapitu i tekst każdego akapitu.  
+ W tym przykładzie otwiera pakiet Office Open XML, używa relacji w pakiecie Open XML, aby znaleźć dokument i części stylu. Następnie wysyła zapytanie do dokumentu, wyświetlając kolekcję <xref:System.Xml.Linq.XElement> typu anonimowego, która zawiera węzeł akapitu, nazwę stylu każdego akapitu i tekst każdego akapitu.  
   
- W przykładzie zastosowano metodę rozszerzającą o nazwie `StringConcatenate`, która jest również podana w przykładzie.  
+ W przykładzie użyto `StringConcatenate`metody rozszerzenia o nazwie , która jest również podana w przykładzie.  
   
- Aby zapoznać się z szczegółowym samouczkiem wyjaśniającym sposób działania tego przykładu, zobacz [czysteC#przekształceń języka XML ()](./introduction-to-pure-functional-transformations.md).  
+ Aby uzyskać szczegółowy samouczek, który wyjaśnia, jak działa ten przykład, zobacz [Czyste transformacje funkcjonalne XML (C#).](./introduction-to-pure-functional-transformations.md)  
   
- Ten przykład używa klas znalezionych w zestawie 'Windowsbase. Używa typów w przestrzeni nazw <xref:System.IO.Packaging?displayProperty=nameWithType>.  
+ W tym przykładzie użyto klas znalezionych w zestawie WindowsBase. Używa typów w <xref:System.IO.Packaging?displayProperty=nameWithType> obszarze nazw.  
   
 ```csharp  
 public static class LocalExtensions  
@@ -163,7 +163,7 @@ class Program
 }  
 ```  
   
- W przypadku uruchomienia z przykładowym otwartym dokumentem XML opisanym w temacie [Tworzenie źródłowego dokumentuC#Office Open XML ()](./creating-the-source-office-open-xml-document.md)ten przykład generuje następujące dane wyjściowe:  
+ Po uruchomieniu z próbkowania dokumentu Open XML opisane w [Tworzenie dokumentu XML open pakietu Source Office (C#),](./creating-the-source-office-open-xml-document.md)w tym przykładzie daje następujące dane wyjściowe:  
   
 ```output  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  

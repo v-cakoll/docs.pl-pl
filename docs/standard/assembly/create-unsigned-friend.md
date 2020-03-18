@@ -1,26 +1,26 @@
 ---
-title: 'Instrukcje: Tworzenie nieoznaczonych zaprzyjaźnionych zestawów'
+title: 'Jak: Tworzenie niepodpisanych zestawów znajomych'
 ms.date: 08/19/2019
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
 dev_langs:
 - csharp
 - vb
 ms.openlocfilehash: f8fec064507553b8208083578165965de2303a33
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74352434"
 ---
-# <a name="how-to-create-unsigned-friend-assemblies"></a>Instrukcje: Tworzenie nieoznaczonych zaprzyjaźnionych zestawów
+# <a name="how-to-create-unsigned-friend-assemblies"></a>Jak: Tworzenie niepodpisanych zestawów znajomych
 
-Ten przykład pokazuje, jak używać zespołów zaprzyjaźnionych z zestawami, które nie są podpisane.
+W tym przykładzie pokazano, jak używać zestawów znajomych z zestawami, które są niepodpisane.
 
-## <a name="create-an-assembly-and-a-friend-assembly"></a>Tworzenie zestawu i zestawu zaprzyjaźnionego
+## <a name="create-an-assembly-and-a-friend-assembly"></a>Tworzenie złożenia i złożenia znajomego
 
 1. Otwórz wiersz polecenia.
 
-2. Utwórz plik C# lub Visual Basic o nazwie *friend_unsigned_A* , który zawiera poniższy kod. Kod używa atrybutu <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>, aby zadeklarować *friend_unsigned_B* jako zestaw zaprzyjaźniony.
+2. Utwórz plik Języka C# lub Visual Basic o nazwie *friend_unsigned_A* zawierający następujący kod. Kod używa <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybutu do deklarowania *friend_unsigned_B* jako zestawu znajomego.
 
    ```csharp
    // friend_unsigned_A.cs
@@ -73,7 +73,7 @@ Ten przykład pokazuje, jak używać zespołów zaprzyjaźnionych z zestawami, k
    End Class
    ```
 
-3. Kompiluj i podpisz *friend_unsigned_A* przy użyciu następującego polecenia:
+3. Skompiluj i podpisuj *friend_unsigned_A* za pomocą następującego polecenia:
 
    ```csharp
    csc /target:library friend_unsigned_A.cs
@@ -83,7 +83,7 @@ Ten przykład pokazuje, jak używać zespołów zaprzyjaźnionych z zestawami, k
    vbc -target:library friend_unsigned_A.vb
    ```
 
-4. Utwórz plik C# lub Visual Basic o nazwie *friend_unsigned_B* , który zawiera poniższy kod. Ponieważ *friend_unsigned_A* określa *friend_unsigned_B* jako zestaw zaprzyjaźniony, kod w *friend_unsigned_B* może uzyskać dostęp do `internal`C#() lub `Friend` (Visual Basic) typów i członków z *friend_unsigned_A*.
+4. Utwórz plik Języka C# lub Visual Basic o nazwie *friend_unsigned_B* zawierający następujący kod. Ponieważ *friend_unsigned_A* określa *friend_unsigned_B* jako zestaw znajomego, kod w *friend_unsigned_B* można uzyskać `internal` dostęp (C#) lub `Friend` (Visual Basic) typów i elementów członkowskich z *friend_unsigned_A*.
 
    ```csharp
    // friend_unsigned_B.cs
@@ -125,7 +125,7 @@ Ten przykład pokazuje, jak używać zespołów zaprzyjaźnionych z zestawami, k
    End Module
    ```
 
-5. Kompiluj *friend_unsigned_B* przy użyciu następującego polecenia.
+5. Skompiluj *friend_unsigned_B* przy użyciu następującego polecenia.
 
    ```csharp
    csc /r:friend_unsigned_A.dll /out:friend_unsigned_B.exe friend_unsigned_B.cs
@@ -135,21 +135,21 @@ Ten przykład pokazuje, jak używać zespołów zaprzyjaźnionych z zestawami, k
    vbc -r:friend_unsigned_A.dll friend_unsigned_B.vb
    ```
 
-   Nazwa zestawu, który jest generowany przez kompilator musi być zgodna z nazwą zestawu zaprzyjaźnionego, która jest przesyłana do atrybutu <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. Należy jawnie określić nazwę zestawu wyjściowego ( *. exe* lub *. dll*) przy użyciu opcji kompilatora `-out`. Aby uzyskać więcej informacji, zobacz [-outC# (opcje kompilatora)](../../csharp/language-reference/compiler-options/out-compiler-option.md) lub [-out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md)..
+   Nazwa zestawu, który jest generowany przez kompilator musi odpowiadać nazwę <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> zestawu znajomego, który jest przekazywany do atrybutu. Należy jawnie określić nazwę zestawu wyjściowego (*.exe* lub *.dll*) przy użyciu opcji kompilatora. `-out` Aby uzyskać więcej informacji, zobacz [-out (opcje kompilatora C#)](../../csharp/language-reference/compiler-options/out-compiler-option.md) lub [-out (Visual Basic).](../../visual-basic/reference/command-line-compiler/out.md)
 
-6. Uruchom plik *friend_unsigned_B. exe* .
+6. Uruchom plik *friend_unsigned_B.exe.*
 
-   Program wyprowadza dwa ciągi: **Class1. test** i **'klasa. test**.
+   Program wyprowadza dwa ciągi: **Class1.Test** i **Class2.Test**.
 
-## <a name="net-security"></a>Zabezpieczenia platformy .NET
+## <a name="net-security"></a>Zabezpieczenia .NET
 
-Istnieją podobieństwa między atrybutem <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> a klasą <xref:System.Security.Permissions.StrongNameIdentityPermission>. Główną różnicą jest to, że <xref:System.Security.Permissions.StrongNameIdentityPermission> mogą wymagać uprawnień zabezpieczeń do uruchamiania określonej sekcji kodu, natomiast atrybut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> kontroluje widoczność typów i składowych `internal` lub `Friend` (Visual Basic).
+Istnieją podobieństwa między <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybutem <xref:System.Security.Permissions.StrongNameIdentityPermission> a klasą. Główną różnicą <xref:System.Security.Permissions.StrongNameIdentityPermission> jest to, że może żądać uprawnień zabezpieczeń <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> do uruchamiania `internal` określonej `Friend` sekcji kodu, podczas gdy atrybut kontroluje widoczność lub (Visual Basic) typy i elementy członkowskie.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [Zestawy w środowisku .NET](index.md)
-- [Zaprzyjaźnione zestawy](friend.md)
-- [Instrukcje: Tworzenie podpisanych zestawów zaprzyjaźnionych](create-signed-friend.md)
-- [C#Przewodnik programowania](../../csharp/programming-guide/index.md)
+- [Przyjazne zestawy](friend.md)
+- [Jak: Tworzenie podpisanych zestawów znajomych](create-signed-friend.md)
+- [Przewodnik programowania w języku C#](../../csharp/programming-guide/index.md)
 - [Koncepcje programowania (Visual Basic)](../../visual-basic/programming-guide/concepts/index.md)

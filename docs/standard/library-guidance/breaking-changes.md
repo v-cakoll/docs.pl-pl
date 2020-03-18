@@ -1,43 +1,43 @@
 ---
-title: Istotne zmiany i biblioteki .NET
-description: Zalecenia dotyczące najlepszych rozwiązań dotyczących nawigowania po zmianach podczas tworzenia bibliotek .NET.
+title: Przełomowe zmiany i biblioteki .NET
+description: Najlepsze zalecenia dotyczące nawigowania po zmianach podczas tworzenia bibliotek .NET.
 ms.date: 10/02/2018
 ms.openlocfilehash: 2cbd9e0a818b52aede6c9b1f60fdf52dcbd7b96f
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76731462"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79400422"
 ---
-# <a name="breaking-changes"></a>Fundamentalne zmiany
+# <a name="breaking-changes"></a>Zmiany powodujące niezgodność
 
-Ważne jest, aby w bibliotece .NET znaleźć równowagę między stabilnością dla istniejących użytkowników i innowacji w przyszłości. Autorzy biblioteki mają do refaktoryzacji i reprezentacji kodu do momentu idealnego, ale przerwanie istniejących użytkowników ma negatywny wpływ, szczególnie w przypadku bibliotek niskiego poziomu.
+Ważne jest, aby biblioteka .NET znalazła równowagę między stabilnością dla istniejących użytkowników a innowacjami na przyszłość. Autorzy biblioteki skłaniają się ku refaktoryzacji i ponownemu myśleniu kodu, dopóki nie będzie on doskonały, ale złamanie istniejących użytkowników ma negatywny wpływ, szczególnie w przypadku bibliotek niskiego poziomu.
 
-## <a name="project-types-and-breaking-changes"></a>Typy projektów i istotne zmiany
+## <a name="project-types-and-breaking-changes"></a>Typy projektów i zmiany dotyczące najpoławów
 
-Sposób, w jaki biblioteka jest używana przez społeczność programu .NET, zmienia wpływ na istotne zmiany w deweloperach użytkowników końcowych.
+Sposób, w jaki biblioteka jest używana przez społeczność .NET zmienia wpływ wprowadzania zmian na deweloperów użytkowników końcowych.
 
-- **Biblioteki niskie i średnie na poziomie** , takie jak Serializator, analizator składni HTML, mapowanie relacyjne obiektów bazy danych lub platforma internetowa, są najbardziej narażone na podstawie istotnych zmian.
+- **Biblioteki niskiego i średniego poziomu, takie** jak serializator, analizator HTML, obiekt bazy danych relacyjny maper lub struktura sieci web, są najbardziej dotknięte przez zmiany łamiące.
 
-  Pakiety bloków konstrukcyjnych są używane przez deweloperów użytkowników końcowych do kompilowania aplikacji i innych bibliotek jako zależności NuGet. Na przykład tworzysz aplikację i używam klienta typu open source do wywoływania usługi sieci Web. Nieprzerwana Aktualizacja zależności użytej przez klienta nie jest coś, co można naprawić. Jest to klient open-source, który musi zostać zmieniony i nie ma kontroli nad nim. Musisz znaleźć zgodne wersje bibliotek lub przesłać poprawkę do biblioteki klienta i poczekać na nową wersję. W przypadku najgorszego przypadku należy użyć dwóch bibliotek, które są zależne od wzajemnie niezgodnych wersji trzeciej biblioteki.
+  Pakiety bloków konstrukcyjnych są używane przez deweloperów użytkowników końcowych do tworzenia aplikacji i przez inne biblioteki jako zależności NuGet. Na przykład budujesz aplikację i używasz klienta open source do wywołania usługi sieci web. Aktualizacja podziału zależności, której używa klient, nie jest czymś, co można naprawić. Jest to klient open-source, który musi zostać zmieniony i nie masz nad nim kontroli. Musisz znaleźć zgodne wersje bibliotek lub przesłać poprawkę do biblioteki klienta i poczekać na nową wersję. Najgorszą sytuacją jest, jeśli chcesz użyć dwóch bibliotek, które zależą od wzajemnie niezgodnych wersji trzeciej biblioteki.
 
-- **Biblioteki wysokiego poziomu** , takie jak zestaw formantów interfejsu użytkownika, są mniej wrażliwe na istotne zmiany.
+- **Biblioteki wysokiego poziomu,** takie jak zestaw formantów interfejsu użytkownika, są mniej wrażliwe na przełomowe zmiany.
 
-  Biblioteki wysokiego poziomu są bezpośrednio przywoływane w aplikacji użytkownika końcowego. Jeśli wystąpią istotne zmiany, deweloper może zdecydować się na zaktualizowanie do najnowszej wersji lub zmodyfikować swoją aplikację, aby działała ze zmianą.
+  Biblioteki wysokiego poziomu są bezpośrednio odwołuje się w aplikacji użytkownika końcowego. Jeśli wystąpią zmiany dotyczące łamania, deweloper może zaktualizować do najnowszej wersji lub zmodyfikować swoją aplikację do pracy ze zmianą podziału.
 
-✔️ NALEŻY zastanowić się, jak zostanie użyta Biblioteka. Jakie skutki spowodują uszkodzenie zmian w aplikacjach i bibliotekach, które go używają?
+✔️ zastanów się, w jaki sposób będzie używana twoja biblioteka. Jaki wpływ będą miały zmiany krytyczne na aplikacje i biblioteki, które go używają?
 
 ✔️ zminimalizować zmiany podczas tworzenia biblioteki .NET niskiego poziomu.
 
-✔️ ROZWAŻYĆ opublikowanie poważnego ponownego zapisania biblioteki jako nowego pakietu NuGet.
+✔️ ROZWAŻ opublikowanie głównych przepisać biblioteki jako nowy pakiet NuGet.
 
-## <a name="types-of-breaking-changes"></a>Typy istotnych zmian
+## <a name="types-of-breaking-changes"></a>Rodzaje przełomowych zmian
 
-Istotne zmiany mieszczą się w różnych kategoriach i nie wpływają na nie.
+Zmiany przełamywania dzielą się na różne kategorie i nie są równie ważne.
 
 ### <a name="source-breaking-change"></a>Zmiana podziału źródła
 
-Zmiana powodująca uszkodzenie źródłowa nie ma wpływu na wykonanie programu, ale spowoduje błędy kompilacji przy następnym ponownym skompilowaniu aplikacji. Na przykład nowe Przeciążenie może utworzyć niejednoznaczność wywołań metod, które były niejednoznaczne wcześniej, lub parametr o zmienionej nazwie spowoduje przerwanie wywołań, które używają nazwanych parametrów.
+Zmiana podziału źródła nie wpływa na wykonanie programu, ale spowoduje błędy kompilacji przy następnym ponownym skompilowaniu aplikacji. Na przykład nowe przeciążenie można utworzyć niejednoznaczności w wywołaniach metody, które były wcześniej jednoznaczne lub zmieniony parametr spowoduje przerwanie wywołujących, które używają nazwanych parametrów.
 
 ```csharp
 public class Task
@@ -46,35 +46,35 @@ public class Task
 }
 ```
 
-Ze względu na to, że istotne zmiany w źródle są tylko szkodliwe, gdy deweloperzy ponownie skompilują swoje aplikacje, jest to najmniej zakłócona zmiana. Deweloperzy mogą łatwo naprawić swój własny uszkodzony kod źródłowy.
+Ponieważ zmiana podziału źródła jest szkodliwa tylko wtedy, gdy deweloperzy ponownie skompilować swoje aplikacje, jest to najmniej uciążliwa zmiana podziału. Deweloperzy mogą łatwo naprawić swój własny uszkodzony kod źródłowy.
 
-### <a name="behavior-breaking-change"></a>Zmiana powodująca przerwanie działania
+### <a name="behavior-breaking-change"></a>Zmiana łamania zachowań
 
-Zmiany zachowania są najczęściej spotykanym typem zmiany: prawie każda zmiana w zachowaniu może spowodować uszkodzenie kogoś. Zmiany w bibliotece, takie jak sygnatury metod, zgłoszone wyjątki lub dane wejściowe lub wyjściowe, mogą mieć negatywny wpływ na użytkowników biblioteki. Nawet poprawka usterki może zakwalifikować się jako istotna zmiana, jeśli użytkownicy skorzystali z wcześniej naruszonych zachowań.
+Zmiany zachowania są najczęstszym typem zmiany podziału: prawie każda zmiana w zachowaniu może kogoś złamać. Zmiany w bibliotece, takie jak podpisy metod, wyjątki generowane lub formaty danych wejściowych lub wyjściowych, mogą mieć negatywny wpływ na konsumentów biblioteki. Nawet poprawka błędu może kwalifikować się jako przełomowa zmiana, jeśli użytkownicy polegali na wcześniej złamanym zachowaniu.
 
-Dodawanie funkcji i ulepszanie nieprawidłowych zachowań jest dobrym sposobem, ale bez poważnego, aby użytkownicy mogli je uaktualnić. Jednym z rozwiązań ułatwiających deweloperom Rozwiązywanie istotnych zmian w zachowaniu zachowania jest ukrycie ich za pomocą ustawień. Ustawienia umożliwiają deweloperom aktualizację do najnowszej wersji biblioteki, jednocześnie wybierając opcję rezygnacji lub zrezygnowanie z istotnych zmian. Ta strategia umożliwia deweloperom zachowanie aktualności, a jednocześnie pozwala na dostosowanie kodu do swoich potrzeb.
+Dodawanie funkcji i poprawa złych zachowań jest dobrą rzeczą, ale bez opieki może to bardzo utrudnić istniejącym użytkownikom uaktualnienie. Jednym z podejść do pomagania deweloperom radzić sobie ze zmianami łamania zachowań jest ukrycie ich za ustawieniami. Ustawienia umożliwiają deweloperom aktualizację do najnowszej wersji biblioteki, jednocześnie decydując się na opcję wyrażenia zgody lub rezygnację z łamania zmian. Ta strategia pozwala deweloperom być na bieżąco, pozwalając im czasowy dostosowywać kod.
 
-Na przykład ASP.NET Core MVC ma koncepcję [wersji zgodności](/aspnet/core/mvc/compatibility-version) , która modyfikuje funkcje włączone i wyłączone w `MvcOptions`.
+Na przykład ASP.NET Core MVC ma pojęcie [wersji zgodności,](/aspnet/core/mvc/compatibility-version) która modyfikuje `MvcOptions`funkcje włączone i wyłączone na .
 
-✔️ ROZWAŻYĆ pozostawienie nowych funkcji domyślnie, jeśli wpływają one na istniejących użytkowników, i pozwól deweloperom na dostęp do funkcji przy użyciu ustawienia.
+✔️ ROZWAŻ pozostawienie nowych funkcji domyślnie wyłączonych, jeśli mają one wpływ na istniejących użytkowników, i pozwól deweloperom wyrazić zgodę na tę funkcję z ustawieniem.
 
 ### <a name="binary-breaking-change"></a>Zmiana podziału binarnego
 
-Zmiana publicznego interfejsu API biblioteki jest spowodowana zmianą w postaci binarnej, więc zestawy skompilowane pod kątem starszych wersji biblioteki nie będą już mogły wywoływania interfejsu API. Na przykład zmiana sygnatury metody przez dodanie nowego parametru spowoduje, że zestawy skompilowane dla starszej wersji biblioteki w celu wygenerowania <xref:System.MissingMethodException>.
+Binarna zmiana podziału występuje po zmianie publicznego interfejsu API biblioteki, więc zestawy skompilowane ze starszymi wersjami biblioteki nie są już w stanie wywołać interfejsu API. Na przykład zmiana podpisu metody przez dodanie nowego parametru spowoduje, że zestawy skompilowane ze starszą wersją biblioteki będą wyrzucać . <xref:System.MissingMethodException>
 
-Zmiana podziału binarnego może również spowodować przerwanie **całego zestawu**. Zmiana nazwy zestawu z `AssemblyName` spowoduje zmianę tożsamości zestawu, ponieważ spowoduje to dodanie, usunięcie lub zmianę klucza silnego nazewnictwa zestawu. Zmiana tożsamości zestawu spowoduje przerwanie całego skompilowanego kodu, który go używa.
+Zmiana podziału binarnego może również przerwać **cały zestaw**. Zmiana nazwy zestawu `AssemblyName` z zmieni tożsamość zestawu, jak będzie dodawanie, usuwanie lub zmienianie zestawu silny klucz nazewnictwa. Zmiana tożsamości zestawu spowoduje przerwanie całego skompilowanego kodu, który go używa.
 
-❌ nie zmieniać nazwy zestawu.
+❌NIE zmieniaj nazwy zestawu.
 
-❌ nie dodawaj, usuwaj ani nie zmieniaj silnego klucza nazewnictwa.
+❌NIE dodawaj, NIE usuwaj ani nie zmieniaj silnego klucza nazewnictwa.
 
-✔️ ROZWAŻYĆ użycie abstrakcyjnych klas podstawowych zamiast interfejsów.
+✔️ ROZWAŻ UŻYCIE abstrakcyjnych klas podstawowych zamiast interfejsów.
 
-> Dodanie niczego do interfejsu spowoduje niepowodzenie istniejących typów, które implementują go. Abstrakcyjna klasa bazowa umożliwia dodanie domyślnej implementacji wirtualnej.
+> Dodawanie czegokolwiek do interfejsu spowoduje, że istniejące typy, które implementują go nie powiedzie się. Abstrakcyjna klasa podstawowa umożliwia dodanie domyślnej implementacji wirtualnej.
 
-✔️ Rozważ umieszczenie <xref:System.ObsoleteAttribute> na typach i elementach członkowskich, które mają zostać usunięte. Atrybut powinien zawierać instrukcje dotyczące aktualizowania kodu, aby nie używał już przestarzałego interfejsu API.
+✔️ ROZWAŻ <xref:System.ObsoleteAttribute> umieszczenie na typy i elementy członkowskie, które zamierzasz usunąć. Atrybut powinien mieć instrukcje dotyczące aktualizowania kodu, aby nie używać przestarzałego interfejsu API.
 
-> Kod, który wywołuje typy i metody z <xref:System.ObsoleteAttribute> będzie generować ostrzeżenie kompilacji z komunikatem dostarczonym do atrybutu. Ostrzeżenia umożliwiają osobom korzystającym z przestarzałego czasu powierzchni interfejsu API na Migrowanie w celu usunięcia przestarzałego interfejsu API, który nie będzie już używany.
+> Kod, który wywołuje typy <xref:System.ObsoleteAttribute> i metody z wygeneruje ostrzeżenie kompilacji z komunikatem dostarczonym do atrybutu. Ostrzeżenia dają ludziom, którzy używają przestarzałego czasu powierzchni interfejsu API do migracji, tak aby po usunięciu przestarzałego interfejsu API większość z niego nie używa.
 
 ```csharp
 public class Document
@@ -92,15 +92,15 @@ public class Document
 }
 ```
 
-✔️ ROZWAŻYĆ utrzymywanie typów i metod z <xref:System.ObsoleteAttribute> nieokreślonymi w bibliotekach niskiego i średniego.
+✔️ NALEŻY ROZWAŻYĆ prowadzenie <xref:System.ObsoleteAttribute> typów i metod z inczasanie w bibliotekach niskiego i średniego poziomu.
 
-> Usuwanie interfejsów API jest uszkodzeniem binarnym. Biorąc pod uwagę przechowywanie przestarzałych typów i metod, jeśli ich utrzymanie jest niskiego kosztu i nie dodaje do biblioteki dużej liczby długów technicznych. Nieusunięcie typów i metod może pomóc w uniknięciu najgorszych przypadków wymienionych powyżej.
+> Usuwanie interfejsów API jest binarną zmianą podziału. Biorąc pod uwagę utrzymanie przestarzałych typów i metod, jeśli ich utrzymanie jest niski koszt i nie dodaje wiele długu technicznego do biblioteki. Nie usunięcie typów i metod może pomóc uniknąć najgorszych scenariuszy wymienionych powyżej.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Zagadnienia dotyczące wersji i C# aktualizacji dla deweloperów](../../csharp/whats-new/version-update-considerations.md)
-- [Ostateczny Przewodnik po wprowadzeniu zmian w interfejsie API w programie .NET](https://stackoverflow.com/questions/1456785/a-definitive-guide-to-api-breaking-changes-in-net)
-- [Reguły istotnej zmiany w programie .NET](https://github.com/dotnet/runtime/blob/master/docs/coding-guidelines/breaking-change-rules.md)
+- [Zagadnienia dotyczące wersji i aktualizacji dla deweloperów języka C#](../../csharp/whats-new/version-update-considerations.md)
+- [Ostateczny przewodnik po zmianach łamania interfejsu API w .NET](https://stackoverflow.com/questions/1456785/a-definitive-guide-to-api-breaking-changes-in-net)
+- [Reguły łamania zmian .NET](https://github.com/dotnet/runtime/blob/master/docs/coding-guidelines/breaking-change-rules.md)
 
 >[!div class="step-by-step"]
 >[Wstecz](versioning.md)

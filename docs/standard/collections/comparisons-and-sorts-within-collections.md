@@ -13,46 +13,46 @@ helpviewer_keywords:
 - collections [.NET Framework], comparisons
 ms.assetid: 5e4d3b45-97f0-423c-a65f-c492ed40e73b
 ms.openlocfilehash: 3360652f22ed39ccfd99f9863052fe584b78562f
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159263"
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>Porównywanie i sortowanie w kolekcjach
-Klasy <xref:System.Collections> wykonują porównania niemal wszystkich procesów związanych z zarządzaniem kolekcjami, niezależnie od tego, czy są szukane elementy do usunięcia, czy zwracająca wartość pary klucz-wartość.  
+Klasy <xref:System.Collections> wykonywać porównania w prawie wszystkich procesów związanych z zarządzaniem kolekcji, czy wyszukiwanie elementu, aby usunąć lub zwracanie wartości pary klucz i wartość.  
   
- Kolekcje zwykle wykorzystują funkcję porównującą równość i/lub funkcję porównującą porządkowania. Dwa konstrukcje są używane do porównywania.  
+ Kolekcje zazwyczaj wykorzystują porównywarka równości i/lub konektor porównujący. Dwie konstrukcje są używane do porównań.  
   
 <a name="BKMK_Checkingforequality"></a>
 ## <a name="checking-for-equality"></a>Sprawdzanie równości  
- Metody takie jak `Contains`, <xref:System.Collections.IList.IndexOf%2A>, <xref:System.Collections.Generic.List%601.LastIndexOf%2A>i `Remove` wykorzystują funkcję porównującą równość dla elementów kolekcji. Jeśli kolekcja jest ogólna, niż elementy są porównywane pod kątem równości, zgodnie z poniższymi wskazówkami:  
+ Metody, takie `Contains` <xref:System.Collections.IList.IndexOf%2A>jak <xref:System.Collections.Generic.List%601.LastIndexOf%2A>, `Remove` , i użyć porównania równości dla elementów kolekcji. Jeśli kolekcja jest ogólny, niż elementy są porównywane do równości zgodnie z następującymi wytycznymi:  
   
-- Jeśli typ T implementuje interfejs ogólny <xref:System.IEquatable%601>, wówczas funkcja porównująca równość jest metodą <xref:System.IEquatable%601.Equals%2A> tego interfejsu.  
+- Jeśli typ T <xref:System.IEquatable%601> implementuje interfejs ogólny, moduł <xref:System.IEquatable%601.Equals%2A> porównujący równość jest metodą tego interfejsu.  
   
-- Jeśli typ T nie implementuje <xref:System.IEquatable%601>, używany jest <xref:System.Object.Equals%2A?displayProperty=nameWithType>.  
+- Jeśli typ T <xref:System.IEquatable%601>nie <xref:System.Object.Equals%2A?displayProperty=nameWithType> implementuje , jest używany.  
   
- Ponadto niektóre przeciążenia konstruktorów dla kolekcji słowników akceptują implementację <xref:System.Collections.Generic.IEqualityComparer%601>, która jest używana do porównywania kluczy pod kątem równości. Aby zapoznać się z przykładem, zapoznaj się z konstruktorem <xref:System.Collections.Generic.Dictionary%602.%23ctor%2A?displayProperty=nameWithType>.  
+ Ponadto niektóre przeciążenia konstruktora dla <xref:System.Collections.Generic.IEqualityComparer%601> kolekcji słownika zaakceptować implementację, która służy do porównywania kluczy równości. Na przykład zobacz <xref:System.Collections.Generic.Dictionary%602.%23ctor%2A?displayProperty=nameWithType> konstruktora.  
   
 <a name="BKMK_Determiningsortorder"></a>
 ## <a name="determining-sort-order"></a>Określanie kolejności sortowania  
- Metody, takie jak `BinarySearch` i `Sort`, wykorzystują funkcję porównującą porządkowanie dla elementów kolekcji. Porównania mogą znajdować się między elementami kolekcji lub między elementem a określoną wartością. W przypadku porównywania obiektów istnieje koncepcja `default comparer` i `explicit comparer`.  
+ Metody, takie `BinarySearch` `Sort` jak i używać konektor dla elementów kolekcji. Porównania mogą być między elementami kolekcji lub między elementem i określoną wartością. Do porównywania obiektów istnieje pojęcie `default comparer` a `explicit comparer`i .  
   
- Domyślna funkcja porównująca polega na co najmniej jednym z obiektów, które są porównywane w celu zaimplementowania interfejsu **IComparable** . Dobrym sposobem implementacji interfejsu **IComparable** dla wszystkich klas są używane jako wartości w kolekcji list lub klucze w kolekcji słowników. W przypadku kolekcji ogólnej Porównywanie równości jest określane na podstawie następujących elementów:  
+ Domyślny moduł porównujący opiera się na co najmniej jednym z obiektów porównywanych do zaimplementowania interfejsu **IComparable.** Jest dobrym rozwiązaniem, aby zaimplementować **IComparable** na wszystkich klasach są używane jako wartości w kolekcji listy lub jako klucze w kolekcji słownika. Dla kolekcji ogólnej porównanie równości jest określane zgodnie z następującymi czynnościami:  
   
-- Jeśli typ T implementuje interfejs ogólny <xref:System.IComparable%601?displayProperty=nameWithType>, wówczas domyślną metodą porównującą jest metoda <xref:System.IComparable%601.CompareTo%28%600%29?displayProperty=nameWithType> tego interfejsu  
+- Jeśli typ T <xref:System.IComparable%601?displayProperty=nameWithType> implementuje interfejs ogólny, domyślnym <xref:System.IComparable%601.CompareTo%28%600%29?displayProperty=nameWithType> modułem porównującym jest metoda tego interfejsu  
   
-- Jeśli typ T implementuje interfejs nieogólny <xref:System.IComparable?displayProperty=nameWithType>, wówczas domyślną metodą porównującą jest metoda <xref:System.IComparable.CompareTo%28System.Object%29?displayProperty=nameWithType> tego interfejsu.  
+- Jeśli typ T implementuje <xref:System.IComparable?displayProperty=nameWithType> interfejs nierodzajowy, domyślnym <xref:System.IComparable.CompareTo%28System.Object%29?displayProperty=nameWithType> modułem porównującym jest metoda tego interfejsu.  
   
-- Jeśli typ T nie implementuje interfejsu, wówczas nie ma domyślnego programu porównującego i należy jawnie podać delegata lub delegowanie porównania.  
+- Jeśli typ T nie implementuje żadnego z interfejsów, nie ma domyślnego modułu porównującego, a moduł porównujący lub delegat porównania musi być jawnie podany.  
   
- Aby zapewnić jawne porównania, niektóre metody akceptują implementację **IComparer** jako parametr. Na przykład Metoda <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> akceptuje implementację <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType>.  
+ Aby zapewnić jawne porównania, niektóre metody akceptują implementację **IComparer** jako parametr. Na przykład <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> metoda akceptuje <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> implementację.  
   
- Bieżące ustawienie kultury systemu może wpływać na porównania i sortować je w obrębie kolekcji. Domyślnie porównania i sortowania w klasach **kolekcji** są zależne od kultury. Aby zignorować ustawienie kultury i w związku z tym uzyskać spójne wyniki porównania i sortowania, użyj <xref:System.Globalization.CultureInfo.InvariantCulture%2A> z przeciążeniami elementów członkowskich, które akceptują <xref:System.Globalization.CultureInfo>. Aby uzyskać więcej informacji, zobacz [wykonywanie operacji na ciągach bez uwzględniania kultur w kolekcjach](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md) i [wykonywanie operacji na ciągach nieuwzględniających kulturę w tablicach](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-arrays.md).  
+ Bieżące ustawienie kultury systemu może mieć wpływ na porównania i sortuje w kolekcji. Domyślnie porównania i sortowania w **kolekcje** klas są zależne od kultury. Aby zignorować ustawienie kultury i w związku z <xref:System.Globalization.CultureInfo.InvariantCulture%2A> tym uzyskać spójne wyniki <xref:System.Globalization.CultureInfo>porównania i sortowania, należy użyć z przeciążenia elementu członkowskiego, które akceptują . Aby uzyskać więcej informacji, zobacz [Wykonywanie operacji ciągów niewrażliwych na kulturę w kolekcjach](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md) i [wykonywanie operacji ciągów niewrażliwych na kulturę w tablicach](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-arrays.md).  
   
 <a name="BKMK_Equalityandsortexample"></a>
 ## <a name="equality-and-sort-example"></a>Przykład równości i sortowania  
- Poniższy kod ilustruje implementację <xref:System.IEquatable%601> i <xref:System.IComparable%601> na prostym obiekcie biznesowym. Ponadto, gdy obiekt jest przechowywany na liście i posortowany, zobaczysz, że wywołanie metody <xref:System.Collections.Generic.List%601.Sort> powoduje użycie domyślnej funkcji porównującej dla typu `Part`, a metoda <xref:System.Collections.Generic.List%601.Sort%28System.Comparison%7B%600%7D%29> zaimplementowana przy użyciu metody anonimowej.  
+ Poniższy kod demonstruje <xref:System.IEquatable%601> implementację i <xref:System.IComparable%601> na prosty obiekt biznesowy. Ponadto gdy obiekt jest przechowywany na liście i posortowane, <xref:System.Collections.Generic.List%601.Sort> zobaczysz, że wywołanie metody powoduje `Part` użycie domyślnego porównania dla typu i <xref:System.Collections.Generic.List%601.Sort%28System.Comparison%7B%600%7D%29> metody zaimplementowanej przy użyciu metody anonimowej.  
   
  [!code-csharp[System.Collections.Generic.List.Sort#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.generic.list.sort/cs/program.cs#1)]
  [!code-vb[System.Collections.Generic.List.Sort#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.generic.list.sort/vb/module1.vb#1)]  

@@ -1,16 +1,16 @@
 ---
-title: Jak zbadać zawartość plików tekstowych w folderze (LINQ) (C#)
+title: Jak wysyłać zapytania do zawartości plików tekstowych w folderze (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: f5b4dce7-1a34-4eb4-9bf1-60d5bdda264c
-ms.openlocfilehash: 9487e00ac4cb69180ad3744183a3ef8467cbac28
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 998fddd3f59ee64df9adcee1acc720d82861c3d9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347681"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168742"
 ---
-# <a name="how-to-query-the-contents-of-text-files-in-a-folder-linq-c"></a>Jak zbadać zawartość plików tekstowych w folderze (LINQ) (C#)
-Ten przykład pokazuje, jak badać wszystkie pliki w określonym drzewie katalogów, otwierać każdy plik i sprawdzać jego zawartość. Ten typ technika może służyć do tworzenia indeksów lub odwracania indeksów zawartości drzewa katalogów. W tym przykładzie jest wykonywane proste wyszukiwanie ciągu. Jednak bardziej złożone typy dopasowywania do wzorców można wykonać przy użyciu wyrażenia regularnego. Aby uzyskać więcej informacji, zobacz [jak łączyć zapytania LINQ z wyrażeniami regularnymi (C#)](./how-to-combine-linq-queries-with-regular-expressions.md).  
+# <a name="how-to-query-the-contents-of-text-files-in-a-folder-linq-c"></a>Jak wysyłać zapytania do zawartości plików tekstowych w folderze (LINQ) (C#)
+W tym przykładzie pokazano, jak zapytań o wszystkie pliki w drzewie określonego katalogu, otworzyć każdy plik i sprawdzić jego zawartość. Ten typ techniki może służyć do tworzenia indeksów lub odwrotnej indeksów zawartości drzewa katalogów. Wyszukiwanie ciągów prostych jest wykonywane w tym przykładzie. Jednak bardziej złożone typy dopasowywania wzorców można wykonywać za pomocą wyrażenia regularnego. Aby uzyskać więcej informacji, zobacz [Jak łączyć zapytania LINQ z wyrażeniami regularnymi (C#).](./how-to-combine-linq-queries-with-regular-expressions.md)  
   
 ## <a name="example"></a>Przykład  
   
@@ -59,7 +59,7 @@ class QueryContents
     {  
         string fileContents = String.Empty;  
   
-        // If the file has been deleted since we took   
+        // If the file has been deleted since we took
         // the snapshot, ignore it and return the empty string.  
         if (System.IO.File.Exists(name))  
         {  
@@ -71,9 +71,9 @@ class QueryContents
 ```  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
-Utwórz projekt C# aplikacji konsolowej z `using` dyrektywami dotyczącymi przestrzeni nazw System. Linq i system.IO.
+Utwórz projekt aplikacji konsoli `using` C# z dyrektywami dla system.Linq i System.IO przestrzeni nazw.
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [LINQ i katalogi plików (C#)](./linq-and-file-directories.md)
-- [LINQ to Objects (C#)](./linq-to-objects.md)
+- [LINQ do obiektów (C#)](./linq-to-objects.md)

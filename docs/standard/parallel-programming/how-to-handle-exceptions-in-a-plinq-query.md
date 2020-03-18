@@ -9,48 +9,48 @@ helpviewer_keywords:
 - PLINQ queries, how to handle exceptions
 ms.assetid: 8d56ff9b-a571-4d31-b41f-80c0b51b70a5
 ms.openlocfilehash: 3645f5dc470ef53710aa7f4c78c60431fb27ecfa
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73123090"
 ---
 # <a name="how-to-handle-exceptions-in-a-plinq-query"></a>Porady: obsługa wyjątków w zapytaniu PLINQ
 
-W pierwszym przykładzie w tym temacie pokazano, jak obsłużyć <xref:System.AggregateException?displayProperty=nameWithType>, które mogą być zgłaszane z zapytania PLINQ, gdy jest ono wykonywane. Drugi przykład pokazuje, jak umieścić bloki try-catch w delegatach, jak najbliżej miejsca, w którym zostanie zgłoszony wyjątek. W ten sposób można je przechwycić zaraz po ich wystąpieniu i prawdopodobnie kontynuować wykonywanie zapytań. Gdy wyjątki mogą być rzutowane z powrotem do wątku sprzęgania, istnieje możliwość, że zapytanie może nadal przetwarzać niektóre elementy po wystąpieniu wyjątku.
+Pierwszy przykład w tym temacie pokazuje, jak <xref:System.AggregateException?displayProperty=nameWithType> obsługiwać, które mogą być generowane z kwerendy PLINQ podczas wykonywania. Drugi przykład pokazuje, jak umieścić try-catch bloki w delegatów, jak najbliżej, gdzie wyjątek zostanie wygenerowany. W ten sposób można je złapać, gdy tylko wystąpią i ewentualnie kontynuować wykonywanie zapytań. Gdy wyjątki mogą bąbelkować z powrotem do wątku łączącego, jest możliwe, że kwerenda może kontynuować przetwarzanie niektórych elementów po wyłączeniu wyjątku.
 
-W niektórych przypadkach, gdy PLINQ przechodzi do wykonywania sekwencyjnego i wystąpi wyjątek, wyjątek może być propagowany bezpośrednio i nieopakowany w <xref:System.AggregateException>. Ponadto <xref:System.Threading.ThreadAbortException>s są zawsze propagowane bezpośrednio.
+W niektórych przypadkach, gdy PLINQ wraca do wykonania sekwencyjnego i występuje wyjątek, wyjątek może <xref:System.AggregateException>być propagowane bezpośrednio i nie zawinięte w . Ponadto <xref:System.Threading.ThreadAbortException>s są zawsze propagowane bezpośrednio.
 
 > [!NOTE]
-> Po włączeniu "Tylko mój kod" program Visual Studio przerwie w wierszu, który zgłasza wyjątek, i wyświetla komunikat o błędzie "wyjątek nie jest obsługiwany przez kod użytkownika". Ten błąd jest niegroźny. Możesz nacisnąć klawisz F5, aby kontynuować z niego i zobaczyć zachowanie obsługi wyjątków, które przedstawiono w poniższych przykładach. Aby zapobiec utracie przez program Visual Studio pierwszego błędu, po prostu usuń zaznaczenie pola wyboru "Tylko mój kod" w obszarze **Narzędzia, opcje, debugowanie, ogólne**.
+> Gdy opcja "Tylko mój kod" jest włączona, program Visual Studio zostanie przerwany w wierszu, który zgłasza wyjątek i wyświetli komunikat o błędzie "wyjątek nie jest obsługiwany przez kod użytkownika". Ten błąd jest niegroźny. Można nacisnąć klawisz F5, aby kontynuować z niego i zobacz zachowanie obsługi wyjątków, który jest pokazany w poniższych przykładach. Aby zapobiec przerywaniu pierwszego błędu przez program Visual Studio, wystarczy odznaczyć pole wyboru "Tylko mój kod" w obszarze **Narzędzia, Opcje, Debugowanie, Ogólne**.
 >
-> Ten przykład jest przeznaczony do zademonstrowania użycia i może nie działać szybciej niż równoważne LINQ to Objects sekwencyjne zapytanie. Aby uzyskać więcej informacji na temat przyspieszenie, zobacz [Opis przyspieszenie w PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).
+> W tym przykładzie jest przeznaczony do wykazania użycia i nie może działać szybciej niż równoważne sekwencyjne LINQ do objects kwerendy. Aby uzyskać więcej informacji na temat przyspieszenia, zobacz [Opis przyspieszenia w PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).
 
 ## <a name="example"></a>Przykład
 
-Ten przykład pokazuje, jak umieścić bloki try-catch wokół kodu, który wykonuje zapytanie, aby przechwytywać wszystkie zgłoszone <xref:System.AggregateException?displayProperty=nameWithType>s.
+W tym przykładzie pokazano, jak umieścić try-catch bloki wokół <xref:System.AggregateException?displayProperty=nameWithType>kodu, który wykonuje kwerendę do połowu wszystkich s, które są generowane.
 
 [!code-csharp[PLINQ#41](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#41)]
 [!code-vb[PLINQ#41](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#41)]
 
-W tym przykładzie zapytanie nie może być kontynuowane po zgłoszeniu wyjątku. Przez czas, gdy kod aplikacji przechwytuje wyjątek, PLINQ już zatrzymał zapytanie we wszystkich wątkach.
+W tym przykładzie kwerenda nie może kontynuować po wyjątek wyjątek. Do czasu kodu aplikacji przechwytuje wyjątek, PLINQ już zatrzymał kwerendę we wszystkich wątkach.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak umieścić blok try-catch w delegatze, aby umożliwić przechwytywanie wyjątku i kontynuować wykonywanie zapytania.
+W poniższym przykładzie pokazano, jak umieścić blok try-catch w pełnomocnika, aby umożliwić przechwycać wyjątek i kontynuować wykonywanie kwerendy.
 
 [!code-csharp[PLINQ#42](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#42)]
 [!code-vb[PLINQ#42](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#42)]
 
 ## <a name="compiling-the-code"></a>Kompilowanie kodu
 
-- Aby skompilować i uruchomić te przykłady, skopiuj je do przykładu danych PLINQ i Wywołaj metodę z głównego.
+- Aby skompilować i uruchomić te przykłady, skopiuj je do przykładu próbki danych PLINQ i wywołaj metodę z Main.
 
 ## <a name="robust-programming"></a>Niezawodne programowanie
 
-Nie Przechwytuj wyjątku, chyba że wiesz, jak go obsłużyć, aby nie uszkodzić stanu programu.
+Nie łapiesz wyjątku, chyba że wiesz, jak go obsługiwać, aby nie uszkodzić stanu programu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Linq.ParallelEnumerable>
 - [Równoległe LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

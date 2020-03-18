@@ -6,34 +6,34 @@ helpviewer_keywords:
 - PLINQ queries, how to iterate directories
 ms.assetid: 354e8ce3-35c4-431c-99ca-7661d1f3901b
 ms.openlocfilehash: 90afc767e422515c6122b8a6ef0e63ffc07caf3a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73091366"
 ---
 # <a name="how-to-iterate-file-directories-with-plinq"></a>Porady: Iteracja po katalogach plików z wykorzystaniem technologii PLINQ
-Ten przykład przedstawia dwa proste sposoby zrównoleglanie operacji na katalogach plików. Pierwsze zapytanie używa metody <xref:System.IO.Directory.GetFiles%2A>, aby wypełnić tablicę nazw plików w katalogu i wszystkich podkatalogach. Ta metoda nie zwraca wartości, dopóki cała tablica nie zostanie wypełniona i w związku z tym może wprowadzić opóźnienie na początku operacji. Jednak po wypełnieniu tablicy PLINQ może szybko przetwarzać ją w sposób równoległy.  
+W tym przykładzie przedstawiono dwa proste sposoby równoległości operacji w katalogach plików. Pierwsza kwerenda <xref:System.IO.Directory.GetFiles%2A> używa metody do wypełniania tablicy nazw plików w katalogu i wszystkich podkatalogów. Ta metoda nie zwraca, dopóki cała tablica jest wypełniona i dlatego może wprowadzić opóźnienie na początku operacji. Jednak po wypełnieniu tablicy funkcja PLINQ może bardzo szybko przetwarzać ją równolegle.  
   
- Drugie zapytanie używa metod statycznych <xref:System.IO.Directory.EnumerateDirectories%2A> i <xref:System.IO.DirectoryInfo.EnumerateFiles%2A>, które natychmiast zwracają wyniki. Takie podejście może być szybsze w przypadku iteracji nad dużymi drzewami katalogów, chociaż czas przetwarzania w porównaniu z pierwszym przykładem może zależeć od wielu czynników.  
+ Druga kwerenda używa <xref:System.IO.Directory.EnumerateDirectories%2A> <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> statycznych i metod, które zaczynają zwracać wyniki natychmiast. Takie podejście może być szybsze, gdy iterujesz drzewa dużych katalogów, chociaż czas przetwarzania w porównaniu z pierwszym przykładem może zależeć od wielu czynników.  
   
 > [!WARNING]
-> Te przykłady są przeznaczone do zademonstrowania użycia i mogą nie działać szybciej niż równoważne LINQ to Objects sekwencyjne zapytanie. Aby uzyskać więcej informacji na temat przyspieszenie, zobacz [Opis przyspieszenie w PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
+> Te przykłady są przeznaczone do wykazania użycia i nie może działać szybciej niż równoważne sekwencyjne LINQ do obiektów kwerendy. Aby uzyskać więcej informacji na temat przyspieszenia, zobacz [Opis przyspieszenia w PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak wykonać iterację katalogów plików w prostych scenariuszach, gdy masz dostęp do wszystkich katalogów w drzewie, rozmiary plików nie są bardzo duże, a czasy dostępu nie są istotne. Takie podejście obejmuje okres opóźnienia na początku podczas konstruowania tablicy nazw plików.  
+ W poniższym przykładzie pokazano, jak iterate nad katalogami plików w prostych scenariuszach, gdy masz dostęp do wszystkich katalogów w drzewie, rozmiary plików nie są bardzo duże, a czasy dostępu nie są znaczące. Takie podejście obejmuje okres opóźnienia na początku, podczas gdy tablica nazw plików jest konstruowana.  
   
  [!code-csharp[PLINQ#33](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqfileiteration.cs#33)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak wykonać iterację katalogów plików w prostych scenariuszach, gdy masz dostęp do wszystkich katalogów w drzewie, rozmiary plików nie są bardzo duże, a czasy dostępu nie są istotne. Takie podejście rozpoczyna generowanie wyników szybciej niż w poprzednim przykładzie.  
+ W poniższym przykładzie pokazano, jak iterate nad katalogami plików w prostych scenariuszach, gdy masz dostęp do wszystkich katalogów w drzewie, rozmiary plików nie są bardzo duże, a czasy dostępu nie są znaczące. Takie podejście zaczyna przynosić wyniki szybciej niż w poprzednim przykładzie.  
   
  [!code-csharp[PLINQ#34](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqfileiteration.cs#34)]  
   
- W przypadku korzystania z <xref:System.IO.Directory.GetFiles%2A>upewnij się, że masz wystarczające uprawnienia do wszystkich katalogów w drzewie. W przeciwnym razie wyjątek zostanie wygenerowany i żadne wyniki nie zostaną zwrócone. W przypadku korzystania z <xref:System.IO.Directory.EnumerateDirectories%2A> w kwerendzie PLINQ problemy z obsługą we/wy mogą być obsługiwane w sposób płynny, który umożliwia kontynuowanie iteracji. Jeśli kod musi obsługiwać wyjątki we/wy lub dostęp nieautoryzowany, należy wziąć pod uwagę podejście opisane w temacie [How to: Iterowanie katalogów plików z klasą równoległą](../../../docs/standard/parallel-programming/how-to-iterate-file-directories-with-the-parallel-class.md).  
+ Podczas <xref:System.IO.Directory.GetFiles%2A>korzystania , upewnij się, że masz wystarczające uprawnienia do wszystkich katalogów w drzewie. W przeciwnym razie zostanie zgłoszony wyjątek i nie zostaną zwrócone żadne wyniki. Podczas korzystania <xref:System.IO.Directory.EnumerateDirectories%2A> z zapytania PLINQ, jest problematyczne do obsługi wyjątków we/wy w sposób wdzięku, który umożliwia kontynuowanie iteracji. Jeśli kod musi obsługiwać wyjątki we/wy lub nieautoryzowanego dostępu, należy wziąć pod uwagę podejście opisane w [jak: Iterować katalogi plików z klasą równoległą](../../../docs/standard/parallel-programming/how-to-iterate-file-directories-with-the-parallel-class.md).  
   
- Jeśli opóźnienie operacji we/wy jest problemem, na przykład w przypadku wejścia/wyjścia plików przez sieć, należy rozważyć użycie jednej z asynchronicznych technik we/wy opisanych w [TPL i tradycyjnym .NET Framework programowaniu asynchronicznym](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md) oraz w tym [wpisie w blogu](https://devblogs.microsoft.com/pfxteam/parallel-extensions-and-io/).  
+ Jeśli opóźnienie we/wy jest problemem, na przykład z we/wy pliku za pomocą sieci, należy rozważyć użycie jednej z asynchronicznych technik we/wy opisanych w [TPL i tradycyjne .NET Framework programowania asynchronicznego](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md) i w tym [blogu](https://devblogs.microsoft.com/pfxteam/parallel-extensions-and-io/).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Równoległe LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

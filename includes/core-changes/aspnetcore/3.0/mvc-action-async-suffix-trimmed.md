@@ -1,14 +1,14 @@
 ---
 ms.openlocfilehash: 58b1190e3e6a3168d35700eed655f6756e076a29
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901759"
 ---
-### <a name="mvc-async-suffix-trimmed-from-controller-action-names"></a>MVC: sufiks Async został przycięty z nazw akcji kontrolera
+### <a name="mvc-async-suffix-trimmed-from-controller-action-names"></a>MVC: Sufiks asynchroniczne przycięte z nazw akcji kontrolera
 
-W ramach adresowania [dotnet/aspnetcore # 4849](https://github.com/dotnet/aspnetcore/issues/4849), ASP.NET Core MVC domyślnie przycina sufiks `Async` z nazw akcji. Począwszy od ASP.NET Core 3,0, ta zmiana ma wpływ na generowanie routingu i linków.
+W ramach adresowania [dotnet/aspnetcore#4849](https://github.com/dotnet/aspnetcore/issues/4849), ASP.NET Core MVC `Async` domyślnie przycina sufiks z nazw akcji. Począwszy od ASP.NET Core 3.0, ta zmiana ma wpływ zarówno na routing, jak i generowanie łączy.
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -16,7 +16,7 @@ W ramach adresowania [dotnet/aspnetcore # 4849](https://github.com/dotnet/aspnet
 
 #### <a name="old-behavior"></a>Stare zachowanie
 
-Rozważmy następujący kontroler ASP.NET Core MVC:
+Należy wziąć pod uwagę następujące ASP.NET kontrolera Core MVC:
 
 ```csharp
 public class ProductController : Controller
@@ -29,7 +29,7 @@ public class ProductController : Controller
 }
 ```
 
-Akcja polega na włączeniu routingu za pośrednictwem `Product/ListAsync`. Generowanie linku wymaga określenia sufiksu `Async`. Na przykład:
+Akcja jest routingu `Product/ListAsync`przez . Generowanie łączy wymaga `Async` określenia sufiksu. Przykład:
 
 ```cshtml
 <a asp-controller="Product" asp-action="ListAsync">List</a>
@@ -37,13 +37,13 @@ Akcja polega na włączeniu routingu za pośrednictwem `Product/ListAsync`. Gene
 
 #### <a name="new-behavior"></a>Nowe zachowanie
 
-W ASP.NET Core 3,0 akcja obsługuje routing za pośrednictwem `Product/List`. Kod generacji łącza powinien pominąć sufiks `Async`. Na przykład:
+W ASP.NET Core 3.0 akcja jest `Product/List`routingu przez . Kod generowania łączy powinien `Async` pominąć sufiks. Przykład:
 
 ```cshtml
 <a asp-controller="Product" asp-action="List">List</a>
 ```
 
-Ta zmiana nie ma wpływu na nazwy określone przy użyciu atrybutu `[ActionName]`. Nowe zachowanie można wyłączyć, ustawiając `MvcOptions.SuppressAsyncSuffixInActionNames` na `false` w `Startup.ConfigureServices`:
+Ta zmiana nie ma wpływu na `[ActionName]` nazwy określone przy użyciu atrybutu. Nowe zachowanie można wyłączyć, `MvcOptions.SuppressAsyncSuffixInActionNames` ustawiając `Startup.ConfigureServices`w: `false`
 
 ```csharp
 services.AddMvc(options =>
@@ -54,14 +54,14 @@ services.AddMvc(options =>
 
 #### <a name="reason-for-change"></a>Przyczyna zmiany
 
-Zgodnie z Konwencją, asynchroniczne metody .NET są sufiksem `Async`. Jednak jeśli metoda definiuje akcję MVC, nie można użyć sufiksu `Async`.
+Zgodnie z konwencją asynchroniczne metody .NET `Async`są sufiksowane z . Jednak gdy metoda definiuje akcję MVC, niepożądane jest użycie `Async` sufiksu.
 
-#### <a name="recommended-action"></a>Zalecane działanie
+#### <a name="recommended-action"></a>Zalecana akcja
 
-Jeśli aplikacja jest zależna od akcji MVC z zachowaniem sufiksu `Async` nazwy, wybierz jedno z następujących środków zaradczych:
+Jeśli aplikacja zależy od akcji MVC zachowując `Async` sufiks nazwy, wybierz jedną z następujących czynników ograniczających zagrożenie:
 
-- Użyj atrybutu `[ActionName]`, aby zachować oryginalną nazwę.
-- Wyłącz zmianę nazwy poprzez ustawienie `MvcOptions.SuppressAsyncSuffixInActionNames` na `false` w `Startup.ConfigureServices`:
+- Użyj `[ActionName]` atrybutu, aby zachować oryginalną nazwę.
+- Całkowicie wyłącz zmianę nazwy, `MvcOptions.SuppressAsyncSuffixInActionNames` `false` ustawiając `Startup.ConfigureServices`w:
 
 ```csharp
 services.AddMvc(options =>

@@ -1,16 +1,16 @@
 ---
 ms.openlocfilehash: 4d99d0b6e99a7a9b976cf11832b33ad3bdc6d299
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901616"
 ---
-### <a name="hosting-objectpoolprovider-removed-from-webhostbuilder-dependencies"></a>Hosting: ObjectPoolProvider usunięte z zależności WebHostBuilder
+### <a name="hosting-objectpoolprovider-removed-from-webhostbuilder-dependencies"></a>Hosting: ObjectPoolProvider usunięty z zależności WebHostBuilder
 
-W ramach wprowadzania ASP.NET Core więcej opłat za odtwarzanie, `ObjectPoolProvider` został usunięty z głównego zestawu zależności. Poszczególne składniki opierają się na `ObjectPoolProvider` teraz dodają sam siebie.
+W ramach dokonywania ASP.NET Core więcej `ObjectPoolProvider` zapłacić za grę, został usunięty z głównego zestawu zależności. Konkretne składniki, `ObjectPoolProvider` na których polegasz, teraz same je dodają.
 
-Aby zapoznać się z omówieniem, zobacz [dotnet/aspnetcore # 5944](https://github.com/dotnet/aspnetcore/issues/5944).
+Aby uzyskać do dyskusji, zobacz [dotnet/aspnetcore#5944](https://github.com/dotnet/aspnetcore/issues/5944).
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -18,19 +18,19 @@ Aby zapoznać się z omówieniem, zobacz [dotnet/aspnetcore # 5944](https://gith
 
 #### <a name="old-behavior"></a>Stare zachowanie
 
-`WebHostBuilder` zapewnia `ObjectPoolProvider` domyślnie w kontenerze DI.
+`WebHostBuilder``ObjectPoolProvider` domyślnie w kontenerze DI.
 
 #### <a name="new-behavior"></a>Nowe zachowanie
 
-`WebHostBuilder` nie zapewnia już `ObjectPoolProvider` domyślnie w kontenerze DI.
+`WebHostBuilder`nie jest `ObjectPoolProvider` już domyślnie udostępnia w kontenerze DI.
 
 #### <a name="reason-for-change"></a>Przyczyna zmiany
 
-Ta zmiana została wprowadzona, aby ASP.NET Core więcej opłat za odtwarzanie.
+Ta zmiana została winna, aby ASP.NET Core więcej płacić za grę.
 
-#### <a name="recommended-action"></a>Zalecane działanie
+#### <a name="recommended-action"></a>Zalecana akcja
 
-Jeśli składnik wymaga `ObjectPoolProvider`, należy dodać go do swoich zależności za pośrednictwem `IServiceCollection`.
+Jeśli składnik `ObjectPoolProvider`wymaga, musi zostać dodany do `IServiceCollection`zależności za pośrednictwem pliku .
 
 #### <a name="category"></a>Kategoria
 

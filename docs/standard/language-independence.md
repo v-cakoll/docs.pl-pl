@@ -1,6 +1,6 @@
 ---
-title: Niezależność od języka i składniki niezależne od języka
-description: Dowiedz się, jak można opracowywać w jednym z wielu obsługiwanych języków w programie .NET C#, C++takich jak F#/CLI,, IronPython, VB, Visual COBOL i PowerShell.
+title: Niezależność językowa i składniki niezależne od języka
+description: Dowiedz się, jak można tworzyć w jednym z wielu obsługiwanych języków w .NET, takich jak C#, C++/CLI, F#, IronPython, VB, Visual COBOL i PowerShell.
 ms.date: 07/22/2016
 dev_langs:
 - csharp
@@ -8,26 +8,26 @@ dev_langs:
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
 ms.openlocfilehash: e1f419dd57c1e90d7ebb57ef572f338a34d1c509
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73423635"
 ---
-# <a name="language-independence-and-language-independent-components"></a>Niezależność od języka i składniki niezależne od języka
+# <a name="language-independence-and-language-independent-components"></a>Niezależność językowa i składniki niezależne od języka
 
-.NET jest niezależny od języka. Oznacza to, że jako programista można opracowywać w jednym z wielu języków, które są przeznaczone dla implementacji platformy .NET, takich C#jak F#, i Visual Basic. Można uzyskać dostęp do typów i elementów członkowskich bibliotek klas opracowanych dla implementacji platformy .NET bez konieczności znajomości języka, w którym zostały pierwotnie napisane, i bez konieczności przestrzegania jakichkolwiek Konwencji języka oryginalnego. Jeśli jesteś deweloperem składnika, możesz uzyskać dostęp do składnika przez dowolną aplikację platformy .NET niezależnie od jego języka.
+.NET jest niezależny od języka. Oznacza to, że jako deweloper można rozwijać w jednym z wielu języków, które są przeznaczone dla implementacji .NET, takich jak C#, F#i Visual Basic. Można uzyskać dostęp do typów i elementów członkowskich bibliotek klas opracowanych dla implementacji .NET bez konieczności znać język, w którym zostały pierwotnie napisane i bez konieczności przestrzegania żadnych konwencji języka oryginalnego. Jeśli jesteś deweloperem składników, składnik może być dostępny dla dowolnej aplikacji .NET, niezależnie od jego języka.
 
 > [!NOTE]
-> W pierwszej części tego artykułu omówiono Tworzenie składników niezależnych od języka — czyli składników, które mogą być używane przez aplikacje, które są zapisywane w dowolnym języku. Możesz również utworzyć pojedynczy składnik lub aplikację z kodu źródłowego zapisaną w wielu językach. Zobacz [współdziałanie między językami](#cross-language-interoperability) w drugiej części tego artykułu.
+> W pierwszej części tego artykułu omówiono tworzenie składników niezależnych od języka — oznacza to, że składniki, które mogą być używane przez aplikacje, które są napisane w dowolnym języku. Można również utworzyć pojedynczy składnik lub aplikację z kodu źródłowego napisanego w wielu językach; zobacz [Interoperacyjność między językami](#cross-language-interoperability) w drugiej części tego artykułu.
 
-Aby w pełni współistnieć z innymi obiektami zapisanymi w dowolnym języku, obiekty muszą uwidocznić wywołujących tylko te funkcje, które są wspólne dla wszystkich języków. Ten wspólny zestaw funkcji jest definiowany przez Common Language Specification (CLS), który jest zestawem reguł, które są stosowane do wygenerowanych zestawów. Common Language Specification jest zdefiniowany w partycji I, klauzule od 7 do 11 w [standardzie ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm).
+Aby w pełni wchodzić w interakcje z innymi obiektami napisanymi w dowolnym języku, obiekty muszą uwidaczniać do wywoływania tylko te funkcje, które są wspólne dla wszystkich języków. Ten wspólny zestaw funkcji jest zdefiniowany przez specyfikację języka wspólnego (CLS), który jest zestawem reguł, które mają zastosowanie do wygenerowanych zestawów. Specyfikacja języka wspólnego jest zdefiniowana w partycji I, klauzule 7 do 11 [standardu ECMA-335: Wspólna infrastruktura językowa](https://www.ecma-international.org/publications/standards/Ecma-335.htm).
 
-Jeśli składnik jest zgodny z Common Language Specification, gwarantowany jest zgodność ze specyfikacją CLS i można uzyskać do niego dostęp z kodu w zestawach pisanych w dowolnym języku programowania, który obsługuje specyfikację CLS. Można określić, czy składnik jest zgodny z Common Language Specification w czasie kompilacji, stosując atrybut [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) do kodu źródłowego. Aby uzyskać więcej informacji, zobacz [atrybut CLSCompliantAttribute](#the-clscompliantattribute-attribute).
+Jeśli składnik jest zgodny ze specyfikacją języka wspólnego, jest gwarantowana, aby być zgodne z CLS i można uzyskać dostęp z kodu w zestawach napisanych w dowolnym języku programowania, który obsługuje CLS. Można określić, czy składnik jest zgodny ze specyfikacją języka wspólnego w czasie kompilacji, stosując [clscompliantattribute](xref:System.CLSCompliantAttribute) atrybut do kodu źródłowego. Aby uzyskać więcej informacji, zobacz [CLSCompliantAttribute atrybut .](#the-clscompliantattribute-attribute)
 
 W tym artykule:
 
-* [Reguły zgodności ze specyfikacją CLS](#cls-compliance-rules)
+* [Reguły zgodności z CLS](#cls-compliance-rules)
 
   * [Typy i podpisy elementów członkowskich typu](#types-and-type-member-signatures)
 
@@ -41,9 +41,9 @@ W tym artykule:
 
   * [Wyliczenia](#enumerations)
 
-  * [Ogólnie wpisz składowe](#type-members-in-general)
+  * [Wpisywanie elementów członkowskich w ogóle](#type-members-in-general)
 
-  * [Ułatwienia dostępu członków](#member-accessibility)
+  * [Dostępność elementów członkowskich](#member-accessibility)
 
   * [Typy ogólne i elementy członkowskie](#generic-types-and-members)
 
@@ -59,23 +59,23 @@ W tym artykule:
 
   * [Atrybuty](#attributes)
 
-* [CLSCompliantAttribute — atrybut](#the-clscompliantattribute-attribute)
+* [Atrybut CLSCompliantAttribute](#the-clscompliantattribute-attribute)
 
 * [Współdziałanie między językami](#cross-language-interoperability)
 
-## <a name="cls-compliance-rules"></a>Reguły zgodności ze specyfikacją CLS
+## <a name="cls-compliance-rules"></a>Reguły zgodności z CLS
 
-W tej sekcji omówiono reguły tworzenia składnika zgodnego ze specyfikacją CLS. Aby uzyskać pełną listę reguł, zobacz partycja I, klauzula 11 [wzorca ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm).
+W tej sekcji omówiono reguły tworzenia składnika zgodnego ze specyfikacją CLS. Aby uzyskać pełną listę reguł, zobacz partycja I, klauzula 11 [standardu ECMA-335: Wspólna infrastruktura językowa](https://www.ecma-international.org/publications/standards/Ecma-335.htm).
 
 > [!NOTE]
-> Common Language Specification omawia każdą zasadę zgodności ze specyfikacją CLS, która ma zastosowanie do konsumentów (deweloperzy, którzy korzystają z programistycznego dostępu do składnika, który jest zgodny ze specyfikacją CLS), platformy (deweloperzy używający kompilatora języka do tworzenia Biblioteki zgodne ze specyfikacją CLS) i rozszerzeń (deweloperzy tworzący narzędzie, takie jak kompilator języka lub parser kodu, który tworzy składniki zgodne ze specyfikacją CLS). Ten artykuł koncentruje się na regułach, które mają zastosowanie do struktur. Należy zauważyć, że niektóre reguły, które mają zastosowanie do rozszerzeń, mogą również być stosowane do zestawów, które są tworzone za pomocą [odbicia. Emituj](xref:System.Reflection.Emit).
+> Specyfikacja języka wspólnego omawia każdą regułę zgodności z usługą CLS, ponieważ ma ona zastosowanie do konsumentów (deweloperzy, którzy programowo uzyskują dostęp do składnika, który jest zgodny ze specyfikacją CLS), struktur (deweloperzy, którzy używają kompilatora języka do tworzenia Biblioteki zgodne ze specyfikacją CLS) i extendery (deweloperzy, którzy tworzą narzędzie, takie jak kompilator języka lub analizator kodu, który tworzy składniki zgodne ze specyfikacją CLS). W tym artykule skupiono się na zasadach, które mają zastosowanie do struktur. Należy jednak zauważyć, że niektóre reguły, które mają zastosowanie do extenders mogą również mieć zastosowanie do zestawów, które są tworzone przy użyciu [Reflection.Emit](xref:System.Reflection.Emit).
 
-Aby zaprojektować składnik niezależny od języka, należy zastosować reguły zgodności ze specyfikacją CLS dla interfejsu publicznego składnika. Twoja prywatna implementacja nie musi być zgodna ze specyfikacją.
+Aby zaprojektować składnik niezależny od języka, należy zastosować tylko reguły zgodności z cls do interfejsu publicznego składnika. Implementacja prywatna nie musi być zgodna ze specyfikacją.
 
 > [!IMPORTANT]
-> Reguły zgodności ze specyfikacją CLS mają zastosowanie tylko do interfejsu publicznego składnika, a nie do prywatnej implementacji.
+> Reguły zgodności z cls mają zastosowanie tylko do interfejsu publicznego składnika, a nie do jego prywatnej implementacji.
 
-Na przykład liczby całkowite bez znaku inne niż [Byte](xref:System.Byte) nie są zgodne ze specyfikacją CLS. Ponieważ Klasa `Person` w poniższym przykładzie uwidacznia Właściwość `Age` typu [UInt16](xref:System.UInt16), poniższy kod wyświetla ostrzeżenie kompilatora.
+Na przykład niepodpisane liczby całkowite inne niż [Bajt](xref:System.Byte) nie są zgodne ze specyfikacją CLS. Ponieważ `Person` klasa w poniższym przykładzie `Age` udostępnia właściwość typu [UInt16](xref:System.UInt16), poniższy kod wyświetla ostrzeżenie kompilatora.
 
 ```csharp
 using System;
@@ -112,7 +112,7 @@ End Class
 '                                ~~~
 ```
 
-Można sprawić, aby Klasa osoby była zgodna ze specyfikacją CLS, zmieniając typ właściwości `Age` z `UInt16` na [Int16](xref:System.Int16), która jest zgodna ze specyfikacją CLS, 16-bitową liczbą całkowitą ze znakiem. Nie musisz zmieniać typu pola `personAge` prywatnego.
+Klasę person zgodną ze specyfikacją CLS `Age` można `UInt16` wprowadzić, zmieniając typ właściwości z [Int16](xref:System.Int16), która jest zgodną ze specyfikacją CLS, 16-bitową liczbą całkowitą z podpisem. Nie trzeba zmieniać typu pola `personAge` prywatnego.
 
 ```csharp
 using System;
@@ -146,67 +146,67 @@ Interfejs publiczny biblioteki składa się z następujących elementów:
 
 * Definicje klas publicznych.
 
-* Definicje publicznych członków klas publicznych oraz definicje członków dostępnych dla klas pochodnych (czyli chronionych elementów członkowskich).
+* Definicje publicznych członków klas publicznych i definicje elementów członkowskich dostępne dla klas pochodnych (czyli członków chronionych).
 
-* Parametry i zwracane typy metod publicznych klas publicznych oraz parametry i zwracane typy metod dostępnych dla klas pochodnych.
+* Parametry i zwracatypy metod publicznych klas publicznych oraz parametry i zwracane typy metod dostępnych dla klas pochodnych.
 
-Reguły zgodności ze specyfikacją CLS są wymienione w poniższej tabeli. Tekst reguł jest pobierany Verbatim z [standardu ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm), czyli Copyright 2012 przez Ecma International. Bardziej szczegółowe informacje o tych regułach znajdują się w poniższych sekcjach.
+Reguły zgodności z cls są wymienione w poniższej tabeli. Tekst zasad jest dosłownie zaczerpnięty ze [standardu ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm), czyli Copyright 2012 by Ecma International. Bardziej szczegółowe informacje na temat tych reguł można znaleźć w poniższych sekcjach.
 
 Kategoria | Zobacz | Reguła | Numer reguły
 -------- | --- | ---- | -----------
-Ułatwienia dostępu | [Ułatwienia dostępu członków](#member-accessibility) | Dostępność nie jest zmieniana podczas zastępowania metod dziedziczonych, z wyjątkiem tego, że w przypadku przesłania metody dziedziczonej z innego zestawu z `family-or-assembly`ułatwień dostępu. W takim przypadku zastąpienie ma `family`ułatwień dostępu. | 10
-Ułatwienia dostępu | [Ułatwienia dostępu członków](#member-accessibility) | Widoczność i dostępność typów i członków jest taka, że typy w podpisie każdego elementu członkowskiego są widoczne i dostępne za każdym razem, gdy sam element członkowski jest widoczny i dostępny. Na przykład metoda publiczna widoczna poza jej zestawem nie ma argumentu, którego typ jest widoczny tylko w obrębie zestawu. Widoczność i dostępność typów tworzących typ ogólny, używany w podpisie dowolnego elementu członkowskiego, są widoczne i dostępne za każdym razem, gdy element członkowski jest widoczny i dostępny. Na przykład typ generyczny skonkretyzowany obecny w sygnaturze elementu członkowskiego, który jest widoczny poza jego zestawem, nie powinien mieć argumentu ogólnego, którego typ jest widoczny tylko w obrębie zestawu. | 12
-Tablice | [Tablice](#arrays) | Tablice powinny mieć elementy z typem zgodnym ze specyfikacją CLS, a wszystkie wymiary tablicy mają dolne granice równe zero. Tylko fakt, że element jest tablicą, a typ elementu tablicy musi być wymagany do rozróżnienia między przeciążeniami. W przypadku przeciążania opartego na co najmniej dwóch typach tablic typy elementów muszą być nazwanymi typami. | 16
-Atrybuty | [Atrybuty](#attributes) | Atrybuty muszą być typu [System. Attribute](xref:System.Attribute)lub dziedziczyć po nim. | 41
-Atrybuty | [Atrybuty](#attributes) | CLS zezwala tylko na podzbiór kodowań atrybutów niestandardowych. Jedyne typy, które są wyświetlane w tych kodowaniach, to (zobacz partycja IV): [System. Type](xref:System.Type), [System. String](xref:System.String), [System. Char](xref:System.Char), [System. Boolean](xref:System.Boolean), [System. Byte](xref:System.Byte), system. [Int16](xref:System.Int16), [System. Int32](xref:System.Int32), [ System. Int64](xref:System.Int64), [System. Single](xref:System.Single), [System. Double](xref:System.Double)i dowolny typ wyliczeniowy na podstawie typu liczby całkowitej zgodnej ze specyfikacją CLS. | 34
-Atrybuty | [Atrybuty](#attributes) | Specyfikacja CLS nie zezwala na publicznie widoczne wymagane Modyfikatory (`modreq`, zobacz partycja II), ale zezwala na Modyfikatory opcjonalne (`modopt`, zobacz partycja II), które nie są zrozumiałe. | 35
-Konstruktorów | [Konstruktory](#constructors) | Konstruktor obiektu wywołuje niektórych konstruktorów wystąpień swojej klasy podstawowej przed wszelkimi dostępami do dziedziczonych danych wystąpienia. (Nie dotyczy to typów wartości, które nie muszą mieć konstruktorów).  | 43
-Konstruktorów | [Konstruktory](#constructors) | Konstruktor obiektów nie jest wywoływany, chyba że jest częścią tworzenia obiektu, a obiekt nie zostanie dwukrotnie zainicjowany. | 22
-Wyliczenia | [Wyliczenia](#enumerations) | Typ podstawowy wyliczenia musi być wbudowanym typem Integer CLS, nazwą pola będzie "value__", a to pole jest oznaczone `RTSpecialName`. |  7
-Wyliczenia | [Wyliczenia](#enumerations) | Istnieją dwa odrębne rodzaje typów wyliczeniowych, wskazywane przez obecność lub brak elementu [System. FlagsAttribute](xref:System.FlagsAttribute) (zobacz partycja IV Library) atrybut niestandardowy. Jeden reprezentuje nazwane wartości całkowite; Druga reprezentuje nazwane flagi bitowe, które można połączyć w celu wygenerowania nienazwanej wartości. Wartość `enum` nie jest ograniczona do określonych wartości. |  8
-Wyliczenia | [Wyliczenia](#enumerations) | Literałowe pola statyczne typu wyliczeniowego mają typ wyliczenia. |  9
-Zdarzenia | [Zdarzenia](#events) | Metody implementujące zdarzenie należy oznaczyć `SpecialName` w metadanych. |dnia
-Zdarzenia | [Zdarzenia](#events) | Dostępność zdarzenia i jego metod dostępu powinna być taka sama. |0,30
-Zdarzenia | [Zdarzenia](#events) | Metody `add` i `remove` dla zdarzenia muszą być obecne lub nieobecne. |niż
-Zdarzenia | [Zdarzenia](#events) | Metody `add` i `remove` dla zdarzenia muszą mieć jeden parametr, którego typ definiuje typ zdarzenia i który powinien pochodzić od elementu [System. Delegate](xref:System.Delegate). |32
-Zdarzenia | [Zdarzenia](#events) | Zdarzenia muszą być zgodne z określonym wzorcem nazewnictwa. Atrybut SpecialName, do którego odwołuje się reguła CLS 29, jest ignorowany w odpowiednich porównaniach nazw i stosuje się do reguł identyfikatorów.  |33
-Wyjątki | [Wyjątki](#exceptions) | Obiekty, które są generowane, są typu [System. Exception](xref:System.Exception) lub dziedziczą z niego typ. Niemniej jednak metody zgodne ze specyfikacją CLS nie są wymagane do blokowania propagacji innych typów wyjątków. | 40
-Ogólne | [Reguły zgodności ze specyfikacją CLS](#cls-compliance-rules) | Reguły CLS stosują się tylko do tych części typu, które są dostępne lub widoczne poza zestawem definiującym. | 1
-Ogólne | [Reguły zgodności ze specyfikacją CLS](#cls-compliance-rules) | Elementy członkowskie typów niezgodnych ze specyfikacją CLS nie mogą być oznaczone jako zgodne ze specyfikacją CLS. | 2
-Typy ogólne | [Typy ogólne i elementy członkowskie](#generic-types-and-members) | Zagnieżdżone typy powinny zawierać co najmniej tyle parametrów ogólnych jak typ otaczający. Parametry ogólne w typie zagnieżdżonym odpowiadają pozycjom parametrów ogólnych w jego typie otaczającym.  | 42
-Typy ogólne | [Typy ogólne i elementy członkowskie](#generic-types-and-members) | Nazwa typu ogólnego zawiera kodowanie liczby parametrów typu zadeklarowanych w typie niezagnieżdżonym lub nowo wprowadzona do typu, jeśli jest zagnieżdżona, zgodnie z regułami określonymi powyżej. | 43
-Typy ogólne | [Typy ogólne i elementy członkowskie](#generic-types-and-members) | Typ ogólny musi redeklarować wystarczające ograniczenia, aby zagwarantować, że wszystkie ograniczenia dotyczące typu podstawowego lub interfejsów byłyby spełnione przez ograniczenia typu ogólnego. | 44
-Typy ogólne | [Typy ogólne i elementy członkowskie](#generic-types-and-members) | Typy używane jako ograniczenia parametrów ogólnych będą same w sobie zgodne ze specyfikacją CLS. | 45
-Typy ogólne | [Typy ogólne i elementy członkowskie](#generic-types-and-members) | Widoczność i dostępność elementów członkowskich (w tym zagnieżdżonych typów) w typie ogólnym, który można utworzyć, jest uznawana za zakres do określonego wystąpienia, a nie jako całości deklaracji typu ogólnego. Przy założeniu, że nadal mają zastosowanie reguły widoczności i dostępności reguły CLS 12. | 46
-Typy ogólne | [Typy ogólne i elementy członkowskie](#generic-types-and-members) | Dla każdej abstrakcyjnej lub wirtualnej metody ogólnej należy mieć domyślną implementację specyficzną (nieabstrakcyjną) | 47
-Interfejsy | [Interfejsy](#interfaces) | Interfejsy zgodne ze specyfikacją CLS nie wymagają definicji metod niezgodnych ze specyfikacją CLS w celu ich wdrożenia. | postanowienia
+Ułatwienia dostępu | [Dostępność elementów członkowskich](#member-accessibility) | Ułatwienia dostępu nie mogą być zmieniane podczas zastępowania metod dziedziczonych, `family-or-assembly`z wyjątkiem sytuacji, gdy zastępowanie metody dziedziczonej z innego zestawu z ułatwieniami dostępu . W takim przypadku zastąpienie ma `family`dostępność . | 10
+Ułatwienia dostępu | [Dostępność elementów członkowskich](#member-accessibility) | Widoczność i dostępność typów i elementów członkowskich musi być taka, aby typy w podpisie każdego członka były widoczne i dostępne w każdym przypadku, gdy sam członek jest widoczny i dostępny. Na przykład metoda publiczna, która jest widoczna poza jego zestaw nie ma argumentu, którego typ jest widoczny tylko w zestawie. Widoczność i dostępność typów tworzących wystąpienie typu ogólnego używanego w podpisie każdego członka muszą być widoczne i dostępne za każdym razem, gdy sam element członkowski jest widoczny i dostępny. Na przykład uprzedzony typ ogólny obecny w podpisie elementu członkowskiego, który jest widoczny poza jego zestawem, nie może mieć ogólnego argumentu, którego typ jest widoczny tylko w zestawie. | 12
+Tablice | [Tablice](#arrays) | Tablice mają elementy o typie zgodnym ze specyfikacją CLS, a wszystkie wymiary tablicy mają dolne granice zera. Tylko fakt, że element jest tablicą i typ elementu tablicy jest wymagane do rozróżnienia przeciążeń. Gdy przeciążenie jest oparte na dwóch lub więcej typów tablicy typy elementów mają być nazwane typy. | 16
+Atrybuty | [Atrybuty](#attributes) | Atrybuty mają typ [System.Attribute](xref:System.Attribute)lub typ dziedziczący z niego. | 41
+Atrybuty | [Atrybuty](#attributes) | CLS zezwala tylko podzbiór kodowania atrybutów niestandardowych. Jedynymi typami, które pojawią się w tych kodowaniach są (patrz Partycja IV): [System.Type](xref:System.Type), [System.String](xref:System.String), [System.Char](xref:System.Char), [System.Boolean](xref:System.Boolean), [System.Byte](xref:System.Byte), [System.Int16](xref:System.Int16), [System.Int32](xref:System.Int32), [System.Int64](xref:System.Int64), [System.Single](xref:System.Single), [System.Double](xref:System.Double), oraz każdy typ wyliczenia oparty na podstawowym typie całkowitym zgodnym ze specyfikacją CLS. | 34
+Atrybuty | [Atrybuty](#attributes) | CLS nie zezwala na publicznie widoczne wymagane`modreq`modyfikatory ( , patrz partycja`modopt`II), ale zezwala na opcjonalne modyfikatory ( , patrz Partycja II) nie rozumie. | 35
+Konstruktorów | [Konstruktory](#constructors) | Konstruktor obiektu wywołaniektóre konstruktora wystąpienia jego klasy podstawowej, zanim nastąpi dostęp do danych wystąpienia dziedziczonego. (Nie dotyczy to typów wartości, które nie muszą mieć konstruktorów).  | 21
+Konstruktorów | [Konstruktory](#constructors) | Konstruktora obiektu nie może być wywoływana z wyjątkiem jako część tworzenia obiektu, a obiekt nie może być inicjowany dwukrotnie. | 22
+Wyliczenia | [Wyliczenia](#enumerations) | Podstawowym typem wyliczenia jest wbudowany typ całkowity CLS, nazwa pola jest "value__", a pole to `RTSpecialName`jest oznaczone. |  7
+Wyliczenia | [Wyliczenia](#enumerations) | Istnieją dwa różne rodzaje wyliczenia, wskazane przez obecność lub brak [System.FlagsAttribute](xref:System.FlagsAttribute) (zobacz Partition IV Library) atrybut niestandardowy. Jeden reprezentuje nazwane wartości całkowite; drugi reprezentuje nazwane flagi bitowe, które można połączyć w celu wygenerowania wartości bez nazwy. Wartość nie `enum` jest ograniczona do określonych wartości. |  8
+Wyliczenia | [Wyliczenia](#enumerations) | Literały pola statyczne wyliczenia mają typ samego wyliczenia. |  9
+Zdarzenia | [Zdarzenia](#events) | Metody implementowania zdarzenia są oznaczone `SpecialName` w metadanych. |29
+Zdarzenia | [Zdarzenia](#events) | Dostępność zdarzenia i jego dostępu jest identyczna. |30
+Zdarzenia | [Zdarzenia](#events) | Metody `add` `remove` i metody zdarzenia są obecne lub nieobecne. |31
+Zdarzenia | [Zdarzenia](#events) | I `add` `remove` metody zdarzenia każdy przyjmuje jeden parametr, którego typ określa typ zdarzenia i które są wyprowadzone z [System.Delegate](xref:System.Delegate). |32
+Zdarzenia | [Zdarzenia](#events) | Zdarzenia muszą być zgodne z określonym wzorcem nazewnictwa. Atrybut SpecialName, o którym mowa w zasadzie CLS 29, jest ignorowany w odpowiednich porównaniach nazw i stosuje się do reguł identyfikatora.  |33
+Wyjątki | [Wyjątki](#exceptions) | Obiekty, które są generowane jest typu [System.Exception](xref:System.Exception) lub typu dziedziczenia z niego. Niemniej jednak metody zgodne ze specyfikacją CLS nie są wymagane do blokowania propagacji innych typów wyjątków. | 40
+Ogólne | [Reguły zgodności z CLS](#cls-compliance-rules) | Reguły CLS mają zastosowanie tylko do tych części typu, które są dostępne lub widoczne poza zestawem definiującym. | 1
+Ogólne | [Reguły zgodności z CLS](#cls-compliance-rules) | Członkowie typów niezgodnych ze specyfikacją CLS nie mogą być oznaczani zgodnie z CLS. | 2
+Typy ogólne | [Typy ogólne i elementy członkowskie](#generic-types-and-members) | Typy zagnieżdżone mają co najmniej tyle parametrów ogólnych, co typ otaczający. Parametry ogólne w typie zagnieżdżonym odpowiadają położeniu parametrom ogólnym w jego typie otaczającym.  | 42
+Typy ogólne | [Typy ogólne i elementy członkowskie](#generic-types-and-members) | Nazwa typu ogólnego koduje liczbę parametrów typu zadeklarowanych na typ ie niezagnieżdżonym lub nowo wprowadzonych do typu, jeśli są zagnieżdżone, zgodnie z regułami określonymi powyżej. | 43
+Typy ogólne | [Typy ogólne i elementy członkowskie](#generic-types-and-members) | Typ rodzajowy deklaruje wystarczające ograniczenia, aby zagwarantować, że wszelkie ograniczenia dotyczące typu podstawowego lub interfejsów byłyby spełnione przez ograniczenia typu ogólnego. | 44
+Typy ogólne | [Typy ogólne i elementy członkowskie](#generic-types-and-members) | Typy stosowane jako ograniczenia parametrów ogólnych same w sobie muszą być zgodne ze specyfikacją CLS. | 45
+Typy ogólne | [Typy ogólne i elementy członkowskie](#generic-types-and-members) | Widoczność i dostępność elementów członkowskich (w tym typów zagnieżdżonych) w uprzednio typogólny uważa się za zakres do konkretnej wystąpienia, a nie ogólnej deklaracji typu jako całości. Zakładając, że to, zasady widoczności i dostępności reguły CLS 12 nadal mają zastosowanie. | 46
+Typy ogólne | [Typy ogólne i elementy członkowskie](#generic-types-and-members) | Dla każdej abstrakcyjnej lub wirtualnej metody ogólnej musi istnieć domyślna konkretna (nieabstrakcyjna) implementacja | 47
+Interfejsy | [Interfejsy](#interfaces) | Interfejsy zgodne ze specyfikacją CLS nie wymagają definiowania metod niezgodnych ze specyfikacją CLS w celu ich wdrożenia. | 18
 Interfejsy | [Interfejsy](#interfaces) | Interfejsy zgodne ze specyfikacją CLS nie definiują metod statycznych ani nie definiują pól. | 19
-Elementy członkowskie | [Ogólnie wpisz składowe](#type-members-in-general) | Globalne pola statyczne i metody nie są zgodne ze specyfikacją CLS. | 36
-Elementy członkowskie | -- | Wartość literału statycznego jest określana za pomocą metadanych inicjacji pola. Literał zgodny ze specyfikacją CLS musi mieć wartość określoną w metadanych inicjowania pola, która jest identyczna z tym samym typem co literał (lub typ podstawowy, jeśli ten literał jest `enum`). | 13
-Elementy członkowskie | [Ogólnie wpisz składowe](#type-members-in-general) | Ograniczenie vararg nie jest częścią specyfikacji CLS, a jedyną konwencją wywoływania obsługiwaną przez specyfikację CLS jest standardowa zarządzana Konwencja wywoływania. | 15000
-Konwencje nazewnictwa | [Konwencje nazewnictwa](#naming-conventions) | Zespoły muszą przestrzegać załącznika 7 raportu technicznego 15 standardu Unicode 3.0 w celu określenia zestawu znaków dozwolonego do uruchomienia i dołączenia do identyfikatorów, dostępne online w [formularzach normalizacji Unicode](https://www.unicode.org/unicode/reports/tr15/tr15-18.html). Identyfikatory powinny znajdować się w formacie kanonicznym zdefiniowanym przez normalizację Unicode w postaci C. W celach CLS dwa identyfikatory są takie same, jeśli ich mapowania małymi literami (zgodnie z ustawieniami regionalnymi Unicode, które różnią się od liter, jeden do jednego) są takie same. Oznacza to, że w przypadku dwóch identyfikatorów, które mają być uznawane za różne pod względem CLS, różnią się w więcej niż w ich przypadku. Jednak w celu zastąpienia definicji dziedziczonej, interfejs wiersza polecenia wymaga dokładnego kodowania oryginalnej deklaracji. | 4
-Przeciążenie | [Konwencje nazewnictwa](#naming-conventions) | Wszystkie nazwy wprowadzone w zakresie zgodnym ze specyfikacją CLS powinny być odrębne niezależnie od rodzaju, z wyjątkiem sytuacji, gdy nazwy są identyczne i rozwiązywane przez przeciążanie. Oznacza to, że podczas gdy CTS zezwala na pojedynczy typ do używania tej samej nazwy dla metody i pola, CLS nie. | 5
-Przeciążenie | [Konwencje nazewnictwa](#naming-conventions) | Pola i zagnieżdżone typy powinny różnić się odrębnie przez porównanie identyfikatorów, nawet jeśli CTS zezwala na rozróżnianie unikatowych podpisów. Metody, właściwości i zdarzenia, które mają taką samą nazwę (za pomocą porównania identyfikatorów), różnią się więcej niż tylko zwracanym typem, z wyjątkiem określonych w regule CLS 39 | 6
+Elementy członkowskie | [Wpisywanie elementów członkowskich w ogóle](#type-members-in-general) | Globalne pola statyczne i metody nie są zgodne ze specyfikacją CLS. | 36
+Elementy członkowskie | -- | Wartość literału statycznego jest określona za pomocą metadanych inicjowania pola. Literału zgodnego ze specyfikacją CLS musi mieć wartość określoną w metadanych inicjowania pola, która jest dokładnie tego `enum`samego typu co literał (lub typu źródłowego, jeśli ten literał jest ). | 13
+Elementy członkowskie | [Wpisywanie elementów członkowskich w ogóle](#type-members-in-general) | Ograniczenie vararg nie jest częścią CLS, a jedyną konwencją wywołującą obsługiwaną przez cls jest standardowa konwencja wywoływania zarządzanego. | 15
+Konwencje nazewnictwa | [Konwencje nazewnictwa](#naming-conventions) | Zespoły następują po załączniku 7 do raportu technicznego 15 Standardu Unicode3.0, regulującego zestaw znaków dopuszczonych do uruchamiania i umieszczania ich w identyfikatorach, dostępnych online na [formularzach normalizacji Unicode.](https://www.unicode.org/unicode/reports/tr15/tr15-18.html) Identyfikatory są w formacie kanonicznym zdefiniowanym przez unicode normalization form C. Dla celów CLS dwa identyfikatory są takie same, jeśli ich małe mapowania (określone przez mapowania niewrażliwe na ustawienia regionalne Unicode, jeden do jednego małe litery) są takie same. Oznacza to, że aby w ramach CLS dwa identyfikatory były uważane za różne, różnią się one w większym niż tylko ich przypadku. Jednak w celu zastąpienia dziedziczonej definicji interfejsu i rdzenia cli wymaga precyzyjnego kodowania oryginalnej deklaracji. | 4
+Przeciążenie | [Konwencje nazewnictwa](#naming-conventions) | Wszystkie nazwy wprowadzone w zakresie zgodnym ze specyfikacją CLS powinny być odrębne niezależnie od rodzaju, z wyjątkiem przypadków, gdy nazwy są identyczne i rozwiązane poprzez przeciążenie. Oznacza to, że podczas gdy CTS umożliwia jeden typ używać tej samej nazwy dla metody i pola, CLS nie. | 5
+Przeciążenie | [Konwencje nazewnictwa](#naming-conventions) | Pola i typy zagnieżdżone różnią się tylko od porównania identyfikatorów, nawet jeśli CTS umożliwia odróżnienie odrębnych podpisów. Metody, właściwości i zdarzenia, które mają taką samą nazwę (przez porównanie identyfikatorów) różnią się o więcej niż tylko typ zwracany, z wyjątkiem przypadków określonych w zasadzie CLS 39 | 6
 Przeciążenie | [Overloads](#overloads) | Tylko właściwości i metody mogą być przeciążone. | 37
-Przeciążenie | [Overloads](#overloads) |Właściwości i metody mogą być przeciążone na podstawie liczby i typów ich parametrów, z wyjątkiem operatorów konwersji o nazwie `op_Implicit` i `op_Explicit`, które mogą być również przeciążone na podstawie ich typu zwracanego. | 38
-Przeciążenie | -- | Jeśli dwie lub więcej metod zgodnych ze specyfikacją CLS zadeklarowanych w typie ma taką samą nazwę i, dla określonego zestawu wystąpień typu, mają one te same parametry i zwracane typy, wówczas wszystkie te metody są semantycznie równoważne w tych wystąpieniach typu. | 48
-Właściwości | [Właściwości](#properties) | Metody, które implementują metody pobierającej i ustawiającej właściwość, są oznaczone `SpecialName` w metadanych. | codzienne
-Właściwości | [Właściwości](#properties) | Metody dostępu do właściwości muszą być statyczne, wszystkie być wirtualne lub być wystąpieniem. | 25
-Właściwości | [Właściwości](#properties) | Typ właściwości musi być typem zwracanym metody pobierającej i typem ostatniego argumentu metody ustawiającej. Typy parametrów właściwości są typami parametrów do metody pobierającej i typami wszystkich oprócz końcowych parametrów metody ustawiającej. Wszystkie te typy muszą być zgodne ze specyfikacją CLS i nie mogą być zarządzanymi wskaźnikami (czyli nie są przesyłane przez odwołanie). | 27
-Właściwości | [Właściwości](#properties) | Właściwości muszą być zgodne z określonym wzorcem nazewnictwa. Atrybut `SpecialName`, do którego odwołuje się reguła CLS, jest ignorowany w odpowiednich porównaniach nazw i stosuje się do reguł identyfikatorów. Właściwość ma metodę pobierającą, metodę ustawiającą lub obie te metody. | 28
-Konwersja typu | [Konwersja typu](#type-conversion) | Jeśli podano parametr op_Implicit lub op_Explicit, należy podać alternatywną metodę zapewniania przekształcenie. | 39
-Types | [Typy i podpisy elementów członkowskich typu](#types-and-type-member-signatures) | Opakowane typy wartości nie są zgodne ze specyfikacją CLS. | 3
-Types | [Typy i podpisy elementów członkowskich typu](#types-and-type-member-signatures) | Wszystkie typy występujące w podpisie muszą być zgodne ze specyfikacją CLS. Wszystkie typy tworzące typ ogólny, który tworzy wystąpienie, są zgodne ze specyfikacją CLS. | 11
-Types | [Typy i podpisy elementów członkowskich typu](#types-and-type-member-signatures) | Wpisane odwołania nie są zgodne ze specyfikacją CLS. | 14,5
-Types | [Typy i podpisy elementów członkowskich typu](#types-and-type-member-signatures) | Niezarządzane typy wskaźnika nie są zgodne ze specyfikacją CLS. | 7
-Types | [Typy i podpisy elementów członkowskich typu](#types-and-type-member-signatures) | Klasy zgodne ze specyfikacją CLS, typy wartości i interfejsy nie wymagają implementacji członków niezgodnych ze specyfikacją CLS | 20
-Types | [Typy i podpisy elementów członkowskich typu](#types-and-type-member-signatures) | Element [System. Object](xref:System.Object) jest zgodny ze specyfikacją CLS. Wszystkie inne klasy zgodne ze specyfikacją CLS są dziedziczone z klasy zgodnej ze specyfikacją CLS. | 233
+Przeciążenie | [Overloads](#overloads) |Właściwości i metody mogą być przeciążone tylko na podstawie liczby i typów `op_Implicit` ich `op_Explicit`parametrów, z wyjątkiem operatorów konwersji o nazwie i , które mogą być również przeciążone na podstawie ich typu zwracanego. | 38
+Przeciążenie | -- | Jeżeli dwie lub więcej metod zgodnych ze specyfikacją CLS zadeklarowanych w typie ma taką samą nazwę, a dla określonego zestawu wystąpień typu mają one ten sam parametr i typy zwracane, wszystkie te metody muszą być semantycznie równoważne w tych wystąpieniach typu. | 48
+Właściwości | [Właściwości](#properties) | The methods that implement the getter and setter methods of a property shall be marked `SpecialName` in the metadata. | 24
+Właściwości | [Właściwości](#properties) | Akcesory właściwości muszą być statyczne, wszystkie są wirtualne lub wszystkie są wystąpieniem. | 26
+Właściwości | [Właściwości](#properties) | Typ właściwości jest zwracany typu getter i typ ostatniego argumentu ustawiającego. Typy parametrów właściwości są typy parametrów do getter i typy wszystkich, ale parametr końcowy ustawiania. Wszystkie te typy muszą być zgodne ze specyfikacją CLS i nie mogą być zarządzane wskaźnikami (to oznacza, że nie są przekazywane przez odniesienie). | 27
+Właściwości | [Właściwości](#properties) | Właściwości muszą być zgodne z określonym wzorcem nazewnictwa. Atrybut, `SpecialName` o którym mowa w zasadzie CLS 24, jest ignorowany w odpowiednich porównaniach nazw i stosuje się do zasad identyfikatora. Właściwość ma metodę metody getter, metodę ustawiania lub obie te metody. | 28
+Konwersja typu | [Konwersja typu](#type-conversion) | Jeżeli zapewnione są op_Implicit lub op_Explicit, należy zapewnić alternatywne środki przymusu. | 39
+Typy | [Typy i podpisy elementów członkowskich typu](#types-and-type-member-signatures) | Typy wartości pudełkowych nie są zgodne ze specyfikacją CLS. | 3
+Typy | [Typy i podpisy elementów członkowskich typu](#types-and-type-member-signatures) | Wszystkie typy pojawiające się w podpisie muszą być zgodne ze specyfikacją CLS. Wszystkie typy tworzące wystąpienie typu ogólnego muszą być zgodne ze specyfikacją CLS. | 11
+Typy | [Typy i podpisy elementów członkowskich typu](#types-and-type-member-signatures) | Wpisane odwołania nie są zgodne ze specyfikacją CLS. | 14
+Typy | [Typy i podpisy elementów członkowskich typu](#types-and-type-member-signatures) | Typy wskaźników niezarządzanych nie są zgodne ze specyfikacją CLS. | 17
+Typy | [Typy i podpisy elementów członkowskich typu](#types-and-type-member-signatures) | Klasy, typy wartości i interfejsy zgodne ze specyfikacją CLS nie wymagają implementacji elementów członkowskich niezgodnych ze specyfikacją CLS | 20
+Typy | [Typy i podpisy elementów członkowskich typu](#types-and-type-member-signatures) | [System.Object](xref:System.Object) jest zgodny ze specyfikacją CLS. Każda inna klasa zgodna ze specyfikacją CLS dziedziczy z klasy zgodnej ze specyfikacją CLS. | 23
 
 ### <a name="types-and-type-member-signatures"></a>Typy i podpisy elementów członkowskich typu
 
-Typ [System. Object](xref:System.Object) jest zgodny ze specyfikacją CLS i jest typem podstawowym wszystkich typów obiektów w systemie .NET Framework typu. Dziedziczenie w .NET Framework jest niejawne (na przykład Klasa [String](xref:System.String) niejawnie dziedziczy z klasy `Object`) lub explicit (na przykład Klasa [CultureNotFoundException](xref:System.Globalization.CultureNotFoundException) jawnie dziedziczy z [ Klasa ArgumentException](xref:System.ArgumentException) , która jawnie dziedziczy z klasy [Exception](xref:System.Exception) . Aby typ pochodny był zgodny ze specyfikacją CLS, jego typ podstawowy również musi być zgodny ze specyfikacją CLS.
+Typ [System.Object](xref:System.Object) jest zgodny ze specyfikacją CLS i jest typem podstawowym wszystkich typów obiektów w systemie typu .NET Framework. Dziedziczenie w .NET Framework jest niejawne (na przykład `Object` [String](xref:System.String) klasy niejawnie dziedziczy z klasy) lub jawne (na przykład [CultureNotFoundException](xref:System.Globalization.CultureNotFoundException) klasy jawnie dziedziczy z [ArgumentException](xref:System.ArgumentException) klasy, która jawnie dziedziczy z [Exception](xref:System.Exception) klasy. Aby typ pochodny był zgodny ze specyfikacją CLS, jego typ podstawowy musi być również zgodny ze specyfikacją CLS.
 
-Poniższy przykład przedstawia typ pochodny, którego typ podstawowy nie jest zgodny ze specyfikacją CLS. Definiuje on klasę bazową `Counter`, która używa niepodpisanej 32-bitowej liczby całkowitej jako licznika. Ponieważ Klasa udostępnia funkcje licznika przez Zawijanie liczby całkowitej bez znaku, Klasa jest oznaczona jako niezgodna ze specyfikacją CLS. W związku z tym Klasa pochodna, `NonZeroCounter`, również nie jest zgodna ze specyfikacją CLS.
+W poniższym przykładzie przedstawiono typ pochodny, którego typ podstawowy nie jest zgodny ze specyfikacją CLS. Definiuje klasę podstawową, `Counter` która używa niepodpisanej 32-bitowej liczby całkowitej jako licznika. Ponieważ klasa zapewnia funkcjonalność licznika przez zawijanie niepodpisanej liczby całkowitej, klasa jest oznaczona jako niezgodna ze specyfikacją CLS. W rezultacie klasa pochodna `NonZeroCounter`, również nie jest zgodna ze specyfikacją CLS.
 
 ```csharp
 using System;
@@ -307,41 +307,41 @@ End Class
 '                 ~~~~~~~~~~~~~~
 ```
 
-Wszystkie typy, które pojawiają się w sygnaturach składowych, łącznie z typem zwracanym metody lub typem właściwości, muszą być zgodne ze specyfikacją CLS. Ponadto dla typów ogólnych:
+Wszystkie typy, które pojawiają się w podpisach elementów członkowskich, w tym typ zwracany metody lub typ właściwości, muszą być zgodne ze specyfikacją CLS. Ponadto dla typów ogólnych:
 
-* Wszystkie typy tworzące typ ogólny wystąpienia muszą być zgodne ze specyfikacją CLS.
+* Wszystkie typy, które tworzą wystąpienie typu ogólnego musi być zgodny ze specyfikacją CLS.
 
 * Wszystkie typy używane jako ograniczenia parametrów ogólnych muszą być zgodne ze specyfikacją CLS.
 
-[Wspólny system typów](common-type-system.md) .NET zawiera wiele wbudowanych typów, które są obsługiwane bezpośrednio przez środowisko uruchomieniowe języka wspólnego i są specjalnie zakodowane w metadanych zestawu. Z tych typów wewnętrznych typy wymienione w poniższej tabeli są zgodne ze specyfikacją CLS.
+[System typowego typu](common-type-system.md) .NET zawiera szereg wbudowanych typów, które są obsługiwane bezpośrednio przez wspólny program językowy i są specjalnie zakodowane w metadanych zestawu. Z tych typów wewnętrznych typy wymienione w poniższej tabeli są zgodne ze specyfikacją CLS.
 
 Typ zgodny ze specyfikacją CLS | Opis
 ------------------ | -----------
-[Bajc](xref:System.Byte) | 8-bitowa liczba całkowita bez znaku
-[Int16](xref:System.Int16) | 16-bitowa liczba całkowita ze znakiem
-[Elementem](xref:System.Int32) | 32-bitowa liczba całkowita ze znakiem
-[Int64](xref:System.Int64) | 64-bitowa liczba całkowita ze znakiem
-[Wiersz](xref:System.Single) | Wartość zmiennoprzecinkowa o pojedynczej precyzji
-[Double](xref:System.Double) | Wartość zmiennoprzecinkowa o podwójnej precyzji
-[Typu](xref:System.Boolean) | Typ wartości true lub false
-[Delikatn](xref:System.Char) | Jednostka kodu zakodowana w formacie UTF-16
-[Dokładności](xref:System.Decimal) | Liczba dziesiętna liczb zmiennoprzecinkowych
-[IntPtr](xref:System.IntPtr) | Wskaźnik lub uchwyt rozmiaru zdefiniowanego przez platformę
-[Ciąg](xref:System.String) | Kolekcja zero, jeden lub więcej obiektów char
+[Byte](xref:System.Byte) | 8-bitowa liczba całkowita bez znaku
+[Int16](xref:System.Int16) | 16-bitowa liczba całkowita podpisana
+[Int32](xref:System.Int32) | 32-bitowa liczba całkowita podpisana
+[Int64 (int64)](xref:System.Int64) | 64-bitowa liczba całkowita podpisana
+[Single](xref:System.Single) | Pojedyncza precyzja wartość zmiennoprzecinkową
+[Podwójne](xref:System.Double) | Podwójna precyzja wartości zmiennoprzecinkowej
+[Wartość logiczna](xref:System.Boolean) | typ wartości prawda lub fałsz
+[Char](xref:System.Char) | Jednostka kodu kodowego zakodowanego uTF-16
+[Dziesiętnych](xref:System.Decimal) | Liczba dziesiętna niezmienno-zmienna
+[Intptr](xref:System.IntPtr) | Wskaźnik lub uchwyt rozmiaru zdefiniowanego przez platformę
+[Ciąg](xref:System.String) | Kolekcja obiektów zero, jeden lub więcej Char
 
-Typy wewnętrzne wymienione w poniższej tabeli są niezgodne ze specyfikacją CLS.
+Typy wewnętrzne wymienione w poniższej tabeli nie są zgodne ze specyfikacją CLS.
 
-Niezgodny typ | Opis | Alternatywa zgodna ze specyfikacją CLS
+Typ niezgodny | Opis | Alternatywa zgodna ze specyfikacją CLS
 ------------------ | ----------- | -------------------------
-[SByte](xref:System.SByte) | 8-bitowy typ danych ze znakiem liczb całkowitych | [Int16](xref:System.Int16)
-[UInt16](xref:System.UInt16) | 16-bitowa liczba całkowita bez znaku | [Elementem](xref:System.Int32)
-[Równ](xref:System.UInt32) | 32-bitowa liczba całkowita bez znaku | [Int64](xref:System.Int64)
-[UInt64](xref:System.UInt64) | 64-bitowa liczba całkowita bez znaku | [Int64](xref:System.Int64) (może przepełnić się), [BigInteger](xref:System.Numerics.BigInteger)lub [Double](xref:System.Double)
-[UIntPtr](xref:System.UIntPtr) | Niepodpisany wskaźnik lub dojście | [IntPtr](xref:System.IntPtr)
+[Sbyte](xref:System.SByte) | 8-bitowy podpisany typ danych całkowitych | [Int16](xref:System.Int16)
+[UInt16](xref:System.UInt16) | 16-bitowa liczba całkowita bez znaku | [Int32](xref:System.Int32)
+[UInt32](xref:System.UInt32) | 32-bitowa liczba całkowita bez znaku | [Int64 (int64)](xref:System.Int64)
+[UInt64](xref:System.UInt64) | 64-bitowa liczba całkowita bez znaku | [Int64](xref:System.Int64) (może przepełnić), [BigInteger](xref:System.Numerics.BigInteger)lub [Double](xref:System.Double)
+[Uintptr](xref:System.UIntPtr) | Niepodpisany wskaźnik lub uchwyt | [Intptr](xref:System.IntPtr)
 
-Biblioteka klas .NET Framework lub jakakolwiek inna Biblioteka klas może zawierać inne typy, które nie są zgodne ze specyfikacją CLS; na przykład:
+Biblioteka klas .NET Framework lub inne biblioteki klas mogą zawierać inne typy, które nie są zgodne ze specyfikacją CLS; na przykład:
 
-* Opakowane typy wartości. Poniższy C# przykład tworzy klasę, która ma właściwość publiczną typu `int`* o nazwie `Value`. Ponieważ `int`* jest opakowanym typem wartościowym, kompilator flaguje go jako niezgodny ze specyfikacją CLS.
+* Typy wartości w pudełku. Poniższy przykład języka C# tworzy klasę, która `int`ma `Value`właściwość publiczną typu * o nazwie . Ponieważ `int`* jest typu wartości zapakowane, kompilator flagi go jako niezgodne z CLS.
 
 ```csharp
 using System;
@@ -365,11 +365,11 @@ public unsafe class TestClass
 //        warning CS3003: Type of 'TestClass.Value' is not CLS-compliant
 ```
 
-* Typy odwołań, które są specjalnymi konstrukcjami, które zawierają odwołanie do obiektu i odwołanie do typu.
+* Wpisane odwołania, które są specjalne konstrukcje, które zawierają odwołanie do obiektu i odwołanie do typu.
 
-Jeśli typ nie jest zgodny ze specyfikacją CLS, należy zastosować atrybut [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) z parametrem *iszgodna* z wartością `false`. Aby uzyskać więcej informacji, zobacz sekcję [atrybut CLSCompliantAttribute](#the-clscompliantattribute-attribute) .
+Jeśli typ nie jest zgodny ze specyfikacją CLS, należy zastosować atrybut [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) z parametrem *isCompliant* z wartością `false` do niego. Aby uzyskać więcej informacji, zobacz [sekcję atrybutu CLSCompliantAttribute.](#the-clscompliantattribute-attribute)
 
-Poniższy przykład ilustruje problem zgodności ze specyfikacją CLS w sygnaturze metody i w tworzeniu wystąpienia typu ogólnego. Definiuje klasę `InvoiceItem` z właściwością typu [UInt32](xref:System.UInt32), właściwością typu [Nullable (UInt32)](xref:System.Nullable%601)i konstruktorem z parametrami typu `UInt32` i `Nullable(Of UInt32)`. Podczas próby skompilowania tego przykładu uzyskasz cztery ostrzeżenia kompilatora.
+Poniższy przykład ilustruje problem zgodności cls w podpisie metody i w funkcji wystąpienia typu ogólnego. Definiuje `InvoiceItem` klasę z właściwością typu [UInt32](xref:System.UInt32), właściwość typu [Nullable(Of UInt32)](xref:System.Nullable%601)i konstruktora z parametrami typu `UInt32` i `Nullable(Of UInt32)`. Otrzymasz cztery ostrzeżenia kompilatora podczas próby skompilowania tego przykładu.
 
 ```csharp
 using System;
@@ -457,7 +457,7 @@ End Class
 '       Public Property InvoiceId As UInteger
 ```
 
-Aby wyeliminować ostrzeżenia kompilatora, Zastąp typy niezgodne ze specyfikacją CLS w `InvoiceItem` publicznym interfejsie z zgodnymi typami:
+Aby wyeliminować ostrzeżenia kompilatora, zastąp typy `InvoiceItem` niezgodne ze specyfikacją CLS w interfejsie publicznym zgodnymi typami:
 
 ```csharp
 using System;
@@ -533,7 +533,7 @@ Public Class InvoiceItem
 End Class
 ```
 
-Oprócz określonych typów wymienionych niektóre kategorie typów nie są zgodne ze specyfikacją CLS. Są to między innymi typy wskaźników niezarządzanych i typy wskaźników funkcji. Poniższy przykład generuje ostrzeżenie kompilatora, ponieważ używa wskaźnika do liczby całkowitej, aby utworzyć tablicę liczb całkowitych.
+Oprócz określonych typów wymienionych, niektóre kategorie typów nie są zgodne ze specyfikacją CLS. Należą do nich typy wskaźników niezarządzanych i typy wskaźników funkcji. Poniższy przykład generuje ostrzeżenie kompilatora, ponieważ używa wskaźnika do liczby całkowitej, aby utworzyć tablicę liczb całkowitych.
 
 ```csharp
 using System;
@@ -581,11 +581,11 @@ public class ArrayHelper
 //    UnmanagedPtr1.cs(8,57): warning CS3001: Argument type 'int*' is not CLS-compliant
 ```
 
-Dla klas abstrakcyjnych zgodnych ze specyfikacją CLS (czyli klas oznaczonych C#jako `abstract` w) wszystkie elementy członkowskie klasy muszą również być zgodne ze specyfikacją CLS.
+Dla klas abstrakcyjnych zgodnych ze specyfikacją `abstract` CLS (czyli klas oznaczonych jako c#), wszystkie elementy członkowskie klasy muszą być również zgodne ze specyfikacją CLS.
 
 ### <a name="naming-conventions"></a>Konwencje nazewnictwa
 
-Ponieważ w niektórych językach programowania nie jest rozróżniana wielkość liter, identyfikatory (takie jak nazwy przestrzeni nazw, typy i składowe) muszą różnić się więcej niż wielkością liter. Dwa identyfikatory są uważane za równoważne, jeśli ich mapowania małych liter są takie same. W poniższym C# przykładzie zdefiniowano dwie klasy publiczne, `Person` i `person`. Ponieważ różnią się tylko wielkością liter C# , kompilator flaguje je jako niezgodne ze specyfikacją CLS.
+Ponieważ niektóre języki programowania są bez uwzględniania wielkości liter, identyfikatory (takie jak nazwy przestrzeni nazw, typy i elementy członkowskie) muszą się różnić o więcej niż wielkość liter. Dwa identyfikatory są uważane za równoważne, jeśli ich małe mapowania są takie same. Poniższy przykład języka C# definiuje `Person` dwie `person`klasy publiczne i . Ponieważ różnią się one tylko przez przypadek, kompilator C# flagi je jako niezgodne ze specyfikacją CLS.
 
 ```csharp
 using System;
@@ -607,13 +607,13 @@ public class person
 //    Naming1.cs(6,14): (Location of symbol related to previous warning)
 ```
 
-Identyfikatory języków programowania, takie jak nazwy przestrzeni nazw, typy i elementy członkowskie, muszą być zgodne ze [standardem Unicode 3,0, sprawozdanie techniczne 15, załącznik 7](https://www.unicode.org/reports/tr15/tr15-18.html). Oznacza to, że:
+Identyfikatory języka programowania, takie jak nazwy przestrzeni nazw, typów i elementów członkowskich, muszą być zgodne ze [standardem Unicode 3.0, sprawozdaniem technicznym 15, załącznikiem 7](https://www.unicode.org/reports/tr15/tr15-18.html). Oznacza to, że:
 
-* Pierwszy znak identyfikatora może być dowolną wielką literą Unicode, małą literą, literą litery tytułu, literą modyfikującą, inną literą lub cyfrą. Aby uzyskać informacje dotyczące kategorii znaków Unicode, zobacz Wyliczenie [System. globalizacja. UnicodeCategory](xref:System.Globalization.UnicodeCategory) .
+* Pierwszym znakiem identyfikatora może być dowolna litera jednoliterowa Unicode, mała litera, litera tytułu, litera modyfikatora, inna litera lub litera. Aby uzyskać informacje na temat kategorii znaków Unicode, zobacz [wyliczenie System.Globalization.UnicodeCategory.](xref:System.Globalization.UnicodeCategory)
 
-* Kolejne znaki mogą pochodzić z dowolnej kategorii jako pierwszy znak i mogą również zawierać znaczniki niebędące odstępami, odstępy łączące znaczniki, liczby dziesiętne, interpunkcji łącznika i kody formatowania.
+* Kolejne znaki mogą pochodzić z dowolnej kategorii jako pierwszy znak, a także mogą zawierać znaki bez odstępów, odstępy łączące znaczniki, liczby dziesiętne, znaki interpunkcyjne łączników i kody formatowania.
 
-Przed porównaniem identyfikatorów należy odfiltrować kody formatowania i przekonwertować identyfikatory na postać normalizacji Unicode, ponieważ pojedynczy znak może być reprezentowany przez wiele jednostek kodu zakodowanych w formacie UTF-16. Sekwencje znaków tworzące te same jednostki kodu w formularzu normalizacji Unicode nie są zgodne ze specyfikacją CLS. W poniższym przykładzie zdefiniowano właściwość o nazwie `Å`, która składa się ze znaku ANGSTROM (U + 212B), a druga właściwość o nazwie `Å`, która składa się z znaku Wielka litera A z PIERŚCIENIem powyżej (U + 00C5). C# Kompilator oflagowuje kod źródłowy jako niezgodny ze specyfikacją CLS.
+Przed porównaniem identyfikatorów należy odfiltrować kody formatowania i przekonwertować identyfikatory na formularz Normalizacji Unicode C, ponieważ pojedynczy znak może być reprezentowany przez wiele jednostek kodu zakodowanego w utf-16. Sekwencje znaków, które produkują te same jednostki kodu w unicode normalizacji formularza C nie są zgodne ze specyfikacją CLS. Poniższy przykład definiuje właściwość `Å`o nazwie , która składa się ze znaku ZNAK ANGSTROM SIGN `Å` (U +212B) i drugą właściwość o nazwie, która składa się ze znaku LATIN LITERA A z pierścieniem POWYŻEJ (U + 00C5). Kompilator C# oznacza kod źródłowy jako niezgodny ze specyfikacją CLS.
 
 ```csharp
 public class Size
@@ -677,13 +677,13 @@ End Class
 '                       ~
 ```
 
-Nazwy elementów członkowskich w ramach określonego zakresu (takie jak przestrzenie nazw w obrębie zestawu, typy w przestrzeni nazw lub elementy członkowskie w ramach typu) muszą być unikatowe, z wyjątkiem nazw, które są rozpoznawane za pomocą przeciążenia. To wymaganie jest bardziej rygorystyczne niż w przypadku systemu wspólnego typu, który umożliwia wielu członkom w zakresie posiadanie identycznych nazw, o ile są one różnymi rodzajami elementów członkowskich (na przykład jest to metoda, a jedna to pole). W szczególności dla elementów członkowskich typu:
+Nazwy elementów członkowskich w określonym zakresie (takie jak obszary nazw w zestawie, typy w obszarze nazw lub elementy członkowskie w obrębie typu) muszą być unikatowe, z wyjątkiem nazw, które są rozpoznawane przez przeciążenie. To wymaganie jest bardziej rygorystyczne niż w systemie typu wspólnego, co pozwala wielu elementów członkowskich w zakresie mają identyczne nazwy, o ile są one różne rodzaje elementów członkowskich (na przykład jeden jest metodą, a jeden jest pole). W szczególności dla członków typu:
 
-* Pola i zagnieżdżone typy są rozróżniane wyłącznie nazwami.
+* Pola i typy zagnieżdżone różnią się samą nazwą.
 
-* Metody, właściwości i zdarzenia, które mają taką samą nazwę, muszą różnić się więcej niż tylko zwracanym typem.
+* Metody, właściwości i zdarzenia, które mają taką samą nazwę musi się różnić o więcej niż tylko zwracać typ.
 
-Poniższy przykład ilustruje wymaganie, aby nazwy elementów członkowskich muszą być unikatowe w ramach zakresu. Definiuje klasę o nazwie `Converter`, która zawiera cztery składowe o nazwie `Conversion`. Trzy to metody, a jedna jest właściwością. Metoda, która zawiera parametr `Int64`, ma unikatową nazwę, ale dwie metody z parametrem `Int32` nie są, ponieważ wartość zwracana nie jest uważana za część podpisu elementu członkowskiego. Właściwość `Conversion` również narusza to wymaganie, ponieważ właściwości nie mogą mieć takiej samej nazwy jak przeciążone metody.
+W poniższym przykładzie przedstawiono wymóg, że nazwy elementów członkowskich muszą być unikatowe w ich zakresie. Definiuje klasę o `Converter` nazwie, która `Conversion`zawiera cztery elementy członkowskie o nazwie . Trzy są metody, a jeden jest właściwością. Metoda, która `Int64` zawiera parametr jest jednoznacznie nazwany, ale `Int32` dwie metody z parametrem nie są, ponieważ wartość zwracana nie jest uważany za część podpisu członka. Właściwość `Conversion` również narusza to wymaganie, ponieważ właściwości nie mogą mieć taką samą nazwę jak przeciążone metody.
 
 ```csharp
 using System;
@@ -757,7 +757,7 @@ End Class
 '                                ~~~~~~~~~~
 ```
 
-Poszczególne języki zawierają unikatowe słowa kluczowe, dlatego Języki przeznaczone dla środowiska uruchomieniowego języka wspólnego muszą również zawierać mechanizm odwołujący się do identyfikatorów (takich jak nazwy typów), które pokrywają się ze słowami kluczowymi. Na przykład `case` jest słowem kluczowym w C# obu i Visual Basic. Jednak poniższy Visual Basic przykład jest w stanie odróżnić klasę o nazwie `case` od słowa kluczowego `case` przy użyciu otwierającego i zamykającego nawiasu klamrowego. W przeciwnym razie przykład zostanie wyświetlony komunikat o błędzie "słowo kluczowe nie jest prawidłowe jako identyfikator" i nie można go skompilować.
+Poszczególne języki zawierają unikatowe słowa kluczowe, więc języki, które są kierowane do wspólnego języka runtime musi również zapewnić pewien mechanizm odwoływania się do identyfikatorów (takich jak nazwy typów), które pokrywają się ze słowami kluczowymi. Na przykład `case` jest słowem kluczowym w języku C# i Visual Basic. Jednak w poniższym przykładzie języka Visual Basic jest w stanie `case` rozróżnić klasę o nazwie od słowa kluczowego `case` przy użyciu otwierania i zamykania nawiasów klamrowych. W przeciwnym razie w przykładzie może wywołać komunikat o błędzie "Słowo kluczowe nie jest prawidłowy jako identyfikator" i nie można skompilować.
 
 ```vb
 Public Class [case]
@@ -777,7 +777,7 @@ Public Class [case]
 End Class
 ```
 
-Poniższy C# przykład jest w stanie utworzyć wystąpienie klasy `case` za pomocą @ symbol, aby odróżnić identyfikator od słowa kluczowego języka. Bez niej, C# kompilator wyświetli dwa komunikaty o błędach, "Oczekiwano typu" i "wyrażenie dotyczące nieprawidłowego terminu". "
+Poniższy przykład języka C# jest w `case` stanie utworzyć wystąpienia klasy przy użyciu symbolu @ do rozróżniania identyfikatora od słowa kluczowego języka. Bez niego kompilator Języka C# wyświetlałby dwa komunikaty o błędach: "Typ oczekiwany" i "Nieprawidłowe wyrażenie termin "case".
 
 ```csharp
 using System;
@@ -794,15 +794,15 @@ public class Example
 
 ### <a name="type-conversion"></a>Konwersja typu
 
-Common Language Specification definiuje dwa operatory konwersji:
+Specyfikacja języka wspólnego definiuje dwa operatory konwersji:
 
-* `op_Implicit`, który jest używany do rozszerzania konwersji, które nie powodują utraty danych lub dokładności. Na przykład struktura [dziesiętna](xref:System.Decimal) zawiera przeciążony operator `op_Implicit`, aby konwertować wartości typów całkowitych i wartości [Char](xref:System.Char) na wartości `Decimal`.
+* `op_Implicit`, który jest używany do rozszerzania konwersji, które nie powodują utraty danych lub precyzji. Na przykład struktura [dziesiętna](xref:System.Decimal) zawiera `op_Implicit` przeciążony operator do konwersji wartości `Decimal` typów całkowitych i wartości [Char](xref:System.Char) do wartości.
 
-* `op_Explicit`, który jest używany na potrzeby konwersji zawężających, które mogą spowodować utratę wielkości (wartość jest konwertowana na wartość, która ma mniejszy zakres) lub precyzję. Na przykład struktura `Decimal` zawiera przeciążony operator `op_Explicit` do konwersji [podwójnych](xref:System.Double) i [pojedynczych](xref:System.Single) wartości na `Decimal` oraz do konwersji wartości `Decimal` na wartości całkowite, `Double`, `Single`i `Char`.
+* `op_Explicit`, który jest używany do zawężania konwersji, które mogą spowodować utratę wielkości (wartość jest konwertowana na wartość, która ma mniejszy zakres) lub precyzji. Na przykład `Decimal` struktura zawiera przeciążony `op_Explicit` operator do konwersji `Decimal` [double](xref:System.Double) i [single](xref:System.Single) wartości do `Single`i `Char`do konwersji `Decimal` wartości do wartości całkowitych, `Double`, , i .
 
-Jednak nie wszystkie języki obsługują przeciążanie operatora lub definicję operatorów niestandardowych. Jeśli zdecydujesz się zaimplementować te operatory konwersji, należy również podać alternatywny sposób wykonywania konwersji. Zalecamy dostarczenie metod `From`XXX i `To`xxx.
+Jednak nie wszystkie języki obsługują przeciążenie operatora lub definicji operatorów niestandardowych. Jeśli zdecydujesz się zaimplementować te operatory konwersji, należy również podać alternatywny sposób wykonania konwersji. Zalecamy podanie `From`metod Xxx `To`i Xxx.
 
-W poniższym przykładzie zdefiniowano Konwersje jawne zgodne ze specyfikacją CLS. Tworzy klasę `UDouble`, która reprezentuje podpisaną liczbę zmiennoprzecinkową o podwójnej precyzji. Zapewnia to niejawne konwersje z `UDouble` do `Double` i dla jawnych konwersji z `UDouble` do `Single`, `Double` `UDouble`i `Single` `UDouble`. Definiuje również metodę `ToDouble` jako alternatywę dla operatora niejawnej konwersji, metody `ToSingle`, `FromDouble`i `FromSingle` jako alternatywy dla operatorów jawnej konwersji.
+W poniższym przykładzie zdefiniowano konwersje niejawne zgodne ze specyfikacją CLS. Tworzy `UDouble` klasę, która reprezentuje podpisaną podwójną precyzję, numer zmiennoprzecinkowy. Przewiduje ona konwersje `UDouble` `Double` niejawne z `UDouble` do `Single` `Double` i `UDouble`dla `Single` `UDouble`jawnych konwersji z do , do , i do . `ToDouble` Definiuje również metodę jako alternatywę dla niejawnego `ToSingle` `FromDouble`operatora `FromSingle` konwersji i , i metody jako alternatywy dla jawnych operatorów konwersji.
 
 ```csharp
 using System;
@@ -949,7 +949,7 @@ End Structure
 
 Tablice zgodne ze specyfikacją CLS są zgodne z następującymi regułami:
 
-* Wszystkie wymiary tablicy muszą mieć dolną granicę równą zero. Poniższy przykład tworzy tablicę niezgodną ze specyfikacją CLS z dolną granicą. Należy pamiętać, że pomimo obecności atrybutu [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) kompilator nie wykrywa, że tablica zwracana przez metodę `Numbers.GetTenPrimes` nie jest zgodna ze specyfikacją CLS.
+* Wszystkie wymiary tablicy muszą mieć dolną obwiednię zerową. Poniższy przykład tworzy tablicę niezgodną ze specyfikacją CLS z dolną obwiednią. Należy zauważyć, że pomimo obecności [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) atrybut, kompilator nie wykrywa, że tablica zwracana przez `Numbers.GetTenPrimes` metodę nie jest zgodna ze specyfikacją CLS.
 
   ```csharp
   [assembly: CLSCompliant(true)]
@@ -996,7 +996,7 @@ Tablice zgodne ze specyfikacją CLS są zgodne z następującymi regułami:
   End Class
   ```
 
-* Wszystkie elementy tablicy muszą zawierać typy zgodne ze specyfikacją CLS. W poniższym przykładzie zdefiniowano dwie metody, które zwracają tablice niezgodne ze specyfikacją CLS. Pierwszy zwraca tablicę wartości [UInt32](xref:System.UInt32) . Druga zwraca tablicę [obiektów](xref:System.Object) , która zawiera wartości [Int32](xref:System.Int32) i `UInt32`. Chociaż kompilator identyfikuje pierwszą tablicę jako niezgodną ze względu na typ `UInt32`, nie rozpozna, że druga tablica zawiera elementy niezgodne ze specyfikacją CLS.
+* Wszystkie elementy tablicy muszą składać się z typów zgodnych ze specyfikacją CLS. W poniższym przykładzie zdefiniowano dwie metody, które zwracają tablice niezgodne ze specyfikacją CLS. Pierwszy zwraca tablicę [wartości UInt32.](xref:System.UInt32) Drugi zwraca [object](xref:System.Object) tablicy, która zawiera `UInt32` [Int32](xref:System.Int32) i wartości. Mimo że kompilator identyfikuje pierwszą tablicę jako niezgodną ze względu na jej `UInt32` typ, nie rozpoznaje, że druga tablica zawiera elementy niezgodne ze specyfikacją CLS.
 
   ```csharp
   using System;
@@ -1038,7 +1038,7 @@ Tablice zgodne ze specyfikacją CLS są zgodne z następującymi regułami:
   '    warning BC40027: Return type of function 'GetTenPrimes' is not CLS-compliant.
   ```
 
-* Rozpoznawanie przeciążenia dla metod, które mają parametry tablicowe, jest oparte na faktach, że są tablicami i według ich typu elementu. Z tego powodu następująca definicja przeciążonej metody `GetSquares` jest zgodna ze specyfikacją CLS.
+* Rozpoznawanie przeciążenia dla metod, które mają parametry tablicy opiera się na fakcie, że są one tablice i na ich typ elementu. Z tego powodu następująca definicja `GetSquares` metody przeciążonej jest zgodna ze specyfikacją CLS.
 
   ```csharp
   using System;
@@ -1108,13 +1108,13 @@ Tablice zgodne ze specyfikacją CLS są zgodne z następującymi regułami:
 
 ### <a name="interfaces"></a>Interfejsy
 
-Interfejsy zgodne ze specyfikacją CLS mogą definiować właściwości, zdarzenia i metody wirtualne (metody bez implementacji). Interfejs zgodny ze specyfikacją CLS nie może mieć następujących elementów:
+Interfejsy zgodne ze specyfikacją CLS mogą definiować właściwości, zdarzenia i metody wirtualne (metody bez implementacji). Interfejs zgodny ze specyfikacją CLS nie może mieć żadnej z następujących czynności:
 
-* Metody statyczne lub pola statyczne. C# Kompilator generuje błędy kompilatora, jeśli zdefiniujesz statyczną składową w interfejsie.
+* Metody statyczne lub pola statyczne. Kompilator C# generuje błędy kompilatora, jeśli zdefiniujesz statyczny element członkowski w interfejsie.
 
-* Pola. C# Kompilator generuje błędy kompilatora, jeśli zdefiniujesz pole w interfejsie.
+* Pola. C# kompilator generuje błędy kompilatora, jeśli zdefiniujesz pole w interfejsie.
 
-* Metody, które nie są zgodne ze specyfikacją CLS. Na przykład następująca definicja interfejsu zawiera metodę `INumber.GetUnsigned`, która jest oznaczona jako niezgodna ze specyfikacją CLS. Ten przykład generuje ostrzeżenie kompilatora.
+* Metody, które nie są zgodne ze specyfikacją CLS. Na przykład następująca definicja interfejsu `INumber.GetUnsigned`zawiera metodę, która jest oznaczona jako niezgodna ze specyfikacją CLS. W tym przykładzie generuje ostrzeżenie kompilatora.
 
   ```csharp
   using System;
@@ -1146,9 +1146,9 @@ Interfejsy zgodne ze specyfikacją CLS mogą definiować właściwości, zdarzen
     '                                      ~~~~~~~~~~~
   ```
 
-  Ze względu na tę regułę typy zgodne ze specyfikacją CLS nie są wymagane do implementacji członków niezgodnych ze specyfikacją CLS. Jeśli struktura zgodna ze specyfikacją CLS uwidacznia klasę, która implementuje interfejs niezgodny ze specyfikacją CLS, powinien również udostępnić konkretne implementacje wszystkich członków niezgodnych ze specyfikacją CLS.
+  Z powodu tej reguły typy zgodne ze specyfikacją CLS nie są wymagane do implementowania elementów członkowskich niezgodnych ze specyfikacją CLS. Jeśli struktura zgodna ze specyfikacją CLS udostępnia klasę, która implementuje interfejs zgodny ze specyfikacją CLS, powinna również zapewnić konkretne implementacje wszystkich elementów członkowskich niezgodnych ze specyfikacją CLS.
 
-Kompilatory języka zgodne ze specyfikacją CLS muszą również zezwalać klasie na udostępnianie oddzielnych implementacji elementów członkowskich o tej samej nazwie i podpisie w wielu interfejsach. C#obsługuje jawne implementacje interfejsu w celu zapewnienia różnych implementacji identycznie nazwanych metod. Poniższy przykład ilustruje ten scenariusz, definiując klasę `Temperature` implementującą interfejsy `ICelsius` i `IFahrenheit` jako jawne implementacje interfejsu.
+Kompilatory języka zgodne ze specyfikacją CLS muszą również zezwalać klasie na dostarczanie oddzielnych implementacji elementów członkowskich, które mają taką samą nazwę i podpis w wielu interfejsach. C# obsługuje implementacje interfejsu jawnego, aby zapewnić różne implementacje metod o identycznej nazwie. W poniższym przykładzie przedstawiono ten `Temperature` scenariusz, definiując klasę, która implementuje `ICelsius` i `IFahrenheit` interfejsy jako implementacje interfejsu jawnego.
 
 ```csharp
 using System;
@@ -1251,7 +1251,7 @@ End Module
 
 Wyliczenia zgodne ze specyfikacją CLS muszą być zgodne z następującymi regułami:
 
-* Podstawowym typem wyliczenia musi być wewnętrzna liczba całkowita zgodna ze specyfikacją CLS ([Byte](xref:System.Byte), [Int16](xref:System.Int16), [Int32](xref:System.Int32)lub [Int64](xref:System.Int64)). Na przykład poniższy kod próbuje zdefiniować Wyliczenie, którego typem podstawowym jest [UInt32](xref:System.UInt32) i generuje ostrzeżenie kompilatora.
+* Podstawowym typem wyliczenia musi być wewnętrzna liczba całkowita zgodna ze specyfikacją CLS ([Byte](xref:System.Byte), [Int16](xref:System.Int16), [Int32](xref:System.Int32)lub [Int64](xref:System.Int64)). Na przykład poniższy kod próbuje zdefiniować wyliczenie, którego podstawowym typem jest [UInt32](xref:System.UInt32) i generuje ostrzeżenie kompilatora.
 
     ```csharp
     using System;
@@ -1301,31 +1301,31 @@ Wyliczenia zgodne ze specyfikacją CLS muszą być zgodne z następującymi regu
     '                ~~~~
     ```
 
-* Typ wyliczeniowy musi mieć pole pojedynczego wystąpienia o nazwie `Value__`, które jest oznaczone atrybutem `FieldAttributes.RTSpecialName`. Dzięki temu można odwołać się do wartości pola niejawnie.
+* Typ wyliczenia musi mieć pole `Value__` pojedynczego wystąpienia `FieldAttributes.RTSpecialName` o nazwie oznaczone atrybutem. Dzięki temu można odwoływać się do wartości pola niejawnie.
 
-* Wyliczenie zawiera literał pól statycznych, których typy pasują do typu wyliczenia. Na przykład, jeśli zdefiniujesz `State` Wyliczenie z wartościami `State.On` i `State.Off`, `State.On` i `State.Off` są polami literałów statycznych, których typ to `State`.
+* Wyliczenie zawiera literały pola statyczne, których typy są zgodne z typem samego wyliczenia. Na przykład, jeśli `State` zdefiniujesz wyliczenie `State.On` z wartościami `State.Off`i , `State.On` i `State.Off` są zarówno literały pola statyczne, których typem jest `State`.
 
 * Istnieją dwa rodzaje wyliczeń:
 
-  * Wyliczenie, które reprezentuje zestaw wzajemnie wykluczających się wartości o nazwach całkowitych. Ten typ wyliczenia jest wskazywany przez brak atrybutu niestandardowego [System. FlagsAttribute](xref:System.FlagsAttribute) .
+  * Wyliczenie, które reprezentuje zestaw wzajemnie się wykluczają, nazwane wartości całkowite. Ten typ wyliczenia jest wskazywany przez brak atrybutu niestandardowego [System.FlagsAttribute.](xref:System.FlagsAttribute)
 
-  * Wyliczenie, które reprezentuje zestaw flag bitowych, które można połączyć w celu wygenerowania nienazwanej wartości. Ten typ wyliczenia jest wskazywany przez obecność atrybutu niestandardowego [System. FlagsAttribute](xref:System.FlagsAttribute) .
+  * Wyliczenie, które reprezentuje zestaw flag bitowych, które można połączyć, aby wygenerować wartość bez nazwy. Ten typ wyliczenia jest wskazywany przez obecność Atrybutu niestandardowego [System.FlagsAttribute.](xref:System.FlagsAttribute)
 
-Aby uzyskać więcej informacji, zapoznaj się z dokumentacją struktury [enum](xref:System.Enum) .
+Aby uzyskać więcej informacji, zobacz dokumentację struktury [wyliczenia.](xref:System.Enum)
 
-* Wartość wyliczenia nie jest ograniczona do zakresu określonych wartości. Innymi słowy, zakres wartości w wyliczeniu jest zakresem jego wartości źródłowej. Można użyć metody `Enum.IsDefined`, aby określić, czy określona wartość jest elementem członkowskim wyliczenia.
+* Wartość wyliczenia nie jest ograniczona do zakresu jego określonych wartości. Innymi słowy zakres wartości w wyliczeniu jest zakres jego wartości bazowej. Metoda służy `Enum.IsDefined` do określenia, czy określona wartość jest członkiem wyliczenia.
 
-### <a name="type-members-in-general"></a>Ogólnie wpisz składowe
+### <a name="type-members-in-general"></a>Wpisywanie elementów członkowskich w ogóle
 
-Common Language Specification wymaga, aby wszystkie pola i metody były dostępne jako elementy członkowskie konkretnej klasy. W związku z tym globalne pola i metody statyczne (czyli pola statyczne lub metody, które są zdefiniowane niezależnie od typu) nie są zgodne ze specyfikacją CLS. Jeśli spróbujesz dołączyć pole globalne lub metodę w kodzie źródłowym, C# kompilator generuje błąd kompilatora.
+Specyfikacja języka wspólnego wymaga dostępu do wszystkich pól i metod jako członków określonej klasy. W związku z tym globalne pola statyczne i metody (czyli pola statyczne lub metody, które są zdefiniowane z wyjątkiem typu) nie są zgodne ze specyfikacją CLS. Jeśli spróbujesz uwzględnić globalne pole lub metodę w kodzie źródłowym, kompilator C# generuje błąd kompilatora.
 
-Common Language Specification obsługuje tylko standardową konwencję wywoływania zarządzanego. Nie obsługuje ona niezarządzanych konwencji wywoływania i metod z listami zmiennych argumentów oznaczonych za pomocą słowa kluczowego `varargs`. W przypadku list zmiennych argumentów, które są zgodne ze standardową konwencją wywoływania zarządzanego, Użyj atrybutu [ParamArrayAttribute](xref:System.ParamArrayAttribute) lub implementacji poszczególnych języków, takich jak słowo kluczowe `params` w C# i słowa kluczowego `ParamArray` w Visual Basic.
+Specyfikacja języka wspólnego obsługuje tylko standardową konwencję wywoływania zarządzanego. Nie obsługuje niezarządzanych konwencji i metod wywoływania z listami argumentów zmiennych oznaczonych `varargs` słowem kluczowym. W przypadku list argumentów zmiennych, które są zgodne ze standardową konwencją wywoływania zarządzanego, należy użyć `ParamArray` atrybutu [ParamArrayAttribute](xref:System.ParamArrayAttribute) lub implementacji poszczególnych języków, takich jak `params` słowo kluczowe w języku C# i słowo kluczowe w języku Visual Basic.
 
-### <a name="member-accessibility"></a>Ułatwienia dostępu członków
+### <a name="member-accessibility"></a>Dostępność elementów członkowskich
 
-Zastępowanie dziedziczonego elementu członkowskiego nie może zmienić dostępności tego elementu członkowskiego. Na przykład metoda publiczna w klasie bazowej nie może zostać zastąpiona przez prywatną metodę w klasie pochodnej. Istnieje jeden wyjątek: `protected internal` (in C#) lub `Protected Friend` (w Visual Basic) składowej w jednym zestawie, który jest zastępowany przez typ w innym zestawie.  W takim przypadku dostępność przesłonięcia jest `Protected`.
+Zastąpienie dziedziczonego elementu członkowskiego nie może zmienić dostępności tego elementu członkowskiego. Na przykład metoda publiczna w klasie podstawowej nie może zostać zastąpiona metodą prywatną w klasie pochodnej. Istnieje jeden wyjątek: `protected internal` (w języku `Protected Friend` C#) lub (w języku Visual Basic) element członkowski w jednym zestawie, który jest zastępowany przez typ w innym zestawie.  W takim przypadku dostępność zastąpienia wynosi `Protected`.
 
-Poniższy przykład ilustruje błąd generowany, gdy atrybut [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) jest ustawiony na `true`i `Person`, który jest klasą pochodną `Animal`, próbuje zmienić dostępność właściwości `Species` z publicznego do prywatnego. Przykład został pomyślnie skompilowany, jeśli jego dostępność została zmieniona na publiczną.
+W poniższym przykładzie przedstawiono błąd generowany, gdy atrybut [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) jest ustawiony na `true`, i `Person`, który jest klasą wyprowadzoną z `Animal`, próbuje zmienić dostępność `Species` właściwości z publicznych na prywatne. Przykład kompiluje się pomyślnie, jeśli jego dostępność zostanie zmieniona na publiczne.
 
 ```csharp
 using System;
@@ -1451,7 +1451,7 @@ End Module
 '         Private Overrides ReadOnly Property Species As String
 ```
 
-Typy w podpisie składowej muszą być dostępne za każdym razem, gdy ten element członkowski jest dostępny. Na przykład oznacza to, że publiczna składowa nie może zawierać parametru, którego typem jest Private, protected lub internal. Poniższy przykład ilustruje błąd kompilatora, który powstaje, gdy Konstruktor klasy `StringWrapper` uwidacznia `StringOperationType` wewnętrzną wartość wyliczenia, która określa, w jaki sposób wartość ciągu powinna być opakowana.
+Typy w podpisie elementu członkowskiego muszą być dostępne, gdy ten element członkowski jest dostępny. Na przykład oznacza to, że element członkowski nie może zawierać parametru, którego typ jest prywatny, chroniony lub wewnętrzny. W poniższym przykładzie przedstawiono błąd kompilatora, który powoduje, że konstruktor `StringWrapper` klasy udostępnia wewnętrzną `StringOperationType` wartość wyliczenia, która określa, jak wartość ciągu powinna być opakowana.
 
 ```csharp
 using System;
@@ -1521,9 +1521,9 @@ End Enum
 
 ### <a name="generic-types-and-members"></a>Typy ogólne i elementy członkowskie
 
-Zagnieżdżone typy zawsze mają co najmniej tyle parametrów ogólnych jak ich typ otaczający. Odnoszą się one do parametrów ogólnych w typie otaczającym. Typ ogólny może również zawierać nowe parametry ogólne.
+Typy zagnieżdżone zawsze mają co najmniej tyle parametrów ogólnych, co ich typ otaczający. Odpowiadają one według pozycji parametrów ogólnych w typie otaczającym. Typ ogólny może również zawierać nowe parametry ogólne.
 
-Relacja między parametrami typu ogólnego typu zawierającego i jego zagnieżdżonymi typami może być ukryta przez składnię poszczególnych języków. W poniższym przykładzie typ ogólny `Outer<T>` zawiera dwie klasy zagnieżdżone, `Inner1A` i `Inner1B<U>`. Wywołania metody `ToString`, którą każda klasa dziedziczy z `Object.ToString`, pokazują, że każda klasa zagnieżdżona zawiera parametry typu klasy zawierającej.
+Relacja między parametrami typu ogólnego typu zawierającego i jego zagnieżdżonymi typami może być ukryta przez składnię poszczególnych języków. W poniższym przykładzie typ `Outer<T>` ogólny zawiera dwie `Inner1A` `Inner1B<U>`klasy zagnieżdżone i . Wywołania `ToString` metody, z której dziedziczy każda `Object.ToString`klasa, pokazują, że każda klasa zagnieżdżona zawiera parametry typu jej klasy zawierającej.
 
 ```csharp
 using System;
@@ -1620,9 +1620,9 @@ End Module
 '       Outer`1+Inner1B`1[System.String,System.Int32]
 ```
 
-Nazwy typów ogólnych są zakodowane w postaci *nazwy*"*n*, gdzie *name* jest nazwą typu, *`* jest literałem znaku, a *n* to liczba parametrów zadeklarowanych w typie, lub dla zagnieżdżonych typów ogólnych, liczba nowych wprowadzono parametry typu. To kodowanie nazw typów ogólnych jest szczególnie przydatne dla deweloperów korzystających z odbicia w celu uzyskania dostępu do typów ogólnych z aspektami CLS w bibliotece.
+Nazwy typów ogólnych są kodowane w *nazwie*formularza '*n*, gdzie *nazwa* jest nazwą typu, *`* jest literałznaku, a *n* jest liczbą parametrów zadeklarowanych dla typu lub, dla zagnieżdżonych typów ogólnych, liczbą nowo wprowadzonych parametrów typu. To kodowanie nazw typów ogólnych jest szczególnie interesujące dla deweloperów, którzy używają odbicia, aby uzyskać dostęp do typów ogólnych skarg CLS w bibliotece.
 
-Jeśli ograniczenia są stosowane do typu generycznego, wszystkie typy używane jako ograniczenia muszą również być zgodne ze specyfikacją CLS. W poniższym przykładzie zdefiniowano klasę o nazwie `BaseClass`, która jest niezgodna ze specyfikacją CLS, i klasy generycznej o nazwie `BaseCollection` której parametr typu musi pochodzić od `BaseClass`. Ale ponieważ `BaseClass` nie jest zgodny ze specyfikacją CLS, kompilator emituje ostrzeżenie.
+Jeśli ograniczenia są stosowane do typu ogólnego, wszystkie typy używane jako ograniczenia muszą być również zgodne ze specyfikacją CLS. Poniższy przykład definiuje klasę `BaseClass` o nazwie, która nie jest zgodna ze specyfikacją CLS i klasę ogólną o nazwie, `BaseCollection` której parametr typu musi pochodzić od `BaseClass`. Ale `BaseClass` ponieważ nie jest zgodny ze specyfikacją CLS, kompilator emituje ostrzeżenie.
 
 ```csharp
 using System;
@@ -1654,7 +1654,7 @@ End Class
 '                                        ~~~~~~~~~
 ```
 
-Jeśli typ ogólny pochodzi od generycznego typu podstawowego, musi ponownie zadeklarować wszelkie ograniczenia, aby można było zagwarantować, że ograniczenia dotyczące typu podstawowego również są spełnione. W poniższym przykładzie zdefiniowano `Number<T>`, która może reprezentować dowolny typ liczbowy. Definiuje również klasę `FloatingPoint<T>`, która reprezentuje wartość zmiennoprzecinkową. Jednak kod źródłowy nie zostanie skompilowany, ponieważ nie ma zastosowania ograniczenia dotyczącego `Number<T>` (to T musi być typem wartości), aby `FloatingPoint<T>`.
+Jeśli typ ogólny pochodzi z ogólnego typu podstawowego, musi ponownie zadeklarować wszelkie ograniczenia, aby zagwarantować, że ograniczenia typu podstawowego są również spełnione. Poniższy przykład definiuje, `Number<T>` który może reprezentować dowolny typ liczbowy. Definiuje również `FloatingPoint<T>` klasę, która reprezentuje wartość zmiennoprzecinkową. Jednak kod źródłowy nie może skompilować, ponieważ nie `Number<T>` stosuje ograniczenia na (że `FloatingPoint<T>`T musi być typem wartości) do .
 
 ```csharp
 using System;
@@ -1755,7 +1755,7 @@ End Class
 '                                                          ~
 ```
 
-Przykład zostanie skompilowany pomyślnie, jeśli ograniczenie zostanie dodane do klasy `FloatingPoint<T>`.
+Przykład kompiluje pomyślnie, jeśli ograniczenie jest `FloatingPoint<T>` dodawany do klasy.
 
 ```csharp
 using System;
@@ -1847,9 +1847,9 @@ Public Class FloatingPoint(Of T As Structure) : Inherits Number(Of T)
 End Class
 ```
 
-Common Language Specification nakładają się na model tworzenia wystąpień dla zagnieżdżonych typów i chronionych elementów członkowskich. Otwarte typy ogólne nie mogą ujawniać pól ani członków z podpisami zawierającymi określone wystąpienie zagnieżdżonego, chronionego typu ogólnego. Typy nieogólne, które zwiększają wystąpienie określonego wystąpienia generycznej klasy podstawowej lub interfejsu, nie mogą ujawniać pól ani elementów członkowskich z podpisami zawierającymi różne wystąpienia zagnieżdżonego, chronionego typu ogólnego.
+Specyfikacja języka wspólnego nakłada konserwatywny model wystąpienia dla typów zagnieżdżonych i chronionych elementów członkowskich. Otwórz typy ogólne nie można uwidaczniać pól lub elementów członkowskich z podpisami, które zawierają określone wystąpienia zagnieżdżonego, chronionego typu ogólnego. Typy nierodzajowe, które rozszerzają określony wystąpienia ogólnej klasy podstawowej lub interfejsu nie można uwidaczniać pól lub elementów członkowskich z podpisów, które zawierają różne wystąpienia zagnieżdżonego, chronionego typu ogólnego.
 
-W poniższym przykładzie zdefiniowano typ ogólny, `C1<T>`i chronioną klasę `C1<T>.N`. `C1<T>` ma dwie metody, `M1` i `M2`. Jednakże `M1` nie jest zgodny ze specyfikacją CLS, ponieważ próbuje zwrócić obiekt `C1<int>.N` z `C1<T>`. Druga klasa, `C2`, pochodzi od `C1<long>`. Ma dwie metody, `M3` i `M4`. `M3` jest niezgodna ze specyfikacją CLS, ponieważ próbuje zwrócić obiekt `C1<int>.N` z podklasy `C1<long>`. Należy zauważyć, że kompilatory języka mogą być jeszcze bardziej restrykcyjne. W tym przykładzie Visual Basic wyświetla błąd podczas próby skompilowania `M4`.
+W poniższym przykładzie zdefiniowano typ ogólny `C1<T>` `C1<T>.N`i klasę chronioną . `C1<T>`ma dwie metody `M1` `M2`i . Jednak `M1` nie jest zgodny ze specyfikacją `C1<int>.N` CLS, `C1<T>`ponieważ próbuje zwrócić obiekt z . Druga klasa, `C2`pochodzi od `C1<long>`. Ma dwie metody `M3` i `M4`. `M3`nie jest zgodny ze specyfikacją `C1<int>.N` CLS, ponieważ próbuje `C1<long>`zwrócić obiekt z podklasy . Należy zauważyć, że kompilatory języka mogą być jeszcze bardziej restrykcyjne. W tym przykładzie visual basic wyświetla błąd podczas `M4`próby skompilowania .
 
 ```csharp
 using System;
@@ -1925,9 +1925,9 @@ End Class
 
 Konstruktory w klasach i strukturach zgodnych ze specyfikacją CLS muszą być zgodne z następującymi regułami:
 
-* Konstruktor klasy pochodnej musi wywoływać konstruktora wystąpienia swojej klasy bazowej przed uzyskaniem dostępu do danych dziedziczonego wystąpienia. To wymaganie wynika z faktu, że konstruktory klasy bazowej nie są dziedziczone przez ich klasy pochodne. Ta zasada nie ma zastosowania do struktur, które nie obsługują bezpośredniego dziedziczenia.
+* Konstruktor klasy pochodnej musi wywołać konstruktora wystąpienia jego klasy podstawowej, zanim uzyskuje dostęp do danych wystąpienia dziedziczonego. Wymaganie to wynika z faktu, że konstruktory klasy podstawowej nie są dziedziczone przez ich klas pochodnych. Ta reguła nie ma zastosowania do struktur, które nie obsługują dziedziczenia bezpośredniego.
 
-  Zazwyczaj kompilatory wymuszają tę regułę niezależnie od zgodności ze specyfikacją CLS, jak pokazano w poniższym przykładzie. Tworzy klasę `Doctor`, która jest pochodną klasy `Person`, ale Klasa `Doctor` nie może wywołać konstruktora klasy `Person` w celu zainicjowania pól dziedziczonego wystąpienia.
+  Zazwyczaj kompilatory wymuszają tę regułę niezależnie od zgodności z cls, jak pokazano w poniższym przykładzie. Tworzy `Doctor` klasę, która jest pochodną `Person` klasy, `Doctor` ale klasa `Person` nie może wywołać konstruktora klasy, aby zainicjować pola wystąpienia dziedziczone.
 
     ```csharp
     using System;
@@ -2046,34 +2046,34 @@ Konstruktory w klasach i strukturach zgodnych ze specyfikacją CLS muszą być z
     '                  ~~~
     ````
 
-* Konstruktor obiektów nie może zostać wywołany z wyjątkiem tworzenia obiektu. Ponadto nie można dwukrotnie zainicjować obiektu. Na przykład oznacza to, że `Object.MemberwiseClone` nie może wywoływać konstruktorów.
+* Nie można wywołać konstruktora obiektu, z wyjątkiem utworzenia obiektu. Ponadto obiekt nie może zostać zainicjowany dwukrotnie. Na przykład oznacza `Object.MemberwiseClone` to, że nie może wywoływać konstruktorów.
 
 ### <a name="properties"></a>Właściwości
 
-Właściwości typów zgodnych ze specyfikacją CLS muszą być zgodne z następującymi regułami:
+Właściwości w typach zgodnych ze specyfikacją CLS muszą być zgodne z następującymi regułami:
 
-* Właściwość musi mieć metody ustawiającej, pobierającej lub obu. W zestawie są one implementowane jako metody specjalne, co oznacza, że będą wyświetlane jako oddzielne metody (metoda pobierająca ma nazwę `get`\_*PropertyName* , a Metoda ustawiająca jest `set`\_*PropertyName*) oznaczona jako `SpecialName` w metadane zestawu. C# Kompilator wymusza tę regułę automatycznie bez konieczności stosowania atrybutu <xref:System.CLSCompliantAttribute>.
+* Właściwość musi mieć ustawiacz, getter lub obu. W zestawie są one implementowane jako metody specjalne, co oznacza, że będą one `get` \_wyświetlane jako oddzielne metody (getter `SpecialName` nosi nazwę *właściwości,* a setter jest `set` \_ *propertyname)* oznaczone jako w metadanych zestawu. Kompilator Języka C# wymusza tę regułę <xref:System.CLSCompliantAttribute> automatycznie bez konieczności stosowania atrybutu.
 
-* Typ właściwości jest typem zwracanym metody pobierającej właściwości i ostatnim argumentem metody ustawiającej. Te typy muszą być zgodne ze specyfikacją CLS, a argumenty nie mogą być przypisywane do właściwości przez odwołanie (oznacza to, że nie mogą być wskaźnikami zarządzanymi).
+* Typ właściwości jest zwracany typ getter właściwości i ostatni argument setter. Te typy muszą być zgodne ze specyfikacją CLS, a argumenty nie mogą być przypisane do właściwości przez odwołanie (oznacza to, że nie mogą być zarządzane wskaźniki).
 
-* Jeśli właściwość ma zarówno metodę pobierającą, jak i setter, muszą jednocześnie być wirtualne, zarówno statyczne, jak i oba wystąpienia. C# Kompilator automatycznie wymusza tę regułę za pomocą składni definicji właściwości.
+* Jeśli właściwość ma zarówno metody święceń, jak i metody ustawiania, muszą być zarówno wirtualne, statyczne lub oba wystąpienia. Kompilator C# automatycznie wymusza tę regułę za pomocą składni definicji właściwości.
 
 ### <a name="events"></a>Zdarzenia
 
-Zdarzenie jest definiowane przy użyciu jego nazwy i typu. Typ zdarzenia jest delegatem, który jest używany do wskazania zdarzenia. Na przykład zdarzenie `DbConnection.StateChange` jest typu `StateChangeEventHandler`. Oprócz samego zdarzenia trzy metody z nazwami na podstawie nazwy zdarzenia dostarczają implementację zdarzenia i są oznaczone jako `SpecialName` w metadanych zestawu:
+Zdarzenie jest definiowane przez jego nazwę i typ. Typ zdarzenia jest pełnomocnikiem, który jest używany do wskazania zdarzenia. Na przykład `DbConnection.StateChange` zdarzenie jest `StateChangeEventHandler`typu . Oprócz samego zdarzenia trzy metody z nazwami opartymi na nazwie zdarzenia zapewniają implementację zdarzenia i są oznaczone jako `SpecialName` w metadanych zestawu:
 
-* Metoda dodawania programu obsługi zdarzeń o nazwie `add`_*EventName*. Na przykład Metoda subskrypcji zdarzeń dla zdarzenia `DbConnection.StateChange` ma nazwę `add_StateChange`.
+* Metoda dodawania programu obsługi `add`zdarzeń o nazwie _*EventName*. Na przykład metoda subskrypcji zdarzeń `DbConnection.StateChange` dla `add_StateChange`zdarzenia nosi nazwę .
 
-* Metoda usuwania programu obsługi zdarzeń o nazwie `remove`_*EventName*. Na przykład metoda usuwania dla zdarzenia `DbConnection.StateChange` ma nazwę `remove_StateChange`.
+* Metoda usuwania programu obsługi zdarzeń `remove`o nazwie _*EventName*. Na przykład metoda usuwania `DbConnection.StateChange` zdarzenia nosi `remove_StateChange`nazwę .
 
-* Metoda wskazująca, że wystąpiło zdarzenie o nazwie `raise`\_*EventName*.
+* Metoda wskazująca, że zdarzenie wystąpiło, `raise` \_o nazwie *EventName*.
 
 > [!NOTE]
-> Większość reguł Common Language Specification dotyczących zdarzeń jest implementowanych przez kompilatory języka i są przezroczyste dla deweloperów składników.
+> Większość reguł specyfikacji języka wspólnego dotyczące zdarzeń są implementowane przez kompilatory języka i są przezroczyste dla deweloperów składników.
 
-Metody dodawania, usuwania i wywoływania zdarzenia muszą mieć taki sam dostęp. Muszą one również być statyczne, wystąpienia lub wirtualne. Metody dodawania i usuwania zdarzenia mają jeden parametr, którego typem jest typ delegata zdarzenia. Metody Add i Remove muszą być obecne lub być nieobecne.
+Metody dodawania, usuwania i podnoszenia zdarzenia muszą mieć taką samą dostępność. Muszą być również statyczne, wystąpienia lub wirtualne. Metody dodawania i usuwania zdarzenia mają jeden parametr, którego typem jest typ delegata zdarzenia. Metody dodawania i usuwania muszą być obecne lub oba muszą być nieobecne.
 
-W poniższym przykładzie zdefiniowano klasę zgodną ze specyfikacją CLS o nazwie `Temperature`, która wywołuje zdarzenie `TemperatureChanged`, jeśli zmiana temperatury między dwoma odczytami jest równa lub przekracza wartość progową. Klasa `Temperature` jawnie definiuje metodę `raise_TemperatureChanged`, aby umożliwić selektywne wykonywanie programów obsługi zdarzeń.
+W poniższym przykładzie zdefiniowano klasę `Temperature` zgodną `TemperatureChanged` ze specyfikacją CLS o nazwie, która wywołuje zdarzenie, jeśli zmiana temperatury między dwoma odczytami jest równa lub przekracza wartość progową. Klasa `Temperature` jawnie definiuje `raise_TemperatureChanged` metodę, dzięki czemu można selektywnie wykonywać programy obsługi zdarzeń.
 
 ```csharp
 using System;
@@ -2338,20 +2338,20 @@ End Class
 
 ### <a name="overloads"></a>Overloads
 
-Common Language Specification nakładają następujące wymagania dotyczące przeciążonych elementów członkowskich:
+Specyfikacja języka wspólnego nakłada następujące wymagania na przeciążone elementy członkowskie:
 
-* Elementy członkowskie mogą być przeciążone na podstawie liczby parametrów i typu każdego parametru. Konwencja wywoływania, zwracany typ, Modyfikatory niestandardowe stosowane do metody lub jej parametru oraz czy parametry są przesyłane przez wartość lub przez odwołanie nie są brane pod uwagę podczas różnicowania przeciążeń. Aby zapoznać się z przykładem, zobacz kod wymagający, aby nazwy muszą być unikatowe w zakresie w sekcji [konwencji nazewnictwa](#naming-conventions) .
+* Elementy członkowskie mogą być przeciążone na podstawie liczby parametrów i typu dowolnego parametru. Konwencja wywołująca, typ zwracany, modyfikatory niestandardowe stosowane do metody lub jej parametru i czy parametry są przekazywane przez wartość lub przez odwołanie nie są brane pod uwagę podczas rozróżniania między przeciążenia. Na przykład zobacz kod wymagania, że nazwy muszą być unikatowe w zakresie w [konwencji nazewnictwa](#naming-conventions) sekcji.
 
 * Tylko właściwości i metody mogą być przeciążone. Pola i zdarzenia nie mogą być przeciążone.
 
-* Metody generyczne mogą być przeciążone na podstawie liczby parametrów ogólnych.
+* Metody ogólne mogą być przeciążone na podstawie liczby ich parametrów ogólnych.
 
 > [!NOTE]
-> Operatory `op_Explicit` i `op_Implicit` są wyjątkami od reguły, która zwraca wartość nie jest uważana za część sygnatury metody w celu rozpoznania przeciążenia. Te dwa operatory mogą być przeciążone na podstawie zarówno ich parametrów, jak i ich wartości zwracanej.
+> I `op_Explicit` `op_Implicit` operatory są wyjątki od reguły, że wartość zwracana nie jest uważana za część podpisu metody dla rozpoznawania przeciążenia. Te dwa operatory mogą być przeciążone na podstawie zarówno ich parametrów, jak i ich wartości zwracanej.
 
 ### <a name="exceptions"></a>Wyjątki
 
-Obiekty wyjątków muszą pochodzić od klasy [System. Exception](xref:System.Exception) lub z innego typu pochodzącego od `System.Exception`. Poniższy przykład ilustruje błąd kompilatora, który powstaje, gdy Klasa niestandardowa o nazwie `ErrorClass` jest używana do obsługi wyjątków.
+Obiekty wyjątku muszą pochodzić z [System.Exception](xref:System.Exception) `System.Exception`lub z innego typu pochodzącego z . W poniższym przykładzie przedstawiono błąd kompilatora, który powoduje, że klasa niestandardowa o nazwie `ErrorClass` jest używany do obsługi wyjątków.
 
 ```csharp
 using System;
@@ -2428,7 +2428,7 @@ End Module
 '             ~~~~~~~~~~~~~~
 ```
 
-Aby naprawić ten błąd, Klasa `ErrorClass` musi dziedziczyć po `System.Exception`. Ponadto Właściwość Message musi zostać zastąpiona. Poniższy przykład koryguje te błędy w celu zdefiniowania klasy `ErrorClass`, która jest zgodna ze specyfikacją CLS.
+Aby poprawić ten `ErrorClass` błąd, klasa `System.Exception`musi dziedziczyć z . Ponadto Message właściwość musi zostać zastąpiona. W poniższym przykładzie poprawiono `ErrorClass` te błędy, aby zdefiniować klasę, która jest zgodna ze specyfikacją CLS.
 
 ```csharp
 using System;
@@ -2499,9 +2499,9 @@ End Module
 
 ### <a name="attributes"></a>Atrybuty
 
-Zestawy platformy In.NET Framework, atrybuty niestandardowe oferują rozszerzalny mechanizm do przechowywania atrybutów niestandardowych i pobierania metadanych dotyczących obiektów programistycznych, takich jak zestawy, typy, elementy członkowskie i parametry metody. Atrybuty niestandardowe muszą pochodzić od klasy [System. Attribute](xref:System.Attribute) lub z typu pochodnego od `System.Attribute`.
+In.NET zestawów Framework, atrybuty niestandardowe zapewniają rozszerzalny mechanizm przechowywania atrybutów niestandardowych i pobierania metadanych dotyczących obiektów programowania, takich jak zestawy, typy, elementy członkowskie i parametry metody. Atrybuty niestandardowe muszą pochodzić z [System.Attribute](xref:System.Attribute) lub `System.Attribute`z typu pochodzącego z .
 
-Poniższy przykład narusza tę regułę. Definiuje klasę `NumericAttribute`, która nie pochodzi z `System.Attribute`. Należy zauważyć, że błąd kompilatora występuje tylko wtedy, gdy jest stosowany atrybut niezgodny ze specyfikacją CLS, nie gdy Klasa jest zdefiniowana.
+Poniższy przykład narusza tę regułę. Definiuje `NumericAttribute` klasę, która nie pochodzi `System.Attribute`od . Należy zauważyć, że błąd kompilatora powoduje tylko wtedy, gdy atrybut niezgodny ze specyfikacją CLS jest stosowany, a nie po zdefiniowaniu klasy.
 
 ```csharp
 using System;
@@ -2564,29 +2564,29 @@ End Structure
 
 Konstruktor lub właściwości atrybutu zgodnego ze specyfikacją CLS mogą uwidaczniać tylko następujące typy:
 
-* [Typu](xref:System.Boolean)
+* [Wartość logiczna](xref:System.Boolean)
 
-* [Bajc](xref:System.Byte)
+* [Byte](xref:System.Byte)
 
-* [Delikatn](xref:System.Char)
+* [Char](xref:System.Char)
 
-* [Double](xref:System.Double)
+* [Podwójne](xref:System.Double)
 
 * [Int16](xref:System.Int16)
 
-* [Elementem](xref:System.Int32)
+* [Int32](xref:System.Int32)
 
-* [Int64](xref:System.Int64)
+* [Int64 (int64)](xref:System.Int64)
 
-* [Wiersz](xref:System.Single)
+* [Single](xref:System.Single)
 
 * [Ciąg](xref:System.String)
 
-* [Wprowadź](xref:System.Type)
+* [Typ](xref:System.Type)
 
-* Każdy typ wyliczeniowy, którego typ podstawowy to `Byte`, `Int16`, `Int32`lub `Int64`.
+* Każdy typ wyliczenia, `Byte`którego `Int16` `Int32`typem `Int64`bazowym jest , , lub .
 
-W poniższym przykładzie zdefiniowano klasę `DescriptionAttribute`, która pochodzi od [atrybutu](xref:System.Attribute). Konstruktor klasy ma parametr typu `Descriptor`, więc Klasa nie jest zgodna ze specyfikacją CLS. Należy zauważyć, C# że kompilator emituje ostrzeżenie, ale kompiluje się pomyślnie.
+W poniższym `DescriptionAttribute` przykładzie definiuje klasę, która pochodzi od [atrybutu](xref:System.Attribute). Konstruktor klasy ma `Descriptor`parametr typu, więc klasa nie jest zgodna ze specyfikacją CLS. Należy zauważyć, że kompilator Języka C# emituje ostrzeżenie, ale pomyślnie kompiluje.
 
 ```csharp
 using System;
@@ -2650,40 +2650,40 @@ End Class
 
 ## <a name="the-clscompliantattribute-attribute"></a>Atrybut CLSCompliantAttribute
 
-Atrybut [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) służy do wskazywania, czy element programu jest zgodny z Common Language Specification. Konstruktor `CLSCompliantAttribute.CLSCompliantAttribute(Boolean)` zawiera jeden wymagany parametr, *iszgodna*, który wskazuje, czy element programu jest zgodny ze specyfikacją CLS.
+[ClSCompliantAttribute](xref:System.CLSCompliantAttribute) Atrybut atrybut służy do wskazania, czy element programu jest zgodny ze specyfikacją języka wspólnego. Konstruktor `CLSCompliantAttribute.CLSCompliantAttribute(Boolean)` zawiera pojedynczy wymagany parametr, *isCompliant*, który wskazuje, czy element programu jest zgodny ze specyfikacją CLS.
 
-W czasie kompilacji kompilator wykrywa niezgodne elementy, które są zgodne ze specyfikacją CLS, i emituje ostrzeżenie. Kompilator nie emituje ostrzeżeń dla typów lub elementów członkowskich, które są jawnie zadeklarowane jako niezgodne.
+W czasie kompilacji kompilator wykrywa niezgodne elementy, które są uważane za zgodne ze specyfikacją CLS i emituje ostrzeżenie. Kompilator nie emituje ostrzeżenia dla typów lub elementów członkowskich, które są jawnie uznane za niezgodne.
 
-Deweloperzy składników mogą używać atrybutu `CLSCompliantAttribute` na dwa sposoby:
+Deweloperzy składników `CLSCompliantAttribute` mogą używać tego atrybutu na dwa sposoby:
 
-* Do definiowania części interfejsu publicznego uwidocznionych przez składnik, który jest zgodny ze specyfikacją CLS, i części, które nie są zgodne ze specyfikacją CLS. Gdy atrybut jest używany do oznaczania określonych elementów programu jako zgodnych ze specyfikacją CLS, jego użycie gwarantuje, że te elementy są dostępne we wszystkich językach i narzędziach przeznaczonych dla .NET Framework.
+* Aby zdefiniować części interfejsu publicznego udostępniane przez składnik, które są zgodne ze specyfikacją CLS i części, które nie są zgodne ze specyfikacją CLS. Gdy atrybut jest używany do oznaczania określonych elementów programu jako zgodny chezb, jego użycie gwarantuje, że te elementy są dostępne ze wszystkich języków i narzędzi, które są przeznaczone dla .NET Framework.
 
-* Aby zapewnić, że interfejs publiczny biblioteki składników uwidacznia tylko elementy programu, które są zgodne ze specyfikacją CLS. Jeśli elementy nie są zgodne ze specyfikacją CLS, kompilatory zwykle wygenerują ostrzeżenie.
+* Aby upewnić się, że interfejs publiczny biblioteki składników udostępnia tylko elementy programu, które są zgodne ze specyfikacją CLS. Jeśli elementy nie są zgodne ze specyfikacją CLS, kompilatory zazwyczaj wystawiają ostrzeżenie.
 
 > [!WARNING]
-> W niektórych przypadkach kompilatory języka wymuszają reguły zgodne ze specyfikacją CLS niezależnie od tego, czy atrybut `CLSCompliantAttribute` jest używany. Na przykład Definiowanie elementu członkowskiego `*static` w interfejsie narusza regułę CLS. Jeśli jednak zdefiniujesz element członkowski `*static` w interfejsie, C# kompilator wyświetli komunikat o błędzie i nie będzie mógł skompilować aplikacji.
+> W niektórych przypadkach kompilatory języka wymuszają reguły `CLSCompliantAttribute` zgodne ze specyfikacją CLS, niezależnie od tego, czy atrybut jest używany. Na przykład definiowanie elementu członkowskiego `*static` w interfejsie narusza regułę CLS. Jednak jeśli zdefiniujesz element członkowski `*static` w interfejsie, kompilator C# wyświetla komunikat o błędzie i nie można skompilować aplikacji.
 
-Atrybut `CLSCompliantAttribute` jest oznaczony atrybutem [AttributeUsageAttribute](xref:System.AttributeUsageAttribute) o wartości `AttributeTargets.All`. Ta wartość pozwala zastosować atrybut `CLSCompliantAttribute` do dowolnego elementu programu, w tym zestawów, modułów, typów (klasy, struktury, wyliczenia, interfejsy i delegatów), składowych typu (konstruktory, metody, właściwości, pola i zdarzenia), parametry, parametry ogólne i wartości zwracane. Jednakże, w przypadku, należy zastosować atrybut tylko do zestawów, typów i elementów członkowskich typu. W przeciwnym razie kompilatory ignorują atrybut i kontynuuje generowanie ostrzeżeń kompilatora zawsze wtedy, gdy napotkają niezgodny parametr, parametr ogólny lub wartość zwracaną w interfejsie publicznym biblioteki.
+Atrybut `CLSCompliantAttribute` jest oznaczony atrybutem [AttributeUsageAttribute,](xref:System.AttributeUsageAttribute) który `AttributeTargets.All`ma wartość . Ta wartość umożliwia zastosowanie `CLSCompliantAttribute` atrybutu do dowolnego elementu programu, w tym zestawów, modułów, typów (klas, struktur, wyliczeń, interfejsów i delegatów), elementów członkowskich typu (konstruktorów, metod, właściwości, pól i zdarzeń), parametrów, parametrów ogólnych i wartości zwracanych. Jednak w praktyce należy zastosować atrybut tylko do zestawów, typów i elementów członkowskich typu. W przeciwnym razie kompilatory ignorują atrybut i nadal generują ostrzeżenia kompilatora, gdy napotkają niezgodny parametr, parametr ogólny lub wartość zwracaną w interfejsie publicznym biblioteki.
 
-Wartość atrybutu `CLSCompliantAttribute` jest dziedziczona przez zawarte elementy programu. Na przykład, jeśli zestaw jest oznaczony jako zgodny ze specyfikacją CLS, jego typy są również zgodne ze specyfikacją CLS. Jeśli typ jest oznaczony jako zgodny ze specyfikacją CLS, jego zagnieżdżone typy i elementy członkowskie są również zgodne ze specyfikacją CLS.
+Wartość atrybutu `CLSCompliantAttribute` jest dziedziczona przez zawarte elementy programu. Na przykład jeśli złożenie jest oznaczone jako zgodne ze specyfikacją CLS, jego typy są również zgodne ze specyfikacją CLS. Jeśli typ jest oznaczony jako zgodny ze specyfikacją CLS, jego typy zagnieżdżone i elementy członkowskie są również zgodne ze specyfikacją CLS.
 
-Dziedziczonej zgodności można jawnie zastąpić, stosując atrybut `CLSCompliantAttribute` do zawartego elementu programu. Na przykład można użyć atrybutu `CLSCompliantAttribute` z wartością *Iszgodną* `false` do zdefiniowania niezgodnego typu w zgodnym zestawie i można użyć atrybutu z wartością *iszgodnej* `true` w celu zdefiniowania zgodnego typu w niezgodny zestaw. Istnieje również możliwość zdefiniowania niezgodnych elementów członkowskich w typie zgodnym. Niezgodny typ nie może jednak mieć zgodnych elementów członkowskich, dlatego nie można użyć atrybutu z wartością *Iszgodnej* `true`, aby zastąpić dziedziczenie z niezgodnego typu.
+Dziedziczoną zgodność można jawnie `CLSCompliantAttribute` zastąpić, stosując atrybut do elementu programu zawartego. Na przykład można użyć `CLSCompliantAttribute` atrybutu z *isCompliant* wartość do definiowania `false` niezgodny typ w zestawie zgodnym i można użyć atrybutu z *isCompliant* wartość zdefiniowania zgodnego `true` typu w zestawie niezgodnym. Można również zdefiniować niezgodne elementy członkowskie w typie zgodnym. Jednak niezgodny typ nie może mieć zgodnych elementów członkowskich, więc nie `true` można użyć atrybutu z wartością *isCompliant,* aby zastąpić dziedziczenie z typu niezgodnego.
 
-Podczas tworzenia składników należy zawsze używać atrybutu `CLSCompliantAttribute`, aby wskazać, czy zestaw, jego typy i jego elementy członkowskie są zgodne ze specyfikacją CLS.
+Podczas opracowywania składników, należy zawsze `CLSCompliantAttribute` używać atrybutu, aby wskazać, czy zestaw, jego typy i jego elementy członkowskie są zgodne ze specyfikacją CLS.
 
 Aby utworzyć składniki zgodne ze specyfikacją CLS:
 
-1. Użyj `CLSCompliantAttribute`, aby oznaczyć zestaw jako zgodny ze specyfikacją CLS.
+1. Użyj `CLSCompliantAttribute` oznaczenia złożenia jako zgodnego ze specyfikacją CLS.
 
 2. Oznacz wszystkie publicznie uwidocznione typy w zestawie, które nie są zgodne ze specyfikacją CLS jako niezgodne.
 
-3. Oznacz wszystkie publicznie uwidocznionych członków w typach zgodnych ze specyfikacją CLS jako niezgodne.
+3. Oznacz wszystkie publicznie uwycone elementy członkowskie w typach zgodnych ze specyfikacją CLS jako niezgodne.
 
-4. Podaj alternatywę zgodną ze specyfikacją CLS dla członków niezgodnych ze specyfikacją CLS.
+4. Podaj alternatywę zgodną ze specyfikacją CLS dla elementów członkowskich niezgodnych ze specyfikacją CLS.
 
-Jeśli wszystkie niezgodne typy i elementy członkowskie zostały oznaczone pomyślnie, kompilator nie powinien emitować ostrzeżeń o braku zgodności. Należy jednak wskazać, które elementy członkowskie nie są zgodne ze specyfikacją CLS, i wyświetlić ich alternatywy zgodne ze specyfikacją CLS w dokumentacji produktu.
+Jeśli pomyślnie oznaczyłeś wszystkie niezgodne typy i elementy członkowskie, kompilator nie powinien emitować żadnych ostrzeżeń o niezgodnościach. Należy jednak wskazać, którzy członkowie nie są zgodni ze specyfikacją CLS i wymienić ich alternatywy zgodne ze specyfikacją CLS w dokumentacji produktu.
 
-Poniższy przykład używa atrybutu `CLSCompliantAttribute`, aby zdefiniować zestaw zgodny ze specyfikacją CLS i typ `CharacterUtilities`, który ma dwie składowe niezgodne ze specyfikacją CLS. Ponieważ oba elementy członkowskie są oznaczone atrybutem `CLSCompliant(false)`, kompilator nie generuje ostrzeżeń. Klasa zawiera również alternatywę zgodną ze specyfikacją CLS dla obu tych metod. Zwykle dodaliśmy dwa przeciążenia do metody `ToUTF16`, aby zapewnić alternatywy zgodne ze specyfikacją CLS. Jednak ponieważ metody nie mogą być przeciążone w oparciu o wartość zwracaną, nazwy metod zgodnych ze specyfikacją CLS różnią się od nazw metod niezgodnych.
+W poniższym `CLSCompliantAttribute` przykładzie użyto atrybutu do zdefiniowania zestawu zgodnego ze specyfikacją CLS i typu, `CharacterUtilities`który ma dwa elementy członkowskie niezgodne ze specyfikacją CLS. Ponieważ oba elementy członkowskie `CLSCompliant(false)` są oznaczone atrybutem, kompilator nie generuje żadnych ostrzeżeń. Klasa zapewnia również alternatywę zgodną ze specyfikacją CLS dla obu metod. Zwykle dodalibyśmy dwa przeciążenia do `ToUTF16` metody, aby zapewnić alternatywy zgodne ze specyfikacją CLS. Ponieważ jednak metody nie mogą być przeciążone na podstawie wartości zwracanej, nazwy metod zgodnych ze specyfikacją CLS różnią się od nazw metod niezgodnych.
 
 ```csharp
 using System;
@@ -2804,13 +2804,13 @@ Public Class CharacterUtilities
 End Class
 ```
 
-Jeśli tworzysz aplikację, a nie bibliotekę (czyli jeśli nie ujawniasz typów lub elementów członkowskich, które mogą być używane przez innych deweloperów aplikacji), zgodność ze specyfikacją CLS elementów programu, których używa aplikacja, jest interesująca tylko wtedy, gdy język ich nie obsługuje . W takim przypadku kompilator języka wygeneruje błąd podczas próby użycia elementu niezgodnego ze specyfikacją CLS.
+Jeśli tworzysz aplikację, a nie bibliotekę (to znaczy, jeśli nie ujawniasz typów lub elementów członkowskich, które mogą być używane przez innych deweloperów aplikacji), zgodność cls elementów programu, które zużywa aplikacja są interesujące tylko wtedy, gdy język ich nie obsługuje . W takim przypadku kompilator języka wygeneruje błąd podczas próby użycia elementu niezgodnego ze specyfikacją CLS.
 
 ## <a name="cross-language-interoperability"></a>Współdziałanie między językami
 
-Niezależność od języka ma wiele możliwych znaczenia. Jedno z tych problemów obejmuje bezproblemowe zużywanie typów pisanych w jednym języku z aplikacji w innym języku. Drugie znaczenie, które jest fokusem tego artykułu, obejmuje łączenie kodu pisanego w wielu językach w jeden zestaw .NET Framework.
+Niezależność językowa ma wiele możliwych znaczeń. Jedno znaczenie polega na bezproblemowym używaniu typów napisanych w jednym języku z aplikacji napisanej w innym języku. Drugie znaczenie, które jest przedmiotem tego artykułu, polega na łączeniu kodu napisanego w wielu językach w jeden zestaw .NET Framework.
 
-Poniższy przykład ilustruje współdziałanie między językami przez utworzenie biblioteki klas o nazwie Utilities. dll zawierającej dwie klasy, `NumericLib` i `StringLib`. Klasa `NumericLib` jest zapisywana C#, a Klasa `StringLib` jest zapisywana w Visual Basic. Oto kod źródłowy dla `StringUtil.vb`, który zawiera pojedynczy element członkowski, `ToTitleCase`, w swojej klasie `StringLib`.
+W poniższym przykładzie przedstawiono współdziałanie międzyjęzykowe, tworząc bibliotekę klas o `NumericLib` `StringLib`nazwie Utilities.dll, która zawiera dwie klasy i . Klasa `NumericLib` jest napisana w języku C#, a klasa jest napisana `StringLib` w języku Visual Basic. Oto kod źródłowy dla `StringUtil.vb`, który `ToTitleCase`zawiera `StringLib` jeden element członkowski, w swojej klasie.
 
 ```vb
 Imports System.Collections.Generic
@@ -2847,7 +2847,7 @@ Public Module StringLib
 End Module
 ```
 
-Oto kod źródłowy dla NumberUtil.cs, który definiuje klasę `NumericLib`, która ma dwa elementy członkowskie, `IsEven` i `NearZero`.
+Oto kod źródłowy dla NumberUtil.cs, `NumericLib` który definiuje klasę, `NearZero`która ma dwa elementy członkowskie i `IsEven` .
 
 ```csharp
 using System;
@@ -2877,25 +2877,25 @@ public static class NumericLib
 }
 ```
 
-Aby spakować dwie klasy w jednym zestawie, należy skompilować je do modułów. Aby skompilować plik kodu źródłowego Visual Basic do modułu, użyj tego polecenia:
+Aby spakować dwie klasy w jednym zestawie, należy skompilować je do modułów. Aby skompilować plik kodu źródłowego języka Visual Basic do modułu, użyj następującego polecenia:
 
 ```console
 vbc /t:module StringUtil.vb
 ```
 
-Aby skompilować plik C# kodu źródłowego do modułu, użyj tego polecenia:
+Aby skompilować plik kodu źródłowego Języka C# do modułu, użyj następującego polecenia:
 
 ```console
 csc /t:module NumberUtil.cs
 ```
 
-Następnie użyj narzędzia link (link. exe), aby skompilować dwa moduły do zestawu:
+Następnie użyj narzędzia Łącze (Link.exe), aby skompilować dwa moduły do zestawu:
 
 ```console
 link numberutil.netmodule stringutil.netmodule /out:UtilityLib.dll /dll
 ```
 
-Poniższy przykład wywołuje metody `NumericLib.NearZero` i `StringLib.ToTitleCase`. Należy zauważyć, że zarówno kod Visual Basic, C# jak i kod mogą uzyskać dostęp do metod w obu klasach.
+Poniższy przykład następnie `NumericLib.NearZero` wywołuje `StringLib.ToTitleCase` i metody. Należy zauważyć, że zarówno kod języka Visual Basic, jak i kod Języka C# mają dostęp do metod w obu klasach.
 
 ```csharp
 using System;
@@ -2931,13 +2931,13 @@ End Module
 '       War and Peace
 ```
 
-Aby skompilować kod Visual Basic, użyj tego polecenia:
+Aby skompilować kod języka Visual Basic, użyj następującego polecenia:
 
 ```console
 vbc example.vb /r:UtilityLib.dll
 ```
 
-Aby skompilować przy C#użyciu, Zmień nazwę kompilatora z VBC na CSC i Zmień rozszerzenie pliku z. vb na. cs:
+Aby skompilować z C#, zmień nazwę kompilatora z vbc na csc i zmień rozszerzenie pliku z .vb na .cs:
 
 ```console
 csc example.cs /r:UtilityLib.dll

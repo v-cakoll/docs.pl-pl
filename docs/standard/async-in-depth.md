@@ -1,42 +1,42 @@
 ---
-title: Na poziomie Async
-description: Dowiedz się, jak pisanie kodu powiązanego we/wy oraz kod asynchroniczny związany z PROCESORem jest prosty przy użyciu modelu asynchronicznego opartego na zadaniach platformy .NET.
+title: Async w głębi
+description: Dowiedz się, jak pisanie kodu asynchronicznego związanego z we/wy i cpu jest proste przy użyciu modelu asynchronicznego opartego na zadaniu .NET.
 author: cartermp
 ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
 ms.openlocfilehash: 91fd37ce329c03b43b5472e4579be7f5ef961738
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "70169110"
 ---
-# <a name="async-in-depth"></a>Na poziomie Async
+# <a name="async-in-depth"></a>Async w głębi
 
-Pisanie we/wy i kod asynchroniczny związany z PROCESORem jest prosty przy użyciu modelu asynchronicznego opartego na zadaniach platformy .NET. `Task` Model jest udostępniany przez typy `async` i `Task<T>` i słowa kluczowe `await` C# oraz i Visual Basic. (Zasoby specyficzne dla języka znajdują się w sekcji [Zobacz też](#see-also) .) W tym artykule wyjaśniono, jak używać programu .NET Async i zapewnia wgląd w strukturę asynchroniczną używaną w ramach okładek.
+Pisanie kodu asynchronicznego związanego z i procesorem CPU jest proste przy użyciu modelu asynchronicznego opartego na zadaniu .NET. Model jest narażony `Task` przez `Task<T>` i `async` typów `await` i słów kluczowych i w języku C# i Visual Basic. (Zasoby specyficzne dla języka znajdują się w sekcji [Zobacz również).](#see-also) W tym artykule wyjaśniono, jak korzystać z usługi .NET async i zapewnia wgląd w strukturę asynchronicznej używane w ramach obejmuje.
 
-## <a name="task-and-taskt"></a>Zadanie i zadanie\<T >
+## <a name="task-and-taskt"></a>> zadania\<i zadania T
 
-Zadania są konstrukcjami używanymi do implementowania elementu, który jest znany jako [model obietnicy współbieżności](https://en.wikipedia.org/wiki/Futures_and_promises).  W krótkim czasie oferują one "obietnice", które będą wykonywane w późniejszym momencie, co pozwala na koordynowanie z obietnicą za pomocą czystego interfejsu API.
+Zadania są konstrukcje używane do implementowania, co jest znane jako [Promise Model współbieżności](https://en.wikipedia.org/wiki/Futures_and_promises).  Krótko mówiąc, oferują one "obietnicę", że praca zostanie zakończona w późniejszym czasie, co pozwala koordynować z obietnicą z czystym interfejsem API.
 
 - `Task`reprezentuje pojedynczą operację, która nie zwraca wartości.
-- `Task<T>`reprezentuje pojedynczą operację, która zwraca wartość typu `T`.
+- `Task<T>`reprezentuje pojedynczą operację, która `T`zwraca wartość typu .
 
-Ważne jest, aby zwrócić uwagę na zadania jako abstrakcje pracy wykonywanej asynchronicznie, a *nie* abstrakcję w wątkach. Domyślnie zadania są wykonywane w bieżącym wątku i delegowanie pracy do systemu operacyjnego, zgodnie z potrzebami. Opcjonalnie zadania mogą być jawnie wymagane do uruchomienia w osobnym wątku za pośrednictwem `Task.Run` interfejsu API.
+Ważne jest, aby rozumować o zadaniach jako abstrakcje pracy dzieje asynchronicznie, a *nie* abstrakcji nad wątkowości. Domyślnie zadania są wykonywane w bieżącym wątku i delegują pracę do systemu operacyjnego, odpowiednio. Opcjonalnie można jawnie zażądać zadań do uruchamiania `Task.Run` w oddzielnym wątku za pośrednictwem interfejsu API.
 
-Zadania uwidaczniają protokół interfejsu API w celu monitorowania, oczekiwania na i uzyskiwania dostępu do wartości wyniku (w `Task<T>`przypadku) zadania. Integracja z językiem przy `await` użyciu słowa kluczowego zapewnia abstrakcję wyższego poziomu na potrzeby wykonywania zadań.
+Zadania uwidaczniają protokół interfejsu API do monitorowania, `Task<T>`oczekiwania i uzyskiwania dostępu do wartości wyniku (w przypadku) zadania. Integracja języka, `await` ze słowem kluczowym, zapewnia abstrakcję wyższego poziomu za pomocą zadań.
 
-Użycie `await` umożliwia aplikacji lub usłudze wykonywanie użytecznych zadań, gdy zadanie jest uruchomione przez przekazanie kontroli do obiektu wywołującego do momentu wykonania zadania. Kod nie musi polegać na wywołaniach zwrotnych ani zdarzeniach, aby kontynuować wykonywanie po zakończeniu zadania. Integracja z interfejsem API języka i zadania jest dla Ciebie taka sama. `Task<T>`Jeśli używasz`await` , słowo kluczowe będzie dodatkowo "odwinięcie" wartości zwróconej po zakończeniu zadania.  Szczegóły dotyczące tego działania opisano poniżej.
+Za `await` pomocą aplikacji lub usługi do wykonywania przydatnej pracy, gdy zadanie jest uruchomione przez plonowanie kontroli do jego obiektu wywołującego, dopóki zadanie nie zostanie wykonane. Kod nie musi polegać na wywołaniach wywołania wsteczne lub zdarzenia, aby kontynuować wykonywanie po zakończeniu zadania. Integracja interfejsu API języka i zadania robi to za Ciebie. Jeśli używasz `Task<T>`, `await` słowo kluczowe dodatkowo "rozpakowuje" wartość zwróconą po zakończeniu zadania.  Szczegóły dotyczące tego, jak to działa, wyjaśniono poniżej.
 
-Więcej informacji o zadaniach i różnych sposobach współpracy z nimi można znaleźć w temacie [asynchroniczny wzorzec oparty na zadaniach (TAP)](./asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) .
+Więcej informacji na temat zadań i różnych sposobów interakcji z nimi można znaleźć w temacie [Wzorca asynchronicznego (TAP) opartego na zadaniach.](./asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)
 
-## <a name="deeper-dive-into-tasks-for-an-io-bound-operation"></a>Dokładniejsze szczegółowe do zadań związanych z operacją we/wy
+## <a name="deeper-dive-into-tasks-for-an-io-bound-operation"></a>Głębsze zagłębianie się w zadania operacji związanej z we/wy
 
-W poniższej sekcji opisano, co to jest 10 000, co się dzieje z typowym asynchronicznym wywołaniem we/wy. Zacznijmy od kilku przykładów.
+W poniższej sekcji opisano widok 10 000 stóp tego, co dzieje się z typowym wywołaniem we/wy asynchronicznej. Zacznijmy od kilku przykładów.
 
-Pierwszy przykład wywołuje metodę asynchroniczną i zwraca aktywne zadanie, które może jeszcze nie zostać ukończone.
+Pierwszy przykład wywołuje metodę asynchroniczną i zwraca aktywne zadanie, prawdopodobnie jeszcze do wykonania.
 
 ```csharp
 public Task<string> GetHtmlAsync()
@@ -48,7 +48,7 @@ public Task<string> GetHtmlAsync()
 }
 ```
 
-Drugi przykład dodaje użycie `async` słów kluczowych i `await` do działania na zadaniu.
+Drugi przykład dodaje użycie `async` i `await` słowa kluczowe do działania na zadanie.
 
 ```csharp
 public async Task<string> GetFirstCharactersCountAsync(string url, int count)
@@ -74,51 +74,51 @@ public async Task<string> GetFirstCharactersCountAsync(string url, int count)
 }
 ```
 
-Wywołanie `GetStringAsync()` wywołań za pomocą bibliotek platformy .NET niższego poziomu (np. wywołania innych metod asynchronicznych) do momentu osiągnięcia wywołania międzyoperacyjności P/Invoke do natywnej biblioteki sieciowej. Biblioteka natywna może następnie wywołać wywołanie interfejsu API systemu ( `write()` na przykład w gnieździe w systemie Linux). Obiekt zadania zostanie utworzony na granicy natywnej/zarządzanej, prawdopodobnie przy użyciu [TaskCompletionSource](xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult(%600)). Obiekt zadania zostanie przekierowany przez warstwy, które mogą być używane w lub bezpośrednio zwrócone, ostatecznie zwrócone do początkowego obiektu wywołującego.
+Wywołanie `GetStringAsync()` wywołania za pośrednictwem bibliotek .NET niższego poziomu (być może wywołanie innych metod asynchronicznej), dopóki nie osiągnie wywołania interop P/Invoke do natywnej biblioteki sieciowej. Biblioteka natywna może następnie wywołać wywołanie `write()` interfejsu API systemu (na przykład do gniazda w systemie Linux). Obiekt zadania zostanie utworzony na granicy macierzystej/zarządzanej, prawdopodobnie przy użyciu [TaskCompletionSource](xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult(%600)). Obiekt zadania będą przekazywane przez warstwy, prawdopodobnie obsługiwane na lub bezpośrednio zwrócone, ostatecznie zwrócony do początkowego obiektu wywołującego.
 
-W drugim przykładzie powyżej `Task<T>` obiekt zostanie zwrócony z. `GetStringAsync` Użycie `await` słowa kluczowego powoduje, że metoda zwraca nowo utworzony obiekt zadania. Kontrolka powraca do obiektu wywołującego z tej `GetFirstCharactersCountAsync` lokalizacji w metodzie. Metody i właściwości obiektu [Task&lt;T&gt; ](xref:System.Threading.Tasks.Task%601) umożliwiają wywoływanie, aby monitorować postęp zadania, które zakończy się po wykonaniu pozostałej części kodu w GetFirstCharactersCountAsync.
+W drugim przykładzie powyżej `Task<T>` obiekt zostanie zwrócony z `GetStringAsync`. Użycie słowa `await` kluczowego powoduje, że metoda zwraca nowo utworzony obiekt zadania. Formant powraca do obiektu wywołującego `GetFirstCharactersCountAsync` z tej lokalizacji w metodzie. Metody i właściwości [task&lt;T&gt; ](xref:System.Threading.Tasks.Task%601) obiektu umożliwiają wywołującym monitorowanie postępu zadania, który zostanie ukończony po wykonaniu pozostałego kodu w GetFirstCharactersCountAsync.
 
-Po wywołaniu interfejsu API systemu żądanie jest teraz w przestrzeni jądra, co umożliwia jego sposób do podsystemu sieciowego systemu operacyjnego ( `/net` na przykład w jądrze Linux).  W tym miejscu system operacyjny będzie obsługiwał żądaniesieciowe asynchronicznie.  Szczegóły mogą się różnić w zależności od używanego systemu operacyjnego (wywołanie sterownika urządzenia może być zaplanowane jako sygnał wysłany z powrotem do środowiska uruchomieniowego lub może zostać wykonane wywołanie sterownika urządzenia, a *następnie* sygnał wysłany z powrotem), ale wreszcie środowisko uruchomieniowe zostanie poinformowane o tym, że sieć żądanie jest w toku.  W tej chwili pracę dla sterownika urządzenia zostanie zaplanowana, w toku lub już zakończono (żądanie jest już w trakcie przesyłania), ale ponieważ wszystko to odbywa się asynchronicznie, sterownik urządzenia może natychmiast obsłużyć coś innego!
+Po wywołaniu interfejsu API systemu żądanie znajduje się teraz w przestrzeni jądra, co `/net` trafia do podsystemu sieciowego systemu operacyjnego (na przykład w jądrze Linuksa).  W tym miejscu os będzie obsługiwać żądanie sieci *asynchronicznie*.  Szczegóły mogą się różnić w zależności od używanego systema operacyjnego (wywołanie sterownika urządzenia może być zaplanowane jako sygnał wysłany z powrotem do czasu wykonywania lub można wywołać sterownik urządzenia, a *następnie* sygnał wysłany z powrotem), ale ostatecznie czas wykonywania zostanie poinformowany, że żądanie sieci jest w toku.  W tej chwili praca dla sterownika urządzenia zostanie zaplanowana, w toku lub już zakończona (żądanie jest już "przez sieć") - ale ponieważ wszystko to dzieje się asynchronicznie, sterownik urządzenia jest w stanie natychmiast obsłużyć coś innego!
 
-Na przykład w systemie Windows wątek systemu operacyjnego wykonuje wywołanie do sterownika urządzenia sieciowego i prosi o wykonanie operacji sieci za pośrednictwem pakietu żądania przerwania (IRP), który reprezentuje operację.  Sterownik urządzenia odbiera pakiet IRP, wywołuje połączenie z siecią, oznacza IRP jako "Pending" i zwraca z powrotem do systemu operacyjnego.  Ponieważ wątek systemu operacyjnego wie, że IRP jest "oczekiwanie", nie ma więcej pracy do wykonania dla tego zadania i "zwraca" z powrotem, aby można było go użyć do wykonywania innych zadań.
+Na przykład w systemie Windows wątek systemu operacyjnego wykonuje wywołanie sterownika urządzenia sieciowego i prosi go o wykonanie operacji sieciowej za pomocą pakietu żądania przerwania (IRP), który reprezentuje operację.  Sterownik urządzenia odbiera MPP, wykonuje wywołanie do sieci, oznacza MPP jako "oczekujące" i wraca do os.  Ponieważ wątek os teraz wie, że MPP jest "oczekujące", nie ma więcej pracy do zrobienia dla tego zadania i "zwraca" z powrotem, dzięki czemu może służyć do wykonywania innych prac.
 
-Gdy żądanie jest spełnione, a dane są przywracane za pośrednictwem sterownika urządzenia, powiadamia on o PROCESORAch nowych danych odbieranych za pośrednictwem przerwania.  Sposób obsługi tego przerwania będzie różny w zależności od systemu operacyjnego, ale ostatecznie dane będą przekazywane przez system operacyjny do momentu osiągnięcia wywołania międzyoperacyjności systemu (na przykład w systemie Linux procedura obsługi przerwania spowoduje zaplanowanie dolnej połowy PRZERWAnia w celu przekazania danych za pomocą systemu operacyjnego  asynchronicznie).  Należy zauważyć, że dzieje się to *również* asynchronicznie!  Wynik zostanie umieszczony w kolejce do momentu następnego dostępnego wątku będzie w stanie wykonać metodę asynchroniczną i "odwinięcie" wyniku zadania zakończonego.
+Gdy żądanie zostanie spełnione, a dane powrócą przez sterownik urządzenia, powiadomi procesor o nowych danych otrzymanych za pomocą przerwania.  Sposób obsługi tego przerwania będzie się różnić w zależności od systemu operacyjnego, ale ostatecznie dane będą przekazywane przez system operacyjny, dopóki nie dotrze do połączenia międzyoperacyjnego systemu (na przykład w systemie Linux program obsługi przerwań zaplanuje dolną połowę Przerwania, aby przekazać dane za pośrednictwem systemu operacyjnego asynchronicznie).  Należy pamiętać, że dzieje się to *również* asynchronicznie!  Wynik jest umieszczany w kolejce, dopóki następny dostępny wątek nie będzie mógł wykonać metody asynchronicznej i "rozpakować" wynik ukończonego zadania.
 
-W całym całym procesie wnioskiem Key polega na tym, że **żaden wątek nie jest przeznaczony do uruchamiania zadania**.  Chociaż prace są wykonywane w pewnym kontekście (to oznacza, że system operacyjny musi przekazywać dane do sterownika urządzenia i odpowiadać na przerwanie), nie istnieje wątek przeznaczony do *oczekiwania* na powrót danych z żądania.  Dzięki temu system może obsłużyć znacznie większą ilość pracy, a nie czekając na zakończenie pewnego wywołania we/wy.
+W całym tym procesie, klucz na wynos jest to, że **żaden wątek nie jest dedykowany do uruchamiania zadania**.  Mimo że praca jest wykonywana w pewnym kontekście (oznacza to, że system operacyjny musi przekazać dane do sterownika urządzenia i odpowiedzieć na przerwanie), nie ma wątku dedykowanego do *oczekiwania* na dane z żądania, aby wrócić.  Dzięki temu system może obsługiwać znacznie większą ilość pracy, zamiast czekać na zakończenie niektórych wywołań we/wy.
 
-Chociaż powyższe może wydawać się bardzo dużo pracy, gdy jest mierzony w warunkach zegara ściany, jest miniscule w porównaniu do czasu potrzebnego do wykonania rzeczywistej pracy we/wy. Chociaż nie jest to dokładne, potencjalna oś czasu dla takiego wywołania będzie wyglądać następująco:
+Chociaż powyższe może wydawać się dużo pracy do zrobienia, gdy mierzona pod względem czasu zegara ściennego, to malutkie w porównaniu do czasu potrzebnego do rzeczywistej pracy We/Wy. Chociaż wcale nie jest to precyzyjne, potencjalny harmonogram takiego połączenia wyglądałby tak:
 
 0-1————————————————————————————————————————————————–2-3
 
-- Czas spędzony w `0` punktach `1` to wszystko do momentu, aż Metoda asynchroniczna przeniesie kontrolę do obiektu wywołującego.
-- Czas spędzony od `1` punktów `2` na to czas spędzony na operacji we/wy bez kosztu procesora.
-- Na koniec czas spędzony przez `2` punkty `3` na przekazanie kontroli (i potencjalnie wartości) do metody asynchronicznej, w której punkt jest wykonywany ponownie.
+- Czas spędzony `0` od `1` punktów do jest wszystko do metody asynchronicznej daje kontrolę do jego obiektu wywołującego.
+- Czas spędzony `1` z `2` punktów do to czas spędzony na we/wy, bez kosztów procesora.
+- Na koniec czas `2` spędzony `3` z punktów do jest przekazywanie kontroli z powrotem (i potencjalnie wartość) do metody asynchronicznej, w którym to momencie jest wykonywana ponownie.
 
-### <a name="what-does-this-mean-for-a-server-scenario"></a>Co to znaczy dla scenariusza serwera?
+### <a name="what-does-this-mean-for-a-server-scenario"></a>Co to oznacza dla scenariusza serwera?
 
-Ten model działa dobrze z typowym obciążeniem scenariusza serwera.  Ponieważ nie istnieją wątki przeznaczone do blokowania dla nieukończonych zadań, może ona obsłużyć znacznie wyższą liczbę żądań sieci Web.
+Ten model działa dobrze z typowym obciążeniem scenariusza serwera.  Ponieważ nie ma żadnych wątków przeznaczonych do blokowania niedokończonych zadań, pula wątków serwera może obsługiwać znacznie większą liczbę żądań sieci Web.
 
-Należy wziąć pod uwagę dwa serwery: jeden z nich uruchamia kod asynchroniczny, a nie.  Na potrzeby tego przykładu każdy serwer ma tylko 5 wątków dostępnych do obsługi żądań.  Należy zauważyć, że te liczby są imaginarily małe i służą tylko w kontekście wykazujących.
+Należy wziąć pod uwagę dwa serwery: jeden, który uruchamia kod asynchronicznego, a jeden, który nie.  Na potrzeby tego przykładu każdy serwer ma tylko 5 wątków dostępnych dla żądań obsługi.  Należy zauważyć, że liczby te są wyimaginowane małe i służyć tylko w kontekście demonstracyjne.
 
-Przyjęto założenie, że oba serwery odbierają 6 współbieżnych żądań. Każde żądanie wykonuje operację we/wy.  Serwer *bez* kodu asynchronicznego musi kolejkować szóste żądanie, dopóki jeden z pięciu wątków zakończył pracę we/wy i zapisał odpowiedź. W punkcie, w którym znajduje się 20 żądań, serwer może zaczynać spowalniać pracę, ponieważ kolejka jest zbyt długa.
+Załóżmy, że oba serwery odbierają 6 równoczesnych żądań. Każde żądanie wykonuje operację we/wy.  Serwer *bez* kodu asynchronicznego musi ustawiać się w kolejce do 6 żądania, dopóki jeden z 5 wątków nie zakończy pracy związanej z we/wy i nie napisze odpowiedzi. W momencie, gdy pojawia się 20 żądanie, serwer może zacząć zwalniać, ponieważ kolejka jest zbyt długa.
 
-Serwer *z* działającym na nim kodem asynchronicznym nadal umieszcza w kolejce szóste żądanie, ale ponieważ `async` korzysta `await`z nich i, każdy z jego wątków jest zwalniany po rozpoczęciu pracy powiązanej we/wy, a nie po zakończeniu.  W czasie, gdy przychodzi 20 żądań, kolejka żądań przychodzących będzie znacznie mniejsza (Jeśli w ogóle zawiera wszystkie), a serwer nie zmniejszy się.
+Serwer *z* uruchomionym kodem asynchronicznym nadal umieszcza w `async` kolejce 6 żądanie, ale ponieważ używa i `await`, każdy z jego wątków są zwalniane po rozpoczęciu pracy związanej we/wy, a nie po zakończeniu.  Do czasu wejścia 20 żądania kolejka dla żądań przychodzących będzie znacznie mniejsza (jeśli w ogóle ma w sobie coś), a serwer nie zwolni.
 
-Chociaż jest to contrived przykład, działa on w podobny sposób w świecie rzeczywistym.  W rzeczywistości serwer może być w stanie obsłużyć żądanie o wielkości więcej żądań przy użyciu `async` i `await` niż w przypadku przydzielenia wątku dla każdego odebranego żądania.
+Chociaż jest to wymyślony przykład, działa w bardzo podobny sposób w prawdziwym świecie.  W rzeczywistości można oczekiwać, że serwer będzie w stanie `async` obsłużyć o rząd wielkości więcej żądań przy użyciu i `await` niż gdyby był dedykowany wątku dla każdego żądania, które otrzymuje.
 
-### <a name="what-does-this-mean-for-client-scenario"></a>Co to znaczy dla scenariusza klienta?
+### <a name="what-does-this-mean-for-client-scenario"></a>Co to oznacza dla scenariusza klienta?
 
-Największe korzyści związane z `async` korzystaniem `await` z programu i dla aplikacji klienckiej to wzrost czasu odpowiedzi.  Mimo że można sprawić, że aplikacja będzie odpowiadać przez ręczne duplikowanie wątków, czynność duplikowania wątku jest kosztowną operacją względną do użycia `async` i `await`.  Szczególnie w przypadku urządzeń przenośnych, które mają wpływ na działanie wątku interfejsu użytkownika jak najmniejszej ilości miejsca I/O.
+Największym zyskiem `async` za `await` korzystanie z aplikacji klienckiej i dla niego jest wzrost responsywności.  Chociaż można sprawić, że aplikacja będzie reagować przez ręczne tarło wątków, akt tarła wątku jest kosztowną operacją w stosunku do tylko przy użyciu `async` i `await`.  Szczególnie dla czegoś takiego jak gra mobilna, wpływ na wątek interfejsu użytkownika w jak najmniejszym stopniu, jeśli chodzi o We/Wy, ma kluczowe znaczenie.
 
-Co ważniejsze, ponieważ zadania związane z we/wy poświęcają praktycznie bez czasu na procesorze CPU, dedykowanie całego wątku procesora CPU stanowią jedynie ułamek wszelkie użyteczne działania byłyby niewłaściwym użyciem zasobów.
+Co ważniejsze, ponieważ praca związana z we/wy nie spędza praktycznie czasu na procesorze, poświęcając cały wątek procesora do wykonywania prawie żadnej użytecznej pracy byłoby słabe wykorzystanie zasobów.
 
-Ponadto wysyłanie zadań do wątku interfejsu użytkownika (na przykład aktualizowania interfejsu użytkownika) jest bardzo proste z `async` metodami i nie wymaga dodatkowej pracy (na przykład wywołania delegata bezpiecznego wątkowo).
+Ponadto wysyłanie pracy do wątku interfejsu użytkownika (na przykład aktualizowanie interfejsu `async` użytkownika) jest bardzo proste z metodami i nie wymaga dodatkowej pracy (na przykład wywoływanie delegata bezpiecznego dla wątków).
 
-## <a name="deeper-dive-into-task-and-taskt-for-a-cpu-bound-operation"></a>Dokładniejsze szczegółowe do zadań i\<zadań T > dla operacji związanej z procesorem
+## <a name="deeper-dive-into-task-and-taskt-for-a-cpu-bound-operation"></a>Głębiej zanurz się\<w> zadania i zadania T dla operacji związanej z procesorem
 
-Kod powiązany `async` z procesorem jest nieco inny niż kod powiązany `async` we/wy.  Ponieważ prace odbywają się na procesorze CPU, nie ma możliwości uzyskania większej ilości przydzielenia wątku do obliczenia.  Korzystanie z programu `async` i `await` zapewnia czysty sposób współdziałania z wątkiem w tle i zachowanie obiektu wywołującego metody asynchronicznej.  Należy pamiętać, że nie zapewnia to ochrony danych udostępnionych.  W przypadku korzystania z danych udostępnionych nadal trzeba zastosować odpowiednią strategię synchronizacji.
+Kod związany `async` z procesorem CPU jest nieco `async` inny niż kod związany z we/wy.  Ponieważ praca jest wykonywana na procesorze CPU, nie ma sposobu, aby obejść poświęcając wątek do obliczeń.  Korzystanie z `async` `await` i zapewnia czysty sposób interakcji z wątku w tle i zachować obiekt wywołujący metody asynchronicznej elastyczne.  Należy pamiętać, że nie zapewnia to żadnej ochrony udostępnionych danych.  Jeśli używasz udostępnionych danych, nadal trzeba będzie zastosować odpowiednią strategię synchronizacji.
 
-Oto 10 000-krotne wywołanie asynchroniczne powiązane z PROCESORem:
+Oto 10 000 stóp widok wywołania asynchronicznego związanego z procesorem:
 
 ```csharp
 public async Task<int> CalculateResult(InputData data)
@@ -136,17 +136,17 @@ public async Task<int> CalculateResult(InputData data)
 }
 ```
 
-`CalculateResult()`wykonuje w wątku, w którym został wywołany.  Gdy jest wywoływana `Task.Run`, jest kolejkuje kosztowną operację powiązaną z procesorem, `DoExpensiveCalculation()`, w puli `Task<int>` wątków i odbiera uchwyt.  `DoExpensiveCalculation()`jest ostatecznie uruchamiane współbieżnie na następnym dostępnym wątku, prawdopodobnie na innym rdzeń procesora CPU.  Możliwe jest wykonywanie współbieżnych zadań, gdy `DoExpensiveCalculation()` są one zajęte w innym wątku, ponieważ jest nadal `CalculateResult()` wykonywany wątek, który został wywołany.
+`CalculateResult()`wykonuje w wątku, który został wezwany.  Gdy wywołuje `Task.Run`, kolejki kosztowne operacji cpu `DoExpensiveCalculation()`związane, , w puli `Task<int>` wątków i odbiera dojście.  `DoExpensiveCalculation()`jest ostatecznie uruchamiany jednocześnie na następnym dostępnym wątku, prawdopodobnie na innym rdzeniu procesora.  Jest możliwe do równoczesnych prac, gdy `DoExpensiveCalculation()` jest zajęty w innym `CalculateResult()` wątku, ponieważ wątek, który wywoływany jest nadal wykonywane.
 
-Po `await` napotkaniu `CalculateResult()` zostanie osiągnięty jego obiekt wywołujący, co pozwala na wykonywanie innych zadań z bieżącym wątkiem podczas `DoExpensiveCalculation()` wycofywania wyniku.  Po zakończeniu wynik zostanie umieszczony w kolejce do uruchomienia w wątku głównym.  Ostatecznie wątek główny powróci do wykonania `CalculateResult()`, a następnie będzie miał `DoExpensiveCalculation()`wynik.
+Po `await` napotkaniu, wykonanie `CalculateResult()` jest udomowiony do jego obiektu wywołującego, `DoExpensiveCalculation()` dzięki czemu inne prace do wykonania z bieżącego wątku podczas ubijania obecnie wynik.  Po zakończeniu wynik jest umieszczany w kolejce do uruchomienia w wątku głównym.  Ostatecznie główny wątek powróci do `CalculateResult()`wykonywania , w którym to `DoExpensiveCalculation()`momencie będzie miał wynik .
 
-### <a name="why-does-async-help-here"></a>Dlaczego w tym miejscu jest dostępna pomoc Async?
+### <a name="why-does-async-help-here"></a>Dlaczego async pomaga tutaj?
 
-`async`najlepszym `await` rozwiązaniem jest zarządzanie powiązanymi z procesorami zadań, gdy potrzebna jest czas odpowiedzi. Istnieje wiele wzorców do użycia async z zadaniami związanymi z PROCESORem. Należy pamiętać, że istnieje niewielki koszt korzystania z usługi asynchronicznej i nie jest to zalecane w przypadku ścisłych pętli.  Pozwala to określić sposób pisania kodu w ramach tej nowej funkcji.
+`async`i `await` są najlepszym rozwiązaniem w zarządzaniu pracą związaną z procesorem, gdy potrzebujesz reakcji. Istnieje wiele wzorców do używania asynchronii z pracą związaną z procesorem CPU. Ważne jest, aby pamiętać, że korzystanie z asynchronii jest niewielkie i nie jest zalecane w przypadku ciasnych pętli.  To do Ciebie, aby określić, jak napisać kod wokół tej nowej funkcji.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Programowanie asynchroniczne wC#](../csharp/async.md)
-- [Programowanie asynchroniczne z Async i Await (C#)](../csharp/programming-guide/concepts/async/index.md)
-- [Programowanie asynchroniczne wF#](../fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
-- [Programowanie asynchroniczne z Async i Await (Visual Basic)](../visual-basic/programming-guide/concepts/async/index.md)
+- [Programowanie asynchroniczne w języku C #](../csharp/async.md)
+- [Asynchroniczne programowanie z async i await (C#)](../csharp/programming-guide/concepts/async/index.md)
+- [Programowanie asynchroniczne w f #](../fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
+- [Programowanie asynchroniczne z asynchroniczną i oczekiwaną (Visual Basic)](../visual-basic/programming-guide/concepts/async/index.md)

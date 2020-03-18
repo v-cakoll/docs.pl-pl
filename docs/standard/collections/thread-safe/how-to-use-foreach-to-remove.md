@@ -9,30 +9,30 @@ helpviewer_keywords:
 - thread-safe collections, how to enumerate blocking collection
 ms.assetid: 2096103c-22f7-420d-b631-f102bc33a6dd
 ms.openlocfilehash: f9a858dea74be63634f887c4204aefa8ac338ad0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711236"
 ---
 # <a name="how-to-use-foreach-to-remove-items-in-a-blockingcollection"></a>Porady: używanie ForEach do usuwanie elementów BlockingCollection
 
-Oprócz pobierania elementów z <xref:System.Collections.Concurrent.BlockingCollection%601> przy użyciu metody <xref:System.Collections.Concurrent.BlockingCollection%601.Take%2A> i <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A>, można również użyć instrukcji [foreach](../../../csharp/language-reference/keywords/foreach-in.md) ([dla każdej](../../../visual-basic/language-reference/statements/for-each-next-statement.md) w Visual Basic) do usuwania elementów do momentu ukończenia dodawania, a kolekcja jest pusta. Jest to nazywane *mutacją wyliczenia* lub *zużywaniem wyliczenia* , ponieważ w przeciwieństwie do typowej pętli `foreach` (`For Each`) ten moduł wyliczający modyfikuje kolekcję źródłową, usuwając elementy.
+Oprócz pobierania elementów z <xref:System.Collections.Concurrent.BlockingCollection%601> za <xref:System.Collections.Concurrent.BlockingCollection%601.Take%2A> pomocą <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A> metody i, można również użyć [foreach](../../../csharp/language-reference/keywords/foreach-in.md) [(For Each](../../../visual-basic/language-reference/statements/for-each-next-statement.md) w języku Visual Basic), aby usunąć elementy, dopóki dodawanie nie zostanie zakończona, a kolekcja jest pusta. Jest to nazywane *mutowanie wyliczenia* lub *zużywa wyliczenie,* ponieważ w przeciwieństwie do typowej `foreach` (`For Each`) pętli, ten wyliczacz modyfikuje kolekcji źródłowej przez usunięcie elementów.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak usunąć wszystkie elementy w <xref:System.Collections.Concurrent.BlockingCollection%601> przy użyciu pętli `foreach` (`For Each`).
+W poniższym przykładzie pokazano, jak <xref:System.Collections.Concurrent.BlockingCollection%601> usunąć `foreach` wszystkie`For Each`elementy w pętli () za pomocą ( ).
 
 [!code-csharp[CDS_BlockingCollection#03](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds_blockingcollection/cs/example03.cs#03)]
 [!code-vb[CDS_BlockingCollection#03](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_blockingcollection/vb/enumeratebc.vb#03)]
 
-W tym przykładzie jest stosowana pętla `foreach` z metodą <xref:System.Collections.Concurrent.BlockingCollection%601.GetConsumingEnumerable%2A?displayProperty=nameWithType> w wątku zużywania, która powoduje, że każdy element zostanie usunięty z kolekcji w miarę ich wyliczania. <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> ogranicza maksymalną liczbę elementów, które znajdują się w kolekcji w dowolnym momencie. Wyliczenie kolekcji w ten sposób blokuje wątek odbiorcy, jeśli żadne elementy nie są dostępne lub jeśli kolekcja jest pusta. W tym przykładzie blokowanie nie jest problemem, ponieważ wątek produkcyjny dodaje elementy szybciej niż można ich użyć.
+W tym `foreach` przykładzie używa <xref:System.Collections.Concurrent.BlockingCollection%601.GetConsumingEnumerable%2A?displayProperty=nameWithType> pętli z metodą w wątku zużywa, co powoduje, że każdy element, który ma zostać usunięty z kolekcji, jak jest wyliczany. <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>ogranicza maksymalną liczbę elementów, które znajdują się w kolekcji w dowolnym momencie. Wyliczanie kolekcji w ten sposób blokuje wątek konsumenta, jeśli nie są dostępne żadne elementy lub jeśli kolekcja jest pusta. W tym przykładzie blokowanie nie jest problemem, ponieważ wątek producenta dodaje elementy szybciej niż mogą być używane.
 
-Nie ma gwarancji, że elementy są wyliczane w tej samej kolejności, w jakiej są dodawane przez wątki producentów.
+Nie ma żadnej gwarancji, że elementy są wyliczane w tej samej kolejności, w jakiej są dodawane przez wątki producenta.
 
-Aby wyliczyć kolekcję bez modyfikacji, po prostu Użyj `foreach` (`For Each`) bez metody <xref:System.Collections.Concurrent.BlockingCollection%601.GetConsumingEnumerable%2A>. Jednak ważne jest, aby zrozumieć, że ten rodzaj wyliczenia reprezentuje migawkę kolekcji w określonym momencie. Jeśli inne wątki dodają lub usuwają elementy współbieżnie podczas wykonywania pętli, pętla może nie reprezentować rzeczywistego stanu kolekcji.
+Aby wyliczyć kolekcję bez modyfikowania `foreach` `For Each`jej, <xref:System.Collections.Concurrent.BlockingCollection%601.GetConsumingEnumerable%2A> po prostu użyj ( ) bez metody. Jednak ważne jest, aby zrozumieć, że tego rodzaju wyliczenia reprezentuje migawkę kolekcji w określonym momencie w czasie. Jeśli inne wątki są dodawanie lub usuwanie elementów jednocześnie podczas wykonywania pętli, a następnie pętli może nie reprezentować rzeczywisty stan kolekcji.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - [Programowanie równoległe](../../../../docs/standard/parallel-programming/index.md)

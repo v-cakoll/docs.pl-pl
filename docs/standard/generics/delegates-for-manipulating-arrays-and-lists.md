@@ -11,35 +11,35 @@ helpviewer_keywords:
 - generics [.NET Framework], delegates
 ms.assetid: 416be383-cc61-4102-9b1b-88b51adb963e
 ms.openlocfilehash: baf8497289ee71c2dbdc544607212de90928289c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75708387"
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>Delegaty ogólne do manipulowania tablicami i listami
-Ten temat zawiera przegląd ogólnych delegatów dla konwersji, predykatów wyszukiwania i akcji, które mają być podejmowane w elementach tablicy lub kolekcji.  
+Ten temat zawiera omówienie ogólnych delegatów dla konwersji, predykatów wyszukiwania i akcji, które należy podjąć na elementach tablicy lub kolekcji.  
   
 ## <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>Delegaty ogólne do manipulowania tablicami i listami  
- Delegat ogólny <xref:System.Action%601> reprezentuje metodę wykonującą pewne działania na elemencie określonego typu. Można utworzyć metodę, która wykonuje odpowiednią akcję dla elementu, utworzyć wystąpienie delegata <xref:System.Action%601> do reprezentowania tej metody, a następnie przekazać tablicę i delegata do <xref:System.Array.ForEach%2A?displayProperty=nameWithType> statycznej metody ogólnej. Metoda jest wywoływana dla każdego elementu tablicy.  
+ Ogólny <xref:System.Action%601> delegat reprezentuje metodę, która wykonuje niektóre działania na element określonego typu. Można utworzyć metodę, która wykonuje żądaną akcję na element, <xref:System.Action%601> utworzyć wystąpienie delegata do reprezentowania tej metody, <xref:System.Array.ForEach%2A?displayProperty=nameWithType> a następnie przekazać tablicy i delegata do statycznej metody ogólnej. Metoda jest wywoływana dla każdego elementu tablicy.  
   
- Klasa ogólna <xref:System.Collections.Generic.List%601> również udostępnia metodę <xref:System.Collections.Generic.List%601.ForEach%2A>, która używa delegata <xref:System.Action%601>. Ta metoda nie jest rodzajowa.  
+ Klasa <xref:System.Collections.Generic.List%601> ogólna zapewnia <xref:System.Collections.Generic.List%601.ForEach%2A> również metodę, która używa delegata. <xref:System.Action%601> Ta metoda nie jest ogólna.  
   
 > [!NOTE]
-> Pozwala to na interesujący punkt dotyczący typów ogólnych i metod. Metoda <xref:System.Array.ForEach%2A?displayProperty=nameWithType> musi być statyczna (`Shared` w Visual Basic) i ogólna, ponieważ <xref:System.Array> nie jest typem ogólnym; jedyną przyczyną, aby można było określić typ <xref:System.Array.ForEach%2A?displayProperty=nameWithType>, na którym operuje Metoda ma własną listę parametrów typu. Z kolei Metoda nieogólna <xref:System.Collections.Generic.List%601.ForEach%2A?displayProperty=nameWithType> należy do klasy generycznej <xref:System.Collections.Generic.List%601>, dlatego po prostu używa parametru typu klasy. Klasa jest silnie wpisana, dlatego metoda może być metodą wystąpienia.  
+> To sprawia, że interesujący punkt o typy ogólne i metody. Metoda <xref:System.Array.ForEach%2A?displayProperty=nameWithType> musi być`Shared` statyczna (w języku Visual Basic) i ogólna, ponieważ <xref:System.Array> nie jest typem ogólnym; Jedynym powodem, dla którego <xref:System.Array.ForEach%2A?displayProperty=nameWithType> można określić typ do pracy na jest to, że metoda ma własną listę parametrów typu. Natomiast metoda nierodzajowa <xref:System.Collections.Generic.List%601.ForEach%2A?displayProperty=nameWithType> należy do klasy <xref:System.Collections.Generic.List%601>ogólnej, więc po prostu używa parametru typu jego klasy. Klasa jest silnie typizowany, więc metoda może być metoda wystąpienia.  
   
- Delegat ogólny <xref:System.Predicate%601> reprezentuje metodę, która określa, czy konkretny element spełnia zdefiniowane kryteria. Można go użyć z następującymi statycznymi metodami <xref:System.Array>, aby wyszukać element lub zestaw elementów: <xref:System.Array.Exists%2A>, <xref:System.Array.Find%2A>, <xref:System.Array.FindAll%2A>, <xref:System.Array.FindIndex%2A>, <xref:System.Array.FindLast%2A>, <xref:System.Array.FindLastIndex%2A>i <xref:System.Array.TrueForAll%2A>.  
+ Delegat <xref:System.Predicate%601> ogólny reprezentuje metodę, która określa, czy określony element spełnia kryteria, które definiujesz. Można go używać z następującymi statycznymi <xref:System.Array> metodami ogólnymi wyszukiwania <xref:System.Array.Exists%2A> <xref:System.Array.Find%2A>elementu <xref:System.Array.FindAll%2A> <xref:System.Array.FindIndex%2A>lub zestawu elementów: , , , <xref:System.Array.FindLast%2A>, , <xref:System.Array.FindLastIndex%2A>i <xref:System.Array.TrueForAll%2A>.  
   
- <xref:System.Predicate%601> działa również z odpowiednimi nieogólnymi metodami wystąpień klasy generycznej <xref:System.Collections.Generic.List%601>.  
+ <xref:System.Predicate%601>współpracuje również z odpowiednimi metodami <xref:System.Collections.Generic.List%601> wystąpienia nierodzajowego klasy ogólnej.  
   
- Delegat ogólny <xref:System.Comparison%601> umożliwia podanie porządku sortowania dla elementów tablicy lub listy, które nie mają natywnej kolejności sortowania lub przesłaniania natywnej kolejności sortowania. Utwórz metodę, która wykonuje porównanie, Utwórz wystąpienie delegata <xref:System.Comparison%601>, aby reprezentować metodę, a następnie Przekaż tablicę i delegata do <xref:System.Array.Sort%60%601%28%60%600%5B%5D%2CSystem.Comparison%7B%60%600%7D%29?displayProperty=nameWithType> statycznej metody ogólnej. Klasa generyczna <xref:System.Collections.Generic.List%601> udostępnia odpowiednie Przeciążenie metody wystąpienia, <xref:System.Collections.Generic.List%601.Sort%28System.Comparison%7B%600%7D%29?displayProperty=nameWithType>.  
+ Ogólny <xref:System.Comparison%601> delegat umożliwia podanie kolejności sortowania dla elementów tablicy lub listy, które nie mają natywnej kolejności sortowania, lub zastąpienie kolejności sortowania macierzystego. Utwórz metodę, która wykonuje porównanie, utwórz wystąpienie <xref:System.Comparison%601> pełnomocnika do reprezentowania metody, a następnie <xref:System.Array.Sort%60%601%28%60%600%5B%5D%2CSystem.Comparison%7B%60%600%7D%29?displayProperty=nameWithType> przekaż tablicę i delegata do statycznej metody ogólnej. Klasa <xref:System.Collections.Generic.List%601> ogólna zapewnia odpowiednie przeciążenie metody wystąpienia, <xref:System.Collections.Generic.List%601.Sort%28System.Comparison%7B%600%7D%29?displayProperty=nameWithType>.  
   
- Delegat ogólny <xref:System.Converter%602> umożliwia zdefiniowanie konwersji między dwoma typami, a także konwersję tablicy jednego typu na tablicę lub konwersję listy jednego typu na listę innych. Utwórz metodę, która konwertuje elementy istniejącej listy na nowy typ, Utwórz wystąpienie delegata reprezentujące metodę, a następnie użyj <xref:System.Array.ConvertAll%2A?displayProperty=nameWithType> ogólnej metody statycznej, aby utworzyć tablicę nowego typu z oryginalnej tablicy, lub metodę <xref:System.Collections.Generic.List%601.ConvertAll%60%601%28System.Converter%7B%600%2C%60%600%7D%29?displayProperty=nameWithType> wystąpienie ogólne, aby utworzyć listę nowych typów z listy pierwotnej.  
+ Ogólny <xref:System.Converter%602> delegat umożliwia zdefiniowanie konwersji między dwoma typami i konwertowanie tablicy jednego typu na tablicę drugiego lub konwertowanie listy jednego typu na listę innych typów. Utwórz metodę, która konwertuje elementy istniejącej listy na nowy typ, utwórz <xref:System.Array.ConvertAll%2A?displayProperty=nameWithType> wystąpienie delegata do reprezentowania metody i użyj ogólnej <xref:System.Collections.Generic.List%601.ConvertAll%60%601%28System.Converter%7B%600%2C%60%600%7D%29?displayProperty=nameWithType> metody statycznej do utworzenia tablicy nowego typu z oryginalnej tablicy lub metody wystąpienia ogólnego do utworzenia listy nowego typu z oryginalnej listy.  
   
-### <a name="chaining-delegates"></a>Tworzenie łańcuchów obiektów delegowanych  
- Wiele metod, które używają tych delegatów, zwraca tablicę lub listę, które mogą być przesyłane do innej metody. Na przykład, jeśli chcesz wybrać niektóre elementy tablicy, przekonwertuj te elementy na nowy typ i Zapisz je w nowej tablicy, możesz przekazać tablicę zwracaną przez metodę <xref:System.Array.FindAll%2A> Generic do <xref:System.Array.ConvertAll%2A> metody ogólnej. Jeśli typ nowego elementu nie ma naturalnej kolejności sortowania, można przekazać tablicę zwróconą przez metodę rodzajową <xref:System.Array.ConvertAll%2A> do <xref:System.Array.Sort%60%601%28%60%600%5B%5D%2CSystem.Comparison%7B%60%600%7D%29> metody ogólnej.  
+### <a name="chaining-delegates"></a>Łańcuchowe delegatów  
+ Wiele metod, które używają tych delegatów zwrócić tablicy lub listy, które mogą być przekazywane do innej metody. Na przykład jeśli chcesz zaznaczyć niektóre elementy tablicy, przekonwertować te elementy na nowy typ i zapisać je <xref:System.Array.FindAll%2A> w nowej <xref:System.Array.ConvertAll%2A> tablicy, można przekazać tablicy zwrócone przez metodę rodzajową do metody ogólnej. Jeśli nowy typ elementu nie ma naturalnej kolejności sortowania, <xref:System.Array.ConvertAll%2A> można przekazać <xref:System.Array.Sort%60%601%28%60%600%5B%5D%2CSystem.Comparison%7B%60%600%7D%29> tablicy zwrócone przez metodę rodzajową do metody ogólnej.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Collections.Generic?displayProperty=nameWithType>
 - <xref:System.Collections.ObjectModel?displayProperty=nameWithType>

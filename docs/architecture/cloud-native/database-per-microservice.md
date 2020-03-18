@@ -1,155 +1,155 @@
 ---
-title: Baza danych na mikrousługi
-description: Magazyn danych kontrastowych w aplikacjach monolitycznych i natywnych w chmurze.
+title: Baza danych na mikrousługę
+description: Kontrast przechowywania danych w aplikacjach monolitycznych i natywnych dla chmury.
 author: robvet
 ms.date: 01/22/2020
-ms.openlocfilehash: e472309d3dc815070fc2d2c220bf4fe00b8c29ae
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: c0c5611fa866d70f155e4bdad2eee1181b13c065
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794906"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141448"
 ---
-# <a name="database-per-microservice"></a>Baza danych na mikrousługi
+# <a name="database-per-microservice"></a>Baza danych na mikrousługę
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Jak widać w tej książce, podejście natywne w chmurze zmienia sposób projektowania i wdrażania aplikacji oraz zarządzania nimi. Zmienia również sposób zarządzania i przechowywania danych.
+Jak widzieliśmy w całej tej książce, podejście natywne dla chmury zmienia sposób projektowania, wdrażania i zarządzania aplikacjami. Zmienia również sposób zarządzania i przechowywania danych.
 
 Rysunek 5-1 kontrastuje różnice.
 
-![Magazyn danych w aplikacjach natywnych w chmurze](./media/distributed-data.png)
+![Przechowywanie danych w aplikacjach natywnych dla chmury](./media/distributed-data.png)
 
-**Rysunek 5-1**. Zarządzanie danymi w aplikacjach natywnych w chmurze
+**Rysunek 5-1**. Zarządzanie danymi w aplikacjach natywnych dla chmury
 
-Doświadczeni deweloperzy mogą łatwo rozpoznać architekturę po lewej stronie rysunku 5-1. W tej *aplikacji monolitycznej*składniki usługi biznesowej współdzielą się ze sobą w warstwie usług udostępnionych, udostępniając dane z pojedynczej relacyjnej bazy danych.
+Doświadczeni deweloperzy z łatwością rozpoznają architekturę po lewej stronie rysunku 5-1. W tej *aplikacji monolityczne*, składniki usługi biznesowej kolokacji razem w warstwie usług udostępnionych, udostępnianie danych z jednej relcyjnej bazy danych.
 
-W wielu przypadkach pojedyncza baza danych utrzymuje prostotę zarządzania danymi. Wykonywanie zapytań dotyczących danych w wielu tabelach jest proste. Zmiany w aktualizacjach danych lub ich wycofanie. [Transakcje kwasowe](https://docs.microsoft.com/windows/desktop/cossdk/acid-properties) gwarantują silną i natychmiastową spójność.
+Na wiele sposobów pojedyncza baza danych ułatwia zarządzanie danymi. Wykonywanie zapytań dotyczących danych w wielu tabelach jest proste. Zmiany w aktualizacji danych razem lub wszystkie one wycofać. [Transakcje ACID](https://docs.microsoft.com/windows/desktop/cossdk/acid-properties) gwarantują silną i natychmiastową spójność.
 
-Projektowanie na potrzeby chmury w chmurze jest inne podejście. Zwróć uwagę na to, w jaki sposób funkcje biznesowe są segregowane w małych, niezależnych mikrousługach po prawej stronie rysunku 5-1. Każda mikrousługa hermetyzuje konkretną możliwość biznesową i własne dane. Monolityczna baza danych dekomponowa się do rozproszonego modelu danych z wieloma mniejszymi bazami danych, z których każda jest dostosowywana przy użyciu mikrousługi. Gdy dym jest wyczyszczony, zostanie nadana konstrukcja, która udostępnia *bazę danych na mikrousługi*.
+Projektowanie dla chmury rodzimych, mamy inne podejście. Po prawej stronie rysunku 5-1 należy zwrócić uwagę na sposób, w jaki funkcje biznesowe są segregowane w małe, niezależne mikrousługi. Każda mikrousługa hermetyzuje określone możliwości biznesowe i własne dane. Monolityczne bazy danych rozkłada się w modelu rozproszonych danych z wielu mniejszych baz danych, każdy dostosowanie do mikrousługi. Gdy dym czyści, wyłaniamy się z projektem, który udostępnia *bazy danych na mikrousługi*.
 
 ## <a name="why"></a>Dlaczego?
 
-Ta baza danych dla mikrousług zapewnia wiele korzyści, szczególnie w przypadku systemów, które muszą szybko rozwijać i obsługiwać ogromną skalę. Z tym modelem...
+Ta baza danych na mikrousługi zapewnia wiele korzyści, szczególnie w przypadku systemów, które muszą szybko ewoluować i obsługiwać dużą skalę. Z tym modelem...
 
 - Dane domeny są hermetyzowane w ramach usługi
-- Schemat danych może się rozwijać bez bezpośredniego wpływu na inne usługi
-- Każdy magazyn danych może być niezależnie skalowany
+- Schemat danych może ewoluować bez bezpośredniego wpływu na inne usługi
+- Każdy magazyn danych może niezależnie skalować
 - Awaria magazynu danych w jednej usłudze nie wpłynie bezpośrednio na inne usługi
 
-Rozdzielenie danych umożliwia również każdej mikrousługi implementację typu magazynu danych, który najlepiej jest zoptymalizowany pod kątem obciążenia, potrzeby magazynowania oraz wzorców odczytu i zapisu. Dostępne opcje to relacyjny, dokument, klucz-wartość, a nawet magazyn danych oparty na grafie.
+Segregowanie danych umożliwia również każdej mikrousługi do zaimplementowania typu magazynu danych, który jest najlepiej zoptymalizowany pod kątem jego obciążenia, potrzeb magazynu i odczytu/zapisu wzorców. Dostępne opcje obejmują relacyjne, dokumentowe, kluczowe, a nawet oparte na wykresie magazyny danych.
 
-Rysunek 5-2 przedstawia zasadę trwałości Polyglot w systemie macierzystym w chmurze.
+Rysunek 5-2 przedstawia zasadę trwałości polyglot w systemie natywnym dla chmury.
 
-![Trwałość danych Polyglot](./media/polyglot-data-persistence.png)
+![Trwałość danych polyglot](./media/polyglot-data-persistence.png)
 
-**Rysunek 5-2**. Trwałość danych Polyglot
+**Rysunek 5-2**. Trwałość danych polyglot
 
-Zwróć uwagę na poprzednie ilustracje, w jaki sposób poszczególne mikrousługi obsługują inny typ magazynu danych.
+Uwaga na poprzednim rysunku, jak każda mikrousługa obsługuje inny typ magazynu danych.
 
-- Mikrousługa katalogu produktów korzysta z relacyjnej bazy danych, aby pomieścić rozbudowaną strukturę relacyjną danych źródłowych.
-- Mikrousługa koszyka zakupów używa rozproszonej pamięci podręcznej, która obsługuje prosty magazyn danych o kluczowym poziomie.
-- Mikrousługa porządkowania wykorzystuje bazę danych dokumentów NoSql dla operacji zapisu oraz wysoce nieznormalizowany magazyn klucz/wartość, aby uwzględnić duże ilości operacji odczytu.
+- Mikrousługi katalogu produktów zużywa relacyjnej bazy danych, aby pomieścić bogatą strukturę relacyjnej danych źródłowych.
+- Mikrousługi koszyka zakupów zużywa rozproszonej pamięci podręcznej, która obsługuje jego prosty magazyn danych o wartości klucza.
+- Mikrousługi zamawiania używa zarówno bazy danych dokumentów NoSql dla operacji zapisu wraz z magazynu kluczy/wartości wysoce nieznormalizowane, aby pomieścić duże ilości operacji odczytu.
   
-Relacyjne bazy danych pozostają istotne dla mikrousług z danymi złożonymi, jednak bazy danych NoSQL uzyskały znaczną popularność. Zapewniają one ogromne skalowanie i wysoką dostępność. Ich charakter bez schematu pozwala deweloperom poruszać się od architektury klas danych z określonym typem i ORMs, co sprawia, że zmiany są kosztowne i czasochłonne. Obejmujemy bazy danych NoSQL w dalszej części tego rozdziału.
+Podczas gdy relacyjne bazy danych pozostają istotne dla mikrousług ze złożonymi danymi, bazy danych NoSQL zyskały znaczną popularność. Zapewniają one ogromną skalę i wysoką dostępność. Ich charakter bez schematu umożliwia deweloperom odejście od architektury typowane klasy danych i ORM, które sprawiają, że zmiany kosztowne i czasochłonne. Omówimy bazy danych NoSQL w dalszej części tego rozdziału.
 
- Podczas hermetyzowania danych do oddzielnych mikrousług można zwiększyć elastyczność, wydajność i skalowalność, a także wiele wyzwań. W następnej sekcji omawiamy te wyzwania, a także wzorce i praktyki, które pomogą im je przezwyciężyć.  
+ Hermetyzując dane w oddzielnych mikrousług może zwiększyć elastyczność, wydajność i skalowalność, również przedstawia wiele wyzwań. W następnej części omawiamy te wyzwania wraz ze wzorcami i praktykami, które pomogą je przezwyciężyć.  
 
-## <a name="cross-service-queries"></a>Zapytania międzyusługowe
+## <a name="cross-service-queries"></a>Zapytania między usługami
 
-Chociaż mikrousługi są niezależne i skupiają się na określonych możliwościach funkcjonalnych, takich jak spis, wysyłka lub porządkowanie, często wymagają integracji z innymi mikrousługami. Często integracja obejmuje jednokrotne *wykonywanie zapytań* dotyczących danych. Na rysunku 5-3 przedstawiono scenariusz.
+Mikrousługi są niezależne i koncentrują się na określonych możliwościach funkcjonalnych, takich jak spis, wysyłka lub zamawianie, często wymagają integracji z innymi mikrousługami. Często integracja obejmuje jedną mikrousługę *wykonywania zapytań* innej dla danych. Rysunek 5-3 przedstawia scenariusz.
 
-![Wykonywanie zapytań na mikrousługach](./media/cross-service-query.png)
+![Wykonywanie zapytań w mikrousługach](./media/cross-service-query.png)
 
-**Rysunek 5-3**. Wykonywanie zapytań na mikrousługach
+**Rysunek 5-3**. Wykonywanie zapytań w mikrousługach
 
-Na powyższym rysunku zostanie wyświetlona mikrousługa koszyka zakupów, która dodaje element do koszyka zakupów użytkownika. Chociaż magazyn danych dla tej mikrousługi zawiera dane dotyczące koszyka i wiersza, nie zachowuje danych o produkcie ani cenniku. Zamiast tego te elementy danych należą do wykazu i mikrousług cenowych. Spowoduje to problem. Jak mikrousługa koszyka zakupów dodaje produkt do koszyka zakupów użytkownika, gdy nie zawiera on produktu ani cennika w swojej bazie danych?
+Na powyższym rysunku widzimy mikrousługi koszyka zakupów, który dodaje element do koszyka zakupów użytkownika. Magazyn danych dla tej mikrousługi zawiera dane koszyka i elementu zamówienia, ale nie przechowuje danych o produktach ani cenach. Zamiast tego te elementy danych są własnością mikrousług katalogu i cen. Stanowi to problem. W jaki sposób mikrousługa koszyka zakupów może dodać produkt do koszyka zakupów użytkownika, gdy nie ma produktu ani danych cenowych w swojej bazie danych?
 
-Jedną z opcji omówioną w rozdziale 4 jest [bezpośrednie wywołanie protokołu HTTP](service-to-service-communication.md#queries) z koszyka zakupów do wykazu i mikrousług cenowych. Jednakże w rozdziale 4 firma Microsoft poinformowała o synchronicznych *wywołaniach* http, które dzielą się wspólnie, zmniejszając ich autonomię i ograniczając zalety architektury.
+Jedną z opcji omówionych w rozdziale 4 jest [bezpośrednie wywołanie HTTP](service-to-service-communication.md#queries) z koszyka do mikrousług katalogu i cen. Jednak w rozdziale 4 powiedzieliśmy synchroniczne HTTP wywołuje *kilka* mikrousług razem, zmniejszając ich autonomię i zmniejszając ich korzyści architektoniczne.
 
-Możemy również zaimplementować wzorzec żądanie-odpowiedź z oddzielnymi kolejkami ruchu przychodzącego i wychodzącego dla każdej usługi. Jednak ten wzorzec jest skomplikowany i wymaga instalacji wodociągowej do skorelowania komunikatów żądań i odpowiedzi.
-Podczas oddzielania wywołań mikrousług zaplecza usługa wywołująca musi nadal przeprowadzić synchroniczną oczekiwanie na zakończenie wywołania. Przeciążenie sieci, awarie przejściowe lub przeciążona mikrousługa, co może skutkować długotrwałymi operacjami i nawet niepowodzeniem.
+Możemy również zaimplementować wzorzec żądania i odpowiedzi z oddzielnymi kolejkami przychodzącymi i wychodzącymi dla każdej usługi. Jednak ten wzorzec jest skomplikowane i wymaga hydraulika skorelować żądania i odpowiedzi wiadomości.
+Podczas gdy nie rozłączyć wywołania mikrousługi zaplecza, usługa wywołująca musi nadal synchronicznie czekać na zakończenie wywołania. Przeciążenie sieci, błędy przejściowe lub przeciążenie mikrousługi i może spowodować długotrwałe, a nawet nie powiodło się operacje.
 
-Zamiast tego powszechnie akceptowany wzorzec do usuwania zależności między usługami jest [wzorcem widoku materiałowego](https://docs.microsoft.com/azure/architecture/patterns/materialized-view)pokazanym na rysunku 5-4.
+Zamiast tego powszechnie akceptowanym wzorcem do usuwania zależności między usługami jest [zmaterializowany wzorzec widoku,](https://docs.microsoft.com/azure/architecture/patterns/materialized-view)pokazany na rysunku 5-4.
 
-![Wzorzec widoku materiałowego](./media/materialized-view-pattern.png)
+![Zmaterializowany wzór widoku](./media/materialized-view-pattern.png)
 
-**Rysunek 5-4**. Wzorzec widoku materiałowego
+**Rysunek 5-4**. Zmaterializowany wzór widoku
 
-Przy użyciu tego wzorca należy umieścić lokalną tabelę danych (nazywaną *modelem odczytu*) w usłudze koszyka zakupów. Ta tabela zawiera nieznormalizowaną kopię danych wymaganych z mikrousług produktu i cen. Kopiowanie danych bezpośrednio do usługi koszyka zakupów eliminuje konieczność kosztownych połączeń między usługami. W przypadku danych lokalnych usługi można poprawić czas odpowiedzi i niezawodność usługi. Ponadto posiadanie własnej kopii danych powoduje, że usługa koszyka zakupów bardziej odporna na błędy. Jeśli usługa wykazu powinna stać się niedostępna, nie wpłynie ona bezpośrednio na usługę koszyka zakupów. Koszyk może nadal działać z danymi ze swojego własnego magazynu. 
+Za pomocą tego wzorca umieszczasię tabelę danych lokalnych (znaną jako *model odczytu)* w usłudze koszyka zakupów. Ta tabela zawiera nieznormalizowaną kopię danych potrzebnych z mikrousług produktu i cen. Kopiowanie danych bezpośrednio do mikrousługi koszyka zakupów eliminuje konieczność kosztownych wywołań między usługami. Dzięki danym lokalnym do usługi, można poprawić czas reakcji usługi i niezawodność. Ponadto posiadanie własnej kopii danych sprawia, że usługa koszyka jest bardziej odporna. Jeśli usługa katalogu powinna stać się niedostępna, nie wpłynie bezpośrednio na usługę koszyka. Koszyk może kontynuować działanie z danymi z własnego sklepu.
 
-Catch z tym podejściem polega na tym, że masz teraz duplikaty danych w systemie. Jednak *strategicznie* duplikowanie danych w systemach natywnych w chmurze jest ustanowioną zasadą i nie jest uznawane za antywzorców lub złe rozwiązanie. Należy pamiętać, że *jedna i tylko jedna usługa* może być własnością zestawu danych i mieć przez niego uprawnienia. Podczas aktualizowania systemu rekordów należy synchronizować modele odczytywania. Synchronizacja jest zwykle implementowana za pośrednictwem asynchronicznej obsługi komunikatów ze [wzorcem publikowania/subskrybowania](service-to-service-communication.md#events), jak pokazano na rysunku 5,4.
+Haczyk z tego podejścia jest to, że masz teraz zduplikowane dane w systemie. Jednak *strategicznie* duplikowanie danych w systemach natywnych dla chmury jest utrwaloną praktyką i nie jest uważane za anty-wzorzec lub złe praktyki. Należy pamiętać, że *jedna i tylko jedna usługa* może posiadać zestaw danych i mieć nad nim uprawnienia. Po zaktualizowaniu systemu rekordów należy zsynchronizować modele odczytu. Synchronizacja jest zazwyczaj implementowana za pośrednictwem wiadomości asynchronicznych z [wzorcem publikowania/subskrybowania,](service-to-service-communication.md#events)jak pokazano na rysunku 5.4.
 
 ## <a name="distributed-transactions"></a>Transakcje rozproszone
 
-Podczas wykonywania zapytań dotyczących danych w mikrousługach jest trudne, implementacja transakcji na kilku mikrousług jest jeszcze bardziej skomplikowana. Niezależne wyzwanie związane z konserwacją spójności danych w przypadku różnych mikrousług nie mogą być niezgodne. Brak transakcji rozproszonych w aplikacjach natywnych w chmurze oznacza, że konieczne jest programowe zarządzanie transakcjami rozproszonymi. Przenosisz ze świata *natychmiastowej spójności* do tej *spójności ostatecznej*.
+Podczas wykonywania zapytań danych w mikrousługach jest trudne, implementowanie transakcji w kilku mikrousług jest jeszcze bardziej złożone. Nieodłączne wyzwanie zachowania spójności danych w niezależnych źródłach danych w różnych mikrousług nie można zaniżać. Brak transakcji rozproszonych w aplikacjach natywnych dla chmury oznacza, że należy programowo zarządzać transakcjami rozproszonymi. Przechodzisz ze świata *natychmiastowej spójności* do *ostatecznej spójności.*
 
 Rysunek 5-5 pokazuje problem.
 
-![Transakcja w wzorcu Saga](./media/saga-transaction-operation.png)
+![Transakcja w strukturze sagi](./media/saga-transaction-operation.png)
 
 **Rysunek 5-5**. Implementowanie transakcji w mikrousługach
 
-Na powyższym rysunku pięć niezależnych mikrousług uczestniczy w transakcji rozproszonej, która tworzy zamówienie. Każda mikrousługa utrzymuje własny magazyn danych i implementuje lokalną transakcję dla swojego magazynu. Aby można było utworzyć zamówienie, lokalna transakcja dla *każdej* z mikrousług musi się powieść lub *wszystkie* muszą zostać przerwane i wycofane. Wbudowana obsługa transakcyjna jest dostępna w ramach poszczególnych mikrousług, ale nie jest obsługiwana transakcja rozproszona obejmująca wszystkie pięć usług w celu zachowania spójności danych.
+Na powyższym rysunku pięć niezależnych mikrousług uczestniczyć w transakcji rozproszonej, która tworzy zamówienie. Każda mikrousługa utrzymuje własny magazyn danych i implementuje transakcję lokalną dla swojego magazynu. Aby utworzyć zamówienie, transakcja lokalna dla *każdej* mikrousługi poszczególnych musi się powieść lub *wszystkie* muszą przerwać i wycofać operację. Podczas gdy wbudowana obsługa transakcyjna jest dostępna wewnątrz każdej mikrousługi, nie ma żadnej obsługi transakcji rozproszonej, która będzie się rozciągać we wszystkich pięciu usługach, aby zachować spójność danych.
 
 Zamiast tego należy skonstruować tę transakcję rozproszoną *programowo*.
 
-Popularnym wzorcem dodawania rozproszonej obsługi transakcyjnej jest wzorzec Saga. Jest to implementowane przez grupowanie transakcji lokalnych razem programowo i sekwencyjnie wywoływanie każdego z nich. Jeśli dowolna transakcja lokalna zakończy się niepowodzeniem, Saga przerywa operację i wywołuje zestaw [kompensowania transakcji](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction). Kompensowanie transakcji cofa zmiany dokonane przez poprzednie transakcje lokalne i przywraca spójność danych. Rysunek 5-6 pokazuje nieudaną transakcję ze wzorcem Saga.
+Popularnym wzorcem dodawania rozproszonej obsługi transakcyjnej jest wzór Saga. Jest implementowana przez grupowanie transakcji lokalnych razem programowo i sekwencyjnie wywołując każdy z nich. Jeśli którakolwiek z transakcji lokalnych nie powiedzie się, Saga przerywa operację i wywołuje zestaw [transakcji kompensacyjnych](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction). Transakcje kompensacyjne cofają zmiany wprowadzone przez poprzednie transakcje lokalne i przywracają spójność danych. Rysunek 5-6 przedstawia nieudaną transakcję ze wzorem Saga.
 
-![Wycofywanie w wzorcu Saga](./media/saga-rollback-operation.png)
+![Wycofaj się w sagę wzór](./media/saga-rollback-operation.png)
 
 **Rysunek 5-6**. Wycofywanie transakcji
 
-Na powyższym rysunku operacja *aktualizacji spisu* nie powiodła się w Mikrousłudze spisu. Saga wywołuje zbiór transakcji kompensacyjnych (czerwony), aby dostosować liczbę spisów, anulować płatność i zamówienie i zwrócić dane dla każdej mikrousługi z powrotem do spójnego stanu.
+Na poprzedniej rysunku *operacja Aktualizuj spis* uchylić się w mikrousługi zapasów. Saga wywołuje zestaw transakcji kompensacyjnych (na czerwono), aby dostosować liczbę zapasów, anulować płatności i zamówienia i zwrócić dane dla każdej mikrousługi z powrotem do stanu spójnego.
 
-Wzorce Saga są zwykle choreographed jako serie powiązanych zdarzeń lub zorganizowane jako zestaw powiązanych poleceń. W rozdziale 4 opisano wzorzec agregatora usług, który byłby podstawą dla zorganizowanej implementacji Saga. Omawiamy również zdarzenia dotyczące Azure Service Bus i Azure Event Grid tematów, które byłyby podstawą dla implementacji choreographed Saga.
+Wzorce sagi są zazwyczaj choreografia jako seria powiązanych wydarzeń lub zaaranżowane jako zestaw powiązanych poleceń. W rozdziale 4 omówiliśmy wzorzec agregatora usług, który byłby podstawą zaaranżowanej implementacji sagi. Omówiliśmy również eventing wraz z usługi Azure Service Bus i azure event grid tematów, które będą podstawą dla implementacji sagi choreografia.
 
-## <a name="high-volume-data"></a>Duże ilości danych
+## <a name="high-volume-data"></a>Dane o dużej objętości
 
-Duże aplikacje natywne w chmurze często obsługują wymagania dotyczące dużej ilości danych. W tych scenariuszach tradycyjne techniki magazynowania danych mogą spowodować wąskie gardła. W przypadku złożonych systemów, które wdrażają w dużej skali, zarówno Command and Query Responsibility Segregation (CQRS), jak i źródła zdarzeń mogą zwiększyć wydajność aplikacji.  
+Duże aplikacje natywne dla chmury często obsługują wymagania dotyczące danych o dużej objętości. W tych scenariuszach tradycyjne techniki przechowywania danych może spowodować wąskie gardła. W przypadku złożonych systemów wdrażanych na dużą skalę zarówno segregacja odpowiedzialności za polecenia, jak i kwerendy (CQRS) i pozyskiwanie zdarzeń może zwiększyć wydajność aplikacji.  
 
 ### <a name="cqrs"></a>CQRS
 
-[CQRS](https://docs.microsoft.com/azure/architecture/patterns/cqrs), to wzorzec architektoniczny, który może pomóc zmaksymalizować wydajność, skalowalność i bezpieczeństwo. Wzorzec oddziela operacje odczytujące dane z tych operacji, które zapisują dane. 
+[CQRS](https://docs.microsoft.com/azure/architecture/patterns/cqrs), to wzorzec architektoniczny, który może pomóc zmaksymalizować wydajność, skalowalność i zabezpieczenia. Wzorzec oddziela operacje, które odczytują dane z tych operacji, które zapisują dane.
 
-W normalnych *scenariuszach do operacji odczytu i* zapisu są używane te same obiekty modelu jednostki i repozytorium danych.
+W przypadku normalnych scenariuszy ten sam model jednostki i obiekt repozytorium danych są używane zarówno dla operacji odczytu, *jak* i zapisu.
 
-Jednak scenariusz dużej ilości danych może korzystać z oddzielnych modeli i tabel danych do odczytu i zapisu. Aby zwiększyć wydajność, operacja odczytu może badać wysoce nieznormalizowaną reprezentację danych, aby uniknąć kosztownych sprzężeń między tabelami i blokad tabeli. Operacja *zapisu* , znana jako *polecenie*, będzie aktualizowana względem w pełni znormalizowanej reprezentacji danych, które gwarantują spójność. Następnie należy zaimplementować mechanizm, aby zachować obie reprezentacje w synchronizacji. Zazwyczaj zawsze, gdy tabela zapis jest modyfikowana, publikuje zdarzenie, które replikuje modyfikację tabeli Odczytaj.
+Jednak scenariusz danych o dużej objętości może korzystać z oddzielnych modeli i tabel danych dla odczytów i zapisów. Aby zwiększyć wydajność, operacja odczytu może kwerendy przeciwko wysoce nieznormalizowane reprezentacji danych, aby uniknąć kosztownych powtarzających się sprzężeń tabeli i blokad tabeli. Operacja *zapisu,* znana jako *polecenie,* będzie aktualizowana względem w pełni znormalizowanej reprezentacji danych, która gwarantowałaby spójność. Następnie należy zaimplementować mechanizm, aby zachować obie reprezentacje w synchronizacji. Zazwyczaj za każdym razem, gdy tabela zapisu jest modyfikowany, publikuje zdarzenie, które replikuje modyfikacji do tabeli odczytu.
 
-Na rysunku 5-7 przedstawiono implementację wzorca CQRS.
+Rysunek 5-7 przedstawia implementację wzorca CQRS.
 
-![Command and Query Responsibility Segregation](./media/cqrs-implementation.png)
+![Segregacja odpowiedzialności za polecenia i kwerendy](./media/cqrs-implementation.png)
 
-**Rysunek 5-7**. Implementacja CQRS
+**Rysunek 5-7**. Wdrożenie CQRS
 
-Na poprzednim rysunku zaimplementowane są osobne modele poleceń i zapytań. Każda operacja zapisu danych jest zapisywana w magazynie zapisu, a następnie propagowana do magazynu odczytu. Zwróć szczególną uwagę na to, jak proces propagacji danych działa na zasadzie [spójności ostatecznej](http://www.cloudcomputingpatterns.org/eventual_consistency/). Model odczytu ostatecznie synchronizuje się z modelem zapisu, ale może wystąpić pewne opóźnienie w procesie. Omawiana jest spójność ostateczna w następnej sekcji.
+Na poprzedniej rysunku zaimplementowano oddzielne modele poleceń i zapytań. Każda operacja zapisu danych jest zapisywana w magazynie zapisu, a następnie propagowana do magazynu odczytu. Należy zwrócić szczególną uwagę na to, jak proces propagacji danych działa na zasadzie [spójności ostatecznej](http://www.cloudcomputingpatterns.org/eventual_consistency/). Model odczytu ostatecznie synchronizuje się z modelem zapisu, ale może występować pewne opóźnienia w procesie. Omówimy spójność ostateczną w następnej sekcji.
 
-To Separacja umożliwia niezależne skalowanie odczytów i zapisów. Operacje odczytu używają schematu zoptymalizowanego pod kątem zapytań, podczas gdy zapisy używają schematu zoptymalizowanego pod kątem aktualizacji. Zapytania odczytu przechodzą na nieznormalizowane dane, podczas gdy złożona logika biznesowa może być stosowana do modelu zapisu. Ponadto można nałożyć ściślejsze zabezpieczenia na operacje zapisu niż te, które uwidaczniają odczyty.
+Ta separacja umożliwia odczyty i zapisy do skalowania niezależnie. Operacje odczytu używają schematu zoptymalizowanego pod kątem kwerend, podczas gdy zapisy używają schematu zoptymalizowanego pod kątem aktualizacji. Kwerendy odczytu są sprzeczne z danymi nieznormalizowanych, podczas gdy złożona logika biznesowa może być stosowana do modelu zapisu. Jak również można nałożyć ściślejsze zabezpieczenia na operacje zapisu niż te narażające odczyty.
 
-Wdrożenie CQRS może zwiększyć wydajność aplikacji dla usług natywnych w chmurze. Jednak powoduje to bardziej skomplikowany projekt. Zastosuj tę zasadę starannie i strategicznie do tych sekcji aplikacji natywnej w chmurze, która będzie z niej korzystać. Aby uzyskać więcej informacji na temat CQRS, zobacz temat [Usługa .NET dla usługi Microsoft Books: architektura dla kontenerów aplikacji .NET](https://docs.microsoft.com/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/apply-simplified-microservice-cqrs-ddd-patterns).
+Implementowanie CQRS może zwiększyć wydajność aplikacji dla usług natywnych dla chmury. Jednak powoduje to bardziej złożony projekt. Zastosuj tę zasadę ostrożnie i strategicznie do tych sekcji aplikacji natywnej dla chmury, które będą z niej korzystać. Aby uzyskać więcej informacji na temat CQRS, zobacz książkę Microsoft [.NET Microservices: Architecture for Containerized .NET Applications](https://docs.microsoft.com/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/apply-simplified-microservice-cqrs-ddd-patterns).
 
-### <a name="event-sourcing"></a>Określanie źródła zdarzeń
+### <a name="event-sourcing"></a>Pozyskiwanie zdarzeń
 
-Innym podejściem do optymalizowania scenariuszy danych o wysokiej ilości obejmuje Określanie [źródła zdarzeń](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing).
+Inne podejście do optymalizacji scenariuszy danych o dużej objętości obejmuje [pozyskiwanie zdarzeń.](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)
 
-System zazwyczaj zapisuje bieżący stan jednostki danych. Jeśli użytkownik zmieni swój numer telefonu, na przykład rekord klienta zostanie zaktualizowany przy użyciu nowej liczby. Zawsze wiemy bieżący stan jednostki danych, ale każda aktualizacja zastępuje poprzedni stan. 
+System zazwyczaj przechowuje bieżący stan jednostki danych. Jeśli użytkownik zmieni swój numer telefonu, na przykład rekord klienta zostanie zaktualizowany o nowy numer. Zawsze znamy bieżący stan jednostki danych, ale każda aktualizacja zastępuje poprzedni stan.
 
-W większości przypadków ten model działa prawidłowo. Jednak w systemach o dużych ilościach koszty związane z blokowaniem transakcyjnym i częste operacje aktualizacji mogą mieć wpływ na wydajność bazy danych, czas odpowiedzi i ograniczanie skalowalności.
+W większości przypadków ten model działa dobrze. Jednak w systemach o dużej objętości obciążenie wynikające z operacji blokowania transakcyjnego i częstych aktualizacji może mieć wpływ na wydajność bazy danych, czas reakcji i skalowalność ograniczenia.
 
-Źródłem zdarzeń jest inne podejście do przechwytywania danych. Każda operacja wpływająca na dane jest utrwalana w magazynie zdarzeń. Zamiast aktualizować stan rekordu danych, dołączamy każdą zmianę do sekwencyjnej listy przeszłych wydarzeń — podobnie jak w przypadku księgi rachunkowej. Magazyn zdarzeń jest systemem rejestrowania danych. Służy do propagowania różnorodnych widoków w ramach ograniczonego kontekstu mikrousługi. Rysunek 5,8 pokazuje wzorzec.
+Pozyskiwanie zdarzeń ma inne podejście do przechwytywania danych. Każda operacja, która wpływa na dane jest utrwaliony do magazynu zdarzeń. Zamiast aktualizować stan rekordu danych, dołączamy każdą zmianę do sekwencyjnej listy przeszłych zdarzeń - podobnie jak w księdze księgowej. Magazyn zdarzeń staje się systemem rekordów danych. Jest on używany do propagowania różnych zmaterializowanych widoków w kontekście ograniczone mikrousługi. Rysunek 5.8 przedstawia wzór.
 
 ![Określanie źródła zdarzeń](./media/event-sourcing.png)
 
 **Rysunek 5-8**. Określanie źródła zdarzeń
 
-Na poprzedniej ilustracji należy zwrócić uwagę na to, jak każdy wpis (niebieski) dla koszyka zakupów użytkownika jest dołączany do podstawowego magazynu zdarzeń. W sąsiednim widoku, system projektuje bieżący stan przez odtwarzanie wszystkich zdarzeń skojarzonych z każdym koszykiem. Ten widok lub model odczytywania jest następnie ujawniany z powrotem do interfejsu użytkownika. Zdarzenia mogą być również zintegrowane z systemami zewnętrznymi i aplikacjami lub z kwerendą w celu określenia bieżącego stanu jednostki. W tym podejściu należy zachować historię. Wiadomo, że nie jest tylko bieżący stan jednostki, ale również został osiągnięty ten stan.
+Na poprzednim rysunku należy zwrócić uwagę na to, jak każdy wpis (na niebiesko) koszyka użytkownika jest dołączany do bazowego magazynu zdarzeń. W sąsiednim widoku zmaterializowanym system wyświetla bieżący stan, odtwarzając wszystkie zdarzenia skojarzone z każdym koszykiem. Ten widok lub model odczytu jest następnie udostępniane z powrotem do interfejsu interfejsu. Zdarzenia mogą być również zintegrowane z zewnętrznymi systemami i aplikacjami lub badane w celu określenia bieżącego stanu jednostki. Dzięki takiemu podejściu zachowujesz historię. Wiesz nie tylko bieżący stan jednostki, ale także sposób osiągnięcia tego stanu.
 
-W sposób mechaniczny, źródłem zdarzeń jest uproszczenie modelu zapisu. Brak aktualizacji lub usunięć. Dołączanie każdego wpisu danych jako niezmienne zdarzenie minimalizuje rywalizację, blokowanie i konflikty współbieżności związane z relacyjnymi bazami danych. Kompilowanie modeli odczytu z wzorcem widoku materiałowego umożliwia oddzielenie widoku od modelu zapisu i wybranie najlepszego magazynu danych w celu zoptymalizowania potrzeb interfejsu użytkownika aplikacji.
+Mechanicznie rzecz biorąc, pozyskiwanie zdarzeń upraszcza model zapisu. Nie ma żadnych aktualizacji ani usuwania. Dołączanie każdego wpisu danych jako zdarzenia niezmiennego minimalizuje konflikty rywalizacji, blokowania i współbieżności skojarzone z relacyjnymi bazami danych. Tworzenie modeli odczytu ze zmaterializowanym wzorcem widoku umożliwia oddzielenie widoku od modelu zapisu i wybranie najlepszego magazynu danych w celu optymalizacji potrzeb interfejsu użytkownika aplikacji.
 
-Dla tego wzorca należy wziąć pod uwagę magazyn danych, który bezpośrednio obsługuje określanie źródła zdarzeń. Azure Cosmos DB, MongoDB, Cassandra, CouchDB i RavenDB są dobrymi kandydatami.
+Dla tego wzorca należy wziąć pod uwagę magazyn danych, który bezpośrednio obsługuje pozyskiwanie zdarzeń. Dobrymi kandydatami są usługi Azure Cosmos DB, MongoDB, Cassandra, CouchDB i RavenDB.
 
-Podobnie jak w przypadku wszystkich wzorców i technologii, należy zaimplementować strategiczne i w razie konieczności. Chociaż źródłem zdarzeń może być zwiększona wydajność i skalowalność, zapewnia ona koszt złożoności i krzywą szkoleniową.
+Podobnie jak w przypadku wszystkich wzorców i technologii, wdrażaj strategicznie i w razie potrzeby. Pozyskiwanie zdarzeń może zapewnić zwiększoną wydajność i skalowalność, ale kosztem złożoności i krzywej uczenia się.
 
 >[!div class="step-by-step"]
 >[Poprzedni](service-mesh-communication-infrastructure.md)
->[Następny](relational-vs-nosql-data.md)
+>[następny](relational-vs-nosql-data.md)

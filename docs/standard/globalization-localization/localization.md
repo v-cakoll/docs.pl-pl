@@ -15,25 +15,25 @@ helpviewer_keywords:
 - localizing resources
 ms.assetid: 49d520d7-92d7-44ee-bb24-8b615db1d41b
 ms.openlocfilehash: 89851c42570f301bee8a3eca744eb5d069347d4e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73120875"
 ---
 # <a name="localization"></a>Lokalizacja
 
-Lokalizacja jest procesem tłumaczenia zasobów aplikacji w zlokalizowane wersje dla każdej kultury obsługiwanej przez aplikację. Krok lokalizacji należy przejść dopiero po ukończeniu kroku [Przegląd możliwości zlokalizowania](../../../docs/standard/globalization-localization/localizability-review.md) , aby sprawdzić, czy aplikacja globalna jest gotowa do lokalizacji.
+Lokalizacja jest procesem tłumaczenia zasobów aplikacji na zlokalizowane wersje dla każdej kultury, która będzie obsługiwana przez aplikację. Należy przejść do kroku lokalizacji tylko po zakończeniu kroku [Przegląd lokalizacji,](../../../docs/standard/globalization-localization/localizability-review.md) aby sprawdzić, czy zglobalizowana aplikacja jest gotowa do lokalizacji.
 
-Aplikacja, która jest gotowa do lokalizacji, jest oddzielona na dwa bloki koncepcyjne: blok zawierający wszystkie elementy interfejsu użytkownika i blok zawierający kod wykonywalny. Blok interfejsu użytkownika zawiera tylko lokalizowalnych elementów interfejsu użytkownika, takich jak ciągi, komunikaty o błędach, okna dialogowe, menu, osadzone zasoby obiektów i tak dalej dla kultury neutralnej. Blok kodu zawiera tylko kod aplikacji, który ma być używany przez wszystkie obsługiwane kultury. Środowisko uruchomieniowe języka wspólnego obsługuje model zasobów zestawu satelickiego, który oddziela kod wykonywalny aplikacji od jego zasobów. Aby uzyskać więcej informacji na temat implementowania tego modelu, zobacz [zasoby w programie .NET](../../../docs/framework/resources/index.md).
+Aplikacja, która jest gotowa do lokalizacji jest podzielona na dwa bloki koncepcyjne: blok, który zawiera wszystkie elementy interfejsu użytkownika i blok, który zawiera kod wykonywalny. Blok interfejsu użytkownika zawiera tylko zlokalizowane elementy interfejsu użytkownika, takie jak ciągi, komunikaty o błędach, okna dialogowe, menu, zasoby obiektów osadzonych i tak dalej dla kultury neutralnej. Blok kodu zawiera tylko kod aplikacji, który ma być używany przez wszystkie obsługiwane kultury. Czas wykonywania języka wspólnego obsługuje model zasobów zestawu satelitarnego, który oddziela kod wykonywalny aplikacji z jego zasobów. Aby uzyskać więcej informacji na temat implementowania tego modelu, zobacz [Zasoby w .NET](../../../docs/framework/resources/index.md).
 
-Dla każdej zlokalizowanej wersji aplikacji Dodaj nowy zestaw satelicki zawierający zlokalizowany blok interfejsu użytkownika przetłumaczony do odpowiedniego języka dla kultury docelowej. Blok kodu dla wszystkich kultur powinien pozostać taki sam. Kombinacja zlokalizowanej wersji bloku interfejsu użytkownika z blokiem kodu tworzy zlokalizowaną wersję aplikacji.
+Dla każdej zlokalizowanej wersji aplikacji dodaj nowy zestaw satelicki, który zawiera zlokalizowany blok interfejsu użytkownika przetłumaczony na odpowiedni język dla kultury docelowej. Blok kodu dla wszystkich kultur powinny pozostać takie same. Połączenie zlokalizowanej wersji bloku interfejsu użytkownika z blokiem kodu tworzy zlokalizowaną wersję aplikacji.
 
-Zestaw Windows Software Development Kit (SDK) udostępnia Edytor zasobów Windows Forms (Winres. exe), który umożliwia szybkie lokalizowanie Windows Forms dla kultur docelowych. Aby uzyskać informacje na temat korzystania z tego narzędzia, zobacz [Winres. exe (Edytor zasobów Windows Forms)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md).
+Zestaw Windows Software Development Kit (SDK) dostarcza Edytor zasobów formularzy systemu Windows (Winres.exe), który umożliwia szybkie lokalizowanie formularzy systemu Windows dla kultur docelowych. Aby uzyskać informacje dotyczące korzystania z tego narzędzia, zobacz [Winres.exe (Edytor zasobów formularzy systemu Windows)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Globalizacja i lokalizacja](../../../docs/standard/globalization-localization/index.md)
-- [Sprawdzenie możliwości lokalizacji](../../../docs/standard/globalization-localization/localizability-review.md)
+- [Localizability Recenzja](../../../docs/standard/globalization-localization/localizability-review.md)
 - [Globalizacja](../../../docs/standard/globalization-localization/globalization.md)
 - [Zasoby w aplikacjach klasycznych](../../../docs/framework/resources/index.md)

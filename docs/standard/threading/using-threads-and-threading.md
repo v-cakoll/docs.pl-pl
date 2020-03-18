@@ -7,52 +7,52 @@ helpviewer_keywords:
 - managed threading
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
 ms.openlocfilehash: 1d487edff2cdc2e63f81963bfaa1f68a06e5b36e
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75936842"
 ---
 # <a name="using-threads-and-threading"></a>Używanie wątków i wątkowości
 
-Za pomocą platformy .NET można pisać aplikacje, które wykonują wiele operacji w tym samym czasie. Operacje z możliwością utrzymywania innych operacji można wykonać w oddzielnych wątkach, procesie znanym *jako* wielowątkowość lub *bezpłatne wątki*.  
+Za pomocą programu .NET można zapisywać aplikacje, które wykonują wiele operacji w tym samym czasie. Operacje z potencjałem utrzymywania innych operacji można wykonać na oddzielnych wątków, proces znany jako *wielowątkowości* lub *wątków swobodnego*.  
   
-Aplikacje używające wielowątkowości są wydajniejsze do wprowadzania danych przez użytkownika, ponieważ interfejs użytkownika pozostaje aktywny jako zadania intensywnie korzystające z procesora wykonywane w oddzielnym wątku. Wielowątkowość jest również przydatna podczas tworzenia skalowalnych aplikacji, ponieważ można dodać wątki w miarę wzrostu obciążenia.
+Aplikacje, które używają multithreading są bardziej elastyczne do wprowadzania danych przez użytkownika, ponieważ interfejs użytkownika pozostaje aktywny jako zadania intensywnie korzystających z procesora wykonywane w oddzielnych wątków. Wielowątkowość jest również przydatne podczas tworzenia skalowalnych aplikacji, ponieważ można dodawać wątki w miarę zwiększania obciążenia.
 
 > [!NOTE]
-> Jeśli potrzebujesz większej kontroli nad zachowaniem wątków aplikacji, możesz samodzielnie zarządzać wątkami. Jednak począwszy od .NET Framework 4, programowanie wielowątkowe jest znacznie uproszczone z klasami <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, [Parallel LINQ (PLINQ)](../parallel-programming/parallel-linq-plinq.md), nowe klasy kolekcji współbieżnych w przestrzeni nazw <xref:System.Collections.Concurrent?displayProperty=nameWithType> oraz nowy model programowania oparty na koncepcji zadań, a nie w wątkach. Aby uzyskać więcej informacji, zobacz [programowanie równoległe](../parallel-programming/index.md) i [Biblioteka zadań równoległych (TPL)](../parallel-programming/task-parallel-library-tpl.md).
+> Jeśli potrzebujesz większej kontroli nad zachowaniem wątków aplikacji, można samodzielnie zarządzać wątkami. Jednak począwszy od .NET Framework 4, programowanie wielowątkowe <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> jest znacznie uproszczone z i klas, [Parallel LINQ (PLINQ),](../parallel-programming/parallel-linq-plinq.md)nowe klasy kolekcji równoczesnych w przestrzeni <xref:System.Collections.Concurrent?displayProperty=nameWithType> nazw i nowy model programowania, który jest oparty na koncepcji zadań, a nie wątków. Aby uzyskać więcej informacji, zobacz [Programowanie równoległe](../parallel-programming/index.md) i [biblioteka równoległa zadań (TPL).](../parallel-programming/task-parallel-library-tpl.md)
 
-## <a name="how-to-create-and-start-a-new-thread"></a>Instrukcje: Tworzenie i uruchamianie nowego wątku
+## <a name="how-to-create-and-start-a-new-thread"></a>Jak: Tworzenie i rozpoczynanie nowego wątku
 
-Tworzysz nowy wątek, tworząc nowe wystąpienie klasy <xref:System.Threading.Thread?displayProperty=nameWithType> i dostarczając nazwę metody, która ma zostać wykonana w nowym wątku do konstruktora. Aby uruchomić utworzony wątek, wywołaj metodę <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType>. Aby uzyskać więcej informacji i przykładów, zobacz artykuł [Tworzenie wątków i przekazywanie danych w czasie rozpoczęcia](creating-threads-and-passing-data-at-start-time.md) oraz informacje o interfejsie API <xref:System.Threading.Thread>.
+Utwórz nowy wątek, tworząc nowe <xref:System.Threading.Thread?displayProperty=nameWithType> wystąpienie klasy i podając nazwę metody, która ma zostać wykonana w nowym wątku do konstruktora. Aby rozpocząć utworzony wątek, <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> wywołaj metodę. Aby uzyskać więcej informacji i przykładów, zobacz [tworzenie wątków i przekazywanie danych w czasie rozpoczęcia](creating-threads-and-passing-data-at-start-time.md) artykuł i odwołanie <xref:System.Threading.Thread> interfejsu API.
 
-## <a name="how-to-stop-a-thread"></a>Instrukcje: zatrzymywanie wątku
+## <a name="how-to-stop-a-thread"></a>Jak: Zatrzymać wątek
 
-Aby zakończyć wykonywanie wątku, użyj <xref:System.Threading.CancellationToken?displayProperty=nameWithType>. Zapewnia jednolity sposób, aby zatrzymać wątki wspólnie. Aby uzyskać więcej informacji, zobacz [Anulowanie w zarządzanych wątkach](cancellation-in-managed-threads.md).
+Aby zakończyć wykonywanie wątku, <xref:System.Threading.CancellationToken?displayProperty=nameWithType>należy użyć pliku . Zapewnia jednolity sposób, aby zatrzymać wątki wspólnie. Aby uzyskać więcej informacji, zobacz [Anulowanie w wątkach zarządzanych](cancellation-in-managed-threads.md).
 
-Czasami nie jest możliwe zatrzymywanie wątku wspólnie, ponieważ uruchamia kod innej firmy, który nie został zaprojektowany w celu uzyskania spółdzielni. W takim przypadku możesz chcieć przerwać jego wykonywanie. Aby przerwać wykonanie wymuszonego wątku, w .NET Framework można użyć metody <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Ta metoda podnosi <xref:System.Threading.ThreadAbortException> w wątku, w którym jest wywoływana. Aby uzyskać więcej informacji, zobacz [niszczenie wątków](destroying-threads.md). Metoda <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> nie jest obsługiwana w programie .NET Core. Jeśli konieczne jest zakończenie wykonywania kodu innej firmy w programie .NET Core, należy uruchomić go w osobnym procesie i użyć <xref:System.Diagnostics.Process.Kill%2A?displayProperty=nameWithType>.
+Czasami nie jest możliwe, aby zatrzymać wątek kooperatywnie, ponieważ uruchamia kod innej firmy nie przeznaczony do anulowania współpracy. W takim przypadku można zakończyć jego wykonanie na siłę. Aby zakończyć wykonywanie wątku siłą, w .NET Framework <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> można użyć metody. Ta metoda <xref:System.Threading.ThreadAbortException> wywołuje w wątku, na którym jest wywoływana. Aby uzyskać więcej informacji, zobacz [Niszczenie wątków](destroying-threads.md). Metoda <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> nie jest obsługiwana w .NET Core. Jeśli musisz zakończyć wykonywanie kodu innej firmy siłą w .NET Core, uruchom go <xref:System.Diagnostics.Process.Kill%2A?displayProperty=nameWithType>w oddzielnym procesie i użyj .
 
-<xref:System.Threading.CancellationToken?displayProperty=nameWithType> nie jest dostępna przed .NET Framework 4. Aby zatrzymać wątek w starszych wersjach .NET Framework, należy ręcznie zaimplementować z pomocą technik synchronizacji wątków. Można na przykład utworzyć nietrwałą wartość pola Boolean `shouldStop` i użyć jej do żądania kodu wykonywanego przez wątek w celu zatrzymania. Aby uzyskać więcej informacji, zobacz [nietrwałe](../../csharp/language-reference/keywords/volatile.md) w C# odwołaniach i <xref:System.Threading.Volatile?displayProperty=nameWithType>.
+Nie <xref:System.Threading.CancellationToken?displayProperty=nameWithType> jest dostępna przed .NET Framework 4. Aby zatrzymać wątek w starszych wersjach .NET Framework, należy zaimplementować anulowanie współpracy ręcznie przy użyciu technik synchronizacji wątków. Na przykład można utworzyć pole `shouldStop` nietrwałego logicznego i użyć go do żądania kodu wykonanego przez wątek, aby zatrzymać. Aby uzyskać więcej [volatile](../../csharp/language-reference/keywords/volatile.md) informacji, zobacz <xref:System.Threading.Volatile?displayProperty=nameWithType>volatile w C# Odwołania i .
 
-Użyj metody <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>, aby wątek wywołujący oczekiwał na zakończenie zatrzymania wątku.
+Użyj <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> metody, aby wątek wywołujący czekać na zakończenie wątku jest zatrzymany.
 
-## <a name="how-to-pause-or-interrupt-a-thread"></a>Instrukcje: Wstrzymywanie lub przerywanie wątku
+## <a name="how-to-pause-or-interrupt-a-thread"></a>Jak: Wstrzymać lub przerwać wątek
 
-Użyj metody <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>, aby wstrzymać bieżący wątek przez określony czas. Możesz przerwać zablokowany wątek, wywołując metodę <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>. Aby uzyskać więcej informacji, zobacz [Wstrzymywanie i przerywanie wątków](pausing-and-resuming-threads.md).
+Metoda służy <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> do wstrzymywania bieżącego wątku przez określony czas. Można przerwać zablokowany wątek, <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> wywołując metodę. Aby uzyskać więcej informacji, zobacz [Wstrzymywanie i przerywanie wątków](pausing-and-resuming-threads.md).
 
 ## <a name="thread-properties"></a>Właściwości wątku
 
-W poniższej tabeli przedstawiono niektóre z <xref:System.Threading.Thread> właściwości:  
+W poniższej tabeli <xref:System.Threading.Thread> przedstawiono niektóre właściwości:  
   
 |Właściwość|Opis|  
 |--------------|-----------|  
-|<xref:System.Threading.Thread.IsAlive%2A>|Zwraca `true`, jeśli wątek został uruchomiony i nie został jeszcze zakończony normalnie lub przerwany.|  
-|<xref:System.Threading.Thread.IsBackground%2A>|Pobiera lub ustawia wartość logiczną wskazującą, czy wątek jest wątkiem w tle. Wątki w tle są takie same jak wątki pierwszego planu, ale wątek w tle nie uniemożliwia zatrzymywania procesu. Gdy wszystkie wątki pierwszego planu, które należą do procesu, przestaną działać, środowisko uruchomieniowe języka wspólnego kończy proces, wywołując metodę <xref:System.Threading.Thread.Abort%2A> w wątkach w tle, które są nadal aktywne. Aby uzyskać więcej informacji, zobacz [wątki pierwszego planu i tła](foreground-and-background-threads.md).|  
-|<xref:System.Threading.Thread.Name%2A>|Pobiera lub ustawia nazwę wątku. Najczęściej używane do odnajdywania pojedynczych wątków podczas debugowania.|  
-|<xref:System.Threading.Thread.Priority%2A>|Pobiera lub ustawia wartość <xref:System.Threading.ThreadPriority>, która jest używana przez system operacyjny do określania priorytetów planowania wątków. Aby uzyskać więcej informacji, zobacz [Planowanie wątków](scheduling-threads.md) i odwołanie <xref:System.Threading.ThreadPriority>.|  
-|<xref:System.Threading.Thread.ThreadState%2A>|Pobiera <xref:System.Threading.ThreadState> wartość zawierającą bieżące Stany wątku.|  
+|<xref:System.Threading.Thread.IsAlive%2A>|Zwraca, `true` jeśli wątek został uruchomiony i nie został jeszcze zakończony normalnie lub przerwane.|  
+|<xref:System.Threading.Thread.IsBackground%2A>|Pobiera lub ustawia wartość logiczną, która wskazuje, czy wątek jest wątkiem w tle. Wątki w tle są jak wątki pierwszego planu, ale wątek w tle nie uniemożliwia zatrzymania procesu. Po zatrzymaniu wszystkich wątków pierwszego planu, które należą do procesu, czas <xref:System.Threading.Thread.Abort%2A> uruchomieniowy języka wspólnego kończy proces, wywołując metodę w wątkach w tle, które są nadal aktywne. Aby uzyskać więcej informacji, zobacz [Wątki pierwszego planu i tła](foreground-and-background-threads.md).|  
+|<xref:System.Threading.Thread.Name%2A>|Pobiera lub ustawia nazwę wątku. Najczęściej używane do odnajdowania poszczególnych wątków podczas debugowania.|  
+|<xref:System.Threading.Thread.Priority%2A>|Pobiera lub <xref:System.Threading.ThreadPriority> ustawia wartość, która jest używana przez system operacyjny do ustalania priorytetów planowania wątków. Aby uzyskać więcej informacji, zobacz <xref:System.Threading.ThreadPriority> [Planowanie wątków](scheduling-threads.md) i odwołania.|  
+|<xref:System.Threading.Thread.ThreadState%2A>|Pobiera <xref:System.Threading.ThreadState> wartość zawierającą bieżące stany wątku.|  
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Threading.Thread?displayProperty=nameWithType>
 - [Wątki i wątkowość](threads-and-threading.md)

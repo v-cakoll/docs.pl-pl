@@ -1,30 +1,30 @@
 ---
-title: Operacje projekcjiC#()
+title: Operacje projekcji (C#)
 ms.date: 07/20/2015
 ms.assetid: 98df573a-aad9-4b8c-9a71-844be2c4fb41
-ms.openlocfilehash: a2a2ae762d63d5ff26c7018caef1a83558042fb5
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: f76eeeb779ab08a575e758a9d974573b700ae652
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346528"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168339"
 ---
-# <a name="projection-operations-c"></a>Operacje projekcjiC#()
-Projekcja odnosi się do operacji przekształcenia obiektu w nowy formularz, który często składa się tylko z tych właściwości, które zostaną następnie użyte. Korzystając z projekcji, można utworzyć nowy typ, który jest zbudowany z każdego obiektu. Można projektować Właściwość i wykonywać na niej funkcję matematyczną. Możesz również projektować oryginalny obiekt bez zmieniania go.  
+# <a name="projection-operations-c"></a>Operacje projekcji (C#)
+Rzutowanie odnosi się do operacji przekształcania obiektu w nowy formularz, który często składa się tylko z tych właściwości, które będą następnie używane. Za pomocą projekcji, można skonstruować nowy typ, który jest zbudowany z każdego obiektu. Można rzutować właściwość i wykonać na niej funkcję matematyczną. Można również rzutować oryginalny obiekt bez jego zmiany.  
   
- W poniższej sekcji przedstawiono standardowe metody operatorów zapytań, które wykonują projekcję.  
+ Standardowe metody operatora kwerendy, które wykonują projekcję są wymienione w poniższej sekcji.  
   
 ## <a name="methods"></a>Metody  
   
-|Nazwa metody|Opis|C#Składnia wyrażenia zapytania|Więcej informacji|  
+|Nazwa metody|Opis|Składnia wyrażenia kwerendy c#|Więcej informacji|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|Wybierz|Project wartości, które są oparte na funkcji transformacji.|`select`|<xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType>|  
-|SelectMany|Projektuje sekwencje wartości, które są oparte na funkcji transformacji, a następnie spłaszcza je w jedną sekwencję.|Użyj wielu klauzul `from`|<xref:System.Linq.Enumerable.SelectMany%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SelectMany%2A?displayProperty=nameWithType>|  
+|Wybierz pozycję|Projekty wartości, które są oparte na funkcji transformacji.|`select`|<xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType>|  
+|Selectmany|Projekty sekwencje wartości, które są oparte na funkcji transformacji, a następnie spłaszcza je w jedną sekwencję.|Używanie `from` wielu klauzul|<xref:System.Linq.Enumerable.SelectMany%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SelectMany%2A?displayProperty=nameWithType>|  
   
-## <a name="query-expression-syntax-examples"></a>Przykłady składni wyrażeń zapytania  
+## <a name="query-expression-syntax-examples"></a>Przykłady składni wyrażenia kwerendy  
   
-### <a name="select"></a>Wybierz  
- W poniższym przykładzie zastosowano klauzulę `select`, aby zaprojektować pierwszą literę z każdego ciągu na liście ciągów.  
+### <a name="select"></a>Wybierz pozycję  
+ W poniższym `select` przykładzie użyto klauzuli do rzutu pierwszej litery z każdego ciągu na liście ciągów.  
   
 ```csharp  
 List<string> words = new List<string>() { "an", "apple", "a", "day" };  
@@ -44,8 +44,8 @@ foreach (string s in query)
 */  
 ```  
   
-### <a name="selectmany"></a>SelectMany  
- W poniższym przykładzie zastosowano wiele klauzul `from`, aby zaprojektować każdy wyraz z każdego ciągu na liście ciągów.  
+### <a name="selectmany"></a>Selectmany  
+ W poniższym `from` przykładzie użyto wielu klauzul do rzutowania każdego wyrazu z każdego ciągu na liście ciągów.  
   
 ```csharp  
 List<string> phrases = new List<string>() { "an apple a day", "the quick brown fox" };  
@@ -70,21 +70,21 @@ foreach (string s in query)
 */  
 ```  
   
-## <a name="select-versus-selectmany"></a>Wybierz i SelectMany  
- Prace obu `Select()` i `SelectMany()` to generowanie wartości wyniku (lub wartości) z wartości źródłowych. `Select()` tworzy jedną wartość wynikową dla każdej wartości źródłowej. Ogólny wynik to kolekcja, która ma taką samą liczbę elementów jak kolekcja źródłowa. Natomiast `SelectMany()` generuje pojedynczy wynik ogólny, który zawiera połączone podkolekcje z każdej wartości źródłowej. Funkcja transformacji, która jest przenoszona jako argument do `SelectMany()` musi zwracać wyliczalną sekwencję wartości dla każdej wartości źródłowej. Te wyliczalne sekwencje są następnie łączone przez `SelectMany()`, aby utworzyć jedną dużą sekwencję.  
+## <a name="select-versus-selectmany"></a>Wybierz w porównaniu z SelectMany  
+ Praca obu `Select()` i `SelectMany()` jest do produkcji wartości wynikowej (lub wartości) z wartości źródłowych. `Select()`generuje jedną wartość wyniku dla każdej wartości źródłowego. Ogólny wynik jest zatem kolekcja, która ma taką samą liczbę elementów jak kolekcja źródłowa. Z drugiej `SelectMany()` strony daje pojedynczy wynik ogólny, który zawiera połączone kolekcje podrzędne z każdej wartości źródłowej. Funkcja transformacji, która jest przekazywana jako argument, musi zwracać `SelectMany()` wyliczalną sekwencję wartości dla każdej wartości źródłowej. Te wyliczalne sekwencje są następnie `SelectMany()` łączone przez utworzenie jednej dużej sekwencji.  
   
- Poniższe dwa ilustracje pokazują różnicę koncepcyjną między działaniami tych dwóch metod. W każdym przypadku Załóżmy, że funkcja selektor (Transform) wybiera tablicę kwiatów z każdej wartości źródłowej.  
+ Na poniższych dwóch ilustracjach przedstawiono różnicę koncepcyjną między akcjami tych dwóch metod. W każdym przypadku załóżmy, że funkcja selektora (transformacji) wybiera tablicę kwiatów z każdej wartości źródłowej.  
   
- Na tej ilustracji przedstawiono sposób, w jaki `Select()` zwraca kolekcję, która ma taką samą liczbę elementów jak kolekcja źródłowa.  
+ Ta ilustracja `Select()` przedstawia, jak zwraca kolekcji, która ma taką samą liczbę elementów jak kolekcji źródłowej.  
   
- ![Ilustracja przedstawiająca akcję wyboru&#40;&#41;](./media/projection-operations/select-action-graphic.png)  
+ ![Grafika przedstawiająca akcję Wybierz&#40;&#41;](./media/projection-operations/select-action-graphic.png)  
   
- Ta ilustracja przedstawia sposób, w jaki `SelectMany()` łączy pośrednią sekwencję tablic w jedną końcową wartość wynikową, która zawiera każdą wartość z każdej tablicy pośredniej.  
+ Ta ilustracja `SelectMany()` przedstawia, jak łączy pośrednią sekwencję tablic w jedną wartość wyniku końcowego, która zawiera każdą wartość z każdej tablicy pośredniej.  
   
- ![Ilustracja przedstawiająca akcję SelectMany&#40;&#41;.](./media/projection-operations/select-many-action-graphic.png )  
+ ![Grafika przedstawiająca akcję SelectMany&#40;&#41;.](./media/projection-operations/select-many-action-graphic.png )  
   
 ### <a name="code-example"></a>Przykład kodu  
- Poniższy przykład porównuje zachowanie `Select()` i `SelectMany()`. Kod tworzy "bukiet" kwiatów, pobierając pierwsze dwa elementy z każdej listy nazw kwiatów w kolekcji źródłowej. W tym przykładzie "pojedyncza wartość", którą funkcja transformacji <xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29> używa, jest sama kolekcją wartości. Wymaga to dodatkowej pętli `foreach`, aby wyliczyć każdy ciąg w każdej sekwencji podrzędnej.  
+ W poniższym przykładzie porównano zachowanie `Select()` i `SelectMany()`. Kod tworzy "bukiet" kwiatów, biorąc pierwsze dwa elementy z każdej listy nazw kwiatów w kolekcji źródłowej. W tym przykładzie "pojedyncza wartość", <xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29> która używa funkcji przekształcania jest sama kolekcja wartości. Wymaga to `foreach` dodatkowej pętli, aby wyliczyć każdy ciąg w każdej podsekwencji.  
   
 ```csharp  
 class Bouquet  
@@ -101,7 +101,7 @@ static void SelectVsSelectMany()
         new Bouquet{ Flowers = new List<string> { "larkspur", "lilac", "iris", "dahlia" }}  
     };  
   
-    // *********** Select ***********              
+    // *********** Select ***********
     IEnumerable<List<string>> query1 = bouquets.Select(bq => bq.Flowers);  
   
     // ********* SelectMany *********  
@@ -159,10 +159,10 @@ static void SelectVsSelectMany()
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Linq>
-- [Standardowe operatory zapytań — OmówienieC#()](./standard-query-operators-overview.md)
-- [select, klauzula](../../../language-reference/keywords/select-clause.md)
+- [Omówienie standardowych operatorów zapytań (C#)](./standard-query-operators-overview.md)
+- [klauzula wyboru](../../../language-reference/keywords/select-clause.md)
 - [Jak wypełnić kolekcje obiektów z wielu źródeł (LINQ) (C#)](./how-to-populate-object-collections-from-multiple-sources-linq.md)
 - [Jak podzielić plik na wiele plików przy użyciu grup (LINQ) (C#)](./how-to-split-a-file-into-many-files-by-using-groups-linq.md)

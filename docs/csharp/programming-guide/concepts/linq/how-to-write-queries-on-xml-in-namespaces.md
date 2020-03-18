@@ -1,20 +1,20 @@
 ---
-title: Jak pisać zapytania dotyczące kodu XML w przestrzeniachC#nazw ()
+title: Jak zapisywać zapytania w języku XML w przestrzeniach nazw (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c54df81-15e4-4091-8c81-a87637029130
 ms.openlocfilehash: a8b8d55daaad1ae00e43fed897080ed7a62fafab
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75337373"
 ---
-# <a name="how-to-write-queries-on-xml-in-namespaces-c"></a>Jak pisać zapytania dotyczące kodu XML w przestrzeniachC#nazw ()
-Aby napisać zapytanie dotyczące kodu XML, który znajduje się w przestrzeni nazw, należy użyć <xref:System.Xml.Linq.XName> obiektów, które mają prawidłową przestrzeń nazw.  
+# <a name="how-to-write-queries-on-xml-in-namespaces-c"></a>Jak zapisywać zapytania w języku XML w przestrzeniach nazw (C#)
+Aby napisać kwerendę w xml, który znajduje <xref:System.Xml.Linq.XName> się w obszarze nazw, należy użyć obiektów, które mają poprawny obszar nazw.  
   
- W C#przypadku, najbardziej typowym podejściem jest zainicjowanie <xref:System.Xml.Linq.XNamespace> przy użyciu ciągu zawierającego identyfikator URI, a następnie użycie przeciążenia operatora dodawania do łączenia przestrzeni nazw z nazwą lokalną.  
+ W przypadku języka C#najczęstszym podejściem <xref:System.Xml.Linq.XNamespace> jest zainicjowanie ciągu zawierającego identyfikator URI, a następnie połączenie obszaru nazw z nazwą lokalną za pomocą operatora dodawania.  
   
- Pierwszy zestaw przykładów w tym temacie przedstawia sposób tworzenia drzewa XML w domyślnej przestrzeni nazw. Drugi zestaw pokazuje, jak utworzyć drzewo XML w przestrzeni nazw z prefiksem.  
+ Pierwszy zestaw przykładów w tym temacie pokazuje, jak utworzyć drzewo XML w domyślnym obszarze nazw. Drugi zestaw pokazuje, jak utworzyć drzewo XML w przestrzeni nazw z prefiksem.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład tworzy drzewo XML, który znajduje się w domyślnym obszarze nazw. Następnie pobiera kolekcję elementów.  
@@ -46,7 +46,7 @@ foreach (XElement el in c1)
 ```  
   
 ## <a name="example"></a>Przykład  
- W C#programie zapytania są pisane w taki sam sposób, niezależnie od tego, czy piszesz zapytania w drzewie XML, który używa przestrzeni nazw z prefiksem lub w drzewie XML z domyślną przestrzenią nazw.  
+ W języku C#, kwerendy są pisane w ten sam sposób, niezależnie od tego, czy piszesz zapytania w drzewie XML, który używa obszaru nazw z prefiksem, czy na drzewie XML z domyślnym obszarem nazw.  
   
  Poniższy przykład tworzy drzewo XML, który znajduje się w przestrzeni nazw z prefiksem. Następnie pobiera kolekcję elementów.  
   
@@ -76,6 +76,6 @@ foreach (XElement el in c1)
 3  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Przegląd przestrzeni nazw (LINQ to XML)C#()](namespaces-overview-linq-to-xml.md)
+- [Omówienie przestrzeni nazw (LINQ do XML) (C#)](namespaces-overview-linq-to-xml.md)

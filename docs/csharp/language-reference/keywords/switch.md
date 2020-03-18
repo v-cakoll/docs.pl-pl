@@ -1,5 +1,5 @@
 ---
-title: C#Switch, instrukcja
+title: Instrukcja przełączania języka C#
 ms.date: 04/09/2019
 f1_keywords:
 - switch_CSharpKeyword
@@ -13,53 +13,53 @@ helpviewer_keywords:
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
 ms.openlocfilehash: e5580e81b9175cd95491fdba724bacbffa692a5e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75345395"
 ---
-# <a name="switch-c-reference"></a>przełącznik (C# odwołanie)
+# <a name="switch-c-reference"></a>przełącznik (odwołanie do języka C#)
 
-`switch` jest instrukcją wyboru, która wybiera pojedynczy *przełącznik* , który ma zostać wykonany z listy kandydatów na podstawie dopasowania wzorca z *wyrażeniem Match*.
+`switch`jest instrukcją wyboru, która wybiera *pojedynczą sekcję przełącznika* do wykonania z listy kandydatów na podstawie dopasowania wzorca do *wyrażenia dopasowania*.
 
 [!code-csharp[switch#1](~/samples/snippets/csharp/language-reference/keywords/switch/switch1.cs#1)]
 
-Instrukcja `switch` jest często używana jako alternatywa dla konstrukcji [if-else](if-else.md) , jeśli pojedyncze wyrażenie jest testowane w oparciu o trzy lub więcej warunków. Na przykład następująca instrukcja `switch` określa, czy zmienna typu `Color` ma jedną z trzech wartości:
+Instrukcja `switch` jest często używana jako alternatywa dla konstrukcji [if-else,](if-else.md) jeśli pojedyncze wyrażenie jest testowane na trzy lub więcej warunków. Na przykład następująca `switch` instrukcja określa, `Color` czy zmienna typu ma jedną z trzech wartości:
 
 [!code-csharp[switch#3](~/samples/snippets/csharp/language-reference/keywords/switch/switch3.cs#1)]
 
-Jest to odpowiednik poniższego przykładu korzystającego z `if`-`else` konstrukcja.
+Jest to odpowiednik następującego przykładu, `if` - `else` który używa konstrukcji.
 
 [!code-csharp[switch#3a](~/samples/snippets/csharp/language-reference/keywords/switch/switch3a.cs#1)]
 
 ## <a name="the-match-expression"></a>Wyrażenie dopasowania
 
-Wyrażenie Match zawiera wartość do dopasowania względem wzorców w etykietach `case`. Jego składnia to:
+Wyrażenie dopasowania zapewnia wartość, aby dopasować `case` do wzorców w etykietach. Jego składnia jest:
 
 ```csharp
    switch (expr)
 ```
 
-W C# 6 i wcześniejszych wyrażenia dopasowania musi być wyrażeniem zwracającym wartość następujących typów:
+W języku C# 6 i starszym wyrażenie dopasowania musi być wyrażeniem zwracającym wartość następujących typów:
 
-- [znak](../builtin-types/char.md).
-- [ciąg](../builtin-types/reference-types.md).
-- wartość [logiczna](../builtin-types/bool.md).
-- wartość [całkowita](../builtin-types/integral-numeric-types.md) , taka jak `int` lub `long`.
-- wartość [wyliczenia](../builtin-types/enum.md) .
+- [char](../builtin-types/char.md).
+- [ciąg .](../builtin-types/reference-types.md)
+- [bool](../builtin-types/bool.md).
+- wartości [integralnej,](../builtin-types/integral-numeric-types.md) takiej `int` jak `long`wartość lub .
+- wartości [wyliczenia.](../builtin-types/enum.md)
 
-Począwszy od C# 7,0, wyrażenie dopasowania może być dowolnym wyrażeniem o wartości innej niż null.
+Począwszy od Języka C# 7.0 wyrażenie dopasowania może być dowolne wyrażenie inne niż null.
 
-## <a name="the-switch-section"></a>Sekcja Switch
+## <a name="the-switch-section"></a>Sekcja przełącznika
 
-Instrukcja `switch` zawiera jedną lub więcej sekcji przełączników. Każda sekcja przełącznika zawiera jedną lub więcej *etykiet przypadków* (literę lub etykietę domyślną), po której następuje jedna lub więcej instrukcji. Instrukcja `switch` może zawierać co najwyżej jedną etykietę domyślną umieszczoną w dowolnej sekcji Switch. Poniższy przykład pokazuje prostą instrukcję `switch`, która ma trzy sekcje przełączników, z których każda zawiera dwie instrukcje. Druga sekcja Switch zawiera etykiety `case 2:` i `case 3:`.
+Instrukcja `switch` zawiera jedną lub więcej sekcji przełącznika. Każda sekcja przełącznika zawiera jedną lub więcej *etykiet sprawy* (case lub etykietę domyślną), po której następuje jedna lub więcej instrukcji. Instrukcja `switch` może zawierać co najwyżej jedną domyślną etykietę umieszczoną w dowolnej sekcji przełącznika. W poniższym przykładzie `switch` przedstawiono prostą instrukcję, która ma trzy sekcje przełącznika, z których każda zawiera dwie instrukcje. Druga sekcja przełącznika `case 2:` `case 3:` zawiera etykiety i etykiety.
 
-Instrukcja `switch` może zawierać dowolną liczbę sekcji przełączników, a Każda sekcja może mieć jedną lub więcej etykiet wielkości liter, jak pokazano w poniższym przykładzie. Jednak żadne dwie etykiety wielkości liter nie mogą zawierać tego samego wyrażenia.
+Instrukcja `switch` może zawierać dowolną liczbę sekcji przełącznika, a każda sekcja może mieć jedną lub więcej etykiet sprawy, jak pokazano w poniższym przykładzie. Jednak nie dwie etykiety przypadku może zawierać to samo wyrażenie.
 
 [!code-csharp[switch#2](~/samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]
 
-W instrukcji switch jest wykonywana tylko jedna sekcja Switch. C#nie zezwala na kontynuowanie wykonywania z jednej sekcji przełącznika do następnej. W związku z tym Poniższy kod generuje błąd kompilatora, CS0163: "kontrolka nie może przechodzić z jednej etykiety case (\<etykieta przypadku >) do innej".
+Wykonuje się tylko jedną sekcję przełącznika w instrukcji switch. C# nie zezwala na wykonywanie kontynuować z jednej sekcji przełącznika do następnego. Z tego powodu następujący kod generuje błąd kompilatora, CS0163: "Kontrola\<nie może przechodzić z jednej etykiety przypadku (etykieta przypadku>) do innego."
 
 ```csharp
 switch (caseSwitch)
@@ -74,133 +74,133 @@ switch (caseSwitch)
 }
 ```
 
-To wymaganie jest zwykle spełnione przez jawne opuszczenie sekcji Switch za pomocą instrukcji [Break](break.md), [goto](goto.md)lub [Return](return.md) . Jednak następujący kod jest również prawidłowy, ponieważ gwarantuje, że formant programu nie przechodzi do sekcji przełącznika `default`.
+Wymóg ten jest zwykle spełniony przez jawne zamknięcie sekcji przełącznika za pomocą [instrukcji break,](break.md) [goto](goto.md)lub [return.](return.md) Jednak poniższy kod jest również prawidłowy, ponieważ zapewnia, że kontrola `default` programu nie może przechodzić do sekcji przełączania.
 
 [!code-csharp[switch#4](~/samples/snippets/csharp/language-reference/keywords/switch/switch4.cs#1)]
 
-Wykonanie listy instrukcji w sekcji Switch z etykietą Case, która pasuje do wyrażenia Match rozpoczyna się od pierwszej instrukcji i przechodzi przez listę instrukcji, zwykle do momentu osiągnięcia instrukcji skoku, takiej jak `break`, `goto case`, `goto label`, `return`lub `throw`. W tym momencie kontrola jest przekazywana poza instrukcją `switch` lub do innej etykiety case. Instrukcja `goto`, jeśli jest używana, musi przekazywać kontrolę do stałej etykiety. To ograniczenie jest konieczne, ponieważ próba przetransferowania kontroli do etykiety niestałej może mieć niepożądane efekty uboczne, takie przeniesienie kontroli do niezamierzonej lokalizacji w kodzie lub utworzenie pętli nieskończonej.
+Wykonanie listy instrukcji w sekcji przełącznika z etykietą przypadku, która pasuje do wyrażenia dopasowania, rozpoczyna się od pierwszej `break`instrukcji `goto case` `goto label`i `return`przechodzi `throw`przez listę instrukcji, zazwyczaj do momentu osiągnięcia instrukcji skoku, takiej jak , , , , lub , . W tym momencie kontrola jest `switch` przekazywana poza instrukcję lub do innej etykiety sprawy. Instrukcja, `goto` jeśli jest używana, musi przenieść kontrolę do stałej etykiety. To ograniczenie jest konieczne, ponieważ próba przeniesienia kontroli do etykiety niestałej może mieć niepożądane skutki uboczne, takie przeniesienie kontroli do niezamierzonej lokalizacji w kodzie lub tworzenie nieskończonej pętli.
 
-## <a name="case-labels"></a>Etykiety przypadku
+## <a name="case-labels"></a>Etykiety obudowy
 
-Każda etykieta przypadku określa wzorzec do porównania z wyrażeniem dopasowania (zmienna `caseSwitch` w poprzednich przykładach). Jeśli są one zgodne, sterowanie jest przekazywane do sekcji Switch, która zawiera **pierwszą** pasującą etykietę case. Jeśli żaden wzorzec etykiety case nie jest zgodny z wyrażeniem Match, formant jest przenoszony do sekcji z etykietą przypadku `default`, jeśli istnieje. Jeśli nie ma `default`j wielkości liter, nie są wykonywane żadne instrukcje w żadnej sekcji Switch, a kontrolka jest transferowana poza instrukcją `switch`.
+Każda etykieta przypadku określa wzorzec do `caseSwitch` porównania z wyrażeniem dopasowania (zmienna w poprzednich przykładach). Jeśli są one zgodne, formant jest przenoszony do sekcji przełącznika, który zawiera **pierwszą** etykietę pasującego przypadku. Jeśli żaden wzorzec etykiety przypadku nie pasuje do `default` wyrażenia dopasowania, formant jest przenoszony do sekcji z etykietą sprawy, jeśli istnieje. Jeśli nie ma `default` przypadku, żadne instrukcje w sekcji przełącznika są wykonywane, a kontrola jest przekazywana poza instrukcję. `switch`
 
-Aby uzyskać informacje na temat instrukcji `switch` i dopasowania do wzorca, zobacz Zgodność [wzorców z sekcją `switch` instrukcji](#pattern) .
+Aby uzyskać `switch` informacje na temat dopasowania instrukcji i wzorca, zobacz [pattern dopasowania do `switch` instrukcji](#pattern) sekcji.
 
-Ponieważ C# 6 obsługuje tylko wzorce stałe i nie zezwala na powtarzanie wartości stałych, etykiety przypadków definiują wzajemnie wykluczające się wartości, a tylko jeden wzorzec może być zgodny z wyrażeniem Match. W związku z tym kolejność, w której pojawiają się instrukcje `case`, jest nieważna.
+Ponieważ C# 6 obsługuje tylko wzorzec stały i nie zezwala na powtarzanie wartości stałych, etykiety przypadków definiują wzajemnie wykluczające się wartości i tylko jeden wzorzec może odpowiadać wyrażeniu dopasowania. W rezultacie kolejność, `case` w jakiej pojawiają się instrukcje, jest nieistotna.
 
-W C# 7,0, jednak ponieważ inne wzorce są obsługiwane, etykiety przypadków nie muszą definiować wzajemnie wykluczających się wartości, a wiele wzorców może pasować do wyrażenia Match. Ponieważ są wykonywane tylko instrukcje w pierwszej sekcji przełącznika, które zawiera pasujący wzorzec, kolejność, w której pojawiają się instrukcje `case`, jest teraz ważna. Jeśli C# program wykryje sekcję Switch, której instrukcją Case lub instrukcje są równoważne lub są podzbiorami poprzednich instrukcji, generuje błąd kompilatora, CS8120, "przypadek przełączania został już obsłużony przez poprzednią literę".
+W języku C# 7.0, jednak ponieważ inne wzorce są obsługiwane, etykiety przypadków nie muszą definiować wzajemnie wykluczające się wartości i wiele wzorców można dopasować wyrażenie dopasowania. Ponieważ wykonywane są tylko instrukcje w pierwszej sekcji przełącznika, `case` która zawiera pasujący wzorzec, kolejność, w jakiej pojawiają się instrukcje, jest teraz ważna. Jeśli C# wykryje sekcję przełączania, której instrukcje case lub instrukcje są równoważne lub są podzbiorami poprzednich instrukcji, generuje błąd kompilatora, CS8120, "Sprawa przełącznika została już obsłużena przez poprzedni przypadek."
 
-Poniższy przykład ilustruje instrukcję `switch`, która używa różnych niewzajemnie wykluczających się wzorców. Jeśli przeniesiesz sekcję Switch `case 0:` tak, aby nie była już pierwszą sekcją w instrukcji `switch`, program C# generuje błąd kompilatora, ponieważ liczba całkowita, której wartością jest zero, jest podzbiorem wszystkich liczb całkowitych, które jest wzorcem zdefiniowanym przez instrukcję `case int val`.
+W poniższym przykładzie `switch` przedstawiono instrukcję, która używa różnych wzorców nie wykluczasię wzajemnie. Jeśli `case 0:` przesuniesz sekcję przełącznika tak, aby nie `switch` była już pierwszą sekcją w instrukcji, C# generuje błąd kompilatora, ponieważ liczba całkowita, `case int val` której wartość wynosi zero, jest podzbiorem wszystkich liczb całkowitych, który jest wzorcem zdefiniowanym przez instrukcję.
 
 [!code-csharp[switch#5](~/samples/snippets/csharp/language-reference/keywords/switch/switch5.cs#1)]
 
-Możesz rozwiązać ten problem i wyeliminować Ostrzeżenie kompilatora na jeden z dwóch sposobów:
+Ten problem można rozwiązać i wyeliminować ostrzeżenie kompilatora na jeden z dwóch sposobów:
 
-- Zmieniając kolejność sekcji Switch.
+- Zmieniając kolejność sekcji przełącznika.
 
-- Za pomocą [klauzuli when](#when) w etykiecie `case`.
+- Za pomocą [when klauzuli](#when) w etykiecie. `case`
 
-## <a name="the-default-case"></a>`default` przypadku
+## <a name="the-default-case"></a>Sprawa `default`
 
-`default` Case określa sekcję Switch, która ma zostać wykonana, jeśli wyrażenie Match nie pasuje do żadnej innej etykiety `case`. Jeśli `default` przypadku nie istnieje i wyrażenie Match nie jest zgodne z żadną inną etykietą `case`, przepływ programu odbywa się za pomocą instrukcji `switch`.
+Przypadek `default` określa sekcję switch do wykonania, jeśli wyrażenie dopasowania `case` nie pasuje do żadnej innej etykiety. Jeśli `default` sprawa nie jest obecna, a wyrażenie dopasowania `case` nie pasuje do `switch` żadnej innej etykiety, przepływ programu przechodzi przez instrukcję.
 
-Przypadek `default` może występować w dowolnej kolejności w instrukcji `switch`. Bez względu na jego kolejność w kodzie źródłowym jest zawsze Szacowana jako Ostatnia, po ocenie wszystkich etykiet `case`.
+Sprawa `default` może pojawić się w `switch` dowolnej kolejności w oświadczeniu. Niezależnie od jego kolejności w kodzie źródłowym, zawsze jest `case` oceniana jako ostatnia, po ocenie wszystkich etykiet.
 
-## <a name="a-namepattern--pattern-matching-with-the-switch-statement"></a><a name="pattern" /> dopasowywania do wzorca przy użyciu instrukcji `switch`
+## <a name="a-namepattern--pattern-matching-with-the-switch-statement"></a><a name="pattern" />Dopasowanie wzorca `switch` do instrukcji
 
-Każda instrukcja `case` definiuje wzorzec, który jest zgodny z wyrażeniem Match, powoduje, że jego sekcja Switch zostanie wykonana. Wszystkie wersje programu C# obsługują stałe wzorce. Pozostałe wzorce są obsługiwane począwszy od C# 7,0.
+Każda `case` instrukcja definiuje wzorzec, który, jeśli pasuje do wyrażenia dopasowania, powoduje, że jego sekcja przełącznika zawierające do wykonania. Wszystkie wersje języka C# obsługują wzorzec stały. Pozostałe wzorce są obsługiwane począwszy od języka C# 7.0.
 
-### <a name="constant-pattern"></a>Wzorzec stałej
+### <a name="constant-pattern"></a>Stały wzór
 
-Wzorzec stałej testuje, czy wyrażenie dopasowania jest równe określonej stałej. Jego składnia to:
+Wzorzec stały sprawdza, czy wyrażenie dopasowania jest równe określonej stałej. Jego składnia jest:
 
 ```csharp
    case constant:
 ```
 
-gdzie *stała* jest wartością do przetestowania. *stała* może być dowolnym z następujących wyrażeń stałych:
+gdzie *stała* jest wartością do przetestowania. *stała* może być dowolne z następujących wyrażeń stałych:
 
-- Literał [bool](../builtin-types/bool.md) : `true` lub `false`.
-- Dowolna stała [całkowita](../builtin-types/integral-numeric-types.md) , taka jak `int`, `long`lub `byte`.
-- Nazwa zadeklarowanej zmiennej `const`.
+- [Bool](../builtin-types/bool.md) dosłowny: albo `true` lub `false`.
+- Każda [stała integralna,](../builtin-types/integral-numeric-types.md) `int`taka `long`jak `byte`, a , lub .
+- Nazwa zadeklarowanej `const` zmiennej.
 - Stała wyliczenia.
-- Literał [znakowy](../builtin-types/char.md) .
-- Literał [ciągu](../builtin-types/reference-types.md) .
+- [Char](../builtin-types/char.md) dosłowne.
+- Literał [ciągu.](../builtin-types/reference-types.md)
 
 Wyrażenie stałe jest oceniane w następujący sposób:
 
-- Jeśli *wyrażenie* i *stała* są typami całkowitymi, C# operator równości określa, czy wyrażenie zwróci `true` (to znaczy czy `expr == constant`).
+- Jeśli *expr* i *stała* są typami integralnymi, operator `true` równości Języka C# określa, czy wyrażenie zwraca (czyli czy `expr == constant`).
 
-- W przeciwnym razie wartość wyrażenia jest określana przez wywołanie metody static [obiektu. Equals (wyrażenie, stała)](xref:System.Object.Equals(System.Object,System.Object)) .
+- W przeciwnym razie wartość wyrażenia jest określana przez wywołanie statycznego [Object.Equals(expr, stała)](xref:System.Object.Equals(System.Object,System.Object)) metoda.
 
-W poniższym przykładzie za pomocą wzorca stałego można określić, czy konkretna data to weekend, pierwszy dzień tygodnia pracy, ostatni dzień tygodnia pracy lub środek tygodnia pracy. Oblicza Właściwość <xref:System.DateTime.DayOfWeek?displayProperty=nameWithType> bieżącego dnia względem elementów członkowskich wyliczenia <xref:System.DayOfWeek>.
+W poniższym przykładzie użyto stałego wzorca, aby określić, czy dana data jest weekendem, pierwszym dniem tygodnia roboczego, ostatnim dniem tygodnia roboczego lub środkiem tygodnia roboczego. Oblicza <xref:System.DateTime.DayOfWeek?displayProperty=nameWithType> właściwość bieżącego dnia względem członków wyliczenia. <xref:System.DayOfWeek>
 
 [!code-csharp[switch#7](~/samples/snippets/csharp/language-reference/keywords/switch/const-pattern.cs#1)]
 
-Poniższy przykład używa wzorca stałego do obsługi danych wejściowych użytkownika w aplikacji konsolowej, która symuluje automatyczną maszynę Kawową.
+W poniższym przykładzie użyto stałego wzorca do obsługi danych wejściowych użytkownika w aplikacji konsoli, która symuluje automatyczny ekspres do kawy.
 
 [!code-csharp[switch#6](~/samples/snippets/csharp/language-reference/keywords/switch/switch6.cs)]
 
-### <a name="type-pattern"></a>Wzorzec typu
+### <a name="type-pattern"></a>Wzorzec tekstu
 
-Wzorzec typu umożliwia obliczanie i konwersję zwięzłego typu. Gdy jest używany z instrukcją `switch`, aby wykonać dopasowanie do wzorca, sprawdza, czy wyrażenie można przekonwertować na określony typ, i, jeśli to możliwe, rzutuje go na zmienną tego typu. Jego składnia to:
+Wzorzec typu umożliwia zwięzłe oceny typu i konwersji. W przypadku `switch` użycia z instrukcją do wykonywania dopasowania wzorca, sprawdza, czy wyrażenie można przekonwertować na określony typ i, jeśli może być, rzutuje go do zmiennej tego typu. Jego składnia jest:
 
 ```csharp
    case type varname
 ```
 
-Where *Type* jest nazwą typu, do którego zostanie przekonwertowany wynik *wyrażenia* , a *nazwa_zmiennej* jest obiektem, do którego zostanie przekonwertowany wynik *wyrażenia* , jeśli dopasowanie się powiedzie. Typ "czas kompilacji" *wyrażenia* może być parametrem typu ogólnego, rozpoczynając od C# 7,1.
+gdzie *typ* jest nazwą typu, na który wynik *expr* ma zostać przekonwertowany, a *varname* jest obiektem, na który jest konwertowany wynik *expr,* jeśli dopasowanie zakończy się pomyślnie. Typ czasu kompilacji *expr* może być parametrtypu ogólnego, począwszy od C# 7.1.
 
-Wyrażenie `case` jest `true`, jeśli którykolwiek z następujących warunków jest spełniony:
+Wyrażenie `case` jest, `true` jeśli którakolwiek z następujących wartości jest true:
 
-- *wyrażenie* jest wystąpieniem tego samego typu co *Typ*.
+- *expr* jest wystąpieniem tego samego typu co *typ*.
 
-- *wyrażenie* jest wystąpieniem typu, który pochodzi od *typu*. Innymi słowy, wynik *wyrażenia* może być rzutowany na wystąpienie *typu*.
+- *expr* jest wystąpieniem typu, który pochodzi od *typu*. Innymi słowy wynik *expr* może być rzutnie na wystąpienie *typu*.
 
-- *wyrażenie* ma typ czasu kompilacji, który jest klasą bazową *typu*, a *wyrażenie* ma typ środowiska uruchomieniowego, który jest *typem* lub pochodzi od *typu*. *Typ czasu kompilacji* zmiennej to typ zmiennej, zgodnie z definicją w deklaracji typu. *Typ środowiska uruchomieniowego* zmiennej to typ wystąpienia, które jest przypisane do tej zmiennej.
+- *expr* ma typ kompilacji w czasie, który jest klasą podstawową *typu*, a *expr* ma typ czasu wykonywania, który jest *typem* lub pochodzi od *typu*. *Typ czasu kompilacji* zmiennej jest typem zmiennej zdefiniowanym w deklaracji typu. *Typ czasu wykonywania* zmiennej jest typem wystąpienia przypisanego do tej zmiennej.
 
-- *wyrażenie* jest wystąpieniem typu, który implementuje interfejs *typu* .
+- *expr* jest wystąpieniem typu, który implementuje interfejs *typu.*
 
-Jeśli wyrażenie CASE ma wartość true, właściwość *nazwa_zmiennej* jest ostatecznie przypisana i ma zakres lokalny tylko w sekcji Switch.
+Jeśli wyrażenie sprawy jest prawdziwe, *varname* jest zdecydowanie przypisany i ma zakres lokalny tylko w sekcji przełącznika.
 
-Należy zauważyć, że `null` nie pasuje do typu. Aby dopasować `null`, należy użyć następującej etykiety `case`:
+Pamiętaj, `null` że nie pasuje do typu. Aby dopasować `null`, należy `case` użyć następującej etykiety:
 
 ```csharp
 case null:
 ```
 
-Poniższy przykład używa wzorca typu, aby podać informacje dotyczące różnych rodzajów typów kolekcji.
+W poniższym przykładzie użyto wzorca typu, aby zapewnić informacje o różnych typach typów kolekcji.
 
 [!code-csharp[type-pattern#1](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern.cs#1)]
 
-Zamiast `object`można utworzyć metodę rodzajową przy użyciu typu kolekcji jako parametru typu, jak pokazano w poniższym kodzie:
+Zamiast `object`, można zrobić metodę rodzajową, przy użyciu typu kolekcji jako parametr typu, jak pokazano w następującym kodzie:
 
 [!code-csharp[type-pattern#3](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern3.cs#1)]
 
-Wersja ogólna różni się od pierwszej próbki na dwa sposoby. Najpierw nie można użyć przypadku `null`. Nie można użyć żadnego ze stałych przypadków, ponieważ kompilator nie może konwertować dowolnego dowolnego typu `T` na dowolny typ inny niż `object`. Co było `default` przypadku teraz testuje `object`o wartości innej niż null. Oznacza to, że `default` testy przypadku `null`.
+Wersja ogólna różni się od pierwszej próbki na dwa sposoby. Po pierwsze, nie można `null` użyć sprawy. Nie można użyć żadnej stałej sprawy, ponieważ kompilator `T` nie może `object`przekonwertować dowolnego typu na dowolny typ inny niż . Co było `default` w przypadku teraz testy `object`dla non-null . Oznacza to, że `default` `null`testy przypadku tylko dla .
 
-Bez dopasowania do wzorca ten kod może być zapisany w następujący sposób. Użycie dopasowania wzorca typu daje bardziej zwarty, czytelny kod, eliminując konieczność sprawdzenia, czy wynik konwersji jest `null`, czy też do wykonywania powtarzających się rzutowania.
+Bez dopasowywania wzorców ten kod może być napisany w następujący sposób. Użycie dopasowania wzorca typu tworzy bardziej kompaktowy, czytelny kod, eliminując konieczność `null` testowania, czy wynik konwersji jest lub do wykonywania wielokrotnych rzutowania.
 
 [!code-csharp[type-pattern2#1](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
 
-## <a name="a-namewhen--the-case-statement-and-the-when-clause"></a><a name="when" /> instrukcji `case` i klauzuli `when`
+## <a name="a-namewhen--the-case-statement-and-the-when-clause"></a><a name="when" />Oświadczenie `case` i `when` klauzula
 
-Począwszy od C# 7,0, ponieważ instrukcje Case nie muszą się wzajemnie wykluczać, można dodać klauzulę `when`, aby określić dodatkowy warunek, który musi być spełniony dla instrukcji case, aby obliczyć wartość true. Klauzula `when` może być dowolnym wyrażeniem zwracającym wartość logiczną.
+Począwszy od języka C# 7.0, ponieważ instrukcje case nie `when` muszą się wzajemnie wykluczać, można dodać klauzulę, aby określić dodatkowy warunek, który musi być spełniony dla instrukcji case, aby ocenić wartość true. Klauzula `when` może być dowolne wyrażenie, które zwraca wartość logiczną.
 
-W poniższym przykładzie zdefiniowano klasę podstawową `Shape`, klasy `Rectangle`, która pochodzi od `Shape`i klasy `Square`, która pochodzi od `Rectangle`. Używa klauzuli `when`, aby upewnić się, że `ShowShapeInfo` traktuje `Rectangle` obiekt, do którego przypisano równe długości i szerokości jako `Square` nawet wtedy, gdy nie został skonkretyzowany jako obiekt `Square`. Metoda nie próbuje wyświetlić informacji o obiekcie `null` lub kształcie, którego obszar ma wartość zero.
+Poniższy przykład definiuje klasę `Shape` podstawową, `Rectangle` klasę, `Shape`która pochodzi `Square` z , `Rectangle`i klasy, która pochodzi od . Używa `when` klauzuli, aby `ShowShapeInfo` upewnić się, że traktuje `Rectangle` obiekt, który został przypisany równe długości i szerokości jako `Square` `Square` nawet jeśli nie został utworzyony jako obiekt. Metoda nie próbuje wyświetlić informacji o obiekcie, `null` który jest lub kształt, którego obszar wynosi zero.
 
 [!code-csharp[when-clause#1](~/samples/snippets/csharp/language-reference/keywords/switch/when-clause.cs#1)]
 
-Należy zauważyć, że klauzula `when` w przykładzie, która próbuje sprawdzić, czy obiekt `Shape` jest `null` nie jest wykonywany. Poprawna wzorzec typu do testowania dla `null` jest `case null:`.
+Należy zauważyć, że klauzula `when` w przykładzie, który próbuje sprawdzić, `Shape` czy obiekt nie jest `null` wykonywany. Prawidłowy wzorzec `null` typu `case null:`do testowania dla a jest .
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
-Aby uzyskać więcej informacji, zobacz [instrukcję Switch](~/_csharplang/spec/statements.md#the-switch-statement) w [ C# specyfikacji języka](/dotnet/csharp/language-reference/language-specification/introduction). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
+Aby uzyskać więcej informacji, zobacz [Switch instrukcji](~/_csharplang/spec/statements.md#the-switch-statement) w [specyfikacji języka Języka C #](/dotnet/csharp/language-reference/language-specification/introduction). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Dokumentacja języka C#](../index.md)
-- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [Odwołanie do języka C#](../index.md)
+- [Przewodnik programowania języka C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](index.md)
 - [if-else](if-else.md)
-- [Dopasowanie do wzorca](../../pattern-matching.md)
+- [Dopasowywanie wzorców](../../pattern-matching.md)

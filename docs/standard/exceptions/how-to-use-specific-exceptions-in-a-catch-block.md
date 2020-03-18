@@ -12,19 +12,19 @@ helpviewer_keywords:
 - catch blocks
 ms.assetid: 12af9ff3-8587-4f31-90cf-6c2244e0fdae
 ms.openlocfilehash: 48b450e579263876725f96e0adfc4c16aac1d869
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160160"
 ---
 # <a name="how-to-use-specific-exceptions-in-a-catch-block"></a>Jak używać określonych wyjątków w bloku catch
 
-Ogólnie rzecz biorąc, dobrym sposobem programowania jest przechwycenie określonego typu wyjątku zamiast używania podstawowej instrukcji `catch`.
+Ogólnie rzecz biorąc jest dobrą praktyką programowania, aby przechwycić określony `catch` typ wyjątku, a nie użyć podstawowej instrukcji.
 
-Gdy wystąpi wyjątek, zostanie przekazany stos, a każdy blok catch otrzymuje szansę na jego obsługę. Kolejność instrukcji catch jest ważna. Umieść bloki catch skierowane do określonych wyjątków przed ogólnym blokiem catch wyjątku lub kompilator może wydać błąd. Odpowiedni blok catch jest określany przez dopasowanie typu wyjątku do nazwy wyjątku określonego w bloku catch. Jeśli nie ma określonego bloku catch, wyjątek jest przechwytywany przez ogólny blok catch, jeśli taki istnieje.
+Po wystąpieniu wyjątku jest przekazywana do stosu i każdy blok catch ma możliwość obsługi go. Kolejność instrukcji połowowych jest ważna. Umieść catch bloki przeznaczone do określonych wyjątków przed ogólnym bloku catch wyjątku lub kompilator może wystawiać błąd. Właściwy blok catch jest określana przez dopasowanie typu wyjątku do nazwy wyjątku określonego w bloku catch. Jeśli nie ma żadnego określonego bloku catch, wyjątek jest przechwycone przez ogólny blok catch, jeśli istnieje.
 
-Poniższy przykład kodu używa bloku `try`/`catch` do przechwytywania <xref:System.InvalidCastException>. Przykład tworzy klasę o nazwie `Employee` z pojedynczą właściwością na poziomie pracownika (`Emlevel`). Metoda `PromoteEmployee`, przyjmuje obiekt i zwiększa poziom pracownika. <xref:System.InvalidCastException> występuje, gdy wystąpienie <xref:System.DateTime> zostanie przesłane do metody `PromoteEmployee`.
+Poniższy przykład kodu `try` / `catch` używa bloku <xref:System.InvalidCastException>do połowu . Przykład tworzy klasę `Employee` o nazwie z jednej`Emlevel`właściwości, poziom pracownika ( ). Metoda , `PromoteEmployee`przyjmuje obiekt i zwiększa poziom pracownika. Występuje, <xref:System.InvalidCastException> gdy <xref:System.DateTime> wystąpienie jest `PromoteEmployee` przekazywane do metody.
 
 [!code-cpp[CatchException#2](../../../samples/snippets/cpp/VS_Snippets_CLR/CatchException/CPP/catchexception1.cpp#2)]
 [!code-csharp[CatchException#2](../../../samples/snippets/csharp/VS_Snippets_CLR/CatchException/CS/catchexception1.cs#2)]

@@ -1,56 +1,56 @@
 ---
-title: '! (null-łagodniejszej) — C# odwołanie'
+title: '! (null-wyrozumiały) operator - odwołanie C#'
 ms.date: 10/11/2019
 f1_keywords:
 - '!_CSharpKeyword'
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: 026c50d1696b29f8498d316ae106bc851ed16f6a
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 36bfa46cebd2b35c4985dfc23dbe84f8f5dc9201
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78239018"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78846324"
 ---
-# <a name="-null-forgiving-operator-c-reference"></a>! (null-łagodniejszej) — operatorC# (odwołanie)
+# <a name="-null-forgiving-operator-c-reference"></a>! operator (wyrozumiały null) (odwołanie do języka C#)
 
-Dostępne w C# 8,0 i nowszych operator jednoargumentowy `!` jest operatorem o wartości null-łagodniejszej. W włączonym [kontekście dopuszczającym wartość null](../../nullable-references.md#nullable-annotation-context)należy użyć operatora null-łagodniejszej, aby zadeklarować wyrażenie `x` typu referencyjnego nie `null`: `x!`. Prefiks jednoargumentowy `!` jest operatorem [logicznym negacji](boolean-logical-operators.md#logical-negation-operator-).
+Dostępne w języku C# 8.0 i `!` nowszych, operator unary postfix jest operatorem wyrozumiały mównika. W włączonym [kontekście adnotacji nullable](../../nullable-references.md#nullable-annotation-context), należy użyć null-wyrozumiały operator zadeklarować, że wyrażenie `x` typu odwołania nie `null`jest : `x!`. Operator prefiksu `!` unary jest [operatorem negacji logicznej](boolean-logical-operators.md#logical-negation-operator-).
 
-Operator null-łagodniejszej nie ma wpływu w czasie wykonywania. Ma wpływ tylko na analizę przepływu statycznego kompilatora przez zmianę stanu null wyrażenia. W czasie wykonywania wyrażenie `x!` oblicza wynik wyrażenia bazowego `x`.
+Operator wyrozumiały nie ma wpływu w czasie wykonywania. Ma to wpływ tylko na analizę przepływu statycznego kompilatora, zmieniając stan zerowy wyrażenia. W czasie wykonywania wyrażenie `x!` oblicza wynik wyrażenia `x`źródłowego .
 
-Aby uzyskać więcej informacji na temat funkcji typów referencyjnych dopuszczających wartość null, zobacz [typy referencyjne dopuszczające wartość null](../../nullable-references.md).
+Aby uzyskać więcej informacji na temat funkcji typów odwołań z możliwością null, zobacz [Typy odwołań nullable](../../nullable-references.md).
 
 ## <a name="examples"></a>Przykłady
 
-Jednym z przypadków użycia operatora null-łagodniejszej jest Testowanie logiki walidacji argumentów. Rozważmy na przykład następujące klasy:
+Jednym z przypadków użycia operatora wyrozumiałego jest testowanie logiki sprawdzania poprawności argumentu. Rozważmy na przykład następującą klasę:
 
-[!code-csharp[Person class](~/samples/snippets/csharp/language-reference/operators/NullForgivingOperator.cs#PersonClass)]
+[!code-csharp[Person class](snippets/NullForgivingOperator.cs#PersonClass)]
 
-Używając [platformy testów MSTest](../../../core/testing/unit-testing-with-mstest.md), można utworzyć następujący test dla logiki walidacji w konstruktorze:
+Za pomocą [struktury testów MSTest](../../../core/testing/unit-testing-with-mstest.md)można utworzyć następujący test dla logiki sprawdzania poprawności w konstruktorze:
 
-[!code-csharp[Person test](~/samples/snippets/csharp/language-reference/operators/NullForgivingOperator.cs#TestPerson)]
+[!code-csharp[Person test](snippets/NullForgivingOperator.cs#TestPerson)]
 
-Bez operatora null łagodniejszej kompilator generuje następujące ostrzeżenie dla poprzedniego kodu: `Warning CS8625: Cannot convert null literal to non-nullable reference type`. Za pomocą operatora o wartości null-łagodniejszej, należy poinformować kompilator, że oczekiwany jest przebieg `null` i nie powinien być ostrzegany o.
+Bez operatora wyrozumiałego dla wartości null kompilator generuje `Warning CS8625: Cannot convert null literal to non-nullable reference type`następujące ostrzeżenie dla poprzedniego kodu: . Za pomocą operatora wyrozumiały null, informujesz kompilator, że przekazywanie `null` jest oczekiwane i nie powinien być ostrzeżony.
 
-Można również użyć operatora o wartości null-łagodniejszej, gdy użytkownik oczekuje na to, że wyrażenie nie może być `null` ale kompilator nie rozpoznaje tego elementu. W poniższym przykładzie, jeśli metoda `IsValid` zwraca `true`, jego argument nie jest `null` i można bezpiecznie go wywoływać:
+Można również użyć null-wyrozumiały operator, gdy na `null` pewno wiesz, że wyrażenie nie może być, ale kompilator nie udaje się rozpoznać, że. W poniższym przykładzie, `IsValid` jeśli `true`metoda zwraca, `null` jej argument nie jest i można bezpiecznie wyłuskać go:
 
-[!code-csharp[Use null-forgiving operator](~/samples/snippets/csharp/language-reference/operators/NullForgivingOperator.cs#UseNullForgiving)]
+[!code-csharp[Use null-forgiving operator](snippets/NullForgivingOperator.cs#UseNullForgiving)]
 
-Bez operatora null-łagodniejszej kompilator generuje następujące ostrzeżenie dla kodu `p.Name`: `Warning CS8602: Dereference of a possibly null reference`.
+Bez operatora wyrozumiałego null kompilator generuje `p.Name` następujące `Warning CS8602: Dereference of a possibly null reference`ostrzeżenie dla kodu: .
 
-Jeśli można zmodyfikować metodę `IsValid`, można użyć atrybutu [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute) do informowania kompilatora, że argument metody `IsValid` nie może być `null`, gdy metoda zwróci `true`:
+Jeśli można zmodyfikować `IsValid` metodę, można użyć [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute) atrybut poinformować kompilator, że argument `IsValid` metody nie może być, `null` gdy metoda zwraca: `true`
 
-[!code-csharp[Use an attribute](~/samples/snippets/csharp/language-reference/operators/NullForgivingOperator.cs#UseAttribute)]
+[!code-csharp[Use an attribute](snippets/NullForgivingOperator.cs#UseAttribute)]
 
-W poprzednim przykładzie nie trzeba używać operatora łagodniejszej o wartości null, ponieważ kompilator ma wystarczającą ilość informacji, aby dowiedzieć się, że `p` nie może być `null` wewnątrz instrukcji `if`. Aby uzyskać więcej informacji o atrybutach, które umożliwiają podanie dodatkowych informacji o stanie null zmiennej, zobacz [uaktualnianie interfejsów API z atrybutami w celu zdefiniowania oczekiwań o wartości null](../../nullable-attributes.md).
+W poprzednim przykładzie nie trzeba używać null-wyrozumiały operator, ponieważ kompilator ma `p` wystarczająco `null` dużo `if` informacji, aby dowiedzieć się, że nie może być wewnątrz instrukcji. Aby uzyskać więcej informacji na temat atrybutów, które umożliwiają podanie dodatkowych informacji o stanie zerowym zmiennej, zobacz [Uaktualnianie interfejsów API z atrybutami definiującymi oczekiwania null](../../nullable-attributes.md).
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
-Aby uzyskać więcej informacji, zobacz sekcję [operator null-łagodniejszej](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md#the-null-forgiving-operator) w [wersji roboczej specyfikacji typów odwołań dopuszczających wartość null](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md).
+Aby uzyskać więcej informacji, zobacz [null-wyrozumiały operator](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md#the-null-forgiving-operator) sekcji [wersji roboczej specyfikacji typów odwołań nullable](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md).
 
 ## <a name="see-also"></a>Zobacz też
 
-- [C#odwoła](../index.md)
+- [Dokumentacja języka C#](../index.md)
 - [Operatory języka C#](index.md)
-- [Samouczek: Projektowanie przy użyciu typów referencyjnych dopuszczających wartość null](../../tutorials/nullable-reference-types.md)
+- [Samouczek: Projektowanie z typami odwołań z wartościami null](../../tutorials/nullable-reference-types.md)

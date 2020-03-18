@@ -1,31 +1,29 @@
 ---
 title: Implementowanie ponownych prób wywołania HTTP wykonywanych przy użyciu wycofywania wykładniczego usługi Polly
-description: Dowiedz się, jak obsługiwać błędy HTTP za pomocą Polly i HttpClientFactory.
-ms.date: 01/30/2020
-ms.openlocfilehash: 60943360c9674f93b246b37b2667b48dab659e0e
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+description: Dowiedz się, jak obsługiwać błędy HTTP z Polly i IHttpClientFactory.
+ms.date: 03/03/2020
+ms.openlocfilehash: 49396dd545a05699278254474c77acf1483e0e0c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77502669"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78846799"
 ---
-# <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>Zaimplementuj ponowne próby wywołania HTTP przy użyciu wykładniczej wycofywania z zasadami HttpClientFactory i Polly
+# <a name="implement-http-call-retries-with-exponential-backoff-with-ihttpclientfactory-and-polly-policies"></a>Implementowanie ponownych prób wywołań HTTP przy gwałtownym wycofywaniu z zasadami IHttpClientFactory i Polly
 
-Zalecanym podejściem do ponawiania prób przy użyciu wykładniczej wycofywania jest skorzystanie z bardziej zaawansowanych bibliotek platformy .NET, takich jak [Biblioteka Polly](https://github.com/App-vNext/Polly)typu open source.
+Zalecane podejście do ponownych prób z wykładniczym wycofywaniem jest wykorzystanie bardziej zaawansowanych bibliotek .NET, takich jak [biblioteka Polly](https://github.com/App-vNext/Polly)typu open source .
 
-Polly to biblioteka platformy .NET, która zapewnia możliwości odporności i obsługi błędów przejściowych. Można zaimplementować te funkcje, stosując zasady Polly, takie jak ponawianie próby, wyłącznika, izolacja grodziowa, limit czasu i rezerwa. Polly targets .NET Framework 4. x i .NET Standard 1,0, 1,1 i 2,0 (które obsługują platformę .NET Core).
+Polly jest biblioteką .NET, która zapewnia odporność i funkcje obsługi błędów przejściowych. Te możliwości można zaimplementować, stosując zasady Polly, takie jak Ponów próbę, Wyłącznik, Izolacja grodzi, Ułomek czasu i Rezerwowy. Obiekty docelowe polly .NET Framework 4.x i .NET Standard 1.0, 1.1 i 2.0 (obsługujące program .NET Core).
 
-Jednak zapisanie własnego niestandardowego kodu do używania biblioteki Polly z HttpClient może być znacząco skomplikowane. W pierwotnej wersji programu eShopOnContainers istniał [blok konstrukcyjny ResilientHttpClient](https://github.com/dotnet-architecture/eShopOnContainers/commit/0c317d56f3c8937f6823cf1b45f5683397274815#diff-e6532e623eb606a0f8568663403e3a10) oparty na Polly. Jednak w przypadku wersji [HttpClientFactory](use-httpclientfactory-to-implement-resilient-http-requests.md)implementacja odpornej komunikacji http z Pollyem została znacznie prostsza, tak że blok konstrukcyjny został uznany za przestarzały z eShopOnContainers.
+W poniższych krokach przedstawiono sposób używania ponownych `IHttpClientFactory`prób http z wbudowanym polly , co wyjaśniono w poprzedniej sekcji.
 
-W poniższych krokach pokazano, jak można użyć ponownych prób http z Polly zintegrowanym z HttpClientFactory, co zostało wyjaśnione w poprzedniej sekcji.
+**Odwołaj się do ASP.NET pakietów Core 3.1**
 
-**Odwoływanie się do pakietów ASP.NET Core 3,1**
+`IHttpClientFactory`jest dostępna, ponieważ .NET Core 2.1 jednak zalecamy użycie najnowszych pakietów ASP.NET Core 3.1 z NuGet w projekcie. Zazwyczaj należy również odwołać się `Microsoft.Extensions.Http.Polly`do pakietu rozszerzenia .
 
-`HttpClientFactory` jest dostępna od platformy .NET Core 2,1, ale zalecamy korzystanie z najnowszych pakietów ASP.NET Core 3,1 z narzędzia NuGet w projekcie. Zwykle trzeba również odwoływać się do `Microsoft.Extensions.Http.Polly`pakietu rozszerzenia.
+**Konfigurowanie klienta za pomocą zasad ponów polly w aplikacji Uruchamianie**
 
-**Konfigurowanie klienta przy użyciu zasad ponawiania Polly w programie startowym**
-
-Jak pokazano w poprzednich sekcjach, należy zdefiniować nazwaną lub wpisaną HttpClient konfigurację klienta w standardowej metodzie Startup. ConfigureServices (...), ale teraz można dodać przyrostowy kod określający zasady dla ponawiania prób protokołu HTTP przy użyciu wykładniczej wycofywania, jak poniżej
+Jak pokazano w poprzednich sekcjach, należy zdefiniować nazwanego lub wpisanego klienta httpclient konfiguracji w standardowej Metoda Startup.ConfigureServices(...), ale teraz należy dodać kod przyrostowy określający zasady http ponownych prób z wykładniczego wycofywania, jak Poniżej:
 
 ```csharp
 //ConfigureServices()  - Startup.cs
@@ -34,9 +32,9 @@ services.AddHttpClient<IBasketService, BasketService>()
         .AddPolicyHandler(GetRetryPolicy());
 ```
 
-Metoda **AddPolicyHandler ()** dodaje zasady do obiektów `HttpClient`, które będą używane. W takim przypadku dodajemy zasady Polly do ponawiania prób http przy użyciu wykładniczej wycofywania.
+**AddPolicyHandler()** Metoda jest co dodaje `HttpClient` zasady do obiektów, które będą używane. W takim przypadku jest dodanie zasad Polly dla Http Ponownych prób z wykładniczym wycofywania.
 
-Aby zastosować bardziej modularne podejście, zasady ponawiania http można zdefiniować w oddzielnej metodzie w pliku `Startup.cs`, jak pokazano w poniższym kodzie:
+Aby mieć bardziej modułowe podejście, zasady ponawiania `Startup.cs` http można zdefiniować w oddzielnej metody w pliku, jak pokazano w następującym kodzie:
 
 ```csharp
 static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
@@ -49,11 +47,11 @@ static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
 }
 ```
 
-Za pomocą Polly można zdefiniować zasady ponawiania z liczbą ponownych prób, wykładniczą konfiguracją wycofywania i akcjami, które należy wykonać w przypadku wystąpienia wyjątku HTTP, takiego jak rejestrowanie błędu. W takim przypadku zasady są skonfigurowane do wypróbowania sześć razy z ponowieniem wykładniczym, rozpoczynając od dwóch sekund.
+Za pomocą polly można zdefiniować zasady ponawiania z liczbą ponownych prób, wykładniczą konfiguracją wycofywania i akcjami, które należy wykonać, gdy istnieje wyjątek HTTP, na przykład rejestrowanie błędu. W takim przypadku zasady jest skonfigurowany do próby sześć razy z wykładnicze ponowienie próby, począwszy od dwóch sekund.
 
-## <a name="add-a-jitter-strategy-to-the-retry-policy"></a>Dodawanie strategii o wahaniu do zasad ponowień
+## <a name="add-a-jitter-strategy-to-the-retry-policy"></a>Dodawanie strategii jitter do zasad ponawiania
 
-Regularne zasady ponawiania mogą mieć wpływ na system w przypadku dużej współbieżności i skalowalności oraz w przypadku dużej rywalizacji. Aby przezwyciężyć szczyty podobnych ponownych prób pochodzących z wielu klientów w przypadku częściowego przestoju, dobrym rozwiązaniem jest dodanie strategii o wahaniu do algorytmu/zasad ponowień. Może to poprawić ogólną wydajność systemu kompleksowego, dodając losowość do wykładniczej wycofywania. Powoduje to rozłożenie skoków w przypadku wystąpienia problemów. Zasada jest zilustrowana przy użyciu poniższego przykładu:
+Regularne zasady ponawiania może mieć wpływ na system w przypadkach wysokiej współbieżności i skalowalności i w wysokiej rywalizacji. Aby przezwyciężyć szczyty podobnych ponownych prób pochodzących z wielu klientów w przypadku częściowych awarii, dobrym obejściem jest dodanie strategii jitter do algorytmu/zasad ponawiania prób. Może to poprawić ogólną wydajność systemu end-to-end, dodając losowość do wykładniczego wycofywania. To rozkłada się kolce, gdy pojawiają się problemy. Zasada ta jest zilustrowana następującym przykładem:
 
 ```csharp
 Random jitterer = new Random();
@@ -66,25 +64,25 @@ var retryWithJitterPolicy = HttpPolicyExtensions
     );
 ```
 
-Polly zapewnia algorytmy wahania produkcji w środowisku produkcyjnym za pośrednictwem witryny sieci Web projektu.
+Polly dostarcza gotowe do produkcji algorytmy jitterza za pośrednictwem strony internetowej projektu.
 
-## <a name="additional-resources"></a>Dodatkowe zasoby
+## <a name="additional-resources"></a>Zasoby dodatkowe
 
-- **Wzorzec ponawiania**  
+- **Ponowij próbę wzorzec**  
   [https://docs.microsoft.com/azure/architecture/patterns/retry](/azure/architecture/patterns/retry)
 
-- **Polly i HttpClientFactory**  
+- **Polly i IHttpClientFactory**  
   <https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory>
 
-- **Polly (odporność platformy .NET i Biblioteka obsługi błędów przejściowych)**  
+- **Polly (odporność.NET i biblioteka obsługi błędów przejściowych)**  
   <https://github.com/App-vNext/Polly>
 
-- **Polly: ponów próbę z wahaniem**  
+- **Polly: Ponów próbę z jitter**  
   <https://github.com/App-vNext/Polly/wiki/Retry-with-jitter>
 
-- **Brooker wytłoczyn. Wahanie: zwiększanie losowości**  
+- **Marc Brooker. Jitter: Co lepsze z przypadkowości**  
   <https://brooker.co.za/blog/2015/03/21/backoff.html>
 
 >[!div class="step-by-step"]
->[Poprzednie](explore-custom-http-call-retries-exponential-backoff.md)
->[dalej](implement-circuit-breaker-pattern.md)
+>[Poprzedni](use-httpclientfactory-to-implement-resilient-http-requests.md)
+>[następny](implement-circuit-breaker-pattern.md)

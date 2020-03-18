@@ -1,5 +1,5 @@
 ---
-title: Typ bool- C# odwołanie
+title: typ bool - odwołanie do języka C#
 ms.date: 11/26/2019
 f1_keywords:
 - bool
@@ -8,43 +8,43 @@ helpviewer_keywords:
 - bool data type [C#]
 - Boolean [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: 0e01c183ef07c23203619e0cbbf550c6268bdd46
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 2ba2e54a6b0f24402fc3728dfe19b548a2368830
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78239836"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78846448"
 ---
-# <a name="bool-c-reference"></a>bool (C# odwołanie)
+# <a name="bool-c-reference"></a>bool (odwołanie do języka C#)
 
-Słowo kluczowe typu `bool` jest aliasem dla typu struktury <xref:System.Boolean?displayProperty=nameWithType> .NET, który reprezentuje wartość logiczną, która może być `true` lub `false`.
+Słowo `bool` kluczowe type jest aliasem <xref:System.Boolean?displayProperty=nameWithType> typu struktury .NET, który reprezentuje wartość `true` `false`logiczną, która może być albo .
 
-Aby wykonać operacje logiczne przy użyciu wartości typu `bool`, użyj logicznych operatorów [logicznych](../operators/boolean-logical-operators.md) . Typ `bool` jest typem wyniku [porównania](../operators/comparison-operators.md) i operatory [równości](../operators/equality-operators.md) . Wyrażenie `bool` może być kontrolnym wyrażeniem warunkowym w instrukcjach [if](../keywords/if-else.md), [do](../keywords/do.md), [while](../keywords/while.md)i [for](../keywords/for.md) oraz w [operatorze warunkowym `?:`](../operators/conditional-operator.md).
+Aby wykonać operacje logiczne `bool` z wartościami typu, należy użyć logicznych operatorów [logicznych.](../operators/boolean-logical-operators.md) Typ `bool` jest typu wynik [operatorów porównania](../operators/comparison-operators.md) i [równości.](../operators/equality-operators.md) `bool` Wyrażenie może być kontrolowanie wyrażenia warunkowego w [if](../keywords/if-else.md), [zrobić](../keywords/do.md), [podczas](../keywords/while.md)gdy , i [dla](../keywords/for.md) instrukcji i [w operatorze warunkowym `?:` ](../operators/conditional-operator.md).
 
-Wartość domyślna typu `bool` jest `false`.
+Domyślną wartością `bool` tego `false`typu jest .
 
 ## <a name="literals"></a>Literały
 
-Można użyć literałów `true` i `false`, aby zainicjować zmienną `bool` lub przekazać `bool` wartość:
+Można użyć `true` literałów i `false` zainicjować `bool` zmienną lub `bool` przekazać wartość:
 
-[!code-csharp-interactive[bool literals](~/samples/snippets/csharp/language-reference/builtin-types/BoolType.cs#Literals)]
+[!code-csharp-interactive[bool literals](snippets/BoolType.cs#Literals)]
 
-## <a name="three-valued-boolean-logic"></a>Logika logiczna z trzema wartościami
+## <a name="three-valued-boolean-logic"></a>Logika logiczna o trzech wartościach
 
-Typ `bool?` dopuszczający wartość null, jeśli potrzebna jest obsługa logiki trójwarstwowej, na przykład podczas pracy z bazami danych, które obsługują typ Boolean o wartości 3. W przypadku operandów `bool?` wstępnie zdefiniowane `&` i operatory `|` obsługują logikę z trzema wartościami. Aby uzyskać więcej informacji, zobacz sekcję [Operatory logiczne wartości null](../operators/boolean-logical-operators.md#nullable-boolean-logical-operators) w artykule [Operatory logiczne Boolean](../operators/boolean-logical-operators.md) .
+Użyj typu `bool?` nullable, jeśli trzeba obsługiwać logiki trzech wartości, na przykład podczas pracy z bazami danych, które obsługują typ logiczny o trzech wartościach. W `bool?` przypadku argumentów wstępnie zdefiniowane `&` `|` i operatory obsługują logikę trójwartościową. Aby uzyskać więcej informacji, zobacz [nullable logicznych operatorów logicznych](../operators/boolean-logical-operators.md#nullable-boolean-logical-operators) sekcji [logicznych operatorów logicznych.](../operators/boolean-logical-operators.md)
 
-Aby uzyskać więcej informacji na temat typów wartości null, zobacz [dopuszczanie typów wartości null](nullable-value-types.md).
+Aby uzyskać więcej informacji na temat typów wartości nullable, zobacz [Typy wartości nullable](nullable-value-types.md).
 
 ## <a name="conversions"></a>Konwersje
 
-C#zawiera tylko dwie konwersje, które obejmują typ `bool`. Są one niejawną konwersją do odpowiedniego typu `bool?` nullable i jawnej konwersji z typu `bool?`. Jednak platforma .NET udostępnia dodatkowe metody, których można użyć do przekonwertowania na typ `bool` lub z niego. Aby uzyskać więcej informacji, zobacz sekcję [konwertowanie do i z wartości logicznych](/dotnet/api/system.boolean#converting-to-and-from-boolean-values) na stronie informacje o interfejsie API <xref:System.Boolean?displayProperty=nameWithType>.
+C# zawiera tylko dwie konwersje, które obejmują `bool` typ. Są to niejawna konwersja `bool?` do odpowiedniego typu `bool?` nullable i jawne konwersji z typu. Jednak .NET udostępnia dodatkowe metody, które można użyć `bool` do konwersji do lub z typu. Aby uzyskać więcej informacji, zobacz [konwersja do i z wartości logicznych](/dotnet/api/system.boolean#converting-to-and-from-boolean-values) sekcji strony referencyjnej <xref:System.Boolean?displayProperty=nameWithType> interfejsu API.
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
-Aby uzyskać więcej informacji, zobacz sekcję [Typ bool](~/_csharplang/spec/types.md#the-bool-type) w [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).
+Aby uzyskać więcej informacji, zobacz sekcję [typ bool](~/_csharplang/spec/types.md#the-bool-type) [specyfikacji języka Języka C#.](~/_csharplang/spec/introduction.md)
 
 ## <a name="see-also"></a>Zobacz też
 
-- [C#odwoła](../index.md)
+- [Dokumentacja języka C#](../index.md)
 - [Typy wartości](value-types.md)
-- [Operatory true i false](../operators/true-false-operators.md)
+- [true i false, operatory](../operators/true-false-operators.md)

@@ -1,39 +1,39 @@
 ---
-title: Wprowadzenie do platformy .NET
-description: Wyświetla różne artykuły dotyczące rozpoczynania pracy z platformą .NET, zarówno z perspektywy języka, jak i platformy.
+title: Rozpoczęcie pracy z programem .NET
+description: Wyświetla listę różnych artykułów na wprowadzenie do platformy .NET, zarówno z punktu widzenia języka, jak i platformy.
 author: cartermp
 ms.date: 01/21/2020
 ms.technology: dotnet-standard
 ms.assetid: 81c07080-acdf-4aef-a66d-0ab52fab2c04
 ms.openlocfilehash: af0ce454a986f22dfb00888cab6e34901930c5a9
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77124263"
 ---
-# <a name="get-started"></a>Wprowadzenie
+# <a name="get-started"></a>Rozpoczęcie pracy
 
-Istnieje kilka sposobów na rozpoczęcie pracy z platformą .NET. Ponieważ platforma .NET jest ogromną platformą, w tej dokumentacji znajduje się wiele artykułów, które mogą pomóc Ci rozpocząć pracę z platformą .NET.
+Istnieje wiele sposobów, aby rozpocząć pracę z .NET. Ponieważ platforma .NET jest platformą masową, istnieje wiele artykułów w tej dokumentacji, które mogą pomóc w rozpoczęciu pracy z .NET, każdy z innej perspektywy.
 
 ## <a name="get-started-using-net-languages"></a>Wprowadzenie do korzystania z języków .NET
 
-* Artykuły wprowadzające i [ C# samouczki](../csharp/tutorials/index.md) zawierają metody umożliwiające rozpoczęcie pracy w C#sposób skoncentrowany. [ C# ](../csharp/getting-started/index.md)
+* [C# wprowadzenie](../csharp/getting-started/index.md) artykułów i [samouczki języka C#](../csharp/tutorials/index.md) zapewniają sposoby, aby rozpocząć pracę w sposób C#-centric.
 
-* Samouczki wprowadzające obejmują trzy podstawowe sposoby używania F#: z programem Visual Studio, Visual Studio Code lub narzędziami wiersza polecenia. [ F# ](../fsharp/get-started/index.md)
+* [Samouczki dotyczące rozpoczynania pracy języka F#](../fsharp/get-started/index.md) obejmują trzy podstawowe sposoby używania języka F#: za pomocą programu Visual Studio, kodu programu Visual Studio lub narzędzi wiersza polecenia.
 
-* Artykuł [wprowadzenie Visual Basic](../visual-basic/getting-started/index.md) zawiera przewodniki dotyczące korzystania z Visual Basic w programie Visual Studio.
+* [Visual Basic wprowadzenie](../visual-basic/getting-started/index.md) artykułów zawierają przewodniki dotyczące korzystania z języka Visual Basic w programie Visual Studio.
 
-## <a name="get-started-using-net-core"></a>Wprowadzenie do korzystania z platformy .NET Core
+## <a name="get-started-using-net-core"></a>Wprowadzenie do korzystania z programu .NET Core
 
-* [Wprowadzenie do programu .NET Core](../core/get-started.md) zawiera omówienie artykułów, w których pokazano, jak rozpocząć pracę z platformą .NET Core w różnych systemach operacyjnych i korzystać z różnych narzędzi.
+* [Wprowadzenie do programu .NET Core](../core/get-started.md) zawiera omówienie artykułów, które pokazują, jak rozpocząć pracę z platformą .NET Core w różnych systemach operacyjnych i przy użyciu różnych narzędzi.
 
-* [Samouczki programu .NET Core](../core/tutorials/index.md) szczegółowo opisują sposoby rozpoczynania pracy z platformą .NET Core przy użyciu systemu operacyjnego i wybranych narzędzi.
+* [Samouczki .NET Core](../core/tutorials/index.md) szczegółowo opisują sposoby rozpoczęcia pracy z platformą .NET Core przy użyciu wybranego systemu operacyjnego i narzędzi.
 
-## <a name="get-started-using-net-standard"></a>Rozpocznij korzystanie z .NET Standard
+## <a name="get-started-using-net-standard"></a>Wprowadzenie do korzystania z programu .NET Standard
 
-* Aby zapoznać się z samouczkiem wprowadzającym, zobacz [Tworzenie biblioteki .NET standard w programie Visual Studio](../core/tutorials/library-with-visual-studio.md).
+* Aby zapoznać się z samouczkiem wprowadzającym, zobacz [Tworzenie biblioteki standardu .NET w programie Visual Studio](../core/tutorials/library-with-visual-studio.md).
 
-## <a name="get-started-using-net-core-on-docker"></a>Rozpoczynanie pracy z platformą .NET Core w programie Docker
+## <a name="get-started-using-net-core-on-docker"></a>Wprowadzenie do korzystania z platformy .NET Core na platformie Docker
 
-[Wprowadzenie do oprogramowania .NET i Docker](../core/docker/introduction.md) pokazuje, jak można używać platformy .NET Core w kontenerach Docker systemu Windows.
+[Wprowadzenie do platformy .NET i platformy Docker](../core/docker/introduction.md) pokazuje, jak można używać programu .NET Core w kontenerach platformy Docker systemu Windows.

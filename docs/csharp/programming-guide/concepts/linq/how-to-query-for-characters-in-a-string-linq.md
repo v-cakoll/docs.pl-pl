@@ -1,19 +1,19 @@
 ---
-title: Jak wykonać zapytanie o znaki w ciągu (LINQ) (C#)
+title: Jak wysyłać zapytania o znaki w ciągu (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 727a1be7-dbec-4ab8-b414-bc2d56feb6ff
 ms.openlocfilehash: d85e488a38a6167505732103b4c540cade6ea9bc
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75345680"
 ---
-# <a name="how-to-query-for-characters-in-a-string-linq-c"></a>Jak wykonać zapytanie o znaki w ciągu (LINQ) (C#)
-Ponieważ Klasa <xref:System.String> implementuje ogólny interfejs <xref:System.Collections.Generic.IEnumerable%601>, każdy ciąg może być badany jako sekwencja znaków. Nie jest to jednak powszechne użycie LINQ. W przypadku złożonych operacji dopasowania do wzorca Użyj klasy <xref:System.Text.RegularExpressions.Regex>.  
+# <a name="how-to-query-for-characters-in-a-string-linq-c"></a>Jak wysyłać zapytania o znaki w ciągu (LINQ) (C#)
+Ponieważ <xref:System.String> klasa implementuje <xref:System.Collections.Generic.IEnumerable%601> interfejs ogólny, każdy ciąg można zbadać jako sekwencję znaków. Jednak nie jest to powszechne zastosowanie LINQ. W przypadku operacji dopasowywania wzorców złożonych należy użyć <xref:System.Text.RegularExpressions.Regex> klasy.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład wysyła zapytanie do ciągu, aby określić liczbę cyfr, które zawiera. Należy pamiętać, że zapytanie jest "ponownie używane" po raz pierwszy. Jest to możliwe, ponieważ samo zapytanie nie przechowuje żadnych rzeczywistych wyników.  
+ Poniższy przykład kwerendy ciąg, aby określić liczbę cyfr, które zawiera. Należy zauważyć, że kwerenda jest "ponownie używane" po wykonaniu po raz pierwszy. Jest to możliwe, ponieważ sama kwerenda nie przechowuje żadnych rzeczywistych wyników.  
   
 ```csharp  
 class QueryAString  
@@ -55,9 +55,9 @@ class QueryAString
 ```  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Utwórz projekt C# aplikacji konsolowej z `using` dyrektywami dotyczącymi przestrzeni nazw System. Linq i system.IO.  
+ Utwórz projekt aplikacji konsoli `using` C# z dyrektywami dla system.Linq i System.IO przestrzeni nazw.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [LINQ i ciągi (C#)](./linq-and-strings.md)
-- [Jak połączyć zapytania LINQ z wyrażeniami regularnymiC#()](./how-to-combine-linq-queries-with-regular-expressions.md)
+- [Jak połączyć zapytania LINQ z wyrażeniami regularnymi (C#)](./how-to-combine-linq-queries-with-regular-expressions.md)

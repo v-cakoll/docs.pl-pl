@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Używanie składników obsługujących wzorzec asynchroniczny oparty na zdarzeniach'
+title: 'Porady: używanie składnika obsługującego wzorzec asynchroniczny oparty na zdarzeniach'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -19,28 +19,28 @@ helpviewer_keywords:
 - AsyncCompletedEventArgs class
 ms.assetid: 35e9549c-1568-4768-ad07-17cc6dff11e1
 ms.openlocfilehash: 9ac98b5c576c065f8944714c72b492539e0d2f05
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "61870243"
 ---
-# <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>Instrukcje: Używanie składników obsługujących wzorzec asynchroniczny oparty na zdarzeniach
-Wiele składników zapewniają możliwość wykonywania pracy asynchronicznie. <xref:System.Media.SoundPlayer> i <xref:System.Windows.Forms.PictureBox> składników, na przykład włączyć ładowanie dźwięków i obrazy "w tle" nadal działa bez przerwy z wątku głównego.  
+# <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>Porady: używanie składnika obsługującego wzorzec asynchroniczny oparty na zdarzeniach
+Wiele składników zapewnia możliwość wykonywania ich pracy asynchronicznie. <xref:System.Media.SoundPlayer> Komponenty <xref:System.Windows.Forms.PictureBox> i, na przykład, umożliwiają ładowanie dźwięków i obrazów "w tle", podczas gdy główny wątek nadal działa bez przerwy.  
   
- Używanie metod asynchronicznych klasy, która obsługuje [oparte na zdarzeniach asynchronicznych omówienie wzorca](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md) mogą być proste i polega na dołączanie programu obsługi zdarzeń do składnika _MethodName_  **Ukończono** zdarzenia, tak jak dowolne inne zdarzenie. Gdy wywołujesz _MethodName_**Async** metody, aplikacja będzie nadal działa nieprzerwanie aż do _MethodName_**Ukończono** zdarzenie jest wywoływane. W przypadku obsługi zdarzenia, można sprawdzić <xref:System.ComponentModel.AsyncCompletedEventArgs> parametru, aby określić, czy pomyślnie Ukończono operację asynchroniczną, czy został anulowany.  
+ Przy użyciu metod asynchronicznych w klasie, która obsługuje [omówienie wzorca asynchronicznego opartego](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md) na zdarzeniach może być tak proste, jak dołączanie programu obsługi zdarzeń do zdarzenia _MethodName_**Complete** składnika, tak jak w przypadku każdego innego zdarzenia. Po wywołaniu _MethodName_**Async** metody, aplikacja będzie nadal działać bez przerwy, dopóki _MethodName_**Completed** zdarzenie zostanie podniesiona. W programie obsługi zdarzeń <xref:System.ComponentModel.AsyncCompletedEventArgs> można sprawdzić parametr, aby ustalić, czy operacja asynchroniczna została pomyślnie ukończona lub czy została anulowana.  
   
- Aby uzyskać więcej informacji o używaniu procedur obsługi zdarzeń, zobacz [Przegląd obsługi zdarzeń](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).  
+ Aby uzyskać więcej informacji na temat korzystania z programów obsługi zdarzeń, zobacz [Omówienie programów obsługi zdarzeń](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).  
   
- Poniższa procedura przedstawia sposób użycia asynchronicznego możliwości ładowania obrazu <xref:System.Windows.Forms.PictureBox> kontroli.  
+ W poniższej procedurze pokazano, jak używać asynchronicznej możliwości ładowania obrazu formantu. <xref:System.Windows.Forms.PictureBox>  
   
-### <a name="to-enable-a-picturebox-control-to-asynchronously-load-an-image"></a>Aby włączyć formant PictureBox, aby asynchronicznie załadować obrazu  
+### <a name="to-enable-a-picturebox-control-to-asynchronously-load-an-image"></a>Aby włączyć formant PictureBox do asynchronicznie załadować obraz  
   
-1. Utwórz wystąpienie obiektu <xref:System.Windows.Forms.PictureBox> składnika w formularzu.  
+1. Utwórz wystąpienie <xref:System.Windows.Forms.PictureBox> składnika w formularzu.  
   
-2. Program obsługi zdarzeń, aby przypisać <xref:System.Windows.Forms.PictureBox.LoadCompleted> zdarzeń.  
+2. Przypisz program obsługi <xref:System.Windows.Forms.PictureBox.LoadCompleted> zdarzeń do zdarzenia.  
   
-     Sprawdź, czy wszystkie błędy, które mogły wystąpić podczas asynchronicznego pobierania w tym miejscu. Jest to również, gdzie sprawdzania występowania unieważnienia.  
+     Sprawdź, czy nie wystąpiły błędy podczas pobierania asynchronicznego tutaj. W tym miejscu można również sprawdzić możliwość anulowania.  
   
      [!code-csharp[System.Windows.Forms.PictureBox.LoadAsync#2](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.PictureBox.LoadAsync#2](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/VB/Form1.vb#2)]  
@@ -48,7 +48,7 @@ Wiele składników zapewniają możliwość wykonywania pracy asynchronicznie. <
      [!code-csharp[System.Windows.Forms.PictureBox.LoadAsync#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/CS/Form1.cs#5)]
      [!code-vb[System.Windows.Forms.PictureBox.LoadAsync#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/VB/Form1.vb#5)]  
   
-3. Dodaje dwa przyciski, o nazwie `loadButton` i `cancelLoadButton`, do formularza. Dodaj <xref:System.Windows.Forms.Control.Click> procedury obsługi zdarzeń, aby uruchomić i anulować pobieranie.  
+3. Dodaj dwa przyciski, o nazwie `loadButton` i `cancelLoadButton`, do formularza. Dodaj <xref:System.Windows.Forms.Control.Click> programy obsługi zdarzeń, aby rozpocząć i anulować pobieranie.  
   
      [!code-csharp[System.Windows.Forms.PictureBox.LoadAsync#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.PictureBox.LoadAsync#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/VB/Form1.vb#3)]  
@@ -58,9 +58,9 @@ Wiele składników zapewniają możliwość wykonywania pracy asynchronicznie. <
   
 4. Uruchom aplikację.  
   
-     W trakcie wykonywania pobrania obrazu można swobodnie przemieszczać się formularz, zminimalizować i zmaksymalizować go.  
+     W miarę pobierania obrazu można swobodnie przenosić formularz, minimalizować go i zmaksymalizować.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Instrukcje: Uruchamianie operacji w tle](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [Asynchroniczny wzorzec oparty na zdarzeniach — omówienie](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [Instrukcje: uruchamianie operacji w tle](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [Asynchroniczny wzorzec oparty na zdarzeniach — przegląd](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

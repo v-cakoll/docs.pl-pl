@@ -3,17 +3,17 @@ title: Jak wypełnić drzewo XML z systemu plików (C#)
 ms.date: 07/20/2015
 ms.assetid: 2aa2ccac-4a22-47ae-9107-3bb8df232576
 ms.openlocfilehash: beb44be1a787fa09b091aa48022dbb5b10c4632b
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75345780"
 ---
 # <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a>Jak wypełnić drzewo XML z systemu plików (C#)
-Typową i użyteczną aplikacją drzew XML jest hierarchiczny magazyn danych nazw/wartości. Można wypełnić drzewo XML danymi hierarchicznymi, a następnie wykonać do nich zapytania, przekształcić je i w razie potrzeby serializować. W tym scenariuszu użycia wiele semantyki specyficznych dla XML, takich jak przestrzeń nazw i zachowanie białych znaków, nie są ważne. Zamiast tego używasz drzewa XML jako małej, w pamięci, hierarchicznej bazy danych pojedynczego użytkownika.  
+Typowe i przydatne zastosowanie drzew XML jest jako hierarchiczny magazyn danych nazwy/wartości. Drzewo XML można wypełnić danymi hierarchicznymi, a następnie zbadać je, przekształcić i w razie potrzeby serializować. W tym scenariuszu użycia wiele semantyki specyficzne xml, takich jak obszary nazw i zachowanie biały znak, nie są ważne. Zamiast tego używasz drzewa XML jako małej, w pamięci hierarchicznej bazy danych pojedynczego użytkownika.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład wypełnia drzewo XML z lokalnego systemu plików przy użyciu rekursji. Następnie wykonuje zapytanie do drzewa, obliczając łączny rozmiar wszystkich plików w drzewie.  
+ Poniższy przykład wypełnia drzewo XML z lokalnego systemu plików przy użyciu rekursji. Następnie wysyła zapytanie do drzewa, obliczając sumę rozmiarów wszystkich plików w drzewie.  
   
 ```csharp  
 class Program  
@@ -46,7 +46,7 @@ class Program
 }  
 ```  
   
- Ten przykład generuje dane wyjściowe podobne do następujących:  
+ W tym przykładzie daje dane wyjściowe podobne do następujących:  
   
 ```xml  
 <Dir Name="Tmp">  

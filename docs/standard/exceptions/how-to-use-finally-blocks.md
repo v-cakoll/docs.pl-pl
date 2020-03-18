@@ -14,22 +14,22 @@ helpviewer_keywords:
 - ArgumentOutOfRangeException class
 ms.assetid: 4b9c0137-04af-4468-91d1-b9014df8ddd2
 ms.openlocfilehash: 44fbb53437c4c8f19a424227a167e2e268b77057
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75708835"
 ---
-# <a name="how-to-use-finally-blocks"></a>Jak używać bloków finally
+# <a name="how-to-use-finally-blocks"></a>Jak używać wreszcie bloków
 
-Gdy wystąpi wyjątek, wykonywanie zostaje zatrzymane i kontrola zostanie udzielona odpowiedniej procedurze obsługi wyjątków. Często oznacza to, że wiersze kodu, które należy wykonać, są pomijane. Niektóre Oczyszczanie zasobów, takie jak zamykanie pliku, należy wykonać nawet wtedy, gdy zostanie zgłoszony wyjątek. W tym celu można użyć bloku `finally`. Blok `finally` jest zawsze wykonywany, niezależnie od tego, czy wystąpił wyjątek.
+W przypadku wystąpienia wyjątku, wykonywanie zatrzymuje się i kontroli jest podana do obsługi wyjątków odpowiednie. Często oznacza to, że wiersze kodu, które mają być wykonywane są pomijane. Niektóre oczyszczania zasobów, takich jak zamknięcie pliku, musi być wykonane, nawet jeśli wyjątek. Aby to zrobić, można `finally` użyć bloku. Blok `finally` zawsze jest wykonywany, niezależnie od tego, czy wyjątek jest zgłaszany.
 
-Poniższy przykład kodu używa bloku `try`/`catch` do przechwytywania <xref:System.ArgumentOutOfRangeException>. Metoda `Main` tworzy dwie tablice i próbuje skopiować jeden do drugiego. Akcja generuje <xref:System.ArgumentOutOfRangeException> i błąd jest zapisywana w konsoli. Blok `finally` jest wykonywany niezależnie od wyniku akcji kopiowania.
+Poniższy przykład kodu `try` / `catch` używa bloku <xref:System.ArgumentOutOfRangeException>do połowu . Metoda `Main` tworzy dwie tablice i próbuje skopiować jedną do drugiej. Akcja generuje i <xref:System.ArgumentOutOfRangeException> błąd jest zapisywany w konsoli. Blok `finally` jest wykonywany niezależnie od wyniku akcji kopiowania.
 
 [!code-cpp[CodeTryCatchFinallyExample#3](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeTryCatchFinallyExample/CPP/source2.cpp#3)]
 [!code-csharp[CodeTryCatchFinallyExample#3](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeTryCatchFinallyExample/CS/source2.cs#3)]
 [!code-vb[CodeTryCatchFinallyExample#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeTryCatchFinallyExample/VB/source2.vb#3)]  
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Wyjątki](index.md)

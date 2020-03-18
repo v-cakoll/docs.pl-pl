@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Odczyt i zapis w nowo utworzonym pliku danych'
+title: 'Jak: Odczytywanie i zapisywanie w nowo utworzonym pliku danych'
 ms.date: 01/21/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,19 +14,19 @@ helpviewer_keywords:
 - BinaryWriter class, examples
 ms.assetid: e209d949-31e8-44ea-8e38-87f9093f3093
 ms.openlocfilehash: 3772aeeb25d1251a13fde2a0e51a913e5e39eabc
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78155753"
 ---
-# <a name="how-to-read-and-write-to-a-newly-created-data-file"></a>Instrukcje: Odczyt i zapis w nowo utworzonym pliku danych
-Klasy <xref:System.IO.BinaryWriter?displayProperty=nameWithType> i <xref:System.IO.BinaryReader?displayProperty=nameWithType> są używane do zapisywania i odczytywania danych innych niż ciągi znaków. Poniższy przykład pokazuje, jak utworzyć pusty strumień plików, zapisać w nim dane i odczytać z niego dane.
+# <a name="how-to-read-and-write-to-a-newly-created-data-file"></a>Jak: Odczytywanie i zapisywanie w nowo utworzonym pliku danych
+I <xref:System.IO.BinaryWriter?displayProperty=nameWithType> <xref:System.IO.BinaryReader?displayProperty=nameWithType> klasy są używane do zapisywania i odczytywania danych innych niż ciągi znaków. W poniższym przykładzie pokazano, jak utworzyć pusty strumień plików, zapisać do niego dane i odczytać z niego dane.
 
-Przykład tworzy plik danych o nazwie *test. Data* w bieżącym katalogu, tworzy skojarzone <xref:System.IO.BinaryWriter> i <xref:System.IO.BinaryReader> obiektów, a następnie używa obiektu <xref:System.IO.BinaryWriter>, aby napisać liczbę całkowitą od 0 do 10 w celu *przetestowania. dane*, co pozostawia wskaźnik pliku na końcu pliku. Obiekt <xref:System.IO.BinaryReader> następnie ustawia wskaźnik pliku z powrotem do źródła i odczytuje określoną zawartość.  
+Przykład tworzy plik danych o nazwie *Test.data* w <xref:System.IO.BinaryWriter> bieżącym <xref:System.IO.BinaryReader> katalogu, tworzy <xref:System.IO.BinaryWriter> skojarzone i obiekty i używa obiektu do zapisu liczb całkowitych od 0 do 10 do *Test.data*, który pozostawia wskaźnik pliku na końcu pliku. Następnie <xref:System.IO.BinaryReader> obiekt ustawia wskaźnik pliku z powrotem do początku i odczytuje określoną zawartość.  
   
 > [!NOTE]
-> Jeśli *test. Data* już istnieje w bieżącym katalogu, zostanie zgłoszony wyjątek <xref:System.IO.IOException>. Użyj opcji Tryb plików <xref:System.IO.FileMode.Create?displayProperty=nameWithType>, a nie <xref:System.IO.FileMode.CreateNew?displayProperty=nameWithType>, aby zawsze tworzyć nowy plik bez zgłaszania wyjątku.  
+> Jeśli *Test.data* już istnieje w <xref:System.IO.IOException> bieżącym katalogu, wyjątek. Użyj opcji <xref:System.IO.FileMode.Create?displayProperty=nameWithType> trybu pliku, <xref:System.IO.FileMode.CreateNew?displayProperty=nameWithType> a nie zawsze utworzyć nowy plik bez zgłaszania wyjątku.  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[System.IO.BinaryReaderWriter#7](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter/CS/source6.cs#7)]
@@ -39,10 +39,10 @@ Przykład tworzy plik danych o nazwie *test. Data* w bieżącym katalogu, tworzy
 - <xref:System.IO.FileStream>  
 - <xref:System.IO.FileStream.Seek%2A?displayProperty=nameWithType>  
 - <xref:System.IO.SeekOrigin>  
-- [Instrukcje: Wyliczanie katalogów i plików](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)  
-- [Instrukcje: otwieranie pliku dziennika i dołączanie do niego](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
-- [Instrukcje: odczytywanie tekstu z pliku](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
-- [Instrukcje: wpisywanie tekstu do pliku](../../../docs/standard/io/how-to-write-text-to-a-file.md)  
-- [Instrukcje: odczytywanie znaków z ciągu](../../../docs/standard/io/how-to-read-characters-from-a-string.md)  
-- [Instrukcje: Wpisywanie znaków do ciągu](../../../docs/standard/io/how-to-write-characters-to-a-string.md)  
-- [We/wy plików i strumieni](../../../docs/standard/io/index.md)
+- [Jak: Wyliczanie katalogów i plików](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)  
+- [Jak: Otwieranie i dołączanie do pliku dziennika](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
+- [Jak: Odczytywanie tekstu z pliku](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
+- [Jak: Napisać tekst do pliku](../../../docs/standard/io/how-to-write-text-to-a-file.md)  
+- [Jak: Odczytywanie znaków z ciągu](../../../docs/standard/io/how-to-read-characters-from-a-string.md)  
+- [Jak: Zapisywać znaki do ciągu](../../../docs/standard/io/how-to-write-characters-to-a-string.md)  
+- [Plik i strumień we/wy](../../../docs/standard/io/index.md)

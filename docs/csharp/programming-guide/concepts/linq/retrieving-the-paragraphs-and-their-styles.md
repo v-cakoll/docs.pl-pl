@@ -2,46 +2,46 @@
 title: Pobieranie akapitów i ich stylów (C#)
 ms.date: 07/20/2015
 ms.assetid: c2f767f8-57b1-4b4b-af04-89ffb1f7067d
-ms.openlocfilehash: ec59ef0ac36f8691ca93a4c21c5379118ee0491f
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 47127b6f1d6bfaa0d8d93333882a0d0b59f1bae6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253073"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168300"
 ---
 # <a name="retrieving-the-paragraphs-and-their-styles-c"></a>Pobieranie akapitów i ich stylów (C#)
-W tym przykładzie napiszemy zapytanie, które pobiera węzły akapitu z dokumentu WordprocessingML. Identyfikuje także styl każdego akapitu.  
+W tym przykładzie piszemy kwerendę, która pobiera węzły akapitu z dokumentu WordprocessingML. Identyfikuje również styl każdego akapitu.  
   
- To zapytanie kompiluje zapytanie w poprzednim przykładzie, [wyszukując domyślny styl akapituC#()](./finding-the-default-paragraph-style.md), który Pobiera domyślny styl z listy stylów. Te informacje są wymagane, aby zapytanie mogło identyfikować styl akapitów, w których styl nie został jawnie ustawiony. Style akapitu są ustawiane `w:pPr` za pomocą elementu. Jeśli akapit nie zawiera tego elementu, zostanie sformatowany przy użyciu stylu domyślnego.  
+ Ta kwerenda opiera się na kwerendzie w poprzednim [przykładzie, Znajdowanie domyślnego stylu akapitu (C#),](./finding-the-default-paragraph-style.md)który pobiera domyślny styl z listy stylów. Te informacje są wymagane, aby kwerenda mogła zidentyfikować styl akapitów, które nie mają styljawnie ustawiony. Style akapitowe `w:pPr` są ustawiane przez element; Jeśli akapit nie zawiera tego elementu, jest sformatowany przy pomocą domyślnego stylu.  
   
- W tym temacie wyjaśniono znaczenie niektórych fragmentów zapytania, a następnie przedstawiono zapytanie w ramach kompletnego, działającego przykładu.  
+ W tym temacie wyjaśniono znaczenie niektórych fragmentów kwerendy, a następnie pokazuje kwerendę jako część pełnego, działającego przykładu.  
   
 ## <a name="example"></a>Przykład  
- Źródło zapytania do pobrania wszystkich akapitów w dokumencie i ich stylów jest następująca:  
+ Źródło kwerendy w celu pobrania wszystkich akapitów w dokumencie i ich stylów jest następujące:  
   
 ```csharp  
 xDoc.Root.Element(w + "body").Descendants(w + "p")  
 ```  
   
- To wyrażenie jest podobne do źródła zapytania w poprzednim przykładzie, co umożliwia [znalezienie domyślnego stylu akapitu (C#)](./finding-the-default-paragraph-style.md). Główną różnicą jest to, że używa <xref:System.Xml.Linq.XContainer.Descendants%2A> osi zamiast <xref:System.Xml.Linq.XContainer.Elements%2A> osi. Zapytanie używa <xref:System.Xml.Linq.XContainer.Descendants%2A> osi, ponieważ w dokumentach, w których znajdują się sekcje, akapity nie będą bezpośrednimi elementami podrzędnymi elementu body, a akapity będą dwa poziomy w hierarchii. Korzystając <xref:System.Xml.Linq.XContainer.Descendants%2A> z osi, kod będzie działał niezależnie od tego, czy dokument korzysta z sekcji.  
+ To wyrażenie jest podobne do źródła kwerendy w poprzednim [przykładzie, Znajdowanie domyślnego stylu akapitu (C#)](./finding-the-default-paragraph-style.md). Główną różnicą jest to, że używa <xref:System.Xml.Linq.XContainer.Descendants%2A> osi zamiast <xref:System.Xml.Linq.XContainer.Elements%2A> osi. Kwerenda używa <xref:System.Xml.Linq.XContainer.Descendants%2A> osi, ponieważ w dokumentach, które mają sekcje, akapity nie będą bezpośrednimi elementami podrzędnymi elementu body; akapity będą raczej dwa poziomy w dół w hierarchii. Za pomocą <xref:System.Xml.Linq.XContainer.Descendants%2A> osi, kod będzie działać, czy dokument używa sekcji.  
   
 ## <a name="example"></a>Przykład  
- Zapytanie używa `let` klauzuli do określenia elementu, który zawiera węzeł stylu. Jeśli nie ma elementu, `styleNode` zostanie `null`ustawiona wartość:  
+ Kwerenda używa `let` klauzuli, aby określić element, który zawiera węzeł stylu. Jeśli nie ma elementu, `styleNode` jest `null`ustawiony na:  
   
 ```csharp  
 let styleNode = para.Elements(w + "pPr").Elements(w + "pStyle").FirstOrDefault()  
 ```  
   
- `pPr` <xref:System.Xml.Linq.Extensions.Elements%2A> `pStyle` <xref:System.Linq.Enumerable.FirstOrDefault%2A> Klauzula najpierw <xref:System.Xml.Linq.XContainer.Elements%2A> używa osi, aby znaleźć wszystkie elementy o nazwie, następnie używa metody rozszerzenia do znajdowania wszystkich elementów podrzędnych o nazwie, a wreszcie używa zapytania standardowego `let` operator do konwersji kolekcji na pojedynczą. Jeśli kolekcja jest pusta, `styleNode` jest ustawiona na. `null` Jest to przydatny idiom do wyszukiwania `pStyle` węzła podrzędnego. Należy pamiętać, że `pPr` Jeśli węzeł podrzędny nie istnieje, kod jest lub nie powiedzie się, zwracając wyjątek; `styleNode` zamiast tego jest ustawiony `null`na, który jest pożądanym zachowaniem tej `let` klauzuli.  
+ Klauzula `let` najpierw <xref:System.Xml.Linq.XContainer.Elements%2A> używa osi, aby `pPr`znaleźć wszystkie <xref:System.Xml.Linq.Extensions.Elements%2A> elementy o nazwie, `pStyle`a następnie używa <xref:System.Linq.Enumerable.FirstOrDefault%2A> metody rozszerzenia, aby znaleźć wszystkie elementy podrzędne o nazwie , a na końcu używa standardowego operatora kwerendy do konwersji kolekcji na singleton. Jeśli kolekcja jest `styleNode` pusta, `null`jest ustawiona na . Jest to przydatne idiom szukać `pStyle` węzła podrzędnego. Należy zauważyć, `pPr` że jeśli węzeł podrzędny nie istnieje, kod nie działa ani nie powiedzie się, zgłaszając wyjątek; zamiast `styleNode` tego jest `null`ustawiona na , co `let` jest pożądane zachowanie tej klauzuli.  
   
- Zapytanie projektuje kolekcję typu anonimowego z dwoma członkami `StyleName` i. `ParagraphNode`  
+ Kwerenda wyświetla kolekcję typu anonimowego `StyleName` z `ParagraphNode`dwoma członkami i .  
   
 ## <a name="example"></a>Przykład  
- Ten przykład przetwarza dokument WordprocessingML, pobierając węzły akapitu z dokumentu WordprocessingML. Identyfikuje także styl każdego akapitu. Ten przykład kompiluje się zgodnie z poprzednimi przykładami w tym samouczku. Nowe zapytanie jest wywoływane w komentarzach w poniższym kodzie.  
+ W tym przykładzie przetwarza dokument WordprocessingML, pobierając węzły akapitu z dokumentu WordprocessingML. Identyfikuje również styl każdego akapitu. W tym przykładzie opiera się na poprzednich przykładach w tym samouczku. Nowe zapytanie jest wywoływane w komentarzach w poniższym kodzie.  
   
- Instrukcje dotyczące tworzenia dokumentu źródłowego dla tego przykładu można znaleźć w temacie [Tworzenie źródłowego dokumentu Office Open XMLC#()](./creating-the-source-office-open-xml-document.md).  
+ Instrukcje dotyczące tworzenia dokumentu źródłowego dla tego przykładu można znaleźć w [dokumencie Tworzenie dokumentu XML open pakietu Source Office (C#).](./creating-the-source-office-open-xml-document.md)  
   
- Ten przykład używa klas znalezionych w zestawie 'Windowsbase. Używa typów w <xref:System.IO.Packaging?displayProperty=nameWithType> przestrzeni nazw.  
+ W tym przykładzie użyto klas znalezionych w zestawie WindowsBase. Używa typów w <xref:System.IO.Packaging?displayProperty=nameWithType> obszarze nazw.  
   
 ```csharp  
 const string fileName = "SampleDoc.docx";  
@@ -78,7 +78,7 @@ using (Package wdPackage = Package.Open(fileName, FileMode.Open, FileAccess.Read
     }  
 }  
   
-string defaultStyle =   
+string defaultStyle =
     (string)(  
         from style in styleDoc.Root.Elements(w + "style")  
         where (string)style.Attribute(w + "type") == "paragraph"&&  
@@ -109,7 +109,7 @@ foreach (var p in paragraphs)
     Console.WriteLine("StyleName:{0}", p.StyleName);  
 ```  
   
- Ten przykład generuje następujące dane wyjściowe w przypadku zastosowania do dokumentu opisanego w temacie [Tworzenie źródłowego dokumentu Office Open XML (C#)](./creating-the-source-office-open-xml-document.md).  
+ W tym przykładzie po zastosowaniu do dokumentu opisanego w [dokumencie Tworzenie dokumentu XML pakietu Source Office Open (C#).](./creating-the-source-office-open-xml-document.md)  
   
 ```output  
 StyleName:Heading1  
@@ -130,8 +130,8 @@ StyleName:Code
 ```  
   
 ## <a name="next-steps"></a>Następne kroki  
- W następnym temacie, [pobierając tekst akapitówC#()](./retrieving-the-text-of-the-paragraphs.md), utworzysz zapytanie umożliwiające pobranie tekstu akapitów.  
+ W następnym temacie [Pobieranie tekstu akapitów (C#)](./retrieving-the-text-of-the-paragraphs.md)zostanie utworzone kwerenda, aby pobrać tekst akapitów.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Samouczek: Manipulowanie zawartością w dokumencie WordprocessingML (C#)](./shape-of-wordprocessingml-documents.md)
+- [Samouczek: manipulowanie zawartością w dokumencie WordprocessingML (C#)](./shape-of-wordprocessingml-documents.md)

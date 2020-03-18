@@ -1,80 +1,80 @@
 ---
-title: Ładowanie danych szkoleniowych dla konstruktora modelu
-description: Dowiedz się, jak ładować dane szkoleniowe z bazy danych SQL Server lub pliku do użycia w jednym z scenariuszy konstruktora modelu dla ML.NET.
+title: Załaduj dane szkoleniowe dla konstruktora modeli
+description: Dowiedz się, jak załadować dane szkoleniowe z bazy danych programu SQL Server lub pliku do użycia w jednym ze scenariuszy Konstruktora modeli dla ML.NET.
 ms.date: 10/29/2019
 author: luisquintanilla
 ms.author: luquinta
-ms.custom: mvc, how-to
-ms.openlocfilehash: cc93b3f77284ed283a8d7cbd52b8cd02b4fd9066
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.custom: mvc, how-to, mlnet-tooling
+ms.openlocfilehash: 23de2d06090f4c1eaa2c79178ba4c346698d45e1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977051"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "78849162"
 ---
-# <a name="load-training-data-into-model-builder"></a>Ładowanie danych szkoleniowych do konstruktora modelu
+# <a name="load-training-data-into-model-builder"></a>Załaduj dane szkoleniowe do konstruktora modeli
 
-Dowiedz się, jak ładować zbiory danych szkoleniowych z pliku lub SQL Serverj do użycia w jednym z scenariuszy konstruktora modelu dla ML.NET. Scenariusze konstruktora modeli mogą używać SQL Server baz danych, plików obrazów oraz formatów plików CSV lub TSV jako danych szkoleniowych.
+Dowiedz się, jak załadować zestawy danych szkoleniowych z pliku lub bazy danych programu SQL Server do użycia w jednym ze scenariuszy Konstruktora modeli dla ML.NET. Scenariusze Programu Model Builder mogą używać baz danych programu SQL Server, plików obrazów oraz formatów plików CSV lub TSV jako danych szkoleniowych.
 
-## <a name="training-dataset-limitations-in-model-builder"></a>Ograniczenia szkolenia zestawu danych w konstruktorze modelu
+## <a name="training-dataset-limitations-in-model-builder"></a>Ograniczenia zestawu danych szkoleniowych w Konstruktorze modeli
 
-Konstruktor modelu ogranicza ilość i typ danych, których można użyć do modeli szkoleń:
+Konstruktor modeli ogranicza ilość i typ danych, których można używać w modelach szkoleniowych:
 
-- SQL Server dane: 100 000 wierszy
-- Pliki CSV i TSV: bez limitu rozmiaru
+- Dane programu SQL Server: 100 000 wierszy
+- Pliki CSV i TSV: Brak limitu rozmiaru
 - Obrazy: tylko PNG i JPG.
 
-## <a name="model-builder-scenarios"></a>Scenariusze konstruktora modelu
+## <a name="model-builder-scenarios"></a>Scenariusze konstruktora modeli
 
-Konstruktor modeli ułatwia tworzenie modeli dla następujących scenariuszy uczenia maszynowego:
+Program Model Builder ułatwia tworzenie modeli dla następujących scenariuszy uczenia maszynowego:
 
-- Analiza tonacji (klasyfikacja binarna): klasyfikowanie danych tekstowych do dwóch kategorii.
-- Klasyfikacja problemu (Klasyfikacja wieloklasowa): klasyfikowanie danych tekstowych w 3 lub większej liczbie kategorii.
-- Prognoza cen (regresja): przewidywanie wartości liczbowej.
-- Klasyfikacja obrazu (głębokie uczenie): klasyfikowanie obrazów na podstawie właściwości.
-- Scenariusz niestandardowy: Tworzenie niestandardowych scenariuszy na podstawie danych przy użyciu regresji, klasyfikacji i innych zadań.
+- Analiza tonacji (klasyfikacja binarna): Klasyfikowanie danych tekstowych do dwóch kategorii.
+- Klasyfikacja problemów (klasyfikacja wieloklasowa): Zaklasyfikowanie danych tekstowych do 3 lub więcej kategorii.
+- Przewidywanie cen (regresja): Przewidywanie wartości liczbowej.
+- Klasyfikacja obrazów (uczenie głębokie): Kategoryzuj obrazy na podstawie cech.
+- Scenariusz niestandardowy: Tworzenie scenariuszy niestandardowych na podstawie danych przy użyciu regresji, klasyfikacji i innych zadań.
 
-W tym artykule omówiono scenariusze klasyfikacji i regresji z danymi tekstowymi lub liczbowymi oraz scenariusze klasyfikacji obrazów.
+W tym artykule omówiono scenariusze klasyfikacji i regresji z danymi tekstowymi lub liczbowymi oraz scenariuszami klasyfikacji obrazów.
 
-## <a name="load-text-or-numeric-data-from-a-file"></a>Załaduj dane tekstowe lub liczbowe z pliku
+## <a name="load-text-or-numeric-data-from-a-file"></a>Ładowanie tekstu lub danych liczbowych z pliku
 
-Możesz załadować dane tekstowe lub liczbowe z pliku do konstruktora modelu. Akceptowane są formaty plików rozdzielane przecinkami (CSV) lub rozdzielane znakami tabulacji (TSV).
+Do Konstruktora modeli można załadować dane tekstowe lub liczbowe z pliku. Akceptuje formaty plików rozdzielanych przecinkami (CSV) lub rozdzielanych kartami (TSV).
 
-1. W kroku dane konstruktora modelu wybierz pozycję **plik** z listy rozwijanej Źródło danych.
-2. Wybierz przycisk obok pola tekstowego **Wybierz plik** , a następnie użyj Eksploratora plików, aby przeglądać i wybrać plik danych.
-3. Wybierz kategorię w **kolumnie do przewidywania (etykieta)** listy rozwijanej.
-4. Z listy rozwijanej **kolumny wejściowe (funkcje)** upewnij się, że są zaznaczone kolumny danych, które chcesz dołączyć.
+1. W kroku danych Konstruktora modeli wybierz **pozycję Plik** z listy rozwijanej źródła danych.
+2. Zaznacz przycisk obok pola **tekstowego Wybierz plik** i użyj Eksploratora plików, aby przeglądać i wybierać plik danych.
+3. Wybierz kategorię z listy rozwijanej **Kolumna do przewidzenia (etykieta).**
+4. Z listy **rozwijanej Kolumny wejściowe (Funkcje)** upewnij się, że kolumny danych, które chcesz uwzględnić, są zaznaczone.
 
-Wszystko gotowe do skonfigurowania pliku źródła danych dla konstruktora modelu. Wybierz łącze **uczenie** , aby przejść do następnego kroku w programie model Builder.
+Gotowe skonfigurowanie pliku źródła danych dla Konstruktora modeli. Wybierz **łącze Pociąg,** aby przejść do następnego kroku w konstruktorze modeli.
 
-## <a name="load-data-from-a-sql-server-database"></a>Ładowanie danych z bazy danych SQL Server
+## <a name="load-data-from-a-sql-server-database"></a>Ładowanie danych z bazy danych programu SQL Server
 
-Konstruktor modelu obsługuje ładowanie danych z lokalnych i zdalnych baz danych SQL Server.
+Program Model Builder obsługuje ładowanie danych z lokalnych i zdalnych baz danych programu SQL Server.
 
-Aby załadować dane z bazy danych SQL Server do konstruktora modułów:
+Aby załadować dane z bazy danych programu SQL Server do konstruktora modułów:
 
-1. W kroku dane konstruktora modelu wybierz z listy rozwijanej Źródło danych pozycję **SQL Server** .
-1. Zaznacz przycisk obok pola tekstowego **Połącz z bazą danych SQL Server** .
-    1. W oknie dialogowym **Wybierz dane** wybierz pozycję **plik bazy danych Microsoft SQL Server**.
-    1. Usuń zaznaczenie pola wyboru **zawsze używaj tego zaznaczenia** i wybierz pozycję **Kontynuuj** .
-    1. W oknie dialogowym **Właściwości połączenia** wybierz pozycję **Przeglądaj** i wybierz pobrane. Plik MDF.
-    1. Wybierz **przycisk OK**
-1. Wybierz nazwę zestawu danych z listy rozwijanej **Nazwa tabeli** .
-1. Z listy rozwijanej **kolumna do prognozowania (etykieta)** wybierz kategorię danych, dla której chcesz dokonać przewidywania.
-1. Z listy rozwijanej **kolumny wejściowe (funkcje)** upewnij się, że kolumny, które chcesz dołączyć, są zaznaczone.
+1. W kroku tworzenia danych konstruktora modeli wybierz pozycję **SQL Server** z listy rozwijanej źródła danych.
+1. Zaznacz przycisk obok pola tekstowego Połącz z **bazą danych programu SQL Server.**
+    1. W oknie dialogowym **Wybieranie danych** wybierz pozycję **Plik bazy danych programu Microsoft SQL Server**.
+    1. Wyczyść zaznaczenie pola wyboru **Zawsze używaj tego zaznaczenia** i wybierz **pozycję Kontynuuj**
+    1. W oknie dialogowym **Właściwości połączenia** wybierz pozycję **Przeglądaj** i wybierz pobraną opcję . MDF.
+    1. Wybierz **OK**
+1. Wybierz nazwę zestawu danych z **listy rozwijanej Nazwa tabeli.**
+1. Z listy rozwijanej **Kolumna do przewidywania (etykieta)** wybierz kategorię danych, w której chcesz dokonać przewidywania.
+1. Z listy **rozwijanej Kolumny wejściowe (Funkcje)** upewnij się, że kolumny, które chcesz uwzględnić, są zaznaczone.
 
-Wszystko gotowe do skonfigurowania pliku źródła danych dla konstruktora modelu. Wybierz łącze **uczenie** , aby przejść do następnego kroku w programie model Builder.
+Gotowe skonfigurowanie pliku źródła danych dla Konstruktora modeli. Wybierz **łącze Pociąg,** aby przejść do następnego kroku w konstruktorze modeli.
 
 ## <a name="set-up-image-data-files"></a>Konfigurowanie plików danych obrazu
 
-Konstruktor modelu oczekuje, że dane obrazu mają być pliki JPG lub PNG zorganizowane w folderach, które odpowiadają kategoriom klasyfikacji.
+Model Builder oczekuje, że dane obrazu będą plikami JPG lub PNG zorganizowanymi w foldery odpowiadające kategoriom klasyfikacji.
 
-Aby załadować obrazy do konstruktora modelu, podaj ścieżkę do jednego katalogu najwyższego poziomu:
+Aby załadować obrazy do Konstruktora modeli, należy podać ścieżkę do jednego katalogu najwyższego poziomu:
 
-- Ten katalog najwyższego poziomu zawiera jeden podfolder dla każdej z kategorii do przewidywania.
-- Każdy podfolder zawiera pliki obrazów należące do tej kategorii.
+- Ten katalog najwyższego poziomu zawiera jeden podfolder dla każdej z kategorii do przewidzenia.
+- Każdy podfolder zawiera pliki obrazów należące do jego kategorii.
 
-W strukturze folderów zilustrowanej poniżej katalog najwyższego poziomu jest *flower_photos*. Istnieje pięć podkatalogów odpowiadających kategoriom, które mają zostać przewidywalne: łańcuchy, Dandelion, róże, przepływy i Tulips. Każdy z tych podkatalogów zawiera obrazy należące do odpowiedniej kategorii.
+W strukturze folderów przedstawionej poniżej katalog najwyższego poziomu jest *flower_photos*. Istnieje pięć podkatalogów odpowiadających kategoriom, które chcesz przewidzieć: stokrotki, mniszka lekarskiego, róż, słoneczników i tulipanów. Każdy z tych podkatalogów zawiera obrazy należące do odpowiedniej kategorii.
 
 ```text
 \---flower_photos
@@ -106,9 +106,9 @@ W strukturze folderów zilustrowanej poniżej katalog najwyższego poziomu jest 
 
 ## <a name="next-steps"></a>Następne kroki
 
-Postępuj zgodnie z tymi samouczkami, aby tworzyć aplikacje uczenia maszynowego za pomocą konstruktora modeli:
+Wykonaj następujące samouczki, aby tworzyć aplikacje do uczenia maszynowego za pomocą programu Model Builder:
 
-- [Przewidywanie cen przy użyciu regresji](../tutorials/predict-prices-with-model-builder.md)
-- [Analizowanie tonacji w aplikacji sieci Web przy użyciu klasyfikacji binarnej](../tutorials/sentiment-analysis-model-builder.md )
+- [Przewidywanie cen za pomocą regresji](../tutorials/predict-prices-with-model-builder.md)
+- [Analizowanie opinii w aplikacji sieci web przy użyciu klasyfikacji binarnej](../tutorials/sentiment-analysis-model-builder.md )
 
-Jeśli przekazujesz model przy użyciu kodu, [Dowiedz się, jak ładować dane przy użyciu interfejsu API ml.NET](load-data-ml-net.md).
+Jeśli szkolisz model przy użyciu kodu, [dowiedz się, jak załadować dane przy użyciu ML.NET interfejsu API](load-data-ml-net.md).

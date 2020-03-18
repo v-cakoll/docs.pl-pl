@@ -16,22 +16,22 @@ helpviewer_keywords:
 - culture parameter
 ms.assetid: 5cdc9396-a64b-4615-a1cd-b605db4c5983
 ms.openlocfilehash: 13a9f4896a37be4297f2a1a11435b85ade381c66
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74353675"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-collections"></a>Wykonywanie niezależnych od kultury operacji na ciągach w kolekcjach
 
-W przestrzeni nazw <xref:System.Collections> znajdują się klasy i elementy członkowskie, które domyślnie udostępniają zachowania zależne od kultury. Konstruktory bez parametrów dla klas <xref:System.Collections.CaseInsensitiveComparer> i <xref:System.Collections.CaseInsensitiveHashCodeProvider> inicjują nowe wystąpienie przy użyciu właściwości <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>. Wszystkie przeciążenia metody <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType> tworzą nowe wystąpienie klasy <xref:System.Collections.Hashtable> domyślnie przy użyciu właściwości `Thread.CurrentCulture`. Przeciążenia metody <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType> są wykonywane domyślnie przez `Thread.CurrentCulture`. `Thread.CurrentCulture`, gdy ciągi są używane jako klucze, można mieć wpływ na sortowanie i wyszukiwanie w <xref:System.Collections.SortedList>. Postępuj zgodnie z zaleceniami dotyczącymi użycia opisanymi w tej sekcji, aby uzyskać wyniki niewrażliwe na kulturę z tych klas i metod w przestrzeni nazw `Collections`.
+Istnieją klasy i elementy <xref:System.Collections> członkowskie w obszarze nazw, które domyślnie zapewniają zachowanie zależne od kultury. Konstruktory bezparametrów <xref:System.Collections.CaseInsensitiveComparer> dla <xref:System.Collections.CaseInsensitiveHashCodeProvider> i klas zainicjować nowe <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> wystąpienie przy użyciu właściwości. Wszystkie przeciążenia <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType> metody utworzyć nowe <xref:System.Collections.Hashtable> wystąpienie klasy `Thread.CurrentCulture` przy użyciu właściwości domyślnie. Przeciążenia <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType> metody wykonywania sortowania zależne `Thread.CurrentCulture`od kultury domyślnie przy użyciu . Sortowanie i odciąganie <xref:System.Collections.SortedList> w `Thread.CurrentCulture` a może mieć wpływ, gdy ciągi są używane jako klucze. Postępuj zgodnie z zaleceniami użycia podanymi w tej sekcji, aby `Collections` uzyskać wyniki niewrażliwe na kulturę z tych klas i metod w obszarze nazw.
 
 > [!NOTE]
-> Przekazywanie <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> do metody porównania wykonuje porównanie nieuwzględniające kulturę. Nie powoduje to jednak porównania w języku innym niż język, na przykład w przypadku ścieżek plików, kluczy rejestru i zmiennych środowiskowych. Żadna z tych funkcji nie wspiera podejmowania decyzji dotyczących zabezpieczeń w oparciu o wynik porównania. W przypadku niezgodności z językiem lub pomocy technicznej dla decyzji o zabezpieczeniach opartych na wynikach aplikacja powinna używać metody porównania, która akceptuje wartość <xref:System.StringComparison>. Aplikacja powinna następnie przekazać <xref:System.StringComparison>.
+> Przekazywanie <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> do metody porównania wykonuje porównanie niewrażliwe na kulturę. Jednak nie powoduje porównania nielingwistycznego, na przykład dla ścieżek plików, kluczy rejestru i zmiennych środowiskowych. Nie obsługuje również decyzji dotyczących zabezpieczeń na podstawie wyniku porównania. W przypadku porównania nielingwistycznego lub obsługi decyzji dotyczących zabezpieczeń opartych na <xref:System.StringComparison> wynikach aplikacja powinna używać metody porównywania, która akceptuje wartość. Aplikacja powinna następnie <xref:System.StringComparison>przejść .
 
 ## <a name="using-the-caseinsensitivecomparer-and-caseinsensitivehashcodeprovider-classes"></a>Korzystanie z klas CaseInsensitiveComparer i CaseInsensitiveHashCodeProvider
 
-Konstruktory bez parametrów dla `CaseInsensitiveHashCodeProvider` i `CaseInsensitiveComparer` inicjują nowe wystąpienie klasy przy użyciu `Thread.CurrentCulture`, co wpływa na zachowanie kulturowe. Poniższy przykład kodu demonstruje konstruktora dla `Hashtable`, który jest wrażliwy na kulturę, ponieważ używa konstruktorów bez parametrów dla `CaseInsensitiveHashCodeProvider` i `CaseInsensitiveComparer`.
+Konstruktory bez `CaseInsensitiveHashCodeProvider` parametrów `CaseInsensitiveComparer` dla i zainicjować nowe wystąpienie `Thread.CurrentCulture`klasy przy użyciu , w wyniku zachowania zależne od kultury. Poniższy przykład kodu przedstawia konstruktora `Hashtable` dla, który jest zależny od kultury, `CaseInsensitiveHashCodeProvider` `CaseInsensitiveComparer`ponieważ używa konstruktorów bezparametrów dla i .
 
 ```vb
 internalHashtable = New Hashtable(CaseInsensitiveHashCodeProvider.Default, CaseInsensitiveComparer.Default)
@@ -41,7 +41,7 @@ internalHashtable = New Hashtable(CaseInsensitiveHashCodeProvider.Default, CaseI
 internalHashtable = new Hashtable(CaseInsensitiveHashCodeProvider.Default, CaseInsensitiveComparer.Default);
 ```
 
-Jeśli chcesz utworzyć `Hashtable` bez uwzględniania kultur przy użyciu klas `CaseInsensitiveComparer` i `CaseInsensitiveHashCodeProvider`, zainicjuj nowe wystąpienia tych klas przy użyciu konstruktorów, które akceptują parametr `culture`. Dla parametru `culture` Określ <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>. Poniższy przykład kodu demonstruje konstruktora dla `Hashtable`niewrażliwych na kulturę.
+Jeśli chcesz utworzyć kultury niewrażliwe `Hashtable` przy `CaseInsensitiveComparer` `CaseInsensitiveHashCodeProvider` użyciu i klas, zainicjować nowe wystąpienia tych klas przy `culture` użyciu konstruktorów, które akceptują parametr. Dla `culture` parametru <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>określ . Poniższy przykład kodu przedstawia konstruktora dla `Hashtable`kultury niewrażliwe .
 
 ```vb
 internalHashtable = New Hashtable(New
@@ -55,9 +55,9 @@ internalHashtable = new Hashtable(new CaseInsensitiveHashCodeProvider
     new CaseInsensitiveComparer(CultureInfo.InvariantCulture));
 ```
 
-## <a name="using-the-collectionsutilcreatecaseinsensitivehashtable-method"></a>Korzystanie z metody CollectionsUtil. CreateCaseInsensitiveHashTable
+## <a name="using-the-collectionsutilcreatecaseinsensitivehashtable-method"></a>Korzystanie z metody CollectionsUtil.CreateCaseInsensitiveHashTable
 
-Metoda `CollectionsUtil.CreateCaseInsensitiveHashTable` jest użytecznym skrótem do tworzenia nowego wystąpienia klasy `Hashtable`, która ignoruje wielkość liter w ciągach. Jednak wszystkie przeciążenia metody `CollectionsUtil.CreateCaseInsensitiveHashTable` są zależne od kultury, ponieważ używają właściwości `Thread.CurrentCulture`. Nie można utworzyć `Hashtable` bez uwzględniania kultur przy użyciu tej metody. Aby utworzyć `Hashtable`bez uwzględniania kultur, należy użyć konstruktora `Hashtable`, który akceptuje parametr `culture`. Dla parametru `culture` Określ `CultureInfo.InvariantCulture`. Poniższy przykład kodu demonstruje konstruktora dla `Hashtable`niewrażliwych na kulturę.
+Metoda `CollectionsUtil.CreateCaseInsensitiveHashTable` jest przydatnym skrótem do `Hashtable` tworzenia nowego wystąpienia klasy, która ignoruje przypadek ciągów. Jednak wszystkie przeciążenia `CollectionsUtil.CreateCaseInsensitiveHashTable` metody są zależne od `Thread.CurrentCulture` kultury, ponieważ używają właściwości. Nie można utworzyć kultury `Hashtable` niewrażliwe przy użyciu tej metody. Aby utworzyć niewrażliwe `Hashtable`na kulturę, należy użyć `Hashtable` konstruktora, który akceptuje `culture` parametr. Dla `culture` parametru `CultureInfo.InvariantCulture`określ . Poniższy przykład kodu przedstawia konstruktora dla `Hashtable`kultury niewrażliwe .
 
 ```vb
 internalHashtable = New Hashtable(New
@@ -75,7 +75,7 @@ internalHashtable = new Hashtable(new CaseInsensitiveHashCodeProvider
 
 ## <a name="using-the-sortedlist-class"></a>Korzystanie z klasy SortedList
 
-`SortedList` reprezentuje kolekcję par klucz-wartość, które są sortowane według kluczy i są dostępne dla klucza i według indeksu. W przypadku używania `SortedList`, w którym ciągi są kluczami, właściwość `Thread.CurrentCulture` może mieć wpływ na sortowanie i wyszukiwanie. Aby uzyskać zachowanie niewrażliwe na kulturę z `SortedList`, Utwórz `SortedList` przy użyciu jednego z konstruktorów, które akceptują parametr `comparer`. `comparer` parametr określa implementację <xref:System.Collections.IComparer> do użycia podczas porównywania kluczy. Dla parametru Określ niestandardową klasę porównującą, która używa `CultureInfo.InvariantCulture` do porównywania kluczy. Poniższy przykład ilustruje niestandardową klasę niezależną od kultury, którą można określić jako parametr `comparer` konstruktora `SortedList`.
+A `SortedList` reprezentuje kolekcję par klucz i wartość, które są sortowane według kluczy i są dostępne przez klucz i przez indeks. Korzystając z `SortedList` klawiszy where strings są klucze, sortowanie i `Thread.CurrentCulture` odciąganie może mieć wpływ właściwości. Aby uzyskać zachowanie niewrażliwe `SortedList`na kulturę z , należy utworzyć `SortedList` przy `comparer` użyciu jednego z konstruktorów, który akceptuje parametr. Parametr `comparer` określa <xref:System.Collections.IComparer> implementację do użycia podczas porównywania kluczy. Dla parametru określ klasę niestandardowego `CultureInfo.InvariantCulture` porównania, która używa do porównywania kluczy. W poniższym przykładzie przedstawiono klasę niewrażliwe kultury niewrażliwe klasy `comparer` porównania, `SortedList` który można określić jako parametr do konstruktora.
 
 ```vb
 Imports System.Collections
@@ -131,13 +131,13 @@ internal class InvariantComparer : IComparer
 }
 ```
 
-Ogólnie rzecz biorąc, jeśli używasz `SortedList` na ciągach bez określenia niestandardowej niezmiennej niezmiennej, zmiana na `Thread.CurrentCulture` po wypełnieniu listy może unieważnić listę.
+Ogólnie rzecz biorąc, `SortedList` jeśli używasz na ciągi bez określania niestandardowego `Thread.CurrentCulture` niezmiennego porównania, zmiana po wypełnieniu listy może unieważnić listę.
 
-## <a name="using-the-arraylistsort-method"></a>Korzystanie z metody ArrayList. Sort
+## <a name="using-the-arraylistsort-method"></a>Korzystanie z metody ArrayList.Sort
 
-Przeciążenia metody `ArrayList.Sort` wykonują domyślnie sortowanie zależne od kultury przy użyciu właściwości `Thread.CurrentCulture`. Wyniki mogą się różnić w zależności od różnych kolejności sortowania. Aby wyeliminować zachowanie wrażliwe na kulturę, Użyj przeciążenia tej metody, która akceptuje implementację `IComparer`. Dla parametru `comparer` Określ niestandardową klasę niezmiennej porównującej, która używa `CultureInfo.InvariantCulture`. Przykład niestandardowej klasy niezmiennej porównującej znajduje się w temacie [using klasy SortedList](#cpconperformingculture-insensitivestringoperationsincollectionsanchor1) .
+Przeciążenia `ArrayList.Sort` metody wykonywania sortowania zależne `Thread.CurrentCulture` od kultury domyślnie przy użyciu właściwości. Wyniki mogą się różnić w zależności od kultury ze względu na różne kolejność sortowania. Aby wyeliminować zachowanie zależne od kultury, należy użyć `IComparer` przeciążenia tej metody, które akceptują implementacji. Dla `comparer` parametru określ niestandardową klasę `CultureInfo.InvariantCulture`niezmiennego porównywarki, która używa . Przykład niezmiennej klasy porównania znajduje się w temacie [Korzystanie z klasy sortedlist.](#cpconperformingculture-insensitivestringoperationsincollectionsanchor1)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Collections.CaseInsensitiveComparer>
 - <xref:System.Collections.CaseInsensitiveHashCodeProvider>

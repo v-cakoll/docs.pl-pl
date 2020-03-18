@@ -9,22 +9,22 @@ helpviewer_keywords:
 - parallel loops, how to handle exceptions
 ms.assetid: 512f0d5a-4636-4875-b766-88f20044f143
 ms.openlocfilehash: 5d108937e6ab2483cd1633d4b398c1e250f5c098
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77453016"
 ---
 # <a name="how-to-handle-exceptions-in-parallel-loops"></a>Porady: obsługa wyjątków w pętlach równoległych
-Przeciążenia <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> nie mają żadnego specjalnego mechanizmu do obsługi wyjątków, które mogą być zgłaszane. W tym względzie są one podobne do zwykłych `for` i `foreach` pętli (`For` i `For Each` w Visual Basic); nieobsługiwany wyjątek powoduje, że pętla zostanie zakończona zaraz po zakończeniu wszystkich aktualnie uruchomionych iteracji.
+I <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> przeciążenia nie mają żadnego specjalnego mechanizmu do obsługi wyjątków, które mogą być generowane. W związku z tym `for` przypominają `foreach` one`For` regularne `For Each` i pętle ( i w visual basic); nieobsługiwany wyjątek powoduje, że pętla kończy się natychmiast po zakończeniu wszystkich aktualnie uruchomionych iteracji.
   
- W przypadku dodawania własnej logiki obsługi wyjątków do pętli równoległych należy obsłużyć przypadek, w którym mogą zostać zgłoszone podobne wyjątki w wielu wątkach jednocześnie, a w przypadku, gdy wyjątek zgłoszony w jednym wątku powoduje zgłoszenie innego wyjątku w innym nici. Oba przypadki można obsługiwać, zawijając wszystkie wyjątki z pętli w <xref:System.AggregateException?displayProperty=nameWithType>. W poniższym przykładzie pokazano jedno z możliwych podejścia.  
+ Po dodaniu własnej logiki obsługi wyjątków do pętli równoległych, należy obsługiwać przypadek, w którym podobne wyjątki mogą być generowane na wiele wątków jednocześnie, a przypadek, w którym wyjątek w jednym wątku powoduje, że inny wyjątek ma zostać wygenerowany w innym Wątku. Obie sprawy można obsługiwać, zawijając <xref:System.AggregateException?displayProperty=nameWithType>wszystkie wyjątki z pętli w pliku . W poniższym przykładzie przedstawiono jedno możliwe podejście.  
   
 > [!NOTE]
-> Po włączeniu "Tylko mój kod" program Visual Studio będzie przerywał pracę w wierszu, który zgłosi wyjątek i wyświetli komunikat o błędzie "wyjątek nie jest obsługiwany przez kod użytkownika". Ten błąd jest niegroźny. Możesz nacisnąć klawisz F5, aby kontynuować z niego i zobaczyć zachowanie obsługi wyjątków, które zostało przedstawione w poniższym przykładzie. Aby zapobiec utracie przez program Visual Studio pierwszego błędu, po prostu usuń zaznaczenie pola wyboru "Tylko mój kod" w obszarze **Narzędzia, opcje, debugowanie, ogólne**.  
+> Gdy opcja "Tylko mój kod" jest włączona, visual studio w niektórych przypadkach zostanie przerwana w wierszu, który zgłasza wyjątek i wyświetli komunikat o błędzie z komunikatem "wyjątek nie jest obsługiwany przez kod użytkownika". Ten błąd jest niegroźny. Można nacisnąć klawisz F5, aby kontynuować z niego i zobacz zachowanie obsługi wyjątków, który został pokazany w poniższym przykładzie. Aby zapobiec przerywaniu pierwszego błędu przez program Visual Studio, wystarczy odznaczyć pole wyboru "Tylko mój kod" w obszarze **Narzędzia, Opcje, Debugowanie, Ogólne**.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie wszystkie wyjątki są przechwytywane, a następnie pakowane w <xref:System.AggregateException?displayProperty=nameWithType>, które jest zgłaszane. Obiekt wywołujący może zdecydować, które wyjątki mają być obsługiwane.  
+ W tym przykładzie wszystkie wyjątki są przechwycone, a następnie zawinięte w który <xref:System.AggregateException?displayProperty=nameWithType> jest generowany. Obiekt wywołujący może zdecydować, które wyjątki do obsługi.  
   
  [!code-csharp[TPL_Exceptions#08](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/exceptions.cs#08)]
  [!code-vb[TPL_Exceptions#08](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/exceptionsinloops.vb#08)]  

@@ -1,69 +1,69 @@
 ---
-title: Korzystanie z funkcji dopasowania wzorców w celu poszerzenia typów danych
-description: W tym zaawansowanym samouczku pokazano, jak używać technik dopasowywania wzorców do tworzenia funkcji przy użyciu danych i algorytmów, które są tworzone osobno.
+title: Rozszerzanie typów danych za pomocą funkcji dopasowywania wzorców
+description: Ten zaawansowany samouczek pokazuje, jak używać technik dopasowywania wzorców do tworzenia funkcji przy użyciu danych i algorytmów, które są tworzone oddzielnie.
 ms.date: 03/13/2019
 ms-technology: csharp-whats-new
 ms.custom: mvc
-ms.openlocfilehash: fd08e707402bfcd552997111a9c3fa58841a5466
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: df1054d8e0ec2b2539e6a1d00bf353d8ca927397
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78240057"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156535"
 ---
-# <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Samouczek: Używanie funkcji dopasowania wzorców do zwiększania typów danych
+# <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Samouczek: Korzystanie z funkcji dopasowywania wzorców w celu rozszerzenia typów danych
 
-C#7 wprowadzono podstawowe funkcje dopasowania do wzorca. Te funkcje są rozszerzane C# w 8 przy użyciu nowych wyrażeń i wzorców. Można napisać funkcję, która zachowuje się tak, jakby rozszerzone typy, które mogą znajdować się w innych bibliotekach. Innym zastosowaniem wzorców jest tworzenie funkcji wymaganych przez aplikację, która nie jest podstawową funkcją rozszerzania typu.
+C# 7 wprowadzono podstawowe funkcje dopasowywania wzorców. Te funkcje są rozszerzone w języku C# 8 z nowych wyrażeń i wzorców. Można napisać funkcje, które zachowują się tak, jakby rozszerzone typy, które mogą znajdować się w innych bibliotekach. Innym zastosowaniem wzorców jest tworzenie funkcji, które aplikacja wymaga, która nie jest podstawową funkcją typu jest rozszerzony.
 
 Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
 
 > [!div class="checklist"]
 >
-> - Rozpoznaj sytuacje, w których należy użyć dopasowania do wzorca.
-> - Używaj wyrażeń dopasowania wzorców, aby zaimplementować zachowanie na podstawie typów i wartości właściwości.
-> - Połącz dopasowania wzorców z innymi technikami, aby utworzyć kompletne algorytmy.
+> - Rozpoznaj sytuacje, w których należy używać dopasowywania wzorców.
+> - Użyj wyrażenia dopasowywania wzorców, aby zaimplementować zachowanie na podstawie typów i wartości właściwości.
+> - Połącz dopasowywanie wzorców z innymi technikami, aby utworzyć kompletne algorytmy.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Musisz skonfigurować maszynę do uruchamiania programu .NET Core, w tym kompilatora C# 8,0. C# 8 kompilator jest dostępny w programie [Visual Studio 2019 w wersji 16,3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) lub [.NET Core 3,0 SDK](https://dotnet.microsoft.com/download).
+Musisz skonfigurować komputer do uruchamiania .NET Core, w tym kompilator C# 8.0. Kompilator C# 8 jest dostępny począwszy od [programu Visual Studio 2019 w wersji 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) lub [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download).
 
-W C# tym samouczku założono, że wiesz już, jak i .NET, w tym Visual Studio lub interfejs wiersza polecenia platformy .NET Core.
+W tym samouczku przyjęto założenie, że znasz c# i .NET, w tym visual studio lub .NET Core CLI.
 
-## <a name="scenarios-for-pattern-matching"></a>Scenariusze dotyczące dopasowywania wzorców
+## <a name="scenarios-for-pattern-matching"></a>Scenariusze dopasowywania wzorców
 
-Nowoczesne programowanie często obejmuje Integrowanie danych z wielu źródeł i prezentowanie informacji oraz uzyskiwanie wglądu w dane przy użyciu jednej spójnej aplikacji. Ty i Twój zespół nie będzie mieć kontroli ani dostępu dla wszystkich typów, które reprezentują dane przychodzące.
+Nowoczesny rozwój często obejmuje integrację danych z wielu źródeł oraz prezentowanie informacji i spostrzeżeń z tych danych w jednej, spoistej aplikacji. Ty i Twój zespół nie będziecie mieli kontroli ani dostępu dla wszystkich typów reprezentujących przychodzące dane.
 
-Klasyczny projekt zorientowany obiektowo wywoła do tworzenia typów w aplikacji, które reprezentują każdy typ danych z tych wielu źródeł danych. Następnie aplikacja będzie współpracować z tymi nowymi typami, konstruktorami dziedziczenia, tworzyć metody wirtualne i implementować abstrakcje. Te techniki działają i czasami są najlepszymi narzędziami. Innym razem można napisać mniej kodu. Można napisać bardziej czysty kod przy użyciu technik, które dzielą dane z operacji, które manipulują tymi danymi.
+Klasyczny projekt obiektowy będzie wywoływać tworzenie typów w aplikacji, które reprezentują każdy typ danych z tych wielu źródeł danych. Następnie aplikacja będzie działać z tych nowych typów, budować hierarchie dziedziczenia, tworzenie metod wirtualnych i implementować abstrakcje. Te techniki działają, a czasami są najlepszymi narzędziami. Innym razem można napisać mniej kodu. Można napisać bardziej przejrzysty kod przy użyciu technik, które oddzielają dane od operacji, które manipulują tymi danymi.
 
-W tym samouczku utworzysz i zbadasz aplikację, która pobiera dane przychodzące z kilku źródeł zewnętrznych w jednym scenariuszu. Zobaczysz, jak **dopasowanie wzorca** zapewnia wydajny sposób użycia i przetwarzania tych danych w sposób, który nie jest częścią oryginalnego systemu.
+W tym samouczku utworzysz i eksplorujesz aplikację, która pobiera dane przychodzące z kilku źródeł zewnętrznych dla jednego scenariusza. Zobaczysz, jak **dopasowanie wzorca** zapewnia skuteczny sposób używania i przetwarzania tych danych w sposób, który nie był częścią oryginalnego systemu.
 
-Rozważmy główny obszar metropolitalnych, który korzysta z opłat i cen w czasie szczytu do zarządzania ruchem. Napiszesz aplikację, która oblicza opłaty dla pojazdu na podstawie jego typu. Późniejsze ulepszenia obejmują ceny na podstawie liczby osób w danym jeździe. Dalsze ulepszenia zwiększają ceny na podstawie czasu i dnia tygodnia.
+Rozważmy główny obszar metropolitalny, który korzysta z opłat drogowych i cen w godzinach szczytu do zarządzania ruchem. Piszesz aplikację, która oblicza opłaty za pojazd na podstawie jego typu. Późniejsze ulepszenia obejmują ceny oparte na liczbie osób znajdujących się w pojeździe. Dalsze ulepszenia dodają ceny na podstawie czasu i dnia tygodnia.
 
-Z tego krótkiego opisu można szybko szkicować hierarchię obiektów, aby modelować ten system. Jednak dane pochodzą z wielu źródeł, takich jak inne systemy zarządzania rejestracją pojazdów. Te systemy zapewniają różne klasy do modelowania danych i nie masz modelu pojedynczego obiektu, którego można użyć. W tym samouczku zostaną użyte te uproszczone klasy do modelowania danych pojazdu z tych systemów zewnętrznych, jak pokazano w poniższym kodzie:
+Z tego krótkiego opisu być może szybko naszkicowaliście hierarchię obiektów, aby modelować ten system. Jednak twoje dane pochodzą z wielu źródeł, takich jak inne systemy zarządzania rejestracją pojazdów. Systemy te zapewniają różne klasy do modelu tych danych i nie masz jednego modelu obiektu, którego można użyć. W tym samouczku użyjesz tych uproszczonych klas do modelowania danych pojazdu z tych systemów zewnętrznych, jak pokazano w poniższym kodzie:
 
 [!code-csharp[ExternalSystems](~/samples/snippets/csharp/tutorials/patterns/start/toll-calculator/ExternalSystems.cs)]
 
-Możesz pobrać kod początkowy z repozytorium usługi GitHub [/przykłady](https://github.com/dotnet/samples/tree/master/csharp/tutorials/patterns/start) . Można zobaczyć, że klasy pojazdu pochodzą z różnych systemów i znajdują się w różnych przestrzeniach nazw. Nie można wykorzystać żadnej wspólnej klasy bazowej, innej niż `System.Object`.
+Kod startowy można pobrać z repozytorium GitHub/sample.You can download the starter code from the [dotnet/samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/patterns/start) GitHub repository. Widać, że klasy pojazdów są z różnych systemów i znajdują się w różnych przestrzeniach nazw. Nie wspólnej klasy podstawowej, inne niż `System.Object` mogą być lewarowane.
 
-## <a name="pattern-matching-designs"></a>Projekty dopasowania wzorców
+## <a name="pattern-matching-designs"></a>Wzory pasujące do wzorców
 
-W scenariuszu używanym w tym samouczku przedstawiono rodzaje problemów, których dopasowanie do wzorców jest odpowiednie do rozwiązania:
+Scenariusz użyty w tym samouczku podkreśla rodzaje problemów, które dopasowywanie wzorców jest dobrze nadaje się do rozwiązania:
 
-- Obiekty potrzebne do pracy nie należą do hierarchii obiektów pasujących do Twoich celów. Być może pracujesz z klasami, które są częścią niepowiązanych systemów.
-- Dodawane funkcje nie są częścią abstrakcji rdzeni dla tych klas. Opłaty za przejazd przez pojazd *zmieniają* się w zależności od typu pojazdów, ale opłata nie jest podstawową funkcją pojazdu.
+- Obiekty, z którymi musisz pracować, nie znajdują się w hierarchii obiektów, która pasuje do twoich celów. Być może pracujesz z klasami, które są częścią niepowiązanych systemów.
+- Funkcje, które dodajesz nie jest częścią podstawowej abstrakcji dla tych klas. Opłata za przejazd pobierana przez pojazd *zmienia się* w przypadku różnych typów pojazdów, ale opłata za przejazd nie jest podstawową funkcją pojazdu.
 
-Gdy *kształt* danych i *operacje* na tych danych nie są opisane razem, funkcje dopasowania wzorców w programie C# ułatwiają pracę z.
+Gdy *kształt* danych i *operacje* na tych danych nie są opisane razem, funkcje dopasowywania wzorców w języku C# ułatwiają pracę z.
 
-## <a name="implement-the-basic-toll-calculations"></a>Implementowanie podstawowych obliczeń opłat
+## <a name="implement-the-basic-toll-calculations"></a>Wdrożenie podstawowych obliczeń opłat drogowych
 
-Najbardziej podstawowe obliczenia płatne bazują wyłącznie na typie pojazdu:
+Najbardziej podstawowe obliczenie opłaty drogowej zależy tylko od typu pojazdu:
 
-- `Car` to $2,00.
-- `Taxi` to $3,50.
-- `Bus` to $5,00.
-- `DeliveryTruck` to $10,00
+- A `Car` wynosi $2.00.
+- A `Taxi` wynosi $3.50.
+- A `Bus` wynosi $5.00.
+- A `DeliveryTruck` jest $10.00
 
-Utwórz nową klasę `TollCalculator` i Implementuj dopasowanie wzorców na typie pojazdu, aby uzyskać kwotę opłaty. Poniższy kod przedstawia początkową implementację `TollCalculator`.
+Utwórz `TollCalculator` nową klasę i zaimplementuj dopasowanie wzorców na typie pojazdu, aby uzyskać kwotę opłaty drogowej. Poniższy kod przedstawia wstępną `TollCalculator`implementację pliku .
 
 ```csharp
 using System;
@@ -89,9 +89,9 @@ namespace toll_calculator
 }
 ```
 
-Poprzedni kod używa **wyrażenia Switch** (nie takiego samego jak instrukcja [`switch`](../language-reference/keywords/switch.md) ), które sprawdza **wzorzec typu**. **Wyrażenie Switch** rozpoczyna się od zmiennej, `vehicle` w poprzednim kodzie, po którym następuje słowo kluczowe `switch`. Następnie wszystkie **ramiona przełączania** są umieszczone w nawiasach klamrowych. Wyrażenie `switch` wprowadza inne udoskonalenia do składni otaczającej instrukcję `switch`. Słowo kluczowe `case` zostało pominięte, a wynikiem każdego ARM jest wyrażenie. Ostatnie dwie poręcze zawierają nową funkcję języka. Przypadek `{ }` dopasowuje dowolny obiekt o wartości innej niż null, który nie jest zgodny z wcześniejszą ARM. Ten ARM przechwytuje wszystkie nieprawidłowe typy przesłane do tej metody.  Przypadek `{ }` musi być zgodny z przypadkami dla każdego typu pojazdu. Jeśli zamówienie zostało cofnięte, pierwszeństwo ma `{ }` przypadku. Na koniec wzorzec `null` wykrywa, kiedy `null` jest przenoszona do tej metody. Wzorzec `null` może być ostatni, ponieważ wzorce innych typów pasują tylko do niezerowego obiektu o poprawnym typie.
+Poprzedni kod używa **wyrażenia przełącznika** (nie [`switch`](../language-reference/keywords/switch.md) takie samo jak instrukcja), która testuje **wzorzec typu**. **Wyrażenie przełącznika** rozpoczyna się `vehicle` od zmiennej w poprzednim `switch` kodzie, po której następuje słowo kluczowe. Następnie przychodzi wszystkie **ramiona przełącznika** wewnątrz kręcone szelki. Wyrażenie `switch` sprawia, że inne udoskonalenia do `switch` składni, która otacza instrukcję. Słowo `case` kluczowe jest pomijane, a wynik każdego ramienia jest wyrażeniem. Ostatnie dwa ramiona pokazują nową funkcję językową. Sprawa `{ }` pasuje do dowolnego obiektu innego niż null, który nie był zgodny z wcześniejszym ramieniem. To ramię przechwytuje wszelkie niepoprawne typy przekazane do tej metody.  Sprawa `{ }` musi być zgodna z przypadkami dla każdego typu pojazdu. Gdyby zamówienie zostało odwrócone, `{ }` sprawa miałaby pierwszeństwo. Na koniec `null` wzorzec `null` wykrywa, gdy a jest przekazywana do tej metody. Wzorzec `null` może być ostatni, ponieważ inne wzorce typu odpowiadają tylko obiektowi inne niż null poprawnego typu.
 
-Możesz przetestować ten kod przy użyciu następującego kodu w `Program.cs`:
+Można przetestować ten kod za `Program.cs`pomocą następującego kodu w:
 
 ```csharp
 using System;
@@ -138,21 +138,21 @@ namespace toll_calculator
 }
 ```
 
-Ten kod jest zawarty w projekcie początkowym, ale jest oznaczony jako komentarz. Usuń Komentarze i możesz sprawdzić, które z nich zapisano.
+Ten kod jest uwzględniony w projekcie startowym, ale jest komentowany. Usuń komentarze i możesz sprawdzić, co napisałeś.
 
-Zaczynasz widzieć, jak wzorce mogą pomóc w tworzeniu algorytmów, w których kod i dane są oddzielone. Wyrażenie `switch` sprawdza typ i tworzy różne wartości na podstawie wyników. To tylko początek.
+Zaczynasz widzieć, jak wzorce mogą pomóc w tworzeniu algorytmów, w których kod i dane są oddzielne. Wyrażenie `switch` testuje typ i generuje różne wartości na podstawie wyników. To dopiero początek.
 
-## <a name="add-occupancy-pricing"></a>Dodawanie cen użytkowania
+## <a name="add-occupancy-pricing"></a>Dodaj ceny obłożenia
 
-Urząd certyfikacji jest odpowiedzialny za przemieszczenie pojazdów z maksymalną wydajnością. Zdecydowały się naliczać więcej czasu, gdy pojazdy mają mniej osób i zachęcają do pełnych pojazdów, oferując niższą cenę:
+Organ pobierający opłaty drogowe chce zachęcić pojazdy do poruszania się z maksymalną przepustowością. Zdecydowali się pobierać wyższe opłaty, gdy pojazdy mają mniej pasażerów, i zachęcać do pełnych pojazdów, oferując niższe ceny:
 
-- Samochody i taksówke bez pasażerów płatją dodatkową $0,50.
-- Samochody i taksówki z dwoma pasażerami otrzymują rabat w wysokości $0,50.
-- Samochody i taksówki z trzema lub większą liczbą osób uzyskują rabat $1,00.
-- W przypadku magistrali, które mają mniej niż 50%, pełna opłata wynosi $2,00.
-- Magistrale, które mają więcej niż 90%, uzyskają rabat $1,00.
+- Samochody i taksówki bez pasażerów zapłacić dodatkowe 0,50 dolarów.
+- Samochody i taksówki z dwoma pasażerami otrzymują zniżkę w wysokości 0,50 USD.
+- Samochody i taksówki z trzema lub więcej pasażerami otrzymują zniżkę w wysokości 1,00 USD.
+- Autobusy, które są mniej niż 50% pełne zapłacić dodatkowe 2,00 dolarów.
+- Autobusy, które są więcej niż 90% pełne dostać 1,00 dolarów zniżki.
 
-Te reguły można zaimplementować przy użyciu **wzorca właściwości** w tym samym wyrażeniu przełącznika. Wzorzec właściwości bada właściwości obiektu po ustaleniu typu. Pojedynczy przypadek dla `Car` rozwija się do czterech różnych przypadków:
+Reguły te można zaimplementować przy użyciu **wzorca właściwości** w tym samym wyrażeniu przełącznika. Wzorzec właściwości sprawdza właściwości obiektu po określeniu typu. Pojedynczy przypadek dla `Car` rozszerza się do czterech różnych przypadków:
 
 ```csharp
 vehicle switch
@@ -166,9 +166,9 @@ vehicle switch
 };
 ```
 
-Pierwsze trzy przypadki testują typ jako `Car`, a następnie sprawdzają wartość właściwości `Passengers`. Jeśli oba te wartości są zgodne, to wyrażenie jest oceniane i zwracane.
+Pierwsze trzy przypadki przetestować `Car`typ jako , a `Passengers` następnie sprawdzić wartość właściwości. Jeśli oba zgodne, to wyrażenie jest oceniane i zwracane.
 
-W podobny sposób można również rozwijać przypadki wypadków:
+Można również rozszerzyć sprawy dotyczące taksówek w podobny sposób:
 
 ```csharp
 vehicle switch
@@ -184,9 +184,9 @@ vehicle switch
 };
 ```
 
-W poprzednim przykładzie klauzula `when` została pominięta w przypadku końcowym.
+W poprzednim przykładzie klauzula `when` została pominięta w ostatnim przypadku.
 
-Następnie Zaimplementuj reguły użytkowania, rozszerzając przypadki dla magistrali, jak pokazano w następującym przykładzie:
+Następnie należy wdrożyć zasady obłożenia, rozszerzając sprawy dla autobusów, jak pokazano w poniższym przykładzie:
 
 ```csharp
 vehicle switch
@@ -201,12 +201,12 @@ vehicle switch
 };
 ```
 
-Urząd opłat nie jest zaangażowany w liczbę pasażerów w wagonach dostawczych. Zamiast tego dostosowują kwotę opłat w oparciu o klasę wagi wózków w następujący sposób:
+Organ pobierający opłaty nie zajmuje się liczbą pasażerów w samochodach dostawczych. Zamiast tego dostosowują kwotę opłaty drogowej na podstawie klasy wagowej samochodów ciężarowych w następujący sposób:
 
-- Samochody ciężarowe przekraczające 5000 funtów są obciążane dodatkowymi $5,00.
-- Wózki lekkie poniżej 3000 funtów otrzymują rabat $2,00.
+- Samochody ciężarowe powyżej 5000 funtów są płatne dodatkowe 5,00 dolarów.
+- Lekkie ciężarówki poniżej 3000 funtów otrzymują zniżkę w wysokości 2,00 USD.
 
-Ta reguła jest zaimplementowana przy użyciu następującego kodu:
+Ta reguła jest implementowana przy następującym kodzie:
 
 ```csharp
 vehicle switch
@@ -219,7 +219,7 @@ vehicle switch
 };
 ```
 
-Powyższy kod przedstawia klauzulę `when` ramienia przełącznika. Za pomocą klauzuli `when` można testować warunki inne niż równość we właściwości. Po zakończeniu będziesz mieć metodę, która wygląda podobnie do następującej:
+Poprzedni kod zawiera `when` klauzulę ramienia przełącznika. Klauzula `when` służy do testowania warunków innych niż równości we właściwości. Po zakończeniu będziesz mieć metodę, która wygląda podobnie do następujących:
 
 ```csharp
 vehicle switch
@@ -241,15 +241,15 @@ vehicle switch
     DeliveryTruck t when (t.GrossWeightClass > 5000) => 10.00m + 5.00m,
     DeliveryTruck t when (t.GrossWeightClass < 3000) => 10.00m - 2.00m,
     DeliveryTruck t => 10.00m,
-    
+
     { }     => throw new ArgumentException(message: "Not a known vehicle type", paramName: nameof(vehicle)),
     null    => throw new ArgumentNullException(nameof(vehicle))
 };
 ```
 
-Wiele z tych broni przełączania to przykłady **wzorców cyklicznych**. Na przykład `Car { Passengers: 1}` pokazuje stały wzorzec wewnątrz wzorca właściwości.
+Wiele z tych ramion przełącznika są przykładami **rekurencyjne wzory**. Na przykład `Car { Passengers: 1}` pokazuje stały wzorzec wewnątrz wzorca właściwości.
 
-Ten kod może być mniej powtarzany przy użyciu przełączników zagnieżdżonych. W powyższych przykładach `Car` i `Taxi` mają cztery różne ramion. W obu przypadkach można utworzyć wzorzec typu, który jest przesyłany do wzorca właściwości. Ta technika jest pokazana w poniższym kodzie:
+Można sprawić, że ten kod będzie mniej powtarzalny przy użyciu przełączników zagnieżdżonych. Oba `Car` `Taxi` mają cztery różne ramiona w poprzednich przykładach. W obu przypadkach można utworzyć wzorzec typu, który zasila wzorzec właściwości. Ta technika jest pokazana w następującym kodzie:
 
 ```csharp
 public decimal CalculateToll(object vehicle) =>
@@ -284,42 +284,42 @@ public decimal CalculateToll(object vehicle) =>
     };
 ```
 
-W poprzednim przykładzie użycie wyrażenia cyklicznego oznacza, że nie należy powtarzać `Car` i `Taxi` ramion zawierających ramiona potomne, które testują wartość właściwości. Ta technika nie jest używana dla broni `Bus` i `DeliveryTruck`, ponieważ te poręcze są zakresami testowania dla właściwości, a nie wartości dyskretnych.
+W poprzednim przykładzie użycie wyrażenia cyklicznego oznacza, że nie powtarzasz `Car` i `Taxi` ramion zawierających ramiona podrzędne, które testują wartość właściwości. Ta technika nie jest `Bus` `DeliveryTruck` używana dla i broni, ponieważ te ramiona są zakresy testowania właściwości, a nie wartości dyskretne.
 
 ## <a name="add-peak-pricing"></a>Dodawanie cen szczytowych
 
-W przypadku ostatecznej funkcji urząd opłat umożliwia dodanie cen szczytowych z uwzględnieniem czasu. W godzinach rano i wieczorem szczytu opłaty są napadane podwójnie. Ta reguła ma wpływ tylko na ruch w jednym kierunku: przychodzące do miasta rano i wychodzące w godzinie wieczorem szczytu. W innym czasie w ciągu dnia roboczego opłata zostanie zwiększona o 50%. Późne i wczesne rano, opłaty są ograniczone o 25%. W weekendie jest to normalna stawka, niezależnie od czasu.
+W przypadku końcowej funkcji urząd opłat drogowych chce dodać ceny szczytowe zależne od czasu. W godzinach porannych i wieczornych w godzinach szczytu opłaty są podwojone. Zasada ta wpływa tylko na ruch w jednym kierunku: przychodzące do miasta rano, a wychodzące w godzinach szczytu wieczorem. W innych okresach dnia pracy opłaty drogowe wzrastają o 50%. Późną nocą i wczesnym rankiem opłaty drogowe są zmniejszane o 25%. W weekend, jest to normalna stawka, niezależnie od czasu.
 
-Użyjesz dopasowania do wzorca dla tej funkcji, ale będziesz zintegrować ją z innymi technikami. Można utworzyć wyrażenie dopasowania pojedynczego wzorca, które będzie uwzględniać wszystkie kombinacje kierunku, dzień tygodnia i godzinę. Wynikiem będzie wyrażenie złożone. Trudno jest czytać i trudny do zrozumienia. Dzięki temu trudno jest zapewnić poprawność. Zamiast tego Połącz te metody, aby utworzyć krotkę wartości, która zwięzłie opisuje wszystkie te Stany. Następnie użyj dopasowania wzorca, aby obliczyć mnożnik dla opłaty za połączenie. Krotka zawiera trzy warunki dyskretne:
+Użyjesz dopasowywania wzorców dla tej funkcji, ale zintegrujesz ją z innymi technikami. Można utworzyć wyrażenie dopasowania pojedynczego wzorca, które uwzględniałoby wszystkie kombinacje kierunku, dnia tygodnia i godziny. Rezultatem byłoby skomplikowane wyrażenie. Byłoby to trudne do odczytania i trudne do zrozumienia. To sprawia, że trudno jest zapewnić poprawność. Zamiast tego połączyć te metody, aby zbudować krotkę wartości, które zwięźle opisuje wszystkie te stany. Następnie użyj dopasowania wzorca, aby obliczyć mnożnik dla opłaty drogowej. Krotka zawiera trzy dyskretne warunki:
 
-- Dzień jest dniem tygodnia lub weekendem.
-- Pasmo czasu, w którym jest zbierane połączenie płatne.
-- Kierunek znajduje się w mieście lub na zewnątrz miasta.
+- Dzień to dzień powszedni lub weekend.
+- Pasmo czasu, w którym pobierana jest opłata drogowa.
+- Kierunek jest do miasta lub poza miastem
 
 W poniższej tabeli przedstawiono kombinacje wartości wejściowych i mnożnik cen szczytowych:
 
 | Day        | Time         | Kierunek | Premium |
 | ---------- | ------------ | --------- |--------:|
-| Dzień tygodnia    | rano szczytu | dotycząc   | x 2,00  |
-| Dzień tygodnia    | rano szczytu | wyjściowy  | x 1,00  |
-| Dzień tygodnia    | telefonu      | dotycząc   | x 1,50  |
-| Dzień tygodnia    | telefonu      | wyjściowy  | x 1,50  |
-| Dzień tygodnia    | szczytu wieczór | dotycząc   | x 1,00  |
-| Dzień tygodnia    | szczytu wieczór | wyjściowy  | x 2,00  |
-| Dzień tygodnia    | Przelewy    | dotycząc   | x 0,75  |
-| Dzień tygodnia    | Przelewy    | wyjściowy  | x 0,75  |
-| Weekend    | rano szczytu | dotycząc   | x 1,00  |
-| Weekend    | rano szczytu | wyjściowy  | x 1,00  |
-| Weekend    | telefonu      | dotycząc   | x 1,00  |
-| Weekend    | telefonu      | wyjściowy  | x 1,00  |
-| Weekend    | szczytu wieczór | dotycząc   | x 1,00  |
-| Weekend    | szczytu wieczór | wyjściowy  | x 1,00  |
-| Weekend    | Przelewy    | dotycząc   | x 1,00  |
-| Weekend    | Przelewy    | wyjściowy  | x 1,00  |
+| Dzień tygodnia    | poranny pośpiech | przychodzące   | x 2.00  |
+| Dzień tygodnia    | poranny pośpiech | Wychodzących  | x 1.00  |
+| Dzień tygodnia    | Dzień      | przychodzące   | x 1,50  |
+| Dzień tygodnia    | Dzień      | Wychodzących  | x 1,50  |
+| Dzień tygodnia    | wieczorny pośpiech | przychodzące   | x 1.00  |
+| Dzień tygodnia    | wieczorny pośpiech | Wychodzących  | x 2.00  |
+| Dzień tygodnia    | Noc    | przychodzące   | x 0,75  |
+| Dzień tygodnia    | Noc    | Wychodzących  | x 0,75  |
+| Weekend    | poranny pośpiech | przychodzące   | x 1.00  |
+| Weekend    | poranny pośpiech | Wychodzących  | x 1.00  |
+| Weekend    | Dzień      | przychodzące   | x 1.00  |
+| Weekend    | Dzień      | Wychodzących  | x 1.00  |
+| Weekend    | wieczorny pośpiech | przychodzące   | x 1.00  |
+| Weekend    | wieczorny pośpiech | Wychodzących  | x 1.00  |
+| Weekend    | Noc    | przychodzące   | x 1.00  |
+| Weekend    | Noc    | Wychodzących  | x 1.00  |
 
-Istnieją 16 różnych kombinacji trzech zmiennych. Łącząc niektóre warunki, można uprościć ostateczne wyrażenie Switch.
+Istnieje 16 różnych kombinacji trzech zmiennych. Łącząc niektóre warunki, uprościsz wyrażenie przełącznika końcowego.
 
-System, który zbiera opłaty za usługę, używa struktury <xref:System.DateTime> na czas, w którym nastąpiła opłata. Kompiluj metody Członkowskie, które tworzą zmienne z powyższej tabeli. Poniższa funkcja używa wyrażenia przełącznika dopasowania wzorca, aby określić, czy <xref:System.DateTime> reprezentuje weekend czy dzień tygodnia:
+System, który pobiera opłaty za <xref:System.DateTime> przejazd, wykorzystuje strukturę w momencie pobrania opłaty drogowej. Tworzenie metod członkowskich, które tworzą zmienne z poprzedniej tabeli. Następująca funkcja używa wyrażenia przełącznika pasującego do wzorca, <xref:System.DateTime> aby wyrazić, czy reprezentuje weekend, czy dzień tygodnia:
 
 ```csharp
 private static bool IsWeekDay(DateTime timeOfToll) =>
@@ -335,34 +335,34 @@ private static bool IsWeekDay(DateTime timeOfToll) =>
     };
 ```
 
-Ta metoda działa, ale jest repetitious. Można uprościć ten sposób, jak pokazano w poniższym kodzie:
+Ta metoda działa, ale jest powtarzalna. Można go uprościć, jak pokazano w poniższym kodzie:
 
 [!code-csharp[IsWeekDay](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#IsWeekDay)]
 
-Następnie Dodaj podobną funkcję, aby przydzielić czas do bloków:
+Następnie dodaj podobną funkcję, aby kategoryzować czas do bloków:
 
 [!code-csharp[GetTimeBand](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#GetTimeBand)]
 
-Poprzednia metoda nie używa dopasowania do wzorca. Jest to wyraźniejsze użycie znanych kaskadowych instrukcji `if`. Należy dodać prywatny `enum`, aby przekonwertować każdy zakres czasu na wartość dyskretną.
+Poprzednia metoda nie używa dopasowania wzorca. Jest to jaśniejsze przy użyciu `if` znanej kaskady stwierdzeń. Aby przekonwertować `enum` każdy zakres czasu na wartość dyskretną, należy dodać wartość prywatną.
 
-Po utworzeniu tych metod można użyć innego wyrażenia `switch` ze **wzorcem spójności** , aby obliczyć cenę Premium. Można utworzyć wyrażenie `switch` ze wszystkimi 16 bronią:
+Po utworzeniu tych metod można `switch` użyć innego wyrażenia ze **wzorcem krotki** do obliczania premii cenowej. Można zbudować `switch` wyrażenie z wszystkich 16 broni:
 
 [!code-csharp[FullTuplePattern](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#TuplePatternOne)]
 
-Powyższy kod działa, ale można go uprościć. Wszystkie osiem kombinacji dla weekendu mają te same opłaty za połączenie płatne. Można zastąpić wszystkie osiem następującymi wierszami:
+Powyższy kod działa, ale można go uprościć. Wszystkie osiem kombinacji na weekend ma taką samą opłatę. Możesz zastąpić wszystkie osiem następującym wierszem:
 
 ```csharp
 (false, _, _) => 1.0m,
 ```
 
-Ruch przychodzący i wychodzący ma ten sam mnożnik w ciągu dnia tygodnia Daytime i w godzinach nocnych. Te cztery broń przełączania można zastąpić następującymi dwoma wierszami:
+Ruch przychodzący i wychodzący mają ten sam mnożnik w ciągu dnia w dni powszednie i w godzinach nocnych. Te cztery ramiona przełącznika można zastąpić następującymi dwiema liniami:
 
 ```csharp
 (true, TimeBand.Overnight, _) => 0.75m,
 (true, TimeBand.Daytime, _)   => 1.5m,
 ```
 
-Kod powinien wyglądać podobnie do następującego kodu po obu tych zmianach:
+Kod powinien wyglądać jak następujący kod po tych dwóch zmianach:
 
 ```csharp
 public decimal PeakTimePremium(DateTime timeOfToll, bool inbound) =>
@@ -378,14 +378,14 @@ public decimal PeakTimePremium(DateTime timeOfToll, bool inbound) =>
     };
 ```
 
-Na koniec możesz usunąć dwie szczytu godziny, które będą obciążane stałą cenę. Po usunięciu tych broni można zastąpić `false` odrzucanie (`_`) w końcowej aktywacji. Następująca metoda została zakończona:
+Na koniec możesz usunąć dwa godziny szczytu, które płacą normalną cenę. Po usunięciu tych ramion można `false` zastąpić je`_`odrzutem ( ) w ostatnim ramieniu przełącznika. Będziesz mieć następującą gotową metodę:
 
 [!code-csharp[SimplifiedTuplePattern](../../../samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#FinalTuplePattern)]
 
-Ten przykład wyróżnia jedną z zalet dopasowania do wzorca: gałęzie wzorców są oceniane w kolejności. W przypadku zmiany rozmieszczenia w taki sposób, aby wcześniejsza gałąź obsługiwała jeden z przyszłych przypadków, kompilator ostrzega o nieosiągalnym kodzie. Te reguły języka ułatwiają wykonywanie powyższych uproszczeń bez obaw, że kod nie uległ zmianie.
+W tym przykładzie wyróżniono jedną z zalet dopasowywania wzorców: gałęzie wzorca są oceniane w kolejności. Jeśli zmienisz ich tak, że wcześniejsza gałąź obsługuje jeden z późniejszych przypadków, kompilator ostrzega o nieosiągalny kod. Te reguły języka ułatwiły wykonanie poprzednich uproszczeń z pewnością, że kod się nie zmienił.
 
-Dopasowanie wzorców sprawia, że niektóre typy kodu są bardziej czytelne i oferują alternatywę dla technik zorientowanych obiektowo, gdy nie można dodać kodu do klas. Chmura powoduje, że dane i funkcje mogą się na bieżąco. *Kształt* danych i *operacje* na nim nie są koniecznie opisane razem. W tym samouczku wykorzystano istniejące dane w sposób całkowicie różny od oryginalnej funkcji. Dopasowywanie do wzorca daje możliwość zapisu funkcji, która overrode te typy, nawet jeśli nie można ich zwiększyć.
+Dopasowywanie wzorców sprawia, że niektóre typy kodu są bardziej czytelne i oferują alternatywę dla technik obiektowych, gdy nie można dodać kodu do klas. Chmura powoduje, że dane i funkcje są rozstawione. *Kształt* danych i *operacje* na nim nie muszą być opisane razem. W tym samouczku zużyłeś istniejące dane w zupełnie inny sposób niż jego oryginalna funkcja. Dopasowanie wzorca dało możliwość pisania funkcji, które overrode tych typów, nawet jeśli nie można rozszerzyć je.
 
 ## <a name="next-steps"></a>Następne kroki
 
-Gotowy kod można pobrać z repozytorium usługi GitHub [/przykłady](https://github.com/dotnet/samples/tree/master/csharp/tutorials/patterns/finished) . Eksploruj własne wzorce i Dodaj tę technikę do zwykłych działań związanych z kodowaniem. Uczenie tych technik umożliwia innym sposobem podejścia problemów i tworzenia nowych funkcji.
+Gotowy kod można pobrać z repozytorium GitHub [dotnet/samples.](https://github.com/dotnet/samples/tree/master/csharp/tutorials/patterns/finished) Eksploruj wzorce samodzielnie i dodaj tę technikę do swoich regularnych działań związanych z kodowaniem. Nauka tych technik daje inny sposób podejścia do problemów i tworzenia nowych funkcji.

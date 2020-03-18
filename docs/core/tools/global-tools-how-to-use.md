@@ -1,37 +1,37 @@
 ---
-title: 'Samouczek: Instalowanie i używanie narzędzia globalnego platformy .NET Core'
-description: Dowiedz się, jak zainstalować narzędzie .NET i korzystać z niego jako narzędzia globalnego.
+title: 'Samouczek: Instalowanie i używanie narzędzia globalnego .NET Core'
+description: Dowiedz się, jak zainstalować narzędzie .NET i używać go jako narzędzia globalnego.
 ms.date: 02/12/2020
 ms.openlocfilehash: 9f8378e50fd2544eedbbaaeffb89d67800ec6880
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78156741"
 ---
-# <a name="tutorial-install-and-use-a-net-core-global-tool-using-the-net-core-cli"></a>Samouczek: Instalowanie i używanie narzędzia globalnego platformy .NET Core przy użyciu interfejs wiersza polecenia platformy .NET Core
+# <a name="tutorial-install-and-use-a-net-core-global-tool-using-the-net-core-cli"></a>Samouczek: Instalowanie i używanie globalnego narzędzia .NET Core przy użyciu procesora CLI .NET Core
 
-**Ten artykuł ma zastosowanie do:** ✔️ .net Core 2,1 SDK i nowszych wersjach
+**Ten artykuł dotyczy:** ✔️ .NET Core 2.1 SDK i nowszych wersji
 
-W tym samouczku przedstawiono sposób instalowania i używania narzędzia globalnego. Używasz narzędzia, które tworzysz w [pierwszym samouczku tej serii](global-tools-how-to-create.md).
+W tym samouczku nauczycię, jak zainstalować i używać globalnego narzędzia. Używasz narzędzia, które tworzysz w [pierwszym samouczku tej serii](global-tools-how-to-create.md).
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-* Wykonaj [pierwszy samouczek tej serii](global-tools-how-to-create.md).
+* Ukończ [pierwszy samouczek z tej serii](global-tools-how-to-create.md).
 
-## <a name="use-the-tool-as-a-global-tool"></a>Użyj narzędzia jako narzędzia globalnego
+## <a name="use-the-tool-as-a-global-tool"></a>Używanie narzędzia jako narzędzia globalnego
 
-1. Zainstaluj narzędzie z pakietu, uruchamiając polecenie [dotnet Tool Install](dotnet-tool-install.md) w folderze *Microsoft. botsay* Project:
+1. Zainstaluj narzędzie z pakietu, uruchamiając polecenie [instalacji narzędzia dotnet](dotnet-tool-install.md) w folderze projektu *microsoft.botsay:*
 
    ```dotnetcli
    dotnet tool install --global --add-source ./nupkg microsoft.botsay
    ```
 
-   `--global` parametr informuje interfejs wiersza polecenia platformy .NET Core o konieczności zainstalowania plików binarnych narzędzia w domyślnej lokalizacji, która jest automatycznie dodawana do zmiennej środowiskowej PATH.
+   Parametr `--global` informuje polecenie .NET Core CLI o zainstalowaniu plików binarnych narzędzi w lokalizacji domyślnej, która jest automatycznie dodawana do zmiennej środowiskowej PATH.
 
-   `--add-source` parametr informuje interfejs wiersza polecenia platformy .NET Core o tymczasowym użyciu katalogu *./nupkg* jako dodatkowego źródła strumieniowego dla pakietów NuGet. Pakiet ma unikatową nazwę, aby upewnić się, że zostanie on znaleziony tylko w katalogu *./nupkg* , a nie w witrynie NuGet.org.
+   Parametr `--add-source` informuje kontrolera CLI .NET Core o tymczasowym użyciu katalogu *./nupkg* jako dodatkowego źródła źródła dla pakietów NuGet. Nadasz pakietunikalną nazwę, aby upewnić się, że będzie ona dostępna tylko w katalogu *./nupkg,* a nie w Nuget.org witryny.
 
-   Dane wyjściowe przedstawiają polecenie używane do wywoływania narzędzia i zainstalowanej wersji:
+   Dane wyjściowe pokazuje polecenie używane do wywołania narzędzia i zainstalowana wersja:
 
    ```console
    You can invoke the tool using the following command: botsay
@@ -45,17 +45,17 @@ W tym samouczku przedstawiono sposób instalowania i używania narzędzia global
    ```
 
    > [!NOTE]
-   > Jeśli to polecenie nie powiedzie się, może być konieczne otwarcie nowego terminalu w celu odświeżenia ścieżki.
+   > Jeśli to polecenie nie powiedzie się, może być konieczne otwarcie nowego terminalu w celu odświeżenia ŚCIEŻKI.
 
-1. Aby usunąć narzędzie, należy wykonać polecenie [odinstalowania narzędzia dotnet](dotnet-tool-uninstall.md) :
+1. Usuń narzędzie, uruchamiając polecenie [odinstalowywania narzędzia dotnet:](dotnet-tool-uninstall.md)
 
    ```dotnetcli
    dotnet tool uninstall -g microsoft.botsay
    ```
 
-## <a name="use-the-tool-as-a-global-tool-installed-in-a-custom-location"></a>Używanie narzędzia jako globalnego narzędzia zainstalowanego w lokalizacji niestandardowej
+## <a name="use-the-tool-as-a-global-tool-installed-in-a-custom-location"></a>Używanie narzędzia jako narzędzia globalnego zainstalowanego w lokalizacji niestandardowej
 
-1. Zainstaluj narzędzie z pakietu.
+1. Zainstaluj narzędzie z opakowania.
 
    W systemie Windows:
 
@@ -69,9 +69,9 @@ W tym samouczku przedstawiono sposób instalowania i używania narzędzia global
    dotnet tool install --tool-path ~/bin --add-source ./nupkg microsoft.botsay
    ```
 
-   `--tool-path` parametr informuje interfejs wiersza polecenia platformy .NET Core o konieczności zainstalowania plików binarnych narzędzia w określonej lokalizacji. Jeśli katalog nie istnieje, zostanie utworzony. Ten katalog nie jest automatycznie dodawany do zmiennej środowiskowej PATH.
+   Parametr `--tool-path` informuje cli .NET Core o zainstalowaniu plików binarnych narzędzi w określonej lokalizacji. Jeśli katalog nie istnieje, jest tworzony. Ten katalog nie jest automatycznie dodawany do zmiennej środowiskowej PATH.
 
-   Dane wyjściowe przedstawiają polecenie używane do wywoływania narzędzia i zainstalowanej wersji:
+   Dane wyjściowe pokazuje polecenie używane do wywołania narzędzia i zainstalowana wersja:
 
    ```console
    You can invoke the tool using the following command: botsay
@@ -92,7 +92,7 @@ W tym samouczku przedstawiono sposób instalowania i używania narzędzia global
    ~/bin/botsay hello from the bot
    ```
 
-1. Aby usunąć narzędzie, należy wykonać polecenie [odinstalowania narzędzia dotnet](dotnet-tool-uninstall.md) :
+1. Usuń narzędzie, uruchamiając polecenie [odinstalowywania narzędzia dotnet:](dotnet-tool-uninstall.md)
 
    W systemie Windows:
 
@@ -108,11 +108,11 @@ W tym samouczku przedstawiono sposób instalowania i używania narzędzia global
 
 ## <a name="troubleshoot"></a>Rozwiązywanie problemów
 
-Jeśli podczas wykonywania samouczka zostanie wyświetlony komunikat o błędzie, zobacz [Rozwiązywanie problemów z użyciem narzędzia .NET Core](troubleshoot-usage-issues.md).
+Jeśli podczas korzystania z samouczka zostanie wyświetlony komunikat o błędzie, zobacz [Rozwiązywanie problemów z używaniem narzędzia .NET Core](troubleshoot-usage-issues.md).
 
 ## <a name="next-steps"></a>Następne kroki
 
-W tym samouczku narzędzie zostało zainstalowane i użyte jako narzędzie globalne. Aby zainstalować narzędzie i korzystać z tego samego narzędzia co narzędzie lokalne, przejdź do następnego samouczka.
+W tym samouczku zainstalowano i użyto narzędzia jako narzędzia globalnego. Aby zainstalować i używać tego samego narzędzia co narzędzie lokalne, przejdź do następnego samouczka.
 
 > [!div class="nextstepaction"]
-> [Instalowanie i używanie lokalnych narzędzi](local-tools-how-to-use.md)
+> [Instalowanie i używanie narzędzi lokalnych](local-tools-how-to-use.md)

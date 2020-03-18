@@ -1,22 +1,22 @@
 ---
 ms.openlocfilehash: 7c39fe7ffd59fa7a5564bb45f32a6a2fbe0ddb33
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74568174"
 ---
-### <a name="change-in-semantics-of-stringnull-in-utf8jsonwriter"></a>Zmień semantykę `(string)null` w Utf8JsonWriter
+### <a name="change-in-semantics-of-stringnull-in-utf8jsonwriter"></a>Zmiana semantyki `(string)null` w Utf8JsonWriter
 
-W programie .NET Core 3,0 w wersji zapoznawczej 7 ciąg o wartości null jest traktowany jako pusty ciąg w <xref:System.Text.Json.Utf8JsonWriter>. Począwszy od programu .NET Core 3,0 w wersji zapoznawczej 8, ciąg o wartości null zgłasza wyjątek, gdy jest używany jako nazwa właściwości i emituje token JSON o wartości null, gdy jest używany jako wartość.
+W wersji .NET Core 3.0 Preview 7 ciąg zerowy jest traktowany jako pusty ciąg w pliku <xref:System.Text.Json.Utf8JsonWriter>. Począwszy od .NET Core 3.0 Preview 8, ciąg zerowy zgłasza wyjątek, gdy jest używany jako nazwa właściwości i emituje token null JSON, gdy jest używany jako wartość.
 
 #### <a name="change-description"></a>Zmień opis
 
-W programie .NET Core 3,0 w wersji zapoznawczej 7 ciąg `null` był traktowany jako `""` zarówno podczas pisania nazw właściwości, jak i podczas pisania wartości.  
+W .NET Core 3.0 `null` Preview 7 `""` ciąg był traktowany zarówno podczas zapisywania nazw właściwości, jak i podczas zapisywania wartości.  
 
-Począwszy od platformy .NET Core 3,0 w wersji zapoznawczej 8, nazwa właściwości `null` generuje `ArgumentNullException`, a wartość `null` jest traktowana jako wywołanie <xref:System.Text.Json.Utf8JsonWriter.WriteNull%2A?displayProperty=nameWithType> lub <xref:System.Text.Json.Utf8JsonWriter.WriteNullValue?displayProperty=nameWithType>.
+Począwszy od .NET Core 3.0 Preview 8, `null` nazwa właściwości `ArgumentNullException`zgłasza , a `null` wartość jest traktowana jako wywołanie <xref:System.Text.Json.Utf8JsonWriter.WriteNull%2A?displayProperty=nameWithType> lub <xref:System.Text.Json.Utf8JsonWriter.WriteNullValue?displayProperty=nameWithType>.
 
-Rozważmy następujący kod:
+Spójrzmy na poniższy kod:
 
 ```csharp
 string propertyName1 = null;
@@ -40,33 +40,33 @@ using (Utf8JsonWriter writer = new Utf8JsonWriter(stream))
 }
 ```
 
-Jeśli program jest uruchamiany z programem .NET Core 3,0 w wersji zapoznawczej 7, składnik zapisywania generuje następujące dane wyjściowe:
+Jeśli zostanie uruchomiony z .NET Core 3.0 Preview 7, moduł zapisujący generuje następujące dane wyjściowe:
 
 ```js
 [{"":"","prop2":""},""]
 ```
 
-Począwszy od programu .NET Core 3,0 w wersji zapoznawczej 8, wywołanie do `writer.WriteString(propertyName1, propertyValue1)` zgłasza <xref:System.ArgumentNullException>.  Jeśli `propertyName1 = null` jest zastępowana `propertyName1 = string.Empty`, dane wyjściowe będą teraz:
+Począwszy od .NET Core 3.0 `writer.WriteString(propertyName1, propertyValue1)` Preview 8, wywołanie do wyrzucając . <xref:System.ArgumentNullException>  Jeśli `propertyName1 = null` zostanie `propertyName1 = string.Empty`zastąpiony , wyjście będzie teraz:
 
 ```js
 [{"":null,"prop2":null},null]
 ```
 
-Ta zmiana została wprowadzona w celu lepszego dopasowania przy użyciu oczekiwań obiektu wywołującego dla wartości `null`.
+Ta zmiana została wmazana w `null` celu lepszego dostosowania się do oczekiwań dzwoniącego dla wartości.
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
-3,0 wersja zapoznawcza 8
+3.0 Podgląd 8
 
-#### <a name="recommended-action"></a>Zalecane działanie
+#### <a name="recommended-action"></a>Zalecana akcja
 
-Podczas zapisywania nazw właściwości i wartości z klasą <xref:System.Text.Json.Utf8JsonWriter>:
+Podczas zapisywania nazw właściwości <xref:System.Text.Json.Utf8JsonWriter> i wartości z klasą:
 
-- Upewnij się, że ciągi`null` są używane jako nazwy właściwości.
+- Upewnij się, że ciągi inne są`null` używane jako nazwy właściwości.
 
-- Jeśli poprzednie zachowanie jest wymagane, użyj wywołania łączenia o wartości null; na przykład `writer.WriteString(propertyName1 ?? "", propertyValue1)`.
+- Jeśli poprzednie zachowanie jest pożądane, należy użyć wywołania zerowego łączenia; na przykład `writer.WriteString(propertyName1 ?? "", propertyValue1)`.
 
-- Jeśli pisanie literału `null` dla wartości ciągu `null` nie jest pożądane, użyj wywołania łączenia o wartości null. na przykład `writer.WriteString(propertyName2, propertyValue2 ?? "")`.
+- Jeśli pisanie `null` literału dla wartości `null` ciągu nie jest pożądane, należy użyć wywołania null łączenia; na przykład `writer.WriteString(propertyName2, propertyValue2 ?? "")`.
 
 #### <a name="category"></a>Kategoria
 

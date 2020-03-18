@@ -3,30 +3,30 @@ title: Filtrowanie danych (C#)
 ms.date: 07/20/2015
 ms.assetid: fbaece0d-0f23-47f7-89c5-f3ea8db692b6
 ms.openlocfilehash: 74399244990f8ff2deaa1d10576ea94a57c16bee
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75346993"
 ---
 # <a name="filtering-data-c"></a>Filtrowanie danych (C#)
-Filtrowanie odwołuje się do operacji ograniczającej zestaw wyników tak, aby zawierała tylko te elementy, które spełniają określony warunek. Jest on również znany jako wybór.  
+Filtrowanie odnosi się do działania ograniczajączestaw wyników zawierać tylko te elementy, które spełniają określony warunek. Jest również znany jako wybór.  
   
- Na poniższej ilustracji przedstawiono wyniki filtrowania sekwencji znaków. Predykat dla operacji filtrowania określa, że znak musi mieć wartość "A".  
+ Na poniższej ilustracji przedstawiono wyniki filtrowania sekwencji znaków. Predykat dla operacji filtrowania określa, że znak musi być "A".  
   
  ![Diagram przedstawiający operację filtrowania LINQ](./media/filtering-data/linq-filter-operation.png)  
   
- W poniższej sekcji przedstawiono standardowe metody operatorów zapytań, które wykonują zaznaczenie.  
+ Standardowe metody operatora kwerendy, które wykonują wybór są wymienione w poniższej sekcji.  
   
 ## <a name="methods"></a>Metody  
   
-|Nazwa metody|Opis|C#Składnia wyrażenia zapytania|Więcej informacji|  
+|Nazwa metody|Opis|Składnia wyrażenia kwerendy c#|Więcej informacji|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|OfType|Wybiera wartości, w zależności od możliwości przerzutowania do określonego typu.|Nie dotyczy.|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|  
-|Gdzie|Wybiera wartości, które są oparte na funkcji predykatu.|`where`|<xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType>|  
+|Oftype|Wybiera wartości, w zależności od ich zdolności do rzutowania do określonego typu.|Nie dotyczy.|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|  
+|Lokalizacja|Wybiera wartości, które są oparte na funkcji predykatu.|`where`|<xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType>|  
   
-## <a name="query-expression-syntax-example"></a>Przykład składni wyrażenia zapytania  
- W poniższym przykładzie zastosowano klauzulę `where` do filtrowania z tablicy te ciągi mające określoną długość.  
+## <a name="query-expression-syntax-example"></a>Przykład składni wyrażenia kwerendy  
+ W poniższym `where` przykładzie użyto klauzuli do filtrowania z tablicy tych ciągów, które mają określoną długość.  
   
 ```csharp  
 string[] words = { "the", "quick", "brown", "fox", "jumps" };  
@@ -45,12 +45,12 @@ foreach (string str in query)
 */  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Linq>
-- [Standardowe operatory zapytań — OmówienieC#()](./standard-query-operators-overview.md)
-- [where, klauzula](../../../language-reference/keywords/where-clause.md)
+- [Omówienie standardowych operatorów zapytań (C#)](./standard-query-operators-overview.md)
+- [gdzie klauzula](../../../language-reference/keywords/where-clause.md)
 - [Dynamiczne określanie filtrów predykatów w środowisku uruchomieniowym](../../../linq/dynamically-specify-predicate-filters-at-runtime.md)
-- [Jak wykonać zapytanie dotyczące metadanych zestawu z odbiciem (LINQ) (C#)](./how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
-- [Jak wykonać zapytanie o pliki o określonym atrybucie lub nazwie (C#)](./how-to-query-for-files-with-a-specified-attribute-or-name.md)
-- [Sortowanie lub filtrowanie danych tekstowych według dowolnego wyrazu lub pola (LINQ) (C#)](./how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- [Jak wysyłać zapytania do metadanych zestawu za pomocą odbicia (LINQ) (C#)](./how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
+- [Jak wysyłać zapytania do plików o określonym atrybucie lub nazwie (C#)](./how-to-query-for-files-with-a-specified-attribute-or-name.md)
+- [Jak sortować lub filtrować dane tekstowe według dowolnego wyrazu lub pola (LINQ) (C#)](./how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

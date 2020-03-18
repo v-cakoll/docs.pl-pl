@@ -1,5 +1,5 @@
 ---
-title: We/wy plików i strumienia — .NET
+title: We/Wy plików i strumienia — .NET
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -11,45 +11,45 @@ helpviewer_keywords:
 - data streams, I/O
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 ms.openlocfilehash: 3c69e0fd23b1f8bc11fe908c66ba492f31a53f30
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75706598"
 ---
 # <a name="file-and-stream-io"></a>We/Wy plików i strumieni
 
-Termin „We/Wy (wejście/wyjście) plików i strumieni” dotyczy transferu danych do lub z nośnika magazynowania. W .NET Framework przestrzenie nazw `System.IO` zawierają typy umożliwiające odczyt i zapis, zarówno synchronicznie, jak i asynchronicznie, w strumieniach danych i plikach. Te przestrzenie nazw zawierają również typy, które wykonują kompresję i dekompresję plików, oraz typy, które umożliwiają komunikację za pośrednictwem potoków i portów szeregowych.
+Termin „We/Wy (wejście/wyjście) plików i strumieni” dotyczy transferu danych do lub z nośnika magazynowania. W platformie .NET `System.IO` Framework przestrzenie nazw zawierają typy, które umożliwiają odczyt i zapis, zarówno synchronicznie, jak i asynchronicznie, w strumieniach danych i plikach. Te przestrzenie nazw zawierają również typy, które wykonują kompresję i dekompresję plików, oraz typy, które umożliwiają komunikację za pośrednictwem potoków i portów szeregowych.
 
 Plik to uporządkowana i nazwana kolekcja bajtów, która ma stały magazyn. Podczas pracy z plikami użytkownik pracuje ze ścieżkami katalogów, magazynem dysku oraz nazwami plików i katalogów. Natomiast strumień to sekwencja bajtów służąca do odczytu i zapisu w magazynie zapasowym, który może być jednym z kilku nośników magazynu (na przykład dysk lub pamięć). Tak jak istnieje kilka magazynów zapasowych innych niż dyski, tak samo istnieje kilka rodzajów strumieni innych niż strumienie plików, takie jak strumienie sieci, pamięci i potoku.
 
 ## <a name="files-and-directories"></a>Pliki i katalogi
 
-Możesz użyć typów w przestrzeni nazw <xref:System.IO?displayProperty=nameWithType>, aby korzystać z plików i katalogów. Na przykład można pobierać i ustawiać właściwości plików i katalogów oraz pobierać kolekcje plików i katalogów na podstawie kryteriów wyszukiwania.
+Typy w obszarze <xref:System.IO?displayProperty=nameWithType> nazw można używać do interakcji z plikami i katalogami. Na przykład można pobierać i ustawiać właściwości plików i katalogów oraz pobierać kolekcje plików i katalogów na podstawie kryteriów wyszukiwania.
 
-W przypadku konwencji nazewnictwa ścieżek i sposobów wyrażania ścieżki plików dla systemów Windows, w tym z składnią urządzenia DOS obsługiwaną w programie .NET Core 1,1 lub nowszym oraz .NET Framework 4.6.2 i nowszych, zobacz [formaty ścieżki plików w systemach Windows](file-path-formats.md).
+Aby zapoznać się z konwencjami nazewnictwa ścieżek i sposobami wyrażania ścieżki pliku dla systemów Windows, w tym ze składnią urządzenia DOS obsługiwaną w programie .NET Core 1.1 i nowszych oraz w programie .NET Framework 4.6.2 i [nowszych, zobacz Formaty ścieżek plików w systemach Windows](file-path-formats.md).
 
 Poniżej przedstawiono kilka powszechnie używanych klas związanych z plikami i katalogami:
 
-- <xref:System.IO.File> — udostępnia statyczne metody tworzenia, kopiowania, usuwania, przemieszczania i otwierania plików oraz ułatwiają tworzenie <xref:System.IO.FileStream> obiektu.
+- <xref:System.IO.File>- zapewnia statyczne metody tworzenia, kopiowania, usuwania, przenoszenia i otwierania plików oraz pomaga w tworzeniu <xref:System.IO.FileStream> obiektu.
 
-- <xref:System.IO.FileInfo> — zawiera metody wystąpień służące do tworzenia, kopiowania, usuwania, przemieszczania i otwierania plików oraz ułatwiają tworzenie <xref:System.IO.FileStream> obiektu.
+- <xref:System.IO.FileInfo>- udostępnia metody instancji do tworzenia, kopiowania, usuwania, przenoszenia <xref:System.IO.FileStream> i otwierania plików oraz pomaga utworzyć obiekt.
 
-- <xref:System.IO.Directory> — zapewnia statyczne metody tworzenia, przechodzenia i wyliczania katalogów i podkatalogów.
+- <xref:System.IO.Directory>- zapewnia statyczne metody tworzenia, przenoszenia i wyliczania za pośrednictwem katalogów i podkatalogów.
 
-- <xref:System.IO.DirectoryInfo> — zawiera metody wystąpień służące do tworzenia, przechodzenia i wyliczania katalogów i podkatalogów.
+- <xref:System.IO.DirectoryInfo>- udostępnia metody instancji do tworzenia, przenoszenia i wyliczania za pośrednictwem katalogów i podkatalogów.
 
-- <xref:System.IO.Path> — udostępnia metody i właściwości do przetwarzania ciągów katalogów w sposób Międzyplatformowy.
+- <xref:System.IO.Path>- udostępnia metody i właściwości przetwarzania ciągów katalogów w sposób wieloplatformowy.
 
 Podczas wywoływania metod systemu plików należy zawsze zapewnić niezawodną obsługę wyjątków. Aby uzyskać więcej informacji, zobacz [Obsługa błędów we/wy](handling-io-errors.md).
 
-Oprócz korzystania z tych klas Visual Basic użytkownicy mogą korzystać z metod i właściwości dostarczonych przez klasę <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=nameWithType> dla operacji we/wy pliku.
+Oprócz korzystania z tych klas użytkownicy języka Visual Basic mogą używać <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=nameWithType> metod i właściwości dostarczonych przez klasę dla we/wy pliku.
 
-Zobacz [jak: kopiowanie katalogów](how-to-copy-directories.md), [instrukcje: Tworzenie listy](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5cf8zcfh(v=vs.100))katalogów i [instrukcje: Wyliczanie katalogów i plików](how-to-enumerate-directories-and-files.md).
+Zobacz [Jak: Kopiowanie katalogów](how-to-copy-directories.md), [Jak: Tworzenie listy katalogów](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5cf8zcfh(v=vs.100))i [Jak: Wyliczanie katalogów i plików](how-to-enumerate-directories-and-files.md).
 
 ## <a name="streams"></a>Strumienie
 
-Abstrakcyjna klasa bazowa <xref:System.IO.Stream> obsługuje odczytywanie i zapisywanie bajtów. Wszystkie klasy, które reprezentują strumienie dziedziczące z klasy <xref:System.IO.Stream>. Klasa <xref:System.IO.Stream> i jej klasy pochodne zapewniają wspólny widok źródeł danych i repozytoriów oraz izoluje programistę od konkretnych szczegółów dotyczących systemu operacyjnego i urządzeń bazowych.
+Abstrakcyjna klasa <xref:System.IO.Stream> podstawowa obsługuje odczytianie i pisanie bajtów. Wszystkie klasy reprezentujące strumienie <xref:System.IO.Stream> dziedziczą z klasy. Klasa <xref:System.IO.Stream> i jej klasy pochodne zapewniają wspólny widok źródeł danych i repozytoriów oraz izolować programistę od szczegółowych informacji o systemie operacyjnym i urządzeniach źródłowych.
 
 Strumienie obejmują trzy podstawowe operacje:
 
@@ -59,124 +59,124 @@ Strumienie obejmują trzy podstawowe operacje:
 
 - Wyszukiwanie — badanie i modyfikowanie bieżącej pozycji w strumieniu.
 
-W zależności od podstawowego źródła danych lub repozytorium, strumień może obsługiwać tylko niektóre z tych możliwości. Na przykład Klasa <xref:System.IO.Pipes.PipeStream> nie obsługuje wyszukiwania. Właściwości <xref:System.IO.Stream.CanRead%2A>, <xref:System.IO.Stream.CanWrite%2A>i <xref:System.IO.Stream.CanSeek%2A> strumienia określają operacje obsługiwane przez strumień.
+W zależności od podstawowego źródła danych lub repozytorium, strumień może obsługiwać tylko niektóre z tych możliwości. Na przykład <xref:System.IO.Pipes.PipeStream> klasa nie obsługuje szukania. , <xref:System.IO.Stream.CanRead%2A> <xref:System.IO.Stream.CanWrite%2A>i <xref:System.IO.Stream.CanSeek%2A> właściwości strumienia określić operacje, które obsługuje strumień.
 
 Poniżej przedstawiono niektóre powszechnie używane klasy strumieni:
 
-- <xref:System.IO.FileStream> — do odczytu i zapisu w pliku.
+- <xref:System.IO.FileStream>– do czytania i zapisu do pliku.
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> — do odczytu i zapisu w pliku w magazynie izolowanym.
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>– do czytania i zapisu do pliku w izolowanym magazynie.
 
-- <xref:System.IO.MemoryStream> — do odczytu i zapisu w pamięci jako magazyn zapasowy.
+- <xref:System.IO.MemoryStream>– do czytania i zapisywania w pamięci jako magazynu podkładowego.
 
-- <xref:System.IO.BufferedStream> — w celu zwiększenia wydajności operacji odczytu i zapisu.
+- <xref:System.IO.BufferedStream>– dla poprawy wydajności operacji odczytu i zapisu.
 
-- <xref:System.Net.Sockets.NetworkStream> — do odczytu i zapisu w gniazdach sieciowych.
+- <xref:System.Net.Sockets.NetworkStream>– do czytania i pisania przez gniazda sieciowe.
 
-- <xref:System.IO.Pipes.PipeStream> — do odczytu i zapisu w przypadku potoków anonimowych i nazwanych.
+- <xref:System.IO.Pipes.PipeStream>– do czytania i pisania za anonimowych i nazwanych potoków.
 
-- <xref:System.Security.Cryptography.CryptoStream> — służy do łączenia strumieni danych z transformacjami kryptograficznymi.
+- <xref:System.Security.Cryptography.CryptoStream>– do łączenia strumieni danych z przekształceniami kryptograficznymi.
 
-Aby zapoznać się z przykładem asynchronicznej pracy z strumieniami, zobacz [asynchroniczne operacje we/wy pliku](asynchronous-file-i-o.md).
+Na przykład pracy ze strumieniami asynchronicznie zobacz [Asynchroniczne we/wy pliku](asynchronous-file-i-o.md).
 
-## <a name="readers-and-writers"></a>Czytelnicy i autorzy
+## <a name="readers-and-writers"></a>Czytelnicy i pisarze
 
-Przestrzeń nazw <xref:System.IO?displayProperty=nameWithType> udostępnia również typy do odczytywania zakodowanych znaków ze strumieni i zapisywania ich w strumieniach. Zazwyczaj strumienie są projektowane do obsługi bajtowych danych wejściowych i wyjściowych. Typy czytników i składników zapisywania obsługują konwersję zakodowanych znaków do i z postaci bajtowej, więc strumień może ukończyć operację. Każda Klasa czytnika i składnika zapisywania jest skojarzona ze strumieniem, który można pobrać za pomocą właściwości `BaseStream` klasy.
+Obszar <xref:System.IO?displayProperty=nameWithType> nazw zawiera również typy do odczytywania zakodowanych znaków ze strumieni i zapisywania ich do strumieni. Zazwyczaj strumienie są projektowane do obsługi bajtowych danych wejściowych i wyjściowych. Typy czytników i składników zapisywania obsługują konwersję zakodowanych znaków do i z postaci bajtowej, więc strumień może ukończyć operację. Każda klasa czytnika i modułu zapisującego jest skojarzona `BaseStream` ze strumieniem, który można pobrać za pośrednictwem właściwości klasy.
 
 Poniżej przedstawiono niektóre powszechnie używane klasy czytników i składników zapisywania:
 
-- <xref:System.IO.BinaryReader> i <xref:System.IO.BinaryWriter> — do odczytywania i pisania typów danych pierwotnych jako wartości binarnych.
+- <xref:System.IO.BinaryReader>oraz <xref:System.IO.BinaryWriter> – do odczytywania i zapisywania pierwotnych typów danych jako wartości binarnych.
 
-- <xref:System.IO.StreamReader> i <xref:System.IO.StreamWriter> — do odczytu i pisania znaków przy użyciu wartości kodowania do konwersji znaków na i z bajtów.
+- <xref:System.IO.StreamReader>oraz <xref:System.IO.StreamWriter> – do odczytywania i pisania znaków przy użyciu wartości kodowania do konwertowania znaków do i z bajtów.
 
-- <xref:System.IO.StringReader> i <xref:System.IO.StringWriter> — do odczytu i zapisu znaków do i z ciągów.
+- <xref:System.IO.StringReader>oraz <xref:System.IO.StringWriter> – do czytania i pisania znaków do i z ciągów.
 
-- <xref:System.IO.TextReader> i <xref:System.IO.TextWriter> — służy jako abstrakcyjne klasy podstawowe dla innych czytelników i autorów, które odczytują i zapisują znaki i ciągi, ale nie dane binarne.
+- <xref:System.IO.TextReader>i <xref:System.IO.TextWriter> — służyć jako abstrakcyjne klasy podstawowe dla innych czytelników i pisarzy, które odczytują i zapisują znaki i ciągi, ale nie dane binarne.
 
-Zobacz [jak: odczytywanie tekstu z pliku](how-to-read-text-from-a-file.md), [jak: pisać tekst do pliku](how-to-write-text-to-a-file.md), [instrukcje: odczytywanie znaków z ciągu](how-to-read-characters-from-a-string.md)i [instrukcje: Wpisywanie znaków w ciągu](how-to-write-characters-to-a-string.md).
+Zobacz [jak: Czytać tekst z pliku](how-to-read-text-from-a-file.md), [Jak: Pisanie tekstu do pliku](how-to-write-text-to-a-file.md), [Jak: Odczytywanie znaków z ciągu](how-to-read-characters-from-a-string.md)i [Jak: Pisanie znaków do ciągu](how-to-write-characters-to-a-string.md).
 
-## <a name="asynchronous-io-operations"></a>Asynchroniczne operacje we/wy
+## <a name="asynchronous-io-operations"></a>Operacje we/wy asynchronicznej
 
-Odczyt lub zapis dużej ilości danych może wymagać użycia wielu zasobów. Te zadania należy wykonywać asynchronicznie, jeśli aplikacja ma ciągle reagować na działania użytkownika. Podczas synchronicznych operacji We/Wy wątek interfejsu użytkownika jest blokowany, aż do zakończenia wykonywania zasobochłonnej operacji.  Podczas tworzenia aplikacji do sklepu Windows 8. x używaj asynchronicznych operacji we/wy, aby zapobiec tworzeniu wrażenie, że aplikacja przestała działać.
+Odczyt lub zapis dużej ilości danych może wymagać użycia wielu zasobów. Te zadania należy wykonywać asynchronicznie, jeśli aplikacja ma ciągle reagować na działania użytkownika. Podczas synchronicznych operacji We/Wy wątek interfejsu użytkownika jest blokowany, aż do zakończenia wykonywania zasobochłonnej operacji.  Podczas tworzenia aplikacji ze Sklepu Windows 8.x używaj operacji asynchronicznych, aby zapobiec tworzeniu wrażenia, że aplikacja przestała działać.
 
-Asynchroniczne elementy członkowskie zawierają `Async` nazwy, takie jak <xref:System.IO.Stream.CopyToAsync%2A>, <xref:System.IO.Stream.FlushAsync%2A>, <xref:System.IO.Stream.ReadAsync%2A>i <xref:System.IO.Stream.WriteAsync%2A> metod. Te metody są używane ze słowami kluczowymi `async` i `await`.
+Asynchroniczne elementy `Async` członkowskie zawierają w swoich <xref:System.IO.Stream.CopyToAsync%2A> <xref:System.IO.Stream.FlushAsync%2A>nazwach, takie jak , , <xref:System.IO.Stream.ReadAsync%2A>, i <xref:System.IO.Stream.WriteAsync%2A> metody. Używasz tych metod ze `async` `await` słowami kluczowymi i.
 
-Aby uzyskać więcej informacji, zobacz [asynchroniczne operacje we/wy na plikach](asynchronous-file-i-o.md).
+Aby uzyskać więcej informacji, zobacz [Asynchronous File We/Wy](asynchronous-file-i-o.md).
 
 ## <a name="compression"></a>Kompresja
 
-Termin „kompresja” dotyczy procesu zmniejszania rozmiaru pliku, który ma być przechowywany. Dekompresja to proces wyodrębniania zawartości skompresowanego pliku, dzięki czemu będzie on miał format umożliwiający używanie go. Przestrzeń nazw <xref:System.IO.Compression?displayProperty=nameWithType> zawiera typy służące do kompresowania i dekompresowania plików i strumieni.
+Termin „kompresja” dotyczy procesu zmniejszania rozmiaru pliku, który ma być przechowywany. Dekompresja to proces wyodrębniania zawartości skompresowanego pliku, dzięki czemu będzie on miał format umożliwiający używanie go. Obszar <xref:System.IO.Compression?displayProperty=nameWithType> nazw zawiera typy kompresji i dekompresji plików i strumieni.
 
 Następujące klasy są często używane podczas kompresowania i dekompresowania plików i strumieni:
 
-- <xref:System.IO.Compression.ZipArchive> — służy do tworzenia i pobierania wpisów w archiwum zip.
+- <xref:System.IO.Compression.ZipArchive>– do tworzenia i pobierania wpisów w archiwum zip.
 
-- <xref:System.IO.Compression.ZipArchiveEntry> — dla reprezentowania skompresowanego pliku.
+- <xref:System.IO.Compression.ZipArchiveEntry>– do reprezentowania skompresowanego pliku.
 
-- <xref:System.IO.Compression.ZipFile> — służy do tworzenia, wyodrębniania i otwierania skompresowanego pakietu.
+- <xref:System.IO.Compression.ZipFile>– do tworzenia, wydobywania i otwierania skompresowanego opakowania.
 
-- <xref:System.IO.Compression.ZipFileExtensions> — służy do tworzenia i wyodrębniania wpisów w skompresowanym pakiecie.
+- <xref:System.IO.Compression.ZipFileExtensions>– do tworzenia i wyodrębniania wpisów w pakiecie skompresowanym.
 
-- <xref:System.IO.Compression.DeflateStream> — na potrzeby kompresowania i dekompresowania strumieni przy użyciu algorytmu Wklęśnięcie.
+- <xref:System.IO.Compression.DeflateStream>– do kompresji i dekompresji strumieni za pomocą algorytmu Deflate.
 
-- <xref:System.IO.Compression.GZipStream> — służy do kompresowania i dekompresowania strumieni w formacie gzip.
+- <xref:System.IO.Compression.GZipStream>– do kompresji i dekompresji strumieni w formacie danych gzip.
 
-Zobacz [jak: kompresowanie i wyodrębnianie plików](how-to-compress-and-extract-files.md).
+Zobacz [jak: Kompresować i wyodrębniać pliki](how-to-compress-and-extract-files.md).
 
-## <a name="isolated-storage"></a>Magazyn izolowany
+## <a name="isolated-storage"></a>Magazyn odizolowany
 
 Wydzielona pamięć masowa to mechanizm magazynu, który dostarcza izolację i bezpieczeństwo przez definiowanie ustandaryzowanych metod kojarzenia kodu z zapisanymi danymi. Ta pamięć masowa oferuje wirtualny system plików, który jest izolowany dla konkretnego użytkownika, zestawu i (opcjonalnie) domeny. Wydzielona pamięć masowa jest szczególnie użyteczna, gdy aplikacja nie ma uprawnień dostępu do plików użytkownika. Można zapisać ustawienia lub pliki aplikacji w sposób, który jest kontrolowany przez zasady zabezpieczeń komputera.
 
-Izolowany magazyn nie jest dostępny dla aplikacji ze sklepu Windows 8. x. Zamiast tego należy używać klas danych aplikacji w przestrzeni nazw <xref:Windows.Storage?displayProperty=nameWithType>. Aby uzyskać więcej informacji, zobacz [dane aplikacji](https://docs.microsoft.com/previous-versions/windows/apps/hh464917%28v=win.10%29).
+Izolowana pamięć nie jest dostępna dla aplikacji ze Sklepu Windows 8.x; Zamiast tego należy użyć <xref:Windows.Storage?displayProperty=nameWithType> klas danych aplikacji w obszarze nazw. Aby uzyskać więcej informacji, zobacz [Dane aplikacji](https://docs.microsoft.com/previous-versions/windows/apps/hh464917%28v=win.10%29).
 
 Podczas implementowania wydzielonej pamięci masowej często używane są następujące klasy:
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorage> — udostępnia klasę bazową w przypadku implementacji izolowanych magazynów.
+- <xref:System.IO.IsolatedStorage.IsolatedStorage>– zapewnia klasę podstawową dla implementacji magazynu izolowanego.
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFile> — udostępnia izolowany obszar przechowywania zawierający pliki i katalogi.
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>– zapewnia izolowany obszar przechowywania zawierający pliki i katalogi.
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> — uwidacznia plik w magazynie izolowanym.
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>- udostępnia plik w izolowanym magazynie.
 
-Zobacz [izolowany magazyn](isolated-storage.md).
+Zobacz [Izolowany magazyn](isolated-storage.md).
 
-## <a name="io-operations-in-windows-store-apps"></a>Operacje we/wy w aplikacjach ze sklepu Windows
+## <a name="io-operations-in-windows-store-apps"></a>Operacje we/wy w aplikacjach ze Sklepu Windows
 
-Aplikacje ze sklepu .NET dla systemu Windows 8. x zawierają wiele typów do odczytu i zapisu do strumieni; Jednak ten zestaw nie obejmuje wszystkich typów .NET Framework we/wy.
+Aplikacje .NET dla systemu Windows 8.x Store zawierają wiele typów do odczytu i zapisu do strumieni; Jednak ten zestaw nie zawiera wszystkich typów we/wy .NET Framework.
 
-Kilka ważnych różnic podczas korzystania z operacji we/wy w aplikacjach ze sklepu Windows 8. x:
+Niektóre ważne różnice, które należy zauważyć podczas korzystania z operacji we/wy w aplikacjach ze Sklepu Windows 8.x:
 
-- Typy przeznaczone wyłącznie dla operacji na plikach, takich jak <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> i <xref:System.IO.DirectoryInfo>, nie są zawarte w aplikacjach w sklepie .NET dla systemu Windows 8. x. Zamiast tego należy użyć typów w przestrzeni nazw <xref:Windows.Storage?displayProperty=nameWithType> środowisko wykonawcze systemu Windows, takich jak <xref:Windows.Storage.StorageFile> i <xref:Windows.Storage.StorageFolder>.
+- Typy związane z operacjami plików, <xref:System.IO.FileInfo> <xref:System.IO.Directory> takie <xref:System.IO.DirectoryInfo>jak <xref:System.IO.File>, , i , nie są uwzględniane w aplikacjach sklepu .NET dla systemu Windows 8.x. Zamiast tego należy użyć <xref:Windows.Storage?displayProperty=nameWithType> typów w przestrzeni nazw środowiska <xref:Windows.Storage.StorageFile> <xref:Windows.Storage.StorageFolder>uruchomieniowego systemu Windows, takich jak i .
 
-- Magazyn izolowany nie jest dostępny. Zamiast tego należy użyć [danych aplikacji](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)).
+- Magazyn izolowany nie jest dostępny; zamiast tego użyj [danych aplikacji](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)).
 
-- Użyj metod asynchronicznych, takich jak <xref:System.IO.Stream.ReadAsync%2A> i <xref:System.IO.Stream.WriteAsync%2A>, aby zapobiec blokowaniu wątku interfejsu użytkownika.
+- Użyj metod asynchronicznych, <xref:System.IO.Stream.ReadAsync%2A> takich <xref:System.IO.Stream.WriteAsync%2A>jak i , aby zapobiec blokowaniu wątku interfejsu użytkownika.
 
-- Typy kompresji oparte na ścieżce <xref:System.IO.Compression.ZipFile> i <xref:System.IO.Compression.ZipFileExtensions> są niedostępne. Zamiast tego należy użyć typów w przestrzeni nazw <xref:Windows.Storage.Compression?displayProperty=nameWithType>.
+- Typy <xref:System.IO.Compression.ZipFile> kompresji oparte <xref:System.IO.Compression.ZipFileExtensions> na ścieżkach i nie są dostępne. Zamiast tego należy użyć <xref:Windows.Storage.Compression?displayProperty=nameWithType> typów w obszarze nazw.
 
-W razie potrzeby można wykonywać konwersje między strumieniami programu .NET Framework i strumieniami środowiska wykonawczego systemu Windows. Aby uzyskać więcej informacji, zobacz [jak: konwertowanie między strumieniami .NET Framework a strumieniami środowisko wykonawcze systemu Windows](how-to-convert-between-dotnet-streams-and-winrt-streams.md) lub <xref:System.IO.WindowsRuntimeStreamExtensions>.
+W razie potrzeby można wykonywać konwersje między strumieniami programu .NET Framework i strumieniami środowiska wykonawczego systemu Windows. Aby uzyskać więcej informacji, zobacz [Jak: Konwertować między strumieniami programu .NET Framework i strumieniami środowiska uruchomieniowego systemu Windows](how-to-convert-between-dotnet-streams-and-winrt-streams.md) lub <xref:System.IO.WindowsRuntimeStreamExtensions>.
 
-Aby uzyskać więcej informacji na temat operacji we/wy w aplikacji ze sklepu Windows 8. x, zobacz [Szybki Start: odczytywanie i zapisywanie plików](https://docs.microsoft.com/previous-versions/windows/apps/hh758325(v=win.10)).
+Aby uzyskać więcej informacji na temat operacji we/wy w aplikacji ze Sklepu Windows 8.x, zobacz [Szybki start: Odczytywanie i zapisywanie plików](https://docs.microsoft.com/previous-versions/windows/apps/hh758325(v=win.10)).
 
-## <a name="io-and-security"></a>We/wy i zabezpieczenia
+## <a name="io-and-security"></a>We/Wy i bezpieczeństwo
 
-W przypadku używania klas w przestrzeni nazw <xref:System.IO?displayProperty=nameWithType> należy spełnić wymagania dotyczące zabezpieczeń systemu operacyjnego, takie jak listy kontroli dostępu (ACL), aby kontrolować dostęp do plików i katalogów. To wymaganie jest uzupełnieniem jakichkolwiek wymagań <xref:System.Security.Permissions.FileIOPermission>. Listami ACL można zarządzać programowo. Aby uzyskać więcej informacji, zobacz [jak: Dodawanie lub usuwanie wpisów listy Access Control](how-to-add-or-remove-access-control-list-entries.md).
+Korzystając z klas w <xref:System.IO?displayProperty=nameWithType> obszarze nazw, należy przestrzegać wymagań zabezpieczeń systemu operacyjnego, takich jak listy kontroli dostępu (ACL), aby kontrolować dostęp do plików i katalogów. Wymóg ten jest uzupełniony o wszelkie <xref:System.Security.Permissions.FileIOPermission> wymagania. Listami ACL można zarządzać programowo. Aby uzyskać więcej informacji, zobacz [Jak: Dodawanie lub usuwanie wpisów listy kontroli dostępu](how-to-add-or-remove-access-control-list-entries.md).
 
-Domyślne zasady zabezpieczeń uniemożliwiają aplikacjom internetowym i intranetowym dostęp do plików na komputerze użytkownika. W związku z tym podczas pisania kodu, który zostanie pobrany przez Internet lub intranet, nie należy używać klas We/Wy, które wymagają ścieżki do pliku fizycznego. Zamiast tego należy używać [wydzielonego magazynu](isolated-storage.md) dla tradycyjnych aplikacji .NET Framework lub użyć [danych aplikacji](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) dla aplikacji ze sklepu Windows 8. x.
+Domyślne zasady zabezpieczeń uniemożliwiają aplikacjom internetowym i intranetowym dostęp do plików na komputerze użytkownika. W związku z tym podczas pisania kodu, który zostanie pobrany przez Internet lub intranet, nie należy używać klas We/Wy, które wymagają ścieżki do pliku fizycznego. Zamiast tego należy użyć [izolowanego magazynu](isolated-storage.md) dla tradycyjnych aplikacji .NET Framework lub użyć [danych aplikacji](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) dla aplikacji ze Sklepu Windows 8.x.
 
 Sprawdzanie zabezpieczeń jest wykonywane tylko wtedy, gdy jest konstruowany strumień. W związku z tym nie należy otwierać strumienia, a następnie przekazywać go do kodu lub domeny aplikacji o niższym poziomie zaufania.
 
-## <a name="related-topics"></a>Tematy pokrewne
+## <a name="related-topics"></a>Powiązane tematy
 
 - [Typowe zadania we/wy](common-i-o-tasks.md)\
 Lista zadań We/Wy skojarzonych z plikami, katalogami, i strumieniami oraz łącza do odpowiedniej zawartości i przykładów dla każdego zadania.
 
-- [Asynchroniczne operacje we/wy plików](asynchronous-file-i-o.md)\
+- [We/Wy pliku asynchronicznego](asynchronous-file-i-o.md)\
 Opis korzyści związanych z wydajnością oraz podstawowych asynchronicznych operacji We/Wy.
 
-- \ [magazynu izolowanego](isolated-storage.md)
+- [Magazyn izolowany](isolated-storage.md)\
 Opis mechanizmu pamięci masowej danych, który dostarcza izolację i bezpieczeństwo przez definiowanie ustandaryzowanych opcji kojarzenia kodu z zapisanymi danymi.
 
-- [Potoki](pipe-operations.md)\
+- [Rury](pipe-operations.md)\
 Opis operacji wykonywanych w anonimowych i nazwanych potokach w programie .NET Framework.
 
 - [Pliki mapowane w pamięci](memory-mapped-files.md)\

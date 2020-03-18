@@ -1,20 +1,20 @@
 ---
-ms.openlocfilehash: dc5f608dc9eb4635e1282a9ca5e15ff1bf7d0e0d
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 711b51c590be149545fda3130148e2bcaef8be4f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77449565"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78261945"
 ---
 ### <a name="private-fields-added-to-built-in-struct-types"></a>Pola prywatne dodane do wbudowanych typów struktur
 
-Pola prywatne zostały dodane do wbudowanych typów struktur w [zestawach referencyjnych](../../../../docs/standard/assembly/reference-assemblies.md). W związku z tym w C#programie typy struktur muszą zawsze być tworzone przy użyciu [operatora new](../../../../docs/csharp/language-reference/operators/new-operator.md) lub [literału domyślnego](../../../../docs/csharp/language-reference/operators/default.md#default-literal)lub przez zainicjowanie każdego pola prywatnego.
+Pola prywatne zostały dodane do [niektórych typów struktur](#affected-apis) w [złożeniach referencyjnych](../../../../docs/standard/assembly/reference-assemblies.md). W rezultacie w języku C#te typy struktur zawsze muszą być tworzone przy użyciu [nowego operatora](../../../../docs/csharp/language-reference/operators/new-operator.md) lub [domyślnego literału](../../../../docs/csharp/language-reference/operators/default.md#default-literal).
 
 #### <a name="change-description"></a>Zmień opis
 
-W programie .NET Core 2,0 i poprzednich wersjach niektóre wbudowane typy struktur, na przykład <xref:System.ConsoleKeyInfo>, można utworzyć wystąpienie bez użycia operatora `new` lub [domyślnego literału](../../../../docs/csharp/language-reference/operators/default.md#default-literal) w C#elemencie. Było tak dlatego, że [zestawy referencyjne](../../../../docs/standard/assembly/reference-assemblies.md) używane C# przez kompilator nie zawierały prywatnych pól struktur. Wszystkie pola prywatne dla typów struktury .NET są dodawane do zestawów referencyjnych zaczynających się na platformie .NET Core 2,1.
+W .NET Core 2.0 i poprzednich wersjach niektóre <xref:System.ConsoleKeyInfo>typy struktur, na przykład, `new` mogą być tworzone bez użycia operatora lub [domyślnego literału](../../../../docs/csharp/language-reference/operators/default.md#default-literal) w języku C#. Stało się tak, ponieważ [zestawy odwołań](../../../../docs/standard/assembly/reference-assemblies.md) używane przez kompilator C# nie zawierały pól prywatnych dla struktur. Wszystkie pola prywatne dla typów struktury .NET są dodawane do zestawów odwołań rozpoczynających się w .NET Core 2.1.
 
-Na przykład poniższy C# kod kompiluje się w programie .net Core 2,0, ale nie w programie .net Core 2,1:
+Na przykład następujący kod C# kompiluje się w .NET Core 2.0, ale nie w .NET Core 2.1:
 
 ```csharp
 ConsoleKeyInfo key;    // Struct type
@@ -25,7 +25,7 @@ if (key.ToString() == "y")
 }
 ```
 
-W programie .NET Core 2,1 Poprzedni kod powoduje następujący błąd kompilatora: **CS0165-użycie nieprzypisanej zmiennej lokalnej "Key"**
+W .NET Core 2.1 poprzedni kod powoduje następujący błąd kompilatora: **CS0165 - Użycie nieprzypisanej zmiennej lokalnej 'key'**
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -33,9 +33,9 @@ W programie .NET Core 2,1 Poprzedni kod powoduje następujący błąd kompilator
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Tworzenie wystąpienia typów struktury przy użyciu operatora `new` lub [domyślnego literału](../../../../docs/csharp/language-reference/operators/default.md#default-literal).
+Tworzenie wystąpienia typów struktury przy `new` użyciu operatora lub [domyślnego literału](../../../../docs/csharp/language-reference/operators/default.md#default-literal).
 
-Na przykład:
+Przykład:
 
 ```csharp
 ConsoleKeyInfo key = new ConsoleKeyInfo();    // Struct type.
@@ -49,16 +49,6 @@ ConsoleKeyInfo key = default;    // Struct type.
 
 if (key.ToString() == "y")
     Console.WriteLine("Yes!");
-```
-
-```csharp
-ConsoleKeyInfo[] keys = new ConsoleKeyInfo[5];    // Array of structs.
-
-for (int i = 0; i < keys.Length; i++)
-{
-    // Initialize each array element with the new operator.
-    keys[i] = new ConsoleKeyInfo();
-}
 ```
 
 #### <a name="category"></a>Kategoria

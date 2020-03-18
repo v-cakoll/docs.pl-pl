@@ -1,48 +1,49 @@
 ---
 title: Wprowadzenie do delegatów
-description: Więcej informacji o delegatach w tym temacie zawierającym podstawowe koncepcje i Omówienie celów projektowania języka dla delegatów.
+description: Dowiedz się więcej o pełnomocnikach w tym temacie przeglądu, który wprowadza podstawowe pojęcia i omawia cele projektowania języka dla pełnomocników.
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 59b61d77-84e5-457b-8da5-fb5f24ca6ed6
-ms.openlocfilehash: deff297ccce6cd14a7cd21c49638a9c6030a9996
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: fd594f77c034533a1d5aee1d8279e9b727284311
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037404"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146232"
 ---
 # <a name="introduction-to-delegates"></a>Wprowadzenie do delegatów
 
-Delegaty zapewniają mechanizm *późnego wiązania* w programie .NET. Późne wiązanie oznacza, że tworzysz algorytm, w którym obiekt wywołujący dostarcza również co najmniej jedną metodę implementującą część algorytmu.
+Delegaci zapewniają mechanizm *późnego wiązania* w .NET. Późne wiązanie oznacza, że można utworzyć algorytm, w którym obiekt wywołujący dostarcza również co najmniej jedną metodę, która implementuje część algorytmu.
 
-Rozważmy na przykład sortowanie listy gwiazdek w aplikacji astronomią.
-Możesz posortować te gwiazdki według ich odległości od ziemi lub wielkości gwiazdki lub ich postrzeganej jasności.
+Rozważmy na przykład sortowanie listy gwiazd w aplikacji astronomicznej.
+Możesz posortować te gwiazdy według ich odległości od ziemi, wielkości gwiazdy lub ich postrzeganej jasności.
 
-We wszystkich przypadkach Metoda Sort () zasadniczo wykonuje te same czynności: układa elementy na liście na podstawie porównania. Kod, który porównuje dwie gwiazdki, różni się w zależności od kolejności sortowania.
+We wszystkich tych przypadkach Sort() Metoda zasadniczo to samo: rozmieszcza elementy na liście na podstawie porównania. Kod, który porównuje dwie gwiazdki jest inny dla każdego z kolejności sortowania.
 
-Te rodzaje rozwiązań zostały użyte w oprogramowaniu do połowu wieku.
-Koncepcja C# delegata języka zapewnia pomoc techniczną w języku pierwszej klasy i bezpieczeństwo typów wokół koncepcji.
+Tego rodzaju rozwiązania są stosowane w oprogramowaniu od pół wieku.
+Koncepcja delegata języka Języka C# zapewnia obsługę języka pierwszej klasy i bezpieczeństwo typu wokół koncepcji.
 
-Jak widać w dalszej części tej serii, C# kod napisany dla algorytmów, takich jak ten typ jest bezpieczny, i wykorzystuje język i kompilator, aby upewnić się, że typy pasują do argumentów i typów zwracanych.
+Jak zobaczysz w dalszej części tej serii, kod C# piszesz dla algorytmów, takich jak ten jest typ bezpieczny i wykorzystuje język i kompilator, aby upewnić się, że typy są zgodne dla argumentów i zwracanych typów.
 
 ## <a name="language-design-goals-for-delegates"></a>Cele projektowania języka dla delegatów
 
-Projektanci języka wyliczają kilka celów funkcji, które ostatecznie stały się delegatami.
+Projektanci języka wyliczono kilka celów dla funkcji, która ostatecznie stała się delegatów.
 
-Zespół chciał wspólną konstrukcję języka, która może być używana w przypadku algorytmów późnego wiązania. Dzięki temu deweloperzy mogą uczyć się jednego koncepcji i korzystać z tego samego koncepcji przez wiele różnych problemów z oprogramowaniem.
+Zespół chciał wspólnej konstrukcji języka, który może być używany dla wszelkich algorytmów późnego wiązania. Dzięki temu deweloperzy mogą nauczyć się jednej koncepcji i używać tej samej koncepcji w wielu różnych problemach z oprogramowaniem.
 
-Drugi zespół chciał obsługiwać zarówno wywołania metody pojedynczej, jak i multiemisji. (Delegaty multiemisji są delegatami, które łączą wiele wywołań metod. Zobaczysz przykłady [w dalszej części tej serii](delegate-class.md).) 
+Po drugie, zespół chciał obsługiwać wywołania metodą pojedynczej i multiemisji. (Delegatów multiemisji są delegatów, które łańcuch razem wiele wywołań metody.
+Przykłady w [dalszej części tej serii](delegate-class.md).)
 
-Zespół potrzebował delegatów do obsługi tego samego typu bezpieczeństwa, który deweloperzy oczekują C# od wszystkich konstrukcji. 
+Zespół chciał delegatów do obsługi tego samego typu bezpieczeństwa, które deweloperzy oczekują od wszystkich konstrukcji języka C#.
 
-Na koniec zespół uznał, że wzorzec zdarzeń jest jednym określonym wzorcem, w którym delegatów lub algorytmem późnego wiązania jest bardzo użyteczny. Zespół chciał upewnić się, że kod delegatów może stanowić podstawę dla wzorca zdarzeń .NET.
+Na koniec zespół rozpoznał, że wzorzec zdarzenia jest jeden wzorzec, w którym delegatów lub wszelkie algorytmy późnego wiązania, jest bardzo przydatne. Zespół chciał upewnić się, że kod dla delegatów może stanowić podstawę wzorca zdarzenia .NET.
 
-Wynikiem wszystkich czynności roboczych była obsługa delegowania i zdarzeń w programie C# i .NET. Pozostałe artykuły w tej sekcji obejmują funkcje języka, obsługę biblioteki i typowe idiomy, które są używane podczas pracy z delegatami.
+Wynikiem całej tej pracy był pełnomocnik i obsługa zdarzeń w językach C# i .NET. Pozostałe artykuły w tej sekcji omówi funkcje języka, obsługę biblioteki i wspólne idiomy, które są używane podczas pracy z delegatami.
 
-Dowiesz się więcej na temat słowa kluczowego `delegate` i kodu, który generuje. Dowiesz się więcej na temat funkcji w klasie `System.Delegate` i sposobu korzystania z tych funkcji. Dowiesz się, jak tworzyć bezpieczne Delegaty typu i jak tworzyć metody, które mogą być wywoływane przez delegatów. Dowiesz się również, jak korzystać z delegatów i zdarzeń przy użyciu wyrażeń lambda. Zobaczysz, gdzie Delegaty staną się jednym z bloków konstrukcyjnych dla LINQ. Dowiesz się, jak obiekty delegowane są podstawą dla wzorca zdarzeń .NET i jak się różnią.
+Dowiesz się o `delegate` sutece kluczowej i o tym, jaki kod generuje. Dowiesz się o funkcjach `System.Delegate` w klasie i jak te funkcje są używane. Dowiesz się, jak utworzyć typ bezpiecznych delegatów i jak utworzyć metody, które mogą być wywoływane za pośrednictwem delegatów. Dowiesz się również, jak pracować z delegatów i zdarzeń przy użyciu wyrażeń Lambda. Zobaczysz, gdzie delegaci stają się jednym z bloków konstrukcyjnych dla LINQ. Dowiesz się, jak delegaci są podstawą wzorca zdarzenia .NET i jak są one różne.
 
-Ogólnie, zobaczysz, jak Delegaty są integralną częścią programowania w programie .NET i pracują z interfejsami API struktury.
+Ogólnie rzecz biorąc, zobaczysz, jak delegaci są integralną częścią programowania w .NET i pracy z ramowych interfejsów API.
 
 Zacznijmy.
 
-[Next](delegate-class.md)
+[Dalej](delegate-class.md)

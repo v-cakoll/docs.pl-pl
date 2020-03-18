@@ -1,40 +1,40 @@
 ---
 title: Co to jest ML.NET i jak to działa?
-description: ML.NET umożliwia dodawanie uczenia maszynowego do aplikacji .NET, w scenariuszach w trybie online lub offline. Dzięki tej możliwości można dokonać automatycznych prognoz przy użyciu danych dostępnych dla aplikacji bez konieczności podłączania do sieci w celu użycia ML.NET. W tym artykule objaśniono podstawowe informacje dotyczące uczenia maszynowego w programie ML.NET.
+description: ML.NET umożliwia dodawanie uczenia maszynowego do aplikacji .NET w scenariuszach online lub offline. Dzięki tej funkcji można tworzyć automatyczne prognozy przy użyciu danych dostępnych dla aplikacji bez konieczności łączenia się z siecią w celu korzystania z ML.NET. W tym artykule wyjaśniono podstawy uczenia maszynowego w ML.NET.
 ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
-ms.openlocfilehash: bc157b22201c66bceecf78aaa36b9c653fe6a131
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 169250adf81992ad0025e78eb9c8f151107bcf40
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794573"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79185858"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>Co to jest ML.NET i jak to działa?
 
-ML.NET umożliwia dodawanie uczenia maszynowego do aplikacji .NET, w scenariuszach w trybie online lub offline. Dzięki tej możliwości można dokonać automatycznych prognoz przy użyciu danych dostępnych dla aplikacji. Aplikacje do uczenia maszynowego wykorzystują wzorce w danych, aby tworzyć przewidywania, a nie muszą być jawnie programowane.
+ML.NET umożliwia dodawanie uczenia maszynowego do aplikacji .NET w scenariuszach online lub offline. Dzięki tej funkcji można tworzyć automatyczne prognozy przy użyciu danych dostępnych dla aplikacji. Aplikacje uczenia maszynowego korzystać z wzorców w danych do prognozowania, a nie muszą być jawnie zaprogramowane.
 
-Central do ML.NET to **model**uczenia maszynowego. Model określa kroki niezbędne do przekształcenia danych wejściowych w prognozowanie. Za pomocą ML.NET można uczenie niestandardowego modelu przez określenie algorytmu lub zaimportować wstępnie szkolonych modeli TensorFlow i ONNX.
+Centralnym elementem ML.NET jest **model**uczenia maszynowego. Model określa kroki potrzebne do przekształcenia danych wejściowych w przewidywanie. Za pomocą ML.NET można nabyć model niestandardowy, określając algorytm lub zaimportować wstępnie przeszkolonych modeli TensorFlow i ONNX.
 
-Po utworzeniu modelu możesz dodać go do swojej aplikacji, aby dokonać prognoz.
+Gdy masz model, można dodać go do aplikacji, aby prognozy.
 
-ML.NET działa w systemach Windows, Linux i macOS przy użyciu platformy .NET Core lub systemu Windows przy użyciu .NET Framework. 64 bit jest obsługiwany na wszystkich platformach. 32 bit jest obsługiwany w systemie Windows, z wyjątkiem funkcji TensorFlow, LightGBM i ONNX.
+ML.NET działa w systemach Windows, Linux i macOS przy użyciu programu .NET Core lub systemu Windows przy użyciu programu .NET Framework. 64 bit jest obsługiwany na wszystkich platformach. 32-bitowy jest obsługiwany w systemie Windows, z wyjątkiem funkcji związanych z TensorFlow, LightGBM i ONNX.
 
-Przykłady typu przewidywania, które można wprowadzić przy użyciu ML.NET:
+Przykłady typów prognoz, które można wykonać za pomocą ML.NET:
 
 |||
 |-|-|
-|Klasyfikacja/Kategoryzacja|Automatycznie Podziel Opinie klientów na kategorie dodatnie i ujemne|
-|Wartości ciągłe regresji/przewidywania|Przewidywanie ceny domów na podstawie rozmiaru i lokalizacji|
-|Wykrywanie anomalii|Wykrywanie fałszywych transakcji bankowych |
-|Zalecenia|Sugeruj produkty, które kupujący online może chcieć kupić, w oparciu o ich poprzednie zakupy|
-|Szeregi czasowe/dane sekwencyjne|Prognoza pogody/sprzedaż produktu|
-|Klasyfikacja obrazu|Kategoryzacja pathologies w obrazach medycznych|
+|Klasyfikacja/kategoryzacja|Automatyczne dzielenie opinii klientów na kategorie pozytywne i negatywne|
+|Regresja/Przewidywanie wartości ciągłych|Przewidywanie cen domów na podstawie wielkości i lokalizacji|
+|Wykrywanie anomalii|Wykrywanie nieuczciwych transakcji bankowych |
+|Zalecenia|Zaproponuj produkty, które kupujący online mogą chcieć kupić na podstawie wcześniejszych zakupów|
+|Dane szeregowe/sekwencyjne|Prognoza pogody/sprzedaży produktów|
+|Klasyfikacja obrazów|Kategoryzuj patologie na obrazach medycznych|
 
-## <a name="hello-mlnet-world"></a>Witaj w świecie ML.NET
+## <a name="hello-mlnet-world"></a>Witaj ML.NET Świecie
 
-Kod w poniższym fragmencie kodu demonstruje najprostszą aplikację ML.NET. Ten przykład tworzy model regresji liniowej do przewidywania cen dla domu przy użyciu rozmiaru domu i danych cen. 
+Kod w poniższym fragmencie kodu pokazuje najprostszą aplikację ML.NET. W tym przykładzie konstruuje model regresji liniowej do przewidywania cen domów przy użyciu danych rozmiaru domu i ceny.
 
  ```csharp
     using System;
@@ -87,59 +87,59 @@ Kod w poniższym fragmencie kodu demonstruje najprostszą aplikację ML.NET. Ten
 
 ## <a name="code-workflow"></a>Przepływ pracy kodu
 
-Poniższy diagram przedstawia strukturę kodu aplikacji, a także proces iteracyjny projektowania modelu:
+Poniższy diagram przedstawia strukturę kodu aplikacji, a także iteracyjny proces tworzenia modelu:
 
 - Zbieranie i ładowanie danych szkoleniowych do obiektu **IDataView**
-- Określ potok operacji, aby wyodrębnić funkcje i zastosować algorytm uczenia maszynowego
-- Uczenie modelu przez wywoływanie funkcji **dopasowania ()** na potoku
-- Oceń model i wykonaj iterację w celu usprawnienia
-- Zapisz model w formacie binarnym, który ma być używany w aplikacji
+- Określ potok operacji w celu wyodrębnienia funkcji i zastosowania algorytmu uczenia maszynowego
+- Trenuj model, wywołując **fit()** w potoku
+- Oceń model i iterate, aby poprawić
+- Zapisz model w formacie binarnym, do użycia w aplikacji
 - Załaduj model z powrotem do obiektu **ITransformer**
-- Wykonaj przewidywania, wywołując **CreatePredictionEngine. predykcyjny ()**
+- Dokonaj prognoz, wywołując **CreatePredictionEngine.Predict()**
 
-![Przepływ tworzenia aplikacji ML.NET, w tym składniki służące do generowania danych, tworzenia potoku, szkolenia modeli, oceny modelu i użycia modelu](./media/mldotnet-annotated-workflow.png)
+![ML.NET przepływ rozwoju aplikacji, w tym składniki do generowania danych, opracowywania potoku, szkolenia modelu, oceny modelu i użycia modelu](./media/mldotnet-annotated-workflow.png)
 
-Przyjrzyjmy się nieco bardziej szczegółowym koncepcjom.
+Zagłębijmy się nieco głębiej w te koncepcje.
 
 ## <a name="machine-learning-model"></a>Model uczenia maszynowego
 
-Model ML.NET jest obiektem, który zawiera przekształcenia do wykonania na danych wejściowych w celu osiągnięcia przewidywanych danych wyjściowych.
+Model ML.NET jest obiektem, który zawiera przekształcenia do wykonania na danych wejściowych, aby dotrzeć do przewidywanego danych wyjściowych.
 
-### <a name="basic"></a>Podstawowy
+### <a name="basic"></a>Podstawowa (Basic)
 
-Najpopularniejszym modelem jest dwuwymiarowa regresja liniowa, w której jedna ciągła ilość jest proporcjonalna do innej, jak w powyższym przykładzie cen domu.
+Najbardziej podstawowym modelem jest dwuwymiarowa regresja liniowa, gdzie jedna ciągła ilość jest proporcjonalna do drugiej, jak w powyższym przykładzie ceny domu.
 
-![Model regresji liniowej z parametrami bias i wagi](./media/linear-regression-model.svg)
+![Model regresji liniowej z parametrami odchylenia i wagi](./media/linear-regression-model.svg)
 
-Model jest po prostu: $Price = b + rozmiar * w $. Parametry $b $ i $w $ są szacowane przez dopasowanie wiersza do pary par (size, Price). Dane używane do znajdowania parametrów modelu są nazywane **danymi szkoleniowymi**. Dane wejściowe modelu uczenia maszynowego są nazywane **funkcjami**. W tym przykładzie $Size $ jest jedyną funkcją. Wartości typu podstawa — prawdziwie używane do uczenia modelu uczenia maszynowego są nazywane **etykietami**. W tym miejscu $Price $ wartości w zestawie danych szkoleniowych są etykietami.
+Model jest po prostu: $Price = b + Rozmiar * w$. Parametry $b$ i $w $ są szacowane przez zamontowanie linii na zestawie par (rozmiar, cena). Dane używane do znajdowania parametrów modelu są nazywane **danymi treningowymi.** Dane wejściowe modelu uczenia maszynowego są nazywane **funkcjami**. W tym przykładzie $Size$ jest jedyną funkcją. Wartości prawdy gruntu używane do szkolenia modelu uczenia maszynowego są nazywane **etykietami.** W tym miejscu wartości $Price$ w zestawie danych szkoleniowych są etykietami.
 
-### <a name="more-complex"></a>Bardziej skomplikowane
+### <a name="more-complex"></a>Bardziej złożone
 
-Bardziej skomplikowany model klasyfikuje transakcje finansowe do kategorii przy użyciu opisu tekstu transakcji.
+Bardziej złożony model klasyfikuje transakcje finansowe na kategorie przy użyciu opisu tekstu transakcji.
 
-Każdy opis transakcji jest podzielony na zestaw funkcji przez usunięcie zbędnych słów i znaków oraz liczenie kombinacji wyrazów i znaków. Zestaw funkcji służy do uczenia modelu liniowego na podstawie zestawu kategorii w danych szkoleniowych. Im bardziej podobne są nowe opisy w zestawie szkoleniowym, tym bardziej prawdopodobnie zostanie przypisany do tej samej kategorii.
+Każdy opis transakcji jest podzielony na zestaw funkcji przez usunięcie zbędnych wyrazów i znaków oraz zliczanie kombinacji wyrazów i znaków. Zestaw funkcji służy do uczenia modelu liniowego na podstawie zestawu kategorii w danych szkoleniowych. Im bardziej podobny jest nowy opis do opisu w zestawie szkoleniowym, tym bardziej prawdopodobne jest, że zostanie przypisany do tej samej kategorii.
 
 ![Model klasyfikacji tekstu](./media/text-classification-model.svg)
 
-Model cen domu i model klasyfikacji tekstu to modele **liniowe** . W zależności od charakteru danych i rozwiązywanego problemu można także używać modeli **drzewa decyzyjnego** , **ogólnych modeli dodatków** i innych. Więcej informacji o modelach można znaleźć w części [zadania](./resources/tasks.md).
+Zarówno model ceny domu, jak i model klasyfikacji tekstu są modelami **liniowymi.** W zależności od charakteru danych i rozwiązywania problemu można również użyć modeli **drzewa decyzyjnego,** **uogólnionych** modeli dodatków i innych. Więcej informacji na temat modeli można znaleźć w [obszarze Zadania](./resources/tasks.md).
 
 ## <a name="data-preparation"></a>Przygotowywanie danych
 
-W większości przypadków dostępne dane nie są odpowiednie do użycia bezpośrednio do uczenia modelu uczenia maszynowego. Dane pierwotne muszą zostać przygotowane lub wstępnie przetworzone, aby można było ich użyć w celu znalezienia parametrów modelu. Może być konieczne przekonwertowanie danych z wartości ciągu na reprezentację liczbową. Dane wejściowe mogą zawierać nadmiarowe informacje. Może być konieczne zmniejszenie lub powiększenie wymiarów danych wejściowych. Może być konieczne znormalizowanie lub skalowanie danych.
+W większości przypadków dostępne dane nie są odpowiednie do bezpośredniego uczenia modelu uczenia maszynowego. Nieprzetworzone dane muszą być przygotowane lub wstępnie przetworzone, zanim będzie można go użyć do znalezienia parametrów modelu. Dane mogą wymagać konwersji z wartości ciągu do reprezentacji liczbowej. Być może w danych wejściowych mogą być dostępne nadmiarowe informacje. Może być konieczne zmniejszenie lub rozszerzenie wymiarów danych wejściowych. Dane mogą wymagać znormalizowania lub skalowania.
 
-W [samouczkach ml.NET](./tutorials/index.md) przedstawiono różne potoki przetwarzania danych dotyczące tekstu, obrazów, liczb i danych szeregów czasowych używanych do określonych zadań uczenia maszynowego.
+[Samouczki ML.NET](./tutorials/index.md) uczą o różnych potokach przetwarzania danych dla tekstu, obrazu, numerycznych i szeregów czasowych danych używanych do określonych zadań uczenia maszynowego.
 
-[Sposób przygotowania danych](./how-to-guides/prepare-data-ml-net.md) pokazuje, jak bardziej ogólnie stosować Przygotowywanie danych.
+[Jak przygotować dane](./how-to-guides/prepare-data-ml-net.md) pokazuje, jak zastosować przygotowanie danych bardziej ogólnie.
 
-Dodatek wszystkich [dostępnych transformacji](./resources/transforms.md) można znaleźć w sekcji Resources (zasoby).
+W sekcji zasobów można znaleźć dodatek wszystkich [dostępnych przekształceń.](./resources/transforms.md)
 
 ## <a name="model-evaluation"></a>Ocena modelu
 
-Po przeprowadzeniu szkolenia modelu wiesz, jak dobrze będzie w przyszłości prognozować? Dzięki ML.NET można oszacować model na podstawie nowych danych testowych.
+Po przeszkoleniu modelu, skąd wiesz, jak dobrze będzie to w przyszłości prognozy? Za pomocą ML.NET można ocenić model na niektóre nowe dane testowe.
 
-Każdy typ zadania uczenia maszynowego ma metryki używane do oszacowania dokładności i dokładności modelu względem zestawu danych testowych.
+Każdy typ zadania uczenia maszynowego ma metryki używane do oceny dokładności i dokładności modelu w stosunku do zestawu danych testowych.
 
-W naszym przykładzie cen domu użyto zadania **regresji** . Aby oszacować model, Dodaj następujący kod do oryginalnego przykładu.
+W naszym przykładzie ceny domu użyliśmy zadania **Regresja.** Aby ocenić model, dodaj następujący kod do oryginalnego przykładu.
 
 ```csharp
         HouseData[] testHouseData =
@@ -162,13 +162,13 @@ W naszym przykładzie cen domu użyto zadania **regresji** . Aby oszacować mode
         // RMS error: 0.19
 ```
 
-Metryki oceny informują o tym, że błąd ma niską ish i że korelacja między przewidywanym wyjściem i wyjściem testu jest wysoka. To było łatwe! W rzeczywistych przykładach zwiększa się to w celu osiągnięcia dobrych metryk modelu.
+Metryki oceny powiedzieć, że błąd jest low-owski i że korelacja między przewidywane dane wyjściowe i dane wyjściowe testu jest wysoka. To było łatwe! W rzeczywistych przykładach trwa więcej strojenia, aby osiągnąć dobre metryki modelu.
 
-## <a name="mlnet-architecture"></a>Architektura ML.NET
+## <a name="mlnet-architecture"></a>architektura ML.NET
 
-W tej sekcji przejdziemy do wzorca architektury ML.NET. Jeśli jesteś doświadczonym deweloperem platformy .NET, niektóre z tych wzorców będą znane użytkownikowi, a niektóre z nich będą mniej znane. Zaczekaj, aż szczegółowemy!
+W tej sekcji przechodzimy przez wzorce architektoniczne ML.NET. Jeśli jesteś doświadczonym deweloperem .NET, niektóre z tych wzorców będą znane, a niektóre będą mniej znane. Trzymaj się mocno, podczas gdy my nurkujemy!
 
-Aplikacja ML.NET rozpoczyna się od obiektu <xref:Microsoft.ML.MLContext>. Ten obiekt singleton zawiera **wykazy**. Katalog jest fabryką służącą do ładowania i zapisywania danych, przekształcania, instruktorów i składników operacji modelu. Każdy obiekt wykazu ma metody do tworzenia różnych typów składników:
+Aplikacja ML.NET rozpoczyna <xref:Microsoft.ML.MLContext> się od obiektu. Ten pojedynczy obiekt zawiera **katalogi**. Katalog jest fabryką do ładowania i zapisywania danych, przekształca, trenerów i składników operacji modelu. Każdy obiekt katalogu ma metody tworzenia różnych typów składników:
 
 |||||
 |-|-|-|-|
@@ -177,44 +177,44 @@ Aplikacja ML.NET rozpoczyna się od obiektu <xref:Microsoft.ML.MLContext>. Ten o
 |Algorytmy szkoleniowe|Klasyfikacja binarna|<xref:Microsoft.ML.BinaryClassificationCatalog>||
 ||Klasyfikacja wieloklasowa|<xref:Microsoft.ML.MulticlassClassificationCatalog>||
 ||Wykrywanie anomalii|<xref:Microsoft.ML.AnomalyDetectionCatalog>||
-||Obsługa klastrów|<xref:Microsoft.ML.ClusteringCatalog>||
+||Klastrowanie|<xref:Microsoft.ML.ClusteringCatalog>||
 ||Prognozowanie|<xref:Microsoft.ML.ForecastingCatalog>||
-||Określania|<xref:Microsoft.ML.RankingCatalog>||
-||Regresji|<xref:Microsoft.ML.RegressionCatalog>||
-||Zalecenie|<xref:Microsoft.ML.RecommendationCatalog>|Dodaj `Microsoft.ML.Recommender` pakiet NuGet|
-||Szeregów czasowych|<xref:Microsoft.ML.TimeSeriesCatalog>|Dodaj `Microsoft.ML.TimeSeries` pakiet NuGet|
+||Ranking|<xref:Microsoft.ML.RankingCatalog>||
+||Regresja|<xref:Microsoft.ML.RegressionCatalog>||
+||Zalecenie|<xref:Microsoft.ML.RecommendationCatalog>|dodawanie `Microsoft.ML.Recommender` pakietu NuGet|
+||Seria czasu|<xref:Microsoft.ML.TimeSeriesCatalog>|dodawanie `Microsoft.ML.TimeSeries` pakietu NuGet|
 |Użycie modelu ||<xref:Microsoft.ML.ModelOperationsCatalog>||
 
-Możesz przejść do metod tworzenia w każdej z powyższych kategorii. W przypadku korzystania z programu Visual Studio wykazy są wyświetlane za pośrednictwem technologii IntelliSense.
+Można przejść do metod tworzenia w każdej z powyższych kategorii. Za pomocą programu Visual Studio katalogi są wyświetlane za pośrednictwem programu IntelliSense.
 
-   ![Technologia IntelliSense dla instruktorów regresji](./media/catalog-intellisense.png)
+   ![Intellisense dla trenerów regresji](./media/catalog-intellisense.png)
 
-### <a name="build-the-pipeline"></a>Kompilowanie potoku
+### <a name="build-the-pipeline"></a>Tworzenie potoku
 
-W każdym katalogu jest zestaw metod rozszerzających. Przyjrzyjmy się sposobom, w jaki metody rozszerzające są używane do tworzenia potoku szkoleniowego.
+Wewnątrz każdego katalogu jest zestaw metod rozszerzenia. Przyjrzyjmy się, jak metody rozszerzenia są używane do tworzenia potoku szkolenia.
 
 ```csharp
     var pipeline = mlContext.Transforms.Concatenate("Features", new[] { "Size" })
         .Append(mlContext.Regression.Trainers.Sdca(labelColumnName: "Price", maximumNumberOfIterations: 100));
 ```
 
-W tym fragmencie kodu `Concatenate` i `Sdca` są obydwoma metodami w wykazie. Każdy z nich tworzy obiekt [IEstimator](xref:Microsoft.ML.IEstimator%601) , który jest dołączany do potoku.
+We fragmencie `Concatenate` `Sdca` kodu i obie metody w katalogu. Każdy z nich tworzy obiekt [IEstimator,](xref:Microsoft.ML.IEstimator%601) który jest dołączany do potoku.
 
-W tym momencie obiekty są tworzone tylko. Nie wykonano żadnego wykonania.
+W tym momencie obiekty są tworzone tylko. Nie doszło do wykonania.
 
 ### <a name="train-the-model"></a>Uczenie modelu
 
-Po utworzeniu obiektów w potoku, dane mogą być używane do uczenia modelu.
+Po utworzeniu obiektów w potoku dane mogą służyć do nauczenia modelu.
 
 ```csharp
     var model = pipeline.Fit(trainingData);
 ```
 
-Wywołanie `Fit()` używa danych szkoleniowych wejściowych do oszacowania parametrów modelu. Jest to nazywane uczeniem modelu. Należy pamiętać, że model regresji liniowej powyżej ma dwa parametry modelu: **bias** i **waga**. Po wywołaniu `Fit()` są znane wartości parametrów. Większość modeli będzie zawierać wiele innych parametrów niż to.
+Wywołanie `Fit()` używa danych wejściowych szkolenia do oszacowania parametrów modelu. Jest to nazywane szkoleniem modelu. Należy pamiętać, że powyższy model regresji liniowej miał dwa parametry modelu: **stronniczość** i **wagę.** Po `Fit()` wywołaniu wartości parametrów są znane. Większość modeli będzie miała o wiele więcej parametrów niż ten.
 
-Więcej informacji na temat szkolenia modeli można znaleźć w temacie [Jak szkolić model](./how-to-guides/train-machine-learning-model-ml-net.md).
+Możesz dowiedzieć się więcej o szkoleniu modelu w [Jak trenować swój model](./how-to-guides/train-machine-learning-model-ml-net.md).
 
-Obiekt modelu powstającego implementuje interfejs <xref:Microsoft.ML.ITransformer>. Oznacza to, że model przekształca dane wejściowe w przewidywania.
+Wynikowy obiekt modelu implementuje <xref:Microsoft.ML.ITransformer> interfejs. Oznacza to, że model przekształca dane wejściowe w prognozy.
 
 ```csharp
    IDataView predictions = model.Transform(inputData);
@@ -222,7 +222,7 @@ Obiekt modelu powstającego implementuje interfejs <xref:Microsoft.ML.ITransform
 
 ### <a name="use-the-model"></a>Korzystanie z modelu
 
-Można przekształcać dane wejściowe w prognozy zbiorcze lub pojedyncze dane wejściowe. W przykładzie cen domu firma Microsoft: w sposób zbiorczy na potrzeby oceny modelu i po jednym naraz, aby utworzyć nowe prognozowanie. Przyjrzyjmy się tworzeniu pojedynczych prognoz.
+Dane wejściowe można przekształcać w prognozy zbiorczo lub jedno dane wejściowe naraz. W przykładzie ceny domu zrobiliśmy oba: zbiorczo w celu oceny modelu, a po jednym na raz, aby dokonać nowej prognozy. Przyjrzyjmy się tworzeniu pojedynczych prognoz.
 
 ```csharp
     var size = new HouseData() { Size = 2.5F };
@@ -230,27 +230,27 @@ Można przekształcać dane wejściowe w prognozy zbiorcze lub pojedyncze dane w
     var price = predEngine.Predict(size);
 ```
 
-Metoda `CreatePredictionEngine()` przyjmuje klasę wejściową i klasę wyjściową. Nazwy pól i/lub atrybuty kodu określają nazwy kolumn danych używanych podczas szkoleń i prognozowania modeli. Informacje na temat [sposobu tworzenia pojedynczego przewidywania](./how-to-guides/single-predict-model-ml-net.md) można znaleźć w sekcji How to.
+Metoda `CreatePredictionEngine()` przyjmuje klasy wejściowej i klasy wyjściowej. Nazwy pól i/lub atrybuty kodu określają nazwy kolumn danych używanych podczas szkolenia i przewidywania modelu. Możesz przeczytać o [Jak zrobić pojedyncze przewidywanie](./how-to-guides/single-predict-model-ml-net.md) w sekcji Instrukcje.
 
 ### <a name="data-models-and-schema"></a>Modele danych i schemat
 
-Na początku potoku uczenia maszynowego ML.NET są obiekty [DataView](xref:Microsoft.ML.IDataView) .
+W centrum ML.NET potoku uczenia maszynowego są [DataView](xref:Microsoft.ML.IDataView) obiektów.
 
-Każda transformacja w potoku ma schemat wejściowy (nazwy danych, typy i rozmiary, których transformacja oczekuje na dane wejściowe); oraz schemat danych wyjściowych (nazwy danych, typy i rozmiary generowane przez transformację po przekształceniu). Poniższy dokument zawiera szczegółowy opis [interfejsu IDataView oraz jego systemu typów](https://xadupre.github.io/machinelearningext/mlnetdocs/idataviewtypesystem.html).
+Każda transformacja w potoku ma schemat wejściowy (nazwy danych, typy i rozmiary, które transformacja oczekuje, aby zobaczyć na jego danych wejściowych); i schemat wyjściowy (nazwy danych, typy i rozmiary, które transformacja tworzy po transformacji). Poniższy dokument zawiera szczegółowe wyjaśnienie [interfejsu IDataView i jego systemu typów](https://xadupre.github.io/machinelearningext/mlnetdocs/idataviewtypesystem.html).
 
-Jeśli schemat danych wyjściowych z jednego przekształcenia w potoku nie jest zgodny ze schematem wejściowym kolejnej transformacji, ML.NET zgłosi wyjątek.
+Jeśli schemat wyjściowy z jednej transformacji w potoku nie pasuje do schematu wejściowego następnego przekształcenia, ML.NET zwyżenie wyjątku.
 
-Obiekt widoku danych ma kolumny i wiersze. Każda kolumna ma nazwę i typ i długość. Na przykład kolumny wejściowe z przykładu ceny domu mają **rozmiar** i **cenę**. Są one zarówno typu, jak i są liczbami skalarnymi, a nie wektorami.
+Obiekt widoku danych ma kolumny i wiersze. Każda kolumna ma nazwę, typ i długość. Na przykład kolumny wejściowe w przykładzie ceny domu to **Rozmiar** i **Cena**. Są one zarówno typu i są ilości skalarne, a nie te wektorowe.
 
-   ![Przykład widoku danych ML.NET z danymi prognozowania cen domu](./media/ml-net-dataview.png)
+   ![przykład ML.NET widoku danych z danymi dotyczącymi prognozowania cen nieruchomości](./media/ml-net-dataview.png)
 
-Wszystkie algorytmy ML.NET szukają kolumny wejściowej, która jest wektorem. Domyślnie ta kolumna wektora jest nazywana **funkcjami**. To dlatego, że połączymy kolumnę **size** z nową kolumną o nazwie **Features** w naszym przykładzie cen domu.
+Wszystkie ML.NET algorytmy poszukują kolumny wejściowej, która jest wektorem. Domyślnie ta kolumna wektorowa nosi nazwę **Funkcje**. Dlatego połączyliśmy kolumnę **Size** w nową kolumnę o nazwie **Funkcje** w naszym przykładzie ceny domu.
 
  ```csharp
     var pipeline = mlContext.Transforms.Concatenate("Features", new[] { "Size" })
  ```
 
-Wszystkie algorytmy również tworzą nowe kolumny po przeprowadzeniu przewidywania. Stałe nazwy tych nowych kolumn zależą od typu algorytmu uczenia maszynowego. W przypadku zadania regresji jedna z nowych kolumn jest nazywana **wynikiem**. To dlatego, że nasze dane cen są przypisane do tej nazwy.
+Wszystkie algorytmy również utworzyć nowe kolumny po wykonaniu prognozowania. Stałe nazwy tych nowych kolumn zależą od typu algorytmu uczenia maszynowego. W przypadku zadania regresji jedna z nowych kolumn nosi nazwę **Score**. Dlatego przypisaliśmy nasze dane cenowe o tej nazwie.
 
 ```csharp
     public class Prediction
@@ -260,19 +260,19 @@ Wszystkie algorytmy również tworzą nowe kolumny po przeprowadzeniu przewidywa
     }
 ```
 
-Więcej informacji na temat kolumn wyjściowych różnych zadań uczenia maszynowego można znaleźć w przewodniku [zadania Machine Learning](resources/tasks.md) .
+Więcej informacji na temat kolumn wyjściowych różnych zadań uczenia maszynowego można znaleźć w przewodniku [zadania uczenia maszynowego.](resources/tasks.md)
 
-Ważną właściwością obiektów DataView jest to, że są one oceniane **opóźnieniem**. Widoki danych są ładowane i obsługiwane tylko podczas szkoleń i oceny modelu oraz do przewidywania danych. Podczas pisania i testowania aplikacji ML.NET można użyć debugera programu Visual Studio, aby uzyskać wgląd w dowolny obiekt widoku danych przez wywołanie metody [podglądu](xref:Microsoft.ML.DebuggerExtensions.Preview*) .
+Ważną właściwością DataView obiektów jest, że są one oceniane **leniwie**. Widoki danych są ładowane i obsługiwane tylko podczas szkolenia i oceny modelu oraz prognozowania danych. Podczas pisania i testowania aplikacji ML.NET, można użyć debugera Programu Visual Studio, aby zerknąć na dowolny obiekt widoku danych, wywołując [Preview](xref:Microsoft.ML.DebuggerExtensions.Preview*) metody.
 
 ```csharp
     var debug = testPriceDataView.Preview();
 ```
 
-Możesz obejrzeć zmienną `debug` w debugerze i przeanalizować jej zawartość. Nie używaj metody Preview w kodzie produkcyjnym, ponieważ znacząco obniża ona wydajność.
+Można obejrzeć `debug` zmienną w debugerze i sprawdzić jej zawartość. Nie należy używać podglądu metody w kodzie produkcyjnym, ponieważ znacznie obniża wydajność.
 
-### <a name="model-deployment"></a>Wdrożenie modelu
+### <a name="model-deployment"></a>Wdrażanie modelu
 
-W aplikacjach w czasie rzeczywistym model szkoleń i oceny kodu zostanie oddzielony od prognoz. W rzeczywistości te dwa działania są często wykonywane przez oddzielne zespoły. Zespół projektowy modelu może zapisać model do użycia w aplikacji predykcyjnej.
+W rzeczywistych aplikacjach kodu szkolenia i oceny modelu będzie oddzielony od prognozowania. W rzeczywistości te dwa działania są często wykonywane przez oddzielne zespoły. Zespół programistycznych modelu można zapisać model do użycia w aplikacji przewidywania.
 
 ```csharp
    mlContext.Model.Save(model, trainingData.Schema,"model.zip");
@@ -282,6 +282,6 @@ W aplikacjach w czasie rzeczywistym model szkoleń i oceny kodu zostanie oddziel
 
 * Dowiedz się, jak tworzyć aplikacje przy użyciu różnych zadań uczenia maszynowego z bardziej realistycznymi zestawami danych w [samouczkach](./tutorials/index.md).
 
-* Więcej informacji na temat szczegółowych tematów znajduje się w temacie [jak przewodniki](./how-to-guides/index.md).
+* Więcej informacji na temat konkretnych tematów można uzyskać w [podręcznikach Jak to zrobić.](./how-to-guides/index.md)
 
-* Jeśli jesteś super Keen, możesz szczegółowe bezpośrednio do [dokumentacji dotyczącej interfejsu API](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet).
+* Jeśli jesteś bardzo zainteresowany, możesz zanurzyć się bezpośrednio w [dokumentacji referencyjnej API.](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet)

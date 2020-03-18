@@ -1,5 +1,5 @@
 ---
-title: sizeof — C# odwołanie operatora
+title: sizeof operator - odwołanie do języka C#
 ms.date: 07/25/2019
 f1_keywords:
 - sizeof_CSharpKeyword
@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof keyword [C#]
 ms.assetid: c548592c-677c-4f40-a4ce-e613f7529141
-ms.openlocfilehash: 711005479eea2757b4ef18f6710a4453bfca02f9
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: a9e80ecb3288479a2ca81b43c9d088809ed5f2f0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78238836"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847290"
 ---
-# <a name="sizeof-operator-c-reference"></a>sizeof — OperatorC# (odwołanie)
+# <a name="sizeof-operator-c-reference"></a>operator sizeof (odwołanie do języka C#)
 
-Operator `sizeof` zwraca liczbę bajtów zajmowanych przez zmienną danego typu. Argument operatora `sizeof` musi być nazwą [typu niezarządzanego](../builtin-types/unmanaged-types.md) lub parametrem typu, który jest [ograniczony](../../programming-guide/generics/constraints-on-type-parameters.md#unmanaged-constraint) jako typ niezarządzany.
+Operator `sizeof` zwraca liczbę bajtów zajmowanych przez zmienną danego typu. Argument `sizeof` do operatora musi być nazwa [typu niezarządzanego](../builtin-types/unmanaged-types.md) lub parametr typu, który jest [ograniczony](../../programming-guide/generics/constraints-on-type-parameters.md#unmanaged-constraint) do typu niezarządzanego.
 
-Operator `sizeof` wymaga [niebezpiecznego](../keywords/unsafe.md) kontekstu. Jednak wyrażenia przedstawione w poniższej tabeli są oceniane w czasie kompilacji do odpowiednich wartości stałych i nie wymagają niebezpiecznego kontekstu:
+Operator `sizeof` wymaga [niebezpiecznego](../keywords/unsafe.md) kontekstu. Jednak wyrażenia przedstawione w poniższej tabeli są obliczane w czasie kompilacji do odpowiednich wartości stałych i nie wymagają niebezpiecznego kontekstu:
 
 |Wyrażenie|Stała wartość|
 |---------|---------------|
@@ -36,23 +36,23 @@ Operator `sizeof` wymaga [niebezpiecznego](../keywords/unsafe.md) kontekstu. Jed
 |`sizeof(decimal)`|16|
 |`sizeof(bool)`|1|
 
-Nie trzeba również używać niebezpiecznego kontekstu, gdy argument operacji operatora `sizeof` jest nazwą typu [wyliczeniowego](../builtin-types/enum.md) .
+Nie trzeba również używać niebezpiecznego kontekstu, gdy operand `sizeof` operatora jest nazwą typu [wyliczenia.](../builtin-types/enum.md)
 
-Poniższy przykład ilustruje użycie operatora `sizeof`:
+W poniższym przykładzie przedstawiono `sizeof` użycie operatora:
 
-[!code-csharp[sizeof examples](~/samples/snippets/csharp/language-reference/operators/SizeOfOperator.cs)]
+[!code-csharp[sizeof examples](snippets/SizeOfOperator.cs)]
 
-Operator `sizeof` zwraca liczbę bajtów, które zostałyby przydzielone przez środowisko uruchomieniowe języka wspólnego w pamięci zarządzanej. W przypadku typów [struktur](../builtin-types/struct.md) ta wartość obejmuje wszelkie uzupełnienia, jak pokazano w powyższym przykładzie. Wynik operatora `sizeof` może różnić się od wyniku metody <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType>, która zwraca rozmiar typu w pamięci *niezarządzanej* .
+Operator `sizeof` zwraca liczbę bajtów, które zostaną przydzielone przez środowisko uruchomieniowe języka wspólnego w pamięci zarządzanej. Dla typów [struktury,](../builtin-types/struct.md) ta wartość zawiera dopełnienie, jak pokazano w poprzednim przykładzie. Wynik `sizeof` operatora może się różnić od <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType> wyniku metody, która zwraca rozmiar typu w pamięci *niezarządzanej.*
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
-Aby uzyskać więcej informacji, zobacz sekcję [operator sizeof](~/_csharplang/spec/unsafe-code.md#the-sizeof-operator) w [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).
+Aby uzyskać więcej informacji, zobacz [sekcję operatora sizeof](~/_csharplang/spec/unsafe-code.md#the-sizeof-operator) [specyfikacji języka Języka C#.](~/_csharplang/spec/introduction.md)
 
 ## <a name="see-also"></a>Zobacz też
 
-- [C#odwoła](../index.md)
+- [Dokumentacja języka C#](../index.md)
 - [Operatory języka C#](index.md)
-- [Operatory powiązane z wskaźnikiem](pointer-related-operators.md)
-- [Typy wskaźników](../../programming-guide/unsafe-code-pointers/pointer-types.md)
+- [Operatory związane ze wskaźnikiem](pointer-related-operators.md)
+- [Typy wskaźnika](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Pamięć i typy związane z zakresem](../../../standard/memory-and-spans/index.md)
 - [Typy ogólne w .NET](../../../standard/generics/index.md)

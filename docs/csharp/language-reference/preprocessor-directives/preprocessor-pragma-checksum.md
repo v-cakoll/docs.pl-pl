@@ -1,5 +1,5 @@
 ---
-title: '#pragma — C# odwołanie'
+title: '#pragma suma kontrolna - C# Odwołanie'
 ms.date: 07/20/2015
 f1_keywords:
 - '#pragma checksum'
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - '#pragma checksum [C#]'
 ms.assetid: 3673e4ca-6098-4ec1-890f-8fceb2a794a2
 ms.openlocfilehash: 1bbb404e1183daa5e68e512e7439b6ae52abd605
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712484"
 ---
 # <a name="pragma-checksum-c-reference"></a>#pragma checksum (odwołanie w C#)
-Generuje sumy kontrolne dla plików źródłowych, aby pomóc w debugowaniu stron ASP.NET.  
+Generuje sumy kontrolne dla plików źródłowych, aby ułatwić debugowanie ASP.NET stron.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -24,22 +24,22 @@ Generuje sumy kontrolne dla plików źródłowych, aby pomóc w debugowaniu stro
   
 ## <a name="parameters"></a>Parametry  
  `"filename"`  
- Nazwa pliku, który wymaga monitorowania pod kątem zmian lub aktualizacji.  
+ Nazwa pliku, który wymaga monitorowania zmian lub aktualizacji.  
   
  `"{guid}"`  
- Unikatowy identyfikator globalny (GUID) algorytmu wyznaczania wartości skrótu.  
+ Globalnie unikatowy identyfikator (GUID) dla algorytmu mieszania.  
   
  `"checksum_bytes"`  
- Ciąg cyfr szesnastkowych reprezentujący liczbę bajtów sumy kontrolnej. Musi być parzystą liczbą cyfr szesnastkowych. Nieparzysta liczba cyfr skutkuje ostrzeżeniem w czasie kompilacji, a dyrektywa jest ignorowana.  
+ Ciąg cyfr szesnastkowych reprezentujących bajty sumy kontrolnej. Musi być parzysta liczba cyfr szesnastkowych. Nieparzysta liczba cyfr powoduje ostrzeżenie w czasie kompilacji, a dyrektywa jest ignorowana.  
   
 ## <a name="remarks"></a>Uwagi  
- Debuger programu Visual Studio używa sumy kontrolnej do sprawdzania, czy użyte zostało prawidłowe źródło. Kompilator oblicza sumę kontrolną pliku źródłowego, a następnie przesyła dane wyjściowe do pliku bazy danych programu (PDB). Następnie debuger używa pliku PDB do porównania sumy kontrolnej obliczanej dla pliku źródłowego.  
+ Debuger programu Visual Studio używa sumy kontrolnej, aby upewnić się, że zawsze znajdzie odpowiednie źródło. Kompilator oblicza sumę kontrolną dla pliku źródłowego, a następnie emituje dane wyjściowe do pliku bazy danych programu (PDB). Debuger następnie używa PDB do porównania z sumą kontrolną, która oblicza dla pliku źródłowego.  
   
- To rozwiązanie nie działa w przypadku projektów ASP.NET, ponieważ obliczona suma kontrolna jest dla wygenerowanego pliku źródłowego, a nie pliku. aspx. Aby rozwiązać ten problem, `#pragma checksum` zapewnia obsługę sum kontrolnych dla stron ASP.NET.  
+ To rozwiązanie nie działa w przypadku projektów ASP.NET, ponieważ obliczona suma kontrolna jest dla wygenerowanego pliku źródłowego, a nie pliku .aspx. Aby rozwiązać ten `#pragma checksum` problem, zapewnia obsługę sumy kontrolnej dla ASP.NET stron.  
   
- Podczas tworzenia projektu ASP.NET w wizualizacji C#wygenerowany plik źródłowy zawiera sumę kontrolną dla pliku. aspx, z którego jest generowane źródło. Następnie kompilator zapisuje te informacje w pliku PDB.  
+ Podczas tworzenia projektu ASP.NET w języku Visual C#, wygenerowany plik źródłowy zawiera sumę kontrolną dla pliku .aspx, z którego generowane jest źródło. Kompilator następnie zapisuje te informacje w pliku PDB.  
   
- Jeśli kompilator nie napotka w pliku dyrektywy `#pragma checksum`, oblicza jego sumę kontrolną i zapisuje jej wartość w pliku PDB.  
+ Jeśli kompilator `#pragma checksum` nie napotka żadnej dyrektywy w pliku, oblicza sumę kontrolną i zapisuje wartość do pliku PDB.  
   
 ## <a name="example"></a>Przykład  
   
@@ -53,8 +53,8 @@ class TestClass
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Dokumentacja języka C#](../index.md)
-- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
-- [Dyrektywy preprocesora C#](./index.md)
+- [Odwołanie do języka C#](../index.md)
+- [Przewodnik programowania języka C#](../../programming-guide/index.md)
+- [Dyrektywy przedprocesorowe C#](./index.md)

@@ -7,25 +7,25 @@ helpviewer_keywords:
 - .NET Framework, asynchronous design patterns
 ms.assetid: 4ece5c0b-f8fe-4114-9862-ac02cfe5a5d7
 ms.openlocfilehash: e1efe9c3eb57f317def91e527506c358eb086679
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160056"
 ---
 # <a name="asynchronous-programming-patterns"></a>Wzorce programowania asynchronicznego
 
-Platforma .NET udostępnia trzy wzorce do wykonywania operacji asynchronicznych:  
+.NET udostępnia trzy wzorce do wykonywania operacji asynchronicznych:  
 
-- **Wzorzec asynchroniczny oparty na zadaniach (TAP)**, który używa pojedynczej metody do reprezentowania inicjacji i ukończenia operacji asynchronicznej. Naciśnij przycisk został wprowadzony w .NET Framework 4. **Jest to zalecane podejście do programowania asynchronicznego w programie .NET.** Słowa kluczowe [Async](../../csharp/language-reference/keywords/async.md) i [await](../../csharp/language-reference/operators/await.md) w C# programie oraz operatory [Async](../../visual-basic/language-reference/modifiers/async.md) i [await](../../visual-basic/language-reference/operators/await-operator.md) w Visual Basic Dodaj obsługę języka dla TAP. Aby uzyskać więcej informacji, zobacz [wzorzec asynchroniczny oparty na zadaniach (TAP)](task-based-asynchronous-pattern-tap.md).  
+- **Oparty na zadaniach wzorzec asynchroniczny (TAP),** który używa pojedynczej metody do reprezentowania inicjowania i zakończenia operacji asynchronicznej. TAP został wprowadzony w .NET Framework 4. **Jest to zalecane podejście do programowania asynchronicznego w .NET.** [Async](../../csharp/language-reference/keywords/async.md) i [await](../../csharp/language-reference/operators/await.md) słów kluczowych w języku C# i [Async](../../visual-basic/language-reference/modifiers/async.md) i [await](../../visual-basic/language-reference/operators/await-operator.md) operatorów w języku Visual Basic dodać obsługę języka tap. Aby uzyskać więcej informacji, zobacz [Asynchroniczny wzorzec (TAP) oparty na zadaniach](task-based-asynchronous-pattern-tap.md).  
 
-- **Wzorzec asynchroniczny oparty na zdarzeniach (EAP)**, który jest oparty na zdarzeniach starszym modelu do zapewniania zachowania asynchronicznego. Wymaga metody, która ma `Async` sufiks i co najmniej jedno zdarzenie, typy delegatów obsługi zdarzeń i typy pochodne `EventArg`. Protokół EAP został wprowadzony w .NET Framework 2,0. Nie jest już zalecane w przypadku nowych rozwiązań programistycznych. Aby uzyskać więcej informacji, zobacz [asynchroniczny wzorzec oparty na zdarzeniach (EAP)](event-based-asynchronous-pattern-eap.md).  
+- **Oparty na zdarzeniach wzorzec asynchroniczny (EAP),** który jest opartym na zdarzeniach starszym modelu zapewniającym zachowanie asynchroniczne. Wymaga metody, która `Async` ma sufiks i jeden lub więcej zdarzeń, typy delegatów obsługi obsługi zdarzeń i `EventArg`typy pochodne. EAP został wprowadzony w .NET Framework 2.0. Nie jest już zalecany do nowego rozwoju. Aby uzyskać więcej informacji, zobacz [Wzorce asynchroniczne oparte na zdarzeniach (EAP).](event-based-asynchronous-pattern-eap.md)  
 
-- Wzorzec **modelu programowania asynchronicznego (APM)** (nazywany również wzorcem <xref:System.IAsyncResult>), który jest starszym modelem, który używa interfejsu <xref:System.IAsyncResult>, aby zapewnić asynchroniczne zachowanie. W tym wzorcu operacje synchroniczne wymagają `Begin` i `End` metod (na przykład `BeginWrite` i `EndWrite` do implementowania asynchronicznej operacji zapisu). Ten wzorzec nie jest już zalecany w przypadku nowych rozwiązań programistycznych. Aby uzyskać więcej informacji, zobacz [asynchroniczny model programowania (APM)](asynchronous-programming-model-apm.md).  
+- **Asynchroniczny model programowania (APM)** wzorzec (nazywany również <xref:System.IAsyncResult> wzorzec), który jest starszy model, który używa <xref:System.IAsyncResult> interfejsu, aby zapewnić zachowanie asynchroniczne. W tym wzorcu operacje `Begin` `End` synchroniczne wymagają `BeginWrite` i `EndWrite` metody (na przykład i zaimplementować operację zapisu asynchronicznego). Ten wzorzec nie jest już zalecany do nowego rozwoju. Aby uzyskać więcej informacji, zobacz [Asynchroniczny model programowania (APM)](asynchronous-programming-model-apm.md).  
   
 ## <a name="comparison-of-patterns"></a>Porównanie wzorców
 
-Aby szybko porównać sposób wykonywania operacji asynchronicznych przez trzy modele wzorców, należy rozważyć metodę `Read`, która odczytuje określoną ilość danych do podanego buforu, rozpoczynając od określonego przesunięcia:  
+Aby uzyskać szybkie porównanie sposobu, w jaki trzy wzorce modelu operacji asynchronicznych, należy wziąć pod uwagę `Read` metodę, która odczytuje określoną ilość danych do dostarczonego buforu, począwszy od określonego odsunięcia:  
   
 ```csharp  
 public class MyClass  
@@ -34,7 +34,7 @@ public class MyClass
 }  
 ```  
 
-Odpowiedniki TAP dla tej metody uwidaczniają następujące pojedyncze metody `ReadAsync`:  
+Odpowiednik TAP tej metody uwidacznia następujące pojedynczej `ReadAsync` metody:  
   
 ```csharp
 public class MyClass  
@@ -43,7 +43,7 @@ public class MyClass
 }  
 ```
 
-Odpowiedniki protokołu EAP uwidaczniają następujący zestaw typów i członków:  
+Odpowiednik EAP będzie narazić następujący zestaw typów i elementów członkowskich:  
   
 ```csharp  
 public class MyClass  
@@ -53,7 +53,7 @@ public class MyClass
 }  
 ```  
   
-Odpowiednika APM uwidacznia `BeginRead` i `EndRead` metody:  
+Odpowiednik APM będzie `BeginRead` narazić i `EndRead` metody:  
   
 ```csharp  
 public class MyClass  
@@ -67,7 +67,7 @@ public class MyClass
 
 ## <a name="see-also"></a>Zobacz też
 
-- [Na poziomie Async](../async-in-depth.md)
-- [Programowanie asynchroniczne wC#](../../csharp/async.md)
-- [Programowanie asynchroniczne wF#](../../fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
-- [Programowanie asynchroniczne z Async i Await (Visual Basic)](../../visual-basic/programming-guide/concepts/async/index.md)
+- [Async w głębi](../async-in-depth.md)
+- [Programowanie asynchroniczne w języku C #](../../csharp/async.md)
+- [Programowanie asynchroniczne w f #](../../fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
+- [Programowanie asynchroniczne z asynchroniczną i oczekiwaną (Visual Basic)](../../visual-basic/programming-guide/concepts/async/index.md)

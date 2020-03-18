@@ -1,20 +1,20 @@
 ---
-title: Sortowanie lub filtrowanie danych tekstowych według dowolnego wyrazu lub pola (LINQ) (C#)
+title: Jak sortować lub filtrować dane tekstowe według dowolnego wyrazu lub pola (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c04d42f-4a78-42c8-9ec8-57ef18fe13a9
 ms.openlocfilehash: e869d57c413d175c092cdc15a6fe54cab94e04b8
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75347351"
 ---
-# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-c"></a>Sortowanie lub filtrowanie danych tekstowych według dowolnego wyrazu lub pola (LINQ) (C#)
-Poniższy przykład pokazuje, jak sortować wiersze tekstu strukturalnego, takie jak wartości rozdzielane przecinkami, według dowolnego pola w wierszu. Pole może być określane dynamicznie w czasie wykonywania. Załóżmy, że pola w pliku Scores. csv reprezentują numer IDENTYFIKACYJNy studenta, a następnie serię czterech wyników testu.  
+# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-c"></a>Jak sortować lub filtrować dane tekstowe według dowolnego wyrazu lub pola (LINQ) (C#)
+W poniższym przykładzie pokazano, jak sortować wiersze tekstu strukturalnego, takie jak wartości oddzielone przecinkami, według dowolnego pola w wierszu. Pole może być dynamicznie określone w czasie wykonywania. Załóżmy, że pola w pliku scores.csv reprezentują numer id ucznia, po którym następuje seria czterech wyników testów.  
   
 ### <a name="to-create-a-file-that-contains-data"></a>Aby utworzyć plik zawierający dane  
   
-1. Skopiuj dane Score. CSV z tematu [jak dołączyć zawartość z niepodobnych plików (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md) i zapisać je w folderze rozwiązania.  
+1. Skopiuj dane scores.csv z tematu [Jak dołączyć zawartość z różnych plików (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md) i zapisać ją w folderze rozwiązania.  
   
 ## <a name="example"></a>Przykład  
   
@@ -72,12 +72,12 @@ public class SortLines
  */  
 ```  
   
- W tym przykładzie pokazano również, jak zwrócić zmienną zapytania z metody.  
+ W tym przykładzie pokazano również, jak zwrócić zmienną kwerendy z metody.  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
 
-Utwórz projekt C# aplikacji konsolowej z `using` dyrektywami dotyczącymi przestrzeni nazw System. Linq i system.IO.
+Utwórz projekt aplikacji konsoli `using` C# z dyrektywami dla system.Linq i System.IO przestrzeni nazw.
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [LINQ i ciągi (C#)](./linq-and-strings.md)

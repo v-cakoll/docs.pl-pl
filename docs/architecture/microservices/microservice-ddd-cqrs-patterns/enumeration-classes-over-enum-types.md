@@ -1,25 +1,25 @@
 ---
 title: Używanie klas wyliczeń zamiast typów wyliczeń
-description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Wyczyść, w jaki sposób można używać klas wyliczenia, zamiast wyliczeniowych, w celu rozwiązania niektórych ograniczeń dotyczących tego ostatniego.
+description: Architektura mikrousług .NET dla konteneryzowanych aplikacji .NET | Lear jak można użyć klas wyliczenia, zamiast wyliczenia, jako sposób na rozwiązanie niektórych ograniczeń tego ostatniego.
 ms.date: 10/08/2018
-ms.openlocfilehash: 82bd80d19b3b73eb2f45ede8cc7ad4593c688277
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: fb2cbcd744f29c70a86e6f3300721934192eb752
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77628465"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847183"
 ---
-# <a name="use-enumeration-classes-instead-of-enum-types"></a>Użyj klas wyliczenia zamiast typów wyliczeniowych
+# <a name="use-enumeration-classes-instead-of-enum-types"></a>Używanie klas wyliczania zamiast typów wyliczenia
 
-[Wyliczenia](../../../csharp/language-reference/builtin-types/enum.md) (lub *typy wyliczeniowe* dla krótki) są otoką języka cienkiego wokół typu całkowitego. Możesz chcieć ograniczyć ich użycie do momentu przechowywania jednej wartości z zamkniętego zestawu wartości. Klasyfikacja oparta na rozmiarach (mały, średni, duży) jest dobrym przykładem. Korzystanie z wyliczeń dla przepływu sterowania lub bardziej niezawodnych abstrakcji może być [zapachem kodu](https://deviq.com/code-smells/). Ten typ użycia prowadzi do delikatnego kodu z wieloma instrukcjami przepływu sterowania, sprawdzając wartości wyliczenia.
+[Wyliczenia](../../../csharp/language-reference/builtin-types/enum.md) (lub *typy wyliczenia* w skrócie) są cienką otoką języka wokół typu integralnego. Można ograniczyć ich użycie do podczas przechowywania jednej wartości z zamkniętego zestawu wartości. Klasyfikacja oparta na rozmiarach (małych, średnich, dużych) jest dobrym przykładem. Używanie wyliczeń do sterowania przepływem lub bardziej niezawodnych abstrakcji może być [zapachem kodu.](https://deviq.com/code-smells/) Ten typ użycia prowadzi do kruchego kodu z wielu instrukcji przepływu sterowania sprawdzanie wartości wyliczenia.
 
-Zamiast tego można tworzyć klasy wyliczenia, które umożliwiają wszystkie bogate funkcje języka zorientowanego na obiekt.
+Zamiast tego można utworzyć klasy wyliczenia, które umożliwiają wszystkie funkcje sformatowane języka obiektowego.
 
-Nie jest to jednak krytyczne zagadnienie i w wielu przypadkach dla uproszczenia można nadal używać zwykłych [typów wyliczeniowych](../../../csharp/language-reference/builtin-types/enum.md) , jeśli jest to Twoje preferencje. Mimo to użycie klas wyliczenia jest bardziej powiązane z pojęciami związanymi z biznesem.
+Jednak nie jest to temat krytyczny i w wielu przypadkach, dla uproszczenia, nadal można używać regularnych [typów wyliczenia,](../../../csharp/language-reference/builtin-types/enum.md) jeśli jest to twoje preferencje. W każdym razie użycie klas wyliczenia jest bardziej związane z pojęciami związanymi z biznesem.
 
-## <a name="implement-an-enumeration-base-class"></a>Zaimplementuj wyliczaną klasę bazową
+## <a name="implement-an-enumeration-base-class"></a>Implementowanie klasy podstawowej wyliczania
 
-Mikrousługa porządkowania w eShopOnContainers zapewnia przykładową implementację klasy bazowej wyliczenia, jak pokazano w następującym przykładzie:
+Mikrousługi zamawiania w eShopOnContainers zawiera przykładową implementację klasy podstawowej wyliczania, jak pokazano w poniższym przykładzie:
 
 ```csharp
 public abstract class Enumeration : IComparable
@@ -64,14 +64,14 @@ public abstract class Enumeration : IComparable
 }
 ```
 
-Tej klasy można użyć jako typu w dowolnej jednostce lub obiekcie wartości, tak jak w przypadku następujących `CardType`: `Enumeration` Class:
+Tej klasy można użyć jako typu w dowolnej jednostce `CardType` lub `Enumeration` obiekcie wartości, jak w przypadku następującej: klasy:
 
 ```csharp
 public class CardType : Enumeration
 {
-    public static CardType Amex = new CardType(1, "Amex");
-    public static CardType Visa = new CardType(2, "Visa");
-    public static CardType MasterCard = new CardType(3, "MasterCard");
+    public static readonly CardType Amex = new CardType(1, "Amex");
+    public static readonly CardType Visa = new CardType(2, "Visa");
+    public static readonly CardType MasterCard = new CardType(3, "MasterCard");
 
     public CardType(int id, string name)
         : base(id, name)
@@ -80,23 +80,23 @@ public class CardType : Enumeration
 }
 ```
 
-## <a name="additional-resources"></a>Dodatkowe zasoby
+## <a name="additional-resources"></a>Zasoby dodatkowe
 
-- **Jimmy Bogard. Klasy wyliczeniowe** \
+- **Jimmy Bogard. Klasy wyliczania** \
   <https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/>
 
-- **Steve Smith. Warianty wyliczenia C# w** \
+- **Steve Smith. Alternatywy wyliczenia w C #** \
   <https://ardalis.com/enum-alternatives-in-c>
 
-- **Enumeration.cs.** Podstawowa klasa wyliczenia w eShopOnContainers \
+- **Enumeration.cs.** Klasa wyliczania podstawowego w eShopOnContainers \
   <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs>
 
-- **CardType.cs**. Przykładowa Klasa wyliczenia w eShopOnContainers. \
+- **CardType.cs**. Przykładowa klasa wyliczania w eShopOnContainers. \
   <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs>
 
-- **SmartEnum**. Ardalis-klasy, które ułatwiają tworzenie inteligentnych typów wyliczeniowych w programie .NET. \
+- **SmartEnum**. Ardalis - Klasy, które pomagają w produkcji silnie wpisane inteligentniejsze wyliczenia w .NET. \
   <https://www.nuget.org/packages/Ardalis.SmartEnum/>
 
 >[!div class="step-by-step"]
->[Poprzednie](implement-value-objects.md)
->[dalej](domain-model-layer-validations.md)
+>[Poprzedni](implement-value-objects.md)
+>[następny](domain-model-layer-validations.md)

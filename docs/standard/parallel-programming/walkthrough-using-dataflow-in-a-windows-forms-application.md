@@ -8,48 +8,48 @@ helpviewer_keywords:
 - Windows Forms, and TPL
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
 ms.openlocfilehash: 794253514edf63f02276e1ece21c60a85c534390
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159770"
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Wskazówki: Korzystanie z przepływu danych w Aplikacji formularzy systemu Windows
-W tym dokumencie przedstawiono sposób tworzenia sieci bloków przepływu danych, które wykonują przetwarzanie obrazów w aplikacji Windows Forms.  
+W tym dokumencie pokazano, jak utworzyć sieć bloków przepływu danych, które wykonują przetwarzanie obrazu w aplikacji Formularzy systemu Windows.  
   
- Ten przykład służy do ładowania plików obrazów z określonego folderu, tworzenia obrazu złożonego i wyświetlania wyniku. W przykładzie zastosowano model przepływu danych do rozsyłania obrazów za pośrednictwem sieci. W modelu przepływu danych niezależne składniki programu komunikują się ze sobą przez wysyłanie komunikatów. Gdy składnik odbiera komunikat, wykonuje pewne działania, a następnie przekazuje wynik do innego składnika. Porównaj ten element z modelem przepływu sterowania, w którym aplikacja używa struktur kontroli, na przykład instrukcji warunkowych, pętli i tak dalej, aby kontrolować kolejność operacji w programie.  
+ W tym przykładzie wczytuje pliki obrazów z określonego folderu, tworzy obraz złożony i wyświetla wynik. W przykładzie użyto modelu przepływu danych do kierowania obrazów przez sieć. W modelu przepływu danych niezależne składniki programu komunikują się ze sobą, wysyłając wiadomości. Gdy składnik odbiera komunikat, wykonuje niektóre działania, a następnie przekazuje wynik do innego składnika. Porównaj to z modelem przepływu sterowania, w którym aplikacja używa struktur kontroli, na przykład instrukcji warunkowych, pętli i tak dalej, aby kontrolować kolejność operacji w programie.  
   
 ## <a name="prerequisites"></a>Wymagania wstępne  
- Przeczytaj [przepływu danych](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) przed rozpoczęciem tego instruktażu.  
+ Przeczytaj [przepływ danych](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) przed rozpoczęciem tego instruktażenia.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
 
 ## <a name="sections"></a>Sekcje  
- Ten Instruktaż zawiera następujące sekcje:  
+ Ten instruktaż zawiera następujące sekcje:  
   
-- [Tworzenie aplikacji Windows Forms](#winforms)  
+- [Tworzenie aplikacji formularzy systemu Windows](#winforms)  
   
 - [Tworzenie sieci przepływu danych](#network)  
   
-- [Łączenie sieci przepływu danych z interfejsem użytkownika](#ui)  
+- [Podłączanie sieci przepływu danych do interfejsu użytkownika](#ui)  
   
 - [Kompletny przykład](#complete)  
   
 <a name="winforms"></a>
-## <a name="creating-the-windows-forms-application"></a>Tworzenie aplikacji Windows Forms  
- W tej sekcji opisano, jak utworzyć podstawową aplikację Windows Forms i dodać kontrolki do formularza głównego.  
+## <a name="creating-the-windows-forms-application"></a>Tworzenie aplikacji formularzy systemu Windows  
+ W tej sekcji opisano sposób tworzenia podstawowej aplikacji formularzy systemu Windows i dodawania kontrolek do formularza głównego.  
   
-### <a name="to-create-the-windows-forms-application"></a>Aby utworzyć aplikację Windows Forms  
+### <a name="to-create-the-windows-forms-application"></a>Aby utworzyć aplikację formularzy systemu Windows  
   
-1. W programie Visual Studio Utwórz projekt C# **aplikacji Windows Forms** wizualizacji lub Visual Basic. W tym dokumencie projekt ma nazwę `CompositeImages`.  
+1. W programie Visual Studio utwórz projekt aplikacji Visual C# lub Visual Basic **Windows Forms Application.** W tym dokumencie projekt `CompositeImages`nosi nazwę .  
   
-2. W projektancie formularzy dla formularza głównego Form1.cs (Form1. vb dla Visual Basic) Dodaj kontrolkę <xref:System.Windows.Forms.ToolStrip>.  
+2. W projektancie formularza dla formularza głównego Form1.cs (Form1.vb <xref:System.Windows.Forms.ToolStrip> dla języka Visual Basic) dodaj formant.  
   
-3. Dodaj kontrolkę <xref:System.Windows.Forms.ToolStripButton> do kontrolki <xref:System.Windows.Forms.ToolStrip>. Ustaw właściwość <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> na <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> i Właściwość <xref:System.Windows.Forms.ToolStripItem.Text%2A>, aby **wybrać folder**.  
+3. Dodaj <xref:System.Windows.Forms.ToolStripButton> formant do <xref:System.Windows.Forms.ToolStrip> formantu. Ustaw <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> właściwość <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> i <xref:System.Windows.Forms.ToolStripItem.Text%2A> właściwość wybierz **folder**.  
   
-4. Dodaj drugą kontrolkę <xref:System.Windows.Forms.ToolStripButton> do kontrolki <xref:System.Windows.Forms.ToolStrip>. Ustaw właściwość <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> na <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>, właściwość <xref:System.Windows.Forms.ToolStripItem.Text%2A> na wartość **Cancel**i Właściwość <xref:System.Windows.Forms.ToolStripItem.Enabled%2A> na `False`.  
+4. Dodaj drugi <xref:System.Windows.Forms.ToolStripButton> formant <xref:System.Windows.Forms.ToolStrip> do formantu. Ustaw <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> właściwość <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>na <xref:System.Windows.Forms.ToolStripItem.Text%2A> , właściwość **Anuluj**, a <xref:System.Windows.Forms.ToolStripItem.Enabled%2A> właściwość na `False`.  
   
-5. Dodaj obiekt <xref:System.Windows.Forms.PictureBox> do formularza głównego. Ustaw właściwość <xref:System.Windows.Forms.Control.Dock%2A> na <xref:System.Windows.Forms.DockStyle.Fill>.  
+5. Dodaj <xref:System.Windows.Forms.PictureBox> obiekt do formularza głównego. Ustaw <xref:System.Windows.Forms.Control.Dock%2A> właściwość <xref:System.Windows.Forms.DockStyle.Fill>na .  
   
 <a name="network"></a>
 ## <a name="creating-the-dataflow-network"></a>Tworzenie sieci przepływu danych  
@@ -57,77 +57,77 @@ W tym dokumencie przedstawiono sposób tworzenia sieci bloków przepływu danych
   
 ### <a name="to-create-the-dataflow-network"></a>Aby utworzyć sieć przepływu danych  
   
-1. Dodaj odwołanie do elementu System. Threading. Tasks. przepływu danych. dll do projektu.  
+1. Dodaj odwołanie do pliku System.Threading.Tasks.Dataflow.dll do projektu.  
   
-2. Upewnij się, że Form1.cs (Form1. vb dla Visual Basic) zawiera następujące instrukcje `using` (`Using` w Visual Basic):  
+2. Upewnij się, że Form1.cs (Form1.vb `using` dla`Using` języka Visual Basic) zawiera następujące instrukcje (w języku Visual Basic):  
   
      [!code-csharp[TPLDataflow_CompositeImages#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#1)]  
   
-3. Dodaj następujące składowe danych do klasy `Form1`:  
+3. Dodaj następujące elementy członkowskie `Form1` danych do klasy:  
   
      [!code-csharp[TPLDataflow_CompositeImages#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#2)]  
   
-4. Dodaj następującą metodę, `CreateImageProcessingNetwork`, do klasy `Form1`. Ta metoda służy do tworzenia sieci przetwarzania obrazów.  
+4. Dodaj następującą `CreateImageProcessingNetwork`metodę, `Form1` , do klasy. Ta metoda tworzy sieć przetwarzania obrazu.  
   
      [!code-csharp[TPLDataflow_CompositeImages#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#3)]  
   
-5. Zaimplementuj metodę `LoadBitmaps`.  
+5. Zaimplementuj `LoadBitmaps` metodę.  
   
      [!code-csharp[TPLDataflow_CompositeImages#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#4)]  
   
-6. Zaimplementuj metodę `CreateCompositeBitmap`.  
+6. Zaimplementuj `CreateCompositeBitmap` metodę.  
   
      [!code-csharp[TPLDataflow_CompositeImages#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#5)]  
   
     > [!NOTE]
-    > C# Wersja metody `CreateCompositeBitmap` używa wskaźników w celu zapewnienia wydajnego przetwarzania obiektów <xref:System.Drawing.Bitmap?displayProperty=nameWithType>. W związku z tym należy włączyć opcję **Zezwalaj na niebezpieczny kod** w projekcie, aby można było [użyć słowa kluczowego unsafe.](../../csharp/language-reference/keywords/unsafe.md) Aby uzyskać więcej informacji na temat włączania niebezpiecznego kodu C# w projekcie wizualizacji, zobacz [stronę Kompilacja,C#Projektant projektu ()](/visualstudio/ide/reference/build-page-project-designer-csharp).  
+    > Wersja C# `CreateCompositeBitmap` metody używa wskaźników, aby umożliwić <xref:System.Drawing.Bitmap?displayProperty=nameWithType> wydajne przetwarzanie obiektów. W związku z tym należy włączyć **zezwalaj na niebezpieczny kod** opcji w projekcie, aby użyć [niebezpiecznego](../../csharp/language-reference/keywords/unsafe.md) słowa kluczowego. Aby uzyskać więcej informacji na temat włączania niebezpiecznego kodu w projekcie visual c#, zobacz [Tworzenie strony, projektanta projektu (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
   
  W poniższej tabeli opisano elementy członkowskie sieci.  
   
 |Członek|Typ|Opis|  
 |------------|----------|-----------------|  
-|`loadBitmaps`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Pobiera ścieżkę folderu jako dane wejściowe i tworzy kolekcję <xref:System.Drawing.Bitmap> obiektów jako dane wyjściowe.|  
-|`createCompositeBitmap`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Pobiera kolekcję obiektów <xref:System.Drawing.Bitmap> jako dane wejściowe i tworzy kompozytową mapę bitową jako dane wyjściowe.|  
-|`displayCompositeBitmap`|<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>|Wyświetla kompozytową mapę bitową w formularzu.|  
-|`operationCancelled`|<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>|Wyświetla obraz wskazujący, że operacja została anulowana, i umożliwia użytkownikowi wybranie innego folderu.|  
+|`loadBitmaps`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Przyjmuje ścieżkę folderu jako dane <xref:System.Drawing.Bitmap> wejściowe i tworzy kolekcję obiektów jako dane wyjściowe.|  
+|`createCompositeBitmap`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Pobiera kolekcję <xref:System.Drawing.Bitmap> obiektów jako dane wejściowe i tworzy złożoną mapę bitową jako dane wyjściowe.|  
+|`displayCompositeBitmap`|<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>|Wyświetla złożoną mapę bitową w formularzu.|  
+|`operationCancelled`|<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>|Wyświetla obraz wskazujący, że operacja została anulowana i umożliwia użytkownikowi wybranie innego folderu.|  
   
- Aby połączyć bloki przepływu danych w celu utworzenia sieci, w tym przykładzie zostanie użyta metoda <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A>. Metoda <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> zawiera przeciążoną wersję, która przyjmuje obiekt <xref:System.Predicate%601>, który określa, czy blok docelowy akceptuje lub odrzuca komunikat. Ten mechanizm filtrowania umożliwia blokom komunikatów odbieranie tylko określonych wartości. W tym przykładzie sieć może rozgałęziać się na jeden z dwóch sposobów. Gałąź główna ładuje obrazy z dysku, tworzy obraz złożony i wyświetla ten obraz w formularzu. Gałąź alternatywna anuluje bieżącą operację. Obiekty <xref:System.Predicate%601> umożliwiają blokom przepływu danych wzdłuż gałęzi głównej, aby przełączyć się na gałąź alternatywną poprzez odrzucenie niektórych komunikatów. Na przykład, jeśli użytkownik anuluje operację, blok przepływu danych `createCompositeBitmap` produkuje `null` (`Nothing` w Visual Basic) jako dane wyjściowe. Blok przepływu danych `displayCompositeBitmap` odrzuca wartości wejściowe `null` i w związku z tym komunikat jest oferowany do `operationCancelled`. Blok przepływu danych `operationCancelled` akceptuje wszystkie komunikaty i w związku z tym wyświetla obraz, aby wskazać, że operacja została anulowana.  
+ Aby połączyć bloki przepływu danych w celu <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> utworzenia sieci, w tym przykładzie używa metody. Metoda <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> zawiera przeciążoną wersję, <xref:System.Predicate%601> która przyjmuje obiekt, który określa, czy blok docelowy akceptuje lub odrzuca wiadomość. Ten mechanizm filtrowania umożliwia blokom komunikatów odbieranie tylko niektórych wartości. W tym przykładzie sieć może rozgałęziać się na jeden z dwóch sposobów. Główna gałąź ładuje obrazy z dysku, tworzy obraz złożony i wyświetla ten obraz w formularzu. Alternatywna gałąź anuluje bieżącą operację. Obiekty <xref:System.Predicate%601> umożliwiają bloków przepływu danych wzdłuż gałęzi głównej, aby przełączyć się do alternatywnej gałęzi, odrzucając niektóre wiadomości. Na przykład jeśli użytkownik anuluje operację, `createCompositeBitmap` blok `null` `Nothing` przepływu danych generuje (w języku Visual Basic) jako dane wyjściowe. Blok `displayCompositeBitmap` przepływu danych `null` odrzuca wartości wejściowe i w związku `operationCancelled`z tym wiadomość jest oferowana do . Blok `operationCancelled` przepływu danych akceptuje wszystkie wiadomości i w związku z tym wyświetla obraz, aby wskazać, że operacja została anulowana.  
   
- Na poniższej ilustracji przedstawiono sieć przetwarzania obrazów:  
+ Na poniższej ilustracji przedstawiono sieć przetwarzania obrazu:  
   
- ![Ilustracja przedstawiająca sieć przetwarzania obrazów.](./media/walkthrough-using-dataflow-in-a-windows-forms-application/dataflow-winforms-image-processing.png)  
+ ![Ilustracja przedstawiająca sieć przetwarzania obrazu.](./media/walkthrough-using-dataflow-in-a-windows-forms-application/dataflow-winforms-image-processing.png)  
   
- Ponieważ `displayCompositeBitmap` i `operationCancelled` bloków przepływu danych działają w interfejsie użytkownika, ważne jest, aby te akcje miały miejsce w wątku interfejsu użytkownika. W tym celu w czasie konstruowania obiekty te udostępniają <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions> obiekt, który ma właściwość <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.TaskScheduler%2A> ustawioną na <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType>. Metoda <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> tworzy obiekt <xref:System.Threading.Tasks.TaskScheduler>, który wykonuje prace w bieżącym kontekście synchronizacji. Ponieważ metoda `CreateImageProcessingNetwork` jest wywoływana z procedury obsługi przycisku **Wybierz folder** , który działa w wątku interfejsu użytkownika, akcje dla bloków `displayCompositeBitmap` i `operationCancelled` przepływu danych również są uruchamiane w wątku interfejsu użytkownika.  
+ Ponieważ `displayCompositeBitmap` bloki przepływu `operationCancelled` danych działają na interfejsie użytkownika, ważne jest, aby te akcje wystąpiły w wątku interfejsu użytkownika. Aby to osiągnąć, podczas budowy, <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions> te obiekty <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.TaskScheduler%2A> każdy podać <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType>obiekt, który ma właściwość ustawioną . Metoda <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> tworzy <xref:System.Threading.Tasks.TaskScheduler> obiekt, który wykonuje pracę na bieżącym kontekście synchronizacji. Ponieważ `CreateImageProcessingNetwork` metoda jest wywoływana z obsługi wybierz **folder** przycisk, który jest uruchamiany `displayCompositeBitmap` w `operationCancelled` wątku interfejsu użytkownika, akcje dla bloków i przepływu danych również uruchomić w wątku interfejsu użytkownika.  
   
- W tym przykładzie używa udostępnionego tokenu anulowania zamiast ustawiania właściwości <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A>, ponieważ właściwość <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> trwale anuluje wykonywanie bloku przepływu danych. Token anulowania umożliwia korzystanie z tej samej sieci przepływu danych wiele razy, nawet jeśli użytkownik anuluje jedną lub więcej operacji. Przykład, który używa <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> do trwałego anulowania wykonywania bloku przepływu danych, można znaleźć w temacie [How to: Cancel a przepływu danych Block](../../../docs/standard/parallel-programming/how-to-cancel-a-dataflow-block.md).  
+ W tym przykładzie używa tokenu <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> anulowania udostępnionego zamiast ustawiania właściwości, <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> ponieważ właściwość trwale anuluje wykonanie bloku przepływu danych. Token anulowania umożliwia w tym przykładzie ponowne użycie tej samej sieci przepływu danych wiele razy, nawet wtedy, gdy użytkownik anuluje jedną lub więcej operacji. Na przykład, <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> który używa do trwałego anulowania wykonywania bloku przepływu danych, zobacz [Jak: Anulowanie bloku przepływu danych](../../../docs/standard/parallel-programming/how-to-cancel-a-dataflow-block.md).  
   
 <a name="ui"></a>
-## <a name="connecting-the-dataflow-network-to-the-user-interface"></a>Łączenie sieci przepływu danych z interfejsem użytkownika  
- W tej sekcji opisano sposób łączenia sieci przepływu danych z interfejsem użytkownika. Tworzenie obrazu złożonego i anulowanie operacji są inicjowane z przycisków **Wybierz folder** i **Anuluj** . Gdy użytkownik wybierze jeden z tych przycisków, odpowiednia akcja zostanie zainicjowana w sposób asynchroniczny.  
+## <a name="connecting-the-dataflow-network-to-the-user-interface"></a>Podłączanie sieci przepływu danych do interfejsu użytkownika  
+ W tej sekcji opisano sposób łączenia sieci przepływu danych z interfejsem użytkownika. Tworzenie obrazu złożonego i anulowanie operacji są inicjowane z **wybierz folder** i **Anuluj** przyciski. Gdy użytkownik wybierze jeden z tych przycisków, odpowiednia akcja jest inicjowana w sposób asynchroniczny.  
   
 ### <a name="to-connect-the-dataflow-network-to-the-user-interface"></a>Aby połączyć sieć przepływu danych z interfejsem użytkownika  
   
-1. W projektancie formularzy dla formularza głównego Utwórz procedurę obsługi zdarzeń dla zdarzenia <xref:System.Windows.Forms.ToolStripItem.Click> dla przycisku **Wybierz folder** .  
+1. W projektancie formularza dla formularza głównego utwórz program obsługi zdarzeń dla <xref:System.Windows.Forms.ToolStripItem.Click> zdarzenia dla przycisku Wybierz **folder.**  
   
-2. Zaimplementuj zdarzenie <xref:System.Windows.Forms.ToolStripItem.Click> dla przycisku **Wybierz folder** .  
+2. Zaimplementuj <xref:System.Windows.Forms.ToolStripItem.Click> zdarzenie dla przycisku **Wybierz folder.**  
   
      [!code-csharp[TPLDataflow_CompositeImages#6](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#6)]  
   
-3. W projektancie formularzy dla formularza głównego Utwórz procedurę obsługi zdarzeń dla zdarzenia <xref:System.Windows.Forms.ToolStripItem.Click> dla przycisku **Anuluj** .  
+3. W projektancie formularza dla formularza głównego utwórz program obsługi zdarzeń dla <xref:System.Windows.Forms.ToolStripItem.Click> zdarzenia dla przycisku **Anuluj.**  
   
-4. Zaimplementuj zdarzenie <xref:System.Windows.Forms.ToolStripItem.Click> dla przycisku **Anuluj** .  
+4. Zaimplementuj <xref:System.Windows.Forms.ToolStripItem.Click> zdarzenie dla przycisku **Anuluj.**  
   
      [!code-csharp[TPLDataflow_CompositeImages#7](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#7)]  
   
 <a name="complete"></a>
 ## <a name="the-complete-example"></a>Kompletny przykład  
- Poniższy przykład pokazuje kompletny kod dla tego przewodnika.  
+ W poniższym przykładzie przedstawiono pełny kod dla tego instruktaże.  
   
  [!code-csharp[TPLDataflow_CompositeImages#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#100)]  
   
- Na poniższej ilustracji przedstawiono typowe dane wyjściowe folderu Common \Sample obrazy \ folder.  
+ Na poniższej ilustracji przedstawiono typowe dane wyjściowe dla wspólnego folderu \Sample Pictures\.  
   
- ![Aplikacja Windows Forms](../../../docs/standard/parallel-programming/media/tpldataflow-compositeimages.gif "TPLDataflow_CompositeImages")  
+ ![Aplikacja formularzy systemu Windows](../../../docs/standard/parallel-programming/media/tpldataflow-compositeimages.gif "TPLDataflow_CompositeImages")  
 
 ## <a name="see-also"></a>Zobacz też
 

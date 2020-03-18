@@ -1,137 +1,137 @@
 ---
-title: 'Samouczek: kategoryzowanie kwiatów'
+title: 'Samouczek: Kategoryzuj kwiaty iris - k-oznacza klastrowanie'
 description: Dowiedz się, jak używać ML.NET w scenariuszu klastrowania
 author: pkulikov
 ms.date: 11/15/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
 ms.openlocfilehash: 174907adac5741d5cc7d02cb134921debc586061
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78241094"
 ---
-# <a name="tutorial-categorize-iris-flowers-using-k-means-clustering-with-mlnet"></a>Samouczek: kategoryzowanie kwiatów w ramach Iris przy użyciu k-oznacza klastrowanie z ML.NET
+# <a name="tutorial-categorize-iris-flowers-using-k-means-clustering-with-mlnet"></a>Samouczek: Kategoryzuj kwiaty przysiadów za pomocą k-oznacza klastrowanie z ML.NET
 
-W tym samouczku pokazano, jak za pomocą ML.NET utworzyć [Model klastrowania](../resources/tasks.md#clustering) dla [zestawu danych dla elementu pokwiatowego Iris](https://en.wikipedia.org/wiki/Iris_flower_data_set).
+W tym samouczku przedstawiono sposób używania ML.NET do tworzenia [modelu klastrowania](../resources/tasks.md#clustering) dla [zestawu danych kwiatu przysłonki](https://en.wikipedia.org/wiki/Iris_flower_data_set).
 
-Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
+Niniejszy samouczek zawiera informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]
 >
 > - Omówienie problemu
 > - Wybierz odpowiednie zadanie uczenia maszynowego
 > - Przygotowywanie danych
-> - Załaduj i Przekształć dane
-> - Wybierz algorytm uczenia
+> - Ładowanie i przekształcanie danych
+> - Wybierz algorytm uczenia się
 > - Uczenie modelu
-> - Używanie modelu dla prognoz
+> - Użyj modelu dla prognoz
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-- [Program Visual Studio 2017 w wersji 15,6 lub nowszej](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) z zainstalowanym obciążeniem "Programowanie dla wielu platform w środowisku .NET Core".
+- [Visual Studio 2017 w wersji 15.6 lub nowszej](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) z zainstalowanym obciążeniem ".NET Core programistorna wieloplatformowa".
 
 ## <a name="understand-the-problem"></a>Omówienie problemu
 
-Ten problem polega na rozdzieleniu zestawu zakwiatek Iris w różnych grupach w oparciu o funkcje kwiatowe. Te funkcje to długość i szerokość słupka oraz długość i szerokość płatne. W tym samouczku przyjęto założenie, że typ każdego kwiatu jest nieznany. Chcesz poznać strukturę zestawu danych z funkcji i przewidywania, jak wystąpienie danych pasuje do tej struktury.
+Ten problem polega na podzieleniu zestawu kwiatów iris w różnych grupach w oparciu o cechy kwiatu. Cechy te są długość i szerokość działka oraz długość i szerokość płatka. W tym samouczku załóżmy, że typ każdego kwiatu jest nieznany. Chcesz poznać strukturę zestawu danych z funkcji i przewidzieć, jak wystąpienie danych pasuje do tej struktury.
 
 ## <a name="select-the-appropriate-machine-learning-task"></a>Wybierz odpowiednie zadanie uczenia maszynowego
 
-Ponieważ nie wiesz, do której grupy należą każdy kwiat, wybierz zadanie [nienadzorowane Uczenie maszynowe](../resources/glossary.md#unsupervised-machine-learning) . Aby podzielić zestaw danych w grupach w taki sposób, że elementy w tej samej grupie są bardziej podobne do siebie, niż w przypadku innych grup, Użyj zadania uczenia [maszynowego](../resources/tasks.md#clustering) .
+Ponieważ nie wiesz, do której grupy należy każdy kwiat, wybierasz [zadanie uczenia maszynowego bez nadzoru.](../resources/glossary.md#unsupervised-machine-learning) Aby podzielić zestaw danych w grupach w taki sposób, że elementy w tej samej grupie są bardziej podobne do siebie niż w innych grupach, należy użyć zadania uczenia maszynowego [klastrowania.](../resources/tasks.md#clustering)
 
 ## <a name="create-a-console-application"></a>Tworzenie aplikacji konsolowej
 
-1. Otwórz program Visual Studio. Wybierz pozycję **plik** > **Nowy** > **projekt** na pasku menu. W oknie dialogowym **Nowy projekt** wybierz węzeł **wizualizacji C#**  , a następnie węzeł **.NET Core** . Następnie wybierz szablon projektu **aplikacja konsoli (.NET Core)** . W polu tekstowym **Nazwa** wpisz "IrisFlowerClustering", a następnie wybierz przycisk **OK** .
+1. Otwórz program Visual Studio. Wybierz **pozycję Plik** > **nowy** > **projekt** z paska menu. W oknie dialogowym **Nowy projekt** wybierz węzeł **Visual C#,** po którym następuje węzeł **.NET Core.** Następnie wybierz szablon projektu **aplikacji konsoli (.NET Core).** W polu tekstowym **Nazwa** wpisz "IrisFlowerClustering", a następnie wybierz przycisk **OK.**
 
-1. Utwórz katalog o nazwie *dane* w projekcie do przechowywania zestawu danych i plików modeli:
+1. Utwórz katalog o nazwie *Dane* w projekcie w celu przechowywania zestawu danych i plików modelu:
 
-    W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt, a następnie wybierz pozycję **Dodaj** > **Nowy folder**. Wpisz "Data" i naciśnij klawisz ENTER.
+    W **Eksploratorze rozwiązań**kliknij prawym przyciskiem myszy projekt i wybierz polecenie **Dodaj** > **nowy folder**. Wpisz "Dane" i naciśnij klawisz Enter.
 
-1. Zainstaluj pakiet NuGet **Microsoft.ml** :
+1. Zainstaluj pakiet **Microsoft.ML** NuGet:
 
-    W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt i wybierz polecenie **Zarządzaj pakietami NuGet**. Wybierz pozycję "nuget.org" jako źródło pakietu, wybierz kartę **Przeglądaj** , wyszukaj pozycję **Microsoft.ml** i wybierz przycisk **Instaluj** . Wybierz przycisk **OK** w oknie dialogowym **Podgląd zmian** , a następnie **Wybierz przycisk** Akceptuję w oknie dialogowym **akceptacji licencji** , jeśli zgadzasz się z postanowieniami licencyjnymi dotyczącymi wymienionych pakietów.
+    W **Eksploratorze rozwiązań**kliknij prawym przyciskiem myszy projekt i wybierz polecenie **Zarządzaj pakietami NuGet**. Wybierz "nuget.org" jako źródło pakietu, wybierz kartę **Przeglądaj,** wyszukaj **Microsoft.ML** i wybierz przycisk **Zainstaluj.** Wybierz przycisk **OK** w oknie dialogowym **Podgląd zmian,** a następnie wybierz przycisk **Akceptuję** w oknie dialogowym **Akceptacja licencji,** jeśli zgadzasz się z warunkami licencyjnymi dla wymienionych pakietów.
 
 ## <a name="prepare-the-data"></a>Przygotowywanie danych
 
-1. Pobierz zestaw danych [Iris. Data](https://github.com/dotnet/machinelearning/blob/master/test/data/iris.data) i Zapisz go w folderze *danych* utworzonym w poprzednim kroku. Aby uzyskać więcej informacji na temat zestawu danych Iris, zapoznaj się ze stroną sieci Web dotyczącą [zestawu danych kwitnienia Iris](https://en.wikipedia.org/wiki/Iris_flower_data_set) oraz stroną [zestawu danych Iris](https://archive.ics.uci.edu/ml/datasets/Iris) , która jest źródłem zestawu danych.
+1. Pobierz zestaw danych [iris.data](https://github.com/dotnet/machinelearning/blob/master/test/data/iris.data) i zapisz go w folderze *Dane* utworzonym w poprzednim kroku. Aby uzyskać więcej informacji na temat zestawu danych przysłonki, zobacz [zestaw danych kwiatów iris](https://en.wikipedia.org/wiki/Iris_flower_data_set) Wikipedia strony i [iris data set](https://archive.ics.uci.edu/ml/datasets/Iris) strony, która jest źródłem zestawu danych.
 
-1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy plik *Iris. Data* i wybierz polecenie **Właściwości**. W obszarze **Zaawansowane**Zmień wartość opcji **Kopiuj do katalogu wyjściowego** na Kopiuj, **jeśli nowszy**.
+1. W **Eksploratorze rozwiązań**kliknij prawym przyciskiem myszy plik *iris.data* i wybierz polecenie **Właściwości**. W obszarze **Zaawansowane**zmień wartość **kopiuj do katalogu wyjściowego,** aby **skopiować, jeśli nowsza**.
 
-Plik *Iris. Data* zawiera pięć kolumn, które reprezentują:
+Plik *iris.data* zawiera pięć kolumn, które reprezentują:
 
-- słupka długość w centymetrach
-- słupka szerokość w centymetrach
-- płatna długość w centymetrach
-- Wysokość i szerokość w centymetrach
-- Typ kwitnienia tęczówki
+- długość sepal w centymetrach
+- szerokość działka w centymetrach
+- długość płatka w centymetrach
+- szerokość płatka w centymetrach
+- rodzaj kwiatu przysłania
 
-W ramach przykładu klastrowania ten samouczek ignoruje ostatnią kolumnę.
+Ze względu na przykład klastrowania ten samouczek ignoruje ostatnią kolumnę.
 
 ## <a name="create-data-classes"></a>Tworzenie klas danych
 
-Utwórz klasy dla danych wejściowych i prognoz:
+Tworzenie klas dla danych wejściowych i prognoz:
 
-1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt, a następnie wybierz pozycję **Dodaj** > **nowy element**.
-1. W oknie dialogowym **Dodaj nowy element** wybierz pozycję **Klasa** i zmień wartość pola **Nazwa** na *IrisData.cs*. Następnie wybierz przycisk **Dodaj** .
-1. Dodaj następującą `using` dyrektywy do nowego pliku:
+1. W **Eksploratorze rozwiązań**kliknij prawym przyciskiem myszy projekt, a następnie wybierz polecenie **Dodaj** > **nowy element**.
+1. W oknie dialogowym **Dodawanie nowego elementu** wybierz pozycję **Klasa** i zmień pole **Nazwa** na *IrisData.cs*. Następnie wybierz przycisk **Dodaj.**
+1. Dodaj następującą `using` dyrektywę do nowego pliku:
 
    [!code-csharp[Add necessary usings](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/IrisData.cs#Usings)]
 
-Usuń istniejącą definicję klasy i Dodaj następujący kod, który definiuje klasy `IrisData` i `ClusterPrediction`, do pliku *IrisData.cs* :
+Usuń istniejącą definicję klasy i dodaj następujący `IrisData` kod, który definiuje klasy i `ClusterPrediction`, do *pliku IrisData.cs:*
 
 [!code-csharp[Define data classes](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/IrisData.cs#ClassDefinitions)]
 
-`IrisData` jest klasą danych wejściowych i zawiera definicje dla każdej funkcji z zestawu danych. Użyj atrybutu [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute) , aby określić indeksy kolumn źródłowych w pliku zestawu danych.
+`IrisData`jest klasą danych wejściowych i ma definicje dla każdej funkcji z zestawu danych. Użyj [atrybutu LoadColumn,](xref:Microsoft.ML.Data.LoadColumnAttribute) aby określić indeksy kolumn źródłowych w pliku zestawu danych.
 
-Klasa `ClusterPrediction` reprezentuje dane wyjściowe modelu klastrowania zastosowanego do wystąpienia `IrisData`. Użyj atrybutu [ColumnName](xref:Microsoft.ML.Data.ColumnNameAttribute) , aby powiązać pola `PredictedClusterId` i `Distances` z kolumnami **PredictedLabel** i **Score** . W przypadku zadania klastrowania te kolumny mają następujące znaczenie:
+Klasa `ClusterPrediction` reprezentuje dane wyjściowe modelu klastrowania zastosowane `IrisData` do wystąpienia. Użyj [Atrybutcolumnname,](xref:Microsoft.ML.Data.ColumnNameAttribute) aby `PredictedClusterId` `Distances` powiązać i pola odpowiednio **predictedlabel** i **score** kolumn. W przypadku zadania klastrowania kolumny te mają następujące znaczenie:
 
-- Kolumna **PredictedLabel** zawiera identyfikator przewidywanego klastra.
-- Kolumna **punktacji** zawiera tablicę z kwadratową Euclideaną odległości do centroids klastra. Długość tablicy jest równa liczbie klastrów.
+- **Kolumna PredictedLabel** zawiera identyfikator przewidywanego klastra.
+- **Kolumna Wynik** zawiera tablicę z kwadratowymi odległościami euklidesa do centroidklastra. Długość tablicy jest równa liczbie klastrów.
 
 > [!NOTE]
-> Użyj typu `float`, aby reprezentować wartości zmiennoprzecinkowe w klasach danych wejściowych i prognoz.
+> Typ `float` służy do reprezentowania wartości zmiennoprzecinkowych w klasach danych wejściowych i przewidywania.
 
 ## <a name="define-data-and-model-paths"></a>Definiowanie ścieżek danych i modeli
 
-Wróć do pliku *program.cs* i Dodaj dwa pola do przechowywania ścieżek do pliku zestawu danych i do pliku, aby zapisać model:
+Wróć do *pliku Program.cs* i dodaj dwa pola, aby przytrzymać ścieżki do pliku zestawu danych i do pliku, aby zapisać model:
 
-- `_dataPath` zawiera ścieżkę do pliku z zestawem danych używanym do uczenia modelu.
-- `_modelPath` zawiera ścieżkę do pliku, w którym jest przechowywany przeszkolony model.
+- `_dataPath`zawiera ścieżkę do pliku z zestawem danych używanym do nauczenia modelu.
+- `_modelPath`zawiera ścieżkę do pliku, w którym jest przechowywany uczonego modelu.
 
-Dodaj następujący kod bezpośrednio powyżej metody `Main`, aby określić te ścieżki:
+Dodaj następujący kod tuż `Main` nad metodą, aby określić te ścieżki:
 
 [!code-csharp[Initialize paths](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/Program.cs#Paths)]
 
-Aby wykonać poprzednią kompilację kodu, Dodaj następujące dyrektywy `using` w górnej części pliku *program.cs* :
+Aby skompilować poprzedni kod, dodaj `using` następujące dyrektywy u góry *Program.cs* pliku:
 
 [!code-csharp[Add usings for paths](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/Program.cs#UsingsForPaths)]
 
-## <a name="create-ml-context"></a>Tworzenie kontekstu ML
+## <a name="create-ml-context"></a>Tworzenie kontekstu ml
 
-Dodaj następujące dodatkowe dyrektywy `using` na początku pliku *program.cs* :
+Dodaj następujące `using` dodatkowe dyrektywy w górnej części *Program.cs* pliku:
 
 [!code-csharp[Add Microsoft.ML usings](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/Program.cs#MLUsings)]
 
-W metodzie `Main` Zastąp wiersz `Console.WriteLine("Hello World!");` następującym kodem:
+W `Main` metodzie zastąp `Console.WriteLine("Hello World!");` wiersz następującym kodem:
 
 [!code-csharp[Create ML context](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/Program.cs#CreateContext)]
 
-Klasa <xref:Microsoft.ML.MLContext?displayProperty=nameWithType> reprezentuje środowisko uczenia maszynowego i udostępnia mechanizmy rejestrowania i punktów wejścia na potrzeby ładowania danych, szkoleń modeli, prognozowania i innych zadań. Jest to porównywalne z koncepcją `DbContext` w Entity Framework.
+Klasa <xref:Microsoft.ML.MLContext?displayProperty=nameWithType> reprezentuje środowisko uczenia maszynowego i zapewnia mechanizmy rejestrowania i punkty wejścia do ładowania danych, szkolenia modelu, przewidywania i innych zadań. Jest to porównywalne koncepcyjnie do używania `DbContext` w ramach jednostki.
 
 ## <a name="set-up-data-loading"></a>Konfigurowanie ładowania danych
 
-Dodaj następujący kod do metody `Main`, aby skonfigurować sposób ładowania danych:
+Dodaj następujący kod `Main` do metody, aby skonfigurować sposób ładowania danych:
 
 [!code-csharp[Create text loader](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/Program.cs#CreateDataView)]
 
-[Metoda rozszerzenia](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) generycznego`MLContext.Data.LoadFromTextFile` wnioskuje schemat zestawu danych z podanego typu `IrisData` i zwraca <xref:Microsoft.ML.IDataView>, który może być używany jako dane wejściowe dla transformatorów.
+Metoda [ `MLContext.Data.LoadFromTextFile` rozszerzenia](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) ogólnego wnioskuje schemat zestawu danych `IrisData` z <xref:Microsoft.ML.IDataView> podanego typu i zwraca, które mogą być używane jako dane wejściowe dla transformatorów.
 
-## <a name="create-a-learning-pipeline"></a>Tworzenie potoku uczenia
+## <a name="create-a-learning-pipeline"></a>Tworzenie potoku uczenia się
 
-W tym samouczku potok uczenia zadania klastra składa się z dwóch następujących kroków:
+W tym samouczku potok uczenia się zadania klastrowania składa się z dwóch następujących kroków:
 
-- Połącz załadowane kolumny w jedną kolumnę **funkcji** , która jest używana przez Trainer klastrowania;
-- Użyj <xref:Microsoft.ML.Trainers.KMeansTrainer> Trainer, aby nauczyć model przy użyciu algorytmu klastrowanie k-oznaczanie + +.
+- łączenie załadowanych kolumn w jedną **kolumnę Funkcji,** która jest używana przez trenera klastrowania;
+- użyj <xref:Microsoft.ML.Trainers.KMeansTrainer> trenera do szkolenia modelu przy użyciu algorytmu klastrowania k-means++.
 
 Dodaj następujący kod do metody `Main`:
 
@@ -141,51 +141,51 @@ Kod określa, że zestaw danych powinien być podzielony na trzy klastry.
 
 ## <a name="train-the-model"></a>Uczenie modelu
 
-Kroki dodane w poprzednich sekcjach przygotowano potok do szkolenia, jednak żadne nie zostały wykonane. Dodaj następujący wiersz do metody `Main`, aby wykonać ładowanie danych i uczenie modeli:
+Kroki dodane w poprzednich sekcjach przygotowały potok do szkolenia, jednak żadne nie zostały wykonane. Dodaj następujący wiersz `Main` do metody, aby wykonać ładowanie danych i szkolenie modelu:
 
 [!code-csharp[Train the model](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/Program.cs#TrainModel)]
 
-### <a name="save-the-model"></a>Zapisz model
+### <a name="save-the-model"></a>Zapisywanie modelu
 
-W tym momencie masz model, który można zintegrować z dowolnymi istniejącymi lub nowymi aplikacjami platformy .NET. Aby zapisać model w pliku zip, Dodaj następujący kod do metody `Main`:
+W tym momencie masz model, który można zintegrować z dowolnym z istniejących lub nowych aplikacji .NET. Aby zapisać model w pliku zip, dodaj do `Main` metody następujący kod:
 
 [!code-csharp[Save the model](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/Program.cs#SaveModel)]
 
-## <a name="use-the-model-for-predictions"></a>Używanie modelu dla prognoz
+## <a name="use-the-model-for-predictions"></a>Użyj modelu dla prognoz
 
-Aby dokonać prognoz, użyj klasy <xref:Microsoft.ML.PredictionEngine%602>, która pobiera wystąpienia typu wejściowego za pomocą potoku transformatora i tworzy wystąpienia typu danych wyjściowych. Dodaj następujący wiersz do metody `Main`, aby utworzyć wystąpienie tej klasy:
+Aby przewidywań, należy <xref:Microsoft.ML.PredictionEngine%602> użyć klasy, która przyjmuje wystąpień typu wejściowego za pośrednictwem potoku transformatora i tworzy wystąpienia typu wyjściowego. Dodaj następujący wiersz `Main` do metody, aby utworzyć wystąpienie tej klasy:
 
 [!code-csharp[Create predictor](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/Program.cs#Predictor)]
 
-[PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) jest WYGODNYm interfejsem API, który umożliwia prognozowanie jednego wystąpienia danych. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) nie jest bezpieczna wątkowo. Jest to możliwe do użycia w środowiskach wielowątkowych lub prototypowych. Aby zwiększyć wydajność i bezpieczeństwo wątków w środowiskach produkcyjnych, Użyj usługi `PredictionEnginePool`, która tworzy [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) obiektów do użycia w całej aplikacji. Zapoznaj się z tym przewodnikiem dotyczącym [korzystania z `PredictionEnginePool` w ASP.NET Core Web API](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application).
+[PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) jest interfejs emanujący interfejsu API wygody, który umożliwia wykonywanie przewidywanie na pojedyncze wystąpienie danych. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)nie jest bezpieczny dla nici. Dopuszczalne jest stosowanie w środowiskach jednowątkowych lub prototypowych. Aby zwiększyć wydajność i bezpieczeństwo wątków `PredictionEnginePool` w środowiskach [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) produkcyjnych, należy użyć usługi, która tworzy obiektów [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) do użycia w całej aplikacji. Zobacz ten przewodnik, jak [ `PredictionEnginePool` używać w ASP.NET Core Web API](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application).
 
 > [!NOTE]
-> rozszerzenie usługi `PredictionEnginePool` jest obecnie w wersji zapoznawczej.
+> `PredictionEnginePool`rozszerzenie usługi jest obecnie w wersji zapoznawczej.
 
-Utwórz klasę `TestIrisData` do przechowywania wystąpień danych testowych:
+Utwórz `TestIrisData` klasę do umieszczenia wystąpień danych testowych:
 
-1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt, a następnie wybierz pozycję **Dodaj** > **nowy element**.
-1. W oknie dialogowym **Dodaj nowy element** wybierz pozycję **Klasa** i zmień wartość pola **Nazwa** na *TestIrisData.cs*. Następnie wybierz przycisk **Dodaj** .
-1. Zmodyfikuj klasę jako statyczną, jak w poniższym przykładzie:
+1. W **Eksploratorze rozwiązań**kliknij prawym przyciskiem myszy projekt, a następnie wybierz polecenie **Dodaj** > **nowy element**.
+1. W oknie dialogowym **Dodawanie nowego elementu** wybierz pozycję **Klasa** i zmień pole **Nazwa** na *TestIrisData.cs*. Następnie wybierz przycisk **Dodaj.**
+1. Zmodyfikuj klasę, aby była statyczna, jak w poniższym przykładzie:
 
    [!code-csharp[Make class static](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/TestIrisData.cs#Static)]
 
-W tym samouczku wprowadzono jedno wystąpienie danych Iris w tej klasie. Możesz dodać inne scenariusze, aby eksperymentować z modelem. Dodaj następujący kod do klasy `TestIrisData`:
+W tym samouczku przedstawiono jedno wystąpienie danych przysłonki w tej klasie. Można dodać inne scenariusze do eksperymentowania z modelem. Dodaj następujący kod `TestIrisData` do klasy:
 
 [!code-csharp[Test data](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/TestIrisData.cs#TestData)]
 
-Aby sprawdzić klaster, do którego należy określony element, Wróć do pliku *program.cs* i Dodaj następujący kod do metody `Main`:
+Aby dowiedzieć się klastra, do którego należy określony element, wróć do *pliku* Program.cs `Main` i dodaj następujący kod do metody:
 
 [!code-csharp[Predict and output results](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/Program.cs#PredictionExample)]
 
-Uruchom program, aby zobaczyć, który klaster zawiera określone wystąpienie danych i kwadratowe odległości z tego wystąpienia do klastra centroids. Wyniki powinny wyglądać podobnie do następujących:
+Uruchom program, aby zobaczyć, który klaster zawiera określone wystąpienie danych i kwadratowe odległości od tego wystąpienia do centroidów klastra. Wyniki powinny być podobne do następujących:
 
 ```text
 Cluster: 2
 Distances: 11.69127 0.02159119 25.59896
 ```
 
-Gratulacje! Pomyślnie skompilowano model uczenia maszynowego na potrzeby klastrowania Iris i użył go do prognozowania. Kod źródłowy dla tego samouczka można znaleźć w repozytorium GitHub [/Samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/IrisFlowerClustering) .
+Gratulacje! Teraz pomyślnie skonstruowano model uczenia maszynowego do klastrowania przysłonek i użyto go do tworzenia prognoz. Kod źródłowy tego samouczka można znaleźć w repozytorium GitHub [dotnet/samples.](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/IrisFlowerClustering)
 
 ## <a name="next-steps"></a>Następne kroki
 
@@ -195,11 +195,11 @@ W niniejszym samouczku zawarto informacje na temat wykonywania następujących c
 > - Omówienie problemu
 > - Wybierz odpowiednie zadanie uczenia maszynowego
 > - Przygotowywanie danych
-> - Załaduj i Przekształć dane
-> - Wybierz algorytm uczenia
+> - Ładowanie i przekształcanie danych
+> - Wybierz algorytm uczenia się
 > - Uczenie modelu
-> - Używanie modelu dla prognoz
+> - Użyj modelu dla prognoz
 
-Zapoznaj się z naszym repozytorium GitHub, aby kontynuować uczenie i znaleźć więcej przykładów.
+Sprawdź nasze repozytorium GitHub, aby kontynuować naukę i znaleźć więcej przykładów.
 > [!div class="nextstepaction"]
-> [repozytorium dotnet/machinelearning w witrynie GitHub](https://github.com/dotnet/machinelearning/)
+> [repozytorium GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/)

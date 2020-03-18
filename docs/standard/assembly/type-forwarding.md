@@ -9,28 +9,28 @@ dev_langs:
 - csharp
 - cpp
 ms.openlocfilehash: 215636a9617a2723d8ab69640c1d3e69491a7d87
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160368"
 ---
 # <a name="type-forwarding-in-the-common-language-runtime"></a>Przekazywanie dalej typu w środowisku uruchomieniowym języka wspólnego
-Przekazywanie typu pozwala przenieść typ do innego zestawu bez konieczności ponownego kompilowania aplikacji, które używają oryginalnego zestawu.  
+Przekazywanie tekstu umożliwia przeniesienie typu do innego zestawu bez konieczności ponownej kompilacji aplikacji korzystających z oryginalnego zestawu.  
   
- Załóżmy na przykład, że aplikacja używa klasy `Example` w zestawie o nazwie *Utility. dll*. Deweloperzy *Narzędzia Utility. dll* mogą zdecydować się na refaktoryzację zestawu, a w procesie może przenieść klasę `Example` do innego zestawu. Jeśli stara wersja *Narzędzia Utility. dll* jest zastępowana przez nową wersję *pliku Utility. dll* i jego zestawu towarzyszącego, aplikacja, która używa klasy `Example`, kończy się niepowodzeniem, ponieważ nie może zlokalizować klasy `Example` w nowej wersji *pliku Utility. dll*.  
+ Załóżmy na przykład, `Example` że aplikacja używa klasy w zestawie o nazwie *Utility.dll*. Deweloperzy *Utility.dll* może zdecydować się na refaktoryzacji zestawu, `Example` a w procesie mogą przenieść klasy do innego zestawu. Jeśli stara wersja *pliku Utility.dll* zostanie zastąpiona nową wersją *pliku Utility.dll* i jej zestawu towarzyszącego, aplikacja korzystająca z `Example` tej klasy nie powiedzie się, ponieważ nie może zlokalizować `Example` klasy w nowej wersji pliku *Utility.dll*.  
   
- Deweloperzy *narzędzi. dll* mogą uniknąć tego przez przekazywanie żądań dla klasy `Example` przy użyciu atrybutu <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>. Jeśli atrybut został zastosowany do nowej wersji *pliku Utility. dll*, żądania dla klasy `Example` są przekazywane do zestawu, który zawiera teraz klasę. Istniejąca aplikacja nadal działa normalnie, bez ponownej kompilacji.  
+ Deweloperzy *Utility.dll* można tego uniknąć, przesyłając dalej żądania dla `Example` klasy, przy użyciu atrybutu. <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute> Jeśli atrybut został zastosowany do nowej wersji *Utility.dll,* żądania dla `Example` klasy są przekazywane do zestawu, który teraz zawiera klasę. Istniejąca aplikacja nadal działa normalnie, bez ponownej kompilacji.  
   
 > [!NOTE]
-> W .NET Framework w wersji 2,0 nie można przesłać dalej typów z zestawów utworzonych w Visual Basic. Jednak aplikacja zapisywana w Visual Basic może korzystać z przekazanych typów. Oznacza to, że jeśli aplikacja używa zestawu zakodowanego w C# lub C++, a typ z tego zestawu jest przekazywany do innego zestawu, aplikacja Visual Basic może użyć przekazanego typu.  
+> W wersji .NET Framework w wersji 2.0 nie można przesyłać dalej typów z zestawów napisanych w języku Visual Basic. Jednak aplikacja napisana w języku Visual Basic może korzystać z typów przesyłanych dalej. Oznacza to, że jeśli aplikacja używa zestawu zakodowanego w języku C# lub C++, a typ z tego zestawu jest przekazywany do innego zestawu, aplikacja Visual Basic może używać typu przekazywanego dalej.  
   
 ## <a name="forward-types"></a>Typy do przodu  
- Aby przesłać dalej typ, należy wykonać cztery kroki:  
+ Istnieją cztery kroki przekazywania typu:  
   
-1. Przenieś kod źródłowy dla typu z oryginalnego zestawu do zestawu docelowego.  
+1. Przenieś kod źródłowy typu z oryginalnego złożenia do zestawu docelowego.  
 
-2. W zestawie, w którym używany jest typ, Dodaj <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute> dla typu, który został przeniesiony. Poniższy kod przedstawia atrybut dla typu o nazwie `Example`, który został przeniesiony.  
+2. W zestawie, w którym typ był <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute> używany, dodaj a dla typu, który został przeniesiony. Poniższy kod przedstawia atrybut dla `Example` typu o nazwie, który został przeniesiony.  
 
    ```cpp  
     [assembly:TypeForwardedToAttribute(Example::typeid)]  
@@ -40,12 +40,12 @@ Przekazywanie typu pozwala przenieść typ do innego zestawu bez konieczności p
     [assembly:TypeForwardedToAttribute(typeof(Example))]  
    ```  
 
-3. Kompiluj zestaw, który zawiera teraz typ.  
+3. Skompiluj zestaw, który teraz zawiera typ.  
 
-4. Ponownie skompiluj zestaw, w którym znajduje się typ, z odwołaniem do zestawu, który zawiera teraz typ. Na przykład, Jeśli kompilujesz C# plik z wiersza polecenia, użyj opcji [-Reference (C# opcje kompilatora)](../../csharp/language-reference/compiler-options/reference-compiler-option.md) , aby określić zestaw, który zawiera typ. W C++programie użyj dyrektywy [#using](/cpp/preprocessor/hash-using-directive-cpp) w pliku źródłowym, aby określić zestaw, który zawiera typ.  
+4. Ponownie skompilować zestaw, w którym typ był używany, z odwołaniem do zestawu, który teraz zawiera typ. Na przykład jeśli kompilowanie pliku C# z wiersza polecenia, użyj [-reference (Opcje kompilatora C#),](../../csharp/language-reference/compiler-options/reference-compiler-option.md) aby określić zestaw, który zawiera typ. W języku C++ użyj dyrektywy [#using](/cpp/preprocessor/hash-using-directive-cpp) w pliku źródłowym, aby określić zestaw, który zawiera typ.  
   
 ## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>
-- [Przekazywanie typu (C++/CLI)](/cpp/windows/type-forwarding-cpp-cli)
-- [#using — dyrektywa](/cpp/preprocessor/hash-using-directive-cpp)
+- [Przekazywanie tekstu (C++/CLI)](/cpp/windows/type-forwarding-cpp-cli)
+- [dyrektywa #using](/cpp/preprocessor/hash-using-directive-cpp)

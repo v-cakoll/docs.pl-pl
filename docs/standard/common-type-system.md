@@ -1,38 +1,38 @@
 ---
-title: System typu wspólnego i specyfikacja Common Language Specification
-description: Dowiedz się, jak System typu wspólnego (CTS) i Common Language Specification (CLS) umożliwiają programowi .NET o obsłudze wielu języków.
+title: System typu wspólnego i specyfikacja języka wspólnego
+description: Dowiedz się, jak system wspólnych typów (CTS) i specyfikacja języka wspólnego (CLS) umożliwiają programowi .NET obsługę wielu języków.
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 3b1f5725-ac94-4f17-8e5f-244442438a4d
-ms.openlocfilehash: d162a736b8f7b56293fc75a445c2a80cce597768
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8983e456b051ace434fda9f6ed9cf9028c2ec2d7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664515"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187676"
 ---
-# <a name="common-type-system--common-language-specification"></a>System typu wspólnego i specyfikacja Common Language Specification
+# <a name="common-type-system--common-language-specification"></a>System typu wspólnego i specyfikacja języka wspólnego
 
-Ponownie dwa terminy swobodnie używane w środowisku .NET, faktycznie są niezwykle istotne, aby zrozumieć, jak implementacji .NET umożliwia tworzenie wielojęzycznych i zrozumienie jego sposobu działania.
+Ponownie dwa terminy, które są swobodnie używane w świecie .NET, są one rzeczywiście kluczowe, aby zrozumieć, jak implementacja .NET umożliwia tworzenie wielu języków i zrozumieć, jak to działa.
 
 ## <a name="common-type-system"></a>System typu wspólnego
 
-Zacząć od początku, należy pamiętać, że implementacja .NET jest _niezależny od języka_. Nie oznacza to, po prostu programistą można napisać jej kod w dowolnym języku, który może być kompilowane, aby IL. Oznacza to również potrzebuje można było korzystać z kodu napisanego w innych językach, które mogą być używane w implementacji .NET.
+Aby rozpocząć od początku, należy pamiętać, że implementacja .NET jest _agnostyk języka_. Nie oznacza to tylko, że programista może napisać swój kod w dowolnym języku, który można skompilować do IL. Oznacza to również, że muszą być w stanie wchodzić w interakcje z kodem napisanym w innych językach, które mogą być używane w implementacji .NET.
 
-Aby to zrobić w sposób niewidoczny dla użytkownika, musi istnieć typowym sposobem opisano wszystkie obsługiwane typy. Jest to, co odpowiada za to System typu wspólnego (CTS). Został on utworzony, aby wykonać kilka czynności:
+Aby to zrobić w sposób przejrzysty, musi istnieć wspólny sposób opisywania wszystkich obsługiwanych typów. To jest to, co wspólny system typu (CTS) jest odpowiedzialny za to, co robi. Został on stworzony, aby zrobić kilka rzeczy:
 
-* Ustanów umożliwiająca wykonanie wielu języków.
-* Zapewnia model obiektowy umożliwiają wdrażanie różnych języków na implementacji .NET.
-* Zdefiniuj zestaw reguł, które należy wykonać we wszystkich językach, jeśli chodzi o pracy z typami.
-* Podaj bibliotekę, która zawiera podstawowe typy pierwotne, które są używane podczas tworzenia aplikacji (takich jak `Boolean`, `Byte`, `Char` itp.)
+* Ustanowienie struktury dla wykonywania w wielu językach.
+* Podaj model obiektowy do obsługi implementacji różnych języków w implementacji .NET.
+* Zdefiniuj zestaw reguł, których muszą przestrzegać wszystkie języki, jeśli chodzi o pracę z typami.
+* Podaj bibliotekę zawierającą podstawowe typy pierwotne, które są `Boolean`używane `Byte` `Char` w tworzeniu aplikacji (takie jak , , itp.)
 
-CTS definiuje dwa główne rodzaje typów, które powinny być obsługiwane: typy odwołań i wartości. Ich nazwy wskazują ich definicje.
+CTS definiuje dwa główne typy typów, które powinny być obsługiwane: typy odwołań i wartości. Ich nazwy wskazują na ich definicje.
 
-Typy odwołań obiekty są reprezentowane przez odniesienie do rzeczywistej wartości obiektu; w tym miejscu odwołanie jest podobne do wskaźnika w języku C/C++. Po prostu odwołuje się on w lokalizacji pamięci, w których wartości obiektów. To ma poważny wpływ na sposób te typy są używane. Przypisać typu odwołania do zmiennej, a następnie przekazać tej zmiennej do metody, na przykład zmiany wprowadzone w obiekcie będzie odzwierciedlona w głównym obiekcie; nie ma żadnych kopiowanie.
+Obiekty typów odwołań są reprezentowane przez odwołanie do rzeczywistej wartości obiektu; odwołanie w tym miejscu jest podobny do wskaźnika w C/C++. Po prostu odnosi się do lokalizacji pamięci, w której znajdują się wartości obiektów. Ma to ogromny wpływ na sposób korzystania z tych typów. Jeśli przypiszesz typ odwołania do zmiennej, a następnie przekażesz tę zmienną do metody, na przykład wszelkie zmiany w obiekcie zostaną odzwierciedlone w obiekcie głównym; nie ma kopiowania.
 
-Typy wartości są i na odwrót, w których obiekty są reprezentowane przez ich wartości. Jeśli przypisujesz typ wartości do zmiennej, kopiowane są zasadniczo wartość obiektu.
+Typy wartości są odwrotne, gdzie obiekty są reprezentowane przez ich wartości. Jeśli typ wartości zostanie przypisany do zmiennej, zasadniczo kopiujesz wartość obiektu.
 
-CTS definiuje kilka kategorii typów, z których każdy z ich określonych semantyki i użycia:
+CTS definiuje kilka kategorii typów, z których każda ma specyficzną semantyką i zastosowanie:
 
 * Klasy
 * Struktury
@@ -40,17 +40,17 @@ CTS definiuje kilka kategorii typów, z których każdy z ich określonych seman
 * Interfejsy
 * Delegaty
 
-CTS definiuje również inne właściwości typów, takich jak modyfikatorów dostępu, co to są elementami członkowskimi prawidłowego typu, jak dziedziczenie i przeciążenie działa i tak dalej. Niestety, przechodząc bardziej szczegółowo omówiono żadnego z tych wykracza poza zakres artykułu wprowadzające, takich jak to, ale można zapoznać się [więcej zasobów](#more-resources) sekcji na końcu łącza do bardziej szczegółowej zawartości, która obejmuje następujące tematy.
+CTS definiuje również wszystkie inne właściwości typów, takich jak modyfikatory dostępu, jakie są prawidłowe elementy członkowskie typu, jak dziedziczenie i przeciążenie działa i tak dalej. Niestety, wchodzenie w głąb któregokolwiek z nich wykracza poza zakres artykułu wprowadzającego, takiego jak ten, ale możesz zapoznać się z sekcją [Więcej zasobów](#more-resources) na końcu, aby uzyskać linki do bardziej szczegółowej zawartości obejmującej te tematy.
 
 ## <a name="common-language-specification"></a>Specyfikacja języka wspólnego
 
-Aby włączyć pełne współdziałanie scenariuszy, wszystkie obiekty, które są tworzone w kodzie muszą polegać na pozycjami w językach, które są z ich używaniem (są ich _wywołujących_). Ponieważ istnieje wiele różnych języków, .NET została określona tych commonalities w coś, co jest nazywane **specyfikacja Common Language Specification** (CLS). Zgodny ze specyfikacją definiuje zestaw funkcji, które są wymagane przez wiele typowych aplikacji. Umożliwia także sortowania przepisem dla dowolnego języka, który jest wdrażany w oparciu .NET na to, czego potrzebuje do obsługi.
+Aby włączyć pełne scenariusze współdziałania, wszystkie obiekty, które są tworzone w kodzie musi polegać na pewne wspólności w językach, które zużywają je (są ich _obiekty wywołujące)._ Ponieważ istnieje wiele różnych języków, .NET określił te podobieństwa w coś o nazwie **specyfikacji języka wspólnego** (CLS). CLS definiuje zestaw funkcji, które są potrzebne przez wiele typowych aplikacji. Zapewnia również rodzaj przepisu dla dowolnego języka, który jest implementowany na wierzchu .NET na co musi obsługiwać.
 
-Zgodny ze specyfikacją jest podzbiorem CTS. Oznacza to, że wszystkie reguły w CTS dotyczą również ze specyfikacją CLS, o ile nie są bardziej rygorystyczne reguły zgodne ze specyfikacją. Jeśli składnik został utworzony przy użyciu tylko reguł w specyfikację CLS, oznacza to, udostępnia tylko funkcje ze specyfikacją CLS w jego interfejsie API, jest określany jako **zgodne ze specyfikacją CLS**. Na przykład `<framework-librares>` są zgodne ze specyfikacją CLS, dokładnie, ponieważ muszą wykonywać pracę we wszystkich językach, które są obsługiwane na platformie .NET.
+CLS jest podzbiorem CTS. Oznacza to, że wszystkie reguły w CTS mają również zastosowanie do CLS, chyba że reguły CLS są bardziej rygorystyczne. Jeśli składnik jest zbudowany przy użyciu tylko reguł w CLS, oznacza to, że udostępnia tylko funkcje CLS w swoim interfejsie API, mówi się, że **jest zgodny ze specyfikacją CLS**. Na przykład `<framework-librares>` są zgodne ze specyfikacją CLS właśnie dlatego, że muszą pracować we wszystkich językach, które są obsługiwane w .NET.
 
-Należy zapoznać się dokumenty w [więcej zasobów](#more-resources) sekcji poniżej, aby uzyskać przegląd wszystkich funkcji w specyfikację CLS.
+Możesz zapoznać się z dokumentami w sekcji [Więcej zasobów](#more-resources) poniżej, aby uzyskać przegląd wszystkich funkcji w cls.
 
-## <a name="more-resources"></a>Inne zasoby
+## <a name="more-resources"></a>Więcej zasobów
 
 * [System typu wspólnego](./base-types/common-type-system.md)
-* [Specyfikacja Common Language Specification](language-independence-and-language-independent-components.md)
+* [Specyfikacja języka wspólnego](language-independence-and-language-independent-components.md)

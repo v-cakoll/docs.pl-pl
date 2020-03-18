@@ -1,21 +1,21 @@
 ---
-title: Obsługa wyjątków — C# Przewodnik programowania
+title: Obsługa wyjątków — przewodnik programowania Języka C#
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], handling
 ms.assetid: b4e4ecf2-b907-4e58-891f-2563762258e9
 ms.openlocfilehash: ee1e5bd15183dad9ffe97824f9b194668e9d3b17
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705304"
 ---
 # <a name="exception-handling-c-programming-guide"></a>Obsługa wyjątków (Przewodnik programowania w języku C#)
-Programista używa bloku try do partycjonowania kodu, który może mieć wpływ na wyjątek. [](../../language-reference/keywords/try-catch.md) C# Skojarzone bloki [catch](../../language-reference/keywords/try-catch.md) są używane do obsługi wszelkich wyjątków z wynikiem. Blok [finally](../../language-reference/keywords/try-finally.md) zawiera kod, który jest uruchamiany niezależnie od tego, czy wyjątek jest zgłaszany w bloku `try`, na przykład zwalniając zasoby, które są przydzieloną w bloku `try`. Blok `try` wymaga co najmniej jednego skojarzonego bloku `catch` lub bloku `finally` lub obu tych metod.  
+Blok [try](../../language-reference/keywords/try-catch.md) jest używany przez programistów Języka C# do partycji kodu, który może mieć wpływ na wyjątek. Skojarzone bloki [catch](../../language-reference/keywords/try-catch.md) są używane do obsługi wszelkich wyjątków wynikowych. Finally [finally](../../language-reference/keywords/try-finally.md) bloku zawiera kod, który jest uruchamiany niezależnie od `try` tego, czy wyjątek jest zgłaszany `try` w bloku, takich jak zwalnianie zasobów, które są przydzielane w bloku. Blok `try` wymaga jednego lub `catch` więcej skojarzonych bloków lub `finally` bloku lub obu.  
   
- W poniższych przykładach pokazano instrukcję `try-catch`, instrukcję `try-finally` i instrukcję `try-catch-finally`.  
+ W poniższych przykładach przedstawiono `try-finally` instrukcję, `try-catch-finally` `try-catch` instrukcję i instrukcję.  
   
  [!code-csharp[csProgGuideExceptions#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#6)]  
   
@@ -23,44 +23,44 @@ Programista używa bloku try do partycjonowania kodu, który może mieć wpływ 
   
  [!code-csharp[csProgGuideExceptions#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#8)]  
   
- Blok `try` bez bloku `catch` lub `finally` powoduje błąd kompilatora.  
+ Blok `try` bez `catch` lub `finally` bloku powoduje błąd kompilatora.  
   
-## <a name="catch-blocks"></a>Bloki catch  
- Blok `catch` może określać typ wyjątku do przechwycenia. Specyfikacja typu jest nazywana *filtrem wyjątków*. Typ wyjątku powinien pochodzić od <xref:System.Exception>. Ogólnie rzecz biorąc nie należy określać <xref:System.Exception> jako filtru wyjątków, chyba że wiesz, jak obsługiwać wszystkie wyjątki, które mogą być zgłaszane w bloku `try`, lub dołączono instrukcję [throw](../../language-reference/keywords/throw.md) na końcu bloku `catch`.  
+## <a name="catch-blocks"></a>Złap bloki  
+ Blok `catch` można określić typ wyjątku do połowu. Specyfikacja typu jest nazywana *filtrem wyjątków*. Typ wyjątku powinien pochodzić od <xref:System.Exception>. Ogólnie rzecz biorąc <xref:System.Exception> nie należy określać jako filtr wyjątku, chyba że wiesz, `try` jak obsługiwać wszystkie wyjątki, które mogą `catch` być generowane w bloku lub zostały uwzględnione [throw](../../language-reference/keywords/throw.md) instrukcji na końcu bloku.  
   
- Wiele bloków `catch` z różnymi filtrami wyjątków można łączyć ze sobą. Bloki `catch` są oceniane z góry do dołu w kodzie, ale tylko jeden blok `catch` jest wykonywany dla każdego zgłoszonego wyjątku. Zostanie wykonany pierwszy blok `catch`, który określa typ dokładny lub Klasa bazowa zgłoszonego wyjątku. Jeśli żaden blok `catch` nie określa zgodnego filtru wyjątków, blok `catch`, który nie ma filtra jest zaznaczony, jeśli jeden jest obecny w instrukcji. Ważne jest, aby umieścić bloki `catch` z najbardziej szczegółowymi (najbardziej pochodnymi) typami wyjątków.  
+ Wiele `catch` bloków z różnymi filtrami wyjątków można połączyć ze sobą. Bloki `catch` są oceniane od góry do dołu w `catch` kodzie, ale tylko jeden blok jest wykonywany dla każdego wyjątku, który jest generowany. Pierwszy `catch` blok, który określa dokładny typ lub klasy podstawowej wyjątek jest wykonywana. Jeśli `catch` żaden blok nie określa pasującego filtru `catch` wyjątków, wybrany jest blok, który nie ma filtra, jeśli jest obecny w instrukcji. Ważne jest, `catch` aby najpierw umieścić bloki z najbardziej szczegółowymi (czyli najbardziej pochodnymi) typami wyjątków.  
   
- Wyjątki należy przechwytywać, gdy są spełnione następujące warunki:  
+ Należy przechwycić wyjątki, gdy spełnione są następujące warunki:  
   
-- Warto zapoznać się z tym, dlaczego wyjątek może być zgłaszany, i można zaimplementować konkretne odzyskiwanie, na przykład monitowanie użytkownika o wprowadzenie nowej nazwy pliku podczas przechwytywania obiektu <xref:System.IO.FileNotFoundException>.  
+- Masz dobre zrozumienie, dlaczego wyjątek może być generowany i można zaimplementować określonego odzyskiwania, takich jak monitowanie użytkownika, aby wprowadzić nową nazwę pliku podczas połowu <xref:System.IO.FileNotFoundException> obiektu.  
   
 - Można utworzyć i zgłosić nowy, bardziej szczegółowy wyjątek.  
   
      [!code-csharp[csProgGuideExceptions#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#9)]  
   
-- Chcesz częściowo obsłużyć wyjątek przed przekazaniem go do dodatkowej obsługi. W poniższym przykładzie blok `catch` jest używany do dodawania wpisu do dziennika błędów przed ponownym wygenerowaniem wyjątku.  
+- Chcesz częściowo obsługiwać wyjątek przed przekazaniem go do dodatkowej obsługi. W poniższym `catch` przykładzie blok służy do dodawania wpisu do dziennika błędów przed ponownym zgłoszeniem wyjątku.  
   
      [!code-csharp[csProgGuideExceptions#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#10)]  
   
-## <a name="finally-blocks"></a>Bloki finally  
- Blok `finally` umożliwia czyszczenie akcji wykonywanych w bloku `try`. Jeśli jest obecny, blok `finally` jest wykonywany jako ostatni, po bloku `try` i dowolnych dopasowanych bloków `catch`. Blok `finally` jest zawsze uruchamiany, niezależnie od tego, czy wystąpił wyjątek, czy znaleziono blok `catch` pasujący do typu wyjątku.  
+## <a name="finally-blocks"></a>Wreszcie bloki  
+ Blok `finally` umożliwia oczyszczanie akcji wykonywanych w `try` bloku. Jeśli jest `finally` obecny, blok wykonuje `try` ostatni, po `catch` bloku i wszelkie dopasowane bloku. Blok `finally` zawsze działa, niezależnie od tego, czy `catch` wyjątek lub blok pasujący do typu wyjątku zostanie znaleziony.  
   
- Blok `finally` może służyć do zwalniania zasobów, takich jak strumienie plików, połączenia z bazami danych i uchwyty grafiki, bez oczekiwania na zakończenie działania modułu zbierającego elementy bezużyteczne w środowisku uruchomieniowym. Aby uzyskać więcej informacji, zobacz [używanie instrukcji using](../../language-reference/keywords/using-statement.md) .  
+ Blok `finally` może służyć do zwalniania zasobów, takich jak strumienie plików, połączenia bazy danych i uchwyty grafiki bez oczekiwania na moduł zbierający elementy bezużyteczne w czasie wykonywania, aby sfinalizować obiekty. Aby uzyskać więcej [informacji, zobacz korzystanie z instrukcji.](../../language-reference/keywords/using-statement.md)  
   
- W poniższym przykładzie blok `finally` jest używany do zamykania pliku, który jest otwierany w bloku `try`. Przed zamknięciem pliku należy zauważyć, że jego stan jest sprawdzany. Jeśli blok `try` nie może otworzyć pliku, dojście do pliku nadal ma wartość `null` a blok `finally` nie próbuje go zamknąć. Alternatywnie, jeśli plik zostanie pomyślnie otwarty w bloku `try`, blok `finally` zamknie otwarty plik.  
+ W poniższym `finally` przykładzie blok służy do zamykania pliku, `try` który jest otwarty w bloku. Należy zauważyć, że stan dojścia do plików jest sprawdzany przed zamknięciem pliku. Jeśli `try` blok nie może otworzyć pliku, dojście do pliku nadal ma wartość, `null` a `finally` blok nie próbuje go zamknąć. Alternatywnie, jeśli plik zostanie pomyślnie `try` otwarty w `finally` bloku, blok zamyka otwarty plik.  
   
  [!code-csharp[csProgGuideExceptions#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#11)]  
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
 
-Aby uzyskać więcej informacji, zobacz [wyjątki](~/_csharplang/spec/exceptions.md) i [Instrukcje try](~/_csharplang/spec/statements.md#the-try-statement) w [ C# specyfikacji języka](/dotnet/csharp/language-reference/language-specification/introduction). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
+For more information, see [Exceptions](~/_csharplang/spec/exceptions.md) and [The try statement](~/_csharplang/spec/statements.md#the-try-statement) in the [C# Language Specification](/dotnet/csharp/language-reference/language-specification/introduction). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Dokumentacja języka C#](../../language-reference/index.md)
-- [Przewodnik programowania w języku C#](../index.md)
+- [Odwołanie do języka C#](../../language-reference/index.md)
+- [Przewodnik programowania języka C#](../index.md)
 - [Wyjątki i obsługa wyjątków](./index.md)
 - [try-catch](../../language-reference/keywords/try-catch.md)
 - [try-finally](../../language-reference/keywords/try-finally.md)
 - [try-catch-finally](../../language-reference/keywords/try-catch-finally.md)
-- [using, instrukcja](../../language-reference/keywords/using-statement.md)
+- [za pomocą instrukcji](../../language-reference/keywords/using-statement.md)

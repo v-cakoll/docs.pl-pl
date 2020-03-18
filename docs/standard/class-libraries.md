@@ -1,50 +1,50 @@
 ---
 title: Biblioteki klas .NET
-description: Dowiedz się, jak biblioteki klas .NET umożliwiają grupowanie przydatnych funkcji w moduły, które mogą być używane przez wiele aplikacji.
+description: Dowiedz się, jak biblioteki klas .NET umożliwiają grupowanie użytecznych funkcji w moduły, które mogą być używane przez wiele aplikacji.
 author: richlander
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
 ms.openlocfilehash: b7934e5def202760ab05d363ee5fcda5d012ca72
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77124588"
 ---
 # <a name="net-class-libraries"></a>Biblioteki klas .NET
 
-Biblioteki klas są koncepcją [biblioteki udostępnionej](https://en.wikipedia.org/wiki/Library_%28computing%29#Shared_libraries) dla platformy .NET. Umożliwiają one componentize przydatną funkcjonalność do modułów, które mogą być używane przez wiele aplikacji. Mogą one również służyć jako sposób ładowania funkcjonalności, która nie jest wymagana lub jest nieznana podczas uruchamiania aplikacji. Biblioteki klas są opisane przy użyciu [formatu pliku zestawu platformy .NET](assembly/file-format.md).
+Biblioteki klas są koncepcją [biblioteki udostępnionej](https://en.wikipedia.org/wiki/Library_%28computing%29#Shared_libraries) dla .NET. Umożliwiają one zestawienie przydatnych funkcji w moduły, które mogą być używane przez wiele aplikacji. Mogą być również używane jako sposób ładowania funkcji, które nie są potrzebne lub nie są znane podczas uruchamiania aplikacji. Biblioteki klas są opisane przy użyciu [formatu pliku .NET Assembly](assembly/file-format.md).
 
 Istnieją trzy typy bibliotek klas, których można użyć:
 
-* Biblioteki klas **specyficzne dla platformy** mają dostęp do wszystkich interfejsów API w danej platformie (na przykład .NET Framework, Xamarin iOS), ale mogą być używane tylko przez aplikacje i biblioteki przeznaczone dla tej platformy.
-* **Przenośne** biblioteki klas mają dostęp do podzestawu interfejsów API i mogą być używane przez aplikacje i biblioteki przeznaczone dla wielu platform.
-* Biblioteki klas **.NET Standard** są fuzją koncepcji biblioteki dla platformy i przenośnej w jeden model, który zapewnia najlepsze z nich.
+* Biblioteki klas **specyficzne dla platformy** mają dostęp do wszystkich interfejsów API na danej platformie (na przykład .NET Framework, Xamarin iOS), ale mogą być używane tylko przez aplikacje i biblioteki, które są przeznaczone dla tej platformy.
+* **Przenośne** biblioteki klas mają dostęp do podzbioru interfejsów API i mogą być używane przez aplikacje i biblioteki przeznaczone na wiele platform.
+* Biblioteki klas **.NET Standard** są połączeniem koncepcji biblioteki specyficznej dla platformy i przenośnej w jeden model, który zapewnia najlepsze z obu.
 
 ## <a name="platform-specific-class-libraries"></a>Biblioteki klas specyficzne dla platformy
 
-Biblioteki specyficzne dla platformy są powiązane z pojedynczą implementacją platformy .NET (na przykład .NET Framework w systemie Windows) i w związku z tym mogą przyjmować znaczące zależności w znanym środowisku wykonawczym. Takie środowisko spowoduje udostępnienie znanego zestawu interfejsów API (interfejsów API platformy .NET i systemu operacyjnego) oraz udostępnienie i uwidocznienie oczekiwanego stanu (na przykład rejestru systemu Windows).
+Biblioteki specyficzne dla platformy są powiązane z pojedynczą implementacją .NET (na przykład .NET Framework w systemie Windows) i w związku z tym mogą mieć znaczące zależności od znanego środowiska wykonywania. Takie środowisko uwidacznia znany zestaw interfejsów API (.NET i OS API) i będzie utrzymywać i udostępniać oczekiwany stan (na przykład rejestr systemu Windows).
 
-Deweloperzy, którzy tworzą biblioteki specyficzne dla platformy, mogą w pełni wykorzystać podstawową platformę. Biblioteki będą kiedykolwiek działać tylko na danej platformie, dzięki czemu testy platformy lub inne formy kodu warunkowego są zbędne (modulo pojedynczy kod pochodzenia dla wielu platform).
+Deweloperzy, którzy tworzą biblioteki specyficzne dla platformy można w pełni wykorzystać platformę podstawową. Biblioteki będą działać tylko na danej platformie, dzięki czemu sprawdza niepotrzebna lub inne formy kodu warunkowego (kod pojedynczego źródła modulo dla wielu platform).
 
-Biblioteki specyficzne dla platformy były typu biblioteki klas podstawowych dla .NET Framework. Podobnie jak w przypadku innych implementacji platformy .NET, biblioteki specyficzne dla platformy pozostawały w typie biblioteki dominującej.
+Biblioteki specyficzne dla platformy zostały typu biblioteki klasy podstawowej dla .NET Framework. Nawet w miarę pojawiania się innych implementacji .NET biblioteki specyficzne dla platformy pozostały dominującym typem biblioteki.
 
 ## <a name="portable-class-libraries"></a>Przenośne biblioteki klas
 
-Biblioteki przenośne są obsługiwane w wielu implementacjach platformy .NET. Mogą oni nadal przyjmować zależności w znanym środowisku wykonawczym, jednak środowisko jest to syntetyczne, które jest generowane przez część wspólną zestawu konkretnych implementacji platformy .NET. Oznacza to, że uwidocznione interfejsy API i założenia platformy są podzbiorem dostępności dla biblioteki specyficznej dla platformy.
+Biblioteki przenośne są obsługiwane w wielu implementacjach .NET. Nadal mogą przyjmować zależności od znanego środowiska wykonywania, jednak środowisko jest syntetyczne, które jest generowane przez przecięcie zestawu konkretnych implementacji .NET. Oznacza to, że udostępniane interfejsy API i założenia platformy są podzbiorem tego, co będzie dostępne dla biblioteki specyficznej dla platformy.
 
-Podczas tworzenia biblioteki przenośnej wybiera się konfigurację platformy. To jest zestaw platform, które muszą być obsługiwane (na przykład .NET Framework 4.5 +, Windows Phone 8.0 +). Im więcej platform można obsłużyć, tym mniej interfejsów API i mniejszych założeń platformy, które można utworzyć, najniższego wspólnego mianownika. Ta cecha może być w pierwszej kolejności myląca, ponieważ ludzie często uważają, że większa jest lepsza
+Podczas tworzenia przenośnej biblioteki można wybrać konfigurację platformy. Są to zestaw platform, które należy obsługiwać (na przykład .NET Framework 4.5+, Windows Phone 8.0+). Im więcej platform zdecydujesz się obsługiwać, tym mniej interfejsów API i mniej założeń platformy można zrobić, najniższy wspólny mianownik. Ta cecha może być mylące na początku, ponieważ ludzie często myślą "więcej jest lepiej", ale okaże się, że więcej obsługiwanych platform powoduje mniej dostępnych interfejsów API.
 
-Wielu deweloperów biblioteki przełączyli się od tworzenia wielu bibliotek specyficznych dla platformy z jednego źródła (przy użyciu dyrektyw kompilacji warunkowej) do bibliotek przenośnych. Istnieje [kilka podejścia](https://blog.stephencleary.com/2012/11/portable-class-library-enlightenment.html) do uzyskiwania dostępu do funkcji specyficznych dla platformy w bibliotekach przenośnych, [a](https://log.paulbetts.org/the-bait-and-switch-pcl-trick/) w tym momencie jest to najczęściej zaakceptowana technika.
+Wielu deweloperów biblioteki przestawiło się z tworzenia wielu bibliotek specyficznych dla platformy z jednego źródła (przy użyciu dyrektyw kompilacji warunkowej) do bibliotek przenośnych. Istnieje [kilka metod](https://blog.stephencleary.com/2012/11/portable-class-library-enlightenment.html) uzyskiwania dostępu do funkcji specyficznych dla platformy w bibliotekach przenośnych, z [przynętą i przełącznikiem](https://log.paulbetts.org/the-bait-and-switch-pcl-trick/) jest najczęściej akceptowaną techniką w tym momencie.
 
-## <a name="net-standard-class-libraries"></a>.NET Standard biblioteki klas
+## <a name="net-standard-class-libraries"></a>Biblioteki klas .NET Standard
 
-Biblioteki .NET Standard są zastępowane pojęcia dotyczące bibliotek i elementów przenośnych specyficznych dla platformy. Są one specyficzne dla platformy w tym sensie, że uwidaczniają wszystkie funkcje z poziomu podstawowej platformy (nie zawiera żadnych platform syntetycznych lub przecięć platform). Są one przenośne w tym sensie, że działają na wszystkich platformach pomocniczych.
+Biblioteki .NET Standard zastępują pojęcia dotyczące bibliotek specyficznych dla platformy i przenośnych. Są one specyficzne dla platformy w tym sensie, że ujawniają wszystkie funkcje z platformy bazowej (brak syntetycznych platform lub przecięć platformy). Są przenośne w tym sensie, że działają na wszystkich platformach pomocniczych.
 
-.NET Standard uwidacznia zestaw _kontraktów_biblioteki. Implementacje platformy .NET muszą obsługiwać wszystkie umowy w całości lub wcale. W związku z tym każda implementacja obsługuje zestaw kontraktów .NET Standard. Współrzuty polega na tym, że każda biblioteka klas .NET Standard jest obsługiwana na platformach, które obsługują jej zależności kontraktu.
+Standard .NET udostępnia zestaw _kontraktów_biblioteki . Implementacje .NET muszą obsługiwać każdą umowę w pełni lub wcale. Każda implementacja obsługuje zatem zestaw kontraktów .NET Standard. W powiastów jest, że każda biblioteka klas .NET Standard jest obsługiwana na platformach, które obsługują jego zależności kontraktu.
 
-.NET Standard nie uwidacznia całej funkcjonalności .NET Framework (nie jest to cel), ale udostępnia wiele innych interfejsów API niż przenośne biblioteki klas. Więcej interfejsów API zostanie dodanych w czasie.
+Standard .NET nie udostępnia całej funkcjonalności programu .NET Framework (ani nie jest to cel), jednak nie uwidaczniają wiele więcej interfejsów API niż przenośne biblioteki klas. Więcej interfejsów API zostaną dodane w czasie.
 
 Następujące platformy obsługują biblioteki .NET Standard:
 
@@ -53,12 +53,12 @@ Następujące platformy obsługują biblioteki .NET Standard:
 * Mono
 * Xamarin.iOS, Xamarin.Mac, Xamarin.Android
 * Platforma uniwersalna systemu Windows (UWP)
-* System Windows
+* Windows
 * Windows Phone
 * Windows Phone Silverlight
 
-Aby uzyskać więcej informacji, zobacz temat [.NET Standard](net-standard.md) .
+Aby uzyskać więcej informacji, zobacz temat [.NET Standard.](net-standard.md)
 
 ## <a name="mono-class-libraries"></a>Biblioteki klas mono
 
-Biblioteki klas są obsługiwane przez mono, w tym trzy typy bibliotek opisanych powyżej. Język mono jest często widoczny (poprawnie) jako implementacja międzyplatformowa platformy Microsoft .NET. W części jest to spowodowane tym, że biblioteki .NET Framework specyficzne dla platformy mogą działać w środowisku uruchomieniowym mono bez modyfikacji ani ponownej kompilacji. Ta cecha była przed utworzeniem bibliotek klas przenośnych, dlatego była oczywistym wyborem umożliwiającym obsługę binarnej przenośności między .NET Framework i mono (chociaż działa tylko w jednym kierunku).
+Biblioteki klas są obsługiwane w mono, w tym trzy typy bibliotek opisanych powyżej. Mono jest często postrzegany (poprawnie) jako implementacja między platformami programu Microsoft .NET Framework. Po części było to spowodowane platformy specyficzne .NET Framework biblioteki można uruchomić w czasie wykonywania Mono bez modyfikacji lub ponownej kompilacji. Ta cecha została w miejscu przed utworzeniem przenośnych bibliotek klas, więc był oczywistym wyborem, aby umożliwić przenośność binarną między .NET Framework i Mono (chociaż działał tylko w jednym kierunku).

@@ -1,29 +1,29 @@
 ---
 title: Interpretowanie wyrażeń
-description: Dowiedz się, jak napisać kod, aby sprawdzić strukturę drzewa wyrażenia.
+description: Dowiedz się, jak napisać kod, aby sprawdzić strukturę drzewa wyrażeń.
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 34434a633d866b82da3da713aaecc218c7d35124
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 1283d7d957c72558652b96cb428efd0f071f0184
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036898"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146011"
 ---
 # <a name="interpreting-expressions"></a>Interpretowanie wyrażeń
 
-[Poprzednie--wykonywanie wyrażeń](expression-trees-execution.md)
+[Poprzedni -- Wykonywanie wyrażeń](expression-trees-execution.md)
 
-Teraz Napiszmy kod, aby przeanalizować strukturę *drzewa wyrażenia*. Każdy węzeł w drzewie wyrażenia będzie obiektem klasy, która jest pochodną `Expression`.
+Teraz napiszmy jakiś kod, aby zbadać strukturę *drzewa wyrażeń*. Każdy węzeł w drzewie wyrażeń będzie obiektem `Expression`klasy, która pochodzi od .
 
-Ten projekt umożliwia odwiedzanie wszystkich węzłów w drzewie wyrażenia stosunkowo prostej operacji cyklicznej. Ogólna strategia jest uruchamiana w węźle głównym i decyduje o rodzaju węzła.
+Ten projekt sprawia, że odwiedzenie wszystkich węzłów w drzewie wyrażeń stosunkowo prostą operacją cykliczną. Ogólną strategią jest rozpoczęcie w węźle głównym i określenie, jaki to rodzaj węzła.
 
-Jeśli typ węzła ma elementy podrzędne, rekursywnie odwiedza elementy podrzędne. W każdym węźle podrzędnym Powtórz proces używany w węźle głównym: Określ typ, a jeśli typ ma elementy podrzędne, zapoznaj się ze wszystkimi elementami podrzędnymi.
+Jeśli typ węzła ma podrzędne, rekursywnie odwiedzić dzieci. W każdym węźle podrzędny powtórz proces używany w węźle głównym: określ typ, a jeśli typ ma podrzędne, odwiedź każdy z podrzędnych.
 
-## <a name="examining-an-expression-with-no-children"></a>Badanie wyrażenia bez elementów podrzędnych
-Zacznijmy od odwiedzenia każdego węzła w bardzo prostym drzewie wyrażeń.
-Oto kod, który tworzy wyrażenie stałe, a następnie analizuje jego właściwości:
+## <a name="examining-an-expression-with-no-children"></a>Badanie wyrażenia bez dzieci
+Zacznijmy od ododwiedzenia każdego węzła w bardzo prostym drzewie wyrażeń.
+Oto kod, który tworzy wyrażenie stałe, a następnie sprawdza jego właściwości:
 
 ```csharp
 var constant = Expression.Constant(24, typeof(int));
@@ -33,7 +33,7 @@ Console.WriteLine($"The type of the constant value is {constant.Type}");
 Console.WriteLine($"The value of the constant value is {constant.Value}");
 ```
 
-Spowoduje to wydrukowanie następujących danych:
+Spowoduje to wydrukowanie następujących elementów:
 
 ```output
 This is an Constant expression type
@@ -41,21 +41,21 @@ The type of the constant value is System.Int32
 The value of the constant value is 24
 ```
 
-Teraz Napiszmy kod, który będzie przebadał to wyrażenie i napisać kilka ważnych właściwości. Oto kod:
+Teraz napiszmy kod, który zbada to wyrażenie i zapisać kilka ważnych właściwości na jego temat. Oto ten kod:
 
 ## <a name="examining-a-simple-addition-expression"></a>Badanie prostego wyrażenia dodawania
 
-Zacznijmy od dodania przykładu od wprowadzenia do tej sekcji.
+Zacznijmy od przykładu dodawania z wprowadzenia do tej sekcji.
 
 ```csharp
 Expression<Func<int>> sum = () => 1 + 2;
 ```
 
-> Nie używam `var` do zadeklarować tego drzewa wyrażenia, ponieważ nie jest to możliwe, ponieważ prawa strona przypisania jest niejawnie wpisywana. Więcej informacji można znaleźć [tutaj](implicitly-typed-lambda-expressions.md).
+> Nie używam `var` do deklarowania tego drzewa wyrażeń, ponieważ nie jest to możliwe, ponieważ po prawej stronie przypisania jest wpisywany niejawnie. Aby zrozumieć to głębiej, przeczytaj [tutaj](implicitly-typed-lambda-expressions.md).
 
-Węzeł główny to `LambdaExpression`. Aby uzyskać interesujący kod z prawej strony operatora `=>`, należy znaleźć jeden z elementów podrzędnych `LambdaExpression`. Wykonamy te czynności ze wszystkimi wyrażeniami w tej sekcji. Węzeł nadrzędny pomaga nam znaleźć zwracany typ `LambdaExpression`.
+Węzeł główny jest `LambdaExpression`. Aby uzyskać interesujący kod po prawej stronie `=>` operatora, musisz znaleźć jedno z dzieci `LambdaExpression`. Zrobimy to ze wszystkimi wyrażeniami w tej sekcji. Węzeł nadrzędny pomaga nam znaleźć typ `LambdaExpression`zwrotu pliku .
 
-Aby przeanalizować każdy węzeł w tym wyrażeniu, należy rekursywnie odwiedzić liczbę węzłów. Oto prosta Pierwsza implementacja:
+Aby sprawdzić każdy węzeł w tym wyrażeniu, musimy cyklicznie odwiedzić kilka węzłów. Oto prosta pierwsza implementacja:
 
 ```csharp
 Expression<Func<int, int, int>> addition = (a, b) => a + b;
@@ -79,7 +79,7 @@ var right= (ParameterExpression)additionBody.Right;
 Console.WriteLine($"\tParameter Type: {right.Type.ToString()}, Name: {right.Name}");
 ```
 
-Ten przykład drukuje następujące dane wyjściowe:
+W tym przykładzie wydrukowane są następujące dane wyjściowe:
 
 ```output
 This expression is a/an Lambda expression type
@@ -95,9 +95,9 @@ The right side is a Parameter expression
         Parameter Type: System.Int32, Name: b
 ```
 
-Zobaczysz wiele powtórzeń w przykładowym kodzie.
-Wyczyśćmy, jak i kompilować więcej osób odwiedzających węzeł wyrażenia ogólnego przeznaczenia. Ta wartość będzie wymagała zapisania algorytmu cyklicznego. Dowolny węzeł może być typu, który może mieć elementy podrzędne.
-Każdy węzeł, który ma elementy podrzędne, musi odwiedzać te elementy podrzędne i określić, czym jest ten węzeł. Oto oczyszczona wersja, która wykorzystuje rekursję do odwiedzenia operacji dodawania:
+Zauważysz wiele powtórzeń w przykładzie kodu powyżej.
+Posprzątajmy to i zbudujmy bardziej ogólnego przeznaczenia użytkownika węzła wyrażeń. To będzie wymagać od nas napisania algorytmu rekurencyjnego. Każdy węzeł może być typu, który może mieć podrzędne.
+Każdy węzeł, który ma dzieci, wymaga od nas odwiedzenia tych dzieci i określenia, czym jest ten węzeł. Oto oczyszczona wersja, która wykorzystuje rekursję do odwiedzenia operacji dodawania:
 
 ```csharp
 // Base Visitor class:
@@ -215,9 +215,9 @@ public class ConstantVisitor : Visitor
 }
 ```
 
-Ten algorytm jest podstawą algorytmu, który może odwiedzać dowolny `LambdaExpression`. Istnieje wiele otworów, w tym, że kod, który został utworzony, szuka bardzo małego przykładu możliwych zestawów węzłów drzewa wyrażeń, które może napotkać. Jednak nadal możesz uzyskać nieco informacji o tym, co produkuje. (Przypadek domyślny w metodzie `Visitor.CreateFromExpression` drukuje komunikat do konsoli błędów, gdy zostanie napotkany nowy typ węzła. Dzięki temu możesz dodać nowy typ wyrażenia.)
+Algorytm ten jest podstawą algorytmu, który `LambdaExpression`może odwiedzić dowolne . Istnieje wiele otworów, a mianowicie, że kod, który stworzyłem, szuka tylko bardzo małej próbki możliwych zestawów węzłów drzewa wyrażeń, które może napotkać. Jednak nadal można dowiedzieć się sporo od tego, co produkuje. (Domyślny przypadek w `Visitor.CreateFromExpression` metodzie drukuje komunikat do konsoli błędów po napotkaniu nowego typu węzła. W ten sposób wiesz, aby dodać nowy typ wyrażenia.)
 
-Po uruchomieniu tego gościa w wyrażeniu dodawania pokazanym powyżej otrzymujesz następujące dane wyjściowe:
+Po uruchomieniu tego odwiedzającego na wyrażenie dodawania pokazane powyżej, otrzymasz następujące dane wyjściowe:
 
 ```output
 This expression is a/an Lambda expression type
@@ -238,17 +238,17 @@ The expression body is:
                 Type: System.Int32, Name: b, ByRef: False
 ```
 
-Teraz, gdy została skompilowana bardziej ogólna implementacja gościa, można odwiedzać i przetwarzać wiele innych typów wyrażeń.
+Teraz, gdy masz bardziej ogólną implementację odwiedzających, możesz odwiedzić i przetworzyć wiele innych rodzajów wyrażeń.
 
-## <a name="examining-an-addition-expression-with-many-levels"></a>Badanie dodawania wyrażenia z wieloma poziomami
+## <a name="examining-an-addition-expression-with-many-levels"></a>Badanie wyrażenia dodawania z wieloma poziomami
 
-Wypróbujmy bardziej skomplikowany przykład, ale nadal ograniczasz typy węzłów tylko do dodawania:
+Spróbujmy bardziej skomplikowany przykład, ale nadal ograniczyć typy węzłów tylko do dodawania:
 
 ```csharp
 Expression<Func<int>> sum = () => 1 + 2 + 3 + 4;
 ```
 
-Przed uruchomieniem tego polecenia w algorytmie odwiedzającym, wypróbuj ćwiczenie, aby obejść dane wyjściowe. Należy pamiętać, że operator `+` jest *operatorem binarnym*: musi mieć dwa elementy podrzędne, reprezentujący lewy i prawy operand. Istnieje kilka możliwych sposobów konstruowania drzewa, które może być poprawne:
+Przed uruchomieniem tego na algorytmie odwiedzającego, spróbuj ćwiczenia myślowego, aby dowiedzieć się, co może być dane wyjściowe. Należy pamiętać, że `+` operator jest *operatorem binarnym:* musi mieć dwoje dzieci, reprezentujących lewe i prawe argumenty. Istnieje kilka możliwych sposobów konstruowania drzewa, które mogą być poprawne:
 
 ```csharp
 Expression<Func<int>> sum1 = () => 1 + (2 + (3 + 4));
@@ -259,18 +259,18 @@ Expression<Func<int>> sum4 = () => 1 + ((2 + 3) + 4);
 Expression<Func<int>> sum5 = () => (1 + (2 + 3)) + 4;
 ```
 
-Rozdzielenie można zobaczyć na dwie możliwe odpowiedzi, aby wyróżnić najbardziej obiecujące. Pierwsze reprezentuje wyrażenia *asocjacyjne z prawej strony* . Druga reprezentuje wyrażenia *asocjacyjne z lewej strony* .
-Zaletą obu tych dwóch formatów jest skalowanie do dowolnej dowolnej liczby wyrażeń dodawania. 
+Możesz zobaczyć separację na dwie możliwe odpowiedzi, aby wyróżnić najbardziej obiecujące. Pierwszy reprezentuje *prawe wyrażenia asocjacyjne.* Drugi reprezentuje *lewych wyrażeń zesychających.*
+Zaletą obu tych formatów jest to, że format jest skalowany do dowolnej liczby wyrażeń dodawania.
 
-Jeśli to wyrażenie zostanie uruchomione za pomocą gościa, zobaczysz to dane wyjściowe, sprawdzając, czy proste wyrażenie dodawania jest *polewane*. 
+Jeśli to wyrażenie zostanie uruchomione przez odwiedzającego, zobaczysz to dane wyjściowe, sprawdzając, czy proste wyrażenie dodawania *pozostało zesłane.*
 
-Aby można było uruchomić ten przykład i zobaczyć pełne drzewo wyrażeń, musiałem wprowadzić jedną zmianę w drzewie wyrażenia źródłowego. Gdy drzewo wyrażenia zawiera wszystkie stałe, utworzone drzewo po prostu zawiera stałą wartość `10`. Kompilator wykonuje wszystkie Dodawanie i zmniejsza wyrażenie do najprostszego formularza. Po prostu dodanie jednej zmiennej w wyrażeniu jest wystarczające, aby wyświetlić pierwotne drzewo:
+Aby uruchomić ten przykład i zobaczyć pełne drzewo wyrażeń, musiałem wprowadzić jedną zmianę do drzewa wyrażeń źródłowych. Gdy drzewo wyrażeń zawiera wszystkie stałe, wynikowe `10`drzewo zawiera po prostu stałą wartość . Kompilator wykonuje wszystkie dodawanie i zmniejsza wyrażenie do jego najprostszej postaci. Wystarczy dodać jedną zmienną w wyrażeniu wystarczy, aby zobaczyć oryginalne drzewo:
 
 ```csharp
 Expression<Func<int, int>> sum = (a) => 1 + a + 3 + 4;
 ```
 
-Utwórz osobę odwiedzającą dla tej sumy i uruchom gościa, zobaczysz następujące dane wyjściowe:
+Utwórz odwiedzającego dla tej sumy i uruchom odwiedzającego zobaczysz to wyjście:
 
 ```output
 This expression is a/an Lambda expression type
@@ -302,13 +302,13 @@ The expression body is:
                 The value of the constant value is 4
 ```
 
-Możesz również uruchomić dowolną z innych próbek za pomocą kodu gościa i zobaczyć, jakie drzewo reprezentuje. Oto przykład powyższego wyrażenia `sum3` (z dodatkowym parametrem uniemożliwiającym kompilatorowi Obliczanie stałej):
+Można również uruchomić dowolne inne przykłady za pomocą kodu odwiedzającego i zobaczyć, jakie drzewo reprezentuje. Oto przykład powyższego `sum3` wyrażenia (z dodatkowym parametrem, aby zapobiec kompilatorowi z obliczania stałej):
 
 ```csharp
 Expression<Func<int, int, int>> sum3 = (a, b) => (1 + a) + (3 + b);
 ```
 
-Oto dane wyjściowe od odwiedzających:
+Oto dane wyjściowe od odwiedzającego:
 
 ```output
 This expression is a/an Lambda expression type
@@ -341,30 +341,30 @@ The expression body is:
                         Type: System.Int32, Name: b, ByRef: False
 ```
 
-Zauważ, że nawiasy nie są częścią danych wyjściowych. W drzewie wyrażenia nie ma węzłów, które reprezentują nawiasy w wyrażeniu wejściowym. Struktura drzewa wyrażenia zawiera wszystkie informacje niezbędne do przekazania pierwszeństwa.
+Należy zauważyć, że nawiasy nie są częścią danych wyjściowych. Nie ma węzłów w drzewie wyrażeń, które reprezentują nawiasy w wyrażeniu wejściowym. Struktura drzewa wyrażeń zawiera wszystkie informacje niezbędne do przekazania pierwszeństwa.
 
-## <a name="extending-from-this-sample"></a>Rozszerzanie z tego przykładu
+## <a name="extending-from-this-sample"></a>Rozszerzenie z tego przykładu
 
-Przykład dotyczy tylko najbardziej podstawoweych drzew wyrażeń. Kod widziany w tej sekcji obsługuje tylko stałe liczby całkowite i binarny operator `+`. Jako ostatni przykład zaktualizujmy gościa, aby obsługiwał bardziej skomplikowane wyrażenie. Przyjrzyjmy się temu:
+Przykład dotyczy tylko najbardziej prymitywnych drzew wyrazu. Kod, który widzisz w tej sekcji obsługuje tylko stałe liczby `+` całkowite i operator binarny. Jako przykład końcowy zaktualizujmy odwiedzającego, aby obsłużyć bardziej skomplikowane wyrażenie. Sprawmy, aby to działało w tym zakresie:
 
 ```csharp
 Expression<Func<int, int>> factorial = (n) =>
-    n == 0 ? 
-    1 : 
+    n == 0 ?
+    1 :
     Enumerable.Range(1, n).Aggregate((product, factor) => product * factor);
 ```
 
-Ten kod reprezentuje jedną możliwą implementację funkcji *silnie* arytmetycznej. Sposób pisania tego kodu wyróżnia dwa ograniczenia dotyczące kompilowania drzew wyrażeń, przypisując wyrażenia lambda do wyrażeń. Najpierw wyrażenia lambda są niedozwolone. Oznacza to, że nie można używać pętli, bloków, instrukcji if/else i innych struktur formantów wspólnych C#w. Nie mogę używać wyrażeń. Po drugie nie można rekursywnie wywołać tego samego wyrażenia.
-Mam już delegata, ale nie można go wywołać w jego formularzu drzewa wyrażeń. W sekcji dotyczącej [tworzenia drzew wyrażeń](expression-trees-building.md) dowiesz się, jak można przezwyciężyć te ograniczenia.
+Ten kod reprezentuje jedną z możliwych implementacji dla funkcji *matematycznej czynników.* Sposób, w jaki napisałem ten kod, podkreśla dwa ograniczenia budowania drzew wyrażeń, przypisując wyrażenia lambda do wyrażeń. Po pierwsze, lambdas oświadczenie nie są dozwolone. Oznacza to, że nie mogę używać pętli, bloków, instrukcji if / else i innych struktur kontroli wspólnych w języku C#. Ograniczam się do używania wyrażeń. Po drugie, nie mogę rekurencyjnego wywołania tego samego wyrażenia.
+Mógłbym, gdyby był już delegatem, ale nie mogę go nazwać w formie drzewa wyrazu. W sekcji na [budowanie drzew wyrażeń](expression-trees-building.md) nauczysz się technik, aby przezwyciężyć te ograniczenia.
 
-W tym wyrażeniu zobaczysz węzły wszystkich następujących typów:
+W tym wyrażeniu napotkasz węzły wszystkich tych typów:
 
 1. Równe (wyrażenie binarne)
-2. Pomnóż (wyrażenie binarne)
-3. Warunkowo (? wyrażenia
-4. Wyrażenie wywołania metody (wywołujące `Range()` i `Aggregate()`)
+2. Mnożenie (wyrażenie binarne)
+3. Warunkowe (? : wyrażenie)
+4. Wyrażenie wywołania `Range()` metody `Aggregate()`(wywołanie i )
 
-Jednym ze sposobów modyfikowania algorytmu gościa jest zachowanie go i zapisanie typu węzła za każdym razem, gdy docierasz do klauzuli `default`. Po kilku iteracjach zobaczysz każdy z potencjalnych węzłów. Następnie masz wszystko, co jest potrzebne. Wynik będzie wyglądać następująco:
+Jednym ze sposobów modyfikowania algorytmu odwiedzającego jest kontynuowanie go i `default` pisanie typu węzła za każdym razem, gdy dotrzesz do klauzuli. Po kilku iteracjach zobaczysz każdy z potencjalnych węzłów. Następnie masz wszystko, czego potrzebujesz. Wynik byłby mniej więcej taki:
 
 ```csharp
 public static Visitor CreateFromExpression(Expression node)
@@ -392,7 +392,7 @@ public static Visitor CreateFromExpression(Expression node)
 }
 ```
 
-Proces ConditionalVisitor i MethodCallVisitor te dwa węzły:
+ConditionalVisitor i MethodCallVisitor przetwarzają te dwa węzły:
 
 ```csharp
 public class ConditionalVisitor : Visitor
@@ -451,7 +451,7 @@ public class MethodCallVisitor : Visitor
 }
 ```
 
-A dane wyjściowe dla drzewa wyrażenia:
+Dane wyjściowe drzewa wyrażeń będą następujące:
 
 ```output
 This expression is a/an Lambda expression type
@@ -507,18 +507,18 @@ The expression body is:
                                         Type: System.Int32, Name: factor, ByRef: False
 ```
 
-## <a name="extending-the-sample-library"></a>Rozszerzanie biblioteki przykładowej
+## <a name="extending-the-sample-library"></a>Rozszerzanie przykładowej biblioteki
 
-W przykładach w tej sekcji przedstawiono podstawowe techniki do odwiedzania i sprawdzenia węzłów w drzewie wyrażenia. Mam wiele akcji, które mogą być potrzebne, aby skoncentrować się na podstawowych zadaniach związanych z odwiedzaniem i uzyskiwaniem dostępu do węzłów w drzewie wyrażenia. 
+Przykłady w tej sekcji pokazują podstawowych technik do odwiedzenia i zbadania węzłów w drzewie wyrażeń. I błyszczące na wiele działań może być konieczne, aby skoncentrować się na podstawowych zadań odwiedzania i uzyskiwania dostępu do węzłów w drzewie wyrażeń.
 
-Najpierw Goście obsługują tylko stałe, które są liczbami całkowitymi. Stałe wartości mogą być dowolnego innego typu liczbowego, a C# język obsługuje konwersje i promocje między tymi typami. Bardziej niezawodna wersja tego kodu będzie dublować wszystkie te funkcje.
+Po pierwsze, odwiedzający obsługują tylko stałe, które są liczbami całkowitymi. Stałe wartości mogą być dowolny inny typ numeryczny, a język C# obsługuje konwersje i promocje między tymi typami. Bardziej niezawodna wersja tego kodu będzie odzwierciedlać wszystkie te możliwości.
 
-Nawet ostatni przykład rozpoznaje podzestaw możliwych typów węzłów.
-Nadal można uzyskać wiele wyrażeń, które spowodują niepowodzenie.
-Pełna implementacja jest uwzględniona w .NET Standard pod nazwą <xref:System.Linq.Expressions.ExpressionVisitor> i może obsługiwać wszystkie możliwe typy węzłów.
+Nawet ostatni przykład rozpoznaje podzbiór możliwych typów węzłów.
+Nadal można karmić go wiele wyrażeń, które spowoduje, że nie powiedzie się.
+Pełna implementacja znajduje się w standardzie <xref:System.Linq.Expressions.ExpressionVisitor> .NET pod nazwą i może obsługiwać wszystkie możliwe typy węzłów.
 
-Na koniec Biblioteka użyta w tym artykule została skompilowana w celu pokazania i uczenia się. Nie została zoptymalizowana. Ja został napisany, aby zapewnić, że struktury są bardzo jasne, i aby wyróżnić techniki używane do odwiedzania węzłów i przeanalizować zawartość. Implementacja produkcyjna zwróci więcej uwagi na wydajność niż mam.
+Wreszcie, biblioteka użyłem w tym artykule został zbudowany do demonstracji i uczenia się. Nie jest zoptymalizowany. Napisałem go, aby struktury były bardzo jasne i aby podkreślić techniki używane do odwiedzania węzłów i analizowania tego, co tam jest. Implementacja produkcji zwracałaby większą uwagę na wydajność niż ja.
 
-Nawet z tymi ograniczeniami, należy być dobrym sposobem pisania algorytmów, które odczytują i opisują drzewa wyrażeń.
+Nawet z tymi ograniczeniami, powinieneś być na dobrej drodze do pisania algorytmów, które czytają i rozumieją drzewa wyrażeń.
 
-[Następne — tworzenie wyrażeń](expression-trees-building.md)
+[Dalej -- Budowanie wyrażeń](expression-trees-building.md)

@@ -1,9 +1,9 @@
 - name: Serializacja
   href: index.md
   items:
-    - name: 'Instrukcje: Wpisywanie danych o obiektach do pliku XML'
+    - name: 'Porady: wpisywanie danych o obiektach do pliku XML'
       href: how-to-write-object-data-to-an-xml-file.md
-    - name: 'Instrukcje: Odczytywanie danych o obiektach z pliku XML'
+    - name: 'Porady: odczytywanie danych o obiektach z pliku XML'
       href: how-to-read-object-data-from-an-xml-file.md
-    - name: 'Przewodnik: Przechowywanie obiektu'
+    - name: 'Wskazówki: przechowywanie obiektu'
       href: walkthrough-persisting-an-object-in-visual-studio.md

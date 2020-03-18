@@ -1,23 +1,23 @@
 - name: Obiekty i klasy
   href: index.md
   items:
-    - name: 'Przewodnik: Definiowanie klas'
+    - name: 'Wskazówki: definiowanie klas'
       href: walkthrough-defining-classes.md
     - name: Przeciążone właściwości i metody
       href: overloaded-properties-and-methods.md
     - name: Podstawowe informacje o dziedziczeniu
       href: inheritance-basics.md
-    - name: 'Okres istnienia obiektu: w jaki sposób obiekty są tworzone i niszczone'
+    - name: 'Okres istnienia obiektów: w jaki sposób obiekty są tworzone i niszczone'
       href: object-lifetime-how-objects-are-created-and-destroyed.md
-    - name: 'Inicjatory obiektów: Typy nazwane i anonimowe'
+    - name: 'Inicjatory obiektów: typy nazwane i anonimowe'
       href: object-initializers-named-and-anonymous-types.md
       items:
-        - name: 'Instrukcje: Deklarowanie obiektu za pomocą inicjatora obiektów'
+        - name: 'Porady: deklarowanie obiektu za pomocą inicjatora obiektów'
           href: how-to-declare-an-object-by-using-an-object-initializer.md
     - name: Typy anonimowe
       href: anonymous-types.md
       items:
-        - name: 'Instrukcje: Wnioskowanie nazw właściwości i typów w deklaracjach typu anonimowego'
+        - name: 'Porady: wnioskowanie nazw właściwości i typów w deklaracjach typu anonimowego'
           href: how-to-infer-property-names-and-types-in-anonymous-type-declarations.md
         - name: Definicja typu anonimowego
           href: anonymous-type-definition.md

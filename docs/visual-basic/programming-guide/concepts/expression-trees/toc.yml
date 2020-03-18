@@ -1,11 +1,11 @@
 - name: Drzewa wyrażeń
   href: index.md
   items:
-    - name: 'Instrukcje: Wykonywanie drzew wyrażeń'
+    - name: 'Porady: wykonywanie drzew wyrażeń'
       href: how-to-execute-expression-trees.md
-    - name: 'Instrukcje: Modyfikowanie drzew wyrażeń'
+    - name: 'Porady: modyfikowanie drzew wyrażeń'
       href: how-to-modify-expression-trees.md
-    - name: 'Instrukcje: Używanie drzew wyrażeń do kompilowania zapytań dynamicznych'
+    - name: 'Porady: używanie drzew wyrażeń do kompilowania zapytań dynamicznych'
       href: how-to-use-expression-trees-to-build-dynamic-queries.md
     - name: Debugowanie drzew wyrażeń
       href: debugging-expression-trees-in-visual-studio.md

@@ -1,22 +1,22 @@
 ---
-title: Sortowanie lub filtrowanie danych tekstowych według dowolnego wyrazu lub pola (LINQ) (C#)
+title: Jak sortować lub filtrować dane tekstowe według dowolnego wyrazu lub pola (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c04d42f-4a78-42c8-9ec8-57ef18fe13a9
 ms.openlocfilehash: e869d57c413d175c092cdc15a6fe54cab94e04b8
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75347351"
 ---
-# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-c"></a><span data-ttu-id="6f49a-102">Sortowanie lub filtrowanie danych tekstowych według dowolnego wyrazu lub pola (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="6f49a-102">How to sort or filter text data by any word or field (LINQ) (C#)</span></span>
-<span data-ttu-id="6f49a-103">Poniższy przykład pokazuje, jak sortować wiersze tekstu strukturalnego, takie jak wartości rozdzielane przecinkami, według dowolnego pola w wierszu.</span><span class="sxs-lookup"><span data-stu-id="6f49a-103">The following example shows how to sort lines of structured text, such as comma-separated values, by any field in the line.</span></span> <span data-ttu-id="6f49a-104">Pole może być określane dynamicznie w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="6f49a-104">The field may be dynamically specified at runtime.</span></span> <span data-ttu-id="6f49a-105">Załóżmy, że pola w pliku Scores. csv reprezentują numer IDENTYFIKACYJNy studenta, a następnie serię czterech wyników testu.</span><span class="sxs-lookup"><span data-stu-id="6f49a-105">Assume that the fields in scores.csv represent a student's ID number, followed by a series of four test scores.</span></span>  
+# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-c"></a><span data-ttu-id="60866-102">Jak sortować lub filtrować dane tekstowe według dowolnego wyrazu lub pola (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="60866-102">How to sort or filter text data by any word or field (LINQ) (C#)</span></span>
+<span data-ttu-id="60866-103">W poniższym przykładzie pokazano, jak sortować wiersze tekstu strukturalnego, takie jak wartości oddzielone przecinkami, według dowolnego pola w wierszu.</span><span class="sxs-lookup"><span data-stu-id="60866-103">The following example shows how to sort lines of structured text, such as comma-separated values, by any field in the line.</span></span> <span data-ttu-id="60866-104">Pole może być dynamicznie określone w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="60866-104">The field may be dynamically specified at runtime.</span></span> <span data-ttu-id="60866-105">Załóżmy, że pola w pliku scores.csv reprezentują numer id ucznia, po którym następuje seria czterech wyników testów.</span><span class="sxs-lookup"><span data-stu-id="60866-105">Assume that the fields in scores.csv represent a student's ID number, followed by a series of four test scores.</span></span>  
   
-### <a name="to-create-a-file-that-contains-data"></a><span data-ttu-id="6f49a-106">Aby utworzyć plik zawierający dane</span><span class="sxs-lookup"><span data-stu-id="6f49a-106">To create a file that contains data</span></span>  
+### <a name="to-create-a-file-that-contains-data"></a><span data-ttu-id="60866-106">Aby utworzyć plik zawierający dane</span><span class="sxs-lookup"><span data-stu-id="60866-106">To create a file that contains data</span></span>  
   
-1. <span data-ttu-id="6f49a-107">Skopiuj dane Score. CSV z tematu [jak dołączyć zawartość z niepodobnych plików (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md) i zapisać je w folderze rozwiązania.</span><span class="sxs-lookup"><span data-stu-id="6f49a-107">Copy the scores.csv data from the topic [How to join content from dissimilar files (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md) and save it to your solution folder.</span></span>  
+1. <span data-ttu-id="60866-107">Skopiuj dane scores.csv z tematu [Jak dołączyć zawartość z różnych plików (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md) i zapisać ją w folderze rozwiązania.</span><span class="sxs-lookup"><span data-stu-id="60866-107">Copy the scores.csv data from the topic [How to join content from dissimilar files (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md) and save it to your solution folder.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6f49a-108">Przykład</span><span class="sxs-lookup"><span data-stu-id="6f49a-108">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="60866-108">Przykład</span><span class="sxs-lookup"><span data-stu-id="60866-108">Example</span></span>  
   
 ```csharp  
 public class SortLines  
@@ -72,12 +72,12 @@ public class SortLines
  */  
 ```  
   
- <span data-ttu-id="6f49a-109">W tym przykładzie pokazano również, jak zwrócić zmienną zapytania z metody.</span><span class="sxs-lookup"><span data-stu-id="6f49a-109">This example also demonstrates how to return a query variable from a method.</span></span>  
+ <span data-ttu-id="60866-109">W tym przykładzie pokazano również, jak zwrócić zmienną kwerendy z metody.</span><span class="sxs-lookup"><span data-stu-id="60866-109">This example also demonstrates how to return a query variable from a method.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="6f49a-110">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="6f49a-110">Compiling the Code</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="60866-110">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="60866-110">Compiling the Code</span></span>  
 
-<span data-ttu-id="6f49a-111">Utwórz projekt C# aplikacji konsolowej z `using` dyrektywami dotyczącymi przestrzeni nazw System. Linq i system.IO.</span><span class="sxs-lookup"><span data-stu-id="6f49a-111">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>
+<span data-ttu-id="60866-111">Utwórz projekt aplikacji konsoli `using` C# z dyrektywami dla system.Linq i System.IO przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="60866-111">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="6f49a-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="6f49a-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="60866-112">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="60866-112">See also</span></span>
 
-- [<span data-ttu-id="6f49a-113">LINQ i ciągi (C#)</span><span class="sxs-lookup"><span data-stu-id="6f49a-113">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
+- [<span data-ttu-id="60866-113">LINQ i ciągi (C#)</span><span class="sxs-lookup"><span data-stu-id="60866-113">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)

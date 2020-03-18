@@ -1,23 +1,23 @@
 ---
-title: Jak zaimplementować zdarzenia interfejsu — C# Przewodnik programowania
+title: Jak zaimplementować zdarzenia interfejsu - Przewodnik programowania C#
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [C#], event implementation in classes
 - events [C#], in interfaces
 ms.assetid: 63527447-9535-4880-8e95-35e2075827df
-ms.openlocfilehash: b84b96245310bce557bcd3865e41cf152e7ae9df
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8c0d221ef1272a43e2682ef2af3fa37d2d12d35e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712341"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79167483"
 ---
-# <a name="how-to-implement-interface-events-c-programming-guide"></a><span data-ttu-id="91647-102">Jak zaimplementować zdarzenia interfejsu (C# Przewodnik programowania)</span><span class="sxs-lookup"><span data-stu-id="91647-102">How to implement interface events (C# Programming Guide)</span></span>
-<span data-ttu-id="91647-103">[Interfejs](../../language-reference/keywords/interface.md) może zadeklarować [zdarzenie](../../language-reference/keywords/event.md).</span><span class="sxs-lookup"><span data-stu-id="91647-103">An [interface](../../language-reference/keywords/interface.md) can declare an [event](../../language-reference/keywords/event.md).</span></span> <span data-ttu-id="91647-104">Poniższy przykład pokazuje, jak zaimplementować zdarzenia interfejsu w klasie.</span><span class="sxs-lookup"><span data-stu-id="91647-104">The following example shows how to implement interface events in a class.</span></span> <span data-ttu-id="91647-105">Zasadniczo reguły są takie same, jak w przypadku implementowania dowolnej metody interfejsu lub właściwości.</span><span class="sxs-lookup"><span data-stu-id="91647-105">Basically the rules are the same as when you implement any interface method or property.</span></span>  
+# <a name="how-to-implement-interface-events-c-programming-guide"></a><span data-ttu-id="248b9-102">Jak zaimplementować zdarzenia interfejsu (Przewodnik programowania C#)</span><span class="sxs-lookup"><span data-stu-id="248b9-102">How to implement interface events (C# Programming Guide)</span></span>
+<span data-ttu-id="248b9-103">[Interfejs](../../language-reference/keywords/interface.md) może zadeklarować [zdarzenie](../../language-reference/keywords/event.md).</span><span class="sxs-lookup"><span data-stu-id="248b9-103">An [interface](../../language-reference/keywords/interface.md) can declare an [event](../../language-reference/keywords/event.md).</span></span> <span data-ttu-id="248b9-104">W poniższym przykładzie pokazano, jak zaimplementować zdarzenia interfejsu w klasie.</span><span class="sxs-lookup"><span data-stu-id="248b9-104">The following example shows how to implement interface events in a class.</span></span> <span data-ttu-id="248b9-105">Zasadniczo reguły są takie same, jak podczas implementowania dowolnej metody interfejsu lub właściwości.</span><span class="sxs-lookup"><span data-stu-id="248b9-105">Basically the rules are the same as when you implement any interface method or property.</span></span>  
   
-## <a name="to-implement-interface-events-in-a-class"></a><span data-ttu-id="91647-106">Aby zaimplementować zdarzenia interfejsu w klasie</span><span class="sxs-lookup"><span data-stu-id="91647-106">To implement interface events in a class</span></span>  
+## <a name="to-implement-interface-events-in-a-class"></a><span data-ttu-id="248b9-106">Aby zaimplementować zdarzenia interfejsu w klasie</span><span class="sxs-lookup"><span data-stu-id="248b9-106">To implement interface events in a class</span></span>  
   
-<span data-ttu-id="91647-107">Zadeklaruj zdarzenie w klasie, a następnie Wywołaj je w odpowiednich obszarach.</span><span class="sxs-lookup"><span data-stu-id="91647-107">Declare the event in your class and then invoke it in the appropriate areas.</span></span>  
+<span data-ttu-id="248b9-107">Zadeklarować zdarzenie w klasie, a następnie wywołać go w odpowiednich obszarach.</span><span class="sxs-lookup"><span data-stu-id="248b9-107">Declare the event in your class and then invoke it in the appropriate areas.</span></span>  
   
 ```csharp
 namespace ImplementInterfaceEvents  
@@ -26,7 +26,7 @@ namespace ImplementInterfaceEvents
     {  
         event EventHandler ShapeChanged;  
     }  
-    public class MyEventArgs : EventArgs   
+    public class MyEventArgs : EventArgs
     {  
         // class members  
     }  
@@ -39,7 +39,7 @@ namespace ImplementInterfaceEvents
 
             OnShapeChanged(new MyEventArgs(/*arguments*/));  
 
-            // or do something here after the event.   
+            // or do something here after the event.
         }  
         protected virtual void OnShapeChanged(MyEventArgs e)  
         {  
@@ -50,17 +50,17 @@ namespace ImplementInterfaceEvents
 }  
 ```  
   
-## <a name="example"></a><span data-ttu-id="91647-108">Przykład</span><span class="sxs-lookup"><span data-stu-id="91647-108">Example</span></span>  
-<span data-ttu-id="91647-109">Poniższy przykład pokazuje, jak obsłużyć mniej typowe sytuacje, w których Klasa dziedziczy z co najmniej dwóch interfejsów, a każdy interfejs ma zdarzenie o tej samej nazwie.</span><span class="sxs-lookup"><span data-stu-id="91647-109">The following example shows how to handle the less-common situation in which your class inherits from two or more interfaces and each interface has an event with the same name.</span></span> <span data-ttu-id="91647-110">W takiej sytuacji należy podać jawną implementację interfejsu dla co najmniej jednego zdarzenia.</span><span class="sxs-lookup"><span data-stu-id="91647-110">In this situation, you must provide an explicit interface implementation for at least one of the events.</span></span> <span data-ttu-id="91647-111">Podczas pisania jawnej implementacji interfejsu dla zdarzenia należy również napisać `add` i `remove` metody dostępu do zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="91647-111">When you write an explicit interface implementation for an event, you must also write the `add` and `remove` event accessors.</span></span> <span data-ttu-id="91647-112">Zwykle są one dostarczane przez kompilator, ale w tym przypadku kompilator nie może ich udostępnić.</span><span class="sxs-lookup"><span data-stu-id="91647-112">Normally these are provided by the compiler, but in this case the compiler cannot provide them.</span></span>  
+## <a name="example"></a><span data-ttu-id="248b9-108">Przykład</span><span class="sxs-lookup"><span data-stu-id="248b9-108">Example</span></span>  
+<span data-ttu-id="248b9-109">W poniższym przykładzie pokazano, jak obsługiwać mniej typowej sytuacji, w której klasa dziedziczy z dwóch lub więcej interfejsów i każdy interfejs ma zdarzenie o tej samej nazwie.</span><span class="sxs-lookup"><span data-stu-id="248b9-109">The following example shows how to handle the less-common situation in which your class inherits from two or more interfaces and each interface has an event with the same name.</span></span> <span data-ttu-id="248b9-110">W tej sytuacji należy podać implementację interfejsu jawnego dla co najmniej jednego zdarzenia.</span><span class="sxs-lookup"><span data-stu-id="248b9-110">In this situation, you must provide an explicit interface implementation for at least one of the events.</span></span> <span data-ttu-id="248b9-111">Podczas pisania implementacji interfejsu jawnego dla zdarzenia, `add` `remove` należy również napisać akcesorów i zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="248b9-111">When you write an explicit interface implementation for an event, you must also write the `add` and `remove` event accessors.</span></span> <span data-ttu-id="248b9-112">Zwykle są one dostarczane przez kompilator, ale w tym przypadku kompilator nie może ich podać.</span><span class="sxs-lookup"><span data-stu-id="248b9-112">Normally these are provided by the compiler, but in this case the compiler cannot provide them.</span></span>  
   
-<span data-ttu-id="91647-113">Dostarczając własne metody dostępu, można określić, czy dwa zdarzenia są reprezentowane przez to samo zdarzenie w klasie, czy przez różne zdarzenia.</span><span class="sxs-lookup"><span data-stu-id="91647-113">By providing your own accessors, you can specify whether the two events are represented by the same event in your class, or by different events.</span></span> <span data-ttu-id="91647-114">Na przykład jeśli zdarzenia powinny być zgłaszane w różnych terminach zgodnie ze specyfikacją interfejsu, można skojarzyć każde zdarzenie z oddzielną implementacją w klasie.</span><span class="sxs-lookup"><span data-stu-id="91647-114">For example, if the events should be raised at different times according to the interface specifications, you can associate each event with a separate implementation in your class.</span></span> <span data-ttu-id="91647-115">W poniższym przykładzie Subskrybenci określają, które zdarzenia `OnDraw` będą odbierane przez wyrzucanie odwołania kształtu do `IShape` lub `IDrawingObject`.</span><span class="sxs-lookup"><span data-stu-id="91647-115">In the following example, subscribers determine which `OnDraw` event they will receive by casting the shape reference to either an `IShape` or an `IDrawingObject`.</span></span>  
+<span data-ttu-id="248b9-113">Udostępniając własne akcesory, można określić, czy dwa zdarzenia są reprezentowane przez to samo zdarzenie w klasie lub przez różne zdarzenia.</span><span class="sxs-lookup"><span data-stu-id="248b9-113">By providing your own accessors, you can specify whether the two events are represented by the same event in your class, or by different events.</span></span> <span data-ttu-id="248b9-114">Na przykład jeśli zdarzenia powinny być wywoływane w różnym czasie zgodnie ze specyfikacjami interfejsu, można skojarzyć każde zdarzenie z oddzielną implementacją w klasie.</span><span class="sxs-lookup"><span data-stu-id="248b9-114">For example, if the events should be raised at different times according to the interface specifications, you can associate each event with a separate implementation in your class.</span></span> <span data-ttu-id="248b9-115">W poniższym przykładzie subskrybenci określają, które `OnDraw` zdarzenie `IShape` otrzymają, `IDrawingObject`rzutując odwołanie do kształtu do pliku .</span><span class="sxs-lookup"><span data-stu-id="248b9-115">In the following example, subscribers determine which `OnDraw` event they will receive by casting the shape reference to either an `IShape` or an `IDrawingObject`.</span></span>  
   
  [!code-csharp[csProgGuideEvents#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEvents/CS/Events.cs#10)]
   
-## <a name="see-also"></a><span data-ttu-id="91647-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="91647-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="248b9-116">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="248b9-116">See also</span></span>
 
-- [<span data-ttu-id="91647-117">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="91647-117">C# Programming Guide</span></span>](../index.md)
-- [<span data-ttu-id="91647-118">Zdarzenia</span><span class="sxs-lookup"><span data-stu-id="91647-118">Events</span></span>](./index.md)
-- [<span data-ttu-id="91647-119">Delegaci</span><span class="sxs-lookup"><span data-stu-id="91647-119">Delegates</span></span>](../delegates/index.md)
-- [<span data-ttu-id="91647-120">Implementacja interfejsu jawnego</span><span class="sxs-lookup"><span data-stu-id="91647-120">Explicit Interface Implementation</span></span>](../interfaces/explicit-interface-implementation.md)
-- [<span data-ttu-id="91647-121">Jak wywoływać zdarzenia klasy podstawowej w klasach pochodnych</span><span class="sxs-lookup"><span data-stu-id="91647-121">How to raise base class events in derived classes</span></span>](./how-to-raise-base-class-events-in-derived-classes.md)
+- [<span data-ttu-id="248b9-117">Przewodnik programowania języka C#</span><span class="sxs-lookup"><span data-stu-id="248b9-117">C# Programming Guide</span></span>](../index.md)
+- [<span data-ttu-id="248b9-118">Zdarzenia</span><span class="sxs-lookup"><span data-stu-id="248b9-118">Events</span></span>](./index.md)
+- [<span data-ttu-id="248b9-119">Delegaty</span><span class="sxs-lookup"><span data-stu-id="248b9-119">Delegates</span></span>](../delegates/index.md)
+- [<span data-ttu-id="248b9-120">Implementacja interfejsu jawnego</span><span class="sxs-lookup"><span data-stu-id="248b9-120">Explicit Interface Implementation</span></span>](../interfaces/explicit-interface-implementation.md)
+- [<span data-ttu-id="248b9-121">Wywoływanie zdarzeń klasy podstawowej w klasach pochodnych</span><span class="sxs-lookup"><span data-stu-id="248b9-121">How to raise base class events in derived classes</span></span>](./how-to-raise-base-class-events-in-derived-classes.md)

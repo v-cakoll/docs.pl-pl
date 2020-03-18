@@ -1,6 +1,6 @@
 ---
-title: Operatory testowania typu i rzutowania — C# odwołanie
-description: Dowiedz C# się więcej na temat operatorów, których można użyć do sprawdzenia typu wyniku wyrażenia i przekonwertowania go na inny typ w razie potrzeby.
+title: Operatory testowania typu i rzutów — odwołanie do języka C#
+description: Dowiedz się więcej o operatorach języka C#, których można użyć do sprawdzenia typu wyniku wyrażenia i przekonwertowania go na inny typ, jeśli to konieczne.
 ms.date: 06/21/2019
 author: pkulikov
 f1_keywords:
@@ -18,65 +18,65 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: c29833ece83e386446aaf0a5d242bda366cbfbb0
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 037ddc8eeda418b2e4858ab98be6cd362ca0e1e2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78239043"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399470"
 ---
-# <a name="type-testing-and-cast-operators-c-reference"></a>Operatory testowania typu i rzutowania (C# odwołanie)
+# <a name="type-testing-and-cast-operators-c-reference"></a>Operatory testowania typu i rzutów (odwołanie do języka C#)
 
-Można użyć następujących operatorów do przeprowadzenia sprawdzania typu lub konwersji typu:
+Za pomocą następujących operatorów można przeprowadzać sprawdzanie typów lub konwersję typów:
 
-- [is — operator](#is-operator): Aby sprawdzić, czy typ środowiska uruchomieniowego wyrażenia jest zgodny z danym typem
-- [operator as](#as-operator): Aby jawnie przekonwertować wyrażenie na dany typ, jeśli jego typ środowiska uruchomieniowego jest zgodny z tym typem
-- [operator rzutowania ()](#cast-operator-): Aby wykonać konwersję jawną
-- [operator typeof](#typeof-operator): Aby uzyskać wystąpienie <xref:System.Type?displayProperty=nameWithType> dla typu
+- [jest operatorem:](#is-operator)aby sprawdzić, czy typ środowiska uruchomieniowego wyrażenia jest zgodny z danym typem
+- [jako operator](#as-operator): jawnie przekonwertować wyrażenie na dany typ, jeśli jego typ środowiska uruchomieniowego jest zgodny z tym typem
+- [operator odlewu ()](#cast-operator-): do przeprowadzenia jawnej konwersji
+- [operator typeof](#typeof-operator): <xref:System.Type?displayProperty=nameWithType> w celu uzyskania instancji dla typu
 
-## <a name="is-operator"></a>IS — operator
+## <a name="is-operator"></a>jest operatorem
 
-Operator `is` sprawdza, czy typ środowiska uruchomieniowego wyniku wyrażenia jest zgodny z danym typem. Począwszy od C# 7,0, operator `is` również testuje wynik wyrażenia w stosunku do wzorca.
+Operator `is` sprawdza, czy typ środowiska uruchomieniowego wyniku wyrażenia jest zgodny z danym typem. Począwszy od Języka C# `is` 7.0, operator testuje również wynik wyrażenia względem wzorca.
 
-Wyrażenie z operatorem `is` testowania typu ma następującą postać
+Wyrażenie z operatorem `is` testowania typu ma następujący formularz
 
 ```csharp
 E is T
 ```
 
-gdzie `E` jest wyrażeniem zwracającym wartość i `T` jest nazwą typu lub parametrem typu. `E` nie może być metodą anonimową ani wyrażeniem lambda.
+gdzie `E` jest wyrażenie, które `T` zwraca wartość i jest nazwą typu lub parametru typu. `E`nie może być metodą anonimową ani wyrażeniem lambda.
 
-Wyrażenie `E is T` zwraca `true`, jeśli wynik `E` ma wartość różną od null i można go przekonwertować na typ `T` przez konwersję odwołania, konwersję z opakowaniem lub konwersję rozpakowywanie. w przeciwnym razie zwraca `false`. Operator `is` nie uwzględnia konwersji zdefiniowanych przez użytkownika.
+Wyrażenie `E is T` zwraca, `true` jeśli `E` wynik jest non-null i mogą `T` być konwertowane na typ przez konwersję odwołania, konwersji bokserskiej lub konwersji rozpakowywania; w przeciwnym `false`razie zwraca . Operator `is` nie bierze pod uwagę konwersji zdefiniowanych przez użytkownika.
 
-Poniższy przykład pokazuje, że operator `is` zwraca `true`, jeśli typ środowiska uruchomieniowego wynik wyrażenia pochodzi z danego typu, to oznacza, że istnieje konwersja odwołania między typami:
+W poniższym przykładzie `is` pokazano, że operator zwraca, `true` jeśli typ czasu wykonywania wyniku wyrażenia pochodzi od danego typu, oznacza to, że istnieje konwersja odwołania między typami:
 
-[!code-csharp[is with reference conversion](~/samples/snippets/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#IsWithReferenceConversion)]
+[!code-csharp[is with reference conversion](snippets/TypeTestingAndConversionOperators.cs#IsWithReferenceConversion)]
 
-W następnym przykładzie pokazano, że operator `is` uwzględnia konwersje pakowania i rozpakowywania, ale nie uwzględnia [konwersji liczbowych](../builtin-types/numeric-conversions.md):
+Następny przykład pokazuje, `is` że operator bierze pod uwagę boks i unboxing konwersji, ale nie bierze pod uwagę [konwersje liczbowe:](../builtin-types/numeric-conversions.md)
 
-[!code-csharp-interactive[is with int](~/samples/snippets/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#IsWithInt)]
+[!code-csharp-interactive[is with int](snippets/TypeTestingAndConversionOperators.cs#IsWithInt)]
 
-Aby uzyskać informacje C# na temat konwersji, zobacz rozdział dotyczący [konwersji](~/_csharplang/spec/conversions.md) [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).
+Aby uzyskać informacje na temat konwersji języka C#, zobacz rozdział [Konwersje](~/_csharplang/spec/conversions.md) [specyfikacji języka Języka C#.](~/_csharplang/spec/introduction.md)
 
-### <a name="type-testing-with-pattern-matching"></a>Testowanie typu z dopasowaniem do wzorca
+### <a name="type-testing-with-pattern-matching"></a>Testowanie typów z dopasowaniem wzorców
 
-Począwszy od C# 7,0, operator `is` również testuje wynik wyrażenia w stosunku do wzorca. W szczególności obsługuje wzorzec typu w następującej postaci:
+Począwszy od Języka C# `is` 7.0, operator testuje również wynik wyrażenia względem wzorca. W szczególności obsługuje wzorzec typu w następującej formie:
 
 ```csharp
 E is T v
 ```
 
-gdzie `E` jest wyrażeniem zwracającym wartość, `T` jest nazwą typu lub parametrem typu, a `v` jest nową zmienną lokalną typu `T`. Jeśli wynik `E` ma wartość różną od null i można go przekonwertować na `T` przez konwersję, opakowanie lub odpakowywanie, wyrażenie `E is T v` zwraca `true`, a przekonwertowana wartość wyniku `E` zostanie przypisana do zmiennej `v`.
+gdzie `E` jest wyrażeniem, które `T` zwraca wartość, jest nazwą typu `v` lub parametru typu `T`i jest nową zmienną lokalną typu . Jeśli wynik `E` nie jest null i mogą `T` być konwertowane przez odwołanie, boks `E is T v` lub `true` unboxing konwersji, wyrażenie zwraca `E` i przekonwertowana wartość wyniku jest przypisany do zmiennej `v`.
 
-Poniższy przykład ilustruje użycie operatora `is` ze wzorcem typu:
+W poniższym przykładzie przedstawiono `is` użycie operatora ze wzorcem typu:
 
-[!code-csharp-interactive[is with type pattern](~/samples/snippets/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#IsTypePattern)]
+[!code-csharp-interactive[is with type pattern](snippets/TypeTestingAndConversionOperators.cs#IsTypePattern)]
 
-Aby uzyskać więcej informacji na temat wzorca typu i innych obsługiwanych wzorców, zobacz [Dopasowanie wzorców do](../keywords/is.md#pattern-matching-with-is).
+Aby uzyskać więcej informacji na temat wzorca typu i innych obsługiwanych wzorców, zobacz [Dopasowanie wzorca z is](../keywords/is.md#pattern-matching-with-is).
 
-## <a name="as-operator"></a>AS — operator
+## <a name="as-operator"></a>jako operator
 
-Operator `as` jawnie konwertuje wynik wyrażenia na daną odwołanie lub typ wartości null. Jeśli konwersja nie jest możliwa, operator `as` zwraca `null`. W przeciwieństwie do [operatora CAST ()](#cast-operator-)operator `as` nigdy nie zgłasza wyjątku.
+Operator `as` jawnie konwertuje wynik wyrażenia na dany typ wartości odniesienia lub wartości null. Jeśli konwersja nie jest `as` możliwa, operator zwraca `null`. W przeciwieństwie do operatora `as` [rzutowania ()](#cast-operator-)operator nigdy nie zgłasza wyjątek.
 
 Wyrażenie formularza
 
@@ -84,75 +84,75 @@ Wyrażenie formularza
 E as T
 ```
 
-gdzie `E` jest wyrażeniem zwracającym wartość i `T` jest nazwą typu lub parametrem typu, daje ten sam wynik jako
+gdzie `E` jest wyrażenie, które `T` zwraca wartość i jest nazwą typu lub parametru typu, daje taki sam wynik jak
 
 ```csharp
 E is T ? (T)(E) : (T)null
 ```
 
-z tą różnicą, że `E` są oceniane tylko raz.
+chyba `E` że jest oceniana tylko raz.
 
-Operator `as` uwzględnia tylko konwersje odwołania, dopuszczające wartość null, opakowanie i rozpakowywanie. Nie można użyć operatora `as` do wykonania konwersji zdefiniowanej przez użytkownika. Aby to zrobić, użyj [operatora CAST ()](#cast-operator-).
+Operator `as` uwzględnia tylko odwołania, nullable, boks i unboxing konwersji. Nie można `as` użyć operatora do wykonania konwersji zdefiniowanej przez użytkownika. Aby to zrobić, należy użyć [operatora rzutowania ()](#cast-operator-).
 
-Poniższy przykład ilustruje użycie operatora `as`:
+W poniższym przykładzie przedstawiono `as` użycie operatora:
 
-[!code-csharp-interactive[as operator](~/samples/snippets/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#AsOperator)]
+[!code-csharp-interactive[as operator](snippets/TypeTestingAndConversionOperators.cs#AsOperator)]
 
 > [!NOTE]
-> Jak pokazano w powyższym przykładzie, należy porównać wynik wyrażenia `as` z `null`, aby sprawdzić, czy konwersja zakończyła się pomyślnie. Począwszy od C# 7,0, można użyć [operatora is](#type-testing-with-pattern-matching) , aby sprawdzić, czy konwersja się powiedzie i, jeśli zakończy się pomyślnie, przypisz wynik do nowej zmiennej.
+> Jak pokazano w poprzednim przykładzie, należy porównać `as` wynik `null` wyrażenia z, aby sprawdzić, czy konwersja zakończyła się pomyślnie. Począwszy od Języka C# 7.0, można użyć [is operator](#type-testing-with-pattern-matching) zarówno do testowania, jeśli konwersja zakończy się pomyślnie, a jeśli zakończy się pomyślnie, przypisać jego wynik do nowej zmiennej.
 
 ## <a name="cast-operator-"></a>Operator rzutowania ()
 
-Wyrażenie rzutowania formularza `(T)E` wykonuje jawną konwersję wyniku `E` wyrażenia, aby wpisać `T`. Jeśli nie ma żadnej jawnej konwersji z typu `E` do typu `T`, wystąpi błąd w czasie kompilacji. W czasie wykonywania jawna konwersja może się nie powieść, a wyrażenie rzutowania może zgłosić wyjątek.
+Wyrażenie rzutowania formularza `(T)E` wykonuje jawną konwersję wyniku `E` wyrażenia `T`do typu . Jeśli nie istnieje jawna `E` konwersja `T`z typu typu typu, występuje błąd w czasie kompilacji. W czasie wykonywania jawne konwersji może się nie powieść i wyrażenie rzutowania może zgłosić wyjątek.
 
-W poniższym przykładzie zademonstrowano jawne konwersje liczbowe i odwołania:
+W poniższym przykładzie przedstawiono jawne konwersje liczbowe i referencyjne:
 
-[!code-csharp-interactive[cast expression](~/samples/snippets/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#Cast)]
+[!code-csharp-interactive[cast expression](snippets/TypeTestingAndConversionOperators.cs#Cast)]
 
-Aby uzyskać informacje na temat obsługiwanych konwersji jawnych, zobacz sekcję [Konwersje jawne](~/_csharplang/spec/conversions.md#explicit-conversions) w [ C# specyfikacji języka](~/_csharplang/spec/introduction.md). Aby uzyskać informacje dotyczące sposobu definiowania niestandardowej jawnej lub niejawnej konwersji typu, zobacz [Operatory konwersji zdefiniowane przez użytkownika](user-defined-conversion-operators.md).
+Aby uzyskać informacje o obsługiwanych jawnych konwersjach, zobacz [jawne konwersje](~/_csharplang/spec/conversions.md#explicit-conversions) sekcji [specyfikacji języka Języka C#.](~/_csharplang/spec/introduction.md) Aby uzyskać informacje dotyczące definiowania niestandardowej konwersji typu jawnego lub niejawnego, zobacz [Operatory konwersji zdefiniowane przez użytkownika](user-defined-conversion-operators.md).
 
-### <a name="other-usages-of-"></a>Inne użycie ()
+### <a name="other-usages-of-"></a>Inne zastosowania ()
 
-Należy również użyć nawiasów do [wywołania metody lub wywołania delegata](member-access-operators.md#invocation-operator-).
+Nawiasy można również użyć do [wywołania metody lub wywołania delegata](member-access-operators.md#invocation-operator-).
 
-Innym zastosowaniem nawiasów jest dostosowanie kolejności, w której mają być oceniane operacje w wyrażeniu. Aby uzyskać więcej informacji, zobacz [ C# operatory](index.md).
+Inne użycie nawiasów jest dostosowanie kolejności, w jakiej do oceny operacji w wyrażeniu. Aby uzyskać więcej informacji, zobacz [Operatory języka C#.](index.md)
 
 ## <a name="typeof-operator"></a>typeof — Operator
 
-Operator `typeof` uzyskuje <xref:System.Type?displayProperty=nameWithType> wystąpienie dla typu. Argument operatora `typeof` musi być nazwą typu lub parametrem typu, jak pokazano w poniższym przykładzie:
+Operator `typeof` uzyskuje <xref:System.Type?displayProperty=nameWithType> wystąpienie dla typu. Argument `typeof` do operatora musi być nazwa typu lub parametrtypu, jak pokazano w poniższym przykładzie:
 
-[!code-csharp-interactive[typeof operator](~/samples/snippets/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#TypeOf)]
+[!code-csharp-interactive[typeof operator](snippets/TypeTestingAndConversionOperators.cs#TypeOf)]
 
-Można również użyć operatora `typeof` z niepowiązane typy ogólne. Nazwa niepowiązanego typu ogólnego musi zawierać odpowiednią liczbę przecinków, która jest mniejsza niż liczba parametrów typu. W poniższym przykładzie pokazano użycie operatora `typeof` z niezwiązanym typem ogólnym:
+Można również użyć `typeof` operatora z niepowiązanych typów ogólnych. Nazwa niezwiązanego typu ogólnego musi zawierać odpowiednią liczbę przecinków, która jest mniejsza niż liczba parametrów typu. W poniższym przykładzie przedstawiono `typeof` użycie operatora z niepowiązanym typem ogólnym:
 
-[!code-csharp-interactive[typeof unbound generic](~/samples/snippets/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#TypeOfUnboundGeneric)]
+[!code-csharp-interactive[typeof unbound generic](snippets/TypeTestingAndConversionOperators.cs#TypeOfUnboundGeneric)]
 
-Wyrażenie nie może być argumentem operatora `typeof`. Aby uzyskać <xref:System.Type?displayProperty=nameWithType> wystąpienia dla typu wyniku w czasie wykonywania wyrażenia, użyj metody <xref:System.Object.GetType%2A?displayProperty=nameWithType>.
+Wyrażenie nie może być `typeof` argumentem operatora. Aby uzyskać <xref:System.Type?displayProperty=nameWithType> wystąpienie dla typu czasu wykonywania wyniku <xref:System.Object.GetType%2A?displayProperty=nameWithType> wyrażenia, należy użyć metody.
 
-### <a name="type-testing-with-the-typeof-operator"></a>Testowanie typu za pomocą operatora `typeof`
+### <a name="type-testing-with-the-typeof-operator"></a>Testowanie typu `typeof` z operatorem
 
-Użyj operatora `typeof`, aby sprawdzić, czy typ środowiska uruchomieniowego wynik wyrażenia jest dokładnie zgodny z danym typem. Poniższy przykład ilustruje różnicę między sprawdzaniem typu wykonanego za pomocą operatora `typeof` i [operatorem is](#is-operator):
+Użyj `typeof` operatora, aby sprawdzić, czy typ czasu wykonywania wyniku wyrażenia dokładnie pasuje do danego typu. Poniższy przykład pokazuje różnicę między sprawdzanietypu `typeof` wykonywane z operatorem i [jest operator:](#is-operator)
 
-[!code-csharp[typeof vs is](~/samples/snippets/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#TypeCheckWithTypeOf)]
+[!code-csharp[typeof vs is](snippets/TypeTestingAndConversionOperators.cs#TypeCheckWithTypeOf)]
 
-## <a name="operator-overloadability"></a>Przeciążanie operatora
+## <a name="operator-overloadability"></a>Przeciążenie operatora
 
-Operatory `is`, `as`i `typeof` nie mogą być przeciążone.
+`is`Program `as`, `typeof` i operatory nie mogą być przeciążone.
 
-Typ zdefiniowany przez użytkownika nie może przeciążać operatora `()`, ale może definiować konwersje typów niestandardowych, które mogą być wykonywane przez wyrażenie rzutowania. Aby uzyskać więcej informacji, zobacz [Operatory konwersji zdefiniowane przez użytkownika](user-defined-conversion-operators.md).
+Typ zdefiniowany przez użytkownika `()` nie może przeciążać operatora, ale można zdefiniować konwersje typu niestandardowego, które mogą być wykonywane przez wyrażenie rzutowania. Aby uzyskać więcej informacji, zobacz [Operatory konwersji zdefiniowane przez użytkownika](user-defined-conversion-operators.md).
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
-Aby uzyskać więcej informacji, zobacz następujące sekcje [ C# specyfikacji języka](~/_csharplang/spec/introduction.md):
+Aby uzyskać więcej informacji, zobacz następujące sekcje [specyfikacji języka Języka C#:](~/_csharplang/spec/introduction.md)
 
-- [Operator is](~/_csharplang/spec/expressions.md#the-is-operator)
-- [Operator as](~/_csharplang/spec/expressions.md#the-as-operator)
-- [Wyrażenia rzutowania](~/_csharplang/spec/expressions.md#cast-expressions)
+- [Operator jest](~/_csharplang/spec/expressions.md#the-is-operator)
+- [Operator jako](~/_csharplang/spec/expressions.md#the-as-operator)
+- [Rzutacja wyrażeń](~/_csharplang/spec/expressions.md#cast-expressions)
 - [Operator typeof](~/_csharplang/spec/expressions.md#the-typeof-operator)
 
 ## <a name="see-also"></a>Zobacz też
 
-- [C#odwoła](../index.md)
+- [Dokumentacja języka C#](../index.md)
 - [Operatory języka C#](index.md)
-- [Jak bezpiecznie rzutować przy użyciu dopasowania wzorca i operatorów is i AS](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
+- [Jak bezpiecznie oddać za pomocą dopasowania wzorców i jest i jako operatorzy](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
 - [Typy ogólne w .NET](../../../standard/generics/index.md)

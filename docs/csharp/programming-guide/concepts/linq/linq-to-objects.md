@@ -1,46 +1,46 @@
 ---
-title: LINQ to Objects (C#)
+title: LINQ do obiektów (C#)
 ms.date: 07/20/2015
 ms.assetid: c5c2c178-3529-4f6c-b3df-2d5267af7f22
 ms.openlocfilehash: ae4389aa1ce049edc71bff42c38f66fb328ba034
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75344781"
 ---
-# <a name="linq-to-objects-c"></a>LINQ to Objects (C#)
-Termin "LINQ to Objects" odnosi się do używania zapytań LINQ z dowolnymi <xref:System.Collections.IEnumerable> lub <xref:System.Collections.Generic.IEnumerable%601> kolekcji bezpośrednio, bez użycia pośredniego dostawcy LINQ lub interfejsu API, takiego jak [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md) lub [LINQ to XML](./linq-to-xml-overview.md). Za pomocą LINQ można badać wszystkie wyliczalne kolekcje, takie jak <xref:System.Collections.Generic.List%601>, <xref:System.Array>lub <xref:System.Collections.Generic.Dictionary%602>. Kolekcja może być zdefiniowana przez użytkownika lub może być zwrócona przez interfejs API .NET Framework.  
+# <a name="linq-to-objects-c"></a>LINQ do obiektów (C#)
+Termin "LINQ do obiektów" odnosi się do korzystania <xref:System.Collections.IEnumerable> z <xref:System.Collections.Generic.IEnumerable%601> zapytań LINQ z dowolnym lub kolekcji bezpośrednio, bez użycia pośredniego dostawcy LINQ lub interfejsu API, takich jak [LINQ do SQL](../../../../framework/data/adonet/sql/linq/index.md) lub [LINQ do XML](./linq-to-xml-overview.md). Linq służy do wykonywania zapytań do <xref:System.Collections.Generic.List%601> <xref:System.Array>wszystkich <xref:System.Collections.Generic.Dictionary%602>kolekcji wyliczanych, takich jak , , lub . Kolekcja może być zdefiniowana przez użytkownika lub może być zwracana przez interfejs API .NET Framework.  
   
- W podstawowym sensie LINQ to Objects reprezentuje nowe podejście do kolekcji. W stary sposób należy napisać złożone pętle `foreach`, które określają sposób pobierania danych z kolekcji. W podejściu LINQ napiszesz kod deklaratywny opisujący, co chcesz pobrać.  
+ W sensie podstawowym LINQ do obiektów reprezentuje nowe podejście do kolekcji. W stary sposób trzeba było `foreach` napisać złożone pętle, które określały sposób pobierania danych z kolekcji. W podejściu LINQ piszesz kod deklaratywny, który opisuje, co chcesz pobrać.  
   
- Ponadto zapytania LINQ oferują trzy główne zalety w porównaniu z tradycyjnymi pętlami `foreach`:  
+ Ponadto zapytania LINQ oferują trzy główne `foreach` zalety w porównaniu z tradycyjnymi pętlami:  
   
-1. Są one bardziej zwięzłe i czytelne, szczególnie w przypadku filtrowania wielu warunków.  
+1. Są one bardziej zwięzłe i czytelne, zwłaszcza podczas filtrowania wielu warunków.  
   
 2. Zapewniają one zaawansowane możliwości filtrowania, porządkowania i grupowania przy minimalnym kodzie aplikacji.  
   
-3. Można je przenieść do innych źródeł danych z niewielką lub bez modyfikacji.  
+3. Mogą być przenoszeni do innych źródeł danych z niewielkimi lub żadnymi modyfikacjami.  
   
- Ogólnie rzecz biorąc, bardziej złożone operacje, które mają być wykonywane na danych, tym większe korzyści, które można wykorzystać przy użyciu LINQ zamiast tradycyjnych technik iteracji.  
+ Ogólnie rzecz biorąc bardziej złożona operacja, którą chcesz wykonać na danych, tym więcej korzyści zrealizujesz przy użyciu LINQ zamiast tradycyjnych technik iteracji.  
   
- Celem tej sekcji jest zademonstrowanie podejścia LINQ z pewnymi przykładami. Nie jest to wyczerpujące.  
+ Celem tej sekcji jest wykazanie podejścia LINQ z niektórych przykładów wybierz. Nie ma być wyczerpujący.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [LINQ i ciągi (C#)](./linq-and-strings.md)  
- Wyjaśnia, w jaki sposób LINQ może służyć do wykonywania zapytań i przekształcania ciągów i kolekcji ciągów. Zawiera również linki do tematów demonstrujących te zasady.  
+ W tym artykule wyjaśniono, jak LINQ może służyć do wykonywania zapytań i przekształcania ciągów i kolekcji ciągów. Zawiera również linki do tematów, które pokazują te zasady.  
   
- [LINQ i odbicieC#()](how-to-query-an-assembly-s-metadata-with-reflection-linq.md)  
- Linki do przykładu, który pokazuje, jak LINQ używa odbicia.  
+ [LINQ i odbicie (C#)](how-to-query-an-assembly-s-metadata-with-reflection-linq.md)  
+ Łącza do próbki, która pokazuje, jak LINQ używa odbicia.  
   
  [LINQ i katalogi plików (C#)](./linq-and-file-directories.md)  
- Wyjaśnia, w jaki sposób LINQ może służyć do współdziałania z systemami plików. Zawiera również linki do tematów, które przedstawiają te koncepcje.  
+ W tym artykule wyjaśniono, w jaki sposób linq może służyć do interakcji z systemami plików. Zawiera również łącza do tematów, które pokazują te pojęcia.  
   
- [Jak zbadać ArrayList za pomocą LINQ (C#)](./how-to-query-an-arraylist-with-linq.md)  
- Pokazuje, jak zbadać ArrayList w C#.  
+ [Jak zapytanie ArrayList z LINQ (C#)](./how-to-query-an-arraylist-with-linq.md)  
+ Pokazuje, jak zapytanie ArrayList w języku C#.  
   
  [Jak dodać metody niestandardowe dla zapytań LINQ (C#)](./how-to-add-custom-methods-for-linq-queries.md)  
- Wyjaśnia, w jaki sposób rozszerzać zestaw metod, których można użyć dla zapytań LINQ przez dodanie metod rozszerzenia do interfejsu <xref:System.Collections.Generic.IEnumerable%601>.  
+ W tym artykule wyjaśniono, jak rozszerzyć zestaw metod, których można <xref:System.Collections.Generic.IEnumerable%601> używać dla kwerend LINQ, dodając metody rozszerzenia do interfejsu.  
   
- [Zapytanie zintegrowane z językiem (LINQ)C#()](./index.md)  
- Zawiera łącza do tematów, które wyjaśniają LINQ i dostarczają przykłady kodu, który wykonuje zapytania.
+ [Zapytanie zintegrowane z językiem (LINQ) (C#)](./index.md)  
+ Zawiera łącza do tematów, które wyjaśniają LINQ i podać przykłady kodu, który wykonuje kwerendy.

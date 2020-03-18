@@ -1,23 +1,23 @@
 ---
-title: Korzystanie z wariancji w interfejsach dlaC#kolekcji ogólnych ()
+title: Używanie wariancji w interfejsach dla kolekcji ogólnych (C#)
 ms.date: 07/20/2015
 ms.assetid: a44f0708-10fa-4c76-82cd-daa6e6b31e8e
-ms.openlocfilehash: 53aaf49ee0802c0d207e0b0a29661cee7c628b4d
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: b891ccde93e18baf5d5e814911666e9c6268e009
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595216"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169743"
 ---
-# <a name="using-variance-in-interfaces-for-generic-collections-c"></a>Korzystanie z wariancji w interfejsach dlaC#kolekcji ogólnych ()
-Interfejs współdzielny umożliwia metodom Zwracanie większej liczby typów pochodnych niż określone w interfejsie. Interfejs kontrawariantne umożliwia jej metodom akceptowanie parametrów o mniejszych typach pochodnych niż określone w interfejsie.  
+# <a name="using-variance-in-interfaces-for-generic-collections-c"></a>Używanie wariancji w interfejsach dla kolekcji ogólnych (C#)
+Interfejs kowariantny umożliwia jego metody, aby zwrócić więcej typów pochodnych niż określone w interfejsie. Interfejs kontrawariantny umożliwia jego metodom akceptowanie parametrów mniej pochodnych typów niż te określone w interfejsie.  
   
- W .NET Framework 4, kilka istniejących interfejsów stał się współwariantem i kontrawariantne. Obejmują <xref:System.Collections.Generic.IEnumerable%601> one i <xref:System.IComparable%601>. Dzięki temu można ponownie użyć metod, które działają z ogólnymi kolekcjami typów podstawowych dla kolekcji typów pochodnych.  
+ W .NET Framework 4 kilka istniejących interfejsów stało się kowariantnych i kontrawariantnych. Należą <xref:System.Collections.Generic.IEnumerable%601> do <xref:System.IComparable%601>nich i . Dzięki temu można ponownie użyć metod, które działają z kolekcji ogólnych typów podstawowych dla kolekcji typów pochodnych.  
   
- Aby uzyskać listę interfejsów wariantów w .NET Framework, zobacz WARIANCJA [w interfejsach ogólnych (C#)](./variance-in-generic-interfaces.md).  
+ Aby uzyskać listę interfejsów wariantów w platformie .NET Framework, zobacz [Wariancja w interfejsach ogólnych (C#).](./variance-in-generic-interfaces.md)  
   
 ## <a name="converting-generic-collections"></a>Konwertowanie kolekcji ogólnych  
- Poniższy przykład ilustruje zalety obsługi kowariancji w <xref:System.Collections.Generic.IEnumerable%601> interfejsie. Metoda akceptuje kolekcję `IEnumerable<Person>` typu jako parametr. `PrintFullName` Można jednak ponownie użyć go dla kolekcji typu, `IEnumerable<Employee>` ponieważ `Employee` dziedziczy `Person`.  
+ W poniższym przykładzie przedstawiono zalety obsługi <xref:System.Collections.Generic.IEnumerable%601> kowariancji w interfejsie. Metoda `PrintFullName` akceptuje kolekcję `IEnumerable<Person>` typu jako parametr. Można jednak użyć go ponownie dla `IEnumerable<Employee>` kolekcji `Employee` typu, `Person`ponieważ dziedziczy .  
   
 ```csharp  
 // Simple hierarchy of classes.  
@@ -45,7 +45,7 @@ class Program
     {  
         IEnumerable<Employee> employees = new List<Employee>();  
   
-        // You can pass IEnumerable<Employee>,   
+        // You can pass IEnumerable<Employee>,
         // although the method expects IEnumerable<Person>.  
   
         PrintFullName(employees);  
@@ -55,7 +55,7 @@ class Program
 ```  
   
 ## <a name="comparing-generic-collections"></a>Porównywanie kolekcji ogólnych  
- Poniższy przykład ilustruje zalety obsługi kontrawariancja w <xref:System.Collections.Generic.IComparer%601> interfejsie. `PersonComparer` Klasa`IComparer<Person>` implementuje interfejs. Można jednak ponownie użyć tej klasy do porównania sekwencji obiektów typu, `Employee` ponieważ `Employee` dziedziczy `Person`.  
+ W poniższym przykładzie przedstawiono zalety obsługi różnic <xref:System.Collections.Generic.IComparer%601> w interfejsie. Klasa `PersonComparer` implementuje interfejs `IComparer<Person>`. Jednak można ponownie użyć tej klasy, aby porównać `Employee` sekwencję obiektów typu, ponieważ `Employee` dziedziczy `Person`.  
   
 ```csharp  
 // Simple hierarchy of classes.  
@@ -73,11 +73,11 @@ public class Employee : Person { }
 class PersonComparer : IEqualityComparer<Person>  
 {  
     public bool Equals(Person x, Person y)  
-    {              
+    {
         if (Object.ReferenceEquals(x, y)) return true;  
         if (Object.ReferenceEquals(x, null) ||  
             Object.ReferenceEquals(y, null))  
-            return false;              
+            return false;
         return x.FirstName == y.FirstName && x.LastName == y.LastName;  
     }  
     public int GetHashCode(Person person)  
@@ -100,7 +100,7 @@ class Program
                new Employee() {FirstName = "Jeff", LastName = "Price"}  
             };  
   
-        // You can pass PersonComparer,   
+        // You can pass PersonComparer,
         // which implements IEqualityComparer<Person>,  
         // although the method expects IEqualityComparer<Employee>.  
   
@@ -113,6 +113,6 @@ class Program
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Wariancja w interfejsachC#ogólnych ()](./variance-in-generic-interfaces.md)
+- [Wariancja w interfejsach ogólnych (C#)](./variance-in-generic-interfaces.md)

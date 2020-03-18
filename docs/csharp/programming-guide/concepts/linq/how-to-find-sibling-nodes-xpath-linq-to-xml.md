@@ -1,30 +1,30 @@
 ---
-title: Jak znaleźć węzły równorzędne (XPath-LINQ to XML) (C#)
+title: Jak znaleźć węzły równorzędne (XPath-LINQ do XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: e2c73d10-a8ca-4e11-b5aa-d055de285874
-ms.openlocfilehash: 24bad37151f3d63b03ec28c0fbea95bef02ab614
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: c201dcea5e6d148ae0998eb27d4e42df5b15309f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141014"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169210"
 ---
-# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a>Jak znaleźć węzły równorzędne (XPath-LINQ to XML) (C#)
-Możesz chcieć znaleźć wszystkie elementy równorzędne węzła o określonej nazwie. Utworzona kolekcja może zawierać węzeł kontekstu, jeśli węzeł kontekstu ma również określoną nazwę.  
+# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a>Jak znaleźć węzły równorzędne (XPath-LINQ do XML) (C#)
+Można znaleźć wszystkie elementy równorzędne węzła, które mają określoną nazwę. Wynikowy kolekcja może zawierać węzeł kontekstu, jeśli węzeł kontekstu ma również określoną nazwę.  
   
- Wyrażenie XPath:  
+ Wyrażenie XPath jest następujące:  
   
  `../Book`  
   
 ## <a name="example"></a>Przykład  
- Ten przykład najpierw odnajduje `Book` element, a następnie znajduje wszystkie elementy równorzędne o nazwie `Book`. Kolekcja wyników zawiera węzeł kontekstu.  
+ W tym przykładzie `Book` najpierw znajduje element, a `Book`następnie znajduje wszystkie elementy równorzędne o nazwie . Wynikowa kolekcja zawiera węzeł kontekstu.  
   
- Ten przykład używa następującego dokumentu XML: [przykładowy plik XML: Books (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md).  
+ W tym przykładzie użyto następującego dokumentu XML: [Przykładowy plik XML: Książki (LINQ do XML)](./sample-xml-file-books-linq-to-xml.md).  
   
 ```csharp  
 XDocument books = XDocument.Load("Books.xml");  
   
-XElement book =   
+XElement book =
     books  
     .Root  
     .Elements("Book")  
@@ -59,7 +59,7 @@ Results are identical
   <Genre>Computer</Genre>  
   <Price>44.95</Price>  
   <PublishDate>2000-10-01</PublishDate>  
-  <Description>An in-depth look at creating applications   
+  <Description>An in-depth look at creating applications
       with XML.</Description>  
 </Book>  
 <Book id="bk102">  
@@ -68,8 +68,8 @@ Results are identical
   <Genre>Fantasy</Genre>  
   <Price>5.95</Price>  
   <PublishDate>2000-12-16</PublishDate>  
-  <Description>A former architect battles corporate zombies,   
-      an evil sorceress, and her own childhood to become queen   
+  <Description>A former architect battles corporate zombies,
+      an evil sorceress, and her own childhood to become queen
       of the world.</Description>  
 </Book>  
 ```  

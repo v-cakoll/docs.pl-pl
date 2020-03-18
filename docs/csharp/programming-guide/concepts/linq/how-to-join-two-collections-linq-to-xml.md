@@ -1,39 +1,39 @@
 ---
-title: Jak sprzęgać dwie kolekcje (LINQ to XML) (C#)
+title: Jak dołączyć dwie kolekcje (LINQ do XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 7b817ede-911a-4cff-9dd3-639c3fc228c9
 ms.openlocfilehash: a5044778bbfd9529faf5fe63c72076f6a973c815
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75345859"
 ---
-# <a name="how-to-join-two-collections-linq-to-xml-c"></a>Jak sprzęgać dwie kolekcje (LINQ to XML) (C#)
+# <a name="how-to-join-two-collections-linq-to-xml-c"></a>Jak dołączyć dwie kolekcje (LINQ do XML) (C#)
 
-Element lub atrybut w dokumencie XML czasami może odwoływać się do innego elementu lub atrybutu. [Przykładowy plik XML: Customers i Orders (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md) dokument XML zawiera listę klientów i listę zamówień. Każdy element `Customer` zawiera atrybut `CustomerID`. Każdy element `Order` zawiera `CustomerID` elementu. Element `CustomerID` w każdej kolejności odwołuje się do atrybutu `CustomerID` w kliencie.
+Element lub atrybut w dokumencie XML może czasami odwoływać się do innego elementu lub atrybutu. Przykładowy [plik XML: Klienci i zamówienia (LINQ do XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md) Dokument XML zawiera listę klientów i listę zamówień. Każdy `Customer` element `CustomerID` zawiera atrybut. Każdy `Order` element `CustomerID` zawiera element. Element `CustomerID` w każdym zamówieniu `CustomerID` odnosi się do atrybutu w kliencie.
 
-[Przykładowy plik XSD tematu: klienci i zamówienia](./sample-xsd-file-customers-and-orders1.md) zawierają XSD, których można użyć do zweryfikowania tego dokumentu. Używa `xs:key` i `xs:keyref` funkcji XSD, aby określić, że atrybut `CustomerID` elementu `Customer` jest kluczem i aby ustanowić relację między `CustomerID` elementu w każdym `Order` elementu i atrybut `CustomerID` w każdym `Customer` elementu.
+Przykładowy [przykładowy plik XSD w temacie: Klienci i zamówienia](./sample-xsd-file-customers-and-orders1.md) zawierają xsd, który może służyć do sprawdzania poprawności tego dokumentu. Używa `xs:key` `xs:keyref` i funkcje XSD, aby `CustomerID` ustalić, `Customer` że atrybut elementu jest kluczem i `CustomerID` ustanowić `Order` relację `CustomerID` między `Customer` elementem w każdym elemencie i atrybutu w każdym elemencie.
 
-Za pomocą [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]można wykorzystać tę relację przy użyciu klauzuli `join`.
+Z [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], można skorzystać z tej `join` relacji przy użyciu klauzuli.
 
-Ponieważ nie ma dostępnego indeksu, takie dołączenie będzie miało niską wydajność w czasie wykonywania.
+Ponieważ nie ma dostępnego indeksu, takie łączenie będzie miało słabą wydajność w czasie wykonywania.
 
-Aby uzyskać szczegółowe informacje na temat `join`, zobacz [operacje JoinC#()](./join-operations.md).
+Aby uzyskać bardziej `join`szczegółowe informacje na temat , zobacz [Dołączanie operacji (C#)](./join-operations.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład sprzęga elementy `Customer` do elementów `Order` i generuje nowy dokument XML zawierający element `CompanyName` w zamówieniach.
+Poniższy przykład łączy `Customer` elementy do `Order` elementów i generuje nowy dokument XML, który zawiera `CompanyName` element w zamówieniach.
 
-Przed wykonaniem zapytania, przykład sprawdza, czy dokument jest zgodny ze schematem w [przykładowym pliku XSD: klienci i zamówienia](./sample-xsd-file-customers-and-orders1.md). Dzięki temu Klauzula join zawsze będzie działała.
+Przed wykonaniem kwerendy, przykład sprawdza, czy dokument jest zgodny ze schematem w [przykładowym pliku XSD: Klienci i zamówienia](./sample-xsd-file-customers-and-orders1.md). Gwarantuje to, że join klauzula będzie zawsze działać.
 
-To zapytanie najpierw pobiera wszystkie elementy `Customer`, a następnie łączy je z elementami `Order`. Wybiera tylko zamówienia dla klientów o `CustomerID` większej niż "K". Następnie projektuje nowy element `Order` zawierający informacje o klientach w poszczególnych zamówieniach.
+Ta kwerenda najpierw `Customer` pobiera wszystkie elementy, a `Order` następnie łączy je z elementami. Wybiera tylko zamówienia dla klientów `CustomerID` o większej niż "K". Następnie wyświetla nowy `Order` element, który zawiera informacje o kliencie w każdym zamówieniu.
 
-W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: Customers i Orders (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).
+W tym przykładzie użyto następującego dokumentu XML: [Przykładowy plik XML: Klienci i zamówienia (LINQ do XML).](./sample-xml-file-customers-and-orders-linq-to-xml-2.md)
 
-W tym przykładzie zastosowano następujący schemat XSD: [przykładowy plik XSD: klienci i zamówienia](./sample-xsd-file-customers-and-orders1.md).
+W tym przykładzie użyto następującego schematu XSD: [Przykładowy plik XSD: Klienci i zamówienia](./sample-xsd-file-customers-and-orders1.md).
 
-Łączenie w ten sposób nie będzie działać prawidłowo. Sprzężenia są wykonywane za pośrednictwem wyszukiwania liniowego. Brak tabel lub indeksów skrótów, które mogą pomóc w wydajności.
+Przyłączenie się w ten sposób nie będzie działać dobrze. Sprzężenia są wykonywane za pomocą wyszukiwania liniowego. Nie ma żadnych tabel mieszania lub indeksów, które pomogą w wydajności.
 
 ```csharp
 XmlSchemaSet schemas = new XmlSchemaSet();

@@ -1,65 +1,65 @@
 ---
-title: Tablice jednowymiarowe — C# Przewodnik programowania
+title: Tablice jednowymiarowe — przewodnik programowania Języka C#
 ms.date: 07/20/2015
 helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-ms.openlocfilehash: 8f093d22da789c6df750475e47a3b4e4685c5651
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: bd4ab53a9cb53e5cf636601bff5ac64a10a310a6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744211"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170354"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>Tablice jednowymiarowe (Przewodnik programowania w języku C#)
 
-Można zadeklarować jednowymiarową tablicę składającą się z pięciu liczb całkowitych, jak pokazano w następującym przykładzie:  
+Można zadeklarować jednowymiarową tablicę pięciu liczb całkowitych, jak pokazano w poniższym przykładzie:  
   
  [!code-csharp[csProgGuideArrays#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#4)]  
   
- Ta tablica zawiera elementy `array[0]` do `array[4]`. Operator [New](../../language-reference/operators/new-operator.md) jest używany do tworzenia tablicy i inicjowania elementów tablicy do ich wartości domyślnych. W tym przykładzie wszystkie elementy tablicy są inicjowane do zera.  
+ Ta tablica zawiera `array[0]` `array[4]`elementy od do . [Nowy](../../language-reference/operators/new-operator.md) operator jest używany do tworzenia tablicy i inicjowania elementów tablicy do ich wartości domyślnych. W tym przykładzie wszystkie elementy tablicy są inicjowane do zera.  
   
- Tablica, która przechowuje elementy ciągu, może być zadeklarowana w ten sam sposób. Na przykład:  
+ Tablica, która przechowuje elementy ciągu mogą być zadeklarowane w ten sam sposób. Przykład:  
   
  [!code-csharp[csProgGuideArrays#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#5)]  
   
 ## <a name="array-initialization"></a>Inicjowanie tablicy
 
- Możliwe jest zainicjowanie tablicy przy użyciu deklaracji, w takim przypadku specyfikator długości nie jest wymagany, ponieważ jest już dostarczany przez liczbę elementów na liście inicjalizacji. Na przykład:  
+ Istnieje możliwość zainicjowania tablicy na deklarację, w którym to przypadku specyfikator długości nie jest potrzebny, ponieważ jest już dostarczany przez liczbę elementów na liście inicjalizacji. Przykład:  
   
  [!code-csharp[csProgGuideArrays#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#6)]  
   
- Tablicę ciągów można zainicjować w taki sam sposób. Poniżej znajduje się deklaracja tablicy ciągów, w której każdy element tablicy jest inicjowany przez nazwę dnia:  
- 
+ Tablica ciągów może być inicjowana w ten sam sposób. Poniżej przedstawiono deklarację tablicy ciągów, w której każdy element tablicy jest inicjowany przez nazwę dnia:  
+
  ```csharp
  string[] weekDays = new string[] { "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
  ```
   
- Po zainicjowaniu tablicy po zgłoszeniu można użyć następujących skrótów:  
+ Podczas inicjowania tablicy na deklarację, można użyć następujących skrótów:  
   
  [!code-csharp[csProgGuideArrays#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#8)]  
   
- Istnieje możliwość zadeklarować zmienną tablicową bez inicjalizacji, ale należy użyć operatora `new`, gdy przypiszesz tablicę do tej zmiennej. Na przykład:  
+ Istnieje możliwość zadeklarowania zmiennej tablicy bez inicjowania, ale należy użyć `new` operatora podczas przypisywania tablicy do tej zmiennej. Przykład:  
   
  [!code-csharp[csProgGuideArrays#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#9)]  
   
- C#3,0 wprowadza niejawnie wpisane tablice. Aby uzyskać więcej informacji, zobacz [niejawnie wpisane tablice](./implicitly-typed-arrays.md).  
+ C# 3.0 wprowadza niejawnie wpisane tablice. Aby uzyskać więcej informacji, zobacz [Tablice wpisane niejawnie](./implicitly-typed-arrays.md).  
   
-## <a name="value-type-and-reference-type-arrays"></a>Typ wartości i tablice typów referencyjnych
+## <a name="value-type-and-reference-type-arrays"></a>Tablice typów wartości i typów odwołań
 
- Rozważmy następującą deklarację tablicy:  
+ Należy wziąć pod uwagę następującą deklarację tablicy:  
   
  [!code-csharp[csProgGuideArrays#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#10)]  
   
- Wynik tej instrukcji zależy od tego, czy `SomeType` jest typem wartości czy typem referencyjnym. Jeśli jest to typ wartości, instrukcja tworzy tablicę zawierającą 10 elementów, z których każdy ma typ `SomeType`. Jeśli `SomeType` jest typem referencyjnym, instrukcja tworzy tablicę zawierającą 10 elementów, z których każdy jest zainicjowany do odwołania o wartości null.  
+ Wynik tej instrukcji zależy `SomeType` od tego, czy jest typem wartości, czy typem odwołania. Jeśli jest typem wartości, instrukcja tworzy tablicę 10 elementów, `SomeType`z których każdy ma typ . Jeśli `SomeType` jest typem odwołania, instrukcja tworzy tablicę 10 elementów, z których każdy jest inicjowany do odwołania null.  
   
-Aby uzyskać więcej informacji na temat typów wartości i typów referencyjnych, zobacz [typy wartości](../../language-reference/builtin-types/value-types.md) i [typy odwołań](../../language-reference/keywords/reference-types.md).
+Aby uzyskać więcej informacji na temat typów wartości i typów odwołań, zobacz [Typy wartości](../../language-reference/builtin-types/value-types.md) i [Typy odwołań](../../language-reference/keywords/reference-types.md).
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Array>
-- [Przewodnik programowania w języku C#](../index.md)
+- [Przewodnik programowania języka C#](../index.md)
 - [Tablice](./index.md)
 - [Tablice wielowymiarowe](./multidimensional-arrays.md)
 - [Tablice nieregularne](./jagged-arrays.md)

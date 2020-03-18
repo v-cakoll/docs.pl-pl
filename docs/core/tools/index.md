@@ -1,73 +1,73 @@
 ---
 title: Interfejs wiersza polecenia platformy .NET Core
 titleSuffix: ''
-description: Przegląd interfejs wiersza polecenia platformy .NET Core i jego funkcji.
+description: Omówienie cli .NET Core i jego funkcji.
 ms.date: 02/13/2020
-ms.openlocfilehash: d84f96889cabc3fb4521e39db25050aacdd11546
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 45a40063f70a621e807abf5e01ceecb125aecd7c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156715"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79399120"
 ---
-# <a name="net-core-cli-overview"></a>Przegląd interfejs wiersza polecenia platformy .NET Core
+# <a name="net-core-cli-overview"></a>Omówienie procesora CLI programu .NET Core
 
-**Ten artykuł ma zastosowanie do:** ✔️ .net Core 2,1 SDK i nowszych wersjach
+**Ten artykuł dotyczy:** ✔️ .NET Core 2.1 SDK i nowszych wersji
 
-Interfejs wiersza polecenia (CLI) platformy .NET Core to Międzyplatformowy łańcucha narzędzi służący do tworzenia, kompilowania, uruchamiania i publikowania aplikacji platformy .NET Core.
+Interfejs wiersza polecenia .NET Core (CLI) jest wieloplatformowym łańcuchem narzędzi do tworzenia, tworzenia, uruchamiania i publikowania aplikacji .NET Core.
 
-Interfejs wiersza polecenia platformy .NET Core jest dołączona do [zestaw .NET Core SDK](../sdk.md). Aby dowiedzieć się, jak zainstalować zestaw .NET Core SDK, zobacz [Install the zestaw .NET Core SDK](../install/sdk.md).
+Wartość .NET Core CLI jest dołączona do [sdk .NET Core .](../sdk.md) Aby dowiedzieć się, jak zainstalować zestaw SDK .NET Core, zobacz [Instalowanie sdk .NET Core .](../install/sdk.md)
 
-## <a name="cli-commands"></a>Poleceń interfejsu wiersza polecenia
+## <a name="cli-commands"></a>Polecenia wiersza polecenia
 
-Następujące polecenia są instalowane domyślnie:
+Domyślnie instalowane są następujące polecenia:
 
-### <a name="basic-commands"></a>Polecenia podstawowe
+### <a name="basic-commands"></a>Podstawowe polecenia
 
-- [new](dotnet-new.md)
-- [restore](dotnet-restore.md)
-- [utworzenia](dotnet-build.md)
-- [publish](dotnet-publish.md)
-- [wykonane](dotnet-run.md)
-- [badan](dotnet-test.md)
-- [VSTest](dotnet-vstest.md)
-- [pakiet](dotnet-pack.md)
-- [migrowanie](dotnet-migrate.md)
-- [czyst](dotnet-clean.md)
-- [sln](dotnet-sln.md)
-- [Pomoc](dotnet-help.md)
-- [zachować](dotnet-store.md)
+- [`new`](dotnet-new.md)
+- [`restore`](dotnet-restore.md)
+- [`build`](dotnet-build.md)
+- [`publish`](dotnet-publish.md)
+- [`run`](dotnet-run.md)
+- [`test`](dotnet-test.md)
+- [`vstest`](dotnet-vstest.md)
+- [`pack`](dotnet-pack.md)
+- [`migrate`](dotnet-migrate.md)
+- [`clean`](dotnet-clean.md)
+- [`sln`](dotnet-sln.md)
+- [`help`](dotnet-help.md)
+- [`store`](dotnet-store.md)
 
 ### <a name="project-modification-commands"></a>Polecenia modyfikacji projektu
 
-- [Dodaj pakiet](dotnet-add-package.md)
-- [Dodaj odwołanie](dotnet-add-reference.md)
-- [Usuń pakiet](dotnet-remove-package.md)
-- [Usuń odwołanie](dotnet-remove-reference.md)
-- [odwołanie do listy](dotnet-list-reference.md)
+- [`add package`](dotnet-add-package.md)
+- [`add reference`](dotnet-add-reference.md)
+- [`remove package`](dotnet-remove-package.md)
+- [`remove reference`](dotnet-remove-reference.md)
+- [`list reference`](dotnet-list-reference.md)
 
-### <a name="advanced-commands"></a>Polecenia Zaawansowane
+### <a name="advanced-commands"></a>Polecenia zaawansowane
 
-- [Usuwanie NuGet](dotnet-nuget-delete.md)
-- [Ustawienia regionalne NuGet](dotnet-nuget-locals.md)
-- [wypychanie NuGet](dotnet-nuget-push.md)
-- [MSBuild](dotnet-msbuild.md)
-- [skrypt instalacji dotnet](dotnet-install-script.md)
+- [`nuget delete`](dotnet-nuget-delete.md)
+- [`nuget locals`](dotnet-nuget-locals.md)
+- [`nuget push`](dotnet-nuget-push.md)
+- [`msbuild`](dotnet-msbuild.md)
+- [`dotnet install script`](dotnet-install-script.md)
 
 ### <a name="tool-management-commands"></a>Polecenia zarządzania narzędziami
 
-- [Instalacja narzędzia](dotnet-tool-install.md)
-- [Lista narzędzi](dotnet-tool-list.md)
-- [Aktualizacja narzędzia](dotnet-tool-update.md)
-- dostępne [przywracanie narzędzi](global-tools.md#install-a-local-tool) **rozpoczynające się od zestaw .NET Core SDK 3,0**
-- dostępne [uruchomienie narzędzia](global-tools.md#invoke-a-local-tool) **rozpoczynające się od zestaw .NET Core SDK 3,0**
-- [Odinstalowywanie narzędzia](dotnet-tool-uninstall.md)
+- [`tool install`](dotnet-tool-install.md)
+- [`tool list`](dotnet-tool-list.md)
+- [`tool update`](dotnet-tool-update.md)
+- [`tool restore`](global-tools.md#install-a-local-tool)Dostępne od .NET Core SDK 3.0.
+- [`tool run`](global-tools.md#invoke-a-local-tool)Dostępne od .NET Core SDK 3.0.
+- [`tool uninstall`](dotnet-tool-uninstall.md)
 
-Narzędzia są aplikacjami konsolowymi, które są instalowane z pakietów NuGet i są wywoływane z wiersza polecenia. Narzędzia można pisać samodzielnie lub instalować Narzędzia zapisane przez inne firmy. Narzędzia są również nazywane narzędziami globalnymi, narzędziami ścieżki narzędzi i narzędziami lokalnymi. Aby uzyskać więcej informacji, zobacz [Narzędzia platformy .NET Core — Omówienie](global-tools.md).
+Narzędzia są aplikacje konsoli, które są instalowane z pakietów NuGet i są wywoływane z wiersza polecenia. Możesz samodzielnie pisać narzędzia lub instalować narzędzia napisane przez osoby trzecie. Narzędzia są również znane jako narzędzia globalne, narzędzia ścieżki narzędziowej i narzędzia lokalne. Aby uzyskać więcej informacji, zobacz [omówienie narzędzi .NET Core](global-tools.md).
 
 ## <a name="command-structure"></a>Struktura poleceń
 
-Struktura poleceń interfejsu wiersza polecenia składa się ze [sterownika ("dotnet")](#driver), [polecenia](#command)oraz możliwych [argumentów](#arguments) i [opcji](#options)polecenia. Ten wzorzec jest widoczny w większości operacji interfejsu wiersza polecenia, takich jak tworzenie nowej aplikacji konsolowej i uruchamianie jej z poziomu wiersza poleceń, ponieważ następujące polecenia pokazują, że są wykonywane z katalogu o nazwie *my_app*:
+Struktura polecenia CLI składa się ze [sterownika ("dotnet"),](#driver) [polecenia](#command)i ewentualnie [argumentów](#arguments) poleceń i [opcji](#options). Ten wzorzec jest wyświetlana w większości operacji wiersza polecenia, takich jak tworzenie nowej aplikacji konsoli i uruchamianie jej z wiersza polecenia, zgodnie z poniższymi poleceniami, które są wyświetlane podczas wykonywania z katalogu o nazwie *my_app:*
 
 ```dotnetcli
 dotnet new console
@@ -77,31 +77,31 @@ dotnet /build_output/my_app.dll
 
 ### <a name="driver"></a>Sterownik
 
-Sterownik nosi nazwę [dotnet](dotnet.md) i ma dwie obowiązki, uruchamiają [aplikację zależną od platformy](../deploying/index.md) lub wykonując polecenie.
+Sterownik nosi nazwę [dotnet](dotnet.md) i ma dwa obowiązki, uruchamiając [aplikację zależną od struktury](../deploying/index.md) lub wykonując polecenie.
 
-Aby uruchomić aplikację zależną od platformy, należy określić aplikację po sterowniku, na przykład `dotnet /path/to/my_app.dll`. Podczas wykonywania polecenia z folderu, w którym znajduje się biblioteka DLL aplikacji, wystarczy wykonać `dotnet my_app.dll`. Jeśli chcesz użyć określonej wersji środowiska uruchomieniowego platformy .NET Core, użyj opcji `--fx-version <VERSION>` (zobacz informacje dotyczące [polecenia dotnet](dotnet.md) ).
+Aby uruchomić aplikację zależną od struktury, określ aplikację `dotnet /path/to/my_app.dll`po sterowniku, na przykład . Podczas wykonywania polecenia z folderu, w którym znajduje się `dotnet my_app.dll`dll aplikacji, wystarczy wykonać . Jeśli chcesz użyć określonej wersji programu .NET Core Runtime, użyj `--fx-version <VERSION>` tej opcji (zobacz odwołanie do polecenia [dotnet).](dotnet.md)
 
-Gdy podasz polecenie do sterownika, `dotnet.exe` uruchamia proces wykonywania polecenia interfejsu CLI. Na przykład:
+Po dostarczeniu polecenia `dotnet.exe` do sterownika uruchamia proces wykonywania polecenia WIERSZA. Przykład:
 
 ```dotnetcli
 dotnet build
 ```
 
-Najpierw sterownik Określa wersję zestawu SDK do użycia. Jeśli nie ma pliku [Global. JSON](global-json.md) , używana jest Najnowsza wersja zestawu SDK. Może to być wersja zapoznawcza lub stabilna, w zależności od tego, co jest najnowsze na komputerze.  Po ustaleniu wersji zestawu SDK wykonuje polecenie.
+Po pierwsze, sterownik określa wersję sdk do użycia. Jeśli nie ma pliku [global.json,](global-json.md) używana jest najnowsza dostępna wersja sdk. Może to być wersja zapoznawcza lub stabilna, w zależności od tego, co jest najnowsze na komputerze.  Po ustaleniu wersji sdk wykonuje polecenie.
 
 ### <a name="command"></a>Polecenie
 
-Polecenie wykonuje akcję. Na przykład `dotnet build` kompiluje kod. `dotnet publish` publikuje kod. Polecenia są implementowane jako Aplikacja konsolowa przy użyciu konwencji `dotnet {command}`.
+Polecenie wykonuje akcję. Na przykład `dotnet build` tworzy kod. `dotnet publish`publikuje kod. Polecenia są implementowane jako aplikacja konsoli `dotnet {command}` przy użyciu konwencji.
 
 ### <a name="arguments"></a>Argumenty
 
-Argumenty przekazywane do wiersza polecenia są argumentami wywoływanego polecenia. Na przykład podczas wykonywania `dotnet publish my_app.csproj`argument `my_app.csproj` wskazuje projekt do opublikowania i jest przesyłany do polecenia `publish`.
+Argumenty, które przekazujesz w wierszu polecenia są argumentami do wywołanych polecenia. Na przykład podczas `dotnet publish my_app.csproj`wykonywania `my_app.csproj` , argument wskazuje projekt do `publish` opublikowania i jest przekazywany do polecenia.
 
 ### <a name="options"></a>Opcje
 
-Opcje, które są przekazywane w wierszu polecenia są opcje wywoływanego polecenia. Na przykład podczas wykonywania `dotnet publish --output /build_output`opcja `--output` i jej wartość są przesyłane do polecenia `publish`.
+Opcje, które przekazujesz w wierszu polecenia, są opcjami wywołanych polecenia. Na przykład podczas `dotnet publish --output /build_output`wykonywania, `--output` opcja i jej `publish` wartość są przekazywane do polecenia.
 
 ## <a name="see-also"></a>Zobacz też
 
-- [repozytorium usługi dotnet/zestawu SDK usługi GitHub](https://github.com/dotnet/sdk/)
+- [Repozytorium GitHub dotnet/sdk](https://github.com/dotnet/sdk/)
 - [Przewodnik instalacji programu .NET Core](../install/sdk.md)

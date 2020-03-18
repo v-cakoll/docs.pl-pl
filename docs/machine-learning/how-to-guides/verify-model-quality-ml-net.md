@@ -1,25 +1,25 @@
 ---
-title: Oblicz metryki, aby oszacować jakość modelu uczenia maszynowego
-description: Dowiedz się, jak obliczyć metryki w celu oszacowania i sprawdzenia jakości modelu uczenia maszynowego za pomocą ML.NET
+title: Obliczanie metryk w celu oceny jakości modelu uczenia maszynowego
+description: Dowiedz się, jak obliczyć metryki, aby ocenić i zweryfikować jakość modelu uczenia maszynowego za pomocą ML.NET
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
 ms.openlocfilehash: d6409307cd283ae67d7546c4dc6e19e6089a0766
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73975841"
 ---
-# <a name="calculate-metrics-to-evaluate-machine-learning-model-quality"></a>Oblicz metryki, aby oszacować jakość modelu uczenia maszynowego
+# <a name="calculate-metrics-to-evaluate-machine-learning-model-quality"></a>Obliczanie metryk w celu oceny jakości modelu uczenia maszynowego
 
 > [!NOTE]
-> Ten temat dotyczy ML.NET, który jest obecnie w wersji zapoznawczej, a materiał może ulec zmianie. Aby uzyskać więcej informacji, odwiedź stronę [ml.NET](https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet) .
+> Ten temat odnosi się do ML.NET, który jest obecnie w wersji zapoznawczej, a materiał może ulec zmianie. Aby uzyskać więcej informacji, odwiedź stronę [ML.NET.](https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet)
 
-Ta procedura i powiązana próbka są obecnie używane w programie **ml.NET w wersji 0,10**. Aby uzyskać więcej informacji, zobacz informacje o wersji w [repozytorium programu dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)w witrynie GitHub.
+Ten przykład i powiązane są obecnie przy użyciu **ML.NET wersji 0.10**. Aby uzyskać więcej informacji, zobacz informacje o wersji w [reppo github dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
-Jak przeprowadzić ocenę jakości po nauczeniu modelu? Każde zadanie uczenia maszynowego udostępnia metryki na potrzeby oceny jakości.
+Jak oceniasz jakość po wytrenowaniu modelu? Każde zadanie uczenia maszynowego udostępnia metryki dla oceny jakości.
 
-Aby oszacować model, można użyć odpowiedniego kontekstu zadania, tak jak w poniższym przykładzie:
+Można użyć odpowiedniego "kontekstu" zadania do oceny modelu, jak w poniższym przykładzie:
 
 ```csharp
 // Read the test dataset.

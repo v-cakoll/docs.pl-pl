@@ -1,5 +1,5 @@
 ---
-title: Właściwości — C# Przewodnik programowania
+title: Właściwości — przewodnik programowania C#
 ms.date: 03/10/2017
 f1_keywords:
 - cs.properties
@@ -7,53 +7,53 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: 4f83d574357aa725b955870e3d93aa1f8222723a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: ee530e981e0c85302b2b11cc739d6c51d6650ddd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714707"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170107"
 ---
 # <a name="properties-c-programming-guide"></a>Właściwości (Przewodnik programowania w języku C#)
 
-Właściwość jest członkiem, który zapewnia elastyczny mechanizm odczytu, zapisu lub obliczania wartości pola prywatnego. Właściwości mogą być używane tak, jakby były publicznymi elementami członkowskimi danych, ale w rzeczywistości są to specjalne metody nazywane metodami *dostępu*. Dzięki temu można łatwo uzyskać dostęp do danych, a następnie zapewnić bezpieczeństwo i elastyczność metod.  
+Właściwość jest elementem członkowskim, który zapewnia elastyczny mechanizm odczytu, zapisu lub obliczania wartości pola prywatnego. Właściwości mogą służyć tak, jakby były członkami danych publicznych, ale w rzeczywistości są to specjalne metody nazywane *akcesorami.* Umożliwia to łatwy dostęp do danych i nadal pomaga promować bezpieczeństwo i elastyczność metod.  
 
 ## <a name="properties-overview"></a>Przegląd właściwości  
   
-- Właściwości umożliwiają klasy udostępnianie publicznego sposobu pobierania i ustawiania wartości podczas ukrywania implementacji lub kodu weryfikacyjnego.  
+- Właściwości umożliwiają klasy, aby uwidaczniać publiczny sposób uzyskiwania i ustawiania wartości podczas ukrywania kodu implementacji lub weryfikacji.  
   
-- Metoda dostępu [Get](../../language-reference/keywords/get.md) właściwości służy do zwracania wartości właściwości, a metoda dostępu do właściwości [zestawu](../../language-reference/keywords/set.md) jest używana do przypisywania nowej wartości. Te metody dostępu mogą mieć różne poziomy dostępu. Aby uzyskać więcej informacji, zobacz [ograniczanie dostępności metody](./restricting-accessor-accessibility.md)dostępu.  
+- A [get](../../language-reference/keywords/get.md) property akcesor jest używany do zwracania wartości właściwości, a akcesor właściwości [set](../../language-reference/keywords/set.md) jest używany do przypisywania nowej wartości. Te akcesory mogą mieć różne poziomy dostępu. Aby uzyskać więcej informacji, zobacz [Ograniczanie ułatwień dostępu .](./restricting-accessor-accessibility.md)  
   
-- Słowo kluczowe [Value](../../language-reference/keywords/value.md) służy do definiowania wartości przypisywanej przez metodę dostępu `set`.  
-- Właściwościami mogą być *Odczyt-zapis* (mają zarówno `get`, jak i metodę dostępu `set`), *tylko do odczytu* (mają `get` metodę dostępu, ale nie ma metody dostępu do `set`) ani tylko do *zapisu* (mają `set` metodę dostępu, ale bez metody dostępu `get`). Właściwości tylko do zapisu są rzadkie i najczęściej są używane do ograniczania dostępu do poufnych danych.
+- Value [value](../../language-reference/keywords/value.md) — słowo kluczowe służy do definiowania wartości przypisanej przez akcesora. `set`  
+- Właściwości mogą być *odczytu i zapisu* (mają zarówno `get` a i `set` akcesor), tylko do *odczytu* `get` (mają akcesor, ale nie `set` ma akcesora) lub tylko do *zapisu* `set` (mają akcesor, ale nie `get` ma akcesora). Właściwości tylko do zapisu są rzadkie i są najczęściej używane do ograniczania dostępu do poufnych danych.
 
-- Proste właściwości, które nie wymagają niestandardowego kodu dostępu, można zaimplementować jako definicje treści wyrażenia lub jako właściwości, które są [implementowane](./auto-implemented-properties.md).
- 
+- Proste właściwości, które nie wymagają niestandardowego kodu akcesora, mogą być implementowane jako definicje treści wyrażeń lub jako [właściwości implementowane automatycznie.](./auto-implemented-properties.md)
+
 ## <a name="properties-with-backing-fields"></a>Właściwości z polami zapasowymi
 
-Jeden wzorzec podstawowy do implementowania właściwości obejmuje użycie prywatnego pola zapasowego w celu ustawienia i pobrania wartości właściwości. Metoda dostępu `get` zwraca wartość pola prywatnego, a metoda dostępu `set` może wykonać pewne sprawdzanie poprawności danych przed przypisaniem wartości do pola prywatnego. Oba metody dostępu mogą także wykonać konwersję lub obliczenia danych przed ich zapisaniem lub zwróceniem.
+Jeden podstawowy wzorzec do implementowania właściwości polega na użyciu prywatnego pola zapasowego do ustawiania i pobierania wartości właściwości. Akcesor `get` zwraca wartość pola prywatnego, a `set` akcesor może wykonać niektóre sprawdzanie poprawności danych przed przypisaniem wartości do pola prywatnego. Oba akcesory mogą również wykonać konwersję lub obliczenia na danych, zanim zostaną zapisane lub zwrócone.
 
-Poniższy przykład ilustruje ten wzorzec. W tym przykładzie Klasa `TimePeriod` reprezentuje interwał czasu. Wewnętrznie Klasa przechowuje przedział czasu (w sekundach) w polu prywatnym o nazwie `_seconds`. Właściwość do odczytu i zapisu o nazwie `Hours` umożliwia klientowi określenie przedziału czasu w godzinach. Zarówno `get`, jak i metody dostępu `set` wykonują wymaganą konwersję między godzinami i sekundami. Ponadto metoda dostępu `set` sprawdza poprawność danych i zgłasza <xref:System.ArgumentOutOfRangeException>, jeśli liczba godzin jest nieprawidłowa. 
-   
+Poniższy przykład ilustruje ten wzorzec. W tym przykładzie `TimePeriod` klasa reprezentuje interwał czasu. Wewnętrznie klasa przechowuje przedział czasu w sekundach `_seconds`w polu prywatnym o nazwie . Właściwość odczytu i `Hours` zapisu o nazwie umożliwia klientowi określenie przedziału czasu w godzinach. Zarówno `get` akcesorów `set` i wykonać niezbędne konwersji między godzinami i sekundami. Ponadto `set` akcesor sprawdza poprawność danych <xref:System.ArgumentOutOfRangeException> i zgłasza, jeśli liczba godzin jest nieprawidłowa.
+
  [!code-csharp[Properties#1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-1.cs)]  
   
-## <a name="expression-body-definitions"></a>Definicje treści wyrażenia  
+## <a name="expression-body-definitions"></a>Definicje treści wyrażeń  
 
- Metody dostępu do właściwości często składają się z jednowierszowych instrukcji, które po prostu przypisują lub zwracają wynik wyrażenia. Te właściwości można zaimplementować jako elementy członkowskie z wyrażeniami. Definicje treści wyrażenia składają się z symbolu `=>`, po którym następuje wyrażenie, które ma zostać przypisane do właściwości lub z niego pobrane.
+ Akcesory właściwości często składają się z jednowierszowych instrukcji, które po prostu przypisują lub zwracają wynik wyrażenia. Można zaimplementować te właściwości jako elementy członkowskie zabudowane wyrażeniem. Definicje treści wyrażenia `=>` składają się z symbolu, po którym następuje wyrażenie przypisywane do właściwości lub pobieranie z niej.
 
- Począwszy od C# 6, właściwości tylko do odczytu mogą zaimplementować metodę dostępu `get`ną jako składowa wyrażeń. W takim przypadku nie jest używane słowo kluczowe metody dostępu `get` ani słowa kluczowego `return`. Poniższy przykład implementuje Właściwość `Name` tylko do odczytu jako element członkowski posiadający wyrażenie.
+ Począwszy od Języka C# 6 właściwości `get` tylko do odczytu można zaimplementować akcesor jako element członkowski zabudowany wyrażeń. W takim przypadku nie `get` jest używany `return` ani słowo kluczowe akcesor, ani słowo kluczowe. W poniższym przykładzie implementuje `Name` właściwości tylko do odczytu jako element członkowski zabudowany wyrażeń.
 
  [!code-csharp[Properties#2](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-2.cs)]  
 
- Począwszy od C# 7,0, zarówno `get`, jak i metodę dostępu `set` można zaimplementować jako elementy członkowskie z wyrażeniami. W takim przypadku `get` i `set` słowa kluczowe muszą być obecne. Poniższy przykład ilustruje użycie definicji treści wyrażenia dla obu metod dostępu. Należy zauważyć, że słowo kluczowe `return` nie jest używane z akcesorem `get`.
- 
+ Począwszy od języka C# `get` 7.0, zarówno i `set` akcesor akcesor akcesor akcesor akcesora można zaimplementować jako elementy członkowskie zabudowane wyrażeniem. W takim przypadku `get` `set` słowa kluczowe i muszą być obecne. W poniższym przykładzie przedstawiono użycie definicji treści wyrażenia dla obu akcesorów. Należy pamiętać, że `return` słowo `get` kluczowe nie jest używany z akcesor.
+
   [!code-csharp[Properties#3](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-3.cs)]  
 
-## <a name="auto-implemented-properties"></a>Właściwości zaimplementowane wstępnie
+## <a name="auto-implemented-properties"></a>Właściwości implementowane automatycznie
 
-W niektórych przypadkach właściwości `get` i metody dostępu `set` po prostu przypisują wartość lub pobierze wartość z pola zapasowego bez uwzględniania dodatkowej logiki. Za pomocą zaimplementowanych właściwości, można uprościć kod, gdy C# kompilator nieprzezroczystie udostępnia pole zapasowe. 
+W niektórych przypadkach `get` `set` właściwości i akcesorów po prostu przypisać wartość do lub pobrać wartość z pola zapasowego bez uwzględnienia żadnych dodatkowych logiki. Za pomocą właściwości auto-implementowane, można uprościć kodu, a kompilator Języka C# w sposób niewidoczny dla ciebie.
 
-Jeśli właściwość ma zarówno `get`, jak i metodę dostępu `set`, oba muszą być implementowane. Należy zdefiniować właściwość, która jest implementowana przy użyciu słów kluczowych `get` i `set` bez podawania żadnej implementacji. Poniższy przykład powtarza poprzedni, z tą różnicą, że `Name` i `Price` są właściwościami, które są implementowane. Należy zauważyć, że w przykładzie jest również usuwany Konstruktor sparametryzowany, dzięki czemu obiekty `SaleItem` są teraz inicjowane z wywołaniem konstruktora bez parametrów i [inicjatora obiektów](object-and-collection-initializers.md).
+Jeśli właściwość ma `get` zarówno `set` a, jak i akcesor, oba muszą być automatycznie implementowane. Można zdefiniować właściwości zaimplementowane automatycznie `get` `set` przy użyciu i słów kluczowych bez podawania implementacji. Poniższy przykład powtarza poprzedni, z `Name` tą `Price` różnicą, że i są właściwościami implementowane automatycznie. Należy zauważyć, że w przykładzie również usuwa `SaleItem` konstruktora sparametryzowany, tak, że obiekty są teraz inicjowane z wywołaniem konstruktora bezparametrów i [inicjatora obiektu](object-and-collection-initializers.md).
 
   [!code-csharp[Properties#4](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-4.cs)]  
 
@@ -71,12 +71,12 @@ Jeśli właściwość ma zarówno `get`, jak i metodę dostępu `set`, oba musz�
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
 
-Aby uzyskać więcej informacji, zobacz [Właściwości](~/_csharplang/spec/classes.md#properties) w [ C# specyfikacji języka](/dotnet/csharp/language-reference/language-specification/introduction). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
+Aby uzyskać więcej informacji, zobacz [Właściwości](~/_csharplang/spec/classes.md#properties) w [specyfikacji języka Języka C#](/dotnet/csharp/language-reference/language-specification/introduction). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Przewodnik programowania w języku C#](../index.md)
+- [Przewodnik programowania języka C#](../index.md)
 - [Używanie właściwości](./using-properties.md)
-- [Indeksatory](../indexers/index.md)
-- [Get — słowo kluczowe](../../language-reference/keywords/get.md)
-- [Set — słowo kluczowe](../../language-reference/keywords/set.md)
+- [Indexers](../indexers/index.md) (Indeksatory)
+- [pobierz słowo kluczowe](../../language-reference/keywords/get.md)
+- [set — słowo kluczowe](../../language-reference/keywords/set.md)

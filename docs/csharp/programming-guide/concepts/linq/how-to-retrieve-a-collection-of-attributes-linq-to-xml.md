@@ -1,19 +1,19 @@
 ---
-title: Jak pobrać kolekcję atrybutów (LINQ to XML) (C#)
+title: Jak pobrać kolekcję atrybutów (LINQ do XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: a49ee7a3-b2c2-4d49-9b5c-b7c6c41f4f13
 ms.openlocfilehash: 02871b38c3b1a1ed64fa6ca808e193811cd7f721
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75347640"
 ---
-# <a name="how-to-retrieve-a-collection-of-attributes-linq-to-xml-c"></a>Jak pobrać kolekcję atrybutów (LINQ to XML) (C#)
-W tym temacie przedstawiono metodę <xref:System.Xml.Linq.XElement.Attributes%2A>. Ta metoda pobiera atrybuty elementu.  
+# <a name="how-to-retrieve-a-collection-of-attributes-linq-to-xml-c"></a>Jak pobrać kolekcję atrybutów (LINQ do XML) (C#)
+W tym temacie <xref:System.Xml.Linq.XElement.Attributes%2A> przedstawiono metodę. Ta metoda pobiera atrybuty elementu.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak wykonać iterację kolekcji atrybutów elementu.  
+ W poniższym przykładzie pokazano, jak iterate za pośrednictwem kolekcji atrybutów elementu.  
   
 ```csharp  
 XElement val = new XElement("Value",  
@@ -36,6 +36,6 @@ Type="int"
 ConvertableTo="double"  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Osie LINQ to XML (C#)](./linq-to-xml-axes-overview.md)
+- [LINQ do osi XML (C#)](./linq-to-xml-axes-overview.md)

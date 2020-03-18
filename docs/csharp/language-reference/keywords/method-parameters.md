@@ -1,5 +1,5 @@
 ---
-title: Parametry metody — C# odwołanie
+title: Parametry metody — odwołanie do języka C#
 ms.date: 07/20/2015
 helpviewer_keywords:
 - methods [C#], parameters
@@ -7,28 +7,28 @@ helpviewer_keywords:
 - parameters [C#]
 ms.assetid: 680e39ff-775b-48b0-9f47-4186a5bfc4a1
 ms.openlocfilehash: 2cc7f9178fa5c1a040be9d45ba66fac292bb0e28
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713374"
 ---
 # <a name="method-parameters-c-reference"></a>Parametry metody (odwołanie w C#)
 
-Parametry zadeklarowane dla metody bez elementu [in](./in-parameter-modifier.md), [ref](./ref.md) lub [out](./out-parameter-modifier.md)są przesyłane do metody wywoływanej przez wartość. Tę wartość można zmienić w metodzie, ale zmieniona wartość nie będzie zachowywana, gdy kontrola przechodzi z powrotem do procedury wywołującej. Za pomocą słowa kluczowego Parameter metody można zmienić to zachowanie.  
+Parametry zadeklarowane dla metody bez [w](./in-parameter-modifier.md), [ref](./ref.md) lub [out](./out-parameter-modifier.md), są przekazywane do metody wywoływanej przez wartość. Tę wartość można zmienić w metodzie, ale zmieniona wartość nie zostanie zachowana, gdy kontrola przechodzi z powrotem do procedury wywoływania. Za pomocą słowa kluczowego parametrmetody można zmienić to zachowanie.  
   
  W tej sekcji opisano słowa kluczowe, których można użyć podczas deklarowania parametrów metody:  
   
-- [params](./params.md) określa, że ten parametr może przyjmować zmienną liczbę argumentów.
+- [params](./params.md) określa, że ten parametr może mieć zmienną liczbę argumentów.
   
-- [w programie](./in-parameter-modifier.md) określa, że ten parametr jest przesyłany przez odwołanie, ale jest odczytywany tylko przez wywołaną metodę.
+- [w](./in-parameter-modifier.md) określa, że ten parametr jest przekazywany przez odwołanie, ale jest odczytywany tylko przez wywoływana metoda.
   
-- [ref](./ref.md) określa, że ten parametr jest przesyłany przez odwołanie i może być odczytywany lub zapisywana przez wywołaną metodę.
+- [ref](./ref.md) określa, że ten parametr jest przekazywany przez odwołanie i może być odczytywany lub zapisywany przez wywoływaną metodę.
   
-- [określa,](./out-parameter-modifier.md) że ten parametr jest przesyłany przez odwołanie i jest zapisywana przez wywołaną metodę.
+- [out](./out-parameter-modifier.md) określa, że ten parametr jest przekazywany przez odwołanie i jest zapisywany przez wywoływaną metodę.
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Dokumentacja języka C#](../index.md)
-- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [Odwołanie do języka C#](../index.md)
+- [Przewodnik programowania języka C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](./index.md)

@@ -1,18 +1,18 @@
 ---
-ms.openlocfilehash: 1b4b0aba3ea24682ae972bf283ac387692c83781
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 9d138f79fcede4acac837f8d7793aa343ced737c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901634"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78290756"
 ---
-### <a name="http-defaulthttpcontext-extensibility-removed"></a>HTTP: Usunięto rozszerzalność DefaultHttpContext
+### <a name="http-defaulthttpcontext-extensibility-removed"></a>HTTP: Usunięto rozszerzalność domyślnego elementu HttpContext
 
-W ramach ulepszeń wydajności ASP.NET Core 3,0, rozszerzalność `DefaultHttpContext` została usunięta. Klasa jest teraz `sealed`. Aby uzyskać więcej informacji, zobacz [dotnet/aspnetcore # 6504](https://github.com/dotnet/aspnetcore/pull/6504).
+W ramach ASP.NET core 3.0 poprawy wydajności, rozszerzalność została usunięta. `DefaultHttpContext` Klasa jest `sealed`teraz . Aby uzyskać więcej informacji, zobacz [dotnet/aspnetcore#6504](https://github.com/dotnet/aspnetcore/pull/6504).
 
-Jeśli testy jednostkowe używają `Mock<DefaultHttpContext>`, użyj `Mock<HttpContext>` zamiast tego.
+Jeśli testy jednostkowe `Mock<HttpContext>` `new DefaultHttpContext()` używają `Mock<DefaultHttpContext>`, użyj lub zamiast tego.
 
-Aby zapoznać się z omówieniem, zobacz [dotnet/aspnetcore # 6534](https://github.com/dotnet/aspnetcore/issues/6534).
+Aby uzyskać do dyskusji, zobacz [dotnet/aspnetcore#6534](https://github.com/dotnet/aspnetcore/issues/6534).
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -20,19 +20,19 @@ Aby zapoznać się z omówieniem, zobacz [dotnet/aspnetcore # 6534](https://gith
 
 #### <a name="old-behavior"></a>Stare zachowanie
 
-Klasy mogą pochodzić od `DefaultHttpContext`.
+Klasy mogą pochodzić z `DefaultHttpContext`.
 
 #### <a name="new-behavior"></a>Nowe zachowanie
 
-Klasy nie mogą pochodzić od `DefaultHttpContext`.
+Klasy nie mogą pochodzić z `DefaultHttpContext`.
 
 #### <a name="reason-for-change"></a>Przyczyna zmiany
 
-Rozszerzalność podano początkowo w celu umożliwienia puli `HttpContext`, ale wprowadza niepotrzebną złożoność i utrudnia inne optymalizacje.
+Rozszerzalność została początkowo dostarczona, aby umożliwić łączenie `HttpContext`, ale wprowadziła niepotrzebną złożoność i utrudniła inne optymalizacje.
 
-#### <a name="recommended-action"></a>Zalecane działanie
+#### <a name="recommended-action"></a>Zalecana akcja
 
-Jeśli używasz `Mock<DefaultHttpContext>` w testach jednostkowych, Zacznij używać `Mock<HttpContext>` zamiast tego.
+Jeśli używasz `Mock<DefaultHttpContext>` w testach jednostkowych, `Mock<HttpContext>` zacznij używać zamiast tego.
 
 #### <a name="category"></a>Kategoria
 

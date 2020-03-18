@@ -1,142 +1,142 @@
 ---
-title: Dopasowanie wzorca — C# Przewodnik
-description: Dowiedz się więcej na temat wyrażeń dopasowania wzorców wC#
+title: Dopasowywanie wzorców — przewodnik po językach C#
+description: 'Dowiedz się więcej o wyrażeniach dopasowywania wzorców w c #'
 ms.date: 04/10/2019
 ms.technology: csharp-fundamentals
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: ffa59d073ad891fd93e0f8d7ad8889de0499b106
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 0c302499543c90bd01427e2791435968d580f644
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78241016"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170387"
 ---
 # <a name="pattern-matching"></a>Dopasowanie wzorca
 
-Wzorzec testuje, że wartość ma określony *kształt*i może *wyodrębnić* informacje z wartości, gdy ma pasujący kształt. Dopasowanie wzorca zawiera bardziej zwięzłą składnię dla algorytmów, które już dzisiaj używały. Można już tworzyć algorytmy dopasowywania wzorców przy użyciu istniejącej składni. Należy napisać `if` lub `switch` instrukcji, które testują wartości. Następnie, gdy te instrukcje są zgodne, wyodrębnisz i użyjesz informacji z tej wartości. Nowe elementy składni są rozszerzeniami do instrukcji, które są już znane: `is` i `switch`. Te nowe rozszerzenia łączą testowanie wartości i wyodrębniają te informacje.
+Wzorce testują, że wartość ma określony *kształt*i może *wyodrębnić* informacje z wartości, gdy ma pasujący kształt. Dopasowanie wzorców zapewnia bardziej zwięzłą składnię dla algorytmów, których już używasz dzisiaj. Algorytmy dopasowywania wzorców są już tworzone przy użyciu istniejącej składni. `if` Piszesz `switch` lub instrukcje, które testują wartości. Następnie, gdy te instrukcje są zgodne, wyodrębnić i używać informacji z tej wartości. Nowe elementy składni są rozszerzeniami instrukcji, które `is` już `switch`znasz: i . Te nowe rozszerzenia łączą testowanie wartości i wyodrębnianie tych informacji.
 
-W tym artykule poznasz nową składnię, aby pokazać, jak to umożliwia czytelny, zwięzły kod. Dopasowywanie wzorców umożliwia idiomy, w których dane i kod są oddzielane, w przeciwieństwie do projektów zorientowanych obiektowo, w przypadku których dane i metody manipulowania nimi są ściśle sprzężone.
+W tym artykule przyjrzymy się nowej składni, aby pokazać, jak umożliwia czytelny, zwięzły kod. Dopasowywanie wzorców umożliwia idiomy, w których dane i kod są oddzielone, w przeciwieństwie do projektów obiektowych, w których dane i metody, które nimi manipulują, są ściśle powiązane.
 
-Aby zilustrować te nowe idiomy, przyjrzyjmy się strukturom, które reprezentują kształty geometryczne przy użyciu instrukcji dopasowania do wzorca. Prawdopodobnie wiesz już, jak tworzyć hierarchie klas i tworzyć [metody wirtualne i zastąpione metody,](methods.md#inherited) aby dostosować zachowanie obiektów na podstawie typu środowiska uruchomieniowego obiektu.
+Aby zilustrować te nowe idiomy, pracujmy ze strukturami reprezentującymi kształty geometryczne przy użyciu instrukcji dopasowywania wzorców. Prawdopodobnie znasz hierarchie klas i tworzenie [metod wirtualnych i przesłoniętych metod](methods.md#inherited) dostosowywania zachowania obiektu na podstawie typu środowiska uruchomieniowego obiektu.
 
-Te techniki nie są możliwe w przypadku danych, które nie są strukturalne w hierarchii klas. Gdy dane i metody są oddzielone, potrzebne są inne narzędzia. Nowe konstrukcje *dopasowania wzorców* umożliwiają oczyszczarkę składnię do badania danych i manipulowania przepływem sterowania na podstawie dowolnego warunku tych danych. Należy już napisać `if` instrukcji i `switch`, które testują wartość zmiennej. Należy napisać `is` instrukcji, które testują typ zmiennej. *Dopasowanie wzorca* dodaje nowe możliwości do tych instrukcji.
+Te techniki nie są możliwe dla danych, które nie są zorganizowane w hierarchii klas. Gdy dane i metody są oddzielne, potrzebne są inne narzędzia. Nowe konstrukcje *dopasowywania wzorców* umożliwiają czystsze składni do zbadania danych i manipulować przepływem sterowania na podstawie dowolnego warunku tych danych. Już `if` piszesz `switch` instrukcje i że test wartości zmiennej. Piszesz `is` instrukcje, które testują typ zmiennej. *Dopasowanie wzorca* dodaje nowe możliwości do tych instrukcji.
 
-W tym artykule utworzysz metodę, która oblicza obszar różnych kształtów geometrycznych. Jednak należy to zrobić bez konieczności wykonywania technik zorientowanych obiektowo i tworzenia hierarchii klas dla różnych kształtów.
-Zamiast tego użyjesz *dopasowania do wzorca* .
-Korzystając z tego przykładu, należy pokontraście ten kod, tak aby był on strukturalny jako hierarchia obiektów. Gdy dane, które należy wykonać podczas wykonywania zapytania i manipulowania, nie są hierarchią klas, dopasowanie wzorców umożliwia tworzenie eleganckich projektów.
+W tym artykule stworzysz metodę, która oblicza obszar różnych kształtów geometrycznych. Ale zrobisz to bez uciekania się do technik obiektowych i budowania hierarchii klas dla różnych kształtów.
+Zamiast tego *użyjesz dopasowania wzorców.*
+Podczas przechodzenia przez ten przykład, kontrast ten kod z jak będzie zorganizowany jako hierarchii obiektów. Gdy dane, które należy zbadać i manipulować nie jest hierarchii klas, dopasowanie wzorca umożliwia eleganckie projekty.
 
-Zamiast rozpoczynać się od definicji kształtu abstrakcyjnego i dodawać różne klasy kształtów, zacznijmy zamiast od prostych definicji zawierających tylko dane dla każdego z kształtów geometrycznych:
+Zamiast zaczynać od abstrakcyjnej definicji kształtu i dodawać różne klasy kształtów, zacznijmy od prostych definicji danych tylko dla każdego z kształtów geometrycznych:
 
 [!code-csharp[ShapeDefinitions](../../samples/snippets/csharp/PatternMatching/Shapes.cs#01_ShapeDefinitions "Shape definitions")]
 
-Z tych struktur Napiszmy metodę, która oblicza obszar pewnego kształtu.
+Z tych struktur napiszmy metodę, która oblicza obszar pewnego kształtu.
 
-## <a name="the-is-type-pattern-expression"></a>Wyrażenie wzorca typu `is`
+## <a name="the-is-type-pattern-expression"></a>Wyrażenie `is` wzorca typu
 
-Przed C# 7,0 należy przetestować każdy typ w serii `if` i `is` instrukcji:
+Przed C# 7.0, należy przetestować każdy typ `if` w `is` serii i instrukcje:
 
 [!code-csharp[ClassicIsExpression](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#02_ClassicIsExpression "Classic type pattern using is")]
 
-Ten kod powyżej jest wyrażeniem klasycznym *wzorca typu*: testujesz zmienną, aby określić jej typ i wykonując inną akcję na podstawie tego typu.
+Ten powyższy kod jest klasycznym wyrażeniem *wzorca typu:* Testujesz zmienną, aby określić jej typ i podjąć inną akcję na podstawie tego typu.
 
-Ten kod będzie prostszy przy użyciu rozszerzeń wyrażenia `is`, aby przypisać zmienną, jeśli test zakończy się pomyślnie:
+Ten kod staje się prostszy `is` przy użyciu rozszerzeń do wyrażenia, aby przypisać zmienną, jeśli test zakończy się pomyślnie:
 
 [!code-csharp[IsPatternExpression](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#03_IsPatternExpression "is pattern expression")]
 
-W tej zaktualizowanej wersji wyrażenie `is` obydwu testuje zmienną i przypisuje ją do nowej zmiennej odpowiedniego typu. Należy również zauważyć, że ta wersja zawiera typ `Rectangle`, który jest `struct`. Nowe wyrażenie `is` działa z typami wartości, a także typami referencyjnymi.
+W tej zaktualizowanej `is` wersji wyrażenie testuje zmienną i przypisuje ją do nowej zmiennej właściwego typu. Należy również zauważyć, że `Rectangle` ta wersja `struct`zawiera typ, który jest . Nowe `is` wyrażenie działa z typami wartości, a także typami odwołań.
 
-Reguły języka dla wyrażeń dopasowania wzorców pomagają uniknąć nieprawidłowych wyników wyrażenia dopasowania. W powyższym przykładzie zmienne `s`, `c`i `r` są tylko w zakresie i ostatecznie przypisane, gdy odpowiednie wyrażenia dopasowania wzorców mają `true` wyniki. Jeśli spróbujesz użyć dowolnej zmiennej w innej lokalizacji, kod generuje błędy kompilatora.
+Reguły języka dla wyrażeń dopasowywania wzorców ułatwiają unikanie nadużywania wyników wyrażenia dopasowania. W powyższym przykładzie zmienne `s` `c`, `r` i są tylko w zakresie i zdecydowanie przypisane, `true` gdy odpowiednie wyrażenia dopasowania wzorca mają wyniki. Jeśli spróbujesz użyć jednej ze zmiennych w innej lokalizacji, kod generuje błędy kompilatora.
 
-Sprawdźmy szczegóły obu tych reguł, rozpoczynając od zakresu. Zmienna `c` jest w zakresie tylko w gałęzi `else` pierwszej instrukcji `if`. Zmienna `s` znajduje się w zakresie `ComputeAreaModernIs`metody. Jest to spowodowane tym, że każda gałąź instrukcji `if` ustanawia oddzielny zakres dla zmiennych. Jednak sama instrukcja `if` nie jest. Oznacza to, że zmienne zadeklarowane w instrukcji `if` są w tym samym zakresie co instrukcja `if` (metoda w tym przypadku). To zachowanie nie jest specyficzne dla dopasowania do wzorca, ale jest zachowaniem zdefiniowanym dla zakresów zmiennych i instrukcji `if` i `else`.
+Przeanalizujmy szczegółowo obie te reguły, zaczynając od zakresu. Zmienna `c` znajduje się w `else` zakresie tylko `if` w gałęzi pierwszej instrukcji. Zmienna `s` znajduje się w `ComputeAreaModernIs`zakresie w metodzie . Dzieje się tak, ponieważ `if` każda gałąź instrukcji ustanawia osobny zakres zmiennych. Jednak samo `if` stwierdzenie nie. Oznacza to, że `if` zmienne zadeklarowane w instrukcji `if` znajdują się w tym samym zakresie co instrukcja (metoda w tym przypadku). To zachowanie nie jest specyficzne dla dopasowania wzorca, ale jest `if` `else` zdefiniowane zachowanie dla zmiennych zakresów i instrukcji.
 
-Zmienne `c` i `s` są przypisywane, gdy odpowiednie instrukcje `if` są prawdziwe ze względu na to, że jest on w nieskończony sposób przypisany.
+Zmienne `c` i `s` są przypisane, gdy `if` odpowiednie instrukcje są prawdziwe ze względu na zdecydowanie przypisane, gdy mechanizm true.
 
 > [!TIP]
-> W przykładach w tym temacie użyto zalecanej konstrukcji, w której wyrażenie `is`e zgodne ze wzorcem ostatecznie przypisuje zmienną Match w gałęzi `true` instrukcji `if`.
-> Można wycofać logikę, wypowiadając `if (!(shape is Square s))`, a zmienna `s` będzie ostatecznie przypisana tylko w gałęzi `false`. Chociaż jest to prawidłowe C#, nie jest to zalecane, ponieważ jest bardziej trudne do przestrzegania logiki.
+> Przykłady w tym temacie użyć zalecanej konstrukcji, gdzie wyrażenie dopasowania `is` wzorca zdecydowanie przypisuje zmienną dopasowania w `true` gałęzi `if` instrukcji.
+> Można odwrócić logikę, `if (!(shape is Square s))` mówiąc, `s` a zmienna będzie `false` zdecydowanie przypisana tylko w gałęzi. Chociaż jest to prawidłowy C#, nie jest zalecane, ponieważ jest bardziej mylące, aby postępować zgodnie z logiką.
 
-Te reguły oznaczają, że nie jest możliwe przypadkowe uzyskanie dostępu do wyniku wyrażenia dopasowania do wzorca, gdy ten wzorzec nie został spełniony.
+Te reguły oznaczają, że jest mało prawdopodobne, aby przypadkowo uzyskać dostęp do wyniku wyrażenia dopasowania wzorca, gdy ten wzorzec nie został spełniony.
 
-## <a name="using-pattern-matching-switch-statements"></a>Używanie instrukcji `switch` zgodnych ze wzorcem
+## <a name="using-pattern-matching-switch-statements"></a>Korzystanie z `switch` instrukcji dopasowywania wzorców
 
-Gdy przejdzie czas, może być konieczne obsługę innych typów kształtów. W miarę zwiększania się liczby testowanych warunków można się dowiedzieć, że użycie wyrażeń dopasowania wzorca `is` może być kłopotliwe. Oprócz wymagania `if` instrukcji dla każdego typu, który chcesz sprawdzić, wyrażenia `is` są ograniczone do testowania, jeśli dane wejściowe są zgodne z pojedynczym typem. W tym przypadku zobaczysz, że wyrażenia dopasowania wzorca `switch` staną się lepszym wyborem. 
+W miarę upływu czasu może być konieczne wsparcie innych typów kształtów. Wraz ze wzrostem liczby testów, które testujesz, `is` przekonasz się, że użycie wyrażenia pasującego do wzorca może stać się kłopotliwe. Oprócz wymagających `if` instrukcji dla każdego typu, który `is` chcesz sprawdzić, wyrażenia są ograniczone do testowania, jeśli dane wejściowe pasuje do pojedynczego typu. W takim przypadku przekonasz `switch` się, że wyrażenia pasujące do wzorca stają się lepszym wyborem.
 
-Tradycyjna instrukcja `switch` była wyrażeniem wzorca: obsługuje stałe wzorce.
-Można porównać zmienną z dowolną stałą używaną w instrukcji `case`:
+Tradycyjna `switch` instrukcja była wyrażeniewzorcem: obsługiwała wzorzec stały.
+Można porównać zmienną z dowolną `case` stałą używaną w instrukcji:
 
 [!code-csharp[ClassicSwitch](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#04_ClassicSwitch "Classic switch statement")]
 
-Jedynym wzorcem obsługiwanym przez instrukcję `switch` była stała wzorca. Jest on bardziej ograniczony do typów liczbowych i typu `string`.
-Te ograniczenia zostały usunięte i można teraz napisać instrukcję `switch` przy użyciu wzorca typu:
+Jedynym wzorcem obsługiwanym `switch` przez instrukcję był stały wzorzec. Był on ponadto ograniczony do `string` typów liczbowych i typu.
+Te ograniczenia zostały usunięte, a teraz `switch` można napisać instrukcję przy użyciu wzorca typu:
 
 [!code-csharp[Switch Type Pattern](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#05_SwitchTypePattern "Compute with `switch` expression")]
 
-Składnia zgodna ze wzorcem `switch` używa znanej składni dla deweloperów, którzy używali tradycyjnej instrukcji `switch` języka C. Poszczególne `case` są oceniane i kod pod warunkiem, który pasuje do zmiennej wejściowej jest wykonywany. Wykonanie kodu nie może "przechodzenie" z jednego wyrażenia case do następnego; Składnia instrukcji `case` wymaga, aby każdy `case` kończyć się `break`, `return`lub `goto`.
+Instrukcja `switch` dopasowania wzorca używa znanej składni deweloperom, `switch` którzy używali tradycyjnej instrukcji w stylu C. Każdy `case` jest oceniany, a kod poniżej warunku, który pasuje do zmiennej wejściowej jest wykonywany. Wykonanie kodu nie może "wpaść" z jednego wyrażenia sprawy do następnego; `case` składnia instrukcji wymaga, aby `case` każdy `break`koniec `return`z `goto`, lub .
 
 > [!NOTE]
-> Instrukcje `goto`, aby przejść do innej etykiety, są prawidłowe tylko dla wzorca stałej (instrukcji switch klasycznego).
+> Instrukcje, `goto` aby przejść do innej etykiety są prawidłowe tylko dla wzorca stałego (instrukcja przełącznika klasycznego).
 
-Istnieją ważne nowe reguły dotyczące `switch` instrukcji. Ograniczenia dotyczące typu zmiennej w wyrażeniu `switch` zostały usunięte.
-Można użyć dowolnego typu, takiego jak `object` w tym przykładzie. Wyrażenia case nie są już ograniczone do wartości stałych. Usunięcie tego ograniczenia oznacza, że zmiany kolejności `switch` mogą zmienić zachowanie programu.
+Istnieją ważne nowe zasady `switch` regulujące oświadczenie. Ograniczenia dotyczące typu zmiennej w `switch` wyrażeniu zostały usunięte.
+Można użyć dowolnego `object` typu, takiego jak w tym przykładzie. Wyrażenia przypadków nie są już ograniczone do wartości stałych. Usunięcie tego ograniczenia oznacza, `switch` że zmiana kolejności sekcji może zmienić zachowanie programu.
 
-Gdy są ograniczone do wartości stałych, nie więcej niż jedna etykieta `case` może pasować do wartości wyrażenia `switch`. Połącz z regułą, że każda sekcja `switch` nie może przechodzić do kolejnej sekcji, a następnie, gdy sekcje `switch` można zmienić w dowolnej kolejności bez wpływu na zachowanie.
-Teraz, mając bardziej uogólnione wyrażenia `switch`, kolejność każdej sekcji jest ważna. Wyrażenia `switch` są oceniane w kolejności tekstowej. Wykonanie przenosi do pierwszej etykiety `switch`, która pasuje do wyrażenia `switch`.  
-Przypadek `default` będzie wykonywany tylko wtedy, gdy żadne inne etykiety case nie pasują do siebie. Wielkość liter `default` jest szacowana jako Ostatnia, niezależnie od kolejności tekstu. Jeśli nie ma `default` przypadku i żadna z innych instrukcji `case` nie jest zgodna, wykonanie kontynuuje się zgodnie z instrukcją podaną w instrukcji `switch`. Żaden z kodów etykiet `case` nie jest wykonywany.
+Gdy ograniczone do wartości stałych, `case` nie więcej niż `switch` jedna etykieta może odpowiadać wartości wyrażenia. Połącz to z `switch` regułą, że każda sekcja nie może przechodzić do następnej sekcji, a następnie, że `switch` sekcje mogą być rozmieszczone w dowolnej kolejności bez wpływu na zachowanie.
+Teraz, z bardziej `switch` uogólnionym wyrażeniami, kolejność każdej sekcji ma znaczenie. Wyrażenia `switch` są obliczane w kolejności tekstowej. Wykonywanie przenosi do `switch` pierwszej `switch` etykiety, która pasuje do wyrażenia.  
+Sprawa `default` zostanie wykonana tylko wtedy, gdy nie są zgodne żadne inne etykiety przypadków. Sprawa `default` jest oceniana jako ostatnia, niezależnie od kolejności tekstowej. Jeśli nie ma `default` żadnego przypadku i `case` żadna z pozostałych instrukcji nie `switch` jest zgodna, wykonanie jest kontynuowane w instrukcji następującej po instrukcji. Żaden z `case` etykiet kod jest wykonywany.
 
-## <a name="when-clauses-in-case-expressions"></a>klauzule `when` w wyrażeniach `case`
+## <a name="when-clauses-in-case-expressions"></a>`when`klauzule `case` w wyrażeniach
 
-Można tworzyć specjalne przypadki dla tych kształtów, które mają 0 obszarów, używając klauzuli `when` w etykiecie `case`. Kwadrat o długości bocznej 0 lub Okręg o promieniu 0 ma powierzchnię 0. Należy określić warunek przy użyciu klauzuli `when` w etykiecie `case`:  
+Można tworzyć specjalne przypadki dla tych kształtów, `when` które mają `case` obszar 0, używając klauzuli na etykiecie. Kwadrat o długości bocznej 0 lub okrąg o promieniu 0 ma obszar 0. Należy określić ten `when` warunek `case` przy użyciu klauzuli na etykiecie:  
 
 [!code-csharp[ComputeDegenerateShapes](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#07_ComputeDegenerateShapes "Compute shapes with 0 area")]
 
-Ta zmiana pokazuje kilka ważnych punktów dotyczących nowej składni. Najpierw do jednej sekcji `switch` można zastosować wiele etykiet `case`. Blok instrukcji jest wykonywany, gdy dowolna z tych etykiet jest `true`. W tym przypadku, jeśli wyrażenie `switch` jest okrąg lub kwadrat z 0 obszaru, metoda zwraca stałą 0.
+Ta zmiana pokazuje kilka ważnych punktów dotyczących nowej składni. Najpierw można `case` zastosować wiele etykiet `switch` do jednej sekcji. Blok instrukcji jest wykonywany, gdy `true`dowolna z tych etykiet jest . W tym przypadku `switch` jeśli wyrażenie jest okrąg lub kwadrat z obszaru 0, metoda zwraca stałą 0.
 
-W tym przykładzie wprowadzono dwie różne zmienne w dwóch `case` etykietach dla pierwszego bloku `switch`. Należy zauważyć, że instrukcje w tym bloku `switch` nie używają zmiennych `c` (dla okręgu) lub `s` (dla kwadratu).
-Żadna z tych zmiennych nie jest ostatecznie przypisana w tym bloku `switch`.
-Jeśli jeden z tych przypadków jest zgodny, wyraźnie jedna ze zmiennych została przypisana.
-Nie jest jednak możliwe informowanie, *które* zostało przypisane w czasie kompilacji, ponieważ każdy przypadek może być zgodny w czasie wykonywania. Z tego powodu najczęściej w przypadku używania wielu `case` etykiet dla tego samego bloku nie zostanie wprowadzona nowa zmienna w instrukcji `case` lub w klauzuli `when` będzie używana tylko zmienna.
+W tym przykładzie przedstawiono dwie różne `case` zmienne w `switch` dwóch etykietach dla pierwszego bloku. Należy zauważyć, że `switch` instrukcje w tym bloku `c` nie używają zmiennych `s` (dla okręgu) lub (dla kwadratu).
+Żadna z tych zmiennych nie jest `switch` zdecydowanie przypisana w tym bloku.
+Jeśli którykolwiek z tych przypadków są zgodne, wyraźnie jedna ze zmiennych została przypisana.
+Jednak nie można powiedzieć, *który* został przypisany w czasie kompilacji, ponieważ w obu przypadkach może być dopasowywany w czasie wykonywania. Z tego powodu większość razy, `case` gdy używasz wielu etykiet dla tego samego bloku, `case` nie będzie wprowadzać nową zmienną `when` w instrukcji lub będzie używać tylko zmiennej w klauzuli.
 
-Po dodaniu tych kształtów w obszarze 0 Dodajmy kilka typów kształtów: prostokąt i Trójkąt:
+Po dodaniu tych kształtów z obszarem 0 dodajmy jeszcze kilka typów kształtów: prostokąt i trójkąt:
 
 [!code-csharp[AddRectangleAndTriangle](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#09_AddRectangleAndTriangle "Add rectangle and triangle")]
 
- Ten zestaw zmian dodaje `case` etykiety dla przypadku degeneracji, a następnie etykiety i bloki dla każdego nowego kształtu. 
+ Ten zestaw zmian `case` dodaje etykiety dla zdegenerowanego przypadku oraz etykiety i bloki dla każdego z nowych kształtów.
 
-Na koniec możesz dodać przypadek `null`, aby upewnić się, że argument nie jest `null`:
+Na koniec można `null` dodać sprawę, aby upewnić `null`się, że argument nie jest:
 
 [!code-csharp[NullCase](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#10_NullCase "Add null case")]
 
-Specjalne zachowanie wzorca `null` jest interesujące, ponieważ stała `null` we wzorcu nie ma typu, ale można ją przekonwertować na dowolny typ referencyjny lub typ dopuszczający wartość null. Zamiast konwersji `null` do dowolnego typu, język definiuje, że `null` wartość nie będzie zgodna ze wzorcem typu, niezależnie od typu czasu kompilowania zmiennej. To zachowanie powoduje, że nowy wzorzec typu oparty na `switch` jest spójny z instrukcją `is`: instrukcje `is` zawsze zwracają `false`, gdy sprawdzana wartość jest `null`. Jest również prostsze: po sprawdzeniu typu nie jest wymagane dodatkowe sprawdzenie wartości null. Można sprawdzić, czy nie ma żadnych testów null w żadnym z bloków Case powyższych przykładów: nie jest to konieczne, ponieważ dopasowanie wzorca typu gwarantuje wartość różną od null.
+Specjalne zachowanie wzorca `null` jest interesujące, `null` ponieważ stała we wzorcu nie ma typu, ale można przekonwertować na dowolny typ odwołania lub typ nullable. Zamiast konwertować `null` na dowolny typ, język `null` definiuje, że wartość nie będzie zgodna z żadnym wzorcem typu, niezależnie od typu kompilacji zmiennej. To zachowanie sprawia, że nowy `switch` `is` wzorzec typu na podstawie zgodne z instrukcją: `is` instrukcje zawsze zwracają, `false` gdy sprawdzana wartość jest `null`. Jest to również prostsze: po sprawdzeniu typu nie potrzebujesz dodatkowego sprawdzania wartości null. Widać, że z faktu, że nie ma żadnych kontroli null w każdym z bloków sprawy poszczególnych przykładów: nie są one konieczne, ponieważ dopasowanie wzorca typu gwarantuje wartość nienull.
 
-## <a name="var-declarations-in-case-expressions"></a>deklaracje `var` w wyrażeniach `case`
+## <a name="var-declarations-in-case-expressions"></a>`var`deklaracje `case` w wyrażeniach
 
-Wprowadzenie `var` jako jednego z wyrażeń dopasowania wprowadza nowe reguły do dopasowania do wzorca.
+Wprowadzenie `var` jako jedno z wyrażeń dopasowania wprowadza nowe reguły do dopasowania wzorca.
 
-Pierwsza reguła polega na tym, że deklaracja `var` jest zgodna z regułami wnioskowania o typie normalnym: typ jest wywnioskowany jako typ statyczny wyrażenia Switch. W tej regule typ zawsze jest zgodny.
+Pierwsza reguła jest, że `var` deklaracja jest zgodna z regułami wnioskowania normalnego typu: Typ jest wywnioskować, aby być statyczny typ wyrażenia przełącznika. Z tej reguły typ zawsze pasuje.
 
-Druga reguła polega na tym, że deklaracja `var` nie ma sprawdzenia wartości null, ponieważ inne wyrażenia wzorca typu obejmują. Oznacza to, że zmienna może mieć wartość null, a w takim przypadku konieczne jest sprawdzenie wartości null.
+Druga reguła jest, że `var` deklaracja nie ma sprawdzania wartości null, które zawierają inne wyrażenia wzorca typu. Oznacza to, że zmienna może mieć wartość null, a w takim przypadku konieczne jest sprawdzenie zerowe.
 
-Te dwie reguły oznaczają, że w wielu przypadkach deklaracja `var` w wyrażeniu `case` dopasowuje te same warunki co `default` wyrażenie.
-Ze względu na to, że przypadek inny niż domyślny jest preferowany w przypadku `default` przypadku, przypadek `default` nigdy nie zostanie wykonany.
+Te dwie reguły oznaczają, że `var` w wielu `case` przypadkach deklaracja w `default` wyrażeniu odpowiada tym samym warunkom co wyrażenie.
+Ponieważ każda sprawa niedomyślna `default` jest preferowana w przypadku, `default` sprawa nigdy nie zostanie wykonana.
 
 > [!NOTE]
-> Kompilator nie emituje ostrzeżenia w tych przypadkach, w których zapisano przypadek `default`, ale nigdy nie będzie wykonywany. Jest to zgodne z obecnym zachowaniem instrukcji `switch` w przypadku, gdy wszystkie możliwe przypadki zostały wymienione.
+> Kompilator nie emituje ostrzeżenie w tych `default` przypadkach, gdy sprawa została napisana, ale nigdy nie zostanie wykonana. Jest to zgodne `switch` z zachowaniem bieżącej instrukcji, gdzie wszystkie możliwe przypadki zostały wymienione.
 
-Trzecia reguła wprowadza użycie w przypadku, gdy `var` może być przydatne. Załóżmy, że wykonujesz dopasowanie do wzorca, gdzie dane wejściowe są ciągiem i wyszukujesz znane wartości poleceń. Można napisać coś takiego jak:
+Trzecia reguła wprowadza zastosowania, w `var` których przypadek może być przydatny. Wyobraź sobie, że robisz dopasowanie wzorca, gdzie dane wejściowe jest ciąg iem i szukasz znanych wartości poleceń. Możesz napisać coś takiego:
 
 [!code-csharp[VarCaseExpression](../../samples/snippets/csharp/PatternMatching/Program.cs#VarCaseExpression "use a var case expression to filter white space")]
 
-Wielkość liter `var` jest zgodna z `null`, ciągiem pustym lub dowolnym ciągiem zawierającym tylko biały znak. Zwróć uwagę, że poprzedni kod używa operatora `?.`, aby upewnić się, że nie przypadkowo zgłosił <xref:System.NullReferenceException>. Przypadek `default` obsługuje wszelkie inne wartości ciągów, które nie są zrozumiałe dla tego analizatora poleceń.
+Sprawa `var` pasuje `null`, pusty ciąg lub dowolny ciąg, który zawiera tylko biały znak. Należy zauważyć, że poprzedni `?.` kod używa operatora, aby upewnić <xref:System.NullReferenceException>się, że nie przypadkowo throw . Sprawa `default` obsługuje inne wartości ciągu, które nie są rozumiane przez ten analizator poleceń.
 
-Jest to jeden przykład, w którym warto rozważyć wyrażenie CASE `var`, które różni się od wyrażenia `default`.
+Jest to jeden przykład, w `var` którym warto rozważyć `default` wyrażenie sprawy, które różni się od wyrażenia.
 
 ## <a name="conclusions"></a>Wnioski
 
-*Konstrukcje dopasowania wzorców* umożliwiają łatwe zarządzanie przepływem sterowania między różnymi zmiennymi i typami, które nie są powiązane z hierarchią dziedziczenia. Możesz również sterować logiką, aby używać dowolnego warunku, który można testować na zmiennej. Umożliwia ona wzorce i idiomy, które będą potrzebne częściej, podczas tworzenia bardziej rozproszonych aplikacji, w przypadku których dane i metody manipulowania nimi są osobne. Zauważ, że struktury kształtu używane w tym przykładzie nie zawierają żadnych metod, tylko właściwości tylko do odczytu.
-Dopasowanie wzorca współdziała z dowolnym typem danych. Można pisać wyrażenia, które badają obiekt, i podejmować decyzje dotyczące przepływu sterowania na podstawie tych warunków.
+*Konstrukcje dopasowywania wzorców* umożliwiają łatwe zarządzanie przepływem sterowania między różnymi zmiennymi i typami, które nie są powiązane przez hierarchię dziedziczenia. Można również kontrolować logikę, aby użyć dowolnego warunku, który testujesz na zmiennej. Umożliwia wzorce i idiomy, które będą potrzebne częściej podczas tworzenia bardziej rozproszonych aplikacji, gdzie dane i metody, które manipulują tymi danymi są oddzielne. Można zauważyć, że struktury kształtu używane w tym przykładzie nie zawierają żadnych metod, tylko właściwości tylko do odczytu.
+Dopasowanie wzorca działa z dowolnym typem danych. Piszesz wyrażenia, które sprawdzają obiekt i podejmują decyzje dotyczące przepływu sterowania na podstawie tych warunków.
 
-Porównaj kod z tego przykładu z projektem, który byłby następujący po utworzeniu hierarchii klas dla abstrakcyjnej `Shape` i określonych kształtów pochodnych z własnym implementacją metody wirtualnej w celu obliczenia obszaru. Często należy zauważyć, że wyrażenia dopasowania wzorców mogą być bardzo użytecznym narzędziem podczas pracy z danymi i chcą oddzielić problemy związane z przechowywaniem danych od problemów z zachowaniem.
+Porównaj kod z tego przykładu z projektem, który `Shape` będzie wynikać z tworzenia hierarchii klas dla abstrakcyjnych i określonych kształtów pochodnych każdy z własną implementację metody wirtualnej do obliczania obszaru. Często okazuje się, że wyrażenia dopasowywania wzorców może być bardzo przydatne narzędzie podczas pracy z danymi i chcesz oddzielić problemy przechowywania danych od problemów zachowania.
 
 ## <a name="see-also"></a>Zobacz też
 
-- [Samouczek: Używanie funkcji dopasowania wzorców do zwiększania typów danych](tutorials/pattern-matching.md)
+- [Samouczek: Korzystanie z funkcji dopasowywania wzorców w celu rozszerzenia typów danych](tutorials/pattern-matching.md)

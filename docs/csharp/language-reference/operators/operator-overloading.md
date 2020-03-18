@@ -1,69 +1,69 @@
 ---
-title: Przeciążanie operatora — C# odwołanie
-description: Dowiedz się, jak C# przeciążać C# operatora i które operatory są przeciążone.
+title: Przeciążenie operatora — odwołanie do języka C#
+description: Dowiedz się, jak przeciążać operatora C# i które operatory Języka C# są przeładowywalne.
 ms.date: 07/05/2019
 f1_keywords:
 - operator_CSharpKeyword
 helpviewer_keywords:
 - operator keyword [C#]
 - operator overloading [C#]
-ms.openlocfilehash: c59ae6960a77efd866db4748ca537d9e5218fd1e
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: cdb35b212d5bfc4cc685fbfd6c294066983709df
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78238978"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847303"
 ---
-# <a name="operator-overloading-c-reference"></a>Przeciążanie operatora (C# odwołanie)
+# <a name="operator-overloading-c-reference"></a>Przeciążenie operatora (odwołanie do Języka C#)
 
-Typ zdefiniowany przez użytkownika może przeciążać wstępnie C# zdefiniowany operator. Oznacza to, że typ może zapewnić niestandardową implementację operacji w przypadku, gdy jeden lub oba operandy są tego typu. Sekcja [Operatory](#overloadable-operators) z możliwością przeciążenia pokazuje, C# które operatory mogą być przeciążone.
+Typ zdefiniowany przez użytkownika może przeciążać wstępnie zdefiniowany operator Języka C#. Oznacza to, że typ może zapewnić implementację niestandardową operacji w przypadku jednego lub obu operands są tego typu. Sekcja [Operatory przeciążenia](#overloadable-operators) pokazuje, które operatory Języka C# mogą być przeciążone.
 
-Użyj słowa kluczowego `operator`, aby zadeklarować operator. Deklaracja operatora musi spełniać następujące zasady:
+Użyj `operator` słowa kluczowego, aby zadeklarować operatora. Deklaracja podmiotu gospodarczego musi spełniać następujące zasady:
 
-- Zawiera zarówno modyfikator `public`, jak i `static`.
-- Jednoargumentowy operator ma jeden parametr wejściowy. Operator binarny ma dwa parametry wejściowe. W każdym przypadku co najmniej jeden parametr musi mieć typ `T` lub `T?`, gdzie `T` jest typem, który zawiera deklarację operatora.
+- Zawiera zarówno `public` modyfikator, jak `static` i modyfikator.
+- Operator jednoargumentowy ma jeden parametr wejściowy. Operator binarny ma dwa parametry wejściowe. W każdym przypadku co najmniej jeden `T` `T?` parametr `T` musi mieć typ lub gdzie jest typem, który zawiera deklarację operatora.
 
-Poniższy przykład definiuje uproszczoną strukturę do reprezentowania liczby wymiernej. Struktura przeciąża niektóre [Operatory arytmetyczne](arithmetic-operators.md):
+Poniższy przykład definiuje uproszczoną strukturę reprezentującą liczbę racjonalną. Struktura przeciąża niektóre [operatory arytmetyczne:](arithmetic-operators.md)
 
-[!code-csharp[fraction example](~/samples/snippets/csharp/language-reference/operators/OperatorOverloading.cs)]
+[!code-csharp[fraction example](snippets/OperatorOverloading.cs)]
 
-Możesz poszerzyć poprzedni przykład, [definiując niejawną konwersję](user-defined-conversion-operators.md) z `int` na `Fraction`. Następnie przeciążone operatory obsługują argumenty tych dwóch typów. Oznacza to, że można dodać liczbę całkowitą do ułamka i uzyskać ułamek jako wynik.
+Poprzedni przykład można rozszerzyć, [definiując konwersję niejawną](user-defined-conversion-operators.md) z `int` do `Fraction`. Następnie przeciążone operatory będą obsługiwać argumenty tych dwóch typów. Oznacza to, że stałoby się możliwe dodanie liczby całkowitej do ułamka i uzyskanie ułamka w wyniku.
 
-Możesz również użyć słowa kluczowego `operator`, aby zdefiniować niestandardową konwersję typu. Aby uzyskać więcej informacji, zobacz [Operatory konwersji zdefiniowane przez użytkownika](user-defined-conversion-operators.md).
+`operator` Słowo kluczowe służy również do definiowania konwersji typu niestandardowego. Aby uzyskać więcej informacji, zobacz [Operatory konwersji zdefiniowane przez użytkownika](user-defined-conversion-operators.md).
 
-## <a name="overloadable-operators"></a>Operatory z możliwością przeciążenia
+## <a name="overloadable-operators"></a>Operatorzy z możliwością przeciążenia
 
-Poniższa tabela zawiera informacje dotyczące przeciążania C# operatorów:
+Poniższa tabela zawiera informacje na temat przeciążenia operatorów Języka C#:
 
 | Operatory | Przeciążenie |
 | --------- | --------------- |
-|[+ x](arithmetic-operators.md#unary-plus-and-minus-operators), [-x](arithmetic-operators.md#unary-plus-and-minus-operators), [! x](boolean-logical-operators.md#logical-negation-operator-), [~ x](bitwise-and-shift-operators.md#bitwise-complement-operator-), [++](arithmetic-operators.md#increment-operator-), [--](arithmetic-operators.md#decrement-operator---), [true](true-false-operators.md), [false](true-false-operators.md)|Te operatory jednoargumentowe mogą być przeciążone.|
-|[x + y](addition-operator.md), [x-y](subtraction-operator.md), [x \* y](arithmetic-operators.md#multiplication-operator-), [x/y](arithmetic-operators.md#division-operator-), [x% y](arithmetic-operators.md#remainder-operator-), [x & y](boolean-logical-operators.md#logical-and-operator-), [x &#124; y](boolean-logical-operators.md#logical-or-operator-), [x ^ y](boolean-logical-operators.md#logical-exclusive-or-operator-), [x \<\< y](bitwise-and-shift-operators.md#left-shift-operator-), [x > > y](bitwise-and-shift-operators.md#right-shift-operator-), [x = = y](equality-operators.md#equality-operator-), [x! = y](equality-operators.md#inequality-operator-), [x \< y](comparison-operators.md#less-than-operator-), [x > y](comparison-operators.md#greater-than-operator-), x [\<= y](comparison-operators.md#less-than-or-equal-operator-), [x > = y](comparison-operators.md#greater-than-or-equal-operator-)|Te operatory binarne mogą być przeciążone. Niektóre operatory muszą być przeciążone w parach; Więcej informacji można znaleźć w poniższej tabeli.|
-|[x & & y](boolean-logical-operators.md#conditional-logical-and-operator-), [x &#124; &#124; y](boolean-logical-operators.md#conditional-logical-or-operator-)|Warunkowe operatory logiczne nie mogą być przeciążone. Jednakże, jeśli typ z przeciążonymi [`true` i operatory `false`](true-false-operators.md) również przeciąża operator `&` lub <code>&#124;</code> w określony sposób, można obliczyć odpowiednio operatora `&&` lub <code>&#124;&#124;</code>, które są odpowiednie dla operandów tego typu. Aby uzyskać więcej informacji, zapoznaj się z sekcją [Operatory logiczne warunkowe](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) w [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).|
-|[a&#91;i&#93;](member-access-operators.md#indexer-operator-)|Dostęp do elementu nie jest traktowany jako operator z możliwością przeciążenia, ale można zdefiniować [indeksator](../../programming-guide/indexers/index.md).|
-|[(T) x](type-testing-and-cast.md#cast-operator-)|Operator rzutowania nie może być przeciążony, ale można zdefiniować nowe operatory konwersji. Aby uzyskać więcej informacji, zobacz [Operatory konwersji zdefiniowane przez użytkownika](user-defined-conversion-operators.md).|
-|[+=](arithmetic-operators.md#compound-assignment), [-=](arithmetic-operators.md#compound-assignment), [\*=](arithmetic-operators.md#compound-assignment), [/=](arithmetic-operators.md#compound-assignment), [%=](arithmetic-operators.md#compound-assignment), [&=](boolean-logical-operators.md#compound-assignment), [ &#124;=](boolean-logical-operators.md#compound-assignment), [^=](boolean-logical-operators.md#compound-assignment), [\<](bitwise-and-shift-operators.md#compound-assignment)\<[, =](bitwise-and-shift-operators.md#compound-assignment)>>=|Operatory przypisania złożonego nie mogą być jawnie przeciążone. Jednak w przypadku przeciążenia operatora binarnego odpowiedni operator przypisania złożonego, jeśli istnieje, również jest niejawnie przeciążony. Na przykład `+=` jest oceniane przy użyciu `+`, który może być przeciążony.|
-|[^ x](member-access-operators.md#index-from-end-operator-), [x = y](assignment-operator.md), [x. y](member-access-operators.md#member-access-operator-), [c? t: f](conditional-operator.md), [x?? y](null-coalescing-operator.md), [x? = y](null-coalescing-operator.md), [x.. y](member-access-operators.md#range-operator-), [x-> y](pointer-related-operators.md#pointer-member-access-operator--), [=>](lambda-operator.md), [f (x)](member-access-operators.md#invocation-operator-), [as](type-testing-and-cast.md#as-operator), [await](await.md), [niezaznaczone](../keywords/checked.md), [niezaznaczone](../keywords/unchecked.md), [Domyślnie](default.md), [Delegat](delegate-operator.md), [is](type-testing-and-cast.md#is-operator), [nameof](nameof.md), [New](new-operator.md), [sizeof](sizeof.md), [stackalloc](stackalloc.md), [typeof](type-testing-and-cast.md#typeof-operator)|Te operatory nie mogą być przeciążone.|
+|[+x](arithmetic-operators.md#unary-plus-and-minus-operators), [-x](arithmetic-operators.md#unary-plus-and-minus-operators), [!x](boolean-logical-operators.md#logical-negation-operator-) [--](arithmetic-operators.md#decrement-operator---), [~x](bitwise-and-shift-operators.md#bitwise-complement-operator-), [++](arithmetic-operators.md#increment-operator-), [true](true-false-operators.md), [false](true-false-operators.md)|Te operatory niedziałające mogą być przeciążone.|
+|[x + y](addition-operator.md), [x - y](subtraction-operator.md), x [ \* y](arithmetic-operators.md#multiplication-operator-), x / [y](arithmetic-operators.md#division-operator-), x [% y](arithmetic-operators.md#remainder-operator-), x & [y](boolean-logical-operators.md#logical-and-operator-), x [&#124; y](boolean-logical-operators.md#logical-or-operator-), x , [x \< \< y](bitwise-and-shift-operators.md#left-shift-operator-), x >> [y](bitwise-and-shift-operators.md#right-shift-operator-), [x == y](equality-operators.md#equality-operator-), x [!= y](equality-operators.md#inequality-operator-), [x ^ y](boolean-logical-operators.md#logical-exclusive-or-operator-)x [ \< y](comparison-operators.md#less-than-operator-), x > [y](comparison-operators.md#greater-than-operator-), [ \<x = y](comparison-operators.md#less-than-or-equal-operator-), x >= [y](comparison-operators.md#greater-than-or-equal-operator-)|Te operatory binarne mogą być przeciążone. Niektóre operatory muszą być przeciążone w parach; Aby uzyskać więcej informacji, zobacz notatkę, która jest zgodna z poniższą tabelą.|
+|[x && y](boolean-logical-operators.md#conditional-logical-and-operator-), [x &#124;&#124; y](boolean-logical-operators.md#conditional-logical-or-operator-)|Warunkowe operatory logiczne nie mogą być przeciążone. Jednakże jeśli typ z [ `true` przeciążonych `false` i operatorów](true-false-operators.md) również przeciążenia `&&` <code>&#124;&#124;</code> `&` lub <code>&#124;</code> operatora w określony sposób, lub operator, odpowiednio, mogą być oceniane dla operandów tego typu. Aby uzyskać więcej informacji, zobacz sekcję [Operatory logiczne warunkowe zdefiniowane przez użytkownika](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) [specyfikacji języka Języka C#.](~/_csharplang/spec/introduction.md)|
+|[&#91;i&#93;](member-access-operators.md#indexer-operator-)|Dostęp do elementu nie jest uważany za operator przeciążenia, ale można zdefiniować [indeksator](../../programming-guide/indexers/index.md).|
+|[(T)x](type-testing-and-cast.md#cast-operator-)|Operator rzutowania nie może być przeciążony, ale można zdefiniować nowe operatory konwersji. Aby uzyskać więcej informacji, zobacz [Operatory konwersji zdefiniowane przez użytkownika](user-defined-conversion-operators.md).|
+|[+=](arithmetic-operators.md#compound-assignment)[-=](arithmetic-operators.md#compound-assignment), [ \* ](arithmetic-operators.md#compound-assignment), [/=](arithmetic-operators.md#compound-assignment) [%=](arithmetic-operators.md#compound-assignment), [&=](boolean-logical-operators.md#compound-assignment),&#124;[^=](boolean-logical-operators.md#compound-assignment) [ \< \< ](bitwise-and-shift-operators.md#compound-assignment) [=](boolean-logical-operators.md#compound-assignment), ,[>>=](bitwise-and-shift-operators.md#compound-assignment)|Operatory przypisania złożonego nie mogą być jawnie przeciążone. Jednak podczas przeciążenia operatora binarnego, odpowiedni operator przypisania złożonego, jeśli istnieje, jest również niejawnie przeciążony. Na przykład `+=` jest oceniana przy użyciu `+`, które mogą być przeciążone.|
+|[^x](member-access-operators.md#index-from-end-operator-), [x = y](assignment-operator.md), [x.y](member-access-operators.md#member-access-operator-), [c ? t : f](conditional-operator.md), x [?? y](null-coalescing-operator.md), x [?? = y](null-coalescing-operator.md), [x.. y](member-access-operators.md#range-operator-), [x->y](pointer-related-operators.md#pointer-member-access-operator--) [=>](lambda-operator.md), , [f(x)](member-access-operators.md#invocation-operator-), [jak](type-testing-and-cast.md#as-operator), [await](await.md), [sprawdzone](../keywords/checked.md), [niezaznaczone](../keywords/unchecked.md), [domyślnie](default.md), [delegat](delegate-operator.md), [jest](type-testing-and-cast.md#is-operator), [nameof](nameof.md), [nowy](new-operator.md), [sizeof](sizeof.md), [stackalloc](stackalloc.md), [typeof](type-testing-and-cast.md#typeof-operator)|Operatory te nie mogą być przeciążone.|
 
 > [!NOTE]
-> Operatory porównania muszą być przeciążone w parach. Oznacza to, że jeśli oba operatory pary są przeciążone, drugi operator musi być przeciążony. Takie pary są następujące:
+> Operatory porównania muszą być przeciążone w parach. Oznacza to, że jeśli którykolwiek z operatorów pary jest przeciążony, inny operator musi być przeciążony, jak również. Takie pary są następujące:
 >
-> - Operatory `==` i `!=`
-> - Operatory `<` i `>`
-> - Operatory `<=` i `>=`
+> - `==`i `!=` operatorów
+> - `<`i `>` operatorów
+> - `<=`i `>=` operatorów
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
-Aby uzyskać więcej informacji, zobacz następujące sekcje [ C# specyfikacji języka](~/_csharplang/spec/introduction.md):
+Aby uzyskać więcej informacji, zobacz następujące sekcje [specyfikacji języka Języka C#:](~/_csharplang/spec/introduction.md)
 
-- [Przeciążanie operatora](~/_csharplang/spec/expressions.md#operator-overloading)
+- [Przeciążenie operatora](~/_csharplang/spec/expressions.md#operator-overloading)
 - [Operatory](~/_csharplang/spec/classes.md#operators)
 
 ## <a name="see-also"></a>Zobacz też
 
-- [C#odwoła](../index.md)
+- [Dokumentacja języka C#](../index.md)
 - [Operatory języka C#](index.md)
-- [Zdefiniowane przez użytkownika operatory konwersji](user-defined-conversion-operators.md)
-- [Wytyczne dotyczące projektowania — przeciążenia operatorów](../../../standard/design-guidelines/operator-overloads.md)
-- [Wytyczne dotyczące projektowania — operatory równości](../../../standard/design-guidelines/equality-operators.md)
-- [Dlaczego przeciążone operatory zawsze są statyczne C#w?](https://docs.microsoft.com/archive/blogs/ericlippert/why-are-overloaded-operators-always-static-in-c)
+- [Operatory konwersji zdefiniowane przez użytkownika](user-defined-conversion-operators.md)
+- [Wytyczne projektowe - Przeciążenia operatora](../../../standard/design-guidelines/operator-overloads.md)
+- [Wytyczne projektowe - Operatorzy równości](../../../standard/design-guidelines/equality-operators.md)
+- [Dlaczego przeciążone operatory są zawsze statyczne w języku C#?](https://docs.microsoft.com/archive/blogs/ericlippert/why-are-overloaded-operators-always-static-in-c)

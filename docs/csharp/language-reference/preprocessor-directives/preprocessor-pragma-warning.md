@@ -1,5 +1,5 @@
 ---
-title: '#pragma warning C# -Reference'
+title: '#ostrzeżenie pragma - C# Odwołanie'
 ms.date: 07/20/2015
 f1_keywords:
 - '#pragma warning'
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - '#pragma warning [C#]'
 ms.assetid: 723493d5-9753-4cec-babb-54e2b8eb36b6
 ms.openlocfilehash: 5620ea9e5f31c22e26bee95a450335bb179ced25
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712471"
 ---
 # <a name="pragma-warning-c-reference"></a>#pragma warning (odwołanie w C#)
-Dyrektywa `#pragma warning` służy do włączania i wyłączania określonych ostrzeżeń.  
+`#pragma warning`można włączyć lub wyłączyć niektóre ostrzeżenia.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -25,12 +25,12 @@ Dyrektywa `#pragma warning` służy do włączania i wyłączania określonych o
   
 ## <a name="parameters"></a>Parametry  
  `warning-list`  
- Rozdzielana przecinkami lista numerów ostrzeżeń. Prefiks „CS” jest opcjonalny.  
+ Lista numerów ostrzegawczych rozdzielonych przecinkami. Prefiks "CS" jest opcjonalny.  
   
- Jeżeli numery ostrzeżeń nie są wymienione, `disable` wyłącza wszystkie ostrzeżenia, a `restore` włącza wszystkie ostrzeżenia.  
+ Jeśli nie określono żadnych `disable` numerów ostrzegawczych, `restore` wyłącza wszystkie ostrzeżenia i włącza wszystkie ostrzeżenia.  
   
 > [!NOTE]
-> Aby znaleźć numery ostrzeżeń w programie Visual Studio, należy skompilować projekt, a następnie znaleźć numery ostrzeżeń w oknie **Dane wyjściowe**.  
+> Aby znaleźć numery ostrzeżeń w programie Visual Studio, skompiluj projekt, a następnie poszukaj numerów ostrzeżeń w oknie **Dane wyjściowe.**  
   
 ## <a name="example"></a>Przykład  
   
@@ -58,9 +58,9 @@ public class D
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Dokumentacja języka C#](../index.md)
-- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
-- [Dyrektywy preprocesora C#](./index.md)
-- [Błędy kompilatora C#](../compiler-messages/index.md)
+- [Odwołanie do języka C#](../index.md)
+- [Przewodnik programowania języka C#](../../programming-guide/index.md)
+- [Dyrektywy przedprocesorowe C#](./index.md)
+- [Błędy kompilatora Języka C#](../compiler-messages/index.md)

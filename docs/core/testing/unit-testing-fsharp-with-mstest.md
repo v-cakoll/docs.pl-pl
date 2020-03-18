@@ -1,27 +1,27 @@
 ---
-title: Testy F# jednostkowe w środowisku .NET Core z testami dotnet i MSTest
-description: Poznaj koncepcje testów jednostkowych dla F# platformy .NET Core za pośrednictwem interaktywnego środowiska tworzenia przykładowego rozwiązania krok po kroku przy użyciu testu dotnet i MSTest.
+title: Testowanie jednostkowe F# w .NET Core z testem dotnet owym i MSTest
+description: Poznaj pojęcia dotyczące testu jednostkowego dla języka F# w platformie .NET Core za pomocą interaktywnego środowiska, które krok po kroku przy użyciu testu dotnet i programu MSTest.
 author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.openlocfilehash: a685ed8a56393fb6e1c1b9400f0ed4bcef15f9b5
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714279"
 ---
-# <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-mstest"></a>Biblioteki testów F# jednostkowych w programie .NET Core przy użyciu testu dotnet i MSTest
+# <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-mstest"></a>Testowanie jednostkowe bibliotek F# w .NET Core przy użyciu testu dotnet i mstest
 
-Ten samouczek przeprowadzi Cię przez interaktywny proces tworzenia przykładowego rozwiązania krok po kroku, aby poznać koncepcje dotyczące testowania jednostkowego. Jeśli wolisz postępować zgodnie z samouczkiem przy użyciu wstępnie skompilowanego rozwiązania, przed rozpoczęciem [Wyświetl lub Pobierz przykładowy kod](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp-mstest/) . Aby uzyskać instrukcje dotyczące pobierania, zobacz [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+W tym samouczku można za pośrednictwem interakcyjnego środowiska tworzenia przykładowego rozwiązania krok po kroku, aby dowiedzieć się pojęcia testowania jednostek. Jeśli wolisz postępować zgodnie z samouczkiem przy użyciu wstępnie utworzonego rozwiązania, [wyświetl lub pobierz przykładowy kod](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp-mstest/) przed rozpoczęciem. Aby uzyskać instrukcje dotyczące pobierania, zobacz [Przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 [!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
 ## <a name="creating-the-source-project"></a>Tworzenie projektu źródłowego
 
-Otwórz okno powłoki. Utwórz katalog o nazwie *Unit-Test-with-FSharp* , aby pomieścić rozwiązanie.
-W tym nowym katalogu Uruchom `dotnet new sln`, aby utworzyć nowe rozwiązanie. Ułatwia to zarządzanie biblioteką klas i projektem testów jednostkowych.
-W katalogu rozwiązania Utwórz katalog *mathservice* . W tej chwili struktura katalogów i plików jest pokazana poniżej:
+Otwórz okno powłoki. Utwórz katalog o nazwie *unit-testing-with-fsharp* do przechowywania rozwiązania.
+Wewnątrz tego nowego `dotnet new sln` katalogu uruchom, aby utworzyć nowe rozwiązanie. Ułatwia to zarządzanie zarówno biblioteki klas i projektu testu jednostkowego.
+Wewnątrz katalogu rozwiązania utwórz katalog *MathService.* Struktura katalogów i plików do tej pory jest pokazana poniżej:
 
 ```
 /unit-testing-with-fsharp
@@ -29,18 +29,18 @@ W katalogu rozwiązania Utwórz katalog *mathservice* . W tej chwili struktura k
     /MathService
 ```
 
-Ustaw *mathservice* w bieżącym katalogu i uruchom `dotnet new classlib -lang "F#"`, aby utworzyć projekt źródłowy.  Utworzysz nieprawidłową implementację usługi matematycznej:
+Utwórz *MathService* bieżącego `dotnet new classlib -lang "F#"` katalogu i uruchom, aby utworzyć projekt źródłowy.  Utworzysz nieudołężej wykonania usługi matematycznej:
 
 ```fsharp
 module MyMath =
     let squaresOfOdds xs = raise (System.NotImplementedException("You haven't written a test yet!"))
 ```
 
-Zmień katalog z powrotem na katalog *test-z-FSharp* . Uruchom `dotnet sln add .\MathService\MathService.fsproj`, aby dodać projekt biblioteki klas do rozwiązania.
+Zmień katalog z powrotem do katalogu *testowania jednostek z fsharp.* Uruchom, `dotnet sln add .\MathService\MathService.fsproj` aby dodać projekt biblioteki klas do rozwiązania.
 
 ## <a name="creating-the-test-project"></a>Tworzenie projektu testowego
 
-Następnie Utwórz katalog *mathservice. Tests* . Poniższy konspekt przedstawia strukturę katalogów:
+Następnie utwórz katalog *MathService.Tests.* Poniższy konspekt przedstawia strukturę katalogów:
 
 ```console
 /unit-testing-with-fsharp
@@ -51,7 +51,7 @@ Następnie Utwórz katalog *mathservice. Tests* . Poniższy konspekt przedstawia
     /MathService.Tests
 ```
 
-Utwórz katalog *mathservice. Tests* jako bieżący katalog i Utwórz nowy projekt przy użyciu `dotnet new mstest -lang "F#"`. Spowoduje to utworzenie projektu testowego, który używa MSTest jako środowiska testowego. Wygenerowany szablon służy do konfigurowania modułu uruchamiającego testy w *MathServiceTests. fsproj*:
+Utwórz katalog *MathService.Tests* jako bieżący katalog `dotnet new mstest -lang "F#"`i utwórz nowy projekt przy użyciu . Spowoduje to utworzenie projektu testowego, który używa MSTest jako struktury testowej. Wygenerowany szablon konfiguruje testrunner w *MathServiceTests.fsproj:*
 
 ```xml
 <ItemGroup>
@@ -61,15 +61,15 @@ Utwórz katalog *mathservice. Tests* jako bieżący katalog i Utwórz nowy proje
 </ItemGroup>
 ```
 
-Projekt testowy wymaga innych pakietów do tworzenia i uruchamiania testów jednostkowych. `dotnet new` w poprzednim kroku został dodany MSTest i moduł uruchamiający MSTest. Teraz dodaj bibliotekę klas `MathService` jako inną zależność do projektu. Użyj `dotnet add reference` polecenia:
+Projekt testowy wymaga innych pakietów do tworzenia i uruchamiania testów jednostkowych. `dotnet new`w poprzednim kroku dodano MSTest i mstest runner. Teraz dodaj `MathService` bibliotekę klas jako inną zależność do projektu. Użyj `dotnet add reference` polecenia:
 
 ```dotnetcli
 dotnet add reference ../MathService/MathService.fsproj
 ```
 
-Cały plik można zobaczyć w [repozytorium Samples](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-with-fsharp/MathService.Tests/MathService.Tests.fsproj) w witrynie GitHub.
+Możesz zobaczyć cały plik w [repozytorium próbek](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-with-fsharp/MathService.Tests/MathService.Tests.fsproj) w uspolu GitHub.
 
-Dysponujesz następującym końcowym układem rozwiązań:
+Masz następujący ostateczny układ rozwiązania:
 
 ```
 /unit-testing-with-fsharp
@@ -82,11 +82,11 @@ Dysponujesz następującym końcowym układem rozwiązań:
         MathServiceTests.fsproj
 ```
 
-Wykonaj `dotnet sln add .\MathService.Tests\MathService.Tests.fsproj` w katalogu *test-with-FSharp* .
+Wykonywanie `dotnet sln add .\MathService.Tests\MathService.Tests.fsproj` w katalogu *testowania jednostek z fsharp.*
 
 ## <a name="creating-the-first-test"></a>Tworzenie pierwszego testu
 
-Napiszesz jeden test zakończony niepowodzeniem, upewnij się, a następnie powtórz ten proces. Otwórz aplet *testy. FS* i Dodaj następujący kod:
+Piszesz jeden test nie, sprawiają, że przechodzi, a następnie powtórzyć proces. Otwórz *testy.fs* i dodaj następujący kod:
 
 ```fsharp
 namespace MathService.Tests
@@ -106,11 +106,11 @@ type TestClass () =
      member this.FailEveryTime() = Assert.IsTrue(false)
 ```
 
-Atrybut `[<TestClass>]` oznacza klasę, która zawiera testy. Atrybut `[<TestMethod>]` oznacza metodę testową, która jest uruchamiana przez program Test Runner. W katalogu *testy jednostkowe-with-FSharp* należy wykonać `dotnet test`, aby skompilować testy i bibliotekę klas, a następnie uruchomić testy. Program MSTest Test Runner zawiera punkt wejścia programu do uruchamiania testów. `dotnet test` uruchamia program Test Runner przy użyciu utworzonego projektu testu jednostkowego.
+Atrybut `[<TestClass>]` oznacza klasę, która zawiera testy. Atrybut `[<TestMethod>]` oznacza metodę testową, która jest uruchamiana przez test runner. Z *katalogu testowania jednostek z fsharp* `dotnet test` wykonaj, aby utworzyć testy i biblioteki klas, a następnie uruchomić testy. Program testowy MSTest zawiera punkt wejścia programu do uruchamiania testów. `dotnet test`uruchamia testrunnerprzy użyciu utworzonego projektu testu jednostkowego.
 
-Te dwa testy pokazują najbardziej podstawowe testy dotyczące przekazywania i niepowodzenia. `My test` passs i `Fail every time` nie powiedzie się. Teraz Utwórz test dla metody `squaresOfOdds`. Metoda `squaresOfOdds` zwraca listę kwadratów wszystkich nieparzystych wartości całkowitych, które są częścią sekwencji wejściowej. Zamiast próbować zapisywać wszystkie te funkcje jednocześnie, można iteracyjnie utworzyć testy, które weryfikują funkcjonalność. Każdy przebieg testowy oznacza tworzenie niezbędnych funkcji dla metody.
+Te dwa testy pokazują najbardziej podstawowe testy zaliczenia i niepowodzenia. `My test`przechodzi i `Fail every time` nie powiedzie się. Teraz utwórz test `squaresOfOdds` dla metody. Metoda `squaresOfOdds` zwraca listę kwadratów wszystkich wartości nieparzystych liczb całkowitych, które są częścią sekwencji wejściowej. Zamiast próbować napisać wszystkie te funkcje naraz, można iteracyjne tworzenie testów, które sprawdzają poprawność funkcji. Dokonywanie każdego testu oznacza tworzenie niezbędnych funkcji dla metody.
 
-Najprostszym testem możemy napisać jest wywołanie `squaresOfOdds` ze wszystkimi parzystymi liczbami, gdzie wynik powinien być pustą sekwencją liczb całkowitych.  Oto test:
+Najprostszym testem, który `squaresOfOdds` możemy napisać, jest wywołanie ze wszystkimi parzystymi numerami, gdzie wynik powinien być pustą sekwencją liczb całkowitych.  Oto ten test:
 
 ```fsharp
 [<TestMethod>]
@@ -120,20 +120,20 @@ member this.TestEvenSequence() =
     Assert.AreEqual(expected, actual)
 ```
 
-Zwróć uwagę, że sekwencja `expected` została przekonwertowana na listę. Biblioteka MSTest opiera się na wielu standardowych typach .NET. Ta zależność oznacza, że interfejs publiczny i oczekiwane wyniki obsługują <xref:System.Collections.ICollection>, a nie <xref:System.Collections.IEnumerable>.
+Należy zauważyć, że sekwencja `expected` została przekonwertowana na listę. Biblioteka MSTest opiera się na wielu standardowych typach .NET. Ta zależność oznacza, że interfejs publiczny <xref:System.Collections.ICollection> i <xref:System.Collections.IEnumerable>oczekiwane wyniki obsługują, a nie .
 
-Po uruchomieniu testu zobaczysz, że test zakończy się niepowodzeniem. Nie utworzono jeszcze implementacji. Wykonaj ten test, pisząc najprostszy kod w klasie `Mathservice`, która działa:
+Po uruchomieniu testu, widać, że test nie powiedzie się. Implementacja nie została jeszcze utworzona. Zrób ten test przejść, pisząc najprostszy kod w `Mathservice` klasie, która działa:
 
 ```fsharp
 let squaresOfOdds xs =
     Seq.empty<int> |> Seq.toList
 ```
 
-W katalogu *testy jednostkowe-with-FSharp* uruchom ponownie `dotnet test`. `dotnet test` polecenie uruchamia kompilację dla projektu `MathService`, a następnie dla projektu `MathService.Tests`. Po skompilowaniu obu projektów jest uruchamiany ten pojedynczy test. Przekazuje.
+W katalogu *testowania jednostek z fsharp* `dotnet test` uruchom ponownie. Polecenie `dotnet test` uruchamia kompilację `MathService` dla projektu, `MathService.Tests` a następnie dla projektu. Po zbudowaniu obu projektów uruchamia ten pojedynczy test. Mija.
 
-## <a name="completing-the-requirements"></a>Spełnienie wymagań
+## <a name="completing-the-requirements"></a>Wypełnianie wymagań
 
-Teraz, po wykonaniu jednego przebiegu testowego, należy napisać więcej. Następny prosty przypadek działa z sekwencją, której tylko numer nieparzysty jest `1`. Numer 1 jest łatwiejszy, ponieważ kwadrat 1 ma wartość 1. Oto następny test:
+Teraz, gdy dokonałeś jednego testu, nadszedł czas, aby napisać więcej. Następny prosty przypadek działa z sekwencją, `1`której jedyną liczbą nieparzystą jest . Liczba 1 jest łatwiejsza, ponieważ kwadrat 1 wynosi 1. Oto następny test:
 
 ```fsharp
 [<TestMethod>]
@@ -143,7 +143,7 @@ member public this.TestOnesAndEvens() =
     Assert.AreEqual(expected, actual)
 ```
 
-Wykonanie `dotnet test` nie powiedzie się w nowym teście. Należy zaktualizować metodę `squaresOfOdds`, aby obsługiwała ten nowy test. Należy odfiltrować wszystkie liczby parzyste z sekwencji, aby wykonać ten test. Możesz to zrobić, pisząc małą funkcję filtrowania i używając `Seq.filter`:
+Wykonywanie `dotnet test` nie powiedzie się nowy test. Należy zaktualizować `squaresOfOdds` metodę obsługi tego nowego testu. Należy filtrować wszystkie numery parzyste z sekwencji, aby ten test przeszedł. Można to zrobić, pisząc małą funkcję `Seq.filter`filtra i używając:
 
 ```fsharp
 let private isOdd x = x % 2 <> 0
@@ -153,9 +153,9 @@ let squaresOfOdds xs =
     |> Seq.filter isOdd |> Seq.toList
 ```
 
-Zwróć uwagę na wywołanie `Seq.toList`. Tworzy listę, która implementuje interfejs <xref:System.Collections.ICollection>.
+Zwróć uwagę `Seq.toList`na wywołanie . Który tworzy listę, która <xref:System.Collections.ICollection> implementuje interfejs.
 
-Istnieje jeden krok do przechodzenia: kwadrat każdej z liczb nieparzystych. Zacznij od zapisania nowego testu:
+Jest jeszcze jeden krok do zrobienia: kwadrat każdej z liczb nieparzystych. Zacznij od napisania nowego testu:
 
 ```fsharp
 [<TestMethod>]
@@ -165,7 +165,7 @@ member public this.TestSquaresOfOdds() =
     Assert.AreEqual(expected, actual)
 ```
 
-Możesz naprawić test, przechodząc sekwencję przefiltrowanych przez operację mapowania, aby obliczyć kwadrat dla każdej liczby nieparzystej:
+Test można naprawić, przeinacząc przefiltrowaną sekwencję za pomocą operacji mapy, aby obliczyć kwadrat każdego nieparzystego numeru:
 
 ```fsharp
 let private square x = x * x
@@ -178,9 +178,9 @@ let squaresOfOdds xs =
     |> Seq.toList
 ```
 
-Utworzono niewielką bibliotekę i zestaw testów jednostkowych dla tej biblioteki. Rozbudowane rozwiązanie jest przeznaczone do dodawania nowych pakietów i testów jest częścią normalnego przepływu pracy. Zbyt najwięcej czasu i wysiłku na rozwiązywanie celów aplikacji.
+Utworzono małą bibliotekę i zestaw testów jednostkowych dla tej biblioteki. Ustrukturyzowano rozwiązanie tak, aby dodawanie nowych pakietów i testów było częścią normalnego przepływu pracy. Większość czasu i wysiłku skoncentrowałeś na rozwiązywaniu celów aplikacji.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [dotnet new](../tools/dotnet-new.md)
 - [dotnet sln](../tools/dotnet-sln.md)

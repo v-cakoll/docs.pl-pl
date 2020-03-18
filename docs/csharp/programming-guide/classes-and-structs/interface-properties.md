@@ -1,42 +1,42 @@
 ---
-title: Właściwości interfejsu — C# Przewodnik programowania
+title: Właściwości interfejsu — przewodnik programowania C#
 ms.date: 01/31/2020
 helpviewer_keywords:
 - properties [C#], on interfaces
 - interfaces [C#], properties
 ms.assetid: 6503e9ed-33d7-44ec-b4c1-cc16c084b795
 ms.openlocfilehash: 5798b80526f34e923e2eaab43847b98f6c64e14b
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77626623"
 ---
 # <a name="interface-properties-c-programming-guide"></a>Właściwości interfejsu (Przewodnik programowania w języku C#)
 
-Właściwości można zadeklarować w [interfejsie](../../language-reference/keywords/interface.md). Poniższy przykład deklaruje metodę dostępu do właściwości interfejsu:
+Właściwości można zadeklarować w [interfejsie](../../language-reference/keywords/interface.md). W poniższym przykładzie deklaruje akcesor właściwości interfejsu:
 
 [!code-csharp[DeclareProperties](~/samples/snippets/csharp/interfaces/properties.cs#DeclareInterfaceProperties)]
 
-Właściwości interfejsu zazwyczaj nie mają treści. Metody dostępu wskazują, czy właściwość jest tylko do odczytu i zapisu, tylko do odczytu lub tylko do zapisu. W przeciwieństwie do klas i struktur, deklarując metody dostępu bez treści nie deklaruje właściwości, która jest [implementowana](auto-implemented-properties.md). Począwszy od C# 8,0, interfejs może definiować domyślną implementację elementów członkowskich, w tym właściwości. Definiowanie domyślnej implementacji właściwości w interfejsie jest rzadkie, ponieważ interfejsy nie mogą definiować pól danych wystąpienia.
+Właściwości interfejsu zazwyczaj nie mają treści. Akcesory wskazują, czy właściwość jest do odczytu i zapisu, tylko do odczytu lub tylko do zapisu. W przeciwieństwie do klas i struktur, deklarowanie akcesorów bez treści nie deklaruje [właściwości autoimplemented](auto-implemented-properties.md). Począwszy od języka C# 8.0, interfejs może zdefiniować implementację domyślną dla elementów członkowskich, w tym właściwości. Definiowanie domyślnej implementacji właściwości w interfejsie jest rzadkie, ponieważ interfejsy mogą nie definiować pól danych wystąpienia.
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie interfejs `IEmployee` ma właściwość do odczytu i zapisu, `Name`i właściwość tylko do odczytu, `Counter`. Klasa `Employee` implementuje interfejs `IEmployee` i używa tych dwóch właściwości. Program odczytuje nazwę nowego pracownika oraz bieżącą liczbę pracowników i wyświetla nazwę pracownika oraz obliczony numer pracownika.
+W tym przykładzie `IEmployee` interfejs ma właściwość odczytu i zapisu `Name`, `Counter`i właściwości tylko do odczytu , . Klasa `Employee` implementuje `IEmployee` interfejs i używa tych dwóch właściwości. Program odczytuje nazwę nowego pracownika i bieżącą liczbę pracowników i wyświetla nazwisko pracownika i obliczony numer pracownika.
 
-Można użyć w pełni kwalifikowanej nazwy właściwości, która odwołuje się do interfejsu, w którym jest zadeklarowany element członkowski. Na przykład:
-
-[!code-csharp[ExplicitProperties](~/samples/snippets/csharp/interfaces/properties.cs#ExplicitImplementation)]
-
-W powyższym przykładzie przedstawiono [jawną implementację interfejsu](../interfaces/explicit-interface-implementation.md). Na przykład jeśli Klasa `Employee` implementuje dwa interfejsy `ICitizen` i `IEmployee` i oba interfejsy mają właściwość `Name`, wymagana jest Jawna implementacja elementów członkowskich interfejsu. Oznacza to, że następująca deklaracja właściwości:
+Można użyć w pełni kwalifikowanej nazwy właściwości, która odwołuje się do interfejsu, w którym element członkowski jest zadeklarowany. Przykład:
 
 [!code-csharp[ExplicitProperties](~/samples/snippets/csharp/interfaces/properties.cs#ExplicitImplementation)]
 
-implementuje Właściwość `Name` w interfejsie `IEmployee`, podczas gdy następująca deklaracja:
+W poprzednim przykładzie przedstawiono [implementację interfejsu jawnego](../interfaces/explicit-interface-implementation.md). Na przykład jeśli `Employee` klasa implementuje `ICitizen` dwa `IEmployee` interfejsy i `Name` oba interfejsy mają właściwość, implementacja elementu członkowskiego interfejsu jawnego będzie konieczne. Oznacza to, że następujące oświadczenie majątkowe:
+
+[!code-csharp[ExplicitProperties](~/samples/snippets/csharp/interfaces/properties.cs#ExplicitImplementation)]
+
+implementuje `Name` właściwość na `IEmployee` interfejsie, podczas gdy następująca deklaracja:
 
 [!code-csharp[ExplicitProperties](~/samples/snippets/csharp/interfaces/properties.cs#CitizenImplementation)]
 
-implementuje Właściwość `Name` w interfejsie `ICitizen`.
+implementuje `Name` właściwość na `ICitizen` interfejsie.
 
 [!code-csharp[Example](~/samples/snippets/csharp/interfaces/properties.cs#PropertyExample)]
 [!code-csharp[Example](~/samples/snippets/csharp/interfaces/properties.cs#UseProperty)]
@@ -55,7 +55,7 @@ Employee name: Hazem Abolrous
 
 ## <a name="see-also"></a>Zobacz też
 
-- [Przewodnik programowania w języku C#](../index.md)
+- [Przewodnik programowania języka C#](../index.md)
 - [Właściwości](./properties.md)
 - [Używanie właściwości](./using-properties.md)
 - [Porównanie właściwości i indeksatorów](../indexers/comparison-between-properties-and-indexers.md)

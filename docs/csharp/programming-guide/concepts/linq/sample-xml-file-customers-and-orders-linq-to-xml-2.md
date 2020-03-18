@@ -3,20 +3,20 @@ title: 'Przykładowy plik XML: klienci i zamówienia (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: d6d1c9ea-be74-4e6d-bfdd-d4bcc2d301cf
 ms.openlocfilehash: 01c1719bd67bbaf0d46dc6e3c23b5031afd271f8
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75346498"
 ---
 # <a name="sample-xml-file-customers-and-orders-linq-to-xml"></a>Przykładowy plik XML: klienci i zamówienia (LINQ to XML)
-Poniższy plik XML jest używany w różnych przykładach w dokumentacji [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Ten plik zawiera klientów i zamówienia.  
+Poniższy plik XML jest używany w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] różnych przykładach w dokumentacji. Ten plik zawiera klientów i zamówienia.  
   
- [Przykładowy plik XSD tematu: klienci i zamówienia](./sample-xsd-file-customers-and-orders1.md) zawierają XSD, których można użyć do zweryfikowania tego dokumentu. Używa `xs:key` i `xs:keyref` funkcji XSD, aby określić, że atrybut `CustomerID` elementu `Customer` jest kluczem i aby ustanowić relację między `CustomerID` elementu w każdym `Order` elementu i atrybut `CustomerID` w każdym `Customer` elementu.  
+ Przykładowy [przykładowy plik XSD w temacie: Klienci i zamówienia](./sample-xsd-file-customers-and-orders1.md) zawierają xsd, który może służyć do sprawdzania poprawności tego dokumentu. Używa `xs:key` `xs:keyref` i funkcje XSD, aby `CustomerID` ustalić, `Customer` że atrybut elementu jest kluczem i `CustomerID` ustanowić `Order` relację `CustomerID` między `Customer` elementem w każdym elemencie i atrybutu w każdym elemencie.  
   
- Przykład pisania zapytań LINQ wykorzystujących tę relację przy użyciu klauzuli `Join` można znaleźć w temacie [jak sprzęgać dwie kolekcje (LINQ to XML) (C#)](./how-to-join-two-collections-linq-to-xml.md).  
+ Na przykład pisania zapytań LINQ, które korzystają `Join` z tej relacji przy użyciu klauzuli, zobacz [Jak dołączyć dwie kolekcje (LINQ do XML) (C#)](./how-to-join-two-collections-linq-to-xml.md).  
   
-## <a name="customersordersxml"></a>CustomersOrders. XML  
+## <a name="customersordersxml"></a>KlienciOrders.xml  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

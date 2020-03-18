@@ -1,21 +1,21 @@
 ---
-title: Korzystanie z wariancji dla delegatów dla funkcjiC#Func i Action ()
+title: Używanie wariancji dla delegatów ogólnych akcji i akcji (C#)
 ms.date: 07/20/2015
 ms.assetid: 1826774f-2b7a-470f-b110-17cfdd6abdae
-ms.openlocfilehash: bbfc41fb8ab3e7d800f1eb03098e02056e694872
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 17f55d594ad4364fd29c8f6e41bd6ad2445b0986
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659910"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169795"
 ---
-# <a name="using-variance-for-func-and-action-generic-delegates-c"></a>Korzystanie z wariancji dla delegatów dla funkcjiC#Func i Action ()
-W poniższych przykładach pokazano, jak używać kowariancji i kontrawariancja `Func` w `Action` i delegatów ogólnych, aby umożliwić ponowne użycie metod i zapewnić większą elastyczność w kodzie.  
+# <a name="using-variance-for-func-and-action-generic-delegates-c"></a>Używanie wariancji dla delegatów ogólnych akcji i akcji (C#)
+W tych przykładach pokazano, jak używać kowariancji `Func` `Action` i kontrawariancji w delegatów i ogólne, aby umożliwić ponowne użycie metod i zapewnić większą elastyczność w kodzie.  
   
- Aby uzyskać więcej informacji na temat kowariancji i kontrawariancja, zobacz [WARIANCJAC#w delegatach ()](./variance-in-delegates.md).  
+ Aby uzyskać więcej informacji na temat kowariancji i kontrawaracji, zobacz [Wariancja w delegatach (C#)](./variance-in-delegates.md).  
   
-## <a name="using-delegates-with-covariant-type-parameters"></a>Używanie delegatów z parametrami typu współwariantowego  
- Poniższy przykład ilustruje zalety obsługi kowariancji w delegatach ogólnych `Func` . Metoda przyjmuje parametr `String` typu i `Employee` zwraca obiekt typu. `FindByTitle` Można jednak przypisać tę metodę do `Func<String, Person>` delegata, ponieważ `Employee` dziedziczy `Person`.  
+## <a name="using-delegates-with-covariant-type-parameters"></a>Korzystanie z delegatów z parametrami typu kowariantnego  
+ Poniższy przykład ilustruje korzyści z obsługi `Func` kowariancji w delegatów ogólnych. Metoda `FindByTitle` przyjmuje parametr `String` typu i zwraca obiekt `Employee` typu. Jednak można przypisać tę metodę `Func<String, Person>` do pełnomocnika, ponieważ `Employee` dziedziczy `Person`.  
   
 ```csharp  
 // Simple hierarchy of classes.  
@@ -39,8 +39,8 @@ class Program
         // but you can assign it a method that returns Employee.  
         Func<String, Person> findPerson = FindByTitle;  
   
-        // You can also assign a delegate   
-        // that returns a more derived type   
+        // You can also assign a delegate
+        // that returns a more derived type
         // to a delegate that returns a less derived type.  
         findPerson = findEmployee;  
   
@@ -48,8 +48,8 @@ class Program
 }  
 ```  
   
-## <a name="using-delegates-with-contravariant-type-parameters"></a>Korzystanie z delegatów z parametrami typu kontrawariantne  
- Poniższy przykład ilustruje zalety obsługi kontrawariancja w delegatach ogólnych `Action` . Metoda przyjmuje parametr `Person`typu. `AddToContacts` Można jednak przypisać tę metodę do `Action<Employee>` delegata, ponieważ `Employee` dziedziczy `Person`.  
+## <a name="using-delegates-with-contravariant-type-parameters"></a>Używanie delegatów z parametrami typu contravariant  
+ Poniższy przykład ilustruje korzyści z obsługi contravariance w delegatów ogólnych. `Action` Metoda `AddToContacts` przyjmuje parametr `Person` typu. Jednak można przypisać tę metodę `Action<Employee>` do pełnomocnika, ponieważ `Employee` dziedziczy `Person`.  
   
 ```csharp  
 public class Person { }  
@@ -67,21 +67,21 @@ class Program
         // Create an instance of the delegate without using variance.  
         Action<Person> addPersonToContacts = AddToContacts;  
   
-        // The Action delegate expects   
+        // The Action delegate expects
         // a method that has an Employee parameter,  
         // but you can assign it a method that has a Person parameter  
         // because Employee derives from Person.  
         Action<Employee> addEmployeeToContacts = AddToContacts;  
   
-        // You can also assign a delegate   
-        // that accepts a less derived parameter to a delegate   
+        // You can also assign a delegate
+        // that accepts a less derived parameter to a delegate
         // that accepts a more derived parameter.  
         addEmployeeToContacts = addPersonToContacts;  
     }  
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Kowariancja i kontrawariancja (C#)](./index.md)
 - [Typy ogólne](../../../../standard/generics/index.md)

@@ -1,5 +1,5 @@
 ---
-title: Niebezpieczny kod i wskaźniki C# — Przewodnik programistyczny
+title: Niebezpieczny kod i wskaźniki — przewodnik programowania języka C#
 ms.date: 07/20/2015
 helpviewer_keywords:
 - security [C#], type safety
@@ -11,46 +11,46 @@ helpviewer_keywords:
 - pointers [C#], about pointers
 ms.assetid: b0fcca10-a92d-4f2a-835b-b0ccae6739ee
 ms.openlocfilehash: 013af4e55c8fc396bbc92058d7fb454484f3263e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711834"
 ---
-# <a name="unsafe-code-and-pointers-c-programming-guide"></a>Niebezpieczny kod i wskaźnikiC# (Przewodnik programowania)
+# <a name="unsafe-code-and-pointers-c-programming-guide"></a>Niebezpieczny kod i wskaźniki (Przewodnik programowania C#)
 
-Aby zachować bezpieczeństwo typów i zabezpieczenia, C# program nie obsługuje domyślnie arytmetycznego wskaźnika. Jednak za pomocą słowa kluczowego [UNSAFE](../../language-reference/keywords/unsafe.md) można zdefiniować niebezpieczny kontekst, w którym można używać wskaźników. Aby uzyskać więcej informacji na temat wskaźników, zobacz [typy wskaźnika](pointer-types.md).  
+Aby zachować bezpieczeństwo typów i zabezpieczeń, C# nie obsługuje wskaźnik arytmetyczny, domyślnie. Jednak za pomocą [niebezpiecznego](../../language-reference/keywords/unsafe.md) słowa kluczowego można zdefiniować niebezpieczny kontekst, w którym można używać wskaźników. Aby uzyskać więcej informacji o wskaźnikach, zobacz [Typy wskaźników](pointer-types.md).  
   
 > [!NOTE]
-> W środowisku uruchomieniowym języka wspólnego (CLR) kod niebezpieczny jest określany jako kod niemożliwy do zweryfikowania. Kod niebezpieczny C# w programie nie musi być niebezpieczny; jest to tylko kod, którego bezpieczeństwo nie może być zweryfikowane przez środowisko CLR. W związku z tym środowisko CLR wykona tylko niebezpieczny kod, jeśli znajduje się w w pełni zaufanym zestawie. Jeśli używasz niebezpiecznego kodu, jest odpowiedzialny za upewnienie się, że Twój kod nie wprowadza zagrożeń bezpieczeństwa lub błędy wskaźników.  
+> W czasie wykonywania języka wspólnego (CLR) niebezpieczny kod jest określany jako kod nieweryfikowalny. Niebezpieczny kod w języku C# niekoniecznie jest niebezpieczne; jest to tylko kod, którego bezpieczeństwo nie może być zweryfikowane przez CLR. W związku z tym clr będzie wykonywać niebezpieczny kod tylko wtedy, gdy znajduje się w pełni zaufanym zestawie. Jeśli używasz niebezpiecznego kodu, to jest twoim obowiązkiem, aby upewnić się, że kod nie wprowadza zagrożenia bezpieczeństwa lub błędy wskaźnika.  
   
-## <a name="unsafe-code-overview"></a>Przegląd niebezpiecznego kodu
+## <a name="unsafe-code-overview"></a>Omówienie niebezpiecznego kodu
 
-Kod niebezpieczny ma następujące właściwości:
+Niebezpieczny kod ma następujące właściwości:
 
-- Metody, typy i bloki kodu można definiować jako niebezpieczne.
+- Metody, typy i bloki kodu można zdefiniować jako niebezpieczne.
 
-- W niektórych przypadkach niebezpieczny kod może zwiększyć wydajność aplikacji przez usunięcie kontroli granic tablicy.
+- W niektórych przypadkach niebezpieczny kod może zwiększyć wydajność aplikacji, usuwając kontrole granic tablicy.
 
-- Kod niebezpieczny jest wymagany po wywołaniu funkcji natywnych, które wymagają wskaźników.
+- Niebezpieczny kod jest wymagany podczas wywoływania funkcji macierzystych, które wymagają wskaźników.
 
-- Użycie niebezpiecznego kodu wprowadza zagrożenia bezpieczeństwa i stabilności.
+- Używanie niebezpiecznego kodu wprowadza zagrożenia bezpieczeństwa i stabilności.
 
-- Kod, który zawiera niebezpieczne bloki, musi być skompilowany przy użyciu opcji [niebezpiecznego](../../language-reference/compiler-options/unsafe-compiler-option.md) kompilatora.
+- Kod, który zawiera niebezpieczne bloki muszą być skompilowane z [opcją kompilatora -niebezpieczne.](../../language-reference/compiler-options/unsafe-compiler-option.md)
   
 ## <a name="related-sections"></a>Sekcje pokrewne
 
 Aby uzyskać więcej informacji, zobacz:
 
-- [Typy wskaźników](pointer-types.md)
+- [Typy wskaźnika](pointer-types.md)
 
 - [Bufory o ustalonym rozmiarze](fixed-size-buffers.md)
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
-Aby uzyskać więcej informacji, zobacz temat dotyczący [niebezpiecznego kodu](~/_csharplang/spec/unsafe-code.md) w [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).
+Aby uzyskać więcej informacji, zobacz temat [Niebezpieczny kod](~/_csharplang/spec/unsafe-code.md) [specyfikacji języka Języka C#.](~/_csharplang/spec/introduction.md)
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Przewodnik programowania w języku C#](../index.md)
+- [Przewodnik programowania języka C#](../index.md)
 - [unsafe](../../language-reference/keywords/unsafe.md)

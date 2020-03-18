@@ -1,16 +1,16 @@
 ---
-title: Jak połączyć zapytania LINQ z wyrażeniami regularnymiC#()
+title: Jak połączyć zapytania LINQ z wyrażeniami regularnymi (C#)
 ms.date: 07/20/2015
 ms.assetid: 6b003b65-20a4-4ca2-929e-2ee3f215aecc
-ms.openlocfilehash: 97551f7d9d8cf13f05449c2f825ed4d29eb3d86e
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 104e63adb9c07a75077b92654afd791b6c82d8de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141410"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169432"
 ---
-# <a name="how-to-combine-linq-queries-with-regular-expressions-c"></a>Jak połączyć zapytania LINQ z wyrażeniami regularnymiC#()
-Ten przykład pokazuje, jak używać klasy <xref:System.Text.RegularExpressions.Regex> do tworzenia wyrażenia regularnego w celu uzyskania bardziej złożonych odpowiedników w ciągach tekstowych. Zapytanie LINQ ułatwia filtrowanie według dokładnie plików, które mają być przeszukiwane przy użyciu wyrażenia regularnego, oraz do kształtowania wyników.  
+# <a name="how-to-combine-linq-queries-with-regular-expressions-c"></a>Jak połączyć zapytania LINQ z wyrażeniami regularnymi (C#)
+W tym przykładzie pokazano, jak użyć <xref:System.Text.RegularExpressions.Regex> klasy do utworzenia wyrażenia regularnego dla bardziej złożonych dopasowywania w ciągach tekstowych. Kwerenda LINQ ułatwia filtrowanie dokładnie tych plików, które chcesz wyszukiwać za pomocą wyrażenia regularnego, oraz kształtowanie wyników.  
   
 ## <a name="example"></a>Przykład  
   
@@ -36,7 +36,7 @@ class QueryWithRegEx
         // This query produces a list of files where a match  
         // was found, and a list of the matchedValues in that file.  
         // Note: Explicit typing of "Match" in select clause.  
-        // This is required because MatchCollection is not a   
+        // This is required because MatchCollection is not a
         // generic IEnumerable collection.  
         var queryMatchingFiles =  
             from file in fileList  
@@ -56,7 +56,7 @@ class QueryWithRegEx
   
         foreach (var v in queryMatchingFiles)  
         {  
-            // Trim the path a bit, then write   
+            // Trim the path a bit, then write
             // the file name in which a match was found.  
             string s = v.name.Substring(startFolder.Length - 1);  
             Console.WriteLine(s);  
@@ -73,7 +73,7 @@ class QueryWithRegEx
         Console.ReadKey();  
     }  
   
-    // This method assumes that the application has discovery   
+    // This method assumes that the application has discovery
     // permissions for all folders under the specified path.  
     static IEnumerable<System.IO.FileInfo> GetFiles(string path)  
     {  
@@ -93,12 +93,12 @@ class QueryWithRegEx
 }  
 ```  
   
- Należy zauważyć, że można także zbadać obiekt <xref:System.Text.RegularExpressions.MatchCollection>, który jest zwracany przez wyszukiwanie `RegEx`. W tym przykładzie tylko wartość każdego dopasowania jest generowana w wynikach. Można jednak używać LINQ do wykonywania wszelkiego rodzaju filtrowania, sortowania i grupowania w tej kolekcji. Ponieważ <xref:System.Text.RegularExpressions.MatchCollection> jest nieogólną kolekcją <xref:System.Collections.IEnumerable>, należy jawnie podać typ zmiennej zakresu w zapytaniu.  
+ Należy zauważyć, że <xref:System.Text.RegularExpressions.MatchCollection> można również zbadać `RegEx` obiekt, który jest zwracany przez wyszukiwanie. W tym przykładzie tylko wartość każdego dopasowania jest tworzona w wynikach. Jednak istnieje również możliwość użycia LINQ do wykonywania wszelkiego rodzaju filtrowania, sortowania i grupowania w tej kolekcji. Ponieważ <xref:System.Text.RegularExpressions.MatchCollection> jest to <xref:System.Collections.IEnumerable> kolekcja nierodzajowa, należy jawnie podać typ zmiennej zakresu w kwerendzie.  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Utwórz projekt C# aplikacji konsolowej z `using` dyrektywami dotyczącymi przestrzeni nazw System. Linq i system.IO.  
+ Utwórz projekt aplikacji konsoli `using` C# z dyrektywami dla system.Linq i System.IO przestrzeni nazw.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [LINQ i ciągi (C#)](./linq-and-strings.md)
 - [LINQ i katalogi plików (C#)](./linq-and-file-directories.md)

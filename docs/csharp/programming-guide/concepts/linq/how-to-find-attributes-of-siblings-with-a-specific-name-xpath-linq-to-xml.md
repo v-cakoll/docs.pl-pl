@@ -1,30 +1,30 @@
 ---
-title: Jak znaleźć atrybuty elementów równorzędnych o określonej nazwie (XPath-LINQ to XML) (C#)
+title: Jak znaleźć atrybuty rodzeństwa o określonej nazwie (XPath-LINQ do XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: c3133d64-523f-422d-8838-73d36b945ca0
-ms.openlocfilehash: 788945232874ed5c1ba9a8a43c10eaf012320cbb
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 331e1a7f432f4d06b697180b1594106ec6842c9a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141129"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169262"
 ---
-# <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-c"></a>Jak znaleźć atrybuty elementów równorzędnych o określonej nazwie (XPath-LINQ to XML) (C#)
-W tym temacie pokazano, jak znaleźć wszystkie atrybuty elementów równorzędnych węzła kontekstu. W kolekcji są zwracane tylko atrybuty o określonej nazwie.  
+# <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-c"></a>Jak znaleźć atrybuty rodzeństwa o określonej nazwie (XPath-LINQ do XML) (C#)
+W tym temacie pokazano, jak znaleźć wszystkie atrybuty elementu równorzędnego węzła kontekstu. Tylko atrybuty o określonej nazwie są zwracane w kolekcji.  
   
- Wyrażenie XPath:  
+ Wyrażenie XPath jest następujące:  
   
  `../Book/@id`  
   
 ## <a name="example"></a>Przykład  
- Ten przykład najpierw odnajduje `Book` element, a następnie znajduje wszystkie elementy równorzędne o nazwie `Book`, a następnie odnajdzie wszystkie atrybuty o nazwie `id`. Wynik jest kolekcją atrybutów.  
+ W tym przykładzie `Book` najpierw znajduje element, a `Book`następnie znajduje wszystkie elementy `id`równorzędne o nazwie , a następnie znajduje wszystkie atrybuty o nazwie . Wynik jest kolekcją atrybutów.  
   
- Ten przykład używa następującego dokumentu XML: [przykładowy plik XML: Books (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md).  
+ W tym przykładzie użyto następującego dokumentu XML: [Przykładowy plik XML: Książki (LINQ do XML)](./sample-xml-file-books-linq-to-xml.md).  
   
 ```csharp  
 XDocument books = XDocument.Load("Books.xml");  
   
-XElement book =   
+XElement book =
     books  
     .Root  
     .Element("Book");  

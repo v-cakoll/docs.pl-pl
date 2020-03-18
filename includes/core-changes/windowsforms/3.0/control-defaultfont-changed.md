@@ -1,34 +1,34 @@
 ---
 ms.openlocfilehash: b0c4e9617677cf95e3a059b57f3d50ddfb072f4a
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75936996"
 ---
-### <a name="default-control-font-changed-to-segoe-ui-9-pt"></a>Domyślna czcionka kontrolki zmieniono na Segoe UI 9 pt
+### <a name="default-control-font-changed-to-segoe-ui-9-pt"></a>Domyślna czcionka kontrolna zmieniona na Segoe UI 9 pkt
 
-#### <a name="change-description"></a>Opis zmiany
+#### <a name="change-description"></a>Zmień opis
 
-W .NET Framework Właściwość <xref:System.Windows.Forms.Control.DefaultFont?displayProperty=nameWithType> została ustawiona na `Microsoft Sans Serif 8 pt`. Na poniższej ilustracji przedstawiono okno, które używa czcionki domyślnej.
+W platformie <xref:System.Windows.Forms.Control.DefaultFont?displayProperty=nameWithType> .NET Framework `Microsoft Sans Serif 8 pt`właściwość została ustawiona na . Na poniższej ilustracji przedstawiono okno, które używa czcionki domyślnej.
 
-![Domyślna czcionka kontrolki w .NET Framework](~/docs/images/core-changes/windowsforms/control-defaultfont-changed/defaultfont-framework.png)
+![Domyślna czcionka kontrolna w programach .NET Framework](~/docs/images/core-changes/windowsforms/control-defaultfont-changed/defaultfont-framework.png)
 
-Począwszy od platformy .NET Core 3,0, domyślna czcionka jest ustawiona na `Segoe UI 9 pt` (taka sama czcionka jak <xref:System.Drawing.SystemFonts.MessageBoxFont?displayProperty=nameWithType>). W wyniku tej zmiany rozmiar formularzy i kontrolek ma rozmiar o 27% większy do konta w celu uzyskania większego rozmiaru nowej czcionki domyślnej. Na przykład:
+Począwszy od .NET Core 3.0, `Segoe UI 9 pt` domyślna czcionka <xref:System.Drawing.SystemFonts.MessageBoxFont?displayProperty=nameWithType>jest ustawiona na (ta sama czcionka co ). W wyniku tej zmiany formularze i formanty są o 27% większe, aby uwzględnić większy rozmiar nowej czcionki domyślnej. Przykład:
 
-![Domyślna czcionka kontrolna w programie .NET Core](~/docs/images/core-changes/windowsforms/control-defaultfont-changed/defaultfont-core.png)
+![Domyślna czcionka kontrolna w .NET Core](~/docs/images/core-changes/windowsforms/control-defaultfont-changed/defaultfont-core.png)
 
-Ta zmiana została wprowadzona w celu dostosowania ze [wskazówkami dotyczącymi środowiska użytkownika systemu Windows](/windows/win32/uxguide/vis-fonts#fonts-and-colors).
+Ta zmiana została wmazana w celu dostosowania do [wytycznych dotyczących środowiska użytkownika systemu Windows .](/windows/win32/uxguide/vis-fonts#fonts-and-colors)
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
 3.0
 
-#### <a name="recommended-action"></a>Zalecane działanie
+#### <a name="recommended-action"></a>Zalecana akcja
 
-Ze względu na zmianę rozmiaru formularzy i kontrolek upewnij się, że aplikacja jest renderowana poprawnie.
+Ze względu na zmianę rozmiaru formularzy i formantów upewnij się, że aplikacja renderuje poprawnie.
 
-Aby zachować oryginalną czcionkę, ustaw czcionkę domyślną formularza na `Microsoft Sans Serif 8 pt`. Na przykład:
+Aby zachować oryginalną czcionkę, ustaw domyślną czcionkę formularza na `Microsoft Sans Serif 8 pt`. Przykład:
 
 ```csharp
 public MyForm()

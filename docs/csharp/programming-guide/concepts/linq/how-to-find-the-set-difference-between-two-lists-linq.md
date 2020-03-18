@@ -1,26 +1,26 @@
 ---
-title: Jak znaleźć różnice między dwoma listami (LINQ) (C#)
+title: Jak znaleźć różnicę między dwiema listami (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 8e8945f0-4aba-439d-8d5d-c8d1eeef4e71
-ms.openlocfilehash: 227405428a1b418cbe6ceb3d0e3274595307e5ef
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 03fae5451ee395487e73ed7c38d465c3f891e0f7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345941"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169184"
 ---
-# <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a>Jak znaleźć różnice między dwoma listami (LINQ) (C#)
-Ten przykład pokazuje, jak używać LINQ do porównywania dwóch list ciągów i wyprowadzania tych wierszy w names1. txt, ale nie w names2. txt.  
+# <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a>Jak znaleźć różnicę między dwiema listami (LINQ) (C#)
+W tym przykładzie pokazano, jak użyć LINQ do porównania dwóch list ciągów i wyjmować te wiersze, które są w names1.txt, ale nie w names2.txt.  
   
 ### <a name="to-create-the-data-files"></a>Aby utworzyć pliki danych  
   
-1. Skopiuj names1. txt i names2. txt do folderu rozwiązania, jak pokazano w temacie [jak połączyć i porównać kolekcje ciągów (LINQ) (C#)](./how-to-combine-and-compare-string-collections-linq.md).  
+1. Skopiuj names1.txt i names2.txt do folderu rozwiązania, jak pokazano w [jak połączyć i porównać kolekcje ciągów (LINQ) (C#)](./how-to-combine-and-compare-string-collections-linq.md).  
   
 ## <a name="example"></a>Przykład  
   
 ```csharp  
 class CompareLists  
-{          
+{
     static void Main()  
     {  
         // Create the IEnumerable data sources.  
@@ -52,11 +52,11 @@ class CompareLists
      */  
 ```  
   
- Niektóre typy operacji zapytania w C#, takie jak <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>i <xref:System.Linq.Enumerable.Concat%2A>, można wyrazić tylko w składni opartej na metodzie.  
+ Niektóre typy operacji kwerend w języku <xref:System.Linq.Enumerable.Distinct%2A> <xref:System.Linq.Enumerable.Union%2A>C#, takie jak <xref:System.Linq.Enumerable.Concat%2A> <xref:System.Linq.Enumerable.Except%2A>, , , i , mogą być wyrażone tylko w składni opartej na metodach.  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Utwórz projekt C# aplikacji konsolowej z `using` dyrektywami dotyczącymi przestrzeni nazw System. Linq i system.IO.  
+ Utwórz projekt aplikacji konsoli `using` C# z dyrektywami dla system.Linq i System.IO przestrzeni nazw.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [LINQ i ciągi (C#)](./linq-and-strings.md)

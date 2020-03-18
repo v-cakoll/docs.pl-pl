@@ -1,29 +1,29 @@
 ---
-title: Testowanie opublikowanych danych wyjściowych przy użyciu VSTest dotnet
-description: Dowiedz się, jak uruchamiać testy w opublikowanych bibliotekach, a nie w kodzie źródłowym, za pomocą polecenia dotnet VSTest.
+title: Testowanie opublikowanych danych wyjściowych za pomocą dotnet vstest
+description: Dowiedz się, jak uruchamiać testy na opublikowanych bibliotekach, a nie na kodzie źródłowym, za pomocą polecenia dotnet vstest.
 author: kendrahavens
 ms.author: kehavens
 ms.date: 10/18/2017
 ms.openlocfilehash: 7618d37782de3a16f1963380bbb56945fb73e8eb
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714268"
 ---
-# <a name="test-published-output-with-dotnet-vstest"></a><span data-ttu-id="aab73-103">Testowanie opublikowanych danych wyjściowych przy użyciu VSTest dotnet</span><span class="sxs-lookup"><span data-stu-id="aab73-103">Test published output with dotnet vstest</span></span>
+# <a name="test-published-output-with-dotnet-vstest"></a><span data-ttu-id="6caa0-103">Testowanie opublikowanych danych wyjściowych za pomocą dotnet vstest</span><span class="sxs-lookup"><span data-stu-id="6caa0-103">Test published output with dotnet vstest</span></span>
 
-<span data-ttu-id="aab73-104">Można uruchomić testy dla już opublikowanych danych wyjściowych za pomocą polecenia `dotnet vstest`.</span><span class="sxs-lookup"><span data-stu-id="aab73-104">You can run tests on already published output by using the `dotnet vstest` command.</span></span> <span data-ttu-id="aab73-105">Będzie to działało na testach xUnit, MSTest i NUnit.</span><span class="sxs-lookup"><span data-stu-id="aab73-105">This will work on xUnit, MSTest, and NUnit tests.</span></span> <span data-ttu-id="aab73-106">Po prostu zlokalizuj plik DLL, który był częścią opublikowanych danych wyjściowych, i uruchom:</span><span class="sxs-lookup"><span data-stu-id="aab73-106">Simply locate the DLL file that was part of your published output and run:</span></span>
+<span data-ttu-id="6caa0-104">Testy można uruchamiać na już opublikowanych danych wyjściowych za pomocą `dotnet vstest` polecenia.</span><span class="sxs-lookup"><span data-stu-id="6caa0-104">You can run tests on already published output by using the `dotnet vstest` command.</span></span> <span data-ttu-id="6caa0-105">Będzie to działać na testach xUnit, MSTest i NUnit.</span><span class="sxs-lookup"><span data-stu-id="6caa0-105">This will work on xUnit, MSTest, and NUnit tests.</span></span> <span data-ttu-id="6caa0-106">Wystarczy zlokalizować plik DLL, który był częścią opublikowanego wyjścia i uruchomić:</span><span class="sxs-lookup"><span data-stu-id="6caa0-106">Simply locate the DLL file that was part of your published output and run:</span></span>
 
 ```dotnetcli
 dotnet vstest <MyPublishedTests>.dll
 ```
 
-<span data-ttu-id="aab73-107">Gdzie `<MyPublishedTests>` jest nazwą opublikowanego projektu testowego.</span><span class="sxs-lookup"><span data-stu-id="aab73-107">Where `<MyPublishedTests>` is the name of your published test project.</span></span>
+<span data-ttu-id="6caa0-107">Gdzie `<MyPublishedTests>` jest nazwa opublikowanego projektu testowego.</span><span class="sxs-lookup"><span data-stu-id="6caa0-107">Where `<MyPublishedTests>` is the name of your published test project.</span></span>
 
-## <a name="example"></a><span data-ttu-id="aab73-108">Przykład</span><span class="sxs-lookup"><span data-stu-id="aab73-108">Example</span></span>
+## <a name="example"></a><span data-ttu-id="6caa0-108">Przykład</span><span class="sxs-lookup"><span data-stu-id="6caa0-108">Example</span></span>
 
-<span data-ttu-id="aab73-109">Poniższe polecenia przedstawiają uruchamianie testów w opublikowanej bibliotece DLL.</span><span class="sxs-lookup"><span data-stu-id="aab73-109">The commands below demonstrate running tests on a published DLL.</span></span>
+<span data-ttu-id="6caa0-109">Poniższe polecenia pokazują uruchomione testy opublikowanej dll.</span><span class="sxs-lookup"><span data-stu-id="6caa0-109">The commands below demonstrate running tests on a published DLL.</span></span>
 
 ```dotnetcli
 dotnet new mstest -o MyProject.Tests
@@ -33,10 +33,10 @@ dotnet vstest out/MyProject.Tests.dll
 ```
 
 > [!NOTE]
-> <span data-ttu-id="aab73-110">Uwaga: Jeśli aplikacja jest ukierunkowana na platformę inną niż `netcoreapp`, można nadal uruchomić polecenie `dotnet vstest`, przekazując w platformę docelową flagę platformy.</span><span class="sxs-lookup"><span data-stu-id="aab73-110">Note: If your app targets a framework other than `netcoreapp`, you can still run the `dotnet vstest` command by passing in the targeted framework with a framework flag.</span></span> <span data-ttu-id="aab73-111">Na przykład `dotnet vstest <MyPublishedTests>.dll --Framework:".NETFramework,Version=v4.6"`.</span><span class="sxs-lookup"><span data-stu-id="aab73-111">For example, `dotnet vstest <MyPublishedTests>.dll --Framework:".NETFramework,Version=v4.6"`.</span></span> <span data-ttu-id="aab73-112">W programie Visual Studio 2017 Update 5 i nowszych zostanie automatycznie wykryta pożądana struktura.</span><span class="sxs-lookup"><span data-stu-id="aab73-112">In Visual Studio 2017 Update 5 and later, the desired framework is automatically detected.</span></span>
+> <span data-ttu-id="6caa0-110">Uwaga: Jeśli aplikacja jest przeznaczona dla struktury innej niż `netcoreapp`, nadal można uruchomić `dotnet vstest` polecenie, przekazując w ramach docelowej z flagą struktury.</span><span class="sxs-lookup"><span data-stu-id="6caa0-110">Note: If your app targets a framework other than `netcoreapp`, you can still run the `dotnet vstest` command by passing in the targeted framework with a framework flag.</span></span> <span data-ttu-id="6caa0-111">Na przykład `dotnet vstest <MyPublishedTests>.dll --Framework:".NETFramework,Version=v4.6"`.</span><span class="sxs-lookup"><span data-stu-id="6caa0-111">For example, `dotnet vstest <MyPublishedTests>.dll --Framework:".NETFramework,Version=v4.6"`.</span></span> <span data-ttu-id="6caa0-112">W programie Visual Studio 2017 Update 5 i nowszych żądana struktura jest automatycznie wykrywana.</span><span class="sxs-lookup"><span data-stu-id="6caa0-112">In Visual Studio 2017 Update 5 and later, the desired framework is automatically detected.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="aab73-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="aab73-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6caa0-113">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="6caa0-113">See also</span></span>
 
-- [<span data-ttu-id="aab73-114">Testowanie jednostkowe za pomocą testu dotnet i xUnit</span><span class="sxs-lookup"><span data-stu-id="aab73-114">Unit Testing with dotnet test and xUnit</span></span>](unit-testing-with-dotnet-test.md)
-- [<span data-ttu-id="aab73-115">Testowanie jednostkowe za pomocą testu dotnet i NUnit</span><span class="sxs-lookup"><span data-stu-id="aab73-115">Unit Testing with dotnet test and NUnit</span></span>](unit-testing-with-nunit.md)
-- [<span data-ttu-id="aab73-116">Testowanie jednostkowe za pomocą testu dotnet i MSTest</span><span class="sxs-lookup"><span data-stu-id="aab73-116">Unit Testing with dotnet test and MSTest</span></span>](unit-testing-with-mstest.md)
+- [<span data-ttu-id="6caa0-114">Testowanie jednostkowe z testem dotnetowym i jednostką xUnit</span><span class="sxs-lookup"><span data-stu-id="6caa0-114">Unit Testing with dotnet test and xUnit</span></span>](unit-testing-with-dotnet-test.md)
+- [<span data-ttu-id="6caa0-115">Testowanie jednostkowe z testem dotnetowym i jednostką NUnit</span><span class="sxs-lookup"><span data-stu-id="6caa0-115">Unit Testing with dotnet test and NUnit</span></span>](unit-testing-with-nunit.md)
+- [<span data-ttu-id="6caa0-116">Testowanie jednostkowe z testem dotnetowym i mstestem</span><span class="sxs-lookup"><span data-stu-id="6caa0-116">Unit Testing with dotnet test and MSTest</span></span>](unit-testing-with-mstest.md)

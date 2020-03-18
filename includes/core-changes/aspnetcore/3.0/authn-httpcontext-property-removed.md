@@ -1,38 +1,38 @@
 ---
 ms.openlocfilehash: 60ebcd9fc9ca18c33d31b82ba5020426d22a7d5a
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75902059"
 ---
-### <a name="authentication-httpcontextauthentication-property-removed"></a><span data-ttu-id="c75f4-101">Uwierzytelnianie: Właściwość HttpContext. Authentication została usunięta</span><span class="sxs-lookup"><span data-stu-id="c75f4-101">Authentication: HttpContext.Authentication property removed</span></span>
+### <a name="authentication-httpcontextauthentication-property-removed"></a><span data-ttu-id="24386-101">Uwierzytelnianie: usunięto właściwość HttpContext.Authentication</span><span class="sxs-lookup"><span data-stu-id="24386-101">Authentication: HttpContext.Authentication property removed</span></span>
 
-<span data-ttu-id="c75f4-102">Właściwość `Authentication` przestarzała w `HttpContext` została usunięta.</span><span class="sxs-lookup"><span data-stu-id="c75f4-102">The deprecated `Authentication` property on `HttpContext` has been removed.</span></span>
+<span data-ttu-id="24386-102">Przestarzałe `Authentication` właściwości na `HttpContext` został usunięty.</span><span class="sxs-lookup"><span data-stu-id="24386-102">The deprecated `Authentication` property on `HttpContext` has been removed.</span></span>
 
-#### <a name="change-description"></a><span data-ttu-id="c75f4-103">Opis zmiany</span><span class="sxs-lookup"><span data-stu-id="c75f4-103">Change description</span></span>
+#### <a name="change-description"></a><span data-ttu-id="24386-103">Zmień opis</span><span class="sxs-lookup"><span data-stu-id="24386-103">Change description</span></span>
 
-<span data-ttu-id="c75f4-104">W ramach programu [dotnet/aspnetcore # 6504](https://github.com/dotnet/aspnetcore/pull/6504)właściwość przestarzałe `Authentication` w `HttpContext` została usunięta.</span><span class="sxs-lookup"><span data-stu-id="c75f4-104">As part of [dotnet/aspnetcore#6504](https://github.com/dotnet/aspnetcore/pull/6504), the deprecated `Authentication` property on `HttpContext` has been removed.</span></span> <span data-ttu-id="c75f4-105">Właściwość `Authentication` została uznana za przestarzałą od 2,0.</span><span class="sxs-lookup"><span data-stu-id="c75f4-105">The `Authentication` property has been deprecated since 2.0.</span></span> <span data-ttu-id="c75f4-106">Opublikowano [Przewodnik migracji](/aspnet/core/migration/1x-to-2x/identity-2x?view=aspnetcore-2.2#use-httpcontext-authentication-extensions) w celu migrowania kodu przy użyciu tej przestarzałej właściwości do nowych interfejsów API wymiany.</span><span class="sxs-lookup"><span data-stu-id="c75f4-106">A [migration guide](/aspnet/core/migration/1x-to-2x/identity-2x?view=aspnetcore-2.2#use-httpcontext-authentication-extensions) was published to migrate code using this deprecated property to the new replacement APIs.</span></span> <span data-ttu-id="c75f4-107">Pozostałe nieużywane klasy/interfejsy API powiązane ze starym stosem uwierzytelniania ASP.NET Core 1. x zostały usunięte w [dotnet/aspnetcore@d7a7c65](https://github.com/dotnet/aspnetcore/commit/d7a7c65)zatwierdzania.</span><span class="sxs-lookup"><span data-stu-id="c75f4-107">The remaining unused classes / APIs related to the old ASP.NET Core 1.x authentication stack were removed in commit [dotnet/aspnetcore@d7a7c65](https://github.com/dotnet/aspnetcore/commit/d7a7c65).</span></span>
+<span data-ttu-id="24386-104">W ramach [dotnet/aspnetcore#6504](https://github.com/dotnet/aspnetcore/pull/6504)usunięto wycofaną `Authentication` `HttpContext` właściwość.</span><span class="sxs-lookup"><span data-stu-id="24386-104">As part of [dotnet/aspnetcore#6504](https://github.com/dotnet/aspnetcore/pull/6504), the deprecated `Authentication` property on `HttpContext` has been removed.</span></span> <span data-ttu-id="24386-105">Obiekt `Authentication` został przestarzały od 2.0.</span><span class="sxs-lookup"><span data-stu-id="24386-105">The `Authentication` property has been deprecated since 2.0.</span></span> <span data-ttu-id="24386-106">[Przewodnik migracji](/aspnet/core/migration/1x-to-2x/identity-2x?view=aspnetcore-2.2#use-httpcontext-authentication-extensions) został opublikowany w celu migracji kodu przy użyciu tej przestarzałej właściwości do nowych zastępczych interfejsów API.</span><span class="sxs-lookup"><span data-stu-id="24386-106">A [migration guide](/aspnet/core/migration/1x-to-2x/identity-2x?view=aspnetcore-2.2#use-httpcontext-authentication-extensions) was published to migrate code using this deprecated property to the new replacement APIs.</span></span> <span data-ttu-id="24386-107">Pozostałe nieużywane klasy / interfejsy API związane ze starym ASP.NET [dotnet/aspnetcore@d7a7c65](https://github.com/dotnet/aspnetcore/commit/d7a7c65)stosie uwierzytelniania Core 1.x zostały usunięte w zatwierdzeniu .</span><span class="sxs-lookup"><span data-stu-id="24386-107">The remaining unused classes / APIs related to the old ASP.NET Core 1.x authentication stack were removed in commit [dotnet/aspnetcore@d7a7c65](https://github.com/dotnet/aspnetcore/commit/d7a7c65).</span></span>
 
-<span data-ttu-id="c75f4-108">Aby zapoznać się z omówieniem, zobacz [dotnet/aspnetcore # 6533](https://github.com/dotnet/aspnetcore/issues/6533).</span><span class="sxs-lookup"><span data-stu-id="c75f4-108">For discussion, see [dotnet/aspnetcore#6533](https://github.com/dotnet/aspnetcore/issues/6533).</span></span>
+<span data-ttu-id="24386-108">Aby uzyskać do dyskusji, zobacz [dotnet/aspnetcore#6533](https://github.com/dotnet/aspnetcore/issues/6533).</span><span class="sxs-lookup"><span data-stu-id="24386-108">For discussion, see [dotnet/aspnetcore#6533](https://github.com/dotnet/aspnetcore/issues/6533).</span></span>
 
-#### <a name="version-introduced"></a><span data-ttu-id="c75f4-109">Wprowadzona wersja</span><span class="sxs-lookup"><span data-stu-id="c75f4-109">Version introduced</span></span>
+#### <a name="version-introduced"></a><span data-ttu-id="24386-109">Wprowadzona wersja</span><span class="sxs-lookup"><span data-stu-id="24386-109">Version introduced</span></span>
 
-<span data-ttu-id="c75f4-110">3.0</span><span class="sxs-lookup"><span data-stu-id="c75f4-110">3.0</span></span>
+<span data-ttu-id="24386-110">3.0</span><span class="sxs-lookup"><span data-stu-id="24386-110">3.0</span></span>
 
-#### <a name="reason-for-change"></a><span data-ttu-id="c75f4-111">Przyczyna zmiany</span><span class="sxs-lookup"><span data-stu-id="c75f4-111">Reason for change</span></span>
+#### <a name="reason-for-change"></a><span data-ttu-id="24386-111">Przyczyna zmiany</span><span class="sxs-lookup"><span data-stu-id="24386-111">Reason for change</span></span>
 
-<span data-ttu-id="c75f4-112">Interfejsy API ASP.NET Core 1,0 zostały zastąpione metodami rozszerzającymi w <xref:Microsoft.AspNetCore.Authentication.AuthenticationHttpContextExtensions?displayProperty=fullName>.</span><span class="sxs-lookup"><span data-stu-id="c75f4-112">ASP.NET Core 1.0 APIs have been replaced by extension methods in <xref:Microsoft.AspNetCore.Authentication.AuthenticationHttpContextExtensions?displayProperty=fullName>.</span></span>
+<span data-ttu-id="24386-112">ASP.NET interfejsy API Core 1.0 zostały <xref:Microsoft.AspNetCore.Authentication.AuthenticationHttpContextExtensions?displayProperty=fullName>zastąpione metodami rozszerzenia w pliku .</span><span class="sxs-lookup"><span data-stu-id="24386-112">ASP.NET Core 1.0 APIs have been replaced by extension methods in <xref:Microsoft.AspNetCore.Authentication.AuthenticationHttpContextExtensions?displayProperty=fullName>.</span></span>
 
-#### <a name="recommended-action"></a><span data-ttu-id="c75f4-113">Zalecane działanie</span><span class="sxs-lookup"><span data-stu-id="c75f4-113">Recommended action</span></span>
+#### <a name="recommended-action"></a><span data-ttu-id="24386-113">Zalecana akcja</span><span class="sxs-lookup"><span data-stu-id="24386-113">Recommended action</span></span>
 
-<span data-ttu-id="c75f4-114">Zapoznaj się z [przewodnikiem migracji](/aspnet/core/migration/1x-to-2x/identity-2x?view=aspnetcore-2.2#use-httpcontext-authentication-extensions).</span><span class="sxs-lookup"><span data-stu-id="c75f4-114">See the [migration guide](/aspnet/core/migration/1x-to-2x/identity-2x?view=aspnetcore-2.2#use-httpcontext-authentication-extensions).</span></span>
+<span data-ttu-id="24386-114">Zobacz [przewodnik migracji](/aspnet/core/migration/1x-to-2x/identity-2x?view=aspnetcore-2.2#use-httpcontext-authentication-extensions).</span><span class="sxs-lookup"><span data-stu-id="24386-114">See the [migration guide](/aspnet/core/migration/1x-to-2x/identity-2x?view=aspnetcore-2.2#use-httpcontext-authentication-extensions).</span></span>
 
-#### <a name="category"></a><span data-ttu-id="c75f4-115">Kategoria</span><span class="sxs-lookup"><span data-stu-id="c75f4-115">Category</span></span>
+#### <a name="category"></a><span data-ttu-id="24386-115">Kategoria</span><span class="sxs-lookup"><span data-stu-id="24386-115">Category</span></span>
 
-<span data-ttu-id="c75f4-116">ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="c75f4-116">ASP.NET Core</span></span>
+<span data-ttu-id="24386-116">ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="24386-116">ASP.NET Core</span></span>
 
-#### <a name="affected-apis"></a><span data-ttu-id="c75f4-117">Dotyczy interfejsów API</span><span class="sxs-lookup"><span data-stu-id="c75f4-117">Affected APIs</span></span>
+#### <a name="affected-apis"></a><span data-ttu-id="24386-117">Dotyczy interfejsów API</span><span class="sxs-lookup"><span data-stu-id="24386-117">Affected APIs</span></span>
 
 - <xref:Microsoft.AspNetCore.Http.Authentication.AuthenticateInfo?displayProperty=nameWithType>
 - <xref:Microsoft.AspNetCore.Http.Authentication.AuthenticationManager?displayProperty=nameWithType>

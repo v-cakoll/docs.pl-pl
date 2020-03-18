@@ -1,89 +1,89 @@
 ---
-title: Przetwarzanie pliku XML — C# Przewodnik programowania
+title: Przetwarzanie pliku XML — przewodnik programowania C#
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
 ms.openlocfilehash: bc72cade9ce6edddb88d741a3424405bba0a7ad8
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76793395"
 ---
-# <a name="processing-the-xml-file-c-programming-guide"></a>Przetwarzanie pliku XML (C# Przewodnik programowania)
+# <a name="processing-the-xml-file-c-programming-guide"></a>Przetwarzanie pliku XML (przewodnik programowania C#)
 
-Kompilator generuje ciąg identyfikatora dla każdej konstrukcji w kodzie, który jest oznaczony do generowania dokumentacji. (Aby uzyskać informacje na temat znakowania kodu, zobacz [zalecane Tagi dla komentarzy do dokumentacji](./recommended-tags-for-documentation-comments.md)). Ciąg identyfikatora jednoznacznie identyfikuje konstrukcję. Programy, które przetwarzają plik XML, mogą używać ciągu identyfikatora do identyfikowania odpowiednich .NET Framework metadanych/elementu odbicia, do których odnosi się dokumentacja.
+Kompilator generuje ciąg identyfikatora dla każdej konstrukcji w kodzie, który jest oznaczony do generowania dokumentacji. (Aby uzyskać informacje dotyczące oznaczania kodu, zobacz [Zalecane tagi dla komentarzy do dokumentacji](./recommended-tags-for-documentation-comments.md).) Ciąg identyfikatora jednoznacznie identyfikuje konstrukcję. Programy przetwarzająplik XML można użyć ciągu identyfikatora do zidentyfikowania odpowiedniego elementu metadanych/odbicia .NET Framework, którego dotyczy dokumentacja.
 
 Plik XML nie jest hierarchiczną reprezentacją kodu; jest to płaska lista, która ma wygenerowany identyfikator dla każdego elementu.
 
-Podczas generowania ciągów identyfikatorów kompilator przestrzega następujących reguł:
+Kompilator przestrzega następujących reguł podczas generowania ciągów identyfikatora:
 
-- Brak białego znaku w ciągu.
+- Żaden biały znak nie jest w ciągu.
 
-- Pierwsza część ciągu identyfikatora identyfikuje rodzaj identyfikowanego elementu członkowskiego za pomocą pojedynczego znaku, po którym następuje dwukropek. Używane są następujące typy elementów członkowskich:
+- Pierwsza część ciągu Identyfikatoridentyfikuje rodzaj elementu członkowskiego identyfikowanego, za pomocą pojedynczego znaku, po którym następuje dwukropek. Używane są następujące typy elementów członkowskich:
 
     |Znak|Opis|
     |---------------|-----------------|
-    |N|{1&gt; — przestrzeń nazw&lt;1}<br /><br /> Nie można dodać komentarzy do dokumentacji do przestrzeni nazw, ale możesz wprowadzić do nich odwołania cref, jeśli są obsługiwane.|
-    |T|Typ: Klasa, interfejs, struktura, Wyliczenie lub delegat|
+    |Nie|przestrzeń nazw<br /><br /> Nie można dodawać komentarzy dokumentacji do obszaru nazw, ale można do nich odwołać cref, gdzie jest to obsługiwane.|
+    |T|typ: klasa, interfejs, struktura, wyliczenie lub pełnomocnik|
     |F|pole|
-    |P|Właściwość (w tym indeksatory lub inne właściwości indeksowane)|
-    |M|Metoda (łącznie z takimi metodami specjalnymi jak konstruktory, operatory itd.)|
-    |E|zdarzenie|
-    |!|ciąg błędu<br /><br /> Pozostała część ciągu zawiera informacje o błędzie. C# Kompilator generuje informacje o błędzie dla linków, których nie można rozpoznać.|
+    |P|(w tym indeksatory lub inne właściwości indeksowane)|
+    |M|metoda (w tym takie specjalne metody jak konstruktorzy, operatorzy itd.)|
+    |E|event|
+    |!|ciąg błędu<br /><br /> Reszta ciągu zawiera informacje o błędzie. Kompilator Języka C# generuje informacje o błędach dla łączy, których nie można rozwiązać.|
 
-- Druga część ciągu to w pełni kwalifikowana nazwa elementu, rozpoczynając od elementu głównego przestrzeni nazw. Nazwa elementu, jego typy otaczające i przestrzeń nazw są oddzielone kropkami. Jeśli nazwa samego elementu ma okresy, są one zastępowane przez znak hash ("#"). Przyjęto założenie, że żaden element nie ma znaku skrótu bezpośrednio w nazwie. Na przykład w pełni kwalifikowana nazwa konstruktora String byłaby "System. String. #ctor".
+- Druga część ciągu jest w pełni kwalifikowaną nazwą elementu, zaczynając od katalogu głównego obszaru nazw. Nazwa elementu, jego otaczające typy i obszar nazw są oddzielone kropkami. Jeśli nazwa samego elementu ma kropki, są one zastępowane znakiem skrótu ('#'). Zakłada się, że żaden element nie ma znaku skrótu bezpośrednio w jego nazwie. Na przykład w pełni kwalifikowana nazwa konstruktora String będzie "System.String.#ctor".
 
-- W przypadku właściwości i metod, jeśli istnieją argumenty metody, lista argumentów ujęta w nawiasy. Jeśli nie ma żadnych argumentów, nie ma nawiasów. Argumenty są rozdzielone przecinkami. Kodowanie każdego argumentu następuje bezpośrednio po zakodowaniu w sygnaturze .NET Framework:
+- W przypadku właściwości i metod, jeśli istnieją argumenty do metody, lista argumentów ujęta w nawiasy następuje. Jeśli nie ma żadnych argumentów, nie są dostępne żadne nawiasy. Argumenty są oddzielone przecinkami. Kodowanie każdego argumentu następuje bezpośrednio, jak jest zakodowany w podpisie .NET Framework:
 
-  - Typy podstawowe. Zwykłe typy (ELEMENT_TYPE_CLASS lub ELEMENT_TYPE_VALUETYPE) są reprezentowane jako w pełni kwalifikowana nazwa typu.
+  - Typy podstawowe. Regularne typy (ELEMENT_TYPE_CLASS lub ELEMENT_TYPE_VALUETYPE) są reprezentowane jako w pełni kwalifikowana nazwa typu.
 
-  - Typy wewnętrzne (na przykład ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF i ELEMENT_TYPE_VOID) są reprezentowane jako w pełni kwalifikowana nazwa odpowiedniego pełnego typu. Na przykład system. Int32 lub system. TypedReference.
+  - Typy wewnętrzne (na przykład ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF i ELEMENT_TYPE_VOID) są reprezentowane jako w pełni kwalifikowana nazwa odpowiedniego pełnego typu. Na przykład System.Int32 lub System.TypedReference.
 
-  - ELEMENT_TYPE_PTR jest reprezentowane jako "\*" po zmodyfikowanym typie.
+  - ELEMENT_TYPE_PTR jest reprezentowana\*jako ' po zmodyfikowanym typie.
 
-  - ELEMENT_TYPE_BYREF jest reprezentowane jako "\@" po zmodyfikowanym typie.
+  - ELEMENT_TYPE_BYREF jest reprezentowany jako\@' po zmodyfikowanym typie.
 
-  - ELEMENT_TYPE_PINNED jest reprezentowane jako "^" po zmodyfikowanym typie. C# Kompilator nigdy nie generuje tego.
+  - ELEMENT_TYPE_PINNED jest reprezentowana jako "^" po zmodyfikowanym typie. Kompilator Języka C# nigdy tego nie generuje.
 
-  - ELEMENT_TYPE_CMOD_REQ jest reprezentowane jako "&#124;" i w pełni kwalifikowana nazwa klasy modyfikującej, po zmodyfikowanym typie. C# Kompilator nigdy nie generuje tego.
+  - ELEMENT_TYPE_CMOD_REQ jest reprezentowana jako "&#124;" i w pełni kwalifikowaną nazwę klasy modyfikatora, po zmodyfikowanym typie. Kompilator Języka C# nigdy tego nie generuje.
 
-  - ELEMENT_TYPE_CMOD_OPT jest reprezentowane jako "!" i w pełni kwalifikowana nazwa klasy modyfikującej, po zmodyfikowanym typie.
+  - ELEMENT_TYPE_CMOD_OPT jest reprezentowana jako "!" i w pełni kwalifikowana nazwa klasy modyfikatora, po zmodyfikowanym typie.
 
-  - ELEMENT_TYPE_SZARRAY jest reprezentowane jako "[]" po typie elementu tablicy.
+  - ELEMENT_TYPE_SZARRAY jest reprezentowana jako "[]" po typie elementu tablicy.
 
-  - ELEMENT_TYPE_GENERICARRAY jest reprezentowane jako "[?]" po typie elementu tablicy. C# Kompilator nigdy nie generuje tego.
+  - ELEMENT_TYPE_GENERICARRAY jest reprezentowana jako "[?]" po typie elementu tablicy. Kompilator Języka C# nigdy tego nie generuje.
 
-  - ELEMENT_TYPE_ARRAY jest reprezentowane jako [*lowerbound*:`size`,*lowerbound*:`size`], gdzie liczba przecinków jest rangą 1, a dolne granice i rozmiar każdego wymiaru, jeśli są znane, są reprezentowane w postaci dziesiętnej. Jeśli Dolna granica nie zostanie określona, zostanie ona po prostu pominięta. Jeśli Dolna granica i rozmiar określonego wymiaru zostaną pominięte, znak ":" również zostanie pominięty. Na przykład tablica 2-wymiarową z 1 jako dolne granice i nieokreślone rozmiary to [1:, 1:].
+  - ELEMENT_TYPE_ARRAY jest reprezentowana jako`size`[*dolna granica*: ,*dolna granica*:`size`], gdzie liczba przecinków jest rangą - 1, a dolne granice i rozmiar każdego wymiaru, jeśli są znane, są reprezentowane po przecinku. Jeśli dolna granica lub rozmiar nie jest określony, jest po prostu pominięty. Jeśli dolna granica i rozmiar dla określonego wymiaru zostaną pominięte, pominięto również ":". Na przykład tablica dwuwymiarowa z 1 jako dolna granica i nieokreślone rozmiary to [1:,1:].
 
-  - ELEMENT_TYPE_FNPTR jest reprezentowana jako "= FUNC:`type`(*sygnatura*)", gdzie `type` jest typem zwracanym, a *sygnatura* jest argumentami metody. Jeśli nie ma żadnych argumentów, nawiasy są pomijane. C# Kompilator nigdy nie generuje tego.
+  - ELEMENT_TYPE_FNPTR jest reprezentowany jako`type`"=FUNC: (*podpis*)", gdzie `type` jest typem zwracanym, a *podpis* jest argumentami metody. Jeśli nie ma żadnych argumentów, nawiasy są pomijane. Kompilator Języka C# nigdy tego nie generuje.
 
-    Następujące składniki podpisu nie są reprezentowane, ponieważ nie są nigdy używane do odróżniania przeciążonych metod:
+    Następujące składniki podpisu nie są reprezentowane, ponieważ nigdy nie są używane do różnicowania przeciążonych metod:
 
-  - Konwencja wywoływania
+  - konwencja wywoływania
 
-  - Typ zwracany
+  - typ zwracany
 
   - ELEMENT_TYPE_SENTINEL
 
-- W przypadku operatorów konwersji (op_Implicit i op_Explicit) wartość zwracana metody jest zaszyfrowana jako "~", po której następuje zwracany typ, jak powyżej.
+- Tylko dla operatorów konwersji (op_Implicit i op_Explicit) wartość zwracana metody jest kodowana jako "~", po której następuje typ zwracany, jak zakodowato powyżej.
 
-- W przypadku typów ogólnych, nazwa typu następuje przez nieskończoność, a następnie liczbę, która wskazuje liczbę parametrów typu ogólnego. Na przykład:
+- W przypadku typów ogólnych po nazwie typu następuje backtick, a następnie liczba wskazująca liczbę parametrów typu ogólnego. Przykład:
 
-     ``<member name="T:SampleClass`2">`` jest tagiem dla typu, który jest zdefiniowany jako `public class SampleClass<T, U>`.
+     ``<member name="T:SampleClass`2">``jest tagiem typu zdefiniowanego jako `public class SampleClass<T, U>`.
 
-     W przypadku metod, które pobierają typy ogólne jako parametry, parametry typu ogólnego są określone jako liczby poprzedzone znakami kreskowych (na przykład \`0,\`1). Każda liczba reprezentująca notację tablicową opartą na zero dla ogólnych parametrów typu.
+     W przypadku metod przyjmujących typy ogólne jako parametry, parametry typu ogólnego są określane \`jako\`liczby poprzedzone backtickami (na przykład 0, 1). Każda liczba reprezentująca tablicę o zerowej tablicy dla parametrów ogólnych typu.
 
 ## <a name="examples"></a>Przykłady
 
-W poniższych przykładach pokazano, jak generowane są ciągi identyfikatorów dla klasy i jej członków:
+W poniższych przykładach przedstawiono sposób generowania ciągów identyfikatorów dla klasy i jej elementów członkowskich:
 
 [!code-csharp[csProgGuidePointers#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuidePointers/CS/Pointers.cs#21)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [C#Przewodnik programowania](../index.md)
-- [-doc (C# opcje kompilatora)](../../language-reference/compiler-options/doc-compiler-option.md)
+- [Przewodnik programowania w języku C#](../index.md)
+- [-doc (opcje kompilatora C#)](../../language-reference/compiler-options/doc-compiler-option.md)
 - [Komentarze dokumentacji XML](./index.md)

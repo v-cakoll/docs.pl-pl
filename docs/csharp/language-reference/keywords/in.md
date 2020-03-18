@@ -1,5 +1,5 @@
 ---
-title: C# odwołanie w odwołaniu
+title: w - Odwołanie do języka C#
 ms.date: 02/06/2018
 f1_keywords:
 - in
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - in keyword [C#]
 ms.openlocfilehash: 251a330ec327366ce458dd8066061365ab0e1dad
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713457"
 ---
 # <a name="in-c-reference"></a>in (odwołanie w C#)
 
-Słowo kluczowe `in` jest używane w czterech kontekstach:  
+Słowo `in` kluczowe jest używane w czterech kontekstach:  
   
-- [parametry typu ogólnego](in-generic-modifier.md) w interfejsach ogólnych i delegatach.
-- Jako [modyfikator parametru](in-parameter-modifier.md), który umożliwia przekazywanie argumentu do metody przez odwołanie, a nie przez wartość.
-- instrukcja [foreach](foreach-in.md) .
-- [klauzule from](from-clause.md) w wyrażeniach zapytań LINQ.
-- [klauzule Join](join-clause.md) w wyrażeniach zapytań LINQ.
+- [ogólne parametry typu](in-generic-modifier.md) w ogólnych interfejsach i delegatach.
+- Jako [modyfikator parametrów](in-parameter-modifier.md), który pozwala przekazać argument do metody przez odwołanie, a nie przez wartość.
+- [w przypadku poszczególnych](foreach-in.md) instrukcji.
+- z klauzul w [wyrażeniach](from-clause.md) kwerend LINQ.
+- [sprzężenia klauzule](join-clause.md) w wyrażeniach kwerendlinq.
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Słowa kluczowe języka C#](index.md)
-- [Dokumentacja języka C#](../index.md)
+- [Odwołanie do języka C#](../index.md)

@@ -1,48 +1,48 @@
 ---
-title: domyślny operator — C# odwołanie
-description: Użyj operatora domyślnego, aby utworzyć wartość domyślną typu
+title: operator domyślny — odwołanie do języka C#
+description: Użyj domyślnego operatora do wytworzenia wartości domyślnej typu
 ms.date: 08/01/2019
 helpviewer_keywords:
 - default keyword [C#]
-ms.openlocfilehash: ba4c02caa53a9d532be4012a4543a25cd41b6023
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 0d37fe952e71e74f014872231a2e58663dea9d18
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78239316"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399484"
 ---
-# <a name="default-operator-c-reference"></a>Default — operatorC# (odwołanie)
+# <a name="default-operator-c-reference"></a>operator domyślny (odwołanie do języka C#)
 
-Operator `default` generuje [wartość domyślną](../builtin-types/default-values.md) typu. Argument operatora `default` musi być nazwą typu lub parametrem typu.
+Operator `default` tworzy [wartość domyślną](../builtin-types/default-values.md) typu. Argument `default` do operatora musi być nazwa typu lub parametrtypu.
 
-Poniższy przykład pokazuje użycie operatora `default`:
+W poniższym przykładzie przedstawiono `default` użycie operatora:
 
-[!code-csharp-interactive[default of T](~/samples/snippets/csharp/language-reference/operators/DefaultOperator.cs#WithOperand)]
+[!code-csharp-interactive[default of T](snippets/DefaultOperator.cs#WithOperand)]
 
-Możesz również użyć słowa kluczowego `default` jako domyślnej etykiety case w [instrukcji`switch`](../keywords/switch.md).
+Słowo `default` kluczowe jest również używane jako domyślna etykieta sprawy w [ `switch` instrukcji](../keywords/switch.md).
 
-## <a name="default-literal"></a>domyślny literał
+## <a name="default-literal"></a>literał domyślny
 
-Począwszy od C# 7,1, można użyć literału `default`, aby utworzyć wartość domyślną typu, gdy kompilator może wywnioskować typ wyrażenia. Wyrażenie `default` literału zwraca tę samą wartość co wyrażenie `default(T)`, gdzie `T` jest typem wywnioskowanym. Literału `default` można użyć w dowolnym z następujących przypadków:
+Począwszy od Języka C# 7.1, można użyć `default` literału do produkcji wartości domyślnej typu, gdy kompilator można wywnioskować typ wyrażenia. Wyrażenie `default` literału tworzy tę `default(T)` samą `T` wartość co wyrażenie, w którym jest typem wywnioskowanym. Literału `default` można użyć w dowolnym z następujących przypadków:
 
-- W przypisaniu lub inicjacji zmiennej.
-- W deklaracji wartości domyślnej dla [opcjonalnego parametru metody](../../methods.md#optional-parameters-and-arguments).
+- W przypisaniu lub inicjowaniu zmiennej.
+- W deklaracji wartości domyślnej dla [parametru metody opcjonalnej](../../methods.md#optional-parameters-and-arguments).
 - W wywołaniu metody, aby podać wartość argumentu.
-- W [instrukcji`return`](../keywords/return.md) lub jako wyrażenie w [składowej](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)zawierającej wyrażenie.
+- W [ `return` instrukcji](../keywords/return.md) lub jako wyrażenie w [element członkowski zabudowany wyrażeniem](../../programming-guide/statements-expressions-operators/expression-bodied-members.md).
 
-Poniższy przykład pokazuje użycie literału `default`:
+W poniższym przykładzie przedstawiono `default` użycie literału:
 
-[!code-csharp-interactive[default literal](~/samples/snippets/csharp/language-reference/operators/DefaultOperator.cs#DefaultLiteral)]
+[!code-csharp-interactive[default literal](snippets/DefaultOperator.cs#DefaultLiteral)]
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
-Aby uzyskać więcej informacji, zobacz sekcję [wyrażenia wartości domyślnej](~/_csharplang/spec/expressions.md#default-value-expressions) [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).
+Aby uzyskać więcej informacji, zobacz [sekcję Domyślne wyrażenia wartości](~/_csharplang/spec/expressions.md#default-value-expressions) [specyfikacji języka Języka C#.](~/_csharplang/spec/introduction.md)
 
-Aby uzyskać więcej informacji na temat literału `default`, zobacz [Uwaga dotycząca oferty funkcji](~/_csharplang/proposals/csharp-7.1/target-typed-default.md).
+Aby uzyskać więcej `default` informacji na temat literału, zobacz [notatkę propozycji funkcji](~/_csharplang/proposals/csharp-7.1/target-typed-default.md).
 
 ## <a name="see-also"></a>Zobacz też
 
-- [C#odwoła](../index.md)
+- [Dokumentacja języka C#](../index.md)
 - [Operatory języka C#](index.md)
-- [Wartości domyślne C# typów](../builtin-types/default-values.md)
+- [Domyślne wartości typów Języka C#](../builtin-types/default-values.md)
 - [Typy ogólne w .NET](../../../standard/generics/index.md)

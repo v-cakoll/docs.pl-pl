@@ -1,6 +1,6 @@
 ---
-title: Całkowite typy liczbowe — C# odwołanie
-description: Poznaj zakres, rozmiar magazynu i użycie dla każdego z typów całkowitych.
+title: Typy liczbowe integralne — odwołanie do języka C#
+description: Poznaj zakres, rozmiar magazynu i zastosowania dla każdego z typów liczbowych.
 ms.date: 10/22/2019
 f1_keywords:
 - byte
@@ -33,51 +33,51 @@ helpviewer_keywords:
 - long keyword [C#]
 - ulong keyword [C#]
 ms.openlocfilehash: 394a809a9a2f45f4aee652d0eca892f62f0f2e54
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77093204"
 ---
-# <a name="integral-numeric-types--c-reference"></a>Całkowite typy liczbowe (C# odwołanie)
+# <a name="integral-numeric-types--c-reference"></a>Typy liczbowe integralne (odwołanie do języka C#)
 
-Całkowite *typy liczbowe* przedstawiają liczbę całkowitą. Wszystkie typy liczb całkowitych są [typami wartości](value-types.md). Są one również [typami prostymi](value-types.md#built-in-value-types) i mogą być inicjowane za pomocą [literałów](#integer-literals). Wszystkie typy liczbowe całkowite obsługują operatory [arytmetyczne](../operators/arithmetic-operators.md), [bitowe logiczne](../operators/bitwise-and-shift-operators.md), [porównania](../operators/comparison-operators.md)i [równości](../operators/equality-operators.md) .
+Typy *liczbowe integralne* reprezentują liczby całkowite. Wszystkie typy liczbowe integralne są [typami wartości.](value-types.md) Są one również [proste typy](value-types.md#built-in-value-types) i mogą być inicjowane za pomocą [literału](#integer-literals). Wszystkie typy liczbowe integralne obsługują [operatory arytmetyczne,](../operators/arithmetic-operators.md) [logiczne bitowe,](../operators/bitwise-and-shift-operators.md) [porównywanie](../operators/comparison-operators.md)i [równość.](../operators/equality-operators.md)
 
-## <a name="characteristics-of-the-integral-types"></a>Cechy typów całkowitych
+## <a name="characteristics-of-the-integral-types"></a>Charakterystyka typów integralnych
 
-C#obsługuje następujące wstępnie zdefiniowane typy całkowite:
+C# obsługuje następujące wstępnie zdefiniowane typy całki:
 
-|C#Type/słowo kluczowe|Zakres|Rozmiar|Typ .NET|
+|Typ/słowo kluczowe języka C#|Zakres|Rozmiar|Typ .NET|
 |----------|-----------|----------|-------------|
-|`sbyte`|-128 do 127|8-bitowa liczba całkowita ze znakiem|<xref:System.SByte?displayProperty=nameWithType>|
-|`byte`|od 0 do 255|8-bitowa liczba całkowita bez znaku|<xref:System.Byte?displayProperty=nameWithType>|
-|`short`|-32 768 do 32 767|16-bitowa liczba całkowita ze znakiem|<xref:System.Int16?displayProperty=nameWithType>|
-|`ushort`|od 0 do 65 535|16-bitowa liczba całkowita bez znaku|<xref:System.UInt16?displayProperty=nameWithType>|
-|`int`|-2 147 483 648 do 2 147 483 647|32-bitowa liczba całkowita|<xref:System.Int32?displayProperty=nameWithType>|
-|`uint`|od 0 do 4 294 967 295|Niepodpisany 32-bitowa liczba całkowita|<xref:System.UInt32?displayProperty=nameWithType>|
-|`long`|-zakresu od do 9 223 372 036 854 775 807|64-bitowa liczba całkowita|<xref:System.Int64?displayProperty=nameWithType>|
-|`ulong`|od 0 do 18446744073709551615 są|Niepodpisany 64-bitowa liczba całkowita|<xref:System.UInt64?displayProperty=nameWithType>|
+|`sbyte`|od -128 do 127|Podpisana 8-bitowa liczba całkowita|<xref:System.SByte?displayProperty=nameWithType>|
+|`byte`|Od 0 do 255|Niepodpisana 8-bitowa liczba całkowita|<xref:System.Byte?displayProperty=nameWithType>|
+|`short`|od -32 768 do 32 767|Podpisana 16-bitowa liczba całkowita|<xref:System.Int16?displayProperty=nameWithType>|
+|`ushort`|od 0 do 65 535|Niepodpisana 16-bitowa liczba całkowita|<xref:System.UInt16?displayProperty=nameWithType>|
+|`int`|-2 147 483 648 do 2 147 483 647|Podpisana 32-bitowa liczba całkowita|<xref:System.Int32?displayProperty=nameWithType>|
+|`uint`|0 do 4.294.967.295|Niepodpisana 32-bitowa liczba całkowita|<xref:System.UInt32?displayProperty=nameWithType>|
+|`long`|-9 223 372 036.854.775.808 do 9.223.372.036.854.775.807|Podpisana 64-bitowa liczba całkowita|<xref:System.Int64?displayProperty=nameWithType>|
+|`ulong`|0 do 18 446 744 773 709 551 615|Niepodpisana 64-bitowa liczba całkowita|<xref:System.UInt64?displayProperty=nameWithType>|
 
-W powyższej tabeli każde C# słowo kluczowe type z lewej kolumny jest aliasem odpowiadającego typu .NET. Są one zamienne. Na przykład następujące deklaracje deklarują zmienne tego samego typu:
+W powyższej tabeli każde słowo kluczowe typu C# z kolumny po lewej stronie jest aliasem dla odpowiedniego typu .NET. Są wymienne. Na przykład następujące deklaracje deklarują zmienne tego samego typu:
 
 ```csharp
 int a = 123;
 System.Int32 b = 123;
 ```
 
-Wartością domyślną każdego typu całkowitego jest zero, `0`. Każdy z typów całkowitych ma `MinValue` i `MaxValue` stałe, które zapewniają minimalną i maksymalną wartość tego typu.
+Domyślną wartością każdego typu `0`integralnego jest zero, . Każdy z typów całki ma `MinValue` i `MaxValue` stałe, które zapewniają minimalną i maksymalną wartość tego typu.
 
-Użyj struktury <xref:System.Numerics.BigInteger?displayProperty=nameWithType>, aby reprezentować liczbę całkowitą ze znakiem bez górnych lub dolnych granic.
+<xref:System.Numerics.BigInteger?displayProperty=nameWithType> Struktura służy do reprezentowania podpisanej liczby całkowitej bez górnych lub dolnych granic.
 
 ## <a name="integer-literals"></a>Literały całkowite
 
 Literały całkowite mogą być
 
-- *Decimal*: bez żadnego prefiksu
-- *szesnastkowe*: z prefiksem `0x` lub `0X`
-- *plik binarny*: z prefiksem `0b` lub `0B` ( C# dostępnym w 7,0 i nowszych)
+- *dziesiętne:* bez prefiksu
+- *szesnastkowy:* `0x` z `0X` prefiksem lub prefiksem
+- *binarny:* `0b` `0B` z prefiksem lub prefiksem (dostępny w języku C# 7.0 i nowszych)
 
-Poniższy kod ilustruje przykład każdego z nich:
+Poniższy kod przedstawia przykład każdego z nich:
 
 ```csharp
 var decimalLiteral = 42;
@@ -85,31 +85,31 @@ var hexLiteral = 0x2A;
 var binaryLiteral = 0b_0010_1010;
 ```
 
-W powyższym przykładzie przedstawiono również użycie `_` jako *separatora cyfr*, który jest obsługiwany od C# 7,0. Można użyć separatora cyfr z wszystkimi rodzajami literałów liczbowych.
+W poprzednim przykładzie pokazano `_` również użycie jako *separatora cyfr*, który jest obsługiwany począwszy od Języka C# 7.0. Separatora cyfr można używać ze wszystkimi rodzajami literałów liczbowych.
 
-Typ literału liczby całkowitej jest określany na podstawie jego sufiksu w następujący sposób:
+Typ literału całkowitego jest określany przez jego sufiks w następujący sposób:
 
-- Jeśli literał nie ma sufiksu, jego typ to pierwszy z następujących typów, w którym można przedstawić jego wartość: `int`, `uint`, `long``ulong`.
-- Jeśli literał jest sufiksem `U` lub `u`, jego typ jest pierwszym z następujących typów, w których można reprezentować wartość: `uint``ulong`.
-- Jeśli literał jest sufiksem `L` lub `l`, jego typ jest pierwszym z następujących typów, w których można reprezentować wartość: `long``ulong`.
+- Jeśli literał nie ma sufiksu, jego typ jest pierwszym z następujących `int` `uint`typów, w których można reprezentować jego wartość: , , `long`, `ulong`.
+- Jeśli literał `U` jest sufiksprzez lub `u`, jego typ jest pierwszym z następujących `uint` `ulong`typów, w których jego wartość może być reprezentowana: , .
+- Jeśli literał `L` jest sufiksprzez lub `l`, jego typ jest pierwszym z następujących `long` `ulong`typów, w których jego wartość może być reprezentowana: , .
 
   > [!NOTE]
-  > Jako sufiksu można użyć małych liter `l`. Jednak spowoduje to wygenerowanie ostrzeżenia kompilatora, ponieważ `l` można mylić z cyfrą `1`. Użyj `L` do przejrzystości.
+  > Małej litery `l` można użyć jako sufiksu. Jednak generuje to ostrzeżenie kompilatora, ponieważ litera `l` może być mylona z cyfrą `1`. Użyj `L` dla jasności.
 
-- Jeśli literał jest sufiksem `UL`, `Ul`, `uL`, `ul`, `LU`, `Lu`, `lU`lub `lu`, jego typ to `ulong`.
+- Jeśli literał jest sufiksowany `LU` `Lu`przez `lU` `UL`, `Ul` `uL`, `ul`, `ulong`, lub `lu`jego typ jest .
 
-Jeśli wartość reprezentowana przez literał liczby całkowitej przekracza <xref:System.UInt64.MaxValue?displayProperty=nameWithType>, wystąpi błąd kompilatora [CS1021](../../misc/cs1021.md) .
+Jeśli wartość reprezentowana przez literał całkowity <xref:System.UInt64.MaxValue?displayProperty=nameWithType>przekracza, występuje błąd kompilatora [CS1021.](../../misc/cs1021.md)
 
-Jeśli określony typ literału liczby całkowitej jest `int` a wartość reprezentowana przez literał znajduje się w zakresie typu docelowego, wartość może zostać niejawnie przekonwertowana na `sbyte`, `byte`, `short`, `ushort`, `uint`lub `ulong`:
+Jeżeli określony typ literału `int` całkowitego jest i wartość reprezentowana przez literał jest w zakresie typu docelowego, `sbyte` `byte`wartość `short` `ushort`może `uint`być `ulong`niejawnie konwertowane na , , , , , , lub:
 
 ```csharp
 byte a = 17;
 byte b = 300;   // CS0031: Constant value '300' cannot be converted to a 'byte'
 ```
 
-Jak pokazano w poprzednim przykładzie, jeśli wartość literału nie należy do zakresu typu docelowego, wystąpi błąd kompilatora [CS0031](../../misc/cs0031.md) .
+Jak pokazano w poprzednim przykładzie, jeśli wartość literału nie znajduje się w zakresie typu docelowego, występuje błąd kompilatora [CS0031.](../../misc/cs0031.md)
 
-Można również użyć rzutowania, aby przekonwertować wartość reprezentowaną przez literał liczby całkowitej na typ inny niż określony typ literału:
+Można również użyć rzutowania do konwersji wartości reprezentowanej przez literał całkowity na typ inny niż określony typ literału:
 
 ```csharp
 var signedByte = (sbyte)42;
@@ -118,19 +118,19 @@ var longVariable = (long)42;
 
 ## <a name="conversions"></a>Konwersje
 
-Można skonwertować dowolny całkowity typ liczbowy do dowolnego innego typu liczb całkowitych. Jeśli typ docelowy może przechowywać wszystkie wartości typu źródła, konwersja jest niejawna. W przeciwnym razie należy użyć [operatora rzutowania `()`](../operators/type-testing-and-cast.md#cast-operator-) do wywołania jawnej konwersji. Aby uzyskać więcej informacji, zobacz [wbudowane konwersje numeryczne](numeric-conversions.md).
+Można przekonwertować dowolny typ liczbowy na dowolny inny integralny typ numeryczny. Jeśli typ docelowy może przechowywać wszystkie wartości typu źródłowego, konwersja jest niejawna. W przeciwnym razie należy użyć [ `()` operatora rzutowania](../operators/type-testing-and-cast.md#cast-operator-) do wywołania jawnej konwersji. Aby uzyskać więcej informacji, zobacz [Wbudowane konwersje liczbowe](numeric-conversions.md).
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
-Aby uzyskać więcej informacji, zobacz następujące sekcje [ C# specyfikacji języka](~/_csharplang/spec/introduction.md):
+Aby uzyskać więcej informacji, zobacz następujące sekcje [specyfikacji języka Języka C#:](~/_csharplang/spec/introduction.md)
 
-- [Typy całkowite](~/_csharplang/spec/types.md#integral-types)
+- [Typy całonowe](~/_csharplang/spec/types.md#integral-types)
 - [Literały całkowite](~/_csharplang/spec/lexical-structure.md#integer-literals)
 
 ## <a name="see-also"></a>Zobacz też
 
-- [C#odwoła](../index.md)
+- [Dokumentacja języka C#](../index.md)
 - [Typy wartości](value-types.md)
 - [Typy zmiennoprzecinkowe](floating-point-numeric-types.md)
-- [Standardowe ciągi formatujące liczby](../../../standard/base-types/standard-numeric-format-strings.md)
+- [Standardowe ciągi formatu numerycznego](../../../standard/base-types/standard-numeric-format-strings.md)
 - [Wartości numeryczne na platformie .NET](../../../standard/numerics.md)

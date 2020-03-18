@@ -1,14 +1,14 @@
 ---
 ms.openlocfilehash: 15ba678431b97e7c961c119d83546569bdf9bad2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74282527"
 ---
-### <a name="http-some-cookie-samesite-defaults-changed-to-none"></a>HTTP: niektóre ustawienia domyślne SameSite pliku cookie zmieniły się na brak
+### <a name="http-some-cookie-samesite-defaults-changed-to-none"></a>HTTP: Niektóre ustawienia domyślne tej samej witryny zostały zmienione na Brak
 
-`SameSite` jest opcją dla plików cookie, która może pomóc w zmniejszeniu liczby ataków na wiele witryn (CSRF). W przypadku wybrania tej opcji, niespójne wartości domyślne są używane w różnych ASP.NET Core interfejsów API. Niespójność spowodowała mylące wyniki. W przypadku ASP.NET Core 3,0 te wartości domyślne są lepiej wyrównane. Należy zadecydować, aby ta funkcja była oparta na poszczególnych składnikach.
+`SameSite`jest opcją dla plików cookie, które mogą pomóc w ograniczeniu niektórych ataków csrf (Cross-Site Request Forgery). Gdy ta opcja została początkowo wprowadzona, niespójne wartości domyślne były używane w różnych ASP.NET podstawowych interfejsów API. Niespójność doprowadziła do mylących wyników. Od ASP.NET Core 3.0 te wartości domyślne są lepiej wyrównane. Należy wyrazić zgodę na tę funkcję na podstawie pojmą.
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -16,19 +16,19 @@ ms.locfileid: "74282527"
 
 #### <a name="old-behavior"></a>Stare zachowanie
 
-Podobne ASP.NET Core interfejsy API używały różnych domyślnych wartości <xref:Microsoft.AspNetCore.Http.SameSiteMode>. Przykład niespójności jest widoczny w `HttpResponse.Cookies.Append(String, String)` i `HttpResponse.Cookies.Append(String, String, CookieOptions)`, które domyślnie są odpowiednio `SameSiteMode.None` i `SameSiteMode.Lax`.
+Podobne ASP.NET podstawowe interfejsy <xref:Microsoft.AspNetCore.Http.SameSiteMode> API używały różnych wartości domyślnych. Przykład niespójności jest widoczny `HttpResponse.Cookies.Append(String, String)` w `HttpResponse.Cookies.Append(String, String, CookieOptions)`i , `SameSiteMode.None` które `SameSiteMode.Lax`domyślnie do i , odpowiednio.
 
 #### <a name="new-behavior"></a>Nowe zachowanie
 
-Wszystkie narażone interfejsy API domyślnie `SameSiteMode.None`.
+Wszystkie interfejsy API, których dotyczy problem, domyślnie . `SameSiteMode.None`
 
 #### <a name="reason-for-change"></a>Przyczyna zmiany
 
-Wartość domyślna została zmieniona, aby `SameSite` funkcję wyboru.
+Wartość domyślna została `SameSite` zmieniona, aby wprowadzić funkcję opt-in.
 
-#### <a name="recommended-action"></a>Zalecane działanie
+#### <a name="recommended-action"></a>Zalecana akcja
 
-Każdy składnik, który emituje pliki cookie, musi zdecydować, czy `SameSite` jest odpowiedni dla swoich scenariuszy. Zapoznaj się z użyciem odpowiednich interfejsów API i ponownie skonfiguruj `SameSite` w razie konieczności.
+Każdy składnik, który emituje pliki `SameSite` cookie musi zdecydować, czy jest odpowiedni dla jego scenariuszy. Przejrzyj użycie interfejsów API, których dotyczy problem, i ponownie skonfiguruj `SameSite` w razie potrzeby.
 
 #### <a name="category"></a>Kategoria
 

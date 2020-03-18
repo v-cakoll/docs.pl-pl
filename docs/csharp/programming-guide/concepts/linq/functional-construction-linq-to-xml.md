@@ -1,24 +1,24 @@
 ---
-title: Konstrukcja funkcjonalna (LINQ to XML)C#()
+title: Konstrukcja funkcjonalna (LINQ do XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 57a82bcf-de03-4f1c-a0c8-9a76e989d542
 ms.openlocfilehash: e55b0010a5f75eee8137d1e9bcefc573b5e07e72
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635759"
 ---
-# <a name="functional-construction-linq-to-xml-c"></a>Konstrukcja funkcjonalna (LINQ to XML)C#()
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zapewnia zaawansowany sposób tworzenia elementów XML o nazwie *konstrukcja funkcjonalna*. Konstrukcja funkcjonalna to możliwość tworzenia drzewa XML w pojedynczej instrukcji.  
+# <a name="functional-construction-linq-to-xml-c"></a>Konstrukcja funkcjonalna (LINQ do XML) (C#)
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]zapewnia potężny sposób tworzenia elementów XML zwanych *konstrukcją funkcjonalną.* Funkcjonalna konstrukcja to możliwość tworzenia drzewa XML w jednej instrukcji.  
   
- Istnieje kilka najważniejszych funkcji interfejsu programowania [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], które umożliwiają konstruowanie funkcjonalne:  
+ Istnieje kilka kluczowych funkcji [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] interfejsu programowania, które umożliwiają funkcjonalną konstrukcję:  
   
-- Konstruktor <xref:System.Xml.Linq.XElement> ma różne typy argumentów dla zawartości. Na przykład można przekazać inny obiekt <xref:System.Xml.Linq.XElement>, który stanie się elementem podrzędnym. Można przekazać obiekt <xref:System.Xml.Linq.XAttribute>, który stanie się atrybutem elementu. Lub można przekazać każdy inny typ obiektu, który jest konwertowany na ciąg i stanie się zawartością tekstową elementu.  
+- Konstruktor <xref:System.Xml.Linq.XElement> przyjmuje różne typy argumentów dla zawartości. Na przykład można przekazać inny <xref:System.Xml.Linq.XElement> obiekt, który staje się elementem podrzędnym. Można przekazać <xref:System.Xml.Linq.XAttribute> obiekt, który staje się atrybutem elementu. Lub można przekazać dowolny inny typ obiektu, który jest konwertowany na ciąg i staje się zawartość tekstową elementu.  
   
-- Konstruktor <xref:System.Xml.Linq.XElement> pobiera tablicę `params` typu <xref:System.Object>, dzięki czemu można przekazać dowolną liczbę obiektów do konstruktora. Dzięki temu można utworzyć element, który ma złożoną zawartość.  
+- Konstruktor <xref:System.Xml.Linq.XElement> `params` przyjmuje tablicę typu, <xref:System.Object>dzięki czemu można przekazać dowolną liczbę obiektów do konstruktora. Dzięki temu można utworzyć element, który ma złożoną zawartość.  
   
-- Jeśli obiekt implementuje <xref:System.Collections.Generic.IEnumerable%601>, kolekcja w obiekcie zostanie wyliczona i wszystkie elementy w kolekcji zostaną dodane. Jeśli kolekcja zawiera obiekty <xref:System.Xml.Linq.XElement> lub <xref:System.Xml.Linq.XAttribute>, każdy element w kolekcji zostanie dodany osobno. Jest to ważne, ponieważ umożliwia przekazywanie wyników zapytania LINQ do konstruktora.  
+- Jeśli obiekt implementuje <xref:System.Collections.Generic.IEnumerable%601>, kolekcja w obiekcie jest wyliczana, a wszystkie elementy w kolekcji są dodawane. Jeśli kolekcja <xref:System.Xml.Linq.XElement> zawiera <xref:System.Xml.Linq.XAttribute> lub obiektów, każdy element w kolekcji jest dodawany oddzielnie. Jest to ważne, ponieważ umożliwia przekazywanie wyników kwerendy LINQ do konstruktora.  
   
  Te funkcje umożliwiają pisanie kodu w celu utworzenia drzewa XML. Poniżej przedstawiono przykład:  
   
@@ -38,7 +38,7 @@ XElement contacts =
     );  
 ```  
   
- Te funkcje umożliwiają również pisanie kodu, który używa wyników zapytań LINQ podczas tworzenia drzewa XML w następujący sposób:  
+ Funkcje te umożliwiają również pisanie kodu, który używa wyników kwerend LINQ podczas tworzenia drzewa XML, w następujący sposób:  
   
 ```csharp  
 XElement srcTree = new XElement("Root",  

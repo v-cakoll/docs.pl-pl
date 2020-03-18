@@ -1,19 +1,19 @@
 ---
-title: Jak znaleźć wszystkie węzły w przestrzeni nazw (C#)
+title: Jak znaleźć wszystkie węzły w obszarze nazw (C#)
 ms.date: 07/20/2015
 ms.assetid: 3a38b913-a53e-4d0e-a19d-8782bffd3364
 ms.openlocfilehash: 408f4207798720428d0dd3821d33fd3edf2f897e
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141180"
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-c"></a>Jak znaleźć wszystkie węzły w przestrzeni nazw (C#)
-Można filtrować według przestrzeni nazw każdego elementu lub atrybutu, aby znaleźć wszystkie węzły w danej przestrzeni nazw.  
+# <a name="how-to-find-all-nodes-in-a-namespace-c"></a>Jak znaleźć wszystkie węzły w obszarze nazw (C#)
+Można filtrować w obszarze nazw każdego elementu lub atrybutu, aby znaleźć wszystkie węzły w tym określonym obszarze nazw.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład tworzy drzewo XML z dwoma przestrzeniami nazw. Następnie wykonuje iterację w drzewie i drukuje nazwy wszystkich elementów i atrybutów w jednej z tych przestrzeni nazw.  
+ Poniższy przykład tworzy drzewo XML z dwoma obszarami nazw. Następnie iteruje przez drzewo i drukuje nazwy wszystkich elementów i atrybutów w jednym z tych obszarów nazw.  
   
 ```csharp  
 string markup = @"<aw:Root xmlns:aw='http://www.adventure-works.com' xmlns:fc='www.fourthcoffee.com'>  
@@ -44,9 +44,9 @@ Nodes in the http://www.adventure-works.com namespace
 ```  
   
 ## <a name="example"></a>Przykład  
- Plik XML, do którego uzyskuje się następujące zapytanie, zawiera zamówienia zakupu w dwóch różnych przestrzeniach nazw. Zapytanie tworzy nowe drzewo zawierające tylko elementy w jednej z przestrzeni nazw.  
+ Plik XML, do który uzyskano dostęp, korzystając z następującej kwerendy, zawiera zamówienia zakupu w dwóch różnych przestrzeniach nazw. Kwerenda tworzy nowe drzewo tylko z elementami w jednym z obszarów nazw.  
   
- W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: skonsolidowane zamówienia zakupu](./sample-xml-file-consolidated-purchase-orders.md).  
+ W tym przykładzie użyto następującego dokumentu XML: [Przykładowy plik XML: Skonsolidowane zamówienia zakupu](./sample-xml-file-consolidated-purchase-orders.md).  
   
 ```csharp  
 XDocument cpo = XDocument.Load("ConsolidatedPurchaseOrders.xml");  

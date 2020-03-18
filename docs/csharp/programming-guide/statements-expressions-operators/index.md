@@ -1,5 +1,5 @@
 ---
-title: Instrukcje, wyrażenia i operatory — C# Przewodnik programowania
+title: Instrukcje, wyrażenia i operatory — przewodnik programowania języka C#
 ms.date: 07/20/2015
 helpviewer_keywords:
 - expressions [C#]
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - statements [C#]
 ms.assetid: 20f8469d-5a6a-4084-ad90-0856b7e97e45
 ms.openlocfilehash: b339158848dac30f8c87a372b44574f6114a6aed
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75698641"
 ---
 # <a name="statements-expressions-and-operators-c-programming-guide"></a>Instrukcje, wyrażenia i operatory (Przewodnik programowania w języku C#)
 
-C# Kod składający się z aplikacji składa się z instrukcji składających się z słów kluczowych, wyrażeń i operatorów. Ta sekcja zawiera informacje dotyczące tych podstawowych elementów C# programu.
+Kod Języka C#, który składa się z aplikacji składa się z instrukcji składających się ze słów kluczowych, wyrażeń i operatorów. Ta sekcja zawiera informacje dotyczące tych podstawowych elementów programu C#.
 
  Aby uzyskać więcej informacji, zobacz:
 
@@ -26,17 +26,17 @@ C# Kod składający się z aplikacji składa się z instrukcji składających si
 
 - [Wyrażenia](expressions.md)
 
-  - [Elementy członkowskie z wyrażeniem w treści](expression-bodied-members.md)
+  - [Składowe z wyrażeniem w treści](expression-bodied-members.md)
 
 - [Funkcje anonimowe](anonymous-functions.md)
 
-- [Porównywanie równości](equality-comparisons.md)
+- [Porównania równości](equality-comparisons.md)
 
 ## <a name="c-language-specification"></a>Specyfikacja języka C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Przewodnik programowania w języku C#](../index.md)
+- [Przewodnik programowania języka C#](../index.md)
 - [Rzutowanie i konwersje typów](../types/casting-and-type-conversions.md)

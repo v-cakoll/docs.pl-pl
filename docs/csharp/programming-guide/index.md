@@ -10,19 +10,19 @@ helpviewer_keywords:
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
 ms.openlocfilehash: de40369a661c347a2125075e820420af4eb71cac
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75337259"
 ---
-# <a name="c-programming-guide"></a>C#Przewodnik programowania
+# <a name="c-programming-guide"></a>Przewodnik programowania w języku C#
 
-Ta sekcja zawiera szczegółowe informacje o kluczowych funkcjach języka C# oraz o funkcjach tego języka dostępnych przez platformę .NET Framework.  
+Ta sekcja zawiera szczegółowe informacje na temat kluczowych funkcji języka Języka C# i funkcje dostępne dla języka C# za pośrednictwem .NET Framework.  
   
- W większej części tej sekcji przyjęto założenie, że masz już pewną wiedzę na temat języka C# i ogólnie na temat programowania. Jeśli jesteś kompletnym początkującym z programowaniem lub C#programem, możesz chcieć odwiedzić [wprowadzenie do C# samouczków](../tutorials/intro-to-csharp/index.md) lub [samouczka platformy .NET w przeglądarce](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1), gdzie nie jest wymagana wcześniejsza wiedza o programowaniu.  
+ Większość z tej sekcji zakłada, że już wiesz coś o Języku C# i ogólne koncepcje programowania. Jeśli jesteś początkującym początkującym z programowaniem lub z C#, możesz odwiedzić [wprowadzenie do samouczków języka C#](../tutorials/intro-to-csharp/index.md) lub [samouczka .NET w przeglądarce,](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)gdzie nie jest wymagana wcześniejsza wiedza o programowaniu.  
   
- Aby uzyskać informacje dotyczące określonych słów kluczowych, operatorów i dyrektyw preprocesora, zobacz sekcję [Dokumentacja języka C#](../language-reference/index.md). Informacje o specyfikacji języka C# można znaleźć w temacie [Specyfikacja języka C#](/dotnet/csharp/language-reference/language-specification/introduction).  
+ Aby uzyskać informacje na temat określonych słów kluczowych, operatorów i dyrektyw preprocesora, zobacz [C# Odwołanie](../language-reference/index.md). For information about the C# Language Specification, see [C# Language Specification](/dotnet/csharp/language-reference/language-specification/introduction).  
   
 ## <a name="program-sections"></a>Sekcje programu
 
@@ -30,7 +30,7 @@ Ta sekcja zawiera szczegółowe informacje o kluczowych funkcjach języka C# ora
   
 [Main() i argumenty wiersza polecenia](./main-and-command-args/index.md)  
 
-## <a name="language-sections"></a>Sekcje języka
+## <a name="language-sections"></a>Sekcje językowe
 
 [Instrukcje, wyrażenia i operatory](./statements-expressions-operators/index.md)  
 
@@ -40,7 +40,7 @@ Ta sekcja zawiera szczegółowe informacje o kluczowych funkcjach języka C# ora
   
  [Interfejsy](./interfaces/index.md)  
 
- [Delegaci](./delegates/index.md)  
+ [Delegaty](./delegates/index.md)  
 
  [Tablice](./arrays/index.md)  
   
@@ -48,7 +48,7 @@ Ta sekcja zawiera szczegółowe informacje o kluczowych funkcjach języka C# ora
   
  [Właściwości](./classes-and-structs/properties.md)  
   
- [Indeksatory](./indexers/index.md)  
+ [Indexers](./indexers/index.md) (Indeksatory)  
   
  [Zdarzenia](./events/index.md)  
   
@@ -56,15 +56,15 @@ Ta sekcja zawiera szczegółowe informacje o kluczowych funkcjach języka C# ora
   
  [Iteratory](./concepts/iterators.md)
   
- [Wyrażenia zapytania LINQ](../linq/index.md)  
+ [Wyrażenia zapytań LINQ](../linq/index.md)  
   
- [Wyrażenia lambda](./statements-expressions-operators/lambda-expressions.md)  
+ [Wyrażenia Lambda](./statements-expressions-operators/lambda-expressions.md)  
   
  [Przestrzenie nazw](./namespaces/index.md)  
   
  [Niebezpieczny kod i wskaźniki](./unsafe-code-pointers/index.md)  
   
- [Komentarze dokumentacji XML](./xmldoc/index.md)  
+ [Komentarze dotyczące dokumentacji XML](./xmldoc/index.md)  
   
 ## <a name="platform-sections"></a>Sekcje platformy
 
@@ -78,12 +78,12 @@ Ta sekcja zawiera szczegółowe informacje o kluczowych funkcjach języka C# ora
   
  [Wyjątki i obsługa wyjątków](./exceptions/index.md)  
   
- [System plików i Rejestr (C# Przewodnik programowania)](./file-system/index.md)  
+ [System plików i rejestr (Przewodnik programowania w języku C#)](./file-system/index.md)  
   
  [Współdziałanie](./interop/index.md)  
   
  [Odbicie](./concepts/reflection.md)  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Dokumentacja języka C#](../language-reference/index.md)
+- [Odwołanie do języka C#](../language-reference/index.md)

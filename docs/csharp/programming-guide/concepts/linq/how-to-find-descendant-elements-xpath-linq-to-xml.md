@@ -1,23 +1,23 @@
 ---
-title: Jak znaleźć elementy zależne (XPath-LINQ to XML) (C#)
+title: Jak znaleźć elementy podrzędne (XPath-LINQ do XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: b318da39-bb8b-4c56-a019-e13b12b01831
 ms.openlocfilehash: c90651502629284c67cc16de8a1aa59c392ae178
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141104"
 ---
-# <a name="how-to-find-descendant-elements-xpath-linq-to-xml-c"></a>Jak znaleźć elementy zależne (XPath-LINQ to XML) (C#)
+# <a name="how-to-find-descendant-elements-xpath-linq-to-xml-c"></a>Jak znaleźć elementy podrzędne (XPath-LINQ do XML) (C#)
 W tym temacie pokazano, jak uzyskać elementy podrzędne o określonej nazwie.  
   
- Wyrażenie XPath jest `//Name`.  
+ Wyrażenie XPath `//Name`jest .  
   
 ## <a name="example"></a>Przykład  
- Ten przykład umożliwia znalezienie wszystkich elementów podrzędnych o nazwie `Name`.  
+ W tym przykładzie znajduje `Name`się wszystkie elementy podrzędne o nazwie .  
   
- W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: wiele zamówień zakupu (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ W tym przykładzie użyto następującego dokumentu XML: [Przykładowy plik XML: wiele zamówień zakupu (LINQ do XML).](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md)  
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  

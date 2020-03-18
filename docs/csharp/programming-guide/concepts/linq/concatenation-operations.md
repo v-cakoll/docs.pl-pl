@@ -3,29 +3,29 @@ title: Operacje łączenia (C#)
 ms.date: 07/20/2015
 ms.assetid: 890ee104-c590-457e-8a7f-b2b5da0fb417
 ms.openlocfilehash: f02e323e673e46f4e7ba4a6005c86b7f9050f8ef
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141525"
 ---
 # <a name="concatenation-operations-c"></a>Operacje łączenia (C#)
-Konkatenacja odnosi się do operacji dołączania jednej sekwencji do innej.  
+Łączenie odnosi się do operacji dołączania jednej sekwencji do drugiej.  
   
- Poniższa ilustracja przedstawia operację łączenia dla dwóch sekwencji znaków.  
+ Na poniższej ilustracji przedstawiono operację łączenia dwóch sekwencji znaków.  
   
- ![Ilustracja przedstawiająca łączenie dwóch sekwencji.](./media/concatenation-operations/concatenation-two-sequences.png)  
+ ![Grafika przedstawiająca łączenie dwóch sekwencji.](./media/concatenation-operations/concatenation-two-sequences.png)  
   
- W poniższej sekcji przedstawiono standardowe metody operatorów zapytań, które wykonują łączenie.  
+ Standardowe metody operatora kwerendy, które wykonują konkatensję są wymienione w poniższej sekcji.  
   
 ## <a name="methods"></a>Metody  
   
-|Nazwa metody|Opis|C#Składnia wyrażenia zapytania|Więcej informacji|  
+|Nazwa metody|Opis|Składnia wyrażenia kwerendy c#|Więcej informacji|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|Concat|Łączy dwie sekwencje w celu utworzenia jednej sekwencji.|Nie dotyczy.|<xref:System.Linq.Enumerable.Concat%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Concat%2A?displayProperty=nameWithType>|  
+|Concat|Łączy dwie sekwencje, tworząc jedną sekwencję.|Nie dotyczy.|<xref:System.Linq.Enumerable.Concat%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Concat%2A?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Linq>
-- [Standardowe operatory zapytań — OmówienieC#()](./standard-query-operators-overview.md)
-- [Łączenie i porównywanie kolekcji ciągów (LINQ) (C#)](./how-to-combine-and-compare-string-collections-linq.md)
+- [Omówienie standardowych operatorów zapytań (C#)](./standard-query-operators-overview.md)
+- [Jak łączyć i porównywać kolekcje ciągów (LINQ) (C#)](./how-to-combine-and-compare-string-collections-linq.md)

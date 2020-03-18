@@ -3,34 +3,34 @@ title: Serializowanie do plików, elementów TextWriter i elementów XmlWriter
 ms.date: 07/20/2015
 ms.assetid: bd3ea6f7-895b-4ff4-a625-fe2bb55b1886
 ms.openlocfilehash: 20cb84a9f79ca8de3e86a996f18c388dc53340ae
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68868855"
 ---
 # <a name="serializing-to-files-textwriters-and-xmlwriters"></a>Serializowanie do plików, elementów TextWriter i elementów XmlWriter
 
-Można serializować drzewa XML do <xref:System.IO.File>, a <xref:System.IO.TextWriter>lub <xref:System.Xml.XmlWriter>.
+Drzewa XML można serializować <xref:System.IO.File>na <xref:System.IO.TextWriter>, a <xref:System.Xml.XmlWriter>, lub .
 
-Można serializować dowolny składnik XML, w tym <xref:System.Xml.Linq.XDocument> i <xref:System.Xml.Linq.XElement>, do ciągu przy użyciu `ToString` metody.
+Za pomocą <xref:System.Xml.Linq.XDocument> <xref:System.Xml.Linq.XElement> `ToString` tej metody można serializować dowolny składnik XML, w tym i , ciąg.
 
-Jeśli chcesz pominąć formatowanie podczas serializacji do ciągu, możesz użyć <xref:System.Xml.Linq.XNode.ToString%2A?displayProperty=nameWithType> metody.
+Jeśli chcesz pominąć formatowanie podczas serializacji do ciągu, <xref:System.Xml.Linq.XNode.ToString%2A?displayProperty=nameWithType> można użyć tej metody.
 
-Zachowanie domyślne podczas serializowania do pliku ma format (wcięcie) otrzymany dokument XML. W przypadku wcięcia nie jest zachowywany znaczący biały znak w drzewie XML. Aby serializować z formatowaniem, użyj jednego z przeciążeń następujących metod, które nie przyjmują <xref:System.Xml.Linq.SaveOptions> argumentu:
-
-- <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=nameWithType>
-
-- <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=nameWithType>
-
-Jeśli chcesz, aby opcja nie była wcięty i aby zachować nieznaczący biały znak w drzewie XML, użyj jednego z przeciążeń następujących metod, które przyjmuje <xref:System.Xml.Linq.SaveOptions> jako argument:
+Domyślnym zachowaniem podczas serializacji do pliku jest sformatowanie (wcięcia) wynikowego dokumentu XML. Po wcięciu nieznaczne odstępy w drzewie XML nie są zachowywane. Aby serializować za pomocą formatowania, należy użyć jednej z przeciążeń <xref:System.Xml.Linq.SaveOptions> następujących metod, które nie są przyjmowane jako argument:
 
 - <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=nameWithType>
 
 - <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=nameWithType>
 
-Przykłady znajdują się w odpowiednim temacie.
+Jeśli opcja nie wcinać i zachować nieznaczne odstępy w drzewie XML, należy użyć jednej <xref:System.Xml.Linq.SaveOptions> z przeciążeń następujących metod, które przyjmuje jako argument:
 
-## <a name="see-also"></a>Zobacz także
+- <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=nameWithType>
 
-- [Serializowanie drzew XML (C#)](serializing-to-files-textwriters-and-xmlwriters.md)
+- <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=nameWithType>
+
+Na przykład zobacz odpowiedni temat odwołania.
+
+## <a name="see-also"></a>Zobacz też
+
+- [Serializujące drzewa XML (C#)](serializing-to-files-textwriters-and-xmlwriters.md)

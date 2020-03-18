@@ -1,20 +1,20 @@
 ---
 title: Wprowadzenie do analizy składni (interfejsy API Roslyn)
-description: Wprowadzenie do przechodzenia, wykonywania zapytań i eksplorowania drzew składni.
+description: Wprowadzenie do przechodzenia, wykonywania zapytań i przechodzenia drzew składni.
 ms.date: 02/05/2018
 ms.custom: mvc
 ms.openlocfilehash: 22d1303c9daa2ae35cf130b0c857cd7a5efdbe76
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78240522"
 ---
 # <a name="get-started-with-syntax-analysis"></a>Wprowadzenie do analizy składni
 
-W tym samouczku poznasz **składnię interfejsu API**. Interfejs API składni zapewnia dostęp do struktur danych, które opisują C# program lub Visual Basic. Te struktury danych mają wystarczającą ilość szczegółów, aby można było w pełni reprezentować każdy program dowolnego rozmiaru. Struktury te mogą opisywać kompletne programy, które kompilują i działają poprawnie. Mogą również opisywać niekompletne programy podczas pisania ich w edytorze.
+W tym samouczku zapoznajesz się z **interfejsem API składni**. Interfejs API składni zapewnia dostęp do struktur danych, które opisują program Języka C# lub Visual Basic. Te struktury danych mają wystarczająco dużo szczegółów, że mogą w pełni reprezentować dowolny program o dowolnym rozmiarze. Te struktury można opisać kompletne programy, które kompilują i działają poprawnie. Mogą również opisywać niekompletne programy, jak je piszesz, w edytorze.
 
-Aby włączyć to wyrażenie bogate, struktury danych i interfejsy API, które składają się na interfejs API składni, muszą być złożone. Zacznijmy od tego, jak wygląda struktura danych dla typowego programu "Hello world":
+Aby włączyć to wyrażenie sformatowane, struktury danych i interfejsy API, które tworzą składni interfejsu API są koniecznie złożone. Zacznijmy od tego, jak wygląda struktura danych dla typowego programu "Hello World":
 
 ```csharp
 using System;
@@ -33,88 +33,88 @@ namespace HelloWorld
 }
 ```
 
-Spójrz na tekst poprzedniego programu. Rozpoznajesz znane elementy. Cały tekst reprezentuje pojedynczy plik źródłowy lub **jednostkę kompilacji**. Trzy pierwsze wiersze tego pliku źródłowego **używają dyrektyw**. Pozostałe źródło jest zawarte w **deklaracji przestrzeni nazw**. Deklaracja przestrzeni nazw zawiera podrzędną **deklarację klasy**. Deklaracja klasy zawiera jedną **deklarację metody**.
+Spójrz na tekst poprzedniego programu. Rozpoznajesz znane elementy. Cały tekst reprezentuje pojedynczy plik źródłowy lub **jednostkę kompilacji**. Pierwsze trzy wiersze tego pliku źródłowego **używają dyrektyw**. Pozostałe źródło znajduje się w **deklaracji obszaru nazw**. Deklaracja obszaru nazw zawiera **deklarację klasy**podrzędnej . Deklaracja klasy zawiera **jedną deklarację metody**.
 
-Interfejs API składni tworzy strukturę drzewa z elementem głównym reprezentującym jednostkę kompilacji. Węzły w drzewie reprezentują dyrektywy using, deklarację przestrzeni nazw i wszystkie inne elementy programu. Struktura drzewa przechodzi do najniższych poziomów: ciąg "Hello world!" jest **tokenem literału ciągu** , który jest elementem podrzędnym **argumentu**. Interfejs API składni zapewnia dostęp do struktury programu. Można wykonywać zapytania dotyczące określonych rozwiązań kodu, przeszukać całe drzewo, aby zrozumieć kod i utworzyć nowe drzewa modyfikując istniejące drzewo.
+Interfejs API składni tworzy strukturę drzewa z katalogiem głównym reprezentującym jednostkę kompilacji. Węzły w drzewie reprezentują using dyrektyw, deklaracji obszaru nazw i wszystkie inne elementy programu. Struktura drzewa nadal do najniższych poziomów: ciąg "Hello World!" jest **tokenem literału ciągu,** który jest potomkiem **argumentu**. Interfejs API składni zapewnia dostęp do struktury programu. Można zapytań dla określonych praktyk kodu, chodzić całe drzewo, aby zrozumieć kod i utworzyć nowe drzewa, modyfikując istniejące drzewo.
 
-Ten krótki opis zawiera przegląd rodzaju informacji dostępnych przy użyciu interfejsu API składni. Interfejs API składni nie ma więcej niż formalny interfejs API, który opisuje znane konstrukcje kodu, które znasz C#. Pełne możliwości obejmują informacje o sposobie formatowania kodu, w tym podziały wierszy, biały znak i wcięcia. Korzystając z tych informacji, można w pełni przedstawić kod jako zapisany i odczytany przez programistów lub kompilator. Użycie tej struktury umożliwia współpracę z kodem źródłowym na poziomie głęboko zrozumiałym. Nie są już ciągami tekstowymi, ale dane reprezentują strukturę C# programu.
+Ten krótki opis zawiera omówienie rodzaju informacji dostępnych przy użyciu interfejsu API składni. Interfejs API składni jest niczym więcej niż formalnyinterfejs API, który opisuje znane konstrukcje kodu znane z języka C#. Pełne możliwości obejmują informacje o sposobie formatowania kodu, w tym podziały wierszy, odstępy i wcięcia. Korzystając z tych informacji, można w pełni reprezentować kod jako napisany i odczytany przez programistów lub kompilatora. Za pomocą tej struktury umożliwia interakcję z kodem źródłowym na poziomie głęboko znaczące. Nie jest to już ciągi tekstowe, ale dane reprezentujące strukturę programu C#.
 
-Aby rozpocząć, musisz zainstalować **zestaw SDK .NET compiler platform**:
+Aby rozpocząć, należy zainstalować **zestaw SDK platformy kompilatora .NET:**
 
 [!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 
 ## <a name="understanding-syntax-trees"></a>Opis drzew składni
 
-Składnia interfejsu API do analizy struktury C# kodu jest używana. **Interfejs API składni** udostępnia analizatory, drzewa składni i narzędzia do analizowania i konstruowania drzew składniowych. Jest to sposób wyszukiwania kodu dla określonych elementów składniowych lub odczytywania kodu dla programu.
+Interfejs API składni służy do dowolnej analizy struktury kodu C#. **Interfejs API składni** udostępnia analizatory, drzewa składni i narzędzia do analizowania i konstruowania drzew składni. W ten sposób można wyszukać kod dla określonych elementów składni lub odczytać kod programu.
 
-Drzewo składni jest strukturą danych używaną przez kompilatory C# i Visual Basic, aby zrozumieć C# i Visual Basic programy. Drzewa składni są tworzone przez ten sam parser, który jest uruchamiany, gdy projekt jest skompilowany lub deweloper trafi na F5. Drzewa składni mają pełną wierność w języku; każdy bit informacji w pliku kodu jest reprezentowany w drzewie. Zapisanie drzewa składni do tekstu powoduje odtworzenie dokładnego, przeanalizowanego tekstu. Drzewa składniowe są również **niezmienne**; Po utworzeniu drzewa składni nie można go zmienić. Odbiorcy drzew mogą analizować drzewa na wielu wątkach, bez blokowania ani innych miar współbieżności, wiedząc, że dane nigdy nie ulegną zmianie. Za pomocą interfejsów API można tworzyć nowe drzewa, które są wynikiem modyfikacji istniejącego drzewa.
+Drzewo składni to struktura danych używana przez kompilatory Języka C# i Visual Basic do zrozumienia programów Języka C# i Visual Basic. Drzewa składni są tworzone przez ten sam analizator, który jest uruchamiany, gdy projekt jest zbudowany lub deweloper uderza F5. Drzewa składni mają pełną wierność z językiem; każdy bit informacji w pliku kodu jest reprezentowany w drzewie. Zapis drzewa składni na tekst odtwarza dokładnie oryginalny tekst, który został przeanalizowany. Drzewa składni są również **niezmienne;** po utworzeniu drzewa składni nigdy nie można zmienić. Konsumenci drzew można analizować drzewa na wiele wątków, bez blokad lub innych środków współbieżności, wiedząc, że dane nigdy się nie zmienia. Za pomocą interfejsów API można tworzyć nowe drzewa, które są wynikiem modyfikowania istniejącego drzewa.
 
-Cztery główne bloki konstrukcyjne drzew składni są następujące:
+Cztery podstawowe bloki składni drzew składni to:
 
-* Klasa <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType>, wystąpienie reprezentujące całe drzewo analizy. <xref:Microsoft.CodeAnalysis.SyntaxTree> jest klasą abstrakcyjną, która ma pochodne specyficzne dla języka. Metody analizy klasy <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree?displayProperty=nameWithType> (lub <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree?displayProperty=nameWithType>) służą do analizowania tekstu w C# lub Visual Basic.
-* Klasa <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType>, wystąpienia reprezentujące konstrukcje składniowe, takie jak deklaracje, instrukcje, klauzule i wyrażenia.
-* Struktura <xref:Microsoft.CodeAnalysis.SyntaxToken?displayProperty=nameWithType>, która reprezentuje pojedyncze słowo kluczowe, identyfikator, operator lub interpunkcja.
-* A wreszcie struktura <xref:Microsoft.CodeAnalysis.SyntaxTrivia?displayProperty=nameWithType>, która reprezentuje składniowo nieznaczące bity informacji, takie jak odstęp między tokenami, dyrektywy przetwarzania wstępnego i komentarze.
+* Klasa, <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType> której wystąpienie reprezentuje całe drzewo analizy. <xref:Microsoft.CodeAnalysis.SyntaxTree>jest klasą abstrakcyjną, która ma instrumenty pochodne specyficzne dla języka. Metody analizy (lub) <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree?displayProperty=nameWithType> <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree?displayProperty=nameWithType>klasy do analizowania tekstu w języku C# lub Visual Basic.
+* Klasa, <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType> których wystąpienia reprezentują konstrukcje składniowe, takie jak deklaracje, instrukcje, klauzule i wyrażenia.
+* Struktura, <xref:Microsoft.CodeAnalysis.SyntaxToken?displayProperty=nameWithType> która reprezentuje pojedyncze słowo kluczowe, identyfikator, operator lub znaki interpunkcyjne.
+* I wreszcie <xref:Microsoft.CodeAnalysis.SyntaxTrivia?displayProperty=nameWithType> struktura, która reprezentuje syntaktycznie nieistotne bity informacji, takie jak biały znak między tokenami, dyrektywy przetwarzania wstępnego i komentarze.
 
-Kwizy, tokeny i węzły składają się hierarchicznie w celu utworzenia drzewa, które całkowicie reprezentuje wszystko w fragmencie Visual Basic lub C# kodu. Tę strukturę można zobaczyć przy użyciu okna **Syntax Visualizer** . W programie Visual Studio wybierz pozycję **wyświetl** > innych **Syntax Visualizer** **Windows** > . Na przykład poprzedni C# plik źródłowy zbadany przy użyciu **Syntax Visualizer** wygląda następująco:
+Ciekawostki, tokeny i węzły składają się hierarchicznie, tworząc drzewo, które całkowicie reprezentuje wszystko w fragmencie kodu Języka Visual Basic lub C#. Tę strukturę można zobaczyć za pomocą okna **Wizualizator składni.** W programie Visual Studio wybierz pozycję **Wyświetl** > inny**wizualizator składni****systemu Windows** > . Na przykład poprzedni plik źródłowy Języka C# zbadany przy użyciu **wizualizatora składni** wygląda następująco:
 
-**SyntaxNode**: Blue | **SyntaxToken**: zielony | **SyntaxTrivia**: czerwony ![C# pliku kodu](media/walkthrough-csharp-syntax-figure1.png)
+**Węzeł składni**: Niebieski | **SkładniaToken**: Zielony | **Składnia Trivia:** Czerwony ![plik kodu C#](media/walkthrough-csharp-syntax-figure1.png)
 
-Przechodząc do tej struktury drzewa, można znaleźć dowolne instrukcje, wyrażenie, token lub bit białych znaków w pliku kodu.
+Nawigując po tej strukturze drzewa, można znaleźć dowolną instrukcję, wyrażenie, token lub bit odstępu w pliku kodu.
 
-Chociaż można znaleźć coś w pliku kodu przy użyciu składni interfejsów API, większość scenariuszy obejmuje badanie małych fragmentów kodu lub wyszukiwanie konkretnych instrukcji lub fragmentów. Dwa przykłady, które obserwują typowe zastosowania do przeglądania struktury kodu lub wyszukiwania pojedynczych instrukcji.
+Chociaż można znaleźć wszystko w pliku kodu przy użyciu składni interfejsów API, większość scenariuszy obejmuje badanie małych fragmentów kodu lub wyszukiwanie określonych instrukcji lub fragmentów. Dwa przykłady, które należy wykonać pokaż typowe zastosowania do przeglądania struktury kodu lub wyszukiwania pojedynczych instrukcji.
 
-## <a name="traversing-trees"></a>Przechodzenie między drzewami
+## <a name="traversing-trees"></a>Przemierzanie drzew
 
-Węzły w drzewie składni można przeanalizować na dwa sposoby. Można przechodzić przez drzewo, aby zbadać każdy węzeł, lub można wykonywać zapytania dotyczące określonych elementów lub węzłów.
+Węzły w drzewie składni można sprawdzić na dwa sposoby. Można przechodzić przez drzewo, aby zbadać każdy węzeł lub można zapytań dla określonych elementów lub węzłów.
 
 ### <a name="manual-traversal"></a>Ręczne przechodzenie
 
 Gotowy kod dla tego przykładu można zobaczyć w [naszym repozytorium GitHub](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/SyntaxQuickStart).
 
 > [!NOTE]
-> Typy drzewa składni używają dziedziczenia do opisywania różnych elementów składni, które są prawidłowe w różnych lokalizacjach w programie. Użycie tych interfejsów API często oznacza rzutowanie właściwości lub członków kolekcji na określone typy pochodne. W poniższych przykładach przypisanie i rzutowania są oddzielnymi instrukcjami przy użyciu jawnie wpisanych zmiennych. Kod można odczytać, aby wyświetlić typy zwracane przez interfejs API i typ środowiska uruchomieniowego zwracanych obiektów. W rzeczywistości jest to bardziej powszechne użycie niejawnie wpisanych zmiennych i poleganie na nazwach interfejsów API do opisywania typu badanych obiektów.
+> Typy Drzewa składni używają dziedziczenia do opisywania różnych elementów składni, które są prawidłowe w różnych lokalizacjach w programie. Korzystanie z tych interfejsów API często oznacza właściwości rzutowania lub członków kolekcji do określonych typów pochodnych. W poniższych przykładach przypisania i rzutowania są oddzielne instrukcje, przy użyciu jawnie wpisane zmienne. Można odczytać kod, aby zobaczyć typy zwracane interfejsu API i typu wykonywania zwróconych obiektów. W praktyce jest bardziej powszechne do używania niejawnie wpisane zmienne i polegać na nazwy interfejsu API do opisania typu obiektów badane.
 
-Utwórz nowy C# projekt **Narzędzia do analizy kodu autonomicznego** :
+Utwórz nowy projekt narzędzia do **analizy kodu autonomicznego** języka C#:
 
-* W programie Visual Studio wybierz kolejno pozycje **plik** > **Nowy** > **projekt** , aby wyświetlić okno dialogowe Nowy projekt.
-* W obszarze **rozszerzalność** **Visual C#**  > wybierz pozycję **Narzędzie do analizy kodu autonomicznego**.
-* Nadaj projektowi nazwę "**SyntaxTreeManualTraversal**" i kliknij przycisk OK.
+* W programie Visual Studio wybierz pozycję **Plik** > **nowy** > **projekt,** aby wyświetlić okno dialogowe Nowy projekt.
+* W obszarze**Rozszerzalność** **języka Visual C#** > wybierz pozycję **Autonomiczne narzędzie do analizy kodu**.
+* Nazwij swój projekt "**SyntaxTreeManualTraversal**" i kliknij przycisk OK.
 
-Zamierzasz analizować podstawową "Hello world!" pokazany wcześniej program.
-Dodaj tekst dla programu Hello world jako stałą w klasie `Program`:
+Będziesz analizować podstawowe "Hello World!" program pokazany wcześniej.
+Dodaj tekst programu Hello World jako stałą w swojej `Program` klasie:
 
 [!code-csharp[Declare the program text](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#1 "Declare a constant string for the program text to analyze")]
 
-Następnie Dodaj następujący kod, aby skompilować **drzewo składni** dla tekstu kodu w `programText` stałej.  Dodaj następujący wiersz do metody `Main`:
+Następnie dodaj następujący kod, aby utworzyć **drzewo składni** `programText` dla tekstu kodu w stałej.  Dodaj następujący wiersz `Main` do metody:
 
 [!code-csharp[Create the tree](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#2 "Create the syntax tree")]
 
-Te dwa wiersze tworzą drzewo i pobierają węzeł główny tego drzewa. Teraz można przeanalizować węzły w drzewie. Dodaj te wiersze do metody `Main`, aby wyświetlić niektóre właściwości węzła głównego w drzewie:
+Te dwie linie tworzą drzewo i pobierają węzeł główny tego drzewa. Teraz można sprawdzić węzły w drzewie. Dodaj te wiersze do metody, `Main` aby wyświetlić niektóre właściwości węzła głównego w drzewie:
 
 [!code-csharp[Examine the root node](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#3 "Examine the root node")]
 
-Uruchom aplikację, aby zobaczyć, co Twój kod wykrył w węźle głównym w tym drzewie.
+Uruchom aplikację, aby zobaczyć, co kod został odnaleziony o węźle głównym w tym drzewie.
 
-Zwykle przejdziesz do drzewa, aby dowiedzieć się więcej o kodzie. W tym przykładzie analizujesz kod, który znasz, aby poznać interfejsy API. Dodaj następujący kod, aby przeanalizować pierwszego członka węzła `root`:
+Zazwyczaj należy przejść przez drzewo, aby dowiedzieć się o kodzie. W tym przykładzie analizujesz kod, który znasz, aby eksplorować interfejsy API. Dodaj następujący kod, aby sprawdzić `root` pierwszy element członkowski węzła:
 
 [!code-csharp[Find the first member](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#4 "Find the first member")]
 
-Ten element członkowski jest <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NamespaceDeclarationSyntax?displayProperty=nameWithType>. Reprezentuje wszystko w zakresie deklaracji `namespace HelloWorld`. Dodaj następujący kod, aby ocenić, które węzły są zadeklarowane wewnątrz przestrzeni nazw `HelloWorld`:
+Ten członek <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NamespaceDeclarationSyntax?displayProperty=nameWithType>jest . Reprezentuje wszystko w zakresie `namespace HelloWorld` deklaracji. Dodaj następujący kod, aby sprawdzić, które `HelloWorld` węzły są zadeklarowane w obszarze nazw:
 
 [!code-csharp[Find the class declaration](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#5 "Find the class declaration")]
 
-Uruchom program, aby zobaczyć, co się stało.
+Uruchom program, aby zobaczyć, czego się nauczyłeś.
 
-Teraz, gdy znasz deklarację <xref:Microsoft.CodeAnalysis.CSharp.Syntax.ClassDeclarationSyntax?displayProperty=nameWithType>, Zadeklaruj nową zmienną tego typu, aby sprawdzić deklarację klasy. Ta klasa zawiera tylko jeden element członkowski: Metoda `Main`. Dodaj następujący kod, aby znaleźć metodę `Main` i rzutować ją na <xref:Microsoft.CodeAnalysis.CSharp.Syntax.MethodDeclarationSyntax?displayProperty=nameWithType>.
+Teraz, gdy wiesz, <xref:Microsoft.CodeAnalysis.CSharp.Syntax.ClassDeclarationSyntax?displayProperty=nameWithType>że deklaracja jest , zadeklarować nową zmienną tego typu, aby zbadać deklarację klasy. Ta klasa zawiera tylko `Main` jeden element członkowski: metodę. Dodaj następujący kod, `Main` aby znaleźć metodę i <xref:Microsoft.CodeAnalysis.CSharp.Syntax.MethodDeclarationSyntax?displayProperty=nameWithType>oddać ją do pliku .
 
 [!code-csharp[Find the main declaration](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#6 "Find the main declaration")]
 
-Węzeł deklaracji metody zawiera wszystkie informacje o składni metody. Umożliwia wyświetlenie zwracanego typu metody `Main`, liczby i typów argumentów oraz tekstu treści metody. Dodaj następujący kod:
+Węzeł deklaracji metody zawiera wszystkie informacje składniowe dotyczące metody. Wyświetlmy zwracany typ `Main` metody, liczbę i typy argumentów oraz tekst podstawowy metody. Dodaj następujący kod:
 
 [!code-csharp[Examine the syntax of the main method](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#7 "Display information about the main method")]
 
-Uruchom program, aby wyświetlić wszystkie wykryte informacje o tym programie:
+Uruchom program, aby wyświetlić wszystkie informacje, które zostały wykryte na temat tego programu:
 
 ```text
 The tree is a CompilationUnit node.
@@ -138,57 +138,57 @@ The body text of the Main method follows:
         }
 ```
 
-### <a name="query-methods"></a>Metody zapytań
+### <a name="query-methods"></a>Metody kwerendy
 
-Oprócz przechodzenia między drzewami można także eksplorować drzewo składni przy użyciu metod zapytania zdefiniowanych w <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType>. Metody te powinny być od razu znane dla każdego, kto zna wyrażenie XPath. Za pomocą tych metod można szybko znaleźć elementy w drzewie. <xref:Microsoft.CodeAnalysis.SyntaxNode> ma metody zapytania, takie jak <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A>, <xref:Microsoft.CodeAnalysis.SyntaxNode.AncestorsAndSelf%2A> i <xref:Microsoft.CodeAnalysis.SyntaxNode.ChildNodes%2A>.
+Oprócz przechodzenia przez drzewa można również eksplorować drzewo składni <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType>przy użyciu metod kwerendy zdefiniowanych na . Metody te powinny być natychmiast znane każdemu zaznajomienizi z XPath. Za pomocą tych metod z LINQ szybko znaleźć rzeczy w drzewie. Ma <xref:Microsoft.CodeAnalysis.SyntaxNode> metody kwerend, <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A>takie <xref:Microsoft.CodeAnalysis.SyntaxNode.AncestorsAndSelf%2A> <xref:Microsoft.CodeAnalysis.SyntaxNode.ChildNodes%2A>jak , i .
 
-Za pomocą tych metod zapytania można znaleźć argument metody `Main` jako alternatywę dla nawigowania po drzewie. Dodaj następujący kod na dole metody `Main`:
+Za pomocą tych metod kwerendy można `Main` znaleźć argument do metody jako alternatywa dla nawigacji drzewa. Dodaj następujący kod do dolnej części metody: `Main`
 
 [!code-csharp[Query the tree for the arguments to Main](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#8 "Query the tree for the arguments to Main")]
 
-Pierwsza instrukcja używa wyrażenia LINQ i metody <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A>, aby zlokalizować ten sam parametr jak w poprzednim przykładzie.
+Pierwsza instrukcja używa wyrażenia LINQ i <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A> metody, aby zlokalizować ten sam parametr, co w poprzednim przykładzie.
 
-Uruchom program i sprawdź, czy wyrażenie LINQ znalazło ten sam parametr co ręczne nawigowanie po drzewie.
+Uruchom program i widać, że wyrażenie LINQ znaleziono ten sam parametr, co ręczne poruszanie się po drzewie.
 
-Przykład używa instrukcji `WriteLine`, aby wyświetlić informacje o drzewach składni w miarę ich przechodzenia. Więcej informacji można również uzyskać, uruchamiając gotowy program w debugerze. Można zapoznać się z większą liczbą właściwości i metod, które są częścią drzewa składni utworzonego dla programu Hello World.
+Przykład używa `WriteLine` instrukcji do wyświetlania informacji o drzewach składni podczas ich przechodzenia. Można również dowiedzieć się znacznie więcej, uruchamiając gotowy program w ramach debugera. Można zbadać więcej właściwości i metod, które są częścią drzewa składni utworzonego dla programu hello world.
 
-## <a name="syntax-walkers"></a>Instruktaże składniowe
+## <a name="syntax-walkers"></a>Spacerowicze składni
 
-Często chcesz znaleźć wszystkie węzły określonego typu w drzewie składni, na przykład każdą deklarację właściwości w pliku. Rozszerzając klasę <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker?displayProperty=nameWithType> i zastępując metodę <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor.VisitPropertyDeclaration(Microsoft.CodeAnalysis.CSharp.Syntax.PropertyDeclarationSyntax)>, przetwarzasz każdą deklarację właściwości w drzewie składni bez uprzedniego znajomości swojej struktury. <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> jest szczególnym rodzajem <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor>, które rekursywnie odwiedza węzeł i każdy z jego elementów podrzędnych.
+Często chcesz znaleźć wszystkie węzły określonego typu w drzewie składni, na przykład każdą deklarację właściwości w pliku. Rozszerzając <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker?displayProperty=nameWithType> klasę i zastępując <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor.VisitPropertyDeclaration(Microsoft.CodeAnalysis.CSharp.Syntax.PropertyDeclarationSyntax)> metodę, przetwarzasz każdą deklarację właściwości w drzewie składni, nie znając wcześniej jej struktury. <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker>jest specyficznym <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor> rodzajem tego cyklicznego odwiedza węzeł i każde z jego dzieci.
 
-Ten przykład implementuje <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker>, który analizuje drzewo składni. Zbiera `using` dyrektywy znalezionych, które nie importuje `System` przestrzeni nazw.
+W tym przykładzie <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> implementuje, który sprawdza drzewo składni. Zbiera `using` dyrektyw, które stwierdza, że nie `System` są importowane obszaru nazw.
 
-Utwórz nowy C# projekt **Narzędzia do analizy kodu autonomicznego** ; Nadaj mu nazwę "**SyntaxWalker**".
+Utwórz nowy projekt narzędzia do **analizy kodu autonomicznego** języka C#; nazwa **"SyntaxWalker**"
 
-Gotowy kod dla tego przykładu można zobaczyć w [naszym repozytorium GitHub](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/SyntaxQuickStart). Przykład w witrynie GitHub zawiera projekty opisane w tym samouczku.
+Gotowy kod dla tego przykładu można zobaczyć w [naszym repozytorium GitHub](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/SyntaxQuickStart). Przykład na GitHub zawiera oba projekty opisane w tym samouczku.
 
-Tak jak w poprzednim przykładzie, można zdefiniować stałą ciągu, aby pomieścić tekst programu, który ma być analizowany:
+Podobnie jak w poprzednim przykładzie, można zdefiniować stałą ciągu do przechowywania tekstu programu, który zamierzasz przeanalizować:
 
 [!code-csharp[Define the code text to analyzer](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#1 "Define the program text to analyze")]
 
-Ten tekst źródłowy zawiera dyrektywy `using` rozłożone na cztery różne lokalizacje: na poziomie pliku, w przestrzeni nazw najwyższego poziomu i w dwóch zagnieżdżonych obszarach nazw. Ten przykład wyróżnia scenariusz podstawowy dla użycia klasy <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> do wykonywania zapytań w kodzie. Aby znaleźć deklaracje, można odwiedzać każdy węzeł w głównym drzewie składni. Zamiast tego należy utworzyć klasę pochodną i zastąpić metodę, która jest wywoływana tylko wtedy, gdy bieżący węzeł drzewa jest dyrektywą using. Odwiedzający nie wykonuje żadnej pracy na żadnym innym typie węzła. Ta pojedyncza Metoda analizuje poszczególne instrukcje `using` i tworzy kolekcję przestrzeni nazw, które nie znajdują się w `System` przestrzeni nazw. Tworzysz <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker>, który analizuje wszystkie instrukcje `using`, ale tylko instrukcje `using`.
+Ten tekst `using` źródłowy zawiera dyrektywy rozproszone w czterech różnych lokalizacjach: na poziomie pliku, w obszarze nazw najwyższego poziomu i w dwóch zagnieżdżonych przestrzeniach nazw. W tym przykładzie wyróżniono <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> podstawowy scenariusz używania klasy do wykonywania zapytań kodu. Byłoby kłopotliwe, aby odwiedzić każdy węzeł w drzewie składni katalogu głównego, aby znaleźć przy użyciu deklaracji. Zamiast tego należy utworzyć klasę pochodną i zastąpić metodę, która jest wywoływana tylko wtedy, gdy bieżący węzeł w drzewie jest using dyrektywy. Użytkownik nie wykonuje żadnej pracy nad innymi typami węzłów. Ta pojedyncza metoda sprawdza `using` każdą z instrukcji i tworzy kolekcję przestrzeni `System` nazw, które nie są w przestrzeni nazw. <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> Tworzysz, który sprawdza `using` wszystkie instrukcje, `using` ale tylko instrukcje.
 
-Po zdefiniowaniu tekstu programu należy utworzyć `SyntaxTree` i uzyskać katalog główny tego drzewa:
+Po zdefiniowaniu tekstu programu należy utworzyć `SyntaxTree` katalog główny tego drzewa:
 
 [!code-csharp[Create the Syntax tree and access the root](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#2 "Create the Syntax tree and access the root node.")]
 
-Następnie utwórz nową klasę. W programie Visual Studio wybierz pozycję **projekt** > **Dodaj nowy element**. W oknie dialogowym **Dodaj nowy element** wpisz *UsingCollector.cs* jako nazwę pliku.
+Następnie utwórz nową klasę. W programie Visual Studio wybierz pozycję **Project** > **Add New Item**. W oknie dialogowym **Dodawanie nowego elementu** *UsingCollector.cs* jako nazwa pliku.
 
-Zaimplementowanie funkcji odwiedzającej `using` w klasie `UsingCollector`. Zacznij od wprowadzenia klasy `UsingCollector` pochodnej z <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker>.
+Zaimplementujesz `using` funkcjonalność odwiedzającego `UsingCollector` w klasie. Zacznij od `UsingCollector` tego, aby <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker>klasa pochodziła od .
 
 [!code-csharp[Declare the base class for the using collector](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#3 "Declare the base class for the UsingCollector")]
 
-Potrzebujesz magazynu, w którym będą przechowywane węzły przestrzeni nazw, które są zbierane.  Zadeklaruj publiczną właściwość tylko do odczytu w klasie `UsingCollector`; Ta zmienna służy do przechowywania odnalezionych <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax> węzłów:
+Magazyn jest potrzebny do przechowywania zbieraczy węzłów obszaru nazw.  Zadeklarować publiczną właściwość tylko `UsingCollector` do odczytu w klasie; ta zmienna służy <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax> do przechowywania węzłów, które można znaleźć:
 
 [!code-csharp[Declare storage for the using syntax nodes](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#4 "Declare storage for the using syntax nodes")]
 
-Klasa bazowa, <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> implementuje logikę, aby odwiedzać każdy węzeł w drzewie składni. Klasa pochodna przesłania metody wywoływane dla określonych odpowiednich węzłów. W tym przypadku interesuje Cię `using` dyrektywę. Oznacza to, że należy zastąpić metodę <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor.VisitUsingDirective(Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax)>. Jeden z argumentów tej metody jest obiektem <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax?displayProperty=nameWithType>. Jest to ważna korzyść przy użyciu osób odwiedzających: wywołuje zastąpione metody z argumentami, które są już rzutowane na określony typ węzła. Klasa <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax?displayProperty=nameWithType> ma właściwość <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax.Name>, która przechowuje nazwę importowanej przestrzeni nazw. Jest to <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax?displayProperty=nameWithType>. Dodaj następujący kod w <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor.VisitUsingDirective(Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax)> przesłonięciu:
+Klasa podstawowa <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> implementuje logikę, aby odwiedzić każdy węzeł w drzewie składni. Klasa pochodna zastępuje metody wywoływane dla określonych węzłów, które Cię interesują. W takim przypadku jesteś zainteresowany `using` dowolną dyrektywą. Oznacza to, że <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor.VisitUsingDirective(Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax)> należy zastąpić metodę. Jeden argument do tej <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax?displayProperty=nameWithType> metody jest obiektem. Jest to ważna zaleta korzystania z odwiedzających: nazywają zastąpione metody z argumentami już oddanych do określonego typu węzła. Klasa <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax?displayProperty=nameWithType> ma <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax.Name> właściwość, która przechowuje nazwę importowanego obszaru nazw. Jest to <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax?displayProperty=nameWithType>. Dodaj następujący kod <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor.VisitUsingDirective(Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax)> w zastąpieniu:
 
 [!code-csharp[Examine using nodes for the System namespace](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#5 "Examine all using nodes for the System namespace.")]
 
-Podobnie jak w przypadku wcześniejszego przykładu dodano szereg instrukcji `WriteLine`, które ułatwią zrozumienie tej metody. Możesz zobaczyć, kiedy jest wywoływana, i jakie argumenty są do niego przesyłane za każdym razem.
+Podobnie jak we wcześniejszym przykładzie, dodano wiele `WriteLine` instrukcji, aby pomóc w zrozumieniu tej metody. Można zobaczyć, kiedy jest wywoływana i jakie argumenty są przekazywane do niego za każdym razem.
 
-Na koniec należy dodać dwa wiersze kodu, aby utworzyć `UsingCollector` i odwiedzać węzeł główny, zbierając wszystkie instrukcje `using`. Następnie Dodaj pętlę `foreach`, aby wyświetlić wszystkie instrukcje `using` znalezione przez moduł zbierający:
+Na koniec należy dodać dwa wiersze `UsingCollector` kodu, aby utworzyć i go odwiedzić `using` węzeł główny, zbierając wszystkie instrukcje. Następnie dodaj `foreach` pętlę, aby `using` wyświetlić wszystkie instrukcje znalezione przez moduł zbierający:
 
 [!code-csharp[Create the UsingCollector and visit the root node.](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#6 "Create the UsingCollector and visit the root node.")]
 
@@ -220,4 +220,4 @@ Microsoft.CSharp
 Press any key to continue . . .
 ```
 
-Gratulacje! **Interfejs API składni** jest używany do lokalizowania określonych rodzajów C# instrukcji i deklaracji w C# kodzie źródłowym.
+Gratulacje! Interfejs **API składni** został użyty do zlokalizowania określonych rodzajów instrukcji c# i deklaracji w kodzie źródłowym języka C#.

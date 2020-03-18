@@ -1,18 +1,18 @@
 ---
 title: Przechowywanie wyników zapytania w pamięci
-description: Sposób przechowywania wyników.
+description: Jak przechowywać wyniki.
 ms.date: 11/30/2016
 ms.assetid: 5b863961-1750-4cf9-9607-acea5054d15a
 ms.openlocfilehash: 66a7a95c74db4062e76c54d4339ccb7343f44067
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "65633567"
 ---
 # <a name="store-the-results-of-a-query-in-memory"></a>Przechowywanie wyników zapytania w pamięci
 
-Zapytanie jest po prostu zestaw instrukcji dotyczących sposobu pobierania i organizowania danych. Zapytania są wykonywane opóźnieniem, zgodnie z żądaniem jest każdy element kolejne w wyniku. Kiedy używasz `foreach` do iteracji wyników, elementy są zwracane jako dostępne. Ocena zapytania i przechowywać wyniki bez wykonywania `foreach` pętli, po prostu wywołać jedną z następujących metod w zmiennej zapytania:
+Kwerenda jest w zasadzie zestaw instrukcji dotyczących pobierania i organizowania danych. Zapytania są wykonywane leniwie, jak każdy kolejny element w wyniku jest wymagane. Gdy używasz `foreach` do iterate wyników, elementy są zwracane jako dostęp. Aby ocenić kwerendę i przechowywać `foreach` jej wyniki bez wykonywania pętli, wystarczy wywołać jedną z następujących metod na zmiennej kwerendy:
 
 - <xref:System.Linq.Enumerable.ToList%2A>
 
@@ -22,12 +22,12 @@ Zapytanie jest po prostu zestaw instrukcji dotyczących sposobu pobierania i org
 
 - <xref:System.Linq.Enumerable.ToLookup%2A>
 
- Zaleca się, czy podczas można przechowywać wyników zapytania, można przypisać obiektu zwróconego kolekcji do nowej zmiennej jak pokazano w poniższym przykładzie:
+ Zaleca się, aby podczas przechowywania wyników kwerendy przypisano zwrócony obiekt kolekcji do nowej zmiennej, jak pokazano w poniższym przykładzie:
 
 ## <a name="example"></a>Przykład
 
 [!code-csharp[csProgGuideLINQ#25](~/samples/snippets/csharp/concepts/linq/how-to-store-the-results-of-a-query-in-memory_1.cs)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Language Integrated Query (LINQ)](index.md)

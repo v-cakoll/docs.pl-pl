@@ -1,66 +1,66 @@
 ---
 title: Samouczki języka C#
-description: Zapoznaj C# się z tymi samouczkami, C# aby dowiedzieć C# się, jak tworzyć programy i uczyć się funkcji językowych.
+description: Zapoznaj się z tymi samouczkami języka C#, aby dowiedzieć się, jak tworzyć programy języka C# i uczyć się funkcji języka Języka C#.
 ms.date: 10/25/2018
 ms.openlocfilehash: 8adbec3311c7a0e88475734312ecc3621042c3f3
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75346799"
 ---
 # <a name="c-tutorials"></a>Samouczki języka C#
 
-Witamy w C# samouczkach. Rozpoczynają się one od interaktywnych lekcji, które można uruchomić w przeglądarce. Nowsze samouczki i bardziej zaawansowane samouczki ułatwiają współpracę z narzędziami deweloperskimi C# platformy .NET w celu tworzenia programów na komputerze.
+Witamy w samouczkach języka C#. Zaczynają się one od interaktywnych lekcji, które można uruchomić w przeglądarce. Późniejsze samouczki i bardziej zaawansowane samouczki ułatwiają pracę z narzędziami programistycznymi .NET w celu tworzenia programów Języka C# na komputerze.
 
-## <a name="introduction-to-c-interactive-tutorials"></a>Wprowadzenie do C# interaktywnych samouczków
+## <a name="introduction-to-c-interactive-tutorials"></a>Wprowadzenie do interaktywnych samouczków języka C#
 
-Jeśli chcesz rozpocząć Eksplorowanie w formacie wideo, [ C# seria wideo 101](https://aka.ms/dotnet3-csharp) zawiera wprowadzenie do. C# W tych samouczkach znajdziesz informacje o pojęciach, które można poznać.
+Jeśli chcesz rozpocząć eksplorację w formacie wideo, [seria wideo C# 101](https://aka.ms/dotnet3-csharp) zawiera wprowadzenie do języka C#. Dowiesz się o pojęciach, które możesz poznać w tych samouczkach.
 
-Pierwsze lekcje objaśniają C# koncepcje dotyczące korzystania z małych fragmentów kodu. Poznasz podstawy C# składni i sposób pracy z typami danych, takimi jak ciągi, liczby i wartości logiczne. Jest to wszystko interaktywne, a ty będziesz pisać i uruchamiać kod w ciągu kilku minut. W tych pierwszej lekcji nie założono wcześniej znajomości programowania lub C# języka.
+Pierwsze lekcje wyjaśnić pojęcia C# przy użyciu małych fragmentów kodu. Dowiesz się podstaw składni języka C# i sposobu pracy z typami danych, takimi jak ciągi, liczby i wartości logiczne. To wszystko jest interaktywne, a będziesz pisać i uruchamiać kod w ciągu kilku minut. Te pierwsze lekcje zakładają brak wcześniejszej wiedzy na temat programowania lub języka C#.
 
-## <a name="hello-worldintro-to-csharphello-worldyml"></a>[Hello World](intro-to-csharp/hello-world.yml)
+## <a name="hello-world"></a>[Cześć ludzie](intro-to-csharp/hello-world.yml)
 
-W samouczku [Hello World](intro-to-csharp/hello-world.yml) utworzysz najbardziej podstawowy C# program. Poznasz typ `string` i sposób pracy z tekstem.
+W samouczku [Hello world](intro-to-csharp/hello-world.yml) utworzysz najbardziej podstawowy program Języka C#. Będziesz eksplorować `string` typ i jak pracować z tekstem.
 
-## <a name="numbers-in-cintro-to-csharpnumbers-in-csharpyml"></a>[Liczby w języku C#](intro-to-csharp/numbers-in-csharp.yml)
+## <a name="numbers-in-c"></a>[Liczby w języku C#](intro-to-csharp/numbers-in-csharp.yml)
 
-W [numerach w C# ](intro-to-csharp/numbers-in-csharp.yml) samouczku dowiesz się, jak komputery są przechowywane w liczbie i jak wykonywać obliczenia przy użyciu różnych typów liczbowych. Poznasz podstawy zaokrąglania i sposób wykonywania obliczeń matematycznych za pomocą C#. Ten samouczek jest również dostępny [do uruchamiania lokalnego na komputerze](intro-to-csharp/numbers-in-csharp-local.md).
+W [samouczku Numbers in C#](intro-to-csharp/numbers-in-csharp.yml) dowiesz się, jak komputery przechowują liczby i jak wykonywać obliczenia z różnymi typami liczbowymi. Dowiesz się podstaw zaokrąglania i jak wykonywać obliczenia matematyczne przy użyciu języka C#. Ten samouczek jest również dostępny [do uruchamiania lokalnie na komputerze](intro-to-csharp/numbers-in-csharp-local.md).
 
-W tym samouczku założono, że zakończono lekcji [Witaj świecie](intro-to-csharp/hello-world.yml) .
+W tym samouczku przyjęto założenie, że lekcja [świata Hello](intro-to-csharp/hello-world.yml) została ukończona.
 
-## <a name="branches-and-loopsintro-to-csharpbranches-and-loopsyml"></a>[Gałęzie i pętle](intro-to-csharp/branches-and-loops.yml)
+## <a name="branches-and-loops"></a>[Gałęzie i pętle](intro-to-csharp/branches-and-loops.yml)
 
-Samouczek [rozgałęzienia i pętle](intro-to-csharp/branches-and-loops.yml) uczy się podstaw wyboru różnych ścieżek wykonywania kodu na podstawie wartości przechowywanych w zmiennych. Nauczysz się podstaw przepływu sterowania, który jest podstawą sposobu podejmowania decyzji przez programy i wybierania różnych akcji. Ten samouczek jest również dostępny [do uruchamiania lokalnego na komputerze](intro-to-csharp/branches-and-loops-local.md).
+Poradnik [gałęzie i pętle](intro-to-csharp/branches-and-loops.yml) uczy podstaw wybierania różnych ścieżek wykonywania kodu na podstawie wartości przechowywanych w zmiennych. Dowiesz się podstaw przepływu sterowania, który jest podstawą tego, jak programy podejmują decyzje i wybierają różne akcje. Ten samouczek jest również dostępny [do uruchamiania lokalnie na komputerze](intro-to-csharp/branches-and-loops-local.md).
 
-W tym samouczku przyjęto założenie, że zakończysz [Witaj świecie](intro-to-csharp/hello-world.yml) i [numery w C# ](intro-to-csharp/numbers-in-csharp.yml) lekcji.
+W tym samouczku przyjęto założenie, że ukończono [Hello świata](intro-to-csharp/hello-world.yml) i numery [w c#](intro-to-csharp/numbers-in-csharp.yml) lekcje.
 
-## <a name="list-collectionintro-to-csharplist-collectionyml"></a>[Kolekcja list](intro-to-csharp/list-collection.yml)
+## <a name="list-collection"></a>[Kolekcja listy](intro-to-csharp/list-collection.yml)
 
-Lekcja [kolekcji list](intro-to-csharp/list-collection.yml) zawiera Przewodnik typu kolekcji list, który przechowuje sekwencje danych. Dowiesz się, jak dodawać i usuwać elementy, wyszukiwać elementy i sortować listy. Poznasz różne rodzaje list. Ten samouczek jest również dostępny [do uruchamiania lokalnego na komputerze](intro-to-csharp/arrays-and-collections.md).
+[Lekcja kolekcji Lista](intro-to-csharp/list-collection.yml) daje przewodnik po typie kolekcji Lista, który przechowuje sekwencje danych. Dowiesz się, jak dodawać i usuwać elementy, wyszukiwać elementy i sortować listy. Będziesz eksplorować różne rodzaje list. Ten samouczek jest również dostępny [do uruchamiania lokalnie na komputerze](intro-to-csharp/arrays-and-collections.md).
 
-W tym samouczku założono, że zostały zakończone lekcje wymienione powyżej.
+W tym samouczku przyjęto założenie, że lekcje wymienione powyżej zostały zakończone.
 
-## <a name="introduction-to-c----work-locallyintro-to-csharplocal-environmentmd"></a>[Wprowadzenie do C# pracy lokalnie](intro-to-csharp/local-environment.md)
+## <a name="introduction-to-c----work-locally"></a>[Wprowadzenie do języka C# — praca lokalnie](intro-to-csharp/local-environment.md)
 
-Wszystkie samouczki wprowadzające po lekcji Hello world są dostępne w Twoim lokalnym środowisku programistycznym. Na końcu każdego samouczka zdecyduje się, czy chcesz przejść do następnej lekcji w trybie online, czy na własnej maszynie. Istnieją linki ułatwiające skonfigurowanie środowiska i kontynuowanie następnego samouczka na komputerze.
+Wszystkie samouczki wprowadzające następujące po lekcji Hello World są dostępne we własnym lokalnym środowisku programistycznym. Pod koniec każdego samouczka zdecydujesz, czy chcesz kontynuować następną lekcję online lub na własnym komputerze. Istnieją łącza ułatwiające konfigurowanie środowiska i kontynuowanie następnego samouczka na komputerze.
 
-## <a name="explore-new-features-in-c"></a>Poznaj nowe funkcje w języku C\#
+## <a name="explore-new-features-in-c"></a>Poznaj nowe funkcje w C\#
 
-* [Wypróbuj nowe funkcje w C# 6 interaktywnie](exploration/csharp-6.yml): Eksploruj funkcje dodane w [ C# 6](../whats-new/csharp-6.md) interaktywnie w przeglądarce.
-* [Interpolacja ciągów](string-interpolation.md): pokazuje, jak używać interpolacji ciągów do tworzenia ciągów sformatowanych C#w.
-* [Typy odwołań do wartości null](nullable-reference-types.md): pokazuje, jak używać typów referencyjnych dopuszczających wartość null do wyrażania intencji dla odwołań o wartości null.
-* [Zaktualizuj projekt, aby korzystał z typów referencyjnych dopuszczających wartość null](upgrade-to-nullable-references.md): demonstruje metody uaktualniania istniejącego projektu w celu użycia typów referencyjnych dopuszczających wartość null.
-* [Rozszerzenie możliwości danych przy użyciu dopasowania do wzorca](pattern-matching.md): pokazuje, jak używać dopasowywania wzorców do rozszerzonego typu poza podstawowe funkcje.
-* [Pracuj z sekwencjami danych przy użyciu indeksów i zakresów](ranges-indexes.md): pokazuje nową dogodną składnię do uzyskiwania dostępu do pojedynczych elementów lub zakresów kontenera danych sekwencyjnych.
+* [Wypróbuj nowe funkcje w języku C# 6 interaktywnie:](exploration/csharp-6.yml)zapoznaj się z funkcjami dodanymi w [języku C# 6](../whats-new/csharp-6.md) interaktywnie w przeglądarce.
+* [Interpolacja ciągów](string-interpolation.md): pokazuje, jak używać interpolacji ciągów do tworzenia sformatowanych ciągów w języku C#.
+* [Typy odwołań z możliwością null:](nullable-reference-types.md)pokazuje, jak używać typów odwołań nullable wyrazić zamiar dla odwołań null.
+* [Zaktualizuj projekt, aby użyć typów odwołań nullable:](upgrade-to-nullable-references.md)demonstruje techniki uaktualniania istniejącego projektu, aby użyć typów odwołań nullable.
+* [Rozszerz możliwości danych przy użyciu dopasowania wzorca:](pattern-matching.md)pokazuje, jak używać dopasowywania wzorców, aby rozszerzyć typy poza ich podstawowe funkcje.
+* [Praca z sekwencjami danych przy użyciu indeksów i zakresów](ranges-indexes.md): Demonstruje nową wygodną składnię dostępu do pojedynczych elementów lub zakresów kontenera danych sekwencyjnych.
 
-## <a name="general-tutorials"></a>Ogólne samouczki
+## <a name="general-tutorials"></a>Samouczki ogólne
 
-Poniższe samouczki umożliwiają kompilowanie C# programów przy użyciu [programu .NET Core](../../core/index.md):
+Następujące samouczki umożliwiają tworzenie programów C# przy użyciu [programu .NET Core:](../../core/index.md)
 
-* [Aplikacja konsolowa](console-teleprompter.md): pokazuje operacje we/wy konsoli, strukturę aplikacji konsolowej oraz podstawowe modele programowania asynchronicznego opartego na zadaniach.
-* [Klient REST](console-webapiclient.md): pokazuje komunikację sieci Web, serializacji JSON i funkcje zorientowane obiektowo w C# języku.
-* [Dziedziczenie C# w programie i .NET](inheritance.md): demonstruje C#dziedziczenie w, w tym użycie dziedziczenia do definiowania klas bazowych, abstrakcyjnych klas podstawowych i klas pochodnych.
-* [Praca z LINQ](working-with-linq.md): pokazuje wiele funkcji LINQ i elementów języka, które je obsługują.
-* [Używanie atrybutów](attributes.md): pokazuje, jak tworzyć i używać atrybutów w C#.
-* Samouczek [interpolacji ciągów](exploration/interpolated-strings.yml) pokazuje, jak wstawić wartości do ciągu. Dowiesz się, jak utworzyć ciąg interpolowany z osadzonymi C# wyrażeniami i jak kontrolować wygląd wyników wyrażenia w ciągu wynikowym. Ten samouczek jest również dostępny [do uruchamiania lokalnego na komputerze](exploration/interpolated-strings-local.md).
+* [Aplikacja konsoli:](console-teleprompter.md)demonstruje we/wy konsoli, strukturę aplikacji konsoli i podstawy modelu programowania asynchronicznego opartego na zadaniach.
+* [Klient REST](console-webapiclient.md): demonstruje komunikację internetową, serializację JSON i funkcje obiektowe w języku C#.
+* [Dziedziczenie w języku C# i .NET](inheritance.md): demonstruje dziedziczenie w języku C#, w tym użycie dziedziczenia do definiowania klas podstawowych, abstrakcyjnych klas podstawowych i klas pochodnych.
+* [Praca z LINQ](working-with-linq.md): pokazuje wiele funkcji LINQ i elementów języka, które go obsługują.
+* [Za pomocą atrybutów:](attributes.md)pokazuje, jak tworzyć i używać atrybutów w języku C#.
+* Samouczek [interpolacji ciągów](exploration/interpolated-strings.yml) pokazuje, jak wstawić wartości do ciągu. Dowiesz się, jak utworzyć interpolowany ciąg z osadzonymi wyrażeniami Języka C# i jak kontrolować wygląd tekstu wyrażenia powoduje ciąg wynikowy. Ten samouczek jest również dostępny [do uruchamiania lokalnie na komputerze](exploration/interpolated-strings-local.md).

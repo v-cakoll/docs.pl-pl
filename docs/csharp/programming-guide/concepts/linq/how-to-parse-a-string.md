@@ -1,21 +1,21 @@
 ---
-title: Jak przeanalizować ciąg (C#)
+title: Jak przeanalizować ciąg znaków (C#)
 ms.date: 07/20/2015
 ms.assetid: 81e5686c-9658-42d8-a7e3-b11be0a2c98b
 ms.openlocfilehash: 79821eb9e5cd7187ac3c2a93f85eaae45c5c48ac
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75345812"
 ---
-# <a name="how-to-parse-a-string-c"></a>Jak przeanalizować ciąg (C#)
+# <a name="how-to-parse-a-string-c"></a>Jak przeanalizować ciąg znaków (C#)
 
-W tym temacie pokazano, jak przeanalizować ciąg w celu utworzenia drzewa C#XML w.
+W tym temacie pokazano, jak przeanalizować ciąg, aby utworzyć drzewo XML w języku C#.
 
 ## <a name="example"></a>Przykład
 
-Poniższy C# kod ilustruje sposób analizowania ciągu XML:
+Poniższy kod Języka C# pokazuje sposób analizowanie ciągu XML:
 
 ```csharp
 XElement contacts = XElement.Parse(
@@ -47,13 +47,13 @@ XElement contacts = XElement.Parse(
 Console.WriteLine(contacts);
 ```
 
-Węzeł główny `Contacts` ma dwa węzły `Contact`. Aby uzyskać dostęp do określonych danych w analizowanym formacie XML, należy użyć metody [XElement. elementy ()](xref:System.Xml.Linq.XContainer.Elements) , która w tym przypadku zwraca elementy podrzędne głównego węzła `Contacts`. Poniższy przykład drukuje pierwszy węzeł `Contact` w konsoli programu:
+Węzeł `Contacts` główny ma `Contact` dwa węzły. Aby uzyskać dostęp do niektórych określonych danych w przeanalizowanym pliku XML, należy użyć metody [XElement.Elements(),](xref:System.Xml.Linq.XContainer.Elements) która w tym przypadku zwraca elementy podrzędne węzła głównego. `Contacts` Poniższy przykład drukuje `Contact` pierwszy węzeł do konsoli:
 
 ```csharp
 List<XElement> contactNodes = contacts.Elements("Contact").ToList();
 Console.WriteLine(contactNodes[0]);
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Jak znaleźć element z określonym atrybutem (C#)](how-to-find-an-element-with-a-specific-attribute.md)

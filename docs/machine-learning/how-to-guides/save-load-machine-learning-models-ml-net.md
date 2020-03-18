@@ -1,22 +1,22 @@
 ---
-title: Zapisz i Załaduj modele przeszkolone
+title: Zapisywanie i ładowanie przeszkolonych modeli
 description: Dowiedz się, jak zapisywać i ładować przeszkolone modele
 ms.date: 05/03/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
 ms.openlocfilehash: e3cebe979b5c279ce8cb90db5510f8758c24c2b4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73977007"
 ---
-# <a name="save-and-load-trained-models"></a>Zapisz i Załaduj modele przeszkolone
+# <a name="save-and-load-trained-models"></a>Zapisywanie i ładowanie przeszkolonych modeli
 
-Dowiedz się, jak zapisywać i ładować modele przeszkolone w aplikacji.
+Dowiedz się, jak zapisywać i ładować przeszkolone modele w aplikacji.
 
-W całym procesie konstruowania modelu, model jest w pamięci i jest dostępny w całym cyklu życia aplikacji. Jeśli jednak aplikacja przestanie działać, jeśli model nie zostanie zapisany lokalnie lub zdalnie, nie jest już dostępny. Zazwyczaj modele są używane w pewnym momencie po szkoleniu w innych aplikacjach do wnioskowania lub ponownego uczenia się. W związku z tym ważne jest, aby zachować model. Zapisz i Załaduj modele, korzystając z kroków opisanych w kolejnych sekcjach tego dokumentu w przypadku używania potoków przygotowywania danych i szkoleń modeli, takich jak przedstawione poniżej. Chociaż ten przykład używa modelu regresji liniowej, ten sam proces ma zastosowanie do innych algorytmów ML.NET.
+W całym procesie budowania modelu model mieszka w pamięci i jest dostępny w całym cyklu życia aplikacji. Jednak gdy aplikacja przestanie działać, jeśli model nie jest zapisywany gdzieś lokalnie lub zdalnie, nie jest już dostępny. Zazwyczaj modele są używane w pewnym momencie po szkoleniu w innych aplikacjach albo do wnioskowania lub ponownego szkolenia. W związku z tym ważne jest, aby przechowywać model. Zapisz i załaduj modele, wykonując kroki opisane w kolejnych sekcjach tego dokumentu podczas korzystania z potoków przygotowania i szkolenia modelu, takich jak ten opisany poniżej. Mimo że w tym przykładzie używa modelu regresji liniowej, ten sam proces ma zastosowanie do innych algorytmów ML.NET.
 
 ```csharp
 HousingData[] housingData = new HousingData[]
@@ -60,27 +60,27 @@ ITransformer trainedModel = pipelineEstimator.Fit(data);
 mlContext.Model.Save(trainedModel, data.Schema, "model.zip");
 ```
 
-Ponieważ większość modeli i potoków przygotowywania danych dziedziczy z tego samego zestawu klas, sygnatury metody Zapisz i Załaduj dla tych składników są takie same. W zależności od przypadku użycia można połączyć potok przygotowania danych i model do jednego [`EstimatorChain`](xref:Microsoft.ML.Data.TransformerChain%601) , co spowoduje wyjście pojedynczego [`ITransformer`](xref:Microsoft.ML.ITransformer) lub oddzielenie ich w celu utworzenia oddzielnego [`ITransformer`](xref:Microsoft.ML.ITransformer) dla każdej z nich.
+Ponieważ większość modeli i potoków przygotowania danych dziedziczyć z tego samego zestawu klas, zapisz i załadować podpisy metody dla tych składników jest taka sama. W zależności od przypadku użycia można połączyć potok przygotowania [`EstimatorChain`](xref:Microsoft.ML.Data.TransformerChain%601) danych i modelu [`ITransformer`](xref:Microsoft.ML.ITransformer) w jednym, który [`ITransformer`](xref:Microsoft.ML.ITransformer) będzie wyprowadzać jeden lub oddzielić je w ten sposób tworząc oddzielne dla każdego.
 
-## <a name="save-a-model-locally"></a>Lokalne zapisywanie modelu
+## <a name="save-a-model-locally"></a>Zapisywanie modelu lokalnie
 
-Podczas zapisywania modelu potrzebne są dwa elementy:
+Podczas zapisywania modelu potrzebne są dwie rzeczy:
 
-1. [`ITransformer`](xref:Microsoft.ML.ITransformer) modelu.
-2. [`DataViewSchema`](xref:Microsoft.ML.DataViewSchema) oczekiwanego danych wejściowych [`ITransformer`](xref:Microsoft.ML.ITransformer).
+1. Modelu. [`ITransformer`](xref:Microsoft.ML.ITransformer)
+2. Oczekiwane [`DataViewSchema`](xref:Microsoft.ML.DataViewSchema) go [`ITransformer`](xref:Microsoft.ML.ITransformer)wego.
 
-Po przekształceniu modelu Użyj metody [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*) , aby zapisać przeszkolony model do pliku o nazwie `model.zip` przy użyciu `DataViewSchema` danych wejściowych.
+Po przeszkoleniu modelu, [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*) należy użyć metody, aby `model.zip` zapisać `DataViewSchema` uczonego modelu do pliku o nazwie przy użyciu danych wejściowych.
 
 ```csharp
 // Save Trained Model
 mlContext.Model.Save(trainedModel, data.Schema, "model.zip");
 ```
 
-## <a name="load-a-model-stored-locally"></a>Ładowanie modelu przechowywanego lokalnie
+## <a name="load-a-model-stored-locally"></a>Załaduj model przechowywany lokalnie
 
-Modele przechowywane lokalnie mogą być używane w innych procesach lub aplikacjach, takich jak `ASP.NET Core` i `Serverless Web Applications`. Zobacz [używanie ml.NET w interfejsie API sieci Web](./serve-model-web-api-ml-net.md) i [wdrażanie aplikacji sieci Web bezserwerowych ml.NET](./serve-model-serverless-azure-functions-ml-net.md) , aby dowiedzieć się więcej.
+Modele przechowywane lokalnie mogą być używane `ASP.NET Core` `Serverless Web Applications`w innych procesach lub aplikacjach, takich jak i . Aby dowiedzieć się więcej, [zobacz Używanie ML.NET w interfejsie API sieci Web](./serve-model-web-api-ml-net.md) i wdrażanie artykułów ML.NET aplikacji ML.NET [serverless Web App.](./serve-model-serverless-azure-functions-ml-net.md)
 
-W oddzielnej aplikacji lub procesie Użyj metody [`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load*) wraz ze ścieżką pliku, aby uzyskać model przeszkolony do aplikacji.
+W oddzielnej aplikacji lub [`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load*) procesu użyj metody wraz ze ścieżką pliku, aby uzyskać uczonego modelu do aplikacji.
 
 ```csharp
 //Define DataViewSchema for data preparation pipeline and trained model
@@ -90,9 +90,9 @@ DataViewSchema modelSchema;
 ITransformer trainedModel = mlContext.Model.Load("model.zip", out modelSchema);
 ```
 
-## <a name="load-a-model-stored-remotely"></a>Załaduj zdalnie przechowywany model
+## <a name="load-a-model-stored-remotely"></a>Załaduj model przechowywany zdalnie
 
-Aby załadować potoki przygotowywania danych i modele przechowywane w lokalizacji zdalnej do aplikacji, użyj [`Stream`](xref:System.IO.Stream) zamiast ścieżki pliku w metodzie [`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load*) .
+Aby załadować potoki przygotowania danych i modele przechowywane [`Stream`](xref:System.IO.Stream) w lokalizacji zdalnej [`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load*) do aplikacji, należy użyć ścieżki pliku zamiast metody.
 
 ```csharp
 // Create MLContext
@@ -111,14 +111,14 @@ using (HttpClient client = new HttpClient())
 }
 ```
 
-## <a name="working-with-separate-data-preparation-and-model-pipelines"></a>Praca z oddzielnymi potokami przygotowywania i tworzenia danych
+## <a name="working-with-separate-data-preparation-and-model-pipelines"></a>Praca z oddzielnymi potokami przygotowania i modelowania danych
 
 > [!NOTE]
-> Praca z oddzielnymi potokami przygotowywania i uczenia modeli jest opcjonalna. Rozdzielenie potoków ułatwia sprawdzenie poznaniych parametrów modelu. W przypadku prognoz można łatwiej zapisywać i ładować pojedynczy potok, który obejmuje operacje przygotowywania i szkolenia modelu danych.
+> Praca z oddzielnymi potokami przygotowania danych i szkolenia modelu jest opcjonalna. Separacja potoków ułatwia sprawdzanie parametrów modelu wyuczonego. W przypadku prognoz łatwiej jest zapisać i załadować pojedynczy potok, który zawiera operacje przygotowania danych i szkolenia modelu.
 
-Podczas pracy z oddzielnymi potokami i modelami przygotowywania danych jest stosowany ten sam proces jak pojedynczy potok; z wyjątkiem przypadków, w których teraz oba potoki muszą być zapisane i ładowane jednocześnie.
+Podczas pracy z oddzielnymi potokami i modelami przygotowania danych stosuje się ten sam proces co pojedyncze potoki; z wyjątkiem teraz oba rurociągi muszą być zapisywane i ładowane jednocześnie.
 
-Podane oddzielne potoki przygotowywania i szkolenia modeli:
+Biorąc pod uwagę oddzielne potoki przygotowania danych i model szkolenia:
 
 ```csharp
 // Define data preparation estimator
@@ -139,9 +139,9 @@ IDataView transformedData = dataPrepTransformer.Transform(data);
 RegressionPredictionTransformer<LinearRegressionModelParameters> trainedModel = sdcaEstimator.Fit(transformedData);
 ```
 
-### <a name="save-data-preparation-pipeline-and-trained-model"></a>Zapisywanie potoku przygotowywania danych i modelu przeszkolonego
+### <a name="save-data-preparation-pipeline-and-trained-model"></a>Zapisywanie potoku przygotowania danych i przeszkolonego modelu
 
-Aby zapisać zarówno potok przygotowania danych, jak i model przeszkolony, użyj następujących poleceń:
+Aby zapisać zarówno potok przygotowania danych, jak i przeszkolony model, użyj następujących poleceń:
 
 ```csharp
 // Save Data Prep transformer
@@ -151,9 +151,9 @@ mlContext.Model.Save(dataPrepTransformer, data.Schema, "data_preparation_pipelin
 mlContext.Model.Save(trainedModel, transformedData.Schema, "model.zip");
 ```
 
-### <a name="load-data-preparation-pipeline-and-trained-model"></a>Załaduj potok przygotowywania danych i model szkolony
+### <a name="load-data-preparation-pipeline-and-trained-model"></a>Potok przygotowania danych załadowania i przeszkolony model
 
-W oddzielnym procesie lub aplikacji Załaduj potok przygotowywania danych i model szkolony jednocześnie w następujący sposób:
+W oddzielnym procesie lub aplikacji załaduj potok przygotowania danych i przeszkolony model jednocześnie w następujący sposób:
 
 ```csharp
 // Create MLContext

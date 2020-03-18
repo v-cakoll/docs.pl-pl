@@ -1,32 +1,32 @@
 ---
-title: C#Atrybuty — przewodnik po C# języku
-description: Dowiedz się więcej na temat programowania deklaracyjnego przy użyciu atrybutów wC#
+title: C# Atrybuty — przewodnik po języku Języka C#
+description: 'Dowiedz się więcej o programowaniu deklaratywnym przy użyciu atrybutów w języku C #'
 ms.date: 02/27/2020
 ms.assetid: 753bcfe2-7ddd-4487-9513-ba70937fc8e9
 ms.openlocfilehash: dc5b194c22fc2746ff8b0ab3e550e560a3666bbe
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78159211"
 ---
 # <a name="attributes"></a>Atrybuty
 
-Typy, elementy członkowskie i inne jednostki w C# programie obsługują Modyfikatory kontrolujące pewne aspekty ich zachowania. Na przykład dostępność metody jest kontrolowana przy użyciu modyfikatorów `public`, `protected`, `internal`i `private`. C#służy do uogólniania tej funkcji w taki sposób, aby typy informacji deklaratywnych zdefiniowanych przez użytkownika mogły być dołączane do jednostek programu i pobierane w czasie wykonywania. Programy określają te dodatkowe informacje deklaracyjne przez definiowanie i używanie ***atrybutów***.
+Typy, elementy członkowskie i inne jednostki w programie C# obsługują modyfikatory, które kontrolują niektóre aspekty ich zachowania. Na przykład dostępność metody jest kontrolowana `public`za `protected` `internal`pomocą `private` , , i modyfikatorów. C# generalizuje tę funkcję, tak aby zdefiniowane przez użytkownika typy informacji deklaratywnych można dołączyć do jednostek programu i pobrać w czasie wykonywania. Programy określają te dodatkowe informacje deklaratywne, definiując i używając ***atrybutów***.
 
-Poniższy przykład deklaruje `HelpAttribute` atrybutu, który może być umieszczony w jednostkach programu, aby udostępnić linki do powiązanej dokumentacji.
+W poniższym `HelpAttribute` przykładzie deklaruje atrybut, który można umieścić w jednostkach programu, aby zapewnić łącza do ich skojarzonej dokumentacji.
 
 [!code-csharp[AttributeDefined](../../../samples/snippets/csharp/tour/attributes/Program.cs#L3-L20)]
 
-Wszystkie klasy atrybutów pochodzą z klasy bazowej <xref:System.Attribute> dostarczonej przez bibliotekę standardową. Atrybuty mogą być stosowane, dając ich nazwę, wraz z dowolnymi argumentami, wewnątrz nawiasów kwadratowych tuż przed skojarzoną deklaracją. Jeśli nazwa atrybutu zostanie zakończona w `Attribute`, ta część nazwy może zostać pominięta, gdy odwołanie do atrybutu. Na przykład `HelpAttribute` może być używana w następujący sposób.
+Wszystkie klasy atrybutów <xref:System.Attribute> pochodzą od klasy podstawowej dostarczonej przez bibliotekę standardową. Atrybuty mogą być stosowane przez podanie ich nazwy, wraz z dowolnymi argumentami, wewnątrz nawiasów kwadratowych tuż przed skojarzonej deklaracji. Jeśli nazwa atrybutu kończy `Attribute`się na , tej części nazwy można pominąć, gdy atrybut jest przywoływany. Na przykład `HelpAttribute` można użyć w następujący sposób.
 
 [!code-csharp[AttributeApplied](../../../samples/snippets/csharp/tour/attributes/Program.cs#L22-L28)]
 
-Ten przykład dołącza `HelpAttribute` do klasy `Widget`. Dodaje kolejną `HelpAttribute` do metody `Display` w klasie. Publiczne konstruktory klasy atrybutów kontrolują informacje, które muszą być dostarczone, gdy atrybut jest dołączony do jednostki programu. Dodatkowe informacje można uzyskać, odwołując się do właściwości publicznego odczytu i zapisu klasy atrybutów (takich jak odwołanie do właściwości `Topic` wcześniej).
+W tym przykładzie `HelpAttribute` dołącza `Widget` a do klasy. Dodaje inny `HelpAttribute` do `Display` metody w klasie. Konstruktory publiczne klasy atrybutu kontrolują informacje, które muszą być dostarczone, gdy atrybut jest dołączony do jednostki programu. Dodatkowe informacje można podać, odwołując się do publicznych właściwości odczytu i `Topic` zapisu klasy atrybutu (takie jak odwołanie do właściwości wcześniej).
 
-Metadane zdefiniowane przez atrybuty mogą być odczytywane i manipulowane w czasie wykonywania przy użyciu odbicia. Gdy określony atrybut jest żądany przy użyciu tej techniki, Konstruktor klasy atrybutu jest wywoływany z informacjami podanymi w źródle programu i zwracane jest wystąpienie atrybutu wynikowego. Jeśli dodatkowe informacje zostały przekazane za pomocą właściwości, te właściwości są ustawiane na podane wartości przed zwróceniem wystąpienia atrybutu.
+Metadane zdefiniowane przez atrybuty mogą być odczytywane i manipulowane w czasie wykonywania przy użyciu odbicia. Gdy określony atrybut jest wymagane przy użyciu tej techniki, konstruktor dla klasy atrybutu jest wywoływana z informacji podanych w źródle programu, a wynikowy wystąpienie atrybutu jest zwracany. Jeśli dodatkowe informacje zostały dostarczone za pośrednictwem właściwości, te właściwości są ustawione na podane wartości przed wystąpieniem atrybutu jest zwracany.
 
-Poniższy przykład kodu demonstruje, jak uzyskać `HelpAttribute` wystąpienia skojarzone z klasą `Widget` i jej metodą `Display`.
+Poniższy przykład owy pokazuje, jak `HelpAttribute` uzyskać wystąpienia `Widget` skojarzone `Display` z klasą i jej metodą.
 
 [!code-csharp[AttributeRead](../../../samples/snippets/csharp/tour/attributes/Program.cs#ReadAttributes)]
 

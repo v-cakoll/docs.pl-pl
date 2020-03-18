@@ -1,128 +1,128 @@
 ---
 title: Wdrażanie aplikacji .NET Core za pomocą programu Visual Studio
-description: Dowiedz się, jak wdrożyć aplikację platformy .NET Core w programie Visual Studio.
+description: Dowiedz się, jak wdrożyć aplikację .NET Core za pomocą programu Visual Studio.
 ms.date: 09/03/2018
 dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
 ms.openlocfilehash: 11a322278ce3ff38964fe2fa389e0b4a58897ec4
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77449026"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Wdrażanie aplikacji .NET Core za pomocą programu Visual Studio
 
-Aplikację .NET Core można wdrożyć jako *wdrożenie zależne od platformy*, które obejmuje pliki binarne aplikacji, ale zależy od obecności platformy .NET Core w systemie docelowym lub jako *samodzielnego wdrożenia*, w tym plików binarnych aplikacji i programu .NET Core. Aby zapoznać się z omówieniem wdrażania aplikacji .NET Core, zobacz [wdrażanie aplikacji .NET Core](index.md).
+Aplikację .NET Core można wdrożyć jako *wdrożenie zależne od struktury,* które obejmuje pliki binarne aplikacji, ale zależy od obecności programu .NET Core w systemie docelowym lub jako *samodzielne wdrożenie,* które obejmuje zarówno aplikację, jak i pliki binarne .NET Core. Aby zapoznać się z omówieniem wdrażania aplikacji .NET Core, zobacz [Wdrażanie aplikacji podstawowej .NET](index.md).
 
-W poniższych sekcjach pokazano, jak używać Microsoft Visual Studio do tworzenia następujących rodzajów wdrożeń:
+W poniższych sekcjach przedstawiono sposób tworzenia następujących rodzajów wdrożeń za pomocą programu Microsoft Visual Studio:
 
-- Wdrożenie zależny od struktury
-- Wdrożenie zależne od platformy z zależnościami innych firm
-- Niezależne wdrożenia
-- Samodzielne wdrożenie z zależnościami innych firm
+- Wdrożenie zależne od struktury
+- Wdrożenie zależne od struktury z zależnościami innych firm
+- Samodzielne wdrażanie
+- Samodzielne wdrażanie z zależnościami innych firm
 
-Aby uzyskać informacje dotyczące korzystania z programu Visual Studio w celu tworzenia aplikacji platformy .NET Core, zobacz [zależności i wymagania dotyczące platformy .NET Core](../install/dependencies.md?pivots=os-windows).
+Aby uzyskać informacje dotyczące tworzenia aplikacji .NET Core za pomocą programu Visual Studio, zobacz [zależności i wymagania programu .NET Core](../install/dependencies.md?pivots=os-windows).
 
-## <a name="framework-dependent-deployment"></a>Wdrożenie zależny od struktury
+## <a name="framework-dependent-deployment"></a>Wdrożenie zależne od struktury
 
-Wdrażanie wdrożenia zależnego od platformy bez zależności innych firm polega jedynie na kompilowaniu, testowaniu i publikowaniu aplikacji. Prosty przykład zapisaniem C# ilustruje proces.
+Wdrażanie wdrożenia zależneod struktury bez zależności innych firm po prostu polega na tworzeniu, testowania i publikowania aplikacji. Prosty przykład napisany w języku C# ilustruje proces.
 
 1. Utwórz projekt.
 
-   Wybierz kolejno pozycje **Plik** > **Nowy** > **Projekt**. W oknie dialogowym **Nowy projekt** C# rozwiń kategorie projektu języka (lub Visual Basic) w okienku **zainstalowane** typy projektów, wybierz pozycję **.NET Core**, a następnie w środkowym okienku wybierz szablon **Aplikacja konsolowa (.NET Core)** . Wprowadź nazwę projektu, na przykład "FDD", w polu tekstowym **Nazwa** . Wybierz przycisk **OK**.
+   Wybierz **pozycję Plik** > **nowy** > **projekt**. W oknie dialogowym **Nowy projekt** rozwiń kategorie projektów języka (C# lub Visual Basic) w okienku **Zainstalowane** typy projektów wybierz pozycję **.NET Core**, a następnie wybierz szablon aplikacji konsoli **(.NET Core)** w środkowym okienku. Wprowadź nazwę projektu, na przykład "FDD", w polu tekstowym **Nazwa.** Wybierz przycisk **OK**.
 
 1. Dodaj kod źródłowy aplikacji.
 
-   Otwórz plik *program.cs* lub *program. vb* w edytorze i Zastąp automatycznie wygenerowany kod następującym kodem. Poprosi użytkownika o wprowadzenie tekstu i wyświetlenie pojedynczych słów wprowadzonych przez użytkownika. Używa wyrażenia regularnego `\w+`, aby rozdzielić słowa w tekście wejściowym.
+   Otwórz *plik Program.cs* lub *Program.vb* w edytorze i zastąp automatycznie wygenerowany kod następującym kodem. Monituje użytkownika o wprowadzenie tekstu i wyświetla poszczególne słowa wprowadzone przez użytkownika. Używa wyrażenia `\w+` regularnego do oddzielenia wyrazów w tekście wejściowym.
 
    [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
    [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
 
 1. Utwórz kompilację debugowania aplikacji.
 
-   Wybierz pozycję **kompilacja** > **Kompiluj rozwiązanie**. Możesz również skompilować i uruchomić kompilację debugowania aplikacji, wybierając pozycję **debuguj** > **Rozpocznij debugowanie**.
+   Wybierz **rozwiązanie kompilacji** > **Build Solution**. Można również skompilować i uruchomić kompilację debugowania aplikacji, wybierając **debugowanie** > **Rozpocznij debugowanie**.
 
-1. Wdróż aplikację.
+1. Wdrażanie aplikacji.
 
-   Po debugowaniu i przetestowaniu programu Utwórz pliki do wdrożenia przy użyciu aplikacji. Aby opublikować z programu Visual Studio, wykonaj następujące czynności:
+   Po debugowania i przetestowaniu programu utwórz pliki do wdrożenia w aplikacji. Aby opublikować z programu Visual Studio, wykonaj następujące czynności:
 
-      1. Zmień konfigurację rozwiązania z **Debuguj** na **Release** na pasku narzędzi, aby utworzyć wydanie (a nie debugowanie) wersji aplikacji.
+      1. Zmień konfigurację rozwiązania z **Debug** do **Wydania** na pasku narzędzi, aby utworzyć wersję (a nie debugowanie) wersji aplikacji.
 
-      1. Kliknij prawym przyciskiem myszy projekt (a nie rozwiązanie) w **Eksplorator rozwiązań** i wybierz polecenie **Publikuj**.
+      1. Kliknij prawym przyciskiem myszy projekt (nie rozwiązanie) w **Eksploratorze rozwiązań** i wybierz polecenie **Publikuj**.
 
-      1. Na karcie **Publikowanie** wybierz pozycję **Publikuj**. Program Visual Studio zapisuje pliki wchodzące w skład aplikacji w lokalnym systemie plików.
+      1. Na karcie **Publikowanie** wybierz pozycję **Publikuj**. Program Visual Studio zapisuje pliki, które składają się na aplikację do lokalnego systemu plików.
 
-      1. Karta **Publikowanie** zawiera teraz pojedynczy profil, **FolderProfile**. Ustawienia konfiguracji profilu są wyświetlane w sekcji **Podsumowanie** karty.
+      1. Na karcie **Publikuj** jest teraz wyświetlany pojedynczy **profil, FolderProfile**. Ustawienia konfiguracji profilu są wyświetlane w sekcji **Podsumowanie** na karcie.
 
-   Pliki otrzymane są umieszczane w katalogu o nazwie `Publish` w systemie Windows i `publish` w systemach UNIX, które znajdują się w podkatalogu podkatalogu *.\bin\release\netcoreapp2.1* projektu.
+   Pliki wynikowe są umieszczane `Publish` w `publish` katalogu o nazwie w systemie Windows i w systemach Unix, który znajduje się w podkatalogu podkatalogu projektu *.\bin\release\netcoreapp2.1.*
 
-Podobnie jak w przypadku plików aplikacji, proces publikowania emituje plik bazy danych programu (. pdb), który zawiera informacje o debugowaniu aplikacji. Plik jest przydatny głównie do debugowania wyjątków. Możesz zrezygnować z spakowania go z plikami aplikacji. Należy jednak zapisać ją w zdarzeniu, które chcesz debugować kompilację wydania aplikacji.
+Wraz z plikami aplikacji proces publikowania emituje plik bazy danych programu (pdb), który zawiera informacje o debugowaniu aplikacji. Plik jest przydatny głównie do debugowania wyjątków. Można wybrać, aby nie pakować go z plikami aplikacji. Należy jednak zapisać go w przypadku, gdy chcesz debugować kompilacji wersji aplikacji.
 
-Wdróż cały zestaw plików aplikacji w dowolny sposób. Na przykład możesz spakować je w pliku zip, użyć prostego polecenia `copy` lub wdrożyć je przy użyciu dowolnego wybranego pakietu instalacyjnego. Po zainstalowaniu użytkownicy mogą następnie wykonać swoją aplikację za pomocą polecenia `dotnet` i podać nazwę pliku aplikacji, taką jak `dotnet fdd.dll`.
+Wdrażaj kompletny zestaw plików aplikacji w dowolny sposób. Na przykład można spakować je w pliku `copy` Zip, użyć prostego polecenia lub wdrożyć je z dowolnego pakietu instalacyjnego do wyboru. Po zainstalowaniu użytkownicy mogą następnie wykonać `dotnet` aplikację za pomocą polecenia i `dotnet fdd.dll`podając nazwę pliku aplikacji, takich jak .
 
-Oprócz plików binarnych aplikacji Instalator powinien również powiązać Instalatora struktury udostępnionej lub sprawdzić go jako warunek wstępny w ramach instalacji aplikacji.  Instalacja struktury udostępnionej wymaga dostępu administratora/katalogu głównego, ponieważ jest to cały komputer.
+Oprócz plików binarnych aplikacji instalator powinien również łączyć instalator udostępnionej struktury lub sprawdzać go jako warunek wstępny w ramach instalacji aplikacji.  Instalacja udostępnionej struktury wymaga dostępu administratora/katalogu głównego, ponieważ jest dostępna na całym komputerze.
 
-## <a name="framework-dependent-deployment-with-third-party-dependencies"></a>Wdrożenie zależne od platformy z zależnościami innych firm
+## <a name="framework-dependent-deployment-with-third-party-dependencies"></a>Wdrożenie zależne od struktury z zależnościami innych firm
 
-Wdrożenie wdrożenia zależnego od platformy z co najmniej jedną zależnością innej firmy wymaga, aby wszystkie zależności były dostępne dla projektu. Aby można było skompilować aplikację, wymagane są następujące dodatkowe kroki:
+Wdrażanie wdrożenia zależneod struktury z co najmniej jedną zależnościami innych firm wymaga, aby wszystkie zależności były dostępne dla projektu. Aby można było utworzyć aplikację, wymagane są następujące dodatkowe kroki:
 
-1. Użyj **Menedżera pakietów NuGet** , aby dodać odwołanie do pakietu NuGet do projektu; a jeśli pakiet nie jest jeszcze dostępny w systemie, zainstaluj go. Aby otworzyć Menedżera pakietów, wybierz pozycję **narzędzia** > **menedżer pakietów NuGet** > **Zarządzanie pakietami NuGet dla rozwiązania**.
+1. Użyj **Menedżera pakietów NuGet,** aby dodać odwołanie do pakietu NuGet do projektu; a jeśli pakiet nie jest jeszcze dostępny w systemie, zainstaluj go. Aby otworzyć menedżera pakietów, wybierz **narzędzia** > **NuGet Package Manager** > **Manage NuGet Packages for Solution**.
 
-1. Upewnij się, że zależności innych firm (na przykład `Newtonsoft.Json`) są zainstalowane w systemie i, jeśli nie, zainstaluj je. Karta **zainstalowane** zawiera listę pakietów NuGet zainstalowanych w systemie. Jeśli `Newtonsoft.Json` nie znajduje się na liście, wybierz kartę **Przeglądaj** i w polu wyszukiwania wprowadź ciąg "Newtonsoft. JSON". Wybierz pozycję `Newtonsoft.Json` i w prawym okienku wybierz swój projekt przed wybraniem opcji **Zainstaluj**.
+1. Upewnij się, że zależności innych firm `Newtonsoft.Json`(na przykład) są zainstalowane w systemie i, jeśli nie są, zainstaluj je. **Zainstalowana** karta zawiera listę pakietów NuGet zainstalowanych w systemie. Jeśli `Newtonsoft.Json` nie ma tam na liście, wybierz kartę **Przeglądaj** i wpisz "Newtonsoft.Json" w polu wyszukiwania. Zaznacz `Newtonsoft.Json` i w prawym okienku wybierz projekt przed wybraniem **opcji Zainstaluj**.
 
-1. Jeśli `Newtonsoft.Json` jest już zainstalowana w systemie, Dodaj ją do projektu, wybierając projekt w prawym okienku na karcie **Zarządzanie pakietami dla rozwiązania** .
+1. Jeśli `Newtonsoft.Json` jest już zainstalowany w systemie, dodaj go do projektu, wybierając projekt w prawym okienku karty **Zarządzanie pakietami dla rozwiązania.**
 
-Wdrożenie zależne od platformy z zależnościami innych firm jest przenośne tylko jako elementy zależne od innych firm. Jeśli na przykład biblioteka innych firm obsługuje tylko macOS, aplikacja nie jest przenośna do systemów Windows. Dzieje się tak, jeśli zależność innej firmy zależy od kodu natywnego. Dobrym przykładem jest [serwer Kestrel](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), który wymaga natywnej zależności od [libuv](https://github.com/libuv/libuv). Gdy FDD jest tworzona dla aplikacji z tym rodzajem zależności innych firm, opublikowane dane wyjściowe zawierają folder dla każdego [identyfikatora środowiska uruchomieniowego (RID)](../rid-catalog.md) , który obsługuje zależność natywną (i która istnieje w pakiecie NuGet).
+Wdrożenie zależne od struktury z zależnościami innych firm jest tylko tak przenośne, jak jego zależności innych firm. Jeśli na przykład biblioteka innej firmy obsługuje tylko system macOS, nie jest przenośna w systemach Windows. Dzieje się tak, jeśli zależność innej firmy sama zależy od kodu macierzystego. Dobrym tego przykładem jest [serwer Kestrel](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), który wymaga natywnej zależności od [libuv](https://github.com/libuv/libuv). Gdy fdd jest tworzony dla aplikacji z tego rodzaju zależności innych firm, opublikowane dane wyjściowe zawiera folder dla każdego [identyfikatora wykonywania (RID),](../rid-catalog.md) który obsługuje zależności macierzystej (i który istnieje w pakiecie NuGet).
 
 ## <a name="simpleSelf"></a>Samodzielne wdrażanie bez zależności innych firm
 
-Wdrożenie samodzielnego wdrożenia bez zależności innych firm polega na tworzeniu projektu, modyfikowaniu pliku *csproj* , tworzeniu, testowaniu i publikowaniu aplikacji. Prosty przykład zapisaniem C# ilustruje proces. Zacznij od utworzenia, napisania i przetestowania projektu w taki sam sposób, jak w przypadku wdrożenia zależnego od platformy:
+Wdrażanie samodzielnego wdrożenia bez zależności innych firm wiąże się z tworzeniem projektu, modyfikowaniem pliku *csproj,* tworzeniem, testowaniem i publikowaniem aplikacji. Prosty przykład napisany w języku C# ilustruje proces. Rozpoczynasz od tworzenia, kodowania i testowania projektu tak samo, jak wdrożenie zależne od struktury:
 
 1. Utwórz projekt.
 
-   Wybierz kolejno pozycje **Plik** > **Nowy** > **Projekt**. W oknie dialogowym **Nowy projekt** C# rozwiń kategorie projektu języka (lub Visual Basic) w okienku **zainstalowane** typy projektów, wybierz pozycję **.NET Core**, a następnie w środkowym okienku wybierz szablon **Aplikacja konsolowa (.NET Core)** . Wprowadź nazwę projektu, na przykład "SCD", w polu tekstowym **Nazwa** , a następnie wybierz przycisk **OK** .
+   Wybierz **pozycję Plik** > **nowy** > **projekt**. W oknie dialogowym **Nowy projekt** rozwiń kategorie projektów języka (C# lub Visual Basic) w okienku **Zainstalowane** typy projektów wybierz pozycję **.NET Core**, a następnie wybierz szablon aplikacji konsoli **(.NET Core)** w środkowym okienku. Wprowadź nazwę projektu, na przykład "SCD", w polu tekstowym **Nazwa** i wybierz przycisk **OK.**
 
 1. Dodaj kod źródłowy aplikacji.
 
-   Otwórz plik *program.cs* lub *program. vb* w edytorze i Zastąp automatycznie wygenerowany kod następującym kodem. Poprosi użytkownika o wprowadzenie tekstu i wyświetlenie pojedynczych słów wprowadzonych przez użytkownika. Używa wyrażenia regularnego `\w+`, aby rozdzielić słowa w tekście wejściowym.
+   Otwórz *plik Program.cs* lub *Program.vb* w edytorze i zastąp automatycznie wygenerowany kod następującym kodem. Monituje użytkownika o wprowadzenie tekstu i wyświetla poszczególne słowa wprowadzone przez użytkownika. Używa wyrażenia `\w+` regularnego do oddzielenia wyrazów w tekście wejściowym.
 
    [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
    [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
 
-1. Określ, czy chcesz używać trybu niezmiennej globalizacji.
+1. Określ, czy chcesz użyć trybu niezmiennego globalizacji.
 
-   Szczególnie jeśli aplikacja jest przeznaczona dla systemu Linux, można zmniejszyć łączny rozmiar wdrożenia, wykorzystując [tryb niezmienny globalizacji](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md). Tryb niezmiennej globalizacji jest przydatny w przypadku aplikacji, które nie są ogólnie obsługiwane i które mogą korzystać z Konwencji formatowania, konwencji dotyczących wielkości liter i porównywania ciągów oraz kolejności sortowania [niezmiennej kultury](xref:System.Globalization.CultureInfo.InvariantCulture).
+   Szczególnie jeśli aplikacja jest przeznaczona dla systemu Linux, można zmniejszyć całkowity rozmiar wdrożenia, korzystając z [trybu niezmiennego globalizacji.](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md) Tryb niezmienny globalizacji jest przydatny w przypadku aplikacji, które nie są globalnie świadome i które mogą używać konwencji formatowania, konwencji wielkości liter oraz porównania i sortowania ciągów [kultury niezmiennej.](xref:System.Globalization.CultureInfo.InvariantCulture)
 
-   Aby włączyć tryb niezmienny, kliknij prawym przyciskiem myszy projekt (nie rozwiązanie) w **Eksplorator rozwiązań**i wybierz polecenie **Edytuj SCD. csproj** lub **Edytuj SCD. vbproj**. Następnie Dodaj następujące wyróżnione wiersze do pliku:
+   Aby włączyć tryb niezmienny, kliknij prawym przyciskiem myszy projekt (nie rozwiązanie) w **Eksploratorze rozwiązań**i wybierz polecenie **Edit SCD.csproj** lub **Edit SCD.vbproj**. Następnie dodaj do pliku następujące wyróżnione wiersze:
 
    [!code-xml[globalization-invariant-mode](~/samples/snippets/core/deploying/xml/invariant.csproj?highlight=6-8)]
 
 1. Utwórz kompilację debugowania aplikacji.
 
-   Wybierz pozycję **kompilacja** > **Kompiluj rozwiązanie**. Możesz również skompilować i uruchomić kompilację debugowania aplikacji, wybierając pozycję **debuguj** > **Rozpocznij debugowanie**. Ten krok debugowania pozwala identyfikować problemy z aplikacją, gdy jest ona uruchomiona na platformie hosta. Nadal będzie konieczne przetestowanie go na każdej platformie docelowej.
+   Wybierz **rozwiązanie kompilacji** > **Build Solution**. Można również skompilować i uruchomić kompilację debugowania aplikacji, wybierając **debugowanie** > **Rozpocznij debugowanie**. Ten krok debugowania umożliwia identyfikowanie problemów z aplikacją, gdy jest uruchomiona na platformie hosta. Nadal będziesz musiał przetestować go na każdej z platform docelowych.
 
-   Jeśli włączono tryb niezmienny globalizacji, należy sprawdzić, czy brak danych wrażliwych na kulturę jest odpowiednie dla aplikacji.
+   Jeśli włączysz tryb niezmienny globalizacji, należy szczególnie sprawdzić, czy brak danych zależnych od kultury jest odpowiedni dla aplikacji.
 
-Po zakończeniu debugowania można opublikować własne wdrożenie:
+Po zakończeniu debugowania można opublikować wdrożenie niezależne:
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="visual-studio-156-and-earlier"></a>[Visual Studio 15,6 i starsze](#tab/vs156)
+# <a name="visual-studio-156-and-earlier"></a>[Visual Studio 15.6 i wcześniejsze](#tab/vs156)
 
-Po debugowaniu i przetestowaniu programu Utwórz pliki, które mają zostać wdrożone wraz z aplikacją dla każdej platformy, do której się odwołuje.
+Po debugowania i przetestowaniu programu, utwórz pliki do wdrożenia z aplikacją dla każdej platformy, na której jest przeznaczona.
 
-Aby opublikować aplikację z poziomu programu Visual Studio, wykonaj następujące czynności:
+Aby opublikować aplikację z programu Visual Studio, wykonaj następujące czynności:
 
-1. Zdefiniuj platformy, dla których aplikacja będzie docelowa.
+1. Zdefiniuj platformy, na które będzie kierować aplikacja.
 
-   1. Kliknij prawym przyciskiem myszy projekt (nie rozwiązanie) w **Eksplorator rozwiązań** i wybierz polecenie **Edytuj SCD. csproj**.
+   1. Kliknij prawym przyciskiem myszy projekt (nie rozwiązanie) w **Eksploratorze rozwiązań** i wybierz **polecenie Edit SCD.csproj**.
 
-   1. Utwórz tag `<RuntimeIdentifiers>` w sekcji `<PropertyGroup>` pliku *csproj* , który definiuje platformy, dla których aplikacja jest przeznaczona, i określ identyfikator czasu wykonywania (RID) dla każdej platformy docelowej. Należy również dodać średnik, aby oddzielić RID. Listę identyfikatorów środowiska uruchomieniowego można znaleźć w [katalogu identyfikatorów środowiska uruchomieniowego](../rid-catalog.md) .
+   1. Utwórz `<RuntimeIdentifiers>` tag `<PropertyGroup>` w sekcji pliku *csproj,* który definiuje platformy, których dotyczy aplikacja, i określ identyfikator czasu wykonywania (RID) każdej platformy docelowej. Należy również dodać średnik, aby oddzielić identyfikatory IDENTYFIKATORY. Zobacz [katalog identyfikatorów identyfikatorów](../rid-catalog.md) środowiska uruchomieniowego.
 
-   Na przykład poniższy przykład wskazuje, że aplikacja działa w 64-bitowych systemach operacyjnych Windows 10 i 64-bitowy OS X Version 10,11 system operacyjny.
+   Na przykład poniższy przykład wskazuje, że aplikacja działa w 64-bitowych systemach operacyjnych Windows 10 i 64-bitowym systemie operacyjnym OS X w wersji 10.11.
 
    ```xml
    <PropertyGroup>
@@ -130,39 +130,39 @@ Aby opublikować aplikację z poziomu programu Visual Studio, wykonaj następuj�
    </PropertyGroup>
    ```
 
-   Element `<RuntimeIdentifiers>` może przejść do dowolnego `<PropertyGroup>`, które znajdują się w pliku *csproj* . Pełny przykładowy plik *csproj* pojawia się w dalszej części tej sekcji.
+   Element `<RuntimeIdentifiers>` może przejść `<PropertyGroup>` do każdego, który masz w pliku *csproj.* Pełny przykładowy plik *csproj* pojawi się w dalszej części tej sekcji.
 
 1. Opublikuj aplikację.
 
-   Po debugowaniu i przetestowaniu programu Utwórz pliki, które mają zostać wdrożone wraz z aplikacją dla każdej platformy, do której się odwołuje.
+   Po debugowania i przetestowaniu programu, utwórz pliki do wdrożenia z aplikacją dla każdej platformy, na której jest przeznaczona.
 
-   Aby opublikować aplikację z poziomu programu Visual Studio, wykonaj następujące czynności:
+   Aby opublikować aplikację z programu Visual Studio, wykonaj następujące czynności:
 
-      1. Zmień konfigurację rozwiązania z **Debuguj** na **Release** na pasku narzędzi, aby utworzyć wydanie (a nie debugowanie) wersji aplikacji.
+      1. Zmień konfigurację rozwiązania z **Debug** do **Wydania** na pasku narzędzi, aby utworzyć wersję (a nie debugowanie) wersji aplikacji.
 
-      1. Kliknij prawym przyciskiem myszy projekt (a nie rozwiązanie) w **Eksplorator rozwiązań** i wybierz polecenie **Publikuj**.
+      1. Kliknij prawym przyciskiem myszy projekt (nie rozwiązanie) w **Eksploratorze rozwiązań** i wybierz polecenie **Publikuj**.
 
-      1. Na karcie **Publikowanie** wybierz pozycję **Publikuj**. Program Visual Studio zapisuje pliki wchodzące w skład aplikacji w lokalnym systemie plików.
+      1. Na karcie **Publikowanie** wybierz pozycję **Publikuj**. Program Visual Studio zapisuje pliki, które składają się na aplikację do lokalnego systemu plików.
 
-      1. Karta **Publikowanie** zawiera teraz pojedynczy profil, **FolderProfile**. Ustawienia konfiguracji profilu są wyświetlane w sekcji **Podsumowanie** na karcie. **docelowa wersja środowiska uruchomieniowego** określa, które środowisko uruchomieniowe zostało opublikowane, a **Lokalizacja docelowa** określa miejsce zapisania plików dla wdrożenia samodzielnego.
+      1. Na karcie **Publikuj** jest teraz wyświetlany pojedynczy **profil, FolderProfile**. Ustawienia konfiguracji profilu są wyświetlane w sekcji **Podsumowanie** na karcie. **Docelowy czas wykonywania** identyfikuje, który czas wykonywania został opublikowany, a **lokalizacja docelowa** określa, gdzie zostały zapisane pliki dla samodzielnego wdrożenia.
 
-      1. Program Visual Studio domyślnie zapisuje wszystkie pliki opublikowane w jednym katalogu. Dla wygody najlepiej utworzyć osobne profile dla każdego docelowego środowiska uruchomieniowego i umieścić pliki opublikowane w katalogu specyficznym dla platformy. Obejmuje to utworzenie osobnego profilu publikowania dla każdej platformy docelowej. Teraz należy ponownie skompilować aplikację dla każdej platformy, wykonując następujące czynności:
+      1. Program Visual Studio domyślnie zapisuje wszystkie opublikowane pliki w jednym katalogu. Dla wygody najlepiej jest utworzyć oddzielne profile dla każdego docelowego czasu wykonywania i umieścić opublikowane pliki w katalogu specyficznym dla platformy. Obejmuje to utworzenie oddzielnego profilu publikowania dla każdej platformy docelowej. Więc teraz odbudować aplikację dla każdej platformy, wykonując następujące czynności:
 
-         1. Wybierz pozycję **Utwórz nowy profil** w oknie dialogowym **publikowania** .
+         1. Wybierz **pozycję Utwórz nowy profil** w oknie dialogowym **Publikowanie.**
 
-         1. W oknie dialogowym **Wybieranie elementu docelowego publikowania** Zmień lokalizację **Wybieranie lokalizacji folderu** na *bin\Release\PublishOutput\win10-x64*. Kliknij przycisk **OK**.
+         1. W oknie **dialogowym Wybieranie obiektu docelowego publikowania** zmień pozycję **Wybierz lokalizację folderu** do *kosza\Release\PublishOutput\win10-x64*. Kliknij przycisk **OK**.
 
-         1. Wybierz nowy profil (**FolderProfile1**) na liście profilów i upewnij się, że **docelowe środowisko uruchomieniowe** jest `win10-x64`. Jeśli nie, wybierz pozycję **Ustawienia**. W oknie dialogowym **Ustawienia profilu** Zmień **docelowy środowisko uruchomieniowe** na `win10-x64` i wybierz pozycję **Zapisz**. W przeciwnym razie wybierz pozycję **Anuluj**.
+         1. Wybierz nowy profil **(FolderProfile1)** na liście profilów i upewnij się, `win10-x64`że docelowy czas **wykonywania** jest . Jeśli tak nie jest, wybierz **pozycję Ustawienia**. W oknie dialogowym **Ustawienia profilu** zmień docelowy **czas wykonywania** i `win10-x64` wybierz pozycję **Zapisz**. W przeciwnym razie wybierz **pozycję Anuluj**.
 
-         1. Wybierz pozycję **Publikuj** , aby opublikować aplikację dla 64-bitowych platform Windows 10.
+         1. Wybierz **pozycję Publikuj,** aby opublikować aplikację dla 64-bitowych platform systemu Windows 10.
 
-         1. Wykonaj ponownie powyższe kroki, aby utworzyć profil dla `osx.10.11-x64` platformy. **Lokalizacja docelowa** to *Bin\Release\PublishOutput\osx.10.11-x64*, a **docelowy środowisko uruchomieniowe** jest `osx.10.11-x64`. Nazwa, którą program Visual Studio przypisuje do tego profilu, to **FolderProfile2**.
+         1. Wykonaj ponownie poprzednie kroki, aby `osx.10.11-x64` utworzyć profil dla platformy. **Lokalizacja docelowa** to *bin\Release\PublishOutput\osx.10.11-x64*, a `osx.10.11-x64`docelowy **m.in.** Nazwa, którą program Visual Studio przypisuje do tego profilu, to **FolderProfile2**.
 
-      Każda lokalizacja docelowa zawiera pełny zestaw plików (zarówno plików aplikacji, jak i wszystkich plików platformy .NET Core) potrzebnych do uruchomienia aplikacji.
+      Każda lokalizacja docelowa zawiera kompletny zestaw plików (zarówno plików aplikacji, jak i wszystkich plików .NET Core) potrzebnych do uruchomienia aplikacji.
 
-Podobnie jak w przypadku plików aplikacji, proces publikowania emituje plik bazy danych programu (. pdb), który zawiera informacje o debugowaniu aplikacji. Plik jest przydatny głównie do debugowania wyjątków. Możesz zrezygnować z spakowania go z plikami aplikacji. Należy jednak zapisać ją w zdarzeniu, które chcesz debugować kompilację wydania aplikacji.
+Wraz z plikami aplikacji proces publikowania emituje plik bazy danych programu (pdb), który zawiera informacje o debugowaniu aplikacji. Plik jest przydatny głównie do debugowania wyjątków. Można wybrać, aby nie pakować go z plikami aplikacji. Należy jednak zapisać go w przypadku, gdy chcesz debugować kompilacji wersji aplikacji.
 
-Wdróż opublikowane pliki w dowolny sposób. Na przykład możesz spakować je w pliku zip, użyć prostego polecenia `copy` lub wdrożyć je przy użyciu dowolnego wybranego pakietu instalacyjnego.
+Wdrażaj opublikowane pliki w dowolny sposób. Na przykład można spakować je w pliku `copy` Zip, użyć prostego polecenia lub wdrożyć je z dowolnego pakietu instalacyjnego do wyboru.
 
 Poniżej znajduje się kompletny plik *csproj* dla tego projektu.
 
@@ -176,57 +176,57 @@ Poniżej znajduje się kompletny plik *csproj* dla tego projektu.
 </Project>
 ```
 
-# <a name="visual-studio-157-and-later"></a>[Program Visual Studio 15,7 lub nowszy](#tab/vs157)
+# <a name="visual-studio-157-and-later"></a>[Visual Studio 15.7 i nowsze](#tab/vs157)
 
-Po debugowaniu i przetestowaniu programu Utwórz pliki, które mają zostać wdrożone wraz z aplikacją dla każdej platformy, do której się odwołuje. Obejmuje to utworzenie osobnego profilu dla każdej platformy docelowej.
+Po debugowania i przetestowaniu programu, utwórz pliki do wdrożenia z aplikacją dla każdej platformy, na której jest przeznaczona. Wiąże się to z utworzeniem oddzielnego profilu dla każdej platformy docelowej.
 
-Dla każdej platformy, która jest przeznaczona dla aplikacji, wykonaj następujące czynności:
+Dla każdej platformy, na którą dotyczy aplikacji, wykonaj następujące czynności:
 
-1. Utwórz profil dla platformy docelowej.
+1. Utwórz profil dla swojej platformy docelowej.
 
-   Jeśli jest to pierwszy utworzony profil, kliknij prawym przyciskiem myszy projekt (a nie rozwiązanie) w **Eksplorator rozwiązań** i wybierz polecenie **Publikuj**.
+   Jeśli jest to pierwszy utworzony profil, kliknij prawym przyciskiem myszy projekt (nie rozwiązanie) w **Eksploratorze rozwiązań** i wybierz polecenie **Publikuj**.
 
-   Jeśli utworzono już profil, kliknij prawym przyciskiem myszy projekt, aby otworzyć okno dialogowe **publikowania** , jeśli nie jest jeszcze otwarte. Następnie wybierz pozycję **Nowy profil**.
+   Jeśli profil został już utworzony, kliknij prawym przyciskiem myszy projekt, aby otworzyć okno **dialogowe Publikowanie,** jeśli nie jest jeszcze otwarty. Następnie wybierz **pozycję Nowy profil**.
 
-   Zostanie otwarte okno dialogowe **Wybieranie elementu docelowego publikowania** .
+   Zostanie otwarte okno **dialogowe Wybieranie obiektu docelowego publikowania.**
 
-1. Wybierz lokalizację, w której program Visual Studio opublikuje aplikację.
+1. Wybierz lokalizację, w której program Visual Studio publikuje aplikację.
 
-   W przypadku publikowania tylko na jednej platformie można zaakceptować wartość domyślną w polu tekstowym **Wybierz folder** . spowoduje to opublikowanie wdrożenia aplikacji zależnej od platformy w katalogu *\<projektu > katalogu \bin\Release\netcoreapp2.1\publish* .
+   Jeśli publikujesz tylko na jednej platformie, możesz zaakceptować wartość domyślną w polu **tekstowym Wybierz folder;** spowoduje to opublikowanie wdrożenia aplikacji zależnego od struktury w * \<katalogu projektu>\bin\Release\netcoreapp2.1\publish* directory.
 
-   Jeśli publikujesz na więcej niż jednej platformie, dołącz ciąg, który identyfikuje platformę docelową. Na przykład, jeśli dołączysz ciąg "Linux" do ścieżki pliku, program Visual Studio opublikuje wdrożenie aplikacji zależnej od platformy do *\<projektu > Directory \bin\Release\netcoreapp2.1\publish\linux* .
+   Jeśli publikujesz na więcej niż jednej platformie, dołącz ciąg, który identyfikuje platformę docelową. Na przykład jeśli dościeżnica pliku zostanie dołączona ciąg "linux", program Visual Studio opublikuje zależne od struktury wdrożenie aplikacji do * \<katalogu projektu>\bin\Release\netcoreapp2.1\publish\linux.*
 
-1. Utwórz profil, wybierając ikonę listy rozwijanej obok przycisku **Publikuj** i wybierając pozycję **Utwórz profil**. Następnie wybierz przycisk **Utwórz profil** , aby utworzyć profil.
+1. Utwórz profil, wybierając ikonę listy rozwijanej obok przycisku **Publikuj** i wybierając pozycję **Utwórz profil**. Następnie wybierz przycisk **Utwórz profil,** aby utworzyć profil.
 
-1. Wskaż, że publikujesz wdrożenie samodzielne i zdefiniujesz platformę, w której aplikacja będzie docelowa.
+1. Wskaż, że publikujesz niezależne wdrożenie i zdefiniuj platformę, na którą będzie kierować aplikację.
 
-   1. W oknie dialogowym **Publikowanie** wybierz link **Konfiguruj** , aby otworzyć okno dialogowe **Ustawienia profilu** .
+   1. W oknie **dialogowym Publikowanie** wybierz łącze **Konfigurowanie,** aby otworzyć okno dialogowe **Ustawienia profilu.**
 
-   1. W polu listy **Tryb wdrożenia** wybierz pozycję **samodzielna** .
+   1. Wybierz **opcję Samodzielne w** polu listy Tryb **wdrażania.**
 
-   1. W polu listy **cel środowiska uruchomieniowego** wybierz jedną z platform, do której należy aplikacja.
+   1. W polu listy **Docelowe uruchomienie** wybierz jedną z platform, na których znajduje się aplikacja.
 
-   1. Wybierz pozycję **Zapisz** , aby zaakceptować zmiany i zamknąć okno dialogowe.
+   1. Wybierz **pozycję Zapisz,** aby zaakceptować zmiany i zamknij okno dialogowe.
 
 1. Nazwij swój profil.
 
-   1. Wybierz **Akcje** , > **zmienić nazwy profilu** , aby określić nazwę profilu.
+   1. Wybierz **pozycję Akcje** > **Zmień nazwę profilu,** aby nazwać swój profil.
 
-   2. Przypisz do profilu nazwę identyfikującą platformę docelową, a następnie wybierz pozycję **Zapisz*.
+   2. Przypisz profil nazwę identyfikującą platformę docelową, a następnie wybierz **Zapisz*.
 
-Powtórz te kroki, aby zdefiniować wszelkie dodatkowe Platformy docelowe, do których odwołuje się aplikacja.
+Powtórz te kroki, aby zdefiniować wszelkie dodatkowe platformy docelowe, które są przeznaczone dla aplikacji.
 
-Twoje profile zostały skonfigurowane i są teraz gotowe do opublikowania aplikacji. W tym celu:
+Skonfigurowato swoje profile i są teraz gotowe do opublikowania aplikacji. W tym celu:
 
-   1. Jeśli okno **publikowania** nie jest aktualnie otwarte, kliknij prawym przyciskiem myszy projekt (a nie rozwiązanie) w **Eksplorator rozwiązań** i wybierz polecenie **Publikuj**.
+   1. Jeśli okno **Publikowania** nie jest aktualnie otwarte, kliknij prawym przyciskiem myszy projekt (nie rozwiązanie) w **Eksploratorze rozwiązań** i wybierz polecenie **Publikuj**.
 
-   2. Wybierz profil, który chcesz opublikować, a następnie wybierz pozycję **Publikuj**. Zrób to dla każdego profilu do opublikowania.
+   2. Wybierz profil, który chcesz opublikować, a następnie wybierz **pozycję Publikuj**. Zrób to dla każdego profilu, który ma zostać opublikowany.
 
-   Każda lokalizacja docelowa (w przypadku naszego przykładu bin\release\netcoreapp2.1\publish\\*Profile-Name* zawiera kompletny zestaw plików (zarówno plików aplikacji, jak i wszystkich plików platformy .NET Core) potrzebnych do uruchomienia aplikacji.
+   Każda lokalizacja docelowa (w naszym przykładzie bin\release\netcoreapp2.1\publish\\*profile-name* zawiera kompletny zestaw plików (zarówno plików aplikacji, jak i wszystkich plików .NET Core) potrzebnych do uruchomienia aplikacji.
 
-Podobnie jak w przypadku plików aplikacji, proces publikowania emituje plik bazy danych programu (. pdb), który zawiera informacje o debugowaniu aplikacji. Plik jest przydatny głównie do debugowania wyjątków. Możesz zrezygnować z spakowania go z plikami aplikacji. Należy jednak zapisać ją w zdarzeniu, które chcesz debugować kompilację wydania aplikacji.
+Wraz z plikami aplikacji proces publikowania emituje plik bazy danych programu (pdb), który zawiera informacje o debugowaniu aplikacji. Plik jest przydatny głównie do debugowania wyjątków. Można wybrać, aby nie pakować go z plikami aplikacji. Należy jednak zapisać go w przypadku, gdy chcesz debugować kompilacji wersji aplikacji.
 
-Wdróż opublikowane pliki w dowolny sposób. Na przykład możesz spakować je w pliku zip, użyć prostego polecenia `copy` lub wdrożyć je przy użyciu dowolnego wybranego pakietu instalacyjnego.
+Wdrażaj opublikowane pliki w dowolny sposób. Na przykład można spakować je w pliku `copy` Zip, użyć prostego polecenia lub wdrożyć je z dowolnego pakietu instalacyjnego do wyboru.
 
 Poniżej znajduje się kompletny plik *csproj* dla tego projektu.
 
@@ -239,7 +239,7 @@ Poniżej znajduje się kompletny plik *csproj* dla tego projektu.
 </Project>
 ```
 
-Ponadto program Visual Studio tworzy oddzielny profil publikacji (\*. pubxml) dla każdej platformy docelowej. Na przykład plik z naszym profilem systemu Linux (Linux. pubxml) jest wyświetlany w następujący sposób:
+Ponadto visual studio tworzy oddzielny profil\*publikowania (.pubxml) dla każdej platformy, na którą kierujesz. Na przykład plik dla naszego profilu linuksa (linux.pubxml) pojawia się w następujący sposób:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -262,19 +262,19 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 
 ---
 
-## <a name="self-contained-deployment-with-third-party-dependencies"></a>Samodzielne wdrożenie z zależnościami innych firm
+## <a name="self-contained-deployment-with-third-party-dependencies"></a>Samodzielne wdrażanie z zależnościami innych firm
 
-Wdrożenie samodzielnego wdrożenia z co najmniej jedną zależnością innych firm obejmuje dodanie zależności. Aby można było skompilować aplikację, wymagane są następujące dodatkowe kroki:
+Wdrażanie samodzielnego wdrożenia z co najmniej jedną zależnościami innych firm polega na dodawaniu zależności. Aby można było utworzyć aplikację, wymagane są następujące dodatkowe kroki:
 
-1. Użyj **Menedżera pakietów NuGet** , aby dodać odwołanie do pakietu NuGet do projektu; a jeśli pakiet nie jest jeszcze dostępny w systemie, zainstaluj go. Aby otworzyć Menedżera pakietów, wybierz pozycję **narzędzia** > **menedżer pakietów NuGet** > **Zarządzanie pakietami NuGet dla rozwiązania**.
+1. Użyj **Menedżera pakietów NuGet,** aby dodać odwołanie do pakietu NuGet do projektu; a jeśli pakiet nie jest jeszcze dostępny w systemie, zainstaluj go. Aby otworzyć menedżera pakietów, wybierz **narzędzia** > **NuGet Package Manager** > **Manage NuGet Packages for Solution**.
 
-1. Upewnij się, że zależności innych firm (na przykład `Newtonsoft.Json`) są zainstalowane w systemie i, jeśli nie, zainstaluj je. Karta **zainstalowane** zawiera listę pakietów NuGet zainstalowanych w systemie. Jeśli `Newtonsoft.Json` nie znajduje się na liście, wybierz kartę **Przeglądaj** i w polu wyszukiwania wprowadź ciąg "Newtonsoft. JSON". Wybierz pozycję `Newtonsoft.Json` i w prawym okienku wybierz swój projekt przed wybraniem opcji **Zainstaluj**.
+1. Upewnij się, że zależności innych firm `Newtonsoft.Json`(na przykład) są zainstalowane w systemie i, jeśli nie są, zainstaluj je. **Zainstalowana** karta zawiera listę pakietów NuGet zainstalowanych w systemie. Jeśli `Newtonsoft.Json` nie ma tam na liście, wybierz kartę **Przeglądaj** i wpisz "Newtonsoft.Json" w polu wyszukiwania. Zaznacz `Newtonsoft.Json` i w prawym okienku wybierz projekt przed wybraniem **opcji Zainstaluj**.
 
-1. Jeśli `Newtonsoft.Json` jest już zainstalowana w systemie, Dodaj ją do projektu, wybierając projekt w prawym okienku na karcie **Zarządzanie pakietami dla rozwiązania** .
+1. Jeśli `Newtonsoft.Json` jest już zainstalowany w systemie, dodaj go do projektu, wybierając projekt w prawym okienku karty **Zarządzanie pakietami dla rozwiązania.**
 
 Poniżej znajduje się kompletny plik *csproj* dla tego projektu:
 
-# <a name="visual-studio-156-and-earlier"></a>[Visual Studio 15,6 i starsze](#tab/vs156)
+# <a name="visual-studio-156-and-earlier"></a>[Visual Studio 15.6 i wcześniejsze](#tab/vs156)
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -289,7 +289,7 @@ Poniżej znajduje się kompletny plik *csproj* dla tego projektu:
 </Project>
 ```
 
-# <a name="visual-studio-157-and-later"></a>[Program Visual Studio 15,7 lub nowszy](#tab/vs157)
+# <a name="visual-studio-157-and-later"></a>[Visual Studio 15.7 i nowsze](#tab/vs157)
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -305,11 +305,11 @@ Poniżej znajduje się kompletny plik *csproj* dla tego projektu:
 
 ---
 
-Podczas wdrażania aplikacji wszystkie zależności innych firm używane w aplikacji również są zawarte w plikach aplikacji. Biblioteki innych firm nie są wymagane w systemie, w którym jest uruchomiona aplikacja.
+Podczas wdrażania aplikacji wszelkie zależności innych firm używane w aplikacji są również zawarte z plikami aplikacji. Biblioteki innych firm nie są wymagane w systemie, w którym aplikacja jest uruchomiona.
 
-Można wdrożyć tylko własne wdrożenie z biblioteką innej firmy na platformach obsługiwanych przez tę bibliotekę. Jest to podobne do występowania zależności innych firm z natywnymi zależnościami w ramach wdrożenia zależnego od platformy, w przypadku których natywne zależności nie będą istniały na platformie docelowej, chyba że zostały wcześniej zainstalowane.
+Wdrożenie samodzielne można wdrażać tylko z biblioteką innych firm na platformach obsługiwanych przez tę bibliotekę. Jest to podobne do zależności innych firm z zależnościami macierzystymi we wdrożeniu zależnym od struktury, gdzie zależności macierzyste nie będą istnieć na platformie docelowej, chyba że zostały wcześniej tam zainstalowane.
 
 ## <a name="see-also"></a>Zobacz też
 
-- [Wdrażanie aplikacji .NET Core](index.md)
-- [Wykaz identyfikatorów środowiska uruchomieniowego platformy .NET Core (RID)](../rid-catalog.md)
+- [Wdrożenie aplikacji podstawowej .NET](index.md)
+- [Wykaz identyfikatora środowiska uruchomienionowego programu .NET Core (RID)](../rid-catalog.md)

@@ -1,23 +1,23 @@
 ---
 ms.openlocfilehash: dc733ee32184db5af59bb06e294cd73765977581
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77449566"
 ---
-### <a name="fieldinfosetvalue-throws-exception-for-static-init-only-fields"></a>Element FieldInfo. SetValue zgłasza wyjątek dla pól static, tylko init
+### <a name="fieldinfosetvalue-throws-exception-for-static-init-only-fields"></a>FieldInfo.SetValue zgłasza wyjątek dla pól statycznych, tylko do init
 
-Począwszy od platformy .NET Core 3,0, wyjątek jest zgłaszany podczas próby ustawienia wartości w statycznej <xref:System.Reflection.FieldAttributes.InitOnly> polu przez wywołanie <xref:System.Reflection.FieldInfo.SetValue%2A?displayProperty=fullName>.
+Począwszy od .NET Core 3.0, wyjątek jest generowany podczas próby ustawienie wartości na statyczne pole, <xref:System.Reflection.FieldAttributes.InitOnly> wywołując <xref:System.Reflection.FieldInfo.SetValue%2A?displayProperty=fullName>.
 
 #### <a name="change-description"></a>Zmień opis
 
-W .NET Framework i wersjach programu .NET Core wcześniejszych niż 3,0, można ustawić wartość pola statycznego, które jest stałe po zainicjowaniu ([ReadOnly in C# ](~/docs/csharp/language-reference/keywords/readonly.md)), wywołując <xref:System.Reflection.FieldInfo.SetValue%2A?displayProperty=fullName>. Jednak ustawienie takiego pola w ten sposób skutkuje nieprzewidywalnym zachowaniem na podstawie ustawień platformy docelowej i optymalizacji.
+W platformie .NET Framework i wersjach programu .NET Core przed wersją 3.0 można ustawić wartość stałego pola statycznego <xref:System.Reflection.FieldInfo.SetValue%2A?displayProperty=fullName>po jego zainicjowaniu[(tylko do odczytu w języku C#),](~/docs/csharp/language-reference/keywords/readonly.md)wywołując . Jednak ustawienie takiego pola w ten sposób spowodowało nieprzewidywalne zachowanie na podstawie docelowej struktury i ustawień optymalizacji.
 
-W przypadku programu .NET Core 3,0 i jego nowszych wersji, gdy wywołasz <xref:System.Reflection.FieldInfo.SetValue%2A> w statycznej <xref:System.Reflection.FieldAttributes.InitOnly> polu, zostanie zgłoszony wyjątek <xref:System.FieldAccessException?displayProperty=nameWithType>.
+W wersji .NET Core 3.0 i <xref:System.Reflection.FieldInfo.SetValue%2A> nowszych, podczas <xref:System.FieldAccessException?displayProperty=nameWithType> wywoływania statycznego pola, <xref:System.Reflection.FieldAttributes.InitOnly> wyjątek.
 
 > [!TIP]
-> <xref:System.Reflection.FieldAttributes.InitOnly> pole to takie, które można ustawić tylko w czasie, gdy jest zadeklarowany, lub w konstruktorze dla klasy zawierającej. Innymi słowy, jest ona stała po zainicjowaniu.
+> Pole <xref:System.Reflection.FieldAttributes.InitOnly> to pole, które można ustawić tylko w momencie, gdy jest zadeklarowany lub w konstruktorze dla klasy zawierającej. Innymi słowy, jest stała po jego zainicjowaniu.
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -25,9 +25,9 @@ W przypadku programu .NET Core 3,0 i jego nowszych wersji, gdy wywołasz <xref:S
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Inicjuj statyczne <xref:System.Reflection.FieldAttributes.InitOnly> pól w konstruktorze statycznym. Dotyczy to zarówno typów dynamicznych, jak i niedynamicznych.
+Inicjuj <xref:System.Reflection.FieldAttributes.InitOnly> statyczne pola w konstruktorze statycznym. Dotyczy to zarówno typów dynamicznych, jak i niedynamicznych.
 
-Alternatywnie możesz usunąć atrybut <xref:System.Reflection.FieldAttributes.InitOnly?displayProperty=nameWithType> z pola, a następnie wywołać <xref:System.Reflection.FieldInfo.SetValue%2A?displayProperty=nameWithType>.
+Alternatywnie można usunąć <xref:System.Reflection.FieldAttributes.InitOnly?displayProperty=nameWithType> atrybut z pola, a <xref:System.Reflection.FieldInfo.SetValue%2A?displayProperty=nameWithType>następnie wywołać .
 
 #### <a name="category"></a>Kategoria
 

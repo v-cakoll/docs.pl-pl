@@ -3,14 +3,14 @@ title: Tworzenie atrybutów niestandardowych (C#)
 ms.date: 07/20/2015
 ms.assetid: 500e1977-c6de-462d-abce-78a0eb1eda22
 ms.openlocfilehash: c0f25adf0d562b659edaa8f36e72332fd0c1ee7e
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69595406"
 ---
 # <a name="creating-custom-attributes-c"></a>Tworzenie atrybutów niestandardowych (C#)
-Można utworzyć własne atrybuty niestandardowe przez zdefiniowanie klasy atrybutów, klasy, która dziedziczy bezpośrednio lub pośrednio z, co <xref:System.Attribute>sprawia, że definicje atrybutów i są łatwe w użyciu w metadanych. Załóżmy, że chcesz oznakować typy nazwą programisty, który zapisał typ. Można zdefiniować klasę niestandardowego `Author` atrybutu:  
+Można utworzyć własne atrybuty niestandardowe, definiując klasę atrybutów, klasę, <xref:System.Attribute>która wywodzi się bezpośrednio lub pośrednio z , co sprawia, że identyfikowanie definicji atrybutów w metadanych jest szybkie i łatwe. Załóżmy, że chcesz oznaczyć typy z nazwą programisty, który napisał typ. Można zdefiniować klasę `Author` atrybutu niestandardowego:  
   
 ```csharp  
 [System.AttributeUsage(System.AttributeTargets.Class |  
@@ -29,9 +29,9 @@ public class Author : System.Attribute
 }  
 ```  
   
- Nazwa klasy jest nazwą atrybutu, `Author`. Jest ona pochodną `System.Attribute`, więc jest klasą atrybutów niestandardowych. Parametry konstruktora są parametrami pozycyjnymi atrybutu niestandardowego. W tym przykładzie `name` jest parametrem pozycyjnym. Wszystkie publiczne pola do odczytu i zapisu są nazwanymi parametrami. W tym przypadku `version` jest jedynym nazwanym parametrem. Zwróć uwagę na użycie `AttributeUsage` atrybutu, aby `Author` atrybut był prawidłowy tylko dla klasy i `struct` deklaracji.  
+ Nazwa klasy jest nazwą atrybutu `Author`. Pochodzi z `System.Attribute`, więc jest to klasa atrybutów niestandardowych. Parametry konstruktora są parametrami pozycyjnymi atrybutu niestandardowego. W tym `name` przykładzie jest parametrem pozycyjnym. Wszystkie publiczne pola odczytu i zapisu są nazywane parametrami. W tym `version` przypadku jest jedynym nazwanym parametrem. Należy zwrócić uwagę `AttributeUsage` na użycie `Author` atrybutu, aby `struct` atrybut był prawidłowy tylko w klasie i deklaracjach.  
   
- Tego nowego atrybutu można użyć w następujący sposób:  
+ Możesz użyć tego nowego atrybutu w następujący sposób:  
   
 ```csharp  
 [Author("P. Ackerman", version = 1.1)]  
@@ -41,7 +41,7 @@ class SampleClass
 }  
 ```  
   
- `AttributeUsage`ma nazwany parametr `AllowMultiple`, za pomocą którego można wykonać pojedyncze użycie lub Multiuse atrybutu niestandardowego. W poniższym przykładzie kodu tworzony jest atrybut Multiuse.  
+ `AttributeUsage`ma nazwany parametr, `AllowMultiple`, z którym można dokonać atrybutu niestandardowego jednorazowego użytku lub wielokrotnego użytku. W poniższym przykładzie kodu tworzony jest atrybut wielokrotnego użytku.  
   
 ```csharp  
 [System.AttributeUsage(System.AttributeTargets.Class |  
@@ -51,7 +51,7 @@ class SampleClass
 public class Author : System.Attribute  
 ```  
   
- W poniższym przykładzie kodu do klasy są stosowane wiele atrybutów tego samego typu.  
+ W poniższym przykładzie kodu wiele atrybutów tego samego typu są stosowane do klasy.  
   
 ```csharp  
 [Author("P. Ackerman", version = 1.1)]  
@@ -63,12 +63,12 @@ class SampleClass
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Reflection>
-- [Przewodnik programowania w języku C#](../../index.md)
+- [Przewodnik programowania języka C#](../../index.md)
 - [Wpisywanie atrybutów niestandardowych](../../../../standard/attributes/writing-custom-attributes.md)
-- [OdbicieC#()](../reflection.md)
+- [Odbicie (C#)](../reflection.md)
 - [Atrybuty (C#)](./index.md)
-- [Uzyskiwanie dostępu do atrybutów przyC#użyciu odbicia ()](./accessing-attributes-by-using-reflection.md)
-- [AttributeUsage (C#)](./attributeusage.md)
+- [Uzyskiwanie dostępu do atrybutów przy użyciu odbicia (C#)](./accessing-attributes-by-using-reflection.md)
+- [Użycie atrybutu (C#)](./attributeusage.md)

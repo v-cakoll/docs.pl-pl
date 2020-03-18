@@ -1,27 +1,27 @@
 ---
-title: Jak znaleźć poprzednie elementy równorzędne (XPath-LINQ to XML) (C#)
+title: Jak znaleźć poprzednie elementy równorzędne (XPath-LINQ do XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: b281ff99-d08a-43d0-bea1-eff831b2f8ae
 ms.openlocfilehash: 08fc2073f76f37bd0381a05a7969d1c7748d6252
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141059"
 ---
-# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-c"></a>Jak znaleźć poprzednie elementy równorzędne (XPath-LINQ to XML) (C#)
-W tym temacie porównano oś `preceding-sibling` XPath z osią [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] podrzędnej <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType>.  
+# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-c"></a>Jak znaleźć poprzednie elementy równorzędne (XPath-LINQ do XML) (C#)
+W tym temacie porównano oś XPath `preceding-sibling` z osią podrzędna. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType>  
   
- Wyrażenie XPath:  
+ Wyrażenie XPath jest następujące:  
   
  `preceding-sibling::*`  
   
- Zwróć uwagę, że wyniki obu <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> i <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> są w kolejności dokumentu.  
+ Należy zauważyć, że <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> wyniki obu i są w kolejności dokumentu.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład umożliwia znalezienie elementu `FullAddress`, a następnie pobranie poprzednich elementów przy użyciu osi `preceding-sibling`.  
+ Poniższy przykład znajduje `FullAddress` element, a następnie pobiera poprzednie `preceding-sibling` elementy przy użyciu osi.  
   
- W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: Customers i Orders (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ W tym przykładzie użyto następującego dokumentu XML: [Przykładowy plik XML: Klienci i zamówienia (LINQ do XML).](./sample-xml-file-customers-and-orders-linq-to-xml-2.md)  
   
 ```csharp  
 XElement co = XElement.Load("CustomersOrders.xml");  

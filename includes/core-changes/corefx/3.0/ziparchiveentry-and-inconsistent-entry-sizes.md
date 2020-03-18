@@ -1,30 +1,30 @@
 ---
 ms.openlocfilehash: 9520f8c6b6671917f5694bc602293a00e2dab82d
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74568109"
 ---
-### <a name="ziparchiveentry-no-longer-handles-archives-with-inconsistent-entry-sizes"></a>Element ZipArchiveEntry nie obsługuje już archiwów z niespójnymi rozmiarami wpisów
+### <a name="ziparchiveentry-no-longer-handles-archives-with-inconsistent-entry-sizes"></a>ZipArchiveEntry nie obsługuje już archiwów z niespójnymi rozmiarami wejść
 
-Archiwa zip wyświetlają rozmiar skompresowany i nieskompresowany w katalogu centralnym i nagłówku lokalnym.  Dane wejściowe również wskazują jego rozmiar.  W programie .NET Core 2,2 i starszych wersjach te wartości nigdy nie były sprawdzane pod kątem spójności. Począwszy od platformy .NET Core 3,0, są one teraz.
+Archiwa zip wyświetlają zarówno skompresowany rozmiar, jak i nieskompresowany rozmiar w katalogu centralnym i nagłówku lokalnym.  Dane wpisu również wskazuje jego rozmiar.  W .NET Core 2.2 i wcześniejszych wersjach te wartości nigdy nie zostały sprawdzone pod kątem spójności. Począwszy od .NET Core 3.0, są teraz.
 
 #### <a name="change-description"></a>Zmień opis
 
-W programie .NET Core 2,2 i jego wcześniejszych wersjach <xref:System.IO.Compression.ZipArchiveEntry.Open?displayProperty=nameWithType> powodzenie, nawet jeśli nagłówek lokalny nie zgadza się z centralnym nagłówkiem pliku zip. Dane są dekompresowane do momentu osiągnięcia końca skompresowanego strumienia, nawet jeśli jego długość przekracza rozmiar nieskompresowanych plików wymieniony w katalogu centralnym/nagłówku lokalnym.
+W .NET Core 2.2 i <xref:System.IO.Compression.ZipArchiveEntry.Open?displayProperty=nameWithType> wcześniejszych wersjach, nawet jeśli nagłówek lokalny nie zgadza się z centralnym nagłówkiem pliku zip. Dane są dekompresowane do momentu osiągnięcia końca skompresowanego strumienia, nawet jeśli jego długość przekracza rozmiar nieskompresowanego pliku wymieniony w centralnym katalogu/nagłówku lokalnym.
 
-Począwszy od platformy .NET Core 3,0, Metoda <xref:System.IO.Compression.ZipArchiveEntry.Open?displayProperty=nameWithType> sprawdza, czy nagłówek lokalny i nagłówek centralny zgadzają się na skompresowane i nieskompresowane rozmiary wpisu.  Jeśli tak nie jest, metoda zgłasza <xref:System.IO.InvalidDataException>, jeśli nagłówek lokalny nagłówka i/lub listy deskryptorów danych są niezgodne z katalogiem centralnym pliku zip. Podczas odczytywania wpisu dekompresowane dane są obcinane do rozmiaru nieskompresowanego pliku wymienionego w nagłówku.
+Począwszy od .NET Core <xref:System.IO.Compression.ZipArchiveEntry.Open?displayProperty=nameWithType> 3.0, metoda sprawdza, czy nagłówek lokalny i nagłówek centralny zgadzają się na skompresowane i nieskompresowane rozmiary wpisu.  Jeśli nie, metoda <xref:System.IO.InvalidDataException> zgłasza, jeśli w lokalnym nagłówku archiwum i/lub rozmiarze listy deskryptora danych, które nie zgadzają się z centralnym katalogiem pliku zip. Podczas odczytywania wpisu dekompresowane dane są obcinane do rozmiaru nieskompresowanego pliku wymienionego w nagłówku.
 
-Ta zmiana została wprowadzona w celu upewnienia się, że <xref:System.IO.Compression.ZipArchiveEntry> prawidłowo reprezentuje rozmiar danych i że tylko ilość danych jest odczytywana.
+Ta zmiana została wmazana w celu zapewnienia, że <xref:System.IO.Compression.ZipArchiveEntry> poprawnie reprezentuje rozmiar swoich danych i że tylko ta ilość danych jest odczytywana.
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
 3.0
 
-#### <a name="recommended-action"></a>Zalecane działanie
+#### <a name="recommended-action"></a>Zalecana akcja
 
-Ponownie spakować wszystkie archiwum zip, które wykazuje te problemy.
+Przepakuj dowolne archiwum zip, które wykazuje te problemy.
 
 #### <a name="category"></a>Kategoria
 

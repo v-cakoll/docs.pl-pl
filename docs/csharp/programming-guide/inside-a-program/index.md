@@ -6,19 +6,19 @@ helpviewer_keywords:
 - Visual C#, program structure
 ms.assetid: 9551354b-33f0-4e11-bbf0-1a35e3702b22
 ms.openlocfilehash: a180dc30c7fab11e5b939682244dbb90eb7615eb
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "69589256"
 ---
 # <a name="inside-a-c-program"></a>Konstrukcja programu C#
 
-Sekcja omawia ogólną strukturę C# programu i zawiera standard "Hello, World!" przyklad.
+W sekcji omówiono ogólną strukturę programu C# i zawiera standard "Hello, World!" Przykład.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-- [Hello world — pierwszy program](hello-world-your-first-program.md)
+- [Witaj Świecie — pierwszy program](hello-world-your-first-program.md)
 
 - [Ogólna struktura programu w języku C#](general-structure-of-a-csharp-program.md)
 
@@ -28,11 +28,11 @@ Sekcja omawia ogólną strukturę C# programu i zawiera standard "Hello, World!"
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
-- [Wprowadzenie zC#](../../getting-started/index.md)
+- [Wprowadzenie do C #](../../getting-started/index.md)
 
-- [Przewodnik programowania w języku C#](../index.md)
+- [Przewodnik programowania języka C#](../index.md)
 
-- [Dokumentacja języka C#](../../language-reference/index.md)
+- [Odwołanie do języka C#](../../language-reference/index.md)
 
 - [Przykłady i samouczki](../../../samples-and-tutorials/index.md)
 
@@ -40,6 +40,6 @@ Sekcja omawia ogólną strukturę C# programu i zawiera standard "Hello, World!"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Przewodnik programowania w języku C#](../index.md)
+- [Przewodnik programowania języka C#](../index.md)

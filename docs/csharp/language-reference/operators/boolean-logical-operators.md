@@ -1,6 +1,6 @@
 ---
-title: Operatory logiczne Boolean — C# odwołanie
-description: Dowiedz C# się więcej na temat operatorów, które wykonują logiczne negacje, połączenie (i) i Włączne i wyłączne operacje odłączania (lub) z argumentami operacji logicznych.
+title: Logiczne operatory logiczne logiczne — odwołanie do języka C#
+description: Dowiedz się więcej o operatorach języka C#, które wykonują logiczne negacji, spójnik (I) i włącznie i wyłączne operacje rozłączenia (OR) z operandów logicznych.
 ms.date: 09/27/2019
 author: pkulikov
 f1_keywords:
@@ -32,92 +32,92 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: d8fe68fc04300b65bea9b66a6dc6c20e3c69abf4
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 930329b922f585ac4763e6a66d3b192ae839f14f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78239446"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399498"
 ---
-# <a name="boolean-logical-operators-c-reference"></a>Logiczna operatory logiczne (C# odwołanie)
+# <a name="boolean-logical-operators-c-reference"></a>Logiczne operatory logiczne (odwołanie do języka C#)
 
-Następujące operatory wykonują operacje logiczne z argumentami operacji [bool](../builtin-types/bool.md) :
+Następujące operatory wykonują operacje logiczne z [bool](../builtin-types/bool.md) operands:
 
-- Operator jednoargumentowy [`!` (logiczne Negacja)](#logical-negation-operator-) .
-- Binarne [`&` (logiczne i)](#logical-and-operator-), [`|` (logiczne lub)](#logical-or-operator-)i [`^` (logiczne wyłącznych lub)](#logical-exclusive-or-operator-) . Te operatory zawsze obliczają oba operandy.
-- Binarne [`&&` (warunkowe logiczne i)](#conditional-logical-and-operator-) i [`||` (warunkowe operatory logiczne or)](#conditional-logical-or-operator-) . Te operatory obliczają operand z prawej strony tylko wtedy, gdy jest to konieczne.
+- Operator unary [ `!` (logiczne negacji).](#logical-negation-operator-)
+- Operatory [ `&` binarne (logiczne i),](#logical-and-operator-) [ `|` (logiczne LUB)](#logical-or-operator-)i [ `^` (logiczne wyłączne LUB).](#logical-exclusive-or-operator-) Operatorzy ci zawsze oceniają oba argumenty.
+- Operatory [ `&&` binarne (warunkowe logiczne I)](#conditional-logical-and-operator-) i [ `||` (warunkowe logiczne LUB).](#conditional-logical-or-operator-) Operatorzy ci oceniają argument y po prawej stronie tylko wtedy, gdy jest to konieczne.
 
-W przypadku operandów [całkowitych typów liczbowych](../builtin-types/integral-numeric-types.md)operatory `&`, `|`i `^` wykonują bitowe operacje logiczne. Aby uzyskać więcej informacji, zobacz [Operatory bitowe i przesunięcia](bitwise-and-shift-operators.md).
+W przypadku operandów [zintegrowanych typów numerycznych](../builtin-types/integral-numeric-types.md) `&`, , `|`i `^` operatory wykonują operacje logiczne bitwise. Aby uzyskać więcej informacji, zobacz [Operatory bitowe i przesuwne](bitwise-and-shift-operators.md).
 
-## <a name="logical-negation-operator-"></a>Operator logiczny negacji
+## <a name="logical-negation-operator-"></a>Logiczny operator negacji!
 
-Operator jednoargumentowy `!` oblicza logiczne Negacja operandu. Oznacza to, że generuje `true`, jeśli operand zostanie obliczony do `false`i `false`, jeśli operand zostanie obliczony do `true`:
+Operator przedrostka `!` unary oblicza logiczne negacji jego operand. Oznacza to, że `true`produkuje , jeśli operand ocenia , `false`i `false`, `true`jeśli operand ocenia:
 
-[!code-csharp-interactive[logical negation](~/samples/snippets/csharp/language-reference/operators/BooleanLogicalOperators.cs#Negation)]
+[!code-csharp-interactive[logical negation](snippets/BooleanLogicalOperators.cs#Negation)]
 
-Począwszy od C# 8,0, operator jednoargumentowy `!` jest operatorem o [wartości null-łagodniejszej](null-forgiving.md).
+Począwszy od Języka C# 8.0, `!` operator postfix unary jest [operatorem wyrozumiałym.](null-forgiving.md)
 
-## <a name="logical-and-operator-"></a>Operatory logiczne i &amp;
+## <a name="logical-and-operator-"></a>Operator logiczny AND&amp;
 
-Operator `&` oblicza wartość logiczną i jej operandów. Wynik `x & y` jest `true`, jeśli oba `x` i `y` są oceniane do `true`. W przeciwnym razie wynik jest `false`.
+Operator `&` oblicza logiczną i jego operands. Wynik `x & y` jest, `true` jeśli `x` `y` oba `true`i ocenić . W przeciwnym razie `false`wynikiem jest .
 
-Operator `&` oblicza oba operandy, nawet jeśli argument operacji po lewej stronie szacuje się na `false`, dzięki czemu wynik operacji jest `false` niezależnie od wartości operandu po prawej stronie.
+Operator `&` ocenia oba argumenty, nawet jeśli operand po `false`lewej stronie ocenia , `false` tak, że wynik operacji jest niezależnie od wartości operand po prawej stronie.
 
-W poniższym przykładzie argument operacji z prawej strony operatora `&` jest wywołaniem metody, które jest wykonywane niezależnie od wartości operandu po lewej stronie:
+W poniższym przykładzie operand po prawej `&` stronie operatora jest wywołanie metody, które jest wykonywane niezależnie od wartości operand po lewej stronie:
 
-[!code-csharp-interactive[logical AND](~/samples/snippets/csharp/language-reference/operators/BooleanLogicalOperators.cs#And)]
+[!code-csharp-interactive[logical AND](snippets/BooleanLogicalOperators.cs#And)]
 
-[Warunkowe operatory logiczne i](#conditional-logical-and-operator-) `&&` oblicza również wartości logiczne i jego operandy, ale nie oblicza wartości operandu po prawej stronie, jeśli argument operacji po lewej stronie ma wartość `false`.
+[Warunkowe logiczne and operator](#conditional-logical-and-operator-) `&&` oblicza również logiczne i jego operands, ale nie ocenia operand po prawej stronie, `false`jeśli po lewej stronie operand ocenia .
 
-Dla operandów [całkowitych typów liczbowych](../builtin-types/integral-numeric-types.md)operator `&` oblicza koniunkcję [bitową i](bitwise-and-shift-operators.md#logical-and-operator-) jej operandy. Jednoargumentowy operator `&` jest [operatorem address-of](pointer-related-operators.md#address-of-operator-).
+W przypadku operandów [zintegrowanych typów numerycznych](../builtin-types/integral-numeric-types.md) `&` operator oblicza [bitowy logiczny i](bitwise-and-shift-operators.md#logical-and-operator-) jego argumentów. Operator `&` emancypuje. [address-of operator](pointer-related-operators.md#address-of-operator-)
 
-## <a name="logical-exclusive-or-operator-"></a>Operator wyłączny logicznego OR ^
+## <a name="logical-exclusive-or-operator-"></a>Logiczny wyłączny operator OR ^
 
-Operator `^` oblicza wartość logiczną na wyłączność lub, znaną również jako logiczna XOR, jego operandów. Wynik `x ^ y` jest `true`, jeśli `x` oblicza `true` i `y` oblicza `false`, lub `x` oblicza `false`, a `y` oblicza `true`. W przeciwnym razie wynik jest `false`. Oznacza to, że dla operandów `bool` operator `^` oblicza ten sam wynik, co `!=`[operatora nierówności](equality-operators.md#inequality-operator-) .
+Operator `^` oblicza logiczne wyłączne OR, znany również jako logiczne XOR, jego operands. `x ^ y` Wynik jest, `true` `x` jeśli ocenia `true` `y` i ocenia `false`, `x` lub `false` ocenia `y` i `true`ocenia . W przeciwnym razie `false`wynikiem jest . Oznacza to, `bool` że w przypadku `^` operandów operator oblicza taki sam wynik jak [operator](equality-operators.md#inequality-operator-) `!=`nierówności.
 
-[!code-csharp-interactive[logical exclusive OR](~/samples/snippets/csharp/language-reference/operators/BooleanLogicalOperators.cs#Xor)]
+[!code-csharp-interactive[logical exclusive OR](snippets/BooleanLogicalOperators.cs#Xor)]
 
-W przypadku operandów [całkowitych typów liczbowych](../builtin-types/integral-numeric-types.md)operator `^` oblicza [bitowe logiczne wyłącznych lub](bitwise-and-shift-operators.md#logical-exclusive-or-operator-) jego operandów.
+W przypadku operandów [zintegrowanych typów numerycznych](../builtin-types/integral-numeric-types.md) `^` operator oblicza [bitowy logiczny wyłączny lub](bitwise-and-shift-operators.md#logical-exclusive-or-operator-) jego operandów.
 
-## <a name="logical-or-operator-"></a>Operator logiczny OR |
+## <a name="logical-or-operator-"></a>Logiczny operator OR |
 
-Operator `|` oblicza wartość logiczną lub argumentów operacji. Wynik `x | y` jest `true`, jeśli `x` lub `y` szacuje się `true`. W przeciwnym razie wynik jest `false`.
+Operator `|` oblicza logiczne LUB jego operandów. Wynik `x | y` jest, `true` jeśli `x` `y` albo lub `true`ocenia . W przeciwnym razie `false`wynikiem jest .
 
-Operator `|` oblicza oba operandy, nawet jeśli argument operacji po lewej stronie szacuje się na `true`, dzięki czemu wynik operacji jest `true` niezależnie od wartości operandu po prawej stronie.
+Operator `|` ocenia oba argumenty, nawet jeśli operand po `true`lewej stronie ocenia , `true` tak, że wynik operacji jest niezależnie od wartości operand po prawej stronie.
 
-W poniższym przykładzie argument operacji z prawej strony operatora `|` jest wywołaniem metody, które jest wykonywane niezależnie od wartości operandu po lewej stronie:
+W poniższym przykładzie operand po prawej `|` stronie operatora jest wywołanie metody, które jest wykonywane niezależnie od wartości operand po lewej stronie:
 
-[!code-csharp-interactive[logical OR](~/samples/snippets/csharp/language-reference/operators/BooleanLogicalOperators.cs#Or)]
+[!code-csharp-interactive[logical OR](snippets/BooleanLogicalOperators.cs#Or)]
 
-[Warunkowy operator logiczny or](#conditional-logical-or-operator-) `||` oblicza również wartość logiczną lub jej operandów, ale nie oblicza wartości operandu po prawej stronie, jeśli argument operacji po lewej stronie szacuje się na `true`.
+[Operator logiczny warunkowy OR](#conditional-logical-or-operator-) `||` oblicza również logiczny OR jego argumentów, ale nie ocenia operandu po `true`prawej stronie, jeśli lewy operand ocenia .
 
-Dla operandów [całkowitych typów liczbowych](../builtin-types/integral-numeric-types.md)operator `|` oblicza [bitową wartość logiczną lub](bitwise-and-shift-operators.md#logical-or-operator-) jej operandów.
+W przypadku argumentów [zintegrowanych typów numerycznych](../builtin-types/integral-numeric-types.md) `|` operator oblicza [bitowy logiczny LUB](bitwise-and-shift-operators.md#logical-or-operator-) jego argumentów.
 
-## <a name="conditional-logical-and-operator-"></a>Warunkowe &amp;logiczne i operatory &amp;
+## <a name="conditional-logical-and-operator-"></a>Operator warunkowego logicznego AND&amp;&amp;
 
-Warunkowe operatory logiczne i `&&`, znane także jako operator logiczny "krótki-obwód", oblicza wartość logiczną i argumentów operacji. Wynik `x && y` jest `true`, jeśli oba `x` i `y` są oceniane do `true`. W przeciwnym razie wynik jest `false`. Jeśli `x` oblicza `false`, `y` nie jest oceniane.
+Warunkowe logiczne and `&&`operator , znany również jako "zwarcie" logiczne i operator, oblicza logiczne i jego operands. Wynik `x && y` jest, `true` jeśli `x` `y` oba `true`i ocenić . W przeciwnym razie `false`wynikiem jest . Jeśli `x` zostanie `false`oceniona , `y` nie jest oceniana.
 
-W poniższym przykładzie argument operacji po prawej stronie operatora `&&` jest wywołaniem metody, które nie jest wykonywane, jeśli argument operacji po lewej stronie szacuje się na `false`:
+W poniższym przykładzie operand po prawej `&&` stronie operatora jest wywołanie metody, które nie jest wykonywane, `false`jeśli po lewej stronie operand ocenia:
 
-[!code-csharp-interactive[conditional logical AND](~/samples/snippets/csharp/language-reference/operators/BooleanLogicalOperators.cs#ConditionalAnd)]
+[!code-csharp-interactive[conditional logical AND](snippets/BooleanLogicalOperators.cs#ConditionalAnd)]
 
-[Operator logiczny i](#logical-and-operator-) `&` oblicza również wartości logiczne i jego operandy, ale zawsze oblicza oba operandy.
+[Operator logiczny AND](#logical-and-operator-) `&` oblicza również logiczną i jego argumenty, ale zawsze ocenia oba argumenty.
 
-## <a name="conditional-logical-or-operator-"></a>Warunkowe logiczne OR operator | |
+## <a name="conditional-logical-or-operator-"></a>Warunkowy operator logiczny OR ||
 
-Warunkowe operatory logiczne OR `||`, znane także jako operator logiczny OR "krótkie-obwód", oblicza wartość logiczną lub argumentów operacji. Wynik `x || y` jest `true`, jeśli `x` lub `y` szacuje się `true`. W przeciwnym razie wynik jest `false`. Jeśli `x` oblicza `true`, `y` nie jest oceniane.
+Warunkowe logiczne or `||`operator , znany również jako "zwarcie" logiczny operator OR, oblicza logiczne LUB jego operandów. Wynik `x || y` jest, `true` jeśli `x` `y` albo lub `true`ocenia . W przeciwnym razie `false`wynikiem jest . Jeśli `x` zostanie `true`oceniona , `y` nie jest oceniana.
 
-W poniższym przykładzie argument operacji po prawej stronie operatora `||` jest wywołaniem metody, które nie jest wykonywane, jeśli argument operacji po lewej stronie szacuje się na `true`:
+W poniższym przykładzie operand po prawej `||` stronie operatora jest wywołanie metody, które nie jest wykonywane, `true`jeśli po lewej stronie operand ocenia:
 
-[!code-csharp-interactive[conditional logical OR](~/samples/snippets/csharp/language-reference/operators/BooleanLogicalOperators.cs#ConditionalOr)]
+[!code-csharp-interactive[conditional logical OR](snippets/BooleanLogicalOperators.cs#ConditionalOr)]
 
-[Operator logiczny or](#logical-or-operator-) `|` oblicza również wartości logiczne lub jego operandy, ale zawsze oblicza oba operandy.
+[Operator logiczny OR](#logical-or-operator-) `|` oblicza również logiczny LUB jego argumentów, ale zawsze ocenia oba argumenty.
 
-## <a name="nullable-boolean-logical-operators"></a>Logiczne operatory wartości null
+## <a name="nullable-boolean-logical-operators"></a>Operatory logiczne logiczne logiczne wartości null
 
-Dla argumentów operacji `bool?` operatory `&` i `|` obsługują logikę z trzema wartościami. Semantyka tych operatorów jest definiowana przez następującą tabelę:  
+W `bool?` przypadku `&` operandów `|` operatorzy i operatorzy obsługują logikę trójwartościową. Semantyka tych operatorów jest zdefiniowana przez następującą tabelę:  
   
-|x|{1&gt;y&lt;1}|x & y|x&#124;y|  
+|x|t|x&y|x&#124;y|  
 |----|----|----|----|  
 |true|true|true|true|  
 |true|false|false|true|  
@@ -129,70 +129,70 @@ Dla argumentów operacji `bool?` operatory `&` i `|` obsługują logikę z trzem
 |null|false|false|null|  
 |null|null|null|null|  
 
-Zachowanie tych operatorów różni się od typowego zachowania operatora z zerowymi typami wartości. Zazwyczaj operator, który jest zdefiniowany dla operandów typu wartości, może być również używany z operandami odpowiadającego typu wartości null. Taki operator wytwarza `null`, jeśli którykolwiek z jego operandów zwróci `null`. Jednak operatory `&` i `|` mogą generować wartości inne niż null, nawet jeśli jeden z operandów szacuje się w `null`. Aby uzyskać więcej informacji o zachowaniu operatora z typem wartości null, zobacz sekcję [zniesione operatory](../builtin-types/nullable-value-types.md#lifted-operators) w artykule [typy wartości null](../builtin-types/nullable-value-types.md) .
+Zachowanie tych operatorów różni się od typowezachowanie operatora z typami wartości nullable. Zazwyczaj operator, który jest zdefiniowany dla operandów typu wartości może być również używany z argumentów odpowiedniego typu wartości nullable. Taki operator produkuje, `null` jeśli którykolwiek z jego `null`operands ocenia . Jednak `&` operatory `|` i może produkować non-null, nawet jeśli jeden `null`z operands ocenia . Aby uzyskać więcej informacji na temat zachowania operatora z typami wartości nullable, zobacz [Lifted operatorów](../builtin-types/nullable-value-types.md#lifted-operators) sekcji [typy wartości nullable.](../builtin-types/nullable-value-types.md)
 
-Można również użyć operatorów `!` i `^` z argumentami operacji `bool?`, jak pokazano w poniższym przykładzie:
+Można również użyć `!` `^` i `bool?` operatorów z operandów, jak pokazano w poniższym przykładzie:
 
-[!code-csharp-interactive[lifted negation and xor](~/samples/snippets/csharp/language-reference/operators/BooleanLogicalOperators.cs#WithNullableBoolean)]
+[!code-csharp-interactive[lifted negation and xor](snippets/BooleanLogicalOperators.cs#WithNullableBoolean)]
 
-Warunkowe operatory logiczne `&&` i `||` nie obsługują argumentów operacji `bool?`.
+Warunkowe operatory `&&` `||` logiczne i `bool?` nie obsługują operandów.
 
 ## <a name="compound-assignment"></a>Przypisanie złożone
 
-Dla operatora binarnego `op`wyrażenie złożonego przypisania formularza
+Dla operatora `op`binarnego wyrażenie przypisania złożonego formularza
 
 ```csharp
 x op= y
 ```
 
-odpowiada wyrażeniu
+jest równoważny
 
 ```csharp
 x = x op y
 ```
 
-z tą różnicą, że `x` są oceniane tylko raz.
+chyba `x` że jest oceniana tylko raz.
 
-Operatory `&`, `|`i `^` obsługują przypisanie złożone, co ilustruje poniższy przykład:
+Program `&` `|`, `^` i operatory obsługują przypisanie złożone, jak pokazano w poniższym przykładzie:
 
-[!code-csharp-interactive[compound assignment](~/samples/snippets/csharp/language-reference/operators/BooleanLogicalOperators.cs#CompoundAssignment)]
+[!code-csharp-interactive[compound assignment](snippets/BooleanLogicalOperators.cs#CompoundAssignment)]
 
-Warunkowe operatory logiczne `&&` i `||` nie obsługują przypisania złożonego.
+Warunkowe operatory `&&` `||` logiczne i nie obsługują przypisania złożonego.
 
 ## <a name="operator-precedence"></a>Pierwszeństwo operatorów
 
-Poniższa lista porządkuje operatory logiczne rozpoczynając od najwyższego priorytetu do najniższego:
+Poniższa lista porządkuje operatory logiczne, począwszy od najwyższego pierwszeństwa do najniższego:
 
-- `!` operatora negacji logicznej
-- Operatory logiczne i `&`
-- `^` operatora logicznego wyłącznego OR
-- `|` operatora logicznego OR
-- Warunkowe operatory logiczne i `&&`
-- Warunkowe `||` operatora logicznego OR
+- Logiczny operator negacji`!`
+- Operator logiczny AND`&`
+- Logiczny wyłączny operator OR`^`
+- Operator logiczny OR`|`
+- Operator warunkowego logicznego AND`&&`
+- Operator logiczny warunkowy OR`||`
 
-Użyj nawiasów `()`, aby zmienić kolejność oceny nałożona przez pierwszeństwo operatorów:
+Użyj nawiasów, `()`, aby zmienić kolejność oceny narzuconą przez pierwszeństwo operatora:
 
-[!code-csharp-interactive[operator precedence](~/samples/snippets/csharp/language-reference/operators/BooleanLogicalOperators.cs#Precedence)]
+[!code-csharp-interactive[operator precedence](snippets/BooleanLogicalOperators.cs#Precedence)]
 
-Aby uzyskać pełną listę C# operatorów uporządkowanych według poziomu pierwszeństwa, zobacz sekcję [pierwszeństwo](index.md#operator-precedence) operatorów w artykule [ C# Operators](index.md) .
+Aby uzyskać pełną listę operatorów Języka C# uporządkowane według poziomu pierwszeństwa, zobacz [pierwszeństwo operatora](index.md#operator-precedence) sekcji [operatorów C#artykułu.](index.md)
 
-## <a name="operator-overloadability"></a>Przeciążanie operatora
+## <a name="operator-overloadability"></a>Przeciążenie operatora
 
-Typ zdefiniowany przez użytkownika może [przeciążać](operator-overloading.md) operatory `!`, `&`, `|`i `^`. Gdy operator binarny jest przeciążony, odpowiadający mu operator przypisania złożonego jest również niejawnie przeciążony. Typ zdefiniowany przez użytkownika nie może jawnie przeciążać złożonego operatora przypisania.
+Typ zdefiniowany przez użytkownika `!`może `&` `|` `^` [przeciążyć](operator-overloading.md) , , i operatorów. Gdy operator binarny jest przeciążony, odpowiedni operator przypisania złożonego jest również niejawnie przeciążony. Typ zdefiniowany przez użytkownika nie może jawnie przeciążać operatora przypisania złożonego.
 
-Typ zdefiniowany przez użytkownika nie może przeciążać warunkowych operatorów logicznych `&&` i `||`. Jednakże, jeśli typ zdefiniowany przez użytkownika przeciążuje [Operatory true i false](true-false-operators.md) oraz operator `&` lub `|` w określony sposób, `&&` lub `||` operacji, można je obliczyć odpowiednio dla operandów tego typu. Aby uzyskać więcej informacji, zapoznaj się z sekcją [Operatory logiczne warunkowe](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) w [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).
+Typ zdefiniowany przez użytkownika nie może `&&` `||`przeciążać operatorów logicznych warunkowych i . Jednak jeśli typ zdefiniowany przez użytkownika przeciąża `&` [operatory true i false](true-false-operators.md) `||` i lub `|` operator w określony sposób, `&&` lub operacji, odpowiednio, mogą być oceniane dla operandów tego typu. Aby uzyskać więcej informacji, zobacz sekcję [Operatory logiczne warunkowe zdefiniowane przez użytkownika](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) [specyfikacji języka Języka C#.](~/_csharplang/spec/introduction.md)
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
-Aby uzyskać więcej informacji, zobacz następujące sekcje [ C# specyfikacji języka](~/_csharplang/spec/introduction.md):
+Aby uzyskać więcej informacji, zobacz następujące sekcje [specyfikacji języka Języka C#:](~/_csharplang/spec/introduction.md)
 
-- [Operator logiczny negacji](~/_csharplang/spec/expressions.md#logical-negation-operator)
+- [Logiczny operator negacji](~/_csharplang/spec/expressions.md#logical-negation-operator)
 - [Operatory logiczne](~/_csharplang/spec/expressions.md#logical-operators)
 - [Warunkowe operatory logiczne](~/_csharplang/spec/expressions.md#conditional-logical-operators)
 - [Przypisanie złożone](~/_csharplang/spec/expressions.md#compound-assignment)
 
 ## <a name="see-also"></a>Zobacz też
 
-- [C#odwoła](../index.md)
+- [Dokumentacja języka C#](../index.md)
 - [Operatory języka C#](index.md)
-- [Operatory bitowe i przesunięcia](bitwise-and-shift-operators.md)
+- [Operatory przesunięcia i operatory bitowe](bitwise-and-shift-operators.md)

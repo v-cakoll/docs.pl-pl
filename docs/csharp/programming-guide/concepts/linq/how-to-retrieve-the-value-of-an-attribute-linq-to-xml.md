@@ -1,19 +1,19 @@
 ---
-title: Jak pobrać wartość atrybutu (LINQ to XML) (C#)
+title: Jak pobrać wartość atrybutu (LINQ do XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 817bbe89-5979-4234-bf0c-46f63692ac8c
 ms.openlocfilehash: d5b8bb3b5857b82a61367953b8e1cd63bea90beb
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75347433"
 ---
-# <a name="how-to-retrieve-the-value-of-an-attribute-linq-to-xml-c"></a>Jak pobrać wartość atrybutu (LINQ to XML) (C#)
-W tym temacie pokazano, jak uzyskać wartość atrybutów. Istnieją dwa podstawowe sposoby: można rzutować <xref:System.Xml.Linq.XAttribute> na żądany typ; operator jawnej konwersji konwertuje zawartość elementu lub atrybutu do określonego typu. Alternatywnie możesz użyć właściwości <xref:System.Xml.Linq.XAttribute.Value%2A>. Jednak Rzutowanie jest ogólnie lepszym rozwiązaniem. Jeśli rzutowany atrybut na typ dopuszczający wartość null, kod jest łatwiejszy do zapisu podczas pobierania wartości atrybutu, który może lub nie istnieje. Aby zapoznać się z przykładami tej techniki, zobacz [jak pobrać wartość elementu (LINQ to XML) (C#)](./how-to-retrieve-the-value-of-an-element-linq-to-xml.md).  
+# <a name="how-to-retrieve-the-value-of-an-attribute-linq-to-xml-c"></a>Jak pobrać wartość atrybutu (LINQ do XML) (C#)
+W tym temacie pokazano, jak uzyskać wartość atrybutów. Istnieją dwa główne sposoby: Można <xref:System.Xml.Linq.XAttribute> rzucić do żądanego typu; operator konwersji jawnej następnie konwertuje zawartość elementu lub atrybutu na określony typ. Alternatywnie można użyć <xref:System.Xml.Linq.XAttribute.Value%2A> tej właściwości. Jednak casting jest na ogół lepszym podejściem. Jeśli rzutowane atrybut udopuszczający typ, kod jest prostszy do zapisu podczas pobierania wartości atrybutu, który może lub nie może istnieć. Przykłady tej techniki można znaleźć w [części Jak pobrać wartość elementu (LINQ do XML) (C#).](./how-to-retrieve-the-value-of-an-element-linq-to-xml.md)  
   
 ## <a name="example"></a>Przykład  
- Aby pobrać wartość atrybutu, należy po prostu rzutować obiekt <xref:System.Xml.Linq.XAttribute> na żądany typ.  
+ Aby pobrać wartość atrybutu, wystarczy <xref:System.Xml.Linq.XAttribute> rzutować obiekt do żądanego typu.  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -32,7 +32,7 @@ abcde
 ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak pobrać wartość atrybutu, gdzie atrybut znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz temat [przestrzenie nazw —C#omówienie (LINQ to XML) ()](namespaces-overview-linq-to-xml.md).  
+ W poniższym przykładzie pokazano, jak pobrać wartość atrybutu, w którym atrybut znajduje się w obszarze nazw. Aby uzyskać więcej informacji, zobacz [Omówienie przestrzeni nazw (LINQ do XML) (C#)](namespaces-overview-linq-to-xml.md).  
   
 ```csharp  
 XNamespace aw = "http://www.adventure-works.com";  
@@ -49,6 +49,6 @@ Console.WriteLine(str);
 abcde  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Osie LINQ to XML (C#)](./linq-to-xml-axes-overview.md)
+- [LINQ do osi XML (C#)](./linq-to-xml-axes-overview.md)

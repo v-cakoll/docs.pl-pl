@@ -1,7 +1,7 @@
 - name: Dokumentacja języka XAML
   href: index.md
   items:
-    - name: 'Przestrzeń nazw XAML (x:) Funkcje językowe'
+    - name: 'Przestrzeń nazwa (x:) XAML — Funkcje językowe'
       href: namespace-language-features.md
       items:
         - name: Funkcje języka XAML 2009 (nie WPF)

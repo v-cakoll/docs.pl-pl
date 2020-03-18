@@ -3,24 +3,24 @@ title: Kształt dokumentów WordprocessingML (C#)
 ms.date: 07/20/2015
 ms.assetid: 3791b5e0-c502-469b-bb75-a7bf6fdd0a94
 ms.openlocfilehash: 58c028fed465f45fdcf8f63f2119eb8e8b201e32
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76732671"
 ---
 # <a name="shape-of-wordprocessingml-documents-c"></a>Kształt dokumentów WordprocessingML (C#)
-Ten temat zawiera wprowadzenie do kształtu XML dokumentu WordprocessingML.  
+W tym temacie przedstawiono kształt XML dokumentu WordprocessingML.  
   
-## <a name="microsoft-office-formats"></a>Formaty Microsoft Office  
- Format pliku natywnego dla systemu 2007 Microsoft Office to Office Open XML (często nazywanego Open XML). Open XML jest formatem opartym na formacie XML, który Standard ECMA i jest obecnie przechodzący przez proces standardów ISO-IEC. Język znaczników dla plików edytora tekstu w formacie Open XML ma nazwę WordprocessingML. Ten samouczek używa plików źródłowych WordprocessingML jako danych wejściowych dla przykładów.  
+## <a name="microsoft-office-formats"></a>Formaty pakietu Microsoft Office  
+ Natywnym formatem pliku dla pakietu Microsoft Office system 2007 jest office Open XML (powszechnie nazywany Open XML). Open XML to format oparty na XML, który jest standardem Ecma i obecnie przechodzi proces standardów ISO-IEC. Język znaczników dla plików edytora tekstu w otwartym pliku XML nosi nazwę WordprocessingML. W tym samouczku użyto plików źródłowych WordprocessingML jako danych wejściowych dla przykładów.  
   
- Jeśli używasz Microsoft Office 2003, możesz zapisać dokumenty w formacie Office Open XML, jeśli zainstalowano pakiet zgodności Microsoft Office dla formatów plików programów Word, Excel i PowerPoint 2007.  
+ Jeśli używasz pakietu Microsoft Office 2003, możesz zapisywać dokumenty w formacie Otwartych xml pakietu Office, jeśli zainstalowano pakiet zgodności pakietu Microsoft Office dla formatów plików programów Word, Excel i PowerPoint 2007.  
   
-## <a name="the-shape-of-wordprocessingml-documents"></a>Kształt dokumentów WordprocessingML  
- Pierwszą rzeczą, którą należy zrozumieć, jest kształt dokumentów WordprocessingML. Dokument WordprocessingML zawiera element Body (o nazwie `w:body`) zawierający akapity dokumentu. Każdy akapit zawiera jeden lub więcej uruchomień tekstu (o nazwie `w:r`). Każdy przebieg tekstowy zawiera jedną lub więcej fragmentów tekstu (o nazwie `w:t`).  
+## <a name="the-shape-of-wordprocessingml-documents"></a>Kształt dokumentów wordprocessingML  
+ Pierwszą rzeczą do zrozumienia jest kształt dokumentów WordprocessingML. Dokument WordprocessingML zawiera element treści `w:body`(o nazwie), który zawiera akapity dokumentu. Każdy akapit zawiera jeden lub `w:r`więcej przebiegów tekstu (o nazwie). Każdy uruchomiony tekst zawiera jeden lub `w:t`więcej fragmentów tekstu (o nazwie).  
   
- Oto bardzo prosty dokument WordprocessingML:  
+ Poniżej znajduje się bardzo prosty dokument WordprocessingML:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
@@ -51,11 +51,11 @@ xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml">
 </w:document>  
 ```  
   
- Ten dokument zawiera dwa akapity. Oba te elementy zawierają pojedynczy przebieg tekstowy, a każdy z nich jest pojedynczym fragmentem tekstu.  
+ Ten dokument zawiera dwa akapity. Oba zawierają jeden przebieg tekstu, a każdy przebieg tekstu zawiera pojedynczy fragment tekstu.  
   
- Najprostszym sposobem wyświetlenia zawartości dokumentu WordprocessingML w formularzu XML jest utworzenie go przy użyciu programu Microsoft Word, zapisanie go, a następnie uruchomienie następującego programu, który drukuje plik XML do konsoli programu.  
+ Najprostszym sposobem wyświetlenia zawartości dokumentu WordprocessingML w formularzu XML jest utworzenie go przy użyciu programu Microsoft Word, zapisanie go, a następnie uruchomienie następującego programu, który drukuje kod XML na konsoli.  
   
- Ten przykład używa klas znalezionych w zestawie 'Windowsbase. Używa typów w przestrzeni nazw <xref:System.IO.Packaging?displayProperty=nameWithType>.  
+ W tym przykładzie użyto klas znalezionych w zestawie WindowsBase. Używa typów w <xref:System.IO.Packaging?displayProperty=nameWithType> obszarze nazw.  
   
 ```csharp  
 const string documentRelationshipType =  
@@ -89,11 +89,11 @@ using (Package wdPackage = Package.Open("SampleDoc.docx", FileMode.Open, FileAcc
   
 ## <a name="external-resources"></a>Zasoby zewnętrzne
 
-- [Wprowadzenie do pakietu Office (2007) otwartych formatów plików XML](https://docs.microsoft.com/previous-versions/office/developer/office-2007/aa338205%28v=office.12%29)
-- [Przegląd WordprocessingML](https://docs.microsoft.com/previous-versions/office/developer/office-2003/aa212812%28v=office.11%29)
+- [Przedstawiamy otwierane formaty plików XML pakietu Office (2007)](https://docs.microsoft.com/previous-versions/office/developer/office-2007/aa338205%28v=office.12%29)
+- [Omówienie języka WordprocessingML](https://docs.microsoft.com/previous-versions/office/developer/office-2003/aa212812%28v=office.11%29)
 - [Anatomia pliku WordProcessingML](http://officeopenxml.com/anatomyofOOXML.php)
-- [Wprowadzenie do WordprocessingML](https://ericwhite.com/blog/introduction-to-wordprocessingml-series/)
+- [Wprowadzenie do wordprocessingML](https://ericwhite.com/blog/introduction-to-wordprocessingml-series/)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Samouczek: manipulowanie zawartością w dokumencie WordprocessingML (C#)](./shape-of-wordprocessingml-documents.md)

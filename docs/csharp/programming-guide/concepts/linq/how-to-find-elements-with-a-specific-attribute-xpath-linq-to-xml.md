@@ -1,23 +1,23 @@
 ---
-title: Jak znaleźć elementy z określonym atrybutem (XPath-LINQ to XML) (C#)
+title: Jak znaleźć elementy z określonym atrybutem (XPath-LINQ do XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: daed00dd-923a-43be-8a90-eee406f6f574
 ms.openlocfilehash: e79cad3ad6fb0bf88e388b552f8e39327acfb4ad
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141037"
 ---
-# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-c"></a>Jak znaleźć elementy z określonym atrybutem (XPath-LINQ to XML) (C#)
-Czasami chcesz znaleźć wszystkie elementy, które mają określony atrybut. Nie dotyczy zawartości atrybutu. Zamiast tego należy wybrać opcję na podstawie istnienia atrybutu.  
+# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-c"></a>Jak znaleźć elementy z określonym atrybutem (XPath-LINQ do XML) (C#)
+Czasami chcesz znaleźć wszystkie elementy, które mają określony atrybut. Nie martwisz się o zawartość atrybutu. Zamiast tego chcesz wybrać na podstawie istnienia atrybutu.  
   
- Wyrażenie XPath:  
+ Wyrażenie XPath jest następujące:  
   
  `./*[@Select]`  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod wybiera tylko elementy, które mają atrybut `Select`.  
+ Poniższy kod wybiera tylko elementy, `Select` które mają atrybut.  
   
 ```csharp  
 XElement doc = XElement.Parse(  

@@ -10,7 +10,7 @@
           href: pack-uris-in-wpf.md
         - name: Dodawanie ekranu powitalnego do aplikacji WPF
           href: how-to-add-a-splash-screen-to-a-wpf-application.md
-        - name: Używanie słownika zasobów zakresu aplikacji
+        - name: Użyj słownika zasobów zakresu aplikacji
           href: how-to-use-an-application-scope-resource-dictionary.md
         - name: Utrwalanie i przywracanie właściwości zakresu aplikacji między sesjami aplikacji
           href: persist-and-restore-application-scope-properties.md
@@ -80,9 +80,9 @@
         - name: — Tematy porad
           href: how-to-topics.md
           items:
-            - name: 'Tworzenie dodatku, który zwraca interfejs użytkownika'
+            - name: 'Utwórz dodatek, który zwraca interfejs użytkownika'
               href: how-to-create-an-add-in-that-returns-a-ui.md
-            - name: 'Tworzenie dodatku, który jest interfejsem użytkownika'
+            - name: 'Utwórz dodatek, który jest interfejsem użytkownika'
               href: how-to-create-an-add-in-that-is-a-ui.md
     - name: Hosting
       href: hosting-wpf-applications.md
@@ -128,7 +128,7 @@
           items:
             - name: Konfigurowanie w usługach IIS 5.0 oraz IIS 6.0 wdrażania aplikacji WPF
               href: how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md
-            - name: 'Konfiguruj Visual Studio, aby debugować aplikację przeglądarki XAML i wywołać usługę sieci Web'
+            - name: Konfigurowanie w programie Visual Studio debugowania aplikacji przeglądarki XAML w celu wywoływania usługi internetowej
               href: configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md
             - name: 'Wykryj, czy wtyczka .NET Framework 3.0 jest zainstalowana'
               href: how-to-detect-whether-the-net-framework-3-0-is-installed.md

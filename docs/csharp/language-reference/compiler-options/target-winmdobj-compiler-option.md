@@ -1,16 +1,16 @@
 ---
-title: '-target: winmdobj (C# opcje kompilatora)'
+title: -target:winmdobj (Opcje kompilatora C#)
 ms.date: 07/20/2015
 ms.assetid: 1819a045-659d-498a-9457-c466e902986f
 ms.openlocfilehash: 85ae9a3f5e9b038c0c56935ec5af2b9b09d19f20
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74204493"
 ---
-# <a name="-targetwinmdobj-c-compiler-options"></a>-target: winmdobj (C# opcje kompilatora)
-W przypadku użycia opcji kompilatora **-target: winmdobj** kompilator tworzy plik pośredni. winmdobj, który można przekonwertować na środowisko wykonawcze systemu Windows plik binarny (. winmd). Plik. winmd może być następnie używany przez JavaScript i C++ programy, oprócz programów języka zarządzanego.  
+# <a name="-targetwinmdobj-c-compiler-options"></a>-target:winmdobj (Opcje kompilatora C#)
+Jeśli używasz opcji **kompilatora -target:winmdobj,** kompilator tworzy pośredni plik .winmdobj, który można przekonwertować na plik binarny środowiska uruchomieniowego systemu Windows (winmd). Plik .winmd może być następnie używany przez programy JavaScript i C++, oprócz zarządzanych programów językowych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -19,34 +19,34 @@ W przypadku użycia opcji kompilatora **-target: winmdobj** kompilator tworzy pl
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Ustawienie **winmdobj** sygnalizuje kompilatorowi, że wymagany jest moduł pośredni. W odpowiedzi program Visual Studio kompiluje bibliotekę C# klas jako plik. winmdobj. Plik. winmdobj można następnie uzyskać za pomocą narzędzia eksportu <xref:Microsoft.Build.Tasks.WinMDExp>, aby utworzyć plik metadanych systemu Windows (WinMD). Plik. winmd zawiera zarówno kod z oryginalnej biblioteki, jak i metadane WinMD, które są używane przez skrypty JavaScript lub C++ środowisko wykonawcze systemu Windows.  
+ Ustawienie **winmdobj** sygnalizuje kompilator, że wymagany jest moduł pośredni. W odpowiedzi Visual Studio kompiluje biblioteki klas C# jako plik .winmdobj. Plik .winmdobj może być następnie <xref:Microsoft.Build.Tasks.WinMDExp> podawany za pomocą narzędzia eksportu w celu wygenerowania pliku metadanych systemu Windows (winmd). Plik .winmd zawiera zarówno kod z oryginalnej biblioteki, jak i metadane WinMD używane przez JavaScript lub C++ oraz przez środowisko uruchomieniowe systemu Windows.  
   
- Dane wyjściowe pliku, który jest kompilowany przy użyciu opcji **-target: winmdobj** kompilatora, jest przeznaczony do użycia tylko jako dane wejściowe dla narzędzia eksportu WimMDExp; sam plik. winmdobj nie jest bezpośrednio przywoływany.  
+ Dane wyjściowe pliku, który jest kompilowany przy użyciu opcji kompilatora **-target:winmdobj** jest przeznaczony do użycia tylko jako dane wejściowe dla narzędzia eksportu WimMDExp; plik .winmdobj sam nie odwołuje się bezpośrednio.  
   
- O ile nie zostanie użyta opcja [-out](./out-compiler-option.md) , nazwa pliku wyjściowego przyjmuje nazwę pierwszego pliku wejściowego. Metoda [Main](../../programming-guide/main-and-command-args/index.md) nie jest wymagana.  
+ Jeśli nie użyjesz opcji [-out,](./out-compiler-option.md) nazwa pliku wyjściowego przyjmuje nazwę pierwszego pliku wejściowego. [Metoda główna](../../programming-guide/main-and-command-args/index.md) nie jest wymagana.  
   
- W przypadku określenia opcji-target: winmdobj w wierszu polecenia wszystkie pliki do momentu, w którym zostanie użyta opcja modułu "Następny **-out** " lub ["target: module"](./target-module-compiler-option.md) , są używane do tworzenia programu systemu Windows.  
+ Jeśli określisz opcję -target:winmdobj w wierszu polecenia, wszystkie pliki do następnego **-out** lub [-target:module](./target-module-compiler-option.md) opcja są używane do tworzenia programu Windows.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-ide-for-a-windows-store-app"></a>Aby ustawić tę opcję kompilatora w programie Visual Studio IDE dla aplikacji magazynu systemu Windows  
   
-1. W **Eksplorator rozwiązań**Otwórz menu skrótów dla projektu, a następnie wybierz polecenie **Właściwości**.  
+1. W **Eksploratorze rozwiązań**otwórz menu skrótów dla projektu, a następnie wybierz pozycję **Właściwości**.  
   
-2. Wybierz kartę **aplikacja** .  
+2. Wybierz **kartę Aplikacja.**  
   
-3. Na liście **Typ danych wyjściowych** wybierz pozycję **plik WinMD**.  
+3. Na liście **Typ wyjściowy** wybierz pozycję **Plik WinMD**.  
   
-     Opcja **plik WinMD** jest dostępna tylko dla szablonów aplikacji ze sklepu Windows 8. x.  
+     Opcja **Plik WinMD** jest dostępna tylko dla szablonów aplikacji ze Sklepu Windows 8.x.  
   
- Aby uzyskać informacje o tym, jak ustawić tę opcję kompilatora programowo, zobacz <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
+ Aby uzyskać informacje dotyczące programowego ustawiania tej <xref:VSLangProj80.ProjectProperties3.OutputType%2A>opcji kompilatora, zobacz .  
   
 ## <a name="example"></a>Przykład  
- Poniższe polecenie kompiluje `filename.cs` do pliku pośredniego. winmdobj.  
+ Następujące polecenie kompiluje `filename.cs` się do pośredniego pliku .winmdobj.  
   
 ```console  
 csc -target:winmdobj filename.cs  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [-Target (C# opcje kompilatora)](./target-compiler-option.md)
-- [Opcje kompilatora C#](./index.md)
+- [-target (Opcje kompilatora C#)](./target-compiler-option.md)
+- [Opcje kompilatora Języka C#](./index.md)

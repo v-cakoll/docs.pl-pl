@@ -1,46 +1,46 @@
 ---
-title: Wybierz używaną wersję platformy .NET Core
-description: Dowiedz się, jak platforma .NET Core automatycznie wyszukuje i wybiera wersje środowiska uruchomieniowego dla programu. Ponadto w tym artykule opisano, jak wymusić określoną wersję.
+title: Wybierz wersję programu .NET Core, której ma być używana
+description: Dowiedz się, jak program .NET Core automatycznie wyszukuje i wybiera wersje czasu wykonywania programu. Ponadto w tym artykule nauczysz, jak wymusić określoną wersję.
 author: thraka
 ms.author: adegeo
 ms.date: 06/26/2019
 ms.openlocfilehash: 55f04ce81f63753831fca8fa2e44811c44049733
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451002"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398826"
 ---
-# <a name="select-the-net-core-version-to-use"></a>Wybierz wersję platformy .NET Core do użycia
+# <a name="select-the-net-core-version-to-use"></a>Wybierz wersję .NET Core, która ma być używana
 
-W tym artykule wyjaśniono zasady używane przez narzędzia, zestaw SDK i środowisko uruchomieniowe programu .NET Core do wybierania wersji. Te zasady zapewniają równowagę między uruchomionymi aplikacjami korzystającymi z określonych wersji i umożliwiającą łatwe uaktualnienie maszyn deweloperskich i użytkowników końcowych. Te zasady wykonują następujące czynności:
+W tym artykule wyjaśniono zasady używane przez narzędzia .NET Core, Zestaw SDK i czas wykonywania do wybierania wersji. Te zasady zapewniają równowagę między uruchamianiem aplikacji przy użyciu określonych wersji i umożliwieniem aktualizacji maszyn deweloperskich i użytkowników końcowych. Te zasady wykonują następujące czynności:
 
 - Łatwe i wydajne wdrażanie programu .NET Core, w tym aktualizacje zabezpieczeń i niezawodności.
-- Użyj najnowszych narzędzi i poleceń niezależnie od docelowego środowiska uruchomieniowego.
+- Użyj najnowszych narzędzi i poleceń niezależnie od docelowego czasu wykonywania.
 
-Wybór wersji:
+Wybór wersji następuje:
 
-- Po uruchomieniu polecenia zestawu SDK [zestaw SDK używa najnowszej zainstalowanej wersji](#the-sdk-uses-the-latest-installed-version).
-- Podczas kompilowania zestawu [monikery struktury docelowej definiują interfejsy API czasu kompilacji](#target-framework-monikers-define-build-time-apis).
-- Po uruchomieniu aplikacji platformy .NET Core [aplikacje zależne od platformy docelowej są przenoszone do przodu](#framework-dependent-apps-roll-forward).
-- Po opublikowaniu aplikacji samodzielne [wdrożenia obejmują wybrane środowisko uruchomieniowe](#self-contained-deployments-include-the-selected-runtime).
+- Po uruchomieniu polecenia SDK [zestaw SDK używa najnowszej zainstalowanej wersji](#the-sdk-uses-the-latest-installed-version).
+- Podczas tworzenia zestawu, [monikerów platformy docelowej zdefiniować czas kompilacji interfejsów API](#target-framework-monikers-define-build-time-apis).
+- Po uruchomieniu aplikacji .NET Core [aplikacje zależne od struktury docelowej przewiń do przodu](#framework-dependent-apps-roll-forward).
+- Podczas publikowania niezależnej aplikacji niezależne [wdrożenia obejmują wybrany czas wykonywania](#self-contained-deployments-include-the-selected-runtime).
 
-Pozostała część tego dokumentu bada te cztery scenariusze.
+W pozostałej części tego dokumentu przeanalizowano te cztery scenariusze.
 
-## <a name="the-sdk-uses-the-latest-installed-version"></a>Zestaw SDK używa najnowszej zainstalowanej wersji
+## <a name="the-sdk-uses-the-latest-installed-version"></a>Zestaw SDK korzysta z najnowszej zainstalowanej wersji
 
-Polecenia zestawu SDK zawierają `dotnet new` i `dotnet run`. Interfejs wiersza polecenia platformy .NET Core musi wybrać wersję zestawu SDK dla każdego polecenia `dotnet`. Domyślnie używa najnowszego zestawu SDK zainstalowanego na komputerze, nawet jeśli:
+Polecenia SDK `dotnet new` obejmują `dotnet run`i . Polecenie CLI programu .NET Core musi wybrać `dotnet` wersję sdk dla każdego polecenia. Domyślnie używa najnowszego sdk zainstalowanego na komputerze, nawet jeśli:
 
-- Projekt jest przeznaczony dla starszej wersji środowiska uruchomieniowego .NET Core.
-- Najnowsza wersja zestaw .NET Core SDK jest wersją zapoznawczą.
+- Projekt jest przeznaczony dla starszej wersji programu runtime .NET Core.
+- Najnowsza wersja sdk .NET Core jest wersja zapoznawcza.
 
-W przypadku wcześniejszych wersji środowiska uruchomieniowego platformy .NET Core można korzystać z najnowszych funkcji i ulepszeń zestawu SDK. Można kierować wiele wersji środowiska uruchomieniowego platformy .NET Core w różnych projektach przy użyciu tych samych narzędzi zestawu SDK dla wszystkich projektów.
+Można korzystać z najnowszych funkcji i ulepszeń sdk podczas określania wartości docelowej wcześniejszych wersji programu .NET Core. Można kierować wiele wersji programu .NET Core na różne projekty, przy użyciu tych samych narzędzi SDK dla wszystkich projektów.
 
-W rzadkich przypadkach może być konieczne użycie wcześniejszej wersji zestawu SDK. Należy określić tę wersję w pliku [ *Global. JSON* ](../tools/global-json.md). Zasady "Użyj najnowszych" oznacza, że do określenia wersji zestaw .NET Core SDKj starszej niż Najnowsza wersja jest używany plik *Global. JSON* .
+W rzadkich przypadkach może być konieczne użycie wcześniejszej wersji sdk. Określ tę wersję w pliku [ *global.json* ](../tools/global-json.md). Zasady "użyj najnowszego" *oznaczają,* że do określenia wersji sdk .NET Core jest używana tylko wersja sdk .NET Core wcześniejsza niż najnowsza zainstalowana wersja.
 
-plik *Global. JSON* można umieścić w dowolnym miejscu w hierarchii plików. Interfejs wiersza polecenia przeszukuje w górę w katalogu projektu pierwszy znaleziony plik *Global. JSON* . Można kontrolować, które projekty, do których odnosi się plik *Global. JSON* w systemie plików. Interfejs wiersza polecenia platformy .NET wyszukuje plik *Global. JSON* , co umożliwia iteracyjne nawigowanie po ścieżce z bieżącego katalogu roboczego. Pierwszy znaleziony plik *Global. JSON* Określa używaną wersję. W przypadku zainstalowania tej wersji zestawu SDK ta wersja jest używana. Jeśli zestaw SDK określony w pliku *Global. JSON* nie zostanie znaleziony, interfejs wiersza polecenia platformy .NET używa [reguł dopasowania](../tools/global-json.md#matching-rules) do wybrania zgodnego zestawu SDK lub kończy się niepowodzeniem, jeśli nie zostanie znaleziony.
+*global.json* można umieścić w dowolnym miejscu w hierarchii plików. Cli przeszukuje w górę z katalogu projektu dla pierwszego *global.json* znajdzie. Można kontrolować, które projekty danego *global.json* stosuje się do jego miejsca w systemie plików. .NET CLI wyszukuje plik *global.json* iteratively nawigowanie ścieżki w górę od bieżącego katalogu roboczego. Pierwszy znaleziony plik *global.json* określa używaną wersję. Jeśli ta wersja SDK jest zainstalowana, ta wersja jest używana. Jeśli zestaw SDK określony w *global.json* nie zostanie znaleziony, polecenie CLI .NET używa [reguł dopasowywania,](../tools/global-json.md#matching-rules) aby wybrać zgodny zestaw SDK lub nie zostanie znaleziony, jeśli nie zostanie znaleziony.
 
-W poniższym przykładzie przedstawiono składnię *Global. JSON* :
+W poniższym przykładzie przedstawiono składnię *global.json:*
 
 ``` json
 {
@@ -50,67 +50,67 @@ W poniższym przykładzie przedstawiono składnię *Global. JSON* :
 }
 ```
 
-Proces wybierania wersji zestawu SDK to:
+Proces wyboru wersji sdk jest:
 
-1. `dotnet` wyszukuje w pliku *Global. JSON* iteracyjnie odwrotnie przechodzenie ścieżki do góry od bieżącego katalogu roboczego.
-1. `dotnet` używa zestawu SDK określonego w pierwszym pliku *Global. JSON* .
-1. `dotnet` używa najnowszego zainstalowanego zestawu SDK, jeśli nie zostanie znaleziony plik *Global. JSON* .
+1. `dotnet`wyszukuje plik *global.json* iteratively odwrotnie nawigując ścieżkę w górę od bieżącego katalogu roboczego.
+1. `dotnet`używa sdk określonego w pierwszym *global.json* znaleźć.
+1. `dotnet`używa najnowszego zainstalowanego sdk, jeśli nie znaleziono *global.json.*
 
-Więcej informacji na temat wybierania wersji zestawu SDK można znaleźć w sekcji [reguł dopasowania](../tools/global-json.md#matching-rules) w artykule w pliku *Global. JSON*.
+Więcej informacji na temat wybierania wersji sdk można uzyskać w sekcji [Reguły dopasowywania](../tools/global-json.md#matching-rules) w artykule na *stronie global.json*.
 
-## <a name="target-framework-monikers-define-build-time-apis"></a>Monikery struktury docelowej definiują interfejsy API czasu kompilacji
+## <a name="target-framework-monikers-define-build-time-apis"></a>Target Framework Monikers zdefiniować czas kompilacji interfejsów API
 
-Projekt można skompilować pod kątem interfejsów API zdefiniowanych w **monikerze platformy docelowej** (TFM). Należy określić [platformę docelową](../../standard/frameworks.md) w pliku projektu. Ustaw `TargetFramework` element w pliku projektu, jak pokazano w następującym przykładzie:
+Tworzenie projektu względem interfejsów API zdefiniowanych w **moniker struktury docelowej** (TFM). Należy określić [platformę docelową](../../standard/frameworks.md) w pliku projektu. Ustaw `TargetFramework` element w pliku projektu, jak pokazano w poniższym przykładzie:
 
 ``` xml
 <TargetFramework>netcoreapp2.0</TargetFramework>
 ```
 
-Możesz skompilować projekt na wiele TFMs. Ustawienie wielu struktur docelowych jest bardziej popularne dla bibliotek, ale można je również wykonywać przy użyciu aplikacji. Należy określić właściwość `TargetFrameworks` (plural of `TargetFramework`). Struktury docelowe są rozdzielane średnikami, jak pokazano w następującym przykładzie:
+Można utworzyć projekt względem wielu TFM. Ustawienie wielu struktur docelowych jest bardziej powszechne dla bibliotek, ale można to zrobić również za pomocą aplikacji. Należy określić `TargetFrameworks` właściwość (liczba `TargetFramework`mnoga ). Struktury docelowe są rozdzielane średnikami, jak pokazano w poniższym przykładzie:
 
 ``` xml
 <TargetFrameworks>netcoreapp2.0;net47</TargetFrameworks>
 ```
 
-Dany zestaw SDK obsługuje ustalony zestaw struktur, ograniczone do docelowej struktury środowiska uruchomieniowego, z którym jest dostarczany. Na przykład zestaw SDK programu .NET Core 2,0 zawiera środowisko uruchomieniowe programu .NET Core 2,0, które jest implementacją `netcoreapp2.0` platformy docelowej. Zestaw SDK platformy .NET Core 2,0 obsługuje `netcoreapp1.0`, `netcoreapp1.1`i `netcoreapp2.0`, ale nie `netcoreapp2.1` (lub wyższy). Zainstaluj zestaw SDK platformy .NET Core 2,1 do kompilowania `netcoreapp2.1`.
+A dany zestaw SDK obsługuje stały zestaw struktur, ograniczone do docelowej struktury czasu wykonywania, które jest dostarczany z. Na przykład .NET Core 2.0 SDK zawiera .NET Core 2.0 runtime, który jest implementacją platformy docelowej. `netcoreapp2.0` Zestaw SDK .NET Core `netcoreapp1.0`2.0 `netcoreapp2.0` obsługuje `netcoreapp2.1` , `netcoreapp1.1`ale nie (lub wyższy). Zainstaluj zestaw SDK .NET Core 2.1 do utworzenia dla `netcoreapp2.1`programu .
 
-Platformy docelowe .NET Standard są również ograniczone do docelowej struktury środowiska uruchomieniowego, które jest dostarczane z zestawem SDK. Zestaw SDK platformy .NET Core 2,0 jest ograniczone do `netstandard2.0`.
+Platformy docelowe .NET Standard są również ograniczone do docelowej struktury czasu wykonywania, z których jest dostarczany zestaw SDK. Zestaw SDK .NET Core 2.0 jest ograniczony do `netstandard2.0`.
 
-## <a name="framework-dependent-apps-roll-forward"></a>Aplikacje zależne od platformy przekazują
+## <a name="framework-dependent-apps-roll-forward"></a>Aplikacje zależne od struktury przewijają się do przodu
 
-Gdy uruchamiasz aplikację ze źródła z [`dotnet run`](../tools/dotnet-run.md), z [**wdrożenia zależnego od platformy**](../deploying/index.md#publish-runtime-dependent) z [`dotnet myapp.dll`](../tools/dotnet.md#description)lub z [**pliku wykonywalnego zależnego od platformy**](../deploying/index.md#publish-runtime-dependent) z `myapp.exe`, `dotnet` plik wykonywalny jest **hostem** aplikacji.
+Po uruchomieniu aplikacji ze [`dotnet run`](../tools/dotnet-run.md)źródła z , z [**wdrożenia zależnego od struktury**](../deploying/index.md#publish-runtime-dependent) z [`dotnet myapp.dll`](../tools/dotnet.md#description)lub z pliku [**wykonywalnego zależnego od struktury**](../deploying/index.md#publish-runtime-dependent) z `myapp.exe`, `dotnet` plik wykonywalny jest **hostem** dla aplikacji.
 
-Na hoście wybierana jest Najnowsza wersja poprawki zainstalowana na maszynie. Na przykład jeśli w pliku projektu określono `netcoreapp2.0`, a `2.0.4` to Najnowsza wersja środowiska uruchomieniowego platformy .NET, zostanie użyte środowisko uruchomieniowe `2.0.4`.
+Host wybiera najnowszą wersję poprawki zainstalowaną na komputerze. Na przykład jeśli określono `netcoreapp2.0` w pliku projektu `2.0.4` i jest najnowszym zainstalowanym `2.0.4` uruchomieniu .NET, używany jest czas wykonywania.
 
-Jeśli nie zostanie znaleziona akceptowalna wersja `2.0.*`, zostanie użyta Nowa wersja `2.*`. Na przykład jeśli określono `netcoreapp2.0` i tylko `2.1.0` jest zainstalowana, aplikacja zostanie uruchomiona przy użyciu środowiska uruchomieniowego `2.1.0`. Takie zachowanie jest określane jako "wersja pomocnicza do przełączenia do przodu". Małe wersje nie będą również brane pod uwagę. Gdy nie zainstalowano akceptowalnego środowiska uruchomieniowego, aplikacja nie zostanie uruchomiona.
+Jeśli nie `2.0.*` zostanie znaleziona `2.*` akceptowalna wersja, zostanie użyta nowa wersja. Na przykład jeśli określono `netcoreapp2.0` i `2.1.0` jest zainstalowany tylko, `2.1.0` aplikacja jest uruchamiana przy użyciu czasu wykonywania. To zachowanie jest określane jako "wersja pomocnicza roll-forward." Niższe wersje również nie będą brane pod uwagę. Po zainstalowaniu nie jest zainstalowany akceptowalny czas uruchomieniowy, aplikacja nie będzie działać.
 
-Kilka przykładów użycia przedstawia zachowanie, jeśli celem jest 2,0:
+Kilka przykładów użycia wykazać zachowanie, jeśli cel 2.0:
 
-- 2,0 został określony. 2.0.5 to najwyższa zainstalowana wersja poprawki. 2.0.5.
-- 2,0 został określony. Nie zainstalowano żadnych wersji 2,0. *. 1.1.1 to najwyższy zainstalowany środowisko uruchomieniowe. Zostanie wyświetlony komunikat o błędzie.
-- 2,0 został określony. Nie zainstalowano żadnych wersji 2,0. *. 2.2.2 to najwyższa zainstalowana wersja środowiska uruchomieniowego 2. x. 2.2.2 jest używany.
-- 2,0 został określony. Nie ma zainstalowanych wersji 2. x. 3.0.0 jest zainstalowany. Zostanie wyświetlony komunikat o błędzie.
+- 2.0. 2.0.5 jest najwyższą zainstalowaną wersją poprawek. 2.0.5.
+- 2.0. Nie są zainstalowane wersje 2.0.*. 1.1.1 jest najwyższym zainstalowanym czasem pracy. Zostanie wyświetlony komunikat o błędzie.
+- 2.0. Nie są zainstalowane wersje 2.0.*. 2.2.2 jest najwyższą zainstalowaną wersją uruchomieniową 2.x. 2.2.2.
+- 2.0. Nie zainstalowano wersji 2.x. 3.0.0. Zostanie wyświetlony komunikat o błędzie.
 
-Wersja pomocnicza — do przodu ma jeden efekt uboczny, który może mieć wpływ na użytkowników końcowych. Poniżej przedstawiono przykładowy scenariusz:
+Rzut roll-forward wersji pomocniczej ma jeden efekt uboczny, który może mieć wpływ na użytkowników końcowych. Poniżej przedstawiono przykładowy scenariusz:
 
-1. Aplikacja określa, że 2,0 jest wymagana.
-2. W przypadku uruchomienia w wersji 2,0. * nie jest zainstalowana, natomiast 2.2.2 jest. Zostanie użyta wersja 2.2.2.
-3. Później użytkownik zainstaluje 2.0.5 i uruchomi aplikację ponownie, 2.0.5 będzie teraz używany.
+1. Aplikacja określa, że wymagany jest 2.0.
+2. Po uruchomieniu wersja 2.0.* nie jest zainstalowana, jednak 2.2.2 jest. Zostanie użyta wersja 2.2.2.
+3. Później użytkownik instaluje 2.0.5 i uruchamia aplikację ponownie, 2.0.5 będzie teraz używany.
 
-Możliwe jest, że 2.0.5 i 2.2.2 działają inaczej, szczególnie w przypadku scenariuszy, takich jak Serializowanie danych binarnych.
+Możliwe, że 2.0.5 i 2.2.2 zachowują się inaczej, szczególnie w scenariuszach takich jak serializacja danych binarnych.
 
-## <a name="self-contained-deployments-include-the-selected-runtime"></a>Wdrożenia z własnym uwzględnieniem obejmują wybrane środowisko uruchomieniowe
+## <a name="self-contained-deployments-include-the-selected-runtime"></a>Niezależne wdrożenia obejmują wybrane w czasie wykonywania
 
-Aplikację można opublikować jako samodzielną [**dystrybucję**](../deploying/index.md#publish-self-contained). To podejście służy do łączenia środowiska uruchomieniowego i bibliotek platformy .NET Core z aplikacją. Wdrożenia samodzielne nie mają zależności w środowiskach środowiska uruchomieniowego. Wybór wersji środowiska uruchomieniowego występuje w czasie publikowania, a nie w czasie wykonywania.
+Aplikację można opublikować jako [**niezależną dystrybucję.**](../deploying/index.md#publish-self-contained) Takie podejście łączy program runtime i biblioteki .NET Core z aplikacją. Niezależne wdrożenia nie mają zależności od środowisk środowiska uruchomieniowego. Wybór wersji w czasie wykonywania występuje w czasie publikowania, a nie w czasie wykonywania.
 
-Proces publikowania wybiera najnowszą wersję poprawki danej rodziny środowiska uruchomieniowego. Na przykład `dotnet publish` wybierze pozycję .NET Core 2.0.4, jeśli jest to Najnowsza wersja poprawki w rodzinie środowiska uruchomieniowego programu .NET Core 2,0. Platforma docelowa (łącznie z najnowszymi zainstalowanymi poprawkami zabezpieczeń) jest spakowana z aplikacją.
+Proces publikowania wybiera najnowszą wersję poprawki danej rodziny runtime. Na przykład `dotnet publish` wybierze .NET Core 2.0.4, jeśli jest to najnowsza wersja poprawki z rodziny runtime .NET Core 2.0. Platforma docelowa (w tym najnowsze zainstalowane poprawki zabezpieczeń) jest pakowana z aplikacją.
 
-Jeśli minimalna wersja określona dla aplikacji nie jest spełniona, występuje błąd. `dotnet publish` tworzy powiązanie z najnowszą wersją poprawki środowiska uruchomieniowego (w ramach danej głównej rodziny wersji). `dotnet publish` nie obsługuje semantyki z przekazaniem do przodu `dotnet run`. Aby uzyskać więcej informacji na temat poprawek i wdrożeń samodzielnych, zapoznaj się z artykułem dotyczącym [wyboru poprawek w środowisku uruchomieniowym](../deploying/runtime-patch-selection.md) w temacie Wdrażanie aplikacji .NET Core.
+Jest to błąd, jeśli minimalna wersja określona dla aplikacji nie jest spełniona. `dotnet publish`wiąże się z najnowszą wersją poprawki w czasie wykonywania (w ramach danej rodziny wersji major.minor). `dotnet publish`nie obsługuje semantyki roll-forward `dotnet run`. Aby uzyskać więcej informacji na temat poprawek i wdrożeń zawieranych samodzielnie, zobacz artykuł na [temat wyboru poprawek](../deploying/runtime-patch-selection.md) w czasie wykonywania podczas wdrażania aplikacji .NET Core.
 
-Wdrożenia samodzielne mogą wymagać określonej wersji poprawki. Można zastąpić minimalną wersję poprawki środowiska uruchomieniowego (do nowszej lub niższej wersji) w pliku projektu, jak pokazano w następującym przykładzie:
+Niezależne wdrożenia mogą wymagać określonej wersji poprawki. W pliku projektu można zastąpić minimalną wersję poprawki w czasie wykonywania (do wyższych lub niższych wersji), jak pokazano w poniższym przykładzie:
 
 ``` xml
 <RuntimeFrameworkVersion>2.0.4</RuntimeFrameworkVersion>
 ```
 
-Element `RuntimeFrameworkVersion` zastępuje domyślne zasady wersji. W przypadku wdrożeń samodzielnych `RuntimeFrameworkVersion` określa *dokładną* wersję struktury środowiska uruchomieniowego. W przypadku aplikacji zależnych od platformy `RuntimeFrameworkVersion` określa *minimalną* wymaganą wersję środowiska uruchomieniowego.
+Element `RuntimeFrameworkVersion` zastępuje domyślne zasady wersji. W przypadku wdrożeń `RuntimeFrameworkVersion` samodzielnych określa *dokładną* wersję struktury wykonywania. W przypadku aplikacji zależnych od struktury `RuntimeFrameworkVersion` określa *minimalną* wymaganą wersję struktury wykonywania.

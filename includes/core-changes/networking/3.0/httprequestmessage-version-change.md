@@ -1,14 +1,14 @@
 ---
 ms.openlocfilehash: 5ad9c494fd02059e05cc744aad3b06cfc9399995
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77451897"
 ---
-### <a name="default-value-of-httprequestmessageversion-changed-to-11"></a>Wartość domyślna HttpRequestMessage. Version została zmieniona na 1,1
+### <a name="default-value-of-httprequestmessageversion-changed-to-11"></a>Wartość domyślna httprequestmessage.version zmieniono na 1.1
 
-Wartość domyślna właściwości <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> została zmieniona z 2,0 na 1,1.
+Wartość domyślna <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> właściwości została zmieniona z 2.0 na 1.1.
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -16,17 +16,17 @@ Wartość domyślna właściwości <xref:System.Net.Http.HttpRequestMessage.Vers
 
 #### <a name="change-description"></a>Zmień opis
 
-W przypadku platformy .NET Core 1,0 do 2,0 wartość domyślna właściwości <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> to 1,1. Począwszy od platformy .NET Core 2,1, zmieniono ją na 2,1.
+W .NET Core 1.0 do 2.0 <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> domyślną wartością właściwości jest 1.1. Począwszy od .NET Core 2.1, został zmieniony na 2.1.
 
-Począwszy od platformy .NET Core 3,0, domyślny numer wersji zwracany przez właściwość <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> jest ponownie 1,1.
+Począwszy od .NET Core 3.0, domyślny <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> numer wersji zwrócony przez właściwość jest ponownie 1.1.
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Zaktualizuj swój kod, jeśli zależy od właściwości <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> zwracającej wartość domyślną 2,0.
+Zaktualizuj kod, jeśli <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> zależy od właściwości zwracającej domyślną wartość 2.0.
 
 #### <a name="category"></a>Kategoria
 
-Sieć
+Networking
 
 #### <a name="affected-apis"></a>Dotyczy interfejsów API
 

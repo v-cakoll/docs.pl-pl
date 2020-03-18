@@ -1,5 +1,5 @@
 ---
-title: <typeparamref> — C# Przewodnik programowania
+title: <typeparamref>- Przewodnik programowania C#
 ms.date: 07/20/2015
 f1_keywords:
 - typeparamref
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - <typeparamref> C# XML tag
 ms.assetid: 6d8ffc58-12c5-4688-8db6-833a7ded5886
 ms.openlocfilehash: 266eadad322fd3c4167c7a911cb57ef1e1333012
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76789659"
 ---
-# <a name="typeparamref-c-programming-guide"></a>\<typeparamref > (C# Przewodnik programowania)
+# <a name="typeparamref-c-programming-guide"></a>\<typeparamref> (przewodnik programowania C#)
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,21 +26,21 @@ ms.locfileid: "76789659"
 
 - `name`
 
-  Nazwa parametru typu. Ujmij nazwę w znaki podwójnego cudzysłowu ("").
+  Nazwa parametru typu. Nazwę ująć w podwójne cudzysłowy (" ").
 
 ## <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji na temat parametrów typu w typach ogólnych i metodach, zobacz [Generics](../generics/index.md).
+Aby uzyskać więcej informacji na temat parametrów typu w typach ogólnych i metodach, zobacz [Generyk.](../generics/index.md)
 
-Ten tag umożliwia użytkownikom pliku dokumentacji formatowanie wyrazu w niektórych odrębnych przypadkach, na przykład kursywą.
+Użyj tego tagu, aby umożliwić konsumentom pliku dokumentacji formatowanie wyrazu w różny sposób, na przykład kursywą.
 
-Kompiluj z [-doc](../../language-reference/compiler-options/doc-compiler-option.md) , aby przetwarzać komentarze dokumentacji do pliku.
+Skompiluj za pomocą [-doc,](../../language-reference/compiler-options/doc-compiler-option.md) aby przetworzyć komentarze dokumentacji do pliku.
 
 ## <a name="example"></a>Przykład
 
 [!code-csharp[csProgGuideDocComments#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#13)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [C#Przewodnik programowania](../index.md)
-- [Zalecane Tagi dla komentarzy dokumentacji](./recommended-tags-for-documentation-comments.md)
+- [Przewodnik programowania w języku C#](../index.md)
+- [Zalecane tagi przeznaczone do komentarzy dokumentacji](./recommended-tags-for-documentation-comments.md)

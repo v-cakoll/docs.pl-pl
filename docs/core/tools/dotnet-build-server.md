@@ -1,21 +1,21 @@
 ---
-title: Kompilacja dotnet — polecenie serwera
-description: Polecenie programu dotnet Build-Server współdziała z serwerami uruchomionymi przez kompilację.
+title: polecenie dotnet build-server
+description: Polecenie dotnet build-server współdziała z serwerami uruchomionymi przez kompilację.
 ms.date: 02/14/2020
 ms.openlocfilehash: a6a9cd6de66371caef66d1101b3f844dffc771ef
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503778"
 ---
 # <a name="dotnet-build-server"></a>dotnet build-server
 
-**Ten artykuł ma zastosowanie do:** ✔️ .net Core 2,1 SDK i nowszych wersjach
+**Ten artykuł dotyczy:** ✔️ .NET Core 2.1 SDK i nowszych wersji
 
-## <a name="name"></a>Name (Nazwa)
+## <a name="name"></a>Nazwa
 
-`dotnet build-server` — współdziała z serwerami uruchomionymi przez kompilację.
+`dotnet build-server`- Współdziała z serwerami uruchomionymi przez kompilację.
 
 ## <a name="synopsis"></a>Streszczenie
 
@@ -29,7 +29,7 @@ dotnet build-server [-h|--help]
 
 - **`shutdown`**
 
-  Zamyka serwery kompilacji uruchomione z programu dotnet. Domyślnie wszystkie serwery są wyłączone.
+  Zamyka serwery kompilacji, które są uruchamiane z dotnet. Domyślnie wszystkie serwery są zamykane.
 
 ## <a name="options"></a>Opcje
 
@@ -47,4 +47,4 @@ dotnet build-server [-h|--help]
 
 - **`--vbcscompiler`**
 
-  Zamyka serwer kompilacji VB/C# kompilatora.
+  Zamyka serwer kompilacji kompilatora VB/C#.

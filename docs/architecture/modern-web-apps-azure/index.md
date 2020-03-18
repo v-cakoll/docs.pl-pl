@@ -1,115 +1,115 @@
 ---
-title: Tworzenie architektury nowoczesnych aplikacji sieci Web przy użyciu ASP.NET Core i platformy Azure
-description: Przewodnik, który oferuje kompleksowe wskazówki dotyczące tworzenia monolitycznych aplikacji sieci Web przy użyciu ASP.NET Core i platformy Azure.
+title: Architekt nowoczesnych aplikacji internetowych z ASP.NET Core i Azure
+description: Przewodnik, który zawiera kompleksowe wskazówki dotyczące tworzenia monolitycznych aplikacji sieci web przy użyciu ASP.NET Core i Azure.
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/4/2019
 ms.openlocfilehash: c19e5e90cfb96463f744cfb064abe72ee5db2e9f
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77449334"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>Tworzenie architektury nowoczesnych aplikacji internetowych za pomocą platformy ASP.NET Core i platformy Azure
 
-![Obraz okładki książki nowoczesnej aplikacji sieci Web.](./media/index/web-application-guide-cover-image.png)
+![Zarezerwuj okładkę przewodnika Architect Modern Web Applications.](./media/index/web-application-guide-cover-image.png)
 
-**Edition w wersji 3.1** — zaktualizowany do ASP.NET Core 3,1
+**EDITION v3.1** - Zaktualizowano do ASP.NET Core 3.1
 
-OPUBLIKOWANO PRZEZ
+OPUBLIKOWANA PRZEZ
 
-Zespoły deweloperów firmy Microsoft, .NET i Visual Studio
+Zespoły produktów Microsoft Developer Division, .NET i Visual Studio
 
-Dział firmy Microsoft Corporation
+Oddział Firmy Microsoft Corporation
 
 One Microsoft Way
 
-Redmond, Waszyngton 98052-6399
+Redmond (Waszyngton) 98052-6399
 
-Prawa autorskie © 2020 przez firmę Microsoft Corporation
+Prawa autorskie © 2020 r. przez Firmę Microsoft Corporation
 
-Wszelkie prawa zastrzeżone. Żadna część zawartości tej księgi nie może być odtwarzana ani przekazywana w żadnej formie ani za pomocą jakichkolwiek środków bez zgody na wydawcę.
+Wszelkie prawa zastrzeżone. Żadna część treści tej książki nie może być powielana lub przekazywana w jakiejkolwiek formie lub w jakikolwiek sposób bez pisemnej zgody wydawcy.
 
-Ta książka jest świadczona w postaci "AS-IS" i zawiera widoki i opinie autora. Widoki, opinie i informacje wyrażone w tej książce, w tym adresy URL i inne odwołania do witryn internetowych, mogą ulec zmianie bez powiadomienia.
+Ta książka jest "tak jak jest" i wyraża poglądy i opinie autora. Poglądy, opinie i informacje wyrażone w tej książce, w tym adresy URL i inne odniesienia do stron internetowych, mogą ulec zmianie bez powiadomienia.
 
-Niektóre przykłady opisane w niniejszym dokumencie są dostępne tylko dla ilustracji i są fikcyjne. Żadne prawdziwe skojarzenie lub połączenie nie jest zamierzone ani nie powinno zostać wywnioskowane.
+Niektóre z przykładów przedstawiono wyłącznie do celów informacyjnych i są one fikcyjne. Żadne rzeczywiste skojarzenia lub związki nie są zamierzone ani wnioskowane.
 
-Firma Microsoft i znaki towarowe wymienione w https://www.microsoft.com na stronie "znaki towarowe" są znakami towarowymi grupy firm Microsoft.
+Microsoft i znaki towarowe https://www.microsoft.com wymienione na stronie internetowej "Znaki towarowe" są znakami towarowymi grupy firm Microsoft.
 
-Komputery Mac i macOS są znakami towarowymi firmy Apple Inc.
+Mac i macOS są znakami towarowymi firmy Apple Inc.
 
-Logo Docker Whale jest zastrzeżonym znakiem towarowym platformy Docker, Inc. używanym przez uprawnienie.
+Logo wieloryba Docker jest zastrzeżonym znakiem towarowym firmy Docker, Inc. Używanym za zgodą.
 
-Wszystkie inne znaczniki i logo są własnością odpowiednich właścicieli.
+Wszystkie inne znaki i logo są własnością ich właścicieli.
 
 Autor:
 
-> **Steve "ardalis" Smith** — architekt oprogramowania i Trainer- [Ardalis.com](https://ardalis.com)
+> **Steve "ardalis" Smith** - Architekt oprogramowania i trener - [Ardalis.com](https://ardalis.com)
 
-Edytory
+Edytory:
 
 > **Maira Wenzel**
 
 ## <a name="introduction"></a>Wprowadzenie
 
-Platforma .NET Core i ASP.NET Core oferują kilka korzyści w porównaniu z tradycyjnym programowaniem platformy .NET. Należy używać platformy .NET Core dla aplikacji serwerowych, jeśli niektóre lub wszystkie z następujących elementów są ważne dla sukcesu aplikacji:
+.NET Core i ASP.NET Core oferują kilka zalet w porównaniu z tradycyjnym rozwojem .NET. Należy użyć .NET Core dla aplikacji serwera, jeśli niektóre lub wszystkie z następujących są ważne dla powodzenia aplikacji:
 
-- Obsługa wielu platform.
+- Obsługa międzyplatformowa.
 
 - Korzystanie z mikrousług.
 
 - Korzystanie z kontenerów platformy Docker.
 
-- Wymagania dotyczące wysokiej wydajności i skalowalności.
+- Wysoka wydajność i skalowalność wymagania.
 
-- Równoczesne przechowywanie wersji platformy .NET według aplikacji na tym samym serwerze.
+- Side-by-side przechowywanie wersji programu .NET przez aplikację na tym samym serwerze.
 
-Tradycyjne aplikacje .NET mogą i obsługują wiele z tych wymagań, ale ASP.NET Core i .NET Core zostały zoptymalizowane w celu zapewnienia lepszej obsługi powyższych scenariuszy.
+Tradycyjne aplikacje .NET mogą i obsługują wiele z tych wymagań, ale ASP.NET Core i .NET Core zostały zoptymalizowane w celu zaoferowania ulepszonej obsługi powyższych scenariuszy.
 
-Więcej i więcej organizacji umożliwia hostowanie aplikacji sieci Web w chmurze przy użyciu usług takich jak Microsoft Azure. Należy rozważyć hosting aplikacji w chmurze, jeśli istnieją następujące istotne dla Twojej aplikacji lub organizacji:
+Coraz więcej organizacji decyduje się na hostowanie swoich aplikacji sieci web w chmurze przy użyciu usług, takich jak Microsoft Azure. Należy rozważyć hosting aplikacji w chmurze, jeśli następujące są ważne dla aplikacji lub organizacji:
 
-- Zmniejszona inwestycja w koszty centrum danych (sprzęt, oprogramowanie, miejsce, narzędzia, zarządzanie serwerem itd.)
+- Mniejsze inwestycje w koszty centrów danych (sprzęt, oprogramowanie, przestrzeń, narzędzia, zarządzanie serwerami itp.)
 
-- Elastyczne ceny (płatność na podstawie użycia, nie do bezczynnej wydajności).
+- Elastyczne ceny (płatność na podstawie użycia, a nie bezczynności).
 
-- Wysoka niezawodność.
+- Ekstremalna niezawodność.
 
-- Lepsza mobilność aplikacji; łatwo zmieniaj miejsce i sposób wdrożenia aplikacji.
+- Ulepszona mobilność aplikacji; łatwo zmienić miejsce i sposób wdrażania aplikacji.
 
-- Elastyczna pojemność; skalowanie w górę lub w dół na podstawie rzeczywistych potrzeb.
+- Elastyczna pojemność; w górę lub w dół w zależności od rzeczywistych potrzeb.
 
-Tworzenie aplikacji sieci Web za pomocą ASP.NET Core hostowanych na platformie Azure oferuje wiele konkurencyjnych korzyści w porównaniu z tradycyjnymi alternatywami. ASP.NET Core jest zoptymalizowany pod kątem nowoczesnych rozwiązań do tworzenia aplikacji sieci Web i scenariuszy hostingu w chmurze. W tym przewodniku dowiesz się, jak zaprojektować ASP.NET Core aplikacje, aby najlepiej wykorzystać te możliwości.
+Tworzenie aplikacji sieci Web z ASP.NET Core, hostowanym na platformie Azure, oferuje wiele przewag konkurencyjnych w porównaniu z tradycyjnymi alternatywami. ASP.NET Core jest zoptymalizowany pod kątem nowoczesnych praktyk tworzenia aplikacji sieci web i scenariuszy hostingu w chmurze. W tym przewodniku dowiesz się, jak zaprojektować swoje ASP.NET aplikacje podstawowe, aby jak najlepiej wykorzystać te możliwości.
 
-## <a name="purpose"></a>Cel
+## <a name="purpose"></a>Przeznaczenie
 
-Ten przewodnik zawiera kompleksowe wskazówki dotyczące tworzenia *monolitycznych* aplikacji sieci Web przy użyciu ASP.NET Core i platformy Azure. W tym kontekście "monolityczne" odnosi się do faktu, że te aplikacje są wdrażane jako pojedyncza jednostka, nie jako kolekcja współpracujących usług i aplikacji.
+Ten przewodnik zawiera kompleksowe wskazówki dotyczące tworzenia *monolitycznych* aplikacji sieci web przy użyciu ASP.NET Core i Azure. W tym kontekście "monolityczne" odnosi się do faktu, że te aplikacje są wdrażane jako pojedyncza jednostka, a nie jako zbiór usług interakcji i aplikacji.
 
-Ten przewodnik uzupełnia ["_mikrousługi platformy .NET". Architektura dla kontenerów aplikacji .NET_](../microservices/index.md) , które koncentrują się na platformie Docker, mikrousług i wdrażaniu kontenerów w celu hostowania aplikacji dla przedsiębiorstw.
+Ten przewodnik jest uzupełnieniem ["_Mikrousług .NET. Architektura konteneryzowanych aplikacji .NET_",](../microservices/index.md) która koncentruje się bardziej na platformie Docker, Mikrousługach i wdrażaniu kontenerów do hostowania aplikacji dla przedsiębiorstw.
 
-### <a name="net-microservices-architecture-for-containerized-net-applications"></a>Mikrousługi platformy .NET. architektura konteneryzowanych aplikacji .NET
+### <a name="net-microservices-architecture-for-containerized-net-applications"></a>Mikrousług .NET. architektura konteneryzowanych aplikacji .NET
 
 - **książka elektroniczna**  
   <https://aka.ms/MicroservicesEbook>
 - **Przykładowa aplikacja**  
   <https://aka.ms/microservicesarchitecture>
 
-## <a name="who-should-use-this-guide"></a>Kto powinien korzystać z tego przewodnika
+## <a name="who-should-use-this-guide"></a>Kto powinien skorzystać z tego przewodnika
 
-Odbiorcy tego przewodnika są głównie deweloperzy, liderzy programistyczni i architektzy, którzy chcą tworzyć nowoczesne aplikacje sieci Web przy użyciu technologii i usług firmy Microsoft w chmurze.
+Odbiorcami tego przewodnika są głównie deweloperzy, potencjalni klienci i architekci zainteresowani tworzeniem nowoczesnych aplikacji internetowych przy użyciu technologii i usług firmy Microsoft w chmurze.
 
-Dodatkowymi odbiorcami są osoby podejmujące decyzje techniczne, które już znają ASP.NET lub platformę Azure i poszukują informacji na temat tego, czy warto przeprowadzić uaktualnienie do ASP.NET Core dla nowych lub istniejących projektów.
+Dodatkowa grupa odbiorców to decydenci techniczni, którzy są już zaznajomieni ASP.NET lub platformie Azure i szukają informacji na temat tego, czy warto uaktualnić do ASP.NET Core dla nowych lub istniejących projektów.
 
-## <a name="how-you-can-use-this-guide"></a>Jak można użyć tego przewodnika
+## <a name="how-you-can-use-this-guide"></a>Jak korzystać z tego przewodnika
 
-Ten przewodnik został skrócony do stosunkowo małego dokumentu, który koncentruje się na tworzeniu aplikacji sieci Web przy użyciu nowoczesnych technologii .NET i systemu Windows Azure. W związku z tym może być odczytany w całości, aby zapewnić podstawę interpretacji takich aplikacji i ich zagadnień technicznych. Przewodnik wraz z przykładową aplikacją może również stanowić punkt początkowy lub odwołanie. Użyj skojarzonej przykładowej aplikacji jako szablonu dla własnych aplikacji lub, aby zobaczyć, w jaki sposób można organizować części składnika aplikacji. Zapoznaj się z artykułami dotyczącymi zasad i zakresu architektury i technologii oraz zagadnieniami dotyczącymi decyzji o tym, kiedy oceniasz wybór dla własnej aplikacji.
+Ten przewodnik został skondensowany do stosunkowo małego dokumentu, który koncentruje się na tworzeniu aplikacji sieci web przy zastosowaniu nowoczesnych technologii .NET i systemu Windows Azure. W związku z tym można je przeczytać w całości, aby zapewnić podstawę zrozumienia takich zastosowań i ich względów technicznych. Przewodnik, wraz z jego przykładowej aplikacji, może również służyć jako punkt wyjścia lub odniesienia. Użyj skojarzonej przykładowej aplikacji jako szablonu dla własnych aplikacji lub aby zobaczyć, jak można zorganizować części składowe aplikacji. Zapoznaj się z zasadami przewodnika i zakresarchitektury i technologii opcji i zagadnień decyzji, gdy jesteś ważenia tych wyborów dla własnej aplikacji.
 
-Możesz przesłać dalej ten przewodnik do zespołu, aby pomóc w zapewnieniu powszechnej wiedzy na temat tych zagadnień i możliwości. Korzystanie ze wspólnego zestawu terminologii i podstawowych zasad pomaga zapewnić spójne stosowanie wzorców i praktyk architektury.
+Nie krępuj się przekazać ten przewodnik do swojego zespołu, aby zapewnić wspólne zrozumienie tych rozważań i możliwości. Posiadanie wszystkich pracujących na podstawie wspólnego zestawu terminologii i podstawowych zasad pomaga zapewnić spójne stosowanie wzorców i praktyk architektonicznych.
 
-## <a name="references"></a>Odwołania
+## <a name="references"></a>Dokumentacja
 
 - **Wybieranie między programami .NET Core i .NET Framework na potrzeby aplikacji serwerowych**  
   [https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server](../../standard/choosing-core-framework-server.md)
 
 >[!div class="step-by-step"]
->[Next](modern-web-applications-characteristics.md)
+>[Dalej](modern-web-applications-characteristics.md)

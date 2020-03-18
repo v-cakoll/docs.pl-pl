@@ -1,5 +1,5 @@
 ---
-title: <permission> — C# Przewodnik programowania
+title: <permission> - Przewodnik programowania C#
 ms.date: 07/20/2015
 f1_keywords:
 - permission
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - permission C# XML tag
 ms.assetid: 769e93fe-8404-443f-bf99-577aa42b6a49
 ms.openlocfilehash: 4f76d28d5531c1b9f01fa950589407934cc1244a
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77093477"
 ---
-# <a name="permission-c-programming-guide"></a>> uprawnień \<(C# Przewodnik programowania)
+# <a name="permission-c-programming-guide"></a>\<> uprawnień (przewodnik programowania C#)
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,11 +25,11 @@ ms.locfileid: "77093477"
 
 ## <a name="parameters"></a>Parametry
 
-- cref = "`member`"
+- cref = `member`" "
 
-  Odwołanie do elementu członkowskiego lub pola, które jest dostępne do wywołania z bieżącego środowiska kompilacji. Kompilator sprawdza, czy dany element kodu istnieje i tłumaczy `member` na nazwę elementu kanonicznego w wyjściowym kodzie XML. *składowa* musi znajdować się w podwójnym cudzysłowie ("").
+  Odwołanie do elementu członkowskiego lub pola, które jest dostępne do wywołania z bieżącego środowiska kompilacji. Kompilator sprawdza, czy istnieje dany element kodu i tłumaczy `member` się na nazwę elementu kanonicznego w wyjściowym pliku XML. *element członkowski* musi znajdować się w cudzysłowie podwójnym (" ").
 
-  Aby uzyskać informacje na temat sposobu tworzenia odwołania cref do typu ogólnego, zobacz [atrybut cref](./cref-attribute.md).
+  Aby uzyskać informacje na temat tworzenia odwołania cref do typu ogólnego, zobacz [atrybut cref](./cref-attribute.md).
 
 - `description`
 
@@ -37,9 +37,9 @@ ms.locfileid: "77093477"
 
 ## <a name="remarks"></a>Uwagi
 
-Tag > uprawnień \<umożliwia dokumentowanie dostępu do elementu członkowskiego. Klasa <xref:System.Security.PermissionSet> pozwala określić dostęp do elementu członkowskiego.
+Uprawnienie \<> tag umożliwia dokumentowanie dostępu członka. Klasa <xref:System.Security.PermissionSet> umożliwia określenie dostępu do elementu członkowskiego.
 
-Kompiluj z [-doc](../../language-reference/compiler-options/doc-compiler-option.md) , aby przetwarzać komentarze dokumentacji do pliku.
+Skompiluj za pomocą [-doc,](../../language-reference/compiler-options/doc-compiler-option.md) aby przetworzyć komentarze dokumentacji do pliku.
 
 ## <a name="example"></a>Przykład
 
@@ -47,5 +47,5 @@ Kompiluj z [-doc](../../language-reference/compiler-options/doc-compiler-option.
 
 ## <a name="see-also"></a>Zobacz też
 
-- [C#Przewodnik programowania](../index.md)
-- [Zalecane Tagi dla komentarzy dokumentacji](./recommended-tags-for-documentation-comments.md)
+- [Przewodnik programowania w języku C#](../index.md)
+- [Zalecane tagi przeznaczone do komentarzy dokumentacji](./recommended-tags-for-documentation-comments.md)

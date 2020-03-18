@@ -1,5 +1,5 @@
 ---
-title: OrderBy — klauzula C# -Reference
+title: klauzula orderby - C# Odwołanie
 ms.date: 07/20/2015
 f1_keywords:
 - orderby
@@ -8,37 +8,37 @@ helpviewer_keywords:
 - orderby clause [C#]
 - orderby keyword [C#]
 ms.assetid: 21f87f48-d69d-4e95-9a52-6fec47b37e1f
-ms.openlocfilehash: d88b2b40f63f0616cfd54e8abb62f1bc2183f776
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: cd76b2c33fe1a1a986bc05e3c3ed5f22809686ed
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713297"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173578"
 ---
 # <a name="orderby-clause-c-reference"></a>Klauzula orderby (odwołanie w C#)
 
-W wyrażeniu zapytania klauzula `orderby` powoduje, że zwracaną sekwencję lub podsekwencję (grupę) można sortować w kolejności rosnącej lub malejącej. Można określić wiele kluczy, aby wykonać jedną lub więcej pomocniczych operacji sortowania. Sortowanie jest wykonywane przez domyślną funkcję porównującą dla typu elementu. Domyślna kolejność sortowania to Ascending. Można również określić niestandardową funkcję porównującą. Jednak jest on dostępny tylko przy użyciu składni opartej na metodzie. Aby uzyskać więcej informacji, zobacz [Sortowanie danych](../../programming-guide/concepts/linq/sorting-data.md).
+W wyrażeniu `orderby` kwerendy klauzula powoduje, że zwracana sekwencja lub podsekwencja (grupa) mają być sortowane w kolejności rosnącej lub malejącej. Można określić wiele kluczy w celu wykonania jednej lub więcej pomocniczych operacji sortowania. Sortowanie jest wykonywane przez domyślny porównywarka dla typu elementu. Domyślna kolejność sortowania jest rosnąco. Można również określić niestandardowego porównania. Jednak jest on aplikowane tylko przy użyciu składni opartej na metodach. Aby uzyskać więcej informacji, zobacz [Sortowanie danych](../../programming-guide/concepts/linq/sorting-data.md).
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pierwsze zapytanie sortuje wyrazy w kolejności alfabetycznej, zaczynając od A, a drugie zapytanie sortuje te same wyrazy w kolejności malejącej. (`ascending` słowo kluczowe jest domyślną wartością sortowania i można je pominąć).
+W poniższym przykładzie pierwsza kwerenda sortuje wyrazy w kolejności alfabetycznej, począwszy od A, a druga kwerenda sortuje te same wyrazy w porządku malejącym. (Słowo `ascending` kluczowe jest domyślną wartością sortowania i można je pominąć).
 
 [!code-csharp[cscsrefQueryKeywords#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Orderby.cs#20)]
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład wykonuje sortowanie podstawowe dla nazwisk uczniów, a następnie pomocnicze sortowanie według ich imion.
+Poniższy przykład wykonuje sortowanie podstawowe na nazwiska uczniów, a następnie sortowanie dodatkowe na ich imiona.
 
 [!code-csharp[cscsrefQueryKeywords#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Orderby.cs#22)]
 
 ## <a name="remarks"></a>Uwagi
 
-W czasie kompilacji klauzula `orderby` jest tłumaczona na wywołanie metody <xref:System.Linq.Enumerable.OrderBy%2A>. Wiele kluczy w klauzuli `orderby` przetłumaczy na wywołania metody <xref:System.Linq.Enumerable.ThenBy%2A>.
+W czasie kompilacji `orderby` klauzula jest tłumaczona <xref:System.Linq.Enumerable.OrderBy%2A> na wywołanie metody. Wiele kluczy `orderby` w <xref:System.Linq.Enumerable.ThenBy%2A> klauzuli przetłumaczyć na wywołania metody.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Dokumentacja języka C#](../index.md)
+- [Odwołanie do języka C#](../index.md)
 - [Słowa kluczowe zapytania (LINQ)](query-keywords.md)
-- [Language Integrated Query (LINQ)](../../linq/index.md)
+- [LINQ w C#](../../linq/index.md)
 - [group, klauzula](group-clause.md)
-- [Wprowadzenie do korzystania z LINQ w C#](/dotnet/csharp/programming-guide/concepts/linq/)
+- [Language Integrated Query (LINQ)](../../programming-guide/concepts/linq/index.md)

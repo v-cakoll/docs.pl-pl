@@ -1,20 +1,20 @@
 ---
 ms.openlocfilehash: 9583d868ee01117d7bd6e465e7d89a734489d1a8
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77449229"
 ---
-### <a name="boolean-parameter-of-signedcmscomputesignature-is-respected"></a>Parametr logiczny elementu SignedCms. ComputeSignature jest przestrzegany
+### <a name="boolean-parameter-of-signedcmscomputesignature-is-respected"></a>Przestrzegany jest parametr logiczny podpisu SignedCms.ComputeSignature
 
-W oprogramowaniu .NET Core jest przestrzegany parametr `silent` typu Boolean metody <xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType>. Monit o podanie numeru PIN nie jest wyświetlany, jeśli ten parametr ma wartość `true`.
+W .NET Core jest `silent` przestrzegana <xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType> parametr logiczny metody. Monit o numer PIN nie `true`jest wyświetlany, jeśli ten parametr jest ustawiony na .
 
 #### <a name="change-description"></a>Zmień opis
 
-W .NET Framework parametr `silent` metody <xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType> jest ignorowany, a monit o podanie numeru PIN jest zawsze wyświetlany, jeśli jest to wymagane przez dostawcę. W programie .NET Core jest przestrzegany parametr `silent`, a jeśli jest ustawiony na `true`, monit o podanie numeru PIN nigdy nie jest wyświetlany, nawet jeśli jest wymagany przez dostawcę.
+W platformie .NET `silent` Framework <xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType> parametr metody jest ignorowany, a monit o numer PIN jest zawsze wyświetlany, jeśli jest wymagany przez dostawcę. W .NET Core `silent` parametr jest przestrzegany, `true`a jeśli jest ustawiona na , wiersz pin nigdy nie jest wyświetlany, nawet jeśli jest to wymagane przez dostawcę.
 
-Obsługa komunikatów CMS/PKCS #7 została wprowadzona do programu .NET Core w wersji 2,1.
+Obsługa komunikatów #7 CMS/PKCS została wprowadzona do programu .NET Core w wersji 2.1.
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -22,7 +22,7 @@ Obsługa komunikatów CMS/PKCS #7 została wprowadzona do programu .NET Core w w
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Aby zapewnić, że w razie potrzeby będzie wyświetlany monit o podanie numeru PIN, aplikacje klasyczne powinny wywoływać <xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType> i ustawić parametr logiczny na `false`. Zachowanie rezultatowe jest takie samo jak w przypadku .NET Framework niezależnie od tego, czy kontekst dyskretny jest wyłączony.
+Aby upewnić się, że w razie potrzeby <xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType> pojawi się monit o numer PIN, aplikacje klasyczne powinny wywołać i ustawić parametr Logiczny na `false`. Wynikowe zachowanie jest taka sama jak w .NET Framework niezależnie od tego, czy kontekst cichy jest tam wyłączony.
 
 ### <a name="category"></a>Kategoria
 

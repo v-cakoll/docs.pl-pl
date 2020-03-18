@@ -1,25 +1,25 @@
 ---
-title: Jak debugować puste zestawy wyników zapytania (C#)
+title: Jak debugować puste zestawy wyników kwerendy (C#)
 ms.date: 07/20/2015
 ms.assetid: b569f0dc-425e-45a6-acbf-770fb761c981
 ms.openlocfilehash: 2716f7c525ac6bee8d2fb374e4ecc4c975d852a0
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141293"
 ---
-# <a name="how-to-debug-empty-query-results-sets-c"></a>Jak debugować puste zestawy wyników zapytania (C#)
-Jednym z najczęstszych problemów związanych z kwerendą drzewa XML jest to, że jeśli drzewo XML ma domyślną przestrzeń nazw, deweloper czasami zapisuje zapytanie tak, jakby kod XML nie był w przestrzeni nazw.  
+# <a name="how-to-debug-empty-query-results-sets-c"></a>Jak debugować puste zestawy wyników kwerendy (C#)
+Jednym z najczęstszych problemów podczas wykonywania zapytań drzew XML jest to, że jeśli drzewo XML ma domyślny obszar nazw, deweloper czasami zapisuje kwerendę tak, jakby XML nie znajdował się w przestrzeni nazw.  
   
- Pierwszy zestaw przykładów w tym temacie przedstawia typowy sposób ładowania kodu XML w domyślnej przestrzeni nazw i jest on nieprawidłowo przeszukiwany.  
+ Pierwszy zestaw przykładów w tym temacie pokazuje typowy sposób, że XML w domyślnym obszarze nazw jest ładowany i jest przeszukiwany nieprawidłowo.  
   
- Drugi zestaw przykładów pokazuje niezbędne poprawki, aby można było zbadać kod XML w przestrzeni nazw.  
+ Drugi zestaw przykładów pokazuje niezbędne poprawki, dzięki czemu można wysyłać zapytania do języka XML w obszarze nazw.  
   
- Aby uzyskać więcej informacji, zobacz temat [przestrzenie nazw —C#omówienie (LINQ to XML) ()](namespaces-overview-linq-to-xml.md).  
+ Aby uzyskać więcej informacji, zobacz [Omówienie przestrzeni nazw (LINQ do XML) (C#)](namespaces-overview-linq-to-xml.md).  
   
 ## <a name="example"></a>Przykład  
- Ten przykład pokazuje tworzenie XML w przestrzeni nazw i zapytanie zwracające pusty zestaw wyników.  
+ W tym przykładzie przedstawiono tworzenie języka XML w obszarze nazw i kwerendę, która zwraca pusty zestaw wyników.  
   
 ```csharp  
 XElement root = XElement.Parse(  
@@ -40,7 +40,7 @@ foreach (XElement el in c1)
 Console.WriteLine("End of result set");  
 ```  
   
- Ten przykład generuje następujący wynik:  
+ W tym przykładzie daje następujący wynik:  
   
 ```output  
 Result set follows:  
@@ -48,9 +48,9 @@ End of result set
 ```  
   
 ## <a name="example"></a>Przykład  
- Ten przykład pokazuje tworzenie kodu XML w przestrzeni nazw oraz zakodowane prawidłowo zapytanie.  
+ W tym przykładzie przedstawiono tworzenie języka XML w obszarze nazw i kwerendę, która jest poprawnie zakodowana.  
   
- Rozwiązaniem jest Zadeklaruj i zainicjuj obiekt <xref:System.Xml.Linq.XNamespace> i użyj go podczas określania obiektów <xref:System.Xml.Linq.XName>. W tym przypadku argument metody <xref:System.Xml.Linq.XContainer.Elements%2A> jest obiektem <xref:System.Xml.Linq.XName>.  
+ Rozwiązaniem jest zadeklarowanie i zainicjowanie <xref:System.Xml.Linq.XNamespace> obiektu oraz użycie go <xref:System.Xml.Linq.XName> podczas określania obiektów. W takim przypadku argument <xref:System.Xml.Linq.XContainer.Elements%2A> metody jest <xref:System.Xml.Linq.XName> obiektem.  
   
 ```csharp  
 XElement root = XElement.Parse(  
@@ -72,7 +72,7 @@ foreach (XElement el in c1)
 Console.WriteLine("End of result set");  
 ```  
   
- Ten przykład generuje następujący wynik:  
+ W tym przykładzie daje następujący wynik:  
   
 ```output  
 Result set follows:  

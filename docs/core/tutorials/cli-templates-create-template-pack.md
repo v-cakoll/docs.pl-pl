@@ -1,26 +1,26 @@
 ---
-title: Tworzenie pakietu szablonów dla nowego dotnet
-description: Dowiedz się, jak utworzyć plik CSPROJ, który będzie kompilować pakiet szablonów dla nowego polecenia dotnet.
+title: Tworzenie pakietu szablonów dla dotnet nowy
+description: Dowiedz się jak utworzyć plik csproj, który stworzy pakiet szablonów dla dotnet nowego polecenia.
 author: thraka
 ms.date: 12/10/2019
 ms.topic: tutorial
 ms.author: adegeo
 ms.openlocfilehash: 5bc926861dd6a501d7c2d24bd5f7c4116cc78b2c
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503492"
 ---
 # <a name="tutorial-create-a-template-pack"></a>Samouczek: Tworzenie pakietu szablonów
 
-Za pomocą platformy .NET Core można tworzyć i wdrażać szablony generujące projekty, pliki, nawet zasoby. Ten samouczek jest trzecią częścią serii, która zawiera informacje na temat tworzenia, instalowania i odinstalowywania szablonów do użycia z poleceniem `dotnet new`.
+Za pomocą programu .NET Core można tworzyć i wdrażać szablony, które generują projekty, pliki, a nawet zasoby. Ten samouczek jest częścią trzeciej serii, która uczy, jak tworzyć, instalować i odinstalowywać szablony do użycia z poleceniem. `dotnet new`
 
 W tej części serii dowiesz się, jak:
 
 > [!div class="checklist"]
 >
-> * Utwórz projekt \*. csproj, aby skompilować pakiet szablonów
+> * Tworzenie \*projektu .csproj do tworzenia pakietu szablonów
 > * Konfigurowanie pliku projektu do pakowania
 > * Instalowanie szablonu z pliku pakietu NuGet
 > * Odinstalowywanie szablonu według identyfikatora pakietu
@@ -29,27 +29,27 @@ W tej części serii dowiesz się, jak:
 
 * Ukończ [część 1](cli-templates-create-item-template.md) i [część 2](cli-templates-create-project-template.md) tej serii samouczków.
 
-  Ten samouczek używa dwóch szablonów utworzonych w pierwszych dwóch częściach tego samouczka. Możesz użyć innego szablonu, dopóki szablon zostanie skopiowany do folderu _working\templates\\_ .
+  Ten samouczek używa dwóch szablonów utworzonych w pierwszych dwóch częściach tego samouczka. Można użyć innego szablonu, o ile skopiujesz szablon jako folder do folderu _working\templates.\\ _
 
-* Otwórz Terminal i przejdź do folderu _roboczego\\_ .
+* Otwórz terminal i przejdź do folderu _\\ roboczego._
 
 ## <a name="create-a-template-pack-project"></a>Tworzenie projektu pakietu szablonów
 
-Pakiet szablonów to jeden lub więcej szablonów pakowanych do pliku. Podczas instalowania lub odinstalowywania pakietu wszystkie szablony zawarte w pakiecie są dodawane lub usuwane odpowiednio. Poprzednie części tej serii samouczków działały tylko z poszczególnymi szablonami. Aby udostępnić niespakowany szablon, należy skopiować folder szablonu i zainstalować go za pośrednictwem tego folderu. Ponieważ pakiet szablonów może mieć więcej niż jeden szablon w tym samym pliku, udostępnianie jest łatwiejsze.
+Pakiet szablonów to jeden lub więcej szablonów zapakowanych do pliku. Podczas instalowania lub odinstalowywania pakietu wszystkie szablony zawarte w pakiecie są odpowiednio dodawane lub usuwane. Poprzednie części tej serii samouczków działały tylko z poszczególnymi szablonami. Aby udostępnić niespakowany szablon, należy skopiować folder szablonu i zainstalować go za pośrednictwem tego folderu. Ponieważ pakiet szablonów może mieć więcej niż jeden szablon i jest pojedynczym plikiem, udostępnianie jest łatwiejsze.
 
-Pakiety szablonów są reprezentowane przez plik pakietu NuGet ( _. nupkg_). Podobnie jak każdy pakiet NuGet, można przekazać pakiet szablonów do źródła danych NuGet. Polecenie `dotnet new -i` obsługuje instalowanie pakietu Template Pack z kanału informacyjnego pakietu NuGet. Ponadto można bezpośrednio zainstalować pakiet szablonów z pliku _. nupkg_ .
+Pakiety szablonów są reprezentowane przez plik pakietu NuGet _(nupkg)._ I, podobnie jak każdy pakiet NuGet, można przekazać pakiet szablonów do źródła danych NuGet. Polecenie `dotnet new -i` obsługuje instalowanie pakietu szablonów z źródła danych pakietu NuGet. Ponadto pakiet szablonów można zainstalować bezpośrednio z pliku _.nupkg._
 
-Zwykle plik C# projektu jest używany do kompilowania kodu i tworzenia danych binarnych. Jednak projekt może być również używany do generowania pakietu szablonów. Zmieniając ustawienia elementu _. csproj_, można zapobiec kompilacji dowolnego kodu, a zamiast tego dołączyć wszystkie zasoby szablonów jako zasoby. Po skompilowaniu tego projektu tworzy pakiet NuGet pakietu szablonów.
+Zwykle używasz pliku projektu C# do kompilowania kodu i tworzenia pliku binarnego. Jednak projekt może również służyć do generowania pakietu szablonów. Zmieniając ustawienia _.csproj_, możesz uniemożliwić mu kompilowanie dowolnego kodu i zamiast tego uwzględnić wszystkie zasoby szablonów jako zasoby. Po skonstruowaniu tego projektu tworzy pakiet szablonów NuGet pakietu.
 
-Tworzony pakiet będzie obejmował [szablon elementu](cli-templates-create-item-template.md) i [szablon pakietu](cli-templates-create-project-template.md) utworzony wcześniej. Ze względu na to, że dwa szablony są zgrupowane w folderze _working\templates\\_ , możemy użyć folderu _roboczego_ dla pliku _. csproj_ .
+Utworzony pakiet będzie zawierał [szablon elementu](cli-templates-create-item-template.md) i [szablon pakietu](cli-templates-create-project-template.md) utworzony wcześniej. Ponieważ pogrupowaliśmy dwa szablony w folderze _working\templates,\\ _ możemy użyć folderu _roboczego_ dla pliku _csproj._
 
-W terminalu przejdź do folderu _roboczego_ . Utwórz nowy projekt i ustaw dla niego nazwę `templatepack` i folder wyjściowy do bieżącego folderu.
+W terminalu przejdź do folderu _roboczego._ Utwórz nowy projekt i `templatepack` ustaw nazwę i folder wyjściowy na bieżący folder.
 
 ```dotnetcli
 dotnet new console -n templatepack -o .
 ```
 
-Parametr `-n` ustawia nazwę pliku _. csproj_ na _templatepack. csproj_. `-o` parametr tworzy pliki w bieżącym katalogu. Powinien zostać wyświetlony wynik podobny do następującego: dane wyjściowe.
+Parametr `-n` ustawia nazwę pliku _csproj_ na _templatepack.csproj_. Parametr `-o` tworzy pliki w bieżącym katalogu. Powinien zostać wyświetlony wynik podobny do następującego wyjścia.
 
 ```dotnetcli
 dotnet new console -n templatepack -o .
@@ -65,7 +65,7 @@ Running 'dotnet restore' on .\templatepack.csproj...
 Restore succeeded.
 ```
 
-Następnie otwórz plik _templatepack. csproj_ w ulubionym edytorze i Zastąp zawartość następującym kodem XML:
+Następnie otwórz plik _templatepack.csproj_ w swoim ulubionym edytorze i zastąp zawartość następującym plikiem XML:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -94,23 +94,23 @@ Następnie otwórz plik _templatepack. csproj_ w ulubionym edytorze i Zastąp za
 </Project>
 ```
 
-Ustawienia `<PropertyGroup>` w pliku XML powyżej są podzielone na trzy grupy. Pierwsza grupa zajmuje się właściwościami wymaganymi dla pakietu NuGet. Trzy `<Package` ustawienia muszą wykonać przy użyciu właściwości pakietu NuGet, aby zidentyfikować pakiet w źródle danych NuGet. W celu odinstalowania pakietu Template Pack o pojedynczej nazwie zamiast ścieżki do katalogu zostanie użyta wartość `<PackageId>`. Można go również użyć do zainstalowania pakietu Template Pack ze źródła danych NuGet. Pozostałe ustawienia, takie jak `<Title>` i `<PackageTags>`, muszą zrobić z metadanymi wyświetlanymi w źródle danych NuGet. Aby uzyskać więcej informacji na temat ustawień NuGet, zobacz [Właściwości narzędzia NuGet i programu MSBuild](/nuget/reference/msbuild-targets).
+Ustawienia `<PropertyGroup>` w powyższym pliku XML są podzielone na trzy grupy. Pierwsza grupa zajmuje się właściwości wymagane dla pakietu NuGet. Trzy `<Package` ustawienia mają do czynienia z nuget właściwości pakietu do identyfikowania pakietu w kanale informacyjnym NuGet. W szczególności `<PackageId>` wartość jest używana do odinstalowania pakietu szablonów o pojedynczej nazwie zamiast ścieżki katalogu. Może również służyć do instalowania pakietu szablonów z nuget źródła danych. Pozostałe ustawienia, `<Title>` takie `<PackageTags>` jak i mają do czynienia z metadanych wyświetlanych w kanale informacyjnym NuGet. Aby uzyskać więcej informacji na temat ustawień NuGet, zobacz [NuGet i MSBuild właściwości](/nuget/reference/msbuild-targets).
 
-Ustawienie `<TargetFramework>` musi być ustawione tak, aby program MSBuild działał prawidłowo po uruchomieniu polecenia Pack w celu skompilowania i spakowania projektu.
+Ustawienie `<TargetFramework>` musi być ustawione tak, aby MSBuild będzie działać poprawnie po uruchomieniu polecenia pack do kompilacji i spakowania projektu.
 
-Ostatnie trzy ustawienia należy wykonać w celu poprawnego skonfigurowania projektu w celu uwzględnienia szablonów w odpowiednim folderze w pakiecie NuGet, gdy zostanie on utworzony.
+Ostatnie trzy ustawienia mają do czynienia z konfigurowaniem projektu poprawnie, aby uwzględnić szablony w odpowiednim folderze w pakiecie NuGet po jego utworzeniu.
 
-`<ItemGroup>` zawiera dwa ustawienia. Najpierw ustawienie `<Content>` obejmuje wszystko w folderze _templates_ jako zawartość. Jest również ustawiony na wykluczenie dowolnego folderu _bin_ lub _obj_ , aby zapobiec dołączeniu kodu skompilowanego (w przypadku przetestowania i skompilowania szablonów). Po drugie, ustawienie `<Compile>` wyklucza wszystkie pliki kodu z kompilacji niezależnie od tego, gdzie się znajdują. To ustawienie uniemożliwia projekt używany do tworzenia pakietu szablonów na podstawie próby skompilowania kodu w hierarchii folderów _szablonów_ .
+Zawiera `<ItemGroup>` dwa ustawienia. Po `<Content>` pierwsze, ustawienie zawiera wszystko w folderze _szablonów_ jako zawartość. Jest również ustawiona, aby wykluczyć dowolny folder _bin_ lub _folder obj,_ aby zapobiec uwzględnieniu skompilowanych kodów (jeśli zostały przetestowane i skompilowane szablony). Po `<Compile>` drugie, ustawienie wyklucza wszystkie pliki kodu ze kompilowania bez względu na to, gdzie się znajdują. To ustawienie zapobiega próbie skompilowania kodu w hierarchii _folderów szablonów_ przez projekt używany do tworzenia pakietu szablonów.
 
-## <a name="build-and-install"></a>Kompiluj i zainstaluj
+## <a name="build-and-install"></a>Tworzenie i instalowanie
 
-Zapisz ten plik, a następnie uruchom polecenie Pack
+Zapisz ten plik, a następnie uruchom polecenie pack
 
 ```dotnetcli
 dotnet pack
 ```
 
-To polecenie spowoduje skompilowanie projektu i utworzenie pakietu NuGet w tym folderze _working\bin\Debug_ .
+To polecenie stworzy projekt i utworzy pakiet NuGet w folderze To powinno być _folder emanuje\bin\Debug._
 
 ```dotnetcli
 dotnet pack
@@ -126,7 +126,7 @@ Copyright (C) Microsoft Corporation. All rights reserved.
   Successfully created package 'C:\working\bin\Debug\AdatumCorporation.Utility.Templates.1.0.0.nupkg'.
 ```
 
-Następnie Zainstaluj plik pakietu szablonów przy użyciu polecenia `dotnet new -i PATH_TO_NUPKG_FILE`.
+Następnie zainstaluj plik pakietu szablonów za `dotnet new -i PATH_TO_NUPKG_FILE` pomocą polecenia.
 
 ```console
 C:\working> dotnet new -i C:\working\bin\Debug\AdatumCorporation.Utility.Templates.1.0.0.nupkg
@@ -146,11 +146,11 @@ Example templates: async project                  consoleasync          [C#]    
 Class library                                     classlib              [C#], F#, VB      Common/Library
 ```
 
-Jeśli pakiet NuGet został przekazany do źródła danych NuGet, można użyć polecenia `dotnet new -i PACKAGEID`, gdzie `PACKAGEID` jest taka sama jak wartość ustawienia `<PackageId>` z pliku _. csproj_ . Ten identyfikator pakietu jest taki sam jak identyfikator pakietu NuGet.
+Jeśli pakiet NuGet został przekazany do źródła danych NuGet, można użyć `dotnet new -i PACKAGEID` polecenia, `PACKAGEID` gdzie jest taki sam jak `<PackageId>` ustawienie z pliku _.csproj._ Ten identyfikator pakietu jest taki sam jak identyfikator pakietu NuGet.
 
 ## <a name="uninstall-the-template-pack"></a>Odinstalowywanie pakietu szablonów
 
-Niezależnie od tego, jak został zainstalowany pakiet szablonów, z plikiem _. nupkg_ bezpośrednio lub przez źródło danych NuGet, usunięcie pakietu szablonu jest takie samo. Użyj `<PackageId>` szablonu, który chcesz odinstalować. Listę zainstalowanych szablonów można uzyskać, uruchamiając polecenie `dotnet new -u`.
+Bez względu na to, jak zainstalowano pakiet szablonów, z plikiem _.nupkg_ bezpośrednio lub przez nuget kanału informacyjnego, usunięcie pakietu szablonów jest taka sama. Użyj `<PackageId>` szablonu, który chcesz odinstalować. Można uzyskać listę szablonów, które są `dotnet new -u` instalowane przez uruchomienie polecenia.
 
 ```dotnetcli
 dotnet new -u
@@ -185,14 +185,14 @@ Currently installed items:
       Example templates: string extensions (stringext) C#
 ```
 
-Uruchom `dotnet new -u AdatumCorporation.Utility.Templates`, aby odinstalować szablon. Polecenie `dotnet new` będzie wyprowadzać informacje pomocy, które powinny pominąć wcześniej zainstalowane szablony.
+Uruchom, `dotnet new -u AdatumCorporation.Utility.Templates` aby odinstalować szablon. Polecenie `dotnet new` wygeneruje informacje pomocy, które powinny pominąć szablony, które zostały wcześniej zainstalowane.
 
-Gratulacje! Pakiet szablonów został zainstalowany i odinstalowany.
+Gratulacje! zainstalowano i odinstalowałeś pakiet szablonów.
 
 ## <a name="next-steps"></a>Następne kroki
 
-Aby dowiedzieć się więcej o szablonach, z których większość już wiesz, zobacz [Szablony niestandardowe dla nowego](../tools/custom-templates.md) artykułu usługi dotnet.
+Aby dowiedzieć się więcej o szablonach, z których większość już się nauczyłeś, zobacz nowy artykuł [Szablony niestandardowe dla dotnet.](../tools/custom-templates.md)
 
-* [Witryna typu wiki repozytorium usługi GitHub/tworzenia szablonów](https://github.com/dotnet/templating/wiki)
-* [dotnet/dotnet-Template-przykłady repozytorium GitHub](https://github.com/dotnet/dotnet-template-samples)
-* [*szablon Template. JSON* w magazynie schematów JSON](http://json.schemastore.org/template)
+* [dotnet/templating GitHub repo Wiki](https://github.com/dotnet/templating/wiki)
+* [dotnet/dotnet-template-samples GitHub repo](https://github.com/dotnet/dotnet-template-samples)
+* [*schemat template.json* w Sklepie Schematów JSON](http://json.schemastore.org/template)

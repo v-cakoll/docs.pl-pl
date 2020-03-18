@@ -1,36 +1,36 @@
 ---
 title: Debugowanie ustawień konfiguracji profilowania
-description: Informacje o ustawieniach czasu wykonywania, które konfigurują debugowanie i profilowanie dla aplikacji platformy .NET Core.
+description: Dowiedz się więcej o ustawieniach czasu wykonywania, które konfigurują debugowanie i profilowanie aplikacji .NET Core.
 ms.date: 11/27/2019
 ms.topic: reference
 ms.openlocfilehash: c57cfa7233f48def890ded3c9d589b7f268147df
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74802800"
 ---
-# <a name="run-time-configuration-options-for-debugging-and-profiling"></a>Opcje konfiguracji czasu wykonywania na potrzeby debugowania i profilowania
+# <a name="run-time-configuration-options-for-debugging-and-profiling"></a>Opcje konfiguracji w czasie wykonywania do debugowania i profilowania
 
 ## <a name="enable-diagnostics"></a>Włączanie diagnostyki
 
-- Określa, czy debuger, profiler i Diagnostyka EventPipe są włączone lub wyłączone.
-- Wartość domyślna: włączone (`1`).
+- Konfiguruje, czy debuger, profiler i diagnostyka EventPipe są włączone lub wyłączone.
+- Domyślnie: Włączone`1`( ).
 
 | | Nazwa ustawienia | Wartości |
 | - | - | - |
-| **runtimeconfig. JSON** | N/D | N/D |
-| **Zmienna środowiskowa** | `COMPlus_EnableDiagnostics` | `1` — włączono<br/>`0` — wyłączone |
+| **runtimeconfig.json** | Nie dotyczy | Nie dotyczy |
+| **Zmienna środowiskowa** | `COMPlus_EnableDiagnostics` | `1`- włączona<br/>`0`- wyłączone |
 
 ## <a name="enable-profiling"></a>Włącz profilowanie
 
-- Określa, czy profilowanie jest włączone dla aktualnie uruchomionego procesu.
-- Domyślnie: wyłączone (`0`).
+- Konfiguruje, czy profilowanie jest włączone dla aktualnie uruchomionego procesu.
+- Domyślnie: Wyłączone`0`( ).
 
 | | Nazwa ustawienia | Wartości |
 | - | - | - |
-| **runtimeconfig. JSON** | N/D | N/D |
-| **Zmienna środowiskowa** | `CORECLR_ENABLE_PROFILING` | `0` — wyłączone<br/>`1` — włączono |
+| **runtimeconfig.json** | Nie dotyczy | Nie dotyczy |
+| **Zmienna środowiskowa** | `CORECLR_ENABLE_PROFILING` | `0`- wyłączone<br/>`1`- włączona |
 
 ## <a name="profiler-guid"></a>Identyfikator GUID profilera
 
@@ -38,37 +38,37 @@ ms.locfileid: "74802800"
 
 | | Nazwa ustawienia | Wartości |
 | - | - | - |
-| **runtimeconfig. JSON** | N/D | N/D |
-| **Zmienna środowiskowa** | `CORECLR_PROFILER` | *ciąg — identyfikator GUID* |
+| **runtimeconfig.json** | Nie dotyczy | Nie dotyczy |
+| **Zmienna środowiskowa** | `CORECLR_PROFILER` | *string-guid* |
 
 ## <a name="profiler-location"></a>Lokalizacja profilera
 
-- Określa ścieżkę do pliku DLL profilera do załadowania do aktualnie uruchomionego procesu (lub 32-bitowego lub 64-bitowego procesu).
-- Jeśli ustawiono więcej niż jedną zmienną, pierwszeństwo mają zmienne specyficzne dla bitów. Określają, która liczba bitów profilera ma zostać załadowana.
-- Aby uzyskać więcej informacji, zobacz [Znajdowanie biblioteki profilera](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/profiling/Profiler%20Loading.md).
+- Określa ścieżkę do dll profilera, aby załadować do aktualnie uruchomionego procesu (lub procesu 32-bitowego lub 64-bitowego).
+- Jeśli ustawiono więcej niż jedną zmienną, pierwszeństwo mają zmienne specyficzne dla bitness. Określają one, która bitność profilera do załadowania.
+- Aby uzyskać więcej informacji, zobacz [Znajdowanie biblioteki profilerów](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/profiling/Profiler%20Loading.md).
 
 | | Nazwa ustawienia | Wartości |
 | - | - | - |
-| **Zmienna środowiskowa** | `CORECLR_PROFILER_PATH` | *ścieżka ciągu* |
-| **Zmienna środowiskowa** | `CORECLR_PROFILER_PATH_32` | *ścieżka ciągu* |
-| **Zmienna środowiskowa** | `CORECLR_PROFILER_PATH_64` | *ścieżka ciągu* |
+| **Zmienna środowiskowa** | `CORECLR_PROFILER_PATH` | *ścieżka ciągów* |
+| **Zmienna środowiskowa** | `CORECLR_PROFILER_PATH_32` | *ścieżka ciągów* |
+| **Zmienna środowiskowa** | `CORECLR_PROFILER_PATH_64` | *ścieżka ciągów* |
 
-## <a name="write-perf-map"></a>Zapisz mapę wydajności
+## <a name="write-perf-map"></a>Napisz mapę perf
 
-- Włącza lub wyłącza zapisywanie */tmp/perf-$PID. map* w systemach Linux.
-- Domyślnie: wyłączone (`0`).
-
-| | Nazwa ustawienia | Wartości |
-| - | - | - |
-| **runtimeconfig. JSON** | N/D | N/D |
-| **Zmienna środowiskowa** | `COMPlus_PerfMapEnabled` | `0` — wyłączone<br/>`1` — włączono |
-
-## <a name="perf-log-markers"></a>Znaczniki dzienników wydajności
-
-- Gdy `COMPlus_PerfMapEnabled` jest ustawiona na `1`, włącza lub wyłącza określony sygnał, który ma być akceptowany i ignorowany jako znacznik w dziennikach wydajności.
-- Domyślnie: wyłączone (`0`).
+- Włącza lub wyłącza zapisywanie */tmp/perf-$pid.map* w systemach Linux.
+- Domyślnie: Wyłączone`0`( ).
 
 | | Nazwa ustawienia | Wartości |
 | - | - | - |
-| **runtimeconfig. JSON** | N/D | N/D |
-| **Zmienna środowiskowa** | `COMPlus_PerfMapIgnoreSignal` | `0` — wyłączone<br/>`1` — włączono |
+| **runtimeconfig.json** | Nie dotyczy | Nie dotyczy |
+| **Zmienna środowiskowa** | `COMPlus_PerfMapEnabled` | `0`- wyłączone<br/>`1`- włączona |
+
+## <a name="perf-log-markers"></a>Znaczniki dziennika Perf
+
+- Gdy `COMPlus_PerfMapEnabled` jest `1`ustawiona na , włącza lub wyłącza określony sygnał, który ma być akceptowany i ignorowany jako znacznik w dziennikach perf.
+- Domyślnie: Wyłączone`0`( ).
+
+| | Nazwa ustawienia | Wartości |
+| - | - | - |
+| **runtimeconfig.json** | Nie dotyczy | Nie dotyczy |
+| **Zmienna środowiskowa** | `COMPlus_PerfMapIgnoreSignal` | `0`- wyłączone<br/>`1`- włączona |

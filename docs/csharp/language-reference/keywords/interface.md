@@ -1,5 +1,5 @@
 ---
-title: C# informacje o interfejsie
+title: interfejs — odwołanie do języka C#
 ms.date: 01/17/2020
 f1_keywords:
 - interface_CSharpKeyword
@@ -7,42 +7,42 @@ helpviewer_keywords:
 - interface keyword [C#]
 ms.assetid: 7da38e81-4f99-4bc5-b07d-c986b687eeba
 ms.openlocfilehash: 473f5f8e226f0a144746ac943afcffdccd4777c7
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77625855"
 ---
-# <a name="no-loc-textinterface-c-reference"></a>:::no-loc text="interface"::: (C# odwołanie)
+# <a name="no-loc-textinterface-c-reference"></a>:::no-loc text="interface":::(Odwołanie do języka C#)
 
-Interfejs definiuje kontrakt. Wszelkie [`class`](class.md) lub [`struct`](../builtin-types/struct.md) implementujące ten kontrakt muszą zawierać implementację elementów członkowskich zdefiniowanych w interfejsie. Począwszy od C# 8,0, interfejs może definiować domyślną implementację elementów członkowskich. Może również definiować [`static`](static.md) składowe w celu zapewnienia pojedynczej implementacji dla typowych funkcji.
+Interfejs definiuje kontrakt. Wszelkie [`class`](class.md) [`struct`](../builtin-types/struct.md) lub implementuje tej umowy musi zapewnić implementację elementów członkowskich zdefiniowanych w interfejsie. Począwszy od języka C# 8.0, interfejs może zdefiniować implementację domyślną dla elementów członkowskich. Może również [`static`](static.md) zdefiniować elementy członkowskie w celu zapewnienia jednej implementacji dla wspólnych funkcji.
 
-W poniższym przykładzie Klasa `ImplementationClass` musi implementować metodę o nazwie `SampleMethod`, która nie ma parametrów i zwraca `void`.
+W poniższym przykładzie `ImplementationClass` klasa musi `SampleMethod` implementować metodę o `void`nazwie, która nie ma parametrów i zwraca .
 
-Aby uzyskać więcej informacji i przykładów, zobacz [interfejsy](../../programming-guide/interfaces/index.md).
+Aby uzyskać więcej informacji i przykładów, zobacz [Interfejsy](../../programming-guide/interfaces/index.md).
 
 ## <a name="example"></a>Przykład
 
 [!code-csharp[csrefKeywordsTypes#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#14)]
 
-Interfejs może być elementem członkowskim przestrzeni nazw lub klasy. Deklaracja interfejsu może zawierać deklaracje (podpisy bez implementacji) następujących elementów członkowskich:
+Interfejs może być członkiem obszaru nazw lub klasy. Deklaracja interfejsu może zawierać deklaracje (podpisy bez implementacji) następujących elementów członkowskich:
 
 - [Metody](../../programming-guide/classes-and-structs/methods.md)
 - [Właściwości](../../programming-guide/classes-and-structs/using-properties.md)
 - [Indexers](../../programming-guide/indexers/using-indexers.md) (Indeksatory)
 - [Zdarzenia](event.md)
 
-Te poprzedzające deklaracje składowych zwykle nie zawierają treści. Począwszy od C# 8,0, element członkowski interfejsu może deklarować treść. Ta nazwa jest nazywana *implementacją domyślną*. Elementy członkowskie z organami umożliwiają interfejsowi określenie "domyślnej" implementacji klas i struktur, które nie zapewniają zastępowania implementacji. Ponadto począwszy od C# 8,0, interfejs może obejmować:
+Te poprzednie deklaracje elementów członkowskich zazwyczaj nie zawierają treści. Począwszy od języka C# 8.0, element członkowski interfejsu może zadeklarować treść. Jest to nazywane *domyślną implementacją*. Elementy członkowskie z organami pozwalają interfejsowi, aby zapewnić "domyślną" implementację dla klas i struktur, które nie zapewniają implementacji nadrzędnej. Ponadto począwszy od języka C# 8.0 interfejs może zawierać:
 
 - [Stałe](const.md)
 - [Operatory](../operators/operator-overloading.md)
 - [Konstruktor statyczny](../../programming-guide/classes-and-structs/constructors.md#static-constructors).
 - [Typy zagnieżdżone](../../programming-guide/classes-and-structs/nested-types.md)
 - [Pola statyczne, metody, właściwości, indeksatory i zdarzenia](static.md)
-- Deklaracje elementów członkowskich przy użyciu jawnej składni implementacji interfejsu.
-- Modyfikatory jawnego dostępu (domyślny dostęp jest [`public`](access-modifiers.md)).
+- Deklaracje członkowskie przy użyciu składni implementacji interfejsu jawnego.
+- Modyfikatory dostępu jawnego [`public`](access-modifiers.md)(domyślnym dostępem jest ).
 
-Interfejsy nie mogą zawierać stanu wystąpienia. Gdy pola statyczne są teraz dozwolone, pola wystąpień nie są dozwolone w interfejsach. [Funkcja autowłaściwości wystąpienia](../../programming-guide/classes-and-structs/auto-implemented-properties.md) nie jest obsługiwana w interfejsach, ponieważ niejawnie deklaruje pole ukryte. Ta reguła ma delikatny efekt dla deklaracji właściwości. W deklaracji interfejsu Poniższy kod nie deklaruje właściwości, która jest implementowana w `class` lub `struct`. Zamiast tego deklaruje właściwość, która nie ma domyślnej implementacji, ale musi być zaimplementowana w dowolnym typie, który implementuje interfejs:
+Interfejsy mogą nie zawierać stanu wystąpienia. Podczas gdy pola statyczne są teraz dozwolone, pola wystąpień nie są dozwolone w interfejsach. [Wystąpienia właściwości automatyczne](../../programming-guide/classes-and-structs/auto-implemented-properties.md) nie są obsługiwane w interfejsach, ponieważ będą one niejawnie zadeklarować ukryte pole. Ta reguła ma subtelny wpływ na deklaracje właściwości. W deklaracji interfejsu następujący kod nie deklaruje właściwości zaimplementowanej automatycznie, `class` `struct`tak jak w a lub . Zamiast tego deklaruje właściwość, która nie ma implementacji domyślnej, ale musi być zaimplementowana w dowolnym typie, który implementuje interfejs:
 
 ```csharp
 public interface INamed
@@ -51,28 +51,28 @@ public interface INamed
 }
 ```
 
-Interfejs może dziedziczyć z jednego lub kilku interfejsów podstawowych. Gdy interfejs [zastępuje metodę](override.md) zaimplementowaną w interfejsie podstawowym, musi używać [jawnej składni implementacji interfejsu](../../programming-guide/interfaces/explicit-interface-implementation.md) .
+Interfejs można dziedziczyć z jednego lub więcej interfejsów podstawowych. Gdy interfejs [zastępuje metodę](override.md) zaimplementowane w interfejsie podstawowym, należy użyć składni [implementacji interfejsu jawnego.](../../programming-guide/interfaces/explicit-interface-implementation.md)
 
-Gdy lista typów podstawowych zawiera klasę bazową i interfejsy, Klasa bazowa musi znajdować się na liście.
+Gdy lista typów podstawowych zawiera klasę podstawową i interfejsy, klasa podstawowa musi być na pierwszym miejscu na liście.
 
-Klasa implementująca interfejs może jawnie implementować elementy członkowskie tego interfejsu. Nie można uzyskać dostępu do jawnie zaimplementowanego elementu członkowskiego za pomocą wystąpienia klasy, ale tylko za pomocą wystąpienia interfejsu. Ponadto do domyślnych członków interfejsu można uzyskać dostęp tylko za pomocą wystąpienia interfejsu.
+Klasa, która implementuje interfejs może jawnie implementować elementy członkowskie tego interfejsu. Jawnie zaimplementowany element członkowski nie może być dostępny za pośrednictwem wystąpienia klasy, ale tylko za pośrednictwem wystąpienia interfejsu. Ponadto domyślne elementy członkowskie interfejsu są dostępne tylko za pośrednictwem wystąpienia interfejsu.
 
-Aby uzyskać więcej informacji na temat jawnej implementacji interfejsu, zobacz [jawną implementację interfejsu](../../programming-guide/interfaces/explicit-interface-implementation.md).
+Aby uzyskać więcej informacji na temat implementacji interfejsu jawnego, zobacz [Implementacja interfejsu jawnego](../../programming-guide/interfaces/explicit-interface-implementation.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład ilustruje implementację interfejsu. W tym przykładzie interfejs zawiera deklarację właściwości, a Klasa zawiera implementację. Każde wystąpienie klasy implementującej `IPoint` ma właściwości całkowite `x` i `y`.
+W poniższym przykładzie przedstawiono implementację interfejsu. W tym przykładzie interfejs zawiera deklarację właściwości i klasa zawiera implementację. Każde wystąpienie klasy, która `IPoint` implementuje ma `x` właściwości `y`całkowite i .
 
 [!code-csharp[csrefKeywordsTypes#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#15)]
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
-Aby uzyskać więcej informacji, zobacz sekcję [interfejsy](~/_csharplang/spec/interfaces.md) [ C# specyfikacji języka](~/_csharplang/spec/introduction.md) i Specyfikacja funkcji dla [domyślnych członków interfejsu C# — 8,0](~/_csharplang/proposals/csharp-8.0/default-interface-methods.md)
+Aby uzyskać więcej informacji, zobacz [interfaces](~/_csharplang/spec/interfaces.md) sekcji [specyfikacji języka C#](~/_csharplang/spec/introduction.md) i specyfikacji funkcji dla [domyślnych elementów członkowskich interfejsu — C# 8.0](~/_csharplang/proposals/csharp-8.0/default-interface-methods.md)
 
 ## <a name="see-also"></a>Zobacz też
 
-- [C#Odwoła](../index.md)
-- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [Odwołanie do języka C#](../index.md)
+- [Przewodnik programowania języka C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](index.md)
 - [Typy odwołań](reference-types.md)
 - [Interfejsy](../../programming-guide/interfaces/index.md)

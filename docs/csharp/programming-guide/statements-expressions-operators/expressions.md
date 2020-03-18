@@ -1,22 +1,22 @@
 ---
-title: Wyrażenia — C# Przewodnik programowania
+title: Wyrażenia — przewodnik programowania Języka C#
 ms.date: 05/11/2017
 helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
 ms.openlocfilehash: 4bbee8f15c2591e8b172df9a6759449d48697804
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75699096"
 ---
 # <a name="expressions-c-programming-guide"></a>Wyrażenia (Przewodnik programowania w języku C#)
 
-*Wyrażenie* jest sekwencją co najmniej jednego operandu i zero lub więcej [operatorów](../../language-reference/operators/index.md) , które mogą być oceniane do pojedynczej wartości, obiektu, metody lub przestrzeni nazw. Wyrażenia mogą składać się z wartości literału, wywołania metody, operatora i jego operandów lub *nazwy prostej*. Proste nazwy mogą być nazwą zmiennej, składową, parametrem metody, przestrzenią nazw lub typem.  
+*Wyrażenie* jest sekwencją jednego lub więcej operandów i zero lub więcej [operatorów,](../../language-reference/operators/index.md) które mogą być oceniane do pojedynczej wartości, obiektu, metody lub przestrzeni nazw. Wyrażenia mogą składać się z wartości literału, wywołania metody, operatora i jego argumentów lub *prostej nazwy.* Proste nazwy mogą być nazwą zmiennej, elementu członkowskiego typu, parametru metody, obszaru nazw lub typu.  
   
- Wyrażenia mogą używać operatorów, które z kolei używają innych wyrażeń jako parametrów lub wywołań metod, których parametry są z kolei inne wywołania metod, dlatego wyrażenia mogą być różne od prostych do bardzo złożonych. Poniżej przedstawiono dwa przykłady wyrażeń:  
+ Wyrażenia można używać operatorów, które z kolei używają innych wyrażeń jako parametry lub wywołania metody, których parametry są z kolei inne wywołania metody, więc wyrażenia mogą wahać się od prostych do bardzo złożonych. Oto dwa przykłady wyrażeń:  
   
 ```csharp  
 ((x < 10) && ( x > 5)) || ((x > 20) && (x < 25));
@@ -24,73 +24,73 @@ ms.locfileid: "75699096"
 System.Convert.ToInt32("35");  
 ```  
   
-## <a name="expression-values"></a>Wartości wyrażeń
+## <a name="expression-values"></a>Wartości wyrażenia
 
- W większości kontekstów, w których są używane wyrażenia, na przykład w instrukcjach lub parametrach metod, oczekiwane jest wyrażenie do obliczenia wartości. Jeśli x i y są liczbami całkowitymi, wyrażenie `x + y` oblicza wartość liczbową. Wyrażenie `new MyClass()` oblicza odwołanie do nowego wystąpienia klasy `MyClass`. Wyrażenie `myClass.ToString()` zwraca ciąg, ponieważ jest typem zwracanym metody. Mimo że nazwa przestrzeni nazw jest sklasyfikowana jako wyrażenie, nie jest ona szacowana jako wartość i w związku z tym nie może być ostatnim wynikiem żadnego wyrażenia. Nie można przekazać nazwy przestrzeni nazw do parametru metody lub użyć jej w nowym wyrażeniu lub przypisać do zmiennej. Można go użyć tylko jako wyrażenia podrzędnego w większym wyrażeniu. Ta sama wartość dotyczy typów (w odróżnieniu od obiektów <xref:System.Type?displayProperty=nameWithType>), nazw grup metod (jako odrębnych od określonych metod), a także do [dodawania](../../language-reference/keywords/add.md) i [usuwania](../../language-reference/keywords/remove.md) zdarzeń.  
+ W większości kontekstów, w których używane są wyrażenia, na przykład w instrukcjach lub parametrach metody, wyrażenie ma ocenić pewną wartość. Jeśli x i y są liczbami `x + y` całkowitymi, wyrażenie oblicza wartość liczbową. Wyrażenie `new MyClass()` oblicza odwołanie do nowego wystąpienia `MyClass` klasy. Wyrażenie `myClass.ToString()` oblicza ciąg, ponieważ jest to typ zwracany metody. Jednak mimo że nazwa obszaru nazw jest klasyfikowany jako wyrażenie, nie jest oceniana do wartości i dlatego nigdy nie może być wynikiem końcowym dowolnego wyrażenia. Nie można przekazać nazwy obszaru nazw do parametru metody ani użyć jej w nowym wyrażeniu ani przypisać jej do zmiennej. Można go używać tylko jako wyrażenia podrzędnego w wyrażeniu większym. To samo dotyczy typów (w <xref:System.Type?displayProperty=nameWithType> odróżnieniu od obiektów), nazw grup metod (w odróżnieniu od określonych metod) i [dodania](../../language-reference/keywords/add.md) i [usuwania](../../language-reference/keywords/remove.md) akcesorów.  
   
- Każda wartość ma skojarzony typ. Na przykład jeśli x i y są zmiennymi typu `int`, wartość wyrażenia `x + y` jest również wpisana jako `int`. Jeśli wartość jest przypisana do zmiennej innego typu lub jeśli x i y są różne typy, stosowane są reguły konwersji typów. Aby uzyskać więcej informacji na temat tego, jak te konwersje działają, zobacz [rzutowanie i konwersje typów](../types/casting-and-type-conversions.md).  
+ Każda wartość ma skojarzony typ. Na przykład jeśli x i y są `int`obiema zmiennymi `x + y` typu, wartość `int`wyrażenia jest również wpisana jako . Jeśli wartość jest przypisana do zmiennej innego typu lub jeśli x i y są różnymi typami, stosowane są reguły konwersji typu. Aby uzyskać więcej informacji na temat działania takich konwersji, zobacz [Konwersje rzutowania i typu](../types/casting-and-type-conversions.md).  
   
-## <a name="overflows"></a>Przepełnienia
+## <a name="overflows"></a>Przepełnienie
 
- Wyrażenia liczbowe mogą spowodować przepełnienie, jeśli wartość jest większa niż wartość maksymalna typu wartości. Aby uzyskać więcej informacji, zobacz sekcję [Checked i unchecked](../../language-reference/keywords/checked-and-unchecked.md) i [jawne konwersje liczbowe](../../language-reference/builtin-types/numeric-conversions.md#explicit-numeric-conversions) [wbudowanego artykułu konwersji liczbowych](../../language-reference/builtin-types/numeric-conversions.md) .
+ Wyrażenia liczbowe mogą powodować przepełnienie, jeśli wartość jest większa niż maksymalna wartość typu wartości. Aby uzyskać więcej informacji, zobacz [Sprawdzone i niezaznaczone](../../language-reference/keywords/checked-and-unchecked.md) oraz [jawne konwersje liczbowe](../../language-reference/builtin-types/numeric-conversions.md#explicit-numeric-conversions) w artykule [Wbudowane konwersje liczbowe.](../../language-reference/builtin-types/numeric-conversions.md)
   
-## <a name="operator-precedence-and-associativity"></a>Pierwszeństwo operatorów i łączność
+## <a name="operator-precedence-and-associativity"></a>Pierwszeństwo operatora i zespolenie
 
- Sposób, w jaki wyrażenie jest oceniane, podlega regułom łączność i pierwszeństwa operatorów. Aby uzyskać więcej informacji, zobacz [Operatory](../../language-reference/operators/index.md).  
+ Sposób, w jaki wyrażenie jest oceniane jest regulowane przez zasady kojarzenia i pierwszeństwo operatora. Aby uzyskać więcej informacji, zobacz [Operatory](../../language-reference/operators/index.md).  
   
- Większość wyrażeń, z wyjątkiem wyrażeń przypisania i wyrażenia wywołania metody, musi być osadzona w instrukcji. Aby uzyskać więcej informacji, zobacz [instrukcje](./statements.md).  
+ Większość wyrażeń, z wyjątkiem wyrażeń przypisania i wyrażeń wywołania metody, musi być osadzona w instrukcji. Aby uzyskać więcej informacji, zobacz [Oświadczenia](./statements.md).  
   
-## <a name="literals-and-simple-names"></a>Literały i nazwy proste
+## <a name="literals-and-simple-names"></a>Literały i proste nazwy
 
- Dwa najprostsze typy wyrażeń to literały i proste nazwy. Literał jest wartością stałą, która nie ma nazwy. Na przykład w poniższym przykładzie kodu zarówno `5`, jak i `"Hello World"` są wartościami literału:  
+ Dwa najprostsze typy wyrażeń są literały i proste nazwy. Literału jest stałą wartością, która nie ma nazwy. Na przykład w poniższym przykładzie `5` `"Hello World"` kodu oba i są wartościami literału:  
   
  [!code-csharp[csProgGuideStatements#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#2)]  
   
- Aby uzyskać więcej informacji na temat literałów, zobacz [typy](/dotnet/csharp/language-reference/keywords).  
+ Aby uzyskać więcej informacji na temat literału, zobacz [Typy](/dotnet/csharp/language-reference/keywords).  
   
- W poprzednim przykładzie zarówno `i`, jak i `s` są prostymi nazwami, które identyfikują zmienne lokalne. Gdy zmienne są używane w wyrażeniu, nazwa zmiennej jest obliczana do wartości, która jest aktualnie przechowywana w lokalizacji zmiennej w pamięci. Jest to pokazane w poniższym przykładzie:  
+ W poprzednim przykładzie oba `i` `s` i są proste nazwy, które identyfikują zmienne lokalne. Gdy te zmienne są używane w wyrażeniu, nazwa zmiennej jest obliczana na wartość, która jest aktualnie przechowywana w lokalizacji zmiennej w pamięci. Jest to pokazane w poniższym przykładzie:  
   
  [!code-csharp[csProgGuideStatements#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#3)]
 
 ## <a name="invocation-expressions"></a>Wyrażenia wywołania
 
- W poniższym przykładzie kodu wywołanie `DoWork` jest wyrażeniem wywołania.  
+ W poniższym przykładzie kodu `DoWork` wywołanie jest wyrażenie minacji.  
   
 ```csharp
 DoWork();  
 ```  
   
- Wywołanie metody wymaga nazwy metody, jako nazwy, jak w poprzednim przykładzie, lub jako wynik innego wyrażenia, po którym następuje nawias i wszystkie parametry metody. Aby uzyskać więcej informacji, zobacz [metody](../classes-and-structs/methods.md). Wywołanie delegata używa nazwy delegata i parametrów metody w nawiasie. Aby uzyskać więcej informacji, zobacz [delegats](../delegates/index.md). Wywołania metod i delegatów wywołań są oceniane do wartości zwracanej metody, jeśli metoda zwraca wartość. Metody zwracające typ void nie mogą być używane zamiast wartości w wyrażeniu.  
+ Wywołanie metody wymaga nazwy metody, jako nazwę, jak w poprzednim przykładzie, lub w wyniku innego wyrażenia, a następnie nawiasy i wszelkie parametry metody. Aby uzyskać więcej informacji, zobacz [Metody](../classes-and-structs/methods.md). Wywołanie delegata używa nazwy delegata i parametrów metody w nawiasie. Aby uzyskać więcej informacji, zobacz [Delegatów](../delegates/index.md). Wywołania metody i delegować wywołania ocenić wartość zwracaną metody, jeśli metoda zwraca wartość. Metody, które zwracają void nie można użyć w miejsce wartości w wyrażeniu.  
 
-## <a name="query-expressions"></a>Wyrażenia zapytań
+## <a name="query-expressions"></a>Wyrażenia kwerendy
 
- Te same reguły dla wyrażeń ogólnych dotyczą wyrażeń zapytań. Aby uzyskać więcej informacji, zobacz [LINQ](../../linq/index.md).  
+ Te same reguły dla wyrażeń w ogóle stosuje się do wyrażeń kwerendy. Aby uzyskać więcej informacji, zobacz [LINQ](../../linq/index.md).  
   
 ## <a name="lambda-expressions"></a>Wyrażenia lambda
 
- Wyrażenia lambda reprezentują "metody wbudowane", które nie mają nazwy, ale mogą zawierać parametry wejściowe i wiele instrukcji. Są one używane w szerokim stopniu w LINQ do przekazywania argumentów do metod. Wyrażenia lambda są kompilowane do delegatów lub drzew wyrażeń w zależności od kontekstu, w którym są używane. Aby uzyskać więcej informacji, zobacz [wyrażenia lambda](lambda-expressions.md).  
+ Wyrażenia Lambda reprezentują "metody inline", które nie mają nazwy, ale mogą mieć parametry wejściowe i wiele instrukcji. Są one szeroko stosowane w LINQ do przekazywania argumentów do metod. Wyrażenia Lambda są kompilowane do delegatów lub drzewa wyrażeń w zależności od kontekstu, w którym są używane. Aby uzyskać więcej informacji, zobacz [Wyrażenia Lambda](lambda-expressions.md).  
   
 ## <a name="expression-trees"></a>Drzewa wyrażeń
 
-Drzewa wyrażeń umożliwiają wyrażenia, które mają być reprezentowane jako struktury danych. Są one szeroko używane przez dostawców LINQ do translacji wyrażeń zapytania do kodu, który jest zrozumiały w innym kontekście, na przykład w bazie danych SQL. Aby uzyskać więcej informacji, zobacz [drzewa wyrażeńC#()](../concepts/expression-trees/index.md).
+Drzewa wyrażeń umożliwiają reprezentację wyrażeń jako struktury danych. Są one szeroko używane przez dostawców LINQ do tłumaczenia wyrażeń zapytań na kod, który ma znaczenie w innym kontekście, takich jak baza danych SQL. Aby uzyskać więcej informacji, zobacz [Drzewa wyrażeń (C#)](../concepts/expression-trees/index.md).
   
-## <a name="expression-body-definitions"></a>Definicje treści wyrażenia
+## <a name="expression-body-definitions"></a>Definicje treści wyrażeń
 
-C#obsługuje *składowe*w postaci wyrażeń, które umożliwiają dostarczenie zwięzłej definicji treści wyrażenia dla metod, konstruktorów, finalizatorów, właściwości i indeksatorów. Aby uzyskać więcej informacji, zobacz [elementy członkowskie z wyrażeniami](expression-bodied-members.md).
+C# obsługuje *elementy członkowskie zabudowane wyrażeniem*, które umożliwiają dostarczanie definicji treści zwięzłe wyrażenie dla metod, konstruktorów, finalizatorów, właściwości i indeksatorów. Aby uzyskać więcej informacji, zobacz [Elementy członkowskie zabudowane wyrażeniem](expression-bodied-members.md).
 
 ## <a name="remarks"></a>Uwagi
 
- Za każdym razem, gdy zmienna, właściwość obiektu lub dostęp indeksatora obiektu jest identyfikowany na podstawie wyrażenia, wartość tego elementu jest używana jako wartość wyrażenia. Wyrażenie można umieścić w dowolnym miejscu, C# w którym jest wymagana wartość lub obiekt, tak długo, jak wyrażenie ostatecznie zwraca wymagany typ.  
+ Za każdym razem, gdy zmienna, właściwość obiektu lub dostęp do indeksatora obiektów są identyfikowane z wyrażenia, wartość tego elementu jest używana jako wartość wyrażenia. Wyrażenie można umieścić w dowolnym miejscu w języku C#, gdzie wymagana jest wartość lub obiekt, tak długo, jak wyrażenie ostatecznie ocenia wymagany typ.  
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
-Aby uzyskać więcej informacji, zobacz sekcję [Expressions](~/_csharplang/spec/expressions.md) w [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).
+Aby uzyskać więcej informacji, zobacz [sekcję Wyrażenia](~/_csharplang/spec/expressions.md) [specyfikacji języka Języka C#.](~/_csharplang/spec/introduction.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Przewodnik programowania w języku C#](../index.md)
+- [Przewodnik programowania języka C#](../index.md)
 - [Operatory](../../language-reference/operators/index.md)
 - [Metody](../classes-and-structs/methods.md)
-- [Delegaci](../delegates/index.md)
+- [Delegaty](../delegates/index.md)
 - [Typy](../types/index.md)
-- [LINQ](../../linq/index.md)
+- [Linq](../../linq/index.md)

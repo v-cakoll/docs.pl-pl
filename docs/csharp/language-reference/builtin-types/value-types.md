@@ -1,5 +1,5 @@
 ---
-title: Typy wartości — C# odwołanie
+title: Typy wartości — odwołanie do języka C#
 ms.date: 01/22/2020
 f1_keywords:
 - cs.valuetypes
@@ -8,59 +8,59 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: a2b9dce3b0ca5e66cfc0fbdbbf8f341abca0b636
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 406e5b8bbe0802146a65bb4b9a053e753a7827ee
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78239732"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399582"
 ---
-# <a name="value-types-c-reference"></a>Typy wartości (C# odwołanie)
+# <a name="value-types-c-reference"></a>Typy wartości (odwołanie do języka C#)
 
-*Typy wartości* i [typy odwołań](../keywords/reference-types.md) to dwie główne kategorie C# typów. Zmienna typu wartości zawiera wystąpienie typu. Różni się to od zmiennej typu referencyjnego, która zawiera odwołanie do wystąpienia typu. Domyślnie przy [przypisywaniu](../operators/assignment-operator.md)przekazywanie argumentu do metody i zwracanie wyniku metody powoduje skopiowanie wartości zmiennych. W przypadku zmiennych typu wartość są kopiowane odpowiednie wystąpienia typu. Poniższy przykład ilustruje takie zachowanie:
+*Typy wartości* i [typy odwołań](../keywords/reference-types.md) są dwiegłówne kategorie typów C#. Zmienna typu wartości zawiera wystąpienie typu. Różni się od zmiennej typu odwołania, która zawiera odwołanie do wystąpienia typu. Domyślnie w przypadku [przypisania](../operators/assignment-operator.md), przekazywania argumentu do metody i zwracania wyniku metody są kopiowane wartości zmiennych. W przypadku zmiennych typu wartości są kopiowane odpowiednie wystąpienia typu. W poniższym przykładzie przedstawiono to zachowanie:
 
-[!code-csharp[copy of values](~/samples/snippets/csharp/language-reference/builtin-types/ValueTypes.cs#ValueTypeCopied)]
+[!code-csharp[copy of values](snippets/ValueTypes.cs#ValueTypeCopied)]
 
-Jak pokazano w powyższym przykładzie, operacje na zmiennej typu wartości wpływają tylko na to wystąpienie typu wartości przechowywane w zmiennej.
+Jak pokazano w poprzednim przykładzie, operacje na zmiennej typu wartości wpływają tylko na to wystąpienie typu wartości, przechowywane w zmiennej.
 
-Jeśli typ wartości zawiera element członkowski danych typu referencyjnego, podczas kopiowania wystąpienia typu wartości jest kopiowane tylko odwołanie do wystąpienia typu referencyjnego. Zarówno kopia, jak i oryginalne wystąpienie typu wartości mają dostęp do tego samego wystąpienia typu odwołania. Poniższy przykład ilustruje takie zachowanie:
+Jeśli typ wartości zawiera element członkowski danych typu odwołania, tylko odwołanie do wystąpienia typu odwołania jest kopiowane podczas kopiowania wystąpienia typu wartości. Zarówno kopia, jak i oryginalne wystąpienie typu wartości mają dostęp do tego samego wystąpienia typu odwołania. W poniższym przykładzie przedstawiono to zachowanie:
 
-[!code-csharp[shallow copy](~/samples/snippets/csharp/language-reference/builtin-types/ValueTypes.cs#ShallowCopy)]
+[!code-csharp[shallow copy](snippets/ValueTypes.cs#ShallowCopy)]
 
 > [!NOTE]
-> Aby kod był mniej podatny na błędy i bardziej niezawodny, definiować i korzystać z niezmiennego typu wartości. W tym artykule są stosowane modyfikowalne typy wartości tylko w celach demonstracyjnych.
+> Aby kod był mniej podatny na błędy i bardziej niezawodny, należy zdefiniować i użyć niezmiennych typów wartości. W tym artykule użyto typów wartości zapisywalnych tylko do celów demonstracyjnych.
 
 ## <a name="kinds-of-value-types"></a>Rodzaje typów wartości
 
 Typ wartości może być jednym z dwóch następujących rodzajów:
 
-- [Typ struktury](struct.md), który hermetyzuje dane i powiązane funkcje
-- [Typ wyliczeniowy](enum.md), który jest zdefiniowany przez zestaw nazwanych stałych i reprezentuje wybór lub kombinację opcji
+- [typ konstrukcji,](struct.md)który hermetyzuje dane i powiązane funkcje
+- [typ wyliczenia](enum.md), który jest definiowany przez zestaw nazwanych stałych i reprezentuje wybór lub kombinację wyborów
 
-[Typ wartości null](nullable-value-types.md) `T?` reprezentuje wszystkie wartości jego bazowego typu wartości `T` i dodatkową wartość [null](../keywords/null.md) . Nie można przypisać `null` do zmiennej typu wartości, chyba że jest to typ wartości null.
+[Typ](nullable-value-types.md) `T?` wartości nullable reprezentuje wszystkie wartości jego `T` podstawowego typu wartości i dodatkowej wartości [null.](../keywords/null.md) Nie można `null` przypisać do zmiennej typu wartości, chyba że jest to typ wartości z wartością null.
 
 ## <a name="built-in-value-types"></a>Wbudowane typy wartości
 
-C#Program udostępnia następujące wbudowane typy wartości, znane także jako *typy proste*:
+C# zawiera następujące wbudowane typy wartości, znane również jako *typy proste:*
 
-- [Całkowite typy liczbowe](integral-numeric-types.md)
-- [Zmiennoprzecinkowe typy liczbowe](floating-point-numeric-types.md)
+- [Typy liczb całkowitych](integral-numeric-types.md)
+- [Zmiennoprzecinkowe rodzaje wartości numerycznych](floating-point-numeric-types.md)
 - [bool](bool.md) reprezentujący wartość logiczną
-- [char](char.md) , który reprezentuje znak Unicode UTF-16
+- [char,](char.md) który reprezentuje znak Unicode UTF-16
 
-Wszystkie typy proste są typami struktury i różnią się od innych typów struktury w tym, że dopuszczają pewne dodatkowe operacje:
+Wszystkie typy proste są typy struktury i różnią się od innych typów struktury, ponieważ pozwalają one na pewne dodatkowe operacje:
 
-- Można użyć literałów, aby podać wartość typu prostego. Na przykład `'A'` jest literałem typu `char`, a `2001` jest literałem typu `int`.
+- Można użyć literału, aby zapewnić wartość typu prostego. Na przykład `'A'` jest literałem `char` `2001` typu i jest `int`literałem typu .
 
-- Stałe typów prostych można zadeklarować za pomocą słowa kluczowego [const](../keywords/const.md) . Nie jest możliwe posiadanie stałych dla innych typów struktury.
+- Za pomocą słowa kluczowego [const](../keywords/const.md) można deklarować stałe typów prostych. Nie jest możliwe, aby mieć stałe innych typów struktury.
 
-- Wyrażenia stałe, których operandy to wszystkie stałe typów prostych, są oceniane w czasie kompilacji.
+- Wyrażenia stałe, których argumenty są wszystkie stałe typów prostych, są oceniane w czasie kompilacji.
 
-Począwszy od C# 7,0, C# obsługuje [krotki wartości](../../tuples.md). Krotka wartości jest typem wartości, ale nie typem prostym.
+Począwszy od języka C# 7.0, C# obsługuje [krotek wartości](../../tuples.md). Krotka wartości jest typem wartości, ale nie jest typem prostym.
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
-Aby uzyskać więcej informacji, zobacz następujące sekcje [ C# specyfikacji języka](~/_csharplang/spec/introduction.md):
+Aby uzyskać więcej informacji, zobacz następujące sekcje [specyfikacji języka Języka C#:](~/_csharplang/spec/introduction.md)
 
 - [Typy wartości](~/_csharplang/spec/types.md#value-types)
 - [Typy proste](~/_csharplang/spec/types.md#simple-types)
@@ -68,6 +68,6 @@ Aby uzyskać więcej informacji, zobacz następujące sekcje [ C# specyfikacji j
 
 ## <a name="see-also"></a>Zobacz też
 
-- [C#odwoła](../index.md)
+- [Dokumentacja języka C#](../index.md)
 - <xref:System.ValueType?displayProperty=nameWithType>
 - [Typy odwołań](../keywords/reference-types.md)

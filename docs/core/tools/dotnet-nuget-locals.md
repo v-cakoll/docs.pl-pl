@@ -1,22 +1,22 @@
 ---
-title: polecenie locale dla pakietów NuGet dotnet
-description: Polecenie locale polecenia NuGet programu dotnet czyści lub wyświetla listę lokalnych zasobów NuGet, takich jak pamięć podręczna żądań HTTP, tymczasowa pamięć podręczna lub folder pakietów globalnych dla całego komputera.
+title: dotnet nuget locals polecenie
+description: Polecenie dotnet nuget locals czyści lub wyświetla lokalne zasoby NuGet, takie jak pamięć podręczna żądań http, tymczasowa pamięć podręczna lub folder pakietów globalnych dla całego komputera.
 author: karann-msft
 ms.date: 02/14/2020
 ms.openlocfilehash: 3fdd7d946b08b4c18cfaeb65013de259b927a7fa
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503683"
 ---
 # <a name="dotnet-nuget-locals"></a>dotnet nuget locals
 
-**Ten artykuł ma zastosowanie do:** ✔️ .NET Core 2. x SDK i nowszych wersji
+**Ten artykuł dotyczy:** ✔️ .NET Core 2.x SDK i nowszych wersji
 
-## <a name="name"></a>Name (Nazwa)
+## <a name="name"></a>Nazwa
 
-`dotnet nuget locals` — czyści lub wyświetla lokalne zasoby NuGet.
+`dotnet nuget locals`- Czyści lub wyświetla lokalne zasoby NuGet.
 
 ## <a name="synopsis"></a>Streszczenie
 
@@ -27,24 +27,24 @@ dotnet nuget locals [-h|--help]
 
 ## <a name="description"></a>Opis
 
-Polecenie `dotnet nuget locals` czyści lub wyświetla listę lokalnych zasobów NuGet w pamięci podręcznej żądania HTTP, tymczasowej pamięci podręcznej lub na całej maszynie.
+Polecenie `dotnet nuget locals` czyści lub wyświetla lokalne zasoby NuGet w pamięci podręcznej żądań http, tymczasowej pamięci podręcznej lub folderze pakietów globalnych dla całego komputera.
 
 ## <a name="arguments"></a>Argumenty
 
 - **`CACHE_LOCATION`**
 
-  Lokalizacja pamięci podręcznej do wyświetlenia lub wyczyszczenia. Akceptuje jedną z następujących wartości:
+  Lokalizacja pamięci podręcznej do listy lub wyczyścić. Akceptuje jedną z następujących wartości:
 
-  * `all` — wskazuje, że określona operacja jest stosowana do wszystkich typów pamięci podręcznej: pamięć podręczna żądań HTTP, pamięć podręczna pakietów globalnych i tymczasowa pamięć podręczna.
-  * `http-cache` — wskazuje, że określona operacja jest stosowana tylko do pamięci podręcznej żądania HTTP. Nie ma to wpływu na inne lokalizacje pamięci podręcznej.
-  * `global-packages` — wskazuje, że określona operacja jest stosowana tylko do globalnej pamięci podręcznej pakietów. Nie ma to wpływu na inne lokalizacje pamięci podręcznej.
-  * `temp` — wskazuje, że określona operacja jest stosowana tylko do tymczasowej pamięci podręcznej. Nie ma to wpływu na inne lokalizacje pamięci podręcznej.
+  * `all`- Wskazuje, że określona operacja jest stosowana do wszystkich typów pamięci podręcznej: pamięci podręcznej żądań http, pamięci podręcznej pakietów globalnych i tymczasowej pamięci podręcznej.
+  * `http-cache`- Wskazuje, że określona operacja jest stosowana tylko do pamięci podręcznej żądań http. Nie ma to wpływu na inne lokalizacje pamięci podręcznej.
+  * `global-packages`- Wskazuje, że określona operacja jest stosowana tylko do pamięci podręcznej pakietów globalnych. Nie ma to wpływu na inne lokalizacje pamięci podręcznej.
+  * `temp`- Wskazuje, że określona operacja jest stosowana tylko do tymczasowej pamięci podręcznej. Nie ma to wpływu na inne lokalizacje pamięci podręcznej.
 
 ## <a name="options"></a>Opcje
 
 - **`--force-english-output`**
 
-  Wymusza uruchomienie aplikacji przy użyciu niezmiennej, opartej na języku angielskim kultury.
+  Wymusza uruchamianie aplikacji przy użyciu niezmiennej kultury opartej na języku angielskim.
 
 - **`-h|--help`**
 
@@ -52,33 +52,33 @@ Polecenie `dotnet nuget locals` czyści lub wyświetla listę lokalnych zasobów
 
 - **`-c|--clear`**
 
-  Opcja Clear wykonuje operację czyszczenia dla określonego typu pamięci podręcznej. Zawartość katalogów pamięci podręcznej jest usuwana rekursywnie. Wykonywany użytkownik/grupa musi mieć uprawnienia do plików w katalogach pamięci podręcznej. W przeciwnym razie zostanie wyświetlony komunikat o błędzie wskazujący pliki/foldery, które nie zostały wyczyszczone.
+  Opcja wyczyść wykonuje wyczyść operację na określonym typie pamięci podręcznej. Zawartość katalogów pamięci podręcznej są usuwane cyklicznie. Wykonujący użytkownik/grupa musi mieć uprawnienia do plików w katalogach pamięci podręcznej. Jeśli nie, zostanie wyświetlony błąd wskazujący pliki/foldery, które nie zostały wyczyszczone.
 
 - **`-l|--list`**
 
-  Opcja Lista służy do wyświetlania lokalizacji określonego typu pamięci podręcznej.
+  Opcja listy służy do wyświetlania lokalizacji określonego typu pamięci podręcznej.
 
 ## <a name="examples"></a>Przykłady
 
-- Wyświetla ścieżki wszystkich lokalnych katalogów pamięci podręcznej (Katalog pamięci podręcznej http, Katalog pamięci podręcznej pakietów globalnych i tymczasowy katalog pamięci podręcznej):
+- Wyświetla ścieżki wszystkich lokalnych katalogów pamięci podręcznej (katalog pamięci podręcznej http-cache, katalog pamięci podręcznej pakietów globalnych i katalog pamięci podręcznej tymczasowej):
 
   ```dotnetcli
   dotnet nuget locals all –l
   ```
 
-- Wyświetla ścieżkę dla lokalnego katalogu pamięci podręcznej http:
+- Wyświetla ścieżkę dla lokalnego katalogu http-cache:
 
   ```dotnetcli
   dotnet nuget locals http-cache --list
   ```
 
-- Czyści wszystkie pliki z katalogów lokalnej pamięci podręcznej (Katalog pamięci podręcznej http, Katalog pamięci podręcznej pakietów globalnych i tymczasowy katalog pamięci podręcznej):
+- Czyści wszystkie pliki ze wszystkich katalogów lokalnej pamięci podręcznej (katalog pamięci podręcznej http-cache, katalog pamięci podręcznej pakietów globalnych i katalog pamięci podręcznej tymczasowej):
 
   ```dotnetcli
   dotnet nuget locals all --clear
   ```
 
-- Czyści wszystkie pliki w lokalnym katalogu globalnym pakietów pamięci podręcznej:
+- Czyści wszystkie pliki w katalogu pamięci podręcznej lokalnych pakietów globalnych:
 
   ```dotnetcli
   dotnet nuget locals global-packages -c
@@ -92,4 +92,4 @@ Polecenie `dotnet nuget locals` czyści lub wyświetla listę lokalnych zasobów
 
 ## <a name="troubleshooting"></a>Rozwiązywanie problemów
 
-Informacje o typowych problemach i błędach przy użyciu polecenia `dotnet nuget locals` można znaleźć w temacie [Zarządzanie pamięcią podręczną NuGet](/nuget/consume-packages/managing-the-nuget-cache).
+Aby uzyskać informacje na temat `dotnet nuget locals` typowych problemów i błędów podczas korzystania z polecenia, zobacz [Zarządzanie pamięcią podręczną NuGet](/nuget/consume-packages/managing-the-nuget-cache).

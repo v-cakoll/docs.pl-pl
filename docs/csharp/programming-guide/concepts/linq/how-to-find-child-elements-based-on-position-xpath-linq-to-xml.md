@@ -1,27 +1,27 @@
 ---
-title: Jak znaleźć elementy podrzędne na podstawie pozycji (XPath-LINQ to XML) (C#)
+title: Jak znaleźć elementy podrzędne na podstawie pozycji (XPath-LINQ do XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: e35bb269-ec86-4c96-8321-12491a0eb2c3
 ms.openlocfilehash: cc0ff5639345d36ebb0423a12b66de8f1a70ade1
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141120"
 ---
-# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-c"></a>Jak znaleźć elementy podrzędne na podstawie pozycji (XPath-LINQ to XML) (C#)
-Czasami chcesz znaleźć elementy na podstawie ich położenia. Może być konieczne znalezienie drugiego elementu lub znalezienie trzeciej przez piąty element.  
+# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-c"></a>Jak znaleźć elementy podrzędne na podstawie pozycji (XPath-LINQ do XML) (C#)
+Czasami chcesz znaleźć elementy na podstawie ich pozycji. Możesz chcieć znaleźć drugi element lub możesz chcieć znaleźć trzeci za pośrednictwem piątego elementu.  
   
- Wyrażenie XPath:  
+ Wyrażenie XPath jest następujące:  
   
  `Test[position() >= 2 and position() <= 4]`  
   
- Istnieją dwa podejścia do zapisu tego [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zapytania w sposób opóźniony. Można użyć operatorów <xref:System.Linq.Enumerable.Skip%2A> i <xref:System.Linq.Enumerable.Take%2A> lub użyć przeciążenia <xref:System.Linq.Enumerable.Where%2A>, które przyjmuje indeks. Używając przeciążenia <xref:System.Linq.Enumerable.Where%2A>, należy użyć wyrażenia lambda, które przyjmuje dwa argumenty. W poniższym przykładzie przedstawiono obie metody wyboru na podstawie pozycji.  
+ Istnieją dwa podejścia do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] pisania tej kwerendy w sposób leniwy. Można użyć <xref:System.Linq.Enumerable.Skip%2A> i <xref:System.Linq.Enumerable.Take%2A> operatorów lub można <xref:System.Linq.Enumerable.Where%2A> użyć przeciążenia, który ma indeks. Korzystając z <xref:System.Linq.Enumerable.Where%2A> przeciążenia, należy użyć wyrażenia lambda, który przyjmuje dwa argumenty. W poniższym przykładzie przedstawiono obie metody wybierania na podstawie pozycji.  
   
 ## <a name="example"></a>Przykład  
- Ten przykład wyszukuje sekundę za pomocą czwartego elementu `Test`. Wynik jest kolekcją elementów.  
+ W tym przykładzie znajduje `Test` drugi przez czwarty element. Wynik jest zbiorem elementów.  
   
- W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: Konfiguracja testu (LINQ to XML)](./sample-xml-file-test-configuration-linq-to-xml.md).  
+ W tym przykładzie użyto następującego dokumentu XML: [Przykładowy plik XML: Konfiguracja testu (LINQ do XML)](./sample-xml-file-test-configuration-linq-to-xml.md).  
   
 ```csharp  
 XElement testCfg = XElement.Load("TestConfig.xml");  

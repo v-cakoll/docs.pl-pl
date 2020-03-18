@@ -1,21 +1,21 @@
 ---
-title: Jak zmienić przestrzeń nazw dla całego drzewa XML (C#)
+title: Jak zmienić obszar nazw dla całego drzewa XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 1584ff3b-c77d-4241-ab62-80adfb7bfc1b
 ms.openlocfilehash: 6462cbb5001682b6a464c1446f8ae6de3c5669d1
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141509"
 ---
-# <a name="how-to-change-the-namespace-for-an-entire-xml-tree-c"></a>Jak zmienić przestrzeń nazw dla całego drzewa XML (C#)
-Czasami trzeba programistycznie zmienić przestrzeń nazw dla elementu lub atrybutu. Ułatwia to LINQ to XML. Właściwość <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType> można ustawić. Nie można ustawić właściwości <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType>, ale można łatwo skopiować atrybuty do <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, usunąć istniejące atrybuty, a następnie dodać nowe atrybuty, które znajdują się w nowym żądanym obszarze nazw.  
+# <a name="how-to-change-the-namespace-for-an-entire-xml-tree-c"></a>Jak zmienić obszar nazw dla całego drzewa XML (C#)
+Czasami trzeba programowo zmienić obszar nazw dla elementu lub atrybutu. LINQ do XML sprawia, że to proste. Obiekt <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType> można ustawić. Nie <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType> można ustawić właściwości, ale można łatwo skopiować atrybuty do <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, usunąć istniejące atrybuty, a następnie dodać nowe atrybuty, które znajdują się w nowym żądanym obszarze nazw.  
   
- Aby uzyskać więcej informacji, zobacz temat [przestrzenie nazw —C#omówienie (LINQ to XML) ()](namespaces-overview-linq-to-xml.md).  
+ Aby uzyskać więcej informacji, zobacz [Omówienie przestrzeni nazw (LINQ do XML) (C#)](namespaces-overview-linq-to-xml.md).  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod tworzy dwa drzewa XML w obszarze brak przestrzeni nazw. Następnie zmienia przestrzeń nazw każdego drzewa i łączy je w jedno drzewo.  
+ Poniższy kod tworzy dwa drzewa XML w obszarze nazw. Następnie zmienia obszar nazw każdego z drzew i łączy je w jedno drzewo.  
   
 ```csharp  
 XElement tree1 = new XElement("Data",  

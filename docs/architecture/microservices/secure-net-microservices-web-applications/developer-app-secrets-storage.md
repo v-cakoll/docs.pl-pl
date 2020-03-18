@@ -1,26 +1,26 @@
 ---
 title: Bezpieczne przechowywanie kluczy tajnych aplikacji podczas jej tworzenia
-description: Zabezpieczenia w mikrousługach .NET i aplikacjach sieci Web — nie przechowuj wpisów tajnych aplikacji, takich jak hasła, parametry połączenia lub klucze interfejsu API w kontroli źródła, Poznaj opcje, których można użyć w ASP.NET Core, w szczególności musisz zrozumieć, jak obsługiwać "użytkownika wpisy tajne ".
+description: Zabezpieczenia w mikrousługach .NET i aplikacjach sieci Web — nie przechowuj kluczy tajnych aplikacji, takich jak hasła, parametry połączenia lub klucze interfejsu API w kontroli źródła, należy zrozumieć opcje, których można użyć w ASP.NET Core, w szczególności musisz zrozumieć, jak obsługiwać "użytkownika" tajemnice".
 author: mjrousos
 ms.date: 01/30/2020
 ms.openlocfilehash: 1ef2246746b9165f1564fa7be64ff7eb28eb1d32
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77501799"
 ---
-# <a name="store-application-secrets-safely-during-development"></a>Bezpieczne przechowywanie wpisów tajnych aplikacji podczas opracowywania
+# <a name="store-application-secrets-safely-during-development"></a>Bezpiecznie przechowuj wpisy tajne aplikacji podczas opracowywania
 
-Aby nawiązać połączenie z chronionymi zasobami i innymi usługami, ASP.NET Core aplikacje zwykle muszą używać parametrów połączenia, haseł lub innych poświadczeń, które zawierają informacje poufne. Te poufne informacje są nazywane *tajemnicami*. Najlepszym rozwiązaniem jest, aby nie uwzględnić wpisów tajnych w kodzie źródłowym i upewnić się, że wpisy tajne nie są przechowywane w kontroli źródła. Zamiast tego należy użyć modelu konfiguracji ASP.NET Core, aby odczytać wpisy tajne z bardziej bezpiecznych lokalizacji.
+Aby połączyć się z chronionymi zasobami i innymi usługami, ASP.NET aplikacje podstawowe zazwyczaj muszą używać ciągów połączeń, haseł lub innych poświadczeń zawierających poufne informacje. Te wrażliwe informacje są nazywane *tajemnicami*. Jest najlepszym rozwiązaniem, aby nie zawierać wpisy tajne w kodzie źródłowym i upewniając się, aby nie przechowywać klucze tajne w kontroli źródła. Zamiast tego należy użyć ASP.NET modelu konfiguracji Core, aby odczytać klucze tajne z bezpieczniejszych lokalizacji.
 
-Należy oddzielić wpisy tajne, aby uzyskać dostęp do zasobów deweloperskich i przejściowych z tych, które są używane do uzyskiwania dostępu do zasobów produkcyjnych, ponieważ różne osoby będą potrzebować dostępu do tych różnych zestawów kluczy tajnych. Aby przechowywać wpisy tajne używane podczas opracowywania, typowe podejścia do przechowywania wpisów tajnych w zmiennych środowiskowych lub za pomocą narzędzia ASP.NET Core Secret Manager. Aby zapewnić większy bezpieczny magazyn w środowiskach produkcyjnych, mikrousługi mogą przechowywać wpisy tajne w Azure Key Vault.
+Należy oddzielić klucze tajne dostępu do zasobów deweloperskich i przejściowych od tych używanych do uzyskiwania dostępu do zasobów produkcyjnych, ponieważ różne osoby będą potrzebować dostępu do tych różnych zestawów kluczy tajnych. Aby przechowywać wpisy tajne używane podczas tworzenia aplikacji, typowe podejścia mają na celu przechowywanie kluczy tajnych w zmiennych środowiskowych lub przy użyciu narzędzia ASP.NET Core Secret Manager. Aby zapewnić bezpieczniejsze przechowywanie w środowiskach produkcyjnych, mikrousługi mogą przechowywać klucze tajne w usłudze Azure Key Vault.
 
-## <a name="store-secrets-in-environment-variables"></a>Przechowuj wpisy tajne w zmiennych środowiskowych
+## <a name="store-secrets-in-environment-variables"></a>Przechowywanie kluczy tajnych w zmiennych środowiskowych
 
-Jednym ze sposobów utrzymywania tajemnicy kodu źródłowego jest to, aby deweloperzy mogli ustawiać klucze tajne na podstawie ciągów jako [zmienne środowiskowe](/aspnet/core/security/app-secrets#environment-variables) na swoich maszynach deweloperskich. W przypadku używania zmiennych środowiskowych do przechowywania wpisów tajnych z nazwami hierarchicznymi, takimi jak zagnieżdżone w sekcjach konfiguracji, należy nazwać zmienne, aby uwzględnić pełną hierarchię jej sekcji, rozdzielaną średnikami (:).
+Jednym ze sposobów zachowania wpisów tajnych z kodu źródłowego jest dla deweloperów, aby ustawić wtajemnic opartych na [ciągach](/aspnet/core/security/app-secrets#environment-variables) jako zmienne środowiskowe na swoich komputerach deweloperskich. W przypadku używania zmiennych środowiskowych do przechowywania wpisów tajnych z nazwami hierarchicznymi, takimi jak te zagnieżdżone w sekcjach konfiguracji, należy nadać im nazwę, aby uwzględnić pełną hierarchię jej sekcji, rozdzieloną dwukropkami (:).
 
-Na przykład ustawienie zmiennej środowiskowej `Logging:LogLevel:Default` na wartość `Debug` będzie równoważne wartości konfiguracji z następującego pliku JSON:
+Na przykład ustawienie `Logging:LogLevel:Default` zmiennej `Debug` środowiskowej na wartość byłoby równoważne wartości konfiguracji z następującego pliku JSON:
 
 ```json
 {
@@ -32,15 +32,15 @@ Na przykład ustawienie zmiennej środowiskowej `Logging:LogLevel:Default` na wa
 }
 ```
 
-Aby uzyskać dostęp do tych wartości ze zmiennych środowiskowych, aplikacja po prostu musi wywołać AddEnvironmentVariables na ConfigurationBuilder podczas konstruowania obiektu IConfigurationRoot.
+Aby uzyskać dostęp do tych wartości ze zmiennych środowiskowych, aplikacja po prostu musi wywołać AddEnvironmentVariables na jego ConfigurationBuilder podczas konstruowania IConfigurationRoot obiektu.
 
-Należy pamiętać, że zmienne środowiskowe są zwykle przechowywane jako zwykły tekst, więc jeśli komputer lub proces ze zmiennymi środowiskowymi zostanie naruszony, wartości zmiennych środowiskowych będą widoczne.
+Należy zauważyć, że zmienne środowiskowe są często przechowywane jako zwykły tekst, więc jeśli komputer lub proces ze zmiennymi środowiskowymi jest zagrożona, wartości zmiennej środowiskowej będą widoczne.
 
-## <a name="store-secrets-with-the-aspnet-core-secret-manager"></a>Przechowywanie wpisów tajnych za pomocą programu ASP.NET Core Secret Manager
+## <a name="store-secrets-with-the-aspnet-core-secret-manager"></a>Przechowuj sekrety za pomocą ASP.NET Core Secret Manager
 
-Narzędzie ASP.NET Core [Secret Manager](/aspnet/core/security/app-secrets#secret-manager) zapewnia kolejną metodę przechowywania wpisów tajnych z kodu źródłowego **podczas opracowywania**. Aby użyć narzędzia Secret Manager, zainstaluj pakiet **Microsoft. Extensions. Configuration. SecretManager** w pliku projektu. Gdy ta zależność jest obecna i przywrócona, polecenie `dotnet user-secrets` może służyć do ustawiania wartości wpisów tajnych z wiersza polecenia. Te wpisy tajne będą przechowywane w pliku JSON w katalogu profilu użytkownika (szczegóły różnią się w zależności od systemu operacyjnego), a nie od kodu źródłowego.
+Narzędzie ASP.NET Core [Secret Manager](/aspnet/core/security/app-secrets#secret-manager) udostępnia inną metodę utrzymywania tajemnic poza kodem źródłowym podczas **tworzenia .** Aby użyć narzędzia Secret Manager, zainstaluj pakiet **Microsoft.Extensions.Configuration.SecretManager** w pliku projektu. Gdy ta zależność jest obecna i została `dotnet user-secrets` przywrócona, polecenie może służyć do ustawiania wartości kluczy tajnych z wiersza polecenia. Te wpisy tajne będą przechowywane w pliku JSON w katalogu profilu użytkownika (szczegóły różnią się w zależności od systemu operacyjnego), z dala od kodu źródłowego.
 
-Wpisy tajne ustawiane przez narzędzie tajnego Menedżera są zorganizowane według właściwości `UserSecretsId` projektu, który używa wpisów tajnych. W związku z tym należy ustawić właściwość UserSecretsId w pliku projektu, jak pokazano w poniższym fragmencie kodu. Wartość domyślna to identyfikator GUID przypisany przez program Visual Studio, ale rzeczywisty ciąg nie jest ważny, o ile jest unikatowy na komputerze.
+Wtajemnice ustawione przez narzędzie Secret `UserSecretsId` Manager są zorganizowane przez właściwość projektu, który używa kluczy tajnych. W związku z tym należy ustawić UserSecretsId właściwość w pliku projektu, jak pokazano w urywku poniżej. Wartością domyślną jest identyfikator GUID przypisany przez program Visual Studio, ale rzeczywisty ciąg nie jest ważny, o ile jest unikatowy na komputerze.
 
 ```xml
 <PropertyGroup>
@@ -48,10 +48,10 @@ Wpisy tajne ustawiane przez narzędzie tajnego Menedżera są zorganizowane wed�
 </PropertyGroup>
 ```
 
-Korzystanie z wpisów tajnych przechowywanych w ramach Menedżera wpisów tajnych w aplikacji jest realizowane przez wywołanie `AddUserSecrets<T>` w wystąpieniu ConfigurationBuilder w celu uwzględnienia wpisów tajnych aplikacji w konfiguracji. Parametr generyczny T powinien być typem z zestawu, do którego zastosowano UserSecretId. Zwykle używanie `AddUserSecrets<Startup>` jest dokładne.
+Za pomocą wpisów tajnych przechowywanych w `AddUserSecrets<T>` Secret Manager w aplikacji jest realizowane przez wywołanie wystąpienia ConfigurationBuilder do uwzględnienia wpisów tajnych dla aplikacji w jego konfiguracji. Parametr ogólny T powinien być typem z zestawu, do którego zastosowano identyfikator UserSecretId. Zwykle `AddUserSecrets<Startup>` używanie jest w porządku.
 
-`AddUserSecrets<Startup>()` jest uwzględniona w domyślnych opcjach środowiska programistycznego w przypadku używania metody `CreateDefaultBuilder` w *program.cs*.
+Jest `AddUserSecrets<Startup>()` ona uwzględniona w domyślnych `CreateDefaultBuilder` opcjach środowiska programistycznego podczas korzystania z metody w *Program.cs*.
 
 >[!div class="step-by-step"]
->[Poprzednie](authorization-net-microservices-web-applications.md)
->[dalej](azure-key-vault-protects-secrets.md)
+>[Poprzedni](authorization-net-microservices-web-applications.md)
+>[następny](azure-key-vault-protects-secrets.md)

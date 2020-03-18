@@ -1,40 +1,40 @@
 ---
 ms.openlocfilehash: 58d1c8cd3aff52703522391c14348bd81c108587
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74568157"
 ---
-### <a name="custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively"></a>Niestandardowe wystąpienia EncoderFallbackBuffer nie mogą podlegać rekursywnie
+### <a name="custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively"></a>Niestandardowe wystąpienia Buforu ConerFallbackBuffer nie mogą wycofać się cyklicznie
 
-Niestandardowe wystąpienia <xref:System.Text.EncoderFallbackBuffer> nie mogą przeliczyć cyklicznie. Implementacja <xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> musi spowodować sekwencję znaków, która jest konwertowany na kodowanie docelowe. W przeciwnym razie wystąpi wyjątek.
+Wystąpienia <xref:System.Text.EncoderFallbackBuffer> niestandardowe nie mogą wycofać się cyklicznie. Implementacja <xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> musi spowodować sekwencję znaków, która jest konwertowalna do kodowania docelowego. W przeciwnym razie wystąpi wyjątek.
 
 #### <a name="change-description"></a>Zmień opis
 
-Podczas operacji transkodowania typu "Character-to-Byte" środowisko uruchomieniowe wykrywa nieprawidłowo sformułowane lub niewymienialne sekwencje UTF-16 i dostarcza te znaki do metody <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType>. Metoda `Fallback` określa, które znaki powinny być zastępowane dla oryginalnych danych nieprzekonwertowanych. te znaki są opróżniane przez wywołanie <xref:System.Text.EncoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> w pętli.
+Podczas operacji transkodowania między znakami do bajtów program runtime wykrywa źle sformułowane lub niekonwertowalne sekwencje UTF-16 i udostępnia te znaki <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> do metody. Metoda `Fallback` określa, które znaki powinny być zastępowane oryginalnymi danymi niewymienialnymi, <xref:System.Text.EncoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> a te znaki są opróżniane przez wywoływanie w pętli.
 
-Środowisko uruchomieniowe następnie próbuje transkodowanie te znaki podstawiania do kodowania docelowego. Jeśli ta operacja zakończy się pomyślnie, środowisko uruchomieniowe kontynuuje transkodowanie z miejsca, w którym jest pozostawione w oryginalnym ciągu wejściowym.
+Następnie czas wykonywania próbuje przekodować te znaki podstawienia do kodowania docelowego. Jeśli ta operacja zakończy się pomyślnie, czas wykonywania kontynuuje transkodowanie od miejsca, w którym zostało wyłączone w oryginalnym ciągu wejściowym.
 
-W programie .NET Core w wersji zapoznawczej 7 i starszych wersjach niestandardowe implementacje <xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> mogą zwracać sekwencje znaków, które nie są konwertowane na kodowanie docelowe. Jeśli podstawiane znaki nie mogą być transkodowane do kodowania docelowego, środowisko uruchomieniowe wywołuje metodę <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> raz ponownie z znakami podstawiania, oczekiwanie metody <xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> do zwrócenia nowej sekwencji podstawiania. Ten proces jest kontynuowany do momentu, gdy środowisko uruchomieniowe ostatecznie zobaczy dobrze sformułowane, Zastępcze podstawienie lub dopóki nie zostanie osiągnięta maksymalna liczba rekursji.
+W .NET Core Preview 7 i wcześniejszych <xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> wersjach implementacje niestandardowe mogą zwracać sekwencje znaków, które nie są konwertowalne do kodowania docelowego. Jeśli podstawione znaki nie mogą być transkodowane do kodowania <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> docelowego, czas wykonywania wywołuje metodę ponownie ze <xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> znakami podstawienia, oczekując, że metoda zwróci nową sekwencję podstawienia. Ten proces jest kontynuowany, dopóki czas wykonywania ostatecznie widzi dobrze sformułowane, kabriolet podstawienia lub do momentu osiągnięcia maksymalnej liczby rekursji.
 
-Począwszy od platformy .NET Core 3,0, niestandardowe implementacje <xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> muszą zwracać sekwencje znaków, które są konwertowane na kodowanie docelowe. Jeśli podstawiane znaki nie mogą być transkodowane do kodowania docelowego, zostanie zgłoszony <xref:System.ArgumentException>. Środowisko wykonawcze nie będzie już powodowało wywołań cyklicznych do wystąpienia <xref:System.Text.EncoderFallbackBuffer>.
+Począwszy od .NET Core 3.0, implementacje niestandardowe <xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> musi zwracać sekwencje znaków, które są konwertowalne do kodowania docelowego. Jeśli podstawione znaki nie mogą być transkodowane <xref:System.ArgumentException> do kodowania docelowego, zgłaszany jest obiekt. Czas wykonywania nie będzie już wykonywać wywołania <xref:System.Text.EncoderFallbackBuffer> cykliczne do wystąpienia.
 
 To zachowanie ma zastosowanie tylko wtedy, gdy spełnione są wszystkie trzy z następujących warunków:
 
-- Środowisko uruchomieniowe wykrywa źle sformułowaną sekwencję UTF-16 lub sekwencję UTF-16, której nie można przekonwertować na kodowanie docelowe.
-- Określono niestandardową <xref:System.Text.EncoderFallback>.
-- Niestandardowy <xref:System.Text.EncoderFallback> próbuje zastąpić nową sekwencję UTF-16 źle sformułowaną lub nieprzekonwertowaną.
+- Program runtime wykrywa źle sformułowaną sekwencję UTF-16 lub sekwencję UTF-16, której nie można przekonwertować na kodowanie docelowe.
+- Określono <xref:System.Text.EncoderFallback> niestandardowy.
+- Niestandardowe <xref:System.Text.EncoderFallback> próbuje zastąpić nową nieukształtowaną lub niewymienialną sekwencję UTF-16.
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
 3.0
 
-#### <a name="recommended-action"></a>Zalecane działanie
+#### <a name="recommended-action"></a>Zalecana akcja
 
-Większość deweloperów nie musi podejmować wszelkie działania.
+Większość programistów nie musi podejmować żadnych działań.
 
-Jeśli aplikacja używa niestandardowej klasy <xref:System.Text.EncoderFallback> i <xref:System.Text.EncoderFallbackBuffer>, upewnij się, że implementacja <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> wypełnia bufor rezerwowy przy użyciu poprawnie sformułowanych danych UTF-16, które są bezpośrednio konwertowane na kodowanie docelowe, gdy metoda <xref:System.Text.EncoderFallbackBuffer.Fallback%2A> jest wywoływana po raz pierwszy przez środowisko uruchomieniowe.
+Jeśli aplikacja używa <xref:System.Text.EncoderFallback> niestandardowego i <xref:System.Text.EncoderFallbackBuffer> klasy, <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> upewnij się, że implementacja wypełnia bufor rezerwowy dobrze sformułowanymi danymi UTF-16, które są bezpośrednio konwertowalne do kodowania docelowego, gdy <xref:System.Text.EncoderFallbackBuffer.Fallback%2A> metoda jest po raz pierwszy wywoływana przez program runtime.
 
 #### <a name="category"></a>Kategoria
 

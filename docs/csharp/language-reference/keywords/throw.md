@@ -1,5 +1,5 @@
 ---
-title: throw — C# odwołanie
+title: throw - Odwołanie do języka C#
 ms.date: 03/02/2015
 f1_keywords:
 - throw
@@ -10,11 +10,11 @@ helpviewer_keywords:
 - throw keyword [C#]
 ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
 ms.openlocfilehash: 04d3138e3390627355b4b2d4e25c6b00248cec1a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713056"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399337"
 ---
 # <a name="throw-c-reference"></a>throw (odwołanie w C#)
 
@@ -22,42 +22,42 @@ Sygnalizuje wystąpienie wyjątku podczas wykonywania programu.
   
 ## <a name="remarks"></a>Uwagi
 
-Składnia `throw` jest następująca:
+Składnia `throw` jest:
 
 ```csharp
 throw [e];
 ```
 
-gdzie `e` jest wystąpieniem klasy pochodzącej od <xref:System.Exception?displayProperty=nameWithType>. Poniższy przykład używa instrukcji `throw`, aby zgłosić <xref:System.IndexOutOfRangeException>, jeśli argument przesłany do metody o nazwie `GetNumber` nie odpowiada prawidłowemu indeksowi tablicy wewnętrznej.
+gdzie `e` jest wystąpienieklasy pochodzącej <xref:System.Exception?displayProperty=nameWithType>z . W poniższym `throw` przykładzie użyto <xref:System.IndexOutOfRangeException> instrukcji do wyrzucania, jeśli argument przekazany do metody o nazwie `GetNumber` nie odpowiada prawidłowy indeks tablicy wewnętrznej.
 
 [!code-csharp[csrefKeyword#1](~/samples/snippets/csharp/language-reference/keywords/throw/throw-1.cs#1)]
 
-Metody wywołujące stosują następnie `try-catch` lub `try-catch-finally` bloku, aby obsłużyć zgłoszony wyjątek. Poniższy przykład obsługuje wyjątek zgłoszony przez metodę `GetNumber`.
+Wywoływanie metody następnie `try-catch` `try-catch-finally` użyć lub bloku do obsługi wyjątek. Poniższy przykład obsługuje wyjątek zgłoszony `GetNumber` przez metodę.
 
 [!code-csharp[csrefKeyword#2](~/samples/snippets/csharp/language-reference/keywords/throw/throw-1.cs#2)]
 
 ## <a name="re-throwing-an-exception"></a>Ponowne zgłaszanie wyjątku
 
-`throw` można również użyć w bloku `catch`, aby ponownie zgłosić wyjątek obsłużony w bloku `catch`.  W tym przypadku `throw` nie przyjmuje operandu wyjątku. Jest to najbardziej przydatne, gdy metoda przekazuje argument od wywołującego do innej metody biblioteki, a metoda Library zgłasza wyjątek, który musi zostać przekazana do obiektu wywołującego. Na przykład poniższy przykład ponownie generuje <xref:System.NullReferenceException>, który jest zgłaszany podczas próby pobrania pierwszego znaku niezainicjowanego ciągu.
+`throw`może być również `catch` używany w bloku, aby ponownie `catch` zgłosić wyjątek obsługiwany w bloku.  W tym `throw` przypadku nie ma argumentu wyjątku. Jest to najbardziej przydatne, gdy metoda przekazuje argument z obiektu wywołującego do innej metody biblioteki, a metoda biblioteki zgłasza wyjątek, który musi zostać przekazany do obiektu wywołującego. Na przykład w poniższym przykładzie <xref:System.NullReferenceException> ponownie zgłasza, który jest generowany podczas próby pobrania pierwszego znaku niezainicjowanego ciągu.
 
 [!code-csharp[csrefKeyword#3](~/samples/snippets/csharp/language-reference/keywords/throw/throw-3.cs#3)]
 
 > [!IMPORTANT]
-> Możesz również użyć składni `throw e` w bloku `catch`, aby utworzyć wystąpienie nowego wyjątku przekazanego do obiektu wywołującego. W takim przypadku śledzenie stosu oryginalnego wyjątku, który jest dostępny we właściwości <xref:System.Exception.StackTrace>, nie jest zachowywane.
+> Można również użyć `throw e` składni `catch` w bloku, aby utworzyć wystąpienie nowego wyjątku, który można przekazać do obiektu wywołującego. W takim przypadku ślad stosu oryginalnego wyjątku, który jest dostępny z <xref:System.Exception.StackTrace> właściwości, nie jest zachowywany.
 
 ## <a name="the-throw-expression"></a>Wyrażenie `throw`
 
-Począwszy od C# 7,0, `throw` może służyć jako wyrażenie, a także instrukcja. Pozwala to na wyrzucanie wyjątku w kontekstach, które były wcześniej nieobsługiwane. Należą do nich następujące elementy:
+Począwszy od języka C# 7.0, `throw` może służyć jako wyrażenie, a także instrukcji. Dzięki temu wyjątek wyjątek w kontekstach, które wcześniej nie były obsługiwane. Należą do nich:
 
-- [operator warunkowy](../operators/conditional-operator.md). Poniższy przykład używa wyrażenia `throw`, aby zgłosić <xref:System.ArgumentException>, jeśli metoda jest przenoszona pustą tablicę ciągów. Przed C# 7,0, ta logika powinna być wyświetlana w instrukcji `if`/`else`.
+- [operatora warunkowego](../operators/conditional-operator.md). W poniższym `throw` przykładzie użyto <xref:System.ArgumentException> wyrażenia do wyrzucania, jeśli metoda jest przekazywana tablicy pustyciąg. Przed C# 7.0, ta logika `if` / `else` musi pojawić się w instrukcji.
 
    [!code-csharp[csrefKeyword#4](~/samples/snippets/csharp/language-reference/keywords/throw/conditional.cs#1)]
 
-- [operator łączenia wartości null](../operators/null-coalescing-operator.md). W poniższym przykładzie wyrażenie `throw` jest używane z operatorem łączenia wartości null, aby zgłosić wyjątek, jeśli ciąg przypisany do właściwości `Name` jest `null`.
+- [operatora zerowego łączenia](../operators/null-coalescing-operator.md). W poniższym `throw` przykładzie wyrażenie jest używane z operatorem łączenia wartości null, aby zgłosić wyjątek, jeśli ciąg przypisany do `Name` właściwości jest `null`.
 
    [!code-csharp[csrefKeyword#5](~/samples/snippets/csharp/language-reference/keywords/throw/coalescing.cs#1)]
 
-- wyrażenie wyrażenia [lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md) lub metody. Poniższy przykład ilustruje metodę zanikającą z wyrażenia, która zgłasza <xref:System.InvalidCastException>, ponieważ konwersja do wartości <xref:System.DateTime> nie jest obsługiwana.
+- [lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md) lub metoda osażeniu. W poniższym przykładzie przedstawiono metodę zabudowaną <xref:System.InvalidCastException> wyrażeniem, która <xref:System.DateTime> zgłasza, ponieważ konwersja na wartość nie jest obsługiwana.
 
    [!code-csharp[csrefKeyword#6](~/samples/snippets/csharp/language-reference/keywords/throw/exp-bodied.cs#1)]
 
@@ -65,10 +65,10 @@ Począwszy od C# 7,0, `throw` może służyć jako wyrażenie, a także instrukc
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Dokumentacja języka C#](../index.md)
-- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [Odwołanie do języka C#](../index.md)
+- [Przewodnik programowania języka C#](../../programming-guide/index.md)
 - [try-catch](try-catch.md)
 - [Słowa kluczowe języka C#](index.md)
 - [Instrukcje: Jawne zgłaszanie wyjątków](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

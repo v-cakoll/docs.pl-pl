@@ -1,14 +1,14 @@
 ---
 ms.openlocfilehash: b4a20599ce6b7d8fd642e4f0e5b5f7d3fbcdac92
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394290"
 ---
-### <a name="obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed"></a>Usunięto przestarzałe interfejsy API "antysfałszowane", "CORS, Diagnostics, MVC i Routing"
+### <a name="obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed"></a>Usunięto przestarzałe interfejsy API antiforgery, CORS, Diagnostics, MVC i Routing
 
-Usunięto przestarzałe elementy członkowskie i przełączniki zgodności w ASP.NET Core 2,2.
+Usunięto przestarzałe elementy członkowskie i przełączniki zgodności w ASP.NET Core 2.2.
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -20,7 +20,7 @@ Poprawa powierzchni interfejsu API w czasie.
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Podczas określania platformy .NET Core 2,2 Postępuj zgodnie ze wskazówkami w przestarzałych komunikatach kompilacji, aby zamiast tego zastosować nowe interfejsy API.
+Podczas określania wartości docelowej .NET Core 2.2, postępuj zgodnie ze wskazówkami w przestarzałych komunikatów kompilacji, aby zamiast tego przyjąć nowe interfejsy API.
 
 #### <a name="category"></a>Kategoria
 
@@ -28,7 +28,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>Dotyczy interfejsów API
 
-Następujące typy i elementy członkowskie zostały oznaczone jako przestarzałe dla ASP.NET Core 2,1 i 2,2:
+Następujące typy i elementy członkowskie zostały oznaczone jako przestarzałe dla ASP.NET Core 2.1 i 2.2:
 
 **Typy**
 

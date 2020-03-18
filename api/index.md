@@ -9,12 +9,12 @@ ms.topic: landing-page
 ms.custom: updateeachrelease
 ms.date: 01/24/2020
 ms.openlocfilehash: 2c3901f8d5c8bb0c7ffde31b1aec19a81af9f4ce
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78239927"
 ---
 # <a name="net-api-browser"></a>Przeglądarka interfejsów API na platformie .NET
 
-Witamy w przeglądarce interfejsu API platformy .NET — dla wszystkich. Oparte na sieci interfejsy API firmy Microsoft. Rozpocznij wyszukiwanie wszelkich zarządzanych interfejsów API, wpisując je w polu poniżej. Więcej informacji na temat przeglądarki interfejsu API można znaleźć [w naszym wpisie w blogu](https://aka.ms/apibrowser). Jeśli masz jakieś opinie, Utwórz nowy problem w [repozytorium MicrosoftDocs/opinia w witrynie GitHub](https://github.com/MicrosoftDocs/feedback/issues).
+Witamy w przeglądarce .NET API – twoim jednym przystanku dla wszystkich. Interfejsy API oparte na sieci NET firmy Microsoft. Zacznij wyszukiwać wszystkie zarządzane interfejsy API, wpisując w polu poniżej. Możesz dowiedzieć się więcej o przeglądarce API [w naszym blogu](https://aka.ms/apibrowser). Jeśli masz jakieś opinie, utwórz nowy problem w [repozytorium MicrosoftDocs/feedback w witrynie GitHub](https://github.com/MicrosoftDocs/feedback/issues).

@@ -1,5 +1,5 @@
 ---
-title: '#pragma C# — odwołanie'
+title: '#pragma - C# Odwołanie'
 ms.date: 07/20/2015
 f1_keywords:
 - '#pragma'
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - '#pragma directive [C#]'
 ms.assetid: 5b7944cd-d402-46a1-ad8f-feffb2d83673
 ms.openlocfilehash: 3bd62364aeae0f21715711324655ef7d00d88afc
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712458"
 ---
 # <a name="pragma-c-reference"></a>#pragma (odwołanie w C#)
-Dyrektywa `#pragma` zapewnia specjalne instrukcje dla kompilatora dotyczące kompilowania pliku, w którym występuje. Instrukcje muszą być obsługiwane przez kompilator. Innymi słowy, nie można użyć dyrektywy `#pragma` do tworzenia niestandardowych instrukcji przetwarzania wstępnego. Kompilator Microsoft C# obsługuje dwie instrukcje `#pragma`:  
+`#pragma`daje kompilatorowi specjalne instrukcje dotyczące kompilacji pliku, w którym się pojawia. Instrukcje muszą być obsługiwane przez kompilator. Innymi słowy nie można `#pragma` użyć do tworzenia niestandardowych instrukcji wstępnego przetwarzania. Kompilator Języka Microsoft C# obsługuje następujące dwie `#pragma` instrukcje:  
   
  [#pragma warning](./preprocessor-pragma-warning.md)  
   
@@ -28,15 +28,15 @@ Dyrektywa `#pragma` zapewnia specjalne instrukcje dla kompilatora dotyczące kom
   
 ## <a name="parameters"></a>Parametry  
  `pragma-name`  
- Nazwa rozpoznanej dyrektywy pragma.  
+ Nazwa uznanej pragmy.  
   
  `pragma-arguments`  
- Argumenty określone dla dyrektywy pragma.  
+ Argumenty specyficzne dla Pragmy.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Dokumentacja języka C#](../index.md)
-- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
-- [Dyrektywy preprocesora C#](./index.md)
+- [Odwołanie do języka C#](../index.md)
+- [Przewodnik programowania języka C#](../../programming-guide/index.md)
+- [Dyrektywy przedprocesorowe C#](./index.md)
 - [#pragma warning](./preprocessor-pragma-warning.md)
 - [#pragma checksum](./preprocessor-pragma-checksum.md)

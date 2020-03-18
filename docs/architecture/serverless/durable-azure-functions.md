@@ -1,33 +1,33 @@
 ---
 title: Trwałe funkcje platformy Azure — aplikacje bezserwerowe
-description: Trwałe funkcje platformy Azure zwiększają środowisko uruchomieniowe Azure Functions, aby umożliwić stanowe przepływy pracy w kodzie.
+description: Trwałe funkcje platformy Azure rozszerzają czas uruchomieniowy funkcji azure, aby włączyć stanowe przepływy pracy w kodzie.
 author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
 ms.openlocfilehash: 2c0ad086640409ac187c3aa882add4d6b39b6ff9
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72522863"
 ---
 # <a name="durable-azure-functions"></a>Trwałe funkcje platformy Azure
 
-Podczas tworzenia aplikacji bezserwerowych z Azure Functions operacje są zwykle przeznaczone do uruchamiania w sposób bezstanowy. Przyczyną tego wyboru jest to, że w miarę skalowania platformy trudno jest wiedzieć, na których serwerach jest uruchomiony kod. Trudno jest również wiedzieć, ile wystąpień jest aktywnych w danym punkcie. Istnieją jednak klasy aplikacji, które wymagają znanego stanu procesu. Weź pod uwagę proces przesyłania zamówienia do sklepu online. Operacja wyewidencjonowywania może być przepływem pracy, który składa się z wielu operacji, które muszą znać stan procesu. Takie informacje mogą obejmować spis produktów, jeśli klient ma jakiekolwiek środki na swoje konto, a także wyniki przetwarzania karty kredytowej. Te operacje mogą łatwo być własnymi wewnętrznymi przepływami pracy lub nawet usługami z systemów innych firm.
+Podczas tworzenia aplikacji bezserwerowych za pomocą funkcji Azure, operacje będą zazwyczaj przeznaczone do uruchamiania w sposób bezstanowy. Powodem tego wyboru projektu jest, ponieważ w miarę skalowania platformy trudno jest wiedzieć, na jakich serwerach jest uruchomiony kod. Trudno jest również wiedzieć, ile wystąpień jest aktywnych w danym momencie. Istnieją jednak klasy aplikacji, które wymagają bieżącego stanu procesu, które mają być znane. Rozważmy proces składania zamówienia do sklepu internetowego. Operacja realizacji transakcji może być przepływem pracy, który składa się z wielu operacji, które muszą znać stan procesu. Takie informacje mogą obejmować spis produktów, jeśli klient ma jakiekolwiek środki na swoim koncie, a także wyniki przetwarzania karty kredytowej. Operacje te mogą być ich własnymi wewnętrznymi przepływami pracy, a nawet usługami z systemów innych firm.
 
-Istnieją różne wzorce, które pomagają w koordynacji stanu aplikacji między systemami wewnętrznymi i zewnętrznymi. Często są one dostępne w różnych rozwiązaniach, które polegają na scentralizowanych systemach kolejkowania, rozproszonych magazynach wartości klucza lub udostępnionych bazach danych w celu zarządzania tym stanem. Są to jednak wszystkie dodatkowe zasoby, które teraz wymagają aprowizacji i zarządzania nimi. W środowisku bezserwerowym kod może stać się nieskomplikowaną próbą skoordynowania z tymi zasobami ręcznie. Azure Functions oferuje alternatywę do tworzenia funkcji stanowych o nazwie Durable Functions.
+Istnieją dziś różne wzorce, które pomagają w koordynacji stanu aplikacji między systemami wewnętrznymi i zewnętrznymi. Często można natknąć się na rozwiązania, które opierają się na scentralizowanych systemach kolejkowania, rozproszonych magazynach o wartości klucza lub udostępnionych bazach danych w celu zarządzania tym stanem. Są to jednak wszystkie dodatkowe zasoby, które teraz muszą być aprowizowane i zarządzane. W środowisku bezserwerowym kod może stać się kłopotliwe próbuje koordynować z tych zasobów ręcznie. Usługa Azure Functions oferuje alternatywę dla tworzenia funkcji stanowych o nazwie trwałe funkcje.
 
-Durable Functions to rozszerzenie środowiska uruchomieniowego Azure Functions, które umożliwia definiowanie stanowych przepływów pracy w kodzie. Dzieląc przepływy pracy na działania, rozszerzenie Durable Functions może zarządzać stanem, tworzyć punkty kontrolne postępu i obsługiwać dystrybucję wywołań funkcji między serwerami. W tle korzysta z konta usługi Azure Storage, aby utrzymać historię wykonywania, planować funkcje działania i odbierać odpowiedzi. Kod bezserwerowy nigdy nie powinien korzystać z utrwalonych informacji w ramach tego konta magazynu i zazwyczaj nie jest to coś, z którym deweloperzy muszą korzystać.
+Funkcje trwałe jest rozszerzeniem do działania funkcji azure, który umożliwia definiowanie stanowych przepływów pracy w kodzie. Poprzez podział przepływów pracy na działania, trwałe funkcje rozszerzenie można zarządzać stanem, tworzenie punktów kontrolnych postępu i obsługiwać dystrybucję wywołań funkcji między serwerami. W tle korzysta z konta usługi Azure Storage, aby utrwalić historię wykonywania, zaplanować funkcje działania i pobrać odpowiedzi. Twój kod bezserwerowy nigdy nie powinien wchodzić w interakcje z utrwaonymi informacjami na tym koncie magazynu i zazwyczaj nie jest czymś, z czym deweloperzy muszą wchodzić w interakcje.
 
-## <a name="triggering-a-stateful-workflow"></a>Wyzwalanie przepływu stanowego
+## <a name="triggering-a-stateful-workflow"></a>Wyzwalanie stanowego przepływu pracy
 
-Bezstanowe przepływy pracy w Durable Functions można podzielić na dwa składniki wewnętrzne; Wyzwalacze aranżacji i działania. Wyzwalacze i powiązania są podstawowymi składnikami używanymi przez Azure Functions, aby umożliwić powiadamianie funkcji bezserwerowych w momencie uruchamiania, odbierania danych wejściowych i zwracania wyników.
+Stateful przepływów pracy w funkcji trwałe można podzielić na dwa składniki wewnętrzne; wyzwalaczy aranżacji i aktywności. Wyzwalacze i powiązania są podstawowymi składnikami używanymi przez usługi Azure Functions, aby umożliwić funkcje bezserwerowe, które mają być powiadamiane o uruchomieniu, odebraniu danych wejściowych i zwrocie wyników.
 
-### <a name="working-with-the-orchestration-client"></a>Praca z klientem aranżacji
+### <a name="working-with-the-orchestration-client"></a>Praca z klientem Aranżacji
 
-Aranżacje są unikatowe w porównaniu z innymi stylami operacji wyzwalanych w Azure Functions. Durable Functions włącza wykonywanie funkcji, które mogą trwać kilka godzin, a nawet dni. Ten typ zachowania jest konieczny, aby można było sprawdzić stan uruchomionej aranżacji, zapobiegawczo przerwać lub wysyłać powiadomienia o zdarzeniach zewnętrznych.
+Aranżacje są unikatowe w porównaniu do innych stylów wyzwalanych operacji w usłudze Azure Functions. Trwałe funkcje umożliwia wykonywanie funkcji, które mogą potrwać wiele godzin lub nawet dni, aby zakończyć. Ten typ zachowania pochodzi z konieczności sprawdzania stanu uruchomionej aranżacji, prewencyjnie zakończyć lub wysłać powiadomienia o zdarzeniach zewnętrznych.
 
-W takich przypadkach rozszerzenie Durable Functions udostępnia klasę `DurableOrchestrationClient`, która pozwala na współdziałanie z funkcjami zorganizowanymi przez organizację. Dostęp do klienta aranżacji uzyskuje się za pomocą powiązania `OrchestrationClientAttribute`. Ogólnie rzecz biorąc, należy uwzględnić ten atrybut z innym typem wyzwalacza, takim jak `HttpTrigger` lub `ServiceBusTrigger`. Po wyzwoleniu funkcji źródłowej można użyć klienta aranżacji do uruchomienia funkcji programu Orchestrator.
+W takich przypadkach trwałe funkcje `DurableOrchestrationClient` rozszerzenie zapewnia klasę, która umożliwia interakcję z funkcji zaaranżowanych. Otrzymasz dostęp do klienta aranżacji przy użyciu `OrchestrationClientAttribute` powiązania. Ogólnie rzecz biorąc, należy dołączyć ten atrybut z `HttpTrigger` `ServiceBusTrigger`innym typem wyzwalacza, takich jak lub . Po wyzwoleniu funkcji źródłowej klient aranżacji może służyć do uruchamiania funkcji koordynatora.
 
 ```csharp
 [FunctionName("KickOff")]
@@ -43,15 +43,15 @@ public static async Task<HttpResponseMessage> Run(
 }
 ```
 
-### <a name="the-orchestrator-function"></a>Funkcja programu Orchestrator
+### <a name="the-orchestrator-function"></a>Funkcja koordynatora
 
-Dodawanie adnotacji do funkcji z OrchestrationTriggerAttribute w Azure Functions oznacza, że działa jako funkcja programu Orchestrator. Jest on odpowiedzialny za zarządzanie różnymi działaniami, które tworzą swój stanowy przepływ pracy.
+Adnotacje funkcji z OrchestrationTriggerAttribute w funkcji platformy Azure znaków, które działają jako funkcja koordynatora. Jest odpowiedzialny za zarządzanie różnymi działaniami, które składają się na stanowy przepływ pracy.
 
-Funkcje programu Orchestrator nie mogą używać powiązań innych niż OrchestrationTriggerAttribute. Tego atrybutu można używać tylko z typem parametru DurableOrchestrationContext. Nie można używać innych danych wejściowych, ponieważ deserializacja wejść w sygnaturze funkcji nie jest obsługiwana. Aby uzyskać dane wejściowe dostarczone przez klienta aranżacji, należy użyć metody getinput\<T\>.
+Funkcje koordynatora nie można używać powiązań innych niż OrchestrationTriggerAttribute. Ten atrybut może służyć tylko z typem parametru DurableOrchestrationContext. Żadne inne dane wejściowe nie mogą być używane, ponieważ deserializacja danych wejściowych w sygnaturze funkcji nie jest obsługiwana. Aby uzyskać dane wejściowe dostarczone przez klienta\<aranżacji, GetInput T\> metoda musi być używany.
 
-Ponadto zwracane typy funkcji aranżacji muszą mieć wartość void, Task lub można serializować wartości JSON.
+Ponadto zwracane typy funkcji aranżacji muszą być nieważne, zadanie lub wartość serializowalną JSON.
 
-> *Kod obsługi błędu został pozostawiony dla zwięzłości*
+> *Kod obsługi błędów został pominięty dla zwięzłości*
 
 ```csharp
 [FunctionName("PlaceOrder")]
@@ -69,19 +69,19 @@ public static async Task<string> PlaceOrder([OrchestrationTrigger] DurableOrches
 }
 ```
 
-Wiele wystąpień aranżacji można uruchomić i uruchomić w tym samym czasie. Wywołanie metody `StartNewAsync` na `DurableOrchestrationClient` uruchamia nowe wystąpienie aranżacji. Metoda zwraca `Task<string>`, która kończy się po rozpoczęciu aranżacji. Wyjątek typu `TimeoutException` jest zgłaszany, jeśli aranżacja nie została uruchomiona w ciągu 30 sekund.
+Wiele wystąpień aranżacji można uruchomić i działa w tym samym czasie. Wywołanie `StartNewAsync` metody `DurableOrchestrationClient` na uruchamia nowe wystąpienie aranżacji. Metoda zwraca `Task<string>` a, który kończy się po rozpoczęciu aranżacji. Wyjątek typu `TimeoutException` zostanie wygenerowany, jeśli aranżacja nie została uruchomiona w ciągu 30 sekund.
 
-Ukończony `Task<string>` od `StartNewAsync` powinien zawierać unikatowy identyfikator wystąpienia aranżacji. Tego identyfikatora wystąpienia można użyć do wywołania operacji dla danej aranżacji. W ramach aranżacji można wykonywać zapytania dotyczące stanu lub powiadomień o zdarzeniach wysłanych.
+Ukończone `Task<string>` z `StartNewAsync` powinien zawierać unikatowy identyfikator wystąpienia aranżacji. Ten identyfikator wystąpienia może służyć do wywoływania operacji na tej konkretnej aranżacji. Aranżacja może być wyszukiwane dla stanu lub wysłane powiadomienia o zdarzeniach.
 
-### <a name="the-activity-functions"></a>Funkcje działania
+### <a name="the-activity-functions"></a>Działanie działa
 
-Funkcje działania to dyskretne operacje, które są tworzone razem w ramach funkcji aranżacji w celu utworzenia przepływu pracy. Oto miejsce, w którym ma miejsce najwięcej rzeczywistej pracy. Reprezentują one logikę biznesową, długotrwałe procesy i elementy układanki do większych rozwiązań.
+Funkcje działania są dyskretne operacje, które są składane razem w ramach funkcji aranżacji, aby utworzyć przepływ pracy. Oto, gdzie większość rzeczywistych prac odbędzie się. Reprezentują one logikę biznesową, długotrwałe procesy i elementy układanki do większego rozwiązania.
 
-`ActivityTriggerAttribute` jest używany do dodawania adnotacji do parametru funkcji typu `DurableActivityContext`. Użycie adnotacji informuje środowisko uruchomieniowe, że funkcja jest przeznaczona do użycia jako funkcja działania. Wartości wejściowe do funkcji działania są pobierane przy użyciu metody `GetInput<T>` parametru `DurableActivityContext`.
+Służy `ActivityTriggerAttribute` do adnotatora parametru `DurableActivityContext`funkcji typu . Za pomocą adnotacji informuje program runtime, że funkcja jest przeznaczona do użycia jako funkcja działania. Wartości wejściowe do funkcji działania `GetInput<T>` są pobierane `DurableActivityContext` przy użyciu metody parametru.
 
-Podobnie jak w przypadku funkcji aranżacji, zwracane typy funkcji działania muszą być typu void, Task lub wartości możliwy do serializacji JSON.
+Podobnie jak funkcje aranżacji, zwracane typy funkcji działania muszą być nieważne, zadanie lub wartość serializable JSON.
 
-Wszystkie Nieobsłużone wyjątki, które są zgłaszane w ramach funkcji działania, będą wysyłane do wywoływania funkcji programu Orchestrator i prezentowane jako `TaskFailedException`. W tym momencie błąd może zostać przechwycony i zarejestrowany w programie Orchestrator, a działanie może być ponowione.
+Wszelkie nieobsługiwane wyjątki, które zostaną wygenerowane w ramach funkcji działania zostanie wysłana `TaskFailedException`do funkcji koordynatora wywołującego i przedstawione jako . W tym momencie błąd można przechwycić i zalogować się w koordynatorze, a działanie można ponowić.
 
 ```csharp
 [FunctionName("CheckAndReserveInventory")]
@@ -96,10 +96,10 @@ public static bool CheckAndReserveInventory([ActivityTrigger] DurableActivityCon
 
 ## <a name="recommended-resources"></a>Zalecane zasoby
 
-- [Durable Functions](https://docs.microsoft.com/azure/azure-functions/durable-functions-overview)
-- [Powiązania dla Durable Functions](https://docs.microsoft.com/azure/azure-functions/durable-functions-bindings)
-- [Zarządzanie wystąpieniami w Durable Functions](https://docs.microsoft.com/azure/azure-functions/durable-functions-instance-management)
+- [Trwałe funkcje](https://docs.microsoft.com/azure/azure-functions/durable-functions-overview)
+- [Wiązania dla trwałych funkcji](https://docs.microsoft.com/azure/azure-functions/durable-functions-bindings)
+- [Zarządzanie wystąpieniami w trwałych funkcjach](https://docs.microsoft.com/azure/azure-functions/durable-functions-instance-management)
 
 >[!div class="step-by-step"]
 >[Poprzedni](event-grid.md)
->[Następny](orchestration-patterns.md)
+>[następny](orchestration-patterns.md)

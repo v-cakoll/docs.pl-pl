@@ -109,7 +109,7 @@
               href: value-xelement-dynamic-property.md
             - name: Xml
               href: xml-xelement-dynamic-property.md
-        - name: Sample
+        - name: Przykład
           items:
             - name: Przykład powiązania danych LINQ to XML
               href: linq-to-xml-data-binding-sample.md

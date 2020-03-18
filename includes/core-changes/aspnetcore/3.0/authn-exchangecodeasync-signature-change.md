@@ -1,14 +1,14 @@
 ---
 ms.openlocfilehash: a4e20e0468d861138ad801c9dbfa15340b3f388c
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394282"
 ---
-### <a name="authentication-oauthhandler-exchangecodeasync-signature-changed"></a>Uwierzytelnianie: OAuthHandler ExchangeCodeAsync zmieniono sygnaturę
+### <a name="authentication-oauthhandler-exchangecodeasync-signature-changed"></a>Uwierzytelnianie: Zmieniono podpis programu OAuthHandler ExchangeCodeAsync
 
-W ASP.NET Core 3,0 sygnatura `OAuthHandler.ExchangeCodeAsync` została zmieniona z:
+W ASP.NET Core 3.0 `OAuthHandler.ExchangeCodeAsync` podpis został zmieniony z:
 
 ```csharp
 protected virtual System.Threading.Tasks.Task<Microsoft.AspNetCore.Authentication.OAuth.OAuthTokenResponse> ExchangeCodeAsync(string code, string redirectUri) { throw null; }
@@ -26,19 +26,19 @@ protected virtual System.Threading.Tasks.Task<Microsoft.AspNetCore.Authenticatio
 
 #### <a name="old-behavior"></a>Stare zachowanie
 
-Ciągi `code` i `redirectUri` zostały przekazane jako oddzielne argumenty.
+`code` Ciągi `redirectUri` i zostały przekazane jako oddzielne argumenty.
 
 #### <a name="new-behavior"></a>Nowe zachowanie
 
-`Code` i `RedirectUri` są właściwościami `OAuthCodeExchangeContext`, które można ustawić za pośrednictwem konstruktora `OAuthCodeExchangeContext`. Nowy typ `OAuthCodeExchangeContext` jest jedynym argumentem przekazaną do `OAuthHandler.ExchangeCodeAsync`.
+`Code`i `RedirectUri` są właściwości, które `OAuthCodeExchangeContext` mogą `OAuthCodeExchangeContext` być ustawione za pomocą konstruktora. Nowy `OAuthCodeExchangeContext` typ jest jedynym argumentem przekazanym do `OAuthHandler.ExchangeCodeAsync`.
 
 #### <a name="reason-for-change"></a>Przyczyna zmiany
 
-Ta zmiana pozwala na dostarczenie dodatkowych parametrów w sposób rozdzielny. Nie ma potrzeby tworzenia nowych przeciążeń `ExchangeCodeAsync`.
+Ta zmiana umożliwia dodatkowe parametry, które mają być dostarczone w sposób nieprzerywający. Nie ma potrzeby tworzenia `ExchangeCodeAsync` nowych przeciążeń.
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Utwórz `OAuthCodeExchangeContext` z odpowiednimi wartościami `code` i `redirectUri`. Należy podać wystąpienie <xref:Microsoft.AspNetCore.Authentication.AuthenticationProperties>. To pojedyncze wystąpienie `OAuthCodeExchangeContext` może być przekazane do `OAuthHandler.ExchangeCodeAsync` zamiast wielu argumentów.
+Skonstruować `OAuthCodeExchangeContext` z `code` `redirectUri` odpowiednimi i wartości. Należy <xref:Microsoft.AspNetCore.Authentication.AuthenticationProperties> podać wystąpienie. To `OAuthCodeExchangeContext` pojedyncze wystąpienie można `OAuthHandler.ExchangeCodeAsync` przekazać do zamiast wielu argumentów.
 
 #### <a name="category"></a>Kategoria
 

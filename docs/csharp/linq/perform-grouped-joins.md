@@ -1,39 +1,39 @@
 ---
-title: Wykonanie sprzężeń grupowanych (LINQ w C#)
-description: Dowiedz się, jak wykonanie sprzężeń grupowanych za pomocą LINQ w C#.
+title: Wykonywanie sprzężeń grupowanych (LINQ w języku C)Perform grouped joins (LINQ in C#)
+description: Dowiedz się, jak wykonywać sprzężenia grupowe przy użyciu LINQ w języku C#.
 ms.date: 12/01/2016
 ms.assetid: 9667daf9-a5fd-4b43-a5c4-a9c2b744000e
 ms.openlocfilehash: dfb75b55336d8ca486d5f10b187e955d20cd06fd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "61689141"
 ---
 # <a name="perform-grouped-joins"></a>Wykonywanie sprzężeń grupowanych
 
-Sprzężenie grupy jest przydatne do tworzenia struktur danych hierarchicznych. Pary on każdy element z kolekcji pierwszy zestaw elementów skorelowane z drugiej kolekcji.
+Sprzężenie grupy jest przydatne do tworzenia hierarchicznych struktur danych. Łączy każdy element z pierwszej kolekcji z zestawem skorelowanych elementów z drugiej kolekcji.
 
-Na przykład klasa lub tabela relacyjna baza danych o nazwie `Student` może zawierać dwóch pól: `Id` i `Name`. Tabela drugiej klasy lub relacyjnej bazy danych o nazwie `Course` może zawierać dwóch pól: `StudentId` i `CourseTitle`. Grupowe z tych dwóch źródeł danych, na podstawie zgodności `Student.Id` i `Course.StudentId`, czy każda grupa `Student` z kolekcją `Course` obiektów, (które mogą być puste).
+Na przykład klasa lub tabela relacyjnej bazy danych o nazwie `Student` może zawierać dwa pola: `Id` i `Name`. Druga klasa lub relacyjna `Course` tabela bazy `StudentId` danych `CourseTitle`o nazwie może zawierać dwa pola: i . Dołączanie grupy z tych dwóch źródeł `Student.Id` `Course.StudentId`danych, na `Student` podstawie dopasowania `Course` i , będzie grupować każdy z kolekcji obiektów (które mogą być puste).
 
 > [!NOTE]
-> Każdy element pierwszej kolekcji pojawia się w zestawie wyników grupowe, niezależnie od tego, czy elementy skorelowane znajdują się w drugiej kolekcji. W przypadku, gdzie znajdują się żadnych elementów skorelowany sekwencji elementów skorelowany dla tego elementu jest pusty. Selektor wynik zatem ma dostęp do każdego elementu pierwszej kolekcji. To różni się od selektor wynik sprzężenia-group, którego nie można uzyskać dostęp do elementów z pierwszej kolekcji, która ma niezgodności w drugiej kolekcji.
+> Każdy element pierwszej kolekcji pojawia się w zestawie wyników sprzężenia grupy, niezależnie od tego, czy skorelowane elementy znajdują się w drugiej kolekcji. W przypadku, gdy nie znaleziono skorelowanych elementów, sekwencja skorelowanych elementów dla tego elementu jest pusta. Selektor wyników ma zatem dostęp do każdego elementu pierwszej kolekcji. Różni się to od selektora wyników w sprzężeniu niegrupowym, który nie może uzyskać dostępu do elementów z pierwszej kolekcji, które nie mają dopasowania w drugiej kolekcji.
 
-Pierwszy przykład w tym artykule pokazano, jak wykonać sprzężenie grupy. Drugi przykład przedstawia sposób użycia sprzężenie grupy do tworzenia elementów XML.
+Pierwszy przykład w tym artykule pokazuje, jak wykonać sprzężenie grupy. Drugi przykład pokazuje, jak używać sprzężenia grupy do tworzenia elementów XML.
 
-## <a name="example---group-join"></a>Przykład — łączenie grupowe
+## <a name="example---group-join"></a>Przykład — dołączanie do grupy
 
-Poniższy przykład wykonuje sprzężenie grupy obiektów typu `Person` i `Pet` na podstawie `Person` dopasowania `Pet.Owner` właściwości. W odróżnieniu od sprzężenia-group dałby w efekcie pary elementów dla każdego dopasowania, łączenie grupy tworzy tylko jeden obiekt wynikowy dla każdego elementu pierwszej kolekcji, czyli w tym przykładzie `Person` obiektu. Odpowiednie elementy z kolekcji drugi, będące w tym przykładzie `Pet` obiektów są grupowane w kolekcji. Ponadto funkcja selektor result tworzy typu anonimowego dla każdego dopasowania, która składa się z `Person.FirstName` i kolekcji `Pet` obiektów.
+Poniższy przykład wykonuje sprzężenie grupy `Person` obiektów `Pet` typu `Person` i `Pet.Owner` na podstawie pasujące jawłaściwości. W przeciwieństwie do sprzężenia niegrupowego, które spowodowałoby parę elementów dla każdego dopasowania, sprzężenie grupy tworzy tylko jeden `Person` wynikowy obiekt dla każdego elementu pierwszej kolekcji, który w tym przykładzie jest obiektem. Odpowiednie elementy z drugiej kolekcji, które `Pet` w tym przykładzie są obiekty, są zgrupowane w kolekcji. Na koniec funkcja selektora wyników tworzy typ anonimowy `Person.FirstName` dla każdego `Pet` dopasowania, który składa się z i kolekcji obiektów.
 
 [!code-csharp[CsLINQProgJoining#5](~/samples/snippets/csharp/concepts/linq/how-to-perform-grouped-joins_1.cs)]
 
-## <a name="example---group-join-to-create-xml"></a>Przykład — łączenie grupowe tworzenie kodu XML
+## <a name="example---group-join-to-create-xml"></a>Przykład — dołączanie grupowe w celu utworzenia języka XML
 
-Sprzężenia grupowane są doskonałe do tworzenia XML za pomocą LINQ to XML. Poniższy przykład jest podobny do poprzedniego przykładu, z tą różnicą, że zamiast tworzyć typy anonimowe, funkcja selektor result tworzy elementy XML, które reprezentują dołączonym do obiektów.
+Sprzężenia grupowe są idealne do tworzenia Języka XML przy użyciu LINQ do XML. Poniższy przykład jest podobny do poprzedniego przykładu, z tą różnicą, że zamiast tworzyć typy anonimowe, funkcja selektora wyników tworzy elementy XML reprezentujące połączone obiekty.
 
 [!code-csharp[CsLINQProgJoining#6](~/samples/snippets/csharp/concepts/linq/how-to-perform-grouped-joins_2.cs)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Linq.Enumerable.Join%2A>
 - <xref:System.Linq.Enumerable.GroupJoin%2A>

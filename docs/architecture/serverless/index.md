@@ -1,141 +1,141 @@
 ---
 title: 'Aplikacje bezserwerowe: architektura, wzorce i implementacja platformy Azure'
-description: Przewodnik dotyczący architektury bezserwerowej. Dowiedz się, kiedy i w jaki sposób zaimplementować architekturę bezserwerową (w przeciwieństwie do infrastruktury jako usługi [IaaS] lub platformy jako usługi [PaaS]) dla aplikacji dla przedsiębiorstw.
+description: Przewodnik po architekturze bezserwerowej. Dowiedz się, kiedy, dlaczego i jak zaimplementować architekturę bezserwerową (w przeciwieństwie do Infrastruktury jako usługi [IaaS] lub Platforma jako usługa [PaaS]) dla aplikacji korporacyjnych.
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 9dea7dbccb5c9e125f792e6a7287a7dd2fad26f1
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73093545"
 ---
 # <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>Aplikacje bezserwerowe: architektura, wzorce i implementacja platformy Azure
 
-![Zrzut ekranu przedstawiający centrum poczty elektronicznej aplikacji bezserwerowych.](./media/index/serverless-apps-cover.jpg)
+![Zrzut ekranu przedstawiający okładkę e-booków aplikacji bez serwerów.](./media/index/serverless-apps-cover.jpg)
 
-> Pobieranie dostępne o: <https://aka.ms/serverless-ebook>
+> POBIERZ dostępny pod adresem:<https://aka.ms/serverless-ebook>
 
-OPUBLIKOWANO PRZEZ
+OPUBLIKOWANA PRZEZ
 
-Zespoły deweloperów firmy Microsoft, .NET i Visual Studio
+Zespoły produktów Microsoft Developer Division, .NET i Visual Studio
 
-Dział firmy Microsoft Corporation
+Oddział Firmy Microsoft Corporation
 
 One Microsoft Way
 
-Redmond, Waszyngton 98052-6399
+Redmond (Waszyngton) 98052-6399
 
-Prawa autorskie © 2018 przez firmę Microsoft Corporation
+Prawa autorskie © 2018 przez Microsoft Corporation
 
-Wszelkie prawa zastrzeżone. Żadna część zawartości tej księgi nie może być odtwarzana ani przekazywana w żadnej formie ani za pomocą jakichkolwiek środków bez zgody na wydawcę.
+Wszelkie prawa zastrzeżone. Żadna część treści tej książki nie może być powielana lub przekazywana w jakiejkolwiek formie lub w jakikolwiek sposób bez pisemnej zgody wydawcy.
 
-Ta książka jest świadczona w postaci "AS-IS" i zawiera widoki i opinie autora. Widoki, opinie i informacje wyrażone w tej książce, w tym adresy URL i inne odwołania do witryn internetowych, mogą ulec zmianie bez powiadomienia.
+Ta książka jest "tak jak jest" i wyraża poglądy i opinie autora. Poglądy, opinie i informacje wyrażone w tej książce, w tym adresy URL i inne odniesienia do stron internetowych, mogą ulec zmianie bez powiadomienia.
 
-Niektóre przykłady opisane w niniejszym dokumencie są dostępne tylko dla ilustracji i są fikcyjne. Żadne prawdziwe skojarzenie lub połączenie nie jest zamierzone ani nie powinno zostać wywnioskowane.
+Niektóre z przykładów przedstawiono wyłącznie do celów informacyjnych i są one fikcyjne. Żadne rzeczywiste skojarzenia lub związki nie są zamierzone ani wnioskowane.
 
-Firma Microsoft i znaki towarowe wymienione w <https://www.microsoft.com> na stronie "znaki towarowe" są znakami towarowymi grupy firm Microsoft.
+Microsoft i znaki towarowe <https://www.microsoft.com> wymienione na stronie internetowej "Znaki towarowe" są znakami towarowymi grupy firm Microsoft.
 
-Komputery Mac i macOS są znakami towarowymi firmy Apple Inc.
+Mac i macOS są znakami towarowymi firmy Apple Inc.
 
-Wszystkie inne znaczniki i logo są własnością odpowiednich właścicieli.
+Wszystkie inne znaki i logo są własnością ich właścicieli.
 
-Tworzone
+Autor:
 
-> **[Jeremy Likness](https://twitter.com/jeremylikness)** , starszy ambasador w chmurze, Microsoft Corp.
+> **[Jeremy Likness](https://twitter.com/jeremylikness)**, Starszy Rzecznik Chmury, Microsoft Corp.
 
-Trybu
+Współautorów:
 
-> **[Cecil Phillip](https://twitter.com/cecilphillip)** , starszy ambasador w chmurze, Microsoft Corp.
+> **[Cecil Phillip](https://twitter.com/cecilphillip)**, Starszy Rzecznik Chmury, Microsoft Corp.
 
-Edytory
+Edytory:
 
-> **[Bill Wagner](https://twitter.com/billwagner)** , Starszy programista ds. zawartości, Microsoft Corp.
+> **[Bill Wagner](https://twitter.com/billwagner)**, Starszy programista treści, Microsoft Corp.
 
-> **[Maira Wenzel](https://twitter.com/mairacw)** , Starszy programista ds. zawartości, Microsoft Corp.
+> **[Maira Wenzel](https://twitter.com/mairacw)**, Starszy programista treści, Microsoft Corp.
 
 Uczestnicy i recenzenci:
 
-> **[Steve Smith](https://twitter.com/ardalis)** , Owner, Ardalis Services.
+> **[Steve Smith](https://twitter.com/ardalis)**, Właściciel, Ardalis Services.
 
 ## <a name="introduction"></a>Wprowadzenie
 
-[Bezserwerowy](https://azure.microsoft.com/solutions/serverless/) to ewolucja platform w chmurze w kierunku czystego natywnego kodu w chmurze. Bezserwerowe serwery zapewniają deweloperom bliższą logikę biznesową, jednocześnie izolując ich od obaw związanych z infrastrukturą. Jest to wzorzec, który nie implikuje "No Server", ale raczej "Less Server". Kod bezserwerowy jest sterowany zdarzeniami. Kod może być wyzwalany przez dowolne elementy od tradycyjnego żądania sieci Web HTTP do czasomierza lub wynik przekazywania pliku. Infrastruktura za bezserwerową umożliwia natychmiastowe skalowanie w celu spełnienia elastycznych wymagań i oferuje szeroką rozliczenie za użycie. Bezserwerowy wymaga nowego sposobu podejścia do tworzenia aplikacji i nie jest odpowiednim rozwiązaniem dla każdego problemu. Jako programista musisz wybrać:
+[Bezserwerowe](https://azure.microsoft.com/solutions/serverless/) jest ewolucja platform w chmurze w kierunku czystego kodu natywnego chmury. Bezserwerowe przybliża deweloperów do logiki biznesowej, jednocześnie izolując ich od problemów z infrastrukturą. Jest to wzorzec, który nie oznacza "nie ma serwera", ale raczej "mniej serwera". Kod bezserwerowy jest oparty na zdarzeniach. Kod może być wyzwalany przez cokolwiek z tradycyjnego żądania sieci Web HTTP do czasoatora lub wynik przekazywania pliku. Infrastruktura stojąca za bezserwerową pozwala na natychmiastową skalę, aby sprostać elastycznym wymaganiom i oferuje mikro-rozliczenia, aby naprawdę "płacić za to, czego używasz". Bezserwerowe wymaga nowego sposobu myślenia i podejścia do tworzenia aplikacji i nie jest właściwym rozwiązaniem dla każdego problemu. Jako programista musisz zdecydować:
 
-- Jakie są zalety i wady bezserwerowe?
-- Dlaczego należy wziąć pod uwagę bezserwerowe aplikacje?
-- Jak można kompilować, testować, wdrażać i obsługiwać kod bezserwerowy?
-- Gdzie warto przeprowadzić migrację kodu do aplikacji bezserwerowej w istniejących aplikacjach i jak najlepiej wykonać tę transformację?
+- Jakie są plusy i minusy bezserwerowe?
+- Dlaczego warto wziąć pod uwagę bezserwerowe dla własnych aplikacji?
+- Jak można tworzyć, testować, wdrażać i obsługiwać kod bezserwerowy?
+- Gdzie ma sens migrowanie kodu do bezserwerowego w istniejących aplikacjach i jaki jest najlepszy sposób na wykonanie tej transformacji?
 
-## <a name="about-this-guide"></a>Informacje o tym przewodniku
+## <a name="about-this-guide"></a>O tym przewodniku
 
-Ten przewodnik koncentruje się na natywnym programowaniu aplikacji, które używają bezserwerowego programu. Książka wyróżnia korzyści i ujawnia potencjalne wady tworzenia aplikacji bezserwerowych i udostępnia Przegląd architektury bezserwerowej. Wiele przykładów wykorzystania bezserwerowego można zobaczyć wraz z różnymi wzorcami projektowymi bez użycia serwera.
+Ten przewodnik koncentruje się na natywnych dla chmury rozwoju aplikacji, które używają bezużycia serwera. Książka podkreśla korzyści i ujawnia potencjalne wady tworzenia aplikacji bezserwerowych i zapewnia ankietę architektur bezserwerowych. Wiele przykładów tego, jak można używać bezserwerowych, jest zilustrowanych wraz z różnymi wzorcami projektowania bez serwerów.
 
-W tym przewodniku objaśniono składniki platformy bezserwerowej platformy Azure i koncentruje się na implementacji bezserwerowej przy użyciu [Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview). Zapoznaj się z wyzwalaczami i powiązaniami oraz sposobem implementacji aplikacji bezserwerowych, które są zależne od stanu przy użyciu funkcji trwałych. Na koniec przykłady biznesowe i analizy przypadków ułatwią dostarczenie kontekstu i ramki odniesienia, aby określić, czy bezserwerowy jest właściwym podejściem do projektów.
+W tym przewodniku wyjaśniono składniki platformy bezserwerowej platformy Azure i koncentruje się w szczególności na implementacji bezserwerowej przy użyciu [funkcji Azure .](https://docs.microsoft.com/azure/azure-functions/functions-overview) Dowiesz się o wyzwalacze i powiązania, a także jak zaimplementować aplikacje bezużycia serwera, które opierają się na stanie przy użyciu funkcji trwałych. Na koniec przykłady biznesowe i studia przypadków pomogą zapewnić kontekst i ramy odniesienia, aby ustalić, czy bezserwerowe jest właściwym podejściem dla projektów.
 
-## <a name="evolution-of-cloud-platforms"></a>Ewolucja platform w chmurze
+## <a name="evolution-of-cloud-platforms"></a>Ewolucja platform chmurowych
 
-Bezserwerowy jest culmination kilku iteracji platformy w chmurze. Ewolucja rozpoczęła się z materiałem fizycznym w centrum danych i postępuje za pomocą infrastruktury jako usługi (IaaS) i platformy jako usługi (PaaS).
+Bezserwerowe jest kulminacją kilku iteracji platform w chmurze. Ewolucja rozpoczęła się od fizycznego metalu w centrum danych i przebiegała przez Infrastrukturę jako usługę (IaaS) i Platformę jako usługę (PaaS).
 
-![Ewolucja w środowisku lokalnym do bezserwerowego](./media/serverless-evolution-iaas-paas.png)
+![Ewolucja od lokalnego do bezserwerowego](./media/serverless-evolution-iaas-paas.png)
 
-Przed chmurą istniała różnica między programowaniem a operacją. Wdrożenie aplikacji, która odpowiada na pytania wyposażono, takie jak:
+Przed chmurą istniała dostrzegalna granica między programami deweloperskimi a operacjami. Wdrożenie aplikacji oznaczało udzielenie odpowiedzi na niezliczone pytania, takie jak:
 
-- Jakiego sprzętu należy zainstalować?
-- Jak bezpieczny jest fizyczny dostęp do maszyny?
+- Jaki sprzęt powinien być zainstalowany?
+- W jaki sposób fizyczny dostęp do urządzenia jest zabezpieczony?
 - Czy centrum danych wymaga zasilacza awaryjnego (UPS)?
 - Gdzie są wysyłane kopie zapasowe magazynu?
-- Czy istnieje nadmiarowa moc?
+- Czy powinna istnieć nadmiarowa moc?
 
-Ta lista jest włączona, a obciążenie było ogromne. W wielu sytuacjach działy IT były zmuszeni do postępowania z niezwykłą ilością odpadów. Przyczyną jest nadmierne przydzielanie serwerów jako maszyn zapasowych na potrzeby odzyskiwania po awarii i serwerów rezerwy, aby umożliwić skalowanie w poziomie. Na szczęście wprowadzenie technologii wirtualizacji (takich jak [Funkcja Hyper-V](/virtualization/hyper-v-on-windows/about/)) z Virtual Machines (maszyny wirtualne) spowodowało powstanie infrastruktury jako usługi (IaaS). Zwirtualizowana infrastruktura umożliwia wykonywanie operacji w celu skonfigurowania standardowego zestawu serwerów jako szkieletu, co prowadzi do elastycznego środowiska z możliwością aprowizacji unikatowych serwerów na żądanie. Co ważniejsze, wirtualizacja ustawia etap korzystania z chmury w celu zapewnienia maszyn wirtualnych "jako usługi". Firmy mogą łatwo uzyskać informacje o nadmiarowych maszynach lub komputerach fizycznych. Zamiast tego koncentrują się na środowisku wirtualnym.
+Lista jest długa, a obciążenie było ogromne. W wielu sytuacjach działy IT były zmuszone do radzenia sobie z niesamowitymi odpadami. Odpady były spowodowane nadmierną alokacją serwerów jako maszyn zapasowych do odzyskiwania po awarii i serwerów rezerwowych, aby umożliwić skalowanie w życie. Na szczęście wprowadzenie technologii wirtualizacji (jak [Hyper-V)](/virtualization/hyper-v-on-windows/about/)z maszynami wirtualnymi (VM) dało początek infrastrukturze jako usłudze (IaaS). Zwirtualizowana infrastruktura umożliwiła operacjom skonfigurowanie standardowego zestawu serwerów jako szkieletu, co doprowadziło do elastycznego środowiska zdolnego do inicjowania obsługi administracyjnej unikatowych serwerów "na żądanie". Co ważniejsze, wirtualizacja ustawić scenę za pomocą chmury, aby zapewnić maszyny wirtualne "jako usługa." Firmy mogą łatwo wydostać się z biznesu martwiąc się o nadmiarowe zasilanie lub maszyny fizyczne. Zamiast tego skupili się na środowisku wirtualnym.
 
-IaaS nadal wymaga dużego nakładu pracy, ponieważ operacje są nadal odpowiedzialne za różne zadania. Te zadania obejmują:
+IaaS nadal wymaga dużego obciążenia, ponieważ operacje są nadal odpowiedzialne za różne zadania. Zadania te obejmują:
 
-- Stosowanie poprawek i tworzenie kopii zapasowych serwerów.
+- Łatanie i tworzenie kopii zapasowych serwerów.
 - Instalowanie pakietów.
-- Utrzymywanie Aktualności systemu operacyjnego.
+- Aktualizowanie systemu operacyjnego.
 - Monitorowanie aplikacji.
 
-Kolejna ewolucja obniżyć koszty dzięki udostępnieniu platformy jako usługi (PaaS). W przypadku usługi PaaS dostawca chmury obsługuje systemy operacyjne, poprawki zabezpieczeń, a nawet pakiety wymagane do obsługi określonej platformy. Zamiast tworzyć maszyny wirtualne, a następnie konfigurować .NET Framework i stałe serwery Internet Information Services (IIS), deweloperzy po prostu wybierają "obiekty docelowe platformy", takie jak "aplikacja sieci Web" lub "punkt końcowy interfejsu API" i bezpośrednio wdrażają kod. Pytania dotyczące infrastruktury są ograniczone do:
+Kolejna ewolucja zmniejszyła obciążenie, udostępniając platformę jako usługę (PaaS). Dzięki paas dostawca chmury obsługuje systemy operacyjne, poprawki zabezpieczeń, a nawet wymagane pakiety do obsługi określonej platformy. Zamiast tworzenia maszyny Wirtualnej, a następnie konfigurowania .NET Framework i stojąc serwery Internetowych Usług Informacyjnych (IIS), deweloperzy po prostu wybrać "miejsce docelowe platformy", takich jak "aplikacja sieci web" lub "punkt końcowy interfejsu API" i wdrożyć kod bezpośrednio. Pytania dotyczące infrastruktury są ograniczone do:
 
 - Jakie usługi rozmiaru są potrzebne?
-- Jak są skalowane usługi (Dodaj więcej serwerów lub węzłów)?
-- Jak są skalowane usługi (zwiększyć pojemność serwerów hostingu lub węzłów)?
+- Jak usługi skalować w sposób skalowany w sposób skalowany w czasie (dodać więcej serwerów lub węzłów)?
+- Jak usługi skalują się (zwiększają pojemność serwerów hostingowych lub węzłów)?
 
-Serwerowe bardziej abstrakcyjne serwery, koncentrując się na kodzie sterowanym zdarzeniami. Zamiast platformy deweloperzy mogą skupić się na mikrousłudze, która wykonuje jedną czynność. Dwa kluczowe pytania dotyczące kompilowania kodu bezserwerowego są następujące:
+Bezserwerowe dalsze abstrakcje serwerów, koncentrując się na kod oparty na zdarzeniach. Zamiast platformy deweloperzy mogą skupić się na mikrousługi, która robi jedną rzecz. Dwa kluczowe pytania dotyczące tworzenia kodu bezserwerowego to:
 
 - Co wyzwala kod?
-- Do czego służy kod?
+- Do czego działa kod?
 
-Bez serwera, infrastruktura jest abstrakcyjna. W niektórych przypadkach deweloperzy nie będą już martw o hoście. Niezależnie od tego, czy wystąpienie usług IIS, Kestrel, Apache lub innego serwera sieci Web jest uruchomione do zarządzania żądaniami sieci Web, deweloper koncentruje się na wyzwalaczu HTTP. Wyzwalacz zawiera standardowy, międzyplatformowy ładunek dla żądania. Ładunek nie tylko upraszcza proces opracowywania, ale ułatwia testowanie i w niektórych przypadkach sprawia, że kod jest łatwo przenośny między platformami.
+W wersji bez serwerowej infrastruktura jest abstrakcja. W niektórych przypadkach deweloper nie martwi się już o hosta w ogóle. Niezależnie od tego, czy wystąpienie usług IIS, Kestrel, Apache lub innego serwera sieci web jest uruchomione w celu zarządzania żądaniami sieci Web, deweloper koncentruje się na wyzwalaczu HTTP. Wyzwalacz zapewnia standardowy, międzyplatformowy ładunek dla żądania. Ładunek nie tylko upraszcza proces tworzenia, ale ułatwia testowanie, a w niektórych przypadkach sprawia, że kod jest łatwo przenośny na różnych platformach.
 
-Inna funkcja bezserwerowa to bardzo rozliczenia. Często aplikacje sieci Web mogą hostować punkty końcowe interfejsu API sieci Web. W tradycyjnych tradycyjnym systemie IaaS i nawet implementacjach PaaS zasoby do hostowania interfejsów API są płatne w sposób ciągły. Oznacza to, że płacisz będzie hostować punkty końcowe nawet wtedy, gdy nie są dostępne. Często znajdziesz jeden interfejs API o nazwie więcej niż inne, więc cały system jest skalowany w oparciu o obsługę popularnych punktów końcowych. Funkcja bezserwerowa umożliwia niezależne skalowanie każdego punktu końcowego i płatność za użycie, więc żadne koszty nie są naliczane, gdy interfejsy API nie są wywoływane. Migracja może w wielu przypadkach znacząco obniżyć koszty związane z punktami końcowymi.
+Inną cechą bezserwerowych jest mikro-rozliczeń. Często aplikacje sieci web hostują punkty końcowe interfejsu API sieci Web. W tradycyjnych implementacjach gołego metalu, IaaS, a nawet PaaS, zasoby do hostowania interfejsów API są opłacane w sposób ciągły. Oznacza to, że płacisz za hosta punktów końcowych, nawet jeśli nie są one dostępne. Często znajdziesz jeden interfejs API jest nazywany więcej niż inne, więc cały system jest skalowany w oparciu o obsługę popularnych punktów końcowych. Bezserwerowe umożliwia skalowanie każdego punktu końcowego niezależnie i płacić za użycie, więc nie są ponoszone żadne koszty, gdy interfejsy API nie są wywoływane. Migracja może w wielu okolicznościach znacznie zmniejszyć bieżące koszty obsługi punktów końcowych.
 
-## <a name="what-this-guide-doesnt-cover"></a>Czym nie obejmuje ten przewodnik
+## <a name="what-this-guide-doesnt-cover"></a>Co ten przewodnik nie obejmuje
 
-W tym przewodniku szczegółowo omówiono podejścia do architektury i wzorce projektowe i nie jest głębokie szczegółowe w szczegółach implementacji Azure Functions, [Logic Apps](https://docs.microsoft.com/azure/logic-apps/logic-apps-what-are-logic-apps)lub innych platform bezserwerowych. Ten przewodnik nie obejmuje na przykład zaawansowanych przepływów pracy z Logic Appsami lub funkcjami Azure Functions, takimi jak Konfigurowanie udostępniania zasobów między źródłami (CORS), stosowanie domen niestandardowych lub przekazywanie certyfikatów SSL. Te szczegóły są dostępne w [dokumentacji Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-reference)online.
+W tym przewodniku szczegółowo podkreślono podejścia do architektury i wzorce projektowe i nie jest dogłębne zagłębienie się w szczegóły implementacji funkcji Azure, [aplikacji logiki](https://docs.microsoft.com/azure/logic-apps/logic-apps-what-are-logic-apps)lub innych platform bezserwerowych. Ten przewodnik nie obejmuje na przykład zaawansowanych przepływów pracy z aplikacjami logiki lub funkcji funkcji platformy Azure, takich jak konfigurowanie udostępniania zasobów między źródłami (CORS), stosowanie domen niestandardowych lub przekazywanie certyfikatów SSL. Te szczegóły są dostępne w [dokumentacji usługi Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-reference)w trybie online.
 
-### <a name="additional-resources"></a>Dodatkowe zasoby
+### <a name="additional-resources"></a>Zasoby dodatkowe
 
 - [Centrum architektury platformy Azure](https://docs.microsoft.com/azure/architecture/)
 - [Najlepsze rozwiązania dla aplikacji w chmurze](https://docs.microsoft.com/azure/architecture/best-practices/api-design)
 
-## <a name="who-should-use-the-guide"></a>Kto powinien korzystać z przewodnika
+## <a name="who-should-use-the-guide"></a>Kto powinien skorzystać z przewodnika
 
-Ten przewodnik został utworzony dla deweloperów i architektów rozwiązań, którzy chcą kompilować aplikacje dla przedsiębiorstw przy użyciu platformy .NET, które mogą korzystać ze składników bezserwerowych w środowisku lokalnym lub w chmurze. Jest to przydatne dla deweloperów, architektów i decyzji technicznych zainteresowanych:
+Ten przewodnik został napisany dla deweloperów i architektów rozwiązań, którzy chcą tworzyć aplikacje dla przedsiębiorstw za pomocą platformy .NET, które mogą używać składników bezserwerowych lokalnie lub w chmurze. Jest to przydatne dla deweloperów, architektów i decydentów technicznych zainteresowanych:
 
-- Zrozumienie specjalistów i wad tworzenia bezserwerowego
-- Nauka podejścia do architektury bezserwerowej
+- Zrozumienie zalet i wad rozwoju bezserwerowego
+- Uczenie się, jak podejść do architektury bezserwerowej
 - Przykładowe implementacje aplikacji bezserwerowych
 
 ## <a name="how-to-use-the-guide"></a>Jak korzystać z przewodnika
 
-W pierwszej części tego przewodnika sprawdzono, dlaczego serwer jest opłacalną opcją, porównując kilka różnych metod architektury. Bada ona zarówno cykl życia technologii, jak i programowania, ponieważ wszystkie aspekty opracowywania oprogramowania mają wpływ na decyzje architektury. Przewodnik bada przypadki użycia i wzorce projektowe i zawiera implementacje odwołań przy użyciu Azure Functions. Każda sekcja zawiera dodatkowe zasoby, aby dowiedzieć się więcej na temat określonego obszaru. Przewodnik zawiera zasoby dla przewodników i praktycznej eksploracji implementacji bezserwerowej.
+Pierwsza część tego przewodnika sprawdza, dlaczego bezserwerowe jest realną opcją, porównując kilka różnych metod architektury. Bada zarówno cykl życia technologii, jak i rozwoju, ponieważ wszystkie aspekty rozwoju oprogramowania mają wpływ na decyzje dotyczące architektury. Przewodnik następnie sprawdza przypadki użycia i wzorce projektu i zawiera implementacje odwołań przy użyciu funkcji azure. Każda sekcja zawiera dodatkowe zasoby, aby dowiedzieć się więcej o danym obszarze. Przewodnik kończy się zasobami na instruktaże i praktyczne badanie implementacji bezserwerowej.
 
-## <a name="send-your-feedback"></a>Wyślij opinię
+## <a name="send-your-feedback"></a>Wyślij swoją opinię
 
-Przewodnik i powiązane przykłady są stale rozwijane, więc Twoje opinie są gotowe! Jeśli masz komentarze dotyczące sposobu, w jaki można ulepszyć ten przewodnik, Skorzystaj z sekcji opinia w dolnej części strony utworzonej w witrynie [GitHub](https://github.com/dotnet/docs/issues).
+Przewodnik i powiązane próbki stale ewoluują, więc Twoja opinia jest mile widziana! Jeśli masz uwagi dotyczące tego, jak można poprawić ten przewodnik, skorzystaj z sekcji opinii u dołu dowolnej strony zbudowanej na [problemach z githubem](https://github.com/dotnet/docs/issues).
 
 >[!div class="step-by-step"]
->[Next](architecture-approaches.md)
+>[Dalej](architecture-approaches.md)

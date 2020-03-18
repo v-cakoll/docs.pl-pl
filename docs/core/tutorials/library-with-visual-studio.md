@@ -1,100 +1,100 @@
 ---
-title: Tworzenie biblioteki klas .NET Standard w programie Visual Studio
-description: Dowiedz się, jak utworzyć .NET Standardą bibliotekę klas C# zapisaną w programie lub Visual Basic przy użyciu programu Visual Studio
+title: Tworzenie biblioteki klas standardu .NET w programie Visual Studio
+description: Dowiedz się, jak utworzyć bibliotekę klas .NET Standard napisaną w języku C# lub Visual Basic przy użyciu programu Visual Studio
 ms.date: 12/09/2019
 ms.custom: vs-dotnet
 ms.openlocfilehash: 748a1499e0c3a4a41613a69b715dbcfbd585bfe3
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714020"
 ---
-# <a name="build-a-net-standard-library-in-visual-studio"></a>Tworzenie biblioteki .NET Standard w programie Visual Studio
+# <a name="build-a-net-standard-library-in-visual-studio"></a>Tworzenie biblioteki standardu .NET w programie Visual Studio
 
-*Biblioteka klas* definiuje typy i metody, które są wywoływane przez aplikację. Biblioteka klas, która jest przeznaczona dla .NET Standard 2,0 umożliwia wywoływanie biblioteki przez dowolną implementację platformy .NET, która obsługuje tę wersję .NET Standard. Po zakończeniu biblioteki klas możesz zdecydować, czy chcesz ją rozpowszechnić jako składnik innej firmy, czy chcesz ją dołączyć jako składnik pakietu z co najmniej jedną aplikacjami.
+*Biblioteka klas* definiuje typy i metody wywoływane przez aplikację. Biblioteka klas przeznaczona dla programu .NET Standard 2.0 umożliwia wywoływanie biblioteki przez dowolną implementację .NET obsługującej tę wersję standardu .NET. Po zakończeniu biblioteki klas, można zdecydować, czy chcesz rozpowszechniać go jako składnik innej firmy lub czy chcesz dołączyć go jako składnik w pakiecie z jedną lub więcej aplikacji.
 
 > [!NOTE]
-> Listę wersji .NET Standard i obsługiwanych przez nich platform można znaleźć w temacie [.NET Standard](../../standard/net-standard.md).
+> Aby uzyskać listę wersji standardu .NET i obsługiwanych platform, zobacz [.NET Standard](../../standard/net-standard.md).
 
-W tym temacie utworzysz prostą bibliotekę narzędzi, która zawiera pojedynczą metodę obsługi ciągów. Należy zaimplementować ją jako [metodę rozszerzenia](../../csharp/programming-guide/classes-and-structs/extension-methods.md) , aby można było wywołać ją tak, jakby była elementem członkowskim klasy <xref:System.String>.
+W tym temacie utworzysz prostą bibliotekę narzędziową zawierającą metodę obsługi pojedynczych ciągów. Zaimplementujesz go jako [metodę rozszerzenia,](../../csharp/programming-guide/classes-and-structs/extension-methods.md) dzięki czemu można wywołać go <xref:System.String> tak, jakby był członkiem klasy.
 
 ## <a name="create-a-visual-studio-solution"></a>Tworzenie rozwiązania programu Visual Studio
 
-Zacznij od utworzenia pustego rozwiązania, aby umieścić projekt biblioteki klas w. Rozwiązanie programu Visual Studio służy jako kontener dla jednego lub wielu projektów. Jeśli będziesz kontynuować pracę z serią samouczków, dodasz kolejne powiązane projekty do tego samego rozwiązania.
+Rozpocznij od utworzenia pustego rozwiązania, aby umieścić projekt biblioteki klas. Rozwiązanie programu Visual Studio służy jako kontener dla jednego lub więcej projektów. Dodasz dodatkowe, powiązane projekty do tego samego rozwiązania, jeśli będziesz kontynuować serię samouczków.
 
 Aby utworzyć puste rozwiązanie:
 
 1. Otwórz program Visual Studio.
 
-2. W oknie uruchamiania wybierz pozycję **Utwórz nowy projekt**.
+2. W oknie startowym wybierz pozycję **Utwórz nowy projekt**.
 
-3. Na stronie **Tworzenie nowego projektu** wprowadź **rozwiązanie** w polu wyszukiwania. Wybierz szablon **pustego rozwiązania** , a następnie wybierz przycisk **dalej**.
+3. Na stronie **Tworzenie nowego projektu** wprowadź **rozwiązanie** w polu wyszukiwania. Wybierz szablon **Puste rozwiązanie,** a następnie wybierz pozycję **Dalej**.
 
    ![Pusty szablon rozwiązania w programie Visual Studio](media/library-with-visual-studio/blank-solution.png)
 
-4. Na stronie **Konfiguruj nowy projekt** wprowadź **ClassLibraryProjects** w polu **Nazwa projektu** . Następnie wybierz pozycję **Utwórz**.
+4. Na stronie **Konfigurowanie nowego projektu** wprowadź **pozycję ClassLibraryProjects** w polu **Nazwa projektu.** Następnie wybierz pozycję **Utwórz**.
 
 > [!TIP]
-> Możesz również pominąć ten krok i pozwolić programowi Visual Studio utworzyć rozwiązanie dla Ciebie podczas tworzenia projektu w następnym kroku. Zapoznaj się z opcjami rozwiązania na stronie **Konfiguruj nowy projekt** .
+> Można również pominąć ten krok i pozwolić visual studio utworzyć rozwiązanie dla Ciebie podczas tworzenia projektu w następnym kroku. Poszukaj opcji rozwiązania na stronie **Konfigurowanie nowego projektu.**
 
 ## <a name="create-a-class-library-project"></a>Tworzenie projektu biblioteki klas
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C #](#tab/csharp)
 
-1. Dodaj nowy C# projekt biblioteki klas .NET Standard o nazwie "StringLibrary" do rozwiązania.
+1. Dodaj nowy projekt biblioteki klas Standard c# .NET o nazwie "StringLibrary" do rozwiązania.
 
-   1. Kliknij prawym przyciskiem myszy rozwiązanie w **Eksplorator rozwiązań** a następnie wybierz pozycję **Dodaj** > **Nowy projekt**.
+   1. Kliknij prawym przyciskiem myszy rozwiązanie w **Eksploratorze rozwiązań** i wybierz **polecenie Dodaj** > **nowy projekt**.
 
-   1. Na stronie **Dodawanie nowego projektu** wprowadź **bibliotekę** w polu wyszukiwania. Wybierz **C#** z listy język, a następnie wybierz pozycję **wszystkie platformy** z listy platform. Wybierz szablon **Biblioteka klas (.NET standard)** , a następnie wybierz przycisk **dalej**.
+   1. Na stronie **Dodawanie nowego projektu** wprowadź **bibliotekę** w polu wyszukiwania. Wybierz **c#** z listy Język, a następnie wybierz **wszystkie platformy** z listy Platforma. Wybierz szablon **Biblioteka klas (.NET Standard),** a następnie wybierz pozycję **Dalej**.
 
-   1. Na stronie **Konfiguruj nowy projekt** wprowadź **StringLibrary** w polu **Nazwa projektu** . Następnie wybierz pozycję **Utwórz**.
+   1. Na stronie **Konfigurowanie nowego projektu** wprowadź **bibliotekę ciągów** w polu **Nazwa projektu.** Następnie wybierz pozycję **Utwórz**.
 
-1. Upewnij się, że biblioteka jest ukierunkowana na poprawną wersję .NET Standard. Kliknij prawym przyciskiem myszy projekt Biblioteka w **Eksplorator rozwiązań**, a następnie wybierz polecenie **Właściwości**. Pole tekstowe **platformy docelowej** pokazuje, że projekt jest docelowy .NET Standard 2,0.
+1. Upewnij się, że biblioteka jest przeznaczona dla poprawnej wersji programu .NET Standard. Kliknij prawym przyciskiem myszy projekt biblioteki w **Eksploratorze rozwiązań**, a następnie wybierz polecenie **Właściwości**. Pole tekstowe **Platforma docelowa** pokazuje, że projekt jest przeznaczony dla programu .NET Standard 2.0.
 
    ![Właściwości projektu dla biblioteki klas](./media/library-with-visual-studio/library-project-properties.png)
 
-1. Zastąp kod w oknie kodu następującym kodem i Zapisz plik:
+1. Zastąp kod w oknie kodu następującym kodem i zapisz plik:
 
    [!CODE-csharp[ClassLib#1](../../../samples/snippets/csharp/getting_started/with_visual_studio_2017/classlib.cs)]
 
-   Biblioteka klas `UtilityLibraries.StringLibrary`, zawiera metodę o nazwie `StartsWithUpper`. Ta metoda zwraca <xref:System.Boolean> wartość, która wskazuje, czy bieżące wystąpienie ciągu zaczyna się od wielkiej litery. Standard Unicode rozróżnia wielkie litery od małych liter. Metoda <xref:System.Char.IsUpper(System.Char)?displayProperty=nameWithType> zwraca `true`, jeśli znak jest pisany wielką literą.
+   Biblioteka klas `UtilityLibraries.StringLibrary`, zawiera metodę `StartsWithUpper`o nazwie . Ta metoda <xref:System.Boolean> zwraca wartość, która wskazuje, czy bieżące wystąpienie ciągu rozpoczyna się wielkimi literami. Standard Unicode odróżnia wielkie litery od małych liter. Metoda <xref:System.Char.IsUpper(System.Char)?displayProperty=nameWithType> zwraca, `true` jeśli znak jest wielkimi literami.
 
-1. Na pasku menu wybierz kolejno opcje **kompiluj** > **Kompiluj rozwiązanie**.
+1. Na pasku menu wybierz pozycję **Zbuduj** > **rozwiązanie kompilacji**.
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
-1. Dodaj nowy projekt biblioteki klas Visual Basic .NET Standard o nazwie "StringLibrary" do rozwiązania.
+1. Dodaj nowy projekt biblioteki klas programu Visual Basic .NET Standard o nazwie "StringLibrary" do rozwiązania.
 
-   1. Kliknij prawym przyciskiem myszy rozwiązanie w **Eksplorator rozwiązań** a następnie wybierz pozycję **Dodaj** > **Nowy projekt**.
+   1. Kliknij prawym przyciskiem myszy rozwiązanie w **Eksploratorze rozwiązań** i wybierz **polecenie Dodaj** > **nowy projekt**.
 
-   1. Na stronie **Dodawanie nowego projektu** wprowadź **bibliotekę** w polu wyszukiwania. Wybierz **Visual Basic** z listy język, a następnie wybierz pozycję **wszystkie platformy** z listy platform. Wybierz szablon **Biblioteka klas (.NET standard)** , a następnie wybierz przycisk **dalej**.
+   1. Na stronie **Dodawanie nowego projektu** wprowadź **bibliotekę** w polu wyszukiwania. Wybierz **pozycję Visual Basic** z listy Język, a następnie wybierz pozycję Wszystkie **platformy** z listy Platforma. Wybierz szablon **Biblioteka klas (.NET Standard),** a następnie wybierz pozycję **Dalej**.
 
-   1. Na stronie **Konfiguruj nowy projekt** wprowadź **StringLibrary** w polu **Nazwa projektu** . Następnie wybierz pozycję **Utwórz**.
+   1. Na stronie **Konfigurowanie nowego projektu** wprowadź **bibliotekę ciągów** w polu **Nazwa projektu.** Następnie wybierz pozycję **Utwórz**.
 
-1. Upewnij się, że biblioteka jest ukierunkowana na poprawną wersję .NET Standard. Kliknij prawym przyciskiem myszy projekt Biblioteka w **Eksplorator rozwiązań**, a następnie wybierz polecenie **Właściwości**. Pole tekstowe **platformy docelowej** pokazuje, że projekt jest docelowy .NET Standard 2,0.
+1. Upewnij się, że biblioteka jest przeznaczona dla poprawnej wersji programu .NET Standard. Kliknij prawym przyciskiem myszy projekt biblioteki w **Eksploratorze rozwiązań**, a następnie wybierz polecenie **Właściwości**. Pole tekstowe **Platforma docelowa** pokazuje, że projekt jest przeznaczony dla programu .NET Standard 2.0.
 
    ![Właściwości projektu dla biblioteki klas](./media/library-with-visual-studio/vb/library-project-properties.png)
 
-1. W oknie dialogowym **Właściwości** Wyczyść tekst w polu tekstowym **główna przestrzeń nazw** . Dla każdego projektu Visual Basic automatycznie tworzy przestrzeń nazw, która odnosi się do nazwy projektu. W tym samouczku zdefiniujesz przestrzeń nazw najwyższego poziomu za pomocą słowa kluczowego [`namespace`](../../visual-basic/language-reference/statements/namespace-statement.md) w pliku kodu.
+1. W oknie dialogowym **Właściwości** wyczyść tekst w polu tekstowym **Główny obszar nazw.** Dla każdego projektu program Visual Basic automatycznie tworzy obszar nazw odpowiadający nazwie projektu. W tym samouczku można zdefiniować obszar nazw [`namespace`](../../visual-basic/language-reference/statements/namespace-statement.md) najwyższego poziomu przy użyciu słowa kluczowego w pliku kodu.
 
-1. Zastąp kod w oknie kodu następującym kodem i Zapisz plik:
+1. Zastąp kod w oknie kodu następującym kodem i zapisz plik:
 
    [!CODE-vb[ClassLib#1](../../../samples/snippets/core/tutorials/vb-library-with-visual-studio/stringlibrary.vb)]
 
-   Biblioteka klas `UtilityLibraries.StringLibrary`, zawiera metodę o nazwie `StartsWithUpper`. Ta metoda zwraca <xref:System.Boolean> wartość, która wskazuje, czy bieżące wystąpienie ciągu zaczyna się od wielkiej litery. Standard Unicode rozróżnia wielkie litery od małych liter. Metoda <xref:System.Char.IsUpper(System.Char)?displayProperty=nameWithType> zwraca `true`, jeśli znak jest pisany wielką literą.
+   Biblioteka klas `UtilityLibraries.StringLibrary`, zawiera metodę `StartsWithUpper`o nazwie . Ta metoda <xref:System.Boolean> zwraca wartość, która wskazuje, czy bieżące wystąpienie ciągu rozpoczyna się wielkimi literami. Standard Unicode odróżnia wielkie litery od małych liter. Metoda <xref:System.Char.IsUpper(System.Char)?displayProperty=nameWithType> zwraca, `true` jeśli znak jest wielkimi literami.
 
-1. Na pasku menu wybierz kolejno opcje **kompiluj** > **Kompiluj rozwiązanie**.
+1. Na pasku menu wybierz pozycję **Zbuduj** > **rozwiązanie kompilacji**.
 
 ---
 
-   Projekt powinien zostać skompilowany bez błędu.
+   Projekt należy skompilować bez błędów.
 
 ## <a name="next-steps"></a>Następne kroki
 
-Biblioteka została pomyślnie skompilowana. Ponieważ nie została wywołana żadna z jej metod, nie wiesz, czy działa ona zgodnie z oczekiwaniami. Następnym krokiem w opracowaniu biblioteki jest przetestowanie go.
+Biblioteka została pomyślnie utworzona. Ponieważ nie zostały wywołane żadnej z jego metod, nie wiesz, czy to działa zgodnie z oczekiwaniami. Następnym krokiem w tworzeniu biblioteki jest przetestowanie jej.
 
 > [!div class="nextstepaction"]
 > [Tworzenie projektu testu jednostkowego](testing-library-with-visual-studio.md)

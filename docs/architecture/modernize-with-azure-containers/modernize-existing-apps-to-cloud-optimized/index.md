@@ -1,26 +1,26 @@
 ---
 title: Modernizacja istniejących aplikacji .NET do aplikacji zoptymalizowanych pod kątem chmury
-description: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows.
+description: Zmodernizuj istniejące aplikacje .NET za pomocą kontenerów usługi Azure Cloud i Windows.
 ms.date: 04/28/2018
 ms.openlocfilehash: cd7e2886b135eb89c381965a327b6e62baa39736
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "72318604"
 ---
 # <a name="modernize-existing-net-apps-to-cloud-optimized-applications"></a>Modernizacja istniejących aplikacji .NET do aplikacji zoptymalizowanych pod kątem chmury
 
-> Wizja: modernizowanie istniejących aplikacji .NET Framework do aplikacji zoptymalizowanych pod kątem chmury, aby radykalnie poprawić elastyczność wdrożenia, dzięki czemu możesz dostarczać szybciej i obniżać koszty dostaw aplikacji.
+> Wizja: Zmodernizuj istniejące aplikacje .NET Framework do aplikacji zoptymalizowanych pod kątem chmury, aby drastycznie zwiększyć elastyczność wdrażania, dzięki czemu można wysyłać szybsze i niższe koszty dostawy aplikacji.
 
-Aby skorzystać z zalet chmury i nowych technologii, takich jak kontenery, należy co najmniej częściowo przeprowadzić modernizację istniejących aplikacji platformy .NET. Ostatecznie modernizacja aplikacji korporacyjnych spowoduje obniżenie całkowitego kosztu posiadania.
+Aby skorzystać z zalet chmury i nowych technologii, takich jak kontenery, należy przynajmniej częściowo zmodernizować istniejące aplikacje .NET. Ostatecznie modernizacja aplikacji korporacyjnych obniży całkowity koszt posiadania.
 
-Częściowe modernizacja aplikacji niekoniecznie oznacza pełną migrację i architekturę. Na początku można przeprowadzić modernizację istniejących aplikacji z ważnych, ale łatwym modernizacją. Możesz zachować bieżącą bazę kodu, która jest zapisywana w istniejących wersjach .NET Framework, z dowolnymi zależnościami między oknami i usługami IIS. Rysunek 4-1 przedstawia sposób, w jaki aplikacje zoptymalizowane pod kątem chmury są rozmieszczone w modelach zapadalności aplikacji platformy Azure.
+Częściowa modernizacja aplikacji nie musi oznaczać pełnej migracji i architektury. Istniejące aplikacje można początkowo modernizować za pomocą ważnej, ale łatwej do wykonania modernizacji. Można zachować bieżącą bazę kodu, zapisaną w istniejących wersjach .NET Framework, z dowolnymi zależnościami systemu Windows i IIS. Rysunek 4-1 przedstawia sposób pozycjonowania aplikacji zoptymalizowanych pod kątem chmury w modelach modernizacji aplikacji platformy Azure.
 
-![Diagram przedstawiający sposób pozycjonowania aplikacji zoptymalizowanych pod kątem chmury.](./media/index/position-cloud-optimized-application.png)
+![Diagram sposobu pozycjonowania aplikacji zoptymalizowanych pod kątem chmury.](./media/index/position-cloud-optimized-application.png)
 
-**Rysunek 4-1.** Pozycjonowanie aplikacji zoptymalizowanych pod kątem chmury
+**Rysunek 4-1.** Aplikacje zoptymalizowane pod kątem położenia w chmurze
 
 >[!div class="step-by-step"]
 >[Poprzedni](../migrate-your-relational-databases-to-azure.md)
->[Następny](reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications.md)
+>[następny](reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications.md)

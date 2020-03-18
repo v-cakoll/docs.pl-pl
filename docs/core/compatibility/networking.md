@@ -1,19 +1,19 @@
 ---
-title: Zmiany w sieci
-description: Wyświetla listę istotnych zmian w sieci w programie .NET Core.
+title: Przełomowe zmiany w sieci
+description: Wyświetla listę zmian w sieci w platformie .NET Core.
 ms.date: 10/03/2019
 ms.openlocfilehash: d5d445827554d2c898e07dac53d8a571ebdf9359
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77092996"
 ---
-# <a name="networking-breaking-changes"></a>Zmiany w sieci
+# <a name="networking-breaking-changes"></a>Przełomowe zmiany w sieci
 
-Następujące istotne zmiany zostały udokumentowane na tej stronie:
+Na tej stronie udokumentowane są następujące zmiany dotyczące zasad:
 
-- [Wartość domyślna HttpRequestMessage. Version została zmieniona na 1,1](#default-value-of-httprequestmessageversion-changed-to-11)
+- [Wartość domyślna httprequestmessage.version zmieniono na 1.1](#default-value-of-httprequestmessageversion-changed-to-11)
 
 ## <a name="net-core-30"></a>.NET Core 3.0
 

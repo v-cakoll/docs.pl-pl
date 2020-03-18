@@ -1,25 +1,25 @@
 ---
-title: Korzystanie z serwera bazy danych działającego jako kontener
-description: Zapoznaj się z ważnością korzystania z serwera bazy danych działającego jako kontener tylko do celów deweloperskich. Nigdy nie do produkcji.
+title: Używanie serwera bazy danych działającego jako kontener
+description: Zrozumienie znaczenia korzystania z serwera bazy danych działającego jako kontener tylko do tworzenia aplikacji. Nigdy do produkcji.
 ms.date: 01/30/2020
 ms.openlocfilehash: 0cbc933003aac10970814378c27e88b5cb0ddbe5
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77628530"
 ---
-# <a name="use-a-database-server-running-as-a-container"></a>Korzystanie z serwera bazy danych działającego jako kontener
+# <a name="use-a-database-server-running-as-a-container"></a>Używanie serwera bazy danych działającego jako kontener
 
-Możesz mieć bazy danych (SQL Server, PostgreSQL, MySQL itp.) na zwykłych serwerach autonomicznych, w klastrach lokalnych lub w usługach PaaS Services w chmurze, takich jak Azure SQL DB. Jednak w środowiskach deweloperskich i testowych, które bazy danych działają jako kontenery są wygodne, ponieważ nie istnieje żadna zależność zewnętrzna i po prostu uruchomienie `docker-compose up` polecenie uruchamia całą aplikację. Posiadanie tych baz danych jako kontenerów jest również doskonałe dla testów integracji, ponieważ baza danych została uruchomiona w kontenerze i jest zawsze wypełniana tymi samymi przykładowymi danymi, dzięki czemu testy mogą być bardziej przewidywalne.
+Bazy danych (SQL Server, PostgreSQL, MySQL itp.) można mieć na zwykłych serwerach autonomicznych, w klastrach lokalnych lub w usługach PaaS w chmurze, takich jak usługa Azure SQL DB. Jednak w środowiskach deweloperskich i testowych posiadanie baz danych uruchomionych jako kontenery jest wygodne, `docker-compose up` ponieważ nie masz żadnych zależności zewnętrznych i po prostu uruchomienie polecenia uruchamia całą aplikację. Posiadanie tych baz danych jako kontenerów jest również idealne do testów integracji, ponieważ baza danych jest uruchamiana w kontenerze i jest zawsze wypełniona tymi samymi przykładowymi danymi, dzięki czemu testy mogą być bardziej przewidywalne.
 
-## <a name="sql-server-running-as-a-container-with-a-microservice-related-database"></a>SQL Server działa jako kontener z bazą danych z mikrousługą
+## <a name="sql-server-running-as-a-container-with-a-microservice-related-database"></a>Program SQL Server uruchomiony jako kontener z bazą danych związaną z mikrousługami
 
-W eShopOnContainers istnieje kontener o nazwie `sqldata`, zgodnie z definicją w pliku [Docker-Compose. yml](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/docker-compose.yml) , który uruchamia wystąpienie SQL Server dla systemu Linux z bazami danych SQL dla wszystkich mikrousług, które potrzebują.
+W eShopOnContainers istnieje kontener o `sqldata`nazwie , zgodnie z definicją w pliku [docker-compose.yml,](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/docker-compose.yml) który uruchamia SQL Server dla systemu Linux wystąpienia z bazami danych SQL dla wszystkich mikrousług, które potrzebują jednego.
 
-Kluczowy punkt w mikrousługach polega na tym, że każda mikrousługa jest właścicielem powiązanych danych, dlatego powinna mieć własną bazę danych. Jednak bazy danych mogą znajdować się w dowolnym miejscu. W tym przypadku są one wszystkie w tym samym kontenerze, aby zachować wymagania dotyczące pamięci platformy Docker jak najmniejszej ilości. Należy pamiętać, że jest to dobre, wystarczające rozwiązanie do programowania i, na przykład, testowania, ale nie w środowisku produkcyjnym.
+Kluczowym punktem w mikrousługach jest, że każda mikrousługa jest właścicielem powiązanych danych, więc powinien mieć własną bazę danych. Jednak bazy danych mogą być wszędzie. W takim przypadku wszystkie one znajdują się w tym samym kontenerze, aby zachować wymagania dotyczące pamięci platformy Docker tak niskie, jak to możliwe. Należy pamiętać, że jest to wystarczające rozwiązanie do tworzenia i, być może, testowania, ale nie dla produkcji.
 
-Kontener SQL Server w przykładowej aplikacji jest skonfigurowany przy użyciu następującego kodu YAML w pliku Docker-Compose. yml, który jest wykonywany podczas uruchamiania `docker-compose up`. Należy pamiętać, że kod YAML ma skonsolidowane informacje o konfiguracji z pliku Generic Docker-Compose. yml oraz pliku Docker-Compose. override. yml. (Zazwyczaj należy oddzielić ustawienia środowiska od podstawowej lub statycznej informacji powiązanej z obrazem SQL Server).
+Kontener programu SQL Server w przykładowej aplikacji jest skonfigurowany z następującym kodem YAML w pliku `docker-compose up`docker-compose.yml, który jest wykonywany po uruchomieniu . Należy zauważyć, że kod YAML ma skonsolidowane informacje o konfiguracji z ogólnego pliku docker-compose.yml i pliku docker-compose.override.yml. (Zazwyczaj należy oddzielić ustawienia środowiska od informacji podstawowych lub statycznych związanych z obrazem programu SQL Server).
 
 ```yml
   sqldata:
@@ -31,31 +31,31 @@ Kontener SQL Server w przykładowej aplikacji jest skonfigurowany przy użyciu n
       - "5434:1433"
 ```
 
-W podobny sposób, zamiast używać `docker-compose`, następujące polecenie `docker run` może uruchomić ten kontener:
+W podobny sposób zamiast `docker-compose`używać `docker run` następującego polecenia można uruchomić ten kontener:
 
 ```powershell
 docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Pass@word' -p 5433:1433 -d mcr.microsoft.com/mssql/server:2017-latest
 ```
 
-Jednak w przypadku wdrażania aplikacji z wieloma kontenerami, takich jak eShopOnContainers, wygodniejsze jest użycie polecenia `docker-compose up`, aby wdrożyć wszystkie wymagane kontenery dla aplikacji.
+Jednak jeśli wdrażasz aplikację wielokontenerową, taką jak eShopOnContainers, `docker-compose up` wygodniej jest używać polecenia, aby wdrożyć wszystkie wymagane kontenery dla aplikacji.
 
-Po pierwszym uruchomieniu tego kontenera SQL Server Kontener inicjuje SQL Server przy użyciu podania hasła. Gdy SQL Server jest uruchomiony jako kontener, możesz zaktualizować bazę danych, łącząc się za pośrednictwem dowolnego zwykłego połączenia SQL, takiego jak z SQL Server Management Studio, Visual Studio lub C\# Code.
+Po pierwszym uruchomieniu tego kontenera programu SQL Server kontener inicjuje program SQL Server przy użyciu podanych hasła. Gdy sql Server jest uruchomiony jako kontener, można zaktualizować bazę danych, łącząc się za pośrednictwem dowolnego\# zwykłego połączenia SQL, takich jak z SQL Server Management Studio, Visual Studio lub kod C.
 
-Aplikacja eShopOnContainers inicjuje każdą mikrousługą bazę danych z przykładowymi danymi, umieszczając je w danych podczas uruchamiania, jak wyjaśniono w poniższej sekcji.
+Aplikacja eShopOnContainers inicjuje każdą bazę danych mikrousług z przykładowymi danymi, rozmieszając ją danymi podczas uruchamiania, jak wyjaśniono w poniższej sekcji.
 
-Posiadanie SQL Server działającego jako kontenera nie jest samo przydatne w przypadku pokazu, w którym może nie mieć dostępu do wystąpienia SQL Server. Jak zauważono, jest to również idealne rozwiązanie w środowiskach deweloperskich i testowych, dzięki czemu można łatwo uruchomić testy integracji zaczynające się od czystego obrazu SQL Server i znanych danych, umieszczając nowe przykładowe dane.
+Po SQL Server uruchomiony jako kontener jest nie tylko przydatne dla wersji demonstracyjnej, gdzie nie może mieć dostępu do wystąpienia programu SQL Server. Jak wspomniano, jest również wielki dla środowisk deweloperskich i testowych, dzięki czemu można łatwo uruchomić testy integracji, począwszy od czystego obrazu programu SQL Server i znanych danych przez rozmieszczanie nowych przykładowych danych.
 
-### <a name="additional-resources"></a>Dodatkowe zasoby
+### <a name="additional-resources"></a>Zasoby dodatkowe
 
-- **Uruchamianie obrazu SQL Server Docker w systemie Linux, Mac lub Windows** \
+- **Uruchamianie obrazu platformy Docker programu SQL Server w systemach Linux, Mac lub Windows** \
   <https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker>
 
-- **Łączenie i SQL Server on Linux zapytań przy użyciu narzędzia sqlcmd** \
+- **Łączenie i wykonywanie zapytań do programu SQL Server w systemie Linux za pomocą sqlcmd** \
   <https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd>
 
-## <a name="seeding-with-test-data-on-web-application-startup"></a>Umieszczanie danych testowych przy uruchamianiu aplikacji sieci Web
+## <a name="seeding-with-test-data-on-web-application-startup"></a>Wysiew z danymi testowymi podczas uruchamiania aplikacji sieci Web
 
-Aby dodać dane do bazy danych podczas uruchamiania aplikacji, można dodać kod podobny do poniższego do metody `Main` w klasie `Program` projektu interfejsu API sieci Web:
+Aby dodać dane do bazy danych podczas uruchamiania aplikacji, można `Main` dodać `Program` kod podobny do metody w klasie projektu interfejsu API sieci Web:
 
 ```csharp
 public static int Main(string[] args)
@@ -99,7 +99,7 @@ public static int Main(string[] args)
 }
 ```
 
-Podczas stosowania migracji i wypełniania bazy danych podczas uruchamiania kontenera istnieje ważne zastrzeżenie. Ponieważ serwer bazy danych może nie być dostępny z jakiegokolwiek powodu, należy obsłużyć ponawianie prób podczas oczekiwania na udostępnienie serwera. Ta logika ponawiania jest obsługiwana przez metodę rozszerzenia `MigrateDbContext()`, jak pokazano w poniższym kodzie:
+Istnieje ważne zastrzeżenie podczas stosowania migracji i rozmieszczania bazy danych podczas uruchamiania kontenera. Ponieważ serwer bazy danych może nie być dostępny z jakiegokolwiek powodu, należy obsługiwać ponownych prób podczas oczekiwania na serwer, który ma być dostępny. Ta logika ponawiania jest obsługiwana przez metodę `MigrateDbContext()` rozszerzenia, jak pokazano w następującym kodzie:
 
 ```cs
 public static IWebHost MigrateDbContext<TContext>(
@@ -159,7 +159,7 @@ public static IWebHost MigrateDbContext<TContext>(
 }
 ```
 
-Poniższy kod w niestandardowej klasie CatalogContextSeed wypełnia dane.
+Następujący kod w niestandardowej klasie CatalogContextSeed wypełnia dane.
 
 ```csharp
 public class CatalogContextSeed
@@ -210,11 +210,11 @@ public class CatalogContextSeed
 }
 ```
 
-Po uruchomieniu testów integracji istnieje możliwość generowania danych spójnych z testami integracji. Możliwość tworzenia wszystkiego od podstaw, w tym wystąpienia SQL Server działającego w kontenerze, doskonale sprawdza się w środowiskach testowych.
+Po uruchomieniu testów integracji, o sposób generowania danych zgodnych z testów integracji jest przydatne. Możliwość tworzenia wszystkiego od podstaw, w tym wystąpienia programu SQL Server uruchomionego w kontenerze, jest świetna dla środowisk testowych.
 
-## <a name="ef-core-inmemory-database-versus-sql-server-running-as-a-container"></a>EF Core bazę danych inMemory, a SQL Server działa jako kontener
+## <a name="ef-core-inmemory-database-versus-sql-server-running-as-a-container"></a>Baza danych EF Core InMemory kontra SQL Server uruchomiony jako kontener
 
-Innym dobrym wyborem w przypadku uruchamiania testów jest użycie dostawcy bazy danych inMemory Entity Framework. Możesz określić tę konfigurację w metodzie ConfigureServices klasy Start w projekcie interfejsu API sieci Web:
+Innym dobrym wyborem podczas uruchamiania testów jest użycie dostawcy bazy danych Jednostki InMemory. Tę konfigurację można określić w metodzie ConfigureServices klasy Startup w projekcie interfejsu API sieci Web:
 
 ```csharp
 public class Startup
@@ -237,29 +237,29 @@ public class Startup
 }
 ```
 
-Istnieje ważna połowa, chociaż. Baza danych w pamięci nie obsługuje wielu ograniczeń, które są specyficzne dla konkretnej bazy danych. Na przykład możesz dodać unikatowy indeks do kolumny w modelu EF Core i napisać test do bazy danych w pamięci, aby sprawdzić, czy nie zezwala na dodanie zduplikowanej wartości. Ale w przypadku korzystania z bazy danych w pamięci nie można obsłużyć unikatowych indeksów w kolumnie. W związku z tym baza danych znajdująca się w pamięci nie zachowuje się dokładnie tak samo jak rzeczywista SQL Server baza danych — nie emuluje ograniczeń specyficznych dla bazy danych.
+Jest jednak ważny haczyk. Baza danych w pamięci nie obsługuje wiele ograniczeń, które są specyficzne dla określonej bazy danych. Na przykład można dodać unikatowy indeks w kolumnie w modelu EF Core i napisać test względem bazy danych w pamięci, aby sprawdzić, czy nie pozwala dodać zduplikowaną wartość. Ale podczas korzystania z bazy danych w pamięci, nie można obsłużyć unikatowe indeksy w kolumnie. W związku z tym baza danych w pamięci nie zachowuje się dokładnie tak samo jak rzeczywista baza danych programu SQL Server — nie emuluje ograniczeń specyficznych dla bazy danych.
 
-Nawet w takim przypadku baza danych znajdująca się w pamięci jest nadal przydatna do testowania i tworzenia prototypów. Jeśli jednak chcesz utworzyć dokładne testy integracji, które uwzględniają zachowanie określonej implementacji bazy danych, musisz użyć prawdziwej bazy danych, takiej jak SQL Server. W tym celu uruchomienie SQL Server w kontenerze jest doskonałym wyborem i jest bardziej dokładne niż dostawca bazy danych inMemory EF Core.
+Mimo to baza danych w pamięci jest nadal przydatna do testowania i tworzenia prototypów. Ale jeśli chcesz utworzyć dokładne testy integracji, które uwzględniają zachowanie implementacji określonej bazy danych, należy użyć prawdziwej bazy danych, takich jak SQL Server. W tym celu uruchomienie programu SQL Server w kontenerze jest doskonałym wyborem i bardziej dokładne niż dostawca bazy danych EF Core InMemory.
 
-## <a name="using-a-redis-cache-service-running-in-a-container"></a>Używanie usługi pamięci podręcznej Redis działającej w kontenerze
+## <a name="using-a-redis-cache-service-running-in-a-container"></a>Korzystanie z usługi redis pamięci podręcznej uruchomionej w kontenerze
 
-Można uruchamiać Redis w kontenerze, szczególnie w przypadku projektowania i testowania oraz dla scenariuszy weryfikacji koncepcji. Ten scenariusz jest wygodny, ponieważ możesz mieć wszystkie zależności działające w kontenerach — nie tylko dla lokalnych maszyn deweloperskich, ale dla środowisk testowych w potokach ciągłej integracji/ciągłego dostarczania.
+Można uruchomić Redis na kontenerze, szczególnie dla programowania i testowania i scenariuszy proof-of-concept. Ten scenariusz jest wygodny, ponieważ wszystkie zależności mogą być uruchomione na kontenerach — nie tylko dla lokalnych maszyn deweloperskich, ale także dla środowisk testowych w potokach ciągłej integracji/ciągłego rozwoju.
 
-Jednak po uruchomieniu Redis w środowisku produkcyjnym lepiej jest wyszukać rozwiązanie wysokiej dostępności, takie jak Redis Microsoft Azure, które działa jako PaaS (platforma jako usługa). W kodzie należy jedynie zmienić parametry połączenia.
+Jednak po uruchomieniu Redis w środowisku produkcyjnym, lepiej jest szukać rozwiązania o wysokiej dostępności, takich jak Redis Microsoft Azure, który działa jako PaaS (Platforma jako usługa). W kodzie wystarczy zmienić parametry połączenia.
 
-Redis udostępnia obraz platformy Docker z Redis. Ten obraz jest dostępny z poziomu usługi Docker Hub pod tym adresem URL:
+Redis udostępnia obraz platformy Docker z redis. Ten obraz jest dostępny w centrum docker pod tym adresem URL:
 
 <https://hub.docker.com/_/redis/>
 
-Można bezpośrednio uruchomić kontener Docker Redis, wykonując następujące polecenie Docker CLI w wierszu polecenia:
+Kontener Docker Redis można bezpośrednio uruchomić, wykonując w wierszu polecenia następujące polecenie wiersza polecenia wiersza polecenia platformy Docker:
 
 ```console
 docker run --name some-redis -d redis
 ```
 
-Obraz Redis obejmuje Uwidacznianie: 6379 (port używany przez Redis), więc łączenie kontenerów standardowych będzie automatycznie dostępne dla połączonych kontenerów.
+Obraz Redis zawiera expose:6379 (port używany przez Redis), więc standardowe łączenie kontenerów sprawi, że będzie automatycznie dostępny dla połączonych kontenerów.
 
-W `basket-api` eShopOnContainers mikrousługa korzysta z pamięci podręcznej Redis działającej jako kontener. Kontener `basketdata` jest zdefiniowany jako część pliku *Docker-Compose. yml* z wielokontenerem, jak pokazano w następującym przykładzie:
+W eShopOnContainers `basket-api` mikrousługi używa redis pamięci podręcznej uruchomionej jako kontener. Ten `basketdata` kontener jest zdefiniowany jako część pliku *docker-compose.yml* z wieloma kontenerami, jak pokazano w poniższym przykładzie:
 
 ```yml
 #docker-compose.yml file
@@ -270,9 +270,9 @@ W `basket-api` eShopOnContainers mikrousługa korzysta z pamięci podręcznej Re
       - "6379"
 ```
 
-Ten kod w Docker-Compose. yml definiuje kontener o nazwie `basketdata` w oparciu o obraz Redis i publikuje wewnętrznie port 6379. Oznacza to, że będzie dostępny tylko z innych kontenerów uruchomionych w ramach hosta platformy Docker.
+Ten kod w pliku docker-compose.yml `basketdata` definiuje kontener o nazwie na podstawie obrazu redis i publikowania portu 6379 wewnętrznie. Oznacza to, że będzie dostępny tylko z innych kontenerów działających w obrębie hosta platformy Docker.
 
-Na koniec w pliku *Docker-Compose. override. yml* , `basket-api` mikrousługa dla próbki eShopOnContainers definiuje parametry połączenia do użycia dla tego kontenera Redis:
+Na koniec w pliku *docker-compose.override.yml* `basket-api` mikrousługi dla eShopOnContainers próbki definiuje parametry połączenia do użycia dla tego kontenera Redis:
 
 ```yml
   basket-api:
@@ -282,8 +282,8 @@ Na koniec w pliku *Docker-Compose. override. yml* , `basket-api` mikrousługa dl
       - EventBusConnection=rabbitmq
 ```
 
-Jak wspomniano wcześniej, nazwa `basketdata` mikrousług jest rozpoznawana przez system DNS w sieci wewnętrznej platformy Docker.
+Jak wspomniano wcześniej, nazwa mikrousługi `basketdata` jest rozpoznawana przez wewnętrzną sieć DNS platformy Docker.
 
 >[!div class="step-by-step"]
->[Poprzednie](multi-container-applications-docker-compose.md)
->[dalej](integration-event-based-microservice-communications.md)
+>[Poprzedni](multi-container-applications-docker-compose.md)
+>[następny](integration-event-based-microservice-communications.md)

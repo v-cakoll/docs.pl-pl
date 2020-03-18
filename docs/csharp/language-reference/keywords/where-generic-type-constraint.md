@@ -1,5 +1,5 @@
 ---
-title: WHERE (ograniczenie typu ogólnego) — C# odwołanie
+title: gdzie (ograniczenie typu ogólnego) - Odwołanie c#
 ms.date: 04/12/2018
 f1_keywords:
 - whereconstraint
@@ -7,63 +7,63 @@ f1_keywords:
 helpviewer_keywords:
 - where (generic type constraint) [C#]
 ms.openlocfilehash: d236420c5019f7529b729155b13df50807dc1dab
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77626714"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where — Ograniczenie typu ogólnego (odwołanie w C#)
 
-Klauzula `where` w definicji ogólnej określa ograniczenia dotyczące typów, które są używane jako argumenty parametrów typu w typie ogólnym, metodzie, delegatze lub funkcji lokalnej. Ograniczenia mogą określać interfejsy, klasy bazowe lub wymagać typu ogólnego, aby być odwołaniem, wartością lub typem niezarządzanym. Deklarują możliwości, że argument typu musi mieć wartość.
+Klauzula `where` w definicji ogólnej określa ograniczenia typów, które są używane jako argumenty dla parametrów typu w typie ogólnym, metody, delegowania lub funkcji lokalnej. Ograniczenia mogą określać interfejsy, klasy podstawowe lub wymagać, aby typ ogólny był typem referencyjnym, wartościowym lub niezarządzanym. Deklarują one możliwości, które musi posiadać argument typu.
 
-Na przykład można zadeklarować klasę generyczną `MyGenericClass`, tak aby parametr typu `T` implementował interfejs <xref:System.IComparable%601>:
+Na przykład można zadeklarować klasę `MyGenericClass`rodzajową, w `T` taki <xref:System.IComparable%601> sposób, że parametr type implementuje interfejs:
 
 [!code-csharp[using an interface constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#1)]
 
 > [!NOTE]
-> Aby uzyskać więcej informacji na temat klauzuli WHERE w wyrażeniu zapytania, zobacz [klauzula WHERE](where-clause.md).
+> Aby uzyskać więcej informacji na temat where klauzuli w wyrażeniu kwerendy, zobacz [gdzie klauzula](where-clause.md).
 
-Klauzula `where` może również zawierać ograniczenie klasy bazowej. Ograniczenie klasy bazowej określa, że typ, który ma być używany jako argument typu dla tego typu ogólnego ma określoną klasę jako klasę bazową (lub jest tą klasą bazową), która ma być używana jako argument typu dla tego typu ogólnego. Jeśli jest używane ograniczenie klasy bazowej, musi ono znajdować się przed innymi ograniczeniami tego parametru typu. Niektóre typy są niedozwolone jako ograniczenie klasy bazowej: <xref:System.Object>, <xref:System.Array>i <xref:System.ValueType>. Przed C# 7,3, <xref:System.Enum>, <xref:System.Delegate>i <xref:System.MulticastDelegate> były również niedozwolone jako ograniczenia klas podstawowych. W poniższym przykładzie przedstawiono typy, które można teraz określić jako klasę bazową:
+Klauzula `where` może również zawierać ograniczenie klasy podstawowej. Ograniczenie klasy podstawowej stwierdza, że typ, który ma być używany jako argument typu dla tego typu ogólnego ma określoną klasę jako klasę podstawową (lub jest tą klasą podstawową), która ma być używana jako argument typu dla tego typu ogólnego. Jeśli używane jest ograniczenie klasy podstawowej, musi pojawić się przed innymi ograniczeniami dla tego parametru typu. Niektóre typy są niedozwolone jako ograniczenie klasy <xref:System.Object> <xref:System.Array>podstawowej: , , i <xref:System.ValueType>. Przed C# 7.3 <xref:System.Enum> <xref:System.Delegate>, <xref:System.MulticastDelegate> , i były również niedozwolone jako ograniczenia klasy podstawowej. W poniższym przykładzie przedstawiono typy, które można teraz określić jako klasę podstawową:
 
 [!code-csharp[using an interface constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#2)]
 
-Klauzula `where` może określać, że typ jest `class` lub `struct`. Ograniczenie `struct` eliminuje konieczność określenia ograniczenia klasy bazowej `System.ValueType`. Typ `System.ValueType` nie może być używany jako ograniczenie klasy bazowej. W poniższym przykładzie przedstawiono zarówno ograniczenia `class`, jak i `struct`:
+Klauzula `where` może określać, `class` że `struct`typ jest a lub . Ograniczenie `struct` eliminuje konieczność określania ograniczenia klasy podstawowej . `System.ValueType` Typ `System.ValueType` nie może być używany jako ograniczenie klasy podstawowej. W poniższym `class` przykładzie `struct` przedstawiono zarówno i ograniczenia:
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#3)]
 
-Klauzula `where` może zawierać ograniczenie `notnull`. Ograniczenie `notnull` ogranicza parametr typu do typów niedopuszczających wartości null. Ten typ może być typem [wartości](../builtin-types/value-types.md) lub typem referencyjnym, który nie dopuszcza wartości null. Ograniczenie `notnull` jest dostępne począwszy od C# 8,0 dla kodu skompilowanego w [kontekście`nullable enable`](../../nullable-references.md#nullable-contexts). W przeciwieństwie do innych ograniczeń, jeśli argument typu narusza ograniczenie `notnull`, kompilator generuje ostrzeżenie, a nie błąd. Ostrzeżenia są generowane tylko w kontekście `nullable enable`.
+Klauzula `where` może `notnull` zawierać ograniczenie. Ograniczenie `notnull` ogranicza parametr typu do typów niepodlegających zerwaniu. Ten typ może być [typem wartości](../builtin-types/value-types.md) lub typem odwołania niepodlegającym wartości null. Ograniczenie `notnull` jest dostępne począwszy od języka C# 8.0 dla kodu skompilowanego w [ `nullable enable` kontekście](../../nullable-references.md#nullable-contexts). W przeciwieństwie do innych ograniczeń, `notnull` jeśli argument typu narusza ograniczenie, kompilator generuje ostrzeżenie zamiast błędu. Ostrzeżenia są generowane tylko `nullable enable` w kontekście.
 
 > [!IMPORTANT]
-> Deklaracje ogólne zawierające ograniczenie `notnull` mogą być używane w kontekście dopuszczającym wartość null, ale kompilator nie wymusza ograniczenia.
+> Deklaracje ogólne, `notnull` które zawierają ograniczenie mogą być używane w kontekście nullable nieświadomych, ale kompilator nie wymusza ograniczenia.
 
 [!code-csharp[using the nonnull constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#NotNull)]
 
-Klauzula `where` może również zawierać ograniczenie `unmanaged`. Ograniczenie `unmanaged` ogranicza parametr typu do typów znanych jako [typy niezarządzane](../builtin-types/unmanaged-types.md). Ograniczenie `unmanaged` ułatwia pisanie kodu międzyoperacyjności niskiego poziomu w programie C#. To ograniczenie umożliwia wykonywanie procedur wielokrotnego użytku we wszystkich typach niezarządzanych. Nie można połączyć ograniczenia `unmanaged` z ograniczeniem `class` lub `struct`. Ograniczenie `unmanaged` wymusza, że typ musi być `struct`:
+Klauzula `where` może również `unmanaged` zawierać ograniczenie. Ograniczenie `unmanaged` ogranicza parametr typu do typów znanych jako [typy niezarządzane](../builtin-types/unmanaged-types.md). Ograniczenie `unmanaged` ułatwia pisanie kodu współdliczbowego niskiego poziomu w języku C#. To ograniczenie umożliwia procedury wielokrotnego użytku we wszystkich typach niezarządzanych. Ograniczenia `unmanaged` nie można łączyć z `class` lub `struct` ograniczenia. `unmanaged` Ograniczenie wymusza, że typ musi być `struct`:
 
 [!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#4)]
 
-Klauzula `where` może również zawierać ograniczenie konstruktora, `new()`. To ograniczenie umożliwia utworzenie wystąpienia parametru typu za pomocą operatora `new`. To [ograniczenie New ()](new-constraint.md) umożliwia kompilatorowi, że każdy dostarczony argument typu musi mieć dostępny Konstruktor bez parametrów. Na przykład:
+Klauzula `where` może również zawierać ograniczenie konstruktora. `new()` To ograniczenie umożliwia utworzenie wystąpienia parametru typu przy `new` użyciu operatora. [New() Ograniczenie](new-constraint.md) informuje kompilator wiedzieć, że każdy argument typu dostarczone musi mieć dostępny konstruktor bez parametrów. Przykład:
 
 [!code-csharp[using the new constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#5)]
 
-Ograniczenie `new()` pojawia się jako ostatni w klauzuli `where`. Nie można łączyć ograniczenia `new()` z ograniczeniami `struct` lub `unmanaged`. Wszystkie typy spełniające te ograniczenia muszą mieć dostępny Konstruktor bez parametrów, co sprawia, że ograniczenie `new()` nadmiarowe.
+Ograniczenie `new()` pojawia się ostatnio `where` w klauzuli. Ograniczenia `new()` nie można łączyć z ograniczeniami `struct` `unmanaged` lub ograniczeniami. Wszystkie typy spełniające te ograniczenia muszą mieć konstruktora dostępnego bezparametrów, dzięki czemu `new()` ograniczenie jest nadmiarowe.
 
-W przypadku wielu parametrów typu należy użyć jednej `where` klauzul dla każdego parametru typu, na przykład:
+W przypadku wielu parametrów `where` typu należy użyć jednej klauzuli dla każdego parametru typu, na przykład:
 
 [!code-csharp[using multiple where constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#6)]
 
-Można również dołączyć ograniczenia do parametrów typu metod ogólnych, jak pokazano w następującym przykładzie:
+Ograniczenia można również dołączyć do parametrów typu metod ogólnych, jak pokazano w poniższym przykładzie:
 
 [!code-csharp[where constraints with generic methods](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#7)]
 
-Zauważ, że składnia opisująca ograniczenia parametru typu dla delegatów jest taka sama jak w przypadku metod:
+Należy zauważyć, że składnia opisująca ograniczenia parametrów typu dla delegatów jest taka sama jak w przypadku metod:
 
 [!code-csharp[where constraints with generic methods](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#8)]
 
-Aby uzyskać informacje na temat delegatów ogólnych, zobacz [Delegaty ogólne](../../programming-guide/generics/generic-delegates.md).
+Aby uzyskać informacje na temat delegatów ogólnych, zobacz [Ogólne delegatów](../../programming-guide/generics/generic-delegates.md).
 
-Aby uzyskać szczegółowe informacje na temat składni i użycia ograniczeń, zobacz [ograniczenia dotyczące parametrów typu](../../programming-guide/generics/constraints-on-type-parameters.md).
+Aby uzyskać szczegółowe informacje na temat składni i użycia ograniczeń, zobacz [Ograniczenia parametrów typu](../../programming-guide/generics/constraints-on-type-parameters.md).
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
@@ -71,8 +71,8 @@ Aby uzyskać szczegółowe informacje na temat składni i użycia ograniczeń, z
 
 ## <a name="see-also"></a>Zobacz też
 
-- [C#Odwoła](../index.md)
-- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [Odwołanie do języka C#](../index.md)
+- [Przewodnik programowania języka C#](../../programming-guide/index.md)
 - [Wprowadzenie do typów ogólnych](../../programming-guide/generics/index.md)
-- [new, ograniczenie](./new-constraint.md)
+- [nowe ograniczenie](./new-constraint.md)
 - [Ograniczenia dotyczące parametrów typu](../../programming-guide/generics/constraints-on-type-parameters.md)

@@ -1,18 +1,18 @@
 ---
-title: Ogólna struktura przewodnika C# C# programowania programu
+title: Ogólna struktura programu C# — przewodnik programowania C#
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, program structure
 ms.assetid: 5ae964a5-0ef0-40fe-88fb-6d1793371d0d
 ms.openlocfilehash: 4a2340c29527ac09ba53daee03e06420b269df56
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/27/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77673345"
 ---
 # <a name="general-structure-of-a-c-program-c-programming-guide"></a>Ogólna struktura programu w języku C# (Przewodnik programowania w języku C#)
-C#programy mogą składać się z co najmniej jednego pliku. Każdy plik może zawierać zero lub więcej przestrzeni nazw. Przestrzeń nazw może zawierać typy takie jak klasy, struktury, interfejsy, wyliczenia i Delegaty, a także inne przestrzenie nazw. Poniżej przedstawiono szkielet C# programu zawierającego wszystkie te elementy.  
+Programy C# mogą składać się z jednego lub więcej plików. Każdy plik może zawierać zero lub więcej przestrzeni nazw. Obszar nazw może zawierać typy, takie jak klasy, struktury, interfejsy, wyliczenia i delegatów, oprócz innych obszarów nazw. Poniżej przedstawiono szkielet programu C#, który zawiera wszystkie te elementy.  
   
  [!code-csharp[csProgGuide#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/class2.cs#34)]  
   
@@ -27,14 +27,14 @@ C#programy mogą składać się z co najmniej jednego pliku. Każdy plik może z
   
 - [Interfejsy](../interfaces/index.md)  
   
-- [Delegaci](../delegates/index.md)  
+- [Delegaty](../delegates/index.md)  
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
 
-Aby uzyskać więcej informacji, zobacz [podstawowe pojęcia](~/_csharplang/spec/basic-concepts.md) w [ C# specyfikacji języka](/dotnet/csharp/language-reference/language-specification/introduction). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
+Aby uzyskać więcej informacji, zobacz [podstawowe pojęcia](~/_csharplang/spec/basic-concepts.md) w [specyfikacji języka Języka C#](/dotnet/csharp/language-reference/language-specification/introduction). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Przewodnik programowania w języku C#](../index.md)
+- [Przewodnik programowania języka C#](../index.md)
 - [Konstrukcja programu C#](./index.md)
-- [C#Odwoła](../../language-reference/index.md)
+- [Odwołanie do języka C#](../../language-reference/index.md)

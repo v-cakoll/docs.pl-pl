@@ -1,19 +1,19 @@
 ---
-title: Zaimplementuj odporne Entity Framework Core połączenia SQL
-description: Dowiedz się, jak zaimplementować odporne Entity Framework Core połączenia SQL. Ta technika jest szczególnie ważna w przypadku korzystania z Azure SQL Database w chmurze.
+title: Implementowanie połączeń core SQL platformy odpornej jednostki
+description: Dowiedz się, jak zaimplementować połączenia SQL platformy core platformy odporna. Ta technika jest szczególnie ważne podczas korzystania z usługi Azure SQL Database w chmurze.
 ms.date: 10/16/2018
 ms.openlocfilehash: 7a047edca21d63a451e90f407b23f3358d461330
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78241068"
 ---
-# <a name="implement-resilient-entity-framework-core-sql-connections"></a>Zaimplementuj odporne Entity Framework Core połączenia SQL
+# <a name="implement-resilient-entity-framework-core-sql-connections"></a>Implementowanie połączeń core SQL platformy odpornej jednostki
 
-W przypadku usługi Azure SQL DB Entity Framework (EF) Core udostępnia już wewnętrzną odporność połączenia z bazą danych i logikę ponowień. Należy jednak włączyć strategię wykonywania Entity Framework dla każdego połączenia <xref:Microsoft.EntityFrameworkCore.DbContext>, jeśli chcesz mieć [odporne EF Core połączenia](/ef/core/miscellaneous/connection-resiliency).
+W przypadku usługi Azure SQL DB, entity framework (EF) Core już zapewnia odporność połączenia wewnętrznej bazy danych i logikę ponawiania próby. Należy jednak włączyć strategię wykonywania <xref:Microsoft.EntityFrameworkCore.DbContext> struktury jednostek dla każdego połączenia, jeśli chcesz mieć [odporne połączenia EF Core](/ef/core/miscellaneous/connection-resiliency).
 
-Na przykład poniższy kod na poziomie połączenia EF Core włącza odporne połączenia SQL, które są ponawiane, jeśli połączenie nie powiedzie się.
+Na przykład następujący kod na poziomie połączenia EF Core umożliwia odporne połączenia SQL, które są ponowione w przypadku niepowodzenia połączenia.
 
 ```csharp
 // Startup.cs from any ASP.NET Core Web API
@@ -39,17 +39,17 @@ public class Startup
 }
 ```
 
-## <a name="execution-strategies-and-explicit-transactions-using-begintransaction-and-multiple-dbcontexts"></a>Strategie wykonywania i jawne transakcje przy użyciu BeginTransaction i wielu dbcontexts
+## <a name="execution-strategies-and-explicit-transactions-using-begintransaction-and-multiple-dbcontexts"></a>Strategie realizacji i jawne transakcje przy użyciu BeginTransaction i wielu DbContexts
 
-Po włączeniu ponownych prób w EF Core połączeniach każda operacja wykonywana przy użyciu EF Core będzie własną operacją ponawiania. Każde zapytanie i każde wywołanie `SaveChanges` zostanie ponowione w przypadku wystąpienia błędu przejściowego.
+Po włączeniu ponownych prób w połączeniach EF Core każda operacja wykonywana przy użyciu EF Core staje się własną operacją ponawiania prób. Każde zapytanie i `SaveChanges` każde wywołanie zostanie ponowione jako jednostka, jeśli wystąpi błąd przejściowy.
 
-Jeśli jednak kod inicjuje transakcję przy użyciu `BeginTransaction`, definiujesz własną grupę operacji, która musi być traktowana jako jednostka. Jeśli wystąpi awaria, wszystkie elementy wewnątrz transakcji należy wycofać.
+Jeśli jednak kod inicjuje `BeginTransaction`transakcję przy użyciu , definiujesz własną grupę operacji, które muszą być traktowane jako jednostka. Wszystko wewnątrz transakcji musi zostać wycofana w przypadku wystąpienia awarii.
 
-Jeśli spróbujesz wykonać tę transakcję przy użyciu strategii wykonywania EF (zasady ponawiania) i wywołajesz `SaveChanges` z wielu kontekstów DbContext, uzyskasz wyjątek podobny do tego:
+Jeśli spróbujesz wykonać tę transakcję podczas korzystania ze strategii `SaveChanges` wykonywania EF (zasady ponawiania próby) i wywołać z wielu DbContexts, otrzymasz wyjątek, taki jak ten:
 
-> System. InvalidOperationException: skonfigurowana strategia wykonywania "SqlServerRetryingExecutionStrategy" nie obsługuje transakcji inicjowanych przez użytkownika. Użyj strategii wykonywania zwróconej przez obiekt "DbContext. Database. CreateExecutionStrategy ()", aby wykonać wszystkie operacje w transakcji jako jednostkę wywołały.
+> System.InvalidOperationException: Skonfigurowana strategia wykonywania "SqlServerRetryingExecutionStrategy" nie obsługuje transakcji inicjowanych przez użytkownika. Użyj strategii wykonywania zwracanej przez "DbContext.Database.CreateExecutionStrategy()", aby wykonać wszystkie operacje w transakcji jako jednostkę podlegającą zwrotowi.
 
-Rozwiązaniem jest ręczne Wywołaj strategię wykonywania EF z delegatem reprezentującym wszystkie elementy, które należy wykonać. Jeśli wystąpi błąd przejściowy, strategia wykonywania ponownie wywoła delegata. Na przykład poniższy kod pokazuje, w jaki sposób jest implementowany w eShopOnContainers przy użyciu dwóch wielu dbcontexts (\_catalogContext i IntegrationEventLogContext) podczas aktualizowania produktu, a następnie zapisywania obiektu ProductPriceChangedIntegrationEvent, który musi korzystać z innego DbContext.
+Rozwiązaniem jest ręczne wywołanie strategii wykonywania EF z delegata reprezentujących wszystko, co musi zostać wykonane. Jeśli wystąpi błąd przejściowy, strategia wykonywania ponownie wywoła delegata. Na przykład poniższy kod pokazuje, jak jest zaimplementowany w eShopOnContainers\_z dwoma wieloma DbContexts (catalogContext i IntegrationEventLogContext) podczas aktualizowania produktu, a następnie zapisywania ProductPriceChangedIntegrationEvent obiektu, który musi używać innego DbContext.
 
 ```csharp
 public async Task<IActionResult> UpdateProduct(
@@ -88,9 +88,9 @@ public async Task<IActionResult> UpdateProduct(
 }
 ```
 
-Pierwszy <xref:Microsoft.EntityFrameworkCore.DbContext> jest `_catalogContext`, a drugi `DbContext` znajduje się w obrębie obiektu `_catalogIntegrationEventService`. Akcja zatwierdzania jest wykonywana dla wszystkich `DbContext` obiektów przy użyciu strategii wykonywania EF.
+Pierwszy <xref:Microsoft.EntityFrameworkCore.DbContext> `_catalogContext` jest, a `DbContext` drugi `_catalogIntegrationEventService` znajduje się w obiekcie. Akcja zatwierdzania jest wykonywana we wszystkich `DbContext` obiektach przy użyciu strategii wykonywania EF.
 
-Aby osiągnąć tę wiele `DbContext` zatwierdzenia, `SaveEventAndCatalogContextChangesAsync` używa klasy `ResilientTransaction`, jak pokazano w poniższym kodzie:
+Aby osiągnąć `DbContext` to zatwierdzenie `SaveEventAndCatalogContextChangesAsync` wielokrotności, używa `ResilientTransaction` klasy, jak pokazano w następującym kodzie:
 
 ```csharp
 public class CatalogIntegrationEventService : ICatalogIntegrationEventService
@@ -114,7 +114,7 @@ public class CatalogIntegrationEventService : ICatalogIntegrationEventService
 }
 ```
 
-Metoda `ResilientTransaction.ExecuteAsync` zasadniczo rozpoczyna transakcję od zakończono `DbContext` (`_catalogContext`), a następnie `EventLogService` używa tej transakcji do zapisywania zmian z `IntegrationEventLogContext`, a następnie zatwierdza całą transakcję.
+Metoda `ResilientTransaction.ExecuteAsync` zasadniczo rozpoczyna transakcję z `DbContext` przekazany`_catalogContext`( ), `EventLogService` a następnie sprawia, że `IntegrationEventLogContext` użycie tej transakcji, aby zapisać zmiany z, a następnie zatwierdza całą transakcję.
 
 ```csharp
 public class ResilientTransaction
@@ -144,14 +144,14 @@ public class ResilientTransaction
 }
 ```
 
-## <a name="additional-resources"></a>Dodatkowe zasoby
+## <a name="additional-resources"></a>Zasoby dodatkowe
 
-- **Odporność połączeń i przechwycenie poleceń z EF w aplikacji ASP.NET MVC** \
+- **Odporność połączeń i przechwytywanie poleceń za pomocą EF w ASP.NET aplikacji MVC** \
   [https://docs.microsoft.com/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/connection-resiliency-and-command-interception-with-the-entity-framework-in-an-asp-net-mvc-application](/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/connection-resiliency-and-command-interception-with-the-entity-framework-in-an-asp-net-mvc-application)
 
-- **Cesar de La Torre. Korzystanie z odpornych Entity Framework Core połączeń i transakcji SQL** \
+- **Cesar de la Torre. Korzystanie z platformy stabilnej jednostki Core SQL połączenia i transakcje** \
   <https://devblogs.microsoft.com/cesardelatorre/using-resilient-entity-framework-core-sql-connections-and-transactions-retries-with-exponential-backoff/>
 
 >[!div class="step-by-step"]
->[Poprzednie](implement-retries-exponential-backoff.md)
->[dalej](use-httpclientfactory-to-implement-resilient-http-requests.md)
+>[Poprzedni](implement-retries-exponential-backoff.md)
+>[następny](use-httpclientfactory-to-implement-resilient-http-requests.md)

@@ -1,254 +1,254 @@
 ---
-title: Debugowanie aplikacji Hello world .NET Core za pomocą programu Visual Studio
-description: Dowiedz się, jak debugować aplikację Hello world w C# programie lub Visual Basic za pomocą programu Visual Studio.
+title: Debugowanie aplikacji Hello World .NET Core za pomocą programu Visual Studio
+description: Dowiedz się, jak debugować aplikację Hello World napisaną w języku C# lub Visual Basic za pomocą programu Visual Studio.
 ms.date: 12/05/2019
 ms.custom: vs-dotnet
 ms.openlocfilehash: b2ee1401fc89f990c5f930d80d1a510a117e63a0
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78156676"
 ---
-# <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio"></a>Debuguj aplikację C# Hello World .NET Core lub Visual Basic przy użyciu programu Visual Studio
+# <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio"></a>Debugowanie aplikacji C# lub Visual Basic .NET Core Hello World przy użyciu programu Visual Studio
 
-Do tej pory wykonano kroki opisane w temacie [Tworzenie pierwszej aplikacji konsolowej .NET Core w programie Visual Studio 2019](with-visual-studio.md) w celu utworzenia i uruchomienia prostej aplikacji konsolowej. Po napisaniu i skompilowaniu aplikacji możesz rozpocząć testowanie. Program Visual Studio zawiera kompleksowy zestaw narzędzi do debugowania, których można użyć do rozwiązywania problemów z aplikacją.
+Do tej pory postępowano zgodnie z instrukcjami w [tworzenie pierwszej aplikacji konsoli .NET Core w programie Visual Studio 2019,](with-visual-studio.md) aby utworzyć i uruchomić prostą aplikację konsoli. Po napisaniu i skompilowaniu aplikacji można rozpocząć testowanie go. Program Visual Studio zawiera kompleksowy zestaw narzędzi do debugowania, których można używać do rozwiązywania problemów z aplikacją.
 
-## <a name="debug-build-configuration"></a>Debuguj konfigurację kompilacji
+## <a name="debug-build-configuration"></a>Konfiguracja kompilacji debugowania
 
-*Debugowanie* i *wydanie* są dwiema domyślnymi konfiguracjami kompilacji programu Visual Studio. Bieżąca konfiguracja kompilacji jest pokazywana na pasku narzędzi. Poniższy obraz paska narzędzi pokazuje, że program Visual Studio jest skonfigurowany do kompilowania wersji do debugowania aplikacji:
+*Debugowanie* i *wydanie* to dwie domyślne konfiguracje kompilacji programu Visual Studio. Bieżąca konfiguracja kompilacji jest wyświetlana na pasku narzędzi. Poniższy obraz paska narzędzi pokazuje, że program Visual Studio jest skonfigurowany do kompilowania wersji debugowania aplikacji:
 
-![Pasek narzędzi programu Visual Studio z wyróżnioną pozycją Debug](./media/debugging-with-visual-studio/visual-studio-toolbar-debug.png)
+![Pasek narzędzi programu Visual Studio z wyróżnionym debugowaniem](./media/debugging-with-visual-studio/visual-studio-toolbar-debug.png)
 
-Zacznij od uruchomienia wersji debugowania aplikacji. Konfiguracja kompilacji debugowania powoduje wyłączenie większości optymalizacji kompilatora i zapewnia bogatsze informacje podczas procesu kompilacji.
+Rozpocznij od uruchomienia debugowania wersji aplikacji. Konfiguracja kompilacji debugowania wyłącza większość optymalizacji kompilatora i zapewnia bogatsze informacje podczas procesu kompilacji.
 
 ## <a name="set-a-breakpoint"></a>Ustawianie punktu przerwania
 
-Uruchom program i wypróbuj kilka funkcji debugowania:
+Uruchom program i spróbuj wykonać kilka funkcji debugowania:
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="c"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C #](#tab/csharp)
 
-1. Ustaw *punkt przerwania* w wierszu, który odczytuje `Console.WriteLine($"\nHello, {name}, on {date:d} at {date:t}!");`, klikając na lewym marginesie okna kod w tym wierszu. Możesz również ustawić punkt przerwania, umieszczając karetkę w wierszu kodu, a następnie naciskając klawisz **F9** lub wybierając pozycję **Debuguj** > **Przełącz punkt przerwania** z paska menu.
+1. Ustaw *punkt przerwania* w `Console.WriteLine($"\nHello, {name}, on {date:d} at {date:t}!");` wierszu, który odczytuje, klikając lewy margines okna kodu w tym wierszu. Punkt przerwania można również ustawić, umieszczając daszek w wierszu kodu, a następnie naciskając **klawisz F9** lub wybierając punkt przerwania **przełączania debugowania** > **Toggle Breakpoint** z paska menu.
 
-   Punkt przerwania tymczasowo przerywa wykonywanie aplikacji *przed* wykonaniem wiersza z punktem przerwania.
+   Punkt przerwania tymczasowo przerywa wykonanie aplikacji *przed* wykonaniem wiersza z punktem przerwania.
 
-   Jak widać na poniższej ilustracji, program Visual Studio wskazuje wiersz, w którym jest ustawiony punkt przerwania, zaznaczając go i wyświetlając czerwony okrąg na lewym marginesie.
+   Jak pokazano na poniższej ilustracji, Visual Studio wskazuje wiersz, na którym ustawiono punkt przerwania, wyróżniając go i wyświetlając czerwone kółko na lewym marginesie.
 
-   ![Okno programu Visual Studio z ustawionym punktem przerwania](./media/debugging-with-visual-studio/set-breakpoint-in-editor.png)
+   ![Okno programu Visual Studio z zestawem punktów przerwania](./media/debugging-with-visual-studio/set-breakpoint-in-editor.png)
 
-1. Uruchom program w trybie debugowania, wybierając przycisk **HelloWorld** z zieloną strzałką na pasku narzędzi, naciskając klawisz **F5**lub wybierając pozycję **Debuguj** > **Rozpocznij debugowanie**.
+1. Uruchom program w trybie debugowania, wybierając przycisk **HelloWorld** z zieloną strzałką na pasku narzędzi, naciskając **klawisz F5**lub wybierając **debugowanie** > **Debuguj rozpocznij debugowanie**.
 
-1. Wprowadź ciąg w oknie konsoli, gdy program zapyta o nazwę, a następnie naciśnij klawisz **Enter**.
+1. Wprowadź ciąg w oknie konsoli, gdy program wyświetli monit o nazwę, a następnie naciśnij klawisz **Enter**.
 
-1. Wykonanie programu zostaje zatrzymane po osiągnięciu punktu przerwania i przed wykonaniem metody `Console.WriteLine`. W oknie **Ustawienia lokalne** są wyświetlane wartości zmiennych, które są zdefiniowane w aktualnie wykonywanej metodzie.
+1. Wykonywanie programu zatrzymuje się, gdy osiągnie `Console.WriteLine` punkt przerwania i przed wykonaniem metody. Okno **Locals** wyświetla wartości zmiennych, które są zdefiniowane w aktualnie wykonywanej metody.
 
-   ![Zrzut ekranu punktu przerwania w programie Visual Studio](./media/debugging-with-visual-studio/breakpoint-hit.png)
+   ![Zrzut ekranu przedstawiający punkt przerwania w programie Visual Studio](./media/debugging-with-visual-studio/breakpoint-hit.png)
 
-1. Okno **bezpośrednie** umożliwia korzystanie z debugowanej aplikacji. Możesz interaktywnie zmienić wartość zmiennych, aby zobaczyć, jak ma to wpływ na program.
+1. Okno **Natychmiastowe** umożliwia interakcję z debugowaniem aplikacji. Można interaktywnie zmienić wartość zmiennych, aby zobaczyć, jak wpływa ona na program.
 
-   1. Jeśli okno **bezpośrednie** nie jest widoczne, Wyświetl je, wybierając pozycję **debuguj** > **Windows** > **natychmiastowe**.
+   1. Jeśli okno **Natychmiastowe** nie jest widoczne, wyświetl je, wybierając opcję **Debugowanie** > **systemu Windows** > **Natychmiastowe**.
 
-   1. Wprowadź `name = "Gracie"` w oknie **bezpośrednim** i naciśnij klawisz **Enter** .
+   1. Wprowadź `name = "Gracie"` w oknie **Natychmiastowe** i naciśnij klawisz **Enter.**
 
-   1. Wprowadź `date = DateTime.Parse("11/16/2019 5:25 PM")` w oknie **bezpośrednim** i naciśnij klawisz **Enter** .
+   1. Wprowadź `date = DateTime.Parse("11/16/2019 5:25 PM")` w oknie **Natychmiastowe** i naciśnij klawisz **Enter.**
 
-   W oknie **bezpośrednim** zostanie wyświetlona wartość zmiennej String i właściwości wartości <xref:System.DateTime>. Ponadto wartości zmiennych są aktualizowane w oknie **zmiennych lokalnych** .
+   Okno **Natychmiastowe** wyświetla wartość zmiennej ciągu i właściwości <xref:System.DateTime> wartości. Ponadto wartości zmiennych są aktualizowane w oknie **Locals.**
 
-   ![Lokalne i natychmiastowe okna w programie Visual Studio 2019](./media/debugging-with-visual-studio/locals-immediate-window.png)
+   ![Miejscowi i bezpośredni system Windows w programie Visual Studio 2019](./media/debugging-with-visual-studio/locals-immediate-window.png)
 
-1. Kontynuuj wykonywanie programu, wybierając przycisk **Kontynuuj** na pasku narzędzi lub wybierając pozycję **Debuguj** > **Kontynuuj**. Wartości wyświetlane w oknie konsoli odpowiadają zmianom wprowadzonym w oknie **bezpośrednim** .
+1. Kontynuuj wykonywanie programu, wybierając przycisk **Kontynuuj** na pasku narzędzi lub wybierając **opcję DebugUj** > **kontynuuj**. Wartości wyświetlane w oknie konsoli odpowiadają zmianom dokonanym w oknie **Natychmiastowy.**
 
-   ![Okno konsoli pokazujące wprowadzone wartości](./media/debugging-with-visual-studio/console-window.png)
+   ![Okno konsoli z wyświetlonymi wprowadzonymi wartościami](./media/debugging-with-visual-studio/console-window.png)
 
-1. Naciśnij dowolny klawisz, aby zamknąć aplikację i zatrzymać debugowanie.
+1. Naciśnij dowolny klawisz, aby zakończyć działanie aplikacji i zatrzymać debugowanie.
 
 # <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
-1. Ustaw *punkt przerwania* w wierszu, który odczytuje `Console.WriteLine($"{vbCrLf}Hello, {name}, on {currentDate:d} at {currentDate:t}!")`, klikając na lewym marginesie okna kod w tym wierszu. Możesz również ustawić punkt przerwania, umieszczając karetkę w żądanym wierszu, a następnie wybierając pozycję **debuguj** > **Przełącz punkt przerwania** z paska menu.
+1. Ustaw *punkt przerwania* w `Console.WriteLine($"{vbCrLf}Hello, {name}, on {currentDate:d} at {currentDate:t}!")` wierszu, który odczytuje, klikając lewy margines okna kodu w tym wierszu. Punkt przerwania można również ustawić, umieszczając daszek na żądanym wierszu, a następnie wybierając punkt przerwania **przełączania debugowania** > **Toggle Breakpoint** z paska menu.
 
-   Punkt przerwania tymczasowo przerywa wykonywanie aplikacji *przed* wykonaniem wiersza z punktem przerwania.
+   Punkt przerwania tymczasowo przerywa wykonanie aplikacji *przed* wykonaniem wiersza z punktem przerwania.
 
-   Jak widać na poniższej ilustracji, program Visual Studio wskazuje wiersz, w którym jest ustawiony punkt przerwania, zaznaczając go i wyświetlając czerwony okrąg na lewym marginesie.
+   Jak pokazano na poniższej ilustracji, Visual Studio wskazuje wiersz, na którym ustawiono punkt przerwania, wyróżniając go i wyświetlając czerwone kółko na lewym marginesie.
 
-   ![Okno programu Visual Studio z ustawionym punktem przerwania](./media/debugging-with-visual-studio/vb/set-breakpoint-in-editor.png)
+   ![Okno programu Visual Studio z zestawem punktów przerwania](./media/debugging-with-visual-studio/vb/set-breakpoint-in-editor.png)
 
-1. Uruchom program w trybie debugowania, wybierając przycisk **HelloWorld** z zieloną strzałką na pasku narzędzi, naciskając klawisz **F5**lub wybierając pozycję **Debuguj** > **Rozpocznij debugowanie**.
+1. Uruchom program w trybie debugowania, wybierając przycisk **HelloWorld** z zieloną strzałką na pasku narzędzi, naciskając **klawisz F5**lub wybierając **debugowanie** > **Debuguj rozpocznij debugowanie**.
 
-1. Wprowadź ciąg w oknie konsoli, gdy program zapyta o nazwę i naciśnij klawisz **Enter**.
+1. Wprowadź ciąg w oknie konsoli, gdy program wyświetli **Enter**monit o nazwę, a naciśnieenter .
 
-1. Wykonanie programu zostaje zatrzymane po osiągnięciu punktu przerwania i przed wykonaniem metody `Console.WriteLine`. W oknie **Ustawienia lokalne** są wyświetlane wartości zmiennych, które są zdefiniowane w aktualnie wykonywanej metodzie.
+1. Wykonywanie programu zatrzymuje się, gdy osiągnie `Console.WriteLine` punkt przerwania i przed wykonaniem metody. Okno **Locals** wyświetla wartości zmiennych, które są zdefiniowane w aktualnie wykonywanej metody.
 
-1. Okno **bezpośrednie** umożliwia korzystanie z debugowanej aplikacji. Możesz interaktywnie zmienić wartość zmiennych, aby zobaczyć, jak ma to wpływ na program.
+1. Okno **Natychmiastowe** umożliwia interakcję z debugowaniem aplikacji. Można interaktywnie zmienić wartość zmiennych, aby zobaczyć, jak wpływa ona na program.
 
-   1. Jeśli okno **bezpośrednie** nie jest widoczne, Wyświetl je, wybierając pozycję **debuguj** > **Windows** > **natychmiastowe**.
+   1. Jeśli okno **Natychmiastowe** nie jest widoczne, wyświetl je, wybierając opcję **Debugowanie** > **systemu Windows** > **Natychmiastowe**.
 
-   1. Wprowadź `name = "Gracie"` w oknie **bezpośrednim** i naciśnij klawisz **Enter** .
+   1. Wprowadź `name = "Gracie"` w oknie **Natychmiastowe** i naciśnij klawisz **Enter.**
 
-   1. Wprowadź `date = DateTime.Parse("11/16/2019 5:25 PM")` w oknie **bezpośrednim** i naciśnij klawisz **Enter** .
+   1. Wprowadź `date = DateTime.Parse("11/16/2019 5:25 PM")` w oknie **Natychmiastowe** i naciśnij klawisz **Enter.**
 
-   Wartości zmiennych są aktualizowane w oknie **zmiennych lokalnych** .
+   Wartości zmiennych są aktualizowane w oknie **Locals.**
 
-1. Kontynuuj wykonywanie programu, wybierając przycisk **Kontynuuj** na pasku narzędzi lub wybierając element menu **Debuguj** > **Kontynuuj** . Wartości wyświetlane w oknie konsoli odpowiadają zmianom wprowadzonym w oknie **bezpośrednim** .
+1. Kontynuuj wykonywanie programu, wybierając przycisk **Kontynuuj** na pasku narzędzi lub wybierając element menu **Debuguj** > **kontynuuj.** Wartości wyświetlane w oknie konsoli odpowiadają zmianom dokonanym w oknie **Natychmiastowy.**
 
-   ![Okno konsoli pokazujące wprowadzone wartości](./media/debugging-with-visual-studio/console-window.png)
+   ![Okno konsoli z wyświetlonymi wprowadzonymi wartościami](./media/debugging-with-visual-studio/console-window.png)
 
-1. Naciśnij dowolny klawisz, aby zamknąć aplikację i zatrzymać debugowanie.
+1. Naciśnij dowolny klawisz, aby zakończyć działanie aplikacji i zatrzymać debugowanie.
 
 ---
 
-## <a name="set-a-conditional-breakpoint"></a>Ustaw punkt przerwania warunkowego
+## <a name="set-a-conditional-breakpoint"></a>Ustawianie warunkowego punktu przerwania
 
-Program wyświetla ciąg wprowadzony przez użytkownika. Co się stanie, jeśli użytkownik nie wprowadzi niczego? Można to sprawdzić za pomocą przydatnej funkcji debugowania nazywanej *warunkowym punktem przerwania*, która przerywa wykonywanie programu po spełnieniu jednego lub kilku warunków.
+Program wyświetla ciąg, który wprowadza użytkownik. Co się stanie, jeśli użytkownik niczego nie wprowadzi? Można przetestować to za pomocą przydatnej funkcji debugowania o nazwie *warunkowego punktu przerwania,* która przerywa wykonywanie programu, gdy spełniony jest co najmniej jeden warunek.
 
-Aby ustawić warunkowy punkt przerwania i sprawdzić, co się dzieje, gdy użytkownik nie może wprowadzić ciągu, wykonaj następujące czynności:
+Aby ustawić warunkowy punkt przerwania i sprawdzić, co się stanie, gdy użytkownik nie przejdzie ciągu, wykonaj następujące czynności:
 
-# <a name="c"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C #](#tab/csharp)
 
-1. Kliknij prawym przyciskiem myszy czerwoną kropkę reprezentującą punkt przerwania. W menu kontekstowym wybierz pozycję **warunki** , aby otworzyć okno dialogowe **Ustawienia punktu przerwania** . Zaznacz pole wyboru **warunki** , jeśli nie zostało ono jeszcze wybrane.
+1. Kliknij prawym przyciskiem myszy czerwoną kropkę reprezentującą punkt przerwania. W menu kontekstowym wybierz pozycję **Warunki,** aby otworzyć okno dialogowe **Ustawienia punktu przerwania.** Zaznacz pole **Warunki,** jeśli nie jest jeszcze zaznaczone.
 
-   ![Edytor przedstawiający panel ustawień punktu przerwania —C#](./media/debugging-with-visual-studio/breakpoint-settings.png)
+   ![Edytor z panelem ustawień punktu przerwania - C #](./media/debugging-with-visual-studio/breakpoint-settings.png)
 
-1. Dla **wyrażenia warunkowego**Zastąp wartość "np. x = = 5" następującym:
+1. W przypadku **wyrażenia warunkowego**zamień "np. x == 5" na następujące elementy:
 
    ```csharp
    String.IsNullOrEmpty(name)
    ```
 
-   Testujesz warunek kodu, że wywołanie metody `String.IsNullOrEmpty(name)` jest `true`, ponieważ `name` nie ma przypisanej wartości lub ponieważ jej wartość jest ciągiem pustym (""). Zamiast wyrażenia warunkowego można także określić *liczbę trafień*, która przerywa wykonywanie programu, zanim instrukcja zostanie wykonana określoną liczbę razy lub *warunek filtru*, który przerywa wykonywanie programu w oparciu o takie atrybuty jak identyfikator wątku, nazwa procesu lub nazwa wątku.
+   Testujesz warunek kodu, że `String.IsNullOrEmpty(name)` wywołanie `true` metody `name` jest albo dlatego, że nie został przypisany wartość lub ponieważ jego wartość jest pusty ciąg (""). Zamiast wyrażenia warunkowego można również określić *liczbę trafień*, która przerywa wykonywanie programu przed wykonaniem instrukcji określoną liczbę razy, lub *warunek filtru*, który przerywa wykonywanie programu na podstawie takich atrybutów, jak identyfikator wątku, nazwa procesu lub nazwa wątku.
 
-1. Wybierz pozycję **Zamknij** , aby zamknąć okno dialogowe.
+1. Wybierz **pozycję Zamknij,** aby zamknąć okno dialogowe.
 
-1. Uruchom program z debugowaniem, naciskając klawisz **F5**.
+1. Uruchom program z debugowaniem, naciskając **klawisz F5**.
 
-1. W oknie konsoli naciśnij klawisz **Enter** po wyświetleniu monitu, aby wprowadzić swoją nazwę.
+1. W oknie konsoli naciśnij klawisz **Enter** po wyświetleniu monitu o wprowadzenie nazwy.
 
-1. Ponieważ określony warunek, `name` jest `null` lub <xref:System.String.Empty?displayProperty=nameWithType>, zostało spełnione, wykonanie programu zatrzyma się po osiągnięciu punktu przerwania i przed wykonaniem metody `Console.WriteLine`.
+1. Ponieważ warunek określony, `name` jest `null` <xref:System.String.Empty?displayProperty=nameWithType>albo lub , został spełniony, wykonanie programu zatrzymuje `Console.WriteLine` się, gdy osiągnie punkt przerwania i przed wykonaniem metody.
 
-1. Wybierz okno zmienne **lokalne** , które pokazuje wartości zmiennych, które są lokalne dla aktualnie wykonywanej metody. W tym przypadku `Main` jest aktualnie wykonywanym metodami. Zwróć uwagę, że wartość zmiennej `name` jest `""`lub <xref:System.String.Empty?displayProperty=nameWithType>.
+1. Wybierz okno **Locals,** które pokazuje wartości zmiennych, które są lokalne dla aktualnie wykonywanej metody. W tym `Main` przypadku jest aktualnie wykonywaną metodą. Należy zauważyć, że `name` wartość `""`zmiennej jest , lub <xref:System.String.Empty?displayProperty=nameWithType>.
 
-1. Potwierdź, że wartość jest pustym ciągiem, wprowadzając poniższą instrukcję w oknie **bezpośrednim** i naciskając klawisz **Enter**. Wynik jest `true`.
+1. Upewnij się, że wartość jest pustym ciągiem, wprowadzając następującą instrukcję w oknie **Natychmiastowe** i naciskając klawisz **Enter**. Wynik jest `true`.
 
    ```csharp
    ? name == String.Empty
    ```
 
-   ![Bezpośrednie okno zwracające wartość true po wykonaniu instrukcji —C#](./media/debugging-with-visual-studio/immediate-window-output.png)
+   ![Natychmiastowe okno zwracawartość true po wykonaniu instrukcji - C #](./media/debugging-with-visual-studio/immediate-window-output.png)
 
 1. Wybierz przycisk **Kontynuuj** na pasku narzędzi, aby kontynuować wykonywanie programu.
 
 1. Naciśnij dowolny klawisz, aby zamknąć okno konsoli i zatrzymać debugowanie.
 
-1. Wyczyść punkt przerwania, klikając kropkę na lewym marginesie okna kod lub wybierając polecenie **debuguj > Przełącz punkt przerwania** , gdy zostanie wybrany wiersz kodu.
+1. Wyczyść punkt przerwania, klikając kropkę na lewym marginesie okna kodu lub wybierając **debugowanie > Przełącz punkt przerwania,** gdy jest zaznaczony wiersz kodu.
 
 # <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
-1. Kliknij prawym przyciskiem myszy czerwoną kropkę reprezentującą punkt przerwania. W menu kontekstowym wybierz pozycję **warunki** , aby otworzyć okno dialogowe **Ustawienia punktu przerwania** . Zaznacz pole **warunki**.
+1. Kliknij prawym przyciskiem myszy czerwoną kropkę reprezentującą punkt przerwania. W menu kontekstowym wybierz pozycję **Warunki,** aby otworzyć okno dialogowe **Ustawienia punktu przerwania.** Zaznacz pole **wyboru Warunki**.
 
-   ![Edytor przedstawiający panel ustawień punktu przerwania — Visual Basic](./media/debugging-with-visual-studio/vb-breakpointsettings.png)
+   ![Edytor z panelem ustawień punktu przerwania — Visual Basic](./media/debugging-with-visual-studio/vb-breakpointsettings.png)
 
-1. W przypadku **wyrażenia warunkowego** Zastąp wartość "np. x = 5" następującym:
+1. Dla **wyrażenia warunkowego** zastąpić "np x = 5" z następującymi:
 
    ```vb
    String.IsNullOrEmpty(name)
    ```
 
-   Testujesz warunek kodu, że wywołanie metody `String.IsNullOrEmpty(name)` jest `true`, ponieważ `name` nie ma przypisanej wartości lub ponieważ jej wartość jest ciągiem pustym (""). Zamiast wyrażenia warunkowego można także określić *liczbę trafień*, która przerywa wykonywanie programu, zanim instrukcja zostanie wykonana określoną liczbę razy lub *warunek filtru*, który przerywa wykonywanie programu w oparciu o takie atrybuty jak identyfikator wątku, nazwa procesu lub nazwa wątku.
+   Testujesz warunek kodu, że `String.IsNullOrEmpty(name)` wywołanie `true` metody `name` jest albo dlatego, że nie został przypisany wartość lub ponieważ jego wartość jest pusty ciąg (""). Zamiast wyrażenia warunkowego można również określić *liczbę trafień*, która przerywa wykonywanie programu przed wykonaniem instrukcji określoną liczbę razy, lub *warunek filtru*, który przerywa wykonywanie programu na podstawie takich atrybutów, jak identyfikator wątku, nazwa procesu lub nazwa wątku.
 
-1. Wybierz pozycję **Zamknij** , aby zamknąć okno dialogowe.
+1. Wybierz **pozycję Zamknij,** aby zamknąć okno dialogowe.
 
-1. Uruchom program z debugowaniem, naciskając klawisz **F5**.
+1. Uruchom program z debugowaniem, naciskając **klawisz F5**.
 
-1. W oknie konsoli naciśnij klawisz **Enter** po wyświetleniu monitu, aby wprowadzić swoją nazwę.
+1. W oknie konsoli naciśnij klawisz **Enter** po wyświetleniu monitu o wprowadzenie nazwy.
 
-1. Ponieważ określony warunek, `name` jest `null` lub <xref:System.String.Empty?displayProperty=nameWithType>, zostało spełnione, wykonanie programu zatrzyma się po osiągnięciu punktu przerwania i przed wykonaniem metody `Console.WriteLine`.
+1. Ponieważ warunek określony, `name` jest `null` <xref:System.String.Empty?displayProperty=nameWithType>albo lub , został spełniony, wykonanie programu zatrzymuje `Console.WriteLine` się, gdy osiągnie punkt przerwania i przed wykonaniem metody.
 
-1. Wybierz okno zmienne **lokalne** , które pokazuje wartości zmiennych, które są lokalne dla aktualnie wykonywanej metody. W tym przypadku `Main` jest aktualnie wykonywanym metodami. Zwróć uwagę, że wartość zmiennej `name` jest `""`lub <xref:System.String.Empty?displayProperty=nameWithType>.
+1. Wybierz okno **Locals,** które pokazuje wartości zmiennych, które są lokalne dla aktualnie wykonywanej metody. W tym `Main` przypadku jest aktualnie wykonywaną metodą. Należy zauważyć, że `name` wartość `""`zmiennej jest , lub <xref:System.String.Empty?displayProperty=nameWithType>.
 
-1. Potwierdź, że wartość jest pustym ciągiem, wprowadzając poniższą instrukcję w oknie **bezpośrednim** i naciskając klawisz **Enter**. Wynik jest `true`.
+1. Upewnij się, że wartość jest pustym ciągiem, wprowadzając następującą instrukcję w oknie **Natychmiastowe** i naciskając klawisz **Enter**. Wynik jest `true`.
 
    ```vb
    ? String.IsNullOrEmpty(name)
    ```
 
-   ![Bezpośrednie okno zwracające wartość true po wykonaniu instrukcji — Visual Basic](./media/debugging-with-visual-studio/vb/immediate-window-output.png)
+   ![Natychmiastowe okno zwracawartość true po wykonaniu instrukcji - Visual Basic](./media/debugging-with-visual-studio/vb/immediate-window-output.png)
 
 1. Wybierz przycisk **Kontynuuj** na pasku narzędzi, aby kontynuować wykonywanie programu.
 
 1. Naciśnij dowolny klawisz, aby zamknąć okno konsoli i zatrzymać debugowanie.
 
-1. Wyczyść punkt przerwania, klikając kropkę na lewym marginesie okna kod lub wybierając pozycję **debuguj > Przełącz element menu punkt przerwania** z wybranym wierszem.
+1. Wyczyść punkt przerwania, klikając kropkę na lewym marginesie okna kodu lub wybierając element menu **Debuguj > Przełącz punkt przerwania** z zaznaczonym wierszem.
 
 ---
-## <a name="step-through-a-program"></a>Przechodzenie przez program
+## <a name="step-through-a-program"></a>Krok po programie
 
-Program Visual Studio umożliwia również krok po kroku w wierszu przez program i monitorowanie jego wykonania. Zwykle ustawiasz punkt przerwania i użyjesz tej funkcji do obserwowania przepływu programu za pomocą niewielkiej części kodu programu. Ponieważ program jest mały, możesz przejść przez cały program:
+Program Visual Studio umożliwia również przechodzenie liniowo przez program i monitorowanie jego realizacji. Zwykle można ustawić punkt przerwania i użyć tej funkcji, aby śledzić przepływ programu przez niewielką część kodu programu. Ponieważ program jest mały, można przejść przez cały program:
 
-# <a name="c"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C #](#tab/csharp)
 
-1. Na pasku menu wybierz **debuguj** > **Wkrocz do** lub naciśnij klawisz **F11**. Program Visual Studio podświetla i wyświetli strzałkę obok następnego wiersza wykonania.
+1. Na pasku menu wybierz pozycję **Debuguj** > **krok do** lub naciśnij klawisz **F11**. Program Visual Studio wyróżnia i wyświetla strzałkę obok następnego wiersza wykonania.
 
-   ![Visual Studio — Wkrocz do metody —C#](./media/debugging-with-visual-studio/step-into-method.png)
+   ![Visual Studio krok do metody - C #](./media/debugging-with-visual-studio/step-into-method.png)
 
-   W tym momencie okno **lokalne** pokazuje, że program ma zdefiniowaną tylko jedną zmienną, `args`. Ponieważ nie przesłano żadnych argumentów wiersza polecenia do programu, jego wartość jest pustą tablicą ciągów. Ponadto program Visual Studio otworzył puste okno konsoli.
+   W tym momencie **locals** okno pokazuje, że program zdefiniował tylko jedną zmienną, `args`. Ponieważ nie przekazano programowi żadnych argumentów wiersza polecenia, jego wartość jest tablicą pustych ciągów. Ponadto program Visual Studio otworzył puste okno konsoli.
 
-1. Wybierz pozycję **debuguj** > **Wkrocz do** lub naciśnij klawisz **F11**. Program Visual Studio teraz podświetla następny wiersz wykonania. Jak widać w obrazie, wykonanie kodu między ostatnią instrukcją a tym. `args` pozostaje jedyną zadeklarowaną zmienną, a okno konsoli pozostanie puste.
+1. Wybierz **opcję Debug** > **Ujmij krok do** lub naciśnij klawisz **F11**. Visual Studio teraz wyróżnia następny wiersz wykonania. Jak pokazano na obrazie, zajęło mniej niż jedną milisekundę, aby wykonać kod między ostatnią instrukcją a tą. `args`pozostaje jedyną zadeklarowaną zmienną, a okno konsoli pozostaje puste.
 
-   ![Krok programu Visual Studio w źródle metody —C#](./media/debugging-with-visual-studio/step-into-source-method.png)
+   ![Krok programu Visual Studio w źródle metody — C #](./media/debugging-with-visual-studio/step-into-source-method.png)
 
-1. Wybierz pozycję **debuguj** > **Wkrocz do** lub naciśnij klawisz **F11**. Program Visual Studio podświetla instrukcję, która zawiera `name` przypisanie zmiennej. Okno **lokalne** pokazuje, że `name` jest `null`, a okno konsoli wyświetla ciąg "co to jest Twoja nazwa?".
+1. Wybierz **opcję Debug** > **Ujmij krok do** lub naciśnij klawisz **F11**. Visual Studio wyróżnia instrukcję, która zawiera przypisanie zmiennej. `name` Okno **Locals** pokazuje, że `name` jest `null`, a okno konsoli wyświetla ciąg "Jak masz na imię?".
 
-1. Odpowiedz na monit, wprowadzając ciąg w oknie konsoli i naciskając klawisz **Enter**. Konsola nie odpowiada, a wprowadzony ciąg nie jest wyświetlany w oknie konsoli, ale metoda <xref:System.Console.ReadLine%2A?displayProperty=nameWithType> przechwytuje dane wejściowe.
+1. Odpowiedz na monit, wprowadzając ciąg w oknie konsoli i naciskając klawisz **Enter**. Konsola nie odpowiada, a wprowadzony ciąg nie jest wyświetlany w oknie <xref:System.Console.ReadLine%2A?displayProperty=nameWithType> konsoli, ale mimo to metoda będzie przechwytywać dane wejściowe.
 
-1. Wybierz pozycję **debuguj** > **Wkrocz do** lub naciśnij klawisz **F11**. Program Visual Studio podświetla instrukcję, która zawiera `date` przypisanie zmiennej. Okno zmienne **lokalne** pokazuje wartość zwracaną przez wywołanie metody <xref:System.Console.ReadLine%2A?displayProperty=nameWithType>. W oknie konsoli jest również wyświetlany ciąg wprowadzony w wierszu polecenia.
+1. Wybierz **opcję Debug** > **Ujmij krok do** lub naciśnij klawisz **F11**. Visual Studio wyróżnia instrukcję, która zawiera przypisanie zmiennej. `date` Locals **Locals** okno pokazuje wartość zwracaną przez <xref:System.Console.ReadLine%2A?displayProperty=nameWithType> wywołanie metody. W oknie konsoli jest również wyświetlany ciąg wprowadzony w wierszu polecenia.
 
-1. Wybierz pozycję **debuguj** > **Wkrocz do** lub naciśnij klawisz **F11**. Okno zmienne **lokalne** pokazuje wartość zmiennej `date` po przypisaniu z właściwości <xref:System.DateTime.Now?displayProperty=nameWithType>. Okno konsoli nie jest zmieniane.
+1. Wybierz **opcję Debug** > **Ujmij krok do** lub naciśnij klawisz **F11**. Locals **Locals** okno pokazuje wartość `date` zmiennej po przypisania z <xref:System.DateTime.Now?displayProperty=nameWithType> właściwości. Okno konsoli pozostaje bez zmian.
 
-1. Wybierz pozycję **debuguj** > **Wkrocz do** lub naciśnij klawisz **F11**. Program Visual Studio wywołuje metodę <xref:System.Console.WriteLine(System.String,System.Object,System.Object)?displayProperty=nameWithType>. W oknie konsoli zostanie wyświetlony sformatowany ciąg.
+1. Wybierz **opcję Debug** > **Ujmij krok do** lub naciśnij klawisz **F11**. Visual Studio <xref:System.Console.WriteLine(System.String,System.Object,System.Object)?displayProperty=nameWithType> wywołuje metodę. W oknie konsoli jest wyświetlany sformatowany ciąg.
 
-1. Wybierz pozycję **debuguj** > **Wyjdź** lub naciśnij klawisz **SHIFT**+**F11**. Spowoduje to zatrzymanie wykonywania krok po kroku. W oknie konsoli zostanie wyświetlony komunikat i czeka na naciśnięcie klawisza.
+1. Wybierz **debugowanie** > **step out** lub naciśnij klawisz **Shift**+**F11**. Spowoduje to zatrzymanie wykonywania krok po kroku. W oknie konsoli zostanie wyświetlony komunikat i czeka na naciśnięcie klawisza.
 
 1. Naciśnij dowolny klawisz, aby zamknąć okno konsoli i zatrzymać debugowanie.
 
 # <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
-1. Na pasku menu wybierz **debuguj** > **Wkrocz do** lub naciśnij klawisz **F11**. Program Visual Studio podświetla i wyświetli strzałkę obok następnego wiersza wykonania.
+1. Na pasku menu wybierz pozycję **Debuguj** > **krok do** lub naciśnij klawisz **F11**. Program Visual Studio wyróżnia i wyświetla strzałkę obok następnego wiersza wykonania.
 
-   ![Visual Studio Wkrocz do metody-Visual Basic](./media/debugging-with-visual-studio/vb-step-into-method.png)
+   ![Visual Studio krok do metody — Visual Basic](./media/debugging-with-visual-studio/vb-step-into-method.png)
 
-   W tym momencie okno **lokalne** pokazuje, że program ma zdefiniowaną tylko jedną zmienną, `args`. Ponieważ nie przesłano żadnych argumentów wiersza polecenia do programu, jego wartość jest pustą tablicą ciągów. Ponadto program Visual Studio otworzył puste okno konsoli.
+   W tym momencie **locals** okno pokazuje, że program zdefiniował tylko jedną zmienną, `args`. Ponieważ nie przekazano programowi żadnych argumentów wiersza polecenia, jego wartość jest tablicą pustych ciągów. Ponadto program Visual Studio otworzył puste okno konsoli.
 
-1. Wybierz pozycję **debuguj** > **Wkrocz do** lub naciśnij klawisz **F11**. Program Visual Studio teraz podświetla następny wiersz wykonania. Jak widać na ilustracji, pobrano mniej niż jedną milisekundę do wykonania kodu między ostatnią instrukcją a tym. `args` pozostaje jedyną zadeklarowaną zmienną, a okno konsoli pozostanie puste.
+1. Wybierz **opcję Debug** > **Ujmij krok do** lub naciśnij klawisz **F11**. Visual Studio teraz wyróżnia następny wiersz wykonania. Jak pokazano na rysunku, zajęło mniej niż jedną milisekundę, aby wykonać kod między ostatnią instrukcją a tą. `args`pozostaje jedyną zadeklarowaną zmienną, a okno konsoli pozostaje puste.
 
-   ![Visual Studio — przejdź do źródła metody — Visual Basic](./media/debugging-with-visual-studio/vb-step-into-source-method.png)
+   ![Visual Studio krok do źródła metody — Visual Basic](./media/debugging-with-visual-studio/vb-step-into-source-method.png)
 
-1. Wybierz pozycję **debuguj** > **Wkrocz do** lub naciśnij klawisz **F11**. Program Visual Studio podświetla instrukcję, która zawiera `name` przypisanie zmiennej. Okno **lokalne** pokazuje, że `name` jest `Nothing`, a okno konsoli wyświetla ciąg "co to jest Twoja nazwa?".
+1. Wybierz **opcję Debug** > **Ujmij krok do** lub naciśnij klawisz **F11**. Visual Studio wyróżnia instrukcję, która zawiera przypisanie zmiennej. `name` Okno **Locals** pokazuje, że `name` jest `Nothing`, a okno konsoli wyświetla ciąg "Jak masz na imię?".
 
-1. Odpowiedz na monit, wprowadzając ciąg w oknie konsoli i naciskając klawisz **Enter**. Konsola nie odpowiada, a wprowadzony ciąg nie jest wyświetlany w oknie konsoli, ale metoda <xref:System.Console.ReadLine%2A?displayProperty=nameWithType> przechwytuje dane wejściowe.
+1. Odpowiedz na monit, wprowadzając ciąg w oknie konsoli i naciskając klawisz **Enter**. Konsola nie odpowiada, a wprowadzony ciąg nie jest wyświetlany w oknie <xref:System.Console.ReadLine%2A?displayProperty=nameWithType> konsoli, ale mimo to metoda będzie przechwytywać dane wejściowe.
 
-1. Wybierz pozycję **debuguj** > **Wkrocz do** lub naciśnij klawisz **F11**. Program Visual Studio podświetla instrukcję, która zawiera `currentDate` przypisanie zmiennej. Okno zmienne **lokalne** pokazuje wartość zwracaną przez wywołanie metody <xref:System.Console.ReadLine%2A?displayProperty=nameWithType>. W oknie konsoli jest również wyświetlany ciąg wprowadzony w momencie wyświetlenia monitu o wprowadzenie do konsoli.
+1. Wybierz **opcję Debug** > **Ujmij krok do** lub naciśnij klawisz **F11**. Visual Studio wyróżnia instrukcję, która zawiera przypisanie zmiennej. `currentDate` Locals **Locals** okno pokazuje wartość zwracaną przez <xref:System.Console.ReadLine%2A?displayProperty=nameWithType> wywołanie metody. W oknie konsoli jest również wyświetlany ciąg wprowadzony, gdy konsola zostanie poproszona o wprowadzenie danych.
 
-1. Wybierz pozycję **debuguj** > **Wkrocz do** lub naciśnij klawisz **F11**. Okno konsoli nie jest zmieniane.
+1. Wybierz **opcję Debug** > **Ujmij krok do** lub naciśnij klawisz **F11**. Okno konsoli pozostaje bez zmian.
 
-1. Wybierz pozycję **debuguj** > **Wkrocz do** lub naciśnij klawisz **F11**. Program Visual Studio wywołuje metodę <xref:System.Console.WriteLine(System.String,System.Object,System.Object)?displayProperty=nameWithType>. W oknie konsoli zostanie wyświetlony sformatowany ciąg.
+1. Wybierz **opcję Debug** > **Ujmij krok do** lub naciśnij klawisz **F11**. Visual Studio <xref:System.Console.WriteLine(System.String,System.Object,System.Object)?displayProperty=nameWithType> wywołuje metodę. W oknie konsoli jest wyświetlany sformatowany ciąg.
 
-1. Wybierz pozycję **debuguj** > **Wyjdź** lub naciśnij klawisz **SHIFT**+**F11**. Spowoduje to zatrzymanie wykonywania krok po kroku. W oknie konsoli zostanie wyświetlony komunikat i czeka na naciśnięcie klawisza.
+1. Wybierz **debugowanie** > **step out** lub naciśnij klawisz **Shift**+**F11**. Spowoduje to zatrzymanie wykonywania krok po kroku. W oknie konsoli zostanie wyświetlony komunikat i czeka na naciśnięcie klawisza.
 
 1. Naciśnij dowolny klawisz, aby zamknąć okno konsoli i zatrzymać debugowanie.
 
 ---
 
-## <a name="build-a-release-version"></a>Tworzenie wersji wydania
+## <a name="build-a-release-version"></a>Tworzenie wersji
 
-Po przetestowaniu wersji debugowania aplikacji należy również skompilować i przetestować wersję publikacji. Wersja wydania obejmuje optymalizacje kompilatora, które mogą czasami mieć negatywny wpływ na działanie aplikacji. Na przykład optymalizacje kompilatora, które mają na celu poprawę wydajności, mogą tworzyć sytuacje wyścigu w aplikacjach wielowątkowych.
+Po przetestowaniu wersji debugowania aplikacji należy również skompilować i przetestować wersję. Wersja zawiera optymalizacje kompilatora, które czasami mogą negatywnie wpłynąć na zachowanie aplikacji. Na przykład optymalizacje kompilatora, które są przeznaczone do poprawy wydajności można utworzyć warunki wyścigu w aplikacjach wielowątkowych.
 
-Aby skompilować i przetestować wydaną wersję aplikacji konsolowej, Zmień konfigurację kompilacji na pasku narzędzi z **Debuguj** do **Release**.
+Aby utworzyć i przetestować wersję aplikacji konsoli, zmień konfigurację kompilacji na pasku narzędzi z **Debug** do **Release**.
 
-![domyślny pasek narzędzi programu Visual Studio z wyróżnioną pozycją Debug](./media/debugging-with-visual-studio/visual-studio-toolbar-release.png)
+![domyślny pasek narzędzi programu Visual Studio z wyróżnioną debugowaniem](./media/debugging-with-visual-studio/visual-studio-toolbar-release.png)
 
-Po naciśnięciu klawisza **F5** lub wybraniu opcji **Kompiluj rozwiązanie** z menu **kompilacja** program Visual Studio kompiluje wersję aplikacji. Można go przetestować, tak jak w przypadku wersji do debugowania.
+Po naciśnięciu **klawisza F5** lub **wybraniu opcji Tworzenie rozwiązania** z menu **Kompilacja** program Visual Studio kompiluje wersję aplikacji. Można go przetestować, tak jak w wersji debugowania.
 
 ## <a name="next-steps"></a>Następne kroki
 
-Po zakończeniu debugowania aplikacji następnym krokiem jest opublikowanie wersji do wdrożenia aplikacji. Aby uzyskać informacje o tym, jak to zrobić, zobacz temat [publikowanie aplikacji .NET Core Hello World przy użyciu programu Visual Studio](publishing-with-visual-studio.md).
+Po debugowania aplikacji następnym krokiem jest opublikowanie wdrożonej wersji aplikacji. Aby uzyskać informacje na temat sposobu wykonywania tej funkcji, zobacz [Publikowanie aplikacji .NET Core Hello World za pomocą programu Visual Studio](publishing-with-visual-studio.md).

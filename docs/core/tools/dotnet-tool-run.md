@@ -1,32 +1,33 @@
 ---
-title: Uruchom polecenie Narzędzia dotnet
-description: Polecenie Uruchom narzędzie dotnet wywołuje narzędzie lokalne.
+title: polecenie uruchom narzędzie dotnet
+description: Polecenie uruchamiania narzędzia dotnet wywołuje narzędzie lokalne.
 ms.date: 02/14/2020
-ms.openlocfilehash: 76830b8a8088fbf21f14ab0722b9547eabde7ba4
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: a088cd0b7f4bba014234a8189a42a63aa6d88f4e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156962"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847849"
 ---
 # <a name="dotnet-tool-run"></a>dotnet tool run
 
-**Ten artykuł ma zastosowanie do:** ✔️ .net Core 3,0 SDK i nowszych wersjach
+**Ten artykuł dotyczy:** ✔️ .NET Core 3.0 SDK i nowszych wersji
 
-## <a name="name"></a>Name (Nazwa)
+## <a name="name"></a>Nazwa
 
-`dotnet tool run` — wywołuje narzędzie lokalne.
+`dotnet tool run`- Wywołuje lokalne narzędzie.
 
 ## <a name="synopsis"></a>Streszczenie
 
 ```dotnetcli
 dotnet tool run <COMMAND NAME>
+
 dotnet tool run <-h|--help>
 ```
 
 ## <a name="description"></a>Opis
 
-Polecenie `dotnet tool run` przeszukuje pliki manifestu narzędzia, które znajdują się w zakresie dla bieżącego katalogu. Po znalezieniu odwołania do określonego narzędzia zostanie uruchomione narzędzie. Aby uzyskać więcej informacji, zobacz [wywoływanie narzędzia lokalnego](global-tools.md#invoke-a-local-tool).
+Polecenie `dotnet tool run` wyszukuje pliki manifestu narzędzia, które znajdują się w zakresie bieżącego katalogu. Po znalezieniu odwołania do określonego narzędzia uruchamia narzędzie. Aby uzyskać więcej informacji, zobacz [Wywoływanie narzędzia lokalnego](global-tools.md#invoke-a-local-tool).
 
 ## <a name="arguments"></a>Argumenty
 
@@ -44,8 +45,9 @@ Polecenie `dotnet tool run` przeszukuje pliki manifestu narzędzia, które znajd
 
 - **`dotnet tool run dotnetsay`**
 
-  Uruchamia narzędzie `dotnetsay` lokalnego.
+  Uruchamia `dotnetsay` narzędzie lokalne.
 
 ## <a name="see-also"></a>Zobacz też
 
 - [Narzędzia .NET Core](global-tools.md)
+- [Samouczek: Instalowanie i używanie lokalnego narzędzia .NET Core przy użyciu procesora CLI .NET Core](local-tools-how-to-use.md)

@@ -1,14 +1,14 @@
 ---
 ms.openlocfilehash: 806722ea9aec1c828786525e3155b7f624159ac1
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72522666"
 ---
-### <a name="identity-adddefaultui-method-overload-removed"></a>Tożsamość: Usunięto Przeciążenie metody AddDefaultUI
+### <a name="identity-adddefaultui-method-overload-removed"></a>Tożsamość: usunięto przeciążenie metody AddDefaultUI
 
-Począwszy od ASP.NET Core 3,0, Przeciążenie metody <xref:Microsoft.AspNetCore.Identity.IdentityBuilderUIExtensions.AddDefaultUI(Microsoft.AspNetCore.Identity.IdentityBuilder,Microsoft.AspNetCore.Identity.UI.UIFramework)?displayProperty=nameWithType> już nie istnieje.
+Począwszy od ASP.NET Core <xref:Microsoft.AspNetCore.Identity.IdentityBuilderUIExtensions.AddDefaultUI(Microsoft.AspNetCore.Identity.IdentityBuilder,Microsoft.AspNetCore.Identity.UI.UIFramework)?displayProperty=nameWithType> 3.0, przeciążenie metody już nie istnieje.
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -16,11 +16,11 @@ Począwszy od ASP.NET Core 3,0, Przeciążenie metody <xref:Microsoft.AspNetCore
 
 #### <a name="reason-for-change"></a>Przyczyna zmiany
 
-Ta zmiana była wynikiem przyjęcia funkcji statyczne elementy zawartości sieci Web.
+Ta zmiana była wynikiem przyjęcia funkcji statycznych zasobów sieci web.
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Wywołaj <xref:Microsoft.AspNetCore.Identity.IdentityBuilderUIExtensions.AddDefaultUI(Microsoft.AspNetCore.Identity.IdentityBuilder)?displayProperty=nameWithType> zamiast przeciążenia. Jeśli używasz narzędzia Bootstrap 3, Dodaj również następujący wiersz do `<PropertyGroup>` elementu w pliku projektu:
+Wywołanie <xref:Microsoft.AspNetCore.Identity.IdentityBuilderUIExtensions.AddDefaultUI(Microsoft.AspNetCore.Identity.IdentityBuilder)?displayProperty=nameWithType> zamiast przeciążenia. Jeśli używasz programu Bootstrap 3, dodaj również `<PropertyGroup>` następujący wiersz do elementu w pliku projektu:
 
 ```xml
 <IdentityUIFrameworkVersion>Bootstrap3</IdentityUIFrameworkVersion>

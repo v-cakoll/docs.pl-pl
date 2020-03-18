@@ -1,18 +1,18 @@
 ---
-title: Wprowadzenie do cyklu życia aplikacji platformy Docker
-description: Zacznij tutaj przejazdem tworzenia aplikacji kontenerowych.
+title: Wprowadzenie do cyklu życia aplikacji Platformy Docker
+description: Rozpocznij tutaj podróż konteneryzowanych rozwoju aplikacji.
 ms.date: 11/23/2018
 ms.openlocfilehash: 825226e0004af16deccfe1418596d91d6438b076
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "70295367"
 ---
-# <a name="introduction-tothe-docker-application-life-cycle"></a>Wprowadzenie do cyklu życia aplikacji platformy Docker
+# <a name="introduction-tothe-docker-application-life-cycle"></a>Wprowadzenie do cyklu życia aplikacji Platformy Docker
 
-*Cykl życia aplikacji kontenerowych to podróż, która zaczyna się od dewelopera. Deweloperzy wybierają implementację kontenerów i platformy Docker, ponieważ eliminuje to tarcie we wdrożeniach i operacjach IT, co ostatecznie pomaga wszystkim użytkownikom na bardziej elastyczne, wydajniejsze i szybsze działanie.*
+*Cykl życia konteneryzowanych aplikacji jest podróż, która rozpoczyna się od dewelopera. Deweloper zdecyduje się zaimplementować kontenery i platformę Docker, ponieważ eliminuje tarcia we wdrożeniach i operacjach IT, co ostatecznie pomaga wszystkim być bardziej zwinnym, bardziej produktywnym end-to-end i szybciej.*
 
 >[!div class="step-by-step"]
 >[Poprzedni](../docker-containers-images-and-registries.md)
->[Następny](containers-foundation-for-devops-collaboration.md)
+>[następny](containers-foundation-for-devops-collaboration.md)

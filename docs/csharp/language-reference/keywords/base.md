@@ -1,6 +1,6 @@
 ---
-title: podstawowe słowo kluczowe C# — odwołanie
-description: Dowiedz się więcej o słowie kluczowym Base, które służy do uzyskiwania dostępu do elementów członkowskich klasy bazowej z C#poziomu klasy pochodnej w.
+title: podstawowe słowo kluczowe - Odwołanie do języka C#
+description: Dowiedz się więcej o podstawowym senie kluczowym, które służy do uzyskiwania dostępu do członków klasy podstawowej z poziomu klasy pochodnej w języku C#.
 ms.date: 07/20/2015
 f1_keywords:
 - base
@@ -10,37 +10,37 @@ helpviewer_keywords:
 - base keyword [C#]
 ms.assetid: 8b645dbe-1a33-49b8-8716-1c401f9a5ea5
 ms.openlocfilehash: a4686fc5d4245a50de5d77dc0e71c231772f40ef
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713769"
 ---
 # <a name="base-c-reference"></a>base (odwołanie w C#)
 
-Słowo kluczowe `base` służy do uzyskiwania dostępu do składowych klasy bazowej z poziomu klasy pochodnej:
+Słowo `base` kluczowe służy do uzyskiwania dostępu do elementów członkowskich klasy podstawowej z poziomu klasy pochodnej:
 
-- Wywołaj metodę w klasie bazowej, która została zastąpiona przez inną metodę.
+- Wywołaj metodę w klasie podstawowej, która została zastąpiona przez inną metodę.
 
-- Określ, który Konstruktor klasy bazowej powinien być wywoływany podczas tworzenia wystąpień klasy pochodnej.
+- Określ, który konstruktor klasy podstawowej powinien być wywoływany podczas tworzenia wystąpień klasy pochodnej.
 
-Dostęp do klasy podstawowej jest dozwolony tylko w konstruktorze, metodzie wystąpienia lub akcesorze właściwości wystąpienia.
+Dostęp klasy podstawowej jest dozwolone tylko w konstruktora, metody wystąpienia lub akcesor właściwości wystąpienia.
 
-Wystąpił błąd, aby użyć słowa kluczowego `base` z metody statycznej.
+Jest to błąd, `base` aby użyć słowa kluczowego z wewnątrz metody statycznej.
 
-Dostępną klasą bazową jest klasa bazowa określona w deklaracji klasy. Na przykład jeśli określisz `class ClassB : ClassA`, członkowie ClassA są dostępni z ClassB, niezależnie od klasy bazowej ClassA.
+Klasa podstawowa, która jest dostępna jest klasa podstawowa określona w deklaracji klasy. Na przykład, jeśli `class ClassB : ClassA`określisz, członkowie ClassA są dostępne z ClassB, niezależnie od klasy podstawowej ClassA.
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie zarówno Klasa bazowa, `Person`, jak i Klasa pochodna, `Employee`, mają metodę o nazwie `Getinfo`. Za pomocą słowa kluczowego `base` można wywołać metodę `Getinfo` w klasie bazowej z poziomu klasy pochodnej.
+W tym przykładzie zarówno klasa `Person`podstawowa, jak `Employee`i klasa pochodna , mają metodę o nazwie `Getinfo`. Za pomocą `base` słowa kluczowego, można `Getinfo` wywołać metodę na klasie podstawowej, z poziomu klasy pochodnej.
 
 [!code-csharp[csrefKeywordsAccess#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsAccess/CS/csrefKeywordsAccess.cs#1)]
 
-Aby uzyskać więcej przykładów, zobacz [nowe](new-modifier.md), [wirtualne](virtual.md)i [przesłonięcie](override.md).
+Aby uzyskać dodatkowe przykłady, zobacz [nowe](new-modifier.md), [wirtualne](virtual.md)i [zastąp](override.md).
 
 ## <a name="example"></a>Przykład
 
-Ten przykład pokazuje, jak określić Konstruktor klasy bazowej wywoływany podczas tworzenia wystąpień klasy pochodnej.
+W tym przykładzie pokazano, jak określić konstruktora klasy podstawowej wywoływane podczas tworzenia wystąpień klasy pochodnej.
 
 [!code-csharp[csrefKeywordsAccess#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsAccess/CS/csrefKeywordsAccess.cs#2)]
 
@@ -48,9 +48,9 @@ Ten przykład pokazuje, jak określić Konstruktor klasy bazowej wywoływany pod
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Dokumentacja języka C#](../index.md)
-- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [Odwołanie do języka C#](../index.md)
+- [Przewodnik programowania języka C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](./index.md)
-- [this](./this.md)
+- [względem tego ruchu](./this.md)

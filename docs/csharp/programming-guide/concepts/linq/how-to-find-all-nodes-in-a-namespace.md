@@ -1,19 +1,19 @@
 ---
-title: Jak znaleźć wszystkie węzły w przestrzeni nazw (C#)
+title: Jak znaleźć wszystkie węzły w obszarze nazw (C#)
 ms.date: 07/20/2015
 ms.assetid: 3a38b913-a53e-4d0e-a19d-8782bffd3364
 ms.openlocfilehash: 408f4207798720428d0dd3821d33fd3edf2f897e
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141180"
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-c"></a><span data-ttu-id="51a48-102">Jak znaleźć wszystkie węzły w przestrzeni nazw (C#)</span><span class="sxs-lookup"><span data-stu-id="51a48-102">How to find all nodes in a namespace (C#)</span></span>
-<span data-ttu-id="51a48-103">Można filtrować według przestrzeni nazw każdego elementu lub atrybutu, aby znaleźć wszystkie węzły w danej przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="51a48-103">You can filter on the namespace of each element or attribute to find all nodes in that particular namespace.</span></span>  
+# <a name="how-to-find-all-nodes-in-a-namespace-c"></a><span data-ttu-id="4255c-102">Jak znaleźć wszystkie węzły w obszarze nazw (C#)</span><span class="sxs-lookup"><span data-stu-id="4255c-102">How to find all nodes in a namespace (C#)</span></span>
+<span data-ttu-id="4255c-103">Można filtrować w obszarze nazw każdego elementu lub atrybutu, aby znaleźć wszystkie węzły w tym określonym obszarze nazw.</span><span class="sxs-lookup"><span data-stu-id="4255c-103">You can filter on the namespace of each element or attribute to find all nodes in that particular namespace.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="51a48-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="51a48-104">Example</span></span>  
- <span data-ttu-id="51a48-105">Poniższy przykład tworzy drzewo XML z dwoma przestrzeniami nazw.</span><span class="sxs-lookup"><span data-stu-id="51a48-105">The following example creates an XML tree with two namespaces.</span></span> <span data-ttu-id="51a48-106">Następnie wykonuje iterację w drzewie i drukuje nazwy wszystkich elementów i atrybutów w jednej z tych przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="51a48-106">It then iterates through the tree and prints the names of all the elements and attributes in one of those namespaces.</span></span>  
+## <a name="example"></a><span data-ttu-id="4255c-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="4255c-104">Example</span></span>  
+ <span data-ttu-id="4255c-105">Poniższy przykład tworzy drzewo XML z dwoma obszarami nazw.</span><span class="sxs-lookup"><span data-stu-id="4255c-105">The following example creates an XML tree with two namespaces.</span></span> <span data-ttu-id="4255c-106">Następnie iteruje przez drzewo i drukuje nazwy wszystkich elementów i atrybutów w jednym z tych obszarów nazw.</span><span class="sxs-lookup"><span data-stu-id="4255c-106">It then iterates through the tree and prints the names of all the elements and attributes in one of those namespaces.</span></span>  
   
 ```csharp  
 string markup = @"<aw:Root xmlns:aw='http://www.adventure-works.com' xmlns:fc='www.fourthcoffee.com'>  
@@ -35,7 +35,7 @@ foreach (XElement el in awElements)
     Console.WriteLine(el.Name.ToString());  
 ```  
   
- <span data-ttu-id="51a48-107">Ten kod generuje następujące dane wyjściowe:</span><span class="sxs-lookup"><span data-stu-id="51a48-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="4255c-107">Ten kod generuje następujące dane wyjściowe:</span><span class="sxs-lookup"><span data-stu-id="4255c-107">This code produces the following output:</span></span>  
   
 ```output  
 Nodes in the http://www.adventure-works.com namespace  
@@ -43,10 +43,10 @@ Nodes in the http://www.adventure-works.com namespace
 {http://www.adventure-works.com}GrandChild2  
 ```  
   
-## <a name="example"></a><span data-ttu-id="51a48-108">Przykład</span><span class="sxs-lookup"><span data-stu-id="51a48-108">Example</span></span>  
- <span data-ttu-id="51a48-109">Plik XML, do którego uzyskuje się następujące zapytanie, zawiera zamówienia zakupu w dwóch różnych przestrzeniach nazw.</span><span class="sxs-lookup"><span data-stu-id="51a48-109">The XML file accessed by the following query contains purchase orders in two different namespaces.</span></span> <span data-ttu-id="51a48-110">Zapytanie tworzy nowe drzewo zawierające tylko elementy w jednej z przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="51a48-110">The query creates a new tree with just the elements in one of the namespaces.</span></span>  
+## <a name="example"></a><span data-ttu-id="4255c-108">Przykład</span><span class="sxs-lookup"><span data-stu-id="4255c-108">Example</span></span>  
+ <span data-ttu-id="4255c-109">Plik XML, do który uzyskano dostęp, korzystając z następującej kwerendy, zawiera zamówienia zakupu w dwóch różnych przestrzeniach nazw.</span><span class="sxs-lookup"><span data-stu-id="4255c-109">The XML file accessed by the following query contains purchase orders in two different namespaces.</span></span> <span data-ttu-id="4255c-110">Kwerenda tworzy nowe drzewo tylko z elementami w jednym z obszarów nazw.</span><span class="sxs-lookup"><span data-stu-id="4255c-110">The query creates a new tree with just the elements in one of the namespaces.</span></span>  
   
- <span data-ttu-id="51a48-111">W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: skonsolidowane zamówienia zakupu](./sample-xml-file-consolidated-purchase-orders.md).</span><span class="sxs-lookup"><span data-stu-id="51a48-111">This example uses the following XML document: [Sample XML File: Consolidated Purchase Orders](./sample-xml-file-consolidated-purchase-orders.md).</span></span>  
+ <span data-ttu-id="4255c-111">W tym przykładzie użyto następującego dokumentu XML: [Przykładowy plik XML: Skonsolidowane zamówienia zakupu](./sample-xml-file-consolidated-purchase-orders.md).</span><span class="sxs-lookup"><span data-stu-id="4255c-111">This example uses the following XML document: [Sample XML File: Consolidated Purchase Orders](./sample-xml-file-consolidated-purchase-orders.md).</span></span>  
   
 ```csharp  
 XDocument cpo = XDocument.Load("ConsolidatedPurchaseOrders.xml");  
@@ -59,7 +59,7 @@ XElement newTree = new XElement("Root",
 Console.WriteLine(newTree);  
 ```  
   
- <span data-ttu-id="51a48-112">Ten kod generuje następujące dane wyjściowe:</span><span class="sxs-lookup"><span data-stu-id="51a48-112">This code produces the following output:</span></span>  
+ <span data-ttu-id="4255c-112">Ten kod generuje następujące dane wyjściowe:</span><span class="sxs-lookup"><span data-stu-id="4255c-112">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  

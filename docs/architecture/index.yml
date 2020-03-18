@@ -7,25 +7,25 @@ metadata:
   ms.topic: landing-page
   ms.date: 10/22/2019
 abstract:
-  description: 'Dowiedz się, jak tworzyć aplikacje .NET gotowe do użycia w środowisku produkcyjnym przy użyciu bezpłatnych wskazówek dotyczących architektury aplikacji.'
+  description: 'Dowiedz się, jak tworzyć gotowe do produkcji aplikacje .NET z bezpłatnymi wskazówkami dotyczącymi architektury aplikacji.'
 sections:
-  - title: Opublikowane książki elektroniczne
+  - title: Opublikowane e-booki
     items:
-      - html: <ul><li><p><a href="grpc-for-wcf-developers/index">ASP.NET Core gRPC dla deweloperów WCF</a></p>
-      - html: '<p>W tym przewodniku wyjaśniono, co to jest gRPC, odnoszące się do poszczególnych koncepcji funkcji WCF, i przedstawiono wskazówki dotyczące migrowania istniejącej aplikacji WCF do gRPC.</p></li></ul>'
-      - html: <ul><li><p><a href="containerized-lifecycle/index">Cykl życia aplikacji platformy Docker w kontenerze z platformą i narzędziami firmy Microsoft</a></p>
-      - html: '<p>Ten przewodnik zawiera wprowadzenie do zalecanych kompleksowych procesów cyklu życia, z których można korzystać w celu opracowywania, weryfikowania i wdrażania aplikacji platformy Docker przy użyciu programu Visual Studio i Microsoft Azure.</p></li></ul>'
-      - html: <ul><li><p><a href="modernize-with-azure-containers/index">Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows</a></p>
-      - html: '<p>Ten przewodnik zawiera wprowadzenie do strategii potrzebnych do migrowania istniejących aplikacji sieci Web do usługi Azure Cloud i kontenerów systemu Windows. Zapoznaj się z strategiami kodu, migracją danych, koordynatorami i procesami ciągłej integracji/ciągłego wdrażania.</p></li></ul>'
-      - html: <ul><li><p><a href="modern-web-apps-azure/index">Tworzenie architektury nowoczesnych aplikacji sieci Web przy użyciu ASP.NET Core i platformy Azure</a></p>
-      - html: '<p>Ten przewodnik zawiera wprowadzenie do zalecanej architektury, projektu i procesów wdrażania, które będą używane do kompilowania aplikacji ASP.NET i ASP.NET Core oraz hostowania aplikacji na platformie Azure.</p></li></ul>'
-      - html: <ul><li><p><a href="microservices/index">Tworzenie architektury aplikacji opartych na kontenerach i mikrousługach</a></p>
-      - html: <p>Ten przewodnik stanowi wprowadzenie do tworzenia aplikacji opartych na mikrousługach i zarządzania nimi przy użyciu kontenerów. Omówiono w nim podejścia do projektowania i implementowania architektury przy użyciu platformy .NET Core i kontenerów Docker.</p></li></ul>
+      - html: <ul><li><p><a href="grpc-for-wcf-developers/index">Usługa gRPC platformy ASP.NET Core dla deweloperów WCF</a></p>
+      - html: '<p>W tym przewodniku wyjaśniono, co to jest gRPC, odnoszące się do każdej koncepcji do równoważnych funkcji WCF i oferuje wskazówki dotyczące migracji istniejącej aplikacji WCF do gRPC.</p></li></ul>'
+      - html: <ul><li><p><a href="containerized-lifecycle/index">Cykl życia konteneryzowanych aplikacji platformy Docker korzystających z platformy i narzędzi firmy Microsoft</a></p>
+      - html: '<p>Ten przewodnik zawiera wprowadzenie do zalecanych procesów cyklu życia typu end-to-end, które będą używane do tworzenia, sprawdzania poprawności i wdrażania kontenerowych aplikacji platformy Docker przy użyciu programu Visual Studio i platformy Microsoft Azure.</p></li></ul>'
+      - html: <ul><li><p><a href="modernize-with-azure-containers/index">Modernizacja istniejących aplikacji .NET za pomocą kontenerów w chmurze platformy Azure i systemu Windows</a></p>
+      - html: '<p>Ten przewodnik jest wprowadzeniem do strategii potrzebnych do migracji istniejących aplikacji sieci web do kontenerów chmury platformy Azure i systemu Windows. Dowiesz się o strategiach kodu, migracji danych, koordynatorach i procesach ciągłej integracji/ciągłej integracji.</p></li></ul>'
+      - html: <ul><li><p><a href="modern-web-apps-azure/index">Architekt nowoczesnych aplikacji internetowych z ASP.NET Core i Azure</a></p>
+      - html: '<p>Ten przewodnik jest wprowadzeniem do zalecanych architektury, projektowania i wdrażania procesów, które będą używane do tworzenia ASP.NET i ASP.NET podstawowych aplikacji i hostowania tych aplikacji na platformie Azure.</p></li></ul>'
+      - html: <ul><li><p><a href="microservices/index">Projektowanie aplikacji kontenerowych i opartych na mikrousługach</a></p>
+      - html: <p>Ten przewodnik jest wprowadzenie do tworzenia aplikacji opartych na mikrousługach i zarządzanie nimi za pomocą kontenerów. Omówiono projekt architektoniczny i podejścia implementacji przy użyciu .NET Core i kontenerów platformy Docker.</p></li></ul>
       - html: '<ul><li><p><a href="serverless/index">Aplikacje bezserwerowe: architektura, wzorce i implementacja platformy Azure</a></p>'
-      - html: '<p>Jest to przewodnik dotyczący tworzenia aplikacji bezserwerowych z przykładami przy użyciu platformy Azure. W tym artykule omówiono różne podejścia do architektury i projektowania, korzyści i wyzwania związane z bez serwera oraz scenariusze i przypadki użycia dla aplikacji bezserwerowych.</p></li></ul>'
+      - html: '<p>Jest to przewodnik do tworzenia aplikacji bezserwerowych z przykładami przy użyciu platformy Azure. Omówiono różne podejścia do architektury i projektowania, korzyści i wyzwania, które pochodzą z bezserwerowe i zawiera scenariusze i przypadki użycia dla aplikacji bezserwerowych.</p></li></ul>'
   - title: Podgląd książek elektronicznych
     items:
-      - html: <ul><li><p><a href="cloud-native/index">Tworzenie architektury natywnych aplikacji .NET w chmurze dla platformy Azure</a></p>
-      - html: '<p>W tym przewodniku opisano, co jest natywne w chmurze, wprowadzono przykładową aplikację utworzoną przy użyciu zasad natywnych w chmurze i omówiono tematy wspólne dla większości aplikacji natywnych w chmurze.</p></li></ul>'
-      - html: <ul><li><p><a href="blazor-for-web-forms-developers/index">Blazor dla deweloperów formularzy sieci Web ASP.NET</a></p>
-      - html: '<p>Wprowadzenie do Blazor dla deweloperów formularzy sieci Web ASP.NET. Dowiedz się, jak tworzyć aplikacje sieci Web w pełnym stosie przy użyciu platformy .NET, Blazor i .NET Core w prosty i znany sposób.</p></li></ul>'
+      - html: <ul><li><p><a href="cloud-native/index">Projektowanie natywnych dla chmury aplikacji platformy .NET dla platformy Azure</a></p>
+      - html: '<p>W tym przewodniku opisano, czym jest natywna chmura, wprowadza przykładową aplikację zbudowaną przy użyciu zasad natywnych dla chmury i obejmuje tematy typowe dla większości aplikacji natywnych dla chmury.</p></li></ul>'
+      - html: <ul><li><p><a href="blazor-for-web-forms-developers/index">Platforma Blazor dla deweloperów technologii ASP.NET Web Forms</a></p>
+      - html: '<p>Wprowadzenie do Blazor dla ASP.NET web forms deweloperów. Dowiedz się, jak tworzyć aplikacje sieci Web z pełnym stosem za pomocą platformy .NET przy użyciu funkcji Blazor i .NET Core w prosty i znajomy sposób.</p></li></ul>'

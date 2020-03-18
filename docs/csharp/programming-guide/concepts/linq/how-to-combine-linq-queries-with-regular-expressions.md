@@ -1,18 +1,18 @@
 ---
-title: Jak połączyć zapytania LINQ z wyrażeniami regularnymiC#()
+title: Jak połączyć zapytania LINQ z wyrażeniami regularnymi (C#)
 ms.date: 07/20/2015
 ms.assetid: 6b003b65-20a4-4ca2-929e-2ee3f215aecc
-ms.openlocfilehash: 97551f7d9d8cf13f05449c2f825ed4d29eb3d86e
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 104e63adb9c07a75077b92654afd791b6c82d8de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141410"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169432"
 ---
-# <a name="how-to-combine-linq-queries-with-regular-expressions-c"></a><span data-ttu-id="35b35-102">Jak połączyć zapytania LINQ z wyrażeniami regularnymiC#()</span><span class="sxs-lookup"><span data-stu-id="35b35-102">How to combine LINQ queries with regular expressions (C#)</span></span>
-<span data-ttu-id="35b35-103">Ten przykład pokazuje, jak używać klasy <xref:System.Text.RegularExpressions.Regex> do tworzenia wyrażenia regularnego w celu uzyskania bardziej złożonych odpowiedników w ciągach tekstowych.</span><span class="sxs-lookup"><span data-stu-id="35b35-103">This example shows how to use the <xref:System.Text.RegularExpressions.Regex> class to create a regular expression for more complex matching in text strings.</span></span> <span data-ttu-id="35b35-104">Zapytanie LINQ ułatwia filtrowanie według dokładnie plików, które mają być przeszukiwane przy użyciu wyrażenia regularnego, oraz do kształtowania wyników.</span><span class="sxs-lookup"><span data-stu-id="35b35-104">The LINQ query makes it easy to filter on exactly the files that you want to search with the regular expression, and to shape the results.</span></span>  
+# <a name="how-to-combine-linq-queries-with-regular-expressions-c"></a><span data-ttu-id="14ed3-102">Jak połączyć zapytania LINQ z wyrażeniami regularnymi (C#)</span><span class="sxs-lookup"><span data-stu-id="14ed3-102">How to combine LINQ queries with regular expressions (C#)</span></span>
+<span data-ttu-id="14ed3-103">W tym przykładzie pokazano, jak użyć <xref:System.Text.RegularExpressions.Regex> klasy do utworzenia wyrażenia regularnego dla bardziej złożonych dopasowywania w ciągach tekstowych.</span><span class="sxs-lookup"><span data-stu-id="14ed3-103">This example shows how to use the <xref:System.Text.RegularExpressions.Regex> class to create a regular expression for more complex matching in text strings.</span></span> <span data-ttu-id="14ed3-104">Kwerenda LINQ ułatwia filtrowanie dokładnie tych plików, które chcesz wyszukiwać za pomocą wyrażenia regularnego, oraz kształtowanie wyników.</span><span class="sxs-lookup"><span data-stu-id="14ed3-104">The LINQ query makes it easy to filter on exactly the files that you want to search with the regular expression, and to shape the results.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="35b35-105">Przykład</span><span class="sxs-lookup"><span data-stu-id="35b35-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="14ed3-105">Przykład</span><span class="sxs-lookup"><span data-stu-id="14ed3-105">Example</span></span>  
   
 ```csharp  
 class QueryWithRegEx  
@@ -36,7 +36,7 @@ class QueryWithRegEx
         // This query produces a list of files where a match  
         // was found, and a list of the matchedValues in that file.  
         // Note: Explicit typing of "Match" in select clause.  
-        // This is required because MatchCollection is not a   
+        // This is required because MatchCollection is not a
         // generic IEnumerable collection.  
         var queryMatchingFiles =  
             from file in fileList  
@@ -56,7 +56,7 @@ class QueryWithRegEx
   
         foreach (var v in queryMatchingFiles)  
         {  
-            // Trim the path a bit, then write   
+            // Trim the path a bit, then write
             // the file name in which a match was found.  
             string s = v.name.Substring(startFolder.Length - 1);  
             Console.WriteLine(s);  
@@ -73,7 +73,7 @@ class QueryWithRegEx
         Console.ReadKey();  
     }  
   
-    // This method assumes that the application has discovery   
+    // This method assumes that the application has discovery
     // permissions for all folders under the specified path.  
     static IEnumerable<System.IO.FileInfo> GetFiles(string path)  
     {  
@@ -93,12 +93,12 @@ class QueryWithRegEx
 }  
 ```  
   
- <span data-ttu-id="35b35-106">Należy zauważyć, że można także zbadać obiekt <xref:System.Text.RegularExpressions.MatchCollection>, który jest zwracany przez wyszukiwanie `RegEx`.</span><span class="sxs-lookup"><span data-stu-id="35b35-106">Note that you can also query the <xref:System.Text.RegularExpressions.MatchCollection> object that is returned by a `RegEx` search.</span></span> <span data-ttu-id="35b35-107">W tym przykładzie tylko wartość każdego dopasowania jest generowana w wynikach.</span><span class="sxs-lookup"><span data-stu-id="35b35-107">In this example only the value of each match is produced in the results.</span></span> <span data-ttu-id="35b35-108">Można jednak używać LINQ do wykonywania wszelkiego rodzaju filtrowania, sortowania i grupowania w tej kolekcji.</span><span class="sxs-lookup"><span data-stu-id="35b35-108">However, it is also possible to use LINQ to perform all kinds of filtering, sorting, and grouping on that collection.</span></span> <span data-ttu-id="35b35-109">Ponieważ <xref:System.Text.RegularExpressions.MatchCollection> jest nieogólną kolekcją <xref:System.Collections.IEnumerable>, należy jawnie podać typ zmiennej zakresu w zapytaniu.</span><span class="sxs-lookup"><span data-stu-id="35b35-109">Because <xref:System.Text.RegularExpressions.MatchCollection> is a non-generic <xref:System.Collections.IEnumerable> collection, you have to explicitly state the type of the range variable in the query.</span></span>  
+ <span data-ttu-id="14ed3-106">Należy zauważyć, że <xref:System.Text.RegularExpressions.MatchCollection> można również zbadać `RegEx` obiekt, który jest zwracany przez wyszukiwanie.</span><span class="sxs-lookup"><span data-stu-id="14ed3-106">Note that you can also query the <xref:System.Text.RegularExpressions.MatchCollection> object that is returned by a `RegEx` search.</span></span> <span data-ttu-id="14ed3-107">W tym przykładzie tylko wartość każdego dopasowania jest tworzona w wynikach.</span><span class="sxs-lookup"><span data-stu-id="14ed3-107">In this example only the value of each match is produced in the results.</span></span> <span data-ttu-id="14ed3-108">Jednak istnieje również możliwość użycia LINQ do wykonywania wszelkiego rodzaju filtrowania, sortowania i grupowania w tej kolekcji.</span><span class="sxs-lookup"><span data-stu-id="14ed3-108">However, it is also possible to use LINQ to perform all kinds of filtering, sorting, and grouping on that collection.</span></span> <span data-ttu-id="14ed3-109">Ponieważ <xref:System.Text.RegularExpressions.MatchCollection> jest to <xref:System.Collections.IEnumerable> kolekcja nierodzajowa, należy jawnie podać typ zmiennej zakresu w kwerendzie.</span><span class="sxs-lookup"><span data-stu-id="14ed3-109">Because <xref:System.Text.RegularExpressions.MatchCollection> is a non-generic <xref:System.Collections.IEnumerable> collection, you have to explicitly state the type of the range variable in the query.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="35b35-110">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="35b35-110">Compiling the Code</span></span>  
- <span data-ttu-id="35b35-111">Utwórz projekt C# aplikacji konsolowej z `using` dyrektywami dotyczącymi przestrzeni nazw System. Linq i system.IO.</span><span class="sxs-lookup"><span data-stu-id="35b35-111">Create a C# console application project with `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="14ed3-110">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="14ed3-110">Compiling the Code</span></span>  
+ <span data-ttu-id="14ed3-111">Utwórz projekt aplikacji konsoli `using` C# z dyrektywami dla system.Linq i System.IO przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="14ed3-111">Create a C# console application project with `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="35b35-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="35b35-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="14ed3-112">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="14ed3-112">See also</span></span>
 
-- [<span data-ttu-id="35b35-113">LINQ i ciągi (C#)</span><span class="sxs-lookup"><span data-stu-id="35b35-113">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
-- [<span data-ttu-id="35b35-114">LINQ i katalogi plików (C#)</span><span class="sxs-lookup"><span data-stu-id="35b35-114">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)
+- [<span data-ttu-id="14ed3-113">LINQ i ciągi (C#)</span><span class="sxs-lookup"><span data-stu-id="14ed3-113">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
+- [<span data-ttu-id="14ed3-114">LINQ i katalogi plików (C#)</span><span class="sxs-lookup"><span data-stu-id="14ed3-114">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)

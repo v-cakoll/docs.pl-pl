@@ -1,26 +1,26 @@
 ---
 title: Architektura zorientowana na usługi
-description: Poznaj podstawowe różnice między mikrousługami i architekturą zorientowaną na usługi (SOA).
+description: Poznaj podstawowe różnice między mikrousługami a architekturą zorientowaną na usługi (SOA).
 ms.date: 09/20/2018
 ms.openlocfilehash: 84786539fbac0e8b38a81a2580232474774cd355
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70296216"
 ---
 # <a name="service-oriented-architecture"></a>Architektura zorientowana na usługi
 
-Architektura zorientowana na usługi (SOA) była nadstosowana i ma różne znaczenie dla różnych osób. Jednak jako typowy mianownik, SOA oznacza, że tworzysz strukturę aplikacji, tworząc ją w wielu usługach (najczęściej jako usługi HTTP), które mogą być klasyfikowane jako różne typy, takie jak podsystemy lub warstwy.
+Architektura zorientowana na usługi (SOA) była nadużywanym terminem i oznaczała różne rzeczy dla różnych ludzi. Ale jako wspólny mianownik SOA oznacza, że struktura aplikacji przez rozkładanie go na wiele usług (najczęściej jako usługi HTTP), które mogą być klasyfikowane jako różne typy, takie jak podsystemy lub warstwy.
 
-Te usługi można teraz wdrożyć jako kontenery platformy Docker, co rozwiązuje problemy z wdrażaniem, ponieważ wszystkie zależności są zawarte w obrazie kontenera. Jeśli jednak chcesz skalować w górę aplikacje SOA, możesz mieć problemy ze skalowalnością i dostępnością w przypadku wdrażania na podstawie jednego hosta platformy Docker. Jest to miejsce, w którym można znaleźć oprogramowanie do klastrowania platformy Docker lub programu Orchestrator, jak wyjaśniono w kolejnych sekcjach, w których opisano podejścia do wdrożenia dla mikrousług.
+Te usługi można teraz wdrożyć jako kontenery platformy Docker, co rozwiązuje problemy z wdrażaniem, ponieważ wszystkie zależności są uwzględnione w obrazie kontenera. Jednak gdy trzeba skalować w górę aplikacji SOA, może być skalowalność i dostępność wyzwania, jeśli wdrażasz na podstawie pojedynczych hostów platformy Docker. W tym miejscu oprogramowanie do klastrowania platformy Docker lub koordynator może ci pomóc, jak wyjaśniono w kolejnych sekcjach, w których opisano metody wdrażania mikrousług.
 
-Kontenery platformy Docker są przydatne (ale nie są wymagane) dla tradycyjnych architektur zorientowanych na usługę i bardziej zaawansowanych architektur mikrousług.
+Kontenery platformy Docker są przydatne (ale nie są wymagane) zarówno dla tradycyjnych architektur zorientowanych na usługi, jak i bardziej zaawansowanych architektur mikrousług.
 
-Mikrousługi pochodzą z SOA, ale SOA różni się od architektury mikrousług. Funkcje takie jak duże centralne brokerzy, centralne Koordynatory na poziomie organizacji, a [Service Bus Enterprise (ESB)](https://en.wikipedia.org/wiki/Enterprise_service_bus) są typowe w SOA. Jednak w większości przypadków są to antywzorce w społeczności mikrousług. W rzeczywistości niektórzy użytkownicy twierdzili, że "architektura mikrousług jest w pełni gotowa."
+Mikrousługi pochodzą z SOA, ale SOA różni się od architektury mikrousług. Funkcje takie jak duzi centralni brokerzy, centralni koordynatorzy na poziomie organizacji i [Enterprise Service Bus (ESB)](https://en.wikipedia.org/wiki/Enterprise_service_bus) są typowe w SOA. Ale w większości przypadków są to anty-wzorce w społeczności mikrousług. W rzeczywistości niektórzy ludzie twierdzą, że "architektura mikrousług jest SOA zrobić dobrze."
 
-Ten przewodnik koncentruje się na mikrousługach, ponieważ podejście SOA jest mniej opisowe niż wymagania i techniki używane w architekturze mikrousług. Jeśli wiesz, jak utworzyć aplikację opartą na mikrousługach, wiesz również, jak utworzyć prostsze aplikacje zorientowane na usługę.
+Ten przewodnik koncentruje się na mikrousług, ponieważ podejście SOA jest mniej nakazowe niż wymagania i techniki używane w architekturze mikrousług. Jeśli wiesz, jak utworzyć aplikację opartą na mikrousługach, wiesz również, jak utworzyć prostszą aplikację zorientowaną na usługi.
 
 >[!div class="step-by-step"]
 >[Poprzedni](docker-application-state-data.md)
->[Następny](microservices-architecture.md)
+>[następny](microservices-architecture.md)

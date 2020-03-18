@@ -1,21 +1,21 @@
 ---
-title: polecenie "Usuń odwołanie" dotnet
-description: Polecenie "Usuń odwołanie" dotnet zapewnia wygodną opcję usuwania projektu do odwołań do projektu.
+title: polecenie dotnet remove reference
+description: Polecenie odwołania dotnet remove zapewnia wygodną opcję usuwania projektu do odwołań do projektu.
 ms.date: 02/14/2020
 ms.openlocfilehash: fcadf677faaf9281fb019c3c4bb16efc906b1aa1
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503618"
 ---
 # <a name="dotnet-remove-reference"></a>dotnet remove reference
 
-**Ten artykuł ma zastosowanie do:** ✔️ .NET Core 2. x SDK i nowszych wersji
+**Ten artykuł dotyczy:** ✔️ .NET Core 2.x SDK i nowszych wersji
 
-## <a name="name"></a>Name (Nazwa)
+## <a name="name"></a>Nazwa
 
-`dotnet remove reference` — usuwa odwołania między projektami.
+`dotnet remove reference`- Usuwa odwołania projektu do projektu.
 
 ## <a name="synopsis"></a>Streszczenie
 
@@ -25,17 +25,17 @@ dotnet remove [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--
 
 ## <a name="description"></a>Opis
 
-Polecenie `dotnet remove reference` zapewnia wygodną opcję usuwania odwołań projektu z projektu.
+Polecenie `dotnet remove reference` zapewnia wygodną opcję usuwania odwołań do projektu z projektu.
 
 ## <a name="arguments"></a>Argumenty
 
 `PROJECT`
 
-Docelowy plik projektu. Jeśli nie zostanie określony, polecenie przeszukuje bieżący katalog.
+Docelowy plik projektu. Jeśli nie zostanie określony, polecenie przeszukuje bieżący katalog w poszukiwaniu jednego.
 
 `PROJECT_REFERENCES`
 
-Odwołania między projektami i projektami (P2P) do usunięcia. Można określić jeden lub wiele projektów. [Wzorce globalizowania](https://en.wikipedia.org/wiki/Glob_(programming)) są obsługiwane w terminalach opartych na systemie UNIX/Linux.
+Odwołania do projektu (P2P) do usunięcia. Można określić jeden lub wiele projektów. [Wzorce Glob](https://en.wikipedia.org/wiki/Glob_(programming)) są obsługiwane na terminalach unixowych/linuxowych.
 
 ## <a name="options"></a>Opcje
 
@@ -45,7 +45,7 @@ Odwołania między projektami i projektami (P2P) do usunięcia. Można określi�
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Usuwa odwołanie tylko w przypadku określania konkretnej [struktury](../../standard/frameworks.md).
+  Usuwa odwołanie tylko podczas określania określonej [struktury](../../standard/frameworks.md).
 
 ## <a name="examples"></a>Przykłady
 
@@ -55,13 +55,13 @@ Odwołania między projektami i projektami (P2P) do usunięcia. Można określi�
   dotnet remove app/app.csproj reference lib/lib.csproj
   ```
 
-- Usuń odwołania do wielu projektów z projektu w bieżącym katalogu:
+- Usuń wiele odwołań do projektu z projektu w bieżącym katalogu:
 
   ```dotnetcli
   dotnet remove reference lib1/lib1.csproj lib2/lib2.csproj
   ```
 
-- Usuń odwołania do wielu projektów za pomocą wzorca globalizowania w systemie UNIX/Linux:
+- Usuń wiele odwołań do projektu za pomocą wzoru glob na Unix/Linux:
 
   ```dotnetcli
   dotnet remove app/app.csproj reference **/*.csproj`

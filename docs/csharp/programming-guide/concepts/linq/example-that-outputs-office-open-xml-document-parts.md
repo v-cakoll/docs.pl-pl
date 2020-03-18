@@ -1,21 +1,21 @@
 ---
-title: Przykład, który wyprowadza części dokumentu programu Office Open XML (C#)
+title: Przykład, który wyprowadza pakiet Office Otwórz części dokumentów XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 6cd37055-89b4-42e8-bf27-5a29717e35f3
 ms.openlocfilehash: be4c0ba2ce2a007fa6e19a65d7d86854d85851c4
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "66486003"
 ---
-# <a name="example-that-outputs-office-open-xml-document-parts-c"></a>Przykład, który wyprowadza części dokumentu programu Office Open XML (C#)
-W tym temacie przedstawiono sposób Otwórz dokument XML otwórz pakietu Office i przejdź do części znajdujący się w nim.  
+# <a name="example-that-outputs-office-open-xml-document-parts-c"></a>Przykład, który wyprowadza pakiet Office Otwórz części dokumentów XML (C#)
+W tym temacie pokazano, jak otworzyć dokument XML pakietu Office i uzyskać dostęp do części w nim.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład spowoduje otwarcie dokumentu Office Open XML i drukuje dokument i część stylu do konsoli.  
+ Poniższy przykład otwiera dokument XML otwierania pakietu Office i drukuje część dokumentu i część stylu do konsoli.  
   
- W tym przykładzie użyto klasy z zestawu WindowsBase. Używa typów w <xref:System.IO.Packaging?displayProperty=nameWithType> przestrzeni nazw.  
+ W tym przykładzie użyto klas z zestawu WindowsBase. Używa typów w <xref:System.IO.Packaging?displayProperty=nameWithType> obszarze nazw.  
   
 ```csharp  
 const string fileName = "SampleDoc.docx";  

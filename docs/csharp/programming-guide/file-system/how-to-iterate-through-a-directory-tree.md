@@ -1,63 +1,63 @@
 ---
-title: Jak wykonać iterację w przewodniku C# programowania drzewa katalogów
+title: Jak iterate przez drzewo katalogów - C# Programming Guide
 ms.date: 07/20/2015
 helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
 ms.openlocfilehash: be3931a23e7a88affcf4d0abf617ec00bd35297a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712263"
 ---
-# <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Jak wykonać iterację w drzewie katalogów (C# Przewodnik programowania)
-Fraza "Iterowanie drzewa katalogów" oznacza, że uzyskuje dostęp do każdego pliku w każdym zagnieżdżonym podkatalogu w określonym folderze głównym, na dowolną głębokość. Nie trzeba otwierać każdego pliku. Można po prostu pobrać nazwę pliku lub podkatalogu jako `string`lub można pobrać dodatkowe informacje w postaci obiektu <xref:System.IO.FileInfo?displayProperty=nameWithType> lub <xref:System.IO.DirectoryInfo?displayProperty=nameWithType>.  
+# <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Jak iterate przez drzewo katalogów (C# Programming Guide)
+Fraza "iterować drzewo katalogów" oznacza dostęp do każdego pliku w każdym zagnieżdżonym podkatalogu w określonym folderze głównym, do dowolnej głębokości. Nie koniecznie trzeba otworzyć każdy plik. Można po prostu pobrać nazwę pliku lub `string`podkatalogu jako , lub można pobrać <xref:System.IO.FileInfo?displayProperty=nameWithType> <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> dodatkowe informacje w postaci lub obiektu.  
   
 > [!NOTE]
-> W systemie Windows terminy "katalog" i "folder" są używane zamiennie. Większość dokumentacji i tekstu interfejsu użytkownika używa terminu "folder", ale Biblioteka klas .NET Framework używa terminu "Directory".  
+> W systemie Windows terminy "katalog" i "folder" są używane zamiennie. Większość dokumentacji i tekstu interfejsu użytkownika używa terminu "folder", ale biblioteka klas .NET Framework używa terminu "katalog".  
   
- W najprostszym przypadku, w którym wiadomo, że masz uprawnienia dostępu do wszystkich katalogów w określonym katalogu głównym, możesz użyć flagi `System.IO.SearchOption.AllDirectories`. Ta flaga zwraca wszystkie zagnieżdżone podkatalogi zgodne z określonym wzorcem. Poniższy przykład pokazuje, jak używać tej flagi.  
+ W najprostszym przypadku, w którym wiesz na pewno, że masz uprawnienia dostępu do wszystkich `System.IO.SearchOption.AllDirectories` katalogów w określonym katalogu głównym, można użyć flagi. Ta flaga zwraca wszystkie zagnieżdżone podkatalogi, które pasują do określonego wzorca. W poniższym przykładzie pokazano, jak używać tej flagi.  
   
 ```csharp  
 root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);  
 ```  
   
- Przyczyną tej metody jest to, że jeśli którykolwiek z podkatalogów w określonym katalogu głównym powoduje <xref:System.IO.DirectoryNotFoundException> lub <xref:System.UnauthorizedAccessException>, cała Metoda zakończy się niepowodzeniem i nie zwróci żadnych katalogów. Ta sama wartość jest prawdziwa w przypadku używania metody <xref:System.IO.DirectoryInfo.GetFiles%2A>. Jeśli musisz obsługiwać te wyjątki w określonych podfolderach, musisz ręcznie przeprowadzić drzewo katalogów, jak pokazano w poniższych przykładach.  
+ Słabość w tym podejściu jest to, że jeśli jeden z <xref:System.IO.DirectoryNotFoundException> <xref:System.UnauthorizedAccessException>podkatalogów w ramach określonego katalogu głównego powoduje lub , cała metoda nie powiedzie się i zwraca żadnych katalogów. To samo dotyczy korzystania <xref:System.IO.DirectoryInfo.GetFiles%2A> z metody. Jeśli musisz obsłużyć te wyjątki w określonych podfolderach, musisz ręcznie przejść drzewo katalogów, jak pokazano w poniższych przykładach.  
   
- W przypadku ręcznego przeszukiwania drzewa katalogów można najpierw obsłużyć podkatalogi (*Przechodzenie*przedrzędne) lub pliki pierwsze (*Przechodzenie po kolejności*). W przypadku przeprowadzania przechodzenia przed kolejnością należy przeszukać całe drzewo w bieżącym folderze przed przeprowadzeniem iteracji w plikach, które znajdują się bezpośrednio w tym folderze. Przykłady w dalszej części tego dokumentu wykonują przechodzenie po kolejności, ale można je łatwo modyfikować, aby wykonać przechodzenie w kolejności wstępnej.  
+ Podczas ręcznego przechodzenia drzewa katalogów można najpierw obsługiwać podkatalogi *(przechodzenie w przedsprzedaży)* lub pliki jako pierwsze *(przechodzenie po zakończeniu zamówienia).* Jeśli wykonujesz przechodzenie w przedsprzedaży, chodzisz po całym drzewie pod bieżącym folderem przed iteracji za pośrednictwem plików, które znajdują się bezpośrednio w tym folderze. Przykłady w dalszej części tego dokumentu wykonać przechodzenie po kolejności, ale można łatwo zmodyfikować je do wykonywania przechodzenia w przedsprzedaży.  
   
- Inną opcją jest użycie rekursji lub przechodzenie oparte na stosie. W przykładach w dalszej części tego dokumentu przedstawiono oba podejścia.  
+ Inną opcją jest, czy użyć rekursji lub przechodzenia opartego na stosie. Przykłady w dalszej części tego dokumentu pokazują obie podejścia.  
   
- Jeśli trzeba wykonać różne operacje na plikach i folderach, można modularyzacji te przykłady przez refaktoryzację operacji do oddzielnych funkcji, które można wywołać za pomocą pojedynczego delegata.  
+ Jeśli trzeba wykonać różne operacje na plikach i folderach, można modularyzować te przykłady, refaktoryzując operację na oddzielne funkcje, które można wywołać przy użyciu jednego pełnomocnika.  
   
 > [!NOTE]
-> Systemy plików NTFS mogą zawierać *punkty ponownej analizy* w postaci *punktów połączenia*, *linków symbolicznych*i *twardych linków*. Metody .NET Framework, takie jak <xref:System.IO.DirectoryInfo.GetFiles%2A> i <xref:System.IO.DirectoryInfo.GetDirectories%2A> nie zwróci żadnego podkatalogów w punkcie ponownej analizy. To zachowanie chroni przed ryzykiem wprowadzenia do pętli nieskończonej, gdy dwa punkty ponownej analizy odnoszą się do siebie. Ogólnie rzecz biorąc, należy zachować szczególną ostrożność podczas postępowania z punktami ponownej analizy, aby upewnić się, że nie można przypadkowo modyfikować ani usuwać plików. Jeśli potrzebujesz precyzyjnej kontroli nad punktami ponownej analizy, użyj wywołania platformy lub kodu natywnego, aby bezpośrednio wywołać odpowiednie metody systemu plików Win32.  
+> Systemy plików NTFS mogą zawierać *punkty ponownej analizy* w postaci *punktów połączenia,* *łączy symbolicznych*i *twardych łączy.* Metody .NET Framework, <xref:System.IO.DirectoryInfo.GetFiles%2A> takie <xref:System.IO.DirectoryInfo.GetDirectories%2A> jak i nie zwróci żadnych podkatalogów w punkcie ponownej analizy. To zachowanie chroni przed ryzykiem wejścia w nieskończoną pętlę, gdy dwa punkty ponownej analizy odnoszą się do siebie. Ogólnie rzecz biorąc należy zachować szczególną ostrożność podczas zajmowania się punktami ponownej analizy, aby upewnić się, że nie przypadkowo zmodyfikujesz lub nie usuniesz plików. Jeśli potrzebujesz precyzyjnej kontroli nad punktami ponownej analizy, użyj wywołania platformy lub kodu macierzystego, aby bezpośrednio wywołać odpowiednie metody systemu plików Win32.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak przeprowadzić drzewo katalogów za pomocą rekursji. Podejście cykliczne to elegancki, ale może powodować wyjątek przepełnienia stosu, jeśli drzewo katalogów jest duże i głęboko zagnieżdżone.  
+ W poniższym przykładzie pokazano, jak przejść drzewa katalogów przy użyciu rekursji. Podejście cykliczne jest elegancki, ale ma potencjał, aby spowodować wyjątek przepełnienia stosu, jeśli drzewo katalogów jest duży i głęboko zagnieżdżone.  
   
- Określone wyjątki, które są obsługiwane, oraz określone akcje wykonywane na każdym pliku lub folderze są dostępne jako tylko przykłady. Należy zmodyfikować ten kod w celu spełnienia określonych wymagań. Aby uzyskać więcej informacji, zobacz komentarze w kodzie.  
+ Szczególne wyjątki, które są obsługiwane, a określone akcje, które są wykonywane w każdym pliku lub folderze, są podane tylko jako przykłady. Należy zmodyfikować ten kod, aby spełnić określone wymagania. Zobacz komentarze w kodzie, aby uzyskać więcej informacji.  
   
  [!code-csharp[csFilesandFolders#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#1)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak wykonać iterację plików i folderów w drzewie katalogów bez użycia rekursji. W tej metodzie jest używany ogólny typ kolekcji <xref:System.Collections.Generic.Stack%601>, który jest ostatnim wyjściem ze stosu (LIFO).  
+ W poniższym przykładzie pokazano, jak iterować pliki i foldery w drzewie katalogów bez użycia rekursji. Ta technika <xref:System.Collections.Generic.Stack%601> używa ogólnego typu kolekcji, który jest ostatnim w stosie lifo (first out).  
   
- Określone wyjątki, które są obsługiwane, oraz określone akcje wykonywane na każdym pliku lub folderze są dostępne jako tylko przykłady. Należy zmodyfikować ten kod w celu spełnienia określonych wymagań. Aby uzyskać więcej informacji, zobacz komentarze w kodzie.  
+ Szczególne wyjątki, które są obsługiwane, a określone akcje, które są wykonywane w każdym pliku lub folderze, są podane tylko jako przykłady. Należy zmodyfikować ten kod, aby spełnić określone wymagania. Zobacz komentarze w kodzie, aby uzyskać więcej informacji.  
   
  [!code-csharp[csFilesandFolders#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#2)]  
   
- Przetestowanie każdego folderu jest zwykle zbyt czasochłonne, aby określić, czy aplikacja ma uprawnienia do otwierania go. W związku z tym, przykładowy kod po prostu umieszcza tę część operacji w bloku `try/catch`. Możesz zmodyfikować blok `catch` tak, aby w przypadku odmowy dostępu do folderu podjęto próbę podniesienia uprawnień, a następnie uzyskać do niego dostęp. Jako reguła, należy jedynie przechwytywać te wyjątki, które można obsłużyć bez opuszczania aplikacji w nieznanym stanie.  
+ Zazwyczaj jest zbyt czasochłonne, aby przetestować każdy folder, aby ustalić, czy aplikacja ma uprawnienia do jego otwarcia. W związku z tym przykład kodu po prostu `try/catch` otacza tę część operacji w bloku. Blok można `catch` zmodyfikować w taki sposób, aby po odmowie dostępu do folderu, spróbuj podnieść swoje uprawnienia, a następnie uzyskać do niego dostęp ponownie. Z reguły tylko przechwycić te wyjątki, które można obsłużyć bez pozostawienia aplikacji w nieznanym stanie.  
   
- Jeśli zawartość drzewa katalogów ma być przechowywana w pamięci lub na dysku, najlepszym rozwiązaniem jest przechowywanie tylko właściwości <xref:System.IO.FileSystemInfo.FullName%2A> (typu `string`) dla każdego pliku. Następnie można użyć tego ciągu do utworzenia nowego <xref:System.IO.FileInfo> lub <xref:System.IO.DirectoryInfo> obiektu w razie potrzeby lub otworzyć dowolny plik, który wymaga dodatkowego przetwarzania.  
+ Jeśli zawartość drzewa katalogów musi być przechowywana w pamięci lub na dysku, <xref:System.IO.FileSystemInfo.FullName%2A> najlepszym rozwiązaniem `string`jest przechowywanie tylko właściwości (typu) dla każdego pliku. Następnie można użyć tego ciągu, <xref:System.IO.FileInfo> <xref:System.IO.DirectoryInfo> aby utworzyć nowy lub obiekt w razie potrzeby lub otworzyć dowolny plik, który wymaga dodatkowego przetwarzania.  
   
-## <a name="robust-programming"></a>Skuteczne programowanie  
- Niezawodny kod iteracji pliku musi uwzględniać wiele złożoności systemu plików. Aby uzyskać więcej informacji o systemie plików systemu Windows, zobacz [NTFS — Omówienie](/windows-server/storage/file-server/ntfs-overview).  
+## <a name="robust-programming"></a>Niezawodne programowanie  
+ Niezawodny kod iteracji pliku musi uwzględniać wiele złożoności systemu plików. Aby uzyskać więcej informacji na temat systemu plików Systemu Windows, zobacz [omówienie systemu plików NTFS](/windows-server/storage/file-server/ntfs-overview).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.IO>
 - [LINQ i katalogi plików](../concepts/linq/linq-and-file-directories.md)
-- [System plików i Rejestr (C# Przewodnik programowania)](./index.md)
+- [System plików i rejestr (Przewodnik programowania w języku C#)](./index.md)

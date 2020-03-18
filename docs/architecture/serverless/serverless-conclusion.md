@@ -1,33 +1,33 @@
 ---
-title: Key wnioski — aplikacje bezserwerowe
-description: Bezserwerowy program oferuje wiele korzyści i ma własne wyzwania. Podsumowanie usługi Key wnioski z tego przewodnika.
+title: Kluczowe dania na wynos - Aplikacje bezserwerowe
+description: Bezserwerowy zapewnia wiele korzyści i ma swoje własne wyzwania. Podsumowanie kluczowych wynos z tego przewodnika.
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: ae9fc47bf07a7e28688942b856b4743ae7aadc36
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68676689"
 ---
-# <a name="conclusion"></a>Wniosek
+# <a name="conclusion"></a>Podsumowanie
 
-Poniższy temat Key wnioski to najważniejsze wnioski z tego przewodnika.
+Następujące kluczowe wynos są najważniejsze wnioski z tego przewodnika.
 
-**Korzyści wynikające z używania bezserwerowego programu.** Rozwiązania bez użycia serwera zapewniają istotną korzyść oszczędności, ponieważ bezserwerowe wdrożenie jest realizowane w modelu płatnych opłat. Bezserwerowe umożliwia niezależne skalowanie, testowanie i wdrażanie pojedynczych składników aplikacji. Bezserwerowy jest jednoznacznie dostosowany do implementowania architektur mikrousług i integruje się w pełni z potokiem DevOps.
+**Zalety korzystania z bezserwerowych.** Rozwiązania bezserwerowe zapewniają ważną korzyść z oszczędności kosztów, ponieważ bezserwerowe jest zaimplementowana w modelu pay-per-use. Bezserwerowe umożliwia niezależnie skalować, testować i wdrażać poszczególne składniki aplikacji. Bezserwerowy jest wyjątkowo nadaje się do implementowania architektur mikrousług i integruje się w pełni do potoku DevOps.
 
-**Kod jako jednostka wdrożenia.** Bezserwerowy abstrakcyjny sprzęt, system operacyjny i środowisko uruchomieniowe z aplikacji. Bezserwerowy umożliwia skoncentrowanie się na logice biznesowej w kodzie jako jednostkę wdrożenia.
+**Kod jako jednostka wdrożenia.** Bezserwerowe abstrakcje sprzętu, systemu operacyjnego i czasu pracy z dala od aplikacji. Bezserwerowe umożliwia skupienie się na logice biznesowej w kodzie jako jednostce wdrażania.
 
-**Wyzwalacze i powiązania.** Bezserwerowa łatwość integracji z magazynem, interfejsami API i innymi zasobami w chmurze. Azure Functions udostępnia wyzwalacze do wykonywania kodu i powiązań w celu współdziałania z zasobami.
+**Wyzwalacze i powiązania.** Bezserwerowy ułatwia integrację z pamięcią masową, interfejsami API i innymi zasobami w chmurze. Usługa Azure Functions udostępnia wyzwalacze do wykonywania kodu i powiązań do interakcji z zasobami.
 
-**Mikrousług.** Architektura mikrousług jest preferowanym podejściem dla rozproszonych i dużych lub złożonych aplikacji o znaczeniu strategicznym, które są oparte na wielu niezależnych podsystemach w formie usług autonomicznych. W architekturze mikrousług aplikacja jest zbudowana jako kolekcja usług, które mogą być opracowane, przetestowane, w wersji, wdrożone i skalowane niezależnie. Bezserwerowy jest również architekturą odpowiednią do tworzenia tych usług.
+**Mikrousług.** Architektura mikrousług staje się preferowanym podejściem dla rozproszonych i dużych lub złożonych aplikacji o znaczeniu krytycznym, które są oparte na wielu niezależnych podsystemach w postaci usług autonomicznych. W architekturze opartej na mikrousługach aplikacja jest tworzona jako zbiór usług, które mogą być opracowywane, testowane, wersjonowane, wdrażane i skalowane niezależnie. Serverless to architektura doskonale nadaje się do tworzenia tych usług.
 
-**Platformy bezserwerowe.** Bezserwerowe nie tylko kod. Platformy obsługujące architektury bezserwerowe obejmują przepływy pracy bezserwerowych i aranżacji, bezserwerowe komunikaty i usługi zdarzeń oraz bazy danych bezserwerowych.
+**Platformy bezserwerowe.** Bezserwerowe nie chodzi tylko o kod. Platformy obsługujące architektury bezserwerowe obejmują bezserwerowe przepływy pracy i aranżację, usługi obsługi wiadomości i zdarzeń bez użycia serwera oraz bezserwerowe bazy danych.
 
-**Wyzwania bezserwerowe.** Bezserwerowe wprowadzenie wyzwań związanych z tworzeniem aplikacji rozproszonych, takich jak pofragmentowane i niezależne modele danych, odporność, przechowywanie wersji i odnajdowanie usług. Bezserwerowe może nie być idealnie dostosowane do długotrwałych procesów lub składników, które korzystają z ściślejszego sprzężenia.
+**Wyzwania bez użycia serwera.** Serverless wprowadza wyzwania związane z tworzeniem aplikacji rozproszonych, takie jak pofragmentowane i niezależne modele danych, odporność, przechowywanie wersji i odnajdowanie usług. Bezserwerowe mogą nie być idealnie dostosowane do długotrwałych procesów lub komponentów, które korzystają z ściślejszego sprzężenia.
 
-**Bez serwera jako narzędzie, a nie Przybornik.** Bezserwerowe rozwiązanie nie jest rozwiązaniem wyłącznym dla architektury aplikacji. Jest to narzędzie, które można wykorzystać jako część aplikacji hybrydowej, która może zawierać tradycyjne warstwy, monolitu zaplecza i kontenery. W celu udoskonalenia istniejących rozwiązań nie jest to samo podejście do tworzenia aplikacji.
+**Bezserwerowe jako narzędzie, a nie przybornik.** Bezserwerowe nie jest wyłącznym rozwiązaniem dla architektury aplikacji. Jest to narzędzie, które mogą być wykorzystywane jako część aplikacji hybrydowej, która może zawierać tradycyjne warstwy, monolit back ends i kontenerów. Bezserwerowy może służyć do ulepszania istniejących rozwiązań i nie jest podejściem wszystko albo nic do tworzenia aplikacji.
 
 >[!div class="step-by-step"]
->[Ubiegł](serverless-business-scenarios.md)
+>[Wstecz](serverless-business-scenarios.md)

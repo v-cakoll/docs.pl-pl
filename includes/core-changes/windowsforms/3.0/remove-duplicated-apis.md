@@ -1,18 +1,18 @@
 ---
 ms.openlocfilehash: e609b8006846cd202a6a7eeec2529cf1fbb09e7c
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75936983"
 ---
-### <a name="duplicated-apis-removed-from-windows-forms"></a>Zduplikowane interfejsy API zostały usunięte z Windows Forms
+### <a name="duplicated-apis-removed-from-windows-forms"></a>Zduplikowane interfejsy API usunięte z formularzy systemu Windows
 
-Wiele interfejsów API przypadkowo zduplikowanych w przestrzeni nazw <xref:System.Windows.Forms?displayProperty=fullName>, począwszy od platformy .NET Core 3,0 w wersji zapoznawczej 4, zostało usuniętych w programie .NET Core 3,0 RC1.
+Liczba interfejsów API przypadkowo zduplikowanych w obszarze <xref:System.Windows.Forms?displayProperty=fullName> nazw, począwszy od .NET Core 3.0 Preview 4, została usunięta w .NET Core 3.0 RC1.
 
-#### <a name="change-description"></a>Opis zmiany
+#### <a name="change-description"></a>Zmień opis
 
-Program .NET Core 3,0 w wersji zapoznawczej 4 przypadkowo duplikuje kilka typów w przestrzeni nazw <xref:System.Windows.Forms?displayProperty=fullName>, które już istniały w przestrzeni nazw <xref:System.ComponentModel.Design?displayProperty=fullName>. Począwszy od platformy .NET Core 3,0 RC1, te zduplikowane typy nie są już dostępne. Poniższa tabela zawiera listę typów pierwotnych i duplikatów typów:
+.NET Core 3.0 Preview 4 przypadkowo zduplikował liczbę typów w obszarze <xref:System.Windows.Forms?displayProperty=fullName> nazw, które już istniały w obszarze <xref:System.ComponentModel.Design?displayProperty=fullName> nazw. Począwszy od .NET Core 3.0 RC1, te zduplikowane typy nie są już dostępne. W poniższej tabeli przedstawiono oryginalny typ i jego zduplikowany typ:
 
 > [!div class="mx-tdCol2BreakAll"]
 > |Typ oryginalny|Zduplikowany typ|
@@ -25,11 +25,11 @@ Program .NET Core 3,0 w wersji zapoznawczej 4 przypadkowo duplikuje kilka typów
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
-3,0 RC1
+3.0 Rc1
 
-#### <a name="recommended-action"></a>Zalecane działanie
+#### <a name="recommended-action"></a>Zalecana akcja
 
-Zaktualizuj kod, aby odwołać się do oryginalnego typu, jak pokazano w kolumnie **pierwotnego typu** tabeli.
+Zaktualizuj kod, aby odwoływać się do oryginalnego typu, jak pokazano w kolumnie **Typ oryginalny** tabeli.
 
 #### <a name="category"></a>Kategoria
 
@@ -37,7 +37,7 @@ Windows Forms
 
 #### <a name="affected-apis"></a>Dotyczy interfejsów API
 
-- Nie wykrywalne za pośrednictwem analizy interfejsu API.
+- Nie wykrywalne za pomocą analizy Interfejsu API.
 
 <!--
 

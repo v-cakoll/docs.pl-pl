@@ -1,70 +1,70 @@
 ---
 title: Stan i dane w aplikacjach platformy Docker
-description: Zarządzanie stanem i danymi w aplikacjach platformy Docker. Wystąpienia mikrousług są expendablee, ale dane nie są, jak obsługiwać je za pomocą mikrousług.
+description: Zarządzanie stanem i danymi w aplikacjach platformy Docker. Wystąpienia mikrousług są zbędne, ale dane nie jest, jak obsługiwać to z mikrousług.
 ms.date: 09/20/2018
 ms.openlocfilehash: 1157ea3c4ca8fc389769308cc0a1141b5f92bb88
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72771439"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Stan i dane w aplikacjach platformy Docker
 
-W większości przypadków można traktować kontener jako wystąpienie procesu. Proces nie zachowuje trwałego stanu. Kontener może być zapisany w magazynie lokalnym, przy założeniu, że wystąpienie będzie się znajdować na około czas nieokreślony, przy założeniu, że pojedyncza lokalizacja w pamięci będzie trwała. Należy założyć, że obrazy kontenerów, takie jak procesy, mają wiele wystąpień lub ostatecznie zostaną skasowane. Jeśli są one zarządzane przy użyciu koordynatora kontenerów, należy założyć, że mogą one zostać przeniesione z jednego węzła lub maszyny wirtualnej do innego.
+W większości przypadków można myśleć o kontenerze jako wystąpienie procesu. Proces nie utrzymuje stanu trwałego. Podczas gdy kontener można zapisać do lokalnego magazynu, przy założeniu, że wystąpienie będzie wokół przez czas nieokreślony będzie jak przy założeniu, że pojedyncza lokalizacja w pamięci będzie trwałe. Należy założyć, że obrazy kontenera, takie jak procesy, mają wiele wystąpień lub ostatecznie zostaną zabite. Jeśli są one zarządzane za pomocą koordynatora kontenera, należy założyć, że mogą zostać przeniesione z jednego węzła lub maszyny Wirtualnej do innego.
 
 Następujące rozwiązania są używane do zarządzania danymi w aplikacjach platformy Docker:
 
-Z poziomu hosta platformy Docker jako [woluminów platformy Docker](https://docs.docker.com/engine/admin/volumes/):
+Z hosta platformy Docker jako [woluminy platformy Docker:](https://docs.docker.com/engine/admin/volumes/)
 
 - **Woluminy** są przechowywane w obszarze systemu plików hosta, który jest zarządzany przez platformę Docker.
 
-- **Instalacje bind** można mapować do dowolnego folderu w systemie plików hosta, dlatego nie można sterować dostępem z procesu platformy Docker i może stanowić zagrożenie bezpieczeństwa, ponieważ kontener może uzyskać dostęp do poufnych folderów systemu operacyjnego.
+- **Powiększe montuje** można mapować do dowolnego folderu w systemie plików hosta, więc dostęp nie może być kontrolowane z procesu platformy Docker i może stanowić zagrożenie bezpieczeństwa jako kontener może uzyskać dostęp do poufnych folderów systemu operacyjnego.
 
-- **instalacje tmpfs** są podobne do folderów wirtualnych, które znajdują się tylko w pamięci hosta i nigdy nie są zapisywane w systemie plików.
+- **montuje tmpfs** są jak foldery wirtualne, które istnieją tylko w pamięci hosta i nigdy nie są zapisywane w systemie plików.
 
 Z magazynu zdalnego:
 
-- [Usługa Azure Storage](https://azure.microsoft.com/documentation/services/storage/), która zapewnia magazyn do dystrybucji geograficznej, zapewniająca dobre długoterminowe rozwiązanie trwałości dla kontenerów.
+- [Usługa Azure Storage](https://azure.microsoft.com/documentation/services/storage/), która zapewnia magazyn geograficzny, zapewniając dobre długoterminowe rozwiązanie trwałości dla kontenerów.
 
-- Zdalne relacyjne bazy danych, takie jak [Azure SQL Database](https://azure.microsoft.com/services/sql-database/) lub NoSQL, takie jak [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction), lub usługi pamięci podręcznej, takie jak [Redis](https://redis.io/).
+- Zdalne relacyjne bazy danych, takie jak [baza danych SQL Azure SQL](https://azure.microsoft.com/services/sql-database/) lub bazy danych NoSQL, takie jak usługa Azure [Cosmos DB,](https://docs.microsoft.com/azure/cosmos-db/introduction)lub usługi pamięci podręcznej, takie jak [Redis](https://redis.io/).
 
-Z kontenera Docker:
+Z kontenera platformy Docker:
 
-- **System plików nakładki**. Ta funkcja platformy Docker implementuje zadanie kopiowania przy zapisie, które przechowuje zaktualizowane informacje do głównego systemu plików kontenera. Te informacje są "na początku" oryginalnego obrazu, na którym bazuje kontener. Jeśli kontener zostanie usunięty z systemu, te zmiany zostaną utracone. W związku z tym, chociaż istnieje możliwość zapisania stanu kontenera w magazynie lokalnym, zaprojektowanie systemu powoduje konflikt z lokalnym projektem kontenera, który domyślnie jest bezstanowy.
+- **Nakładki systemu plików**. Ta funkcja platformy Docker implementuje zadanie kopiowania przy zapisie, które przechowuje zaktualizowane informacje w głównym systemie plików kontenera. Informacje te są "na wierzchu" oryginalnego obrazu, na którym znajduje się kontener. Jeśli kontener zostanie usunięty z systemu, te zmiany zostaną utracone. W związku z tym, gdy jest możliwe, aby zapisać stan kontenera w jego lokalnej pamięci masowej, projektowanie systemu wokół tego będzie w konflikcie z założenia projektu kontenera, który domyślnie jest bezstanowy.
 
-Jednak używanie woluminów platformy Docker jest teraz preferowanym sposobem obsługi danych lokalnych w platformie Docker. Jeśli potrzebujesz więcej informacji na temat magazynu w kontenerach, zapoznaj się z tematem [sterowniki magazynu Docker](https://docs.docker.com/storage/storagedriver/select-storage-driver/) i [sterowniki magazynu](https://docs.docker.com/storage/storagedriver/).
+Jednak przy użyciu woluminów platformy Docker jest teraz preferowanym sposobem obsługi danych lokalnych w platformie Docker. Jeśli potrzebujesz więcej informacji na temat magazynu w kontenerach sprawdź [sterowniki magazynu platformy Docker](https://docs.docker.com/storage/storagedriver/select-storage-driver/) i [Informacje o sterownikach magazynu](https://docs.docker.com/storage/storagedriver/).
 
-Poniżej przedstawiono bardziej szczegółowe informacje na temat tych opcji:
+Poniżej przedstawiono więcej szczegółów na temat tych opcji:
 
-**Woluminy** są katalogami mapowanymi z systemu operacyjnego hosta do katalogów w kontenerach. Gdy kod w kontenerze ma dostęp do katalogu, dostęp jest w rzeczywistości do katalogu w systemie operacyjnym hosta. Ten katalog nie jest powiązany z okresem istnienia samego kontenera, a katalog jest zarządzany przez platformę Docker i izolowany od podstawowych funkcji komputera hosta. Z tego względu woluminy danych są przeznaczone do utrwalania danych niezależnie od okresu istnienia kontenera. Po usunięciu kontenera lub obrazu z hosta platformy Docker dane utrwalane w woluminie danych nie są usuwane.
+**Woluminy** są katalogami mapowanymi z systemu operacyjnego hosta na katalogi w kontenerach. Gdy kod w kontenerze ma dostęp do katalogu, ten dostęp jest faktycznie do katalogu w os hosta. Ten katalog nie jest powiązany z okresem istnienia samego kontenera, a katalog jest zarządzany przez platformę Docker i odizolowany od podstawowej funkcjonalności komputera hosta. W związku z tym woluminy danych są przeznaczone do utrwalania danych niezależnie od żywotności kontenera. Jeśli usuniesz kontener lub obraz z hosta platformy Docker, dane utrwalione w woluminie danych nie zostaną usunięte.
 
-Woluminy mogą mieć nazwy lub anonimowe (domyślnie). Nazwane woluminy są ewolucją **kontenerów woluminów danych** i ułatwiają udostępnianie danych między kontenerami. Woluminy obsługują również sterowniki woluminów umożliwiające przechowywanie danych na hostach zdalnych między innymi opcjami.
+Woluminy mogą być nazwane lub anonimowe (domyślnie). Nazwane woluminy są ewolucją **kontenerów woluminów danych** i ułatwiają udostępnianie danych między kontenerami. Woluminy obsługują również sterowniki woluminów, które umożliwiają przechowywanie danych na hostach zdalnych, między innymi.
 
-**Instalacje wiązania** są dostępne od dawna dawno temu i umożliwiają mapowanie dowolnego folderu do punktu instalacji w kontenerze. Instalacje powiązań mają więcej ograniczeń niż woluminy i niektóre ważne problemy z zabezpieczeniami, dlatego zalecaną opcją są woluminy.
+**Powiększe są** dostępne od dawna temu i umożliwiają mapowanie dowolnego folderu do punktu instalacji w kontenerze. Iniwady powiązań mają więcej ograniczeń niż woluminy i niektóre ważne problemy z zabezpieczeniami, więc woluminy są zalecaną opcją.
 
-**instalacje tmpfs** są jedynymi folderami wirtualnymi, które znajdują się tylko w pamięci hosta i nigdy nie są zapisywane w systemie plików. Są one szybkie i bezpieczne, ale wykorzystują pamięć i są przeznaczone wyłącznie dla danych tymczasowych, nietrwałych.
+**montuje tmpfs** są w zasadzie wirtualnymi folderami, które żyją tylko w pamięci hosta i nigdy nie są zapisywane w systemie plików. Są szybkie i bezpieczne, ale używają pamięci i są przeznaczone tylko dla tymczasowych, nietrwałych danych.
 
-Jak pokazano na rysunku 4-5, regularne woluminy platformy Docker mogą być przechowywane poza kontenerami, ale w granicach fizycznych serwera hosta lub maszyny wirtualnej. Kontenery platformy Docker nie mogą jednak uzyskać dostępu do woluminu z jednego serwera hosta lub maszyny wirtualnej do innej. Innymi słowy, z tymi woluminami nie jest możliwe zarządzanie danymi udostępnionymi między kontenerami, które działają na różnych hostach platformy Docker, chociaż można je osiągnąć za pomocą sterownika woluminu obsługującego hosty zdalne.
+Jak pokazano na rysunku 4-5, regularne woluminy platformy Docker mogą być przechowywane poza kontenerami, ale w granicach fizycznych serwera hosta lub maszyny Wirtualnej. Jednak kontenery platformy Docker nie można uzyskać dostępu do woluminu z jednego serwera hosta lub maszyny Wirtualnej do innego. Innymi słowy z tych woluminów nie jest możliwe zarządzanie danymi współużytkowane między kontenerami, które są uruchamiane na różnych hostach platformy Docker, chociaż można to osiągnąć za pomocą sterownika woluminu, który obsługuje hosty zdalne.
 
 ![Diagram przedstawiający woluminy i zewnętrzne źródła danych dla aplikacji opartych na kontenerach.](./media/docker-application-state-data/volumes-external-data-sources.png)
 
 **Rysunek 4-5**. Woluminy i zewnętrzne źródła danych dla aplikacji opartych na kontenerach
 
-Woluminy mogą być udostępniane między kontenerami, ale tylko na tym samym hoście, chyba że używany jest sterownik zdalny obsługujący hosty zdalne. Ponadto, gdy kontenery platformy Docker są zarządzane przez program Orchestrator, kontenery mogą "przenosić" między hostami, w zależności od optymalizacji wykonywanych przez klaster. W związku z tym nie zaleca się używania woluminów danych dla danych firmowych. Jednak są dobrym mechanizmem do pracy z plikami śledzenia, plikami czasowymi lub podobnymi, które nie wpłyną na spójność danych firmy.
+Woluminy mogą być współużytkowane między kontenerami, ale tylko w tym samym hoście, chyba że używasz sterownika zdalnego obsługującego hosty zdalne. Ponadto gdy kontenery platformy Docker są zarządzane przez koordynatora, kontenery mogą "przenosić się" między hostami, w zależności od optymalizacji wykonywanych przez klaster. W związku z tym nie zaleca się używania woluminów danych dla danych biznesowych. Ale są one dobrym mechanizmem do pracy z plikami śledzenia, plikami czasowymi lub podobnymi, które nie będą miały wpływu na spójność danych biznesowych.
 
-**Zdalne źródła danych i narzędzia pamięci podręcznej** , takie jak Azure SQL Database, Azure Cosmos DB lub zdalna pamięć podręczna, takie jak Redis, mogą być używane w aplikacjach kontenerowych w taki sam sposób, w jaki są używane podczas tworzenia bez kontenerów. Jest to sprawdzona metoda przechowywania danych aplikacji biznesowej.
+Zdalne źródła danych i narzędzia **pamięci podręcznej,** takie jak usługa Azure SQL Database, usługa Azure Cosmos DB lub zdalna pamięć podręczna, taka jak Redis, mogą być używane w aplikacjach konteneryzowanych w taki sam sposób, w jaki są używane podczas tworzenia bez kontenerów. Jest to sprawdzony sposób przechowywania danych aplikacji biznesowych.
 
-**Usługa Azure Storage.** Dane biznesowe zwykle trzeba umieścić w zasobach zewnętrznych lub bazach danych, takich jak usługa Azure Storage. Usługa Azure Storage w konkretnym przypadku udostępnia następujące usługi w chmurze:
+**Azure Storage.** Dane biznesowe zwykle muszą być umieszczone w zasobach zewnętrznych lub bazach danych, takich jak usługa Azure Storage. Usługa Azure Storage, w sposób konkretny, zapewnia następujące usługi w chmurze:
 
-- Magazyn obiektów BLOB przechowuje dane obiektu bez struktury. Obiekt BLOB może być dowolnego typu danych tekstowych lub binarnych, takich jak pliki dokumentów lub plików multimedialnych (obrazy, pliki audio i wideo). Magazyn obiektów BLOB jest również określany jako Storage Object.
+- Magazyn obiektów blob przechowuje nieustrukturyzowane dane obiektów. Obiekt blob może być dowolnym rodzajem tekstu lub danych binarnych, takich jak pliki dokumentów lub plików multimedialnych (obrazy, pliki audio i wideo). Magazyn obiektów Blob jest także nazywany magazynem obiektów.
 
-- Magazyn plików oferuje udostępniony magazyn dla starszych aplikacji używających standardowego protokołu SMB. Usługa Azure Virtual Machines i usługi w chmurze mogą udostępniać dane plików między składnikami aplikacji za pośrednictwem zainstalowanych udziałów. Aplikacje lokalne mogą uzyskiwać dostęp do danych plików w udziale za pośrednictwem interfejsu API REST usługi plików.
+- Magazyn plików oferuje magazyn udostępniony dla starszych aplikacji przy użyciu standardowego protokołu SMB. Maszyny wirtualne platformy Azure i usługi w chmurze mogą udostępniać dane plików między składnikami aplikacji za pośrednictwem zainstalowanych udziałów. Aplikacje lokalne mogą uzyskiwać dostęp do danych plików w udziale za pośrednictwem interfejsu API REST usługi plików.
 
-- Magazyn tabel przechowuje zestawy danych ze strukturą. Table Storage to NoSQLy magazyn danych, który umożliwia szybkie tworzenie i szybki dostęp do dużych ilości danych.
+- Table Storage — przechowuje zestawy danych ze strukturą. Magazyn tabel to magazyn danych kluczy noSQL, który umożliwia szybki rozwój i szybki dostęp do dużych ilości danych.
 
-**Relacyjne bazy danych i bazy danych NoSQL.** Istnieje wiele opcji zewnętrznych baz danych, z relacyjnych baz danych, takich jak SQL Server, PostgreSQL, Oracle lub NoSQL, takich jak Azure Cosmos DB, MongoDB itd. Te bazy danych nie są wyjaśnione jako część tego przewodnika, ponieważ znajdują się w zupełnie innym temacie.
+**Relacyjne bazy danych i bazy danych NoSQL.** Istnieje wiele opcji dla zewnętrznych baz danych, z relacyjnych baz danych, takich jak SQL Server, PostgreSQL, Oracle lub NoSQL baz danych, takich jak Azure Cosmos DB, MongoDB, itp. Te bazy danych nie będą wyjaśnione jako część tego przewodnika, ponieważ są one w zupełnie innym temacie.
 
 >[!div class="step-by-step"]
 >[Poprzedni](containerize-monolithic-applications.md)
->[Następny](service-oriented-architecture.md)
+>[następny](service-oriented-architecture.md)

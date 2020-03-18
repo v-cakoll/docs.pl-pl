@@ -1,42 +1,42 @@
 ---
-title: Utwórz pakiet NuGet przy użyciu interfejs wiersza polecenia platformy .NET Core
-description: Dowiedz się, jak utworzyć pakiet NuGet za pomocą polecenia "dotnet Pack".
+title: Tworzenie pakietu NuGet za pomocą cli .NET Core
+description: Dowiedz się, jak utworzyć pakiet NuGet za pomocą polecenia "dotnet pack".
 author: cartermp
 ms.date: 06/20/2016
 ms.technology: dotnet-cli
 ms.openlocfilehash: 3f8e75a501cfc48e1c416f71e91290cab1a4ffae
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76920918"
 ---
-# <a name="how-to-create-a-nuget-package-with-the-net-core-cli"></a>Jak utworzyć pakiet NuGet przy użyciu interfejs wiersza polecenia platformy .NET Core
+# <a name="how-to-create-a-nuget-package-with-the-net-core-cli"></a>Jak utworzyć pakiet NuGet za pomocą cli .NET Core
 
 > [!NOTE]
-> Poniżej przedstawiono przykłady wiersza polecenia przy użyciu systemu UNIX. Polecenie `dotnet pack`, jak pokazano w tym miejscu, działa w taki sam sposób w systemie Windows.
+> Poniżej przedstawiono przykłady wiersza polecenia przy użyciu systemu Unix. Polecenie, `dotnet pack` jak pokazano tutaj działa w ten sam sposób w systemie Windows.
 
-Biblioteki .NET Standard i .NET Core są dystrybuowane jako pakiety NuGet. Jest to fakt, że wszystkie .NET Standard biblioteki są dystrybuowane i używane. Jest to najłatwiej wykonane za pomocą polecenia `dotnet pack`.
+Oczekuje się, że biblioteki .NET Standard i .NET Core będą dystrybuowane jako pakiety NuGet. Jest to w rzeczywistości, jak wszystkie biblioteki .NET Standard są dystrybuowane i używane. Najłatwiej to zrobić `dotnet pack` za pomocą polecenia.
 
-Załóżmy, że właśnie Zapisano nową bibliotekę, którą chcesz dystrybuować za pośrednictwem narzędzia NuGet. Pakiet NuGet można utworzyć przy użyciu narzędzi międzyplatformowych, aby dokładnie wykonać te czynności. W poniższym przykładzie przyjęto, że biblioteka o nazwie **SuperAwesomeLibrary** , która jest przeznaczona dla `netstandard1.0`.
+Wyobraź sobie, że właśnie napisał niesamowite nowej biblioteki, które chcesz rozpowszechniać za pomocą NuGet. Możesz utworzyć pakiet NuGet z narzędziami wieloplatformowymi, aby dokładnie to zrobić! W poniższym przykładzie przyjęto założenie biblioteki `netstandard1.0`o nazwie **SuperAwesomeLibrary,** która jest przeznaczona dla .
 
-Jeśli istnieją zależności przechodnie, czyli projekt zależny od innego pakietu, należy przywrócić pakiety dla całego rozwiązania przy użyciu polecenia `dotnet restore` przed utworzeniem pakietu NuGet. W przeciwnym razie polecenie `dotnet pack` nie będzie działać prawidłowo.
+Jeśli masz zależności przechodnie, oznacza to, że projekt, który zależy od innego pakietu, `dotnet restore` upewnij się, aby przywrócić pakiety dla całego rozwiązania za pomocą polecenia przed utworzeniem pakietu NuGet. Niezastosowanie się do tego `dotnet pack` spowoduje, że polecenie nie działa poprawnie.
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-Po przywróceniu pakietów możesz przejść do katalogu, w którym przebywa Biblioteka:
+Po przywróceniu pakietów można przejść do katalogu, w którym znajduje się biblioteka:
 
 ```console
 cd src/SuperAwesomeLibrary
 ```
 
-Jest to tylko jedno polecenie z wiersza polecenia:
+Następnie jest to tylko jedno polecenie z wiersza polecenia:
 
 ```dotnetcli
 dotnet pack
 ```
 
-Folder */bin/debug* będzie teraz wyglądać następująco:
+Folder */bin/Debug* będzie teraz wyglądał tak:
 
 ```console
 $ ls bin/Debug
@@ -45,13 +45,13 @@ SuperAwesomeLibrary.1.0.0.nupkg
 SuperAwesomeLibrary.1.0.0.symbols.nupkg
 ```
 
-Spowoduje to utworzenie pakietu, który może być debugowany. Jeśli chcesz skompilować pakiet NuGet przy użyciu plików binarnych wydania, wystarczy dodać przełącznik `--configuration` (lub `-c`) i użyć `release` jako argumentu.
+Spowoduje to wygenerowanie pakietu, który jest zdolny do debugowania. Jeśli chcesz utworzyć pakiet NuGet z plikami binarnymi wersji, `--configuration` wszystko, co musisz zrobić, to dodać (lub `-c`) przełącznik i używać `release` jako argument.
 
 ```dotnetcli
 dotnet pack --configuration release
 ```
 
-Folder */bin.* będzie teraz zawierać folder *wersji* zawierający pakiet NuGet z wydaniami plików binarnych:
+Folder */bin* będzie teraz miał folder *wersji* zawierający pakiet NuGet z plikami binarnymi wersji:
 
 ```console
 $ ls bin/release
@@ -60,12 +60,12 @@ SuperAwesomeLibrary.1.0.0.nupkg
 SuperAwesomeLibrary.1.0.0.symbols.nupkg
 ```
 
-Teraz masz wymagane pliki do opublikowania pakietu NuGet!
+A teraz masz niezbędne pliki do opublikowania pakietu NuGet!
 
-## <a name="dont-confuse-dotnet-pack-with-dotnet-publish"></a>Nie należy mylić `dotnet pack` z `dotnet publish`
+## <a name="dont-confuse-dotnet-pack-with-dotnet-publish"></a>Nie myl `dotnet pack` się z`dotnet publish`
 
-Należy pamiętać, że w żadnym momencie nie jest to `dotnet publish` polecenie. `dotnet publish` polecenie służy do wdrażania aplikacji ze wszystkimi zależnościami w tym samym pakiecie — nie do generowania pakietu NuGet, który ma być dystrybuowany i używany za pośrednictwem programu NuGet.
+Ważne jest, aby pamiętać, że `dotnet publish` w żadnym momencie nie jest to polecenie zaangażowany. Polecenie `dotnet publish` służy do wdrażania aplikacji ze wszystkimi ich zależnościami w tym samym pakiecie — a nie do generowania pakietu NuGet do dystrybucji i używania za pośrednictwem NuGet.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Szybki Start: Tworzenie i publikowanie pakietu](/nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli)
+- [Szybki start: tworzenie i publikowanie pakietu](/nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli)

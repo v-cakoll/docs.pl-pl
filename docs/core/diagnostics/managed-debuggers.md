@@ -1,37 +1,37 @@
 ---
-title: Zarządzane debugery — .NET Core
-description: Przegląd programów Visual Studio i Visual Studio Code Managed Debuggers.
+title: Zarządzane debugery - .NET Core
+description: Przegląd debugerów zarządzanych przez program Visual Studio i Visual Studio Code.
 ms.date: 08/05/2019
 ms.openlocfilehash: 065b1b0fc32eb76b398cb3821c8592a1955c9359
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75715565"
 ---
-# <a name="net-core-managed-debuggers"></a>Zarządzane debugery programu .NET Core
+# <a name="net-core-managed-debuggers"></a>Debugery zarządzane przez program .NET Core
 
-Debugery umożliwiają Wstrzymywanie lub wykonywanie programów krok po kroku. W przypadku wstrzymania bieżący stan procesu może być wyświetlany. Poprzez przechodzenie przez najważniejsze sekcje, możesz zrozumieć swój kod i dlaczego generuje wynik.
+Debuggery umożliwiają wstrzymywanie lub wykonywania programów krok po kroku. Po wstrzymaniu można wyświetlić bieżący stan procesu. Przez krok po kroku kluczowych sekcji, można uzyskać zrozumienie kodu i dlaczego daje wynik, który robi.
 
-Firma Microsoft udostępnia debugery dla kodu zarządzanego w programie **Visual Studio** i **Visual Studio Code**.
+Firma Microsoft udostępnia debugery kodu zarządzanego w **programie Visual Studio** i Visual Studio **Code**.
 
-## <a name="visual-studio-managed-debugger"></a>Debuger zarządzany programu Visual Studio
+## <a name="visual-studio-managed-debugger"></a>Debuger zarządzany w programie Visual Studio
 
-**Program Visual Studio** to zintegrowane środowisko programistyczne z najpełniejszym dostępnym debugerem. Program Visual Studio to doskonały wybór dla deweloperów pracujących nad systemem Windows.
+**Visual Studio** to zintegrowane środowisko programistyczne z najbardziej wszechstronnym debugerem. Visual Studio to doskonały wybór dla programistów pracujących w systemie Windows.
 
-- [Samouczek — debugowanie aplikacji .NET Core w systemie Windows przy użyciu programu Visual Studio](../tutorials/debugging-with-visual-studio.md)
+- [Samouczek — debugowanie aplikacji .NET Core w systemie Windows za pomocą programu Visual Studio](../tutorials/debugging-with-visual-studio.md)
 
-Mimo że program Visual Studio jest aplikacją systemu Windows, może być nadal używany do zdalnego debugowania aplikacji Linux i macOS.
+Program Visual Studio jest aplikacją systemu Windows, ale nadal może być używany do zdalnego debugowania aplikacji systemu Linux i systemu macOS.
 
-- [Debugowanie aplikacji .NET Core w systemie Linux/OSX przy użyciu programu Visual Studio](https://github.com/Microsoft/MIEngine/wiki/Offroad-Debugging-of-.NET-Core-on-Linux---OSX-from-Visual-Studio)
+- [Debugowanie aplikacji .NET Core w systemie Linux/OSX za pomocą programu Visual Studio](https://github.com/Microsoft/MIEngine/wiki/Offroad-Debugging-of-.NET-Core-on-Linux---OSX-from-Visual-Studio)
 
- Debugowanie ASP.NET Core aplikacji wymaga nieco innych instrukcji.
+ Debugowanie ASP.NET aplikacje Core wymagają nieco innych instrukcji.
 
 - [Debugowanie aplikacji ASP.NET Core w programie Visual Studio](/visualstudio/debugger/how-to-enable-debugging-for-aspnet-applications#debug-aspnet-core-apps)
 
-## <a name="visual-studio-code-managed-debugger"></a>Debuger zarządzanego Visual Studio Code
+## <a name="visual-studio-code-managed-debugger"></a>Debuger zarządzany przez kod programu Visual Studio
 
-**Visual Studio Code** to lekki Edytor kodu dla wielu platform. Używa tej samej implementacji debugera platformy .NET Core jako programu Visual Studio, ale przy użyciu uproszczonego interfejsu użytkownika.
+**Visual Studio Code** to lekki edytor kodu między platformami. Używa tej samej implementacji debugera .NET Core co Visual Studio, ale z uproszczonym interfejsem użytkownika.
 
-- [Samouczek — debugowanie aplikacji .NET Core za pomocą Visual Studio Code](../tutorials/with-visual-studio-code.md#debug)
-- [Debugowanie w Visual Studio Code](https://code.visualstudio.com/docs/editor/debugging)
+- [Samouczek — debugowanie aplikacji .NET Core za pomocą kodu programu Visual Studio](../tutorials/with-visual-studio-code.md#debug)
+- [Debugowanie w kodzie programu Visual Studio](https://code.visualstudio.com/docs/editor/debugging)

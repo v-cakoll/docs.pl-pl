@@ -1,14 +1,14 @@
 ---
 ms.openlocfilehash: 6f8e6d2786d20e055c9bef63891db4d6f88bc64b
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901712"
 ---
 ### <a name="identity-signinmanager-constructor-accepts-new-parameter"></a>Tożsamość: Konstruktor SignInManager akceptuje nowy parametr
 
-Począwszy od ASP.NET Core 3,0, dodano nowy parametr `IUserConfirmation<TUser>` do konstruktora `SignInManager`. Aby uzyskać więcej informacji, zobacz [dotnet/aspnetcore # 8356](https://github.com/dotnet/aspnetcore/issues/8356).
+Począwszy od ASP.NET Core 3.0, `IUserConfirmation<TUser>` nowy `SignInManager` parametr został dodany do konstruktora. Aby uzyskać więcej informacji, zobacz [dotnet/aspnetcore#8356](https://github.com/dotnet/aspnetcore/issues/8356).
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -16,11 +16,11 @@ Począwszy od ASP.NET Core 3,0, dodano nowy parametr `IUserConfirmation<TUser>` 
 
 #### <a name="reason-for-change"></a>Przyczyna zmiany
 
-Celem zmiany było dodanie obsługi nowych przepływów poczty e-mail/potwierdzenia w tożsamości.
+Motywacją do zmiany było dodanie obsługi nowych przepływów e-mail / potwierdzenie w tożsamości.
 
-#### <a name="recommended-action"></a>Zalecane działanie
+#### <a name="recommended-action"></a>Zalecana akcja
 
-W przypadku ręcznego konstruowania `SignInManager`Podaj implementację `IUserConfirmation` lub Przechwyć jeden z iniekcji zależności, aby zapewnić.
+Jeśli ręcznie konstruowanie `SignInManager`, należy `IUserConfirmation` podać implementację lub pobrać jeden z iniekcji zależności, aby zapewnić.
 
 #### <a name="category"></a>Kategoria
 

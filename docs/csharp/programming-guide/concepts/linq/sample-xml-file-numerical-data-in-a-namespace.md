@@ -1,16 +1,16 @@
 ---
-title: 'Przykładowy plik XML: Dane liczbowe w Namespace3'
+title: 'Przykładowy plik XML: dane liczbowe w obszarze nazw3'
 ms.date: 07/20/2015
 ms.assetid: 51750cab-3c66-4511-90fb-b9d211308d31
 ms.openlocfilehash: 02788b73a7af9922b5a50237f2d2e401cba8abe2
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "66483705"
 ---
 # <a name="sample-xml-file-numerical-data-in-a-namespace"></a>Przykładowy plik XML: dane liczbowe w przestrzeni nazw
-Następujący plik XML jest używany w różne przykłady w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dokumentacji. Ten plik zawiera dane liczbowe, sumowanie, średniej i grupowania. Kod XML jest w przestrzeni nazw.  
+Poniższy plik XML jest używany w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] różnych przykładach w dokumentacji. Ten plik zawiera dane liczbowe do sumowania, uśredniania i grupowania. Kod XML znajduje się w obszarze nazw.  
   
 ## <a name="data"></a>Dane  
   

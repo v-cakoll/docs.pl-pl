@@ -1,18 +1,18 @@
 ---
 ms.openlocfilehash: 2c1362d6982206b14475f77700add0bae61da173
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901987"
 ---
-### <a name="caching-compactonmemorypressure-property-removed"></a>Buforowanie: Usunięto Właściwość CompactOnMemoryPressure
+### <a name="caching-compactonmemorypressure-property-removed"></a>Buforowanie: Usunięto właściwość CompactOnMemoryPressure
 
-W wersji ASP.NET Core 3,0 usunięto [przestarzałe interfejsy API MemoryCacheOptions](https://github.com/dotnet/extensions/blob/dc5c593da7b72c82e6fe85abb91d03818f9b700c/src/Caching/Memory/src/MemoryCacheOptions.cs#L17-L18).
+Wersja ASP.NET Core 3.0 usunęła [przestarzałe interfejsy API MemoryCacheOptions](https://github.com/dotnet/extensions/blob/dc5c593da7b72c82e6fe85abb91d03818f9b700c/src/Caching/Memory/src/MemoryCacheOptions.cs#L17-L18).
 
-#### <a name="change-description"></a>Opis zmiany
+#### <a name="change-description"></a>Zmień opis
 
-Ta zmiana to kontynuacja dla elementu [ASPNET/buforowanie # 221](https://github.com/aspnet/Caching/issues/221). Aby zapoznać się z omówieniem, zobacz [dotnet/Extensions # 1062](https://github.com/dotnet/extensions/issues/1062).
+Ta zmiana jest kontynuacją [aspnet/caching#221](https://github.com/aspnet/Caching/issues/221). Aby uzyskać dyskusję, zobacz [dotnet/extensions#1062](https://github.com/dotnet/extensions/issues/1062).
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -20,19 +20,19 @@ Ta zmiana to kontynuacja dla elementu [ASPNET/buforowanie # 221](https://github.
 
 #### <a name="old-behavior"></a>Stare zachowanie
 
-Właściwość `MemoryCacheOptions.CompactOnMemoryPressure` była dostępna.
+`MemoryCacheOptions.CompactOnMemoryPressure`nieruchomości.
 
 #### <a name="new-behavior"></a>Nowe zachowanie
 
-Właściwość `MemoryCacheOptions.CompactOnMemoryPressure` została usunięta.
+Obiekt `MemoryCacheOptions.CompactOnMemoryPressure` został usunięty.
 
 #### <a name="reason-for-change"></a>Przyczyna zmiany
 
-Automatyczne kompaktowanie pamięci podręcznej powodowało problemy. Aby uniknąć nieoczekiwanego zachowania, pamięć podręczna powinna być kompaktowana tylko wtedy, gdy jest to konieczne.
+Automatyczne kompaktowanie pamięci podręcznej spowodowało problemy. Aby uniknąć nieoczekiwanego zachowania, pamięć podręczna powinna być skompaktowana tylko wtedy, gdy jest to potrzebne.
 
-#### <a name="recommended-action"></a>Zalecane działanie
+#### <a name="recommended-action"></a>Zalecana akcja
 
-Aby skompaktować pamięć podręczną, downcast do `MemoryCache` i Wywołaj `Compact` w razie potrzeby.
+Aby skompaktować pamięć `MemoryCache` podręczną, w razie potrzeby należy smisjać i wywołać połączenie. `Compact`
 
 #### <a name="category"></a>Kategoria
 

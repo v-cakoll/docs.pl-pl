@@ -1,14 +1,14 @@
 ---
 ms.openlocfilehash: 2a65caedea2af65796267aa145e275ebff814bf8
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394062"
 ---
-### <a name="signalr-usesignalr-and-useconnections-methods-marked-obsolete"></a>Sygnalizujący: metody UseSignalR i UseConnections oznaczone jako przestarzałe
+### <a name="signalr-usesignalr-and-useconnections-methods-marked-obsolete"></a>SignalR: UseSignalR i UseConnections metody oznaczone jako przestarzałe
 
-Metody `UseConnections` i `UseSignalR` oraz klasy `ConnectionsRouteBuilder` i `HubRouteBuilder` są oznaczane jako przestarzałe w ASP.NET Core 3,0.
+Metody `UseConnections` i `UseSignalR` klasy `ConnectionsRouteBuilder` i `HubRouteBuilder` są oznaczone jako przestarzałe w ASP.NET Core 3.0.
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -16,19 +16,19 @@ Metody `UseConnections` i `UseSignalR` oraz klasy `ConnectionsRouteBuilder` i `H
 
 #### <a name="old-behavior"></a>Stare zachowanie
 
-Routing centrum sygnałów został skonfigurowany przy użyciu `UseSignalR` lub `UseConnections`.
+Routing koncentratora SignalR `UseSignalR` `UseConnections`został skonfigurowany przy użyciu lub .
 
 #### <a name="new-behavior"></a>Nowe zachowanie
 
-Stary sposób konfigurowania routingu został przestarzały i zastąpiony przez Routing punktów końcowych.
+Stary sposób konfigurowania routingu został przestarzały i zastąpiony routingiem punktów końcowych.
 
 #### <a name="reason-for-change"></a>Przyczyna zmiany
 
-Oprogramowanie pośredniczące jest przenoszone do nowego systemu routingu punktu końcowego. Stary sposób dodawania oprogramowania pośredniczącego jest przestarzały.
+Oprogramowanie pośredniczą jest przenoszone do nowego systemu routingu punktów końcowych. Stary sposób dodawania pośredniczy jest przestarzały.
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Zastąp `UseSignalR` z `UseEndpoints`:
+Zamień na: `UseSignalR` `UseEndpoints`
 
 **Stary kod:**
 

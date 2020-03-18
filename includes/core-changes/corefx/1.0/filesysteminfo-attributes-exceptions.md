@@ -1,18 +1,18 @@
 ---
 ms.openlocfilehash: 4091bdcf7d9ed8872aed5faa6e6d3ed143903787
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77449410"
 ---
-### <a name="unauthorizedaccessexception-thrown-by-filesysteminfoattributes"></a>UnauthorizedAccessException zgłoszone przez FileSystemInfo. Attributes
+### <a name="unauthorizedaccessexception-thrown-by-filesysteminfoattributes"></a>UnauthorizedAccessException zgłoszony przez FileSystemInfo.Attributes
 
-W programie .NET Core jest generowany <xref:System.UnauthorizedAccessException>, gdy wywołujący próbuje ustawić wartość atrybutu pliku, ale nie ma uprawnienia do zapisu.
+W .NET Core <xref:System.UnauthorizedAccessException> jest generowany, gdy obiekt wywołujący próbuje ustawić wartość atrybutu pliku, ale nie ma uprawnień do zapisu.
 
 #### <a name="change-description"></a>Zmień opis
 
-W .NET Framework jest generowany <xref:System.ArgumentException>, gdy wywołujący próbuje ustawić wartość atrybutu pliku w <xref:System.IO.FileSystemInfo.Attributes?displayProperty=nameWithType>, ale nie ma uprawnienia do zapisu. W przypadku platformy .NET Core w zamian zostanie zgłoszony <xref:System.UnauthorizedAccessException>. (W środowisku .NET Core jest nadal zgłaszane <xref:System.ArgumentException>, jeśli obiekt wywołujący podejmie próbę ustawienia nieprawidłowego atrybutu pliku).
+W platformie .NET Framework jest <xref:System.ArgumentException> generowany, gdy obiekt <xref:System.IO.FileSystemInfo.Attributes?displayProperty=nameWithType> wywołujący próbuje ustawić wartość atrybutu pliku, ale nie ma uprawnień do zapisu. W .NET Core <xref:System.UnauthorizedAccessException> zamiast tego jest generowany. (W .NET Core <xref:System.ArgumentException> jest nadal generowany, jeśli obiekt wywołujący próbuje ustawić nieprawidłowy atrybut pliku).
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -20,7 +20,7 @@ W .NET Framework jest generowany <xref:System.ArgumentException>, gdy wywołują
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Zmodyfikuj wszystkie instrukcje `catch`, aby przechwycić <xref:System.UnauthorizedAccessException> zamiast lub oprócz <xref:System.ArgumentException>, w razie potrzeby.
+Zmodyfikuj `catch` <xref:System.UnauthorizedAccessException> wszystkie instrukcje, aby przechwycić <xref:System.ArgumentException>zamiast lub oprócz , w razie potrzeby.
 
 #### <a name="category"></a>Kategoria
 

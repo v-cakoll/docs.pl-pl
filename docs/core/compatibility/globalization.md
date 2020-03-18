@@ -1,19 +1,19 @@
 ---
-title: Zmiany dotyczące podziału globalizacji
-description: Wyświetla listę istotnych zmian w globalizacji w programie .NET Core.
+title: Przełomowe zmiany związane z globalizacją
+description: Wyświetla listę kluczowych zmian w globalizacji w .NET Core.
 ms.date: 09/20/2019
 ms.openlocfilehash: eebab2b43c1fc852cd728636518c6ac2ceef2d74
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77093009"
 ---
-# <a name="globalization-breaking-changes"></a>Zmiany dotyczące podziału globalizacji
+# <a name="globalization-breaking-changes"></a>Przełomowe zmiany związane z globalizacją
 
-Następujące istotne zmiany zostały udokumentowane na tej stronie:
+Na tej stronie udokumentowane są następujące zmiany dotyczące zasad:
 
-- [Ustawienia regionalne "C" są mapowane na niezmienne ustawienia regionalne](#c-locale-maps-to-the-invariant-locale)
+- [Mapy regionalne "C" do niezmiennych ustawień regionalnych](#c-locale-maps-to-the-invariant-locale)
 
 ## <a name="net-core-30"></a>.NET Core 3.0
 

@@ -1,5 +1,5 @@
 ---
-title: ':: operator- C# odwołanie'
+title: ':: operator - odwołanie do języka C#'
 ms.date: 08/09/2019
 f1_keywords:
 - ::_CSharpKeyword
@@ -11,17 +11,17 @@ helpviewer_keywords:
 - global keyword [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
 ms.openlocfilehash: a18e52ea05d49bf2b3a468923f1433f09fff9a8b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712679"
 ---
-# <a name="-operator-c-reference"></a>:: — operatorC# (odwołanie)
+# <a name="-operator-c-reference"></a>:: operator (odwołanie do Języka C#)
 
-Użyj kwalifikatora aliasu przestrzeni nazw `::`, aby uzyskać dostęp do elementu członkowskiego aliasu przestrzeni nazw. Kwalifikator `::` można użyć tylko między dwoma identyfikatorami. Identyfikator po lewej stronie może być jednym z następujących aliasów:
+Użyj kwalifikatora `::` aliasu obszaru nazw, aby uzyskać dostęp do członka aliased namespace. Kwalifikatora `::` można używać tylko między dwoma identyfikatorami. Identyfikator po lewej stronie może być dowolny z następujących aliasów:
 
-- Alias przestrzeni nazw utworzony za pomocą [dyrektywy aliasu using](../keywords/using-directive.md):
+- Alias obszaru nazw utworzony przy [użyciu aliasdyrektywy:](../keywords/using-directive.md)
 
   ```csharp
   using forwinforms = System.Drawing;
@@ -33,10 +33,10 @@ Użyj kwalifikatora aliasu przestrzeni nazw `::`, aby uzyskać dostęp do elemen
   }
   ```
 
-- [Alias zewnętrzny](../keywords/extern-alias.md).
-- Alias `global`, który jest aliasem globalnym przestrzeni nazw. Globalna przestrzeń nazw jest przestrzenią nazw zawierającą przestrzenie nazw i typy, które nie są zadeklarowane w nazwanym obszarze nazw. Gdy jest używany z kwalifikatorem `::`, alias `global` zawsze odwołuje się do globalnej przestrzeni nazw, nawet jeśli istnieje `global` alias przestrzeni nazw zdefiniowany przez użytkownika.
+- Alias [extern](../keywords/extern-alias.md).
+- Alias, `global` który jest aliasem globalnej przestrzeni nazw. Globalny obszar nazw to obszar nazw zawierający obszary nazw i typy, które nie są zadeklarowane wewnątrz nazwanego obszaru nazw. W przypadku `::` użycia z `global` kwalifikatorem alias zawsze odwołuje się do `global` globalnego obszaru nazw, nawet jeśli istnieje alias obszaru nazw zdefiniowany przez użytkownika.
 
-  Poniższy przykład używa aliasu `global`, aby uzyskać dostęp do przestrzeni nazw .NET <xref:System>, która jest elementem członkowskim globalnej przestrzeni nazw. Bez aliasu `global` zdefiniowane przez użytkownika `System` przestrzeń nazw, która jest elementem członkowskim `MyCompany.MyProduct` przestrzeni nazw, zostanie uzyskany dostęp:
+  W poniższym `global` przykładzie użyto aliasu, aby uzyskać dostęp do obszaru nazw .NET, <xref:System> który jest członkiem globalnego obszaru nazw. Bez `global` aliasu można uzyskać `System` dostęp do obszaru nazw zdefiniowanego przez użytkownika, który jest członkiem obszaru `MyCompany.MyProduct` nazw:
 
   ```csharp
   namespace MyCompany.MyProduct.System
@@ -54,16 +54,16 @@ Użyj kwalifikatora aliasu przestrzeni nazw `::`, aby uzyskać dostęp do elemen
   ```
 
   > [!NOTE]
-  > Słowo kluczowe `global` jest aliasem globalnym przestrzeni nazw tylko wtedy, gdy jest to identyfikator po lewej stronie kwalifikatora `::`.
+  > Słowo `global` kluczowe jest aliasem globalnej przestrzeni nazw tylko wtedy, `::` gdy jest to lewy identyfikator kwalifikatora.
 
-Możesz również użyć [operatora `.` dostępu do elementu członkowskiego](member-access-operators.md#member-access-operator-) , aby uzyskać dostęp do elementu członkowskiego z aliasem. Jednak operator `.` jest również używany w celu uzyskania dostępu do elementu członkowskiego typu. Kwalifikator `::` gwarantuje, że jego identyfikator po lewej stronie zawsze odwołuje się do aliasu przestrzeni nazw, nawet jeśli istnieje typ lub przestrzeń nazw o tej samej nazwie.
+Można również użyć [operatora `.` dostępu do elementu członkowskiego,](member-access-operators.md#member-access-operator-) aby uzyskać dostęp do elementu członkowskiego aliased obszaru nazw. Jednak `.` operator jest również używany do uzyskiwania dostępu do elementu członkowskiego typu. Kwalifikator `::` zapewnia, że jego lewy identyfikator zawsze odwołuje się do aliasu obszaru nazw, nawet jeśli istnieje typ lub obszar nazw o tej samej nazwie.
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
-Aby uzyskać więcej informacji, zobacz sekcję [kwalifikatory aliasów przestrzeni nazw](~/_csharplang/spec/namespaces.md#namespace-alias-qualifiers) [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).
+Aby uzyskać więcej informacji, zobacz sekcję [Kwalifikatory aliasu obszaru nazw](~/_csharplang/spec/namespaces.md#namespace-alias-qualifiers) [specyfikacji języka Języka C#.](~/_csharplang/spec/introduction.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [C#odwoła](../index.md)
+- [Dokumentacja języka C#](../index.md)
 - [Operatory języka C#](index.md)
-- [Używanie przestrzeni nazw](../../programming-guide/namespaces/using-namespaces.md)
+- [Korzystanie z przestrzeni nazw](../../programming-guide/namespaces/using-namespaces.md)

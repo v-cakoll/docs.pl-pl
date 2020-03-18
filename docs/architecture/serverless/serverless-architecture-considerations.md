@@ -1,86 +1,86 @@
 ---
 title: Zagadnienia dotyczące architektury bezserwerowej — aplikacje bezserwerowe
-description: Zapoznaj się z wyzwaniami dotyczącymi tworzenia aplikacji bezserwerowych, od zarządzania stanami i trwałego magazynu do skalowania, rejestrowania, śledzenia i diagnostyki.
+description: Poznaj wyzwania związane z projektowaniem aplikacji bezserwerowych, od zarządzania stanem i trwałego magazynu po skalowanie, rejestrowanie, śledzenie i diagnostykę.
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: c856683cf6910be98661e634246cd003b93a6d76
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72522427"
 ---
 # <a name="serverless-architecture-considerations"></a>Zagadnienia dotyczące architektury bezserwerowej
 
-Przyjęcie architektury bezserwerowej wiąże się z pewnymi wyzwaniami. W tej części przedstawiono kilka typowych zagadnień, z którymi należy się zapoznać. Wszystkie te wyzwania mają rozwiązania. Podobnie jak w przypadku wszystkich opcji architektury, decyzja o bezproblemowym przejściu do serwera powinna być podejmowana dopiero po starannym uwzględnieniu specjalistów i wad. W zależności od potrzeb aplikacji możesz zdecydować, że implementacja bezserwerowa nie jest odpowiednim rozwiązaniem dla niektórych składników.
+Przyjęcie architektury bezserwerowej wiąże się z pewnymi wyzwaniami. W tej sekcji omówiono niektóre z bardziej typowych zagadnień, o które należy pamiętać. Wszystkie te wyzwania mają rozwiązania. Podobnie jak w przypadku wszystkich wyborów architektury, decyzja, aby przejść bez serwerów powinny być podejmowane dopiero po dokładnym rozważeniu plusy i minusy. W zależności od potrzeb aplikacji może zdecydować, że implementacja bezserwerowa nie jest właściwym rozwiązaniem dla niektórych składników.
 
 ## <a name="managing-state"></a>Zarządzanie stanem
 
-Funkcje bezserwerowe, podobnie jak w przypadku mikrousług, są domyślnie bezstanowe. Uniknięcie stanu powoduje, że serwer nie będzie miał charakteru tymczasowych, do skalowania w poziomie i zapewnienia odporności bez centralnego punktu awarii. W pewnych okolicznościach procesy biznesowe wymagają stanu. Jeśli proces wymaga stanu, dostępne są dwie opcje. Możesz przyjąć model inny niż serwer lub korzystać z osobnej usługi, która zapewnia stan. Dodanie stanu może spowodować skomplikowanie rozwiązania i utrudnić jego skalowanie i potencjalnie utworzyć single point of failure. Należy uważnie rozważyć, czy funkcja absolutnie wymaga stanu. Jeśli odpowiedź ma wartość "tak", należy określić, czy nadal ma sens zaimplementowanie jej z użyciem bezserwerowej.
+Funkcje bezserwerowe, podobnie jak w ogóle w mikrousługach, są domyślnie bezstanowe. Unikanie stanu umożliwia bezserwerowe być efemeryczny, skalować w sposób skalowany w sposób skalowany i zapewnić odporność bez centralnego punktu awarii. W pewnych okolicznościach procesy biznesowe wymagają stanu. Jeśli proces wymaga stanu, masz dwie opcje. Można przyjąć model inny niż bezserwerowy lub wchodzić w interakcje z oddzielną usługą, która zapewnia stan. Dodawanie stanu może skomplikować rozwiązanie i utrudnić skalowanie i potencjalnie utworzyć pojedynczy punkt awarii. Dokładnie zastanów się, czy twoja funkcja absolutnie wymaga stanu. Jeśli odpowiedź brzmi "tak", należy określić, czy nadal warto zaimplementować ją bez serwerów.
 
-Istnieje kilka rozwiązań do przyjęcia stanu bez naruszania korzyści związanych z serwerem. Oto niektóre z najpopularniejszych rozwiązań:
+Istnieje kilka rozwiązań do przyjęcia stanu bez naruszania korzyści z bezserwerowych. Niektóre z bardziej popularnych rozwiązań obejmują:
 
-- Korzystanie z tymczasowego magazynu danych lub rozproszonej pamięci podręcznej, takich jak Redis
-- Stan magazynu w bazie danych, na przykład SQL lub CosmosDB
-- Obsługa stanu za pomocą aparatu przepływu pracy, takiego jak funkcje trwałe
+- Korzystanie z tymczasowego magazynu danych lub rozproszonej pamięci podręcznej, takiej jak Redis
+- Stan przechowywania w bazie danych, takiej jak SQL lub CosmosDB
+- Stan obsługi za pomocą aparatu przepływu pracy, takiego jak trwałe funkcje
 
-Dolna linia polega na tym, że należy zwrócić uwagę na konieczność zarządzania stanami w ramach procesów, które są rozważane, aby wdrożyć je bezserwerowo.
+Najważniejsze jest to, że należy zdawać sobie sprawę z potrzeby zarządzania stanem w ramach procesów, które rozważasz do wdrożenia z bezserwerowych.
 
 ## <a name="long-running-processes"></a>Długotrwałe procesy
 
-Wiele zalet bezserwerowych jest zależnych od procesów tymczasowych. Krótkie czasy wykonywania ułatwiają dostawcy bezserwerowym zwolnienie zasobów jako funkcje końcowe i udostępniające funkcje między hostami. Większość dostawców chmury ogranicza łączny czas działania funkcji do około 10 minut. Jeśli proces może trwać dłużej, można rozważyć alternatywną implementację.
+Wiele korzyści z bezserwerowych polegać na procesach jest ulotne. Krótkie czasy uruchamiania ułatwiają dostawcy bezserwerowe zwalnianie zasobów w miarę końców funkcji i udostępnianie funkcji między hostami. Większość dostawców chmury ogranicza całkowity czas działania funkcji do około 10 minut. Jeśli proces może potrwać dłużej, można rozważyć alternatywną implementację.
 
-Istnieje kilka wyjątków i rozwiązań. Jednym z rozwiązań może być przerwanie procesu w mniejszych składnikach, które indywidualnie trwają krócej. Jeśli proces jest długotrwały ze względu na zależności, można także wziąć pod uwagę asynchroniczny przepływ pracy przy użyciu rozwiązania, takiego jak funkcje trwałe. Trwałe funkcje wstrzymują i utrzymują stan procesu, oczekując na zakończenie procesu zewnętrznego. Obsługa asynchroniczna skraca czas rzeczywistego uruchamiania procesu.
+Istnieje kilka wyjątków i rozwiązań. Jednym z rozwiązań może być podzielić proces na mniejsze składniki, które indywidualnie zajmują mniej czasu. Jeśli proces działa długo z powodu zależności, można również rozważyć asynchroniczny przepływ pracy przy użyciu rozwiązania, takich jak trwałe funkcje. Trwałe funkcje wstrzymywają i utrzymują stan procesu, gdy oczekuje na zakończenie procesu zewnętrznego. Obsługa asynchroniczna skraca czas rzeczywistego procesu.
 
 ## <a name="startup-time"></a>Czas uruchamiania
 
-Jednym z potencjalnych problemów dotyczących implementacji bezserwerowych jest czas uruchamiania. Aby zaoszczędzić zasoby, wielu dostawców bezserwerowych tworzy infrastrukturę "na żądanie". Gdy funkcja bezserwerowa jest wyzwalana po upływie okresu czasu, może być konieczne utworzenie lub ponowne uruchomienie zasobów do hostowania funkcji. W niektórych sytuacjach zimny start może powodować opóźnienia kilku sekund. Czas uruchamiania zależy od dostawców i poziomów usług. Istnieje kilka metod rozwiązywania czasu uruchamiania, jeśli ważne jest, aby zminimalizować w przypadku powodzenia aplikacji.
+Jednym z potencjalnych problemów z implementacjami bezserwerowych jest czas uruchamiania. Aby oszczędzać zasoby, wielu dostawców bezserwerowych tworzy infrastrukturę "na żądanie". Gdy funkcja bezserwerowa jest wyzwalana po pewnym czasie, zasoby do obsługi funkcji może być konieczne utworzenie lub ponowne uruchomienie. W niektórych sytuacjach zimne starty mogą powodować kilkusekundowe opóźnienia. Czas uruchamiania różni się w zależności od dostawcy i poziomów usług. Istnieje kilka metod adres czasu uruchamiania, jeśli jest to ważne, aby zminimalizować dla powodzenia aplikacji.
 
-- Niektórzy dostawcy umożliwiają użytkownikom płatność za poziomy usług, które gwarantują infrastrukturę "zawsze włączone".
-- Zaimplementuj mechanizm Keep-Alive (Wyślij polecenie ping do punktu końcowego, aby zachować jego wartość "aktywny").
-- Używaj aranżacji, takiej jak Kubernetes, z podejściem do funkcji kontenera (host jest już uruchomiony, dzięki czemu nowe wystąpienia są niezwykle szybkie).
+- Niektórzy dostawcy umożliwiają użytkownikom płacenie za poziomy usług, które gwarantują, że infrastruktura jest "zawsze na".
+- Zaimplementuj mechanizm keep-alive (ping punktu końcowego, aby utrzymać go "obudzić").
+- Użyj aranżacji, takich jak Kubernetes z podejściem funkcji konteneryzowanych (host jest już uruchomiony, więc przędzenia nowych wystąpień jest bardzo szybki).
 
 ## <a name="database-updates-and-migrations"></a>Aktualizacje i migracje bazy danych
 
-Zaletą bezserwerowego kodu jest możliwość zwolnienia nowych funkcji bez konieczności ponownego wdrażania całej aplikacji. Ta korzyść może stać się wadą, gdy istnieje relacyjna baza danych. Zmiany w schematach bazy danych są trudne do synchronizowania z aktualizacjami bez serwera. Dodatkowe wyzwania są powodowane, gdy wystąpią problemy, a zmiany muszą zostać wycofane. Integralność danych jest jednym z powodów, że najlepszym rozwiązaniem dla mikrousług i funkcji bezserwerowych jest posiadanie własnych danych. Można wdrożyć zmiany jako pojedynczą jednostkę obliczeniową i dane. Rzeczywistość polega na tym, że w wielu starszych systemach jest dostępna duża baza danych zaplecza, która musi być uzgodniona z architekturą bezserwerową.
+Zaletą kodu bezserwerowego jest to, że można zwolnić nowe funkcje bez konieczności ponownego wdrażania całej aplikacji. Ta zaleta może stać się wadą, gdy istnieje relacyjna baza danych zaangażowanych. Zmiany w schemach bazy danych są trudne do zsynchronizowania z aktualizacjami bezserwerowych. Dodatkowe wyzwania pojawiają się, gdy coś pójdzie nie tak, a zmiany muszą zostać wycofane. Integralność danych jest jednym z powodów, że najlepszym rozwiązaniem dla mikrousług i funkcji bezserwerowych jest, że są one właścicielem własnych danych. Istnieje możliwość wdrożenia zmian jako pojedynczej jednostki obliczeń i danych. W rzeczywistości wiele starszych systemów posiada dużą bazę danych zaplecza, która musi zostać uzgodniona z architekturą bezserwerową.
 
-Popularnym podejściem do rozwiązywania wersji schematu jest nigdy nie modyfikować istniejących właściwości i kolumn, ale zamiast tego Dodaj nowe informacje. Rozważmy na przykład zmianę przechodzenia z flagi "ukończone" z wartością "ukończony" na listę zadań do wykonania na "Data ukończenia". Zamiast usuwać stare pole, zmiana bazy danych będzie:
+Popularnym podejściem do rozwiązywania wersji schematu jest nigdy nie modyfikować istniejących właściwości i kolumn, ale zamiast tego dodać nowe informacje. Rozważmy na przykład zmianę, aby przejść z flagi "ukończone" logicznej dla listy dozrobienia do "daty ukończonej". Zamiast usuwać stare pole, zmiana bazy danych:
 
-1. Dodaj nowe pole "Data zakończenia".
-1. Przekształć pole Boolean "ukończony" na obliczaną funkcję, która oblicza, czy data zakończenia przypada po dacie bieżącej.
-1. Dodaj wyzwalacz, aby ustawić datę ukończenia na bieżącą datę, gdy ukończona wartość logiczna jest ustawiona na wartość true.
+1. Dodaj nowe pole "data ukończona".
+1. Przekształć "ukończone" pole logiczne w funkcję obliczaną, która ocenia, czy ukończona data jest po bieżącej dacie.
+1. Dodaj wyzwalacz, aby ustawić ukończoną datę na bieżącą datę, gdy ukończony wartość logiczna jest ustawiona na true.
 
-Sekwencja zmian zapewnia, że starszy kod będzie nadal działać "w stanie takim, w jakim nowsze funkcje bezserwerowe mogą korzystać z nowego pola.
+Sekwencja zmian gwarantuje, że starszy kod będzie nadal działał "tak jak jest", podczas gdy nowsze funkcje bezserwerowe mogą korzystać z nowego pola.
 
-Aby uzyskać więcej informacji na temat danych w architekturach bezserwerowych, zobacz [wyzwania i rozwiązania dotyczące rozproszonego zarządzania danymi](../microservices/architect-microservice-container-applications/distributed-data-management.md).
+Aby uzyskać więcej informacji na temat danych w architekturach bezserwerowych, zobacz [Wyzwania i rozwiązania dotyczące zarządzania danymi rozproszonymi.](../microservices/architect-microservice-container-applications/distributed-data-management.md)
 
 ## <a name="scaling"></a>Skalowanie
 
-Jest to typowa koncepcja, która bezserwerowo oznacza "Brak serwera". Jest to fakt "mniej serwera". Fakt, że istnieje infrastruktura zapasowa, jest ważne, aby zrozumieć, Kiedy przejdziesz do skalowania. Większość platform bezserwerowych udostępnia zestaw kontrolek do obsługi skalowalności infrastruktury, gdy zwiększa się gęstość zdarzeń. Można wybrać jedną z wielu opcji, ale strategia może się różnić w zależności od funkcji. Ponadto funkcje są zwykle uruchamiane w ramach pokrewnego hosta, dzięki czemu funkcje na tym samym hoście mają takie same opcje skalowania. W związku z tym konieczna jest organizacja i ułożeniu, które funkcje są hostowane razem na podstawie wymagań dotyczących skali.
+Jest to powszechne błędne przekonanie, że bezserwerowe oznacza "nie ma serwera". W rzeczywistości jest to "mniej serwera". Fakt, że istnieje infrastruktura podkładowa jest ważne, aby zrozumieć, jeśli chodzi o skalowanie. Większość platform bezserwerowych zapewniają zestaw formantów do obsługi, jak infrastruktura powinna skalować po zwiększeniu gęstości zdarzeń. Możesz wybierać spośród wielu opcji, ale twoja strategia może się różnić w zależności od funkcji. Ponadto funkcje są zazwyczaj uruchamiane w ramach powiązanego hosta, dzięki czemu funkcje na tym samym hoście mają te same opcje skalowania. W związku z tym konieczne jest zorganizowanie i strategize, które funkcje są hostowane razem na podstawie wymagań skali.
 
-Reguły często określają sposób skalowania w górę (zwiększenie zasobów hosta) i skalowanie w poziomie (zwiększenie liczby wystąpień hosta) na podstawie różnych parametrów. Wyzwalacze dla skalowania mogą obejmować harmonogram, szybkości żądań, użycie procesora CPU i użycie pamięci. Wyższa wydajność często odbywa się z większymi kosztami. Mniej kosztowne metody oparte na użyciu mogą nie skalować się jak najszybciej, gdy częstotliwość żądań nagle się zwiększy. Istnieje różnica między zapłaceniem "kosztem ubezpieczenia" i "w miarę jak" i "ryzykowne", z powodu nagłego wzrostu popytu.
+Reguły często określają sposób skalowania w górę (zwiększenie zasobów hosta) i skalowanie w górę (zwiększenie liczby wystąpień hosta) na podstawie różnych parametrów. Wyzwalacze dla skali mogą obejmować harmonogram, szybkość żądań, wykorzystanie procesora CPU i użycie pamięci. Wyższa wydajność często wiąże się z większymi kosztami. Tańsze podejścia oparte na konsumpcji mogą nie być skalowane tak szybko, gdy wskaźnik żądań nagle wzrośnie. Istnieje kompromis między płaceniem z góry "kosztów ubezpieczenia" w porównaniu do płacenia ściśle "jak idziesz" i ryzykując wolniejsze odpowiedzi z powodu nagłego wzrostu popytu.
 
 ## <a name="monitoring-tracing-and-logging"></a>Monitorowanie, śledzenie i rejestrowanie
 
-Często DevOpsm aspektem jest monitorowanie aplikacji po wdrożeniu. Ważne jest, aby mieć strategię monitorowania funkcji bezserwerowych. Największe wyzwanie jest często korelacją lub rozpoznawania, gdy użytkownik wywołuje wiele funkcji w ramach tej samej interakcji. Większość platform bezserwerowych umożliwia rejestrowanie konsoli, które mogą być importowane do narzędzi innych firm. Dostępne są również opcje automatyzacji zbierania danych telemetrycznych, generowania i śledzenia identyfikatorów korelacji oraz monitorowania określonych akcji w celu zapewnienia szczegółowych informacji. Platforma Azure udostępnia zaawansowaną [platformę Application Insights](https://docs.microsoft.com/azure/azure-functions/functions-monitoring) do monitorowania i analizy.
+Często pomijany aspekt DevOps jest monitorowanie aplikacji po wdrożeniu. Ważne jest, aby mieć strategię monitorowania funkcji bezserwerowych. Największym wyzwaniem jest często korelacji lub rozpoznawania, gdy użytkownik wywołuje wiele funkcji w ramach tej samej interakcji. Większość platform bezserwerowych umożliwia rejestrowanie konsoli, które można zaimportować do narzędzi innych firm. Istnieją również opcje automatyzacji zbierania danych telemetrycznych, generowania i śledzenia identyfikatorów korelacji oraz monitorowania określonych akcji w celu zapewnienia szczegółowych informacji. Platforma Azure udostępnia zaawansowaną [platformę Application Insights](https://docs.microsoft.com/azure/azure-functions/functions-monitoring) do monitorowania i analizy.
 
-## <a name="inter-service-dependencies"></a>Zależności między usługami
+## <a name="inter-service-dependencies"></a>Zależności między służbami
 
-Architektura bezserwerowa może obejmować funkcje, które korzystają z innych funkcji. W rzeczywistości nierzadko zdarza się, że w architekturze bezserwerowej wiele usług wywołuje siebie nawzajem w ramach interakcji lub transakcji rozproszonej. Aby uniknąć silnego sprzężenia, zaleca się, aby usługi nie odwołują się bezpośrednio do siebie. Gdy punkt końcowy usługi wymaga zmiany, bezpośrednie odwołania mogą skutkować poważnym refaktoryzacją. Sugerowanym rozwiązaniem jest zapewnienie mechanizmu odnajdowania usług, takiego jak rejestr, który zapewnia odpowiedni punkt końcowy dla typu żądania. Innym rozwiązaniem jest wykorzystanie usług przesyłania komunikatów, takich jak kolejki lub tematy, aby komunikować się między usługami.
+Architektura bezserwerowa może zawierać funkcje, które opierają się na innych funkcjach. W rzeczywistości nie jest rzadkością w architekturze bezserwerowej, aby wiele usług wywoływać siebie w ramach interakcji lub transakcji rozproszonych. Aby uniknąć silnego sprzężenia, zaleca się, aby usługi nie odwoływały się bezpośrednio do siebie. Gdy punkt końcowy dla usługi musi ulec zmianie, bezpośrednie odwołania może spowodować poważne refaktoryzacji. Sugerowanym rozwiązaniem jest zapewnienie mechanizmu odnajdywania usług, takiego jak rejestr, który zapewnia odpowiedni punkt końcowy dla typu żądania. Innym rozwiązaniem jest wykorzystanie usług obsługi wiadomości, takich jak kolejki lub tematy do komunikacji między usługami.
 
-## <a name="managing-failure-and-providing-resiliency"></a>Zarządzanie awarią i zapewnianie odporności
+## <a name="managing-failure-and-providing-resiliency"></a>Zarządzanie awariami i zapewnianie odporności
 
-Ważne jest również, aby wziąć pod uwagę *wzorzec wyłącznika*: Jeśli z jakiegoś powodu usługa nadal się nie powiedzie, nie zaleca się wielokrotnego wywołania tej usługi. Zamiast tego wywoływana jest usługa alternatywna lub komunikat zwracany do momentu ponownego ustanowienia kondycji usługi zależnej. Architektura bezserwerowa musi uwzględniać strategię rozwiązywania zależności między usługami i zarządzania nimi.
+Ważne jest również, aby wziąć pod uwagę *wzorzec wyłącznika*: Jeśli z jakiegoś powodu usługa nadal się nie powiedzie, nie zaleca się wielokrotnego wywoływania tej usługi. Zamiast tego usługa alternatywna jest wywoływana lub komunikat zwracany, dopóki kondycja usługi zależnej zostanie ponownie ustanowiona. Architektura bezserwerowa musi uwzględniać strategię rozwiązywania zależności między służbami i zarządzania nimi.
 
-Aby kontynuować wzorzec wyłącznika, usługi muszą być odporne na uszkodzenia i odporne na błędy. Odporność na uszkodzenia dotyczy możliwości kontynuowania działania aplikacji nawet po wystąpieniu nieoczekiwanych wyjątków lub napotkaniu nieprawidłowych Stanów. Odporność na uszkodzenia jest zazwyczaj funkcją samego kodu i w jaki sposób jest zapisywana w celu obsługi wyjątków. Odporność odnosi się do sposobu, w jaki aplikacja jest w trakcie odzyskiwania po awarii. Odporność jest często zarządzana przez platformę bezserwerową. Platforma powinna być w stanie uruchamiać nowe wystąpienie funkcji bezserwerowej, gdy istniejąca awaria nie powiedzie się. Platforma powinna być również inteligentnie dostępna, aby zatrzymać nowe wystąpienia, gdy każde nowe wystąpienie nie powiedzie się.
+Aby kontynuować wzorzec wyłącznika, usługi muszą być odporne na uszkodzenia i odporne. Odporność na uszkodzenia odnosi się do możliwości kontynuowania działania aplikacji nawet po napotkaniu nieoczekiwanych wyjątków lub nieprawidłowych stanów. Odporność na uszkodzenia jest zazwyczaj funkcją samego kodu i jak jest zapisywany do obsługi wyjątków. Odporność odnosi się do tego, jak aplikacja jest w stanie odzyskać po awarii. Odporność jest często zarządzana przez platformę bezserwerową. Platforma powinna być w stanie rozkręcić nowe wystąpienie funkcji bezserwerowej, gdy istniejący nie powiedzie się. Platforma powinna być również wystarczająco inteligentna, aby zatrzymać przędzenie nowych wystąpień, gdy każde nowe wystąpienie nie powiedzie się.
 
-Aby uzyskać więcej informacji, zobacz [implementowanie wzorca wyłącznika](../microservices/implement-resilient-applications/implement-circuit-breaker-pattern.md).
+Aby uzyskać więcej informacji, zobacz [Implementowanie wzorca wyłącznika](../microservices/implement-resilient-applications/implement-circuit-breaker-pattern.md).
 
-## <a name="versioning-and-greenblue-deployments"></a>Przechowywanie wersji i zielone/niebieskie wdrożenia
+## <a name="versioning-and-greenblue-deployments"></a>Przechowywanie wersji i wdrożenia w kolorze zielonym/niebieskim
 
-Główną zaletą bezserwerową jest możliwość uaktualnienia określonej funkcji bez konieczności ponownego wdrażania całej aplikacji. Aby uaktualnienia zostały wykonane pomyślnie, funkcje muszą być w wersji, tak aby usługi wywołujące je, były kierowane do odpowiedniej wersji kodu. Jest również ważna strategia wdrażania nowych wersji. Typowym podejściem jest użycie "zielone/niebieskie wdrożenia". Zielone wdrożenie jest bieżącą funkcją. Nowa wersja "niebieska" została wdrożona w środowisku produkcyjnym i przetestowana. Podczas testowania są wymieniane zielone i niebieskie wersje, aby nowa wersja była aktywna. Jeśli wystąpią jakieś problemy, można wymienić je ponownie. Obsługa wersji i wdrożenia zielone/niebieskie wymagają kombinacji tworzenia funkcji w celu uwzględnienia zmian wersji i pracy z platformą bezserwerową do obsługi wdrożeń. Jedną z możliwych metod jest użycie serwerów proxy, które są opisane w rozdziale [platformy bezserwerowej platformy Azure](azure-functions.md#proxies) .
+Główną zaletą bezserwerowej jest możliwość uaktualnienia określonej funkcji bez konieczności ponownego wdrażania całej aplikacji. Aby uaktualnienia zakończyły się pomyślnie, funkcje muszą być wersjonowane, aby usługi wywołujące je były kierowane do poprawnej wersji kodu. Ważna jest również strategia wdrażania nowych wersji. Typowym podejściem jest użycie "zielonych/niebieskich wdrożeń". Zielone wdrożenie jest bieżącą funkcją. Nowa "niebieska" wersja jest wdrażana w środowisku produkcyjnym i testowana. Podczas testowania przebiegów, wersje zielone i niebieskie są wymieniane, więc nowa wersja jest dostępna na żywo. Jeśli wystąpią jakiekolwiek problemy, można je zamienić z powrotem. Obsługa wersji i wdrożeń zielony/niebieski wymaga kombinacji tworzenia funkcji, aby uwzględnić zmiany wersji i pracy z platformą bezserwerową do obsługi wdrożeń. Jednym z możliwych podejść jest użycie serwerów proxy, które są opisane w rozdziale [platformy bezserwerowej platformy platformy platformy platformy platformy platformy platformy Platformy Azure.](azure-functions.md#proxies)
 
 >[!div class="step-by-step"]
 >[Poprzedni](serverless-architecture.md)
->[Następny](serverless-design-examples.md)
+>[następny](serverless-design-examples.md)

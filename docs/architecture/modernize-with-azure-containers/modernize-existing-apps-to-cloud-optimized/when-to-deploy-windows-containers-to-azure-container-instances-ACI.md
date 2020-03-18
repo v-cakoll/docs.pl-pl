@@ -1,39 +1,39 @@
 ---
-title: Kiedy należy wdrażać kontenery systemu Windows do Azure Container Instances (ACI)
-description: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows | Kiedy należy wdrażać kontenery systemu Windows do Azure Container Instances (ACI)
+title: Kiedy wdrażać kontenery systemu Windows w wystąpieniach kontenerów platformy Azure (ACI)
+description: Modernizacja istniejących aplikacji .NET za pomocą kontenerów usługi Azure Cloud i Windows | Kiedy wdrażać kontenery systemu Windows w wystąpieniach kontenerów platformy Azure (ACI)
 ms.date: 04/29/2018
 ms.openlocfilehash: 3b6ae1ced9c4e01f5ab400e2575947a396064ebd
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68676908"
 ---
-# <a name="when-to-deploy-windows-containers-to-azure-container-instances-aci"></a>Kiedy należy wdrażać kontenery systemu Windows do Azure Container Instances (ACI)
+# <a name="when-to-deploy-windows-containers-to-azure-container-instances-aci"></a>Kiedy wdrażać kontenery systemu Windows w wystąpieniach kontenerów platformy Azure (ACI)
 
-Azure Container Instances propozycja wartości głównej polega na tym, że możesz od razu wdrożyć kontenery i nie musisz obsługiwać tego środowiska, nie musisz uaktualniać ani poprawiać bazowego systemu operacyjnego lub maszyn wirtualnych, a wszystko to jest widoczne, a dopiero po prostu wdrażasz kontenery w gotowym do użycia środowisku.
+Propozycja głównej wartości wystąpień kontenera azure polega na tym, że można od razu wdrożyć kontenery i nie trzeba utrzymywać tego środowiska, nie trzeba uaktualniać/łatać podstawowego systemu operacyjnego lub maszyn wirtualnych, wszystko, co jest przezroczyste i po prostu wdrożyć kontenery w środowisku gotowy do użycia.
 
-Przyczyny i scenariusze, które należy stosować ACI, są podobne do głównych scenariuszy w przypadku używania maszyn wirtualnych platformy Azure z kontenerami, dlatego główne scenariusze używania Azure Container Instances są następujące:
+Przyczyny i scenariusze, gdy chcesz użyć usługi ACI są podobne do głównych scenariuszy podczas korzystania z maszyn wirtualnych platformy Azure z kontenerami, więc w zasadzie główne scenariusze korzystania z wystąpień usługi Azure Container są:
 
-- **Scenariusze tworzenia i testowania**
+- **Scenariusze tworzenia/testowania**
 - **Automatyzacja zadań**
 - **Agenci CI/CD**
-- **Małe/skalowane przetwarzanie wsadowe**
-- **Proste aplikacje sieci Web**
+- **Przetwarzanie wsadowe na małą skalę**
+- **Proste aplikacje internetowe**
 
-Scenariusz prostego programu Web Apps jest uczciwym scenariuszem dla ACI, ale należy wziąć pod uwagę, że ponieważ w ACI może istnieć tylko jedno wystąpienie kontenera dla każdego obrazu kontenera, nie ma wysokiej dostępności i ma ograniczoną skalowalność.
+Prosty scenariusz aplikacji sieci web jest uczciwy scenariusz dla usługi ACI, ale należy wziąć pod uwagę, że ponieważ w aci można mieć tylko jedno wystąpienie kontenera na obraz kontenera, nie będzie miał wysoką dostępność i mają tylko ograniczoną skalowalność.
 
-Jednak nawet jeśli ACI jest uznawany za infrastrukturę, ponieważ tylko zawiera ona pojedyncze wystąpienia kontenera, w porównaniu z regularnymi maszynami wirtualnymi platformy Azure w systemie Windows Server istnieje ogromna korzyść. Dzięki usłudze ACI możesz wdrażać kontenery w środowisku z własnym obsługą i płacisz tylko za te kontenery. Nie musisz obsługiwać ani aktualizować/poprawiać maszyn wirtualnych, więc jest to znacznie lepsza platforma dla większości scenariuszy, w których można używać maszyn wirtualnych z kontenerami. Korzystanie z usługi ACI jest proste — wystarczy wdrożyć kontener, ale nie ma potrzeby tworzenia środowiska maszyny wirtualnej, które wdrażają kontenery.
+Jednak nawet wtedy, gdy usługa ACI jest uważana za infrastrukturę, ponieważ zapewnia tylko pojedyncze wystąpienia kontenera, istnieje ogromna korzyść w porównaniu do zwykłych maszyn wirtualnych platformy Azure z systemem Windows Server. Dzięki aci wystarczy wdrożyć kontenery w środowisku samoobsługowym i po prostu zapłacić za te kontenery. Nie trzeba obsługiwać/aktualizować/łatamaszyn wirtualnych, więc jest to znacznie lepsza platforma dla większości scenariuszy, w których może być przy użyciu maszyn wirtualnych z kontenerami. Za pomocą ACI jest prosto do przodu, po prostu wdrożyć kontenera, nie ma potrzeby tworzenia środowiska maszyn wirtualnych po prostu wdrożyć kontenery.
 
-Główne zalety Azure Container Instances (ACI) to:
+Główne zalety wystąpienia kontenera platformy Azure (ACI) to:
 
 - Uruchamianie kontenerów bez zarządzania serwerami
 - Zwiększ elastyczność dzięki kontenerom na żądanie
-- Wdrażaj kontenery w chmurze z niepoprzednią prostotą i szybkością — za pomocą jednego polecenia.
-- Zabezpieczanie aplikacji z izolacją funkcji hypervisor
+- Wdrażaj kontenery w chmurze z niespotykaną dotąd prostotą i szybkością — za pomocą jednego polecenia.
+- Bezpieczne aplikacje dzięki izolacji hiperwizorowej
 
-Krótko mówiąc, dzięki funkcji ACI można szybko opracowywać aplikacje bez konieczności zarządzania maszynami wirtualnymi ani uczenia się nowych narzędzi. Jest to tylko Twoja aplikacja w kontenerze działającym w chmurze.
+Krótko mówiąc, dzięki ACI możesz szybko tworzyć aplikacje bez zarządzania maszynami wirtualnymi lub konieczności uczenia się nowych narzędzi. To tylko aplikacja, w kontenerze, uruchomiony w chmurze.
 
 > [!div class="step-by-step"]
 > [Poprzedni](when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md)
-> [Następny](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
+> [następny](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)

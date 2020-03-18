@@ -1,29 +1,29 @@
 ---
-title: LINQ to XML Annotations3
+title: LINQ do Adnotacji XML3
 ms.date: 07/20/2015
 ms.assetid: 54e7b9d0-07f5-488f-9065-b6e6b870f810
 ms.openlocfilehash: 5f1940be2fc126ff9e9c7a4cb37e5cc7fc95d3c3
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "66689945"
 ---
 # <a name="linq-to-xml-annotations"></a>Adnotacje LINQ to XML
 
-Adnotacje w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] umożliwiają skojarzenie z dowolnych obiektów dowolnego typu za pomocą dowolnego składnika XML w drzewie XML.
+Adnotacje [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] umożliwiające skojarzenie dowolnego obiektu dowolnego dowolnego typu z dowolnym składnikiem XML w drzewie XML.
 
-Dodawanie adnotacji do elementu XML, takie jak <xref:System.Xml.Linq.XElement> lub <xref:System.Xml.Linq.XAttribute>, należy wywołać <xref:System.Xml.Linq.XObject.AddAnnotation%2A> metody. Możesz pobrać adnotacje według typu.
+Aby dodać adnotację do składnika XML, takiego jak <xref:System.Xml.Linq.XElement> lub <xref:System.Xml.Linq.XAttribute>, należy wywołać <xref:System.Xml.Linq.XObject.AddAnnotation%2A> metodę. Adnotacje można pobrać według typu.
 
-Należy pamiętać, że adnotacji nie są częścią zestaw informacji XML; nie jest serializowany lub deserializowany.
+Należy zauważyć, że adnotacje nie są częścią zestawu informacji XML; nie są serializowane ani deserializowane.
 
 ## <a name="methods"></a>Metody
 
-Podczas pracy z adnotacjami, można użyć następujących metod:
+Podczas pracy z adnotacjami można użyć następujących metod:
 
 |Metoda|Opis|
 |------------|-----------------|
-|<xref:System.Xml.Linq.XObject.AddAnnotation%2A>|Dodaje obiekt do listy adnotacji <xref:System.Xml.Linq.XObject>.|
-|<xref:System.Xml.Linq.XObject.Annotation%2A>|Pobiera pierwszy obiekt adnotacji określonego typu z <xref:System.Xml.Linq.XObject>.|
-|<xref:System.Xml.Linq.XObject.Annotations%2A>|Pobiera kolekcję adnotacje określonego typu <xref:System.Xml.Linq.XObject>.|
-|<xref:System.Xml.Linq.XObject.RemoveAnnotations%2A>|Usuwa adnotacje określonego typu z <xref:System.Xml.Linq.XObject>.|
+|<xref:System.Xml.Linq.XObject.AddAnnotation%2A>|Dodaje obiekt do listy adnotacji pliku <xref:System.Xml.Linq.XObject>.|
+|<xref:System.Xml.Linq.XObject.Annotation%2A>|Pobiera pierwszy obiekt adnotacji określonego typu <xref:System.Xml.Linq.XObject>z pliku .|
+|<xref:System.Xml.Linq.XObject.Annotations%2A>|Pobiera kolekcję adnotacji określonego typu dla <xref:System.Xml.Linq.XObject>.|
+|<xref:System.Xml.Linq.XObject.RemoveAnnotations%2A>|Usuwa adnotacje określonego typu z <xref:System.Xml.Linq.XObject>pliku .|

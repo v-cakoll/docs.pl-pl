@@ -1,14 +1,14 @@
 ---
 ms.openlocfilehash: 8979b7ffc09726c6588fe3ba60b916202697648f
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72522686"
 ---
-### <a name="signalr-hubconnectioncontext-constructors-changed"></a>Sygnalizacja: zmieniono konstruktory HubConnectionContext
+### <a name="signalr-hubconnectioncontext-constructors-changed"></a>SignalR: Konstruktory HubConnectionContext zmienione
 
-Konstruktory `HubConnectionContext` zostały zmienione w celu zaakceptowania typu opcji, a nie wielu parametrów, do dalszej próby dodania opcji. Ta zmiana zastępuje dwa konstruktory z pojedynczym konstruktorem akceptującym typ opcji.
+`HubConnectionContext` Konstruktorzy SignalR zmienili się, aby zaakceptować typ opcji, a nie wiele parametrów, na przyszłościowe opcje dodawania. Ta zmiana zastępuje dwa konstruktory z jednego konstruktora, który akceptuje typ opcji.
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -16,7 +16,7 @@ Konstruktory `HubConnectionContext` zostały zmienione w celu zaakceptowania typ
 
 #### <a name="old-behavior"></a>Stare zachowanie
 
-`HubConnectionContext` ma dwa konstruktory:
+`HubConnectionContext`ma dwa konstruktory:
 
 ```csharp
 public HubConnectionContext(ConnectionContext connectionContext, TimeSpan keepAliveInterval, ILoggerFactory loggerFactory);
@@ -33,11 +33,11 @@ public HubConnectionContext(ConnectionContext connectionContext, HubConnectionCo
 
 #### <a name="reason-for-change"></a>Przyczyna zmiany
 
-Nowy Konstruktor używa nowego obiektu options. W związku z tym funkcje `HubConnectionContext` mogą być rozwinięte w przyszłości bez tworzenia większej liczby konstruktorów i istotnej zmiany.
+Nowy konstruktor używa nowego obiektu opcji. W związku z `HubConnectionContext` tym funkcje można rozszerzyć w przyszłości bez wprowadzania większej liczby konstruktorów i wprowadzania zmian.
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Zamiast korzystać z następującego konstruktora:
+Zamiast używać następującego konstruktora:
 
 ```csharp
 HubConnectionContext connectionContext = new HubConnectionContext(

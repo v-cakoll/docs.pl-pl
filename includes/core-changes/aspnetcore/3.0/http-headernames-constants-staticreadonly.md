@@ -1,16 +1,16 @@
 ---
 ms.openlocfilehash: 31e7f84a787d255a474f4c2b1fa3068903dbed52
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75902006"
 ---
-### <a name="http-headernames-constants-changed-to-static-readonly"></a>HTTP: stałe HeaderNames zmienione do statycznego tylko do odczytu
+### <a name="http-headernames-constants-changed-to-static-readonly"></a>HTTP: NagłówkiNames stałych zmienionych na statyczne tylko do odczytu
 
-Począwszy od ASP.NET Core 3,0 wersja zapoznawcza 5, pola w <xref:Microsoft.Net.Http.Headers.HeaderNames?displayProperty=fullName> zmienione z `const` na `static readonly`.
+Począwszy od wersji ASP.NET Core 3.0 `const` Preview `static readonly`5, pola w zmienionym <xref:Microsoft.Net.Http.Headers.HeaderNames?displayProperty=fullName> stosunku do .
 
-Aby zapoznać się z omówieniem, zobacz [dotnet/aspnetcore # 9514](https://github.com/dotnet/aspnetcore/issues/9514).
+Aby uzyskać do dyskusji, zobacz [dotnet/aspnetcore#9514](https://github.com/dotnet/aspnetcore/issues/9514).
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -18,28 +18,28 @@ Aby zapoznać się z omówieniem, zobacz [dotnet/aspnetcore # 9514](https://gith
 
 #### <a name="old-behavior"></a>Stare zachowanie
 
-Te pola używane do `const`.
+Pola te były `const`kiedyś .
 
 #### <a name="new-behavior"></a>Nowe zachowanie
 
-Te pola są teraz `static readonly`.
+Te pola `static readonly`są teraz .
 
 #### <a name="reason-for-change"></a>Przyczyna zmiany
 
 Zmiana:
 
-* Zapobiega osadzaniu wartości między granicami zestawów, umożliwiając korektę wartości zgodnie z wymaganiami.
+* Zapobiega osadzaniu wartości przez granice złożenia, co pozwala na korekty wartości zgodnie z potrzebami.
 * Umożliwia szybsze sprawdzanie równości odwołań.
 
-#### <a name="recommended-action"></a>Zalecane działanie
+#### <a name="recommended-action"></a>Zalecana akcja
 
-Kompiluj ponownie z 3,0. Kod źródłowy korzystający z tych pól w następujących sposobach nie może już być taki:
+Ponownie skompilować przeciwko 3.0. Kod źródłowy używający tych pól w następujący sposób nie może już tego zrobić:
 
 * Jako argument atrybutu
-* Jako `case` w instrukcji `switch`
-* Podczas definiowania innego `const`
+* Jako `case` w `switch` oświadczeniu
+* Przy definiowaniu innego`const`
 
-Aby obejść istotną zmianę, należy przełączyć się do użycia samodzielnych stałych nazw nagłówka lub literałów ciągów.
+Aby obejść zmianę podziału, przełącz się na używanie samodzielnie zdefiniowanych stałych nazw nagłówka lub literałów ciągów.
 
 #### <a name="category"></a>Kategoria
 

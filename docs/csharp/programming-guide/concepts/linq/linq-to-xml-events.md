@@ -1,42 +1,42 @@
 ---
-title: Zdarzenia LINQ to XML (C#)
+title: LINQ do zdarzeń XML (C#)
 ms.date: 07/20/2015
 ms.assetid: ce7de951-cba7-4870-9962-733eb01cd680
 ms.openlocfilehash: 8e0cb4519dd0fc2bed443d9a62b9a2545d10e161
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70253174"
 ---
-# <a name="linq-to-xml-events-c"></a>Zdarzenia LINQ to XML (C#)
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]zdarzenia umożliwiają otrzymywanie powiadomień, gdy drzewo XML zostanie zmienione.  
+# <a name="linq-to-xml-events-c"></a>LINQ do zdarzeń XML (C#)
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]zdarzenia umożliwiają powiadamianie o zmianie drzewa XML.  
   
- Zdarzenia można dodać do wystąpienia dowolnego <xref:System.Xml.Linq.XObject>. Procedura obsługi zdarzeń będzie następnie otrzymywać zdarzenia dotyczące modyfikacji tego <xref:System.Xml.Linq.XObject> elementu i jego elementów podrzędnych. Na przykład można dodać program obsługi zdarzeń do elementu głównego drzewa i obsłużyć wszystkie modyfikacje drzewa z tego programu obsługi zdarzeń.  
+ Zdarzenia można dodać do wystąpienia <xref:System.Xml.Linq.XObject>dowolnego pliku . Program obsługi zdarzeń otrzyma zdarzenia dla <xref:System.Xml.Linq.XObject> modyfikacji tego i dowolnego z jego elementów podrzędnych. Na przykład można dodać program obsługi zdarzeń do katalogu głównego drzewa i obsługiwać wszystkie modyfikacje do drzewa z tego programu obsługi zdarzeń.  
   
- Przykłady [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zdarzeń można znaleźć w tematach <xref:System.Xml.Linq.XObject.Changed> <xref:System.Xml.Linq.XObject.Changing> i.  
+ Przykłady [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zdarzeń można <xref:System.Xml.Linq.XObject.Changing> znaleźć <xref:System.Xml.Linq.XObject.Changed>w części I .  
   
-## <a name="types-and-events"></a>Typy i zdarzenia  
- Następujące typy są używane podczas pracy ze zdarzeniami:  
+## <a name="types-and-events"></a>Typy i wydarzenia  
+ Podczas pracy ze zdarzeniami należy używać następujących typów:  
   
 |Typ|Opis|  
 |----------|-----------------|  
-|<xref:System.Xml.Linq.XObjectChange>|Określa typ zdarzenia, gdy zdarzenie jest zgłaszane dla elementu <xref:System.Xml.Linq.XObject>.|  
-|<xref:System.Xml.Linq.XObjectChangeEventArgs>|Dostarcza dane dla <xref:System.Xml.Linq.XObject.Changing> zdarzeń i <xref:System.Xml.Linq.XObject.Changed> .|  
+|<xref:System.Xml.Linq.XObjectChange>|Określa typ zdarzenia, gdy zdarzenie jest <xref:System.Xml.Linq.XObject>wywoływane dla pliku .|  
+|<xref:System.Xml.Linq.XObjectChangeEventArgs>|Zawiera dane <xref:System.Xml.Linq.XObject.Changing> dla <xref:System.Xml.Linq.XObject.Changed> i zdarzeń.|  
   
- Podczas modyfikowania drzewa XML są zgłaszane następujące zdarzenia:  
+ Podczas modyfikowania drzewa XML są wywoływane następujące zdarzenia:  
   
-|Zdarzenie|Opis|  
+|Wydarzenie|Opis|  
 |-----------|-----------------|  
-|<xref:System.Xml.Linq.XObject.Changing>|Występuje tuż przed tym <xref:System.Xml.Linq.XObject> lub dowolnym z jego obiektów podrzędnych zostanie zmieniony.|  
-|<xref:System.Xml.Linq.XObject.Changed>|Występuje po <xref:System.Xml.Linq.XObject> zmianie lub dowolnych jego elementów podrzędnych.|  
+|<xref:System.Xml.Linq.XObject.Changing>|Występuje tuż <xref:System.Xml.Linq.XObject> przed tym lub którykolwiek z jego elementów podrzędnych będzie się zmieniać.|  
+|<xref:System.Xml.Linq.XObject.Changed>|Występuje, <xref:System.Xml.Linq.XObject> gdy zmienił się lub którykolwiek z jego elementów podrzędnych uległ zmianie.|  
   
 ## <a name="example"></a>Przykład  
   
 ### <a name="description"></a>Opis  
- Zdarzenia są przydatne, gdy chcesz zachować pewne zagregowane informacje w drzewie XML. Na przykład możesz chcieć zachować sumę faktury, która jest sumą wierszy faktury. Ten przykład używa zdarzeń, aby zachować sumę wszystkich elementów podrzędnych w ramach elementu `Items`złożonego.  
+ Zdarzenia są przydatne, gdy chcesz zachować pewne informacje zagregowane w drzewie XML. Na przykład można zachować sumę faktury, która jest sumą pozycji faktury. W tym przykładzie użyto zdarzeń do utrzymania sumy `Items`wszystkich elementów podrzędnych w elemencie złożonym .  
   
-### <a name="code"></a>Kod  
+### <a name="code"></a>Code  
   
 ```csharp  
 XElement root = new XElement("Root",  

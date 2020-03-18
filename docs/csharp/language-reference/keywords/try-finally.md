@@ -1,5 +1,5 @@
 ---
-title: try-finally- C# Reference
+title: try-finally - Odwołanie do języka C#
 ms.date: 07/20/2015
 f1_keywords:
 - finally
@@ -9,42 +9,42 @@ helpviewer_keywords:
 - try-finally statement [C#]
 ms.assetid: c27623fb-7261-4464-862c-7a369d3c8f0a
 ms.openlocfilehash: 2c4c69b1e104aed968bc24bac690de83026643a0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713017"
 ---
 # <a name="try-finally-c-reference"></a>try-finally (odwołanie w C#)
 
-Za pomocą bloku `finally` można wyczyścić wszystkie zasoby, które są przydzielone w bloku [try](try-catch.md) , i można uruchomić kod nawet wtedy, gdy w bloku `try` wystąpi wyjątek. Zazwyczaj instrukcje bloku `finally` są uruchamiane, gdy kontrolka opuszcza instrukcję `try`. Transfer kontroli może odbywać się w wyniku normalnego wykonywania, wykonywania `break`, `continue`, `goto`lub instrukcji `return` lub propagacji wyjątku z `try` instrukcji.
+Za pomocą `finally` bloku, można oczyścić wszystkie zasoby, które są przydzielane w [try](try-catch.md) bloku `try` i można uruchomić kod, nawet jeśli wystąpi wyjątek w bloku. Zazwyczaj instrukcje `finally` bloku uruchomić, gdy formant `try` pozostawia instrukcji. Przeniesienie kontroli może nastąpić w wyniku normalnego wykonania, `break` `continue`wykonania `goto`, `return` , lub instrukcji lub propagacji `try` wyjątku z instrukcji.
 
-W ramach obsłużonego wyjątku zagwarantowany jest, że skojarzony blok `finally` jest uruchamiany. Jeśli jednak wyjątek nie jest obsługiwany, wykonanie bloku `finally` jest zależne od tego, w jaki sposób wyzwalany jest wyjątek operacji unwind. To z kolei zależy od konfiguracji komputera.
+W ramach obsługiwanego wyjątku skojarzony `finally` blok jest gwarantowany do uruchomienia. Jednak jeśli wyjątek jest nieobsługiwany, wykonanie `finally` bloku zależy od sposobu wyzwalania operacji unwind wyjątku. To z kolei zależy od konfiguracji komputera.
 
-Zwykle, gdy nieobsługiwany wyjątek powoduje zakończenie aplikacji, niezależnie od tego, czy blok `finally` jest uruchomiony, nie jest ważne. Jednakże jeśli masz instrukcje w bloku `finally`, który musi być uruchamiany nawet w takiej sytuacji, jedno rozwiązanie ma dodać blok `catch` do instrukcji `try`-`finally`. Alternatywnie można przechwytywać wyjątek, który może zostać wygenerowany w bloku `try` `try`-`finally` instrukcji wyższej stosu wywołań. Oznacza to, że można przechwytywać wyjątek w metodzie, która wywołuje metodę, która zawiera instrukcję `try`-`finally` lub w metodzie, która wywołuje tę metodę, lub w dowolnej metodzie stosu wywołań. Jeśli wyjątek nie zostanie przechwycony, wykonanie bloku `finally` zależy od tego, czy system operacyjny wybiera wyzwalacz operacji unwind.
+Zazwyczaj po zakończeniu nieobsługiwanego wyjątku aplikacja, `finally` czy blok jest uruchamiany nie jest ważne. Jednak jeśli masz instrukcje `finally` w bloku, które muszą być uruchamiane nawet `catch` w tej `try` - `finally` sytuacji, jednym rozwiązaniem jest dodanie bloku do instrukcji. Alternatywnie można przechwycić wyjątek, który może `try` zostać `try` - `finally` wygenerowany w bloku instrukcji wyżej stosu wywołań. Oznacza to, że można przechwycić wyjątek w metodzie, która wywołuje metodę, która zawiera instrukcję `try` - `finally` lub w metodzie, która wywołuje tę metodę lub w dowolnej metody w stosie wywołań. Jeśli wyjątek nie zostanie przechwycona, wykonanie `finally` bloku zależy od tego, czy system operacyjny zdecyduje się wyzwolić operację unwind wyjątku.
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie instrukcja konwersji nieprawidłowa powoduje wyjątek `System.InvalidCastException`. Wyjątek nie jest obsługiwany.
+W poniższym przykładzie nieprawidłowe oświadczenie konwersji `System.InvalidCastException` powoduje wyjątek. Wyjątek jest nieobsługiwany.
 
 [!code-csharp[csrefKeywordsExceptions#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsExceptions/CS/csrefKeywordsExceptions.cs#4)]
 
-W poniższym przykładzie wyjątek z metody `TryCast` jest przechwytywany w metodzie dalej w stosie wywołań.
+W poniższym przykładzie wyjątek `TryCast` od metody jest przechwycone w metodzie dalej stosu wywołań.
 
 [!code-csharp[csrefKeywordsExceptions#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsExceptions/CS/csrefKeywordsExceptions.cs#6)]
 
-Aby uzyskać więcej informacji na temat `finally`, zobacz [try-catch-finally](try-catch-finally.md).
+Aby uzyskać `finally`więcej informacji na temat , zobacz [try-catch-finally](try-catch-finally.md).
 
-C#zawiera również [instrukcję using](using-statement.md), która zapewnia podobną funkcjonalność dla <xref:System.IDisposable> obiektów w wygodnej składni.
+C# zawiera również [using instrukcji](using-statement.md), który <xref:System.IDisposable> zapewnia podobne funkcje dla obiektów w składni wygodne.
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
-Aby uzyskać więcej informacji, zobacz sekcję [try instrukcji](~/_csharplang/spec/statements.md#the-try-statement) [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).
+Aby uzyskać więcej informacji, zobacz sekcję [instrukcja wypróbuj](~/_csharplang/spec/statements.md#the-try-statement) [specyfikację języka Języka C#.](~/_csharplang/spec/introduction.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Dokumentacja języka C#](../index.md)
-- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [Odwołanie do języka C#](../index.md)
+- [Przewodnik programowania języka C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](index.md)
 - [Instrukcje try, throw i catch (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)
 - [throw](throw.md)

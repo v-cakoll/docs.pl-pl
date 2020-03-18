@@ -1,8 +1,8 @@
 ### YamlMime:Tutorial
-title: Użyj interpolacji ciągów, aby utworzyć sformatowane ciągi
+title: Używanie interpolacji ciągów do konstruowania sformatowanych ciągów
 metadata:
-  title: Interpolacja ciągów — C# Samouczek interaktywny
-  description: W tym samouczku użyjesz przeglądarki, aby interaktywnie C# eksplorować funkcję interpolacji ciągów. Napiszesz C# kod i zobaczysz wyniki kompilacji i uruchomienia kodu bezpośrednio w przeglądarce.
+  title: Interpolacja ciągów — interaktywny samouczek języka C#
+  description: W tym samouczku używasz przeglądarki do interakcyjnego eksplorowania funkcji interpolacji ciągów C#. Możesz pisać kod w języku C# i zobaczyć wyniki kompilacji oraz uruchomienia kodu bezpośrednio w przeglądarce.
   audience: Developer
   ms.custom: mvc
   ms.date: 08/24/2018
@@ -10,19 +10,19 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.openlocfilehash: 1b54ea8b3bbb63bdadb8386b0f6311f1f5458b42
-  ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 01/24/2020
+  ms.lasthandoff: 03/14/2020
   ms.locfileid: "76737533"
 items:
 - durationInMinutes: 2
   content: >
-    W tym samouczku przedstawiono sposób użycia [interpolacji ciągu](../../language-reference/tokens/interpolated.md) do wstawiania wartości w jednym ciągu. Dowiesz się również, jak kontrolować formatowanie tekstu ciągu wynikowego. Używasz przeglądarki do pisania i uruchamiania C# kodu i od razu można zobaczyć wyniki.
-- title: Utwórz ciąg interpolowany
+    W tym samouczku nauczy cię, jak używać [interpolacji ciągów](../../language-reference/tokens/interpolated.md) do wstawiania wartości do jednego ciągu. Dowiesz się również, jak kontrolować formatowanie tekstu ciągu wynikowego. Używasz przeglądarki do pisania i uruchamiania kodu C# i można natychmiast zobaczyć wyniki.
+- title: Tworzenie ciągu interpolowanego
   durationInMinutes: 2
   content: >
-    Uruchom następujący kod w oknie interaktywnym. Wybierz przycisk **Przejdź do trybu koncentracji uwagi** . Następnie wpisz poniższy blok kodu w oknie interaktywnym (Zastąp `<name>` nazwą) i wybierz pozycję **Uruchom**:
+    Uruchom poniższy kod w oknie interaktywnym. Wybierz przycisk **Wprowadź tryb ustawiania ostrości.** Następnie wpisz następujący blok kodu w `<name>` interaktywnym oknie (zamień na swoją nazwę) i wybierz **pozycję Uruchom:**
 
 
     ```csharp
@@ -34,31 +34,31 @@ items:
     ```
 
 
-    Po uruchomieniu kodu **dane wyjściowe** wyświetlają ciąg, który zawiera nazwę użytkownika w powitaniu. Argument ciągu wywołania metody <xref:System.Console.WriteLine%2A> jest *wyrażeniem ciągu interpolowanego*. Jest to rodzaj szablonu, który umożliwia konstruowanie pojedynczego ciągu (zwanego *ciągiem wynikowym*) z ciągu, który zawiera kod osadzony. Wyrażenia interpolowane ciągów są szczególnie przydatne do wstawiania wartości do ciągu lub łączenia (łączenie ze sobą) kilku ciągów.
+    Po uruchomieniu kodu, **Output** wyświetla ciąg, który zawiera swoje imię i nazwisko w powitanie. Argument ciągu wywołania <xref:System.Console.WriteLine%2A> metody jest *interpolowanym wyrażeniem ciągu*. Jest to rodzaj szablonu, który umożliwia skonstruowanie pojedynczego ciągu (zwanego *ciągiem wynikowym*) z ciągu obejmującego osadzony kod. Interpolowane wyrażenia ciągów są szczególnie przydatne do wstawiania wartości do ciągu lub łączenia (łączenie ze sobą) kilka ciągów.
 
 
-    Powyższy przykład zawiera dwa elementy, które każde interpolowane wyrażenie ciągu musi zawierać:
+    Powyższy przykład zawiera dwa elementy, które każde interpolowane wyrażenie ciągu musi mieć:
 
 
-    - Literał ciągu rozpoczynający się od znaku `$` przed znakiem cudzysłowu otwierającego. Między symbolem `$` i znakiem cudzysłowu nie mogą znajdować się spacje. (Jeśli chcesz zobaczyć, co się stanie, jeśli dołączysz jeden, Wstaw spację po znaku `$` w oknie interaktywnym i Uruchom zaktualizowany kod. W C# kompilatorze wystąpił "nieoczekiwany znak" $ "".)
+    - Literał ciągu rozpoczynający się od znaku `$` przed otwierającym znakiem cudzysłowu. Pomiędzy symbolem `$` i znakiem zapytania nie może być żadnych odstępów. (Jeśli chcesz zobaczyć, co się stanie, jeśli je dodasz, wstaw spacja po `$` znaku w interaktywnym oknie i uruchom zaktualizowany kod. Kompilator języka C# zgłosi błąd „Nieoczekiwany znak '$'”.)
 
 
-    - Co najmniej jedno *wyrażenie interpolacji*. Wyrażenie interpolacji jest wskazywane przez otwierające i zamykające nawiasy klamrowe (`{` i `}`). Można umieścić dowolne C# Wyrażenie zwracające wartość (w tym `null`) wewnątrz nawiasów klamrowych.
+    - Jedno lub więcej *wyrażeń interpolacji*. Wyrażenie interpolacji jest oznaczone nawiasem klamrowym otwierania i zamykania (`{` i `}`). Do nawiasów klamrowych możesz wstawić dowolne wyrażenie języka C# zwracające wartość (w tym `null`).
 
 
-    Wypróbujmy kilka przykładów interpolacji ciągów z innymi typami danych.
+    Spróbujmy kilka przykładów interpolacji ciągów z niektórych innych typów danych.
 
 
     > [!NOTE]
 
-    > To środowisko kodowania online jest w trybie podglądu. Jeśli wystąpią problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).
-- title: Uwzględnij różne typy danych
+    > To środowisko kodowania online jest dostępne w wersji zapoznawczej. Jeśli napotkasz problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).
+- title: Uwzględnianie innych typów danych
   durationInMinutes: 5
   content: >
-    W poprzednim kroku użyto interpolacji ciągu do wstawienia jednego ciągu wewnątrz innego. Każde wyrażenie interpolacji, które jest częścią interpolowanego wyrażenia ciągu może być dowolnego typu danych, chociaż. Dołączmy wartości różnych wyrażeń typu danych w ciągu interpolowanym.
+    W poprzednim kroku użyto interpolacji ciągów, aby wstawić jeden ciąg wewnątrz innego. Każde wyrażenie interpolacji, które jest częścią interpolowanego wyrażenia ciągu może być dowolnego typu danych, choć. Uwzględnijmy wartości różnych wyrażeń typu danych w interpolowanym ciągu.
 
 
-    W poniższym przykładzie najpierw zdefiniujemy [krotkę](../../tuples.md) , która ma `Name`, `Price`i `perPackage` członków. Uruchom następujący kod w oknie interaktywnym:
+    W poniższym przykładzie najpierw definiujemy [krotkę,](../../tuples.md) która ma `Name`, `Price`i `perPackage` członków. Uruchom następujący kod w oknie interaktywnym:
 
 
     ```csharp
@@ -72,25 +72,25 @@ items:
     ```
 
 
-    Należy zauważyć, że wyrażenie interpolacji `item.Price` w ciągu interpolowanym jest rozpoznawane jako tekst "1,99" w ciągu wynikowym. Dzieje się tak, ponieważ, gdy typ wyniku wyrażenia nie jest ciągiem, wynik jest rozpoznawany jako ciąg w następujący sposób:
+    Należy zauważyć, że `item.Price` wyrażenie interpolacji w interpolowanym ciągu jest rozpoznawane z tekstem "1.99" w ciągu wyników. Dzieje się tak, ponieważ gdy typ wyniku wyrażenia nie jest ciągiem, wynik jest rozpoznawany do ciągu w następujący sposób:
 
 
-    - Jeśli wyrażenie interpolacji szacuje się na `null`, używany jest pusty ciąg ("" lub <xref:System.String.Empty?displayProperty=nameWithType>).
+    - Jeśli wyrażenie interpolacji jest `null`oceniane , jest używany <xref:System.String.Empty?displayProperty=nameWithType>pusty ciąg ("", lub ) .
 
 
-    - Jeśli wyrażenie interpolacji nie jest szacowane do `null`, zazwyczaj wywoływana jest metoda `ToString` wyrażenia wynikowego.
+    - Jeśli wyrażenie interpolacji nie ocenia `null`, zazwyczaj `ToString` nazywa się metodę wyrażenia wynikowego.
 
 
-    W danych wyjściowych tego przykładu Data jest zbyt dokładna (cena oberżyny nie zmienia się co sekundę), a wartość ceny nie wskazuje jednostki waluty. W następnym kroku dowiesz się, jak rozwiązać te problemy, kontrolując format wyników wyrażenia w postaci ciągu.
+    W danych wyjściowych z tego przykładu data jest zbyt precyzyjna (cena bakłażana nie zmienia się co sekundę), a wartość ceny nie wskazuje jednostki waluty. W następnym kroku dowiesz się, jak rozwiązać te problemy, kontrolując format reprezentacji ciągów wyników wyrażenia.
 
 
     > [!NOTE]
 
-    > To środowisko kodowania online jest w trybie podglądu. Jeśli wystąpią problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).
+    > To środowisko kodowania online jest dostępne w wersji zapoznawczej. Jeśli napotkasz problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).
 - title: Sterowanie formatowaniem wyrażeń interpolacji
   durationInMinutes: 5
   content: >
-    W poprzednim kroku wstawiono dwa niewłaściwie sformatowane ciągi do ciągu wynikowego. Jedna była wartością daty i godziny, dla której jest właściwa tylko Data. Druga cena była ceną, która nie wskazywała swojej jednostki waluty. Oba problemy są łatwe w obsłudze. Interpolacja ciągów pozwala określić *ciągi formatowania* , które kontrolują formatowanie poszczególnych typów. Zmodyfikuj wywołanie `Console.WriteLine` z poprzedniego przykładu, aby uwzględnić ciągi formatu dla wyrażeń daty i ceny, jak pokazano w następującym wierszu:
+    W poprzednim kroku dwa źle sformatowane ciągi zostały wstawione do ciągu wynikowego. Jednym z nich była wartość daty i godziny, chociaż tylko data powinna mieć zastosowanie. Druga to cena, która nie wskazywała na jednostkę waluty. Oba problemy można z łatwością rozwiązać. Interpolacja ciągów umożliwia określenie *formatów,* które kontrolują formatowanie określonych typów. Zmodyfikuj wywołanie z poprzedniego przykładu, aby `Console.WriteLine` uwzględnić ciągi formatu dla wyrażeń daty i ceny, jak pokazano w następującym wierszu:
 
 
     ```csharp
@@ -100,25 +100,25 @@ items:
     ```
 
 
-    Ciąg formatu można określić, wykonując wyrażenie interpolacji z dwukropkiem (":") i ciągiem formatu. "d" to [standardowy ciąg formatu daty i godziny](../../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier) , który reprezentuje format daty krótkiej. "C2" to [standardowy ciąg formatu liczbowego](../../../standard/base-types/standard-numeric-format-strings.md#the-currency-c-format-specifier) , który reprezentuje liczbę jako wartość walutową z dwiema cyframi po przecinku dziesiętnym.
+    Ciąg formatu można określić, wykonując wyrażenie interpolacji z dwukropkiem (":") i ciągiem formatu. „d” jest [standardowym ciągiem formatu daty i godziny](../../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier), który reprezentuje krótki format daty. "C2" to [standardowy ciąg formatu numerycznego,](../../../standard/base-types/standard-numeric-format-strings.md#the-currency-c-format-specifier) który reprezentuje liczbę jako wartość waluty z dwiema cyframi po przecinku.
 
 
-    Wiele typów w bibliotekach .NET obsługuje wstępnie zdefiniowany zestaw ciągów formatujących. Obejmują one wszystkie typy liczbowe i typy daty i godziny. Aby zapoznać się z pełną listą typów, które obsługują ciągi formatu, zobacz [ciągi formatowania i typy bibliotek klas .NET](../../../standard/base-types/formatting-types.md#format-strings-and-net-types) w [typach formatowania w artykule .NET](../../../standard/base-types/formatting-types.md) .
+    Wiele typów w bibliotekach .NET obsługuje wstępnie zdefiniowany zestaw ciągów formatu. Uwzględnia to wszystkie typy numeryczne oraz typy daty i godziny. Aby uzyskać kompletną listę typów, które obsługują ciągi formatu, zobacz [Ciągi formatu i typy biblioteki klas .NET](../../../standard/base-types/formatting-types.md#format-strings-and-net-types) w artykule [Typy formatowania na platformie .NET](../../../standard/base-types/formatting-types.md).
 
 
-    Spróbuj zmodyfikować ciągi formatu w przykładzie, aby zobaczyć, w jaki sposób wpływają na formatowanie daty i godziny oraz wartości liczbowej. Zmień literę "d" w `{date:d}` na "t" (aby wyświetlić format godziny krótkiej), "y" (w celu wyświetlenia roku i miesiąca) oraz "RRRR" (aby wyświetlić rok jako liczbę czterocyfrową). Zmień wartość "C2" w `{price:C2}` na "e" (dla notacji wykładniczej) i "F3" (dla wartości liczbowej z trzema cyframi po przecinku dziesiętnym).
+    Spróbuj zmodyfikować ciągi formatu w przykładzie, aby zobaczyć, jak wpływają one na formatowanie daty i godziny oraz wartości liczbowej. Zmień „d” w ciągu `{date:d}` na „t” (aby wyświetlić krótki format daty), „y” (aby wyświetlić rok i miesiąc) oraz „yyyy” (aby wyświetlać rok jako liczbę czterocyfrową). Zmień „C2” w ciągu `{price:C2}` na „e” (notacja wykładnicza) oraz „F3” (wartość numeryczna z trzema cyframi po separatorze dziesiętnym).
 
 
-    Oprócz kontrolowania formatowania można również kontrolować szerokość pola i wyrównanie sformatowanych ciągów, które są uwzględnione w ciągu wynikowym. W następnym kroku dowiesz się, jak to zrobić.
+    Oprócz sterowania formatowaniem można również sterować szerokością pola i wyrównaniem sformatowanych ciągów, które są zawarte w ciągu wyników. W kolejnym kroku dowiesz się, jak to zrobić.
 
 
     > [!NOTE]
 
-    > To środowisko kodowania online jest w trybie podglądu. Jeśli wystąpią problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).
-- title: Kontrolowanie szerokości pola i wyrównania wyrażeń interpolacji
+    > To środowisko kodowania online jest dostępne w wersji zapoznawczej. Jeśli napotkasz problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).
+- title: Sterowanie szerokością pola i wyrównaniem wyrażeń interpolacji
   durationInMinutes: 6
   content: >
-    Zwykle, gdy wynik interpolowanego wyrażenia ciągu jest sformatowany do ciągu, ten ciąg jest uwzględniany w ciągu wynikowym bez spacji wiodących i końcowych. Szczególnie podczas pracy z zestawem danych, możliwość kontrolowania szerokości pola i wyrównania tekstu pomaga utworzyć bardziej czytelny wynik. Aby to sprawdzić, uruchom następujący kod:
+    Zwykle, gdy wynik interpolowanego wyrażenia ciągu jest sformatowany na ciąg, ten ciąg jest uwzględniany w ciągu wynikowym bez spacji wiodących lub końcowych. Szczególnie podczas pracy z zestawem danych, możliwość kontrolowania szerokości pola i wyrównania tekstu pomaga uzyskać bardziej czytelne dane wyjściowe. Aby to zobaczyć, uruchom następujący kod:
 
 
     ```csharp
@@ -137,13 +137,13 @@ items:
     ```
 
 
-    Nazwy elementów są wyrównane do lewej, a ich liczby są wyrównane do prawej. Wyrównanie należy określić przez dodanie przecinka (",") po wyrażeniu interpolacji i wyznaczenie *minimalnej* szerokości pola. Jeśli określona wartość jest liczbą dodatnią, pole jest wyrównane do prawej strony. Jeśli jest to liczba ujemna, pole jest wyrównane do lewej.
+    Nazwy elementu są wyrównywane do lewej, a ich ilości są wyrównywane do prawej. Wyrównanie należy określić, dodając przecinek (",") po wyrażeniu interpolacji i wyznaczając *minimalną* szerokość pola. Jeśli określona wartość jest liczbą dodatnią, pole jest wyrównane do prawej. Jeśli jest to liczba ujemna, pole jest wyrównane do lewej.
 
 
-    Spróbuj usunąć znaki ujemne z `{"Item",-25}` i `{item.Key,-25}` kod i ponownie uruchomić przykład. Tym razem nazwy elementów są wyrównane do prawej.
+    Spróbuj usunąć negatywne znaki `{"Item",-25}` z `{item.Key,-25}` kodu i i uruchom przykład ponownie. Tym razem nazwy elementów są wyrównane do prawej.
 
 
-    Można połączyć specyfikator wyrównania i ciąg formatu dla pojedynczego wyrażenia interpolacji. W tym celu należy określić wyrównania jako pierwsze, po którym następuje dwukropek i ciąg formatu. Wypróbuj następujący kod, który wyświetla trzy sformatowane ciągi ze zdefiniowanymi szerokościami pól:
+    Można połączyć specyfikator wyrównania i ciąg formatu dla pojedynczego wyrażenia interpolacji. Aby to zrobić, najpierw określ wyrównanie, a następnie dwukropek i ciąg formatu. Wypróbuj następujący kod, który wyświetla trzy sformatowane ciągi o zdefiniowanych szerokościach pól:
 
 
     ```csharp
@@ -155,9 +155,9 @@ items:
 
     > [!NOTE]
 
-    > To środowisko kodowania online jest w trybie podglądu. Jeśli wystąpią problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).
+    > To środowisko kodowania online jest dostępne w wersji zapoznawczej. Jeśli napotkasz problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).
 - content: >-
-    Ukończono Interaktywny samouczek interpolacji ciągów. Możesz odwiedzić [witrynę programu .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) , aby pobrać zestaw .NET Core SDK, utworzyć projekt na maszynie i zachować kodowanie.
+    Ukończono interaktywny samouczek interpolacji ciągu. Możesz odwiedzić [witrynę .NET,](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) aby pobrać zestaw SDK .NET Core, utworzyć projekt na komputerze i zachować kodowanie.
 
 
     Aby uzyskać więcej informacji, zobacz [Interpolacja ciągów](../../language-reference/tokens/interpolated.md).

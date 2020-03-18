@@ -1,22 +1,22 @@
 ---
-title: polecenia wypychania NuGet dotnet
-description: Polecenie polecenia push NuGet narzędzia dotnet wypycha pakiet do serwera i opublikuje go.
+title: polecenie wypychania dotnet nuget
+description: Polecenie wypychania dotnet nuget wypycha pakiet do serwera i publikuje go.
 author: karann-msft
 ms.date: 02/14/2020
 ms.openlocfilehash: d4ef8e58908fe488c712debff3b313ac0908b43e
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503662"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
-**Ten artykuł ma zastosowanie do:** ✔️ .NET Core 2. x SDK i nowszych wersji
+**Ten artykuł dotyczy:** ✔️ .NET Core 2.x SDK i nowszych wersji
 
-## <a name="name"></a>Name (Nazwa)
+## <a name="name"></a>Nazwa
 
-`dotnet nuget push` — wypchnij pakiet do serwera i opublikuje go.
+`dotnet nuget push`- Wypycha paczkę na serwer i publikuje go.
 
 ## <a name="synopsis"></a>Streszczenie
 
@@ -28,23 +28,23 @@ dotnet nuget push [-h|--help]
 
 ## <a name="description"></a>Opis
 
-`dotnet nuget push` polecenie wypycha pakiet do serwera i opublikuje go. Polecenie push używa informacji o serwerze i poświadczeniach znajdujących się w pliku konfiguracyjnym NuGet systemu lub w łańcuchu plików konfiguracji. Aby uzyskać więcej informacji na temat plików konfiguracji, zobacz [Konfigurowanie zachowania NuGet](/nuget/consume-packages/configuring-nuget-behavior). Domyślna konfiguracja narzędzia NuGet jest uzyskiwana przez załadowanie *%AppData%\NuGet\NuGet.config* (Windows) lub *$Home/.local/share* (Linux/macOS), a następnie załadowanie jakichkolwiek *NuGet. config* lub *. NuGet\NuGet.config* , począwszy od katalogu głównego dysku i kończącego się w bieżącym katalogu.
+Polecenie `dotnet nuget push` wypycha pakiet do serwera i publikuje go. Polecenie push używa danych serwera i poświadczeń znalezionych w pliku konfiguracyjnym NuGet systemu lub łańcuchu plików konfiguracyjnych. Aby uzyskać więcej informacji na temat plików konfiguracyjnych, zobacz [Konfigurowanie zachowania NuGet](/nuget/consume-packages/configuring-nuget-behavior). Domyślną konfigurację NuGet uzyskuje się przez wczytanie *%AppData%\NuGet\NuGet.config* (Windows) lub *$HOME/.local/share* (Linux/macOS), a następnie ładowanie *dowolnego nuget.config* lub *.nuget\nuget.config,* zaczynając od katalogu głównego dysku, a kończąc w bieżącym katalogu.
 
 ## <a name="arguments"></a>Argumenty
 
 - **`ROOT`**
 
-  Określa ścieżkę pliku do pakietu do wypchnięcia.
+  Określa ścieżkę pliku do pakietu, który ma zostać wypchnięty.
 
 ## <a name="options"></a>Opcje
 
 - **`-d|--disable-buffering`**
 
-  Wyłącza buforowanie podczas wypychania do serwera HTTP (S) w celu zmniejszenia użycia pamięci.
+  Wyłącza buforowanie podczas wypychania do serwera HTTP(S), aby zmniejszyć użycie pamięci.
 
 - **`--force-english-output`**
 
-  Wymusza uruchomienie aplikacji przy użyciu niezmiennej, opartej na języku angielskim kultury.
+  Wymusza uruchamianie aplikacji przy użyciu niezmiennej kultury opartej na języku angielskim.
 
 - **`-h|--help`**
 
@@ -52,31 +52,31 @@ dotnet nuget push [-h|--help]
 
 - **`--interactive`**
 
-  Umożliwia zablokowanie polecenia i wymaga ręcznej akcji dla operacji takich jak uwierzytelnianie. Opcja dostępna od wersji .NET Core 2,2 SDK.
+  Umożliwia blokowanie polecenia i wymaga ręcznego działania dla operacji, takich jak uwierzytelnianie. Opcja dostępna od sdk .NET Core 2.2.
 
 - **`-k|--api-key <API_KEY>`**
 
-  Klucz interfejsu API dla serwera programu.
+  Klucz interfejsu API dla serwera.
 
 - **`-n|--no-symbols`**
 
-  Nie Wypychaj symboli (nawet jeśli istnieją).
+  Nie wciska symboli (nawet jeśli są obecne).
 
 - **`--no-service-endpoint`**
 
-  Nie dołącza "API/v2/Package" do źródłowego adresu URL. Opcja dostępna od wersji .NET Core 2,1 SDK.
+  Nie dołącza "api/v2/package" do źródłowego adresu URL. Opcja dostępna od sdk .NET Core 2.1.
 
 - **`-s|--source <SOURCE>`**
 
-  Określa adres URL serwera. Ta opcja jest wymagana, chyba że w pliku konfiguracyjnym NuGet zostanie ustawiona wartość `DefaultPushSource` konfiguracja.
+  Określa adres URL serwera. Ta opcja jest wymagana, chyba `DefaultPushSource` że wartość konfiguratowa jest ustawiona w pliku konfiguracyjnym NuGet.
 
 - **`--skip-duplicate`**
 
-  Podczas wypychania wielu pakietów do serwera HTTP (S) program traktuje wszystkie 409 odpowiedzi w konflikcie jako ostrzeżenie, aby można było kontynuować wypychanie. Dostępne od wersji .NET Core 3,1 SDK.
+  Podczas wypychania wielu pakietów do serwera HTTP(S) traktuje dowolną odpowiedź 409 Konflikt jako ostrzeżenie, dzięki czemu wypychanie można kontynuować. Dostępne od sdk .NET Core 3.1.
 
 - **`-sk|--symbol-api-key <API_KEY>`**
 
-  Klucz interfejsu API dla serwera symboli.
+  Klucz interfejsu API serwera symboli.
 
 - **`-ss|--symbol-source <SOURCE>`**
 
@@ -84,57 +84,57 @@ dotnet nuget push [-h|--help]
 
 - **`-t|--timeout <TIMEOUT>`**
 
-  Określa limit czasu wypychania do serwera w sekundach. Wartość domyślna to 300 sekund (5 minut). Wartość domyślna to 0 (zero sekund).
+  Określa uchył czasu wypychania do serwera w ciągu kilku sekund. Domyślnie 300 sekund (5 minut). Określenie 0 (zero sekund) jest stosowane wartość domyślną.
 
 ## <a name="examples"></a>Przykłady
 
-- Wypchnięcie *foo. nupkg* do domyślnego źródła push, określając klucz interfejsu API:
+- Wypycha *foo.nupkg* do domyślnego źródła wypychania, określając klucz interfejsu API:
 
   ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a
   ```
 
-- Wypychanie *foo. nupkg* do oficjalnego serwera NuGet, określając klucz interfejsu API:
+- Wypchnij *foo.nupkg* do oficjalnego serwera NuGet, określając klucz interfejsu API:
 
   ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://api.nuget.org/v3/index.json
   ```
   
-  * Wypchnij *foo. nupkg* do niestandardowego źródła push `https://customsource`, określając klucz interfejsu API:
+  * Wypchnij *foo.nupkg* do niestandardowego źródła `https://customsource`wypychania, określając klucz interfejsu API:
 
   ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/
   ```
 
-- Wypchnięcie *foo. nupkg* do domyślnego źródła push:
+- Popycha *foo.nupkg* do domyślnego źródła wypychania:
 
   ```dotnetcli
   dotnet nuget push foo.nupkg
   ```
 
-- Wypchnięcie *foo. Symbols. nupkg* do domyślnego źródła symboli:
+- Wypycha *foo.symbols.nupkg* do domyślnego źródła symboli:
 
   ```dotnetcli
   dotnet nuget push foo.symbols.nupkg
   ```
 
-- Wypchnięcie *foo. nupkg* do domyślnego źródła push, określając 360-sekundowy limit czasu:
+- Popycha *foo.nupkg* do domyślnego źródła wypychania, określając 360-sekundowy timeout:
 
   ```dotnetcli
   dotnet nuget push foo.nupkg --timeout 360
   ```
 
-- Wypycha wszystkie pliki *. nupkg* w bieżącym katalogu do domyślnego źródła push:
+- Wypycha wszystkie pliki *nupkg* w bieżącym katalogu do domyślnego źródła wypychania:
 
   ```dotnetcli
   dotnet nuget push *.nupkg
   ```
 
   > [!NOTE]
-  > Jeśli to polecenie nie działa, może to być spowodowane usterką, która istniała we wcześniejszych wersjach zestawu SDK (zestaw SDK programu .NET Core 2,1 i wcześniejsze wersje).
-  > Aby rozwiązać ten problem, Uaktualnij wersję zestawu SDK lub zamiast tego Uruchom następujące polecenie: `dotnet nuget push **/*.nupkg`
+  > Jeśli to polecenie nie działa, może to być spowodowane błędem, który istniał w starszych wersjach sdk (.NET Core 2.1 SDK i wcześniejszych wersjach).
+  > Aby rozwiązać ten problem, uaktualnij wersję sdk lub zamiast tego uruchom następujące polecenie:`dotnet nuget push **/*.nupkg`
 
-- Wypychanie wszystkich plików *. nupkg* , nawet jeśli odpowiedź na 409 jest zwracana przez serwer http (S):
+- Wypycha wszystkie pliki *.nupkg,* nawet jeśli odpowiedź na konflikt 409 jest zwracana przez serwer HTTP(S):Pushes all .nupkg files even if a 409 Conflict response is returned by an HTTP(S) server:
 
   ```dotnetcli
   dotnet nuget push *.nupkg --skip-duplicate

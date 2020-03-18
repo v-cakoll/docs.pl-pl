@@ -1,20 +1,20 @@
 ---
-title: Interpretowanie modeli ML.NET z ogólnymi modelami addytywne
-description: Korzystaj z uogólnionych modeli i funkcji kształtu do interpretowania modeli w ML.NET
+title: Interpretowanie modeli ML.NET za pomocą uogólnionych modeli dodatków
+description: Użyj ogólnych modeli dodatków i funkcji kształtu dla interpretacji modelu w ML.NET
 ms.date: 01/30/2020
 ms.custom: mvc,how-to
 ms.openlocfilehash: 6df19eff4fec98c5815a9f8f4d8e4e9a80cba6ed
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77092476"
 ---
-# <a name="use-generalized-additive-models-and-shape-functions-for-model-interpretability-in-mlnet"></a>Korzystaj z uogólnionych modeli i funkcji kształtu do interpretowania modeli w ML.NET
+# <a name="use-generalized-additive-models-and-shape-functions-for-model-interpretability-in-mlnet"></a>Użyj ogólnych modeli dodatków i funkcji kształtu dla interpretacji modelu w ML.NET
 
-Podczas tworzenia modeli uczenia maszynowego często nie wystarczy, aby robić przewidywania. Często deweloperzy uczenia maszynowego, osoby podejmujące decyzje i te, których dotyczą modele, muszą zrozumieć, jak modele uczenia maszynowego podejmują decyzje i jakie funkcje przyczyniają się do ich wydajności. **Ogólne modele addytywne (GAMs)** są używane wewnętrznie w firmie Microsoft w celu interpretowania modeli, aby ułatwić deweloperom uczenia maszynowego tworzenie modeli o wysokiej wydajności, które mogą być łatwo interpretowane przez inne osoby.
+Podczas tworzenia modeli uczenia maszynowego często nie wystarczy po prostu tworzyć prognozy. Często deweloperzy uczenia maszynowego, decydenci i osoby, których dotyczą modele, muszą zrozumieć, w jaki sposób modele uczenia maszynowego podejmują decyzje i które funkcje przyczyniają się do ich wydajności. **Generalized Additive Models (GAMs)** są używane wewnętrznie w firmie Microsoft do interpretacji modelu, aby ułatwić deweloperom uczenia maszynowego tworzenie modeli o dużej pojemności, które mogą być łatwo interpretowane przez inne osoby.
 
-GAMs jest klasą **interpretowanych modeli** , które są modelami liniowymi, gdzie warunki są funkcjami nieliniowymi, nazywanymi "funkcjami kształtu" jednej zmiennej. Modele liniowe są łatwo interpretowane, ale ponieważ modele poznają funkcje funkcji zamiast pojedynczej wagi, mogą modelować bardziej złożone relacje niż prosty model liniowy. Wynikająca przewidywalność mapie gam ma termin przechwycenia reprezentujący średnią prognozę dla zestawu szkoleniowego i funkcje kształtu, które reprezentują odchylenia od średniej przewidywania. Funkcje kształtu mogą być sprawdzane przez oczy, aby zobaczyć odpowiedź modelu do różnych wartości funkcji i wizualizować jak Poniższy wykres, który jest tworzony na końcu przykładu kodu. MAPIE gam Trainer w ML.NET jest zaimplementowana przy użyciu wzorów podwyższania poziomu gradientu (na przykład drzewa Stumps), aby poznać funkcje kształtu nieparametrycznego i opiera się na metodzie opisanej w [odniesieniu do modelu klasyfikacji i regresji](https://www.cs.cornell.edu/~yinlou/papers/lou-kdd12.pdf) przez Lou, Caruana i Gehrke.
+GAMs są klasą **modeli podlegających interpretacji,** które są modelami liniowymi, w których terminy są funkcjami nieliniowymi, zwanymi "funkcjami kształtu" pojedynczej zmiennej. Jako modele liniowe są one łatwo interpretowane, ale ponieważ modele uczą się funkcji obiektów zamiast pojedynczej wagi, mogą modelować bardziej złożone relacje niż prosty model liniowy. Wynikowy predyktor GAM ma termin przechwytywania, który reprezentuje średnią prognozę w zestawie szkoleniowym i funkcje kształtu, które reprezentują odchylenie od średniej prognozy. Funkcje kształtu mogą być kontrolowane przez oko, aby zobaczyć odpowiedź modelu na różne wartości operacji i wizualizowane jak poniższy wykres, który jest tworzony na końcu przykładu kodu. Trener GAM w ML.NET jest implementowany przy użyciu płytkich gradientu wzmocnionych drzew (na przykład pniaki drzewa) do nauki funkcji kształtu nieparametrycznego i opiera się na metodzie opisanej w [Inteludowy modele klasyfikacji i regresji](https://www.cs.cornell.edu/~yinlou/papers/lou-kdd12.pdf) przez Lou, Caruana i Gehrke.
 
 ```csharp
 // Train the Generalized Additive Model
@@ -48,6 +48,6 @@ for (int i = 0; i < myFeatureBins.Length; i++)
 }
 ```
 
-![Wykres funkcji kształtów ogólnych modeli addytywne](./media/use-gams-for-model-explainability/gam-shape-function-graph.png)
+![Wykres funkcji kształtu Uogólnione modele dodatków](./media/use-gams-for-model-explainability/gam-shape-function-graph.png)
 
-Aby zapoznać się z przykładem sposobu uczenia modelu mapie gam i sprawdzenia i interpretacji wyników, zobacz [repozytorium dotnet/machinelearning w witrynie GitHub](https://github.com/dotnet/machinelearning/blob/master/docs/samples/Microsoft.ML.Samples/Dynamic/GeneralizedAdditiveModels.cs).
+Aby uzyskać przykład o tym, jak nabyć model GAM i sprawdzić i zinterpretować wyniki, zobacz [repozytorium GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/blob/master/docs/samples/Microsoft.ML.Samples/Dynamic/GeneralizedAdditiveModels.cs).

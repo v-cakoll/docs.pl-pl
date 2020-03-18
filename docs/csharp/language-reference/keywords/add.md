@@ -1,5 +1,5 @@
 ---
-title: Dodaj C# odwołanie
+title: add - C# Odwołanie
 ms.date: 07/20/2015
 f1_keywords:
 - add_CSharpKeyword
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - add event accessor [C#]
 ms.assetid: faf30b99-10e8-45cd-ab9a-57585d4d1d8d
 ms.openlocfilehash: 323064dcbe7596b5f1d2f0f6aa566b07cee45789
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713806"
 ---
 # <a name="add-c-reference"></a>add (odwołanie w C#)
-`add` kontekstowe słowo kluczowe jest używane do definiowania niestandardowego akcesora zdarzeń, który jest wywoływany, gdy kod klienta subskrybuje [zdarzenie](./event.md). W przypadku podania niestandardowej metody dostępu `add` należy również podać metodę dostępu [Usuń](./remove.md) .  
+Kontekstowe `add` słowo kluczowe służy do definiowania niestandardowego akcesora zdarzeń, który jest wywoływany, gdy kod klienta subskrybuje [zdarzenie](./event.md). Jeśli podasz `add` niestandardowy akcesor, należy również podać [remove](./remove.md) akcesor.  
   
 ## <a name="example"></a>Przykład  
-Poniższy przykład pokazuje zdarzenie, które ma niestandardowe metody dostępu `add` i [usuwania](./remove.md) . Pełny przykład można znaleźć w temacie [jak zaimplementować zdarzenia interfejsu](../../programming-guide/events/how-to-implement-interface-events.md).
+W poniższym przykładzie przedstawiono `add` zdarzenie, które ma niestandardowe i [usunąć](./remove.md) akcesory. Aby uzyskać pełny przykład, zobacz [Jak zaimplementować zdarzenia interfejsu](../../programming-guide/events/how-to-implement-interface-events.md).
   
 [!code-csharp[csrefKeywordsContextual#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#15)]
   
- Zazwyczaj nie trzeba podawać własnych niestandardowych metod dostępu do zdarzeń. Metody dostępu, które są generowane automatycznie przez kompilator podczas deklarowania zdarzenia, są wystarczające dla większości scenariuszy.  
+ Zazwyczaj nie trzeba podać własne niestandardowe akcesory zdarzeń. Akcesory, które są automatycznie generowane przez kompilator podczas deklarowania zdarzenia są wystarczające dla większości scenariuszy.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Zdarzenia](../../programming-guide/events/index.md)

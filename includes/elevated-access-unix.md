@@ -1,48 +1,48 @@
 ---
 ms.openlocfilehash: 85f50b221e7ecb1ebd6fa539894ab7aabed8d362
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "67540117"
 ---
-### <a name="install-the-global-tool"></a>Zainstaluj narzędzie globalne
+### <a name="install-the-global-tool"></a>Instalowanie narzędzia globalnego
 
-Zasoby pakietu, powinien być zainstalowany w lokacji chronionej przy użyciu `--tool-path` opcji. Ta separacja pozwala uniknąć, udostępnianie środowiska użytkowników z ograniczeniami przy użyciu środowiska o podniesionych uprawnieniach.
+Zasoby pakietu powinny być instalowane w chronionej lokalizacji przy użyciu `--tool-path` tej opcji. Ta separacja pozwala uniknąć udostępniania ograniczonego środowiska użytkownika z podwyższonym poziomem ochrony środowiska.
 
 ```bash
 sudo dotnet tool install PACKAGEID --tool-path /usr/local/share/dotnet-tools
 ```
 
-`/usr/local/share/dotnet-tools` zostanie utworzona z uprawnieniem `drwxr-xr-x`. Jeśli katalog już istnieje, użyj `ls -l` polecenie, aby sprawdzić, ograniczeniami użytkownik nie ma uprawnień do edytowania katalogu. Jeśli tak, użyj `sudo chmod o-w -R /usr/share/dotnet-tools` polecenie, aby usunąć dostęp.
+`/usr/local/share/dotnet-tools`zostanie utworzony za `drwxr-xr-x`zgodą . Jeśli katalog już istnieje, `ls -l` użyj polecenia, aby sprawdzić, czy użytkownik z ograniczeniami nie ma uprawnień do edytowania katalogu. Jeśli tak, `sudo chmod o-w -R /usr/share/dotnet-tools` użyj polecenia, aby usunąć dostęp.
 
-### <a name="run-the-global-tool"></a>Uruchom narzędzie globalnej
+### <a name="run-the-global-tool"></a>Uruchamianie narzędzia globalnego
 
-**Opcja 1** użycie pełnej ścieżki przy użyciu programu sudo:
+**Wariant 1** Użyj pełnej ścieżki z sudo:
 
 ```bash
 sudo /usr/local/share/dotnet-tools/TOOLCOMMAND
 ```
 
-**Opcja 2** symbol Link do narzędzia, raz na narzędzie:
+**Wariant 2** Dodaj link symbolu narzędzia raz na narzędzie:
 
 ```bash
 sudo ln -s /usr/local/share/dotnet-tools/TOOLCOMMAND /usr/local/bin/TOOLCOMMAND
 ```
 
-A następnie uruchom za pomocą:
+I uruchomić z:
 
 ```bash
 sudo TOOLCOMMAND
 ```
 
-### <a name="uninstall-the-global-tool"></a>Odinstaluj narzędzie globalne
+### <a name="uninstall-the-global-tool"></a>Odinstalowywanie narzędzia globalnego
 
 ```bash
 sudo dotnet tool uninstall PACKAGEID --tool-path /usr/local/share/dotnet-tools
 ```
 
-Jeśli utworzono łącze symboli, należy ją usunąć:
+Jeśli nawiązałeś link do symbolu, musisz go usunąć:
 
 ```bash
 sudo rm /usr/local/bin/TOOLCOMMAND

@@ -1,30 +1,30 @@
 ---
 title: Tłumaczenie drzew wyrażeń
-description: Dowiedz się, jak odwiedzać każdy węzeł w drzewie wyrażenia podczas tworzenia zmodyfikowanej kopii tego drzewa wyrażenia.
+description: Dowiedz się, jak odwiedzić każdy węzeł w drzewie wyrażeń podczas tworzenia zmodyfikowanej kopii tego drzewa wyrażeń.
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
 ms.openlocfilehash: f60c447d5c89aa83f85073e642e621608131ed8d
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76115775"
 ---
-# <a name="translate-expression-trees"></a>Tłumaczenie drzew wyrażeń
+# <a name="translate-expression-trees"></a>Przetłumacz drzewa wyrażeń
 
-[Poprzednie — Kompilowanie wyrażeń](expression-trees-building.md)
+[Poprzedni -- Budowanie wyrażeń](expression-trees-building.md)
 
-W tej ostatniej sekcji dowiesz się, jak odwiedzać każdy węzeł w drzewie wyrażenia podczas tworzenia zmodyfikowanej kopii tego drzewa wyrażenia. Są to techniki, które będą używane w dwóch ważnych scenariuszach. Pierwszy polega na zrozumieniu algorytmów wyrażonych przez drzewo wyrażenia, aby można było je przetłumaczyć na inne środowisko. Druga jest zmiana algorytmu, który został utworzony. Może to być dodanie rejestrowania, wywołanie metody przechwytywania i śledzenie ich lub inne cele.
+W tej ostatniej sekcji dowiesz się, jak odwiedzić każdy węzeł w drzewie wyrażeń podczas tworzenia zmodyfikowanej kopii tego drzewa wyrażeń. Są to techniki, które będą używane w dwóch ważnych scenariuszach. Pierwszym z nich jest zrozumienie algorytmów wyrażonych przez drzewo wyrażeń, dzięki czemu można je przetłumaczyć na inne środowisko. Drugi to, kiedy chcesz zmienić algorytm, który został utworzony. Może to być dodanie rejestrowania, przechwytywania wywołań metody i śledzenie ich lub innych celów.
 
-## <a name="translating-is-visiting"></a>Trwa odwiedzanie tłumaczenia
+## <a name="translating-is-visiting"></a>Tłumaczenie polega na odwiedzeniu
 
-Kod, który tworzysz w celu przetłumaczenia drzewa wyrażenia, jest rozszerzeniem tego, co już widzisz, aby odwiedzić wszystkie węzły w drzewie. W przypadku tłumaczenia drzewa wyrażenia odwiedzane są wszystkie węzły, a podczas odwiedzania można utworzyć nowe drzewo. Nowe drzewo może zawierać odwołania do oryginalnych węzłów lub nowe węzły, które zostały umieszczone w drzewie.
+Kod, który tworzysz w celu przetłumaczenia drzewa wyrażeń jest rozszerzeniem tego, co już widziałeś, aby odwiedzić wszystkie węzły w drzewie. Po przetłumaczeniu drzewa wyrażeń, odwiedź wszystkie węzły i podczas ich wizyty, zbudować nowe drzewo. Nowe drzewo może zawierać odwołania do oryginalnych węzłów lub nowe węzły, które zostały umieszczone w drzewie.
 
-Zobaczmy to w akcji, odwiedzając drzewo wyrażenia i tworząc nowe drzewo z niektórymi węzłami zastępczymi. W tym przykładzie zamienimy każdą stałą na stałą o dziesięć razy większym.
-W przeciwnym razie pozostawimy drzewo wyrażenia bez zmian. Zamiast odczytywania wartości stałej i zamieniania jej na nową stałą, wprowadzimy tę zamianę, zastępując węzeł stały nowym węzłem, który wykonuje mnożenie.
+Zobaczmy to w akcji, odwiedzając drzewo wyrażeń i tworząc nowe drzewo z niektórymi węzłami zastępczymi. W tym przykładzie zastąpmy dowolną stałą stałą, która jest dziesięć razy większa.
+W przeciwnym razie pozostawimy drzewo wyrażeń nienaruszone. Zamiast odczytywać wartość stałej i zastępować ją nową stałą, dokonamy tego zastąpienia, zastępując węzeł stały nowym węzłem, który wykonuje mnożenie.
 
-W tym miejscu po znalezieniu stałego węzła utworzysz nowy węzeł mnożenia, którego elementy podrzędne są pierwotną stałą, a `10`stałej:
+W tym miejscu po znalezieniu stałego węzła można utworzyć nowy węzeł mnożenia, `10`którego podrzędne są oryginalną stałą, a stała:
 
 ```csharp
 private static Expression ReplaceNodes(Expression original)
@@ -44,7 +44,7 @@ private static Expression ReplaceNodes(Expression original)
 }
 ```
 
-Zastępując pierwotny węzeł podstawianiem, tworzone jest nowe drzewo zawierające nasze modyfikacje. Możemy sprawdzić, czy przez skompilowanie i wykonanie zastąpionego drzewa.
+Zastępując oryginalny węzeł substytutem, powstaje nowe drzewo, które zawiera nasze modyfikacje. Możemy to sprawdzić, kompilując i wykonując zastąpione drzewo.
 
 ```csharp
 var one = Expression.Constant(1, typeof(int));
@@ -58,14 +58,14 @@ var answer = func();
 Console.WriteLine(answer);
 ```
 
-Tworzenie nowego drzewa jest kombinacją odwiedzanych węzłów w istniejącym drzewie i tworzenie nowych węzłów i wstawianie ich do drzewa.
+Tworzenie nowego drzewa jest kombinacją odwiedzania węzłów w istniejącym drzewie i tworzenia nowych węzłów i wstawiania ich do drzewa.
 
-Ten przykład pokazuje ważność drzew wyrażeń, które są niezmienne. Należy zauważyć, że nowe drzewo utworzone powyżej zawiera kombinację nowo utworzonych węzłów i węzłów z istniejącego drzewa. Jest to bezpieczne, ponieważ nie można modyfikować węzłów w istniejącym drzewie. Może to spowodować znaczne zwiększenie wydajności pamięci.
-Te same węzły można używać w całym drzewie lub w wielu drzewach wyrażeń. Ponieważ węzły nie mogą być modyfikowane, ten sam węzeł może być ponownie używany w każdym przypadku, gdy jest to konieczne.
+W tym przykładzie pokazano znaczenie drzewa wyrażenie jest niezmienne. Należy zauważyć, że nowe drzewo utworzone powyżej zawiera mieszaninę nowo utworzonych węzłów i węzłów z istniejącego drzewa. Jest to bezpieczne, ponieważ węzłów w istniejącym drzewie nie można modyfikować. Może to spowodować znaczną wydajność pamięci.
+Te same węzły mogą być używane w całym drzewie lub w wielu drzewach wyrażeń. Ponieważ węzłów nie można modyfikować, ten sam węzeł może być ponownie użyty, gdy jest to potrzebne.
 
-## <a name="traversing-and-executing-an-addition"></a>Przechodzenie i wykonywanie dodawania
+## <a name="traversing-and-executing-an-addition"></a>Przechodzenie przez i wykonywanie dodawania
 
-Sprawdźmy to, tworząc drugiego odwiedzającego, który przeprowadzi drzewo węzłów dodawania i obliczy wynik. Można to zrobić, wprowadzając kilka modyfikacji odwiedzanych do tej pory. W tej nowej wersji odwiedzający zwróci częściową sumę operacji dodawania do tego punktu. Wyrażenie stałe, które jest po prostu wartością wyrażenia stałej. W przypadku wyrażenia dodawania wynik jest sumą argumentów operacji lewy i prawy, gdy te drzewa zostały przesunięte.
+Sprawdźmy to, budując drugiego odwiedzającego, który przechodzi przez drzewo węzłów dodawania i oblicza wynik. Możesz to zrobić, dokonując kilku modyfikacji dla odwiedzającego, który widziałeś do tej pory. W tej nowej wersji użytkownik zwróci częściową sumę operacji dodawania do tego momentu. Dla wyrażenia stałego jest to po prostu wartość wyrażenia stałego. Dla wyrażenia dodawania wynik jest sumą lewego i prawego argumentów, gdy te drzewa zostały przeciągnięte.
 
 ```csharp
 var one = Expression.Constant(1, typeof(int));
@@ -90,11 +90,11 @@ var theSum = aggregate(sum);
 Console.WriteLine(theSum);
 ```
 
-W tym miejscu jest dość dużo kodu, ale koncepcje są bardzo podejścia.
-Ten kod wizytuje elementy podrzędne na głębokości pierwszego wyszukiwania. Gdy napotka węzeł stały, odwiedzający zwraca wartość stałej. Po odwiedzeniu obu elementów podrzędnych osoba odwiedzająca będzie obliczać sumę obliczoną dla tego poddrzewa. Węzeł dodawania może teraz obliczyć jego sumę.
-Po odwiedzeniu wszystkich węzłów w drzewie wyrażenia suma zostanie obliczona. Wykonanie można śledzić przez uruchomienie przykładu w debugerze i śledzenie wykonania.
+Jest tu sporo kodu, ale pojęcia są bardzo przystępne.
+Ten kod odwiedza dzieci w dogłębnym pierwszym wyszukiwaniu. Gdy napotka węzeł stały, gość zwraca wartość stałej. Po użytkownik odwiedził oba dzieci, te dzieci będą obliczać sumę obliczoną dla tego poddrzewa. Węzeł dodawania można teraz obliczyć jego sumę.
+Po odwiedzeniu wszystkich węzłów w drzewie wyrażeń suma zostanie obliczona. Można śledzić wykonanie, uruchamiając przykład w debugerze i śledzenia wykonania.
 
-Ułatwiamy śledzenie sposobu analizowania węzłów i sposobu obliczania sumy przez przechodzenie przez drzewo. Oto zaktualizowana wersja metody agregującej, która zawiera dość kilka informacji o śledzeniu:
+Ułatwiamy śledzenie, jak węzły są analizowane i jak suma jest obliczana przez przechodzenie przez drzewo. Oto zaktualizowana wersja metody Agreguj, która zawiera sporo informacji o śledzeniu:
 
 ```csharp
 private static int Aggregate(Expression exp)
@@ -123,7 +123,7 @@ private static int Aggregate(Expression exp)
 }
 ```
 
-Uruchomienie go w tym samym wyrażeniu daje następujące dane wyjściowe:
+Uruchomienie go na tym samym wyrażeniu daje następujące dane wyjściowe:
 
 ```output
 10
@@ -152,15 +152,15 @@ Computed sum: 10
 10
 ```
 
-Śledź dane wyjściowe i postępuj zgodnie z powyższym kodem. Powinien być w stanie dowiedzieć się, jak kod odwiedza każdy węzeł i oblicza sumę w miarę przechodzenia przez drzewo i odnajduje sumę.
+Śledzenie danych wyjściowych i postępuj zgodnie z powyższym kodem. Powinieneś być w stanie ustalić, jak kod odwiedza każdy węzeł i oblicza sumę, jak przechodzi przez drzewo i znajduje sumę.
 
-Teraz przyjrzyjmy się różnemu przebiegowi z wyrażeniem podanym przez `sum1`:
+Teraz przyjrzyjmy się innemu przebiegowi, `sum1`z wyrażeniem podanym przez:
 
 ```csharp
 Expression<Func<int> sum1 = () => 1 + (2 + (3 + 4));
 ```
 
-Oto dane wyjściowe badania tego wyrażenia:
+Oto dane wyjściowe z badania tego wyrażenia:
 
 ```output
 Found Addition Expression
@@ -188,13 +188,13 @@ Computed sum: 10
 10
 ```
 
-Gdy ostateczna odpowiedź jest taka sama, przechodzenie drzewa jest zupełnie inne. Węzły są przesyłane w innej kolejności, ponieważ drzewo zostało skonstruowane z różnymi operacjami wykonywanymi jako pierwsze.
+Podczas gdy ostateczna odpowiedź jest taka sama, przechodzenie drzewa jest zupełnie inna. Węzły są przemieszczane w innej kolejności, ponieważ drzewo zostało zbudowane z różnych operacji występujących najpierw.
 
 ## <a name="learning-more"></a>Dodatkowe informacje
 
-Ten przykład pokazuje mały podzbiór kodu, który będzie przepływał i interpretuje algorytmy reprezentowane przez drzewo wyrażenia. Aby uzyskać kompletną dyskusję na temat wszystkich zadań niezbędnych do utworzenia biblioteki ogólnego przeznaczenia, która tłumaczy drzewa wyrażeń na inny język, Przeczytaj [tę serię](https://docs.microsoft.com/archive/blogs/mattwar/linq-building-an-iqueryable-provider-series) przez otoczkę Warren. Szczegółowe informacje na temat sposobu tłumaczenia dowolnego kodu, który może znajdować się w drzewie wyrażenia.
+W tym przykładzie przedstawiono mały podzbiór kodu, który można utworzyć do przechodzenia i interpretować algorytmy reprezentowane przez drzewo wyrażeń. Aby uzyskać pełną dyskusję na temat wszystkich prac niezbędnych do zbudowania biblioteki ogólnego przeznaczenia, która tłumaczy drzewa wyrażeń na inny język, przeczytaj [tę serię autorstwa](https://docs.microsoft.com/archive/blogs/mattwar/linq-building-an-iqueryable-provider-series) Matta Warrena. Przechodzi do bardzo szczegółowo, jak przetłumaczyć dowolny kod, który można znaleźć w drzewie wyrażeń.
 
-Mam nadzieję, że już widzisz prawdziwą moc drzew wyrażeń.
-Możesz sprawdzić zestaw kodu, wprowadzić wszelkie zmiany w tym kodzie i wykonać zmienioną wersję. Ponieważ drzewa wyrażeń są niezmienne, można utworzyć nowe drzewa przy użyciu składników istniejących drzew. Minimalizuje to ilość pamięci wymaganej do utworzenia zmodyfikowanych drzew wyrażeń.
+Mam nadzieję, że widzieliście teraz prawdziwą moc drzew ekspresji.
+Można sprawdzić zestaw kodu, wprowadzić wszelkie zmiany, które chcesz do tego kodu i wykonać zmienioną wersję. Ponieważ drzewa wyrażeń są niezmienne, można utworzyć nowe drzewa przy użyciu składników istniejących drzew. Minimalizuje to ilość pamięci potrzebnej do utworzenia drzew wyrażeń zmodyfikowanych.
 
-[Następne — sumowanie](expression-trees-summary.md)
+[Dalej -- Podsumowując](expression-trees-summary.md)

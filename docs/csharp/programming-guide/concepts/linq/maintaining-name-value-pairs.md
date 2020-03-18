@@ -1,40 +1,40 @@
 ---
-title: Obsługa par nazwa-wartość (C#)
+title: Utrzymywanie par name-value (C#)
 ms.date: 07/20/2015
 ms.assetid: 7b04b0f1-af64-42eb-8737-83f8861b5915
 ms.openlocfilehash: 9c42a154a4c3ed1463e428faab4c7d33197ef4a5
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69591702"
 ---
-# <a name="maintaining-namevalue-pairs-c"></a>Obsługa par nazwa/wartość (C#)
-Wiele aplikacji musi utrzymywać informacje, które najlepiej są przechowywane jako pary nazwa/wartość. Te informacje mogą dotyczyć informacji konfiguracyjnych lub ustawień globalnych. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]zawiera kilka metod, które ułatwiają przechowywanie zestawu par nazwa/wartość. Możesz zachować informacje jako atrybuty lub jako zestaw elementów podrzędnych.  
+# <a name="maintaining-namevalue-pairs-c"></a>Utrzymywanie par nazwy/wartości (C#)
+Wiele aplikacji musi przechowywać informacje, które najlepiej są przechowywane jako pary nazw i wartości. Te informacje mogą być informacje o konfiguracji lub ustawienia globalne. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]zawiera kilka metod, które ułatwiają zachowanie zestawu par nazw/wartości. Informacje można zachować jako atrybuty lub jako zestaw elementów podrzędnych.  
   
- Jedną z różnic między przechowywaniem informacji jako atrybuty lub jako elementami podrzędnymi jest to, że atrybuty mogą mieć tylko jeden atrybut z określoną nazwą dla elementu. To ograniczenie nie ma zastosowania do elementów podrzędnych.  
+ Jedną różnicą między przechowywanie informacji jako atrybuty lub jako elementy podrzędne jest to, że atrybuty mają ograniczenie, że może istnieć tylko jeden atrybut o określonej nazwie dla elementu. To ograniczenie nie ma zastosowania do elementów podrzędnych.  
   
 ## <a name="setattributevalue-and-setelementvalue"></a>SetAttributeValue i SetElementValue  
- Dwie metody, które ułatwiają utrzymywanie par <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> nazwa/wartość, i. <xref:System.Xml.Linq.XElement.SetElementValue%2A> Te dwie metody mają podobną semantykę.  
+ Dwie metody, które ułatwiają utrzymywanie <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> par <xref:System.Xml.Linq.XElement.SetElementValue%2A>nazwy/wartości są i . Te dwie metody mają podobną semantyki.  
   
- <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>może dodawać, modyfikować lub usuwać atrybuty elementu.  
+ <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>można dodawać, modyfikować lub usuwać atrybuty elementu.  
   
-- Jeśli wywoływana <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> jest nazwa atrybutu, który nie istnieje, metoda tworzy nowy atrybut i dodaje go do określonego elementu.  
+- Jeśli wywołasz <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> z nazwą atrybutu, który nie istnieje, metoda tworzy nowy atrybut i dodaje go do określonego elementu.  
   
 - Jeśli wywołasz <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> nazwę istniejącego atrybutu i z określoną zawartością, zawartość atrybutu zostanie zastąpiona określoną zawartością.  
   
-- Jeśli wywołasz <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> nazwę istniejącego atrybutu i określisz wartość null dla zawartości, atrybut zostanie usunięty z jego elementu nadrzędnego.  
+- Jeśli wywołasz <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> z nazwą istniejącego atrybutu i określisz wartość null dla zawartości, atrybut zostanie usunięty z jego nadrzędnego.  
   
- <xref:System.Xml.Linq.XElement.SetElementValue%2A>może dodawać, modyfikować lub usuwać elementy podrzędne elementu.  
+ <xref:System.Xml.Linq.XElement.SetElementValue%2A>można dodawać, modyfikować lub usuwać elementy podrzędne elementu.  
   
-- W przypadku wywołania <xref:System.Xml.Linq.XElement.SetElementValue%2A> z nazwą elementu podrzędnego, który nie istnieje, metoda tworzy nowy element i dodaje go do określonego elementu.  
+- Jeśli wywołanie <xref:System.Xml.Linq.XElement.SetElementValue%2A> z nazwą elementu podrzędnego, który nie istnieje, metoda tworzy nowy element i dodaje go do określonego elementu.  
   
 - Jeśli wywołasz <xref:System.Xml.Linq.XElement.SetElementValue%2A> nazwę istniejącego elementu i z określoną zawartością, zawartość elementu zostanie zastąpiona określoną zawartością.  
   
-- Jeśli wywołasz <xref:System.Xml.Linq.XElement.SetElementValue%2A> nazwę istniejącego elementu i określisz wartość null dla zawartości, element zostanie usunięty z jego elementu nadrzędnego.  
+- Jeśli wywołasz <xref:System.Xml.Linq.XElement.SetElementValue%2A> z nazwą istniejącego elementu i określisz wartość null dla zawartości, element zostanie usunięty z jego elementu nadrzędnego.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład tworzy element bez atrybutów. Następnie używa <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> metody, aby utworzyć i zachować listę par nazwa/wartość.  
+ Poniższy przykład tworzy element bez atrybutów. Następnie używa <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> metody do tworzenia i utrzymywania listy par nazw/wartości.  
   
 ```csharp  
 // Create an element with no content.  
@@ -66,7 +66,7 @@ Console.WriteLine(root);
 ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład tworzy element bez elementów podrzędnych. Następnie używa <xref:System.Xml.Linq.XElement.SetElementValue%2A> metody, aby utworzyć i zachować listę par nazwa/wartość.  
+ Poniższy przykład tworzy element bez elementów podrzędnych. Następnie używa <xref:System.Xml.Linq.XElement.SetElementValue%2A> metody do tworzenia i utrzymywania listy par nazw/wartości.  
   
 ```csharp  
 // Create an element with no content.  
@@ -118,8 +118,8 @@ Console.WriteLine(root);
 </Root>  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>
 - <xref:System.Xml.Linq.XElement.SetElementValue%2A>
-- [Modyfikowanie drzew XML (LINQ to XML) (C#)](./in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md)
+- [Modyfikowanie drzew XML (LINQ do XML) (C#)](./in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md)

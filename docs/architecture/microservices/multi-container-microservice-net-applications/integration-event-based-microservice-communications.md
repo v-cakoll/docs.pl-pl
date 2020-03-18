@@ -1,43 +1,43 @@
 ---
 title: Implementowanie komunikacji opartej na zdarzeniach między mikrousługami (zdarzenia integracji)
-description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Zrozumienie zdarzeń integracji w celu zaimplementowania komunikacji opartej na zdarzeniach między mikrousługami.
+description: Architektura mikrousług .NET dla konteneryzowanych aplikacji .NET | Zrozumienie zdarzeń integracji w celu zaimplementowania komunikacji opartej na zdarzeniach między mikrousługami.
 ms.date: 10/02/2018
 ms.openlocfilehash: 6d4e324a05def91935a82df41c971a75cb75c3f8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712406"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Implementowanie komunikacji opartej na zdarzeniach między mikrousługami (zdarzenia integracji)
 
-Zgodnie z wcześniejszym opisem, gdy używasz komunikacji opartej na zdarzeniach, mikrousługa publikuje zdarzenie w przypadku, gdy coś się stało, na przykład gdy aktualizuje jednostkę biznesową. Inne mikrousługi subskrybują te zdarzenia. Gdy mikrousługa otrzymuje zdarzenie, może aktualizować własne jednostki biznesowe, co może prowadzić do publikowania większej liczby zdarzeń. Jest to istota koncepcji spójności ostatecznej. Ten system publikowania/subskrybowania jest zwykle wykonywany przy użyciu implementacji magistrali zdarzeń. Magistrala zdarzeń może być zaprojektowana jako interfejs z interfejsem API, który jest wymagany do subskrybowania i anulowania subskrypcji zdarzeń oraz do publikowania zdarzeń. Może również mieć co najmniej jedną implementację opartą na komunikacji między procesami lub obsługą komunikatów, taką jak kolejka komunikatów lub Usługa Service Bus, która obsługuje komunikację asynchroniczną i model publikowania/subskrybowania.
+Jak opisano wcześniej, podczas korzystania z komunikacji opartej na zdarzeniach mikrousługi publikuje zdarzenie, gdy coś godnego uwagi dzieje się, na przykład, gdy aktualizuje jednostkę biznesową. Inne mikrousługi subskrybują te zdarzenia. Gdy mikrousługa odbiera zdarzenie, można zaktualizować własne jednostki biznesowe, co może prowadzić do więcej zdarzeń są publikowane. Jest to istota koncepcji spójności ostatecznej. Ten system publikowania/subskrybowania jest zwykle wykonywane przy użyciu implementacji magistrali zdarzeń. Magistrala zdarzeń może być zaprojektowana jako interfejs z interfejsem API potrzebnym do subskrybowania i anulowania subskrypcji zdarzeń oraz publikowania zdarzeń. Może również mieć co najmniej jedną implementacje na podstawie dowolnej komunikacji między procesami lub wiadomościami, takiej jak kolejka obsługi wiadomości lub magistrala usług, która obsługuje komunikację asynchroniczną i model publikowania/subskrybowania.
 
-Zdarzenia mogą służyć do implementowania transakcji handlowych obejmujących wiele usług, co zapewnia spójność między tymi usługami. Ostatecznie spójna transakcja składa się z serii działań rozproszonych. W każdej akcji mikrousługa aktualizuje jednostkę biznesową i publikuje zdarzenie, które wyzwala następną akcję. Na rysunku 6-18 poniżej znajduje się zdarzenie PriceUpdated opublikowane za pomocą usługi i usługi Event Bus, dzięki czemu Aktualizacja ceny jest propagowana do koszyka i innych mikrousług.
+Zdarzenia można użyć do zaimplementowania transakcji biznesowych, które obejmują wiele usług, co zapewnia spójność ostateczną między tymi usługami. Ostatecznie spójna transakcja składa się z serii akcji rozproszonych. Przy każdej akcji mikrousługi aktualizuje jednostkę biznesową i publikuje zdarzenie, które wyzwala następną akcję. Rysunek 6-18 poniżej pokazuje PriceUpdated zdarzenie opublikowane za pośrednictwem i magistrali zdarzeń, więc aktualizacja cen jest propagowane do koszyka i innych mikrousług.
 
-![Diagram komunikacji asynchronicznej sterowanej zdarzeniami z magistralą zdarzeń.](./media/integration-event-based-microservice-communications/event-driven-communication.png)
+![Diagram komunikacji asynchronicznej opartej na zdarzeniach z magistralą zdarzeń.](./media/integration-event-based-microservice-communications/event-driven-communication.png)
 
-**Rysunek 6-18**. Komunikacja sterowana zdarzeniami oparta na magistrali zdarzeń
+**Rysunek 6-18**. Komunikacja oparta na zdarzeniach oparta na magistrali zdarzeń
 
-W tej sekcji opisano, jak można zaimplementować ten typ komunikacji z platformą .NET przy użyciu ogólnego interfejsu magistrali zdarzeń, jak pokazano na rysunku 6-18. Istnieje wiele potencjalnych implementacji, z których każda korzysta z innej technologii lub infrastruktury, takiej jak RabbitMQ, Azure Service Bus lub jakakolwiek inna usługa typu open-source innej firmy lub komercyjnej usługi Service Bus.
+W tej sekcji opisano, jak można zaimplementować tego typu komunikacji z .NET przy użyciu interfejsu ogólnej magistrali zdarzeń, jak pokazano na rysunku 6-18. Istnieje wiele potencjalnych implementacji, z których każda korzysta z innej technologii lub infrastruktury, takiej jak RabbitMQ, Azure Service Bus lub innej innej firmy typu open source lub komercyjnej magistrali usług.
 
-## <a name="using-message-brokers-and-services-buses-for-production-systems"></a>Korzystanie z brokerów komunikatów i magistrali usług dla systemów produkcyjnych
+## <a name="using-message-brokers-and-services-buses-for-production-systems"></a>Korzystanie z brokerów komunikatów i autobusów usługowych dla systemów produkcyjnych
 
-Zgodnie z opisem w sekcji architektura można wybrać jedną z wielu technologii obsługi komunikatów w celu zaimplementowania abstrakcyjnej magistrali zdarzeń. Jednak te technologie są na różnych poziomach. Na przykład RabbitMQ, transport brokera komunikatów, znajduje się na niższym poziomie niż produkty komercyjne, takie jak Azure Service Bus, NServiceBus, MassTransit lub jaśniejszy. Większość z tych produktów może korzystać z RabbitMQ lub Azure Service Bus. Wybór produktu zależy od tego, ile funkcji i ile jest potrzebnych skalowalności aplikacji.
+Jak wspomniano w sekcji architektury, można wybrać jedną z wielu technologii obsługi wiadomości do implementowania magistrali zdarzeń abstrakcyjnych. Ale te technologie są na różnych poziomach. Na przykład RabbitMQ, transport brokera obsługi wiadomości, jest na niższym poziomie niż produkty komercyjne, takie jak usługa Azure Service Bus, NServiceBus, MassTransit lub Brighter. Większość z tych produktów może działać na górze RabbitMQ lub Usługi Azure Service Bus. Wybór produktu zależy od liczby funkcji i ilości niedostępnej skalowalności potrzebnej do zastosowania.
 
-W celu zaimplementowania tylko weryfikacji usługi Event Bus dla środowiska deweloperskiego, tak jak w przykładzie eShopOnContainers, prosta implementacja na RabbitMQ działa jako kontener może być wystarczająca. Jednak w przypadku systemów o znaczeniu krytycznym i produkcyjnym wymagających wysokiej skalowalności warto oszacować i użyć Azure Service Bus.
+Do implementowania tylko system weryfikacji magistrali zdarzeń dla środowiska programistycznego, jak w przykładzie eShopOnContainers, wystarczy prosta implementacja na górze RabbitMQ uruchomiony jako kontener. Jednak w przypadku systemów o znaczeniu krytycznym i produkcyjnych, które wymagają wysokiej skalowalności, można ocenić usługę Azure Service Bus i korzystać z niej.
 
-Jeśli wymagane są abstrakcje wysokiego poziomu i bogatsze funkcje, takie jak [sagach](https://docs.particular.net/nservicebus/sagas/) dla długotrwałych procesów, które ułatwiają opracowywanie rozproszonego, inne komercyjne i typu "open source", takie jak NServiceBus, MassTransit i jaśniejszy, oceniają. W takim przypadku abstrakcje i interfejsy API, które mają być używane, zwykle są bezpośrednio podane przez te magistrale usług wyższego poziomu zamiast własnych streszczeń (takich jak [proste abstrakcje magistrali zdarzeń dostępne w eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/BuildingBlocks/EventBus/EventBus/Abstractions/IEventBus.cs)). W takim przypadku można zbadać [eShopOnContainers rozwidlenia przy użyciu NServiceBus](https://go.particular.net/eShopOnContainers) (dodatkowe pochodne próbki zaimplementowane przez określone oprogramowanie).
+Jeśli potrzebujesz abstrakcji wysokiego poziomu i bogatszych funkcji, takich jak Sagas dla [długotrwałych](https://docs.particular.net/nservicebus/sagas/) procesów, które ułatwiają rozwój rozproszony, warto ocenić inne komercyjne i open source magistrale, takie jak NServiceBus, MassTransit i Brighter. W takim przypadku abstrakcje i interfejs API do użycia będzie zwykle bezpośrednio te dostarczane przez te magistrale usług wysokiego poziomu zamiast własnych abstrakcji (jak [abstrakcje prostej magistrali zdarzeń dostarczonych w eShopOnContainers).](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/BuildingBlocks/EventBus/EventBus/Abstractions/IEventBus.cs) O to chodzi, można zbadać [rozwidliwe eShopOnContainers przy użyciu NServiceBus](https://go.particular.net/eShopOnContainers) (dodatkowe próbki pochodne zaimplementowane przez oprogramowanie particular).
 
-Oczywiście można zawsze tworzyć własne funkcje usługi Service Bus na podstawie technologii niższego poziomu, takich jak RabbitMQ i Docker, ale pracy wymaganej do "odtworzenia kółka" może być zbyt kosztowne dla niestandardowej aplikacji przedsiębiorstwa.
+Oczywiście zawsze możesz zbudować własne funkcje magistrali usług na technologiach niższego poziomu, takich jak RabbitMQ i Docker, ale praca potrzebna do "ponownego wynalezienia koła" może być zbyt kosztowna dla niestandardowej aplikacji dla przedsiębiorstw.
 
-Aby wykonać ponownie iterację: abstrakcje i implementacje magistrali zdarzeń opisane w próbce eShopOnContainers są przeznaczone do użycia tylko jako Weryfikacja koncepcji. Po ustaleniu, że chcesz mieć komunikację asynchroniczną i opartą na zdarzeniach, jak wyjaśniono w bieżącej sekcji, należy wybrać produkt usługi Service Bus, który najlepiej odpowiada Twoim potrzebom produkcyjnym.
+Aby powtórzyć: abstrakcje magistrali zdarzeń przykładowych i implementacji prezentowane w przykładzie eShopOnContainers są przeznaczone tylko jako dowód koncepcji. Po podjęciu decyzji, że chcesz mieć komunikację asynchroniczną i opartą na zdarzeniach, jak wyjaśniono w bieżącej sekcji, należy wybrać produkt magistrali usług, który najlepiej odpowiada Twoim potrzebom w środowisku produkcyjnym.
 
-## <a name="integration-events"></a>Zdarzenia integracji
+## <a name="integration-events"></a>Wydarzenia integracyjne
 
-Zdarzenia integracji służą do przełączania stanu domeny w ramach wielu mikrousług lub systemów zewnętrznych. Jest to realizowane przez opublikowanie zdarzeń integracji poza mikrousługą. W przypadku opublikowania zdarzenia w wielu mikrousługach odbiornika (do jak wielu mikrousług jako subskrybowanych przez zdarzenie integracji) odpowiednia procedura obsługi zdarzeń w każdej mikrousłudze odbiornika obsługuje zdarzenie.
+Zdarzenia integracji są używane do synchronizacji stanu domeny w wielu mikrousługach lub systemach zewnętrznych. Odbywa się to przez publikowanie zdarzeń integracji poza mikrousług. Gdy zdarzenie jest publikowane do wielu mikrousług odbiornika (do tylu mikrousług, jak są subskrybowane do zdarzenia integracji), odpowiedni program obsługi zdarzeń w każdym mikrousługi odbiornika obsługuje zdarzenie.
 
-Zdarzenie integracji jest zasadniczo klasą holdingu danych, jak w poniższym przykładzie:
+Zdarzenie integracji jest w zasadzie klasy przechowywania danych, jak w poniższym przykładzie:
 
 ```csharp
 public class ProductPriceChangedIntegrationEvent : IntegrationEvent
@@ -56,51 +56,51 @@ public class ProductPriceChangedIntegrationEvent : IntegrationEvent
 }
 ```
 
-Zdarzenia integracji można definiować na poziomie aplikacji każdej mikrousług, dzięki czemu są one oddzielone od innych mikrousług, podobnie jak modele widoków są zdefiniowane na serwerze i kliencie. Nie zaleca się udostępniania wspólnej biblioteki zdarzeń integracji w wielu mikrousługach; Dzięki temu można sprzęgać te mikrousługi za pomocą pojedynczej biblioteki danych definicji zdarzenia. Nie chcesz tego robić z tego samego powodu, w którym nie chcesz udostępniać wspólnego modelu domeny w wielu mikrousługach: mikrousługi muszą być całkowicie autonomiczne.
+Zdarzenia integracji można zdefiniować na poziomie aplikacji każdej mikrousługi, więc są one oddzielone od innych mikrousług, w sposób porównywalny do sposobu ViewModels są zdefiniowane na serwerze i kliencie. Co nie jest zalecane jest udostępnianie biblioteki typowych zdarzeń integracji w wielu mikrousług; w ten sposób będzie sprzężenie tych mikrousług z biblioteki danych definicji pojedynczego zdarzenia. Nie chcesz to zrobić z tych samych powodów, które nie chcesz współużytkować wspólny model domeny w wielu mikrousług: mikrousług musi być całkowicie autonomiczne.
 
-Istnieje tylko kilka rodzajów bibliotek, które powinny być współużytkowane przez mikrousługi. Jedną z nich są biblioteki, które są końcowymi blokami aplikacji, na przykład [interfejs API klienta usługi Event Bus](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/BuildingBlocks/EventBus), jak w eShopOnContainers. Inne to biblioteki, które stanowią narzędzia, które mogą być również udostępniane jako składniki NuGet, takie jak serializatory JSON.
+Istnieje tylko kilka rodzajów bibliotek, które należy udostępnić w mikrousługach. Jednym z nich są biblioteki, które są blokami aplikacji końcowych, takich jak [interfejs API klienta magistrali zdarzeń](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/BuildingBlocks/EventBus), jak w eShopOnContainers. Innym jest biblioteki, które stanowią narzędzia, które mogą być również współużytkowane jako składniki NuGet, takie jak serializatory JSON.
 
-## <a name="the-event-bus"></a>Magistrala zdarzeń
+## <a name="the-event-bus"></a>Autobus imprezowy
 
-Magistrala zdarzeń umożliwia komunikację w stylu publikacji/subskrypcji między mikrousługami bez konieczności jawnego informowania składników, jak pokazano na rysunku 6-19.
+Magistrala zdarzeń umożliwia komunikację w stylu publikowania/subskrybowania między mikrousługami bez konieczności używania składników jawnie świadomych siebie nawzajem, jak pokazano na rysunku 6-19.
 
 ![Diagram przedstawiający podstawowy wzorzec publikowania/subskrybowania.](./media/integration-event-based-microservice-communications/publish-subscribe-basics.png)
 
-**Rysunek 6-19**. Podstawowe informacje dotyczące publikowania/subskrybowania za pomocą usługi Event Bus
+**Rysunek 6-19**. Publikowanie/subskrybowanie podstawowych za pomocą magistrali zdarzeń
 
-Na powyższym diagramie przedstawiono, że mikrousługa A publikuje w usłudze Event Bus, która dystrybuuje w celu subskrybowania mikrousług B i C, bez konieczności poznania subskrybentów przez wydawcę. Magistrala zdarzeń jest powiązana ze wzorcem obserwatora i wzorcem publikowania/subskrybowania.
+Powyższy diagram pokazuje, że mikrousługi A publikuje do usługi Event Bus, która dystrybuuje do subskrypcji mikrousług B i C, bez wydawcy konieczności poznania subskrybentów. Magistrala zdarzeń jest powiązana ze wzorcem Obserwatora i wzorcem publikowania i subskrybowania.
 
-### <a name="observer-pattern"></a>Wzorzec obserwatora
+### <a name="observer-pattern"></a>Wzór obserwatora
 
-We [wzorcu obserwatora](https://en.wikipedia.org/wiki/Observer_pattern)obiekt podstawowy (znany jako widoczny) powiadamia inne zainteresowane obiekty (zwane obserwatorami) z odpowiednimi informacjami (zdarzenia).
+We [wzorcu obserwatora](https://en.wikipedia.org/wiki/Observer_pattern)obiekt podstawowy (znany jako Obserwowalny) powiadamia inne zainteresowane obiekty (znane jako obserwatorzy) odpowiednimi informacjami (zdarzeniami).
 
-### <a name="publishsubscribe-pubsub-pattern"></a>Wzorzec publikowania/subskrybowania (pub/Sub)
+### <a name="publishsubscribe-pubsub-pattern"></a>Wzorzec publikowania/subskrybowania (Pub/Sub)
 
-Celem [wzorca publikowania/subskrybowania](https://docs.microsoft.com/previous-versions/msp-n-p/ff649664(v=pandp.10)) jest taka sama jak wzorzec obserwatora: chcesz powiadomić inne usługi o wystąpieniu pewnych zdarzeń. Ale istnieje istotna różnica między wzorcem obserwatora a publikowaniem/podrzędnym. We wzorcu obserwatora emisja jest wykonywana bezpośrednio od zauważalnych obserwatorów, więc "wiedzą". Jednak w przypadku korzystania ze wzorca publikowania/sub, istnieje trzeci składnik, nazywany brokerem lub brokerem komunikatów lub magistralą zdarzeń, który jest znany przez wydawcę i abonenta. W związku z tym w przypadku używania wzorca publikowania/podłączania Wydawca i Subskrybenci są precyzyjnie oddzielone przez wymienioną magistralę zdarzeń lub brokera komunikatów.
+Celem [publikowania/subskrybowania wzorzec](https://docs.microsoft.com/previous-versions/msp-n-p/ff649664(v=pandp.10)) jest taki sam jak wzorca obserwatora: chcesz powiadomić inne usługi, gdy pewne zdarzenia mają miejsce. Istnieje jednak istotna różnica między wzorcami Obserwatora i Pub/Sub. We wzorcu obserwatora transmisja jest wykonywana bezpośrednio z obserwowalnych obserwatorów, więc "znają się" na siebie. Ale podczas korzystania z wzorca Pub/Sub istnieje trzeci składnik, nazywany brokerem lub brokerem komunikatów lub magistralią zdarzeń, który jest znany zarówno wydawcy, jak i subskrybentowi. W związku z tym podczas korzystania z wzorca Pub/Sub wydawcy i subskrybentów są dokładnie oddzielone dzięki wspomnianej magistrali zdarzeń lub brokera komunikatów.
 
-### <a name="the-middleman-or-event-bus"></a>Centrum oprogramowania lub magistrali zdarzeń
+### <a name="the-middleman-or-event-bus"></a>Pośrednik lub autobus imprezowy
 
-Jak uzyskać anonimowość między wydawcą a subskrybentem? Prostym sposobem jest poinformowanie o całej komunikacji przez centrum. Magistrala zdarzeń to ten środek pośredniczący.
+Jak uzyskać anonimowość między wydawcą a subskrybentem? Łatwym sposobem jest niech pośrednik zajmie się całą komunikacją. Autobus zdarzeń jest jednym z takich pośredników.
 
-Magistrala zdarzeń zwykle składa się z dwóch części:
+Magistrala zdarzeń składa się zazwyczaj z dwóch części:
 
-- Streszczenie lub interfejs.
+- Abstrakcja lub interfejs.
 
 - Co najmniej jedna implementacja.
 
-Na rysunku 6-19 można zobaczyć, jak, z punktu widzenia aplikacji, magistrala zdarzeń nie ma więcej niż w oddzielnym kanale pub/sub. Sposób implementacji komunikacji asynchronicznej może się różnić. Może być wiele implementacji, aby można było zamienić między nimi, w zależności od wymagań środowiska (na przykład środowiska produkcyjnego i środowisk deweloperskich).
+Na rysunku 6-19 można zobaczyć, jak z punktu widzenia aplikacji magistrala zdarzeń jest niczym więcej niż kanałem Pub/Sub. Sposób implementowania tej komunikacji asynchronicznej może się różnić. Może mieć wiele implementacji, dzięki czemu można wymieniać między nimi, w zależności od wymagań środowiskowych (na przykład środowiska produkcyjne go i programistyczne).
 
-Na rysunku 6-20 można zobaczyć abstrakcję magistrali zdarzeń z wieloma implementacjami na podstawie technologii obsługi komunikatów infrastruktury, takich jak RabbitMQ, Azure Service Bus lub innego brokera zdarzeń/komunikatów.
+Na rysunku 6-20 można zobaczyć abstrakcję magistrali zdarzeń z wieloma implementacjami opartymi na technologiach obsługi wiadomości infrastruktury, takich jak RabbitMQ, Usługa Azure Service Bus lub inny broker zdarzeń/komunikatów.
 
 ![Diagram przedstawiający dodanie warstwy abstrakcji magistrali zdarzeń.](./media/integration-event-based-microservice-communications/multiple-implementations-event-bus.png)
 
-**Rysunek 6-20.** Wiele implementacji magistrali zdarzeń
+**Rysunek 6- 20.** Wiele implementacji magistrali zdarzeń
 
-Dobrym sposobem jest użycie magistrali zdarzeń zdefiniowanej za pomocą interfejsu, aby można ją było zaimplementować przy użyciu kilku technologii, takich jak RabbitMQ usługi Azure Service Bus lub innych. Jednak jak wspomniano wcześniej, użycie własnych streszczeń (interfejsu magistrali zdarzeń) jest dobre tylko wtedy, gdy potrzebne są podstawowe funkcje magistrali zdarzeń obsługiwane przez abstrakcyjne. Jeśli potrzebujesz bogatszych funkcji usługi Service Bus, prawdopodobnie Użyj interfejsu API i abstrakcji udostępnianych przez preferowaną komercyjną usługę Service Bus zamiast własnych streszczeń.
+Dobrze jest mieć magistrali zdarzeń zdefiniowane za pośrednictwem interfejsu, dzięki czemu można zaimplementować za pomocą kilku technologii, takich jak rabbitMQ azure service bus lub innych. Jednak i jak wspomniano wcześniej, przy użyciu własnych abstrakcji (interfejs magistrali zdarzeń) jest dobre tylko wtedy, gdy potrzebne są podstawowe funkcje magistrali zdarzeń obsługiwane przez abstrakcje. Jeśli potrzebujesz bogatszych funkcji magistrali usług, prawdopodobnie należy użyć interfejsu API i abstrakcji dostarczonych przez preferowaną komercyjną magistralię usług zamiast własnych abstrakcji.
 
 ### <a name="defining-an-event-bus-interface"></a>Definiowanie interfejsu magistrali zdarzeń
 
-Zacznijmy od pewnego kodu implementacji dla interfejsu usługi Event Bus i możliwych implementacji dla celów eksploracji. Interfejs powinien być ogólny i prosty, tak jak w poniższym interfejsie.
+Zacznijmy od kodu implementacji dla interfejsu magistrali zdarzeń i możliwych implementacji do celów eksploracji. Interfejs powinien być ogólny i prosty, jak w poniższym interfejsie.
 
 ```csharp
 public interface IEventBus
@@ -123,23 +123,23 @@ public interface IEventBus
 }
 ```
 
-Metoda `Publish` jest prosta. Magistrala zdarzeń będzie emitować przesłane do niej zdarzenie integracji z dowolną mikrousługą, a nawet z aplikacją zewnętrzną, która subskrybuje to zdarzenie. Ta metoda jest używana przez mikrousługę, która publikuje zdarzenie.
+Metoda `Publish` jest prosta. Magistrala zdarzeń będzie emitować zdarzenie integracji przekazywane do dowolnego mikrousługi lub nawet aplikacji zewnętrznej, subskrybowane do tego zdarzenia. Ta metoda jest używana przez mikrousługę, która publikuje zdarzenie.
 
-Metody `Subscribe` (można mieć kilka implementacji w zależności od argumentów) są używane przez mikrousługi, które chcą odbierać zdarzenia. Ta metoda ma dwa argumenty. Pierwsze jest zdarzeniem integracji subskrybowanym przez usługę (`IntegrationEvent`). Drugim argumentem jest program obsługi zdarzeń integracji (lub metoda wywołania zwrotnego) o nazwie `IIntegrationEventHandler<T>`, która ma być wykonywana, gdy mikrousługa odbiornika pobiera ten komunikat o zdarzeniu integracji.
+`Subscribe` Metody (może mieć kilka implementacji w zależności od argumentów) są używane przez mikrousług, które mają odbierać zdarzenia. Ta metoda ma dwa argumenty. Pierwszym z nich jest zdarzenie`IntegrationEvent`integracji do subskrybowania ( ). Drugi argument jest obsługi zdarzeń integracji (lub `IIntegrationEventHandler<T>`metody wywołania wywołania wywołania), o nazwie , które mają być wykonywane, gdy mikrousługi odbiornika pobiera ten komunikat zdarzenia integracji.
 
-## <a name="additional-resources"></a>Dodatkowe zasoby
+## <a name="additional-resources"></a>Zasoby dodatkowe
 
-Niektóre rozwiązania do obsługi komunikatów w środowisku produkcyjnym:
+Niektóre rozwiązania do obsługi wiadomości gotowe do produkcji:
 
-- **Azure Service Bus** \
+- **Usługa usługi Azure** \
   <https://docs.microsoft.com/azure/service-bus-messaging/>
   
-- **NServiceBus** \
+- **Usługa NServiceBus** \
   <https://particular.net/nservicebus>
   
-- **MassTransit** \
+- **Transport masowy** \
   <https://masstransit-project.com/>
 
 > [!div class="step-by-step"]
 > [Poprzedni](database-server-container.md)
-> [Następny](rabbitmq-event-bus-development-test-environment.md)
+> [następny](rabbitmq-event-bus-development-test-environment.md)

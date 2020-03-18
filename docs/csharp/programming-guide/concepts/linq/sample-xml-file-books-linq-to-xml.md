@@ -2,17 +2,17 @@
 title: 'Przykładowy plik XML: książki (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: b75ab1a2-fb76-4df9-bd01-c45ec22a29ef
-ms.openlocfilehash: d2e3971119812862fc9c059ea947dc46cf7fe1ad
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: bcdc402fc32278a1cd3ddde52a0b102f0d939005
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483815"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168275"
 ---
-# <a name="sample-xml-file-books-linq-to-xml"></a><span data-ttu-id="034d0-102">Przykładowy plik XML: książki (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="034d0-102">Sample XML File: Books (LINQ to XML)</span></span>
-<span data-ttu-id="034d0-103">Następujący plik XML jest używany w różne przykłady w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dokumentacji.</span><span class="sxs-lookup"><span data-stu-id="034d0-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="034d0-104">Plik zawiera informacje dotyczące książek.</span><span class="sxs-lookup"><span data-stu-id="034d0-104">The file contains information about books.</span></span>  
+# <a name="sample-xml-file-books-linq-to-xml"></a><span data-ttu-id="126c4-102">Przykładowy plik XML: książki (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="126c4-102">Sample XML File: Books (LINQ to XML)</span></span>
+<span data-ttu-id="126c4-103">Poniższy plik XML jest używany w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] różnych przykładach w dokumentacji.</span><span class="sxs-lookup"><span data-stu-id="126c4-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="126c4-104">Plik zawiera informacje o książkach.</span><span class="sxs-lookup"><span data-stu-id="126c4-104">The file contains information about books.</span></span>  
   
-## <a name="booksxml"></a><span data-ttu-id="034d0-105">Books.XML</span><span class="sxs-lookup"><span data-stu-id="034d0-105">books.xml</span></span>  
+## <a name="booksxml"></a><span data-ttu-id="126c4-105">books.xml</span><span class="sxs-lookup"><span data-stu-id="126c4-105">books.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -23,7 +23,7 @@ ms.locfileid: "66483815"
       <Genre>Computer</Genre>  
       <Price>44.95</Price>  
       <PublishDate>2000-10-01</PublishDate>  
-      <Description>An in-depth look at creating applications   
+      <Description>An in-depth look at creating applications
       with XML.</Description>  
    </Book>  
    <Book id="bk102">  
@@ -32,8 +32,8 @@ ms.locfileid: "66483815"
       <Genre>Fantasy</Genre>  
       <Price>5.95</Price>  
       <PublishDate>2000-12-16</PublishDate>  
-      <Description>A former architect battles corporate zombies,   
-      an evil sorceress, and her own childhood to become queen   
+      <Description>A former architect battles corporate zombies,
+      an evil sorceress, and her own childhood to become queen
       of the world.</Description>  
    </Book>  
 </Catalog>  

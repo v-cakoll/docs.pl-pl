@@ -1,18 +1,18 @@
 ---
-title: 'Przykładowy plik XML: Wiele zamówień zakupu w Namespace2'
+title: 'Przykładowy plik XML: wiele zamówień zakupu w obszarze nazw2'
 ms.date: 07/20/2015
 ms.assetid: 595024f2-374a-4615-acb5-64fa1600f377
-ms.openlocfilehash: 05eb5dd7e6a73b03b693375441eb14f533105894
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: f525f73854b52b8a4d70ff842c19d3bdda9c38d5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483711"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168190"
 ---
-# <a name="sample-xml-file-multiple-purchase-orders-in-a-namespace"></a><span data-ttu-id="9e6e4-102">Przykładowy plik XML: wiele zamówień zakupu w przestrzeni nazw</span><span class="sxs-lookup"><span data-stu-id="9e6e4-102">Sample XML File: Multiple Purchase Orders in a Namespace</span></span>
-<span data-ttu-id="9e6e4-103">Następujący plik XML jest używany w różne przykłady w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dokumentacji.</span><span class="sxs-lookup"><span data-stu-id="9e6e4-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="9e6e4-104">Ten plik zawiera wiele zamówień zakupu.</span><span class="sxs-lookup"><span data-stu-id="9e6e4-104">This file contains several purchase orders.</span></span> <span data-ttu-id="9e6e4-105">Kod XML jest w przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="9e6e4-105">The XML is in a namespace.</span></span>  
+# <a name="sample-xml-file-multiple-purchase-orders-in-a-namespace"></a><span data-ttu-id="05bab-102">Przykładowy plik XML: wiele zamówień zakupu w przestrzeni nazw</span><span class="sxs-lookup"><span data-stu-id="05bab-102">Sample XML File: Multiple Purchase Orders in a Namespace</span></span>
+<span data-ttu-id="05bab-103">Poniższy plik XML jest używany w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] różnych przykładach w dokumentacji.</span><span class="sxs-lookup"><span data-stu-id="05bab-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="05bab-104">Ten plik zawiera kilka zamówień zakupu.</span><span class="sxs-lookup"><span data-stu-id="05bab-104">This file contains several purchase orders.</span></span> <span data-ttu-id="05bab-105">Kod XML znajduje się w obszarze nazw.</span><span class="sxs-lookup"><span data-stu-id="05bab-105">The XML is in a namespace.</span></span>  
   
-## <a name="purchaseordersinnamespacexml"></a><span data-ttu-id="9e6e4-106">PurchaseOrdersInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="9e6e4-106">PurchaseOrdersInNamespace.xml</span></span>  
+## <a name="purchaseordersinnamespacexml"></a><span data-ttu-id="05bab-106">OrderordersInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="05bab-106">PurchaseOrdersInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -108,4 +108,3 @@ ms.locfileid: "66483711"
   </aw:PurchaseOrder>  
 </aw:PurchaseOrders>  
 ```  
- 

@@ -1,16 +1,16 @@
 ---
-title: 'Przykładowy plik XML: Orders2 skonsolidowany zakupu'
+title: 'Przykładowy plik XML: Skonsolidowane zamówienia zakupu2'
 ms.date: 07/20/2015
 ms.assetid: 9d9698a5-95f2-4564-813b-ba536cdf3bfb
 ms.openlocfilehash: abd9a8f49cbd1308dfb1c043f310601decf64336
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "66483794"
 ---
 # <a name="sample-xml-file-consolidated-purchase-orders"></a>Przykładowy plik XML: skonsolidowane zamówienia zakupu
-Następujący plik XML jest używany w różne przykłady w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dokumentacji. Ten plik jest zestawem zamówień zakupu z różnych kształtów, wiele firm. Zamówienia zakupu z każdej firmy znajdują się w oddzielnych przestrzeni nazw.  
+Poniższy plik XML jest używany w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] różnych przykładach w dokumentacji. Ten plik jest zestawem zamówień zakupu o różnych kształtach z wielu firm. Zamówienia zakupu od każdej firmy znajdują się w oddzielnych przestrzeniach nazw.  
   
 ## <a name="consolidatedpurchaseordersxml"></a>ConsolidatedPurchaseOrders.xml  
   

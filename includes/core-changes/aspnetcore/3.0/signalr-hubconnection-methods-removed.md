@@ -1,14 +1,14 @@
 ---
 ms.openlocfilehash: de06825f1031d05bc83183a83bae165e2f9512ff
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901808"
 ---
-### <a name="signalr-hubconnection-resetsendping-and-resettimeout-methods-removed"></a>Sygnalizujący: HubConnection ResetSendPing i ResetTimeout metod
+### <a name="signalr-hubconnection-resetsendping-and-resettimeout-methods-removed"></a>SignalR: Usunięto metody Resetowania i resetowania czasu usługi HubConnection ResetSendPing i Resettimeout
 
-Metody `ResetSendPing` i `ResetTimeout` zostały usunięte z interfejsu API `HubConnection` sygnalizującego. Metody te były pierwotnie przeznaczone wyłącznie do użytku wewnętrznego, ale zostały udostępnione w ASP.NET Core 2,2. Te metody nie będą dostępne od momentu wydania w ASP.NET Core 3,0 wersja zapoznawcza 4. Aby zapoznać się z omówieniem, zobacz [dotnet/aspnetcore # 8543](https://github.com/dotnet/aspnetcore/issues/8543).
+I `ResetSendPing` `ResetTimeout` metody zostały usunięte z `HubConnection` interfejsu API SignalR. Metody te były pierwotnie przeznaczone wyłącznie do użytku wewnętrznego, ale zostały upublicznione w ASP.NET Core 2.2. Te metody nie będą dostępne począwszy od wersji ASP.NET Core 3.0 Preview 4. Aby uzyskać do dyskusji, zobacz [dotnet/aspnetcore#8543](https://github.com/dotnet/aspnetcore/issues/8543).
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -16,7 +16,7 @@ Metody `ResetSendPing` i `ResetTimeout` zostały usunięte z interfejsu API `Hub
 
 #### <a name="old-behavior"></a>Stare zachowanie
 
-Dostępne interfejsy API.
+Interfejsy API były dostępne.
 
 #### <a name="new-behavior"></a>Nowe zachowanie
 
@@ -24,11 +24,11 @@ Interfejsy API są usuwane.
 
 #### <a name="reason-for-change"></a>Przyczyna zmiany
 
-Metody te były pierwotnie przeznaczone wyłącznie do użytku wewnętrznego, ale zostały udostępnione w ASP.NET Core 2,2.
+Metody te były pierwotnie przeznaczone wyłącznie do użytku wewnętrznego, ale zostały upublicznione w ASP.NET Core 2.2.
 
-#### <a name="recommended-action"></a>Zalecane działanie
+#### <a name="recommended-action"></a>Zalecana akcja
 
-Nie używaj tych metod.
+Nie należy używać tych metod.
 
 #### <a name="category"></a>Kategoria
 

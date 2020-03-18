@@ -1,57 +1,57 @@
 ---
-title: Instalowanie programu .NET Core w systemie SLES 12 — Menedżer pakietów — .NET Core
-description: Zainstaluj zestaw .NET Core SDK i środowisko uruchomieniowe w systemie SLES 12 przy użyciu Menedżera pakietów.
+title: Zainstaluj .NET Core na SLES 12 - menedżer pakietów - .NET Core
+description: Użyj menedżera pakietów, aby zainstalować zestaw SDK .NET Core i program runtime na sles 12.
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
 ms.openlocfilehash: a6c10c6b11bc57ae4bbe814c66c563b85ce3c22b
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76920731"
 ---
-# <a name="sles-12-package-manager---install-net-core"></a>SLES 12 — Menedżer pakietów — Instalowanie programu .NET Core
+# <a name="sles-12-package-manager---install-net-core"></a>SLES 12 Menedżer pakietów — instalowanie programu .NET Core
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-switcher.md)]
 
-W tym artykule opisano, jak za pomocą Menedżera pakietów zainstalować platformę .NET Core w systemie SLES 12. Jeśli instalujesz środowisko uruchomieniowe, zalecamy zainstalowanie [ASP.NET Core środowiska uruchomieniowego](#install-the-aspnet-core-runtime), ponieważ zawiera on zarówno środowisko uruchomieniowe programu .NET Core, jak i ASP.NET Core.
+W tym artykule opisano sposób instalowania programu .NET Core za pomocą menedżera pakietów w sles 12. Jeśli instalujesz program runtime, zalecamy zainstalowanie [ASP.NET core runtime](#install-the-aspnet-core-runtime), ponieważ zawiera zarówno .NET Core, jak i ASP.NET core.
 
-## <a name="register-microsoft-key-and-feed"></a>Zarejestruj klucz i źródło danych firmy Microsoft
+## <a name="register-microsoft-key-and-feed"></a>Rejestrowanie klucza firmy Microsoft i źródła danych
 
 Przed zainstalowaniem programu .NET należy:
 
-- Zarejestruj klucz Microsoft.
+- Zarejestruj klucz firmy Microsoft.
 - Zarejestruj repozytorium produktów.
 - Zainstaluj wymagane zależności.
 
-Należy to zrobić tylko raz dla każdego komputera.
+Te operacje należy wykonać tylko jeden raz na każdej maszynie.
 
-Otwórz Terminal i uruchom następujące polecenie.
+Otwórz terminal i uruchom następujące polecenie.
 
 ```bash
 sudo rpm -Uvh https://packages.microsoft.com/config/sles/12/packages-microsoft-prod.rpm
 ```
 
-## <a name="install-the-net-core-sdk"></a>Zainstaluj zestaw .NET Core SDK
+## <a name="install-the-net-core-sdk"></a>Zainstalowany zestaw .NET Core SDK
 
-Zaktualizuj produkty dostępne do zainstalowania, a następnie Zainstaluj zestaw .NET Core SDK. W terminalu uruchom następujące polecenie.
+Zaktualizuj produkty dostępne do instalacji, a następnie zainstaluj zestaw .NET Core SDK. W terminalu uruchom następujące polecenie.
 
 ```bash
 sudo zypper install dotnet-sdk-3.1
 ```
 
-## <a name="install-the-aspnet-core-runtime"></a>Zainstaluj środowisko uruchomieniowe ASP.NET Core
+## <a name="install-the-aspnet-core-runtime"></a>Instalowanie ASP.NET core
 
-Zaktualizuj produkty dostępne do zainstalowania, a następnie zainstaluj środowisko uruchomieniowe ASP.NET. W terminalu uruchom następujące polecenie.
+Zaktualizuj produkty dostępne do instalacji, a następnie zainstaluj ASP.NET czasie wykonywania. W terminalu uruchom następujące polecenie.
 
 ```bash
 sudo zypper install aspnetcore-runtime-3.1
 ```
 
-## <a name="install-the-net-core-runtime"></a>Instalowanie środowiska uruchomieniowego platformy .NET Core
+## <a name="install-the-net-core-runtime"></a>Instalowanie programu .NET Core
 
-Zaktualizuj produkty dostępne do zainstalowania, a następnie zainstaluj środowisko uruchomieniowe programu .NET Core. W terminalu uruchom następujące polecenie.
+Zaktualizuj produkty dostępne do instalacji, a następnie zainstaluj program .NET Core. W terminalu uruchom następujące polecenie.
 
 ```bash
 sudo zypper install dotnet-runtime-3.1
@@ -63,7 +63,7 @@ sudo zypper install dotnet-runtime-3.1
 
 ## <a name="troubleshoot-the-package-manager"></a>Rozwiązywanie problemów z menedżerem pakietów
 
-Ta sekcja zawiera informacje o typowych błędach, które mogą wystąpić podczas korzystania z Menedżera pakietów w celu zainstalowania platformy .NET Core.
+Ta sekcja zawiera informacje o typowych błędach, które mogą pojawić się podczas instalowania programu .NET Core za pomocą Menedżera pakietów.
 
 ### <a name="failed-to-fetch"></a>Nie można pobrać
 

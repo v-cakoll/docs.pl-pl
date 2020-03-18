@@ -1,19 +1,19 @@
 ---
-title: Serializowanie do elementu XmlReader (wywoływanie XSLT) (C#)
+title: Serializacja do czytnika XmlReader (wywoływania XSLT) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4cc3ee03-ef4c-429b-a408-fedd10b728cd
 ms.openlocfilehash: b079fe05fa8c230f644e011dcb62ec54f55cae60
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "66487182"
 ---
-# <a name="serializing-to-an-xmlreader-invoking-xslt-c"></a>Serializowanie do elementu XmlReader (wywoływanie XSLT) (C#)
-Kiedy używasz <xref:System.Xml?displayProperty=nameWithType> możliwości współdziałania [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], możesz użyć <xref:System.Xml.Linq.XNode.CreateReader%2A> utworzyć <xref:System.Xml.XmlReader>. Moduł odczytujący z tego <xref:System.Xml.XmlReader> odczytuje węzłów z drzewa XML i przetwarza je, odpowiednio.  
+# <a name="serializing-to-an-xmlreader-invoking-xslt-c"></a>Serializacja do czytnika XmlReader (wywoływania XSLT) (C#)
+Korzystając z <xref:System.Xml?displayProperty=nameWithType> możliwości współdziałania [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], można <xref:System.Xml.Linq.XNode.CreateReader%2A> użyć do <xref:System.Xml.XmlReader>utworzenia pliku . Moduł, który odczytuje z tego <xref:System.Xml.XmlReader> odczytuje węzły z drzewa XML i przetwarza je odpowiednio.  
   
 ## <a name="invoking-an-xslt-transformation"></a>Wywoływanie transformacji XSLT  
- Jedno możliwe użycie tej metody jest wywoływanie transformacji XSLT. Można utworzyć drzewa XML, tworzenie <xref:System.Xml.XmlReader> z drzewa XML, należy utworzyć nowy dokument, a następnie utwórz <xref:System.Xml.XmlWriter> do zapisu do nowego dokumentu. Następnie możesz wywołać transformację XSLT, przekazując <xref:System.Xml.XmlReader> i <xref:System.Xml.XmlWriter>. Po pomyślnym ukończeniu przekształcenie nowego drzewa XML jest wypełniana wyniki przekształcenia.  
+ Jednym z możliwych użycia dla tej metody jest podczas wywoływania transformacji XSLT. Można utworzyć drzewo XML, <xref:System.Xml.XmlReader> utworzyć drzewo z drzewa XML, utworzyć nowy <xref:System.Xml.XmlWriter> dokument, a następnie utworzyć do zapisania w nowym dokumencie. Następnie można wywołać transformację XSLT, <xref:System.Xml.XmlReader> <xref:System.Xml.XmlWriter>przekazując i . Po pomyślnym zakończeniu transformacji nowe drzewo XML jest wypełniane wynikami transformacji.  
   
 ```csharp  
 string xslMarkup = @"<?xml version='1.0'?>  
@@ -59,6 +59,6 @@ Console.WriteLine(newTree);
 </Root>  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Serializowanie drzew XML (C#)](serializing-to-files-textwriters-and-xmlwriters.md)
+- [Serializujące drzewa XML (C#)](serializing-to-files-textwriters-and-xmlwriters.md)

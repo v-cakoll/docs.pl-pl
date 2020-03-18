@@ -1,52 +1,55 @@
 ---
-title: polecenie Narzędzia dotnet narzędzie do odinstalowywania
-description: Polecenie Narzędzia dotnet narzędzie do odinstalowywania Odinstalowuje określone narzędzie .NET Core z maszyny.
+title: polecenie odinstalowywanie narzędzia dotnet
+description: Polecenie odinstalowywania narzędzia dotnet odinstalowuje określone narzędzie .NET Core z komputera.
 ms.date: 02/14/2020
-ms.openlocfilehash: 7a15c169c73cf5a743e0fa6f47645d6bccedbde3
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 82799404c40baa3a39f4e2a5fdb414fb745ef448
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157048"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847836"
 ---
 # <a name="dotnet-tool-uninstall"></a>dotnet tool uninstall
 
-**Ten artykuł ma zastosowanie do:** ✔️ .net Core 2,1 SDK i nowszych wersjach
+**Ten artykuł dotyczy:** ✔️ .NET Core 2.1 SDK i nowszych wersji
 
-## <a name="name"></a>Name (Nazwa)
+## <a name="name"></a>Nazwa
 
-`dotnet tool uninstall` — Odinstalowuje określone [Narzędzie .NET Core](global-tools.md) z maszyny.
+`dotnet tool uninstall`- Odinstalowuje określone [narzędzie .NET Core](global-tools.md) z komputera.
 
 ## <a name="synopsis"></a>Streszczenie
 
 ```dotnetcli
 dotnet tool uninstall <PACKAGE_NAME> <-g|--global>
+
 dotnet tool uninstall <PACKAGE_NAME> <--tool-path>
+
 dotnet tool uninstall <PACKAGE_NAME>
+
 dotnet tool uninstall <-h|--help>
 ```
 
 ## <a name="description"></a>Opis
 
-`dotnet tool uninstall` polecenie umożliwia odinstalowanie narzędzi .NET Core z komputera. Aby użyć polecenia, należy określić jedną z następujących opcji:
+Polecenie `dotnet tool uninstall` umożliwia odinstalowanie narzędzi programu .NET Core z komputera. Aby użyć polecenia, należy określić jedną z następujących opcji:
 
-* Aby odinstalować narzędzie globalne, które zostało zainstalowane w lokalizacji domyślnej, użyj opcji `--global`.
-* Aby odinstalować narzędzie globalne, które zostało zainstalowane w niestandardowej lokalizacji, użyj opcji `--tool-path`.
-* Aby odinstalować narzędzie lokalne, Pomiń opcje `--global` i `--tool-path`.
+* Aby odinstalować narzędzie globalne, które zostało `--global` zainstalowane w lokalizacji domyślnej, użyj tej opcji.
+* Aby odinstalować narzędzie globalne, które zostało `--tool-path` zainstalowane w lokalizacji niestandardowej, użyj tej opcji.
+* Aby odinstalować narzędzie lokalne, pomiń te `--global` opcje. `--tool-path`
 
-**Narzędzia lokalne są dostępne począwszy od zestaw .NET Core SDK 3,0.**
+**Lokalne narzędzia są dostępne począwszy od .NET Core SDK 3.0.**
 
 ## <a name="arguments"></a>Argumenty
 
 - **`PACKAGE_NAME`**
 
-  Nazwa/identyfikator pakietu NuGet zawierającego narzędzie .NET Core do odinstalowania. Nazwę pakietu można znaleźć przy użyciu polecenia [listy narzędzi dotnet](dotnet-tool-list.md) .
+  Nazwa/identyfikator pakietu NuGet, który zawiera narzędzie .NET Core do odinstalowania. Nazwę pakietu można znaleźć za pomocą polecenia [listy narzędzi dotnet.](dotnet-tool-list.md)
 
 ## <a name="options"></a>Opcje
 
 - **`-g|--global`**
 
-  Określa, że narzędzie ma zostać usunięte z instalacji na poziomie użytkownika. Nie można łączyć z opcją `--tool-path`. Pominięcie obu `--global` i `--tool-path` określa, że narzędzie ma zostać usunięte, jest narzędziem lokalnym.
+  Określa, że narzędzie, które ma zostać usunięte, pochodzi z instalacji obejmującej cały użytkownik. Nie można połączyć z `--tool-path` tą opcją. Pominięcie obu `--global` `--tool-path` i określa, że narzędzie do usunięcia jest narzędziem lokalnym.
 
 - **`-h|--help`**
 
@@ -54,13 +57,13 @@ dotnet tool uninstall <-h|--help>
 
 - **`--tool-path <PATH>`**
 
-  Określa lokalizację, w której ma zostać odinstalowane narzędzie. ŚCIEŻKA może być bezwzględna lub względna. Nie można łączyć z opcją `--global`. Pominięcie obu `--global` i `--tool-path` określa, że narzędzie ma zostać usunięte, jest narzędziem lokalnym.
+  Określa lokalizację, w której należy odinstalować narzędzie. PATH może być bezwzględny lub względny. Nie można połączyć z `--global` tą opcją. Pominięcie obu `--global` `--tool-path` i określa, że narzędzie do usunięcia jest narzędziem lokalnym.
 
 ## <a name="examples"></a>Przykłady
 
 - **`dotnet tool uninstall -g dotnetsay`**
 
-  Odinstalowuje narzędzie globalne [dotnetsay](https://www.nuget.org/packages/dotnetsay/) .
+  Odinstalowuje narzędzie globalne [dotnetsay.](https://www.nuget.org/packages/dotnetsay/)
 
 - **`dotnet tool uninstall dotnetsay --tool-path c:\global-tools`**
 
@@ -68,7 +71,7 @@ dotnet tool uninstall <-h|--help>
 
 - **`dotnet tool uninstall dotnetsay --tool-path ~/bin`**
 
-  Odinstalowuje narzędzie globalne [dotnetsay](https://www.nuget.org/packages/dotnetsay/) z określonego katalogu systemu Linux/macOS.
+  Odinstalowuje globalne narzędzie [dotnetsay](https://www.nuget.org/packages/dotnetsay/) z określonego katalogu Linux/macOS.
 
 - **`dotnet tool uninstall dotnetsay`**
 
@@ -77,3 +80,5 @@ dotnet tool uninstall <-h|--help>
 ## <a name="see-also"></a>Zobacz też
 
 - [Narzędzia .NET Core](global-tools.md)
+- [Samouczek: Instalowanie i używanie globalnego narzędzia .NET Core przy użyciu procesora CLI .NET Core](global-tools-how-to-use.md)
+- [Samouczek: Instalowanie i używanie lokalnego narzędzia .NET Core przy użyciu procesora CLI .NET Core](local-tools-how-to-use.md)

@@ -1,23 +1,23 @@
 ---
-title: Typy wbudowane — C# odwołanie
-description: Poznaj C# wbudowane wartości i typy referencyjne
+title: Typy wbudowane — odwołanie do języka C#
+description: Naucz się wbudowanych typów wartości i odwołań języka C#
 ms.date: 02/04/2020
 helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
 ms.openlocfilehash: 4f748373350ed0596a5f1d595c273243ae3227c3
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77095310"
 ---
-# <a name="built-in-types-c-reference"></a>Typy wbudowane (C# odwołanie)
+# <a name="built-in-types-c-reference"></a>Typy wbudowane (odwołanie do języka C#)
 
-W poniższej tabeli wymieniono C# wbudowane typy [wartości](value-types.md) :
+W poniższej tabeli wymieniono wbudowane typy [wartości](value-types.md) języka C#:
 
-|C#Type — słowo kluczowe|Typ .NET|
+|Słowo kluczowe typu C#|Typ .NET|
 |--------------|-------------------------|
 |[`bool`](bool.md)|<xref:System.Boolean?displayProperty=nameWithType>|
 |[`byte`](integral-numeric-types.md)|<xref:System.Byte?displayProperty=nameWithType>|
@@ -33,14 +33,14 @@ W poniższej tabeli wymieniono C# wbudowane typy [wartości](value-types.md) :
 |[`short`](integral-numeric-types.md)|<xref:System.Int16?displayProperty=nameWithType>|
 |[`ushort`](integral-numeric-types.md)|<xref:System.UInt16?displayProperty=nameWithType>|
 
-W poniższej tabeli wymieniono C# wbudowane typy [odwołań](../keywords/reference-types.md) :
+W poniższej tabeli wymieniono wbudowane typy [odwołań](../keywords/reference-types.md) języka C#:
 
-|C#Type — słowo kluczowe|Typ .NET|
+|Słowo kluczowe typu C#|Typ .NET|
 |--------------|-------------------------|
 |[`object`](reference-types.md#the-object-type)|<xref:System.Object?displayProperty=nameWithType>|
 |[`string`](reference-types.md#the-string-type)|<xref:System.String?displayProperty=nameWithType>|
 
-W powyższych tabelach każde C# słowo kluczowe type z lewej kolumny jest aliasem dla odpowiedniego typu .NET. Są one zamienne. Na przykład następujące deklaracje deklarują zmienne tego samego typu:
+W poprzednich tabelach każde słowo kluczowe typu C# z lewej kolumny jest aliasem dla odpowiedniego typu .NET. Są wymienne. Na przykład następujące deklaracje deklarują zmienne tego samego typu:
 
 ```csharp
 int a = 123;
@@ -49,6 +49,6 @@ System.Int32 b = 123;
 
 ## <a name="see-also"></a>Zobacz też
 
-- [C#odwoła](../index.md)
-- [Wartości domyślne C# typów](default-values.md)
-- [`dynamic` — słowo kluczowe](reference-types.md#the-dynamic-type)
+- [Dokumentacja języka C#](../index.md)
+- [Domyślne wartości typów Języka C#](default-values.md)
+- [`dynamic`Słowa kluczowego](reference-types.md#the-dynamic-type)

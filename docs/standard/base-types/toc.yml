@@ -8,7 +8,7 @@
       items:
         - name: Tabele konwersji typów
           href: conversion-tables.md
-    - name: Formatowanie typów
+    - name: Formatowanie tekstu
       href: formatting-types.md
       items:
         - name: Standardowe ciągi formatujące liczby
@@ -30,17 +30,17 @@
         - name: Wykonywanie operacji formatowania
           href: performing-formatting-operations.md
           items:
-            - name: 'Instrukcje: Uzupełnianie liczby zerami wiodącymi'
+            - name: 'Porady: uzupełnianie liczby zerami prowadzącymi'
               href: how-to-pad-a-number-with-leading-zeros.md
-            - name: 'Instrukcje: Wyodrębnianie dnia tygodnia z określonej daty'
+            - name: 'Porady: wyodrębnianie dnia tygodnia z określonej daty'
               href: how-to-extract-the-day-of-the-week-from-a-specific-date.md
-            - name: 'Instrukcje: Definiowanie i używanie niestandardowych dostawców formatu liczbowego'
+            - name: 'Porady: definiowanie i użycie niestandardowych dostawców formatu liczbowego'
               href: how-to-define-and-use-custom-numeric-format-providers.md
-            - name: 'Instrukcje: Obustronne wartości daty i godziny'
+            - name: 'Porady: obustronna konwersja wartości daty i godziny'
               href: how-to-round-trip-date-and-time-values.md
-            - name: 'Instrukcje: Wyświetlanie liczby milisekund w wartościach daty i godziny'
+            - name: 'Porady: wyświetlanie ilości milisekund wartości daty i godziny'
               href: how-to-display-milliseconds-in-date-and-time-values.md
-            - name: 'Instrukcje: Wyświetlanie dat w kalendarzach innych niż gregoriański'
+            - name: 'Porady: wyświetlanie dat w kalendarzach innych niż gregoriański'
               href: how-to-display-dates-in-non-gregorian-calendars.md
     - name: Manipulowanie ciągami
       href: manipulating-strings.md
@@ -62,7 +62,7 @@
               href: changing-case.md
             - name: Używanie klasy StringBuilder
               href: stringbuilder.md
-            - name: 'Instrukcje: Wykonywanie podstawowych działań na ciągach'
+            - name: 'Porady: wykonywanie podstawowych działań na ciągach'
               href: basic-manipulations.md
         - name: Wyrażenia regularne w programie .NET
           href: regular-expressions.md
@@ -106,13 +106,13 @@
             - name: Przykłady wyrażeń regularnych
               href: regular-expression-examples.md
               items:
-                - name: 'Przykład: Wyszukiwanie wartości HREF'
+                - name: 'Przykład: wyszukiwanie wartości HREF'
                   href: regular-expression-example-scanning-for-hrefs.md
-                - name: 'Przykład: Zmienianie formatów daty'
+                - name: 'Przykład: zmienianie formatów daty'
                   href: regular-expression-example-changing-date-formats.md
-                - name: 'Instrukcje: Wyodrębnianie protokołu i numeru portu z adresu URL'
+                - name: 'Porady: wyodrębnianie protokółu i numeru portu z adresu URL'
                   href: how-to-extract-a-protocol-and-port-number-from-a-url.md
-                - name: 'Instrukcje: Usuwanie nieprawidłowych znaków z ciągu'
+                - name: 'Porady: usuwanie nieprawidłowych znaków z ciągów'
                   href: how-to-strip-invalid-characters-from-a-string.md
                 - name: 'Sprawdzanie, czy format poczty e-mail ciągów jest prawidłowy'
                   href: how-to-verify-that-strings-are-in-valid-email-format.md

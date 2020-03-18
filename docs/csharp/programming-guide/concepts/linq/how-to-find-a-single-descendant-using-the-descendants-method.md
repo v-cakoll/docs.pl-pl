@@ -1,19 +1,19 @@
 ---
-title: Jak znaleźć pojedynczy element podrzędny przy użyciu metody Descendants (C#)
+title: Jak znaleźć pojedynczy potomek przy użyciu metody descendants (C#)
 ms.date: 07/20/2015
 ms.assetid: 6f735be9-0293-4680-8007-ca9d96bfebed
 ms.openlocfilehash: 59d8cfb93ec527a6ceaa58b422a154e16d712533
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141197"
 ---
-# <a name="how-to-find-a-single-descendant-using-the-descendants-method-c"></a>Jak znaleźć pojedynczy element podrzędny przy użyciu metody Descendants (C#)
-Za pomocą metody osi <xref:System.Xml.Linq.XContainer.Descendants%2A> można szybko napisać kod, aby znaleźć jeden unikatowy element. Ta technika jest szczególnie przydatna, gdy chcesz znaleźć konkretny element podrzędny o określonej nazwie. Można napisać kod, aby przejść do żądanego elementu, ale jest on często szybszy i łatwiejszy w pisaniu kodu przy użyciu osi <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
+# <a name="how-to-find-a-single-descendant-using-the-descendants-method-c"></a>Jak znaleźć pojedynczy potomek przy użyciu metody descendants (C#)
+Można użyć <xref:System.Xml.Linq.XContainer.Descendants%2A> metody osi, aby szybko napisać kod, aby znaleźć jeden element o unikatowej nazwie. Ta technika jest szczególnie przydatna, gdy chcesz znaleźć określony potomit ów o określonej nazwie. Można napisać kod, aby przejść do żądanego elementu, ale często jest <xref:System.Xml.Linq.XContainer.Descendants%2A> szybsze i łatwiejsze do napisania kodu przy użyciu osi.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie użyto standardowego operatora zapytania <xref:System.Linq.Enumerable.First%2A>.  
+ W tym <xref:System.Linq.Enumerable.First%2A> przykładzie użyto standardowego operatora kwerendy.  
   
 ```csharp  
 XElement root = XElement.Parse(@"<Root>  
@@ -43,7 +43,7 @@ GC3 Value
 ```  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano to samo zapytanie dla kodu XML, który znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz temat [przestrzenie nazw —C#omówienie (LINQ to XML) ()](namespaces-overview-linq-to-xml.md).  
+ W poniższym przykładzie przedstawiono tę samą kwerendę dla języka XML, która znajduje się w obszarze nazw. Aby uzyskać więcej informacji, zobacz [Omówienie przestrzeni nazw (LINQ do XML) (C#)](namespaces-overview-linq-to-xml.md).  
   
 ```csharp  
 XElement root = XElement.Parse(@"<aw:Root xmlns:aw='http://www.adventure-works.com'>  

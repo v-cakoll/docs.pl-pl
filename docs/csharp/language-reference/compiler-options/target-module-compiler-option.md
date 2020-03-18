@@ -1,5 +1,5 @@
 ---
-title: '-target: module (C# opcje kompilatora)'
+title: -target:module (Opcje kompilatora C#)
 ms.date: 07/20/2015
 f1_keywords:
 - /target:module
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - /target compiler options [C#], /target:module
 ms.assetid: 9af1e4fa-c749-44e7-ae58-90a3d05d4e72
 ms.openlocfilehash: 25421df2e9306071ce3506aaf7affd1b259d1c32
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69602444"
 ---
-# <a name="-targetmodule-c-compiler-options"></a>-target: module (C# opcje kompilatora)
+# <a name="-targetmodule-c-compiler-options"></a>-target:module (Opcje kompilatora C#)
 Ta opcja powoduje, że kompilator nie generuje manifestu zestawu.  
   
 ## <a name="syntax"></a>Składnia  
@@ -25,24 +25,24 @@ Ta opcja powoduje, że kompilator nie generuje manifestu zestawu.
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Domyślnie plik wyjściowy utworzony przez kompilację z tą opcją będzie miał rozszerzenie.  
+ Domyślnie plik wyjściowy utworzony przez kompilację z tą opcją będzie miał rozszerzenie .netmodule.  
   
- Nie można załadować pliku, który nie zawiera manifestu zestawu, za pomocą środowiska uruchomieniowego języka wspólnego .NET Framework. Jednak taki plik można włączyć do manifestu zestawu zestawu za pomocą [-addmodule](./addmodule-compiler-option.md).  
+ Nie można załadować pliku, który nie ma manifestu zestawu, przez czas uruchomieniowy wspólnego języka .NET Framework. Jednak taki plik może być włączony do manifestu zestawu za pomocą [-addmodule](./addmodule-compiler-option.md).  
   
- W przypadku utworzenia więcej niż jednego modułu w pojedynczej kompilacji typy [wewnętrzne](../keywords/internal.md) w jednym module będą dostępne dla innych modułów w kompilacji. Gdy kod w jednym module odwołuje `internal` się do typów w innym module, oba moduły muszą być dołączone do manifestu zestawu, za pomocą **-addmodule**.  
+ Jeśli więcej niż jeden moduł jest tworzony w jednej kompilacji, typy [wewnętrzne](../keywords/internal.md) w jednym module będą dostępne dla innych modułów w kompilacji. Gdy kod w `internal` jednym module odwołuje się do typów w innym module, oba moduły muszą być włączone do manifestu zestawu za pomocą **-addmodule**.  
   
- Tworzenie modułu nie jest obsługiwane w środowisku deweloperskim programu Visual Studio.  
+ Tworzenie modułu nie jest obsługiwane w środowisku programistycznym programu Visual Studio.  
   
- Aby uzyskać informacje na temat sposobu, w jaki można programowo ustawić <xref:VSLangProj80.ProjectProperties3.OutputType%2A>tę opcję kompilatora, zobacz.  
+ Aby uzyskać informacje na temat programowania tej opcji <xref:VSLangProj80.ProjectProperties3.OutputType%2A>kompilatora, zobacz .  
   
 ## <a name="example"></a>Przykład  
- Kompiluj `in.cs`, Utwórz `in.netmodule`:  
+ `in.cs`Kompiluj `in.netmodule`, tworząc:  
   
 ```console  
 csc -target:module in.cs  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [-Target (C# opcje kompilatora)](./target-compiler-option.md)
-- [Opcje kompilatora C#](./index.md)
+- [-target (Opcje kompilatora C#)](./target-compiler-option.md)
+- [Opcje kompilatora Języka C#](./index.md)

@@ -3,27 +3,27 @@ title: Jak przekształcić kształt drzewa XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 93c5d426-dea2-4709-a991-60204de42e8f
 ms.openlocfilehash: 91f91ed6fea5371fae2ce67a413f4825f37af6c3
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75347303"
 ---
 # <a name="how-to-transform-the-shape-of-an-xml-tree-c"></a>Jak przekształcić kształt drzewa XML (C#)
-*Kształt* dokumentu XML odwołuje się do jego nazw elementów, nazw atrybutów i cech hierarchii.  
+*Kształt* dokumentu XML odnosi się do jego nazw elementów, nazw atrybutów i cech jego hierarchii.  
   
- Czasami trzeba będzie zmienić kształt dokumentu XML. Na przykład może być konieczne wysłanie istniejącego dokumentu XML do innego systemu, który wymaga innych nazw elementów i atrybutów. Możesz przejść przez dokument, usunąć i zmienić nazwy elementów zgodnie z potrzebami, ale użycie konstrukcji funkcjonalnej skutkuje bardziej czytelnym i możliwym do utrzymania kodem. Aby uzyskać więcej informacji na temat konstrukcji funkcjonalnej, zobacz [konstrukcja funkcjonalnaC#(LINQ to XML) ()](./functional-construction-linq-to-xml.md).  
+ Czasami trzeba będzie zmienić kształt dokumentu XML. Na przykład może być trzeba wysłać istniejący dokument XML do innego systemu, który wymaga różnych nazw elementów i atrybutów. Można przejść przez dokument, usuwanie i zmienianie nazw elementów zgodnie z wymaganiami, ale przy użyciu funkcjonalnych wyników budowy w bardziej czytelny i konserwacji kodu. Aby uzyskać więcej informacji na temat konstrukcji funkcjonalnej, zobacz [Functional Construction (LINQ to XML) (C#).](./functional-construction-linq-to-xml.md)  
   
- Pierwszy przykład zmienia organizację dokumentu XML. Przenosi elementy złożone z jednej lokalizacji w drzewie do innej.  
+ Pierwszy przykład zmienia organizację dokumentu XML. Przenosi złożone elementy z jednego miejsca w drzewie do drugiego.  
   
- Drugi przykład w tym temacie tworzy dokument XML o innym kształcie niż dokument źródłowy. Zmiany wielkości liter w nazwach elementów, zmiana nazwy niektórych elementów i pozostawienie niektórych elementów z drzewa źródłowego z przekształconego drzewa.  
+ Drugi przykład w tym temacie tworzy dokument XML o innym kształcie niż dokument źródłowy. Zmienia obudowę nazw elementów, zmienia nazwy niektórych elementów i pozostawia niektóre elementy z drzewa źródłowego z przekształconego drzewa.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod zmienia kształt pliku XML przy użyciu osadzonych wyrażeń zapytań.  
+ Poniższy kod zmienia kształt pliku XML przy użyciu osadzonych wyrażeń kwerend.  
   
- Źródłowy dokument XML w tym przykładzie zawiera element `Customers` w elemencie `Root`, który zawiera wszystkich klientów. Zawiera również element `Orders` w elemencie `Root`, który zawiera wszystkie zamówienia. Ten przykład tworzy nowe drzewo XML, w którym zamówienia dla każdego klienta znajdują się w `Orders` elementu w ramach elementu `Customer`. Oryginalny dokument zawiera również element `CustomerID` w elemencie `Order`; Ten element zostanie usunięty z dokumentu, który można zmienić.  
+ Źródłowy dokument XML w `Customers` tym `Root` przykładzie zawiera element pod elementem, który zawiera wszystkich klientów. Zawiera również `Orders` element pod `Root` elementem, który zawiera wszystkie zamówienia. W tym przykładzie tworzy nowe drzewo XML, w którym `Orders` zamówienia dla `Customer` każdego klienta są zawarte w elemencie w elemencie. Oryginalny dokument zawiera `CustomerID` również element `Order` w elemencie; ten element zostanie usunięty z dokumentu o zmienionej kształcie.  
   
- W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: Customers i Orders (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ W tym przykładzie użyto następującego dokumentu XML: [Przykładowy plik XML: Klienci i zamówienia (LINQ do XML).](./sample-xml-file-customers-and-orders-linq-to-xml-2.md)  
   
 ```csharp  
 XElement co = XElement.Load("CustomersOrders.xml");  
@@ -86,11 +86,11 @@ Console.WriteLine(newCustOrd);
 ```  
   
 ## <a name="example"></a>Przykład  
- Ten przykład zmienia nazwę niektórych elementów i konwertuje niektóre atrybuty do elementów.  
+ W tym przykładzie zmienia nazwy niektórych elementów i konwertuje niektóre atrybuty do elementów.  
   
- Kod wywołuje `ConvertAddress`, który zwraca listę obiektów <xref:System.Xml.Linq.XElement>. Argument metody jest zapytanie, które określa `Address` element złożony, gdzie atrybut `Type` ma wartość `"Shipping"`.  
+ Kod wywołuje `ConvertAddress`, który zwraca <xref:System.Xml.Linq.XElement> listę obiektów. Argument metody jest kwerendą, która `Address` określa złożony `Type` element, w `"Shipping"`którym atrybut ma wartość .  
   
- W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: typowe zamówienie zakupu (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
+ W tym przykładzie użyto następującego dokumentu XML: [Przykładowy plik XML: Typowe zamówienie zakupu (LINQ do XML).](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md)  
   
 ```csharp  
 static IEnumerable<XElement> ConvertAddress(XElement add)  

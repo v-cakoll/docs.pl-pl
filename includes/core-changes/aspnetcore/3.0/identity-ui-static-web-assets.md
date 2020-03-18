@@ -1,21 +1,21 @@
 ---
 ms.openlocfilehash: c5e4b5619394f99a419fe48aee190ad741ea8c0d
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73041662"
 ---
-### <a name="identity-ui-uses-static-web-assets-feature"></a>Tożsamość: interfejs użytkownika używa funkcji statyczne zasoby sieci Web
+### <a name="identity-ui-uses-static-web-assets-feature"></a>Tożsamość: interfejs użytkowników interfejsu używa funkcji statycznych zasobów sieci Web
 
-W ASP.NET Core 3,0 wprowadzono statyczną funkcję zasobów sieci Web i została ona przyjęta przez interfejs użytkownika tożsamości.
+ASP.NET Core 3.0 wprowadziła funkcję statycznych zasobów sieci web, a interfejs tożsamości ją przyjął.
 
 #### <a name="change-description"></a>Zmień opis
 
-W związku z tym interfejs użytkownika tożsamości przyjmuje funkcję statyczne elementy zawartości sieci Web:
+W wyniku interfejsu tożsamości przyjęcia funkcji statycznych zasobów sieci web:
 
-- Wybór struktury jest realizowany przy użyciu właściwości `IdentityUIFrameworkVersion` w pliku projektu.
-- Bootstrap 4 jest domyślną strukturą interfejsu użytkownika dla interfejsu użytkownika tożsamości. Program ładowania początkowego 3 osiągnął koniec okresu istnienia i należy rozważyć migrację do obsługiwanej wersji.
+- Wybór struktury odbywa się `IdentityUIFrameworkVersion` przy użyciu właściwości w pliku projektu.
+- Bootstrap 4 jest domyślną strukturą interfejsu użytkownika dla interfejsu tożsamości. Bootstrap 3 osiągnął koniec życia i należy rozważyć migrację do obsługiwanej wersji.
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -23,19 +23,19 @@ W związku z tym interfejs użytkownika tożsamości przyjmuje funkcję statyczn
 
 #### <a name="old-behavior"></a>Stare zachowanie
 
-Domyślną strukturą interfejsu użytkownika dla interfejsu użytkownika tożsamości był **Bootstrap 3**. Strukturę interfejsu użytkownika można skonfigurować przy użyciu parametru do wywołania metody `AddDefaultUI` w `Startup.ConfigureServices`.
+Domyślną strukturą interfejsu użytkownika dla interfejsu tożsamości był **Bootstrap 3**. Platformę interfejsu użytkownika można skonfigurować przy `AddDefaultUI` użyciu parametru do wywołania metody w . `Startup.ConfigureServices`
 
 #### <a name="new-behavior"></a>Nowe zachowanie
 
-Domyślną strukturą interfejsu użytkownika dla interfejsu użytkownika tożsamości jest **Bootstrap 4**. Struktura interfejsu użytkownika musi być skonfigurowana w pliku projektu, a nie w wywołaniu metody `AddDefaultUI`.
+Domyślną strukturą interfejsu użytkownika dla interfejsu tożsamości jest **Bootstrap 4**. Struktura interfejsu użytkownika musi być skonfigurowana w pliku `AddDefaultUI` projektu, a nie w wywołaniu metody.
 
 #### <a name="reason-for-change"></a>Przyczyna zmiany
 
-Zastosowanie statycznej funkcji zasobów sieci Web wymaga, aby konfiguracja struktury interfejsu użytkownika była przenoszona do programu MSBuild. Podjęcie decyzji dotyczącej struktury osadzania to decyzja w czasie kompilacji, a nie decyzja dotycząca środowiska uruchomieniowego.
+Przyjęcie funkcji statycznych zasobów sieci web wymagane, że konfiguracja struktury interfejsu użytkownika przenieść do MSBuild. Decyzja, które ramy do osadzenie jest decyzja w czasie kompilacji, a nie decyzji runtime.
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Przejrzyj interfejs użytkownika witryny, aby upewnić się, że nowe składniki ładowania początkowego 4 są zgodne. W razie potrzeby użyj właściwości programu MSBuild `IdentityUIFrameworkVersion`, aby powrócić do programu Bootstrap 3. Dodaj właściwość do elementu `<PropertyGroup>` w pliku projektu:
+Przejrzyj swój ui witryny, aby upewnić się, że nowe składniki Bootstrap 4 są kompatybilne. W razie potrzeby `IdentityUIFrameworkVersion` użyj MSBuild właściwości, aby powrócić do Bootstrap 3. Dodaj właściwość do `<PropertyGroup>` elementu w pliku projektu:
 
 ```xml
 <IdentityUIFrameworkVersion>Bootstrap3</IdentityUIFrameworkVersion>

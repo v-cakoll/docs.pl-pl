@@ -1,24 +1,24 @@
 ---
-title: Private Protected C# — odwołanie
+title: chronione prywatne — odwołanie do języka C#
 ms.date: 11/15/2017
 author: sputier
 ms.openlocfilehash: a73d61712075cf24d2b94c505104df1fade629e9
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713212"
 ---
-# <a name="private-protected-c-reference"></a>prywatna chroniona (C# odwołanie)
+# <a name="private-protected-c-reference"></a>chronione prywatne (odwołanie do języka C#)
 
-Kombinacja słowa kluczowego `private protected` jest modyfikatorem dostępu składowej. Prywatna chroniona składowa jest dostępna dla typów pochodzących od klasy zawierającej, ale tylko w obrębie zawartego zestawu. Aby uzyskać porównanie `private protected` z innymi modyfikatorami dostępu, zobacz [poziomy dostępności](accessibility-levels.md).
+Kombinacja `private protected` słów kluczowych jest modyfikatorem dostępu do elementów członkowskich. Prywatny chroniony element członkowski jest dostępny przez typy pochodzące z klasy zawierającej, ale tylko w jego zestawie zawierającym. Aby porównać `private protected` inne modyfikatory dostępu, zobacz [Poziomy ułatwień dostępu](accessibility-levels.md).
 
 > [!NOTE]
-> Modyfikator dostępu `private protected` jest prawidłowy w C# wersji 7,2 i nowszych.
+> Modyfikator `private protected` dostępu jest prawidłowy w wersji C# 7.2 i nowszych.
 
 ## <a name="example"></a>Przykład
 
-Prywatna chroniona składowa klasy bazowej jest dostępna z typów pochodnych w jego zestawie zawierającym tylko wtedy, gdy typ statyczny zmiennej jest typem klasy pochodnej. Rozważmy na przykład następujący segment kodu:  
+Prywatny chroniony element członkowski klasy podstawowej jest dostępny z typów pochodnych w jego zestawie zawierającym tylko wtedy, gdy typ statyczny zmiennej jest typem klasy pochodnej. Rozważmy na przykład następujący segment kodu:  
 
 ```csharp
 // Assembly1.cs  
@@ -58,25 +58,25 @@ class DerivedClass2 : BaseClass
 }
 ```
 
-Ten przykład zawiera dwa pliki, `Assembly1.cs` i `Assembly2.cs`.
-Pierwszy plik zawiera publiczną klasę bazową, `BaseClass`i typ pochodny, `DerivedClass1`. `BaseClass` jest właścicielem prywatnej chronionej składowej, `myValue`, która `DerivedClass1` próbuje uzyskać dostęp na dwa sposoby. Pierwsza próba dostępu do `myValue` za pomocą wystąpienia `BaseClass` spowoduje wystąpienie błędu. Jednak próba użycia jej jako dziedziczonego elementu członkowskiego w `DerivedClass1` powiedzie się.
-W drugim pliku próba uzyskania dostępu do `myValue` jako dziedziczonego elementu członkowskiego `DerivedClass2` spowoduje wystąpienie błędu, ponieważ jest on dostępny tylko dla typów pochodnych w assembly1.
+W tym przykładzie `Assembly1.cs` znajdują `Assembly2.cs`się dwa pliki i .
+Pierwszy plik zawiera publiczną `BaseClass`klasę podstawową i typ `DerivedClass1`pochodzący z niej. `BaseClass`jest właścicielem prywatnego `myValue`chronionego `DerivedClass1` elementu członkowskiego, który próbuje uzyskać dostęp na dwa sposoby. Pierwsza próba dostępu `myValue` za pośrednictwem wystąpienia `BaseClass` spowoduje błąd. Jednak próba użycia go jako dziedziczonego `DerivedClass1` elementu członkowskiego w zakończy się pomyślnie.
+W drugim pliku próba dostępu `myValue` jako dziedziczony element członkowski `DerivedClass2` spowoduje błąd, ponieważ jest dostępny tylko przez typy pochodne w Assembly1.
 
-Elementy członkowskie struktury nie mogą być `private protected`, ponieważ struktura nie może być dziedziczona.  
+Elementy członkowskie struktury `private protected` nie mogą być, ponieważ struktura nie może być dziedziczona.  
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Dokumentacja języka C#](../index.md)
-- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [Odwołanie do języka C#](../index.md)
+- [Przewodnik programowania języka C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](index.md)
 - [Modyfikatory dostępu](access-modifiers.md)
 - [Poziomy ułatwień dostępu](accessibility-levels.md)
 - [Modyfikatory](index.md)
-- [public](public.md)
-- [private](private.md)
-- [internal](internal.md)
-- [Zagadnienia dotyczące zabezpieczeń wewnętrznych wirtualnych słów kluczowych](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100))
+- [Publicznego](public.md)
+- [Prywatny](private.md)
+- [Wewnętrznego](internal.md)
+- [Obawy dotyczące zabezpieczeń wewnętrznych wirtualnych słów kluczowych](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100))

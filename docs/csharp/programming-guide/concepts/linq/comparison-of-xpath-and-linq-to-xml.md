@@ -6,53 +6,53 @@ dev_langs:
 - vb
 ms.assetid: 87d361b1-daa9-4fd4-a53a-cbfa40111ad3
 ms.openlocfilehash: e9bf192a2075653802f0c5a8b4e44ff0ceacb975
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "66487529"
 ---
 # <a name="comparison-of-xpath-and-linq-to-xml"></a>Porównanie metody XPath i LINQ to XML
-Wyrażenie XPath i LINQ to XML oferuje kilka podobne funkcje. Jednocześnie może służyć do kwerendy drzewa XML, zwracaniu takich wyników jako kolekcja elementów, Kolekcja atrybutów, kolekcja węzłów lub wartość elementu lub atrybutu. Istnieją również pewne różnice.  
+XPath i LINQ do XML oferują pewne podobne funkcje. Oba mogą służyć do wykonywania zapytań drzewa XML, zwracając takie wyniki jak zbiór elementów, zbiór atrybutów, zbiór węzłów lub wartość elementu lub atrybutu. Istnieją jednak również pewne różnice.  
   
-## <a name="differences-between-xpath-and-linq-to-xml"></a>Różnice między XPath i LINQ to XML  
- Wyrażenie XPath nie zezwala na projekcji nowych typów. Jego może zwracać tylko kolekcje węzłów z drzewa, natomiast LINQ to XML można wykonać zapytania i projektu wykresu obiektu lub drzewa XML w nowy kształt. LINQ do XML zapytań uwzględniający znacznie więcej funkcji i są bardziej zaawansowane niż wyrażenia XPath.  
+## <a name="differences-between-xpath-and-linq-to-xml"></a>Różnice między XPath i LINQ do XML  
+ XPath nie zezwala na projekcję nowych typów. Może zwracać tylko kolekcje węzłów z drzewa, podczas gdy LINQ do XML może wykonać kwerendę i rzutować wykres obiektu lub drzewo XML w nowym kształcie. LINQ do xml zapytania obejmują znacznie więcej funkcji i są znacznie bardziej wydajne niż wyrażenia XPath.  
   
- Wyrażenia XPath istnieje w izolacji wewnątrz ciągu. Kompilator języka C# nie będzie mogła pomóc przeanalizować wyrażenia XPath w czasie kompilacji. Z drugiej strony LINQ to XML zapytania są analizowane i kompilowane przez kompilator języka C#. Kompilator jest w stanie przechwytywania wielu błędów zapytań.  
+ Wyrażenia XPath istnieją w izolacji w ciągu. Kompilator Języka C# nie może pomóc w przeanalizowaniu wyrażenia XPath w czasie kompilacji. Natomiast zapytania LINQ do XML są analizowane i kompilowane przez kompilator C#. Kompilator jest w stanie przechwycić wiele błędów zapytań.  
   
- Wyniki XPath nie są silnie typizowane. W wielu sytuacjach wynikiem obliczenia wyrażenia XPath jest obiektem, a zależy od dla deweloperów, aby ustalić odpowiedniego typu i Rzutuj wynik metody zgodnie z potrzebami. Z drugiej strony projekcje z LINQ do kwerendy XML są silnie typizowane.  
+ Wyniki XPath nie są silnie typowane. W wielu okolicznościach wynik oceny wyrażenia XPath jest obiektem i to do dewelopera należy określenie właściwego typu i rzutowanie wyniku w razie potrzeby. Natomiast rzutowania z kwerendy LINQ do XML są silnie typowane.  
   
-## <a name="result-ordering"></a>Wynik, porządkowanie  
- Wyrażenie XPath 1.0 zalecenie stanów, nieuporządkowane to kolekcja, która jest wynikiem obliczenia wyrażenia XPath.  
+## <a name="result-ordering"></a>Kolejność wyników  
+ Zalecenie XPath 1.0 stwierdza, że kolekcja, która jest wynikiem oceny wyrażenia XPath jest nieuporządkowana.  
   
- Podczas iteracji przez kolekcję zwracane przez LINQ do XML XPath metody osi, węzły w kolekcji są zwracane w kolejności dokumentu. Jest to możliwe nawet wtedy, gdy dostęp do osi XPath gdzie predykaty są wyrażone w kolejności odwrotnej dokumentu, takich jak `preceding` i `preceding-sibling`.  
+ Jednak podczas iteracji za pośrednictwem kolekcji zwracanej przez LINQ do XML XPath metody osi, węzły w kolekcji są zwracane w kolejności dokumentu. Dzieje się tak nawet podczas uzyskiwania dostępu do osi XPath, gdzie predykaty `preceding` są `preceding-sibling`wyrażone w kategoriach odwrotnej kolejności dokumentów, takich jak i .  
   
- Z kolei większość LINQ to XML osi zwrócić kolekcji w kolejności dokumentu, ale dwa z nich, <xref:System.Xml.Linq.XNode.Ancestors%2A> i <xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A>, zwracają kolekcje w kolejności odwrotnej dokumentu. W poniższej tabeli wylicza osi i wskazuje kolejność kolekcji dla każdego:  
+ Natomiast większość osi LINQ do XML zwraca kolekcje w kolejności dokumentu, ale dwie z nich, <xref:System.Xml.Linq.XNode.Ancestors%2A> a <xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A>kolekcje zwracają w odwrotnej kolejności dokumentu. W poniższej tabeli wylicza się osie i wskazuje kolejność zbierania dla każdego z nich:  
   
-|LINQ do XML osi|Szeregowanie|  
+|LINQ do osi XML|Szeregowanie|  
 |----------------------|--------------|  
-|XContainer.DescendantNodes|Kolejności dokumentu|  
-|XContainer.Descendants|Kolejności dokumentu|  
-|XContainer.Elements|Kolejności dokumentu|  
-|XContainer.Nodes|Kolejności dokumentu|  
-|XContainer.NodesAfterSelf|Kolejności dokumentu|  
-|XContainer.NodesBeforeSelf|Kolejności dokumentu|  
-|XElement.AncestorsAndSelf|Kolejności odwrotnej dokumentu|  
-|XElement.Attributes|Kolejności dokumentu|  
-|XElement.DescendantNodesAndSelf|Kolejności dokumentu|  
-|XElement.DescendantsAndSelf|Kolejności dokumentu|  
-|XNode.Ancestors|Kolejności odwrotnej dokumentu|  
-|XNode.ElementsAfterSelf|Kolejności dokumentu|  
-|XNode.ElementsBeforeSelf|Kolejności dokumentu|  
-|XNode.NodesAfterSelf|Kolejności dokumentu|  
-|XNode.NodesBeforeSelf|Kolejności dokumentu|  
+|Węzły XContainer.Descendant|Kolejność dokumentów|  
+|XContainer.Descendants (Podrzędne).|Kolejność dokumentów|  
+|XContainer.Elements (Elementy XContainer.Elements)|Kolejność dokumentów|  
+|XContainer.Węzły|Kolejność dokumentów|  
+|XContainer.NodesAfterSelf|Kolejność dokumentów|  
+|XContainer.NodesPrzedsiebie|Kolejność dokumentów|  
+|XElement.AncestorsISelf|Odwróć kolejność dokumentów|  
+|XElement.Atrybuty|Kolejność dokumentów|  
+|XElement.DescendantNodesAndSelf|Kolejność dokumentów|  
+|XElement.DescendantsAndSelf|Kolejność dokumentów|  
+|XNode.Przodkowie|Odwróć kolejność dokumentów|  
+|XNode.ElementsAfterSelf|Kolejność dokumentów|  
+|XNode.ElementsBeforeSelf|Kolejność dokumentów|  
+|XNode.NodesAfterSelf|Kolejność dokumentów|  
+|XNode.NodesBeforeSelf|Kolejność dokumentów|  
   
 ## <a name="positional-predicates"></a>Predykaty pozycyjne  
- W obrębie wyrażenia XPath predykaty pozycyjne są wyrażone w kolejności dokumentu dla wielu osi, ale są wyrażone w kolejności odwrotnej dokumentu dla odwrotnej osi, które są `preceding`, `preceding-sibling`, `ancestor`, i `ancestor-or-self`. Na przykład, wyrażenie XPath `preceding-sibling::*[1]` zwraca niezwłocznie poprzednich elementów równorzędnych. Dotyczy to nawet, jeśli zestaw wynik końcowy są prezentowane w kolejności dokumentu.  
+ W wyrażeniu XPath predykaty pozycyjne są wyrażane w kolejności dokumentów dla wielu osi, ale są `preceding`wyrażone w odwrotnej kolejności dokumentu dla osi odwróconych, które są , `preceding-sibling`, `ancestor`, i `ancestor-or-self`. Na przykład wyrażenie `preceding-sibling::*[1]` XPath zwraca bezpośrednio poprzedzających elementu równorzędnego. Dzieje się tak, mimo że ostateczny zestaw wyników jest prezentowany w kolejności dokumentu.  
   
- Z drugiej strony wszystkich predykaty pozycyjne w składniku LINQ to XML zawsze są wyrażone w kolejności osi. Na przykład `anElement.ElementsBeforeSelf().ElementAt(0)` zwraca pierwszy element podrzędny elementu nadrzędnego zapytanie o element, a nie bezpośrednio poprzednich elementów równorzędnych. Inny przykład: `anElement.Ancestors().ElementAt(0)` zwraca element nadrzędny.  
+ Natomiast wszystkie predykaty pozycyjne w LINQ do XML są zawsze wyrażone w kolejności osi. Na przykład `anElement.ElementsBeforeSelf().ElementAt(0)` zwraca pierwszy element podrzędny elementu nadrzędnego elementu, którego dotyczy kwerenda, a nie bezpośrednio poprzedzających elementu równorzędnego. Inny przykład: `anElement.Ancestors().ElementAt(0)` zwraca element nadrzędny.  
   
- Jeśli chcesz znaleźć bezpośrednio poprzedzający element w składniku LINQ to XML, należy napisać następujące wyrażenie:  
+ Jeśli chcesz znaleźć bezpośrednio poprzedzający element w LINQ do XML, należy napisać następujące wyrażenie:  
   
 ```csharp
 ElementsBeforeSelf().Last()
@@ -63,12 +63,12 @@ ElementsBeforeSelf().Last()
 ```
   
 ## <a name="performance-differences"></a>Różnice w wydajności  
- Kwerendy XPath, które używają funkcji XPath w składniku LINQ to XML nie wykona oraz LINQ do XML zapytań.  
+ Kwerendy XPath, które używają funkcji XPath w LINQ do XML nie będzie działać, jak również LINQ do xml kwerend.  
   
-## <a name="comparison-of-composition"></a>Porównanie kompozycji  
- Skład zapytaniu składnika LINQ to XML jest nieco zbliżony do składu wyrażenie XPath, mimo że jest to bardzo różne przy użyciu składni.  
+## <a name="comparison-of-composition"></a>Porównanie składu  
+ Skład kwerendy LINQ do XML jest nieco równoległy do kompozycji wyrażenia XPath, chociaż bardzo różni się składnią.  
   
- Na przykład, jeśli element w zmiennej o nazwie `customers`, i chcesz znaleźć element podwójnym o nazwie `CompanyName` w ramach wszystkich elementów podrzędnych o nazwie `Customer`, należy napisać wyrażenie XPath w następujący sposób:  
+ Na przykład jeśli masz element w `customers`zmiennej o nazwie i chcesz `CompanyName` znaleźć element wnuka o nazwie pod wszystkimi elementami podrzędnych o nazwie, `Customer`należy napisać wyrażenie XPath w następujący sposób:  
   
 ```csharp  
 customers.XPathSelectElements("./Customer/CompanyName")
@@ -78,7 +78,7 @@ customers.XPathSelectElements("./Customer/CompanyName")
 customers.XPathSelectElements("./Customer/CompanyName")
 ```
 
- Jest równoważne zapytaniu składnika LINQ to XML:  
+ Równoważne LINQ do kwerendy XML jest:  
   
 ```csharp  
 customers.Elements("Customer").Elements("CompanyName")
@@ -88,19 +88,19 @@ customers.Elements("Customer").Elements("CompanyName")
 customers.Elements("Customer").Elements("CompanyName")
 ```  
 
- Istnieją podobne równoleżników dla każdej z osi XPath.  
+ Istnieją podobne podobieństwa dla każdej z osi XPath.  
   
-|Wyrażenie XPath osi|LINQ do XML osi|  
+|Oś XPath|LINQ do osi XML|  
 |----------------|----------------------|  
-|podrzędne (oś domyślny)|<xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>|  
-|Nadrzędny (.)|<xref:System.Xml.Linq.XObject.Parent%2A?displayProperty=nameWithType>|  
-|osi atrybutu (@)|<xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType><br /><br /> lub<br /><br /> <xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=nameWithType>|  
-|osi nadrzędnym|<xref:System.Xml.Linq.XNode.Ancestors%2A?displayProperty=nameWithType>|  
-|osi nadrzędnym lub self|<xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A?displayProperty=nameWithType>|  
-|osi elementu podrzędnego (/ /)|<xref:System.Xml.Linq.XContainer.Descendants%2A?displayProperty=nameWithType><br /><br /> lub<br /><br /> <xref:System.Xml.Linq.XContainer.DescendantNodes%2A?displayProperty=nameWithType>|  
-|descendant-or-self|<xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A?displayProperty=nameWithType><br /><br /> lub<br /><br /> <xref:System.Xml.Linq.XElement.DescendantNodesAndSelf%2A?displayProperty=nameWithType>|  
-|następujący element równorzędny|<xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A?displayProperty=nameWithType><br /><br /> lub<br /><br /> <xref:System.Xml.Linq.XNode.NodesAfterSelf%2A?displayProperty=nameWithType>|  
-|Poprzedni element równorzędny|<xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType><br /><br /> lub<br /><br /> <xref:System.Xml.Linq.XNode.NodesBeforeSelf%2A?displayProperty=nameWithType>|  
-|następujące|Bezpośredniego odpowiednika.|  
-|poprzedza|Bezpośredniego odpowiednika.|  
+|podrzędny (oś domyślna)|<xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>|  
+|Element nadrzędny (..)|<xref:System.Xml.Linq.XObject.Parent%2A?displayProperty=nameWithType>|  
+|oś atrybutu (@)|<xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType><br /><br /> lub<br /><br /> <xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=nameWithType>|  
+|oś przodka|<xref:System.Xml.Linq.XNode.Ancestors%2A?displayProperty=nameWithType>|  
+|oś przodka lub samo-siebie|<xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A?displayProperty=nameWithType>|  
+|oś podrzędna (//)|<xref:System.Xml.Linq.XContainer.Descendants%2A?displayProperty=nameWithType><br /><br /> lub<br /><br /> <xref:System.Xml.Linq.XContainer.DescendantNodes%2A?displayProperty=nameWithType>|  
+|pojechania lub-ja|<xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A?displayProperty=nameWithType><br /><br /> lub<br /><br /> <xref:System.Xml.Linq.XElement.DescendantNodesAndSelf%2A?displayProperty=nameWithType>|  
+|kolejne rodzeństwo|<xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A?displayProperty=nameWithType><br /><br /> lub<br /><br /> <xref:System.Xml.Linq.XNode.NodesAfterSelf%2A?displayProperty=nameWithType>|  
+|poprzednia rodzeństwo|<xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType><br /><br /> lub<br /><br /> <xref:System.Xml.Linq.XNode.NodesBeforeSelf%2A?displayProperty=nameWithType>|  
+|Następujące|Brak bezpośredniego odpowiednika.|  
+|Poprzednim|Brak bezpośredniego odpowiednika.|  
   

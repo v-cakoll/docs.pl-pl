@@ -1,19 +1,19 @@
 ---
-title: Jak kompilować przykłady LINQ to XML (C#)
+title: Jak tworzyć przykłady LINQ do XML (C#)
 ms.date: 07/20/2015
 ms.assetid: e5d18fa1-2704-48fe-a44b-1564f97c9e9c
 ms.openlocfilehash: 289a13daed7e3c871156bf50c6fa04c113c0cd13
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141456"
 ---
-# <a name="how-to-build-linq-to-xml-examples-c"></a>Jak kompilować przykłady LINQ to XML (C#)
-Różne fragmenty kodu i przykłady w tej dokumentacji używają klas i typów z różnych przestrzeni nazw. Podczas kompilowania C# kodu należy dostarczyć odpowiednie dyrektywy `using`.  
+# <a name="how-to-build-linq-to-xml-examples-c"></a>Jak tworzyć przykłady LINQ do XML (C#)
+Różne fragmenty kodu i przykłady w tej dokumentacji używają klas i typów z różnych przestrzeni nazw. Podczas kompilowania kodu C#, należy `using` podać odpowiednie dyrektywy.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod zawiera dyrektywy `using`, których C# przykłady wymagają do skompilowania i uruchomienia. Dla każdego przykładu nie wszystkie dyrektywy `using` są wymagane.  
+ Poniższy kod zawiera `using` dyrektywy, które przykłady Języka C# wymagają do tworzenia i uruchamiania. Nie `using` wszystkie dyrektywy są wymagane dla każdego przykładu.  
   
 ```csharp  
 using System;  
@@ -34,6 +34,6 @@ using System.Reflection;
 using System.IO.Packaging;  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Omówienie programowania LINQ to XML (C#)](./linq-to-xml-overview.md)
+- [Omówienie programowania LINQ do XML (C#)](./linq-to-xml-overview.md)

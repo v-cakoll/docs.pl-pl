@@ -1,19 +1,19 @@
 ---
 title: Magazyn pakietu środowiska uruchomieniowego
-description: Dowiedz się, jak używać magazynu pakietów środowiska uruchomieniowego do manifestów docelowych używanych przez platformę .NET Core.
+description: Dowiedz się, jak używać magazynu pakietów czasu wykonywania do kierowania manifestów używanych przez .NET Core.
 ms.date: 08/12/2017
 ms.openlocfilehash: 7a833ed95147608c6fb403f8f0dec179d2a73833
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77448961"
 ---
 # <a name="runtime-package-store"></a>Magazyn pakietu środowiska uruchomieniowego
 
-Począwszy od platformy .NET Core 2,0, możliwe jest pakowanie i wdrażanie aplikacji względem znanego zestawu pakietów istniejących w środowisku docelowym. Korzyści to szybsze wdrożenia, mniejsze użycie miejsca na dysku i Ulepszona wydajność uruchamiania w niektórych przypadkach.
+Począwszy od .NET Core 2.0, można spakować i wdrożyć aplikacje przeciwko znanemu zestawowi pakietów, które istnieją w środowisku docelowym. Korzyści są szybsze wdrożenia, mniejsze zużycie miejsca na dysku i zwiększona wydajność uruchamiania w niektórych przypadkach.
 
-Ta funkcja jest zaimplementowana jako *Magazyn pakietów środowiska uruchomieniowego*, który jest katalogiem na dysku, na którym są przechowywane pakiety (zwykle w */usr/local/share/dotnet/Store* na macOS/Linux i *C:/pliki programu/dotnet/sklep* w systemie Windows). W tym katalogu znajdują się podkatalogi dla architektury i [platform docelowych](../../standard/frameworks.md). Układ pliku jest podobny do sposobu, w jaki [zasoby programu NuGet są wdrożone na dysku](/nuget/create-packages/supporting-multiple-target-frameworks#framework-version-folder-structure):
+Ta funkcja jest implementowana jako *magazyn pakietów środowiska uruchomieniowego,* który jest katalogiem na dysku, na którym przechowywane są pakiety (zazwyczaj w */usr/local/share/dotnet/store* w systemie macOS/Linux i *C:/Program Files/dotnet/store* w systemie Windows). W tym katalogu istnieją podkatalogi dla architektur i [platform docelowych](../../standard/frameworks.md). Układ pliku jest podobny do sposobu, w jaki [zasoby NuGet są rozmieszczone na dysku:](/nuget/create-packages/supporting-multiple-target-frameworks#framework-version-folder-structure)
 
 ```
 \dotnet
@@ -30,13 +30,13 @@ Ta funkcja jest zaimplementowana jako *Magazyn pakietów środowiska uruchomieni
                 ...
 ```
 
-*Docelowy plik manifestu* zawiera listę pakietów w magazynie pakietów środowiska uruchomieniowego. Deweloperzy mogą wskazywać ten manifest podczas publikowania aplikacji. Manifest docelowy jest zwykle dostarczany przez właściciela docelowego środowiska produkcyjnego.
+Plik *manifestu docelowego* wyświetla listę pakietów w magazynie pakietów w czasie wykonywania. Deweloperzy mogą kierować ten manifest podczas publikowania aplikacji. Manifest docelowy jest zazwyczaj dostarczany przez właściciela docelowego środowiska produkcyjnego.
 
-## <a name="preparing-a-runtime-environment"></a>Przygotowywanie środowiska uruchomieniowego
+## <a name="preparing-a-runtime-environment"></a>Przygotowywanie środowiska środowiska uruchomieniowego
 
-Administrator środowiska uruchomieniowego może zoptymalizować aplikacje dla szybszych wdrożeń i zmniejszyć użycie miejsca na dysku przez utworzenie magazynu pakietów środowiska uruchomieniowego i odpowiedniego manifestu docelowego.
+Administrator środowiska uruchomieniowego można zoptymalizować aplikacje dla szybszych wdrożeń i mniejsze wykorzystanie miejsca na dysku, tworząc magazyn pakietów środowiska uruchomieniowego i odpowiedniego manifestu docelowego.
 
-Pierwszym krokiem jest utworzenie *manifestu magazynu pakietów* zawierającego listę pakietów, które tworzą magazyn pakietów środowiska uruchomieniowego. Ten format pliku jest zgodny z formatem pliku projektu (*csproj*).
+Pierwszym krokiem jest utworzenie *manifestu magazynu pakietów,* który zawiera listę pakietów, które tworzą magazyn pakietów w czasie wykonywania. Ten format pliku jest zgodny z formatem pliku projektu *(csproj).*
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -49,7 +49,7 @@ Pierwszym krokiem jest utworzenie *manifestu magazynu pakietów* zawierającego 
 
 **Przykład**
 
-Następujący przykładowy manifest magazynu pakietów (*Packages. csproj*) służy do dodawania [`Newtonsoft.Json`](https://www.nuget.org/packages/Newtonsoft.Json/) i [`Moq`](https://www.nuget.org/packages/moq/) do magazynu pakietów środowiska uruchomieniowego:
+Poniższy przykładowy manifest magazynu pakietów (*packages.csproj*) służy do dodawania [`Newtonsoft.Json`](https://www.nuget.org/packages/Newtonsoft.Json/) i [`Moq`](https://www.nuget.org/packages/moq/) do magazynu pakietów w czasie wykonywania:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -60,7 +60,7 @@ Następujący przykładowy manifest magazynu pakietów (*Packages. csproj*) słu
 </Project>
 ```
 
-Zainicjuj obsługę magazynu pakietów środowiska uruchomieniowego, wykonując `dotnet store` przy użyciu manifestu magazynu pakietów, środowiska uruchomieniowego i struktury:
+Aprowizuj magazyn pakietów `dotnet store` w czasie wykonywania, wykonując za pomocą manifestu magazynu pakietów, czasu wykonawczego i struktury:
 
 ```dotnetcli
 dotnet store --manifest <PATH_TO_MANIFEST_FILE> --runtime <RUNTIME_IDENTIFIER> --framework <FRAMEWORK>
@@ -72,13 +72,13 @@ dotnet store --manifest <PATH_TO_MANIFEST_FILE> --runtime <RUNTIME_IDENTIFIER> -
 dotnet store --manifest packages.csproj --runtime win10-x64 --framework netcoreapp2.0 --framework-version 2.0.0
 ```
 
-Istnieje możliwość przekazania wielu ścieżek manifestu magazynu pakietów docelowych do pojedynczego polecenia [`dotnet store`](../tools/dotnet-store.md) przez powtórzenie opcji i ścieżki w poleceniu.
+Można przekazać wiele ścieżek manifestu [`dotnet store`](../tools/dotnet-store.md) magazynu pakietów docelowych do jednego polecenia, powtarzając opcję i ścieżkę w poleceniu.
 
-Domyślnie dane wyjściowe polecenia są magazynem pakietów w podkatalogu *. dotnet/Store* w profilu użytkownika. Możesz określić inną lokalizację przy użyciu opcji `--output <OUTPUT_DIRECTORY>`. Katalog główny magazynu zawiera docelowy plik *artefaktu* manifestu. Ten plik można udostępnić do pobrania i będzie używany przez autorów aplikacji, którzy chcą wskazać ten magazyn podczas publikowania.
+Domyślnie dane wyjściowe polecenia to magazyn pakietów w podkatalogu *.dotnet/store* profilu użytkownika. Można określić inną lokalizację `--output <OUTPUT_DIRECTORY>` za pomocą tej opcji. Katalog główny magazynu zawiera plik artefaktu manifestu *docelowego.xml.* Ten plik może być dostępny do pobrania i być używany przez autorów aplikacji, którzy chcą kierować ten sklep podczas publikowania.
 
 **Przykład**
 
-Następujący plik *artefaktu. XML* jest generowany po uruchomieniu poprzedniego przykładu. Należy pamiętać, że [`Castle.Core`](https://www.nuget.org/packages/Castle.Core/) jest zależnością `Moq`, dlatego jest ona dołączana automatycznie i pojawia się w pliku manifestu *artefaktów. XML* .
+Następujący plik *artifact.xml* jest tworzony po uruchomieniu poprzedniego przykładu. Należy [`Castle.Core`](https://www.nuget.org/packages/Castle.Core/) zauważyć, że `Moq`jest zależność , więc jest ona dołączona automatycznie i pojawia się w pliku manifestu *artifacts.xml.*
 
 ```xml
 <StoreArtifacts>
@@ -88,9 +88,9 @@ Następujący plik *artefaktu. XML* jest generowany po uruchomieniu poprzedniego
 </StoreArtifacts>
 ```
 
-## <a name="publishing-an-app-against-a-target-manifest"></a>Publikowanie aplikacji w manifeście docelowym
+## <a name="publishing-an-app-against-a-target-manifest"></a>Publikowanie aplikacji względem manifestu docelowego
 
-Jeśli na dysku znajduje się docelowy plik manifestu, podczas publikowania aplikacji za pomocą polecenia [`dotnet publish`](../tools/dotnet-publish.md) należy określić ścieżkę do pliku:
+Jeśli na dysku znajduje się docelowy plik manifestu, należy określić ścieżkę do pliku podczas publikowania aplikacji [`dotnet publish`](../tools/dotnet-publish.md) za pomocą polecenia:
 
 ```dotnetcli
 dotnet publish --manifest <PATH_TO_MANIFEST_FILE>
@@ -102,13 +102,13 @@ dotnet publish --manifest <PATH_TO_MANIFEST_FILE>
 dotnet publish --manifest manifest.xml
 ```
 
-Opublikowana aplikacja jest wdrażana w środowisku z pakietami opisanymi w manifeście docelowym. Wykonanie tej czynności spowoduje niepowodzenie uruchomienia aplikacji.
+Wdrożenie wynikowej opublikowanej aplikacji do środowiska, które ma pakiety opisane w manifeście docelowym. Nie wykonanie tego nie powoduje niepowodzenia aplikacji w przypadku nieuruchomienia.
 
-Określ wiele manifestów docelowych podczas publikowania aplikacji przez powtórzenie opcji i ścieżki (na przykład `--manifest manifest1.xml --manifest manifest2.xml`). Gdy to zrobisz, aplikacja zostanie przycięta dla związku z pakietami określonymi w docelowym pliku manifestu dostarczanym do polecenia.
+Określ wiele manifestów docelowych podczas publikowania aplikacji, powtarzając `--manifest manifest1.xml --manifest manifest2.xml`opcję i ścieżkę (na przykład). Po złożeniu tej pracy aplikacja jest przycięta dla unii pakietów określonych w docelowych plików manifestu dostarczonych do polecenia.
 
 ## <a name="specifying-target-manifests-in-the-project-file"></a>Określanie manifestów docelowych w pliku projektu
 
-Alternatywą dla określenia manifestów docelowych za pomocą polecenia [`dotnet publish`](../tools/dotnet-publish.md) jest określenie ich w pliku projektu jako listę ścieżek rozdzielonych średnikami pod tagiem **\<TargetManifestFiles >** .
+Alternatywą dla określania manifestów [`dotnet publish`](../tools/dotnet-publish.md) docelowych za pomocą polecenia jest określenie ich w pliku projektu jako listy ścieżek oddzielonych średnikami pod tagiem ** \<>TargetManifestFiles.**
 
 ```xml
 <PropertyGroup>
@@ -116,17 +116,17 @@ Alternatywą dla określenia manifestów docelowych za pomocą polecenia [`dotne
 </PropertyGroup>
 ```
 
-Określ docelowe manifesty w pliku projektu tylko wtedy, gdy Środowisko docelowe dla aplikacji jest dobrze znane, na przykład w przypadku projektów .NET Core. Nie jest to przypadek dla projektów open source. Użytkownicy projektu typu open source zwykle wdrażają je w różnych środowiskach produkcyjnych. W tych środowiskach produkcyjnych ogólnie zainstalowano różne zestawy pakietów. Nie można utworzyć założeń dotyczących manifestu docelowego w takich środowiskach, dlatego należy użyć opcji `--manifest` [`dotnet publish`](../tools/dotnet-publish.md).
+Określ manifesty docelowe w pliku projektu tylko wtedy, gdy środowisko docelowe dla aplikacji jest dobrze znane, na przykład dla projektów .NET Core. Nie dotyczy to projektów typu open source. Użytkownicy projektu typu open source zazwyczaj wdrażają go w różnych środowiskach produkcyjnych. Te środowiska produkcyjne mają zazwyczaj różne zestawy pakietów wstępnie zainstalowanych. Nie można zakładać manifestu docelowego w takich środowiskach, więc `--manifest` należy [`dotnet publish`](../tools/dotnet-publish.md)użyć opcji .
 
-## <a name="aspnet-core-implicit-store"></a>Niejawny magazyn ASP.NET Core
+## <a name="aspnet-core-implicit-store"></a>ASP.NET Magazyn niejawny core
 
-Niejawny magazyn ASP.NET Core ma zastosowanie tylko do ASP.NET Core 2,0. Zdecydowanie zalecamy stosowanie aplikacji ASP.NET Core 2,1 i nowszych, które **nie** korzystają z magazynu niejawnego. ASP.NET Core 2,1 i później używają udostępnionej platformy.
+Magazyn niejawny ASP.NET Core ma zastosowanie tylko do ASP.NET Core 2.0. Zdecydowanie zaleca się aplikacje używać ASP.NET Core 2.1 i nowsze, który **nie** używa magazynu niejawnego. ASP.NET Core 2.1 i później użyć wspólnej struktury.
 
-Funkcja magazynu pakietów środowiska uruchomieniowego jest używana niejawnie przez aplikację ASP.NET Core, gdy aplikacja jest wdrażana jako aplikacja [wdrożenia zależnego od platformy (FDD)](index.md#publish-runtime-dependent) . Elementy docelowe w [`Microsoft.NET.Sdk.Web`](https://github.com/aspnet/websdk) zawierają manifesty odwołujące się do niejawnego magazynu pakietów w systemie docelowym. Ponadto każda aplikacja FDD, która zależy od pakietu `Microsoft.AspNetCore.All`, spowoduje opublikowanie aplikacji, która zawiera tylko aplikację i jej zasoby, a nie pakiety wymienione w pakiecie `Microsoft.AspNetCore.All`. Przyjęto założenie, że te pakiety znajdują się w systemie docelowym.
+Funkcja magazynu pakietów w czasie wykonywania jest używana niejawnie przez aplikację ASP.NET Core, gdy aplikacja jest wdrażana jako aplikacja [wdrażania zależnego od struktury (FDD).](index.md#publish-runtime-dependent) Obiekty docelowe [`Microsoft.NET.Sdk.Web`](https://github.com/aspnet/websdk) w include manifesty odwołujące się do magazynu pakietów niejawnych w systemie docelowym. Ponadto każda aplikacja FDD, która `Microsoft.AspNetCore.All` zależy od wyników pakietu w opublikowanej aplikacji, która zawiera tylko `Microsoft.AspNetCore.All` aplikację i jej zasoby, a nie pakiety wymienione w metapakiecie. Zakłada się, że te pakiety są obecne w systemie docelowym.
 
-Magazyn pakietów środowiska uruchomieniowego jest instalowany na hoście, gdy zainstalowano zestaw .NET Core SDK. Inne Instalatory mogą dostarczyć magazyn pakietów środowiska uruchomieniowego, w tym instalacje zip/plik tar zestaw .NET Core SDK, `apt-get`, Red Hat yum, pakiet hostingu platformy .NET Core systemu Windows Server i ręczne instalacje magazynu pakietów w środowisku uruchomieniowym.
+Magazyn pakietów w czasie wykonywania jest instalowany na hoście po zainstalowaniu zestawu SDK .NET Core. Inni instalatorzy mogą udostępniać magazyn pakietów środowiska uruchomieniowego, w tym instalacje `apt-get`Zip/tarball zestawu .NET Core SDK, Red Hat Yum, pakietu hostingowego .NET Core Windows Server hosting umiejętnie oraz ręczne instalacje magazynu pakietów środowiska uruchomieniowego.
 
-Podczas wdrażania aplikacji [wdrożenia zależnego od platformy (FDD)](index.md#publish-runtime-dependent) upewnij się, że w środowisku docelowym jest zainstalowane zestaw .NET Core SDK. Jeśli aplikacja jest wdrażana w środowisku, które nie zawiera ASP.NET Core, można zrezygnować z niejawnego magazynu przez określenie **\<PublishWithAspNetCoreTargetManifest >** ustawione na `false` w pliku projektu, jak w poniższym przykładzie:
+Podczas wdrażania aplikacji [wdrażania zależnej od struktury (FDD)](index.md#publish-runtime-dependent) upewnij się, że w środowisku docelowym jest zainstalowany zestaw SDK .NET Core. Jeśli aplikacja jest wdrażana w środowisku, które nie zawiera ASP.NET Core, można zrezygnować z magazynu niejawnego, `false` określając ** \<PublishWithAspNetCoreTargetManifest>** ustawiony w pliku projektu, jak w poniższym przykładzie:
 
 ```xml
 <PropertyGroup>
@@ -135,15 +135,15 @@ Podczas wdrażania aplikacji [wdrożenia zależnego od platformy (FDD)](index.md
 ```
 
 > [!NOTE]
-> W przypadku aplikacji do [samodzielnego wdrażania (SCD)](index.md#publish-self-contained) zakłada się, że system docelowy nie musi zawierać wymaganych pakietów manifestu. W związku z tym **\<PublishWithAspNetCoreTargetManifest >** nie można ustawić na `true` dla aplikacji SCD.
+> W przypadku aplikacji [do samodzielnego wdrażania (SCD)](index.md#publish-self-contained) zakłada się, że system docelowy niemusi zawierać wymaganych pakietów manifestu. W związku z tym ** \<PublishWithAspNetCoreTargetManifest>** nie można ustawić `true` dla aplikacji SCD.
 
-W przypadku wdrożenia aplikacji z zależnością manifestu, która znajduje się we wdrożeniu (zestaw jest obecny w folderze *bin* ), magazyn pakietów środowiska uruchomieniowego *nie jest używany* na hoście dla tego zestawu. Zestaw folderu *bin* jest używany niezależnie od jego obecności w magazynie pakietów środowiska uruchomieniowego na hoście.
+Jeśli wdrożysz aplikację z zależnościmanifestu, który jest obecny we wdrożeniu (zestaw jest obecny w folderze *pakietu,* magazyn pakietów czasu *wykonywania nie jest używany* na hoście dla tego zestawu. Zestaw folderu *pojemnika* jest używany niezależnie od jego obecności w magazynie pakietów w czasie wykonywania na hoście.
 
-Wersja zależności wskazanej w manifeście musi być zgodna z wersją zależności w magazynie pakietów środowiska uruchomieniowego. Jeśli masz niezgodność wersji między zależnością w manifeście docelowym a wersją, która istnieje w magazynie pakietów środowiska uruchomieniowego, a aplikacja nie zawiera wymaganej wersji pakietu w jej wdrożeniu, uruchomienie aplikacji nie powiedzie się. Wyjątek zawiera nazwę manifestu docelowego, który został wywołany dla zestawu magazynu pakietów środowiska uruchomieniowego, co pomaga w rozwiązywaniu problemów z niezgodnością.
+Wersja zależności wskazanew manifeście musi odpowiadać wersji zależności w magazynie pakietów czasu wykonywania. Jeśli masz niezgodność wersji między zależności w manifeście docelowym i wersji, która istnieje w magazynie pakietów w czasie wykonywania i aplikacja nie zawiera wymaganą wersję pakietu w jego wdrożeniu, aplikacja nie może zostać uruchomiony. Wyjątek zawiera nazwę manifestu docelowego, który wezwał do zestawu magazynu pakietów czasu wykonywania, który pomaga rozwiązać problem niezgodności.
 
-Gdy wdrożenie zostanie *przycięte* po opublikowaniu, tylko określone wersje pakietów manifestu są potrącane z publikowanych danych wyjściowych. Pakiety na wskazanych wersjach muszą być obecne na hoście, aby można było uruchomić aplikację.
+Gdy wdrożenie jest *przycięte* na publikacji, tylko określone wersje pakietów manifestu, które wskazują są wstrzymane z opublikowanych danych wyjściowych. Pakiety w wskazanych wersjach muszą być obecne na hoście, aby aplikacja została uniejszona.
 
 ## <a name="see-also"></a>Zobacz też
 
-- [dotnet — publikowanie](../tools/dotnet-publish.md)
-- [dotnet — sklep](../tools/dotnet-store.md)
+- [dotnet-publikowanie](../tools/dotnet-publish.md)
+- [dotnet-sklep](../tools/dotnet-store.md)

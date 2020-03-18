@@ -1,22 +1,22 @@
 ---
 ms.openlocfilehash: f9000b19997201c2d3de0643669f9029ff1ca31c
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74567956"
 ---
-### <a name="envelopedcms-defaults-to-aes-256-encryption"></a>EnvelopedCms domyślnie szyfrowanie AES-256
+### <a name="envelopedcms-defaults-to-aes-256-encryption"></a>Domyślnie moduły szyfrowania EnvelopedCms
 
-Domyślny algorytm szyfrowania symetrycznego używany przez `EnvelopedCms` został zmieniony z TripleDES na AES-256.
+Domyślny algorytm szyfrowania symetrycznego używany `EnvelopedCms` przez został zmieniony z TripleDES na AES-256.
 
 #### <a name="change-description"></a>Zmień opis
 
-W programie .NET Core w wersji zapoznawczej 7 i starszych wersjach, gdy <xref:System.Security.Cryptography.Pkcs.EnvelopedCms> jest używany do szyfrowania danych bez określania algorytmu szyfrowania symetrycznego za pośrednictwem przeciążenia konstruktora, dane były szyfrowane przy użyciu algorytmu TripleDES/3DES/3DEA/DES3-EDE.
+W .NET Core Preview 7 i <xref:System.Security.Cryptography.Pkcs.EnvelopedCms> wcześniejszych wersjach, gdy jest używany do szyfrowania danych bez określania algorytmu szyfrowania symetrycznego za pomocą przeciążenia konstruktora, dane zostały zaszyfrowane za pomocą algorytmu TripleDES/3DES/3DEA/DES3-EDE.
 
-Począwszy od programu .NET Core 3,0 wersja zapoznawcza 8 (za pośrednictwem wersji 4.6.0 pliku [System. Security. Cryptography. PKCS](https://www.nuget.org/packages/System.Security.Cryptography.Pkcs/) NuGet), domyślny algorytm został zmieniony na AES-256 na potrzeby modernizacji algorytmu oraz poprawić zabezpieczenia opcji domyślnych. Jeśli certyfikat odbiorcy wiadomości ma klucz publiczny (poza EC), operacja szyfrowania może zakończyć się niepowodzeniem <xref:System.Security.Cryptography.CryptographicException> z powodu ograniczeń na platformie podstawowej.
+Począwszy od .NET Core 3.0 Preview 8 (za pośrednictwem wersji 4.6.0 [pakietu System.Security.Cryptography.Pkcs](https://www.nuget.org/packages/System.Security.Cryptography.Pkcs/) NuGet), domyślny algorytm został zmieniony na AES-256 w celu modernizacji algorytmów i poprawy bezpieczeństwa opcji domyślnych. Jeśli certyfikat adresata wiadomości ma (non-EC) Diffie-Hellman klucz publiczny, operacja szyfrowania może zakończyć się niepowodzeniem z <xref:System.Security.Cryptography.CryptographicException> powodu ograniczeń w platformie źródłowej.
 
-W poniższym przykładowym kodzie dane są szyfrowane przy użyciu TripleDES, jeśli uruchomiono w programie .NET Core 3,0 w wersji zapoznawczej 7 lub starszym. W przypadku korzystania z programu .NET Core 3,0 w wersji zapoznawczej 8 lub nowszej jest on szyfrowany przy użyciu algorytmu AES-256.
+W poniższym przykładowym kodzie dane są szyfrowane za pomocą programu TripleDES, jeśli są uruchomione w wersji .NET Core 3.0 Preview 7 lub wcześniejszej. Jeśli jest uruchomiona na .NET Core 3.0 Preview 8 lub nowszy, jest szyfrowana za pomocą AES-256.
 
 ```csharp
 EnvelopedCms cms = new EnvelopedCms(content);
@@ -26,11 +26,11 @@ return cms.Encode();
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
-3,0 wersja zapoznawcza 8
+3.0 Podgląd 8
 
-#### <a name="recommended-action"></a>Zalecane działanie
+#### <a name="recommended-action"></a>Zalecana akcja
 
-Jeśli zmiana ma negatywny wpływ na zmiany, można przywrócić szyfrowanie TripleDES przez jawne określenie identyfikatora algorytmu szyfrowania w konstruktorze <xref:System.Security.Cryptography.Pkcs.EnvelopedCms> zawierającym parametr typu <xref:System.Security.Cryptography.Pkcs.AlgorithmIdentifier>, taki jak:
+Jeśli zmiana ma negatywny wpływ, możesz przywrócić szyfrowanie TripleDES, jawnie określając identyfikator <xref:System.Security.Cryptography.Pkcs.EnvelopedCms> algorytmu szyfrowania w konstruktorze zawierającym parametr typu, <xref:System.Security.Cryptography.Pkcs.AlgorithmIdentifier>na przykład:
 
 ```csharp
 Oid tripleDesOid = new Oid("1.2.840.113549.3.7", null);

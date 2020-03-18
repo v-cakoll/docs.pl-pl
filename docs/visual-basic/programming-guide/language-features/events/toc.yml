@@ -1,13 +1,13 @@
 - name: Zdarzenia
   href: index.md
   items:
-    - name: 'Przewodnik: Deklarowanie i wywoływanie zdarzeń'
+    - name: 'Wskazówki: deklarowanie i wywoływanie zdarzeń'
       href: walkthrough-declaring-and-raising-events.md
-    - name: 'Przewodnik: Obsługa zdarzeń'
+    - name: 'Wskazówki: obsługa zdarzeń'
       href: walkthrough-handling-events.md
-    - name: 'Instrukcje: Deklarowanie zdarzeń niestandardowych w celu unikania blokowania'
+    - name: 'Porady: deklarowanie zdarzeń niestandardowych w celu unikania blokowania'
       href: how-to-declare-custom-events-to-avoid-blocking.md
-    - name: 'Instrukcje: Deklarowanie zdarzeń niestandardowych w celu oszczędzania pamięci'
+    - name: 'Porady: deklarowanie zdarzeń niestandardowych w celu zachowywania pamięci'
       href: how-to-declare-custom-events-to-conserve-memory.md
     - name: Rozwiązywanie problemów związanych z odziedziczonymi programami obsługi zdarzeń
       href: troubleshooting-inherited-event-handlers.md

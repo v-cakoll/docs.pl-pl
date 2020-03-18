@@ -1,23 +1,23 @@
 ---
-title: Jak znaleźć listę elementów podrzędnych (XPath-LINQ to XML) (C#)
+title: Jak znaleźć listę elementów podrzędnych (XPath-LINQ do XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c589dd8-f680-4cdb-9d6a-78d57e2555e8
 ms.openlocfilehash: 2b6f6031441e7d1bd015e25a8debad7dd7f3b261
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141227"
 ---
-# <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-c"></a>Jak znaleźć listę elementów podrzędnych (XPath-LINQ to XML) (C#)
-W tym temacie porównano oś elementów podrzędnych XPath z osią [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A>.  
+# <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-c"></a>Jak znaleźć listę elementów podrzędnych (XPath-LINQ do XML) (C#)
+W tym temacie porównano oś elementów [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> podrzędnych XPath z osią.  
   
- Wyrażenie XPath jest: `./*`  
+ Wyrażenie XPath jest następujące:`./*`  
   
 ## <a name="example"></a>Przykład  
- Ten przykład umożliwia znalezienie wszystkich elementów podrzędnych elementu `Address`.  
+ W tym przykładzie znajduje wszystkie `Address` elementy podrzędne elementu.  
   
- W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: wiele zamówień zakupu (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ W tym przykładzie użyto następującego dokumentu XML: [Przykładowy plik XML: wiele zamówień zakupu (LINQ do XML).](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md)  
   
 ```csharp  
 XDocument cpo = XDocument.Load("PurchaseOrders.xml");  

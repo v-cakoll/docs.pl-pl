@@ -2,19 +2,19 @@
   href: index.md
 - name: Wprowadzenie do WPF
   href: introduction-to-wpf.md
-- name: Rozpoczęcie pracy
+- name: Wprowadzenie
   href: getting-started/
-- name: Opracowywanie aplikacji
+- name: Projektowanie aplikacji
   href: app-development/
 - name: Zaawansowane
   href: advanced/
-- name: Kontrolki
+- name: Formanty
   href: controls/
 - name: Dane
   href: data/
 - name: Grafika i multimedia
   href: graphics-multimedia/
-- name: Bezpieczeństwo
+- name: Zabezpieczenia
   href: security-wpf.md
   items:
     - name: Zabezpieczenie częściowej relacji zaufania WPF

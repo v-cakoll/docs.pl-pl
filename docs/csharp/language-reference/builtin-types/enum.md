@@ -1,6 +1,6 @@
 ---
-title: Typy wyliczeniowe — C# odwołanie
-description: Dowiedz C# się więcej na temat typów wyliczeniowych, które reprezentują wybór lub kombinację opcji
+title: Typy wyliczania — odwołanie do języka C#
+description: Dowiedz się więcej o typach wyliczenia języka C#, które reprezentują wybór lub kombinację opcji
 ms.date: 12/13/2019
 f1_keywords:
 - enum
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - enumeration type [C#]
 - bit flags [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 77c7b7bd7f3e59fbe782755c829f18cf1cefc725
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: ab5eb1679f846bf0e25d90a4d0e0a71f0bdb0096
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78239823"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847715"
 ---
-# <a name="enumeration-types-c-reference"></a>Typy wyliczeniowe (C# odwołanie)
+# <a name="enumeration-types-c-reference"></a>Typy wyliczania (odwołanie do języka C#)
 
-*Typ wyliczenia* (lub *Typ wyliczeniowy*) jest [typem wartości](value-types.md) zdefiniowanym przez zestaw nazwanych stałych podstawowego typu [liczbowego](integral-numeric-types.md) . Aby zdefiniować typ wyliczeniowy, użyj słowa kluczowego `enum` i określ nazwy *elementów członkowskich wyliczenia*:
+*Typ wyliczenia* (lub *typ wyliczenia)* jest [typem wartości](value-types.md) zdefiniowanym przez zestaw nazwanych stałych podstawowego integralnego typu [liczbowego.](integral-numeric-types.md) Aby zdefiniować typ wyliczenia, użyj słowa kluczowego `enum` i określ nazwy elementów członkowskich *wyliczenia:*
 
 ```csharp
 enum Season
@@ -32,7 +32,7 @@ enum Season
 }
 ```
 
-Domyślnie skojarzone wartości stałe elementów członkowskich wyliczenia są przypisane do typu `int`; zaczynają się od zera i zwiększają się o jeden po kolejności tekstu definicji. Można jawnie określić dowolny inny typ [liczbowy całkowity](integral-numeric-types.md) jako typ podstawowy typu wyliczenia. Można również jawnie określić skojarzone wartości stałe, jak pokazano na poniższym przykładzie:
+Domyślnie skojarzone stałe wartości elementów członkowskich `int`wyliczenia są typu ; zaczynają się od zera i zwiększają się o jeden po kolejności tekstu definicji. Można jawnie określić dowolny inny [typ liczbowy integralną](integral-numeric-types.md) jako typ podstawowy typu wyliczenia. Można również jawnie określić skojarzone wartości stałe, jak pokazano w poniższym przykładzie:
 
 ```csharp
 enum ErrorCode : ushort
@@ -44,51 +44,51 @@ enum ErrorCode : ushort
 }
 ```
 
-Nie można zdefiniować metody wewnątrz definicji typu wyliczenia. Aby dodać funkcjonalność do typu wyliczenia, Utwórz [metodę rozszerzenia](../../programming-guide/classes-and-structs/extension-methods.md).
+Nie można zdefiniować metody wewnątrz definicji typu wyliczenia. Aby dodać funkcje do typu wyliczenia, należy utworzyć [metodę rozszerzenia](../../programming-guide/classes-and-structs/extension-methods.md).
 
-Wartość domyślna typu wyliczeniowego `E` jest wartością wygenerowaną przez wyrażenie `(E)0`, nawet jeśli zero nie ma odpowiedniego elementu członkowskiego wyliczenia.
+Domyślną wartością typu `E` wyliczenia jest `(E)0`wartość tworzona przez wyrażenie , nawet jeśli zero nie ma odpowiedniego elementu członkowskiego wyliczenia.
 
-Typ wyliczenia służy do reprezentowania wyboru z zestawu wzajemnie wykluczających się wartości lub kombinacji wyboru. Aby przedstawić kombinację opcji, zdefiniuj typ wyliczenia jako flagi bitowe.
+Typ wyliczenia służy do reprezentowania wyboru z zestawu wzajemnie wykluczające się wartości lub kombinacji wyborów. Aby reprezentować kombinację opcji, należy zdefiniować typ wyliczenia jako flagi bitowe.
 
-## <a name="enumeration-types-as-bit-flags"></a>Typy wyliczeniowe jako flagi bitowe
+## <a name="enumeration-types-as-bit-flags"></a>Typy wyliczenia jako flagi bitowe
 
-Jeśli chcesz, aby typ wyliczeniowy reprezentował kombinację opcji, Zdefiniuj elementy członkowskie wyliczenia dla tych opcji, tak że pojedynczy wybór jest polem bitowym. Oznacza to, że skojarzone wartości tych elementów członkowskich wyliczenia powinny być potęgami dwóch. Następnie można użyć [bitowe operatory logiczne `|` lub `&`](../operators/bitwise-and-shift-operators.md#enumeration-logical-operators) do łączenia opcji lub przecinających się kombinacji opcji. Aby wskazać, że typ wyliczeniowy deklaruje pola bitowe, Zastosuj do niego atrybut [flags](xref:System.FlagsAttribute) . Jak pokazano na poniższym przykładzie, można również uwzględnić niektóre typowe kombinacje w definicji typu wyliczenia.
+Jeśli typ wyliczenia ma reprezentować kombinację opcji, należy zdefiniować elementy członkowskie wyliczenia dla tych wyborów, tak aby pojedynczy wybór był polem bitowym. Oznacza to, że powiązane wartości tych członków wyliczenia powinny być uprawnieniami dwóch osób. Następnie można użyć [bitowych operatorów `|` `&` logicznych lub](../operators/bitwise-and-shift-operators.md#enumeration-logical-operators) połączyć wybory lub przecinające się kombinacje wyborów, odpowiednio. Aby wskazać, że typ wyliczenia deklaruje pola bitowe, zastosuj do niego atrybut [Flagi.](xref:System.FlagsAttribute) Jak pokazano w poniższym przykładzie, można również uwzględnić niektóre typowe kombinacje w definicji typu wyliczenia.
 
-[!code-csharp[enum flags](~/samples/snippets/csharp/language-reference/builtin-types/EnumType.cs#Flags)]
+[!code-csharp[enum flags](snippets/EnumType.cs#Flags)]
 
-Aby uzyskać więcej informacji i przykładów, zobacz stronę referencyjną API <xref:System.FlagsAttribute?displayProperty=nameWithType> i [niewyłączne elementy członkowskie i atrybuty flag](/dotnet/api/system.enum#non-exclusive-members-and-the-flags-attribute) na stronie Dokumentacja interfejsu API <xref:System.Enum?displayProperty=nameWithType>.
+Aby uzyskać więcej informacji i <xref:System.FlagsAttribute?displayProperty=nameWithType> przykładów, zobacz stronę odwołania interfejsu API i [niewyłącznych członków i Flagi atrybut](/dotnet/api/system.enum#non-exclusive-members-and-the-flags-attribute) sekcji strony odwołania <xref:System.Enum?displayProperty=nameWithType> interfejsu API.
 
-## <a name="the-systemenum-type-and-enum-constraint"></a>Typ System. Enum i ograniczenie wyliczenia
+## <a name="the-systemenum-type-and-enum-constraint"></a>Ograniczenie typu System.Enum i wyliczenia
 
-Typ <xref:System.Enum?displayProperty=nameWithType> jest abstrakcyjną klasą bazową wszystkich typów wyliczeniowych. Zawiera kilka metod uzyskiwania informacji na temat typu wyliczenia i jego wartości. Aby uzyskać więcej informacji i przykładów, zobacz stronę referencyjną interfejsu API <xref:System.Enum?displayProperty=nameWithType>.
+Typ <xref:System.Enum?displayProperty=nameWithType> jest abstrakcyjną klasą podstawową wszystkich typów wyliczenia. Zawiera szereg metod, aby uzyskać informacje o typie wyliczenia i jego wartości. Aby uzyskać więcej informacji i <xref:System.Enum?displayProperty=nameWithType> przykłady, zobacz stronę referencyjną interfejsu API.
 
-Począwszy od C# 7,3, można użyć `System.Enum` w ograniczeniu klasy bazowej (znanym jako [ograniczenie wyliczenia](../../programming-guide/generics/constraints-on-type-parameters.md#enum-constraints)), aby określić, że parametr typu jest typem wyliczenia.
+Począwszy od C# 7.3, można użyć `System.Enum` w ograniczeniu klasy podstawowej (który jest znany jako ograniczenie [wyliczenia),](../../programming-guide/generics/constraints-on-type-parameters.md#enum-constraints)aby określić, że parametr typu jest typem wyliczenia.
 
 ## <a name="conversions"></a>Konwersje
 
-Dla dowolnego typu wyliczenia istnieją jawne konwersje między typem wyliczenia i jego podstawowym typem całkowitym. W przypadku [rzutowania](../operators/type-testing-and-cast.md#cast-operator-) wartości wyliczenia na jej typ podstawowy wynik jest skojarzoną wartością całkowitą elementu członkowskiego wyliczenia.
+Dla dowolnego typu wyliczenia istnieją jawne konwersje między typem wyliczenia a jego podstawowym typem całki. Jeśli [rzutujesz](../operators/type-testing-and-cast.md#cast-operator-) wartość wyliczeniową na jego typ bazowy, wynik jest skojarzoną wartością całkowitą elementu członkowskiego wyliczenia.
 
-[!code-csharp[enum conversions](~/samples/snippets/csharp/language-reference/builtin-types/EnumType.cs#Conversions)]
+[!code-csharp[enum conversions](snippets/EnumType.cs#Conversions)]
 
-Użyj metody <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType>, aby określić, czy typ wyliczeniowy zawiera element członkowski wyliczenia z określoną wartością skojarzoną.
+Użyj <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> metody, aby ustalić, czy typ wyliczenia zawiera element członkowski wyliczenia z określoną skojarzoną wartością.
 
-Dla dowolnego typu wyliczenia istnieją konwersje pakowania [i rozpakowywanie](../../programming-guide/types/boxing-and-unboxing.md) do i z typu <xref:System.Enum?displayProperty=nameWithType>.
+Dla każdego typu wyliczenia istnieje [boks i rozpakowywanie](../../programming-guide/types/boxing-and-unboxing.md) konwersji do iz <xref:System.Enum?displayProperty=nameWithType> typu, odpowiednio.
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
-Aby uzyskać więcej informacji, zobacz następujące sekcje [ C# specyfikacji języka](~/_csharplang/spec/introduction.md):
+Aby uzyskać więcej informacji, zobacz następujące sekcje [specyfikacji języka Języka C#:](~/_csharplang/spec/introduction.md)
 
 - [Wyliczenia](~/_csharplang/spec/enums.md)
 - [Wartości wyliczeniowe i operacje](~/_csharplang/spec/enums.md#enum-values-and-operations)
-- [Wyliczanie operatorów logicznych](~/_csharplang/spec/expressions.md#enumeration-logical-operators)
+- [Operatory logiczne wyliczania](~/_csharplang/spec/expressions.md#enumeration-logical-operators)
 - [Operatory porównania wyliczenia](~/_csharplang/spec/expressions.md#enumeration-comparison-operators)
-- [Jawne konwersje wyliczenia](~/_csharplang/spec/conversions.md#explicit-enumeration-conversions)
-- [Niejawne konwersje wyliczenia](~/_csharplang/spec/conversions.md#implicit-enumeration-conversions)
+- [Jawne konwersje wyliczania](~/_csharplang/spec/conversions.md#explicit-enumeration-conversions)
+- [Niejawne konwersje wyliczania](~/_csharplang/spec/conversions.md#implicit-enumeration-conversions)
 
 ## <a name="see-also"></a>Zobacz też
 
-- [C#odwoła](../index.md)
-- [Ciągi formatujące Wyliczenie](../../../standard/base-types/enumeration-format-strings.md)
-- [Wskazówki dotyczące projektowania — projekt enum](../../../standard/design-guidelines/enum.md)
-- [Wytyczne dotyczące projektowania — wyliczanie konwencji nazewnictwa](../../../standard/design-guidelines/names-of-classes-structs-and-interfaces.md#naming-enumerations)
-- [Switch, instrukcja](../keywords/switch.md)
+- [Dokumentacja języka C#](../index.md)
+- [Ciągi formatu wyliczenia](../../../standard/base-types/enumeration-format-strings.md)
+- [Wytyczne projektowe - Projektowanie enum](../../../standard/design-guidelines/enum.md)
+- [Wytyczne projektowe — konwencje nazewnictwa wyliczenia](../../../standard/design-guidelines/names-of-classes-structs-and-interfaces.md#naming-enumerations)
+- [instrukcja switch](../keywords/switch.md)

@@ -1,41 +1,41 @@
 ---
 ms.openlocfilehash: 51b3c1b3e3d61b23a0511ca807afef0269ac9ee4
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77465978"
 ---
 
-Pakiety dodane do kanałów informacyjnych Menedżera pakietów są nazywane w formacie włamywania: `{product}-{type}-{version}`.
+Pakiety dodane do kanałów menedżera pakietów są nazwane `{product}-{type}-{version}`w formacie hackable: .
 
-- \ **produktu**
+- **Produktu**\
 Typ produktu .NET do zainstalowania. Prawidłowe opcje to:
 
   - dotnet
-  - aspnetcore
+  - aspnetcore (polski)
 
-- **typ**\
-Wybiera zestaw SDK lub środowisko uruchomieniowe. Prawidłowe opcje to:
+- **Typu**\
+Wybiera zestaw SDK lub czas wykonywania. Prawidłowe opcje to:
 
   - sdk
   - środowisko uruchomieniowe
 
-- \ **wersji**
-Wersja zestawu SDK lub środowiska uruchomieniowego do zainstalowania. Ten artykuł będzie zawsze zawierać instrukcje dotyczące najnowszej obsługiwanej wersji. Prawidłowe opcje to wszystkie wydane wersje, takie jak:
+- **Wersja**\
+Wersja sdk lub czas wykonywania do zainstalowania. W tym artykule zawsze zostaną opublikowane instrukcje dotyczące najnowszej obsługiwanej wersji. Prawidłowe opcje to dowolna wydana wersja, taka jak:
 
   - 3.1
   - 3.0
   - 2.1
 
-  Możliwe, że zestaw SDK/środowisko uruchomieniowe, które próbujesz pobrać, nie jest dostępny dla dystrybucji systemu Linux. Aby zapoznać się z listą obsługiwanych dystrybucji, zobacz temat [zależności i wymagania dotyczące platformy .NET Core](../dependencies.md?pivots=os-linux).
+  Możliwe, że zestaw SDK/runtime, który próbujesz pobrać, nie jest dostępny dla twojej dystrybucji systemu Linux. Aby uzyskać listę obsługiwanych dystrybucji, zobacz [zależności i wymagania programu .NET Core](../dependencies.md?pivots=os-linux).
 
 ### <a name="examples"></a>Przykłady
 
-- Zainstaluj środowisko uruchomieniowe ASP.NET Core 3,1: `aspnetcore-runtime-3.1`
-- Zainstaluj środowisko uruchomieniowe programu .NET Core 2,1: `dotnet-runtime-2.1`
-- Zainstaluj zestaw SDK platformy .NET Core 3,0: `dotnet-sdk-3.0`
+- Zainstaluj ASP.NET core 3.1:`aspnetcore-runtime-3.1`
+- Zainstaluj czas uruchomieniowy .NET Core 2.1:`dotnet-runtime-2.1`
+- Zainstaluj zestaw SDK .NET Core 3.0:`dotnet-sdk-3.0`
 
-### <a name="package-missing"></a>Brak pakietu
+### <a name="package-missing"></a>Brakuje pakietu
 
-Jeśli kombinacja pakiet-wersja nie działa, jest niedostępna. Na przykład nie istnieje zestaw ASP.NET Core SDK, składniki zestawu SDK są dołączone do zestaw .NET Core SDK. Wartość `aspnetcore-sdk-2.2` jest niepoprawna i powinna być `dotnet-sdk-2.2`. Aby uzyskać listę dystrybucji systemu Linux obsługiwanych przez platformę .NET Core, zobacz [zależności i wymagania dotyczące platformy .NET Core](../dependencies.md?pivots=os-linux).
+Jeśli kombinacja wersji pakietu nie działa, nie jest dostępna. Na przykład nie ma ASP.NET Core SDK, składniki sdk są dołączone do .NET Core SDK. Wartość `aspnetcore-sdk-2.2` jest niepoprawna `dotnet-sdk-2.2`i powinna być . Aby uzyskać listę dystrybucji systemu Linux obsługiwanych przez program .NET Core, zobacz [zależności i wymagania programu .NET Core](../dependencies.md?pivots=os-linux).

@@ -1,28 +1,28 @@
 ---
 ms.openlocfilehash: 9631e64bb403a3fe7b1b91e8ac592b57ce8068d9
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75937028"
 ---
-### <a name="donotsupportselectallshortcutinmultilinetextbox-compatibility-switch-not-supported"></a>Nieobsługiwany przełącznik zgodności DoNotSupportSelectAllShortcutInMultilineTextBox
+### <a name="donotsupportselectallshortcutinmultilinetextbox-compatibility-switch-not-supported"></a>Przełącznik zgodności DoNotSupportSelectAllShortcutInMultilineTextBox nie jest obsługiwany
 
-Przełącznik zgodności `Switch.System.Windows.Forms.DoNotSupportSelectAllShortcutInMultilineTextBox`, który został wprowadzony w .NET Framework 4.6.1, nie jest obsługiwany w Windows Forms na platformie .NET Core 3,0.
+Przełącznik `Switch.System.Windows.Forms.DoNotSupportSelectAllShortcutInMultilineTextBox` zgodności, który został wprowadzony w programie .NET Framework 4.6.1, nie jest obsługiwany w formularzach systemu Windows w programie .NET Core 3.0.
 
-#### <a name="change-description"></a>Opis zmiany
+#### <a name="change-description"></a>Zmień opis
 
-Rozpoczynając od .NET Framework 4.6.1, wybierając pozycję <kbd>Ctrl</kbd> + <kbd>klawisz</kbd> skrótu w kontrolce <xref:System.Windows.Forms.TextBox> zaznacz opcję cały tekst. W .NET Framework 4,6 i poprzednich wersjach wybranie opcji <kbd>Ctrl</kbd> <kbd> + klawisza</kbd> skrótu nie powiodło się, aby zaznaczyć cały tekst, jeśli właściwości [TextBox. ShortcutsEnabled](xref:System.Windows.Forms.TextBoxBase.ShortcutsEnabled) i <xref:System.Windows.Forms.TextBox.Multiline?displayProperty=nameWithType> były ustawione na `true`. Przełącznik zgodności `Switch.System.Windows.Forms.DoNotSupportSelectAllShortcutInMultilineTextBox` został wprowadzony w .NET Framework 4.6.1, aby zachować oryginalne zachowanie. Aby uzyskać więcej informacji, zobacz temat <xref:System.Windows.Forms.TextBox.ProcessCmdKey%2A?displayProperty=nameWithType>.
+Zaczynając od .NET Framework 4.6.1, wybierając klawisz skrótu <kbd>Ctrl</kbd> + <kbd>A</kbd> w formantie <xref:System.Windows.Forms.TextBox> zaznaczono cały tekst. W .NET Framework 4.6 i poprzednich wersjach wybranie klawisza skrótu <kbd>Ctrl</kbd> + <kbd>A</kbd> nie może zaznaczyć całego tekstu, jeśli [pole tekstowe.SkrótyWłączone](xref:System.Windows.Forms.TextBoxBase.ShortcutsEnabled) i <xref:System.Windows.Forms.TextBox.Multiline?displayProperty=nameWithType> właściwości zostały ustawione na `true`. Przełącznik `Switch.System.Windows.Forms.DoNotSupportSelectAllShortcutInMultilineTextBox` zgodności został wprowadzony w .NET Framework 4.6.1, aby zachować oryginalne zachowanie. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Forms.TextBox.ProcessCmdKey%2A?displayProperty=nameWithType>.
 
-W programie .NET Core przełącznik `Switch.System.Windows.Forms.DoNotSupportSelectAllShortcutInMultilineTextBox` nie jest obsługiwany.
+W .NET Core `Switch.System.Windows.Forms.DoNotSupportSelectAllShortcutInMultilineTextBox` przełącznik nie jest obsługiwany.
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
-3,0 wersja zapoznawcza 9
+3.0 Podgląd 9
 
-#### <a name="recommended-action"></a>Zalecane działanie
+#### <a name="recommended-action"></a>Zalecana akcja
 
-Usuń przełącznik. Przełącznik nie jest obsługiwany i żadna alternatywna funkcja nie jest dostępna.
+Wyjmij przełącznik. Przełącznik nie jest obsługiwany i nie jest dostępna żadna alternatywna funkcjonalność.
 
 #### <a name="category"></a>Kategoria
 

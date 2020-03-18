@@ -1,32 +1,32 @@
 ---
 ms.openlocfilehash: b49b2f88b130bb952b77964d5bf38374dc606385
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74567982"
 ---
-### <a name="net-core-30-prefers-openssl-11x-to-openssl-10x"></a>.NET Core 3,0 preferuje OpenSSL 1.1. x do OpenSSL 1.0. x
+### <a name="net-core-30-prefers-openssl-11x-to-openssl-10x"></a>.NET Core 3.0 preferuje OpenSSL 1.1.x do OpenSSL 1.0.x
 
-.NET Core dla systemu Linux, który działa między wieloma dystrybucjami systemu Linux, może obsługiwać zarówno OpenSSL 1.0. x, jak i OpenSSL 1.1. x.  Programy .NET Core 2,1 i .NET Core 2,2 szukają najpierw 1.0. x, a następnie wracają do wersji 1.1. x; program .NET Core 3,0 szuka najpierw 1.1. x. Ta zmiana została wprowadzona w celu dodania obsługi nowych standardów kryptograficznych.
+.NET Core for Linux, który działa w wielu dystrybucjach Linuksa, może obsługiwać zarówno OpenSSL 1.0.x, jak i OpenSSL 1.1.x.  .NET Core 2.1 i .NET Core 2.2 najpierw szukają 1.0.x, a następnie wracają do 1.1.x; .NET Core 3.0 najpierw szuka 1.1.x. Ta zmiana została wmazana w celu dodania obsługi nowych standardów kryptograficznych.
 
-Ta zmiana może mieć wpływ na biblioteki lub aplikacje, które wykonują współdziałanie platformy z typami międzyoperacyjności specyficznymi dla OpenSSL w programie .NET Core.
+Ta zmiana może mieć wpływ na biblioteki lub aplikacje, które współdziałają z typami współzależności specyficznymi dla OpenSSL w .NET Core.
 
 #### <a name="change-description"></a>Zmień opis
 
-W programie .NET Core 2,2 i starszych wersjach środowisko uruchomieniowe preferuje ładowanie OpenSSL 1.0. x over 1.1. x. Oznacza to, że typy <xref:System.IntPtr> i <xref:System.Runtime.InteropServices.SafeHandle> dla elementu Interop z OpenSSL są używane z libcrypto. so. 1.0.0/libcrypto. so. 1.0/libcrypto. so. 10 według preferencji.
+W .NET Core 2.2 i wcześniejszych wersjach program runtime preferuje ładowanie OpenSSL 1.0.x ponad 1.1.x. Oznacza to, <xref:System.IntPtr> <xref:System.Runtime.InteropServices.SafeHandle> że i typy interop z OpenSSL są używane z libcrypto.so.1.0.0 / libcrypto.so.1.0 / libcrypto.so.10 według preferencji.
 
-Począwszy od platformy .NET Core 3,0, środowisko uruchomieniowe preferuje ładowanie OpenSSL 1.1. x over OpenSSL 1.0. x, dlatego typy <xref:System.IntPtr> i <xref:System.Runtime.InteropServices.SafeHandle> dla elementu Interop with OpenSSL są używane z libcrypto. so. 1.1/libcrypto. tak. 11/libcrypto. tak. 1.1.0/libcrypto. tak. 1.1.1 według preferencji. W związku z tym biblioteki i aplikacje, które współdziałają z usługą OpenSSL, mogą mieć niezgodne wskaźniki z wartościami dostępnymi dla platformy .NET Core podczas uaktualniania z platformy .NET Core 2,1 lub .NET Core 2,2.
+Począwszy od .NET Core 3.0, czas wykonywania preferuje ładowanie OpenSSL 1.1.x nad <xref:System.IntPtr> <xref:System.Runtime.InteropServices.SafeHandle> OpenSSL 1.0.x, więc i typy interop z OpenSSL są używane z libcrypto.so.1.1 / libcrypto.so.11 / libcrypto.so.11 / libcrypto.so.1 / libcrypto.so.1 / libcrypto.so.1 przez preferencje. W rezultacie biblioteki i aplikacje, które współdziałają bezpośrednio z OpenSSL bezpośrednio może mieć niezgodne wskaźniki z .NET Core-exposed wartości podczas uaktualniania z .NET Core 2.1 lub .NET Core 2.2.
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
 3.0
 
-#### <a name="recommended-action"></a>Zalecane działanie
+#### <a name="recommended-action"></a>Zalecana akcja
 
-Biblioteki i aplikacje, które wykonują bezpośrednie operacje z OpenSSL należy zachować ostrożność, aby upewnić się, że korzystają z tej samej wersji programu OpenSSL, co środowisko uruchomieniowe programu .NET Core.
+Biblioteki i aplikacje, które wykonują bezpośrednie operacje z OpenSSL należy uważać, aby upewnić się, że używają tej samej wersji OpenSSL jako .NET Core runtime.
 
-Wszystkie biblioteki lub aplikacje, które używają wartości <xref:System.IntPtr> lub <xref:System.Runtime.InteropServices.SafeHandle> z typów kryptograficznych platformy .NET Core bezpośrednio z OpenSSL, powinny porównać wersję biblioteki, której używają z nową właściwością <xref:System.Security.Cryptography.SafeEvpPKeyHandle.OpenSslVersion?displayProperty=nameWithType>, aby upewnić się, że wskaźniki są zgodne.
+Wszystkie biblioteki lub aplikacje, które używają <xref:System.IntPtr> lub <xref:System.Runtime.InteropServices.SafeHandle> wartości z .NET Core typów kryptograficznych bezpośrednio z OpenSSL należy porównać wersję biblioteki, których używają z nową <xref:System.Security.Cryptography.SafeEvpPKeyHandle.OpenSslVersion?displayProperty=nameWithType> właściwością, aby upewnić się, że wskaźniki są zgodne.
 
 #### <a name="category"></a>Kategoria
 

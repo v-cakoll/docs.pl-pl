@@ -1,22 +1,22 @@
 ---
-title: Jak zmienić kolejność pól w rozdzielonym pliku (LINQ) (C#)
+title: Jak ponownie uporządkować pola rozdzielonego pliku (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4e62d82c-61b7-4f18-b9a1-86723746d7d2
 ms.openlocfilehash: 6bc502ff12a908edf43f9ff7f5f63f98c3ff29c4
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75347655"
 ---
-# <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-c"></a>Jak zmienić kolejność pól w rozdzielonym pliku (LINQ) (C#)
-Plik wartości rozdzielanych przecinkami (CSV) to plik tekstowy, który jest często używany do przechowywania danych arkusza kalkulacyjnego lub innych danych tabelarycznych, które są reprezentowane przez wiersze i kolumny. Za pomocą metody <xref:System.String.Split%2A>, aby rozdzielić pola, można bardzo łatwo wykonywać zapytania i manipulować plikami CSV przy użyciu LINQ. W rzeczywistości ta sama technika może służyć do zmiany kolejności części dowolnego strukturalnego wiersza tekstu. nie jest to ograniczone do plików CSV.  
+# <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-c"></a>Jak ponownie uporządkować pola rozdzielonego pliku (LINQ) (C#)
+Plik wartości rozdzielonych przecinkami (CSV) to plik tekstowy, który jest często używany do przechowywania danych arkusza kalkulacyjnego lub innych danych tabelarycznych, które są reprezentowane przez wiersze i kolumny. Za pomocą <xref:System.String.Split%2A> metody do oddzielania pól, jest bardzo łatwo zapytań i manipulować plików CSV za pomocą LINQ. W rzeczywistości ta sama technika może służyć do ponownego uporządkowania części dowolnego ustrukturyzowanego wiersza tekstu; nie jest ograniczona do plików CSV.  
   
- W poniższym przykładzie Załóżmy, że trzy kolumny reprezentują uczniów "" nazwisko, "imię i nazwisko" i "ID". Pola są w kolejności alfabetycznej na podstawie nazwisk uczniów. Zapytanie generuje nową sekwencję, w której zostanie wyświetlona kolumna ID, a po niej druga kolumna łącząca imię i nazwisko studenta. Wiersze są zmieniane proporcjonalnie do pola ID. Wyniki są zapisywane w nowym pliku, a oryginalne dane nie są modyfikowane.  
+ W poniższym przykładzie załóżmy, że trzy kolumny reprezentują "nazwisko", "imię" i "id" uczniów. Pola są w porządku alfabetycznym na podstawie nazwisk uczniów. Kwerenda tworzy nową sekwencję, w której kolumna Identyfikator pojawia się jako pierwsza, a następnie druga kolumna, która łączy imię i nazwisko ucznia. Kolejność wierszy jest reaplikowana zgodnie z polem Identyfikatora. Wyniki są zapisywane w nowym pliku, a oryginalne dane nie są modyfikowane.  
   
 ### <a name="to-create-the-data-file"></a>Aby utworzyć plik danych  
   
-1. Skopiuj następujące wiersze do zwykłego pliku tekstowego o nazwie spreadsheet1. csv. Zapisz plik w folderze projektu.  
+1. Skopiuj następujące wiersze do zwykłego pliku o nazwie arkusz kalkulacyjny1.csv. Zapisz plik w folderze projektu.  
   
     ```csv  
     Adams,Terry,120  
@@ -76,10 +76,10 @@ class CSVFiles
 ```  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
-Utwórz projekt C# aplikacji konsolowej z `using` dyrektywami dotyczącymi przestrzeni nazw System. Linq i system.IO.
+Utwórz projekt aplikacji konsoli `using` C# z dyrektywami dla system.Linq i System.IO przestrzeni nazw.
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [LINQ i ciągi (C#)](./linq-and-strings.md)
 - [LINQ i katalogi plików (C#)](./linq-and-file-directories.md)
-- [Jak generować XML z plików CSV (C#)](./how-to-generate-xml-from-csv-files.md)
+- [Jak wygenerować xml z plików CSV (C#)](./how-to-generate-xml-from-csv-files.md)

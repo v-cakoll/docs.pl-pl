@@ -1,18 +1,18 @@
 ---
-title: Jak zbadać LINQ to XML przy użyciu XPath (C#)
+title: Jak wysyłać zapytania linq do XML przy użyciu XPath (C#)
 ms.date: 07/20/2015
 ms.assetid: ee5af263-4ab1-45e5-b792-33a3221b426d
 ms.openlocfilehash: 61878febd9b4880872b7bc58e4de04b37cff96f8
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75344810"
 ---
-# <a name="how-to-query-linq-to-xml-using-xpath-c"></a>Jak zbadać LINQ to XML przy użyciu XPath (C#)
-W tym temacie przedstawiono metody rozszerzające, które umożliwiają badanie drzewa XML przy użyciu XPath. Aby uzyskać szczegółowe informacje na temat korzystania z tych metod rozszerzających, zobacz <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>.  
+# <a name="how-to-query-linq-to-xml-using-xpath-c"></a>Jak wysyłać zapytania linq do XML przy użyciu XPath (C#)
+W tym temacie przedstawiono metody rozszerzenia, które umożliwiają wykonywanie zapytań do drzewa XML przy użyciu xpath. Aby uzyskać szczegółowe informacje na temat <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>korzystania z tych metod rozszerzenia, zobacz .  
   
- Chyba że masz bardzo konkretny powód wykonywania zapytań przy użyciu XPath, na przykład w przypadku korzystania z starszego kodu, używanie XPath z LINQ to XML nie jest zalecane. Zapytania XPath nie będą wykonywane, a także [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zapytań.  
+ Chyba że masz bardzo konkretny powód do wykonywania zapytań przy użyciu XPath, takich jak szerokie wykorzystanie starszego kodu, przy użyciu XPath z LINQ do XML nie jest zalecane. Kwerendy XPath nie będą [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] wykonywać, jak również kwerendy.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład tworzy małe drzewo XML i używa <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> do wybierania zestawu elementów.  

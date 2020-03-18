@@ -1,18 +1,18 @@
 ---
-title: polecenie usunięcia NuGet narzędzia dotnet
-description: Polecenie dotnet-NuGet-DELETE Usuwa pakiet z serwera lub go wystawia.
+title: polecenie dotnet nuget delete
+description: Polecenie dotnet-nuget-delete usuwa lub usuwa pakiet z serwera.
 author: karann-msft
 ms.date: 06/26/2019
 ms.openlocfilehash: 0950f03c0986bde17ae3e2e7170d402ea8222853
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76733123"
 ---
 # <a name="dotnet-nuget-delete"></a>dotnet nuget delete
 
-**Ten artykuł ma zastosowanie do:** ✔️ .NET Core 1. x SDK i nowszych wersji
+**Ten artykuł dotyczy:** ✔️ .NET Core 1.x SDK i nowszych wersji
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
@@ -20,7 +20,7 @@ ms.locfileid: "76733123"
 
 ## <a name="name"></a>Nazwa
 
-`dotnet nuget delete` — usuwa pakiet z serwera lub go wystawia.
+`dotnet nuget delete`- Usuwa lub usuwa pakiet z serwera.
 
 ## <a name="synopsis"></a>Streszczenie
 
@@ -32,7 +32,7 @@ dotnet nuget delete [-h|--help]
 
 ## <a name="description"></a>Opis
 
-Polecenie `dotnet nuget delete` usuwa pakiet z serwera lub go wystawia. W przypadku [NuGet.org](https://www.nuget.org/)akcja ma na celu odlistowanie pakietu.
+Polecenie `dotnet nuget delete` usuwa lub usuwa listę pakietu z serwera. W [przypadku nuget.org](https://www.nuget.org/)akcja polega na wykreślania pakietu z listy.
 
 ## <a name="arguments"></a>Argumenty
 
@@ -48,7 +48,7 @@ Polecenie `dotnet nuget delete` usuwa pakiet z serwera lub go wystawia. W przypa
 
 * **`--force-english-output`**
 
-  Wymusza uruchomienie aplikacji przy użyciu niezmiennej, opartej na języku angielskim kultury.
+  Wymusza uruchamianie aplikacji przy użyciu niezmiennej kultury opartej na języku angielskim.
 
 * **`-h|--help`**
 
@@ -56,33 +56,33 @@ Polecenie `dotnet nuget delete` usuwa pakiet z serwera lub go wystawia. W przypa
 
 * **`--interactive`**
 
-  Umożliwia zablokowanie polecenia i wymaga ręcznej akcji dla operacji takich jak uwierzytelnianie. Opcja dostępna od wersji .NET Core 2,2 SDK.
+  Umożliwia blokowanie polecenia i wymaga ręcznego działania dla operacji, takich jak uwierzytelnianie. Opcja dostępna od sdk .NET Core 2.2.
 
 * **`-k|--api-key <API_KEY>`**
 
-  Klucz interfejsu API dla serwera programu.
+  Klucz interfejsu API dla serwera.
 
 * **`--no-service-endpoint`**
 
-  Nie dołącza "API/v2/Package" do źródłowego adresu URL. Opcja dostępna od wersji .NET Core 2,1 SDK.
+  Nie dołącza "api/v2/package" do źródłowego adresu URL. Opcja dostępna od sdk .NET Core 2.1.
 
 * **`--non-interactive`**
 
-  Nie monituje o dane wejściowe lub potwierdzone przez użytkownika.
+  Nie monituje o wprowadzenie danych przez użytkownika ani potwierdzenia.
 
 * **`-s|--source <SOURCE>`**
 
-  Określa adres URL serwera. Obsługiwane adresy URL dla nuget.org obejmują `https://www.nuget.org`, `https://www.nuget.org/api/v3`i `https://www.nuget.org/api/v2/package`. W przypadku źródeł prywatnych Zastąp wartość Nazwa hosta (na przykład `%hostname%/api/v3`).
+  Określa adres URL serwera. Obsługiwane adresy URL dla `https://www.nuget.org` `https://www.nuget.org/api/v3`nuget.org `https://www.nuget.org/api/v2/package`obejmują , i . W przypadku prywatnych źródeł danych należy zastąpić `%hostname%/api/v3`nazwę hosta (na przykład).
 
 ## <a name="examples"></a>Przykłady
 
-* Usuwa wersję 1,0 pakietu `Microsoft.AspNetCore.Mvc`:
+* Usuwa wersję 1.0 `Microsoft.AspNetCore.Mvc`pakietu:
 
   ```dotnetcli
   dotnet nuget delete Microsoft.AspNetCore.Mvc 1.0
   ```
 
-* Usuwa wersję 1,0 pakietu `Microsoft.AspNetCore.Mvc`, bez monitowania użytkownika o poświadczenia lub inne dane wejściowe:
+* Usuwa wersję 1.0 `Microsoft.AspNetCore.Mvc`pakietu, nie monitując użytkownika o poświadczenia lub inne dane wejściowe:
 
   ```dotnetcli
   dotnet nuget delete Microsoft.AspNetCore.Mvc 1.0 --non-interactive

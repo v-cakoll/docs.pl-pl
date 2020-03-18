@@ -1,6 +1,6 @@
 ---
-title: Operatory równości — C# odwołanie
-description: Dowiedz C# się więcej na temat C# operatorów porównania równości i równości typów.
+title: Operatory równości — odwołanie do języka C#
+description: Dowiedz się więcej o operatorach porównania równości języka C# i równości typów Języka C#.
 ms.date: 06/26/2019
 author: pkulikov
 f1_keywords:
@@ -15,86 +15,86 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 099e535dc9dae1f7e93200509a02c8762ce43c27
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 079522b18afdf86a942d502672174516d45d37fc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78239343"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399568"
 ---
-# <a name="equality-operators-c-reference"></a>Operatory równości (C# odwołanie)
+# <a name="equality-operators-c-reference"></a>Operatory równości (odwołanie do języka C#)
 
-Operatory [`==` (równość)](#equality-operator-) i [`!=` (nierówność)](#inequality-operator-) sprawdzają, czy ich operandy są równe, czy nie.
+[ `==` Operatorzy (równości)](#equality-operator-) i [ `!=` (nierówności)](#inequality-operator-) sprawdzają, czy ich argumenty są równe, czy nie.
 
-## <a name="equality-operator-"></a>Operator równości = =
+## <a name="equality-operator-"></a>Operator równości ==
 
-Operator równości `==` zwraca `true`, jeśli jego operandy są równe, `false` w przeciwnym razie.
+Operator `==` równości `true` zwraca, jeśli jego argumenty są równe, `false` w przeciwnym razie.
 
 ### <a name="value-types-equality"></a>Równość typów wartości
 
-Argumenty operacji [wbudowanych typów wartości](../builtin-types/value-types.md#built-in-value-types) są równe, jeśli ich wartości są równe:
+Argumenty [wbudowanych typów wartości](../builtin-types/value-types.md#built-in-value-types) są równe, jeśli ich wartości są równe:
 
-[!code-csharp-interactive[value types equality](~/samples/snippets/csharp/language-reference/operators/EqualityOperators.cs#ValueTypesEquality)]
+[!code-csharp-interactive[value types equality](snippets/EqualityOperators.cs#ValueTypesEquality)]
 
 > [!NOTE]
-> Dla operatorów `==`, [`<`, `>`, `<=`i `>=`](comparison-operators.md) , jeśli którykolwiek z operandów nie jest liczbą (<xref:System.Double.NaN?displayProperty=nameWithType> lub <xref:System.Single.NaN?displayProperty=nameWithType>), wynik operacji jest `false`. Oznacza to, że wartość `NaN` nie może być większa niż ani równa żadnej innej wartości `double` (lub `float`), w tym `NaN`. Aby uzyskać więcej informacji i przykładów, zobacz artykuł <xref:System.Double.NaN?displayProperty=nameWithType> lub <xref:System.Single.NaN?displayProperty=nameWithType> Reference.
+> Dla `==`, [ `<` `>`, `<=`, `>=` i](comparison-operators.md) operatorów, jeśli którykolwiek z argumentów <xref:System.Single.NaN?displayProperty=nameWithType>nie jest liczbą ( `false`<xref:System.Double.NaN?displayProperty=nameWithType> lub ), wynikiem działania jest . Oznacza to, `NaN` że wartość nie jest większa niż, mniejsza `double` niż, ani równa żadnej innej (lub) `float`wartości, w tym `NaN`. Aby uzyskać więcej informacji i <xref:System.Double.NaN?displayProperty=nameWithType> <xref:System.Single.NaN?displayProperty=nameWithType> przykładów, zobacz artykuł lub odwołanie.
 
-Dwa operandy tego samego typu [wyliczeniowego](../builtin-types/enum.md) są równe, jeśli odpowiadające wartości bazowego typu całkowitego są równe.
+Dwa argumenty tego samego typu [wyliczenia](../builtin-types/enum.md) są równe, jeśli odpowiednie wartości podstawowego typu integralnego są równe.
 
-Zdefiniowane przez użytkownika typy [struktur](../builtin-types/struct.md) nie obsługują domyślnie operatora `==`. Aby zapewnić obsługę operatora `==`, struktura zdefiniowana przez użytkownika musi [przeciążać](operator-overloading.md) ją.
+Typy [struktury](../builtin-types/struct.md) zdefiniowane przez użytkownika nie `==` obsługują operatora domyślnie. Aby obsługiwać `==` operatora, struktury zdefiniowane przez użytkownika musi [przeciążać](operator-overloading.md) go.
 
-Począwszy od C# 7,3 operatory `==` i `!=` są obsługiwane przez C# [krotki](../../tuples.md). Aby uzyskać więcej informacji, zobacz sekcję [równości i krotek](../../tuples.md#equality-and-tuples) w artykule [ C# typy krotek](../../tuples.md) .
+Począwszy od języka C# `==` `!=` 7.3, operatory i są obsługiwane przez [krotek C#](../../tuples.md). Aby uzyskać więcej informacji, zobacz [Równości i krotek](../../tuples.md#equality-and-tuples) sekcji [typu krotka Języka C#.](../../tuples.md)
 
-### <a name="reference-types-equality"></a>Równość typów referencyjnych
+### <a name="reference-types-equality"></a>Równość typów odwołań
 
-Domyślnie dwa operandy typu odwołania są równe, jeśli odwołują się do tego samego obiektu:
+Domyślnie dwa operandy typu odwołania są równe, jeśli odnoszą się do tego samego obiektu:
 
-[!code-csharp[reference type equality](~/samples/snippets/csharp/language-reference/operators/EqualityOperators.cs#ReferenceTypesEquality)]
+[!code-csharp[reference type equality](snippets/EqualityOperators.cs#ReferenceTypesEquality)]
 
-Jak pokazano na przykładzie, zdefiniowane przez użytkownika typy odwołań domyślnie obsługują operator `==`. Jednak typ referencyjny może przeciążać operator `==`. Jeśli typ referencyjny przeciąża operator `==`, użyj metody <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType>, aby sprawdzić, czy dwa odwołania tego typu odwołują się do tego samego obiektu.
+Jak pokazano w przykładzie, typy odwołań zdefiniowane przez `==` użytkownika domyślnie obsługują operatora. Jednak typ odwołania może przeciążać `==` operatora. Jeśli typ odwołania przeciążenia `==` operatora, należy użyć <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> metody, aby sprawdzić, czy dwa odwołania tego typu odnoszą się do tego samego obiektu.
 
 ### <a name="string-equality"></a>Równość ciągów
 
-Dwa operandy [ciągu](../builtin-types/reference-types.md#the-string-type) są równe, gdy oba z nich są `null` lub oba wystąpienia ciągu mają taką samą długość i mają identyczne znaki w każdej pozycji znaku:
+Dwa [argumenty smyczkowe](../builtin-types/reference-types.md#the-string-type) są równe, `null` gdy oba z nich są lub oba instancje ciągów mają tę samą długość i mają identyczne znaki w każdej pozycji znaku:
 
-[!code-csharp-interactive[string equality](~/samples/snippets/csharp/language-reference/operators/EqualityOperators.cs#StringEquality)]
+[!code-csharp-interactive[string equality](snippets/EqualityOperators.cs#StringEquality)]
 
-Jest to porównanie porządkowe z uwzględnieniem wielkości liter. Aby uzyskać więcej informacji na temat porównywania ciągów, zobacz [Jak porównać C#ciągi w ](../../how-to/compare-strings.md).
+Jest to porównanie z uwzględnieniem wielkości liter. Aby uzyskać więcej informacji na temat porównywania [ciągów, zobacz Jak porównać ciągi w języku C#](../../how-to/compare-strings.md).
 
-### <a name="delegate-equality"></a>Równość delegowania
+### <a name="delegate-equality"></a>Delegowanie równości
 
-Dwa operandy [delegatów](../../programming-guide/delegates/index.md) tego samego typu środowiska uruchomieniowego są równe, gdy oba z nich są `null` lub ich listy wywołań są o tej samej długości i mają równe wpisy w każdej pozycji:
+Dwa operandy [delegata](../../programming-guide/delegates/index.md) tego samego typu wykonywania są `null` równe, gdy oba z nich są lub ich listy wywołań są tej samej długości i mają równe wpisy w każdej pozycji:
 
-[!code-csharp-interactive[delegate equality](~/samples/snippets/csharp/language-reference/operators/EqualityOperators.cs#DelegateEquality)]
+[!code-csharp-interactive[delegate equality](snippets/EqualityOperators.cs#DelegateEquality)]
 
-Aby uzyskać więcej informacji, zobacz sekcję [delegowanie operatorów równości](~/_csharplang/spec/expressions.md#delegate-equality-operators) w [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).
+Aby uzyskać więcej informacji, zobacz [delegowanie operatorów równości](~/_csharplang/spec/expressions.md#delegate-equality-operators) sekcji [specyfikacji języka Języka C#.](~/_csharplang/spec/introduction.md)
 
-Delegaty wytwarzane z oceny semantycznie identycznych [wyrażeń lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md) nie są równe, jak pokazano w poniższym przykładzie:
+Delegatów, które są produkowane z oceny semantycznie [identyczne wyrażenia lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md) nie są równe, jak pokazano w poniższym przykładzie:
 
-[!code-csharp-interactive[from identical lambdas](~/samples/snippets/csharp/language-reference/operators/EqualityOperators.cs#IdenticalLambdas)]
+[!code-csharp-interactive[from identical lambdas](snippets/EqualityOperators.cs#IdenticalLambdas)]
 
-## <a name="inequality-operator-"></a>Operator nierówności! =
+## <a name="inequality-operator-"></a>Operator nierówności !=
 
-Operator nierówności `!=` zwraca `true`, jeśli jego operandy nie są równe, `false` w przeciwnym razie. Dla argumentów operacji [typu wbudowanego](../builtin-types/built-in-types.md)wyrażenie `x != y` daje ten sam wynik, co `!(x == y)`wyrażenia. Aby uzyskać więcej informacji na temat równości typów, zobacz sekcję [operator równości](#equality-operator-) .
+Operator `!=` nierówności `true` zwraca, jeśli jego argumenty `false` nie są równe, w przeciwnym razie. Dla operandów [typów wbudowanych](../builtin-types/built-in-types.md)wyrażenie `x != y` daje taki sam wynik jak `!(x == y)`wyrażenie . Aby uzyskać więcej informacji na temat równości typów, zobacz [Equality operator](#equality-operator-) sekcji.
 
-Poniższy przykład ilustruje użycie operatora `!=`:
+W poniższym przykładzie przedstawiono `!=` użycie operatora:
 
-[!code-csharp-interactive[non-equality examples](~/samples/snippets/csharp/language-reference/operators/EqualityOperators.cs#NonEquality)]
+[!code-csharp-interactive[non-equality examples](snippets/EqualityOperators.cs#NonEquality)]
 
-## <a name="operator-overloadability"></a>Przeciążanie operatora
+## <a name="operator-overloadability"></a>Przeciążenie operatora
 
-Typ zdefiniowany przez użytkownika może [przeciążać](operator-overloading.md) operatory `==` i `!=`. Jeśli typ przeciąża jeden z dwóch operatorów, musi również przeciążać inny.
+Typ zdefiniowany przez użytkownika `==` może `!=` [przeciążać](operator-overloading.md) i operatorów. Jeśli typ przeciążenia jednego z dwóch operatorów, musi również przeciążenia innego.
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
-Aby uzyskać więcej informacji, zobacz sekcję [Operatory relacyjne i testowe typu](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators) w [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).
+Aby uzyskać więcej informacji, zobacz [relacyjne i typ testowania operatorów](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators) sekcji [specyfikacji języka C#.](~/_csharplang/spec/introduction.md)
 
 ## <a name="see-also"></a>Zobacz też
 
-- [C#odwoła](../index.md)
+- [Dokumentacja języka C#](../index.md)
 - [Operatory języka C#](index.md)
 - <xref:System.IEquatable%601?displayProperty=nameWithType>
 - <xref:System.Object.Equals%2A?displayProperty=nameWithType>
 - <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType>
-- [Porównania równości](../../programming-guide/statements-expressions-operators/equality-comparisons.md)
+- [Porównywanie równości](../../programming-guide/statements-expressions-operators/equality-comparisons.md)
 - [Operatory porównania](comparison-operators.md)

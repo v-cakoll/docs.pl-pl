@@ -2,19 +2,19 @@
 title: 'Przykładowy plik XSD: klienci i zamówienia'
 ms.date: 07/20/2015
 ms.assetid: ef9911a3-7ac4-44fd-b36e-a0c0ad0a157d
-ms.openlocfilehash: ff893053e5ed29b95a0ede1f172915df2e83ffa2
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 2e8fdcd9100ea608828371ff5dce6cf0d040292f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346490"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79167949"
 ---
 # <a name="sample-xsd-file-customers-and-orders"></a>Przykładowy plik XSD: klienci i zamówienia
-Następujący plik XSD jest używany w różnych przykładach w dokumentacji [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Ten plik zawiera definicję schematu dla [przykładowego pliku XML: Customers i Orders (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md). Schemat używa funkcji `xs:key` i `xs:keyref` XSD, aby określić, że atrybut `CustomerID` elementu `Customer` jest kluczem i aby ustanowić relację między `CustomerID` elementu w każdym `Order` elementu i atrybut `CustomerID` w każdym `Customer` elementu.  
+Poniższy plik XSD jest używany w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] różnych przykładach w dokumentacji. Ten plik zawiera definicję schematu [dla przykładowego pliku XML: Klienci i zamówienia (LINQ do XML).](./sample-xml-file-customers-and-orders-linq-to-xml-2.md) Schemat `xs:key` używa i `xs:keyref` funkcje XSD, aby `CustomerID` ustalić, `Customer` że atrybut elementu jest kluczem i `CustomerID` ustanowić `Order` relację `CustomerID` między `Customer` elementem w każdym elemencie i atrybutu w każdym elemencie.  
   
- Przykład pisania zapytań LINQ wykorzystujących tę relację przy użyciu klauzuli `Join` można znaleźć w temacie [jak sprzęgać dwie kolekcje (LINQ to XML) (C#)](./how-to-join-two-collections-linq-to-xml.md).  
+ Na przykład pisania zapytań LINQ, które korzystają `Join` z tej relacji przy użyciu klauzuli, zobacz [Jak dołączyć dwie kolekcje (LINQ do XML) (C#)](./how-to-join-two-collections-linq-to-xml.md).  
   
-## <a name="customersordersxsd"></a>CustomersOrders. xsd  
+## <a name="customersordersxsd"></a>KlienciOrders.xsd  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -92,4 +92,3 @@ Następujący plik XSD jest używany w różnych przykładach w dokumentacji [!I
   </xs:complexType>  
 </xs:schema>  
 ```  
- 

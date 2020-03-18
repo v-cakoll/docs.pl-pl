@@ -1,8 +1,8 @@
 - name: .NET framework — przewodnik
   href: index.md
-- name: Nowości
+- name: Co nowego?
   href: whats-new/
-- name: Rozpocznij
+- name: Wprowadzenie
   href: get-started/
 - name: Przewodnik instalacji
   href: install/
@@ -20,8 +20,9 @@
     - name: Dane i modelowanie
       href: data/
     - name: Aplikacje klienckie
-      href: develop-client-apps.md
       items:
+        - name: Omówienie
+          href: develop-client-apps.md
         - name: Windows Presentation Foundation
           href: wpf/
         - name: Windows Forms
@@ -30,13 +31,13 @@
       href: wcf/
     - name: Windows Workflow Foundation
       href: windows-workflow-foundation/
-    - name: Aplikacje usług systemu Windows
+    - name: Aplikacje usługi systemu Windows
       href: windows-services/
     - name: Aplikacje 64-bitowe
       href: 64-bit-apps.md
-    - name: Aplikacje internetowe wykorzystujące technologie ASP.NET
+    - name: Aplikacje internetowe za pomocą programu ASP.NET
       href: develop-web-apps-with-aspnet.md
-    - name: Programowanie dla sieci w .NET Framework
+    - name: Programowanie sieciowe
       href: network-programming/
     - name: Konfigurowanie aplikacji
       href: configure-apps/

@@ -1,38 +1,38 @@
 ---
-title: Mieszany kod deklaracyjnej usterki kodu (LINQ to XML) (C#)
+title: Mieszane deklaratywne błędy kodu imperatywnego (LINQ do XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: fada62d0-0680-4e73-945a-2b00d7a507af
-ms.openlocfilehash: 30760999a264c81e16104c0c9b112d442ce66121
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 76a9bb5abf6ce2700a2a0698ebc109f65e2b7eb1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591624"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168352"
 ---
-# <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-c"></a>Mieszany kod deklaratywny/niezbędny kod (LINQ to XMLC#) ()
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]zawiera różne metody, które umożliwiają bezpośrednie modyfikowanie drzewa XML. Możesz dodać elementy, usunąć elementy, zmienić zawartość elementu, dodać atrybuty i tak dalej. Ten interfejs programowania został opisany w temacie [Modyfikowanie drzew XML (LINQ to XML)C#()](./in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md). Jeśli dokonujesz iteracji przez jedną z osi, na <xref:System.Xml.Linq.XContainer.Elements%2A>przykład, i modyfikujesz drzewo XML podczas iteracji przez oś, możesz zakończyć z niektórymi niektórymi usterkami.  
+# <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-c"></a>Mieszane deklaratywne błędy kodu/kodu imperatywnego (LINQ do XML) (C#)
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]zawiera różne metody, które umożliwiają bezpośrednią modyfikację drzewa XML. Można dodawać elementy, usuwać elementy, zmieniać zawartość elementu, dodawać atrybuty itd. Ten interfejs programowania jest opisany w [modyfikowaniu drzew XML (LINQ do XML) (C#)](./in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md). Jeśli iteracji przez jedną z osi, <xref:System.Xml.Linq.XContainer.Elements%2A>takich jak , i modyfikujesz drzewo XML podczas iteracji przez oś, można skończyć z dziwnych błędów.  
   
- Ten problem jest czasami znany jako "problem z Halloween".  
+ Ten problem jest czasami znany jako "Halloween Problem".  
   
 ## <a name="definition-of-the-problem"></a>Definicja problemu  
- Podczas pisania kodu przy użyciu LINQ, który wykonuje iterację kolekcji, piszesz kod w stylu deklaratywnym. Więcej informacji o tym, *co* chcesz zrobić, jest bardziej zbliżone, a tym samym, *jak* chcesz go wykonać. Jeśli napiszesz kod, który 1) pobierze pierwszy element, 2) testuje go w pewnym stanie, 3) modyfikuje go, a 4) umieszcza go z powrotem na liście, wówczas będzie to kod zapasowy. Poinformujesz o tym, *jak* to zrobić.  
+ Podczas pisania kodu przy użyciu LINQ, który iteruje za pośrednictwem kolekcji, piszesz kod w stylu deklaratywnym. Jest to bardziej podobne do opisywania *tego, co* chcesz, a raczej, że *jak* chcesz to zrobić. Jeśli piszesz kod, który 1) pobiera pierwszy element, 2) testuje go dla pewnego warunku, 3) modyfikuje go i 4) umieszcza go z powrotem na liście, a następnie byłoby to kod imperatyw. Mówisz *komputerowi, jak* robić to, co chcesz zrobić.  
   
- Mieszanie tych stylów kodu w tej samej operacji polega na tym, co prowadzi do problemów. Rozważ następujące opcje:  
+ Mieszanie tych stylów kodu w tej samej operacji jest to, co prowadzi do problemów. Rozważ następujące źródła:  
   
  Załóżmy, że masz połączoną listę z trzema elementami (a, b i c):  
   
  `a -> b -> c`  
   
- Teraz Załóżmy, że chcesz przejść przez połączoną listę, dodając trzy nowe elementy (a ", b" i c "). Chcesz, aby połączona lista wyglądała następująco:  
+ Teraz załóżmy, że chcesz przejść przez połączoną listę, dodając trzy nowe elementy (a', b', i c'). Chcesz, aby wynikowa lista połączona wyglądała tak:  
   
  `a -> a' -> b -> b' -> c -> c'`  
   
- Dlatego Napisz kod, który wykonuje iterację na liście, i dla każdego elementu, dodaje nowy element po nim. Co się dzieje, gdy Twój kod będzie najpierw widział `a` element i Wstaw `a'` po nim. Teraz kod zostanie przeniesiony do następnego węzła na liście, który jest teraz `a'`! Happily IT dodaje nowy element do listy `a''`.  
+ Więc napisać kod, który iteruje przez listę i dla każdego elementu, dodaje nowy element zaraz po nim. Co się stanie, że kod `a` najpierw zobaczy element i wstaw i wstaw `a'` po nim. Teraz twój kod zostanie przesuniesię do następnego `a'`węzła na liście, który jest teraz! Szczęśliwie dodaje nowy element do `a''`listy, .  
   
- Jak rozwiązać ten problem w świecie rzeczywistym? Można również utworzyć kopię pierwotnej połączonej listy oraz zupełnie nową listę. Lub jeśli piszesz czysty kod, możesz znaleźć pierwszy element, dodać nowy element, a następnie dwukrotnie wykonać dwa razy na liście połączonej, przenosząc nad element, który właśnie został dodany.  
+ Jak rozwiązać ten problem w prawdziwym świecie? Cóż, możesz utworzyć kopię oryginalnej listy połączonej i utworzyć zupełnie nową listę. Lub jeśli piszesz kod czysto imperatywny, może znaleźć pierwszy element, dodać nowy element, a następnie przejść dwa razy na liście połączone, postępy nad elementem, który właśnie dodał.  
   
 ## <a name="adding-while-iterating"></a>Dodawanie podczas iteracji  
- Załóżmy na przykład, że chcesz napisać jakiś kod dla każdego elementu w drzewie, chcesz utworzyć zduplikowany element:  
+ Załóżmy na przykład, że chcesz napisać kod, który dla każdego elementu w drzewie chcesz utworzyć zduplikowany element:  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -44,9 +44,9 @@ foreach (XElement e in root.Elements())
     root.Add(new XElement(e.Name, (string)e));  
 ```  
   
- Ten kod przechodzi do nieskończonej pętli. Instrukcja iteruje `Elements()` przez oś, `doc` dodając nowe elementy do elementu. `foreach` Zostanie ona zakończona również za pomocą elementów, które właśnie dodał. I ponieważ przydziela nowe obiekty do każdej iteracji pętli, ostatecznie zużywa całą dostępną pamięć.  
+ Ten kod przechodzi w nieskończoną pętlę. Instrukcja `foreach` iteruje `Elements()` przez oś, dodając `doc` nowe elementy do elementu. Kończy się iteracji również poprzez elementy to właśnie dodał. A ponieważ przydziela nowe obiekty z każdą iteracją pętli, ostatecznie zużywa całą dostępną pamięć.  
   
- Ten problem można rozwiązać, pobierając kolekcję do pamięci przy użyciu <xref:System.Linq.Enumerable.ToList%2A> standardowego operatora zapytania w następujący sposób:  
+ Ten problem można rozwiązać, ściągając kolekcję do pamięci przy użyciu standardowego <xref:System.Linq.Enumerable.ToList%2A> operatora zapytania w następujący sposób:  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -59,7 +59,7 @@ foreach (XElement e in root.Elements().ToList())
 Console.WriteLine(root);  
 ```  
   
- Teraz kod działa. Utworzone drzewo XML jest następujące:  
+ Teraz kod działa. Wynikowe drzewo XML jest następujące:  
   
 ```xml  
 <Root>  
@@ -73,7 +73,7 @@ Console.WriteLine(root);
 ```  
   
 ## <a name="deleting-while-iterating"></a>Usuwanie podczas iteracji  
- Jeśli chcesz usunąć wszystkie węzły na określonym poziomie, być może chcesz napisać kod podobny do poniższego:  
+ Jeśli chcesz usunąć wszystkie węzły na pewnym poziomie, możesz ulec pokusie, aby napisać kod w następujący sposób:  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -86,9 +86,9 @@ foreach (XElement e in root.Elements())
 Console.WriteLine(root);  
 ```  
   
- Nie jest to jednak wykonywane. W tej sytuacji po usunięciu pierwszego elementu, jest on usuwany z drzewa XML zawartego w katalogu głównym, a kod w metodzie element, który wykonuje iterację nie może znaleźć następnego elementu.  
+ Jednak to nie robi, co chcesz. W tej sytuacji po usunięciu pierwszego elementu, A, jest usuwany z drzewa XML zawarte w katalogu głównym, a kod w Elements metody, która wykonuje iteracji nie można znaleźć następnego elementu.  
   
- Poprzedni kod generuje następujące dane wyjściowe:  
+ Poprzedni kod daje następujące dane wyjściowe:  
   
 ```xml  
 <Root>  
@@ -97,7 +97,7 @@ Console.WriteLine(root);
 </Root>  
 ```  
   
- Rozwiązanie to ponownie wywołuje <xref:System.Linq.Enumerable.ToList%2A> zmaterializowania kolekcji w następujący sposób:  
+ Rozwiązaniem jest ponowne <xref:System.Linq.Enumerable.ToList%2A> wywołanie urzeczywistnienia kolekcji w następujący sposób:  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -110,13 +110,13 @@ foreach (XElement e in root.Elements().ToList())
 Console.WriteLine(root);  
 ```  
   
- Spowoduje to utworzenie następujących danych wyjściowych:  
+ Daje to następujące dane wyjściowe:  
   
 ```xml  
 <Root />  
 ```  
   
- Alternatywnie można wyeliminować iterację całkowicie poprzez wywołanie <xref:System.Xml.Linq.XElement.RemoveAll%2A> elementu nadrzędnego:  
+ Alternatywnie można całkowicie wyeliminować iterację, <xref:System.Xml.Linq.XElement.RemoveAll%2A> wywołując element nadrzędny:  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -128,10 +128,10 @@ root.RemoveAll();
 Console.WriteLine(root);  
 ```  
   
-## <a name="why-cant-linq-automatically-handle-this"></a>Dlaczego nie można automatycznie obsłużyć LINQ?  
- Jednym z metod jest zawsze umieszczenie wszystkiego w pamięci zamiast oceny z opóźnieniem. Jest to jednak bardzo kosztowne pod względem wydajności i użycia pamięci. W rzeczywistości, jeśli LINQ i (LINQ to XML) miały przyjąć takie podejście, wystąpi niepowodzenie w rzeczywistych sytuacjach.  
+## <a name="why-cant-linq-automatically-handle-this"></a>Dlaczego linq nie może automatycznie sobie z tym poradzić?  
+ Jednym z podejść byłoby zawsze przynieść wszystko do pamięci, a nie robi leniwy oceny. Jednak byłoby to bardzo kosztowne pod względem wydajności i wykorzystania pamięci. W rzeczywistości, jeśli LINQ i (LINQ do XML) miałyby przyjąć takie podejście, nie powiodłoby się w rzeczywistych sytuacjach.  
   
- Innym możliwym podejściem jest umieszczenie w kodzie LINQ składni transakcji, a kompilator próbuje analizować kod i ustalić, czy jakakolwiek konkretna kolekcja jest wymagana do materiału. Jednak próba ustalenia całego kodu, który ma efekty uboczne, to niezwykle Complex. Rozważmy następujący kod:  
+ Innym możliwym podejściem byłoby umieścić w jakiejś składni transakcji w LINQ i mieć próby kompilatora do analizy kodu i ustalić, czy jakakolwiek konkretna kolekcja musi być zmaterializowane. Jednak, próby określenia całego kodu, który ma skutki uboczne jest niezwykle skomplikowane. Spójrzmy na poniższy kod:  
   
 ```csharp  
 var z =  
@@ -140,20 +140,20 @@ var z =
     select DoMyProjection(e);  
 ```  
   
- Taki kod analizy musi analizować metody TestSomeCondition i DoMyProjection, a także wszystkie metody wywoływane przez te metody, aby określić, czy dowolny kod ma efekty uboczne. Jednak kod analizy nie może wyszukać żadnego kodu, który miał skutki uboczne. Należy wybrać tylko kod, który miał skutki uboczne w elementach `root` podrzędnych w tej sytuacji.  
+ Taki kod analizy musiałby przeanalizować metody TestSomeCondition i DoMyProjection i wszystkie metody, które te metody o nazwie, aby ustalić, czy kod miał skutki uboczne. Ale kod analizy nie mógł po prostu szukać kodu, który miał skutki uboczne. Musiałby wybrać tylko kod, który miał skutki uboczne dla `root` elementów podrzędnych w tej sytuacji.  
   
- LINQ to XML nie próbuje wykonać żadnej takiej analizy.  
+ LINQ do XML nie próbuje wykonać żadnej takiej analizy.  
   
- Pozwala to uniknąć tych problemów.  
+ To do Ciebie, aby uniknąć tych problemów.  
   
 ## <a name="guidance"></a>Wskazówki  
- Najpierw nie należy mieszać kodu deklaratywnego i bezwzględnego.  
+ Po pierwsze, nie należy mieszać deklaratywny i imperatywny kod.  
   
- Nawet jeśli znasz dokładnie semantykę kolekcji i semantykę metod, które modyfikują drzewo XML, jeśli piszesz jakiś kod sprytne, który pozwala uniknąć tych kategorii problemów, kod będzie musiał być obsługiwany przez innych deweloperów w przyszłości. i mogą nie być jasne w przypadku problemów. Jeśli Mieszasz deklaratywne i bezwzględne style kodowania, kod będzie bardziej kruchy.  
+ Nawet jeśli wiesz dokładnie semantyki kolekcji i semantyki metod, które modyfikują drzewo XML, jeśli napiszesz jakiś sprytny kod, który unika tych kategorii problemów, kod będzie musiał być utrzymywany przez innych deweloperów w przyszłości i mogą nie być tak jasne w kwestiach. Jeśli połączysz deklaratywne i imperatywne style kodowania, kod będzie bardziej kruchy.  
   
- Jeśli napiszesz kod, który materializuje kolekcję, aby uniknąć tych problemów, zwróć uwagę na to, że komentarze są odpowiednie w kodzie, dzięki czemu programiści mogą zrozumieć problem.  
+ Jeśli piszesz kod, który materializuje kolekcji, tak aby uniknąć tych problemów, należy pamiętać, że z komentarzami, jak odpowiednio w kodzie, tak, że programiści konserwacji zrozumie problem.  
   
- Jeśli na przykład wydajność i inne zagadnienia są dozwolone, należy użyć tylko kodu deklaratywnego. Nie należy modyfikować istniejącego drzewa XML. Generuj nowy.  
+ Po drugie, jeśli wydajność i inne zagadnienia pozwalają, należy użyć tylko kod deklaratywny. Nie należy modyfikować istniejącego drzewa XML. Wygeneruj nowy.  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -167,4 +167,3 @@ XElement newRoot = new XElement("Root",
 );  
 Console.WriteLine(newRoot);  
 ```  
- 

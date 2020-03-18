@@ -1,0 +1,246 @@
+### YamlMime:Hub
+title: Dokumentacja platformy .NET
+summary: Dowiedz się, jak używać platformy .NET do tworzenia aplikacji na dowolnej platformie w języku C#, Visual Basic i F#. Przeglądaj dokumentację dotyczącą interfejsu API, przykładowy kod, samouczki i inne zasoby.
+brand: dotnet
+metadata:
+  title: Dokumentacja platformy .NET
+  description: Dowiedz się, jak używać platformy .NET do tworzenia aplikacji na dowolnej platformie w języku C#, Visual Basic i F#. Przeglądaj dokumentację dotyczącą interfejsu API, przykładowy kod, samouczki i inne zasoby.
+  ms.product: dotnet
+  ms.topic: hub-page
+  ms.collection: collection
+  author: BillWagner
+  ms.author: wiwagn
+  ms.date: 12/19/2019
+  ms.openlocfilehash: 6b23ab2f0214f23d45499fcf8ab7c3f2771be15c
+  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+  ms.translationtype: HT
+  ms.contentlocale: pl-PL
+  ms.lasthandoff: 03/16/2020
+  ms.locfileid: "79416327"
+highlightedContent:
+  items:
+  - title: Wprowadzenie do języka C#. Szybkie interaktywne rozpoczęcie pracy.
+    itemType: get-started
+    url: csharp/tutorials/intro-to-csharp/hello-world.yml
+  - title: Utwórz swoją pierwszą aplikację konsolową.
+    itemType: tutorial
+    url: core/get-started.md
+  - title: Utwórz swoją pierwszą aplikację internetową.
+    itemType: learn
+    url: https://dotnet.microsoft.com/learn/aspnet/hello-world-tutorial/intro
+  - title: Co nowego w dokumentacji platformy .NET
+    itemType: whats-new
+    url: whats-new/index.yml
+conceptualContent:
+  title: '.NET: Bezpłatna. Wieloplatformowość. Open source.'
+  summary: 'Platforma deweloperska do tworzenia wszystkich aplikacji: internetowych, mobilnych, klasycznych, IoT i wielu innych, a także gier. Obsługiwana w systemach Windows, Linux i macOS.'
+  items:
+  - title: Platforma .NET typu open-source
+    summary: Informacje o platformie .NET Core
+    links:
+    - url: core/index.md
+      itemType: overview
+      text: Omówienie platformy .NET Core
+    - url: core/whats-new/dotnet-core-3-1.md
+      itemType: whats-new
+      text: Co nowego w programie .NET Core 3.1
+    - url: standard/tour.md
+      itemType: overview
+      text: Przewodnik po środowisku .NET
+    - url: core/deploying/index.md
+      itemType: deploy
+      text: Wdrażanie aplikacji .NET Core
+    - url: core/docker/build-container.md
+      itemType: tutorial
+      text: Konteneryzowanie aplikacji platformy .NET Core przy użyciu platformy Docker
+    - url: core/tutorials/index.md
+      itemType: tutorial
+      text: Samouczki
+  - title: Pojęcia dotyczące platformy .NET
+    summary: Poznaj podstawowe pojęcia związane z platformą .NET
+    links:
+    - url: https://channel9.msdn.com/Series/NET-Core-101/What-is-NET
+      itemType: video
+      text: Co to jest platforma .NET?
+    - url: standard/index.md
+      itemType: overview
+      text: Omówienie platformy .NET
+    - url: standard/net-standard.md
+      itemType: overview
+      text: .NET Standard
+    - url: /aspnet/core/
+      itemType: overview
+      text: ASP.NET Core
+    - url: /ef/core/
+      itemType: overview
+      text: Entity Framework Core
+    - url: standard/get-started.md
+      itemType: get-started
+      text: Wprowadzenie
+    - url: standard/components.md
+      itemType: concept
+      text: Składniki architektury .NET
+    - url: framework/index.md
+      itemType: overview
+      text: Aplikacje .NET Framework (Windows)
+  - title: Tworzenie aplikacji .NET
+    summary: Rozpocznij programowanie na platformie .NET
+    links:
+    - url: core/sdk.md
+      itemType: download
+      text: Pobieranie zestawu .NET Core SDK
+    - url: core/tools/index.md
+      itemType: overview
+      text: Omówienie interfejsu wiersza polecenia platformy .NET Core
+    - url: core/porting/index.md
+      itemType: how-to-guide
+      text: Przenoszenie z programu .NET Framework na platformę .NET Core
+    - url: core/compatibility/index.md
+      itemType: concept
+      text: Zmiany powodujące niezgodność w platformie .NET Core
+    - url: desktop-wpf/overview/index.md
+      itemType: overview
+      text: Tworzenie aplikacji klasycznych .NET Core dla systemu Windows
+    - url: standard/library-guidance/index.md
+      itemType: concept
+      text: Wskazówki dotyczące biblioteki typu open source
+  - title: Przewodniki dotyczące architektury .NET
+    summary: Zapoznaj się z podstawowymi wytycznymi dotyczącymi programowania i architektury dla platformy .NET
+    links:
+    - url: architecture/microservices/index.md
+      itemType: architecture
+      text: 'Mikrousługi .NET: Architektura konteneryzowanych aplikacji .NET'
+    - url: architecture/modern-web-apps-azure/index.md
+      itemType: architecture
+      text: Tworzenie architektury nowoczesnych aplikacji internetowych za pomocą platformy ASP.NET Core i platformy Azure
+    - url: architecture/containerized-lifecycle/index.md
+      itemType: architecture
+      text: Cykl życia konteneryzowanych aplikacji platformy Docker korzystających z platformy i narzędzi firmy Microsoft
+    - url: architecture/modernize-with-azure-containers/index.md
+      itemType: architecture
+      text: Modernizacja istniejących aplikacji platformy .NET za pomocą chmury platformy Azure i kontenerów systemu Windows
+    footerLink:
+      url: architecture/index.yml
+      text: Wszystkie przewodniki dotyczące architektury
+tools:
+  title: Języki programowania
+  summary: Aplikacje .NET można pisać w języku C#, F# lub Visual Basic.
+  items:
+  - title: Nowoczesny, obiektowy i bezpieczny członek rodziny języków C
+    imageSrc: https://docs.microsoft.com/media/logos/logo_Csharp.svg
+    url: csharp/index.yml
+  - title: Funkcjonalny język programowania dla platformy .NET
+    imageSrc: https://docs.microsoft.com/media/logos/logo_Fsharp.svg
+    url: fsharp/index.yml
+  - title: Przyjazny język z czytelną składnią
+    imageSrc: https://docs.microsoft.com/media/logos/logo_VB.svg
+    url: visual-basic/index.yml
+additionalContent:
+  sections:
+  - title: Tworzenie aplikacji
+    summary: Wybrać możesz aplikacje internetowe, mobilne, klasyczne, IoT i wiele innych, a także gry.
+    items:
+    - title: sieć Web
+      links:
+      - url: /aspnet/core/getting-started
+        text: Tworzenie pierwszej aplikacji internetowej
+      - url: /aspnet/core/tutorials
+        text: Samouczki dotyczące platformy ASP.NET Core
+      - url: /aspnet/core
+        text: Co to jest ASP.NET Core?
+      - url: /aspnet/core/tutorials/first-mvc-app/start-mvc
+        text: Platforma ASP.NET Core w programie Visual Studio
+      - url: /aspnet/mvc/overview/deployment/docker-aspnetmvc
+        text: Aplikacje MVC platformy ASP.NET w kontenerach systemu Windows
+      - url: /aspnet/core/blazor/
+        text: 'Blazor: Interaktywny internetowy interfejs użytkownika po stronie klienta obsługujący platformę .NET'
+    - title: Natywne dla chmury i mikrousługi
+      links:
+      - url: /dotnet/azure/
+        text: Dokumentacja dotycząca platformy Azure na platformie .NET
+      - url: /azure/storage
+        text: Magazyn
+      - url: /dotnet/fsharp/using-fsharp-on-azure/
+        text: Używanie języka F# na platformie Azure
+      - url: architecture/serverless/index.md
+        text: 'Aplikacje bezserwerowe: architektura, wzorce i implementacja platformy Azure'
+      - url: architecture/microservices/index.md
+        text: 'Mikrousługi .NET: architektura konteneryzowanych aplikacji .NET'
+    - title: Urządzenia przenośne
+      links:
+      - url: /xamarin/ios/
+        text: Xamarin.iOS
+      - url: /xamarin/android
+        text: Xamarin.Android
+      - url: /xamarin/xamarin-forms
+        text: Xamarin.Forms
+    - title: Aplikacje klasyczne
+      links:
+      - url: /uwp
+        text: Aplikacje uniwersalne systemu Windows
+      - url: desktop-wpf/index.md
+        text: Windows Presentation Foundation (.NET Core)
+      - url: framework/wpf/index.md
+        text: Windows Presentation Foundation (.NET Framework)
+      - url: framework/winforms/index.md
+        text: Windows Forms
+      - url: /xamarin/mac
+        text: Platforma Xamarin dla systemu macOS
+    - title: Gry
+      links:
+      - url: https://visualstudio.microsoft.com/vs/features/game-development/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link
+        text: Tworzenie gier w programie Visual Studio
+      - url: https://docs.cryengine.com/display/CEPROG/C%23+Programming
+        text: Informacje o tworzeniu gier w języku C# za pomocą aparatu CRYENGINE
+      - url: http://www.monogame.net/documentation/?page=main
+        text: Tworzenie gier w języku C# przy użyciu biblioteki MonoGame
+      - url: https://docs.unity3d.com/Manual/index.html
+        text: Informacje o tworzeniu gier 2D i 3D w języku C# na platformie Unity
+    - title: Uczenie maszynowe i sztuczna inteligencja
+      links:
+      - url: machine-learning/index.yml
+        text: Tworzenie niestandardowych rozwiązań AI za pomocą platformy ML.NET
+      - url: /azure/cognitive-services/
+        text: Azure Cognitive Services
+      - url: /azure/machine-learning
+        text: Azure Machine Learning
+      - url: spark/index.yml
+        text: Platforma .NET dla platformy Apache Spark
+    - title: Internet rzeczy (IoT)
+      links:
+      - url: https://channel9.msdn.com/Shows/On-NET/IoT-support-for-NET-Core
+        text: 'Na platformie .NET: Informacje o obsłudze IoT na platformie .NET Core'
+      - url: https://docs.microsoft.com/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0
+        text: Programowanie IoT dla wielu platform przy użyciu platformy .NET Core 3.0
+      - url: https://github.com/dotnet/iot
+        text: Biblioteki IoT platformy .NET Core
+      - url: https://www.nuget.org/packages/System.Device.Gpio
+        text: Pakiet NuGet System.Device.Gpio
+  - title: Sekcje dokumentacji interfejsów API
+    summary: Przeszukaj dokumentację referencyjną interfejsów API platformy .NET w zakresie ograniczonym do tego, co Cię interesuje.
+    items:
+    - title: Dokumentacja interfejsów API platformy .NET Core
+      summary: Dokumentacja referencyjna interfejsów API dla platformy .NET Core
+      url: https://docs.microsoft.com/dotnet/api/?view=netcore-3.1
+    - title: Dokumentacja interfejsów API programu .NET Framework
+      summary: Dokumentacja referencyjna interfejsów API dla platformy .NET Framework
+      url: https://docs.microsoft.com/dotnet/api/?view=netframework-4.8
+    - title: Dokumentacja interfejsów API platformy ASP.NET Core
+      summary: Dokumentacja referencyjna interfejsów API dla platformy ASP.NET Core
+      url: https://docs.microsoft.com/dotnet/api/?view=aspnetcore-3.1
+    - title: Dokumentacja interfejsów API ML.NET
+      summary: Dokumentacja referencyjna interfejsów API dla platformy ML.NET
+      url: https://docs.microsoft.com/dotnet/api/?view=ml-dotnet
+    - title: Dokumentacja interfejsów API platformy .NET dla platformy Apache Spark
+      summary: Dokumentacja referencyjna interfejsów API platformy .NET dla platformy Apache Spark
+      url: https://docs.microsoft.com/dotnet/api/?view=spark-dotnet
+    - title: Dokumentacja języka C#
+      summary: Dokumentacja i specyfikacja języka C#
+      url: csharp/language-reference/index.md
+    - title: Materiały referencyjne dotyczące języka F#
+      summary: Materiały referencyjne dotyczące języka F#
+      url: fsharp/language-reference/index.md
+    - title: Dokumentacja języka Visual Basic
+      summary: Dokumentacja i specyfikacja języka Visual Basic
+      url: visual-basic/language-reference/index.md
+  footer: Współtwórz dokumentację platformy .NET. Przeczytaj nasz [przewodnik współautora](https://github.com/dotnet/Docs/blob/master/CONTRIBUTING.md).

@@ -2,26 +2,26 @@
 title: Jak porównać zawartość dwóch folderów (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: c7c4870e-c500-4de3-afa4-2c8e07f510e6
-ms.openlocfilehash: 9d46303068f2284415ea50c0514d76c5b2b55780
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 44dc97d6d48bed5e8b4d0376838e4dada2e8300c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346533"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169405"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>Jak porównać zawartość dwóch folderów (LINQ) (C#)
-Ten przykład ilustruje trzy sposoby porównywania dwóch list plików:  
+W tym przykładzie przedstawiono trzy sposoby porównywania dwóch aukcji plików:  
   
-- Za pomocą zapytania o wartość logiczną określającą, czy dwie listy plików są identyczne.  
+- Przez zapytanie o wartość logiczną, która określa, czy dwie listy plików są identyczne.  
   
-- Wykonując zapytania dotyczące przecięcia do pobrania plików, które znajdują się w obu folderach.  
+- Przez zapytanie do przecięcia, aby pobrać pliki, które znajdują się w obu folderach.  
   
-- Wykonując zapytania o różnicę zestawu, aby pobrać pliki znajdujące się w jednym folderze, ale nie w drugim.  
+- Przez zapytanie o różnicę zestawu, aby pobrać pliki, które znajdują się w jednym folderze, ale nie w drugim.  
   
     > [!NOTE]
-    > Techniki przedstawione w tym miejscu można dostosować do porównania sekwencji obiektów dowolnego typu.  
+    > Techniki przedstawione w tym miejscu można dostosować do porównywania sekwencji obiektów dowolnego typu.  
   
- Pokazana tutaj Klasa `FileComparer` ilustruje sposób używania niestandardowej klasy porównującej ze standardowymi operatorami zapytań. Klasa nie jest przeznaczona do użycia w rzeczywistych scenariuszach. Po prostu używa nazwy i długości w bajtach każdego pliku, aby określić, czy zawartość każdego folderu jest identyczna, czy nie. W rzeczywistym scenariuszu należy zmodyfikować tę funkcję porównującą w celu przeprowadzenia bardziej rygorystycznej kontroli równości.  
+ Klasa `FileComparer` pokazana w tym miejscu pokazuje, jak używać niestandardowej klasy porównania wraz ze standardowymi operatorami zapytań. Klasa nie jest przeznaczona do użycia w rzeczywistych scenariuszach. Po prostu używa nazwy i długości w bajtach każdego pliku, aby ustalić, czy zawartość każdego folderu są identyczne, czy nie. W scenariuszu rzeczywistym należy zmodyfikować tego porównania, aby wykonać bardziej rygorystyczne sprawdzanie równości.  
   
 ## <a name="example"></a>Przykład  
   
@@ -34,7 +34,7 @@ namespace QueryCompareTwoDirs
         static void Main(string[] args)  
         {  
   
-            // Create two identical or different temporary folders   
+            // Create two identical or different temporary folders
             // on a local drive and change these file paths.  
             string pathA = @"C:\TestDir";  
             string pathB = @"C:\TestDir2";  
@@ -64,7 +64,7 @@ namespace QueryCompareTwoDirs
                 Console.WriteLine("The two folders are not the same");  
             }  
   
-            // Find the common files. It produces a sequence and doesn't   
+            // Find the common files. It produces a sequence and doesn't
             // execute until the foreach statement.  
             var queryCommonFiles = list1.Intersect(list2, myFileCompare);  
   
@@ -111,7 +111,7 @@ namespace QueryCompareTwoDirs
                     f1.Length == f2.Length);  
         }  
   
-        // Return a hash that reflects the comparison criteria. According to the   
+        // Return a hash that reflects the comparison criteria. According to the
         // rules for IEqualityComparer<T>, if Equals is true, then the hash codes must  
         // also be equal. Because equality as defined here is a simple value equality, not  
         // reference identity, it is possible that two or more objects will produce the same  
@@ -126,9 +126,9 @@ namespace QueryCompareTwoDirs
 ```  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Utwórz projekt C# aplikacji konsolowej z `using` dyrektywami dotyczącymi przestrzeni nazw System. Linq i system.IO.  
+ Utwórz projekt aplikacji konsoli `using` C# z dyrektywami dla system.Linq i System.IO przestrzeni nazw.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [LINQ to Objects (C#)](./linq-to-objects.md)
+- [LINQ do obiektów (C#)](./linq-to-objects.md)
 - [LINQ i katalogi plików (C#)](./linq-and-file-directories.md)

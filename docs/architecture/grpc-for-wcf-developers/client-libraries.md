@@ -1,36 +1,36 @@
 ---
-title: Tworzenie bibliotek klienckich gRPC — gRPC dla deweloperów WCF
-description: Omówienie udostępnionych bibliotek klientów/pakietów dla usług gRPC Services.
+title: Tworzenie bibliotek klientów gRPC - gRPC dla programistów WCF
+description: Omówienie udostępnionych bibliotek klienckich/pakietów dla usług gRPC.
 ms.date: 09/02/2019
 ms.openlocfilehash: bb58cb3cda4b0cbb3a5d34129961349bcb0093e9
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711454"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401670"
 ---
-# <a name="create-grpc-client-libraries"></a>Tworzenie bibliotek klienckich gRPC
+# <a name="create-grpc-client-libraries"></a>Tworzenie bibliotek klientów gRPC
 
-Nie jest konieczne dystrybuowanie bibliotek klienckich dla aplikacji gRPC. Można utworzyć udostępnioną bibliotekę plików `.proto` w organizacji, a inne zespoły mogą używać tych plików do generowania kodu klienta w swoich projektach. Jeśli jednak masz prywatne repozytorium NuGet i wiele innych zespołów używa platformy .NET Core, możesz tworzyć i publikować pakiety NuGet klienta w ramach projektu usługi. Może to być dobry sposób udostępniania i promowania usługi.
+Nie jest konieczne rozpowszechnianie bibliotek klientów dla aplikacji gRPC. Można utworzyć udostępnioną `.proto` bibliotekę plików w organizacji, a inne zespoły mogą używać tych plików do generowania kodu klienta we własnych projektach. Ale jeśli masz prywatne repozytorium NuGet i wiele innych zespołów używa .NET Core, można tworzyć i publikować pakiety NuGet klienta w ramach projektu usługi. Może to być dobry sposób dzielenia się i promowania swojej usługi.
 
-Jedną z zalet dystrybucji biblioteki klienta jest możliwość udoskonalenia wygenerowanych klas gRPC i protobuf przy użyciu przydatnych metod i właściwości. W kodzie klienta, podobnie jak na serwerze, wszystkie klasy są deklarowane jako `partial`, więc można je zwiększyć bez konieczności edytowania wygenerowanego kodu. Oznacza to, że można łatwo dodać konstruktory, metody i właściwości obliczeniowe do typów podstawowych.
+Jedną z zalet dystrybucji biblioteki klienta jest to, że można zwiększyć wygenerowane klasy gRPC i Protobuf z pomocnymi metodami i właściwościami "wygody". W kodzie klienta, podobnie jak na serwerze, wszystkie klasy są zadeklarowane jako `partial`, dzięki czemu można je rozszerzyć bez edytowania wygenerowanego kodu. Oznacza to, że łatwo jest dodać konstruktory, metody i właściwości obliczeniowe do typów podstawowych.
 
 > [!CAUTION]
-> Nie należy używać niestandardowego kodu w celu zapewnienia zasadniczych funkcji. Nie chcesz ograniczyć tej funkcji do zespołów .NET, które korzystają z biblioteki udostępnionej, i nie udostępniaj jej zespołom korzystającym z innych języków lub platform, takich jak Python lub Java.
+> Nie należy używać kodu niestandardowego, aby zapewnić podstawowe funkcje. Nie chcesz ograniczać tej podstawowej funkcji do zespołów .NET, które używają biblioteki udostępnionej, i nie udostępniać jej zespołom, które używają innych języków lub platform, takich jak Python lub Java.
 
-Upewnij się, że możliwie jak najwięcej zespołów może uzyskać dostęp do usługi gRPC. Najlepszym sposobem jest udostępnienie `.proto` plików, aby deweloperzy mogli generować własnych klientów. Jest to szczególnie prawdziwe w środowisku wieloplatformowym, w którym różne zespoły często używają różnych języków programowania i struktur lub gdzie interfejs API jest dostępny zewnętrznie.
+Upewnij się, że jak najwięcej zespołów może uzyskać dostęp do usługi gRPC. Najlepszym sposobem, aby to `.proto` zrobić jest udostępnianie plików, dzięki czemu deweloperzy mogą generować własnych klientów. Jest to szczególnie prawdziwe w środowisku wielu platform, gdzie różne zespoły często używają różnych języków programowania i struktur lub gdzie interfejs API jest dostępny zewnętrznie.
 
 ## <a name="useful-extensions"></a>Przydatne rozszerzenia
 
-Istnieją dwa powszechnie używane interfejsy w programie .NET do obsługi strumieni obiektów: <xref:System.Collections.Generic.IEnumerable%601> i <xref:System.IObservable%601>. Począwszy od platformy .NET Core 3,0 C# i 8,0, istnieje <xref:System.Collections.Generic.IAsyncEnumerable%601> interfejs do przetwarzania strumieni asynchronicznie i składnia `await foreach` do korzystania z interfejsu. Ta sekcja przedstawia kod wielokrotnego użytku do zastosowania tych interfejsów do strumieni gRPC.
+Istnieją dwa powszechnie używane interfejsy w .NET do radzenia <xref:System.Collections.Generic.IEnumerable%601> <xref:System.IObservable%601>sobie ze strumieniami obiektów: i . Począwszy od .NET Core 3.0 i C# <xref:System.Collections.Generic.IAsyncEnumerable%601> 8.0, istnieje interfejs do przetwarzania `await foreach` strumieni asynchronicznie i składni za pomocą interfejsu. W tej sekcji przedstawiono kod wielokrotnego użytku do stosowania tych interfejsów do strumieni gRPC.
 
-W przypadku bibliotek klienckich programu .NET Core gRPC istnieje `ReadAllAsync` Metoda rozszerzająca `IAsyncStreamReader<T>`, która tworzy interfejs `IAsyncEnumerable<T>`. W przypadku deweloperów korzystających z samoczynnego programowania, równoważna Metoda rozszerzenia do utworzenia interfejsu `IObservable<T>` może wyglądać podobnie do przykładu w poniższej sekcji.
+Z .NET Core gRPC bibliotek klienta istnieje `ReadAllAsync` metoda `IAsyncStreamReader<T>` rozszerzenia, `IAsyncEnumerable<T>` który tworzy interfejs. Dla deweloperów korzystających z programowania reaktywnego `IObservable<T>` równoważna metoda rozszerzenia do tworzenia interfejsu może wyglądać jak w przykładzie w poniższej sekcji.
 
-### <a name="iobservable"></a>IObservable
+### <a name="iobservable"></a>Iobservable
 
-Interfejs `IObservable<T>` to "Reactive" Reverse `IEnumerable<T>`. Zamiast ściągania elementów ze strumienia, podejście reaktywne umożliwia wypychanie elementów do subskrybenta. Jest to bardzo podobne do gRPC strumieni i można łatwo otoczyć interfejs `IObservable<T>` wokół interfejsu `IAsyncStreamReader<T>`.
+Interfejs `IObservable<T>` jest "reaktywną" odwrotnością `IEnumerable<T>`. Zamiast ściągać elementy ze strumienia, podejście reaktywne umożliwia przepływanie elementów strumienia do subskrybenta. Jest to bardzo podobne do strumieni gRPC i łatwo `IObservable<T>` jest `IAsyncStreamReader<T>` owinąć interfejs wokół interfejsu.
 
-Ten kod jest dłuższy niż kod `IAsyncEnumerable<T>`, ponieważ C# nie ma wbudowaną obsługę pracy z observables. Musisz ręcznie utworzyć klasę implementacji. Jest to Klasa generyczna, dlatego jedna implementacja działa dla wszystkich typów.
+Ten kod jest `IAsyncEnumerable<T>` dłuższy niż kod, ponieważ c# nie ma wbudowanej obsługi pracy z obserwowalnych. Musisz ręcznie utworzyć klasę implementacji. Jest to klasa ogólna, więc pojedyncza implementacja działa we wszystkich typach.
 
 ```csharp
 using System;
@@ -63,9 +63,9 @@ namespace Grpc.Core
 ```
 
 > [!IMPORTANT]
-> Ta zazauważalna implementacja umożliwia wywoływanie metody `Subscribe` tylko raz, ponieważ wielu subskrybentów próbujących odczytać dane ze strumienia spowodowałaby chaos. Istnieją operatory, takie jak `Replay` w [System. Reactive. LINQ](https://www.nuget.org/packages/System.Reactive.Linq), które umożliwiają buforowanie i powtarzanie udostępniania observables, które mogą być używane z tą implementacją.
+> Ta obserwowana `Subscribe` implementacja umożliwia metodę, która ma być wywoływana tylko raz, ponieważ posiadanie wielu subskrybentów próbujących odczytać ze strumienia spowodowałoby chaos. Istnieją operatory, `Replay` takie jak [system.Reactive.Linq](https://www.nuget.org/packages/System.Reactive.Linq), które umożliwiają buforowanie i powtarzalne udostępnianie obserwowalnych, które mogą być używane z tą implementacją.
 
-Klasa `GrpcStreamSubscription` obsługuje Wyliczenie `IAsyncStreamReader`:
+Klasa `GrpcStreamSubscription` obsługuje wyliczenie `IAsyncStreamReader`:
 
 ```csharp
 public class GrpcStreamSubscription : IDisposable
@@ -127,7 +127,7 @@ public class GrpcStreamSubscription : IDisposable
 }
 ```
 
-Wszystkie wymagane teraz jest prostą metodą rozszerzenia, aby można było uzyskać zauważalność z czytnika strumienia.
+Wszystko, co jest wymagane teraz jest prosta metoda rozszerzenia, aby utworzyć obserwowalne z czytnika strumienia.
 
 ```csharp
 using System;
@@ -147,8 +147,8 @@ namespace Grpc.Core
 
 ## <a name="summary"></a>Podsumowanie
 
-Modele `IAsyncEnumerable` i `IObservable` są dobrze obsługiwane i dobrze udokumentowane sposoby postępowania z asynchronicznymi strumieniami danych w programie .NET. gRPC strumienie są dobrze mapowane w obu odmianach, oferując bliską integrację z programem .NET Core oraz z aktywnymi i asynchronicznymi stylami programowania.
+Modele `IAsyncEnumerable` `IObservable` i są dobrze obsługiwane i dobrze udokumentowane sposoby radzenia sobie z asynchronicznych strumieni danych w .NET. Strumienie gRPC dobrze mapują zarówno paradygmaty, oferując ścisłą integrację z .NET Core, jak i reaktywne i asynchroniczne style programowania.
 
 >[!div class="step-by-step"]
->[Poprzednie](streaming-versus-repeated.md)
->[dalej](security.md)
+>[Poprzedni](streaming-versus-repeated.md)
+>[następny](security.md)

@@ -1,27 +1,27 @@
 ---
-title: Jak znaleźć elementy pokrewne (XPath-LINQ to XML) (C#)
+title: Jak znaleźć powiązane elementy (XPath-LINQ do XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 41b386ee-562d-4841-bd6b-e44a7eb69f26
-ms.openlocfilehash: cdc281d0b08ee7b7f93ac28b14e82fa113a3379d
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: f74c338019c0451ab5e3ac0d8da10392ae5601ed
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141032"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169236"
 ---
-# <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a>Jak znaleźć elementy pokrewne (XPath-LINQ to XML) (C#)
-W tym temacie pokazano, jak uzyskać element, wybierając atrybut, który jest określany przez wartość innego elementu.  
+# <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a>Jak znaleźć powiązane elementy (XPath-LINQ do XML) (C#)
+W tym temacie pokazano, jak uzyskać element wybierający atrybut, do której odnosi się wartość innego elementu.  
   
- Wyrażenie XPath:  
+ Wyrażenie XPath jest następujące:  
   
  `.//Customer[@CustomerID=/Root/Orders/Order[12]/CustomerID]`  
   
 ## <a name="example"></a>Przykład  
- Ten przykład znajduje 12 `Order` elementu, a następnie wyszukuje klienta dla tej kolejności.  
+ W tym przykładzie znajduje `Order` 12 element, a następnie znajduje nabywcy dla tego zamówienia.  
   
- Należy zauważyć, że indeksowanie do listy w .NET jest oparte na "zero". Indeksowanie do kolekcji węzłów w predykacie XPath jest oparte na "jednej". Ten przykład odzwierciedla tę różnicę.  
+ Należy zauważyć, że indeksowanie do listy w .NET jest oparte na "zero". Indeksowanie do kolekcji węzłów w predykatxPath jest "jeden" na podstawie. Ten przykład odzwierciedla tę różnicę.  
   
- W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: Customers i Orders (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ W tym przykładzie użyto następującego dokumentu XML: [Przykładowy plik XML: Klienci i zamówienia (LINQ do XML).](./sample-xml-file-customers-and-orders-linq-to-xml-2.md)  
   
 ```csharp  
 XDocument co = XDocument.Load("CustomersOrders.xml");  
@@ -83,4 +83,3 @@ Results are identical
   </FullAddress>  
 </Customer>  
 ```  
- 

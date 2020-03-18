@@ -2,19 +2,19 @@
 title: Jak podzielić plik na wiele plików przy użyciu grup (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-ms.openlocfilehash: 934b6385a8634c23a4e29098367c9aaa7355f11c
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 654b444c26f2868c4e2b0e2893a639ebc6cacabf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347319"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168573"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>Jak podzielić plik na wiele plików przy użyciu grup (LINQ) (C#)
-Ten przykład pokazuje jeden ze sposobów, aby scalić zawartość dwóch plików, a następnie utworzyć zestaw nowych plików, które organizują dane w nowy sposób.  
+W tym przykładzie przedstawiono jeden sposób scalania zawartości dwóch plików, a następnie tworzenia zestawu nowych plików, które organizują dane w nowy sposób.  
   
 ### <a name="to-create-the-data-files"></a>Aby utworzyć pliki danych  
   
-1. Skopiuj te nazwy do pliku tekstowego o nazwie names1. txt i Zapisz go w folderze projektu:  
+1. Skopiuj te nazwy do pliku tekstowego o nazwie names1.txt i zapisz je w folderze projektu:  
   
     ```text  
     Bankov, Peter  
@@ -29,7 +29,7 @@ Ten przykład pokazuje jeden ze sposobów, aby scalić zawartość dwóch plikó
     Garcia, Debra  
     ```  
   
-2. Skopiuj te nazwy do pliku tekstowego o nazwie names2. txt i Zapisz go w folderze projektu: należy pamiętać, że te dwa pliki mają nazwy wspólne.  
+2. Skopiuj te nazwy do pliku tekstowego o nazwie names2.txt i zapisz je w folderze projektu: Należy pamiętać, że oba pliki mają kilka nazw wspólnych.  
   
     ```text  
     Liu, Jinghao  
@@ -92,7 +92,7 @@ class SplitWithGroups
         Console.ReadKey();  
     }  
 }  
-/* Output:   
+/* Output:
     A  
        Aw, Kam Foo  
     B  
@@ -122,13 +122,13 @@ class SplitWithGroups
  */  
 ```  
   
- Program zapisuje oddzielny plik dla każdej grupy w tym samym folderze co pliki danych.  
+ Program zapisuje osobny plik dla każdej grupy w tym samym folderze co pliki danych.  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu
 
-Utwórz projekt C# aplikacji konsolowej z `using` dyrektywami dotyczącymi przestrzeni nazw System. Linq i system.IO.
+Utwórz projekt aplikacji konsoli `using` C# z dyrektywami dla system.Linq i System.IO przestrzeni nazw.
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [LINQ i ciągi (C#)](./linq-and-strings.md)
 - [LINQ i katalogi plików (C#)](./linq-and-file-directories.md)

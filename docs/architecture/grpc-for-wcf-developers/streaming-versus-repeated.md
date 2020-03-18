@@ -1,42 +1,42 @@
 ---
-title: Usługi przesyłania strumieniowego a powtarzalne pola — gRPC dla deweloperów WCF
-description: Porównaj powtarzane pola z usługami przesyłania strumieniowego jako metody przekazywania kolekcji danych przy użyciu gRPC.
+title: Usługi przesyłania strumieniowego a powtarzające się pola - gRPC dla deweloperów WCF
+description: Porównaj powtarzające się pola z usługami przesyłania strumieniowego jako sposoby przekazywania kolekcji danych przy użyciu gRPC.
 ms.date: 09/02/2019
-ms.openlocfilehash: 0e717df57ba2bb52d63a063072d8a45bf0f7e395
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 542ebc393f9c9c1ad717d02d01fab33d85c18917
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503373"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79147753"
 ---
-# <a name="grpc-streaming-services-vs-repeated-fields"></a>gRPC Streaming Services a powtórzone pola
+# <a name="grpc-streaming-services-vs-repeated-fields"></a>Usługi przesyłania strumieniowego gRPC a powtarzające się pola
 
-usługi gRPC zapewniają dwa sposoby zwracania zestawów danych lub listy obiektów. Specyfikacja komunikatów buforów protokołu używa słowa kluczowego `repeated` do deklarowania list lub tablic komunikatów w innym komunikacie. Specyfikacja usługi gRPC używa słowa kluczowego `stream`, aby zadeklarować długotrwałe połączenie trwałe. Za pośrednictwem tego połączenia są wysyłane wiele komunikatów i mogą być przetwarzane pojedynczo. 
+Usługi gRPC zapewniają dwa sposoby zwracania zestawów danych lub listy obiektów. Specyfikacja komunikatu Bufory `repeated` protokołu używa słowa kluczowego do deklarowania list lub tablic wiadomości w ramach innej wiadomości. Specyfikacja usługi gRPC `stream` używa słowa kluczowego do deklarowania długotrwałego połączenia trwałego. Za pomocą tego połączenia wiele wiadomości są wysyłane i mogą być przetwarzane, indywidualnie.
 
-Można również użyć funkcji `stream` w przypadku długotrwałych danych czasowych, takich jak powiadomienia lub komunikaty dziennika. Jednak ten rozdział rozważy jego użycie do zwrócenia jednego zestawu danych.
+Można również użyć `stream` tej funkcji dla długotrwałych danych czasowych, takich jak powiadomienia lub komunikaty dziennika. Ale ten rozdział rozważy jego użycie do zwracania pojedynczego zestawu danych.
 
-Którego należy użyć, zależy od następujących czynników:
+Którego należy użyć, zależy od takich czynników, jak:
 
-- Całkowity rozmiar zestawu danych.
-- Czas, jaki zajęło utworzenie zestawu danych na końcu klienta lub serwera.
-- Czy konsument zestawu danych może rozpocząć od razu, jak tylko pierwszy element jest dostępny, lub wymaga kompletny zestaw danych, aby zrobić coś użyteczne.
+- Ogólny rozmiar zestawu danych.
+- Czas, który trzeba było utworzyć zestaw danych na końcu klienta lub serwera.
+- Czy konsument zestawu danych może rozpocząć działanie na nim tak szybko, jak pierwszy element jest dostępny lub potrzebuje pełnego zestawu danych, aby zrobić coś pożytecznego.
 
 ## <a name="when-to-use-repeated-fields"></a>Kiedy używać `repeated` pól
 
-Dla dowolnego zestawu danych, który jest ograniczony do rozmiaru i który może zostać wygenerowany w całości w krótkim czasie — powiedzmy, poniżej jednej sekundy — należy użyć pola `repeated` w zwykłym komunikacie protobuf. Na przykład w systemie handlu elektronicznego, aby utworzyć listę elementów w ramach zamówienia, prawdopodobnie szybko i lista nie będzie bardzo duża. Zwracanie pojedynczej wiadomości z polem `repeated` jest kolejnością większą niż użycie `stream` i powoduje mniejsze obciążenie sieci.
+W przypadku każdego zestawu danych, który jest ograniczony rozmiarem i który może być generowany w całości w krótkim `repeated` czasie — powiedzmy, poniżej jednej sekundy — należy użyć pola w zwykłej wiadomości Protobuf. Na przykład w systemie e-commerce, aby zbudować listę elementów w zamówieniu jest prawdopodobnie szybkie, a lista nie będzie bardzo duża. Zwracanie pojedynczej wiadomości `repeated` z polem jest o `stream` rząd wielkości szybciej niż przy użyciu i wiąże się z mniejszym obciążeniem sieciowym.
 
-Jeśli klient potrzebuje wszystkich danych przed rozpoczęciem przetwarzania, a zestaw danych jest wystarczająco mały, aby utworzyć w pamięci, należy rozważyć użycie pola `repeated`. Należy wziąć pod uwagę, nawet jeśli Tworzenie zestawu danych w pamięci na serwerze jest wolniejsze.
+Jeśli klient potrzebuje wszystkich danych przed rozpoczęciem przetwarzania go, a zestaw danych jest `repeated` wystarczająco mały, aby skonstruować w pamięci, należy rozważyć użycie pola. Należy wziąć pod uwagę, nawet jeśli tworzenie zestawu danych w pamięci na serwerze jest wolniejsze.
 
-## <a name="when-to-use-stream-methods"></a>Kiedy należy używać metod `stream`
+## <a name="when-to-use-stream-methods"></a>Kiedy stosować `stream` metody
 
-Gdy obiekty komunikatów w zestawach danych są potencjalnie bardzo duże, najlepszym rozwiązaniem jest przeniesienie ich przy użyciu żądań lub odpowiedzi przesyłania strumieniowego. Bardziej wydajne jest konstruowanie dużego obiektu w pamięci, zapisanie go w sieci, a następnie zwolnienie zasobów. Takie podejście poprawi skalowalność usługi.
+Gdy obiekty wiadomości w zestawach danych są potencjalnie bardzo duże, najlepiej jest przenieść je przy użyciu żądań przesyłania strumieniowego lub odpowiedzi. Bardziej efektywne jest konstruowanie dużego obiektu w pamięci, zapisywanie go w sieci, a następnie zwalnianie zasobów. Takie podejście poprawi skalowalność usługi.
 
-Podobnie należy wysyłać zestawy danych o nieograniczonej wielkości nad strumieniami, aby uniknąć wyczerpania pamięci podczas konstruowania ich.
+Podobnie należy wysyłać zestawy danych o nieograniczonym rozmiarze przez strumienie, aby uniknąć wyczerpania pamięci podczas konstruowania ich.
 
-W przypadku zestawów danych, w których konsument może osobno przetwarzać każdy element, należy rozważyć użycie strumienia, jeśli oznacza to, że ten postęp może zostać wskazany użytkownikowi. Użycie strumienia może zwiększyć czas odpowiedzi aplikacji, ale należy zrównoważyć ją względem ogólnej wydajności aplikacji.
+W przypadku zestawów danych, w których konsument może oddzielnie przetwarzać każdy element, należy rozważyć użycie strumienia, jeśli oznacza to, że postęp może być wskazany użytkownikowi. Za pomocą strumienia można poprawić czas reakcji aplikacji, ale należy zrównoważyć go z ogólną wydajność aplikacji.
 
-Innym scenariuszem, w którym strumienie mogą być przydatne, jest to, że komunikat jest przetwarzany przez wiele usług. Jeśli każda usługa w łańcuchu zwraca strumień, usługa terminala (czyli Ostatnia z nich w łańcuchu) może rozpocząć Zwracanie komunikatów. Te komunikaty mogą być przetwarzane i przesyłane z powrotem do pierwotnego obiektu żądającego. Obiekt żądający może zwrócić strumień lub agregować wyniki w pojedynczym komunikacie odpowiedzi. Takie podejście pozwala sobie dobrze na wzorce, takie jak MapReduce.
+Innym scenariuszem, w którym strumienie mogą być przydatne jest, gdy komunikat jest przetwarzany w wielu usługach. Jeśli każda usługa w łańcuchu zwraca strumień, usługa terminalowa (czyli ostatnia w łańcuchu) może rozpocząć zwracanie wiadomości. Te wiadomości mogą być przetwarzane i przekazywane z powrotem wzdłuż łańcucha do oryginalnego żądaczy. Żądającego można zwrócić strumień lub agregować wyniki w jednej wiadomości odpowiedzi. Takie podejście nadaje się również do wzorców, takich jak MapReduce.
 
 >[!div class="step-by-step"]
->[Poprzednie](migrate-duplex-services.md)
->[dalej](client-libraries.md)
+>[Poprzedni](migrate-duplex-services.md)
+>[następny](client-libraries.md)

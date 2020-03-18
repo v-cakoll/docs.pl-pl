@@ -9,42 +9,42 @@ helpviewer_keywords:
 - overloaded operators
 ms.assetid: 37585bf2-4c27-4dee-849a-af70e3338cc1
 ms.openlocfilehash: 0999e94c8d77396b237522e89c51206ce1226718
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743686"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79400569"
 ---
 # <a name="operator-overloads"></a>Przeciążenia operatorów
-Przeciążenia operatorów pozwalają na wyświetlanie typów struktur, tak jakby były wbudowane jako elementy pierwotne języka.
+Przeciążenia operatorów umożliwiają typy struktury, które mają być wyświetlane tak, jakby były wbudowane prymitywy języka.
 
- Chociaż dozwolone i przydatne w niektórych sytuacjach, przeciążenia operatorów powinny być stosowane ostrożnie. Istnieje wiele przypadków, w których przeciążanie operatora zostało nadmiarowe, na przykład gdy projektanci struktury zaczynali używać operatorów dla operacji, które powinny być prostymi metodami. Poniższe wskazówki powinny pomóc określić, kiedy i jak należy używać przeciążania operatora.
+ Mimo że dozwolone i przydatne w niektórych sytuacjach, przeciążenia operatora powinny być używane ostrożnie. Istnieje wiele przypadków, w których przeciążenie operatora zostało nadużywane, na przykład gdy projektanci struktury zaczęli używać operatorów do operacji, które powinny być prostymi metodami. Poniższe wskazówki powinny pomóc w podjęciu decyzji, kiedy i jak używać przeciążenia operatora.
 
- ❌ uniknąć definiowania przeciążeń operatora, z wyjątkiem typów, które powinny być takie jak typy pierwotne (wbudowane).
+ ❌UNIKAJ definiowania przeciążeń operatora, z wyjątkiem typów, które powinny czuć się jak typy pierwotne (wbudowane).
 
- ✔️ ROZWAŻYĆ Definiowanie przeciążeń operatora w typie, który powinien być taki sam jak typ pierwotny.
+ ✔️ ROZWAŻ definiowanie przeciążeń operatora w typie, który powinien czuć się jak typ pierwotny.
 
- Na przykład <xref:System.String?displayProperty=nameWithType> ma zdefiniowane `operator==` i `operator!=`.
+ Na przykład <xref:System.String?displayProperty=nameWithType> `operator==` ma `operator!=` i zdefiniowane.
 
- ✔️ definiują przeciążenia operatorów w strukturach reprezentujących liczby (takie jak <xref:System.Decimal?displayProperty=nameWithType>).
+ ✔️ Zdefiniuj przeciążenia operatora w <xref:System.Decimal?displayProperty=nameWithType>strukturach reprezentujących liczby (takie jak ).
 
- ❌ nie urocze podczas definiowania przeciążeń operatora.
+ ❌NIE bądź uroczy podczas definiowania przeciążeń operatora.
 
- Przeciążanie operatora jest przydatne w przypadkach, w których jest od razu oczywisty, co jest wynikiem operacji. Na przykład warto mieć możliwość odejmowania jednego <xref:System.DateTime> od innego `DateTime` i uzyskania <xref:System.TimeSpan>. Nie jest jednak konieczne użycie operatora Union Logical do złożenia dwóch zapytań bazy danych lub użycie operatora przesunięcia do zapisu w strumieniu.
+ Przeciążenie operatora jest przydatne w przypadkach, w których od razu jest oczywiste, jaki będzie wynik operacji. Na przykład, to ma sens, aby <xref:System.DateTime> móc `DateTime` odjąć <xref:System.TimeSpan>jeden od drugiego i uzyskać . Jednak nie jest właściwe użycie operatora unii logicznej do unii dwóch kwerend bazy danych lub użyć operatora shift do zapisu do strumienia.
 
- ❌ nie zapewniają przeciążeń operatora, chyba że co najmniej jeden z operandów ma typ definiujący Przeciążenie.
+ ❌NIE należy podawać przeciążenia operatora, chyba że co najmniej jeden z operandów jest typu definiującego przeciążenie.
 
- ✔️ przeciążać operatory w sposób symetryczny.
+ ✔️ DO operatorów przeciążenia w sposób symetryczny.
 
- Na przykład w przypadku przeciążenia `operator==`należy również przeciążyć `operator!=`. Podobnie w przypadku przeciążenia `operator<`należy również przeciążać `operator>`i tak dalej.
+ Na przykład, jeśli przeciążenie `operator==`, należy `operator!=`również przeciążyć . Podobnie, jeśli przeciążysz `operator<`, należy również `operator>`przeciążyć , i tak dalej.
 
- ✔️ Rozważ dostarczenie metod o przyjaznych nazwach odpowiadających każdemu przeciążonemu operatorowi.
+ ✔️ ROZWAŻ dostarczenie metod o przyjaznych nazwach, które odpowiadają każdemu przeciążonemu operatorowi.
 
- Wiele języków nie obsługuje przeciążania operatora. Z tego powodu zaleca się, aby typy, które zawierają operatory przeciążeń, uwzględniają dodatkową metodę z odpowiednią nazwą domeny, która zapewnia równorzędną funkcjonalność.
+ Wiele języków nie obsługuje przeciążenia operatora. Z tego powodu zaleca się, że typy, które przeciążenia operatory zawierają metodę pomocniczą o odpowiedniej nazwie specyficznej dla domeny, która zapewnia równoważne funkcje.
 
- Poniższa tabela zawiera listę operatorów i odpowiednich przyjaznych nazw metod.
+ Poniższa tabela zawiera listę operatorów i odpowiadające im nazwy metod przyjaznych.
 
-|C#Symbol operatora|Nazwa metadanych|Przyjazna nazwa|
+|Symbol operatora Języka C#|Nazwa metadanych|Przyjazna nazwa|
 |-------------------------|-------------------|-------------------|
 |`N/A`|`op_Implicit`|`To<TypeName>/From<TypeName>`|
 |`N/A`|`op_Explicit`|`To<TypeName>/From<TypeName>`|
@@ -85,33 +85,33 @@ Przeciążenia operatorów pozwalają na wyświetlanie typów struktur, tak jakb
 |`+ (unary)`|`op_UnaryPlus`|`Plus`|
 |`~`|`op_OnesComplement`|`OnesComplement`|
 
-### <a name="overloading-operator-"></a>Przeciążanie operatora = =
- Przeciążenie `operator ==` jest dość skomplikowane. Semantyka operatora musi być zgodna z kilkoma innymi elementami członkowskimi, takimi jak <xref:System.Object.Equals%2A?displayProperty=nameWithType>.
+### <a name="overloading-operator-"></a>Operator przeciążenia ==
+ Przeciążenie `operator ==` jest dość skomplikowane. Semantyka operatora musi być zgodna z kilkoma innymi <xref:System.Object.Equals%2A?displayProperty=nameWithType>członkami, takimi jak .
 
 ### <a name="conversion-operators"></a>Operatory konwersji
- Operatory konwersji to operatory jednoargumentowe, które umożliwiają konwersję z jednego typu na drugi. Operatory muszą być zdefiniowane jako statyczne elementy członkowskie dla operandu lub typu zwracanego. Istnieją dwa typy operatorów konwersji: niejawne i jawne.
+ Operatory konwersji są operatorami jednoargumentowymi, które umożliwiają konwersję z jednego typu na inny. Operatory muszą być zdefiniowane jako statyczne elementy członkowskie na operand lub typu zwracane. Istnieją dwa typy operatorów konwersji: niejawne i jawne.
 
- ❌ nie zapewniają operatora konwersji, jeśli taka konwersja nie jest wyraźnie oczekiwana przez użytkowników końcowych.
+ ❌NIE udostępniaj operatora konwersji, jeśli taka konwersja nie jest wyraźnie oczekiwana przez użytkowników końcowych.
 
- ❌ nie definiują operatorów konwersji poza domeną typu.
+ ❌NIE definiuj operatorów konwersji poza domeną typu.
 
- Na przykład <xref:System.Int32>, <xref:System.Double>i <xref:System.Decimal> to wszystkie typy liczbowe, natomiast <xref:System.DateTime> nie jest. W związku z tym nie powinien istnieć operator konwersji do konwersji `Double(long)` na `DateTime`. Konstruktor jest preferowany w takich przypadkach.
+ Na przykład <xref:System.Int32> <xref:System.Double>, <xref:System.Decimal> , i są wszystkie <xref:System.DateTime> typy liczbowe, podczas gdy nie jest. W związku z tym nie powinno `Double(long)` być `DateTime`operator konwersji do konwersji na . Konstruktor jest preferowany w takim przypadku.
 
- ❌ nie zapewniają operatora niejawnej konwersji, jeśli konwersja jest potencjalnie stratna.
+ ❌NIE udostępniaj niejawnego operatora konwersji, jeśli konwersja jest potencjalnie stratna.
 
- Na przykład nie powinna być niejawna konwersja z `Double` na `Int32`, ponieważ `Double` ma szerszy zakres niż `Int32`. Jawny Operator konwersji można podać, nawet jeśli konwersja jest potencjalnie stratna.
+ Na przykład nie powinno być niejawna `Double` konwersja z `Int32` `Double` powodu `Int32` ma szerszy zakres niż . Operator konwersji jawnej można podać, nawet jeśli konwersja jest potencjalnie stratna.
 
- ❌ nie generować wyjątków z rzutów niejawnych.
+ ❌NIE zgłaszaj wyjątków od rzutów niejawnych.
 
- Bardzo trudne jest, aby użytkownicy końcowi wiedzieli, co się dzieje, ponieważ mogą nie wiedzieć, że odbywa się konwersja.
+ Jest to bardzo trudne dla użytkowników końcowych, aby zrozumieć, co się dzieje, ponieważ mogą nie być świadomi, że konwersja ma miejsce.
 
- ✔️ DO throw <xref:System.InvalidCastException?displayProperty=nameWithType>, jeśli wywołanie do operatora rzutowania skutkuje konwersją stratną, a kontrakt operatora nie zezwala na konwersje stratne.
+ ✔️ czy <xref:System.InvalidCastException?displayProperty=nameWithType> rzucać, jeśli wywołanie odlewanego operatora powoduje stratną konwersję, a umowa operatora nie zezwala na straty konwersji.
 
- *Fragmenty © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*
+ *Części © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*
 
- *Ponownie Wydrukowano przez uprawnienie Pearson Education, Inc. z [wytycznych dotyczących projektowania platformy: konwencje, idiomy i wzorce dla bibliotek .NET do wielokrotnego użytku, 2. wydanie](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) przez Krzysztof Cwalina i Brad Abrams, opublikowane 22, 2008 przez Addison-Wesley Professional w ramach serii Microsoft Windows Development.*
+ *Przedruk za zgodą Pearson Education, Inc. z [Framework Design Guidelines: Conventions, Idioms i Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) autorstwa Krzysztofa Cwaliny i Brada Abramsa, opublikowane 22 października 2008 przez Addison-Wesley Professional w ramach serii Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Element członkowski — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/member.md)
 - [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)

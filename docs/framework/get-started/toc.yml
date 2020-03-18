@@ -5,7 +5,7 @@
       href: overview.md
     - name: Program .NET Framework i wydania poza harmonogramem (OOB)
       href: the-net-framework-and-out-of-band-releases.md
-    - name: Oprogramowanie .NET Core i Open-Source
+    - name: Oprogramowanie .NET Core i open-source
       href: net-core-and-open-source.md
     - name: Wymagania systemowe
       href: system-requirements.md

@@ -1,21 +1,21 @@
 ---
-title: Jak pobrać wartość elementu (LINQ to XML) (C#)
+title: Jak pobrać wartość elementu (LINQ do XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4228c007-07c9-4cf2-a45b-e7074c109581
-ms.openlocfilehash: 775e7282408910cc06b7d660d84cb6f80ef47949
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 6f2d355eac9914cd4c03d3a4521992b346b92f0b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347419"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168690"
 ---
-# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a>Jak pobrać wartość elementu (LINQ to XML) (C#)
-W tym temacie pokazano, jak uzyskać wartość elementów. Istnieją dwa podstawowe sposoby wykonania tej czynności. Jednym ze sposobów jest rzutowanie <xref:System.Xml.Linq.XElement> lub <xref:System.Xml.Linq.XAttribute> na żądany typ. Operator jawnej konwersji konwertuje zawartość elementu lub atrybutu do określonego typu i przypisuje go do zmiennej. Alternatywnie można użyć właściwości <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> lub właściwości <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType>.  
+# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a>Jak pobrać wartość elementu (LINQ do XML) (C#)
+W tym temacie pokazano, jak uzyskać wartość elementów. Istnieją dwa główne sposoby, aby to zrobić. Jednym ze sposobów <xref:System.Xml.Linq.XElement> jest <xref:System.Xml.Linq.XAttribute> rzut lub do żądanego typu. Operator konwersji jawnej następnie konwertuje zawartość elementu lub atrybutu na określony typ i przypisuje go do zmiennej. Goście mogą również korzystać <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> z <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> obiektu lub obiektu.  
   
- C#Jednakże Rzutowanie jest ogólnie lepszym rozwiązaniem. Jeśli przerzutuje element lub atrybut na typ dopuszczający wartość null, kod jest łatwiejszy do zapisu podczas pobierania wartości elementu (lub atrybutu), który może lub nie istnieje. W ostatnim przykładzie w tym temacie pokazano, jak to zrobić. Nie można jednak ustawić zawartości elementu przez rzutowanie, jak można za pomocą właściwości <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType>.  
+ Z C#, jednak casting jest na ogół lepszym podejściem. Jeśli rzutowane elementu lub atrybutu do typu nullable, kod jest prostsze do zapisu podczas pobierania wartości elementu (lub atrybutu), które mogą lub nie mogą istnieć. Ostatni przykład w tym temacie pokazuje to. Jednak nie można ustawić zawartość elementu za pomocą rzutowania, jak można za pośrednictwem <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> właściwości.  
   
 ## <a name="example"></a>Przykład  
- Aby pobrać wartość elementu, należy po prostu rzutować obiekt <xref:System.Xml.Linq.XElement> na żądany typ. Można zawsze rzutować element na ciąg w następujący sposób:  
+ Aby pobrać wartość elementu, wystarczy rzutować <xref:System.Xml.Linq.XElement> obiekt do żądanego typu. Zawsze można rzutować element na ciąg, w następujący sposób:  
   
 ```csharp  
 XElement e = new XElement("StringElement", "abcde");  
@@ -31,7 +31,7 @@ Value of e:abcde
 ```  
   
 ## <a name="example"></a>Przykład  
- Można również rzutować elementy do typów innych niż ciąg. Na przykład jeśli masz element zawierający liczbę całkowitą, możesz rzutować go na `int`, jak pokazano w poniższym kodzie:  
+ Można również rzutować elementy do typów innych niż ciąg. Na przykład jeśli masz element, który zawiera całkowitą, można `int`rzutować go do , jak pokazano w następującym kodzie:  
   
 ```csharp  
 XElement e = new XElement("Age", "44");  
@@ -46,15 +46,15 @@ Console.WriteLine("Value of e:" + (int)e);
 Value of e:44  
 ```  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zapewnia jawne Operatory rzutowania dla następujących typów danych: `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?`, `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID`i `GUID?`.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]zapewnia operatory oddanych jawnie `string` `bool`dla `bool?` `int`następujących `int?` `uint`typów `uint?` `long`danych: , , , `decimal` `decimal?`, `DateTime` `DateTime?`, `TimeSpan` `TimeSpan?`, `GUID`, `GUID?` `long?` `ulong` `ulong?` `float`, , `float?`, `double`, `double?`, , , , i .  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zapewnia te same Operatory rzutowania dla obiektów <xref:System.Xml.Linq.XAttribute>.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]zapewnia te same <xref:System.Xml.Linq.XAttribute> operatory rzutów dla obiektów.  
   
 ## <a name="example"></a>Przykład  
- Za pomocą właściwości <xref:System.Xml.Linq.XElement.Value%2A> można pobrać zawartość elementu:  
+ Właściwość służy <xref:System.Xml.Linq.XElement.Value%2A> do pobierania zawartości elementu:  
   
 ```csharp  
-XElement e = new XElement("StringElement", "abcde");   
+XElement e = new XElement("StringElement", "abcde");
 Console.WriteLine(e);  
 Console.WriteLine("Value of e:" + e.Value);  
 ```  
@@ -67,7 +67,7 @@ Value of e:abcde
 ```  
   
 ## <a name="example"></a>Przykład  
- Czasami próbujesz pobrać wartość elementu, chociaż nie masz pewności, że istnieje. W tym przypadku, gdy przypiszesz element rzutowany do typu dopuszczającego wartość null (albo `string` lub jeden z typów dopuszczających wartość null w .NET Framework), jeśli element nie istnieje, przypisana zmienna jest po prostu ustawiona na `null`. Poniższy kod pokazuje, że gdy element może lub nie istnieje, łatwiej jest użyć rzutowania, aby użyć właściwości <xref:System.Xml.Linq.XElement.Value%2A>.  
+ Czasami próbujesz pobrać wartość elementu, nawet jeśli nie masz pewności, że istnieje. W takim przypadku po przypisaniu casted element do `string` typu nullable (lub jeden z typów nullable w .NET Framework), jeśli `null`element nie istnieje przypisane zmiennej jest po prostu ustawiona na . Poniższy kod pokazuje, że gdy element może lub nie może istnieć, <xref:System.Xml.Linq.XElement.Value%2A> łatwiej jest używać rzutowania niż do korzystania z właściwości.  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -143,8 +143,8 @@ v3:element does not exist
 v4:element does not exist  
 ```  
   
- Ogólnie rzecz biorąc, można napisać łatwiejszy kod podczas używania rzutowania do pobrania zawartości elementów i atrybutów.  
+ Ogólnie rzecz biorąc można napisać prostszy kod podczas używania rzutowania do pobierania zawartości elementów i atrybutów.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Osie LINQ to XML (C#)](./linq-to-xml-axes-overview.md)
+- [LINQ do osi XML (C#)](./linq-to-xml-axes-overview.md)

@@ -61,7 +61,7 @@
                   items:
                     - name: 'Instrukcje: Wdrażanie asynchronicznej operacji usługi'
                       href: how-to-implement-an-asynchronous-service-operation.md
-                - name: Reliable Services
+                - name: Niezawodne usługi
                   href: reliable-services.md
                 - name: Usługi i transakcje
                   href: services-and-transactions.md

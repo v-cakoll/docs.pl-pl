@@ -1,21 +1,21 @@
 ---
 title: Rekordy anonimowe
-description: Dowiedz się, jak korzystać z metod tworzenia i używania rekordów anonimowych oraz funkcji języka, która ułatwia manipulowanie danymi.
+description: Dowiedz się, jak używać funkcji tworzenia i używania rekordów anonimowych, funkcji języka, która pomaga w manipulowaniu danymi.
 ms.date: 06/12/2019
-ms.openlocfilehash: 061fd3279c84b9a3161c687d9392947ee7ce9c83
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: ef3aa8fccdb6ff406542932816e4138040845a59
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77453029"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79187492"
 ---
 # <a name="anonymous-records"></a>Rekordy anonimowe
 
-Rekordy anonimowe to proste Agregowanie wartości nazwanych, które nie muszą być deklarowane przed użyciem. Można zadeklarować je jako struktury lub typy referencyjne. Domyślnie są to typy odwołań.
+Rekordy anonimowe są proste agregaty nazwanych wartości, które nie muszą być zadeklarowane przed użyciem. Można zadeklarować je jako struktury lub typy odwołań. Są to domyślnie typy odwołań.
 
 ## <a name="syntax"></a>Składnia
 
-W poniższych przykładach przedstawiono składnię rekordu anonimowego. Elementy rozdzielane jako `[item]` są opcjonalne.
+W poniższych przykładach przedstawiono składnię rekordu anonimowego. Elementy rozdzielone jako `[item]` opcjonalne.
 
 ```fsharp
 // Construct an anonymous record
@@ -28,11 +28,11 @@ let value-name = Type-Name<[struct] {| Label1: Type1; Label2: Type2; ...|}>
 let function-name (arg-name: [struct] {| Label1: Type1; Label2: Type2; ...|}) ...
 ```
 
-## <a name="basic-usage"></a>Podstawowe użycie
+## <a name="basic-usage"></a>Podstawowy sposób użycia
 
-Rekordy anonimowe najlepiej rozumieją się F# jako typy rekordów, które nie muszą być zadeklarowane przed utworzeniem wystąpienia.
+Rekordy anonimowe są najlepiej traktowane jako typy rekordów F#, które nie muszą być zadeklarowane przed wystąpieniem.
 
-Na przykład, w jaki sposób można korzystać z funkcji, która generuje rekord anonimowy:
+Na przykład w tym miejscu, jak można wchodzić w interakcje z funkcją, która tworzy rekord anonimowy:
 
 ```fsharp
 open System
@@ -50,7 +50,7 @@ printfn "Circle with radius: %f has diameter %f, area %f, and circumference %f"
     r stats.Diameter stats.Area stats.Circumference
 ```
 
-Poniższy przykład rozszerza na poprzednią wartość za pomocą funkcji `printCircleStats`, która pobiera rekord anonimowy jako dane wejściowe:
+Poniższy przykład rozwija się na poprzednim `printCircleStats` z funkcją, która przyjmuje rekord anonimowy jako dane wejściowe:
 
 ```fsharp
 open System
@@ -71,7 +71,7 @@ let stats = getCircleStats r
 printCircleStats r stats
 ```
 
-Wywoływanie `printCircleStats` z dowolnym typem rekordu anonimowego, który nie ma tego samego "kształtu", ponieważ typ danych wejściowych nie zostanie skompilowany:
+Wywołanie `printCircleStats` z dowolnym typem rekordu anonimowego, który nie ma tego samego "kształtu", co typ wejściowy, nie powiedzie się:
 
 ```fsharp
 printCircleStats r {| Diameter = 2.0; Area = 4.0; MyCircumference = 12.566371 |}
@@ -79,9 +79,9 @@ printCircleStats r {| Diameter = 2.0; Area = 4.0; MyCircumference = 12.566371 |}
 // '["Area"; "Circumference"; "Diameter"]' and '["Area"; "Diameter"; "MyCircumference"]'
 ```
 
-## <a name="struct-anonymous-records"></a>Anonimowe rekordy struktury
+## <a name="struct-anonymous-records"></a>Rekordy anonimowe struktury
 
-Rekordy anonimowe można także definiować jako struktury za pomocą opcjonalnego słowa kluczowego `struct`. Poniższy przykład rozszerza poprzednią wartość przez produkowanie i zużywanie anonimowego rekordu struktury:
+Rekordy anonimowe można również zdefiniować jako `struct` struktury z opcjonalnym słowem kluczowym. Poniższy przykład rozszerza poprzedni, produkując i zużywając rekord anonimowy struct:
 
 ```fsharp
 open System
@@ -106,7 +106,7 @@ printCircleStats r stats
 
 ### <a name="structness-inference"></a>Wnioskowanie o strukturze
 
-Anonimowe rekordy struktury pozwalają również na "wnioskowanie o strukturze", gdzie nie trzeba określać słowa kluczowego `struct` w witrynie wywołania. W tym przykładzie Elide słowo kluczowe `struct` podczas wywoływania `printCircleStats`:
+Rekordy anonimowe struct pozwalają również na "wnioskowanie struktury", w `struct` którym nie trzeba określać słowa kluczowego w witrynie wywołania. W tym przykładzie można `struct` elide `printCircleStats`słowa kluczowego podczas wywoływania:
 
 ```fsharp
 
@@ -117,11 +117,11 @@ let printCircleStats r (stats: struct {| Area: float; Circumference: float; Diam
 printCircleStats r {| Area = 4.0; Circumference = 12.6; Diameter = 12.6 |}
 ```
 
-Wzorzec odwrotny — Określanie `struct`, gdy typ danych wejściowych nie jest rekordem anonimowym struktury — kompilacja nie zostanie ukończona.
+Odwrotny wzorzec - określając, `struct` gdy typ wejściowy nie jest struktury rekord anonimowy - nie powiedzie się skompilować.
 
 ## <a name="embedding-anonymous-records-within-other-types"></a>Osadzanie rekordów anonimowych w innych typach
 
-Jest to przydatne do deklarowania [związków rozłącznych](discriminated-unions.md) , których przypadki są rekordami. Ale jeśli dane w rekordach są tego samego typu co związek rozłącznych, należy zdefiniować wszystkie typy jako wzajemnie cykliczne. Korzystanie z rekordów anonimowych pozwala uniknąć tego ograniczenia. Poniżej znajduje się przykładowy typ i funkcja, która pasuje do wzorca:
+Warto zadeklarować [dyskryminowane związki zawodowe,](discriminated-unions.md) których sprawy są rekordami. Jeśli jednak dane w rekordach są tego samego typu co unia dyskryminowana, należy zdefiniować wszystkie typy jako wzajemnie cykliczne. Korzystanie z rekordów anonimowych pozwala uniknąć tego ograniczenia. Poniżej przedstawiono przykładowy typ i funkcję, która pasuje do niego:
 
 ```fsharp
 type FullName = { FirstName: string; LastName: string }
@@ -139,16 +139,16 @@ let getFirstName e =
     | Executive ex -> ex.Name.FirstName
 ```
 
-## <a name="copy-and-update-expressions"></a>Kopiuj i Aktualizuj wyrażenia
+## <a name="copy-and-update-expressions"></a>Kopiowanie i aktualizowanie wyrażeń
 
-Rekordy anonimowe obsługują tworzenie z [wyrażeniami kopiowania i aktualizowania](copy-and-update-record-expressions.md). Można na przykład utworzyć nowe wystąpienie rekordu anonimowego, który kopiuje istniejące dane:
+Anonimowe rekordy obsługują budowę z [wyrażeniami kopiowania i aktualizacji](copy-and-update-record-expressions.md). Na przykład oto jak można skonstruować nowe wystąpienie rekordu anonimowego, który kopiuje istniejące dane:
 
 ```fsharp
 let data = {| X = 1; Y = 2 |}
 let data' = {| data with Y = 3 |}
 ```
 
-Jednak w przeciwieństwie do nazwanych rekordów, anonimowe rekordy umożliwiają konstruowanie zupełnie różnych formularzy z wyrażeniami Copy i Update. W poniższym przykładzie ten sam rekord anonimowy jest pobierany z poprzedniego przykładu i rozszerzany do nowego rekordu anonimowego:
+Jednak w przeciwieństwie do nazwanych rekordów rekordy anonimowe umożliwiają konstruowanie zupełnie innych formularzy z wyrażeniami kopiowania i aktualizacji. W powyższym przykładzie jest ten sam anonimowy rekord z poprzedniego przykładu i rozszerza go do nowego rekordu anonimowego:
 
 ```fsharp
 let data = {| X = 1; Y = 2 |}
@@ -163,7 +163,7 @@ let data = { X = 1 }
 let data' = {| data with Y = 2 |} // Gives {| X=1; Y=2 |}
 ```
 
-Możesz również kopiować dane do i z odwołań do rekordów i struktury anonimowe:
+Można również kopiować dane do i z dokumentacji i struktury rekordów anonimowych:
 
 ```fsharp
 // Copy data from a reference record into a struct anonymous record
@@ -185,20 +185,20 @@ let data3 = struct {| data2 with Z = r2.X |}
 
 ## <a name="properties-of-anonymous-records"></a>Właściwości rekordów anonimowych
 
-Rekordy anonimowe mają wiele cech, które są niezbędne do pełnego poznania sposobu ich używania.
+Anonimowe rekordy mają wiele cech, które są niezbędne do pełnego zrozumienia, w jaki sposób mogą być używane.
 
-### <a name="anonymous-records-are-nominal"></a>Rekordy anonimowe są nominalne
+### <a name="anonymous-records-are-nominal"></a>Anonimowe rekordy są nominalne
 
-Rekordy anonimowe są [typami nominalnymi](https://en.wikipedia.org/wiki/Nominal_type_system). Są one najlepiej przemyślane jako nazwane typy [rekordów](records.md) (które są również nominalne), które nie wymagają deklaracji z góry.
+Rekordy anonimowe są [typami nominalnymi](https://en.wikipedia.org/wiki/Nominal_type_system). Są one najlepiej traktowane jako nazwane typy [rekordów](records.md) (które są również nominalne), które nie wymagają deklaracji z góry.
 
-Rozważmy następujący przykład z dwiema deklaracjami rekordów anonimowych:
+Rozważmy następujący przykład z dwóch anonimowych deklaracji rekordu:
 
 ```fsharp
 let x = {| X = 1 |}
 let y = {| Y = 1 |}
 ```
 
-Wartości `x` i `y` mają różne typy i nie są zgodne ze sobą. Nie są one równe i nie są porównywalne. Aby to zilustrować, należy wziąć pod uwagę nazwany rekord odpowiedni:
+Wartości `x` `y` i mają różne typy i nie są ze sobą kompatybilne. Nie są one zbywalne i nie są porównywalne. Aby to zilustrować, należy wziąć pod uwagę odpowiednik rekordu o nazwie:
 
 ```fsharp
 type X = { X: int }
@@ -208,11 +208,11 @@ let x = { X = 1 }
 let y = { Y = 1 }
 ```
 
-W porównaniu z odpowiadającymi im odpowiednikami typów lub porównaniem nie ma niczego inaczej niż w przypadku rekordów anonimowych.
+Nie ma nic z natury różni się o anonimowych rekordów w porównaniu z ich odpowiednikami rekord, gdy dotyczące równoważności typu lub porównania.
 
-### <a name="anonymous-records-use-structural-equality-and-comparison"></a>Rekordy anonimowe wykorzystują równość i porównanie strukturalne
+### <a name="anonymous-records-use-structural-equality-and-comparison"></a>Anonimowe zapisy wykorzystują równość strukturalną i porównanie
 
-Podobnie jak w przypadku typów rekordów anonimowe rekordy są strukturalnie równe i porównywalne. Jest to możliwe tylko wtedy, gdy wszystkie typy składników obsługują równość i porównanie, podobnie jak w przypadku typów rekordów. Aby obsłużyć równość lub porównanie, dwa rekordy anonimowe muszą mieć ten sam "kształt".
+Podobnie jak typy rekordów, anonimowe rekordy są strukturalnie zbywalne i porównywalne. Jest to prawdą tylko wtedy, gdy wszystkie typy składników obsługują równość i porównanie, na przykład w przypadku typów rekordów. Aby obsługiwać równość lub porównanie, dwa anonimowe rekordy muszą mieć ten sam "kształt".
 
 ```fsharp
 {| a = 1+1 |} = {| a = 2 |} // true
@@ -222,25 +222,25 @@ Podobnie jak w przypadku typów rekordów anonimowe rekordy są strukturalnie r�
 {| a = 1 + 1 |} = {| a = 2;  b = 1|}
 ```
 
-### <a name="anonymous-records-are-serializable"></a>Rekordy anonimowe są możliwe do serializacji
+### <a name="anonymous-records-are-serializable"></a>Anonimowe rekordy są możliwe do serializacji
 
-Rekordy anonimowe można serializować tak samo jak z nazwanymi rekordami. Oto przykład użycia [Newtonsoft. JSON](https://www.nuget.org/packages/Newtonsoft.Json/):
+Można serializować rekordy anonimowe tak samo, jak w przypadku nazwanych rekordów. Oto przykład za pomocą [Newtonsoft.Json:](https://www.nuget.org/packages/Newtonsoft.Json/)
 
 ```fsharp
 open Newtonsoft.Json
 
 let phillip' = {| name="Phillip"; age=28 |}
-let philStr = JsonConvert.SerializeObject(phillip') 
+let philStr = JsonConvert.SerializeObject(phillip')
 
 let phillip = JsonConvert.DeserializeObject<{|name: string; age: int|}>(philStr)
 printfn "Name: %s Age: %d" phillip.name phillip.age
 ```
 
-Rekordy anonimowe są przydatne do przesyłania danych lekkich za pośrednictwem sieci bez konieczności definiowania domeny dla serializowanych i deserializowanych typów z góry.
+Rekordy anonimowe są przydatne do wysyłania lekkich danych przez sieć bez konieczności definiowania domeny dla typów serializowanych/deserializowanych z góry.
 
-### <a name="anonymous-records-interoperate-with-c-anonymous-types"></a>Rekordy anonimowe współdziałają z C# typami anonimowymi
+### <a name="anonymous-records-interoperate-with-c-anonymous-types"></a>Rekordy anonimowe współpracują z typami anonimowymi języka C#
 
-Możliwe jest użycie interfejsu API platformy .NET, który wymaga użycia [ C# typów anonimowych](../../csharp/programming-guide/classes-and-structs/anonymous-types.md). C#Typy anonimowe mogą współdziałać z wykorzystaniem anonimowych rekordów. Poniższy przykład pokazuje, jak używać rekordów anonimowych do wywoływania przeciążenia [LINQ](../../csharp/programming-guide/concepts/linq/index.md) , które wymaga typu anonimowego:
+Istnieje możliwość użycia interfejsu API .NET, który wymaga użycia [typów anonimowych języka C#.](../../csharp/programming-guide/classes-and-structs/anonymous-types.md) Typy anonimowe języka C# są trywialne do współdziałania przy użyciu rekordów anonimowych. W poniższym przykładzie pokazano, jak używać rekordów anonimowych do wywoływania przeciążenia [LINQ,](../../csharp/programming-guide/concepts/linq/index.md) które wymaga typu anonimowego:
 
 ```fsharp
 open System.Linq
@@ -251,26 +251,26 @@ for ng in nameGrouping do
     printfn "%s has first letter %c" ng.Name ng.FirstLetter
 ```
 
-Istnieje wiele innych interfejsów API używanych w środowisku .NET, które wymagają użycia przekazywania w typie anonimowym. Rekordy anonimowe to narzędzie do pracy z nimi.
+Istnieje wiele innych interfejsów API używanych w całej .NET, które wymagają użycia przekazywania w typie anonimowym. Anonimowe rekordy są narzędziem do pracy z nimi.
 
 ## <a name="limitations"></a>Ograniczenia
 
-Rekordy anonimowe mają pewne ograniczenia w ich użyciu. Niektóre z nich są związane z projektem, ale inne mogą ulec zmianie.
+Anonimowe rekordy mają pewne ograniczenia w ich użyciu. Niektóre z nich są nieodłącznym elementem ich projektu, ale inne są podatne na zmiany.
 
-### <a name="limitations-with-pattern-matching"></a>Ograniczenia z dopasowaniem do wzorca
+### <a name="limitations-with-pattern-matching"></a>Ograniczenia z dopasowaniem wzorców
 
-Rekordy anonimowe nie obsługują dopasowywania do wzorców, w przeciwieństwie do nazwanych rekordów. Istnieją trzy przyczyny:
+Rekordy anonimowe nie obsługują dopasowywania wzorców, w przeciwieństwie do nazwanych rekordów. Istnieją trzy powody:
 
-1. Wzorzec będzie musiał uwzględnić każde pole rekordu anonimowego, w przeciwieństwie do typów rekordów nazwanych. Wynika to z faktu, że rekordy anonimowe nie obsługują podpisywania strukturalnego — są to typy nominalne.
-2. Ze względu na (1) nie ma możliwości posiadania dodatkowych wzorców w wyrażeniu dopasowania do wzorca, ponieważ każdy unikatowy wzorzec będzie oznaczać inny typ rekordu anonimowego.
-3. Ze względu na (3) każdy wzorzec rekordu anonimowego będzie bardziej pełny niż użycie notacji "kropka".
+1. Wzorzec musiałby uwzględniać każde pole rekordu anonimowego, w przeciwieństwie do nazwanych typów rekordów. Dzieje się tak, ponieważ rekordy anonimowe nie obsługują podtypowania strukturalnego — są to typy nominalne.
+2. Ze względu na (1) nie ma możliwości, aby dodatkowe wzorce w wyrażeniu dopasowania wzorca, jak każdy odrębny wzorzec będzie oznaczać inny typ rekordu anonimowego.
+3. Ze względu na (3) każdy wzorzec rekordu anonimowego będzie bardziej szczegółowy niż użycie notacji "kropka".
 
-Jest dostępna sugestia języka umożliwiająca [Dopasowywanie wzorców w ograniczonych kontekstach](https://github.com/fsharp/fslang-suggestions/issues/713).
+Istnieje sugestia otwartego języka, aby [umożliwić dopasowywanie wzorców w ograniczonych kontekstach.](https://github.com/fsharp/fslang-suggestions/issues/713)
 
-### <a name="limitations-with-mutability"></a>Ograniczenia dotyczące zmienność
+### <a name="limitations-with-mutability"></a>Ograniczenia z zmienność
 
-Obecnie nie jest możliwe Definiowanie rekordu anonimowego za pomocą danych `mutable`. Jest dostępna [sugestia języka](https://github.com/fsharp/fslang-suggestions/issues/732) , w której można zezwolić na modyfikowalne dane.
+Obecnie nie jest możliwe zdefiniowanie `mutable` rekordu anonimowego z danymi. Istnieje [sugestia otwartego języka,](https://github.com/fsharp/fslang-suggestions/issues/732) aby umożliwić zmienne dane.
 
-### <a name="limitations-with-struct-anonymous-records"></a>Ograniczenia z anonimowymi rekordami struktury
+### <a name="limitations-with-struct-anonymous-records"></a>Ograniczenia z rekordami anonimowymi struct
 
-Nie można zadeklarować anonimowych rekordów struktury jako `IsByRefLike` ani `IsReadOnly`. Istnieje [otwarta sugestia językowa](https://github.com/fsharp/fslang-suggestions/issues/712) dla `IsByRefLike` i `IsReadOnly` rekordów anonimowych.
+Nie można zadeklarować rekordów anonimowych `IsByRefLike` `IsReadOnly`jako lub . Istnieje [sugestia otwartego](https://github.com/fsharp/fslang-suggestions/issues/712) języka `IsByRefLike` `IsReadOnly` dla i anonimowych rekordów.

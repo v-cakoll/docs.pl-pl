@@ -1,17 +1,17 @@
 ---
 title: Struktury
-description: Dowiedz się F# więcej o strukturze, typ obiektu kompaktowego jest często bardziej wydajny niż Klasa dla typów z niewielką ilością danych i prostym zachowaniem.
+description: Dowiedz się więcej o Strukturze F#, typ obiektu kompaktowego często bardziej wydajne niż klasy dla typów z niewielką ilością danych i proste zachowanie.
 ms.date: 05/16/2016
 ms.openlocfilehash: 1e9652cc4776e4d1d52eb20e41b6dd87a6c5ba05
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106823"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79400282"
 ---
 # <a name="structures"></a>Struktury
 
-*Struktura* jest typem obiektu kompaktowego, który może być bardziej wydajny niż Klasa dla typów, które mają niewielką ilość danych i proste zachowanie.
+*Struktura* jest typem obiektu kompaktowego, który może być bardziej efektywne niż klasy dla typów, które mają niewielką ilość danych i proste zachowanie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -30,19 +30,19 @@ type [accessibility-modifier] type-name =
 
 ## <a name="remarks"></a>Uwagi
 
-Struktury są *typami wartości*, co oznacza, że są przechowywane bezpośrednio na stosie lub, gdy są używane jako pola lub elementy tablicy, wbudowane w typie nadrzędnym. W przeciwieństwie do klas i rekordów struktury mają semantykę typu pass-by-Value. Oznacza to, że są one przydatne głównie w przypadku małych zagregowanych danych, do których często uzyskuje się dostęp i które są kopiowane.
+Struktury są *typy wartości*, co oznacza, że są one przechowywane bezpośrednio na stosie lub, gdy są one używane jako pola lub elementy tablicy, w wierszu typu nadrzędnego. W przeciwieństwie do klas i rekordów struktury mają semantykę przekazywania według wartości. Oznacza to, że są one przydatne głównie dla małych agregatów danych, które są często dostępne i kopiowane.
 
-W poprzedniej składni są wyświetlane dwa formularze. Pierwsza nie jest prostą składnią, ale jest Niemniej często używana, ponieważ przy użyciu `struct` słów kluczowych i `end` można pominąć `StructAttribute` ten atrybut, który pojawia się w drugim formularzu. Można skrócić `StructAttribute` do samego `Struct`.
+W poprzedniej składni wyświetlane są dwie formy. Pierwszym z nich nie jest składnia lekka, ale mimo `struct` to `end` jest często używany, `StructAttribute` ponieważ podczas korzystania z i słów kluczowych, można pominąć atrybut, który pojawia się w drugim formularzu. Możesz `StructAttribute` skrócić do po `Struct`prostu .
 
-*Definicja typu-elementy-i-Members* w poprzedniej składni reprezentuje deklaracje i definicje składowych. Struktury mogą mieć konstruktory i modyfikowalne i niezmienne pola oraz mogą deklarować elementy członkowskie i implementacje interfejsów. Aby uzyskać więcej informacji, zobacz [Członkowie](./members/index.md).
+*Typ-definition-elements-and-members* w poprzedniej składni reprezentuje deklaracje elementów członkowskich i definicje. Struktury mogą mieć konstruktorów i pola zmienne i niezmienne i mogą deklarować implementacje członków i interfejsu. Aby uzyskać więcej informacji, zobacz [Członkowie](./members/index.md).
 
-Struktury nie mogą uczestniczyć w dziedziczeniu, `let` nie `do` mogą zawierać ani powiązań ani rekursywnie zawierać pól własnego typu (chociaż mogą zawierać komórki odniesienia odwołujące się do własnego typu).
+Struktury nie mogą uczestniczyć w `let` `do` dziedziczeniu, nie mogą zawierać ani powiązać i nie mogą zawierać cyklicznie pól własnego typu (chociaż mogą zawierać komórki referencyjne, które odwołują się do własnego typu).
 
-Ponieważ struktury nie zezwalają `let` na powiązania, należy zadeklarować pola w strukturach za `val` pomocą słowa kluczowego. `val` Słowo kluczowe definiuje pole i jego typ, ale nie zezwala na inicjalizację. Zamiast tego `val` deklaracje są inicjowane do zera lub wartości null. Z tego powodu struktury, które mają niejawny Konstruktor (czyli parametry, które są nadawane bezpośrednio po nazwie struktury w deklaracji), wymagają, `val` aby deklaracje miały adnotację `DefaultValue` z atrybutem. Struktury, które mają zdefiniowany Konstruktor nadal obsługują inicjowanie zerowe. W związku z `DefaultValue` tym atrybut jest deklaracją, że ta wartość zerowa jest prawidłowa dla pola. Niejawne konstruktory struktur nie wykonują żadnych `let` akcji `do` , ponieważ nie są dozwolone powiązania z typem, ale niejawne wartości parametrów konstruktora są dostępne jako pola prywatne.
+Ponieważ struktury nie `let` zezwalają na powiązania, należy zadeklarować `val` pola w strukturach przy użyciu słowa kluczowego. Słowo `val` kluczowe definiuje pole i jego typ, ale nie zezwala na inicjowanie. Zamiast `val` tego deklaracje są inicjowane do zera lub null. Z tego powodu struktury, które mają niejawny konstruktor (czyli parametry, które są podane `val` bezpośrednio po nazwie struktury w `DefaultValue` deklaracji) wymagają, aby deklaracje były adnotowane z atrybutem. Struktury, które mają zdefiniowany konstruktor nadal obsługują zero-inicjowania. W związku `DefaultValue` z tym atrybut jest deklaracją, że taka wartość zero jest prawidłowa dla pola. Niejawnych konstruktorów dla struktur nie `let` `do` wykonują żadnych akcji, ponieważ i powiązania nie są dozwolone na typ, ale niejawne wartości parametrów konstruktora przekazywane są dostępne jako pola prywatne.
 
-Jawne konstruktory mogą polegać na inicjacji wartości pól. Jeśli masz strukturę, która ma jawny Konstruktor, nadal obsługuje inicjowanie zerujące; nie należy jednak używać `DefaultValue` atrybutu `val` w deklaracjach, ponieważ powoduje on konflikt z konstruktorem jawnym. Aby uzyskać więcej informacji `val` na temat deklaracji [, zobacz pola jawne: `val` Słowo kluczowe](./members/explicit-fields-the-val-keyword.md).
+Jawne konstruktory mogą obejmować inicjowanie wartości pól. Gdy masz strukturę, która ma jawny konstruktora, nadal obsługuje zero-inicjowania; jednak nie należy używać `DefaultValue` atrybutu `val` na deklaracje, ponieważ jest w konflikcie z konstruktora jawnego. Aby uzyskać `val` więcej informacji o deklaracjach, zobacz [Jawne pola: `val` Słowo kluczowe](./members/explicit-fields-the-val-keyword.md).
 
-Atrybuty i Modyfikatory dostępności są dozwolone w strukturach i są zgodne z tymi samymi regułami dla innych typów. Aby uzyskać więcej informacji, zobacz [atrybuty](attributes.md) i [Access Control](access-control.md).
+Atrybuty i modyfikatory ułatwień dostępu są dozwolone w strukturach i postępuj zgodnie z tymi samymi regułami, co w przypadku innych typów. Aby uzyskać więcej informacji, zobacz [Atrybuty](attributes.md) i [kontrola dostępu](access-control.md).
 
 Poniższe przykłady kodu ilustrują definicje struktury.
 
@@ -50,7 +50,7 @@ Poniższe przykłady kodu ilustrują definicje struktury.
 
 ## <a name="byreflike-structs"></a>Struktury ByRefLike
 
-Można definiować własne struktury, które mogą przestrzegać `byref`podobnej semantyki: Aby uzyskać więcej informacji, zobacz [ByRef](byrefs.md) . Jest to realizowane z <xref:System.Runtime.CompilerServices.IsByRefLikeAttribute> atrybutem:
+Można zdefiniować własne struktury, które mogą `byref`przylegać do semantyki -like: zobacz [Byrefs](byrefs.md) aby uzyskać więcej informacji. Odbywa się to <xref:System.Runtime.CompilerServices.IsByRefLikeAttribute> za pomocą atrybutu:
 
 ```fsharp
 open System
@@ -62,20 +62,20 @@ type S(count1: Span<int>, count2: Span<int>) =
     member x.Count2 = count2
 ```
 
-`IsByRefLike`nie oznacza `Struct`. Oba muszą być obecne w typie.
+`IsByRefLike`nie oznacza `Struct`. Oba muszą być obecne na typie.
 
-Struktura "`byref`like" w F# jest typem wartości związanym ze stosem. Nigdy nie jest przydzielany na zarządzanym stosie. `byref`Struktura przypominająca podobne rozwiązanie jest przydatna w programowaniu o wysokiej wydajności, ponieważ jest wymuszana z zestawem silnych sprawdzeń i bez przechwycenia. Reguły są następujące:
+Struktura`byref`"-like" w języku F# jest typem wartości powiązanym ze stosem. Nigdy nie jest przydzielany na zarządzanym stercie. Struktura `byref`-like jest przydatna w programowaniu o wysokiej wydajności, ponieważ jest wymuszana z zestawem silnych kontroli dotyczących okresu istnienia i braku przechwytywania. Zasady są następujące:
 
-- Mogą one być używane jako parametry funkcji, parametry metody, zmienne lokalne, Metoda Return.
-- Nie mogą być statyczne ani składowe wystąpień klasy ani normalnej struktury.
-- Nie mogą być przechwytywane przez żadną konstrukcję`async` zamknięcia (metody lub wyrażenia lambda).
-- Nie mogą być używane jako parametr generyczny.
+- Mogą być używane jako parametry funkcji, parametry metody, zmienne lokalne, zwraca metoda.
+- Nie mogą być statyczne lub wystąpienia elementów członkowskich klasy lub normalnej struktury.
+- Nie mogą być przechwytywane`async` przez dowolną konstrukcję zamknięcia (metody lub wyrażenia lambda).
+- Nie można ich używać jako parametru ogólnego.
 
-Chociaż te reguły bardzo zdecydowanie ograniczają użycie, robią to w celu zapewnienia bezpieczeństwa obliczeń o wysokiej wydajności w bezpieczny sposób.
+Chociaż te reguły bardzo silnie ograniczają użycie, robią to, aby spełnić obietnicę obliczeń o wysokiej wydajności w bezpieczny sposób.
 
 ## <a name="readonly-structs"></a>Struktury tylko do odczytu
 
-Można dodawać adnotacje do struktur przy użyciu <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute> atrybutu. Przykład:
+Można adnotować struktury z <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute> atrybutem. Przykład:
 
 ```fsharp
 [<IsReadOnly; Struct>]
@@ -84,19 +84,19 @@ type S(count1: int, count2: int) =
     member x.Count2 = count2
 ```
 
-`IsReadOnly`nie oznacza `Struct`. Musisz dodać oba, aby mieć `IsReadOnly` strukturę.
+`IsReadOnly`nie oznacza `Struct`. Należy dodać oba, `IsReadOnly` aby mieć strukturę.
 
-Użycie tego atrybutu emituje F# metadane i C# poznanie go `inref<'T>` odpowiednio do i. `in ref`
+Użycie tego atrybutu emituje metadane pozwalając F# i `inref<'T>` C# wiedzieć, aby traktować go jako i `in ref`, odpowiednio.
 
-Zdefiniowanie wartości modyfikowalnej wewnątrz struktury tylko do odczytu powoduje wystąpienie błędu.
+Definiowanie wartości zmiennej wewnątrz struktury tylko do odczytu powoduje błąd.
 
-## <a name="struct-records-and-discriminated-unions"></a>Rekordy struktury i związki rozłącznych
+## <a name="struct-records-and-discriminated-unions"></a>Ewidencja struktur i związki dyskryminowane
 
-[Rekordy](records.md) i [związki rozłącznych](discriminated-unions.md) można reprezentować jako struktury z `[<Struct>]` atrybutem.  Aby dowiedzieć się więcej, zobacz każdy artykuł.
+Można reprezentować [rekordy](records.md) i [związki dyskryminowane](discriminated-unions.md) jako struktury z atrybutem. `[<Struct>]`  Zobacz każdy artykuł, aby dowiedzieć się więcej.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Dokumentacja języka F#](index.md)
+- [Odwołanie do języka F#](index.md)
 - [Klasy](classes.md)
 - [Rekordy](records.md)
 - [Elementy członkowskie](./members/index.md)

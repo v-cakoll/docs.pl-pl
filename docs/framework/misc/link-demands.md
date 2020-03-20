@@ -14,34 +14,34 @@ helpviewer_keywords:
 - caller security checks
 - link demands
 ms.assetid: a33fd5f9-2de9-4653-a4f0-d9df25082c4d
-ms.openlocfilehash: 31fbd938acb457a4ea803375d18cb1be11d8b287
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: a0466eb5c24840c77a3b191f9b0e001f6b267fca
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217168"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181171"
 ---
 # <a name="link-demands"></a>Żądania połączeń
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- Żądanie linku powoduje sprawdzenie zabezpieczeń podczas kompilacji just-in-Time i sprawdza tylko bezpośrednio wywołujący zestaw kodu. Łączenie występuje, gdy kod jest powiązany z odwołaniem do typu, w tym odwołaniami wskaźników funkcji i wywołaniami metod. Jeśli zestaw wywołujący nie ma wystarczających uprawnień do łączenia się z kodem, link jest niedozwolony i podczas ładowania i uruchamiania kodu zostanie wygenerowany wyjątek czasu wykonywania. Wymagania dotyczące linków można przesłonić w klasach, które dziedziczą z kodu.  
+ Żądanie łącza powoduje sprawdzanie zabezpieczeń podczas kompilacji just-in-time i sprawdza tylko natychmiastowe wywołanie zestawu kodu. Łączenie występuje, gdy kod jest powiązany z odwołaniem do typu, w tym odwołania do wskaźnika funkcji i wywołania metody. Jeśli zestaw wywołujący nie ma wystarczających uprawnień do łącza do kodu, łącze jest niedozwolone i wyjątek środowiska uruchomieniowego jest zgłaszany, gdy kod jest ładowany i uruchamiany. Żądania łącza można zastąpić w klasach, które dziedziczą z kodu.  
   
- Należy zauważyć, że pełne przechodzenie stosu nie jest przeprowadzane z tym typem żądania i że kod nadal jest podatny na ataki luring. Na przykład jeśli metoda w zestawie A jest chroniona przez żądanie linku, bezpośredni obiekt wywołujący w zestawie B jest oceniany na podstawie uprawnień zestawu B.  Jednak żądanie linku nie będzie szacować metody w zestawie C, jeśli pośrednio wywołuje metodę w zestawie A przy użyciu metody w zestawie B. Żądanie linku określa tylko elementy wywołujące bezpośrednich uprawnień w bezpośrednim wywołującym zestawie musi mieć połączenie z kodem. Nie określa uprawnień, które mogą być wymagane do uruchomienia kodu.  
+ Należy zauważyć, że pełny spacer stosu nie jest wykonywane z tego typu popytu i że kod jest nadal podatne na ataki zwabiania. Na przykład jeśli metoda w zestawie A jest chroniony przez żądanie łącza, bezpośrednie obiekt wywołujący w zestawie B jest oceniany na podstawie uprawnień zestawu B.  Jednak zapotrzebowanie na łącza nie oceni metody w zestawie C, jeśli pośrednio wywołuje metodę w zestawie A przy użyciu metody w zestawie B. Żądanie łącza określa tylko uprawnienia bezpośrednich wywołań w zestawie wywołania natychmiastowego musi mieć link do kodu. Nie określa uprawnień, które muszą mieć wszystkie osoby wywołujące do uruchomienia kodu.  
   
- Modyfikatory przeszukiwania stosu <xref:System.Security.CodeAccessPermission.Assert%2A>, <xref:System.Security.CodeAccessPermission.Deny%2A>i <xref:System.Security.CodeAccessPermission.PermitOnly%2A> nie wpływają na ocenę żądań związanych z łączami.  Ponieważ wymagania dotyczące linków nie wykonują przechodzenia stosu, Modyfikatory przeszukiwania stosu nie mają wpływu na wymagania dotyczące linków.  
+ Modyfikatory <xref:System.Security.CodeAccessPermission.Assert%2A>, <xref:System.Security.CodeAccessPermission.Deny%2A>i <xref:System.Security.CodeAccessPermission.PermitOnly%2A> stack walk nie wpływają na ocenę żądań łączy.  Ponieważ żądania łącza nie wykonują spacer stosu, modyfikatory spacer stosu nie mają wpływu na żądania łącza.  
   
- Jeśli dostęp do metody chronionej przez żądanie linku odbywa się za pomocą [odbicia](../reflection-and-codedom/reflection.md), żądanie linku sprawdza natychmiastowy obiekt wywołujący kod, do którego uzyskano dostęp za pomocą odbicia. Dotyczy to zarówno odnajdywania metody, jak i wywołania metody wykonywanej przy użyciu odbicia. Załóżmy na przykład, że kod używa odbicia do zwrócenia obiektu <xref:System.Reflection.MethodInfo> reprezentującego metodę chronioną przez żądanie linku, a następnie przekazuje ten obiekt **MethodInfo** do innego kodu, który używa obiektu do wywołania pierwotnej metody. W takim przypadku sprawdzanie wymagań linku odbywa się dwa razy: raz dla kodu, który zwraca obiekt **MethodInfo** i jeden raz dla kodu, który go wywołuje.  
+ Jeśli metoda chroniona przez żądanie łącza jest dostępna za pośrednictwem [odbicia,](../reflection-and-codedom/reflection.md)żądanie łącza sprawdza bezpośrednie wywołanie kodu dostępnego za pomocą odbicia. Dotyczy to zarówno odnajdowania metody, jak i wywołania metody wykonywanego przy użyciu odbicia. Załóżmy na przykład, że <xref:System.Reflection.MethodInfo> kod używa odbicia do zwrócenia obiektu reprezentującego metodę chroniona przez żądanie łącza, a następnie przekazuje ten **obiekt MethodInfo** do innego kodu, który używa obiektu do wywołania oryginalnej metody. W takim przypadku sprawdzanie popytu łącza występuje dwa razy: raz dla kodu, który zwraca **MethodInfo** obiektu i raz dla kodu, który wywołuje go.  
   
 > [!NOTE]
-> Żądanie linku wykonywane na konstruktorze klasy statycznej nie chroni konstruktora, ponieważ konstruktory statyczne są wywoływane przez system, poza ścieżką wykonywania kodu aplikacji. W związku z tym, gdy żądanie linku jest stosowane do całej klasy, nie może chronić dostępu do konstruktora statycznego, chociaż chroni resztę klasy.  
+> Żądanie łącza wykonywane na konstruktorze klasy statycznej nie chroni konstruktora, ponieważ konstruktory statyczne są wywoływane przez system, poza ścieżką wykonywania kodu aplikacji. W rezultacie, gdy żądanie łącza jest stosowane do całej klasy, nie można chronić dostęp do konstruktora statycznego, chociaż nie chroni resztę klasy.  
   
- Poniższy fragment kodu deklaratywnie określa, że dowolny kod łączący się z metodą `ReadData` musi mieć uprawnienie `CustomPermission`. To uprawnienie jest hipotetycznym uprawnieniem niestandardowym i nie istnieje w .NET Framework. Żądanie jest wykonywane przez przekazanie flagi **SecurityAction. LinkDemand** do `CustomPermissionAttribute`.  
+ Poniższy fragment kodu deklaratywnie określa, `ReadData` że każdy `CustomPermission` kod łączący się z metodą musi mieć uprawnienie. To uprawnienie jest hipotetyczne uprawnienie niestandardowe i nie istnieje w .NET Framework. Żądanie jest dokonywane przez przekazanie **SecurityAction.LinkDemand** flagi do `CustomPermissionAttribute`.  
   
 ```vb  
 <CustomPermissionAttribute(SecurityAction.LinkDemand)> _  
 Public Shared Function ReadData() As String  
     ' Access a custom resource.  
-End Function    
+End Function
 ```  
   
 ```csharp  

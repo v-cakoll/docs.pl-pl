@@ -15,46 +15,46 @@ helpviewer_keywords:
 ms.assetid: 50a58a83-6287-40a4-b315-47823cea0a5c
 topic_type:
 - apiref
-ms.openlocfilehash: f1262181fa745e1b6d3fc48a4ad728c1020705b5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d02943f28435fc00aad8e319aa260a24cca5e307
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74434315"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177589"
 ---
 # <a name="imetadataemitgettokenfromsig-method"></a>IMetaDataEmit::GetTokenFromSig — Metoda
-Pobiera token dla określonej sygnatury metadanych.  
+Pobiera token dla określonej podpisu metadanych.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
-HRESULT GetTokenFromSig (   
-    [in]  PCCOR_SIGNATURE pvSig,   
-    [in]  ULONG       cbSig,   
-    [out] mdSignature *pmsig   
+HRESULT GetTokenFromSig (
+    [in]  PCCOR_SIGNATURE pvSig,
+    [in]  ULONG       cbSig,
+    [out] mdSignature *pmsig
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `pvSig`  
- podczas Podpis, który ma zostać utrwalony i zapisany.  
+ [w] Podpis, który ma być utrwalony i przechowywany.  
   
  `cbSig`  
- podczas Liczba bajtów w `pvSig`.  
+ [w] Liczba bajtów `pvSig`w pliku .  
   
  `pmsig`  
- określoną Przypisany token `mdSignature`.  
+ [na zewnątrz] Token `mdSignature` przypisany.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
+ **Biblioteka:** Używany jako zasób w pliku MSCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

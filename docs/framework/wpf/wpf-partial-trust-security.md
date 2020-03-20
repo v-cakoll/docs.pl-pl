@@ -1,5 +1,5 @@
 ---
-title: Zabezpieczenia częściowej relacji zaufania
+title: Częściowe zabezpieczenia zaufania
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,156 +15,156 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: 0d9bbcc32eea49afc6ecc713b0cf005b4434a67d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 99c7d9cfae2b137053ca77d9e3d7055b4674ce5b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743340"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174579"
 ---
 # <a name="wpf-partial-trust-security"></a>Zabezpieczenie częściowej relacji zaufania WPF
-<a name="introduction"></a>Ogólnie rzecz biorąc, aplikacje internetowe powinny być ograniczone przez bezpośredni dostęp do krytycznych zasobów systemowych, aby zapobiec złośliwym szkodom. Domyślnie języki skryptów HTML i po stronie klienta nie mogą uzyskać dostępu do krytycznych zasobów systemowych. Ponieważ aplikacje hostowane w przeglądarce Windows Presentation Foundation (WPF) mogą być uruchamiane z przeglądarki, powinny one być zgodne z podobnym zestawem ograniczeń. Aby wymusić te ograniczenia, WPF korzysta z zabezpieczeń dostępu kodu (CAS) i ClickOnce (zobacz [strategia zabezpieczeń WPF-platforma Security](wpf-security-strategy-platform-security.md)). Domyślnie aplikacje hostowane w przeglądarce żądają zestawu uprawnień strefy Internetu, niezależnie od tego, czy są uruchamiane z Internetu, lokalnego intranetu, czy komputera lokalnego. Aplikacje działające z dowolnym elementem mniejszym niż pełny zestaw uprawnień są uznawane za działające z częściowym zaufaniem.  
+<a name="introduction"></a>Ogólnie rzecz biorąc, aplikacje internetowe powinny mieć ograniczony dostęp do krytycznych zasobów systemowych, aby zapobiec złośliwym uszkodzeniom. Domyślnie języki skryptów html i po stronie klienta nie są w stanie uzyskać dostępu do krytycznych zasobów systemowych. Ponieważ aplikacje hostowane przez przeglądarkę Programu Windows Presentation Foundation (WPF) mogą być uruchamiane z przeglądarki, powinny one być zgodne z podobnym zestawem ograniczeń. Aby wymusić te ograniczenia, WPF WPF opiera się zarówno na zabezpieczeniach dostępu do kodu (CAS), jak i clickonce (zobacz [WPF Security Strategy - Platform Security](wpf-security-strategy-platform-security.md)). Domyślnie aplikacje hostowane przez przeglądarkę żądają zestawu uprawnień CAS strefy internetowej, niezależnie od tego, czy są one uruchamiane z Internetu, lokalnego intranetu czy komputera lokalnego. Aplikacje, które działają z niczego mniej niż pełny zestaw uprawnień mówi się, że są uruchomione z częściowego zaufania.  
   
- WPF zapewnia szeroką gamę pomocy technicznej, aby zapewnić, że możliwie największej funkcjonalności można bezpiecznie używać w częściowej relacji zaufania, a także w przypadku urzędów certyfikacji zapewnia dodatkową pomoc techniczną w zakresie programowania częściowego zaufania.  
+ WPF WPF zapewnia szeroką gamę obsługi, aby zapewnić, że jak najwięcej funkcji, jak to możliwe, mogą być bezpiecznie używane w częściowym zaufaniu i wraz z CAS, zapewnia dodatkową obsługę programowanie częściowego zaufania.  
   
  Ten temat zawiera następujące sekcje:  
   
-- [Obsługa częściowego zaufania funkcji WPF](#WPF_Feature_Partial_Trust_Support)  
+- [Funkcja częściowego zaufania funkcji WPF](#WPF_Feature_Partial_Trust_Support)  
   
-- [Programowanie częściowej relacji zaufania](#Partial_Trust_Programming)  
+- [Programowanie częściowego zaufania](#Partial_Trust_Programming)  
   
 - [Zarządzanie uprawnieniami](#Managing_Permissions)  
   
-<a name="WPF_Feature_Partial_Trust_Support"></a>   
-## <a name="wpf-feature-partial-trust-support"></a>Obsługa częściowego zaufania funkcji WPF  
- W poniższej tabeli wymieniono funkcje wysokiego poziomu Windows Presentation Foundation (WPF), które są bezpieczne do użycia w granicach zestawu uprawnień strefy internetowej.  
+<a name="WPF_Feature_Partial_Trust_Support"></a>
+## <a name="wpf-feature-partial-trust-support"></a>Funkcja częściowego zaufania funkcji WPF  
+ W poniższej tabeli wymieniono funkcje wysokiego poziomu programu Windows Presentation Foundation (WPF), które można bezpiecznie używać w granicach zestawu uprawnień strefy internetowej.  
   
- Tabela 1: funkcje WPF, które są bezpieczne w częściowej relacji zaufania  
+ Tabela 1: Funkcje WPF, które są bezpieczne w częściowym zaufaniu  
   
-|Obszar funkcji|Funkcja|  
+|Obszar charakterystyczny|Funkcja|  
 |------------------|-------------|  
-|Ogólne|Okno przeglądarki<br /><br /> Dostęp do lokacji pochodzenia<br /><br /> IsolatedStorage (limit 512 KB)<br /><br /> Dostawcy UIAutomation<br /><br /> Przegląd<br /><br /> Edytory Input Method Editor (IME)<br /><br /> Pióro i atrament<br /><br /> Symulowane przeciąganie/upuszczanie przy użyciu funkcji przechwytywania i przenoszenia myszy<br /><br /> OpenFileDialog<br /><br /> Deserializacja XAML (za pośrednictwem XamlReader. Load)|  
-|Integracja z siecią Web|Okno dialogowe pobierania przeglądarki<br /><br /> Nawigacja zainicjowana przez użytkownika najwyższego poziomu<br /><br /> mailto: linki<br /><br /> Parametry Uniform Resource Identifier<br /><br /> HTTPWebRequest<br /><br /> Zawartość WPF hostowana w elemencie IFRAME<br /><br /> Hosting stron HTML na tej samej stronie przy użyciu ramki<br /><br /> Hosting tych samych stron HTML witryny przy użyciu przeglądarki WebBrowser<br /><br /> Usługi sieci Web (ASMX)<br /><br /> Usługi sieci Web (przy użyciu Windows Communication Foundation)<br /><br /> Wykonywanie skryptów<br /><br /> Document Object Model|  
-|Wizualizacji|2D i 3W<br /><br /> Animacja<br /><br /> Nośnik (lokacja źródłowa i międzydomenowa)<br /><br /> Przetwarzanie obrazów/audio/wideo|  
-|Odczytu|FlowDocuments<br /><br /> Dokumenty XPS<br /><br /> Osadzone & czcionki systemowe<br /><br /> CFF & czcionki TrueType|  
-|Edytowanie|Sprawdzanie pisowni<br /><br /> RichTextBox<br /><br /> Obsługa przezroczystego tekstu i schowka<br /><br /> Wklej zainicjowany przez użytkownika<br /><br /> Kopiowanie wybranej zawartości|  
-|Formanty|Formanty ogólne|  
+|Ogólne|Okno przeglądarki<br /><br /> Strona origin access<br /><br /> Izolowanestorage (limit 512 KB)<br /><br /> Dostawcy uiautomation<br /><br /> Komendanta<br /><br /> Edytory Input Method Editor (IME)<br /><br /> Rysik i atrament na tablecie<br /><br /> Symulowane przeciąganie/upuszczanie za pomocą przechwytywania myszy i przenoszenia zdarzeń<br /><br /> Openfiledialog<br /><br /> Deserializacja XAML (za pośrednictwem XamlReader.Load)|  
+|Integracja z siecią Web|Okno dialogowe pobierania przeglądarki<br /><br /> Nawigacja inicjowana przez użytkownika najwyższego poziomu<br /><br /> mailto:linki<br /><br /> Jednolite parametry identyfikatora zasobu<br /><br /> HttpWebRequest (HttpWebRequest)<br /><br /> Zawartość WPF hostowana w elementów IFRAME<br /><br /> Hostowanie stron HTML tej samej witryny przy użyciu ramki<br /><br /> Hosting stron HTML tej samej witryny za pomocą WebBrowser<br /><br /> Usługi sieci Web (ASMX)<br /><br /> Usługi sieci Web (przy użyciu programu Windows Communication Foundation)<br /><br /> Wykonywanie skryptów<br /><br /> Model obiektu dokumentu|  
+|Wizualizacje|2D i 3D<br /><br /> Animacja<br /><br /> Media (strona pochodzenia i międzydomenowe)<br /><br /> Obrazowanie/audio/wideo|  
+|Czytanie|FlowDocuments<br /><br /> Dokumenty XPS<br /><br /> Wbudowane czcionki systemowe &<br /><br /> Czcionki CFF & TrueType|  
+|Edytowanie|Sprawdzanie pisowni<br /><br /> RichTextBox<br /><br /> Obsługa zwykłego tekstu i schowka z atramentem<br /><br /> Wklej zainicjowane przez użytkownika<br /><br /> Kopiowanie wybranej zawartości|  
+|Kontrolki|Kontrole ogólne|  
   
- Ta tabela obejmuje funkcje WPF na wysokim poziomie. Aby uzyskać bardziej szczegółowe informacje, Windows SDK dokumentuje uprawnienia, które są wymagane przez każdy element członkowski w WPF. Ponadto poniższe funkcje zawierają bardziej szczegółowe informacje dotyczące częściowego wykonywania zaufania, w tym zagadnienia specjalne.  
+ Ta tabela obejmuje funkcje WPF na wysokim poziomie. Aby uzyskać bardziej szczegółowe informacje, windows SDK dokumenty uprawnienia, które są wymagane przez każdego członka w WPF. Ponadto następujące funkcje mają bardziej szczegółowe informacje dotyczące częściowego wykonywania zaufania, w tym specjalne zagadnienia.  
   
-- [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] (zobacz [XAML — Omówienie (WPF)](../../desktop-wpf/fundamentals/xaml.md)).  
+- [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)](patrz [Przegląd XAML (WPF)](../../desktop-wpf/fundamentals/xaml.md)).  
   
-- Okna podręczne (zobacz <xref:System.Windows.Controls.Primitives.Popup?displayProperty=nameWithType>).  
+- Wyskakujące <xref:System.Windows.Controls.Primitives.Popup?displayProperty=nameWithType>okienka (patrz ).  
   
-- Przeciągnij i upuść (zobacz [Przegląd przeciągania i upuszczania](./advanced/drag-and-drop-overview.md)).  
+- Przeciąganie i upuszczanie (zobacz [Omówienie przeciągania i upuszczania).](./advanced/drag-and-drop-overview.md)  
   
-- Schowek (zobacz <xref:System.Windows.Clipboard?displayProperty=nameWithType>).  
+- Schowek <xref:System.Windows.Clipboard?displayProperty=nameWithType>(patrz ).  
   
-- Imaging (zobacz <xref:System.Windows.Controls.Image?displayProperty=nameWithType>).  
+- Obrazowanie <xref:System.Windows.Controls.Image?displayProperty=nameWithType>obrazu (patrz ).  
   
-- Serializacja (zobacz <xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>, <xref:System.Windows.Markup.XamlWriter.Save%2A?displayProperty=nameWithType>).  
+- Serializacja <xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>(patrz <xref:System.Windows.Markup.XamlWriter.Save%2A?displayProperty=nameWithType>, ).  
   
-- Otwórz plik — okno dialogowe (zobacz <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>).  
+- Okno dialogowe Otwieranie pliku (patrz <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>).  
   
- W poniższej tabeli opisano funkcje WPF, które nie są bezpieczne do uruchomienia w ramach limitów zestawu uprawnień strefy internetowej.  
+ W poniższej tabeli przedstawiono funkcje WPF, które nie są bezpieczne do uruchomienia w granicach zestawu uprawnień strefy internet.  
   
- Tabela 2: funkcje WPF, które nie są bezpieczne w częściowej relacji zaufania  
+ Tabela 2: Funkcje WPF, które nie są bezpieczne w częściowym zaufaniu  
   
-|Obszar funkcji|Funkcja|  
+|Obszar charakterystyczny|Funkcja|  
 |------------------|-------------|  
-|Ogólne|Okno (zdefiniowane przez aplikację okna i okna dialogowe)<br /><br /> SaveFileDialog<br /><br /> System plików<br /><br /> Dostęp do rejestru<br /><br /> Przeciągnij i opuść<br /><br /> Serializacja XAML (za pośrednictwem XamlWriter. Save)<br /><br /> UIAutomation klienci<br /><br /> Dostęp do okna źródłowego (HwndHost)<br /><br /> Pełna pomoc techniczna mowy<br /><br /> Współdziałanie Windows Forms|  
-|Wizualizacji|Efekty mapy bitowej<br /><br /> Kodowanie obrazu|  
-|Edytowanie|Schowek formatu tekstu sformatowanego<br /><br /> Pełna obsługa XAML|  
+|Ogólne|Okno (okna zdefiniowane przez aplikację i okna dialogowe)<br /><br /> Savefiledialog<br /><br /> System plików<br /><br /> Dostęp do rejestru<br /><br /> Przeciągnij i opuść<br /><br /> Serializacja XAML (za pośrednictwem XamlWriter.Save)<br /><br /> Klienci uiautomation<br /><br /> Dostęp do okna źródłowego (HwndHost)<br /><br /> Pełna obsługa mowy<br /><br /> Interoperacyjność formularzy systemu Windows|  
+|Wizualizacje|Efekty mapy bitowej<br /><br /> Kodowanie obrazów|  
+|Edytowanie|Schowek w formacie tekstu sformatowanym<br /><br /> Pełna obsługa XAML|  
   
-<a name="Partial_Trust_Programming"></a>   
-## <a name="partial-trust-programming"></a>Programowanie częściowej relacji zaufania  
- W przypadku aplikacji XBAP kod, który przekracza domyślny zestaw uprawnień, będzie miał inne zachowanie w zależności od strefy zabezpieczeń. W niektórych przypadkach podczas próby zainstalowania tego użytkownika zostanie wyświetlone ostrzeżenie. Użytkownik może wybrać opcję kontynuowania lub anulowania instalacji. W poniższej tabeli opisano zachowanie aplikacji dla każdej strefy zabezpieczeń i czynności, które należy wykonać, aby aplikacja mogła uzyskać pełne zaufanie.  
+<a name="Partial_Trust_Programming"></a>
+## <a name="partial-trust-programming"></a>Programowanie częściowego zaufania  
+ W przypadku aplikacji XBAP kod, który przekracza domyślny zestaw uprawnień będzie miał różne zachowanie w zależności od strefy zabezpieczeń. W niektórych przypadkach użytkownik otrzyma ostrzeżenie podczas próby jego zainstalowania. Użytkownik może kontynuować lub anulować instalację. W poniższej tabeli opisano zachowanie aplikacji dla każdej strefy zabezpieczeń i co należy zrobić, aby aplikacja otrzymała pełne zaufanie.  
   
-|Strefa zabezpieczeń|Zachowanie|Pobieranie pełnego zaufania|  
+|Strefa zabezpieczeń|Zachowanie|Pełne zaufanie|  
 |-------------------|--------------|------------------------|  
-|Komputer lokalny|Automatyczne pełne zaufanie|Nie trzeba wykonywać żadnych czynności.|  
-|Intranet i Zaufane witryny|Monituj o pełne zaufanie|Podpisz element XBAP przy użyciu certyfikatu, aby użytkownik widział źródło w monicie.|  
-|Internet|Niepowodzenie z "zaufaniem nieudzielonym"|Podpisz element XBAP przy użyciu certyfikatu.|  
+|Komputer lokalny|Automatyczne pełne zaufanie|Nie są potrzebne żadne działania.|  
+|Intranet i zaufane witryny|Monitowanie o pełne zaufanie|Podpisz xbap za pomocą certyfikatu, aby użytkownik widział źródło w wierszu polecenia.|  
+|Internet|Niepowodzenie z "Zaufanie nie jest przyznane"|Podpisz xbap za pomocą certyfikatu.|  
   
 > [!NOTE]
-> Zachowanie opisane w poprzedniej tabeli służy do pełnego zaufania XBAP, które nie są zgodne z zaufanym modelem wdrażania ClickOnce.  
+> Zachowanie opisane w poprzedniej tabeli jest dla pełnego zaufania XBAPs, które nie są zgodne z ClickOnce modelu zaufanego wdrożenia.  
   
- Ogólnie rzecz biorąc, kod, który może przekroczyć dozwolone uprawnienia, prawdopodobnie będzie typowym kodem, który jest współużytkowany przez aplikacje autonomiczne i hostowane w przeglądarce. Urzędy certyfikacji i WPF oferują kilka technik związanych z zarządzaniem tym scenariuszem.  
+ Ogólnie rzecz biorąc kod, który może przekroczyć dozwolone uprawnienia może być wspólny kod, który jest współużytkowany między aplikacjami autonomicznymi i hostowanymi w przeglądarce. CAS i WPF oferują kilka technik zarządzania tym scenariuszem.  
   
-<a name="Detecting_Permissions_using_CAS"></a>   
-### <a name="detecting-permissions-using-cas"></a>Wykrywanie uprawnień przy użyciu urzędów certyfikacji  
- W niektórych sytuacjach istnieje możliwość, że współużytkowany kod w zestawach bibliotek ma być używany przez aplikacje autonomiczne i XBAP. W takich przypadkach kod może wykonywać funkcje, które mogą wymagać większej liczby uprawnień niż przyznany zestaw uprawnień aplikacji. Aplikacja może wykryć, czy ma określone uprawnienie przy użyciu zabezpieczeń Microsoft .NET Framework. W konkretnym przypadku można sprawdzić, czy ma określone uprawnienie przez wywołanie metody <xref:System.Security.CodeAccessPermission.Demand%2A> w wystąpieniu żądanego uprawnienia. Jest to pokazane w poniższym przykładzie, który zawiera kod, który umożliwia zaoszczędzenie pliku na dysku lokalnym:  
+<a name="Detecting_Permissions_using_CAS"></a>
+### <a name="detecting-permissions-using-cas"></a>Wykrywanie uprawnień przy użyciu cas  
+ W niektórych sytuacjach jest możliwe dla udostępnionego kodu w zestawach biblioteki do użycia zarówno przez aplikacje autonomiczne i XBAPs. W takich przypadkach kod może wykonywać funkcje, które mogą wymagać więcej uprawnień niż aplikacja przyznane uprawnienia pozwala. Aplikacja może wykryć, czy ma określone uprawnienia przy użyciu zabezpieczeń programu Microsoft .NET Framework. W szczególności można sprawdzić, czy ma określone <xref:System.Security.CodeAccessPermission.Demand%2A> uprawnienia, wywołując metodę w wystąpieniu żądanego uprawnienia. Jest to pokazane w poniższym przykładzie, który zawiera kod, który pyta, czy ma możliwość zapisania pliku na dysku lokalnym:  
   
  [!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsCODE1](~/samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandling.cs#detectpermscode1)]
  [!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsCODE1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandling.vb#detectpermscode1)]  
 [!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsCODE2](~/samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandling.cs#detectpermscode2)]
 [!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsCODE2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandling.vb#detectpermscode2)]  
   
- Jeśli aplikacja nie ma żądanego uprawnienia, wywołanie do <xref:System.Security.CodeAccessPermission.Demand%2A> spowoduje zgłoszenie wyjątku zabezpieczeń. W przeciwnym razie przyznano uprawnienie. `IsPermissionGranted` hermetyzuje to zachowanie i zwraca odpowiednio `true` lub `false`.  
+ Jeśli aplikacja nie ma żądanego uprawnienia, <xref:System.Security.CodeAccessPermission.Demand%2A> wywołanie zgłosić wyjątek zabezpieczeń. W przeciwnym razie uprawnienie zostało przyznane. `IsPermissionGranted`hermetyzuje to zachowanie `true` `false` i zwraca lub, w stosownych przypadkach.  
   
-<a name="Graceful_Degradation_of_Functionality"></a>   
-### <a name="graceful-degradation-of-functionality"></a>Bezpieczne obniżenie funkcjonalności  
- Możliwość wykrycia, czy kod ma uprawnienia do wykonywania czynności, które należy wykonać, jest interesujący dla kodu, który może być wykonywany z różnych stref. Wykrywanie strefy jest jednym z nich, dlatego znacznie lepiej jest udostępnić alternatywę dla użytkownika, jeśli jest to możliwe. Na przykład aplikacja z pełnym zaufaniem zwykle umożliwia użytkownikom tworzenie plików w dowolnym miejscu, podczas gdy aplikacja częściowej zaufania może tworzyć tylko pliki w izolowanym magazynie. Jeśli kod, który ma zostać utworzony, istnieje w zestawie, który jest współużytkowany przez zarówno aplikacje pełnego zaufania (autonomiczne), jak i częściowe zaufanie (hostowane w przeglądarce), a obie aplikacje chcą, aby użytkownicy mogli tworzyć pliki, kod współużytkowany powinien wykryć, czy jest Uruchamianie w częściowej lub pełnej relacji zaufania przed utworzeniem pliku w odpowiedniej lokalizacji. Poniższy kod ilustruje obie.  
+<a name="Graceful_Degradation_of_Functionality"></a>
+### <a name="graceful-degradation-of-functionality"></a>Wdzięczna degradacja funkcjonalności  
+ Możliwość wykrycia, czy kod ma uprawnienia do wykonywania tego, co musi zrobić, jest interesująca dla kodu, który może być wykonywany z różnych stref. Podczas wykrywania strefy to jedno, o wiele lepiej jest zapewnić alternatywę dla użytkownika, jeśli to możliwe. Na przykład aplikacja pełnego zaufania zazwyczaj umożliwia użytkownikom tworzenie plików w dowolnym miejscu, podczas gdy aplikacja częściowego zaufania może tworzyć tylko pliki w izolowanym magazynie. Jeśli kod do utworzenia pliku istnieje w zestawie, który jest współużytkowany zarówno przez aplikacje pełnego zaufania (autonomiczne), jak i aplikacje z częściowym zaufaniem (hostowane przez przeglądarkę), a obie aplikacje chcą, aby użytkownicy mogli tworzyć pliki, udostępniony kod powinien wykryć, czy jest częściowego lub pełnego zaufania przed utworzeniem pliku w odpowiedniej lokalizacji. Poniższy kod demonstruje oba.  
   
  [!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsGracefulCODE1](~/samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandlingGraceful.cs#detectpermsgracefulcode1)]
  [!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsGracefulCODE1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandlingGraceful.vb#detectpermsgracefulcode1)]  
 [!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsGracefulCODE2](~/samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandlingGraceful.cs#detectpermsgracefulcode2)]
 [!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsGracefulCODE2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandlingGraceful.vb#detectpermsgracefulcode2)]  
   
- W wielu przypadkach powinno być możliwe znalezienie częściowej alternatywy zaufania.  
+ W wielu przypadkach powinieneś być w stanie znaleźć alternatywę częściowego zaufania.  
   
- W środowisku kontrolowanym, takim jak intranet, niestandardowe platformy zarządzane można zainstalować w ramach bazy klientów w ramach globalnej pamięci podręcznej zestawów (GAC). Te biblioteki mogą wykonywać kod, który wymaga pełnego zaufania, i mogą być przywoływane z aplikacji, które są dozwolone tylko częściowej relacji zaufania przy użyciu <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (Aby uzyskać więcej informacji, zobacz temat [Security](security-wpf.md) and [WPF Security strategi-platform Security](wpf-security-strategy-platform-security.md)).  
+ W kontrolowanym środowisku, takim jak intranet, niestandardowe struktury zarządzane mogą być instalowane w całej bazie klientów w globalnej pamięci podręcznej zestawów (GAC). Biblioteki te mogą wykonywać kod, który wymaga pełnego zaufania i odwoływać się <xref:System.Security.AllowPartiallyTrustedCallersAttribute> do aplikacji, które są dozwolone tylko częściowe zaufanie przy użyciu (aby uzyskać więcej informacji, zobacz [Bezpieczeństwo](security-wpf.md) i [WPF Security Strategy - Platform Security](wpf-security-strategy-platform-security.md)).  
   
-<a name="Browser_Host_Detection"></a>   
+<a name="Browser_Host_Detection"></a>
 ### <a name="browser-host-detection"></a>Wykrywanie hosta przeglądarki  
- Korzystanie z urzędów certyfikacji do sprawdzania uprawnień jest odpowiednią techniką w przypadku konieczności sprawdzenia poszczególnych uprawnień. Chociaż ta technika jest zależna od przechwytywania wyjątków w ramach normalnego przetwarzania, co nie jest ogólnie zalecane i może mieć problemy z wydajnością. Zamiast tego, jeśli aplikacja przeglądarki XAML (XBAP) działa tylko w obszarze piaskownicy strefy internetowej, można użyć właściwości <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType>, która zwraca wartość true dla aplikacji przeglądarki XAML (XBAP).  
+ Za pomocą CAS, aby sprawdzić uprawnienia jest odpowiednią techniką, gdy trzeba sprawdzić na podstawie uprawnień. Mimo, że ta technika zależy od przechwytywania wyjątków jako część normalnego przetwarzania, który nie jest ogólnie zalecane i może mieć problemy z wydajnością. Zamiast tego jeśli aplikacja przeglądarki XAML (XBAP) działa tylko w strefie <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType> internetowej izolowania, można użyć właściwości, która zwraca true dla aplikacji przeglądarki XAML (XBAPs).  
   
 > [!NOTE]
-> <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A> odróżnia tylko, czy aplikacja działa w przeglądarce, a nie zestaw uprawnień, z którymi aplikacja działa.  
+> <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A>rozróżnia tylko, czy aplikacja jest uruchomiona w przeglądarce, a nie zestaw uprawnień, z którymi aplikacja jest uruchomiona.  
   
-<a name="Managing_Permissions"></a>   
+<a name="Managing_Permissions"></a>
 ## <a name="managing-permissions"></a>Zarządzanie uprawnieniami  
- Domyślnie aplikacje XBAP działają z częściowym zaufaniem (ustawienie domyślne strefy internetowej). Jednakże, w zależności od wymagań aplikacji, można zmienić zestaw uprawnień z domyślnego. Na przykład jeśli aplikacje XBAP są uruchamiane z lokalnego intranetu, może skorzystać z większego zestawu uprawnień, który jest przedstawiony w poniższej tabeli.  
+ Domyślnie XBAPs są uruchamiane z częściowym zaufaniem (domyślny zestaw uprawnień strefy internetowej). Jednak w zależności od wymagań aplikacji, istnieje możliwość zmiany zestawu uprawnień z domyślnego. Na przykład jeśli XBAPs jest uruchamiany z lokalnego intranetu, może skorzystać ze zwiększonego zestawu uprawnień, który jest wyświetlany w poniższej tabeli.  
   
- Tabela 3: LocalIntranet i uprawnienia internetowe  
+ Tabela 3: Uprawnienia lokalneintranet i internet  
   
-|Uprawnienie|Atrybut|LocalIntranet|Internet|  
+|Uprawnienie|Atrybut|Localintranet|Internet|  
 |----------------|---------------|-------------------|--------------|  
-|systemem DNS,|Dostęp do serwerów DNS|Tak|Nie|  
+|DNS|Dostęp do serwerów DNS|Tak|Nie|  
 |Zmienne środowiskowe|Odczyt|Tak|Nie|  
 |Okna dialogowe plików|Otwarcie|Tak|Tak|  
-|Okna dialogowe plików|Nieograniczone|Tak|Nie|  
+|Okna dialogowe plików|Bez ograniczeń|Tak|Nie|  
 |Izolowany magazyn|Izolacja zestawu przez użytkownika|Tak|Nie|  
 |Izolowany magazyn|Nieznana izolacja|Tak|Tak|  
-|Izolowany magazyn|Nieograniczony limit przydziału użytkowników|Tak|Nie|  
-|Multimedia|Bezpieczne audio, wideo i obrazy|Tak|Tak|  
+|Izolowany magazyn|Nieograniczony przydział użytkowników|Tak|Nie|  
+|Multimedia|Bezpieczny dźwięk, wideo i obrazy|Tak|Tak|  
 |Drukowanie|Drukowanie domyślne|Tak|Nie|  
 |Drukowanie|Bezpieczne drukowanie|Tak|Tak|  
-|Odbicie|Wysyłać|Tak|Nie|  
-|Zabezpieczenia|Wykonywanie kodu zarządzanego|Tak|Tak|  
-|Zabezpieczenia|Potwierdzenie przyznanych uprawnień|Tak|Nie|  
-|Interfejs użytkownika|Nieograniczone|Tak|Nie|  
+|Odbicie|Emitować|Tak|Nie|  
+|Zabezpieczenia|Wykonanie kodu zarządzanego|Tak|Tak|  
+|Zabezpieczenia|Potwierdzanie przyznanych uprawnień|Tak|Nie|  
+|Interfejs użytkownika|Bez ograniczeń|Tak|Nie|  
 |Interfejs użytkownika|Bezpieczne okna najwyższego poziomu|Tak|Tak|  
-|Interfejs użytkownika|Własny schowek|Tak|Tak|  
-|Przeglądarka internetowa|Bezpieczne nawigowanie po ramce do kodu HTML|Tak|Tak|  
+|Interfejs użytkownika|Własny Schowek|Tak|Tak|  
+|Przeglądarka internetowa|Bezpieczna nawigacja w ramce do html|Tak|Tak|  
   
 > [!NOTE]
-> Operacje wycinania i wklejania są dozwolone tylko w częściowej relacji zaufania po zainicjowaniu użytkownika.  
+> Wytnij i wklej jest dozwolone tylko w częściowym zaufaniu, gdy użytkownik zainicjował.  
   
- Jeśli musisz zwiększyć uprawnienia, musisz zmienić ustawienia projektu i manifest aplikacji ClickOnce. Aby uzyskać więcej informacji, zobacz [Omówienie aplikacji w przeglądarce WPF XAML](./app-development/wpf-xaml-browser-applications-overview.md). Pomocne mogą być również następujące dokumenty.  
+ Jeśli chcesz zwiększyć uprawnienia, należy zmienić ustawienia projektu i ClickOnce manifest aplikacji. Aby uzyskać więcej informacji, zobacz [Omówienie aplikacji przeglądarki WPF XAML](./app-development/wpf-xaml-browser-applications-overview.md). Pomocne mogą być również następujące dokumenty.  
   
-- Program [Mage. exe (narzędzie tworzenia i edycji manifestów)](../tools/mage-exe-manifest-generation-and-editing-tool.md).  
+- [Mage.exe (Narzędzie do generowania manifestów i edycji)](../tools/mage-exe-manifest-generation-and-editing-tool.md).  
   
-- [MageUI. exe (narzędzie tworzenia i edycji manifestów, klient graficzny)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).  
+- [MageUI.exe (narzędzie do generowania manifestu i edycji, klient graficzny).](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)  
   
 - [Zabezpieczanie aplikacji ClickOnce](/visualstudio/deployment/securing-clickonce-applications).  
   
- Jeśli Twoje aplikacje XBAP wymagają pełnego zaufania, możesz użyć tych samych narzędzi, aby zwiększyć żądane uprawnienia. Chociaż usługa XBAP będzie otrzymywać pełne zaufanie, jeśli jest zainstalowana na komputerze lokalnym, w intranecie lub z adresu URL, który znajduje się na liście zaufanych lub dozwolonych witryn w przeglądarce. Jeśli aplikacja jest zainstalowana z intranetu lub zaufanej witryny, użytkownik otrzyma standardowy monit ClickOnce o podniesionych uprawnieniach. Użytkownik może wybrać opcję kontynuowania lub anulowania instalacji.  
+ Jeśli xbap wymaga pełnego zaufania, można użyć tych samych narzędzi, aby zwiększyć żądane uprawnienia. Mimo że xbap otrzyma pełne zaufanie tylko wtedy, gdy jest zainstalowany i uruchomiony z komputera lokalnego, intranetu lub z adresu URL, który jest wymieniony w zaufanych lub dozwolonych witrynach przeglądarki. Jeśli aplikacja jest zainstalowana z intranetu lub zaufanej witryny, użytkownik otrzyma standardowy monit ClickOnce informujący o podwyższonych uprawnieniach. Użytkownik może kontynuować lub anulować instalację.  
   
- Alternatywnie można użyć zaufanego modelu wdrażania ClickOnce do pełnego wdrożenia zaufania z dowolnej strefy zabezpieczeń. Aby uzyskać więcej informacji, zobacz [Omówienie wdrażania zaufanych aplikacji](/visualstudio/deployment/trusted-application-deployment-overview) i [zabezpieczenia](security-wpf.md).  
+ Alternatywnie można użyć modelu ClickOnce zaufanego wdrożenia dla pełnego wdrożenia zaufania z dowolnej strefy zabezpieczeń. Aby uzyskać więcej informacji, zobacz [Omówienie wdrażania zaufanych aplikacji](/visualstudio/deployment/trusted-application-deployment-overview) i [zabezpieczenia](security-wpf.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Security](security-wpf.md)
+- [Zabezpieczenia](security-wpf.md)
 - [Strategia zabezpieczeń WPF — zabezpieczenia platformy](wpf-security-strategy-platform-security.md)
 - [Strategia zabezpieczeń WPF — projekt zabezpieczeń](wpf-security-strategy-security-engineering.md)

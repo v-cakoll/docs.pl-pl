@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 93aeecb9-7fef-4545-8daf-f566dfc47084
 topic_type:
 - apiref
-ms.openlocfilehash: 0370c74bde9ca5bdbd0fd03515f4b174ddd0a39a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a5c743064b8ca645cf45d02b8800c88187bf4c6c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132318"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179286"
 ---
 # <a name="cor_segment-structure"></a>COR_SEGMENT — Struktura
 Zawiera informacje o regionie pamięci w zarządzanym stosie.  
@@ -28,37 +28,37 @@ Zawiera informacje o regionie pamięci w zarządzanym stosie.
   
 ```cpp  
 typedef struct _COR_SEGMENT {  
-    CORDB_ADDRESS start;            
-    CORDB_ADDRESS end;              
-    CorDebugGenerationTypes gen;    
-    ULONG heap;                     
+    CORDB_ADDRESS start;
+    CORDB_ADDRESS end;
+    CorDebugGenerationTypes gen;
+    ULONG heap;
 } COR_SEGMENT;  
 ```  
   
 ## <a name="members"></a>Elementy członkowskie  
   
-|Element członkowski|Opis|  
+|Członek|Opis|  
 |------------|-----------------|  
 |`start`|Adres początkowy regionu pamięci.|  
 |`end`|Adres końcowy regionu pamięci.|  
-|`gen`|Element członkowski wyliczenia [CorDebugGenerationTypes —](cordebuggenerationtypes-enumeration.md) wskazujący generowanie regionu pamięci.|  
-|`heap`|Numer sterty, w której znajduje się region pamięci. Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji.|  
+|`gen`|A [CorDebugGenerationTypes](cordebuggenerationtypes-enumeration.md) element członkowski wyliczenia, który wskazuje generowanie regionu pamięci.|  
+|`heap`|Numer sterty, w którym znajduje się region pamięci. Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji.|  
   
 ## <a name="remarks"></a>Uwagi  
- Struktura `COR_SEGMENTS` reprezentuje region pamięci w zarządzanym stosie.  obiekty `COR_SEGMENTS` są elementami członkowskimi obiektu kolekcji [ICorDebugHeapRegionEnum](icordebugheapsegmentenum-interface.md) , który jest wypełniany przez wywołanie metody [ICorDebugProcess5:: EnumerateHeapRegions —](icordebugprocess5-enumerateheapregions-method.md) .  
+ Struktura `COR_SEGMENTS` reprezentuje region pamięci w zarządzanym stosie.  `COR_SEGMENTS`obiekty są członkami obiektu kolekcji [ICorDebugHeapRegionEnum,](icordebugheapsegmentenum-interface.md) który jest wypełniany przez [wywołanie metody ICorDebugProcess5::EnumerateHeapRegions.](icordebugprocess5-enumerateheapregions-method.md)  
   
- Pole `heap` jest numerem procesora, który odpowiada zgłaszanej stercie. W przypadku modułów bezużytecznych stacji roboczej jego wartość jest zawsze zerowa, ponieważ stacje robocze mają tylko jedną stertę odzyskiwania pamięci. W przypadku modułów wyrzucających elementy bezużyteczne serwera jego wartość odpowiada procesorowi, do którego jest dołączona sterta. Należy zauważyć, że może być więcej lub mniej sterty wyrzucania elementów bezużytecznych, ponieważ istnieją rzeczywiste procesory ze względu na szczegóły implementacji modułu wyrzucania elementów bezużytecznych.  
+ To `heap` pole jest numerem procesora, który odpowiada zgłoszonemu stercie. Dla modułów zbierających elementy bezużyteczne stacji roboczej jego wartość jest zawsze równa zero, ponieważ stacje robocze mają tylko jedną stertę wyrzucania elementów bezużytecznych. W przypadku modułów zbierających elementy bezużyteczne serwera jego wartość odpowiada procesorowi, do którym jest dołączona sterta. Należy zauważyć, że może być więcej lub mniej sterty wyrzucania elementów bezużytecznych niż istnieją rzeczywiste procesory ze względu na szczegóły implementacji modułu zbierającego elementy bezużyteczne.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug. idl, CorDebug. h  
+ **Nagłówek:** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids. lib  
+ **Biblioteka:** CorGuids.lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Struktury debugowania](debugging-structures.md)
-- [Debugowanie](index.md)
+- [Debugging](index.md)

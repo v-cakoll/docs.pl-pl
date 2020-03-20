@@ -15,61 +15,61 @@ helpviewer_keywords:
 ms.assetid: dd11c485-be95-4b97-9cd8-68679a4fb432
 topic_type:
 - apiref
-ms.openlocfilehash: 031996813718a074eebab62ff54a2de52b898c22
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 4f1c3e823b35fcf7d5935eee111e042b2291d216
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450217"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175762"
 ---
 # <a name="imetadataemitdefinetypedef-method"></a>IMetaDataEmit::DefineTypeDef — Metoda
-Tworzy definicję typu dla typu środowiska uruchomieniowego języka wspólnego i pobiera token metadanych dla tej definicji typu.  
+Tworzy definicję typu dla wspólnego typu środowiska uruchomieniowego języka i pobiera token metadanych dla tej definicji typu.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
-HRESULT DefineTypeDef (   
-    [in]  LPCWSTR     szTypeDef,   
-    [in]  DWORD       dwTypeDefFlags,   
-    [in]  mdToken     tkExtends,   
-    [in]  mdToken     rtkImplements[],   
+HRESULT DefineTypeDef (
+    [in]  LPCWSTR     szTypeDef,
+    [in]  DWORD       dwTypeDefFlags,
+    [in]  mdToken     tkExtends,
+    [in]  mdToken     rtkImplements[],
     [out] mdTypeDef   *ptd  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `szTypeDef`  
- podczas Nazwa typu w formacie Unicode.  
+ [w] Nazwa typu w Unicode.  
   
  `dwTypeDefFlags`  
- [in] `TypeDef` atrybuty. To jest maska bitów wartości `CoreTypeAttr`.  
+ [w] `TypeDef` atrybutów. Jest to maska `CoreTypeAttr` bitowa wartości.  
   
  `tkExtends`  
- podczas Token klasy bazowej. Musi to być `mdTypeDef` lub token `mdTypeRef`.  
+ [w] Token klasy podstawowej. Musi to być `mdTypeDef` token `mdTypeRef` lub token.  
   
  `rtkImplements`  
- podczas Tablica tokenów określająca interfejsy, które implementuje Ta klasa lub interfejs.  
+ [w] Tablica tokenów określających interfejsy, które implementuje ta klasa lub interfejs.  
   
  `ptd`  
- określoną Przypisany token `mdTypeDef`.  
+ [na zewnątrz] Token `mdTypeDef` przypisany.  
   
 ## <a name="remarks"></a>Uwagi  
- Flaga w `dwTypeDefFlags` określa, czy tworzony typ jest typem referencyjnym systemu typu wspólnego (Class lub Interface) czy typem wartości typu wspólnego systemu.  
+ Flaga `dwTypeDefFlags` w określa, czy tworzony typ jest typem odwołania do systemu typu typ (klasa lub interfejs) lub typem wartości systemu typu wspólnego.  
   
- W zależności od dostarczonych parametrów, ta metoda jako efekt uboczny może również utworzyć rekord `mdInterfaceImpl` dla każdego interfejsu, który jest dziedziczony lub zaimplementowany przez ten typ. Jednak ta metoda nie zwraca żadnego z tych tokenów `mdInterfaceImpl`. Jeśli klient chce później dodać lub zmodyfikować token `mdInterfaceImpl`, musi użyć interfejsu `IMetaDataImport`, aby je wyliczyć. Jeśli chcesz używać semantyki COM interfejsu `[default]`, należy podać domyślny interfejs jako pierwszy element w `rtkImplements`; niestandardowy atrybut ustawiony dla klasy wskazuje, że Klasa ma interfejs domyślny (który zawsze przyjmuje się, że jest to pierwszy token `mdInterfaceImpl` zadeklarowany dla klasy).  
+ W zależności od dostarczonych parametrów ta metoda, jako `mdInterfaceImpl` efekt uboczny, może również utworzyć rekord dla każdego interfejsu, który jest dziedziczony lub implementowany przez ten typ. Jednak ta metoda nie zwraca `mdInterfaceImpl` żadnego z tych tokenów. Jeśli klient chce później dodać lub `mdInterfaceImpl` zmodyfikować token, `IMetaDataImport` musi użyć interfejsu, aby je wyliczyć. Jeśli chcesz użyć semantyki COM `[default]` interfejsu, należy podać domyślny interfejs jako `rtkImplements`pierwszy element w ; atrybut niestandardowy ustawiony w klasie wskazuje, że klasa ma domyślny interfejs (który jest zawsze zakłada się, że jest pierwszym `mdInterfaceImpl` tokenem zadeklarowanym dla klasy).  
   
- Każdy element tablicy `rtkImplements` zawiera token `mdTypeDef` lub `mdTypeRef`. Ostatni element w tablicy musi być `mdTokenNil`.  
+ Każdy element `rtkImplements` tablicy `mdTypeDef` zawiera `mdTypeRef` lub token. Ostatnim elementem w tablicy musi być `mdTokenNil`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
+ **Biblioteka:** Używany jako zasób w pliku MSCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

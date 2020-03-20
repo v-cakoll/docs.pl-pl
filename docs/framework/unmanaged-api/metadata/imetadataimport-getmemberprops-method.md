@@ -15,31 +15,31 @@ helpviewer_keywords:
 ms.assetid: 42790918-4142-4938-b8f4-a56979a55846
 topic_type:
 - apiref
-ms.openlocfilehash: bc5bbba2fa4a95955e52a2e083a2097178b5d96a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 72e14ea0414ebdeb8f54a4bdef8ce5208fc8ef72
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437514"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177227"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>IMetaDataImport::GetMemberProps — Metoda
-Pobiera informacje przechowywane w metadanych dla określonej definicji elementu członkowskiego, w tym nazwę, podpis binarny i względny adres wirtualny, elementu członkowskiego <xref:System.Type>, do którego odwołuje się określony token metadanych. Jest to prosta metoda pomocnicza: Jeśli *MB* jest elementem MethodDef, **GetMethodProps —** jest wywoływana; Jeśli liczba *MB* to FieldDef, **GetFieldProps —** jest wywoływana. Zobacz te inne metody, aby uzyskać szczegółowe informacje. 
+Pobiera informacje przechowywane w metadanych dla definicji określonego elementu członkowskiego, w tym <xref:System.Type> nazwę, podpis binarny i względny adres wirtualny elementu członkowskiego, do którego odwołuje się określony token metadanych. Jest to prosta metoda pomocnika: jeśli *mb* jest MethodDef, a następnie **GetMethodProps** jest wywoływana; jeśli *mb* jest FieldDef, a następnie **GetFieldProps** jest wywoływana. Zobacz te inne metody, aby uzyskać szczegółowe informacje.
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
 HRESULT GetMemberProps (  
-   [in]  mdToken           mb,   
+   [in]  mdToken           mb,
    [out] mdTypeDef         *pClass,  
-   [out] LPWSTR            szMember,   
-   [in]  ULONG             cchMember,   
-   [out] ULONG             *pchMember,   
+   [out] LPWSTR            szMember,
+   [in]  ULONG             cchMember,
+   [out] ULONG             *pchMember,
    [out] DWORD             *pdwAttr,  
-   [out] PCCOR_SIGNATURE   *ppvSigBlob,   
-   [out] ULONG             *pcbSigBlob,   
-   [out] ULONG             *pulCodeRVA,   
-   [out] DWORD             *pdwImplFlags,   
-   [out] DWORD             *pdwCPlusTypeFlag,   
+   [out] PCCOR_SIGNATURE   *ppvSigBlob,
+   [out] ULONG             *pcbSigBlob,
+   [out] ULONG             *pulCodeRVA,
+   [out] DWORD             *pdwImplFlags,
+   [out] DWORD             *pdwCPlusTypeFlag,
    [out] UVCP_CONSTANT     *ppValue,  
    [out] ULONG             *pcchValue  
 );  
@@ -47,54 +47,54 @@ HRESULT GetMemberProps (
   
 ## <a name="parameters"></a>Parametry  
  `mb`  
- podczas Token, który odwołuje się do elementu członkowskiego, aby uzyskać skojarzone metadane.  
+ [w] Token, który odwołuje się do elementu członkowskiego, aby uzyskać skojarzone metadane.  
   
  `pClass`  
- określoną Wskaźnik do tokenu metadanych, który reprezentuje klasę elementu członkowskiego.  
+ [na zewnątrz] Wskaźnik do tokenu metadanych, który reprezentuje klasę członka.  
   
  `szMember`  
- określoną Nazwa elementu członkowskiego.  
+ [na zewnątrz] Nazwa elementu członkowskiego.  
   
  `cchMember`  
- podczas Rozmiar w postaci znaków dwubajtowych bufora `szMember`.  
+ [w] Rozmiar w szerokich `szMember` znakach buforu.  
   
  `pchMember`  
- określoną Rozmiar w postaci znaków dwubajtowych zwracanej nazwy.  
+ [na zewnątrz] Rozmiar w szerokich znakach zwracanej nazwy.  
   
  `pdwAttr`  
- określoną Wszystkie wartości flag zastosowane do elementu członkowskiego.  
+ [na zewnątrz] Wszystkie wartości flag zastosowanych do elementu członkowskiego.  
   
  `ppvSigBlob`  
- określoną Wskaźnik do binarnego podpisu metadanych elementu członkowskiego.  
+ [na zewnątrz] Wskaźnik do podpisu binarnych metadanych członka.  
   
  `pcbSigBlob`  
- określoną Rozmiar w bajtach `ppvSigBlob`.  
+ [na zewnątrz] Rozmiar w bajtach . `ppvSigBlob`  
   
  `pulCodeRVA`  
- określoną Wskaźnik do względnego adresu wirtualnego elementu członkowskiego.  
+ [na zewnątrz] Wskaźnik do względnego adresu wirtualnego elementu członkowskiego.  
   
  `pdwImplFlags`  
- określoną Wszystkie flagi implementacji metody skojarzone z elementem członkowskim.  
+ [na zewnątrz] Flagi implementacji dowolnej metody skojarzone z elementem członkowskim.  
   
  `pdwCPlusTypeFlag`  
- określoną Flaga oznaczająca <xref:System.ValueType>. Jest to jedna z wartości `ELEMENT_TYPE_*`.
+ [na zewnątrz] Flaga oznaczająca <xref:System.ValueType>. Jest to jedna `ELEMENT_TYPE_*` z wartości.
   
  `ppValue`  
- określoną Wartość stałej ciągu zwrócona przez ten element członkowski.  
+ [na zewnątrz] Stała wartość ciągu zwrócona przez ten element członkowski.  
   
  `pcchValue`  
- określoną Rozmiar w znakach `ppValue`lub zero, jeśli `ppValue` nie zawiera ciągu.  
+ [na zewnątrz] Rozmiar znaków `ppValue`, lub zero, jeśli `ppValue` nie posiada ciągu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Uwzględnione jako zasób w pliku MsCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

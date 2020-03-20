@@ -1,31 +1,31 @@
 ---
-title: Implementowanie logiki biznesowej (LINQ to SQL)
+title: Implementowanie logiki biznesowej (LINQ do SQL)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c4577590-7b12-42e1-84a6-95aa2562727e
-ms.openlocfilehash: 5261aab1ef6641651f856b8ebb024f64ad32ee59
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 51b92549a40d0e5121cc390f5dbdf726cc06404b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781430"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174553"
 ---
-# <a name="implementing-business-logic-linq-to-sql"></a>Implementowanie logiki biznesowej (LINQ to SQL)
-Termin "logika biznesowa" w tym temacie odnosi się do wszystkich reguł niestandardowych lub testów weryfikacyjnych, które są stosowane do danych, zanim zostaną wstawione, zaktualizowane lub usunięte z bazy danych. Logika biznesowa jest również czasami określana jako "reguły biznesowe" lub "Logika domeny". W aplikacjach n-warstwowych zwykle jest to warstwa logiczna, dzięki czemu można ją modyfikować niezależnie od warstwy prezentacji lub warstwy dostępu do danych. Logika biznesowa może być wywoływana przez warstwę dostępu do danych przed dowolnymi aktualizacjami, wstawianiem lub usuwaniem danych w bazie danych.  
+# <a name="implementing-business-logic-linq-to-sql"></a>Implementowanie logiki biznesowej (LINQ do SQL)
+Termin "logika biznesowa" w tym temacie odnosi się do wszelkich reguł niestandardowych lub testów sprawdzania poprawności, które mają zastosowanie do danych przed ich wstawieniem, zaktualizowaniem lub usunięciem z bazy danych. Logika biznesowa jest również czasami nazywana "regułami biznesowymi" lub "logiką domeny". W aplikacjach n-warstwowych jest zazwyczaj zaprojektowany jako warstwa logiczna, dzięki czemu można go modyfikować niezależnie od warstwy prezentacji lub warstwy dostępu do danych. Logika biznesowa może być wywoływana przez warstwę dostępu do danych przed lub po każdej aktualizacji, wstawieniu lub usunięciu danych w bazie danych.  
   
- Logika biznesowa może być prosta jako Walidacja schematu, aby upewnić się, że typ pola jest zgodny z typem kolumny tabeli. Lub może składać się z zestawu obiektów, które współpracują w sposób arbitralnie skomplikowany. Reguły mogą być implementowane jako procedury składowane w bazie danych lub jako obiekty w pamięci. Jednak logika biznesowa jest zaimplementowana, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] umożliwia korzystanie z klas częściowych i metod częściowych w celu oddzielenia logiki biznesowej od kodu dostępu do danych.  
+ Logika biznesowa może być tak prosta, jak sprawdzanie poprawności schematu, aby upewnić się, że typ pola jest zgodny z typem kolumny tabeli. Lub może składać się z zestawu obiektów, które współdziałają w dowolnie złożony sposób. Reguły mogą być implementowane jako procedury przechowywane w bazie danych lub jako obiekty w pamięci. Jednak logika biznesowa [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] jest zaimplementowana, umożliwia użycie klas częściowych i metod częściowych, aby oddzielić logikę biznesową od kodu dostępu do danych.  
   
-## <a name="how-linq-to-sql-invokes-your-business-logic"></a>Jak LINQ to SQL wywołuje logikę biznesową  
- Podczas generowania klasy jednostki w czasie projektowania, ręcznie lub przy użyciu Object Relational Designer lub SQLMetal, jest definiowana jako Klasa częściowa. Oznacza to, że w osobnym pliku kodu można zdefiniować inną część klasy Entity, która zawiera niestandardową logikę biznesową. W czasie kompilacji dwie części są scalane w jedną klasę. Ale jeśli musisz ponownie wygenerować klasy jednostek przy użyciu Object Relational Designer lub SQLMetal, możesz to zrobić, a część klasy nie zostanie zmodyfikowana.  
+## <a name="how-linq-to-sql-invokes-your-business-logic"></a>Jak LINQ do SQL wywołuje logikę biznesową  
+ Podczas generowania klasy jednostki w czasie projektowania, ręcznie lub przy użyciu Object Relational Designer lub SQLMetal, jest zdefiniowany jako klasa częściowa. Oznacza to, że w pliku kodu oddzielne, można zdefiniować inną część klasy jednostki, która zawiera niestandardową logikę biznesową. W czasie kompilacji dwie części są scalane w jedną klasę. Ale jeśli trzeba ponownie wygenerować klasy jednostki przy użyciu Object Relational Designer lub SQLMetal, można to zrobić, a część klasy nie zostaną zmodyfikowane.  
   
- Klasy częściowe, które definiują jednostki i <xref:System.Data.Linq.DataContext> zawierają metody częściowe. Są to punkty rozszerzalności, których można użyć do zastosowania logiki biznesowej przed i po dowolnej aktualizacji, wstawieniu lub usunięciu dla właściwości jednostki lub jednostki. Metody częściowe można traktować jako zdarzenia w czasie kompilacji. Generator kodu definiuje sygnaturę metody i wywołuje metody w metodach dostępu do właściwości get i Set, `DataContext` Konstruktor i w niektórych przypadkach w tle, gdy <xref:System.Data.Linq.DataContext.SubmitChanges%2A> jest wywoływana. Jednakże jeśli nie zaimplementowano konkretnej metody częściowej, wszystkie odwołania do niej i definicja zostaną usunięte w czasie kompilacji.  
+ Klasy częściowe, które definiują jednostki <xref:System.Data.Linq.DataContext> i zawierają metody częściowe. Są to punkty rozszerzalności, których można użyć do zastosowania logiki biznesowej przed i po każdej aktualizacji, wstawianiu lub usuwaniu właściwości jednostki lub jednostki. Metody częściowe można traktować jako zdarzenia w czasie kompilacji. Generator kodu definiuje podpis metody i wywołuje metody w get and set `DataContext` akcesorów właściwości, <xref:System.Data.Linq.DataContext.SubmitChanges%2A> konstruktora, a w niektórych przypadkach w tle, gdy jest wywoływana. Jednak jeśli nie zaimplementujesz określonej metody częściowej, wszystkie odwołania do niej i definicja są usuwane w czasie kompilacji.  
   
- W definicji implementującej zapisanej w osobnym pliku kodu można wykonać dowolną logikę niestandardową. Możesz użyć swojej częściowej klasy jako warstwy domeny lub wywołać z definicji implementującej metody częściowej w oddzielnym obiekcie lub obiektach. W obu przypadkach logika biznesowa jest czysto oddzielona od kodu dostępu do danych i kodu warstwy prezentacji.  
+ W definicji implementacji, który piszesz w pliku kodu oddzielne, można wykonać niezależnie od logiki niestandardowej jest wymagane. Klasę częściową można użyć jako warstwy domeny lub wywołać z implementującej definicji metody częściowej do oddzielnego obiektu lub obiektów. Tak czy inaczej logika biznesowa jest czysto oddzielona od kodu dostępu do danych i kodu warstwy prezentacji.  
   
-## <a name="a-closer-look-at-the-extensibility-points"></a>Bliżej przeszukiwania punktów rozszerzalności  
- Poniższy przykład przedstawia część kodu wygenerowanego przez Object Relational Designer dla `DataContext` klasy, która ma dwie tabele: `Customers` i `Orders`. Należy zauważyć, że dla każdej tabeli w klasie są zdefiniowane metody INSERT, Update i DELETE.  
+## <a name="a-closer-look-at-the-extensibility-points"></a>Bliższe spojrzenie na punkty rozszerzalności  
+ W poniższym przykładzie przedstawiono część kodu wygenerowanego `DataContext` przez projektanta `Customers` relacyjnego obiektu dla klasy, która ma dwie tabele: i `Orders`. Należy zauważyć, że wstaw, aktualizacja i usuń metody są zdefiniowane dla każdej tabeli w klasie.  
   
 ```vb  
 Partial Public Class Northwnd  
@@ -69,9 +69,9 @@ public partial class MyNorthWindDataContext : System.Data.Linq.DataContext
         #endregion  
 ```  
   
- W przypadku zaimplementowania metody INSERT, Update i DELETE w klasie częściowej [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] środowisko uruchomieniowe wywoła je zamiast własnych metod domyślnych, gdy <xref:System.Data.Linq.DataContext.SubmitChanges%2A> jest wywoływana. Dzięki temu można zastąpić domyślne zachowanie operacji tworzenia/odczytywania/aktualizowania/usuwania. Aby uzyskać więcej informacji, [zobacz Przewodnik: Dostosowywanie zachowania INSERT, Update i DELETE klas](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)jednostek.  
+ Jeśli zaimplementujesz Wstaw, Aktualizuj i [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Usuń metody w klasie częściowej, środowisko <xref:System.Data.Linq.DataContext.SubmitChanges%2A> wykonawcze wywoła je zamiast własnych metod domyślnych, gdy jest wywoływana. Pozwala to zastąpić domyślne zachowanie dla operacji tworzenia / odczytu / aktualizacji / usuwania. Aby uzyskać więcej informacji, zobacz [Przewodnik: Dostosowywanie zachowania wstawiania, aktualizowania i usuwania klas jednostek](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes).  
   
- `OnCreated` Metoda jest wywoływana w konstruktorze klasy.  
+ Metoda `OnCreated` jest wywoływana w konstruktorze klasy.  
   
 ```vb  
 Public Sub New(ByVal connection As String)  
@@ -88,7 +88,7 @@ public MyNorthWindDataContext(string connection) :
         }  
 ```  
   
- Klasy jednostek mają trzy metody, które są wywoływane przez [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] środowisko uruchomieniowe, gdy jednostka została utworzona, załadowana i sprawdzona (gdy `SubmitChanges` jest wywoływana). Klasy jednostek mają również dwie metody częściowe dla każdej właściwości, jeden, który jest wywoływany przed ustawieniem właściwości, i jeden, który jest wywoływany po. Poniższy przykład kodu pokazuje niektóre metody wygenerowane dla `Customer` klasy:  
+ Klasy jednostek mają trzy metody, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] które są wywoływane przez środowisko wykonawcze `SubmitChanges` podczas tworzenia, ładowania i sprawdzania poprawności jednostki (po wywołaniu). Klasy jednostki mają również dwie metody częściowe dla każdej właściwości, jedną, która jest wywoływana przed ustawieniem właściwości, i jedną, która jest wywoływana po. Poniższy przykład kodu pokazuje niektóre metody `Customer` generowane dla klasy:  
   
 ```vb  
 #Region "Extensibility Method Definitions"  
@@ -122,7 +122,7 @@ public MyNorthWindDataContext(string connection) :
 // ...additional Changing/Changed methods for each property  
 ```  
   
- Metody są wywoływane w akcesorze zestawu właściwości, jak pokazano w poniższym przykładzie dla `CustomerID` właściwości:  
+ Metody są wywoływane w akcesor zestawu właściwości, jak pokazano w poniższym przykładzie `CustomerID` dla właściwości:  
   
 ```vb  
 Public Property CustomerID() As String  
@@ -155,7 +155,7 @@ public string CustomerID
 }  
 ```  
   
- W Twojej części klasy napiszesz definicję implementującą metodę. W programie Visual Studio, po wpisaniu `partial` , zobaczysz IntelliSense dla definicji metod w drugiej części klasy.  
+ W swojej części klasy piszesz implementującą definicję metody. W programie Visual Studio `partial` po wpisaniu zostanie wyświetlony IntelliSense dla definicji metod w drugiej części klasy.  
   
 ```vb  
 Partial Public Class Customer  
@@ -166,7 +166,7 @@ End Class
 ```  
   
 ```csharp  
-partial class Customer   
+partial class Customer
     {  
         partial void OnCustomerIDChanging(string value)  
         {  
@@ -177,13 +177,13 @@ partial class Customer
   
  Aby uzyskać więcej informacji na temat dodawania logiki biznesowej do aplikacji przy użyciu metod częściowych, zobacz następujące tematy:  
   
- [Instrukcje: Dodawanie walidacji do klas jednostek](/visualstudio/data-tools/how-to-add-validation-to-entity-classes)  
+ [Instrukcje: dodawanie walidacji do klas jednostek](/visualstudio/data-tools/how-to-add-validation-to-entity-classes)  
   
- [Przewodnik: Dostosowywanie zachowania wstawiania, aktualizacji i usuwania dla klas jednostek](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)  
+ [Przewodnik: dostosowywanie zachowania wstawiania, aktualizacji i usuwania dla klas jednostek](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)  
   
- [Przewodnik: Dodawanie walidacji do klas jednostek](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb629301(v=vs.120))  
+ [Przewodnik: Dodawanie sprawdzania poprawności do klas encji](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb629301(v=vs.120))  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Klasy częściowe i metody](../../../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)
 - [Metody częściowe](../../../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)

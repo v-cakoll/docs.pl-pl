@@ -1,5 +1,5 @@
 ---
-title: Funkcja CreateIDispatchSTAForwarder — dokumentacja interfejsu API Unmanaged WPF
+title: Funkcja CreateIDispatchSTAForwarder — odwołanie do niezarządzanego interfejsu API WPF WPF
 titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
@@ -9,23 +9,23 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: 57a02dfa-f091-4ace-9c06-1f4ab52b3527
-ms.openlocfilehash: 67f2542733fb9c6af197c99ede2bd097ce876b5d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: e151ffa6eb5f1dc7479c699e0d7f9f3f57833ebd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76738032"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174722"
 ---
-# <a name="createidispatchstaforwarder-function-wpf-unmanaged-api-reference"></a>CreateIDispatchSTAForwarder — funkcja (odwołanie do niezarządzanego interfejsu API platformy WPF)
-Ten interfejs API obsługuje infrastrukturę Windows Presentation Foundation (WPF) i nie jest przeznaczony do użycia bezpośrednio w kodzie.  
+# <a name="createidispatchstaforwarder-function-wpf-unmanaged-api-reference"></a>Funkcja CreateIDispatchSTAForwarder (odwołanie do interfejsu API niezarządzanego WPF)
+Ten interfejs API obsługuje infrastrukturę Programu Windows Presentation Foundation (WPF) i nie jest przeznaczony do użycia bezpośrednio z kodu.  
   
- Używany przez infrastrukturę Windows Presentation Foundation (WPF) dla wątków i zarządzania systemem Windows.  
+ Używane przez Windows Presentation Foundation (WPF) infrastruktury do zarządzania wątkami i oknami.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
 HRESULT CreateIDispatchSTAForwarder(  
-   __in IDispatch *pDispatchDelegate,   
+   __in IDispatch *pDispatchDelegate,
    __deref_out IDispatch **ppForwarder  
 )  
 ```  
@@ -34,22 +34,22 @@ HRESULT CreateIDispatchSTAForwarder(
   
 ## <a name="property-valuereturn-value"></a>Wartość właściwości/Zwracana wartość  
  pDispatchDelegate  
- Wskaźnik do interfejsu `IDispatch`.  
+ Wskaźnik do `IDispatch` interfejsu.  
   
- ppForwarder  
- Wskaźnik do adresu interfejsu `IDispatch`.  
+ ppForwarder (Polski)  
+ Wskaźnik do adresu `IDispatch` interfejsu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe .NET Framework](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [.NET Framework Wymagania systemowe](../../get-started/system-requirements.md).  
   
- **BIBLIOTECE**  
+ **Dll:**  
   
- W .NET Framework 3,0 i 3,5: PresentationHostDLL. dll  
+ W pliku .NET Framework 3.0 i 3.5: PresentationHostDLL.dll  
   
- W .NET Framework 4 i nowszych: PresentationHost_v0400. dll  
+ W pliku .NET Framework 4 i nowszym: PresentationHost_v0400.dll  
   
- **Wersja .NET Framework:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
+ **Wersja programu .NET Framework:**[!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Niezarządzane interfejsy API WPF — informacje](wpf-unmanaged-api-reference.md)

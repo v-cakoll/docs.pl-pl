@@ -1,5 +1,5 @@
 ---
-title: Tworzenie aplikacji klienckich opartych na systemie Windows za pomocą .NET Framework
+title: Tworzenie aplikacji klienckich opartych na systemie Windows za pomocą programu .NET Framework
 ms.date: 01/09/2018
 helpviewer_keywords:
 - client application services
@@ -13,51 +13,43 @@ helpviewer_keywords:
 - Visual C#, creating applications
 - client/server applications, Windows applications
 ms.assetid: 2dfb50b7-5af2-4e12-9bbb-c5ade0e39a68
-ms.openlocfilehash: 5cf10a4d50aec561fea4f8537098345f8e03a26a
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: b6b5f47980e7c0c87128b9efb782e637ed7144f4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73457974"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79181636"
 ---
-# <a name="develop-client-applications-with-the-net-framework"></a>Tworzenie aplikacji klienckich przy użyciu .NET Framework
+# <a name="develop-client-applications-with-net-framework"></a>Tworzenie aplikacji klienckich za pomocą programu .NET Framework
 
-Istnieje kilka sposobów na tworzenie aplikacji opartych na systemie Windows przy użyciu .NET Framework. Można użyć dowolnego z tych narzędzi i platform:
+Istnieje kilka sposobów tworzenia aplikacji opartych na systemie Windows za pomocą programu .NET Framework. Można użyć dowolnego z następujących narzędzi i struktur:
 
-- [Platforma uniwersalna systemu Windows (UWP)](https://developer.microsoft.com/windows/apps)
+- [Platforma uniwersalna systemu Windows (UWP)](/windows/uwp/)
 - [Windows Presentation Foundation (WPF)](./wpf/index.md)
 - [Windows Forms](./winforms/index.md)
 
-Ta sekcja zawiera tematy opisujące sposób tworzenia aplikacji opartych na systemie Windows przy użyciu Windows Presentation Foundation lub Windows Forms. Można jednak tworzyć aplikacje sieci Web przy użyciu .NET Framework i aplikacji klienckich dla komputerów lub urządzeń udostępnianych za pośrednictwem Microsoft Store.
+Ta sekcja zawiera artykuły opisujące sposób tworzenia aplikacji opartych na systemie Windows przy użyciu programu Windows Presentation Foundation lub Windows Forms. Można jednak również tworzyć aplikacje sieci Web przy użyciu programu .NET Framework i aplikacji klienckich dla komputerów lub urządzeń udostępnianych za pośrednictwem sklepu Microsoft Store (aplikacje platformy uniwersalnej systemu Windows).
 
-## <a name="in-this-section"></a>W tej sekcji
+## <a name="related-sections"></a>Powiązane sekcje
 
-[Windows Presentation Foundation](./wpf/index.md)  
-Zawiera informacje na temat tworzenia aplikacji przy użyciu WPF.
+[Uniwersalna platforma systemu Windows](/windows/uwp/)\
+W tym artykule opisano sposób tworzenia aplikacji platformy uniwersalnej systemu i platformy uniwersalnej systemu, które można udostępnić użytkownikom za pośrednictwem sklepu Microsoft Store.
 
-[Windows Forms](./winforms/index.md)  
-Zawiera informacje dotyczące tworzenia aplikacji za pomocą Windows Forms.
-
-## <a name="related-sections"></a>Sekcje pokrewne
-
-[platforma uniwersalna systemu Windows](https://developer.microsoft.com/windows/apps)  
-Zawiera opis sposobu tworzenia aplikacji dla systemu Windows 10, które mogą być dostępne dla użytkowników w Sklepie Windows.
-
-[.NET for platformy UWP — aplikacje](https://msdn.microsoft.com/library/windows/apps/mt185501.aspx)  
-W tym artykule opisano obsługę .NET Framework aplikacji ze sklepu, którą można wdrożyć na komputerach i urządzeniach z systemem Windows.
-
-[Interfejs API platformy .NET dla Windows Phone Silverlight](https://docs.microsoft.com/previous-versions/windows/apps/jj207211\(v=vs.105\))  
-Wyświetla listę interfejsów API .NET Framework, których można użyć do kompilowania aplikacji przy użyciu Windows Phone Silverlight.
+[Interfejs API platformy .NET dla aplikacji platformy uniwersalnej systemu Windows](/dotnet/api/index?view=dotnet-uwp-10.0)\
+Odwołanie do typów platformy .NET, które obsługują aplikacje platformy uniwersalnej systemu Windows.
   
-[Tworzenie aplikacji dla wielu platform](../standard/cross-platform/index.md)  
-W tym artykule opisano różne metody, których można użyć w celu zastosowania wielu typów aplikacji klienckich .NET Framework.
+[Tworzenie dla wielu platform](../standard/cross-platform/index.md)\
+W tym artykule opisano różne metody, za pomocą programu .NET Framework do kierowania wielu typów aplikacji klienckich.
 
-[Wprowadzenie do witryn sieci Web ASP.NET](https://www.asp.net/get-started/websites)  
-Opisuje sposoby opracowywania aplikacji sieci Web przy użyciu usługi ASP.NET.
+[Wprowadzenie do ASP.NET witryn sieci Web](https://dotnet.microsoft.com/apps/aspnet/web-apps)\
+W tym artykule opisano sposoby tworzenia aplikacji sieci Web przy użyciu ASP.NET.
 
-## <a name="see-also"></a>Zobacz także
+[Interfejs API platformy .NET dla systemu Windows Phone Silverlight](https://docs.microsoft.com/previous-versions/windows/apps/jj207211\(v=vs.105\))\
+Wyświetla listę interfejsów API programu .NET Framework, których można używać do tworzenia aplikacji za pomocą programu Windows Phone Silverlight.
+
+## <a name="see-also"></a>Zobacz też
 
 - [.NET Standard](../standard/net-standard.md)
-- [Omówienie](./get-started/overview.md)
+- [Przegląd](./get-started/overview.md)
 - [Podręcznik programowania](./development-guide.md)
 - [Aplikacje usług systemu Windows](./windows-services/index.md)

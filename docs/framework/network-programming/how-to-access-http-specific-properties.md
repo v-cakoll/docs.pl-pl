@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f8848c7e-f5c5-4d42-b86d-9951ff8f4146
-ms.openlocfilehash: f902fb3ee97e94c85192836be047dfe632249735
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 68ad6b2c55cd5cc467e53441caa778ea10b994fb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71048494"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180851"
 ---
 # <a name="how-to-access-http-specific-properties"></a>Instrukcje: dostęp do właściwości specyficznych dla protokołu HTTP
-Ten przykład pokazuje, jak wyłączyć zachowanie **Keep-Alive** protokołu HTTP i uzyskać numer wersji protokołu z serwera sieci Web.  
+W tym przykładzie pokazano, jak wyłączyć zachowanie **http keep-alive** i uzyskać numer wersji protokołu z serwera sieci Web.  
   
 ## <a name="example"></a>Przykład  
   
@@ -32,7 +32,7 @@ HttpWResp.Close()
 ```  
   
 ```csharp  
-HttpWebRequest HttpWReq =   
+HttpWebRequest HttpWReq =
     (HttpWebRequest)WebRequest.Create("http://www.contoso.com");  
 // Turn off connection keep-alives.  
 HttpWReq.KeepAlive = false;  
@@ -47,10 +47,10 @@ HttpWResp.Close();
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
-- Odwołania do przestrzeni nazw **System.NET** .  
+- Odwołania do **System.Net** obszaru nazw.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Dostęp do Internetu za pośrednictwem serwera proxy](accessing-the-internet-through-a-proxy.md)
 - [Korzystanie z protokołów aplikacji](using-application-protocols.md)
-- [HTTP](http.md)
+- [Protokół HTTP](http.md)

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: c8b65b19-d777-428f-bc0c-0d84c78a37bc
 topic_type:
 - apiref
-ms.openlocfilehash: 355f9da29a435a02d929cc01f28e95c4e04cdfcc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fb77fe470829570d5abe291249eb7ef9023e6b14
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73109156"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178309"
 ---
 # <a name="asm_name-enumeration"></a>ASM_NAME — Wyliczenie
-Wskazuje wersję, kompilację, kulturę, sygnaturę i tak dalej, zestawu, którego właściwości będą pobierane lub ustawiane przez metody [IAssemblyName](iassemblyname-interface.md) .  
+Wskazuje wersję, kompilację, kulturę, podpis i tak dalej, zestawu, którego właściwości zostaną pobrane lub ustawione przez [metody IAssemblyName.](iassemblyname-interface.md)  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -47,7 +47,7 @@ typedef enum {
     ASM_NAME_NULL_PUBLIC_KEY,  
     ASM_NAME_NULL_PUBLIC_KEY_TOKEN,  
     ASM_NAME_CUSTOM,  
-    ASM_NAME_NULL_CUSTOM,   
+    ASM_NAME_NULL_CUSTOM,
     ASM_NAME_MVID,  
     ASM_NAME_FILE_MAJOR_VERSION,  
     ASM_NAME_FILE_MINOR_VERSION,  
@@ -63,15 +63,15 @@ typedef enum {
 ```  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** Fusion. h  
+ **Nagłówek:** Fuzja.h  
   
- **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Uwzględnione jako zasób w pliku MsCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [IAssemblyName, interfejs](iassemblyname-interface.md)
 - [Wyliczenia łączenia](fusion-enumerations.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Otwieranie plików za pomocą składnika OpenFileDialog'
+title: 'Jak: Otwieranie plików za pomocą składnika OpenFileDialog'
 ms.date: 02/11/2019
 dev_langs:
 - csharp
@@ -9,38 +9,38 @@ helpviewer_keywords:
 - OpenFile method [Windows Forms], OpenFileDialog component
 - files [Windows Forms], opening with OpenFileDialog component
 ms.assetid: 9d88367a-cc21-4ffd-be74-89fd63767d35
-ms.openlocfilehash: 7f4e96f1714a182647665f12e29d38f2b8037478
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ca69de19ab1b9ae387002898145fe99e35a7b6b9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913461"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182130"
 ---
-# <a name="how-to-open-files-with-the-openfiledialog"></a>Instrukcje: Pliki otwarte z OpenFileDialog 
+# <a name="how-to-open-files-with-the-openfiledialog"></a>Jak: Otwieranie plików za pomocą OpenFileDialog
 
-<xref:System.Windows.Forms.OpenFileDialog?displayProperty=nameWithType> Składnika otwiera okno dialogowe Windows do przeglądania i zaznaczania plików. Aby otworzyć i odczytać wybranych plików, można użyć <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A?displayProperty=nameWithType> metodę, lub Utwórz wystąpienie obiektu <xref:System.IO.StreamReader?displayProperty=nameWithType> klasy. W poniższych przykładach pokazano oba podejścia. 
+Składnik <xref:System.Windows.Forms.OpenFileDialog?displayProperty=nameWithType> otwiera okno dialogowe systemu Windows do przeglądania i wybierania plików. Aby otworzyć i odczytać wybrane pliki, <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A?displayProperty=nameWithType> można użyć metody lub <xref:System.IO.StreamReader?displayProperty=nameWithType> utworzyć wystąpienie klasy. Poniższe przykłady pokazują oba podejścia.
 
-W programie .NET Framework do pobierania lub ustawiania <xref:System.Windows.Forms.FileDialog.FileName%2A> właściwości wymaga poziomu uprawnień przyznanych przez <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> klasy. Uruchamianie przykładów <xref:System.Security.Permissions.FileIOPermission> uprawnień Sprawdź i może zgłosić wyjątek ze względu na niewystarczające uprawnienia, jeśli są uruchamiane w kontekście częściowego zaufania. Aby uzyskać więcej informacji, zobacz [podstawy zabezpieczeń dostępu kodu](../../misc/code-access-security-basics.md).
+W .NET Framework, aby <xref:System.Windows.Forms.FileDialog.FileName%2A> uzyskać lub ustawić właściwość <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> wymaga poziomu uprawnień przyznane przez klasę. Przykłady uruchomić <xref:System.Security.Permissions.FileIOPermission> sprawdzanie uprawnień i można zgłosić wyjątek z powodu niewystarczających uprawnień, jeśli są uruchamiane w kontekście częściowego zaufania. Aby uzyskać więcej informacji, zobacz [Podstawy zabezpieczeń dostępu do kodu](../../misc/code-access-security-basics.md).
 
-Można skompilować i uruchomić te przykłady jako aplikacji .NET Framework z C# lub wiersza polecenia programu Visual Basic. Aby uzyskać więcej informacji, zobacz [za pomocą wiersza polecenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) lub [kompilacji z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md). 
+Można skompilować i uruchomić te przykłady jako aplikacje .NET Framework z wiersza polecenia C# lub Visual Basic. Aby uzyskać więcej informacji, zobacz [Tworzenie wiersza polecenia za pomocą pliku csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) lub [Kompilacja z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).
 
-Począwszy od programu .NET Core 3.0 można również skompilować i uruchomić przykłady jako Windows aplikacje platformy .NET Core z folderu, który ma .NET Core Windows form  *\<nazwę folderu > .csproj* pliku projektu. 
+Począwszy od programu .NET Core 3.0, można również tworzyć i uruchamiać przykłady jako aplikacje windows .NET Core z folderu o nazwie folderu .NET Core Windows Forms * \<>.csproj* pliku projektu.
 
-## <a name="example-read-a-file-as-a-stream-with-streamreader"></a>Przykład: Odczytywanie pliku jako strumienia za pomocą StreamReader  
+## <a name="example-read-a-file-as-a-stream-with-streamreader"></a>Przykład: Odczyt pliku jako strumienia za pomocą streamreadera  
   
-W poniższym przykładzie użyto formularze Windows <xref:System.Windows.Forms.Button> kontrolki <xref:System.Windows.Forms.Control.Click> programu obsługi zdarzeń, aby otworzyć <xref:System.Windows.Forms.OpenFileDialog> z <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> metody. Po użytkownik wybierze plik i wybierze **OK**, wystąpienie <xref:System.IO.StreamReader> klasy odczytuje plik i wyświetla jego zawartość w polu tekstowym w formularzu. Aby uzyskać więcej informacji na temat odczytywania ze strumieni plików Zobacz <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> i <xref:System.IO.FileStream.Read%2A?displayProperty=nameWithType>.  
+W poniższym przykładzie <xref:System.Windows.Forms.Button> użyto <xref:System.Windows.Forms.Control.Click> programu obsługi zdarzeń <xref:System.Windows.Forms.OpenFileDialog> formantu Windows Forms, aby otworzyć <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> metodę with. Gdy użytkownik wybierze plik i wybierze przycisk <xref:System.IO.StreamReader> **OK,** wystąpienie klasy odczytuje plik i wyświetla jego zawartość w polu tekstowym formularza. Aby uzyskać więcej informacji na temat <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> <xref:System.IO.FileStream.Read%2A?displayProperty=nameWithType>odczytu ze strumieni plików, zobacz i .  
 
  [!code-csharp[OpenFileDialog#1](~/samples/snippets/winforms/open-files/example1/cs/Form1.cs)]
  [!code-vb[OpenFileDialog#1](~/samples/snippets/winforms/open-files/example1/vb/Form1.vb)]  
 
-## <a name="example-open-a-file-from-a-filtered-selection-with-openfile"></a>Przykład: Otwórz plik z filtrowanych zaznaczenia z OpenFile 
+## <a name="example-open-a-file-from-a-filtered-selection-with-openfile"></a>Przykład: Otwieranie pliku z filtrowanego zaznaczenia za pomocą pliku OpenFile
 
-W poniższym przykładzie użyto <xref:System.Windows.Forms.Button> kontrolki <xref:System.Windows.Forms.Control.Click> programu obsługi zdarzeń, aby otworzyć <xref:System.Windows.Forms.OpenFileDialog> za pomocą filtru, który pokazuje tylko pliki tekstowe. Gdy użytkownik wybierze plik tekstowy, a wybiera **OK**, <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> metoda służy do otwierania tego pliku w Notatniku.
+W poniższym <xref:System.Windows.Forms.Button> przykładzie użyto programu obsługi <xref:System.Windows.Forms.Control.Click> zdarzeń formantu, aby otworzyć <xref:System.Windows.Forms.OpenFileDialog> z filtrem, który pokazuje tylko pliki tekstowe. Gdy użytkownik wybierze plik tekstowy i <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> wybierze **przycisk OK,** metoda ta jest używana do otwierania pliku w Notatniku.
 
  [!code-csharp[OpenFileDialog#2](~/samples/snippets/winforms/open-files/example2/cs/Form1.cs)]
  [!code-vb[OpenFileDialog#2](~/samples/snippets/winforms/open-files/example2/vb/Form1.vb)]  
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Windows.Forms.OpenFileDialog>
-- [Openfiledialog — składnik](openfiledialog-component-windows-forms.md)
+- [Składnik OpenFileDialog](openfiledialog-component-windows-forms.md)

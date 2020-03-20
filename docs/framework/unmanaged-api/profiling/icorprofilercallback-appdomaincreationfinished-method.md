@@ -15,48 +15,48 @@ helpviewer_keywords:
 ms.assetid: dbab7d90-d515-4dc9-8195-294d5d04bab6
 topic_type:
 - apiref
-ms.openlocfilehash: 1cf3f2b62b388b6c2d6fcd75b1b07a67d5b2e49f
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 8b3f7712436c001e5cd44f214f6edb06390abd41
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866706"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177075"
 ---
 # <a name="icorprofilercallbackappdomaincreationfinished-method"></a>ICorProfilerCallback::AppDomainCreationFinished — Metoda
-Powiadamia profiler o utworzeniu domeny aplikacji.  
+Powiadamia profiler, że domena aplikacji została utworzona.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
 HRESULT AppDomainCreationFinished(  
     [in] AppDomainID appDomainId,  
-    [in] HRESULT     hrStatus);   
+    [in] HRESULT     hrStatus);
 ```  
   
 ## <a name="parameters"></a>Parametry
 
 - `appDomainId`
 
-  \[in] określa domenę, która została utworzona.
+  \[w] Identyfikuje domenę, która została utworzona.
 
 - `hrStatus`
 
-  \[in] wynik HRESULT wskazujący, czy Tworzenie domeny aplikacji zakończyło się pomyślnie.
+  \[w] HRESULT, który wskazuje, czy tworzenie domeny aplikacji zostało pomyślnie zakończone.
 
 ## <a name="remarks"></a>Uwagi  
- Identyfikator aplikacji nie jest prawidłowy dla żadnego żądania informacji, dopóki nie zostanie wywołana metoda `AppDomainCreationFinished`.  
+ Identyfikator aplikacji nie jest prawidłowy dla `AppDomainCreationFinished` każdego żądania informacji, dopóki metoda nie zostanie wywołana.  
   
- Niektóre części ładowania domeny aplikacji mogą być kontynuowane po wywołaniu wywołania zwrotnego `AppDomainCreationFinished`. Błąd HRESULT w `hrStatus` wskazuje na błąd. Jednak wynik HRESULT w `hrStatus` wskazuje tylko, że pierwsza część tworzenia domeny aplikacji zakończyła się powodzeniem.  
+ Niektóre części ładowania domeny aplikacji może `AppDomainCreationFinished` być kontynuowana po wywołaniu zwrotnym. Błąd HRESULT `hrStatus` w wskazuje na błąd. Jednak sukces HRESULT `hrStatus` w wskazuje tylko, że pierwsza część tworzenia domeny aplikacji powiodła się.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf. idl, CorProf. h  
+ **Nagłówek:** CorProf.idl, CorProf.h  
   
- **Biblioteka:** CorGuids. lib  
+ **Biblioteka:** CorGuids.lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [ICorProfilerCallback, interfejs](icorprofilercallback-interface.md)
+- [ICorProfilerCallback — Interfejs](icorprofilercallback-interface.md)

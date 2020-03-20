@@ -15,58 +15,58 @@ helpviewer_keywords:
 ms.assetid: a95a3908-9f87-4084-937e-8e01ef03ad63
 topic_type:
 - apiref
-ms.openlocfilehash: 813460aa027b259866b168d426fd28502b5c4465
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 13220dcfdd260688494d5aebc50f94abf8a82215
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432497"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177504"
 ---
 # <a name="imetadataemitsetparamprops-method"></a>IMetaDataEmit::SetParamProps — Metoda
-Ustawia lub zmienia funkcje parametru metody, który został zdefiniowany przez poprzednie wywołanie do [IMetaDataEmit::D efineparam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineparam-method.md).  
+Ustawia lub zmienia funkcje parametru metody zdefiniowanego przez wcześniejsze wywołanie [IMetaDataEmit::DefineParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineparam-method.md).  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
-HRESULT SetParamProps (   
-    [in]  mdParamDef  pd,   
-    [in]  LPCWSTR     szName,   
-    [in]  DWORD       dwParamFlags,   
-    [in]  DWORD       dwCPlusTypeFlag,   
-    [in]  void const  *pValue,   
-    [in]  ULONG       cchValue   
+HRESULT SetParamProps (
+    [in]  mdParamDef  pd,
+    [in]  LPCWSTR     szName,
+    [in]  DWORD       dwParamFlags,
+    [in]  DWORD       dwCPlusTypeFlag,
+    [in]  void const  *pValue,
+    [in]  ULONG       cchValue
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `pd`  
- podczas Token dla parametru Target.  
+ [w] Token parametru docelowego.  
   
  `szName`  
- podczas Nazwa parametru w formacie Unicode.  
+ [w] Nazwa parametru w Unicode.  
   
  `dwParamFlags`  
- podczas Flagi parametru.  
+ [w] Flagi parametru.  
   
  `dwCPlusTypeFlag`  
- podczas ELEMENT_TYPE_ * dla wartości stałej.  
+ [w] Wartość ELEMENT_TYPE_* dla wartości stałej.  
   
  `pValue`  
- podczas Stała wartość parametru.  
+ [w] Stała wartość parametru.  
   
  `cchValue`  
- podczas Znaki w formacie (Unicode) `pValue`.  
+ [w] Rozmiar w znakach (Unicode) . `pValue`  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
+ **Biblioteka:** Używany jako zasób w pliku MSCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

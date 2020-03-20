@@ -2,54 +2,54 @@
 title: 'Instrukcje: Określanie wiązań klienta w konfiguracji'
 ms.date: 03/30/2017
 ms.assetid: 4a7c79aa-50ee-4991-891e-adc0599323a7
-ms.openlocfilehash: b16f4b062f7f97a5855b06bdcf348911ee0497d2
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 574f56173c2acfcf41a5e9a9e99abe45281e3636
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320862"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184036"
 ---
 # <a name="how-to-specify-a-client-binding-in-configuration"></a>Instrukcje: Określanie wiązań klienta w konfiguracji
-W tym przykładzie aplikacja konsoli klienta zostanie utworzona w celu korzystania z usługi kalkulatora, a powiązanie dla tego klienta jest określone w konfiguracji w sposób deklaratywny. Klient uzyskuje dostęp do `CalculatorService`, który implementuje interfejs `ICalculator`, a zarówno usługa, jak i klient używają klasy <xref:System.ServiceModel.BasicHttpBinding>.  
+W tym przykładzie aplikacja konsoli klienta jest tworzony do korzystania z usługi kalkulatora, a powiązanie dla tego klienta jest określony deklaratywnie w konfiguracji. Klient uzyskuje dostęp `CalculatorService`do , `ICalculator` który implementuje interfejs, a zarówno <xref:System.ServiceModel.BasicHttpBinding> usługi i klienta używać klasy.  
   
- W opisanej procedurze przyjęto założenie, że usługa kalkulatora jest uruchomiona. Aby uzyskać informacje na temat sposobu tworzenia usługi, zobacz [How to: Określanie powiązania usługi w konfiguracji](how-to-specify-a-service-binding-in-configuration.md). Używa także narzędzia do [przesyłania metadanych modelu ServiceModel (Svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) , które zapewnia Windows Communication Foundation (WCF), aby automatycznie generować składniki klienta. Narzędzie generuje kod klienta i konfigurację w celu uzyskania dostępu do usługi.  
+ Opisana procedura zakłada, że usługa kalkulatora jest uruchomiona. Aby uzyskać informacje dotyczące sposobu tworzenia usługi, zobacz [Jak: Określanie powiązania usługi w konfiguracji](how-to-specify-a-service-binding-in-configuration.md). Używa również [ServiceModel Metadata Utility Tool (Svcutil.exe),](servicemodel-metadata-utility-tool-svcutil-exe.md) które program Windows Communication Foundation (WCF) zapewnia do automatycznego generowania składników klienta. Narzędzie generuje kod klienta i konfiguracji dostępu do usługi.  
   
- Klient jest skompilowany w dwóch częściach. Svcutil. exe generuje `ClientCalculator` implementujący interfejs `ICalculator`. Ta aplikacja kliencka jest następnie tworzona przez konstruowanie wystąpienia `ClientCalculator`.  
+ Klient jest zbudowany w dwóch częściach. Svcutil.exe `ClientCalculator` generuje, który implementuje `ICalculator` interfejs. Ta aplikacja kliencka jest następnie konstruowana przez skonstruowanie wystąpienia . `ClientCalculator`  
   
- Zazwyczaj najlepszym rozwiązaniem jest określenie informacji o powiązaniach i adresie w konfiguracji, a nie w sposób konieczny w kodzie. Definiowanie punktów końcowych w kodzie zazwyczaj nie jest praktyczne, ponieważ powiązania i adresy dla wdrożonej usługi są zwykle inne niż te używane podczas tworzenia usługi. Ogólnie rzecz biorąc, przechowywanie informacji o powiązaniach i adresach poza kodem pozwala na ich zmianę bez konieczności ponownego kompilowania lub wdrażania aplikacji.  
+ Zazwyczaj jest najlepszym rozwiązaniem, aby określić informacje dotyczące powiązania i adresu deklaratywnie w konfiguracji, a nie bezwzględnie w kodzie. Definiowanie punktów końcowych w kodzie zwykle nie jest praktyczne, ponieważ powiązania i adresy dla wdrożonej usługi zazwyczaj różnią się od tych używanych podczas opracowywania usługi. Bardziej ogólnie, utrzymywanie powiązanie i adresowanie informacji z kodu pozwala na ich zmiany bez konieczności ponownego kompilowania lub ponownego rozmieszczenia aplikacji.  
   
- Wszystkie poniższe kroki konfiguracji można wykonać za pomocą [Narzędzia Edytora konfiguracji (SvcConfigEditor. exe)](configuration-editor-tool-svcconfigeditor-exe.md).  
+ Wszystkie następujące kroki konfiguracji można wykonać za pomocą [narzędzia Edytor konfiguracji (SvcConfigEditor.exe).](configuration-editor-tool-svcconfigeditor-exe.md)  
   
- Aby uzyskać kopię źródła tego przykładu, zobacz przykład [podstawowabinding](./samples/basicbinding.md) .  
+ Aby uzyskać kopię źródłową tego przykładu, zobacz [BasicBinding](./samples/basicbinding.md) próbki.  
   
 ### <a name="specifying-a-client-binding-in-configuration"></a>Określanie powiązania klienta w konfiguracji  
   
-1. Użyj Svcutil. exe z wiersza polecenia w celu wygenerowania kodu z metadanych usługi.  
+1. Użyj programu Svcutil.exe z wiersza polecenia, aby wygenerować kod z metadanych usługi.  
   
     ```console  
-    Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>   
+    Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>
     ```  
   
-2. Wygenerowany klient zawiera interfejs `ICalculator`, który definiuje kontrakt usługi, który musi spełniać implementacja klienta.  
+2. Klient, który jest `ICalculator` generowany zawiera interfejs, który definiuje umowy serwisowej, że implementacja klienta musi spełniać.  
   
      [!code-csharp[C_HowTo_ConfigureClientBinding#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureclientbinding/cs/generatedclient.cs#1)]
      [!code-csharp[C_HowTo_ConfigureClientBinding#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureclientbinding/cs/source.cs#1)]  
   
-3. Wygenerowany klient również zawiera implementację `ClientCalculator`.  
+3. Wygenerowany klient zawiera również `ClientCalculator`implementację pliku .  
   
      [!code-csharp[C_HowTo_ConfigureClientBinding#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureclientbinding/cs/generatedclient.cs#2)]
      [!code-csharp[C_HowTo_ConfigureClientBinding#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureclientbinding/cs/source.cs#2)]  
   
-4. Svcutil. exe generuje również konfigurację dla klienta, który używa klasy <xref:System.ServiceModel.BasicHttpBinding>. W przypadku korzystania z programu Visual Studio Nazwij ten plik App. config. Należy zauważyć, że informacje o adresie i powiązaniu nie są określone w dowolnym miejscu w ramach implementacji usługi. Ponadto kod nie musi być zapisany, aby można było pobrać te informacje z pliku konfiguracyjnego.  
+4. Svcutil.exe generuje również konfigurację dla klienta, <xref:System.ServiceModel.BasicHttpBinding> który używa klasy. Podczas korzystania z programu Visual Studio, nazwa tego pliku App.config. Należy zauważyć, że adres i informacje o powiązaniach nie są określone w dowolnym miejscu wewnątrz implementacji usługi. Ponadto kod nie musi być zapisywany, aby pobrać te informacje z pliku konfiguracji.  
   
-     [!code-xml[C_HowTo_ConfigureClientBinding#100](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureclientbinding/common/client.exe.config#100)]   
-            
-5. Utwórz wystąpienie `ClientCalculator` w aplikacji, a następnie Wywołaj operacje usługi.  
+     [!code-xml[C_HowTo_ConfigureClientBinding#100](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureclientbinding/common/client.exe.config#100)]
+
+5. Utwórz wystąpienie `ClientCalculator` w aplikacji, a następnie wywołaj operacje usługi.  
   
      [!code-csharp[C_HowTo_ConfigureClientBinding#3](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureclientbinding/cs/client.cs#3)]  
   
-6. Kompiluj i uruchom klienta.  
+6. Skompiluj i uruchom klienta.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Konfigurowanie usług i klientów za pomocą powiązań](using-bindings-to-configure-services-and-clients.md)

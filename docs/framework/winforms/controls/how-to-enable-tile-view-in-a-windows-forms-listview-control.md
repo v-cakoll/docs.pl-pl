@@ -1,5 +1,5 @@
 ---
-title: Włącz widok kafelków w formancie ListView
+title: Włącz widok kafelków w kontrolce widoku listview
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,25 +11,25 @@ helpviewer_keywords:
 - Windows Forms, controls
 - ListView control [Windows Forms], tile view
 ms.assetid: c20e67a3-2d94-413d-9fcf-ecbd0fe251da
-ms.openlocfilehash: 8ccbd42d870e44fc6fd80169327922409ea4f6e7
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 1478ba5e4f175cd7d9ec7ab5c3c4bc9050ce02fb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745465"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182150"
 ---
 # <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control"></a>Porady: włączanie widoku Tile w formancie ListView formularzy systemu Windows
-Za pomocą funkcji Widok kafelka kontrolki <xref:System.Windows.Forms.ListView> można zapewnić balans wizualizacji między informacjami graficznymi i tekstowymi. Informacje tekstowe wyświetlane dla elementu w widoku kafelków są takie same, jak informacje o kolumnie zdefiniowane dla widoku szczegółów. Widok kafelków działa w połączeniu z funkcjami grupowania lub wstawiania znaczników w kontrolce <xref:System.Windows.Forms.ListView>.  
+Dzięki funkcji widoku kafelków <xref:System.Windows.Forms.ListView> formantu można zapewnić wizualną równowagę między informacjami graficznymi i tekstowymi. Informacje tekstowe wyświetlane dla elementu w widoku kafelków są takie same jak informacje o kolumnach zdefiniowane dla widoku szczegółów. Widok kafelków działa w połączeniu z elementami grupowania <xref:System.Windows.Forms.ListView> lub wstawiania w formancie.  
   
- Widok kafelka używa ikony pikseli 32 x 32 i kilku wierszy tekstu, jak pokazano na poniższych ilustracjach.  
+ Widok kafelka używa ikony 32 x 32 pikseli i kilku wierszy tekstu, jak pokazano na poniższych obrazach.  
   
- ![Widok kafelka w kontrolce ListView](./media/how-to-enable-tile-view-in-a-windows-forms-listview-control/tile-view-in-listview-control.gif "Wyświetlanie ikon i tekstu kafelków")  
- 
- Aby włączyć widok kafelków, ustaw właściwość <xref:System.Windows.Forms.ListView.View%2A> na <xref:System.Windows.Forms.View.Tile>. Można dostosować rozmiar kafelków, ustawiając właściwość <xref:System.Windows.Forms.ListView.TileSize%2A> i liczbę wierszy tekstu wyświetlanych na kafelku przez dostosowanie kolekcji <xref:System.Windows.Forms.ListView.Columns%2A>.  
+ ![Widok kafli w formancie widoku listy](./media/how-to-enable-tile-view-in-a-windows-forms-listview-control/tile-view-in-listview-control.gif "Ikony widoku kafelków i tekst")  
+
+ Aby włączyć widok kafelka, <xref:System.Windows.Forms.View.Tile>ustaw właściwość na <xref:System.Windows.Forms.ListView.View%2A> . Rozmiar kafelków można dostosować, ustawiając <xref:System.Windows.Forms.ListView.TileSize%2A> właściwość oraz liczbę linii tekstowych wyświetlanych na <xref:System.Windows.Forms.ListView.Columns%2A> kafelku, dostosowując kolekcję.  
   
 ### <a name="to-set-tile-view-programmatically"></a>Aby programowo ustawić widok kafelków  
   
-1. Użyj <xref:System.Windows.Forms.View> Wyliczenie <xref:System.Windows.Forms.ListView> formantu.  
+1. Użyj <xref:System.Windows.Forms.View> wyliczenia <xref:System.Windows.Forms.ListView> formantu.  
   
     ```vb  
     ListView1.View = View.Tile  
@@ -40,7 +40,7 @@ Za pomocą funkcji Widok kafelka kontrolki <xref:System.Windows.Forms.ListView> 
     ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykładowy kod ilustruje widok kafelków z kafelkami zmodyfikowanymi, aby pokazać trzy wiersze tekstu. Rozmiar kafelka został dostosowany, aby zapobiec zawijaniu wierszy.  
+ W poniższym przykładzie pełnego kodu przedstawiono widok kafelków z zmodyfikowanymi kafelkami, aby wyświetlić trzy wiersze tekstu. Rozmiar kafelka został dostosowany, aby zapobiec zawijania linii.  
   
  [!code-cpp[System.Windows.Forms.ListView.Tiling#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListView.Tiling/CPP/listviewtilingexample.cpp#1)]
  [!code-csharp[System.Windows.Forms.ListView.Tiling#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView.Tiling/CS/listviewtilingexample.cs#1)]
@@ -49,13 +49,13 @@ Za pomocą funkcji Widok kafelka kontrolki <xref:System.Windows.Forms.ListView> 
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
-- Odwołania do zestawów system i system. Windows. Forms.  
+- Odwołania do zestawów System i System.Windows.Forms.  
   
-- Plik ikony o nazwie Book. ico w tym samym katalogu, w którym znajduje się plik wykonywalny.  
+- Plik ikony o nazwie book.ico w tym samym katalogu co plik wykonywalny.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.TileSize%2A>
-- [Kontrolka ListView](listview-control-windows-forms.md)
-- [ListView, kontrolka — omówienie](listview-control-overview-windows-forms.md)
+- [ListView, kontrolka](listview-control-windows-forms.md)
+- [ListView — Informacje o formancie](listview-control-overview-windows-forms.md)

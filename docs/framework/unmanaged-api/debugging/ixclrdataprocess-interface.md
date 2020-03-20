@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: a5d707d61513b030e5968af28db3c2a606e4419b
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: e7e53615e38d0ab76f9e7c0a753be3c13780057d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790373"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178377"
 ---
 # <a name="ixclrdataprocess-interface"></a>IXCLRDataProcess, interfejs
 
-Dostarcza metody do wykonywania zapytań dotyczących informacji o procesie.
+Zawiera metody wykonywania zapytań o proces.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -32,26 +32,26 @@ Dostarcza metody do wykonywania zapytań dotyczących informacji o procesie.
 
 | Metoda                                                                                                                                               | Opis                                                                                     |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| [GetAppDomainByUniqueId](ixclrdataprocess-getappdomainbyuniqueid-method.md)                       | Pobiera `AppDomain` w procesie według jego unikatowego identyfikatora.                                              |
-| [StartEnumModules](ixclrdataprocess-startenummodules-method.md)                                   | Udostępnia dojście do wyliczenia modułów procesu.                                        |
+| [GetAppDomainByUniqueId](ixclrdataprocess-getappdomainbyuniqueid-method.md)                       | Pobiera `AppDomain` w procesie przez jego unikatowy identyfikator.                                              |
+| [StartEnumModules](ixclrdataprocess-startenummodules-method.md)                                   | Zapewnia dojście do wyliczenia modułów procesu.                                        |
 | [EnumModule](ixclrdataprocess-enummodule-method.md)                                               | Wylicza moduły tego procesu.                                                         |
-| [EndEnumModules](ixclrdataprocess-endenummodules-method.md)                                       | Zwalnia zasoby używane przez Iteratory wewnętrzne używane podczas wyliczania modułu.               |
-| [StartEnumMethodInstancesByAddress](ixclrdataprocess-startenummethodinstancesbyaddress-method.md) | Udostępnia dojście do wyliczenia wystąpień metody `AppDomain`, rozpoczynając od danego adresu. |
-| [EnumMethodInstanceByAddress](ixclrdataprocess-enummethodinstancebyaddress-method.md)             | Wylicza wystąpienia metody tego procesu, rozpoczynając od przesunięcia adresu.                  |
-| [EndEnumMethodInstancesByAddress](ixclrdataprocess-endenummethodinstancesbyaddress-method.md)     | Zwalnia zasoby używane przez Iteratory wewnętrzne używane podczas wyliczania wystąpień.             |
+| [EndEnumModules](ixclrdataprocess-endenummodules-method.md)                                       | Zwalnia zasoby używane przez wewnętrzne iteratory używane podczas wyliczania modułu.               |
+| [StartEnumMethodInstancesByAddress](ixclrdataprocess-startenummethodinstancesbyaddress-method.md) | Zawiera dojście do wyliczenia `AppDomain` wystąpień metody, począwszy od danego adresu. |
+| [EnumMethodInstanceByAddress](ixclrdataprocess-enummethodinstancebyaddress-method.md)             | Wylicza wystąpienia metody tego procesu, począwszy od przesunięcia adresu.                  |
+| [EndEnumMethodInstancesByAddress](ixclrdataprocess-endenummethodinstancesbyaddress-method.md)     | Zwalnia zasoby używane przez wewnętrzne iteratory używane podczas wyliczania wystąpienia.             |
 
 ## <a name="remarks"></a>Uwagi
 
-Ten interfejs jest wewnątrz środowiska uruchomieniowego i nie jest udostępniany przez żadne nagłówki lub pliki bibliotek. Jest to jednak interfejs COM, który pochodzi od `IUnknown` z identyfikatorem GUID `5c552ab6-fc09-4cb3-8e36-22fa03c798b7`, który można uzyskać za pomocą zwykłych mechanizmów COM.
+Ten interfejs znajduje się wewnątrz środowiska wykonawczego i nie jest narażony za pośrednictwem żadnych nagłówków lub plików biblioteki. Jednak jest to interfejs COM, który `IUnknown` wywodzi się z guid, `5c552ab6-fc09-4cb3-8e36-22fa03c798b7` które można uzyskać za pośrednictwem zwykłych mechanizmów COM.
 
 ## <a name="requirements"></a>Wymagania
 
-**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).   
-**Nagłówek:** Dawaj  
-**Biblioteka:** Dawaj  
-**Wersje .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
+**Nagłówek:** Brak  
+**Biblioteka:** Brak  
+**Wersje programu .NET Framework:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Debugowanie](index.md)
-- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugging](index.md)
+- [Debugowanie — Interfejsy](debugging-interfaces.md)

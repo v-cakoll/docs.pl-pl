@@ -15,50 +15,50 @@ helpviewer_keywords:
 ms.assetid: 3c24e552-fc69-4971-b65a-a3e4b5f7f1e8
 topic_type:
 - apiref
-ms.openlocfilehash: 7547d7557169b1279125141afb5b05e22341942a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a5d9342b8bfe650106ccf9daf2a91dfbcd575446
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432743"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175542"
 ---
 # <a name="imetadataemit2definemethodspec-method"></a>IMetaDataEmit2::DefineMethodSpec — Metoda
-Tworzy wystąpienie ogólne metody i pobiera token do definicji.  
+Tworzy ogólne wystąpienie metody i pobiera token do definicji.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
 HRESULT DefineMethodSpec (  
-    [in]  mdToken           tkParent,   
-    [in]  PCCOR_SIGNATURE   pvSigBlob,   
-    [in]  ULONG             cbSigBlob,   
+    [in]  mdToken           tkParent,
+    [in]  PCCOR_SIGNATURE   pvSigBlob,
+    [in]  ULONG             cbSigBlob,
     [out] mdMethodSpec      *pmi  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `tkParent`  
- podczas Token dla metody tworzenia wystąpienia ogólnego. Token musi być typu `mdMethodDef` lub `mdMemberRef`.  
+ [w] Token dla metody, której można utworzyć wystąpienie ogólne. Token musi być `mdMethodDef` typu `mdMemberRef`lub .  
   
  `pvSigBlob`  
- podczas Wskaźnik do binarnego podpisu COM+ metody.  
+ [w] Wskaźnik do binarnego sygnatury COM+ metody.  
   
  `cbSibBlob`  
- podczas Rozmiar w bajtach `pvSigBlob`.  
+ [w] Rozmiar w bajtach `pvSigBlob`.  
   
  `pmi`  
- określoną Token do definicji sygnatury metadanych metody.  
+ [na zewnątrz] Token do definicji podpisu metadanych metody.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

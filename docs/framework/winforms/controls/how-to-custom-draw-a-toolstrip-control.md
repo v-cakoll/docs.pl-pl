@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: niestandardowy rysunek kontrolki ToolStrip'
+title: 'Porady: niestandardowy rysunek formantu ToolStrip'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,42 +16,42 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 94e7d7bd-a752-441c-b5b3-7acf98881163
-ms.openlocfilehash: 810a680a1a9d9065e80ed87453a728fe628a953d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a9f603efdb4b4a5f68154da9c6a8bd05b55b8f46
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935368"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182222"
 ---
-# <a name="how-to-custom-draw-a-toolstrip-control"></a>Instrukcje: niestandardowy rysunek kontrolki ToolStrip
-<xref:System.Windows.Forms.ToolStrip> Formanty mają następujące skojarzone klasy renderowania (Painting):  
+# <a name="how-to-custom-draw-a-toolstrip-control"></a>Porady: niestandardowy rysunek formantu ToolStrip
+Formanty <xref:System.Windows.Forms.ToolStrip> mają następujące skojarzone klasy renderowania (malowania):  
   
 - <xref:System.Windows.Forms.ToolStripSystemRenderer>zapewnia wygląd i styl systemu operacyjnego.  
   
-- <xref:System.Windows.Forms.ToolStripProfessionalRenderer>zapewnia wygląd i styl Microsoft Office.  
+- <xref:System.Windows.Forms.ToolStripProfessionalRenderer>zapewnia wygląd i styl pakietu Microsoft Office.  
   
-- <xref:System.Windows.Forms.ToolStripRenderer>jest abstrakcyjną klasą bazową dla pozostałych dwóch klas renderowania.  
+- <xref:System.Windows.Forms.ToolStripRenderer>jest abstrakcyjną klasą podstawową dla pozostałych dwóch klas renderowania.  
   
- Do niestandardowego rysowania (nazywanego również rysowaniem przez właściciela <xref:System.Windows.Forms.ToolStrip>) a można przesłonić jedną z klas modułu renderowania i zmienić aspekt logiki renderowania.  
+ Aby narysować niestandardowe (znane <xref:System.Windows.Forms.ToolStrip>również jako rysowanie właściciela) a , można zastąpić jedną z klas modułu renderowania i zmienić aspekt logiki renderowania.  
   
- Poniższe procedury opisują różne aspekty niestandardowego rysowania.  
+ W poniższych procedurach opisano różne aspekty rysunku niestandardowego.  
   
-### <a name="to-switch-between-the-provided-renderers"></a>Aby przełączać się między podanymi elementami renderowania  
+### <a name="to-switch-between-the-provided-renderers"></a>Aby przełączać się między dostarczonymi modułami renderowania  
   
-- Ustaw właściwość na żądaną <xref:System.Windows.Forms.ToolStripRenderMode>wartość. <xref:System.Windows.Forms.ToolStrip.RenderMode%2A>  
+- Ustaw <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> właściwość <xref:System.Windows.Forms.ToolStripRenderMode> na żądaną wartość.  
   
-     W <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>programie statyczny <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> określa moduł renderujący dla aplikacji. Inne wartości <xref:System.Windows.Forms.ToolStripRenderMode> to <xref:System.Windows.Forms.ToolStripRenderMode.Custom>, <xref:System.Windows.Forms.ToolStripRenderMode.Professional>, i <xref:System.Windows.Forms.ToolStripRenderMode.System>.  
+     Za <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>pomocą , <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> statyczne określa moduł renderowania dla aplikacji. Inne wartości <xref:System.Windows.Forms.ToolStripRenderMode> to <xref:System.Windows.Forms.ToolStripRenderMode.Custom> <xref:System.Windows.Forms.ToolStripRenderMode.Professional>, <xref:System.Windows.Forms.ToolStripRenderMode.System>i .  
   
-### <a name="to-change-the-microsoft-officestyle-borders-to-straight"></a>Aby zmienić obramowanie Microsoft Office — do stylu prostego  
+### <a name="to-change-the-microsoft-officestyle-borders-to-straight"></a>Aby zmienić obramowania w stylu pakietu Microsoft Office na proste  
   
-- Przesłoń <xref:System.Windows.Forms.ToolStripProfessionalRenderer.OnRenderToolStripBorder%2A?displayProperty=nameWithType>, ale nie wywołuj klasy bazowej.  
+- Zastądić <xref:System.Windows.Forms.ToolStripProfessionalRenderer.OnRenderToolStripBorder%2A?displayProperty=nameWithType>, ale nie wywołać klasy podstawowej.  
   
 > [!NOTE]
-> Istnieje wersja tej metody dla <xref:System.Windows.Forms.ToolStripRenderer>, <xref:System.Windows.Forms.ToolStripSystemRenderer>i <xref:System.Windows.Forms.ToolStripProfessionalRenderer>.  
+> Istnieje wersja tej metody <xref:System.Windows.Forms.ToolStripRenderer>dla <xref:System.Windows.Forms.ToolStripSystemRenderer>, <xref:System.Windows.Forms.ToolStripProfessionalRenderer>i .  
   
-### <a name="to-change-the-professionalcolortable"></a>Aby zmienić ProfessionalColorTable  
+### <a name="to-change-the-professionalcolortable"></a>Aby zmienić tabelę ProfessionalColorTable  
   
-- Zastąp <xref:System.Windows.Forms.ProfessionalColorTable> i zmień odpowiednie kolory.  
+- Zastąd w <xref:System.Windows.Forms.ProfessionalColorTable> odpowiedni sposób i zmień kolory.  
   
     ```vb  
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As _  
@@ -60,7 +60,7 @@ ms.locfileid: "69935368"
         ToolStrip1.Renderer = New ToolStripProfessionalRenderer(t)  
     End Sub  
   
-    Class MyColorTable   
+    Class MyColorTable
     Inherits ProfessionalColorTable  
   
     Public Overrides ReadOnly Property ButtonPressedGradientBegin() As Color  
@@ -105,19 +105,19 @@ ms.locfileid: "69935368"
     End Class  
     ```  
   
-### <a name="to-change-the-rendering-for-all-toolstrip-controls-in-your-application"></a>Aby zmienić renderowanie dla wszystkich kontrolek ToolStrip w aplikacji  
+### <a name="to-change-the-rendering-for-all-toolstrip-controls-in-your-application"></a>Aby zmienić renderowanie dla wszystkich formantów ToolStrip w aplikacji  
   
-1. <xref:System.Windows.Forms.ToolStripManager.RenderMode%2A?displayProperty=nameWithType> Użyj właściwości, aby wybrać jeden z podanych elementów renderowania.  
+1. Użyj <xref:System.Windows.Forms.ToolStripManager.RenderMode%2A?displayProperty=nameWithType> właściwości, aby wybrać jeden z dostarczonych modułów renderowania.  
   
 2. Służy <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> do przypisywania niestandardowego modułu renderowania.  
   
-3. Upewnij się <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> , że ustawiono <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>wartość domyślną.  
+3. Upewnij <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> się, że jest <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>ustawiona wartość domyślna .  
   
-### <a name="to-turn-off-the-microsoft-office-colors-for-the-entire-application"></a>Aby wyłączyć Microsoft Office kolory dla całej aplikacji  
+### <a name="to-turn-off-the-microsoft-office-colors-for-the-entire-application"></a>Aby wyłączyć kolory pakietu Microsoft Office dla całej aplikacji  
   
-- <xref:System.Windows.Forms.ToolStripManager.VisualStylesEnabled%2A?displayProperty=nameWithType> Ustaw wartość .`false`  
+- Ustaw <xref:System.Windows.Forms.ToolStripManager.VisualStylesEnabled%2A?displayProperty=nameWithType> `false`na .  
   
-### <a name="to-turn-off-the-microsoft-office-colors-for-one-toolstrip-control"></a>Aby wyłączyć Microsoft Office kolory dla jednej kontrolki ToolStrip  
+### <a name="to-turn-off-the-microsoft-office-colors-for-one-toolstrip-control"></a>Aby wyłączyć kolory pakietu Microsoft Office dla jednego formantu ToolStrip  
   
 - Użyj kodu podobnego do poniższego przykładu kodu.  
   
@@ -133,11 +133,11 @@ ms.locfileid: "69935368"
     toolStrip.Renderer = new ToolStripProfessionalRenderer(colorTable);  
     ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Windows.Forms.ToolStripSystemRenderer>
 - <xref:System.Windows.Forms.ToolStripProfessionalRenderer>
 - <xref:System.Windows.Forms.ToolStripRenderer>
 - [Kontrolki z wbudowaną obsługą rysowania przez właściciela](controls-with-built-in-owner-drawing-support.md)
-- [Instrukcje: Tworzenie i Ustawianie niestandardowego modułu renderowania dla formantu ToolStrip w Windows Forms](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
-- [ToolStrip, kontrolka — omówienie](toolstrip-control-overview-windows-forms.md)
+- [Instrukcje: tworzenie i ustawienie niestandardowego modułu renderowania dla kontrolki ToolStrip w formularzach Windows Forms](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
+- [ToolStrip — Informacje o formancie](toolstrip-control-overview-windows-forms.md)

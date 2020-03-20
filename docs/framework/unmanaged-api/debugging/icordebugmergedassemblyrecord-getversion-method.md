@@ -1,57 +1,57 @@
 ---
-title: 'ICorDebugMergedAssemblyRecord:: GetVersion — Metoda'
+title: ICorDebugMergedAssemblyRecord::Metoda GetVersion
 ms.date: 03/30/2017
 ms.assetid: c6858b06-ae26-4312-b325-ea6025016675
-ms.openlocfilehash: 8b5995183be7f1c992cf3230e16456cb248eff0c
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 5dc9995e88086da854d2e9382cef81b229ff9dc9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793082"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178683"
 ---
-# <a name="icordebugmergedassemblyrecordgetversion-method"></a>ICorDebugMergedAssemblyRecord:: GetVersion — Metoda
+# <a name="icordebugmergedassemblyrecordgetversion-method"></a>ICorDebugMergedAssemblyRecord::Metoda GetVersion
 Pobiera informacje o wersji zestawu.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
 HRESULT GetVersion(  
-   [out] USHORT *pMajor,   
-   [out] USHORT *pMinor,   
-   [out] USHORT *pBuild,   
+   [out] USHORT *pMajor,
+   [out] USHORT *pMinor,
+   [out] USHORT *pBuild,
    [out] USHORT *pRevision  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `pMajor`  
- określoną Wskaźnik do głównego numeru wersji.  
+ [na zewnątrz] Wskaźnik do głównego numeru wersji.  
   
  `pMinor`  
- określoną Wskaźnik do pomocniczego numeru wersji.  
+ [na zewnątrz] Wskaźnik do pomocniczego numeru wersji.  
   
  `pBuild`  
- określoną Wskaźnik do numeru kompilacji.  
+ [na zewnątrz] Wskaźnik do numeru kompilacji.  
   
  `pRevision`  
- określoną Wskaźnik do numeru poprawki.  
+ [na zewnątrz] Wskaźnik do numeru poprawki.  
   
 ## <a name="remarks"></a>Uwagi  
- Informacje o numerach wersji zestawu znajdują się w temacie <xref:System.Version> Class.  
+ Aby uzyskać informacje na temat <xref:System.Version> numerów wersji zestawu, zobacz temat klasy.  
   
 > [!NOTE]
-> Ta metoda jest dostępna tylko z .NET Native.  
+> Ta metoda jest dostępna tylko w przypadku platformy .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug. idl, CorDebug. h  
+ **Nagłówek:** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids. lib  
+ **Biblioteka:** CorGuids.lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [ICorDebugMergedAssemblyRecord, interfejs](icordebugmergedassemblyrecord-interface.md)
-- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie — Interfejsy](debugging-interfaces.md)

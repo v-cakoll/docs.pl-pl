@@ -15,62 +15,62 @@ helpviewer_keywords:
 ms.assetid: 3b039e50-63ec-4730-99ff-2327408de477
 topic_type:
 - apiref
-ms.openlocfilehash: 506e13ad956a01b16e36d8c71737fe0efce4c01b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f664e694303691fb1132150037dcbcdb5549539a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450322"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177527"
 ---
 # <a name="imetadataemitseteventprops-method"></a>IMetaDataEmit::SetEventProps — Metoda
-Ustawia lub aktualizuje określoną funkcję zdarzenia zdefiniowaną przez poprzednie wywołanie do [IMetaDataEmit::D efineevent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).  
+Ustawia lub aktualizuje określoną funkcję zdarzenia zdefiniowanego przez wcześniejsze wywołanie [IMetaDataEmit::DefineEvent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
 HRESULT SetEventProps (  
-    [in]  mdEvent     ev,   
-    [in]  DWORD       dwEventFlags,   
-    [in]  mdToken     tkEventType,   
-    [in]  mdMethodDef mdAddOn,   
-    [in]  mdMethodDef mdRemoveOn,   
-    [in]  mdMethodDef mdFire,   
-    [in]  mdMethodDef rmdOtherMethods[]   
+    [in]  mdEvent     ev,
+    [in]  DWORD       dwEventFlags,
+    [in]  mdToken     tkEventType,
+    [in]  mdMethodDef mdAddOn,
+    [in]  mdMethodDef mdRemoveOn,
+    [in]  mdMethodDef mdFire,
+    [in]  mdMethodDef rmdOtherMethods[]
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `ev`  
- podczas Token zdarzenia.  
+ [w] Token zdarzenia.  
   
  `dwEventFlags`  
- podczas Flagi zdarzeń. To jest maska bitów wartości `CorEventAttr`.  
+ [w] Flagi zdarzeń. Jest to maska `CorEventAttr` bitowa wartości.  
   
  `tkEventType`  
- podczas Token dla klasy Event. Jest to `mdTypeDef` lub token `mdTypeRef`.  
+ [w] Token dla klasy zdarzenia. Jest to token `mdTypeDef` lub `mdTypeRef` token.  
   
  `mdAddOn`  
- podczas Metoda używana do subskrybowania zdarzenia lub wartość null.  
+ [w] Metoda używana do subskrybowania zdarzenia lub null.  
   
  `mdRemoveOn`  
- podczas Metoda używana do anulowania subskrypcji zdarzenia lub wartość null.  
+ [w] Metoda używana do anulowania subskrypcji zdarzenia lub null.  
   
  `mdFire`  
- podczas Metoda używana (przez klasę pochodną) do podniesienia zdarzenia.  
+ [w] Metoda używana (przez klasę pochodną) do podniesienia zdarzenia.  
   
  `rmdOtherMethods[]`  
- podczas Tablica tokenów dla innych metod skojarzonych ze zdarzeniem. Ostatni element tablicy musi być `mdMethodDefNil`.  
+ [w] Tablica tokenów dla innych metod skojarzonych ze zdarzeniem. Ostatnim elementem tablicy `mdMethodDefNil`musi być .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
+ **Biblioteka:** Używany jako zasób w pliku MSCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

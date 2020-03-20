@@ -11,19 +11,19 @@ helpviewer_keywords:
 - Panel control [Windows Forms], background
 - colors [Windows Forms], Windows Forms Panel controls
 ms.assetid: 096cbd8d-45cc-47b8-b1ef-a27f60ea8be0
-ms.openlocfilehash: ba2619354403793aea7ca15d43649da9637079a6
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 36e552475334c25b9d5a6fafb82155c6ebcba266
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744742"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182109"
 ---
 # <a name="how-to-set-the-background-of-a-windows-forms-panel"></a>Porady: ustawianie tła panelu formularzy systemu Windows
-Kontrolka <xref:System.Windows.Forms.Panel> Windows Forms może wyświetlać zarówno kolor tła, jak i obraz tła. Właściwość <xref:System.Windows.Forms.Control.BackColor%2A> ustawia kolor tła zawartych kontrolek, takich jak etykiety i przyciski radiowe. Jeśli właściwość <xref:System.Windows.Forms.Control.BackgroundImage%2A> nie jest ustawiona, wybór <xref:System.Windows.Forms.Control.BackColor%2A> wypełni cały panel. Jeśli właściwość <xref:System.Windows.Forms.Control.BackgroundImage%2A> jest ustawiona, obraz zostanie wyświetlony za zawartymi kontrolkami.  
+Formant <xref:System.Windows.Forms.Panel> Formularze systemu Windows może wyświetlać zarówno kolor tła, jak i obraz tła. Właściwość <xref:System.Windows.Forms.Control.BackColor%2A> ustawia kolor tła dla zawartych formantów, takich jak etykiety i przyciski radiowe. Jeśli <xref:System.Windows.Forms.Control.BackgroundImage%2A> właściwość nie jest <xref:System.Windows.Forms.Control.BackColor%2A> ustawiona, zaznaczenie wypełni cały panel. Jeśli <xref:System.Windows.Forms.Control.BackgroundImage%2A> właściwość jest ustawiona, obraz będzie wyświetlany za zawartymi formantami.  
   
-### <a name="to-set-the-background-programmatically"></a>Aby programowo ustawić tło  
+### <a name="to-set-the-background-programmatically"></a>Aby zaprogramować tło  
   
-1. Ustaw właściwość <xref:System.Windows.Forms.Control.BackColor%2A> panelu na wartość typu <xref:System.Drawing.Color?displayProperty=nameWithType>.  
+1. Ustaw <xref:System.Windows.Forms.Control.BackColor%2A> właściwość panelu na wartość <xref:System.Drawing.Color?displayProperty=nameWithType>typu .  
   
     ```vb  
     Panel1.BackColor = Color.AliceBlue  
@@ -37,10 +37,10 @@ Kontrolka <xref:System.Windows.Forms.Panel> Windows Forms może wyświetlać zar
     panel1->BackColor = Color::AliceBlue;  
     ```  
   
-2. Ustaw właściwość <xref:System.Windows.Forms.Control.BackgroundImage%2A> panelu przy użyciu metody <xref:System.Drawing.Image.FromFile%2A> klasy <xref:System.Drawing.Image?displayProperty=nameWithType>.  
+2. Ustaw <xref:System.Windows.Forms.Control.BackgroundImage%2A> właściwość panelu przy <xref:System.Drawing.Image.FromFile%2A> użyciu <xref:System.Drawing.Image?displayProperty=nameWithType> metody klasy.  
   
     ```vb  
-    ' You should replace the bolded image   
+    ' You should replace the bolded image
     ' in the sample below with an image of your own choosing.  
     Panel1.BackgroundImage = Image.FromFile _  
         (System.Environment.GetFolderPath _  
@@ -49,7 +49,7 @@ Kontrolka <xref:System.Windows.Forms.Panel> Windows Forms może wyświetlać zar
     ```  
   
     ```csharp  
-    // You should replace the bolded image   
+    // You should replace the bolded image
     // in the sample below with an image of your own choosing.  
     // Note the escape character used (@) when specifying the path.  
     panel1.BackgroundImage = Image.FromFile  
@@ -59,7 +59,7 @@ Kontrolka <xref:System.Windows.Forms.Panel> Windows Forms może wyświetlać zar
     ```  
   
     ```cpp  
-    // You should replace the bolded image   
+    // You should replace the bolded image
     // in the sample below with an image of your own choosing.  
     panel1->BackgroundImage = Image::FromFile(String::Concat(  
        System::Environment::GetFolderPath  
@@ -67,9 +67,9 @@ Kontrolka <xref:System.Windows.Forms.Panel> Windows Forms może wyświetlać zar
        "\\Image.gif"));  
     ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Windows.Forms.Control.BackColor%2A>
 - <xref:System.Windows.Forms.Control.BackgroundImage%2A>
-- [Panel, kontrolka](panel-control-windows-forms.md)
+- [Panel — Formant](panel-control-windows-forms.md)
 - [Panel, kontrolka — omówienie](panel-control-overview-windows-forms.md)

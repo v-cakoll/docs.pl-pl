@@ -1,6 +1,6 @@
 ---
-title: CloneEnumWbemClassObject — funkcja (niezarządzana dokumentacja interfejsu API)
-description: Funkcja CloneEnumWbemClassObject wykonuje logiczną kopię modułu wyliczającego.
+title: CloneEnumWbemClassObject, funkcja (niezarządzane odwołanie do interfejsu API)
+description: CloneEnumWbemClassObject funkcja sprawia, że logiczna kopia modułu wyliczacza.
 ms.date: 11/06/2017
 api_name:
 - CloneEnumWbemClassObject
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CloneEnumWbemClassObject function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 9d2442161aaa83693a33f9efc230c09b8c4426e2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f2a3a7e848108e50c04f0ec70cf42586755a0a88
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128730"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175021"
 ---
 # <a name="cloneenumwbemclassobject-function"></a>CloneEnumWbemClassObject, funkcja
 Tworzy logiczną kopię modułu wyliczającego, zachowując jego bieżącą pozycję w wyliczeniu.
@@ -30,69 +30,70 @@ Tworzy logiczną kopię modułu wyliczającego, zachowując jego bieżącą pozy
 
 ```cpp
 HRESULT CloneEnumWbemClassObject (
-   [out] IEnumWbemClassObject**  ppEnum, 
+   [out] IEnumWbemClassObject**  ppEnum,
    [in] DWORD                    authLevel,
    [in] DWORD                    impLevel,
-   [in] IEnumWbemClassObject*    pCurrentEnumWbemClassObject, 
+   [in] IEnumWbemClassObject*    pCurrentEnumWbemClassObject,
    [in] BSTR                     strUser,
    [in] BSTR                     strPassword,
-   [in BSTR]                     strAuthority 
-); 
+   [in BSTR]                     strAuthority
+);
 ```
 
 ## <a name="parameters"></a>Parametry
 
 `ppEnum`\
-określoną Odbiera wskaźnik do nowego [IEnumWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject).
+[na zewnątrz] Odbiera wskaźnik do nowego [IEnumWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject).
 
 `authLevel`\
-podczas Poziom autoryzacji.
+[w] Poziom autoryzacji.
 
 `impLevel`\
-podczas Poziom personifikacji.
+[w] Poziom personifikacji.
 
 `pCurrentEnumWbemClassObject`\
-określoną Wskaźnik do wystąpienia [IEnumWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject) , który ma zostać sklonowany.
+[na zewnątrz] Wskaźnik do [wystąpienia IEnumWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject) do sklonowania.
 
 `strUser`\
-podczas Nazwa użytkownika. Zobacz funkcję [ConnectServerWmi](connectserverwmi.md) , aby uzyskać więcej informacji.
+[w] Nazwa użytkownika. Więcej informacji można znaleźć w funkcji [ConnectServerWmi.](connectserverwmi.md)
 
 `strPassword`\
-podczas Hasło. Zobacz funkcję [ConnectServerWmi](connectserverwmi.md) , aby uzyskać więcej informacji.
+[w] Hasło. Więcej informacji można znaleźć w funkcji [ConnectServerWmi.](connectserverwmi.md)
 
-`strAuthority`\ [in] nazwa domeny użytkownika. Zobacz funkcję [ConnectServerWmi](connectserverwmi.md) , aby uzyskać więcej informacji.
+`strAuthority`\
+[w] Nazwa domeny użytkownika. Więcej informacji można znaleźć w funkcji [ConnectServerWmi.](connectserverwmi.md)
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Następujące wartości zwracane przez tę funkcję są zdefiniowane w pliku nagłówkowym *WbemCli. h* lub można je definiować jako stałe w kodzie:
+Następujące wartości zwracane przez tę funkcję są zdefiniowane w pliku nagłówka *WbemCli.h* lub można zdefiniować je jako stałe w kodzie:
 
-|Stała  |Wartość  |Opis  |
+|Stały  |Wartość  |Opis  |
 |---------|---------|---------|
-| `WBEM_E_FAILED` | 0x80041001 | Wystąpił błąd ogólny. |
+| `WBEM_E_FAILED` | 0x80041001 | Wystąpiła ogólna porażka. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametr jest nieprawidłowy. |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Za mało dostępnej pamięci, aby ukończyć operację. |
-| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Łącze zdalnego wywołania procedury (RPC) między bieżącym procesem a usługą WMI nie powiodło się. |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Za mało pamięci jest dostępna zakończyć operację. |
+| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Połączenie procedury zdalnej (RPC) między bieżącym procesem a usługą WMI nie powiodło się. |
 | `WBEM_S_NO_ERROR` | 0 | Wywołanie funkcji zakończyło się pomyślnie.  |
 
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja otacza wywołanie metody [IEnumWbemClassObject:: Clone](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone) .
+Ta funkcja zawija wywołanie [metody IEnumWbemClassObject::Clone.](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone)
 
-Ta metoda zapewnia tylko kopię "najlepszej pracy". Ze względu na dynamiczny charakter wielu obiektów CIM, istnieje możliwość, że nowy moduł wyliczający nie wylicza tego samego zestawu obiektów, co źródłowy moduł wyliczający.
+Ta metoda sprawia, że tylko "najlepszy wysiłek" kopię. Ze względu na dynamiczny charakter wielu obiektów CIM jest możliwe, że nowy wyliczacz nie wylicza ten sam zestaw obiektów jako wyliczacz źródłowy.
 
-Jeśli wywołanie funkcji nie powiedzie się, można uzyskać dodatkowe informacje o błędzie, wywołując funkcję [GetErrorInfo](geterrorinfo.md) .
+Jeśli wywołanie funkcji nie powiedzie się, można uzyskać dodatkowe informacje o błędzie, wywołując funkcję [GetErrorInfo.](geterrorinfo.md)
 
 ## <a name="example"></a>Przykład
 
-Aby zapoznać się z przykładem, zobacz metodę [IEnumWbemClassObject:: Clone](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone) .
+Na przykład zobacz [IEnumWbemClassObject::Clone](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone) metody.
 
 ## <a name="requirements"></a>Wymagania
- **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).
+ **Platformy:** Zobacz [Wymagania systemowe](../../get-started/system-requirements.md).
 
- **Nagłówek:** WMINet_Utils. idl
+ **Nagłówek:** WMINet_Utils.idl
 
- **Wersje .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [WMI i liczniki wydajności (niezarządzana dokumentacja interfejsu API)](index.md)
+- [Liczniki wydajności WMI i (niezarządzane odwołanie interfejsu API)](index.md)

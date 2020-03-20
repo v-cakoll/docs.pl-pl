@@ -1,74 +1,74 @@
 ---
-title: 'Samouczek: Rozpoczynanie pracy z aplikacjami Windows Communication Foundation'
-description: W tych samouczkach przedstawiono wprowadzenie do tworzenia aplikacji WCF.
+title: 'Samouczek: Wprowadzenie do aplikacji Windows Communication Foundation'
+description: Te samouczki zawiera wprowadzenie do tworzenia aplikacji WCF.
 ms.date: 01/25/2019
 helpviewer_keywords:
 - WCF [WCF], get started
 - Windows Communication Foundation [WCF], get started
 - get started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
-ms.openlocfilehash: d4613edefeb8db2c0d1e11e925f8ac41329efb0d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: df73f953372202796cebce9d3e3f28bd617c67ef
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61929548"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184124"
 ---
-# <a name="tutorial-get-started-with-windows-communication-foundation-applications"></a>Samouczek: Rozpoczynanie pracy z aplikacjami Windows Communication Foundation
-Poniższą sekwencję samouczki zawierają wprowadzenie do Windows Communication Foundation (WCF) środowisko programowania. Pracy przy użyciu tych samouczków, w kolejności zapewni wprowadzające zrozumienia czynności wymagane do tworzenia aplikacji WCF. Po zakończeniu będziesz mieć uruchomioną usługę WCF i klienta WCF, który wywołuje usługę. 
+# <a name="tutorial-get-started-with-windows-communication-foundation-applications"></a>Samouczek: Wprowadzenie do aplikacji Windows Communication Foundation
+Poniższa seria samouczków przedstawia środowisko programowania Programu Windows Communication Foundation (WCF). Praca za pomocą tych samouczków w kolejności daje wstępne zrozumienie kroków wymaganych do tworzenia aplikacji WCF. Po zakończeniu będziesz mieć uruchomionej usługi WCF i klienta WCF, który wywołuje usługę.
 
-W samouczku przyjęto założenie, że używasz programu Visual Studio jako środowisko projektowe. Jeśli używasz innego środowiska deweloperskiego, zignorować instrukcje dotyczące programu Visual Studio. 
+W samouczku przyjęto założenie, że używasz programu Visual Studio jako środowiska programistycznego. Jeśli używasz innego środowiska programistycznego, zignoruj instrukcje specyficzne dla programu Visual Studio.
 
-Dla przykładowych aplikacji WCF, które można pobierać i uruchamiać, zobacz [przykładów Windows Communication Foundation](samples/index.md). Wprowadzenie do przykładów, zobacz [przykładowe wprowadzające](samples/getting-started-sample.md).
+Aby uzyskać przykładowe aplikacje WCF, które można pobrać i uruchomić, zobacz [przykłady Programu Windows Communication Foundation](samples/index.md). Aby zapoznać się z wprowadzeniem do próbek, zobacz [Wprowadzenie próbki](samples/getting-started-sample.md).
 
-Aby uzyskać bardziej szczegółowe informacje o sposobie tworzenia usług i klientów, zobacz [programowanie WCF podstawowe](basic-wcf-programming.md).
+Aby uzyskać bardziej szczegółowe informacje na temat tworzenia usług i klientów, zobacz [Podstawowe programowanie WCF](basic-wcf-programming.md).
 
-## <a name="wcf-tutorials"></a>Samouczki programu WCF
+## <a name="wcf-tutorials"></a>Samouczki WCF
 
-Pierwszych trzech samouczków opisano, jak definiowanie kontraktu usługi WCF, sposobie jego implementowania i sposobu hostowania go. Usługa tworzona jest samodzielnie hostowany w aplikacji konsoli. You can also host services under Microsoft Internet Information Services (IIS). Aby uzyskać więcej informacji, zobacz [jak: Hostowanie usługi WCF w programie IIS](feature-details/how-to-host-a-wcf-service-in-iis.md). Mimo że kod jest używane do konfigurowania usługi w tym samouczku, można również [skonfigurować usługi w pliku konfiguracji](configuring-services-using-configuration-files.md). 
+Pierwsze trzy samouczki opisują sposób definiowania umowy serwisowej WCF, jak ją zaimplementować i jak go hostować. Utworzona usługa jest hostowana samodzielnie w aplikacji konsoli. Usługi można również hostować w ramach internetowych usług informacyjnych firmy Microsoft (IIS). Aby uzyskać więcej informacji, zobacz [Jak: Hostować usługę WCF w usługach IIS](feature-details/how-to-host-a-wcf-service-in-iis.md). Chociaż kod służy do konfigurowania usługi w samouczku, można również [skonfigurować usługi w pliku konfiguracyjnym](configuring-services-using-configuration-files.md).
 
-- [Samouczek: Definiowanie kontraktu usługi](how-to-define-a-wcf-service-contract.md)
+- [Samouczek: Definiowanie umowy serwisowej](how-to-define-a-wcf-service-contract.md)
 
-    Możesz utworzyć kontraktu usługi WCF z interfejsem użytkownika. Ten kontrakt definiuje funkcje, które uwidacznia usługa.
+    Tworzenie umowy WCF z interfejsem zdefiniowanym przez użytkownika. Ten kontrakt definiuje funkcje, które usługa udostępnia.
 
-- [Samouczek: Implementowanie kontraktu usługi](how-to-implement-a-wcf-contract.md)
+- [Samouczek: Zaimplementowanie umowy serwisowej](how-to-implement-a-wcf-contract.md)
 
-    Po zdefiniowaniu kontrakt, należy zaimplementować go za pomocą klasy usługi.
+    Po zdefiniowaniu umowy należy zaimplementować ją z klasą usługi.
 
-- [Samouczek: Hostowanie i uruchamianie podstawowej usługi](how-to-host-and-run-a-basic-wcf-service.md)
+- [Samouczek: Host i uruchom podstawową usługę](how-to-host-and-run-a-basic-wcf-service.md)
 
-    Skonfiguruj punkt końcowy usługi i Hostuj usługi w aplikacji konsoli. Dla usługi stanie się aktywna można ją skonfigurować, a następnie Hostuj go w środowisku uruchomieniowym. To środowisko wykonawczej tworzy usługi i kontroluje jego kontekstu i okresu istnienia.
+    Skonfiguruj punkt końcowy dla usługi i hostuj usługę w aplikacji konsoli. Aby usługa stała się aktywna, należy ją skonfigurować i hostować w środowisku wykonywania. To środowisko wykonywania tworzy usługę i kontroluje jej kontekst i okres istnienia.
 
-W dwóch następnych samouczków opisano, jak tworzyć, konfigurować i przedstawia użycie aplikacji klienckiej, wywoływania operacji usługi. Usługi publikowania metadanych, który definiuje informacje, które aplikacja kliencka musi komunikować się z usługą. Visual Studio automatyzuje proces uzyskiwania dostępu do metadanych i używa ich do utworzenia aplikacji klienckiej dla usługi. Jeśli zdecydujesz się nie należy używać programu Visual Studio, możesz użyć [narzędzia narzędzie metadanych elementu ServiceModel (*Svcutil.exe*)](servicemodel-metadata-utility-tool-svcutil-exe.md) zamiast tego.
+Następne dwa samouczki opisują sposób tworzenia, konfigurowania i używania aplikacji klienckiej do wywoływania operacji udostępnianych przez usługę. Usługi publikują metadane definiujące informacje, które aplikacja kliencka musi komunikować się z usługą. Visual Studio automatyzuje proces uzyskiwania dostępu do tych metadanych i używa go do konstruowania aplikacji klienckiej dla usługi. Jeśli zdecydujesz się nie używać programu Visual Studio, możesz użyć [narzędzia Narzędzia metadanych ServiceModel (*Svcutil.exe).*](servicemodel-metadata-utility-tool-svcutil-exe.md)
 
 - [Samouczek: Tworzenie klienta](how-to-create-a-wcf-client.md)
 
-    Pobieranie metadanych tworzenia serwer proxy klienta WCF z usługą WCF. Pobieranie metadanych przy użyciu programu Visual Studio, aby dodać odwołanie do usługi lub narzędzia narzędzie metadanych elementu ServiceModel. Należy określić punkt końcowy, który klient używa w celu uzyskania dostępu do usługi.
+    Pobieranie metadanych do tworzenia serwera proxy klienta WCF z usługi WCF. Pobierasz metadane za pomocą programu Visual Studio, aby dodać odwołanie do usługi lub można użyć narzędzia Narzędzia Metadata ServiceModel. Należy określić punkt końcowy, który klient używa do uzyskania dostępu do usługi.
 
-- [Samouczek: Używanie klienta](how-to-use-a-wcf-client.md)
+- [Samouczek: Korzystanie z klienta](how-to-use-a-wcf-client.md)
 
-    Serwer proxy klienta WCF umożliwia wywoływanie operacji usługi.
+    Użyj serwera proxy klienta WCF do wywołania operacji usługi.
 
-## <a name="reference"></a>Tematy pomocy
+## <a name="reference"></a>Dokumentacja
 
 - <xref:System.ServiceModel.ServiceContractAttribute>
 - <xref:System.ServiceModel.OperationContractAttribute>
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Omówienie pojęć](conceptual-overview.md)
 - [Przewodnik po dokumentacji](guide-to-the-documentation.md)
-- [Co to jest Windows Communication Foundation](whats-wcf.md)
+- [Co to jest Fundacja Komunikacji systemu Windows](whats-wcf.md)
 - [Szczegóły funkcji WCF](feature-details/index.md)
-- [Podstawowy cykl życia programowania](basic-programming-lifecycle.md)
-- [Kompilowanie klientów](building-clients.md)
-- [Podstawy programowania programu WCF](basic-wcf-programming.md)
-- [Instrukcje: Tworzenie kontraktu dwukierunkowego](feature-details/how-to-create-a-duplex-contract.md)
-- [Instrukcje: Dostęp do usług za pomocą kontraktu dwukierunkowego](feature-details/how-to-access-services-with-a-duplex-contract.md)
-- [Narzędzie narzędzie metadanych elementu ServiceModel (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [Instrukcje: Używanie Svcutil.exe do pobierania dokumentów metadanych](feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)
-- [Instrukcje: Publikowanie metadanych dla usługi przy użyciu pliku konfiguracji](feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
-- [Konfigurowanie usług i klientów za pomocą powiązań](using-bindings-to-configure-services-and-clients.md)
-- [Wprowadzenie — przykład](samples/getting-started-sample.md)
-- [Przykłady Windows Communication Foundation](samples/index.md)
+- [Podstawowy cykl programowania](basic-programming-lifecycle.md)
+- [Budowanie klientów](building-clients.md)
+- [Podstawowe programowanie WCF](basic-wcf-programming.md)
+- [Jak: Tworzenie kontraktu dupleksowego](feature-details/how-to-create-a-duplex-contract.md)
+- [Jak: Dostęp do usług z umową dupleksową](feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [Narzędzie narzędzia Metadata Usługi ServiceModel (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [Jak: Pobieranie dokumentów metadanych za pomocą programu Svcutil.exe](feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)
+- [Jak: Publikowanie metadanych dla usługi przy użyciu pliku konfiguracyjnego](feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [Używanie powiązań do konfigurowania usług i klientów](using-bindings-to-configure-services-and-clients.md)
+- [Wprowadzenie próbki](samples/getting-started-sample.md)
+- [Przykłady programu Windows Communication Foundation](samples/index.md)
 - [Host samodzielny](samples/self-host.md)

@@ -2,36 +2,36 @@
 title: Migrowanie z programu .NET Remoting do programu WCF
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: 4b6996b01da6312486649482ffbb812fcb021306
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 8dcc019017195fd55231fbea3493d4c53d500cb3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452555"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183962"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>Migrowanie z programu .NET Remoting do programu WCF
-W tym artykule opisano sposób migracji aplikacji, która używa usług komunikacji zdalnej .NET do korzystania z Windows Communication Foundation (WCF). Porównuje podobne koncepcje tych produktów, a następnie opisuje sposób wykonywania kilku typowych scenariuszy komunikacji zdalnej w programie WCF.  
+W tym artykule opisano sposób migracji aplikacji, która używa programu .NET Remoting do używania programu Windows Communication Foundation (WCF). Porównuje podobne pojęcia między tymi produktami, a następnie opisuje, jak wykonać kilka typowych scenariuszy komunikacji zdalnej w WCF.  
   
- Komunikacja zdalna .NET to starszy produkt, który jest obsługiwany tylko w celu zapewnienia zgodności z poprzednimi wersjami. Nie jest on zabezpieczony w środowiskach z zaufaniem mieszanym, ponieważ nie może zachować oddzielnych poziomów zaufania między klientem i serwerem. Na przykład nigdy nie należy ujawniać punktu końcowego komunikacji zdalnej platformy .NET z Internetem lub niezaufanym klientom. Zalecamy Migrowanie istniejących aplikacji zdalnych do nowszych i bardziej bezpiecznych technologii. Jeśli projekt aplikacji używa tylko protokołu HTTP i jest RESTful, zalecamy ASP.NET Web API. Aby uzyskać więcej informacji, zobacz ASP.NET Web API. Jeśli aplikacja jest oparta na protokole SOAP lub wymaga protokołów innych niż http, takich jak TCP, zalecamy korzystanie z programu WCF.  
+ .NET Remoting jest starszy produkt, który jest obsługiwany tylko dla zgodności z powrotem. Nie jest bezpieczny w środowiskach zaufania mieszanego, ponieważ nie może utrzymać oddzielnych poziomów zaufania między klientem a serwerem. Na przykład nigdy nie należy udostępniać punktu końcowego .NET Remoting do Internetu lub niezaufanych klientów. Firma Microsoft zaleca, aby istniejące aplikacje komunikacji zdalnej były migrowane do nowszych i bezpieczniejszych technologii. Jeśli projekt aplikacji używa tylko protokołu HTTP i jest restful, zalecamy ASP.NET interfejsu API sieci Web. Aby uzyskać więcej informacji, zobacz ASP.NET interfejsu API sieci Web. Jeśli aplikacja jest oparta na soap lub wymaga protokołów innych niż Http, takich jak TCP, zaleca się WCF.  
 
-## <a name="comparing-net-remoting-to-wcf"></a>Porównanie komunikacji zdalnej .NET z usługą WCF  
- Ta sekcja zawiera porównanie podstawowych bloków konstrukcyjnych komunikacji zdalnej .NET z ich odpowiednikami WCF. Będziemy używać tych bloków konstrukcyjnych później, aby utworzyć niektóre typowe scenariusze serwera klienta w programie WCF. Poniższy wykres podsumowuje główne podobieństwa i różnice między usługami zdalnymi i WCF platformy .NET.  
+## <a name="comparing-net-remoting-to-wcf"></a>Porównywanie komunikacji zdalnej .NET z WCF  
+ W tej sekcji porównuje podstawowe bloki konstrukcyjne .NET Remoting z ich odpowiednikami WCF. Użyjemy tych bloków konstrukcyjnych później do utworzenia niektórych typowych scenariuszy klient-serwer w WCF. Na poniższym wykresie podsumowano główne podobieństwa i różnice między .NET Remoting i WCF.  
   
 ||Wywołaniem funkcji zdalnych .NET|WCF|  
 |-|-------------------|---------|  
-|Typ serwera|MarshalByRefObject podklasy|Oznacz przy użyciu atrybutu [ServiceContract]|  
-|Operacje usługi|Metody publiczne na serwerze typu|Oznacz przy użyciu atrybutu [OperationContract]|  
+|Typ serwera|Podklasa MarshalByRefObject|Oznacz za pomocą atrybutu [ServiceContract]|  
+|Operacje serwisowe|Metody publiczne typu serwera|Oznacz za pomocą atrybutu [OperationContract]|  
 |Serializacja|ISerializable lub [Serializable]|DataContractSerializer lub XmlSerializer|  
-|Obiekty zakończone|Według wartości lub według odwołania|Tylko według wartości|  
-|Błędy/wyjątki|Dowolny wyjątek możliwy do serializacji|FaultContract\<TDetail >|  
-|Obiekty serwera proxy klienta|Przezroczyste obiekty pośredniczące o jednoznacznie określonym typie są tworzone automatycznie z MarshalByRefObjects|Serwery proxy o jednoznacznie określonym typie są generowane na żądanie przy użyciu elementu ChannelFactory\<TChannel >|  
-|Wymagana platforma|Zarówno klient, jak i serwer muszą korzystać z systemów operacyjnych Microsoft i .NET|Wieloplatformowość|  
-|Format wiadomości|Private|Standardy branżowe (SOAP, WS-* itp.)|  
+|Obiekty przekazywane|Wartość według wartości lub odwołanie|Tylko wartość według wartości|  
+|Błędy/wyjątki|Dowolny wyjątek, który można szeregizać|> faultcontract\<TDetail|  
+|Obiekty serwera proxy klienta|Silnie wpisane przezroczyste serwery proxy są tworzone automatycznie z MarshalByRefObjects|Silnie typizowane serwery proxy są generowane na\<żądanie przy użyciu kanału ChannelFactory TChannel>|  
+|Wymagana platforma|Zarówno klient, jak i serwer muszą używać systemu operacyjnego Microsoft I .NET|Wieloplatformowość|  
+|Format wiadomości|Private|Normy branżowe (SOAP, WS-*, itp.)|  
   
 ### <a name="server-implementation-comparison"></a>Porównanie implementacji serwera  
   
-#### <a name="creating-a-server-in-net-remoting"></a>Tworzenie serwera w usłudze komunikacja zdalna .NET  
- Typy serwerów komunikacji zdalnej platformy .NET muszą pochodzić od MarshalByRefObject i definiować metody, które klient może wywołać, tak jak w przypadku następujących:  
+#### <a name="creating-a-server-in-net-remoting"></a>Tworzenie serwera w systemie remoting .NET  
+ .NET Typy serwerów remoting musi pochodzić z MarshalByRefObject i zdefiniować metody, które klient może wywołać, jak poniżej:  
   
 ```csharp
 public class RemotingServer : MarshalByRefObject  
@@ -40,25 +40,25 @@ public class RemotingServer : MarshalByRefObject
 }  
 ```  
   
- Publiczne metody tego typu serwera stają się kontraktem publicznym dostępnym dla klientów.  Nie ma rozdzielania między interfejsem publicznym serwera a jego implementacją — jeden typ obsługuje obie.  
+ Publiczne metody tego typu serwera stają się kontraktem publicznym dostępnym dla klientów.  Nie ma separacji między interfejsem publicznym serwera i jego implementacji — jeden typ obsługuje zarówno.  
   
- Po zdefiniowaniu typu serwera można go udostępnić klientom, tak jak w poniższym przykładzie:  
+ Po zdefiniowaniu typu serwera można go udostępnić klientom, na przykład w poniższym przykładzie:  
   
 ```csharp
 TcpChannel channel = new TcpChannel(8080);  
 ChannelServices.RegisterChannel(channel, ensureSecurity : true);  
 RemotingConfiguration.RegisterWellKnownServiceType(  
-    typeof(RemotingServer),   
-    "RemotingServer",   
+    typeof(RemotingServer),
+    "RemotingServer",
     WellKnownObjectMode.Singleton);  
 Console.WriteLine("RemotingServer is running.  Press ENTER to terminate...");  
 Console.ReadLine();  
 ```  
   
- Istnieje wiele sposobów zapewnienia, że typ komunikacji zdalnej jest dostępny jako serwer, w tym przy użyciu plików konfiguracyjnych. Jest to tylko jeden przykład.  
+ Istnieje wiele sposobów, aby udostępnić typ komunikacji zdalnej jako serwer, w tym przy użyciu plików konfiguracyjnych. To tylko jeden z przykładów.  
   
-#### <a name="creating-a-server-in-wcf"></a>Tworzenie serwera w programie WCF  
- Odpowiedni krok w programie WCF obejmuje tworzenie dwóch typów — publicznego "kontraktu usług" i konkretnej implementacji. Pierwszy jest zadeklarowany jako interfejs oznaczony przy użyciu [ServiceContract]. Metody dostępne dla klientów są oznaczone atrybutem [OperationContract]:  
+#### <a name="creating-a-server-in-wcf"></a>Tworzenie serwera w WCF  
+ Równoważny krok w WCF polega na utworzeniu dwóch typów - publicznego "umowy o świadczenie usług" i konkretnej implementacji. Pierwszy jest zadeklarowany jako interfejs oznaczony jako [ServiceContract]. Metody dostępne dla klientów są oznaczone symbolem [OperationContract]:  
   
 ```csharp
 [ServiceContract]  
@@ -69,7 +69,7 @@ public interface IWCFServer
 }  
 ```  
   
- Implementacja serwera jest definiowana w oddzielnym konkretnym klasie, jak w poniższym przykładzie:  
+ Implementacja serwera jest zdefiniowana w osobnej konkretnej klasie, jak w poniższym przykładzie:  
   
 ```csharp
 public class WCFServer : IWCFServer  
@@ -78,7 +78,7 @@ public class WCFServer : IWCFServer
 }  
 ```  
   
- Po zdefiniowaniu tych typów serwer WCF można udostępnić klientom, jak w poniższym przykładzie:  
+ Po zdefiniowaniu tych typów serwer WCF może być udostępniony klientom, na przykład w poniższym przykładzie:  
   
 ```csharp
 NetTcpBinding binding = new NetTcpBinding();  
@@ -97,9 +97,9 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(WCFServer), baseAddress)
 ```  
   
 > [!NOTE]
-> Protokół TCP jest używany w obu przykładach, aby zachować je tak jak to możliwe. Zapoznaj się z tematami dotyczącymi scenariusza w dalszej części tego tematu, aby poznać przykłady użycia protokołu HTTP.  
+> Protokół TCP jest używany w obu przykładach, aby zachować je tak podobne, jak to możliwe. Zapoznaj się z for-ów scenariusz w dalszej części tego tematu na przykłady przy użyciu protokołu HTTP.  
   
- Istnieje wiele sposobów konfigurowania i hostowania usług WCF. Jest to tylko jeden przykład, znany jako "samodzielny". Aby uzyskać więcej informacji, zobacz następujące tematy:  
+ Istnieje wiele sposobów konfigurowania i hostować usługi WCF. Jest to tylko jeden z przykładów, znany jako "self-hosted". Aby uzyskać więcej informacji, zobacz następujące tematy:  
   
 - [Instrukcje: definiowanie kontraktu usługi](how-to-define-a-wcf-service-contract.md)  
   
@@ -109,30 +109,30 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(WCFServer), baseAddress)
   
 ### <a name="client-implementation-comparison"></a>Porównanie implementacji klienta  
   
-#### <a name="creating-a-client-in-net-remoting"></a>Tworzenie klienta w usłudze komunikacja zdalna .NET  
- Po udostępnieniu obiektu serwera komunikacji zdalnej platformy .NET może on być używany przez klientów, taki jak w poniższym przykładzie:  
+#### <a name="creating-a-client-in-net-remoting"></a>Tworzenie klienta w sieci .NET Remoting  
+ Po udostępnieniu obiektu serwera remotingu .NET może on być zużywany przez klientów, jak w poniższym przykładzie:  
   
 ```csharp
 TcpChannel channel = new TcpChannel();  
 ChannelServices.RegisterChannel(channel, ensureSecurity : true);  
 RemotingServer server = (RemotingServer)Activator.GetObject(  
-                            typeof(RemotingServer),   
+                            typeof(RemotingServer),
                             "tcp://localhost:8080/RemotingServer");  
   
 RemotingCustomer customer = server.GetCustomer(42);  
 Console.WriteLine($"Customer {customer.FirstName} {customer.LastName} received.");
 ```  
   
- Wystąpienie RemotingServer zwróciło element aktywator. GetObject () jest znany jako "przezroczysty serwer proxy". Implementuje on publiczny interfejs API dla typu RemotingServer na kliencie, ale wszystkie metody wywołują obiekt serwera uruchomiony w innym procesie lub na maszynie.  
+ RemotingServer wystąpienie zwrócone z Activator.GetObject() jest znany jako "przezroczysty serwer proxy." Implementuje publiczny interfejs API dla typu RemotingServer na kliencie, ale wszystkie metody wywołać obiekt serwera uruchomiony w innym procesie lub komputerze.  
   
-#### <a name="creating-a-client-in-wcf"></a>Tworzenie klienta w programie WCF  
- Odpowiedni krok w programie WCF polega na użyciu fabryki kanałów w celu jawnego utworzenia serwera proxy. Podobnie jak w przypadku komunikacji zdalnej, obiekt serwera proxy może służyć do wywoływania operacji na serwerze, jak w poniższym przykładzie:  
+#### <a name="creating-a-client-in-wcf"></a>Tworzenie klienta w WCF  
+ Równoważny krok w WCF polega na użyciu fabryki kanałów, aby utworzyć serwer proxy jawnie. Podobnie jak funkcja komunikacji zdalnej, obiekt proxy może służyć do wywoływania operacji na serwerze, jak w poniższym przykładzie:  
   
 ```csharp
 NetTcpBinding binding = new NetTcpBinding();  
 String url = "net.tcp://localhost:8000/wcfserver";  
 EndpointAddress address = new EndpointAddress(url);  
-ChannelFactory<IWCFServer> channelFactory =   
+ChannelFactory<IWCFServer> channelFactory =
     new ChannelFactory<IWCFServer>(binding, address);  
 IWCFServer server = channelFactory.CreateChannel();  
   
@@ -140,29 +140,29 @@ Customer customer = server.GetCustomer(42);
 Console.WriteLine($"  Customer {customer.FirstName} {customer.LastName} received.");
 ```  
   
- W tym przykładzie przedstawiono Programowanie na poziomie kanału, ponieważ jest ono najbardziej podobne do przykładu komunikacji zdalnej. Dostępna jest również Metoda **Dodaj odwołanie do usługi** w programie Visual Studio, która generuje kod upraszczający programowanie klientów. Aby uzyskać więcej informacji, zobacz następujące tematy:  
+ W tym przykładzie pokazano programowania na poziomie kanału, ponieważ jest najbardziej podobny do przykładu komunikacji zdalnej. Dostępne jest również **podejście Dodaj odwołanie do usługi** w programie Visual Studio, które generuje kod w celu uproszczenia programowania klienta. Aby uzyskać więcej informacji, zobacz następujące tematy:  
   
 - [Programowanie na poziomie kanału klienta](./extending/client-channel-level-programming.md)  
   
-- [Instrukcje: Dodawanie, aktualizowanie lub usuwanie odwołania do usługi](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)  
+- [Jak: Dodawanie, aktualizowanie lub usuwanie odwołania do usługi](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)  
   
 ### <a name="serialization-usage"></a>Użycie serializacji  
- Zarówno komunikacja zdalna .NET, jak i WCF używają serializacji do przesyłania obiektów między klientem a serwerem, ale różnią się następującymi sposobami:  
+ Zarówno .NET Remoting i WCF używać serializacji do wysyłania obiektów między klientem a serwerem, ale różnią się one w tych ważnych sposobów:  
   
-1. Wykorzystują różne serializatory i konwencje w celu wskazania, co należy serializować.  
+1. Używają różnych serializatorów i konwencji, aby wskazać, co do serializacji.  
   
-2. Komunikacja zdalna platformy .NET obsługuje serializację "przywoływane", który umożliwia dostęp do metody lub właściwości w jednej warstwie w celu wykonywania kodu w innej warstwie, która znajduje się w granicach zabezpieczeń. Ta funkcja udostępnia luki w zabezpieczeniach i jest jednym z głównych powodów, dla których punkty końcowe komunikacji zdalnej nigdy nie mają być ujawniane niezaufanym klientom.  
+2. .NET Remoting obsługuje serializacji "przez odwołanie", która umożliwia dostęp do metody lub właściwości w jednej warstwie do wykonania kodu w drugiej warstwie, która znajduje się poza granicami zabezpieczeń. Ta funkcja uwidacznia luki w zabezpieczeniach i jest jednym z głównych powodów, dla których punkty końcowe komunikacji zdalnej nigdy nie powinny być narażone na niezaufanych klientów.  
   
-3. Serializacja używana przez funkcję komunikacji zdalnej jest niezależna (jawnie wyklucza to, co nie jest serializowane) i Serializacja WCF jest niezależna (jawnie Oznacz członków do serializacji).  
+3. Serializacja używana przez remoting jest opt-out (jawnie wykluczyć, co nie serializacji) i WCF serializacji jest opt-in (jawnie oznaczyć, które elementy członkowskie do serializacji).  
   
-#### <a name="serialization-in-net-remoting"></a>Serializacja w komunikacji zdalnej .NET  
- Komunikacja zdalna platformy .NET obsługuje dwa sposoby serializacji i deserializacji obiektów między klientem a serwerem:  
+#### <a name="serialization-in-net-remoting"></a>Serializacja w .NET Remoting  
+ Funkcja .NET Remoting obsługuje dwa sposoby serializacji i deserializacji obiektów między klientem a serwerem:  
   
-- *Według wartości* — wartości obiektu są serializowane w granicach warstwy, a nowe wystąpienie tego obiektu jest tworzone w innej warstwie. Wszystkie wywołania metod lub właściwości tego nowego wystąpienia są wykonywane tylko lokalnie i nie wpływają na oryginalny obiekt lub warstwę.  
+- *Według wartości* — wartości obiektu są serializowane między granicami warstwy, a nowe wystąpienie tego obiektu jest tworzone w innej warstwie. Wszelkie wywołania metod lub właściwości tego nowego wystąpienia są wykonywane tylko lokalnie i nie mają wpływu na oryginalny obiekt lub warstwę.  
   
-- *Według odwołania* — specjalne "odwołanie do obiektu" jest serializowane między granicami warstwy. Gdy jedna warstwa współdziała z metodami lub właściwościami tego obiektu, komunikuje się z powrotem do oryginalnego obiektu w oryginalnej warstwie. Obiekty przez odwołanie mogą przepływać w dowolnym kierunku — serwer do klienta lub z klientem do serwera.  
+- *Przez odwołanie* — specjalne "odwołanie do obiektu" jest serializowane w granicach warstwy. Gdy jedna warstwa współdziała z metodami lub właściwościami tego obiektu, komunikuje się z powrotem do oryginalnego obiektu w oryginalnej warstwie. Obiekty według odwołania mogą przepływać w każdym kierunku — serwer do klienta lub klient do serwera.  
   
- Typy według wartości w ramach usług zdalnych są oznaczone atrybutem [Serializable] lub implementuje interfejs ISerializable, tak jak w poniższym przykładzie:  
+ Typy według wartości w remoting są oznaczone atrybutem [Serializable] lub implementują ISerializable, jak w poniższym przykładzie:  
   
 ```csharp
 [Serializable]  
@@ -174,7 +174,7 @@ public class RemotingCustomer
 }  
 ```  
   
- Typy odwołań pochodnych pochodzą od klasy MarshalByRefObject, jak w poniższym przykładzie:  
+ Typy według odwołań pochodzą z MarshalByRefObject klasy, jak w poniższym przykładzie:  
   
 ```csharp
 public class RemotingCustomerReference : MarshalByRefObject  
@@ -185,10 +185,10 @@ public class RemotingCustomerReference : MarshalByRefObject
 }  
 ```  
   
- Niezwykle ważne jest, aby zrozumieć konsekwencje dotyczące obiektów odwołujących się do komunikacji zdalnej. Jeśli jedna z warstw (klienta lub serwera) wysyła obiekt przez odwołanie do innej warstwy, wszystkie wywołania metod są wykonywane z powrotem do warstwy będącej właścicielem obiektu. Na przykład wywoływanie metod przez klienta na obiektach przez odwołanie przez serwer spowoduje wykonanie kodu na serwerze. Podobnie serwer wywołujący metody dla obiektu przez odwołanie dostarczone przez klienta spowoduje wykonanie kodu z powrotem na kliencie. Z tego powodu zaleca się używanie komunikacji zdalnej platformy .NET tylko w środowiskach w pełni zaufanych. Ujawnienie publicznego punktu końcowego komunikacji zdalnej .NET do niezaufanych klientów spowoduje, że serwer komunikacji zdalnej będzie narażony na ataki.  
+ Jest niezwykle ważne, aby zrozumieć implikacje remoting przez odniesienia obiektów. Jeśli warstwa (klient lub serwer) wysyła obiekt według odwołania do innej warstwy, wszystkie wywołania metody są wykonywane z powrotem w warstwie posiadającej obiekt. Na przykład metody wywołujące klienta na obiekcie odwołania zwróconego przez serwer będą wykonywać kod na serwerze. Podobnie metody wywoływania serwera na obiektie według odwołania dostarczonych przez klienta wykona kod z powrotem na kliencie. Z tego powodu użycie funkcji .NET Remoting jest zalecane tylko w w pełni zaufanych środowiskach. Uwidacznianie publicznego punktu końcowego komunikacji zdalnej .NET na niezaufanych klientach spowoduje, że serwer komunikacji zdalnej będzie narażony na ataki.  
   
-#### <a name="serialization-in-wcf"></a>Serializacja w programie WCF  
- WCF obsługuje tylko serializacji według wartości. Najbardziej typowym sposobem zdefiniowania typu do wymiany między klientem a serwerem jest jak w poniższym przykładzie:  
+#### <a name="serialization-in-wcf"></a>Serializacja w WCF  
+ WCF obsługuje tylko przez wartość serializacji. Najczęstszym sposobem definiowania typu do wymiany między klientem a serwerem jest jak w poniższym przykładzie:  
   
 ```csharp
 [DataContract]  
@@ -205,19 +205,19 @@ public class WCFCustomer
 }  
 ```  
   
- Atrybut [DataContract] identyfikuje ten typ jako taki, który może być serializowany i deserializowany między klientem i serwerem. Atrybut [DataMember] identyfikuje poszczególne właściwości lub pola do serializacji.  
+ Atrybut [DataContract] identyfikuje ten typ jako taki, który może być serializowany i deserializowany między klientem a serwerem. Atrybut [DataMember] identyfikuje poszczególne właściwości lub pola do serializacji.  
   
- Gdy WCF wysyła obiekt między warstwami, serializować tylko wartości i tworzy nowe wystąpienie obiektu na drugiej warstwie. Wszystkie interakcje z wartościami obiektu są wykonywane tylko lokalnie — nie komunikują się z drugą warstwą, tak jak obiekty referencyjne komunikacji zdalnej przez platformę .NET. Aby uzyskać więcej informacji, zobacz [serializacji i deserializacji](./feature-details/serialization-and-deserialization.md).  
+ Gdy WCF wysyła obiekt między warstwami, serializuje tylko wartości i tworzy nowe wystąpienie obiektu w innej warstwie. Wszelkie interakcje z wartościami obiektu występują tylko lokalnie — nie komunikują się z drugą warstwą sposób .NET Remoting przez odwołanie obiektów zrobić. Aby uzyskać więcej informacji, zobacz [Serializacja i deserializacja](./feature-details/serialization-and-deserialization.md).  
   
 ### <a name="exception-handling-capabilities"></a>Możliwości obsługi wyjątków  
   
-#### <a name="exceptions-in-net-remoting"></a>Wyjątki w komunikacji zdalnej .NET  
- Wyjątki zgłoszone przez serwer usług zdalnych są serializowane, wysyłane do klienta i zgłaszane lokalnie na kliencie, podobnie jak każdy inny wyjątek. Wyjątki niestandardowe można utworzyć przez podklasę typu wyjątku i oznaczenie go przy użyciu [Serializable].   Większość wyjątków Framework została już oznaczona w ten sposób, co pozwala na to, aby większość zgłaszać serwerowi, serializować i ponownie wygenerowane na kliencie. Chociaż ten projekt jest wygodny podczas programowania, informacje po stronie serwera mogą zostać przypadkowo ujawnione dla klienta. Jest to jedna z wielu powodów, dla których komunikacja zdalna powinna być używana tylko w w pełni zaufanych środowiskach.  
+#### <a name="exceptions-in-net-remoting"></a>Wyjątki w obszarze .NET Remoting  
+ Wyjątki generowane przez serwer komunikacji zdalnej są serializowane, wysyłane do klienta i generowane lokalnie na kliencie, jak każdy inny wyjątek. Wyjątki niestandardowe można utworzyć, klasyfikując typ wyjątku i oznaczając go za pomocą [Serializable].   Większość wyjątków framework są już oznaczone w ten sposób, dzięki czemu większość być generowane przez serwer, serializowane i ponownie generowane na kliencie. Chociaż ten projekt jest wygodny podczas tworzenia, informacje po stronie serwera mogą przypadkowo zostać ujawnione klientowi. Jest to jeden z wielu powodów, dla których program komunikacji zdalnej powinien być używany tylko w w pełni zaufanych środowiskach.  
   
-#### <a name="exceptions-and-faults-in-wcf"></a>Wyjątki i błędy w programie WCF  
- Funkcja WCF nie zezwala na Zwracanie żadnych typów wyjątków z serwera do klienta, ponieważ może to prowadzić do przypadkowego ujawnienia informacji. Jeśli operacja usługi zgłasza nieoczekiwany wyjątek, spowoduje to, że na kliencie zostanie zgłoszony błąd ogólnego przeznaczeniaexception. Ten wyjątek nie zawiera żadnych informacji o tym, dlaczego wystąpił problem, i w przypadku niektórych aplikacji, które są wystarczające. Aplikacje, które muszą przekazać bogatsze informacje o błędzie do klienta, można to zrobić, definiując umowę o błędzie.  
+#### <a name="exceptions-and-faults-in-wcf"></a>Wyjątki i usterki w WCF  
+ WCF nie zezwala na arbitralne typy wyjątków mają być zwracane z serwera do klienta, ponieważ może to prowadzić do niezamierzonego ujawnienia informacji. Jeśli operacja usługi zgłasza nieoczekiwany wyjątek, powoduje, że ogólne przeznaczenie FaultException do rzuconego na klienta. Ten wyjątek nie zawiera żadnych informacji, dlaczego i gdzie wystąpił problem, a dla niektórych aplikacji jest to wystarczające. Aplikacje, które muszą komunikować się z klientem bogatsze informacje o błędach, robią to, definiując kontrakt o usterki.  
   
- W tym celu należy najpierw utworzyć typ [DataContract], aby przenieść informacje o błędzie.  
+ Aby to zrobić, należy najpierw utworzyć typ [DataContract] do przenoszenia informacji o usterce.  
   
 ```csharp
 [DataContract]  
@@ -231,7 +231,7 @@ public class CustomerServiceFault
 }  
 ```  
   
- Określ kontrakt błędu, który ma być używany dla każdej operacji usługi.  
+ Określ kontrakt błędów do użycia dla każdej operacji serwisu.  
   
 ```csharp
 [ServiceContract]  
@@ -243,17 +243,17 @@ public interface IWCFServer
 }  
 ```  
   
- Serwer zgłasza warunki błędów, zgłaszając wyjątek FaultException.  
+ Serwer zgłasza warunki błędu, rzucając FaultException.  
   
 ```csharp
 throw new FaultException<CustomerServiceFault>(  
-    new CustomerServiceFault() {   
-        CustomerId = customerId,   
-        ErrorMessage = "Illegal customer Id"   
+    new CustomerServiceFault() {
+        CustomerId = customerId,
+        ErrorMessage = "Illegal customer Id"
     });  
 ```  
   
- Gdy klient wysyła żądanie do serwera, może przechwytywać błędy jako normalne wyjątki.  
+ I za każdym razem, gdy klient wysyła żądanie do serwera, może przechwytywać błędy jako normalne wyjątki.  
   
 ```csharp
 try  
@@ -266,60 +266,60 @@ catch (FaultException<CustomerServiceFault> fault)
 }  
 ```  
   
- Aby uzyskać więcej informacji na temat umów dotyczących błędów, zobacz <xref:System.ServiceModel.FaultException>.  
+ Aby uzyskać więcej informacji <xref:System.ServiceModel.FaultException>na temat kontraktów usterek, zobacz .  
   
 ### <a name="security-considerations"></a>Zagadnienia związane z zabezpieczeniami  
   
 #### <a name="security-in-net-remoting"></a>Zabezpieczenia w komunikacji zdalnej .NET  
- Niektóre kanały komunikacji zdalnej .NET obsługują funkcje zabezpieczeń, takie jak uwierzytelnianie i szyfrowanie, w warstwie kanału (IPC i TCP). Kanał HTTP opiera się na Internet Information Services (IIS) do uwierzytelniania i szyfrowania. Pomimo tego wsparcia należy rozważyć użycie przez program .NET zdalnej protokołu komunikacyjnego i używanie go tylko w środowiskach w pełni zaufanych. Nigdy nie ujawniaj publicznego punktu końcowego komunikacji zdalnej dla Internetu lub niezaufanych klientów.  
+ Niektóre kanały komunikacji zdalnej platformy .NET obsługują funkcje zabezpieczeń, takie jak uwierzytelnianie i szyfrowanie w warstwie kanału (IPC i TCP). Kanał HTTP opiera się na internetowych usługach informacyjnych (IIS) zarówno do uwierzytelniania, jak i szyfrowania. Pomimo tej pomocy należy rozważyć .NET Remoting niezabezpieczony protokół komunikacyjny i używać go tylko w w pełni zaufanych środowiskach. Nigdy nie udostępniaj publicznego punktu końcowego komunikacji zdalnej w Internecie lub niezaufanych klientów.  
   
 #### <a name="security-in-wcf"></a>Zabezpieczenia w programie WCF  
- Funkcja WCF została zaprojektowana z myślą o bezpieczeństwie, w części dotyczącej rodzaju luk w zabezpieczeniach platformy .NET. Usługa WCF oferuje zabezpieczenia zarówno na poziomie transportu, jak i komunikatów, a ponadto oferuje wiele opcji uwierzytelniania, autoryzacji, szyfrowania i tak dalej. Aby uzyskać więcej informacji, zobacz następujące tematy:  
+ WCF został zaprojektowany z myślą o bezpieczeństwie, częściowo w celu wyeliminowania rodzajów luk znalezionych w .NET Remoting. WCF oferuje zabezpieczenia na poziomie transportu i wiadomości i oferuje wiele opcji uwierzytelniania, autoryzacji, szyfrowania i tak dalej. Aby uzyskać więcej informacji, zobacz następujące tematy:  
   
-- [Bezpieczeństwo](./feature-details/security.md)  
+- [Zabezpieczenia](./feature-details/security.md)  
   
-- [Wskazówki dotyczące zabezpieczeń programu WCF](./feature-details/security-guidance-and-best-practices.md)  
+- [Wskazówki dotyczące zabezpieczeń WCF](./feature-details/security-guidance-and-best-practices.md)  
   
-## <a name="migrating-to-wcf"></a>Migrowanie do programu WCF  
+## <a name="migrating-to-wcf"></a>Migracja do WCF  
   
-### <a name="why-migrate-from-remoting-to-wcf"></a>Dlaczego należy przeprowadzić migrację z usług zdalnych do WCF?  
+### <a name="why-migrate-from-remoting-to-wcf"></a>Dlaczego migracji z komunikacji zdalnej do WCF?  
   
-- **Komunikacja zdalna .NET to starszy produkt.** Zgodnie z opisem w [komunikacji zdalnej .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507%28v=vs.100%29), jest uznawany za starszy produkt i nie jest zalecany w przypadku nowych rozwiązań programistycznych. W przypadku nowych i istniejących aplikacji zaleca się używanie interfejsu API sieci Web WCF lub ASP.NET.  
+- **.NET Remoting jest produktem starszej wersji.** Jak opisano w [.NET Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507%28v=vs.100%29), jest uważany za produkt starszej wersji i nie jest zalecany do nowego rozwoju. WCF lub ASP.NET web API są zalecane dla nowych i istniejących aplikacji.  
   
-- **Funkcja WCF stosuje standardy dla wielu platform.** Program WCF został zaprojektowany z myślą o współdziałaniu między platformami i obsługuje wiele standardów branżowych (SOAP, WS-Security, WS-Trust itp.). Usługa WCF może współpracować z klientami uruchomionymi w systemach operacyjnych innych niż Windows. Komunikacja zdalna została zaprojektowana głównie dla środowisk, w których aplikacje serwerowe i klienckie działają za pomocą .NET Framework w systemie operacyjnym Windows.
+- **WCF używa standardów międzyplatformowych.** WCF został zaprojektowany z myślą o interoperacyjności między platformami i obsługuje wiele standardów branżowych (SOAP, WS-Security, WS-Trust itp.). Usługa WCF może współpracować z klientami działającymi w systemach operacyjnych innych niż Windows. Komunikacji zdalnej został zaprojektowany przede wszystkim dla środowisk, w których zarówno serwer, jak i aplikacje klienckie są uruchamiane przy użyciu programu .NET Framework w systemie operacyjnym Windows.
   
-- **Funkcja WCF ma wbudowane zabezpieczenia.** Funkcja WCF została zaprojektowana z myślą o bezpieczeństwie i oferuje wiele opcji uwierzytelniania, zabezpieczeń na poziomie transportu, zabezpieczeń na poziomie komunikatów itp. Komunikacja zdalna została zaprojektowana w celu ułatwienia współpracy aplikacji, ale nie została zaprojektowana w taki sposób, aby była zabezpieczona w środowiskach niezaufanych. Funkcja WCF została zaprojektowana tak, aby działała zarówno w środowiskach zaufanych, jak i niezaufanych.  
+- **WCF ma wbudowane zabezpieczenia.** WCF został zaprojektowany z myślą o bezpieczeństwie i oferuje wiele opcji uwierzytelniania, bezpieczeństwa na poziomie transportu, zabezpieczeń na poziomie wiadomości itp. Komunikacji zdalnej został zaprojektowany, aby ułatwić aplikacjom współdziałanie, ale nie został zaprojektowany, aby być bezpieczne w środowiskach niezaufanych. WCF został zaprojektowany do pracy w środowiskach zaufanych i niezaufanych.  
   
 ### <a name="migration-recommendations"></a>Zalecenia dotyczące migracji  
- Poniżej przedstawiono zalecane kroki migracji z komunikacji zdalnej platformy .NET do programu WCF:  
+ Poniżej przedstawiono zalecane kroki migracji z .NET Remoting do WCF:  
   
-- **Utwórz kontrakt usługi.** Zdefiniuj typy interfejsów usługi i oznacz je atrybutem [ServiceContract]. Oznacz wszystkie metody, które będą mogły być wywoływane przez klientów [OperationContract].  
+- **Utwórz umowę serwisową.** Zdefiniuj typy interfejsów usługi i oznacz je atrybutem [ServiceContract]. Oznacz wszystkie metody, które klienci będą mogli wywołać za pomocą [OperationContract].  
   
-- **Utwórz kontrakt danych.** Zdefiniuj typy danych, które będą wymieniane między serwerem a klientem i oznacz je atrybutem [DataContract]. Oznacz wszystkie pola i właściwości, których klient będzie mógł używać z [DataMember].  
+- **Utwórz kontrakt na dane.** Zdefiniuj typy danych, które będą wymieniane między serwerem a klientem, i oznacz je atrybutem [DataContract]. Zaznacz wszystkie pola i właściwości, których klient będzie mógł używać z programem [DataMember].  
   
-- **Utwórz kontrakt błędu (opcjonalnie).** Utwórz typy, które będą wymieniane między serwerem a klientem po napotkaniu błędów. Oznacz te typy elementami [DataContract] i [DataMember], aby je serializować. Dla wszystkich operacji usługi, które zostały oznaczone za pomocą elementu [OperationContract], należy również oznaczyć je jako [FaultContract], aby wskazać, które błędy mogą zostać zwrócone.  
+- **Utwórz kontrakt na usterkę (opcjonalnie).** Utwórz typy, które będą wymieniane między serwerem a klientem po napotkaniu błędów. Oznacz te typy za pomocą [DataContract] i [DataMember], aby były serializowalne. Dla wszystkich operacji usługi oznaczone jako [OperationContract], również oznaczyć je z [FaultContract], aby wskazać, które błędy mogą zwracać.  
   
-- **Skonfigurowanie i Hostowanie usługi.** Po utworzeniu kontraktu usługi następnym krokiem jest skonfigurowanie powiązania, aby uwidocznić usługę w punkcie końcowym. Aby uzyskać więcej informacji, zobacz [punkty końcowe: adresy, powiązania i kontrakty](./feature-details/endpoints-addresses-bindings-and-contracts.md).  
+- **Konfigurowanie i hostowania usługi.** Po utworzeniu umowy serwisowej następnym krokiem jest skonfigurowanie powiązania, aby udostępnić usługę w punkcie końcowym. Aby uzyskać więcej informacji, zobacz [Punkty końcowe: Adresy, Powiązania i Kontrakty](./feature-details/endpoints-addresses-bindings-and-contracts.md).  
   
- Po przeprowadzeniu migracji aplikacji zdalnej do programu WCF nadal trzeba usunąć zależności dotyczące komunikacji zdalnej platformy .NET. Dzięki temu wszystkie luki w zabezpieczeniach zdalnych zostaną usunięte z aplikacji. Następujące kroki obejmują:  
+ Po migracji aplikacji komunikacji zdalnej do WCF, nadal ważne jest, aby usunąć zależności na .NET Komunikacji zdalnej. Gwarantuje to, że wszelkie luki w zabezpieczeniach są usuwane z aplikacji. Te kroki obejmują następujące czynności:  
   
-- **Zaprzestanie korzystania z MarshalByRefObject.** Typ MarshalByRefObject istnieje tylko w przypadku komunikacji zdalnej i nie jest używany przez WCF. Wszystkie typy aplikacji, które podklasy MarshalByRefObject należy usunąć lub zmienić.  
+- **Zaprzestanie używania MarshalByRefObject.** Typu MarshalByRefObject istnieje tylko dla komunikacji zdalnej i nie jest używany przez WCF. Wszystkie typy aplikacji, które podklasy MarshalByRefObject powinny zostać usunięte lub zmienione.  
   
-- **Zaprzestanie używania [Serializable] i ISerializable.** Atrybut [Serializable] i interfejs ISerializable zostały pierwotnie zaprojektowane do serializacji typów w zaufanych środowiskach i są używane przez funkcję komunikacji zdalnej. Serializacja WCF opiera się na typach oznaczonych za pomocą elementu [DataContract] i [DataMember]. Typy danych używane przez aplikację należy zmodyfikować tak, aby używały elementu [DataContract], a nie do użycia interfejsu ISerializable lub [Serializable].  
+- **Zaprzestać używania [Serializable] i ISerializable.** Atrybut [Serializable] i interfejs ISerializable zostały pierwotnie zaprojektowane do serializacji typów w zaufanych środowiskach i są używane przez program Remoting. Serializacja WCF zależy od typów oznaczonych jako [DataContract] i [DataMember]. Typy danych używane przez aplikację powinny być modyfikowane w celu użycia [DataContract] i nie używać funkcji ISerializable lub [Serializable].  
   
 ### <a name="migration-scenarios"></a>Scenariusze migracji  
- Teraz zobaczmy, jak wykonywać następujące typowe scenariusze komunikacji zdalnej w programie WCF:  
+ Teraz zobaczmy, jak wykonać następujące typowe scenariusze komunikacji zdalnej w WCF:  
   
-1. Serwer zwraca obiekt przez wartość do klienta  
+1. Serwer zwraca klientowi wartość po wartości obiektu  
   
 2. Serwer zwraca obiekt przez odwołanie do klienta  
   
 3. Klient wysyła obiekt według wartości do serwera  
   
 > [!NOTE]
-> Wysyłanie obiektu przez odwołanie z klienta do serwera nie jest dozwolone w programie WCF.  
+> Wysyłanie obiektu przez odwołanie od klienta do serwera nie jest dozwolone w WCF.  
   
- Podczas czytania w tych scenariuszach Załóżmy, że nasze interfejsy bazowe dla komunikacji zdalnej platformy .NET wyglądają jak w poniższym przykładzie. Implementacja komunikacji zdalnej platformy .NET nie jest ważna w tym miejscu, ponieważ chcemy zilustrować, jak używać programu WCF do implementowania równoważnej funkcjonalności.  
+ Podczas odczytywania tych scenariuszy, załóżmy, że nasze interfejsy linii bazowej dla .NET Komunikacji zdalnej wyglądają jak w poniższym przykładzie. Implementacja .NET Remoting nie jest w tym miejscu ważne, ponieważ chcemy zilustrować tylko sposób używania WCF do implementowania równoważnych funkcji.  
   
 ```csharp
 public class RemotingServer : MarshalByRefObject  
@@ -335,10 +335,10 @@ public class RemotingServer : MarshalByRefObject
 }  
 ```  
   
-#### <a name="scenario-1-service-returns-an-object-by-value"></a>Scenariusz 1: usługa zwraca obiekt przez wartość  
- W tym scenariuszu zademonstrowano serwer zwracający obiekt do klienta przez wartość. Program WCF zawsze zwraca obiekty z serwera według wartości, dlatego w następujących krokach opisano sposób tworzenia normalnej usługi WCF.  
+#### <a name="scenario-1-service-returns-an-object-by-value"></a>Scenariusz 1.  
+ W tym scenariuszu pokazano serwer zwraca obiekt do klienta według wartości. WCF zawsze zwraca obiekty z serwera według wartości, więc następujące kroki po prostu opisują sposób tworzenia normalnej usługi WCF.  
   
-1. Zacznij od zdefiniowania interfejsu publicznego dla usługi WCF i oznacz go atrybutem [ServiceContract]. Używamy [OperationContract], aby identyfikować metody po stronie serwera, które będą wywoływane przez klienta.  
+1. Rozpocznij od zdefiniowania interfejsu publicznego dla usługi WCF i oznacz go atrybutem [ServiceContract]. Używamy [OperationContract] do identyfikowania metod po stronie serwera, które nasz klient wywoła.  
   
    ```csharp
    [ServiceContract]  
@@ -352,7 +352,7 @@ public class RemotingServer : MarshalByRefObject
    }  
    ```  
   
-2. Następnym krokiem jest utworzenie kontraktu danych dla tej usługi. W tym celu należy utworzyć klasy (nie interfejsy) oznaczone za pomocą atrybutu [DataContract]. Poszczególne właściwości lub pola, które mają być widoczne dla klienta i serwera, są oznaczone za pomocą [DataMember]. Jeśli chcemy, aby typy pochodne były dozwolone, należy użyć atrybutu [KnownType], aby je zidentyfikować. Jedyne typy WCF umożliwią serializacji lub deserializacji dla tej usługi są te w interfejsie usługi i tych "znanych typach". Próba wymiany dowolnego innego typu, którego nie ma na liście, zostanie odrzucona.  
+2. Następnym krokiem jest utworzenie kontraktu danych dla tej usługi. Robimy to, tworząc klasy (nie interfejsy) oznaczone atrybutem [DataContract]. Poszczególne właściwości lub pola, które chcemy być widoczne zarówno dla klienta, jak i dla serwera, są oznaczone symbolem [DataMember]. Jeśli chcemy, aby typy pochodne były dozwolone, musimy użyć [KnownType] atrybut do ich identyfikacji. Jedynymi typami WCF pozwoli być serializowane lub deserialized dla tej usługi są te w interfejsie usługi i tych "znanych typów". Próba wymiany dowolnego innego typu, który nie znajduje się na tej liście, zostanie odrzucona.  
   
    ```csharp
    [DataContract]  
@@ -370,14 +370,14 @@ public class RemotingServer : MarshalByRefObject
    }  
   
    [DataContract]  
-   public class PremiumCustomer : Customer   
+   public class PremiumCustomer : Customer
    {  
        [DataMember]  
        public int AccountId { get; set; }  
    }  
    ```  
   
-3. Następnie udostępnimy implementację interfejsu usługi.  
+3. Następnie zapewniamy implementację interfejsu usługi.  
   
    ```csharp  
    public class CustomerService : ICustomerService  
@@ -394,7 +394,7 @@ public class RemotingServer : MarshalByRefObject
    }  
    ```  
   
-4. Aby uruchomić usługę WCF, musimy zadeklarować punkt końcowy, który ujawnia ten interfejs usługi w określonym adresie URL przy użyciu określonego powiązania WCF. Zwykle jest to wykonywane przez dodanie poniższych sekcji do pliku Web. config projektu serwera.  
+4. Aby uruchomić usługę WCF, musimy zadeklarować punkt końcowy, który udostępnia tego interfejsu usługi przy określonym adresie URL przy użyciu określonego powiązania WCF. Zazwyczaj odbywa się to przez dodanie następujących sekcji do pliku web.config projektu serwera.  
   
     ```xml  
     <configuration>  
@@ -410,16 +410,16 @@ public class RemotingServer : MarshalByRefObject
     </configuration>  
     ```  
   
-5. Następnie można uruchomić usługę WCF przy użyciu następującego kodu:  
+5. Usługę WCF można następnie uruchomić z następującym kodem:  
   
    ```csharp
    ServiceHost customerServiceHost = new ServiceHost(typeof(CustomerService));  
        customerServiceHost.Open();  
    ```  
   
-     Po uruchomieniu tego elementu ServiceHost używa on pliku Web. config w celu ustanowienia właściwego kontraktu, powiązania i punktu końcowego. Aby uzyskać więcej informacji na temat plików konfiguracji, zobacz [Konfigurowanie usług przy użyciu plików konfiguracji](./configuring-services-using-configuration-files.md). Ten styl uruchamiania serwera jest znany jako samohosting. Aby dowiedzieć się więcej o innych opcjach hostingu usług WCF, zobacz [usługi hostingu](./hosting-services.md).  
+     Po uruchomieniu tego ServiceHost używa pliku web.config do ustanowienia właściwej umowy, powiązania i punktu końcowego. Aby uzyskać więcej informacji na temat plików konfiguracyjnych, zobacz [Konfigurowanie usług przy użyciu plików konfiguracyjnych](./configuring-services-using-configuration-files.md). Ten styl uruchamiania serwera jest znany jako własny hosting. Aby dowiedzieć się więcej o innych możliwościach obsługi usług WCF, zobacz [Usługi hostingowe](./hosting-services.md).  
   
-6. Plik App. config projektu klienta musi deklarować pasujące informacje o powiązaniu dla punktu końcowego usługi. Najprostszym sposobem wykonania tej czynności w programie Visual Studio jest użycie **Dodaj odwołanie do usługi**, która spowoduje automatyczne zaktualizowanie pliku App. config. Alternatywnie te same zmiany można dodać ręcznie.  
+6. App.config projektu klienta musi zadeklarować pasujące informacje o powiązaniach dla punktu końcowego usługi. Najprostszym sposobem, aby to zrobić w programie Visual Studio jest użycie **Dodaj service reference**, który automatycznie zaktualizuje plik app.config. Alternatywnie te same zmiany można dodać ręcznie.  
   
     ```xml  
     <configuration>  
@@ -434,9 +434,9 @@ public class RemotingServer : MarshalByRefObject
     </configuration>  
     ```  
   
-     Aby uzyskać więcej informacji o korzystaniu z **Dodaj odwołanie do usługi**, zobacz [How to: Add, Update lub Remove a Service Reference](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference).  
+     Aby uzyskać więcej informacji na temat **używania dodatku odwołania do usługi,** zobacz [Jak: Dodawanie, aktualizowanie lub usuwanie odwołania do usługi](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference).  
   
-7. Teraz możemy wywołać usługę WCF od klienta. Możemy to zrobić, tworząc fabrykę kanałów dla tej usługi, zwracając ją na kanał i bezpośrednio wywołując metodę, którą chcemy w tym kanale. Można to zrobić, ponieważ kanał implementuje interfejs usługi i obsługuje podstawową logikę żądania/odpowiedzi. Wartością zwracaną z tego wywołania metody jest deserializowana kopia odpowiedzi serwera.  
+7. Teraz możemy wywołać usługę WCF z klienta. Robimy to, tworząc fabrykę kanałów dla tej usługi, prosząc ją o kanał i bezpośrednio wywołując metodę, którą chcemy na tym kanale. Możemy to zrobić, ponieważ kanał implementuje interfejs usługi i obsługuje podstawową logikę żądania/odpowiedzi dla nas. Zwracana wartość z tego wywołania metody jest deserializowanej kopii odpowiedzi serwera.  
   
    ```csharp
    ChannelFactory<ICustomerService> factory =  
@@ -446,12 +446,12 @@ public class RemotingServer : MarshalByRefObject
    Console.WriteLine($"  Customer {customer.FirstName} {customer.LastName} received.");
    ```  
   
- Obiekty zwracane przez WCF z serwera do klienta są zawsze przez wartość. Obiekty są deserializowanymi kopiami danych wysyłanych przez serwer. Klient może wywoływać metody dla tych kopii lokalnych bez jakichkolwiek zagrożeń związanych z wywoływaniem kodu serwera za pomocą wywołań zwrotnych.  
+ Obiekty zwracane przez WCF z serwera do klienta są zawsze według wartości. Obiekty są deserializowane kopie danych wysyłanych przez serwer. Klient może wywołać metody na tych kopiach lokalnych bez żadnego niebezpieczeństwa wywoływania kodu serwera za pomocą wywołań zwrotnych.  
   
-#### <a name="scenario-2-server-returns-an-object-by-reference"></a>Scenariusz 2. serwer zwraca obiekt przez odwołanie  
- W tym scenariuszu pokazano serwer dostarczający obiekt do klienta przez odwołanie. W przypadku komunikacji zdalnej .NET jest to obsługiwane automatycznie dla dowolnego typu pochodnego od MarshalByRefObject, który jest serializowany przez odwołanie. Przykładem tego scenariusza jest umożliwienie wielu klientom niezależnych obiektów po stronie serwera. Jak wspomniano wcześniej, obiekty zwrócone przez usługę WCF są zawsze przez wartość, więc nie istnieje bezpośredni odpowiednik obiektu przez odwołanie, ale możliwe jest osiągnięcie czegoś podobnego do semantyki odniesienia przy użyciu obiektu <xref:System.ServiceModel.EndpointAddress10>. Jest to obiekt możliwy do serializacji przez wartość, który może być używany przez klienta w celu uzyskania na serwerze sesji na podstawie obiektu referencyjnego. Dzięki temu scenariusz ma wiele klientów z niezależnymi obiektami po stronie serwera.  
+#### <a name="scenario-2-server-returns-an-object-by-reference"></a>Scenariusz 2: Serwer zwraca obiekt według odwołania  
+ W tym scenariuszu pokazano serwer dostarczanie obiektu do klienta przez odwołanie. W .NET Remoting jest obsługiwany automatycznie dla dowolnego typu pochodzącego z MarshalByRefObject, który jest serializowany przez odwołanie. Przykładem tego scenariusza jest umożliwienie wielu klientom mieć niezależne sesyjne obiekty po stronie serwera. Jak wcześniej wspomniano, obiekty zwracane przez usługę WCF są zawsze według wartości, więc nie ma bezpośredniego odpowiednika obiektu przez odwołanie, ale jest <xref:System.ServiceModel.EndpointAddress10> możliwe, aby osiągnąć coś podobnego do semantyki przez odwołanie za pomocą obiektu. Jest to obiekt według wartości, który może być używany przez klienta do uzyskania sesyjnego obiektu po odwołań na serwerze. Dzięki temu scenariusz posiadania wielu klientów z niezależnymi obiektami po stronie serwera.  
   
-1. Najpierw należy zdefiniować kontrakt usługi WCF, który odpowiada obiektowi sesji.  
+1. Po pierwsze musimy zdefiniować kontrakt serwisowy WCF, który odpowiada samego obiektu sessionful.  
   
    ```csharp
    [ServiceContract(SessionMode = SessionMode.Allowed)]  
@@ -466,9 +466,9 @@ public class RemotingServer : MarshalByRefObject
    ```  
   
     > [!TIP]
-    > Zwróć uwagę, że obiekt sesji jest oznaczony za pomocą elementu [ServiceContract], co sprawia, że jest to normalny interfejs usługi WCF. Ustawienie właściwości SessionMode wskazuje, że będzie ona usługą sesji. W programie WCF sesja jest sposobem skorelowania wielu wiadomości przesyłanych między dwoma punktami końcowymi. Oznacza to, że gdy klient uzyska połączenie z tą usługą, zostanie ustanowiona sesja między klientem a serwerem. Klient będzie używać jednego unikatowego wystąpienia obiektu po stronie serwera dla wszystkich jego interakcji w ramach jednej sesji.  
+    > Należy zauważyć, że obiekt sessionful jest oznaczony jako [ServiceContract], co czyni go normalnym interfejsem usługi WCF. Ustawienie SessionMode właściwość wskazuje, że będzie to usługa sesyjna. W WCF sesji jest sposobem korelowania wielu komunikatów wysyłanych między dwoma punktami końcowymi. Oznacza to, że gdy klient uzyskuje połączenie z tą usługą, zostanie ustanowiona sesja między klientem a serwerem. Klient użyje pojedynczego unikatowego wystąpienia obiektu po stronie serwera dla wszystkich jego interakcji w ramach tej pojedynczej sesji.  
   
-2. Następnie musimy wprowadzić implementację tego interfejsu usługi. Wskazując, że za pomocą [ServiceBehavior] i ustawiając właściwość InstanceContextmode, będziemy informować, że firma Microsoft chce użyć unikatowego wystąpienia tego typu dla każdej sesji.  
+2. Następnie musimy zapewnić implementację tego interfejsu usługi. Oznaczając go za pomocą [ServiceBehavior] i ustawiając InstanceContextMode, informujemy WCF, że chcemy użyć unikatowego wystąpienia tego typu dla każdej sesji.  
   
    ```csharp
    [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession)]  
@@ -489,7 +489,7 @@ public class RemotingServer : MarshalByRefObject
        }  
    ```  
   
-3. Teraz potrzebujemy metody uzyskania wystąpienia tego obiektu sesji. W tym celu należy utworzyć inny interfejs usługi WCF, który zwraca obiekt EndpointAddress10. Jest to możliwy do serializacji formularz punktu końcowego, którego może użyć klient do utworzenia obiektu sesji.  
+3. Teraz potrzebujemy sposobu, aby uzyskać wystąpienie tego obiektu sesji. Robimy to, tworząc inny interfejs usługi WCF, który zwraca Obiekt EndpointAddress10. Jest to serializable formie punktu końcowego, który klient może użyć do utworzenia obiektu sessionful.  
   
    ```csharp
    [ServiceContract]  
@@ -500,14 +500,14 @@ public class RemotingServer : MarshalByRefObject
        }  
    ```  
   
-     I implementujemy tę usługę WCF:  
+     I wdrażamy tę usługę WCF:  
   
    ```csharp
    public class SessionBoundFactory : ISessionBoundFactory  
        {  
-           public static ChannelFactory<ISessionBoundObject> _factory =   
+           public static ChannelFactory<ISessionBoundObject> _factory =
                new ChannelFactory<ISessionBoundObject>("sessionbound");  
- 
+
            public SessionBoundFactory()  
            {  
            }  
@@ -520,13 +520,13 @@ public class RemotingServer : MarshalByRefObject
        }  
    ```  
   
-     Ta implementacja obsługuje pojedyncze fabryki kanałów do tworzenia obiektów sesji. Gdy wywoływana jest GetInstanceAddress (), tworzy kanał i tworzy obiekt EndpointAddress10, który efektywnie wskazuje adres zdalny skojarzony z tym kanałem. EndpointAddress10 jest po prostu typem danych, który może być zwracany do klienta przez wartość.  
+     Ta implementacja utrzymuje fabrykę pojedynczego kanału do tworzenia obiektów sesji. Gdy getInstanceAddress() jest wywoływana, tworzy kanał i tworzy EndpointAddress10 obiektu, który skutecznie wskazuje na adres zdalny skojarzony z tym kanałem. EndpointAddress10 jest po prostu typem danych, który może być zwracany do wartości klienta według wartości.  
   
-4. Musimy zmodyfikować plik konfiguracji serwera, wykonując następujące dwie czynności, jak pokazano w poniższym przykładzie:  
+4. Musimy zmodyfikować plik konfiguracyjny serwera, wykonując następujące dwie czynności, jak pokazano w poniższym przykładzie:  
   
-    1. Zadeklaruj sekcję > klienta \<, która opisuje punkt końcowy dla obiektu sesji. Jest to konieczne, ponieważ serwer działa również jako klient w takiej sytuacji.  
+    1. Zadeklaruj sekcję \<> klienta, która opisuje punkt końcowy dla obiektu sesji. Jest to konieczne, ponieważ serwer działa również jako klient w tej sytuacji.  
   
-    2. Zadeklaruj punkty końcowe dla obiektu fabryki i sesji. Jest to konieczne, aby umożliwić klientowi komunikowanie się z punktami końcowymi usługi w celu uzyskania EndpointAddress10 i utworzenia kanału sesji.  
+    2. Zadeklaruj punkty końcowe dla obiektu fabrycznego i sesyjnego. Jest to konieczne, aby umożliwić klientowi komunikować się z punktami końcowymi usługi, aby uzyskać EndpointAddress10 i utworzyć kanał sessionful.  
   
     ```xml  
     <configuration>  
@@ -558,7 +558,7 @@ public class RemotingServer : MarshalByRefObject
     </configuration>  
     ```  
   
-     A następnie możemy uruchomić następujące usługi:  
+     A następnie możemy uruchomić te usługi:  
   
    ```csharp
    ServiceHost factoryHost = new ServiceHost(typeof(SessionBoundFactory));  
@@ -568,7 +568,7 @@ public class RemotingServer : MarshalByRefObject
    sessionHost.Open();  
    ```  
   
-5. Skonfigurujemy klienta, deklarując te same punkty końcowe w pliku App. config projektu.  
+5. Konfigurujemy klienta, deklarując te same punkty końcowe w pliku app.config projektu.  
   
     ```xml  
     <configuration>  
@@ -591,29 +591,29 @@ public class RemotingServer : MarshalByRefObject
     </configuration>  
     ```  
   
-6. Aby można było utworzyć ten obiekt sesji i używać go, klient musi wykonać następujące czynności:  
+6. Aby utworzyć i używać tego obiektu sesyjnego, klient musi wykonać następujące kroki:  
   
-    1. Utwórz kanał usługi ISessionBoundFactory.  
+    1. Utwórz kanał do usługi ISessionBoundFactory.  
   
-    2. Użyj tego kanału do wywołania tej usługi w celu uzyskania EndpointAddress10.  
+    2. Użyj tego kanału, aby wywołać tę usługę, aby uzyskać EndpointAddress10.  
   
-    3. Użyj EndpointAddress10, aby utworzyć kanał, aby uzyskać obiekt sesji.  
+    3. EndpointAddress10 służy do tworzenia kanału w celu uzyskania obiektu sesji.  
   
-    4. Pracuj z obiektem Session, aby pokazać, że pozostaje w tym samym wystąpieniu w wielu wywołaniach.  
+    4. Interakcja z sessionful obiektu, aby zademonstrować, że pozostaje to samo wystąpienie w wielu wywołaniach.  
   
    ```csharp
-   ChannelFactory<ISessionBoundFactory> channelFactory =   
+   ChannelFactory<ISessionBoundFactory> channelFactory =
        new ChannelFactory<ISessionBoundFactory>("factory");  
    ISessionBoundFactory sessionFactory = channelFactory.CreateChannel();  
   
    EndpointAddress10 address1 = sessionFactory.GetInstanceAddress();  
    EndpointAddress10 address2 = sessionFactory.GetInstanceAddress();  
   
-   ChannelFactory<ISessionBoundObject> sessionObjectFactory1 =   
-       new ChannelFactory<ISessionBoundObject>(new NetTcpBinding(),   
+   ChannelFactory<ISessionBoundObject> sessionObjectFactory1 =
+       new ChannelFactory<ISessionBoundObject>(new NetTcpBinding(),
                                                address1.ToEndpointAddress());  
-   ChannelFactory<ISessionBoundObject> sessionObjectFactory2 =   
-       new ChannelFactory<ISessionBoundObject>(new NetTcpBinding(),   
+   ChannelFactory<ISessionBoundObject> sessionObjectFactory2 =
+       new ChannelFactory<ISessionBoundObject>(new NetTcpBinding(),
                                                address2.ToEndpointAddress());  
   
    ISessionBoundObject sessionInstance1 = sessionObjectFactory1.CreateChannel();  
@@ -629,34 +629,34 @@ public class RemotingServer : MarshalByRefObject
    }  
    ```  
   
- Funkcja WCF zawsze zwraca obiekty według wartości, ale istnieje możliwość obsługi równoważnej semantyki przez odwołanie za pomocą EndpointAddress10. Pozwala to klientowi na zażądanie wystąpienia usługi WCF, po którym może ona współistnieć z nim, podobnie jak w przypadku każdej innej usługi WCF.  
+ WCF zawsze zwraca obiekty według wartości, ale jest możliwe do obsługi odpowiednika semantyki odwołania za pomocą EndpointAddress10. Dzięki temu klient żądać sesyjne wystąpienie usługi WCF, po czym można wchodzić w interakcje z nim, jak każda inna usługa WCF.  
   
-#### <a name="scenario-3-client-sends-server-a-by-value-instance"></a>Scenariusz 3: klient wysyła serwer a wystąpienie przez wartość  
- W tym scenariuszu przedstawiono klienta wysyłającego wystąpienie obiektu niepierwotnego do serwera przez wartość. Ponieważ WCF wysyła tylko obiekty według wartości, w tym scenariuszu pokazano normalne użycie programu WCF.  
+#### <a name="scenario-3-client-sends-server-a-by-value-instance"></a>Scenariusz 3: Klient wysyła serwer jako wystąpienie według wartości  
+ W tym scenariuszu pokazano klienta wysyłania wystąpienia obiektu nieizbowy do serwera według wartości. Ponieważ WCF wysyła tylko obiekty według wartości, w tym scenariuszu pokazuje normalne użycie WCF.  
   
-1. Użyj tej samej usługi WCF w scenariuszu 1.  
+1. Użyj tej samej usługi WCF ze scenariusza 1.  
   
-2. Użyj klienta programu, aby utworzyć nowy obiekt według wartości (klienta), utworzyć kanał do komunikacji z usługą ICustomerService i wysłać do niego obiekt.  
+2. Użyj klienta, aby utworzyć nowy obiekt według wartości (Klient), utworzyć kanał do komunikowania się z usługą ICustomerService i wysłać obiekt do niego.  
   
    ```csharp
    ChannelFactory<ICustomerService> factory =  
        new ChannelFactory<ICustomerService>("customerservice");  
    ICustomerService service = factory.CreateChannel();  
-   PremiumCustomer customer = new PremiumCustomer {   
-   FirstName = "Bob",   
-   LastName = "Jones",   
-   CustomerId = 43,   
+   PremiumCustomer customer = new PremiumCustomer {
+   FirstName = "Bob",
+   LastName = "Jones",
+   CustomerId = 43,
    AccountId = 99};  
    bool success = service.UpdateCustomer(customer);  
    Console.WriteLine($"  Server returned {success}.");
    ```  
   
-     Obiekt klienta zostanie Zserializowany i wysłany do serwera, gdzie zostaje rozszeregowany do nowej kopii tego obiektu.  
+     Obiekt klienta zostanie szeregizowany i wysłany do serwera, gdzie jest deserializowany do nowej kopii tego obiektu.  
   
     > [!NOTE]
-    > Ten kod ilustruje również wysyłanie typu pochodnego (PremiumCustomer). Interfejs usługi oczekuje obiektu klienta, ale atrybut [KnownType] w klasie Customer wskazujący PremiumCustomer był również dozwolony. W przypadku programu WCF próba serializacji lub deserializacji dowolnego innego typu za poorednictwem tego interfejsu usługi jest niemożliwa.  
+    > Ten kod ilustruje również wysyłanie typu pochodnego (PremiumCustomer). Interfejs usługi oczekuje Customer obiektu, ale [KnownType] atrybut w Customer klasy wskazane PremiumCustomer był również dozwolone. WCF zakończy się niepowodzeniem wszelkie próby serializacji lub deserializacji dowolnego innego typu za pośrednictwem tego interfejsu usługi.  
   
- Normalne wymianę danych WCF są według wartości. Gwarantuje to, że wywoływanie metod na jednym z tych obiektów danych jest wykonywane tylko lokalnie — nie wywoła kodu w drugiej warstwie. Chociaż możliwe jest osiągnięcie obiektów, takich jak obiekty referencyjne, zwracanych *z* serwera, nie jest możliwe, aby klient przeszedł obiekt przez odwołanie *do* serwera. Scenariusz, który wymaga konwersacji między klientem a serwerem można osiągnąć w programie WCF przy użyciu usługi dupleksowej. Aby uzyskać więcej informacji, zobacz [usługi dupleksowe](./feature-details/duplex-services.md).  
+ Normalna wymiana danych WCF jest według wartości. Gwarantuje to, że wywoływanie metod na jednym z tych obiektów danych wykonuje tylko lokalnie — nie będzie wywoływać kodu w innej warstwie. Chociaż jest możliwe, aby osiągnąć coś jak obiekty odwołania zwracane *z* serwera, nie jest możliwe dla klienta, aby przekazać obiekt by-reference *do* serwera. Scenariusz, który wymaga konwersacji tam iz powrotem między klientem a serwerem można osiągnąć w WCF przy użyciu usługi dupleksu. Aby uzyskać więcej informacji, zobacz [Usługi dupleksu](./feature-details/duplex-services.md).  
   
 ## <a name="summary"></a>Podsumowanie  
- Komunikacja zdalna .NET to struktura komunikacji przeznaczona do użycia tylko w środowiskach w pełni zaufanych. Jest to starszy produkt i jest obsługiwany tylko w celu zapewnienia zgodności z poprzednimi wersjami. Nie należy używać go do kompilowania nowych aplikacji. Z kolei platforma WCF została zaprojektowana z myślą o bezpieczeństwie i jest zalecana w przypadku nowych i istniejących aplikacji. Firma Microsoft zaleca, aby w zamian przeprowadzić migrację istniejących aplikacji zdalnych do korzystania z interfejsu API sieci Web WCF lub ASP.NET.
+ .NET Remoting to struktura komunikacji przeznaczona do użycia tylko w w pełni zaufanych środowiskach. Jest to produkt starszej wersji i obsługiwany tylko w celu zapewnienia zgodności z powrotem. Nie należy używać do tworzenia nowych aplikacji. Z drugiej strony WCF został zaprojektowany z myślą o bezpieczeństwie i jest zalecany dla nowych i istniejących aplikacji. Firma Microsoft zaleca migrację istniejących aplikacji komunikacji zdalnej w celu użycia interfejsu WCF lub ASP.NET interfejsu API sieci Web.

@@ -15,22 +15,22 @@ helpviewer_keywords:
 ms.assetid: d627e8b7-a605-40ac-b9bb-da9a3f1b66d9
 topic_type:
 - apiref
-ms.openlocfilehash: 4382d3c9f69df2808f8cd0aaf7f8eaf19bc9891e
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: bd2f67c2d7230d3873b4dc0df73ac1be778a0828
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793678"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179095"
 ---
 # <a name="iclrdatatargetwritevirtual-method"></a>ICLRDataTarget::WriteVirtual — Metoda
-Zapisuje dane z określonego buforu na określonym adresie pamięci wirtualnej.  
+Zapisuje dane z określonego buforu na określony adres pamięci wirtualnej.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
 HRESULT WriteVirtual (  
     [in] CLRDATA_ADDRESS    address,  
-    [in, size_is(bytesRequested)]   
+    [in, size_is(bytesRequested)]
         BYTE                *buffer,  
     [in] ULONG32            bytesRequested,  
     [out] ULONG32           *bytesWritten  
@@ -39,26 +39,26 @@ HRESULT WriteVirtual (
   
 ## <a name="parameters"></a>Parametry  
  `address`  
- podczas CLRDATA_ADDRESS, w którym jest przechowywany adres pamięci wirtualnej.  
+ [w] CLRDATA_ADDRESS, który przechowuje adres pamięci wirtualnej.  
   
  `buffer`  
- podczas Wskaźnik do buforu, który przechowuje dane do zapisania.  
+ [w] Wskaźnik do buforu, który przechowuje dane do zapisania.  
   
  `bytesRequested`  
- podczas Liczba bajtów do zapisania.  
+ [w] Liczba bajtów do zapisania.  
   
  `bytesWritten`  
- określoną Wskaźnik do rzeczywistej liczby zapisanych bajtów.  
+ [na zewnątrz] Wskaźnik do rzeczywistej liczby bajtów, które zostały zapisane.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** ClrData. idl, ClrData. h  
+ **Nagłówek:** ClrData.idl, ClrData.h  
   
- **Biblioteka:** CorGuids. lib  
+ **Biblioteka:** CorGuids.lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [ICLRDataTarget, interfejs](iclrdatatarget-interface.md)

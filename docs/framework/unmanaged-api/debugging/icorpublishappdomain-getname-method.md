@@ -15,51 +15,51 @@ helpviewer_keywords:
 ms.assetid: 6ef8ac9b-9803-4b65-8b13-25f3e0b1bc6b
 topic_type:
 - apiref
-ms.openlocfilehash: 4325d61d12a66b17f88e5e368cbbc7806d0a3ec5
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 762c637696fdf79ccab6702918b5bf962ea55903
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790710"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178406"
 ---
 # <a name="icorpublishappdomaingetname-method"></a>ICorPublishAppDomain::GetName — Metoda
-Pobiera nazwę domeny aplikacji reprezentowanej przez ten [ICorPublishAppDomain](icorpublishappdomain-interface.md).  
+Pobiera nazwę domeny aplikacji, która jest reprezentowana przez ten [ICorPublishAppDomain](icorpublishappdomain-interface.md).  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
 HRESULT GetName (  
-    [in]  ULONG32   cchName,   
+    [in]  ULONG32   cchName,
     [out] ULONG32   *pcchName,  
-    [out, size_is(cchName), length_is(*pcchName)]   
+    [out, size_is(cchName), length_is(*pcchName)]
         WCHAR       *szName  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `cchName`  
- podczas Rozmiar tablicy `szName`.  
+ [w] Rozmiar tablicy. `szName`  
   
  `pcchName`  
- określoną Wskaźnik do liczby znaków dwubajtowych, w tym znak null, zwracany w tablicy `szName`.  
+ [na zewnątrz] Wskaźnik do liczby znaków szerokich, w tym znaku `szName` null, zwrócony w tablicy.  
   
  `szName`  
- określoną Tablica, w której ma zostać przechowana nazwa.  
+ [na zewnątrz] Tablica, w której ma być przechowywana nazwa.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli `szName` ma wartość różną od null, Metoda `GetName` kopiuje do `szName`znaki `cchName` (w tym terminator wartości null). Jeśli w `pcchName`jest zwracana wartość inna niż null, rzeczywista liczba znaków w nazwie (łącznie z terminatorem wartości null) jest przechowywana w tablicy `szName`.  
+ Jeśli `szName` metoda nie jest `GetName` null, metoda `cchName` kopiuje do znaków `szName`(w tym zerowy terminator) do . Jeśli w `pcchName`tablicy jest zwracana wartość null, rzeczywista liczba znaków w nazwie `szName` (w tym terminator zerowy) jest przechowywana w tablicy.  
   
- Metoda `GetName` zwraca S_OK HRESULT, niezależnie od liczby skopiowanych znaków.  
+ Metoda `GetName` zwraca S_OK HRESULT niezależnie od liczby znaków zostały skopiowane.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorPub. idl, CorPub. h  
+ **Nagłówek:** CorPub.idl, CorPub.h  
   
- **Biblioteka:** CorGuids. lib  
+ **Biblioteka:** CorGuids.lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [ICorPublishAppDomain, interfejs](icorpublishappdomain-interface.md)

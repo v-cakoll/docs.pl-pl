@@ -1,6 +1,6 @@
 ---
-title: Setsecurity — funkcja (niezarządzana dokumentacja interfejsu API)
-description: Funkcja setsecurity pobiera token personifikacji bieżącego wątku.
+title: SetSecurity, funkcja (odwołanie do niezarządzanego interfejsu API)
+description: Funkcja SetSecurity pobiera token personifikacji bieżącego wątku.
 ms.date: 11/06/2017
 api_name:
 - SetSecurity
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - SetSecurity function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 6d27779bcfc97e1c4156b8782896e83d4754491b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 809f6a95fdd6854b3a591b496877838c48d52199
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120225"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176737"
 ---
-# <a name="setsecurity-function"></a>Funkcja setsecurity
+# <a name="setsecurity-function"></a>SetSecurity, funkcja
 
-Pobiera token personifikacji skojarzony z bieżącym wątkiem. 
+Pobiera token personifikacji skojarzony z bieżącym wątkiem.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -31,33 +31,33 @@ Pobiera token personifikacji skojarzony z bieżącym wątkiem.
 
 ```cpp
 HRESULT SetSecurity (
-   [out] boolean* pNeedToReset, 
+   [out] boolean* pNeedToReset,
    [out] HANDLE* pCurrentThreadToken
-); 
+);
 ```
 
 ## <a name="parameters"></a>Parametry
 
 `pNeedToReset`\
-określoną Gdy funkcja zwraca, zawiera wskaźnik do `boolean`, który wskazuje, czy token powinien być resetowany przez wywołanie funkcji [ResetSecurity](resetsecurity.md) .
+[na zewnątrz] Po powrocie funkcja, zawiera `boolean` wskaźnik do, który wskazuje, czy token powinien zostać zresetowany przez wywołanie [ResetSecurity](resetsecurity.md) funkcji.
 
 `token`\
-określoną Gdy funkcja zwraca, zawiera wskaźnik do uchwytu tokenu personifikacji skojarzonego z bieżącym wątkiem. Jej wartość może być `null`, jeśli nie ma tokenu skojarzonego z bieżącym wątkiem. 
+[na zewnątrz] Gdy funkcja zwraca, zawiera wskaźnik do dojścia token personifikacji skojarzone z bieżącym wątku. Jego wartość `null` może być, jeśli nie ma tokenu skojarzone z bieżącego wątku.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli funkcja się powiedzie, wartość zwracana jest `S_OK` (0).
+Jeśli funkcja powiedzie się, `S_OK` zwracana wartość wynosi (0).
 
-Jeśli funkcja się nie powiedzie, wartość zwracana jest kodem błędu o wartości innej niż zero. Aby uzyskać rozszerzone informacje o błędzie, wywołaj funkcję [GetErrorInfo](geterrorinfo.md) .
+Jeśli funkcja nie powiedzie się, zwracana wartość jest kodem błędu niezerowego. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać funkcję [GetErrorInfo.](geterrorinfo.md)
 
 ## <a name="requirements"></a>Wymagania
 
- **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).
+ **Platformy:** Zobacz [Wymagania systemowe](../../get-started/system-requirements.md).
 
- **Nagłówek:** WMINet_Utils. idl
+ **Nagłówek:** WMINet_Utils.idl
 
- **Wersje .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [WMI i liczniki wydajności (niezarządzana dokumentacja interfejsu API)](index.md)
+- [Liczniki wydajności WMI i (niezarządzane odwołanie interfejsu API)](index.md)

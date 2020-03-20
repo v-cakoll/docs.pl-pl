@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 93829d15-d942-4e2d-b7a4-dfc9d7fb96be
 topic_type:
 - apiref
-ms.openlocfilehash: ffab2762fd86e95c3272ca456039028e0897bc41
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fb8b8f3e29c141e91587a4d0cdc81cdabccdbc9e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137177"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178650"
 ---
 # <a name="icordebugprocess2setunmanagedbreakpoint-method"></a>ICorDebugProcess2::SetUnmanagedBreakpoint — Metoda
-Ustawia niezarządzany punkt przerwania w określonym przesunięciu obrazu natywnego.  
+Ustawia niezarządzany punkt przerwania przy określonym przesunięciu obrazu macierzystego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -31,7 +31,7 @@ Ustawia niezarządzany punkt przerwania w określonym przesunięciu obrazu natyw
 HRESULT SetUnmanagedBreakpoint (  
     [in]  CORDB_ADDRESS    address,  
     [in]  ULONG32          bufsize,  
-    [out, size_is(bufsize), length_is(*bufLen)]   
+    [out, size_is(bufsize), length_is(*bufLen)]
         BYTE               buffer[],  
     [out] ULONG32          *bufLen  
 );  
@@ -39,25 +39,25 @@ HRESULT SetUnmanagedBreakpoint (
   
 ## <a name="parameters"></a>Parametry  
  `address`  
- podczas Obiekt `CORDB_ADDRESS`, który określa przesunięcie obrazu natywnego.  
+ [w] Obiekt `CORDB_ADDRESS` określający przesunięcie obrazu macierzystego.  
   
  `bufsize`  
- podczas Rozmiar (w bajtach) tablicy `buffer`.  
+ [w] Rozmiar tablicy w bajtach. `buffer`  
   
  `buffer`  
- określoną Tablica zawierająca kod operacji, który jest zastępowany przez punkt przerwania.  
+ [na zewnątrz] Tablica zawierająca opcode, który jest zastępowany przez punkt przerwania.  
   
  `bufLen`  
- określoną Wskaźnik do liczby bajtów zwróconych w tablicy `buffer`.  
+ [na zewnątrz] Wskaźnik do liczby bajtów zwróconych w tablicy. `buffer`  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli przesunięcie obrazu natywnego znajduje się w środowisku uruchomieniowym języka wspólnego (CLR), punkt przerwania zostanie zignorowany. Pozwala to na uniknięcie wysyłania przez środowisko uruchomieniowe punktu przerwania poza pasmem, gdy punkt przerwania jest ustawiony przez debuger.  
+ Jeśli przesunięcie obrazu macierzystego znajduje się w środowisku uruchomieniowym języka wspólnego (CLR), punkt przerwania zostanie zignorowany. Dzięki temu CLR uniknąć wysyłania pozapasmowego punktu przerwania, gdy punkt przerwania jest ustawiany przez debugera.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug. idl, CorDebug. h  
+ **Nagłówek:** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids. lib  
+ **Biblioteka:** CorGuids.lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

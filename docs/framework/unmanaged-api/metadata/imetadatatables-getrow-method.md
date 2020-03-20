@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: a7408d51-0bce-45a2-b58f-da4660bbc039
 topic_type:
 - apiref
-ms.openlocfilehash: 9ac6eba18ae23dc80a8dc90383aa67cfe41b39ff
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 71f6c496816fec1a7537f5ccdfdc1b47d17da871
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937402"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177114"
 ---
 # <a name="imetadatatablesgetrow-method"></a>IMetaDataTables::GetRow — Metoda
-Pobiera wiersz o określonym indeksie wiersza w tabeli w określonym indeksie tabeli.  
+Pobiera wiersz w określonym indeksie wiersza, w tabeli w określonym indeksie tabeli.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
-HRESULT GetRow (   
+HRESULT GetRow (
     [in]  ULONG   ixTbl,  
     [in]  ULONG   rid,  
     [out] void    **ppRow  
@@ -37,28 +37,28 @@ HRESULT GetRow (
   
 ## <a name="parameters"></a>Parametry  
  `ixTbl`  
- podczas Indeks tabeli, z której zostanie pobrany wiersz.  
+ [w] Indeks tabeli, z której wiersz zostanie pobrany.  
   
  `rid`  
- podczas Indeks wiersza do pobrania.  
+ [w] Indeks wiersza, aby uzyskać.  
   
  `ppRow`  
- określoną Wskaźnik do wskaźnika do wiersza.  
+ [na zewnątrz] Wskaźnik do wskaźnika do wiersza.  
   
 ## <a name="remarks"></a>Uwagi  
 
-  Nie zalecamy użycia tej metody, ponieważ nie zwracają one spójnych wyników. Aby uzyskać informacje na temat tabeli GUID, zobacz dokumentację Common Language Infrastructure (CLI), szczególnie "partycja II: definicja metadanych i semantyka". Dokumentacja jest dostępna w trybie online; zobacz Standard ECMA [ C# i Common Language Infrastructure](../../../standard/components.md#applicable-standards) i [standard ECMA-335-Common Language Infrastructure (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm).  
+  Nie zaleca się stosowania tej metody, ponieważ nie zwraca spójne wyniki. Aby uzyskać informacje na temat tabeli GUID, zobacz dokumentację wspólnej infrastruktury języka (CLI), w szczególności "Partycja II: Definicja metadanych i semantyka". Dokumentacja jest dostępna online; zobacz [ECMA C# i common language infrastructure standards](../../../standard/components.md#applicable-standards) and standard [ECMA-335 - Common Language Infrastructure (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm).  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
   
- **.NET Framework wersje**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework**  [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [IMetaDataTables, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [IMetaDataTables2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [IMetaDataTables2 — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

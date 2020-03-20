@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 47b2a3b6-907d-43dc-858d-1ae7dca1316a
 topic_type:
 - apiref
-ms.openlocfilehash: 3898b095809e2b84f71aba2036f4d7a294dfdf6a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 1868d13a9dbb73dbdf64e49c395bdbff02ce89d4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444654"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177454"
 ---
 # <a name="imetadataemit2definegenericparam-method"></a>IMetaDataEmit2::DefineGenericParam — Metoda
 Tworzy definicję parametru typu ogólnego i pobiera token do tego parametru typu ogólnego.  
@@ -28,49 +28,49 @@ Tworzy definicję parametru typu ogólnego i pobiera token do tego parametru typ
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
-HRESULT DefineGenericParam (   
-    [in]  mdToken         tk,   
-    [in]  ULONG           ulParamSeq,   
-    [in]  DWORD           dwParamFlags,   
-    [in]  LPCWSTR         szname,   
-    [in]  DWORD           reserved,   
-    [in]  mdToken         rtkConstraints[],   
+HRESULT DefineGenericParam (
+    [in]  mdToken         tk,
+    [in]  ULONG           ulParamSeq,
+    [in]  DWORD           dwParamFlags,
+    [in]  LPCWSTR         szname,
+    [in]  DWORD           reserved,
+    [in]  mdToken         rtkConstraints[],
     [out] mdGenericParam  *pgp  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `tk`  
- podczas Token `mdTypeDef` lub `mdMethodDef` reprezentujący metodę lub Konstruktor, dla którego ma zostać zdefiniowany parametr generyczny.  
+ [w] Lub `mdTypeDef` `mdMethodDef` token, który reprezentuje metodę lub konstruktora, dla którego można zdefiniować parametr ogólny.  
   
  `ulParamSeq`  
- podczas Indeks parametru generycznego.  
+ [w] Indeks parametru ogólnego.  
   
  `dwParamFlags`  
- podczas Wartość wyliczenia [CorGenericParamAttr —](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) opisująca typ parametru generycznego.  
+ [w] Wartość wyliczania [CorGenericParamAttr,](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) która opisuje typ parametru ogólnego.  
   
  `szname`  
- podczas Nazwa parametru.  
+ [w] Nazwa parametru.  
   
  `reserved`  
- podczas Ten parametr jest zarezerwowany do użytku w przyszłości.  
+ [w] Ten parametr jest zarezerwowany dla przyszłej rozszerzalności.  
   
  `rtkConstraints`  
- podczas Tablica zakończona zerem z ograniczeniami typu. Elementy członkowskie tablicy muszą być tokenem metadanych `mdTypeDef`, `mdTypeRef`lub `mdTypeSpec`.  
+ [w] Tablica typu zakończona z zerowym o zerowym zakończeniem. Elementy członkowskie tablicy `mdTypeRef`muszą `mdTypeSpec` być tokenem `mdTypeDef`, lub metadanych.  
   
  `pgp`  
- określoną Token, który reprezentuje parametr generyczny.  
+ [na zewnątrz] Token reprezentujący parametr ogólny.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

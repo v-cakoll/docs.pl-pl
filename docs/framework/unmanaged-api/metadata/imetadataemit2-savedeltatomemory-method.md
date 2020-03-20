@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e2146726-0084-4c9e-a2d2-e8d461b13b21
 topic_type:
 - apiref
-ms.openlocfilehash: d0718ff9a7e288ffc6a856032aa47949fda443f5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5ec4fe2a8e949cf6e9aa0ce68f4d4e49b72170b5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447884"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177437"
 ---
 # <a name="imetadataemit2savedeltatomemory-method"></a>IMetaDataEmit2::SaveDeltaToMemory — Metoda
 Zapisuje zmiany z bieżącej sesji edycji i kontynuowania w pamięci.  
@@ -29,28 +29,28 @@ Zapisuje zmiany z bieżącej sesji edycji i kontynuowania w pamięci.
   
 ```cpp  
 HRESULT SaveDeltaToMemory (  
-    [out] void        *pbData,   
+    [out] void        *pbData,
     [in]  ULONG       cbData  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `pbData`  
- określoną Adres, pod którym rozpocznie się zapisywanie różnic metadanych.  
+ [na zewnątrz] Adres, pod którym można rozpocząć pisanie delta metadanych.  
   
  `cbData`  
- podczas Rozmiar zmian. Aby określić rozmiar, użyj [IMetaDataEmit2:: GetDeltaSaveSize —](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-getdeltasavesize-method.md) .  
+ [w] Rozmiar zmian. Użyj [IMetaDataEmit2::GetDeltaSaveSize,](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-getdeltasavesize-method.md) aby określić rozmiar.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

@@ -7,40 +7,40 @@ dev_langs:
 helpviewer_keywords:
 - platform invoke, calling unmanaged functions
 ms.assetid: 9b92ac73-32b7-4e1b-862e-6d8d950cf169
-ms.openlocfilehash: 8fde48f0697d986c5fc7f6d7059b6b45a6af1488
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 11e329fa8f0c059b6c2f1c8ccb1d6bd0d0f0030a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124980"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181335"
 ---
 # <a name="passing-structures"></a>Przekazywanie struktur
-Wiele niezarządzanych funkcji oczekuje, że jako parametr funkcji, elementy członkowskie struktur (typy zdefiniowane przez użytkownika w Visual Basic) lub elementy członkowskie klas, które są zdefiniowane w kodzie zarządzanym. Podczas przekazywania struktur lub klas do niezarządzanego kodu przy użyciu funkcji Invoke platformy należy podać dodatkowe informacje, aby zachować oryginalny układ i wyrównanie. W tym temacie wprowadzono atrybut <xref:System.Runtime.InteropServices.StructLayoutAttribute>, który służy do definiowania sformatowanych typów. Dla zarządzanych struktur i klas można wybrać spośród kilku przewidzianych zachowań układu **LayoutKind** .  
+Wiele funkcji niezarządzanych oczekuje, że przejdziesz, jako parametr do funkcji, członków struktur (zdefiniowane przez użytkownika typy w języku Visual Basic) lub członków klas, które są zdefiniowane w kodzie zarządzanym. Podczas przekazywania struktur lub klas do kodu niezarządzanego przy użyciu platformy wywołać, należy podać dodatkowe informacje, aby zachować oryginalny układ i wyrównanie. W tym temacie <xref:System.Runtime.InteropServices.StructLayoutAttribute> przedstawiono atrybut, którego używasz do definiowania sformatowanych typów. Dla struktur zarządzanych i klas można wybrać z kilku przewidywalnych zachowań układu dostarczonych przez **LayoutKind** wyliczenia.  
   
- Centralne koncepcje przedstawione w tym temacie są istotną różnicą między strukturą i typami klas. Struktury są typami wartości, a klasy są typami odwołań — klasy zawsze zapewniają co najmniej jeden poziom pośredni pamięci (wskaźnik do wartości). Różnica ta jest ważna, ponieważ funkcje niezarządzane często żądają pośrednika, jak pokazano w podpisach w pierwszej kolumnie tabeli poniżej. Struktura zarządzana i deklaracje klas w pozostałych kolumnach przedstawiają stopień, w jakim można dostosować poziom pośredni w deklaracji. Deklaracje są udostępniane zarówno dla Visual Basic, C#jak i dla wizualizacji.  
+ Centralnym elementem pojęć przedstawionych w tym temacie jest istotna różnica między strukturą a typami klas. Struktury są typy wartości i klasy są typy odwołań — klasy zawsze zapewniają co najmniej jeden poziom pośredniej pamięci (wskaźnik do wartości). Ta różnica jest ważna, ponieważ funkcje niezarządzane często wymagają pośredniego, jak pokazano w podpisach w pierwszej kolumnie poniższej tabeli. Struktura zarządzana i deklaracje klas w pozostałych kolumnach pokazują stopień, w jakim można dostosować poziom pośredni w deklaracji. Deklaracje są dostarczane dla języka Visual Basic i Visual C#.  
   
-|Niezarządzany podpis|Deklaracja zarządzana: <br />Brak pośrednich<br />`Structure MyType`<br />`struct MyType;`|Deklaracja zarządzana: <br />jeden poziom pośredni<br />`Class MyType`<br />`class MyType;`|  
+|Podpis niezarządzany|Deklaracja zarządzana: <br />bez pośrednictwa<br />`Structure MyType`<br />`struct MyType;`|Deklaracja zarządzana: <br />jeden poziom pośredni<br />`Class MyType`<br />`class MyType;`|  
 |-------------------------|---------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|  
-|`DoWork(MyType x);`<br /><br /> Wymaga zerowych poziomów pośrednich.|`DoWork(ByVal x As MyType)` <br /> `DoWork(MyType x)`<br /><br /> Dodaje zero poziomów pośrednich.|Nie jest możliwe, ponieważ istnieje już jeden poziom pośredni.|  
-|`DoWork(MyType* x);`<br /><br /> Wymaga jednego poziomu pośredniego.|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> Dodaje jeden poziom pośredni.|`DoWork(ByVal x As MyType)` <br /> `DoWork(MyType x)`<br /><br /> Dodaje zero poziomów pośrednich.|  
-|`DoWork(MyType** x);`<br /><br /> Wymaga dwóch poziomów pośrednich.|Niemożliwa, ponieważ nie można użyć `ref` **ByRef** **ByRef** ani `ref`.|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> Dodaje jeden poziom pośredni.|  
+|`DoWork(MyType x);`<br /><br /> Wymaga zerowych poziomów pośrednictwu.|`DoWork(ByVal x As MyType)` <br /> `DoWork(MyType x)`<br /><br /> Dodaje zerowe poziomy pośrednictwu.|Nie jest to możliwe, ponieważ istnieje już jeden poziom pośredni.|  
+|`DoWork(MyType* x);`<br /><br /> Wymaga jednego poziomu pośredniego.|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> Dodaje jeden poziom pośredni.|`DoWork(ByVal x As MyType)` <br /> `DoWork(MyType x)`<br /><br /> Dodaje zerowe poziomy pośrednictwu.|  
+|`DoWork(MyType** x);`<br /><br /> Wymaga dwóch poziomów pośrednich.|Nie jest to możliwe, `ref` `ref` ponieważ **ByRef** **ByRef** lub nie można użyć.|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> Dodaje jeden poziom pośredni.|  
   
- W tabeli opisano następujące wskazówki dotyczące deklaracji wywołania platformy:  
+ W tabeli opisano następujące wskazówki dotyczące deklaracji wywoływania przez platformę:  
   
-- Użyj struktury przeszacowanej przez wartość, gdy niezarządzana funkcja nie wymaga pośredniego.  
+- Użyj struktury przekazywane przez wartość, gdy funkcja niezarządzana wymaga nie indirection.  
   
-- Użyj struktury przeszacowanej przez odwołanie lub klasy przekazaną przez wartość, gdy niezarządzana funkcja wymaga jednego poziomu pośredniego.  
+- Użyj struktury przekazywane przez odwołanie lub klasy przekazywane przez wartość, gdy funkcja niezarządzana wymaga jednego poziomu pośredniego.  
   
-- Użyj klasy przekazaną przez odwołanie, gdy niezarządzana funkcja wymaga dwóch poziomów pośrednika.  
+- Użyj klasy przekazywane przez odwołanie, gdy funkcja niezarządzana wymaga dwóch poziomów pośrednich.  
   
 ## <a name="declaring-and-passing-structures"></a>Deklarowanie i przekazywanie struktur  
- Poniższy przykład pokazuje, jak zdefiniować struktury `Point` i `Rect` w kodzie zarządzanym i przekazać typy jako parametr do funkcji **PtInRect** w pliku User32. dll. **PtInRect** ma następujący niezarządzany podpis:  
+ Poniższy przykład pokazuje, `Point` jak `Rect` zdefiniować i struktur w kodzie zarządzanym i przekazać typy jako parametr do **funkcji PtInRect** w pliku User32.dll. **PtInRect** ma następujący podpis niezarządzany:  
   
 ```cpp
 BOOL PtInRect(const RECT *lprc, POINT pt);  
 ```  
   
- Należy zwrócić uwagę, że należy przekazać strukturę Rect przez odwołanie, ponieważ funkcja oczekuje wskaźnika do typu RECT.  
+ Należy zauważyć, że należy przekazać Rect struktury przez odwołanie, ponieważ funkcja oczekuje wskaźnik do typu RECT.  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -57,7 +57,7 @@ Public Structure <StructLayout(LayoutKind.Explicit)> Rect
     <FieldOffset(12)> Public bottom As Integer  
 End Structure  
   
-Friend Class NativeMethods      
+Friend Class NativeMethods
     Friend Declare Auto Function PtInRect Lib "user32.dll" (
         ByRef r As Rect, p As Point) As Boolean  
 End Class  
@@ -70,7 +70,7 @@ using System.Runtime.InteropServices;
 public struct Point {  
     public int x;  
     public int y;  
-}     
+}
   
 [StructLayout(LayoutKind.Explicit)]  
 public struct Rect {  
@@ -78,7 +78,7 @@ public struct Rect {
     [FieldOffset(4)] public int top;  
     [FieldOffset(8)] public int right;  
     [FieldOffset(12)] public int bottom;  
-}     
+}
   
 internal static class NativeMethods
 {  
@@ -88,13 +88,13 @@ internal static class NativeMethods
 ```  
   
 ## <a name="declaring-and-passing-classes"></a>Deklarowanie i przekazywanie klas  
- Elementy członkowskie klasy można przekazać do niezarządzanej funkcji DLL, o ile Klasa ma stały układ elementu członkowskiego. Poniższy przykład ilustruje sposób przekazywania elementów członkowskich klasy `MySystemTime`, które są zdefiniowane w kolejności sekwencyjnej, do **GetSystemTime** w pliku User32. dll. **GetSystemTime** ma następujący niezarządzany podpis:  
+ Można przekazać członków klasy do niezarządzanej funkcji DLL, tak długo, jak klasa ma układ stałego elementu członkowskiego. W poniższym przykładzie pokazano, `MySystemTime` jak przekazać członków klasy, które są zdefiniowane w kolejności sekwencyjnej, do **GetSystemTime** w pliku User32.dll. **GetSystemTime** ma następujący podpis niezarządzany:  
   
 ```cpp
 void GetSystemTime(SYSTEMTIME* SystemTime);  
 ```  
   
- W przeciwieństwie do typów wartości, klasy zawsze mają co najmniej jeden poziom pośredni.  
+ W przeciwieństwie do typów wartości klasy zawsze mają co najmniej jeden poziom pośredni.  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -102,7 +102,7 @@ Imports System.Runtime.InteropServices
 <StructLayout(LayoutKind.Sequential)> Public Class MySystemTime  
     Public wYear As Short  
     Public wMonth As Short  
-    Public wDayOfWeek As Short   
+    Public wDayOfWeek As Short
     Public wDay As Short  
     Public wHour As Short  
     Public wMinute As Short  
@@ -117,7 +117,7 @@ Friend Class NativeMethods
         hWnd As IntPtr, lpText As String, lpCaption As String, uType As UInteger) As Integer  
 End Class  
   
-Public Class TestPlatformInvoke      
+Public Class TestPlatformInvoke
     Public Shared Sub Main()  
         Dim sysTime As New MySystemTime()  
         NativeMethods.GetSystemTime(sysTime)  
@@ -128,7 +128,7 @@ Public Class TestPlatformInvoke
               ControlChars.CrLf & "Month: " & sysTime.wMonth & _  
               ControlChars.CrLf & "DayOfWeek: " & sysTime.wDayOfWeek & _  
               ControlChars.CrLf & "Day: " & sysTime.wDay  
-        NativeMethods.MessageBox(IntPtr.Zero, dt, "Platform Invoke Sample", 0)        
+        NativeMethods.MessageBox(IntPtr.Zero, dt, "Platform Invoke Sample", 0)
     End Sub  
 End Class  
 ```  
@@ -136,14 +136,14 @@ End Class
 ```csharp  
 [StructLayout(LayoutKind.Sequential)]  
 public class MySystemTime {  
-    public ushort wYear;   
+    public ushort wYear;
     public ushort wMonth;  
-    public ushort wDayOfWeek;   
-    public ushort wDay;   
-    public ushort wHour;   
-    public ushort wMinute;   
-    public ushort wSecond;   
-    public ushort wMilliseconds;   
+    public ushort wDayOfWeek;
+    public ushort wDay;
+    public ushort wHour;
+    public ushort wMinute;
+    public ushort wSecond;
+    public ushort wMilliseconds;
 }  
 internal static class NativeMethods
 {  
@@ -173,7 +173,7 @@ public class TestPlatformInvoke
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Wywołanie funkcji DLL](calling-a-dll-function.md)
 - <xref:System.Runtime.InteropServices.StructLayoutAttribute>

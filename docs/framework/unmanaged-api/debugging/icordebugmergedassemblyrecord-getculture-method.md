@@ -1,53 +1,53 @@
 ---
-title: 'ICorDebugMergedAssemblyRecord:: getculture — Metoda'
+title: ICorDebugMergedAssemblyRecord::Metoda GetCulture
 ms.date: 03/30/2017
 ms.assetid: 030b2f8c-8c21-40b7-855d-3afa78975a17
-ms.openlocfilehash: 77ad8ee7977096e87b9fd2e131920a042243560e
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: ad54a93b16e803170987dd56d8063669f7e67f94
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793155"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178754"
 ---
-# <a name="icordebugmergedassemblyrecordgetculture-method"></a>ICorDebugMergedAssemblyRecord:: getculture — Metoda
+# <a name="icordebugmergedassemblyrecordgetculture-method"></a>ICorDebugMergedAssemblyRecord::Metoda GetCulture
 Pobiera ciąg nazwy kultury zestawu.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
 HRESULT GetCulture(  
-   [in] ULONG32 cchCulture,   
-   [out] ULONG32 *pcchCulture,   
+   [in] ULONG32 cchCulture,
+   [out] ULONG32 *pcchCulture,
    [out, size_is(cchCulture), length_is(*pcchCulture)] WCHAR szCulture[]  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `cchCulture`  
- podczas Liczba znaków w buforze `szCulture`.  
+ [w] Liczba znaków w `szCulture` buforze.  
   
  `pcchCulture`  
- określoną Liczba znaków rzeczywiście zapisywana w buforze `szCulture`.  
+ [na zewnątrz] Liczba znaków faktycznie zapisanych `szCulture` w buforze.  
   
  `szCulture`  
- określoną Tablica znaków, która zawiera nazwę kultury.  
+ [na zewnątrz] Tablica znaków zawierająca nazwę kultury.  
   
 ## <a name="remarks"></a>Uwagi  
- Nazwa kultury jest unikatowym ciągiem, który identyfikuje kulturę, na przykład "en-US" (dla kultury angielskiej (Stany Zjednoczone)) lub "neutralną" (dla kultury neutralnej).  
+ Nazwa kultury jest unikatowy ciąg, który identyfikuje kultury, takich jak "en-US" (dla kultury angielski (Stany Zjednoczone) lub "neutralny" (dla kultury neutralnej).  
   
 > [!NOTE]
-> Ta metoda jest dostępna tylko z .NET Native.  
+> Ta metoda jest dostępna tylko w przypadku platformy .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug. idl, CorDebug. h  
+ **Nagłówek:** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids. lib  
+ **Biblioteka:** CorGuids.lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [ICorDebugMergedAssemblyRecord, interfejs](icordebugmergedassemblyrecord-interface.md)
-- [Debugowanie, interfejsy](debugging-interfaces.md)
+- [Debugowanie — Interfejsy](debugging-interfaces.md)

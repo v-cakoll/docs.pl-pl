@@ -1,5 +1,5 @@
 ---
-title: 'Samouczek: korzystanie z klienta Windows Communication Foundation'
+title: 'Samouczek: Korzystanie z klienta programu Windows Communication Foundation'
 ms.date: 03/19/2019
 helpviewer_keywords:
 - WCF clients [WCF], using
@@ -7,34 +7,34 @@ dev_langs:
 - CSharp
 - VB
 ms.assetid: 190349fc-0573-49c7-bb85-8e316df7f31f
-ms.openlocfilehash: d0ef525db16b2b2cedeea5fa03376fb4f3489a4a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d2357c134aef8da204dcdb19d6c1fc93cfdc068c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346769"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184014"
 ---
-# <a name="tutorial-use-a-windows-communication-foundation-client"></a>Samouczek: korzystanie z klienta Windows Communication Foundation
+# <a name="tutorial-use-a-windows-communication-foundation-client"></a>Samouczek: Korzystanie z klienta programu Windows Communication Foundation
 
-W tym samouczku opisano ostatnie pięć zadań wymaganych do utworzenia aplikacji podstawowej Windows Communication Foundation (WCF). Aby zapoznać się z omówieniem samouczków, zobacz [Samouczek: Rozpoczynanie pracy z aplikacjami Windows Communication Foundation](getting-started-tutorial.md).
+W tym samouczku opisano ostatnie z pięciu zadań wymaganych do utworzenia podstawowej aplikacji Programu Windows Communication Foundation (WCF). Aby zapoznać się z omówieniem samouczków, zobacz [Samouczek: Wprowadzenie do aplikacji Programu Windows Communication Foundation](getting-started-tutorial.md).
 
-Po utworzeniu i skonfigurowaniu serwera proxy programu Windows Communication Foundation (WCF) można utworzyć wystąpienie klienta i skompilować aplikację kliencką. Następnie użyjesz go do komunikowania się z usługą WCF. 
+Po utworzeniu i skonfigurowaniu serwera proxy Windows Communication Foundation (WCF) należy utworzyć wystąpienie klienta i skompilować aplikację kliencką. Następnie można go używać do komunikowania się z usługą WCF.
 
-Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
+Niniejszy samouczek zawiera informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]
 >
 > - Dodaj kod, aby użyć klienta WCF.
 > - Przetestuj klienta WCF.
 
-## <a name="add-code-to-use-the-wcf-client"></a>Dodawanie kodu do korzystania z klienta WCF
+## <a name="add-code-to-use-the-wcf-client"></a>Dodaj kod, aby użyć klienta WCF
 
-Kod klienta wykonuje następujące czynności:
+Kod klienta wykonuje następujące kroki:
 
-- Tworzy wystąpienie klienta WCF.
+- Wystąpienia klienta WCF.
 - Wywołuje operacje usługi z wygenerowanego serwera proxy.
 - Zamyka klienta po zakończeniu wywołania operacji.
 
-Otwórz plik **program.cs** lub **Module1. vb** z projektu **GettingStartedClient** i Zastąp jego kod następującym kodem:
+Otwórz plik **Program.cs** lub **Module1.vb** z projektu **GettingStartedClient** i zastąp jego kod następującym kodem:
 
 ```csharp
 using System;
@@ -134,7 +134,7 @@ Module Module1
 End Module
 ```
 
-Zwróć uwagę na instrukcję `using` ( C#dla wizualizacji) lub `Imports` (for Visual Basic), która importuje `GettingStartedClient.ServiceReference1`. Ta instrukcja importuje kod, który program Visual Studio wygenerował z funkcją **Dodaj odwołanie do usługi** . Kod tworzy wystąpienie serwera proxy programu WCF i wywołuje każdą operację usługi, którą uwidacznia usługa Kalkulator. Następnie zamknie serwer proxy i zakończy działanie programu.
+Zwróć `using` uwagę na (dla `Imports` języka Visual C#) lub `GettingStartedClient.ServiceReference1`(dla języka Visual Basic) instrukcję importowania . Ta instrukcja importuje kod wygenerowany przez program Visual Studio za pomocą funkcji **Dodaj odwołanie do usługi.** Kod wywołuje serwer proxy WCF i wywołuje każdą z operacji usługi, które udostępnia usługa kalkulatora. Następnie zamyka serwer proxy i kończy program.
 
 ## <a name="test-the-wcf-client"></a>Testowanie klienta WCF
 
@@ -142,19 +142,19 @@ Zwróć uwagę na instrukcję `using` ( C#dla wizualizacji) lub `Imports` (for V
 
 1. Zapisz i skompiluj rozwiązanie.
 
-2. Wybierz folder **GettingStartedLib** , a następnie wybierz pozycję **Ustaw jako projekt startowy** z menu skrótów.
+2. Wybierz folder **GettingStartedLib,** a następnie z menu skrótów wybierz polecenie **Ustaw jako projekt startowy.**
 
-3. Z **projektów uruchamiania**wybierz pozycję **GettingStartedLib** z listy rozwijanej, a następnie wybierz pozycję **Uruchom** lub naciśnij klawisz **F5**.
+3. W **obszarze Projekty startowe**wybierz pozycję **GettingStartedLib** z listy rozwijanej, a następnie wybierz pozycję **Uruchom** lub naciśnij **klawisz F5**.
 
-### <a name="test-the-application-from-a-command-prompt"></a>Testowanie aplikacji z poziomu wiersza polecenia
+### <a name="test-the-application-from-a-command-prompt"></a>Testowanie aplikacji z wiersza polecenia
 
-1. Otwórz wiersz polecenia jako administrator, a następnie przejdź do katalogu rozwiązania programu Visual Studio. 
+1. Otwórz wiersz polecenia jako administrator, a następnie przejdź do katalogu rozwiązania programu Visual Studio.
 
-2. Aby uruchomić usługę: wprowadź *GettingStartedHost\bin\Debug\GettingStartedHost.exe*.
+2. Aby uruchomić usługę: wprowadź *plik GettingStartedHost\bin\Debug\GettingStartedHost.exe*.
 
-3. Aby uruchomić klienta: Otwórz inny wiersz polecenia, przejdź do katalogu rozwiązania programu Visual Studio, a następnie wprowadź *GettingStartedClient\bin\Debug\GettingStartedClient.exe*.
+3. Aby uruchomić klienta: Otwórz inny wiersz polecenia, przejdź do katalogu rozwiązania programu Visual Studio, a następnie wprowadź *plik GettingStartedClient\bin\Debug\GettingStartedClient.exe*.
 
-   *GettingStartedHost. exe* generuje następujące dane wyjściowe:
+   *Program GettingStartedHost.exe* daje następujące dane wyjściowe:
 
    ```text
    The service is ready.
@@ -170,7 +170,7 @@ Zwróć uwagę na instrukcję `using` ( C#dla wizualizacji) lub `Imports` (for V
    Return: 3.14285714285714
    ```
 
-   *GettingStartedClient. exe* generuje następujące dane wyjściowe:
+   *Program GettingStartedClient.exe* daje następujące dane wyjściowe:
 
    ```text
    Add(100,15.99) = 115.99
@@ -181,17 +181,17 @@ Zwróć uwagę na instrukcję `using` ( C#dla wizualizacji) lub `Imports` (for V
    Press <Enter> to terminate the client.
    ```
 
-## <a name="next-steps"></a>Kolejne kroki
+## <a name="next-steps"></a>Następne kroki
 
-Wszystkie zadania zostały wykonane w samouczku wprowadzenie do usługi WCF. W niniejszym samouczku zawarto informacje na temat wykonywania następujących czynności:
+Teraz ukończono wszystkie zadania w samouczku WCF wprowadzenie. W niniejszym samouczku zawarto informacje na temat wykonywania następujących czynności:
 
-Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
+Niniejszy samouczek zawiera informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]
 >
 > - Dodaj kod, aby użyć klienta WCF.
 > - Przetestuj klienta WCF.
 
-Jeśli masz problemy lub błędy w którymkolwiek z kroków, wykonaj kroki opisane w artykule dotyczącym rozwiązywania problemów, aby je rozwiązać.
+Jeśli masz problemy lub błędy w dowolnym z kroków, wykonaj kroki opisane w artykule rozwiązywania problemów, aby je naprawić.
 
 > [!div class="nextstepaction"]
-> [Rozwiązywanie problemów z samouczkami wprowadzenie do usługi WCF](troubleshooting-the-getting-started-tutorial.md)
+> [Rozwiązywanie problemów z samouczkami Wprowadzenie do WCF](troubleshooting-the-getting-started-tutorial.md)

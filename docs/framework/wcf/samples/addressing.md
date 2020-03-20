@@ -2,20 +2,20 @@
 title: Adresowanie
 ms.date: 03/30/2017
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
-ms.openlocfilehash: 2a737552ef5ea2a8e4544f9ec2c2f84b4b994a75
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 4403ac2bf8e0e5193006f6ec19b24a9bcb00bf35
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715876"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183978"
 ---
 # <a name="addressing"></a>Adresowanie
-Przykład Addressing ilustruje różne aspekty i funkcje adresów punktów końcowych. Przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md). W tym przykładzie usługa jest samodzielna. Zarówno usługa, jak i klient są aplikacjami konsolowymi. Usługa definiuje wiele punktów końcowych przy użyciu kombinacji względnych i bezwzględnych adresów punktów końcowych.  
+Przykład Adresowania pokazuje różne aspekty i funkcje adresów końcowych. Próbka jest oparta na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md). W tym przykładzie usługa jest hostowana samodzielnie. Zarówno usługa, jak i klient są aplikacjami konsoli. Usługa definiuje wiele punktów końcowych przy użyciu kombinacji względnych i bezwzględnych adresów końcowych.  
   
 > [!NOTE]
-> Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
+> Procedura konfiguracji i instrukcje kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
- Plik konfiguracji usługi określa adres podstawowy i cztery punkty końcowe. Adres podstawowy jest określany przy użyciu elementu Add, w obszarze Service/Host/baseAddresses, jak pokazano w poniższej konfiguracji przykładowej.  
+ Plik konfiguracji usługi określa adres podstawowy i cztery punkty końcowe. Adres podstawowy jest określony przy użyciu elementu add, w obszarze service/host/baseAddresses, jak pokazano w poniższej konfiguracji przykładowej.  
   
 ```xml  
 <service name="Microsoft.ServiceModel.Samples.CalculatorService"  
@@ -28,7 +28,7 @@ Przykład Addressing ilustruje różne aspekty i funkcje adresów punktów końc
 </service>  
 ```  
   
- Definicja pierwszego punktu końcowego pokazana w poniższej konfiguracji przykładowej określa adres względny, co oznacza, że adres punktu końcowego jest kombinacją adresu podstawowego i adresu względnego, zgodnie z regułami kompozycji identyfikatora URI.  
+ Pierwsza definicja punktu końcowego pokazana w poniższej przykładowej konfiguracji określa adres względny, co oznacza, że adres punktu końcowego jest kombinacją adresu bazowego i adresu względnego zgodnie z regułami składu identyfikatora URI.  
   
 ```xml
 <!-- Empty relative address specified:   
@@ -40,9 +40,9 @@ Przykład Addressing ilustruje różne aspekty i funkcje adresów punktów końc
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- W takim przypadku adres względny jest pusty (""), więc adres punktu końcowego jest taki sam jak adres podstawowy. Rzeczywisty adres punktu końcowego to `http://localhost:8000/servicemodelsamples/service`.
+ W takim przypadku adres względny jest pusty (""), więc adres punktu końcowego jest taki sam jak adres podstawowy. Rzeczywisty adres punktu `http://localhost:8000/servicemodelsamples/service`końcowego to .
   
- Druga definicja punktu końcowego określa adres względny, jak pokazano w poniższej konfiguracji przykładowej.  
+ Druga definicja punktu końcowego określa również adres względny, jak pokazano w poniższej konfiguracji przykładowej.  
   
 ```xml  
 <!-- The relative address specified: use the base address -->  
@@ -53,9 +53,9 @@ Przykład Addressing ilustruje różne aspekty i funkcje adresów punktów końc
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- Adres względny "test" jest dołączany do adresu podstawowego. Rzeczywisty adres punktu końcowego to `http://localhost:8000/servicemodelsamples/service/test`.
+ Adres względny ,,test", jest dołączany do adresu podstawowego. Rzeczywisty adres punktu `http://localhost:8000/servicemodelsamples/service/test`końcowego to .
   
- Definicja trzeciego punktu końcowego określa adres bezwzględny, jak pokazano w poniższej konfiguracji przykładowej.  
+ Trzecia definicja punktu końcowego określa adres bezwzględny, jak pokazano w poniższej konfiguracji przykładowej.  
   
 ```xml  
 <endpoint address="http://localhost:8001/hello/servicemodelsamples"  
@@ -63,9 +63,9 @@ Przykład Addressing ilustruje różne aspekty i funkcje adresów punktów końc
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- Adres podstawowy nie pełni żadnej roli w adresie. Rzeczywisty adres punktu końcowego to `http://localhost:8001/hello/servicemodelsamples`.
+ Adres podstawowy nie odgrywa żadnej roli w adresie. Rzeczywisty adres punktu `http://localhost:8001/hello/servicemodelsamples`końcowego to .
   
- Czwarty adres punktu końcowego określa adres bezwzględny i inny transport — TCP. Adres podstawowy nie pełni żadnej roli w adresie. Rzeczywisty adres punktu końcowego to `net.tcp://localhost:9000/servicemodelsamples/service`.
+ Czwarty adres punktu końcowego określa adres bezwzględny i inny transport — TCP. Adres podstawowy nie odgrywa żadnej roli w adresie. Rzeczywisty adres punktu `net.tcp://localhost:9000/servicemodelsamples/service`końcowego to .
   
 ```xml  
 <!-- The absolute address specified, different transport: -->  
@@ -79,9 +79,9 @@ Przykład Addressing ilustruje różne aspekty i funkcje adresów punktów końc
 </service>  
 ```  
   
- Klient uzyskuje dostęp tylko do jednego z czterech punktów końcowych usługi, ale wszystkie cztery są zdefiniowane w pliku konfiguracji. Po utworzeniu obiektu `CalculatorProxy` klient wybierze punkt końcowy. Zmieniając nazwę konfiguracji z `CalculatorEndpoint1` na `CalculatorEndpoint4`, można wykonać każdy z punktów końcowych.  
+ Klient uzyskuje dostęp tylko do jednego z czterech punktów końcowych usługi, ale wszystkie cztery są zdefiniowane w pliku konfiguracji. Klient wybiera punkt końcowy podczas tworzenia `CalculatorProxy` obiektu. Zmieniając nazwę konfiguracji `CalculatorEndpoint1` z `CalculatorEndpoint4`za pośrednictwem , można wykonywać każdy z punktów końcowych.  
   
- Po uruchomieniu przykładu usługa wylicza adres, nazwę powiązania i nazwę kontraktu dla każdego z punktów końcowych. Punkt końcowy wymiany metadanych (MEX) jest tylko innym punktem końcowym w perspektywie hosta ServiceHost, aby został wyświetlony na liście.  
+ Po uruchomieniu próbki usługa wylicza adres, nazwa powiązania i nazwę kontraktu dla każdego z jego punktów końcowych. Punkt końcowy wymiany metadanych (MEX) jest tylko inny punkt końcowy z punktu widzenia ServiceHost, więc pojawia się na liście.  
   
 ```console  
 Service endpoints:  
@@ -105,7 +105,7 @@ The service is ready.
 Press <ENTER> to terminate service.  
 ```  
   
- Po uruchomieniu klienta żądania operacji i odpowiedzi są wyświetlane zarówno w systemie, jak i w oknach konsoli klienta. Naciśnij klawisz ENTER w każdym oknie konsoli, aby zamknąć usługę i klienta.  
+ Po uruchomieniu klienta żądania operacji i odpowiedzi są wyświetlane w oknach konsoli usługi i klienta. Naciśnij klawisz ENTER w każdym oknie konsoli, aby zamknąć usługę i klienta.  
   
 ```console  
 Add(100,15.99) = 115.99  
@@ -116,22 +116,22 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić próbkę  
   
-1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że wykonano [procedurę jednorazowej instalacji dla przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Aby utworzyć wersję C# lub Visual Basic .NET rozwiązania, postępuj zgodnie z instrukcjami w [tworzenie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Aby uruchomić próbkę w konfiguracji z jednym lub krzyżowym komputerem, postępuj zgodnie z instrukcjami w [programie Uruchamianie przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!NOTE]
-    > Jeśli używasz programu Svcutil. exe w celu ponownego wygenerowania konfiguracji dla tego przykładu, pamiętaj, aby zmodyfikować nazwę punktu końcowego w konfiguracji klienta w celu dopasowania go do kodu klienta.  
+    > Jeśli używasz Svcutil.exe do ponownego wygenerowania konfiguracji dla tego przykładu, należy zmodyfikować nazwę punktu końcowego w konfiguracji klienta, aby dopasować kod klienta.  
   
 > [!IMPORTANT]
-> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
->   
+> Próbki mogą być już zainstalowane na komputerze. Przed kontynuowaniem sprawdź następujący (domyślny) katalog.  
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
->   
+>
+> Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) Przykłady dla platformy .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Addressing`  

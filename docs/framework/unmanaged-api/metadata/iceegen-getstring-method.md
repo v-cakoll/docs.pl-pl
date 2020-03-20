@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7cc22562-128c-440a-9147-55ff20f173d7
 topic_type:
 - apiref
-ms.openlocfilehash: e81ef33f4fb684cce29aa9afb756451b1e5db896
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ada126b41f1c634f7d8daa58480406ac26f92377
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74426168"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177903"
 ---
 # <a name="iceegengetstring-method"></a>ICeeGen::GetString — Metoda
-Pobiera ciąg przechowywany w określonym względnym adresie wirtualnym.  
+Pobiera ciąg przechowywany przy określonym względnym adresie wirtualnym.  
   
  Ta metoda jest przestarzała i nie powinna być używana.  
   
@@ -31,27 +31,27 @@ Pobiera ciąg przechowywany w określonym względnym adresie wirtualnym.
   
 ```cpp  
 HRESULT GetString (  
-    [in]  ULONG      RVA,   
+    [in]  ULONG      RVA,
     [out] LPWSTR     *lpString  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `RVA`  
- podczas Względny adres wirtualny ciągu do zwrócenia.  
+ [w] Względny adres wirtualny ciągu do zwrócenia.  
   
  `lpString`  
- określoną Zwrócony ciąg.  
+ [na zewnątrz] Zwrócony ciąg.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [ICeeGen, interfejs](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [ICeeGen — Interfejs](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

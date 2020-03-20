@@ -2,23 +2,23 @@
 title: Strumień
 ms.date: 03/30/2017
 ms.assetid: 58a3db81-20ab-4627-bf31-39d30b70b4fe
-ms.openlocfilehash: d4166ac0258001b3e4eb0b8ece0f5163863359a4
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: f22339ca298f053fa636cc37281276051c70f6d6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716660"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183322"
 ---
 # <a name="stream"></a>Strumień
-Przykład strumienia ilustruje użycie komunikacji w trybie transferu strumieniowego. Usługa udostępnia kilka operacji wysyłających i odbierających strumienie. Ten przykład jest samodzielny. Zarówno klient, jak i usługa to programy konsolowe.  
+Próbka Stream pokazuje użycie komunikacji w trybie przesyłania strumieniowego. Usługa udostępnia kilka operacji, które wysyłają i odbierają strumienie. Ten przykład jest hostowany samodzielnie. Zarówno klient, jak i usługa są programami konsolowymi.  
   
 > [!NOTE]
-> Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
+> Procedura konfiguracji i instrukcje kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
- Windows Communication Foundation (WCF) może komunikować się w dwóch trybach transferu — buforowane lub przesyłane strumieniowo. W domyślnym trybie transferu buforowanego komunikat musi zostać całkowicie dostarczony, aby odbiorca mógł go odczytać. W trybie transferu strumieniowego odbiorca może zacząć przetwarzać komunikat, zanim zostanie on całkowicie dostarczony. Tryb przesyłania strumieniowego jest przydatny, gdy przesyłane informacje są długie i mogą być przetwarzane sekwencyjnie. Tryb przesyłania strumieniowego jest również przydatny, gdy komunikat jest zbyt duży, aby był całkowicie buforowany.  
+ Windows Communication Foundation (WCF) może komunikować się w dwóch trybach transferu — buforowane lub przesyłania strumieniowego. W domyślnym buforowanym trybie transferu komunikat musi zostać całkowicie dostarczony, zanim odbiorca będzie mógł ją odczytać. W trybie przesyłania strumieniowego odbiorca może rozpocząć przetwarzanie wiadomości, zanim zostanie całkowicie dostarczona. Tryb przesyłania strumieniowego jest przydatne, gdy informacje, które są przekazywane jest długa i mogą być przetwarzane szeregowo. Tryb przesyłania strumieniowego jest również przydatne, gdy wiadomość jest zbyt duża, aby być całkowicie buforowane.  
   
 ## <a name="streaming-and-service-contracts"></a>Kontrakty przesyłania strumieniowego i usług  
- Przesyłanie strumieniowe jest brane pod uwagę podczas projektowania kontraktu usługi. Jeśli operacja odbiera lub zwraca duże ilości danych, należy rozważyć przesyłanie strumieniowe tych danych w celu uniknięcia wysokiego użycia pamięci z powodu buforowania komunikatów wejściowych lub wyjściowych. Aby przesłać strumieniowo dane, parametr, który przechowuje te dane, musi być jedynym parametrem w komunikacie. Na przykład jeśli komunikat wejściowy jest przesyłany strumieniowo, operacja musi mieć dokładnie jeden parametr wejściowy. Podobnie, jeśli wiadomość wyjściowa ma być przesyłana strumieniowo, operacja musi mieć dokładnie jeden parametr wyjściowy lub wartość zwracaną. W obu przypadkach parametr lub typ wartości zwracanej musi mieć wartość `Stream`, `Message`lub `IXmlSerializable`. Poniżej znajduje się kontrakt usługi używany w tym przykładzie przesyłania strumieniowego.  
+ Przesyłanie strumieniowe jest czymś, co należy wziąć pod uwagę podczas projektowania umowy serwisowej. Jeśli operacja odbiera lub zwraca duże ilości danych, należy rozważyć przesyłanie strumieniowe tych danych, aby uniknąć wysokiego wykorzystania pamięci z powodu buforowania komunikatów wejściowych lub wyjściowych. Aby przesyłać strumieniowo dane, parametr, który przechowuje te dane, musi być jedynym parametrem w komunikacie. Na przykład jeśli komunikat wejściowy jest ten, który ma być przesyłany strumieniowo, operacja musi mieć dokładnie jeden parametr wejściowy. Podobnie jeśli komunikat wyjściowy ma być przesyłany strumieniowo, operacja musi mieć dokładnie jeden parametr wyjściowy lub wartość zwracaną. W obu przypadkach parametr lub typ wartości zwracanej `Message`musi `IXmlSerializable`być albo `Stream`, lub . Poniżej znajduje się umowa serwisowa używana w tym przykładzie przesyłania strumieniowego.  
   
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -36,14 +36,14 @@ public interface IStreamingSample
 }  
 ```  
   
- Operacja `GetStream` otrzymuje dane wejściowe jako ciąg, który jest buforowany i zwraca `Stream`, który jest przesyłany strumieniowo. Z kolei `UploadStream` wykonuje `Stream` (przesyłane strumieniowo) i zwraca `bool` (buforowana). `EchoStream` pobiera i zwraca `Stream` i jest przykładem operacji, której przesyłanie strumieniowe i wyjściowe odbywa się jednocześnie. Na koniec `GetReversedStream` nie pobiera danych wejściowych i zwraca `Stream` (przesyłane strumieniowo).  
+ Operacja `GetStream` odbiera niektóre dane wejściowe jako ciąg, który `Stream`jest buforowany i zwraca , który jest przesyłany strumieniowo. Z drugiej `UploadStream` strony `Stream` przyjmuje (przesyłane strumieniowo) i zwraca `bool` (buforowane). `EchoStream`pobiera i `Stream` zwraca i jest przykładem operacji, której komunikaty wejściowe i wyjściowe są przesyłane strumieniowo. Na koniec `GetReversedStream` nie pobiera żadnych `Stream` danych wejściowych i zwraca (przesyłane strumieniowo).  
   
-## <a name="enabling-streamed-transfers"></a>Włączanie transferu strumieniowego  
- Zdefiniowanie kontraktów operacji, jak opisano wcześniej, zapewnia przesyłanie strumieniowe na poziomie modelu programowania. Jeśli zatrzymasz ten problem, transport nadal buforuje całą zawartość wiadomości. Aby włączyć przesyłanie strumieniowe transportu, wybierz tryb transferu dla elementu powiązania transportu. Element Binding ma właściwość `TransferMode`, która może być ustawiona na `Buffered`, `Streamed`, `StreamedRequest`lub `StreamedResponse`. Ustawienie trybu transferu na `Streamed` Włącza komunikację przesyłania strumieniowego w obu kierunkach. Ustawienie trybu transferu na `StreamedRequest` lub `StreamedResponse` Włącza komunikację przesyłania strumieniowego odpowiednio do żądania lub odpowiedzi.  
+## <a name="enabling-streamed-transfers"></a>Włączanie transferów przesyłanych strumieniowo  
+ Definiowanie kontraktów operacyjnych, jak opisano wcześniej zapewnia przesyłanie strumieniowe na poziomie modelu programowania. Jeśli zatrzymasz się tam, transport nadal buforuje całą zawartość wiadomości. Aby włączyć przesyłanie strumieniowe transportu, wybierz tryb transferu na element powiązania transportu. Element wiązania ma `TransferMode` właściwość, którą `Buffered` `Streamed`można `StreamedRequest`ustawić `StreamedResponse`na , , , lub . Ustawienie trybu transferu `Streamed` w celu umożliwiającego przesyłanie strumieniowe komunikacji w obu kierunkach. Ustawienie trybu transferu `StreamedRequest` `StreamedResponse` lub włącza komunikację strumieniową odpowiednio tylko w żądaniu lub odpowiedzi.  
   
- `basicHttpBinding` uwidacznia Właściwość `TransferMode` w powiązaniu jako `NetTcpBinding` i `NetNamedPipeBinding`. W przypadku innych transportów należy utworzyć niestandardowe powiązanie, aby ustawić tryb transferu.  
+ Udostępnia `basicHttpBinding` `TransferMode` właściwość na powiązanie, `NetTcpBinding` `NetNamedPipeBinding`podobnie jak i . W przypadku innych transportów należy utworzyć niestandardowe powiązanie, aby ustawić tryb transferu.  
   
- Poniższy kod konfiguracji z przykładu przedstawia Ustawianie właściwości `TransferMode` do przesyłania strumieniowego `basicHttpBinding` i niestandardowego powiązania HTTP:  
+ Następujący kod konfiguracji z przykładu `TransferMode` pokazuje ustawienie `basicHttpBinding` właściwości do przesyłania strumieniowego na i niestandardowe powiązanie HTTP:  
   
 ```xml  
 <!-- An example basicHttpBinding using streaming. -->  
@@ -61,12 +61,12 @@ public interface IStreamingSample
 </customBinding>  
 ```  
   
- Poza ustawieniem `transferMode` na `Streamed`, poprzedni kod konfiguracji ustawia `maxReceivedMessageSize` na 64 MB. Jako mechanizm obrony `maxReceivedMessageSize` umieszcza limit na maksymalny dozwolony rozmiar komunikatów odbieranych przez program. Domyślny `maxReceivedMessageSize` to 64 KB, który jest zwykle zbyt niski dla scenariuszy przesyłania strumieniowego.  
+ Oprócz ustawienia `transferMode` na `Streamed`, poprzedni kod konfiguracji `maxReceivedMessageSize` ustawia na 64MB. Jako mechanizm obronny `maxReceivedMessageSize` umieszcza limit maksymalnego dopuszczalnego rozmiaru wiadomości podczas odbierania. Wartość `maxReceivedMessageSize` domyślna to 64 KB, która jest zwykle zbyt niska dla scenariuszy przesyłania strumieniowego.  
   
-## <a name="processing-data-as-it-is-streamed"></a>Przetwarzanie danych przesyłanych strumieniowo  
- Operacje `GetStream`, `UploadStream` i `EchoStream` wszystkie związane z wysyłaniem danych bezpośrednio z pliku lub zapisywanie danych odebranych bezpośrednio do pliku. Jednak w niektórych przypadkach istnieje wymóg, aby wysyłać lub odbierać duże ilości danych, a także wykonywać przetwarzanie na fragmentach danych w miarę ich wysyłania lub odbierania. Jednym ze sposobów na rozwiązanie takich scenariuszy jest zapisanie niestandardowego strumienia (klasy pochodzącej od <xref:System.IO.Stream>), która przetwarza dane w trakcie ich odczytu lub zapisu. Przykładem jest operacja `GetReversedStream` i Klasa `ReverseStream`.  
+## <a name="processing-data-as-it-is-streamed"></a>Przetwarzanie danych w miarę ich przesyłania strumieniowego  
+ Operacje `GetStream`i `UploadStream` `EchoStream` wszystkie dotyczą wysyłania danych bezpośrednio z pliku lub zapisywania odebranych danych bezpośrednio do pliku. Jednak w niektórych przypadkach istnieje wymóg wysyłania lub odbierania dużych ilości danych i wykonywania niektórych przetwarzania na fragmentach danych, gdy są wysyłane lub odbierane. Jednym ze sposobów rozwiązania takich scenariuszy jest napisanie strumienia <xref:System.IO.Stream>niestandardowego (klasy, która wywodzi się z ), który przetwarza dane w miarę ich odczytu lub zapisu. Operacja `GetReversedStream` i `ReverseStream` klasa są tego przykładem.  
   
- `GetReversedStream` tworzy i zwraca nowe wystąpienie `ReverseStream`. Rzeczywiste przetwarzanie odbywa się, gdy system odczytuje z tego obiektu `ReverseStream`. Implementacja `ReverseStream.Read` odczytuje fragmenty bajtów z pliku bazowego, odwraca je, a następnie zwraca odwrócone bajty. Nie powoduje to odwrócenia całej zawartości pliku; powoduje odwrócenie jednego fragmentu bajtów w danym momencie. Jest to przykład pokazujący, jak można wykonać przetwarzanie strumienia, ponieważ zawartość jest odczytywana lub zapisywana z i do strumienia.  
+ `GetReversedStream`tworzy i zwraca nowe `ReverseStream`wystąpienie . Rzeczywiste przetwarzanie odbywa się w `ReverseStream` systemie odczytuje z tego obiektu. Implementacja `ReverseStream.Read` odczytuje fragment bajtów z pliku źródłowego, odwraca je, a następnie zwraca odwrócone bajty. Nie powoduje to odwrócenia całej zawartości pliku; odwraca jeden fragment bajtów naraz. Jest to przykład, aby pokazać, jak można wykonać przetwarzanie strumienia, jak zawartość jest odczytywany lub zapisywany z i do strumienia.  
   
 ```csharp
 class ReverseStream : Stream  
@@ -112,10 +112,10 @@ class ReverseStream : Stream
 }  
 ```  
   
-## <a name="running-the-sample"></a>Uruchamianie przykładu  
- Aby uruchomić przykład, należy najpierw skompilować usługę i klienta, postępując zgodnie z instrukcjami na końcu tego dokumentu. Następnie uruchom usługę i klienta w dwóch różnych oknach konsoli. Po uruchomieniu klienta czeka na naciśnięcie klawisza ENTER, gdy usługa jest gotowa. Klient następnie wywołuje metody `GetStream()`, `UploadStream()` i `GetReversedStream()` najpierw za pośrednictwem protokołu HTTP, a następnie za pośrednictwem protokołu TCP. Oto przykładowe dane wyjściowe usługi, a następnie przykładowe dane wyjściowe z klienta:  
+## <a name="running-the-sample"></a>Uruchamianie próbki  
+ Aby uruchomić przykład, najpierw skompiluj usługę i klienta, postępając zgodnie ze wskazówkami na końcu tego dokumentu. Następnie uruchom usługę i klienta w dwóch różnych oknach konsoli. Po uruchomieniu klienta czeka na naciśnięcie klawisza ENTER, gdy usługa jest gotowa. Następnie klient wywołuje `GetStream()`metody `UploadStream()` `GetReversedStream()` , a najpierw za pośrednictwem protokołu HTTP, a następnie za pośrednictwem protokołu TCP. Oto przykład danych wyjściowych z usługi, a następnie przykładowe dane wyjściowe z klienta:  
   
- Dane wyjściowe usługi:  
+ Wyjście usługi:  
   
 ```console  
 The streaming service is ready.  
@@ -133,7 +133,7 @@ File D:\...\uploadedfile saved
   
 ```console  
 Press <ENTER> when service is ready  
------- Using HTTP ------   
+------ Using HTTP ------
 Calling GetStream()  
 Saving to file D:\...\clientfile  
 ......................  
@@ -165,22 +165,22 @@ File D:\...\clientfile saved
 Press <ENTER> to terminate client.  
 ```  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić próbkę  
   
-1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że wykonano [procedurę jednorazowej instalacji dla przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Aby utworzyć wersję C# lub Visual Basic .NET rozwiązania, postępuj zgodnie z instrukcjami w [tworzenie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Aby uruchomić próbkę w konfiguracji z jednym lub krzyżowym komputerem, postępuj zgodnie z instrukcjami w [programie Uruchamianie przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!NOTE]
-> Jeśli używasz programu Svcutil. exe w celu ponownego wygenerowania konfiguracji dla tego przykładu, pamiętaj, aby zmodyfikować nazwę punktu końcowego w konfiguracji klienta w celu dopasowania go do kodu klienta.  
+> Jeśli używasz Svcutil.exe do ponownego wygenerowania konfiguracji dla tego przykładu, należy zmodyfikować nazwę punktu końcowego w konfiguracji klienta, aby dopasować kod klienta.  
   
 > [!IMPORTANT]
-> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
->   
+> Próbki mogą być już zainstalowane na komputerze. Przed kontynuowaniem sprawdź następujący (domyślny) katalog.  
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
->   
+>
+> Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) Przykłady dla platformy .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Stream`  

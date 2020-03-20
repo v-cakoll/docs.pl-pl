@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6c116592-134b-4ef2-a319-680e92d013aa
 topic_type:
 - apiref
-ms.openlocfilehash: c5199794098e4d83588728eeb165aee5f81fe4c4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 35e043c56977bf644efe1dd9cee1409f50cc877f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73088499"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179025"
 ---
 # <a name="icordebugarrayvaluegetdimensions-method"></a>ICorDebugArrayValue::GetDimensions — Metoda
 Pobiera liczbę elementów w każdym wymiarze tej tablicy.  
@@ -30,25 +30,25 @@ Pobiera liczbę elementów w każdym wymiarze tej tablicy.
 ```cpp  
 HRESULT GetDimensions (  
     [in] ULONG32         cdim,  
-    [out, size_is(cdim), length_is(cdim)]   
+    [out, size_is(cdim), length_is(cdim)]
         ULONG32          dims[]  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `cdim`  
- podczas Liczba wymiarów tego obiektu ICorDebugArrayValue.  
+ [w] Liczba wymiarów tego obiektu ICorDebugArrayValue.  
   
- Ta wartość jest również rozmiarem tablicy `dims`, ponieważ jej rozmiar jest równy liczbie wymiarów obiektu `ICorDebugArrayValue`.  
+ Ta wartość jest również `dims` rozmiar tablicy, ponieważ jej rozmiar jest `ICorDebugArrayValue` równy liczbie wymiarów obiektu.  
   
  `dims`  
- określoną Tablica liczb całkowitych, z których każdy określa liczbę elementów w wymiarze w tym obiekcie `ICorDebugArrayValue`.  
+ [na zewnątrz] Tablica liczb całkowitych, z których każda określa liczbę elementów `ICorDebugArrayValue` w wymiarze w tym obiekcie.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug. idl, CorDebug. h  
+ **Nagłówek:** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids. lib  
+ **Biblioteka:** CorGuids.lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -2,28 +2,28 @@
 title: Kompensacja
 ms.date: 03/30/2017
 ms.assetid: 722e9766-48d7-456c-9496-d7c5c8f0fa76
-ms.openlocfilehash: 147da26fd297d41876815cffcc70450ae905ba85
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 75c5ed2f5e5c3a93834632ce499a2c8195fbc6bb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935427"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183003"
 ---
 # <a name="compensation"></a>Kompensacja
-Kompensacja w Windows Workflow Foundation (WF) to mechanizm, za pomocą którego poprzednio ukończona czynność może zostać cofnięta lub wynagradzana (zgodnie z logiką zdefiniowaną przez aplikację) w przypadku wystąpienia kolejnego błędu. W tej sekcji opisano sposób korzystania z kompensacji w przepływach pracy.  
+Wynagrodzenie w Fundacji Przepływu Pracy systemu Windows (WF) to mechanizm, za pomocą którego wcześniej ukończona praca może zostać cofnięta lub skompensowane (zgodnie z logiką zdefiniowaną przez aplikację) po wystąpieniu kolejnej awarii. W tej sekcji opisano sposób używania kompensacji w przepływach pracy.  
   
-## <a name="compensation-vs-transactions"></a>Kompensacja a Transakcje  
- Transakcja umożliwia łączenie wielu operacji w pojedynczą jednostkę pracy. Użycie transakcji umożliwia aplikacji przerwanie (Przywracanie) wszystkich zmian wykonywanych w ramach transakcji w przypadku wystąpienia błędów występujących w ramach procesu transakcji. Jednak użycie transakcji może być nieodpowiednie, jeśli prace są długotrwałe. Na przykład aplikacja do planowania podróży jest zaimplementowana jako przepływ pracy. Kroki przepływu pracy mogą obejmować zarezerwowanie lotu, oczekiwanie na zatwierdzenie przez kierownika, a następnie zapłacenie za lot. Ten proces może potrwać wiele dni i nie jest praktyczny w przypadku czynności związanych z rezerwacją i uiszczeniem opłat za uczestnictwo w tej samej transakcji. W takim scenariuszu można użyć kompensacji w celu cofnięcia etapu rezerwacji przepływu pracy w przypadku wystąpienia błędu w dalszej części przetwarzania.  
+## <a name="compensation-vs-transactions"></a>Rekompensata a transakcje  
+ Transakcja umożliwia łączenie wielu operacji w jedną jednostkę pracy. Za pomocą transakcji daje aplikacji możliwość przerwania (wycofać) wszystkie zmiany wykonane z wewnątrz transakcji, jeśli wystąpią błędy podczas dowolnej części procesu transakcji. Jednak przy użyciu transakcji może nie być odpowiednie, jeśli praca jest długotrwała. Na przykład aplikacja planowania podróży jest implementowana jako przepływ pracy. Kroki przepływu pracy mogą polegać na rezerwacji lotu, oczekiwaniu na zatwierdzenie przez menedżera, a następnie opłaceniu lotu. Proces ten może potrwać wiele dni i nie jest praktyczne dla kroków rezerwacji i płacenia za lot do udziału w tej samej transakcji. W takim scenariuszu kompensacja może służyć do cofania kroku rezerwacji przepływu pracy, jeśli w dalszej części przetwarzania wystąpi błąd.  
   
 > [!NOTE]
-> W tym temacie omówiono odszkodowanie w przepływach pracy. Aby uzyskać więcej informacji o transakcjach w [](workflow-transactions.md) przepływach <xref:System.Activities.Statements.TransactionScope>pracy, zobacz transakcje i. Aby uzyskać więcej informacji na temat transakcji <xref:System.Transactions?displayProperty=nameWithType> , <xref:System.Transactions.Transaction?displayProperty=nameWithType>Zobacz i.  
+> W tym temacie opisano wynagrodzenie w przepływach pracy. Aby uzyskać więcej informacji o transakcjach [Transactions](workflow-transactions.md) w <xref:System.Activities.Statements.TransactionScope>przepływach pracy, zobacz Transakcje i . Aby uzyskać więcej informacji <xref:System.Transactions?displayProperty=nameWithType> o <xref:System.Transactions.Transaction?displayProperty=nameWithType>transakcjach, zobacz i .  
   
-## <a name="using-compensableactivity"></a>Korzystanie z działanie CompensableActivity  
- <xref:System.Activities.Statements.CompensableActivity>to podstawowe działanie związane z kompensacją w programie [!INCLUDE[wf1](../../../includes/wf1-md.md)]. Wszelkie działania wykonujące zadania, które mogą być wymagane do uzyskania wynagrodzenia, są umieszczane <xref:System.Activities.Statements.CompensableActivity.Body%2A> w <xref:System.Activities.Statements.CompensableActivity>. W tym przykładzie etap rezerwacji zakupu lotu jest umieszczany w <xref:System.Activities.Statements.CompensableActivity.Body%2A> <xref:System.Activities.Statements.CompensableActivity> a, a anulowanie <xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A>rezerwacji jest umieszczane w. Natychmiast po <xref:System.Activities.Statements.CompensableActivity> przeniesieniu do przepływu pracy są dwa działania, które oczekują na zatwierdzenie przez Menedżera, a następnie ukończą krok zakupu lotu. Jeśli warunek błędu powoduje, że przepływ pracy zostanie anulowany po <xref:System.Activities.Statements.CompensableActivity> pomyślnym zakończeniu, wówczas działania w ramach <xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A> programu obsługi są zaplanowane, a lot zostanie anulowany.  
+## <a name="using-compensableactivity"></a>Korzystanie z compensableActivity  
+ <xref:System.Activities.Statements.CompensableActivity>jest podstawową działalnością kompensacyjną w [!INCLUDE[wf1](../../../includes/wf1-md.md)]. Wszelkie działania, które wykonują pracę, która może wymagać rekompensaty są umieszczane w <xref:System.Activities.Statements.CompensableActivity.Body%2A> <xref:System.Activities.Statements.CompensableActivity>pliku . W tym przykładzie etap rezerwacji zakupu lotu <xref:System.Activities.Statements.CompensableActivity.Body%2A> jest <xref:System.Activities.Statements.CompensableActivity> umieszczany w a, a <xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A>anulowanie rezerwacji jest umieszczane w pliku . Natychmiast po <xref:System.Activities.Statements.CompensableActivity> w przepływie pracy są dwa działania, które czekają na zatwierdzenie menedżera, a następnie zakończyć etap zakupu lotu. Jeśli warunek błędu powoduje, że przepływ pracy <xref:System.Activities.Statements.CompensableActivity> zostanie anulowany po pomyślnym <xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A> zakończeniu, a następnie działania w programie obsługi są zaplanowane i lot jest anulowany.  
   
  [!code-csharp[CFX_CompensationExample#1](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_CompensationExample/cs/Program.cs#1)]  
   
- Poniższy przykład to przepływ pracy w języku XAML.  
+ Poniższy przykład jest przepływ pracy w XAML.  
   
 ```xaml  
 <Sequence  
@@ -45,26 +45,26 @@ Kompensacja w Windows Workflow Foundation (WF) to mechanizm, za pomocą którego
 </Sequence>  
 ```  
   
- Po wywołaniu przepływu pracy następujące dane wyjściowe są wyświetlane w konsoli programu.  
+ Po wywołaniu przepływu pracy do konsoli są wyświetlane następujące dane wyjściowe.  
   
  **ReserveFlight: Bilet jest zarezerwowany.**  
-**ManagerApproval: Odebrano zatwierdzenie przez Menedżera.**    
-**PurchaseFlight: Zakupiony bilet.**    
-**Przepływ pracy został pomyślnie ukończony ze stanem: Napis.**    
+**ManagerApproval: Otrzymano zatwierdzenie menedżera.** 
+ **PurchaseFlight: Bilet jest zakupiony.** 
+ **Przepływ pracy został pomyślnie zakończony ze stanem: Zamknięte.**
 > [!NOTE]
-> Przykładowe działania w tym temacie, takie jak `ReserveFlight` wyświetlanie ich nazwy i przeznaczenia do konsoli programu, aby ułatwić zilustrowanie kolejności, w której działania są wykonywane, gdy nastąpi kompensacja.  
+> Przykładowe działania w tym `ReserveFlight` temacie, takie jak wyświetlanie ich nazwy i celu w konsoli, aby pomóc zilustrować kolejność wykonywania działań w przypadku wystąpienia rekompensaty.  
   
 ### <a name="default-workflow-compensation"></a>Domyślna kompensacja przepływu pracy  
- Domyślnie, jeśli przepływ pracy zostanie anulowany, logika kompensacji jest uruchamiana dla wszystkich działań kompensacyjne, które zostały pomyślnie kompletne i nie zostały jeszcze potwierdzone lub wynagradzane.  
+ Domyślnie, jeśli przepływ pracy zostanie anulowany, logika kompensacji jest uruchamiana dla każdego działania wyrównawczego, które zostało pomyślnie całkowicie potwierdzone i nie zostało jeszcze potwierdzone lub zrekompensowane.  
   
 > [!NOTE]
-> Po potwierdzeniu, nie można już wywołać kompensaty dla działania. <xref:System.Activities.Statements.CompensableActivity> Proces potwierdzania został opisany w dalszej części tej sekcji.  
+> <xref:System.Activities.Statements.CompensableActivity> Po *potwierdzeniu*, rekompensata za działanie nie może być już wywoływana. Proces potwierdzenia jest opisany w dalszej części tej sekcji.  
   
- W tym przykładzie wyjątek jest zgłaszany po zarezerwacji lotu, ale przed etapem zatwierdzania przez Menedżera.  
+ W tym przykładzie wyjątek jest zgłaszany po zarezerwuje lot, ale przed krokiem zatwierdzenia menedżera.  
   
  [!code-csharp[CFX_CompensationExample#2](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_CompensationExample/cs/Program.cs#2)]  
   
- Ten przykład to przepływ pracy w języku XAML.  
+ W tym przykładzie jest przepływ pracy w języku XAML.  
   
 ```xaml  
 <Sequence  
@@ -89,21 +89,21 @@ Kompensacja w Windows Workflow Foundation (WF) to mechanizm, za pomocą którego
   
  [!code-csharp[CFX_CompensationExample#100](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_CompensationExample/cs/Program.cs#100)]  
   
- Gdy przepływ pracy jest wywoływany, wyjątek symulowanego warunku błędu jest obsługiwany przez aplikację hosta w <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>, przepływ pracy zostanie anulowany, a logika kompensacji jest wywoływana.  
+ Po wywołaniu przepływu pracy symulowany wyjątek warunku błędu jest <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>obsługiwany przez aplikację hosta w , przepływ pracy jest anulowany, a logika kompensacji jest wywoływana.  
   
  **ReserveFlight: Bilet jest zarezerwowany.**  
-**SimulatedErrorCondition: Zgłaszanie elementu ApplicationException.**    
-**Nieobsługiwany wyjątek przepływu pracy:**    
-**System. ApplicationException: Symulowany warunek błędu w przepływie pracy.**    
-**CancelFlight: Bilet został anulowany.**    
-**Przepływ pracy został pomyślnie ukończony ze stanem: Szkodliw.**    
-### <a name="cancellation-and-compensableactivity"></a>Anulowanie i działanie CompensableActivity  
- Jeśli działania w <xref:System.Activities.Statements.CompensableActivity.Body%2A> <xref:System.Activities.Statements.CompensableActivity> ramach programu nie zostały ukończone i działanie zostało anulowane <xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A> , działania w programie są wykonywane.  
+**SymulowaneErrorCondition: Throwing ApplicationException.** 
+ **Nieobsługiwał się wyjątek:**
+**System.ApplicationException: Symulowany warunek błędu w przepływie pracy.** 
+ **CancelFlight: Bilet został anulowany.** 
+ **Przepływ pracy został pomyślnie zakończony ze stanem: Anulowano.**
+### <a name="cancellation-and-compensableactivity"></a>Anulowanie i wyrównawcza aktywność  
+ Jeśli działania w <xref:System.Activities.Statements.CompensableActivity.Body%2A> a <xref:System.Activities.Statements.CompensableActivity> nie zostały zakończone, a działanie zostanie anulowane, działania w są <xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A> wykonywane.  
   
 > [!NOTE]
-> Jest <xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A> wywoływana tylko w przypadku, gdy działania <xref:System.Activities.Statements.CompensableActivity.Body%2A> z programu <xref:System.Activities.Statements.CompensableActivity> nie zostały ukończone i działanie zostało anulowane. Jest wykonywane tylko wtedy, gdy działania <xref:System.Activities.Statements.CompensableActivity.Body%2A> z programu <xref:System.Activities.Statements.CompensableActivity> zostały pomyślnie wykonane i wynagrodzenie jest następnie wywoływane dla działania. <xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A>  
+> Wywoływane <xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A> jest tylko wtedy, gdy <xref:System.Activities.Statements.CompensableActivity.Body%2A> działania <xref:System.Activities.Statements.CompensableActivity> w nie zostały zakończone, a działanie zostanie anulowane. Jest <xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A> wykonywany tylko wtedy, gdy <xref:System.Activities.Statements.CompensableActivity.Body%2A> działania <xref:System.Activities.Statements.CompensableActivity> w pomyślnie zakończone i rekompensata jest następnie wywoływana na działanie.  
   
- <xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A> Daje autorom przepływu pracy możliwość zapewnienia odpowiedniej logiki anulowania. W poniższym przykładzie wyjątek jest zgłaszany podczas wykonywania <xref:System.Activities.Statements.CompensableActivity.Body%2A>, a <xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A> następnie wywoływany.  
+ Daje <xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A> autorom przepływu pracy możliwość zapewnienia odpowiedniej logiki anulowania. W poniższym przykładzie wyjątek jest zgłaszany podczas wykonywania <xref:System.Activities.Statements.CompensableActivity.Body%2A>, a następnie <xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A> jest wywoływany.  
   
 ```csharp  
 Activity wf = new Sequence()  
@@ -114,7 +114,7 @@ Activity wf = new Sequence()
         {  
             Body = new Sequence  
             {  
-                Activities =   
+                Activities =
                 {  
                     new ChargeCreditCard(),  
                     new SimulatedErrorCondition(),  
@@ -130,7 +130,7 @@ Activity wf = new Sequence()
 };  
 ```  
   
- Ten przykład to przepływ pracy w języku XAML  
+ W tym przykładzie jest przepływ pracy w języku XAML  
   
 ```xaml  
 <Sequence  
@@ -159,21 +159,21 @@ Activity wf = new Sequence()
 </Sequence>  
 ```  
   
- Gdy przepływ pracy jest wywoływany, wyjątek symulowanego warunku błędu jest obsługiwany przez aplikację hosta w <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>, przepływ pracy zostanie anulowany, a logika <xref:System.Activities.Statements.CompensableActivity> anulowania jest wywoływana. W tym przykładzie logika kompensacji i logika anulowania mają różne cele. Jeśli zakończyło się <xref:System.Activities.Statements.CompensableActivity.Body%2A> pomyślnie, oznacza to, że opłata za kartę kredytową została naliczona i jest ona księgowana zgodnie z zapisem, dlatego należy cofnąć obie czynności. (W tym przykładzie anulowanie lotu automatycznie anuluje opłaty za kartę kredytową). Jeśli <xref:System.Activities.Statements.CompensableActivity> jednak zostanie anulowana, oznacza to, że <xref:System.Activities.Statements.CompensableActivity.Body%2A> nie została ukończona, a <xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A> więc logika musi być w stanie określić, jak najlepiej obsłużyć anulowanie. W tym przykładzie <xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A> anuluje opłaty za kartę kredytową, ale od czasu `ReserveFlight` ostatniego działania w programie <xref:System.Activities.Statements.CompensableActivity.Body%2A>nie jest podejmowana próba anulowania lotu. Ponieważ `ReserveFlight` była ostatnią aktywnością <xref:System.Activities.Statements.CompensableActivity.Body%2A>w programie, w przypadku pomyślnego wykonania <xref:System.Activities.Statements.CompensableActivity.Body%2A> operacji zostałaby ukończona i nie będzie możliwe jej anulowanie.  
+ Gdy przepływ pracy jest wywoływany, symulowany wyjątek warunku <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>błędu jest obsługiwany przez aplikację hosta w <xref:System.Activities.Statements.CompensableActivity> , przepływ pracy jest anulowany, a logika anulowania jest wywoływana. W tym przykładzie logiki wynagrodzeń i logiki anulowania mają różne cele. Jeśli <xref:System.Activities.Statements.CompensableActivity.Body%2A> ukończono pomyślnie, oznacza to, że karta kredytowa została obciążona i lot zarezerwowany, więc odszkodowanie powinno cofnąć oba kroki. (W tym przykładzie anulowanie lotu powoduje automatyczne anulowanie opłat za kartę kredytową). Jednak jeśli <xref:System.Activities.Statements.CompensableActivity> jest anulowane, oznacza <xref:System.Activities.Statements.CompensableActivity.Body%2A> to, że nie została <xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A> ukończona, a więc logika musi być w stanie określić, jak najlepiej obsługiwać anulowanie. W tym przykładzie <xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A> anuluje obciążenie kartą kredytową, ale ponieważ `ReserveFlight` była to ostatnia czynność w <xref:System.Activities.Statements.CompensableActivity.Body%2A>, nie próbuje anulować lotu. Ponieważ `ReserveFlight` była to ostatnia działalność w <xref:System.Activities.Statements.CompensableActivity.Body%2A>, <xref:System.Activities.Statements.CompensableActivity.Body%2A> gdyby została pomyślnie zakończona, to by się zakończyła i nie byłoby możliwe anulowanie.  
   
- **ChargeCreditCard: Opłata za kartę kredytową dla lotu.**  
-**SimulatedErrorCondition: Zgłaszanie elementu ApplicationException.**    
-**Nieobsługiwany wyjątek przepływu pracy:**    
-**System. ApplicationException: Symulowany warunek błędu w przepływie pracy.**    
-**CancelCreditCard: Anuluj opłaty za karty kredytowe.**    
-**Przepływ pracy został pomyślnie ukończony ze stanem: Szkodliw.**  Aby uzyskać więcej informacji na temat anulowania, zobacz [anulowania](modeling-cancellation-behavior-in-workflows.md).  
+ **ChargeCreditCard: Obciąż kartę kredytową za lot.**  
+**SymulowaneErrorCondition: Throwing ApplicationException.** 
+ **Nieobsługiwał się wyjątek:**
+**System.ApplicationException: Symulowany warunek błędu w przepływie pracy.** 
+ **CancelCreditCard: Anuluj opłaty za karty kredytowe.** 
+ **Przepływ pracy został pomyślnie zakończony ze stanem: Anulowano.**  Aby uzyskać więcej informacji na temat anulowania, zobacz [Anulowanie](modeling-cancellation-behavior-in-workflows.md).  
   
-### <a name="explicit-compensation-using-the-compensate-activity"></a>Jawne wynagrodzenie przy użyciu działania kompensacja  
- W poprzedniej sekcji podano niejawną kompensację. Niejawne kompensacje mogą być odpowiednie w przypadku prostych scenariuszy, ale jeśli jest wymagana bardziej jawna kontrola nad planowaniem <xref:System.Activities.Statements.Compensate> obsługi kompensacji, działanie może być używane. W celu zainicjowania procesu <xref:System.Activities.Statements.Compensate> kompensacji działania <xref:System.Activities.Statements.CompensationToken> należy użyć elementu <xref:System.Activities.Statements.CompensableActivity> , dla którego jest wymagana kompensacja. Działanie może służyć do inicjowania kompensaty dla wszystkich ukończonych <xref:System.Activities.Statements.CompensableActivity> , które nie zostały potwierdzone lub wynagradzane. <xref:System.Activities.Statements.Compensate> Na przykład <xref:System.Activities.Statements.Compensate> działanie może być używane <xref:System.Activities.Statements.TryCatch.Catches%2A> w sekcji <xref:System.Activities.Statements.TryCatch> działania lub w dowolnym momencie po <xref:System.Activities.Statements.CompensableActivity> zakończeniu. W tym przykładzie <xref:System.Activities.Statements.Compensate> działanie jest używane <xref:System.Activities.Statements.TryCatch.Catches%2A> w sekcji <xref:System.Activities.Statements.TryCatch> działania w celu odwrócenia akcji <xref:System.Activities.Statements.CompensableActivity>.  
+### <a name="explicit-compensation-using-the-compensate-activity"></a>Jawna kompensacja przy użyciu działania kompensacji  
+ W poprzedniej sekcji uwzględniono niejawną rekompensatę. Niejawna kompensacja może być odpowiednia dla prostych scenariuszy, ale jeśli <xref:System.Activities.Statements.Compensate> bardziej jawna kontrola jest wymagana w harmonogramie obsługi wynagrodzeń, działanie może być używane. Aby rozpocząć proces rekompensaty <xref:System.Activities.Statements.Compensate> z <xref:System.Activities.Statements.CompensationToken> działalnością, stosuje się rekompensatę, <xref:System.Activities.Statements.CompensableActivity> dla której wymagana jest rekompensata. Działanie <xref:System.Activities.Statements.Compensate> może służyć do inicjowania <xref:System.Activities.Statements.CompensableActivity> rekompensaty za wszystkie ukończone, które nie zostały potwierdzone lub zrekompensowane. Na przykład <xref:System.Activities.Statements.Compensate> działanie może być <xref:System.Activities.Statements.TryCatch.Catches%2A> używane w <xref:System.Activities.Statements.TryCatch> sekcji działania lub <xref:System.Activities.Statements.CompensableActivity> w dowolnym momencie po zakończeniu. W <xref:System.Activities.Statements.Compensate> tym przykładzie działanie jest <xref:System.Activities.Statements.TryCatch.Catches%2A> używane <xref:System.Activities.Statements.TryCatch> w sekcji działania, <xref:System.Activities.Statements.CompensableActivity>aby odwrócić akcję .  
   
  [!code-csharp[CFX_CompensationExample#3](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_CompensationExample/cs/Program.cs#3)]  
   
- Ten przykład to przepływ pracy w języku XAML.  
+ W tym przykładzie jest przepływ pracy w języku XAML.  
   
 ```xaml  
 <TryCatch  
@@ -242,18 +242,18 @@ Activity wf = new Sequence()
 </TryCatch>  
 ```  
   
- Po wywołaniu przepływu pracy następujące dane wyjściowe są wyświetlane w konsoli programu.  
+ Po wywołaniu przepływu pracy do konsoli są wyświetlane następujące dane wyjściowe.  
   
  **ReserveFlight: Bilet jest zarezerwowany.**  
-**SimulatedErrorCondition: Zgłaszanie elementu ApplicationException.**    
-**CancelFlight: Bilet został anulowany.**    
-**Przepływ pracy został pomyślnie ukończony ze stanem: Napis.**    
-### <a name="confirming-compensation"></a>Potwierdzanie kompensaty  
- Domyślnie działania kompensacyjne mogą być kompensowane w dowolnym momencie po zakończeniu. W niektórych scenariuszach może to nie być odpowiednie. W poprzednim przykładzie wynagrodzenie związane z odświadczeniem biletu zostało anulowane. Jednak po ukończeniu lotu ten krok kompensaty nie jest już ważny. Potwierdzenie działania kompensacyjne wywołuje działanie określone przez <xref:System.Activities.Statements.CompensableActivity.ConfirmationHandler%2A>. Jednym z tych możliwości jest umożliwienie wszelkim zasobom, które są niezbędne do zwolnienia wyrównania. Po potwierdzeniu działania kompensacyjne nie jest możliwe jego kompensowanie, a jeśli zostanie podjęta próba <xref:System.InvalidOperationException> , zostanie zgłoszony wyjątek. Gdy przepływ pracy zakończy się pomyślnie, wszystkie niepotwierdzone i niekompensowane działania kompensacyjne, które zostały zakończone pomyślnie, są potwierdzone w odwrotnej kolejności uzupełniania. W tym przykładzie lot jest zastrzeżony, zakupiony i zakończony, a następnie działanie kompensacyjne zostało potwierdzone. Aby potwierdzić <xref:System.Activities.Statements.CompensableActivity>, <xref:System.Activities.Statements.Confirm> Użyj <xref:System.Activities.Statements.CompensationToken> działania<xref:System.Activities.Statements.CompensableActivity> i określ, aby potwierdzić.  
+**SymulowaneErrorCondition: Throwing ApplicationException.** 
+ **CancelFlight: Bilet został anulowany.** 
+ **Przepływ pracy został pomyślnie zakończony ze stanem: Zamknięte.**
+### <a name="confirming-compensation"></a>Potwierdzenie odszkodowania  
+ Domyślnie działania podlegające kompensacji można zrekompensować w dowolnym momencie po ich zakończeniu. W niektórych scenariuszach może to nie być właściwe. W poprzednim przykładzie rekompensatą za rezerwację biletu było anulowanie rezerwacji. Jednak po zakończeniu lotu ten etap rekompensaty nie jest już ważny. Potwierdzenie działania kompensacyjnego wywołuje działanie określone <xref:System.Activities.Statements.CompensableActivity.ConfirmationHandler%2A>przez . Jednym z możliwych zastosowań jest umożliwienie wszelkich zasobów, które są niezbędne do wykonania rekompensaty, które mają zostać zwolnione. Po potwierdzenie działania kompensacyjnego nie jest możliwe, aby uzyskać rekompensatę, <xref:System.InvalidOperationException> a jeśli jest to próba wyjątek. Po pomyślnym zakończeniu przepływu pracy wszystkie nieuwarzanowane i niekompensowane działania kompensacyjne, które zakończyły się pomyślnie, są potwierdzane w odwrotnej kolejności. W tym przykładzie lot jest zarezerwowany, zakupiony i ukończony, a następnie działanie wyrównawalne zostaje potwierdzone. Aby <xref:System.Activities.Statements.CompensableActivity>potwierdzić , <xref:System.Activities.Statements.Confirm> użyj działania <xref:System.Activities.Statements.CompensationToken> i <xref:System.Activities.Statements.CompensableActivity> określ to, aby potwierdzić.  
   
  [!code-csharp[CFX_CompensationExample#4](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_CompensationExample/cs/Program.cs#4)]  
   
- Ten przykład to przepływ pracy w języku XAML.  
+ W tym przykładzie jest przepływ pracy w języku XAML.  
   
 ```xaml  
 <Sequence  
@@ -311,20 +311,20 @@ Activity wf = new Sequence()
 </Sequence>  
 ```  
   
-Po wywołaniu przepływu pracy następujące dane wyjściowe są wyświetlane w konsoli programu.  
+Po wywołaniu przepływu pracy do konsoli są wyświetlane następujące dane wyjściowe.  
   
 **ReserveFlight: Bilet jest zarezerwowany.**  
-**ManagerApproval: Odebrano zatwierdzenie przez Menedżera.**    
-**PurchaseFlight: Zakupiony bilet.**    
-**TakeFlight: Działanie lotu zostało zakończone.**    
-**ConfirmFlight: Nastąpiło przeprowadzenie lotu, bez możliwości dokonania kompensacji.**    
-**Przepływ pracy został pomyślnie ukończony ze stanem: Napis.**   
+**ManagerApproval: Otrzymano zatwierdzenie menedżera.** 
+ **PurchaseFlight: Bilet jest zakupiony.** 
+ **TakeFlight: Lot jest zakończony.** 
+ **Potwierdź Lot: Lot został wykonany, nie ma możliwości odszkodowania.** 
+ **Przepływ pracy został pomyślnie zakończony ze stanem: Zamknięte.**
 
-## <a name="nesting-compensation-activities"></a>Zagnieżdżanie działań związanych z kompensacją  
+## <a name="nesting-compensation-activities"></a>Zagnieżdżanie działań kompensacyjnych  
 
-Można umieścić w sekcji innej <xref:System.Activities.Statements.CompensableActivity>. <xref:System.Activities.Statements.CompensableActivity.Body%2A> <xref:System.Activities.Statements.CompensableActivity> Nie może być umieszczony w procedurze obsługi innej <xref:System.Activities.Statements.CompensableActivity>. <xref:System.Activities.Statements.CompensableActivity> Zadaniem nadrzędnym <xref:System.Activities.Statements.CompensableActivity> jest upewnienie się, że gdy zostanie on anulowany, potwierdzony lub wynagradzany, wszystkie podrzędne działania kompensacyjne, które zostały zakończone pomyślnie i nie zostały jeszcze potwierdzone lub kompensowane, muszą zostać potwierdzone lub kompensowane przed zakończeniem anulowania, potwierdzenia lub kompensacji elementu nadrzędnego. Jeśli nie jest to jawnie modelowane, obiekt <xref:System.Activities.Statements.CompensableActivity> nadrzędny będzie niejawnie kompensować podrzędne działania kompensacyjne, jeśli element nadrzędny otrzymał sygnał Cancel lub kompensacja. Jeśli element nadrzędny otrzymał sygnał Confirm, element nadrzędny będzie niejawnie potwierdzał podrzędne działania kompensacyjne. Jeśli logika do obsługi anulowania, potwierdzenia lub kompensacji jest jawnie modelowana w procedurze obsługi elementu nadrzędnego <xref:System.Activities.Statements.CompensableActivity>, wszelkie elementy podrzędne, które nie zostały jawnie obsłużone, zostaną niejawnie potwierdzone.  
+A <xref:System.Activities.Statements.CompensableActivity> można umieścić <xref:System.Activities.Statements.CompensableActivity.Body%2A> w sekcji <xref:System.Activities.Statements.CompensableActivity>innego . A <xref:System.Activities.Statements.CompensableActivity> nie mogą być umieszczone <xref:System.Activities.Statements.CompensableActivity>w obsłudze innego . Obowiązkiem rodzica <xref:System.Activities.Statements.CompensableActivity> jest zapewnienie, że po anulowaniu, potwierdzeniu lub wypłacie odszkodowania wszystkie czynności podlegające wyrównaniu dziecka, które zostały zakończone pomyślnie i nie zostały jeszcze potwierdzone lub zrekompensowane, muszą zostać potwierdzone lub zrekompensowane przed zakończeniem przez rodzica anulowania, potwierdzenia lub odszkodowania. Jeśli nie jest to modelowane <xref:System.Activities.Statements.CompensableActivity> jawnie nadrzędny będzie niejawnie kompensować podrzędnych compensable działań, jeśli rodzic otrzymał anuluj lub kompensować sygnał. Jeśli rodzic otrzymał sygnał potwierdzenia, rodzic niejawnie potwierdzi podrzędne działania podlegające kompensacjom. Jeśli logika do obsługi anulowania, potwierdzenia lub odszkodowania jest jawnie wzorowany w programie obsługi nadrzędnego, <xref:System.Activities.Statements.CompensableActivity>każdy element podrzędny nie jawnie obsługiwane zostaną niejawnie potwierdzone.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Activities.Statements.CompensableActivity>
 - <xref:System.Activities.Statements.Compensate>

@@ -15,22 +15,22 @@ helpviewer_keywords:
 ms.assetid: b420433c-5ebe-4986-bba1-97902e6db819
 topic_type:
 - apiref
-ms.openlocfilehash: 0c833416cca965f2655266152c5bdf5f11624d14
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: b6e26d1538cab30db66e887aee89b8fbae501bdb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76861141"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177010"
 ---
 # <a name="icorprofilerobjectenumnext-method"></a>ICorProfilerObjectEnum::Next — Metoda
-Pobiera określoną liczbę obiektów ciągłego z kolekcji sekwencyjnej obiektów, rozpoczynając od bieżącej pozycji modułu wyliczającego w sekwencji.  
+Pobiera określoną liczbę obiektów ciągłych z sekwencyjnej kolekcji obiektów, począwszy od bieżącej pozycji wyliczacza w sekwencji.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
 HRESULT Next (  
     [in] ULONG                    celt,  
-    [out, size_is(celt), length_is(*pceltFetched)]    
+    [out, size_is(celt), length_is(*pceltFetched)]
         ObjectID                  objects[],  
     [out] ULONG                   *pceltFetched  
 );  
@@ -38,23 +38,23 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parametry  
  `celt`  
- podczas Liczba obiektów do pobrania.  
+ [w] Liczba obiektów do pobrania.  
   
  `objects`  
- określoną Tablica wartości `ObjectID`, z których każdy reprezentuje pobrany obiekt.  
+ [na zewnątrz] Tablica `ObjectID` wartości, z których każda reprezentuje pobrany obiekt.  
   
  `pceltFetched`  
- określoną Wskaźnik do liczby elementów faktycznie zwracanych w tablicy `objects`.  
+ [na zewnątrz] Wskaźnik do liczby elementów faktycznie `objects` zwróconych w tablicy.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf. idl, CorProf. h  
+ **Nagłówek:** CorProf.idl, CorProf.h  
   
- **Biblioteka:** CorGuids. lib  
+ **Biblioteka:** CorGuids.lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [ICorProfilerObjectEnum, interfejs](icorprofilerobjectenum-interface.md)
+- [ICorProfilerObjectEnum — Interfejs](icorprofilerobjectenum-interface.md)

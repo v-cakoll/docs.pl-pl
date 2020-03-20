@@ -9,26 +9,26 @@ helpviewer_keywords:
 - container tags, <assemblyIdentity> element
 - assemblyIdentity element
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
-ms.openlocfilehash: 7cce12f6fb4b957d740cd590bd84851fa16a117d
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: b026dafbde796bbd8726de56b532ed6710ba2290
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252799"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154312"
 ---
-# <a name="assemblyidentity-element-for-runtime"></a>\<assemblyIdentity element > dla \<> środowiska uruchomieniowego
-Zawiera informacje identyfikacyjne zestawu.  
+# <a name="assemblyidentity-element-for-runtime"></a>\<assemblyIdentity> Element dla \<> środowiska wykonawczego
+Zawiera informacje identyfikujące o zestawie.  
   
-[ **\<> konfiguracji**](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> środowiska uruchomieniowego**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> zestawubinding**](assemblybinding-element-for-runtime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> dependentAssembly**](dependentassembly-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<assemblyIdentity >**  
+[**\<>konfiguracyjne**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<>czasu wykonywania**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<>montażowy**](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<>**](dependentassembly-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<assemblyIdentity>**  
   
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-   <assemblyIdentity    
+   <assemblyIdentity
 name="assembly name"  
 publicKeyToken="public key token"  
 culture="assembly culture"/>  
@@ -43,17 +43,17 @@ culture="assembly culture"/>
 |---------------|-----------------|  
 |`name`|Atrybut wymagany.<br /><br /> Nazwa zestawu|  
 |`culture`|Atrybut opcjonalny.<br /><br /> Ciąg określający język i kraj/region zestawu.|  
-|`publicKeyToken`|Atrybut opcjonalny.<br /><br /> Wartość szesnastkowa, która określa silną nazwę zestawu.|  
-|`processorArchitecture`|Atrybut opcjonalny.<br /><br /> Jedna z wartości "x86", "amd64", "MSIL" lub "ia64", określająca architekturę procesora dla zestawu, który zawiera kod specyficzny dla procesora. W wartościach nie jest rozróżniana wielkość liter. Jeśli atrybut jest przypisany dowolną inną wartość, cały `<assemblyIdentity>` element jest ignorowany. Zobacz <xref:System.Reflection.ProcessorArchitecture>.|  
+|`publicKeyToken`|Atrybut opcjonalny.<br /><br /> Wartość szesnastkowa określająca silną nazwę zestawu.|  
+|`processorArchitecture`|Atrybut opcjonalny.<br /><br /> Jedna z wartości "x86", "amd64", "msil" lub "ia64", określająca architekturę procesora dla zestawu zawierającego kod specyficzny dla procesora. W wartościach nie rozróżnia się wielkość liter. Jeśli atrybut jest przypisany do innych `<assemblyIdentity>` wartości, cały element jest ignorowany. Zobacz: <xref:System.Reflection.ProcessorArchitecture>.|  
   
-## <a name="processorarchitecture-attribute"></a>processorArchitecture — atrybut  
+## <a name="processorarchitecture-attribute"></a>ProcessorArchitecture Attribute processorArchitecture Attribute  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
 |`amd64`|Tylko architektura AMD x86-64.|  
-|`ia64`|Tylko architektura procesorów Intel Itanium.|  
-|`msil`|Neutralna w odniesieniu do procesora i bitów na słowo.|  
-|`x86`|32-bitowy procesor x86 — natywny lub w środowisku Windows on Windows (WOW) na platformie 64-bitowej.|  
+|`ia64`|Tylko architektura Intel Itanium.|  
+|`msil`|Neutralny w odniesieniu do procesora i bitów na słowo.|  
+|`x86`|32-bitowy procesor x86, natywny lub w środowisku Windows w systemie Windows (WOW) na platformie 64-bitowej.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -64,15 +64,15 @@ culture="assembly culture"/>
 |-------------|-----------------|  
 |`assemblyBinding`|Zawiera informacje o przekierowaniu wersji zestawu i lokalizacji zestawów.|  
 |`configuration`|Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.|  
-|`dependentAssembly`|Hermetyzuje zasady powiązań oraz lokalizację zestawu dla każdego zestawu. Użyj jednego `<dependentAssembly>` elementu dla każdego zestawu.|  
+|`dependentAssembly`|Hermetyzuje zasady powiązań oraz lokalizację zestawu dla każdego zestawu. Użyj `<dependentAssembly>` jednego elementu dla każdego złożenia.|  
 |`runtime`|Zawiera informacje dotyczące powiązania zestawu oraz wyrzucania elementów bezużytecznych.|  
   
 ## <a name="remarks"></a>Uwagi  
- **Każde\<elementy > elementu dependentAssembly** muszą mieć jeden  **\<element podrzędny assemblyIdentity >** .  
+ Każdy ** \<element>>** musi mieć jeden ** \<zestawIdentykość>** element podrzędny.  
   
- Jeśli atrybut jest obecny, element ma zastosowanie tylko do zestawu z odpowiednią architekturą procesora. `<assemblyIdentity>` `processorArchitecture` Jeśli atrybut nie istnieje, element może być stosowany do zestawu z dowolną architekturą procesora. `<assemblyIdentity>` `processorArchitecture`  
+ Jeśli `processorArchitecture` atrybut jest obecny, `<assemblyIdentity>` element ma zastosowanie tylko do zestawu z odpowiednią architekturą procesora. Jeśli `processorArchitecture` atrybut nie jest obecny, `<assemblyIdentity>` element można zastosować do zestawu z dowolnej architektury procesora.  
   
- W poniższym przykładzie przedstawiono plik konfiguracyjny dla dwóch zestawów o tej samej nazwie, który jest przeznaczony dla dwóch różnych architektur procesora, a których wersje nie zostały zachowane w synchronizacji. Gdy aplikacja jest wykonywana na platformie x86, stosuje się `<assemblyIdentity>` pierwszy element, a drugi jest ignorowany. Jeśli aplikacja jest uruchamiana na platformie innej niż x86 lub ia64, obie te wartości są ignorowane.  
+ W poniższym przykładzie przedstawiono plik konfiguracji dla dwóch zestawów o tej samej nazwie, które są przeznaczone dla dwóch różnych architektur procesora i których wersje nie zostały zachowane w synchronizacji. Gdy aplikacja jest wykonywana na platformie `<assemblyIdentity>` x86, stosuje się pierwszy element, a drugi jest ignorowany. Jeśli aplikacja jest wykonywana na platformie innej niż x86 lub ia64, oba są ignorowane.  
   
 ```xml  
 <configuration>  
@@ -83,15 +83,15 @@ culture="assembly culture"/>
                   publicKeyToken="14a739be0244c389"  
                   culture="neutral"  
                   processorArchitecture="x86" />  
-            <bindingRedirect oldVersion= "1.0.0.0"   
+            <bindingRedirect oldVersion= "1.0.0.0"
                   newVersion="1.1.0.0" />  
          </dependentAssembly>  
          <dependentAssembly>  
             <assemblyIdentity name="MyAssembly"  
                   publicKeyToken="14a739be0244c389"  
-                  culture="neutral"   
+                  culture="neutral"
                   processorArchitecture="ia64" />  
-            <bindingRedirect oldVersion="1.0.0.0"   
+            <bindingRedirect oldVersion="1.0.0.0"
                   newVersion="2.0.0.0" />  
          </dependentAssembly>  
       </assemblyBinding>  
@@ -99,10 +99,10 @@ culture="assembly culture"/>
 </configuration>  
 ```  
   
- Jeśli plik konfiguracji zawiera `<assemblyIdentity>` element `processorArchitecture` bez atrybutu i nie zawiera elementu, który jest zgodny z platformą `processorArchitecture` , element bez atrybutu jest używany.  
+ Jeśli plik konfiguracji `<assemblyIdentity>` zawiera element `processorArchitecture` bez atrybutu i nie zawiera elementu, który pasuje `processorArchitecture` do platformy, element bez atrybutu jest używany.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak podać informacje o zestawie.  
+ W poniższym przykładzie pokazano, jak podać informacje o zestawie.  
   
 ```xml  
 <configuration>  
@@ -119,7 +119,7 @@ culture="assembly culture"/>
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Schemat ustawień środowiska uruchomieniowego](index.md)
 - [Schemat pliku konfiguracji](../index.md)

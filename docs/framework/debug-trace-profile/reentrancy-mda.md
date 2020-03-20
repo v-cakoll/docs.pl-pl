@@ -13,48 +13,48 @@ helpviewer_keywords:
 - managed code, debugging
 - native debugging, MDAs
 ms.assetid: 7240c3f3-7df8-4b03-bbf1-17cdce142d45
-ms.openlocfilehash: 8f1621090079c030e3c055a417ed9bcad882bf78
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 5cbe8e843ad72785010240f3db30b1d344c80650
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217232"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181763"
 ---
 # <a name="reentrancy-mda"></a>wielobieżność MDA
-Asystent debugowania zarządzanego `reentrancy` (MDA) jest uaktywniany, gdy podejmowana jest próba przejścia z macierzystego do kodu zarządzanego w przypadkach, gdy wcześniejsze przełączenie z kodu zarządzanego na kod natywny nie było wykonywane za pośrednictwem przejścia uporządkowanego.  
+Asystent `reentrancy` debugowania zarządzanego (MDA) jest aktywowany, gdy podejmowana jest próba przejścia z kodu macierzystego do zarządzanego w przypadkach, gdy wcześniejsze przejście z kodu natywnego nie zostało wykonane za pośrednictwem uporządkowanego przejścia.  
   
 ## <a name="symptoms"></a>Objawy  
- Sterta obiektu jest uszkodzona lub występują inne poważne błędy podczas przechodzenia z kodu natywnego do zarządzanego.  
+ Sterta obiektu jest uszkodzona lub inne poważne błędy występują podczas przechodzenia z kodu macierzystego do zarządzanego.  
   
- Wątki przełączające się między kodem natywnym i zarządzanym w obu kierunkach muszą wykonywać uporządkowane przejścia. Jednak niektóre punkty rozszerzenia niskiego poziomu w systemie operacyjnym, takie jak obsługa wyjątków wektorowych, zezwalają na przełączanie z kodu zarządzanego na natywny bez wykonywania uporządkowanego przejścia.  Te przełączniki są pod kontrolą systemu operacyjnego, a nie pod kontrolą środowiska uruchomieniowego języka wspólnego (CLR).  Każdy kod natywny, który jest wykonywany w tych punktach rozszerzalności, musi unikać wywoływania kodu zarządzanego.  
+ Wątki, które przełączają się między kodem macierzystym i zarządzanym w obu kierunkach, muszą wykonać uporządkowane przejście. Jednak niektóre punkty rozszerzalności niskiego poziomu w systemie operacyjnym, takie jak program obsługi wyjątków wektorowych, umożliwiają przełączanie z kodu natywnego bez przeprowadzania uporządkowanego przejścia.  Te przełączniki są pod kontrolą systemu operacyjnego, a nie pod kontrolą wspólnego środowiska wykonawczego języka (CLR).  Każdy kod macierzysty, który wykonuje wewnątrz tych punktów rozszerzalności należy unikać wywoływania z powrotem do kodu zarządzanego.  
   
 ## <a name="cause"></a>Przyczyna  
- Punkt rozszerzalności systemu operacyjnego niskiego poziomu, taki jak program obsługi wyjątków wektorowych, został aktywowany podczas wykonywania kodu zarządzanego.  Kod aplikacji, który jest wywoływany przez ten punkt rozszerzalności, próbuje wywołać kod zarządzany.  
+ Niski poziom punktu rozszerzalności systemu operacyjnego, takich jak wektorowy program obsługi wyjątków, został aktywowany podczas wykonywania kodu zarządzanego.  Kod aplikacji, który jest wywoływany za pośrednictwem tego punktu rozszerzalności próbuje wywołać z powrotem do kodu zarządzanego.  
   
  Ten problem jest zawsze spowodowany przez kod aplikacji.  
   
 ## <a name="resolution"></a>Rozwiązanie  
- Przejrzyj ślad stosu dla wątku, który uaktywnił to MDA.  Wątek próbuje niedozwolone wywołanie w kodzie zarządzanym.  Ślad stosu powinien ujawnić kod aplikacji przy użyciu tego punktu rozszerzalności, kodu systemu operacyjnego, który zapewnia ten punkt rozszerzalności, oraz kodu zarządzanego, który został przerwany przez punkt rozszerzalności.  
+ Sprawdź ślad stosu dla wątku, który aktywował ten MDA.  Wątek próbuje nielegalnie wywołać kod zarządzany.  Ślad stosu powinien ujawnić kod aplikacji przy użyciu tego punktu rozszerzalności, kod systemu operacyjnego, który zapewnia ten punkt rozszerzalności i kod zarządzany, który został przerwany przez punkt rozszerzalności.  
   
- Na przykład zobaczysz, że element MDA został aktywowany w trakcie próby wywołania kodu zarządzanego z wewnątrz wektorowego programu obsługi wyjątków.  Na stosie zobaczysz kod obsługi wyjątków systemu operacyjnego i jakiś kod zarządzany wyzwalający wyjątek, taki jak <xref:System.DivideByZeroException> lub <xref:System.AccessViolationException>.  
+ Na przykład zostanie wyświetlony MDA aktywowany w próbie wywołania kodu zarządzanego z wewnątrz wektorowego programu obsługi wyjątków.  Na stosie zobaczysz kod obsługi wyjątków systemu operacyjnego i niektóre <xref:System.DivideByZeroException> kody <xref:System.AccessViolationException>zarządzane wyzwalające wyjątek, taki jak a lub .  
   
- W tym przykładzie poprawne rozwiązanie polega na zaimplementowaniu w całości kodu niezarządzanego programu obsługi wyjątków.  
+ W tym przykładzie prawidłowe rozwiązanie jest do zaimplementowania wektorowego obsługi wyjątków całkowicie w kodzie niezarządzanym.  
   
-## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
- To zdarzenie MDA nie ma wpływu na środowisko CLR.  
+## <a name="effect-on-the-runtime"></a>Wpływ na czas działania  
+ To MDA nie ma wpływu na CLR.  
   
 ## <a name="output"></a>Dane wyjściowe  
- Podjęto próbę wykonania niedozwolonych współużytkowania wątkowości w raportach MDA.  Sprawdź stos wątku, aby określić, dlaczego dzieje się tak i jak rozwiązać problem. Poniżej przedstawiono przykładowe dane wyjściowe.  
+ MDA informuje, że podejmowane są próby nielegalnego ponownego wejścia na boja.  Sprawdź stos wątku, aby ustalić, dlaczego tak się dzieje i jak rozwiązać problem. Poniżej przedstawiono dane wyjściowe próbki.  
   
 ```output
-Additional Information: Attempting to call into managed code without   
-transitioning out first.  Do not attempt to run managed code inside   
-low-level native extensibility points. Managed Debugging Assistant   
+Additional Information: Attempting to call into managed code without
+transitioning out first.  Do not attempt to run managed code inside
+low-level native extensibility points. Managed Debugging Assistant
 'Reentrancy' has detected a problem in 'D:\ConsoleApplication1\  
 ConsoleApplication1\bin\Debug\ConsoleApplication1.vshost.exe'.  
 ```  
   
-## <a name="configuration"></a>Konfiguracja  
+## <a name="configuration"></a>Konfigurowanie  
   
 ```xml  
 <mdaConfig>  
@@ -65,38 +65,38 @@ ConsoleApplication1\bin\Debug\ConsoleApplication1.vshost.exe'.
 ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu powoduje zgłoszenie <xref:System.AccessViolationException>.  W przypadku wersji systemu Windows, które obsługują obsługę wyjątków wektorowych, spowoduje to wywołanie zarządzanej procedury obsługi wyjątków zarządzanych.  Jeśli `reentrancy` MDA jest włączona, zdarzenie MDA zostanie aktywowane podczas próby wywołania `MyHandler` z obsłudze wyjątków wektorowego systemu operacyjnego.  
+ Poniższy przykład kodu <xref:System.AccessViolationException> powoduje, że mają być generowane.  W wersjach systemu Windows, które obsługują wektorowe obsługi wyjątków, spowoduje to, że zarządzany program obsługi wyjątków wektorowych do wywołania.  Jeśli `reentrancy` MDA jest włączona, MDA aktywuje się `MyHandler` podczas próby wywołania z systemu operacyjnego wektorowe kod obsługi wyjątków.  
   
 ```csharp
 using System;  
 public delegate int ExceptionHandler(IntPtr ptrExceptionInfo);  
   
-public class Reenter   
+public class Reenter
 {  
     public static ExceptionHandler keepAlive;  
   
-    [System.Runtime.InteropServices.DllImport("kernel32", ExactSpelling=true,   
+    [System.Runtime.InteropServices.DllImport("kernel32", ExactSpelling=true,
         CharSet=System.Runtime.InteropServices.CharSet.Auto)]  
-    public static extern IntPtr AddVectoredExceptionHandler(int bFirst,   
+    public static extern IntPtr AddVectoredExceptionHandler(int bFirst,
         ExceptionHandler handler);  
   
-    static int MyHandler(IntPtr ptrExceptionInfo)   
+    static int MyHandler(IntPtr ptrExceptionInfo)
     {  
         // EXCEPTION_CONTINUE_SEARCH  
         return 0;  
     }  
     void Run() {}  
   
-    static void Main()   
+    static void Main()
     {  
         keepAlive = new ExceptionHandler(Reenter.MyHandler);  
         IntPtr ret = AddVectoredExceptionHandler(1, keepAlive);  
-        try   
+        try
         {  
             // Dispatch on null should AV.  
-            Reenter r = null;   
+            Reenter r = null;
             r.Run();  
-        }   
+        }
         catch { }  
     }  
 }  

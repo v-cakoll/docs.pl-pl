@@ -15,61 +15,61 @@ helpviewer_keywords:
 ms.assetid: e97c97a6-6e4f-41f5-9af1-9b3cf3bdbd6b
 topic_type:
 - apiref
-ms.openlocfilehash: 743b6bed1a5d62f5214b8366b1a3c6e4ebecb98b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b8a65b0748fec0e474d8b3b5dc03473fbd716108
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441718"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177332"
 ---
 # <a name="imetadataimportenummemberrefs-method"></a>IMetaDataImport::EnumMemberRefs — Metoda
-Wylicza tokeny elementu MemberRef reprezentujące elementy członkowskie określonego typu.  
+Wylicza tokeny MemberRef reprezentujące członków określonego typu.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
 HRESULT EnumMemberRefs (  
-   [in, out] HCORENUM    *phEnum,   
-   [in]   mdToken        tkParent,   
-   [out]  mdMemberRef    rMemberRefs[],   
-   [in]   ULONG          cMax,   
+   [in, out] HCORENUM    *phEnum,
+   [in]   mdToken        tkParent,
+   [out]  mdMemberRef    rMemberRefs[],
+   [in]   ULONG          cMax,
    [out]  ULONG          *pcTokens  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [in. out] Wskaźnik do modułu wyliczającego.  
+ [w, na zewnątrz] Wskaźnik do wyliczacza.  
   
  `tkParent`  
- podczas Token TypeDef, TypeRef, MethodDef lub ModuleRef dla typu, którego składowe mają zostać wyliczone.  
+ [w] A TypeDef, TypeRef, MethodDef lub ModuleRef token dla typu, którego elementy członkowskie mają być wyliczone.  
   
  `rMemberRefs`  
- określoną Tablica służąca do przechowywania tokenów elementu MemberRef.  
+ [na zewnątrz] Tablica używana do przechowywania tokenów MemberRef.  
   
  `cMax`  
- podczas Maksymalny rozmiar tablicy `rMemberRefs`.  
+ [w] Maksymalny rozmiar `rMemberRefs` tablicy.  
   
  `pcTokens`  
- określoną Rzeczywista liczba tokenów elementu MemberRef zwrócona w `rMemberRefs`.  
+ [na zewnątrz] Rzeczywista liczba tokenów MemberRef `rMemberRefs`zwrócona w .  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMemberRefs` pomyślnie zwrócone.|  
-|`S_FALSE`|Brak tokenów elementu MemberRef do wyliczenia. W takim przypadku `pcTokens` ma wartość zero.|  
+|`S_OK`|`EnumMemberRefs`zwrócono pomyślnie.|  
+|`S_FALSE`|Nie ma żadnych tokenów MemberRef do wyliczenia. W takim `pcTokens` przypadku jest do zera.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Uwzględnione jako zasób w pliku MsCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

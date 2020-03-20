@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: zdarzenia wyzwalaczy menu dla przycisków paska narzędzi'
+title: 'Porady: zdarzenia wyzwalaczy menu dla przycisków paska narzędzi'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,26 +11,26 @@ helpviewer_keywords:
 - ToolBar control [Windows Forms], coding button click events
 - toolbars [Windows Forms], click event handlers
 ms.assetid: 98374f70-993d-4ca4-89fb-48fea6ce5b45
-ms.openlocfilehash: 381b8ba08db6ff5bb817c9c89008dacb1085ac1b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 99db077b41a59fe9263f7283b58b8c31959c7c79
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956033"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182074"
 ---
-# <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a>Instrukcje: zdarzenia wyzwalaczy menu dla przycisków paska narzędzi
+# <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a>Porady: zdarzenia wyzwalaczy menu dla przycisków paska narzędzi
 > [!NOTE]
-> Formant zastępuje i dodaje funkcję <xref:System.Windows.Forms.ToolBar> do <xref:System.Windows.Forms.ToolBar> kontrolki; jednak kontrolka jest zachowywana w celu zapewnienia zgodności z poprzednimi wersjami i w przyszłości, jeśli wybierzesz opcję. <xref:System.Windows.Forms.ToolStrip>  
+> Formant <xref:System.Windows.Forms.ToolStrip> zastępuje i dodaje funkcjonalność <xref:System.Windows.Forms.ToolBar> do formantu; jednak <xref:System.Windows.Forms.ToolBar> formant jest zachowywany zarówno dla zgodności z powrotem i przyszłego użycia, jeśli wybierzesz.  
   
- Jeśli formularz systemu Windows zawiera <xref:System.Windows.Forms.ToolBar> kontrolkę z przyciskami paska narzędzi, warto wiedzieć, który przycisk użytkownik klika.  
+ Jeśli formularz systemu <xref:System.Windows.Forms.ToolBar> Windows jest wyposażony w formant z przyciskami paska narzędzi, należy wiedzieć, który przycisk zostanie kliknięć przez użytkownika.  
   
- Na zdarzeniu <xref:System.Windows.Forms.ToolBar> formantu można <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> oszacowaćwłaściwośćklasy.<xref:System.Windows.Forms.ToolBarButtonClickEventArgs> <xref:System.Windows.Forms.ToolBar.ButtonClick> W poniższym przykładzie zostanie wyświetlone okno komunikatu z informacją o tym, który przycisk został kliknięty. Aby uzyskać szczegółowe informacje <xref:System.Windows.Forms.MessageBox>, zobacz.  
+ W <xref:System.Windows.Forms.ToolBar.ButtonClick> przypadku <xref:System.Windows.Forms.ToolBar> formantu można ocenić <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> właściwość <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> klasy. W poniższym przykładzie zostanie wyświetlone okno komunikatu wskazujące, który przycisk został kliknięty. Aby uzyskać szczegółowe informacje, zobacz <xref:System.Windows.Forms.MessageBox>.  
   
- W poniższym przykładzie przyjęto <xref:System.Windows.Forms.ToolBar> założenie, że kontrolka została dodana do formularza systemu Windows.  
+ Poniższy przykład zakłada, <xref:System.Windows.Forms.ToolBar> że formant został dodany do formularza systemu Windows.  
   
-### <a name="to-handle-the-click-event-on-a-toolbar"></a>Aby obsłużyć zdarzenie kliknięcia na pasku narzędzi  
+### <a name="to-handle-the-click-event-on-a-toolbar"></a>Aby obsłużyć zdarzenie Click na pasku narzędzi  
   
-1. W procedurze Dodaj przyciski paska narzędzi do <xref:System.Windows.Forms.ToolBar> kontrolki.  
+1. W procedurze dodaj przyciski <xref:System.Windows.Forms.ToolBar> paska narzędzi do formantu.  
   
     ```vb  
     Public Sub ToolBarConfig()  
@@ -45,13 +45,13 @@ ms.locfileid: "69956033"
     ```  
   
     ```csharp  
-    public void ToolBarConfig()   
+    public void ToolBarConfig()
     {  
        toolBar1.Buttons.Add(new ToolBarButton("One"));  
        toolBar1.Buttons.Add(new ToolBarButton("Two"));  
        toolBar1.Buttons.Add(new ToolBarButton("Three"));  
   
-       toolBar1.ButtonClick +=   
+       toolBar1.ButtonClick +=
           new ToolBarButtonClickEventHandler(this.toolBar1_ButtonClick);  
     }  
     ```  
@@ -64,13 +64,13 @@ ms.locfileid: "69956033"
           toolBar1->Buttons->Add(gcnew ToolBarButton("Two"));  
           toolBar1->Buttons->Add(gcnew ToolBarButton("Three"));  
   
-          toolBar1->ButtonClick +=   
+          toolBar1->ButtonClick +=
              gcnew ToolBarButtonClickEventHandler(this,  
              &Form1::toolBar1_ButtonClick);  
        }  
     ```  
   
-2. Dodaj program obsługi zdarzeń dla <xref:System.Windows.Forms.ToolBar> <xref:System.Windows.Forms.ToolBar.ButtonClick> zdarzenia kontrolki. Użyj instrukcji przełączania przypadku i <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> klasy, aby określić kliknięty przycisk paska narzędzi. W zależności od tego należy wyświetlić odpowiednie okno komunikatu.  
+2. Dodaj program obsługi <xref:System.Windows.Forms.ToolBar> zdarzeń dla <xref:System.Windows.Forms.ToolBar.ButtonClick> zdarzenia formantu. Użyj instrukcji przełączania spraw <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> i klasy, aby określić przycisk paska narzędzi, który został kliknięty. Na tej podstawie pokaż odpowiednie okno komunikatu.  
   
     > [!NOTE]
     > Okno komunikatu jest używane wyłącznie jako symbol zastępczy w tym przykładzie. Możesz dodać inny kod do wykonania po kliknięciu przycisków paska narzędzi.  
@@ -134,9 +134,9 @@ ms.locfileid: "69956033"
        }  
     ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Windows.Forms.ToolBar>
-- [Instrukcje: Dodawanie przycisków do kontrolki paska narzędzi](how-to-add-buttons-to-a-toolbar-control.md)
-- [Instrukcje: Zdefiniuj ikonę dla przycisku paska narzędzi](how-to-define-an-icon-for-a-toolbar-button.md)
-- [ToolBar, kontrolka](toolbar-control-windows-forms.md)
+- [Instrukcje: dodawanie przycisków do kontrolki ToolBar](how-to-add-buttons-to-a-toolbar-control.md)
+- [Instrukcje: określanie ikony dla przycisku kontrolki ToolBar](how-to-define-an-icon-for-a-toolbar-button.md)
+- [ToolBar — Formant](toolbar-control-windows-forms.md)

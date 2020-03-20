@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Określanie elementu podrzędnego MDI Active'
+title: 'Porady: określanie elementu podrzędnego MDI Active'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,26 +11,26 @@ helpviewer_keywords:
 - MDI [Windows Forms], activating forms
 - MDI [Windows Forms], locating focus
 ms.assetid: 33880ec3-0207-4c2b-a616-ff140443cc0f
-ms.openlocfilehash: 91100b37e4cae9041479b209e40034efe376df5b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 57491faa10c182630d41565ba236d65e393929b3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946222"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182543"
 ---
-# <a name="how-to-determine-the-active-mdi-child"></a>Instrukcje: Określanie elementu podrzędnego MDI Active
-W razie potrzeby należy udostępnić polecenie, które będzie działać na formancie, który ma fokus w aktualnie aktywnym formularzu podrzędnym. Załóżmy na przykład, że chcesz skopiować zaznaczony tekst z pola tekstowego formularza podrzędnego do Schowka. Należy utworzyć procedurę, która kopiuje zaznaczony tekst do schowka przy użyciu <xref:System.Windows.Forms.Control.Click> zdarzenia menu Kopiuj w standardowym menu edycji.  
+# <a name="how-to-determine-the-active-mdi-child"></a>Porady: określanie elementu podrzędnego MDI Active
+Czasami należy podać polecenie, które działa na formancie, który koncentruje się na aktualnie aktywnym formularzu podrzędnym. Załóżmy na przykład, że chcesz skopiować zaznaczony tekst z pola tekstowego formularza podrzędnego do Schowka. Należy utworzyć procedurę kopiuje zaznaczony tekst do <xref:System.Windows.Forms.Control.Click> Schowka przy użyciu zdarzenia elementu menu Kopiuj w standardowym menu Edycja.  
   
- Ponieważ aplikacja MDI może mieć wiele wystąpień tego samego formularza podrzędnego, procedura musi wiedzieć, którego formularza użyć. Aby określić poprawną formę, użyj <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> właściwości, która zwraca formularz podrzędny, który ma fokus lub który był ostatnio aktywny.  
+ Ponieważ aplikacja MDI może mieć wiele wystąpień tego samego formularza podrzędnego, procedura musi wiedzieć, który formularz do użycia. Aby określić poprawny <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> formularz, należy użyć właściwości, która zwraca formularz podrzędny, który ma fokus lub który był ostatnio aktywny.  
   
- Jeśli masz kilka kontrolek w formularzu, musisz również określić, który formant jest aktywny. Podobnie jak <xref:System.Windows.Forms.ContainerControl.ActiveControl%2A> właściwość, właściwość zwraca formant z fokusem na aktywnym formularzu podrzędnym. <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> Poniższa procedura ilustruje procedurę kopiowania, którą można wywołać z menu formularza podrzędnego, menu w formularzu MDI lub przycisk paska narzędzi.  
+ Jeśli masz kilka formantów w formularzu, należy również określić, który formant jest aktywny. Podobnie <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> jak <xref:System.Windows.Forms.ContainerControl.ActiveControl%2A> właściwość, właściwość zwraca formant z fokusem na aktywnym formularzu podrzędnym. Poniższa procedura ilustruje procedurę kopiowania, którą można wywołać z menu formularza podrzędnego, menu w formularzu MDI lub przycisku paska narzędzi.  
   
-### <a name="to-determine-the-active-mdi-child-to-copy-its-text-to-the-clipboard"></a>Aby określić aktywny element podrzędny MDI (aby skopiować jego tekst do schowka)  
+### <a name="to-determine-the-active-mdi-child-to-copy-its-text-to-the-clipboard"></a>Aby określić aktywne dziecko MDI (skopiować jego tekst do Schowka)  
   
-1. W ramach metody skopiuj tekst aktywnej kontrolki aktywnego formularza podrzędnego do Schowka.  
+1. W ramach metody skopiuj tekst aktywnego formantu aktywnego formularza podrzędnego do Schowka.  
   
     > [!NOTE]
-    > W tym przykładzie założono, że istnieje formularz nadrzędny`Form1`MDI (), który ma co najmniej jeden Windows podrzędny <xref:System.Windows.Forms.RichTextBox> MDI zawierający formant. Aby uzyskać więcej informacji, zobacz [Tworzenie formularzy nadrzędnych MDI](how-to-create-mdi-parent-forms.md).  
+    > W tym przykładzie przyjęto założenie,`Form1`że istnieje formularz nadrzędny MDI <xref:System.Windows.Forms.RichTextBox> ( ), który ma co najmniej jedno podrzędne okna MDI zawierające formant. Aby uzyskać więcej informacji, zobacz [Tworzenie formularzy nadrzędnych MDI](how-to-create-mdi-parent-forms.md).  
   
     ```vb  
     Public Sub mniCopy_Click(ByVal sender As Object, _  
@@ -64,7 +64,7 @@ W razie potrzeby należy udostępnić polecenie, które będzie działać na for
        // If there is an active child form, find the active control, which  
        // in this example should be a RichTextBox.  
        if (activeChild != null)  
-       {    
+       {
           try  
           {  
              RichTextBox theBox = (RichTextBox)activeChild.ActiveControl;  
@@ -83,10 +83,10 @@ W razie potrzeby należy udostępnić polecenie, które będzie działać na for
     }  
     ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Aplikacje interfejsu wielu dokumentów (MDI)](multiple-document-interface-mdi-applications.md)
-- [Instrukcje: Tworzenie formularzy nadrzędnych MDI](how-to-create-mdi-parent-forms.md)
-- [Instrukcje: Tworzenie formularzy podrzędnych MDI](how-to-create-mdi-child-forms.md)
-- [Instrukcje: Wyślij dane do aktywnego elementu podrzędnego MDI](how-to-send-data-to-the-active-mdi-child.md)
-- [Instrukcje: Rozmieść formularze podrzędne MDI](how-to-arrange-mdi-child-forms.md)
+- [Porady: tworzenie formularzy nadrzędnych MDI](how-to-create-mdi-parent-forms.md)
+- [Porady: tworzenie formularzy podrzędnych MDI](how-to-create-mdi-child-forms.md)
+- [Instrukcje: wysyłanie danych do Active MDI Child](how-to-send-data-to-the-active-mdi-child.md)
+- [Porady: aranżowanie formularzy podrzędnych MDI](how-to-arrange-mdi-child-forms.md)

@@ -15,41 +15,41 @@ helpviewer_keywords:
 ms.assetid: bd6ccde5-d578-48d8-abed-b474fbd48d13
 topic_type:
 - apiref
-ms.openlocfilehash: 49023424c21fced1c49b16ecdbea93c654b5e883
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 97f0d81c389ffd0bd8a69df2ca39322d726f98bc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448383"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176633"
 ---
 # <a name="isymencunmanagedmethodgetdocumentsformethod-method"></a>ISymENCUnmanagedMethod::GetDocumentsForMethod — Metoda
-Pobiera dokumenty, w których ta metoda zawiera wiersze.  
+Pobiera dokumenty, w których ta metoda ma wiersze.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
 HRESULT GetDocumentsForMethod(  
     [in]  ULONG32  cDocs,  
-    [out] ULONG32  *pcDocs,   
+    [out] ULONG32  *pcDocs,
     [in, size_is(cDocs)] ISymUnmanagedDocument* documents[]);  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `cDocs`  
- podczas Długość buforu wskazywanego przez `pcDocs`.  
+ [w] Długość buforu wskazana `pcDocs`przez .  
   
  `pcDocs`  
- określoną Wskaźnik do `ULONG32`, który odbiera rozmiar (w znakach) bufora wymaganego do przechowywania dokumentów.  
+ [na zewnątrz] Wskaźnik do, `ULONG32` który odbiera rozmiar, w znakach, buforu wymagane do przechowywania dokumentów.  
   
  `documents`  
- podczas Bufor, który zawiera dokumenty.  
+ [w] Bufor, który zawiera dokumenty.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK, jeśli metoda się powiedzie; w przeciwnym razie kod błędu.  
+ S_OK, jeśli metoda powiedzie się; w przeciwnym razie kod błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** CorSym. idl, CorSym. h  
+ **Nagłówek:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [ISymENCUnmanagedMethod, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+- [ISymENCUnmanagedMethod — Interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

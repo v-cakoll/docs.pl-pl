@@ -1,35 +1,35 @@
 ---
-title: 'Środki zaradcze: sprawdzanie dwukropka ścieżki'
+title: 'Łagodzenie: Kontrola dwukropek ścieżki'
 ms.date: 03/30/2017
 ms.assetid: a0bb52de-d279-419d-8f23-4b12d1a3f36e
-ms.openlocfilehash: e88643fea3bd507289436f41880a2de34117884f
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: c6e1106b6f5d8457417992941b9f28712d484442
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73457898"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181244"
 ---
-# <a name="mitigation-path-colon-checks"></a>Środki zaradcze: sprawdzanie dwukropka ścieżki
-Począwszy od aplikacji odnoszących się do .NET Framework 4.6.2, wprowadzono wiele zmian do obsługi poprzednio nieobsługiwanych ścieżek (zarówno pod względem długości, jak i formatu). W szczególności sprawdza poprawność składni separatora dysku (dwukropek).  
+# <a name="mitigation-path-colon-checks"></a>Łagodzenie: Kontrola dwukropek ścieżki
+Począwszy od aplikacji, które są przeznaczone dla programu .NET Framework 4.6.2, wprowadzono szereg zmian w celu obsługi wcześniej nieobsługiwał ścieżek (zarówno pod względem długości i formatu). W szczególności, kontrole prawidłowej składni separatora dysku (dwukropek) zostały bardziej poprawne.  
   
 ## <a name="impact"></a>Wpływ  
- Te zmiany blokują niektóre ścieżki URI <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> i <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> metody, które wcześniej były obsługiwane.  
+ Te zmiany blokują niektóre <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> ścieżki <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> URI i metody wcześniej obsługiwane.  
   
-## <a name="mitigation"></a>Ograniczenie  
- Aby obejść problem z wcześniej akceptowalną ścieżką, która nie jest już obsługiwana przez <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> i <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> metody, można wykonać następujące czynności:  
+## <a name="mitigation"></a>Środki zaradcze  
+ Aby obejść problem wcześniej akceptowalnej ścieżki, która nie <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> jest <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> już obsługiwana przez metody i, można wykonać następujące czynności:  
   
-- Ręcznie usuń schemat z adresu URL. Na przykład Usuń `file://` z adresu URL.  
+- Ręcznie usuń schemat z adresu URL. Na przykład `file://` usuń z adresu URL.  
   
-- Przekaż identyfikator URI do konstruktora <xref:System.Uri> i Pobierz wartość właściwości <xref:System.Uri.LocalPath%2A?displayProperty=nameWithType>.  
+- Przekaż identyfikator URI <xref:System.Uri> do konstruktora i <xref:System.Uri.LocalPath%2A?displayProperty=nameWithType> pobrać wartość właściwości.  
   
-- Zrezygnuj z nowej normalizacji ścieżki, ustawiając przełącznik `Switch.System.IO.UseLegacyPathHandling`<xref:System.AppContext> do `true`.  
+- Zrezygnuj z normalizacji `Switch.System.IO.UseLegacyPathHandling` <xref:System.AppContext> nowej `true`ścieżki, ustawiając przełącznik na .  
   
     ```xml  
     <runtime>  
-        <AppContextSwitchOverrides value="Switch.System.IO.UseLegacyPathHandling=true" />    
+        <AppContextSwitchOverrides value="Switch.System.IO.UseLegacyPathHandling=true" />
     </runtime>  
     ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Zgodność aplikacji](application-compatibility.md)

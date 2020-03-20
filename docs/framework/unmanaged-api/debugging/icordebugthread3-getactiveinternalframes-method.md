@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: d69796b4-5b6d-457c-85f6-2cf42e8a8773
 topic_type:
 - apiref
-ms.openlocfilehash: 25cd3e05bc80dd39d2ca558bb4dd5fb77d255f5a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 680af5afa3ebef5bcaf9e34580e421dcc8093aaf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791394"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178464"
 ---
 # <a name="icordebugthread3getactiveinternalframes-method"></a>ICorDebugThread3::GetActiveInternalFrames — Metoda
-Zwraca tablicę ramek wewnętrznych ([ICorDebugInternalFrame2](icordebuginternalframe2-interface.md) obiektów) na stosie.  
+Zwraca tablicę ramek wewnętrznych[(Obiekty ICorDebugInternalFrame2)](icordebuginternalframe2-interface.md) na stosie.  
   
 ## <a name="syntax"></a>Składnia  
   
-```cpp 
+```cpp
 HRESULT GetActiveInternalFrames  
       (  
       [in] ULONG32 cInternalFrames,  
@@ -39,44 +39,44 @@ HRESULT GetActiveInternalFrames
   
 ## <a name="parameters"></a>Parametry  
  `cInternalFrames`  
- podczas Liczba wewnętrznych ramek oczekiwanych w `ppInternalFrames`.  
+ [w] Liczba ramek wewnętrznych oczekiwanych w pliku `ppInternalFrames`.  
   
  `pcInternalFrames`  
- określoną Wskaźnik do `ULONG32`, który zawiera liczbę ramek wewnętrznych na stosie.  
+ [na zewnątrz] Wskaźnik do, `ULONG32` który zawiera liczbę klatek wewnętrznych na stosie.  
   
  `ppInternalFrames`  
- [in. out] Wskaźnik do adresu tablicy ramek wewnętrznych na stosie.  
+ [w, na zewnątrz] Wskaźnik do adresu tablicy ramek wewnętrznych na stosie.  
   
-## <a name="return-value"></a>Wartość zwrócona  
- Ta metoda zwraca następujące określone wartości HRESULT oraz błędy HRESULT wskazujące niepowodzenie metody.  
+## <a name="return-value"></a>Wartość zwracana  
+ Ta metoda zwraca następujące specyficzne HRESULTs, a także błędy HRESULT, które wskazują na niepowodzenie metody.  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
 |S_OK|Obiekt [ICorDebugInternalFrame2](icordebuginternalframe2-interface.md) został pomyślnie utworzony.|  
-|E_INVALIDARG|`cInternalFrames` nie jest zerem i `ppInternalFrames` jest `null`lub `pcInternalFrames` jest `null`.|  
-|HRESULT_FROM_WIN32 (ERROR_INSUFFICIENT_BUFFER)|`ppInternalFrames` jest mniejsza niż liczba ramek wewnętrznych.|  
+|E_invalidarg|`cInternalFrames`nie jest `ppInternalFrames` zerowa `pcInternalFrames` i `null`jest `null`, lub jest .|  
+|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|`ppInternalFrames`jest mniejsza niż liczba klatek wewnętrznych.|  
   
 ## <a name="exceptions"></a>Wyjątki  
   
 ## <a name="remarks"></a>Uwagi  
- Ramki wewnętrzne to struktury danych wypychane na stosie przez środowisko uruchomieniowe do przechowywania danych tymczasowych.  
+ Ramki wewnętrzne są struktury danych wypchnięte do stosu przez środowisko wykonawcze do przechowywania danych tymczasowych.  
   
- Podczas pierwszego wywołania `GetActiveInternalFrames`należy ustawić parametr `cInternalFrames` na 0 (zero), a parametr `ppInternalFrames` na wartość null. Gdy `GetActiveInternalFrames` pierwsze zwraca, `pcInternalFrames` zawiera liczbę ramek wewnętrznych na stosie.  
+ Podczas pierwszego `GetActiveInternalFrames`wywołania należy `cInternalFrames` ustawić parametr na 0 `ppInternalFrames` (zero), a parametr na wartość null. Po `GetActiveInternalFrames` pierwszym `pcInternalFrames` zwraca, zawiera liczbę ramek wewnętrznych na stosie.  
   
- `GetActiveInternalFrames` powinna następnie być wywoływana po raz drugi. Należy przekazać poprawną liczbę (`pcInternalFrames`) w parametrze `cInternalFrames` i określić wskaźnik do odpowiedniej wielkości tablicy w `ppInternalFrames`.  
+ `GetActiveInternalFrames`następnie należy nazwać po raz drugi. Należy przekazać właściwą`pcInternalFrames`liczbę ( `cInternalFrames` ) w parametrze i określić `ppInternalFrames`wskaźnik do tablicy o odpowiednim rozmiarze w .  
   
- Użyj metody [ICorDebugStackWalk:: GetFrame](icordebugthread3-getactiveinternalframes-method.md) , aby zwrócić rzeczywiste ramki stosu.  
+ Użyj [metody ICorDebugStackWalk::GetFrame,](icordebugthread3-getactiveinternalframes-method.md) aby zwrócić rzeczywiste ramki stosu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug. idl, CorDebug. h  
+ **Nagłówek:** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids. lib  
+ **Biblioteka:** CorGuids.lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Debugowanie, interfejsy](debugging-interfaces.md)
-- [Debugowanie](index.md)
+- [Debugowanie — Interfejsy](debugging-interfaces.md)
+- [Debugging](index.md)

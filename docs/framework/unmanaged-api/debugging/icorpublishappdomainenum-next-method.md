@@ -15,22 +15,22 @@ helpviewer_keywords:
 ms.assetid: ad37cd10-0339-4d08-9b0e-4b3428bb4dc3
 topic_type:
 - apiref
-ms.openlocfilehash: c8866e98be0dd064138acdf5e0f6fb9c339fb3d2
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 6f7f400c51ded0b98c0c2286cb6f90bbd77e47d7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790647"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178399"
 ---
 # <a name="icorpublishappdomainenumnext-method"></a>ICorPublishAppDomainEnum::Next — Metoda
-Pobiera określoną liczbę domen aplikacji, które aktualnie istnieją w procesie, rozpoczynając od bieżącego położenia.  
+Pobiera określoną liczbę domen aplikacji, które obecnie istnieją w procesie, począwszy od bieżącej pozycji.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
 HRESULT Next (  
     [in] ULONG  celt,  
-    [out, size_is(celt), length_is(*pceltFetched)]   
+    [out, size_is(celt), length_is(*pceltFetched)]
         ICorPublishAppDomain **objects,  
     [out] ULONG *pceltFetched  
 );  
@@ -38,23 +38,23 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parametry  
  `celt`  
- podczas Liczba elementów, które mają zostać pobrane.  
+ [w] Liczba elementów do pobrania.  
   
  `objects`  
- określoną Wskaźnik do tablicy pobranych obiektów [ICorPublishAppDomain](icorpublishappdomain-interface.md) , z których każdy reprezentuje domenę aplikacji.  
+ [na zewnątrz] Wskaźnik do tablicy pobranych obiektów [ICorPublishAppDomain,](icorpublishappdomain-interface.md) z których każdy reprezentuje domenę aplikacji.  
   
  `pceltFetched`  
- określoną Wskaźnik na liczbę domen aplikacji, które faktycznie zostały zwrócone. Ta wartość może być równa null, jeśli `celt`.  
+ [na zewnątrz] Wskaźnik do liczby domen aplikacji faktycznie zwrócone. Ta wartość może `celt` być null, jeśli jest jednym.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorPub. idl, CorPub. h  
+ **Nagłówek:** CorPub.idl, CorPub.h  
   
- **Biblioteka:** CorGuids. lib  
+ **Biblioteka:** CorGuids.lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [ICorPublishAppDomainEnum, interfejs](icorpublishappdomainenum-interface.md)
+- [ICorPublishAppDomainEnum — Interfejs](icorpublishappdomainenum-interface.md)

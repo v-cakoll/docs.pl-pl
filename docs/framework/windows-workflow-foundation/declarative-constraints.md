@@ -2,23 +2,23 @@
 title: Ograniczenia deklaratywne
 ms.date: 03/30/2017
 ms.assetid: 67001ed1-7f4d-4ada-ae57-a31176901a53
-ms.openlocfilehash: e3ced8f6f88d698273ace5c8b74fe90b94fa9720
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 321021e3d73daecae07268f33807c992414a7b4c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945824"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182961"
 ---
 # <a name="declarative-constraints"></a>Ograniczenia deklaratywne
-Ograniczenia deklaratywne udostępnia zaawansowane metody sprawdzania poprawności działania i jej relacji z innymi działaniami. Ograniczenia są skonfigurowane do działania podczas procesu tworzenia, ale można również określić dodatkowe ograniczenia przez hosta przepływu pracy. Ten temat zawiera omówienie sposobu użycia ograniczenia deklaratywne, aby zapewnić działanie sprawdzania poprawności.  
+Ograniczenia deklaratywne zapewniają zaawansowana metoda sprawdzania poprawności dla działania i jego relacji z innymi działaniami. Ograniczenia są konfigurowane dla działania podczas procesu tworzenia, ale dodatkowe ograniczenia mogą być również określone przez hosta przepływu pracy. Ten temat zawiera omówienie przy użyciu ograniczeń deklaratywnych, aby zapewnić sprawdzanie poprawności działania.  
   
-## <a name="using-declarative-constraints"></a>Za pomocą ograniczenia deklaratywne  
- Ograniczenie to działanie, które zawiera logikę weryfikacji. To działanie ograniczenia można tworzyć w kodzie lub w XAML. Po utworzeniu działania ograniczenie autorzy działanie, dodaj to ograniczenie było <xref:System.Activities.Activity.Constraints%2A> właściwość działania, aby zweryfikować, lub używają ograniczenie do udostępnienia dodatkowej weryfikacji za pomocą <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> właściwość <xref:System.Activities.Validation.ValidationSettings> wystąpienia . Logikę weryfikacji może składać się z prostych operacji sprawdzania poprawności, takich jak sprawdzanie poprawności metadanych działania, ale może również przeprowadzać weryfikacji, który uwzględnia relacji bieżące działanie do jego działania nadrzędnego, elementy podrzędne i tego samego poziomu. Ograniczenia są tworzone za pomocą <xref:System.Activities.Validation.Constraint%601> działanie i kilku działań dodatkowe sprawdzenie poprawności są udostępniane na potrzeby tworzenia błędy i ostrzeżenia walidacji i podaj informacje o powiązanych działań w przepływie pracy.  
+## <a name="using-declarative-constraints"></a>Korzystanie z ograniczeń deklaratywnych  
+ Ograniczenie jest działaniem zawierającym logikę sprawdzania poprawności. To działanie ograniczenia można tworzyć w kodzie lub w języku XAML. Po utworzeniu działania ograniczenia autorzy działań <xref:System.Activities.Activity.Constraints%2A> dodają to ograniczenie do właściwości działania w celu sprawdzenia <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> poprawności lub <xref:System.Activities.Validation.ValidationSettings> używają ograniczenia, aby zapewnić dodatkową weryfikację przy użyciu właściwości wystąpienia. Logika sprawdzania poprawności może składać się z prostych sprawdzania poprawności, takich jak sprawdzanie poprawności metadanych działania, ale może również wykonywać sprawdzanie poprawności, która uwzględnia relację bieżącego działania z jego działaniami nadrzędnymi, podrzędnymi i równorzędnymi. Ograniczenia są tworzene <xref:System.Activities.Validation.Constraint%601> przy użyciu działania, a kilka dodatkowych działań sprawdzania poprawności są dostarczane w celu pomocy w tworzeniu błędów sprawdzania poprawności i ostrzeżenia i dostarczyć informacji o powiązanych działań w przepływie pracy.  
   
 ### <a name="assertvalidation-and-addvalidationerror"></a>AssertValidation i AddValidationError  
- <xref:System.Activities.Validation.AssertValidation> Działanie ocenia wyrażenie odwołuje się jego <xref:System.Activities.Validation.AssertValidation.Assertion%2A> właściwości, a jeśli wyrażenie ma `false`, błąd sprawdzania poprawności lub ostrzeżenie zostanie dodany do <xref:System.Activities.Validation.ValidationResults>. <xref:System.Activities.Validation.AssertValidation.Message%2A> Właściwość opisuje błąd sprawdzania poprawności i <xref:System.Activities.Validation.AssertValidation.IsWarning%2A> właściwość wskazuje, czy błąd sprawdzania poprawności jest błąd lub ostrzeżenie. Wartością domyślną dla <xref:System.Activities.Validation.AssertValidation.IsWarning%2A> jest `false`.  
+ Działanie <xref:System.Activities.Validation.AssertValidation> ocenia wyrażenie, do którego <xref:System.Activities.Validation.AssertValidation.Assertion%2A> odwołuje się jego właściwość, a jeśli wyrażenie ocenia `false` <xref:System.Activities.Validation.ValidationResults>, błąd sprawdzania poprawności lub ostrzeżenie jest dodawany do . Właściwość <xref:System.Activities.Validation.AssertValidation.Message%2A> opisuje błąd sprawdzania <xref:System.Activities.Validation.AssertValidation.IsWarning%2A> poprawności i właściwość wskazuje, czy błąd sprawdzania poprawności jest błąd lub ostrzeżenie. Wartością domyślną `false`jest <xref:System.Activities.Validation.AssertValidation.IsWarning%2A> .  
   
- W poniższym przykładzie zadeklarowano ograniczenie zwraca ostrzeżeń dotyczących weryfikacji, jeśli <xref:System.Activities.Activity.DisplayName%2A> działania sprawdzania poprawności jest dwóch znaków lub mniej znaków. Parametr typu ogólnego, umożliwiający <xref:System.Activities.Validation.Constraint%601> Określa typ działania, którego poprawność jest sprawdzana przez ograniczenie. To ograniczenie używa <xref:System.Activities.Activity> jako ogólnego typu i może służyć do sprawdzania poprawności wszystkich typów działań.  
+ W poniższym przykładzie jest zadeklarowane ograniczenie, <xref:System.Activities.Activity.DisplayName%2A> które zwraca ostrzeżenie sprawdzania poprawności, jeśli działanie jest sprawdzane jest dwa znaki lub mniej długości. Parametr typu ogólnego <xref:System.Activities.Validation.Constraint%601> używany dla określa typ działania, który jest sprawdzany przez ograniczenie. To ograniczenie <xref:System.Activities.Activity> używa jako typ ogólny i może służyć do sprawdzania poprawności wszystkich typów działań.  
   
 ```csharp  
 public static Constraint ActivityDisplayNameIsNotSetWarning()  
@@ -41,7 +41,7 @@ public static Constraint ActivityDisplayNameIsNotSetWarning()
 }  
 ```  
   
- Aby określić, to ograniczenie dla działania, jest ona dodawana do <xref:System.Activities.Activity.Constraints%2A> działań, jak pokazano w poniższym przykładowym kodzie.  
+ Aby określić to ograniczenie dla działania, <xref:System.Activities.Activity.Constraints%2A> jest dodawany do działania, jak pokazano w poniższym przykładowym kodzie.  
   
 ```csharp  
 public sealed class SampleActivity : CodeActivity  
@@ -55,15 +55,15 @@ public sealed class SampleActivity : CodeActivity
 }  
 ```  
   
- Hosta można również określić tego ograniczenia dotyczące działań w przepływie pracy przy użyciu <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>, które zostało omówione w następnej sekcji.  
+ Host może również określić to ograniczenie dla działań w przepływie pracy przy użyciu <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>programu , który jest omówiony w następnej sekcji.  
   
- <xref:System.Activities.Validation.AddValidationError> Działania jest używany do generowania błąd sprawdzania poprawności lub ostrzeżenie bez wyniku obliczenia wyrażenia. Jego właściwości są podobne do <xref:System.Activities.Validation.AssertValidation> i może służyć w połączeniu z działań sterowania przepływem ograniczenia takich jak <xref:System.Activities.Statements.If> działania.
+ Działanie <xref:System.Activities.Validation.AddValidationError> jest używane do generowania błędu sprawdzania poprawności lub ostrzeżenia bez konieczności oceny wyrażenia. Jego właściwości są <xref:System.Activities.Validation.AssertValidation> podobne do i może być używany w połączeniu z <xref:System.Activities.Statements.If> działaniami kontroli przepływu ograniczenia, takich jak działanie.
   
 ### <a name="workflow-relationship-activities"></a>Działania relacji przepływu pracy
 
-Dostępnych jest kilka działań sprawdzania poprawności, podaj informacje o innych działań w przepływie pracy w odniesieniu do działania sprawdzania poprawności. <xref:System.Activities.Validation.GetParentChain> Zwraca kolekcję działań, która zawiera wszystkie działania od bieżącej aktywności i działania głównego. <xref:System.Activities.Validation.GetChildSubtree> zawiera kolekcję działań, która zawiera działania podrzędne we wzorcu cyklicznego i <xref:System.Activities.Validation.GetWorkflowTree> pobiera wszystkie działania w przepływie pracy.  
+Dostępnych jest kilka działań sprawdzania poprawności, które zawierają informacje o innych działaniach w przepływie pracy w odniesieniu do sprawdzane działanie. <xref:System.Activities.Validation.GetParentChain>zwraca kolekcję działań, która zawiera wszystkie działania między bieżącym działaniem a działaniem głównym. <xref:System.Activities.Validation.GetChildSubtree>zawiera zbiór działań, który zawiera działania podrzędne w wzorzec cykliczny i <xref:System.Activities.Validation.GetWorkflowTree> pobiera wszystkie działania w przepływie pracy.  
   
-W poniższym przykładzie `CreateState` działania jest zdefiniowana. `CreateState` Działania muszą być zawarte w obrębie `CreateCountry` działania i `GetParent` metoda zwraca ograniczenie, które wymusza to wymaganie. `GetParent` używa <xref:System.Activities.Validation.GetParentChain> działania w połączeniu z <xref:System.Activities.Statements.ForEach%601> działanie, aby sprawdzić działania nadrzędnego `CreateState` działanie, aby określić, jeśli to wymaganie można spełnić.  
+W poniższym przykładzie zdefiniowano `CreateState` działanie. Działanie `CreateState` musi być zawarte `CreateCountry` w działaniu, a `GetParent` metoda zwraca ograniczenie, które wymusza to wymaganie. `GetParent`używa <xref:System.Activities.Validation.GetParentChain> działania w połączeniu <xref:System.Activities.Statements.ForEach%601> z działaniem do sprawdzania `CreateState` działań nadrzędnych działania działania w celu ustalenia, czy wymóg jest spełniony.  
   
 ```csharp  
 public sealed class CreateState : CodeActivity  
@@ -71,58 +71,58 @@ public sealed class CreateState : CodeActivity
     public CreateState()  
     {  
         base.Constraints.Add(CheckParent());  
-        this.Cities = new List<Activity>();              
+        this.Cities = new List<Activity>();
     }  
   
     public List<Activity> Cities { get; set; }  
   
-    public string Name { get; set; }    
+    public string Name { get; set; }
   
     static Constraint CheckParent()  
     {  
         DelegateInArgument<CreateState> element = new DelegateInArgument<CreateState>();  
-        DelegateInArgument<ValidationContext> context = new DelegateInArgument<ValidationContext>();                          
+        DelegateInArgument<ValidationContext> context = new DelegateInArgument<ValidationContext>();
         Variable<bool> result = new Variable<bool>();  
         DelegateInArgument<Activity> parent = new DelegateInArgument<Activity>();  
   
         return new Constraint<CreateState>  
-        {                                     
+        {
             Body = new ActivityAction<CreateState,ValidationContext>  
-            {                      
+            {
                 Argument1 = element,  
                 Argument2 = context,  
                 Handler = new Sequence  
                 {  
                     Variables =  
                     {  
-                        result   
+                        result
                     },  
                     Activities =  
                     {  
                         new ForEach<Activity>  
-                        {                                  
+                        {
                             Values = new GetParentChain  
                             {  
-                                ValidationContext = context                                      
+                                ValidationContext = context
                             },  
                             Body = new ActivityAction<Activity>  
-                            {     
-                                Argument = parent,   
+                            {
+                                Argument = parent,
                                 Handler = new If()  
-                                {                                            
-                                    Condition = new InArgument<bool>((env) => object.Equals(parent.Get(env).GetType(),typeof(CreateCountry))),                                          
+                                {
+                                    Condition = new InArgument<bool>((env) => object.Equals(parent.Get(env).GetType(),typeof(CreateCountry))),
                                     Then = new Assign<bool>  
                                     {  
                                         Value = true,  
                                         To = result  
                                     }  
                                 }  
-                            }                                  
+                            }
                         },  
                         new AssertValidation  
                         {  
                             Assertion = new InArgument<bool>(result),  
-                            Message = new InArgument<string> ("CreateState has to be inside a CreateCountry activity"),                                                                  
+                            Message = new InArgument<string> ("CreateState has to be inside a CreateCountry activity"),
                         }  
                     }  
                 }  
@@ -138,7 +138,7 @@ public sealed class CreateState : CodeActivity
 ```
   
 ## <a name="additional-constraints"></a>Dodatkowe ograniczenia  
- Autorzy hosta przepływu pracy można określić dodatkowe sprawdzenie poprawności ograniczenia dotyczące działań w przepływie pracy, tworząc ograniczeń i dodanie ich do <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> słownik <xref:System.Activities.Validation.ValidationSettings> wystąpienia. Każdy element na <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> zawiera typ aktywności dla ograniczenia stosowane oraz listę dodatkowych ograniczeń dla tego typu działania. Podczas sprawdzania poprawności dla przepływu pracy, każde działanie określonego typu, w tym klasy pochodne, daje w wyniku ograniczenia. W tym przykładzie `ActivityDisplayNameIsNotSetWarning` ograniczenie z poprzedniej sekcji jest stosowane do wszystkich działań w przepływie pracy.  
+ Autorzy hosta przepływu pracy mogą określić dodatkowe ograniczenia sprawdzania poprawności dla działań <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> w przepływie pracy, tworząc ograniczenia i dodając je do słownika <xref:System.Activities.Validation.ValidationSettings> wystąpienia. Każdy element <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> w zawiera typ działania, dla którego ograniczenia mają zastosowanie i listę dodatkowych ograniczeń dla tego typu działania. Gdy sprawdzanie poprawności jest wywoływane dla przepływu pracy, każde działanie określonego typu, w tym klasy pochodne, ocenia ograniczenia. W tym przykładzie `ActivityDisplayNameIsNotSetWarning` ograniczenie z poprzedniej sekcji jest stosowane do wszystkich działań w przepływie pracy.  
   
 ```csharp  
 Activity wf = new Sequence  
@@ -151,7 +151,7 @@ ValidationSettings settings = new ValidationSettings()
   
     AdditionalConstraints =  
     {  
-        {typeof(Activity), new List<Constraint> {ActivityDisplayNameIsNotSetWarning()}},       
+        {typeof(Activity), new List<Constraint> {ActivityDisplayNameIsNotSetWarning()}},
     }  
 };  
   
@@ -176,4 +176,4 @@ else
 }  
 ```  
   
- Jeśli <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> właściwość <xref:System.Activities.Validation.ValidationSettings> jest `true`, a następnie określone dodatkowe ograniczenia są oceniane podczas sprawdzania poprawności, wywołując <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. Może to być przydatne w przypadku sprawdzanie przepływów pracy na potrzeby sprawdzania poprawności określonej konfiguracji. Należy jednak pamiętać, że podczas wywoływania przepływu pracy logikę weryfikacji skonfigurowany w przepływie pracy jest obliczane i musi pomyślnie przejść dla przepływu pracy rozpocząć pomyślnie. Aby uzyskać więcej informacji na temat wywoływania sprawdzania poprawności, zobacz [wywoływanie walidacji działania](invoking-activity-validation.md).
+ Jeśli <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> właściwość <xref:System.Activities.Validation.ValidationSettings> `true`jest , to tylko określone dodatkowe ograniczenia są oceniane <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>podczas sprawdzania poprawności jest wywoływana przez wywołanie . Może to być przydatne do sprawdzania przepływów pracy dla określonych konfiguracji sprawdzania poprawności. Należy jednak zauważyć, że po wywołaniu przepływu pracy logika sprawdzania poprawności skonfigurowana w przepływie pracy jest oceniana i musi przebiegać, aby przepływ pracy został pomyślnie rozpocznieny. Aby uzyskać więcej informacji na temat wywoływania sprawdzania poprawności, zobacz [Wywoływanie sprawdzania poprawności działania](invoking-activity-validation.md).

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e00fd477-4f49-43d3-bd0e-3094824b1136
 topic_type:
 - apiref
-ms.openlocfilehash: 11b1072b3467f7d0a3f223fbc2151ec9ccf461ad
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 6484832e8e737b9a0d0b3eaf3ede4078729f7a4a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790801"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178438"
 ---
 # <a name="icoreclrdebugtargetenumprocesses-method"></a>ICoreClrDebugTarget::EnumProcesses — Metoda
 Wylicza procesy, które są uruchomione na komputerze zdalnym.  
@@ -31,40 +31,40 @@ Wylicza procesy, które są uruchomione na komputerze zdalnym.
   
 ```cpp  
 HRESULT EnumProcesses (  
-       [out]  DWORD*                  pcProcs,   
+       [out]  DWORD*                  pcProcs,
        [out]  CoreClrDebugProcInfo**  ppProcs  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `pcProcs`  
- określoną Liczba procesów zwróconych w `ppProcs`. Ta wartość może być równa 0 (zero).  
+ [na zewnątrz] Liczba procesów zwróconych w `ppProcs`pliku . Ta wartość może wynosić 0 (zero).  
   
  `ppProcs`  
- określoną Tablica struktur [CoreClrDebugProcInfo —](coreclrdebugprocinfo-structure.md) , które reprezentują procesy uruchomione na komputerze zdalnym.  
+ [na zewnątrz] Tablica [struktur CoreClrDebugProcInfo,](coreclrdebugprocinfo-structure.md) które reprezentują procesy uruchomione na komputerze zdalnym.  
   
-## <a name="return-value"></a>Wartość zwrócona  
+## <a name="return-value"></a>Wartość zwracana  
  S_OK  
- Prawnego.  
+ Powodzenie.  
   
- E_OUTOFMEMORY  
- Nie można przydzielić wystarczającej ilości pamięci dla `ppProcs`.  
+ E_outofmemory  
+ Nie można przydzielić `ppProcs`wystarczającej ilości pamięci dla pliku .  
   
- E_FAIL (lub inne kody powrotne E_)  
- Inne błędy.  
+ E_FAIL (lub inne E_ kody zwrotne)  
+ Inne awarie.  
   
 ## <a name="remarks"></a>Uwagi  
- Aby zwolnić pamięć, która została przypisana przez tę metodę, wywołaj metodę [ICoreClrDebugTarget:: freememory —](icoreclrdebugtarget-freememory-method.md) .  
+ Aby zwolnić pamięć, która została przydzielona przez tę metodę, wywołaj [metodę ICoreClrDebugTarget::FreeMemory.](icoreclrdebugtarget-freememory-method.md)  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CoreClrRemoteDebuggingInterfaces. h  
+ **Nagłówek:** CoreClrRemoteDebuggingInterfaces.h  
   
- **Library:** mscordbi_macx86.dll  
+ **Biblioteka:** mscordbi_macx86.dll  
   
- **.NET Framework wersje:** 3,5 SP1  
+ **Wersje .NET Framework:** 3.5 SP1  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [ICoreClrDebugTarget, interfejs](icoreclrdebugtarget-interface.md)

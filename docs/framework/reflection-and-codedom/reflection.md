@@ -1,5 +1,5 @@
 ---
-title: Odbicie w programie .NET
+title: Odbicie w .NET
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET], reflection
@@ -21,69 +21,69 @@ helpviewer_keywords:
 - discovering type information at run time
 - type system, reflection
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
-ms.openlocfilehash: 42944d8267d2e99fd9eb1a2cb28c0c81d3e9af75
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 90d9cf4c473d73d1eeeb5f2a1098f8626c20359f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744570"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180473"
 ---
-# <a name="reflection-in-net"></a>Odbicie w programie .NET
+# <a name="reflection-in-net"></a>Odbicie w .NET
 
-Klasy w przestrzeni nazw <xref:System.Reflection>, w połączeniu z <xref:System.Type?displayProperty=nameWithType>, umożliwiają uzyskanie informacji o załadowanych [zestawach](../../standard/assembly/index.md) i typach zdefiniowanych w nich, takich jak [klasy](../../standard/base-types/common-type-system.md#classes), [interfejsy](../../standard/base-types/common-type-system.md#interfaces)i typy wartości (czyli [struktury](../../standard/base-types/common-type-system.md#structures) i [wyliczenia](../../standard/base-types/common-type-system.md#enumerations)). Można również użyć odbicia do tworzenia wystąpień typów w czasie wykonywania oraz do wywoływania i uzyskiwania dostępu do nich. Aby zapoznać się z tematami dotyczącymi konkretnych aspektów odbicia, zobacz [Tematy pokrewne](#related_topics) na końcu tego omówienia.
+Klasy w <xref:System.Reflection> obszarze nazw, <xref:System.Type?displayProperty=nameWithType>wraz z , umożliwiają uzyskanie informacji o załadowanych [zestawach](../../standard/assembly/index.md) i typów zdefiniowanych w nich, takich jak [klasy,](../../standard/base-types/common-type-system.md#classes) [interfejsy](../../standard/base-types/common-type-system.md#interfaces)i typy wartości (czyli struktury i [wyliczenia](../../standard/base-types/common-type-system.md#enumerations)). [structures](../../standard/base-types/common-type-system.md#structures) Można również użyć odbicia do tworzenia wystąpień typu w czasie wykonywania i do wywoływania i uzyskiwania do nich dostępu. Aby zapoznać się z tematami dotyczącymi określonych aspektów refleksji, zobacz [Tematy pokrewne](#related_topics) na końcu tego przeglądu.
   
-Moduł ładujący [środowiska uruchomieniowego języka wspólnego](../../standard/clr.md) zarządza [domenami aplikacji](../app-domains/application-domains.md), które stanowią zdefiniowane granice wokół obiektów, które mają ten sam zakres aplikacji. Zarządzanie obejmuje ładowanie każdego zestawu do odpowiedniej domeny aplikacji i sterowanie układem pamięci hierarchii typów w ramach każdego zestawu.  
+Program ładujący [środowiska wykonawczego języka wspólnego](../../standard/clr.md) zarządza [domenami aplikacji,](../app-domains/application-domains.md)które stanowią zdefiniowane granice wokół obiektów, które mają ten sam zakres aplikacji. To zarządzanie obejmuje ładowanie każdego zestawu do odpowiedniej domeny aplikacji i kontrolowanie układu pamięci hierarchii typów w każdym zestawie.  
   
-[Zestawy](../app-domains/index.md) zawierają moduły, moduły zawierają typy, a typy zawierają elementy członkowskie. Odbicie zawiera obiekty, które hermetyzują zestawy, moduły i typy. Możesz użyć odbicia, aby dynamicznie utworzyć wystąpienie typu, powiązać typ z istniejącym obiektem lub uzyskać typ z istniejącego obiektu. Następnie można wywołać metody typu lub uzyskać dostęp do jego pól i właściwości. Typowe zastosowania odbicia obejmują następujące elementy:  
+[Zestawy](../app-domains/index.md) zawierają moduły, moduły zawierają typy, a typy zawierają elementy członkowskie. Odbicie zapewnia obiekty, które hermetyzują złożenia, moduły i typy. Odbicie służy do dynamicznego tworzenia wystąpienia typu, powiązania typu z istniejącym obiektem lub uzyskania typu z istniejącego obiektu. Następnie można wywołać metody typu lub uzyskać dostęp do jego pól i właściwości. Typowe zastosowania odbicia są następujące:  
   
-- Użyj <xref:System.Reflection.Assembly>, aby definiować i ładować zestawy, ładować moduły, które są wymienione w manifeście zestawu, i zlokalizować typ z tego zestawu i utworzyć wystąpienie.  
+- Służy <xref:System.Reflection.Assembly> do definiowania i ładowania złożeń, ładowania modułów wymienionych w manifeście złożenia i lokalizowania typu z tego złożenia i tworzenia jego wystąpienia.  
   
-- Użyj <xref:System.Reflection.Module>, aby odnaleźć informacje takie jak zestaw, który zawiera moduł i klasy w module. Można również uzyskać wszystkie metody globalne lub inne określone, nieglobalne metody zdefiniowane w module.  
+- Służy <xref:System.Reflection.Module> do odnajdywać informacje, takie jak zestaw, który zawiera moduł i klas w module. Można również uzyskać wszystkie metody globalne lub inne specyficzne, nieglobalne metody zdefiniowane w module.  
   
-- Użyj <xref:System.Reflection.ConstructorInfo>, aby odnaleźć informacje takie jak nazwa, parametry, Modyfikatory dostępu (takie jak `public` lub `private`) i szczegóły implementacji (takie jak `abstract` lub `virtual`) konstruktora. Użyj metody <xref:System.Type.GetConstructors%2A> lub <xref:System.Type.GetConstructor%2A> <xref:System.Type>, aby wywołać określony Konstruktor.  
+- Służy <xref:System.Reflection.ConstructorInfo> do odnajdowania informacji, takich jak `public` nazwa, parametry, modyfikatory dostępu (takie jak lub `private`) i szczegóły implementacji (takie jak `abstract` lub) `virtual`konstruktora. Użyj <xref:System.Type.GetConstructors%2A> lub <xref:System.Type.GetConstructor%2A> metody <xref:System.Type> a wywołać określonego konstruktora.  
   
-- Użyj <xref:System.Reflection.MethodInfo>, aby odnaleźć informacje takie jak nazwa, zwracany typ, parametry, Modyfikatory dostępu (takie jak `public` lub `private`) i szczegóły implementacji (takie jak `abstract` lub `virtual`) metody. Użyj metody <xref:System.Type.GetMethods%2A> lub <xref:System.Type.GetMethod%2A> <xref:System.Type>, aby wywołać określoną metodę.  
+- Służy <xref:System.Reflection.MethodInfo> do odnajdowania informacji, takich jak nazwa, `public` typ `private`zwracany, parametry, `abstract` `virtual`modyfikatory dostępu (takie jak lub ) i szczegóły implementacji (takie jak lub) metody. Użyj <xref:System.Type.GetMethods%2A> lub <xref:System.Type.GetMethod%2A> metody <xref:System.Type> a wywołać określoną metodę.  
   
-- Użyj <xref:System.Reflection.FieldInfo>, aby odnaleźć informacje takie jak nazwa, Modyfikatory dostępu (takie jak `public` lub `private`) i szczegóły implementacji (takie jak `static`) pola, i pobrać lub ustawić wartości pól.  
+- Służy <xref:System.Reflection.FieldInfo> do odnajdywać informacje, takie `public` `private`jak nazwa, modyfikatory dostępu (takie jak lub) i szczegóły implementacji (takie jak) `static`pola oraz uzyskać lub ustawić wartości pól.  
   
-- Użyj <xref:System.Reflection.EventInfo>, aby odnaleźć informacje takie jak nazwa, typ danych programu obsługi zdarzeń, atrybuty niestandardowe, typ deklarujący i typ odbicia zdarzenia oraz dodać lub usunąć programy obsługi zdarzeń.  
+- Służy <xref:System.Reflection.EventInfo> do odnajdowania informacji, takich jak nazwa, typ danych obsługi zdarzeń, atrybuty niestandardowe, deklarowanie typu i odzwierciedlenie typu zdarzenia oraz do dodawania lub usuwania programów obsługi zdarzeń.  
   
-- Użyj <xref:System.Reflection.PropertyInfo>, aby odnaleźć informacje takie jak nazwa, typ danych, typ deklarujący, typ odbicia i stan tylko do odczytu lub do zapisu właściwości, a także pobrać lub ustawić wartości właściwości.  
+- Służy <xref:System.Reflection.PropertyInfo> do odnajdowania informacji, takich jak nazwa, typ danych, deklarowanie typu, typ odzwierciedlenie i tylko do odczytu lub zapisywalny stan właściwości, a także do uzyskania lub ustawiania wartości właściwości.  
   
-- Użyj <xref:System.Reflection.ParameterInfo>, aby odnaleźć informacje takie jak nazwa parametru, typ danych, czy parametr jest parametrem wejściowym lub wyjściowym, oraz pozycją parametru w podpisie metody.  
+- Służy <xref:System.Reflection.ParameterInfo> do odnajdowania informacji, takich jak nazwa parametru, typ danych, czy parametr jest parametrem wejściowym lub wyjściowym oraz położenie parametru w podpisie metody.  
   
-- Użyj <xref:System.Reflection.CustomAttributeData>, aby odnaleźć informacje o atrybutach niestandardowych podczas pracy w kontekście tylko odbicia w domenie aplikacji. <xref:System.Reflection.CustomAttributeData> umożliwia badanie atrybutów bez tworzenia wystąpień.  
+- Służy <xref:System.Reflection.CustomAttributeData> do odnajdywać informacje o atrybutach niestandardowych podczas pracy w kontekście tylko do odbicia domeny aplikacji. <xref:System.Reflection.CustomAttributeData>umożliwia badanie atrybutów bez tworzenia ich wystąpień.  
   
-Klasy przestrzeni nazw <xref:System.Reflection.Emit> zapewniają wyspecjalizowaną postać odbicia, która umożliwia kompilowanie typów w czasie wykonywania.  
+Klasy obszaru <xref:System.Reflection.Emit> nazw zapewniają wyspecjalizowaną formę odbicia, która umożliwia tworzenie typów w czasie wykonywania.  
   
-Odbicie może również służyć do tworzenia aplikacji nazywanych przeglądarkami typu, które umożliwiają użytkownikom wybieranie typów, a następnie wyświetlanie informacji o tych typach.  
+Odbicie może być również używane do tworzenia aplikacji o nazwie przeglądarki typów, które umożliwiają użytkownikom wybieranie typów, a następnie wyświetlanie informacji o tych typach.  
   
-Istnieją inne zastosowania do odbicia. Kompilatory dla języków takich jak JScript używają odbicia do konstruowania tabel symboli. Klasy w przestrzeni nazw <xref:System.Runtime.Serialization> używają odbicia, aby uzyskiwać dostęp do danych i określać, które pola mają być utrwalane. Klasy w przestrzeni nazw <xref:System.Runtime.Remoting> używają odbicia pośrednio przy użyciu serializacji.  
+Istnieją inne zastosowania do refleksji. Kompilatory dla języków, takich jak JScript używać odbicia do konstruowania tabel symboli. Klasy w <xref:System.Runtime.Serialization> obszarze nazw używają odbicia, aby uzyskać dostęp do danych i określić, które pola mają być zachowywane. Klasy w <xref:System.Runtime.Remoting> obszarze nazw używać odbicia pośrednio poprzez serializacji.  
   
 ## <a name="runtime-types-in-reflection"></a>Typy środowiska uruchomieniowego w odbiciu  
-Odbicie zawiera klasy, takie jak <xref:System.Type> i <xref:System.Reflection.MethodInfo>, do reprezentowania typów, elementów członkowskich, parametrów i innych jednostek kodu. Jednak w przypadku używania odbicia nie można bezpośrednio korzystać z tych klas, z których większość jest abstrakcyjna (`MustInherit` w Visual Basic). Zamiast tego pracujesz z typami dostarczanymi przez środowisko uruchomieniowe języka wspólnego (CLR).  
+Odbicie zapewnia klasy, takie jak <xref:System.Type> i <xref:System.Reflection.MethodInfo>, do reprezentowania typów, elementów członkowskich, parametrów i innych jednostek kodu. Jednak podczas korzystania z odbicia, nie działają bezpośrednio z tych klas,`MustInherit` z których większość jest abstrakcyjna (w języku Visual Basic). Zamiast tego pracujesz z typami dostarczonymi przez środowisko uruchomieniowe języka wspólnego (CLR).  
   
-Na przykład, gdy używasz operatora C# `typeof` (`GetType` w Visual Basic) do uzyskania obiektu <xref:System.Type>, obiekt jest w rzeczywistości `RuntimeType`. `RuntimeType` pochodzi od <xref:System.Type> i udostępnia implementacje wszystkich metod abstrakcyjnych.  
+Na przykład podczas korzystania z `typeof` operatora`GetType` C# (w <xref:System.Type> języku Visual Basic) `RuntimeType`w celu uzyskania obiektu, obiekt jest naprawdę . `RuntimeType`pochodzi z <xref:System.Type> i zapewnia implementacje wszystkich metod abstrakcyjnych.  
   
-Te klasy środowiska uruchomieniowego są `internal` (`Friend` w Visual Basic). Nie są one udokumentowane niezależnie od ich klas bazowych, ponieważ ich zachowanie zostało opisane w dokumentacji klasy bazowej.  
+Te klasy środowiska `internal` `Friend` uruchomieniowego są ( w języku Visual Basic). Nie są one udokumentowane oddzielnie od ich klas podstawowych, ponieważ ich zachowanie jest opisane przez dokumentację klasy podstawowej.  
   
-<a name="related_topics"></a>   
+<a name="related_topics"></a>
 
 ## <a name="related-topics"></a>Tematy pokrewne  
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Wyświetlanie informacji o typie](viewing-type-information.md)|Opisuje klasę <xref:System.Type> i zawiera przykłady kodu, które ilustrują sposób użycia <xref:System.Type> z kilkoma klasami odbicia w celu uzyskania informacji na temat konstruktorów, metod, pól, właściwości i zdarzeń.|  
-|[Odbicie i typy ogólne](reflection-and-generic-types.md)|Wyjaśnia, jak odbicie obsługuje parametry typu i argumenty typu rodzajowego i metod ogólnych.|  
-|[Zagadnienia dotyczące zabezpieczeń dla odbicia](security-considerations-for-reflection.md)|Opisuje reguły, które określają, w jakim stopniu odbicie może być używane do wykrywania informacji o typie i typów dostępu.|  
-|[Dynamiczne ładowanie i używanie typów](dynamically-loading-and-using-types.md)|Opisuje interfejs powiązania niestandardowego odbicia obsługujący późne wiązanie.|  
-|[Instrukcje: ładowanie zestawów do kontekstu Reflection-Only](how-to-load-assemblies-into-the-reflection-only-context.md)|Opisuje kontekst ładowania tylko odbicie. Pokazuje, jak załadować zestaw, jak przetestować kontekst i jak sprawdzać atrybuty zastosowane do zestawu w kontekście tylko odbicie.|  
-|[Uzyskiwanie dostępu do atrybutów niestandardowych](accessing-custom-attributes.md)|Demonstruje użycie odbicia w celu uzyskania atrybutu i jego wartości.|  
-|[Określanie w pełni kwalifikowanych nazw typów](specifying-fully-qualified-type-names.md)|Opisuje format w pełni kwalifikowanych nazw typów w warunkach Naura (BNF) i składni wymaganej do określenia znaków specjalnych, nazw zestawów, wskaźników, odwołań i tablic.|  
-|[Instrukcje: podłączanie delegata za pomocą odbicia](how-to-hook-up-a-delegate-using-reflection.md)|Wyjaśnia, jak utworzyć delegata dla metody i podłączyć delegata do zdarzenia. Wyjaśnia, jak utworzyć metodę obsługi zdarzeń w czasie wykonywania przy użyciu <xref:System.Reflection.Emit.DynamicMethod>.|  
-|[Emitowanie dynamicznych metod i zestawów](emitting-dynamic-methods-and-assemblies.md)|Wyjaśnia, jak generować dynamiczne zestawy i metody dynamiczne.|  
+|[Wyświetlanie informacji o typie](viewing-type-information.md)|W <xref:System.Type> tym artykule opisano klasę i zawiera <xref:System.Type> przykłady kodu, które ilustrują, jak używać z kilkoma klasami odbicia w celu uzyskania informacji o konstruktorach, metodach, polach, właściwościach i zdarzeniach.|  
+|[Odbicie i typy ogólne](reflection-and-generic-types.md)|Wyjaśniono, jak odbicie obsługuje parametry typu i argumenty typu typów ogólnych i metod ogólnych.|  
+|[Zagadnienia dotyczące zabezpieczeń dla odbicia](security-considerations-for-reflection.md)|W tym artykule opisano reguły, które określają, w jakim stopniu odbicie może służyć do odnajdowania informacji o typie i typów dostępu.|  
+|[Dynamiczne ładowanie i używanie typów](dynamically-loading-and-using-types.md)|W tym artykule opisano interfejs niestandardowego powiązania odbicia, który obsługuje późne powiązanie.|  
+|[Porady: ładowanie zestawów do kontekstu Reflection-Only](how-to-load-assemblies-into-the-reflection-only-context.md)|Opisuje kontekst ładowania tylko do odbicia. Pokazuje, jak załadować zestaw, jak przetestować kontekst i jak sprawdzić atrybuty zastosowane do zestawu w kontekście tylko do odbicia.|  
+|[Uzyskiwanie dostępu do atrybutów niestandardowych](accessing-custom-attributes.md)|Pokazuje za pomocą odbicia do kwerendy atrybut istnienia i wartości.|  
+|[Określanie w pełni kwalifikowanych nazw typów](specifying-fully-qualified-type-names.md)|Opisuje format w pełni kwalifikowanych nazw typów w postaci formularza Backus-Naur (BNF) oraz składnię wymaganą do określania znaków specjalnych, nazw zestawów, wskaźników, odwołań i tablic.|  
+|[Porady: podłączanie delegata za pomocą odbicia](how-to-hook-up-a-delegate-using-reflection.md)|Wyjaśniono, jak utworzyć pełnomocnika dla metody i podłączyć pełnomocnika do zdarzenia. W tym artykule wyjaśniono, jak <xref:System.Reflection.Emit.DynamicMethod>utworzyć metodę obsługi zdarzeń w czasie wykonywania przy użyciu programu .|  
+|[Emitowanie dynamicznych metod i zestawów](emitting-dynamic-methods-and-assemblies.md)|Wyjaśniono, jak generować zestawy dynamiczne i metody dynamiczne.|  
   
-## <a name="reference"></a>Tematy pomocy  
+## <a name="reference"></a>Dokumentacja  
 
 <xref:System.Type?displayProperty=nameWithType>  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: kopiowanie pikseli w celu zmniejszenia migotania'
+title: 'Jak: Kopiowanie pikseli w celu zmniejszenia migotania'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,22 +13,22 @@ helpviewer_keywords:
 - flicker
 - bit-block transfer
 ms.assetid: 33b76910-13a3-4521-be98-5c097341ae3b
-ms.openlocfilehash: 299041e7038d5bd5b9824d668b3f47d842030ac7
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: a25295532d7123d92bcacc6828d3e8cfcc839d6e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746484"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182590"
 ---
 # <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>Porady: kopiowanie pikseli w celi zmniejszenia migotania w formularzach systemu Windows
-W przypadku animowania prostej grafiki użytkownicy mogą czasami napotkać migotanie lub inne niepożądane efekty wizualne. Jednym ze sposobów ograniczenia tego problemu jest użycie w grafice procesu "BitBlt". BitBlt to "bit-Block transfer" danych koloru z prostokąta początkowego pikseli do docelowego prostokąta pikseli.  
+Podczas animowania prostej grafiki użytkownicy mogą czasami napotkać migotanie lub inne niepożądane efekty wizualne. Jednym ze sposobów ograniczenia tego problemu jest użycie procesu "bitblt" na grafice. Bitblt jest "bit-block transfer" danych kolorów z prostokąta pochodzenia pikseli do prostokąta docelowego pikseli.  
   
- W Windows Forms BitBlt jest realizowana przy użyciu metody <xref:System.Drawing.Graphics.CopyFromScreen%2A> klasy <xref:System.Drawing.Graphics>. W parametrach metody należy określić źródło i miejsce docelowe (jako punkty), rozmiar obszaru, który ma zostać skopiowany, oraz obiekt graficzny używany do rysowania nowego kształtu.  
+ W formularzu Windows Form bitblt <xref:System.Drawing.Graphics.CopyFromScreen%2A> jest <xref:System.Drawing.Graphics> realizowany przy użyciu metody klasy. W parametrach metody należy określić źródło i miejsce docelowe (jako punkty), rozmiar obszaru, który ma zostać skopiowany, oraz obiekt graficzny używany do rysowania nowego kształtu.  
   
- W poniższym przykładzie kształt jest rysowany w formularzu w jego obsłudze zdarzeń <xref:System.Windows.Forms.Control.Paint>. Następnie do duplikowania kształtu zostanie użyta metoda <xref:System.Drawing.Graphics.CopyFromScreen%2A>.  
+ W poniższym przykładzie kształt jest rysowany <xref:System.Windows.Forms.Control.Paint> na formularzu w jego programie obsługi zdarzeń. Następnie <xref:System.Drawing.Graphics.CopyFromScreen%2A> metoda jest używana do duplikowania kształtu.  
   
 > [!NOTE]
-> Ustawienie właściwości <xref:System.Windows.Forms.Control.DoubleBuffered%2A> formularza na `true` spowoduje, że kod oparty na grafice w zdarzeniu <xref:System.Windows.Forms.Control.Paint> będzie dwukrotnie buforowany. Chociaż nie będzie to miało dostrzegalnego wzrostu wydajności podczas korzystania z poniższego kodu, należy pamiętać o tym, kiedy pracujesz z bardziej złożonym kodem operowania grafiki.  
+> Ustawienie <xref:System.Windows.Forms.Control.DoubleBuffered%2A> właściwości formularza spowoduje, `true` że kod oparty <xref:System.Windows.Forms.Control.Paint> na grafice w zdarzeniu będzie buforowany dwukrotnie. Chociaż nie będzie to miało żadnych zauważalnych wzrost wydajności podczas korzystania z kodu poniżej, jest to coś, o czym należy pamiętać podczas pracy z bardziej złożonym kodem manipulacji grafiką.  
   
 ## <a name="example"></a>Przykład  
   
@@ -54,15 +54,15 @@ private void Form1_Paint(System.Object sender,
             Rectangle(10,10,60,60));  
         e.Graphics.FillRectangle(Brushes.Khaki, new  
             Rectangle(20,30,60,10));  
-        e.Graphics.CopyFromScreen(new Point(10, 10), new Point(100, 100),   
+        e.Graphics.CopyFromScreen(new Point(10, 10), new Point(100, 100),
             new Size(70, 70));  
 }  
 ```  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Powyższy kod jest uruchamiany w programie obsługi zdarzeń <xref:System.Windows.Forms.Control.Paint> formularza, aby grafika była zachowywana po odrysowaniu formularza. W związku z tym nie należy wywoływać metod związanych z grafiki w programie obsługi zdarzeń <xref:System.Windows.Forms.Form.Load>, ponieważ narysowana zawartość nie zostanie ponownie narysowana, jeśli rozmiar formularza zostanie zmieniony lub zasłonięty przez inny formularz.  
+ Powyższy kod jest uruchamiany <xref:System.Windows.Forms.Control.Paint> w programie obsługi zdarzeń formularza, dzięki czemu grafika będzie zachowywana po ponownym narysowaniu formularza. W związku z tym nie należy <xref:System.Windows.Forms.Form.Load> wywoływać metod związanych z grafiką w programie obsługi zdarzeń, ponieważ narysowana zawartość nie zostanie ponownie narysowana, jeśli formularz zostanie zmieniona lub zasłonięta przez inny formularz.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Drawing.CopyPixelOperation>
 - <xref:System.Drawing.Graphics.FillRectangle%2A?displayProperty=nameWithType>

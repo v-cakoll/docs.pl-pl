@@ -15,82 +15,82 @@ helpviewer_keywords:
 ms.assetid: 5c4c1dc2-d40d-4173-bbe6-7058fb21c98f
 topic_type:
 - apiref
-ms.openlocfilehash: f11b374ed0ecbfc137c43fb641ae691237604691
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: eb3ecbf39376e7126b5ec93a26badcbf5076d1db
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431517"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175788"
 ---
 # <a name="imetadataemitdefineproperty-method"></a>IMetaDataEmit::DefineProperty — Metoda
-Tworzy definicję właściwości określonego typu z określonym `get` i metodami dostępu do metody `set` i pobiera token do tej definicji właściwości.  
+Tworzy definicję właściwości dla określonego typu, z określonymi `get` i `set` akcesorami metod i pobiera token do tej definicji właściwości.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
-HRESULT DefineProperty (   
-    [in]  mdTypeDef          td,   
-    [in]  LPCWSTR            szProperty,   
-    [in]  DWORD              dwPropFlags,   
-    [in]  PCCOR_SIGNATURE    pvSig,   
-    [in]  ULONG              cbSig,   
-    [in]  DWORD              dwCPlusTypeFlag,   
-    [in]  void const         *pValue,   
-    [in]  ULONG              cchValue,   
-    [in]  mdMethodDef        mdSetter,   
-    [in]  mdMethodDef        mdGetter,   
-    [in]  mdMethodDef        rmdOtherMethods[],   
-    [out] mdProperty         *pmdProp   
+HRESULT DefineProperty (
+    [in]  mdTypeDef          td,
+    [in]  LPCWSTR            szProperty,
+    [in]  DWORD              dwPropFlags,
+    [in]  PCCOR_SIGNATURE    pvSig,
+    [in]  ULONG              cbSig,
+    [in]  DWORD              dwCPlusTypeFlag,
+    [in]  void const         *pValue,
+    [in]  ULONG              cchValue,
+    [in]  mdMethodDef        mdSetter,
+    [in]  mdMethodDef        mdGetter,
+    [in]  mdMethodDef        rmdOtherMethods[],
+    [out] mdProperty         *pmdProp
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `td`  
- podczas Token klasy lub interfejsu, w którym właściwość jest zdefiniowana.  
+ [w] Token dla klasy lub interfejsu, na którym właściwość jest definiowana.  
   
  `szProperty`  
- podczas Nazwa właściwości.  
+ [w] Nazwa właściwości.  
   
  `dwPropFlags`  
- podczas Flagi właściwości.  
+ [w] Flagi właściwości.  
   
  `pvSig`  
- podczas Podpis właściwości.  
+ [w] Podpis właściwości.  
   
  `cbSig`  
- podczas Liczba bajtów w `pvSig`.  
+ [w] Liczba bajtów `pvSig`w pliku .  
   
  `dwCPlusTypeFlag`  
- podczas Typ wartości domyślnej właściwości.  
+ [w] Typ wartości domyślnej właściwości.  
   
  `pValue`  
- podczas Wartość domyślna właściwości.  
+ [w] Wartość domyślna właściwości.  
   
  `cchValue`  
- podczas Liczba znaków (Unicode) w `pValue`.  
+ [w] Liczba znaków (Unicode) `pValue`w pliku .  
   
  `mdSetter`  
- podczas Metoda, która ustawia wartość właściwości.  
+ [w] Metoda, która ustawia wartość właściwości.  
   
  `mdGetter`  
- podczas Metoda, która pobiera wartość właściwości.  
+ [w] Metoda, która pobiera wartość właściwości.  
   
  `rmdOtherMethods[]`  
- podczas Tablica innych metod skojarzonych z właściwością. Przerwij tablicę przy użyciu `mdTokenNil`.  
+ [w] Tablica innych metod skojarzonych z właściwością. Zakończ tablicę za `mdTokenNil`pomocą pliku .  
   
  `pmdProp`  
- określoną Przypisany token `mdProperty`.  
+ [na zewnątrz] Token `mdProperty` przypisany.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
+ **Biblioteka:** Używany jako zasób w pliku MSCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

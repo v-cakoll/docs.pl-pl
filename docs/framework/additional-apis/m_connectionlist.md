@@ -1,5 +1,5 @@
 ---
-title: Connection. m_ConnectionList — pole
+title: Pole ConnectionGroup.m_ConnectionList
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 186083cf-8dff-4600-a2ab-6fed4b4de6af
-ms.openlocfilehash: d53eeb54d212adb011dae138e103ea5b30f7fb99
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 8eb6f215c36e214f7095eeba90bf0aed66dfcea0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215548"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155853"
 ---
-# <a name="connectiongroupm_connectionlist-field"></a>ConnectionList pole połączenia. m\_
+# <a name="connectiongroupm_connectionlist-field"></a>Pole ConnectionGroup.m\_ConnectionList
 
-`ConnectionGroup.m_ConnectionList` to <xref:System.Collections.ArrayList> obiektów połączeń, które obsługują ten sam identyfikator URI i mają te same wartości dla niektórych innych właściwości, takich jak wygaśnięcie i uwierzytelnianie.
+`ConnectionGroup.m_ConnectionList`jest <xref:System.Collections.ArrayList> obiektem połączenia, który obsługuje ten sam identyfikator URI i współużytkuje te same wartości dla niektórych innych właściwości, takich jak wygaśnięcie i uwierzytelnianie.
 
 ## <a name="syntax"></a>Składnia
   
@@ -28,14 +28,14 @@ private ArrayList m_ConnectionList
 ```
 
 > [!WARNING]
-> Pole `ConnectionGroup.m_ConnectionList` jest prywatne i nie jest przeznaczone do użycia bezpośrednio w kodzie.
-> 
-> Firma Microsoft nie obsługuje korzystania z tego pola w aplikacji produkcyjnej w żadnej sytuacji.
+> To `ConnectionGroup.m_ConnectionList` pole jest prywatne i nie jest przeznaczone do użycia bezpośrednio w kodzie.
+>
+> Firma Microsoft w żadnym wypadku nie obsługuje używania tego pola w aplikacji produkcyjnej.
 
 ## <a name="requirements"></a>Wymagania
 
-**Przestrzeń nazw:** <xref:System.Net>
+**Obszar nazw:**<xref:System.Net>
 
-**Zestaw:** System (w pliku System. dll)
+**Montaż:** System (w pliku System.dll)
 
-**.NET Framework wersje:** Dostępne od 2,0.
+**Wersje programu .NET Framework:** Dostępne od 2.0.

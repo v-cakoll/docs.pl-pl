@@ -6,34 +6,34 @@ helpviewer_keywords:
 - dependency objects [WPF], constructor patterns
 - FXCop tool [WPF]
 ms.assetid: f704b81c-449a-47a4-ace1-9332e3cc6d60
-ms.openlocfilehash: 66e380a9428395c772d0dcfe45a995374774aec6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6d6ff444b99ca893e687731c56a48ea3ac072dd0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283832"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79187230"
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>Bezpieczne wzorce konstruktora DependencyObjects
-Ogólnie rzecz biorąc, konstruktory klas nie powinny wywoływać wywołań zwrotnych, takich jak metody wirtualne lub Delegaty, ponieważ konstruktory mogą być wywoływane jako podstawowe inicjowanie konstruktorów dla klasy pochodnej. Wprowadzenie do wirtualnego stanu może być wykonywane z niekompletnym stanem inicjalizacji danego obiektu. Jednak sam system właściwości wywołuje i ujawnia wywołania zwrotne wewnętrznie w ramach systemu właściwości zależności. Jako prostą operację, ponieważ ustawienie wartości właściwości zależności z wywołaniem <xref:System.Windows.DependencyObject.SetValue%2A> potencjalnie może zawierać wywołanie zwrotne w miejscu wyznaczania. Z tego powodu należy zachować ostrożność podczas ustawiania wartości właściwości zależności w treści konstruktora, które mogą stać się problematyczne, jeśli typ jest używany jako klasa bazowa. Istnieje szczególny wzorzec służący do implementowania konstruktorów <xref:System.Windows.DependencyObject>, które unikają określonych problemów ze Stanami właściwości zależności i nieodłącznymi wywołaniami zwrotnymi, które opisano tutaj.  
+Ogólnie rzecz biorąc konstruktory klas nie należy wywoływać wywołania zwrotne, takie jak metody wirtualne lub delegatów, ponieważ konstruktory mogą być wywoływane jako inicjowania podstawowego konstruktorów dla klasy pochodnej. Wprowadzanie wirtualnego może odbywać się w stanie niepełnego inicjowania danego obiektu. Jednak sam system właściwości wywołuje i udostępnia wywołania zwrotne wewnętrznie, jako część systemu właściwości zależności. Tak proste operacji, jak ustawienie wartości <xref:System.Windows.DependencyObject.SetValue%2A> właściwości zależności z wywołaniem potencjalnie zawiera wywołanie zwrotne gdzieś w określaniu. Z tego powodu należy zachować ostrożność podczas ustawiania wartości właściwości zależności w treści konstruktora, co może stać się problematyczne, jeśli typ jest używany jako klasa podstawowa. Istnieje określony wzorzec <xref:System.Windows.DependencyObject> implementacji konstruktorów, który pozwala uniknąć określonych problemów ze stanami właściwości zależności i nieodłączne wywołania zwrotne, co jest udokumentowane w tym miejscu.  
 
-<a name="Property_System_Virtual_Methods"></a>   
+<a name="Property_System_Virtual_Methods"></a>
 ## <a name="property-system-virtual-methods"></a>Metody wirtualne systemu właściwości  
- Następujące metody wirtualne lub wywołania zwrotne są potencjalnie wywoływane podczas obliczeń wywołania <xref:System.Windows.DependencyObject.SetValue%2A>, które ustawia wartość właściwości zależności: <xref:System.Windows.ValidateValueCallback>, <xref:System.Windows.PropertyChangedCallback>, <xref:System.Windows.CoerceValueCallback>, <xref:System.Windows.DependencyObject.OnPropertyChanged%2A>. Każda z tych metod wirtualnych lub wywołań zwrotnych służy konkretnie do rozwijania uniwersalności właściwości systemu właściwości [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] i zależności. Aby uzyskać więcej informacji na temat sposobu użycia tych wirtualnych do dostosowywania określania wartości właściwości, zobacz [wywołania zwrotne właściwości zależności i walidacja](dependency-property-callbacks-and-validation.md).  
+ Następujące metody wirtualne lub wywołania zwrotne są <xref:System.Windows.DependencyObject.SetValue%2A> potencjalnie wywoływane podczas obliczeń <xref:System.Windows.ValidateValueCallback> <xref:System.Windows.PropertyChangedCallback>wywołania, które ustawia wartość właściwości zależności: , , <xref:System.Windows.CoerceValueCallback>, <xref:System.Windows.DependencyObject.OnPropertyChanged%2A>. Każda z tych metod wirtualnych lub wywołania zwrotne służy [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] określonego celu w rozwijaniu wszechstronność systemu właściwości i właściwości zależności. Aby uzyskać więcej informacji na temat używania tych wirtualnych do dostosowywania określania wartości właściwości, zobacz [Wywołania zwrotności właściwości zależności i sprawdzanie poprawności.](dependency-property-callbacks-and-validation.md)  
   
-### <a name="fxcop-rule-enforcement-vs-property-system-virtuals"></a>Wymuszanie reguł FXCop a wirtualne system właściwości  
- Jeśli używasz narzędzia firmy Microsoft FXCop jako części procesu kompilacji i pochodzą z pewnych klas [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Framework wywoływanych przez Konstruktor podstawowy lub zaimplementować własne właściwości zależności w klasach pochodnych, może wystąpić naruszenie zasad FXCop. Ciąg nazwy dla tego naruszenia:  
+### <a name="fxcop-rule-enforcement-vs-property-system-virtuals"></a>Wymuszanie reguł FXCop a wirtualne systemu właściwości  
+ Jeśli używasz narzędzia Microsoft FXCop jako część procesu kompilacji i [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] albo pochodzą z niektórych klas struktury wywołujących konstruktora podstawowego lub zaimplementować własne właściwości zależności na klasy pochodne, może wystąpić naruszenie reguły FXCop określonego. Ciąg nazwy dla tego naruszenia jest:  
   
  `DoNotCallOverridableMethodsInConstructors`  
   
- Jest to reguła, która jest częścią domyślnego publicznego zestawu reguł dla FXCop. Ta reguła może być raportowana przez system właściwości zależności, który ostatecznie wywołuje metodę wirtualną zależności systemu właściwości. To naruszenie reguły może nadal występować nawet po zastosowaniu zalecanych wzorców konstruktorów udokumentowanych w tym temacie, więc może być konieczne wyłączenie lub pominięcie reguły w konfiguracji zestawu reguł FXCop.  
+ Jest to reguła, która jest częścią domyślnego zestawu reguł publicznych dla FXCop. Co ta reguła może być raportowanie jest śledzenie za pośrednictwem systemu właściwości zależności, który ostatecznie wywołuje metody wirtualnej systemu właściwości zależności. To naruszenie reguły może nadal pojawiać się nawet po przestrzeganiu zalecanych wzorców konstruktora udokumentowanych w tym temacie, więc może być konieczne wyłączenie lub wyłączenie tej reguły w konfiguracji zestawu reguł FXCop.  
   
-### <a name="most-issues-come-from-deriving-classes-not-using-existing-classes"></a>Większość problemów pochodzi z klasy wyprowadzania, nie używając istniejących klas  
- Problemy zgłaszane przez tę regułę występuje, gdy Klasa, która jest zaimplementowana przy użyciu metod wirtualnych w jego sekwencji konstrukcji, pochodzi od. W przypadku zapieczętowania klasy lub poznania lub wymuszenia, że Klasa nie zostanie pobrana z, zagadnienia wyjaśnione w tym miejscu i problemy, które zostały omówione przez regułę FXCop, nie mają zastosowania do użytkownika. Jednakże w przypadku tworzenia klas w taki sposób, aby były one przeznaczone do użycia jako klasy bazowe, na przykład w przypadku tworzenia szablonów lub zestawu bibliotek kontrolek rozszerzalnych należy stosować wzorce zalecane w tym miejscu dla konstruktorów.  
+### <a name="most-issues-come-from-deriving-classes-not-using-existing-classes"></a>Większość problemów pochodzi z klas pochodnych, nie używając istniejących klas  
+ Problemy zgłaszane przez tę regułę występują, gdy klasa, która implementujesz za pomocą metod wirtualnych w sekwencji konstrukcji jest następnie pochodną. Jeśli uszczelnisz klasę lub w inny sposób wiesz lub wymuszsz, że twoja klasa nie będzie pochodzić z, rozważania wyjaśnione tutaj i problemy, które motywowane regułą FXCop nie mają zastosowania do Ciebie. Jednak jeśli są tworzenie klas w taki sposób, że są one przeznaczone do użycia jako klasy podstawowe, na przykład w przypadku tworzenia szablonów lub rozwijany zestaw biblioteki formantu, należy postępować zgodnie z wzorców zalecanych w tym miejscu dla konstruktorów.  
   
-### <a name="default-constructors-must-initialize-all-values-requested-by-callbacks"></a>Domyślne konstruktory muszą inicjować wszystkie wartości żądane przez wywołania zwrotne  
- Każdy element członkowski wystąpienia, który jest używany przez przesłonięcia klasy lub wywołania zwrotne (wywołania zwrotne z listy w sekcji "wirtualne system właściwości") musi być zainicjowany w konstruktorze bez parametrów klasy, nawet jeśli niektóre z tych wartości są wypełnione wartościami "Real" w parametry konstruktorów bez parametrów.  
+### <a name="default-constructors-must-initialize-all-values-requested-by-callbacks"></a>Domyślne konstruktory muszą inicjować wszystkie wartości wymagane przez wywołania zwrotne  
+ Wszystkie elementy członkowskie wystąpienia, które są używane przez zastąpienia klasy lub wywołania zwrotne (wywołania zwrotne z listy w sekcji Wirtualne systemu właściwości) muszą być inicjowane w konstruktorze bez parametrów klasy, nawet jeśli niektóre z tych wartości są wypełniane przez "prawdziwe" wartości za pośrednictwem parametrów konstruktorów nieparameterless.  
   
- Poniższy przykładowy kod (i kolejne przykłady) to pseudo-C# przykład, który narusza tę regułę i wyjaśnia problem:  
+ Poniższy przykładowy kod (i kolejne przykłady) jest przykładem pseudo-C#, który narusza tę regułę i wyjaśnia problem:  
   
 ```csharp  
 public class MyClass : DependencyObject  
@@ -45,7 +45,7 @@ public class MyClass : DependencyObject
         Wobble = toSetWobble; //this is backed by a DependencyProperty  
         _myList = new ArrayList();    // this line should be in the default ctor  
     }  
-    public static readonly DependencyProperty WobbleProperty =   
+    public static readonly DependencyProperty WobbleProperty =
         DependencyProperty.Register("Wobble", typeof(object), typeof(MyClass));  
     public object Wobble  
     {  
@@ -60,28 +60,28 @@ public class MyClass : DependencyObject
 }  
 ```  
   
- Gdy kod aplikacji wywołuje `new MyClass(objectvalue)`, spowoduje to wywołanie konstruktora bez parametrów i konstruktorów klas bazowych. Następnie ustawia `Property1 = object1`, która wywołuje metodę wirtualną `OnPropertyChanged` do <xref:System.Windows.DependencyObject>będących właścicielem `MyClass`.  Zastąpienie odwołuje się do `_myList`, które nie zostało jeszcze zainicjowane.  
+ Gdy wywołano `new MyClass(objectvalue)`kod aplikacji, wywołuje konstruktora bez parametrów i klasy podstawowej konstruktorów. Następnie ustawia `Property1 = object1`, który wywołuje `OnPropertyChanged` metodę wirtualną na posiadanie `MyClass` <xref:System.Windows.DependencyObject>.  Zastąpienie odnosi się do `_myList`, który nie został jeszcze zainicjowany.  
   
- Jednym ze sposobów uniknięcia tych problemów jest upewnienie się, że wywołania zwrotne używają tylko innych właściwości zależności i że każda taka właściwość zależności ma ustaloną wartość domyślną jako część zarejestrowanego metadanych.  
+ Jednym ze sposobów uniknięcia tych problemów jest upewnienie się, że wywołania zwrotne używają tylko innych właściwości zależności i że każda taka właściwość zależności ma ustaloną wartość domyślną jako część zarejestrowanych metadanych.  
   
-<a name="Safe_Constructor_Patterns"></a>   
-## <a name="safe-constructor-patterns"></a>Wzorce bezpiecznych konstruktorów  
- Aby uniknąć ryzyka niekompletnej inicjalizacji, jeśli klasa jest używana jako klasa bazowa, wykonaj następujące wzorce:  
+<a name="Safe_Constructor_Patterns"></a>
+## <a name="safe-constructor-patterns"></a>Bezpieczne wzory konstruktora  
+ Aby uniknąć ryzyka niepełnego inicjowania, jeśli klasa jest używana jako klasa podstawowa, postępuj zgodnie z następującymi wzorcami:  
   
-#### <a name="parameterless-constructors-calling-base-initialization"></a>Konstruktory bez parametrów wywołujące podstawową inicjalizację  
- Zaimplementuj te konstruktory wywołujące podstawową wartość domyślną:  
+#### <a name="parameterless-constructors-calling-base-initialization"></a>Konstruktory bez parametrów wywołujące inicjowanie podstawowe  
+ Zaimplementuj te konstruktory wywołujące domyślne wartości podstawowe:  
   
 ```csharp  
 public MyClass : SomeBaseClass {  
     public MyClass() : base() {  
-        // ALL class initialization, including initial defaults for   
+        // ALL class initialization, including initial defaults for
         // possible values that other ctors specify or that callbacks need.  
     }  
 }  
 ```  
   
-#### <a name="non-default-convenience-constructors-not-matching-any-base-signatures"></a>Konstruktory inne niż domyślne (wygoda), niezgodne z żadnymi podpisami podstawowymi  
- Jeśli te konstruktory używają parametrów do ustawiania właściwości zależności podczas inicjowania, najpierw Wywołaj konstruktora bez parametrów klasy do inicjalizacji, a następnie użyj parametrów, aby ustawić właściwości zależności. Mogą to być właściwości zależności zdefiniowane przez klasę lub właściwości zależności dziedziczone z klas bazowych, ale w obu przypadkach używają następującego wzorca:  
+#### <a name="non-default-convenience-constructors-not-matching-any-base-signatures"></a>Konstruktory inne niż domyślne (wygoda), niepasujące do żadnych podpisów podstawowych  
+ Jeśli te konstruktory używają parametrów do ustawiania właściwości zależności w inicjacji, najpierw wywołaj własny konstruktor bez parametrów klasy do inicjowania, a następnie użyj parametrów, aby ustawić właściwości zależności. Mogą to być właściwości zależności zdefiniowane przez klasę lub właściwości zależności dziedziczone z klas podstawowych, ale w obu przypadkach użyj następującego wzorca:  
   
 ```csharp  
 public MyClass : SomeBaseClass {  
@@ -93,8 +93,8 @@ public MyClass : SomeBaseClass {
 }  
 ```  
   
-#### <a name="non-default-convenience-constructors-which-do-match-base-signatures"></a>Konstruktory inne niż domyślne (wygodne), które pasują do sygnatur podstawowych  
- Zamiast wywołania konstruktora podstawowego z tym samym parametryzacja, należy ponownie wywołać Konstruktor bez parametrów klasy. Nie wywołuj inicjatora podstawowego; Zamiast tego należy wywołać `this()`. Następnie Odtwórz oryginalne zachowanie konstruktora przy użyciu parametrów zakończonych jako wartości dla ustawienia odpowiednich właściwości. Użyj oryginalnej dokumentacji konstruktora podstawowego, aby uzyskać wskazówki dotyczące określania właściwości, które mają być ustawione dla określonych parametrów:  
+#### <a name="non-default-convenience-constructors-which-do-match-base-signatures"></a>Konstruktory inne niż domyślne (wygoda), które pasują do podpisów podstawowych  
+ Zamiast wywoływania konstruktora podstawowego z taką samą parametryzacji, ponownie wywołać własną klasę' konstrukcję bez parametrów. Nie należy wywoływać inicjatora podstawowego; zamiast tego należy `this()`zadzwonić . Następnie odtwórz oryginalne zachowanie konstruktora przy użyciu przekazanych parametrów jako wartości do ustawiania odpowiednich właściwości. Użyj oryginalnej dokumentacji konstruktora podstawowego, aby uzyskać wskazówki dotyczące określania właściwości, które mają ustawić określone parametry:  
   
 ```csharp  
 public MyClass : SomeBaseClass {  
@@ -107,13 +107,13 @@ public MyClass : SomeBaseClass {
 ```  
   
 #### <a name="must-match-all-signatures"></a>Musi być zgodna ze wszystkimi podpisami  
- W przypadku, gdy typ podstawowy ma wiele podpisów, należy świadomie dopasować wszystkie możliwe podpisy przy użyciu implementacji konstruktora, która używa zalecanego wzorca wywołania konstruktora bez parametrów klasy przed podjęciem dalszych ustawień aœciwoœci.  
+ W przypadkach, gdy typ podstawowy ma wiele podpisów, należy celowo dopasować wszystkie możliwe podpisy z implementacją konstruktora, która używa zalecanego wzorca wywoływania konstruktora bez parametrów klasy przed ustawieniem dalej Właściwości.  
   
-#### <a name="setting-dependency-properties-with-setvalue"></a>Ustawianie właściwości zależności przy użyciu wartości SetValue  
- Te same wzorce są stosowane, jeśli ustawiasz właściwość, która nie ma otoki dla wygody ustawienia właściwości, i ustaw wartości przy użyciu <xref:System.Windows.DependencyObject.SetValue%2A>. Wywołania <xref:System.Windows.DependencyObject.SetValue%2A>, które przechodzą przez parametry konstruktora, powinny również wywołać Konstruktor bez parametrów klasy do inicjacji.  
+#### <a name="setting-dependency-properties-with-setvalue"></a>Ustawianie właściwości zależności za pomocą wartości SetValue  
+ Te same wzorce mają zastosowanie, jeśli ustawiasz właściwość, która nie ma <xref:System.Windows.DependencyObject.SetValue%2A>otoki dla wygody ustawiania właściwości, i ustawiasz wartości za pomocą . Wywołania <xref:System.Windows.DependencyObject.SetValue%2A> do tego przechodzą przez parametry konstruktora należy również wywołać klasy' konstruktora bez parametrów do inicjowania.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Niestandardowe właściwości zależności](custom-dependency-properties.md)
-- [Przegląd właściwości zależności](dependency-properties-overview.md)
-- [Zabezpieczenia właściwości zależności](dependency-property-security.md)
+- [Przegląd Właściwości zależności](dependency-properties-overview.md)
+- [Zabezpieczenie właściwości zależności](dependency-property-security.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Tworzenie dekoracji tekstu'
+title: Jak utworzyć dekorację tekstu
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,52 +16,52 @@ helpviewer_keywords:
 - typography [WPF], text decorations
 - baseline type [WPF]
 ms.assetid: cf3cb4e7-782a-4be7-b2d4-e0935e21e4e0
-ms.openlocfilehash: d586eef8d1308070da38a0a54c63c3ba64d30c8b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cf3b3c3bcb75153a0be4f7ced03b38134b79a930
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61776636"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185920"
 ---
-# <a name="how-to-create-a-text-decoration"></a>Instrukcje: Tworzenie dekoracji tekstu
-A <xref:System.Windows.TextDecoration> obiekt jest ornamentacji visual, można dodać do tekstu. Istnieją cztery typy dekoracje tekstu: podkreślenie, linii bazowej, przekreślenia i nadkreślenia. Poniższy przykład przedstawia lokalizacje dekoracje tekstu względem tekstu.  
+# <a name="how-to-create-a-text-decoration"></a>Jak utworzyć dekorację tekstu
+Obiekt <xref:System.Windows.TextDecoration> jest ozdobą wizualną, którą można dodać do tekstu. Istnieją cztery typy dekoracji tekstu: podkreślenie, linia bazowa, przekreślenie i linia zbyta. W poniższym przykładzie przedstawiono lokalizacje dekoracji tekstu względem tekstu.  
   
- ![Diagram przedstawiający typów dekoracji tekstu](./media/how-to-create-a-text-decoration/text-decoration-types.gif)  
+ ![Diagram typów dekoracji tekstu](./media/how-to-create-a-text-decoration/text-decoration-types.gif)  
   
- Aby dodać dekoracji tekstu do tekstu, należy utworzyć <xref:System.Windows.TextDecoration> obiektów i modyfikowania jego właściwości. Użyj <xref:System.Windows.TextDecoration.Location%2A> właściwości w celu określenia, gdzie dekoracji tekstu pojawi się, takie jak podkreślenie. Użyj <xref:System.Windows.TextDecoration.Pen%2A> właściwości w celu określenia wyglądu dekoracji tekstu, takiego jak wypełnienia kryjącego lub kolor gradientu. Jeśli nie określisz wartości <xref:System.Windows.TextDecoration.Pen%2A> właściwości wartość domyślna dekoracje, to ten sam kolor jak tekst. Po zdefiniowaniu <xref:System.Windows.TextDecoration> obiektu, dodaj ją do <xref:System.Windows.TextDecorations> kolekcji obiektu odpowiedni tekst.  
+ Aby dodać dekorację tekstu do <xref:System.Windows.TextDecoration> tekstu, utwórz obiekt i zmodyfikuj jego właściwości. Użyj <xref:System.Windows.TextDecoration.Location%2A> właściwości, aby określić, gdzie pojawia się dekoracja tekstu, takich jak podkreślenie. Użyj <xref:System.Windows.TextDecoration.Pen%2A> właściwości, aby określić wygląd dekoracji tekstu, na przykład pełny kolor wypełnienia lub gradientu. Jeśli nie określisz wartości <xref:System.Windows.TextDecoration.Pen%2A> właściwości, dekoracje domyślnie mają ten sam kolor co tekst. Po zdefiniowaniu <xref:System.Windows.TextDecoration> obiektu dodaj go <xref:System.Windows.TextDecorations> do kolekcji żądanego obiektu tekstowego.  
   
- Dekorację tekstu, który został wstawiony w pędzel gradientów liniowych i Pióro przerywaną, co można znaleźć w poniższym przykładzie.  
+ W poniższym przykładzie przedstawiono dekorację tekstu stylizowaną za pomocą pędzla gradientu liniowego i pióra przerywanego.  
   
- ![Dekoracja tekstu z podkreślenie gradientu liniowego](./media/how-to-create-a-text-decoration/text-decoration-gradient.png)  
+ ![Dekoracja tekstu z podkreśleniem gradientu liniowego](./media/how-to-create-a-text-decoration/text-decoration-gradient.png)  
   
- <xref:System.Windows.Documents.Hyperlink> Obiekt jest element zawartości śródwierszowy przepływ, który pozwala na hosta hiperlinki w dowolnej zawartości. Domyślnie <xref:System.Windows.Documents.Hyperlink> używa <xref:System.Windows.TextDecoration> obiektu, aby wyświetlić podkreślenie. <xref:System.Windows.TextDecoration> obiekty mogą być intensywnie do utworzenia wystąpienia, wydajność, zwłaszcza, jeśli dostępnych jest wiele <xref:System.Windows.Documents.Hyperlink> obiektów. Jeśli wprowadzisz zwiększone użycie <xref:System.Windows.Documents.Hyperlink> elementów, warto wziąć pod uwagę przedstawiający podkreślenie, tylko wtedy, gdy wyzwalanie zdarzenia, takie jak <xref:System.Windows.ContentElement.MouseEnter> zdarzeń.  
+ Obiekt <xref:System.Windows.Documents.Hyperlink> jest elementem zawartości przepływu na poziomie wbudowanym, który umożliwia hostować hiperłącza w zawartości przepływu. Domyślnie <xref:System.Windows.Documents.Hyperlink> obiekt jest <xref:System.Windows.TextDecoration> używany do wyświetlania podkreślenia. <xref:System.Windows.TextDecoration>obiekty mogą być intensywnie wydajne do wystąpienia, <xref:System.Windows.Documents.Hyperlink> szczególnie jeśli masz wiele obiektów. Jeśli szeroko korzystać <xref:System.Windows.Documents.Hyperlink> z elementów, można rozważyć pokazano podkreślenie tylko podczas <xref:System.Windows.ContentElement.MouseEnter> wyzwalania zdarzenia, takich jak zdarzenie.  
   
- W poniższym przykładzie jest dynamiczny podkreślenie dla linku "Mój MSN" — pojawia się tylko, gdy <xref:System.Windows.ContentElement.MouseEnter> zdarzenie jest wyzwalane.  
+ W poniższym przykładzie podkreślenie łącza "Moje MSN" jest <xref:System.Windows.ContentElement.MouseEnter> dynamiczne — pojawia się tylko wtedy, gdy zdarzenie jest wyzwalane.  
   
- ![Wyświetlanie właściwości TextDecorations hiperłącza](./media/how-to-create-a-text-decoration/text-decorations-hyperlinks.png)  
-   
- Aby uzyskać więcej informacji, zobacz [określ czy hiperłącze jest podkreślone](how-to-specify-whether-a-hyperlink-is-underlined.md).  
+ ![Hiperłącza wyświetlające dekoracje tekstowe](./media/how-to-create-a-text-decoration/text-decorations-hyperlinks.png)  
+
+ Aby uzyskać więcej informacji, zobacz [Określanie, czy hiperłącze jest podkreślone](how-to-specify-whether-a-hyperlink-is-underlined.md).  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie kodu podkreślenia dekoracji tekstu używa wartość domyślna czcionka.  
+ W poniższym przykładzie kodu dekoracja tekstu podkreślenia używa domyślnej wartości czcionki.  
   
  [!code-csharp[TextDecorationSnippets#TextDecorationSnippets1](~/samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml.cs#textdecorationsnippets1)]
  [!code-vb[TextDecorationSnippets#TextDecorationSnippets1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextDecorationSnippets/visualbasic/window1.xaml.vb#textdecorationsnippets1)]
  [!code-xaml[TextDecorationSnippets#TextDecorationSnippets1](~/samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml#textdecorationsnippets1)]  
   
- W poniższym przykładzie kodu podkreślenia Dekoracja tekstu jest tworzony z pędzel pełnego koloru pióra.  
+ W poniższym przykładzie kodu zostanie utworzona dekoracja tekstu podkreślenia za pomocą pędzla z jednolitym kolorem pióra.  
   
  [!code-csharp[TextDecorationSnippets#TextDecorationSnippets2](~/samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml.cs#textdecorationsnippets2)]
  [!code-vb[TextDecorationSnippets#TextDecorationSnippets2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextDecorationSnippets/visualbasic/window1.xaml.vb#textdecorationsnippets2)]
  [!code-xaml[TextDecorationSnippets#TextDecorationSnippets2](~/samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml#textdecorationsnippets2)]  
   
- W poniższym przykładzie kodu dekoracyjną podkreślenie jest tworzony z pędzel gradientów liniowych kreskowane pióra.  
+ W poniższym przykładzie kodu zostanie utworzona dekoracja tekstu podkreślenia za pomocą pędzla gradientu liniowego dla pióra przerywanego.  
   
  [!code-csharp[TextDecorationSnippets#TextDecorationSnippets3](~/samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml.cs#textdecorationsnippets3)]
  [!code-vb[TextDecorationSnippets#TextDecorationSnippets3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextDecorationSnippets/visualbasic/window1.xaml.vb#textdecorationsnippets3)]
  [!code-xaml[TextDecorationSnippets#TextDecorationSnippets3](~/samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml#textdecorationsnippets3)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Windows.TextDecoration>
 - <xref:System.Windows.Documents.Hyperlink>

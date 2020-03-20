@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: określanie właściwości strony za pomocą składnika PageSetupDialog'
+title: 'Porady: określanie właściwości strony za pomocą składnika PageSetupDialog'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,27 +10,27 @@ helpviewer_keywords:
 - page setup
 - PageSetupDialog component
 ms.assetid: 6dae05bc-c0fd-4357-bb93-841a1631d98f
-ms.openlocfilehash: 306e0dbf7fb819d1214d7d5d93d335b5d2db75e6
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 8a015c199193dfd9c43bec53cc93cbf9dc201413
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053616"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142046"
 ---
-# <a name="how-to-determine-page-properties-using-the-pagesetupdialog-component"></a>Instrukcje: określanie właściwości strony za pomocą składnika PageSetupDialog
-[PageSetupDialog](pagesetupdialog-component-windows-forms.md) składnika wyświetlane układ, rozmiar papieru i inne opcje układu strony użytkownika do danego dokumentu.  
+# <a name="how-to-determine-page-properties-using-the-pagesetupdialog-component"></a>Porady: określanie właściwości strony za pomocą składnika PageSetupDialog
+[Składnik PageSetupDialog](pagesetupdialog-component-windows-forms.md) przedstawia użytkownikowi wybór układu, rozmiaru papieru i innego układu strony dla dokumentu.  
   
- Należy określić wystąpienie <xref:System.Drawing.Printing.PrintDocument> klasy — jest to dokument do wydrukowania. Ponadto użytkownicy muszą mieć zainstalowany na komputerze, lokalnie lub za pośrednictwem sieci, drukarki, jest częściowo sposób, w jaki <xref:System.Windows.Forms.PageSetupDialog> składnika Określa stronę, użytkownik widzi opcji formatowania.  
+ Należy określić wystąpienie <xref:System.Drawing.Printing.PrintDocument> klasy — jest to dokument, który ma zostać wydrukowany. Ponadto użytkownicy muszą mieć zainstalowaną drukarkę na swoim komputerze, lokalnie lub za <xref:System.Windows.Forms.PageSetupDialog> pośrednictwem sieci, ponieważ jest to częściowo sposób, w jaki składnik określa opcje formatowania strony prezentowane użytkownikowi.  
   
- Praca z ważnym aspektem <xref:System.Windows.Forms.PageSetupDialog> składnik to sposób jej interakcji z <xref:System.Drawing.Printing.PageSettings> klasy. <xref:System.Drawing.Printing.PageSettings> Klasa jest używana do określenia ustawienia umożliwiające modyfikowanie sposobu stronę do wydrukowania, takie jak układ papieru, rozmiar strony i marginesów. Każdy z tych ustawień jest reprezentowany jako właściwość <xref:System.Drawing.Printing.PageSettings> klasy. <xref:System.Windows.Forms.PageSetupDialog> Klasy Modyfikuje wartości tej właściwości dla danego wystąpienia <xref:System.Drawing.Printing.PageSettings> klasę, która jest skojarzona z dokumentu (i jest reprezentowany jako <xref:System.Drawing.Printing.PrintDocument.DefaultPageSettings%2A> właściwości).  
+ Ważnym aspektem pracy <xref:System.Windows.Forms.PageSetupDialog> z komponentem jest sposób <xref:System.Drawing.Printing.PageSettings> interakcji z klasą. Klasa <xref:System.Drawing.Printing.PageSettings> służy do określania ustawień, które modyfikują sposób drukowania strony, takich jak orientacja papieru, rozmiar strony i marginesy. Każde z tych ustawień jest reprezentowane <xref:System.Drawing.Printing.PageSettings> jako właściwość klasy. Klasa <xref:System.Windows.Forms.PageSetupDialog> modyfikuje te wartości właściwości dla <xref:System.Drawing.Printing.PageSettings> danego wystąpienia klasy, która jest skojarzona <xref:System.Drawing.Printing.PrintDocument.DefaultPageSettings%2A> z dokumentem (i jest reprezentowana jako właściwość).  
   
-### <a name="to-set-page-properties-using-the-pagesetupdialog-component"></a>Aby ustawić właściwości strony za pomocą składnika PageSetupDialog  
+### <a name="to-set-page-properties-using-the-pagesetupdialog-component"></a>Aby ustawić właściwości strony przy użyciu składnika PageSetupDialog  
   
-1. Użyj <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> metodę, aby wyświetlić okno dialogowe, określając <xref:System.Drawing.Printing.PrintDocument> do użycia.  
+1. Użyj <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> metody, aby wyświetlić okno <xref:System.Drawing.Printing.PrintDocument> dialogowe, określając do użycia.  
   
-     W poniższym przykładzie <xref:System.Windows.Forms.Button> kontrolki <xref:System.Windows.Forms.Control.Click> programu obsługi zdarzeń otwaiera wystąpienia programu <xref:System.Windows.Forms.PageSetupDialog> składnika. Określono istniejący dokument w <xref:System.Windows.Forms.PageSetupDialog.Document%2A> właściwości, a jego <xref:System.Drawing.Printing.PageSettings.Color%2A?displayProperty=nameWithType> właściwość jest ustawiona na `false`.  
+     W poniższym przykładzie <xref:System.Windows.Forms.Button> program <xref:System.Windows.Forms.Control.Click> obsługi zdarzeń formantu otwiera wystąpienie składnika. <xref:System.Windows.Forms.PageSetupDialog> Istniejący dokument jest <xref:System.Windows.Forms.PageSetupDialog.Document%2A> określony we <xref:System.Drawing.Printing.PageSettings.Color%2A?displayProperty=nameWithType> właściwości, a `false`jego właściwość jest ustawiona na .  
   
-     W przykładzie założono, formularz ma <xref:System.Windows.Forms.Button> kontroli <xref:System.Drawing.Printing.PrintDocument> składnika o nazwie `myDocument`, a <xref:System.Windows.Forms.PageSetupDialog> składnika.  
+     W przykładzie przyjęto <xref:System.Windows.Forms.Button> założenie, <xref:System.Drawing.Printing.PrintDocument> że `myDocument`formularz ma <xref:System.Windows.Forms.PageSetupDialog> formant, składnik o nazwie i składnik.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, _  
@@ -76,19 +76,19 @@ ms.locfileid: "66053616"
        }  
     ```  
   
-     (Visual C# i wizualna C++) Umieść następujący kod w Konstruktorze formularza, aby zarejestrować program obsługi zdarzeń.  
+     (Visual C# i Visual C++) Umieść następujący kod w konstruktorze formularza, aby zarejestrować program obsługi zdarzeń.  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
     ```  
   
     ```cpp  
-    this->button1->Click += gcnew   
+    this->button1->Click += gcnew
        System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Windows.Forms.PageSetupDialog>
-- [Instrukcje: Tworzenie zadań drukowania formularzy Windows Standard](../advanced/how-to-create-standard-windows-forms-print-jobs.md)
+- [Instrukcje: tworzenie standardowych zadań drukowania formularzy Windows Forms](../advanced/how-to-create-standard-windows-forms-print-jobs.md)
 - [PageSetupDialog, składnik](pagesetupdialog-component-windows-forms.md)

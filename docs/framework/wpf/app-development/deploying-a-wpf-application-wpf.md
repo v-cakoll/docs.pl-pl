@@ -5,123 +5,123 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: 9d4b7dd0464960441410d8ff2a196f0912354e5f
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 54d14503a0f65bb50f2dfb14d40af3b47d51589c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741945"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186311"
 ---
 # <a name="deploy-a-wpf-application"></a>Wdrażanie aplikacji WPF
 
-Po skompilowaniu aplikacji Windows Presentation Foundation (WPF) muszą one zostać wdrożone. Systemy Windows i .NET Framework zawierają kilka technologii wdrażania. Technologia wdrażania, która jest używana do wdrażania aplikacji WPF, zależy od typu aplikacji. Ten temat zawiera krótkie omówienie poszczególnych technologii wdrażania oraz sposób ich użycia w połączeniu z wymaganiami dotyczącymi wdrożenia poszczególnych typów aplikacji WPF.
+Po windows presentation foundation (WPF) aplikacje są tworzone, muszą być wdrożone. Systemy Windows i .NET Framework zawierają kilka technologii wdrażania. Technologia wdrażania, który jest używany do wdrażania aplikacji WPF zależy od typu aplikacji. W tym temacie przedstawiono krótkie omówienie każdej technologii wdrażania i jak są one używane w połączeniu z wymaganiami dotyczącymi wdrażania każdego typu aplikacji WPF.
 
-<a name="Deployment_Technologies"></a>   
+<a name="Deployment_Technologies"></a>
 ## <a name="deployment-technologies"></a>Technologie wdrażania  
- Systemy Windows i .NET Framework zawierają kilka technologii wdrażania, w tym:  
+ Systemy Windows i program .NET Framework obejmują kilka technologii wdrażania, w tym:  
   
-- Wdrażanie polecenia XCopy.  
+- XCopy wdrożenia.  
   
-- Wdrożenie Instalator Windows.  
+- Wdrożenie Instalatora Windows.  
   
-- Wdrożenie ClickOnce.  
+- Kliknij pozycjęWładne wdrożenie.  
   
-<a name="XCopy_Deployment"></a>   
-### <a name="xcopy-deployment"></a>Wdrażanie polecenia XCopy  
- Polecenie XCopy Deployment odnosi się do kopiowania plików z jednej lokalizacji do drugiej przy użyciu narzędzia wiersza polecenia XCopy. Wdrożenie polecenia XCopy jest odpowiednie w następujących okolicznościach:  
+<a name="XCopy_Deployment"></a>
+### <a name="xcopy-deployment"></a>Wdrożenie XCopy  
+ Wdrożenie XCopy odnosi się do używania programu wiersza polecenia XCopy do kopiowania plików z jednej lokalizacji do drugiej. Wdrożenie XCopy jest odpowiednie w następujących okolicznościach:  
   
-- Aplikacja jest samodzielna. Nie trzeba aktualizować klienta programu, aby uruchomić program.  
+- Aplikacja jest niezależna. Nie trzeba aktualizować klienta, aby uruchomić.  
   
-- Pliki aplikacji muszą zostać przeniesione z jednej lokalizacji do innej, na przykład z lokalizacji kompilacji (dysk lokalny, udział plików UNC itd.), do lokalizacji publikowania (witryna sieci Web, udział plików UNC itd.).  
+- Pliki aplikacji muszą zostać przeniesione z jednej lokalizacji do innej, na przykład z lokalizacji kompilacji (dysk lokalny, udział plików UNC itd.) do lokalizacji publikowania (witryny sieci Web, udziału plików UNC itd.).  
   
-- Aplikacja nie wymaga integracji powłoki (skrót menu Start, ikona pulpitu itp.).  
+- Aplikacja nie wymaga integracji powłoki (skrót menu Start, ikona pulpitu i tak dalej).  
   
- Chociaż XCopy jest odpowiednie dla prostych scenariuszy wdrażania, jest ograniczone, gdy wymagane są bardziej złożone możliwości wdrażania. W szczególności użycie XCopy często polega na tworzeniu i wykonywaniu skryptów służących do zarządzania wdrażaniem w niezawodny sposób. Ponadto XCopy nie obsługuje przechowywania wersji, odinstalowywania lub wycofywania.  
+ Mimo że XCopy nadaje się do prostych scenariuszy wdrażania, jest ograniczona, gdy wymagane są bardziej złożone możliwości wdrażania. W szczególności przy użyciu XCopy często ponosi obciążenie dla tworzenia, wykonywania i obsługi skryptów do zarządzania wdrożeniem w niezawodny sposób. Ponadto XCopy nie obsługuje przechowywania wersji, dezinstalacji ani wycofywania.  
   
-<a name="Windows_Installer"></a>   
+<a name="Windows_Installer"></a>
 ### <a name="windows-installer"></a>Instalator Windows  
- Instalator Windows umożliwia spakowanie aplikacji jako samodzielnych plików wykonywalnych, które mogą być łatwo dystrybuowane do klientów i uruchamiane. Ponadto program Instalator Windows jest instalowany z systemem Windows i umożliwia integrację z pulpitem, menu Start i apletem programy w panelu sterowania.  
+ Instalator Windows umożliwia pakowanie aplikacji jako samodzielnych plików wykonywalnych, które można łatwo dystrybuować do klientów i uruchamiać. Ponadto Instalator Windows jest zainstalowany z systemem Windows i umożliwia integrację z pulpitem, menu Start i panelem sterowania Programy.  
   
- Instalator Windows upraszcza instalację i odinstalowywanie aplikacji, ale nie zapewnia możliwości zapewniania aktualności zainstalowanych aplikacji z punktu widzenia wersji programu.  
+ Instalator Windows upraszcza instalację i dezinstalację aplikacji, ale nie zapewnia urządzeń zapewniających, że zainstalowane aplikacje są aktualizowane z punktu widzenia przechowywania wersji.  
   
- Aby uzyskać więcej informacji na temat Instalator Windows, zobacz [Instalator Windows Deployment](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).
+ Aby uzyskać więcej informacji na temat Instalatora Windows, zobacz [Wdrażanie Instalatora Windows](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).
   
-<a name="ClickOnce_Deployment"></a>   
-### <a name="clickonce-deployment"></a>Wdrożenie ClickOnce  
- Technologia ClickOnce umożliwia wdrażanie aplikacji w stylu sieci Web dla aplikacji innych niż sieci Web. Aplikacje są publikowane w sieci Web lub na serwerach plików i wdrażane z nich. Chociaż technologia ClickOnce nie obsługuje pełnego zakresu funkcji klienta, które Instalator Windows zainstalowanych aplikacji, obsługuje podzestaw, który obejmuje następujące elementy:  
+<a name="ClickOnce_Deployment"></a>
+### <a name="clickonce-deployment"></a>Wdrożenie clickonce  
+ ClickOnce umożliwia wdrażanie aplikacji w stylu sieci Web dla aplikacji innych niż sieci Web. Aplikacje są publikowane i wdrażane z serwerów sieci Web lub plików. Mimo że ClickOnce nie obsługuje pełnego zakresu funkcji klienta, które robią aplikacje zainstalowane przez Instalatora Windows, obsługuje podzbiór, który zawiera następujące elementy:  
   
-- Integracja z menu Start i apletem Panel sterowania programy.  
+- Integracja z menu Start i panelem sterowania Programy.  
   
-- Przechowywanie wersji, wycofywanie i odinstalowywanie.  
+- Przechowywanie wersji, wycofywanie i dezinstalacja.  
   
-- Tryb instalacji online, który zawsze uruchamia aplikację z lokalizacji wdrożenia.  
+- Tryb instalacji online, który zawsze uruchamia aplikację z lokalizacji wdrażania.  
   
 - Automatyczne aktualizowanie po wydaniu nowych wersji.  
   
 - Rejestracja rozszerzeń plików.  
   
- Aby uzyskać więcej informacji na temat technologii ClickOnce, zobacz [zabezpieczenia i wdrażanie technologii ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment).  
+ Aby uzyskać więcej informacji na temat ClickOnce, zobacz [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment).  
   
-<a name="Deploying_WPF_Applications"></a>   
+<a name="Deploying_WPF_Applications"></a>
 ## <a name="deploying-wpf-applications"></a>Wdrażanie aplikacji WPF  
- Opcje wdrażania aplikacji WPF zależą od typu aplikacji. W perspektywie wdrożenia WPF ma trzy znaczące typy aplikacji:  
+ Opcje wdrażania aplikacji WPF zależą od typu aplikacji. Z punktu widzenia wdrożenia WPF WPF ma trzy istotne typy aplikacji:  
   
 - Aplikacje autonomiczne.  
   
-- Tylko znaczniki [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] aplikacji.  
+- Aplikacje tylko [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] do znaczników.  
   
-- Aplikacje przeglądarki XAML (XBAP).  
+- aplikacje przeglądarki XAML (XBAPs).  
   
-<a name="Deploying_Standalone_Applications"></a>   
+<a name="Deploying_Standalone_Applications"></a>
 ### <a name="deploying-standalone-applications"></a>Wdrażanie aplikacji autonomicznych  
- Aplikacje autonomiczne są wdrażane przy użyciu technologii ClickOnce lub Instalator Windows. W obu przypadkach aplikacje autonomiczne wymagają pełnego zaufania do uruchomienia. Pełne zaufanie jest automatycznie przydzielane do aplikacji autonomicznych wdrożonych przy użyciu Instalator Windows. Aplikacje autonomiczne wdrożone przy użyciu technologii ClickOnce nie mają automatycznie pełnego zaufania. Zamiast tego, ClickOnce Wyświetla okno dialogowe ostrzeżenia o zabezpieczeniach, które użytkownicy muszą zaakceptować przed zainstalowaniem aplikacji autonomicznej. W przypadku zaakceptowania aplikacja autonomiczna jest zainstalowana i ma przyznane pełne zaufanie. W przeciwnym razie aplikacja autonomiczna nie jest zainstalowana.  
+ Aplikacje autonomiczne są wdrażane przy użyciu funkcji ClickOnce lub Instalatora Windows. Tak czy inaczej, autonomiczne aplikacje wymagają pełnego zaufania do uruchomienia. Pełne zaufanie jest automatycznie przyznawane autonomicznym aplikacjom, które są wdrażane przy użyciu Instalatora Windows. Autonomiczne aplikacje, które są wdrażane przy użyciu ClickOnce nie są automatycznie przyznane pełne zaufanie. Zamiast tego ClickOnce wyświetla okno dialogowe z ostrzeżeniem o zabezpieczeniach, które użytkownicy muszą zaakceptować przed zainstalowaniem aplikacji autonomicznej. Jeśli zostanie zaakceptowana, aplikacja autonomiczna jest zainstalowana i obdarowana pełnym zaufaniem. Jeśli nie, aplikacja autonomiczna nie jest zainstalowana.  
   
-<a name="Deploying_Markup_Only_XAML_Applications"></a>   
+<a name="Deploying_Markup_Only_XAML_Applications"></a>
 ### <a name="deploying-markup-only-xaml-applications"></a>Wdrażanie aplikacji XAML tylko do znaczników  
- Tylko znaczniki [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] strony są zwykle publikowane na serwerach sieci Web, takich jak strony HTML, i można je przeglądać za pomocą programu Internet Explorer. Tylko znaczniki [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] strony są uruchamiane w obszarze piaskownicy zabezpieczeń częściowej relacji zaufania z ograniczeniami, które są zdefiniowane przez zestaw uprawnień strefy internetowej. Zapewnia to równorzędną piaskownicę zabezpieczeń dla aplikacji sieci Web opartych na języku HTML.  
+ Strony tylko [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] do oznaczania są zwykle publikowane na serwerach sieci Web, takich jak strony HTML, i mogą być przeglądane za pomocą programu Internet Explorer. Strony tylko [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] do oznaczania są uruchamiane w obszarze izolowanym z częściowym zabezpieczeniem z ograniczeniami zdefiniowanymi przez ustawiony zestaw uprawnień strefy internetowej. Zapewnia to równoważne zabezpieczenia izolowania do aplikacji sieci Web opartych na języku HTML.  
   
- Aby uzyskać więcej informacji o zabezpieczeniach aplikacji WPF, zobacz [zabezpieczenia](../security-wpf.md).  
+ Aby uzyskać więcej informacji na temat zabezpieczeń aplikacji WPF, zobacz [Zabezpieczenia](../security-wpf.md).  
   
- Tylko znaczniki [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] strony można zainstalować w lokalnym systemie plików przy użyciu polecenia XCopy lub Instalator Windows. Te strony można wyświetlać przy użyciu programu Internet Explorer lub Eksploratora Windows.  
+ Strony tylko [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] do oznaczania można zainstalować w lokalnym systemie plików za pomocą xcopy lub Instalatora Windows. Te strony można przeglądać za pomocą programu Internet Explorer lub Eksploratora Windows.  
   
- Aby uzyskać więcej informacji na temat języka XAML, zobacz [Omówienie języka XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md).  
+ Aby uzyskać więcej informacji na temat xaml, zobacz [Omówienie XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md).  
   
-<a name="Deploying_XAML_Browser_Applications"></a>   
+<a name="Deploying_XAML_Browser_Applications"></a>
 ### <a name="deploying-xaml-browser-applications"></a>Wdrażanie aplikacji przeglądarki XAML  
- Aplikacje XBAP są skompilowanymi aplikacjami, które wymagają wdrożenia następujących trzech plików:  
+ XBAPs są skompilowane aplikacje, które wymagają następujących trzech plików do wdrożenia:  
   
-- *ApplicationName*. exe: plik wykonywalny aplikacji zestawu.  
+- *Nazwa aplikacji*.exe: Plik aplikacji zestawu wykonywalnego.  
   
-- *ApplicationName*. XBAP: manifest wdrożenia.  
+- *Nazwa aplikacji*.xbap: Manifest wdrożenia.  
   
-- *ApplicationName*. exe. manifest: manifest aplikacji.  
+- *Nazwa aplikacji*.exe.manifest: Manifest aplikacji.  
   
 > [!NOTE]
-> Aby uzyskać więcej informacji na temat wdrażania i manifestów aplikacji, zobacz [Kompilowanie aplikacji WPF](building-a-wpf-application-wpf.md).  
+> Aby uzyskać więcej informacji na temat manifestów wdrażania i aplikacji, zobacz [Tworzenie aplikacji WPF](building-a-wpf-application-wpf.md).  
   
- Te pliki są tworzone po skompilowaniu aplikacji XBAP. Aby uzyskać więcej informacji, zobacz [How to: Create a New WPF Browser Application](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100)). Podobnie jak w przypadku [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] stron, aplikacje XBAP są zwykle publikowane na serwerze sieci Web i wyświetlane przy użyciu przeglądarki Internet Explorer.  
+ Pliki te są produkowane, gdy XBAP jest zbudowany. Aby uzyskać więcej informacji, zobacz [Jak: Tworzenie nowego projektu aplikacji przeglądarki WPF](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100)). Podobnie jak strony [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tylko do znaczników, XBAPs są zazwyczaj publikowane na serwerze sieci Web i wyświetlane przy użyciu programu Internet Explorer.  
   
- Aplikacje XBAP można wdrożyć na klientach przy użyciu dowolnych metod wdrażania. Jednak funkcja ClickOnce jest zalecana, ponieważ zapewnia następujące możliwości:  
+ XBAPs można wdrożyć na klientach przy użyciu dowolnej z technik wdrażania. Jednak ClickOnce jest zalecane, ponieważ zapewnia następujące możliwości:  
   
-1. Aktualizacje automatyczne po opublikowaniu nowej wersji.  
+1. Automatyczne aktualizacje po opublikowaniu nowej wersji.  
   
-2. Podniesienie uprawnień dla aplikacji XBAP działającego z pełnym zaufaniem.  
+2. Uprawnienia podniesienia uprawnień dla XBAP działającego z pełnym zaufaniem.  
   
- Domyślnie ClickOnce publikuje pliki aplikacji przy użyciu rozszerzenia. deploy. Może to być przyczyną problemów, ale można ją wyłączyć. Aby uzyskać więcej informacji, zobacz [problemy z konfiguracją serwera i klienta we wdrożeniach ClickOnce](/visualstudio/deployment/server-and-client-configuration-issues-in-clickonce-deployments).  
+ Domyślnie ClickOnce publikuje pliki aplikacji z rozszerzeniem .deploy. Może to być problematyczne, ale można je wyłączyć. Aby uzyskać więcej informacji, zobacz [Problemy z konfiguracją serwera i klienta w przypadku wdrożeń ClickOnce](/visualstudio/deployment/server-and-client-configuration-issues-in-clickonce-deployments).  
   
- Aby uzyskać więcej informacji na temat wdrażania aplikacji przeglądarki XAML (XBAP), zobacz [Omówienie aplikacji przeglądarki XAML w języku WPF](wpf-xaml-browser-applications-overview.md).  
+ Aby uzyskać więcej informacji na temat wdrażania aplikacji przeglądarki XAML (XBAPs), zobacz [Omówienie aplikacji przeglądarki WPF XAML](wpf-xaml-browser-applications-overview.md).  
   
-<a name="Installing__NET_Framework_3_0"></a>   
+<a name="Installing__NET_Framework_3_0"></a>
 ## <a name="installing-the-net-framework"></a>Instalowanie programu .NET Framework  
- Aby można było uruchomić aplikację WPF, na kliencie musi być zainstalowana platforma Microsoft .NET. Program Internet Explorer automatycznie wykrywa, czy klienci są instalowani z .NET Framework, gdy są wyświetlane aplikacje hostowane w przeglądarce WPF. Jeśli .NET Framework nie jest zainstalowana, program Internet Explorer poprosi użytkowników o ich zainstalowanie.  
+ Aby uruchomić aplikację WPF, program Microsoft .NET Framework musi być zainstalowany na kliencie. Program Internet Explorer automatycznie wykrywa, czy klienci są instalowani z programem .NET Framework podczas wyświetlania aplikacji hostowanych przez przeglądarkę WPF. Jeśli program .NET Framework nie jest zainstalowany, program Internet Explorer monituje użytkowników o jej zainstalowanie.  
   
- Aby wykryć, czy .NET Framework jest zainstalowana, program Internet Explorer zawiera aplikację programu inicjującego, która jest zarejestrowana jako rezerwowa procedura obsługi rozszerzeń MIME (Multipurpose Internet Mail Extensions) dla plików zawartości z następującymi rozszerzeniami: XAML, XPS,. XBAP i. Application. Jeśli przejdziesz do tych typów plików, a .NET Framework nie jest zainstalowana na kliencie, aplikacja inicjująca zażąda uprawnień do jej zainstalowania. Jeśli nie zostanie podane uprawnienie, ani .NET Framework ani aplikacja nie zostanie zainstalowana.  
+ Aby wykryć, czy program .NET Framework jest zainstalowany, program Internet Explorer zawiera aplikację programu inipulacyjnego zarejestrowaną jako program obsługi zbiorczych wielozadaniowych rozszerzeń poczty internetowej (MIME) dla plików zawartości z następującymi rozszerzeniami: .xaml, xps, .xbap i .application. Jeśli przejdziesz do tych typów plików, a program .NET Framework nie zostanie zainstalowany na kliencie, aplikacja programu inichowania żąda uprawnień do jej zainstalowania. Jeśli uprawnienie nie zostanie udzielone, nie jest zainstalowany program .NET Framework ani aplikacja.  
   
- W przypadku udzielenia uprawnienia program Internet Explorer pobiera i instaluje .NET Framework przy użyciu Usługa inteligentnego transferu w tle Microsoft (BITS). Po pomyślnej instalacji .NET Framework pierwotnie żądany plik zostanie otwarty w nowym oknie przeglądarki.  
+ Jeśli uprawnienie zostanie udzielone, program Internet Explorer pobierze i zainstaluje program .NET Framework przy użyciu usługi inteligentnego transferu w tle firmy Microsoft (BITS). Po pomyślnej instalacji programu .NET Framework pierwotnie żądany plik jest otwierany w nowym oknie przeglądarki.  
   
- Aby uzyskać więcej informacji, zobacz [wdrażanie .NET Framework i aplikacji](../../deployment/index.md).  
+ Aby uzyskać więcej informacji, zobacz [Wdrażanie programu .NET Framework i aplikacji](../../deployment/index.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Kompilowanie aplikacji WPF](building-a-wpf-application-wpf.md)
-- [Security](../security-wpf.md)
+- [Zabezpieczenia](../security-wpf.md)

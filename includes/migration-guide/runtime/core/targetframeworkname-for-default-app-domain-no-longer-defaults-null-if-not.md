@@ -1,19 +1,18 @@
 ---
-ms.openlocfilehash: f221f923381d874e1d9e8b420811a770d86f7578
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: cbe1b32fa40e509f620845866c7a584e37f49a80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67858617"
 ---
-### <a name="targetframeworkname-for-default-app-domain-no-longer-defaults-to-null-if-not-set"></a>TargetFrameworkName dla domyślnej domeny aplikacji nie jest już domyślnie przyjmuje wartość null Jeśli nie zostanie ustawiona
+### <a name="targetframeworkname-for-default-app-domain-no-longer-defaults-to-null-if-not-set"></a>TargetFrameworkName dla domyślnej domeny aplikacji nie jest już domyślnie null, jeśli nie jest ustawiona
 
 |   |   |
 |---|---|
-|Szczegóły|<xref:System.AppDomainSetup.TargetFrameworkName?displayProperty=name> Została wcześniej wartości null w domyślnej domeny aplikacji, o ile nie została jawnie ustawiona. Począwszy od 4.6, <xref:System.AppDomainSetup.TargetFrameworkName?displayProperty=name> właściwość dla domyślnej domeny aplikacji będzie mieć wartość domyślną, pochodną TargetFrameworkAttribute (jeśli istnieje). Domeny inne niż domyślne aplikacji będą w dalszym ciągu dziedziczą ich <xref:System.AppDomainSetup.TargetFrameworkName?displayProperty=name> z domyślnej domeny aplikacji (co nie jest domyślnie ustawiana na wartość null w wersji 4.6) o ile nie jest jawnie przesłaniana.|
-|Sugestia|Kod powinien zostać zaktualizowany, aby nie są zależne od <xref:System.AppDomainSetup.TargetFrameworkName> przyjęto wartość domyślną wartość null. Jeśli jest to konieczne, właściwość ta w dalszym ciągu ma wartość null, może być jawnie ustawiona na tę wartość.|
-|Scope|Krawędź|
+|Szczegóły|Wcześniej <xref:System.AppDomainSetup.TargetFrameworkName?displayProperty=name> wartość null była null w domyślnej domenie aplikacji, chyba że została jawnie ustawiona. Począwszy od 4.6, <xref:System.AppDomainSetup.TargetFrameworkName?displayProperty=name> właściwość dla domyślnej domeny aplikacji będzie miała wartość domyślną pochodną targetframeworkattribute (jeśli jest obecny). Domeny aplikacji inne niż domyślne <xref:System.AppDomainSetup.TargetFrameworkName?displayProperty=name> będą nadal dziedziczyć z domyślnej domeny aplikacji (która nie będzie domyślnie null w 4.6), chyba że zostanie jawnie zastąpiona.|
+|Sugestia|Kod powinien zostać zaktualizowany, aby nie był zależny <xref:System.AppDomainSetup.TargetFrameworkName> od niewykonania zobowiązania do wartości null. Jeśli jest wymagane, że ta właściwość w dalszym ciągu do oceny null, można jawnie ustawić tę wartość.|
+|Zakres|Brzeg|
 |Wersja|4.6|
 |Typ|Środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.AppDomainSetup.TargetFrameworkName?displayProperty=nameWithType></li></ul>|
-

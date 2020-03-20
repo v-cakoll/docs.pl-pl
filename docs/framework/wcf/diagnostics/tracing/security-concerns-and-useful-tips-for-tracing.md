@@ -2,43 +2,43 @@
 title: Problemy dotyczące zabezpieczeń i przydatne porady na temat śledzenia
 ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
-ms.openlocfilehash: d1b2c13cacc792ecedacfc3ede7c38e072841263
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5ced4f3a3a5e83564703db88b28ee2b3c6eeb1a0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600051"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185721"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>Problemy dotyczące zabezpieczeń i przydatne porady na temat śledzenia
-W tym temacie opisano, jak możesz chronić poufne informacje przed przypadkowym, a także przydatne porady, korzystając z hostem sieci Web.  
+W tym temacie opisano, jak można chronić poufne informacje przed narażoną, a także przydatne wskazówki podczas korzystania z webhost.  
   
-## <a name="using-a-custom-trace-listener-with-webhost"></a>Używanie odbiornika śledzenia niestandardowe z hostem sieci Web  
- Jeśli piszesz detektor śledzenia, należy pamiętać o możliwości śledzenia może zniknąć w przypadku usługi hostowanej w sieci Web. Podczas odtwarzania hostem sieci Web, wyłącza żywy proces podczas duplikatu przejmuje. Jednak dwa procesy muszą mieć dostęp do tego samego zasobu przez pewien czas, który jest zależny od typu odbiornika. W tym przypadku, `XmlWriterTraceListener` tworzy nowy plik śledzenia dla drugiego procesu; podczas gdy zarządza wiele procesów w ramach tej samej sesji śledzenia zdarzeń Windows i zapewnia dostęp do tego samego pliku. Jeśli odbiornik własne nie zapewnia podobne funkcje, ślady mogą zostać utracone, jeśli plik jest zablokowany w przy użyciu dwóch procesów.  
+## <a name="using-a-custom-trace-listener-with-webhost"></a>Korzystanie z niestandardowego odbiornika śledzenia za pomocą usługi WebHost  
+ Jeśli piszesz własny odbiornik śledzenia, należy pamiętać o możliwości, że ślady mogą zostać utracone w przypadku usługi hostowane w sieci Web. Gdy WebHost odtwarza, zamyka proces na żywo, podczas gdy duplikat przejmuje. Jednak dwa procesy muszą nadal mieć dostęp do tego samego zasobu przez pewien czas, który jest zależny od typu odbiornika. W takim przypadku `XmlWriterTraceListener` , tworzy nowy plik śledzenia dla drugiego procesu; podczas śledzenia zdarzeń systemu Windows zarządza wieloma procesami w ramach tej samej sesji i daje dostęp do tego samego pliku. Jeśli własny odbiornik nie zapewnia podobnych funkcji, ślady mogą zostać utracone, gdy plik jest zablokowany przez dwa procesy.  
   
- Należy również pamiętać, że odbiornik śledzenia niestandardowe można wysłać ślady i komunikatów w sieci, na przykład ze zdalną bazą danych. Narzędzia do wdrażania aplikacji należy skonfigurować niestandardowe odbiorniki przy użyciu kontroli dostępu. Należy również zastosować kontroli zabezpieczeń na informacje osobiste, może być udostępniona w lokalizacjach zdalnych.  
+ Należy również pamiętać, że niestandardowy odbiornik śledzenia może wysyłać ślady i wiadomości w sieci, na przykład do zdalnej bazy danych. Jako wdrażający aplikację należy skonfigurować niestandardowe odbiorniki z odpowiednią kontrolą dostępu. Należy również zastosować kontrolę zabezpieczeń w odniesieniu do wszelkich informacji osobistych, które mogą być ujawnione w lokalizacji zdalnej.  
   
-## <a name="logging-sensitive-information"></a>Rejestrowanie informacji poufnych  
- Ślady zawierają nagłówki wiadomości, gdy komunikat jest w zakresie. Jeśli śledzenie jest włączone, informacje osobiste w nagłówkach specyficzne dla aplikacji, takich jak ciąg zapytania. i body informacje, takie jak numer karty kredytowej, może stać się widoczne w dziennikach. Narzędzia do wdrażania aplikacji jest odpowiedzialny za wymuszania kontroli dostępu do plików konfiguracji i śledzenia. Nie należy tego rodzaju informacje są widoczne, należy wyłączyć śledzenie lub odfiltrować części danych, jeśli chcesz udostępnić dzienniki śledzenia.  
+## <a name="logging-sensitive-information"></a>Rejestrowanie poufnych informacji  
+ Ślady zawierają nagłówki wiadomości, gdy wiadomość jest w zakresie. Gdy śledzenie jest włączone, informacje osobiste w nagłówkach specyficznych dla aplikacji, takich jak ciąg zapytania; informacje o treści, takie jak numer karty kredytowej, mogą stać się widoczne w dziennikach. Wdrażający aplikację jest odpowiedzialny za wymuszanie kontroli dostępu w plikach konfiguracji i śledzenia. Jeśli nie chcesz, aby tego rodzaju informacje były widoczne, należy wyłączyć śledzenie lub odfiltrować część danych, jeśli chcesz udostępnić dzienniki śledzenia.  
   
- Poniższe porady mogą pomóc aby zawartość pliku śledzenia przed przypadkowym ujawnieniem:  
+ Poniższe wskazówki mogą pomóc w zapobieganiu niezamierzonej instynkowaniu zawartości pliku śledzenia:  
   
-- Upewnij się, że dziennika, które pliki są chronione przez kontroli dostępu zawiera listę (ACL) zarówno w hosta samodzielnego scenariuszy i hostem sieci Web.  
+- Upewnij się, że pliki dziennika są chronione przez listy kontroli dostępu (ACL) zarówno w webhost i scenariuszy hosta własnego.  
   
-- Wybierz rozszerzenie pliku, który nie może być łatwo przekazywane za pomocą żądania sieci Web. Na przykład rozszerzenie pliku XML nie jest bezpiecznym wyborem. Można sprawdzić w podręczniku administratora usług IIS, aby wyświetlić listę rozszerzeń, które mogą być przekazywane.  
+- Wybierz rozszerzenie pliku, które nie może być łatwo obsługiwane za pomocą żądania sieci Web. Na przykład rozszerzenie pliku xml nie jest bezpiecznym wyborem. Można zapoznać się z przewodnikiem administracyjnym iis, aby wyświetlić listę rozszerzeń, które mogą być obsługiwane.  
   
-- Określ ścieżki bezwzględnej do lokalizacji pliku dziennika, która powinna być poza katalogiem WebHost publiczny głównego katalogu wirtualnego, aby uniemożliwić dostęp do innych firm za pomocą przeglądarki sieci Web.  
+- Określ ścieżkę bezwzględną dla lokalizacji pliku dziennika, która powinna znajdować się poza katalogiem publicznym WebHost vroot, aby uniemożliwić dostęp do niej przez stronę zewnętrzną za pomocą przeglądarki sieci Web.  
   
- Domyślnie klucze identyfikowalne dane osobowe (PII), takie jak nazwa użytkownika i hasło nie są rejestrowane w śladach i rejestrowane komunikaty. Administrator komputera, jednak można użyć `enableLoggingKnownPII` atrybutu w `machineSettings` elementu w pliku Machine.config, aby zezwolić aplikacji na maszynie się znane identyfikowalne dane osobowe (PII) w następujący sposób:  
+ Domyślnie klucze i informacje umożliwiające identyfikację użytkownika, takie jak nazwa użytkownika i hasło, nie są rejestrowane w ślady i rejestrowane wiadomości. Administrator komputera może jednak użyć `enableLoggingKnownPII` atrybutu `machineSettings` w elemencie pliku Machine.config, aby umożliwić aplikacjom uruchomionym na komputerze rejestrowanie znanych informacji umożliwiających identyfikację użytkownika w następujący sposób:  
   
 ```xml  
 <configuration>  
    <system.ServiceModel>  
       <machineSettings enableLoggingKnownPii="Boolean"/>  
    </system.ServiceModel>  
-</configuration>   
+</configuration>
 ```  
   
- Następnie można użyć narzędzia do wdrażania aplikacji `logKnownPii` atrybutu w pliku App.config lub Web.config, aby włączyć dane osobowe rejestrowanie się w następujący sposób:  
+ Wdrażający aplikację może następnie `logKnownPii` użyć atrybutu w pliku App.config lub Web.config, aby włączyć rejestrowanie danych umożliwiających identyfikację użytkowników w następujący sposób:  
   
 ```xml  
 <system.diagnostics>  
@@ -55,9 +55,9 @@ W tym temacie opisano, jak możesz chronić poufne informacje przed przypadkowym
 </system.diagnostics>  
 ```  
   
- Tylko wtedy, gdy oba ustawienia są `true` jest włączone rejestrowanie danych osobowych. Kombinacja dwóch przełączników umożliwia elastyczne się znane też danych osobowych dla każdej aplikacji.  
+ Tylko wtedy, `true` gdy oba ustawienia są włączone rejestrowanie pii. Połączenie dwóch przełączników umożliwia elastyczność rejestrowania znanych identyfikatorów umożliwiających identyfikację dla każdej aplikacji.  
   
- Należy pamiętać, jeśli określisz co najmniej dwóch źródeł niestandardowych w pliku konfiguracji, tylko atrybuty pierwszego źródła są odczytywane. Pozostałe są ignorowane. Oznacza to, że dla następujących App.config, plik, dane osobowe nie jest rejestrowana dla obu źródeł, mimo, że rejestrowanie danych osobowych jest jawnie włączone dla drugiego źródła.  
+ Należy pamiętać, że jeśli określisz dwa lub więcej źródeł niestandardowych w pliku konfiguracyjnym, odczytywane są tylko atrybuty pierwszego źródła. Pozostałe są ignorowane. Oznacza to, że dla następującego pliku App.config, informacje umożliwiające identyfikację nie są rejestrowane dla obu źródeł, mimo że rejestrowanie danych umożliwiających identyfikację jest jawnie włączone dla drugiego źródła.  
   
 ```xml  
 <system.diagnostics>  
@@ -70,7 +70,7 @@ W tym temacie opisano, jak możesz chronić poufne informacje przed przypadkowym
                 initializeData="c:\logs\messages.svclog" />  
           </listeners>  
       </source>  
-      <source name="System.ServiceModel"   
+      <source name="System.ServiceModel"
          logKnownPii="true">  
          <listeners>  
             <add name="xml" />  
@@ -80,16 +80,16 @@ W tym temacie opisano, jak możesz chronić poufne informacje przed przypadkowym
 </system.diagnostics>  
 ```  
   
- Jeśli `<machineSettings enableLoggingKnownPii="Boolean"/>` element istnieje poza pliku Machine.config, system generuje <xref:System.Configuration.ConfigurationErrorsException>.  
+ Jeśli `<machineSettings enableLoggingKnownPii="Boolean"/>` element istnieje poza plikiem Machine.config, system <xref:System.Configuration.ConfigurationErrorsException>zgłasza plik .  
   
- Zmiany zostaną zastosowane, tylko wtedy, gdy rozpoczyna się lub ponowne uruchomienie aplikacji. Zdarzenie jest rejestrowane podczas uruchamiania, gdy oba atrybuty są ustawione na `true`. Jeśli zdarzenie jest również rejestrowana `logKnownPii` ustawiono `true` , ale `enableLoggingKnownPii` jest `false`.  
+ Zmiany są skuteczne tylko wtedy, gdy aplikacja zostanie uruchomiona lub ponownie uruchomiona. Zdarzenie jest rejestrowane podczas uruchamiania, gdy `true`oba atrybuty są ustawione na . Zdarzenie jest również rejestrowane, `logKnownPii` jeśli `true` `enableLoggingKnownPii` jest `false`ustawione, ale jest .  
   
- Aby uzyskać więcej informacji na temat rejestrowania danych osobowych, zobacz [blokada zabezpieczeń PII](../../../../../docs/framework/wcf/samples/pii-security-lockdown.md) próbki.  
+ Aby uzyskać więcej informacji na temat rejestrowania informacji umożliwiających identyfikację, zobacz przykład [blokady zabezpieczeń pii.](../../../../../docs/framework/wcf/samples/pii-security-lockdown.md)  
   
- Administrator maszyny i wdrażania aplikacji należy zachować wyjątkową ostrożność, korzystając z tych dwóch przełączników. Jeśli włączono rejestrowanie dane osobowe, kluczy zabezpieczeń i dane osobowe są rejestrowane. Jeśli jest wyłączone, dane poufne i specyficzne dla aplikacji są nadal rejestrowane w wiadomości nagłówki i treść. Bardziej szczegółowe omówienie dotyczące ochrony prywatności i ochrony danych osobowych przed przypadkowym, zobacz [rozwiązania prywatność użytkownika](https://go.microsoft.com/fwlink/?LinkID=94647).  
+ Administrator komputera i wdrażający aplikacje powinni zachować szczególną ostrożność podczas korzystania z tych dwóch przełączników. Jeśli rejestrowanie danych umożliwiających identyfikację jest włączone, rejestrowane są klucze zabezpieczeń i dane umożliwiające identyfikację. Jeśli jest wyłączona, poufne i specyficzne dla aplikacji dane są nadal rejestrowane w nagłówkach wiadomości i treści. Aby uzyskać dokładniejszą dyskusję na temat prywatności i ochrony informacji umożliwiających identyfikację użytkownika przed narażeniem, zobacz [Prywatność użytkowników](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480490(v=msdn.10)).  
   
- Ponadto adres IP nadawcy wiadomości jest rejestrowane raz na połączenia dla transportu nawiązaniem połączenia i jeden raz na wiadomością wysłaną w inny sposób. Można to zrobić bez zgody nadawcy. Jednak rejestrowanie występuje tylko na poziomie informacji lub pełne śledzenie, które nie są domyślnie lub zalecane poziomy śledzenia w środowisku produkcyjnym, z wyjątkiem aktywnego debugowania.  
+ Ponadto adres IP nadawcy wiadomości jest rejestrowany raz na połączenie dla transportów zorientowanych na połączenie, a raz na wiadomość wysłaną w inny sposób. Odbywa się to bez zgody nadawcy. Jednak to rejestrowanie występuje tylko na poziomach śledzenia informacji lub pełnej, które nie są domyślnymi lub zalecanymi poziomami śledzenia w produkcji, z wyjątkiem debugowania na żywo.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)

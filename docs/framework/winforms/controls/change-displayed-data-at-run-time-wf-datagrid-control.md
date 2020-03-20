@@ -1,5 +1,5 @@
 ---
-title: Zmiana wyświetlanych danych w czasie wykonywania w formancie DataGrid
+title: Zmienianie wyświetlanych danych w czasie wykonywania w formancie DataGrid
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,27 +10,27 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], data binding
 - cells [Windows Forms], changing DataGrid cell values
 ms.assetid: 0c7a6d00-30de-416e-8223-0a81ddb4c1f8
-ms.openlocfilehash: f91e2ea01ef4a52dd649efed70319017efb8368a
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 6b788c10784082a0c74ee09f8cd85d540c670b84
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76740587"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142384"
 ---
 # <a name="how-to-change-displayed-data-at-run-time-in-the-windows-forms-datagrid-control"></a>Porady: zmienianie wyświetlanych danych w czasie wykonywania w formancie DataGrid formularzy systemu Windows
 > [!NOTE]
-> Formant <xref:System.Windows.Forms.DataGridView> zamienia i dodaje funkcje do kontrolki <xref:System.Windows.Forms.DataGrid>; Niemniej jednak kontrolka <xref:System.Windows.Forms.DataGrid> jest zachowywana na potrzeby zgodności z poprzednimi wersjami i w przyszłości. Aby uzyskać więcej informacji, zobacz [różnice między kontrolkami DataGridView i DataGrid Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+> Formant <xref:System.Windows.Forms.DataGridView> zastępuje i dodaje funkcjonalność <xref:System.Windows.Forms.DataGrid> do formantu; jednak <xref:System.Windows.Forms.DataGrid> formant jest zachowywany zarówno dla zgodności z powrotem i przyszłego użycia, jeśli wybierzesz. Aby uzyskać więcej informacji, zobacz [Różnice między formami Windows DataGridView i DataGrid Formantów](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Po utworzeniu <xref:System.Windows.Forms.DataGrid> Windows Forms przy użyciu funkcji czasu projektowania, można również dynamicznie zmieniać elementy obiektu <xref:System.Data.DataSet> siatki w czasie wykonywania. Może to obejmować zmiany poszczególnych wartości tabeli lub zmianę źródła danych powiązanego z kontrolką <xref:System.Windows.Forms.DataGrid>. Zmiany poszczególnych wartości są wykonywane za pomocą obiektu <xref:System.Data.DataSet>, a nie formantu <xref:System.Windows.Forms.DataGrid>.  
+ Po utworzeniu formularzy <xref:System.Windows.Forms.DataGrid> systemu Windows przy użyciu funkcji czasu projektowania można <xref:System.Data.DataSet> również dynamicznie zmieniać elementy obiektu siatki w czasie wykonywania. Może to obejmować zmiany poszczególnych wartości tabeli lub zmiana źródła <xref:System.Windows.Forms.DataGrid> danych powiązanego z formantem. Zmiany poszczególnych wartości są <xref:System.Data.DataSet> wykonywane za <xref:System.Windows.Forms.DataGrid> pośrednictwem obiektu, a nie formantu.  
   
 ### <a name="to-change-data-programmatically"></a>Aby programowo zmienić dane  
   
-1. Określ żądaną tabelę z obiektu <xref:System.Data.DataSet> i żądany wiersz i pole z tabeli i ustaw komórkę równą nowej wartości.  
+1. Określ żądaną <xref:System.Data.DataSet> tabelę z obiektu oraz żądany wiersz i pole z tabeli i ustaw komórkę równą nowej wartości.  
   
     > [!NOTE]
-    > Aby określić pierwszą tabelę <xref:System.Data.DataSet> lub pierwszy wiersz tabeli, należy użyć 0.  
+    > Aby określić pierwszą <xref:System.Data.DataSet> tabelę lub pierwszy wiersz tabeli, użyj 0.  
   
-     Poniższy przykład pokazuje, jak zmienić drugi wpis pierwszego wiersza w pierwszej tabeli zestawu danych, klikając `Button1`. Wcześniej utworzono <xref:System.Data.DataSet> (`ds`) i tabele (`0` i `1`).  
+     W poniższym przykładzie pokazano, jak zmienić drugi wpis pierwszego wiersza `Button1`pierwszej tabeli zestawu danych, klikając przycisk . ( <xref:System.Data.DataSet> `ds`) i`0` tabele ( i `1`) zostały wcześniej utworzone.  
   
     ```vb  
     Protected Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -46,14 +46,14 @@ ms.locfileid: "76740587"
     ```  
   
     ```cpp  
-    private:   
+    private:
        void button1_Click(System::Object^ sender, System::EventArgs^ e)  
        {  
           dataSet1->Tables[0]->Rows[0][1] = "NewEntry";  
        }  
     ```  
   
-     (Wizualizacja C#, C++wizualizacja) Umieść poniższy kod w Konstruktorze formularza, aby zarejestrować procedurę obsługi zdarzeń.  
+     (Visual C#, Visual C++) Umieść następujący kod w konstruktorze formularza, aby zarejestrować program obsługi zdarzeń.  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
@@ -64,13 +64,13 @@ ms.locfileid: "76740587"
        gcnew System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-     W czasie wykonywania można użyć metody <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>, aby powiązać formant <xref:System.Windows.Forms.DataGrid> z innym źródłem danych. Na przykład może istnieć kilka ADO.NETch kontrolek danych połączonych z inną bazą danych.  
+     W czasie wykonywania można <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> użyć metody <xref:System.Windows.Forms.DataGrid> do powiązania formantu z innym źródłem danych. Na przykład może mieć kilka formantów ADO.NET danych, każdy połączony z inną bazą danych.  
   
-### <a name="to-change-the-datasource-programmatically"></a>Aby programowo zmienić źródło danych  
+### <a name="to-change-the-datasource-programmatically"></a>Aby zmienić źródło danych programowo  
   
-1. Ustaw metodę <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> na nazwę źródła danych i tabeli, do której chcesz utworzyć powiązanie.  
+1. Ustaw <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> metodę na nazwę źródła danych i tabeli, z którą chcesz się powiązać.  
   
-     Poniższy przykład pokazuje, jak zmienić źródło danych przy użyciu metody <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> na ADO.NET (adoPubsAuthors), która jest połączona z tabelą autorów w bazie danych pubs.  
+     Poniższy przykład pokazuje, jak zmienić <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> źródło daty przy użyciu metody na formant danych ADO.NET (adoPubsAuthors), który jest połączony z tabeli Autorzy w bazie danych pubów.  
   
     ```vb  
     Private Sub ResetSource()  
@@ -93,9 +93,9 @@ ms.locfileid: "76740587"
        }  
     ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Zestawy danych ADO.NET](../../data/adonet/ado-net-datasets.md)
-- [Instrukcje: usuwanie lub ukrywanie kolumn w kontrolce DataGrid formularzy Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [Porady: usuwanie lub ukrywanie kolumn w formancie DataGrid formularzy systemu Windows](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
 - [Instrukcje: dodawanie tabel i kolumn do kontrolki DataGrid formularzy Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
 - [Instrukcje: powiązywanie kontrolki DataGrid formularzy Windows Forms ze źródłem danych](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)

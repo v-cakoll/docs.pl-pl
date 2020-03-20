@@ -1,18 +1,17 @@
 ---
-ms.openlocfilehash: c1a2d76b4e596acc395da6cefed008078e57a336
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 22f8e3bb1ba72379b3f5fc87a077e5fe57f89bf8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67858598"
 ---
-### <a name="null-coalescer-values-are-not-visible-in-debugger-until-one-step-later"></a>Wartości null coalescer nie są widoczne w debugerze, dopóki jeden krok później
+### <a name="null-coalescer-values-are-not-visible-in-debugger-until-one-step-later"></a>Null coalescer wartości nie są widoczne w debugerze, aż jeden krok później
 
 |   |   |
 |---|---|
-|Szczegóły|Usterki w programie .NET Framework 4.5 powoduje, że wartości ustawione za pośrednictwem o wartości null operacji łączącego nie powinny być widoczne w debugerze natychmiast po zakończeniu operacji przypisania jest wykonywany podczas uruchamiania na 64-bitowej wersji Framework.|
-|Sugestia|Przechodzenie krok po kroku jeden dodatkowy czas w debugerze spowoduje, że lokalne/pola. wartość do zaktualizowania poprawnie. Ponadto ten problem został rozwiązany w .NET Framework 4.6; Uaktualnianie do wersji Framework powinno rozwiązać problem.|
-|Scope|Krawędź|
+|Szczegóły|Błąd w programie .NET Framework 4.5 powoduje, że wartości ustawione za pomocą operacji scalania null nie są widoczne w debugerze natychmiast po wykonaniu operacji przypisania podczas uruchamiania w 64-bitowej wersji frameworka.|
+|Sugestia|Krok po jednym dodatkowym czasie w debugerze spowoduje, że wartość lokalnego/pola zostanie poprawnie zaktualizowana. Ponadto ten problem został rozwiązany w .NET Framework 4.6; aktualizacji do tej wersji ram, należy rozwiązać ten problem.|
+|Zakres|Brzeg|
 |Wersja|4.5|
 |Typ|Środowisko uruchomieniowe|
-

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 47915d33-b7bf-409e-b484-4ee1df15de22
 topic_type:
 - apiref
-ms.openlocfilehash: cea84f47a5289df4bc9c50381e18d7077b3b8dad
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2662af41fbd2cdc3ce8a6df1e036dfc5b22ff6a3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440476"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175554"
 ---
 # <a name="imetadataemittranslatesigwithscope-method"></a>IMetaDataEmit::TranslateSigWithScope — Metoda
 Importuje zestaw do bieżącego zakresu i pobiera nowy podpis metadanych dla scalonego zakresu.  
@@ -28,68 +28,68 @@ Importuje zestaw do bieżącego zakresu i pobiera nowy podpis metadanych dla sca
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
-HRESULT TranslateSigWithScope (   
-    [in]  IMetaDataAssemblyImport   *pAssemImport,   
-    [in]  const void                *pbHashValue,   
-    [in]  ULONG                     cbHashValue,   
-    [in]  IMetaDataImport           *import,   
-    [in]  PCCOR_SIGNATURE           pbSigBlob,   
+HRESULT TranslateSigWithScope (
+    [in]  IMetaDataAssemblyImport   *pAssemImport,
+    [in]  const void                *pbHashValue,
+    [in]  ULONG                     cbHashValue,
+    [in]  IMetaDataImport           *import,
+    [in]  PCCOR_SIGNATURE           pbSigBlob,
     [in]  ULONG                     cbSigBlob,  
-    [in]  IMetaDataAssemblyEmit     *pAssemEmit,   
-    [in]  IMetaDataEmit             *emit,   
-    [out] PCOR_SIGNATURE            pvTranslatedSig,   
-    [in]  ULONG                     cbTranslatedSigMax,   
-    [out] ULONG                     *pcbTranslatedSig   
+    [in]  IMetaDataAssemblyEmit     *pAssemEmit,
+    [in]  IMetaDataEmit             *emit,
+    [out] PCOR_SIGNATURE            pvTranslatedSig,
+    [in]  ULONG                     cbTranslatedSigMax,
+    [out] ULONG                     *pcbTranslatedSig
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `pAssemImport`  
- podczas Interfejs dla zestawu importu (gdzie sygnatura jest zdefiniowana).  
+ [w] Interfejs zestawu importu (w którym zdefiniowano podpis).  
   
  `pbHashValue`  
- podczas Obiekt BLOB mieszania dla zestawu.  
+ [w] Obiekt blob skrótu dla zestawu.  
   
  `cbHashValue`  
- podczas Liczba bajtów w `pbHashValue`.  
+ [w] Liczba bajtów `pbHashValue`w pliku .  
   
  `import`  
- podczas Interfejs dla zakresu metadanych importu.  
+ [w] Interfejs dla zakresu metadanych importu.  
   
  `pbSigBlob`  
- podczas Podpis do zaimportowania.  
+ [w] Podpis do zaimportowania.  
   
  `cbSigBlob`  
- podczas Rozmiar w bajtach `pbSigBlob`.  
+ [w] Rozmiar w bajtach `pbSigBlob`.  
   
  `pAssemEmit`  
- podczas Interfejs do eksportowania zestawu.  
+ [w] Interfejs do zestawu eksportu.  
   
  `emit`  
- podczas Interfejs do eksportowania zakresu metadanych.  
+ [w] Interfejs do eksportu zakresu metadanych.  
   
  `pvTranslatedSig`  
- określoną Bufor do przechowywania przetłumaczonego obiektu BLOB sygnatury.  
+ [na zewnątrz] Bufor do przechowywania przetłumaczonego obiektu blob podpisu.  
   
  `cbTranslatedSigMax`  
- podczas Pojemność, w bajtach, `pvTranslatedSig`.  
+ [w] Pojemność w bajtach `pvTranslatedSig`.  
   
  `pcbTranslatedSig`  
- określoną Liczba rzeczywistych bajtów w przetłumaczonym podpisie.  
+ [na zewnątrz] Liczba bajtów rzeczywistych w przetłumaczonym podpisie.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
+ **Biblioteka:** Używany jako zasób w pliku MSCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataAssemblyEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
-- [IMetaDataAssemblyImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
-- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataAssemblyEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

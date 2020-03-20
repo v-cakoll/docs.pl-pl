@@ -1,39 +1,39 @@
 ---
-title: 'Ograniczanie: X509CertificateClaimSet. FindClaims Metoda'
+title: 'Łagodzenie: X509CertificateClaimSet.FindClaims Metoda'
 ms.date: 03/30/2017
 ms.assetid: ee356e3b-f932-48f5-875a-5e42340bee63
-ms.openlocfilehash: e75b1cae599b153012b8525a0e1e36ed116e695f
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f94a5f685a5aa94332bf2e15e5d5eb0def02d7ef
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73457755"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79400142"
 ---
-# <a name="mitigation-x509certificateclaimsetfindclaims-method"></a>Ograniczanie: X509CertificateClaimSet. FindClaims Metoda
-Począwszy od aplikacji, które są przeznaczone dla .NET Framework 4.6.1, Metoda <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> podejmie próbę dopasowania argumentu `claimType` ze wszystkimi wpisami DNS w jego polu SAN.  
+# <a name="mitigation-x509certificateclaimsetfindclaims-method"></a>Łagodzenie: X509CertificateClaimSet.FindClaims Metoda
+Począwszy od aplikacji docelowych .NET Framework 4.6.1, <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> `claimType` metoda będzie próbować dopasować argument do wszystkich wpisów DNS w polu SAN.  
   
 ## <a name="impact"></a>Wpływ  
- Ta zmiana ma wpływ tylko na aplikacje, które są przeznaczone dla wersji .NET Framework począwszy od .NET Framework 4.6.1.  
+ Ta zmiana dotyczy tylko aplikacji, które docelowe wersje programu .NET Framework, począwszy od programu .NET Framework 4.6.1.  
   
- W przypadku aplikacji przeznaczonych dla poprzednich wersji .NET Framework Metoda <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> próbuje dopasować argument `claimType` tylko do ostatniego wpisu DNS.  
+ W przypadku aplikacji przeznaczonych dla poprzednich <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> wersji programu .NET Framework metoda próbuje dopasować `claimType` argument tylko do ostatniego wpisu DNS.  
   
-## <a name="mitigation"></a>Ograniczenie  
- Jeśli ta zmiana jest niepożądana, aplikacje, które są przeznaczone dla wersji .NET Framework począwszy od .NET Framework 4.6.1 mogą zrezygnować z niego, dodając następujące ustawienia konfiguracji [\<do sekcji > Runtime](../configure-apps/file-schema/runtime/runtime-element.md) w pliku konfiguracyjnym aplikacji:  
-  
-```xml  
-<runtime>  
-   <AppContextSwitchOverrides value="Switch.System.IdentityModel.DisableMultipleDNSEntriesInSANCertificate=true" />   
-</runtime>  
-```  
-  
- Ponadto aplikacje, które są przeznaczone dla poprzednich wersji .NET Framework, ale działają w ramach .NET Framework 4.6.1 i nowszych wersji, mogą zrezygnować z tego zachowania, dodając następujące ustawienia konfiguracji do sekcji [> środowiska uruchomieniowego\<](../configure-apps/file-schema/runtime/runtime-element.md) plik konfiguracji aplikacji:  
+## <a name="mitigation"></a>Środki zaradcze  
+ Jeśli ta zmiana jest niepożądana, aplikacje docelowe wersji programu .NET Framework, począwszy od programu .NET Framework 4.6.1, mogą zrezygnować z niej, dodając następujące ustawienie konfiguracji do sekcji [ \<>środowiska wykonawczego](../configure-apps/file-schema/runtime/runtime-element.md) pliku konfiguracyjnego aplikacji:  
   
 ```xml  
 <runtime>  
-    <AppContextSwitchOverrides value="Switch.System.IdentityModel.DisableMultipleDNSEntriesInSANCertificate=false" />   
+   <AppContextSwitchOverrides value="Switch.System.IdentityModel.DisableMultipleDNSEntriesInSANCertificate=true" />
 </runtime>  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+ Ponadto aplikacje przeznaczone dla poprzednich wersji programu .NET Framework, ale uruchomione w ramach programu .NET Framework 4.6.1 i nowszych wersji mogą zdecydować się na to zachowanie, dodając następujące ustawienie konfiguracji do sekcji [ \<>środowiska wykonawczego](../configure-apps/file-schema/runtime/runtime-element.md) pliku konfiguracyjnego aplikacji:  
+  
+```xml  
+<runtime>  
+    <AppContextSwitchOverrides value="Switch.System.IdentityModel.DisableMultipleDNSEntriesInSANCertificate=false" />
+</runtime>  
+```  
+  
+## <a name="see-also"></a>Zobacz też
 
 - [Zgodność aplikacji](application-compatibility.md)

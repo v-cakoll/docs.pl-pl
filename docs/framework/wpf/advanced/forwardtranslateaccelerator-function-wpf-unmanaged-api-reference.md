@@ -1,5 +1,5 @@
 ---
-title: Funkcja ForwardTranslateAccelerator — dokumentacja interfejsu API Unmanaged WPF
+title: ForwardTranslateAccelerator, funkcja — odwołanie do niezarządzanego interfejsu API WPF WPF
 titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
@@ -9,45 +9,45 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: fff47a86-9d9f-4176-9530-10e1876e393f
-ms.openlocfilehash: f6e8208ffe2c186234f30f31e346ca6b1d0be4c0
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: a0a01be3000dc53df7855cb74015ba1164206838
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76747035"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186629"
 ---
-# <a name="forwardtranslateaccelerator-function-wpf-unmanaged-api-reference"></a>ForwardTranslateAccelerator — funkcja (odwołanie do niezarządzanego interfejsu API platformy WPF)
-Ten interfejs API obsługuje infrastrukturę Windows Presentation Foundation (WPF) i nie jest przeznaczony do użycia bezpośrednio w kodzie.  
+# <a name="forwardtranslateaccelerator-function-wpf-unmanaged-api-reference"></a>ForwardTranslateAccelerator, funkcja (odwołanie do interfejsu API niezarządzanego WPF)
+Ten interfejs API obsługuje infrastrukturę Programu Windows Presentation Foundation (WPF) i nie jest przeznaczony do użycia bezpośrednio z kodu.  
   
- Używany przez infrastrukturę Windows Presentation Foundation (WPF) do zarządzania systemem Windows.  
+ Używane przez Windows Presentation Foundation (WPF) infrastruktury do zarządzania systemem Windows.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
 HRESULT ForwardTranslateAccelerator(  
-   MSG* pMsg,   
+   MSG* pMsg,
    VARIANT_BOOL appUnhandled  
 )  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  pMsg  
- Wskaźnik do komunikatu.  
+ Wskaźnik do wiadomości.  
   
- appUnhandled  
- `true`, gdy aplikacja uzyskała już szansę obsługi wiadomości wejściowej, ale jej nie została obsłużona; w przeciwnym razie `false`.  
+ appNieręczny  
+ `true`gdy aplikacja ma już szansę obsłużyć komunikat wejściowy, ale nie obsługuje go; w `false`przeciwnym razie , .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe .NET Framework](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [.NET Framework Wymagania systemowe](../../get-started/system-requirements.md).  
   
- **BIBLIOTECE**  
+ **Dll:**  
   
- W .NET Framework 3,0 i 3,5: PresentationHostDLL. dll  
+ W pliku .NET Framework 3.0 i 3.5: PresentationHostDLL.dll  
   
- W .NET Framework 4 i nowszych: PresentationHost_v0400. dll  
+ W pliku .NET Framework 4 i nowszym: PresentationHost_v0400.dll  
   
- **Wersja .NET Framework:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
+ **Wersja programu .NET Framework:**[!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Niezarządzane interfejsy API WPF — informacje](wpf-unmanaged-api-reference.md)

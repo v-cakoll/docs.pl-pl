@@ -1,21 +1,21 @@
 ---
-title: 'Instrukcje: Wyświetlanie zawartości katalogu przy użyciu protokołu FTP'
-description: W tym artykule przedstawiono przykładowy sposób wyświetlenia listy zawartości katalogu serwera FTP.
+title: 'Jak: Lista zawartości katalogu za pomocą protokołu FTP'
+description: W tym artykule przedstawiono przykładowy sposób wyświetlania listy zawartości katalogu serwera FTP.
 ms.date: 06/26/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 130c64c9-7b7f-4672-9b3b-d946bd2616c5
 ms.openlocfilehash: 924e6731ce585f127af319fdbfbdc8c12e61c46d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "61642623"
 ---
-# <a name="how-to-list-directory-contents-with-ftp"></a>Instrukcje: Wyświetlanie zawartości katalogu przy użyciu protokołu FTP
+# <a name="how-to-list-directory-contents-with-ftp"></a>Jak: Lista zawartości katalogu za pomocą protokołu FTP
 
-Ten przykład ilustruje sposób wyświetlenia listy zawartości katalogu serwera FTP.
+W tym przykładzie pokazano, jak wyświetlić listę zawartości katalogu serwera FTP.
 
 ## <a name="example"></a>Przykład
 
@@ -81,7 +81,7 @@ Namespace Examples.System.Net
 End Namespace
 ```
 
-Jeśli potrzebujesz wyświetlić listę określonego katalogu, wystarczy dodać katalog do końca identyfikatora URI jest używany w <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> metody:
+Jeśli chcesz wyświetlić listę określonego katalogu, wystarczy dodać katalog na końcu identyfikatora URI, którego używasz w metodzie: <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType>
 
 ```csharp
 FtpWebRequest request = (FtpWebRequest)WebRequest.Create("ftp://www.contoso.com/your_preferred_directory");

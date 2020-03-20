@@ -20,16 +20,16 @@ helpviewer_keywords:
 - user authentication, digest
 ms.assetid: 8cce2742-8d52-4643-9dd2-64ddf38aa878
 ms.openlocfilehash: 9a1ad701e1e8f4ee9966ebd56922c29e2bae7a03
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048900"
 ---
 # <a name="basic-and-digest-authentication"></a>Uwierzytelnianie podstawowe i szyfrowane
-<xref:System.Net> Implementacja uwierzytelniania podstawowego i szyfrowanego jest zgodna z RFC2617 — uwierzytelnianie http: Uwierzytelnianie podstawowe i szyfrowane (dostępne w witrynie sieci Web [organizacja World Wide Web Consortium](https://www.w3.org) ).  
+Implementacja <xref:System.Net> uwierzytelniania podstawowego i szyfrowego jest zgodna z rfc2617 — uwierzytelnianie HTTP: uwierzytelnianie podstawowe i szyfrowane (dostępne na stronie internetowej [world wide web consortium).](https://www.w3.org)  
   
- Aby można było korzystać z uwierzytelniania podstawowego i szyfrowanego, aplikacja musi podać nazwę użytkownika i hasło we <xref:System.Net.WebRequest.Credentials%2A> właściwości <xref:System.Net.WebRequest> obiektu, którego używa do żądania danych z Internetu, jak pokazano w poniższym przykładzie.  
+ Aby użyć uwierzytelniania podstawowego i szyfrowanego, aplikacja <xref:System.Net.WebRequest.Credentials%2A> musi <xref:System.Net.WebRequest> podać nazwę użytkownika i hasło we właściwości obiektu, który używa do żądania danych z Internetu, jak pokazano w poniższym przykładzie.  
   
 ```vb  
 Dim MyURI As String = "http://www.contoso.com/"  
@@ -44,9 +44,9 @@ WReq.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword);
 ```  
   
 > [!CAUTION]
-> Dane wysyłane z uwierzytelnianiem podstawowym i szyfrowanym nie są szyfrowane, więc dane mogą być widoczne przez atakującej. Ponadto poświadczenia uwierzytelniania podstawowego (nazwa użytkownika i hasło) są wysyłane w postaci jasnej i mogą być przechwytywane.  
+> Dane wysyłane za pomocą uwierzytelniania podstawowego i szyfrowanego nie są szyfrowane, więc dane mogą być widoczne przez przeciwnika. Ponadto poświadczenia uwierzytelniania podstawowego (nazwa użytkownika i hasło) są wysyłane w sposób czysty i mogą zostać przechwycone.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Uwierzytelnianie NTLM i uwierzytelnianie Kerberos](ntlm-and-kerberos-authentication.md)
 - [Uwierzytelnianie internetowe](internet-authentication.md)

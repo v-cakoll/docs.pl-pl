@@ -8,101 +8,101 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-ms.openlocfilehash: 2331e484f22be7e3154a4cff981ee320a9b143a5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 86c679af77f2b7b1960e7489e0e6e61b811e1bad
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948161"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185222"
 ---
 # <a name="federation"></a>Federacja
-Ten temat zawiera krótkie omówienie koncepcji zabezpieczeń federacyjnych. Opisano w nim również obsługę Windows Communication Foundation (WCF) na potrzeby wdrażania federacyjnych architektur zabezpieczeń. Aby zapoznać się z przykładową aplikacją, która demonstruje Federacji, zobacz [przykład Federacji](../../../../docs/framework/wcf/samples/federation-sample.md).  
+Ten temat zawiera krótki przegląd pojęcia zabezpieczeń federacyjnej. Opisano w nim również obsługę programu Windows Communication Foundation (WCF) w zakresie wdrażania architektur zabezpieczeń federacyjnego. Aby zapoznać się z przykładową aplikacją, która demonstruje federację, zobacz [Próbka federacyjne](../../../../docs/framework/wcf/samples/federation-sample.md).  
   
-## <a name="definition-of-federated-security"></a>Definicja zabezpieczeń federacyjnych  
- Zabezpieczenia federacyjne umożliwiają czyste rozdzielenie między usługą dostępną przez klienta a związanymi z nimi procedurami uwierzytelniania i autoryzacji. Zabezpieczenia federacyjne umożliwiają również współpracę między wieloma systemami, sieciami i organizacjami w różnych obszarach zaufania.  
+## <a name="definition-of-federated-security"></a>Definicja zabezpieczeń federacyjnej  
+ Zabezpieczenia federacyjne umożliwiają czystą separację między usługą, do która klient uzyskuje dostęp, a skojarzonymi procedurami uwierzytelniania i autoryzacji. Zabezpieczenia federacyjne umożliwiają również współpracę między wieloma systemami, sieciami i organizacjami w różnych domenach zaufania.  
   
- Funkcja WCF zapewnia obsługę kompilowania i wdrażania systemów rozproszonych, które wykorzystują zabezpieczenia federacyjne.  
+ WCF zapewnia obsługę tworzenia i wdrażania systemów rozproszonych, które wykorzystują zabezpieczenia federacyjne.  
   
-### <a name="elements-of-a-federated-security-architecture"></a>Elementy architektury zabezpieczeń federacyjnych  
- Architektura zabezpieczeń federacyjnych ma trzy kluczowe elementy, zgodnie z opisem w poniższej tabeli.  
+### <a name="elements-of-a-federated-security-architecture"></a>Elementy architektury zabezpieczeń federacyjnej  
+ Architektura zabezpieczeń federacyjnej ma trzy kluczowe elementy, zgodnie z opisem w poniższej tabeli.  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|Domena/obszar|Pojedyncza jednostka administrowania zabezpieczeniami lub zaufania. Typowa domena może obejmować jedną organizację.|  
-|Federacja|Kolekcja domen, które mają ustanowioną relację zaufania. Poziom zaufania może się różnić, ale zazwyczaj obejmuje uwierzytelnianie i prawie zawsze obejmuje autoryzację. Typowa Federacja może obejmować wiele organizacji, które ustanowiły zaufanie dostępu współdzielonego do zestawu zasobów.|  
-|Usługa tokenu zabezpieczającego (STS)|Usługa sieci Web, która wystawia tokeny zabezpieczające; oznacza to, że wykonuje potwierdzenia oparte na zasobie, że ufa, aby whomever je z zaufaniem. Stanowi to podstawę zaufania między domenami.|  
+|Domena/królestwo|Pojedyncza jednostka administracji zabezpieczeń lub zaufania. Typowa domena może obejmować jedną organizację.|  
+|Federacja|Kolekcja domen, które nawiązały zaufanie. Poziom zaufania może się różnić — zwykle obejmuje uwierzytelnianie i niemal zawsze autoryzację. Typowa federacja może obejmować kilka organizacji, które mają ustanowioną relację zaufania na potrzeby dostępu współdzielonego do zestawu zasobów.|  
+|Usługa tokenu zabezpieczającego (STS)|Usługa sieci Web, która wystawia tokeny zabezpieczające; oznacza to, że sprawia, że twierdzenia oparte na dowodach, że ufa, kto mu ufa. Stanowi to podstawę brokerowania zaufania między domenami.|  
   
 ### <a name="example-scenario"></a>Przykładowy scenariusz  
  Na poniższej ilustracji przedstawiono przykład zabezpieczeń federacyjnych:  
   
- ![Diagram przedstawiający typowy scenariusz zabezpieczeń federacyjnych.](./media/federation/typical-federated-security-scenario.gif)  
+ ![Diagram przedstawiający typowy scenariusz zabezpieczeń federacyjnej.](./media/federation/typical-federated-security-scenario.gif)  
   
- Ten scenariusz obejmuje dwie organizacje: A i B. organizacja B ma zasób sieci Web (usługę sieci Web), który niektórzy użytkownicy w organizacji znalazły wartość cenną.  
+ Ten scenariusz obejmuje dwie organizacje: A i B. Organizacja B ma zasób sieci Web (usługa sieci Web), który niektórzy użytkownicy w organizacji A uważają za wartościowy.  
   
 > [!NOTE]
-> Ta sekcja używa zamiennie postanowień dotyczących *zasobów*, *usług*i *usług sieci Web* .  
+> W tej sekcji użyto *warunków zasób*, *usługa*i usługa *sieci Web* zamiennie.  
   
- Zazwyczaj organizacja B wymaga, aby przed uzyskaniem dostępu do usługi użytkownik z organizacji A zapewniał pewną prawidłową formę uwierzytelniania. Ponadto organizacja może również wymagać, aby użytkownik miał uprawnienia dostępu do określonego zasobu. Jednym ze sposobów rozwiązania tego problemu i umożliwienie użytkownikom w organizacji A uzyskiwania dostępu do zasobu w organizacji B jest następująca:  
+ Zazwyczaj organizacja B wymaga, aby użytkownik z organizacji A dostarczył prawidłową formę uwierzytelniania przed dostępem do usługi. Ponadto organizacja może również wymagać, aby użytkownik był upoważniony do uzyskania dostępu do określonego zasobu, o których mowa. Jednym ze sposobów rozwiązania tego problemu i umożliwienia użytkownikom w organizacji A dostępu do zasobu w organizacji B jest następujący sposób:  
   
-- Użytkownicy z organizacji A rejestrują swoje poświadczenia (nazwa użytkownika i hasło) w organizacji B.  
+- Użytkownicy z organizacji A rejestrują swoje poświadczenia (nazwę użytkownika i hasło) w organizacji B.  
   
-- Podczas uzyskiwania dostępu do zasobów użytkownicy z organizacji składają swoje poświadczenia do organizacji B i są uwierzytelniani przed uzyskaniem dostępu do zasobu.  
+- Podczas dostępu do zasobów użytkownicy z organizacji A prezentują swoje poświadczenia w organizacji B i są uwierzytelnieni przed dostępem do zasobu.  
   
- Takie podejście ma trzy znaczące wady:  
+ Takie podejście ma trzy istotne wady:  
   
-- Organizacja B musi zarządzać poświadczeniami użytkowników z organizacji A poza zarządzaniem poświadczeniami użytkowników lokalnych.  
+- Organizacja B musi zarządzać poświadczeniami dla użytkowników z organizacji A oprócz zarządzania poświadczeniami użytkowników lokalnych.  
   
-- Użytkownicy w organizacji muszą zachować dodatkowy zestaw poświadczeń (czyli zapamiętać dodatkową nazwę użytkownika i hasło) od poświadczeń, z których zazwyczaj korzystają, aby uzyskać dostęp do zasobów w organizacji A. Zwykle jest to zalecane w przypadku używania tej samej nazwy użytkownika i hasła w wielu lokacjach usług, co jest słabym środkiem bezpieczeństwa.  
+- Użytkownicy w organizacji A muszą zachować dodatkowy zestaw poświadczeń (czyli zapamiętać dodatkową nazwę użytkownika i hasło) oprócz poświadczeń, których zwykle używają do uzyskiwania dostępu do zasobów w organizacji A. Zazwyczaj zachęca to do stosowania tej samej nazwy użytkownika i hasła w wielu witrynach serwisowych, co jest słabym środkiem bezpieczeństwa.  
   
-- Architektura nie jest skalowana, ponieważ coraz więcej organizacji postrzega zasób w organizacji B jako część wartości.  
+- Architektura nie skaluje się, ponieważ więcej organizacji postrzega zasób w organizacji B jako o pewnej wartości.  
   
- Alternatywne podejście, które dotyczy wyżej wspomnianych wad, ma na celu zastosowanie zabezpieczeń federacyjnych. W tym podejściu organizacje A i B ustanawiają relację zaufania i korzystają z usługi tokenu zabezpieczającego (STS) w celu umożliwienia brokera ustanowionego zaufania.  
+ Alternatywnym podejściem, które rozwiązuje wspomniane wcześniej wady, jest stosowanie zabezpieczeń federacyjnej. W tym podejściu organizacje A i B ustanawiają relację zaufania i wykorzystują usługę tokenu zabezpieczeń (STS), aby umożliwić pośrednictwo w ustalonym zaufaniu.  
   
- W federacyjnej architekturze zabezpieczeń Użytkownicy z organizacji wiedzą, że jeśli chcą uzyskać dostęp do usługi sieci Web w organizacji B, która musi przedstawić prawidłowy token zabezpieczający z STS w organizacji B, który uwierzytelnia i autoryzuje dostęp do określona usługa.  
+ W architekturze zabezpieczeń federacyjnego użytkownicy z organizacji A wiedzą, że jeśli chcą uzyskać dostęp do usługi sieci Web w organizacji B, muszą przedstawić prawidłowy token zabezpieczający z STS w organizacji B, który uwierzytelnia i zezwala na ich dostęp do konkretnej usługi.  
   
- Podczas kontaktowania się z usługą STS B użytkownicy otrzymują kolejny poziom pośredni z zasad skojarzonych z usługą STS. Muszą one przedstawić prawidłowy token zabezpieczający od usługi STS A (czyli obszaru zaufania klienta) przed wystawieniem im tokenu zabezpieczającego przez usługę STS B. Jest to współrzut relacji zaufania ustanowiony między obiema organizacjami i oznacza, że organizacja B nie musi zarządzać tożsamościami użytkowników z organizacji A. W przypadku usługi STS B zazwyczaj ma wartość null `issuerAddress` i `issuerMetadataAddress`. Aby uzyskać więcej informacji, zobacz [jak: Konfigurowanie lokalnego wystawcy](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md). W takim przypadku klient korzysta z zasad lokalnych w celu zlokalizowania usługi STS A. Ta konfiguracja jest nazywana *Federacją obszaru głównego* i skalowalna, ponieważ usługa STS B nie musi obsługiwać informacji o usłudze STS A.  
+ Po skontaktowaniu się z STS B użytkownicy otrzymują inny poziom pośredni z zasad skojarzonych z STS. Muszą przedstawić prawidłowy token zabezpieczający z STS A (czyli sfery zaufania klienta), zanim usługa STS B może wydać im token zabezpieczający. Jest to następstwo relacji zaufania ustanowionej między dwiema organizacjami i oznacza, że organizacja B nie musi zarządzać tożsamościami użytkowników z organizacji A. W praktyce STS B zazwyczaj `issuerAddress` `issuerMetadataAddress`ma wartość null i . Aby uzyskać więcej informacji, zobacz [Jak: Konfigurowanie wystawcy lokalnego](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md). W takim przypadku klient konsultuje się z zasadami lokalnymi w celu zlokalizowania usługi STS A. Ta konfiguracja jest nazywana *federacją obszaru macierzystego* i jest skalowana lepiej, ponieważ STS B nie musi obsługiwać informacji o STS A.  
   
- Użytkownicy mogą następnie skontaktować się z usługą STS w organizacji A i uzyskać token zabezpieczający przez przedstawienie poświadczeń uwierzytelniania, które zwykle są używane do uzyskania dostępu do dowolnego innego zasobu w organizacji A. Pozwala to również uniknąć problemów użytkowników, którzy muszą zachować wiele zestawów poświadczeń lub użyć tego samego zestawu poświadczeń w wielu lokacjach usług.  
+ Następnie użytkownicy kontaktują się z STS w organizacji A i uzyskują token zabezpieczający, przedstawiając poświadczenia uwierzytelniania, których zwykle używają do uzyskiwania dostępu do innych zasobów w organizacji A. To również łagodzi problem użytkowników konieczności obsługi wielu zestawów poświadczeń lub przy użyciu tego samego zestawu poświadczeń w wielu lokacjach usługi.  
   
- Gdy użytkownicy uzyskają token zabezpieczający od usługi STS A, przedstawią token do usługi STS B. organizacja B wykonuje autoryzację żądań użytkowników i wystawia token zabezpieczający użytkownikom ze swojego własnego zestawu tokenów zabezpieczających. Użytkownicy mogą następnie przedstawić swój token dla zasobu w organizacji B i uzyskać dostęp do usługi.  
+ Gdy użytkownicy uzyskują token zabezpieczający z STS A, przedstawiają token do STS B. Organizacja B przystępuje do wykonywania autoryzacji żądań użytkowników i wystawia token zabezpieczający dla użytkowników z własnego zestawu tokenów zabezpieczających. Użytkownicy mogą następnie przedstawić swój token do zasobu w organizacji B i uzyskać dostęp do usługi.  
   
-## <a name="support-for-federated-security-in-wcf"></a>Obsługa zabezpieczeń federacyjnych w programie WCF  
- Funkcja WCF oferuje gotoweą obsługę wdrażania federacyjnych architektur zabezpieczeń za pomocą [ \<> WSFederationHttpBinding](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
+## <a name="support-for-federated-security-in-wcf"></a>Wsparcie dla federacyjnego bezpieczeństwa w WCF  
+ WCF zapewnia "pod klucz" obsługę wdrażania architektur zabezpieczeń federacyjnych za pośrednictwem [ \<>wsFederationHttpBinding ](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
   
- Element [WSFederationHttpBinding > zapewnia bezpieczne, niezawodne i interoperacyjne powiązanie, które wiąże się z użyciem protokołu HTTP jako podstawowego mechanizmu transportu dla stylu komunikacji żądanie-odpowiedź, używając tekstu i XML jako \<](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) Format sieci do kodowania.  
+ Element [ \<>wsFederationHttpBinding](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) zapewnia bezpieczne, niezawodne, interoperacyjne powiązanie, które pociąga za sobą użycie protokołu HTTP jako mechanizmu transportu bazowego dla stylu komunikacji żądanie-odpowiedź, wykorzystując tekst i XML jako format przewodowy do kodowania.  
   
- Korzystanie z [ \<WSFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) w federacyjnym scenariuszu zabezpieczeń można rozdzielić na dwie niezależne od siebie fazy, zgodnie z opisem w poniższych sekcjach.  
+ Użycie [ \<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) w scenariuszu zabezpieczeń federacyjnych można oddzielić na dwie logicznie niezależne fazy, zgodnie z opisem w poniższych sekcjach.  
   
 ### <a name="phase-1-design-phase"></a>Faza 1: Faza projektowania  
- W fazie projektowania klient używa narzędzia do obsługi [metadanych ServiceModel (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) , aby przeczytać zasady ujawniane przez punkt końcowy usługi i zebrać wymagania dotyczące uwierzytelniania i autoryzacji usługi. Odpowiednie serwery proxy są konstruowane w celu utworzenia na kliencie następującego wzorca komunikacji z zabezpieczeniami federacyjnymi:  
+ W fazie projektowania klient używa [Narzędzia narzędzia ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) do odczytu zasad udostępnianych przez punkt końcowy usługi oraz do zbierania wymagań dotyczących uwierzytelniania i autoryzacji usługi. Odpowiednie serwery proxy są skonstruowane w celu utworzenia następującego wzorca komunikacji zabezpieczeń federacyjnego na kliencie:  
   
-- Uzyskaj token zabezpieczający z usługi STS w obszarze zaufania klienta.  
+- Uzyskaj token zabezpieczający z usługi STS w dziedzinie zaufania klienta.  
   
-- Zaprezentowanie tokenu w usłudze STS w obszarze zaufania usługi.  
+- Przedstaw token do STS w sferze zaufania usługi.  
   
-- Uzyskaj token zabezpieczający z programu STS w obszarze zaufania usługi.  
+- Uzyskaj token zabezpieczający z STS w dziedzinie zaufania usługi.  
   
-- Zaprezentowanie tokenu usłudze w celu uzyskania dostępu do usługi.  
+- Przedstaw token do usługi, aby uzyskać dostęp do usługi.  
   
 ### <a name="phase-2-run-time-phase"></a>Faza 2: Faza czasu wykonywania  
- Podczas fazy czasu wykonywania klient tworzy wystąpienie obiektu klasy klienta WCF i wykonuje wywołanie przy użyciu klienta WCF. Podstawowa struktura programu WCF obsługuje wyżej wymienione kroki we wzorcu komunikacji z zabezpieczeniami federacyjnymi i umożliwia klientowi bezproblemowe korzystanie z usługi.  
+ Podczas fazy wykonywania klienta tworzy wystąpienia obiektu klasy klienta WCF i wykonuje wywołanie przy użyciu klienta WCF. Podstawowa struktura WCF obsługuje wcześniej wymienionych kroków w federacyjnej komunikacji zabezpieczeń wzorca i umożliwia klientowi bezproblemowe korzystanie z usługi.  
   
-## <a name="sample-implementation-using-wcf"></a>Przykładowa implementacja przy użyciu programu WCF  
- Na poniższej ilustracji przedstawiono przykładową implementację architektury zabezpieczeń federacyjnych przy użyciu natywnej pomocy technicznej z programu WCF.  
+## <a name="sample-implementation-using-wcf"></a>Przykładowa implementacja przy użyciu WCF  
+ Na poniższej ilustracji przedstawiono przykładową implementację architektury zabezpieczeń federacyjnych przy użyciu natywnej obsługi z WCF.  
   
- ![Diagram przedstawiający przykładową implementację zabezpieczeń Federacji.](./media/federation/federated-security-implementation.gif)  
+ ![Diagram przedstawiający przykładową implementację zabezpieczeń federacji.](./media/federation/federated-security-implementation.gif)  
   
-### <a name="example-myservice"></a>Przykładowa usługa  
- Usługa `MyService` ujawnia pojedynczy punkt końcowy za pomocą `MyServiceEndpoint`. Na poniższej ilustracji przedstawiono adres, powiązanie i kontrakt skojarzone z punktem końcowym.  
+### <a name="example-myservice"></a>Przykład MyService  
+ Usługa `MyService` udostępnia pojedynczy punkt końcowy `MyServiceEndpoint`za pośrednictwem . Na poniższej ilustracji przedstawiono adres, powiązanie i umowy skojarzone z punktem końcowym.  
   
- ![Diagram przedstawiający szczegóły dotyczące programu ServiceEndpoint.](./media/federation/myserviceendpoint-details.gif)  
+ ![Diagram przedstawiający szczegóły MyServiceEndpoint.](./media/federation/myserviceendpoint-details.gif)  
   
- Punkt końcowy `MyServiceEndpoint` usługi `accessAuthorized` [ \<używa > WSFederationHttpBinding](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) i wymaga prawidłowego tokenu potwierdzeń zabezpieczeń (SAML) z twierdzeniem wystawionym przez usługę STS B. Ta wartość jest deklaratywnie określona w konfiguracji usługi.  
+ Punkt `MyServiceEndpoint` końcowy usługi używa [ \<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) i wymaga prawidłowego tokenu języka znaczników oświadczeń zabezpieczeń (SAML) z oświadczeniem wystawionym `accessAuthorized` przez STS B. Jest to deklaratywnie określone w konfiguracji usługi.  
   
 ```xml  
 <system.serviceModel>  
   <services>  
-    <service type="FederationSample.MyService"      
+    <service type="FederationSample.MyService"
         behaviorConfiguration='MyServiceBehavior'>  
         <endpoint address=""  
             binding=" wsFederationHttpBinding"  
@@ -120,7 +120,7 @@ Ten temat zawiera krótkie omówienie koncepcji zabezpieczeń federacyjnych. Opi
            <message issuedTokenType=  
 "http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1">  
            <issuer address="http://localhost/FederationSample/STS-B/STS.svc" />  
-            <issuerMetadata   
+            <issuerMetadata
            address=  
 "http://localhost/FederationSample/STS-B/STS.svc/mex" />  
          <requiredClaimTypes>  
@@ -134,7 +134,7 @@ Ten temat zawiera krótkie omówienie koncepcji zabezpieczeń federacyjnych. Opi
   
   <behaviors>  
     <behavior name='MyServiceBehavior'>  
-      <serviceAuthorization   
+      <serviceAuthorization
 operationRequirementType="FederationSample.MyServiceOperationRequirement, MyService" />  
        <serviceCredentials>  
          <serviceCertificate findValue="CN=FederationSample.com"  
@@ -148,21 +148,21 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ```  
   
 > [!NOTE]
-> Należy zauważyć delikatny wgląd w oświadczenia wymagane przez `MyService`. Drugi rysunek wskazuje, że `MyService` wymaga tokenu SAML z tym `accessAuthorized` elementem. Aby dokładniej określić typ, który `MyService` wymaga. W pełni kwalifikowana nazwa tego typu jest `http://tempuri.org:accessAuthorized` (wraz ze skojarzoną przestrzenią nazw), która jest używana w pliku konfiguracji usługi. Wartość tego żądania wskazuje obecność tego żądania i zakłada się, że jest ono ustawiane `true` przez usługę STS B.  
+> Subtelny punkt należy zwrócić uwagę na `MyService`roszczenia wymagane przez . Druga liczba wskazuje, `MyService` że wymaga tokenu `accessAuthorized` SAML z oświadczeniem. Aby być bardziej precyzyjne, określa `MyService` typ oświadczenia, który wymaga. W pełni kwalifikowana nazwa tego `http://tempuri.org:accessAuthorized` typu oświadczenia jest (wraz ze skojarzonym obszarem nazw), który jest używany w pliku konfiguracji usługi. Wartość tego oświadczenia wskazuje na obecność tego oświadczenia i zakłada `true` się, że jest ona ustawiona przez STS B.  
   
- W czasie wykonywania te zasady są wymuszane przez `MyServiceOperationRequirement` klasę, która jest implementowana w ramach `MyService`programu.  
+ W czasie wykonywania ta zasada jest `MyServiceOperationRequirement` wymuszana przez klasę, która jest implementowana jako część `MyService`.  
   
  [!code-csharp[C_Federation#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_federation/cs/source.cs#0)]
  [!code-vb[C_Federation#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federation/vb/source.vb#0)]  
 [!code-csharp[C_Federation#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_federation/cs/source.cs#1)]
 [!code-vb[C_Federation#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federation/vb/source.vb#1)]  
   
-#### <a name="sts-b"></a>USŁUGA STS B  
- Na poniższej ilustracji przedstawiono usługę STS B. Jak wspomniano wcześniej, usługa tokenu zabezpieczającego (STS) jest również usługą sieci Web i może mieć skojarzone punkty końcowe, zasady i tak dalej.  
+#### <a name="sts-b"></a>STS B  
+ Na poniższej ilustracji przedstawiono STS B. Jak wspomniano wcześniej, usługa tokenu zabezpieczającego (STS) jest również usługą sieci Web i może mieć skojarzone z nią punkty końcowe, zasady i tak dalej.  
   
- ![Diagram przedstawiający usługę tokenów zabezpieczających B.](./media/federation/myservice-security-token-service-b.gif)  
+ ![Diagram przedstawiający usługę tokenu zabezpieczającego B.](./media/federation/myservice-security-token-service-b.gif)  
   
- Usługa STS B udostępnia jeden punkt końcowy o `STSEndpoint` nazwie, którego można użyć do żądania tokenów zabezpieczających. W odniesieniu do usługi STS B są `accessAuthorized` wystawiane tokeny SAML, które `MyService` mogą być prezentowane w lokacji usługi w celu uzyskania dostępu do usług. Jednak usługa STS B wymaga, aby użytkownicy zaprezentować prawidłowy token SAML wystawiony przez usługę `userAuthenticated` STS a, która zawiera ten element. Ta wartość jest deklaratywnie określona w konfiguracji usługi STS.  
+ STS B udostępnia pojedynczy punkt `STSEndpoint` końcowy, wywoływane, które mogą być używane do żądania tokenów zabezpieczających. W szczególności STS B wystawia tokeny `accessAuthorized` SAML z oświadczenia, `MyService` które mogą być prezentowane w witrynie usługi dostępu do usługi. Jednak STS B wymaga od użytkowników przedstawienia prawidłowego tokenu SAML `userAuthenticated` wystawionego przez STS A, który zawiera oświadczenie. Jest to deklaratywnie określone w konfiguracji STS.  
   
 ```xml  
 <system.serviceModel>  
@@ -207,24 +207,24 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ```  
   
 > [!NOTE]
-> `userAuthenticated` Ponownie jest to typ zgłoszenia wymagany przez usługę STS B. W pełni kwalifikowana nazwa tego typu jest `http://tempuri.org:userAuthenticated` (wraz ze skojarzoną przestrzenią nazw), która jest używana w pliku konfiguracji usługi STS. Wartość tego żądania wskazuje obecność tego żądania i przyjmuje się, że jest ono ustawiane `true` przez usługę STS a.  
+> `userAuthenticated` Ponownie, oświadczenie jest typem oświadczenia, który jest wymagany przez STS B. W pełni kwalifikowana nazwa tego `http://tempuri.org:userAuthenticated` typu oświadczenia jest (wraz ze skojarzonym obszarem nazw), która jest używana w pliku konfiguracyjnym STS. Wartość tego oświadczenia wskazuje na obecność tego oświadczenia i zakłada `true` się, że jest ustawiona przez STS A.  
   
- W czasie wykonywania `STS_B_OperationRequirement` Klasa wymusza te zasady, które są implementowane w ramach usługi STS B.  
+ W czasie wykonywania `STS_B_OperationRequirement` klasa wymusza tę zasadę, która jest implementowana jako część STS B.  
   
  [!code-csharp[C_Federation#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_federation/cs/source.cs#2)]
  [!code-vb[C_Federation#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federation/vb/source.vb#2)]  
   
- Jeśli sprawdzanie dostępu jest jasne, usługa STS B wystawia token języka SAML `accessAuthorized` w ramach tego żądania.  
+ Jeśli sprawdzanie dostępu jest jasne, STS B wystawia `accessAuthorized` token SAML z oświadczeniem.  
   
  [!code-csharp[C_Federation#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_federation/cs/source.cs#3)]
  [!code-vb[C_Federation#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federation/vb/source.vb#3)]  
   
-#### <a name="sts-a"></a>USŁUGA STS A  
- Na poniższej ilustracji przedstawiono usługę STS A.  
+#### <a name="sts-a"></a>STS A  
+ Na poniższej ilustracji przedstawiono STS A.  
   
- ![Federacja federacyjna](../../../../docs/framework/wcf/feature-details/media/sts-b.gif "STS_B")  
+ ![Federacja](../../../../docs/framework/wcf/feature-details/media/sts-b.gif "STS_B")  
   
- Podobnie jak w przypadku usługi STS B, usługa STS A jest również usługą sieci Web, która wystawia tokeny zabezpieczające i udostępnia w tym celu pojedynczy punkt końcowy. Jednak używa innego powiązania (`wsHttpBinding`) i wymaga, aby użytkownicy zaprezentować prawidłowy `emailAddress` program CardSpace z zastrzeżeniem. W odpowiedzi powoduje wystawianie tokenów SAML `userAuthenticated` z wnioskiem. Ta wartość jest deklaratywnie określona w konfiguracji usługi.  
+ Podobnie jak STS B, STS A jest również usługą sieci Web, która wystawia tokeny zabezpieczające i udostępnia w tym celu pojedynczy punkt końcowy. Używa jednak innego powiązania (`wsHttpBinding`) i wymaga od użytkowników przedstawienia `emailAddress` ważnego CardSpace z roszczeniem. W odpowiedzi wydaje tokeny SAML `userAuthenticated` z roszczeniem. Jest to deklaratywnie określone w konfiguracji usługi.  
   
 ```xml  
 <system.serviceModel>  
@@ -235,9 +235,9 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
                 bindingConfiguration="STS-A_Binding"  
                 contract="FederationSample.ISts">  
        <identity>  
-       <certificateReference findValue="CN=FederationSample.com"    
+       <certificateReference findValue="CN=FederationSample.com"
                        x509FindType="FindBySubjectDistinguishedName"  
-                       storeLocation="LocalMachine"   
+                       storeLocation="LocalMachine"
                        storeName="My" />  
        </identity>  
     <endpoint>  
@@ -271,24 +271,24 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 </system.serviceModel>  
 ```  
   
- W czasie wykonywania `STS_A_OperationRequirement` Klasa wymusza te zasady, które są implementowane w ramach usługi STS A.  
+ W czasie wykonywania `STS_A_OperationRequirement` klasa wymusza tę zasadę, która jest implementowana jako część STS A.  
   
  [!code-csharp[C_Federation#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_federation/cs/source.cs#4)]
  [!code-vb[C_Federation#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federation/vb/source.vb#4)]  
   
- Jeśli dostęp to `true`, usługa STS wystawia token języka SAML `userAuthenticated` przy użyciu żądania.  
+ Jeśli dostęp `true`jest , STS A wystawia `userAuthenticated` token SAML z oświadczeniem.  
   
  [!code-csharp[C_Federation#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_federation/cs/source.cs#5)]
  [!code-vb[C_Federation#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federation/vb/source.vb#5)]  
   
-### <a name="client-at-organization-a"></a>Klient w organizacji A  
- Na poniższej ilustracji przedstawiono klienta w organizacji A wraz z krokami związanymi z wykonywaniem `MyService` wywołania usługi. Pozostałe składniki funkcjonalne są również dołączone do kompletności.  
+### <a name="client-at-organization-a"></a>Client w: Organization A  
+ Na poniższej ilustracji przedstawiono klienta w organizacji A, wraz z kroki związane z wykonywaniem `MyService` wywołania usługi. Pozostałe elementy funkcjonalne są również dołączone do kompletności.  
   
- ![Diagram przedstawiający kroki wywołania usługi WebService.](./media/federation/federation-myservice-service-call-process.gif)  
+ ![Diagram przedstawiający kroki w wywołaniu usługi MyService.](./media/federation/federation-myservice-service-call-process.gif)  
   
 ## <a name="summary"></a>Podsumowanie  
- Zabezpieczenia federacyjne zapewniają czyste dział odpowiedzialności i ułatwiają tworzenie bezpiecznych, skalowalnych architektur usług. Jako platforma do kompilowania i wdrażania aplikacji rozproszonych, WCF zapewnia natywną obsługę implementowania zabezpieczeń federacyjnych.  
+ Zabezpieczenia federacyjne zapewniają czysty podział odpowiedzialności i pomagają w tworzeniu bezpiecznych, skalowalnych architektur usług. Jako platforma do tworzenia i wdrażania aplikacji rozproszonych WCF zapewnia natywną obsługę wdrażania zabezpieczeń federacyjnych.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Zabezpieczenia](../../../../docs/framework/wcf/feature-details/security.md)

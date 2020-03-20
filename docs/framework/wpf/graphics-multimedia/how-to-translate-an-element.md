@@ -1,30 +1,30 @@
 ---
-title: 'Instrukcje: Przesuwanie elementu'
+title: Jak przesunąć element
 ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [WPF], translations
 ms.assetid: 461c8273-15df-42f6-8672-89ba22887cc0
-ms.openlocfilehash: 9c1b873a89820e85efb99789f483c4832fb23cf7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba6bda09a4ee189cdd1a32eed8f65b32d1a9abe4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051445"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79187305"
 ---
-# <a name="how-to-translate-an-element"></a>Instrukcje: Przesuwanie elementu
-W tym przykładzie pokazano, jak do tłumaczenia (przenoszenie) elementu za pomocą <xref:System.Windows.Media.TranslateTransform>.  
+# <a name="how-to-translate-an-element"></a>Jak przesunąć element
+W tym przykładzie pokazano, jak przetłumaczyć (przenieść) element za pomocą . <xref:System.Windows.Media.TranslateTransform>  
   
- <xref:System.Windows.Media.TranslateTransform> Klasa jest szczególnie przydatne w przypadku przenoszenia elementy wewnątrz paneli, które nie obsługują pozycjonowanie absolutne. Na przykład, stosując <xref:System.Windows.Media.TranslateTransform> do <xref:System.Windows.UIElement.RenderTransform%2A> właściwość elementu, można przenieść elementu z <xref:System.Windows.Controls.StackPanel> lub <xref:System.Windows.Controls.DockPanel>.  
+ Klasa <xref:System.Windows.Media.TranslateTransform> jest szczególnie przydatna w przypadku ruchomych elementów wewnątrz paneli, które nie obsługują pozycjonowania bezwzględnego. Na przykład, stosując <xref:System.Windows.Media.TranslateTransform> a <xref:System.Windows.UIElement.RenderTransform%2A> do właściwości elementu, można przenieść <xref:System.Windows.Controls.StackPanel> element <xref:System.Windows.Controls.DockPanel>w obrębie lub .  
   
- Użyj <xref:System.Windows.Media.TranslateTransform.X%2A> właściwość <xref:System.Windows.Media.TranslateTransform> Aby określić czas, w pikselach, aby przenieść element na osi x. Użyj <xref:System.Windows.Media.TranslateTransform.Y%2A> właściwość, aby określić czas, w pikselach, aby przenieść element wzdłuż osi y. Na koniec Zastosuj <xref:System.Windows.Media.TranslateTransform> do <xref:System.Windows.UIElement.RenderTransform%2A> właściwości elementu.  
+ Użyj <xref:System.Windows.Media.TranslateTransform.X%2A> właściwości, <xref:System.Windows.Media.TranslateTransform> aby określić ilość w pikselach, aby przenieść element wzdłuż osi x. Użyj <xref:System.Windows.Media.TranslateTransform.Y%2A> właściwości, aby określić ilość w pikselach, aby przenieść element wzdłuż osi y. Na koniec zastosuj <xref:System.Windows.Media.TranslateTransform> do <xref:System.Windows.UIElement.RenderTransform%2A> właściwości elementu.  
   
- W poniższym przykładzie użyto <xref:System.Windows.Media.TranslateTransform> aby przejść do kolejnego elementu 50 pikseli na prawo do 50 pikseli.  
+ W poniższym przykładzie użyto a, <xref:System.Windows.Media.TranslateTransform> aby przenieść element 50 pikseli w prawo i 50 pikseli w dół.  
   
 ## <a name="example"></a>Przykład  
  [!code-xaml[transformsSample#53](~/samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/TranslateTransformExample.xaml#53)]  
   
- Aby uzyskać pełny przykład, zobacz [przykładowych przekształceń 2-D](https://go.microsoft.com/fwlink/?LinkID=158252).  
+ Aby uzyskać pełną próbkę, zobacz [przykład przekształca 2-W](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Przekształcenia — przegląd](transforms-overview.md)

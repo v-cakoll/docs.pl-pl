@@ -1,18 +1,17 @@
 ---
-ms.openlocfilehash: c0a281b05f453b68495e6fa6fca45f3f36a204a3
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 5844dbc2c3c89baeb39b69f16846f92ac10e97f1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67804587"
 ---
-### <a name="xsd-schema-validation-now-correctly-detects-violations-of-unique-constraints-if-compound-keys-are-used-and-one-key-is-empty"></a>Weryfikacja schematu XSD teraz prawidłowo wykrywa naruszenia ograniczenia unikatowe klucze złożone są używane, jeśli jeden klucz jest pusty
+### <a name="xsd-schema-validation-now-correctly-detects-violations-of-unique-constraints-if-compound-keys-are-used-and-one-key-is-empty"></a>Sprawdzanie poprawności schematu XSD teraz poprawnie wykrywa naruszenia unikatowych ograniczeń, jeśli używane są klucze złożone, a jeden klucz jest pusty
 
 |   |   |
 |---|---|
-|Szczegóły|Wersje programu .NET Framework przed 4.6 miał usterkę powodującą walidację XSD nie wykryć ograniczenia unikatowe klucze złożone, jeśli jeden z kluczy był pusty. W .NET Framework 4.6 ten problem został rozwiązany. Spowoduje to bardziej poprawny sprawdzania poprawności, ale także może spowodować pewne XML nie weryfikacji, który wcześniej miałby.|
-|Sugestia|W razie potrzeby im weryfikacji programu .NET Framework 4.0 weryfikowania aplikacji można wskazać w wersji 4.5 (lub starszym) programu .NET Framework. W przypadku przekierowania do .NET Framework 4.6, jednak przeglądu kodu powinna być podejmowana należy upewnić się, że zduplikowane klucze złożone (zgodnie z opisem w opisie tego problemu) najprawdopodobniej nie można zweryfikować.|
-|Scope|Krawędź|
+|Szczegóły|Wersje programu .NET Framework przed 4.6 miał błąd, który spowodował sprawdzanie poprawności XSD nie wykryć unikatowe ograniczenia kluczy złożonych, jeśli jeden z kluczy był pusty. W .NET Framework 4.6 ten problem został rozwiązany. Spowoduje to bardziej poprawne sprawdzanie poprawności, ale może również spowodować, że niektóre XML nie sprawdzania poprawności, które wcześniej będzie miało.|
+|Sugestia|Jeśli jest to konieczne luźniejsze sprawdzanie poprawności programu .NET Framework 4.0, aplikacja sprawdzania poprawności może kierować na wersję 4.5 (lub wcześniejszą) programu .NET Framework. Podczas retargeting do .NET Framework 4.6, jednak przegląd kodu należy wykonać, aby upewnić się, że zduplikowane klucze złożone (zgodnie z opisem tego problemu) nie powinny sprawdzać poprawności.|
+|Zakres|Brzeg|
 |Wersja|4.6|
 |Typ|Przekierowanie|
-

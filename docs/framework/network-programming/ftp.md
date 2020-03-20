@@ -1,29 +1,29 @@
 ---
-title: FTP — .NET
+title: FTP - .NET
 ms.date: 03/30/2017
 helpviewer_keywords:
 - FTP
 ms.assetid: 9b43f8b4-89d7-46a7-89fc-71aca916dd32
 ms.openlocfilehash: d945f03077a863d9e1baa6b59fe8a908566aba5a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "61642883"
 ---
 # <a name="ftp"></a>FTP
 
-Program .NET Framework oferuje kompleksowe wsparcie dla protokołu FTP za pomocą <xref:System.Net.FtpWebRequest> i <xref:System.Net.FtpWebResponse> klasy. Te klasy są uzyskiwane z <xref:System.Net.WebRequest> i <xref:System.Net.WebResponse>. W większości przypadków <xref:System.Net.WebRequest> i <xref:System.Net.WebResponse> klasy zapewniają wszystko, co jest niezbędne do utworzenia żądania, ale jeśli potrzebujesz dostępu do funkcji specyficznych dla protokołu FTP, widoczne jako właściwości, można rzutowanie typu tych klas do <xref:System.Net.FtpWebRequest> lub <xref:System.Net.FtpWebResponse>.
+.NET Framework zapewnia kompleksową obsługę protokołu <xref:System.Net.FtpWebRequest> FTP z i <xref:System.Net.FtpWebResponse> klas. Klasy te pochodzą <xref:System.Net.WebRequest> z <xref:System.Net.WebResponse>i . W większości przypadków <xref:System.Net.WebRequest> <xref:System.Net.WebResponse> i klasy zapewniają wszystko, co jest niezbędne do żądania, ale jeśli potrzebujesz dostępu do funkcji specyficznych <xref:System.Net.FtpWebRequest> dla <xref:System.Net.FtpWebResponse>FTP udostępniane jako właściwości, można typecast tych klas do lub . .
 
 ## <a name="examples"></a>Przykłady
 
-Więcej informacji znajduje się w następujących tematach: [Instrukcje: Pobieranie plików przy użyciu protokołu FTP](how-to-download-files-with-ftp.md), [jak: Przekazywanie plików za pomocą połączenia FTP](how-to-upload-files-with-ftp.md), i [jak: Wyświetlanie zawartości katalogu przy użyciu protokołu FTP](how-to-list-directory-contents-with-ftp.md).
+Aby uzyskać więcej informacji, zobacz następujące tematy: [Jak: Pobieranie plików z FTP](how-to-download-files-with-ftp.md), [Jak: Przekazywanie plików z FTP](how-to-upload-files-with-ftp.md)i [Jak: Lista zawartości katalogu z FTP](how-to-list-directory-contents-with-ftp.md).
 
-## <a name="ftp-and-proxies"></a>FTP i serwerów proxy
+## <a name="ftp-and-proxies"></a>FTP i serwery proxy
 
-Jeśli serwer proxy (określony przez <xref:System.Net.FtpWebRequest.Proxy%2A> właściwość) jest serwer proxy HTTP tylko <xref:System.Net.WebRequestMethods.Ftp.DownloadFile>, <xref:System.Net.WebRequestMethods.Ftp.ListDirectory>, i <xref:System.Net.WebRequestMethods.Ftp.ListDirectoryDetails> polecenia są obsługiwane.
+Jeśli serwer proxy (określony <xref:System.Net.FtpWebRequest.Proxy%2A> przez właściwość) jest <xref:System.Net.WebRequestMethods.Ftp.DownloadFile>serwerem proxy HTTP, obsługiwane są tylko polecenia , <xref:System.Net.WebRequestMethods.Ftp.ListDirectory>i <xref:System.Net.WebRequestMethods.Ftp.ListDirectoryDetails> .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Dostęp do Internetu za pośrednictwem serwera proxy](accessing-the-internet-through-a-proxy.md)
 - [Przykłady programowania sieciowego](network-programming-samples.md)

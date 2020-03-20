@@ -2,31 +2,31 @@
 title: 'Instrukcje: Deserializacja właściwości danych wystąpienia'
 ms.date: 03/30/2017
 ms.assetid: b13a3508-1b97-4359-b336-03d85fa23bc4
-ms.openlocfilehash: e037d5f8d0b221aa0eb8fdc6eceabf6efb2dc387
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 8142671fc1bc154337019e025d8443f0570106b3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989632"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79143086"
 ---
 # <a name="how-to-deserialize-instance-data-properties"></a>Instrukcje: Deserializacja właściwości danych wystąpienia
-Mogą wystąpić sytuacje, w których administrator użytkownika lub przepływu pracy może chcieć ręcznie sprawdzić stan utrwalonego wystąpienia przepływu pracy. <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>zawiera widok tabeli wystąpień, który uwidacznia cztery następujące kolumny:  
+Mogą wystąpić sytuacje, gdy użytkownik lub administrator przepływu pracy może chcieć ręcznie sprawdzić stan wystąpienia utrwalonego przepływu pracy. <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>udostępnia widok w tabeli Wystąpienia, który udostępnia następujące cztery kolumny:  
   
-- ReadWritePrimitiveDataProperties  
+- Właściwości readwriteprimitivedataproperties  
   
 - WriteOnlyPrimitiveDataProperties  
   
-- ReadWriteComplexDataProperties  
+- Właściwości readwritecomplexdataProperties  
   
-- WriteOnlyComplexDataProperties  
+- WriteOnlyComplexDanaProperties  
   
- Właściwości danych pierwotnych odnoszą się do właściwości, których typy .NET Framework są uważane za "wspólne" (na przykład Int32 i String), natomiast złożone właściwości danych odwołują się do wszystkich innych typów. Dokładne wyliczenie typów pierwotnych można znaleźć w dalszej części tego przykładu kodu.  
+ Właściwości danych pierwotnych odnoszą się do właściwości, których typy .NET Framework są uważane za "wspólne" (na przykład Int32 i String), podczas gdy złożone właściwości danych odnoszą się do wszystkich innych typów. Dokładne wyliczenie typów pierwotnych znajduje się w dalszej części tego przykładu kodu.  
   
- Właściwości odczytu/zapisu odwołują się do właściwości, które są zwracane z powrotem do środowiska uruchomieniowego przepływu pracy po załadowaniu wystąpienia. Właściwości WriteOnly są zapisywane w bazie danych, a następnie nigdy nie można ich odczytać.  
+ Właściwości odczytu/zapisu odnoszą się do właściwości, które są zwracane z powrotem do środowiska wykonawczego przepływu pracy po załadowaniu wystąpienia. WriteOnly właściwości są zapisywane w bazie danych, a następnie nigdy nie czytać ponownie.  
   
- Ten przykład zawiera kod, który umożliwia użytkownikowi deserializacja właściwości danych pierwotnych. Podanej tablicy bajtowej odczytanej z kolumny ReadWritePrimitiveDataProperties lub WriteOnlyPrimitiveDataProperties ten kod spowoduje przekonwertowanie obiektu binarnego Binary (BLOB) <xref:System.Collections.Generic.Dictionary%602> na typ \<XName, Object >, gdzie każda wartość klucza para reprezentuje nazwę właściwości i odpowiadającą jej wartość.  
+ W tym przykładzie zawiera kod, który umożliwia użytkownikowi deserialize właściwości danych pierwotnych. Biorąc pod uwagę tablicę bajtów odczytaną z kolumny ReadWritePrimitiveDataProperties lub WriteOnlyPrimitiveDataProperties, ten <xref:System.Collections.Generic.Dictionary%602> kod \<przekonwertuje duży obiekt binarny (BLOB) na typ XName, obiekt>, w którym każda para wartości klucza reprezentuje nazwę właściwości i jej odpowiednią wartość.  
   
- Ten przykład nie pokazuje, jak deserializować złożone właściwości danych, ponieważ nie jest to obecnie obsługiwana operacja.  
+ W tym przykładzie nie pokazano, jak deserializacji złożonych właściwości danych, ponieważ obecnie nie jest to obsługiwana operacja.  
   
 ```csharp  
 using System;  
@@ -104,7 +104,7 @@ namespace PropertyReader
                     // if the instance state is compressed using GZip algorithm  
                     if (isCompressed)  
                     {  
-                        // decompress the data using the GZip   
+                        // decompress the data using the GZip
                         using (GZipStream stream = new GZipStream(memoryStream, CompressionMode.Decompress))  
                         {  
                             // create an XmlReader object and pass it on to the helper method ReadPrimitiveDataProperties  
@@ -117,7 +117,7 @@ namespace PropertyReader
                     }  
                     else  
                     {  
-                        // if the instance data is not compressed   
+                        // if the instance data is not compressed
                         // create an XmlReader object and pass it on to the helper method ReadPrimitiveDataProperties  
                         using (XmlReader reader = XmlDictionaryReader.CreateBinaryReader(memoryStream, XmlDictionaryReaderQuotas.Max))  
                         {  

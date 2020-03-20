@@ -5,76 +5,76 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 27c9f2fd-f64d-4b4e-bbf6-1d24f47067cb
-ms.openlocfilehash: 3f3055b11f0e682ae5a9578289e30dc2716343fe
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4b7972c281786a4e36d0e9c1e455776a293423ee
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785405"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151289"
 ---
 # <a name="datatable-constraints"></a>Ograniczenia elementu DataTable
-Możesz użyć ograniczeń <xref:System.Data.DataTable>, aby wymusić ograniczenia dotyczące danych w, aby zachować integralność danych. Ograniczenie jest automatyczną regułą stosowaną do kolumny lub powiązanych kolumn, która określa przebieg akcji, gdy wartość wiersza jest zmieniana. Ograniczenia są wymuszane, `System.Data.DataSet.EnforceConstraints` gdy właściwość <xref:System.Data.DataSet> ma **wartość true**. Przykładowy kod, który pokazuje, jak ustawić `EnforceConstraints` właściwość, można znaleźć w <xref:System.Data.DataSet.EnforceConstraints%2A> temacie Reference.  
+Ograniczenia można użyć do wymuszenia ograniczeń <xref:System.Data.DataTable>dotyczących danych w programie , aby zachować integralność danych. Ograniczenie jest regułą automatyczną, zastosowaną do kolumny lub powiązanych kolumn, która określa przebieg akcji, gdy wartość wiersza jest w jakiś sposób zmieniona. Ograniczenia są wymuszane, `System.Data.DataSet.EnforceConstraints` <xref:System.Data.DataSet> gdy właściwość jest **true**. Przykład kodu, który pokazuje, `EnforceConstraints` jak ustawić <xref:System.Data.DataSet.EnforceConstraints%2A> właściwość, zobacz temat odwołania.  
   
- Istnieją dwa rodzaje ograniczeń w ADO.NET: <xref:System.Data.ForeignKeyConstraint> <xref:System.Data.UniqueConstraint>i. Domyślnie oba ograniczenia są tworzone automatycznie podczas tworzenia relacji między dwiema lub wieloma tabelami przez dodanie <xref:System.Data.DataRelation> do **zestawu danych**. Takie zachowanie można jednak wyłączyć, określając wartość w polu Wyłącz **ograniczenia** = **false** podczas tworzenia relacji.  
+ Istnieją dwa rodzaje ograniczeń w ADO.NET: <xref:System.Data.ForeignKeyConstraint> i . <xref:System.Data.UniqueConstraint> Domyślnie oba ograniczenia są tworzone automatycznie podczas tworzenia relacji między dwiema <xref:System.Data.DataRelation> lub więcej tabelami przez dodanie a do **zestawu danych**. Jednak można wyłączyć to zachowanie, określając **createConstraints** = **false** podczas tworzenia relacji.  
   
-## <a name="foreignkeyconstraint"></a>ForeignKeyConstraint  
- **Element ForeignKeyConstraint** wymusza reguły dotyczące sposobu propagacji aktualizacji i usunięć do powiązanych tabel. Na przykład, jeśli wartość w wierszu jednej tabeli jest aktualizowana lub usuwana, a ta sama wartość jest również używana w co najmniej jednej pokrewnych tabelach, **element ForeignKeyConstraint** określa, co się dzieje w tabelach pokrewnych.  
+## <a name="foreignkeyconstraint"></a>Foreignkeyconstraint  
+ **ForeignKeyConstraint** wymusza reguły dotyczące sposobu aktualizacji i usuwania powiązanych tabel są propagowane. Na przykład jeśli wartość w wierszu jednej tabeli jest aktualizowana lub usunięta, a ta sama wartość jest również używana w jednej lub kilku powiązanych tabelach, **ForeignKeyConstraint** określa, co się dzieje w powiązanych tabelach.  
   
- Właściwości <xref:System.Data.ForeignKeyConstraint.DeleteRule%2A> i <xref:System.Data.ForeignKeyConstraint.UpdateRule%2A> **element ForeignKeyConstraint** definiują akcję do wykonania, gdy użytkownik próbuje usunąć lub zaktualizować wiersz w powiązanej tabeli. W poniższej tabeli opisano różne ustawienia dostępne dla właściwości **DeleteRule** i **UpdateRule** **element ForeignKeyConstraint**.  
+ Właściwości <xref:System.Data.ForeignKeyConstraint.DeleteRule%2A> <xref:System.Data.ForeignKeyConstraint.UpdateRule%2A> i **ForeignKeyConstraint** zdefiniować akcję, która ma zostać podjęta, gdy użytkownik próbuje usunąć lub zaktualizować wiersz w powiązanej tabeli. W poniższej tabeli opisano różne ustawienia dostępne dla **właściwości DeleteRule** i **UpdateRule** właściwości **ForeignKeyConstraint**.  
   
 |Ustawienie reguły|Opis|  
 |------------------|-----------------|  
-|**Cascade**|Usuń lub zaktualizuj powiązane wiersze.|  
-|**SetNull**|Ustaw wartości w powiązanych wierszach na wartość **DBNull**.|  
-|**SetDefault**|Ustaw wartości domyślne w powiązanych wierszach.|  
-|**Brak**|Nie podejmuj żadnych działań w odniesieniu do powiązanych wierszy. Domyślnie włączone.|  
+|**Kaskadowo**|Usuwanie lub aktualizowanie powiązanych wierszy.|  
+|**Setnull**|Ustaw wartości w powiązanych wierszach na **DBNull**.|  
+|**SetDefault (Domyślnie)**|Ustaw wartości w powiązanych wierszach na wartość domyślną.|  
+|**Brak**|Nie podejmuj żadnych działań w powiązanych wierszach. Domyślnie włączone.|  
   
- **Element ForeignKeyConstraint** może ograniczyć, a także propagowanie zmian w powiązanych kolumnach. W zależności od właściwości ustawionych dla **element ForeignKeyConstraint** kolumny, jeśli właściwość **EnforceConstraints** **zestawu danych** ma **wartość true**, wykonanie niektórych operacji w wierszu nadrzędnym spowoduje wyjątek. Na przykład jeśli właściwość **DeleteRule** elementu **element ForeignKeyConstraint** ma **wartość None**, nie można usunąć wiersza nadrzędnego, jeśli ma on wszystkie wiersze podrzędne.  
+ A **ForeignKeyConstraint** można ograniczyć, a także propagować zmiany w powiązanych kolumn. W zależności od właściwości ustawionych dla **ForeignKeyConstraint** kolumny, jeśli **EnforceConstraints** właściwość **DataSet** jest **true**, wykonywanie niektórych operacji w wierszu nadrzędnym spowoduje wyjątek. Na przykład jeśli **DeleteRule** właściwość **ForeignKeyConstraint** jest **Brak**, wiersz nadrzędny nie można usunąć, jeśli ma żadnych wierszy podrzędnych.  
   
- Można utworzyć ograniczenie klucza obcego między pojedynczymi kolumnami lub między tablicami kolumn za pomocą konstruktora **element ForeignKeyConstraint** . Przekaż otrzymany obiekt **element ForeignKeyConstraint** do metody **Add** właściwości **ograniczenia** tabeli, która jest elementem **ConstraintCollection**. Można również przekazać argumenty konstruktora do kilku przeciążeń metody **Add** obiektu **ConstraintCollection** , aby utworzyć **element ForeignKeyConstraint**.  
+ Ograniczenie klucza obcego między pojedynczymi kolumnami lub między tablicą kolumn można utworzyć przy użyciu konstruktora **ForeignKeyConstraint.** Przekaż wynikowy **Obiekt ForeignKeyConstraint** do **Add** metody tabeli **Constraints** właściwości, która jest **ConstraintCollection**. Można również przekazać argumenty konstruktora do kilku przeciążeń **Add** metody **ConstraintCollection,** aby utworzyć **ForeignKeyConstraint**.  
   
- Podczas tworzenia elementu **element ForeignKeyConstraint**można przekazać wartości **DeleteRule** i **UpdateRule** do konstruktora jako argumenty lub ustawić je jako właściwości, tak jak w poniższym przykładzie (gdzie wartość **DeleteRule** jest ustawiona na  **Brak**).  
+ Podczas tworzenia **ForeignKeyConstraint**, można przekazać **DeleteRule** i **UpdateRule** wartości do konstruktora jako argumenty lub można ustawić je jako właściwości, jak w poniższym przykładzie (gdzie **Wartość DeleteRule** jest ustawiona na **Brak**).  
   
 ```vb  
 Dim custOrderFK As ForeignKeyConstraint = New ForeignKeyConstraint("CustOrderFK", _  
   custDS.Tables("CustTable").Columns("CustomerID"), _  
   custDS.Tables("OrdersTable").Columns("CustomerID"))  
-custOrderFK.DeleteRule = Rule.None    
+custOrderFK.DeleteRule = Rule.None
 ' Cannot delete a customer value that has associated existing orders.  
 custDS.Tables("OrdersTable").Constraints.Add(custOrderFK)  
 ```  
   
 ```csharp  
 ForeignKeyConstraint custOrderFK = new ForeignKeyConstraint("CustOrderFK",  
-  custDS.Tables["CustTable"].Columns["CustomerID"],   
+  custDS.Tables["CustTable"].Columns["CustomerID"],
   custDS.Tables["OrdersTable"].Columns["CustomerID"]);  
-custOrderFK.DeleteRule = Rule.None;    
+custOrderFK.DeleteRule = Rule.None;
 // Cannot delete a customer value that has associated existing orders.  
 custDS.Tables["OrdersTable"].Constraints.Add(custOrderFK);  
 ```  
   
-### <a name="acceptrejectrule"></a>AcceptRejectRule  
- Zmiany w wierszach można zaakceptować przy użyciu **metody AcceptChanges** lub anulowane przy użyciu **metody RejectChanges** **zestawu danych**, **DataTable**lub **DataRow**. Gdy **zestaw danych** zawiera **ForeignKeyConstraints**, wywoływanie metod **AcceptChanges** lub **RejectChanges** wymusza **AcceptRejectRule**. Właściwość **AcceptRejectRule** **element ForeignKeyConstraint** określa, która akcja zostanie podjęta w wierszach podrzędnych w przypadku wywołania metody **AcceptChanges** lub **RejectChanges** w wierszu nadrzędnym.  
+### <a name="acceptrejectrule"></a>Acceptrejectrule  
+ Zmiany w wierszach można zaakceptować za pomocą **acceptChanges** metody lub anulować przy użyciu **RejectChanges** metody **DataSet**, **DataTable**lub **DataRow**. Gdy **zestaw danych** zawiera **foreignkeyconstraints**, wywoływanie **AcceptChanges** lub **RejectChanges** metody wymusza **AcceptRejectRule**. **AcceptRejectRule** właściwość **ForeignKeyConstraint** określa, które działania zostaną podjęte w wierszach podrzędnych, gdy **AcceptChanges** lub **RejectChanges** jest wywoływana w wierszu nadrzędnym.  
   
- W poniższej tabeli wymieniono dostępne ustawienia dla **AcceptRejectRule**.  
+ W poniższej tabeli wymieniono dostępne ustawienia **reguły AcceptRejectRule**.  
   
 |Ustawienie reguły|Opis|  
 |------------------|-----------------|  
-|**Cascade**|Akceptowanie lub odrzucanie zmian w wierszach podrzędnych.|  
+|**Kaskadowo**|Akceptowanie lub odrzucanie zmian w wierszach podrzędnych.|  
 |**Brak**|Nie podejmuj żadnych działań w wierszach podrzędnych. Domyślnie włączone.|  
   
 ### <a name="example"></a>Przykład  
- Poniższy przykład tworzy <xref:System.Data.ForeignKeyConstraint>, ustawia kilka jego właściwości, w <xref:System.Data.ForeignKeyConstraint.AcceptRejectRule%2A>tym <xref:System.Data.ConstraintCollection> i dodaje <xref:System.Data.DataTable> go do obiektu.  
+ Poniższy przykład <xref:System.Data.ForeignKeyConstraint>tworzy , ustawia kilka jego <xref:System.Data.ForeignKeyConstraint.AcceptRejectRule%2A>właściwości, w tym <xref:System.Data.ConstraintCollection> , <xref:System.Data.DataTable> i dodaje go do obiektu.  
   
  [!code-csharp[DataWorks Data.AcceptRejectRule#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks Data.AcceptRejectRule/CS/source.cs#1)]
  [!code-vb[DataWorks Data.AcceptRejectRule#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks Data.AcceptRejectRule/VB/source.vb#1)]  
   
-## <a name="uniqueconstraint"></a>UniqueConstraint  
- Obiekt **UniqueConstraint** , który można przypisać do pojedynczej kolumny lub do tablicy kolumn w **tabeli DataTable**, zapewnia, że wszystkie dane w określonej kolumnie lub kolumnach są unikatowe dla każdego wiersza. Można utworzyć unikatowe ograniczenie dla kolumny lub tablicy kolumn za pomocą konstruktora **UniqueConstraint** . Przekaż otrzymany obiekt **UniqueConstraint** do metody **Add** właściwości **ograniczenia** tabeli, która jest elementem **ConstraintCollection**. Można również przekazać argumenty konstruktora do kilku przeciążeń metody **Add** obiektu **ConstraintCollection** , aby utworzyć **UniqueConstraint**. Podczas tworzenia **UniqueConstraint** dla kolumny lub kolumn można opcjonalnie określić, czy kolumna lub kolumny są kluczem podstawowym.  
+## <a name="uniqueconstraint"></a>Uniqueconstraint  
+ **UniqueConstraint** obiektu, który może być przypisany do jednej kolumny lub do tablicy kolumn w **DataTable**, zapewnia, że wszystkie dane w określonej kolumnie lub kolumnach jest unikatowy dla każdego wiersza. Unikatowe ograniczenie dla kolumny lub tablicy kolumn można utworzyć za pomocą konstruktora **UniqueConstraint.** Przekaż wynikowy **UniqueConstraint** obiektu do **Add** metody tabeli **Constraints** właściwości, która jest **ConstraintCollection**. Można również przekazać argumenty konstruktora do kilku przeciążeń **Add** metody **ConstraintCollection,** aby utworzyć **UniqueConstraint**. Podczas tworzenia **UniqueConstraint** dla kolumny lub kolumn, można opcjonalnie określić, czy kolumna lub kolumny są kluczem podstawowym.  
   
- Możesz również utworzyć unikatowe ograniczenie dla kolumny, ustawiając właściwość **Unique** kolumny na **wartość true**. Alternatywnie, ustawienie właściwości **Unique** pojedynczej kolumny na **false** usuwa wszelkie unikatowe ograniczenia, które mogą istnieć. Definiowanie kolumny lub kolumn jako klucza podstawowego dla tabeli spowoduje automatyczne utworzenie unikatowego ograniczenia dla określonej kolumny lub kolumny. Jeśli usuniesz kolumnę z właściwości **PrimaryKey** **elementu DataTable**, **UniqueConstraint** zostanie usunięta.  
+ Można również utworzyć unikatowe ograniczenie dla kolumny, ustawiając **właściwość Unikatowa** kolumny na **true**. Alternatywnie ustawienie **Unique** właściwość pojedynczej kolumny na **false** usuwa wszelkie unikatowe ograniczenie, które mogą istnieć. Zdefiniowanie kolumny lub kolumn jako klucza podstawowego tabeli spowoduje automatyczne utworzenie unikatowego ograniczenia dla określonej kolumny lub kolumn. Jeśli usuniesz kolumnę z **Właściwości PrimaryKey** **datatable,** **UniqueConstraint** zostanie usunięty.  
   
- Poniższy przykład tworzy **UniqueConstraint** dla dwóch kolumn tabeli **DataTable**.  
+ Poniższy przykład tworzy **UniqueConstraint** dla dwóch kolumn **DataTable**.  
   
 ```vb  
 Dim custTable As DataTable = custDS.Tables("Customers")  
@@ -86,13 +86,13 @@ custDS.Tables("Customers").Constraints.Add(custUnique)
   
 ```csharp  
 DataTable custTable = custDS.Tables["Customers"];  
-UniqueConstraint custUnique = new UniqueConstraint(new DataColumn[]   
-    {custTable.Columns["CustomerID"],   
+UniqueConstraint custUnique = new UniqueConstraint(new DataColumn[]
+    {custTable.Columns["CustomerID"],
     custTable.Columns["CompanyName"]});  
 custDS.Tables["Customers"].Constraints.Add(custUnique);  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Data.DataRelation>
 - <xref:System.Data.DataTable>

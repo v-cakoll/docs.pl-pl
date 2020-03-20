@@ -1,33 +1,33 @@
 ---
-title: 'Instrukcje: wdrażanie aplikacji klienta znajdującej usługę przy użyciu serwera proxy odnajdywania'
+title: 'Instrukcje: Wdrażanie aplikacji klienta znajdującej usługę przy użyciu serwera proxy odnajdywania'
 ms.date: 03/30/2017
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
-ms.openlocfilehash: 30db2bfc6191b1703f6d63ec2a925df42ecc93e4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 33ee5d2c9206b16b1667abd5f6d6c811ff955969
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963873"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185385"
 ---
-# <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>Instrukcje: wdrażanie aplikacji klienta znajdującej usługę przy użyciu serwera proxy odnajdywania
-Ten temat jest trzecią z trzech tematów, w których omówiono sposób implementacji serwera proxy odnajdywania. W poprzednim temacie [How to: Zaimplementuj odnajdywaną usługę, która rejestruje przy użyciu serwera](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)proxy odnajdywania, zaimplementowano usługę WCF, która rejestruje się za pomocą serwera proxy odnajdywania. W tym temacie opisano tworzenie klienta WCF korzystającego z serwera proxy odnajdywania w celu znalezienia usługi WCF.  
+# <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>Instrukcje: Wdrażanie aplikacji klienta znajdującej usługę przy użyciu serwera proxy odnajdywania
+Ten temat jest trzecim z trzech tematów, który omawia sposób implementacji serwera proxy odnajdywania. W poprzednim temacie [Jak: Implementowanie usługi odnajdywalnej, która rejestruje się za pomocą serwera proxy odnajdowania,](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)zaimplementowano usługę WCF, która rejestruje się za pomocą serwera proxy odnajdywania. W tym temacie należy utworzyć klienta WCF, który używa serwera proxy odnajdywania, aby znaleźć usługę WCF.  
   
-### <a name="implement-the-client"></a>Implementowanie klienta  
+### <a name="implement-the-client"></a>Zaimplementuj klienta  
   
-1. Dodaj nowy projekt aplikacji konsolowej do `DiscoveryProxyExample` rozwiązania o nazwie. `Client`  
+1. Dodaj nowy projekt aplikacji `DiscoveryProxyExample` konsoli `Client`do rozwiązania o nazwie .  
   
 2. Dodaj odwołania do następujących zestawów:  
   
-    1. System.ServiceModel  
+    1. System.servicemodel  
   
     2. System.ServiceModel.Discovery  
   
-3. Dodaj GeneratedClient.cs znaleziony w dolnej części tego tematu do projektu.  
+3. Dodaj GeneratedClient.cs znalezionych u dołu tego tematu do projektu.  
   
     > [!NOTE]
-    > Ten plik jest zwykle generowany przy użyciu narzędzia, takiego jak Svcutil. exe. Ten temat jest dostępny w tym temacie, aby uprościć zadanie.  
+    > Ten plik jest zwykle generowany przy użyciu narzędzia, takiego jak Svcutil.exe. Jest to przewidziane w tym temacie, aby uprościć zadanie.  
   
-4. Otwórz plik Program.cs i Dodaj następującą metodę. Ta metoda przyjmuje adres punktu końcowego i używa go do zainicjowania klienta usługi (proxy).  
+4. Otwórz plik Program.cs i dodaj następującą metodę. Ta metoda przyjmuje adres punktu końcowego i używa go do zainicjowania klienta usługi (serwera proxy).  
   
     ```csharp  
     static void InvokeCalculatorService(EndpointAddress endpointAddress)  
@@ -62,7 +62,7 @@ Ten temat jest trzecią z trzech tematów, w których omówiono sposób implemen
     }  
     ```  
   
-5. Dodaj następujący kod do `Main` metody.  
+5. Dodaj następujący kod do metody `Main`:  
   
     ```csharp  
     public static void Main()  
@@ -79,7 +79,7 @@ Ten temat jest trzecią z trzech tematów, w których omówiono sposób implemen
 
         try  
         {  
-            // Search for services that implement ICalculatorService              
+            // Search for services that implement ICalculatorService
             FindResponse findResponse = discoveryClient.Find(new FindCriteria(typeof(ICalculatorService)));  
 
             Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endpoints.Count);  
@@ -101,10 +101,10 @@ Ten temat jest trzecią z trzech tematów, w których omówiono sposób implemen
     }  
     ```  
   
- Zakończono implementowanie aplikacji klienckiej. Przejdź do [: Przetestuj serwer proxy](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)odnajdywania.  
+ Ukończono implementowanie aplikacji klienckiej. Przejdź do [strony Jak: Testowanie serwera proxy odnajdywania](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md).  
   
 ## <a name="example"></a>Przykład  
- Jest to pełen kod dla tego tematu.  
+ Jest to pełna lista kodów dla tego tematu.  
   
 ```csharp  
 // GeneratedClient.cs  
@@ -226,7 +226,7 @@ namespace Microsoft.Samples.Discovery
   
             try  
             {  
-                // Find ICalculatorService endpoints              
+                // Find ICalculatorService endpoints
                 FindResponse findResponse = discoveryClient.Find(new FindCriteria(typeof(ICalculatorService)));  
   
                 Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endpoints.Count);  
@@ -281,8 +281,8 @@ namespace Microsoft.Samples.Discovery
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Omówienie odnajdywania WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [Instrukcje: Implementowanie serwera proxy odnajdywania](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
-- [Instrukcje: Implementowanie usługi wykrywalnej zarejestrowanej za pomocą serwera proxy odnajdywania](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [Instrukcje: Wdrażanie serwera proxy odnajdywania](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
+- [Instrukcje: implementowanie odnajdywanej usługi rejestrowanej za pomocą serwera proxy odnajdywania](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)

@@ -2,36 +2,36 @@
 title: Konfiguracja i obsługa metadanych
 ms.date: 03/30/2017
 ms.assetid: 27c240cb-8cab-472c-87f8-c864f4978758
-ms.openlocfilehash: 3f6d506d719cbb1b2ecc8bae223dfe73e7e2d1a9
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 0ec8c3286037e7adbe6f5efb73e846a30b9d48d3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425129"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185664"
 ---
 # <a name="configuration-and-metadata-support"></a>Konfiguracja i obsługa metadanych
-W tym temacie opisano sposób włączania obsługi konfiguracji i metadanych dla powiązań i elementów powiązania.  
+W tym temacie opisano sposób włączania obsługi konfiguracji i metadanych dla powiązań i elementów wiązania.  
   
-## <a name="overview-of-configuration-and-metadata"></a>Przegląd konfiguracji i metadanych  
- W tym temacie omówiono następujące zadania, które są elementami opcjonalnymi 1, 2 i 4 na liście zadań [Tworzenie kanałów](developing-channels.md) .  
+## <a name="overview-of-configuration-and-metadata"></a>Omówienie konfiguracji i metadanych  
+ W tym temacie omówiono następujące zadania, które są opcjonalnymi elementami 1, 2 i 4 na liście zadań [Kanały programowe.](developing-channels.md)  
   
-- Włączanie obsługi pliku konfiguracji dla elementu powiązania.  
+- Włączanie obsługi pliku konfiguracji dla elementu wiązania.  
   
-- Włączanie obsługi plików konfiguracyjnych dla powiązania.  
+- Włączanie obsługi plików konfiguracji dla powiązania.  
   
-- Eksportowanie potwierdzeń WSDL i zasad dla elementu powiązania.  
+- Eksportowanie WSDL i potwierdzeń zasad dla elementu wiązania.  
   
-- Identyfikowanie potwierdzeń WSDL i zasad w celu wstawienia i skonfigurowania elementu powiązania lub powiązania.  
+- Identyfikowanie WSDL i potwierdzeń zasad, aby wstawić i skonfigurować element wiązania lub powiązania.  
   
- Aby uzyskać informacje na temat tworzenia powiązań zdefiniowanych przez użytkownika i elementów powiązania, zobacz temat [Tworzenie powiązań zdefiniowanych przez użytkownika](creating-user-defined-bindings.md) i [Tworzenie BindingElement](creating-a-bindingelement.md)odpowiednio.  
+ Aby uzyskać informacje dotyczące tworzenia powiązań zdefiniowanych przez użytkownika i elementów wiązania, zobacz [Tworzenie powiązań zdefiniowanych przez użytkownika](creating-user-defined-bindings.md) i tworzenie [bindingelement](creating-a-bindingelement.md), odpowiednio.  
   
 ## <a name="adding-configuration-support"></a>Dodawanie obsługi konfiguracji  
- Aby włączyć obsługę plików konfiguracyjnych dla kanału, należy zaimplementować dwie sekcje konfiguracji <xref:System.ServiceModel.Configuration.BindingElementExtensionElement?displayProperty=nameWithType>, co umożliwia obsługę konfiguracji dla elementów powiązania oraz <xref:System.ServiceModel.Configuration.StandardBindingElement?displayProperty=nameWithType> i <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602?displayProperty=nameWithType>, które umożliwiają obsługę konfiguracji powiązań.  
+ Aby włączyć obsługę plików konfiguracji dla kanału, należy <xref:System.ServiceModel.Configuration.BindingElementExtensionElement?displayProperty=nameWithType>zaimplementować dwie sekcje <xref:System.ServiceModel.Configuration.StandardBindingElement?displayProperty=nameWithType> konfiguracji, który umożliwia obsługę konfiguracji dla elementów wiązania i i <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602?displayProperty=nameWithType>, które umożliwiają obsługę konfiguracji dla powiązań.  
   
- Łatwiejszym sposobem jest użycie narzędzia przykładowej [ConfigurationCodeGenerator](../samples/configurationcodegenerator.md) do wygenerowania kodu konfiguracji powiązań i elementów powiązania.  
+ Łatwiejszym sposobem jest użycie przykładowego narzędzia [ConfigurationCodeGenerator](../samples/configurationcodegenerator.md) do generowania kodu konfiguracji dla powiązań i elementów wiązania.  
   
-### <a name="extending-bindingelementextensionelement"></a>Rozszerzanie BindingElementExtensionElement  
- Następujący przykładowy kod jest pobierany z [transportu: przykład protokołu UDP](../samples/transport-udp.md) . `UdpTransportElement` jest <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>, który uwidacznia `UdpTransportBindingElement` do systemu konfiguracji. Za pomocą kilku podstawowych zastąpień, przykład definiuje nazwę sekcji konfiguracji, typ elementu powiązania i sposób tworzenia elementu powiązania. Następnie użytkownicy mogą zarejestrować sekcję rozszerzenia w pliku konfiguracji w następujący sposób.  
+### <a name="extending-bindingelementextensionelement"></a>Rozszerzanie bindingElementExtensionElement  
+ Poniższy przykładowy kod jest pobierany z transport: przykład [UDP.](../samples/transport-udp.md) Jest `UdpTransportElement` <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> to, który `UdpTransportBindingElement` udostępnia do systemu konfiguracji. Z kilku podstawowych zastąpienia, przykład definiuje nazwę sekcji konfiguracji, typ elementu wiązania i jak utworzyć element wiązania. Użytkownicy mogą następnie zarejestrować sekcję rozszerzenia w pliku konfiguracyjnym w następujący sposób.  
   
 ```xml  
 <configuration>  
@@ -45,7 +45,7 @@ W tym temacie opisano sposób włączania obsługi konfiguracji i metadanych dla
 </configuration>  
 ```  
   
- Do rozszerzenia można odwoływać się z niestandardowych powiązań, aby użyć protokołu UDP jako transportu.  
+ Rozszerzenie można odwoływać się od niestandardowych powiązań do korzystania z protokołu UDP jako transportu.  
   
 ```xml  
 <configuration>  
@@ -62,9 +62,9 @@ W tym temacie opisano sposób włączania obsługi konfiguracji i metadanych dla
 ```  
   
 ### <a name="adding-configuration-for-a-binding"></a>Dodawanie konfiguracji dla powiązania  
- Sekcja `SampleProfileUdpBindingCollectionElement` jest <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602>, który uwidacznia `SampleProfileUdpBinding` do systemu konfiguracji. Zbiorcza implementacja jest delegowana do `SampleProfileUdpBindingConfigurationElement`, który pochodzi z <xref:System.ServiceModel.Configuration.StandardBindingElement>. `SampleProfileUdpBindingConfigurationElement` ma właściwości, które odpowiadają właściwościom `SampleProfileUdpBinding`i funkcje do mapowania na podstawie powiązania `ConfigurationElement`. Na koniec Metoda `OnApplyConfiguration` zostanie zastąpiona w `SampleProfileUdpBinding`, jak pokazano w poniższym przykładowym kodzie.  
+ Sekcja `SampleProfileUdpBindingCollectionElement` <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602> jest, która `SampleProfileUdpBinding` udostępnia do systemu konfiguracji. Większość implementacji jest delegowana `SampleProfileUdpBindingConfigurationElement`do , który <xref:System.ServiceModel.Configuration.StandardBindingElement>pochodzi z . Ma `SampleProfileUdpBindingConfigurationElement` właściwości, które odpowiadają właściwości `SampleProfileUdpBinding`na , i funkcje do mapowania z `ConfigurationElement` powiązania. Na koniec `OnApplyConfiguration` metoda jest zastępowana `SampleProfileUdpBinding`w , jak pokazano w poniższym przykładowym kodzie.  
   
-```csharp 
+```csharp
 protected override void OnApplyConfiguration(string configurationName)  
 {  
             if (binding == null)  
@@ -86,7 +86,7 @@ protected override void OnApplyConfiguration(string configurationName)
 }  
 ```  
   
- Aby zarejestrować ten program obsługi przy użyciu systemu konfiguracji, należy dodać następującą sekcję do odpowiedniego pliku konfiguracji.  
+ Aby zarejestrować ten program obsługi w systemie konfiguracji, dodaj następującą sekcję do odpowiedniego pliku konfiguracyjnego.  
   
 ```xml  
 <configuration>  
@@ -100,16 +100,16 @@ protected override void OnApplyConfiguration(string configurationName)
 </configuration>  
 ```  
   
- Można się do niego odwoływać z sekcji konfiguracji [> System. serviceModel\<](../../configure-apps/file-schema/wcf/system-servicemodel.md) .  
+ Następnie można się do niego odwoływać z [ \<sekcji system.serviceModel>](../../configure-apps/file-schema/wcf/system-servicemodel.md) konfiguracji.  
   
 ```xml  
 <configuration>  
   <system.serviceModel>  
     <client>  
       <endpoint configurationName="calculator"  
-                address="soap.udp://localhost:8001/"   
+                address="soap.udp://localhost:8001/"
                 bindingConfiguration="CalculatorServer"  
-                binding="sampleProfileUdpBinding"   
+                binding="sampleProfileUdpBinding"
                 contract= "Microsoft.ServiceModel.Samples.ICalculatorContract">  
       </endpoint>  
     </client>  
@@ -117,14 +117,14 @@ protected override void OnApplyConfiguration(string configurationName)
 </configuration>  
 ```  
   
-## <a name="adding-metadata-support-for-a-binding-element"></a>Dodawanie obsługi metadanych dla elementu powiązania  
- Aby zintegrować kanał z systemem metadanych, musi on obsługiwać Importowanie i eksportowanie zasad. Umożliwia to narzędziom, takim jak [Narzędzie do metadanych ServiceModel (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) , generowanie klientów elementu powiązania.  
+## <a name="adding-metadata-support-for-a-binding-element"></a>Dodawanie obsługi metadanych dla elementu wiązania  
+ Aby zintegrować kanał z systemem metadanych, musi obsługiwać zarówno importowanie, jak i eksport zasad. Dzięki temu narzędzia, takie jak [ServiceModel Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) do generowania klientów elementu wiązania.  
   
 ### <a name="adding-wsdl-support"></a>Dodawanie obsługi WSDL  
- Element powiązania transportu w powiązaniu jest odpowiedzialny za eksportowanie i importowanie informacji dotyczących adresowania w metadanych. W przypadku korzystania z powiązania SOAP element powiązania transportu powinien również eksportować prawidłowy identyfikator URI transportu w metadanych. Następujący przykładowy kod jest pobierany z [transportu: przykład protokołu UDP](../samples/transport-udp.md) .  
+ Element wiązania transportu w powiązaniu jest odpowiedzialny za eksportowanie i importowanie informacji adresowych w metadanych. Podczas korzystania z powiązania SOAP element wiązania transportu należy również wyeksportować poprawny identyfikator URI transportu w metadanych. Poniższy przykładowy kod jest pobierany z transport: przykład [UDP.](../samples/transport-udp.md)  
   
 #### <a name="wsdl-export"></a>Eksport WSDL  
- Aby wyeksportować informacje dotyczące adresowania, `UdpTransportBindingElement` implementuje interfejs <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType>. Metoda <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A?displayProperty=nameWithType> dodaje do portu WSDL prawidłowe informacje dotyczące adresowania.  
+ Aby wyeksportować `UdpTransportBindingElement` informacje <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> adresowe, implementuje interfejs. Metoda <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A?displayProperty=nameWithType> dodaje poprawne informacje adresowe do portu WSDL.  
   
 ```csharp  
 if (context.WsdlPort != null)  
@@ -133,7 +133,7 @@ if (context.WsdlPort != null)
 }  
 ```  
   
- `UdpTransportBindingElement` implementacja metody <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A> również eksportuje identyfikator URI transportu, gdy punkt końcowy używa powiązania SOAP:  
+ Implementacja `UdpTransportBindingElement` <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A> metody eksportuje również transportowy identyfikator URI, gdy punkt końcowy używa powiązania SOAP:  
   
 ```csharp  
 WsdlNS.SoapBinding soapBinding = GetSoapBinding(context, exporter);  
@@ -143,8 +143,8 @@ if (soapBinding != null)
 }  
 ```  
   
-#### <a name="wsdl-import"></a>Import WSDL  
- Aby zwiększyć system importowania WSDL do obsługi importowania adresów, Dodaj następującą konfigurację do pliku konfiguracji programu Svcutil. exe, jak pokazano w pliku Svcutil. exe. config:  
+#### <a name="wsdl-import"></a>WSDL Import  
+ Aby rozszerzyć system importowania WSDL na obsługę importowania adresów, dodaj następującą konfigurację do pliku konfiguracyjnego programu Svcutil.exe, jak pokazano w pliku Svcutil.exe.config:  
   
 ```xml  
 <configuration>  
@@ -160,13 +160,13 @@ if (soapBinding != null)
 </configuration>  
 ```  
   
- Podczas uruchamiania programu Svcutil. exe dostępne są dwie opcje pobrania pliku Svcutil. exe w celu załadowania rozszerzeń WSDL:  
+ Podczas uruchamiania programu Svcutil.exe dostępne są dwie opcje ładowania rozszerzenia importu WSDL przez program Svcutil.exe:  
   
-1. Wskaż plik konfiguracyjny Svcutil. exe, używając > pliku/SvcutilConfig:\<.  
+1. Punkt Svcutil.exe do pliku konfiguracyjnego przy użyciu\<pliku /SvcutilConfig:>.  
   
-2. Dodaj sekcję konfiguracji do pliku Svcutil. exe. config w tym samym katalogu, w którym znajduje się Svcutil. exe.  
+2. Dodaj sekcję konfiguracji do pliku Svcutil.exe.config w tym samym katalogu co program Svcutil.exe.  
   
- Typ `UdpBindingElementImporter` implementuje interfejs <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType>. Metoda `ImportEndpoint` importuje adres z portu WSDL:  
+ Typ `UdpBindingElementImporter` implementuje <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> interfejs. Metoda `ImportEndpoint` importuje adres z portu WSDL:  
   
 ```csharp  
 BindingElementCollection bindingElements = context.Endpoint.Binding.CreateBindingElements();  
@@ -178,12 +178,12 @@ if (transportBindingElement is UdpTransportBindingElement)
 ```  
   
 ### <a name="adding-policy-support"></a>Dodawanie obsługi zasad  
- Niestandardowy element powiązania może eksportować potwierdzenia zasad w powiązaniu WSDL dla punktu końcowego usługi, aby przedstawić możliwości tego elementu powiązania. Następujący przykładowy kod jest pobierany z [transportu: przykład protokołu UDP](../samples/transport-udp.md) .  
+ Element wiązania niestandardowego można eksportować potwierdzeń zasad w powiązanie WSDL dla punktu końcowego usługi do wyrażania możliwości tego elementu wiązania. Poniższy przykładowy kod jest pobierany z transport: przykład [UDP.](../samples/transport-udp.md)  
   
 #### <a name="policy-export"></a>Eksport zasad  
- Typ `UdpTransportBindingElement` implementuje <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType>, aby dodać obsługę eksportowania zasad. W związku z tym <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> zawiera `UdpTransportBindingElement` w generacji zasad dla dowolnego powiązania, które zawiera.  
+ Typ `UdpTransportBindingElement` implementuje, <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> aby dodać obsługę zasad eksportowania. W rezultacie <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> obejmuje `UdpTransportBindingElement` w generowaniu zasad dla dowolnego powiązania, które go zawiera.  
   
- W <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A?displayProperty=nameWithType>Dodaj potwierdzenie protokołu UDP i inne potwierdzenie, jeśli kanał jest w trybie multiemisji. Jest to spowodowane tym, że tryb multiemisji wpływa na sposób konstruowania stosu komunikacji i w związku z tym musi być koordynowany między stronami.  
+ W <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A?displayProperty=nameWithType>, dodaj asercja dla UDP i innego potwierdzenia, jeśli kanał jest w trybie multiemisji. Jest tak, ponieważ tryb multiemisji wpływa na sposób konstruowania stosu komunikacji, a zatem musi być skoordynowane między obiema stronami.  
   
 ```csharp  
 ICollection<XmlElement> bindingAssertions = context.GetBindingAssertions();  
@@ -197,14 +197,14 @@ UdpPolicyStrings.Prefix, UdpPolicyStrings.MulticastAssertion,     UdpPolicyStrin
 }  
 ```  
   
- Ponieważ niestandardowe elementy powiązania transportu są odpowiedzialne za obsługę adresowania, implementacja <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> na `UdpTransportBindingElement` musi również obsługiwać eksportowanie odpowiednich zatwierdzeń zasad WS-Addressing w celu wskazania używanej wersji WS-Addressing.  
+ Ponieważ niestandardowe elementy wiązania transportu są <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> odpowiedzialne za `UdpTransportBindingElement` obsługę adresowania, implementacja na musi również obsługiwać eksportowanie odpowiednich potwierdzeń zasad adresowania WS, aby wskazać wersję używanego adresowania WS.  
   
 ```csharp  
 AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressing);  
 ```  
   
-#### <a name="policy-import"></a>Importowanie zasad  
- Aby zwiększyć system importowania zasad, należy dodać następującą konfigurację do pliku konfiguracji programu Svcutil. exe, jak pokazano w pliku Svcutil. exe. config:  
+#### <a name="policy-import"></a>Import zasad  
+ Aby rozszerzyć system importu zasad, dodaj następującą konfigurację do pliku konfiguracyjnego programu Svcutil.exe, jak pokazano w pliku Svcutil.exe.config:  
   
 ```xml  
 <configuration>  
@@ -220,16 +220,16 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
 </configuration>  
 ```  
   
- Następnie implementujemy <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> z naszej zarejestrowanej klasy (`UdpBindingElementImporter`). W <xref:System.ServiceModel.Description.IPolicyImportExtension.ImportPolicy%2A?displayProperty=nameWithType>Sprawdź potwierdzenia w odpowiedniej przestrzeni nazw i Przetwarzaj je w celu wygenerowania transportu i sprawdzenia, czy jest to multiemisja. Ponadto Usuń potwierdzenia obsługiwane przez importera z listy potwierdzeń powiązań. Po uruchomieniu programu Svcutil. exe dostępne są dwie opcje integracji:  
+ Następnie wdrażamy <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> z naszej`UdpBindingElementImporter`zarejestrowanej klasy ( ). W <xref:System.ServiceModel.Description.IPolicyImportExtension.ImportPolicy%2A?displayProperty=nameWithType>, zbadać potwierdzenia w odpowiednim obszarze nazw i przetwarzać te do generowania transportu i sprawdzanie, czy jest multiemisji. Ponadto należy usunąć twierdzenia, które importer obsługuje z listy potwierdzeń wiązania. Ponownie, podczas uruchamiania programu Svcutil.exe dostępne są dwie opcje integracji:  
   
-1. Wskaż plik konfiguracyjny Svcutil. exe przy użyciu > pliku/SvcutilConfig:\<.  
+1. Punkt Svcutil.exe do naszego pliku konfiguracyjnego za\<pomocą pliku /SvcutilConfig:>.  
   
-2. Dodaj sekcję konfiguracji do pliku Svcutil. exe. config w tym samym katalogu, w którym znajduje się Svcutil. exe.  
+2. Dodaj sekcję konfiguracji do pliku Svcutil.exe.config w tym samym katalogu co program Svcutil.exe.  
   
-### <a name="adding-a-custom-standard-binding-importer"></a>Dodawanie niestandardowego importera powiązań standardowych  
- Svcutil. exe i typ <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>, domyślnie rozpoznawanie i importowanie powiązań dostarczonych przez system. W przeciwnym razie powiązanie zostanie zaimportowane jako wystąpienie <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>. Aby umożliwić programowi Svcutil. exe i <xref:System.ServiceModel.Description.WsdlImporter> Importowanie `SampleProfileUdpBinding` `UdpBindingElementImporter` również działa jako niestandardowy importer powiązań standardowych.  
+### <a name="adding-a-custom-standard-binding-importer"></a>Dodawanie niestandardowego importera wiązania standardowego  
+ Program Svcutil.exe <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> i typ domyślnie rozpoznają i zaimportują powiązania dostarczone przez system. W przeciwnym razie powiązanie <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> zostanie zaimportowane jako wystąpienie. Aby włączyć Svcutil.exe <xref:System.ServiceModel.Description.WsdlImporter> i `SampleProfileUdpBinding` importować `UdpBindingElementImporter` również działa jako importer wiązania standard niestandardowy.  
   
- Niestandardowy importer powiązań standardowych implementuje metodę `ImportEndpoint` w interfejsie <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType>, aby sprawdzić wystąpienie <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> zaimportowane z metadanych, aby sprawdzić, czy mogło zostać wygenerowane przez określone powiązanie standardowe.  
+ Importer wiązania niestandardowego standard `ImportEndpoint` implementuje <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> metodę w <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> interfejsie, aby sprawdzić wystąpienie importowane z metadanych, aby sprawdzić, czy mogło zostać wygenerowane przez określone powiązanie standardowe.  
   
 ```csharp  
 if (context.Endpoint.Binding is CustomBinding)  
@@ -249,4 +249,4 @@ if (context.Endpoint.Binding is CustomBinding)
 }  
 ```  
   
- Ogólnie rzecz biorąc, implementacja niestandardowego importera powiązań standardowych polega na sprawdzeniu właściwości zaimportowanych elementów powiązania, aby sprawdzić, czy zmieniono tylko właściwości, które mogły zostać ustawione przez powiązanie standardowe, a wszystkie inne właściwości są ich domyślnymi. Podstawową strategią wdrażania importera powiązań standardowych jest utworzenie wystąpienia standardowego powiązania, propagowanie właściwości z elementów powiązania do standardowego wystąpienia powiązania, które obsługuje powiązanie standardowe, oraz porównanie powiązania elementy ze standardowego powiązania z zaimportowanymi elementami powiązania.
+ Ogólnie rzecz biorąc implementowanie importera wiązania niestandardowego standard polega na sprawdzeniu właściwości importowanych elementów wiązania, aby sprawdzić, czy tylko właściwości, które mogły zostać ustawione przez standardowe powiązanie zostały zmienione i wszystkie inne właściwości są ich wartościami domyślnymi. Podstawową strategią wdrażania standardowego importera wiązania jest utworzenie wystąpienia standardowego powiązania, propagowanie właściwości z elementów wiązania do standardowego wystąpienia wiązania, które obsługuje standardowe powiązanie, oraz porównywanie powiązania elementy ze standardowego powiązania z importowanymi elementami wiązania.

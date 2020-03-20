@@ -9,61 +9,61 @@ helpviewer_keywords:
 - documents [WPF], annotations
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
-ms.openlocfilehash: b82c7e7300ebc295ca06d565c2fb5f6f2b28e92c
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 433fee08d44720640d3f9d1bf2511a6a267eb58e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636513"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79145465"
 ---
 # <a name="annotations-overview"></a>Przegląd Adnotacje
-Pisanie notatek lub komentarzy w dokumentach papierowych to takie działanie commonplace, które niemal zajmiemy się przyznanym. Te uwagi lub komentarze są "adnotacjami" dodawane do dokumentu w celu oflagowania informacji lub wyróżniania elementów do późniejszego odwoływania się do nich. Chociaż Pisanie notatek w drukowanych dokumentach jest łatwe i commonplace, możliwość dodawania osobistych komentarzy do dokumentów elektronicznych jest zwykle bardzo ograniczona, jeśli jest tam dostępna.  
+Pisanie notatek lub komentarzy do dokumentów papierowych jest tak powszechną czynnością, że prawie bierzemy to za pewnik. Te notatki lub komentarze są "adnotacjami", które dodajemy do dokumentu, aby oznaczyć interesujące elementy do późniejszego odwołania. Chociaż pisanie notatek na drukowanych dokumentach jest łatwe i powszechne, możliwość dodawania osobistych komentarzy do dokumentów elektronicznych jest zazwyczaj bardzo ograniczona, jeśli jest w ogóle dostępna.  
   
- W tym temacie opisano kilka typowych rodzajów adnotacji, w tym notatek i wyróżniania, a ponadto przedstawiono sposób, w jaki struktura adnotacji firmy Microsoft ułatwia tego rodzaju adnotacje w aplikacjach za pomocą Windows Presentation Foundation (WPF ) kontrolki wyświetlania dokumentu.  Kontrolki wyświetlania dokumentów WPF obsługujące adnotacje obejmują <xref:System.Windows.Controls.FlowDocumentReader> i <xref:System.Windows.Controls.FlowDocumentScrollViewer>, a także formanty pochodzące z <xref:System.Windows.Controls.Primitives.DocumentViewerBase> takich jak <xref:System.Windows.Controls.DocumentViewer> i <xref:System.Windows.Controls.FlowDocumentPageViewer>.  
+ W tym temacie można zapoznać się z kilkoma typowymi typami adnotacji, w szczególności notatkami samoprzylepne i wyróżnieniami, a także zilustrować, w jaki sposób struktura adnotacji firmy Microsoft ułatwia tego typu adnotacje w aplikacjach za pośrednictwem Programu Windows Presentation Foundation (WPF ) kontrolki wyświetlania dokumentów.  Formanty wyświetlania dokumentów WPF <xref:System.Windows.Controls.FlowDocumentReader> <xref:System.Windows.Controls.FlowDocumentScrollViewer>obsługujące adnotacje obejmują <xref:System.Windows.Controls.Primitives.DocumentViewerBase> i <xref:System.Windows.Controls.DocumentViewer> <xref:System.Windows.Controls.FlowDocumentPageViewer>, a także formanty pochodzące z takich jak i .  
 
-<a name="caf1_type_stickynotes"></a>   
-## <a name="sticky-notes"></a>Sticky Notes  
- Typowa notatka programu Sticky Notes zawiera informacje, które są zapisywane w niewielkim kawałku kolorowego papieru, który jest następnie "zablokowany" do dokumentu. Cyfrowe notatki programu Sticky Notes zapewniają podobną funkcjonalność w przypadku dokumentów elektronicznych, ale z dodatkową elastycznością, która obejmuje wiele innych typów zawartości, takich jak tekst tekstowy, Notatki pisane ręcznie (na przykład pociągnięcia atramentu komputera typu Tablet) lub linki sieci Web.  
+<a name="caf1_type_stickynotes"></a>
+## <a name="sticky-notes"></a>Karteczki  
+ Typowa notatka samoprzylepna zawiera informacje napisane na małym kawałku kolorowego papieru, który jest następnie "przyklejony" do dokumentu. Cyfrowe notatki samoprzylepne zapewniają podobną funkcjonalność dla dokumentów elektronicznych, ale z dodatkową elastycznością, aby uwzględnić wiele innych typów zawartości, takich jak tekst maszynowy, notatki odręczne (na przykład pociągnięcia "atramentowe" komputera typu Tablet lub łącza sieci Web.  
   
- Na poniższej ilustracji przedstawiono przykłady wyróżnienia, notatki tekstu i adnotacji odręczne.  
+ Na poniższej ilustracji przedstawiono kilka przykładów podświetlania, notatki samoprzylepnej tekstu i adnotacji notatki samoprzylepnej.  
   
- ![Wyróżnij adnotacje, tekst i atramenty dla notatek.](./media/caf-stickynote.jpg "CAF_StickyNote")  
+ ![Adnotacje do wyróżniania, tekstu i notatki samoprzylepnej.](./media/caf-stickynote.jpg "CAF_StickyNote")  
   
  Poniższy przykład przedstawia metodę, której można użyć, aby włączyć obsługę adnotacji w aplikacji.  
   
  [!code-csharp[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](~/samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXml/CSharp/Window1.xaml.cs#docviewxmlstartannotations)]
  [!code-vb[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DocViewerAnnotationsXml/visualbasic/window1.xaml.vb#docviewxmlstartannotations)]  
   
-<a name="caf1_type_callouts"></a>   
-## <a name="highlights"></a>Wyróżnienia  
- Osoby korzystające z metod twórczych mogą zwrócić uwagę na interesujące Cię elementy, gdy oznaczą dokument papierowy, taki jak podkreślenie, wyróżnianie, krążące słów w zdaniu lub rysowanie znaczników lub notacji na marginesie.  Wyróżnij adnotacje w programie Microsoft Annotations Framework oferują podobną funkcję do oznaczania informacji wyświetlanych w formantach wyświetlania dokumentów WPF.  
+<a name="caf1_type_callouts"></a>
+## <a name="highlights"></a>Najważniejsze informacje  
+ Użytkownicy używają kreatywnych metod, aby zwrócić uwagę na interesujące elementy podczas oznaczania dokumentu papierowego, takie jak podkreślenie, wyróżnianie, okrążanie słów w zdaniu lub rysowanie znaczników lub notacji na marginesie.  Wyróżnij adnotacje w programie Microsoft Annotations Framework zapewniają podobną funkcję do oznaczania informacji wyświetlanych w formanty wyświetlania dokumentów WPF.  
   
- Na poniższej ilustracji przedstawiono przykład adnotacji z wyróżnioną.  
+ Na poniższej ilustracji przedstawiono przykład adnotacji podświetlenia.  
   
- ![Wyróżnij adnotację](./media/caf-callouts.png "CAF_Callouts")  
+ ![Wyróżnianie adnotacji](./media/caf-callouts.png "CAF_Callouts")  
   
- Użytkownicy zazwyczaj tworzą adnotacje, zaznaczając najpierw jakiś tekst lub interesujący element, a następnie klikając prawym przyciskiem myszy, aby wyświetlić <xref:System.Windows.Controls.ContextMenu> opcji adnotacji.  Poniższy przykład pokazuje [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] można użyć, aby zadeklarować <xref:System.Windows.Controls.ContextMenu> z rozesłanymi poleceniami, do których użytkownicy mogą uzyskać dostęp, aby tworzyć adnotacje i zarządzać nimi.  
+ Użytkownicy zazwyczaj tworzą adnotacje, najpierw zaznaczając tekst lub interesujący element, a <xref:System.Windows.Controls.ContextMenu> następnie klikając prawym przyciskiem myszy, aby wyświetlić opcje adnotacji.  Poniższy przykład [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] pokazuje, że można <xref:System.Windows.Controls.ContextMenu> zadeklarować z kierowanych poleceń, które użytkownicy mogą uzyskać dostęp do tworzenia adnotacji i zarządzania nimi.  
   
  [!code-xaml[DocViewerAnnotationsXps#CreateDeleteAnnotations](~/samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXps/CSharp/Window1.xaml#createdeleteannotations)]  
   
-<a name="caf1_framework_data_anchoring"></a>   
+<a name="caf1_framework_data_anchoring"></a>
 ## <a name="data-anchoring"></a>Zakotwiczenie danych  
- Struktura adnotacji wiąże adnotacje z danymi, które użytkownik wybiera, a nie tylko do pozycji w widoku wyświetlania. W związku z tym, jeśli widok dokumentu zmieni się, na przykład gdy użytkownik przewinie lub zmieni rozmiar okna wyświetlania, adnotacja pozostaje z zaznaczeniem danych, z którymi jest powiązane. Na przykład poniższa ilustracja ilustruje adnotację utworzoną przez użytkownika w ramach zaznaczenia tekstu. Gdy widok dokumentu zmieni się (przewija, zmienia rozmiar, skaluje lub w inny sposób przenosi), adnotacja wyróżniona jest przenoszona przy użyciu oryginalnego zaznaczenia danych.  
+ Struktura adnotacji wiąże adnotacje z danymi wybranymi przez użytkownika, a nie tylko z pozycją w widoku wyświetlania. W związku z tym jeśli zmieni się widok dokumentu, na przykład gdy użytkownik przewija lub zmienia rozmiar okna wyświetlania, adnotacja pozostaje z wyborem danych, z którym jest powiązany. Na przykład poniższa grafika ilustruje adnotację, którą użytkownik dokonał w zaznaczeniu tekstu. Gdy widok dokumentu ulegnie zmianie (przewija, zmienia rozmiar, skaluje lub w inny sposób przesuwa), adnotacja podświetlenia zostanie przesunięta z oryginalnym wyborem danych.  
   
- ![Zakotwiczanie danych adnotacji](./media/caf-dataanchoring.png "CAF_DataAnchoring")  
+ ![Zakotwiczenie danych adnotacji](./media/caf-dataanchoring.png "CAF_DataAnchoring")  
   
-<a name="matching_annotations_with_annotated_objects"></a>   
-## <a name="matching-annotations-with-annotated-objects"></a>Pasujące adnotacje z obiektami z adnotacjami  
- Można dopasować adnotacje do odpowiednich obiektów z adnotacjami. Rozważmy na przykład prostą aplikację czytelnika dokumentu, która ma okienko komentarzy. Okienko komentarzy może być polem listy wyświetlającym tekst z listy adnotacji, które są zakotwiczone do dokumentu. Jeśli użytkownik wybierze element w polu listy, aplikacja umożliwia wyświetlenie akapitu w dokumencie, do którego jest zakotwiczony odpowiedni obiekt adnotacji.  
+<a name="matching_annotations_with_annotated_objects"></a>
+## <a name="matching-annotations-with-annotated-objects"></a>Dopasowywanie adnotacji do obiektów z adnotacjami  
+ Adnotacje można dopasować do odpowiednich obiektów z adnotacjami. Rozważmy na przykład prostą aplikację czytnika dokumentów, która ma okienko komentarzy. Okienko komentarzy może być polem listy, w które jest wyświetlany tekst z listy adnotacji zakotwiczonych w dokumencie. Jeśli użytkownik wybierze element w polu listy, aplikacja wyświetli akapit w dokumencie, do którego zakotwiczony jest odpowiedni obiekt adnotacji.  
   
- W poniższym przykładzie pokazano, jak zaimplementować procedurę obsługi zdarzeń takiego pola listy, które służy jako okienko komentarzy.  
+ W poniższym przykładzie pokazano, jak zaimplementować program obsługi zdarzeń takiego pola listy, który służy jako okienko komentarzy.  
   
  [!code-csharp[FlowDocumentAnnotatedViewer#Handler](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/CSharp/Window1.xaml.cs#handler)]
  [!code-vb[FlowDocumentAnnotatedViewer#Handler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/visualbasic/window1.xaml.vb#handler)]  
   
- Inny przykładowy scenariusz obejmuje aplikacje, które umożliwiają wymianę adnotacji i notatek programu Sticky Notes między czytelnikami dokumentu za pośrednictwem poczty e-mail. Ta funkcja umożliwia tym aplikacjom nawigowanie po czytniku do strony zawierającej wymienianą adnotację.  
+ Inny przykładowy scenariusz obejmuje aplikacje, które umożliwiają wymianę adnotacji i karteczek samoprzylepnych między czytnikami dokumentów za pośrednictwem poczty e-mail. Ta funkcja umożliwia tym aplikacjom nawigowanie do czytnika do strony zawierającej adnotację, która jest wymieniana.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Windows.Controls.Primitives.DocumentViewerBase>
 - <xref:System.Windows.Controls.DocumentViewer>
@@ -75,4 +75,4 @@ Pisanie notatek lub komentarzy w dokumentach papierowych to takie działanie com
 - [ContextMenu — przegląd](../controls/contextmenu-overview.md)
 - [Przegląd poleceń](commanding-overview.md)
 - [Przegląd dokumentu przepływu](flow-document-overview.md)
-- [Instrukcje: Dodawanie polecenia do elementu MenuItem](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms741839(v=vs.90))
+- [Jak: Dodawanie polecenia do menuItem](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms741839(v=vs.90))

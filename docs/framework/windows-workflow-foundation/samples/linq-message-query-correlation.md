@@ -2,43 +2,43 @@
 title: Korelacja zapytania komunikatów LINQ
 ms.date: 03/30/2017
 ms.assetid: b746872e-57b1-4514-b337-53398a0e0deb
-ms.openlocfilehash: cd91a171f3242cfd7e8ac0404e24ac065919bcce
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 507001b165efdcbe7c1e27a07749dbe2eafb468f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094621"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182807"
 ---
 # <a name="linq-message-query-correlation"></a>Korelacja zapytania komunikatów LINQ
-Ten przykład pokazuje, jak przeprowadzić korelację opartą na zawartości przy użyciu niestandardowej implementacji <xref:System.ServiceModel.Dispatcher.MessageQuery>, w przeciwieństwie do <xref:System.ServiceModel.XPathMessageQuery>dostarczonych przez system.  
+W tym przykładzie pokazano, jak wykonać korelację <xref:System.ServiceModel.Dispatcher.MessageQuery> opartą na zawartości przy <xref:System.ServiceModel.XPathMessageQuery>użyciu implementacji niestandardowej, w przeciwieństwie do dostarczonych przez system.  
   
-## <a name="demonstrates"></a>Przedstawia  
- <xref:System.ServiceModel.Dispatcher.MessageQuery>niestandardowe, korelacja oparta na zawartości.  
+## <a name="demonstrates"></a>Demonstracje  
+ Niestandardowa <xref:System.ServiceModel.Dispatcher.MessageQuery>korelacja oparta na zawartości.  
   
 ## <a name="discussion"></a>Dyskusji  
- Ten przykład pokazuje, jak rozłożyć z klasy bazowej <xref:System.ServiceModel.Dispatcher.MessageQuery> na potrzeby korelacji. Implementacja niestandardowa, `LinqMessageQuery`, umożliwia użytkownikom podawanie XName do znajdowania w komunikacie przy użyciu XLinq. Dane pobierane przez zapytanie są używane do tworzenia klucza korelacji do wysyłania komunikatów do odpowiedniego wystąpienia przepływu pracy.  
+ W tym przykładzie pokazano, jak rozszerzyć z klasy podstawowej <xref:System.ServiceModel.Dispatcher.MessageQuery> na potrzeby korelacji. Implementacja niestandardowa, `LinqMessageQuery`umożliwia użytkownikom zapewnienie XName znaleźć w wiadomości przy użyciu XLinq. Dane pobrane przez kwerendę jest używany do tworzenia klucza korelacji do wysyłania komunikatów do wystąpienia przepływu pracy odpowiednie.  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić próbkę  
   
-1. Ten przykład uwidacznia usługę przepływu pracy za pomocą punktów końcowych HTTP. Aby uruchomić ten przykład, należy dodać odpowiednie listy ACL adresów URL (zobacz [Konfigurowanie protokołu HTTP i https](../../wcf/feature-details/configuring-http-and-https.md) w celu uzyskania szczegółowych informacji), uruchamiając program Visual Studio jako administrator lub wykonując następujące polecenie w wierszu polecenia z podwyższonym poziomem uprawnień, aby dodać odpowiednie listy ACL. Upewnij się, że Twoja domena i nazwa użytkownika zostały zastąpione.  
+1. W tym przykładzie udostępnia usługę przepływu pracy przy użyciu punktów końcowych HTTP. Aby uruchomić ten przykład, należy dodać odpowiednie listy ACL adresów URL (zobacz [Konfigurowanie protokołu HTTP i HTTPS](../../wcf/feature-details/configuring-http-and-https.md) w celu uzyskania szczegółowych informacji), uruchamiając program Visual Studio jako administrator lub wykonując następujące polecenie z podwyższonym poziomem uprawnień, aby dodać odpowiednie listy ACL. Upewnij się, że twoja domena i nazwa użytkownika są podstawione.  
   
     ```console  
     netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%  
     ```  
   
-2. Po dodaniu list ACL adresów URL wykonaj następujące czynności.  
+2. Po dodaniu list ACL url należy wykonać następujące czynności.  
   
     1. Skompiluj rozwiązanie.  
   
-    2. Aby ustawić wiele projektów uruchomieniowych, kliknij prawym przyciskiem myszy rozwiązanie i wybierz polecenie **Ustaw projekty startowe**. Dodaj **usługę** i **klienta** (w tej kolejności) jako wiele projektów początkowych.  
+    2. Ustaw wiele projektów start-upów, klikając prawym przyciskiem myszy rozwiązanie i wybierając **pozycję Ustaw projekty startowe**. Dodaj **usługę** i **klienta** (w tej kolejności) jako wiele projektów startowych.  
   
-    3. Uruchom aplikację. W konsoli klienta programu jest wyświetlany przepływ pracy, który wysyła zamówienie i pobiera identyfikator zamówienia zakupu, a następnie potwierdza zamówienie. W oknie usługi zostaną wyświetlone żądania przetwarzane.  
+    3. Uruchom aplikację. Konsola klienta pokazuje przepływ pracy wysyłający zamówienie i odbierający identyfikator zamówienia zakupu, a następnie potwierdzający zamówienie. Okno Usługa wyświetli przetwarzane żądania.  
   
 > [!IMPORTANT]
-> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
->   
+> Próbki mogą być już zainstalowane na komputerze. Przed kontynuowaniem sprawdź następujący (domyślny) katalog.  
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
->   
+>
+> Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) Przykłady dla platformy .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Services\LinqMessageQueryCorrelation`

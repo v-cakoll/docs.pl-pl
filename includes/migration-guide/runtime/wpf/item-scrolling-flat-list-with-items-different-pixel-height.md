@@ -1,18 +1,18 @@
 ---
 ms.openlocfilehash: 3a82822aae281ea7e873ba649f05b1d68686ec69
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "70997685"
 ---
-### <a name="item-scrolling-a-flat-list-with-items-of-different-pixel-height"></a>Element — przewijanie płaskiej listy z elementami o różnej wysokości pikseli
+### <a name="item-scrolling-a-flat-list-with-items-of-different-pixel-height"></a>Przewijanie płaskiej listy z elementami o różnej wysokości pikseli
 
 |   |   |
 |---|---|
-|Szczegóły|Gdy zostanie wyświetlona kolekcja używająca<code>IsVirtualizing=true</code>wirtualizacji () i elementu do<code>ScrollUnit=Item</code>przewijania (), a gdy kontrolka przewinie się, aby wyświetlić element, którego wysokość <xref:System.Windows.Controls.VirtualizingStackPanel?displayProperty=name> w pikselach różni się od sąsiadów, iteracje wszystkich <xref:System.Windows.Controls.ItemsControl?displayProperty=name> elementy w kolekcji. Interfejs użytkownika nie odpowiada podczas tej iteracji; Jeśli kolekcja jest duża, może to być postrzegane jako zawieszenie. Iteracja występuje w innych sytuacjach, nawet w poprzednich wersjach .NET Framework. Na przykład występuje w przypadku przewijania do pikseli (<code>ScrollUnit=Pixel</code>) w przypadku napotkania elementu o różnej wysokości pikseli, a po przejściu danych hierarchicznych (takich <xref:System.Windows.Controls.TreeView?displayProperty=name> jak lub <xref:System.Windows.Controls.ItemsControl?displayProperty=name> z włączonym grupowaniem) po napotkaniu elementu z inna liczba elementów podrzędnych niż jej sąsiedzi. W przypadku przewijania elementów i o różnej wysokości pikseli iteracja została wprowadzona w .NET Framework 4.6.1, aby naprawić błędy w układzie danych hierarchicznych.  Nie jest to konieczne, jeśli dane są płaskie (bez hierarchii), a .NET Framework 4.6.2 nie robi w tym przypadku.|
-|Sugestia|Jeśli iteracja występuje w .NET Framework 4.6.1, ale nie w starszych wersjach — to oznacza, że <xref:System.Windows.Controls.ItemsControl?displayProperty=name> Jeśli element jest przewijaną listą z elementami o różnej wysokości pikseli — istnieją dwie metody zaradcze:<ol><li>Zainstaluj .NET Framework 4.6.2.</li><li>Zainstaluj poprawkę HR 1605 dla .NET Framework 4.6.1.</li></ol>|
-|Scope|Mały|
+|Szczegóły|Gdy <xref:System.Windows.Controls.ItemsControl?displayProperty=name> wyświetla kolekcję przy<code>IsVirtualizing=true</code>użyciu wirtualizacji<code>ScrollUnit=Item</code>( ) i przewijanie elementu ( ), a gdy formant <xref:System.Windows.Controls.VirtualizingStackPanel?displayProperty=name> przewija się, aby wyświetlić element, którego wysokość w pikselach różni się od jego sąsiadów, iteruje wszystkie elementy w kolekcji. Interfejs użytkownika nie odpowiada podczas tej iteracji; jeśli kolekcja jest duża, może to być postrzegane jako powiesić. Iteracja występuje w innych okolicznościach, nawet w poprzednich wydaniach programu .NET Framework. Na przykład występuje, gdy pixel-scrolling (<code>ScrollUnit=Pixel</code>) po napotkaniu elementu o różnej wysokości pikseli i gdy element przewijania danych hierarchicznych (takich jak <xref:System.Windows.Controls.TreeView?displayProperty=name> lub <xref:System.Windows.Controls.ItemsControl?displayProperty=name> z grupowania włączone) po napotkaniu elementu z inną liczbą elementów podrzędnych niż jego sąsiadów. W przypadku przewijania elementów i wysokości różnych pikseli iteracja została wprowadzona w .NET Framework 4.6.1, aby naprawić błędy w układzie danych hierarchicznych.  Nie jest potrzebne, jeśli dane są płaskie (bez hierarchii) i .NET Framework 4.6.2 nie robi tego w takim przypadku.|
+|Sugestia|Jeśli iteracja występuje w .NET Framework 4.6.1, ale nie <xref:System.Windows.Controls.ItemsControl?displayProperty=name> we wcześniejszych wersjach - to znaczy, jeśli jest element- przewijanie płaskiej listy z elementami o różnej wysokości pikseli - istnieją dwa środki zaradcze:<ol><li>Zainstaluj program .NET Framework 4.6.2.</li><li>Zainstaluj poprawkę HR 1605 dla platformy .NET Framework 4.6.1.</li></ol>|
+|Zakres|Mały|
 |Wersja|4.6.1|
 |Typ|Środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Windows.Controls.VirtualizingStackPanel?displayProperty=nameWithType></li></ul>|

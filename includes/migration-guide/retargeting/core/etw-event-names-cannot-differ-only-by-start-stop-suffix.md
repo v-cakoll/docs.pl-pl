@@ -1,18 +1,17 @@
 ---
-ms.openlocfilehash: 9ad283af76085c228bedceb6db723a1d18b10210
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 71c81cf188fa4c2300661f10eb87e7ae00e031f6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67804391"
 ---
-### <a name="etw-event-names-cannot-differ-only-by-a-start-or-stop-suffix"></a>Nazwy zdarzeń funkcji ETW nie różnią się jedynie sufiks "Start" lub "Zatrzymaj"
+### <a name="etw-event-names-cannot-differ-only-by-a-start-or-stop-suffix"></a>Nazwy zdarzeń ETW nie mogą różnić się tylko sufiksem "Start" lub "Stop"
 
 |   |   |
 |---|---|
-|Szczegóły|W .NET Framework 4.6 i 4.6.1, środowisko wykonawcze zgłasza <xref:System.ArgumentException> gdy dwie nazwy zdarzeń śledzenie zdarzeń dla Windows (ETW) różniących się tylko &quot;Start&quot; lub &quot;zatrzymać&quot; sufiks (jako po nazwie jedno zdarzenie <code>LogUser</code>i nosi nazwę innego <code>LogUserStart</code>). W tym przypadku środowisko uruchomieniowe nie można utworzyć źródła zdarzeń, którego nie można wyemitować wszelkie rejestrowania.|
-|Sugestia|Aby zapobiec wyjątek, upewnij się, że żadne nazwy dwóch zdarzeń różniących się tylko &quot;Start&quot; lub &quot;zatrzymać&quot; sufiks. To wymaganie jest usuwany, począwszy od programu .NET Framework 4.6.2; środowisko uruchomieniowe można odróżnić nazwy zdarzeń, które różnią się tylko przez &quot;Start&quot; i &quot;zatrzymać&quot; sufiks.|
-|Scope|Krawędź|
+|Szczegóły|W programie .NET Framework 4.6 i 4.6.1 <xref:System.ArgumentException> środowisko wykonawcze zgłasza, gdy dwie nazwy zdarzeń śledzenia &quot;&quot; zdarzeń &quot;&quot; dla systemu Windows (ETW) <code>LogUser</code> różnią się <code>LogUserStart</code>tylko sufiksem Start lub Stop (jak wtedy, gdy jedno zdarzenie jest nazwane, a inne ma nazwę ). W takim przypadku środowisko wykonawcze nie może skonstruować źródła zdarzeń, które nie może emitować żadnych rejestrowania.|
+|Sugestia|Aby zapobiec wyjątek, upewnij się, że &quot;żadne&quot; &quot;dwie&quot; nazwy zdarzeń różnią się tylko przez start lub stop sufiks. To wymaganie jest usuwane począwszy od programu .NET Framework 4.6.2; środowisko wykonawcze może rozróżniać nazwy zdarzeń,&quot; &quot;które&quot; różnią się tylko sufiksem &quot;Start i Stop.|
+|Zakres|Brzeg|
 |Wersja|4.6|
 |Typ|Przekierowanie|
-

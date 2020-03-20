@@ -1,24 +1,24 @@
 ---
-title: Przykład Klasa DataContractJsonSerializer
+title: DataContractJsonSerializer próbki
 ms.date: 03/30/2017
 ms.assetid: 3c2c4747-7510-4bdf-b4fe-64f98428ef4a
-ms.openlocfilehash: 52e10ee28137b16bd90e6f3f3ac41f839528f334
-ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
+ms.openlocfilehash: d3456582d73640f1802c17d7f29f4931a6f920b6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75904544"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79144633"
 ---
-# <a name="datacontractjsonserializer-sample"></a>Przykład Klasa DataContractJsonSerializer
+# <a name="datacontractjsonserializer-sample"></a>DataContractJsonSerializer próbki
 
 > [!NOTE]
-> Ten przykład jest przeznaczony dla <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>. W przypadku większości scenariuszy obejmujących serializację i deserializacja kodu JSON zalecamy używanie interfejsów API w [przestrzeni nazw System. Text. JSON](../../../standard/serialization/system-text-json-overview.md). 
+> Ten przykład <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>jest dla . W przypadku większości scenariuszy, które obejmują serializację i deserializację JSON, zalecamy interfejsy API w [obszarze nazw System.Text.Json](../../../standard/serialization/system-text-json-overview.md).
 
-<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> obsługuje te same typy co <xref:System.Runtime.Serialization.DataContractSerializer>. Format danych JSON jest szczególnie przydatny podczas pisania asynchronicznych aplikacji sieci Web w stylu JavaScript i XML (AJAX). Obsługa technologii AJAX w programie Windows Communication Foundation (WCF) jest zoptymalizowana pod kątem użycia z ASP.NET AJAX przez kontrolkę ScriptManager. Przykłady użycia Windows Communication Foundation (WCF) z ASP.NET AJAX można znaleźć w przykładach [AJAX](ajax.md).  
+<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>obsługuje te same <xref:System.Runtime.Serialization.DataContractSerializer>typy co . Format danych JSON jest szczególnie przydatny podczas pisania asynchronicznych aplikacji sieci Web w stylu JavaScript i XML (AJAX). Obsługa ajax w programie Windows Communication Foundation (WCF) jest zoptymalizowana do użytku z ASP.NET AJAX za pośrednictwem formantu ScriptManager. Przykłady używania programu Windows Communication Foundation (WCF) z ASP.NET AJAX można znaleźć w [przykładzie próbek ajax](ajax.md).  
   
-Procedura konfiguracji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
+Procedura konfiguracji i instrukcje kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
-Przykład używa kontraktu danych `Person` do zademonstrowania serializacji i deserializacji.  
+W przykładzie `Person` użyto umowy danych do wykazania serializacji i deserializacji.  
 
 ```csharp
 [DataContract]
@@ -32,7 +32,7 @@ class Person
 }
 ```
 
- Aby serializować wystąpienie typu `Person` do formatu JSON, najpierw utwórz <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> i użyj metody `WriteObject` do zapisania danych JSON w strumieniu.  
+ Aby serializować wystąpienie `Person` typu do JSON, utwórz <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> pierwszy i użyj metody do zapisu `WriteObject` danych JSON do strumienia.  
 
 ```csharp
 Person p = new Person();
@@ -48,25 +48,25 @@ ser.WriteObject(stream1, p);
 {"age":42,"name":"John"}  
 ```  
   
- Przykład demonstruje deserializacji z danych JSON do obiektu. Następnie przewiń strumień i Wywołaj `ReadObject`.  
+ Przykład demonstruje deserializacji z danych JSON do obiektu. Następnie przewiń strumień `ReadObject`i zadzwoń .  
 
 ```csharp
 Person p2 = (Person)ser.ReadObject(stream1);
 ```
 
- Badanie obiektu `p2` informuje o poprawnym deserializacji danych JSON.  
+ Badanie `p2` obiektu ujawnia, że dane JSON został poprawnie zdesializowany.  
   
 > [!IMPORTANT]
-> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
->   
+> Próbki mogą być już zainstalowane na komputerze. Przed kontynuowaniem sprawdź następujący (domyślny) katalog.  
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
->   
+>
+> Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) Przykłady dla platformy .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Ajax\JsonSerialization`  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić próbkę  
   
-1. Skompiluj rozwiązanie JsonSerialization. sln zgodnie z opisem w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1. Zbuduj rozwiązanie JsonSerialization.sln zgodnie z opisem w [tworzenie przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-2. Uruchom utworzoną aplikację konsolową.  
+2. Uruchom wynikową aplikację konsoli.  

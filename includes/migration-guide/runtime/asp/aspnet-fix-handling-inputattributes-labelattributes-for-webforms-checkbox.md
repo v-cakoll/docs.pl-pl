@@ -1,19 +1,18 @@
 ---
-ms.openlocfilehash: e605e0f2636d83745815ec4ed27bf72692f18d15
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: ea0e1583cd611a624cf2d2edf9defb2294eb89d9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67802701"
 ---
-### <a name="aspnet-fix-handling-of-inputattributes-and-labelattributes-for-webforms-checkbox-control"></a>ASP.NET poprawki obsługi InputAttributes i LabelAttributes dla formantu CheckBox formularzy WebForms
+### <a name="aspnet-fix-handling-of-inputattributes-and-labelattributes-for-webforms-checkbox-control"></a>ASP.NET Fix obsługi inputAttributes i LabelAttributes for WebForms CheckBox control
 
 |   |   |
 |---|---|
-|Szczegóły|Dla aplikacji przeznaczonych dla środowiska .NET Framework 4.7.2 i wcześniejszymi wersjami <xref:System.Web.UI.WebControls.CheckBox.InputAttributes?displayProperty=nameWithType> i <xref:System.Web.UI.WebControls.CheckBox.LabelAttributes?displayProperty=nameWithType> programowo dodawane do formularzy sieci Web <xref:System.Web.UI.WebControls.CheckBox> kontrolki są tracone po odświeżeniu strony. Dla aplikacji przeznaczonych dla platformy .NET Framework 4.8 lub nowszej wersji zostaną zachowane po odświeżeniu strony.|
-|Sugestia|Poprawne zachowanie przywracania atrybutów na odświeżenie strony, można ustawić <code>targetFrameworkVersion</code> 4.8 lub wyższej. Na przykład:<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;system.web&gt;&#13;&#10;&lt;httpRuntime targetFramework=&quot;4.8&quot;/&gt;&#13;&#10;&lt;/system.web&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>Ustawienie niższej lub wcale, zachowuje stary nieprawidłowe zachowanie.|
-|Scope|Nieznany|
+|Szczegóły|Dla aplikacji, które docelowe .NET Framework 4.7.2 i wcześniejszych wersjach <xref:System.Web.UI.WebControls.CheckBox.InputAttributes?displayProperty=nameWithType> i <xref:System.Web.UI.WebControls.CheckBox.LabelAttributes?displayProperty=nameWithType> które są programowo dodawane do formantu WebForms <xref:System.Web.UI.WebControls.CheckBox> są tracone po postback. W przypadku aplikacji docelowych .NET Framework 4.8 lub nowszych wersji są one zachowywane po wprowadzeniu zwrotu zwrotnego.|
+|Sugestia|Aby uzyskać poprawne zachowanie do przywracania atrybutów na postback, ustaw na <code>targetFrameworkVersion</code> 4.8 lub wyższe. Przykład:<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;system.web&gt;&#13;&#10;&lt;httpRuntime targetFramework=&quot;4.8&quot;/&gt;&#13;&#10;&lt;/system.web&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>Ustawienie go niższe lub wcale, zachowuje stare niepoprawne zachowanie.|
+|Zakres|Nieznane|
 |Wersja|4.8|
 |Typ|Środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Web.UI.WebControls.CheckBox?displayProperty=nameWithType></li></ul>|
-

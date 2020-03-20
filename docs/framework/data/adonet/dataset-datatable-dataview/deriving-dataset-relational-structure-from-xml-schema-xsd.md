@@ -2,34 +2,34 @@
 title: Pobieranie relacyjnej struktury elementu DataSet ze schematu XML (XSD)
 ms.date: 03/30/2017
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
-ms.openlocfilehash: ef77030b4e847f91fea074b68e223ac622539048
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: d32b5cb86bc5a138f9a5f438629d8e231be4ba94
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040106"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151172"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>Pobieranie relacyjnej struktury elementu DataSet ze schematu XML (XSD)
-Ta sekcja zawiera omówienie sposobu kompilowania schematu relacyjnego `DataSet` z dokumentu schematu języka definicji schematu XML (XSD). Ogólnie rzecz biorąc dla każdego `complexType` elementu podrzędnego elementu schematu tabela jest generowana w `DataSet`. Struktura tabeli jest określana na podstawie definicji typu złożonego. Tabele są tworzone w `DataSet` dla elementów najwyższego poziomu w schemacie. Jednak tabela jest tworzona tylko dla elementu `complexType` najwyższego poziomu, gdy element `complexType` jest zagnieżdżony wewnątrz innego `complexType` elementu, w którym to przypadku zagnieżdżony element `complexType` jest mapowany na `DataTable` w `DataSet`.  
+Ta sekcja zawiera omówienie sposobu, w `DataSet` jaki schemat relacyjny a jest zbudowany z dokumentu schematu języka XSD (XSD) języka schematu schematu schematu XMD. Ogólnie rzecz biorąc `complexType` dla każdego elementu podrzędnego elementu schematu `DataSet`tabela jest generowana w pliku . Struktura tabeli jest określana przez definicję typu złożonego. Tabele są `DataSet` tworzone w forach elementów najwyższego poziomu w schemacie. Jednak tabela jest tworzona tylko `complexType` dla `complexType` elementu najwyższego poziomu, gdy element jest `complexType` zagnieżdżony `DataTable` wewnątrz `DataSet`innego `complexType` elementu, w którym to przypadku zagnieżdżony element jest mapowany na w obrębie . .  
   
- Aby uzyskać więcej informacji na temat pliku XSD, zobacz temat schemat XML organizacja World Wide Web Consortium (W3C), [część 0: zalecenie podstawowe](https://www.w3.org/TR/xmlschema-0/), [część schematu XML 1: rekomendacja struktur](https://www.w3.org/TR/xmlschema-1/)i [schemat XML schematu część 2: rekomendacja typów](https://www.w3.org/TR/xmlschema-2/)danych.  
+ Aby uzyskać więcej informacji na temat XSD, zobacz World Wide Web Consortium (W3C) [XML Schema Część 0: Primer Zalecenie](https://www.w3.org/TR/xmlschema-0/), [Schemat XML Część 1: Zalecenia struktur](https://www.w3.org/TR/xmlschema-1/)i Schemat [XML Część 2: Datatypes Zalecenie](https://www.w3.org/TR/xmlschema-2/).  
   
- Poniższy przykład ilustruje schemat XML, gdzie `customers` jest elementem podrzędnym elementu `MyDataSet`, który jest elementem **DataSet** .  
+ Poniższy przykład pokazuje schemat XML, gdzie `customers` jest `MyDataSet` elementem podrzędnym elementu, który jest **elementem DataSet.**  
   
 ```xml  
-<xs:schema id="SomeID"   
-            xmlns=""   
-            xmlns:xs="http://www.w3.org/2001/XMLSchema"   
+<xs:schema id="SomeID"
+            xmlns=""
+            xmlns:xs="http://www.w3.org/2001/XMLSchema"
             xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
    <xs:element name="MyDataSet" msdata:IsDataSet="true">  
      <xs:complexType>  
        <xs:choice maxOccurs="unbounded">  
-         <xs:element name="customers" >   
+         <xs:element name="customers" >
            <xs:complexType >  
              <xs:sequence>  
-               <xs:element name="CustomerID" type="xs:integer"   
+               <xs:element name="CustomerID" type="xs:integer"
                             minOccurs="0" />  
-               <xs:element name="CompanyName" type="xs:string"   
+               <xs:element name="CompanyName" type="xs:string"
                             minOccurs="0" />  
                <xs:element name="Phone" type="xs:string" />  
              </xs:sequence>  
@@ -41,23 +41,23 @@ Ta sekcja zawiera omówienie sposobu kompilowania schematu relacyjnego `DataSet`
  </xs:schema>  
 ```  
   
- W poprzednim przykładzie element `customers` jest elementem typu złożonego. W związku z tym definicja typu złożonego jest analizowana, a proces mapowania tworzy poniższą tabelę.  
+ W poprzednim przykładzie element `customers` jest elementem typu złożonego. W związku z tym definicja typu złożonego jest analizowana, a proces mapowania tworzy następującą tabelę.  
   
 ```text  
 Customers (CustomerID, CompanyName, Phone)  
 ```  
   
- Typ danych każdej kolumny w tabeli pochodzi od typu schematu XML określonego elementu lub atrybutu.  
+ Typ danych każdej kolumny w tabeli jest pochodną typu schematu XML odpowiedniego określonego elementu lub atrybutu.  
   
 > [!NOTE]
-> Jeśli element `customers` ma prostego typu danych schematu XML, takiego jak **Integer**, nie jest generowana żadna tabela. Tabele są tworzone tylko dla elementów najwyższego poziomu, które są typami złożonymi.  
+> Jeśli element `customers` ma prosty typ danych schematu XML, taki jak **liczba całkowita,** nie jest generowana żadna tabela. Tabele są tworzone tylko dla elementów najwyższego poziomu, które są typami złożonymi.  
   
- W poniższym schemacie XML element **Schema** ma dwa elementy podrzędne, `InStateCustomers` i `OutOfStateCustomers`.  
+ W poniższym schemacie XML element **Schemat** ma `InStateCustomers` `OutOfStateCustomers`dwa elementy podrzędne i .  
   
 ```xml  
-<xs:schema id="SomeID"   
-            xmlns=""   
-            xmlns:xs="http://www.w3.org/2001/XMLSchema"   
+<xs:schema id="SomeID"
+            xmlns=""
+            xmlns:xs="http://www.w3.org/2001/XMLSchema"
             xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
    <xs:element name="InStateCustomers" type="customerType" />  
    <xs:element name="OutOfStateCustomers" type="customerType" />  
@@ -75,7 +75,7 @@ Customers (CustomerID, CompanyName, Phone)
  </xs:schema>  
 ```  
   
- Elementy podrzędne `InStateCustomers` i `OutOfStateCustomers` są elementami typu złożonego (`customerType`). W związku z tym proces mapowania generuje następujące dwie identyczne tabele w `DataSet`.  
+ Zarówno `InStateCustomers` elementy `OutOfStateCustomers` podrzędne, jak i`customerType`elementy podrzędne są złożonymi elementami typu ( ). W związku z tym proces mapowania generuje `DataSet`następujące dwie identyczne tabele w .  
   
 ```text  
 InStateCustomers (CustomerID, CompanyName, Phone)  
@@ -84,18 +84,18 @@ OutOfStateCustomers (CustomerID, CompanyName, Phone)
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Mapowanie ograniczeń schematu XML (XSD) na ograniczenia elementu DataSet](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- Opisuje elementy schematu XML używane do tworzenia ograniczeń unikatowych i obcych kluczy w `DataSet`.  
+ W tym artykule opisano elementy schematu XML używane `DataSet`do tworzenia unikatowych i obcych ograniczeń klucza w pliku .  
   
  [Generowanie relacji elementu DataSet na podstawie schematu XML (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)  
- Opisuje elementy schematu XML używane do tworzenia relacji między kolumnami tabeli w `DataSet`.  
+ Opisuje elementy schematu XML używane do tworzenia relacji `DataSet`między kolumnami tabel w programie .  
   
  [Relacje i ograniczenia schematu XML](xml-schema-constraints-and-relationships.md)  
- Opisuje, w jaki sposób relacje są tworzone niejawnie podczas używania elementów schematu XML do tworzenia ograniczeń w `DataSet`.  
+ Opisuje, jak relacje są tworzone niejawnie podczas tworzenia ograniczeń `DataSet`przy użyciu elementów schematu XML w programie .  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Używanie języka XML w elemencie DataSet](using-xml-in-a-dataset.md)  
- Opisuje sposób ładowania i utrwalania relacyjnej struktury i danych w `DataSet` jako dane XML.  
+ Opisuje sposób ładowania i utrwalania relacyjnej struktury i danych w `DataSet` danych XML jako.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Omówienie ADO.NET](../ado-net-overview.md)

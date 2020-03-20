@@ -8,38 +8,38 @@ helpviewer_keywords:
 - geometry classes [WPF]
 - graphics [WPF], geometry classes
 ms.assetid: 9fba8934-98b7-4af6-82f6-f4ef887f963a
-ms.openlocfilehash: f45c13e1af9bc2d1f75da11b13a2c03936b136c1
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 1329f26e588b90fcd25052fb805058915b8825e3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73455010"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186473"
 ---
 # <a name="geometry-overview"></a>Przegląd Geometria
-W tym omówieniu opisano sposób użycia klas <xref:System.Windows.Media.Geometry> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] do opisywania kształtów. W tym temacie opisano również różnice między obiektami <xref:System.Windows.Media.Geometry> i <xref:System.Windows.Shapes.Shape> elementów.  
+W tym przeglądzie [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Media.Geometry> opisano sposób używania klas do opisywania kształtów. W tym temacie kontrastuje <xref:System.Windows.Media.Geometry> również <xref:System.Windows.Shapes.Shape> różnice między obiektami i elementami.  
 
-<a name="wcpsdk_graphics_geometry_introduction"></a>   
+<a name="wcpsdk_graphics_geometry_introduction"></a>
 ## <a name="what-is-a-geometry"></a>Co to jest geometria?  
- Klasa <xref:System.Windows.Media.Geometry> i klasy, które pochodzą z niej, takie jak <xref:System.Windows.Media.EllipseGeometry>, <xref:System.Windows.Media.PathGeometry>i <xref:System.Windows.Media.CombinedGeometry>, umożliwiają opisywanie geometrii kształtu 2-D. Te opisy geometryczne mają wiele celów, takich jak Definiowanie kształtu do malowania na ekranie lub Definiowanie trafień i regionów klipów. Można nawet użyć geometrii do definiowania ścieżki animacji.  
+ Klasa <xref:System.Windows.Media.Geometry> i klasy, które się z <xref:System.Windows.Media.EllipseGeometry>niej <xref:System.Windows.Media.PathGeometry>wywodzą, takie jak , i <xref:System.Windows.Media.CombinedGeometry>, umożliwiają opisanie geometrii kształtu 2-W. Te geometryczne opisy mają wiele zastosowań, takich jak definiowanie kształtu do malowania na ekranie lub definiowanie regionów testu trafień i klipów. Można nawet użyć geometrii do zdefiniowania ścieżki animacji.  
   
- obiekty <xref:System.Windows.Media.Geometry> mogą być proste, takie jak prostokąty i okręgi lub złożone, utworzone na podstawie dwóch lub więcej obiektów geometrycznych.  Bardziej złożone geometrie można utworzyć przy użyciu klas <xref:System.Windows.Media.PathGeometry> i <xref:System.Windows.Media.StreamGeometry>, które umożliwiają opisywanie łuków i krzywych.  
+ <xref:System.Windows.Media.Geometry>obiekty mogą być proste, takie jak prostokąty i okręgi, lub kompozytowe, utworzone z dwóch lub więcej obiektów geometrii.  Bardziej złożone geometrie można tworzyć <xref:System.Windows.Media.PathGeometry> <xref:System.Windows.Media.StreamGeometry> przy użyciu klas i, które umożliwiają opisywanie łuków i krzywych.  
   
- Ponieważ <xref:System.Windows.Media.Geometry> jest typem <xref:System.Windows.Freezable>, obiekty <xref:System.Windows.Media.Geometry> zapewniają kilka specjalnych funkcji: mogą być deklarowane jako [zasoby](../../../desktop-wpf/fundamentals/xaml-resources-define.md), współużytkowane przez wiele obiektów, przeznaczone tylko do odczytu w celu poprawy wydajności, klonowania i zabezpieczania wątków. Aby uzyskać więcej informacji o różnych funkcjach zapewnianych przez <xref:System.Windows.Freezable> obiektów, zobacz [Omówienie obiektów Freezable](../advanced/freezable-objects-overview.md).  
+ Ponieważ <xref:System.Windows.Media.Geometry> a jest <xref:System.Windows.Freezable>typem , <xref:System.Windows.Media.Geometry> obiekty zapewniają kilka specjalnych funkcji: mogą być zadeklarowane jako [zasoby,](../../../desktop-wpf/fundamentals/xaml-resources-define.md)współużytkowane przez wiele obiektów, wykonane tylko do odczytu w celu zwiększenia wydajności, sklonowane i wykonane wątku bezpieczne. Aby uzyskać więcej informacji na <xref:System.Windows.Freezable> temat różnych funkcji udostępnianych przez obiekty, zobacz [Omówienie obiektów freezable](../advanced/freezable-objects-overview.md).  
   
-<a name="wcpsdk_graphics_geometry_geometryandshapes"></a>   
-## <a name="geometries-vs-shapes"></a>Geometrie a Shapes  
- Klasy <xref:System.Windows.Media.Geometry> i <xref:System.Windows.Shapes.Shape> wyglądają podobnie jak w przypadku dwóch kształtów (Porównaj <xref:System.Windows.Media.EllipseGeometry> i <xref:System.Windows.Shapes.Ellipse> na przykład), ale istnieją istotne różnice.  
+<a name="wcpsdk_graphics_geometry_geometryandshapes"></a>
+## <a name="geometries-vs-shapes"></a>Geometrie a kształty  
+ Klasy <xref:System.Windows.Media.Geometry> <xref:System.Windows.Shapes.Shape> i klasy wydają się podobne, ponieważ oba opisują kształty 2-W (porównaj <xref:System.Windows.Media.EllipseGeometry> i <xref:System.Windows.Shapes.Ellipse> na przykład), ale istnieją istotne różnice.  
   
- Dla jednej klasy <xref:System.Windows.Media.Geometry> dziedziczy z klasy <xref:System.Windows.Freezable>, podczas gdy Klasa <xref:System.Windows.Shapes.Shape> dziedziczy z <xref:System.Windows.FrameworkElement>. Ponieważ są to elementy, <xref:System.Windows.Shapes.Shape> obiekty mogą same renderować i uczestniczyć w systemie układu, podczas gdy obiekty <xref:System.Windows.Media.Geometry> nie mogą.  
+ Po pierwsze, <xref:System.Windows.Media.Geometry> klasa dziedziczy <xref:System.Windows.Freezable> z <xref:System.Windows.Shapes.Shape> klasy, podczas <xref:System.Windows.FrameworkElement>gdy klasa dziedziczy z . Ponieważ są one <xref:System.Windows.Shapes.Shape> elementami, obiekty mogą renderować <xref:System.Windows.Media.Geometry> się i uczestniczyć w systemie układu, podczas gdy obiekty nie mogą.  
   
- Chociaż obiekty <xref:System.Windows.Shapes.Shape> są bardziej łatwo użyteczne niż obiekty <xref:System.Windows.Media.Geometry>, <xref:System.Windows.Media.Geometry> obiekty są bardziej uniwersalne. Gdy obiekt <xref:System.Windows.Shapes.Shape> jest używany do renderowania grafiki 2-D, obiekt <xref:System.Windows.Media.Geometry> może służyć do definiowania regionu geometrycznego dla grafiki 2-D, definiowania regionu przycinania lub definiowania regionu na potrzeby testowania trafień, na przykład.  
+ Chociaż <xref:System.Windows.Shapes.Shape> obiekty są łatwiej dostępne <xref:System.Windows.Media.Geometry> do <xref:System.Windows.Media.Geometry> użytku niż obiekty, obiekty są bardziej wszechstronne. Podczas <xref:System.Windows.Shapes.Shape> gdy obiekt jest używany do renderowania <xref:System.Windows.Media.Geometry> grafiki 2-W, obiekt może służyć do definiowania regionu geometrycznego dla grafiki 2-W, definiowania regionu do przycinania lub definiowania regionu do testowania trafień, na przykład.  
   
-### <a name="the-path-shape"></a>Kształt ścieżki  
- Jeden <xref:System.Windows.Shapes.Shape>, Klasa <xref:System.Windows.Shapes.Path>, faktycznie używa <xref:System.Windows.Media.Geometry> do opisywania jego zawartości. Ustawiając właściwość <xref:System.Windows.Shapes.Path.Data%2A> <xref:System.Windows.Shapes.Path> za pomocą <xref:System.Windows.Media.Geometry> i ustawiając jej właściwości <xref:System.Windows.Shapes.Shape.Fill%2A> i <xref:System.Windows.Shapes.Shape.Stroke%2A>, można renderować <xref:System.Windows.Media.Geometry>.  
+### <a name="the-path-shape"></a>Kształt Ścieżka  
+ Jeden <xref:System.Windows.Shapes.Shape>, <xref:System.Windows.Shapes.Path> klasa, faktycznie <xref:System.Windows.Media.Geometry> używa a do opisania jego zawartości. <xref:System.Windows.Shapes.Path.Data%2A> Ustawiając właściwość <xref:System.Windows.Shapes.Path> z <xref:System.Windows.Media.Geometry> a i <xref:System.Windows.Shapes.Shape.Fill%2A> <xref:System.Windows.Shapes.Shape.Stroke%2A> ustawiając jego i <xref:System.Windows.Media.Geometry>właściwości, można renderować program .  
   
-<a name="commonproperties"></a>   
-## <a name="common-properties-that-take-a-geometry"></a>Wspólne właściwości, które mają geometrię  
- Powyższe sekcje wymienione w tym, że obiekty geometryczne mogą być używane z innymi obiektami do różnych celów, takich jak rysowanie kształtów, animowanie i przycinanie. W poniższej tabeli wymieniono kilka klas, które mają właściwości, które pobierają <xref:System.Windows.Media.Geometry> obiektu.  
+<a name="commonproperties"></a>
+## <a name="common-properties-that-take-a-geometry"></a>Typowe właściwości, które przyjmują geometrię  
+ W poprzednich sekcjach wspomniano, że obiekty Geometria mogą być używane z innymi obiektami do różnych celów, takich jak rysowanie kształtów, animowanie i przycinanie. W poniższej tabeli wymieniono kilka <xref:System.Windows.Media.Geometry> klas, które mają właściwości, które zajmują obiekt.  
   
 |Typ|Właściwość|  
 |----------|--------------|  
@@ -49,114 +49,114 @@ W tym omówieniu opisano sposób użycia klas <xref:System.Windows.Media.Geometr
 |<xref:System.Windows.Shapes.Path>|<xref:System.Windows.Shapes.Path.Data%2A>|  
 |<xref:System.Windows.UIElement>|<xref:System.Windows.UIElement.Clip%2A>|  
   
-<a name="wcpsdk_graphics_geometry_geometrytypes"></a>   
+<a name="wcpsdk_graphics_geometry_geometrytypes"></a>
 ## <a name="simple-geometry-types"></a>Proste typy geometrii  
- Klasa bazowa dla wszystkich geometrie jest klasą abstrakcyjną <xref:System.Windows.Media.Geometry>.  Klasy, które pochodzą z klasy <xref:System.Windows.Media.Geometry>, mogą być w przybliżeniu pogrupowane w trzy kategorie: proste geometrie, Path geometrie i Composite geometrie.  
+ Klasą bazową dla wszystkich geometrii jest klasa <xref:System.Windows.Media.Geometry>abstrakcyjna .  Klasy, które pochodzą <xref:System.Windows.Media.Geometry> z klasy mogą być z grubsza pogrupowane w trzy kategorie: proste geometrie, geometrie ścieżki i geometrie kompozytowe.  
   
- Proste klasy geometrii obejmują <xref:System.Windows.Media.LineGeometry>, <xref:System.Windows.Media.RectangleGeometry>i <xref:System.Windows.Media.EllipseGeometry> i są używane do tworzenia podstawowych kształtów geometrycznych, takich jak linie, prostokąty i okręgi.  
+ Proste klasy geometrii <xref:System.Windows.Media.RectangleGeometry>obejmują <xref:System.Windows.Media.EllipseGeometry> <xref:System.Windows.Media.LineGeometry>i są używane do tworzenia podstawowych kształtów geometrycznych, takich jak linie, prostokąty i okręgi.  
   
-- <xref:System.Windows.Media.LineGeometry> jest definiowana przez określenie punktu początkowego wiersza i punktu końcowego.  
+- A <xref:System.Windows.Media.LineGeometry> jest definiowany przez określenie punktu początkowego linii i punktu końcowego.  
   
-- <xref:System.Windows.Media.RectangleGeometry> jest definiowana przy użyciu struktury <xref:System.Windows.Rect>, która określa jego położenie względne oraz jego wysokość i szerokość. Prostokąt zaokrąglony można utworzyć przez ustawienie właściwości <xref:System.Windows.Media.RectangleGeometry.RadiusX%2A> i <xref:System.Windows.Media.RectangleGeometry.RadiusY%2A>.  
+- A <xref:System.Windows.Media.RectangleGeometry> jest definiowany za pomocą struktury określającej <xref:System.Windows.Rect> jego względne położenie oraz wysokość i szerokość. Zaokrąglony prostokąt można <xref:System.Windows.Media.RectangleGeometry.RadiusX%2A> utworzyć, <xref:System.Windows.Media.RectangleGeometry.RadiusY%2A> ustawiając właściwości i.  
   
-- <xref:System.Windows.Media.EllipseGeometry> jest definiowana przez punkt centralny, x-RADIUS i y-RADIUS.  W poniższych przykładach pokazano, jak utworzyć prostą geometrie do renderowania i przycinania.  
+- An <xref:System.Windows.Media.EllipseGeometry> jest definiowany przez punkt środkowy, promień x i promień y.  Poniższe przykłady pokazują, jak utworzyć proste geometrie do renderowania i przycinania.  
   
- Te same kształty, a także bardziej złożone kształty, można utworzyć przy użyciu <xref:System.Windows.Media.PathGeometry> lub łącząc obiekty geometryczne ze sobą, ale te klasy zapewniają prostszy sposób tworzenia podstawowych kształtów geometrycznych.  
+ Te same kształty, jak również bardziej złożone kształty, mogą być tworzone przy użyciu <xref:System.Windows.Media.PathGeometry> lub przez połączenie obiektów geometrii razem, ale te klasy zapewniają prostszy sposób tworzenia tych podstawowych kształtów geometrycznych.  
   
- Poniższy przykład pokazuje, jak utworzyć i renderować <xref:System.Windows.Media.LineGeometry>.  Jak wspomniano wcześniej, obiekt <xref:System.Windows.Media.Geometry> nie może narysować samego siebie, więc przykład używa kształtu <xref:System.Windows.Shapes.Path> do renderowania wiersza.  Ponieważ linia nie ma obszaru, ustawienie właściwości <xref:System.Windows.Shapes.Shape.Fill%2A> <xref:System.Windows.Shapes.Path> nie będzie miało żadnego efektu; Zamiast tego są określone tylko właściwości <xref:System.Windows.Shapes.Shape.Stroke%2A> i <xref:System.Windows.Shapes.Shape.StrokeThickness%2A>. Na poniższej ilustracji przedstawiono dane wyjściowe z przykładu.  
+ W poniższym przykładzie pokazano, <xref:System.Windows.Media.LineGeometry>jak utworzyć i renderować plik .  Jak wspomniano wcześniej, <xref:System.Windows.Media.Geometry> obiekt nie może narysować się, <xref:System.Windows.Shapes.Path> więc w przykładzie używa kształtu do renderowania linii.  Ponieważ wiersz nie ma obszaru, <xref:System.Windows.Shapes.Shape.Fill%2A> ustawienie <xref:System.Windows.Shapes.Path> właściwości nie miałoby wpływu; zamiast tego określono <xref:System.Windows.Shapes.Shape.Stroke%2A> <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> tylko właściwości i. Na poniższej ilustracji przedstawiono dane wyjściowe z przykładu.  
   
- ![LineGeometry](./media/graphicsmm-line.gif "graphicsmm_line")  
-LineGeometry od (10, 20) do (100 130)  
+ ![LineGeometria](./media/graphicsmm-line.gif "graphicsmm_line")  
+LineGeometria pobierana od (10,20) do (100 130)  
   
  [!code-xaml[GeometryOverviewSamples_snip#GraphicsMMLineGeometryExample](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometryOverviewSamples_snip/CS/GeometryExamples.xaml#graphicsmmlinegeometryexample)]  
   
  [!code-csharp[GeometryOverviewSamples_procedural_snip#GraphicsMMLineGeometryExample](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometryOverviewSamples_procedural_snip/CSharp/GeometryExamples.cs#graphicsmmlinegeometryexample)]
  [!code-vb[GeometryOverviewSamples_procedural_snip#GraphicsMMLineGeometryExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GeometryOverviewSamples_procedural_snip/visualbasic/geometryexamples.vb#graphicsmmlinegeometryexample)]  
   
- W następnym przykładzie pokazano, jak utworzyć i renderować <xref:System.Windows.Media.EllipseGeometry>.  Przykłady ustawiają <xref:System.Windows.Media.EllipseGeometry.Center%2A> <xref:System.Windows.Media.EllipseGeometry> jest ustawiony na `50,50`, a wartości x-RADIUS i y-RADIUS są ustawiane na `50`, co tworzy okrąg o średnicy 100.  Wnętrze elipsy jest rysowane przez przypisanie wartości do właściwości Fill elementu Path, w tym przypadku <xref:System.Windows.Media.Brushes.Gold%2A>. Na poniższej ilustracji przedstawiono dane wyjściowe z przykładu.  
+ W następnym przykładzie pokazano, <xref:System.Windows.Media.EllipseGeometry>jak utworzyć i renderować plik .  Przykłady <xref:System.Windows.Media.EllipseGeometry.Center%2A> ustawiają <xref:System.Windows.Media.EllipseGeometry> jest ustawiona `50,50` na punkt i x-promień i y-promień są ustawione na `50`, który tworzy okrąg o średnicy 100.  Wnętrze elipsy jest malowane przez przypisanie wartości do Właściwości Wypełnianie elementu <xref:System.Windows.Media.Brushes.Gold%2A>Path, w tym przypadku . Na poniższej ilustracji przedstawiono dane wyjściowe z przykładu.  
   
- ![EllipseGeometry](./media/graphicsmm-ellipse.gif "graphicsmm_ellipse")  
-EllipseGeometry narysowana o (50, 50)  
+ ![ElipsaGeometria](./media/graphicsmm-ellipse.gif "graphicsmm_ellipse")  
+ElipsaGeometria narysowana w (50,50)  
   
  [!code-xaml[GeometryOverviewSamples_snip#GraphicsMMEllipseGeometryExample](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometryOverviewSamples_snip/CS/GeometryExamples.xaml#graphicsmmellipsegeometryexample)]  
   
  [!code-csharp[GeometryOverviewSamples_procedural_snip#GraphicsMMEllipseGeometryExample](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometryOverviewSamples_procedural_snip/CSharp/GeometryExamples.cs#graphicsmmellipsegeometryexample)]
  [!code-vb[GeometryOverviewSamples_procedural_snip#GraphicsMMEllipseGeometryExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GeometryOverviewSamples_procedural_snip/visualbasic/geometryexamples.vb#graphicsmmellipsegeometryexample)]  
   
- Poniższy przykład pokazuje, jak utworzyć i renderować <xref:System.Windows.Media.RectangleGeometry>.  Pozycja i wymiary prostokąta są definiowane przez strukturę <xref:System.Windows.Rect>. Pozycja jest `50,50`, a wysokość i szerokość są `25`, które tworzą kwadrat. Na poniższej ilustracji przedstawiono dane wyjściowe z przykładu.  
+ W poniższym przykładzie pokazano, <xref:System.Windows.Media.RectangleGeometry>jak utworzyć i renderować plik .  Położenie i wymiary prostokąta są definiowane <xref:System.Windows.Rect> przez strukturę. Położenie jest `50,50` i wysokość i `25`szerokość są zarówno , który tworzy kwadrat. Na poniższej ilustracji przedstawiono dane wyjściowe z przykładu.  
   
- ![RectangleGeometry](./media/graphicsmm-rectangle.gif "graphicsmm_rectangle")  
-RectangleGeometry narysowana o 50, 50  
+ ![RectangleGeometria](./media/graphicsmm-rectangle.gif "graphicsmm_rectangle")  
+RectangleGeometry narysowana na 50,50  
   
  [!code-xaml[GeometryOverviewSamples_snip#GraphicsMMRectangleGeometryExample](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometryOverviewSamples_snip/CS/GeometryExamples.xaml#graphicsmmrectanglegeometryexample)]  
   
  [!code-csharp[GeometryOverviewSamples_procedural_snip#GraphicsMMRectangleGeometryExample](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometryOverviewSamples_procedural_snip/CSharp/GeometryExamples.cs#graphicsmmrectanglegeometryexample)]
  [!code-vb[GeometryOverviewSamples_procedural_snip#GraphicsMMRectangleGeometryExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GeometryOverviewSamples_procedural_snip/visualbasic/geometryexamples.vb#graphicsmmrectanglegeometryexample)]  
   
- Poniższy przykład pokazuje, jak używać <xref:System.Windows.Media.EllipseGeometry> jako regionu klipu obrazu.  Obiekt <xref:System.Windows.Controls.Image> jest zdefiniowany za pomocą <xref:System.Windows.FrameworkElement.Width%2A> 200 i <xref:System.Windows.FrameworkElement.Height%2A> 150.  <xref:System.Windows.Media.EllipseGeometry> z wartością <xref:System.Windows.Media.EllipseGeometry.RadiusX%2A> 100, <xref:System.Windows.Media.EllipseGeometry.RadiusY%2A> wartością 75 i <xref:System.Windows.Media.EllipseGeometry.Center%2A> wartością 100, 75 jest ustawiona na Właściwość <xref:System.Windows.UIElement.Clip%2A> obrazu.  Zostanie wyświetlona tylko część obrazu znajdująca się w obszarze elipsy. Na poniższej ilustracji przedstawiono dane wyjściowe z przykładu.  
+ W poniższym <xref:System.Windows.Media.EllipseGeometry> przykładzie pokazano, jak używać jako regionu klipu dla obrazu.  Obiekt <xref:System.Windows.Controls.Image> jest zdefiniowany <xref:System.Windows.FrameworkElement.Width%2A> z 200 <xref:System.Windows.FrameworkElement.Height%2A> i a 150.  Wartość <xref:System.Windows.Media.EllipseGeometry> <xref:System.Windows.Media.EllipseGeometry.RadiusX%2A> 100, <xref:System.Windows.Media.EllipseGeometry.RadiusY%2A> wartość 75 i <xref:System.Windows.Media.EllipseGeometry.Center%2A> wartość 100,75 jest ustawiona na <xref:System.Windows.UIElement.Clip%2A> właściwość obrazu.  Zostanie wyświetlona tylko część obrazu, która znajduje się w obszarze elipsy. Na poniższej ilustracji przedstawiono dane wyjściowe z przykładu.  
   
- ![Obraz z przycinaniem i bez](./media/graphicsmm-clipexample.png "graphicsmm_clipexample")  
-EllipseGeometry używany do wycinania kontrolki obrazu  
+ ![Obraz z przycinaniem i bez niego](./media/graphicsmm-clipexample.png "graphicsmm_clipexample")  
+Wiązypsgeometria używana do przycinania kontrolki obrazu  
   
  [!code-xaml[GeometryOverviewSamples_snip#GraphicsMMImageClipGeometryExample](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometryOverviewSamples_snip/CS/GeometryExamples.xaml#graphicsmmimageclipgeometryexample)]  
   
  [!code-csharp[GeometryOverviewSamples_procedural_snip#GraphicsMMImageClipGeometryExample](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometryOverviewSamples_procedural_snip/CSharp/GeometryExamples.cs#graphicsmmimageclipgeometryexample)]
  [!code-vb[GeometryOverviewSamples_procedural_snip#GraphicsMMImageClipGeometryExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GeometryOverviewSamples_procedural_snip/visualbasic/geometryexamples.vb#graphicsmmimageclipgeometryexample)]  
   
-<a name="wcpsdk_graphics_geometry_pathgeometry"></a>   
+<a name="wcpsdk_graphics_geometry_pathgeometry"></a>
 ## <a name="path-geometries"></a>Geometrie ścieżki  
- Klasa <xref:System.Windows.Media.PathGeometry> i jej lekki odpowiednik, Klasa <xref:System.Windows.Media.StreamGeometry>, udostępniają metody opisujące wiele złożonych liczb składających się z łuków, krzywych i linii.  
+ Klasa <xref:System.Windows.Media.PathGeometry> i jej lekki <xref:System.Windows.Media.StreamGeometry> odpowiednik, klasa, zapewniają środki do opisania wielu złożonych postaci składających się z łuków, krzywych i linii.  
   
- W przypadku <xref:System.Windows.Media.PathGeometry> jest kolekcją obiektów <xref:System.Windows.Media.PathFigure>, dlatego nazwane, ponieważ każda ilustracja opisuje dyskretny kształt w <xref:System.Windows.Media.PathGeometry>. Każda <xref:System.Windows.Media.PathFigure> składa się z jednego lub kilku obiektów <xref:System.Windows.Media.PathSegment>, z których każdy opisuje segment rysunku.  
+ Sercem <xref:System.Windows.Media.PathGeometry> a jest zbiór <xref:System.Windows.Media.PathFigure> obiektów, tak nazwany, ponieważ każda postać opisuje <xref:System.Windows.Media.PathGeometry>dyskretny kształt w . Każdy <xref:System.Windows.Media.PathFigure> z nich składa się <xref:System.Windows.Media.PathSegment> z jednego lub więcej obiektów, z których każdy opisuje segment figury.  
   
  Istnieje wiele typów segmentów.  
   
 |Typ segmentu|Opis|Przykład|  
 |------------------|-----------------|-------------|  
-|<xref:System.Windows.Media.ArcSegment>|Tworzy Łuk eliptyczny między dwoma punktami.|[Utwórz Łuk eliptyczny](how-to-create-an-elliptical-arc.md).|  
-|<xref:System.Windows.Media.BezierSegment>|Tworzy zaokrągloną krzywą Beziera między dwoma punktami.|[Utworzenie krzywej Beziera w postaci sześciennej](how-to-create-a-cubic-bezier-curve.md).|  
+|<xref:System.Windows.Media.ArcSegment>|Tworzy łuk eliptyczny między dwoma punktami.|[Utwórz łuk eliptyczny](how-to-create-an-elliptical-arc.md).|  
+|<xref:System.Windows.Media.BezierSegment>|Tworzy krzywą beziera sześciennego między dwoma punktami.|[Utwórz krzywą beziera sześciennego](how-to-create-a-cubic-bezier-curve.md).|  
 |<xref:System.Windows.Media.LineSegment>|Tworzy linię między dwoma punktami.|[Tworzenie obiektu LineSegment w elemencie PathGeometry](how-to-create-a-linesegment-in-a-pathgeometry.md)|  
-|<xref:System.Windows.Media.PolyBezierSegment>|Tworzy serię wielowartościowych krzywych Beziera.|Zobacz stronę typu <xref:System.Windows.Media.PolyBezierSegment>.|  
-|<xref:System.Windows.Media.PolyLineSegment>|Tworzy serię wierszy.|Zobacz stronę typu <xref:System.Windows.Media.PolyLineSegment>.|  
-|<xref:System.Windows.Media.PolyQuadraticBezierSegment>|Tworzy serię krzywych Beziera kwadratowego.|Zobacz stronę <xref:System.Windows.Media.PolyQuadraticBezierSegment>.|  
-|<xref:System.Windows.Media.QuadraticBezierSegment>|Tworzy krzywą Beziera kwadratu.|[Utwórz krzywą Beziera kwadratowego](how-to-create-a-quadratic-bezier-curve.md).|  
+|<xref:System.Windows.Media.PolyBezierSegment>|Tworzy serię sześciennych krzywych Beziera.|Zobacz <xref:System.Windows.Media.PolyBezierSegment> stronę tekstową.|  
+|<xref:System.Windows.Media.PolyLineSegment>|Tworzy serię wierszy.|Zobacz <xref:System.Windows.Media.PolyLineSegment> stronę tekstową.|  
+|<xref:System.Windows.Media.PolyQuadraticBezierSegment>|Tworzy serię kwadratowych krzywych Beziera.|Zobacz <xref:System.Windows.Media.PolyQuadraticBezierSegment> stronę.|  
+|<xref:System.Windows.Media.QuadraticBezierSegment>|Tworzy kwadratową krzywą Beziera.|[Utwórz krzywą beziera kwadratowego](how-to-create-a-quadratic-bezier-curve.md).|  
   
- Segmenty w <xref:System.Windows.Media.PathFigure> są łączone w jeden kształt geometryczny z punktem końcowym każdego segmentu w punkcie początkowym następnego segmentu. Właściwość <xref:System.Windows.Media.PathFigure.StartPoint%2A> <xref:System.Windows.Media.PathFigure> określa punkt, z którego jest rysowany pierwszy segment. Każdy kolejny segment zaczyna się od punktu końcowego poprzedniego segmentu. Na przykład pionowa linia z `10,50` do `10,150` może być zdefiniowana przez ustawienie właściwości <xref:System.Windows.Media.PathFigure.StartPoint%2A> na `10,50` i utworzenie <xref:System.Windows.Media.LineSegment> z ustawieniem <xref:System.Windows.Media.LineSegment.Point%2A> właściwości `10,150`.  
+ Segmenty w <xref:System.Windows.Media.PathFigure> obrębie a są łączone w jeden kształt geometryczny, a punkt końcowy każdego segmentu jest punktem początkowym następnego segmentu. Właściwość <xref:System.Windows.Media.PathFigure.StartPoint%2A> a <xref:System.Windows.Media.PathFigure> określa punkt, z którego jest rysowany pierwszy segment. Każdy kolejny segment rozpoczyna się w punkcie końcowym poprzedniego segmentu. Na przykład pionową `10,50` linię `10,150` od do można <xref:System.Windows.Media.PathFigure.StartPoint%2A> zdefiniować, `10,50` ustawiając <xref:System.Windows.Media.LineSegment.Point%2A> właściwość i tworząc z ustawieniem `10,150` <xref:System.Windows.Media.LineSegment> właściwości .  
   
- Poniższy przykład tworzy prosty <xref:System.Windows.Media.PathGeometry> składający się z pojedynczego <xref:System.Windows.Media.PathFigure> z <xref:System.Windows.Media.LineSegment> i wyświetla go przy użyciu elementu <xref:System.Windows.Shapes.Path>. <xref:System.Windows.Media.PathFigure.StartPoint%2A> obiektu <xref:System.Windows.Media.PathFigure> jest ustawiona na `10,20` i <xref:System.Windows.Media.LineSegment> jest definiowana z punktem końcowym `100,130`. Na poniższej ilustracji przedstawiono <xref:System.Windows.Media.PathGeometry> utworzone w tym przykładzie.  
+ Poniższy przykład tworzy <xref:System.Windows.Media.PathGeometry> prosty składa <xref:System.Windows.Media.PathFigure> się <xref:System.Windows.Media.LineSegment> z jednego z <xref:System.Windows.Shapes.Path> a i wyświetla go przy użyciu elementu. Obiekt <xref:System.Windows.Media.PathFigure> <xref:System.Windows.Media.PathFigure.StartPoint%2A> jest ustawiony i `10,20` a <xref:System.Windows.Media.LineSegment> jest zdefiniowany z `100,130`punktem końcowym . Na poniższej <xref:System.Windows.Media.PathGeometry> ilustracji przedstawiono utworzone w tym przykładzie.  
   
- ![LineGeometry](./media/graphicsmm-line.gif "graphicsmm_line")  
-PathGeometry zawierający pojedynczy LineSegment  
+ ![LineGeometria](./media/graphicsmm-line.gif "graphicsmm_line")  
+PathGeometry, który zawiera jeden LineSegment  
   
  [!code-xaml[GeometryOverviewSamples_snip#GraphicsMMPathGeometryLineExample](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometryOverviewSamples_snip/CS/GeometryExamples.xaml#graphicsmmpathgeometrylineexample)]  
   
  [!code-csharp[GeometryOverviewSamples_procedural_snip#GraphicsMMPathGeometryLineExample](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometryOverviewSamples_procedural_snip/CSharp/GeometryExamples.cs#graphicsmmpathgeometrylineexample)]
  [!code-vb[GeometryOverviewSamples_procedural_snip#GraphicsMMPathGeometryLineExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GeometryOverviewSamples_procedural_snip/visualbasic/geometryexamples.vb#graphicsmmpathgeometrylineexample)]  
   
- Jest to bardzo zróżnicowane w tym przykładzie z powyższym przykładem <xref:System.Windows.Media.LineGeometry>.  Składnia używana dla <xref:System.Windows.Media.PathGeometry> jest znacznie bardziej pełna niż użyta w przypadku prostej <xref:System.Windows.Media.LineGeometry>. w takim przypadku może być wygodniejsze użycie klasy <xref:System.Windows.Media.LineGeometry>, ale Pełna składnia <xref:System.Windows.Media.PathGeometry> zezwala na bardzo Intricate i złożone regiony geometryczne.  
+ Warto porównać ten przykład z <xref:System.Windows.Media.LineGeometry> poprzednim przykładem.  Składnia używana dla <xref:System.Windows.Media.PathGeometry> a jest znacznie bardziej szczegółowa niż <xref:System.Windows.Media.LineGeometry>używana dla prostego , i <xref:System.Windows.Media.LineGeometry> może mieć większy sens, aby użyć klasy <xref:System.Windows.Media.PathGeometry> w tym przypadku, ale składnia pełne pozwala na bardzo skomplikowanych i złożonych regionów geometrycznych.  
   
- Bardziej złożone geometrie można utworzyć przy użyciu kombinacji obiektów <xref:System.Windows.Media.PathSegment>.  
+ Bardziej złożone geometrie można tworzyć za <xref:System.Windows.Media.PathSegment> pomocą kombinacji obiektów.  
   
- W następnym przykładzie zastosowano <xref:System.Windows.Media.BezierSegment>, <xref:System.Windows.Media.LineSegment>i <xref:System.Windows.Media.ArcSegment> do utworzenia kształtu. W przykładzie najpierw tworzona jest dwukierunkowa krzywa Beziera, definiując cztery punkty: punkt początkowy, który jest punktem końcowym poprzedniego segmentu, punkt końcowy (<xref:System.Windows.Media.BezierSegment.Point3%2A>) i dwa punkty kontrolne (<xref:System.Windows.Media.BezierSegment.Point1%2A> i <xref:System.Windows.Media.BezierSegment.Point2%2A>).  Dwa punkty kontrolne zakrzywionej krzywej Beziera zachowują się jak magnets, co pociąga za sobą, że w przeciwnym razie będzie to linia prosta prowadząca do siebie. Pierwszy punkt kontrolny, <xref:System.Windows.Media.BezierSegment.Point1%2A>, ma wpływ na początkową część krzywej; drugi punkt kontrolny, <xref:System.Windows.Media.BezierSegment.Point2%2A>, wpływa na końcową część krzywej.  
+ W następnym przykładzie <xref:System.Windows.Media.BezierSegment>użyto kształtu , a <xref:System.Windows.Media.LineSegment>i do utworzenia. <xref:System.Windows.Media.ArcSegment> Przykład najpierw tworzy krzywą beziera sześciennego polega na zdefiniowaniu czterech punktów: punktu początkowego, który jest punktem końcowym poprzedniego segmentu, punktu końcowego (<xref:System.Windows.Media.BezierSegment.Point3%2A>i dwóch punktów kontrolnych (<xref:System.Windows.Media.BezierSegment.Point1%2A> i <xref:System.Windows.Media.BezierSegment.Point2%2A>).  Dwa punkty kontrolne sześciennej krzywej Beziera zachowują się jak magnesy, przyciągając części tego, co w przeciwnym razie byłoby linią prostą w kierunku siebie, tworząc krzywą. Pierwszy punkt kontrolny <xref:System.Windows.Media.BezierSegment.Point1%2A>wpływa na początkową część krzywej; drugi punkt kontrolny <xref:System.Windows.Media.BezierSegment.Point2%2A>wpływa na końcową część krzywej.  
   
- Przykład dodaje <xref:System.Windows.Media.LineSegment>, który jest rysowany między punktem końcowym poprzedniej <xref:System.Windows.Media.BezierSegment>, który poprzedza do punktu określonego przez jego właściwość <xref:System.Windows.Media.LineSegment>.  
+ W przykładzie <xref:System.Windows.Media.LineSegment>następnie dodaje , który jest rysowany <xref:System.Windows.Media.BezierSegment> między punktem końcowym poprzedniego, <xref:System.Windows.Media.LineSegment> który poprzedzał go do punktu określonego przez jego właściwości.  
   
- Przykład dodaje <xref:System.Windows.Media.ArcSegment>, który jest rysowany od punktu końcowego poprzedniego <xref:System.Windows.Media.LineSegment> do punktu określonego przez jego właściwość <xref:System.Windows.Media.ArcSegment.Point%2A>. W przykładzie określono również wartość x-i y-promieniowy łuku (<xref:System.Windows.Media.ArcSegment.Size%2A>), kąt obrotu (<xref:System.Windows.Media.ArcSegment.RotationAngle%2A>), flagę wskazującą, jak duży kąt powstającego łuku powinien być (<xref:System.Windows.Media.ArcSegment.IsLargeArc%2A>), i wartości wskazujące kierunek rysowania łuku (<xref:System.Windows.Media.ArcSegment.SweepDirection%2A>). Na poniższej ilustracji przedstawiono kształt utworzony w tym przykładzie.  
+ W przykładzie <xref:System.Windows.Media.ArcSegment>następnie dodaje , który jest rysowany <xref:System.Windows.Media.LineSegment> od punktu końcowego poprzedniego do punktu określonego przez jego <xref:System.Windows.Media.ArcSegment.Point%2A> właściwości. W przykładzie określono również kąt x- i y-radiu<xref:System.Windows.Media.ArcSegment.Size%2A>łuku<xref:System.Windows.Media.ArcSegment.RotationAngle%2A>( ), kąt obrotu ( ), flagę wskazującą, jak duży powinien być kąt łuku wynikowego (<xref:System.Windows.Media.ArcSegment.IsLargeArc%2A>) oraz wartość wskazującą, w którym kierunku łuk jest rysowany (<xref:System.Windows.Media.ArcSegment.SweepDirection%2A>). Na poniższej ilustracji przedstawiono kształt utworzony w tym przykładzie.  
   
- ![PathGeometry](./media/graphicsmm-path2.gif "graphicsmm_path2")  
-PathGeometry  
+ ![A PathGeometry](./media/graphicsmm-path2.gif "graphicsmm_path2")  
+A PathGeometry  
   
  [!code-xaml[GeometryOverviewSamples_snip#GraphicsMMPathGeometryComplexExample](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometryOverviewSamples_snip/CS/GeometryExamples.xaml#graphicsmmpathgeometrycomplexexample)]  
   
  [!code-csharp[GeometryOverviewSamples_procedural_snip#GraphicsMMPathGeometryComplexExample](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometryOverviewSamples_procedural_snip/CSharp/GeometryExamples.cs#graphicsmmpathgeometrycomplexexample)]
  [!code-vb[GeometryOverviewSamples_procedural_snip#GraphicsMMPathGeometryComplexExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GeometryOverviewSamples_procedural_snip/visualbasic/geometryexamples.vb#graphicsmmpathgeometrycomplexexample)]  
   
- Jeszcze bardziej złożone geometrie można utworzyć przy użyciu wielu obiektów <xref:System.Windows.Media.PathFigure> w <xref:System.Windows.Media.PathGeometry>.  
+ Jeszcze bardziej złożone geometrie można <xref:System.Windows.Media.PathFigure> tworzyć przy <xref:System.Windows.Media.PathGeometry>użyciu wielu obiektów w obrębie programu .  
   
- Poniższy przykład tworzy <xref:System.Windows.Media.PathGeometry> z dwoma obiektami <xref:System.Windows.Media.PathFigure>, z których każdy zawiera wiele obiektów <xref:System.Windows.Media.PathSegment>.  <xref:System.Windows.Media.PathFigure> z powyższego przykładu i <xref:System.Windows.Media.PathFigure> z <xref:System.Windows.Media.PolyLineSegment> i <xref:System.Windows.Media.QuadraticBezierSegment> są używane.  <xref:System.Windows.Media.PolyLineSegment> jest zdefiniowana z tablicą punktów, a <xref:System.Windows.Media.QuadraticBezierSegment> jest definiowana z punktem kontrolnym i punktem końcowym. Na poniższej ilustracji przedstawiono kształt utworzony w tym przykładzie.  
+ Poniższy przykład <xref:System.Windows.Media.PathGeometry> tworzy <xref:System.Windows.Media.PathFigure> z dwoma obiektami, <xref:System.Windows.Media.PathSegment> z których każdy zawiera wiele obiektów.  Z <xref:System.Windows.Media.PathFigure> powyższego przykładu <xref:System.Windows.Media.PathFigure> i <xref:System.Windows.Media.PolyLineSegment> z <xref:System.Windows.Media.QuadraticBezierSegment> a i a są używane.  A <xref:System.Windows.Media.PolyLineSegment> jest zdefiniowany za pomocą <xref:System.Windows.Media.QuadraticBezierSegment> tablicy punktów i jest zdefiniowany za pomocą punktu kontrolnego i punktu końcowego. Na poniższej ilustracji przedstawiono kształt utworzony w tym przykładzie.  
   
- ![PathGeometry](./media/graphicsmm-path.gif "graphicsmm_path")  
-PathGeometry z wieloma ilustracjami  
+ ![A PathGeometry](./media/graphicsmm-path.gif "graphicsmm_path")  
+PathGeometry z wieloma cyframi  
   
  [!code-xaml[GeometryOverviewSamples_snip#GraphicsMMPathGeometryComplexMultiExample](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometryOverviewSamples_snip/CS/GeometryExamples.xaml#graphicsmmpathgeometrycomplexmultiexample)]  
   
@@ -164,66 +164,66 @@ PathGeometry z wieloma ilustracjami
  [!code-vb[GeometryOverviewSamples_procedural_snip#GraphicsMMPathGeometryComplexMultiExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GeometryOverviewSamples_procedural_snip/visualbasic/geometryexamples.vb#graphicsmmpathgeometrycomplexmultiexample)]  
   
 ### <a name="streamgeometry"></a>StreamGeometry  
- Podobnie jak w przypadku klasy <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.StreamGeometry> definiuje złożony kształt geometryczny, który może zawierać krzywe, łuki i linie. W przeciwieństwie do <xref:System.Windows.Media.PathGeometry>, zawartość <xref:System.Windows.Media.StreamGeometry> nie obsługuje powiązań danych, animacji ani modyfikacji. Użyj <xref:System.Windows.Media.StreamGeometry>, gdy zachodzi potrzeba opisania złożonej geometrii, ale nie chcesz obciążać powiązania danych, animacji ani modyfikacji. Ze względu na jego wydajność Klasa <xref:System.Windows.Media.StreamGeometry> jest dobrym wyborem do opisywania modułów definiowania układu.  
+ Podobnie <xref:System.Windows.Media.PathGeometry> jak klasa, a <xref:System.Windows.Media.StreamGeometry> definiuje złożony kształt geometryczny, który może zawierać krzywe, łuki i linie. W <xref:System.Windows.Media.PathGeometry>przeciwieństwie do , <xref:System.Windows.Media.StreamGeometry> zawartość nie obsługuje powiązania danych, animacji lub modyfikacji. <xref:System.Windows.Media.StreamGeometry> Użyj, gdy trzeba opisać złożoną geometrię, ale nie chcesz obciążenie obsługi powiązania danych, animacji lub modyfikacji. Ze względu na swoją <xref:System.Windows.Media.StreamGeometry> wydajność, klasa jest dobrym wyborem do opisywania adorners.  
   
- Aby zapoznać się z przykładem, zobacz [Tworzenie kształtu przy użyciu StreamGeometry](how-to-create-a-shape-using-a-streamgeometry.md).  
+ Na przykład zobacz [Tworzenie kształtu za pomocą streamgeometry .](how-to-create-a-shape-using-a-streamgeometry.md)  
   
 ### <a name="path-markup-syntax"></a>Składni znacznikowania ścieżki  
- Typy <xref:System.Windows.Media.PathGeometry> i <xref:System.Windows.Media.StreamGeometry> obsługują składnię atrybutów [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] za pomocą specjalnej serii poleceń Move i Draw. Aby uzyskać więcej informacji, zobacz [Path Markup Syntax](path-markup-syntax.md).  
+ <xref:System.Windows.Media.PathGeometry> Typy <xref:System.Windows.Media.StreamGeometry> i [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] typy obsługują składnię atrybutu przy użyciu specjalnej serii poleceń przenoszenia i rysowania. Aby uzyskać więcej informacji, zobacz [Składnia znaczników ścieżki](path-markup-syntax.md).  
   
-<a name="wcpsdk_graphics_geometry_introduction2"></a>   
-## <a name="composite-geometries"></a>Geometrie złożony  
- Złożone obiekty geometryczne mogą być tworzone przy użyciu <xref:System.Windows.Media.GeometryGroup>, <xref:System.Windows.Media.CombinedGeometry>lub przez wywołanie metody statycznej <xref:System.Windows.Media.Geometry> <xref:System.Windows.Media.Geometry.Combine%2A>.  
+<a name="wcpsdk_graphics_geometry_introduction2"></a>
+## <a name="composite-geometries"></a>Geometrie kompozytowe  
+ <xref:System.Windows.Media.GeometryGroup>Obiekty geometrii złożonej można tworzyć <xref:System.Windows.Media.CombinedGeometry>za pomocą , <xref:System.Windows.Media.Geometry> a <xref:System.Windows.Media.Geometry.Combine%2A>lub wywołując metodę statyczną.  
   
-- Obiekt <xref:System.Windows.Media.CombinedGeometry> i Metoda <xref:System.Windows.Media.Geometry.Combine%2A> wykonuje operację logiczną, aby połączyć obszar zdefiniowany przez dwa geometrie. obiekty <xref:System.Windows.Media.Geometry>, które nie mają obszaru są odrzucane. Można łączyć tylko dwa obiekty <xref:System.Windows.Media.Geometry> (Chociaż te dwie geometrie mogą być również złożonymi geometrie).  
+- Obiekt <xref:System.Windows.Media.CombinedGeometry> i <xref:System.Windows.Media.Geometry.Combine%2A> metoda wykonuje operację logiczną, aby połączyć obszar zdefiniowany przez dwie geometrie. <xref:System.Windows.Media.Geometry>obiekty, które nie mają obszaru, są odrzucane. Można <xref:System.Windows.Media.Geometry> połączyć tylko dwa obiekty (chociaż te dwie geometrie mogą być również geometriami kompozytowymi).  
   
-- Klasa <xref:System.Windows.Media.GeometryGroup> tworzy Amalgamation obiektów <xref:System.Windows.Media.Geometry>, które zawiera, bez łączenia ich obszaru. Do <xref:System.Windows.Media.GeometryGroup>można dodać dowolną liczbę obiektów <xref:System.Windows.Media.Geometry>. Aby zapoznać się z przykładem, zobacz [Tworzenie kształtu złożonego](how-to-create-a-composite-shape.md).  
+- Klasa <xref:System.Windows.Media.GeometryGroup> tworzy połączenie obiektów, <xref:System.Windows.Media.Geometry> które zawiera bez łączenia ich obszaru. <xref:System.Windows.Media.Geometry> Do <xref:System.Windows.Media.GeometryGroup>pliku . Na przykład zobacz [Tworzenie kształtu złożonego](how-to-create-a-composite-shape.md).  
   
- Ponieważ nie wykonują operacji łączenia, korzystanie z <xref:System.Windows.Media.GeometryGroup> obiektów zapewnia wydajność w porównaniu z użyciem obiektów <xref:System.Windows.Media.CombinedGeometry> lub metody <xref:System.Windows.Media.Geometry.Combine%2A>.  
+ Ponieważ nie wykonują one operacji <xref:System.Windows.Media.GeometryGroup> kombinowania, przy <xref:System.Windows.Media.CombinedGeometry> użyciu <xref:System.Windows.Media.Geometry.Combine%2A> obiektów zapewnia korzyści wydajności przy użyciu obiektów lub metody.  
   
-<a name="combindgeometriessection"></a>   
+<a name="combindgeometriessection"></a>
 ## <a name="combined-geometries"></a>Połączone geometrie  
- W poprzedniej sekcji wymienionej w obiekcie <xref:System.Windows.Media.CombinedGeometry> i metody <xref:System.Windows.Media.Geometry.Combine%2A> łączą obszar zdefiniowany przez geometrie, które zawierają. Wyliczenie <xref:System.Windows.Media.GeometryCombineMode> określa, w jaki sposób są połączone geometrie. Możliwe wartości właściwości <xref:System.Windows.Media.CombinedGeometry.GeometryCombineMode%2A> to: <xref:System.Windows.Media.GeometryCombineMode.Union>, <xref:System.Windows.Media.GeometryCombineMode.Intersect>, <xref:System.Windows.Media.GeometryCombineMode.Exclude>i <xref:System.Windows.Media.GeometryCombineMode.Xor>.  
+ W poprzedniej sekcji wspomniano <xref:System.Windows.Media.CombinedGeometry> o <xref:System.Windows.Media.Geometry.Combine%2A> obiekcie, a metoda łączy obszar zdefiniowany przez zawarte w nich geometrie. Wyliczenie <xref:System.Windows.Media.GeometryCombineMode> określa sposób łączenia geometrii. Możliwe wartości <xref:System.Windows.Media.CombinedGeometry.GeometryCombineMode%2A> dla właściwości <xref:System.Windows.Media.GeometryCombineMode.Union>to: <xref:System.Windows.Media.GeometryCombineMode.Exclude>, <xref:System.Windows.Media.GeometryCombineMode.Xor> <xref:System.Windows.Media.GeometryCombineMode.Intersect>, , i .  
   
- W poniższym przykładzie <xref:System.Windows.Media.CombinedGeometry> jest zdefiniowany przy użyciu trybu łączenia Unii.  Zarówno <xref:System.Windows.Media.CombinedGeometry.Geometry1%2A>, jak i <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> są zdefiniowane jako koła tego samego promienia, ale z przesunięciami centrów do 50.  
+ W poniższym przykładzie a <xref:System.Windows.Media.CombinedGeometry> jest zdefiniowany za pomocą trybu łączenia Unii.  Oba <xref:System.Windows.Media.CombinedGeometry.Geometry1%2A> i <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> są zdefiniowane jako okręgi o tym samym promieniu, ale z środkami przesuniętymi o 50.  
   
  [!code-xaml[GeometrySample#23](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/combininggeometriesexample.xaml#23)]  
   
- ![Wyniki trybu łączenia z Unią](./media/mil-task-combined-geometry-union.PNG "mil_task_combined_geometry_union")  
+ ![Wyniki unijnego trybu łączenia](./media/mil-task-combined-geometry-union.PNG "mil_task_combined_geometry_union")  
   
- W poniższym przykładzie <xref:System.Windows.Media.CombinedGeometry> jest zdefiniowana z trybem łączenia <xref:System.Windows.Media.GeometryCombineMode.Xor>.  Zarówno <xref:System.Windows.Media.CombinedGeometry.Geometry1%2A>, jak i <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> są zdefiniowane jako koła tego samego promienia, ale z przesunięciami centrów do 50.  
+ W poniższym przykładzie a <xref:System.Windows.Media.CombinedGeometry> jest zdefiniowany z trybem łączenia . <xref:System.Windows.Media.GeometryCombineMode.Xor>  Oba <xref:System.Windows.Media.CombinedGeometry.Geometry1%2A> i <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> są zdefiniowane jako okręgi o tym samym promieniu, ale z środkami przesuniętymi o 50.  
   
  [!code-xaml[GeometrySample#24](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/combininggeometriesexample.xaml#24)]  
   
- ![Wyniki trybu łączenia XOR](./media/mil-task-combined-geometry-xor.PNG "mil_task_combined_geometry_xor")  
+ ![Wyniki trybu kombajnu Xor](./media/mil-task-combined-geometry-xor.PNG "mil_task_combined_geometry_xor")  
   
- Aby uzyskać więcej przykładów, zobacz [Tworzenie złożonego kształtu](how-to-create-a-composite-shape.md) i [Tworzenie połączonej geometrii](how-to-create-a-combined-geometry.md).  
+ Aby uzyskać dodatkowe przykłady, zobacz [Tworzenie kształtu złożonego](how-to-create-a-composite-shape.md) i [Tworzenie połączonej geometrii](how-to-create-a-combined-geometry.md).  
   
-<a name="freezable_features"></a>   
-## <a name="freezable-features"></a>Funkcje freezable  
- Ponieważ dziedziczy on z klasy <xref:System.Windows.Freezable>, Klasa <xref:System.Windows.Media.Geometry> udostępnia kilka specjalnych funkcji: obiekty <xref:System.Windows.Media.Geometry> mogą być deklarowane jako [zasoby XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md), współdzielone przez wiele obiektów, wykonywane tylko do odczytu w celu zwiększenia wydajności, sklonowane i wykonane bezpieczny wątkowo. Aby uzyskać więcej informacji o różnych funkcjach zapewnianych przez <xref:System.Windows.Freezable> obiektów, zobacz [Omówienie obiektów Freezable](../advanced/freezable-objects-overview.md).  
+<a name="freezable_features"></a>
+## <a name="freezable-features"></a>Freezable Funkcje  
+ Ponieważ dziedziczy z <xref:System.Windows.Freezable> klasy, <xref:System.Windows.Media.Geometry> klasa zapewnia kilka <xref:System.Windows.Media.Geometry> funkcji specjalnych: obiekty mogą być zadeklarowane jako [zasoby XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md), współużytkowane przez wiele obiektów, wykonane tylko do odczytu w celu zwiększenia wydajności, sklonowane i wykonane wątku bezpieczne. Aby uzyskać więcej informacji na <xref:System.Windows.Freezable> temat różnych funkcji udostępnianych przez obiekty, zobacz [Omówienie obiektów freezable](../advanced/freezable-objects-overview.md).  
   
-<a name="othergeometryfeatures"></a>   
+<a name="othergeometryfeatures"></a>
 ## <a name="other-geometry-features"></a>Inne funkcje geometrii  
- Klasa <xref:System.Windows.Media.Geometry> udostępnia również przydatne metody narzędziowe, takie jak:  
+ Klasa <xref:System.Windows.Media.Geometry> zawiera również przydatne metody narzędzia, takie jak:  
   
-- <xref:System.Windows.Media.Geometry.GetArea%2A> — Pobiera obszar <xref:System.Windows.Media.Geometry>.  
+- <xref:System.Windows.Media.Geometry.GetArea%2A>- Pobiera obszar <xref:System.Windows.Media.Geometry>.  
   
-- <xref:System.Windows.Media.Geometry.FillContains%2A> — określa, czy geometria zawiera inną <xref:System.Windows.Media.Geometry>.  
+- <xref:System.Windows.Media.Geometry.FillContains%2A>- Określa, czy geometria <xref:System.Windows.Media.Geometry>zawiera inny .  
   
-- <xref:System.Windows.Media.Geometry.StrokeContains%2A> — określa, czy pociągnięcia <xref:System.Windows.Media.Geometry> zawiera określony punkt.  
+- <xref:System.Windows.Media.Geometry.StrokeContains%2A>- Określa, czy obrys <xref:System.Windows.Media.Geometry> zawiera określony punkt.  
   
- Zapoznaj się z klasą <xref:System.Windows.Media.Geometry>, aby zapoznać się z pełną listą metod.  
+ Zobacz <xref:System.Windows.Media.Geometry> klasę, aby uzyskać pełną listę jego metod.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Windows.Media.Geometry>
 - <xref:System.Windows.Media.PathGeometry>
 - <xref:System.Windows.Shapes.Path>
 - <xref:System.Windows.Media.GeometryDrawing>
 - [Grafika 2D i obrazowanie](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Składnia znacznikowania ścieżki](path-markup-syntax.md)
-- [Tematy z instrukcjami](geometries-how-to-topics.md)
-- [Animacja — przegląd](animation-overview.md)
-- [Kształty i podstawowe rysowanie w programie WPF — przegląd](shapes-and-basic-drawing-in-wpf-overview.md)
-- [Rysowanie obiektów — przegląd](drawing-objects-overview.md)
+- [Składni znacznikowania ścieżki](path-markup-syntax.md)
+- [Tematy in jakże](geometries-how-to-topics.md)
+- [Przegląd Animacja](animation-overview.md)
+- [Przegląd Kształty i podstawowe rysowanie w WPF](shapes-and-basic-drawing-in-wpf-overview.md)
+- [Przegląd Rysowanie obiektów](drawing-objects-overview.md)

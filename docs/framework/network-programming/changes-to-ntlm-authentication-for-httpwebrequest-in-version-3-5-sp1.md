@@ -3,57 +3,57 @@ title: Zmiany w uwierzytelnianiu NTLM dla HttpWebRequest w wersji 3.5 z dodatkie
 ms.date: 03/30/2017
 ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
 ms.openlocfilehash: 388e6dc648e1fd68e24a852cb08de107f09f9c9f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "64754880"
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>Zmiany w uwierzytelnianiu NTLM dla HttpWebRequest w wersji 3.5 z dodatkiem SP1
 
-Zmiany zabezpieczeń zostały wprowadzone w .NET Framework w wersji 3.5 z dodatkiem SP1 i później, wpływają na Windows jak zintegrowane uwierzytelnianie jest obsługiwane przez <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Security.NegotiateStream>, i pokrewne klasy w przestrzeni nazw System.Net. Te zmiany mogą mieć wpływ na aplikacje, które używają tych klas do żądań sieci web i odbierania odpowiedzi, gdy jest używane zintegrowane uwierzytelnianie Windows oparte na NTLM. Ta zmiana może wpłynąć na serwerach sieci web i aplikacji klienckich, które są skonfigurowane do korzystania ze zintegrowanego uwierzytelniania Windows.
+W programie .NET Framework w wersji 3.5 z dodatku SP1 i <xref:System.Net.HttpWebRequest>nowszych wprowadzono zmiany zabezpieczeń, które wpływają na sposób obsługi zintegrowanego uwierzytelniania systemu Windows przez programy ,, <xref:System.Net.HttpListener> <xref:System.Net.Security.NegotiateStream>i powiązane klasy w System.Net obszarze nazw. Te zmiany mogą mieć wpływ na aplikacje, które używają tych klas do tworzenia żądań sieci web i odbierania odpowiedzi, w których używane jest zintegrowane uwierzytelnianie systemu Windows oparte na NTLM. Ta zmiana może mieć wpływ na serwery sieci Web i aplikacje klienckie skonfigurowane do używania zintegrowanego uwierzytelniania systemu Windows.
 
 ## <a name="overview"></a>Omówienie
 
-Projekt zintegrowane uwierzytelnianie Windows umożliwia pewne odpowiedzi poświadczeń jako uniwersalny, co oznacza, mogą być ponownie używane lub przesyłane dalej. Jeśli ta funkcja konkretnego projektu nie jest wymagana, protokoły uwierzytelniania powinien mieć docelowy szczegółowe informacje, a także informacje określonego kanału. Usługi mogą udzielić im ochrona rozszerzona, aby upewnić się, że poświadczenie odpowiedzi zawiera usługi szczegółowe informacje, takie jak nazwy głównej nazwy usługi (SPN). Dzięki tym informacjom wymianę poświadczeń usługi mają możliwość zapewnienia lepszej ochrony przed złośliwym korzystaniem z odpowiedzi na poświadczenie, które może być nieprawidłowo uzyskany.
+Projekt zintegrowanego uwierzytelniania systemu Windows pozwala na niektóre odpowiedzi poświadczeń, które mają być uniwersalne, co oznacza, że mogą być ponownie używane lub przekazywane dalej. Jeśli ta określona funkcja projektowania nie jest potrzebna, protokoły uwierzytelniania powinny zawierać określone informacje o obiektach docelowych, a także informacje specyficzne dla kanału. Usługi mogą następnie zapewnić rozszerzoną ochronę, aby upewnić się, że odpowiedzi na poświadczenia zawierają informacje specyficzne dla usługi, takie jak nazwa główna usługi (SPN). Dzięki tym informacjom w wymianie poświadczeń usługi są w stanie lepiej chronić przed złośliwym użyciem odpowiedzi poświadczeń, które mogły zostać uzyskane nieprawidłowo.
 
-Wiele składników w <xref:System.Net> i <xref:System.Net.Security> przestrzenie nazw wykonać zintegrowane uwierzytelnianie Windows w imieniu aplikacji wywołującej. W tej sekcji opisano zmiany w przestrzeni nazw System.Net składników można dodawać ochronę rozszerzoną ich używane zintegrowane uwierzytelnianie Windows.
+Wiele składników <xref:System.Net> w <xref:System.Net.Security> przestrzeniach nazw i obszarach nazw wykonuje zintegrowane uwierzytelnianie systemu Windows w imieniu aplikacji wywołującej. W tej sekcji opisano zmiany składników System.Net, aby dodać rozszerzoną ochronę podczas korzystania ze zintegrowanego uwierzytelniania systemu Windows.
 
 ## <a name="changes"></a>Zmiany
 
-Proces uwierzytelniania NTLM, które są używane z uwierzytelnianiem zintegrowanym Windows zawiera żądanie wystawiony przez komputer docelowy i wysyłane z powrotem do komputera klienckiego. Gdy komputer otrzyma wezwanie on sam wygenerowany, uwierzytelnianie zakończy się niepowodzeniem, chyba że połączenie jest pętlą Wstecz (adres IPv4 127.0.0.1, na przykład).
+Proces uwierzytelniania NTLM używany ze zintegrowanym uwierzytelnianiem systemu Windows obejmuje wyzwanie wydane przez komputer docelowy i odesłane z powrotem do komputera klienckiego. Gdy komputer odbiera wyzwanie, które sam wygenerował, uwierzytelnianie zakończy się niepowodzeniem, chyba że połączenie jest połączeniem zwrotnym pętli (na przykład adres IPv4 127.0.0.1).
 
-Podczas uzyskiwania dostępu do usługi uruchomionej na wewnętrznym serwerze sieci Web, są często uzyskać dostępu do usługi przy użyciu adresu URL, które są podobne do `http://contoso/service` lub `https://contoso/service`. Nazwy "contoso" nie jest często nazwę komputera komputera, na którym została wdrożona usługa. <xref:System.Net> Pokrewne obszary nazw obsługi za pomocą protokołu NetBIOS usługi Active Directory, DNS, hosty komputera lokalnego pliku (zazwyczaj WINDOWS\system32\drivers\etc\hosts, na przykład) lub lmhosts komputera lokalnego pliku (zazwyczaj WINDOWS\system32\ drivers\etc\lmhosts, na przykład) do rozpoznawania nazw na adresy. Nazwy "contoso" zostanie rozwiązany, tak aby żądania wysyłane na "contoso" są wysyłane do odpowiedniego serwera.
+Podczas uzyskiwania dostępu do usługi uruchomionej na wewnętrznym serwerze sieci Web `http://contoso/service` `https://contoso/service`często uzyskuje się dostęp do usługi przy użyciu adresu URL podobnego do lub . Nazwa "contoso" często nie jest nazwą komputera, na którym jest wdrażana usługa. Obsługa <xref:System.Net> i powiązane obszary nazw przy użyciu usługi Active Directory, DNS, NetBIOS, pliku hosts komputera lokalnego (na przykład windows\system32\drivers\etc\hosts) lub pliku lmhosts komputera lokalnego (zazwyczaj windows\system32\drivers\etc\lmhosts, na przykład) w celu rozpoznawania nazw adresów. Nazwa "contoso" jest rozpoznawana, tak aby żądania wysyłane do "contoso" były wysyłane do odpowiedniego komputera serwera.
 
-W przypadku skonfigurowania w przypadku dużych wdrożeń, jest również typowe dla nazwy pojedynczego serwera wirtualnego, należy podać do wdrożenia z podstawowej nazwy maszyn nigdy używane przez aplikacje klienckie i użytkowników końcowych. Na przykład może wywołać serwera `www.contoso.com`, ale w wewnętrznej sieci po prostu użyć "contoso". Ta nazwa nosi nazwę nagłówka hosta w żądaniu klienta sieci web. Określone przez protokół HTTP pole Host w nagłówku żądania określa Internetu hosta i portu numer żądanych zasobów. Te informacje są uzyskiwane z oryginalnego identyfikatora URI, podane przez użytkownika lub odwołuje się do innych zasobów (zwykle adres HTTP URL). W programie .NET Framework w wersji 4, te informacje można również ustawić przez klienta za pomocą nowego <xref:System.Net.HttpWebRequest.Host%2A> właściwości.
+Po skonfigurowaniu dla dużych wdrożeń jest również wspólne dla pojedynczego serwera wirtualnego nazwa, które mają być podane do wdrożenia z podstawowych nazw komputerów nigdy nie używane przez aplikacje klienckie i użytkowników końcowych. Na przykład można wywołać `www.contoso.com`serwer , ale w sieci wewnętrznej po prostu użyć "contoso". Ta nazwa jest nazywana nagłówkiem hosta w żądaniu sieci web klienta. Zgodnie z protokołem HTTP pole Nagłówek żądania hosta określa hosta internetowego i numer portu żądanego zasobu. Te informacje są uzyskiwane z oryginalnego identyfikatora URI podanego przez użytkownika lub zasobu odsyłającego (zazwyczaj adresu URL HTTP). W programie .NET Framework w wersji 4 te informacje <xref:System.Net.HttpWebRequest.Host%2A> mogą być również ustawiane przez klienta przy użyciu nowej właściwości.
 
-<xref:System.Net.AuthenticationManager> Klasy kontrolki składników zarządzanych uwierzytelniania ("moduły"), które są używane przez <xref:System.Net.WebRequest> klas pochodnych i <xref:System.Net.WebClient> klasy. <xref:System.Net.AuthenticationManager> Klasy zawiera właściwości, która udostępnia <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType> obiektu indeksowane przez ciąg identyfikatora URI, dla aplikacji, aby podać niestandardowy ciąg nazwy SPN, który ma być używany podczas uwierzytelniania.
+Klasa <xref:System.Net.AuthenticationManager> steruje zarządzanych składników uwierzytelniania ("moduły"), które są używane przez <xref:System.Net.WebRequest> klasy pochodne <xref:System.Net.WebClient> i klasy. Klasa <xref:System.Net.AuthenticationManager> udostępnia właściwość, która <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType> udostępnia obiekt, indeksowane przez ciąg URI, dla aplikacji do dostarczania niestandardowego ciągu SPN, który ma być używany podczas uwierzytelniania.
 
-W wersji 3.5 z dodatkiem SP1, teraz używane wartości domyślne do określania nazwy hosta w adresie URL żądania w głównej nazwy usługi w uwierzytelnianiu NTLM (NT LAN Manager) programu exchange, kiedy <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A> nie ustawiono właściwości. Nazwa hosta używana w adresie URL żądania może różnić się od nagłówka hosta określona w <xref:System.Net.HttpRequestHeader?displayProperty=nameWithType> w żądaniu klienta. Nazwa hosta używana w adresie URL żądania może różnić się od aktualną nazwą hosta serwera, nazwę komputera serwera, adres IP tego komputera lub adres sprzężenia zwrotnego. W takich przypadkach Windows zakończy się niepowodzeniem żądania uwierzytelniania. Aby rozwiązać ten problem, musimy powiadomić Windows, nazwa hosta używana w adresie URL żądania w kliencie żądania ("contoso", na przykład) jest faktycznie alternatywną nazwę komputera lokalnego.
+Wersja 3.5 SP1 teraz domyślnie określa nazwę hosta używanego w adresie URL żądania w spn <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A> w NTLM (NT LAN Manager) wymiany uwierzytelniania, gdy właściwość nie jest ustawiona. Nazwa hosta używana w adresie URL żądania może <xref:System.Net.HttpRequestHeader?displayProperty=nameWithType> się różnić od nagłówka hosta określonego w żądaniu klienta. Nazwa hosta używana w adresie URL żądania może różnić się od rzeczywistej nazwy hosta serwera, nazwy komputera serwera, adresu IP komputera lub adresu sprzężenia zwrotnego. W takich przypadkach system Windows zakończy się niepowodzeniem żądania uwierzytelniania. Aby rozwiązać ten problem, musimy powiadomić system Windows, że nazwa hosta używana w adresie URL żądania w żądaniu klienta ("contoso", na przykład) jest w rzeczywistości alternatywną nazwą komputera lokalnego.
 
-Istnieje kilka możliwych metod dla aplikacji serwera obejść tę zmianę. Zalecanym podejściem jest mapowanie nazwy hosta, używany w adresie URL żądania, aby `BackConnectionHostNames` klucza w rejestrze na serwerze. `BackConnectionHostNames` Klucz rejestru zwykle są używane do mapowania nazwy hosta na adres sprzężenia zwrotnego. Poniżej przedstawiono kroki.
+Istnieje kilka możliwych metod dla aplikacji serwera, aby obejść tę zmianę. Zalecane podejście jest mapowanie nazwy hosta używane `BackConnectionHostNames` w adresie URL żądania do klucza w rejestrze na serwerze. Klucz `BackConnectionHostNames` rejestru jest zwykle używany do mapowania nazwy hosta na adres sprzężenia zwrotnego. Kroki są wymienione poniżej.
 
-Aby określić nazwy hostów, które są mapowane na adres sprzężenia zwrotnego i można połączyć się z witryny sieci Web na komputerze lokalnym, wykonaj następujące kroki:
+Aby określić nazwy hostów mapowane na adres sprzężenia zwrotnego i mogą łączyć się z witrynami sieci Web na komputerze lokalnym, wykonaj następujące kroki:
 
-1. Kliknij przycisk Start, kliknij przycisk Uruchom, wpisz wyrażenie regedit i kliknij przycisk OK.
+1. Kliknij przycisk Start, kliknij pozycję Uruchom, wpisz polecenie regedit, a następnie kliknij przycisk OK.
 
-2. W Edytorze rejestru Znajdź, a następnie kliknij przycisk następujący klucz rejestru:
+2. W Edytorze rejestru znajdź, a następnie kliknij następujący klucz rejestru:
 
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\MSV1_0`
 
-3. Kliknij prawym przyciskiem myszy MSV1_0, wskaż polecenie Nowy, a następnie kliknij wartość ciągu wielokrotnego.
+3. Kliknij prawym przyciskiem myszy MSV1_0, wskaż polecenie Nowy, a następnie kliknij polecenie Wartość wielostrunowa.
 
-4. Typ `BackConnectionHostNames`, a następnie naciśnij klawisz ENTER.
+4. Wpisz `BackConnectionHostNames`, a następnie naciśnij klawisz ENTER.
 
-5. Kliknij prawym przyciskiem myszy `BackConnectionHostNames`, a następnie kliknij polecenie Modyfikuj.
+5. Kliknij prawym `BackConnectionHostNames`przyciskiem myszy , a następnie kliknij polecenie Modyfikuj.
 
-6. W polu dane wartości wpisz nazwę hosta lub nazwy hostów dla witryny (nazwa hosta używany w adresie URL żądania), które znajdują się na komputerze lokalnym, a następnie kliknij przycisk OK.
+6. W polu Dane wartości wpisz nazwę hosta lub nazwy hosta witryn (nazwę hosta używaną w adresie URL żądania), które znajdują się na komputerze lokalnym, a następnie kliknij przycisk OK.
 
-7. Zamknij Edytor rejestru, a następnie ponownie uruchom usługę IISAdmin i uruchom polecenie IISReset.
+7. Zamknij Edytor rejestru, a następnie uruchom ponownie usługę IISAdmin i uruchom usługę IISReset.
 
-Mniej bezpieczna opcja pracy około jest wyłączenie sprawdzania wstecz pętli, zgodnie z opisem w <https://support.microsoft.com/kb/896861>. Powoduje to wyłączenie ochrony przed atakami odbicia. Dlatego lepiej jest ograniczyć zestaw alternatywnych nazw tylko te, które oczekują maszynę aby rzeczywiście używane.
+Mniej bezpieczne obejście jest wyłączenie sprawdzania pętli z <https://support.microsoft.com/kb/896861>powrotem, jak opisano w . Spowoduje to wyłączenie ochrony przed atakami odbicia. Dlatego lepiej jest ograniczyć zestaw alternatywnych nazw tylko do tych, których oczekujesz, że maszyna będzie faktycznie używana.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType>
 - <xref:System.Net.HttpRequestHeader?displayProperty=nameWithType>

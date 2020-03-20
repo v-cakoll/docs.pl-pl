@@ -1,15 +1,15 @@
 ---
 ms.openlocfilehash: 1fe064b56ea8fd9acb09b7fc10cf103688acfc3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644085"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "64864031"
 ---
 
 > [!IMPORTANT]
-> Wszystkie wersje programu .NET Framework od .NET Framework 4 są aktualizacje w miejscu, dlatego tylko wersji 4.x pojedynczego mogą być obecne w systemie. Ponadto określonej wersji programu .NET Framework są wstępnie zainstalowane w niektórych wersjach systemów operacyjnych Windows. Oznacza to, że:
+> Wszystkie wersje programu .NET Framework od platformy .NET Framework 4 są aktualizacjami w miejscu, więc w systemie może znajdować się tylko pojedyncza wersja 4.x. Ponadto określone wersje programu .NET Framework są wstępnie zainstalowane w niektórych wersjach systemu operacyjnego Windows. Oznacza to, że:
 >
-> - W przypadku nowszej wersji 4.x już zainstalowane na komputerze, nie można zainstalować starszej wersji 4.x.
-> - Jeśli system operacyjny jest wstępnie zainstalowany, z określoną wersą .NET Framework, nie można zainstalować starszej wersji 4.x na tym samym komputerze.
-> - Po zainstalowaniu nowszej wersji, nie trzeba najpierw odinstalować poprzednią wersję.
+> - Jeśli na komputerze jest już zainstalowana nowsza wersja 4.x, nie można zainstalować poprzedniej wersji 4.x.
+> - Jeśli system operacyjny jest fabrycznie zainstalowany z określoną wersją programu .NET Framework, nie można zainstalować poprzedniej wersji 4.x na tym samym komputerze.
+> - Jeśli zainstalujesz nowszą wersję, nie musisz najpierw odinstalowywać poprzedniej wersji.

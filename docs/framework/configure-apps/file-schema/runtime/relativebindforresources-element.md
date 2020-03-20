@@ -1,28 +1,28 @@
 ---
-title: <relativeBindForResources> Element
+title: <relativeBindForResources>, element
 ms.date: 03/30/2017
 helpviewer_keywords:
 - RelativeBindForResources element
 - <relativeBindForResources> element
 ms.assetid: 846ffa47-7257-4ce3-8cac-7ff627e0e34f
-ms.openlocfilehash: 6a418fc546313b74bb965a0b223eca9c2e5acc08
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cd49d424019a4e8422fee0ae16217d49cfc456b1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73115799"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153909"
 ---
-# <a name="relativebindforresources-element"></a>\<element > relativeBindForResources
-Optymalizuje sondę dla zestawów satelickich.  
+# <a name="relativebindforresources-element"></a>\<relativeBindForResources> Element
+Optymalizuje sondę dla zestawów satelitowych.  
   
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp;&nbsp;[ **\<środowiska uruchomieniowego >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<relativeBindForResources >**  
+[**\<>konfiguracyjne**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<>czasu wykonywania**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<relativeBindForResources>**  
   
 ## <a name="syntax"></a>Składnia  
   
 ```xml
-<relativeBindForResources    
+<relativeBindForResources
    enabled="true|false" />  
 ```  
   
@@ -33,14 +33,14 @@ Optymalizuje sondę dla zestawów satelickich.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`enabled`|Atrybut wymagany.<br /><br /> Określa, czy środowisko uruchomieniowe języka wspólnego optymalizuje sondę dla zestawów satelickich.|  
+|`enabled`|Atrybut wymagany.<br /><br /> Określa, czy środowisko wykonawcze języka wspólnego optymalizuje sondę dla zestawów satelickich.|  
   
 ## <a name="enabled-attribute"></a>Atrybut włączony  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|`false`|Środowisko uruchomieniowe nie optymalizuje sondy dla zestawów satelickich. Jest to wartość domyślna.|  
-|`true`|Środowisko uruchomieniowe optymalizuje sondę dla zestawów satelickich.|  
+|`false`|Środowisko wykonawcze nie optymalizuje sondy dla zestawów satelitowych. Jest to wartość domyślna.|  
+|`true`|Środowisko wykonawcze optymalizuje sondę dla zestawów satelitowych.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -53,23 +53,23 @@ Optymalizuje sondę dla zestawów satelickich.
 |`runtime`|Zawiera informacje dotyczące opcji inicjowania środowiska uruchomieniowego.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ogólnie rzecz biorąc, Menedżer zasobów sondy dla zasobów, zgodnie z opisem w temacie [pakowanie i wdrażanie zasobów](../../../resources/packaging-and-deploying-resources-in-desktop-apps.md) . Oznacza to, że podczas Menedżer zasobów sond dla konkretnej zlokalizowanej wersji zasobu może on wyglądać w globalnej pamięci podręcznej zestawów, wyszukać w folderze specyficznym dla kultury w bazie kodu aplikacji, Instalator Windows zapytań dla zestawów satelickich i podnieść zdarzenie <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>. Element `<relativeBindForResources>` optymalizuje sposób, w jaki Menedżer zasobów sondy dla zestawów satelickich. Może zwiększyć wydajność podczas sondowania zasobów w następujących warunkach:  
+ Ogólnie rzecz biorąc, Menedżer zasobów sonduje zasoby, zgodnie z dokumentami w temacie [Pakowanie i wdrażanie zasobów.](../../../resources/packaging-and-deploying-resources-in-desktop-apps.md) Oznacza to, że gdy Menedżer zasobów sonduje dla określonej zlokalizowanej wersji zasobu, może wyglądać w globalnej pamięci podręcznej zestawów, szukać w folderze <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> specyficznym dla kultury w bazie kodu aplikacji, wysyłać zapytania instalatora Windows dla zestawów satelickich i podnosić zdarzenie. Element `<relativeBindForResources>` optymalizuje sposób, w jaki Resource Manager sondy dla zestawów satelitowych. Może poprawić wydajność podczas sondowania zasobów w następujących warunkach:  
   
-- Gdy zestaw satelicki zostanie wdrożony w tej samej lokalizacji co zestaw kodu. Innymi słowy, jeśli zestaw kodu jest zainstalowany w globalnej pamięci podręcznej zestawów, należy również zainstalować w tym miejscu zestawy satelickie. Jeśli zestaw kodu jest zainstalowany w bazie kodu aplikacji, zestawy satelickie muszą być również zainstalowane w folderze specyficznym dla kultury w bazie kodu.  
+- Gdy zestaw satelitów jest wdrażany w tej samej lokalizacji co zestaw kodu. Innymi słowy, jeśli zestaw kodu jest zainstalowany w globalnej pamięci podręcznej zestawów, zestawy satelickiego muszą być również zainstalowane tam. Jeśli zestaw kodu jest zainstalowany w bazie kodu aplikacji, zestawy satelickiego muszą być również zainstalowane w folderze specyficznym dla kultury w bazie kodu.  
   
-- Gdy Instalator Windows nie jest używany lub jest używany rzadko w przypadku instalacji zestawów satelitarnych na żądanie.  
+- Gdy Instalator Windows nie jest używany lub jest używany rzadko do instalacji na żądanie zestawów satelickich.  
   
-- Gdy kod aplikacji nie obsługuje zdarzenia <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>.  
+- Gdy kod aplikacji nie <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> obsługuje zdarzenia.  
   
- Ustawienie atrybutu `enabled` elementu `<relativeBindForResources>`, aby `true` zoptymalizować sondę Menedżer zasobów dla zestawów satelitarnych w następujący sposób:  
+ Ustawienie `enabled` atrybutu elementu `<relativeBindForResources>` w `true` celu optymalizacji sondy Menedżera zasobów dla zestawów satelitowych w następujący sposób:  
   
 - Używa lokalizacji zestawu kodu nadrzędnego do sondowania dla zestawu satelickiego.  
   
-- Nie bada Instalator Windows dla zestawów satelickich.  
+- Nie wysyła kwerendy Instalatora Windows dla zestawów satelickich.  
   
-- Nie zgłasza zdarzenia <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>.  
+- Nie podnosi <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> zdarzenia.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Opakowanie i wdrażanie zasobów](../../../resources/packaging-and-deploying-resources-in-desktop-apps.md)
 - [Schemat ustawień środowiska uruchomieniowego](index.md)

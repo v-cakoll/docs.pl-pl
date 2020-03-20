@@ -2,27 +2,27 @@
 title: OracleTypes
 ms.date: 03/30/2017
 ms.assetid: 18143304-d5c7-4c95-9995-678088d0c142
-ms.openlocfilehash: 9caf30111fc8f856af69571d507c243efa549343
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 95a1173dfbcc4cf49ded8c7b8a42d9764fee9aff
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783266"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149404"
 ---
 # <a name="oracletypes"></a>OracleTypes
-.NET Framework Dostawca danych dla programu Oracle zawiera kilka struktur, których można użyć do pracy z typami danych Oracle. Obejmują <xref:System.Data.OracleClient.OracleNumber> one i <xref:System.Data.OracleClient.OracleString>.  
+Dostawca danych .NET Framework dla Oracle zawiera kilka struktur, których można używać do pracy z typami danych Oracle. Należą <xref:System.Data.OracleClient.OracleNumber> do <xref:System.Data.OracleClient.OracleString>nich i .  
   
 > [!NOTE]
-> Aby zapoznać się z pełną listą tych struktur <xref:System.Data.OracleClient>, zobacz.  
+> Aby uzyskać pełną listę tych <xref:System.Data.OracleClient>struktur, zobacz .  
   
- Następujące C# przykłady:  
+ Następujące przykłady języka C#:  
   
-- Utwórz tabelę Oracle i Załaduj ją z danymi.  
+- Utwórz tabelę Oracle i załaduj ją danymi.  
   
-- Użyj, <xref:System.Data.OracleClient.OracleType> Aby uzyskać dostęp do danych i użyć kilku struktur do wyświetlania danych. <xref:System.Data.OracleClient.OracleDataReader>  
+- Użyj, <xref:System.Data.OracleClient.OracleDataReader> aby uzyskać dostęp do <xref:System.Data.OracleClient.OracleType> danych i użyć kilku struktur do wyświetlania danych.  
   
 ## <a name="creating-an-oracle-table"></a>Tworzenie tabeli Oracle  
- Ten przykład tworzy tabelę Oracle i ładuje ją z danymi. Ten przykład należy uruchomić przed uruchomieniem następnego przykładu.  
+ W tym przykładzie tworzy tabelę Oracle i ładuje ją z danymi. Należy uruchomić ten przykład przed uruchomieniem następnego przykładu.  
   
 ```csharp  
 public void Setup(string connectionString)  
@@ -52,12 +52,12 @@ public void Setup(string connectionString)
 ```  
   
 ## <a name="retrieving-data-from-the-oracle-table"></a>Pobieranie danych z tabeli Oracle  
- Ten przykład używa **OracleDataReader** do uzyskiwania dostępu do danych i używa kilku struktur **OracleType** do wyświetlania danych.  
+ W tym przykładzie używa **OracleDataReader,** aby uzyskać dostęp do danych i używa kilku **struktur OracleType** do wyświetlania danych.  
   
 ```csharp  
 public void ReadOracleTypesExample(string connectionString)  
    {  
-   OracleConnection myConnection =   
+   OracleConnection myConnection =
       new OracleConnection(connectionString);  
    myConnection.Open();  
    OracleCommand myCommand = myConnection.CreateCommand();  
@@ -73,25 +73,25 @@ public void ReadOracleTypesExample(string connectionString)
   
       //First column, MyVarchar2, is a VARCHAR2 data type in Oracle  
       //Server and maps to OracleString.  
-      OracleString oraclestring1 =   
+      OracleString oraclestring1 =
         oracledatareader1.GetOracleString(0);  
       Console.WriteLine("OracleString " + oraclestring1.ToString());  
   
       //Second column, MyNumber, is a NUMBER data type in Oracle Server  
       //and maps to OracleNumber.  
-      OracleNumber oraclenumber1 =   
+      OracleNumber oraclenumber1 =
         oracledatareader1.GetOracleNumber(1);  
       Console.WriteLine("OracleNumber " + oraclenumber1.ToString());  
   
       //Third column, MyDate, is a DATA data type in Oracle Server  
       //and maps to OracleDateTime.  
-      OracleDateTime oracledatetime1 =   
+      OracleDateTime oracledatetime1 =
         oracledatareader1.GetOracleDateTime(2);  
       Console.WriteLine("OracleDateTime " + oracledatetime1.ToString());  
   
       //Fourth column, MyRaw, is a RAW data type in Oracle Server and  
       //maps to OracleBinary.  
-      OracleBinary oraclebinary1 =   
+      OracleBinary oraclebinary1 =
         oracledatareader1.GetOracleBinary(3);  
       //Calling value on a null OracleBinary throws  
       //OracleNullValueException; therefore, check for a null value.  
@@ -115,7 +115,7 @@ public void ReadOracleTypesExample(string connectionString)
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Oracle i ADO.NET](oracle-and-adonet.md)
 - [Omówienie ADO.NET](ado-net-overview.md)

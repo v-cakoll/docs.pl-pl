@@ -2,21 +2,21 @@
 title: Tworzenie zagnieżdżonych zapytań w języku Entity SQL
 ms.date: 03/30/2017
 ms.assetid: 685d4cd3-2c1f-419f-bb46-c9d97a351eeb
-ms.openlocfilehash: cd41c36853f50597a32d511d455148d649d9eb64
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 6b2fc9a32fc30d205b9c33257bf98781cfa07499
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395560"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150392"
 ---
 # <a name="composing-nested-entity-sql-queries"></a>Tworzenie zagnieżdżonych zapytań w języku Entity SQL
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] to bogaty język funkcjonalny. Blok konstrukcyjny [!INCLUDE[esql](../../../../../../includes/esql-md.md)] jest wyrażeniem. W przeciwieństwie do konwencjonalnych SQL, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] nie jest ograniczony do tabelarycznego zestawu wyników: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] obsługuje redagowanie złożonych wyrażeń, które mogą mieć literały, parametry lub wyrażenia zagnieżdżone. Wartość w wyrażeniu może być sparametryzowane lub składać się z innego wyrażenia.  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)]jest bogatym językiem funkcjonalnym. Budulcem [!INCLUDE[esql](../../../../../../includes/esql-md.md)] jest wyrażenie. W przeciwieństwie [!INCLUDE[esql](../../../../../../includes/esql-md.md)] do konwencjonalnego SQL, nie [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ogranicza się do zestaw wyników tabelaryczne: obsługuje tworzenie złożonych wyrażeń, które mogą mieć literały, parametry lub wyrażenia zagnieżdżone. Wartość w wyrażeniu może być sparametryzowana lub składa się z innego wyrażenia.  
   
 ## <a name="nested-expressions"></a>Wyrażenia zagnieżdżone  
- Wyrażenie zagnieżdżone można umieścić wszędzie tam, gdzie wartość zwracanego typu jest akceptowana. Na przykład:  
+ Wyrażenie zagnieżdżone można umieścić w dowolnym miejscu akceptowana jest wartość typu zwracanego przez niego. Przykład:  
   
 ```sql  
--- Returns a hierarchical collection of three elements at top-level.   
+-- Returns a hierarchical collection of three elements at top-level.
 -- x must be passed in the parameter collection.  
 ROW(@x, {@x}, {@x, 4, 5}, {@x, 7, 8, 9})  
   
@@ -25,17 +25,17 @@ ROW(@x, {@x}, {@x, 4, 5}, {@x, 7, 8, 9})
 {{{@x}}};  
 ```  
   
- Zagnieżdżona kwerenda może być umieszczona w klauzuli projekcji. Na przykład:  
+ Zagnieżdżone zapytanie można umieścić w klauzuli rzutowania. Przykład:  
   
 ```sql  
 -- Returns a collection of rows where each row contains an Address entity.  
 -- and a collection of references to its corresponding SalesOrderHeader entities.  
-SELECT address, (SELECT DEREF(soh)   
-                    FROM NAVIGATE(address, AdventureWorksModel.FK_SalesOrderHeader_Address_BillToAddressID) AS soh)   
+SELECT address, (SELECT DEREF(soh)
+                    FROM NAVIGATE(address, AdventureWorksModel.FK_SalesOrderHeader_Address_BillToAddressID) AS soh)
                     AS salesOrderHeader FROM AdventureWorksEntities.Address AS address  
 ```  
   
- W [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zapytania zagnieżdżone muszą zawsze być ujęte w nawiasy:  
+ W [!INCLUDE[esql](../../../../../../includes/esql-md.md)], zagnieżdżone kwerendy muszą być zawsze ujęte w nawiasy:  
   
 ```sql  
 -- Pseudo-Entity SQL  
@@ -46,19 +46,19 @@ UNION ALL
 FROM … );  
 ```  
   
- W poniższym przykładzie pokazano, jak prawidłowo zagnieżdżać wyrażenia w [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [How to: Order Union of dwa zapytania](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100)).  
+ W poniższym przykładzie pokazano, jak [!INCLUDE[esql](../../../../../../includes/esql-md.md)]prawidłowo zagnieżdżać wyrażenia w : [Jak: Kolejność Unii dwóch zapytań](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100)).  
   
-## <a name="nested-queries-in-projection"></a>Zagnieżdżone zapytania w projekcji  
- Zagnieżdżone zapytania w klauzuli Project mogą zostać przetłumaczone na zapytania dotyczące produktu kartezjańskiego na serwerze. W przypadku niektórych serwerów zaplecza, w tym SQL Server, może to spowodować, że tabela TempDB będzie bardzo duża, co może negatywnie wpłynąć na wydajność serwera.  
+## <a name="nested-queries-in-projection"></a>Zagnieżdżone kwerendy w rzutach  
+ Zagnieżdżone zapytania w klauzuli projektu mogą zostać przetłumaczone na zapytania produktów kartezjańskich na serwerze. W niektórych serwerach wewnętrznej bazy danych, w tym SQL Server, może to spowodować, że tabela TempDB uzyskać bardzo duże, co może niekorzystnie wpłynąć na wydajność serwera.  
   
- Oto przykład takiego zapytania:  
+ Oto przykład takiej kwerendy:  
   
 ```sql  
 SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2 FROM AdventureWorksModel.JobCandidate AS c  ) As Inner1 FROM AdventureWorksModel.EmployeeDepartmentHistory AS c  
 ```  
   
-## <a name="ordering-nested-queries"></a>Porządkowanie zagnieżdżonych zapytań  
- W Entity Framework wyrażenie zagnieżdżone można umieścić w dowolnym miejscu zapytania. Ponieważ Entity SQL zapewnia dużą elastyczność podczas pisania zapytań, można napisać zapytanie zawierające kolejność zagnieżdżonych zapytań. Jednak kolejność zagnieżdżonych zapytań nie jest zachowywana.  
+## <a name="ordering-nested-queries"></a>Zamawianie zapytań zagnieżdżonych  
+ W entity framework zagnieżdżone wyrażenie można umieścić w dowolnym miejscu w kwerendzie. Ponieważ entity SQL umożliwia dużą elastyczność w pisaniu zapytań, istnieje możliwość zapisu kwerendy, która zawiera kolejność zapytań zagnieżdżonych. Jednak kolejność kwerendy zagnieżdżonej nie jest zachowywana.  
   
 ```sql  
 -- The following query will order the results by last name.  
@@ -75,6 +75,6 @@ SELECT C2.FirstName, C2.LastName
         ORDER BY C1.LastName) as C2  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Omówienie jednostki SQL](entity-sql-overview.md)

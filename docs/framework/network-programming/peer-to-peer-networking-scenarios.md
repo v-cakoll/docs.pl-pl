@@ -3,64 +3,64 @@ title: Scenariusze sieci równorzędnych
 ms.date: 03/30/2017
 ms.assetid: d23b1a64-2e08-4014-882a-c1dd766bdcc2
 ms.openlocfilehash: 9b5d4d35085585fe04f2f0c0a105e6dff4b1fcc0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "64623088"
 ---
 # <a name="peer-to-peer-networking-scenarios"></a>Scenariusze sieci równorzędnych
 
-Sieci peer-to-peer umożliwia lub rozszerza następujących scenariuszy:
+Sieci peer-to-peer umożliwia lub ulepsza następujące scenariusze:
 
-## <a name="real-time-communications-rtc"></a>Komunikacji w czasie rzeczywistym (RTC)
+## <a name="real-time-communications-rtc"></a>Komunikacja w czasie rzeczywistym (RTC)
 
-- Bez użycia serwera wiadomości błyskawicznych
+- Wiadomości błyskawiczne bezserwerowe
 
-  RTC istnieje już dziś. Użytkownicy komputerów można rozmawiać i głosu lub wideo rozmów z ochotą już dziś. Jednak wiele z istniejących programów i ich protokołów komunikacyjnych opierają się na serwerach, aby działać. Jeśli uczestniczą w sieci bezprzewodowej ad hoc lub są częścią sieci izolowanej, to nie można użyć urządzenia te RTC. Technologia peer-to-peer umożliwia rozszerzenie technologii RTC, aby te dodatkowe środowiska sieciowego.
+  RTC istnieje dzisiaj. Użytkownicy komputerów mogą rozmawiać i prowadzić rozmowy głosowe lub wideo ze swoimi rówieśnikami. Jednak wiele istniejących programów i ich protokołów komunikacyjnych polega na serwerach do działania. Jeśli uczestniczysz w sieci bezprzewodowej ad hoc lub jesteś częścią izolowanej sieci, nie możesz korzystać z tych obiektów RTC. Technologia peer-to-peer umożliwia rozszerzenie technologii RTC na te dodatkowe środowiska sieciowe.
 
-- W czasie rzeczywistym matchmaking i gra
+- Dobieranie graczy w czasie rzeczywistym i rozgrywka
 
-  Podobnie jak RTC, w czasie rzeczywistym gry istnieje już dziś. Istnieje wiele opartego na sieci Web gier witryn, które adresowanych do społeczności graczy za pośrednictwem Internetu. Oferują one możliwość Znajdź inne graczy przy użyciu podobnych zainteresowaniach i gry, ze sobą. Problem jest gier witryn istnieje tylko w Internecie i jest skierowana do avid świąteczne specjalizuję się odtworzyć względem najlepsze graczy na całym świecie. Te witryny śledzenia i podaj statystyki, aby pomóc w procesie. Jednak te witryny nie zezwalają na świąteczne skonfigurować gry ad-hoc między znajomymi w różnych środowiskach sieciowych. Sieci peer-to-peer może zapewnić tę możliwość.
+  Podobnie jak RTC, gra w czasie rzeczywistym istnieje dzisiaj. Istnieje wiele stron internetowych gier, które zaspokajają społeczności graczy za pośrednictwem Internetu. Oferują one możliwość znalezienia innych graczy o podobnych zainteresowaniach i grać razem. Problem polega na tym, że strony gry istnieją tylko w Internecie i są nastawione na zapalonych graczy, którzy chcą grać przeciwko najlepszym graczom na świecie. Witryny te śledzą i dostarczają statystyki, aby pomóc w tym procesie. Jednak te strony nie pozwalają graczowi na skonfigurowanie gry ad-hoc wśród znajomych w różnych środowiskach sieciowych. Sieci peer-to-peer może zapewnić tę możliwość.
 
 ## <a name="collaboration"></a>Współpraca
 
-- Obszary robocze projekt rozwiązania do celu
+- Obszary robocze projektu rozwiązujące cel
 
-  Udostępnionym obszarze roboczym aplikacji umożliwiający tworzenie zapytań ad-hoc w grupach roboczych i następnie właścicielom grupy roboczej wypełnić udostępnionego obszaru roboczego z narzędziami i zawartość, która umożliwi grupy w celu rozwiązania problemu. Może to obejmować tablic wiadomości, narzędzi zwiększających produktywność i plików.
+  Udostępnione aplikacje obszaru roboczego umożliwiają tworzenie grup roboczych ad hoc, a następnie umożliwiają właścicielom grup roboczych wypełnianie udostępnionego obszaru roboczego narzędziami i zawartością, które pozwolą grupie rozwiązać problem. Może to obejmować fora dyskusyjne, narzędzia zwiększające produktywność i pliki.
 
 - Udostępnianie plików innym osobom
 
-  Podzbiór udostępnianie obszar roboczy projektu jest możliwość udostępniania plików. Chociaż ta możliwość istnieje już dziś z bieżącą wersją systemu Windows, może zostać poprawione za pośrednictwem sieci peer-to-peer, aby udostępnić zawartość pliku w sposób łatwy i przyjazna. Umożliwiając łatwy dostęp do materiałów niesamowite, jest na granicy Internetu w środowiskach obliczeniowych w trybie ad-hoc zwiększa wartość sieci obliczeniowych.
+  Podzbiór udostępniania obszaru roboczego projektu to możliwość udostępniania plików. Chociaż ta możliwość istnieje dziś w obecnej wersji systemu Windows, można ją ulepszyć za pomocą sieci peer-to-peer, aby zawartość plików była dostępna w łatwy i przyjazny sposób. Umożliwienie łatwego dostępu do niesamowitego bogactwa treści na obrzeżach Internetu lub w środowiskach komputerowych ad hoc zwiększa wartość komputerów sieciowych.
 
-- Udostępnianie środowiska
+- Dzielenie się doświadczeniami
 
-  Łączności bezprzewodowej staje się bardziej powszechnie znane, sieci peer-to-peer pozwala być w trybie online w grupie elementów równorzędnych i aby można było doświadczeniami (na przykład słońca, koncert rock lub rejs wakacji) podczas, gdy są one wykonywane.
+  Dzięki łączności bezprzewodowej staje się coraz bardziej rozpowszechnione, peer-to-peer sieci pozwala być online w grupie rówieśników i być w stanie podzielić się swoimi doświadczeniami (takie jak zachód słońca, koncert rockowy, lub rejs wakacje), podczas gdy występują.
 
 ## <a name="content-distribution"></a>Dystrybucja zawartości
 
 - Wiadomości SMS
 
-  Sieci peer-to-peer umożliwia rozpowszechnianie informacji tekstowych w postaci plików lub wiadomości do dużej grupy użytkowników. Przykład znajduje się lista wiadomości.
+  Sieci peer-to-peer mogą umożliwiać rozpowszechnianie informacji tekstowych w postaci plików lub wiadomości do dużej grupy użytkowników. Przykładem jest lista wiadomości.
 
-- Audio i wideo
+- Dźwięk i wideo
 
-  Sieci peer-to-peer umożliwia też rozpowszechnianie informacji audio lub wideo do dużej grupy użytkowników, takich jak duże spotkanie koncert lub firmy. Aby rozesłać zawartość już dziś, należy skonfigurować serwery o wysokiej wydajności do zbierania i rozłożenie obciążenia do setek lub tysięcy użytkowników. Za pomocą sieci peer-to-peer, tylko niewielki podzbiór elementów równorzędnych może faktycznie przeniesieniem ich materiałów ze scentralizowanego serwerów. Tych elementów równorzędnych będzie zalać te informacje do kilku więcej osób, którzy wysyłać je do innych użytkowników i tak dalej. Obciążenie dystrybucji zawartości jest wysyłana do elementów równorzędnych w chmurze. Elementu równorzędnego, który chce otrzymywać zawartość może znaleźć najbliższe równorzędnej rozproszone i pobrać zawartość z nich.
+  Sieci peer-to-peer mogą również umożliwiać rozpowszechnianie informacji audio lub wideo wśród dużej grupy użytkowników, takich jak duży koncert lub spotkanie firmowe. Aby rozpowszechniać zawartość dzisiaj, należy skonfigurować serwery o dużej pojemności do zbierania i dystrybucji obciążenia do setek lub tysięcy użytkowników. Dzięki sieci peer-to-peer tylko garstka elementów równorzędnych faktycznie uzyskałaby zawartość ze scentralizowanych serwerów. Ci rówieśnicy zalaliby te informacje jeszcze kilkoma osobami, które wysyłają je do innych i tak dalej. Obciążenie dystrybucji zawartości jest dystrybuowane do wiązek pracy w chmurze. Element równorzędny, który chce otrzymać zawartość, znajdzie najbliższy element równorzędny dystrybucji i pobierze od nich zawartość.
 
-- Dystrybucja aktualizacji produktu
+- Dystrybucja aktualizacji produktów
 
-  Sieci peer-to-peer oferuje również wydajny mechanizm do dystrybucji oprogramowania, takiego jak aktualizacje produktu (aktualizacje zabezpieczeń i dodatków service pack). Elementu równorzędnego, który jest podłączony do serwera dystrybucji oprogramowania można uzyskać aktualizację produktu i propagowanie go innym członkom swojej grupy.
+  Sieci peer-to-peer mogą również zapewnić skuteczny mechanizm dystrybucji oprogramowania, takiego jak aktualizacje produktów (aktualizacje zabezpieczeń i dodatki Service Pack). Element równorzędny, który ma połączenie z serwerem dystrybucji oprogramowania, może uzyskać aktualizację produktu i propagować ją innym członkom swojej grupy.
 
-## <a name="distributed-processing"></a>Przetwarzania rozproszonego
+## <a name="distributed-processing"></a>Przetwarzanie rozproszone
 
-- Dzielenie i stopień rozproszenia zadania
+- Podział i podział zadania
 
-  Duże zadania obliczeniowe najpierw można podzielić na oddzielnych mniejsze zadań dobrze dostosowane do przetwarzania zasobów elementu równorzędnego. Element równorzędny zrobić dzielenia dużych zadań obliczeń. Następnie sieci peer-to-peer można rozpowszechniać poszczególne zadania do oddzielnych elementów równorzędnych w grupie. Każdego elementu równorzędnego wykonuje jego zadania obliczeniowe i raportuje wynik ją do punktu akumulacja scentralizowane.
+  Duże zadanie obliczeniowe można najpierw podzielić na oddzielne mniejsze zadania obliczeniowe dobrze dostosowane do zasobów obliczeniowych elementu równorzędnego. Element równorzędny może wykonać podział zadania przetwarzania dużych. Następnie sieci peer-to-peer można dystrybuować poszczególne zadania do oddzielnych elementów równorzędnych w grupie. Każdy element równorzędny wykonuje swoje zadanie obliczeniowe i zgłasza jego wynik z powrotem do scentralizowanego punktu akumulacji.
 
 - Agregacja zasobów komputera
 
-  Innym sposobem na korzystanie z sieci peer-to-peer na potrzeby przetwarzania rozproszonego jest do uruchamiania programów na każdy komputer równorzędny, są uruchamiane podczas czas bezczynności procesora, która jest częścią większej zadania obliczeniowe, które są koordynowane przez centralny serwer. Przez agregowanie procesorów wielu komputerów, sieci peer-to-peer można przekształcić w grupy komputerów równorzędnej duże równoległe procesora dla dużych zadań obliczeń.
+  Innym sposobem wykorzystania sieci peer-to-peer do przetwarzania rozproszonego jest uruchamianie programów na każdym elementów równorzędnych, które działają w czasie bezczynności procesora i są częścią większego zadania obliczeniowego, które jest koordynowane przez serwer centralny. Dzięki agregowaniu procesorów wielu komputerów sieci peer-to-peer mogą przekształcić grupę komputerów równorzędnych w duży procesor równoległy do wykonywania dużych zadań obliczeniowych.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Net.PeerToPeer.Collaboration>

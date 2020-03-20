@@ -3,35 +3,35 @@ title: Chmury PNRP
 ms.date: 03/30/2017
 ms.assetid: a82e2bf1-62ab-4c2d-83f3-3217a6aead2e
 ms.openlocfilehash: dd27e61fe1f648dcaf4ee4dd5f5119d33913c63a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047372"
 ---
 # <a name="pnrp-clouds"></a>Chmury PNRP
-"Chmura" w protokole PNRP reprezentuje zestaw węzłów, które mogą komunikować się ze sobą za pomocą sieci. Termin "Chmura" jest równoznaczny z "siatką równorzędną" i "wykresem równorzędnym".  
+PnRP "chmura" reprezentuje zestaw węzłów, które mogą komunikować się ze sobą za pośrednictwem sieci. Termin "chmura" jest synonimem "siatki równorzędnej" i "wykres peer-to-peer".  
   
- Komunikacja między węzłami nigdy nie powinna przekraczać jednej chmury do innej. <xref:System.Net.PeerToPeer.Cloud> Wystąpienie jest jednoznacznie identyfikowane przez jego nazwę, w której rozróżniana jest wielkość liter. Pojedynczy element równorzędny lub węzeł może być połączony z więcej niż jedną chmurą.  
+ Komunikacja między węzłami nigdy nie powinna przechodzić z jednej chmury do drugiej. Wystąpienie <xref:System.Net.PeerToPeer.Cloud> jest jednoznacznie identyfikowane przez jego nazwę, która jest rozróżniana wielkość liter. Jeden element równorzędny lub węzeł może być połączony z więcej niż jedną chmurą.  
   
- Chmury są ściśle powiązane z interfejsami sieciowymi.  W przypadku maszyn wieloadresowych z dwiema kartami sieciowymi podłączonymi do różnych podsieci zostaną zwrócone trzy chmury: jedna dla każdego z adresów lokalnych w interfejsie i w jednej chmurze zakresu globalnego.  
+ Chmury są bardzo ściśle powiązane z interfejsami sieciowymi.  Na komputerze wielorodzinnym z dwiema kartami sieciowymi dołączonymi do różnych podsieci zostaną zwrócone trzy chmury: po jednym dla każdego połączenia adresów lokalnych na interfejs i jednej globalnej chmury zakresu.  
   
- Protokół PNRP używa trzech zakresów w chmurze, w których zakres jest grupą komputerów, które mogą się znajdować nawzajem:  
+ PNRP używa trzech "zakresów" w chmurze, w których zakres jest grupowanie komputerów, które są w stanie znaleźć siebie nawzajem:  
   
-- Chmura globalna odnosi się do globalnego zakresu adresów IPv6 i adresów globalnych oraz reprezentuje wszystkie komputery w całym internetowym protokole IPv6. Istnieje tylko jedna chmura globalna.  
+- Chmura globalna odpowiada globalnemu zakresowi adresów IPv6 i adresom globalnym i reprezentuje wszystkie komputery w całym Internecie IPv6. Istnieje tylko jedna globalna chmura.  
   
-- Chmura lokalna łącza odnosi się do zakresu adresów IPv6 i adresów lokalnych łącza. Chmura lokalna linku dotyczy określonego linku, który jest zwykle taki sam, jak w przypadku lokalnie dołączonej podsieci. Może istnieć wiele chmur z linkiem lokalnym.  
+- Chmura lokalna łącza odpowiada zakresowi adresu IPv6 i adresom lokalnym łącza. Chmura lokalna łącza jest dla określonego łącza, które jest zazwyczaj takie same jak lokalnie dołączone podsieci. Może istnieć wiele chmur lokalnych łączy.  
   
- Trzecia Chmura, w której dana lokacja jest zgodna z zakresem adresów IPv6 lokacji i adresami lokalnymi lokacji. Ta chmura jest przestarzała, chociaż nadal jest obsługiwana w protokole PNRP.  
+ Trzecia chmura, chmura specyficzna dla lokacji, odpowiada zakresowi adresu IPv6 witryny i adresom lokalnym lokacji. Ta chmura została przestarzała, chociaż nadal jest obsługiwana w PNRP.  
   
 ## <a name="clouds"></a>Chmury  
- Chmury PNRP są reprezentowane przez wystąpienia <xref:System.Net.PeerToPeer.Cloud> klasy. Grupy chmur używane przez element równorzędny są reprezentowane przez wystąpienia klasy wyliczalnej <xref:System.Net.PeerToPeer.CloudCollection> . Kolekcje chmur protokołu PNRP znane do bieżącego elementu równorzędnego można uzyskać przez wywołanie metody statycznej <xref:System.Net.PeerToPeer.Cloud.GetAvailableClouds%2A> .  
+ Chmury PNRP są reprezentowane przez <xref:System.Net.PeerToPeer.Cloud> wystąpienia klasy. Grupy chmur używane peer są reprezentowane przez wystąpienia klasy <xref:System.Net.PeerToPeer.CloudCollection> wyliczalne. Kolekcje chmur PNRP znane bieżącemu elementowi równorzędnej można uzyskać, wywołując metodę statyczną. <xref:System.Net.PeerToPeer.Cloud.GetAvailableClouds%2A>  
   
- Poszczególne chmury mają unikatowe nazwy reprezentowane przez 256 znak Unicode. Te nazwy, wraz z powyższym zakresem, służą do konstruowania unikatowych wystąpień klasy chmury. Te wystąpienia można serializować i odtworzyć na potrzeby trwałego użycia.  
+ Poszczególne chmury mają unikatowe nazwy, reprezentowane jako 256-znakowy ciąg Unicode. Te nazwy, wraz z wyżej wymienionym zakresem, są używane do konstruowania unikatowych wystąpień cloud klasy. Te wystąpienia mogą być serializowane i rekonstruowane dla trwałego użycia.  
   
- Po utworzeniu lub uzyskaniu wystąpienia w chmurze nazwy elementów równorzędnych mogą być zarejestrowane w celu utworzenia siatki znanych elementów równorzędnych.  
+ Po utworzeniu lub uzyskaniu wystąpienia w chmurze można zarejestrować nazwy elementów równorzędnych, aby utworzyć siatkę znanych elementów równorzędnych.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Net.PeerToPeer.Cloud>
 - [Protokół PNRP](peer-name-resolution-protocol.md)

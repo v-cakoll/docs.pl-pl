@@ -13,50 +13,50 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-ms.openlocfilehash: 49ba1919f68f35e9d72b012540b785e05c307c39
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: a29c2f7137440e64fbf8095f77d5d10d0505bc2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743750"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185901"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Bezpieczniejszy dostęp do plików i danych w formularzach systemu Windows
-.NET Framework używa uprawnień do ochrony zasobów i danych. Miejsce, w którym aplikacja może odczytywać lub zapisywać dane, zależy od uprawnień przyznanych aplikacji. Gdy aplikacja jest uruchamiana w środowisku częściowej relacji zaufania, może nie mieć dostępu do danych lub może zajść konieczność zmiany sposobu uzyskiwania dostępu do danych.  
+Program .NET Framework używa uprawnień do ochrony zasobów i danych. Gdzie aplikacja może odczytywać lub zapisywać dane zależy od uprawnień przyznanych aplikacji. Gdy aplikacja działa w środowisku częściowego zaufania, może nie mieć dostępu do danych lub może być konieczna zmiana sposobu uzyskiwania dostępu do danych.  
   
- W przypadku wystąpienia ograniczenia zabezpieczeń są dostępne dwie opcje: Potwierdź uprawnienie (przy założeniu, że zostało ono przyznane aplikacji) lub użyj wersji funkcji zapisaną do pracy w częściowej relacji zaufania. W poniższych sekcjach omówiono sposób pracy z dostępem do plików, baz danych i rejestrów z aplikacji, które działają w środowisku częściowej relacji zaufania.  
+ Po napotkaniu ograniczenia zabezpieczeń, masz dwie opcje: potwierdzić uprawnienie (przy założeniu, że została przyznana do aplikacji) lub użyć wersji funkcji napisane do pracy w częściowym zaufaniu. W poniższych sekcjach omówiono sposób pracy z dostępem do plików, bazy danych i rejestru z aplikacji, które są uruchomione w środowisku częściowego zaufania.  
   
 > [!NOTE]
-> Domyślnie narzędzia generujące wdrożenia ClickOnce domyślnie wdrażają te wdrożenia w celu żądania pełnego zaufania z komputerów, na których te komputery są uruchamiane. Jeśli zdecydujesz, że chcesz mieć dodatkowe korzyści z używania programu w częściowej relacji zaufania, musisz zmienić to ustawienie domyślne w Visual Studio lub jednym z narzędzi Windows SDK (Mage. exe lub MageUI. exe). Aby uzyskać więcej informacji o zabezpieczeniach Windows Forms i sposobach określania odpowiedniego poziomu zaufania dla aplikacji, zobacz [zabezpieczenia w Windows Forms Omówienie](security-in-windows-forms-overview.md).  
+> Domyślnie narzędzia, które generują clickonce wdrożeń domyślnie tych wdrożeń do żądania pełnego zaufania z komputerów, na których są uruchamiane. Jeśli zdecydujesz, że chcesz dodać korzyści zabezpieczeń z uruchamiania w częściowym zaufaniu, należy zmienić to ustawienie domyślne w programie Visual Studio lub jednym z narzędzi zestawu Windows SDK (Mage.exe lub MageUI.exe). Aby uzyskać więcej informacji na temat zabezpieczeń formularzy systemu Windows i sposobu określania odpowiedniego poziomu zaufania dla aplikacji, zobacz [Omówienie zabezpieczeń w formularzach systemu Windows](security-in-windows-forms-overview.md).  
   
 ## <a name="file-access"></a>Dostęp do plików  
- Klasa <xref:System.Security.Permissions.FileIOPermission> kontroluje dostęp do plików i folderów w .NET Framework. Domyślnie system zabezpieczeń nie udziela <xref:System.Security.Permissions.FileIOPermission> w środowiskach częściowej relacji zaufania, takich jak lokalny intranet i strefy internetowe. Jednak aplikacja wymagająca dostępu do plików może nadal działać w tych środowiskach w przypadku modyfikacji projektu aplikacji lub do uzyskiwania dostępu do plików za pomocą różnych metod. Domyślnie lokalna strefa intranetowa ma dostęp do tego samego dostępu do lokacji i tego samego dostępu do katalogu, aby można było połączyć się z powrotem z lokacją jego pochodzenia i odczytać z katalogu instalacyjnego. Domyślnie strefa Internet ma przyznane prawo do nawiązywania połączenia z witryną źródłową.  
+ Klasa <xref:System.Security.Permissions.FileIOPermission> steruje dostępem do plików i folderów w programie .NET Framework. Domyślnie system zabezpieczeń nie udziela <xref:System.Security.Permissions.FileIOPermission> częściowych środowisk zaufania, takich jak lokalny intranet i strefy internetowe. Jednak aplikacja, która wymaga dostępu do plików, może nadal działać w tych środowiskach, jeśli zmodyfikujesz projekt aplikacji lub użyjesz różnych metod dostępu do plików. Domyślnie lokalnej strefie intranetowej przyznaje się prawo do tego samego dostępu do lokacji i tego samego dostępu do katalogu, do łączenia się z lokacją pochodzenia i odczytu z katalogu instalacyjnego. Domyślnie strefa internetowa ma przyznane tylko prawo do łączenia się z powrotem do witryny pochodzenia.  
   
 ### <a name="user-specified-files"></a>Pliki określone przez użytkownika  
- Jednym ze sposobów postępowania z brakiem uprawnień dostępu do plików jest wyświetlenie monitu o podanie określonych informacji o pliku przy użyciu klasy <xref:System.Windows.Forms.OpenFileDialog> lub <xref:System.Windows.Forms.SaveFileDialog>. Ta interakcja użytkownika pomaga zapewnić pewne gwarancje, że aplikacja nie może złośliwie ładować prywatnych plików ani zastępować ważnych plików. Metody <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> i <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> zapewniają dostęp do plików odczytu i zapisu, otwierając strumień plików dla pliku określonego przez użytkownika. Metody pomagają również chronić plik użytkownika przez zaciemnienie ścieżki pliku.  
+ Jednym ze sposobów radzenia sobie z nie mając uprawnienia dostępu do <xref:System.Windows.Forms.OpenFileDialog> pliku <xref:System.Windows.Forms.SaveFileDialog> jest monitowanie użytkownika o podanie określonych informacji o pliku przy użyciu lub klasy. Ta interakcja z użytkownikiem pomaga zapewnić pewną pewność, że aplikacja nie może złośliwie załadować plików prywatnych lub zastąpić ważnych plików. Metody <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> i zapewniają dostęp do plików odczytu i zapisu, otwierając strumień plików dla pliku określonego przez użytkownika. Metody pomagają również chronić plik użytkownika, zasłaniając ścieżkę pliku.  
   
 > [!NOTE]
-> Te uprawnienia różnią się w zależności od tego, czy aplikacja znajduje się w strefie Internet czy intranet. Aplikacje strefy internetowej mogą korzystać tylko z <xref:System.Windows.Forms.OpenFileDialog>, natomiast aplikacje intranetowe mają nieograniczone uprawnienia do okna dialogowego plików.  
+> Uprawnienia te różnią się w zależności od tego, czy aplikacja znajduje się w strefie Internet lub w intranecie. Aplikacje strefy internetowej <xref:System.Windows.Forms.OpenFileDialog>mogą używać tylko aplikacji intranetowych, podczas gdy aplikacje intranetowe mają nieograniczone uprawnienia do okna dialogowego plików.  
   
- Klasa <xref:System.Security.Permissions.FileDialogPermission> określa typ okna dialogowego, który może być używany przez aplikację. W poniższej tabeli przedstawiono wartość, którą należy wykonać, aby użyć każdej klasy <xref:System.Windows.Forms.FileDialog>.  
+ Klasa <xref:System.Security.Permissions.FileDialogPermission> określa, jakiego typu okna dialogowego pliku może używać aplikacja. W poniższej tabeli przedstawiono wartość, która musi być używana dla każdej <xref:System.Windows.Forms.FileDialog> klasy.  
   
-|Class|Wymagana wartość dostępu|  
+|Klasa|Wymagana wartość dostępu|  
 |-----------|---------------------------|  
 |<xref:System.Windows.Forms.OpenFileDialog>|<xref:System.Security.Permissions.FileDialogPermissionAccess.Open>|  
 |<xref:System.Windows.Forms.SaveFileDialog>|<xref:System.Security.Permissions.FileDialogPermissionAccess.Save>|  
   
 > [!NOTE]
-> Nie jest wymagane odpowiednie uprawnienie, dopóki metoda <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> nie zostanie faktycznie wywołana.  
+> Określone uprawnienie nie jest <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> wymagane, dopóki metoda jest faktycznie wywoływana.  
   
- Uprawnienie do wyświetlania pliku okno dialogowe nie przyznaje aplikacji pełnego dostępu do wszystkich elementów członkowskich klas <xref:System.Windows.Forms.FileDialog>, <xref:System.Windows.Forms.OpenFileDialog>i <xref:System.Windows.Forms.SaveFileDialog>. Aby uzyskać dokładne uprawnienia, które są wymagane do wywołania każdej metody, zobacz temat referencyjny dla tej metody w dokumentacji biblioteki klas .NET Framework.  
+ Uprawnienie do wyświetlania okna dialogowego pliku nie zapewnia <xref:System.Windows.Forms.FileDialog>aplikacji <xref:System.Windows.Forms.OpenFileDialog>pełnego <xref:System.Windows.Forms.SaveFileDialog> dostępu do wszystkich członków programu , i klas. Aby uzyskać dokładne uprawnienia, które są wymagane do wywołania każdej metody, zobacz temat odwołania dla tej metody w dokumentacji biblioteki klas .NET Framework.  
   
- Poniższy przykład kodu używa metody <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A>, aby otworzyć plik określony przez użytkownika w kontrolce <xref:System.Windows.Forms.RichTextBox>. Przykład wymaga <xref:System.Security.Permissions.FileDialogPermission> i skojarzonej wartości wyliczenia <xref:System.Security.Permissions.FileDialogPermissionAttribute.Open%2A>. W przykładzie pokazano, jak obsłużyć <xref:System.Security.SecurityException>, aby określić, czy funkcja Save powinna być wyłączona. Ten przykład wymaga, aby <xref:System.Windows.Forms.Form> ma kontrolkę <xref:System.Windows.Forms.Button> o nazwie `ButtonOpen`i formant <xref:System.Windows.Forms.RichTextBox> o nazwie `RtfBoxMain`.  
+ Poniższy przykład kodu <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> używa metody, aby otworzyć plik <xref:System.Windows.Forms.RichTextBox> określony przez użytkownika do formantu. Przykład wymaga <xref:System.Security.Permissions.FileDialogPermission> i skojarzonej wartości wyliczenia. <xref:System.Security.Permissions.FileDialogPermissionAttribute.Open%2A> W przykładzie pokazano, <xref:System.Security.SecurityException> jak obsługiwać, aby ustalić, czy funkcja zapisywania powinna być wyłączona. W tym przykładzie <xref:System.Windows.Forms.Button> wymaga, `ButtonOpen`aby <xref:System.Windows.Forms.RichTextBox> formant `RtfBoxMain` <xref:System.Windows.Forms.Form> o nazwie i formancie o nazwie .  
   
 > [!NOTE]
-> W przykładzie nie pokazano logiki programowania dla funkcji Zapisz.  
+> Logika programowania dla funkcji zapisywania nie jest wyświetlana w przykładzie.  
   
 ```vb  
 Private Sub ButtonOpen_Click(ByVal sender As System.Object, _  
-    ByVal e As System.EventArgs) Handles ButtonOpen.Click   
+    ByVal e As System.EventArgs) Handles ButtonOpen.Click
   
     Dim editingFileName as String = ""  
     Dim saveAllowed As Boolean = True  
@@ -64,9 +64,9 @@ Private Sub ButtonOpen_Click(ByVal sender As System.Object, _
     ' Displays the OpenFileDialog.  
     If (OpenFileDialog1.ShowDialog() = DialogResult.OK) Then  
         Dim userStream as System.IO.Stream  
-        Try   
+        Try
             ' Opens the file stream for the file selected by the user.  
-            userStream =OpenFileDialog1.OpenFile()   
+            userStream =OpenFileDialog1.OpenFile()
             Me.RtfBoxMain.LoadFile(userStream, _  
                 RichTextBoxStreamType.PlainText)  
         Finally  
@@ -76,14 +76,14 @@ Private Sub ButtonOpen_Click(ByVal sender As System.Object, _
         ' Tries to get the file name selected by the user.  
         ' Failure means that the application does not have  
         ' unrestricted permission to the file.  
-        Try   
+        Try
             editingFileName = OpenFileDialog1.FileName  
         Catch ex As Exception  
-            If TypeOf ex Is System.Security.SecurityException Then   
-                ' The application does not have unrestricted permission   
+            If TypeOf ex Is System.Security.SecurityException Then
+                ' The application does not have unrestricted permission
                 ' to the file so the save feature will be disabled.  
-                saveAllowed = False   
-            Else   
+                saveAllowed = False
+            Else
                 Throw ex  
             End If  
         End Try  
@@ -92,16 +92,16 @@ End Sub
 ```  
   
 ```csharp  
-private void ButtonOpen_Click(object sender, System.EventArgs e)   
+private void ButtonOpen_Click(object sender, System.EventArgs e)
 {  
     String editingFileName = "";  
     Boolean saveAllowed = true;  
   
     // Displays the OpenFileDialog.  
-    if (openFileDialog1.ShowDialog() == DialogResult.OK)   
+    if (openFileDialog1.ShowDialog() == DialogResult.OK)
     {  
         // Opens the file stream for the file selected by the user.  
-        using (System.IO.Stream userStream = openFileDialog1.OpenFile())   
+        using (System.IO.Stream userStream = openFileDialog1.OpenFile())
         {  
             this.RtfBoxMain.LoadFile(userStream,  
                 RichTextBoxStreamType.PlainText);  
@@ -111,19 +111,19 @@ private void ButtonOpen_Click(object sender, System.EventArgs e)
         // Tries to get the file name selected by the user.  
         // Failure means that the application does not have  
         // unrestricted permission to the file.  
-        try   
+        try
         {  
             editingFileName = openFileDialog1.FileName;  
-        }   
-        catch (Exception ex)   
+        }
+        catch (Exception ex)
         {  
-            if (ex is System.Security.SecurityException)   
+            if (ex is System.Security.SecurityException)
             {  
-                // The application does not have unrestricted permission   
+                // The application does not have unrestricted permission
                 // to the file so the save feature will be disabled.  
-                saveAllowed = false;   
-            }   
-            else   
+                saveAllowed = false;
+            }
+            else
             {  
                 throw ex;  
             }  
@@ -133,19 +133,19 @@ private void ButtonOpen_Click(object sender, System.EventArgs e)
 ```  
   
 > [!NOTE]
-> W programie C#Visual należy dodać kod, aby włączyć obsługę zdarzeń. Używając kodu z poprzedniego przykładu, poniższy kod pokazuje, jak włączyć obsługę zdarzeń.`this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`  
+> W języku Visual C#upewnij się, że dodasz kod, aby włączyć program obsługi zdarzeń. Za pomocą kodu z poprzedniego przykładu, poniższy kod pokazuje, jak włączyć program obsługi zdarzeń.`this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`  
   
 ### <a name="other-files"></a>Inne pliki  
- Czasami konieczne jest odczytanie lub zapisanie plików, które nie są określone przez użytkownika, na przykład w przypadku konieczności utrwalania ustawień aplikacji. W lokalnym intranecie i strefach internetowych aplikacja nie będzie miała uprawnienia do przechowywania danych w pliku lokalnym. Jednak aplikacja będzie mogła przechowywać dane w izolowanym magazynie. Magazyn izolowany jest abstrakcyjnym przedziałem danych (nie konkretną lokalizacją przechowywania), który zawiera jeden lub więcej izolowanych plików magazynu o nazwie Stores, które zawierają rzeczywiste lokalizacje katalogów, w których są przechowywane dane. Uprawnienia dostępu do plików, takie jak <xref:System.Security.Permissions.FileIOPermission>, nie są wymagane; Zamiast tego Klasa <xref:System.Security.Permissions.IsolatedStoragePermission> kontroluje uprawnienia do magazynu izolowanego. Domyślnie aplikacje działające w lokalnym intranecie i strefach internetowych mogą przechowywać dane przy użyciu magazynu izolowanego. Jednak ustawienia takie jak przydział dysku mogą się różnić. Aby uzyskać więcej informacji na temat izolowanego magazynu, zobacz [izolowany magazyn](../../standard/io/isolated-storage.md).  
+ Czasami trzeba będzie odczytać lub zapisać do plików, które użytkownik nie określa, takich jak kiedy należy utrwalić ustawienia aplikacji. W lokalnym intranecie i strefach internetowych aplikacja nie będzie miała uprawnień do przechowywania danych w pliku lokalnym. Jednak aplikacja będzie mogła przechowywać dane w izolowanym magazynie. Magazyn izolowany to abstrakcyjny przedział danych (nie określona lokalizacja magazynu), który zawiera jeden lub więcej izolowanych plików magazynu, nazywanych magazynami, które zawierają rzeczywiste lokalizacje katalogów, w których przechowywane są dane. Uprawnienia dostępu do <xref:System.Security.Permissions.FileIOPermission> plików, takie jak nie są wymagane; Zamiast tego <xref:System.Security.Permissions.IsolatedStoragePermission> klasa kontroluje uprawnienia do izolowanego magazynu. Domyślnie aplikacje uruchomione w lokalnym intranecie i strefach internetowych mogą przechowywać dane przy użyciu magazynu izolowanego; jednak ustawienia, takie jak przydział dysku, mogą się różnić. Aby uzyskać więcej informacji na temat magazynu izolowanego, zobacz [Magazyn izolowany](../../standard/io/isolated-storage.md).  
   
- Poniższy przykład używa wydzielonej pamięci masowej do zapisywania danych do pliku znajdującego się w sklepie. Przykład wymaga <xref:System.Security.Permissions.IsolatedStorageFilePermission> i <xref:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByUser> wartości wyliczenia. Przykład ilustruje odczytywanie i zapisywanie niektórych wartości właściwości kontrolki <xref:System.Windows.Forms.Button> do pliku w magazynie izolowanym. Funkcja `Read` zostanie wywołana po uruchomieniu aplikacji, a funkcja `Write` zostanie wywołana przed zakończeniem działania aplikacji. Przykład wymaga, aby funkcje `Read` i `Write` istniały jako elementy członkowskie <xref:System.Windows.Forms.Form>, który zawiera kontrolkę <xref:System.Windows.Forms.Button> o nazwie `MainButton`.  
+ W poniższym przykładzie użyto magazynu izolowanego do zapisywania danych w pliku znajdującym się w magazynie. Przykład wymaga <xref:System.Security.Permissions.IsolatedStorageFilePermission> i <xref:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByUser> wartość wyliczenia. W przykładzie pokazano odczytu i <xref:System.Windows.Forms.Button> zapisu niektórych wartości właściwości formantu do pliku w izolowanym magazynie. Funkcja `Read` zostanie wywołana po uruchomieniu aplikacji `Write` i funkcja zostanie wywołana przed zakończeniem aplikacji. Przykład wymaga, `Read` aby `Write` i funkcje <xref:System.Windows.Forms.Form> istnieją jako <xref:System.Windows.Forms.Button> elementy `MainButton`członkowskie formantu o nazwie .  
   
 ```vb  
-' Reads the button options from the isolated storage. Uses Default values   
+' Reads the button options from the isolated storage. Uses Default values
 ' for the button if the options file does not exist.  
-Public Sub Read()   
+Public Sub Read()
     Dim isoStore As System.IO.IsolatedStorage.IsolatedStorageFile = _  
-        System.IO.IsolatedStorage.IsolatedStorageFile. _   
+        System.IO.IsolatedStorage.IsolatedStorageFile. _
         GetUserStoreForDomain()  
   
     Dim filename As String = "options.txt"  
@@ -154,28 +154,28 @@ Public Sub Read()
         If (isoStore.GetFileNames(filename).GetLength(0) <> 0) Then  
   
             ' Opens the file because it exists.  
-            Dim isos As New System.IO.IsolatedStorage.IsolatedStorageFileStream _   
+            Dim isos As New System.IO.IsolatedStorage.IsolatedStorageFileStream _
                  (filename, IO.FileMode.Open,isoStore)  
             Dim reader as System.IO.StreamReader  
-            Try   
+            Try
                 reader = new System.IO.StreamReader(isos)  
   
                 ' Reads the values stored.  
                 Dim converter As System.ComponentModel.TypeConverter  
-                converter = System.ComponentModel.TypeDescriptor.GetConverter _   
+                converter = System.ComponentModel.TypeDescriptor.GetConverter _
                     (GetType(Color))  
   
-                Me.MainButton.BackColor = _   
-                        CType(converter.ConvertFromString _   
+                Me.MainButton.BackColor = _
+                        CType(converter.ConvertFromString _
                          (reader.ReadLine()), Color)  
                 me.MainButton.ForeColor = _  
-                        CType(converter.ConvertFromString _   
+                        CType(converter.ConvertFromString _
                          (reader.ReadLine()), Color)  
   
-                converter = System.ComponentModel.TypeDescriptor.GetConverter _   
+                converter = System.ComponentModel.TypeDescriptor.GetConverter _
                     (GetType(Font))  
                 me.MainButton.Font = _  
-                        CType(converter.ConvertFromString _   
+                        CType(converter.ConvertFromString _
                          (reader.ReadLine()), Font)  
   
             Catch ex As Exception  
@@ -192,13 +192,13 @@ Public Sub Read()
 End Sub  
   
 ' Writes the button options to the isolated storage.  
-Public Sub Write()   
+Public Sub Write()
     Dim isoStore As System.IO.IsolatedStorage.IsolatedStorageFile = _  
-        System.IO.IsolatedStorage.IsolatedStorageFile. _   
+        System.IO.IsolatedStorage.IsolatedStorageFile. _
         GetUserStoreForDomain()  
   
     Dim filename As String = "options.txt"  
-    Try   
+    Try
         ' Checks if the file exists, and if it does, tries to delete it.  
         If (isoStore.GetFileNames(filename).GetLength(0) <> 0) Then  
             isoStore.DeleteFile(filename)  
@@ -209,21 +209,21 @@ Public Sub Write()
   
     ' Creates the options.txt file and writes the button options to it.  
     Dim writer as System.IO.StreamWriter  
-    Try   
-        Dim isos As New System.IO.IsolatedStorage.IsolatedStorageFileStream _   
+    Try
+        Dim isos As New System.IO.IsolatedStorage.IsolatedStorageFileStream _
              (filename, IO.FileMode.CreateNew, isoStore)  
   
         writer = New System.IO.StreamWriter(isos)  
         Dim converter As System.ComponentModel.TypeConverter  
   
-        converter = System.ComponentModel.TypeDescriptor.GetConverter _   
+        converter = System.ComponentModel.TypeDescriptor.GetConverter _
            (GetType(Color))  
         writer.WriteLine(converter.ConvertToString( _  
             Me.MainButton.BackColor))  
         writer.WriteLine(converter.ConvertToString( _  
             Me.MainButton.ForeColor))  
   
-        converter = System.ComponentModel TypeDescriptor.GetConverter _   
+        converter = System.ComponentModel TypeDescriptor.GetConverter _
            (GetType(Font))  
         writer.WriteLine(converter.ConvertToString( _  
             Me.MainButton.Font))  
@@ -238,11 +238,11 @@ End Sub
 ```  
   
 ```csharp  
-// Reads the button options from the isolated storage. Uses default values   
+// Reads the button options from the isolated storage. Uses default values
 // for the button if the options file does not exist.  
-public void Read()   
+public void Read()
 {  
-    System.IO.IsolatedStorage.IsolatedStorageFile isoStore =   
+    System.IO.IsolatedStorage.IsolatedStorageFile isoStore =
         System.IO.IsolatedStorage.IsolatedStorageFile.  
         GetUserStoreForDomain();  
   
@@ -250,14 +250,14 @@ public void Read()
     try  
     {  
         // Checks to see if the options.txt file exists.  
-        if (isoStore.GetFileNames(filename).GetLength(0) != 0)   
+        if (isoStore.GetFileNames(filename).GetLength(0) != 0)
         {  
             // Opens the file because it exists.  
-            System.IO.IsolatedStorage.IsolatedStorageFileStream isos =   
+            System.IO.IsolatedStorage.IsolatedStorageFileStream isos =
                 new System.IO.IsolatedStorage.IsolatedStorageFileStream  
                     (filename, System.IO.FileMode.Open,isoStore);  
             System.IO.StreamReader reader = null;  
-            try   
+            try
             {  
                 reader = new System.IO.StreamReader(isos);  
   
@@ -265,17 +265,17 @@ public void Read()
                 TypeConverter converter ;  
                 converter = TypeDescriptor.GetConverter(typeof(Color));  
   
-                this.MainButton.BackColor =   
+                this.MainButton.BackColor =
                  (Color)(converter.ConvertFromString(reader.ReadLine()));  
-                this.MainButton.ForeColor =   
+                this.MainButton.ForeColor =
                  (Color)(converter.ConvertFromString(reader.ReadLine()));  
   
                 converter = TypeDescriptor.GetConverter(typeof(Font));  
-                this.MainButton.Font =   
+                this.MainButton.Font =
                   (Font)(converter.ConvertFromString(reader.ReadLine()));  
             }  
             catch (Exception ex)  
-            {   
+            {
                 System.Diagnostics.Debug.WriteLine  
                      ("Cannot read options " + ex.ToString());  
             }  
@@ -284,8 +284,8 @@ public void Read()
                 reader.Close();  
             }  
         }  
-    }   
-    catch (Exception ex)   
+    }
+    catch (Exception ex)
     {  
         System.Diagnostics.Debug.WriteLine  
             ("Cannot read options " + ex.ToString());  
@@ -293,22 +293,22 @@ public void Read()
 }  
   
 // Writes the button options to the isolated storage.  
-public void Write()   
+public void Write()
 {  
-    System.IO.IsolatedStorage.IsolatedStorageFile isoStore =   
+    System.IO.IsolatedStorage.IsolatedStorageFile isoStore =
         System.IO.IsolatedStorage.IsolatedStorageFile.  
         GetUserStoreForDomain();  
   
     string filename = "options.txt";  
-    try   
+    try
     {  
         // Checks if the file exists and, if it does, tries to delete it.  
-        if (isoStore.GetFileNames(filename).GetLength(0) != 0)   
+        if (isoStore.GetFileNames(filename).GetLength(0) != 0)
         {  
             isoStore.DeleteFile(filename);  
         }  
     }  
-    catch (Exception ex)   
+    catch (Exception ex)
     {  
         System.Diagnostics.Debug.WriteLine  
             ("Cannot delete file " + ex.ToString());  
@@ -316,10 +316,10 @@ public void Write()
   
     // Creates the options file and writes the button options to it.  
     System.IO.StreamWriter writer = null;  
-    try   
+    try
     {  
-        System.IO.IsolatedStorage.IsolatedStorageFileStream isos = new   
-            System.IO.IsolatedStorage.IsolatedStorageFileStream(filename,   
+        System.IO.IsolatedStorage.IsolatedStorageFileStream isos = new
+            System.IO.IsolatedStorage.IsolatedStorageFileStream(filename,
             System.IO.FileMode.CreateNew,isoStore);  
   
         writer = new System.IO.StreamWriter(isos);  
@@ -337,7 +337,7 @@ public void Write()
   
     }  
     catch (Exception ex)  
-    {   
+    {
         System.Diagnostics.Debug.WriteLine  
            ("Cannot write options " + ex.ToString());  
     }  
@@ -349,20 +349,20 @@ public void Write()
 ```  
   
 ## <a name="database-access"></a>Dostęp do bazy danych  
- Uprawnienia wymagane do uzyskania dostępu do bazy danych różnią się w zależności od dostawcy bazy danych. jednak tylko aplikacje z odpowiednimi uprawnieniami mogą uzyskiwać dostęp do bazy danych za pomocą połączenia danych. Aby uzyskać więcej informacji o uprawnieniach, które są wymagane do uzyskania dostępu do bazy danych, zobacz [zabezpieczenia dostępu kodu i ADO.NET](../data/adonet/code-access-security.md).  
+ Uprawnienia wymagane do uzyskania dostępu do bazy danych różnią się w zależności od dostawcy bazy danych; jednak tylko aplikacje, które są uruchomione z odpowiednimi uprawnieniami można uzyskać dostęp do bazy danych za pośrednictwem połączenia danych. Aby uzyskać więcej informacji na temat uprawnień wymaganych do uzyskania dostępu do bazy danych, zobacz [Zabezpieczenia dostępu do kodu i ADO.NET](../data/adonet/code-access-security.md).  
   
- Jeśli nie możesz uzyskać bezpośredniego dostępu do bazy danych, ponieważ aplikacja ma działać w częściowej relacji zaufania, możesz użyć usługi sieci Web jako alternatywnej metody dostępu do danych. Usługa sieci Web to oprogramowanie, które można programowo uzyskać dostęp za pośrednictwem sieci. Dzięki usługom sieci Web aplikacje mogą udostępniać dane między strefami grup kodu. Domyślnie aplikacje w lokalnym intranecie i strefach internetowych uzyskują prawo dostępu do swoich witryn pochodzenia, co umożliwia im Wywoływanie usługi sieci Web hostowanej na tym samym serwerze. Aby uzyskać więcej informacji, zobacz [usługi sieci Web w ASP.NET AJAX](https://docs.microsoft.com/previous-versions/aspnet/bb398785(v=vs.100)) lub [Windows Communication Foundation](../wcf/index.md).  
+ Jeśli nie można bezpośrednio uzyskać dostępu do bazy danych, ponieważ aplikacja ma być uruchamiana w częściowym zaufaniu, można użyć usługi sieci Web jako alternatywnego środka dostępu do danych. Usługa sieci Web to oprogramowanie, do które można uzyskać dostęp programowo za pośrednictwem sieci. Dzięki usługom sieci Web aplikacje mogą udostępniać dane w strefach grup kodu. Domyślnie aplikacjom w lokalnym intranecie i strefach internetowych przyznaje się prawo dostępu do swoich witryn pochodzenia, co umożliwia im wywołanie usługi sieci Web hostowanego na tym samym serwerze. Aby uzyskać więcej informacji, zobacz [Usługi sieci Web w ASP.NET AJAX](https://docs.microsoft.com/previous-versions/aspnet/bb398785(v=vs.100)) lub Windows Communication [Foundation](../wcf/index.md).  
   
 ## <a name="registry-access"></a>Dostęp do rejestru  
- Klasa <xref:System.Security.Permissions.RegistryPermission> kontroluje dostęp do rejestru systemu operacyjnego. Domyślnie tylko aplikacje, które są uruchomione lokalnie, mogą uzyskać dostęp do rejestru.  <xref:System.Security.Permissions.RegistryPermission> przyznaje aplikacji prawo do wypróbowania dostępu do rejestru; nie gwarantuje to, że dostęp powiedzie się, ponieważ system operacyjny nadal wymusza zabezpieczenia rejestru.  
+ Klasa <xref:System.Security.Permissions.RegistryPermission> kontroluje dostęp do rejestru systemu operacyjnego. Domyślnie tylko aplikacje, które są uruchomione lokalnie, mogą uzyskiwać dostęp do rejestru.  <xref:System.Security.Permissions.RegistryPermission>tylko przyznaje aplikacji prawo do wypróbowania dostępu do rejestru; nie gwarantuje, że dostęp zakończy się pomyślnie, ponieważ system operacyjny nadal wymusza zabezpieczenia w rejestrze.  
   
- Ponieważ nie można uzyskać dostępu do rejestru w ramach częściowej relacji zaufania, może być konieczne znalezienie innych metod przechowywania danych. Podczas przechowywania ustawień aplikacji należy użyć izolowanego magazynu zamiast rejestru. Magazyn izolowany może być również używany do przechowywania innych plików specyficznych dla aplikacji. Możesz również przechowywać globalne informacje o aplikacji dotyczące serwera lub lokacji pochodzenia, ponieważ domyślnie aplikacja otrzymuje prawo dostępu do witryny jego pochodzenia.  
+ Ponieważ nie można uzyskać dostępu do rejestru w ramach częściowego zaufania, może być konieczne znalezienie innych metod przechowywania danych. Podczas przechowywania ustawień aplikacji należy używać magazynu izolowanego zamiast rejestru. Izolowany magazyn może również służyć do przechowywania innych plików specyficznych dla aplikacji. Można również przechowywać informacje o aplikacji globalnej o serwerze lub witrynie pochodzenia, ponieważ domyślnie aplikacja ma prawo dostępu do witryny pochodzenia.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Bezpieczniejsze drukowanie w formularzach Windows Forms](more-secure-printing-in-windows-forms.md)
+- [Bezpieczniejsze drukowanie w formularzach systemu Windows](more-secure-printing-in-windows-forms.md)
 - [Dodatkowe zagadnienia z zakresu zabezpieczeń dotyczące formularzy Windows Forms](additional-security-considerations-in-windows-forms.md)
 - [Przegląd zabezpieczeń w formularzach Windows Forms](security-in-windows-forms-overview.md)
-- [Zabezpieczenia formularzy Windows Forms](windows-forms-security.md)
+- [Zabezpieczenia formularzy systemu Windows](windows-forms-security.md)
 - [Mage.exe (narzędzie generowania manifestu i edytowania)](../tools/mage-exe-manifest-generation-and-editing-tool.md)
 - [MageUI.exe (narzędzie generowania i edytowania manifestu, klient z interfejsem graficznym)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

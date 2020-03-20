@@ -2,23 +2,23 @@
 title: Działanie GetWorkflowInstanceId
 ms.date: 03/30/2017
 ms.assetid: bd7eea3b-1c28-4b84-9a67-003bc553aa81
-ms.openlocfilehash: 37dc0cac9c6ac69b9e430677a9c8cf3f47b200eb
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 8cb83fcf15b814b0ca6f7f95f1a9b8eec70185cb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716021"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142735"
 ---
 # <a name="get-workflowinstanceid"></a>Działanie GetWorkflowInstanceId
-Ten przykład ilustruje sposób używania działania niestandardowego, `GetWorkflowInstanceId` do zwrócenia identyfikatora wystąpienia przepływu pracy.  
+W tym przykładzie pokazano, jak `GetWorkflowInstanceId` używać działania niestandardowego, aby zwrócić identyfikator wystąpienia przepływu pracy.  
   
-## <a name="demonstrates"></a>Przedstawia  
- Niestandardowe programowanie działań, jak uzyskać dostęp do wystąpienia przepływu pracy.  
+## <a name="demonstrates"></a>Demonstracje  
+ Niestandardowe tworzenie działań, jak uzyskać dostęp do wystąpienia przepływu pracy.  
   
 ## <a name="discussion"></a>Dyskusji  
- Pobieranie identyfikatora wystąpienia uruchomionego przepływu pracy wymaga napisania kodu. Jeśli chcesz napisać całkowicie deklaratywny przepływ pracy, potrzebujesz działania, które może zwrócić identyfikator wystąpienia przepływu pracy, aby można było odwołać się do działania w przepływie pracy, aby zapewnić w pełni deklaracyjne środowisko tworzenia przepływu pracy. Wiele scenariuszy wymaga dostępu do identyfikatora wystąpienia: kilka przykładów służy do rejestrowania lub przeprowadzania inspekcji lub w celu przeprowadzenia korelacji na poziomie aplikacji, dostarczając identyfikator wystąpienia z powrotem do klienta w celu przyszłego skojarzenia (na przykład za pomocą tego działania w ramach Działanie SendReply).  
+ Uzyskanie identyfikatora wystąpienia uruchomionego przepływu pracy wymaga zapisu kodu. Jeśli chcesz napisać w pełni deklaratywny przepływ pracy, potrzebujesz działania, które może zwrócić identyfikator wystąpienia przepływu pracy, aby można było odwoływać się do działania w przepływie pracy, aby zapewnić w pełni deklaratywne środowisko tworzenia przepływu pracy. Wiele scenariuszy wymaga dostępu do identyfikatora wystąpienia: kilka przykładów dotyczy rejestrowania lub inspekcji lub wykonywania korelacji na poziomie aplikacji przez podanie identyfikatora wystąpienia z powrotem do klienta dla przyszłego skojarzenia (na przykład przy użyciu tego działania wewnątrz działania SendReply).  
   
- `GetWorkflowInstanceId` jest zaimplementowana jako <xref:System.Activities.CodeActivity%601>, ponieważ musi zwrócić wartość typu <xref:System.Guid>i musi mieć dostęp do <xref:System.Activities.CodeActivityContext> do pobierania identyfikatora wystąpienia przepływu pracy. Jego implementacja jest dość podstawowa.  
+ `GetWorkflowInstanceId`jest implementowany <xref:System.Activities.CodeActivity%601> jako, ponieważ musi zwracać wartość typu <xref:System.Guid>i <xref:System.Activities.CodeActivityContext> musi mieć dostęp do uzyskiwania identyfikatora wystąpienia przepływu pracy. Jego wdrożenie jest dość proste.  
   
 ```csharp  
 public sealed class GetWorkflowInstanceId : CodeActivity<Guid>  
@@ -31,10 +31,10 @@ public sealed class GetWorkflowInstanceId : CodeActivity<Guid>
 ```  
   
 > [!IMPORTANT]
-> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
->   
+> Próbki mogą być już zainstalowane na komputerze. Przed kontynuowaniem sprawdź następujący (domyślny) katalog.  
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
->   
+>
+> Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) Przykłady dla platformy .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\GetWorkflowInstanceId`

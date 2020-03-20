@@ -1,66 +1,66 @@
 ---
-title: Kod w tle i XAML
+title: Kod-Behind i XAML
 ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [WPF], code-behind
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
-ms.openlocfilehash: 212a37fb7fbcb7e66a669d96671333be793956df
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 32283d5b81bf92999a97711ded13a8b533ae3028
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76738093"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79145348"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>Związane z kodem i XAML w WPF
-<a name="introduction"></a>Kod jest terminem używanym do opisania kodu, który jest dołączany do obiektów zdefiniowanych przez znaczników, gdy strona [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] jest skompilowana przy użyciu znaczników. W tym temacie opisano wymagania dotyczące kodu, a także alternatywny mechanizm kodu wbudowanego dla kodu w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
+<a name="introduction"></a>Code-behind jest terminem używanym do opisywania kodu, który jest [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] połączony z obiektami zdefiniowanymi znacznikami, gdy strona jest skompilowana znacznikami. W tym temacie opisano wymagania dotyczące kod-behind, jak również [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]alternatywny mechanizm kodu wbudowanego dla kodu w .  
   
  Ten temat zawiera następujące sekcje:  
   
 - [Wymagania wstępne](#Prerequisites)  
   
-- [Kod źródłowy i język XAML](#codebehind_and_the_xaml_language)  
+- [Kod-Behind i język XAML](#codebehind_and_the_xaml_language)  
   
-- [Powiązane z kodem, procedury obsługi zdarzeń i częściowe wymagania klas w WPF](#Code_behind__Event_Handler__and_Partial_Class)  
+- [Wymagania dotyczące kodów, obsługi zdarzeń i częściowej klasy w programie WPF](#Code_behind__Event_Handler__and_Partial_Class)  
   
-- [x:Code](#x_Code)  
+- [x:Kod](#x_Code)  
   
 - [Ograniczenia kodu wbudowanego](#Inline_Code_Limitations)  
   
-<a name="Prerequisites"></a>   
+<a name="Prerequisites"></a>
 ## <a name="prerequisites"></a>Wymagania wstępne  
- W tym temacie założono, że użytkownik przeczytał [Omówienie XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md) i ma pewną podstawową wiedzę na temat środowiska CLR i programowania zorientowanego obiektowo.  
+ W tym temacie przyjęto założenie, że zapoznałeś się [z omówieniem XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md) i masz podstawową wiedzę na temat programu CLR i programowania obiektowego.  
   
-<a name="codebehind_and_the_xaml_language"></a>   
-## <a name="code-behind-and-the-xaml-language"></a>Kod źródłowy i język XAML  
- Język XAML zawiera funkcje poziomu języka, które umożliwiają kojarzenie plików kodu z plikami znaczników, po stronie pliku znaczników. W każdym przypadku język XAML definiuje funkcje języka [X:Class dyrektywy](../../../desktop-wpf/xaml-services/xclass-directive.md), [dyrektywy X:Subclass —](../../../desktop-wpf/xaml-services/xsubclass-directive.md)i [dyrektywy x:ClassModifier —](../../../desktop-wpf/xaml-services/xclassmodifier-directive.md). Dokładnie jak kod powinien być tworzony i jak zintegrować znaczniki i kod, nie jest częścią tego, co określa język XAML. Jest ona pozostała do struktur, takich jak WPF, aby określić, jak zintegrować kod, jak używać języka XAML w modelach aplikacji i programowania, a także akcji kompilacji lub innych obsługi wymaganych przez wszystkie te wymagania.  
+<a name="codebehind_and_the_xaml_language"></a>
+## <a name="code-behind-and-the-xaml-language"></a>Kod-Behind i język XAML  
+ Język XAML zawiera funkcje na poziomie języka, które umożliwiają kojarzenie plików kodu z plikami znaczników od strony pliku znaczników. W szczególności język XAML definiuje funkcje języka [x:Class Directive](../../../desktop-wpf/xaml-services/xclass-directive.md), [x:Subclass Directive](../../../desktop-wpf/xaml-services/xsubclass-directive.md)i [x:ClassModifier Directive](../../../desktop-wpf/xaml-services/xclassmodifier-directive.md). Dokładnie, jak kod powinien być produkowany i jak zintegrować znaczników i kodu, nie jest częścią tego, co określa język XAML. Pozostaje do struktur, takich jak WPF, aby określić, jak zintegrować kod, jak używać XAML w aplikacji i modeli programowania i akcji kompilacji lub innej pomocy technicznej, która wymaga tego wszystkiego.  
   
-<a name="Code_behind__Event_Handler__and_Partial_Class"></a>   
-## <a name="code-behind-event-handler-and-partial-class-requirements-in-wpf"></a>Powiązane z kodem, procedury obsługi zdarzeń i częściowe wymagania klas w WPF  
+<a name="Code_behind__Event_Handler__and_Partial_Class"></a>
+## <a name="code-behind-event-handler-and-partial-class-requirements-in-wpf"></a>Wymagania dotyczące kodów, obsługi zdarzeń i częściowej klasy w programie WPF  
   
-- Klasa częściowa musi pochodzić od typu, który wykonuje kopię zapasową elementu głównego.  
+- Klasa częściowa musi pochodzić od typu, który wspiera element główny.  
   
-- Należy zauważyć, że pod domyślnym zachowaniem akcji kompilacji znaczników można pozostawić wartość pochodną pustą w definicji klasy częściowej po stronie kodu. Skompilowany wynik przyjmie, że typ kopii zapasowej elementu głównego strony będzie podstawą dla klasy częściowej, nawet jeśli nie zostanie określony. Nie jest to jednak najlepsze rozwiązanie polegające na tym zachowaniu.  
+- Należy zauważyć, że w domyślnym zachowaniu akcji kompilacji znaczników można pozostawić wynikowe puste w definicji klasy częściowej po stronie związanej z kodem. Skompilowany wynik przyjmie typ kopii katalogu głównego strony jako podstawa dla klasy częściowej, nawet jeśli nie została określona. Jednak poleganie na tym zachowaniu nie jest najlepszym rozwiązaniem.  
   
-- Procedury obsługi zdarzeń zapisywane w kodzie muszą być metodami wystąpień i nie mogą być metodami statycznymi. Te metody muszą być zdefiniowane przez klasę częściową w przestrzeni nazw CLR identyfikowanej przez `x:Class`. Nie można zakwalifikować nazwy programu obsługi zdarzeń, aby polecić [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] procesorowi wyszukać obsługę zdarzeń dla okablowania zdarzeń w innym zakresie klasy.  
+- Programy obsługi zdarzeń, które piszesz w kodzie posuwu musi być metody wystąpienia i nie mogą być metody statyczne. Metody te muszą być zdefiniowane przez klasę częściową `x:Class`w obszarze nazw CLR identyfikowaną przez . Nie można zakwalifikować nazwę programu obsługi [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] zdarzeń, aby poinstruować procesora, aby wyszukać program obsługi zdarzeń dla okablowania zdarzeń w zakresie innej klasy.  
   
-- Program obsługi musi być zgodny z delegatem dla odpowiedniego zdarzenia w systemie typu zapasowego.  
+- Program obsługi musi być zgodny delegata dla odpowiedniego zdarzenia w systemie typu kopii zapasowej.  
   
-- W przypadku języka Microsoft Visual Basic w konkretnym przypadku można użyć słowa kluczowego `Handles` specyficznego dla języka w celu skojarzenia programów obsługi z wystąpieniami i zdarzeniami w deklaracji procedury obsługi, zamiast dołączać obsługi z atrybutami w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Jednak w tej metodzie istnieją pewne ograniczenia, ponieważ słowo kluczowe `Handles` nie może obsługiwać wszystkich konkretnych funkcji systemu zdarzeń [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], takich jak określone scenariusze zdarzeń kierowanych lub dołączone zdarzenia. Aby uzyskać szczegółowe informacje, zobacz [Visual Basic i obsługa zdarzeń WPF](visual-basic-and-wpf-event-handling.md).  
+- W szczególności w języku microsoft visual basic można `Handles` użyć słowa kluczowego specyficznego dla języka do skojarzenia programów obsługi z [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]wystąpieniami i zdarzeniami w deklaracji obsługi, zamiast dołączania programów obsługi z atrybutami w programie . Jednak ta technika ma pewne `Handles` ograniczenia, ponieważ słowo kluczowe [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nie obsługuje wszystkich określonych funkcji systemu zdarzeń, takich jak niektóre scenariusze zdarzeń kierowanych lub dołączone zdarzenia. Aby uzyskać szczegółowe informacje, zobacz [Visual Basic i Obsługa zdarzeń WPF](visual-basic-and-wpf-event-handling.md).  
   
-<a name="x_Code"></a>   
-## <a name="xcode"></a>x:Code  
- [x:Code](../../../desktop-wpf/xaml-services/xcode-intrinsic-xaml-type.md) jest elementem dyrektywy zdefiniowanym w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Element dyrektywy `x:Code` może zawierać wbudowany kod programistyczny. Kod, który jest zdefiniowany w tekście, może współdziałać z [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] na tej samej stronie. Poniższy przykład ilustruje kod wbudowany C# . Zwróć uwagę, że kod znajduje się wewnątrz elementu `x:Code` i że kod musi być ujęty w `<CDATA[`...`]]>`, aby wypróbować zawartość pliku XML, dzięki czemu procesor [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] (interpretując schemat [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] lub schemat [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]) nie będzie próbować interpretować zawartości dosłownie jako XML.  
+<a name="x_Code"></a>
+## <a name="xcode"></a>x:Kod  
+ [x:Code](../../../desktop-wpf/xaml-services/xcode-intrinsic-xaml-type.md) jest elementem [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]dyrektywy zdefiniowanym w . Element `x:Code` dyrektywy może zawierać wbudowany kod programowania. Kod, który jest zdefiniowany w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] linii może wchodzić w interakcje z na tej samej stronie. Poniższy przykład ilustruje wbudowany kod języka C#. Należy zauważyć, że `x:Code` kod znajduje się wewnątrz elementu `<CDATA[`i że kod musi być otoczony przez ... `]]>` aby uniknąć zawartości dla XML, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tak aby procesor [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] (interpretujący [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] schemat lub schemat) nie próbował interpretować zawartości dosłownie jako XML.  
   
  [!code-xaml[XAMLOvwSupport#ButtonWithInlineCode](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page4.xaml#buttonwithinlinecode)]  
   
-<a name="Inline_Code_Limitations"></a>   
+<a name="Inline_Code_Limitations"></a>
 ## <a name="inline-code-limitations"></a>Ograniczenia kodu wbudowanego  
- Należy rozważyć uniknięcie lub ograniczenie użycia kodu wbudowanego. W zakresie architektury i zasad kodowania, utrzymując rozdzielenie między adiustacją i kodem, utrzymuje znacznie więcej odrębnych ról projektanta i dewelopera. Na wyższym poziomie technicznym kod, który można napisać pod kątem kodu wbudowanego może być niewygodna do zapisu, ponieważ zawsze piszesz do [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] wygenerowanej częściowej klasy i można używać tylko domyślnych mapowań przestrzeni nazw XML. Ponieważ nie można dodać instrukcji `using`, musisz w pełni zakwalifikować wiele wywołań interfejsu API. Domyślne mapowania [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] obejmują większość, ale nie wszystkie przestrzenie nazw CLR, które znajdują się w zestawach [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]; konieczne będzie w pełni kwalifikowanie wywołań do typów i elementów członkowskich zawartych w innych przestrzeniach nazw środowiska CLR. Nie można również definiować niczego poza klasą częściową w kodzie wbudowanym, a wszystkie jednostki kodu użytkownika, do których się odwołuje, muszą istnieć jako element członkowski lub zmienna w wygenerowanej klasie częściowej. Inne funkcje programistyczne specyficzne dla języka, takie jak makra lub `#ifdef` na zmienne globalne lub zmienne kompilacji, również są niedostępne. Aby uzyskać więcej informacji, zobacz [X:Code wewnętrzny typ XAML](../../../desktop-wpf/xaml-services/xcode-intrinsic-xaml-type.md).  
+ Należy rozważyć unikanie lub ograniczanie użycia kodu wbudowanego. Pod względem architektury i filozofii kodowania, utrzymanie separacji między znaczników i związane z kodem zachowuje projektanta i dewelopera role znacznie bardziej różne. Na poziomie bardziej technicznym kod, który piszesz dla kodu wbudowanego może być [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] niewygodne do zapisu, ponieważ są zawsze zapisywania w klasie częściowej generowane i można używać tylko domyślne mapowania obszaru nazw XML. Ponieważ nie `using` można dodać instrukcji, należy w pełni zakwalifikować wiele wywołań interfejsu API, które można wykonać. Domyślne [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] mapowania obejmują większość, ale nie wszystkie obszary [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nazw CLR, które są obecne w zestawach; musisz w pełni zakwalifikować wywołania do typów i elementów członkowskich zawartych w innych przestrzeniach nazw CLR. Nie można również zdefiniować niczego poza klasy częściowej w kodzie wbudowanym i wszystkie jednostki kodu użytkownika, do których odwołuje się musi istnieć jako element członkowski lub zmienna w wygenerowanej klasie częściowej. Inne funkcje programowania specyficzne dla `#ifdef` języka, takie jak makra lub zmienne globalne lub zmienne kompilacji, również nie są dostępne. Aby uzyskać więcej informacji, zobacz [x:Kod intrinsic XAML Type](../../../desktop-wpf/xaml-services/xcode-intrinsic-xaml-type.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Przegląd XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
-- [x:Code, wewnętrzny typ XAML](../../../desktop-wpf/xaml-services/xcode-intrinsic-xaml-type.md)
+- [x:Code — Typ funkcji XAML](../../../desktop-wpf/xaml-services/xcode-intrinsic-xaml-type.md)
 - [Kompilowanie aplikacji WPF](../app-development/building-a-wpf-application-wpf.md)
 - [Szczegóły składni XAML](xaml-syntax-in-detail.md)

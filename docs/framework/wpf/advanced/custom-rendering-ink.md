@@ -9,88 +9,88 @@ helpviewer_keywords:
 - ink [WPF], custom-rendering
 - classes [WPF], InkCanvas
 ms.assetid: 65c978a7-0ee0-454f-ac7f-b1bd2efecac5
-ms.openlocfilehash: 9a62a16f4fa16cfe40bbf830de2255bea25f8d3f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3cf0d98c40e71a380b218c76d6e52d00cdd05342
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611976"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186349"
 ---
 # <a name="custom-rendering-ink"></a>Niestandardowy atrament renderowania
-<xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> Właściwości pociągnięcia umożliwia określenie wyglądu pociągnięcia, takie jak rozmiar, kolor i kształt, ale mogą zaistnieć sytuacje, które chcesz dostosować wygląd poza to, co <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> Zezwalaj. Można dostosować wygląd pisma odręcznego za renderowaniem w wygląd Aerograf, paint ropa naftowa i innych skutków. Windows Presentation Foundation (WPF) pozwala na niestandardowe renderowanie pisma odręcznego poprzez implementację niestandardową <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> i <xref:System.Windows.Ink.Stroke> obiektu.  
+Właściwość <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> obrysu umożliwia określenie wyglądu obrysu, takiego jak jego rozmiar, kolor i kształt, ale mogą <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> wystąpić czasy, w których chcesz dostosować wygląd poza to, co pozwala. Można dostosować wygląd pisma odcowego, renderując wygląd pędzla powietrznego, farby olejnej i wielu innych efektów. Windows Presentation Foundation (WPF) umożliwia niestandardowe renderowania pisma <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> <xref:System.Windows.Ink.Stroke> od ink przez implementowanie niestandardowe i obiektu.  
   
  Ten temat zawiera następujące podsekcje:  
   
 - [Architektura](#Architecture)  
   
-- [Implementowanie dynamicznych programu renderującego](#ImplementingADynamicRenderer)  
+- [Implementowanie dynamicznego modułu renderowania](#ImplementingADynamicRenderer)  
   
-- [Implementowanie niestandardowego pociągnięcia](#ImplementingCustomStrokes)  
+- [Implementowanie niestandardowych pociągnięć](#ImplementingCustomStrokes)  
   
-- [Implementowanie niestandardowego InkCanvas](#ImplementingACustomInkCanvas)  
+- [Implementowanie niestandardowego urządzenia InkCanvas](#ImplementingACustomInkCanvas)  
   
 - [Podsumowanie](#Conclusion)  
   
-<a name="Architecture"></a>   
+<a name="Architecture"></a>
 ## <a name="architecture"></a>Architektura  
- Renderowanie pisma odręcznego występuje dwa razy; gdy użytkownik zapisuje pisma odręcznego powierzchnię pisma odręcznego i ponownie po obrysu jest dodawany do powierzchnią. <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Renderuje pismo odręczne, gdy użytkownik przesuwa pióra na dyskretyzatorze i <xref:System.Windows.Ink.Stroke> renderowany po dodaniu go do elementu.  
+ Renderowanie pisma odurzającego odbywa się dwa razy; gdy użytkownik zapisuje atrament na powierzchni odręcznej i ponownie po dodaniu obrysu do powierzchni z włączoną funkcją pisma odręcznego. Renderuje <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> atrament, gdy użytkownik przesuwa pióro na digitalizatorze, a <xref:System.Windows.Ink.Stroke> renderuje się po dodaniu go do elementu.  
   
- Istnieją trzy klasy do zaimplementowania podczas dynamiczne renderowanie pisma odręcznego.  
+ Istnieją trzy klasy do zaimplementowania podczas dynamicznego renderowania pisma odurzającego.  
   
-1. **DynamicRenderer**: Implementowanie klasy, która pochodzi od klasy <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Ta klasa jest wyspecjalizowanego <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> która renderuje obrysu zgodnie z jej rysowania. <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Jest renderowanie w oddzielnym wątku, więc powierzchni pisma odręcznego pojawia się na zbieranie pisma odręcznego, nawet wtedy, gdy wątek interfejsu użytkownika aplikacji jest zablokowany. Aby uzyskać więcej informacji na temat modelu wątkowości, zobacz [Model wątkowości typu atrament](the-ink-threading-model.md). Aby dostosować dynamiczne renderowanie pociągnięcia, należy zastąpić <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw%2A> metody.  
+1. **DynamicRenderer**: Implementowanie klasy, <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>która wywodzi się z . Ta klasa jest <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> wyspecjalizowana, która renderuje obrys podczas rysowania. Nie <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> renderowania na oddzielny wątek, więc powierzchnia pisma od pisma od pisma wydaje się zbierać atramentu, nawet wtedy, gdy interfejs użytkownika aplikacji (UI) wątek jest zablokowany. Aby uzyskać więcej informacji na temat modelu wątkowości, zobacz [Model wątkowości odulcowej](the-ink-threading-model.md). Aby dostosować dynamiczne renderowanie obrysu, <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw%2A> należy zastąpić metodę.  
   
-2. **Pociągnięcia**: Implementowanie klasy, która pochodzi od klasy <xref:System.Windows.Ink.Stroke>. Ta klasa jest odpowiedzialny za statyczne renderowanie <xref:System.Windows.Input.StylusPoint> danych po został przekształcony w <xref:System.Windows.Ink.Stroke> obiektu. Zastąp <xref:System.Windows.Ink.Stroke.DrawCore%2A> metoda zapewnienie tego statyczne renderowania obrysu jest spójna z renderowania dynamicznego.  
+2. **Stroke**: Zaimplementuj klasę, która wywodzi się z <xref:System.Windows.Ink.Stroke>. Ta klasa jest odpowiedzialna za statyczne renderowanie <xref:System.Windows.Input.StylusPoint> danych po <xref:System.Windows.Ink.Stroke> przekonwertowaniu na obiekt. Zastąpili metodę, <xref:System.Windows.Ink.Stroke.DrawCore%2A> aby upewnić się, że statyczne renderowanie obrysu jest zgodne z renderowaniem dynamicznym.  
   
-3. **Inkcanvas —:** Implementowanie klasy, która pochodzi od klasy <xref:System.Windows.Controls.InkCanvas>. Przypisz dostosowane <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> do <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A> właściwości. Zastąpienie <xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A> metody i dodać niestandardowe obrysu <xref:System.Windows.Controls.InkCanvas.Strokes%2A> właściwości. Zapewnia to, że wygląd pisma odręcznego są spójne.  
+3. **InkCanvas:** Zaimplementuj <xref:System.Windows.Controls.InkCanvas>klasę, która wywodzi się z . Przypisz dostosowane <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> do <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A> właściwości. Zastądeń <xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A> metodę i dodaj <xref:System.Windows.Controls.InkCanvas.Strokes%2A> niestandardowy obrys do właściwości. Dzięki temu wygląd atramentu jest spójny.  
   
-<a name="ImplementingADynamicRenderer"></a>   
-## <a name="implementing-a-dynamic-renderer"></a>Implementowanie dynamicznych programu renderującego  
- Mimo że <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> klasa jest wchodzi w skład [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], wykonywać więcej wyspecjalizowanym renderowania, należy utworzyć dostosowane dynamiczne modułu renderowania, która pochodzi od klasy <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> i zastąpić <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw%2A> metody.  
+<a name="ImplementingADynamicRenderer"></a>
+## <a name="implementing-a-dynamic-renderer"></a>Implementowanie dynamicznego modułu renderowania  
+ Chociaż <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> klasa jest standardową [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]częścią , aby wykonać bardziej wyspecjalizowane renderowanie, należy utworzyć <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> niestandardowy moduł <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw%2A> renderowania dynamicznego, który wywodzi się z metody i ją zastąpić.  
   
- W poniższym przykładzie pokazano dostosowany <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> który rysuje atrament za pomocą efekt pędzel gradientów liniowych.  
+ W poniższym przykładzie <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> pokazano dostosowane, który rysuje pisma odmłkowego z liniowym efektem pędzla gradientu.  
   
  [!code-csharp[AdvancedInkTopicsSamples#19](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
  [!code-vb[AdvancedInkTopicsSamples#19](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
 [!code-csharp[AdvancedInkTopicsSamples#1](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#1)]
 [!code-vb[AdvancedInkTopicsSamples#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#1)]  
   
-<a name="ImplementingCustomStrokes"></a>   
-## <a name="implementing-custom-strokes"></a>Implementowanie niestandardowego pociągnięcia  
- Implementowanie klasy, która pochodzi od klasy <xref:System.Windows.Ink.Stroke>. Ta klasa jest odpowiedzialny za renderowania <xref:System.Windows.Input.StylusPoint> danych po został przekształcony w <xref:System.Windows.Ink.Stroke> obiektu. Zastąp <xref:System.Windows.Ink.Stroke.DrawCore%2A> klasie w celu wykonania rzeczywistego rysowania.  
+<a name="ImplementingCustomStrokes"></a>
+## <a name="implementing-custom-strokes"></a>Implementowanie niestandardowych pociągnięć  
+ Zaimplementuj <xref:System.Windows.Ink.Stroke>klasę, która wywodzi się z . Ta klasa jest odpowiedzialna <xref:System.Windows.Input.StylusPoint> za renderowanie danych po <xref:System.Windows.Ink.Stroke> przekonwertowaniu na obiekt. Zastądnie klasy, <xref:System.Windows.Ink.Stroke.DrawCore%2A> aby wykonać rzeczywisty rysunek.  
   
- Klasa obrysu można również przechowywać dane niestandardowe przy użyciu <xref:System.Windows.Ink.Stroke.AddPropertyData%2A> metody. Te dane są przechowywane danymi obrysu utrwalone.  
+ Klasa Stroke może również przechowywać <xref:System.Windows.Ink.Stroke.AddPropertyData%2A> dane niestandardowe przy użyciu metody. Te dane są przechowywane z danymi obrysu po utrwaleniu.  
   
- <xref:System.Windows.Ink.Stroke> Klasy można również wykonać testowanie trafień. Możesz również wdrożyć własne trafień testowania algorytm przez zastąpienie <xref:System.Windows.Ink.Stroke.HitTest%2A> metody w bieżącej klasie.  
+ Klasa <xref:System.Windows.Ink.Stroke> może również wykonać testy trafień. Można również zaimplementować własny algorytm <xref:System.Windows.Ink.Stroke.HitTest%2A> testowania trafień, zastępując metodę w bieżącej klasie.  
   
- Następujące C# kod pokazuje niestandardowy <xref:System.Windows.Ink.Stroke> klasę, która renderuje <xref:System.Windows.Input.StylusPoint> dane jako 3-obrysu.  
+ Poniższy kod Języka C# <xref:System.Windows.Ink.Stroke> demonstruje <xref:System.Windows.Input.StylusPoint> klasę niestandardową, która renderuje dane jako obrys 3-W.  
   
  [!code-csharp[AdvancedInkTopicsSamples#19](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
  [!code-vb[AdvancedInkTopicsSamples#19](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
 [!code-csharp[AdvancedInkTopicsSamples#2](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#2)]
 [!code-vb[AdvancedInkTopicsSamples#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#2)]  
   
-<a name="ImplementingACustomInkCanvas"></a>   
-## <a name="implementing-a-custom-inkcanvas"></a>Implementowanie niestandardowego InkCanvas  
- Najprostszym sposobem użycia dostosowanym <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> i obrysu jest implementacja klasy, która pochodzi od klasy <xref:System.Windows.Controls.InkCanvas> i używa tych klas. <xref:System.Windows.Controls.InkCanvas> Ma <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A> właściwość, która określa sposób renderowania obrysu po użytkownik jest jego narysowaniu.  
+<a name="ImplementingACustomInkCanvas"></a>
+## <a name="implementing-a-custom-inkcanvas"></a>Implementowanie niestandardowego urządzenia InkCanvas  
+ Najprostszym sposobem użycia dostosowane <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> i stroke jest zaimplementowanie <xref:System.Windows.Controls.InkCanvas> klasy, która pochodzi z i używa tych klas. Ma <xref:System.Windows.Controls.InkCanvas> <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A> właściwość, która określa sposób renderowania obrysu podczas rysowania przez użytkownika.  
   
- Niestandardowe renderowanie pociągnięć na <xref:System.Windows.Controls.InkCanvas> wykonaj następujące czynności:  
+ Aby wykonać niestandardowe <xref:System.Windows.Controls.InkCanvas> pociągnięcia renderowania na wykonaj następujące czynności:  
   
-- Utwórz klasę, która pochodzi od klasy <xref:System.Windows.Controls.InkCanvas>.  
+- Utwórz klasę, która <xref:System.Windows.Controls.InkCanvas>wywodzi się z pliku .  
   
-- Przypisz dostosowanym <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> do <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A?displayProperty=nameWithType> właściwości.  
+- Przypisz dostosowanego <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A?displayProperty=nameWithType> do właściwości.  
   
-- Zastąp <xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A> metody. W przypadku tej metody należy usunąć oryginalny obrys, który został dodany do przez obiekt InkCanvas. Następnie utwórz obrysu niestandardowego, dodaj ją do <xref:System.Windows.Controls.InkCanvas.Strokes%2A> właściwość i wywołanie klasy bazowej z nową <xref:System.Windows.Controls.InkCanvasStrokeCollectedEventArgs> zawierający niestandardowe obrysu.  
+- Zastąd <xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A> w tej metodzie. W tej metodzie usuń oryginalny obrys, który został dodany do InkCanvas. Następnie utwórz niestandardowy obrys, dodaj go do <xref:System.Windows.Controls.InkCanvas.Strokes%2A> właściwości <xref:System.Windows.Controls.InkCanvasStrokeCollectedEventArgs> i wywołaj klasę podstawową z nowym, który zawiera niestandardowy obrys.  
   
- Następujące C# kod pokazuje niestandardowy <xref:System.Windows.Controls.InkCanvas> klasę, która korzysta z niestandardową <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> i zbieranie pociągnięć niestandardowych.  
+ Poniższy kod Języka C# <xref:System.Windows.Controls.InkCanvas> demonstruje klasę <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> niestandardową, która używa dostosowanych i zbiera niestandardowe obrysy.  
   
  [!code-csharp[AdvancedInkTopicsSamples#9](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#9)]  
   
- <xref:System.Windows.Controls.InkCanvas> Może mieć więcej niż jeden <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Można dodawać wiele <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> obiekty do <xref:System.Windows.Controls.InkCanvas> przez dodanie ich do <xref:System.Windows.UIElement.StylusPlugIns%2A> właściwości.  
+ Może <xref:System.Windows.Controls.InkCanvas> mieć więcej <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>niż jeden . Można dodać <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> wiele obiektów <xref:System.Windows.Controls.InkCanvas> do, dodając <xref:System.Windows.UIElement.StylusPlugIns%2A> je do właściwości.  
   
-<a name="Conclusion"></a>   
-## <a name="conclusion"></a>Wniosek  
- Można dostosować wygląd pisma odręcznego wyprowadzanie własne <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, <xref:System.Windows.Ink.Stroke>, i <xref:System.Windows.Controls.InkCanvas> klasy. Razem te klasy upewnij się, że wygląd obiektu stroke zgodne po użytkownik wprowadzi obrysu i po ich zebraniu.  
+<a name="Conclusion"></a>
+## <a name="conclusion"></a>Podsumowanie  
+ Wygląd pisma oduwu można dostosować, <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>wyprowadzając własne , <xref:System.Windows.Ink.Stroke>i <xref:System.Windows.Controls.InkCanvas> klasy. Razem te klasy zapewniają, że wygląd obrysu jest spójny, gdy użytkownik rysuje obrys i po jego zebraniu.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Zaawansowana obsługa pisma odręcznego](advanced-ink-handling.md)
+- [Zaawansowana obsługa atramentu](advanced-ink-handling.md)

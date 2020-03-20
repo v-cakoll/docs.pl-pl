@@ -1,18 +1,17 @@
 ---
-ms.openlocfilehash: 9500907c6a1ba5b27008dcad4c9b47aef9092106
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 921baed7381fad363cc832c6b6af69068c2c8f43
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67802450"
 ---
-### <a name="ribbongroup-background-is-set-to-transparent-in-localized-builds"></a>Tło RibbonGroup ustawiono w wersji zlokalizowanej
+### <a name="ribbongroup-background-is-set-to-transparent-in-localized-builds"></a>Tło ribbongroup jest ustawione na przezroczyste w zlokalizowanych kompilacjach
 
 |   |   |
 |---|---|
-|Szczegóły|<xref:System.Windows.Controls.Ribbon.RibbonGroup?displayProperty=name> podstawowe informacje dotyczące wersji zlokalizowanej był zawsze rysowane pędzlem przezroczyste, co spowoduje niską możliwości interfejsu użytkownika. Problem ten został rozwiązany w .NET Framework w wersji 4.7 poprawkę WPF, aktualizując zlokalizowane zasoby dla <xref:System.Windows.Controls.Ribbon.RibbonGroup?displayProperty=name>, co z kolei zapewnia wybrano poprawny pędzla.|
-|Sugestia|Uaktualnianie do programu .NET Framework 4.7|
-|Scope|Krawędź|
+|Szczegóły|<xref:System.Windows.Controls.Ribbon.RibbonGroup?displayProperty=name>tło na zlokalizowanych kompilacjach było zawsze malowane za pomocą przezroczystego pędzla, co spowodowało słabe wrażenia z interfejsu użytkownika. Jest to ustalone w .NET Framework 4.7 WPF <xref:System.Windows.Controls.Ribbon.RibbonGroup?displayProperty=name>naprawić przez aktualizację zlokalizowanych zasobów dla , co z kolei zapewnia, że wybrany jest poprawny pędzel.|
+|Sugestia|Uaktualnienie do programu .NET Framework 4.7|
+|Zakres|Brzeg|
 |Wersja|4.6.2|
 |Typ|Środowisko uruchomieniowe|
-

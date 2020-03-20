@@ -1,84 +1,84 @@
 ---
-title: 'Instrukcje: Wyświetlanie certyfikatów za pomocą przystawki programu MMC'
+title: 'Jak: Wyświetlanie certyfikatów przy przystawce PROGRAMU MMC'
 ms.date: 02/25/2019
 helpviewer_keywords:
 - certificates [WCF], viewing with the MMC snap-in
 ms.assetid: 2b8782aa-ebb4-4ee7-974b-90299e356dc5
-ms.openlocfilehash: 69f79b64250ff46524e7b4720d13351774875a3f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 35048c24e838c513909fae8bedcba287001f5cef
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972734"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184785"
 ---
-# <a name="how-to-view-certificates-with-the-mmc-snap-in"></a>Instrukcje: Wyświetlanie certyfikatów za pomocą przystawki programu MMC
-Podczas tworzenia bezpiecznego klienta lub usługę, można użyć [certyfikatu](working-with-certificates.md) jako poświadczenie. Na przykład spotykanym typem poświadczeń jest certyfikat X.509, które są tworzone za pomocą <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType> metody. 
+# <a name="how-to-view-certificates-with-the-mmc-snap-in"></a>Jak: Wyświetlanie certyfikatów przy przystawce PROGRAMU MMC
+Podczas tworzenia bezpiecznego klienta lub usługi, można użyć [certyfikatu](working-with-certificates.md) jako poświadczenia. Na przykład typowym typem poświadczeń jest certyfikat X.509, który można utworzyć za <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType> pomocą metody.
 
 Istnieją trzy różne typy magazynów certyfikatów, które można sprawdzić za pomocą programu Microsoft Management Console (MMC) w systemach Windows:
 
-- Komputer lokalny: Magazyn jest lokalne na urządzeniu i globalne dla wszystkich użytkowników na urządzeniu.
+- Komputer lokalny: magazyn jest lokalny dla urządzenia i globalny dla wszystkich użytkowników na urządzeniu.
 
-- Bieżący użytkownik: Magazyn jest lokalny dla bieżącego konta użytkownika na urządzeniu.
+- Bieżący użytkownik: Sklep jest lokalny dla bieżącego konta użytkownika na urządzeniu.
 
-- Konto usługi: Magazyn jest lokalny dla określonej usługi na urządzeniu.
+- Konto usługi: sklep jest lokalny dla określonej usługi na urządzeniu.
 
-## <a name="view-certificates-in-the-mmc-snap-in"></a>Wyświetlanie certyfikatów w przystawce programu MMC 
+## <a name="view-certificates-in-the-mmc-snap-in"></a>Wyświetlanie certyfikatów w przystawce programu MMC
 
-Poniższa procedura pokazuje, jak sprawdzić magazynów na urządzeniu lokalnym, aby znaleźć odpowiedni certyfikat: 
+Poniższa procedura pokazuje, jak sprawdzić sklepy na urządzeniu lokalnym, aby znaleźć odpowiedni certyfikat:
   
-1. Wybierz **Uruchom** z **Start** menu, a następnie wprowadź *mmc*. 
+1. Wybierz **polecenie Uruchom** z menu **Start,** a następnie wprowadź *mmc*.
 
-    Pojawi się programu MMC. 
+    Pojawi się program MMC.
   
-2. Z **pliku** menu, wybierz opcję **Dodawanie/Usuwanie przystawki**. 
-    
-    **Dodawanie lub usuwanie przystawek** zostanie wyświetlone okno.
-  
-3. Z **dostępne przystawki** wybierz **certyfikaty**, a następnie wybierz **Dodaj**.  
+2. Z menu **Plik** wybierz polecenie **Dodaj/Usuń przyciąganie .**
 
-    ![Dodawanie przystawki certyfikatów](./media/mmc-add-certificate-snap-in.png)
+    Zostanie **wyświetlenie** okna Dodaj lub Usuń przystawki.
   
-4. W **certyfikatów w przystawce** wybierz **konto komputera**, a następnie wybierz pozycję **dalej**. 
+3. Z listy **Dostępne przystawki** wybierz pozycję **Certyfikaty**, a następnie wybierz pozycję **Dodaj**.  
+
+    ![Dodawanie przystawki certyfikatu](./media/mmc-add-certificate-snap-in.png)
   
-    Opcjonalnie można wybrać **Moje konto użytkownika** dla bieżącego użytkownika lub **konto usługi** określonej usługi. 
+4. W oknie **przystawki Certyfikaty** wybierz pozycję **Konto komputera**, a następnie wybierz pozycję **Dalej**.
+  
+    Opcjonalnie można wybrać **moje konto użytkownika** dla bieżącego użytkownika lub konto **usługi** dla określonej usługi.
 
     > [!NOTE]
-    > Jeśli nie masz uprawnienia administratora dla danego urządzenia, mogą zarządzać certyfikatami, tylko w przypadku konta użytkownika.
+    > Jeśli nie jesteś administratorem urządzenia, możesz zarządzać certyfikatami tylko dla swojego konta użytkownika.
   
-5. W **Wybieranie komputera** okna, pozostaw **komputera lokalnego** zaznaczone, a następnie wybierz pozycję **Zakończ**.  
+5. W oknie **Wybierz komputer** pozostaw zaznaczoną pozycję **Komputer lokalny,** a następnie wybierz pozycję **Zakończ**.  
   
-6. W **Dodawanie lub usuwanie przystawki** wybierz **OK**.  
+6. W oknie **Dodawanie lub usuwanie przyciągania** wybierz pozycję **OK**.  
   
-    ![Dodawanie przystawki certyfikatów](./media/mmc-certificate-snap-in-selected.png)
+    ![Dodawanie przystawki certyfikatu](./media/mmc-certificate-snap-in-selected.png)
 
-7. Opcjonalne: Z **pliku** menu, wybierz opcję **Zapisz** lub **Zapisz jako** można zapisać pliku konsoli MMC w celu późniejszego użycia.  
+7. Opcjonalnie: z menu **Plik** wybierz polecenie **Zapisz** lub **Zapisz jako,** aby zapisać plik konsoli programu MMC do późniejszego użycia.  
 
-8. Zaznacz, aby wyświetlić certyfikaty w przystawce programu MMC **katalog główny konsoli** w okienku po lewej stronie, następnie rozwiń węzeł **certyfikaty (komputer lokalny)**.
+8. Aby wyświetlić certyfikaty w przystawce programu MMC, wybierz pozycję **Katalog główny konsoli** w lewym okienku, a następnie rozwiń pozycję **Certyfikaty (komputer lokalny).**
 
-    Zostanie wyświetlona lista katalogów dla każdego typu certyfikatu. Z każdego katalogu certyfikatu można wyświetlić, Eksportuj, importowanie i usunąć swoje certyfikaty.
+    Pojawi się lista katalogów dla każdego typu certyfikatu. Z każdego katalogu certyfikatów można wyświetlać, eksportować, importować i usuwać jego certyfikaty.
 
 ## <a name="view-certificates-with-the-certificate-manager-tool"></a>Wyświetlanie certyfikatów za pomocą narzędzia Menedżer certyfikatów
 
-Można również wyświetlić, Eksportuj, importowanie i usunąć certyfikaty przy użyciu narzędzia Menedżer certyfikatów.
+Certyfikaty można również wyświetlać, eksportować, importować i usuwać za pomocą narzędzia Menedżer certyfikatów.
 
-### <a name="to-view-certificates-for-the-local-device"></a>Aby wyświetlić certyfikaty dla wybranego urządzenia lokalnego
+### <a name="to-view-certificates-for-the-local-device"></a>Aby wyświetlić certyfikaty dla urządzenia lokalnego
 
-1. Wybierz **Uruchom** z **Start** menu, a następnie wprowadź *certlm.msc*. 
+1. Wybierz **polecenie Uruchom** z menu **Start,** a następnie wprowadź *plik certlm.msc*.
 
-    Zostanie wyświetlone narzędzie Menedżer certyfikatów dla wybranego urządzenia lokalnego. 
+    Zostanie wyświetlone narzędzie Menedżer certyfikatów dla urządzenia lokalnego.
   
-2. Aby wyświetlić certyfikaty, w obszarze **certyfikaty — komputer lokalny** w lewym okienku rozwiń węzeł katalogu dla typu certyfikatu, którą chcesz wyświetlić.
+2. Aby wyświetlić certyfikaty, w obszarze **Certyfikaty — Komputer lokalny** w lewym okienku rozwiń katalog typu certyfikatu, który chcesz wyświetlić.
 
 ### <a name="to-view-certificates-for-the-current-user"></a>Aby wyświetlić certyfikaty dla bieżącego użytkownika
 
-1. Wybierz **Uruchom** z **Start** menu, a następnie wprowadź *certmgr.msc*. 
+1. Wybierz **polecenie Uruchom** z menu **Start,** a następnie wprowadź plik *certmgr.msc*.
 
-    Zostanie wyświetlone narzędzie Menedżer certyfikatów dla bieżącego użytkownika. 
+    Pojawi się narzędzie Menedżer certyfikatów dla bieżącego użytkownika.
   
-2. Aby wyświetlić certyfikaty, w obszarze **Certyfikaty — bieżący użytkownik** w lewym okienku rozwiń węzeł katalogu dla typu certyfikatu, którą chcesz wyświetlić.
+2. Aby wyświetlić certyfikaty, w obszarze **Certyfikaty — bieżący użytkownik** w lewym okienku rozwiń katalog dla typu certyfikatu, który chcesz wyświetlić.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Praca z certyfikatami](working-with-certificates.md)
-- [Instrukcje: Tworzenie certyfikatów tymczasowych do użytku w trakcie opracowywania](how-to-create-temporary-certificates-for-use-during-development.md)
-- [Instrukcje: Pobieranie odcisku palca certyfikatu](how-to-retrieve-the-thumbprint-of-a-certificate.md)
+- [Jak: Tworzenie tymczasowych certyfikatów do użycia podczas tworzenia](how-to-create-temporary-certificates-for-use-during-development.md)
+- [Jak: Pobieranie odcisku palca certyfikatu](how-to-retrieve-the-thumbprint-of-a-certificate.md)

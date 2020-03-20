@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5da300e2-74c0-4d13-9202-fc20ed8212d8
-ms.openlocfilehash: ad10557a55b498fe004bff6ce89801e975e7138b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: cfd4587f0dde7687ecf88bf6b31c44b90a2287ca
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786317"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151146"
 ---
 # <a name="finding-rows"></a>Znajdowanie wierszy
-Wiersze można wyszukiwać według ich wartości klucza sortowania przy użyciu <xref:System.Data.DataView.Find%2A> metod <xref:System.Data.DataView>i <xref:System.Data.DataView.FindRows%2A> . Wielkość liter w wartościach wyszukiwania w metodach **Find** i **FindRows** jest określana przez właściwość **CaseSensitive** elementu bazowego <xref:System.Data.DataTable>. Wartości wyszukiwania muszą być zgodne z istniejącymi wartościami klucza sortowania w całości w celu zwrócenia wyniku.  
+Wiersze można wyszukiwać zgodnie z ich wartościami <xref:System.Data.DataView.FindRows%2A> klucza <xref:System.Data.DataView>sortowania przy użyciu <xref:System.Data.DataView.Find%2A> metod i metody programu . Wielkość liter wartości wyszukiwania w find **and** **FindRows** metody jest określana przez **CaseSensitive** właściwość podstawowej <xref:System.Data.DataTable>. Wartości wyszukiwania muszą być zgodne z istniejącymi wartościami klucza sortowania w całości, aby uzyskać wynik.  
   
- Metoda **Find** zwraca liczbę całkowitą z indeksem <xref:System.Data.DataRowView> odpowiadającym kryteriom wyszukiwania. Jeśli więcej niż jeden wiersz pasuje do kryteriów wyszukiwania, zwracany jest tylko indeks pierwszego pasującej **DataRowView** . Jeśli nie znaleziono żadnych dopasowań, **Znajdź** zwraca wartość-1.  
+ **Find** Metoda zwraca liczbę całkowitą z indeksem, <xref:System.Data.DataRowView> który odpowiada kryteriom wyszukiwania. Jeśli więcej niż jeden wiersz spełnia kryteria wyszukiwania, zwracany jest tylko indeks pierwszego pasującego **datarowview.** Jeśli nie zostaną znalezione żadne dopasowania, **funkcja Znajdź** zwraca wartość -1.  
   
- Aby zwrócić wyniki wyszukiwania pasujące do wielu wierszy, użyj metody **FindRows** . **FindRows** działa podobnie jak Metoda **Find** , z tą różnicą, że zwraca tablicę **DataRowView** , która odwołuje się do wszystkich pasujących wierszy w **widoku**danych. Jeśli nie zostaną znalezione żadne dopasowania, tablica **DataRowView** będzie pusta.  
+ Aby zwrócić wyniki wyszukiwania, które pasują do wielu wierszy, użyj **Metody FindRows.** **Funkcja FindRows** działa podobnie jak metoda **Find,** z tą różnicą, że zwraca tablicę **DataRowView,** która odwołuje się do wszystkich pasujących wierszy w **pliku DataView**. Jeśli nie zostaną znalezione żadne dopasowania, **datarowview** tablica będzie pusta.  
   
- Aby użyć metody **Find** lub **FindRows** , należy określić kolejność sortowania przez ustawienie **ApplyDefaultSort** na **true** lub przy użyciu właściwości **sort** . Jeśli kolejność sortowania nie zostanie określona, zostanie zgłoszony wyjątek.  
+ Aby użyć **find** lub **FindRows** metody należy określić kolejność sortowania albo przez ustawienie **ApplyDefaultSort** **true** lub za pomocą **Sort właściwości.** Jeśli nie określono kolejności sortowania, zgłaszany jest wyjątek.  
   
- Metody **Find** i **FindRows** pobierają tablicę wartości jako dane wejściowe, których długość jest zgodna z liczbą kolumn w kolejności sortowania. W przypadku sortowania pojedynczej kolumny można przekazać pojedynczą wartość. W przypadku zamówień sortowania zawierających wiele kolumn należy przekazać tablicę obiektów. Należy pamiętać, że w przypadku sortowania dla wielu kolumn wartości w tablicy obiektów muszą być zgodne z kolejnością kolumn określonych we właściwości **sort** elementu **DataView**.  
+ **Find** i **FindRows** metody wziąć tablicę wartości jako dane wejściowe, których długość odpowiada liczbie kolumn w kolejności sortowania. W przypadku sortowania w jednej kolumnie można przekazać pojedynczą wartość. W przypadku zamówień sortowania zawierających wiele kolumn należy przekazać tablicę obiektów. Należy zauważyć, że w przypadku sortowania w wielu kolumnach wartości w tablicy obiektów muszą być zgodne z kolejnością kolumn określonych we właściwości **Sortowanie** **widoku DataView**.  
   
- Poniższy przykład kodu pokazuje metodę **Find** wywoływaną względem elementu **DataView** z kolejnością sortowania pojedynczej kolumny.  
+ Poniższy przykład kodu pokazuje **Find** metoda wywoływana dla **DataView** z kolejnością sortowania pojedynczej kolumny.  
   
 ```vb  
 Dim custView As DataView = _  
@@ -42,7 +42,7 @@ End If
 ```  
   
 ```csharp  
-DataView custView = new DataView(custDS.Tables["Customers"], "",   
+DataView custView = new DataView(custDS.Tables["Customers"], "",
   "CompanyName", DataViewRowState.CurrentRows);  
   
 int rowIndex = custView.Find("The Cracker Box");  
@@ -55,7 +55,7 @@ else
     custView[rowIndex]["CompanyName"].ToString());  
 ```  
   
- Jeśli właściwość **sortowania** określa wiele kolumn, należy przekazać tablicę obiektów z wartościami wyszukiwania dla każdej kolumny w kolejności określonej przez właściwość **sort** , jak w poniższym przykładzie kodu.  
+ Jeśli właściwość **Sort** określa wiele kolumn, należy przekazać tablicę obiektów z wartościami wyszukiwania dla każdej kolumny w kolejności określonej przez **sortowanie** właściwości, jak w poniższym przykładzie kodu.  
   
 ```vb  
 Dim custView As DataView = _  
@@ -82,18 +82,18 @@ DataView custView = new DataView(custDS.Tables["Customers"], "",
   "CompanyName, ContactName",  
   DataViewRowState.CurrentRows);  
   
-DataRowView[] foundRows =   
+DataRowView[] foundRows =
   custView.FindRows(new object[] {"The Cracker Box", "Liu Wong"});  
   
 if (foundRows.Length == 0)  
   Console.WriteLine("No match found.");  
 else  
   foreach (DataRowView myDRV in foundRows)  
-    Console.WriteLine("{0}, {1}", myDRV["CompanyName"].ToString(),   
+    Console.WriteLine("{0}, {1}", myDRV["CompanyName"].ToString(),
       myDRV["ContactName"].ToString());  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataView>

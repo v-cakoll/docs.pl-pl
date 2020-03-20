@@ -2,18 +2,18 @@
 title: Wymagane argumenty i grupy metod przeciążonych
 ms.date: 03/30/2017
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
-ms.openlocfilehash: 84384e90be0036036477d9b4249832f544e17d08
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 4eb62306f52b8ff890d5a5333c3789bd84ad7f60
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989307"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142943"
 ---
 # <a name="required-arguments-and-overload-groups"></a>Wymagane argumenty i grupy metod przeciążonych
-Działania można skonfigurować tak, aby pewne argumenty były powiązane z prawidłowym działaniem do wykonania. Ten `RequiredArgument` atrybut służy do wskazywania, że określone argumenty działania są wymagane `OverloadGroup` , a atrybut jest używany do grupowania kategorii wymaganych argumentów razem. Przy użyciu atrybutów autorzy działań mogą zapewnić proste lub złożone konfiguracje weryfikacji działania.  
+Działania można skonfigurować tak, aby niektóre argumenty muszą być powiązane dla działania, które mają być prawidłowe do wykonania. Atrybut `RequiredArgument` jest używany do wskazania, że niektóre argumenty `OverloadGroup` na działanie są wymagane i atrybut jest używany do grupowanie kategorii wymaganych argumentów razem. Za pomocą atrybutów autorzy działań można zapewnić proste lub złożone konfiguracje sprawdzania poprawności działania.  
   
-## <a name="using-required-arguments"></a>Używanie wymaganych argumentów  
- Aby użyć `RequiredArgument` atrybutu w działaniu, należy wskazać odpowiednie argumenty przy użyciu <xref:System.Activities.RequiredArgumentAttribute>. W tym przykładzie `Add` zdefiniowano działanie, które ma dwa wymagane argumenty.  
+## <a name="using-required-arguments"></a>Korzystanie z wymaganych argumentów  
+ Aby użyć `RequiredArgument` atrybutu w działaniu, należy <xref:System.Activities.RequiredArgumentAttribute>wskazać żądane argumenty za pomocą programu . W tym przykładzie zdefiniowano `Add` działanie, które ma dwa wymagane argumenty.  
   
 ```csharp  
 public sealed class Add : CodeActivity<int>  
@@ -31,7 +31,7 @@ public sealed class Add : CodeActivity<int>
 }  
 ```  
   
- W języku XAML wymagane argumenty są również wskazywane przy <xref:System.Activities.RequiredArgumentAttribute>użyciu. W tym przykładzie `Add` działanie jest zdefiniowane przy użyciu trzech argumentów i <xref:System.Activities.Statements.Assign%601> używa działania do wykonania operacji dodawania.  
+ W języku XAML wymagane argumenty są <xref:System.Activities.RequiredArgumentAttribute>również wskazywane za pomocą programu . W tym `Add` przykładzie działanie jest definiowane przy <xref:System.Activities.Statements.Assign%601> użyciu trzech argumentów i używa działania do wykonania operacji dodawania.  
   
 ```xaml  
 <Activity x:Class="ValidationDemo.Add" ...>  
@@ -59,15 +59,15 @@ public sealed class Add : CodeActivity<int>
 </Activity>  
 ```  
   
- Jeśli działanie jest używane i jeden z wymaganych argumentów nie jest powiązany, zwracany jest następujący błąd sprawdzania poprawności.  
+ Jeśli działanie jest używane i jeden z wymaganych argumentów nie jest związany następujący błąd sprawdzania poprawności jest zwracany.  
   
- **Nie podano wartości dla wymaganego argumentu działania "Operand1".**  
+ **Wartość wymaganego argumentu działania "Operand1" nie została dostarczona.**  
 > [!NOTE]
-> Aby uzyskać więcej informacji na temat sprawdzania i obsługi błędów i ostrzeżeń walidacji, zobacz [wywoływanie walidacji działania](invoking-activity-validation.md).  
+> Aby uzyskać więcej informacji na temat sprawdzania błędów i ostrzeżeń sprawdzania poprawności i obsługi ich, zobacz [Wywoływanie sprawdzania poprawności działania](invoking-activity-validation.md).  
   
-## <a name="using-overload-groups"></a>Korzystanie z grup przeciążeń
+## <a name="using-overload-groups"></a>Korzystanie z grup przeciążenia
 
-Grupy przeciążeń zapewniają metodę wskazującą, które kombinacje argumentów są prawidłowe w działaniu. Argumenty są pogrupowane przy użyciu <xref:System.Activities.OverloadGroupAttribute>. Każda grupa otrzymuje nazwę określoną przez <xref:System.Activities.OverloadGroupAttribute>. Działanie jest prawidłowe, gdy są powiązane tylko jeden zestaw argumentów w grupie przeciążeń. W poniższym przykładzie `CreateLocation` zdefiniowano klasę.  
+Grupy przeciążenia zapewniają metodę wskazującą, które kombinacje argumentów są prawidłowe w działaniu. Argumenty są zgrupowane <xref:System.Activities.OverloadGroupAttribute>razem za pomocą programu . Każdej grupie otrzymuje się nazwę określoną przez plik <xref:System.Activities.OverloadGroupAttribute>. Działanie jest prawidłowe, gdy tylko jeden zestaw argumentów w grupie przeciążenia są powiązane. W poniższym przykładzie zdefiniowano `CreateLocation` klasę.  
   
 ```csharp  
 class CreateLocation: Activity  
@@ -100,13 +100,13 @@ class CreateLocation: Activity
   
     [RequiredArgument]  
     [OverloadGroup("G3")]  
-    public InArgument<int> Zip { get; set; }                  
+    public InArgument<int> Zip { get; set; }
 }  
 ```  
   
- Celem tego działania jest określenie lokalizacji w Stanach Zjednoczonych. W tym celu użytkownik działania może określić lokalizację przy użyciu jednej z trzech grup argumentów. Aby określić prawidłowe kombinacje argumentów, definiowane są trzy grupy przeciążeń. `G1`zawiera argumenty `Longitude`i. `Latitude` `G2`zawiera `Street`, `City`i .`State` `G3`zawiera `Street` i `Zip`. `Name`jest również argumentem wymaganym, ale nie jest częścią grupy przeciążenia. Aby to działanie było prawidłowe, `Name` musi być powiązane ze wszystkimi argumentami z jednej i tylko jednej grupy przeciążeń.  
+ Celem tego działania jest określenie lokalizacji w STANACH Zjednoczonych. Aby to zrobić, użytkownik działania można określić lokalizację przy użyciu jednej z trzech grup argumentów. Aby określić prawidłowe kombinacje argumentów, zdefiniowane są trzy grupy przeciążenia. `G1`zawiera `Latitude` argumenty `Longitude` i argumenty. `G2`zawiera `Street` `City`, `State`i . `G3`zawiera `Street` `Zip`i . `Name`jest również wymaganym argumentem, ale nie jest częścią grupy przeciążenia. Aby to działanie było `Name` prawidłowe, musiałoby być powiązane ze wszystkimi argumentami z jednej i tylko jednej grupy przeciążenia.  
   
- W poniższym przykładzie z przykładu działania dotyczące [dostępu do bazy danych](./samples/database-access-activities.md) istnieją dwie grupy przeciążeń: `ConnectionString` i `ConfigFileSectionName`. Aby to działanie było prawidłowe, `ProviderName` argumenty i `ConnectionString` muszą `ConfigName` być powiązane albo argument, ale nie oba.  
+ W poniższym przykładzie pobranym z przykładu Działania dostępu do `ConnectionString` `ConfigFileSectionName` [bazy danych](./samples/database-access-activities.md) istnieją dwie grupy przeciążenia: i . Aby to działanie było prawidłowe, argumenty `ProviderName` i `ConnectionString` muszą `ConfigName` być powiązane lub argument, ale nie oba.  
   
 ```csharp  
 public class DbUpdate: AsyncCodeActivity  
@@ -138,25 +138,25 @@ public class DbUpdate: AsyncCodeActivity
     public IDictionary<string, Argument> Parameters { get; }  
   
     [DependsOn("Parameters")]  
-    public OutArgument<int> AffectedRecords { get; set; }       
+    public OutArgument<int> AffectedRecords { get; set; }
 }  
 ```  
   
  Podczas definiowania grupy przeciążenia:  
   
-- Grupa przeciążenia nie może być podzbiorem lub równoważnym zestawem innej grupy przeciążeń.  
+- Grupa przeciążenia nie może być podzbiorem ani równoważnym zestawem innej grupy przeciążenia.  
   
     > [!NOTE]
-    > Istnieje jeden wyjątek dla tej reguły. Jeśli grupa przeciążeń jest podzbiorem innej grupy przeciążeń, a podzestaw zawiera tylko `RequiredArgument` argumenty `false`, gdzie is, to grupa przeciążenia jest prawidłowa.  
+    > Istnieje jeden wyjątek od tej reguły. Jeśli grupa przeciążenia jest podzbiorem innej grupy przeciążenia, `RequiredArgument` `false`a podzbiór zawiera tylko argumenty, gdzie jest , grupa przeciążenia jest prawidłowa.  
   
-- Grupy przeciążeń mogą się nakładać, ale jest to błąd, jeśli część wspólna grup zawiera wszystkie wymagane argumenty jednej lub obu grup przeciążenia. W poprzednim przykładzie `G2` grupy i `G3` przeciążania nakładają się na siebie, ale ponieważ część wspólna nie zawiera wszystkich argumentów jednej lub obu grup, które były prawidłowe.  
+- Grupy przeciążenia mogą się nakładać, ale jest to błąd, jeśli przecięcie grup zawiera wszystkie wymagane argumenty jednej lub obu grup przeciążenia. W poprzednim `G2` przykładzie `G3` i przeciążenia grup nakładających się, ale ponieważ przecięcie nie zawiera wszystkie argumenty jednej lub obu grup to było prawidłowe.  
   
  Podczas wiązania argumentów w grupie przeciążenia:  
   
-- Grupa przeciążenia jest uznawana za powiązaną, `RequiredArgument` Jeśli wszystkie argumenty w grupie są powiązane.  
+- Grupa przeciążenia jest uważana `RequiredArgument` za powiązaną, jeśli wszystkie argumenty w grupie są powiązane.  
   
-- Jeśli grupa ma argumenty zero `RequiredArgument` i powiązana jest co najmniej jeden argument, Grupa jest uznawana za powiązaną.  
+- Jeśli grupa ma `RequiredArgument` zero argumentów i co najmniej jeden argument związany, a następnie grupa jest uważany za związany.  
   
-- Jest to błąd walidacji, jeśli żadne grupy przeciążenia nie są powiązane, chyba że jedna `RequiredArgument` Grupa przeciążenia nie ma żadnych argumentów.  
+- Jest to błąd sprawdzania poprawności, jeśli nie grupy przeciążenia są powiązane, chyba że jedna grupa przeciążenia nie `RequiredArgument` ma argumentów w nim.  
   
-- Występuje błąd z więcej niż jedną powiązaną grupą przeciążeń, to oznacza, że wszystkie wymagane argumenty w jednej grupie przeciążeń są powiązane i dowolny argument w innej grupie przeciążeń jest również powiązany.
+- Jest to błąd, aby mieć więcej niż jedną grupę przeciążenia związane, oznacza to, że wszystkie wymagane argumenty w jednej grupie przeciążenia są powiązane i każdy argument w innej grupie przeciążenia jest również powiązany.

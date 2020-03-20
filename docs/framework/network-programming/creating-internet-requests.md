@@ -11,23 +11,23 @@ helpviewer_keywords:
 - data requests, creating requests
 ms.assetid: faab683e-3f1e-4eee-b5e9-59f7245033d5
 ms.openlocfilehash: 80e3a6bd199691df9391e88d5a64fab5df2a08a1
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048620"
 ---
 # <a name="creating-internet-requests"></a>Tworzenie żądań internetowych
-Aplikacje tworzą <xref:System.Net.WebRequest> wystąpienia <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> za pomocą metody. Jest to metoda statyczna, która tworzy klasę pochodną od **żądania WebRequest** na podstawie schematu identyfikatora URI, do którego został przesłany.  
+Aplikacje <xref:System.Net.WebRequest> tworzą wystąpienia <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> za pomocą metody. Jest to metoda statyczna, która tworzy klasę pochodną **WebRequest** na podstawie schematu URI przekazany do niego.  
   
 ## <a name="web-file-and-ftp-requests"></a>Żądania sieci Web, plików i FTP  
- .NET Framework dostarcza <xref:System.Net.HttpWebRequest> klasę, która pochodzi od **żądania WebRequest**, do obsługi żądań HTTP i https. W większości przypadków Klasa **WebRequest** zawiera wszystkie właściwości potrzebne do zgłoszenia żądania. Jednak w razie potrzeby można rzutować obiekty **WebRequest** utworzone przez metodę **WebRequest. Create** na typ **HttpWebRequest** , aby uzyskać dostęp do właściwości żądania specyficznego dla protokołu HTTP. Podobnie obiekt **HttpWebResponse** obsługuje odpowiedzi z żądań HTTP i https. Aby uzyskać dostęp do właściwości specyficznych dla protokołu HTTP obiektu **HttpWebResponse** , należy rzutować obiekty **WebResponse** na typ **HttpWebResponse** .  
+ .NET Framework udostępnia <xref:System.Net.HttpWebRequest> klasę, która jest pochodną **WebRequest**, do obsługi żądań HTTP i HTTPS. W większości przypadków **WebRequest** klasa zapewnia wszystkie właściwości potrzebne do żądania; jednak w razie potrzeby można rzutować **WebRequest** obiektów utworzonych przez **WebRequest.Create** metody do **HttpWebRequest** typu dostępu do właściwości specyficznych dla protokołu HTTP żądania. Podobnie obiekt **HttpWebResponse** obsługuje odpowiedzi z żądań HTTP i HTTPS. Aby uzyskać dostęp do właściwości specyficznych dla protokołu HTTP **HttpWebResponse** obiektu, należy rzutować **WebResponse** obiektów do **httpWebResponse** typu.  
   
- .NET Framework udostępnia <xref:System.Net.FileWebRequest> również klasy i <xref:System.Net.FileWebResponse> obsługujące żądania dla zasobów, które używają "plik:" Schemat identyfikatora URI. Podobnie klasy <xref:System.Net.FtpWebResponse> i są udostępniane do obsługi żądań dotyczących zasobów, które używają schematu "FTP:". <xref:System.Net.FtpWebRequest> Jeśli Twoje żądanie dotyczy zasobu korzystającego z dowolnego z tych schematów, można użyć metody **WebRequest. Create** w celu uzyskania obiektu, z którym ma zostać wysłane żądanie.  
+ .NET Framework udostępnia <xref:System.Net.FileWebRequest> również <xref:System.Net.FileWebResponse> i klasy do obsługi żądań dla zasobów, które używają schematu URI "file:". Podobnie <xref:System.Net.FtpWebRequest> i <xref:System.Net.FtpWebResponse> klasy są dostarczane do obsługi żądań dla zasobów, które używają schematu "ftp:". Jeśli żądanie dotyczy zasobu, który używa dowolnego z tych schematów, można użyć **WebRequest.Create** metody, aby uzyskać obiekt, za pomocą którego można złożyć żądanie.  
   
- Aby obsługiwać żądania korzystające z innych protokołów na poziomie aplikacji, należy zaimplementować klasy specyficzne dla protokołu pochodzące z **WebRequest** i **WebResponse**. Aby uzyskać więcej informacji, zobacz [programowanie protokołów podłączanych](programming-pluggable-protocols.md).  
+ Aby obsłużyć żądania korzystające z innych protokołów na poziomie aplikacji, należy zaimplementować klasy specyficzne dla protokołu pochodzące z **WebRequest** i **WebResponse**. Aby uzyskać więcej informacji, zobacz [Programowanie protokołów podłączanych](programming-pluggable-protocols.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Instrukcje: Żądanie danych przy użyciu klasy WebRequest](how-to-request-data-using-the-webrequest-class.md)
+- [Instrukcje: żądanie danych przy użyciu klasy WebRequest](how-to-request-data-using-the-webrequest-class.md)
 - [Żądanie danych](requesting-data.md)

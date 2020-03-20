@@ -5,31 +5,31 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3af512f3-87d9-4005-9e2f-abb1060ff43f
-ms.openlocfilehash: c4e782b670bfc74a651ce38457c05d9acfcf0e8c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4606ecb370b7e85cf5ebd92754471f5253321251
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783908"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149664"
 ---
 # <a name="establishing-the-connection"></a>Nawiązywanie połączenia
-Aby nawiązać połączenie z Microsoft SQL Server, <xref:System.Data.SqlClient.SqlConnection> Użyj obiektu dostawca danych .NET Framework SQL Server. Aby nawiązać połączenie ze źródłem danych OLE DB, użyj <xref:System.Data.OleDb.OleDbConnection> obiektu .NET Framework dostawca danych dla OLE DB. Aby nawiązać połączenie ze źródłem danych ODBC, użyj <xref:System.Data.Odbc.OdbcConnection> obiektu dostawca danych .NET Framework dla ODBC. Aby nawiązać połączenie ze źródłem danych Oracle, użyj <xref:System.Data.OracleClient.OracleConnection> obiektu dostawca danych .NET Framework dla programu Oracle. Aby bezpiecznie przechowywać i pobierać parametry połączenia, zobacz [Ochrona informacji o połączeniu](protecting-connection-information.md).  
+Aby połączyć się z <xref:System.Data.SqlClient.SqlConnection> programem Microsoft SQL Server, użyj obiektu dostawcy danych programu .NET Framework dla programu SQL Server. Aby połączyć się ze źródłem <xref:System.Data.OleDb.OleDbConnection> danych OLE DB, należy użyć obiektu dostawcy danych programu .NET Framework dla bazy danych OLE. Aby połączyć się ze źródłem <xref:System.Data.Odbc.OdbcConnection> danych ODBC, należy użyć obiektu dostawcy danych programu .NET Framework dla odbc. Aby połączyć się ze źródłem danych Oracle, użyj <xref:System.Data.OracleClient.OracleConnection> obiektu dostawcy danych .NET Framework dla oracle. Aby bezpiecznie przechowywać i pobierać parametry połączenia, zobacz [Ochrona informacji o połączeniu](protecting-connection-information.md).  
   
 ## <a name="closing-connections"></a>Zamykanie połączeń  
- Zalecane jest, aby zawsze zamykać połączenie po zakończeniu korzystania z niego, aby można było zwrócić połączenie do puli. Blok w Visual Basic lub C# automatycznie usuwa połączenie, gdy kod opuszcza blok, nawet w przypadku nieobsługiwanego wyjątku. `Using` Aby uzyskać więcej informacji, zobacz [używanie instrukcji using](../../../csharp/language-reference/keywords/using-statement.md) i [instrukcji using](../../../visual-basic/language-reference/statements/using-statement.md) .  
+ Zaleca się, aby zawsze zamknąć połączenie po zakończeniu korzystania z niego, tak aby połączenie można było powrócić do puli. Blok `Using` w języku Visual Basic lub C# automatycznie usuwa połączenia, gdy kod kończy blok, nawet w przypadku nieobsługiwany wyjątek. Aby uzyskać więcej [informacji,](../../../csharp/language-reference/keywords/using-statement.md) zobacz korzystanie z instrukcji i [instrukcji.](../../../visual-basic/language-reference/statements/using-statement.md)  
   
- Można również użyć `Close` metod lub `Dispose` obiektu połączenia dla dostawcy, którego używasz. Połączenia, które nie zostały jawnie zamknięte, mogą nie zostać dodane lub zwrócone do puli. Na przykład połączenie, które zostało utracone poza zakresem, ale nie zostało jawnie zamknięte, zostanie zwrócone do puli połączeń tylko wtedy, gdy Osiągnięto maksymalny rozmiar puli, a połączenie jest nadal ważne. Aby uzyskać więcej informacji, zobacz [OLE DB, ODBC i pule połączeń Oracle](ole-db-odbc-and-oracle-connection-pooling.md).  
-  
-> [!NOTE]
-> Nie należy `Close` wywoływać `Dispose` ani nawiązać **połączenia**, elementu **DataReader**ani innego obiektu zarządzanego w `Finalize` metodzie klasy. W finalizatorze zwalniane są tylko niezarządzane zasoby, które są własnością klasy bezpośrednio. Jeśli Klasa nie jest własnością żadnych niezarządzanych zasobów, nie Uwzględniaj `Finalize` metody w definicji klasy. Aby uzyskać więcej informacji, zobacz [odzyskiwanie pamięci](../../../standard/garbage-collection/index.md).  
+ Można również użyć `Close` `Dispose` lub metody obiektu połączenia dla dostawcy, którego używasz. Połączenia, które nie są jawnie zamknięte, mogą nie zostać dodane lub zwrócone do puli. Na przykład połączenie, które wyszło poza zakres, ale nie zostało jawnie zamknięte, zostanie zwrócone do puli połączeń tylko wtedy, gdy osiągnięto maksymalny rozmiar puli, a połączenie jest nadal ważne. Aby uzyskać więcej informacji, zobacz [OLE DB, ODBC i Oracle Connection Pooling](ole-db-odbc-and-oracle-connection-pooling.md).  
   
 > [!NOTE]
-> Zdarzenia logowania i wylogowywania nie będą zgłaszane na serwerze, gdy połączenie zostanie pobrane z lub zwrócone do puli połączeń, ponieważ połączenie nie jest faktycznie zamknięte, gdy zostanie zwrócone do puli połączeń. Aby uzyskać więcej informacji, zobacz [SQL Servering pooling (ADO.NET)](sql-server-connection-pooling.md).  
+> Nie należy `Close` `Dispose` wywoływać ani na **połączenie**, **DataReader**lub `Finalize` inny obiekt zarządzany w metodzie klasy. W finalizatorze tylko zwolnić niezarządzanych zasobów, które posiada bezpośrednio klasy. Jeśli klasa nie jest właścicielem żadnych zasobów niezarządzanych, nie należy uwzględniać `Finalize` metody w definicji klasy. Aby uzyskać więcej informacji, zobacz [Wyrzucanie elementów bezużytecznych](../../../standard/garbage-collection/index.md).  
   
-## <a name="connecting-to-sql-server"></a>Nawiązywanie połączenia z SQL Server  
- Dostawca danych .NET Framework dla SQL Server obsługuje format parametrów połączenia, który jest podobny do formatu parametrów połączenia OLE DB (ADO). W przypadku prawidłowych nazw i wartości formatu ciągu zobacz <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> Właściwość <xref:System.Data.SqlClient.SqlConnection> obiektu. Można również użyć <xref:System.Data.SqlClient.SqlConnectionStringBuilder> klasy do tworzenia składniowo prawidłowych parametrów połączenia w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [konstruktory parametrów połączenia](connection-string-builders.md).  
+> [!NOTE]
+> Zdarzenia logowania i wylogowania nie będą wywoływane na serwerze, gdy połączenie jest pobierane z puli połączeń lub zwracane do puli połączeń, ponieważ połączenie nie jest faktycznie zamknięte, gdy jest zwracane do puli połączeń. Aby uzyskać więcej informacji, zobacz [Sql Server Connection Pooling (ADO.NET)](sql-server-connection-pooling.md).  
   
- Poniższy przykład kodu pokazuje, jak utworzyć i otworzyć połączenie z bazą danych SQL Server.  
+## <a name="connecting-to-sql-server"></a>Łączenie się z programem SQL Server  
+ Dostawca danych programu .NET Framework dla programu SQL Server obsługuje format ciągu połączenia, który jest podobny do formatu ciągu połączenia OLE DB (ADO). Aby uzyskać prawidłowe nazwy i <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> wartości <xref:System.Data.SqlClient.SqlConnection> formatu ciągu, zobacz właściwość obiektu. Można również użyć <xref:System.Data.SqlClient.SqlConnectionStringBuilder> klasy do tworzenia syntaktycznie prawidłowych ciągów połączeń w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [Konstruktorzy ciągów połączeń](connection-string-builders.md).  
+  
+ Poniższy przykład kodu pokazuje, jak utworzyć i otworzyć połączenie z bazą danych programu SQL Server.  
   
 ```vb  
 ' Assumes connectionString is a valid connection string.  
@@ -49,25 +49,25 @@ using (SqlConnection connection = new SqlConnection(connectionString))
 ```  
   
 ### <a name="integrated-security-and-aspnet"></a>Zintegrowane zabezpieczenia i ASP.NET  
- SQL Server zintegrowane zabezpieczenia (znane także jako zaufane połączenia) pomagają zapewnić ochronę podczas nawiązywania połączenia z SQL Server, ponieważ nie uwidacznia identyfikatora użytkownika i hasła w parametrach połączenia i jest zalecaną metodą uwierzytelniania połączenia. Zabezpieczenia zintegrowane korzystają z bieżącej tożsamości lub tokenu procesu wykonywania. W przypadku aplikacji klasycznych zwykle jest to tożsamość aktualnie zalogowanego użytkownika.  
+ Zintegrowane zabezpieczenia programu SQL Server (znane również jako połączenia zaufane) pomagają zapewnić ochronę podczas łączenia się z programem SQL Server, ponieważ nie uwidaczniają identyfikatora użytkownika i hasła w ciągu połączenia i są zalecaną metodą uwierzytelniania połączenia. Zintegrowane zabezpieczenia używa bieżącej tożsamości zabezpieczeń lub tokenu procesu wykonywania. W przypadku aplikacji klasycznych jest to zazwyczaj tożsamość aktualnie zalogowanego użytkownika.  
   
- Tożsamość zabezpieczeń dla aplikacji ASP.NET można ustawić na jedną z kilku różnych opcji. Aby lepiej zrozumieć tożsamość zabezpieczeń używaną przez aplikację ASP.NET podczas nawiązywania połączenia z SQL Server, zobacz [personifikacja ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/xh507fc5(v=vs.100)), [uwierzytelnianie ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/eeyk640h(v=vs.100))i [instrukcje: Dostęp SQL Server przy użyciu zintegrowanych](https://docs.microsoft.com/previous-versions/aspnet/bsz5788z(v=vs.100))zabezpieczeń systemu Windows.  
+ Tożsamość zabezpieczeń dla aplikacji ASP.NET można ustawić na jedną z kilku różnych opcji. Aby lepiej zrozumieć tożsamość zabezpieczeń używaną przez aplikację ASP.NET podczas łączenia się z programem SQL Server, zobacz [personifikacja ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/xh507fc5(v=vs.100)), [ASP.NET uwierzytelnianie](https://docs.microsoft.com/previous-versions/aspnet/eeyk640h(v=vs.100))i [Jak: Dostęp do programu SQL Server przy użyciu zintegrowanych zabezpieczeń systemu Windows](https://docs.microsoft.com/previous-versions/aspnet/bsz5788z(v=vs.100)).  
   
-## <a name="connecting-to-an-ole-db-data-source"></a>Nawiązywanie połączenia ze źródłem danych OLE DB  
- Dostawca danych .NET Framework dla OLE DB zapewnia łączność ze źródłami danych ujawnionymi przy użyciu OLE DB (za pośrednictwem SQLOLEDB, dostawcy OLE DB dla SQL Server) przy użyciu obiektu **OleDbConnection** .  
+## <a name="connecting-to-an-ole-db-data-source"></a>Łączenie się ze źródłem danych OLE DB  
+ Dostawca danych .NET Framework dla ole db zapewnia łączność ze źródłami danych narażonymi przy użyciu OLE DB (za pośrednictwem SQLOLEDB, dostawcy OLE DB dla programu SQL Server), przy użyciu obiektu **OleDbConnection.**  
   
- W przypadku .NET Framework Dostawca danych dla OLE DB format parametrów połączenia jest identyczny z formatem parametrów połączenia używanym w ADO, z następującymi wyjątkami:  
+ Dla dostawcy danych programu .NET Framework dla ole db format ciągu połączenia jest identyczny z formatem ciągu połączenia używanego w ADO, z następującymi wyjątkami:  
   
-- Słowo kluczowe **Provider** jest wymagane.  
+- Wymagane jest słowo kluczowe **Dostawca.**  
   
-- **Adresy URL**, **dostawcy zdalnego**i słowa kluczowe **serwera zdalnego** nie są obsługiwane.  
+- Słowa kluczowe **URL**, **Dostawca zdalny**i **Serwer zdalny** nie są obsługiwane.  
   
- Aby uzyskać więcej informacji na temat OLE DB parametrów połączenia, <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A> Zobacz temat. Można również użyć <xref:System.Data.OleDb.OleDbConnectionStringBuilder> do tworzenia parametrów połączenia w czasie wykonywania.  
+ Aby uzyskać więcej informacji na temat ciągów połączeń OLE DB, zobacz <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A> temat. Można również użyć <xref:System.Data.OleDb.OleDbConnectionStringBuilder> do tworzenia ciągów połączeń w czasie wykonywania.  
   
 > [!NOTE]
-> Obiekt **OleDbConnection** nie obsługuje ustawiania ani pobierania właściwości dynamicznych specyficznych dla dostawcy OLE DB. Obsługiwane są tylko właściwości, które można przekazywać w parametrach połączenia dla dostawcy OLE DB.  
+> **Obiekt OleDbConnection** nie obsługuje ustawiania ani pobierania właściwości dynamicznych specyficznych dla dostawcy ole db. Obsługiwane są tylko właściwości, które mogą być przekazywane w ciągu połączenia dla dostawcy ole db.  
   
- Poniższy przykład kodu demonstruje sposób tworzenia i otwierania połączenia ze źródłem danych OLE DB.  
+ Poniższy przykład kodu pokazuje, jak utworzyć i otworzyć połączenie ze źródłem danych OLE DB.  
   
 ```vb  
 ' Assumes connectionString is a valid connection string.  
@@ -79,7 +79,7 @@ End Using
   
 ```csharp  
 // Assumes connectionString is a valid connection string.  
-using (OleDbConnection connection =   
+using (OleDbConnection connection =
   new OleDbConnection(connectionString))  
 {  
     connection.Open();  
@@ -87,15 +87,15 @@ using (OleDbConnection connection =
 }  
 ```  
   
-## <a name="do-not-use-universal-data-link-files"></a>Nie używaj plików Universal Data Link  
- Możliwe jest podanie informacji o połączeniu dla **OleDbConnection** w pliku Universal Data Link (UDL); należy jednak unikać tego. Pliki UDL nie są szyfrowane i ujawniają informacje o parametrach połączenia w postaci zwykłego tekstu. Ponieważ plik UDL jest zewnętrznym zasobem opartym na plikach dla aplikacji, nie może być zabezpieczony przy użyciu .NET Framework.  
+## <a name="do-not-use-universal-data-link-files"></a>Nie używaj uniwersalnych plików łączy danych  
+ Możliwe jest podanie informacji o połączeniu dla **OleDbConnection** w pliku Uniwersalnego łącza danych (UDL); jednak należy tego unikać. Pliki UDL nie są szyfrowane i ujawniają informacje o ciągu połączenia w postaci zwykłego tekstu. Ponieważ plik UDL jest zewnętrznym zasobem opartym na plikach dla aplikacji, nie można go zabezpieczyć za pomocą programu .NET Framework.  
   
-## <a name="connecting-to-an-odbc-data-source"></a>Nawiązywanie połączenia ze źródłem danych ODBC  
- Dostawca danych .NET Framework dla ODBC zapewnia łączność ze źródłami danych, które są udostępniane za pomocą ODBC przy użyciu obiektu **OdbcConnection** .  
+## <a name="connecting-to-an-odbc-data-source"></a>Łączenie się ze źródłem danych ODBC  
+ Dostawca danych .NET Framework dla ODBC zapewnia łączność ze źródłami danych narażonymi przy użyciu odbc przy użyciu obiektu **OdbcConnection.**  
   
- W przypadku .NET Framework Dostawca danych dla ODBC, format parametrów połączenia jest zaprojektowana tak, aby pasował do formatu parametrów połączenia ODBC tak blisko, jak to możliwe. Możesz również podać nazwę źródła danych ODBC (DSN). Aby uzyskać więcej szczegółów na temat **OdbcConnection** , zobacz <xref:System.Data.Odbc.OdbcConnection>.  
+ Dla dostawcy danych programu .NET Framework dla odbc format ciągu połączenia jest zaprojektowany tak, aby jak najściślijniej dopasować format ciągu połączenia ODBC. Można również podać nazwę źródła danych ODBC (DSN). Aby uzyskać więcej informacji na temat <xref:System.Data.Odbc.OdbcConnection> **OdbcConnection** , zobacz .  
   
- Poniższy przykład kodu demonstruje sposób tworzenia i otwierania połączenia ze źródłem danych ODBC.  
+ Poniższy przykład kodu pokazuje, jak utworzyć i otworzyć połączenie ze źródłem danych ODBC.  
   
 ```vb  
 ' Assumes connectionString is a valid connection string.  
@@ -107,7 +107,7 @@ End Using
   
 ```csharp  
 // Assumes connectionString is a valid connection string.  
-using (OdbcConnection connection =   
+using (OdbcConnection connection =
   new OdbcConnection(connectionString))  
 {  
     connection.Open();  
@@ -115,12 +115,12 @@ using (OdbcConnection connection =
 }  
 ```  
   
-## <a name="connecting-to-an-oracle-data-source"></a>Nawiązywanie połączenia ze źródłem danych Oracle  
- .NET Framework Dostawca danych dla programu Oracle zapewnia łączność ze źródłami danych Oracle przy użyciu obiektu **OracleConnection** .  
+## <a name="connecting-to-an-oracle-data-source"></a>Łączenie się ze źródłem danych Oracle  
+ Dostawca danych .NET Framework dla oracle zapewnia łączność ze źródłami danych Oracle przy użyciu obiektu **OracleConnection.**  
   
- W przypadku .NET Framework Dostawca danych dla programu Oracle format parametrów połączenia jest zaprojektowany tak, aby był zgodny z formatem parametrów połączenia dostawcy OLE DB dla programu Oracle (MSDAORA I). Aby uzyskać więcej szczegółów na temat **OracleConnection**, zobacz <xref:System.Data.OracleClient.OracleConnection>.  
+ Dla dostawcy danych .NET Framework dla Oracle format ciągu połączenia jest zaprojektowany tak, aby jak najdościej dopasować format ciągu połączenia dostawcy OLE DB dla oracle (MSDAORA). Aby uzyskać więcej informacji na temat <xref:System.Data.OracleClient.OracleConnection> **OracleConnection,** zobacz .  
   
- Poniższy przykład kodu demonstruje sposób tworzenia i otwierania połączenia ze źródłem danych Oracle.  
+ Poniższy przykład kodu pokazuje, jak utworzyć i otworzyć połączenie ze źródłem danych Oracle.  
   
 ```vb  
 ' Assumes connectionString is a valid connection string.  
@@ -132,7 +132,7 @@ End Using
   
 ```csharp  
 // Assumes connectionString is a valid connection string.  
-using (OracleConnection connection =   
+using (OracleConnection connection =
   new OracleConnection(connectionString))  
 {  
     connection.Open();  
@@ -142,9 +142,9 @@ OracleConnection nwindConn = new OracleConnection("Data Source=MyOracleServer;In
 nwindConn.Open();  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Nawiązywanie połączenia ze źródłem danych](connecting-to-a-data-source.md)
-- [Parametry połączeń](connection-strings.md)
+- [Łączenie się ze źródłem danych](connecting-to-a-data-source.md)
+- [Parametry połączenia](connection-strings.md)
 - [Buforowanie połączenia Oracle, OLE DB i ODBC](ole-db-odbc-and-oracle-connection-pooling.md)
 - [Omówienie ADO.NET](ado-net-overview.md)

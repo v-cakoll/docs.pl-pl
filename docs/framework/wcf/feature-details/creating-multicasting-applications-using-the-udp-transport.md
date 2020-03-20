@@ -2,18 +2,18 @@
 title: Tworzenie aplikacji multiemisji za pomocą transportu UDP
 ms.date: 03/30/2017
 ms.assetid: 7485154a-6e85-4a67-a9d4-9008e741d4df
-ms.openlocfilehash: b65a277b6e76767d1e3bfdbebbac5051759986e0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6825aaafe87ae362fd9266f7c7a82a36d054a69f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857197"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185251"
 ---
 # <a name="creating-multicasting-applications-using-the-udp-transport"></a>Tworzenie aplikacji multiemisji za pomocą transportu UDP
-Aplikacje korzystające z multiemisji wysyłać małych dużej liczby odbiorców w tym samym czasie, bez konieczności ustanawiania połączeń punkt-punkt. Szczególnym takich aplikacji to szybkość niezawodności. Innymi słowy jest niezwykle ważne wysłać aktualnych danych niż aby upewnić się, że faktycznie odebraniu szczegółowy komunikat o błędzie. Usługi WCF teraz obsługuje pisanie aplikacji multiemisji za pomocą <xref:System.ServiceModel.UdpBinding>. Tego transportu jest przydatne w scenariuszach, gdzie usługa musi wysyłać małych komunikatów do wielu klientów jednocześnie. Aplikacja giełdowej jest przykładem takiej usługi.  
+Aplikacje multiemisji wysyłają małe wiadomości do dużej liczby adresatów w tym samym czasie bez konieczności ustanawiania połączeń typu punkt-punkt. Nacisk na takie aplikacje jest szybkość nad niezawodność. Innymi słowy, ważniejsze jest wysyłanie danych w odpowiednim czasie niż zapewnienie, że każda konkretna wiadomość jest rzeczywiście odbierana. WCF obsługuje teraz pisanie aplikacji <xref:System.ServiceModel.UdpBinding>multiemisji przy użyciu pliku . Ten transport jest przydatny w scenariuszach, w których usługa musi wysyłać małe wiadomości do wielu klientów jednocześnie. Aplikacja stock ticker jest przykładem takiej usługi.  
   
-## <a name="implementing-a-multicast-application"></a>Wdrażanie aplikacji multiemisji  
- Aby wdrożyć aplikację multiemisji, definiowanie kontraktu usługi i dla poszczególnych składników oprogramowania, wymagającego odpowiada na komunikaty multiemisji, należy zaimplementować kontrakt usługi. Na przykład aplikacja giełdowej może definiowanie kontraktu usługi:  
+## <a name="implementing-a-multicast-application"></a>Implementowanie aplikacji multiemisji  
+ Aby zaimplementować aplikację multiemisji, należy zdefiniować umowę serwisową i dla każdego składnika oprogramowania, który musi odpowiadać na komunikaty multiemisji, zaimplementuj umowę serwisową. Na przykład aplikacja giełdowa może zdefiniować umowę serwisową:  
   
 ```csharp
 // Shared contracts between the client and the service  
@@ -41,7 +41,7 @@ class StockInfo
 }
 ```  
   
- Każda aplikacja, która chce odbierać komunikaty multiemisji musi być hostem usługi, który udostępnia ten interfejs.  Na przykład poniżej przedstawiono przykładowy kod, który ilustruje, jak odbierać komunikaty multiemisji:  
+ Każda aplikacja, która chce odbierać komunikaty multiemisji musi obsługiwać usługę, która udostępnia ten interfejs.  Na przykład oto przykładowy kod, który ilustruje sposób odbierania wiadomości multiemisji:  
   
 ```csharp
 // Service Address
@@ -59,9 +59,9 @@ Console.WriteLine("Start receiving stock information");
 Console.ReadLine();
 ```  
   
- Aplikacja określa adres UDP, który będzie nasłuchiwać wszystkich usług. Nowy <xref:System.ServiceModel.ServiceHost> jest tworzony i punkt końcowy usługi jest udostępniana przy użyciu <xref:System.ServiceModel.UdpBinding>. <xref:System.ServiceModel.ServiceHost> Otwarciu i rozpocznie się nasłuchiwanie przychodzących wiadomości.  
+ Aplikacja określa adres UDP, na który będą nasłuchiwanie wszystkich usług. Tworzony <xref:System.ServiceModel.ServiceHost> jest nowy, a punkt końcowy <xref:System.ServiceModel.UdpBinding>usługi jest narażony przy użyciu pliku . Następnie <xref:System.ServiceModel.ServiceHost> zostanie otwarty i rozpocznie nasłuchiwanie wiadomości przychodzących.  
   
- W tego rodzaju scenariusza jest klient, który faktycznie wysyła komunikaty multiemisji. Każda usługa, która nasłuchuje na prawidłowy adres protokołu UDP będzie odbierać komunikaty multiemisji. Poniżej przedstawiono przykładowy klient, który wysyła komunikaty multiemisji:  
+ W tego typu scenariuszu jest klient, który faktycznie wysyła komunikaty multiemisji. Każda usługa nasłuchiwania przy prawidłowym adresie UDP otrzyma komunikaty multiemisji. Oto przykład klienta, który wysyła komunikaty multiemisji:  
   
 ```csharp
 // Multicast Address
@@ -71,7 +71,7 @@ string serviceAddress = "soap.udp://224.0.0.1:40000";
 UdpBinding myBinding = new UdpBinding();
 
 // Channel factory
-ChannelFactory<IStockTicker> factory 
+ChannelFactory<IStockTicker> factory
     = new ChannelFactory<IStockTicker>(myBinding,
                 new EndpointAddress(serviceAddress));
 
@@ -88,13 +88,13 @@ while (true)
 }
 ```  
   
- Ten kod generuje podstawowe informacje, a następnie używa kontraktu usługi IStockTicker do wysyłania komunikatów multiemisji do wywołania usługi nasłuchuje na prawidłowy adres protokołu UDP.  
+ Ten kod generuje informacje o magazynie, a następnie używa umowy serwisowej IStockTicker do wysyłania wiadomości multiemisji do usług wywołujących nasłuchiwanie na poprawny adres UDP.  
   
-### <a name="udp-and-reliable-messaging"></a>UDP i niezawodna obsługa komunikatów  
- Powiązanie protokołu UDP nie obsługuje niezawodną obsługę komunikatów ze względu na charakter uproszczonego protokołu UDP. Jeśli potrzebujesz upewnić się, że komunikaty są odbierane przez zdalny punkt końcowy, użyj transportu, który obsługuje niezawodną obsługę komunikatów, takich jak HTTP lub TCP. Aby uzyskać więcej informacji na temat niezawodnej obsługi komunikatów, zobacz https://go.microsoft.com/fwlink/?LinkId=231830  
+### <a name="udp-and-reliable-messaging"></a>UDP i niezawodne wiadomości  
+ Powiązanie UDP nie obsługuje niezawodnej obsługi wiadomości ze względu na lekki charakter protokołu UDP. Jeśli chcesz potwierdzić, że wiadomości są odbierane przez zdalny punkt końcowy, należy użyć transportu, który obsługuje niezawodne wiadomości, takie jak HTTP lub TCP. Aby uzyskać więcej informacji na temat niezawodnych wiadomości, zobaczhttps://go.microsoft.com/fwlink/?LinkId=231830  
   
-### <a name="two-way-multicast-messaging"></a>Dwukierunkowe komunikaty multiemisji  
- Komunikaty multiemisji są zazwyczaj jednokierunkowe, UdpBinding obsługuje żądanie/nietypizowana odpowiedź wymianę komunikatów. Komunikaty wysyłane za pomocą transportu UDP zawierają zarówno od adresów. Należy zachować ostrożność podczas przy użyciu adresu From, ponieważ może to być złośliwie zmienione na trasie.  Adres można sprawdzić, używając następującego kodu:  
+### <a name="two-way-multicast-messaging"></a>Dwukierunkowe wiadomości multiemisji  
+ Podczas gdy wiadomości multiemisji są zazwyczaj jednokierunkowe, UdpBinding obsługuje wymianę żądań/odpowiedzi. Wiadomości wysyłane przy użyciu transportu UDP zawierają adres Od i Do. Należy zwrócić uwagę podczas korzystania z adresu Od, ponieważ może to być złośliwie zmienione w drodze.  Adres można sprawdzić za pomocą następującego kodu:  
   
 ```csharp
 if (address.AddressFamily == AddressFamily.InterNetwork)
@@ -110,9 +110,9 @@ else
 }
 ```  
   
- Ten kod sprawdza, czy pierwszy bajt adres nadawcy, aby zobaczyć, czy zawiera wartość 0xE0, co oznacza, że adres jest adresem multiemisji.  
+ Ten kod sprawdza pierwszy bajt adresu Od, aby sprawdzić, czy zawiera 0xE0, co oznacza, że adres jest adresem wielokrotnego rzutowania.  
   
-### <a name="security-considerations"></a>Zagadnienia dotyczące zabezpieczeń  
- Gdy nasłuchiwanie komunikaty multiemisji pakiet ICMP są wysyłane do routera powiadamiania ją, z której korzystasz na adres multiemisji. Każda osoba w podsieci lokalnej, który ma uprawnienia może nasłuchiwać tych typów pakietów, a także określić, której adres i port multiemisji nasłuchują na.  
+### <a name="security-considerations"></a>Zagadnienia związane z zabezpieczeniami  
+ Podczas nasłuchiwania wiadomości multiemisji pakiet ICMP jest wysyłany do routera z powiadomieniem, że nasłuchujesz na adres multiemisji. Każda osoba w podsieci lokalnej, która ma uprawnienia, może nasłuchiwanie tego typu pakietów i określać adres multiemisji i port, na który nasłuchujesz.  
   
- Nie należy używać dowolnego ze względów bezpieczeństwa adres IP nadawcy. Te informacje mogą być sfałszowane i może spowodować, że aplikacja do wysyłania odpowiedzi do niewłaściwej maszyny. Jednym ze sposobów, aby osłabić to zagrożenie jest włączyć zabezpieczenia na poziomie komunikatu. W sieci poziomu protokołu IPSec (Internet Protocol Security) i/lub ochrony dostępu do sieci (Ochrona dostępu do sieci) można również użyć.
+ Nie używaj adresu IP nadawcy do celów bezpieczeństwa. Te informacje mogą być sfałszowane i może spowodować, że aplikacja do wysyłania odpowiedzi do niewłaściwego komputera. Jednym ze sposobów ograniczenia tego zagrożenia jest włączenie zabezpieczeń na poziomie wiadomości. Na poziomie sieci można również używać protokołu IPSec (Internet Protocol Security) i/lub ochrony dostępu do sieci (Ochrona dostępu do sieci).

@@ -1,17 +1,16 @@
 ---
-ms.openlocfilehash: ad2f7bf981d56e06ec726942f1fd37dff6b5b09c
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: c8329fbaed68fde3a63a5c589896ffcdf64b1766
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67802633"
 ---
-### <a name="performance-improvement-in-automation-tree-for-grouping-itemscontrols"></a>Zwiększenie wydajności w drzewie automatyzacji do grupowania ItemsControls
+### <a name="performance-improvement-in-automation-tree-for-grouping-itemscontrols"></a>Poprawa wydajności w drzewie automatyzacji do grupowania ItemsControls
 
 |   |   |
 |---|---|
-|Szczegóły|Zwiększona wydajność odbudowywania drzewa automatyzacji <xref:System.Windows.Controls.ItemsControl>, takich jak pola listy lub DataGrid, w którym włączona jest grupowanie.|
-|Scope|Duży|
+|Szczegóły|Poprawiono wydajność przebudowy drzewa automatyzacji <xref:System.Windows.Controls.ItemsControl>, takich jak ListBox lub DataGrid, w którym jest włączone grupowanie.|
+|Zakres|Duży|
 |Wersja|4.8|
 |Typ|Środowisko uruchomieniowe|
-

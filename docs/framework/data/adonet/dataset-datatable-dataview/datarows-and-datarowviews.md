@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8f5eec26-b809-4aca-8778-7e202356d856
-ms.openlocfilehash: 7c76435b8a0f7a874504813d91d5eda929d08f67
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 14e7e1ccb051410c351e49afee9f2d6809264833
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786424"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151302"
 ---
 # <a name="datarows-and-datarowviews"></a>Elementy DataRow i DataRowView
-A <xref:System.Data.DataView> uwidacznia wyliczalną <xref:System.Data.DataRowView> kolekcję obiektów. Obiekty **DataRowView** uwidaczniają wartości jako tablice obiektów, które są indeksowane przez nazwę lub odwołanie porządkowe kolumny w tabeli źródłowej. Możesz uzyskać dostęp do <xref:System.Data.DataRow> programu, który jest udostępniany przez **DataRowView** , <xref:System.Data.DataRowView.Row%2A> przy użyciu właściwości **DataRowView**.  
+A <xref:System.Data.DataView> udostępnia wyliczalną <xref:System.Data.DataRowView> kolekcję obiektów. **Obiekty DataRowView** uwidaczniają wartości jako tablice obiektów, które są indeksowane przez nazwę lub odwołanie porządkowe kolumny w tabeli podstawowej. Można uzyskać <xref:System.Data.DataRow> dostęp do tego, który jest <xref:System.Data.DataRowView.Row%2A> widoczna przez **DataRowView** przy użyciu właściwości **DataRowView**.  
   
- Podczas wyświetlania wartości przy użyciu **DataRowView** <xref:System.Data.DataView.RowStateFilter%2A> Właściwość **widoku** danych określa, która wersja wiersza podstawowego elementu **DataRow** jest uwidoczniona. Aby uzyskać informacje o uzyskiwaniu dostępu do różnych wersji wierszy przy użyciu elementu **DataRow**, zobacz [Stany wiersza i wersje wierszy](row-states-and-row-versions.md).  
+ Podczas wyświetlania wartości przy użyciu **DataRowView,** <xref:System.Data.DataView.RowStateFilter%2A> właściwość **DataView** określa, która wersja wiersza podstawowej **DataRow** jest narażony. Aby uzyskać informacje dotyczące uzyskiwania dostępu do różnych wersji wierszy przy użyciu **funkcji DataRow,** zobacz [Stany wierszy i Wersje wierszy](row-states-and-row-versions.md).  
   
  Poniższy przykład kodu wyświetla wszystkie bieżące i oryginalne wartości w tabeli.  
   
@@ -25,7 +25,7 @@ Console.WriteLine("Current Values:")
 WriteView(catView)  
 Console.WriteLine("Original Values:")  
 catView.RowStateFilter = DataViewRowState.ModifiedOriginal  
-WriteView(catView)      
+WriteView(catView)
   
 Public Shared Sub WriteView(thisDataView As DataView)  
   Dim rowView As DataRowView  
@@ -59,7 +59,7 @@ public static void WriteView(DataView thisDataView)
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Data.DataRowVersion>
 - <xref:System.Data.DataViewRowState>

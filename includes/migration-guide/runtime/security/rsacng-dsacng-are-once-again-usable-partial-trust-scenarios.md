@@ -1,19 +1,18 @@
 ---
-ms.openlocfilehash: 242a9952cb47d170aceffa1aa392071eb40cc6ab
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 8b41e3234c00059ecb5088bbf2597611d7f139b8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67857226"
 ---
-### <a name="rsacng-and-dsacng-are-once-again-usable-in-partial-trust-scenarios"></a>RSACng i DSACng są ponownie użyteczne w sytuacjach częściowego zaufania
+### <a name="rsacng-and-dsacng-are-once-again-usable-in-partial-trust-scenarios"></a>RSACng i DSACng są po raz kolejny użyteczne w scenariuszach częściowego zaufania
 
 |   |   |
 |---|---|
-|Szczegóły|CngLightup (używana w kilku wyższego poziomu szyfrowania interfejsów API, takich jak <xref:System.Security.Cryptography.Xml.EncryptedXml?displayProperty=nameWithType>) i <xref:System.Security.Cryptography.RSACng?displayProperty=nameWithType> w niektórych przypadkach zależą od pełnego zaufania. Obejmują one P/Invokes bez potwierdzające <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode?displayProperty=nameWithType> uprawnienia i ścieżek kodu gdzie <xref:System.Security.Cryptography.CngKey?displayProperty=nameWithType> ma zapotrzebowanie uprawnień dla <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode?displayProperty=nameWithType>. Począwszy od programu .NET Framework 4.6.2, aby przełączyć się do użyto CngLightup <xref:System.Security.Cryptography.RSACng?displayProperty=nameWithType> wszędzie tam, gdzie to możliwe. W rezultacie aplikacje częściowej relacji zaufania, ona pomyślnie użyta <xref:System.Security.Cryptography.Xml.EncryptedXml?displayProperty=nameWithType> rozpoczęła się nie powieść i zgłosić <xref:System.Security.SecurityException> wyjątków. Ta zmiana dodaje wymagane potwierdza, tak aby wszystkie funkcje za pomocą CngLightup wymaganych uprawnień.|
-|Sugestia|Jeśli ta zmiana w programie .NET Framework 4.6.2 ma negatywnego wpływu na Twoje aplikacje częściowej relacji zaufania, uaktualnienie do programu .NET Framework 4.7.1.|
-|Scope|Krawędź|
+|Szczegóły|CngLightup (używany w kilku apis krypto wyższego poziomu, takich jak) <xref:System.Security.Cryptography.Xml.EncryptedXml?displayProperty=nameWithType>i <xref:System.Security.Cryptography.RSACng?displayProperty=nameWithType> w niektórych przypadkach polegać na pełnym zaufaniu. Należą do nich P/Invokes bez potwierdzenia <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode?displayProperty=nameWithType> uprawnień <xref:System.Security.Cryptography.CngKey?displayProperty=nameWithType> i ścieżki <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode?displayProperty=nameWithType>kodu, gdzie ma wymagania dotyczące uprawnień dla . Począwszy od programu .NET Framework 4.6.2, CngLightup został użyty do przełączania się tam, <xref:System.Security.Cryptography.RSACng?displayProperty=nameWithType> gdzie to możliwe. W rezultacie aplikacje częściowego <xref:System.Security.Cryptography.Xml.EncryptedXml?displayProperty=nameWithType> zaufania, które <xref:System.Security.SecurityException> pomyślnie używane zaczął się niepowodzeniem i zgłaszać wyjątki. Ta zmiana dodaje wymagane potwierdzenia, dzięki czemu wszystkie funkcje przy użyciu CngLightup mają wymagane uprawnienia.|
+|Sugestia|Jeśli ta zmiana w .NET Framework 4.6.2 ma negatywny wpływ na aplikacje częściowego zaufania, uaktualnić do .NET Framework 4.7.1.|
+|Zakres|Brzeg|
 |Wersja|4.6.2|
 |Typ|Środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Security.Cryptography.DSACng.%23ctor(System.Security.Cryptography.CngKey)?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.DSACng.Key?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.DSACng.LegalKeySizes?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.DSACng.CreateSignature(System.Byte[])?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.DSACng.VerifySignature(System.Byte[],System.Byte[])?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.RSACng.%23ctor(System.Security.Cryptography.CngKey)?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.RSACng.Key?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.RSACng.Decrypt(System.Byte[],System.Security.Cryptography.RSAEncryptionPadding)?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.RSACng.SignHash(System.Byte[],System.Security.Cryptography.HashAlgorithmName,System.Security.Cryptography.RSASignaturePadding)?displayProperty=nameWithType></li></ul>|
-

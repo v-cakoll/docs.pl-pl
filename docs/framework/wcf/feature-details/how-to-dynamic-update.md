@@ -2,27 +2,27 @@
 title: 'Instrukcje: Aktualizacja dynamiczna'
 ms.date: 03/30/2017
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
-ms.openlocfilehash: 95d99afd09daf4d9bf3937a71d7773332ff1bc14
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: aaeb4d9d42c289cf34a6aee9212fc2d74b8f8c01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834723"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184968"
 ---
 # <a name="how-to-dynamic-update"></a>Instrukcje: Aktualizacja dynamiczna
-W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia i dynamicznej aktualizacji konfiguracji routingu. W tym przykładzie początkowa konfiguracja routingu jest uzyskiwana z pliku konfiguracji i kieruje wszystkie komunikaty do usługi kalkulatora regularCalc. jest to jednak aktualizowane programowo w celu zmiany docelowego punktu końcowego usługi roundingCalc.  
+W tym temacie opisano podstawowe kroki wymagane do utworzenia i dynamicznej aktualizacji konfiguracji routingu. W tym przykładzie początkowa konfiguracja routingu jest uzyskiwana z pliku konfiguracji i kieruje wszystkie komunikaty do usługi kalkulatora regularCalc; jednak jest następnie aktualizowana programowo w celu zmiany docelowego punktu końcowego usługi zaokrąglaniakłość.  
   
 > [!NOTE]
-> W wielu implementacjach konfiguracja będzie w pełni dynamiczna i nie będzie polegać na konfiguracji domyślnej. Istnieje jednak kilka scenariuszy, takich jak wymienione w tym temacie, w przypadku których pożądane jest posiadanie domyślnego stanu konfiguracji podczas uruchamiania usługi.  
+> W wielu implementacjach konfiguracja będzie w pełni dynamiczna i nie będzie polegać na domyślnej konfiguracji; Jednak istnieją pewne scenariusze, takie jak ten w tym temacie, gdzie pożądane jest, aby mieć domyślny stan konfiguracji po uruchomieniu usługi.  
   
 > [!NOTE]
-> Aktualizacje dynamiczne są wykonywane tylko w pamięci i nie powodują modyfikacji plików konfiguracji.  
+> Aktualizacje dynamiczne występują tylko w pamięci i nie powodują modyfikacji plików konfiguracyjnych.  
   
- Zarówno regularCalc, jak i roundingCalc obsługują te same operacje operacji dodawania, odejmowania, mnożenia i dzielenia; jednak roundingCalc zaokrągla wszystkie obliczenia do najbliższej wartości całkowitej przed zwróceniem. Plik konfiguracji służy do konfigurowania usługi do kierowania wszystkich komunikatów do usługi regularCalc. Po uruchomieniu usługi routingu <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> służy do ponownego skonfigurowania usługi do przesyłania komunikatów do usługi roundingCalc.  
+ Zarówno regularCalc, jak i zaokrąglanieCalc obsługują te same operacje dodawania, odejmowania, mnożenia i dzielenia; jednak zaokrąglenieKal zaokrągla wszystkie obliczenia do najbliższej wartości całkowitej przed zwróceniem. Plik konfiguracyjny służy do konfigurowania usługi do kierowania wszystkich wiadomości do usługi regularCalc. Po uruchomieniu usługi <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> routingu, służy do ponownego konfigurowania usługi do kierowania wiadomości do usługi zaokrąglaniaCalc.  
   
-### <a name="implement-initial-configuration"></a>Zaimplementuj konfigurację początkową  
+### <a name="implement-initial-configuration"></a>Implementowanie konfiguracji początkowej  
   
-1. Utwórz podstawową konfigurację usługi routingu, określając punkty końcowe usługi udostępniane przez usługę. W poniższym przykładzie zdefiniowano pojedynczy punkt końcowy usługi, który będzie używany do odbierania komunikatów. Definiuje również punkt końcowy klienta, który będzie używany do wysyłania komunikatów do regularCalc.  
+1. Utwórz podstawową konfigurację usługi routingu, określając punkty końcowe usługi udostępniane przez usługę. Poniższy przykład definiuje punkt końcowy pojedynczej usługi, który będzie używany do odbierania wiadomości. Definiuje również punkt końcowy klienta, który będzie używany do wysyłania wiadomości do regularCalc.  
   
     ```xml  
     <services>  
@@ -49,7 +49,7 @@ W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia i dynamiczne
     </client>  
     ```  
   
-2. Zdefiniuj filtr używany do przesyłania komunikatów do docelowych punktów końcowych. W tym przykładzie filtr MatchAll służy do kierowania wszystkich komunikatów do zdefiniowanej wcześniej regularCalcEndpoint. W poniższym przykładzie zdefiniowano tabelę filtrów i filtrów.  
+2. Zdefiniuj filtr używany do kierowania wiadomości do docelowych punktów końcowych. W tym przykładzie MatchAll filtr jest używany do kierowania wszystkich wiadomości do regularCalcEndpoint zdefiniowane wcześniej. Poniższy przykład definiuje tabelę filtrów i filtrów.  
   
     ```xml  
     <filters>  
@@ -64,7 +64,7 @@ W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia i dynamiczne
     </filterTables>  
     ```  
   
-3. Aby oszacować komunikaty przychodzące względem filtrów zawartych w tabeli filtrów, należy skojarzyć tabelę filtru z punktami końcowymi usługi przy użyciu zachowania routingu. Poniższy przykład demonstruje kojarzenie "filterTable1" z punktem końcowym usługi.  
+3. Aby ocenić przychodzące wiadomości względem filtrów zawartych w tabeli filtrów, należy skojarzyć tabelę filtrów z punktami końcowymi usługi przy użyciu zachowania routingu. W poniższym przykładzie pokazano skojarzenia "filterTable1" z punktem końcowym usługi.  
   
     ```xml  
     <behaviors>  
@@ -77,10 +77,10 @@ W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia i dynamiczne
     </behaviors>  
     ```  
   
-## <a name="implement-dynamic-configuration"></a>Zaimplementuj konfigurację dynamiczną  
- Konfigurację dynamiczną usługi routingu można wykonać tylko w kodzie, tworząc nową <xref:System.ServiceModel.Routing.RoutingConfiguration> i używając <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A>, aby zastąpić bieżącą konfigurację.  W tym przykładzie usługa routingu jest samodzielna w aplikacji konsolowej. Po uruchomieniu aplikacji można zmodyfikować konfigurację routingu, wprowadzając wartość "Regular" lub "rounding" w oknie konsoli, aby skonfigurować docelowy punkt końcowy, do którego są kierowane komunikaty. regularCalc, gdy wprowadzono wartość "Regular", w przeciwnym razie roundingCalc, gdy zostanie wprowadzone "zaokrąglenie".  
+## <a name="implement-dynamic-configuration"></a>Implementowanie konfiguracji dynamicznej  
+ Dynamiczną konfigurację usługi routingu można wykonać tylko <xref:System.ServiceModel.Routing.RoutingConfiguration> w <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> kodzie, tworząc nową i używając do zastąpienia bieżącej konfiguracji.  W tym przykładzie usługa routingu jest hostowana samodzielnie w aplikacji konsoli. Po uruchomieniu aplikacji można zmodyfikować konfigurację routingu, wprowadzając "regularne" lub "zaokrąglanie" w oknie konsoli, aby skonfigurować docelowy punkt końcowy, do którego są kierowane wiadomości; regularCalc, gdy "regularne" jest wprowadzany, w przeciwnym razie zaokrąglaniaCalc po wprowadzeniu "zaokrąglania".  
   
-1. Aby można było obsługiwać usługę routingu, należy dodać następujące instrukcje using.  
+1. Następujące instrukcje using należy dodać w celu obsługi usługi routingu.  
   
     ```csharp  
     using System;  
@@ -92,7 +92,7 @@ W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia i dynamiczne
     using System.ServiceModel.Routing;  
     ```  
   
-2. Poniższy kod służy do samodzielnego hostowania usługi routingu jako aplikacji konsolowej. Spowoduje to zainicjowanie usługi routingu przy użyciu konfiguracji opisanej w poprzednim kroku, która jest zawarta w pliku konfiguracyjnym aplikacji. Pętla WHILE zawiera kod używany do zmiany konfiguracji routingu.  
+2. Poniższy kod jest używany do samodzielnego hostowania usługi routingu jako aplikacji konsoli. Spowoduje to zainicjowanie usługi routingu przy użyciu konfiguracji opisanej w poprzednim kroku, która znajduje się w pliku konfiguracji aplikacji. While Pętli zawiera kod używany do zmiany konfiguracji routingu.  
   
     ```csharp  
     // Host the service within this EXE console application.  
@@ -102,7 +102,7 @@ W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia i dynamiczne
         using (ServiceHost serviceHost =  
             new ServiceHost(typeof(RoutingService)))  
         {  
-            // Open the ServiceHost to create listeners           
+            // Open the ServiceHost to create listeners
             // and start listening for messages.  
             Console.WriteLine("The Routing Service configured, opening....");  
             serviceHost.Open();  
@@ -117,9 +117,9 @@ W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia i dynamiczne
     }  
     ```  
   
-3. Aby dynamicznie zaktualizować konfigurację routingu, należy utworzyć nową konfigurację routingu. Musi zawierać wszystkie punkty końcowe, filtry i tabele filtrów, które są wymagane dla nowej konfiguracji routingu, ponieważ całkowicie zastąpią istniejącą konfigurację routingu. Aby można było użyć nowej konfiguracji routingu, należy wywołać <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> i przekazać nową konfigurację.  
+3. Aby dynamicznie aktualizować konfigurację routingu, należy utworzyć nową konfigurację routingu. Musi to zawierać wszystkie punkty końcowe, filtry i tabele filtrów, które są wymagane dla nowej konfiguracji routingu, ponieważ całkowicie zastąpi istniejącą konfigurację routingu. Aby użyć nowej konfiguracji routingu, należy <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> wywołać i przekazać nową konfigurację.  
   
-     Dodaj następujący kod do pętli while zdefiniowanej wcześniej, aby zezwolić na ponowną konfigurację usługi na podstawie danych wejściowych użytkownika.  
+     Dodaj następujący kod do while pętli zdefiniowane wcześniej, aby umożliwić usługę do ponownego skonfigurowania na podstawie danych wejściowych użytkownika.  
   
     ```csharp  
     Console.WriteLine("Enter 'regular' or 'rounding' to set the destination endpoint:");  
@@ -160,11 +160,11 @@ W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia i dynamiczne
     ```  
   
     > [!NOTE]
-    > Ponieważ metoda udostępniania nowego zastosowano jest zawarta w rozszerzeniu usługi RoutingExtension, nowe obiekty zastosowano mogą być udostępniane w dowolnym miejscu w modelu rozszerzalności WCF, który ma lub może uzyskać odwołanie do ServiceHost lub Rozszerzenia serviceextension (na przykład w innym rozszerzeniu serviceextension).
+    > Ponieważ metoda dostarczania nowej konfiguracji routingu jest zawarta w rozszerzeniu usługi RoutingExtension, nowe obiekty RoutingConfiguration mogą być dostarczane w dowolnym miejscu w modelu rozszerzalności WCF, który ma lub może uzyskać odwołanie do ServiceHost lub ServiceExtensions (na przykład w innym ServiceExtension).
   
 ## <a name="example"></a>Przykład  
 
-Poniżej przedstawiono pełną listę aplikacji konsolowej używanej w tym przykładzie:
+Poniżej znajduje się pełna lista aplikacji konsoli używane w tym przykładzie:
   
 ```csharp
 //-----------------------------------------------------------------  
@@ -185,12 +185,12 @@ namespace Microsoft.Samples.AdvancedFilters
     {  
         // Host the service within this EXE console application.  
         public static void Main()  
-        {             
+        {
             // Create a ServiceHost for the CalculatorService type.  
             using (ServiceHost serviceHost =  
                 new ServiceHost(typeof(RoutingService)))  
             {  
-                // Open the ServiceHost to create listeners           
+                // Open the ServiceHost to create listeners
                 // and start listening for messages.  
                 Console.WriteLine("The Routing Service configured, opening....");  
                 serviceHost.Open();  
@@ -242,8 +242,8 @@ namespace Microsoft.Samples.AdvancedFilters
 ```  
   
 ## <a name="example"></a>Przykład  
- 
-Poniżej znajduje się kompletna lista plików konfiguracyjnych użytych w tym przykładzie:
+
+Poniżej znajduje się pełna lista pliku konfiguracyjnego użytego w tym przykładzie:
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -298,6 +298,6 @@ Poniżej znajduje się kompletna lista plików konfiguracyjnych użytych w tym p
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Usługi routingu](../samples/routing-services.md)

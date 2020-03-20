@@ -2,19 +2,19 @@
 title: 'Instrukcje: Tworzenie usługi WCF komunikującej się przez protokół WebSockets'
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-ms.openlocfilehash: 8f8cf715269fd0ed67e2265eee4139a509f70cd1
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: d420ac8fcb98ddec195093be8ae25be37443da4e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977139"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184977"
 ---
 # <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>Instrukcje: Tworzenie usługi WCF komunikującej się przez protokół WebSockets
-Usługi i klienci WCF mogą używać powiązania <xref:System.ServiceModel.NetHttpBinding>, aby komunikować się za pośrednictwem obiektów WebSockets.  Usługa WebSockets zostanie użyta, gdy <xref:System.ServiceModel.NetHttpBinding> określa kontrakt usługi definiuje kontrakt wywołania zwrotnego. W tym temacie opisano sposób implementacji usługi i klienta programu WCF, który używa <xref:System.ServiceModel.NetHttpBinding> do komunikowania się za pośrednictwem obiektów WebSockets.  
+WCF usług i klientów <xref:System.ServiceModel.NetHttpBinding> można użyć powiązania do komunikowania się za pośrednictwem WebSockets.  WebSockets będą używane, <xref:System.ServiceModel.NetHttpBinding> gdy określa umowy serwisowej definiuje umowy wywołania zwrotnego. W tym temacie opisano sposób implementacji usługi WCF i klienta, który używa <xref:System.ServiceModel.NetHttpBinding> do komunikowania się za pośrednictwem WebSockets.  
   
-### <a name="define-the-service"></a>Definiowanie usługi  
+### <a name="define-the-service"></a>Zdefiniuj usługę  
   
-1. Definiowanie kontraktu wywołania zwrotnego  
+1. Definiowanie umowy wywołania zwrotnego  
   
     ```csharp  
     [ServiceContract]  
@@ -25,9 +25,9 @@ Usługi i klienci WCF mogą używać powiązania <xref:System.ServiceModel.NetHt
         }  
     ```  
   
-     Ta umowa zostanie wdrożona przez aplikację kliencką, aby umożliwić usłudze wysyłanie komunikatów z powrotem do klienta programu.  
+     Ta umowa zostanie zaimplementowana przez aplikację kliencką, aby umożliwić usłudze wysyłanie wiadomości z powrotem do klienta.  
   
-2. Zdefiniuj kontrakt usługi i określ interfejs `IStockQuoteCallback` jako kontrakt wywołania zwrotnego.  
+2. Zdefiniuj umowę `IStockQuoteCallback` serwisową i określ interfejs jako kontrakt wywołania zwrotnego.  
   
     ```csharp  
     [ServiceContract(CallbackContract = typeof(IStockQuoteCallback))]  
@@ -38,7 +38,7 @@ Usługi i klienci WCF mogą używać powiązania <xref:System.ServiceModel.NetHt
         }  
     ```  
   
-3. Zaimplementuj kontrakt usługi.  
+3. Zaimplementuj umowę serwisową.  
   
     ```csharp
     public class StockQuoteService : IStockQuoteService  
@@ -59,17 +59,17 @@ Usługi i klienci WCF mogą używać powiązania <xref:System.ServiceModel.NetHt
     }  
     ```  
   
-     Operacja usługi `StartSendingQuotes` jest zaimplementowana jako wywołanie asynchroniczne. Pobieramy kanał wywołania zwrotnego przy użyciu `OperationContext` i Jeśli kanał jest otwarty, my wywołujemy wywołanie asynchroniczne w kanale wywołania zwrotnego.  
+     Operacja `StartSendingQuotes` usługi jest implementowana jako wywołanie asynchroniczne. Pobieramy kanał wywołania zwrotnego `OperationContext` za pomocą i jeśli kanał jest otwarty, możemy wywołać asynchronii na kanale wywołania zwrotnego.  
   
 4. Konfigurowanie usługi  
   
     ```xml  
     <configuration>  
         <appSettings>  
-          <add key="aspnet:UseTaskFriendlySynchronizationContext" value="true" />        
+          <add key="aspnet:UseTaskFriendlySynchronizationContext" value="true" />
         </appSettings>  
         <system.web>  
-          <compilation debug="true" targetFramework="4.5" />        
+          <compilation debug="true" targetFramework="4.5" />
         </system.web>  
         <system.serviceModel>  
             <protocolMapping>  
@@ -90,11 +90,11 @@ Usługi i klienci WCF mogą używać powiązania <xref:System.ServiceModel.NetHt
     </configuration>  
     ```  
   
-     Plik konfiguracji usługi opiera się na domyślnych punktach końcowych programu WCF. Sekcja `<protocolMapping>` służy do określenia, czy `NetHttpBinding` mają być używane dla utworzonych domyślnych punktów końcowych.  
+     Plik konfiguracyjny usługi opiera się na domyślnych punktach końcowych WCF. Sekcja `<protocolMapping>` jest używana do `NetHttpBinding` określenia, że powinny być używane dla domyślnych punktów końcowych utworzonych.  
   
-### <a name="define-the-client"></a>Definiowanie klienta  
+### <a name="define-the-client"></a>Zdefiniuj klienta  
   
-1. Zaimplementuj kontrakt wywołania zwrotnego.  
+1. Zaimplementuj umowę wywołania zwrotnego.  
   
     ```csharp  
     private class CallbackHandler : StockQuoteServiceReference.IStockQuoteServiceCallback  
@@ -106,7 +106,7 @@ Usługi i klienci WCF mogą używać powiązania <xref:System.ServiceModel.NetHt
             }  
     ```  
   
-     Operacja kontraktu wywołania zwrotnego jest zaimplementowana jako Metoda asynchroniczna.  
+     Operacja umowy wywołania zwrotnego jest implementowana jako metoda asynchroniczne.  
   
     1. Zaimplementuj kod klienta.  
   
@@ -117,7 +117,7 @@ Usługi i klienci WCF mogą używać powiązania <xref:System.ServiceModel.NetHt
             {  
                 var context = new InstanceContext(new CallbackHandler());  
                 var client = new StockQuoteServiceReference.StockQuoteServiceClient(context);  
-                client.StartSendingQuotes();              
+                client.StartSendingQuotes();
                 Console.ReadLine();  
             }  
   
@@ -131,14 +131,14 @@ Usługi i klienci WCF mogą używać powiązania <xref:System.ServiceModel.NetHt
         }  
         ```  
   
-         Obiekt callbackhandlera jest powtarzana w tym miejscu do przejrzystości. Aplikacja kliencka tworzy nową metodę InstanceContext i określa implementację interfejsu wywołania zwrotnego. Następnie tworzy wystąpienie klasy proxy, wysyłając odwołanie do nowo utworzonej metody InstanceContext. Gdy klient wywołuje usługę, usługa wywoła klienta przy użyciu określonego kontraktu wywołania zwrotnego.  
+         CallbackHandler jest powtarzany tutaj dla jasności. Aplikacja kliencka tworzy nowy InstanceContext i określa implementację interfejsu wywołania zwrotnego. Następnie tworzy wystąpienie klasy proxy wysyłając odwołanie do nowo utworzonego InstanceContext. Gdy klient wywołuje usługę, usługa wywoła klienta przy użyciu umowy wywołania zwrotnego określony.  
   
-    2. Konfigurowanie klienta programu  
+    2. Konfigurowanie klienta  
   
         ```xml  
         <?xml version="1.0" encoding="utf-8" ?>  
         <configuration>  
-            <startup>   
+            <startup>
                 <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />  
             </startup>  
             <system.serviceModel>  
@@ -158,10 +158,10 @@ Usługi i klienci WCF mogą używać powiązania <xref:System.ServiceModel.NetHt
         </configuration>  
         ```  
   
-         Nie ma żadnych specjalnych, które należy wykonać w konfiguracji klienta, wystarczy określić punkt końcowy po stronie klienta przy użyciu `NetHttpBinding`.  
+         Nie ma nic specjalnego, co należy zrobić w konfiguracji klienta, `NetHttpBinding`wystarczy określić punkt końcowy po stronie klienta za pomocą .  
   
 ## <a name="example"></a>Przykład  
- Poniżej znajduje się kompletny kod używany w tym temacie.  
+ Poniżej znajduje się pełny kod używany w tym temacie.  
   
 ```csharp  
 // IStockQuoteService.cs  
@@ -233,10 +233,10 @@ namespace Server
   
 <configuration>  
     <appSettings>  
-      <add key="aspnet:UseTaskFriendlySynchronizationContext" value="true" />        
+      <add key="aspnet:UseTaskFriendlySynchronizationContext" value="true" />
     </appSettings>  
     <system.web>  
-      <compilation debug="true" targetFramework="4.5" />        
+      <compilation debug="true" targetFramework="4.5" />
     </system.web>  
     <system.serviceModel>  
         <protocolMapping>  
@@ -279,7 +279,7 @@ namespace Client
         {  
             var context = new InstanceContext(new CallbackHandler());  
             var client = new StockQuoteServiceReference.StockQuoteServiceClient(context);  
-            client.StartSendingQuotes();              
+            client.StartSendingQuotes();
             Console.ReadLine();  
         }  
   
@@ -298,7 +298,7 @@ namespace Client
 <!--App.config -->  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
-    <startup>   
+    <startup>
         <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />  
     </startup>  
     <system.serviceModel>  
@@ -318,7 +318,7 @@ namespace Client
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Operacje synchroniczne i asynchroniczne](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)
 - [Używanie elementu NetHttpBinding](../../../../docs/framework/wcf/feature-details/using-the-nethttpbinding.md)

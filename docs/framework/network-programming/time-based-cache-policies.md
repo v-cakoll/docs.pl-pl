@@ -18,53 +18,53 @@ helpviewer_keywords:
 - age of cached resources
 ms.assetid: 74f0bcaf-5c95-40c1-9967-f3bbf1d2360a
 ms.openlocfilehash: 0edde8e716d5ce3b1444e994234def5835341475
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047126"
 ---
 # <a name="time-based-cache-policies"></a>Zasady pamięci podręcznej oparte na czasie
-Zasady pamięci podręcznej oparte na czasie definiują świeżość buforowanych wpisów przy użyciu czasu pobrania zasobu, nagłówki zwrócone z zasobem i bieżący czas. Konfigurując zasady pamięci podręcznej oparte na czasie, można użyć <xref:System.Net.Cache.HttpRequestCacheLevel.Default> zasad czasu lub utworzyć dostosowane zasady czasu. W przypadku korzystania z domyślnych zasad dotyczących czasu dla zasobów uzyskanych przy użyciu protokołu HTTP (Hypertext Transfer Protocol) dokładne zachowanie pamięci podręcznej zależy od nagłówków zawartych w buforowanej odpowiedzi i według zachowań określonych w sekcjach 13 i 14 specyfikacji RFC 2616. dostępne w witrynie [Internet Engineering Task Force (IETF)](https://www.ietf.org/) . Aby zapoznać się z przykładem kodu, który demonstruje Ustawianie domyślnych zasad opartych na czasie dla [zasobów http, zobacz How to: Ustaw domyślne zasady pamięci podręcznej na podstawie czasu dla](how-to-set-the-default-time-based-cache-policy-for-an-application.md)aplikacji. Przykłady kodu, które demonstrują tworzenie i Używanie zasad pamięci podręcznej, można znaleźć [w temacie Konfigurowanie buforowania w aplikacjach sieciowych](configuring-caching-in-network-applications.md).  
+Zasady pamięci podręcznej oparte na czasie definiuje świeżość wpisów w pamięci podręcznej przy użyciu czasu, w której zasób został pobrany, nagłówki zwrócone z zasobem i bieżący czas. Podczas ustawiania zasad pamięci podręcznej opartych <xref:System.Net.Cache.HttpRequestCacheLevel.Default> na czasie można użyć zasad opartych na czasie lub utworzyć dostosowane zasady oparte na czasie. W przypadku korzystania z domyślnych zasad opartych na czasie dla zasobów uzyskanych przy użyciu protokołu HTTP (Hypertext Transfer Protocol) dokładne zachowanie pamięci podręcznej zależy od nagłówków zawartych w buforowanej odpowiedzi oraz zachowań określonych w sekcjach 13 i 14 RFC 2616, dostępnych w witrynie [internetowej Internet Engineering Task Force (IETF).](https://www.ietf.org/) Przykładowy kod przedstawiający ustawienie domyślnej zasady opartej na czasie dla zasobów HTTP można znaleźć w temacie [Jak: Ustawianie domyślnych zasad pamięci podręcznej opartych na czasie dla aplikacji](how-to-set-the-default-time-based-cache-policy-for-an-application.md). Aby zapoznać się z przykładami kodu, które pokazują tworzenie i używanie zasad pamięci podręcznej, zobacz [Konfigurowanie buforowania w aplikacjach sieciowych](configuring-caching-in-network-applications.md).  
   
-## <a name="criteria-to-determine-freshness-of-cached-entries"></a>Kryteria umożliwiające ustalenie Aktualności buforowanych wpisów  
- Aby dostosować zasady pamięci podręcznej oparte na czasie, można określić, że do określenia Aktualności buforowanych wpisów są używane co najmniej jedno z następujących kryteriów:  
+## <a name="criteria-to-determine-freshness-of-cached-entries"></a>Kryteria określania świeżości wpisów buforowanych  
+ Aby dostosować zasady pamięci podręcznej oparte na czasie, można określić, że co najmniej jedno z następujących kryteriów ma być używane do określania świeżości wpisów w pamięci podręcznej:  
   
 - Maksymalny wiek  
   
 - Maksymalna nieaktualność  
   
-- Minimalna wartość Aktualności  
+- Minimalna świeżość  
   
 - Data synchronizacji pamięci podręcznej  
   
 > [!NOTE]
-> Przy użyciu domyślnych zasad pamięci podręcznej nie należy mylić z ustawieniem domyślnych zasad pamięci podręcznej dla aplikacji. Domyślne zasady oparte na czasie są określonymi zasadami, które mogą być używane na poziomie żądania lub aplikacji. Domyślne zasady pamięci podręcznej dla aplikacji to zasady (oparte na lokalizacji lub czasie), które obowiązują, gdy w żądaniu nie ustawiono żadnych zasad. Aby uzyskać szczegółowe informacje na temat ustawiania domyślnych zasad pamięci podręcznej <xref:System.Net.WebRequest.DefaultCachePolicy%2A>dla aplikacji, zobacz.  
+> Przy użyciu domyślnych zasad pamięci podręcznej opartych na czasie nie należy mylić z ustawieniem domyślnej zasady pamięci podręcznej dla aplikacji. Domyślna zasada oparta na czasie to określona zasada, która może być używana na poziomie żądania lub aplikacji. Domyślne zasady pamięci podręcznej dla aplikacji to zasady (oparte na lokalizacji lub oparte na czasie), które są obowiązywać, gdy nie ustawiono żadnych zasad w żądaniu. Aby uzyskać szczegółowe informacje na temat ustawiania domyślnych zasad pamięci podręcznej dla aplikacji, zobacz <xref:System.Net.WebRequest.DefaultCachePolicy%2A>.  
   
 ### <a name="maximum-age"></a>Maksymalny wiek  
- Kryterium maksymalnego okresu ważności określa ilość czasu, przez który można użyć buforowanej kopii zasobu. Jeśli buforowana kopia zasobu jest starsza niż określona ilość czasu, należy ponownie sprawdzić poprawność zasobu, sprawdzając jego zawartość na serwerze. Jeśli maksymalny wiek zezwoli na użycie zasobu po jego wygaśnięciu, te kryteria nie będą honorowane, chyba że zostanie określona maksymalna wartość nieodświeżona.  
+ Kryterium zasad maksymalnego wieku określa czas, przez jaki może być używana buforowana kopia zasobu. Jeśli buforowana kopia zasobu jest starsza niż określony czas, zasób musi zostać ponownie zweryfikowany, sprawdzając go względem zawartości na serwerze. Jeśli maksymalny wiek pozwoli zasób do użycia po jego wygaśnięciu, kryteria te nie jest honorowane, chyba że określono również maksymalną wartość nieaktualność.  
   
 ### <a name="maximum-staleness"></a>Maksymalna nieaktualność  
- Maksymalne kryterium zasad nieodświeżoności określa czas po wygaśnięciu zawartości, która może być używana w pamięci podręcznej. Jest to jedyne kryterium zasad pamięci podręcznej, które zezwala na używanie zasobów po ich wygaśnięciu.  
+ Kryterium zasad maksymalnego nieaktualności określa czas po wygaśnięciu zawartości, przez który można użyć buforowanej kopii zasobu. Jest to jedyne kryterium zasad pamięci podręcznej, które zezwala na zasoby do użycia po ich wygaśnięciu.  
   
-### <a name="minimum-freshness"></a>Minimalna wartość Aktualności  
- Minimalne kryterium zasad Aktualności określa czas przed wygaśnięciem zawartości, która może zostać użyta w pamięci podręcznej. Ta zasada ma wpływ na wygaśnięcie wpisu pamięci podręcznej przed jego datą wygaśnięcia; w związku z tym minimalne ustawienia Aktualności i maksymalnego przestarzałości wykluczają się wzajemnie.  
+### <a name="minimum-freshness"></a>Minimalna świeżość  
+ Kryterium zasad minimalnej świeżości określa czas przed wygaśnięciem zawartości, przez który można użyć buforowanej kopii zasobu. Ta zasada powoduje, że wpis pamięci podręcznej wygaśnie przed datą wygaśnięcia; w związku z tym minimalne ustawienia świeżości i maksymalnego nieaktualności wzajemnie się wykluczają.  
   
 ## <a name="cache-synchronization-date"></a>Data synchronizacji pamięci podręcznej  
- Kryterium zasad daty synchronizacji pamięci podręcznej określa, kiedy należy ponownie sprawdzić poprawność kopii zasobu w pamięci podręcznej, sprawdzając ją pod kątem zawartości na serwerze. Jeśli zawartość została zmieniona od momentu zbuforowania elementu, jest pobierana z serwera, przechowywany w pamięci podręcznej i zwracany do aplikacji. Jeśli zawartość nie uległa zmianie, jej sygnatura czasowa jest aktualizowana, a aplikacja pobiera zawartość z pamięci podręcznej.  
+ Kryterium zasad daty synchronizacji pamięci podręcznej określa, kiedy buforowana kopia zasobu musi zostać ponownie zweryfikowana, sprawdzając ją względem zawartości na serwerze. Jeśli zawartość uległa zmianie od czasu buforowania elementu, jest pobierana z serwera, przechowywana w pamięci podręcznej i zwracana do aplikacji. Jeśli zawartość nie uległa zmianie, jej sygnatura czasowa jest aktualizowana, a aplikacja pobiera zawartość w pamięci podręcznej.  
   
- Data synchronizacji pamięci podręcznej pozwala określić datę bezwzględną w przypadku konieczności ponownego zweryfikowania zawartości w pamięci podręcznej. Jeśli nowy wpis pamięci podręcznej został ostatnio ponownie sprawdzony przed datą synchronizacji pamięci podręcznej, ponowna Walidacja na serwerze nadal występuje. Jeśli wpis pamięci podręcznej został ponownie zweryfikowany po dacie synchronizacji pamięci podręcznej i nie ma żadnych dodatkowych wymagań dotyczących Aktualności lub ponownego sprawdzania poprawności serwera, który unieważnia wpis w pamięci podręcznej, jest używany wpis z tej pamięci. Jeśli Data synchronizacji pamięci podręcznej jest ustawiona na datę przyszłą, wpis zostanie ponownie zweryfikowany za każdym razem, gdy żądanie zostanie wysłane do momentu, aż upłynie Data synchronizacji pamięci podręcznej.  
+ Data synchronizacji pamięci podręcznej umożliwia określenie daty bezwzględnej, gdy zawartość buforowana musi zostać ponownie oceniona. Jeśli nowy wpis pamięci podręcznej został ostatnio ponownie oceniony przed datą synchronizacji pamięci podręcznej, ponowneuwsznajenie wersji z serwerem nadal występuje. Jeśli wpis pamięci podręcznej został ponownie oceniony po dacie synchronizacji pamięci podręcznej i nie ma żadnych dodatkowych wymagań dotyczących świeżości lub ponownego zmieniania ważności serwera, które unieważniają wpis w pamięci podręcznej, jest używany wpis z pamięci podręcznej. Jeśli data synchronizacji pamięci podręcznej jest ustawiona na przyszłą datę, wpis jest ponownie zmieniany za każdym razem, gdy jest wymagany, dopóki nie przejdzie data synchronizacji pamięci podręcznej.  
   
- Poniższe tematy zawierają informacje dotyczące skutków połączenia kryteriów zasad pamięci podręcznej na podstawie czasu:  
+ Następujące tematy zawierają informacje o skutkach łączenia kryteriów zasad pamięci podręcznej opartych na czasie:  
   
 - [Interakcja z zasadami pamięci podręcznej — maksymalny wiek i maksymalna nieaktualność](cache-policy-interaction-maximum-age-and-maximum-staleness.md)  
   
 - [Interakcja z zasadami pamięci podręcznej — maksymalny wiek i minimalna świeżość](cache-policy-interaction-maximum-age-and-minimum-freshness.md)  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Zarządzanie pamięcią podręczną dla aplikacji sieciowych](cache-management-for-network-applications.md)
 - [Zasady pamięci podręcznej](cache-policy.md)
 - [Zasady pamięci podręcznej oparte na lokalizacji](location-based-cache-policies.md)
 - [Konfigurowanie pamięci podręcznej w aplikacjach sieciowych](configuring-caching-in-network-applications.md)
-- [\<requestCaching >, element (Ustawienia sieci)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+- [\<requestCaching> Element (Ustawienia sieciowe)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)

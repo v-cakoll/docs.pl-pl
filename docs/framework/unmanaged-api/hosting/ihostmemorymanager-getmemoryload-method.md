@@ -15,58 +15,58 @@ helpviewer_keywords:
 ms.assetid: e8138f6e-a0a4-48d4-8dae-9466b4dc6180
 topic_type:
 - apiref
-ms.openlocfilehash: 2210dcd9e8a8af92b7905ec680c53c1119e6a3cf
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 88acd50c83eb1ff4d59aa50d677db2383912659a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136706"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176282"
 ---
 # <a name="ihostmemorymanagergetmemoryload-method"></a>IHostMemoryManager::GetMemoryLoad — Metoda
-Pobiera ilość pamięci fizycznej, która jest aktualnie używana, i dlatego jest niedostępna, zgodnie z informacjami o hoście.  
+Pobiera ilość pamięci fizycznej, która jest obecnie w użyciu i dlatego niedostępne, zgodnie z raportem przez hosta.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
 HRESULT GetMemoryLoad (  
-    [out] DWORD*  pMemoryLoad,   
+    [out] DWORD*  pMemoryLoad,
     [out] SIZE_T  *pAvailableBytes  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `pMemoryLoad`  
- określoną Wskaźnik do przybliżonej wartości procentowej całkowitej ilości pamięci fizycznej, która jest obecnie używana.  
+ [na zewnątrz] Wskaźnik do przybliżonego procentu całkowitej pamięci fizycznej, która jest aktualnie używana.  
   
  `pAvailableBytes`  
- określoną Wskaźnik do liczby bajtów dostępnych dla środowiska uruchomieniowego języka wspólnego (CLR).  
+ [na zewnątrz] Wskaźnik do liczby bajtów dostępnych dla środowiska wykonawczego języka wspólnego (CLR).  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`GetMemoryLoad` pomyślnie zwrócone.|  
-|HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie zostało załadowane do procesu lub środowisko CLR znajduje się w stanie, w którym nie można uruchomić kodu zarządzanego lub przetworzyć wywołania pomyślnie.|  
-|HOST_E_TIMEOUT|Upłynął limit czasu połączenia.|  
-|HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właocicielem blokady.|  
-|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas oczekiwania na niego zablokowanego wątku lub włókna.|  
-|E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwraca wartość E_FAIL, środowisko CLR nie jest już możliwe do użycia w procesie. Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
+|S_OK|`GetMemoryLoad`zwrócono pomyślnie.|  
+|HOST_E_CLRNOTAVAILABLE|Clr nie został załadowany do procesu lub CLR jest w stanie, w którym nie można uruchomić kod zarządzany lub proces wywołania pomyślnie.|  
+|HOST_E_TIMEOUT|Limit czasu połączenia.|  
+|HOST_E_NOT_OWNER|Wywołujący nie jest właścicielem blokady.|  
+|HOST_E_ABANDONED|Zdarzenie zostało anulowane, gdy czekał na niego zablokowany wątek lub włókno.|  
+|E_fail|Doszło do nieznanej katastrofalnej awarii. Gdy metoda zwraca E_FAIL, CLR nie jest już użyteczny w ramach procesu. Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Uwagi  
- `GetMemoryLoad` zawija funkcję Win32 `GlobalMemoryStatus`. Wartość `pMemoryLoad` jest odpowiednikiem pola `dwMemoryLoad` w strukturze `MEMORYSTATUS` zwróconej z `GlobalMemoryStatus`.  
+ `GetMemoryLoad`zawija funkcję `GlobalMemoryStatus` Win32. Wartość jest `pMemoryLoad` odpowiednikiem `dwMemoryLoad` pola w `MEMORYSTATUS` strukturze zwróconej z `GlobalMemoryStatus`.  
   
- Środowisko uruchomieniowe używa wartości zwracanej jako algorytmu heurystycznego modułu wyrzucania elementów bezużytecznych. Na przykład jeśli Host zgłasza, że większość pamięci jest w użyciu, Moduł wyrzucania elementów bezużytecznych może wybrać zbieranie z wielu generacji w celu zwiększenia ilości pamięci, która może być dostępna.  
+ Środowisko wykonawcze używa zwracanej wartości jako heurystyki dla modułu zbierającego elementy bezużyteczne. Na przykład jeśli host zgłasza, że większość pamięci jest w użyciu, moduł zbierający elementy bezużyteczne może wybrać do zbierania z wielu pokoleń, aby zwiększyć ilość pamięci, które mogą potencjalnie stać się dostępne.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE. h  
+ **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
+ **Biblioteka:** Uwzględnione jako zasób w pliku MSCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.GC?displayProperty=nameWithType>
 - [IHostMemoryManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: <section> — element
+title: <section>  — element
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/configSections/section
@@ -8,32 +8,32 @@ helpviewer_keywords:
 - section Element
 - <section> Element
 ms.assetid: ec7d4110-2403-47ac-8218-499bfe9d5ddb
-ms.openlocfilehash: 8785523d664294e3ca3792fb0f84d739d1f1a376
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 88f74c02ef627e9136e4437ffa150c36445266a3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215729"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153736"
 ---
-# <a name="section-element"></a>\<sekcja >
+# <a name="section-element"></a>\<element> sekcji
 
-Zawiera deklarację sekcji konfiguracyjnej.
+Zawiera deklarację sekcji konfiguracji.
 
-[ **\<> konfiguracji**](configuration-element.md)\
-&nbsp;&nbsp;[ **\<configSections >** ](configsections-element-for-configuration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<**
+[**\<>konfiguracyjne**](configuration-element.md)\
+&nbsp;&nbsp;[**\<>konfiguracyjne**](configsections-element-for-configuration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<>sekcji**
 
-[ **\<> konfiguracji**](configuration-element.md)\
-&nbsp;&nbsp;[ **\<configSections >** ](configsections-element-for-configuration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<sekcja**](sectiongroup-element-for-configsections.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp; **&nbsp;&nbsp;\<** >
+[**\<>konfiguracyjne**](configuration-element.md)\
+&nbsp;&nbsp;[**\<>konfiguracyjne**](configsections-element-for-configuration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<sectionGrupa>**](sectiongroup-element-for-configsections.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<>sekcji**
 
 ## <a name="syntax"></a>Składnia
 
 ```xml
 <section name="section name"
          type="configuration section handler class, assembly"
-         allowDefinition="Everywhere|MachineOnly|MachineToApplication" 
+         allowDefinition="Everywhere|MachineOnly|MachineToApplication"
          allowLocation="true|false" />
 ```
 
@@ -41,59 +41,59 @@ Zawiera deklarację sekcji konfiguracyjnej.
 
 |           | Opis |
 | --------- | ----------- |
-| **Nazwij**  | Określa nazwę sekcji konfiguracji. |
-| **type**  | Określa nazwę klasy procedury obsługi sekcji konfiguracji, która odczytuje sekcję z pliku konfiguracyjnego. Wartość typu ma składnię "w pełni kwalifikowana-sekcja-Handler-class-name, Simple-Assembly-Name". Prosta nazwa zestawu to główna nazwa pliku bez rozszerzenia pliku *dll* . |
+| **Nazwa**  | Określa nazwę sekcji konfiguracji. |
+| **Typu**  | Określa nazwę klasy obsługi sekcji konfiguracji, która odczytuje sekcję z pliku konfiguracji. Wartość typu ma składnię "w pełni kwalifikowana sekcja-handler-class-name, simple-assembly-name". Prosta nazwa zestawu to główna nazwa pliku bez rozszerzenia pliku *.dll.* |
 
 ## <a name="optional-attributes"></a>Atrybuty opcjonalne
 
-Następujące atrybuty są stosowane tylko w przypadku aplikacji ASP.NET. System konfiguracji ignoruje te atrybuty dla innych typów aplikacji.
+Następujące atrybuty mają zastosowanie tylko do aplikacji ASP.NET. System konfiguracji ignoruje te atrybuty dla innych typów aplikacji.
 
 |                     | Opis |
 | ------------------- | ----------- |
-| **allowDefinition** | Określa plik konfiguracji, w którym można użyć sekcji. Użyj jednej z następujących wartości:<br><br>**Tam**<br>Zezwala na używanie sekcji w dowolnym pliku konfiguracyjnym. Domyślnie włączone.<br>**MachineOnly**<br>Zezwala na użycie sekcji tylko w pliku konfiguracji komputera (*Machine. config*).<br>**MachineToApplication**<br>Zezwala na używanie sekcji w pliku konfiguracji komputera lub pliku konfiguracyjnym aplikacji. |
-| **allowLocation**   | Określa, czy sekcja może być używana w **\<lokalizacji >** elementu. Użyj jednej z następujących wartości:<br><br>**true**<br>Zezwala na używanie sekcji w **\<lokalizacji >** elementu. Domyślnie włączone.<br>**false**<br>Nie zezwala na używanie sekcji w **\<lokalizacji >** elementu. |
+| **zezwalaj NaDefiniowanie** | Określa, w którym pliku konfiguracyjnym może być używany sekcja. Użyj jednej z następujących wartości:<br><br>**Wszędzie**<br>Umożliwia użycie sekcji w dowolnym pliku konfiguracyjnym. Domyślnie włączone.<br>**MaszynaOnująca**<br>Umożliwia użycie sekcji tylko w pliku konfiguracyjnym komputera (*Machine.config*).<br>**Machinetoapplication**<br>Umożliwia użycie sekcji w pliku konfiguracyjnym komputera lub w pliku konfiguracyjnym aplikacji. |
+| **allowLocation (zezwalajlokalizacja)**   | Określa, czy sekcja może być używana w ** \<>** element lokalizacji. Użyj jednej z następujących wartości:<br><br>**true**<br>Umożliwia użycie sekcji w obrębie ** \<elementu>lokalizacji.** Domyślnie włączone.<br>**false**<br>Nie zezwala na użycie sekcji w obrębie ** \<>** elementu lokalizacji. |
 
 ## <a name="parent-elements"></a>Elementy nadrzędne
 
 |     | Opis |
 | --- | ----------- |
-| [ **\<configSections >** Postaci](configsections-element-for-configuration.md) | Zawiera sekcję konfiguracyjną i deklaracje przestrzeni nazw. |
-| [ **\<sekcji >** Postaci](sectiongroup-element-for-configsections.md) | Definiuje przestrzeń nazw dla sekcji konfiguracyjnych. |
+| [** \<configSekcje>** Element](configsections-element-for-configuration.md) | Zawiera sekcje konfiguracji i deklaracje obszaru nazw. |
+| [** \<sectionGrupa>** Element](sectiongroup-element-for-configsections.md) | Definiuje obszar nazw dla sekcji konfiguracji. |
 
 > [!NOTE]
-> **\<sekcja >** jest elementem podrzędnym **\<configSections >** lub **\<** , ale nie obu.
+> Element ** \<>sekcji** jest elementem podrzędnym ** \<konfisycji>** lub ** \<sectionGroup>** ale nie obu.
 
 ## <a name="child-elements"></a>Elementy podrzędne
 
-None
+Brak
 
 ## <a name="remarks"></a>Uwagi
 
-Deklarowanie sekcji konfiguracji zasadniczo definiuje nowy element pliku konfiguracji. Nowy element zawiera ustawienia, które są używane przez sekcję konfiguracyjną (czyli klasy implementującej interfejs <xref:System.Configuration.IConfigurationSectionHandler>). Atrybuty i elementy podrzędne zdefiniowanej sekcji zależą od procedury obsługi sekcji używanej do odczytywania ustawień.
+Deklarowanie sekcji konfiguracji zasadniczo definiuje nowy element dla pliku konfiguracji. Nowy element zawiera ustawienia, które odczytuje program obsługi sekcji <xref:System.Configuration.IConfigurationSectionHandler> konfiguracji (czyli klasa implementujący interfejs). Atrybuty i elementy podrzędne zdefiniowanej sekcji zależą od programu obsługi sekcji używanego do odczytywania ustawień.
 
-Deklarowanie procedury obsługi sekcji konfiguracji w pliku *Machine. config* umożliwia korzystanie z sekcji konfiguracji w dowolnym pliku konfiguracyjnym aplikacji na tym komputerze, chyba że atrybut **AllowDefinition** określa inaczej.
+Deklarowanie obsługi sekcji konfiguracji w pliku *Machine.config* umożliwia użycie sekcji konfiguracji w dowolnym pliku konfiguracji aplikacji na tym komputerze, chyba że atrybut **allowDefinition** określa inaczej.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak zdefiniować sekcję konfiguracyjną i zdefiniować ustawienia dla tej sekcji:
+W poniższym przykładzie pokazano, jak zdefiniować sekcję konfiguracji i zdefiniować ustawienia dla tej sekcji:
 
 ```xml
 <configuration>
   <configSections>
     <section name="sampleSection"
-             type="System.Configuration.SingleTagSectionHandler" 
+             type="System.Configuration.SingleTagSectionHandler"
              allowLocation="false" />
   </configSections>
-  <sampleSection setting1="Value1" 
-                 setting2="value two" 
+  <sampleSection setting1="Value1"
+                 setting2="value two"
                  setting3="third value" />
 </configuration>
 ```
 
 ## <a name="configuration-file"></a>Plik konfiguracji
 
-Tego elementu można użyć w pliku konfiguracyjnym aplikacji, pliku konfiguracji komputera (*Machine. config*) i plikach *Web. config* , które nie znajdują się na poziomie katalogu aplikacji.
+Ten element może być używany w pliku konfiguracyjnym aplikacji, pliku konfiguracyjnym komputera *(Machine.config)* i plikach *Web.config,* które nie znajdują się na poziomie katalogu aplikacji.
 
 ## <a name="see-also"></a>Zobacz też
 
-- [Schemat pliku konfiguracji dla .NET Framework](index.md)
+- [Schemat pliku konfiguracyjnego programu .NET Framework](index.md)

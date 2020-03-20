@@ -5,71 +5,71 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8025ba1d-29c7-4407-841b-d5a3bed40b7a
-ms.openlocfilehash: 2d9df4d479605c0a2514fe30a9150ab7bcfe904e
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 97ceef3377a67fc621a097843abade9c61c29ca1
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251154"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78848772"
 ---
 # <a name="compiled-queries--linq-to-entities"></a>Zapytania skompilowane (LINQ to Entities)
-W przypadku aplikacji, która wykonuje zapytania podobne do strukturalnie w Entity Framework, można często zwiększyć wydajność, kompilując zapytanie jeden raz i wykonując je kilka razy z innymi parametrami. Na przykład aplikacja może wymagać pobrania wszystkich klientów z określonego miasta. Miasto jest określone w czasie wykonywania przez użytkownika w formularzu. LINQ to Entities obsługuje w tym celu używanie skompilowanych zapytań.  
+Jeśli masz aplikację, która wykonuje strukturalnie podobne zapytania wiele razy w entity framework, często można zwiększyć wydajność, kompilując kwerendę jeden raz i wykonując go kilka razy z różnymi parametrami. Na przykład aplikacja może być konieczności pobierania wszystkich klientów w określonym mieście; miasto jest określone w czasie wykonywania przez użytkownika w formularzu. LINQ do jednostek obsługuje przy użyciu skompilowanych zapytań w tym celu.  
   
- Począwszy od .NET Framework 4,5, zapytania LINQ są buforowane automatycznie. Można jednak nadal używać skompilowanych zapytań LINQ, aby ograniczyć ten koszt do późniejszych wykonań, a skompilowane zapytania mogą być bardziej wydajne niż zapytania LINQ, które są automatycznie buforowane. Należy zauważyć, że zapytania LINQ to Entities, `Enumerable.Contains` które stosują operator do kolekcji w pamięci, nie są automatycznie buforowane. Parametryzacja również kolekcje w pamięci w skompilowanych zapytaniach LINQ są niedozwolone.  
+ Począwszy od programu .NET Framework 4.5, zapytania LINQ są buforowane automatycznie. Jednak nadal można użyć skompilowanych zapytań LINQ, aby zmniejszyć ten koszt w późniejszych wykonaniach i skompilowanych kwerend może być bardziej wydajne niż zapytania LINQ, które są automatycznie buforowane. Należy zauważyć, że LINQ do `Enumerable.Contains` jednostek kwerendy, które stosują operatora do kolekcji w pamięci nie są automatycznie buforowane. Również parametryzowanie kolekcji w pamięci w skompilowanych kwerend LINQ jest niedozwolone.  
   
- <xref:System.Data.Objects.CompiledQuery> Klasa zawiera kompilację i buforowanie zapytań do ponownego użycia. Koncepcyjnie, ta klasa zawiera <xref:System.Data.Objects.CompiledQuery> `Compile` metodę z kilkoma przeciążeniami. Wywołaj `Compile` metodę, aby utworzyć nowy delegat reprezentujący skompilowane zapytanie. Metody, dostarczone <xref:System.Data.Objects.ObjectContext> z wartościami parametrów i zwracają delegata, który tworzy jakiś <xref:System.Linq.IQueryable%601> wynik (na przykład wystąpienie). `Compile` Zapytanie kompiluje się raz podczas pierwszego wykonania. Opcji scalania ustawionych dla zapytania w czasie kompilacji nie można później zmienić. Po skompilowaniu zapytania można dostarczyć tylko parametry typu pierwotnego, ale nie można zastąpić części zapytania, które mogłyby spowodować zmianę wygenerowanej bazy danych SQL. Aby uzyskać więcej informacji, zobacz [Entity Framework opcje scalania i skompilowane zapytania](https://go.microsoft.com/fwlink/?LinkId=199591)  
+ Klasa <xref:System.Data.Objects.CompiledQuery> zapewnia kompilacji i buforowania kwerend do ponownego użycia. Koncepcyjnie ta <xref:System.Data.Objects.CompiledQuery>klasa `Compile` zawiera metodę 's z kilkoma przeciążeniami. Wywołanie `Compile` metody, aby utworzyć nowego pełnomocnika do reprezentowania skompilowane zapytanie. Metody, `Compile` dostarczone z <xref:System.Data.Objects.ObjectContext> wartościami i parametrami, zwracają delegata, <xref:System.Linq.IQueryable%601> który daje pewne wyniki (takie jak wystąpienie). Kwerenda kompiluje się raz podczas tylko pierwszego wykonania. Opcji scalania ustawionych dla kwerendy w czasie kompilacji nie można później zmienić. Po skompilowaniu kwerendy można podać tylko parametry typu pierwotnego, ale nie można zastąpić części kwerendy, które mogłyby zmienić wygenerowany SQL. Aby uzyskać więcej informacji, zobacz [Opcje korespondencji seryjnej EF i Skompilowane kwerendy](https://docs.microsoft.com/archive/blogs/dsimmons/ef-merge-options-and-compiled-queries).
   
- Wyrażenie <xref:System.Data.Objects.CompiledQuery>zapytania LINQ to Entities, które `Compile` jest kompilowane Metoda jest reprezentowane przez jeden z delegatów ogólnych `Func` , takich jak <xref:System.Func%605>. Co więcej, wyrażenie zapytania może hermetyzować `ObjectContext` parametr, parametr Return i 16 parametrów zapytania. Jeśli wymagane są więcej niż 16 parametrów zapytania, można utworzyć strukturę, której właściwości reprezentują parametry zapytania. Po ustawieniu właściwości można użyć właściwości struktury w wyrażeniu zapytania.  
+ Linq do jednostek zapytanie <xref:System.Data.Objects.CompiledQuery>wyrażenie, które skompiluje `Compile` metoda `Func` jest reprezentowana <xref:System.Func%605>przez jednego z delegatów rodzajowych, takich jak . Co najwyżej wyrażenie kwerendy może hermetyzować `ObjectContext` parametr, parametr zwracany i 16 parametrów kwerendy. Jeśli wymagane jest więcej niż 16 parametrów kwerendy, można utworzyć strukturę, której właściwości reprezentują parametry kwerendy. Następnie można użyć właściwości struktury w wyrażeniu kwerendy po ustawieniu właściwości.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kompiluje, a następnie wywołuje zapytanie, które akceptuje <xref:System.Decimal> parametr wejściowy i zwraca sekwencję zamówień, w których całkowita liczba operacji jest większa lub równa $200,00:  
+ Poniższy przykład kompiluje, a następnie wywołuje <xref:System.Decimal> kwerendę, która akceptuje parametr wejściowy i zwraca sekwencję zamówień, w których całkowita należność jest większa lub równa $200.00:  
   
  [!code-csharp[DP L2E Conceptual Examples#CompiledQuery2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery2)]
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery2)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kompiluje, a następnie wywołuje zapytanie zwracające <xref:System.Data.Objects.ObjectQuery%601> wystąpienie:  
+ Poniższy przykład kompiluje, a następnie <xref:System.Data.Objects.ObjectQuery%601> wywołuje kwerendę, która zwraca wystąpienie:  
   
  [!code-csharp[DP L2E Conceptual Examples#CompiledQuery1_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery1_mq)]
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery1_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery1_mq)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kompiluje, a następnie wywołuje zapytanie, które zwraca średnią cen z listy produktów jako <xref:System.Decimal> wartość:  
+ Poniższy przykład kompiluje, a następnie wywołuje kwerendę, która <xref:System.Decimal> zwraca średnią cen listy produktów jako wartość:  
   
  [!code-csharp[DP L2E Conceptual Examples#CompiledQuery3_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery3_mq)]
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery3_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery3_mq)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kompiluje, a następnie wywołuje kwerendę akceptującą <xref:System.String> parametr wejściowy, a następnie zwraca wartość, `Contact` której adres e-mail rozpoczyna się od określonego ciągu:  
+ Poniższy przykład kompiluje, a następnie wywołuje <xref:System.String> kwerendę, która `Contact` akceptuje parametr wejściowy, a następnie zwraca, którego adres e-mail rozpoczyna się od określonego ciągu:  
   
  [!code-csharp[DP L2E Conceptual Examples#CompiledQuery4_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery4_mq)]
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery4_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery4_mq)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kompiluje, a następnie wywołuje kwerendę akceptującą <xref:System.DateTime> i <xref:System.Decimal> wejściową parametrów oraz zwraca sekwencję zamówień, w których Data zamówienia jest późniejsza niż 8 marca 2003, a łączna kwota jest mniejsza niż $300,00:  
+ Poniższy przykład kompiluje, a następnie <xref:System.DateTime> wywołuje <xref:System.Decimal> kwerendę, która akceptuje i wprowadzania parametrów i zwraca sekwencję zamówień, gdzie data zamówienia jest późniejsza niż 8 marca 2003 r., a całkowita należność jest mniejsza niż $300.00:  
   
  [!code-csharp[DP L2E Conceptual Examples#CompiledQuery5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery5)]
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery5)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kompiluje, a następnie wywołuje kwerendę akceptującą <xref:System.DateTime> parametr wejściowy i zwraca sekwencję zamówień, w których Data zamówienia jest późniejsza niż 8 marca 2004. To zapytanie zwraca informacje o kolejności jako sekwencję typów anonimowych. Typy anonimowe są wywnioskowane przez kompilator, dlatego nie można określić parametrów typu w <xref:System.Data.Objects.CompiledQuery> `Compile` metodzie, a typ jest zdefiniowany w zapytaniu.  
+ Poniższy przykład kompiluje, a następnie wywołuje <xref:System.DateTime> kwerendę, która akceptuje parametr wejściowy i zwraca sekwencję zamówień, w której data zamówienia jest późniejsza niż 8 marca 2004. Ta kwerenda zwraca informacje o kolejności jako sekwencję typów anonimowych. Typy anonimowe są wywnioskowane przez kompilator, więc nie można określić parametry typu w metodzie <xref:System.Data.Objects.CompiledQuery>'s `Compile` i typ jest zdefiniowany w samej kwerendzie.  
   
  [!code-csharp[DP L2E Conceptual Examples#CompiledQuery6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery6)]
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery6)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kompiluje, a następnie wywołuje kwerendę akceptującą parametr wejściowy struktury zdefiniowanej przez użytkownika i zwraca sekwencję zamówień. Struktura definiuje datę początkową, datę końcową i łączną liczbę parametrów zapytania, a zapytanie zwraca zamówienia wysłane między 3 marca i 8 marca 2003 ze wszystkimi wynikami przekraczającymi $700,00.  
+ Poniższy przykład kompiluje, a następnie wywołuje kwerendę, która akceptuje parametr wejściowy struktury zdefiniowanej przez użytkownika i zwraca sekwencję zamówień. Struktura definiuje datę rozpoczęcia, datę zakończenia i całkowite parametry kwerendy due, a kwerenda zwraca zamówienia wysłane między 3 marca a 8 marca 2003 r. o łącznej wartości należnej większej niż 700,00 USD.  
   
  [!code-csharp[DP L2E Conceptual Examples#CompiledQuery7](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery7)]
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery7)]  
   
- Struktura, która definiuje parametry zapytania:  
+ Struktura definiująca parametry kwerendy:  
   
  [!code-csharp[DP L2E Conceptual Examples#MyParamsStruct](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#myparamsstruct)]
  [!code-vb[DP L2E Conceptual Examples#MyParamsStruct](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#myparamsstruct)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Program Entity Framework na platformie ADO.NET](../index.md)
 - [LINQ to Entities](linq-to-entities.md)
-- [Entity Framework opcje scalania i skompilowane zapytania](https://go.microsoft.com/fwlink/?LinkId=199591)
+- [Opcje scalania EF i skompilowane kwerendy](https://docs.microsoft.com/archive/blogs/dsimmons/ef-merge-options-and-compiled-queries)

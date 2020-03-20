@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
-ms.openlocfilehash: 6082a171d24c55ea52c153bbd920bb7486be78a7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5e9a00ab78a57c3c1686d7c87ed8b45d9b2649af
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784374"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150834"
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>Wykonywanie zapytania XPath w elemencie DataSet
-Relacja między zsynchronizowaną <xref:System.Data.DataSet> i <xref:System.Xml.XmlDataDocument> umożliwia korzystanie z usług XML, takich jak zapytanie XML Path Language (XPath), które uzyskuje dostęp do **XmlDataDocument** i może działać bardziej wygodnie niż bezpośredni dostęp do **zestawu danych** . <xref:System.Data.DataTable> Na przykład zamiast używać metody **SELECT** elementu do nawigacji relacji do innych tabel w **zestawie danych**, można wykonać zapytanie XPath na **XmlDataDocument** , który jest synchronizowany z **zestawem danych**, aby uzyskać Lista elementów XML w postaci <xref:System.Xml.XmlNodeList>. Węzły w **XmlNodeList**, rzutowania jako <xref:System.Xml.XmlElement> węzły, mogą następnie zostać przesłane do metody **GetRowFromElement** **XmlDataDocument**, aby zwracały pasujące <xref:System.Data.DataRow> odwołania do wierszy tabeli zsynchronizowanych  **Zestaw danych**.  
+Relacja <xref:System.Data.DataSet> między zsynchronizowanym i <xref:System.Xml.XmlDataDocument> umożliwia korzystanie z usług XML, takich jak xml path language (XPath), które uzyskują dostęp do **XmlDataDocument** i można wykonywać pewne funkcje wygodniej niż dostęp do **DataSet** bezpośrednio. Na przykład zamiast używać **Select** metody Select <xref:System.Data.DataTable> a do nawigowania relacji do innych tabel w **zestawie danych,** można wykonać kwerendę XPath na **XmlDataDocument,** który jest zsynchronizowany z **Zestawem danych**, aby uzyskać listę elementów XML w postaci <xref:System.Xml.XmlNodeList>pliku . Węzły w **XmlNodeList**, <xref:System.Xml.XmlElement> rzutowane jako węzły, mogą być następnie przekazywane do **Metody GetRowFromElement** dokumentu <xref:System.Data.DataRow> **XmlDataDocument**, aby zwrócić pasujące odwołania do wierszy tabeli w zsynchronizowanym zestawie **danych**.  
   
- Na przykład poniższy kod przykład wykonuje zapytanie XPath "grandchild". **Zestaw danych** jest wypełniony trzema tabelami: **Klienci**, **zamówienia**i **OrderDetails**. W przykładzie relacja nadrzędny-podrzędny jest najpierw tworzona między tabelami **Customers** i **Orders** oraz między tabelami **Orders** i **OrderDetails** . Następnie zostanie wykonane zapytanie XPath w celu zwrócenia **XmlNodeList** węzłów **klientów** , gdzie węzeł grandchild **OrderDetails** ma węzeł **ProductID** o wartości 43. W zasadzie przykład używa zapytania XPath, aby określić, którzy klienci mają zamówiony produkt o identyfikatorze **ProductID** 43.  
+ Na przykład poniższy przykład kodu wykonuje kwerendę XPath "wnuk". Zestaw **danych** jest wypełniony trzema tabelami: **Klienci,** **Zamówienia**i **Szczegóły zamówienia.** W przykładzie relacja nadrzędny podrzędny jest najpierw tworzony między **klientami** i **zamówienia** tabel oraz między **zamówieniami** i **OrderDetails** tabel. Następnie wykonuje się kwerendę XPath w celu zwrócenia **XmlNodeList** węzłów **klientów,** w których węzeł **OrderDetails** wnuka ma węzeł **ProductID** o wartości 43. W istocie przykład używa XPath kwerendy, aby ustalić, którzy klienci zamówili produkt, który ma **ProductID** 43.  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection.  
@@ -43,7 +43,7 @@ dataSet.Relations.Add("OrderDetail", _
   dataSet.Tables("Orders").Columns("OrderID"), _  
 dataSet.Tables("OrderDetails").Columns("OrderID"), false).Nested = true  
   
-Dim xmlDoc As XmlDataDocument = New XmlDataDocument(dataSet)   
+Dim xmlDoc As XmlDataDocument = New XmlDataDocument(dataSet)
   
 Dim nodeList As XmlNodeList = xmlDoc.DocumentElement.SelectNodes( _  
   "descendant::Customers[*/OrderDetails/ProductID=43]")  
@@ -84,10 +84,10 @@ dataSet.Relations.Add("CustOrders",
   
 dataSet.Relations.Add("OrderDetail",  
   dataSet.Tables["Orders"].Columns["OrderID"],  
-  dataSet.Tables["OrderDetails"].Columns["OrderID"],   
+  dataSet.Tables["OrderDetails"].Columns["OrderID"],
   false).Nested = true;  
   
-XmlDataDocument xmlDoc = new XmlDataDocument(dataSet);   
+XmlDataDocument xmlDoc = new XmlDataDocument(dataSet);
   
 XmlNodeList nodeList = xmlDoc.DocumentElement.SelectNodes(  
   "descendant::Customers[*/OrderDetails/ProductID=43]");  
@@ -101,7 +101,7 @@ foreach (XmlNode xmlNode in nodeList)
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Synchronizacja elementów DataSet i XmlDataDocument](dataset-and-xmldatadocument-synchronization.md)
 - [Omówienie ADO.NET](../ado-net-overview.md)

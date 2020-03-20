@@ -4,76 +4,77 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
-ms.openlocfilehash: 548594379f95952c79363759b8570cf5e2709cff
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 78d80a88153ee15f7ab152da44801c77900f874d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643563"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184599"
 ---
 # <a name="queues-overview"></a>Omówienie kolejek
-W tej sekcji przedstawiono ogólne i podstawowe pojęcia związane oczekujących komunikacji. Kolejne sekcje przejść do szczegółów dotyczących sposobu kolejkowania pojęcia opisane w tym miejscu są dyskowe widoczne w Windows Communication Foundation (WCF).  
+
+W tej sekcji przedstawiono ogólne i podstawowe pojęcia dotyczące komunikacji w kolejce. Kolejne sekcje przejść do szczegółów dotyczących sposobu kolejkowania pojęcia opisane w tym miejscu są widoczne w Programie Windows Communication Foundation (WCF).  
   
-## <a name="basic-queuing-concepts"></a>Podstawowe pojęcia kolejkowania wiadomości  
- Podczas projektowania aplikacji rozproszonej, wybierając odpowiednie transport dla komunikacji między usługami i klientami jest ważne. Kilka czynników wpływa na rodzaj transportu do użycia. Jednym ważnym czynnikiem — izolacji między usługą, klienta i transport — Określa użycie transportu umieszczonych w kolejce lub transportu bezpośredniego, takiego jak protokół TCP lub HTTP. Ze względu na charakter transportów bezpośrednich, takich jak TCP i HTTP, komunikacja zatrzymuje się całkowicie czy usługi lub klienta przestanie działać, czy sieć nie powiedzie się. Usługi, klient i sieć musi działać w tym samym czasie dla aplikacji do pracy. Transporty umieszczonych w kolejce zapewniają izolację, co oznacza, że w przypadku awarii usługi lub klienta lub w przypadku awarii łącza komunikacji między nimi, klienta i usługi mogą nadal działać.  
+## <a name="basic-queuing-concepts"></a>Podstawowe koncepcje kolejkowania  
+ Podczas projektowania aplikacji rozproszonej ważne jest wybranie odpowiedniego transportu do komunikacji między usługami a klientami. Kilka czynników wpływa na rodzaj transportu do wykorzystania. Jeden ważny czynnik — izolacja między usługą, klientem i transportem — określa użycie transportu w kolejce lub transportu bezpośredniego, takiego jak TCP lub HTTP. Ze względu na charakter transportu bezpośredniego, takich jak TCP i HTTP, komunikacja zatrzymuje się całkowicie, jeśli usługa lub klient przestanie działać lub jeśli sieć ulegnie awarii. Usługa, klient i sieć muszą być uruchomione w tym samym czasie, aby aplikacja działała. Transporty w kolejce zapewniają izolację, co oznacza, że jeśli usługa lub klient nie powiedzie się lub jeśli łącza komunikacyjne między nimi nie powiedzie się, klient i usługa mogą nadal działać.  
   
- Kolejki stanowią niezawodny, nawet w przypadku błędów strony komunikujące się lub sieci. Kolejki przechwytywania i dostarczania wiadomości wymieniane między uczestników komunikacji. Kolejki są zazwyczaj obsługiwane przez pewnego rodzaju magazynu, który może być lotnych lub trwałe. Kolejki przechowywanie komunikatów w kliencie w imieniu usługi i później przekazuje te komunikaty do usługi. Operatory pośrednie, które kolejki zapewniają zapewnić izolację awarii przez którąkolwiek ze stron, w związku z tym co systemy o wysokiej dostępności przy użyciu mechanizmu komunikacji preferowanych i odłączone usług. Operator pośredni jest powiązana z koszt duże opóźnienie. *Opóźnienie* jest czas opóźnienia między czas, klient wysyła komunikat i usługa odbiera on. Oznacza to, że po wysłaniu komunikatu nie wiadomo, kiedy można przetworzyć ten komunikat. Najbardziej umieszczonych w kolejce aplikacji poradzić sobie z duże opóźnienie. Na poniższej ilustracji przedstawiono model koncepcyjny komunikatu w kolejce.  
+ Kolejki zapewniają niezawodną komunikację nawet w przypadku awarii w komunikujących się stronach lub w sieci. Kolejki przechwytują i dostarczają wiadomości wymieniane między komunikującymi się stronami. Kolejki są zazwyczaj wspierane przez jakiś sklep, który może być lotny lub trwały. Kolejki przechowują wiadomości od klienta w imieniu usługi, a później prześlij te wiadomości do usługi. Kolejki pośrednie zapewniają zapewnioną izolację awarii przez jedną ze stron, co czyni go preferowanym mechanizmem komunikacji dla systemów o wysokiej dostępności i odłączonych usług. Pośredni jest z kosztem dużych opóźnień. *Opóźnienie* to opóźnienie między czasem, w której klient wysyła wiadomość, a czasem, w której usługa ją odbiera. Oznacza to, że po wysłaniu wiadomości nie wiadomo, kiedy ta wiadomość może zostać przetworzona. Większość aplikacji w kolejce radzi sobie z dużym opóźnieniem. Na poniższej ilustracji przedstawiono koncepcyjny model komunikacji w kolejce.  
   
- ![Model komunikacji umieszczonych w kolejce](../../../../docs/framework/wcf/feature-details/media/qconceptual-figure1c.gif "QConceptual Figure1c")  
+ ![Model komunikacji w kolejce](../../../../docs/framework/wcf/feature-details/media/qconceptual-figure1c.gif "QConceptual-Rysunek1c")  
   
- Model koncepcyjny komunikacji z obsługą kolejek  
+ Model koncepcyjny komunikacji w kolejce  
   
- W rzeczywistości kolejka jest koncepcja rozproszonych. W efekcie mogą być lokalny dla każdej ze stron lub zdalnej w obie strony. Zazwyczaj kolejki jest lokalny z usługą. W tej konfiguracji klient nie może zależeć od łączności Kolejka zdalna ma być stale dostępny. Podobnie kolejki musi być dostępny, niezależnie od dostępności usługi czytania z kolejki. Menedżer kolejki zarządza kolekcji kolejek. Jest on odpowiedzialny za akceptowanie komunikatów wysłanych do swojej kolejki z innych menedżerów kolejki. Jest również odpowiedzialny za zarządzanie połączeniem kolejek zdalnych i przesyłania komunikatów do tych kolejkach zdalnego. Aby zapewnić dostępność kolejek, niezależnie od awarii aplikacji klienckich lub usługi, Menedżer kolejki jest zazwyczaj uruchamiany jako usługi zewnętrznej.  
+ W rzeczywistości kolejka jest pojęciem rozproszonym. W związku z tym mogą one być lokalne dla każdej ze stron lub zdalne dla obu stron. Zazwyczaj kolejka jest lokalna dla usługi. W tej konfiguracji klient nie może zależeć od łączności z kolejką zdalną, która będzie stale dostępna. Podobnie kolejka musi być dostępna niezależnie od dostępności usługi odczytu z kolejki. Menedżer kolejek zarządza kolekcją kolejek. Jest odpowiedzialny za akceptowanie wiadomości wysyłanych do swoich kolejek od innych menedżerów kolejek. Jest również odpowiedzialny za zarządzanie łącznością z kolejkami zdalnymi i przesyłanie wiadomości do tych kolejek zdalnych. Aby zapewnić dostępność kolejek pomimo awarii aplikacji klienta lub usługi, menedżer kolejki jest zazwyczaj uruchamiany jako usługa zewnętrzna.  
   
- Gdy klient wysyła komunikat do kolejki, adresy wiadomości do kolejki docelowej jest kolejką zarządzane przez usługę Menedżer kolejki. Menedżer kolejki na kliencie wysyła wiadomość do transmisji (lub wychodzące) kolejki. Kolejki transmisji jest kolejką na menedżera kolejek klient, który przechowuje komunikaty w celu przesłania go do kolejki docelowej. Menedżer kolejki następnie znalezienie ścieżki menedżera kolejki, który jest właścicielem kolejka docelowa i przesyła do niej komunikatu. W celu zapewnienia komunikacji niezawodnej menedżerami kolejki zaimplementować protokół transferu niezawodne, aby zapobiec utracie danych. Menedżer kolejki docelowej akceptuje komunikaty adresowane do kolejki docelowej jest właścicielem i zapisuje komunikaty. Usługa wykonuje żądania odczytu z kolejki docelowej, które Menedżer kolejki po następnie dostarcza wiadomość do aplikacji docelowej. Poniższa ilustracja przedstawia komunikacji między cztery strony.  
+ Gdy klient wysyła wiadomość do kolejki, adresuje wiadomość do kolejki docelowej, która jest kolejką zarządzaną przez menedżera kolejek usługi. Menedżer kolejek na kliencie wysyła wiadomość do kolejki transmisji (lub wychodzącej). Kolejka transmisji jest kolejką w menedżerze kolejki klienta, która przechowuje wiadomości do transmisji do kolejki docelowej. Menedżer kolejek znajduje ścieżkę do menedżera kolejek, który jest właścicielem kolejki docelowej i przenosi do niej wiadomość. Aby zapewnić niezawodną komunikację, menedżerowie kolejek implementują niezawodny protokół transferu, aby zapobiec utracie danych. Menedżer kolejek docelowych akceptuje wiadomości adresowane do kolejek docelowych, które posiada, i przechowuje wiadomości. Usługa wysyła żądania do odczytu z kolejki docelowej, w którym to czasie menedżer kolejki następnie dostarcza komunikat do aplikacji docelowej. Na poniższej ilustracji przedstawiono komunikację między czterema stronami.  
   
- ![Diagram aplikacji w kolejce](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "rozproszonych kolejka rysunek")  
+ ![Diagram aplikacji w kolejce](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Liczba rozproszonych kolejek")  
   
- Komunikacji z obsługą kolejek w scenariuszu typowe wdrożenie  
+ Komunikacja w kolejce w typowym scenariuszu wdrażania  
   
- W związku z tym Menedżer kolejki udostępnia wymaganą izolację, tak aby nadawca i odbiorca może niezależnie zakończyć się niepowodzeniem bez wywierania wpływu na rzeczywistych komunikacji. Korzyści dodatkowe pośredniego, zapewniające kolejek umożliwia także wielu wystąpień aplikacji do odczytywania z tej samej kolejki tak, aby hodowli pracy między węzłami osiąga większej przepływności. W związku z tym nie jest niczym niezwykłym, aby wyświetlić używane w celu uzyskania większej skali i wymagań w zakresie przepływności kolejek.  
+ W związku z tym menedżer kolejki zapewnia wymaganą izolację, dzięki czemu nadawca i odbiorca mogą niezależnie zakończyć się niepowodzeniem bez wpływu na rzeczywistą komunikację. Korzyści z dodatkowych pośrednich, które zapewniają kolejki umożliwia również wiele wystąpień aplikacji do odczytu z tej samej kolejki, dzięki czemu praca rolnictwo między węzłami osiąga wyższą przepływność. W związku z tym nie jest rzadkością, aby zobaczyć kolejki używane do osiągnięcia wyższej skali i przepływności wymagania.  
   
-## <a name="queues-and-transactions"></a>Kolejki i transakcji  
- Transakcje umożliwiają grupowanie zestawu operacji, więc, że jeśli jedna operacja zakończy się niepowodzeniem, wszystkie operacje zakończyć się niepowodzeniem. Przykładowy sposób, aby móc używać transakcji jest, gdy osoba używa ATM do transferowania 1000 USD z jego rachunek oszczędnościowy jego konta. Pociąga za sobą następujące operacje:  
+## <a name="queues-and-transactions"></a>Kolejki i transakcje  
+ Transakcje umożliwiają grupowanie zestawu operacji razem, tak aby w przypadku niepowodzenia jednej operacji wszystkie operacje zakończyć się niepowodzeniem. Przykładem użycia transakcji jest to, że dana osoba korzysta z bankomatu do przelania 1000 USD z konta oszczędnościowego na swoje konto czekowe. Wiąże się to z następującymi operacjami:  
   
-- Wycofanie 1000 USD z konta oszczędności.  
+- Wypłata $1,000 z konta oszczędnościowego.  
   
-- Złożenie 1000 USD przeznaczony do konta rozliczeniowego.  
+- Wpłacenie $1,000 na konto czekowe.  
   
- Jeśli pierwsza operacja zakończy się pomyślnie i 1000 USD są wybierane z konta oszczędności, ale druga operacja zakończy się niepowodzeniem, 1000 USD jest utracone, ponieważ została już wycofana z konta oszczędności. Aby zachować konta w nieprawidłowym stanie, jeśli jedna operacja zakończy się niepowodzeniem, zarówno operacji musi zakończyć się niepowodzeniem.  
+ Jeśli pierwsza operacja zakończy się powodzeniem, a 1000 USD zostanie wycofane z konta oszczędnościowego, ale druga operacja zakończy się niepowodzeniem, 1000 USD zostanie utracone, ponieważ zostało już wycofane z konta oszczędnościowego. Aby zachować konta w prawidłowym stanie, jeśli jedna operacja zakończy się niepowodzeniem, obie operacje muszą zakończyć się niepowodzeniem.  
   
- W wiadomości transakcyjne wiadomości można wysłanych do kolejki i odbierane z kolejki w ramach transakcji. W związku z tym jeśli wiadomość jest wysyłana w transakcji, transakcja zostanie wycofana następnie wynik jest tak, jakby nigdy wiadomość została wysłana do kolejki. Podobnie jeśli wiadomość zostaje odebrana w transakcji, transakcja zostanie wycofana następnie wynik jest tak, jakby komunikatu nie było nigdy nie zostały odebrane. Komunikat pozostaje w kolejce do odczytu.  
+ W wiadomościach transakcyjnych wiadomości mogą być wysyłane do kolejki i odbierane z kolejki w ramach transakcji. W związku z tym jeśli wiadomość jest wysyłana w transakcji i transakcja jest przywracana, a następnie wynik jest tak, jakby wiadomość nigdy nie zostały wysłane do kolejki. Podobnie, jeśli wiadomość zostanie odebrana w transakcji i transakcja jest przywracana, wynik jest tak, jakby wiadomość nigdy nie została odebrana. Wiadomość pozostaje w kolejce do odczytania.  
   
- Ze względu na duże opóźnienie podczas wysyłania wiadomości, że nie ma możliwości określenia, jak długo trwa dotrzeć do swojej kolejki docelowej, podobnie jak wiesz, jak długo trwa do przetwarzania wiadomości usługi. W związku z tym czy chcesz użyć jednej transakcji do wysłania wiadomości, pojawia się komunikat o, a następnie przetworzyć komunikatu. Spowoduje to utworzenie transakcji, która nie jest zatwierdzona przez nieokreślony czas. Gdy klient i usługa komunikują się za pośrednictwem kolejki za pomocą transakcji, dwie transakcje są zaangażowane: jeden na kliencie i jeden w usłudze. Poniższa ilustracja przedstawia granice transakcji w typowej komunikacji z obsługą kolejek.  
+ Ze względu na duże opóźnienia podczas wysyłania wiadomości nie masz możliwości poznania, jak długo trwa dotarcie do kolejki docelowej, ani nie wiesz, jak długo trwa usługa do przetworzenia wiadomości. Z tego powodu nie chcesz używać pojedynczej transakcji do wysyłania wiadomości, odbierania wiadomości, a następnie przetwarzania wiadomości. Spowoduje to utworzenie transakcji, która nie jest zatwierdzona przez nieokreślony czas. Gdy klient i usługa komunikują się za pośrednictwem kolejki przy użyciu transakcji, zaangażowane są dwie transakcje: jedna na kliencie i jedna w usłudze. Na poniższej ilustracji przedstawiono granice transakcji w typowej komunikacji w kolejce.  
   
- ![Kolejka o transakcji](../../../../docs/framework/wcf/feature-details/media/qwithtransactions-figure3.gif "QWithTransactions Figure3")  
+ ![Kolejka z transakcjami](../../../../docs/framework/wcf/feature-details/media/qwithtransactions-figure3.gif "QWithTransactions-Rysunek3")  
   
- Wyświetlanie oddzielnych transakcji do przechwytywania i dostarczania komunikacji z obsługą kolejek  
+ Komunikacja w kolejce pokazująca oddzielne transakcje do przechwytywania i dostarczania  
   
- Transakcja klienta przetwarza i wysyła komunikat. Gdy transakcja zostanie zatwierdzone, komunikat jest w kolejce transmisji. W usłudze transakcji odczytuje komunikat z kolejki docelowej, przetwarza komunikat i następnie zatwierdzeń transakcji. Jeśli wystąpi błąd podczas przetwarzania, komunikat jest wycofana i umieszczane w kolejce docelowej.  
+ Transakcja klienta przetwarza i wysyła komunikat. Po zawiązaniu transakcji komunikat znajduje się w kolejce transmisji. W usłudze transakcja odczytuje komunikat z kolejki docelowej, przetwarza komunikat, a następnie zatwierdza transakcję. Jeśli wystąpi błąd podczas przetwarzania, wiadomość jest przywracana i umieszczana w kolejce docelowej.  
   
-## <a name="asynchronous-communication-using-queues"></a>Komunikacji asynchronicznej za pomocą kolejek  
- Kolejki zapewniają asynchronicznych metod komunikacji. Aplikacje, które wysyłania komunikatów przy użyciu kolejki nie może czekać na komunikat jest odbierany i przetwarzany przez odbiornik. ze względu na duże opóźnienia wynikające z menedżera kolejek. Komunikaty mogą pozostać w kolejce znacznie dłużej niż aplikacja przeznaczone. Aby tego uniknąć, aplikacja może określić wartość czasu wygaśnięcia wiadomości. Ta wartość określa, jak długo komunikat może pozostawać w kolejce transmisji. Jeśli ta wartość czasu zostanie przekroczony, a komunikat wciąż nie została wysłana do kolejki docelowej, można przenieść komunikatu do kolejki utraconych wiadomości.  
+## <a name="asynchronous-communication-using-queues"></a>Komunikacja asynchronizacjowa przy użyciu kolejek  
+ Kolejki zapewniają asynchroniczne środki komunikacji. Aplikacje, które wysyłają wiadomości przy użyciu kolejek nie można czekać na wiadomość, która ma zostać odebrana i przetworzona przez odbiorcę z powodu dużych opóźnień wprowadzonych przez menedżera kolejek. Wiadomości mogą pozostać w kolejce przez znacznie dłuższy czas niż aplikacja przeznaczona. Aby tego uniknąć, aplikacja może określić wartość czas do żywo w wiadomości. Ta wartość określa, jak długo wiadomość powinna pozostać w kolejce transmisji. Jeśli ta wartość czasu zostanie przekroczona, a wiadomość nadal nie została wysłana do kolejki docelowej, wiadomość może zostać przeniesiona do kolejki utraconych wiadomości.  
   
- Gdy nadawca wysyła komunikat, powrocie z operacji wysyłania oznacza, że wiadomość tylko dotarło do kolejki transmisji na nadawcy. Jako takie Jeśli występuje błąd podczas pobierania komunikatu do kolejki docelowej, aplikacji wysyłającej nie ma informacji o nim natychmiast. Zapoznanie się z tych błędów, nie powiodło się komunikat jest przekazywana do kolejki utraconych wiadomości.  
+ Gdy nadawca wysyła wiadomość, powrót z operacji wysyłania oznacza, że wiadomość tylko dotarła do kolejki transmisji u nadawcy. W związku z tym jeśli występuje błąd w uzyskaniu wiadomości do kolejki docelowej, aplikacja wysyłająca nie może wiedzieć o tym natychmiast. Aby wziąć pod uwagę takie błędy, wiadomość nie powiodła się jest przenoszona do kolejki utraconych wiadomości.  
   
- Jakikolwiek błąd, takich jak wiadomości, których nie można osiągnąć kolejka docelowa lub Time-To-Live wygaśnie, muszą być przetwarzane osobno. Nie jest niczym niezwykłym, dlatego aplikacje umieszczonych w kolejce do zapisania dwa zestawy logiki:  
+ Każdy błąd, taki jak komunikat, który nie może dotrzeć do kolejki docelowej lub wygasający czas wygaśnięcia, musi być przetwarzany oddzielnie. Nie jest rzadkością, w związku z tym dla aplikacji w kolejce do zapisu dwa zestawy logiki:  
   
-- Normalne klient i usługa logiki wysyłania i odbierania wiadomości.  
+- Normalna logika klienta i usługi wysyłania i odbierania wiadomości.  
   
-- Logiki wyrównującej może obsługiwać komunikaty z transmisji nieudane lub dostarczania.  
+- Logika kompensacji do obsługi wiadomości z nieudanej transmisji lub dostarczania.  
   
  W poniższych sekcjach omówiono te pojęcia.  
   
-## <a name="dead-letter-queue-programming"></a>Programowanie kolejki utraconych wiadomości  
- Kolejki utraconych wiadomości zawiera wiadomości, które nie zostały dostarczone do kolejki docelowej z różnych powodów. Powody do zakresu od wygasłe wiadomości do problemów z łącznością, wykluczając transferu wiadomości do kolejki docelowej.  
+## <a name="dead-letter-queue-programming"></a>Programowanie kolejek utraconych  
+ Kolejki utraconych wiadomości zawierają wiadomości, których nie udało się dotrzeć do kolejki docelowej z różnych powodów. Przyczyny mogą wahać się od wygasłych wiadomości do problemów z łącznością uniemożliwiających przeniesienie wiadomości do kolejki docelowej.  
   
- Zazwyczaj aplikacja może odczytywać komunikaty z kolejki utraconych wiadomości całego systemu i określić, co poszło źle i podjąć odpowiednie działania, takie jak naprawa błędów i ponowne wysyłanie wiadomości lub biorąc pod uwagę jej.  
+ Zazwyczaj aplikacja może odczytywać wiadomości z kolejki utraconych wiadomości w całym systemie, określić, co poszło nie tak i podjąć odpowiednie działania, takie jak poprawianie błędów i ponowne wysyłanie wiadomości lub zanotowanie jej.  
   
-## <a name="poison-message-queue-programming"></a>Obsługa zanieczyszczonych komunikatów kolejki programowania  
- Po powoduje komunikat do kolejki docelowej, usługa wielokrotnie może zakończyć się niepowodzeniem przetworzyć komunikatu. Na przykład aplikacja czytania wiadomości z kolejki w ramach transakcji i aktualizowanie bazy danych może się okazać bazy danych, tymczasowo odłączone. W tym przypadku transakcja zostanie wycofana, utworzono nową transakcję i komunikat jest ponownie Pobierz z kolejki. Druga próba może powodzenie lub niepowodzenie. W niektórych przypadkach w zależności od przyczyny tego błędu komunikat wielokrotnie mogą nie działać dostarczania aplikacji. W takich przypadkach komunikat jest uznawany za jako "poison." Takie wiadomości są przenoszone do kolejki skażone, który może zostać odczytany przez aplikację do obsługi poison.  
+## <a name="poison-message-queue-programming"></a>Programowanie kolejki trujących komunikatów  
+ Po wiadomości sprawia, że do kolejki docelowej, usługa może wielokrotnie nie przetwarzać wiadomości. Na przykład aplikacja odczytująca wiadomość z kolejki w ramach transakcji i aktualizująca bazę danych może znaleźć bazę danych tymczasowo rozłączony. W takim przypadku transakcja jest przywracana, tworzona jest nowa transakcja, a wiadomość jest ponownie odczytyna z kolejki. Druga próba może zakończyć się powodzeniem lub niepowodzeniem. W niektórych przypadkach, w zależności od przyczyny błędu, komunikat może wielokrotnie zakończyć się niepowodzeniem dostarczania do aplikacji. W takim przypadku wiadomość jest uważana za "truciznę". Takie komunikaty są przenoszone do kolejki trucizny, które mogą być odczytywane przez aplikację obsługi trucizny.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Tworzenie kolejek w programie WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
 - [Sesje i kolejki](../../../../docs/framework/wcf/samples/sessions-and-queues.md)

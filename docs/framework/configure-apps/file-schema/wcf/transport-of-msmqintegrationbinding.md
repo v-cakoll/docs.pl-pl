@@ -2,23 +2,23 @@
 title: <transport> dla <msmqIntegrationBinding>
 ms.date: 03/30/2017
 ms.assetid: 054579e3-7fdd-47df-99ca-952706ba5c8e
-ms.openlocfilehash: 28c8c877a766e0d881dd04f27298fae332bf08f8
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 1cb165fed9266307335482166116c4c1d62efe7e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73736023"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79152960"
 ---
-# <a name="transport-of-msmqintegrationbinding"></a>\<Transport > \<msmqIntegrationBinding >
-Definiuje ustawienia zabezpieczeń dla transportu integracji usługi kolejkowania komunikatów.  
+# <a name="transport-of-msmqintegrationbinding"></a>\<> transportowy \<msmqIntegrationBinding>
+Definiuje ustawienia zabezpieczeń dla transportu integracji Usługi kolejkowania wiadomości.  
   
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<powiązań**](bindings.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<MsmqIntegrationBinding**](msmqintegrationbinding.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<powiązania >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<zabezpieczeń**](security-of-msmqintegrationbinding.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<transport >**  
+[**\<>konfiguracyjne**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<wiązania>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<msmqIntegrationBinding>**](msmqintegrationbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<wiążące>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<>bezpieczeństwa**](security-of-msmqintegrationbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<>transportowe**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -32,16 +32,16 @@ Definiuje ustawienia zabezpieczeń dla transportu integracji usługi kolejkowani
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
- W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.  
+ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne  
   
 ### <a name="attributes"></a>Atrybuty  
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`msmqAuthenticationMode`|Określa, jak wiadomość musi zostać uwierzytelniona przez transport usługi MSMQ. Jeśli jest ustawiona na `None`, wartość atrybutu `msmqProtectionLevel` musi również być ustawiona na `None`.<br /><br /> Prawidłowe wartości to:<br /><br /> -Brak: brak uwierzytelniania.<br />-WindowsDomain: mechanizm uwierzytelniania używa Active Directory, aby uzyskać certyfikat X. 509 dla identyfikatora SID skojarzonego z wiadomością. Ta wartość jest następnie używana do sprawdzenia listy ACL kolejki, aby upewnić się, że użytkownik ma uprawnienia do zapisu w kolejce.<br />-Certificate: kanał pobiera certyfikat z magazynu certyfikatów.<br /><br /> Wartość domyślna to WindowsDomain. Ten atrybut jest typu <xref:System.ServiceModel.MsmqAuthenticationMode>.|  
-|`msmqEncryptionAlgorithm`|Określa algorytm używany do szyfrowania wiadomości w sieci podczas przesyłania komunikatów między menedżerami kolejki wiadomości. Prawidłowe wartości to:<br /><br /> - RC4Stream<br />-AES<br /><br /> Wartość domyślna to RC4Stream. Ten atrybut jest typu <xref:System.ServiceModel.MsmqEncryptionAlgorithm>.|  
-|`msmqProtectionLevel`|Określa, w jaki sposób wiadomość jest zabezpieczona na poziomie transportu usługi MSMQ. Szyfrowanie zapewnia integralność komunikatów, podczas gdy EncryptAndSign zapewnia integralność komunikatów i odrzucanie. oznacza to, że komunikat rzeczywiście pochodzi od nadawcy, a nadawca jest jego informacją.<br /><br /> -Prawidłowe wartości są następujące:<br />-Brak: brak ochrony.<br />-Sign: komunikaty są podpisane.<br />-EncryptAndSign: komunikaty są szyfrowane i podpisane.<br /><br /> Wartość domyślna to Sign. Ten atrybut jest typu ProtectionLevel.|  
-|`msmqSecureHashAlgorithm`|-Określa algorytm, który ma być używany podczas obliczania skrótu jako części podpisów. Prawidłowe wartości to:<br />-MD5<br />-SHA1<br />-SHA256<br />-SHA512<br /><br /> Wartość domyślna to SHA1. Ten atrybut jest typu <xref:System.ServiceModel.MsmqSecureHashAlgorithm>.<br>Ze względu na kolizje problemów z algorytmem MD5 i algorytmem SHA1 firma Microsoft zaleca SHA256ą lub lepszą.|  
+|`msmqAuthenticationMode`|Określa sposób uwierzytelniania wiadomości przez transport usługi MSMQ. Jeśli jest ustawiona na `None`wartość `msmqProtectionLevel` , wartość atrybutu `None`musi być również ustawiona na .<br /><br /> Prawidłowe wartości są następujące:<br /><br /> - Brak: Brak uwierzytelniania.<br />- WindowsDomain: Mechanizm uwierzytelniania używa usługi Active Directory, aby uzyskać certyfikat X.509 dla identyfikatora SID skojarzonego z wiadomością. Jest to następnie używane do sprawdzania listy ACL kolejki, aby upewnić się, że użytkownik ma uprawnienia do zapisu w kolejce.<br />- Certyfikat: Kanał pobiera certyfikat z magazynu certyfikatów.<br /><br /> Wartością domyślną jest WindowsDomain. Ten atrybut jest <xref:System.ServiceModel.MsmqAuthenticationMode>typu .|  
+|`msmqEncryptionAlgorithm`|Określa algorytm, który ma być używany do szyfrowania wiadomości w sieci podczas przesyłania wiadomości między menedżerami kolejek komunikatów. Prawidłowe wartości są następujące:<br /><br /> - RC4Stream<br />- AES<br /><br /> Wartością domyślną jest RC4Stream. Ten atrybut jest <xref:System.ServiceModel.MsmqEncryptionAlgorithm>typu .|  
+|`msmqProtectionLevel`|Określa sposób zabezpieczenia wiadomości na poziomie transportu usługi MSMQ. Szyfrowanie zapewnia integralność wiadomości, podczas gdy EncryptAndSign zapewnia integralność wiadomości i nie odrzuca; oznacza to, że wiadomość rzeczywiście pochodzi od nadawcy, a nadawca jest tym, kim mówią, że są.<br /><br /> - Prawidłowe wartości są następujące:<br />- Brak: Brak ochrony.<br />- Podpisz: Wiadomości są podpisane.<br />- EncryptAndSign: Wiadomości są szyfrowane i podpisane.<br /><br /> Wartością domyślną jest Sign. Ten atrybut jest typu ProtectionLevel.|  
+|`msmqSecureHashAlgorithm`|- Określa algorytm, który ma być używany do obliczania skrótu jako część podpisów. Prawidłowe wartości są następujące:<br />- MD5<br />- SHA1<br />- SHA256<br />- SHA512<br /><br /> Wartością domyślną jest SHA1. Ten atrybut jest <xref:System.ServiceModel.MsmqSecureHashAlgorithm>typu .<br>Ze względu na problemy z kolizją z MD5 i SHA1 firma Microsoft zaleca sha256 lub lepsze.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -50,12 +50,12 @@ Definiuje ustawienia zabezpieczeń dla transportu integracji usługi kolejkowani
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[> zabezpieczeń \<](security-of-basichttpbinding.md)|Definiuje ustawienia zabezpieczeń dla powiązania usługi MSMQ.|  
+|[\<>bezpieczeństwa](security-of-basichttpbinding.md)|Definiuje ustawienia zabezpieczeń dla powiązania usługi MSMQ.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ten element hermetyzuje ustawienia zabezpieczeń dla transportu integracji usługi kolejkowania komunikatów. Te ustawienia są takie same dla integracji usługi kolejkowania komunikatów i transportów znajdujących się w kolejce. Umożliwia ustawienie trybu uwierzytelniania, algorytmu szyfrowania, algorytmu bezpiecznego skrótu i poziomu ochrony.  
+ Ten element hermetyzuje ustawienia zabezpieczeń dla transportu integracji Usługi kolejkowania wiadomości. Ustawienia są takie same zarówno dla integracji usługi kolejkowania wiadomości, jak i transportów w kolejce. Umożliwia ustawienie trybu uwierzytelniania, algorytmu szyfrowania, bezpiecznego algorytmu mieszania i poziomu ochrony.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity.Transport%2A>
@@ -65,4 +65,4 @@ Definiuje ustawienia zabezpieczeń dla transportu integracji usługi kolejkowani
 - [Powiązania](../../../wcf/bindings.md)
 - [Konfigurowanie powiązań dostarczanych przez system](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Konfigurowanie usług i klientów za pomocą powiązań](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [> powiązań \<](bindings.md)
+- [\<wiążące>](bindings.md)

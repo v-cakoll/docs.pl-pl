@@ -1,19 +1,18 @@
 ---
-ms.openlocfilehash: a7a8bd1a9823a621f3a63c6877da9454489b48fd
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: c9c46793a0f66894649796d960547848ff5ebf8c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67858474"
 ---
-### <a name="gridviews-with-allowcustompaging-set-to-true-may-fire-the-pageindexchanging-event-when-leaving-the-final-page-of-the-view"></a>GridViews z o wartości true Wartość AllowCustomPaging może wyzwalać zdarzenia PageIndexChanging podczas opuszczania ostatnią stronę widoku
+### <a name="gridviews-with-allowcustompaging-set-to-true-may-fire-the-pageindexchanging-event-when-leaving-the-final-page-of-the-view"></a>GridViews z AllowCustomPaging ustawiony na true może odpalić PageIndexChanging zdarzenia po opuszczeniu ostatniej strony widoku
 
 |   |   |
 |---|---|
-|Szczegóły|Powoduje to błąd w .NET Framework 4.5 <xref:System.Web.UI.WebControls.GridView.PageIndexChanging?displayProperty=name> czasami nie ognia dla <xref:System.Web.UI.WebControls.GridView?displayProperty=name>s, które mają włączone <xref:System.Web.UI.WebControls.GridView.AllowCustomPaging?displayProperty=name>.|
-|Sugestia|Ten problem został rozwiązany w .NET Framework 4.6 i może zostać zlikwidowane przez uaktualnienie do wersji programu .NET Framework. Jako obejście, aplikacja nie dysponuje jawne BindGrid na dowolnym <code>Page_Load</code> , osiągnie tych warunków ( <xref:System.Web.UI.WebControls.GridView?displayProperty=name> jest na ostatniej stronie, a ostatni<xref:System.Web.UI.WebControls.GridView.PageSize?displayProperty=name> różni się od <xref:System.Web.UI.WebControls.GridView.PageSize?displayProperty=name>). Alternatywnie aplikacji można zmodyfikować umożliwia stronicowania (zamiast stronicowanie niestandardowych), ten scenariusz nie przedstawiono tu problem.|
-|Scope|Mały|
+|Szczegóły|Błąd w .NET Framework 4.5 powoduje, <xref:System.Web.UI.WebControls.GridView.PageIndexChanging?displayProperty=name> <xref:System.Web.UI.WebControls.GridView?displayProperty=name>że czasami nie <xref:System.Web.UI.WebControls.GridView.AllowCustomPaging?displayProperty=name>uruchamia się dla s, które zostały włączone .|
+|Sugestia|Ten problem został rozwiązany w .NET Framework 4.6 i może zostać rozwiązany przez uaktualnienie do tej wersji programu .NET Framework. Jako obejście, aplikacja może zrobić wyraźne BindGrid <code>Page_Load</code> na każdym, który <xref:System.Web.UI.WebControls.GridView?displayProperty=name> trafi te warunki<xref:System.Web.UI.WebControls.GridView.PageSize?displayProperty=name> (jest <xref:System.Web.UI.WebControls.GridView.PageSize?displayProperty=name>na ostatniej stronie i Last różni się od ). Alternatywnie aplikacja może być modyfikowana, aby umożliwić stronicowanie (zamiast niestandardowego stronicowania), ponieważ ten scenariusz nie wykazuje problemu.|
+|Zakres|Mały|
 |Wersja|4.5|
 |Typ|Środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Web.UI.WebControls.GridView.AllowCustomPaging?displayProperty=nameWithType></li></ul>|
-

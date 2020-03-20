@@ -4,44 +4,44 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bitmap effects [WPF]
 ms.assetid: 23cb338e-4b59-4b52-b294-96431f9c9568
-ms.openlocfilehash: 4a5c304363efe7d0e9bd9e14ff916f8d852ab3a8
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 4a5e73f21d4ce4988f56c139d13038dca902b5b1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636019"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186993"
 ---
 # <a name="bitmap-effects-overview"></a>Przegląd Efekty mapy bitowej
-Efekty mapy bitowej umożliwiają projektantom i deweloperom stosowanie efektów wizualnych do renderowanej zawartości Windows Presentation Foundation (WPF). Na przykład efekty mapy bitowej umożliwiają łatwe stosowanie efektu <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> lub efektu rozmycia do obrazu lub przycisku.  
+Efekty bitmapowe umożliwiają projektantom i deweloperom stosowanie efektów wizualnych do renderowanych treści Programu Windows Presentation Foundation (WPF). Na przykład efekty bitmapy umożliwiają <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> łatwe zastosowanie efektu lub efektu rozmycia do obrazu lub przycisku.  
   
 > [!IMPORTANT]
-> W .NET Framework 4 lub nowszych Klasa <xref:System.Windows.Media.Effects.BitmapEffect> jest przestarzała. Jeśli spróbujesz użyć klasy <xref:System.Windows.Media.Effects.BitmapEffect>, zostanie wyświetlony przestarzały wyjątek. Nieprzestarzała alternatywa dla klasy <xref:System.Windows.Media.Effects.BitmapEffect> jest klasą <xref:System.Windows.Media.Effects.Effect>. W większości sytuacji Klasa <xref:System.Windows.Media.Effects.Effect> jest znacznie szybsza.  
+> W .NET Framework 4 lub <xref:System.Windows.Media.Effects.BitmapEffect> nowszych klasa jest przestarzała. Jeśli spróbujesz <xref:System.Windows.Media.Effects.BitmapEffect> użyć klasy, otrzymasz przestarzały wyjątek. Nieprzestarzewszą <xref:System.Windows.Media.Effects.BitmapEffect> alternatywą <xref:System.Windows.Media.Effects.Effect> dla klasy jest klasa. W większości sytuacji <xref:System.Windows.Media.Effects.Effect> klasa jest znacznie szybsza.  
 
-<a name="wpf_effects"></a>   
-## <a name="wpf-bitmap-effects"></a>Efekty mapy bitowej WPF  
- Efekty mapy bitowej (<xref:System.Windows.Media.Effects.BitmapEffect> Object) to proste operacje przetwarzania pikseli. Efekt mapy bitowej przyjmuje <xref:System.Windows.Media.Imaging.BitmapSource> jako dane wejściowe i tworzy nowy <xref:System.Windows.Media.Imaging.BitmapSource> po zastosowaniu efektu, takiego jak rozmycie lub cień. Każdy efekt mapy bitowej uwidacznia właściwości, które mogą kontrolować właściwości filtrowania, takie jak <xref:System.Windows.Media.Effects.BlurBitmapEffect.Radius%2A> <xref:System.Windows.Media.Effects.BlurBitmapEffect>.  
+<a name="wpf_effects"></a>
+## <a name="wpf-bitmap-effects"></a>Efekty bitmapy WPF  
+ Efekty bitmapowe (obiekt)<xref:System.Windows.Media.Effects.BitmapEffect> są prostymi operacjami przetwarzania pikseli. Efekt mapy bitowej <xref:System.Windows.Media.Imaging.BitmapSource> przyjmuje jako dane wejściowe i tworzy nowy <xref:System.Windows.Media.Imaging.BitmapSource> po zastosowaniu efektu, na przykład rozmycie lub cień. Każdy efekt mapy bitowej udostępnia właściwości, które mogą kontrolować <xref:System.Windows.Media.Effects.BlurBitmapEffect.Radius%2A> <xref:System.Windows.Media.Effects.BlurBitmapEffect>właściwości filtrowania, takie jak .  
   
- W specjalnym przypadku, w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], efekty mogą być ustawiane jako właściwości obiektów <xref:System.Windows.Media.Visual> na żywo, takich jak <xref:System.Windows.Controls.Button> lub <xref:System.Windows.Controls.TextBox>. Przetwarzanie pikseli jest stosowane i renderowane w czasie wykonywania. W tym przypadku w czasie renderowania <xref:System.Windows.Media.Visual> jest automatycznie konwertowana na <xref:System.Windows.Media.Imaging.BitmapSource> równoważne i jest podawana jako dane wejściowe do <xref:System.Windows.Media.Effects.BitmapEffect>. Dane wyjściowe zastępują domyślne zachowanie renderowania obiektu <xref:System.Windows.Media.Visual>. Dlatego <xref:System.Windows.Media.Effects.BitmapEffect> obiekty wymuszają wizualizację do renderowania wyłącznie w oprogramowaniu, tj. bez przyspieszania sprzętowego dla wizualizacji, gdy są stosowane efekty.  
+ W szczególnym przypadku [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]efekty w programie można ustawić <xref:System.Windows.Media.Visual> jako właściwości obiektów <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.TextBox>żywych, takich jak lub . Przetwarzanie pikseli jest stosowane i renderowane w czasie wykonywania. W takim przypadku, w czasie renderowania, a <xref:System.Windows.Media.Visual> jest <xref:System.Windows.Media.Imaging.BitmapSource> automatycznie konwertowany na <xref:System.Windows.Media.Effects.BitmapEffect>jego odpowiednik i jest podawany jako dane wejściowe do . Dane wyjściowe <xref:System.Windows.Media.Visual> zastępują domyślne zachowanie renderowania obiektu. Dlatego <xref:System.Windows.Media.Effects.BitmapEffect> obiekty zmuszają wizualizacje do renderowania w oprogramowaniu tylko wtedy, gdy są stosowane efekty, nie ma akceleracji sprzętowej na wizualizacjach.  
   
-- <xref:System.Windows.Media.Effects.BlurBitmapEffect> symuluje nieskoncentrowany obiekt.  
+- <xref:System.Windows.Media.Effects.BlurBitmapEffect>symuluje obiekt, który wydaje się nieokreślenia.  
   
-- <xref:System.Windows.Media.Effects.OuterGlowBitmapEffect> tworzy otoczkę koloru wokół obwodu obiektu.  
+- <xref:System.Windows.Media.Effects.OuterGlowBitmapEffect>tworzy aureolę koloru na obwodzie obiektu.  
   
-- <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> tworzy cień za obiektem.  
+- <xref:System.Windows.Media.Effects.DropShadowBitmapEffect>tworzy cień za obiektem.  
   
-- <xref:System.Windows.Media.Effects.BevelBitmapEffect> tworzy skos, który podnosi powierzchnię obrazu zgodnie z określoną krzywą.  
+- <xref:System.Windows.Media.Effects.BevelBitmapEffect>tworzy skos, który podnosi powierzchnię obrazu zgodnie z określoną krzywą.  
   
-- <xref:System.Windows.Media.Effects.EmbossBitmapEffect> tworzy mapowanie nierówności <xref:System.Windows.Media.Visual>, aby dać wrażenie głębokości i tekstury z sztucznego źródła światła.  
-  
-> [!NOTE]
-> Efekty mapy bitowej WPF są renderowane w trybie oprogramowania. Każdy obiekt, który stosuje efekt, będzie również renderowany w oprogramowaniu. Wydajność jest obniżana w przypadku używania efektów mapy bitowej w dużych wizualizacjach lub animowania właściwości efektu mapy bitowej. Nie oznacza to, że w ten sposób nie powinno się używać efektów mapy bitowej w ten sposób, ale należy zachować ostrożność i przetestować dokładnie, aby upewnić się, że użytkownicy uzyskują oczekiwane doświadczenie.  
+- <xref:System.Windows.Media.Effects.EmbossBitmapEffect>tworzy odwzorowanie <xref:System.Windows.Media.Visual> wypukłości a, aby dać wrażenie głębi i tekstury ze sztucznego źródła światła.  
   
 > [!NOTE]
-> Efekty mapy bitowej WPF nie obsługują częściowego wykonywania zaufania. Aplikacja musi mieć uprawnienia pełnego zaufania, aby można było używać efektów mapy bitowej.  
+> Efekty bitmapy WPF są renderowane w trybie oprogramowania. Każdy obiekt, który stosuje efekt, będzie również renderowany w oprogramowaniu. Wydajność jest najbardziej obniżana podczas używania efektów bitmapowych na dużych wizualizacjach lub animowaniu właściwości efektu bitmapy. Nie oznacza to, że nie należy używać efektów bitmapy w ten sposób w ogóle, ale należy zachować ostrożność i dokładnie przetestować, aby upewnić się, że użytkownicy są coraz doświadczenie można oczekiwać.  
   
-<a name="applyeffects"></a>   
+> [!NOTE]
+> Efekty mapy bitowej WPF nie obsługują częściowego wykonywania zaufania. Aplikacja musi mieć pełne uprawnienia zaufania do używania efektów bitmapowych.  
+  
+<a name="applyeffects"></a>
 ## <a name="how-to-apply-an-effect"></a>Jak zastosować efekt  
- <xref:System.Windows.Media.Effects.BitmapEffect> jest właściwością <xref:System.Windows.Media.Visual>. W związku z tym stosowanie efektów do wizualizacji, takich jak <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.Image>, <xref:System.Windows.Media.DrawingVisual>lub <xref:System.Windows.UIElement>, jest tak proste jak ustawienie właściwości. <xref:System.Windows.UIElement.BitmapEffect%2A> można ustawić na pojedynczy obiekt <xref:System.Windows.Media.Effects.BitmapEffect> lub wiele efektów może być łańcucha przy użyciu obiektu <xref:System.Windows.Media.Effects.BitmapEffectGroup>.  
+ <xref:System.Windows.Media.Effects.BitmapEffect>jest własnością <xref:System.Windows.Media.Visual>na . Dlatego stosowanie efektów do wizualizacji, <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Image>takich <xref:System.Windows.Media.DrawingVisual>jak <xref:System.Windows.UIElement>, , , lub , jest tak proste, jak ustawienie właściwości. <xref:System.Windows.UIElement.BitmapEffect%2A>można ustawić na <xref:System.Windows.Media.Effects.BitmapEffect> pojedynczy obiekt lub wiele efektów <xref:System.Windows.Media.Effects.BitmapEffectGroup> można przywiązywać za pomocą obiektu.  
   
  W poniższym przykładzie pokazano, jak zastosować <xref:System.Windows.Media.Effects.BitmapEffect> w [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
   
@@ -52,13 +52,13 @@ Efekty mapy bitowej umożliwiają projektantom i deweloperom stosowanie efektów
  [!code-csharp[EffectsGallery_snip#CodeBehindBlurCodeBehindExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/EffectsGallery_snip/CSharp/blurcodebehindexample.xaml.cs#codebehindblurcodebehindexampleinline)]  
   
 > [!NOTE]
-> Gdy <xref:System.Windows.Media.Effects.BitmapEffect> jest stosowana do kontenera układu, takiego jak <xref:System.Windows.Controls.DockPanel> lub <xref:System.Windows.Controls.Canvas>, efekt jest stosowany do drzewa wizualnego elementu lub wizualizacji, w tym wszystkich elementów podrzędnych.  
+> Gdy <xref:System.Windows.Media.Effects.BitmapEffect> a jest stosowany do kontenera <xref:System.Windows.Controls.DockPanel> <xref:System.Windows.Controls.Canvas>układu, takich jak lub , efekt jest stosowany do drzewa wizualnego elementu lub wizualizacji, w tym wszystkie jego elementy podrzędne.  
   
-<a name="customeffects"></a>   
-## <a name="creating-custom-effects"></a>Tworzenie niestandardowych efektów  
- WPF udostępnia także niezarządzane interfejsy do tworzenia niestandardowych efektów, które mogą być używane w zarządzanych aplikacjach WPF. Dodatkowe materiały referencyjne służące do tworzenia niestandardowych efektów mapy bitowej można znaleźć w dokumentacji dotyczącej [niezarządzanego efektu mapy BITOWEJ WPF](https://docs.microsoft.com/previous-versions/windows/desktop/wibe/-wibe-lh) .  
+<a name="customeffects"></a>
+## <a name="creating-custom-effects"></a>Tworzenie efektów niestandardowych  
+ WPF WPF udostępnia również interfejsy niezarządzane do tworzenia efektów niestandardowych, które mogą być używane w zarządzanych aplikacji WPF. Aby uzyskać dodatkowy materiał referencyjny do tworzenia niestandardowych efektów bitmapowych, zobacz dokumentację [Efekt bitmapowy Unmanaged WPF.](https://docs.microsoft.com/previous-versions/windows/desktop/wibe/-wibe-lh)  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Windows.Media.Effects.BitmapEffectGroup>
 - <xref:System.Windows.Media.Effects.BitmapEffectInput>
@@ -66,5 +66,5 @@ Efekty mapy bitowej umożliwiają projektantom i deweloperom stosowanie efektów
 - [Niezarządzany efekt mapy bitowej WPF](https://docs.microsoft.com/previous-versions/windows/desktop/wibe/-wibe-lh)
 - [Obrazowanie — przegląd](imaging-overview.md)
 - [Zabezpieczenia](../security-wpf.md)
-- [Renderowanie grafiki WPF — przegląd](wpf-graphics-rendering-overview.md)
+- [Przegląd Renderowanie grafiki WPF](wpf-graphics-rendering-overview.md)
 - [Grafika 2D i obrazowanie](../advanced/optimizing-performance-2d-graphics-and-imaging.md)

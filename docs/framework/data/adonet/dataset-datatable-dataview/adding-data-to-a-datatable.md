@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d6aa8474-7bde-48f7-949d-20dc38a1625b
-ms.openlocfilehash: 2a001ac8b3d4b8cd9618b3ced7bdf578ebae2e22
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 02d7f94259cc56513be404c5539ca7015d5f3533
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786596"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151536"
 ---
 # <a name="adding-data-to-a-datatable"></a>Dodawanie danych do elementu DataTable
-Po utworzeniu <xref:System.Data.DataTable> i zdefiniowaniu struktury przy użyciu kolumn i ograniczeń można dodać do tabeli nowe wiersze danych. Aby dodać nowy wiersz, Zadeklaruj nową zmienną jako typ <xref:System.Data.DataRow>. Nowy obiekt **DataRow** jest zwracany po wywołaniu <xref:System.Data.DataTable.NewRow%2A> metody. Element **DataTable** następnie tworzy obiekt **DataRow** na podstawie struktury tabeli <xref:System.Data.DataColumnCollection>zdefiniowanej przez.  
+Po utworzeniu <xref:System.Data.DataTable> i zdefiniowaniu jego struktury przy użyciu kolumn i ograniczeń można dodać nowe wiersze danych do tabeli. Aby dodać nowy wiersz, zadeklaruj nową zmienną jako typ <xref:System.Data.DataRow>. Nowy obiekt **DataRow** jest zwracany <xref:System.Data.DataTable.NewRow%2A> po wywołaniu metody. **DataTable** następnie tworzy **DataRow** obiektu na podstawie struktury tabeli, <xref:System.Data.DataColumnCollection>zgodnie z definicją .  
   
- W poniższym przykładzie pokazano, jak utworzyć nowy wiersz przez wywołanie metody **NewRow** .  
+ W poniższym przykładzie pokazano, jak utworzyć nowy wiersz, wywołując **NewRow** metody.  
   
 ```vb  
 Dim workRow As DataRow = workTable.NewRow()  
@@ -25,7 +25,7 @@ Dim workRow As DataRow = workTable.NewRow()
 DataRow workRow = workTable.NewRow();  
 ```  
   
- Następnie można manipulować nowo dodanym wierszem przy użyciu indeksu lub nazwy kolumny, jak pokazano w poniższym przykładzie.  
+ Następnie można manipulować nowo dodany wiersz przy użyciu indeksu lub nazwy kolumny, jak pokazano w poniższym przykładzie.  
   
 ```vb  
 workRow("CustLName") = "Smith"  
@@ -37,7 +37,7 @@ workRow["CustLName"] = "Smith";
 workRow[1] = "Smith";  
 ```  
   
- Po wstawieniu danych do nowego wiersza, Metoda **Dodaj** służy do dodawania wiersza do <xref:System.Data.DataRowCollection>, jak pokazano w poniższym kodzie.  
+ Po wstawieniu danych do nowego wiersza, **Add** metoda <xref:System.Data.DataRowCollection>jest używana do dodawania wiersza do , pokazano w poniższym kodzie.  
   
 ```vb  
 workTable.Rows.Add(workRow)  
@@ -47,7 +47,7 @@ workTable.Rows.Add(workRow)
 workTable.Rows.Add(workRow);  
 ```  
   
- Możesz również wywołać metodę **Add** , aby dodać nowy wiersz przez przekazanie tablicy wartości, <xref:System.Object>tak jak pokazano w poniższym przykładzie.  
+ Można również wywołać **Add** metody, aby dodać nowy wiersz, przekazując <xref:System.Object>w tablicy wartości, wpisane jako , jak pokazano w poniższym przykładzie.  
   
 ```vb  
 workTable.Rows.Add(new Object() {1, "Smith"})  
@@ -57,9 +57,9 @@ workTable.Rows.Add(new Object() {1, "Smith"})
 workTable.Rows.Add(new Object[] {1, "Smith"});  
 ```  
   
- Przekazanie tablicy wartości, wpisanej jako **obiekt**, do metody **Add** tworzy nowy wiersz wewnątrz tabeli i ustawia jego wartości kolumny na wartości w tablicy obiektów. Należy zauważyć, że wartości w tablicy są dopasowane sekwencyjnie do kolumn, na podstawie kolejności ich wyświetlania w tabeli.  
+ Przekazywanie tablicy wartości wpisanych jako **Object**do **Metody Dodaj** tworzy nowy wiersz wewnątrz tabeli i ustawia jego wartości kolumn na wartości w tablicy obiektów. Należy zauważyć, że wartości w tablicy są dopasowywać sekwencyjnie do kolumn, na podstawie kolejności, w jakiej pojawiają się w tabeli.  
   
- Poniższy przykład dodaje 10 wierszy do nowo utworzonej tabeli **Customers** .  
+ W poniższym przykładzie dodano 10 wierszy do nowo utworzonej tabeli **Klienci.**  
   
 ```vb  
 Dim workRow As DataRow  
@@ -76,7 +76,7 @@ Next
 ```csharp  
 DataRow workRow;  
   
-for (int i = 0; i <= 9; i++)   
+for (int i = 0; i <= 9; i++)
 {  
   workRow = workTable.NewRow();  
   workRow[0] = i;  
@@ -85,11 +85,11 @@ for (int i = 0; i <= 9; i++)
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataRowCollection>
 - <xref:System.Data.DataTable>
-- [Operowanie danymi w elemencie DataTable](manipulating-data-in-a-datatable.md)
+- [Operowanie na danych w elemencie DataTable](manipulating-data-in-a-datatable.md)
 - [Omówienie ADO.NET](../ado-net-overview.md)

@@ -2,23 +2,23 @@
 title: Walidacja oparta na kodzie imperatywnym
 ms.date: 03/30/2017
 ms.assetid: ae12537c-455e-42b1-82f4-cea4c46c023e
-ms.openlocfilehash: 333e1e200825dd1fc8ed750abbecbb309da66663
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f3b07d0ab06b3753286c929b90e713a6941684ad
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009776"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79143099"
 ---
 # <a name="imperative-code-based-validation"></a>Walidacja oparta na kodzie imperatywnym
 
-Imperatywne sprawdzanie poprawności, które są oparte na kodzie zapewnia prostą metodę dla działania w celu udostępnienia weryfikacji o sobie i jest dostępny dla działań, które wynikają z <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity>, i <xref:System.Activities.NativeActivity>. Kod sprawdzania poprawności, który określa żadnych ostrzeżeń ani błędów sprawdzania poprawności jest dodawany do działania.  
+Trwać w testapikonietce opartej na kodzie imperatywnym zapewnia <xref:System.Activities.CodeActivity>prosty <xref:System.Activities.AsyncCodeActivity>sposób <xref:System.Activities.NativeActivity>działania w celu zapewnienia sprawdzania poprawności o sobie i jest dostępna dla działań, które wynikają z , i . Kod sprawdzania poprawności, który określa wszelkie błędy sprawdzania poprawności lub ostrzeżenia jest dodawany do działania.  
   
-## <a name="using-code-based-validation"></a>Za pomocą kodu sprawdzania poprawności
+## <a name="using-code-based-validation"></a>Korzystanie z sprawdzania poprawności opartej na kodzie
 
-W oparciu o kod sprawdzania poprawności jest obsługiwana przez działania, które wynikają z <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity>, i <xref:System.Activities.NativeActivity>. Kod sprawdzania poprawności można umieścić w <xref:System.Activities.CodeActivity.CacheMetadata%2A> zastąpienia, a błędy sprawdzania poprawności lub ostrzeżenia, które mogą być dodawane do argumentu metadanych. W poniższym przykładzie Jeśli `Cost` jest większa niż `Price`, błąd sprawdzania poprawności jest dodawany do metadanych.  
+Sprawdzanie poprawności oparte na kodzie jest obsługiwane <xref:System.Activities.CodeActivity> <xref:System.Activities.AsyncCodeActivity>przez <xref:System.Activities.NativeActivity>działania, które wynikają z , i . Kod sprawdzania poprawności można <xref:System.Activities.CodeActivity.CacheMetadata%2A> umieścić w zastąpienia i błędy sprawdzania poprawności lub ostrzeżenia mogą być dodawane do argumentu metadanych. W poniższym przykładzie, jeśli `Cost` `Price`jest większa niż , błąd sprawdzania poprawności jest dodawany do metadanych.  
   
 > [!NOTE]
-> Należy pamiętać, że `Cost` i `Price` nie są argumenty do działania, ale są właściwościami, które są ustawiane w czasie projektowania. Oznacza to dlaczego ich wartości mogą być sprawdzone w <xref:System.Activities.CodeActivity.CacheMetadata%2A> zastąpienia. Nie można zweryfikować wartości danych przepływających przez argument w czasie projektowania, ponieważ nie przepływu danych do czasu wykonywania, ale działanie argumenty mogą być sprawdzone aby upewnić się, że są powiązane za pomocą `RequiredArgument` atrybutu i przeciążenia grup. Ten przykładowy kod będzie widział `RequiredArgument` atrybutu dla `Description` argument, a jeśli nie jest powiązany, to generowany jest błąd sprawdzania poprawności. Wymagane argumenty są objęte [wymagane argumenty i grupy przeciążenia](required-arguments-and-overload-groups.md).  
+> Należy `Cost` zauważyć, że i `Price` nie są argumentami działania, ale są właściwości, które są ustawione w czasie projektowania. Dlatego ich wartości mogą być sprawdzane w <xref:System.Activities.CodeActivity.CacheMetadata%2A> zastąpienia. Wartość danych przepływających przez argument nie może być zweryfikowana w czasie projektowania, ponieważ dane nie przepływają do czasu wykonywania, ale argumenty działania można sprawdzić, aby upewnić się, że są one powiązane przy użyciu grup `RequiredArgument` atrybutów i przeciążenia. Ten przykładowy `RequiredArgument` kod widzi `Description` atrybut dla argumentu, a jeśli nie jest związany, a następnie generowany jest błąd sprawdzania poprawności. Wymagane argumenty są opisane w [Required Arguments i Overload Groups](required-arguments-and-overload-groups.md).  
   
 ```csharp  
 public sealed class CreateProduct : CodeActivity  
@@ -26,7 +26,7 @@ public sealed class CreateProduct : CodeActivity
     public double Price { get; set; }  
     public double Cost { get; set; }  
   
-    // [RequiredArgument] attribute will generate a validation error   
+    // [RequiredArgument] attribute will generate a validation error
     // if the Description argument is not set.  
     [RequiredArgument]  
     public InArgument<string> Description { get; set; }  
@@ -49,10 +49,10 @@ public sealed class CreateProduct : CodeActivity
 }  
 ```  
   
- Domyślnie, błąd sprawdzania poprawności jest dodawana do metadanych podczas <xref:System.Activities.CodeActivityMetadata.AddValidationError%2A> jest wywoływana. Aby dodać ostrzeżeń dotyczących weryfikacji, należy użyć <xref:System.Activities.CodeActivityMetadata.AddValidationError%2A> przeciążenia przyjmującego <xref:System.Activities.Validation.ValidationError>i określić, że <xref:System.Activities.Validation.ValidationError> reprezentuje ostrzeżenie, ustawiając <xref:System.Activities.Validation.ValidationError.IsWarning%2A> właściwości.  
+ Domyślnie błąd sprawdzania poprawności jest dodawany <xref:System.Activities.CodeActivityMetadata.AddValidationError%2A> do metadanych, gdy jest wywoływana. Aby dodać ostrzeżenie sprawdzania <xref:System.Activities.CodeActivityMetadata.AddValidationError%2A> poprawności, należy <xref:System.Activities.Validation.ValidationError>użyć przeciążenia, które ma , i określić, że <xref:System.Activities.Validation.ValidationError> reprezentuje ostrzeżenie, ustawiając <xref:System.Activities.Validation.ValidationError.IsWarning%2A> właściwość.  
   
- Sprawdzanie poprawności występuje, gdy przepływ pracy zostanie zmodyfikowany w Projektancie przepływów pracy i żadnych ostrzeżeń ani błędów sprawdzania poprawności, które są wyświetlane w Projektancie przepływu pracy. Sprawdzanie poprawności występuje także w czasie wykonywania po wywołaniu przepływu pracy i, jeśli wystąpią błędy sprawdzania poprawności, <xref:System.Activities.InvalidWorkflowException> jest generowany przez domyślną logikę weryfikacji. Aby uzyskać więcej informacji na temat wywoływania sprawdzania poprawności i uzyskiwania dostępu do żadnych Walidacja ostrzeżeń ani błędów, zobacz [wywoływanie walidacji działania](invoking-activity-validation.md).  
+ Sprawdzanie poprawności występuje, gdy przepływ pracy jest modyfikowany w projektancie przepływu pracy i wszelkie błędy sprawdzania poprawności lub ostrzeżenia są wyświetlane w projektancie przepływu pracy. Sprawdzanie poprawności występuje również w czasie wykonywania, gdy jest wywoływany <xref:System.Activities.InvalidWorkflowException> przepływ pracy i jeśli wystąpią błędy sprawdzania poprawności, jest generowany przez domyślną logikę sprawdzania poprawności. Aby uzyskać więcej informacji na temat wywoływania sprawdzania poprawności i uzyskiwania dostępu do ostrzeżeń lub błędów sprawdzania poprawności, zobacz [Wywoływanie sprawdzania poprawności działania](invoking-activity-validation.md).  
   
- Wszelkie wyjątki, które są generowane przez <xref:System.Activities.CodeActivity.CacheMetadata%2A> nie są traktowane jako błędy sprawdzania poprawności. Wyjątki te będą uciekały z wywołania <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> i muszą być obsługiwane przez obiekt wywołujący.  
+ Wszelkie wyjątki, które <xref:System.Activities.CodeActivity.CacheMetadata%2A> są generowane z nie są traktowane jako błędy sprawdzania poprawności. Te wyjątki uciekną <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> od wywołania i muszą być obsługiwane przez wywołującego.  
   
- W oparciu o kod sprawdzania poprawności jest przydatne w przypadku sprawdzania poprawności działania, który zawiera kod, ale nie ma wglądu w innych działań w przepływie pracy. Ograniczenia deklaratywne sprawdzanie poprawności zapewnia możliwość zweryfikowania relacji między działania i inne działania w przepływie pracy i został omówiony w [ograniczenia deklaratywne](declarative-constraints.md) tematu.
+ Sprawdzanie poprawności oparte na kodzie jest przydatne do sprawdzania poprawności działania, które zawiera kod, ale nie ma wglądu w inne działania w przepływie pracy. Sprawdzanie poprawności ograniczeń deklaratywnych zapewnia możliwość sprawdzania poprawności relacji między działaniem a innymi działaniami w przepływie pracy i jest omówione w temacie [Ograniczenia deklaratywne.](declarative-constraints.md)

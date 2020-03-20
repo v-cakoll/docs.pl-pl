@@ -6,116 +6,116 @@ helpviewer_keywords:
 - masks [WPF], opacity
 - opacity [WPF], masks
 ms.assetid: 22367fab-5f59-4583-abfd-db2bf86eaef7
-ms.openlocfilehash: d0fea1aac4efb17811404ce45769615bb2e7234f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0c859659c35e2a5806b8585214c87c18fbcb62d4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929662"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79187687"
 ---
 # <a name="opacity-masks-overview"></a>Przegląd Masek krycia
-Maski kryjące umożliwiają udostępnianie części elementu lub wizualizacji jako przezroczyste lub częściowo przezroczyste. Aby utworzyć maskę nieprzezroczystości, należy <xref:System.Windows.Media.Brush> zastosować <xref:System.Windows.UIElement.OpacityMask%2A> do właściwości elementu lub <xref:System.Windows.Media.Visual>.  Pędzel jest mapowany do elementu lub wizualizacji, a wartość nieprzezroczystości każdego koloru pędzla jest używana do określenia nieprzezroczystości każdego odpowiadającego piksela elementu lub wizualizacji.  
+Maski krycia umożliwiają tworzenie części elementu lub wizualizacji przezroczystych lub częściowo przezroczystych. Aby utworzyć maskę krycia, <xref:System.Windows.Media.Brush> należy <xref:System.Windows.UIElement.OpacityMask%2A> zastosować a do <xref:System.Windows.Media.Visual>właściwości elementu lub .  Pędzel jest mapowany na element lub wizualizację, a wartość krycia każdego piksela pędzla jest używana do określenia wynikowego krycia każdego odpowiedniego piksela elementu lub wizualizacji.  
   
-<a name="prereqs"></a>   
+<a name="prereqs"></a>
 ## <a name="prerequisites"></a>Wymagania wstępne  
- W <xref:System.Windows.Media.Brush> tym omówieniu założono, że znasz już obiekty. Aby zapoznać się z wprowadzeniem do używania pędzli, zobacz [malowanie przy użyciu pełnych kolorów i gradientów przegląd](painting-with-solid-colors-and-gradients-overview.md). Aby uzyskać informacje <xref:System.Windows.Media.ImageBrush> o <xref:System.Windows.Media.DrawingBrush>i, zobacz [malowanie przy użyciu obrazów, rysunków i wizualizacji](painting-with-images-drawings-and-visuals.md).  
+ W tym przeglądzie przyjęto <xref:System.Windows.Media.Brush> założenie, że użytkownik jest zaznajomiony z obiektami. Aby zapoznać się z wprowadzeniem do używania pędzli, zobacz [Omówienie malowania za pomocą jednolitych kolorów i gradientów](painting-with-solid-colors-and-gradients-overview.md). Aby uzyskać <xref:System.Windows.Media.ImageBrush> <xref:System.Windows.Media.DrawingBrush>informacje na temat i , zobacz [Malowanie za pomocą obrazów, rysunków i wizualizacji](painting-with-images-drawings-and-visuals.md).  
   
-<a name="opacitymasks"></a>   
-## <a name="creating-visual-effects-with-opacity-masks"></a>Tworzenie efektów wizualnych przy użyciu masek nieprzezroczystości  
- Maska nieprzezroczystości działa przez mapowanie jej zawartości do elementu lub wizualizacji. Kanał alfa każdego z pikseli pędzla jest następnie używany do określenia nieprawidłowej przejrzystości elementu lub odpowiednich pikseli wizualizacji; rzeczywisty kolor pędzla jest ignorowany. Jeśli dana część pędzla jest przezroczysta, odpowiednia część elementu lub wizualizacji staną się przezroczyste. Jeśli dana część pędzla jest nieprzezroczysta, przezroczystość odpowiedniej części elementu lub wizualizacji nie jest zmieniana. Nieprzezroczystość określona przez maskę nieprzezroczystości jest łączona z wszystkimi ustawieniami nieprzezroczystości obecnymi w elemencie lub wizualizacji. Na przykład, jeśli element ma wartość 25 procent nieprzezroczystości, a maska nieprzezroczystości jest stosowana, która przechodzi z całkowitego kryjącego do pełnego przezroczystości, wynikiem jest element, który przechodzi od przezroczystości 25 procent do pełnego przezroczystości.  
+<a name="opacitymasks"></a>
+## <a name="creating-visual-effects-with-opacity-masks"></a>Tworzenie efektów wizualnych za pomocą masek krycia  
+ Maska krycia działa poprzez mapowanie jego zawartości do elementu lub wizualizacji. Kanał alfa każdego z pikseli pędzla są następnie używane do określenia wynikowej krycia elementu lub wizualnych odpowiednich pikseli; rzeczywisty kolor pędzla jest ignorowany. Jeśli dana część pędzla jest przezroczysta, odpowiednia część elementu lub wizualizacji staje się przezroczysta. Jeśli dana część pędzla jest nieprzezroczysta, nieprzezroczystość odpowiedniej części elementu lub wizualizacji pozostaje niezmieniona. Krycie określone przez maskę krycia jest łączone z dowolnymi ustawieniami krycia obecnymi w elemencie lub wizualizacji. Na przykład jeśli element jest 25 procent nieprzezroczyste i maska krycia jest stosowana, że przejścia z całkowicie nieprzezroczyste do w pełni przezroczyste, wynik jest elementem, który przechodzi z 25 procent krycia do w pełni przezroczyste.  
   
 > [!NOTE]
-> Chociaż przykłady w tym omówieniu pokazują użycie masek kryjących elementów obrazu, maska kryjąca może być stosowana do dowolnego elementu lub <xref:System.Windows.Media.Visual>, w tym paneli i kontrolki.  
+> Chociaż przykłady w tym przeglądzie pokazują użycie masek krycia na elementach obrazu, maska <xref:System.Windows.Media.Visual>krycia może być stosowana do dowolnego elementu lub , w tym paneli i formantów.  
   
- Maski nieprzezroczystości są używane do tworzenia interesujących efektów wizualnych, takich jak tworzenie obrazów lub przycisków, które stopniowo rozjaśniają się z widoku, dodawanie tekstury do elementów lub łączenie gradientów w celu tworzenia powierzchni przypominających. Na poniższej ilustracji przedstawiono użycie maski kryjącej. Tło z modułem sprawdzonym służy do pokazywania przezroczystych części maski.  
+ Maski krycia służą do tworzenia interesujących efektów wizualnych, takich jak tworzenie obrazów lub przycisków, które zanikają z widoku, dodawanie tekstur do elementów lub łączenie gradientów w celu wytworzenia powierzchni przypominających szkło. Na poniższej ilustracji przedstawiono użycie maski krycia. Tło w szachowane służy do pokazywalenia przezroczystych części maski.  
   
- ![Obiekt z maską nieprzezroczystości LinearGradientBrush](./media/wcpsdk-graphicsmm-opacitymask-imageexample.png "wcpsdk_graphicsmm_opacitymask_imageexample")  
-Przykład maski kryjącej  
+ ![Obiekt z maską krycia lineargradientBrush](./media/wcpsdk-graphicsmm-opacitymask-imageexample.png "wcpsdk_graphicsmm_opacitymask_imageexample")  
+Przykład maskowania krycia  
   
-<a name="creatingopacitymasks"></a>   
-## <a name="creating-an-opacity-mask"></a>Tworzenie maski kryjącej  
- Aby utworzyć maskę nieprzezroczystości, należy <xref:System.Windows.Media.Brush> ją utworzyć i zastosować <xref:System.Windows.UIElement.OpacityMask%2A> do właściwości elementu lub wizualizacji. Można użyć dowolnego typu <xref:System.Windows.Media.Brush> jako maski kryjącej.  
+<a name="creatingopacitymasks"></a>
+## <a name="creating-an-opacity-mask"></a>Tworzenie maski krycia  
+ Aby utworzyć maskę krycia, <xref:System.Windows.Media.Brush> należy utworzyć ją <xref:System.Windows.UIElement.OpacityMask%2A> i zastosować do właściwości elementu lub wizualizacji. Można użyć dowolnego <xref:System.Windows.Media.Brush> typu jako maski krycia.  
   
-- <xref:System.Windows.Media.LinearGradientBrush>, <xref:System.Windows.Media.RadialGradientBrush>: Służy do stopniowego zanikania elementu lub wizualizacji.  
+- <xref:System.Windows.Media.LinearGradientBrush>, <xref:System.Windows.Media.RadialGradientBrush>: Służy do tworzenia elementu lub wizualnego zanikania z widoku.  
   
-     Na poniższej ilustracji przedstawiono <xref:System.Windows.Media.LinearGradientBrush> użycie maski kryjącej.  
+     Na poniższej <xref:System.Windows.Media.LinearGradientBrush> ilustracji przedstawiono maskę krycia używanego jako maskę krycia.  
   
-     ![Obiekt z maską nieprzezroczystości LinearGradientBrush](./media/wcpsdk-graphicsmm-brushes-lineagradientopacitymasksingle.jpg "wcpsdk_graphicsmm_brushes_lineagradientopacitymasksingle")  
-Przykład maski nieprzezroczystości LinearGradientBrush  
+     ![Obiekt z maską krycia lineargradientBrush](./media/wcpsdk-graphicsmm-brushes-lineagradientopacitymasksingle.jpg "wcpsdk_graphicsmm_brushes_lineagradientopacitymasksingle")  
+Przykład maskowania krycia liniowego pędzla  
   
-- <xref:System.Windows.Media.ImageBrush>: Służy do tworzenia tekstury i niewygładzonych lub podartych efektów krawędzi.  
+- <xref:System.Windows.Media.ImageBrush>: Służy do tworzenia tekstur i miękkich lub rozdartych efektów krawędzi.  
   
-     Na poniższej ilustracji przedstawiono <xref:System.Windows.Media.ImageBrush> użycie maski kryjącej.  
+     Na poniższej <xref:System.Windows.Media.ImageBrush> ilustracji przedstawiono maskę krycia używanego jako maskę krycia.  
   
-     ![Obiekt, który ma maskę nieprzezroczystość ImageBrush](./media/wcpsdk-graphicsmm-brushes-imageasopacitymasksingle.jpg "wcpsdk_graphicsmm_brushes_imageasopacitymasksingle")  
-Przykład maski nieprzezroczystości LinearGradientBrush  
+     ![Obiekt z maską krycia ImageBrush](./media/wcpsdk-graphicsmm-brushes-imageasopacitymasksingle.jpg "wcpsdk_graphicsmm_brushes_imageasopacitymasksingle")  
+Przykład maskowania krycia linearGradientBrush  
   
-- <xref:System.Windows.Media.DrawingBrush>: Służy do tworzenia złożonych masek kryjących ze wzorów kształtów, obrazów i gradientów.  
+- <xref:System.Windows.Media.DrawingBrush>: Służy do tworzenia złożonych masek krycia z wzorów kształtów, obrazów i gradientów.  
   
-     Na poniższej ilustracji przedstawiono <xref:System.Windows.Media.DrawingBrush> użycie maski kryjącej.  
+     Na poniższej <xref:System.Windows.Media.DrawingBrush> ilustracji przedstawiono maskę krycia używanego jako maskę krycia.  
   
-     ![Obiekt z maską nieprzezroczystości DrawingBrush](./media/wcpsdk-drawingbrushasopacitymask-single.jpg "wcpsdk_drawingbrushasopacitymask_single")  
-Przykład maski nieprzezroczystości DrawingBrush  
+     ![Obiekt z maską pędzla drawingbrush](./media/wcpsdk-drawingbrushasopacitymask-single.jpg "wcpsdk_drawingbrushasopacitymask_single")  
+Przykład maskowania krycia pędzla drawingBrush  
   
- Pędzle gradientowe<xref:System.Windows.Media.LinearGradientBrush> ( <xref:System.Windows.Media.RadialGradientBrush>i) są szczególnie odpowiednie do użycia jako maska nieprzezroczystości. Ponieważ wypełnia obszar jednolitym kolorem, sprawia, że stają się słabymi maskami kryjącymi; <xref:System.Windows.Media.SolidColorBrush> użycie jest równoważne z ustawieniem <xref:System.Windows.UIElement.OpacityMask%2A> właściwości elementu lub wizualizacji. <xref:System.Windows.Media.SolidColorBrush>  
+ Szczotki gradientowe<xref:System.Windows.Media.LinearGradientBrush> <xref:System.Windows.Media.RadialGradientBrush>( i ) są szczególnie dobrze nadaje się do stosowania jako maska krycia. Ponieważ <xref:System.Windows.Media.SolidColorBrush> obszar wypełnia jednolitym kolorem, robią słabe maski krycia; przy <xref:System.Windows.Media.SolidColorBrush> użyciu a jest odpowiednikiem ustawienia elementu <xref:System.Windows.UIElement.OpacityMask%2A> lub właściwości wizualnej.  
   
-<a name="creatingopacitymaskswithgradients"></a>   
-## <a name="using-a-gradient-as-an-opacity-mask"></a>Używanie gradientu jako maski kryjącej  
- Aby utworzyć wypełnienie gradientu, należy określić dwa lub więcej zatrzymań gradientu. Każde zatrzymanie gradientu zawiera opis koloru i położenia (zobacz [malowanie przy użyciu pełnych kolorów i gradientów przegląd](painting-with-solid-colors-and-gradients-overview.md) , aby uzyskać więcej informacji na temat tworzenia i używania gradientów). Ten proces jest taki sam, gdy jest używany gradient jako maska nieprzezroczystości, z tą różnicą, że zamiast mieszania kolorów, Gradient maski kryjącej miesza wartości kanału alfa. Dlatego rzeczywisty kolor zawartości gradientu nie ma znaczenia; tylko kanał alfa lub nieprzezroczystość dla każdego koloru. Oto przykład.  
+<a name="creatingopacitymaskswithgradients"></a>
+## <a name="using-a-gradient-as-an-opacity-mask"></a>Używanie gradientu jako maski krycia  
+ Aby utworzyć wypełnienie gradientowe, należy określić co najmniej dwa przystanki gradientu. Każdy przystanek gradientu zawiera opisuje kolor i położenie (zobacz [Malowanie za pomocą jednolitych kolorów i gradientów Omówienie, aby](painting-with-solid-colors-and-gradients-overview.md) uzyskać więcej informacji na temat tworzenia i używania gradientów). Proces jest taki sam, gdy używa się gradientu jako maski krycia, z tą różnicą, że zamiast mieszania kolorów gradient maski krycia miesza wartości kanałów alfa. Tak więc rzeczywisty kolor zawartości gradientu nie ma znaczenia; tylko kanał alfa lub krycie każdego koloru ma znaczenie. Poniżej przedstawiono przykład.  
   
  [!code-xaml[OpacityMasksSnippet#LinearGradientOpacityMaskonImage](~/samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/GradientBrushExample.xaml#lineargradientopacitymaskonimage)]  
   
-<a name="specifyinggradientcolors"></a>   
-## <a name="specifying-gradient-stops-for-an-opacity-mask"></a>Określanie zatrzymań gradientu dla maski nieprzezroczystości  
- W poprzednim przykładzie kolor <xref:System.Windows.Media.Colors.Black%2A> zdefiniowany przez system jest używany jako kolor początkowy gradientu. Ponieważ wszystkie kolory w <xref:System.Windows.Media.Colors> klasie, z wyjątkiem <xref:System.Windows.Media.Colors.Transparent%2A>, są całkowicie nieprzezroczyste, mogą służyć do zwykłego definiowania koloru początkowego dla maski nieprzezroczystości gradientu.  
+<a name="specifyinggradientcolors"></a>
+## <a name="specifying-gradient-stops-for-an-opacity-mask"></a>Określanie przystanków gradientu dla maski krycia  
+ W poprzednim przykładzie kolor <xref:System.Windows.Media.Colors.Black%2A> zdefiniowany przez system jest używany jako kolor początkowy gradientu. Ponieważ wszystkie kolory w <xref:System.Windows.Media.Colors> klasie, <xref:System.Windows.Media.Colors.Transparent%2A>z wyjątkiem , są całkowicie nieprzezroczyste, mogą być używane po prostu zdefiniować kolor początkowy dla maski krycia gradientu.  
   
- Aby uzyskać dodatkową kontrolę nad wartościami alfa przy definiowaniu maski kryjącej, można określić kanał alfa kolorów przy użyciu notacji szesnastkowej ARGB w znaczniku <xref:System.Windows.Media.Color.FromScRgb%2A?displayProperty=nameWithType> lub przy użyciu metody.  
+ Aby uzyskać dodatkową kontrolę nad wartościami alfa podczas definiowania maski krycia, można określić kanał alfa kolorów za <xref:System.Windows.Media.Color.FromScRgb%2A?displayProperty=nameWithType> pomocą notacji szesnastkowej ARGB w znacznikach lub przy użyciu metody.  
   
-<a name="argbsyntax"></a>   
-### <a name="specifying-color-opacity-in-xaml"></a>Określanie nieprzezroczystości koloru w "XAML"  
- W [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]programie używasz notacji szesnastkowej ARGB, aby określić nieprzezroczystość poszczególnych kolorów. Notacja szesnastkowa ARGB używa następującej składni:  
+<a name="argbsyntax"></a>
+### <a name="specifying-color-opacity-in-xaml"></a>Określanie krycia kolorów w "XAML"  
+ W [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]obszarze , należy użyć notacji szesnastkowej ARGB, aby określić krycie poszczególnych kolorów. Notacja szesnastkowa ARGB używa następującej składni:  
   
- `#`**AA** *RRGGBB*  
+ `#`**aa** *rrggbb*  
   
- *AA* w poprzednim wierszu reprezentuje dwucyfrową wartość szesnastkową służącą do określenia nieprzezroczystości koloru. Wartości *RR*, *gg*i *BB* reprezentują dwie cyfry szesnastkowe, używane do określania ilości czerwonego, zielonego i niebieskiego w kolorze. Każda cyfra szesnastkowa może mieć wartość z prze0-9 lub A-F. 0 jest najmniejszą wartością, a F jest największa. Wartość alfa 00 określa kolor, który jest całkowicie przezroczysty, podczas gdy wartość alfa FF tworzy kolor, który jest całkowicie nieprzezroczysty.  W poniższym przykładzie szesnastkowa notacja ARGB jest używana do określenia dwóch kolorów. Pierwszy jest całkowicie nieprzezroczysty, a drugi jest całkowicie przezroczysty.  
+ *Aa* w poprzednim wierszu reprezentuje dwucyfrową wartość szesnastową używaną do określenia krycia koloru. *Rr*, *gg*i *bb* reprezentują dwucyfrową wartość szesnastkową używaną do określenia ilości koloru czerwonego, zielonego i niebieskiego. Każda cyfra szesnastkowa może mieć wartość od 0-9 lub A-F. 0 jest najmniejszą wartością, a F jest największa. Wartość alfa 00 określa kolor, który jest całkowicie przezroczysty, podczas gdy wartość alfa FF tworzy kolor, który jest całkowicie nieprzezroczysty.  W poniższym przykładzie szesnastkowy notacja ARGB jest używana do określenia dwóch kolorów. Pierwszy jest całkowicie nieprzezroczysty, a drugi jest całkowicie przezroczysty.  
   
  [!code-xaml[OpacityMasksSnippet#AARRGGBBValueonOpacityMask](~/samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/GradientBrushExample.xaml#aarrggbbvalueonopacitymask)]  
   
-<a name="usingimageasopacitymask"></a>   
-## <a name="using-an-image-as-an-opacity-mask"></a>Używanie obrazu jako maski kryjącej  
- Obrazy mogą również służyć jako maska nieprzezroczystość. Na poniższej ilustracji przedstawiono przykład. Tło z modułem sprawdzonym służy do pokazywania przezroczystych części maski.  
+<a name="usingimageasopacitymask"></a>
+## <a name="using-an-image-as-an-opacity-mask"></a>Używanie obrazu jako maski krycia  
+ Obrazy mogą być również używane jako maska krycia. Na poniższej ilustracji przedstawiono przykładowy raport. Tło w szachowane służy do pokazywalenia przezroczystych części maski.  
   
- ![Obiekt z maską nieprzezroczystości ImageBrush](./media/wcpsdk-graphicsmm-imageasopacitymask.png "wcpsdk_graphicsmm_imageasopacitymask")  
-Przykład maski kryjącej  
+ ![Obiekt z maską krycia ImageBrush](./media/wcpsdk-graphicsmm-imageasopacitymask.png "wcpsdk_graphicsmm_imageasopacitymask")  
+Przykład maskowania krycia  
   
- Aby użyć obrazu jako maski kryjącej, należy użyć <xref:System.Windows.Media.ImageBrush> , aby zawierać obraz. Podczas tworzenia obrazu, który ma być używany jako maska nieprzezroczystości, Zapisz obraz w formacie obsługującym wiele poziomów przezroczystości, takich jak Portable Network Graphics (PNG). Poniższy przykład pokazuje kod używany do tworzenia poprzedniej ilustracji.  
+ Aby użyć obrazu jako maski krycia, użyj obrazu, <xref:System.Windows.Media.ImageBrush> aby go zawierać. Podczas tworzenia obrazu, który ma być używany jako maska krycia, zapisz obraz w formacie obsługującym wiele poziomów przezroczystości, takich jak przenośna grafika sieciowa (PNG). W poniższym przykładzie przedstawiono kod używany do tworzenia poprzedniej ilustracji.  
   
  [!code-xaml[OpacityMasksSnippet#UIElementOpacityMask](~/samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/ImageBrushExample.xaml#uielementopacitymask)]  
   
-<a name="tilingimageopacitymask"></a>   
-### <a name="using-a-tiled-image-as-an-opacity-mask"></a>Używanie obrazu sąsiadującego jako maski kryjącej  
- W poniższym przykładzie ten sam obraz jest używany z innym <xref:System.Windows.Media.ImageBrush>, ale funkcje dzielenia pędzla są używane do tworzenia kafelków kwadratu obrazu 50 pikseli.  
+<a name="tilingimageopacitymask"></a>
+### <a name="using-a-tiled-image-as-an-opacity-mask"></a>Używanie obrazu sąsiadującego jako maski krycia  
+ W poniższym przykładzie ten sam <xref:System.Windows.Media.ImageBrush>obraz jest używany z innym , ale funkcje kafli pędzla są używane do tworzenia kafelków obrazu 50 pikseli kwadratowych.  
   
  [!code-xaml[OpacityMasksSnippet#TiledImageasOpacityMask](~/samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/ImageBrushExample.xaml#tiledimageasopacitymask)]  
   
-<a name="drawingbrushasopacitymask"></a>   
-## <a name="creating-an-opacity-mask-from-a-drawing"></a>Tworzenie maski kryjącej na podstawie rysunku  
- Na rysunkach można używać maski nieprzezroczystości. Kształty zawarte na rysunku mogą być wypełniane gradientem, pełnymi kolorami, obrazami, a nawet innymi rysunkami. Na poniższej ilustracji przedstawiono przykładowy rysunek używany jako maska nieprzezroczystość. Tło z modułem sprawdzonym służy do pokazywania przezroczystych części maski.  
+<a name="drawingbrushasopacitymask"></a>
+## <a name="creating-an-opacity-mask-from-a-drawing"></a>Tworzenie maski krycia z rysunku  
+ Rysunki mogą być używane maską krycia. Kształty zawarte w rysunku mogą być wypełnione gradientami, jednolitymi kolorami, obrazami, a nawet innymi rysunkami. Na poniższej ilustracji przedstawiono przykład rysunku używanego jako maska krycia. Tło w szachowane służy do pokazywalenia przezroczystych części maski.  
   
- ![Obiekt z maską nieprzezroczystości DrawingBrush](./media/wcpsdk-drawingbrushasopacitymask.png "wcpsdk_drawingbrushasopacitymask")  
-Przykład maski nieprzezroczystości DrawingBrush  
+ ![Obiekt z maską krycia DrawingBrush](./media/wcpsdk-drawingbrushasopacitymask.png "wcpsdk_drawingbrushasopacitymask")  
+Przykład maskowania krycia pędzla drawingBrush  
   
- Aby użyć rysowania jako maski kryjącej, należy użyć <xref:System.Windows.Media.DrawingBrush> , aby zawierać rysunek. Poniższy przykład pokazuje kod używany do tworzenia poprzedniej ilustracji:  
+ Aby użyć rysunku jako maski krycia, użyj a, <xref:System.Windows.Media.DrawingBrush> aby zawierać rysunek. Poniższy przykład przedstawia kod używany do tworzenia poprzedniej ilustracji:  
   
  [!code-xaml[OpacityMasksSnippet#OpacityMaskfromDrawing](~/samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/DrawingBrushExample.xaml#opacitymaskfromdrawing)]  
   
-<a name="tileddrawingbrush"></a>   
-### <a name="using-a-tiled-drawing-as-an-opacity-mask"></a>Korzystanie z sąsiadującego rysunku jako maski kryjącej  
- Podobnie jak <xref:System.Windows.Media.ImageBrush>w <xref:System.Windows.Media.DrawingBrush> , można narysować kafelki. W poniższym przykładzie pędzel rysowania służy do tworzenia wbudowanej maski nieprzezroczystości.  
+<a name="tileddrawingbrush"></a>
+### <a name="using-a-tiled-drawing-as-an-opacity-mask"></a>Używanie rysunku sąsiadującego jako maski krycia  
+ Podobnie <xref:System.Windows.Media.ImageBrush>jak <xref:System.Windows.Media.DrawingBrush> , można zrobić, aby płytki jego rysunek. W poniższym przykładzie pędzel rysunku jest używany do tworzenia kafelkowej maski krycia.  
   
  [!code-xaml[OpacityMasksSnippet#TiledDrawingasOpacityMask](~/samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/DrawingBrushExample.xaml#tileddrawingasopacitymask)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Malowanie przy użyciu obrazów, rysowania i wizualizacji](painting-with-images-drawings-and-visuals.md)
-- [Malowanie jednolitymi kolorami i gradientami — przegląd](painting-with-solid-colors-and-gradients-overview.md)
+- [Przegląd Malowanie jednolitymi kolorami i gradientami](painting-with-solid-colors-and-gradients-overview.md)

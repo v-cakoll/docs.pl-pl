@@ -2,46 +2,46 @@
 title: Przewodnik programowania
 ms.date: 03/30/2017
 ms.assetid: ed1012d4-3ff2-4877-af27-93125c4180ea
-ms.openlocfilehash: c33c7749599de0450a9f969e5802485d154a61e1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 542567cf07e86b642a23a879fa6e5476253005b8
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781258"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78848941"
 ---
 # <a name="programming-guide"></a>Przewodnik programowania
-Ta sekcja zawiera informacje o sposobie tworzenia i używania [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] modelu obiektów. Jeśli używasz programu Visual Studio, możesz również użyć Object Relational Designer, aby wykonać wiele z tych samych zadań.  
+Ta sekcja zawiera informacje dotyczące sposobu [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tworzenia i używania modelu obiektów. Jeśli używasz programu Visual Studio, można również użyć Projektanta relacyjnego obiektu do wykonywania wielu z tych samych zadań.  
   
- Możesz również wyszukać Microsoft Docs pod kątem określonych problemów i można wziąć udział na [forum LINQ](https://go.microsoft.com/fwlink/?LinkId=76488), gdzie można omówić bardziej złożone tematy szczegółowo z ekspertami. Na koniec LINQ to SQL: zastosowana w [języku .NET zapytanie zintegrowane z założeniami](https://go.microsoft.com/fwlink/?LinkId=93205) informacji [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] o relacyjnej ilości danych, C# kompletne z Visual Basic i przykładami kodu.  
+ Można również wyszukać Microsoft Docs dla konkretnych problemów, a także uczestniczyć w [LINQ Forum](https://social.msdn.microsoft.com/forums/home?forum=linqtosql), gdzie można omówić bardziej złożone tematy szczegółowo z ekspertami. Na koniec [LINQ do SQL: .NET Language-Integrated Query for Relational Data](https://docs.microsoft.com/previous-versions/dotnet/articles/bb425822(v=msdn.10)) white paper details [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] technology, wraz z przykładami kodu języka Visual Basic i C#.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Tworzenie modelu obiektu](creating-the-object-model.md)  
- Opisuje sposób generowania modelu obiektów.  
+ W tym artykule opisano sposób generowania modelu obiektu.  
   
  [Komunikacja z bazą danych](communicating-with-the-database.md)  
- Opisuje, jak używać <xref:System.Data.Linq.DataContext> obiektu jako przewód do bazy danych.  
+ W tym artykule opisano sposób używania <xref:System.Data.Linq.DataContext> obiektu jako przewodu do bazy danych.  
   
  [Wykonywanie zapytania w bazie danych](querying-the-database.md)  
- Opisuje sposób wykonywania zapytań w programie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]i zawiera wiele przykładów.  
+ Opisuje sposób wykonywania zapytań w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], i zawiera wiele przykładów.  
   
  [Tworzenie i przesyłanie zmian danych](making-and-submitting-data-changes.md)  
- Opisuje sposób zmiany danych w bazie danych.  
+ Opisuje, jak zmienić dane w bazie danych.  
   
  [Obsługa debugowania](debugging-support.md)  
- Opisuje pomoc techniczną dla debugowania [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projektów.  
+ W tym artykule opisano [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] obsługę dostępnych dla projektów debugowania.  
   
  [Informacje uzupełniające](background-information.md)  
- Obejmuje dodatkowe elementy, takie jak rozwiązywanie konfliktów współbieżności, tworzenie nowych baz danych i inne, dla bardziej zaawansowanych użytkowników.  
+ Zawiera dodatkowe elementy, takie jak rozwiązywanie konfliktów współbieżności, tworzenie nowych baz danych i inne, dla bardziej zaawansowanych użytkowników.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [LINQ to SQL](index.md)  
- Zawiera łącza do tematów, które opisują [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] technologię i demonstrację funkcji.  
+ Zawiera łącza do tematów, które wyjaśniają technologię [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] i demonstrują funkcje.  
   
- [Procedury składowane](stored-procedures.md)  
- Zawiera linki do tematów, które ilustrują sposób korzystania z procedur składowanych.  
+ [Procedury przechowywane](stored-procedures.md)  
+ Zawiera łącza do tematów, które ilustrują sposób korzystania z procedur przechowywanych.  
   
  [Wprowadzenie do LINQ (C#)](../../../../../csharp/programming-guide/concepts/linq/index.md)  
- Zawiera zasoby ułatwiające rozpoczęcie uczenia się LINQ to SQL przy użyciu C#programu.
+ Udostępnia zasoby ułatwiające rozpoczęcie nauki o LINQ do SQL przy użyciu języka C#.
 
  [Wprowadzenie do LINQ (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)  
- Zawiera zasoby ułatwiające rozpoczęcie uczenia się LINQ to SQL przy użyciu Visual Basic.
+ Udostępnia zasoby ułatwiające rozpoczęcie nauki o linq do sql przy użyciu języka Visual Basic.

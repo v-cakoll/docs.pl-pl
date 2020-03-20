@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: pokazywanie palety kolorów przy użyciu składnika ColorDialog'
+title: 'Porady: pokazywanie palety kolorów przy użyciu składnika ColorDialog'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,25 +14,25 @@ helpviewer_keywords:
 - color palettes [Windows Forms], showing in ColorDialog component
 - colors [Windows Forms], showing palettes
 ms.assetid: ee050f61-dbc8-4436-ba22-51360981ab48
-ms.openlocfilehash: ff29df4ecfc90eabe8e3be0e5a6a126858799c16
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 0406ef7a32678bd149c0024348a7adf1f0b72926
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053423"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141786"
 ---
-# <a name="how-to-show-a-color-palette-with-the-colordialog-component"></a>Instrukcje: pokazywanie palety kolorów przy użyciu składnika ColorDialog
-[ColorDialog](colordialog-component-windows-forms.md) składnik wyświetla palety kolorów i zwraca właściwość zawierające kolor użytkownik wybrał.  
+# <a name="how-to-show-a-color-palette-with-the-colordialog-component"></a>Porady: pokazywanie palety kolorów przy użyciu składnika ColorDialog
+Składnik [ColorDialog](colordialog-component-windows-forms.md) wyświetla paletę kolorów i zwraca właściwość zawierającą kolor wybrany przez użytkownika.  
   
-### <a name="to-choose-a-color-using-the-colordialog-component"></a>Wybierz kolor, przy użyciu składnika ColorDialog  
+### <a name="to-choose-a-color-using-the-colordialog-component"></a>Aby wybrać kolor przy użyciu składnika ColorDialog  
   
-1. Wyświetlane przy użyciu okno dialogowe <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> metody.  
+1. Wyświetl okno dialogowe <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> przy użyciu metody.  
   
-2. Użyj <xref:System.Windows.Forms.DialogResult> właściwości w celu określenia, jak okno dialogowe zostało zamknięte.  
+2. Użyj <xref:System.Windows.Forms.DialogResult> właściwości, aby określić, jak okno dialogowe zostało zamknięte.  
   
-3. Użyj <xref:System.Windows.Forms.ColorDialog.Color%2A> właściwość <xref:System.Windows.Forms.ColorDialog> składnika, aby ustawić kolor wybrany.  
+3. Użyj <xref:System.Windows.Forms.ColorDialog.Color%2A> właściwości komponentu, <xref:System.Windows.Forms.ColorDialog> aby ustawić wybrany kolor.  
   
-     W poniższym przykładzie <xref:System.Windows.Forms.Button> kontrolki <xref:System.Windows.Forms.Control.Click> zostanie otwarty program obsługi zdarzeń <xref:System.Windows.Forms.ColorDialog> składnika. Gdy kolor, który jest wybrane i użytkownik klika polecenie **OK**, <xref:System.Windows.Forms.Button> kolor tła kontrolki jest ustawiona na wybranym kolorze. W przykładzie założono, formularz ma <xref:System.Windows.Forms.Button> kontroli i <xref:System.Windows.Forms.ColorDialog> składnika.  
+     W poniższym przykładzie <xref:System.Windows.Forms.Button> program <xref:System.Windows.Forms.Control.Click> obsługi zdarzeń <xref:System.Windows.Forms.ColorDialog> formantu otwiera składnik. Po wybraniu koloru i kliknięciu **przycisku OK**kolor tła <xref:System.Windows.Forms.Button> formantu jest ustawiony na wybrany kolor. W przykładzie przyjęto <xref:System.Windows.Forms.Button> założenie, <xref:System.Windows.Forms.ColorDialog> że formularz ma formant i składnik.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, _  
@@ -55,7 +55,7 @@ ms.locfileid: "66053423"
   
     ```cpp  
     private:  
-       void button1_Click(System::Object ^ sender,   
+       void button1_Click(System::Object ^ sender,
           System::EventArgs ^ e)  
        {  
           if(colorDialog1->ShowDialog() == DialogResult::OK)  
@@ -65,18 +65,18 @@ ms.locfileid: "66053423"
        }  
     ```  
   
-     (Visual C#, Visual C++) Umieść następujący kod w Konstruktorze formularza, aby zarejestrować program obsługi zdarzeń.  
+     (Visual C#, Visual C++) Umieść następujący kod w konstruktorze formularza, aby zarejestrować program obsługi zdarzeń.  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
     ```  
   
     ```cpp  
-    this->button1->Click +=   
+    this->button1->Click +=
        gcnew System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Windows.Forms.ColorDialog>
 - [ColorDialog, składnik](colordialog-component-windows-forms.md)

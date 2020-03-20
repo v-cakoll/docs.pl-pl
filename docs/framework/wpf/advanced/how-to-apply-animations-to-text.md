@@ -1,41 +1,41 @@
 ---
-title: 'Instrukcje: Stosowanie animacji do tekstu'
+title: Jak zastosować animacje do tekstu
 ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], animations
 - animation [WPF], text
 ms.assetid: eec3d26c-0a21-420f-8012-671621c47089
-ms.openlocfilehash: 38aa432fecc5b5e10d8eb90be9c1c596728ed613
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ed2f3beb904f724ac93e2c4033aa6b2eb3fa1290
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61776886"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174631"
 ---
-# <a name="how-to-apply-animations-to-text"></a>Instrukcje: Stosowanie animacji do tekstu
-Animacji można zmienić ekran i wygląd tekstu w aplikacji. W poniższych przykładach używane różne rodzaje animacji wpływa na wyświetlanie tekstu w <xref:System.Windows.Controls.TextBlock> kontroli.  
+# <a name="how-to-apply-animations-to-text"></a>Jak zastosować animacje do tekstu
+Animacje mogą zmieniać wyświetlanie i wygląd tekstu w aplikacji. Poniższe przykłady używają różnych typów animacji, aby <xref:System.Windows.Controls.TextBlock> wpłynąć na wyświetlanie tekstu w formancie.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto <xref:System.Windows.Media.Animation.DoubleAnimation> animować szerokość blok tekstu. Wartość szerokości zmieni się z szerokość blok tekstu 0 dany okres 10 sekund, a następnie odwraca wartości szerokości i jest kontynuowane. Ten typ animacji tworzy efekt czyszczenia.  
+ W poniższym przykładzie użyto a <xref:System.Windows.Media.Animation.DoubleAnimation> do animowania szerokości bloku tekstu. Wartość szerokości zmienia się z szerokości bloku tekstu na 0 w czasie trwania 10 sekund, a następnie odwraca wartości szerokości i kontynuuje. Ten typ animacji tworzy efekt czyszczenia.  
   
  [!code-xaml[TextAnimationSample#TextAnimationSample1](~/samples/snippets/csharp/VS_Snippets_Wpf/TextAnimationSample/CS/Window1.xaml#textanimationsample1)]  
   
- W poniższym przykładzie użyto <xref:System.Windows.Media.Animation.DoubleAnimation> animować nieprzezroczystość blok tekstu. Wartość nieprzezroczystości zmieni się z wersji 1.0 0 dany okres 5 sekund, a następnie odwraca nieprzezroczystość wartości i jest kontynuowane.  
+ W poniższym przykładzie użyto a <xref:System.Windows.Media.Animation.DoubleAnimation> do animowania krycia bloku tekstu. Wartość krycia zmienia się z 1,0 na 0 w czasie trwania 5 sekund, a następnie odwraca wartości krycia i kontynuuje.  
   
  [!code-xaml[TextAnimationSample#TextAnimationSample2](~/samples/snippets/csharp/VS_Snippets_Wpf/TextAnimationSample/CS/Window1.xaml#textanimationsample2)]  
   
- Na poniższym diagramie przedstawiono efekt <xref:System.Windows.Controls.TextBlock> kontroli, zmiana jego nieprzezroczystości od `1.00` do `0.00` podczas 5-sekundowego interwału definicją <xref:System.Windows.Media.Animation.Timeline.Duration%2A>.  
+ Na poniższym diagramie <xref:System.Windows.Controls.TextBlock> przedstawiono efekt zmiany `1.00` krycia formantu z do `0.00` <xref:System.Windows.Media.Animation.Timeline.Duration%2A>5-sekundowego interwału zdefiniowanego przez .  
   
- ![Zmiana nieprzezroczystość z 1,00 0,00 tekst.](./media/how-to-apply-animations-to-text/faded-text-opacity-change.png)  
-   
- W poniższym przykładzie użyto <xref:System.Windows.Media.Animation.ColorAnimation> animować kolor pierwszego planu blok tekstu. Wartość koloru pierwszego planu zmieni się z jednego koloru na drugi kolor dany okres 5 sekund, a następnie odwraca wartości kolorów i jest kontynuowane.  
+ ![Zmiana krycia tekstu z 1,00 na 0,00.](./media/how-to-apply-animations-to-text/faded-text-opacity-change.png)  
+
+ W poniższym przykładzie użyto a <xref:System.Windows.Media.Animation.ColorAnimation> do animowania koloru pierwszego planu bloku tekstu. Wartość koloru pierwszego planu zmienia się z jednego koloru na drugi w czasie trwania 5 sekund, a następnie odwraca wartości kolorów i kontynuuje.  
   
  [!code-xaml[TextAnimationSample#TextAnimationSample3](~/samples/snippets/csharp/VS_Snippets_Wpf/TextAnimationSample/CS/Window1.xaml#textanimationsample3)]  
   
- W poniższym przykładzie użyto <xref:System.Windows.Media.Animation.DoubleAnimation> wymienić blok tekstu. Blok tekstu wykonuje pełne obrotu w czasie trwania wynoszącego 20 sekund i następnie w dalszym ciągu należy powtórzyć obrót.  
+ W poniższym przykładzie użyto a <xref:System.Windows.Media.Animation.DoubleAnimation> do obracania bloku tekstu. Blok tekstu wykonuje pełny obrót przez 20 sekund, a następnie kontynuuje powtarzanie obrotu.  
   
  [!code-xaml[TextAnimationSample#TextAnimationSample4](~/samples/snippets/csharp/VS_Snippets_Wpf/TextAnimationSample/CS/Window1.xaml#textanimationsample4)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Animacja — przegląd](../graphics-multimedia/animation-overview.md)
+- [Przegląd Animacja](../graphics-multimedia/animation-overview.md)

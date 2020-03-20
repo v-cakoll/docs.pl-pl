@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: aa20ac3d-6f60-4aa2-91c5-f3a86f82eba8
 topic_type:
 - apiref
-ms.openlocfilehash: f37bf545553045b9737b7057feed78e1f06ace4d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ca2d00611a7530dfb0d1c2a27123947bdf69820d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73099469"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179351"
 ---
 # <a name="cor_array_layout-structure"></a>COR_ARRAY_LAYOUT — Struktury
-Zawiera informacje o układzie obiektu tablicy w pamięci.  
+Zawiera informacje o układzie obiektu tablicowego w pamięci.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -32,41 +32,41 @@ typedef struct COR_ARRAY_LAYOUT {
     CorElementType componentType;  
     ULONG32 firstElementOffset;  
     ULONG32 elementSize;  
-    ULONG32 countOffset;   
-    ULONG32 rankSize;   
-    ULONG32 numRanks;   
-    ULONG32 rankOffset;   
+    ULONG32 countOffset;
+    ULONG32 rankSize;
+    ULONG32 numRanks;
+    ULONG32 rankOffset;
 } COR_ARRAY_LAYOUT;  
 ```  
   
 ## <a name="members"></a>Elementy członkowskie  
   
-|Element członkowski|Opis|  
+|Członek|Opis|  
 |------------|-----------------|  
 |`componentID`|Identyfikator typu obiektów, które zawiera tablica.|  
-|`componentType`|Wartość wyliczenia CorElementType —, która wskazuje, czy składnik jest odwołaniem do wyrzucania elementów bezużytecznych, klasą wartości lub elementem pierwotnym.|  
+|`componentType`|A CorElementType wartość wyliczenia, która wskazuje, czy składnik jest odwołanie do wyrzucania elementów bezużytecznych, klasy wartości lub pierwotne.|  
 |`firstElementOffset`|Przesunięcie do pierwszego elementu w tablicy.|  
 |`elementSize`|Rozmiar każdego elementu.|  
 |`countOffset`|Przesunięcie do liczby elementów w tablicy.|  
 |`rankSize`|Rozmiar rangi w bajtach.|  
-|`numRanks`|Liczba rangi w tablicy.|  
-|`rankOffset`|Przesunięcie, od którego są uruchamiane Range.|  
+|`numRanks`|Liczba szeregów w tablicy.|  
+|`rankOffset`|Przesunięcie, od którego zaczynają się rangi.|  
   
 ## <a name="remarks"></a>Uwagi  
- Pole `rankSize` określa rozmiar rangi w tablicy wielowymiarowej. Jest to dokładne dla tablic jednowymiarowych.  
+ Pole `rankSize` określa rozmiar rangi w tablicy wielowymiarowej. Jest to dokładne dla tablic jednowymiarowych, jak również.  
   
- Wartość `numRanks` to 1 dla jednowymiarowej tablicy i `N` dla wielowymiarowej tablicy wymiarów `N`.  
+ Wartość `numRanks` wynosi 1 dla tablicy jednowymiarowej i `N` wielowymiarowej tablicy wymiarów. `N`  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug. idl, CorDebug. h  
+ **Nagłówek:** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids. lib  
+ **Biblioteka:** CorGuids.lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Struktury debugowania](debugging-structures.md)
-- [Debugowanie](index.md)
+- [Debugging](index.md)

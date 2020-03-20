@@ -16,24 +16,24 @@ helpviewer_keywords:
 - protocols, pluggable
 ms.assetid: 66ef8456-7576-4e97-8956-959b216373db
 ms.openlocfilehash: 94dfedd317782b9e518df02c84d9af55b1ef2b69
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047400"
 ---
 # <a name="programming-pluggable-protocols"></a>Programowanie protokołów podłączanych
-Abstrakcyjne <xref:System.Net.WebRequest> i <xref:System.Net.WebResponse> klasy stanowią podstawę dla protokołów podłączanych. Dzięki wykorzystaniu klas specyficznych dla <xref:System.Net.WebRequest> protokołu <xref:System.Net.WebResponse>z i, aplikacja może zażądać danych z zasobu internetowego i odczytać odpowiedź bez określania używanego protokołu.  
+Abstrakcyjne <xref:System.Net.WebRequest> <xref:System.Net.WebResponse> i klasy stanowią podstawę dla protokołów podłączanych. Poprzez wyprowadzanie klas specyficznych dla protokołu z <xref:System.Net.WebRequest> i <xref:System.Net.WebResponse>, aplikacja może żądać danych z zasobu internetowego i odczytać odpowiedź bez określania używanego protokołu.  
   
- Aby można było utworzyć specyficzny <xref:System.Net.WebRequest>dla protokołu, należy zarejestrować metodę Create. Użyj <xref:System.Net.WebRequest.RegisterPrefix%28System.String%2CSystem.Net.IWebRequestCreate%29> <xref:System.Net.WebRequest> metody statycznej w celu zarejestrowania elementu podrzędnego w celu obsługi zestawu żądań do określonego schematu internetowego, schematu i serwera, lub schematu, serwera i ścieżki. <xref:System.Net.WebRequest>  
+ Przed utworzeniem specyficznego <xref:System.Net.WebRequest>dla protokołu, należy zarejestrować jego Create metody. Użyj metody <xref:System.Net.WebRequest.RegisterPrefix%28System.String%2CSystem.Net.IWebRequestCreate%29> statycznej, <xref:System.Net.WebRequest> aby <xref:System.Net.WebRequest> zarejestrować element podrzędny do obsługi zestawu żądań do określonego schematu internetowego, do schematu i serwera lub do schematu, serwera i ścieżki.  
   
- W większości przypadków będzie można wysyłać i odbierać dane przy użyciu metod i właściwości <xref:System.Net.WebRequest> klasy. Jeśli jednak chcesz uzyskać dostęp do właściwości specyficznych dla protokołu, możesz rzutowanie a <xref:System.Net.WebRequest> do określonego wystąpienia klasy pochodnej.  
+ W większości przypadków będzie można wysyłać i odbierać dane <xref:System.Net.WebRequest> przy użyciu metod i właściwości klasy. Jednak jeśli chcesz uzyskać dostęp do właściwości specyficznych dla <xref:System.Net.WebRequest> protokołu, można typecast do określonego wystąpienia klasy pochodnej.  
   
- Aby móc korzystać z protokołów podłączanych, <xref:System.Net.WebRequest> elementy podrzędne muszą udostępniać domyślną transakcję żądanie-odpowiedź, która nie wymaga ustawiania właściwości specyficznych dla protokołu. Na przykład <xref:System.Net.HttpWebRequest> Klasa, która <xref:System.Net.WebRequest> implementuje klasę `GET` dla protokołu HTTP, domyślnie zapewnia żądanie i zwraca <xref:System.Net.HttpWebResponse> wartość zawierającą Strumień zwrócony z serwera sieci Web.  
+ Aby skorzystać z protokołów pluggable, elementy <xref:System.Net.WebRequest> podrzędne muszą podać domyślną transakcję żądania i odpowiedzi, która nie wymaga ustawienia właściwości specyficznych dla protokołu. Na przykład <xref:System.Net.HttpWebRequest> klasa, która implementuje <xref:System.Net.WebRequest> klasę dla `GET` protokołu HTTP, domyślnie dostarcza żądanie i zwraca <xref:System.Net.HttpWebResponse> strumień zwracany z serwera sieci Web.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Wyprowadzanie z elementu WebRequest](deriving-from-webrequest.md)
 - [Wyprowadzanie z elementu WebResponse](deriving-from-webresponse.md)
 - [Programowanie dla sieci w programie .NET Framework](index.md)
-- [Instrukcje: Rzutowanie żądania sieci Webw celu uzyskania dostępu do właściwości specyficznych dla protokołu](how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)
+- [Instrukcje: rzutowanie elementu WebRequest w celu uzyskania dostępu do właściwości specyficznych dla protokołu](how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)

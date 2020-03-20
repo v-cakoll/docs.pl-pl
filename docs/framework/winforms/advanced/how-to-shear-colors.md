@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Zmienianie kolorów'
+title: 'Porady: zmienianie kolorów'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,26 +8,26 @@ helpviewer_keywords:
 - colors [Windows Forms], transforming with color matrices
 - colors [Windows Forms], shearing
 ms.assetid: 0a424171-5b8b-45c4-afef-e9720a6c3e22
-ms.openlocfilehash: b390caf644b86de0001387b2c3f41503fd34759a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 825e5a90ebb0d9df3b894ce7bd353e917b676939
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593210"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142397"
 ---
-# <a name="how-to-shear-colors"></a>Instrukcje: Zmienianie kolorów
-Pochylanie zwiększa lub zmniejsza składnika koloru o kwotę proporcjonalną do innego składnika koloru. Na przykład należy wziąć pod uwagę transformacji, w której składnik czerwony jest zwiększana o połowę wartość składnik niebieski. W obszarze takie przekształcenia kolorów (0,2, 0,5, 1) staną się (0,7, 0,5, 1). Nowy składnik czerwony jest wymagane 0,2 + (1/2)(1) = 0,7.  
+# <a name="how-to-shear-colors"></a>Porady: zmienianie kolorów
+Ścinanie zwiększa lub zmniejsza komponent koloru o kwotę proporcjonalną do innego komponentu koloru. Rozważmy na przykład transformację, w której czerwony składnik jest zwiększany o połowę wartości niebieskiego składnika. W ramach takiej transformacji kolor (0,2, 0,5, 1) stałby się (0,7, 0,5, 1). Nowy czerwony komponent to 0,2 + (1/2)(1) = 0,7.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład tworzy <xref:System.Drawing.Image> obiektu na podstawie pliku ColorBars4.bmp. Następnie kod stosuje transformację nożycy opisane w poprzednim akapicie do każdego piksela na obrazie.  
+ Poniższy przykład tworzy <xref:System.Drawing.Image> obiekt z pliku ColorBars4.bmp. Następnie kod stosuje transformację ścinania opisaną w poprzednim akapicie do każdego piksela obrazu.  
   
- Na poniższej ilustracji przedstawiono oryginalny obraz po lewej stronie i pochylone obraz po prawej stronie: 
+ Na poniższej ilustracji przedstawiono oryginalny obraz po lewej stronie i ścięty obraz po prawej stronie:
   
- ![Dwa pola z kolorowe paski side-by-side pokazujący oryginalnego obrazu i pochylone obrazu.](./media/how-to-shear-colors/original-image-sheared-image.png)  
+ ![Dwa kwadraty z kolorowymi paskami obok siebie ilustrujące oryginalny obraz i ścięty obraz.](./media/how-to-shear-colors/original-image-sheared-image.png)  
   
- W poniższej tabeli wymieniono wektorów kolor słupków cztery przed i po nim nożycy transformacji.  
+ W poniższej tabeli wymieniono wektory kolorów dla czterech pasków przed i po transformacji ścinania.  
   
-|Oryginał|Pochylono|  
+|Oryginał|Ścięty|  
 |--------------|-------------|  
 |(0, 0, 1, 1)|(0.5, 0, 1, 1)|  
 |(0.5, 1, 0.5, 1)|(0.75, 1, 0.5, 1)|  
@@ -38,9 +38,9 @@ Pochylanie zwiększa lub zmniejsza składnika koloru o kwotę proporcjonalną do
  [!code-vb[System.Drawing.Misc3#9](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc3/VB/Form1.vb#9)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Poprzedni przykład jest przeznaczony do użytku z formularzami Windows Forms i potrzebny <xref:System.Windows.Forms.PaintEventArgs> `e`, czyli parametrem <xref:System.Windows.Forms.Control.Paint> programu obsługi zdarzeń. Zastąp `ColorBars.bmp` przy użyciu nazwy obrazu i ścieżki prawidłowy w tym systemie.  
+ Powyższy przykład jest przeznaczony do użytku z <xref:System.Windows.Forms.PaintEventArgs> `e`formularzami systemu Windows <xref:System.Windows.Forms.Control.Paint> i wymaga , który jest parametrem obsługi zdarzeń. Zastąp `ColorBars.bmp` nazwą obrazu i ścieżką prawidłową w systemie.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Drawing.Imaging.ColorMatrix>
 - <xref:System.Drawing.Imaging.ImageAttributes>

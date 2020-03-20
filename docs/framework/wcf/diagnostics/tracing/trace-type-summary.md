@@ -2,53 +2,53 @@
 title: Podsumowanie typu śledzenia
 ms.date: 03/30/2017
 ms.assetid: e639410b-d1d1-479c-b78e-a4701d4e4085
-ms.openlocfilehash: 8f54f71ef63338708a29fac5557c7c7e8f257f58
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 8ed6dceb19caa52f928f285064c60337e3f15a87
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70856011"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78674841"
 ---
 # <a name="trace-type-summary"></a>Podsumowanie typu śledzenia
-[Poziomy źródła](https://go.microsoft.com/fwlink/?LinkID=94943) definiują różne poziomy śledzenia: Krytyczne, błąd, ostrzeżenie, informacje i pełne, a także zawiera opis `ActivityTracing` flagi, która przełącza dane wyjściowe z granicy śledzenia i zdarzeń transferu aktywności.  
+[Poziomy źródła](xref:System.Diagnostics.SourceLevels) definiuje różne poziomy śledzenia: Krytyczne, Błąd, Ostrzeżenie, Informacje i Pełne, a `ActivityTracing` także zawiera opis flagi, która przełącza dane wyjściowe śledzenia granic i zdarzeń transferu działania.  
   
- Można również przejrzeć [TraceEventType](https://go.microsoft.com/fwlink/?LinkId=95169) dla typów śladów, które mogą być emitowane z <xref:System.Diagnostics>.  
+ Można również <xref:System.Diagnostics.TraceEventType> przejrzeć typy śladów, które <xref:System.Diagnostics>mogą być emitowane z .  
   
- W poniższej tabeli przedstawiono najważniejsze elementy.  
+ W poniższej tabeli wymieniono najważniejsze z nich.  
   
 |Typ śledzenia|Opis|  
 |----------------|-----------------|  
 |Krytyczny|Błąd krytyczny lub awaria aplikacji.|  
-|Błąd|Odwracalny błąd.|  
-|Ostrzeżenie|Komunikat informacyjny.|  
+|Błąd|Błąd do odzyskania.|  
+|Ostrzeżenie|Wiadomość informacyjna.|  
 |Informacje|Problem niekrytyczny.|  
-|Pełny|Śledzenie debugowania.|  
-|Uruchamianie|Rozpoczynanie logicznej jednostki przetwarzania.|  
-|Wstrzymywanie|Zawieszenie logicznej jednostki przetwarzania.|  
-|Wznawianie|Wznawianie jednostki logicznej przetwarzania.|  
-|Zatrzymywanie|Zatrzymywanie logicznej jednostki przetwarzania.|  
+|Pełny|Debugowanie śledzenia.|  
+|Rozpoczęcie|Rozpoczęcie logicznej jednostki przetwarzania.|  
+|Wstrzymanie|Zawieszenie logicznej jednostki przetwarzania.|  
+|Resume|Wznowienie logicznej jednostki przetwarzania.|  
+|Stop|Zatrzymywanie logicznej jednostki przetwarzania.|  
 |Transfer|Zmiana tożsamości korelacji.|  
   
- Działanie jest zdefiniowane jako kombinacja powyższych typów śledzenia.  
+ Działanie jest zdefiniowane jako kombinacja typów śledzenia powyżej.  
   
- Poniżej znajduje się wyrażenie regularne, które definiuje idealne działanie w zakresie lokalnym (śledzenie źródła),  
+ Poniżej znajduje się wyrażenie regularne, które definiuje idealne działanie w zakresie lokalnym (źródło śledzenia),  
   
  `R = Start (Critical | Error | Warning | Information | Verbose | Transfer | (Transfer Suspend Transfer Resume) )* Stop`  
   
  Oznacza to, że działanie musi spełniać następujące warunki.  
   
-- Musi on być odpowiednio uruchamiany i zatrzymany przez uruchamianie i zatrzymywanie śledzenia  
+- Musi rozpocząć i zatrzymać odpowiednio przez ślady start i stop  
   
-- Musi mieć ślad transferu bezpośrednio poprzedzający śledzenie wstrzymania lub wznowienia  
+- Musi mieć transfer śledzenia bezpośrednio poprzedzających wstrzymanie lub wznowienie śledzenia  
   
-- Nie może mieć żadnych śladów między śladami zawieszenia i wznowienia, jeśli istnieją takie ślady  
+- Nie może mieć żadnych śladów między wstrzymywają i wznawiaj ślady, jeśli takie ślady istnieją  
   
-- Może to być dowolny i wiele ze śladów krytyczne/błąd/ostrzeżenie/informacja/pełny/transfer, o ile zostały spełnione poprzednie warunki  
+- Może mieć dowolną i dowolną liczbę krytycznych/błąd/ostrzeżenie/informacje/pełne/transferowe ślady, o ile zaobserwowano poprzednie warunki  
   
  Poniżej znajduje się wyrażenie regularne, które definiuje idealne działanie w zakresie globalnym,  
   
 `R+`  
   
- za pomocą języka R jest wyrażeniem regularnym dla działania w zakresie lokalnym. Spowoduje to przetłumaczenie na,  
+ z R jest wyrażeniem regularnym dla działania w zakresie lokalnym. Przekłada się to na,  
   
 `[R+ = Start ( Critical | Error | Warning | Information | Verbose | Transfer | (Transfer Suspend Transfer Resume) )* Stop]+`

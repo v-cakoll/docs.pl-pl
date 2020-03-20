@@ -1,27 +1,27 @@
 ---
-title: Zmienne (Entity SQL)
+title: Zmienne (entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 3eed222a-f8f6-46b6-9cd5-220cc0e4e5d8
-ms.openlocfilehash: bb8e6ebe81dacc7ec0f45fdde65b9c18cfd76789
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 88ee41bc08711cf84b8b2e273c9ac0f4267d1d34
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319202"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149820"
 ---
-# <a name="variables-entity-sql"></a><span data-ttu-id="c12e2-102">Zmienne (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="c12e2-102">Variables (Entity SQL)</span></span>
-## <a name="variable"></a><span data-ttu-id="c12e2-103">Zmienna</span><span class="sxs-lookup"><span data-stu-id="c12e2-103">Variable</span></span>  
- <span data-ttu-id="c12e2-104">Wyrażenie zmiennej jest odwołaniem do nazwanego wyrażenia zdefiniowanego w bieżącym zakresie.</span><span class="sxs-lookup"><span data-stu-id="c12e2-104">A variable expression is a reference to a named expression defined in the current scope.</span></span> <span data-ttu-id="c12e2-105">Odwołanie do zmiennej musi być prawidłowym identyfikatorem [!INCLUDE[esql](../../../../../../includes/esql-md.md)], zgodnie z definicją w [identyfikatorach](identifiers-entity-sql.md).</span><span class="sxs-lookup"><span data-stu-id="c12e2-105">A variable reference must be a valid [!INCLUDE[esql](../../../../../../includes/esql-md.md)] identifier, as defined in [Identifiers](identifiers-entity-sql.md).</span></span>  
+# <a name="variables-entity-sql"></a><span data-ttu-id="f6168-102">Zmienne (entity SQL)</span><span class="sxs-lookup"><span data-stu-id="f6168-102">Variables (Entity SQL)</span></span>
+## <a name="variable"></a><span data-ttu-id="f6168-103">Zmienna</span><span class="sxs-lookup"><span data-stu-id="f6168-103">Variable</span></span>  
+ <span data-ttu-id="f6168-104">Wyrażenie zmiennej jest odwołaniem do nazwanego wyrażenia zdefiniowanego w bieżącym zakresie.</span><span class="sxs-lookup"><span data-stu-id="f6168-104">A variable expression is a reference to a named expression defined in the current scope.</span></span> <span data-ttu-id="f6168-105">Odwołanie do zmiennej [!INCLUDE[esql](../../../../../../includes/esql-md.md)] musi być prawidłowym identyfikatorem, zgodnie z definicją w [identyfikatorach](identifiers-entity-sql.md).</span><span class="sxs-lookup"><span data-stu-id="f6168-105">A variable reference must be a valid [!INCLUDE[esql](../../../../../../includes/esql-md.md)] identifier, as defined in [Identifiers](identifiers-entity-sql.md).</span></span>  
   
- <span data-ttu-id="c12e2-106">W poniższym przykładzie pokazano użycie zmiennej w wyrażeniu.</span><span class="sxs-lookup"><span data-stu-id="c12e2-106">The following example shows the use of a variable in the expression.</span></span> <span data-ttu-id="c12e2-107">@No__t-0 w klauzuli FROM jest definicją zmiennej.</span><span class="sxs-lookup"><span data-stu-id="c12e2-107">The `c` in the FROM clause is the definition of the variable.</span></span> <span data-ttu-id="c12e2-108">Użycie `c` w klauzuli SELECT reprezentuje odwołanie do zmiennej.</span><span class="sxs-lookup"><span data-stu-id="c12e2-108">The use of `c` in the SELECT clause represents the variable reference.</span></span>  
+ <span data-ttu-id="f6168-106">Poniższy przykład pokazuje użycie zmiennej w wyrażeniu.</span><span class="sxs-lookup"><span data-stu-id="f6168-106">The following example shows the use of a variable in the expression.</span></span> <span data-ttu-id="f6168-107">W `c` klauzuli FROM jest definicja zmiennej.</span><span class="sxs-lookup"><span data-stu-id="f6168-107">The `c` in the FROM clause is the definition of the variable.</span></span> <span data-ttu-id="f6168-108">Użycie `c` w select klauzuli reprezentuje odwołanie do zmiennej.</span><span class="sxs-lookup"><span data-stu-id="f6168-108">The use of `c` in the SELECT clause represents the variable reference.</span></span>  
   
 ```sql  
-select c   
+select c
 from LOB.customers as c  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c12e2-109">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c12e2-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f6168-109">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="f6168-109">See also</span></span>
 
-- [<span data-ttu-id="c12e2-110">Identyfikatory</span><span class="sxs-lookup"><span data-stu-id="c12e2-110">Identifiers</span></span>](identifiers-entity-sql.md)
-- [<span data-ttu-id="c12e2-111">Parametry</span><span class="sxs-lookup"><span data-stu-id="c12e2-111">Parameters</span></span>](parameters-entity-sql.md)
-- [<span data-ttu-id="c12e2-112">Omówienie jednostki SQL</span><span class="sxs-lookup"><span data-stu-id="c12e2-112">Entity SQL Overview</span></span>](entity-sql-overview.md)
+- [<span data-ttu-id="f6168-110">Identyfikatory</span><span class="sxs-lookup"><span data-stu-id="f6168-110">Identifiers</span></span>](identifiers-entity-sql.md)
+- [<span data-ttu-id="f6168-111">Parametry</span><span class="sxs-lookup"><span data-stu-id="f6168-111">Parameters</span></span>](parameters-entity-sql.md)
+- [<span data-ttu-id="f6168-112">Omówienie jednostki SQL</span><span class="sxs-lookup"><span data-stu-id="f6168-112">Entity SQL Overview</span></span>](entity-sql-overview.md)

@@ -5,28 +5,28 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f588597a-49de-4206-8463-4ef377e112ff
-ms.openlocfilehash: c1d97ed04de25d4db0fbf17e26a1d169d356a72c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d354dda05e8353a33c3a64440e5c2bad390743b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794394"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79148858"
 ---
-# <a name="aspnet-applications-using-wait-handles"></a><span data-ttu-id="225c0-102">Aplikacje ASP.NET z wykorzystaniem uchwytów oczekiwania</span><span class="sxs-lookup"><span data-stu-id="225c0-102">ASP.NET Applications Using Wait Handles</span></span>
-<span data-ttu-id="225c0-103">Model wywołania zwrotnego i sondowania do obsługi operacji asynchronicznych jest przydatny, gdy aplikacja przetwarza tylko jedną operację asynchroniczną w danym momencie.</span><span class="sxs-lookup"><span data-stu-id="225c0-103">The callback and polling models for handling asynchronous operations are useful when your application is processing only one asynchronous operation at a time.</span></span> <span data-ttu-id="225c0-104">Modele oczekiwania zapewniają bardziej elastyczny sposób przetwarzania wielu operacji asynchronicznych.</span><span class="sxs-lookup"><span data-stu-id="225c0-104">The Wait models provide a more flexible way of processing multiple asynchronous operations.</span></span> <span data-ttu-id="225c0-105">Istnieją dwa modele oczekiwania, nazwane dla <xref:System.Threading.WaitHandle> metod używanych do ich implementacji: model oczekiwania (dowolny) i model oczekiwania (wszystkie).</span><span class="sxs-lookup"><span data-stu-id="225c0-105">There are two Wait models, named for the <xref:System.Threading.WaitHandle> methods used to implement them: the Wait (Any) model and the Wait (All) model.</span></span>  
+# <a name="aspnet-applications-using-wait-handles"></a><span data-ttu-id="74d4f-102">Aplikacje ASP.NET z wykorzystaniem uchwytów oczekiwania</span><span class="sxs-lookup"><span data-stu-id="74d4f-102">ASP.NET Applications Using Wait Handles</span></span>
+<span data-ttu-id="74d4f-103">Wywołania zwrotnego i sondowania modeli do obsługi operacji asynchronicznych są przydatne, gdy aplikacja przetwarza tylko jedną operację asynchroniczną w czasie.</span><span class="sxs-lookup"><span data-stu-id="74d4f-103">The callback and polling models for handling asynchronous operations are useful when your application is processing only one asynchronous operation at a time.</span></span> <span data-ttu-id="74d4f-104">Modele oczekiwania zapewniają bardziej elastyczny sposób przetwarzania wielu operacji asynchronicznych.</span><span class="sxs-lookup"><span data-stu-id="74d4f-104">The Wait models provide a more flexible way of processing multiple asynchronous operations.</span></span> <span data-ttu-id="74d4f-105">Istnieją dwa modele oczekiwania, <xref:System.Threading.WaitHandle> nazwane dla metod używanych do ich zaimplementowania: wait (Any) model i wait (all) modelu.</span><span class="sxs-lookup"><span data-stu-id="74d4f-105">There are two Wait models, named for the <xref:System.Threading.WaitHandle> methods used to implement them: the Wait (Any) model and the Wait (All) model.</span></span>  
   
- <span data-ttu-id="225c0-106">Aby użyć dowolnego modelu oczekiwania, należy użyć <xref:System.IAsyncResult.AsyncWaitHandle%2A> właściwości <xref:System.IAsyncResult> obiektu zwróconego przez <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>metody, <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A>lub <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> .</span><span class="sxs-lookup"><span data-stu-id="225c0-106">To use either Wait model, you need to use the <xref:System.IAsyncResult.AsyncWaitHandle%2A> property of the <xref:System.IAsyncResult> object returned by the <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A>, or <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> methods.</span></span> <span data-ttu-id="225c0-107">Metody <xref:System.Threading.WaitHandle.WaitAny%2A> i <xref:System.Threading.WaitHandle.WaitAll%2A> oba<xref:System.Threading.WaitHandle> wymagają wysłania obiektów jako argumentu, zgrupowane razem w tablicy.</span><span class="sxs-lookup"><span data-stu-id="225c0-107">The <xref:System.Threading.WaitHandle.WaitAny%2A> and <xref:System.Threading.WaitHandle.WaitAll%2A> methods both require you to send the <xref:System.Threading.WaitHandle> objects as an argument, grouped together in an array.</span></span>  
+ <span data-ttu-id="74d4f-106">Aby użyć modelu oczekiwania, należy użyć <xref:System.IAsyncResult.AsyncWaitHandle%2A> właściwości <xref:System.IAsyncResult> obiektu zwróconego <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A> <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A>przez <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> , lub metody.</span><span class="sxs-lookup"><span data-stu-id="74d4f-106">To use either Wait model, you need to use the <xref:System.IAsyncResult.AsyncWaitHandle%2A> property of the <xref:System.IAsyncResult> object returned by the <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A>, or <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> methods.</span></span> <span data-ttu-id="74d4f-107">I <xref:System.Threading.WaitHandle.WaitAny%2A> <xref:System.Threading.WaitHandle.WaitAll%2A> metody wymagają wysyłania <xref:System.Threading.WaitHandle> obiektów jako argument, zgrupowane w tablicy.</span><span class="sxs-lookup"><span data-stu-id="74d4f-107">The <xref:System.Threading.WaitHandle.WaitAny%2A> and <xref:System.Threading.WaitHandle.WaitAll%2A> methods both require you to send the <xref:System.Threading.WaitHandle> objects as an argument, grouped together in an array.</span></span>  
   
- <span data-ttu-id="225c0-108">Obie metody oczekiwania monitorują operacje asynchroniczne, czekając na ukończenie.</span><span class="sxs-lookup"><span data-stu-id="225c0-108">Both Wait methods monitor the asynchronous operations, waiting for completion.</span></span> <span data-ttu-id="225c0-109"><xref:System.Threading.WaitHandle.WaitAny%2A> Metoda czeka na zakończenie dowolnej operacji lub przekroczenie limitu czasu. Po poznaniu określonej operacji można przetworzyć jej wyniki, a następnie kontynuować oczekiwanie na ukończenie następnej operacji lub przekroczenie limitu czasu. Metoda czeka na ukończenie wszystkich procesów w <xref:System.Threading.WaitHandle> tablicy wystąpień lub przekroczenie limitu czasu przed kontynuowaniem. <xref:System.Threading.WaitHandle.WaitAll%2A></span><span class="sxs-lookup"><span data-stu-id="225c0-109">The <xref:System.Threading.WaitHandle.WaitAny%2A> method waits for any of the operations to complete or time out. Once you know a particular operation is complete, you can process its results and then continue waiting for the next operation to complete or time out. The <xref:System.Threading.WaitHandle.WaitAll%2A> method waits for all of the processes in the array of <xref:System.Threading.WaitHandle> instances to complete or time out before continuing.</span></span>  
+ <span data-ttu-id="74d4f-108">Obie metody oczekiwania monitorują operacje asynchroniczne, oczekując na zakończenie.</span><span class="sxs-lookup"><span data-stu-id="74d4f-108">Both Wait methods monitor the asynchronous operations, waiting for completion.</span></span> <span data-ttu-id="74d4f-109">Metoda <xref:System.Threading.WaitHandle.WaitAny%2A> czeka na dowolną z operacji, aby zakończyć lub limit czasu. Gdy wiadomo, że określona operacja została ukończona, można przetworzyć jej wyniki, a następnie kontynuować oczekiwanie na następną operację, aby zakończyć lub limit czasu. Metoda <xref:System.Threading.WaitHandle.WaitAll%2A> czeka na wszystkie procesy w <xref:System.Threading.WaitHandle> tablicy wystąpień, aby zakończyć lub limit czasu przed kontynuowaniem.</span><span class="sxs-lookup"><span data-stu-id="74d4f-109">The <xref:System.Threading.WaitHandle.WaitAny%2A> method waits for any of the operations to complete or time out. Once you know a particular operation is complete, you can process its results and then continue waiting for the next operation to complete or time out. The <xref:System.Threading.WaitHandle.WaitAll%2A> method waits for all of the processes in the array of <xref:System.Threading.WaitHandle> instances to complete or time out before continuing.</span></span>  
   
- <span data-ttu-id="225c0-110">Korzyść modeli oczekiwania jest najtrudniejsza, gdy trzeba uruchomić wiele operacji na różnych serwerach lub gdy serwer jest wystarczająco wydajny, aby przetwarzać wszystkie zapytania w tym samym czasie.</span><span class="sxs-lookup"><span data-stu-id="225c0-110">The Wait models' benefit is most striking when you need to run multiple operations of some length on different servers, or when your server is powerful enough to process all the queries at the same time.</span></span> <span data-ttu-id="225c0-111">W przedstawionych tu przykładach trzy zapytania emulują długie procesy przez dodanie poleceń WAITFOR o różnej długości do niektórych zapytań SELECT.</span><span class="sxs-lookup"><span data-stu-id="225c0-111">In the examples presented here, three queries emulate long processes by adding WAITFOR commands of varying lengths to inconsequential SELECT queries.</span></span>  
+ <span data-ttu-id="74d4f-110">Korzyści modeli oczekiwania jest najbardziej uderzające, gdy trzeba uruchomić wiele operacji o określonej długości na różnych serwerach lub gdy serwer jest wystarczająco wydajny, aby przetwarzać wszystkie zapytania w tym samym czasie.</span><span class="sxs-lookup"><span data-stu-id="74d4f-110">The Wait models' benefit is most striking when you need to run multiple operations of some length on different servers, or when your server is powerful enough to process all the queries at the same time.</span></span> <span data-ttu-id="74d4f-111">W przykładach przedstawionych w tym miejscu trzy zapytania emulują długie procesy, dodając polecenia WAITFOR o różnej długości do nieistotnych zapytań SELECT.</span><span class="sxs-lookup"><span data-stu-id="74d4f-111">In the examples presented here, three queries emulate long processes by adding WAITFOR commands of varying lengths to inconsequential SELECT queries.</span></span>  
   
-## <a name="example-wait-any-model"></a><span data-ttu-id="225c0-112">Przykład: Zaczekaj (dowolny) model</span><span class="sxs-lookup"><span data-stu-id="225c0-112">Example: Wait (Any) Model</span></span>  
- <span data-ttu-id="225c0-113">Poniższy przykład ilustruje model oczekiwania (any).</span><span class="sxs-lookup"><span data-stu-id="225c0-113">The following example illustrates the Wait (Any) model.</span></span> <span data-ttu-id="225c0-114">Po rozpoczęciu <xref:System.Threading.WaitHandle.WaitAny%2A> trzech procesów asynchronicznych Metoda jest wywoływana w celu poczekania na zakończenie jednego z nich.</span><span class="sxs-lookup"><span data-stu-id="225c0-114">Once three asynchronous processes are started, the <xref:System.Threading.WaitHandle.WaitAny%2A> method is called to wait for the completion of any one of them.</span></span> <span data-ttu-id="225c0-115">Po zakończeniu każdego procesu wywoływana jest <xref:System.Data.SqlClient.SqlCommand.EndExecuteReader%2A> Metoda, a obiekt wyniku <xref:System.Data.SqlClient.SqlDataReader> jest odczytywany.</span><span class="sxs-lookup"><span data-stu-id="225c0-115">As each process completes, the <xref:System.Data.SqlClient.SqlCommand.EndExecuteReader%2A> method is called and the resulting <xref:System.Data.SqlClient.SqlDataReader> object is read.</span></span> <span data-ttu-id="225c0-116">W tym momencie aplikacja rzeczywista prawdopodobnie użyje, <xref:System.Data.SqlClient.SqlDataReader> aby wypełnić część strony.</span><span class="sxs-lookup"><span data-stu-id="225c0-116">At this point, a real-world application would likely use the <xref:System.Data.SqlClient.SqlDataReader> to populate a portion of the page.</span></span> <span data-ttu-id="225c0-117">W tym prostym przykładzie czas ukończenia procesu jest dodawany do pola tekstowego odpowiadającego procesowi.</span><span class="sxs-lookup"><span data-stu-id="225c0-117">In this simple example, the time the process completed is added to a text box corresponding to the process.</span></span> <span data-ttu-id="225c0-118">Razem, czasy w polach tekstowych ilustrują punkt: Kod jest wykonywany przy każdym zakończeniu procesu.</span><span class="sxs-lookup"><span data-stu-id="225c0-118">Taken together, the times in the text boxes illustrate the point: Code is executed each time a process completes.</span></span>  
+## <a name="example-wait-any-model"></a><span data-ttu-id="74d4f-112">Przykład: Model wait (any)</span><span class="sxs-lookup"><span data-stu-id="74d4f-112">Example: Wait (Any) Model</span></span>  
+ <span data-ttu-id="74d4f-113">W poniższym przykładzie przedstawiono model oczekiwania (dowolna).</span><span class="sxs-lookup"><span data-stu-id="74d4f-113">The following example illustrates the Wait (Any) model.</span></span> <span data-ttu-id="74d4f-114">Po uruchomieniu trzech procesów <xref:System.Threading.WaitHandle.WaitAny%2A> asynchronicznych, metoda jest wywoływana czekać na zakończenie jednego z nich.</span><span class="sxs-lookup"><span data-stu-id="74d4f-114">Once three asynchronous processes are started, the <xref:System.Threading.WaitHandle.WaitAny%2A> method is called to wait for the completion of any one of them.</span></span> <span data-ttu-id="74d4f-115">Po zakończeniu każdego procesu <xref:System.Data.SqlClient.SqlCommand.EndExecuteReader%2A> metoda jest wywoływana, a wynikowy <xref:System.Data.SqlClient.SqlDataReader> obiekt jest odczytywany.</span><span class="sxs-lookup"><span data-stu-id="74d4f-115">As each process completes, the <xref:System.Data.SqlClient.SqlCommand.EndExecuteReader%2A> method is called and the resulting <xref:System.Data.SqlClient.SqlDataReader> object is read.</span></span> <span data-ttu-id="74d4f-116">W tym momencie aplikacja w świecie <xref:System.Data.SqlClient.SqlDataReader> rzeczywistym prawdopodobnie użyje do zapełnienia części strony.</span><span class="sxs-lookup"><span data-stu-id="74d4f-116">At this point, a real-world application would likely use the <xref:System.Data.SqlClient.SqlDataReader> to populate a portion of the page.</span></span> <span data-ttu-id="74d4f-117">W tym prostym przykładzie czas ukończenia procesu jest dodawany do pola tekstowego odpowiadającego procesowi.</span><span class="sxs-lookup"><span data-stu-id="74d4f-117">In this simple example, the time the process completed is added to a text box corresponding to the process.</span></span> <span data-ttu-id="74d4f-118">Razem wzięte, czasy w polach tekstowych ilustrują punkt: Kod jest wykonywany za każdym razem, gdy proces zostanie zakończony.</span><span class="sxs-lookup"><span data-stu-id="74d4f-118">Taken together, the times in the text boxes illustrate the point: Code is executed each time a process completes.</span></span>  
   
- <span data-ttu-id="225c0-119">Aby skonfigurować ten przykład, Utwórz nowy projekt witryny sieci Web ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="225c0-119">To set up this example, create a new ASP.NET Web Site project.</span></span> <span data-ttu-id="225c0-120">Umieść kontrolkę i cztery <xref:System.Web.UI.WebControls.TextBox> kontrolki na stronie (Zaakceptuj nazwę domyślną dla każdej kontrolki). <xref:System.Web.UI.WebControls.Button></span><span class="sxs-lookup"><span data-stu-id="225c0-120">Place a <xref:System.Web.UI.WebControls.Button> control and four <xref:System.Web.UI.WebControls.TextBox> controls on the page (accepting the default name for each control).</span></span>  
+ <span data-ttu-id="74d4f-119">Aby skonfigurować ten przykład, utwórz nowy projekt ASP.NET witryny sieci Web.</span><span class="sxs-lookup"><span data-stu-id="74d4f-119">To set up this example, create a new ASP.NET Web Site project.</span></span> <span data-ttu-id="74d4f-120">Umieść <xref:System.Web.UI.WebControls.Button> formant <xref:System.Web.UI.WebControls.TextBox> i cztery formanty na stronie (akceptując domyślną nazwę dla każdego formantu).</span><span class="sxs-lookup"><span data-stu-id="74d4f-120">Place a <xref:System.Web.UI.WebControls.Button> control and four <xref:System.Web.UI.WebControls.TextBox> controls on the page (accepting the default name for each control).</span></span>  
   
- <span data-ttu-id="225c0-121">Dodaj następujący kod do klasy formularza, modyfikując parametry połączenia jako niezbędne dla danego środowiska.</span><span class="sxs-lookup"><span data-stu-id="225c0-121">Add the following code to the form's class, modifying the connection string as necessary for your environment.</span></span>  
+ <span data-ttu-id="74d4f-121">Dodaj następujący kod do klasy formularza, modyfikując parametry połączenia zgodnie z oczekiwaniami dla środowiska.</span><span class="sxs-lookup"><span data-stu-id="74d4f-121">Add the following code to the form's class, modifying the connection string as necessary for your environment.</span></span>  
   
 ```vb  
 ' Add these to the top of the class  
@@ -37,28 +37,28 @@ Imports System.Threading
   
 ' Add this code to the page's class:  
     Private Function GetConnectionString() As String  
-        ' To avoid storing the connection string in your code,              
-        ' you can retrieve it from a configuration file.   
+        ' To avoid storing the connection string in your code,
+        ' you can retrieve it from a configuration file.
   
-        ' If you have not included "Asynchronous Processing=true"   
+        ' If you have not included "Asynchronous Processing=true"
         ' in the connection string, the command will not be able  
         ' to execute asynchronously.  
         Return "Data Source=(local);Integrated Security=SSPI;" & _  
           "Initial Catalog=AdventureWorks;" & _  
           "Asynchronous Processing=true"  
-    End Function    
+    End Function
   
     Sub Button1_Click( _  
      ByVal sender As Object, ByVal e As System.EventArgs)  
   
-        ' In a real-world application, you might be connecting to   
+        ' In a real-world application, you might be connecting to
         '  three different servers or databases. For the example,  
         '  we connect to only one.  
         Dim connection1 As New SqlConnection(GetConnectionString())  
         Dim connection2 As New SqlConnection(GetConnectionString())  
         Dim connection3 As New SqlConnection(GetConnectionString())  
   
-        ' To keep the example simple, all three asynchronous   
+        ' To keep the example simple, all three asynchronous
         ' processes select a row from the same table. WAITFOR  
         ' commands are used to emulate long-running processes  
         ' that complete after different periods of time.  
@@ -80,7 +80,7 @@ Imports System.Threading
         Dim waitHandles(2) As WaitHandle  
         Try  
             ' For each process, open a connection and begin execution.  
-            ' Use the IAsyncResult object returned by   
+            ' Use the IAsyncResult object returned by
             ' BeginExecuteReader to add a WaitHandle for the process  
             ' to the array.  
             connection1.Open()  
@@ -108,10 +108,10 @@ Imports System.Threading
                 ' array element whose process just completed, or  
                 ' the WaitTimeout value.  
                 index = WaitHandle.WaitAny(waitHandles, 60000, False)  
-                ' This example doesn't actually do anything with the   
-                ' data returned by the processes, but the code opens   
+                ' This example doesn't actually do anything with the
+                ' data returned by the processes, but the code opens
                 ' readers for each just to demonstrate the concept.  
-                ' Instead of using the returned data to fill the   
+                ' Instead of using the returned data to fill the
                 ' controls on the page, the example adds the time  
                 ' the process was completed to the corresponding  
                 ' text box.  
@@ -175,9 +175,9 @@ using System.Data.SqlClient;
   
 // Add this code to the page's class  
 string GetConnectionString()  
-     //  To avoid storing the connection string in your code,              
-     //  you can retrieve it from a configuration file.   
-     //  If you have not included "Asynchronous Processing=true"   
+     //  To avoid storing the connection string in your code,
+     //  you can retrieve it from a configuration file.
+     //  If you have not included "Asynchronous Processing=true"
      //  in the connection string, the command will not be able  
      //  to execute asynchronously.  
 {  
@@ -187,34 +187,34 @@ string GetConnectionString()
 }  
 void Button1_Click(object sender, System.EventArgs e)  
 {  
-     //  In a real-world application, you might be connecting to   
+     //  In a real-world application, you might be connecting to
      //   three different servers or databases. For the example,  
      //   we connect to only one.  
   
-     SqlConnection connection1 =   
+     SqlConnection connection1 =
           new SqlConnection(GetConnectionString());  
-     SqlConnection connection2 =   
+     SqlConnection connection2 =
           new SqlConnection(GetConnectionString());  
-     SqlConnection connection3 =   
+     SqlConnection connection3 =
           new SqlConnection(GetConnectionString());  
-     //  To keep the example simple, all three asynchronous   
+     //  To keep the example simple, all three asynchronous
      //  processes select a row from the same table. WAITFOR  
      //  commands are used to emulate long-running processes  
      //  that complete after different periods of time.  
   
-     string commandText1 = "WAITFOR DELAY '0:0:01';" +   
-          "SELECT * FROM Production.Product " +   
+     string commandText1 = "WAITFOR DELAY '0:0:01';" +
+          "SELECT * FROM Production.Product " +
           "WHERE ProductNumber = 'BL-2036'";  
-     string commandText2 = "WAITFOR DELAY '0:0:05';" +   
-          "SELECT * FROM Production.Product " +   
+     string commandText2 = "WAITFOR DELAY '0:0:05';" +
+          "SELECT * FROM Production.Product " +
           "WHERE ProductNumber = 'BL-2036'";  
-     string commandText3 = "WAITFOR DELAY '0:0:10';" +   
-          "SELECT * FROM Production.Product " +   
+     string commandText3 = "WAITFOR DELAY '0:0:10';" +
+          "SELECT * FROM Production.Product " +
           "WHERE ProductNumber = 'BL-2036'";  
      try  
-          //  For each process, open a connection and begin   
-          //  execution. Use the IAsyncResult object returned by   
-          //  BeginExecuteReader to add a WaitHandle for the   
+          //  For each process, open a connection and begin
+          //  execution. Use the IAsyncResult object returned by
+          //  BeginExecuteReader to add a WaitHandle for the
           //  process to the array.  
      {  
           connection1.Open();  
@@ -242,18 +242,18 @@ void Button1_Click(object sender, System.EventArgs e)
           int index;  
           for (int countWaits = 0; countWaits <= 2; countWaits++)  
           {  
-               //  WaitAny waits for any of the processes to   
-               //  complete. The return value is either the index   
-               //  of the array element whose process just   
+               //  WaitAny waits for any of the processes to
+               //  complete. The return value is either the index
+               //  of the array element whose process just
                //  completed, or the WaitTimeout value.  
   
-               index = WaitHandle.WaitAny(waitHandles,   
+               index = WaitHandle.WaitAny(waitHandles,
                     60000, false);  
-               //  This example doesn't actually do anything with   
-               //  the data returned by the processes, but the   
-               //  code opens readers for each just to demonstrate       
+               //  This example doesn't actually do anything with
+               //  the data returned by the processes, but the
+               //  code opens readers for each just to demonstrate
                //  the concept.  
-               //  Instead of using the returned data to fill the   
+               //  Instead of using the returned data to fill the
                //  controls on the page, the example adds the time  
                //  the process was completed to the corresponding  
                //  text box.  
@@ -262,11 +262,11 @@ void Button1_Click(object sender, System.EventArgs e)
                {  
                     case 0:  
                          SqlDataReader reader1;  
-                         reader1 =   
+                         reader1 =
                               command1.EndExecuteReader(result1);  
                          if (reader1.Read())  
                          {  
-                           TextBox1.Text =   
+                           TextBox1.Text =
                            "Completed " +  
                            System.DateTime.Now.ToLongTimeString();  
                          }  
@@ -274,11 +274,11 @@ void Button1_Click(object sender, System.EventArgs e)
                          break;  
                     case 1:  
                          SqlDataReader reader2;  
-                         reader2 =   
+                         reader2 =
                               command2.EndExecuteReader(result2);  
                          if (reader2.Read())  
                          {  
-                           TextBox2.Text =   
+                           TextBox2.Text =
                            "Completed " +  
                            System.DateTime.Now.ToLongTimeString();  
                          }  
@@ -286,11 +286,11 @@ void Button1_Click(object sender, System.EventArgs e)
                          break;  
                     case 2:  
                          SqlDataReader reader3;  
-                         reader3 =   
+                         reader3 =
                               command3.EndExecuteReader(result3);  
                          if (reader3.Read())  
                          {  
-                           TextBox3.Text =   
+                           TextBox3.Text =
                            "Completed " +  
                            System.DateTime.Now.ToLongTimeString();  
                          }  
@@ -312,14 +312,14 @@ void Button1_Click(object sender, System.EventArgs e)
 }  
 ```  
   
-## <a name="example-wait-all-model"></a><span data-ttu-id="225c0-122">Przykład: Zaczekaj (wszystko) — model</span><span class="sxs-lookup"><span data-stu-id="225c0-122">Example: Wait (All) Model</span></span>  
- <span data-ttu-id="225c0-123">Poniższy przykład ilustruje model oczekiwania (wszystkie).</span><span class="sxs-lookup"><span data-stu-id="225c0-123">The following example illustrates the Wait (All) model.</span></span> <span data-ttu-id="225c0-124">Po rozpoczęciu <xref:System.Threading.WaitHandle.WaitAll%2A> trzech procesów asynchronicznych Metoda jest wywoływana w celu oczekiwania na ukończenie procesów lub przekroczenie limitu czasu.</span><span class="sxs-lookup"><span data-stu-id="225c0-124">Once three asynchronous processes are started, the <xref:System.Threading.WaitHandle.WaitAll%2A> method is called to wait for the processes to complete or time out.</span></span>  
+## <a name="example-wait-all-model"></a><span data-ttu-id="74d4f-122">Przykład: Model wait (all)</span><span class="sxs-lookup"><span data-stu-id="74d4f-122">Example: Wait (All) Model</span></span>  
+ <span data-ttu-id="74d4f-123">W poniższym przykładzie przedstawiono model oczekiwania (wszystkie).</span><span class="sxs-lookup"><span data-stu-id="74d4f-123">The following example illustrates the Wait (All) model.</span></span> <span data-ttu-id="74d4f-124">Po uruchomieniu trzech procesów <xref:System.Threading.WaitHandle.WaitAll%2A> asynchronicznych, metoda jest wywoływana czekać na procesy, aby zakończyć lub limit czasu.</span><span class="sxs-lookup"><span data-stu-id="74d4f-124">Once three asynchronous processes are started, the <xref:System.Threading.WaitHandle.WaitAll%2A> method is called to wait for the processes to complete or time out.</span></span>  
   
- <span data-ttu-id="225c0-125">Podobnie jak w przypadku modelu oczekiwania (dowolnego), czas ukończenia procesu jest dodawany do pola tekstowego odpowiadającego procesowi.</span><span class="sxs-lookup"><span data-stu-id="225c0-125">Like the example of the Wait (Any) model, the time the process completed is added to a text box corresponding to the process.</span></span> <span data-ttu-id="225c0-126">Ponownie godziny w polach tekstowych ilustrują punkt: Kod następujący <xref:System.Threading.WaitHandle.WaitAny%2A> po metodzie jest wykonywany tylko po zakończeniu wszystkich procesów.</span><span class="sxs-lookup"><span data-stu-id="225c0-126">Again, the times in the text boxes illustrate the point: Code following the <xref:System.Threading.WaitHandle.WaitAny%2A> method is executed only after all processes are complete.</span></span>  
+ <span data-ttu-id="74d4f-125">Podobnie jak w przykładzie modelu oczekiwania (dowolny), czas zakończenia procesu jest dodawany do pola tekstowego odpowiadającego procesowi.</span><span class="sxs-lookup"><span data-stu-id="74d4f-125">Like the example of the Wait (Any) model, the time the process completed is added to a text box corresponding to the process.</span></span> <span data-ttu-id="74d4f-126">Ponownie, czasy w polach tekstowych ilustrują punkt: Kod po <xref:System.Threading.WaitHandle.WaitAny%2A> metoda jest wykonywana tylko po zakończeniu wszystkich procesów.</span><span class="sxs-lookup"><span data-stu-id="74d4f-126">Again, the times in the text boxes illustrate the point: Code following the <xref:System.Threading.WaitHandle.WaitAny%2A> method is executed only after all processes are complete.</span></span>  
   
- <span data-ttu-id="225c0-127">Aby skonfigurować ten przykład, Utwórz nowy projekt witryny sieci Web ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="225c0-127">To set up this example, create a new ASP.NET Web Site project.</span></span> <span data-ttu-id="225c0-128">Umieść kontrolkę i cztery <xref:System.Web.UI.WebControls.TextBox> kontrolki na stronie (Zaakceptuj nazwę domyślną dla każdej kontrolki). <xref:System.Web.UI.WebControls.Button></span><span class="sxs-lookup"><span data-stu-id="225c0-128">Place a <xref:System.Web.UI.WebControls.Button> control and four <xref:System.Web.UI.WebControls.TextBox> controls on the page (accepting the default name for each control).</span></span>  
+ <span data-ttu-id="74d4f-127">Aby skonfigurować ten przykład, utwórz nowy projekt ASP.NET witryny sieci Web.</span><span class="sxs-lookup"><span data-stu-id="74d4f-127">To set up this example, create a new ASP.NET Web Site project.</span></span> <span data-ttu-id="74d4f-128">Umieść <xref:System.Web.UI.WebControls.Button> formant <xref:System.Web.UI.WebControls.TextBox> i cztery formanty na stronie (akceptując domyślną nazwę dla każdego formantu).</span><span class="sxs-lookup"><span data-stu-id="74d4f-128">Place a <xref:System.Web.UI.WebControls.Button> control and four <xref:System.Web.UI.WebControls.TextBox> controls on the page (accepting the default name for each control).</span></span>  
   
- <span data-ttu-id="225c0-129">Dodaj następujący kod do klasy formularza, modyfikując parametry połączenia jako niezbędne dla danego środowiska.</span><span class="sxs-lookup"><span data-stu-id="225c0-129">Add the following code to the form's class, modifying the connection string as necessary for your environment.</span></span>  
+ <span data-ttu-id="74d4f-129">Dodaj następujący kod do klasy formularza, modyfikując parametry połączenia zgodnie z oczekiwaniami dla środowiska.</span><span class="sxs-lookup"><span data-stu-id="74d4f-129">Add the following code to the form's class, modifying the connection string as necessary for your environment.</span></span>  
   
 ```vb  
 ' Add these to the top of the class  
@@ -330,27 +330,27 @@ Imports System.Threading
   
 ' Add this code to the page's class:  
     Private Function GetConnectionString() As String  
-        ' To avoid storing the connection string in your code,              
-        ' you can retrieve it from a configuration file.   
+        ' To avoid storing the connection string in your code,
+        ' you can retrieve it from a configuration file.
   
-        ' If you have not included "Asynchronous Processing=true"   
+        ' If you have not included "Asynchronous Processing=true"
         ' in the connection string, the command will not be able  
         ' to execute asynchronously.  
         Return "Data Source=(local);Integrated Security=SSPI;" & _  
           "Initial Catalog=AdventureWorks;" & _  
           "Asynchronous Processing=true"  
-    End Function    
+    End Function
     Sub Button1_Click( _  
      ByVal sender As Object, ByVal e As System.EventArgs)  
   
-        ' In a real-world application, you might be connecting to   
+        ' In a real-world application, you might be connecting to
         '  three different servers or databases. For the example,  
         '  we connect to only one.  
         Dim connection1 As New SqlConnection(GetConnectionString())  
         Dim connection2 As New SqlConnection(GetConnectionString())  
         Dim connection3 As New SqlConnection(GetConnectionString())  
   
-        ' To keep the example simple, all three asynchronous   
+        ' To keep the example simple, all three asynchronous
         ' processes select a row from the same table. WAITFOR  
         ' commands are used to emulate long-running processes  
         ' that complete after different periods of time.  
@@ -385,7 +385,7 @@ Imports System.Threading
   
         Try  
             ' For each process, open a connection and begin execution.  
-            ' Use the IAsyncResult object returned by   
+            ' Use the IAsyncResult object returned by
             ' BeginExecuteReader to add a WaitHandle for the process  
             ' to the array.  
             connection1.Open()  
@@ -407,7 +407,7 @@ Imports System.Threading
             waitHandles(2) = result3.AsyncWaitHandle  
   
             ' WaitAll waits for all of the processes to complete.  
-            ' The return value is True if all processes completed,   
+            ' The return value is True if all processes completed,
             ' False if any process timed out.  
             Dim result As Boolean = _  
              WaitHandle.WaitAll(waitHandles, 60000, False)  
@@ -458,9 +458,9 @@ using System.Data.SqlClient;
   
 // Add this code to the page's class  
 string GetConnectionString()  
-    //  To avoid storing the connection string in your code,              
-    //  you can retrieve it from a configuration file.   
-    //  If you have not included "Asynchronous Processing=true"   
+    //  To avoid storing the connection string in your code,
+    //  you can retrieve it from a configuration file.
+    //  If you have not included "Asynchronous Processing=true"
     //  in the connection string, the command will not be able  
     //  to execute asynchronously.  
 {  
@@ -470,23 +470,23 @@ string GetConnectionString()
 }  
 void Button1_Click(object sender, System.EventArgs e)  
 {  
-    //  In a real-world application, you might be connecting to   
+    //  In a real-world application, you might be connecting to
     //   three different servers or databases. For the example,  
     //   we connect to only one.  
   
-    SqlConnection connection1 =   
+    SqlConnection connection1 =
         new SqlConnection(GetConnectionString());  
-    SqlConnection connection2 =   
+    SqlConnection connection2 =
         new SqlConnection(GetConnectionString());  
-    SqlConnection connection3 =   
+    SqlConnection connection3 =
         new SqlConnection(GetConnectionString());  
-    //  To keep the example simple, all three asynchronous   
+    //  To keep the example simple, all three asynchronous
     //  processes execute UPDATE queries that result in  
       //  no change to the data. WAITFOR  
     //  commands are used to emulate long-running processes  
     //  that complete after different periods of time.  
   
-    string commandText1 =   
+    string commandText1 =
         "UPDATE Production.Product " +  
         "SET ReorderPoint = ReorderPoint + 1 " +  
         "WHERE ReorderPoint Is Not Null;" +  
@@ -495,7 +495,7 @@ void Button1_Click(object sender, System.EventArgs e)
         "SET ReorderPoint = ReorderPoint - 1 " +  
         "WHERE ReorderPoint Is Not Null";  
   
-    string commandText2 =   
+    string commandText2 =
       "UPDATE Production.Product " +  
       "SET ReorderPoint = ReorderPoint + 1 " +  
       "WHERE ReorderPoint Is Not Null;" +  
@@ -513,9 +513,9 @@ void Button1_Click(object sender, System.EventArgs e)
        "SET ReorderPoint = ReorderPoint - 1 " +  
        "WHERE ReorderPoint Is Not Null";  
     try  
-        //  For each process, open a connection and begin   
-        //  execution. Use the IAsyncResult object returned by   
-        //  BeginExecuteReader to add a WaitHandle for the   
+        //  For each process, open a connection and begin
+        //  execution. Use the IAsyncResult object returned by
+        //  BeginExecuteReader to add a WaitHandle for the
         //  process to the array.  
     {  
         connection1.Open();  
@@ -541,7 +541,7 @@ void Button1_Click(object sender, System.EventArgs e)
         };  
   
         bool result;  
-        //  WaitAll waits for all of the processes to   
+        //  WaitAll waits for all of the processes to
         //  complete. The return value is True if the processes  
         //  all completed successfully, False if any process  
         //  timed out.  
@@ -549,16 +549,16 @@ void Button1_Click(object sender, System.EventArgs e)
         result = WaitHandle.WaitAll(waitHandles, 60000, false);  
         if(result)  
         {  
-            long rowCount1 =   
+            long rowCount1 =
                 command1.EndExecuteNonQuery(result1);  
             TextBox1.Text = "Completed " +  
                 System.DateTime.Now.ToLongTimeString();  
-            long rowCount2 =   
+            long rowCount2 =
                 command2.EndExecuteNonQuery(result2);  
             TextBox2.Text = "Completed " +  
                 System.DateTime.Now.ToLongTimeString();  
   
-            long rowCount3 =   
+            long rowCount3 =
                 command3.EndExecuteNonQuery(result3);  
             TextBox3.Text = "Completed " +  
                 System.DateTime.Now.ToLongTimeString();  
@@ -579,7 +579,7 @@ void Button1_Click(object sender, System.EventArgs e)
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="225c0-130">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="225c0-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="74d4f-130">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="74d4f-130">See also</span></span>
 
-- [<span data-ttu-id="225c0-131">Operacje asynchroniczne</span><span class="sxs-lookup"><span data-stu-id="225c0-131">Asynchronous Operations</span></span>](asynchronous-operations.md)
-- [<span data-ttu-id="225c0-132">Omówienie ADO.NET</span><span class="sxs-lookup"><span data-stu-id="225c0-132">ADO.NET Overview</span></span>](../ado-net-overview.md)
+- [<span data-ttu-id="74d4f-131">Operacje asynchroniczne</span><span class="sxs-lookup"><span data-stu-id="74d4f-131">Asynchronous Operations</span></span>](asynchronous-operations.md)
+- [<span data-ttu-id="74d4f-132">Omówienie ADO.NET</span><span class="sxs-lookup"><span data-stu-id="74d4f-132">ADO.NET Overview</span></span>](../ado-net-overview.md)

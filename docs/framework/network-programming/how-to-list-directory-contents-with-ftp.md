@@ -1,23 +1,23 @@
 ---
-title: 'Instrukcje: Wyświetlanie zawartości katalogu przy użyciu protokołu FTP'
-description: W tym artykule przedstawiono przykładowy sposób wyświetlenia listy zawartości katalogu serwera FTP.
+title: 'Jak: Lista zawartości katalogu za pomocą protokołu FTP'
+description: W tym artykule przedstawiono przykładowy sposób wyświetlania listy zawartości katalogu serwera FTP.
 ms.date: 06/26/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 130c64c9-7b7f-4672-9b3b-d946bd2616c5
 ms.openlocfilehash: 924e6731ce585f127af319fdbfbdc8c12e61c46d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "61642623"
 ---
-# <a name="how-to-list-directory-contents-with-ftp"></a><span data-ttu-id="1b185-103">Instrukcje: Wyświetlanie zawartości katalogu przy użyciu protokołu FTP</span><span class="sxs-lookup"><span data-stu-id="1b185-103">How to: List directory contents with FTP</span></span>
+# <a name="how-to-list-directory-contents-with-ftp"></a><span data-ttu-id="b4246-103">Jak: Lista zawartości katalogu za pomocą protokołu FTP</span><span class="sxs-lookup"><span data-stu-id="b4246-103">How to: List directory contents with FTP</span></span>
 
-<span data-ttu-id="1b185-104">Ten przykład ilustruje sposób wyświetlenia listy zawartości katalogu serwera FTP.</span><span class="sxs-lookup"><span data-stu-id="1b185-104">This sample shows how to list the directory contents of an FTP server.</span></span>
+<span data-ttu-id="b4246-104">W tym przykładzie pokazano, jak wyświetlić listę zawartości katalogu serwera FTP.</span><span class="sxs-lookup"><span data-stu-id="b4246-104">This sample shows how to list the directory contents of an FTP server.</span></span>
 
-## <a name="example"></a><span data-ttu-id="1b185-105">Przykład</span><span class="sxs-lookup"><span data-stu-id="1b185-105">Example</span></span>
+## <a name="example"></a><span data-ttu-id="b4246-105">Przykład</span><span class="sxs-lookup"><span data-stu-id="b4246-105">Example</span></span>
 
 ```csharp
 using System;
@@ -81,7 +81,7 @@ Namespace Examples.System.Net
 End Namespace
 ```
 
-<span data-ttu-id="1b185-106">Jeśli potrzebujesz wyświetlić listę określonego katalogu, wystarczy dodać katalog do końca identyfikatora URI jest używany w <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> metody:</span><span class="sxs-lookup"><span data-stu-id="1b185-106">If you need to list a specific directory, just add the directory to the end of the URI you're using in the <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> method:</span></span>
+<span data-ttu-id="b4246-106">Jeśli chcesz wyświetlić listę określonego katalogu, wystarczy dodać katalog na końcu identyfikatora URI, którego używasz w metodzie: <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="b4246-106">If you need to list a specific directory, just add the directory to the end of the URI you're using in the <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> method:</span></span>
 
 ```csharp
 FtpWebRequest request = (FtpWebRequest)WebRequest.Create("ftp://www.contoso.com/your_preferred_directory");

@@ -15,42 +15,42 @@ helpviewer_keywords:
 ms.assetid: d9720428-c353-4f07-a7e8-899e106a1b37
 topic_type:
 - apiref
-ms.openlocfilehash: 8d25f178a3c5e160e78e042d5016bb93aabf3e2d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a1cd932051a9ed90a29ff5eeaa818a67104192bb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443446"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175255"
 ---
-# <a name="imetadatatablesgetnextstring-method"></a><span data-ttu-id="cc837-102">IMetaDataTables::GetNextString — Metoda</span><span class="sxs-lookup"><span data-stu-id="cc837-102">IMetaDataTables::GetNextString Method</span></span>
-<span data-ttu-id="cc837-103">Pobiera indeks następnego ciągu w bieżącej kolumnie tabeli.</span><span class="sxs-lookup"><span data-stu-id="cc837-103">Gets the index of the next string in the current table column.</span></span>  
+# <a name="imetadatatablesgetnextstring-method"></a><span data-ttu-id="879cd-102">IMetaDataTables::GetNextString — Metoda</span><span class="sxs-lookup"><span data-stu-id="879cd-102">IMetaDataTables::GetNextString Method</span></span>
+<span data-ttu-id="879cd-103">Pobiera indeks następnego ciągu w bieżącej kolumnie tabeli.</span><span class="sxs-lookup"><span data-stu-id="879cd-103">Gets the index of the next string in the current table column.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cc837-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="cc837-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="879cd-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="879cd-104">Syntax</span></span>  
   
 ```cpp  
-HRESULT GetNextString (   
+HRESULT GetNextString (
     [in]  ULONG   ixString,  
     [out] ULONG   *pNext  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="cc837-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="cc837-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="879cd-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="879cd-105">Parameters</span></span>  
  `ixString`  
- <span data-ttu-id="cc837-106">podczas Wartość indeksu z kolumny tabeli ciągów.</span><span class="sxs-lookup"><span data-stu-id="cc837-106">[in] The index value from a string table column.</span></span>  
+ <span data-ttu-id="879cd-106">[w] Wartość indeksu z kolumny tabeli ciągów.</span><span class="sxs-lookup"><span data-stu-id="879cd-106">[in] The index value from a string table column.</span></span>  
   
  `pNext`  
- <span data-ttu-id="cc837-107">określoną Wskaźnik do indeksu następnego ciągu w kolumnie.</span><span class="sxs-lookup"><span data-stu-id="cc837-107">[out] A pointer to the index of the next string in the column.</span></span>  
+ <span data-ttu-id="879cd-107">[na zewnątrz] Wskaźnik do indeksu następnego ciągu w kolumnie.</span><span class="sxs-lookup"><span data-stu-id="879cd-107">[out] A pointer to the index of the next string in the column.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cc837-108">Wymagania</span><span class="sxs-lookup"><span data-stu-id="cc837-108">Requirements</span></span>  
- <span data-ttu-id="cc837-109">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cc837-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="879cd-108">Wymagania</span><span class="sxs-lookup"><span data-stu-id="879cd-108">Requirements</span></span>  
+ <span data-ttu-id="879cd-109">**Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="879cd-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cc837-110">**Nagłówek:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="cc837-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="879cd-110">**Nagłówek:** Okręg wyborczy Cor.h</span><span class="sxs-lookup"><span data-stu-id="879cd-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="cc837-111">**Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="cc837-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="879cd-111">**Biblioteka:** Używany jako zasób w pliku MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="879cd-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="cc837-112">**Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cc837-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="879cd-112">**Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="879cd-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cc837-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="cc837-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="879cd-113">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="879cd-113">See also</span></span>
 
-- [<span data-ttu-id="cc837-114">IMetaDataTables, interfejs</span><span class="sxs-lookup"><span data-stu-id="cc837-114">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [<span data-ttu-id="cc837-115">IMetaDataTables2, interfejs</span><span class="sxs-lookup"><span data-stu-id="cc837-115">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [<span data-ttu-id="879cd-114">IMetaDataTables, interfejs</span><span class="sxs-lookup"><span data-stu-id="879cd-114">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="879cd-115">IMetaDataTables2 — Interfejs</span><span class="sxs-lookup"><span data-stu-id="879cd-115">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

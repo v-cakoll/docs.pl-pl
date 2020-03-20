@@ -15,47 +15,47 @@ helpviewer_keywords:
 ms.assetid: b6b95c04-0f2c-4fcc-a8bc-3b1dcbdba731
 topic_type:
 - apiref
-ms.openlocfilehash: 01be6c30e16e4abdd6002fc8207b33a9c76a2eef
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9587bbe8f087fd9a51bba67492af1d5acb53ae4a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448745"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176100"
 ---
-# <a name="iceegencomputepointer-method"></a><span data-ttu-id="5d066-102">ICeeGen::ComputePointer — Metoda</span><span class="sxs-lookup"><span data-stu-id="5d066-102">ICeeGen::ComputePointer Method</span></span>
-<span data-ttu-id="5d066-103">Określa bufor dla określonej sekcji kodu.</span><span class="sxs-lookup"><span data-stu-id="5d066-103">Determines the buffer for the specified code section.</span></span>  
+# <a name="iceegencomputepointer-method"></a><span data-ttu-id="af4c2-102">ICeeGen::ComputePointer — Metoda</span><span class="sxs-lookup"><span data-stu-id="af4c2-102">ICeeGen::ComputePointer Method</span></span>
+<span data-ttu-id="af4c2-103">Określa bufor dla określonej sekcji kodu.</span><span class="sxs-lookup"><span data-stu-id="af4c2-103">Determines the buffer for the specified code section.</span></span>  
   
- <span data-ttu-id="5d066-104">Ta metoda jest przestarzała i nie powinna być używana.</span><span class="sxs-lookup"><span data-stu-id="5d066-104">This method is obsolete and should not be used.</span></span>  
+ <span data-ttu-id="af4c2-104">Ta metoda jest przestarzała i nie powinna być używana.</span><span class="sxs-lookup"><span data-stu-id="af4c2-104">This method is obsolete and should not be used.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5d066-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="5d066-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="af4c2-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="af4c2-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT ComputePointer (  
     [in]  HCEESECTION  section,  
-    [in]  ULONG        RVA,   
+    [in]  ULONG        RVA,
     [out] UCHAR        **lpBuffer  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5d066-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="5d066-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="af4c2-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="af4c2-106">Parameters</span></span>  
  `section`  
- <span data-ttu-id="5d066-107">podczas Sekcja kodu, dla której ma zostać zwrócony bufor.</span><span class="sxs-lookup"><span data-stu-id="5d066-107">[in] The code section for which to return a buffer.</span></span>  
+ <span data-ttu-id="af4c2-107">[w] Sekcja kodu, dla której ma być zwracany bufor.</span><span class="sxs-lookup"><span data-stu-id="af4c2-107">[in] The code section for which to return a buffer.</span></span>  
   
  `RVA`  
- <span data-ttu-id="5d066-108">podczas Względny adres wirtualny metody, dla której ma zostać pobrany wskaźnik.</span><span class="sxs-lookup"><span data-stu-id="5d066-108">[in] The relative virtual address of the method for which to get a pointer.</span></span>  
+ <span data-ttu-id="af4c2-108">[w] Względny adres wirtualny metody, dla której można uzyskać wskaźnik.</span><span class="sxs-lookup"><span data-stu-id="af4c2-108">[in] The relative virtual address of the method for which to get a pointer.</span></span>  
   
  `lpBuffer`  
- <span data-ttu-id="5d066-109">określoną Wskaźnik do zwróconego buforu.</span><span class="sxs-lookup"><span data-stu-id="5d066-109">[out] A pointer to the returned buffer.</span></span>  
+ <span data-ttu-id="af4c2-109">[na zewnątrz] Wskaźnik do zwróconego buforu.</span><span class="sxs-lookup"><span data-stu-id="af4c2-109">[out] A pointer to the returned buffer.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5d066-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="5d066-110">Requirements</span></span>  
- <span data-ttu-id="5d066-111">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5d066-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="af4c2-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="af4c2-110">Requirements</span></span>  
+ <span data-ttu-id="af4c2-111">**Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="af4c2-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5d066-112">**Nagłówek:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="5d066-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="af4c2-112">**Nagłówek:** Okręg wyborczy Cor.h</span><span class="sxs-lookup"><span data-stu-id="af4c2-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="5d066-113">**Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="5d066-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="af4c2-113">**Biblioteka:** Używany jako zasób w pliku MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="af4c2-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="5d066-114">**Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5d066-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="af4c2-114">**Wersje programu .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="af4c2-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5d066-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="5d066-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="af4c2-115">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="af4c2-115">See also</span></span>
 
-- [<span data-ttu-id="5d066-116">ICeeGen, interfejs</span><span class="sxs-lookup"><span data-stu-id="5d066-116">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [<span data-ttu-id="af4c2-116">ICeeGen — Interfejs</span><span class="sxs-lookup"><span data-stu-id="af4c2-116">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

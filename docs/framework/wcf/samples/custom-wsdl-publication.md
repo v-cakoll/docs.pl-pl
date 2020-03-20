@@ -2,32 +2,32 @@
 title: Niestandardowa publikacja WSDL
 ms.date: 03/30/2017
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
-ms.openlocfilehash: 173deaf280c052b76e6937b2cec44ebdeafc57f9
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: ae6d5fdf243d5000090e993bd3353c6180d0ccaa
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714919"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79145062"
 ---
-# <a name="custom-wsdl-publication"></a><span data-ttu-id="c7c01-102">Niestandardowa publikacja WSDL</span><span class="sxs-lookup"><span data-stu-id="c7c01-102">Custom WSDL Publication</span></span>
-<span data-ttu-id="c7c01-103">W tym przykładzie pokazano, jak:</span><span class="sxs-lookup"><span data-stu-id="c7c01-103">This sample demonstrates how to:</span></span>  
+# <a name="custom-wsdl-publication"></a><span data-ttu-id="4f883-102">Niestandardowa publikacja WSDL</span><span class="sxs-lookup"><span data-stu-id="4f883-102">Custom WSDL Publication</span></span>
+<span data-ttu-id="4f883-103">W tym przykładzie pokazano, jak:</span><span class="sxs-lookup"><span data-stu-id="4f883-103">This sample demonstrates how to:</span></span>  
   
-- <span data-ttu-id="c7c01-104">Zaimplementuj <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> na niestandardowym atrybucie <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>, aby wyeksportować właściwości atrybutów jako adnotacje WSDL.</span><span class="sxs-lookup"><span data-stu-id="c7c01-104">Implement a <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> on a custom <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> attribute to export attribute properties as WSDL annotations.</span></span>  
+- <span data-ttu-id="4f883-104">Zaimplementuj <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> atrybut niestandardowy <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> do eksportowania właściwości atrybutu jako adnotacji WSDL.</span><span class="sxs-lookup"><span data-stu-id="4f883-104">Implement a <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> on a custom <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> attribute to export attribute properties as WSDL annotations.</span></span>  
   
-- <span data-ttu-id="c7c01-105">Zaimplementuj <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType>, aby zaimportować niestandardowe adnotacje WSDL.</span><span class="sxs-lookup"><span data-stu-id="c7c01-105">Implement <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> to import the custom WSDL annotations.</span></span>  
+- <span data-ttu-id="4f883-105">Zaimplementuj <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> w celu zaimportowania niestandardowych adnotacji WSDL.</span><span class="sxs-lookup"><span data-stu-id="4f883-105">Implement <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> to import the custom WSDL annotations.</span></span>  
   
-- <span data-ttu-id="c7c01-106">Zaimplementuj <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> i <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType> w niestandardowym zachowaniu kontraktu i niestandardowym zachowaniem działania, aby zapisać zaimportowane adnotacje jako komentarze w języku CodeDom dla zaimportowanego kontraktu i operacji.</span><span class="sxs-lookup"><span data-stu-id="c7c01-106">Implement <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> and <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType> on a custom contract behavior and a custom operation behavior, respectively, to write imported annotations as comments in the CodeDom for the imported contract and operation.</span></span>  
+- <span data-ttu-id="4f883-106">Zaimplementuj <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> i <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType> na zachowanie umowy niestandardowej i zachowanie operacji niestandardowej, odpowiednio, aby zapisać importowane adnotacje jako komentarze w CodeDom dla importowanego kontraktu i operacji.</span><span class="sxs-lookup"><span data-stu-id="4f883-106">Implement <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> and <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType> on a custom contract behavior and a custom operation behavior, respectively, to write imported annotations as comments in the CodeDom for the imported contract and operation.</span></span>  
   
-- <span data-ttu-id="c7c01-107">Użyj <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType>, aby pobrać WSDL, <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> do zaimportowania WSDL przy użyciu niestandardowego importera WSDL oraz <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> do generowania kodu klienta Windows Communication Foundation (WCF) przy użyciu adnotacji WSDL jako komentarzy///i "" "w C# i Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="c7c01-107">Use the <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> to download the WSDL, a <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> to import the WSDL using the custom WSDL importer, and the <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> to generate Windows Communication Foundation (WCF) client code with the WSDL annotations as /// and ''' comments in C# and Visual Basic.</span></span>  
+- <span data-ttu-id="4f883-107"><xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> Użyj, aby pobrać WSDL, a <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> do zaimportowania WSDL przy użyciu niestandardowego importera WSDL i <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> do generowania kodu klienta Windows Communication Foundation (WCF) z adnotacjami WSDL jako /// i ''' komentarze w języku C# i Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="4f883-107">Use the <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> to download the WSDL, a <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> to import the WSDL using the custom WSDL importer, and the <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> to generate Windows Communication Foundation (WCF) client code with the WSDL annotations as /// and ''' comments in C# and Visual Basic.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="c7c01-108">Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.</span><span class="sxs-lookup"><span data-stu-id="c7c01-108">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+> <span data-ttu-id="4f883-108">Procedura konfiguracji i instrukcje kompilacji dla tego przykładu znajdują się na końcu tego tematu.</span><span class="sxs-lookup"><span data-stu-id="4f883-108">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
-## <a name="service"></a><span data-ttu-id="c7c01-109">NDES</span><span class="sxs-lookup"><span data-stu-id="c7c01-109">Service</span></span>  
- <span data-ttu-id="c7c01-110">Usługa w tym przykładzie jest oznaczona dwoma atrybutami niestandardowymi.</span><span class="sxs-lookup"><span data-stu-id="c7c01-110">The service in this sample is marked with two custom attributes.</span></span> <span data-ttu-id="c7c01-111">Pierwszy, `WsdlDocumentationAttribute`, akceptuje ciąg w konstruktorze i może być stosowany w celu udostępnienia interfejsu lub operacji kontraktu z ciągiem opisującym jego użycie.</span><span class="sxs-lookup"><span data-stu-id="c7c01-111">The first, the `WsdlDocumentationAttribute`, accepts a string in the constructor and can be applied to provide a contract interface or operation with a string that describes its usage.</span></span> <span data-ttu-id="c7c01-112">Drugi `WsdlParamOrReturnDocumentationAttribute`, można zastosować do zwracanych wartości lub parametrów, aby opisać te wartości w operacji.</span><span class="sxs-lookup"><span data-stu-id="c7c01-112">The second, `WsdlParamOrReturnDocumentationAttribute`, can be applied to return values or parameters to describe those values in the operation.</span></span> <span data-ttu-id="c7c01-113">W poniższym przykładzie przedstawiono kontrakt usługi, `ICalculator`opisany przy użyciu tych atrybutów.</span><span class="sxs-lookup"><span data-stu-id="c7c01-113">The following example shows a service contract, `ICalculator`, described using these attributes.</span></span>  
+## <a name="service"></a><span data-ttu-id="4f883-109">Usługa</span><span class="sxs-lookup"><span data-stu-id="4f883-109">Service</span></span>  
+ <span data-ttu-id="4f883-110">Usługa w tym przykładzie jest oznaczona dwoma atrybutami niestandardowymi.</span><span class="sxs-lookup"><span data-stu-id="4f883-110">The service in this sample is marked with two custom attributes.</span></span> <span data-ttu-id="4f883-111">Pierwszy, `WsdlDocumentationAttribute`, akceptuje ciąg w konstruktorze i mogą być stosowane w celu zapewnienia interfejsu umowy lub operacji z ciągiem, który opisuje jego użycie.</span><span class="sxs-lookup"><span data-stu-id="4f883-111">The first, the `WsdlDocumentationAttribute`, accepts a string in the constructor and can be applied to provide a contract interface or operation with a string that describes its usage.</span></span> <span data-ttu-id="4f883-112">Drugi , `WsdlParamOrReturnDocumentationAttribute`można zastosować do zwracanych wartości lub parametrów w celu opisania tych wartości w operacji.</span><span class="sxs-lookup"><span data-stu-id="4f883-112">The second, `WsdlParamOrReturnDocumentationAttribute`, can be applied to return values or parameters to describe those values in the operation.</span></span> <span data-ttu-id="4f883-113">Poniższy przykład przedstawia umowę `ICalculator`serwisową, opisane przy użyciu tych atrybutów.</span><span class="sxs-lookup"><span data-stu-id="4f883-113">The following example shows a service contract, `ICalculator`, described using these attributes.</span></span>  
   
 ```csharp  
-// Define a service contract.      
+// Define a service contract.
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 // Document it.  
 [WsdlDocumentation("The ICalculator contract performs basic calculation services.")]  
@@ -37,7 +37,7 @@ public interface ICalculator
     [WsdlDocumentation("The Add operation adds two numbers and returns the result.")]  
     [return:WsdlParamOrReturnDocumentation("The result of adding the two arguments together.")]  
     double Add(  
-      [WsdlParamOrReturnDocumentation("The first value to add.")]double n1,   
+      [WsdlParamOrReturnDocumentation("The first value to add.")]double n1,
       [WsdlParamOrReturnDocumentation("The second value to add.")]double n2  
     );  
   
@@ -45,7 +45,7 @@ public interface ICalculator
     [WsdlDocumentation("The Subtract operation subtracts the second argument from the first.")]  
     [return:WsdlParamOrReturnDocumentation("The result of the second argument subtracted from the first.")]  
     double Subtract(  
-      [WsdlParamOrReturnDocumentation("The value from which the second is subtracted.")]double n1,   
+      [WsdlParamOrReturnDocumentation("The value from which the second is subtracted.")]double n1,
       [WsdlParamOrReturnDocumentation("The value that is subtracted from the first.")]double n2  
     );  
   
@@ -53,7 +53,7 @@ public interface ICalculator
     [WsdlDocumentation("The Multiply operation multiplies two values.")]  
     [return:WsdlParamOrReturnDocumentation("The result of multiplying the first and second arguments.")]  
     double Multiply(  
-      [WsdlParamOrReturnDocumentation("The first value to multiply.")]double n1,   
+      [WsdlParamOrReturnDocumentation("The first value to multiply.")]double n1,
       [WsdlParamOrReturnDocumentation("The second value to multiply.")]double n2  
     );  
   
@@ -61,15 +61,15 @@ public interface ICalculator
     [WsdlDocumentation("The Divide operation returns the value of the first argument divided by the second argument.")]  
     [return:WsdlParamOrReturnDocumentation("The result of dividing the first argument by the second.")]  
     double Divide(  
-      [WsdlParamOrReturnDocumentation("The numerator.")]double n1,   
+      [WsdlParamOrReturnDocumentation("The numerator.")]double n1,
       [WsdlParamOrReturnDocumentation("The denominator.")]double n2  
     );  
 }  
 ```  
   
- <span data-ttu-id="c7c01-114">`WsdlDocumentationAttribute` implementuje <xref:System.ServiceModel.Description.IContractBehavior> i <xref:System.ServiceModel.Description.IOperationBehavior>, więc wystąpienia atrybutów są dodawane do odpowiednich <xref:System.ServiceModel.Description.ContractDescription> lub <xref:System.ServiceModel.Description.OperationDescription> podczas otwierania usługi.</span><span class="sxs-lookup"><span data-stu-id="c7c01-114">The `WsdlDocumentationAttribute` implements <xref:System.ServiceModel.Description.IContractBehavior> and <xref:System.ServiceModel.Description.IOperationBehavior>, so the attribute instances are added to the corresponding <xref:System.ServiceModel.Description.ContractDescription> or <xref:System.ServiceModel.Description.OperationDescription> when the service is opened.</span></span> <span data-ttu-id="c7c01-115">Ten atrybut implementuje również <xref:System.ServiceModel.Description.IWsdlExportExtension>.</span><span class="sxs-lookup"><span data-stu-id="c7c01-115">The attribute also implements <xref:System.ServiceModel.Description.IWsdlExportExtension>.</span></span> <span data-ttu-id="c7c01-116">Gdy <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> jest wywoływana, <xref:System.ServiceModel.Description.WsdlExporter>, który służy do eksportowania metadanych i <xref:System.ServiceModel.Description.WsdlContractConversionContext> zawierający obiekty opisu usługi, są przenoszone jako parametry włączające modyfikację eksportowanych metadanych.</span><span class="sxs-lookup"><span data-stu-id="c7c01-116">When <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> is called, the <xref:System.ServiceModel.Description.WsdlExporter> that is used to export the metadata and the <xref:System.ServiceModel.Description.WsdlContractConversionContext> that contains the service description objects are passed in as parameters enabling the modification of the exported metadata.</span></span>  
+ <span data-ttu-id="4f883-114">Implementuje `WsdlDocumentationAttribute` <xref:System.ServiceModel.Description.IContractBehavior> i <xref:System.ServiceModel.Description.IOperationBehavior>, więc wystąpienia atrybutu są <xref:System.ServiceModel.Description.ContractDescription> dodawane do odpowiednich lub <xref:System.ServiceModel.Description.OperationDescription> po otwarciu usługi.</span><span class="sxs-lookup"><span data-stu-id="4f883-114">The `WsdlDocumentationAttribute` implements <xref:System.ServiceModel.Description.IContractBehavior> and <xref:System.ServiceModel.Description.IOperationBehavior>, so the attribute instances are added to the corresponding <xref:System.ServiceModel.Description.ContractDescription> or <xref:System.ServiceModel.Description.OperationDescription> when the service is opened.</span></span> <span data-ttu-id="4f883-115">Atrybut implementuje <xref:System.ServiceModel.Description.IWsdlExportExtension>również .</span><span class="sxs-lookup"><span data-stu-id="4f883-115">The attribute also implements <xref:System.ServiceModel.Description.IWsdlExportExtension>.</span></span> <span data-ttu-id="4f883-116">Gdy <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> jest wywoływana, <xref:System.ServiceModel.Description.WsdlExporter> który jest używany do <xref:System.ServiceModel.Description.WsdlContractConversionContext> eksportowania metadanych i który zawiera obiekty opisu usługi są przekazywane jako parametry umożliwiające modyfikację eksportowanych metadanych.</span><span class="sxs-lookup"><span data-stu-id="4f883-116">When <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> is called, the <xref:System.ServiceModel.Description.WsdlExporter> that is used to export the metadata and the <xref:System.ServiceModel.Description.WsdlContractConversionContext> that contains the service description objects are passed in as parameters enabling the modification of the exported metadata.</span></span>  
   
- <span data-ttu-id="c7c01-117">W tym przykładzie, w zależności od tego, czy obiekt kontekstu eksportu ma <xref:System.ServiceModel.Description.ContractDescription>, czy <xref:System.ServiceModel.Description.OperationDescription>, komentarz jest wyodrębniany z atrybutu przy użyciu właściwości text i jest dodawany do elementu adnotacji WSDL, jak pokazano w poniższym kodzie.</span><span class="sxs-lookup"><span data-stu-id="c7c01-117">In this sample, depending upon whether the export context object has a <xref:System.ServiceModel.Description.ContractDescription> or an <xref:System.ServiceModel.Description.OperationDescription>, a comment is extracted from the attribute using the text property and is added to the WSDL annotation element as shown in the following code.</span></span>  
+ <span data-ttu-id="4f883-117">W tym przykładzie, w zależności od <xref:System.ServiceModel.Description.ContractDescription> tego, czy obiekt kontekstu eksportu ma lub , <xref:System.ServiceModel.Description.OperationDescription>komentarz jest wyodrębniany z atrybutu przy użyciu właściwości text i jest dodawany do elementu adnotacji WSDL, jak pokazano w poniższym kodzie.</span><span class="sxs-lookup"><span data-stu-id="4f883-117">In this sample, depending upon whether the export context object has a <xref:System.ServiceModel.Description.ContractDescription> or an <xref:System.ServiceModel.Description.OperationDescription>, a comment is extracted from the attribute using the text property and is added to the WSDL annotation element as shown in the following code.</span></span>  
   
 ```csharp
 public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context)
@@ -108,7 +108,7 @@ public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext 
 }
 ```  
   
- <span data-ttu-id="c7c01-118">Jeśli operacja jest eksportowana, przykład używa odbicia w celu uzyskania wszelkich `WsdlParamOrReturnDocumentationAttribute` wartości parametrów i zwracanych wartości i dodaje je do elementów adnotacji WSDL dla tej operacji w następujący sposób.</span><span class="sxs-lookup"><span data-stu-id="c7c01-118">If an operation is being exported, the sample uses reflection to obtain any `WsdlParamOrReturnDocumentationAttribute` values for parameters and return values and adds them to the WSDL annotation elements for that operation as follows.</span></span>  
+ <span data-ttu-id="4f883-118">Jeśli operacja jest eksportowana, próbka używa odbicia `WsdlParamOrReturnDocumentationAttribute` w celu uzyskania dowolnych wartości parametrów i wartości zwracanych i dodaje je do elementów adnotacji WSDL dla tej operacji w następujący sposób.</span><span class="sxs-lookup"><span data-stu-id="4f883-118">If an operation is being exported, the sample uses reflection to obtain any `WsdlParamOrReturnDocumentationAttribute` values for parameters and return values and adds them to the WSDL annotation elements for that operation as follows.</span></span>  
   
 ```csharp
 // Get returns information  
@@ -140,11 +140,11 @@ for (int i = 0; i < args.Length; i++)
 }  
 ```  
   
- <span data-ttu-id="c7c01-119">Następnie próbka publikuje metadane w standardowym sposobie przy użyciu następującego pliku konfiguracji.</span><span class="sxs-lookup"><span data-stu-id="c7c01-119">The sample then publishes metadata in the standard way, using the following configuration file.</span></span>  
+ <span data-ttu-id="4f883-119">Następnie w próbce publikuje metadane w standardowy sposób, używając następującego pliku konfiguracyjnego.</span><span class="sxs-lookup"><span data-stu-id="4f883-119">The sample then publishes metadata in the standard way, using the following configuration file.</span></span>  
   
 ```xml  
 <services>  
-  <service   
+  <service
       name="Microsoft.ServiceModel.Samples.CalculatorService"  
       behaviorConfiguration="CalculatorServiceBehavior">  
     <!-- ICalculator is exposed at the base address provided by host: http://localhost/servicemodelsamples/service.svc  -->  
@@ -169,13 +169,13 @@ for (int i = 0; i < args.Length; i++)
 </behaviors>  
 ```  
   
-## <a name="svcutil-client"></a><span data-ttu-id="c7c01-120">Klient Svcutil</span><span class="sxs-lookup"><span data-stu-id="c7c01-120">Svcutil client</span></span>  
- <span data-ttu-id="c7c01-121">Ten przykład nie używa programu Svcutil. exe.</span><span class="sxs-lookup"><span data-stu-id="c7c01-121">This sample does not use Svcutil.exe.</span></span> <span data-ttu-id="c7c01-122">Umowa jest dostępna w pliku generatedClient.cs, dzięki czemu po przykładzie zademonstrowano niestandardowy import WSDL i generowanie kodu, usługa może być wywoływana.</span><span class="sxs-lookup"><span data-stu-id="c7c01-122">The contract is provided in the generatedClient.cs file so that after the sample demonstrates custom WSDL import and code generation, the service can be invoked.</span></span> <span data-ttu-id="c7c01-123">Aby skorzystać z następującego niestandardowego importera WSDL na potrzeby tego przykładu, można uruchomić Svcutil. exe i określić opcję `/svcutilConfig`, podając ścieżkę do pliku konfiguracji klienta użytego w tym przykładzie, który odwołuje się do biblioteki `WsdlDocumentation.dll`.</span><span class="sxs-lookup"><span data-stu-id="c7c01-123">To use the following custom WSDL importer for this example, you can run Svcutil.exe and specify the `/svcutilConfig` option, giving the path to the client configuration file used in this sample, which references the `WsdlDocumentation.dll` library.</span></span> <span data-ttu-id="c7c01-124">Aby załadować `WsdlDocumentationImporter`, program Svuctil. exe musi mieć możliwość zlokalizowania i załadowania biblioteki `WsdlDocumentation.dll`, co oznacza, że jest ona zarejestrowana w globalnej pamięci podręcznej zestawów, w ścieżce lub znajduje się w tym samym katalogu, co Svcutil. exe.</span><span class="sxs-lookup"><span data-stu-id="c7c01-124">To load the `WsdlDocumentationImporter`, however, Svuctil.exe must be able to locate and load the `WsdlDocumentation.dll` library, which means either that it is registered in the global assembly cache, in the path, or is in the same directory as Svcutil.exe.</span></span> <span data-ttu-id="c7c01-125">W przypadku podstawowego przykładu, najłatwiejszym rozwiązaniem jest skopiowanie Svcutil. exe i pliku konfiguracji klienta do tego samego katalogu co `WsdlDocumentation.dll` i uruchomienie go z tego miejsca.</span><span class="sxs-lookup"><span data-stu-id="c7c01-125">For a basic sample such as this, the easiest thing to do is to copy Svcutil.exe and the client configuration file into the same directory as `WsdlDocumentation.dll` and run it from there.</span></span>  
+## <a name="svcutil-client"></a><span data-ttu-id="4f883-120">Klient Svcutil</span><span class="sxs-lookup"><span data-stu-id="4f883-120">Svcutil client</span></span>  
+ <span data-ttu-id="4f883-121">W tym przykładzie nie jest używany plik Svcutil.exe.</span><span class="sxs-lookup"><span data-stu-id="4f883-121">This sample does not use Svcutil.exe.</span></span> <span data-ttu-id="4f883-122">Umowa jest dostarczana w pliku generatedClient.cs, dzięki czemu po przykładzie pokazuje niestandardowe importU WSDL i generowania kodu, usługa może być wywoływana.</span><span class="sxs-lookup"><span data-stu-id="4f883-122">The contract is provided in the generatedClient.cs file so that after the sample demonstrates custom WSDL import and code generation, the service can be invoked.</span></span> <span data-ttu-id="4f883-123">Aby użyć następującego niestandardowego importera WSDL w tym przykładzie, można `/svcutilConfig` uruchomić program Svcutil.exe i określić opcję, nadając ścieżkę do pliku konfiguracji klienta używanego w tym przykładzie, który odwołuje się do `WsdlDocumentation.dll` biblioteki.</span><span class="sxs-lookup"><span data-stu-id="4f883-123">To use the following custom WSDL importer for this example, you can run Svcutil.exe and specify the `/svcutilConfig` option, giving the path to the client configuration file used in this sample, which references the `WsdlDocumentation.dll` library.</span></span> <span data-ttu-id="4f883-124">Aby `WsdlDocumentationImporter`załadować , jednak Svuctil.exe musi być `WsdlDocumentation.dll` w stanie zlokalizować i załadować bibliotekę, co oznacza, że jest ona zarejestrowana w globalnej pamięci podręcznej zestawu, w ścieżce lub znajduje się w tym samym katalogu co Svcutil.exe.</span><span class="sxs-lookup"><span data-stu-id="4f883-124">To load the `WsdlDocumentationImporter`, however, Svuctil.exe must be able to locate and load the `WsdlDocumentation.dll` library, which means either that it is registered in the global assembly cache, in the path, or is in the same directory as Svcutil.exe.</span></span> <span data-ttu-id="4f883-125">W przypadku próbki podstawowej, takiej jak ta, najłatwiejszą rzeczą do zrobienia jest skopiowanie pliku Svcutil.exe i pliku konfiguracyjnego klienta do tego samego katalogu, co `WsdlDocumentation.dll` ten katalog i uruchomienie go stamtąd.</span><span class="sxs-lookup"><span data-stu-id="4f883-125">For a basic sample such as this, the easiest thing to do is to copy Svcutil.exe and the client configuration file into the same directory as `WsdlDocumentation.dll` and run it from there.</span></span>  
   
-## <a name="the-custom-wsdl-importer"></a><span data-ttu-id="c7c01-126">Niestandardowy importer WSDL</span><span class="sxs-lookup"><span data-stu-id="c7c01-126">The Custom WSDL Importer</span></span>  
- <span data-ttu-id="c7c01-127"><xref:System.ServiceModel.Description.IWsdlImportExtension> obiektu niestandardowego `WsdlDocumentationImporter` również implementuje <xref:System.ServiceModel.Description.IContractBehavior> i <xref:System.ServiceModel.Description.IOperationBehavior>, które mają zostać dodane do zaimportowanych punktów końcowych i <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> i <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> do wywołania, aby zmodyfikować generowanie kodu podczas tworzenia kontraktu lub kodu operacji.</span><span class="sxs-lookup"><span data-stu-id="c7c01-127">The custom <xref:System.ServiceModel.Description.IWsdlImportExtension> object `WsdlDocumentationImporter` also implements <xref:System.ServiceModel.Description.IContractBehavior> and <xref:System.ServiceModel.Description.IOperationBehavior> to be added to the imported ServiceEndpoints and <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> and <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> to be invoked to modify the code generation when the contract or operation code is being created.</span></span>  
+## <a name="the-custom-wsdl-importer"></a><span data-ttu-id="4f883-126">Niestandardowy importer WSDL</span><span class="sxs-lookup"><span data-stu-id="4f883-126">The Custom WSDL Importer</span></span>  
+ <span data-ttu-id="4f883-127"><xref:System.ServiceModel.Description.IWsdlImportExtension> Obiekt `WsdlDocumentationImporter` niestandardowy implementuje <xref:System.ServiceModel.Description.IContractBehavior> również i <xref:System.ServiceModel.Description.IOperationBehavior> mają być dodawane <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> do <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> importowanych ServiceEndpoints i i do wywołania, aby zmodyfikować generowanie kodu podczas tworzenia kodu umowy lub operacji.</span><span class="sxs-lookup"><span data-stu-id="4f883-127">The custom <xref:System.ServiceModel.Description.IWsdlImportExtension> object `WsdlDocumentationImporter` also implements <xref:System.ServiceModel.Description.IContractBehavior> and <xref:System.ServiceModel.Description.IOperationBehavior> to be added to the imported ServiceEndpoints and <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> and <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> to be invoked to modify the code generation when the contract or operation code is being created.</span></span>  
   
- <span data-ttu-id="c7c01-128">Po pierwsze, w metodzie <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29>, przykład określa, czy adnotacja WSDL znajduje się na poziomie kontraktu lub operacji, i dodaje się do niego w odpowiednim zakresie, przekazując zaimportowany tekst adnotacji do jego konstruktora.</span><span class="sxs-lookup"><span data-stu-id="c7c01-128">First, in the <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> method, the sample determines whether the WSDL annotation is at the contract or operation level, and adds itself as a behavior at the appropriate scope, passing the imported annotation text to its constructor.</span></span>  
+ <span data-ttu-id="4f883-128">Po pierwsze <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> w metodzie próbki określa, czy adnotacja WSDL jest na poziomie umowy lub operacji i dodaje się jako zachowanie w odpowiednim zakresie, przekazując importowany tekst adnotacji do jego konstruktora.</span><span class="sxs-lookup"><span data-stu-id="4f883-128">First, in the <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> method, the sample determines whether the WSDL annotation is at the contract or operation level, and adds itself as a behavior at the appropriate scope, passing the imported annotation text to its constructor.</span></span>  
   
 ```csharp
 public void ImportContract(WsdlImporter importer, WsdlContractConversionContext context)  
@@ -202,7 +202,7 @@ public void ImportContract(WsdlImporter importer, WsdlContractConversionContext 
 }  
 ```  
   
- <span data-ttu-id="c7c01-129">Po wygenerowaniu kodu system wywołuje metody <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> i <xref:System.ServiceModel.Description.IOperationContractGenerationExtension.GenerateOperation%28System.ServiceModel.Description.OperationContractGenerationContext%29>, przekazując odpowiednie informacje kontekstu.</span><span class="sxs-lookup"><span data-stu-id="c7c01-129">Then, when the code is generated, the system invokes the <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> and <xref:System.ServiceModel.Description.IOperationContractGenerationExtension.GenerateOperation%28System.ServiceModel.Description.OperationContractGenerationContext%29> methods, passing the appropriate context information.</span></span> <span data-ttu-id="c7c01-130">Przykład formatuje niestandardowe adnotacje WSDL i wstawia je jako komentarze do CodeDom.</span><span class="sxs-lookup"><span data-stu-id="c7c01-130">The sample formats the custom WSDL annotations and inserts them as comments into the CodeDom.</span></span>  
+ <span data-ttu-id="4f883-129">Następnie po wygenerowaniu kodu system wywołuje <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> <xref:System.ServiceModel.Description.IOperationContractGenerationExtension.GenerateOperation%28System.ServiceModel.Description.OperationContractGenerationContext%29> metody i, przekazując odpowiednie informacje kontekstowe.</span><span class="sxs-lookup"><span data-stu-id="4f883-129">Then, when the code is generated, the system invokes the <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> and <xref:System.ServiceModel.Description.IOperationContractGenerationExtension.GenerateOperation%28System.ServiceModel.Description.OperationContractGenerationContext%29> methods, passing the appropriate context information.</span></span> <span data-ttu-id="4f883-130">Przykład formatuje niestandardowe adnotacje WSDL i wstawia je jako komentarze do CodeDom.</span><span class="sxs-lookup"><span data-stu-id="4f883-130">The sample formats the custom WSDL annotations and inserts them as comments into the CodeDom.</span></span>  
   
 ```csharp
 public void GenerateContract(ServiceContractGenerationContext context)  
@@ -218,13 +218,13 @@ public void GenerateOperation(OperationContractGenerationContext context)
 }  
 ```  
   
-## <a name="the-client-application"></a><span data-ttu-id="c7c01-131">Aplikacja kliencka</span><span class="sxs-lookup"><span data-stu-id="c7c01-131">The Client Application</span></span>  
- <span data-ttu-id="c7c01-132">Aplikacja kliencka ładuje niestandardowego importera WSDL przez określenie go w pliku konfiguracyjnym aplikacji.</span><span class="sxs-lookup"><span data-stu-id="c7c01-132">The client application loads the custom WSDL importer by specifying it in the application configuration file.</span></span>  
+## <a name="the-client-application"></a><span data-ttu-id="4f883-131">Aplikacja kliencka</span><span class="sxs-lookup"><span data-stu-id="4f883-131">The Client Application</span></span>  
+ <span data-ttu-id="4f883-132">Aplikacja kliencka ładuje niestandardowego importera WSDL, określając go w pliku konfiguracji aplikacji.</span><span class="sxs-lookup"><span data-stu-id="4f883-132">The client application loads the custom WSDL importer by specifying it in the application configuration file.</span></span>  
   
 ```xml  
 <client>  
-  <endpoint address="http://localhost/servicemodelsamples/service.svc"   
-  binding="wsHttpBinding"   
+  <endpoint address="http://localhost/servicemodelsamples/service.svc"
+  binding="wsHttpBinding"
   contract="ICalculator" />  
   <metadata>  
     <wsdlImporters>  
@@ -234,75 +234,75 @@ public void GenerateOperation(OperationContractGenerationContext context)
 </client>  
 ```  
   
- <span data-ttu-id="c7c01-133">Po określeniu niestandardowego importera system metadanych WCF ładuje niestandardowego importera do dowolnego <xref:System.ServiceModel.Description.WsdlImporter> utworzonego w tym celu.</span><span class="sxs-lookup"><span data-stu-id="c7c01-133">Once the custom importer has been specified, the WCF metadata system loads the custom importer into any <xref:System.ServiceModel.Description.WsdlImporter> created for that purpose.</span></span> <span data-ttu-id="c7c01-134">W tym przykładzie użyto <xref:System.ServiceModel.Description.MetadataExchangeClient>, aby pobrać metadane, <xref:System.ServiceModel.Description.WsdlImporter> prawidłowo skonfigurowane do importowania metadanych przy użyciu niestandardowego importera, który tworzy próbkę, oraz <xref:System.ServiceModel.Description.ServiceContractGenerator> do skompilowania zmodyfikowanych informacji o kontrakcie w Visual Basic C# i kodzie klienta, które mogą być używane w programie Visual Studio do obsługi IntelliSense lub skompilowane w dokumentacji XML.</span><span class="sxs-lookup"><span data-stu-id="c7c01-134">This sample uses the <xref:System.ServiceModel.Description.MetadataExchangeClient> to download the metadata, the <xref:System.ServiceModel.Description.WsdlImporter> properly configured to import the metadata using the custom importer the sample creates, and the <xref:System.ServiceModel.Description.ServiceContractGenerator> to compile the modified contract information into both Visual Basic and C# client code that can be used in Visual Studio to support Intellisense or compiled into XML documentation.</span></span>  
+ <span data-ttu-id="4f883-133">Po określeniu importera niestandardowego system metadanych WCF <xref:System.ServiceModel.Description.WsdlImporter> ładuje importera niestandardowego do dowolnego utworzonego w tym celu.</span><span class="sxs-lookup"><span data-stu-id="4f883-133">Once the custom importer has been specified, the WCF metadata system loads the custom importer into any <xref:System.ServiceModel.Description.WsdlImporter> created for that purpose.</span></span> <span data-ttu-id="4f883-134">W tym przykładzie użyto <xref:System.ServiceModel.Description.MetadataExchangeClient> do <xref:System.ServiceModel.Description.WsdlImporter> pobrania metadanych, poprawnie skonfigurowane do importowania metadanych przy użyciu importera niestandardowego próbka tworzy i <xref:System.ServiceModel.Description.ServiceContractGenerator> skompilować zmodyfikowane informacje umowy do kodu klienta języka Visual Basic i C#, który może służyć w programie Visual Studio do obsługi intellisense lub skompilowany w dokumentacji XML.</span><span class="sxs-lookup"><span data-stu-id="4f883-134">This sample uses the <xref:System.ServiceModel.Description.MetadataExchangeClient> to download the metadata, the <xref:System.ServiceModel.Description.WsdlImporter> properly configured to import the metadata using the custom importer the sample creates, and the <xref:System.ServiceModel.Description.ServiceContractGenerator> to compile the modified contract information into both Visual Basic and C# client code that can be used in Visual Studio to support Intellisense or compiled into XML documentation.</span></span>  
   
 ```csharp
 /// From WSDL Documentation:  
-///   
-/// <summary>The ICalculator contract performs basic calculation   
-/// services.</summary>   
-///   
+///
+/// <summary>The ICalculator contract performs basic calculation
+/// services.</summary>
+///
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]  
 [System.ServiceModel.ServiceContractAttribute(Namespace="http://Microsoft.ServiceModel.Samples", ConfigurationName="ICalculator")]  
 public interface ICalculator  
 {  
   
     /// From WSDL Documentation:  
-    ///   
-    /// <summary>The Add operation adds two numbers and returns the   
-    /// result.</summary><returns>The result of adding the two arguments   
-    /// together.</returns><param name="n1">The first value to add.</param><param   
-    /// name="n2">The second value to add.</param>   
-    ///   
+    ///
+    /// <summary>The Add operation adds two numbers and returns the
+    /// result.</summary><returns>The result of adding the two arguments
+    /// together.</returns><param name="n1">The first value to add.</param><param
+    /// name="n2">The second value to add.</param>
+    ///
     [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.ServiceModel.Samples/ICalculator/Add", ReplyAction="http://Microsoft.ServiceModel.Samples/ICalculator/AddResponse")]  
     double Add(double n1, double n2);  
   
     /// From WSDL Documentation:  
-    ///   
-    /// <summary>The Subtract operation subtracts the second argument from the   
-    /// first.</summary><returns>The result of the second argument subtracted from the   
-    /// first.</returns><param name="n1">The value from which the second is   
-    /// subtracted.</param><param name="n2">The value that is subtracted from the   
-    /// first.</param>   
-    ///   
+    ///
+    /// <summary>The Subtract operation subtracts the second argument from the
+    /// first.</summary><returns>The result of the second argument subtracted from the
+    /// first.</returns><param name="n1">The value from which the second is
+    /// subtracted.</param><param name="n2">The value that is subtracted from the
+    /// first.</param>
+    ///
     [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.ServiceModel.Samples/ICalculator/Subtract", ReplyAction="http://Microsoft.ServiceModel.Samples/ICalculator/SubtractResponse")]  
     double Subtract(double n1, double n2);  
   
     /// From WSDL Documentation:  
-    ///   
-    /// <summary>The Multiply operation multiplies two values.</summary><returns>The   
-    /// result of multiplying the first and second arguments.</returns><param   
-    /// name="n1">The first value to multiply.</param><param name="n2">The second value   
-    /// to multiply.</param>   
-    ///   
+    ///
+    /// <summary>The Multiply operation multiplies two values.</summary><returns>The
+    /// result of multiplying the first and second arguments.</returns><param
+    /// name="n1">The first value to multiply.</param><param name="n2">The second value
+    /// to multiply.</param>
+    ///
     [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.ServiceModel.Samples/ICalculator/Multiply", ReplyAction="http://Microsoft.ServiceModel.Samples/ICalculator/MultiplyResponse")]  
     double Multiply(double n1, double n2);  
   
     /// From WSDL Documentation:  
-    ///   
-    /// <summary>The Divide operation returns the value of the first argument divided   
-    /// by the second argument.</summary><returns>The result of dividing the first   
-    /// argument by the second.</returns><param name="n1">The numerator.</param><param   
-    /// name="n2">The denominator.</param>   
-    ///   
+    ///
+    /// <summary>The Divide operation returns the value of the first argument divided
+    /// by the second argument.</summary><returns>The result of dividing the first
+    /// argument by the second.</returns><param name="n1">The numerator.</param><param
+    /// name="n2">The denominator.</param>
+    ///
     [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.ServiceModel.Samples/ICalculator/Divide", ReplyAction="http://Microsoft.ServiceModel.Samples/ICalculator/DivideResponse")]  
     double Divide(double n1, double n2);  
 }  
 ```  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="c7c01-135">Aby skonfigurować, skompilować i uruchomić przykład</span><span class="sxs-lookup"><span data-stu-id="c7c01-135">To set up, build, and run the sample</span></span>  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="4f883-135">Aby skonfigurować, skompilować i uruchomić próbkę</span><span class="sxs-lookup"><span data-stu-id="4f883-135">To set up, build, and run the sample</span></span>  
   
-1. <span data-ttu-id="c7c01-136">Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="c7c01-136">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1. <span data-ttu-id="4f883-136">Upewnij się, że wykonano [procedurę jednorazowej instalacji dla przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="4f883-136">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2. <span data-ttu-id="c7c01-137">Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="c7c01-137">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+2. <span data-ttu-id="4f883-137">Aby utworzyć wersję C# lub Visual Basic .NET rozwiązania, postępuj zgodnie z instrukcjami w [tworzenie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="4f883-137">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3. <span data-ttu-id="c7c01-138">Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="c7c01-138">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+3. <span data-ttu-id="4f883-138">Aby uruchomić próbkę w konfiguracji z jednym lub krzyżowym komputerem, postępuj zgodnie z instrukcjami w [programie Uruchamianie przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="4f883-138">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
-> <span data-ttu-id="c7c01-139">Przykłady mogą być już zainstalowane na komputerze.</span><span class="sxs-lookup"><span data-stu-id="c7c01-139">The samples may already be installed on your machine.</span></span> <span data-ttu-id="c7c01-140">Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).</span><span class="sxs-lookup"><span data-stu-id="c7c01-140">Check for the following (default) directory before continuing.</span></span>  
->   
+> <span data-ttu-id="4f883-139">Próbki mogą być już zainstalowane na komputerze.</span><span class="sxs-lookup"><span data-stu-id="4f883-139">The samples may already be installed on your machine.</span></span> <span data-ttu-id="4f883-140">Przed kontynuowaniem sprawdź następujący (domyślny) katalog.</span><span class="sxs-lookup"><span data-stu-id="4f883-140">Check for the following (default) directory before continuing.</span></span>  
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> <span data-ttu-id="c7c01-141">Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c7c01-141">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="c7c01-142">Ten przykład znajduje się w następującym katalogu.</span><span class="sxs-lookup"><span data-stu-id="c7c01-142">This sample is located in the following directory.</span></span>  
->   
+>
+> <span data-ttu-id="4f883-141">Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) Przykłady dla platformy .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady.</span><span class="sxs-lookup"><span data-stu-id="4f883-141">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="4f883-142">Ten przykład znajduje się w następującym katalogu.</span><span class="sxs-lookup"><span data-stu-id="4f883-142">This sample is located in the following directory.</span></span>  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Metadata\WsdlDocumentation`  

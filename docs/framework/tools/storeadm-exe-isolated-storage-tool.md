@@ -9,16 +9,16 @@ helpviewer_keywords:
 - removing stores
 ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
 ms.openlocfilehash: 46e846eaf92835fb2a9130b85ed20749934ca5a1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75715712"
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe (Narzędzie wydzielonej pamięci masowej)
 Narzędzie Isolated Storage obsługujące izolowane magazyny wyświetla lub usuwa wszystkie istniejące magazyny bieżącego użytkownika.  
   
- To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, użyj wiersz polecenia dla deweloperów dla programu Visual Studio (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [wiersza polecenia](developer-command-prompt-for-vs.md).  
+ To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, użyj wiersza polecenia dewelopera dla programu Visual Studio (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [Wiersze poleceń](developer-command-prompt-for-vs.md).  
   
  W wierszu polecenia wpisz następujące polecenie:  
   
@@ -32,34 +32,34 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
   
 |Opcja|Opis|  
 |------------|-----------------|  
-|**/h**[**ELP**]|Wyświetla składnię polecenia i opcje narzędzia.|  
-|**/list**|Wyświetla wszystkie istniejące magazyny bieżącego użytkownika. W tym magazyny dla wszystkich aplikacji lub zespołów wykonanych przez tego użytkownika.|  
-|**/Machine**|Wybiera magazyn komputera. Użyj tej opcji z opcją **/list** lub **/Remove** , aby określić, że akcja ma być stosowana do magazynu komputera.<br /><br /> Nowość w programie .NET Framework 2.0|  
-|**/quiet**|Określa tryb cichy; pomija informacyjne dane wyjściowe, tak aby były wyświetlane tylko komunikaty o błędach.|  
-|**/Remove**|Trwale usuwa wszystkie istniejące magazyny bieżącego użytkownika.|  
-|**/roaming**|Wybiera mobilny magazyn. Użyj tej opcji z opcjami **/list** lub **/Remove** , aby określić, że akcja ma być stosowana do magazynu mobilnego.|  
+|**/h**[**elp**]|Wyświetla składnię polecenia i opcje narzędzia.|  
+|**/lista**|Wyświetla wszystkie istniejące magazyny bieżącego użytkownika. W tym magazyny dla wszystkich aplikacji lub zespołów wykonanych przez tego użytkownika.|  
+|**/maszyna**|Wybiera magazyn komputera. Użyj tej opcji z **/list** lub **/remove** opcji, aby określić, że akcja powinna mieć zastosowanie do magazynu komputera.<br /><br /> Nowość w programie .NET Framework 2.0|  
+|**/cichy**|Określa tryb cichy; pomija informacyjne dane wyjściowe, tak aby były wyświetlane tylko komunikaty o błędach.|  
+|**/usuń**|Trwale usuwa wszystkie istniejące magazyny bieżącego użytkownika.|  
+|**/roaming**|Wybiera mobilny magazyn. Użyj tej opcji z **/list** lub **/remove** opcje, aby określić, że akcja powinna mieć zastosowanie do magazynu mobilnego.|  
 |**/?**|Wyświetla składnię polecenia i opcje narzędzia.|  
   
 ## <a name="remarks"></a>Uwagi  
  Uruchamianie Storeadm.exe z wiersza polecenia bez określenia opcji wyświetla składnię i opcje narzędzia.  
   
- Opcje **/list** i **/Remove** są zwykle używane pojedynczo. Jednak jeśli określono dwie lub więcej opcji, zostaną one wykonane w kolejności, w jakiej występują w wierszu polecenia.  
+ Opcje **/list** i **/remove** są zwykle używane po jednym naraz; jednak jeśli określono dwie lub więcej opcji, zostaną one wykonane w kolejności, w jakiej pojawiają się w wierszu polecenia.  
   
  Aplikacje można zapisać do jednego z dwóch magazynów użytkownika lub do magazynu komputera:  
   
-- Magazyn lokalny istnieje w lokalizacji, która nie jest przenoszona (w systemie Windows 2000 i nowszych) nawet wtedy, gdy dla użytkownika włączono funkcję mobilnego dostępu do danych użytkownika.  
+- Lokalny magazyn istnieje w lokalizacji, która jest gwarantowana, aby nie wędrować (w systemie Windows 2000 i nowszych), nawet jeśli roaming danych użytkownika jest włączony dla użytkownika.  
   
-- Magazyn mobilny istnieje w lokalizacji, która może przechować, ale tylko wtedy, gdy roaming jest włączony dla użytkownika za pośrednictwem administracji systemu Windows NT.  
+- Sklep mobilny istnieje w lokalizacji, która może się przemieszczać, ale może to zrobić tylko wtedy, gdy roaming jest włączony dla użytkownika za pośrednictwem administracji systemu Windows NT.  
   
 - Magazyn komputera jest wspólny dla wszystkich użytkowników komputera i jest przechowywany we wspólnym katalogu na tym komputerze.  
   
     > [!NOTE]
     > Magazyn komputera jest nowy w programie .NET Framework w wersji 2.0.  
   
- To, czy roaming jest faktycznie włączony dla użytkownika, nie wpływa na administrację Storeadm.exe. Uruchomienie narzędzia bez żadnych opcji zastosuje wszystkie akcje do magazynu lokalnego. Uruchomienie narzędzia z opcją **/roaming** dotyczy wszystkich akcji w sklepie, który ma możliwość przeroamingu. Uruchomienie narzędzia z opcją **/Machine** powoduje zastosowanie wszystkich akcji do magazynu komputera.  
+ To, czy roaming jest faktycznie włączony dla użytkownika, nie wpływa na administrację Storeadm.exe. Uruchomienie narzędzia bez żadnych opcji zastosuje wszystkie akcje do magazynu lokalnego. Uruchomienie narzędzia z opcją **/roaming** stosuje wszystkie akcje do magazynu, który jest w stanie wędrować. Uruchamianie narzędzia za pomocą opcji **/machine** powoduje zastosowanie wszystkich akcji do magazynu maszyn.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Narzędzia](index.md)
-- [Wydzielona pamięć masowa](../../standard/io/isolated-storage.md)
-- [Wiersze polecenia](developer-command-prompt-for-vs.md)
+- [narzędzia](index.md)
+- [Izolowany magazyn](../../standard/io/isolated-storage.md)
+- [Wiersz polecenia](developer-command-prompt-for-vs.md)

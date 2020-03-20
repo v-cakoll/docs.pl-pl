@@ -2,24 +2,24 @@
 title: <schemeSettings>, element (ustawienia identyfikatora URI)
 ms.date: 03/30/2017
 ms.assetid: 0ae45c6e-8c4c-4c0d-8b9f-a93824648890
-ms.openlocfilehash: 498aef77a1dfd8cffcac73b704b8d1bb6df5d165
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: c745c90bb61b9ee393687d7f6db4fd11565c7dc7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697771"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154650"
 ---
-# <a name="schemesettings-element-uri-settings"></a>\<element > schemeSettings (ustawienia identyfikatora URI)
-Określa, w jaki sposób <xref:System.Uri> będzie analizowana dla określonych schematów.  
+# <a name="schemesettings-element-uri-settings"></a>\<schemeSettings> Element (Ustawienia Uri)
+Określa sposób <xref:System.Uri> analizacji dla określonych schematów.  
   
-[ **> konfiguracji \<** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<URI >** ](uri-element-uri-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp; **\<schemeSettings >**  
+[**\<>konfiguracyjne**](../configuration-element.md)  
+&nbsp;&nbsp;[**\<uri>**](uri-element-uri-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;**\<systemyRozstawy>**  
   
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<schemeSettings>   
+<schemeSettings>
 </schemeSettings>  
 ```  
   
@@ -33,36 +33,36 @@ Określa, w jaki sposób <xref:System.Uri> będzie analizowana dla określonych 
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[add](add-element-for-schemesettings-uri-settings.md)|Dodaje ustawienie schematu dla nazwy schematu.|  
+|[Dodaj](add-element-for-schemesettings-uri-settings.md)|Dodaje ustawienie schematu dla nazwy schematu.|  
 |[Wyczyść](clear-element-for-schemesettings-uri-settings.md)|Czyści wszystkie istniejące ustawienia schematu.|  
-|[remove](remove-element-for-schemesettings-uri-settings.md)|Usuwa ustawienie schematu dla nazwy schematu.|  
+|[Usunąć](remove-element-for-schemesettings-uri-settings.md)|Usuwa ustawienie schematu dla nazwy schematu.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[uri](uri-element-uri-settings.md)|Zawiera ustawienia, które określają, w jaki sposób .NET Framework obsługuje adresy sieci Web wyrażone przy użyciu Uniform Resource Identifier (URI).|  
+|[Identyfikator uri](uri-element-uri-settings.md)|Zawiera ustawienia określające sposób obsługi adresów internetowych .NET Framework wyrażonych przy użyciu jednolitych identyfikatorów zasobów (URI).|  
   
 ## <a name="remarks"></a>Uwagi  
- Domyślnie Klasa <xref:System.Uri?displayProperty=nameWithType> cofa ograniczniki ścieżki kodowanej procentowo przed wykonaniem kompresji ścieżki. Ta implementacja została zaimplementowana jako mechanizm zabezpieczeń przed atakami podobnymi do następujących:  
+ Domyślnie <xref:System.Uri?displayProperty=nameWithType> klasa un-escapes procent zakodowane ograniczniki ścieżki przed wykonaniem kompresji ścieżki. Zostało to zaimplementowane jako mechanizm zabezpieczeń przed atakami, takimi jak następujące:  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- Jeśli ten identyfikator URI zostanie przesłany do modułów, które nie obsługują poprawnie znaków zakodowanych procentowo, może to spowodować wykonanie następującego polecenia przez serwer:  
+ Jeśli ten identyfikator URI zostanie przekazany do modułów, które nie obsługują poprawnie procentowych znaków zakodowanych, może to spowodować wykonanie następującego polecenia przez serwer:  
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- Z tego powodu <xref:System.Uri?displayProperty=nameWithType> klasie najpierw cofa ograniczniki ścieżki, a następnie stosuje kompresję ścieżki. W wyniku przekazania złośliwego adresu URL powyżej do <xref:System.Uri?displayProperty=nameWithType> konstruktora klasy wyniki mają następujący identyfikator URI:  
+ Z tego <xref:System.Uri?displayProperty=nameWithType> powodu klasa najpierw un-escapes ograniczniki ścieżki, a następnie stosuje kompresję ścieżki. Wynik przekazania złośliwego adresu <xref:System.Uri?displayProperty=nameWithType> URL powyżej do konstruktora klasy powoduje następujące identyfikatory URI:  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- To zachowanie domyślne można zmodyfikować, aby nie wycofać ograniczników ścieżki zakodowanej procentowo przy użyciu opcji konfiguracji schemeSettings dla określonego schematu.  
+ To domyślne zachowanie można zmodyfikować tak, aby nie odkodowywało procentów przy użyciu opcji konfiguracji schemeSettings dla określonego schematu.  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
- Tego elementu można użyć w pliku konfiguracyjnym aplikacji lub pliku konfiguracji komputera (Machine. config).  
+ Ten element może być używany w pliku konfiguracyjnym aplikacji lub pliku konfiguracyjnym komputera (Machine.config).  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie przedstawiono konfigurację używaną przez klasę <xref:System.Uri> do obsługi nieprawidłowych ograniczników ścieżki w kodzie procentowym dla schematu http.  
+ Poniższy przykład przedstawia konfigurację <xref:System.Uri> używaną przez klasę do obsługi nie uciekających ograniczników ścieżki zakodowanych w procentach dla schematu http.  
   
 ```xml  
 <configuration>  
@@ -80,10 +80,10 @@ Określa, w jaki sposób <xref:System.Uri> będzie analizowana dla określonych 
 |-|-|  
 |Przestrzeń nazw|System|  
 |Nazwa schematu||  
-|Plik walidacji||  
-|Może być puste||  
+|Plik sprawdzania poprawności||  
+|Może być pusty||  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>
 - <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>

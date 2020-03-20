@@ -8,21 +8,21 @@ helpviewer_keywords:
 - Type Library Exporter
 ms.assetid: 5c0a3d14-5f26-4267-94a9-82c30f8db09a
 ms.openlocfilehash: cbde2af9c8a03e6c41f571120027030713f1b8d5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73104126"
 ---
 # <a name="tlbexp-helper-functions-unmanaged-api-reference"></a>Funkcje pomocy narzędziaTlbexp (Niezarządzany wykaz interfejsów API)
-[Narzędzie eksportu biblioteki typów](../../tools/tlbexp-exe-type-library-exporter.md) (Tlbexp. exe) ładuje bibliotekę dołączaną dynamicznie o nazwie TlbRef. dll. Ta biblioteka DLL zawiera dwie funkcje pomocnika i interfejs, którego używa narzędzie eksportu w procesie konwersji zestawu na typ biblioteki.  
+[Narzędzie Eksporter biblioteki typów](../../tools/tlbexp-exe-type-library-exporter.md) (Tlbexp.exe) ładuje bibliotekę łączy dynamicznych o nazwie TlbRef.dll. Ta biblioteka DLL zawiera dwie funkcje pomocnicze i interfejs używany przez narzędzie eksportera podczas procesu konwersji biblioteki typu zestawu.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [GetTypeLibInfo, funkcja](gettypelibinfo-function.md)  
- Zapewnia lokalizację i informacje o systemie operacyjnym dla biblioteki typów.  
+ Zawiera informacje o lokalizacji i systemie operacyjnym dla biblioteki typów.  
   
- [LoadTypeLibWithResolver, funkcja](loadtypelibwithresolver-function.md)  
- Ładuje bibliotekę typów przy użyciu implementacji [interfejsu ITypeLibResolver](itypelibresolver-interface.md) , aby rozwiązać wszelkie odwołania do bibliotek typów.  
+ [LoadTypeLibWithResolver — Funkcja](loadtypelibwithresolver-function.md)  
+ Ładuje bibliotekę typów przy użyciu implementacji [interfejsu ITypeLibResolver,](itypelibresolver-interface.md) aby rozwiązać wszelkie biblioteki typów, do których istnieje odwołanie.  
   
- [ITypeLibResolver, interfejs](itypelibresolver-interface.md)  
- Udostępnia [metodę ResolveTypeLib —](resolvetypelib-method.md), która zwraca w pełni kwalifikowaną ścieżkę do biblioteki typów.
+ [ITypeLibResolver — Interfejs](itypelibresolver-interface.md)  
+ Zawiera [ResolveTypeLib metoda](resolvetypelib-method.md), która zwraca w pełni kwalifikowaną ścieżkę biblioteki typów.

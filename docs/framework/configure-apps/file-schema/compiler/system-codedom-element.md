@@ -1,5 +1,5 @@
 ---
-title: <system.codedom> Element
+title: <system.codedom>, element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.codedom
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - system.codedom element
 - <system.codedom> element
 ms.assetid: 672a68f7-e69f-4479-ac30-e980085ec4fe
-ms.openlocfilehash: 19f37095bd01b76fda8b1e29423c413dbdb06a65
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 40a3c84e1deed4d215383670176623a6a79ac41d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168917"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155391"
 ---
-# <a name="systemcodedom-element"></a>\<system.codedom> Element
-Określa ustawienia konfiguracji kompilatora dla dostępnych dostawców języka.  
+# <a name="systemcodedom-element"></a>\<element> system.codedom
+Określa ustawienia konfiguracji kompilatora dla dostawców dostępnych języków.  
   
-[ **\<> konfiguracji**](../configuration-element.md)  
-&nbsp;&nbsp; **\<> System. CodeDom**  
+[**\<>konfiguracyjne**](../configuration-element.md)  
+&nbsp;&nbsp;**\<system.codedom>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,31 +40,31 @@ Określa ustawienia konfiguracji kompilatora dla dostępnych dostawców języka.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<compilers>](compilers-element.md)|Kontener dla elementów konfiguracji kompilatora; zawiera zero lub więcej [ \<elementów > kompilatora](compiler-element.md) .|  
+|[\<kompilatory>](compilers-element.md)|Kontener dla elementów konfiguracji kompilatora; zawiera zero lub więcej [ \<elementów kompilatora>.](compiler-element.md)|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<> konfiguracji](../configuration-element.md)|Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.|  
+|[\<>konfiguracyjne](../configuration-element.md)|Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.|  
   
 ## <a name="remarks"></a>Uwagi  
   
-## <a name="net-framework-version-20"></a>.NET Framework wersja 2,0  
- <xref:Microsoft.CSharp.CSharpCodeProvider> [ ElementSystem.CodeDom>zawieraustawieniakonfiguracjikompilatoradladostawcówjęzykazainstalowanychnakomputerzeopróczdomyślnychdostawcówinstalowanychz\<](system-codedom-element.md) .NET Framework, takich jak i <xref:Microsoft.VisualBasic.VBCodeProvider>. Kompilator > element zawiera zero lub więcej [ \<elementów > kompilatora](compiler-element.md) . [ \<](compilers-element.md) Każdy element kompilatora > określa atrybuty konfiguracji kompilatora dla określonego dostawcy języka. [ \<](compiler-element.md)  
+## <a name="net-framework-version-20"></a>.NET Framework w wersji 2.0  
+ Element [ \<>system.codedom](system-codedom-element.md) zawiera ustawienia konfiguracji kompilatora dla dostawców języka zainstalowanych na komputerze oprócz domyślnych dostawców <xref:Microsoft.CSharp.CSharpCodeProvider> zainstalowanych z programem .NET Framework, takich jak <xref:Microsoft.VisualBasic.VBCodeProvider>i . [ \<Kompilatory>](compilers-element.md) element zawiera zero lub więcej [ \<elementów kompilatora>.](compiler-element.md) Każdy [ \<element>kompilatora](compiler-element.md) określa atrybuty konfiguracji kompilatora dla określonego dostawcy języka.  
   
- Deweloperzy i dostawcy kompilatora mogą dodać ustawienia konfiguracji do pliku konfiguracji komputera (Machine. config), aby uzyskać nową <xref:System.CodeDom.Compiler.CodeDomProvider> implementację. Użyj metody <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> , aby programowo wyliczyć zarówno domyślnych dostawców języka, jak i dostawców języka identyfikowanych przez ustawienia konfiguracji kompilatora na komputerze.  
+ Deweloperzy i producenci kompilatorów mogą dodawać ustawienia konfiguracji do pliku <xref:System.CodeDom.Compiler.CodeDomProvider> konfiguracji komputera (Machine.config) dla nowej implementacji. <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> Metoda służy do programowego wyliczenia zarówno domyślnych dostawców języka, jak i dostawców języka zidentyfikowanych przez ustawienia konfiguracji kompilatora na komputerze.  
   
 > [!NOTE]
-> W .NET Framework wersje 1,0 i 1,1 dostawcy języka domyślnego dostarczone przez .NET Framework są identyfikowane w [ \<elemencie > kompilatory](compilers-element.md) . W .NET Framework w wersji 2,0 dostawcy języka domyślnego nie są identyfikowane w [ \<kompilatorach >](compilers-element.md) elementu, ale można je <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A> wyliczyć przy użyciu metody.  
+> W .NET Framework w wersjach 1.0 i 1.1 domyślnych dostawców języka dostarczonych przez .NET Framework są identyfikowane w [ \<kompilatorach>](compilers-element.md) element. W .NET Framework w wersji 2.0 domyślnych dostawców języka nie są identyfikowane w [ \<kompilatorach>](compilers-element.md) element, ale mogą być wyliczone przy użyciu <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A> metody.  
   
-## <a name="net-framework-versions-10-and-11"></a>.NET Framework wersje 1,0 i 1,1  
- Element [System. CodeDom > zawiera ustawienia konfiguracji kompilatora dla dostawców języka na komputerze. \<](system-codedom-element.md) Kompilator > element zawiera zero lub więcej [ \<elementów > kompilatora](compiler-element.md) . [ \<](compilers-element.md) Każdy element kompilatora > określa atrybuty konfiguracji kompilatora dla określonego dostawcy języka. [ \<](compiler-element.md)  
+## <a name="net-framework-versions-10-and-11"></a>.NET Framework wersje 1.0 i 1.1  
+ Element [ \<>system.codedom](system-codedom-element.md) zawiera ustawienia konfiguracji kompilatora dla dostawców języków na komputerze. [ \<Kompilatory>](compilers-element.md) element zawiera zero lub więcej [ \<elementów kompilatora>.](compiler-element.md) Każdy [ \<element>kompilatora](compiler-element.md) określa atrybuty konfiguracji kompilatora dla określonego dostawcy języka.  
   
- .NET Framework definiuje początkowe ustawienia kompilatora w pliku konfiguracji komputera (Machine. config). Deweloperzy i dostawcy kompilatora mogą dodać ustawienia konfiguracji dla nowej <xref:System.CodeDom.Compiler.CodeDomProvider> implementacji. Użyj metody <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> , aby programowo wyliczyć dostawcę języka i ustawienia konfiguracji kompilatora na komputerze.  
+ Program .NET Framework definiuje początkowe ustawienia kompilatora w pliku konfiguracyjnym komputera (Machine.config). Deweloperzy i producenci kompilatorów mogą <xref:System.CodeDom.Compiler.CodeDomProvider> dodawać ustawienia konfiguracji dla nowej implementacji. <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> Metoda służy do programowego wyliczenia ustawień konfiguracji dostawcy języka i kompilatora na komputerze.  
   
 ## <a name="configuration-file"></a>Plik konfiguracji  
- Ten element może być używany w pliku konfiguracji komputera i w pliku konfiguracji aplikacji.  
+ Ten element może być używany w pliku konfiguracji komputera i pliku konfiguracji aplikacji.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład ilustruje typową konfigurację kompilatora.  
@@ -74,11 +74,11 @@ Określa ustawienia konfiguracji kompilatora dla dostępnych dostawców języka.
   <system.codedom>  
     <compilers>  
       <!-- zero or more compiler elements -->  
-      <compiler   
+      <compiler
         language="c#;cs;csharp"  
         extension=".cs"  
-        type="Microsoft.CSharp.CSharpCodeProvider, System,   
-          Version=1.0.5000.0, Culture=neutral,   
+        type="Microsoft.CSharp.CSharpCodeProvider, System,
+          Version=1.0.5000.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089"  
         compilerOptions=""  
         warningLevel="1" />  
@@ -87,10 +87,10 @@ Określa ustawienia konfiguracji kompilatora dla dostępnych dostawców języka.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
 - [Schemat pliku konfiguracji](../index.md)
 - [Schemat ustawień kompilatora i dostawcy języka](index.md)
-- [\<compiler> Element](compiler-element.md)
+- [\<element kompilatora>](compiler-element.md)

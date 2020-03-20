@@ -1,63 +1,63 @@
 ---
-title: PRZYPADEK (Entity SQL)
+title: PRZYPADEK (ENTITY SQL)
 ms.date: 03/30/2017
 ms.assetid: 26a47873-e87d-4ba2-9e2c-3787c21efe89
-ms.openlocfilehash: 7c1e02d44c674bf262f92df1c43bec6e9f2143c5
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 58b21d3be8e13a0a2204a4fd6d355f734207c509
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039930"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150470"
 ---
-# <a name="case-entity-sql"></a>PRZYPADEK (Entity SQL)
-Oblicza zestaw wyrażeń `Boolean`, aby określić wynik.  
+# <a name="case-entity-sql"></a>PRZYPADEK (ENTITY SQL)
+Ocenia zestaw `Boolean` wyrażeń w celu określenia wyniku.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```csharp  
 CASE  
-     WHEN Boolean_expression THEN result_expression   
-    [ ...n ]   
-     [   
-    ELSE else_result_expression   
-     ]   
+     WHEN Boolean_expression THEN result_expression
+    [ ...n ]
+     [
+    ELSE else_result_expression
+     ]
 END  
 ```  
   
 ## <a name="arguments"></a>Argumenty  
  `n`  
- Jest symbolem zastępczym, który wskazuje, że można używać wielu klauzul `result_expression` `Boolean_expression`.  
+ Jest symbolem zastępczym, który `Boolean_expression` wskazuje, że można użyć wielu klauzul WHEN THEN. `result_expression`  
   
- NASTĘPNIE `result_expression`  
- Jest wyrażeniem zwracanym, gdy `Boolean_expression` oblicza `true`. `result expression` jest dowolnym prawidłowym wyrażeniem.  
+ Następnie`result_expression`  
+ Czy wyrażenie jest `Boolean_expression` zwracane `true`po dodaniu . `result expression`jest dowolnym prawidłowym wyrażeniem.  
   
- ELSE `else_result_expression`  
- Jest wyrażeniem zwracanym, jeśli żadna operacja porównania nie zostanie obliczona do `true`. Jeśli ten argument zostanie pominięty i żadna operacja porównania nie zostanie obliczona do `true`, przypadek zwraca wartość null. `else_result_expression` jest dowolnym prawidłowym wyrażeniem. Typy danych `else_result_expression` i wszystkie `result_expression` muszą być takie same lub muszą być niejawną konwersją.  
+ Innego`else_result_expression`  
+ Czy wyrażenie jest zwracane, jeśli `true`żadna operacja porównania nie ma oceny . Jeśli ten argument zostanie pominięty i `true`żadna operacja porównania nie ma do tej wartości , case zwraca wartość null. `else_result_expression`jest dowolnym prawidłowym wyrażeniem. Typy danych `else_result_expression` i `result_expression` wszelkie muszą być takie same lub musi być niejawna konwersja.  
   
- GDY `Boolean_expression`  
- Jest wyrażeniem `Boolean` obliczanym, gdy jest używany przeszukiwany format przypadku. `Boolean_expression` jest dowolnym prawidłowym wyrażeniem `Boolean`.  
+ Kiedy`Boolean_expression`  
+ Czy `Boolean` wyrażenie jest oceniane podczas wyszukiwania formatu CASE jest używany. `Boolean_expression`jest dowolnym `Boolean` prawidłowym wyrażeniem.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Zwraca typ najwyższego pierwszeństwa z zestawu typów w `result_expression` i opcjonalne `else_result_expression`.  
+ Zwraca najwyższy typ pierwszeństwa z zestawu `result_expression` typów w `else_result_expression`i opcjonalnym .  
   
 ## <a name="remarks"></a>Uwagi  
- Wyrażenie CASE [!INCLUDE[esql](../../../../../../includes/esql-md.md)] przypomina wyrażenie CASE języka Transact-SQL. Wyrażenie CASE służy do tworzenia serii testów warunkowych, aby określić, które wyrażenie zwróci odpowiedni wynik. Ta forma wyrażenia case ma zastosowanie do serii co najmniej jednego wyrażenia `Boolean`, aby określić poprawne wyrażenie wyniku.  
+ Wyrażenie [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sprawy przypomina wyrażenie przypadku Transact-SQL. Wyrażenie przypadku służy do wykonania serii testów warunkowych w celu określenia, które wyrażenie przyniesie odpowiedni wynik. Ta forma wyrażenia case ma zastosowanie do serii `Boolean` jednego lub więcej wyrażeń w celu określenia poprawnego wyrażenia wynikowego.  
   
- Funkcja CASE oblicza `Boolean_expression` dla każdej klauzuli WHEN w określonej kolejności i zwraca `result_expression` pierwszego `Boolean_expression`, który jest obliczany jako `true`. Pozostałe wyrażenia nie są oceniane. Jeśli żadna `Boolean_expression` nie zostanie obliczona do `true`, aparat bazy danych zwróci `else_result_expression` Jeśli określono klauzulę ELSE lub wartość null, jeśli nie określono klauzuli ELSE.  
+ Funkcja CASE ocenia `Boolean_expression` dla każdej klauzuli WHEN w `result_expression` określonej `Boolean_expression` kolejności i `true`zwraca pierwszą, która ocenia . Pozostałe wyrażenia nie są oceniane. Jeśli `Boolean_expression` nie ma `true`żadnych obliczeń, `else_result_expression` Aparat baz danych zwraca, jeśli else klauzuli jest określony lub wartość null, jeśli nie else klauzuli jest określony.  
   
- Instrukcja CASE nie może zwracać zestawu wielokrotnego.  
+ Instrukcja CASE nie może zwrócić zestawu wielokrotnego.  
   
 ## <a name="example"></a>Przykład  
- Poniższe zapytanie Entity SQL używa wyrażenia CASE do obliczenia zestawu `Boolean` wyrażeń w celu określenia wyniku. Zapytanie jest oparte na modelu sprzedaży AdventureWorks. Aby skompilować i uruchomić to zapytanie, wykonaj następujące kroki:  
+ Następująca kwerenda SQL jednostki używa wyrażenia `Boolean` CASE do oceny zestawu wyrażeń w celu określenia wyniku. Kwerenda jest oparta na modelu sprzedaży AdventureWorks. Aby skompilować i uruchomić tę kwerendę, wykonaj następujące kroki:  
   
-1. Postępuj zgodnie z procedurą w [instrukcje: wykonywanie zapytania, które zwraca wyniki typu pierwotnego](../how-to-execute-a-query-that-returns-primitivetype-results.md).  
+1. Postępuj zgodnie z procedurą [w : Jak wykonać kwerendę, która zwraca wyniki typu pierwotnego](../how-to-execute-a-query-that-returns-primitivetype-results.md).  
   
-2. Przekaż następujące zapytanie jako argument do metody `ExecutePrimitiveTypeQuery`:  
+2. Przekaż następującą kwerendę jako `ExecutePrimitiveTypeQuery` argument do metody:  
   
  [!code-csharp[DP EntityServices Concepts 2#CASE_WHEN_THEN_ELSE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#case_when_then_else)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [THEN](then-entity-sql.md)
-- [SELECT](select-entity-sql.md)
+- [Następnie](then-entity-sql.md)
+- [Wybierz](select-entity-sql.md)
 - [Odwołanie do jednostki SQL](entity-sql-reference.md)

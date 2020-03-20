@@ -1,5 +1,5 @@
 ---
-title: 'Środki zaradcze: separator ścieżki klasy ZipArchiveEntry. FullName'
+title: 'Łagodzenie: ZipArchiveEntry.FullName Separator ścieżki'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application compatibility
@@ -9,24 +9,24 @@ helpviewer_keywords:
 - retargeting changes
 ms.assetid: 8d575722-4fb6-49a2-8a06-f72d62dc3766
 ms.openlocfilehash: 021d22e90ba39a4d01cf7d64588fab2d724b6640
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73457734"
 ---
-# <a name="mitigation-ziparchiveentryfullname-path-separator"></a>Środki zaradcze: separator ścieżki klasy ZipArchiveEntry. FullName
-Począwszy od aplikacji, które są przeznaczone dla .NET Framework 4.6.1, separator ścieżki używany we właściwości <xref:System.IO.Compression.ZipArchiveEntry.FullName%2A?displayProperty=nameWithType> został zmieniony od ukośnika odwrotnego ("\\") użytego w poprzednich wersjach .NET Framework do ukośnika ("/").   obiekty <xref:System.IO.Compression.ZipArchiveEntry?displayProperty=nameWithType> są tworzone przez wywołanie jednego z przeciążeń metody <xref:System.IO.Compression.ZipFile.CreateFromDirectory%2A?displayProperty=nameWithType>.  
+# <a name="mitigation-ziparchiveentryfullname-path-separator"></a>Łagodzenie: ZipArchiveEntry.FullName Separator ścieżki
+Począwszy od aplikacji, które są przeznaczone dla programu .NET Framework 4.6.1, separator ścieżki używany we <xref:System.IO.Compression.ZipArchiveEntry.FullName%2A?displayProperty=nameWithType> właściwości został zmieniony z ukośnika odwrotnego ("\\") używanego w poprzednich wersjach programu .NET Framework na ukośnik do przodu ("/").   <xref:System.IO.Compression.ZipArchiveEntry?displayProperty=nameWithType>obiekty są tworzone przez wywołanie jednego <xref:System.IO.Compression.ZipFile.CreateFromDirectory%2A?displayProperty=nameWithType> z przeciążeń metody.  
   
 ## <a name="impact"></a>Wpływ  
- Zmiana powoduje, że implementacja platformy .NET jest zgodna z sekcją 4.4.17.1 [. Specyfikacja formatu pliku ZIP](https://pkware.cachefly.net/webdocs/casestudies/APPNOTE.TXT) i zezwala na to. Archiwa ZIP do skompresowania w systemach innych niż Windows.  
+ Zmiana wprowadza implementację platformy .NET w zgodność z sekcją 4.4.17.1 . [ Zip File Format Specification](https://pkware.cachefly.net/webdocs/casestudies/APPNOTE.TXT) i pozwala . Zip archiwów do dekompresji w systemach innych niż Windows.  
   
- Dekompresowanie pliku zip utworzonego przez aplikację, która jest przeznaczona dla starszej wersji .NET Framework w systemach operacyjnych innych niż Windows, takich jak Macintosh, nie można zachować struktury katalogów. Na przykład w systemie Macintosh tworzy zestaw plików, których nazwa pliku łączy ścieżkę katalogu, wraz z dowolnym znakiem ukośnika odwrotnego ("\\") i nazwą pliku. W związku z tym struktura katalogów nieskompresowanych plików nie jest zachowywana.  
+ Dekompresji pliku zip utworzonego przez aplikację, która jest przeznaczona dla poprzedniej wersji programu .NET Framework w systemach operacyjnych innych niż Windows, takich jak Macintosh, nie można zachować struktury katalogów. Na przykład na komputerze Macintosh tworzy zestaw plików, których nazwa pliku łączy ścieżkę katalogu, wraz\\z dowolnymi znakami ukośnika odwrotnego (" ") i nazwy pliku. W rezultacie struktura katalogów zdekompresowanych plików nie jest zachowywana.  
   
- Wpływ tej zmiany na. Pliki ZIP, które są dekompresowane w systemie operacyjnym Windows przez interfejsy API w .NET Framework <xref:System.IO> przestrzeni nazw powinny być minimalne, ponieważ te interfejsy API mogą bezproblemowo obsługiwać ukośnik ("/") lub ukośnik odwrotny ("\\") jako znak separatora ścieżki.  
+ Wpływ tej zmiany na . Pliki ZIP, które są dekompresowane w systemie operacyjnym <xref:System.IO> Windows przez interfejsy API w obszarze nazw programu .NET Framework powinny być minimalne, ponieważ\\te interfejsy API mogą bezproblemowo obsługiwać ukośnik ("/") lub ukośnik odwrotny (" ") jako znak separatora ścieżki.  
   
-## <a name="mitigation"></a>Ograniczenie  
- Jeśli takie zachowanie jest niepożądane, można zrezygnować z dodania ustawienia konfiguracji do sekcji [> środowiska uruchomieniowego\<](../configure-apps/file-schema/runtime/runtime-element.md) w pliku konfiguracji aplikacji. Poniżej przedstawiono sekcję `<runtime>` i przełącznik rezygnacji.  
+## <a name="mitigation"></a>Środki zaradcze  
+ Jeśli to zachowanie jest niepożądane, można zrezygnować, dodając [ \<](../configure-apps/file-schema/runtime/runtime-element.md) ustawienie konfiguracji do środowiska wykonawczego>sekcji pliku konfiguracji aplikacji. Poniżej przedstawiono `<runtime>` zarówno sekcję, jak i przełącznik rezygnacji.  
   
 ```xml  
 <runtime>  
@@ -34,7 +34,7 @@ Począwszy od aplikacji, które są przeznaczone dla .NET Framework 4.6.1, separ
 </runtime>  
 ```  
   
- Ponadto aplikacje, które są przeznaczone dla poprzednich wersji .NET Framework ale działają w .NET Framework 4.6.1 i nowszych wersjach, mogą zrezygnować z tego zachowania przez dodanie ustawienia konfiguracji do sekcji [> środowiska uruchomieniowego\<](../configure-apps/file-schema/runtime/runtime-element.md) aplikacji plik konfiguracji. Poniżej przedstawiono sekcję `<runtime>` i przełącznik zgody.  
+ Ponadto aplikacje przeznaczone dla poprzednich wersji programu .NET Framework, ale są uruchomione w programie .NET Framework 4.6.1 i nowszych wersjach, mogą zdecydować się na to zachowanie, dodając ustawienie konfiguracji do sekcji [ \<>środowiska wykonawczego](../configure-apps/file-schema/runtime/runtime-element.md) pliku konfiguracji aplikacji. Poniżej przedstawiono `<runtime>` zarówno sekcję, jak i przełącznik opt-in.  
   
 ```xml  
 <runtime>  
@@ -42,7 +42,7 @@ Począwszy od aplikacji, które są przeznaczone dla .NET Framework 4.6.1, separ
 </runtime>  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Zmiany retargetingu](retargeting-changes-in-the-net-framework-4-6-1.md)
 - [Zgodność aplikacji](application-compatibility.md)

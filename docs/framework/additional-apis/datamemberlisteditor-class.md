@@ -1,5 +1,5 @@
 ---
-title: Klasa Datamemberfieldeditor
+title: Klasa DataMemberListEditor
 ms.date: 03/30/2017
 ms.technology: dotnet-winforms
 api_name:
@@ -11,16 +11,16 @@ api_type:
 ms.assetid: c11d5231-78f2-45a7-9210-3b2d0969370e
 topic_type:
 - apiref
-ms.openlocfilehash: d0f8063dd85537f81a1ae145b4526e10ad90b77e
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 407bbe87e3d186dc901b18dbfee38e2ff69d356a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215608"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79156002"
 ---
-# <a name="datamemberlisteditor-class"></a>Klasa Datamemberfieldeditor
+# <a name="datamemberlisteditor-class"></a>Klasa DataMemberListEditor
 
-Udostępnia interfejs użytkownika listy rozwijanej służący do edytowania właściwości obiektów powiązanych z danymi (obiektów mających Właściwość `DataSource` o wartości innej niż null) przez wystawienie wszystkich właściwości obiektu `DataSource`, z którego ma zostać wybrana wartość źródło wartości.  
+Udostępnia rozwijany interfejs użytkownika do edycji właściwości obiektów powiązanych z danymi `DataSource` (obiektów, które mają `DataSource` właściwość niezerową), wymieniając wszystkie właściwości obiektu, z których można wybrać źródło wartości.  
   
 ## <a name="syntax"></a>Składnia
   
@@ -30,16 +30,16 @@ internal class DataMemberListEditor : UITypeEditor
 
 > [!WARNING]
 > Klasa `DataMemberListEditor` jest wewnętrzna i nie jest przeznaczona do użycia bezpośrednio w kodzie.
-> 
-> Firma Microsoft nie obsługuje korzystania z tej klasy w aplikacji produkcyjnej w żadnej sytuacji.
+>
+> Firma Microsoft nie obsługuje użycia tej klasy w aplikacji produkcyjnej w żadnych okolicznościach.
   
 ## <a name="requirements"></a>Wymagania
 
-**Przestrzeń nazw:** <xref:System.Windows.Forms.Design?displayProperty=nameWithType>  
+**Obszar nazw:**<xref:System.Windows.Forms.Design?displayProperty=nameWithType>  
   
-**Zestaw:** System. Design (w pliku System. Design. dll)  
+**Montaż:** System.Design (w pliku System.Design.dll)  
   
-**.NET Framework wersje:** Dostępne od 2,0.  
+**Wersje programu .NET Framework:** Dostępne od 2.0.  
   
 ## <a name="see-also"></a>Zobacz też
 

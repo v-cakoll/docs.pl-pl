@@ -6,123 +6,123 @@ helpviewer_keywords:
 - key frames [WPF], about key-frame animations
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-ms.openlocfilehash: 5c0e574ea494bedc1c359d38cda0d17bbb03fcdf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: be815ca522cf18ea2403ea7af5549ceaf922854e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645344"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186681"
 ---
 # <a name="key-frame-animations-overview"></a>Przegląd Animacja kluczowych klatek
-W tym temacie przedstawiono Animacja kluczowych klatek. Animacje kluczowych klatek — umożliwiają animowanie za pomocą więcej niż dwóch wartości docelowych i kontrolować metodę interpolacji animacji.  
+W tym temacie przedstawiono animacje klatek kluczowych. Animacje klatek kluczowych umożliwiają animowanie przy użyciu więcej niż dwóch wartości docelowych i sterowanie metodą interpolacji animacji.  
   
-<a name="prerequisites"></a>   
+<a name="prerequisites"></a>
 ## <a name="prerequisites"></a>Wymagania wstępne  
- Aby zrozumieć, w tym omówieniu, należy się zapoznać z [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] animacje i osi czasu. Aby zapoznać się z wprowadzeniem do animacji, zobacz [Przegląd animacja](animation-overview.md). Pomaga również należy zapoznać się z od/do/przez animacji. Aby uzyskać więcej informacji zobacz Omówienie animacji From/To/By.  
+ Aby zrozumieć ten przegląd, należy [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zapoznać się z animacji i osi czasu. Aby zapoznać się z wprowadzeniem do animacji, zobacz [Omówienie animacji](animation-overview.md). Pomaga również zapoznać się z animacjami Od/Do/Przez. Aby uzyskać więcej informacji, zobacz Przegląd animacji od/do/według.  
   
-<a name="whatisakeyframeanimation"></a>   
-## <a name="what-is-a-key-frame-animation"></a>Co to jest animacja kluczowych klatek?  
- Jak od/do/przez animację, animacji kluczowych klatek animuje wartość właściwości docelowej. Tworzy przejścia między jego wartości docelowych za pośrednictwem jego <xref:System.Windows.Media.Animation.Timeline.Duration%2A>. Jednakże podczas od/do/przez animację tworzy przejście między dwiema wartościami, jednej animacji kluczowych klatek można tworzyć przejścia między dowolną liczbę wartości docelowych. W odróżnieniu od od/do/przez animację, animacji klatek kluczowych ma nie From, aby lub za pomocą właściwości, za pomocą którego można ustawić wartości docelowej. Wartości docelowe animacji kluczowych klatek są opisane za pomocą obiektów klatek kluczowych (dlatego termin, "animacji kluczowych klatek"). Aby określić wartości docelowych animacji, tworzenia obiektów klatek kluczowych i dodać je do animacji <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.KeyFrames%2A> kolekcji. Po uruchomieniu animacji przechodzi między ramek, wskazana.  
+<a name="whatisakeyframeanimation"></a>
+## <a name="what-is-a-key-frame-animation"></a>Co to jest animacja klatki kluczowej?  
+ Podobnie jak animacja Od/Do/Przez animacja klatki kluczowej animuje wartość właściwości docelowej. Tworzy przejście między wartościami docelowymi nad jego <xref:System.Windows.Media.Animation.Timeline.Duration%2A>. Jednak podczas gdy animacja Od/Do/Przez tworzy przejście między dwiema wartościami, pojedyncza animacja klatki kluczowej może tworzyć przejścia między dowolną liczbą wartości docelowych. W przeciwieństwie do animacji Od/Do/Przez animacji klatki kluczowej nie ma od, do lub przez właściwości, z którymi można ustawić swoje wartości docelowe. Wartości docelowe animacji klatki kluczowej są opisane przy użyciu obiektów klatek kluczowych (stąd termin "animacja klatki kluczowej"). Aby określić wartości docelowe animacji, należy utworzyć obiekty klatek <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.KeyFrames%2A> kluczowych i dodać je do kolekcji animacji. Po uruchomieniu animacji przechodzi między określonymi klatkami.  
   
- Oprócz obsługi wielu wartości docelowych, niektóre metody kluczowych klatek nawet obsługuje wiele metod interpolacji. Metoda interpolacji animacji definiuje, jak przechodzi od jednej wartości do następnej. Istnieją trzy typy interpolations: dyskretnych, liniowej i splined.  
+ Oprócz obsługi wielu wartości docelowych niektóre metody klatki kluczowej obsługują nawet wiele metod interpolacji. Metoda interpolacji animacji definiuje sposób przechodzenia z jednej wartości do następnej. Istnieją trzy typy interpolacji: dyskretny, liniowy i splined.  
   
- Aby animować za pomocą animacji kluczowych klatek, są wykonaj następujące czynności.  
+ Aby animować animację klatki kluczowej, wykonaj następujące kroki.  
   
-- Deklarowanie animacji i określ jej <xref:System.Windows.Media.Animation.Timeline.Duration%2A>, podobnie jak w przypadku animacji od/do/przez.  
+- Zadeklaruj <xref:System.Windows.Media.Animation.Timeline.Duration%2A>animację i określ jej , tak jak w przypadku animacji from/to/by.  
   
-- Dla każdej wartości docelowej, należy utworzyć klatek kluczowych odpowiedniego typu, ustaw dla niego wartość i <xref:System.Windows.Media.Animation.KeyTime>i dodaj go do animacji <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.KeyFrames%2A> kolekcji.  
+- Dla każdej wartości docelowej należy utworzyć klatkę kluczową <xref:System.Windows.Media.Animation.KeyTime>odpowiedniego typu, ustawić jej <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.KeyFrames%2A> wartość i , i dodać ją do kolekcji animacji.  
   
-- Skojarz animacji z właściwością tak samo jak w przypadku usługi od/do/przez animację. Aby uzyskać więcej informacji na temat zastosowania animacji do właściwości przy użyciu scenorysu, zobacz [Przegląd Scenorysy](storyboards-overview.md).  
+- Skojarz animację z właściwością, tak jak w animacji Od/Do/Przez. Aby uzyskać więcej informacji na temat stosowania animacji do właściwości przy użyciu scenorysu, zobacz [Omówienie scenoki](storyboards-overview.md).  
   
- W poniższym przykładzie użyto <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> animować <xref:System.Windows.Shapes.Rectangle> element do czterech różnych lokalizacji.  
+ W poniższym przykładzie <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> użyto <xref:System.Windows.Shapes.Rectangle> a do animowania elementu do czterech różnych lokalizacji.  
   
  [!code-xaml[keyframes_ovw_snippet#BasicKeyFrameExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  
   
- Takich jak od/do/przez animację, animacji kluczowych klatek można zastosować do właściwości przy użyciu <xref:System.Windows.Media.Animation.Storyboard> znaczników i kodu lub za pomocą <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> w kodzie. Można także użyć do tworzenia animacji kluczowych klatek <xref:System.Windows.Media.Animation.AnimationClock> i zastosować je do co najmniej jednej właściwości. Aby uzyskać więcej informacji na temat różnych metod do zastosowania animacji, zobacz [Przegląd techniki animacji właściwości](property-animation-techniques-overview.md).  
+ Podobnie jak od/do/przez animacji, animacji klatki kluczowej można <xref:System.Windows.Media.Animation.Storyboard> zastosować do właściwości przy <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> użyciu w znaczników i kodu lub przy użyciu metody w kodzie. Można również użyć animacji klatki <xref:System.Windows.Media.Animation.AnimationClock> kluczowej, aby utworzyć i zastosować ją do jednej lub więcej właściwości. Aby uzyskać więcej informacji na temat różnych metod stosowania animacji, zobacz [Omówienie technik animacji właściwości](property-animation-techniques-overview.md).  
   
-<a name="animation_types"></a>   
-## <a name="key-frame-animation-types"></a>Typy animacji kluczowych klatek  
- Animacje generować wartości właściwości, dlatego są typy inną animację dla różnych typach właściwości. Aby animować właściwości, która przyjmuje <xref:System.Double> (np. element <xref:System.Windows.FrameworkElement.Width%2A> właściwości), użyj animacji, która tworzy <xref:System.Double> wartości. Aby animować właściwości, która przyjmuje <xref:System.Windows.Point>, użyj animacji, która tworzy <xref:System.Windows.Point> wartości i tak dalej.  
+<a name="animation_types"></a>
+## <a name="key-frame-animation-types"></a>Typy animacji klatki kluczowej  
+ Ponieważ animacje generują wartości właściwości, istnieją różne typy animacji dla różnych typów właściwości. Aby animować właściwość, która ma <xref:System.Double> (na przykład <xref:System.Windows.FrameworkElement.Width%2A> właściwości elementu), <xref:System.Double> należy użyć animacji, która tworzy wartości. Aby animować właściwość, która przyjmuje <xref:System.Windows.Point>program <xref:System.Windows.Point> , należy użyć animacji, która tworzy wartości i tak dalej.  
   
- Klasy animacji kluczowych klatek należą do <xref:System.Windows.Media.Animation> przestrzeni nazw i przestrzegaj następująca Konwencja nazewnictwa:  
+ Klasy animacji klatki kluczowej należą do obszaru <xref:System.Windows.Media.Animation> nazw i są zgodne z następującą konwencją nazewnictwa:  
   
- *\<Typ >* `AnimationUsingKeyFrames`  
+ * \<>typu*`AnimationUsingKeyFrames`  
   
- Gdzie  *\<typ >* ma typ wartości, które animuje klasy.  
+ Gdzie * \<Type>* jest typem wartości, który animuje klasę.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawiera następujące klasy animacji kluczowych klatek.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]zawiera następujące klasy animacji klatki kluczowej.  
   
-|Typ właściwości|Odpowiednią klasę animacji od/do/przez|Obsługiwane metody interpolacji|  
+|Typ właściwości|Odpowiadająca klasa animacji od/do/według animacji|Obsługiwane metody interpolacji|  
 |-------------------|------------------------------------------------|-------------------------------------|  
-|<xref:System.Boolean>|<xref:System.Windows.Media.Animation.BooleanAnimationUsingKeyFrames>|Dyskretne|  
-|<xref:System.Byte>|<xref:System.Windows.Media.Animation.ByteAnimationUsingKeyFrames>|Dyskretnych, liniowej, Splined|  
-|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|Dyskretnych, liniowej, Splined|  
-|<xref:System.Decimal>|<xref:System.Windows.Media.Animation.DecimalAnimationUsingKeyFrames>|Dyskretnych, liniowej, Splined|  
-|<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>|Dyskretnych, liniowej, Splined|  
-|<xref:System.Int16>|<xref:System.Windows.Media.Animation.Int16AnimationUsingKeyFrames>|Dyskretnych, liniowej, Splined|  
-|<xref:System.Int32>|<xref:System.Windows.Media.Animation.Int32AnimationUsingKeyFrames>|Dyskretnych, liniowej, Splined|  
-|<xref:System.Int64>|<xref:System.Windows.Media.Animation.Int64AnimationUsingKeyFrames>|Dyskretnych, liniowej, Splined|  
-|<xref:System.Windows.Media.Matrix>|<xref:System.Windows.Media.Animation.MatrixAnimationUsingKeyFrames>|Dyskretne|  
-|<xref:System.Object>|<xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>|Dyskretne|  
-|<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>|Dyskretnych, liniowej, Splined|  
-|<xref:System.Windows.Media.Media3D.Quaternion>|<xref:System.Windows.Media.Animation.QuaternionAnimationUsingKeyFrames>|Dyskretnych, liniowej, Splined|  
-|<xref:System.Windows.Rect>|<xref:System.Windows.Media.Animation.RectAnimationUsingKeyFrames>|Dyskretnych, liniowej, Splined|  
-|<xref:System.Windows.Media.Media3D.Rotation3D>|<xref:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames>|Dyskretnych, liniowej, Splined|  
-|<xref:System.Single>|<xref:System.Windows.Media.Animation.SingleAnimationUsingKeyFrames>|Dyskretnych, liniowej, Splined|  
-|<xref:System.String>|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|Dyskretne|  
-|<xref:System.Windows.Size>|<xref:System.Windows.Media.Animation.SizeAnimationUsingKeyFrames>|Dyskretnych, liniowej, Splined|  
-|<xref:System.Windows.Thickness>|<xref:System.Windows.Media.Animation.ThicknessAnimationUsingKeyFrames>|Dyskretnych, liniowej, Splined|  
-|<xref:System.Windows.Media.Media3D.Vector3D>|<xref:System.Windows.Media.Animation.Vector3DAnimationUsingKeyFrames>|Dyskretnych, liniowej, Splined|  
-|<xref:System.Windows.Vector>|<xref:System.Windows.Media.Animation.VectorAnimationUsingKeyFrames>|Dyskretnych, liniowej, Splined|  
+|<xref:System.Boolean>|<xref:System.Windows.Media.Animation.BooleanAnimationUsingKeyFrames>|Dyskretnych|  
+|<xref:System.Byte>|<xref:System.Windows.Media.Animation.ByteAnimationUsingKeyFrames>|Dyskretny, Liniowy, Splined|  
+|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|Dyskretny, Liniowy, Splined|  
+|<xref:System.Decimal>|<xref:System.Windows.Media.Animation.DecimalAnimationUsingKeyFrames>|Dyskretny, Liniowy, Splined|  
+|<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>|Dyskretny, Liniowy, Splined|  
+|<xref:System.Int16>|<xref:System.Windows.Media.Animation.Int16AnimationUsingKeyFrames>|Dyskretny, Liniowy, Splined|  
+|<xref:System.Int32>|<xref:System.Windows.Media.Animation.Int32AnimationUsingKeyFrames>|Dyskretny, Liniowy, Splined|  
+|<xref:System.Int64>|<xref:System.Windows.Media.Animation.Int64AnimationUsingKeyFrames>|Dyskretny, Liniowy, Splined|  
+|<xref:System.Windows.Media.Matrix>|<xref:System.Windows.Media.Animation.MatrixAnimationUsingKeyFrames>|Dyskretnych|  
+|<xref:System.Object>|<xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>|Dyskretnych|  
+|<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>|Dyskretny, Liniowy, Splined|  
+|<xref:System.Windows.Media.Media3D.Quaternion>|<xref:System.Windows.Media.Animation.QuaternionAnimationUsingKeyFrames>|Dyskretny, Liniowy, Splined|  
+|<xref:System.Windows.Rect>|<xref:System.Windows.Media.Animation.RectAnimationUsingKeyFrames>|Dyskretny, Liniowy, Splined|  
+|<xref:System.Windows.Media.Media3D.Rotation3D>|<xref:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames>|Dyskretny, Liniowy, Splined|  
+|<xref:System.Single>|<xref:System.Windows.Media.Animation.SingleAnimationUsingKeyFrames>|Dyskretny, Liniowy, Splined|  
+|<xref:System.String>|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|Dyskretnych|  
+|<xref:System.Windows.Size>|<xref:System.Windows.Media.Animation.SizeAnimationUsingKeyFrames>|Dyskretny, Liniowy, Splined|  
+|<xref:System.Windows.Thickness>|<xref:System.Windows.Media.Animation.ThicknessAnimationUsingKeyFrames>|Dyskretny, Liniowy, Splined|  
+|<xref:System.Windows.Media.Media3D.Vector3D>|<xref:System.Windows.Media.Animation.Vector3DAnimationUsingKeyFrames>|Dyskretny, Liniowy, Splined|  
+|<xref:System.Windows.Vector>|<xref:System.Windows.Media.Animation.VectorAnimationUsingKeyFrames>|Dyskretny, Liniowy, Splined|  
   
-<a name="animation_target_values"></a>   
-## <a name="target-values-key-frames-and-key-times"></a>Dotyczą wartości (klatek kluczowych) i czas klucza  
- Tak, jak istnieją różne rodzaje Animacja kluczowych klatek animowania różnych typach właściwości, dostępne są także różne rodzaje ramek kluczowych obiektów: jeden dla każdego typu wartości animowane i metodę interpolacji obsługiwane. Typy ramek kluczowych stosować się do następującej konwencji nazewnictwa:  
+<a name="animation_target_values"></a>
+## <a name="target-values-key-frames-and-key-times"></a>Wartości docelowe (klatki kluczowe) i czasy kluczy  
+ Podobnie jak istnieją różne typy animacji klatek kluczowych do animowania różnych typów właściwości, istnieją również różne typy obiektów klatki kluczowej: po jednym dla każdego typu animowanej wartości i obsługiwanej metody interpolacji. Typy klatek kluczowych są zgodne z następującą konwencją nazewnictwa:  
   
- *\<InterpolationMethod >\<typ >* `KeyFrame`  
+ *>\<typu>>interpolacji \<*`KeyFrame`  
   
- Gdzie  *\<InterpolationMethod >* jest metodą interpolacji używa klatek kluczowych i  *\<typ >* ma typ wartości, które animuje klasy. Animacja kluczowych klatek, który obsługuje wszystkich interpolację trzech metod będzie mieć trzy typy klatek kluczowych, które są dostępne. Na przykład, można użyć trzy typy kluczy ramki za pomocą <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>: <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>, <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>, i <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>. (Interpolacji metody są opisane szczegółowo w dalszej części tego tematu).  
+ Gdzie * \<InterpolationMethod>* jest metodą interpolacji, której używa klatka kluczowa, a * \<type>* jest typem wartości, którą klasy animuje. Animacja klatki kluczowej, która obsługuje wszystkie trzy metody interpolacji, będzie miała trzy typy klatek kluczowych, których można użyć. Na przykład można użyć trzech typów <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>klatek <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>kluczowych <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>z : <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>, , i . (Metody interpolacji są szczegółowo opisane w dalszej części).  
   
- Głównym celem klatka kluczowa jest zdefiniowanie <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> i <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>. Każdy typ ramki kluczowe udostępnia te dwie właściwości.  
+ Głównym celem klatki kluczowej jest <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> określenie <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>a i a . Każdy typ klatki kluczowej zapewnia te dwie właściwości.  
   
-- <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> Właściwość określa wartość docelowa dla tego kluczowych klatek.  
+- Właściwość <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> określa wartość docelową dla tej klatki kluczowej.  
   
-- <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> Właściwość określa, kiedy (w ramach animacji <xref:System.Windows.Media.Animation.Timeline.Duration%2A>) klatek kluczowych <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> zostanie osiągnięty.  
+- Właściwość <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> określa, kiedy (w <xref:System.Windows.Media.Animation.Timeline.Duration%2A>animacji) zostanie <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> osiągnięta klatka kluczowa.  
   
- Po rozpoczęciu animacji klatek kluczowych iteruje przez jej klatek kluczowych w kolejności, zdefiniowanych przez ich <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> właściwości.  
+ Po rozpoczęciu animacji klatki kluczowej iteruje za pośrednictwem <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> jego klatek kluczowych w kolejności zdefiniowanej przez ich właściwości.  
   
-- Jeśli w czasie 0 jest bez klucza ramki, animacji tworzy przejście między bieżącą wartość właściwości docelowej i <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> pierwszej ramki kluczowe; w przeciwnym razie animacji danych wyjściowych wartość staje się wartość pierwszej ramki kluczowe.  
+- Jeśli nie ma żadnej klatki kluczowej w czasie 0, animacja tworzy <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> przejście między bieżącą wartością właściwości docelowej a pierwszą klatką kluczową; w przeciwnym razie wartość wyjściowa animacji staje się wartością pierwszej klatki kluczowej.  
   
-- Animacja tworzy przejście między <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> z klatkami kluczowymi pierwszego i drugiego za pomocą metody interpolacji określony przez drugi klatek kluczowych. Przejście rozpoczyna się od pierwszej ramki kluczowe <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> i kończy się po drugiej ramki kluczowe <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> zostanie osiągnięty.  
+- Animacja tworzy przejście <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> między pierwszą i drugą klatką kluczową przy użyciu metody interpolacji określonej przez drugą klatkę kluczową. Przejście rozpoczyna się od pierwszej klatki kluczowej <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> i kończy <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> się po osiągnięciu drugiej klatki kluczowej.  
   
-- Animacja będzie się powtarzać, tworząc przejścia między każdym kolejnych klatek kluczowych i jego poprzedniej ramki kluczowe.  
+- Animacja jest kontynuowana, tworząc przejścia między każdą kolejną klatką kluczową a jej poprzednią klatką kluczową.  
   
-- Ponadto, przejścia do animacji do wartości klatek kluczowych największy czas klucza jest równa lub mniejsza niż animacji <xref:System.Windows.Media.Animation.Timeline.Duration%2A>.  
+- Na koniec animacja przechodzi do wartości klatki kluczowej z największym czasem klucza, który <xref:System.Windows.Media.Animation.Timeline.Duration%2A>jest równy lub mniejszy niż animacja .  
   
- Jeśli animacji <xref:System.Windows.Media.Animation.Timeline.Duration%2A> jest <xref:System.Windows.Duration.Automatic%2A> lub jego <xref:System.Windows.Media.Animation.Timeline.Duration%2A> jest taki sam, jak czas ostatniej ramki kluczowe zakończenia animacji. W przeciwnym razie, jeśli animacji <xref:System.Windows.Duration> jest większa niż wartość klucza czasu ostatniej ramki kluczowe przechowuje animacji, wartość klucza ramki, dopóki osiągnie koniec jego <xref:System.Windows.Duration>. Podobnie jak wszystkie animacje korzysta animacji kluczowych klatek jego <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> właściwości w celu określenia, czy posiada on końcowa wartość po osiągnięciu końca jego okresu aktywności. Aby uzyskać więcej informacji, zobacz [zachowania chronometrażu — Przegląd](timing-behaviors-overview.md).  
+ Jeśli animacja <xref:System.Windows.Media.Animation.Timeline.Duration%2A> jest <xref:System.Windows.Duration.Automatic%2A> lub <xref:System.Windows.Media.Animation.Timeline.Duration%2A> jej jest równa czas ostatniej klatki kluczowej, animacja kończy. W przeciwnym razie, <xref:System.Windows.Duration> jeśli animacja jest większa niż czas klucza ostatniej klatki kluczowej, animacja <xref:System.Windows.Duration>przechowuje wartość klatki kluczowej, dopóki nie osiągnie końca jego . Podobnie jak wszystkie animacje animacji klatki kluczowej używa jego <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> właściwości, aby ustalić, czy posiada wartość końcową, gdy osiągnie koniec aktywnego okresu. Aby uzyskać więcej informacji, zobacz [Omówienie zachowań chronometrażu](timing-behaviors-overview.md).  
   
- W poniższym przykładzie użyto <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> obiektu zdefiniowane w poprzednim przykładzie, aby zademonstrować sposób, w jaki <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> i <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> pracy właściwości.  
+ W poniższym przykładzie użyto obiektu zdefiniowanego <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> w <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> poprzednim przykładzie, aby zademonstrować, jak działają właściwości i.  
   
-- Pierwszej ramki kluczowe natychmiast ustawia wartość danych wyjściowych animacji do 0.  
+- Pierwsza klatka kluczowa natychmiast ustawia wartość wyjściową animacji na 0.  
   
-- Drugi klatek kluczowych animuje z zakresu od 0 do 350. Uruchamia się po zakończeniu pierwszego klatek kluczowych (czas = 0 sekund) i będzie odtwarzany na 2 sekundy, a kończąc na czas = 0:0:2.  
+- Druga klatka kluczowa animuje od 0 do 350. Rozpoczyna się po zakończeniu pierwszej klatki kluczowej (w czasie = 0 sekund) i jest odtwarzany przez 2 sekundy, kończąc na czasie = 0:0:2.  
   
-- Trzeci klatek kluczowych animuje od 350 do 50. Jego uruchomieniu, gdy kończy się druga klatek kluczowych (w momencie = 2 sekundy) i będzie odtwarzany na 5 sekund, kończąc na czas = 0:0:7.  
+- Trzecia klatka kluczowa ożywia od 350 do 50. Rozpoczyna się po zakończeniu drugiej klatki kluczowej (w czasie = 2 sekundy) i jest odtwarzany przez 5 sekund, kończąc na czasie = 0:0:7.  
   
-- Czwarty klatek kluczowych animuje od 50 do 200. Uruchamia się po zakończeniu trzeci klatek kluczowych (w momencie = 7 sekund) i będzie odtwarzany na 1 sekundę, a kończąc na czas = 0:0:8.  
+- Czwarta klatka kluczowa ożywia od 50 do 200. Rozpoczyna się po zakończeniu trzeciej klatki kluczowej (w czasie = 7 sekund) i jest odtwarzany przez 1 sekundę, kończąc na czasie = 0:0:8.  
   
-- Ponieważ <xref:System.Windows.Media.Animation.Timeline.Duration%2A> właściwości animacji został ustawiony na 10 sekund, animacja przechowuje wartość końcowej dla dwóch sekund przed zakończenia w czasie = 0:0:10.  
+- Ponieważ <xref:System.Windows.Media.Animation.Timeline.Duration%2A> właściwość animacji została ustawiona na 10 sekund, animacja przechowuje swoją wartość końcową przez dwie sekundy przed zakończeniem w czasie = 0:0:10.  
   
  [!code-xaml[keyframes_ovw_snippet#BasicKeyFrameExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  
   
-<a name="interpolationmethods"></a>   
+<a name="interpolationmethods"></a>
 ## <a name="interpolation-methods"></a>Metody interpolacji  
- Poprzednich sekcji wspomnieć, że niektórych animacji kluczowych klatek obsługuje wiele metod interpolacji. Interpolacji animacji w tym artykule opisano sposób animacji przechodzi między wartościami w czasie jego trwania. Wybranie typu klatek kluczowych pomocą animacji, można zdefiniować metodę interpolacji dla tego segmentu klatek kluczowych. Istnieją trzy różne rodzaje metod interpolacji: liniowego, odrębny i splined.  
+ W poprzednich sekcjach wspomniano, że niektóre animacje klatek kluczowych obsługują wiele metod interpolacji. Interpolacja animacji opisuje, jak animacja przechodzi między wartościami w czasie jej trwania. Wybierając typ klatki kluczowej używany z animacją, można zdefiniować metodę interpolacji dla tego segmentu klatki kluczowej. Istnieją trzy różne typy metod interpolacji: liniowy, dyskretny i splined.  
   
-### <a name="linear-interpolation"></a>Interpolacji liniowej  
- Przy użyciu interpolacji liniowej animacji w miarę stałą prędkością, czasu trwania segmentu. Na przykład, jeśli segment klatek kluczowych przejścia z zakresu od 0 do 10 dany okres 5 sekund, animacja zwróci następujące wartości w określonym razy:  
+### <a name="linear-interpolation"></a>Interpolacja liniowa  
+ Dzięki interpolacji liniowej animacja rozwija się ze stałą szybkością czasu trwania segmentu. Na przykład jeśli segment klatki kluczowej przechodzi od 0 do 10 w czasie trwania 5 sekund, animacja będzie wyprowadzać następujące wartości w określonych godzinach:  
   
-|Godzina|Wartość wyjściowa|  
+|Time|Wartość wyjściowa|  
 |----------|------------------|  
 |0|0|  
 |1|2|  
@@ -133,10 +133,10 @@ W tym temacie przedstawiono Animacja kluczowych klatek. Animacje kluczowych klat
 |4.5|9|  
 |5|10|  
   
-### <a name="discrete-interpolation"></a>Dyskretne interpolacji  
- Przy użyciu interpolacji dyskretnych funkcja animacji przechodzi z jednej wartości do następnego bez interpolacji. Jeśli segment klatek kluczowych przejścia z zakresu od 0 do 10 dany okres 5 sekund, animacja zwróci następujące wartości w określonym razy:  
+### <a name="discrete-interpolation"></a>Interpolacja dyskretna  
+ W dyskretnej interpolacji funkcja animacji przeskakuje z jednej wartości do następnej bez interpolacji. Jeśli segment klatki kluczowej zostanie przesunie się z 0 do 10 w czasie trwania 5 sekund, animacja wysunie następujące wartości w określonych godzinach:  
   
-|Godzina|Wartość wyjściowa|  
+|Time|Wartość wyjściowa|  
 |----------|------------------|  
 |0|0|  
 |1|0|  
@@ -147,150 +147,150 @@ W tym temacie przedstawiono Animacja kluczowych klatek. Animacje kluczowych klat
 |4.5|0|  
 |5|10|  
   
- Zwróć uwagę, jak animacji nie zmienia jej wartość danych wyjściowych do czasu zakończenia bardzo czas trwania segmentu.  
+ Zwróć uwagę, jak animacja nie zmienia jego wartość wyjściowa do samego końca czasu trwania segmentu.  
   
- Interpolacja splined jest bardziej złożona. Jest on opisany w następnej sekcji.  
+ Interpolacja splined jest bardziej złożona. Jest to opisane w następnej sekcji.  
   
-<a name="anim_spline"></a>   
-### <a name="splined-interpolation"></a>Splined interpolacji  
- Splined interpolacji można osiągnąć bardziej realistycznego efekty chronometrażu. Animacje tak często są używane do naśladowania efekty, które występują w świecie rzeczywistym, deweloperzy mogą muszą pracownikom działu kontroli przyspieszenia i opóźnienia obiektów i zamknij manipulowania segmentów chronometrażu. Ramek kluczowych krzywej składanej umożliwiają animowanie z interpolacją splined. W przypadku innych klatek kluczowych można określić <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> i <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>. Przy użyciu klatek kluczowych krzywej składanej, należy także określić <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame.KeySpline%2A>. W poniższym przykładzie pokazano jednego z krzywymi składanymi ramki kluczowe dla <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>. Zwróć uwagę <xref:System.Windows.Media.Animation.KeySpline> właściwość; która jest, co sprawia, że klatek kluczowych krzywej składanej różni się od innych rodzajów klatek kluczowych.  
+<a name="anim_spline"></a>
+### <a name="splined-interpolation"></a>Interpolacja splined  
+ Interpolacja splined może być wykorzystana do osiągnięcia bardziej realistycznych efektów czasowych. Ponieważ animacje są tak często używane do naśladowania efektów, które występują w świecie rzeczywistym, deweloperzy mogą wymagać precyzyjnej kontroli przyspieszenia i spowolnienia obiektów i ścisłej manipulacji segmentów chronometrażu. Klatki kluczowe splajnu umożliwiają animowanie z interpolacją splined. W przypadku innych klatek <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> kluczowych <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>należy określić przycisk i . Za pomocą klatki kluczowej splajnu można również określić . <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame.KeySpline%2A> W poniższym przykładzie przedstawiono pojedynczą klatkę kluczową splajnu dla pliku <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>. Zwróć <xref:System.Windows.Media.Animation.KeySpline> uwagę na właściwość; to właśnie sprawia, że klatka kluczowa splajnu różni się od innych typów klatek kluczowych.  
   
  [!code-xaml[keyframes_ovw_snippet#SingleSplineKeyFrameExample](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]  
   
- Krzywą Beziera trzeciego stopnia jest definiowany przez dwa punkty kontrolne, punkt początkowy i punkt końcowy. <xref:System.Windows.Media.Animation.KeySpline> Właściwość krzywej składanej ramki kluczowe definiuje punkt kontrolny krzywej Beziera, który rozciąga się od (0,0) (1,1). Pierwszy punkt kontrolny kontroluje współczynnik w pierwszej połowie krzywą Beziera krzywej, a drugi punkt kontrolny kontroluje współczynnik w drugiej połowie segmentu krzywej Beziera krzywej. Wynikowy krzywej w tym artykule opisano szybkość zmian dla tej ramki kluczowych krzywej składanej. Większe krzywej, tym szybsze klatek kluczowych zmienia jego wartości. Ponieważ krzywej pobiera płaski, klatek kluczowych wolniej zmienia jego wartości.  
+ Sześcienna krzywa Beziera jest definiowana przez punkt początkowy, punkt końcowy i dwa punkty kontrolne. Właściwość <xref:System.Windows.Media.Animation.KeySpline> klatki kluczowej splajnu definiuje dwa punkty kontrolne krzywej Beziera, która rozciąga się od (0,0) do (1,1). Pierwszy punkt kontrolny steruje współczynnikiem krzywej pierwszej połowy krzywej Beziera, a drugi punkt kontrolny steruje współczynnikiem krzywej drugiej połowy segmentu Beziera. Wynikowa krzywa opisuje szybkość zmiany dla tej klatki kluczowej splajnu. Im bardziej stroma krzywa, tym szybciej klatka kluczowa zmienia swoje wartości. Gdy krzywa staje się bardziej płaska, klatka kluczowa zmienia swoje wartości wolniej.  
   
- Można na przykład <xref:System.Windows.Media.Animation.KeySpline> do symulacji trajektorii fizycznych, takich jak woda objętych lub odbijania kulki lub zastosowania innych "jej obsługi ułatwiają realizację w" i "przyśpiesz tempo zmian" efekty animacjach ruchu. Dla efektów interakcji użytkownika, jak zanikanie tło lub kontrolki przycisku odbicia mogą być stosowane splined interpolacji, aby przyspieszyć lub spowolnić proces zmiany dla animacji w określony sposób.  
+ Możesz użyć <xref:System.Windows.Media.Animation.KeySpline> do symulacji fizycznych trajektorii, takich jak spadająca woda lub odbijające się kulki, lub zastosować inne efekty "łatwość" i "złagodzić" do animacji ruchu. W przypadku efektów interakcji użytkownika, takich jak zanikanie tła lub odbicie przycisku sterującego, można zastosować interpolację splined, aby przyspieszyć lub spowolnić tempo zmian animacji w określony sposób.  
   
- W poniższym przykładzie określono <xref:System.Windows.Media.Animation.KeySpline> 1,0 0,1, co powoduje utworzenie następujących krzywą Beziera.  
+ Poniższy przykład określa <xref:System.Windows.Media.Animation.KeySpline> 0,1 1,0, który tworzy następującą krzywą Beziera.  
   
  ![Krzywa Beziera](./media/graphicsmm-keyspline-0-1-1-0.png "graphicsmm_keyspline_0_1_1_0")  
-Kluczowych krzywej składanej przy użyciu punktów kontrolnych (0.0, 1.0) i (1.0, 0.0)  
+Kluczowy splajn z punktami kontrolnymi (0,0, 1,0) i (1,0, 0,0)  
   
  [!code-xaml[keyframes_ovw_snippet#SingleSplineKeyFrameExample](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]  
   
- Tej ramki kluczowe animuje szybko po jego rozpoczyna się, spowalnia, a następnie przyspiesza ponownie przed zakończeniem jej.  
+ Ta klatka kluczowa animuje się szybko po jej rozpoczęciu, spowalnia, a następnie przyspiesza ponownie przed jej zakończeniem.  
   
- W poniższym przykładzie określono <xref:System.Windows.Media.Animation.KeySpline> z 0.75,1.0 0.5,0.25, co powoduje utworzenie następujących krzywą Beziera.  
+ Poniższy przykład określa <xref:System.Windows.Media.Animation.KeySpline> 0,5,0,25 0,75,1,0, który tworzy następującą krzywą Beziera.  
   
  ![Krzywa Beziera](./media/graphicsmm-keyspline-025-050-075-10.png "graphicsmm_keyspline_025_050_075_10")  
-Kluczowych krzywej składanej kontrolką punkty (0,25, 0,5) i (0,75, 1.0)  
+Kluczowy splajn z punktami kontrolnymi (0,25, 0,5) i (0,75, 1,0)  
   
  [!code-xaml[keyframes_ovw_snippet#SingleSplineKeyFrameExampleInline3](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexampleinline3)]  
   
- Ponieważ łuku krzywej Beziera zmienia się bardzo niewiele, tej ramki kluczowe animuje stawki prawie stały; go spowalnia nieco kierunku jej końcu.  
+ Ponieważ krzywizna krzywej Beziera zmienia się bardzo mało, ta klatka kluczowa animuje się z niemal stałą szybkością; spowalnia nieco w kierunku samego końca.  
   
- W poniższym przykładzie użyto <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> animować pozycja prostokąta. Ponieważ <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> używa <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> obiektów, przejście pomiędzy każdej wartości kluczowych klatek używa splined interpolacji.  
+ W poniższym przykładzie użyto a <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> do animowania położenia prostokąta. Ponieważ <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> używa <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> obiektów, przejście między każdą wartością klatki kluczowej używa splined interpolacji.  
   
  [!code-xaml[keyframes_ovw_snippet#SplinedInterpolationExample](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/InterpolationMethodsExample.xaml#splinedinterpolationexample)]  
   
- Interpolacja splined może być trudne do zrozumienia; eksperymentowanie z różnymi ustawieniami może pomóc. [Przykład animacji z krzywymi składanymi klucz](https://go.microsoft.com/fwlink/?LinkID=160011) pozwala Ci zmienić wartości klucza z krzywymi składanymi i wyświetlić wynik, ma to na animacji.  
+ Interpolacja splined może być trudne do zrozumienia; eksperymentowanie z różnymi ustawieniami może pomóc. [Przykład animacji splajnu klucza](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/KeySplineAnimations) umożliwia zmianę wartości splajnu klucza i wyświetlenie wyniku animacji.  
   
-<a name="combininginterpolationmethods"></a>   
-### <a name="combining-interpolation-methods"></a>Łącząc metody interpolacji  
- Za pomocą klatek kluczowych interpolacji różnych typów w animacji jednej ramki kluczowe. Po dwóch animacji klatek kluczowych przy użyciu różnych interpolations postępuj zgodnie z sobą, metodę interpolacji drugiej ramki kluczowe służy do tworzenia przejścia z pierwsza wartość do drugiego.  
+<a name="combininginterpolationmethods"></a>
+### <a name="combining-interpolation-methods"></a>Łączenie metod interpolacji  
+ W animacji pojedynczej klatki kluczowej można używać klatek kluczowych z różnymi typami interpolacji. Gdy dwie animacje klatek kluczowych z różnymi interpolacjami podążają za sobą, metoda interpolacji drugiej klatki kluczowej jest używana do tworzenia przejścia od pierwszej wartości do drugiej.  
   
- W poniższym przykładzie <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> utworzeniu tej używa interpolacji liniowej splined i dyskretnych.  
+ W poniższym przykładzie <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> tworzony jest, który używa interpolacji liniowej, splined i dyskretnej.  
   
  [!code-xaml[keyframes_ovw_snippet#ComboInterpolationExample](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/InterpolationMethodsExample.xaml#combointerpolationexample)]  
   
-<a name="keytimes"></a>   
-## <a name="more-about-duration-and-key-times"></a>Więcej informacji o czasie trwania i czasy klucza  
- Podobnie jak inne animacji mają Animacja kluczowych klatek <xref:System.Windows.Duration> właściwości. Oprócz określenia animacji <xref:System.Windows.Duration>, należy określić, jaka część za ten czas, znajduje się na każdej ramce klucza. Możesz to zrobić poprzez opisanie <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> dla każdego z użyciem klatek kluczowych animacji. Każdej ramki kluczowe <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> Określa, kiedy kończy się tym klatek kluczowych.  
+<a name="keytimes"></a>
+## <a name="more-about-duration-and-key-times"></a>Więcej informacji o czas trwania i czasy kluczy  
+ Podobnie jak inne animacje, animacje <xref:System.Windows.Duration> klatek kluczowych mają właściwość. Oprócz określenia animacji <xref:System.Windows.Duration>, należy określić, jaka część tego czasu trwania jest podana do każdej klatki kluczowej. Można to zrobić, <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> opisując dla każdej z animacji klatek kluczowych. Każda klatka <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> kluczowa określa, kiedy kończy się ta klatka kluczowa.  
   
- <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> Właściwość nie określa, jak długo odgrywa czas klucza. Ilość czasu, który odtwarzania klatek kluczowych zależy od kiedy kończy się klatek kluczowych, kiedy zakończył się poprzedniej ramki kluczowe i czas trwania animacji. Czas klucza może być określony jako wartość czasu, wartość procentowa, lub specjalnych wartości <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> lub <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>.  
+ Właściwość <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> nie określa, jak długo rozgrywa się czas klucza. Czas odtwarzania klatki kluczowej zależy od czasu zakończenia klatki kluczowej, zakończenia poprzedniej klatki kluczowej i czasu trwania animacji. Czasy klucza mogą być określone jako wartość czasu, <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>wartość procentowa lub jako wartości specjalne lub .  
   
- Na poniższej liście opisano różne sposoby określania czasu klucza.  
+ Na poniższej liście opisano różne sposoby określania czasów klucza.  
   
-### <a name="timespan-values"></a>Wartości TimeSpan  
- Możesz użyć <xref:System.TimeSpan> wartości określające <xref:System.Windows.Media.Animation.KeyTime>. Wartość powinna być większa lub równa 0 i mniejsza niż czas trwania animacji. Poniższy przykład pokazuje animacji o czasie trwania 10 sekund i cztery klatki kluczowe, których czas klucza są określone jako wartości typu time.  
+### <a name="timespan-values"></a>Wartości timespan  
+ Można użyć <xref:System.TimeSpan> wartości, <xref:System.Windows.Media.Animation.KeyTime>aby określić . Wartość powinna być większa lub równa 0 i mniejsza lub równa czas trwania animacji. W poniższym przykładzie przedstawiono animację o czasie trwania 10 sekund i cztery klatki kluczowe, których czasy klucza są określone jako wartości czasu.  
   
-- Animuje pierwszej ramki kluczowe od wartości bazowej do 100 przez pierwsze 3 sekundach, kończąc na czas = 0:0:03.  
+- Pierwsza klatka kluczowa animuje wartość bazową do 100 w ciągu pierwszych 3 sekund, kończąc na czasie = 0:0:03.  
   
-- Drugi klatek kluczowych animuje od 100 do 200. Uruchamia się po zakończeniu pierwszego klatek kluczowych (w momencie = 3 sekundy) i odtwarzany na 5 sekund, kończąc na czas = 0:0:8.  
+- Druga klatka kluczowa ożywia od 100 do 200. Rozpoczyna się po zakończeniu pierwszej klatki kluczowej (w czasie = 3 sekundy) i jest odtwarzany przez 5 sekund, kończąc na czasie = 0:0:8.  
   
-- Trzeci klatek kluczowych animuje z 200 do 500. Jego uruchomieniu, gdy kończy się druga klatek kluczowych (w momencie = 8 sekund) i będzie odtwarzany na 1 sekundę, a kończąc na czas = 0:0:9.  
+- Trzecia klatka kluczowa ożywia od 200 do 500. Rozpoczyna się po zakończeniu drugiej klatki kluczowej (w czasie = 8 sekund) i jest odtwarzany przez 1 sekundę, kończąc na czasie = 0:0:9.  
   
-- Czwarty klatek kluczowych animacji od 500 do 600. Uruchamia się po zakończeniu trzeci klatek kluczowych (w momencie = sekund 9) i będzie odtwarzany na 1 sekundę, a kończąc na czas = 0:0:10.  
+- Czwarta klatka kluczowa ożywia od 500 do 600. Rozpoczyna się po zakończeniu trzeciej klatki kluczowej (w czasie = 9 sekund) i jest odtwarzany przez 1 sekundę, kończąc na czasie = 0:0:10.  
   
  [!code-xaml[keyframes_ovw_snippet#TimeSpanKeyTimeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#timespankeytimeexample)]  
   
 ### <a name="percentage-values"></a>Wartości procentowe  
- Wartość procentowa Określa, że klatek kluczowych kończy się na wartość procentową animacji <xref:System.Windows.Media.Animation.Timeline.Duration%2A>. W [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], określ wartość procentową jako numer, a następnie `%` symboli. W kodzie, należy użyć <xref:System.Windows.Media.Animation.KeyTime.FromPercent%2A> metody i przekazać go <xref:System.Double> określającą procent. Wartość musi być większa lub równa 0 i mniejsza niż 100 procent. Poniższy przykład pokazuje animacji o czasie trwania 10 sekund i cztery klatki kluczowe, których czas klucza są określone jako wartości procentowe.  
+ Wartość procentowa określa, że klatka kluczowa kończy się <xref:System.Windows.Media.Animation.Timeline.Duration%2A>w pewnym procentie animacji . W [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]obszarze , należy określić wartość `%` procentową jako liczbę, po której następuje symbol. W kodzie należy <xref:System.Windows.Media.Animation.KeyTime.FromPercent%2A> użyć metody <xref:System.Double> i przekazać go wskazując procent. Wartość musi być większa lub równa 0 i mniejsza lub równa 100 procent. W poniższym przykładzie przedstawiono animację o czasie trwania 10 sekund i cztery klatki kluczowe, których czasy klucza są określone jako wartości procentowe.  
   
-- Animuje pierwszej ramki kluczowe od wartości bazowej do 100 przez pierwsze 3 sekundach, kończąc na czas = 0:0:3.  
+- Pierwsza klatka kluczowa animuje wartość bazową do 100 w ciągu pierwszych 3 sekund, kończąc na czasie = 0:0:3.  
   
-- Drugi klatek kluczowych animuje od 100 do 200. Uruchamia się po zakończeniu pierwszego klatek kluczowych (w momencie = 3 sekundy) i odtwarzany na 5 sekund, kończąc na czas = 0:0:8 (0,8 * 10 = 8).  
+- Druga klatka kluczowa ożywia od 100 do 200. Rozpoczyna się po zakończeniu pierwszej klatki kluczowej (w czasie = 3 sekundy) i jest odtwarzany przez 5 sekund, kończąc na czasie = 0:0:8 (0,8 * 10 = 8).  
   
-- Trzeci klatek kluczowych animuje z 200 do 500. Jego uruchomieniu, gdy kończy się druga klatek kluczowych (w momencie = 8 sekund) i będzie odtwarzany na 1 sekundę, a kończąc na czas = 0:0:9 (0,9 * 10 = 9).  
+- Trzecia klatka kluczowa ożywia od 200 do 500. Rozpoczyna się po zakończeniu drugiej klatki kluczowej (w czasie = 8 sekund) i jest odtwarzany przez 1 sekundę, kończąc na czasie = 0:0:9 (0,9 * 10 = 9).  
   
-- Czwarty klatek kluczowych animacji od 500 do 600. Uruchamia się po zakończeniu trzeci klatek kluczowych (w momencie = sekund 9) i będzie odtwarzany na 1 sekundę, a kończąc na czas = 0:0:10 (1 * 10 = 10).  
+- Czwarta klatka kluczowa ożywia od 500 do 600. Rozpoczyna się po zakończeniu trzeciej klatki kluczowej (w czasie = 9 sekund) i jest odtwarzany przez 1 sekundę, kończąc na czasie = 0:0:10 (1 * 10 = 10).  
   
  [!code-xaml[keyframes_ovw_snippet#PercentageKeyTimeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#percentagekeytimeexample)]  
   
-### <a name="special-value-uniform"></a>Specjalna wartość, Uniform  
- Użyj <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> czasu, jeśli chcesz, aby każdy klatek kluczowych się zająć tyle samo czasu.  
+### <a name="special-value-uniform"></a>Wartość specjalna, jednolita  
+ Użyj <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> chronometrażu, jeśli chcesz, aby każda klatka kluczowa zająć taką samą ilość czasu.  
   
- A <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> kluczowym dzieli czas dostępności równie przez liczbę klatek kluczowych, aby określić czas zakończenia każdego klatek kluczowych. W poniższym przykładzie pokazano animacji o czasie trwania 10 sekund i cztery klatki kluczowe, których klucz czasu są określane jako <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>.  
+ Czas <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> klucza dzieli dostępny czas równo przez liczbę klatek kluczowych w celu określenia czasu zakończenia każdej klatki kluczowej. W poniższym przykładzie przedstawiono animację o czasie trwania 10 sekund <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>i cztery klatki kluczowe, których czasy klucza są określone jako .  
   
-- Animuje pierwszej ramki kluczowe od wartości bazowej do 100 za pośrednictwem w ciągu pierwszych 2,5 sekund, kończąc na czas = 0:0:2.5.  
+- Pierwsza klatka kluczowa animuje wartość bazową do 100 w ciągu pierwszych 2,5 sekundy, kończąc na czasie = 0:0:2.5.  
   
-- Drugi klatek kluczowych animuje od 100 do 200. Uruchamia się po zakończeniu pierwszego klatek kluczowych (w momencie = 2,5 sekund) i odtwarzany przez około 2,5 sekund, kończąc na czas = 0:0:5.  
+- Druga klatka kluczowa ożywia od 100 do 200. Rozpoczyna się po zakończeniu pierwszej klatki kluczowej (w czasie = 2,5 sekundy) i jest odtwarzany przez około 2,5 sekundy, kończąc na czasie = 0:0:5.  
   
-- Trzeci klatek kluczowych animuje z 200 do 500. Jego uruchomieniu, gdy kończy się druga klatek kluczowych (w momencie = 5 sekund) i odtwarzany 2,5 sekund, kończąc na czas = 0:0:7.5.  
+- Trzecia klatka kluczowa ożywia od 200 do 500. Rozpoczyna się po zakończeniu drugiej klatki kluczowej (w czasie = 5 sekund) i jest odtwarzany przez 2,5 sekundy, kończąc na czasie = 0:0:7.5.  
   
-- Czwarty klatek kluczowych animacji od 500 do 600. Jego uruchomieniu, gdy kończy się druga klatek kluczowych (w momencie = 7.5 sekund) i odtwarzany 2,5 sekund, kończąc na czas = 0:0:1.  
+- Czwarta klatka kluczowa ożywia od 500 do 600. Rozpoczyna się po zakończeniu drugiej klatki kluczowej (w czasie = 7,5 sekundy) i jest odtwarzany przez 2,5 sekundy, kończąc na czasie = 0:0:1.  
   
  [!code-xaml[keyframes_ovw_snippet#UniformKeyTimeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#uniformkeytimeexample)]  
   
-### <a name="special-value-paced"></a>Specjalna wartość, realizowany  
- Użyj <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> czasu, gdy chcesz animować stałą prędkością.  
+### <a name="special-value-paced"></a>Wartość specjalna, paced  
+ Czas <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> należy używać, gdy chcesz animować ze stałą szybkością.  
   
- A <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> kluczowym przydziela czas dostępności długość każdego z klatkami kluczowymi Aby określić czas trwania każdej ramce.  Zapewni to zachowanie prędkość lub tempie animacji pozostaje stała.  W poniższym przykładzie pokazano animacji o czasie trwania 10 sekund i trzy klatki kluczowe, których klucz czasu są określane jako <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>.  
+ Czas <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> klucza przydziela dostępny czas w zależności od długości każdej z klatek kluczowych, aby określić czas trwania każdej klatki.  Zapewni to zachowanie, że prędkość lub tempo animacji pozostaje stała.  W poniższym przykładzie przedstawiono animację o czasie trwania 10 sekund <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>i trzy klatki kluczowe, których czasy klucza są określone jako .  
   
  [!code-xaml[keyframes_ovw_snippet#PacedKeyTimeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#pacedkeytimeexample)]  
   
- Należy zauważyć, że jeśli czas klucza ostatniej ramki kluczowe jest <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> lub <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>, jego usunięciu czas klucza zostanie ustawiony na 100 procent. Jeśli pierwszy klatek kluczowych animacji wieloma ramkami jest realizowany, jego usunięciu czas klucza będzie równa 0. (Jeśli kolekcja klatek kluczowych zawiera tylko jednej ramki kluczowe i jest realizowany klatek kluczowych, jego usunięciu czas klucza zostanie ustawiona do 100 procent.)  
+ Należy zauważyć, że jeśli ostatni czas <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> klucza klatki kluczowej jest lub <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>, jego rozwiązany czas klucza zostanie ustawiony na 100 procent. Jeśli pierwsza klatka kluczowa w animacji wieloklatkowej jest w tempie, jej rozwiązany czas klucza zostanie ustawiony na 0. (Jeśli kolekcja klatek kluczowych zawiera tylko jedną klatkę kluczową i jest to klatka kluczowa w tempie, jej rozwiązany czas klucza zostanie ustawiony na 100 procent).  
   
- Różne klatek kluczowych w obrębie jednej ramki kluczowe animacji może używać typów inny czas klucza.  
+ Różne klatki kluczowe w jednej animacji klatki kluczowej mogą używać różnych typów czasu kluczy.  
   
-<a name="combiningkeytimes"></a>   
-## <a name="combining-key-times-out-of-order-key-frames"></a>Łącząc czas klucza, klucz poza kolejnością ramek  
- Za pomocą klatek kluczowych różnych <xref:System.Windows.Media.Animation.KeyTime> typów animacji tej samej wartości. I chociaż jest to zalecane Dodaj klatek kluczowych w kolejności, w którym powinna być odtwarzana, nie jest konieczne. Animacja i chronometraż system jest w stanie rozwiązywania poza kolejnością klatek kluczowych. Klatki kluczowe nieprawidłowy czas klucza są ignorowane.  
+<a name="combiningkeytimes"></a>
+## <a name="combining-key-times-out-of-order-key-frames"></a>Łączenie kluczowych czasów, ramek kluczowych poza kolejnością  
+ W tej samej animacji można używać klatek kluczowych o różnych <xref:System.Windows.Media.Animation.KeyTime> typach wartości. I chociaż zaleca się dodawanie klatek kluczowych w kolejności, w jakiej powinny grać, nie jest to konieczne. System animacji i chronometrażu jest w stanie rozwiązać poza kolejnością klatek kluczowych. Klatki kluczowe z nieprawidłowymi czasami kluczy są ignorowane.  
   
- Na poniższej liście opisano procedury, za pomocą którego klucza czasu są rozwiązywane ramek kluczowych animacji kluczowych klatek.  
+ Na poniższej liście opisano procedurę, za pomocą której czasy klucza są rozpoznawane dla klatek kluczowych animacji klatki kluczowej.  
   
 1. Rozwiąż <xref:System.TimeSpan> <xref:System.Windows.Media.Animation.KeyTime> wartości.  
   
-2. Określić animacji *całkowity czas interpolacji*, całkowity czas potrzebny do ukończenia iteracji do przodu animacji kluczowych klatek.  
+2. Określ całkowity *czas interpolacji*animacji , całkowity czas potrzebny animacji klatki kluczowej do ukończenia iteracji do przodu.  
   
-    1. Jeśli animacji <xref:System.Windows.Media.Animation.Timeline.Duration%2A> nie <xref:System.Windows.Duration.Automatic%2A> lub <xref:System.Windows.Duration.Forever%2A>, Czas całkowity interpolacji to wartość zmiennej animacji <xref:System.Windows.Media.Animation.Timeline.Duration%2A> właściwości.  
+    1. Jeśli <xref:System.Windows.Media.Animation.Timeline.Duration%2A> animacja <xref:System.Windows.Duration.Automatic%2A> nie jest <xref:System.Windows.Duration.Forever%2A>lub , całkowity czas interpolacji jest <xref:System.Windows.Media.Animation.Timeline.Duration%2A> wartością właściwości animacji.  
   
-    2. W przeciwnym razie jest największy czas całkowity interpolacji <xref:System.TimeSpan> <xref:System.Windows.Media.Animation.KeyTime> wartość określoną wśród jej klatek kluczowych, jeśli takie istnieją.  
+    2. W przeciwnym razie całkowity czas <xref:System.TimeSpan> <xref:System.Windows.Media.Animation.KeyTime> interpolacji jest największą wartością określoną wśród jego klatek kluczowych, jeśli istnieje.  
   
-    3. W przeciwnym razie całkowitej interpolacji czasu wynosi 1 s.  
+    3. W przeciwnym razie całkowity czas interpolacji wynosi 1 sekundę.  
   
-3. Użyj interpolacji łączna wartość czasu można rozpoznać <xref:System.Windows.Media.Animation.KeyTimeType.Percent> <xref:System.Windows.Media.Animation.KeyTime> wartości.  
+3. Użyj całkowitej wartości czasu <xref:System.Windows.Media.Animation.KeyTimeType.Percent> <xref:System.Windows.Media.Animation.KeyTime> interpolacji, aby rozpoznać wartości.  
   
-4. Rozwiąż ostatniej ramki kluczowe, jeśli jeszcze nie został rozwiązany w poprzednich krokach. Jeśli <xref:System.Windows.Media.Animation.KeyTime> ostatniej ramki kluczowe jest <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> lub <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>, czas jego usunięciu będzie równy czasowi interpolacji całkowitej.  
+4. Rozwiąż ostatnią klatkę kluczową, jeśli nie została jeszcze rozwiązana w poprzednich krokach. Jeśli <xref:System.Windows.Media.Animation.KeyTime> ostatnia klatka <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> kluczowa <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>jest lub , jej rozwiązany czas będzie równy całkowitemu czasowi interpolacji.  
   
-     Jeśli <xref:System.Windows.Media.Animation.KeyTime> pierwszej ramki kluczowe jest <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> i tą animację ma więcej niż na klatek kluczowych rozwiązać jego <xref:System.Windows.Media.Animation.KeyTime> wartość równa zeru; Jeśli istnieje tylko jeden klatek kluczowych i jego <xref:System.Windows.Media.Animation.KeyTime> wartość jest <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>, jest ono rozwiązane w sumie interpolacji czasu, zgodnie z opisem w poprzednim kroku.  
+     Jeśli <xref:System.Windows.Media.Animation.KeyTime> pierwsza klatka kluczowa <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> jest i ta animacja ma więcej <xref:System.Windows.Media.Animation.KeyTime> niż na klatkach kluczowych, rozwiązać jego wartość do zera; jeśli istnieje tylko jedna klatka kluczowa, a jej <xref:System.Windows.Media.Animation.KeyTime> wartość jest <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>, jest rozpoznawana do całkowitego czasu interpolacji, jak opisano w poprzednim kroku.  
   
-5. Rozwiąż pozostałe <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> wartości: każdy posiadają równa część dostępny czas.  W trakcie tego procesu nierozpoznanych <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> wartości tymczasowo są traktowane jako <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> wartości i get tymczasowego rozwiązane czasu.  
+5. Rozwiąż pozostałe <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> wartości: każdy z nich otrzymuje równy udział w dostępnym czasie.  Podczas tego procesu <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> nierozwiązane wartości są <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> tymczasowo traktowane jako wartości i uzyskać tymczasowy czas rozwiązany.  
   
-6. Rozwiąż <xref:System.Windows.Media.Animation.KeyTime> wartości kluczowych klatek z nieokreślony czas klucza przy użyciu klatek kluczowych zadeklarowana najbliżej nich, które zostały rozwiązane <xref:System.Windows.Media.Animation.KeyTime> wartości.  
+6. Rozwiąż <xref:System.Windows.Media.Animation.KeyTime> wartości klatek kluczowych z nieokreślonymi czasami kluczy, używając ramek <xref:System.Windows.Media.Animation.KeyTime> kluczowych zadeklarowanych najbliżej nich, które mają rozpoznane wartości.  
   
-7. Rozwiąż pozostałe <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> wartości. <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> Użyj <xref:System.Windows.Media.Animation.KeyTime> wartości między sąsiednimi klucza ramek, aby określić czas rozwiązania.  Celem jest zapewnienie stałej w czasie zbliżonym do czasu rozwiązania klatek kluczowych szybkość animacji.  
+7. Rozwiąż pozostałe <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> wartości. <xref:System.Windows.Media.Animation.KeyTime.Paced%2A><xref:System.Windows.Media.Animation.KeyTime> użyj <xref:System.Windows.Media.Animation.KeyTime> wartości sąsiednich klatek kluczowych, aby określić ich rozwiązany czas.  Celem jest zapewnienie, że prędkość animacji jest stała wokół czasu rozwiązany tej klatki kluczowej.  
   
-8. Sortowanie klatek kluczowych w kolejności czas rozwiązania (klucz podstawowy) i kolejności deklaracji (klucz pomocniczy), czyli, użyj stabilne sortowanie oparte na rozwiązany klatek kluczowych <xref:System.Windows.Media.Animation.KeyTime> wartości.  
+8. Sortuj klatki kluczowe w kolejności rozpoznanego czasu (klucz podstawowy) i kolejności deklaracji (klucz pomocniczy), czyli <xref:System.Windows.Media.Animation.KeyTime> użyj stabilnego sortowania opartego na rozwiązanych wartościach ramki kluczowej.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Windows.Media.Animation.KeyTime>
 - <xref:System.Windows.Media.Animation.KeySpline>
 - <xref:System.Windows.Media.Animation.Timeline>
-- [Przykład animacji klucza z krzywymi składanymi](https://go.microsoft.com/fwlink/?LinkID=160011)
+- [Przykład animacji splajnu](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/KeySplineAnimations)
 - [Przykład animacji klatki kluczowej](https://go.microsoft.com/fwlink/?LinkID=160012)
-- [Animacja — przegląd](animation-overview.md)
-- [Scenorysy — przegląd](storyboards-overview.md)
+- [Przegląd Animacja](animation-overview.md)
+- [Przegląd Scenorysy](storyboards-overview.md)
 - [Klatki kluczowe — tematy z instrukcjami](key-frame-animation-how-to-topics.md)
-- [Zachowania chronometrażu — przegląd](timing-behaviors-overview.md)
+- [Przegląd Zachowania chronometrażu](timing-behaviors-overview.md)

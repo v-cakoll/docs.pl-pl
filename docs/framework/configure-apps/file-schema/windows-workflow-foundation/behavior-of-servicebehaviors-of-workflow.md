@@ -1,23 +1,23 @@
 ---
-title: <behavior><serviceBehaviors> przepływu pracy
+title: <behavior>przepływu <serviceBehaviors> pracy
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a4b718a-1b40-4957-935a-f6122819ab3c
-ms.openlocfilehash: 65bde45ffdd4af166d5b44308162c23257659802
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 071cff8e9f6ec3fa0546a07d19160869d8b43f60
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70398890"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79152323"
 ---
-# <a name="behavior-of-servicebehaviors-of-workflow"></a>\<> \<zachowania > przepływu pracy
-Element **Behavior** zawiera kolekcję ustawień zachowania usługi. Każde zachowanie jest indeksowane według jego **nazwy**. Usługi mogą łączyć się z każdym zachowaniem za pomocą tej nazwy przy użyciu atrybutu [ \<behaviorConfiguration elementu Endpoint >](../wcf/endpoint-element.md) . Dzięki temu punktów końcowych udostępnić typowych konfiguracji zachowanie bez ponownego definiowania ustawień.  
+# <a name="behavior-of-servicebehaviors-of-workflow"></a>\<zachowanie> \<usługZachowatości> przepływu pracy
+Element **zachowania** zawiera zbiór ustawień zachowania usługi. Każde zachowanie jest indeksowane według jego **nazwy**. Usługi można połączyć się z każdego zachowania za pomocą tego atrybutu **behaviorConfiguration** [ \<elementu>.](../wcf/endpoint-element.md) Dzięki temu punktów końcowych udostępnić typowych konfiguracji zachowanie bez ponownego definiowania ustawień.  
   
-[ **\<> konfiguracji**](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<systemami. > ServiceModel**](system-servicemodel-of-workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> zachowań**](behaviors-of-workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> serviceBehaviors**](servicebehaviors-of-workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> zachowania**  
+[**\<>konfiguracyjne**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<System.>z>**](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<zachowania>**](behaviors-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<usługiZachowady>**](servicebehaviors-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<>zachowania**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -29,20 +29,20 @@ Element **Behavior** zawiera kolekcję ustawień zachowania usługi. Każde zach
         <bufferReceive maxPendingMessagesPerChannel="Integer" />
         <etwTracking profileName="String" />
         <sendMessageChannelCache allowUnsafeCaching="Boolean">
-          <channelSettings idleTimeout="TimeSpan" 
-                           leaseTimeout="TimeSpan" 
+          <channelSettings idleTimeout="TimeSpan"
+                           leaseTimeout="TimeSpan"
                            maxItemsInCache="Integer" />
-          <factorySettings idleTimeout="TimeSpan" 
-                           leaseTimeout="TimeSpan" 
+          <factorySettings idleTimeout="TimeSpan"
+                           leaseTimeout="TimeSpan"
                            maxItemsInCache="Integer" />
         </sendMessageChannelCache>
-        <sqlWorkflowInstanceStore connectionStringName="String" 
-                                  hostLockRenewalPeriod="TimeSpan" 
-                                  instanceCompletionAction="DeleteNothing/DeleteAll" 
-                                  instanceEncodingAction="None/GZip" 
-                                  instanceLockedExceptionAction="NoRetry/BasicRetry/AggressiveRetry" 
+        <sqlWorkflowInstanceStore connectionStringName="String"
+                                  hostLockRenewalPeriod="TimeSpan"
+                                  instanceCompletionAction="DeleteNothing/DeleteAll"
+                                  instanceEncodingAction="None/GZip"
+                                  instanceLockedExceptionAction="NoRetry/BasicRetry/AggressiveRetry"
                                   runnableInstancesDetectionPeriod="TimeSpan" />
-        <workflowIdle timeToPersist="TimeSpan" 
+        <workflowIdle timeToPersist="TimeSpan"
                       timeToUnload="TimeSpan" />
         <workflowUnhandledException action="Abandon/AbandonAndSuspend/Cancel/Terminate" />
       </behavior>
@@ -58,22 +58,22 @@ Element **Behavior** zawiera kolekcję ustawień zachowania usługi. Każde zach
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|nazwa|Unikatowy ciąg, który zawiera nazwę konfiguracji zachowanie. Ta wartość jest ciągiem zdefiniowanej przez użytkownika, który musi być unikatowy, ponieważ działa jako ciąg identyfikacyjny dla elementu.|  
+|name|Unikatowy ciąg, który zawiera nazwę konfiguracji zachowanie. Ta wartość jest ciągiem zdefiniowanej przez użytkownika, który musi być unikatowy, ponieważ działa jako ciąg identyfikacyjny dla elementu.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<bufferReceive >](bufferreceive.md)|Zachowanie usługi, które umożliwia usługa do użycia buforowanego odbierać przetwarzania, co umożliwia usługi przepływu pracy w celu przetwarzania komunikatów poza kolejnością.|  
-|[\<> routingu](../wcf/routing-of-servicebehavior.md)|Zachowanie usługi, które umożliwia usłudze korzystanie z funkcji śledzenia ETW przy użyciu <xref:System.Activities.Tracking.EtwTrackingParticipant>programu.|  
-|[\<sendMessageChannelCache>](sendmessagechannelcache.md)|Zachowanie usługi, które umożliwia dostosowanie poziomów udostępniania pamięci podręcznej, ustawień pamięci podręcznej fabryki kanałów oraz ustawień pamięci podręcznej kanału dla przepływów pracy, które wysyłają komunikaty do punktów końcowych usługi przy użyciu działań wysyłania komunikatów.|  
-|[\<sqlWorkflowInstanceStore>](sqlworkflowinstancestore.md)|Zachowanie usługi, które umożliwia skonfigurowanie <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> funkcji, która obsługuje utrwalanie informacji o stanie dla wystąpień usługi przepływu pracy w bazie danych SQL Server 2005 lub SQL Server 2008.|  
-|[\<workflowIdle>](workflowidle.md)|Zachowanie usługi sterująca po zwolnione wystąpienia bezczynności przepływu pracy i utrwalone.|  
-|[\<workflowInstanceManagement >](workflowinstancemanagement.md)|Zachowanie usługi, które umożliwia określenie ustawień, które kontrolują, jak są uruchamiane wystąpienia przepływu pracy, łącznie z trwałości, nieobsługiwanych wyjątków zachowanie i zachowanie bezczynności.|  
+|[\<buforRecetywne>](bufferreceive.md)|Zachowanie usługi, które umożliwia usługa do użycia buforowanego odbierać przetwarzania, co umożliwia usługi przepływu pracy w celu przetwarzania komunikatów poza kolejnością.|  
+|[\<>routingu](../wcf/routing-of-servicebehavior.md)|Zachowanie usługi, które pozwala usłudze korzystać <xref:System.Activities.Tracking.EtwTrackingParticipant>ze śledzenia ETW za pomocą pliku .|  
+|[\<>sendMessageChannelCache](sendmessagechannelcache.md)|Zachowanie usługi, która umożliwia dostosowanie poziomów udostępniania pamięci podręcznej, ustawienia pamięci podręcznej fabryki kanału i ustawienia pamięci podręcznej kanału dla przepływów pracy, które wysyłają wiadomości do punktów końcowych usługi przy użyciu wysyłania działań obsługi wiadomości.|  
+|[\<sqlWorkflowInstanceStore>](sqlworkflowinstancestore.md)|Zachowanie usługi, które umożliwia skonfigurowanie <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> funkcji, która obsługuje utrwalanie informacji o stanie wystąpień usługi przepływu pracy w bazie danych PROGRAMU SQL Server 2005 lub SQL Server 2008.|  
+|[\<>przepływu pracyIdle](workflowidle.md)|Zachowanie usługi sterująca po zwolnione wystąpienia bezczynności przepływu pracy i utrwalone.|  
+|[\<>zarządzanie przepływem pracy](workflowinstancemanagement.md)|Zachowanie usługi, które umożliwia określenie ustawień, które kontrolują, jak są uruchamiane wystąpienia przepływu pracy, łącznie z trwałości, nieobsługiwanych wyjątków zachowanie i zachowanie bezczynności.|  
 |[\<workflowUnhandledException>](workflowunhandledexception.md)|Zachowanie usługi, który umożliwia określenie Akcja podejmowana po wystąpieniu nieobsługiwanego wyjątku w ramach usługi przepływu pracy.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<> serviceBehaviors](servicebehaviors-of-workflow.md)|Kolekcja elementów zachowanie usługi.|
+|[\<usługiZachowady>](servicebehaviors-of-workflow.md)|Kolekcja elementów zachowanie usługi.|

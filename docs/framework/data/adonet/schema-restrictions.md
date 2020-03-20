@@ -5,38 +5,38 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 73d2980e-e73c-4987-913a-8ddc93d09144
-ms.openlocfilehash: d0250e573dc24bfcad97a2f2606cb2e6c8e520da
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 17c42c5131252993d1f16e4a2f7a6450f0984d11
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782758"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149014"
 ---
 # <a name="schema-restrictions"></a>Ograniczenia schematu
-Drugim parametrem opcjonalnym metody **GetSchema** jest ograniczenia, które są używane do ograniczenia ilości zwracanych informacji o schemacie i są przesyłane do metody **GetSchema** jako tablica ciągów. Pozycja w tablicy określa wartości, które można przekazać, i jest równoważne z numerem ograniczenia.  
+Drugi parametr opcjonalny **Metody GetSchema** jest ograniczenia, które są używane do ograniczenia ilości informacji o schemacie zwracane i jest przekazywana do **Metody GetSchema** jako tablicy ciągów. Położenie w tablicy określa wartości, które można przekazać, a to jest równoważne z numerem ograniczenia.  
   
- Na przykład w poniższej tabeli opisano ograniczenia obsługiwane przez kolekcję schematów "tabele" przy użyciu Dostawca danych .NET Framework dla SQL Server. Dodatkowe ograniczenia dotyczące kolekcji schematów SQL Server są wymienione na końcu tego tematu.  
+ Na przykład w poniższej tabeli opisano ograniczenia obsługiwane przez kolekcję schematów "Tabele" przy użyciu dostawcy danych programu .NET Framework dla programu SQL Server. Dodatkowe ograniczenia dla kolekcji schematów programu SQL Server są wymienione na końcu tego tematu.  
   
 |Nazwa ograniczenia|Nazwa parametru|Domyślne ograniczenie|Numer ograniczenia|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |Wykaz|@Catalog|TABLE_CATALOG|1|  
 |Właściciel|@Owner|TABLE_SCHEMA|2|  
-|tabela|@Name|TABLE_NAME|3|  
-|Tabletype|@TableType|TABLE_TYPE|4|  
+|Tabela|@Name|TABLE_NAME|3|  
+|Typ tabeli|@TableType|Table_type|4|  
   
 ## <a name="specifying-restriction-values"></a>Określanie wartości ograniczeń  
- Aby użyć jednego z ograniczeń kolekcji schematów "tabele", po prostu Utwórz tablicę ciągów z czterema elementami, a następnie umieść wartość w elemencie, który jest zgodny z numerem ograniczenia. Na przykład aby ograniczyć tabele zwracane przez metodę **GetSchema** do tylko tych tabel w schemacie "Sales", należy ustawić drugi element tablicy na "Sales" przed przekazaniem go do metody **GetSchema** .  
+ Aby użyć jednego z ograniczeń kolekcji schematu "Tabele", wystarczy utworzyć tablicę ciągów z czterema elementami, a następnie umieścić wartość w elemencie, który pasuje do numeru ograniczenia. Na przykład, aby ograniczyć tabele zwrócone przez **Metodę GetSchema** tylko do tych tabel w schemacie "Sprzedaż", należy ustawić drugi element tablicy na "Sprzedaż" przed przekazaniem go do **Metody GetSchema.**  
   
 > [!NOTE]
-> Kolekcje ograniczeń dla `SqlClient` i `OracleClient` mają dodatkową `ParameterName` kolumnę. Domyślna kolumna ograniczenia nadal ma zgodność z poprzednimi wersjami, ale jest obecnie ignorowana. Zapytania sparametryzowane zamiast zamiany ciągu powinny służyć do zminimalizowania ryzyka związanego z iniekcją kodu SQL podczas określania wartości ograniczeń.  
+> Kolekcje ograniczeń i `SqlClient` `OracleClient` mają dodatkową `ParameterName` kolumnę. Domyślna kolumna ograniczenia jest nadal tam dla zgodności z powrotem, ale jest obecnie ignorowana. Sparametryzowane kwerendy, a nie zastępowanie ciągów powinny być używane w celu zminimalizowania ryzyka ataku iniekcji SQL podczas określania wartości ograniczeń.  
   
 > [!NOTE]
-> Liczba elementów w tablicy musi być mniejsza lub równa liczbie ograniczeń, które są obsługiwane dla określonej kolekcji schematów, w przeciwnym razie <xref:System.ArgumentException> zostanie zgłoszony. Może być mniejsza niż maksymalna liczba ograniczeń. W przypadku brakujących ograniczeń przyjmuje się, że wartość jest równa null (bez ograniczeń).  
+> Liczba elementów w tablicy musi być mniejsza lub równa liczbie ograniczeń obsługiwanych dla <xref:System.ArgumentException> określonej kolekcji schematu inaczej zostanie rzucona. Może być mniejsza niż maksymalna liczba ograniczeń. Zakłada się, że brakujące ograniczenia mają wartość null (bez ograniczeń).  
   
- Można wysłać zapytanie do dostawcy zarządzanego .NET Framework, aby określić listę obsługiwanych ograniczeń, wywołując metodę **GetSchema** z nazwą kolekcji schematów ograniczeń, która jest "ograniczenia". Spowoduje to zwrócenie <xref:System.Data.DataTable> listy nazw kolekcji, nazw ograniczeń, domyślnych wartości ograniczeń oraz numerów ograniczeń.  
+ Można zbadać .NET Framework zarządzanego dostawcy, aby określić listę obsługiwanych ograniczeń, wywołując **GetSchema** metody o nazwie kolekcji schematu ograniczeń, który jest "Ograniczenia". Spowoduje to <xref:System.Data.DataTable> zwrócenie a z listy nazw kolekcji, nazwy ograniczeń, domyślne wartości ograniczeń i numery ograniczeń.  
   
 ### <a name="example"></a>Przykład  
- W poniższych przykładach pokazano, jak za <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> pomocą metody dostawca danych .NET Framework dla klasy SQL Server <xref:System.Data.SqlClient.SqlConnection> pobrać informacje o schemacie dotyczące wszystkich tabel zawartych w przykładowej bazie danych **AdventureWorks** , i w celu ograniczenia informacji zwracanych do tylko tych tabel w schemacie "Sales":  
+ Poniższe przykłady pokazują, <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> jak używać metody dostawcy danych programu <xref:System.Data.SqlClient.SqlConnection> .NET Framework dla klasy PROGRAMU SQL Server do pobierania informacji o schemacie wszystkich tabel zawartych w przykładowej bazie danych **AdventureWorks** i ograniczania informacji zwracanych tylko do tych tabel w schemacie "Sprzedaż":  
   
 ```vb  
 Imports System.Data.SqlClient  
@@ -79,7 +79,7 @@ class Program
 {  
   static void Main()  
   {  
-    string connectionString =   
+    string connectionString =
        "Data Source=(local);Database=AdventureWorks;" +  
        "Integrated Security=true;";  
     using (SqlConnection connection =  
@@ -98,7 +98,7 @@ class Program
         {  
             foreach (System.Data.DataColumn col in table.Columns)  
             {  
-                Console.WriteLine("{0} = {1}",   
+                Console.WriteLine("{0} = {1}",
                   col.ColumnName, row[col]);  
             }  
             Console.WriteLine("============================");  
@@ -130,14 +130,14 @@ class Program
 }  
 ```  
   
-## <a name="sql-server-schema-restrictions"></a>SQL Server ograniczenia schematu  
- W poniższej tabeli wymieniono ograniczenia dotyczące SQL Serverych kolekcji schematów.  
+## <a name="sql-server-schema-restrictions"></a>Ograniczenia schematu programu SQL Server  
+ W poniższych tabelach przedstawiono ograniczenia dotyczące kolekcji schematów programu SQL Server.  
   
 ### <a name="users"></a>Użytkownicy  
   
 |Nazwa ograniczenia|Nazwa parametru|Domyślne ograniczenie|Numer ograniczenia|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Nazwa_użytkownika|@Name|nazwa|1|  
+|Nazwa_użytkownika|@Name|name|1|  
   
 ### <a name="databases"></a>Bazy danych  
   
@@ -145,14 +145,14 @@ class Program
 |----------------------|--------------------|-------------------------|------------------------|  
 |Nazwa|@Name|Nazwa|1|  
   
-### <a name="tables"></a>Tabelę  
+### <a name="tables"></a>Tabele  
   
 |Nazwa ograniczenia|Nazwa parametru|Domyślne ograniczenie|Numer ograniczenia|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |Wykaz|@Catalog|TABLE_CATALOG|1|  
 |Właściciel|@Owner|TABLE_SCHEMA|2|  
-|tabela|@Name|TABLE_NAME|3|  
-|Tabletype|@TableType|TABLE_TYPE|4|  
+|Tabela|@Name|TABLE_NAME|3|  
+|Typ tabeli|@TableType|Table_type|4|  
   
 ### <a name="columns"></a>Kolumny  
   
@@ -160,7 +160,7 @@ class Program
 |----------------------|--------------------|-------------------------|------------------------|  
 |Wykaz|@Catalog|TABLE_CATALOG|1|  
 |Właściciel|@Owner|TABLE_SCHEMA|2|  
-|tabela|@Table|TABLE_NAME|3|  
+|Tabela|@Table|TABLE_NAME|3|  
 |Kolumna|@Column|COLUMN_NAME|4|  
   
 ### <a name="structuredtypemembers"></a>StructuredTypeMembers  
@@ -169,7 +169,7 @@ class Program
 |----------------------|--------------------|-------------------------|------------------------|  
 |Wykaz|@Catalog|TABLE_CATALOG|1|  
 |Właściciel|@Owner|TABLE_SCHEMA|2|  
-|tabela|@Table|TABLE_NAME|3|  
+|Tabela|@Table|TABLE_NAME|3|  
 |Kolumna|@Column|COLUMN_NAME|4|  
   
 ### <a name="views"></a>Widoki  
@@ -178,18 +178,18 @@ class Program
 |----------------------|--------------------|-------------------------|------------------------|  
 |Wykaz|@Catalog|TABLE_CATALOG|1|  
 |Właściciel|@Owner|TABLE_SCHEMA|2|  
-|tabela|@Table|TABLE_NAME|3|  
+|Tabela|@Table|TABLE_NAME|3|  
   
-### <a name="viewcolumns"></a>ViewColumns  
+### <a name="viewcolumns"></a>ViewColumns (Wychwki)  
   
 |Nazwa ograniczenia|Nazwa parametru|Domyślne ograniczenie|Numer ograniczenia|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |Wykaz|@Catalog|VIEW_CATALOG|1|  
 |Właściciel|@Owner|VIEW_SCHEMA|2|  
-|tabela|@Table|VIEW_NAME|3|  
+|Tabela|@Table|VIEW_NAME|3|  
 |Kolumna|@Column|COLUMN_NAME|4|  
   
-### <a name="procedureparameters"></a>ProcedureParameters  
+### <a name="procedureparameters"></a>ProceduryParametry  
   
 |Nazwa ograniczenia|Nazwa parametru|Domyślne ograniczenie|Numer ograniczenia|  
 |----------------------|--------------------|-------------------------|------------------------|  
@@ -207,60 +207,60 @@ class Program
 |Nazwa|@Name|SPECIFIC_NAME|3|  
 |Typ|@Type|ROUTINE_TYPE|4|  
   
-### <a name="indexcolumns"></a>IndexColumns  
+### <a name="indexcolumns"></a>IndexColumns (Kody indeksu)  
   
 |Nazwa ograniczenia|Nazwa parametru|Domyślne ograniczenie|Numer ograniczenia|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |Wykaz|@Catalog|db_name()|1|  
 |Właściciel|@Owner|user_name()|2|  
-|tabela|@Table|o.name|3|  
-|Element ConstraintName|@ConstraintName|x.name|4|  
+|Tabela|@Table|o.name|3|  
+|Nazwa ograniczenia|@ConstraintName|x.name|4|  
 |Kolumna|@Column|c.name|5|  
   
-### <a name="indexes"></a>Zwiększa  
+### <a name="indexes"></a>Indeksy  
   
 |Nazwa ograniczenia|Nazwa parametru|Domyślne ograniczenie|Numer ograniczenia|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |Wykaz|@Catalog|db_name()|1|  
 |Właściciel|@Owner|user_name()|2|  
-|tabela|@Table|o.name|3|  
+|Tabela|@Table|o.name|3|  
   
-### <a name="userdefinedtypes"></a>UserDefinedTypes  
+### <a name="userdefinedtypes"></a>Zdefiniowane typy użytkownika  
   
 |Nazwa ograniczenia|Nazwa parametru|Domyślne ograniczenie|Numer ograniczenia|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |assembly_name|@AssemblyName|assemblies.name|1|  
-|udt_name|@UDTName|typy. assembly_class|2|  
+|udt_name|@UDTName|typy.assembly_class|2|  
   
-### <a name="foreignkeys"></a>ForeignKeys  
+### <a name="foreignkeys"></a>Klawisze obce  
   
 |Nazwa ograniczenia|Nazwa parametru|Domyślne ograniczenie|Numer ograniczenia|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |Wykaz|@Catalog|CONSTRAINT_CATALOG|1|  
 |Właściciel|@Owner|CONSTRAINT_SCHEMA|2|  
-|tabela|@Table|TABLE_NAME|3|  
+|Tabela|@Table|TABLE_NAME|3|  
 |Nazwa|@Name|CONSTRAINT_NAME|4|  
   
-## <a name="sql-server-2008-schema-restrictions"></a>Ograniczenia schematu SQL Server 2008  
- W poniższej tabeli wymieniono ograniczenia dotyczące kolekcji schematów SQL Server 2008. Te ograniczenia są prawidłowe od wersji 3,5 SP1 .NET Framework i SQL Server 2008. Nie są one obsługiwane we wcześniejszych wersjach .NET Framework i SQL Server.  
+## <a name="sql-server-2008-schema-restrictions"></a>Ograniczenia schematu programu SQL Server 2008  
+ W poniższych tabelach przedstawiono ograniczenia dotyczące kolekcji schematów programu SQL Server 2008. Te ograniczenia są prawidłowe począwszy od wersji 3.5 SP1 programu .NET Framework i SQL Server 2008. Nie są one obsługiwane we wcześniejszych wersjach programu .NET Framework i SQL Server.  
   
-### <a name="columnsetcolumns"></a>ColumnSetColumns  
-  
-|Nazwa ograniczenia|Nazwa parametru|Domyślne ograniczenie|Numer ograniczenia|  
-|----------------------|--------------------|-------------------------|------------------------|  
-|Wykaz|@Catalog|TABLE_CATALOG|1|  
-|Właściciel|@Owner|TABLE_SCHEMA|2|  
-|tabela|@Table|TABLE_NAME|3|  
-  
-### <a name="allcolumns"></a>AllColumns  
+### <a name="columnsetcolumns"></a>ColumnSetColumns (Typy kolumn)  
   
 |Nazwa ograniczenia|Nazwa parametru|Domyślne ograniczenie|Numer ograniczenia|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |Wykaz|@Catalog|TABLE_CATALOG|1|  
 |Właściciel|@Owner|TABLE_SCHEMA|2|  
-|tabela|@Table|TABLE_NAME|3|  
+|Tabela|@Table|TABLE_NAME|3|  
+  
+### <a name="allcolumns"></a>AllKolumny  
+  
+|Nazwa ograniczenia|Nazwa parametru|Domyślne ograniczenie|Numer ograniczenia|  
+|----------------------|--------------------|-------------------------|------------------------|  
+|Wykaz|@Catalog|TABLE_CATALOG|1|  
+|Właściciel|@Owner|TABLE_SCHEMA|2|  
+|Tabela|@Table|TABLE_NAME|3|  
 |Kolumna|@Column|COLUMN_NAME|4|  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Omówienie ADO.NET](ado-net-overview.md)

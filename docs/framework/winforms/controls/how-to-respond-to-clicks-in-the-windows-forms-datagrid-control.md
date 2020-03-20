@@ -1,5 +1,5 @@
 ---
-title: Odpowiadanie na kliknięcia w formancie DataGrid
+title: Odpowiadanie na kliknięcia w formancie datagrid
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,22 +12,22 @@ helpviewer_keywords:
 - examples [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], click events
 ms.assetid: a0aa204b-8351-4d82-9933-ee21a5c9e409
-ms.openlocfilehash: 9aa1331116cd3f2f8050ff9f8cc8cc52d25726d1
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: e72d117b12d43ece8c4d05ed29ab45693418eede
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76735754"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141942"
 ---
 # <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>Porady: odpowiadanie na kliknięcia w formancie DataGrid formularzy systemu Windows
 > [!NOTE]
-> Formant <xref:System.Windows.Forms.DataGridView> zamienia i dodaje funkcje do kontrolki <xref:System.Windows.Forms.DataGrid>; Niemniej jednak kontrolka <xref:System.Windows.Forms.DataGrid> jest zachowywana na potrzeby zgodności z poprzednimi wersjami i w przyszłości. Aby uzyskać więcej informacji, zobacz [różnice między kontrolkami DataGridView i DataGrid Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+> Formant <xref:System.Windows.Forms.DataGridView> zastępuje i dodaje funkcjonalność <xref:System.Windows.Forms.DataGrid> do formantu; jednak <xref:System.Windows.Forms.DataGrid> formant jest zachowywany zarówno dla zgodności z powrotem i przyszłego użycia, jeśli wybierzesz. Aby uzyskać więcej informacji, zobacz [Różnice między formami Windows DataGridView i DataGrid Formantów](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Po powiązaniu Windows Forms <xref:System.Windows.Forms.DataGrid> z bazą danych możesz monitorować klikniętą komórkę.  
+ Po połączeniu <xref:System.Windows.Forms.DataGrid> formularzy systemu Windows z bazą danych można monitorować, którą komórkę kliknął użytkownik.  
   
-### <a name="to-detect-when-the-user-of-the-datagrid-selects-a-different-cell"></a>Aby wykryć, kiedy użytkownik elementu DataGrid wybierze inną komórkę  
+### <a name="to-detect-when-the-user-of-the-datagrid-selects-a-different-cell"></a>Aby wykryć, kiedy użytkownik datagridu wybierze inną komórkę  
   
-- W obsłudze zdarzeń <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> Napisz kod, aby odpowiednio odpowiedzieć.  
+- W <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> programie obsługi zdarzeń napisz kod, aby odpowiednio odpowiedzieć.  
   
     ```vb  
     Private Sub myDataGrid_CurrentCellChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles myDataGrid.CurrentCellChanged  
@@ -38,27 +38,27 @@ ms.locfileid: "76735754"
     ```  
   
     ```csharp  
-    private void myDataGrid_CurrentCellChanged(object sender,   
+    private void myDataGrid_CurrentCellChanged(object sender,
     System.EventArgs e)  
     {  
        MessageBox.Show ("Col is " + myDataGrid.CurrentCell.ColumnNumber  
-          + ", Row is " + myDataGrid.CurrentCell.RowNumber   
+          + ", Row is " + myDataGrid.CurrentCell.RowNumber
           + ", Value is " + myDataGrid[myDataGrid.CurrentCell] );  
     }  
     ```  
   
-     (Wizualizacja C#) Umieść poniższy kod w Konstruktorze formularza, aby zarejestrować procedurę obsługi zdarzeń.  
+     (Visual C#) Umieść następujący kod w konstruktorze formularza, aby zarejestrować program obsługi zdarzeń.  
   
     ```csharp  
     this.myDataGrid.CurrentCellChanged += new  
        System.EventHandler(this.myDataGrid_CurrentCellChanged);  
     ```  
   
-### <a name="to-determine-which-part-of-the-datagrid-the-user-clicked"></a>Aby określić, która część elementu DataGrid kliknięta przez użytkownika  
+### <a name="to-determine-which-part-of-the-datagrid-the-user-clicked"></a>Aby ustalić, która część datagridu użytkownik kliknął  
   
-- Wywołaj metodę <xref:System.Windows.Forms.DataGrid.HitTest%2A> w odpowiedniej procedurze obsługi zdarzeń, na przykład dla zdarzenia <xref:System.Windows.Forms.Control.MouseDown> lub <xref:System.Windows.Forms.Control.Click>.  
+- Wywołanie <xref:System.Windows.Forms.DataGrid.HitTest%2A> metody w odpowiednim programie obsługi <xref:System.Windows.Forms.Control.MouseDown> zdarzeń, takich jak dla lub <xref:System.Windows.Forms.Control.Click> zdarzenia.  
   
-     Metoda <xref:System.Windows.Forms.DataGrid.HitTest%2A> zwraca obiekt <xref:System.Windows.Forms.DataGrid.HitTestInfo>, który zawiera wiersz i kolumnę klikniętego obszaru.  
+     Metoda <xref:System.Windows.Forms.DataGrid.HitTest%2A> zwraca <xref:System.Windows.Forms.DataGrid.HitTestInfo> obiekt zawierający wiersz i kolumnę kliknowanego obszaru.  
   
     ```vb  
     Private Sub myDataGrid_MouseDown(ByVal sender As Object, _  
@@ -92,7 +92,7 @@ ms.locfileid: "76735754"
     ```  
   
     ```csharp  
-    private void myDataGrid_MouseDown(object sender,   
+    private void myDataGrid_MouseDown(object sender,
     System.Windows.Forms.MouseEventArgs e)  
     {  
        DataGrid myGrid = (DataGrid) sender;  
@@ -100,7 +100,7 @@ ms.locfileid: "76735754"
        hti = myGrid.HitTest(e.X, e.Y);  
        string message = "You clicked ";  
   
-       switch (hti.Type)   
+       switch (hti.Type)
        {  
           case System.Windows.Forms.DataGrid.HitTestType.None :  
              message += "the background.";  
@@ -132,7 +132,7 @@ ms.locfileid: "76735754"
     }  
     ```  
   
-     (Wizualizacja C#) Umieść poniższy kod w Konstruktorze formularza, aby zarejestrować procedurę obsługi zdarzeń.  
+     (Visual C#) Umieść następujący kod w konstruktorze formularza, aby zarejestrować program obsługi zdarzeń.  
   
     ```csharp  
     this.myDataGrid.MouseDown += new  
@@ -140,7 +140,7 @@ ms.locfileid: "76735754"
        (this.myDataGrid_MouseDown);  
     ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [DataGrid, kontrolka](datagrid-control-windows-forms.md)
 - [Instrukcje: zmienianie wyświetlanych danych w czasie wykonywania w kontrolce DataGrid formularzy Windows Forms](change-displayed-data-at-run-time-wf-datagrid-control.md)

@@ -8,24 +8,24 @@ helpviewer_keywords:
 - <connectionManagement> element
 - connectionManagement element
 ms.assetid: bedccaab-12a2-4511-8f67-e961f249aec6
-ms.openlocfilehash: b769dd8d3ed0c617d0d8f908e7ef516615da09a7
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 9f1e382bbbaad2cb95e2c33bbbdfb4c505378c9e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088458"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154897"
 ---
-# <a name="connectionmanagement-element-network-settings"></a>\<element > connectionManagement (Ustawienia sieci)
+# <a name="connectionmanagement-element-network-settings"></a>\<connectionManagement> Element (Ustawienia sieciowe)
 Określa maksymalną liczbę połączeń z hostem sieciowym.  
 
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp;&nbsp;[ **\<system. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<connectionManagement >**
+[**\<>konfiguracyjne**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<connectionManagement>**
 
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<connectionManagement>   
+<connectionManagement>
 </connectionManagement>  
 ```  
   
@@ -39,24 +39,24 @@ Określa maksymalną liczbę połączeń z hostem sieciowym.
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[add](add-element-for-connectionmanagement-network-settings.md)|Dodaje adres IP lub nazwę DNS do listy zarządzania połączeniami.|  
+|[Dodaj](add-element-for-connectionmanagement-network-settings.md)|Dodaje adres IP lub nazwę DNS do listy zarządzania połączeniami.|  
 |[Wyczyść](clear-element-for-connectionmanagement-network-settings.md)|Czyści listę zarządzania połączeniami.|  
-|[remove](remove-element-for-connectionmanagement-network-settings.md)|Usuwa adres IP lub nazwę DNS z listy zarządzania połączeniami.|  
+|[Usunąć](remove-element-for-connectionmanagement-network-settings.md)|Usuwa adres IP lub nazwę DNS z listy zarządzania połączeniami.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[system.net](system-net-element-network-settings.md)|Zawiera ustawienia, które określają, w jaki sposób .NET Framework nawiązuje połączenie z siecią.|  
+|[system.net](system-net-element-network-settings.md)|Zawiera ustawienia określające sposób łączenia się programu .NET Framework z siecią.|  
   
 ## <a name="remarks"></a>Uwagi  
  Element `connectionManagement` definiuje maksymalną liczbę połączeń z serwerem lub grupą serwerów.  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
- Tego elementu można użyć w pliku konfiguracyjnym aplikacji lub pliku konfiguracji komputera (Machine. config).  
+ Ten element może być używany w pliku konfiguracyjnym aplikacji lub pliku konfiguracyjnym komputera (Machine.config).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład służy do konfigurowania aplikacji do używania czterech połączeń z serwerem `www.contoso.com` i dwóch połączeń z innymi serwerami.  
+ Poniższy przykład konfiguruje aplikację do używania `www.contoso.com` czterech połączeń z serwerem i dwóch połączeń ze wszystkimi innymi serwerami.  
   
 ```xml  
 <configuration>  
@@ -69,7 +69,7 @@ Określa maksymalną liczbę połączeń z hostem sieciowym.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>

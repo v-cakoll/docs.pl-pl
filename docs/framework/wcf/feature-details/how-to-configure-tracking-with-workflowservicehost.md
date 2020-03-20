@@ -2,38 +2,38 @@
 title: 'Instrukcje: konfigurowanie śledzenia za pomocą elementu WorkflowServiceHost'
 ms.date: 03/30/2017
 ms.assetid: ed1485fe-7529-4351-bca3-8bb915260b17
-ms.openlocfilehash: 5781878270272f5ef894c68dc23b9433029e1d41
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 962dfda9fc5780cc3ac7211464bb3a9be8b7fa90
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968489"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185069"
 ---
 # <a name="how-to-configure-tracking-with-workflowservicehost"></a>Instrukcje: konfigurowanie śledzenia za pomocą elementu WorkflowServiceHost
-W tym temacie wyjaśniono, jak skonfigurować śledzenie [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] dla przepływu pracy <xref:System.ServiceModel.Activities.WorkflowServiceHost>hostowanego w programie. Jest ona konfigurowana za pośrednictwem pliku Web. config przez określenie zachowania usługi.  
+W tym temacie wyjaśniono, [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] jak skonfigurować <xref:System.ServiceModel.Activities.WorkflowServiceHost>śledzenie przepływu pracy hostowanego w pliku . Jest on konfigurowany za pośrednictwem pliku Web.config przez określenie zachowania usługi.  
   
-### <a name="configure-tracking-in-configuration"></a>Konfiguruj śledzenie w konfiguracji  
+### <a name="configure-tracking-in-configuration"></a>Konfigurowanie śledzenia w konfiguracji  
   
-1. `behavior`Dodaj element <xref:System.Activities.Tracking.EtwTrackingParticipant> using > < w pliku konfiguracyjnym, jak pokazano w poniższym przykładzie.  
+1. Dodaj <xref:System.Activities.Tracking.EtwTrackingParticipant> za pomocą <`behavior`> element w pliku konfiguracyjnym, jak pokazano w poniższym przykładzie.  
   
     ```xml  
     <behaviors>  
        <serviceBehaviors>  
          <behavior>  
            <etwTracking profileName="Sample Tracking Profile" />  
-         </behavior>              
+         </behavior>
        </serviceBehaviors>  
     <behaviors>  
     ```  
   
     > [!NOTE]
-    > Poprzedni przykład konfiguracji używa uproszczonej konfiguracji. Aby uzyskać więcej informacji, zobacz [Uproszczona konfiguracja](../../../../docs/framework/wcf/simplified-configuration.md).  
+    > W poprzedniej próbce konfiguracji jest obsługiwana uproszczona konfiguracja. Aby uzyskać więcej informacji, zobacz [Uproszczona konfiguracja](../../../../docs/framework/wcf/simplified-configuration.md).  
   
-     Poprzedni przykład konfiguracji dodaje <xref:System.Activities.Tracking.EtwTrackingParticipant> i określa nazwę profilu śledzenia. Profile śledzenia są tworzone w <`trackingProfile`> elementu w ramach <`tracking`elementu >. Profil śledzenia zawiera zapytania śledzenia umożliwiające uczestnikowi śledzenia subskrybowanie zdarzeń przepływu pracy, które są emitowane w przypadku zmiany stanu wystąpienia przepływu pracy w czasie wykonywania. Poniższy przykład pokazuje, jak utworzyć profil śledzenia.  
+     W poprzednim przykładzie <xref:System.Activities.Tracking.EtwTrackingParticipant> konfiguracji dodaje i określa nazwę profilu śledzenia. Profile śledzenia są tworzone w `trackingProfile` <> element w <`tracking`> element. Profil śledzenia zawiera zapytania śledzenia, które umożliwiają uczestnikowi śledzenia subskrybowanie zdarzeń przepływu pracy, które są emitowane, gdy stan wystąpienia przepływu pracy zmienia się w czasie wykonywania. W poniższym przykładzie pokazano, jak utworzyć profil śledzenia.  
   
     ```xml  
     <system.serviceModel>  
-        <tracking>   
+        <tracking>
          <trackingProfile name="Sample Tracking Profile">  
             <workflow activityDefinitionId="*">  
                <workflowInstanceQueries>  
@@ -45,30 +45,30 @@ W tym temacie wyjaśniono, jak skonfigurować śledzenie [!INCLUDE[netfx_current
                 </workflowInstanceQuery>  
              </workflowInstanceQueries>  
            </workflow>  
-         </trackingProfile>   
+         </trackingProfile>
        </tracking>  
     </system.serviceModel>  
     ```  
   
-     Aby uzyskać więcej informacji o profilach śledzenia, zobacz [śledzenie profilów](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
+     Aby uzyskać więcej informacji na temat profili śledzenia, zobacz [Śledzenie profili](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
   
-     Aby uzyskać więcej informacji na temat ogólnego śledzenia, zobacz [śledzenie i śledzenie przepływu pracy](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).  
+     Aby uzyskać więcej informacji na temat śledzenia w ogóle, zobacz [Śledzenie przepływu pracy i śledzenie](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).  
   
 ### <a name="configure-tracking-in-code"></a>Konfigurowanie śledzenia w kodzie  
   
-1. <xref:System.Activities.Tracking.EtwTrackingParticipant> Dodaj zachowanie<xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior> przy użyciu kodu, jak pokazano w poniższym przykładzie.  
+1. Dodaj <xref:System.Activities.Tracking.EtwTrackingParticipant> <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior> zachowanie przy użyciu kodu, jak pokazano w poniższym przykładzie.  
   
     ```csharp  
     host.Description.Behaviors.Add(new EtwTrackingBehavior { ProfileName = "Sample Tracking Profile" });  
     ```  
   
-     Poprzedni przykład kodu dodaje <xref:System.Activities.Tracking.EtwTrackingParticipant> i określa nazwę profilu śledzenia. Profile śledzenia są tworzone w <`trackingProfile`> elementu w ramach <`tracking`elementu >, jak pokazano w poprzedniej sekcji.  
+     Poprzedni przykładowy kod <xref:System.Activities.Tracking.EtwTrackingParticipant> dodaje i określa nazwę profilu śledzenia. Profile śledzenia są tworzone w <`trackingProfile`> element w <`tracking`> element, jak pokazano w poprzedniej sekcji.  
   
-     Aby uzyskać więcej informacji o profilach śledzenia, zobacz [śledzenie profilów](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
+     Aby uzyskać więcej informacji na temat profili śledzenia, zobacz [Śledzenie profili](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
   
-     Aby uzyskać więcej informacji na temat ogólnego śledzenia, zobacz [śledzenie i śledzenie przepływu pracy](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md). Przykład konfigurowania śledzenia programowo można znaleźć w temacie [Konfigurowanie śledzenia dla przepływu pracy](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).  
+     Aby uzyskać więcej informacji na temat śledzenia w ogóle, zobacz [Śledzenie przepływu pracy i śledzenie](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md). Na przykład konfigurowania śledzenia programowo zobacz [Konfigurowanie śledzenia dla przepływu pracy](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Uproszczona konfiguracja usług WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)
 - [Usługi przepływu pracy](../../../../docs/framework/wcf/feature-details/workflow-services.md)

@@ -1,5 +1,5 @@
 ---
-title: Element <filter> dla <add> <sharedListeners>
+title: <filter>Element <add> dla<sharedListeners>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add/filter
@@ -10,26 +10,26 @@ helpviewer_keywords:
 - filters, trace listeners
 - trace listeners, filters
 ms.assetid: 7d4e7faa-2e4e-4379-ac76-f6cd7f2f8fac
-ms.openlocfilehash: e04ecd773bd6aa7791858711edbd72128dc391ea
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 6fb52cdfa5792ab6059b60d8dbb91c107cd666ca
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088881"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153456"
 ---
-# <a name="filter-element-for-add-for-sharedlisteners"></a>\<> filtru elementu \<dodać > \<
-Dodaje filtr do odbiornika w kolekcji `sharedListeners`.  
+# <a name="filter-element-for-add-for-sharedlisteners"></a>\<filtr> Element \<dodawania> \<dla sharedListeners>
+Dodaje filtr do odbiornika `sharedListeners` w kolekcji.  
 
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp;&nbsp;[ **\<system. diagnostics >** ](system-diagnostics-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<sharedListeners >** ](sharedlisteners-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<dodaj >** ](add-element-for-sharedlisteners.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<filtru >**
+[**\<>konfiguracyjne**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<>system.diagnostics**](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<sharedListeners>**](sharedlisteners-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<dodaj>**](add-element-for-sharedlisteners.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<>filtra**
 
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<filter type="System.Diagnostics.EventTypeFilter"   
+<filter type="System.Diagnostics.EventTypeFilter"
   initializeData="Warning" />  
 ```  
   
@@ -40,8 +40,8 @@ Dodaje filtr do odbiornika w kolekcji `sharedListeners`.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|**Wprowadź**|Atrybut wymagany.<br /><br /> Określa typ filtru. Można użyć tylko pełnej nazwy typu (w formacie właściwości <xref:System.Type.FullName%2A?displayProperty=nameWithType>) lub użyć w pełni kwalifikowanej nazwy typu, w tym informacji o zestawie (w formacie właściwości <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>). Aby uzyskać informacje na temat tworzenia w pełni kwalifikowanej nazwy typu, zobacz [Określanie w pełni kwalifikowanych nazw typów](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
-|**initializeData**|Atrybut opcjonalny.<br /><br /> Ciąg przesłany do konstruktora dla określonej klasy.|  
+|**Typu**|Atrybut wymagany.<br /><br /> Określa typ filtru. Można użyć tylko pełnej nazwy typu (w <xref:System.Type.FullName%2A?displayProperty=nameWithType> formacie właściwości) lub można użyć w pełni kwalifikowanej nazwy typu, w tym informacji o zestawie (w formacie <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> właściwości). Aby uzyskać informacje na temat tworzenia w pełni kwalifikowanej nazwy typu, zobacz [Określanie w pełni kwalifikowanych nazw typów](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|**Initializedata**|Atrybut opcjonalny.<br /><br /> Ciąg przekazany do konstruktora dla określonej klasy.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -51,17 +51,17 @@ Dodaje filtr do odbiornika w kolekcji `sharedListeners`.
 |Element|Opis|  
 |-------------|-----------------|  
 |`configuration`|Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.|  
-|`system.diagnostics`|Określa detektory śledzenia, które zbierają, przechowują i rozsyłają komunikaty oraz poziom, w którym ustawiono przełącznik śledzenia.|  
-|`sharedListeners`|Kolekcja detektorów, które mogą odwoływać się do każdego elementu źródłowego lub śledzenia.|  
-|`add`|Dodaje odbiornik do kolekcji **sharedListeners** .|  
+|`system.diagnostics`|Określa odbiorniki śledzenia, które zbierają, przechowują i rozsyłają komunikaty oraz poziom, na którym ustawiony jest przełącznik śledzenia.|  
+|`sharedListeners`|Kolekcja odbiorników, do których można odwoływać się do dowolnego źródła lub elementu śledzenia.|  
+|`add`|Dodaje odbiornik do **sharedListeners** kolekcji.|  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli odbiornik jest zdefiniowany w `<add>` elementu `<sharedListeners>`, filtr dla tego odbiornika powinien być zdefiniowany w `<filter>` elementu, który jest elementem podrzędnym elementu `<add>`.  
+ Jeśli odbiornik jest zdefiniowany `<add>` w `<sharedListeners>` elemencie elementu, filtr dla tego `<filter>` odbiornika powinny być `<add>` zdefiniowane w elemencie, który jest elementem podrzędnym elementu.  
   
- Ten element może być używany w pliku konfiguracji komputera (Machine. config) i w pliku konfiguracji aplikacji.  
+ Ten element może być używany w pliku konfiguracyjnym komputera (Machine.config) i pliku konfiguracji aplikacji.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak użyć elementu `<filter>`, aby dodać filtr do `console` odbiornika śledzenia w kolekcji `sharedListeners`.  
+ W poniższym przykładzie `<filter>` pokazano, jak użyć elementu, `console` aby `sharedListeners` dodać filtr do odbiornika śledzenia w kolekcji.  
   
 ```xml  
 <configuration>  
@@ -75,9 +75,9 @@ Dodaje filtr do odbiornika w kolekcji `sharedListeners`.
       </source>  
     </sources>  
     <sharedListeners>  
-      <add name="console"   
+      <add name="console"
         type="System.Diagnostics.ConsoleTraceListener" >  
-        <filter type="System.Diagnostics.EventTypeFilter"   
+        <filter type="System.Diagnostics.EventTypeFilter"
           initializeData="Error" />  
       </add>  
     </sharedListeners>  
@@ -85,7 +85,7 @@ Dodaje filtr do odbiornika w kolekcji `sharedListeners`.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Diagnostics.TraceFilter>
 - <xref:System.Diagnostics.TraceListener>

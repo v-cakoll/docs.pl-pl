@@ -10,26 +10,26 @@ helpviewer_keywords:
 - <remove> element, authenticationModules
 - authenticationModules, remove element
 ms.assetid: abf79949-b05c-465a-b51c-bbeda9a74173
-ms.openlocfilehash: 2113b2b81ae347b398b0f25028dc6c361aec8447
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: d171fea193bbae068e69b8976abb8e56a5623f02
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089181"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154780"
 ---
-# <a name="remove-element-for-authenticationmodules-network-settings"></a>\<usunąć elementu > dla authenticationModules (Ustawienia sieci)
+# <a name="remove-element-for-authenticationmodules-network-settings"></a>\<usuń element> dla uwierzytelnianiaModule (Ustawienia sieciowe)
 Usuwa moduł uwierzytelniania z aplikacji.  
 
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp;&nbsp;[ **\<system. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<authenticationModules >** ](authenticationmodules-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<usuń >**
+[**\<>konfiguracyjne**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<>uwierzytelniania**](authenticationmodules-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<usuń>**
 
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<remove   
-   type="authentication module name"   
+<remove
+   type="authentication module name"
 />  
 ```  
   
@@ -40,7 +40,7 @@ Usuwa moduł uwierzytelniania z aplikacji.
   
 |**Atrybut**|**Opis**|  
 |-------------------|---------------------|  
-|**Wprowadź**|Nazwa modułu uwierzytelniania do usunięcia.|  
+|**Typu**|Nazwa modułu uwierzytelniania do usunięcia.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -49,15 +49,15 @@ Usuwa moduł uwierzytelniania z aplikacji.
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[authenticationModules](authenticationmodules-element-network-settings.md)|Określa moduły używane do uwierzytelniania żądań sieci.|  
+|[authenticationModules](authenticationmodules-element-network-settings.md)|Określa moduły używane do uwierzytelniania żądań sieciowych.|  
   
 ## <a name="remarks"></a>Uwagi  
- Element `remove` usuwa moduły uwierzytelniania zdefiniowane wcześniej w pliku konfiguracyjnym lub na wyższym poziomie w hierarchii konfiguracji.  
+ Element `remove` usuwa moduły uwierzytelniania, które zostały zdefiniowane wcześniej w pliku konfiguracyjnym lub na wyższym poziomie w hierarchii konfiguracji.  
   
  Wartość atrybutu `type` powinna być prawidłową nazwą klasy.  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
- Tego elementu można użyć w pliku konfiguracyjnym aplikacji lub pliku konfiguracji komputera (Machine. config).  
+ Ten element może być używany w pliku konfiguracyjnym aplikacji lub pliku konfiguracyjnym komputera (Machine.config).  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład usuwa moduł uwierzytelniania.  
@@ -72,7 +72,7 @@ Usuwa moduł uwierzytelniania z aplikacji.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>

@@ -1,24 +1,24 @@
 ---
-title: Nietrwała korelacja dupleksu
+title: Niezawodna korelacja dwukierunkowa
 ms.date: 03/30/2017
 ms.assetid: 8eb0e49a-6d3b-4f7e-a054-0d4febee2ffb
-ms.openlocfilehash: efc647b8a39f419f2165fe355529ba145663b753
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: bb73cef5190a0b146e713ef1adae24219dc2eed8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291581"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185174"
 ---
-# <a name="durable-duplex-correlation"></a>Nietrwała korelacja dupleksu
-Niezależna korelacja dupleksu, nazywana również korelacją wywołania zwrotnego, jest przydatna, gdy usługa przepływu pracy wymaga do wysłania wywołania zwrotnego do początkowego obiektu wywołującego. W przeciwieństwie do funkcji WCF, wywołanie zwrotne może wystąpić w dowolnym momencie w przyszłości i nie jest powiązane z tym samym kanałem lub okresem istnienia kanału. Jedynym wymaganiem jest, że obiekt wywołujący ma aktywny punkt końcowy nasłuchujący wiadomości wywołania zwrotnego. Dzięki temu dwie usługi przepływu pracy mogą komunikować się w długotrwałej konwersacji. Ten temat zawiera omówienie trwałej korelacji dupleksowej.  
+# <a name="durable-duplex-correlation"></a>Niezawodna korelacja dwukierunkowa
+Trwałej korelacji dupleksu, znany również jako korelacji wywołania zwrotnego, jest przydatne, gdy usługa przepływu pracy ma wymóg, aby wysłać wywołanie zwrotne do początkowego obiektu wywołującego. W przeciwieństwie do dupleksu WCF wywołanie zwrotne może się zdarzyć w dowolnym momencie w przyszłości i nie jest powiązany z tego samego kanału lub okresu istnienia kanału; jedynym wymaganiem jest, że obiekt wywołujący mają aktywny punkt końcowy nasłuchiwania wiadomości wywołania zwrotnego. Dzięki temu dwie usługi przepływu pracy do komunikowania się w długotrwałej konwersacji. Ten temat zawiera omówienie trwałej korelacji dupleksu.  
   
-## <a name="using-durable-duplex-correlation"></a>Używanie trwałej korelacji dupleksowej  
- Aby można było użyć korelacji z trwałą dupleksem, dwie usługi muszą używać powiązania z obsługą kontekstu, które obsługuje operacje dwukierunkowe, takie jak <xref:System.ServiceModel.NetTcpContextBinding> lub <xref:System.ServiceModel.WSHttpContextBinding>. Usługa wywołująca rejestruje <xref:System.ServiceModel.WSHttpContextBinding.ClientCallbackAddress%2A> z pożądanym powiązaniem na kliencie <xref:System.ServiceModel.Endpoint>. Usługa odbierająca odbiera te dane w początkowym wywołaniu, a następnie używa go na własne <xref:System.ServiceModel.Endpoint> w działaniu <xref:System.ServiceModel.Activities.Send>, które powoduje wywołanie z powrotem do usługi wywołującej. W tym przykładzie dwie usługi komunikują się ze sobą. Pierwsza usługa wywołuje metodę dla drugiej usługi, a następnie czeka na odpowiedź. Druga usługa zna nazwę metody wywołania zwrotnego, ale punkt końcowy usługi implementującej tę metodę nie jest znany w czasie projektowania.  
+## <a name="using-durable-duplex-correlation"></a>Korzystanie z trwałej korelacji dupleksu  
+ Aby użyć trwałej korelacji dupleksu, dwie usługi muszą używać powiązania kontekstowego, <xref:System.ServiceModel.NetTcpContextBinding> <xref:System.ServiceModel.WSHttpContextBinding>które obsługuje operacje dwukierunkowe, takie jak lub . Usługa wywołująca rejestruje <xref:System.ServiceModel.WSHttpContextBinding.ClientCallbackAddress%2A> z żądanym powiązaniem dla swojego klienta. <xref:System.ServiceModel.Endpoint> Usługa odbierająca odbiera te dane w wywołaniu początkowym, <xref:System.ServiceModel.Endpoint> a <xref:System.ServiceModel.Activities.Send> następnie używa ich samodzielnie w działaniu, które sprawia, że połączenie z powrotem do usługi wywołującej. W tym przykładzie dwie usługi komunikują się ze sobą. Pierwsza usługa wywołuje metodę w drugiej usłudze, a następnie czeka na odpowiedź. Druga usługa zna nazwę metody wywołania zwrotnego, ale punkt końcowy usługi, która implementuje tę metodę, nie jest znany w czasie projektowania.  
   
 > [!NOTE]
-> Trwały dupleks można używać tylko wtedy, gdy <xref:System.ServiceModel.Channels.AddressingVersion> punktu końcowego jest skonfigurowany z <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A>. Jeśli tak nie jest, zostanie zgłoszony wyjątek <xref:System.InvalidOperationException> z następującym komunikatem: "komunikat zawiera nagłówek kontekstu wywołania zwrotnego z odwołaniem do punktu końcowego dla [AddressingVersion](http://schemas.xmlsoap.org/ws/2004/08/addressing). Kontekst wywołania zwrotnego można przesłać tylko wtedy, gdy AddressingVersion jest skonfigurowany przy użyciu elementu "WSAddressing10".
+> Trwałego dupleksu można <xref:System.ServiceModel.Channels.AddressingVersion> używać tylko wtedy, <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A>gdy punkt końcowy jest skonfigurowany z programem . Jeśli tak nie jest, wyjątek jest zgłaszany z następującym <xref:System.InvalidOperationException> komunikatem: "Wiadomość zawiera nagłówek kontekstu wywołania zwrotnego z odwołaniem do punktu końcowego [addressingversion](http://schemas.xmlsoap.org/ws/2004/08/addressing). Kontekst wywołania zwrotnego może być przesyłany tylko wtedy, gdy AddressingVersion jest skonfigurowany z "WSAddressing10".
   
- W poniższym przykładzie jest hostowana usługa przepływu pracy, która tworzy wywołanie zwrotne <xref:System.ServiceModel.Endpoint> przy użyciu <xref:System.ServiceModel.WSHttpContextBinding>.  
+ W poniższym przykładzie hostowana jest usługa przepływu <xref:System.ServiceModel.Endpoint> pracy, która tworzy wywołanie zwrotne przy użyciu programu <xref:System.ServiceModel.WSHttpContextBinding>.  
   
 ```csharp  
 // Host WF Service 1.  
@@ -37,7 +37,7 @@ host1.Open();
 Console.WriteLine("Service1 waiting at: {0}", baseAddress1);  
 ```  
   
- Przepływ pracy implementujący tę usługę przepływu pracy inicjuje korelację wywołania zwrotnego z działaniem <xref:System.ServiceModel.Activities.Send> i odwołuje się do tego punktu końcowego wywołania zwrotnego z działania <xref:System.ServiceModel.Activities.Receive>, które jest skorelowane z <xref:System.ServiceModel.Activities.Send>. Poniższy przykład reprezentuje przepływ pracy, który jest zwracany z metody `GetWF1`.  
+ Przepływ pracy, który implementuje tę usługę przepływu pracy inicjuje korelację wywołania zwrotnego z jego <xref:System.ServiceModel.Activities.Send> działaniem i odwołuje się do tego punktu końcowego wywołania zwrotnego <xref:System.ServiceModel.Activities.Receive> z działania, które koreluje z <xref:System.ServiceModel.Activities.Send>. Poniższy przykład reprezentuje przepływ pracy, `GetWF1` który jest zwracany z metody.  
   
 ```csharp  
 Variable<CorrelationHandle> CallbackHandle = new Variable<CorrelationHandle>();  
@@ -51,7 +51,7 @@ Receive StartOrder = new Receive
   
 Send GetItems = new Send  
 {  
-    CorrelationInitializers =   
+    CorrelationInitializers =
     {  
         new CallbackCorrelationInitializer  
         {  
@@ -65,7 +65,7 @@ Send GetItems = new Send
         AddressUri = new Uri("http://localhost:8081/Service2"),  
         Binding = new WSHttpContextBinding  
         {  
-            ClientCallbackAddress = new Uri("http://localhost:8080/Service1/ItemsReady")                          
+            ClientCallbackAddress = new Uri("http://localhost:8080/Service1/ItemsReady")
         }  
     }  
 };  
@@ -104,7 +104,7 @@ Activity wf = new Sequence
 };  
 ```  
   
- Druga usługa przepływu pracy jest hostowana przy użyciu opartego na systemie powiązania.  
+ Druga usługa przepływu pracy jest obsługiwana przy użyciu powiązania opartego na systemie, opartego na kontekście.  
   
 ```csharp  
 // Host WF Service 2.  
@@ -120,14 +120,14 @@ host2.Open();
 Console.WriteLine("Service2 waiting at: {0}", baseAddress2);  
 ```  
   
- Przepływ pracy implementujący tę usługę przepływu pracy rozpoczyna się od działania <xref:System.ServiceModel.Activities.Receive>. To działanie Receive inicjuje korelację wywołania zwrotnego dla tej usługi, opóźnia przez pewien czas, aby symulować długotrwałą pracę, a następnie wywołuje z powrotem do pierwszej usługi przy użyciu kontekstu wywołania zwrotnego, który został przesłany podczas pierwszego wywołania usługi. Poniższy przykład reprezentuje przepływ pracy, który jest zwracany przez wywołanie `GetWF2`. Należy pamiętać, że działanie <xref:System.ServiceModel.Activities.Send> ma adres zastępczy `http://www.contoso.com`; rzeczywistym adresem używanym w czasie wykonywania jest podany adres zwrotny.  
+ Przepływ pracy, który implementuje tę usługę <xref:System.ServiceModel.Activities.Receive> przepływu pracy rozpoczyna się od działania. To działanie odbierania inicjuje korelację wywołania zwrotnego dla tej usługi, opóźnienia przez pewien okres czasu, aby symulować długotrwałą pracę, a następnie wywołania z powrotem do pierwszej usługi przy użyciu kontekstu wywołania zwrotnego, który został przekazany w pierwszym wywołaniu do usługi. Poniższy przykład przedstawia przepływ pracy, który `GetWF2`jest zwracany z wywołania do . Należy zauważyć, że <xref:System.ServiceModel.Activities.Send> działanie ma `http://www.contoso.com`adres zastępczy ; rzeczywisty adres używany w czasie wykonywania jest podany adres wywołania zwrotnego.  
   
 ```csharp  
 Variable<CorrelationHandle> ItemsCallbackHandle = new Variable<CorrelationHandle>();  
   
 Receive StartItems = new Receive  
 {  
-    CorrelationInitializers =   
+    CorrelationInitializers =
     {  
         new CallbackCorrelationInitializer  
         {  
@@ -184,12 +184,12 @@ Activity wf = new Sequence
 };  
 ```  
   
- Gdy metoda `StartOrder` jest wywoływana w pierwszym przepływie pracy, wyświetlane są następujące dane wyjściowe, które pokazują przepływ wykonywania przez dwa przepływy pracy.  
+ Gdy `StartOrder` metoda jest wywoływana w pierwszym przepływie pracy, wyświetlane są następujące dane wyjściowe, który pokazuje przepływ wykonywania za pośrednictwem dwóch przepływów pracy.  
   
 ```output  
 Service1 waiting at: http://localhost:8080/Service1  
 Service2 waiting at: http://localhost:8081/Service2  
-Press enter to exit.   
+Press enter to exit.
 WF1 - Started  
 WF2 - Request Received  
 WF1 - Request Submitted  
@@ -198,4 +198,4 @@ WF2 - Items sent
 WF1 - Items Received  
 ```  
   
- W tym przykładzie oba przepływy pracy jawnie zarządzają korelacją przy użyciu <xref:System.ServiceModel.Activities.CallbackCorrelationInitializer>. Ponieważ w tych przykładowych przepływach pracy istniała tylko jedna korelacja, domyślne zarządzanie <xref:System.ServiceModel.Activities.CorrelationHandle> byłoby wystarczające.
+ W tym przykładzie oba przepływy pracy jawnie <xref:System.ServiceModel.Activities.CallbackCorrelationInitializer>zarządzają korelacją przy użyciu pliku . Ponieważ w tych przykładowych przepływach pracy istniała tylko <xref:System.ServiceModel.Activities.CorrelationHandle> jedna korelacja, domyślne zarządzanie byłoby wystarczające.

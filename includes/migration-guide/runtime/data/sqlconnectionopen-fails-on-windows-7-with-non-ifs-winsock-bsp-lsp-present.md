@@ -1,19 +1,18 @@
 ---
-ms.openlocfilehash: a7f61ad42305377331a7f65fb91d49d709d1b728
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 65d9edc1e7377a86f8185ebf28bb5bee3a3f887d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67803257"
 ---
-### <a name="sqlconnectionopen-fails-on-windows-7-with-non-ifs-winsock-bsp-or-lsp-present"></a>SqlConnection.Open Windows 7 kończy się niepowodzeniem bez IFS Winsock BSP lub LSP obecne
+### <a name="sqlconnectionopen-fails-on-windows-7-with-non-ifs-winsock-bsp-or-lsp-present"></a>SqlConnection.Open kończy się niepowodzeniem w systemie Windows 7 z non-IFS Winsock BSP lub LSP obecny
 
 |   |   |
 |---|---|
-|Szczegóły|<xref:System.Data.SqlClient.SqlConnection.Open> i <xref:System.Data.SqlClient.SqlConnection.OpenAsync(System.Threading.CancellationToken)> się niepowodzeniem w .NET Framework 4.5, jeśli działająca na maszynie Windows 7 przy użyciu innego niż IFS Winsock BSP lub dostawcą rozwiązań Licencjonowania są dostępne na komputerze. Aby określić, czy zainstalowano BSP bez IFS lub dostawcą rozwiązań Licencjonowania, użyj <code>netsh WinSock Show Catalog</code> polecenie i zbadaj co <code>Winsock Catalog Provider Entry</code> elementu, który jest zwracany. Jeśli ma wartość flagi usługi <code>0x20000</code> ustawiony bit, dostawca używa IFS obsługuje i będzie działać poprawnie. Jeśli <code>0x20000</code> bit jest jasne (nie ustawiono), jest inne niż IFS BSP lub dostawcą rozwiązań Licencjonowania.|
-|Sugestia|Ten błąd został naprawiony w programie .NET Framework 4.5.2, dzięki czemu można uniknąć przez uaktualnienie programu .NET Framework. Alternatywnie można uniknąć, usuwając wszystkie zainstalowane bez - IFS Winsock nazywani.|
-|Scope|Mały|
+|Szczegóły|<xref:System.Data.SqlClient.SqlConnection.Open>i <xref:System.Data.SqlClient.SqlConnection.OpenAsync(System.Threading.CancellationToken)> zakończyć się niepowodzeniem w programie .NET Framework 4.5, jeśli działa na komputerze z systemem Windows 7 z systemem BSP lub LSP innego niż IFS Winsock są obecne na komputerze. Aby ustalić, czy jest zainstalowany bsp lub LSP <code>netsh WinSock Show Catalog</code> nieobjęty IFS, użyj polecenia i sprawdź każdy <code>Winsock Catalog Provider Entry</code> zwracany element. Jeśli service flags wartość <code>0x20000</code> ma bit ustawiony, dostawca używa uchwytów IFS i będzie działać poprawnie. Jeśli <code>0x20000</code> bit jest czysty (nie ustawiony), jest to bsp lub LSP innego niż IFS.|
+|Sugestia|Ten błąd został naprawiony w .NET Framework 4.5.2, dzięki czemu można go uniknąć, uaktualniając program .NET Framework. Alternatywnie można tego uniknąć, usuwając wszystkie zainstalowane lspy winsocka spoza ifs.|
+|Zakres|Mały|
 |Wersja|4.5|
 |Typ|Środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Data.SqlClient.SqlConnection.Open?displayProperty=nameWithType></li><li><xref:System.Data.SqlClient.SqlConnection.OpenAsync(System.Threading.CancellationToken)?displayProperty=nameWithType></li></ul>|
-

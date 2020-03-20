@@ -1,5 +1,5 @@
 ---
-title: Pole ServicePointManager. s_ServicePointTable
+title: Pole ServicePointManager.s_ServicePointTable
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 24459679-291c-401a-9def-e42b29466fcf
-ms.openlocfilehash: 272a0c113fd70d804c763ba0e7e6e9a4a4ee04ce
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 6a56ecd6fc85005f5987c3c2ad0d1680ca63c398
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77214917"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155820"
 ---
-# <a name="servicepointmanagers_servicepointtable-field"></a>ServicePointManager. s\_pole ServicePoint
+# <a name="servicepointmanagers_servicepointtable-field"></a>Pole ServicePointManager.s\_ServicePointTable
 
-`ServicePointManager.s_ServicePointTable` to <xref:System.Collections.Hashtable>, która zawiera listę aktywnych połączeń HTTP (<xref:System.Net.ServicePoint>s) w <xref:System.AppDomain>.
+`ServicePointManager.s_ServicePointTable`jest <xref:System.Collections.Hashtable> to, która zawiera listę aktywnych połączeń HTTP (s)<xref:System.Net.ServicePoint>w pliku <xref:System.AppDomain>.
 
 ## <a name="syntax"></a>Składnia
   
@@ -28,14 +28,14 @@ private static Hashtable s_ServicePointTable
 ```
 
 > [!WARNING]
-> Pole `ServicePointManager.s_ServicePointTable` jest prywatne i nie jest przeznaczone do użycia bezpośrednio w kodzie.
-> 
-> Firma Microsoft nie obsługuje korzystania z tego pola w aplikacji produkcyjnej w żadnej sytuacji.
+> To `ServicePointManager.s_ServicePointTable` pole jest prywatne i nie jest przeznaczone do użycia bezpośrednio w kodzie.
+>
+> Firma Microsoft w żadnym wypadku nie obsługuje używania tego pola w aplikacji produkcyjnej.
 
 ## <a name="requirements"></a>Wymagania
 
-**Przestrzeń nazw:** <xref:System.Net>
+**Obszar nazw:**<xref:System.Net>
 
-**Zestaw:** System (w pliku System. dll)
+**Montaż:** System (w pliku System.dll)
 
-**.NET Framework wersje:** Dostępne od 2,0.
+**Wersje programu .NET Framework:** Dostępne od 2.0.

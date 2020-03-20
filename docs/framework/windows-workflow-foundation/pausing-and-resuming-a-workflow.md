@@ -2,18 +2,18 @@
 title: Wstrzymywanie i wznawianie przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 11f38339-79c7-4295-b610-24a7223bbf6d
-ms.openlocfilehash: aa0431b18f6d0e4b96d7494ec2e65acd355992c7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dc6bdfe7cc10837fb8721ab12490d244d5ec1ca0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61860961"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142969"
 ---
 # <a name="pausing-and-resuming-a-workflow"></a>Wstrzymywanie i wznawianie przepływu pracy
-Przepływy pracy będzie wstrzymywanie i wznawianie w odpowiedzi na zakładek i blokowanie działania takie jak <xref:System.Activities.Statements.Delay>, ale przepływu pracy można również być jawnie wstrzymana, zwolnione i wznowiona przy użyciu trwałości.  
+Przepływy pracy będą wstrzymywać i wznawiać <xref:System.Activities.Statements.Delay>w odpowiedzi na zakładki i blokowanie działań, takich jak , ale przepływ pracy może być również jawnie wstrzymany, zwolniony i wznowiony przy użyciu trwałości.  
   
 ## <a name="pausing-a-workflow"></a>Wstrzymywanie przepływu pracy  
- Aby wstrzymać przepływ pracy, należy użyć <xref:System.Activities.WorkflowApplication.Unload%2A>.  Ta metoda żądań, przepływ pracy utrwalanie i zwolnić i zgłosi <xref:System.TimeoutException> Jeśli przepływ pracy nie spowoduje usunięcia w ciągu 30 sekund.  
+ Aby wstrzymać przepływ <xref:System.Activities.WorkflowApplication.Unload%2A>pracy, użyj programu .  Ta metoda żąda, aby przepływ pracy utrwalić i zwolnić i będzie <xref:System.TimeoutException> zgłosić, jeśli przepływ pracy nie zwalnia w ciągu 30 sekund.  
   
 ```csharp  
 try  
@@ -28,7 +28,7 @@ catch (TimeoutException e)
 ```  
   
 ## <a name="resuming-a-workflow"></a>Wznawianie przepływu pracy  
- Aby wznowić przepływ pracy wcześniej wstrzymane, jak i zwolniony, należy użyć <xref:System.Activities.WorkflowApplication.Load%2A>. Ta metoda ładuje przepływu pracy do pamięci w sklepie trwałości.  
+ Aby wznowić wcześniej wstrzymany i zwolniony <xref:System.Activities.WorkflowApplication.Load%2A>przepływ pracy, użyj programu . Ta metoda ładuje przepływ pracy z magazynu trwałości do pamięci.  
   
 ```csharp  
 WorkflowApplication application = new WorkflowApplication(activity);  
@@ -41,19 +41,19 @@ application.Load(id);
   
 ```csharp  
 static string bkName = "bkName";  
-static void Main(string[] args)   
+static void Main(string[] args)
 {  
     StartAndUnloadInstance();  
 }  
   
-static void StartAndUnloadInstance()   
+static void StartAndUnloadInstance()
 {  
     AutoResetEvent waitHandler = new AutoResetEvent(false);  
     WorkflowApplication wfApp = new WorkflowApplication(GetDelayedWF());  
     SqlWorkflowInstanceStore instanceStore = SetupSqlpersistenceStore();  
     wfApp.InstanceStore = instanceStore;  
     wfApp.Extensions.Add(SetupMyFileTrackingParticipant);  
-    wfApp.PersistableIdle = (e) => {          ///persists application state and remove it from memory   
+    wfApp.PersistableIdle = (e) => {          ///persists application state and remove it from memory
     return PersistableIdleAction.Unload;  
     };  
     wfApp.Unloaded = (e) => {  
@@ -65,8 +65,8 @@ static void StartAndUnloadInstance()
     LoadAndCompleteInstance(id);  
 }  
   
-static void LoadAndCompleteInstance(Guid id)   
-{            
+static void LoadAndCompleteInstance(Guid id)
+{
     Console.WriteLine("Press <enter> to load the persisted workflow");  
     Console.ReadLine();  
     AutoResetEvent waitHandler = new AutoResetEvent(false);  
@@ -86,7 +86,7 @@ static void LoadAndCompleteInstance(Guid id)
     waitHandler.WaitOne();  
 }  
   
-public static Activity GetDelayedWF()   
+public static Activity GetDelayedWF()
 {  
     return new Sequence {  
         Activities ={  
@@ -97,8 +97,8 @@ public static Activity GetDelayedWF()
     };  
 }  
   
-private static SqlWorkflowInstanceStore SetupSqlpersistenceStore()   
-{   
+private static SqlWorkflowInstanceStore SetupSqlpersistenceStore()
+{
      string connectionString = ConfigurationManager.AppSettings["SqlWF4PersistenceConnectionString"].ToString();  
     SqlWorkflowInstanceStore sqlWFInstanceStore = new SqlWorkflowInstanceStore(connectionString);  
     sqlWFInstanceStore.InstanceCompletionAction = InstanceCompletionAction.DeleteAll;  

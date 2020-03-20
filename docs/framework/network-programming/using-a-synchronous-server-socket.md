@@ -18,18 +18,18 @@ helpviewer_keywords:
 - Internet, sockets
 ms.assetid: d1ce882e-653e-41f5-9289-844ec855b804
 ms.openlocfilehash: cbc02c755ceefa8f31439f121a98978b82f33fa2
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047034"
 ---
 # <a name="using-a-synchronous-server-socket"></a>Używanie synchronicznego gniazda serwera
-Synchroniczne gniazda serwera zawieszają wykonywanie aplikacji do momentu odebrania żądania połączenia w gnieździe. Synchroniczne gniazda serwera nie są odpowiednie dla aplikacji, które wykorzystują intensywną eksploatację sieci, ale mogą być odpowiednie dla prostych aplikacji sieciowych.  
+Synchroniczne gniazda serwera zawieszają wykonywanie aplikacji do momentu odebrania żądania połączenia na gnieździe. Synchroniczne gniazda serwerów nie są odpowiednie dla aplikacji, które intensywnie korzystają z sieci podczas ich działania, ale mogą być odpowiednie do prostych aplikacji sieciowych.  
   
- Gdy jest ustawiony do nasłuchiwania na punkcie końcowym <xref:System.Net.Sockets.Socket.Bind%2A> przy <xref:System.Net.Sockets.Socket.Listen%2A> użyciu metod i, jest <xref:System.Net.Sockets.Socket.Accept%2A> gotowy do akceptowania przychodzących żądań połączeń przy użyciu metody. <xref:System.Net.Sockets.Socket> Aplikacja jest wstrzymana do momentu odebrania żądania połączenia w przypadku wywołania metody **Accept** .  
+ Po <xref:System.Net.Sockets.Socket> a jest ustawiona do nasłuchiwania w punkcie końcowym przy użyciu <xref:System.Net.Sockets.Socket.Bind%2A> i <xref:System.Net.Sockets.Socket.Listen%2A> metody, jest gotowy do akceptowania żądań połączeń przychodzących przy użyciu <xref:System.Net.Sockets.Socket.Accept%2A> metody. Aplikacja jest zawieszona do momentu odebraniem żądania połączenia, gdy wywoływana jest metoda **Accept.**  
   
- Po odebraniu żądania połączenia **Zaakceptuj** zwraca nowe wystąpienie **gniazda** skojarzone z klientem nawiązującym połączenie. Poniższy przykład odczytuje dane z klienta programu, wyświetla go w konsoli programu i zwraca dane z powrotem do klienta. **Gniazdo** nie określa żadnego protokołu obsługi komunikatów, dlatego ciąg "\<EOF >" oznacza koniec danych komunikatu. Przyjęto założenie , że `listener` gniazdo o nazwie zostało zainicjowane i powiązane z punktem końcowym.  
+ Po odebraniu żądania **połączenia, Zaakceptuj** zwraca nowe **wystąpienie Socket,** które jest skojarzone z klientem łączącym. Poniższy przykład odczytuje dane z klienta, wyświetla go na konsoli i echa danych z powrotem do klienta. **Socket** nie określa żadnego protokołu obsługi\<wiadomości, więc ciąg "EOF>" oznacza koniec danych wiadomości. Przyjęto założenie, **Socket** że `listener` Socket nazwie został zainicjowany i powiązany z punktem końcowym.  
   
 ```vb  
 Console.WriteLine("Waiting for a connection...")  
@@ -75,7 +75,7 @@ handler.Shutdown(SocketShutdown.Both);
 handler.Close();  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Używanie asynchronicznego gniazda serwera](using-an-asynchronous-server-socket.md)
 - [Przykład synchronicznego gniazda serwera](synchronous-server-socket-example.md)

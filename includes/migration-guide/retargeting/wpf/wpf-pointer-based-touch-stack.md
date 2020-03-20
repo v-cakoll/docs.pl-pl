@@ -1,18 +1,17 @@
 ---
-ms.openlocfilehash: a620028a4e286799a6762c57145264ac0e2dbaf9
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 3463b6c45952aab0023e40921739e84eb51ca001
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67859150"
 ---
-### <a name="wpf-pointer-based-touch-stack"></a>WPF Pointer-Based Touch Stack
+### <a name="wpf-pointer-based-touch-stack"></a>Stos dotykowy oparty na wskaźniku WPF
 
 |   |   |
 |---|---|
-|Szczegóły|Ta zmiana dodaje możliwość włączenia opcjonalne WM_POINTER oparty na protokole stosu dotyk/pióro WPF.  Deweloperów, którzy nie jawnie włączyć ten powinien zostać wyświetlony bez zmian w zachowaniu dotyk/pióro WPF. Bieżący znane problemy z opcjonalnych WM_POINTER na podstawie dotyk/pióro stosu:<ul><li>Brak obsługi pisma odręcznego w czasie rzeczywistym.</li><li>Podczas pisania odręcznego i stylusplugins — będą nadal działać, zostanie przetworzone w wątku interfejsu użytkownika, co może prowadzić do pogorszenia wydajności.</li><li>Zmiany zachowania z powodu zmian w ramach podwyższenia poziomu dotyk/pióro zdarzeń do zdarzenia myszy</li><li>Manipulowanie może zachowywać się inaczej</li><li>Przeciągnij/upuść będą wyświetlały odpowiednią opinię dotyczącą wprowadzanie dotykowe</li><li>Nie ma to wpływu na wejście pióra</li><li>Już nie można zainicjować przeciągania i upuszczania zdarzeń dotyk/pióra</li><li>To potencjalnie zawieszanie aplikacji, dopóki nie zostanie wykryte wejście myszy.</li><li>Zamiast tego deweloperów należy zainicjować przeciągnij i upuść z zdarzeń myszy.</li></ul>|
-|Sugestia|Deweloperzy, którzy chcą włączyć ten stos można dodać/merge następujące polecenie, aby ich stosowania pliku App.config:<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Windows.Input.Stylus.EnablePointerSupport=true&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>Usunięcie tej lub ustawienie wartości FALSE spowoduje wyłączenie tego stosu opcjonalne. Należy pamiętać, że ten stos jest dostępna tylko w systemie Windows 10 Creators Update i nowszych.|
-|Scope|Krawędź|
+|Szczegóły|Ta zmiana dodaje możliwość włączenia opcjonalnego WM_POINTER oparty na WPF touch/pisaka stosu.  Deweloperzy, którzy nie jawnie włączyć to powinno zobaczyć żadnych zmian w WPF touch/pisak zachowanie. Bieżące znane problemy z opcjonalnym WM_POINTER stosem dotykowym/rysikowym:<ul><li>Brak obsługi pisma oduniającego w czasie rzeczywistym.</li><li>Podczas odkowania i stylusPlugins będzie nadal działać, będą one przetwarzane w wątku interfejsu użytkownika, co może prowadzić do niskiej wydajności.</li><li>Zmiany w zachowaniu spowodowane zmianami w promocji ze zdarzeń dotykowych/pisaka na zdarzenia myszy</li><li>Manipulacja może zachowywać się inaczej</li><li>Przeciąganie/upuszczanie nie będzie wyświetlane odpowiednie informacje zwrotne dla wprowadzania dotykowego</li><li>Nie ma to wpływu na wprowadzanie rysika</li><li>Przeciągania/Upuszczania nie można już inicjować podczas zdarzeń dotykowych/pisaka</li><li>Może to potencjalnie zawiesić aplikację do momentu wykrycia danych wejściowych myszy.</li><li>Zamiast tego deweloperzy powinni zainicjować przeciąganie i upuszczanie ze zdarzeń myszy.</li></ul>|
+|Sugestia|Deweloperzy, którzy chcą włączyć ten stos, mogą dodawać/scalać następujące elementy do pliku App.config aplikacji:<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Windows.Input.Stylus.EnablePointerSupport=true&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>Usunięcie tej wartości lub ustawienie wartości false spowoduje wyłączenie tego opcjonalnego stosu. Należy pamiętać, że ten stos jest dostępny tylko w systemie Windows 10 Creators Update i powyżej.|
+|Zakres|Brzeg|
 |Wersja|4.7|
 |Typ|Przekierowanie|
-

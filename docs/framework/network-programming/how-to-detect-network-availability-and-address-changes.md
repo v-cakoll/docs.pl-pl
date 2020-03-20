@@ -5,14 +5,14 @@ helpviewer_keywords:
 - Network
 ms.assetid: d4377115-4a76-4848-ab23-4898d65c771c
 ms.openlocfilehash: 9e265a97d339da59bb9d0af6ab6757e16af00e06
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "70894964"
 ---
 # <a name="how-to-detect-network-availability-and-address-changes"></a>Instrukcje: wykrywanie dostępności sieci i zmian adresów
-Ten przykład pokazuje, jak wykrywać zmiany w adresie sieciowym interfejsu.  
+W tym przykładzie pokazano, jak wykryć zmiany w adresie sieciowym interfejsu.  
   
 ## <a name="example"></a>Przykład  
   
@@ -48,4 +48,4 @@ namespace Examples.Net.AddressChanges
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
-- Odwołania do przestrzeni nazw **System.NET** .
+- Odwołania do **System.Net** obszaru nazw.

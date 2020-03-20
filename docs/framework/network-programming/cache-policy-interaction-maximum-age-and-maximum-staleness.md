@@ -10,32 +10,32 @@ helpviewer_keywords:
 - age of cached resources
 ms.assetid: 7f775925-89a1-4956-ba90-c869c1749a94
 ms.openlocfilehash: e21cfc28407ba67afdce8d72e5e52c12ab359059
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048838"
 ---
 # <a name="cache-policy-interactionmaximum-age-and-maximum-staleness"></a>Interakcja z zasadami pamięci podręcznej — maksymalny wiek i maksymalna nieaktualność
-Aby zapewnić, że najnowsza zawartość jest zwracana do aplikacji klienckiej, interakcja z zasadami pamięci podręcznej klienta i wymagania dotyczące ponownego sprawdzania poprawności serwera zawsze będą mieć najważniejsze zasady pamięci podręcznej. We wszystkich przykładach w tym temacie przedstawiono zasady pamięci podręcznej dla zasobu, który jest buforowany 1 stycznia i wygasa 4 stycznia.  
+Aby upewnić się, że najświeższa zawartość jest zwracana do aplikacji klienckiej, interakcja zasad pamięci podręcznej klienta i wymagania dotyczące ponownego licencjonowania serwera zawsze skutkuje najbardziej konserwatywnymi zasadami pamięci podręcznej. Wszystkie przykłady w tym temacie ilustrują zasady pamięci podręcznej dla zasobu, który jest buforowany w dniu 1 stycznia i wygasa 4 stycznia.  
   
- W poniższych przykładach maksymalna wartość nieodświeżona (`maxStale`) jest używana w połączeniu z maksymalnym wiekiem (`maxAge`):  
+ W poniższych przykładach maksymalna wartość`maxStale`nieaktualności ( )`maxAge`jest używana w połączeniu z maksymalnym wiekiem ( ):  
   
-- Jeśli zasady pamięci podręcznej są ustawione `maxAge` na 5 dni i nie `maxStale` określają wartości `maxAge` , zgodnie z wartością, zawartość będzie można użyć do 6 stycznia. Jednak zgodnie z wymaganiami dotyczącymi weryfikacji serwera zawartość wygasa 4 stycznia. Ponieważ data wygaśnięcia zawartości jest bardziej ostrożna (wcześniej), ma pierwszeństwo przed `maxAge` zasadami. W związku z tym zawartość wygasa 4 stycznia i należy ponownie sprawdzić poprawność, nawet jeśli nie osiągnięto maksymalnego wieku.  
+- Jeśli zasady pamięci `maxAge` podręcznej ustawia = 5 dni i nie określa `maxStale` wartość, zgodnie z `maxAge` wartością, zawartość jest użyteczna do 6 stycznia. Jednak zgodnie z wymaganiami serwera ponownego ważności zawartość wygasa 4 stycznia. Ponieważ data wygaśnięcia zawartości jest bardziej konserwatywna (wcześniej), ma pierwszeństwo przed zasadami. `maxAge` W związku z tym zawartość wygasa 4 stycznia i musi zostać ponownie przyznana, mimo że jej maksymalny wiek nie został osiągnięty.  
   
-- Jeśli zasady pamięci podręcznej określają `maxAge` 5 dni i `maxStale` = 3 dni `maxAge` , zgodnie z wartością, zawartość będzie można użyć do 6 stycznia. `maxStale` Według wartości, zawartość jest użyteczna do 7 stycznia. W związku z tym zawartość zostanie ponownie sprawdzona w dniu 6 stycznia.  
+- Jeśli ustawienia `maxAge` zasad pamięci podręcznej `maxStale` = 5 dni `maxAge` i = 3 dni, zgodnie z wartością, zawartość może być użytkowana do 6 stycznia. Zgodnie z `maxStale` wartością, zawartość może być użytkowana do 7 stycznia. W związku z tym zawartość zostanie ponownie oceniona 6 stycznia.  
   
-- Jeśli zasady pamięci podręcznej określają `maxAge` 5 dni i `maxStale` = 1 dzień `maxAge` , zgodnie z wartością, zawartość będzie można użyć do 6 stycznia. `maxStale` Według wartości, zawartość jest użyteczna do 5 stycznia. W związku z tym zawartość zostanie ponownie zweryfikowana 5 stycznia.  
+- Jeśli zasady pamięci `maxAge` podręcznej ustawia `maxStale` = 5 dni `maxAge` i = 1 dzień, zgodnie z wartością, zawartość jest użyteczna do 6 stycznia. Zgodnie z `maxStale` wartością, zawartość może być użytkowana do 5 stycznia. W związku z tym zawartość zostanie ponownie oceniona 5 stycznia.  
   
- Gdy maksymalny wiek jest krótszy niż data wygaśnięcia zawartości, bardziej ostrożne zachowanie buforowania jest zawsze przeważane, a maksymalna wartość starej wartości nie ma żadnego wpływu. Poniższe przykłady ilustrują efekt ustawienia maksymalnej wartości starej (`maxStale`) w przypadku osiągnięcia maksymalnego wieku (`maxAge`) przed wygaśnięciem zawartości:  
+ Gdy maksymalny wiek jest mniejszy niż data wygaśnięcia zawartości, zawsze przeważa bardziej konserwatywne zachowanie buforowania, a maksymalna wartość nieaktualności nie ma wpływu. Poniższe przykłady ilustrują efekt ustawienia maksymalnej nieaktualności (`maxStale`) po osiągnięciu maksymalnego wieku (`maxAge`) przed wygaśnięciem zawartości:  
   
-- Jeśli zasady pamięci podręcznej są ustawione `maxAge` na 1 dzień i nie określają `maxStale` wartości, zawartość jest ponownie weryfikowana w dniu 2 stycznia, nawet jeśli nie wygasła.  
+- Jeśli zasady pamięci `maxAge` podręcznej ustawia = 1 `maxStale` dzień i nie określa wartość wartości, zawartość jest ponownie zmieniana 2 stycznia, mimo że nie wygasła.  
   
-- Jeśli zasady pamięci podręcznej określają `maxAge` 1 dzień i `maxStale` = 3 dni, zawartość jest ponownie weryfikowana w dniu 2 stycznia, aby wymusić bardziej niewykonalne ustawienie zasad.  
+- Jeśli zasady pamięci `maxAge` podręcznej ustawia `maxStale` = 1 dzień i = 3 dni, zawartość jest ponownie wyegzekwowana 2 stycznia, aby wymusić ustawienie zasad bardziej konserwatywne.  
   
-- Jeśli zasady pamięci podręcznej określają `maxAge` 1 dzień i `maxStale` = 1 dzień, zawartość jest ponownie weryfikowana 2 stycznia.  
+- Jeśli zasady pamięci `maxAge` podręcznej ustawia `maxStale` = 1 dzień i = 1 dzień, zawartość jest ponownie w dniu 2 stycznia.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Zarządzanie pamięcią podręczną dla aplikacji sieciowych](cache-management-for-network-applications.md)
 - [Zasady pamięci podręcznej](cache-policy.md)

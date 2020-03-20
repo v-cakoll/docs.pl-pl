@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Maluj obszar za pomocą Visual'
+title: Jak malować obszar za pomocą Visual
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,17 +9,17 @@ helpviewer_keywords:
 - visuals [WPF], painting with
 - brushes [WPF], painting with visuals
 ms.assetid: 35f92996-1d03-4542-acc4-3469dcf09492
-ms.openlocfilehash: b5376085dc36549cd2d3d72835ec291454124267
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 793a14f0d395a60bf73ca7dc173b82237a139f35
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921709"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78849370"
 ---
-# <a name="how-to-paint-an-area-with-a-visual"></a>Instrukcje: Maluj obszar za pomocą Visual
-W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.VisualBrush> Maluj obszar za pomocą klasy <xref:System.Windows.Media.Visual>.  
+# <a name="how-to-paint-an-area-with-a-visual"></a>Jak malować obszar za pomocą Visual
+W tym przykładzie <xref:System.Windows.Media.VisualBrush> pokazano, jak używać <xref:System.Windows.Media.Visual>klasy do malowania obszaru za pomocą pliku .  
   
- W poniższym przykładzie kilka formantów i panelu są używane jako tło prostokąta.  
+ W poniższym przykładzie kilka formantów i panel są używane jako tło prostokąta.  
   
 ## <a name="example"></a>Przykład  
  [!code-xaml[BrushOverviewExamples_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/VisualBrushExample.xaml#graphicsmmvisualbrushasrectanglebackgroundexample)]  
@@ -27,10 +27,10 @@ W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.VisualBrush
  [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/VisualBrushExample.cs#graphicsmmvisualbrushasrectanglebackgroundexample1)]
  [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/visualbrushexample.vb#graphicsmmvisualbrushasrectanglebackgroundexample1)]  
   
- Aby uzyskać więcej informacji na temat <xref:System.Windows.Media.VisualBrush> i dodatkowe przykłady, zobacz [malowanie obrazami, rysowaniem i Visual](painting-with-images-drawings-and-visuals.md) Przegląd.  
+ Aby uzyskać <xref:System.Windows.Media.VisualBrush> więcej informacji na temat i dodatkowych przykładów, zobacz [Malowanie obrazami, rysunkami i wizualizacjami.](painting-with-images-drawings-and-visuals.md)  
   
- Ten przykład kodu jest częścią większego przykładu przewidzianego dla <xref:System.Windows.Media.VisualBrush> klasy. Aby uzyskać pełny przykład, zobacz [przykładowe VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049).  
+ W tym przykładzie kodu jest częścią <xref:System.Windows.Media.VisualBrush> większego przykładu przewidzianego dla klasy. Aby uzyskać pełną próbkę, zobacz [Przykład wizualny pędzla](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/VisualBrush).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Malowanie przy użyciu obrazów, rysowania i wizualizacji](painting-with-images-drawings-and-visuals.md)

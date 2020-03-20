@@ -10,21 +10,21 @@ helpviewer_keywords:
 - <bypasslist>, clear element
 - bypasslist, clear element
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
-ms.openlocfilehash: 2ad6b16370f600299439d2e810dfefa1b5fa3c06
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: c25477c2c99be66b34b07e1f7e50115bfa8d14e9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74087528"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154936"
 ---
-# <a name="clear-element-for-bypasslist-network-settings"></a>\<Wyczyść element > dla BypassList (Ustawienia sieci)
-Czyści listę pomijania proxy.  
+# <a name="clear-element-for-bypasslist-network-settings"></a>\<wyczyść> element dla bypasslist (Ustawienia sieciowe)
+Czyści listę pomijania serwera proxy.  
   
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp;&nbsp;[ **\<system. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<BypassList**](bypasslist-element-network-settings.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<wyczyść >**
+[**\<>konfiguracyjne**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<defaultProxy>**](defaultproxy-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<>obwodnicy**](bypasslist-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<wyraźne>**
 
 ## <a name="syntax"></a>Składnia  
   
@@ -45,16 +45,16 @@ Czyści listę pomijania proxy.
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[bypasslist](bypasslist-element-network-settings.md)|Zawiera zestaw wyrażeń regularnych, które opisują adresy, które nie korzystają z serwera proxy.|  
+|[Bypasslist](bypasslist-element-network-settings.md)|Zawiera zestaw wyrażeń regularnych, które opisują adresy, które nie używają serwera proxy.|  
   
 ## <a name="remarks"></a>Uwagi  
  Element `clear` czyści wszystkie wpisy z listy pomijania.  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
- Tego elementu można użyć w pliku konfiguracyjnym aplikacji lub pliku konfiguracji komputera (Machine. config).  
+ Ten element może być używany w pliku konfiguracyjnym aplikacji lub pliku konfiguracyjnym komputera (Machine.config).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład czyści listę pomijania, a następnie dodaje dwa adresy do listy pomijania. Najpierw pomija serwer proxy dla wszystkich serwerów w domenie contoso.com; drugi pomija serwer proxy dla wszystkich serwerów, których adres IP rozpoczyna się od 192,168.  
+ Poniższy przykład czyści listę pomijania, a następnie dodaje dwa adresy do listy pomijania. Pierwszy omija serwer proxy dla wszystkich serwerów w domenie contoso.com; drugi omija serwer proxy dla wszystkich serwerów, których adres IP zaczyna się od 192.168.  
   
 ```xml  
 <configuration>  
@@ -67,10 +67,10 @@ Czyści listę pomijania proxy.
       </bypasslist>  
     </defaultProxy>  
   </system.net>  
-</configuration>   
+</configuration>
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [Schemat ustawień sieci](index.md)

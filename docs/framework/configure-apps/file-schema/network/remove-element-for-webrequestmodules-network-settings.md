@@ -10,26 +10,26 @@ helpviewer_keywords:
 - <remove> element, webRequestModules
 - <webRequestModules>, remove element
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
-ms.openlocfilehash: ca3a78a491c61b6e23dab0f96eebceb3157706ae
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: afa1aef8ea71f43a136987ec5b6e1925c6d9fb40
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089136"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154728"
 ---
-# <a name="remove-element-for-webrequestmodules-network-settings"></a>\<usunąć elementu > dla webRequestModules (Ustawienia sieci)
+# <a name="remove-element-for-webrequestmodules-network-settings"></a>\<usuń element> dla webRequestModules (Ustawienia sieciowe)
 Usuwa niestandardowy moduł żądania sieci Web z aplikacji.  
   
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp;&nbsp;[ **\<system. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<webRequestModules >** ](webrequestmodules-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<usuń >**
+[**\<>konfiguracyjne**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<webRequestModules>**](webrequestmodules-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<usuń>**
   
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<remove   
-  prefix="URI prefix"   
+<remove
+  prefix="URI prefix"
 />  
 ```  
   
@@ -40,7 +40,7 @@ Usuwa niestandardowy moduł żądania sieci Web z aplikacji.
   
 |**Atrybut**|**Opis**|  
 |-------------------|---------------------|  
-|`prefix`|Prefiks identyfikatora URI dla żądań obsłużonych przez ten moduł żądania sieci Web.|  
+|`prefix`|Prefiks identyfikatora URI dla żądań obsługiwanych przez ten moduł żądania sieci Web.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -49,19 +49,19 @@ Usuwa niestandardowy moduł żądania sieci Web z aplikacji.
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[webRequestModules](webrequestmodules-element-network-settings.md)|Określa moduły, które mają być używane do żądania informacji z hostów sieciowych.|  
+|[webRequestModules (WebRequestModules)](webrequestmodules-element-network-settings.md)|Określa moduły, za pomocą których mają być wymagane informacje od hostów sieciowych.|  
   
 ## <a name="remarks"></a>Uwagi  
  Element `remove` usuwa zarejestrowany moduł żądania sieci Web dla określonego prefiksu URI.  
   
- Wartość atrybutu `prefix` powinna być wiodącymi znakami prawidłowego identyfikatora URI — na przykład "`http`" lub "`http://www.contoso.com`".  
+ Wartość atrybutu `prefix` powinna być znakami wiodącymi prawidłowego identyfikatora URI , na przykład " "`http`lub "`http://www.contoso.com`".  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
- Tego elementu można użyć w pliku konfiguracyjnym aplikacji lub pliku konfiguracji komputera (Machine. config).  
+ Ten element może być używany w pliku konfiguracyjnym aplikacji lub pliku konfiguracyjnym komputera (Machine.config).  
   
 ## <a name="example"></a>Przykład  
 
-Poniższy przykład usuwa istniejący moduł żądania sieci Web dla protokołu HTTP, a następnie rejestruje nowy niestandardowy moduł żądania sieci Web dla żądań HTTP do `www.contoso.com`.
+Poniższy przykład usuwa istniejący moduł żądania sieci Web dla protokołu HTTP, a `www.contoso.com`następnie rejestruje nowy niestandardowy moduł żądania sieci Web dla żądań HTTP do .
   
 ```xml  
 <configuration>  
@@ -77,7 +77,7 @@ Poniższy przykład usuwa istniejący moduł żądania sieci Web dla protokołu 
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Net.WebRequest>
 - [Schemat ustawień sieci](index.md)

@@ -3,10 +3,10 @@ title: 'Ograniczenie: Deserializacja obiektów między domenami aplikacji'
 ms.date: 03/30/2017
 ms.assetid: 30c2d66c-04a8-41a5-ad31-646b937f61b5
 ms.openlocfilehash: e2d90a77cab699646bd31eaa162d1bd1744fd51b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73457926"
 ---
 # <a name="mitigation-deserialization-of-objects-across-app-domains"></a>Ograniczenie: Deserializacja obiektów między domenami aplikacji
@@ -35,7 +35,7 @@ W niektórych przypadkach, gdy aplikacja używa dwóch lub większej liczby dome
   
 6. Ponieważ typy znajdujące się w logicznym kontekście wywołań nie mogą być rozpoznane w domyślnej domenie aplikacji, zgłaszany jest wyjątek.  
   
-## <a name="mitigation"></a>Ograniczenie  
+## <a name="mitigation"></a>Środki zaradcze  
  Aby obejść ten problem, należy wykonać następujące czynności  
   
 1. Poszukaj wywołania `get_Evidence` w stosie wywołań gdy wyjątek jest zgłaszany. Może to być dowolny wyjątek z dużego podzbioru wyjątków, łącznie z <xref:System.IO.FileNotFoundException> i <xref:System.Runtime.Serialization.SerializationException>.  
@@ -46,6 +46,6 @@ W niektórych przypadkach, gdy aplikacja używa dwóch lub większej liczby dome
     System.Configuration.ConfigurationManager.GetSection("system.xml/xmlReader");  
     ```
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Zgodność aplikacji](application-compatibility.md)

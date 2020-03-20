@@ -10,26 +10,26 @@ helpviewer_keywords:
 - <connectionManagement>, remove element
 - remove element, connectionManagement
 ms.assetid: 94b81775-5a22-4975-8c47-8620c40c3f35
-ms.openlocfilehash: 287e36dce65be7a002499d2cd22481018a1f4742
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 39ce85c3c15a2d4bdfce801a35e9ca088bd5091b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089168"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154741"
 ---
-# <a name="remove-element-for-connectionmanagement-network-settings"></a>\<usunąć elementu > dla connectionManagement (Ustawienia sieci)
+# <a name="remove-element-for-connectionmanagement-network-settings"></a>\<usuń> element dla połączeniaManagement (Ustawienia sieciowe)
 Usuwa adres IP lub nazwę DNS z listy zarządzania połączeniami.  
 
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp;&nbsp;[ **\<system. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<connectionManagement >** ](connectionmanagement-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<usuń >**
+[**\<>konfiguracyjne**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<connectionManagement>**](connectionmanagement-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<usuń>**
 
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<remove   
-  address="server name or IP address"   
+<remove
+  address="server name or IP address"
 />  
 ```  
   
@@ -49,7 +49,7 @@ Usuwa adres IP lub nazwę DNS z listy zarządzania połączeniami.
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[connectionManagement](connectionmanagement-element-network-settings.md)|Określa maksymalną liczbę połączeń z hostem sieciowym.|  
+|[connectionManagement (PołączenieManagement)](connectionmanagement-element-network-settings.md)|Określa maksymalną liczbę połączeń z hostem sieciowym.|  
   
 ## <a name="remarks"></a>Uwagi  
  Element `remove` usuwa wpis listy zarządzania połączeniami dla określonego serwera.  
@@ -57,10 +57,10 @@ Usuwa adres IP lub nazwę DNS z listy zarządzania połączeniami.
  Wartość atrybutu `address` powinna być prawidłowym adresem IP lub nazwą hosta.  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
- Tego elementu można użyć w pliku konfiguracyjnym aplikacji lub pliku konfiguracji komputera (Machine. config).  
+ Ten element może być używany w pliku konfiguracyjnym aplikacji lub pliku konfiguracyjnym komputera (Machine.config).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład usuwa wszystkie wpisy listy zarządzania połączeniami dla serwera `www.adventure-works.com` a następnie konfiguruje aplikację do używania czterech połączeń z serwerem `www.contoso.com` i dwóch połączeń z innymi serwerami.  
+ Poniższy przykład usuwa wszystkie wpisy listy `www.adventure-works.com` zarządzania połączeniami dla serwera, a następnie `www.contoso.com` konfiguruje aplikację do używania czterech połączeń z serwerem i dwóch połączeń ze wszystkimi innymi serwerami.  
   
 ```xml  
 <configuration>  
@@ -74,7 +74,7 @@ Usuwa adres IP lub nazwę DNS z listy zarządzania połączeniami.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>

@@ -2,27 +2,27 @@
 title: Nieogólne działanie ForEach
 ms.date: 03/30/2017
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
-ms.openlocfilehash: 93a6b1d815ef6478974ceadf8ad935be2a3bdea5
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 08dbac3974915f823a4f6e39f35927453a7c4b3a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75338659"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142709"
 ---
 # <a name="non-generic-foreach"></a>Nieogólne działanie ForEach
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] dostarcza w swoim przyborniku zestaw działań przepływu sterowania, w tym <xref:System.Activities.Statements.ForEach%601>, które umożliwiają iterację przez kolekcje <xref:System.Collections.Generic.IEnumerable%601>.  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]w swoim zestawie narzędzi znajduje się zestaw <xref:System.Activities.Statements.ForEach%601>działań control flow, <xref:System.Collections.Generic.IEnumerable%601> w tym , który umożliwia iterację poprzez kolekcje.  
   
- <xref:System.Activities.Statements.ForEach%601> wymaga, aby Właściwość <xref:System.Activities.Statements.ForEach%601.Values%2A> była typu <xref:System.Collections.Generic.IEnumerable%601>. Uniemożliwia to użytkownikom iterację struktur danych, które implementują interfejs <xref:System.Collections.Generic.IEnumerable%601> (na przykład <xref:System.Collections.ArrayList>). Nieogólna wersja <xref:System.Activities.Statements.ForEach%601> przekroczy to wymaganie, kosztem większej złożoności w czasie wykonywania w celu zapewnienia zgodności typów wartości w kolekcji.  
+ <xref:System.Activities.Statements.ForEach%601>wymaga, <xref:System.Activities.Statements.ForEach%601.Values%2A> aby jego <xref:System.Collections.Generic.IEnumerable%601>właściwość była typu. Uniemożliwia to użytkownikom iterację struktur danych <xref:System.Collections.Generic.IEnumerable%601> implementujących interfejs <xref:System.Collections.ArrayList>(na przykład ). Nierodzyna <xref:System.Activities.Statements.ForEach%601> wersja pokonuje to wymaganie, kosztem większej złożoności w czasie wykonywania w celu zapewnienia zgodności typów wartości w kolekcji.  
   
- Ten przykład pokazuje, jak zaimplementować nieogólne działanie <xref:System.Activities.Statements.ForEach%601> i jego projektanta. To działanie może służyć do iterowania przez <xref:System.Collections.ArrayList>.  
+ W tym przykładzie pokazano, <xref:System.Activities.Statements.ForEach%601> jak zaimplementować działanie niegeneryczne i jego projektanta. To działanie może służyć do <xref:System.Collections.ArrayList>iteracji przez .  
   
-## <a name="foreach-activity"></a>Działanie ForEach  
- Instrukcja C#/Visual Basic `foreach` wylicza elementy kolekcji, wykonując osadzoną instrukcję dla każdego elementu kolekcji. [!INCLUDE[wf1](../../../../includes/wf1-md.md)] równoważne działania `foreach` są <xref:System.Activities.Statements.ForEach%601> i <xref:System.Activities.Statements.ParallelForEach%601>. Działanie <xref:System.Activities.Statements.ForEach%601> zawiera listę wartości i treść. W czasie wykonywania lista jest powtarzana i jest wykonywana dla każdej wartości na liście.  
+## <a name="foreach-activity"></a>Aktywność ForEach  
+ Instrukcja C#/Visual Basic `foreach` wylicza elementy kolekcji, wykonując osadzoną instrukcję dla każdego elementu kolekcji. Równoważne [!INCLUDE[wf1](../../../../includes/wf1-md.md)] działania `foreach` są <xref:System.Activities.Statements.ForEach%601> <xref:System.Activities.Statements.ParallelForEach%601>i . Działanie <xref:System.Activities.Statements.ForEach%601> zawiera listę wartości i treść. W czasie wykonywania lista jest iterowana, a treść jest wykonywana dla każdej wartości na liście.  
   
- W większości przypadków ogólna wersja działania powinna być preferowanym rozwiązaniem, ponieważ obejmuje większość scenariuszy, w których będzie używana, i zapewnia kontrolę typu w czasie kompilacji. Wersja nieogólna może być używana do iterowania za pomocą typów implementujących nieogólny interfejs <xref:System.Collections.IEnumerable>.  
+ W większości przypadków ogólna wersja działania powinna być preferowanym rozwiązaniem, ponieważ obejmuje większość scenariuszy, w których będzie używana i zapewnia sprawdzanie typu w czasie kompilacji. Wersja niegeneryczna może służyć do iteracji za pośrednictwem <xref:System.Collections.IEnumerable> typów, które implementują interfejs niegeneryczny.  
   
 ## <a name="class-definition"></a>Definicja klasy  
- Poniższy przykład kodu pokazuje definicję działania nieogólnego `ForEach`.  
+ Poniższy przykład kodu przedstawia definicję `ForEach` działania nierodzego.  
   
 ```csharp  
 [ContentProperty("Body")]  
@@ -34,18 +34,18 @@ public class ForEach : NativeActivity
   
     [DefaultValue(null)]  
     [DependsOn("Values")]  
-    ActivityAction<object> Body { get; set; }   
+    ActivityAction<object> Body { get; set; }
 }  
 ```  
   
- Treść (opcjonalnie)  
- <xref:System.Activities.ActivityAction> typu <xref:System.Object>, który jest wykonywany dla każdego elementu w kolekcji. Każdy pojedynczy element jest przesyłany do treści za pomocą jego właściwości `Argument`.  
+ Korpus (opcjonalnie)  
+ Typ <xref:System.Activities.ActivityAction> <xref:System.Object>, który jest wykonywany dla każdego elementu w kolekcji. Każdy pojedynczy element jest przekazywany do Body za pośrednictwem jego `Argument` właściwości.  
   
- Wartości (opcjonalne)  
- Kolekcja elementów, które są powtarzane. Upewnienie się, że wszystkie elementy kolekcji są zgodne typy wykonywane w czasie wykonywania.  
+ Wartości (opcjonalnie)  
+ Kolekcja elementów, które są iterowane ponad. Upewnienie się, że wszystkie elementy kolekcji są zgodne typy odbywa się w czasie wykonywania.  
   
-## <a name="example-of-using-foreach"></a>Przykład użycia polecenia ForEach  
- Poniższy kod ilustruje sposób używania działania ForEach w aplikacji.  
+## <a name="example-of-using-foreach"></a>Przykład korzystania z ForEach  
+ Poniższy kod pokazuje, jak używać ForEach działania w aplikacji.  
   
 ```csharp  
 string[] names = { "bill", "steve", "ray" };  
@@ -56,8 +56,8 @@ Activity sampleUsage =
     new ForEach  
     {  
        Values = new InArgument<IEnumerable>(c=> names),  
-       Body = new ActivityAction<object>   
-       {                          
+       Body = new ActivityAction<object>
+       {
            Argument = iterationVariable,  
            Handler = new WriteLine  
            {  
@@ -69,10 +69,10 @@ Activity sampleUsage =
   
 |Warunek|Komunikat|Ważność|Typ wyjątku|  
 |---------------|-------------|--------------|--------------------|  
-|Wartości są `null`|Nie podano wartości dla wymaganego argumentu działania "Values".|Błąd|<xref:System.InvalidOperationException>|  
+|Wartości są`null`|Wartość wymaganego argumentu działania "Wartości" nie została podana.|Błąd|<xref:System.InvalidOperationException>|  
   
 ## <a name="foreach-designer"></a>Projektant ForEach  
- Projektant działań dla przykładu jest podobny do projektanta dostępnego dla wbudowanego działania <xref:System.Activities.Statements.ForEach%601>. Projektant pojawia się w przyborniku w kategorii **przykłady**, **nieogólne działania** . Projektant ma nazwę **ForEachWithBodyFactory** w przyborniku, ponieważ działanie uwidacznia <xref:System.Activities.Presentation.IActivityTemplateFactory> w przyborniku, który tworzy działanie z prawidłowo skonfigurowanym <xref:System.Activities.ActivityAction>.  
+ Projektant działania dla przykładu jest podobny wygląd do projektanta <xref:System.Activities.Statements.ForEach%601> przewidziane dla wbudowanego działania. Projektant pojawi się w przyborniku w **kategorii Przykłady**, **Działania niegeneryczne.** Projektant nosi nazwę **ForEachWithBodyFactory** w przyborniku, <xref:System.Activities.Presentation.IActivityTemplateFactory> ponieważ działanie udostępnia w przyborniku, który <xref:System.Activities.ActivityAction>tworzy działanie z prawidłowo skonfigurowanym .  
   
 ```csharp  
 public sealed class ForEachWithBodyFactory : IActivityTemplateFactory  
@@ -101,13 +101,13 @@ public sealed class ForEachWithBodyFactory : IActivityTemplateFactory
   
     2. **DesignerTestClient** pokazuje, jak używać działania w projektancie.  
   
-2. Skompiluj i uruchom projekt.  
+2. Tworzenie i uruchamianie projektu.  
   
 > [!IMPORTANT]
-> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
->   
+> Próbki mogą być już zainstalowane na komputerze. Przed kontynuowaniem sprawdź następujący (domyślny) katalog.  
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
->   
+>
+> Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) Przykłady dla platformy .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\NonGenericForEach`

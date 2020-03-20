@@ -12,58 +12,58 @@ helpviewer_keywords:
 - graphics features [WPF]
 - transition effects [WPF]
 ms.assetid: 1817d9dc-3d6c-46cb-afc8-63b0bae35e37
-ms.openlocfilehash: f9d27ce50376c3a494a546a23cd5d7409b4c475a
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 56a69c10a420e399478a0d617d30380ff5217e9c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636630"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186728"
 ---
 # <a name="graphics-and-multimedia"></a>Grafika i multimedia
 
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zapewnia obsługę multimediów, grafiki wektorowej, animacji i kompozycji zawartości, ułatwiając deweloperom tworzenie interesujących interfejsów użytkownika i zawartości. Za pomocą programu Visual Studio można tworzyć grafiki wektorowe lub złożone animacje oraz integrować multimedia z aplikacjami.
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]zapewnia obsługę multimediów, grafiki wektorowej, animacji i kompozycji zawartości, ułatwiając programistom tworzenie interesujących interfejsów użytkownika i treści. Za pomocą programu Visual Studio można tworzyć grafiki wektorowe lub złożone animacje i integrować multimedia z aplikacjami.
 
-W tym temacie przedstawiono funkcje grafiki, animacji i multimediów [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], które umożliwiają dodawanie grafiki, efektów przejścia, dźwięku i wideo do aplikacji.
+W tym temacie przedstawiono funkcje grafiki, animacji i multimediów, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]które umożliwiają dodawanie grafiki, efektów przejścia, dźwięku i wideo do aplikacji.
 
 > [!NOTE]
-> Korzystanie z typów WPF w usłudze systemu Windows jest zdecydowanie odradzane. Jeśli spróbujesz użyć typów WPF w usłudze systemu Windows, usługa może nie zadziałała zgodnie z oczekiwaniami.
+> Za pomocą WPF typów w usłudze systemu Windows jest zdecydowanie odradzane. Jeśli spróbujesz użyć typów WPF w usłudze systemu Windows, usługa może nie działać zgodnie z oczekiwaniami.
 
 <a name="whats_new_with_graphics_and_multimedia_in_wpf_4"></a>
 
-## <a name="whats-new-with-graphics-and-multimedia-in-wpf-4"></a>Nowości dotyczące grafiki i multimediów w WPF 4
+## <a name="whats-new-with-graphics-and-multimedia-in-wpf-4"></a>Co nowego w grafice i multimediach w WPF 4
 
-Wprowadzono kilka zmian dotyczących grafiki i animacji.
+Wprowadzono kilka zmian związanych z grafiką i animacjami.
 
-- Zaokrąglenie układu
+- Zaokrąglanie układu
 
-  Gdy brzeg obiektu znajduje się w środku urządzenia pikselowego, niezależny od DPI system grafiki może tworzyć artefakty renderowania, takie jak rozmyte lub częściowo przezroczyste krawędzie. Poprzednie wersje WPF obejmowały przyciąganie pikseli do obsługi tego przypadku. Program Silverlight 2 wprowadził zaokrąglenie układu, który jest innym sposobem przenoszenia elementów tak, aby krawędzie mieściły się w całej krawędzi pikseli. Funkcja WPF obsługuje teraz zaokrąglanie układu z właściwością dołączone <xref:System.Windows.FrameworkElement.UseLayoutRounding%2A> w <xref:System.Windows.FrameworkElement>.
+  Gdy krawędź obiektu spadnie na środku urządzenia pikselowego, niezależny od DPI system graficzny może tworzyć artefakty renderowania, takie jak rozmyte lub półprzezroczyste krawędzie. Poprzednie wersje WPF zawiera przyciąganie pikseli, aby pomóc w obsłudze tej sprawy. Program Silverlight 2 wprowadził zaokrąglanie układu, które jest kolejnym sposobem przenoszenia elementów, tak aby krawędzie spadały na granice całych pikseli. WPF WPF obsługuje teraz <xref:System.Windows.FrameworkElement.UseLayoutRounding%2A> zaokrąglanie układu z dołączoną właściwością na <xref:System.Windows.FrameworkElement>.
 
-- Buforowana kompozycja
+- Kompozycja buforowana
 
-  Korzystając z nowych klas <xref:System.Windows.Media.BitmapCache> i <xref:System.Windows.Media.BitmapCacheBrush>, można buforować złożoną część drzewa wizualnego jako mapę bitową i znacznie poprawić czas renderowania. Mapa bitowa pozostaje niezależna od danych wejściowych użytkownika, takich jak kliknięcia myszą i można ją malować na innych elementach, podobnie jak w przypadku dowolnego pędzla.
+  Za pomocą <xref:System.Windows.Media.BitmapCache> nowych <xref:System.Windows.Media.BitmapCacheBrush> i klas, można buforować złożoną część drzewa wizualnego jako mapy bitowej i znacznie poprawić czas renderowania. Mapa bitowa pozostaje wrażliwa na dane wejściowe użytkownika, takie jak kliknięcia myszą, i można ją malować na inne elementy, tak jak każdy pędzel.
 
-- Obsługa programów do cieniowania pikseli 3
+- Obsługa modułu cieniującego pikseli 3
 
-  Program WPF 4 jest oparty na <xref:System.Windows.Media.Effects.ShaderEffect> pomocy technicznej wprowadzonej w programie WPF 3,5 z dodatkiem SP1, umożliwiając aplikacjom pisanie efektów przy użyciu programu Pixel Shader (PS) w wersji 3,0. Model cieniowania PS 3,0 jest bardziej zaawansowany niż PS 2,0, co pozwala na jeszcze większy wpływ na obsługiwany sprzęt.
+  WPF 4 opiera się <xref:System.Windows.Media.Effects.ShaderEffect> na podstawie pomocy technicznej wprowadzonej w WPF 3.5 SP1, umożliwiając aplikacjom do zapisu efektów przy użyciu Pixel Shader (PS) w wersji 3.0. Model modułu cieniującego PS 3.0 jest bardziej zaawansowany niż PS 2.0, co pozwala na jeszcze większy wpływ na obsługiwany sprzęt.
 
 - Zwalnianie funkcji
 
-  Możesz wzbogacić animacje za pomocą funkcji, które zapewniają dodatkową kontrolę nad zachowaniem animacji. Na przykład można zastosować <xref:System.Windows.Media.Animation.ElasticEase> do animacji, aby nadać animacji zachowanie sprężynowe. Aby uzyskać więcej informacji, zobacz Typy krzywych napięcia w przestrzeni nazw <xref:System.Windows.Media.Animation>.
+  Animacje można ulepszać za pomocą funkcji dynamiki, które zapewniają dodatkową kontrolę nad zachowaniem animacji. Na przykład można zastosować <xref:System.Windows.Media.Animation.ElasticEase> do animacji, aby nadać animacji sprężyste zachowanie. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Media.Animation> typy dynamiki w obszarze nazw.
 
 <a name="graphics_and_rendering"></a>
 
 ## <a name="graphics-and-rendering"></a>Grafika i renderowanie
 
-WPF obejmuje obsługę grafiki 2-D o wysokiej jakości. Funkcje obejmują pędzle, geometrie, obrazy, kształty i przekształcenia. Aby uzyskać więcej informacji, zobacz [grafika](graphics.md). Renderowanie elementów graficznych opiera się na klasie <xref:System.Windows.Media.Visual>. Struktura obiektów wizualizacji na ekranie jest opisana przez drzewo wizualne. Aby uzyskać więcej informacji, zobacz [Omówienie renderowania grafiki WPF](wpf-graphics-rendering-overview.md).
+WPF WPF obejmuje obsługę wysokiej jakości grafiki 2-W. Funkcja obejmuje pędzle, geometrie, obrazy, kształty i przekształcenia. Aby uzyskać więcej informacji, zobacz [Grafika](graphics.md). Renderowanie elementów graficznych opiera <xref:System.Windows.Media.Visual> się na klasie. Struktura obiektów wizualnych na ekranie jest opisana przez drzewo wizualne. Aby uzyskać więcej informacji, zobacz [Omówienie renderowania grafiki WPF](wpf-graphics-rendering-overview.md).
 
-### <a name="2-d-shapes"></a>Kształty 2-D
+### <a name="2-d-shapes"></a>Kształty 2-W
 
-WPF udostępnia bibliotekę często używanych, rysowanych w wektorach kształtów 2-D, takich jak prostokąty i wielokropek, które przedstawiono na poniższej ilustracji.
+WPF WPF udostępnia bibliotekę powszechnie używanych, wektor rysowane kształty 2-W, takich jak prostokąty i elipsy, które pokazano na poniższej ilustracji.
 
-![Diagram przedstawiający wielokropek i prostokąty.](./media/index/two-deminsional-shapes-ellipses-rectangles.png)
+![Diagram przedstawiający elipsy i prostokąty.](./media/index/two-deminsional-shapes-ellipses-rectangles.png)
 
-Te Wewnętrzne kształty WPF nie są tylko kształtami: są to elementy programowalne, które implementują wiele funkcji oczekiwanych od najbardziej typowych kontrolek, takich jak klawiatura i mysz. Poniższy przykład pokazuje, jak obsłużyć zdarzenie <xref:System.Windows.UIElement.MouseUp> wywoływane przez kliknięcie elementu <xref:System.Windows.Shapes.Ellipse>.
+Te wewnętrzne kształty WPF są nie tylko kształty: są one programowalne elementy, które implementują wiele funkcji, których oczekujesz od większości typowych formantów, które obejmują klawiatury i myszy. W poniższym przykładzie <xref:System.Windows.UIElement.MouseUp> pokazano, jak obsługiwać zdarzenie wywoływane przez kliknięcie <xref:System.Windows.Shapes.Ellipse> elementu.
 
 ```xaml
 <Window
@@ -93,83 +93,83 @@ Partial Public Class Window1
 End Class
 ```
 
-Na poniższej ilustracji przedstawiono dane wyjściowe dla poprzedniego [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] znaczników i kodu.
+Na poniższej ilustracji przedstawiono [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dane wyjściowe dla poprzedniego znaczników i związanych z kodem.
 
-![Okno komunikatu z informacją "kliknięto elipsę!"](./media/index/messagebox-text-output.png)
+![Okno komunikatu z napisem "Kliknąłeś elipsę!"](./media/index/messagebox-text-output.png)
 
-Aby uzyskać więcej informacji, zobacz temat [kształty i podstawowe Rysowanie w programie WPF — Omówienie](shapes-and-basic-drawing-in-wpf-overview.md). Aby zapoznać się z przykładem wstępnym, zobacz [element Shape Samples](https://go.microsoft.com/fwlink/?LinkID=160037).
+Aby uzyskać więcej informacji, zobacz [Kształty i rysunek podstawowy w przeglądzie WPF](shapes-and-basic-drawing-in-wpf-overview.md). Aby zapoznać się z przykładem wprowadzającym, zobacz [Przykład elementów kształtu](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/ShapeElements).
 
-### <a name="2-d-geometries"></a>Geometrie 2-D
+### <a name="2-d-geometries"></a>Geometrie 2-W
 
-Gdy kształty 2-D dostarczane przez program WPF nie są wystarczające, można użyć obsługi platformy WPF dla geometrie i ścieżek, aby utworzyć własne. Na poniższej ilustracji przedstawiono, jak można użyć geometrie do tworzenia kształtów, jako pędzla rysowania i obcinania innych elementów WPF.
+Gdy kształty 2-W, które zapewnia WPF nie są wystarczające, można użyć WPF obsługi geometrii i ścieżek do tworzenia własnych. Na poniższej ilustracji pokazano, jak można używać geometrii do tworzenia kształtów jako pędzla rysunku i do przycinania innych elementów WPF.
 
-![Zrzut ekranu przedstawiający sposób tworzenia kształtów za pomocą geometrie.](./media/index/use-geometries-create-shapes.png)
+![Zrzut ekranu przedstawiający sposób tworzenia kształtów za pomocą geometrii.](./media/index/use-geometries-create-shapes.png)
 
-Aby uzyskać więcej informacji, zobacz [Omówienie geometrii](geometry-overview.md). Aby zapoznać się z przykładem wstępnym, zobacz [przykład geometrie](https://go.microsoft.com/fwlink/?LinkID=159989).
+Aby uzyskać więcej informacji, zobacz [Omówienie geometrii](geometry-overview.md). Aby zapoznać się z próbką wprowadzającą, zobacz [Przykład geometrii](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/Geometry).
 
-### <a name="2-d-effects"></a>Efekty 2-D
+### <a name="2-d-effects"></a>Efekty 2-W
 
-WPF udostępnia bibliotekę klas 2-D, których można użyć do tworzenia rozmaitych efektów. Funkcja renderowania 2-D platformy WPF zapewnia możliwość malowania [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementów, które mają gradienty, mapy bitowe, rysunki i wideo. i do manipulowania nimi przy użyciu rotacji, skalowania i skośności. Na poniższej ilustracji przedstawiono przykład wielu efektów, które można osiągnąć przy użyciu pędzli WPF.
+WPF WPF udostępnia bibliotekę klas 2-W, których można użyć do tworzenia różnych efektów. Funkcja renderowania 2-W WPF umożliwia malowanie [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementów, które mają gradienty, mapy bitowe, rysunki i klipy wideo; i manipulować nimi za pomocą obrotu, skalowania i pochylania. Poniższa ilustracja podaje przykład wielu efektów, które można osiągnąć przy użyciu pędzli WPF.
 
-![Ilustracja przedstawiająca różne pędzle WPF i elementy programu Paint.](./media/index/brushes-paint-elements.png)
+![Ilustracja przedstawiająca różne pędzle WPF i elementy malowania.](./media/index/brushes-paint-elements.png)
 
-Aby uzyskać więcej informacji, zobacz [Omówienie pędzli WPF](wpf-brushes-overview.md). Aby zapoznać się z przykładem wstępnym, zobacz [przykłady pędzli](https://go.microsoft.com/fwlink/?LinkID=159973).
+Aby uzyskać więcej informacji, zobacz [WPF Brushes Overview](wpf-brushes-overview.md). Aby zapoznać się z przykładem wprowadzającym, zobacz [Przykład pędzli](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/Brushes).
 
 <a name="rendering"></a>
 
-## <a name="3-d-rendering"></a>Renderowanie 3-D
+## <a name="3-d-rendering"></a>Renderowanie 3-W
 
-WPF oferuje zestaw funkcji renderowania trójwymiarowych, które integrują się z obsługą grafiki 2-D w programie WPF, aby można było tworzyć bardziej atrakcyjne, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]i wizualizacje danych. Na jednym końcu spektrum WPF umożliwia renderowanie obrazów 2-D na powierzchni trójwymiarowych kształtów, które przedstawiono na poniższej ilustracji.
+WPF WPF zapewnia zestaw możliwości renderowania 3-W, które integrują się z obsługą grafiki 2-W w WPF w celu utworzenia bardziej ekscytującego układu [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]i wizualizacji danych. Na jednym końcu spektrum WPF WPF umożliwia renderowanie obrazów 2-W na powierzchniach kształtów 3-W, co pokazuje poniższa ilustracja.
 
-![Zrzut ekranu przedstawiający przykład pokazujący kształty trójwymiarowe z różnymi teksturami.](./media/index/visual-three-dimensional-shape.png)
+![Zrzut ekranu przedstawiający przykład przedstawiający kształty 3-W o różnych teksturach.](./media/index/visual-three-dimensional-shape.png)
 
-Aby uzyskać więcej informacji, zobacz temat [Omówienie grafiki trójwymiarowej](3-d-graphics-overview.md). Aby zapoznać się z przykładem wstępnym, zobacz [3-D pełne próbki](https://go.microsoft.com/fwlink/?LinkID=159964).
+Aby uzyskać więcej informacji, zobacz [Omówienie grafiki 3-W](3-d-graphics-overview.md). Aby uzyskać próbkę wprowadzającą, zobacz [próbka brył 3-W](https://go.microsoft.com/fwlink/?LinkID=159964).
 
 <a name="animation"></a>
 
 ## <a name="animation"></a>Animacja
 
-Używaj animacji, aby tworzyć, wstrząsać, obracać i przerastać elementy. i aby tworzyć interesujące przejścia stron i nie tylko. Ponieważ WPF pozwala animować większość właściwości, nie tylko można animować większość obiektów WPF, można również użyć WPF do animowania tworzonych obiektów niestandardowych.
+Użyj animacji, aby formanty i elementy rosły, wstrząsały, obracały się i zanikały; i tworzyć ciekawe przejścia stron i nie tylko. Ponieważ WPF umożliwia animowanie większości właściwości, nie tylko można animować większość obiektów WPF, można również użyć WPF do animowania obiektów niestandardowych, które tworzysz.
 
-![Zrzut ekranu animowanego modułu.](./media/index/animate-custom-objects.png)
+![Zrzut ekranu animowanego sześcianu.](./media/index/animate-custom-objects.png)
 
-Aby uzyskać więcej informacji, zobacz [Omówienie animacji](animation-overview.md). Aby zapoznać się z przykładem wstępnym, zobacz [Galeria przykładów animacji](https://go.microsoft.com/fwlink/?LinkID=159969).
+Aby uzyskać więcej informacji, zobacz [Omówienie animacji](animation-overview.md). Aby zapoznać się z przykładem wprowadzającym, zobacz [Galeria przykładów animacji](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/AnimationExamples).
 
 <a name="media"></a>
 
-## <a name="media"></a>Nośnik
+## <a name="media"></a>Multimedia
 
-Obrazy, wideo i audio to bogate w multimedia sposoby przekazywania informacji i środowiska użytkownika.
+Obrazy, wideo i audio to bogate w multimedia sposoby przekazywania informacji i doświadczeń użytkowników.
 
 ### <a name="images"></a>Obrazy
 
-Obrazy, takie jak ikony, tła i nawet części animacji, są podstawową częścią większości aplikacji. Ze względu na to, że często trzeba używać obrazów, WPF udostępnia możliwość pracy z nimi na różne sposoby. Na poniższej ilustracji przedstawiono tylko jeden z tych sposobów.
+Obrazy, które zawierają ikony, tła, a nawet części animacji, są podstawową częścią większości aplikacji. Ponieważ często trzeba używać obrazów, WPF udostępnia możliwość pracy z nimi na różne sposoby. Na poniższej ilustracji przedstawiono tylko jeden z tych sposobów.
 
-![Przykładowy zrzut ekranu z stylem](../controls/./media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")
+![Przykładowy zrzut ekranu przedstawiający styl](../controls/./media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")
 
-Aby uzyskać więcej informacji, zobacz [Omówienie tworzenia obrazu](imaging-overview.md).
+Aby uzyskać więcej informacji, zobacz [Omówienie obrazowania](imaging-overview.md).
 
 ### <a name="video-and-audio"></a>Wideo i audio
 
-Podstawową funkcją funkcji graficznych platformy WPF jest zapewnienie natywnej obsługi pracy z multimediami, w tym wideo i audio. Poniższy przykład pokazuje, jak wstawić odtwarzacz multimedialny do aplikacji.
+Podstawową cechą możliwości grafiki WPF jest zapewnienie natywnej obsługi pracy z multimediami, która obejmuje wideo i audio. W poniższym przykładzie pokazano, jak wstawić odtwarzacz multimedialny do aplikacji.
 
 ```xaml
 <MediaElement Source="media\numbers.wmv" Width="450" Height="250" />
 ```
 
-<xref:System.Windows.Controls.MediaElement> jest w stanie odtwarzać wideo i audio, i jest wystarczająco rozszerzalny, aby umożliwić łatwe tworzenie niestandardowych interfejsów użytkownika.
+<xref:System.Windows.Controls.MediaElement>jest w stanie odtwarzać zarówno wideo, jak i audio i jest wystarczająco rozszerzalny, aby umożliwić łatwe tworzenie niestandardowych interfejsów użytkownika.
 
-Aby uzyskać więcej informacji, zobacz [Omówienie multimediów](multimedia-overview.md).
+Aby uzyskać więcej informacji, zobacz [Przegląd multimediów](multimedia-overview.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Windows.Media>
 - <xref:System.Windows.Media.Animation>
 - <xref:System.Windows.Media.Media3D>
 - [Grafika 2D i obrazowanie](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Kształty i podstawowe rysowanie w programie WPF — przegląd](shapes-and-basic-drawing-in-wpf-overview.md)
-- [Malowanie jednolitymi kolorami i gradientami — przegląd](painting-with-solid-colors-and-gradients-overview.md)
+- [Przegląd Kształty i podstawowe rysowanie w WPF](shapes-and-basic-drawing-in-wpf-overview.md)
+- [Przegląd Malowanie jednolitymi kolorami i gradientami](painting-with-solid-colors-and-gradients-overview.md)
 - [Malowanie przy użyciu obrazów, rysowania i wizualizacji](painting-with-images-drawings-and-visuals.md)
-- [Animacja i chronometraż — Tematy porad](animation-and-timing-how-to-topics.md)
+- [Animacja i chronometraż Tematy porad](animation-and-timing-how-to-topics.md)
 - [Grafika 3D — przegląd](3-d-graphics-overview.md)
 - [Multimedia — przegląd](multimedia-overview.md)

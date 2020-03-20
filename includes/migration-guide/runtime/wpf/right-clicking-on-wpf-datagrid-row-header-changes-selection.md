@@ -1,19 +1,18 @@
 ---
-ms.openlocfilehash: 3b36bc1ed9c35722478bdb31b82a79bed1a18914
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 8332aca6e72346c92e80ce28979b83eec496b0e7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67858637"
 ---
-### <a name="right-clicking-on-a-wpf-datagrid-row-header-changes-the-datagrid-selection"></a>Kliknij prawym przyciskiem WPF DataGrid nagłówek wiersza zmienia zaznaczenie DataGrid
+### <a name="right-clicking-on-a-wpf-datagrid-row-header-changes-the-datagrid-selection"></a>Kliknięcie prawym przyciskiem myszy nagłówka wiersza WPF DataGrid zmienia wybór DataGrid
 
 |   |   |
 |---|---|
-|Szczegóły|Kliknij prawym przyciskiem myszy wybrane <xref:System.Windows.Controls.DataGrid?displayProperty=name> nagłówek wiersza, gdy wiele wierszy są wybrane wyniki w <xref:System.Windows.Controls.DataGrid?displayProperty=name>użytkownika wyboru Zmiana tylko w tym wierszu.|
-|Sugestia|Ten problem został rozwiązany w .NET Framework 4.6 i może zostać zlikwidowane przez uaktualnienie do wersji programu .NET Framework.|
-|Scope|Krawędź|
+|Szczegóły|Kliknięcie prawym przyciskiem myszy zaznaczonego <xref:System.Windows.Controls.DataGrid?displayProperty=name> nagłówka wiersza, gdy zaznaczono wiele wierszy, <xref:System.Windows.Controls.DataGrid?displayProperty=name>powoduje zmianę zaznaczenia na tylko ten wiersz.|
+|Sugestia|Ten problem został rozwiązany w .NET Framework 4.6 i może zostać rozwiązany przez uaktualnienie do tej wersji programu .NET Framework.|
+|Zakres|Brzeg|
 |Wersja|4.5|
 |Typ|Środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Windows.Controls.DataGrid.%23ctor?displayProperty=nameWithType></li></ul>|
-

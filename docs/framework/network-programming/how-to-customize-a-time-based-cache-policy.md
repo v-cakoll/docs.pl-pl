@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Dostosowywanie zasad pamięci podręcznej na podstawie czasu'
+title: 'Instrukcje: dostosowywanie zasad pamięci podręcznej na podstawie czasu'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - cache [.NET Framework], time-based policies
 ms.assetid: 8d84f936-2376-4356-9264-03162e0f9279
 ms.openlocfilehash: 1a2ba404e333eeec2a23758c834876d0df5aba81
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73040631"
 ---
-# <a name="how-to-customize-a-time-based-cache-policy"></a>Instrukcje: Dostosowywanie zasad pamięci podręcznej na podstawie czasu
+# <a name="how-to-customize-a-time-based-cache-policy"></a>Instrukcje: dostosowywanie zasad pamięci podręcznej na podstawie czasu
 
-Podczas tworzenia zasad pamięci podręcznej opartej na czasie możesz dostosować zachowanie buforowania, określając wartości maksymalnego wieku, minimalnej Aktualności, maksymalnej wartości starej lub daty synchronizacji pamięci podręcznej. Obiekt <xref:System.Net.Cache.HttpRequestCachePolicy> zawiera kilka konstruktorów, które umożliwiają określenie prawidłowych kombinacji tych wartości.
+Podczas tworzenia zasad pamięci podręcznej opartych na czasie, można dostosować zachowanie buforowania, określając wartości dla maksymalnego wieku, minimalnej świeżości, maksymalnego nieaktualności lub daty synchronizacji pamięci podręcznej. Obiekt <xref:System.Net.Cache.HttpRequestCachePolicy> zawiera kilka konstruktorów, które umożliwiają określenie prawidłowych kombinacji tych wartości.
 
-## <a name="to-create-a-time-based-cache-policy-that-uses-a-cache-synchronization-date"></a>Aby utworzyć zasady pamięci podręcznej oparte na czasie, które używają daty synchronizacji pamięci podręcznej
+## <a name="to-create-a-time-based-cache-policy-that-uses-a-cache-synchronization-date"></a>Aby utworzyć zasadę pamięci podręcznej opartą na czasie, która używa daty synchronizacji pamięci podręcznej
 
-Utwórz zasady pamięci podręcznej oparte na czasie, które używają daty synchronizacji pamięci podręcznej przez przekazanie obiektu <xref:System.DateTime> do konstruktora <xref:System.Net.Cache.HttpRequestCachePolicy>:
+Utwórz zasadę pamięci podręcznej opartą na czasie, <xref:System.DateTime> która <xref:System.Net.Cache.HttpRequestCachePolicy> używa daty synchronizacji pamięci podręcznej, przekazując obiekt do konstruktora:
 
 ```csharp
 public static HttpRequestCachePolicy CreateLastSyncPolicy(DateTime when)
@@ -43,16 +43,16 @@ Public Shared Function CreateLastSyncPolicy([when] As DateTime) As HttpRequestCa
 End Function
 ```
 
-Dane wyjściowe są podobne do następujących:
+Dane wyjściowe będą podobne do następujących:
 
 ```output
 When: 1/14/2004 8:07:30 AM
 Level:Default CacheSyncDate:1/14/2004 8:07:30 AM
 ```
 
-## <a name="to-create-a-time-based-cache-policy-that-is-based-on-minimum-freshness"></a>Aby utworzyć zasady pamięci podręcznej oparte na czasie, które opierają się na minimalnej wartości Aktualności
+## <a name="to-create-a-time-based-cache-policy-that-is-based-on-minimum-freshness"></a>Aby utworzyć zasadę pamięci podręcznej opartą na czasie, która opiera się na minimalnej świeżości
 
-Utwórz zasady pamięci podręcznej oparte na czasie, które opierają się na minimalnym świeżości przez określenie <xref:System.Net.Cache.HttpCacheAgeControl.MinFresh> jako wartości parametru `cacheAgeControl` i przekazanie obiektu <xref:System.TimeSpan> do konstruktora <xref:System.Net.Cache.HttpRequestCachePolicy>:
+Utwórz zasadę pamięci podręcznej opartą na czasie, `cacheAgeControl` która jest oparta na minimalnej świeżości, określając jako wartość parametru i przekazując <xref:System.TimeSpan> <xref:System.Net.Cache.HttpRequestCachePolicy> <xref:System.Net.Cache.HttpCacheAgeControl.MinFresh> obiekt do konstruktora:
 
 ```csharp
 public static HttpRequestCachePolicy CreateMinFreshPolicy(TimeSpan span)
@@ -71,21 +71,21 @@ Public Shared Function CreateMinFreshPolicy(span As TimeSpan) As HttpRequestCach
 End Function
 ```
 
-Dla następujących wywołań:
+Dla następującego wywołania:
 
 ```csharp
 CreateMinFreshPolicy(new TimeSpan(1,0,0));
 ```
 
-Dane wyjściowe:
+Dane wyjściowe wyglądają następująco:
 
 ```output
 Level:Default MinFresh:3600
 ```
 
-## <a name="to-create-a-time-based-cache-policy-that-is-based-on-minimum-freshness-and-maximum-age"></a>Aby utworzyć zasady pamięci podręcznej oparte na czasie, które opierają się na minimalnej wartości Aktualności i maksymalnym wieku
+## <a name="to-create-a-time-based-cache-policy-that-is-based-on-minimum-freshness-and-maximum-age"></a>Aby utworzyć zasadę pamięci podręcznej opartą na czasie, która opiera się na minimalnej świeżości i maksymalnym wieku
 
-Utwórz zasady pamięci podręcznej oparte na czasie, które opierają się na minimalnym okresie Aktualności i maksymalnym wieku przez określenie <xref:System.Net.Cache.HttpCacheAgeControl.MaxAgeAndMinFresh> jako wartości parametru `cacheAgeControl` i przekazanie dwóch <xref:System.TimeSpan> obiektów do konstruktora <xref:System.Net.Cache.HttpRequestCachePolicy>, jeden do określenia maksymalnego wieku zasobów i sekundy do Określ minimalną wartość świeżości dozwoloną dla obiektu zwróconego z pamięci podręcznej:
+Utwórz zasadę pamięci podręcznej opartą na czasie, która <xref:System.Net.Cache.HttpCacheAgeControl.MaxAgeAndMinFresh> jest `cacheAgeControl` oparta na <xref:System.TimeSpan> minimalnej <xref:System.Net.Cache.HttpRequestCachePolicy> świeżości i maksymalnym wieku, określając jako wartość parametru i przekazując dwa obiekty do konstruktora, jeden, aby określić maksymalny wiek zasobów, a drugi, aby określić minimalną świeżość dozwoloną dla obiektu zwróconego z pamięci podręcznej:
 
 ```csharp
 public static HttpRequestCachePolicy CreateFreshAndAgePolicy(TimeSpan freshMinimum, TimeSpan ageMaximum)
@@ -104,22 +104,22 @@ Public Shared Function CreateFreshAndAgePolicy(freshMinimum As TimeSpan, ageMaxi
 End Function
 ```
 
-Dla następujących wywołań:
+Dla następującego wywołania:
   
 ```csharp
 CreateFreshAndAgePolicy(new TimeSpan(5,0,0), new TimeSpan(10,0,0));  
 ```  
 
-Dane wyjściowe:
+Dane wyjściowe wyglądają następująco:
   
 ```output
 Level:Default MaxAge:36000 MinFresh:18000  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Zarządzanie pamięcią podręczną dla aplikacji sieciowych](cache-management-for-network-applications.md)
 - [Zasady pamięci podręcznej](cache-policy.md)
 - [Zasady pamięci podręcznej oparte na lokalizacji](location-based-cache-policies.md)
 - [Zasady pamięci podręcznej oparte na czasie](time-based-cache-policies.md)
-- [\<element > requestCaching (Ustawienia sieci)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+- [\<requestCaching> Element (Ustawienia sieciowe)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)

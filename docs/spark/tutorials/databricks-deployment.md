@@ -1,48 +1,48 @@
 ---
-title: Wdrażanie aplikacji platformy .NET dla Apache Spark w kostkach
-description: Dowiedz się, jak wdrożyć aplikację platformy .NET dla Apache Spark w usłudze datakostki.
+title: Wdrażanie aplikacji platformy .NET dla platformy Spark apache w aplikacjach Databricks
+description: Dowiedz się, jak wdrożyć aplikację platformy .NET dla platformy Spark apache w udziale w udziale w udziale w udziale w udziale w udziale w udziale w uchybieniach.
 ms.date: 01/23/2020
 ms.topic: tutorial
 ms.custom: mvc
 ms.openlocfilehash: c5308530831fa288bf637849c1342f51769c3ad4
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77503964"
 ---
-# <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>Samouczek: wdrażanie aplikacji .NET dla Apache Spark w kostkach
+# <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>Samouczek: Wdrażanie aplikacji .NET dla platformy Spark apache w databricks
 
-W tym samouczku przedstawiono sposób wdrażania aplikacji w chmurze za pośrednictwem Azure Databricks, opartej na Apache Sparkj platformie analitycznej z instalacją jednym kliknięciem, usprawnionych przepływów pracy i interaktywnego obszaru roboczego, który umożliwia współpracę.
+W tym samouczku dowiesz się, jak wdrożyć aplikację w chmurze za pośrednictwem platformy Azure Databricks, platformy analitycznej opartej na platformie Apache Spark z konfiguracją jednym kliknięciem, usprawnionymi przepływami pracy i interaktywnym obszarem roboczym umożliwiającym współpracę.
 
-Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
+Niniejszy samouczek zawiera informacje na temat wykonywania następujących czynności:
 
 > [!div class="checklist"]
 >
 > - Tworzenie obszaru roboczego usługi Azure Databricks.
-> - Opublikuj aplikację .NET dla Apache Spark.
-> - Utwórz zadanie platformy Spark i klaster Spark.
-> - Uruchom aplikację w klastrze Spark.
+> - Opublikuj aplikację .NET for Apache Spark.
+> - Tworzenie zadania platformy Spark i klastra platformy Spark.
+> - Uruchom aplikację w klastrze Platformy Spark.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Przed rozpoczęciem wykonaj następujące zadania:
+Przed rozpoczęciem wykonaj następujące czynności:
 
-* Jeśli nie masz konta platformy Azure, Utwórz [bezpłatne konto](https://azure.microsoft.com/free/).
-* Zaloguj się do [Azure portal](https://portal.azure.com/).
-* Ukończ [platformę .NET dla Apache Spark — Rozpocznij pracę w 10-minutowym](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro) samouczku.
+* Jeśli nie masz konta platformy Azure, utwórz [bezpłatne konto](https://azure.microsoft.com/free/).
+* Zaloguj się do [Portalu Azure](https://portal.azure.com/).
+* Ukończ [samouczek .NET for Apache Spark — rozpocznij pracę w 10-minutowym](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro) samouczku.
 
 ## <a name="create-an-azure-databricks-workspace"></a>Tworzenie obszaru roboczego usługi Azure Databricks
 
 > [!Note]
-> Tego samouczka nie można przeprowadzić za pomocą **subskrypcji bezpłatnej wersji próbnej platformy Azure**.
-> Jeśli masz bezpłatne konto, przejdź do swojego profilu i Zmień subskrypcję na **płatność zgodnie z rzeczywistym**użyciem. Aby uzyskać więcej informacji, zobacz [Bezpłatne konto platformy Azure](https://azure.microsoft.com/free/). Następnie [Usuń limit wydatków](https://docs.microsoft.com/azure/billing/billing-spending-limit#why-you-might-want-to-remove-the-spending-limit)i [Poproś o zwiększenie limitu przydziału](https://docs.microsoft.com/azure/azure-supportability/resource-manager-core-quotas-request) dla procesorów wirtualnych vCPU w Twoim regionie. Podczas tworzenia obszaru roboczego Azure Databricks możesz wybrać warstwę cenową **wersji próbnej (Premium-14-Days Free dBu)** , aby umożliwić dostęp do obszaru roboczego bezpłatnie Azure Databricks DBU przez 14 dni.
+> Tego samouczka nie można przeprowadzić przy użyciu **bezpłatnej subskrypcji próbnej platformy Azure.**
+> Jeśli masz darmowe konto, przejdź do swojego profilu i zmień subskrypcję na **płatność zgodnie z rzeczywistymami.** Aby uzyskać więcej informacji, zobacz [Bezpłatne konto platformy Azure](https://azure.microsoft.com/free/). Następnie [usuń limit wydatków](https://docs.microsoft.com/azure/billing/billing-spending-limit#why-you-might-want-to-remove-the-spending-limit)i [poproś o zwiększenie przydziału](https://docs.microsoft.com/azure/azure-supportability/resource-manager-core-quotas-request) dla procesorów wirtualnych w twoim regionie. Podczas tworzenia obszaru roboczego usługi Azure Databricks, można wybrać **warstwę cenową trial (Premium — 14-dniowe bezpłatne dbu),** aby dać obszarowi roboczemu dostęp do bezpłatnych witryn dbu usługi Premium Azure Databricks przez 14 dni.
 
 W tej sekcji utworzysz obszar roboczy usługi Azure Databricks przy użyciu witryny Azure Portal.
 
-1. W witrynie Azure Portal wybierz pozycję **Utwórz zasób** > **Analiza** > **Azure Databricks**.
+1. W witrynie Azure portal wybierz pozycję **Utwórz zasób** > **Analytics** > **Azure Databricks**.
 
-   ![Tworzenie zasobu Azure Databricks w Azure Portal](./media/databricks-deployment/create-databricks-resource.png)
+   ![Tworzenie zasobu usługi Azure Databricks w witrynie Azure portal](./media/databricks-deployment/create-databricks-resource.png)
 
 2. W obszarze **Usługa Azure Databricks** podaj wartości umożliwiające utworzenie obszaru roboczego usługi Databricks.
 
@@ -51,78 +51,78 @@ W tej sekcji utworzysz obszar roboczy usługi Azure Databricks przy użyciu witr
     |**Nazwa obszaru roboczego**     | Podaj nazwę obszaru roboczego usługi Databricks.        |
     |**Subskrypcja**     | Z listy rozwijanej wybierz subskrypcję platformy Azure.        |
     |**Grupa zasobów**     | Określ, czy chcesz utworzyć nową grupę zasobów, czy użyć istniejącej grupy. Grupa zasobów to kontener, który zawiera powiązane zasoby dla rozwiązania platformy Azure. Aby uzyskać więcej informacji, zobacz [Omówienie usługi Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview). |
-    |**Lokalizacja**     | Wybierz preferowany region. Aby uzyskać informacje na temat dostępnych regionów, zobacz [usługi platformy Azure dostępne według regionów](https://azure.microsoft.com/regions/services/).        |
-    |**Warstwa cenowa**     |  Wybierz warstwę **standardowa**, **Premium**lub **wersja próbna**. Aby uzyskać więcej informacji o tych warstwach, zobacz [stronę usługi Databricks](https://azure.microsoft.com/pricing/details/databricks/).       |
-    |**Virtual Network**     |   Nie       |
+    |**Lokalizacja**     | Wybierz preferowany region. Aby uzyskać informacje o dostępnych regionach, zobacz [Usługi platformy Azure dostępne według regionu](https://azure.microsoft.com/regions/services/).        |
+    |**Warstwa cenowa**     |  Wybierz między **Standard**, **Premium**lub **Trial**. Aby uzyskać więcej informacji o tych warstwach, zobacz [stronę usługi Databricks](https://azure.microsoft.com/pricing/details/databricks/).       |
+    |**Sieć wirtualna**     |   Nie       |
 
-3. Wybierz pozycję **Utwórz**. Tworzenie obszaru roboczego trwa kilka minut. Podczas tworzenia obszaru roboczego można wyświetlić stan wdrożenia w obszarze **powiadomienia**.
+3. Wybierz **pozycję Utwórz**. Tworzenie obszaru roboczego trwa kilka minut. Podczas tworzenia obszaru roboczego można wyświetlić stan wdrożenia w **obszarze Powiadomienia**.
 
-## <a name="install-azure-databricks-tools"></a>Zainstaluj narzędzia Azure Databricks
+## <a name="install-azure-databricks-tools"></a>Instalowanie narzędzi usługi Azure Databricks
 
-Korzystając z **interfejsu wiersza polecenia datacegłs** , można nawiązać połączenie z klastrami Azure Databricks i przekazywać do nich pliki z komputera lokalnego. Klastry datacegły uzyskują dostęp do plików za poorednictwem DBFS (system plików).
+Można użyć **Interfejsu wiersza polecenia Databricks,** aby połączyć się z klastrami usługi Azure Databricks i przekazać pliki do nich z komputera lokalnego. Klastry Databricks uzyskują dostęp do plików za pośrednictwem systemu plików DBFS (Databricks File System).
 
-1. Interfejs wiersza polecenia datakostki wymaga języka Python 3,6 lub nowszego. Jeśli masz już zainstalowany język Python, możesz pominąć ten krok.
+1. Interfejs wiersza polecenia Databricks wymaga języka Python 3.6 lub nowszego. Jeśli masz już zainstalowany python, możesz pominąć ten krok.
 
    **Dla systemu Windows:**
 
-   [Pobierz Język Python dla systemu Windows](https://www.python.org/ftp/python/3.7.4/python-3.7.4.exe)
+   [Pobierz Python dla Windows](https://www.python.org/ftp/python/3.7.4/python-3.7.4.exe)
 
-   **Dla systemu Linux:** Środowisko Python jest preinstalowane na większości dystrybucji systemu Linux. Uruchom następujące polecenie, aby sprawdzić, która wersja została zainstalowana:
+   **Dla Linuksa:** Python jest preinstalowany w większości dystrybucji Linuksa. Uruchom następujące polecenie, aby zobaczyć, która wersja została zainstalowana:
 
    ```bash
    python3 --version
    ```
 
-2. Użyj narzędzia PIP, aby zainstalować interfejs wiersza polecenia datakosteks. Środowisko Python 3,4 i nowsze zawierają domyślnie funkcję PIP. Użyj PIP3 dla języka Python 3. Uruchom następujące polecenie:
+2. Użyj pip, aby zainstalować databricks CLI. Python 3.4 i nowsze domyślnie zawierają pip. Użyj pip3 dla Pythona 3. Uruchom następujące polecenie:
 
    ```bash
    pip3 install databricks-cli
    ```
 
-3. Po zainstalowaniu interfejsu wiersza polecenia datakostki Otwórz nowy wiersz poleceń i uruchom polecenie `databricks`. Jeśli zostanie wyświetlony komunikat " **" nie jest rozpoznawany jako błąd wewnętrzny lub zewnętrzny**, upewnij się, że otwarto nowy wiersz polecenia.
+3. Po zainstalowaniu interfejsu wiersza polecenia Databricks otwórz nowy `databricks`wiersz polecenia i uruchom polecenie . Jeśli otrzymasz **"databricks" nie jest rozpoznawany jako wewnętrzny lub zewnętrzny błąd polecenia,** upewnij się, że otworzył nowy wiersz polecenia.
 
-## <a name="set-up-azure-databricks"></a>Skonfiguruj Azure Databricks
+## <a name="set-up-azure-databricks"></a>Konfigurowanie usługi Azure Databricks
 
-Teraz, gdy masz zainstalowany interfejs wiersza polecenia datakosteks, musisz skonfigurować szczegóły uwierzytelniania.
+Teraz, gdy masz zainstalowany plik WIERSZ DATABricks, musisz skonfigurować szczegóły uwierzytelniania.
 
-1. Uruchom interfejs wiersza polecenia dla `databricks configure --token`.
+1. Uruchom polecenie `databricks configure --token`Databricks CLI .
 
-2. Po uruchomieniu polecenia Konfiguruj zostanie wyświetlony monit o wprowadzenie hosta. Adres URL hosta używa formatu: **https://< \Location >. azuredatabricks. NET**. Na przykład w przypadku wybrania **eastus2** podczas tworzenia usługi Azure Databricks host zostanie **https://eastus2.azuredatabricks.net** .
+2. Po uruchomieniu polecenia configure zostanie wyświetlony monit o wprowadzenie hosta. Adres URL hosta używa formatu: **https://<\Location>.azuredatabricks.net**. Na przykład, jeśli wybrano **eastus2** podczas tworzenia usługi **https://eastus2.azuredatabricks.net**Azure Databricks, host będzie .
 
-3. Po wprowadzeniu hosta zostanie wyświetlony monit o wprowadzenie tokenu. W Azure Portal wybierz pozycję **Uruchom obszar roboczy** , aby uruchomić Azure Databricks obszar roboczy.
+3. Po wejściu do hosta zostanie wyświetlony monit o wprowadzenie tokenu. W witrynie Azure portal wybierz pozycję **Uruchom obszar roboczy,** aby uruchomić obszar roboczy usługi Azure Databricks.
 
-   ![Uruchom Azure Databricks obszar roboczy](./media/databricks-deployment/launch-databricks-workspace.png)
+   ![Uruchamianie obszaru roboczego usługi Azure Databricks](./media/databricks-deployment/launch-databricks-workspace.png)
 
 4. Na stronie głównej obszaru roboczego wybierz pozycję **Ustawienia użytkownika**.
 
-   ![Ustawienia użytkownika w obszarze roboczym Azure Databricks](./media/databricks-deployment/databricks-user-settings.png)
+   ![Ustawienia użytkownika w obszarze roboczym usługi Azure Databricks](./media/databricks-deployment/databricks-user-settings.png)
 
 5. Na stronie Ustawienia użytkownika można wygenerować nowy token. Skopiuj wygenerowany token i wklej go z powrotem do wiersza polecenia.
 
-   ![Generuj nowy token dostępu w obszarze roboczym Azure Databricks](./media/databricks-deployment/generate-token.png)
+   ![Generowanie nowego tokenu dostępu w obszarze roboczym usługi Azure Databricks](./media/databricks-deployment/generate-token.png)
 
-Teraz powinno być możliwe uzyskanie dostępu do dowolnych klastrów Azure Databricks tworzenia i przekazywania plików do DBFS.
+Teraz powinieneś mieć dostęp do wszystkich klastrów usługi Azure Databricks, które tworzysz i przekazujesz pliki do usługi DBFS.
 
-## <a name="download-worker-dependencies"></a>Pobierz zależności procesów roboczych
+## <a name="download-worker-dependencies"></a>Pobieranie zależności procesu roboczego
 
-1. Aplikacja Microsoft. Spark. Worker ułatwia Apache Spark wykonywanie aplikacji, na przykład dowolnych funkcji zdefiniowanych przez użytkownika (UDF). Pobierz [pakiet Microsoft. Spark. Worker](https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz).
+1. Microsoft.Spark.Worker pomaga apache Spark wykonać aplikację, takich jak wszystkie funkcje zdefiniowane przez użytkownika (UDFs) może być napisane. Pobierz [plik Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz).
 
-2. *Install-Worker.sh* to skrypt, który umożliwia skopiowanie programu .net dla Apache Spark plików zależnych do węzłów klastra.
+2. *install-worker.sh* to skrypt, który umożliwia kopiowanie plików zależnych platformy .NET dla platformy Apache Spark do węzłów klastra.
 
-   Utwórz nowy plik o nazwie **Install-Worker.sh** na komputerze lokalnym i wklej [zawartość Install-Worker.sh](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh) znajdującą się w witrynie GitHub.
+   Utwórz nowy plik o nazwie **install-worker.sh** na komputerze lokalnym i wklej [zawartość install-worker.sh znajdującą](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh) się w usłudze GitHub.
 
-3. *DB-init.sh* to skrypt służący do instalowania zależności w klastrze danych platformy Spark.
+3. *db-init.sh* to skrypt, który instaluje zależności w klastrze Databricks Spark.
 
-   Utwórz nowy plik o nazwie **DB-init.sh** na komputerze lokalnym i wklej [zawartość DB-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) znajdującą się w witrynie GitHub.
+   Utwórz nowy plik o nazwie **db-init.sh** na komputerze lokalnym i wklej [zawartość db-init.sh znajdującą](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) się w usłudze GitHub.
 
-   W właśnie utworzonym pliku Ustaw zmienną `DOTNET_SPARK_RELEASE` na `https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz`. Pozostaw resztę pliku *DB-init.sh* .
+   W właśnie utworzonym pliku `DOTNET_SPARK_RELEASE` ustaw `https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz`zmienną na . Pozostaw resztę *pliku db-init.sh* w stanie nie ma stanu"
 
 > [!Note]
-> Jeśli używasz systemu Windows, upewnij się, że końce wiersza w skryptach *Install-Worker.sh* i *DB-init.sh* są w stylu systemu UNIX (LF). Końce wierszy można zmienić za pomocą edytorów tekstu, takich jak Notatnik + + i Atom.
+> Jeśli używasz systemu Windows, sprawdź, czy zakończenia wierszy w *skryptach install-worker.sh* i *db-init.sh* są w stylu Uniksa (LF). Zakończenia wierszy można zmieniać za pomocą edytorów tekstu, takich jak Notatnik++ i Atom.
 
 ## <a name="publish-your-app"></a>Publikowanie aplikacji
 
-Następnie opublikujesz *mySparkApp* utworzoną w programie [.net for Apache Spark — Rozpocznij w 10-minutowym](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro) samouczku, aby zapewnić, że klaster Spark ma dostęp do wszystkich plików potrzebnych do uruchomienia aplikacji.
+Następnie publikujesz *mySparkApp* utworzony w [.NET for Apache Spark — Wprowadzenie w 10-minutowym](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro) samouczku, aby upewnić się, że klaster platformy Spark ma dostęp do wszystkich plików, których potrzebuje do uruchomienia aplikacji.
 
 1. Uruchom następujące polecenia, aby opublikować *mySparkApp*:
 
@@ -131,13 +131,13 @@ Następnie opublikujesz *mySparkApp* utworzoną w programie [.net for Apache Spa
    dotnet publish -c Release -f netcoreapp3.0 -r ubuntu.16.04-x64
    ```
 
-2. Wykonaj następujące zadania w celu przesłania plików opublikowanych aplikacji, aby można je było łatwo przekazać do klastra Spark.
+2. Wykonaj następujące zadania, aby skompresować opublikowane pliki aplikacji, aby łatwo przesłać je do klastra Databricks Spark.
 
    **W systemie Windows:**
 
-   Przejdź do mySparkApp/bin/Release/netcoreapp 3.0/Ubuntu. 16.04-x64. Następnie kliknij prawym przyciskiem myszy folder **Publikowanie** i wybierz polecenie **Wyślij do > folder skompresowany (zip)** . Nadaj nowemu folderowi nazwę **Publish. zip**.
+   Przejdź do mySparkApp/bin/Release/netcoreapp3.0/ubuntu.16.04-x64. Następnie kliknij prawym przyciskiem myszy folder **Publikuj** i wybierz polecenie **Wyślij do > skompresowany (spakowany) folder**. Nazwij nowy folder **publish.zip**.
 
-   **W systemie Linux Uruchom następujące polecenie:**
+   **W systemie Linux uruchom następujące polecenie:**
 
    ```bash
    zip -r publish.zip .
@@ -145,9 +145,9 @@ Następnie opublikujesz *mySparkApp* utworzoną w programie [.net for Apache Spa
 
 ## <a name="upload-files"></a>Przekazywanie plików
 
-W tej sekcji przekazano kilka plików do DBFS, aby klaster miał wszystko, czego potrzebuje do uruchomienia aplikacji w chmurze. Za każdym razem, gdy przekażesz plik do DBFS, upewnij się, że znajduje się w katalogu, w którym znajduje się ten plik na komputerze.
+W tej sekcji należy przekazać kilka plików do usługi DBFS, dzięki czemu klaster ma wszystko, czego potrzebuje do uruchomienia aplikacji w chmurze. Za każdym razem, gdy przesyłasz plik do usługi DBFS, upewnij się, że znajdujesz się w katalogu, w którym znajduje się ten plik na komputerze.
 
-1. Uruchom następujące polecenia, aby przekazać *DB-init.sh*, *Install-Worker.sh*i *Microsoft. Spark. Worker* do DBFS:
+1. Uruchom następujące polecenia, aby przekazać *db-init.sh* *, install-worker.sh*i *Microsoft.Spark.Worker* do DBFS:
 
    ```console
    databricks fs cp db-init.sh dbfs:/spark-dotnet/db-init.sh
@@ -155,7 +155,7 @@ W tej sekcji przekazano kilka plików do DBFS, aby klaster miał wszystko, czego
    databricks fs cp Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz dbfs:/spark-dotnet/   Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz
    ```
 
-2. Uruchom następujące polecenia, aby przekazać pozostałe pliki, do których klaster będzie musiał uruchomić aplikację: spakowanego folderu publikowania, *Input. txt*i *Microsoft-Spark-2.4. x-0.3.0. jar*.
+2. Uruchom następujące polecenia, aby przekazać pozostałe pliki, które klaster będzie musiał uruchomić aplikację: spakowany folder publikowania, *plik input.txt*i *microsoft-spark-2.4.x-0.3.0.jar*.
 
    ```console
    cd mySparkApp
@@ -168,15 +168,15 @@ W tej sekcji przekazano kilka plików do DBFS, aby klaster miał wszystko, czego
 
 ## <a name="create-a-job"></a>Tworzenie zadania
 
-Aplikacja jest uruchamiana na Azure Databricks za pomocą zadania uruchamiającego żądanie uruchomienia platformy **Spark**, które jest poleceniem używanym do uruchamiania programu .net dla Apache Spark zadań.
+Aplikacja jest uruchamiana na platformie Azure Databricks za pomocą zadania **uruchamianego spark-submit**, które jest poleceniem używanym do uruchamiania zadań platformy .NET dla platformy Spark apache.
 
-1. W obszarze roboczym Azure Databricks wybierz ikonę **zadania** , a następnie pozycję **+ Utwórz zadanie**.
+1. W obszarze roboczym usługi Azure Databricks wybierz ikonę **Zadania,** a następnie **+ Utwórz zadanie**.
 
-   ![Tworzenie zadania Azure Databricks](./media/databricks-deployment/create-job.png)
+   ![Tworzenie zadania usługi Azure Databricks](./media/databricks-deployment/create-job.png)
 
-2. Wybierz tytuł zadania, a następnie wybierz pozycję Skonfiguruj platformę **Spark-Submit**.
+2. Wybierz tytuł zadania, a następnie wybierz pozycję **Konfiguruj spark-submit**.
 
-   ![Konfigurowanie usługi Spark-Submit dla zadań datakostek](./media/databricks-deployment/configure-spark-submit.png)
+   ![Konfigurowanie spark-submit dla zadania Databricks](./media/databricks-deployment/configure-spark-submit.png)
 
 3. Wklej następujące parametry w konfiguracji zadania. Następnie wybierz pozycję **Potwierdź**.
 
@@ -186,35 +186,35 @@ Aplikacja jest uruchamiana na Azure Databricks za pomocą zadania uruchamiające
 
 ## <a name="create-a-cluster"></a>Tworzenie klastra
 
-1. Przejdź do zadania i wybierz pozycję **Edytuj** , aby skonfigurować klaster zadania.
+1. Przejdź do zadania i wybierz pozycję **Edytuj,** aby skonfigurować klaster zadania.
 
-2. Ustaw klaster na platformę **Spark 2.4.1**. Następnie wybierz pozycję **Opcje zaawansowane** > **init scripts**. Ustaw ścieżkę skryptu init jako `dbfs:/spark-dotnet/db-init.sh`.
+2. Ustaw klaster na **Spark 2.4.1**. Następnie wybierz opcję **Zaawansowane opcje** > **Skrypty init**. Ustaw ścieżkę skryptu Init jako `dbfs:/spark-dotnet/db-init.sh`.
 
-   ![Skonfiguruj klaster Spark w Azure Databricks](./media/databricks-deployment/cluster-config.png)
+   ![Konfigurowanie klastra iskrowego w usłudze Azure Databricks](./media/databricks-deployment/cluster-config.png)
 
-3. Wybierz pozycję **Potwierdź** , aby potwierdzić ustawienia klastra.
+3. Wybierz **pozycję Potwierdź,** aby potwierdzić ustawienia klastra.
 
 ## <a name="run-your-app"></a>Uruchamianie aplikacji
 
-1. Przejdź do zadania i wybierz pozycję **Uruchom teraz** , aby uruchomić zadanie w nowo skonfigurowanym klastrze Spark.
+1. Przejdź do zadania i wybierz pozycję **Uruchom teraz,** aby uruchomić zadanie w nowo skonfigurowanym klastrze platformy Spark.
 
-2. Utworzenie klastra zadania może potrwać kilka minut. Po jego utworzeniu zadanie zostanie przesłane i będzie można wyświetlić dane wyjściowe.
+2. Utworzenie klastra zadania zajmuje kilka minut. Po jego utworzeniu zadanie zostanie przesłane i będzie można wyświetlić dane wyjściowe.
 
-3. Z menu po lewej stronie wybierz pozycję **klastry** , a następnie nazwę i uruchomienie zadania.
+3. Wybierz **polecenie Klastry** z lewego menu, a następnie nazwę i przebieg zadania.
 
-4. Wybierz pozycję **dzienniki sterowników** , aby wyświetlić dane wyjściowe zadania. Gdy aplikacja zakończy wykonywanie, zobaczysz tę samą tabelę Count wyrazów z uruchomienia lokalnego uruchamiania zapisaną w standardowej konsoli wyjściowej.
+4. Wybierz **dzienniki sterowników,** aby wyświetlić dane wyjściowe zadania. Po zakończeniu wykonywania aplikacji, zobaczysz tę samą tabelę liczby wyrazów z uruchamiania lokalnego uruchamiania na początku zapisane do standardowej konsoli wyjściowej.
 
-   ![Azure Databricks tabeli wyjściowej zadania](./media/databricks-deployment/table-output.png)
+   ![Tabela wyjściowa zadania usługi Azure Databricks](./media/databricks-deployment/table-output.png)
 
-   Gratulacje, uruchomiono pierwszą aplikację platformy .NET dla Apache Spark w chmurze!
+   Gratulacje, uruchomiliście pierwszą aplikację .NET dla Apache Spark w chmurze!
 
 ## <a name="clean-up-resources"></a>Oczyszczanie zasobów
 
-Jeśli obszar roboczy datakostki nie jest już potrzebny, możesz usunąć zasób Azure Databricks w Azure Portal. Dodatkowo możesz wybrać nazwę grupy zasobów, aby otworzyć stronę grupy zasobów, a następnie wybrać pozycję **Usuń grupę zasobów**.
+Jeśli nie potrzebujesz już obszaru roboczego Databricks, możesz usunąć zasób usługi Azure Databricks w witrynie Azure portal. Dodatkowo możesz wybrać nazwę grupy zasobów, aby otworzyć stronę grupy zasobów, a następnie wybrać pozycję **Usuń grupę zasobów**.
 
 ## <a name="next-steps"></a>Następne kroki
 
-W tym samouczku wdrożono aplikację .NET dla Apache Spark w usłudze datakostki. Aby dowiedzieć się więcej na temat datakostki, przejdź do dokumentacji Azure Databricks.
+W tym samouczku wdrożono aplikację platformy .NET for Apache Spark w witrynie Databricks. Aby dowiedzieć się więcej o Databricks, przejdź do dokumentacji usługi Azure Databricks.
 
 > [!div class="nextstepaction"]
-> [Dokumentacja Azure Databricks](https://docs.microsoft.com/azure/azure-databricks/)
+> [Dokumentacja usługi Azure Databricks](https://docs.microsoft.com/azure/azure-databricks/)

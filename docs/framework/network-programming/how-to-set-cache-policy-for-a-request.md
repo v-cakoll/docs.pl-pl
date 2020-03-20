@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
-ms.openlocfilehash: 7b28cf6e27fa6f5a5d255621d8e21e9a565ddbc4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4ad74d69391da0e815faf9c278f2d9bea03937d4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71048116"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180767"
 ---
-# <a name="how-to-set-cache-policy-for-a-request"></a><span data-ttu-id="caefe-102">Instrukcje: ustawianie zasad pamięci podręcznej dla żądania</span><span class="sxs-lookup"><span data-stu-id="caefe-102">How to: Set Cache Policy for a Request</span></span>
-<span data-ttu-id="caefe-103">W poniższym przykładzie pokazano, jak ustawić zasady pamięci podręcznej dla żądania.</span><span class="sxs-lookup"><span data-stu-id="caefe-103">The following example demonstrates setting a cache policy for a request.</span></span> <span data-ttu-id="caefe-104">Przykładowe dane wejściowe to identyfikator URI, taki `http://www.contoso.com/`jak.</span><span class="sxs-lookup"><span data-stu-id="caefe-104">The example input is a URI such as `http://www.contoso.com/`.</span></span>  
+# <a name="how-to-set-cache-policy-for-a-request"></a><span data-ttu-id="00626-102">Instrukcje: ustawianie zasad pamięci podręcznej dla żądania</span><span class="sxs-lookup"><span data-stu-id="00626-102">How to: Set Cache Policy for a Request</span></span>
+<span data-ttu-id="00626-103">W poniższym przykładzie pokazano ustawienie zasad pamięci podręcznej dla żądania.</span><span class="sxs-lookup"><span data-stu-id="00626-103">The following example demonstrates setting a cache policy for a request.</span></span> <span data-ttu-id="00626-104">Przykładowe dane wejściowe to `http://www.contoso.com/`identyfikator URI, taki jak .</span><span class="sxs-lookup"><span data-stu-id="00626-104">The example input is a URI such as `http://www.contoso.com/`.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="caefe-105">Przykład</span><span class="sxs-lookup"><span data-stu-id="caefe-105">Example</span></span>  
- <span data-ttu-id="caefe-106">Poniższy przykład kodu tworzy zasady pamięci podręcznej, które umożliwiają użycie żądanego zasobu z pamięci podręcznej, jeśli nie było w pamięci podręcznej dłużej niż jeden dzień.</span><span class="sxs-lookup"><span data-stu-id="caefe-106">The following code example creates a cache policy that allows the requested resource to be used from the cache if it has not been in the cache for longer than one day.</span></span> <span data-ttu-id="caefe-107">Przykład wyświetla komunikat wskazujący, czy zasób został użyty z pamięci podręcznej, na przykład, `"The response was retrieved from the cache : False."`, a następnie wyświetla zasób.</span><span class="sxs-lookup"><span data-stu-id="caefe-107">The example displays a message that indicates whether the resource was used from the cache—for example, `"The response was retrieved from the cache : False."`—and then displays the resource.</span></span> <span data-ttu-id="caefe-108">Żądanie może być spełnione przez dowolną pamięć podręczną między klientem i serwerem.</span><span class="sxs-lookup"><span data-stu-id="caefe-108">A request can be fulfilled by any cache between the client and server.</span></span>  
+## <a name="example"></a><span data-ttu-id="00626-105">Przykład</span><span class="sxs-lookup"><span data-stu-id="00626-105">Example</span></span>  
+ <span data-ttu-id="00626-106">Poniższy przykład kodu tworzy zasady pamięci podręcznej, która umożliwia żądany zasób do użycia z pamięci podręcznej, jeśli nie był w pamięci podręcznej dłużej niż jeden dzień.</span><span class="sxs-lookup"><span data-stu-id="00626-106">The following code example creates a cache policy that allows the requested resource to be used from the cache if it has not been in the cache for longer than one day.</span></span> <span data-ttu-id="00626-107">W przykładzie jest wyświetlany komunikat wskazujący, czy zasób `"The response was retrieved from the cache : False."`został użyty z pamięci podręcznej , na przykład , a następnie wyświetla zasób.</span><span class="sxs-lookup"><span data-stu-id="00626-107">The example displays a message that indicates whether the resource was used from the cache—for example, `"The response was retrieved from the cache : False."`—and then displays the resource.</span></span> <span data-ttu-id="00626-108">Żądanie może zostać spełnione przez dowolną pamięć podręczną między klientem a serwerem.</span><span class="sxs-lookup"><span data-stu-id="00626-108">A request can be fulfilled by any cache between the client and server.</span></span>  
   
 ```csharp  
 using System;  
@@ -29,12 +29,12 @@ using System.IO;
 namespace Examples.System.Net.Cache  
 {  
     public class CacheExample  
-    {     
+    {
         public static void UseCacheForOneDay(Uri resource)  
         {  
             // Create a policy that allows items in the cache  
             // to be used if they have been cached one day or less.  
-            HttpRequestCachePolicy requestPolicy =   
+            HttpRequestCachePolicy requestPolicy =
                 new HttpRequestCachePolicy (HttpCacheAgeControl.MaxAge,  
                 TimeSpan.FromDays(1));  
   
@@ -105,10 +105,10 @@ Namespace Examples.System.Net.Cache
 End Namespace  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="caefe-109">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="caefe-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="00626-109">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="00626-109">See also</span></span>
 
-- [<span data-ttu-id="caefe-110">Zarządzanie pamięcią podręczną dla aplikacji sieciowych</span><span class="sxs-lookup"><span data-stu-id="caefe-110">Cache Management for Network Applications</span></span>](cache-management-for-network-applications.md)
-- [<span data-ttu-id="caefe-111">Zasady pamięci podręcznej</span><span class="sxs-lookup"><span data-stu-id="caefe-111">Cache Policy</span></span>](cache-policy.md)
-- [<span data-ttu-id="caefe-112">Zasady pamięci podręcznej oparte na lokalizacji</span><span class="sxs-lookup"><span data-stu-id="caefe-112">Location-Based Cache Policies</span></span>](location-based-cache-policies.md)
-- [<span data-ttu-id="caefe-113">Zasady pamięci podręcznej oparte na czasie</span><span class="sxs-lookup"><span data-stu-id="caefe-113">Time-Based Cache Policies</span></span>](time-based-cache-policies.md)
-- [<span data-ttu-id="caefe-114">\<requestCaching >, element (Ustawienia sieci)</span><span class="sxs-lookup"><span data-stu-id="caefe-114">\<requestCaching> Element (Network Settings)</span></span>](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+- [<span data-ttu-id="00626-110">Zarządzanie pamięcią podręczną dla aplikacji sieciowych</span><span class="sxs-lookup"><span data-stu-id="00626-110">Cache Management for Network Applications</span></span>](cache-management-for-network-applications.md)
+- [<span data-ttu-id="00626-111">Zasady pamięci podręcznej</span><span class="sxs-lookup"><span data-stu-id="00626-111">Cache Policy</span></span>](cache-policy.md)
+- [<span data-ttu-id="00626-112">Zasady pamięci podręcznej oparte na lokalizacji</span><span class="sxs-lookup"><span data-stu-id="00626-112">Location-Based Cache Policies</span></span>](location-based-cache-policies.md)
+- [<span data-ttu-id="00626-113">Zasady pamięci podręcznej oparte na czasie</span><span class="sxs-lookup"><span data-stu-id="00626-113">Time-Based Cache Policies</span></span>](time-based-cache-policies.md)
+- [<span data-ttu-id="00626-114">\<requestCaching> Element (Ustawienia sieciowe)</span><span class="sxs-lookup"><span data-stu-id="00626-114">\<requestCaching> Element (Network Settings)</span></span>](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)

@@ -1,33 +1,33 @@
 ---
-title: Żądanie nietypu-odpowiedź
+title: Bez typu żądanie-odpowiedź
 ms.date: 03/30/2017
 ms.assetid: 0bf0f9d9-7caf-4d3d-8c9e-2d468cca16a5
-ms.openlocfilehash: ba1caddd8f37a37df63e2710883f3096e0989fcd
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: a526837b9bccf7a6287972e482a189a53ecadaf8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715865"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183286"
 ---
-# <a name="untyped-requestreply"></a><span data-ttu-id="2cfaa-102">Nietypizowane żądanie/nietypizowana odpowiedź</span><span class="sxs-lookup"><span data-stu-id="2cfaa-102">Untyped Request/Reply</span></span>
-<span data-ttu-id="2cfaa-103">Ten przykład ilustruje sposób definiowania kontraktów operacji, które używają klasy Message.</span><span class="sxs-lookup"><span data-stu-id="2cfaa-103">This sample demonstrates how to define operation contracts that use the Message class.</span></span>  
+# <a name="untyped-requestreply"></a><span data-ttu-id="a6963-102">Nietypizowane żądanie/nietypizowana odpowiedź</span><span class="sxs-lookup"><span data-stu-id="a6963-102">Untyped Request/Reply</span></span>
+<span data-ttu-id="a6963-103">W tym przykładzie pokazano, jak zdefiniować kontrakty operacji, które używają Message klasy.</span><span class="sxs-lookup"><span data-stu-id="a6963-103">This sample demonstrates how to define operation contracts that use the Message class.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="2cfaa-104">Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.</span><span class="sxs-lookup"><span data-stu-id="2cfaa-104">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+> <span data-ttu-id="a6963-104">Procedura konfiguracji i instrukcje kompilacji dla tego przykładu znajdują się na końcu tego tematu.</span><span class="sxs-lookup"><span data-stu-id="a6963-104">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- <span data-ttu-id="2cfaa-105">Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span><span class="sxs-lookup"><span data-stu-id="2cfaa-105">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span> <span data-ttu-id="2cfaa-106">Kontrakt usługi definiuje jedną operację, która przyjmuje typ komunikatu jako argument i zwraca komunikat.</span><span class="sxs-lookup"><span data-stu-id="2cfaa-106">The service contract defines one operation that takes in a message type as an argument and returns a message.</span></span> <span data-ttu-id="2cfaa-107">Operacja zbiera wszystkie wymagane dane w celu obliczenia sumy z treści wiadomości, a następnie wysyła sumę jako treść w komunikacie zwrotnym.</span><span class="sxs-lookup"><span data-stu-id="2cfaa-107">The operation collects all required data to compute the sum from the message body and then sends the sum as body in the return message.</span></span>  
+ <span data-ttu-id="a6963-105">Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span><span class="sxs-lookup"><span data-stu-id="a6963-105">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span> <span data-ttu-id="a6963-106">Umowa serwisowa definiuje jedną operację, która przyjmuje typ wiadomości jako argument i zwraca komunikat.</span><span class="sxs-lookup"><span data-stu-id="a6963-106">The service contract defines one operation that takes in a message type as an argument and returns a message.</span></span> <span data-ttu-id="a6963-107">Operacja zbiera wszystkie wymagane dane do obliczenia sumy z treści wiadomości, a następnie wysyła sumę jako treść w komunikacie zwrotnym.</span><span class="sxs-lookup"><span data-stu-id="a6963-107">The operation collects all required data to compute the sum from the message body and then sends the sum as body in the return message.</span></span>  
   
 ```csharp
 [OperationContract(Action = CalculatorService.RequestAction, ReplyAction = CalculatorService.ReplyAction)]  
 Message ComputeSum(Message request);  
 ```  
   
- <span data-ttu-id="2cfaa-108">W usłudze operacja pobiera tablicę liczb całkowitych przekazaną w komunikacie wejściowym, a następnie oblicza sumę.</span><span class="sxs-lookup"><span data-stu-id="2cfaa-108">On the service, the operation retrieves the array of integers passed in the input message and then computes the sum.</span></span> <span data-ttu-id="2cfaa-109">Aby wysłać komunikat odpowiedzi, przykład tworzy nową wiadomość z odpowiednią wersją i akcją wiadomości i dodaje obliczoną sumę jako treść.</span><span class="sxs-lookup"><span data-stu-id="2cfaa-109">To send a response message, the sample creates a new message with the appropriate message version and Action and adds the computed sum as its body.</span></span> <span data-ttu-id="2cfaa-110">Poniższy przykładowy kod demonstruje ten sposób.</span><span class="sxs-lookup"><span data-stu-id="2cfaa-110">The following sample code demonstrates this.</span></span>  
+ <span data-ttu-id="a6963-108">W usłudze operacja pobiera tablicę liczby całkowitych przekazanych w komunikacie wejściowym, a następnie oblicza sumę.</span><span class="sxs-lookup"><span data-stu-id="a6963-108">On the service, the operation retrieves the array of integers passed in the input message and then computes the sum.</span></span> <span data-ttu-id="a6963-109">Aby wysłać wiadomość odpowiedzi, przykład tworzy nową wiadomość z odpowiednią wersją wiadomości i Action i dodaje obliczoną sumę jako swoją treść.</span><span class="sxs-lookup"><span data-stu-id="a6963-109">To send a response message, the sample creates a new message with the appropriate message version and Action and adds the computed sum as its body.</span></span> <span data-ttu-id="a6963-110">Poniższy przykładowy kod pokazuje to.</span><span class="sxs-lookup"><span data-stu-id="a6963-110">The following sample code demonstrates this.</span></span>  
   
 ```csharp
 public Message ComputeSum(Message request)  
 {  
-    //The body of the message contains a list of numbers which will be   
+    //The body of the message contains a list of numbers which will be
     //read as a int[] using GetBody<T>  
     int result = 0;  
   
@@ -37,13 +37,13 @@ public Message ComputeSum(Message request)
         result += i;  
     }  
   
-    Message response = Message.CreateMessage(request.Version,   
+    Message response = Message.CreateMessage(request.Version,
                                       ReplyAction, result);  
     return response;  
 }  
 ```  
   
- <span data-ttu-id="2cfaa-111">Klient korzysta z kodu wygenerowanego przez [Narzędzie do obsługi metadanych ServiceModel (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) , aby utworzyć serwer proxy w usłudze zdalnej.</span><span class="sxs-lookup"><span data-stu-id="2cfaa-111">The client uses code that is generated by [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) to create a proxy to the remote service.</span></span> <span data-ttu-id="2cfaa-112">Aby wysłać komunikat żądania, klient musi mieć wersję wiadomości, która zależy od kanału bazowego.</span><span class="sxs-lookup"><span data-stu-id="2cfaa-112">To send a request message, the client must have the message version, which depends on the underlying channel.</span></span> <span data-ttu-id="2cfaa-113">W tym celu tworzy nowy <xref:System.ServiceModel.OperationContextScope> zakres do utworzonego przez niego kanału proxy, który tworzy <xref:System.ServiceModel.OperationContext> z prawidłową wersją wiadomości wypełnioną we właściwości `OutgoingMessageHeaders.MessageVersion`.</span><span class="sxs-lookup"><span data-stu-id="2cfaa-113">Thus, it creates a new <xref:System.ServiceModel.OperationContextScope> scoped to the proxy channel it created, which creates an <xref:System.ServiceModel.OperationContext> with the correct message version populated in its `OutgoingMessageHeaders.MessageVersion` property.</span></span> <span data-ttu-id="2cfaa-114">Klient przekazuje tablicę wejściową jako treść komunikatu żądania, a następnie wywołuje `ComputeSum` na serwerze proxy.</span><span class="sxs-lookup"><span data-stu-id="2cfaa-114">The client passes an input array as the body to the request message and then invokes the `ComputeSum` on the proxy.</span></span> <span data-ttu-id="2cfaa-115">Następnie klient pobiera sumę danych wejściowych, które przekazuje, uzyskując dostęp do metody `GetBody<T>` w komunikacie odpowiedzi.</span><span class="sxs-lookup"><span data-stu-id="2cfaa-115">The client then retrieves the sum of the inputs it passed by accessing the `GetBody<T>` method on the reply message.</span></span> <span data-ttu-id="2cfaa-116">Poniższy przykładowy kod demonstruje ten sposób.</span><span class="sxs-lookup"><span data-stu-id="2cfaa-116">The following sample code demonstrates this.</span></span>  
+ <span data-ttu-id="a6963-111">Klient używa kodu generowanego przez [narzędzie narzędzia ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) do utworzenia serwera proxy usługi zdalnej.</span><span class="sxs-lookup"><span data-stu-id="a6963-111">The client uses code that is generated by [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) to create a proxy to the remote service.</span></span> <span data-ttu-id="a6963-112">Aby wysłać wiadomość żądania, klient musi mieć wersję wiadomości, która zależy od kanału źródłowego.</span><span class="sxs-lookup"><span data-stu-id="a6963-112">To send a request message, the client must have the message version, which depends on the underlying channel.</span></span> <span data-ttu-id="a6963-113">W związku z <xref:System.ServiceModel.OperationContextScope> tym tworzy nowy zakres do kanału <xref:System.ServiceModel.OperationContext> proxy, który został utworzony, który tworzy z poprawną wersją wiadomości wypełnione w jego `OutgoingMessageHeaders.MessageVersion` właściwości.</span><span class="sxs-lookup"><span data-stu-id="a6963-113">Thus, it creates a new <xref:System.ServiceModel.OperationContextScope> scoped to the proxy channel it created, which creates an <xref:System.ServiceModel.OperationContext> with the correct message version populated in its `OutgoingMessageHeaders.MessageVersion` property.</span></span> <span data-ttu-id="a6963-114">Klient przekazuje tablicę danych wejściowych jako treść do `ComputeSum` komunikatu żądania, a następnie wywołuje na serwerze proxy.</span><span class="sxs-lookup"><span data-stu-id="a6963-114">The client passes an input array as the body to the request message and then invokes the `ComputeSum` on the proxy.</span></span> <span data-ttu-id="a6963-115">Następnie klient pobiera sumę danych wejściowych, które `GetBody<T>` przeszedł, uzyskując dostęp do metody w wiadomości odpowiedzi.</span><span class="sxs-lookup"><span data-stu-id="a6963-115">The client then retrieves the sum of the inputs it passed by accessing the `GetBody<T>` method on the reply message.</span></span> <span data-ttu-id="a6963-116">Poniższy przykładowy kod pokazuje to.</span><span class="sxs-lookup"><span data-stu-id="a6963-116">The following sample code demonstrates this.</span></span>  
   
 ```csharp
 using (new OperationContextScope(client.InnerChannel))  
@@ -51,17 +51,17 @@ using (new OperationContextScope(client.InnerChannel))
     // Call the Sum service operation.  
     int[] values = { 1, 2, 3, 4, 5 };  
     Message request = Message.CreateMessage(  
-        OperationContext.Current.OutgoingMessageHeaders.MessageVersion,   
+        OperationContext.Current.OutgoingMessageHeaders.MessageVersion,
         RequestAction, values);  
     Message reply = client.ComputeSum(request);  
     int response = reply.GetBody<int>();  
   
-    Console.WriteLine("Sum of numbers passed (1,2,3,4,5) = {0}",   
+    Console.WriteLine("Sum of numbers passed (1,2,3,4,5) = {0}",
                                                        response);  
 }  
 ```  
   
- <span data-ttu-id="2cfaa-117">Ten przykład jest przykładem hostowanym w sieci Web i dlatego musi być uruchomiony tylko plik wykonywalny klienta.</span><span class="sxs-lookup"><span data-stu-id="2cfaa-117">This sample is a Web-hosted sample and so only the client executable must be run.</span></span> <span data-ttu-id="2cfaa-118">Poniżej przedstawiono przykładowe dane wyjściowe na komputerze klienckim.</span><span class="sxs-lookup"><span data-stu-id="2cfaa-118">The following is the sample output on the client.</span></span>  
+ <span data-ttu-id="a6963-117">Ten przykład jest próbką hostowane w sieci Web i dlatego należy uruchomić tylko plik wykonywalny klienta.</span><span class="sxs-lookup"><span data-stu-id="a6963-117">This sample is a Web-hosted sample and so only the client executable must be run.</span></span> <span data-ttu-id="a6963-118">Poniżej przedstawiono przykładowe dane wyjściowe na kliencie.</span><span class="sxs-lookup"><span data-stu-id="a6963-118">The following is the sample output on the client.</span></span>  
   
 ```console  
 Prompt>Client.exe  
@@ -70,21 +70,21 @@ Sum of numbers passed (1,2,3,4,5) = 15
 Press <ENTER> to terminate client.  
 ```  
   
- <span data-ttu-id="2cfaa-119">Ten przykład jest przykładem hostowanym w sieci Web, więc sprawdź link podany w kroku 3, aby zobaczyć, jak skompilować i uruchomić przykład.</span><span class="sxs-lookup"><span data-stu-id="2cfaa-119">This sample is a Web-hosted sample and so check the link provided in step 3 to see how to build and run the sample.</span></span>  
+ <span data-ttu-id="a6963-119">Ten przykład jest próbką hostowane w sieci Web i tak sprawdź łącze podane w kroku 3, aby zobaczyć, jak skompilować i uruchomić przykład.</span><span class="sxs-lookup"><span data-stu-id="a6963-119">This sample is a Web-hosted sample and so check the link provided in step 3 to see how to build and run the sample.</span></span>  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="2cfaa-120">Aby skonfigurować, skompilować i uruchomić przykład</span><span class="sxs-lookup"><span data-stu-id="2cfaa-120">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="a6963-120">Aby skonfigurować, skompilować i uruchomić próbkę</span><span class="sxs-lookup"><span data-stu-id="a6963-120">To set up, build, and run the sample</span></span>  
   
-1. <span data-ttu-id="2cfaa-121">Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="2cfaa-121">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1. <span data-ttu-id="a6963-121">Upewnij się, że wykonano [procedurę jednorazowej instalacji dla przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="a6963-121">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2. <span data-ttu-id="2cfaa-122">Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="2cfaa-122">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+2. <span data-ttu-id="a6963-122">Aby utworzyć wersję C# lub Visual Basic .NET rozwiązania, postępuj zgodnie z instrukcjami w [tworzenie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="a6963-122">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3. <span data-ttu-id="2cfaa-123">Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="2cfaa-123">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+3. <span data-ttu-id="a6963-123">Aby uruchomić próbkę w konfiguracji z jednym lub krzyżowym komputerem, postępuj zgodnie z instrukcjami w [programie Uruchamianie przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="a6963-123">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
-> <span data-ttu-id="2cfaa-124">Przykłady mogą być już zainstalowane na komputerze.</span><span class="sxs-lookup"><span data-stu-id="2cfaa-124">The samples may already be installed on your machine.</span></span> <span data-ttu-id="2cfaa-125">Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).</span><span class="sxs-lookup"><span data-stu-id="2cfaa-125">Check for the following (default) directory before continuing.</span></span>  
->   
+> <span data-ttu-id="a6963-124">Próbki mogą być już zainstalowane na komputerze.</span><span class="sxs-lookup"><span data-stu-id="a6963-124">The samples may already be installed on your machine.</span></span> <span data-ttu-id="a6963-125">Przed kontynuowaniem sprawdź następujący (domyślny) katalog.</span><span class="sxs-lookup"><span data-stu-id="a6963-125">Check for the following (default) directory before continuing.</span></span>  
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> <span data-ttu-id="2cfaa-126">Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="2cfaa-126">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="2cfaa-127">Ten przykład znajduje się w następującym katalogu.</span><span class="sxs-lookup"><span data-stu-id="2cfaa-127">This sample is located in the following directory.</span></span>  
->   
+>
+> <span data-ttu-id="a6963-126">Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) Przykłady dla platformy .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady.</span><span class="sxs-lookup"><span data-stu-id="a6963-126">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="a6963-127">Ten przykład znajduje się w następującym katalogu.</span><span class="sxs-lookup"><span data-stu-id="a6963-127">This sample is located in the following directory.</span></span>  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Untyped`  

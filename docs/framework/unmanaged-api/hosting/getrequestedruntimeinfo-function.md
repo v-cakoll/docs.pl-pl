@@ -15,114 +15,114 @@ helpviewer_keywords:
 ms.assetid: 0dfd7cdc-c116-4e25-b56a-ac7b0378c942
 topic_type:
 - apiref
-ms.openlocfilehash: cd1d9e768698115bee22e35699b044e0c3526d2d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: db721e1ef774c87de0fa7da178463d832a3da756
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136321"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178152"
 ---
-# <a name="getrequestedruntimeinfo-function"></a><span data-ttu-id="efbfa-102">GetRequestedRuntimeInfo — Funkcja</span><span class="sxs-lookup"><span data-stu-id="efbfa-102">GetRequestedRuntimeInfo Function</span></span>
-<span data-ttu-id="efbfa-103">Pobiera informacje o wersji i katalogu dotyczące środowiska uruchomieniowego języka wspólnego (CLR) żądanego przez aplikację.</span><span class="sxs-lookup"><span data-stu-id="efbfa-103">Gets version and directory information about the common language runtime (CLR) requested by an application.</span></span>  
+# <a name="getrequestedruntimeinfo-function"></a><span data-ttu-id="7d2e9-102">GetRequestedRuntimeInfo — Funkcja</span><span class="sxs-lookup"><span data-stu-id="7d2e9-102">GetRequestedRuntimeInfo Function</span></span>
+<span data-ttu-id="7d2e9-103">Pobiera informacje o wersji i katalogu o wspólnym czasie wykonywania języka (CLR) wymagane przez aplikację.</span><span class="sxs-lookup"><span data-stu-id="7d2e9-103">Gets version and directory information about the common language runtime (CLR) requested by an application.</span></span>  
   
- <span data-ttu-id="efbfa-104">Ta funkcja jest przestarzała w .NET Framework 4.</span><span class="sxs-lookup"><span data-stu-id="efbfa-104">This function has been deprecated in the .NET Framework 4.</span></span>  
+ <span data-ttu-id="7d2e9-104">Ta funkcja została przestarzała w .NET Framework 4.</span><span class="sxs-lookup"><span data-stu-id="7d2e9-104">This function has been deprecated in the .NET Framework 4.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="efbfa-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="efbfa-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7d2e9-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="7d2e9-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetRequestedRuntimeInfo (  
-    [in]  LPCWSTR  pExe,   
-    [in]  LPCWSTR  pwszVersion,   
-    [in]  LPCWSTR  pConfigurationFile,   
-    [in]  DWORD    startupFlags,   
-    [in]  DWORD    runtimeInfoFlags,   
-    [out] LPWSTR   pDirectory,   
-    [in]  DWORD    dwDirectory,   
-    [out] DWORD   *dwDirectoryLength,   
-    [out] LPWSTR   pVersion,   
-    [in]  DWORD    cchBuffer,   
+    [in]  LPCWSTR  pExe,
+    [in]  LPCWSTR  pwszVersion,
+    [in]  LPCWSTR  pConfigurationFile,
+    [in]  DWORD    startupFlags,
+    [in]  DWORD    runtimeInfoFlags,
+    [out] LPWSTR   pDirectory,
+    [in]  DWORD    dwDirectory,
+    [out] DWORD   *dwDirectoryLength,
+    [out] LPWSTR   pVersion,
+    [in]  DWORD    cchBuffer,
     [out] DWORD   *dwlength  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="efbfa-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="efbfa-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7d2e9-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="7d2e9-106">Parameters</span></span>  
  `pExe`  
- <span data-ttu-id="efbfa-107">podczas Nazwa aplikacji.</span><span class="sxs-lookup"><span data-stu-id="efbfa-107">[in] The name of the application.</span></span>  
+ <span data-ttu-id="7d2e9-107">[w] Nazwa aplikacji.</span><span class="sxs-lookup"><span data-stu-id="7d2e9-107">[in] The name of the application.</span></span>  
   
  `pwszVersion`  
- <span data-ttu-id="efbfa-108">podczas Ciąg określający numer wersji środowiska uruchomieniowego.</span><span class="sxs-lookup"><span data-stu-id="efbfa-108">[in] A string specifying the version number of the runtime.</span></span>  
+ <span data-ttu-id="7d2e9-108">[w] Ciąg określający numer wersji środowiska wykonawczego.</span><span class="sxs-lookup"><span data-stu-id="7d2e9-108">[in] A string specifying the version number of the runtime.</span></span>  
   
  `pConfigurationFile`  
- <span data-ttu-id="efbfa-109">podczas Nazwa pliku konfiguracji, który jest skojarzony z `pExe`.</span><span class="sxs-lookup"><span data-stu-id="efbfa-109">[in] The name of the configuration file that is associated with `pExe`.</span></span>  
+ <span data-ttu-id="7d2e9-109">[w] Nazwa pliku konfiguracyjnego skojarzonego `pExe`z programem .</span><span class="sxs-lookup"><span data-stu-id="7d2e9-109">[in] The name of the configuration file that is associated with `pExe`.</span></span>  
   
  `startupFlags`  
- <span data-ttu-id="efbfa-110">podczas Co najmniej jedna wartość wyliczenia [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) .</span><span class="sxs-lookup"><span data-stu-id="efbfa-110">[in] One or more of the [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) enumeration values.</span></span>  
+ <span data-ttu-id="7d2e9-110">[w] Co najmniej jedna [z STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) wartości wyliczenia.</span><span class="sxs-lookup"><span data-stu-id="7d2e9-110">[in] One or more of the [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) enumeration values.</span></span>  
   
  `runtimeInfoFlags`  
- <span data-ttu-id="efbfa-111">podczas Co najmniej jedna wartość wyliczenia [RUNTIME_INFO_FLAGS](../../../../docs/framework/unmanaged-api/hosting/runtime-info-flags-enumeration.md) .</span><span class="sxs-lookup"><span data-stu-id="efbfa-111">[in] One or more of the [RUNTIME_INFO_FLAGS](../../../../docs/framework/unmanaged-api/hosting/runtime-info-flags-enumeration.md) enumeration values.</span></span>  
+ <span data-ttu-id="7d2e9-111">[w] Co najmniej jedna [z RUNTIME_INFO_FLAGS](../../../../docs/framework/unmanaged-api/hosting/runtime-info-flags-enumeration.md) wartości wyliczenia.</span><span class="sxs-lookup"><span data-stu-id="7d2e9-111">[in] One or more of the [RUNTIME_INFO_FLAGS](../../../../docs/framework/unmanaged-api/hosting/runtime-info-flags-enumeration.md) enumeration values.</span></span>  
   
  `pDirectory`  
- <span data-ttu-id="efbfa-112">określoną Bufor, który zawiera ścieżkę katalogu do środowiska uruchomieniowego po pomyślnym zakończeniu.</span><span class="sxs-lookup"><span data-stu-id="efbfa-112">[out] A buffer that contains the directory path to the runtime upon successful completion.</span></span>  
+ <span data-ttu-id="7d2e9-112">[na zewnątrz] Bufor, który zawiera ścieżkę katalogu do środowiska wykonawczego po pomyślnym zakończeniu.</span><span class="sxs-lookup"><span data-stu-id="7d2e9-112">[out] A buffer that contains the directory path to the runtime upon successful completion.</span></span>  
   
  `dwDirectory`  
- <span data-ttu-id="efbfa-113">podczas Długość buforu katalogów.</span><span class="sxs-lookup"><span data-stu-id="efbfa-113">[in] The length of the directory buffer.</span></span>  
+ <span data-ttu-id="7d2e9-113">[w] Długość buforu katalogu.</span><span class="sxs-lookup"><span data-stu-id="7d2e9-113">[in] The length of the directory buffer.</span></span>  
   
  `dwDirectoryLength`  
- <span data-ttu-id="efbfa-114">określoną Wskaźnik do długości ciągu ścieżki katalogu.</span><span class="sxs-lookup"><span data-stu-id="efbfa-114">[out] A pointer to the length of the directory path string.</span></span>  
+ <span data-ttu-id="7d2e9-114">[na zewnątrz] Wskaźnik do długości ciągu ścieżki katalogu.</span><span class="sxs-lookup"><span data-stu-id="7d2e9-114">[out] A pointer to the length of the directory path string.</span></span>  
   
  `pVersion`  
- <span data-ttu-id="efbfa-115">określoną Bufor zawierający numer wersji środowiska uruchomieniowego po pomyślnym zakończeniu.</span><span class="sxs-lookup"><span data-stu-id="efbfa-115">[out] A buffer that contains the version number of the runtime upon successful completion.</span></span>  
+ <span data-ttu-id="7d2e9-115">[na zewnątrz] Bufor, który zawiera numer wersji środowiska wykonawczego po pomyślnym zakończeniu.</span><span class="sxs-lookup"><span data-stu-id="7d2e9-115">[out] A buffer that contains the version number of the runtime upon successful completion.</span></span>  
   
  `cchBuffer`  
- <span data-ttu-id="efbfa-116">podczas Długość buforu ciągu wersji.</span><span class="sxs-lookup"><span data-stu-id="efbfa-116">[in] The length of the version string buffer.</span></span>  
+ <span data-ttu-id="7d2e9-116">[w] Długość buforu ciągu wersji.</span><span class="sxs-lookup"><span data-stu-id="7d2e9-116">[in] The length of the version string buffer.</span></span>  
   
  `dwlength`  
- <span data-ttu-id="efbfa-117">określoną Wskaźnik do długości ciągu wersji.</span><span class="sxs-lookup"><span data-stu-id="efbfa-117">[out] A pointer to the length of the version string.</span></span>  
+ <span data-ttu-id="7d2e9-117">[na zewnątrz] Wskaźnik do długości ciągu wersji.</span><span class="sxs-lookup"><span data-stu-id="7d2e9-117">[out] A pointer to the length of the version string.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="efbfa-118">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="efbfa-118">Return Value</span></span>  
- <span data-ttu-id="efbfa-119">Ta metoda zwraca kody błędów standardowego Component Object Model (COM), jak zdefiniowano w WinError. h, oprócz następujących wartości.</span><span class="sxs-lookup"><span data-stu-id="efbfa-119">This method returns standard Component Object Model (COM) error codes, as defined in WinError.h, in addition to the following values.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="7d2e9-118">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="7d2e9-118">Return Value</span></span>  
+ <span data-ttu-id="7d2e9-119">Ta metoda zwraca standardowe kody błędów modelu com (Component Object Model), zgodnie z definicją w pliku WinError.h, oprócz następujących wartości.</span><span class="sxs-lookup"><span data-stu-id="7d2e9-119">This method returns standard Component Object Model (COM) error codes, as defined in WinError.h, in addition to the following values.</span></span>  
   
-|<span data-ttu-id="efbfa-120">Kod powrotu</span><span class="sxs-lookup"><span data-stu-id="efbfa-120">Return code</span></span>|<span data-ttu-id="efbfa-121">Opis</span><span class="sxs-lookup"><span data-stu-id="efbfa-121">Description</span></span>|  
+|<span data-ttu-id="7d2e9-120">Kod powrotu</span><span class="sxs-lookup"><span data-stu-id="7d2e9-120">Return code</span></span>|<span data-ttu-id="7d2e9-121">Opis</span><span class="sxs-lookup"><span data-stu-id="7d2e9-121">Description</span></span>|  
 |-----------------|-----------------|  
-|<span data-ttu-id="efbfa-122">S_OK</span><span class="sxs-lookup"><span data-stu-id="efbfa-122">S_OK</span></span>|<span data-ttu-id="efbfa-123">Metoda została ukończona pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="efbfa-123">The method completed successfully.</span></span>|  
-|<span data-ttu-id="efbfa-124">ERROR_INSUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="efbfa-124">ERROR_INSUFFICIENT_BUFFER</span></span>|<span data-ttu-id="efbfa-125">Bufor katalogów nie jest wystarczająco duży, aby można było przechowywać ścieżkę do katalogu.</span><span class="sxs-lookup"><span data-stu-id="efbfa-125">The directory buffer is not large enough to store the directory path.</span></span><br /><br /> <span data-ttu-id="efbfa-126">oraz</span><span class="sxs-lookup"><span data-stu-id="efbfa-126">- or -</span></span><br /><br /> <span data-ttu-id="efbfa-127">Bufor wersji nie jest wystarczająco duży, aby można było przechowywać ciąg wersji.</span><span class="sxs-lookup"><span data-stu-id="efbfa-127">The version buffer is not large enough to store the version string.</span></span>|  
+|<span data-ttu-id="7d2e9-122">S_OK</span><span class="sxs-lookup"><span data-stu-id="7d2e9-122">S_OK</span></span>|<span data-ttu-id="7d2e9-123">Metoda została ukończona pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="7d2e9-123">The method completed successfully.</span></span>|  
+|<span data-ttu-id="7d2e9-124">ERROR_INSUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="7d2e9-124">ERROR_INSUFFICIENT_BUFFER</span></span>|<span data-ttu-id="7d2e9-125">Bufor katalogu nie jest wystarczająco duży, aby przechowywać ścieżkę katalogu.</span><span class="sxs-lookup"><span data-stu-id="7d2e9-125">The directory buffer is not large enough to store the directory path.</span></span><br /><br /> <span data-ttu-id="7d2e9-126">— lub —</span><span class="sxs-lookup"><span data-stu-id="7d2e9-126">- or -</span></span><br /><br /> <span data-ttu-id="7d2e9-127">Bufor wersji nie jest wystarczająco duży, aby przechowywać ciąg wersji.</span><span class="sxs-lookup"><span data-stu-id="7d2e9-127">The version buffer is not large enough to store the version string.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="efbfa-128">Uwagi</span><span class="sxs-lookup"><span data-stu-id="efbfa-128">Remarks</span></span>  
- <span data-ttu-id="efbfa-129">Metoda `GetRequestedRuntimeInfo` zwraca informacje o wersji załadowanej do procesu, co nie musi być Najnowsza wersja zainstalowana na komputerze.</span><span class="sxs-lookup"><span data-stu-id="efbfa-129">The `GetRequestedRuntimeInfo` method returns run-time information about the version loaded into the process, which is not necessarily the latest version installed on the computer.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7d2e9-128">Uwagi</span><span class="sxs-lookup"><span data-stu-id="7d2e9-128">Remarks</span></span>  
+ <span data-ttu-id="7d2e9-129">Metoda `GetRequestedRuntimeInfo` zwraca informacje w czasie wykonywania o wersji załadowanej do procesu, który niekoniecznie jest najnowszą wersją zainstalowaną na komputerze.</span><span class="sxs-lookup"><span data-stu-id="7d2e9-129">The `GetRequestedRuntimeInfo` method returns run-time information about the version loaded into the process, which is not necessarily the latest version installed on the computer.</span></span>  
   
- <span data-ttu-id="efbfa-130">W .NET Framework w wersji 2,0 można uzyskać informacje o najnowszej zainstalowanej wersji za pomocą metody `GetRequestedRuntimeInfo` w następujący sposób:</span><span class="sxs-lookup"><span data-stu-id="efbfa-130">In the .NET Framework version 2.0, you can get information about the latest installed version by using the `GetRequestedRuntimeInfo` method as follows:</span></span>  
+ <span data-ttu-id="7d2e9-130">W .NET Framework w wersji 2.0 można uzyskać informacje o `GetRequestedRuntimeInfo` najnowszej zainstalowanej wersji przy użyciu metody w następujący sposób:</span><span class="sxs-lookup"><span data-stu-id="7d2e9-130">In the .NET Framework version 2.0, you can get information about the latest installed version by using the `GetRequestedRuntimeInfo` method as follows:</span></span>  
   
-- <span data-ttu-id="efbfa-131">Określ parametry `pExe`, `pwszVersion`i `pConfigurationFile` jako wartości null.</span><span class="sxs-lookup"><span data-stu-id="efbfa-131">Specify the `pExe`, `pwszVersion`, and `pConfigurationFile` parameters as null.</span></span>  
+- <span data-ttu-id="7d2e9-131">Określ `pExe` `pwszVersion`, `pConfigurationFile` i parametry jako null.</span><span class="sxs-lookup"><span data-stu-id="7d2e9-131">Specify the `pExe`, `pwszVersion`, and `pConfigurationFile` parameters as null.</span></span>  
   
-- <span data-ttu-id="efbfa-132">Określ flagę RUNTIME_INFO_UPGRADE_VERSION w wyliczeniach `RUNTIME_INFO_FLAGS` dla parametru `runtimeInfoFlags`.</span><span class="sxs-lookup"><span data-stu-id="efbfa-132">Specify the RUNTIME_INFO_UPGRADE_VERSION flag in the `RUNTIME_INFO_FLAGS` enumerations for the `runtimeInfoFlags` parameter.</span></span>  
+- <span data-ttu-id="7d2e9-132">Określ flagę RUNTIME_INFO_UPGRADE_VERSION `RUNTIME_INFO_FLAGS` w wyliczeniu `runtimeInfoFlags` parametru.</span><span class="sxs-lookup"><span data-stu-id="7d2e9-132">Specify the RUNTIME_INFO_UPGRADE_VERSION flag in the `RUNTIME_INFO_FLAGS` enumerations for the `runtimeInfoFlags` parameter.</span></span>  
   
- <span data-ttu-id="efbfa-133">Metoda `GetRequestedRuntimeInfo` nie zwraca najnowszej wersji środowiska CLR w następujących okolicznościach:</span><span class="sxs-lookup"><span data-stu-id="efbfa-133">The `GetRequestedRuntimeInfo` method does not return the latest CLR version in the following circumstances:</span></span>  
+ <span data-ttu-id="7d2e9-133">Metoda `GetRequestedRuntimeInfo` nie zwraca najnowszej wersji CLR w następujących okolicznościach:</span><span class="sxs-lookup"><span data-stu-id="7d2e9-133">The `GetRequestedRuntimeInfo` method does not return the latest CLR version in the following circumstances:</span></span>  
   
-- <span data-ttu-id="efbfa-134">Istnieje plik konfiguracji aplikacji, który określa ładowanie konkretnej wersji środowiska CLR.</span><span class="sxs-lookup"><span data-stu-id="efbfa-134">An application configuration file that specifies loading a particular CLR version exists.</span></span> <span data-ttu-id="efbfa-135">Należy pamiętać, że .NET Framework użyje pliku konfiguracji, nawet jeśli dla parametru `pConfigurationFile` określono wartość null.</span><span class="sxs-lookup"><span data-stu-id="efbfa-135">Note that the .NET Framework will use the configuration file even if you specify null for the `pConfigurationFile` parameter.</span></span>  
+- <span data-ttu-id="7d2e9-134">Istnieje plik konfiguracji aplikacji, który określa ładowanie określonej wersji CLR.</span><span class="sxs-lookup"><span data-stu-id="7d2e9-134">An application configuration file that specifies loading a particular CLR version exists.</span></span> <span data-ttu-id="7d2e9-135">Należy zauważyć, że program .NET Framework użyje pliku `pConfigurationFile` konfiguracyjnego, nawet jeśli określisz wartość null dla parametru.</span><span class="sxs-lookup"><span data-stu-id="7d2e9-135">Note that the .NET Framework will use the configuration file even if you specify null for the `pConfigurationFile` parameter.</span></span>  
   
-- <span data-ttu-id="efbfa-136">Wywołana została Metoda [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) określająca wcześniejszą wersję środowiska CLR.</span><span class="sxs-lookup"><span data-stu-id="efbfa-136">The [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) method was called specifying an earlier CLR version.</span></span>  
+- <span data-ttu-id="7d2e9-136">[Metoda CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) została wywołana określając wcześniejszą wersję CLR.</span><span class="sxs-lookup"><span data-stu-id="7d2e9-136">The [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) method was called specifying an earlier CLR version.</span></span>  
   
-- <span data-ttu-id="efbfa-137">Aplikacja, która została skompilowana dla starszej wersji środowiska CLR, jest obecnie uruchomiona.</span><span class="sxs-lookup"><span data-stu-id="efbfa-137">An application that was compiled for an earlier CLR version is currently running.</span></span>  
+- <span data-ttu-id="7d2e9-137">Aplikacja, która została skompilowana dla wcześniejszej wersji CLR jest obecnie uruchomiona.</span><span class="sxs-lookup"><span data-stu-id="7d2e9-137">An application that was compiled for an earlier CLR version is currently running.</span></span>  
   
- <span data-ttu-id="efbfa-138">Dla parametru `runtimeInfoFlags` można określić tylko jeden z stałych architektury `RUNTIME_INFO_FLAGS` Wyliczenie w danym momencie:</span><span class="sxs-lookup"><span data-stu-id="efbfa-138">For the `runtimeInfoFlags` parameter, you can specify only one of the architecture constants of the `RUNTIME_INFO_FLAGS` enumeration at a time:</span></span>  
+ <span data-ttu-id="7d2e9-138">Dla `runtimeInfoFlags` parametru można określić tylko jedną ze `RUNTIME_INFO_FLAGS` stałych architektury wyliczenia w czasie:</span><span class="sxs-lookup"><span data-stu-id="7d2e9-138">For the `runtimeInfoFlags` parameter, you can specify only one of the architecture constants of the `RUNTIME_INFO_FLAGS` enumeration at a time:</span></span>  
   
-- <span data-ttu-id="efbfa-139">RUNTIME_INFO_REQUEST_IA64</span><span class="sxs-lookup"><span data-stu-id="efbfa-139">RUNTIME_INFO_REQUEST_IA64</span></span>  
+- <span data-ttu-id="7d2e9-139">RUNTIME_INFO_REQUEST_IA64</span><span class="sxs-lookup"><span data-stu-id="7d2e9-139">RUNTIME_INFO_REQUEST_IA64</span></span>  
   
-- <span data-ttu-id="efbfa-140">RUNTIME_INFO_REQUEST_AMD64</span><span class="sxs-lookup"><span data-stu-id="efbfa-140">RUNTIME_INFO_REQUEST_AMD64</span></span>  
+- <span data-ttu-id="7d2e9-140">RUNTIME_INFO_REQUEST_AMD64</span><span class="sxs-lookup"><span data-stu-id="7d2e9-140">RUNTIME_INFO_REQUEST_AMD64</span></span>  
   
-- <span data-ttu-id="efbfa-141">RUNTIME_INFO_REQUEST_X86</span><span class="sxs-lookup"><span data-stu-id="efbfa-141">RUNTIME_INFO_REQUEST_X86</span></span>  
+- <span data-ttu-id="7d2e9-141">RUNTIME_INFO_REQUEST_X86</span><span class="sxs-lookup"><span data-stu-id="7d2e9-141">RUNTIME_INFO_REQUEST_X86</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="efbfa-142">Wymagania</span><span class="sxs-lookup"><span data-stu-id="efbfa-142">Requirements</span></span>  
- <span data-ttu-id="efbfa-143">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="efbfa-143">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7d2e9-142">Wymagania</span><span class="sxs-lookup"><span data-stu-id="7d2e9-142">Requirements</span></span>  
+ <span data-ttu-id="7d2e9-143">**Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7d2e9-143">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="efbfa-144">**Nagłówek:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="efbfa-144">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="7d2e9-144">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="7d2e9-144">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="efbfa-145">**Biblioteka:** MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="efbfa-145">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="7d2e9-145">**Biblioteka:** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="7d2e9-145">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="efbfa-146">**Wersje .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="efbfa-146">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>  
+ <span data-ttu-id="7d2e9-146">**Wersje programu .NET Framework:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7d2e9-146">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="efbfa-147">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="efbfa-147">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7d2e9-147">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="7d2e9-147">See also</span></span>
 
-- [<span data-ttu-id="efbfa-148">GetRequestedRuntimeVersion, funkcja</span><span class="sxs-lookup"><span data-stu-id="efbfa-148">GetRequestedRuntimeVersion Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)
-- [<span data-ttu-id="efbfa-149">GetVersionFromProcess, funkcja</span><span class="sxs-lookup"><span data-stu-id="efbfa-149">GetVersionFromProcess Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)
-- [<span data-ttu-id="efbfa-150">Przestarzałe funkcje hostingu środowiska CLR</span><span class="sxs-lookup"><span data-stu-id="efbfa-150">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="7d2e9-148">GetRequestedRuntimeVersion — Funkcja</span><span class="sxs-lookup"><span data-stu-id="7d2e9-148">GetRequestedRuntimeVersion Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)
+- [<span data-ttu-id="7d2e9-149">GetVersionFromProcess, funkcja</span><span class="sxs-lookup"><span data-stu-id="7d2e9-149">GetVersionFromProcess Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)
+- [<span data-ttu-id="7d2e9-150">Przestarzałe funkcje hostingu środowiska CLR</span><span class="sxs-lookup"><span data-stu-id="7d2e9-150">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

@@ -2,21 +2,21 @@
 title: Standardowe punkty końcowe
 ms.date: 03/30/2017
 ms.assetid: 3fcb4225-addc-44f2-935d-30e4943a8812
-ms.openlocfilehash: 395d910ddabc553cca47dcdd038f44b1470b3455
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 880601664d7602e279c5d022fa37c44914a58772
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747774"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184403"
 ---
 # <a name="standard-endpoints"></a>Standardowe punkty końcowe
-Punkty końcowe są definiowane przez określenie adresu, powiązanie i kontrakt. Inne parametry, które mogą zostać ustawione dla punktu końcowego obejmują konfigurację zachowania, nagłówki i analizują identyfikatorów URI.  W przypadku niektórych typów punktów końcowych, których nie należy zmieniać te wartości. Na przykład punkty końcowe wymiany metadanych zawsze używaj <xref:System.ServiceModel.Description.IMetadataExchange> kontraktu. Inne punkty końcowe, takich jak <xref:System.ServiceModel.Description.WebHttpEndpoint> zawsze należy wymagać zachowania w określonym punkcie końcowym. Przez punkty końcowe z wartościami domyślnymi dla punktu końcowego często używanych właściwości można zwiększyć użyteczność punktu końcowego. Standardowe punkty końcowe umożliwiają deweloperowi zdefiniować punkt końcowy, który zawiera wartości domyślne lub gdzie właściwości przynajmniej jednego punktu końcowego nie zmienia się.  Te punkty końcowe umożliwiają używanie punktu końcowego bez konieczności określania informacji o charakterze statyczne. Standardowe punkty końcowe może służyć do punktów końcowych infrastruktury i aplikacji.  
+Punkty końcowe są definiowane przez określenie adresu, powiązania i umowy. Inne parametry, które mogą być ustawione w punkcie końcowym obejmują konfigurację zachowania, nagłówki i identyfikatory URI nasłuchi.  W przypadku niektórych typów punktów końcowych te wartości nie zmieniają się. Na przykład punkty końcowe wymiany metadanych zawsze używają <xref:System.ServiceModel.Description.IMetadataExchange> umowy. Inne punkty końcowe, <xref:System.ServiceModel.Description.WebHttpEndpoint> takie jak zawsze wymagają określonego zachowania punktu końcowego. Użyteczność punktu końcowego można poprawić, mając punkty końcowe z wartościami domyślnymi dla powszechnie używanych właściwości punktu końcowego. Standardowe punkty końcowe umożliwiają deweloperowi zdefiniowanie punktu końcowego, który ma wartości domyślne lub gdy co najmniej jedna z właściwości punktu końcowego nie ulegnie zmianie.  Te punkty końcowe umożliwiają korzystanie z takiego punktu końcowego bez konieczności określania informacji o charakterze statycznym. Standardowe punkty końcowe mogą być używane dla infrastruktury i punktów końcowych aplikacji.  
   
 ## <a name="infrastructure-endpoints"></a>Punkty końcowe infrastruktury  
- Usługa może ujawnić punkty końcowe z niektórych właściwości nie są jawnie implementowane przez autora usługi. Na przykład udostępnia punkt końcowy wymiany metadanych <xref:System.ServiceModel.Description.IMetadataExchange> kontraktu, ale jako usługa autora, możesz nie implementuje interfejsu, jest implementowany przez architekturę WCF. Takie punkty końcowe infrastruktury mają wartości domyślnych dla właściwości punktu końcowego, z których część może być aspektów. <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A> Właściwość punkt końcowy wymiany metadanych musi być <xref:System.ServiceModel.Description.IMetadataExchange>, podczas gdy inne właściwości, takie jak powiązania mogą być dostarczane przez dewelopera. Infrastruktura punktów końcowych są identyfikowane przez ustawienie <xref:System.ServiceModel.Description.ServiceEndpoint.IsSystemEndpoint%2A> właściwość `true`.  
+ Usługa może udostępnić punkty końcowe z niektórych właściwości nie jawnie zaimplementowane przez autora usługi. Na przykład punkt końcowy wymiany metadanych udostępnia <xref:System.ServiceModel.Description.IMetadataExchange> umowy, ale jako autor usługi nie implementujesz tego interfejsu, jest implementowany przez WCF. Takie punkty końcowe infrastruktury mają wartości domyślne dla jednej lub więcej właściwości punktu końcowego, z których niektóre mogą być niezmienne. Właściwość <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A> punktu końcowego wymiany metadanych musi być <xref:System.ServiceModel.Description.IMetadataExchange>, podczas gdy inne właściwości, takie jak powiązanie mogą być dostarczane przez dewelopera. Punkty końcowe infrastruktury są identyfikowane przez ustawienie <xref:System.ServiceModel.Description.ServiceEndpoint.IsSystemEndpoint%2A> właściwości na `true`.  
   
 ## <a name="application-endpoints"></a>Punkty końcowe aplikacji  
- Deweloperzy aplikacji mogą definiować własne standardowe punkty końcowe, które określanie wartości domyślnych dla adresu, powiązanie lub umowy. Standardowy punkt końcowy jest definiowane za wyprowadzanie klasy z <xref:System.ServiceModel.Description.ServiceEndpoint> i ustawienie właściwości odpowiednich punktów końcowych. Możesz podać wartości domyślne dla właściwości, które mogą być zmieniane. Niektóre inne właściwości mają wartości statyczne, których nie można zmienić. Poniższy przykład pokazuje, jak wdrożyć standardowy punkt końcowy.  
+ Deweloperzy aplikacji można zdefiniować własne standardowe punkty końcowe, które określają wartości domyślne dla adresu, powiązania lub umowy. Standardowy punkt końcowy definiuje się przez <xref:System.ServiceModel.Description.ServiceEndpoint> wyprowadzanie klasy z i ustawienie odpowiednich właściwości punktu końcowego. Można podać wartości domyślne dla właściwości, które można zmienić. Niektóre inne właściwości będą miały wartości statyczne, których nie można zmienić. W poniższym przykładzie pokazano, jak zaimplementować standardowy punkt końcowy.  
   
 ```csharp
 public class CustomEndpoint : ServiceEndpoint
@@ -24,11 +24,11 @@ public class CustomEndpoint : ServiceEndpoint
     public CustomEndpoint()
         : this(string.Empty)
     { }  
-    
+
     public CustomEndpoint(string address)
         : this(address, ContractDescription.GetContract(typeof(ICalculator)))
     { }  
-    
+
     // Create the custom endpoint with a fixed binding
     public CustomEndpoint(string address, ContractDescription contract)
         : base(contract)
@@ -36,13 +36,13 @@ public class CustomEndpoint : ServiceEndpoint
         this.Binding = new BasicHttpBinding();
         this.IsSystemEndpoint = false;
     }
-    
+
     // Definition of the additional property of this endpoint
     public bool Property { get; set; }
 }
 ```
   
- Aby użyć niestandardowego punktu końcowego zdefiniowana przez użytkownika w pliku konfiguracji należy wyprowadzić klasę z <xref:System.ServiceModel.Configuration.StandardEndpointElement>, wyprowadzić klasę z <xref:System.ServiceModel.Configuration.StandardEndpointCollectionElement%602>i Zarejestruj nowy standardowy punkt końcowy w sekcji rozszerzeń w pliku machine.config lub w pliku app.config.  <xref:System.ServiceModel.Configuration.StandardEndpointElement> Zapewnia obsługę Konfiguracja standardowego punktu końcowego, jak pokazano w poniższym przykładzie.  
+ Aby użyć niestandardowego punktu końcowego zdefiniowanego przez użytkownika w <xref:System.ServiceModel.Configuration.StandardEndpointElement>pliku konfiguracyjnym, należy wyprowadzić klasę z , wyprowadzić klasę z <xref:System.ServiceModel.Configuration.StandardEndpointCollectionElement%602>programu i zarejestrować nowy standardowy punkt końcowy w sekcji rozszerzenia w pliku app.config lub machine.config.  Zapewnia <xref:System.ServiceModel.Configuration.StandardEndpointElement> obsługę konfiguracji dla standardowego punktu końcowego, jak pokazano w poniższym przykładzie.  
   
 ```csharp
 public class CustomEndpointElement : StandardEndpointElement
@@ -103,7 +103,7 @@ public class CustomEndpointElement : StandardEndpointElement
 }
 ```  
   
- <xref:System.ServiceModel.Configuration.StandardEndpointCollectionElement%602> Zapewnia zapasowy typ kolekcji, która pojawia się w obszarze <`standardEndpoints`> sekcji w konfiguracji dla standardowego punktu końcowego.  Poniższy przykład przedstawia sposób implementowania tej klasy.  
+ Zapewnia <xref:System.ServiceModel.Configuration.StandardEndpointCollectionElement%602> typ kopii kolekcji, który pojawia się `standardEndpoints` w sekcji <> w konfiguracji dla standardowego punktu końcowego.  W poniższym przykładzie pokazano, jak zaimplementować tę klasę.  
   
 ```csharp
 public class CustomEndpointCollectionElement : StandardEndpointCollectionElement<CustomEndpoint, CustomEndpointElement>
@@ -112,7 +112,7 @@ public class CustomEndpointCollectionElement : StandardEndpointCollectionElement
 }
 ```
 
-Poniższy przykład pokazuje, jak zarejestrować standardowy punkt końcowy w sekcji rozszerzeń.
+W poniższym przykładzie pokazano, jak zarejestrować standardowy punkt końcowy w sekcji rozszerzeń.
 
 ```xml  
 <extensions>  
@@ -123,14 +123,14 @@ Poniższy przykład pokazuje, jak zarejestrować standardowy punkt końcowy w se
                 Version=1.0.0.0, Culture=neutral, PublicKeyToken=ffffffffffffffff"/>  
 ```  
   
-## <a name="configuring-a-standard-endpoint"></a>Konfigurowanie standardowy punkt końcowy  
- Standardowe punkty końcowe można dodać w kodzie lub w konfiguracji.  Aby dodać standardowy punkt końcowy w kodzie po prostu utworzenie wystąpienia typu odpowiedniego standardowego punktu końcowego i dodaj go do hosta usługi, jak pokazano w poniższym przykładzie:  
+## <a name="configuring-a-standard-endpoint"></a>Konfigurowanie standardowego punktu końcowego  
+ Standardowe punkty końcowe można dodać w kodzie lub w konfiguracji.  Aby dodać standardowy punkt końcowy w kodzie, po prostu smówić wystąpienie odpowiedniego standardowego typu punktu końcowego i dodać go do hosta usługi, jak pokazano w poniższym przykładzie:  
   
 ```csharp  
 serviceHost.AddServiceEndpoint(new CustomEndpoint());  
 ```  
   
- Aby dodać standardowy punkt końcowy w konfiguracji <`endpoint`> elementu <`service`> element i wszystkie wymagane ustawienia konfiguracji w <`standardEndpoints`> element. Poniższy przykład pokazuje, jak dodać <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, jeden standardowe punkty końcowe, które jest dostarczany z [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
+ Aby dodać standardowy punkt końcowy w konfiguracji, `endpoint` dodaj element> <do `service` <> element i wszelkie potrzebne ustawienia `standardEndpoints` konfiguracji w <> element. W poniższym przykładzie <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>pokazano, jak dodać jeden ze [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]standardowych punktów końcowych dostarczanych z programem .  
   
 ```xml  
 <services>  
@@ -138,50 +138,50 @@ serviceHost.AddServiceEndpoint(new CustomEndpoint());
     <endpoint isSystemEndpoint="true" kind="udpDiscoveryEndpoint" />  
   </service>  
 </services>  
-<standardEndpoints>    
+<standardEndpoints>
   <udpDiscoveryEndpoint>  
      <standardEndpoint multicastAddress="soap.udp://239.255.255.250:3702" />
   </udpDiscoveryEndpoint>
 </standardEndpoints>
 ```  
   
- Typ standardowy punkt końcowy jest określony, przy użyciu atrybutu kind w <`endpoint`> element. Punkt końcowy jest konfigurowany w <`standardEndpoints`> element. W powyższym przykładzie <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> dodawania i konfigurowania punktu końcowego. <`udpDiscoveryEndpoint`> Zawiera element <`standardEndpoint`> określająca <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.MulticastAddress%2A> właściwość <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.  
+ Typ standardowego punktu końcowego jest określony przy użyciu atrybutu rodzaju w <`endpoint`> element. Punkt końcowy jest konfigurowany w `standardEndpoints` <> element. W powyższym przykładzie <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> punkt końcowy jest dodawany i konfigurowany. Element> `udpDiscoveryEndpoint` <zawiera `standardEndpoint`> <, który ustawia <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.MulticastAddress%2A> właściwość . <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>  
   
-## <a name="standard-endpoints-shipped-with-the-net-framework"></a>Standardowe punkty końcowe dostarczane z programem .NET Framework  
- W poniższej tabeli wymieniono standardowe punkty końcowe są dostarczane z [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
+## <a name="standard-endpoints-shipped-with-the-net-framework"></a>Standardowe punkty końcowe dostarczane z platformą .NET Framework  
+ W poniższej tabeli wymieniono standardowe [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]punkty końcowe dostarczane z programem .  
   
  `Mex Endpoint`  
  Standardowy punkt końcowy, który jest używany do udostępnienia metadanych usługi.  
   
  <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>  
- Standardowy punkt końcowy, który jest używany przez usługi, aby wysyłać komunikaty anonsów.  
+ Standardowy punkt końcowy, który jest używany przez usługi do wysyłania komunikatów anonsu.  
   
  <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>  
- Standardowy punkt końcowy, który jest używany przez usługi do wysyłania wiadomości odnajdywania.  
+ Standardowy punkt końcowy, który jest używany przez usługi do wysyłania komunikatów odnajdywania.  
   
  <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>  
- Standardowy punkt końcowy, który jest wstępnie skonfigurowana dla operacji odnajdowania za pośrednictwem protokołu UDP multiemisji powiązania.  
+ Standardowy punkt końcowy, który jest wstępnie skonfigurowany do operacji odnajdywania za pociągnięte do wiązania multiemisji UDP.  
   
  <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>  
- Standardowy punkt końcowy, który jest używany przez usługi do wysłania komunikatów Anons z powiązania protokołu UDP.  
+ Standardowy punkt końcowy, który jest używany przez usługi do wysyłania komunikatów anonsu za pomocą powiązania UDP.  
   
  <xref:System.ServiceModel.Discovery.DynamicEndpoint>  
- Standardowy punkt końcowy, który używa protokołu WS Discovery, aby znaleźć adres punktu końcowego dynamicznie w czasie wykonywania.  
+ Standardowy punkt końcowy, który używa WS-Discovery, aby dynamicznie znaleźć adres punktu końcowego w czasie wykonywania.  
   
  <xref:System.ServiceModel.Description.ServiceMetadataEndpoint>  
  Standardowy punkt końcowy wymiany metadanych.  
   
  <xref:System.ServiceModel.Description.WebHttpEndpoint>  
- Standardowy punkt końcowy ze <xref:System.ServiceModel.WebHttpBinding> powiązania, który automatycznie dodaje <xref:System.ServiceModel.Description.WebHttpBehavior> zachowanie  
+ Standardowy punkt końcowy <xref:System.ServiceModel.WebHttpBinding> z powiązaniem, <xref:System.ServiceModel.Description.WebHttpBehavior> które automatycznie dodaje zachowanie  
   
  <xref:System.ServiceModel.Description.WebScriptEndpoint>  
- Standardowy punkt końcowy ze <xref:System.ServiceModel.WebHttpBinding> powiązania, który automatycznie dodaje <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> zachowanie.  
+ Standardowy punkt końcowy <xref:System.ServiceModel.WebHttpBinding> z powiązaniem, <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> które automatycznie dodaje zachowanie.  
   
  <xref:System.ServiceModel.Description.WebServiceEndpoint>  
- Standardowy punkt końcowy ze <xref:System.ServiceModel.WebHttpBinding> powiązania.  
+ Standardowy punkt końcowy <xref:System.ServiceModel.WebHttpBinding> z powiązaniem.  
   
  <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>  
- Standardowy punkt końcowy, który umożliwia wywoływanie operacji kontroli na wystąpienia przepływu pracy.  
+ Standardowy punkt końcowy, który umożliwia wywoływanie operacji kontroli w wystąpieniach przepływu pracy.  
   
  <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>  
- Standardowy punkt końcowy, który obsługuje wznowienie przepływu pracy tworzenia i zakładki.
+ Standardowy punkt końcowy, który obsługuje tworzenie przepływu pracy i wznowienie zakładek.

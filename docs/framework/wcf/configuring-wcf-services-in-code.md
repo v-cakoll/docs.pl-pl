@@ -2,26 +2,26 @@
 title: Konfigurowanie usług WCF w kodzie
 ms.date: 03/30/2017
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
-ms.openlocfilehash: 5d05fe5f70f4e2b1490c728cc019430cd94ff925
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 4ff49b4e17ae179426cc033a955ecf2c71f2a3e1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569503"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174813"
 ---
 # <a name="configuring-wcf-services-in-code"></a>Konfigurowanie usług WCF w kodzie
-Windows Communication Foundation (WCF) umożliwia deweloperom Konfigurowanie usług przy użyciu plików konfiguracyjnych lub kodu.  Pliki konfiguracji są przydatne, gdy usługa musi zostać skonfigurowana po wdrożeniu. W przypadku korzystania z plików konfiguracji Specjalista IT musi tylko zaktualizować plik konfiguracji, nie jest wymagana ponowna kompilacja. Pliki konfiguracji mogą jednak być skomplikowane i trudne do utrzymania. Nie ma obsługi debugowania plików konfiguracji i elementów konfiguracji, do których odwołują się nazwy, co sprawia, że pliki konfiguracji tworzenia są podatne na błędy i trudne. Funkcja WCF umożliwia również Konfigurowanie usług w kodzie. We wcześniejszych wersjach programu WCF (4,0 i starszych) Konfigurowanie usług w kodzie było łatwe w scenariuszach samodzielnej obsługi, ale Klasa <xref:System.ServiceModel.ServiceHost> może skonfigurować punkty końcowe i zachowania przed wywołaniem ServiceHost. Open. Nie ma jednak bezpośredniego dostępu do klasy <xref:System.ServiceModel.ServiceHost> w scenariuszach hostowanych w sieci Web. Aby skonfigurować usługę hostowaną w sieci Web, należy utworzyć `System.ServiceModel.ServiceHostFactory`, które utworzyły <xref:System.ServiceModel.Activation.ServiceHostFactory> i wykonać dowolną potrzebną konfigurację. Począwszy od platformy .NET 4,5, WCF oferuje łatwiejszy sposób konfigurowania usług samodzielnych i hostowanych w sieci Web w kodzie.  
+Windows Communication Foundation (WCF) umożliwia deweloperom konfigurowanie usług przy użyciu plików konfiguracyjnych lub kodu.  Pliki konfiguracyjne są przydatne, gdy usługa musi być skonfigurowana po wdrożeniu. Podczas korzystania z plików konfiguracyjnych specjalista IT musi tylko zaktualizować plik konfiguracyjny, nie jest wymagana ponowna kompilacja. Pliki konfiguracyjne mogą być jednak złożone i trudne do utrzymania. Nie ma obsługi debugowania plików konfiguracyjnych i elementy konfiguracji są odwoływane przez nazwy, które sprawia, że tworzenie plików konfiguracyjnych podatne na błędy i trudne. WCF umożliwia również konfigurowanie usług w kodzie. We wcześniejszych wersjach WCF (4.0 i wcześniejszych) konfigurowanie usług w kodzie <xref:System.ServiceModel.ServiceHost> było łatwe w scenariuszach hostowanych samodzielnie, klasa umożliwia skonfigurowanie punktów końcowych i zachowań przed wywołaniem ServiceHost.Open. W scenariuszach hostowanych w sieci Web nie masz <xref:System.ServiceModel.ServiceHost> jednak bezpośredniego dostępu do klasy. Aby skonfigurować usługę hosta sieci Web, `System.ServiceModel.ServiceHostFactory` konieczne było <xref:System.ServiceModel.Activation.ServiceHostFactory> utworzenie utworzonej i wykonanej dowolnej potrzebnej konfiguracji. Począwszy od platformy .NET 4.5, WCF zapewnia łatwiejszy sposób konfigurowania zarówno hostowanych samodzielnie, jak i hostowanych usług internetowych w kodzie.  
   
-## <a name="the-configure-method"></a>Metoda Configure  
- Po prostu Zdefiniuj publiczną metodę statyczną o nazwie `Configure` z następującą sygnaturą w klasie implementacji usługi:  
+## <a name="the-configure-method"></a>Metoda Konfiguruj  
+ Wystarczy zdefiniować publiczną `Configure` metodę statyczną wywołaną z następującym podpisem w klasie implementacji usługi:  
   
 ```csharp  
 public static void Configure(ServiceConfiguration config)  
 ```  
   
- Metoda Configure przyjmuje <xref:System.ServiceModel.ServiceConfiguration> wystąpienie, które umożliwia deweloperowi Dodawanie punktów końcowych i zachowań. Ta metoda jest wywoływana przez funkcję WCF przed otwarciem hosta usługi. Po zdefiniowaniu wszystkie ustawienia konfiguracji usługi określone w pliku App. config lub Web. config zostaną zignorowane.  
+ Configure Metoda przyjmuje <xref:System.ServiceModel.ServiceConfiguration> wystąpienie, które umożliwia deweloperowi dodawać punkty końcowe i zachowania. Ta metoda jest wywoływana przez WCF przed otwarciem hosta usługi. Po zdefiniowaniu wszystkie ustawienia konfiguracji usługi określone w pliku app.config lub web.config zostaną zignorowane.  
   
- Poniższy fragment kodu ilustruje sposób definiowania metody `Configure` i dodawania punktu końcowego usługi, zachowania punktu końcowego i zachowań usługi:  
+ Poniższy fragment kodu ilustruje sposób `Configure` definiowania metody i dodawania punktu końcowego usługi, zachowania punktu końcowego i zachowań usługi:  
   
 ```csharp  
 public class Service1 : IService1  
@@ -56,44 +56,44 @@ public class Service1 : IService1
     }  
 ```  
   
- Aby włączyć protokół, taki jak https dla usługi, można jawnie dodać punkt końcowy, który używa protokołu lub można automatycznie dodać punkty końcowe, wywołując metodę ServiceConfiguration. EnableProtocol (Binding), która dodaje punkt końcowy dla każdego adresu podstawowego zgodne z protokołem i każdym zdefiniowanym kontraktem usługi. Poniższy kod ilustruje sposób używania metody ServiceConfiguration. EnableProtocol:  
+ Aby włączyć protokół, taki jak https dla usługi, można jawnie dodać punkt końcowy, który używa protokołu, lub automatycznie dodać punkty końcowe, wywołując ServiceConfiguration.EnableProtocol(Binding), który dodaje punkt końcowy dla każdego adresu podstawowego zgodne z protokołem i każdą zdefiniowaną umową serwisową. Poniższy kod ilustruje sposób korzystania z ServiceConfiguration.EnableProtocol metody:  
   
 ```csharp  
-public class Service1 : IService1   
-{   
-    public string GetData(int value);   
-    public static void Configure(ServiceConfiguration config)   
-    {   
-        // Enable "Add Service Reference" support   
-       config.Description.Behaviors.Add( new ServiceMetadataBehavior { HttpGetEnabled = true });   
-       // set up support for http, https, net.tcp, net.pipe   
-       config.EnableProtocol(new BasicHttpBinding());   
-       config.EnableProtocol(new BasicHttpsBinding());   
-       config.EnableProtocol(new NetTcpBinding());   
-       config.EnableProtocol(new NetNamedPipeBinding());   
-       // add an extra BasicHttpBinding endpoint at http:///basic   
-       config.AddServiceEndpoint(typeof(IService1), new BasicHttpBinding(),"basic");   
-    }   
-}   
+public class Service1 : IService1
+{
+    public string GetData(int value);
+    public static void Configure(ServiceConfiguration config)
+    {
+        // Enable "Add Service Reference" support
+       config.Description.Behaviors.Add( new ServiceMetadataBehavior { HttpGetEnabled = true });
+       // set up support for http, https, net.tcp, net.pipe
+       config.EnableProtocol(new BasicHttpBinding());
+       config.EnableProtocol(new BasicHttpsBinding());
+       config.EnableProtocol(new NetTcpBinding());
+       config.EnableProtocol(new NetNamedPipeBinding());
+       // add an extra BasicHttpBinding endpoint at http:///basic
+       config.AddServiceEndpoint(typeof(IService1), new BasicHttpBinding(),"basic");
+    }
+}
 ```  
   
- Ustawienia w sekcji <`protocolMappings`> są używane tylko wtedy, gdy żadne punkty końcowe aplikacji nie są dodawane do <xref:System.ServiceModel.ServiceConfiguration> programowo. Opcjonalnie można załadować konfigurację usługi z domyślnego pliku konfiguracyjnego aplikacji przez wywołanie <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> a następnie zmianę ustawień. Klasa <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration> umożliwia również ładowanie konfiguracji z poziomu scentralizowanej konfiguracji. Poniższy kod ilustruje sposób implementacji:  
+ Ustawienia w sekcji <`protocolMappings`> są używane tylko wtedy, gdy żadne punkty końcowe aplikacji nie są dodawane do <xref:System.ServiceModel.ServiceConfiguration> programowo. Opcjonalnie można załadować konfigurację usługi z domyślnego pliku konfiguracji aplikacji, wywołując, <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> a następnie zmienić ustawienia. Klasa <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration> umożliwia również ładowanie konfiguracji ze scentralizowanej konfiguracji. Poniższy kod ilustruje sposób zaimplementowania tego:  
   
 ```csharp
-public class Service1 : IService1   
-{   
-    public void DoWork();   
-    public static void Configure(ServiceConfiguration config)   
-    {   
-          config.LoadFromConfiguration(ConfigurationManager.OpenMappedExeConfiguration(new ExeConfigurationFileMap { ExeConfigFilename = @"c:\sharedConfig\MyConfig.config" }, ConfigurationUserLevel.None));   
-    }   
+public class Service1 : IService1
+{
+    public void DoWork();
+    public static void Configure(ServiceConfiguration config)
+    {
+          config.LoadFromConfiguration(ConfigurationManager.OpenMappedExeConfiguration(new ExeConfigurationFileMap { ExeConfigFilename = @"c:\sharedConfig\MyConfig.config" }, ConfigurationUserLevel.None));
+    }
 }  
 ```  
   
 > [!IMPORTANT]
-> Należy zauważyć, że <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> ignoruje <`host`> ustawień w <`service`> <. Ze pojęciową <`host`> jest informacje o konfiguracji hosta, a nie konfiguracji usługi i jest ładowany przed wykonaniem metody Configure.  
+> Pamiętaj, <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> że w <`host`>> tagu `system.serviceModel` <`service`> ignor <uje ustawienia>. Koncepcyjnie <`host`> dotyczy konfiguracji hosta, a nie konfiguracji usługi i jest ładowana przed wykonaniem metody Configure.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Konfigurowanie usług za pomocą plików konfiguracji](configuring-services-using-configuration-files.md)
 - [Konfigurowanie zachowań klienta](configuring-client-behaviors.md)

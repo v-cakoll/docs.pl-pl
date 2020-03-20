@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 694c0fa0-7011-41a9-9dfd-f0e16ea574b5
 topic_type:
 - apiref
-ms.openlocfilehash: 5f83cb96e39b257a1d35786130cd5ed31d071de7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 51741aa3a6d965c1e9743081628d8ad62e8fb04e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443867"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176204"
 ---
 # <a name="corattributetargets-enumeration"></a>CorAttributeTargets — Wyliczenie
 Określa elementy aplikacji, na których jest prawidłowy, aby zastosować atrybut.  
@@ -44,53 +44,53 @@ typedef enum CorAttributeTargets
     catDelegate            = 0x1000,  
     catGenericParameter    = 0x4000,  
   
-    catAll                 =   
-        catAssembly | catModule | catClass | catStruct |   
-        catEnum | catConstructor | catMethod | catProperty |   
-        catField | catEvent | catInterface | catParameter |   
+    catAll                 =
+        catAssembly | catModule | catClass | catStruct |
+        catEnum | catConstructor | catMethod | catProperty |
+        catField | catEvent | catInterface | catParameter |
         catDelegate | catGenericParameter,  
   
-    catClassMembers        =   
-        catClass | catStruct | catEnum | catConstructor |   
-        catMethod | catProperty | catField | catEvent |   
+    catClassMembers        =
+        catClass | catStruct | catEnum | catConstructor |
+        catMethod | catProperty | catField | catEvent |
         catDelegate | catInterface  
   
 } CorAttributeTargets;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Elementy członkowskie  
   
-|Element członkowski|Opis|  
+|Członek|Opis|  
 |------------|-----------------|  
-|`catAssembly`|Atrybut może zostać zastosowany do zestawu.|  
-|`catModule`|Atrybut można zastosować do przenośnego modułu pliku wykonywalnego (. dll lub. exe).|  
+|`catAssembly`|Atrybut może być stosowany do zestawu.|  
+|`catModule`|Atrybut może być stosowany do przenośnego modułu wykonywalnego (.dll lub .exe).|  
 |`catClass`|Atrybut może być stosowany do klasy.|  
 |`catStruct`|Atrybut może być stosowany do struktury; oznacza to, że typ wartości.|  
 |`catEnum`|Atrybut może być stosowany do wyliczenia.|  
 |`catConstructor`|Atrybut może być stosowany do konstruktora.|  
-|`catMethod`|Atrybut można zastosować do metody.|  
+|`catMethod`|Atrybut może być stosowany do metody.|  
 |`catProperty`|Atrybut może być stosowany do właściwości.|  
-|`catField`|Atrybut może być stosowany do pola.|  
+|`catField`|Atrybut można zastosować do pola.|  
 |`catEvent`|Atrybut może być stosowany do zdarzenia.|  
 |`catInterface`|Atrybut może być stosowany do interfejsu.|  
 |`catParameter`|Atrybut może być stosowany do parametru.|  
-|`catDelegate`|Atrybut można zastosować do obiektu delegowanego.|  
-|`catGenericParameter`|Atrybut może być stosowany do parametru generycznego.|  
+|`catDelegate`|Atrybut można zastosować do pełnomocnika.|  
+|`catGenericParameter`|Atrybut może być stosowany do parametru ogólnego.|  
 |`catAll`|Atrybut można zastosować do dowolnego elementu aplikacji.|  
-|`catClassMembers`|Atrybut można zastosować do składowej klasy.|  
+|`catClassMembers`|Atrybut może być stosowany do członka klasy.|  
   
 ## <a name="remarks"></a>Uwagi  
- Wartości wyliczeniowe `CorAttributeTargets` można łączyć z wartością bitową lub operacją w celu uzyskania preferowanej kombinacji.  
+ Wartości `CorAttributeTargets` wyliczenia można łączyć z bitową operacją OR, aby uzyskać preferowaną kombinację.  
   
- `CorAttributeTargets` równoległe Wyliczenie <xref:System.AttributeTargets?displayProperty=nameWithType> zarządzanej.  
+ Paralele `CorAttributeTargets` wyliczenia zarządzanego. <xref:System.AttributeTargets?displayProperty=nameWithType>  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorHdr. h  
+ **Nagłówek:** CorHdr.h  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

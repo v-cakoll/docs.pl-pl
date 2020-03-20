@@ -6,68 +6,68 @@ helpviewer_keywords:
 - Title Bar control type
 - UI Automation, Title Bar control type
 ms.assetid: 3b7a4e13-0305-45d5-bc33-1f4133c50782
-ms.openlocfilehash: 7bd86222cd9754c4495455292626a122507adc7c
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 19c203151956ae17dbcf608c135e7fe97a2b4389
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76785737"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179479"
 ---
 # <a name="ui-automation-support-for-the-titlebar-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla typu formantu TitleBar
 > [!NOTE]
-> Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych klas [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zdefiniowanych w przestrzeni nazw <xref:System.Windows.Automation>. Aby uzyskać najnowsze informacje na temat [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [interfejs API usługi Windows Automation: Automatyzacja interfejsu użytkownika](/windows/win32/winauto/entry-uiauto-win32).  
+> Ta dokumentacja jest przeznaczona dla deweloperów [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] programu .NET <xref:System.Windows.Automation> Framework, którzy chcą używać klas zarządzanych zdefiniowanych w obszarze nazw. Aby uzyskać najnowsze [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]informacje na temat interfejsu [API automatyzacji systemu Windows: Automatyzacja interfejsu użytkownika](/windows/win32/winauto/entry-uiauto-win32).  
   
- Ten temat zawiera informacje na temat obsługi [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] dla typu formantu paska tytułu. W [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]typ formantu to zestaw warunków, które formant musi spełniać, aby można było użyć właściwości <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty>. Warunki obejmują określone wytyczne dotyczące struktury drzewa [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], wartości właściwości [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] i wzorców formantów.  
+ Ten temat zawiera [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] informacje na temat obsługi typu formantu TitleBar. W [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], typ formantu jest zestawem warunków, które <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> formant musi spełniać w celu użycia właściwości. Warunki obejmują szczegółowe [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] wytyczne dotyczące [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] struktury drzewa, wartości właściwości i wzorców kontroli.  
   
- Kontrolki paska tytułu reprezentują tytuły lub paski etykiet w oknie.  
+ Formanty paska tytułu reprezentują tytuły lub paski podpisów w oknie.  
   
- Poniższe sekcje definiują wymaganą strukturę drzewa [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], właściwości, wzorce formantów i zdarzenia dla typu formantu paska tytułu. Wymagania [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] są stosowane do wszystkich kontrolek paska tytułu, czy [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 czy Windows Forms.  
+ Poniższe sekcje definiują wymaganą [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] strukturę drzewa, właściwości, wzorce kontroli i zdarzenia dla typu formantu TitleBar. Wymagania [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] dotyczą wszystkich formantów paska tytułu, niezależnie od tego, czy [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32, czy Windows Forms.  
   
-<a name="Required_UI_Automation_Tree_Structure"></a>   
+<a name="Required_UI_Automation_Tree_Structure"></a>
 ## <a name="required-ui-automation-tree-structure"></a>Wymagana struktura drzewa automatyzacji interfejsu użytkownika  
- W poniższej tabeli przedstawiono widok kontrolki i widok zawartości drzewa [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], które odnoszą się do kontrolek paska tytułu i opisano, co może być zawarte w poszczególnych widokach. Aby uzyskać więcej informacji na temat drzewa [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Omówienie drzewa automatyzacji interfejsu użytkownika](ui-automation-tree-overview.md).  
+ W poniższej tabeli przedstawiono widok formantu i widok zawartości [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa, który odnosi się do formantów paska tytułu i opisuje, co może być zawarte w każdym widoku. Aby uzyskać więcej [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] informacji na temat drzewa, zobacz [Omówienie drzewa automatyzacji interfejsu użytkownika](ui-automation-tree-overview.md).  
   
-|Widok kontrolki|Widok zawartości|  
+|Widok sterowania|Widok zawartości|  
 |------------------|------------------|  
-|Pasek<br /><br /> -Menu (0 lub 1)<br />-Przycisk (0 lub więcej)|Nie dotyczy. (kontrolka paska tytułu nie ma zawartości).|  
+|Titlebar<br /><br /> - Menu (0 lub 1)<br />- Przycisk (0 lub więcej)|Nie dotyczy. (formant paska tytułu nie ma zawartości).|  
   
-<a name="Required_UI_Automation_Properties"></a>   
+<a name="Required_UI_Automation_Properties"></a>
 ## <a name="required-ui-automation-properties"></a>Wymagane właściwości automatyzacji interfejsu użytkownika  
- W poniższej tabeli wymieniono [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] właściwości, których wartość lub definicja jest szczególnie istotna dla kontrolek paska tytułu. Aby uzyskać więcej informacji na temat właściwości [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [właściwości automatyzacji interfejsu użytkownika dla klientów](ui-automation-properties-for-clients.md).  
+ W poniższej [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tabeli wymieniono właściwości, których wartość lub definicja jest szczególnie istotne dla formanty TitleBar. Aby uzyskać [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] więcej informacji o właściwościach, zobacz [Właściwości automatyzacji interfejsu użytkownika dla klientów](ui-automation-properties-for-clients.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Właściwość|Wartość|Uwagi|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]Właściwość|Wartość|Uwagi|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Zobacz uwagi.|Wartość tej właściwości musi być unikatowa dla wszystkich kontrolek w aplikacji.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Zobacz uwagi.|Prostokąt ograniczający pasek tytułu musi obejmować wszystkie kontrolki znajdujące się w nim.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|Zobacz uwagi.|Obsługiwane, jeśli istnieje prostokąt ograniczający. Jeśli nie każdy punkt wewnątrz prostokąta ograniczenia jest klikany, a będziesz wykonywał wyspecjalizowane Testy trafień, a następnie przesłonić i udostępnić punkt kliknięcia.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|Fałsz|Paski tytułu nigdy nie mają fokusu klawiatury.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|""|Pasek tytułu nie jest zawartością; informacje tekstowe są uwidocznione w oknie nadrzędnym.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|Zobacz uwagi.|Kontrolka paska tytułu zazwyczaj nie ma etykiety.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Pasek|Ta wartość jest taka sama dla wszystkich platform interfejsu użytkownika.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"pasek tytułu"|Zlokalizowany ciąg odpowiadający typowi formantu paska tytułu.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|Fałsz|Kontrolka paska tytułu nigdy nie jest zawartością.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|Prawda|Formant paska tytułu musi być zawsze kontrolką.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>|Zależy od|Ta kontrolka zwróci wartość w zależności od tego, czy pasek tytułu jest widoczny na ekranie.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>|""|Nie trzeba ujawniać tekstu pomocy.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AcceleratorKeyProperty>|""|Paski tytułu nigdy nie mają klawiszy skrótów.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AccessKeyProperty>|""|Kontrolka paska tytułu nie ma klucza dostępu.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Zobacz notatki.|Wartość tej właściwości musi być unikatowa we wszystkich formantów w aplikacji.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Zobacz notatki.|Prostokąt ograniczający paska tytułu musi obejmować wszystkie formanty znajdujące się w nim.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|Zobacz notatki.|Obsługiwane, jeśli istnieje prostokąt ograniczający. Jeśli nie każdy punkt w prostokątze ograniczającym jest klikalny i wykonujesz specjalistyczne testowanie trafień, a następnie zastądaj i podaj klikalny punkt.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|False|Paski tytułu nigdy nie mają fokusu klawiatury.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|""|Pasek tytułu nie jest zadowolony; jego informacje tekstowe są widoczne w oknie nadrzędnym.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|Zobacz notatki.|Formant paska tytułu zwykle nie ma etykiety.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Titlebar|Ta wartość jest taka sama dla wszystkich struktur interfejsu użytkownika.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"pasek tytułu"|Zlokalizowany ciąg odpowiadający typowi formantu TitleBar.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|False|Formant paska tytułu nigdy nie jest zawartością.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Formant paska tytułu musi być zawsze formantem.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>|Zależy|Ten formant zwróci wartość w zależności od tego, czy pasek tytułu jest widoczny na ekranie.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>|""|Nie jest konieczne uwidacznianie tekstu Pomocy.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AcceleratorKeyProperty>|""|Paski tytułu nigdy nie mają kluczy akceleratora.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AccessKeyProperty>|""|Formant paska tytułu nie ma klucza dostępu.|  
   
-<a name="Required_UI_Automation_Control_Patterns"></a>   
-## <a name="required-ui-automation-control-patterns"></a>Wymagane wzorce kontrolek automatyzacji interfejsu użytkownika  
- Typ formantu paska tytułu nie jest wymagany do obsługi żadnych wzorców kontrolek. Jego funkcje są udostępniane za pomocą wzorca kontrolki okna w formancie okna.  
+<a name="Required_UI_Automation_Control_Patterns"></a>
+## <a name="required-ui-automation-control-patterns"></a>Wymagane wzorce sterowania automatyzacją interfejsu użytkownika  
+ Typ formantu TitleBar nie jest wymagany do obsługi wzorców kontroli. Jego funkcjonalność jest narażona za pośrednictwem wzorca kontroli okna na Window kontroli.  
   
 ## <a name="required-ui-automation-events"></a>Wymagane zdarzenia automatyzacji interfejsu użytkownika  
- Poniższa tabela zawiera listę zdarzeń [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], które muszą być obsługiwane przez wszystkie kontrolki paska tytułu. Aby uzyskać więcej informacji na temat zdarzeń, zobacz [Omówienie zdarzeń automatyzacji interfejsu użytkownika](ui-automation-events-overview.md).  
+ W poniższej [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tabeli wymieniono zdarzenia, które mają być obsługiwane przez wszystkie formanty paska tytułu. Aby uzyskać więcej informacji o zdarzeniach, zobacz [Omówienie zdarzeń automatyzacji interfejsu użytkownika](ui-automation-events-overview.md).  
   
-|Zdarzenie [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Obsługa|Uwagi|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]Zdarzenie|Pomoc techniczna|Uwagi|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> zdarzenie zmiany właściwości.|Wymagane|Brak|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> zdarzenie zmiany właściwości.|Wymagane|Brak|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> zdarzenie zmiany właściwości.|nigdy nie|Brak|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|nigdy nie|Brak|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Wymagane|Brak|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>zdarzenie, które uległo zmianie właściwości.|Wymagany|Brak|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>zdarzenie, które uległo zmianie właściwości.|Wymagany|Brak|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty>zdarzenie, które uległo zmianie właściwości.|Nigdy|Brak|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Nigdy|Brak|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Wymagany|Brak|  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Windows.Automation.ControlType.TitleBar>
 - [Typy kontrolek automatyzacji interfejsu użytkownika — omówienie](ui-automation-control-types-overview.md)

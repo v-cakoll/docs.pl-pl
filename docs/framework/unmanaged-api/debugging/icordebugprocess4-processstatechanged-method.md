@@ -1,5 +1,5 @@
 ---
-title: ICorDebugProcess4::ProcessStateChanged Method
+title: ICorDebugProcess4::PproessStateChanged Method
 ms.date: 02/07/2019
 api_name:
 - ICorDebugProcess4::ProcessStateChanged
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: adfd563e19389642ac0ed0a3cef4aae8a32fa466
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a6f36f5b86b4fa58ce2a4ef4aa23d527f797a5a5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767183"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178631"
 ---
-# <a name="icordebugprocess4processstatechanged-method"></a>ICorDebugProcess4::ProcessStateChanged Method
+# <a name="icordebugprocess4processstatechanged-method"></a>ICorDebugProcess4::PproessStateChanged Method
 
-Powiadamia potoku ICorDebug, poza debugera proces kontynuuje wykonywanie debugee.
+Powiadamia potokU ICorDebug, że debuger poza procesem kontynuuje wykonanie debugee.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,24 +37,24 @@ HRESULT ProcessStateChanged(
 ## <a name="parameters"></a>Parametry
 
  `eChange`\
-[in] Członek [wyliczenie CorDebugStateChange](cordebugstatechange-enumeration.md) opisujące zmianę stanu wykonywania procesu.
+[w] Członek [wyliczenia CorDebugStateChange](cordebugstatechange-enumeration.md) opisujące zmiany w stanie wykonywania procesu.
 
 ## <a name="remarks"></a>Uwagi
 
-Podana metoda jest częścią `ICorDebugProcess4` interfejs i odpowiada czwarte miejsce tabeli wirtualnej metody.
+Podana metoda jest `ICorDebugProcess4` częścią interfejsu i odpowiada czwartemu slotowi tabeli metod wirtualnych.
 
 ## <a name="requirements"></a>Wymagania
 
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
 
  **Nagłówek:** Brak
 
  **Biblioteka:** Brak
- 
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]
 
-## <a name="see-also"></a>Zobacz także
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]
 
-- [ICorDebugProcess4 Interface](icordebugprocess4-interface.md)
-- [Debugowanie, interfejsy](debugging-interfaces.md)
-- [Debugowanie](index.md)
+## <a name="see-also"></a>Zobacz też
+
+- [ICorDebugProcess4, interfejs](icordebugprocess4-interface.md)
+- [Debugowanie — Interfejsy](debugging-interfaces.md)
+- [Debugging](index.md)

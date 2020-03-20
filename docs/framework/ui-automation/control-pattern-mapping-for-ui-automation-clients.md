@@ -5,77 +5,77 @@ helpviewer_keywords:
 - control patterns, for UI Automation clients
 - UI Automation, clients, control patterns for
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
-ms.openlocfilehash: 48298cb8d89958c701d7150aeb497e82d565bde1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 689e649343c93d0670c6870098a09f61097f4fb4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433862"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180227"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>Mapowanie wzorców kontrolek dla klientów automatyzacji interfejsu użytkownika
 > [!NOTE]
-> Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych klas [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zdefiniowanych w przestrzeni nazw <xref:System.Windows.Automation>. Aby uzyskać najnowsze informacje na temat [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [interfejs API usługi Windows Automation: Automatyzacja interfejsu użytkownika](/windows/win32/winauto/entry-uiauto-win32).  
+> Ta dokumentacja jest przeznaczona dla deweloperów [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] programu .NET <xref:System.Windows.Automation> Framework, którzy chcą używać klas zarządzanych zdefiniowanych w obszarze nazw. Aby uzyskać najnowsze [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]informacje na temat interfejsu [API automatyzacji systemu Windows: Automatyzacja interfejsu użytkownika](/windows/win32/winauto/entry-uiauto-win32).  
   
- Ten temat zawiera listę typów formantów i skojarzonych z nimi wzorców kontrolek.  
+ W tym temacie wymieniono typy formantów i skojarzone z nimi wzorce kontroli.  
   
- W poniższej tabeli przedstawiono Wzorce formantów w następujących kategoriach:  
+ W poniższej tabeli wzorce kontroli są podzielone na następujące kategorie:  
   
-- Obsługiwał. Kontrolka musi obsługiwać ten wzorzec kontrolki.  
+- Obsługiwane. Formant musi obsługiwać ten wzorzec sterowania.  
   
-- Obsługa warunkowa. Kontrolka może obsługiwać ten wzorzec kontrolki w zależności od stanu formantu.  
+- Obsługa warunkowa. Formant może obsługiwać ten wzorzec kontroli w zależności od stanu formantu.  
   
-- Nieobsługiwane. Formant nie obsługuje tego wzorca kontrolki; formanty niestandardowe mogą obsługiwać ten wzorzec kontrolki.  
+- Bez pomocy technicznej. Formant nie obsługuje tego wzorca sterowania; formantów niestandardowych może obsługiwać ten wzorzec kontroli.  
   
 > [!NOTE]
-> Niektóre kontrolki mają warunkową obsługę kilku wzorców kontroli w zależności od funkcjonalności formantu. Na przykład kontrolka element menu ma obsługę warunkową dla wzorca kontrolki <xref:System.Windows.Automation.InvokePattern>, <xref:System.Windows.Automation.ExpandCollapsePattern>, <xref:System.Windows.Automation.TogglePattern>lub <xref:System.Windows.Automation.SelectionItemPattern>, w zależności od funkcji w kontrolce menu.  
+> Niektóre formanty mają warunkową obsługę kilku wzorców kontroli w zależności od funkcjonalności formantu. Na przykład formant elementu menu ma <xref:System.Windows.Automation.InvokePattern> <xref:System.Windows.Automation.ExpandCollapsePattern>warunkową <xref:System.Windows.Automation.TogglePattern>obsługę <xref:System.Windows.Automation.SelectionItemPattern> wzorca , , lub formantu, w zależności od jego funkcji w formancie menu.  
   
-<a name="control_mapping_clients"></a>   
+<a name="control_mapping_clients"></a>
 ## <a name="ui-automation-control-patterns-for-clients"></a>Wzorce kontrolek automatyzacji interfejsu użytkownika dla klientów  
   
-|Typ formantu|Obsługiwane|Obsługa warunkowa|Nieobsługiwane|  
+|Typ sterowania|Obsługiwane|Pomoc techniczna warunkowa|Nieobsługiwane|  
 |------------------|---------------|-------------------------|-------------------|  
-|Przycisk|Brak|Invoke, Przełącz, Rozwiń Zwiń|Brak|  
-|Kalendarz|Siatka, tabela|Zaznaczenie, przewijanie|Wartość|  
+|Button|Brak|Wywoływanie, przełączanie, rozwijanie zwijania|Brak|  
+|Kalendarz|Siatka, Tabela|Wybór, Przewijanie|Wartość|  
 |Pole wyboru|przełączanie|Brak|Brak|  
-|pole kombi|Rozwiń Zwiń|Wybór, wartość|Scroll|  
-|siatka danych|Siatka|Przewijanie, Zaznaczanie, tabela|Brak|  
-|Element danych|SelectionItem|Rozwiń Zwiń, element siatki, element przewijania, tabela, przełącznik, wartość|Brak|  
+|pole kombi|Rozwiń zwiń|Wybór, Wartość|Scroll|  
+|siatka danych|Siatka|Przewijanie, zaznaczanie, tabela|Brak|  
+|Element danych|SelectionItem|Rozwiń zwiń, Element siatki, Przewiń element, Tabela, Przełącznik, Wartość|Brak|  
 |Dokument|Tekst|Przewijanie, wartość|Brak|  
 |Edytuj|Brak|Tekst, wartość zakresu, wartość|Brak|  
-|Grupa|Brak|Rozwiń Zwiń|Brak|  
-|Nagłówek|Brak|Transformacja|Brak|  
+|Grupa|Brak|Rozwiń zwiń|Brak|  
+|Nagłówek|Brak|Przekształcanie|Brak|  
 |element nagłówka|Brak|Przekształcanie, wywoływanie|Brak|  
-|Hyperlink|Wywołanie|Wartość|Brak|  
-|Obraz|Brak|Element siatki, element tabeli|Invoke, element zaznaczenia|  
-|List|Brak|Siatka, wiele widoków, przewijanie, Zaznaczanie|Tabela|  
-|Element listy|SelectionItem|Rozwiń Zwiń, element siatki, wywołaj, przewiń element, przełącznik, wartość|Brak|  
+|Hyperlink|Invoke|Wartość|Brak|  
+|Image (Obraz)|Brak|Element siatki, element tabeli|Wywoływanie, element zaznaczenia|  
+|List|Brak|Siatka, widok wielokrotny, przewijanie, zaznaczanie|Tabela|  
+|Element listy|SelectionItem|Rozwiń zwijanie, element siatki, wywoływanie, przewijanie elementu, przełącznik, wartość|Brak|  
 |Menu|Brak|Brak|Brak|  
-|Pasek menu|Brak|Rozwiń Zwiń, Zadokuj, Przekształć|Brak|  
-|Element menu|Brak|Rozwiń Zwiń, wywołaj, zaznacz element, przełącz|Brak|  
-|Okienko|Brak|Zadokuj. Przewiń, Przekształć|Okno|  
+|pasek menu|Brak|Rozwiń zwijanie, dokowanie, przekształcanie|Brak|  
+|Element menu|Brak|Rozwiń zwijanie, wywoływanie, element zaznaczenia, przełączanie|Brak|  
+|Pane|Brak|Dock. Przewijanie, przekształcanie|Okno|  
 |pasek postępu|Brak|Wartość zakresu, wartość|Brak|  
 |przycisk radiowy|SelectionItem|Brak|przełączanie|  
 |pasek przewijania|Brak|wartość zakresu|Scroll|  
 |Separator|Brak|Brak|Brak|  
 |Suwak|Brak|Wartość zakresu, wybór, wartość|Brak|  
 |pokrętło|Brak|Wartość zakresu, wybór, wartość|Brak|  
-|przycisk podziału|Invoke, rozwiń przycisk Zwiń|Brak|Brak|  
+|przycisk podziału|Wywoływanie, rozwijanie zwijania|Brak|Brak|  
 |pasek stanu|Brak|Siatka|Brak|  
 |Tab|Wybór|Scroll|Brak|  
-|element karty|SelectionItem|Brak|Wywołanie|  
-|Tabela|Siatka, element siatki, tabela, element tabeli|Brak|Brak|  
-|Tekst|Brak|Element siatki, element tabeli, tekst|Wartość|  
-|Thumb|Transformacja|Brak|Brak|  
-|Pasek tytułu|Brak|Brak|Brak|  
-|Pasek narzędzi|Brak|Zadokuj, rozwiń, Przekształć|Brak|  
-|Etykietka narzędzia|Brak|Tekst, okno|Brak|  
-|Drzewo|Brak|Przewiń, zaznacz|Brak|  
-|element drzewa|Rozwiń Zwiń|Invoke, przewijanie elementu, Zaznaczanie elementu, przełączanie|Brak|  
-|Okno|Przekształcanie, okno|Zadokuj|Brak|  
+|element karty|SelectionItem|Brak|Invoke|  
+|Tabela|Siatka, Zapas siatki, Tabela, Element tabeli|Brak|Brak|  
+|Tekst|Brak|Element siatki, Element tabeli, Tekst|Wartość|  
+|Thumb|Przekształcanie|Brak|Brak|  
+|pasek tytułu|Brak|Brak|Brak|  
+|Pasek narzędzi|Brak|Dok, rozwiń zwijanie, przekształcanie|Brak|  
+|Etykietka narzędzia|Brak|Tekst, Okno|Brak|  
+|Drzewo|Brak|Przewijanie, wybór|Brak|  
+|element drzewa|Rozwiń zwiń|Wywoływanie, przewijanie elementu, element zaznaczenia, przełączanie|Brak|  
+|Okno|Transformacja, Okno|Dock|Brak|  
   
 > [!NOTE]
-> Jeśli typ formantu nie zawiera żadnych obsługiwanych wzorców kontroli, ale ma jeden lub więcej nieobsługiwanych warunkowo wzorców kontroli, jeden z tych wzorców kontroli warunkowej będzie obsługiwany przez cały czas.  
+> Jeśli typ formantu nie ma obsługiwanych wzorców kontroli na liście, ale ma jeden lub więcej wzorców kontroli obsługiwane warunkowo, a następnie jeden z tych wzorców kontroli warunkowej będą obsługiwane przez cały czas.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Przegląd automatyzacji interfejsu użytkownika](ui-automation-overview.md)

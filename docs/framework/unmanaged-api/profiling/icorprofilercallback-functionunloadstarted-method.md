@@ -15,41 +15,41 @@ helpviewer_keywords:
 ms.assetid: d6a5fa8b-09c6-47a5-b60e-6cf2e355df30
 topic_type:
 - apiref
-ms.openlocfilehash: 2b228337a55d50b94da966b45877e2000b3c03e4
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 988843559e55cc4cacd2a40bb3e6ac51721e99b6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866329"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175164"
 ---
 # <a name="icorprofilercallbackfunctionunloadstarted-method"></a>ICorProfilerCallback::FunctionUnloadStarted — Metoda
-Powiadamia profiler o rozpoczęciu pracy przez środowisko uruchomieniowe w celu zwolnienia funkcji.  
+Powiadamia profiler, że środowisko wykonawcze rozpoczęło zwalnianie funkcji.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
 HRESULT FunctionUnloadStarted(  
-    [in] FunctionID functionId);   
+    [in] FunctionID functionId);
 ```  
   
 ## <a name="parameters"></a>Parametry
 
 - `functionId`
 
-  \[in) identyfikator funkcji, która jest zwalniana.
+  \[w] Identyfikator funkcji, która jest zwalniana.
 
 ## <a name="remarks"></a>Uwagi  
- Wartość parametru `functionId` nie jest już prawidłowa po powrocie tej metody do obiektu wywołującego.  
+ Wartość parametru `functionId` nie jest już prawidłowa po tym, jak ta metoda zwraca do wywołującego.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf. idl, CorProf. h  
+ **Nagłówek:** CorProf.idl, CorProf.h  
   
- **Biblioteka:** CorGuids. lib  
+ **Biblioteka:** CorGuids.lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [ICorProfilerCallback, interfejs](icorprofilercallback-interface.md)
+- [ICorProfilerCallback — Interfejs](icorprofilercallback-interface.md)

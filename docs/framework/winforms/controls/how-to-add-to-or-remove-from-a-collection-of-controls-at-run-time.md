@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: dodawanie do lub usuwanie z kolekcji kontrolek w czasie wykonywania'
+title: 'Porady: dodawanie do lub usuwanie z kolekcji kontrolek w czasie wykonywania'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,28 +12,28 @@ helpviewer_keywords:
 - run time [Windows Forms], adding controls
 - controls [Windows Forms], removing using collections
 ms.assetid: 771bf895-3d5f-469b-a324-3528f343657e
-ms.openlocfilehash: 87ad4c957ac5b99438684d398a0c5ad7d126c406
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 369946581847b4bdcf8bc658aeb94b14c529061c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925044"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182290"
 ---
-# <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>Instrukcje: dodawanie do lub usuwanie z kolekcji kontrolek w czasie wykonywania
-Typowe zadania związane z tworzeniem aplikacji to dodawanie kontrolek do i usuwanie kontrolek z dowolnych kontrolek kontenera w <xref:System.Windows.Forms.Panel> formularzach (takich jak lub <xref:System.Windows.Forms.GroupBox> kontrolka, a nawet do samego formularza). W czasie projektowania formanty mogą być przeciągane bezpośrednio do panelu lub pola grupy. W czasie wykonywania te kontrolki utrzymują `Controls` kolekcję, która śledzi umieszczanie na nich formantów.  
+# <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>Porady: dodawanie do lub usuwanie z kolekcji kontrolek w czasie wykonywania
+Typowe zadania w tworzeniu aplikacji są dodawanie formantów i usuwanie formantów z dowolnego formantu kontenera w formularzach (takich jak <xref:System.Windows.Forms.Panel> lub <xref:System.Windows.Forms.GroupBox> formantu, a nawet sam formularz). W czasie projektowania formanty mogą być przeciągane bezpośrednio na pole panelu lub grupy. W czasie wykonywania te `Controls` formanty obsługi kolekcji, która śledzi, jakie formanty są umieszczane na nich.  
   
 > [!NOTE]
-> Poniższy przykład kodu ma zastosowanie do każdej kontrolki, która zachowuje kolekcję kontrolek.  
+> Poniższy przykład kodu ma zastosowanie do dowolnego formantu, który utrzymuje kolekcję formantów w nim.  
   
-### <a name="to-add-a-control-to-a-collection-programmatically"></a>Aby programowo dodać kontrolkę do kolekcji  
+### <a name="to-add-a-control-to-a-collection-programmatically"></a>Aby programowo dodać formant do kolekcji  
   
-1. Utwórz wystąpienie kontrolki, która ma zostać dodana.  
+1. Utwórz wystąpienie formantu, które ma zostać dodane.  
   
-2. Ustaw właściwości nowej kontrolki.  
+2. Ustaw właściwości nowego formantu.  
   
-3. Dodaj kontrolkę do `Controls` kolekcji kontrolki nadrzędnej.  
+3. Dodaj formant `Controls` do kolekcji formantu nadrzędnego.  
   
-     Poniższy przykład kodu pokazuje, jak utworzyć wystąpienie <xref:System.Windows.Forms.Button> kontrolki. Wymaga formularza z <xref:System.Windows.Forms.Panel> kontrolką i że metoda obsługi zdarzeń dla `NewPanelButton_Click`tworzonego przycisku już istnieje.  
+     Poniższy przykład kodu pokazuje, jak <xref:System.Windows.Forms.Button> utworzyć wystąpienie formantu. Wymaga formularza z <xref:System.Windows.Forms.Panel> formantem i że metoda obsługi zdarzeń `NewPanelButton_Click`dla tworzonego przycisku , już istnieje.  
   
     ```vb  
     Public NewPanelButton As New Button()  
@@ -42,7 +42,7 @@ Typowe zadania związane z tworzeniem aplikacji to dodawanie kontrolek do i usuw
        ' The Add method will accept as a parameter any object that derives  
        ' from the Control class. In this case, it is a Button control.  
        Panel1.Controls.Add(NewPanelButton)  
-       ' The event handler indicated for the Click event in the code   
+       ' The event handler indicated for the Click event in the code
        ' below is used as an example. Substite the appropriate event  
        ' handler for your application.  
        AddHandler NewPanelButton.Click, AddressOf NewPanelButton_Click  
@@ -53,31 +53,31 @@ Typowe zadania związane z tworzeniem aplikacji to dodawanie kontrolek do i usuw
     public Button newPanelButton = new Button();  
   
     public void addNewControl()  
-    {   
+    {
        // The Add method will accept as a parameter any object that derives  
        // from the Control class. In this case, it is a Button control.  
        panel1.Controls.Add(newPanelButton);  
-       // The event handler indicated for the Click event in the code   
+       // The event handler indicated for the Click event in the code
        // below is used as an example. Substitute the appropriate event  
        // handler for your application.  
        this.newPanelButton.Click += new System.EventHandler(this. NewPanelButton_Click);  
     }  
     ```  
   
-### <a name="to-remove-controls-from-a-collection-programmatically"></a>Aby programowo usunąć kontrolki z kolekcji  
+### <a name="to-remove-controls-from-a-collection-programmatically"></a>Aby programowo usunąć formanty z kolekcji  
   
-1. Usuń procedurę obsługi zdarzeń ze zdarzenia. W Visual Basic, użyj słowa kluczowego [RemoveHandler instrukcji](../../../visual-basic/language-reference/statements/removehandler-statement.md) ; w C#programie Użyj [operatora-=](../../../csharp/language-reference/operators/subtraction-operator.md).  
+1. Usuń program obsługi zdarzeń ze zdarzenia. W języku Visual Basic użyj słowa kluczowego [RemoveHandler Statement;](../../../visual-basic/language-reference/statements/removehandler-statement.md) w języku C#, użyj [operatora -=](../../../csharp/language-reference/operators/subtraction-operator.md).  
   
-2. Użyj metody, aby usunąć żądany formant z `Controls` kolekcji panelu. `Remove`  
+2. Użyj `Remove` metody, aby usunąć żądany formant z kolekcji `Controls` panelu.  
   
-3. Wywołaj <xref:System.Windows.Forms.Control.Dispose%2A> metodę, aby zwolnić wszystkie zasoby używane przez formant.  
+3. Wywołanie <xref:System.Windows.Forms.Control.Dispose%2A> metody, aby zwolnić wszystkie zasoby używane przez formant.  
   
     ```vb  
     Public Sub RemoveControl()  
-    ' NOTE: The code below uses the instance of   
+    ' NOTE: The code below uses the instance of
     ' the button (NewPanelButton) from the previous example.  
        If Panel1.Controls.Contains(NewPanelButton) Then  
-          RemoveHandler NewPanelButton.Click, AddressOf _   
+          RemoveHandler NewPanelButton.Click, AddressOf _
              NewPanelButton_Click  
           Panel1.Controls.Remove(NewPanelButton)  
           NewPanelButton.Dispose()  
@@ -88,11 +88,11 @@ Typowe zadania związane z tworzeniem aplikacji to dodawanie kontrolek do i usuw
     ```csharp  
     private void removeControl(object sender, System.EventArgs e)  
     {  
-    // NOTE: The code below uses the instance of   
+    // NOTE: The code below uses the instance of
     // the button (newPanelButton) from the previous example.  
        if(panel1.Controls.Contains(newPanelButton))  
        {  
-          this.newPanelButton.Click -= new System.EventHandler(this.   
+          this.newPanelButton.Click -= new System.EventHandler(this.
              NewPanelButton_Click);  
           panel1.Controls.Remove(newPanelButton);  
           newPanelButton.Dispose();  
@@ -100,7 +100,7 @@ Typowe zadania związane z tworzeniem aplikacji to dodawanie kontrolek do i usuw
     }  
     ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Windows.Forms.Panel>
-- [Panel, kontrolka](panel-control-windows-forms.md)
+- [Panel — Formant](panel-control-windows-forms.md)

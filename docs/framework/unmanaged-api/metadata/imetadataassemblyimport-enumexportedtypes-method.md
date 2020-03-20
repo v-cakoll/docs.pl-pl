@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e5912ed8-e4ce-438b-8ea3-d9e4c288d109
 topic_type:
 - apiref
-ms.openlocfilehash: 45e2348b4726447548544d975e60b93e464fb402
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f00fe5bce2f808265add228406dfaa2ccc267545
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450329"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176009"
 ---
 # <a name="imetadataassemblyimportenumexportedtypes-method"></a>IMetaDataAssemblyImport::EnumExportedTypes — Metoda
 Wylicza eksportowane typy, do których odwołuje się manifest zestawu w bieżącym zakresie metadanych.  
@@ -29,42 +29,42 @@ Wylicza eksportowane typy, do których odwołuje się manifest zestawu w bieżą
   
 ```cpp  
 HRESULT EnumExportedTypes (  
-    [in, out] HCORENUM     *phEnum,   
-    [out] mdExportedType   rExportedTypes[],   
-    [in]  ULONG            cMax,   
+    [in, out] HCORENUM     *phEnum,
+    [out] mdExportedType   rExportedTypes[],
+    [in]  ULONG            cMax,
     [out] ULONG            *pcTokens  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [in. out] Wskaźnik do modułu wyliczającego. Ta wartość musi być wartością null, gdy metoda `EnumExportedTypes` jest wywoływana po raz pierwszy.  
+ [w, na zewnątrz] Wskaźnik do wyliczacza. Musi to być wartość `EnumExportedTypes` null, gdy metoda jest wywoływana po raz pierwszy.  
   
  `rExportedTypes`  
- określoną Wyliczanie tokenów metadanych `mdExportedType`.  
+ [na zewnątrz] Wyliczenie tokenów `mdExportedType` metadanych.  
   
  `cMax`  
- podczas Maksymalna liczba tokenów `mdExportedType`, które można umieścić w tablicy `rExportedTypes`.  
+ [w] Maksymalna liczba `mdExportedType` tokenów, które mogą `rExportedTypes` być umieszczone w tablicy.  
   
  `pcTokens`  
- określoną Liczba tokenów `mdExportedType` faktycznie umieszczonych w `rExportedTypes`.  
+ [na zewnątrz] Liczba tokenów `mdExportedType` faktycznie umieszczonych w `rExportedTypes`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumExportedTypes` pomyślnie zwrócone.|  
-|`S_FALSE`|Brak tokenów do wyliczenia. W tym przypadku `pcTokens` jest ustawiona na zero.|  
+|`S_OK`|`EnumExportedTypes`zwrócono pomyślnie.|  
+|`S_FALSE`|Nie ma żadnych tokenów do wyliczenia. W takim `pcTokens` przypadku jest ustawiona na zero.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforma:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforma:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataAssemblyImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [IMetaDataAssemblyImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

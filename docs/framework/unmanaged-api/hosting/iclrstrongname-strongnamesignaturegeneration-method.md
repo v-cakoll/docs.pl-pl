@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4cdb1284-947a-4ed4-94c1-c5ff5cdfce56
 topic_type:
 - apiref
-ms.openlocfilehash: ced7540afe931fb91240c770d76d205400157a51
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: e58ac181c4e472c469076b880ff71e0c6afa30fe
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901099"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178051"
 ---
 # <a name="iclrstrongnamestrongnamesignaturegeneration-method"></a>ICLRStrongName::StrongNameSignatureGeneration — Metoda
 Generuje podpis silnej nazwy dla określonego zestawu.  
@@ -28,7 +28,7 @@ Generuje podpis silnej nazwy dla określonego zestawu.
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
-HRESULT StrongNameSignatureGeneration (   
+HRESULT StrongNameSignatureGeneration (
     [in]  LPCWSTR   wszFilePath,  
     [in]  LPCWSTR   wszKeyContainer,  
     [in]  BYTE      *pbKeyBlob,  
@@ -40,49 +40,49 @@ HRESULT StrongNameSignatureGeneration (
   
 ## <a name="parameters"></a>Parametry  
  `wszFilePath`  
- podczas Ścieżka do pliku zawierającego manifest zestawu, dla którego zostanie wygenerowany podpis silnej nazwy.  
+ [w] Ścieżka do pliku, który zawiera manifest zestawu, dla którego zostanie wygenerowany podpis silnej nazwy.  
   
  `wszKeyContainer`  
- podczas Nazwa kontenera kluczy, który zawiera parę kluczy publiczny/prywatny.  
+ [w] Nazwa kontenera klucza zawierającego parę kluczy publicznych/prywatnych.  
   
- Jeśli `pbKeyBlob` ma wartość null, `wszKeyContainer` musi określić prawidłowego kontenera w ramach dostawcy usług kryptograficznych (CSP). W takim przypadku para kluczy przechowywana w kontenerze jest używana do podpisania pliku.  
+ Jeśli `pbKeyBlob` wartość `wszKeyContainer` null jest zerowa, należy określić prawidłowy kontener w ramach dostawcy usług kryptograficznych (CSP). W takim przypadku para kluczy przechowywana w kontenerze jest używana do podpisywania pliku.  
   
- Jeśli `pbKeyBlob` nie ma wartości null, przyjmuje się, że para kluczy jest zawarta w kluczowym dużym obiekcie binarnym (BLOB).  
+ Jeśli `pbKeyBlob` nie ma wartości null, przyjmuje się, że para kluczy znajduje się w głównym obiekcie binarnym (BLOB).  
   
- Klucze muszą być 1024-bitowe Rivest-Shamir-Adleman (RSA) kluczy podpisywania. W tej chwili nie są obsługiwane żadne inne typy kluczy.  
+ Klucze muszą być 1024-bitowe klucze podpisywania Rivest-Shamir-Adleman (RSA). Żadne inne typy kluczy są obecnie obsługiwane.  
   
  `pbKeyBlob`  
- podczas Wskaźnik do pary kluczy publicznych/prywatnych. Ta para jest w formacie utworzonym przez funkcję `CryptExportKey` Win32. Jeśli `pbKeyBlob` ma wartość null, założono, że kontener kluczy określony przez `wszKeyContainer` zostanie zawierający parę kluczy.  
+ [w] Wskaźnik do pary kluczy publicznych/prywatnych. Ta para jest w formacie utworzonym `CryptExportKey` przez funkcję Win32. Jeśli `pbKeyBlob` ma wartość null, `wszKeyContainer` przyjmuje się, że kontener kluczy określony przez zawiera parę kluczy.  
   
  `cbKeyBlob`  
- podczas Rozmiar w bajtach `pbKeyBlob`.  
+ [w] Rozmiar w bajtach `pbKeyBlob`.  
   
  `ppbSignatureBlob`  
- określoną Wskaźnik do lokalizacji, do której aparat plików wykonywalnych języka wspólnego zwraca sygnaturę. Jeśli `ppbSignatureBlob` ma wartość null, środowisko uruchomieniowe zapisuje podpis w pliku określonym przez `wszFilePath`.  
+ [na zewnątrz] Wskaźnik do lokalizacji, do której środowisko uruchomieniowe języka wspólnego zwraca podpis. Jeśli `ppbSignatureBlob` wartość null ma wartość null, środowisko `wszFilePath`wykonawcze przechowuje podpis w pliku określonym przez program .  
   
- Jeśli `ppbSignatureBlob` nie ma wartości null, środowisko uruchomieniowe języka wspólnego przydziela miejsce do zwrócenia sygnatury. Obiekt wywołujący musi zwolnić to miejsce przy użyciu metody [ICLRStrongName:: StrongNameFreeBuffer —](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) .  
+ Jeśli `ppbSignatureBlob` nie jest null, środowisko uruchomieniowe języka wspólnego przydziela miejsce, w którym do zwrócenia podpisu. Wywołujący musi zwolnić to miejsce przy użyciu [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) metody.  
   
  `pcbSignatureBlob`  
- określoną Rozmiar zwróconej sygnatury w bajtach.  
+ [na zewnątrz] Rozmiar w bajtach zwróconego podpisu.  
   
-## <a name="return-value"></a>Wartość zwrócona  
- `S_OK`, jeśli metoda została ukończona pomyślnie; w przeciwnym razie wartość HRESULT wskazująca niepowodzenie (zobacz [typowe wartości HRESULT](/windows/win32/seccrypto/common-hresult-values) dla listy).  
+## <a name="return-value"></a>Wartość zwracana  
+ `S_OK`jeśli metoda została pomyślnie ukończona; w przeciwnym razie wartość HRESULT wskazująca błąd (zobacz [typowe wartości HRESULT](/windows/win32/seccrypto/common-hresult-values) dla listy).  
   
 ## <a name="remarks"></a>Uwagi  
- Określ wartość null dla `wszFilePath`, aby obliczyć rozmiar podpisu bez tworzenia podpisu.  
+ Określ `wszFilePath` wartość null, aby obliczyć rozmiar podpisu bez tworzenia podpisu.  
   
- Podpis może być przechowywany bezpośrednio w pliku lub zwracany do obiektu wywołującego.  
+ Podpis może być przechowywany bezpośrednio w pliku lub zwrócony do wywołującego.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Obiekt ServiceHost. h  
+ **Nagłówek:** MetaHost.h  
   
- **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
+ **Biblioteka:** Uwzględnione jako zasób w pliku MSCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [StrongNameSignatureGenerationEx, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md)
 - [ICLRStrongName, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

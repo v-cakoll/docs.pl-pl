@@ -8,126 +8,126 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: 8bdd70a6eaea8aff196e2156d88460a6d24b5d3f
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 0fae3ac1769163101dcdb183f4c5c2135354b1fc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487187"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79145426"
 ---
 # <a name="application-startup-time"></a>Czas uruchamiania aplikacji
-Ilość czasu, która jest wymagana dla aplikacji WPF rozpocząć może się znacznie różnić. W tym temacie opisano różne techniki skracanie czasu uruchamiania postrzegany wartość rzeczywista dla aplikacji Windows Presentation Foundation (WPF).  
+Ilość czasu, który jest wymagany dla aplikacji WPF do uruchomienia może się znacznie różnić. W tym temacie opisano różne techniki skracania czasu uruchamiania postrzegane i rzeczywiste dla aplikacji Windows Presentation Foundation (WPF).  
   
-## <a name="understanding-cold-startup-and-warm-startup"></a>Opis zimnego uruchamiania i uruchamiania bez wyłączania zasilania  
- Podczas zimnego uruchamiania występuje, gdy aplikacja uruchamia się po raz pierwszy po ponownym uruchomieniu systemu lub podczas uruchamiania aplikacji zamknij go, a następnie uruchom go ponownie po długim okresie czasu. Podczas uruchamiania aplikacji, jeśli wymagane stron (kod, dane statyczne, rejestru itp.) nie są obecne na liście wstrzymania Windows Menedżer pamięci, występują błędy stron. Dostęp do dysku jest wymagana do wprowadzenia strony w pamięci.  
+## <a name="understanding-cold-startup-and-warm-startup"></a>Zrozumienie zimnego uruchamiania i ciepłego uruchamiania  
+ Zimne uruchamianie występuje, gdy aplikacja uruchamia się po raz pierwszy po ponownym uruchomieniu systemu lub po uruchomieniu aplikacji, zamknij ją, a następnie uruchom ponownie po długim czasie. Po uruchomieniu aplikacji, jeśli wymagane strony (kod, dane statyczne, rejestr itp.) nie są obecne na liście rezerwowej menedżera pamięci systemu Windows, występują błędy strony. Dostęp do dysku jest wymagany do wprowadzenia stron do pamięci.  
   
- Bez wyłączania zasilania uruchamiania występuje, gdy większość na stronach głównych składników środowiska uruchomieniowego (języka wspólnego CLR) języka wspólnego zostały już załadowane w pamięci, co pozwala zaoszczędzić czas dostępu drogich dysków. Właśnie dlatego aplikacji zarządzanej rozpoczyna się szybciej, gdy jest uruchamiany po raz drugi.  
+ Ciepłe uruchamianie występuje, gdy większość stron dla składników głównego środowiska wykonawczego języka wspólnego (CLR) jest już załadowana do pamięci, co oszczędza kosztowny czas dostępu do dysku. Dlatego aplikacja zarządzana uruchamia się szybciej, gdy działa po raz drugi.  
   
-## <a name="implement-a-splash-screen"></a>Implementowanie ekran powitalny  
- W przypadkach, gdy jest istotne, nieuniknione opóźnienie między uruchomieniem aplikacji oraz wyświetlanie pierwszego interfejsu użytkownika, optymalizowanie czasu uruchamiania postrzegany przy użyciu *ekran powitalny*. Ta metoda Wyświetla obraz niemal natychmiast po użytkownik uruchamia aplikację. Gdy aplikacja jest gotowa do wyświetlenia jego pierwszego interfejsu użytkownika, stopniowo zmienia się na ekranie powitalnym. Począwszy od .NET Framework 3.5 SP1, można użyć <xref:System.Windows.SplashScreen> klasy do zaimplementowania ekran powitalny. Aby uzyskać więcej informacji, zobacz [dodać ekran powitalny do aplikacji WPF](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).  
+## <a name="implement-a-splash-screen"></a>Implementowanie ekranu powitalnego  
+ W przypadkach, gdy występuje znaczne, nieuniknione opóźnienie między uruchomieniem aplikacji a wyświetlaniem pierwszego interfejsu użytkownika, zoptymalizuj czas uruchamiania za pomocą *ekranu powitalnego.* Takie podejście wyświetla obraz niemal natychmiast po uruchomieniu aplikacji przez użytkownika. Gdy aplikacja jest gotowa do wyświetlenia pierwszego interfejsu użytkownika, ekran powitalny zanika. Począwszy od .NET Framework 3.5 SP1, można użyć <xref:System.Windows.SplashScreen> klasy do zaimplementowania ekranu powitalnego. Aby uzyskać więcej informacji, zobacz [Dodawanie ekranu powitalnego do aplikacji WPF](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).  
   
- Możesz również wdrożyć ekranu powitalnego za pomocą natywnego grafiki Win32. Wyświetlanie implementacji przed <xref:System.Windows.Application.Run%2A> metoda jest wywoływana.  
+ Można również zaimplementować własny ekran powitalny przy użyciu natywnej grafiki Win32. Wyświetl implementację <xref:System.Windows.Application.Run%2A> przed wywołaniem metody.  
   
 ## <a name="analyze-the-startup-code"></a>Analizowanie kodu startowego  
- Ustal przyczynę powolne zimnego uruchamiania. We/Wy dysku mogą być odpowiedzialne, ale nie zawsze jest to wymagane. Ogólnie rzecz biorąc należy zminimalizować użycie zasobów zewnętrznych, takich jak sieci, usługi sieci Web lub na dysku.  
+ Określ przyczynę powolnego uruchamiania przeziębienia. We/Wy dysku mogą być odpowiedzialne, ale nie zawsze tak jest. Ogólnie rzecz biorąc należy zminimalizować użycie zasobów zewnętrznych, takich jak sieć, usługi sieci Web lub dysk.  
   
- Przed testowaniem, sprawdź, czy nie inne uruchomione aplikacje lub usługi używają kodu zarządzanego lub kodu WPF.  
+ Przed przetestowaniem sprawdź, czy żadne inne uruchomione aplikacje lub usługi nie używają kodu zarządzanego lub kodu WPF.  
   
- Uruchomić aplikację WPF, natychmiast po ponownym uruchomieniu i określ, jak długo trwa do wyświetlenia. W przypadku znacznie szybciej wszystkich kolejnych uruchomień aplikacji (uruchomienia bez wyłączania zasilania) problem podczas zimnego uruchamiania najprawdopodobniej spowodowane przez operacje We/Wy.  
+ Uruchom aplikację WPF natychmiast po ponownym uruchomieniu komputera i określ, jak długo trwa wyświetlanie. Jeśli wszystkie kolejne uruchomienia aplikacji (ciepłe uruchamianie) są znacznie szybsze, problem zimnego uruchamiania jest najprawdopodobniej spowodowany przez we/wy.  
   
- Jeśli aplikacja zimnego uruchamiania nie dotyczy problem operacji We/Wy, jest prawdopodobne, że Twoja aplikacja działa niektóre długich inicjowania lub obliczenie i czeka na niektóre zdarzenia ukończyć, lub wymaga dużo kompilacja JIT przy uruchamianiu. W następujących sekcjach opisano niektóre z tych sytuacji bardziej szczegółowo.  
+ Jeśli problem zimnego uruchamiania aplikacji nie jest związany z we/wy, jest prawdopodobne, że aplikacja wykonuje pewne długie inicjowanie lub obliczenia, czeka na zakończenie jakiegoś zdarzenia lub wymaga dużo kompilacji JIT podczas uruchamiania. W poniższych sekcjach opisano niektóre z tych sytuacji bardziej szczegółowo.  
   
-## <a name="optimize-module-loading"></a>Optymalizowanie ładowania modułu  
- Użyj narzędzi takich jak Eksplorator procesów (Procexp.exe) i Tlist.exe, aby określić, które moduły aplikacja ładuje. Polecenie `Tlist <pid>` Wyświetla wszystkie moduły, które są ładowane przez proces.  
+## <a name="optimize-module-loading"></a>Optymalizacja ładowania modułu  
+ Użyj narzędzi, takich jak Process Explorer (Procexp.exe) i Tlist.exe, aby określić, które moduły ładuje aplikacja. Polecenie `Tlist <pid>` pokazuje wszystkie moduły, które są ładowane przez proces.  
   
- Na przykład jeśli nie jest nawiązywane w sieci Web jest ładowany System.Web.dll, a następnie w aplikacji jest moduł, odwołuje się do tego zestawu. Sprawdź, czy jest to konieczne.  
+ Na przykład jeśli nie łączysz się z siecią Web i widzisz, że System.Web.dll jest ładowany, a następnie istnieje moduł w aplikacji, który odwołuje się do tego zestawu. Sprawdź, czy odwołanie jest konieczne.  
   
- Jeśli aplikacja ma wiele modułów, scalić w pojedynczym module. Takie podejście wymaga mniejsze koszty ładowania zestawu CLR. Mniejszej liczby zestawów także oznaczać, że środowisko CLR utrzymuje mniej stanu.  
+ Jeśli aplikacja ma wiele modułów, scal je w jeden moduł. Takie podejście wymaga mniej clr obciążenia zestawu obciążenie. Mniej zestawów oznacza również, że CLR utrzymuje mniej stanu.  
   
-## <a name="defer-initialization-operations"></a>Odroczenie inicjowania operacji  
- Należy wziąć pod uwagę odracza kod inicjujący aż po wyrenderowaniu okna głównego aplikacji.  
+## <a name="defer-initialization-operations"></a>Odraczaj operacje inicjowania  
+ Należy rozważyć odroczenie kodu inicjowania, dopóki po renderowaniu głównego okna aplikacji.  
   
- Należy pamiętać, że może być wykonana inicjalizacji w konstruktorze klasy, a kod inicjujący odwołuje się do innych klas, może spowodować efektu kaskadowego, w którym są wykonywane wiele konstruktorów klas.  
+ Należy pamiętać, że inicjowanie może być wykonywane wewnątrz konstruktora klasy, a jeśli kod inicjowania odwołuje się do innych klas, może to spowodować efekt kaskadowy, w którym wykonuje się wiele konstruktorów klas.  
   
-## <a name="avoid-application-configuration"></a>Należy unikać konfiguracji aplikacji  
- Należy wziąć pod uwagę, unikając konfiguracji aplikacji. Na przykład jeśli aplikacja ma prostej konfiguracji wymagań i celów czasu uruchamiania ściśle, wpisy rejestru lub prostego pliku INI może być szybsze zamiast uruchamiania.  
+## <a name="avoid-application-configuration"></a>Unikaj konfiguracji aplikacji  
+ Należy rozważyć unikanie konfiguracji aplikacji. Na przykład, jeśli aplikacja ma proste wymagania konfiguracyjne i ma ścisłe cele czasu uruchamiania, wpisy rejestru lub prosty plik INI może być szybszą alternatywą uruchamiania.  
   
-## <a name="utilize-the-gac"></a>Korzystanie z pamięci podręcznej GAC  
- Zestaw nie jest zainstalowany w globalnej pamięci podręcznej zestawów (GAC), czy opóźnienia spowodowane tym, że weryfikacja skrótu zestawów o silnych nazwach i sprawdzania poprawności obrazów Ngen obraz natywny dla tego zestawu znajduje się na komputerze. Weryfikacja silnej nazwy jest pomijana dla wszystkich zestawów zainstalowane w GAC. Aby uzyskać więcej informacji, zobacz [Gacutil.exe (Global Assembly Cache Tool)](../../tools/gacutil-exe-gac-tool.md).  
+## <a name="utilize-the-gac"></a>Wykorzystaj GAC  
+ Jeśli zestaw nie jest zainstalowany w globalnej pamięci podręcznej zestawów (GAC), istnieją opóźnienia spowodowane weryfikacją mieszania zestawów o silnych nazwach i sprawdzaniem poprawności obrazu Ngen, jeśli na komputerze jest dostępny obraz macierzysty dla tego zestawu. Weryfikacja silnej nazwy jest pomijana dla wszystkich zestawów zainstalowanych w pliku GAC. Aby uzyskać więcej informacji, zobacz [Gacutil.exe (Global Assembly Cache Tool)](../../tools/gacutil-exe-gac-tool.md) (Program Gacutil.exe — narzędzie do obsługi globalnej pamięci podręcznej zestawów).  
   
 ## <a name="use-ngenexe"></a>Użyj Ngen.exe  
- Należy rozważyć użycie Native Image Generator (Ngen.exe) w swojej aplikacji. Użycie Ngen.exe oznacza, handlem użycia procesora CPU, więcej dostępu do dysku, ponieważ może być większe od obrazu MSIL obrazu natywnego wygenerowanego przez Ngen.exe.  
+ Należy rozważyć użycie generatora obrazów natywnych (Ngen.exe) w aplikacji. Korzystanie z Ngen.exe oznacza handel zużyciem procesora cpu dla większego dostępu do dysku, ponieważ natywny obraz generowany przez Ngen.exe może być większy niż obraz MSIL.  
   
- Aby poprawić czas uruchamiania bez wyłączania zasilania, należy zawsze używać Ngen.exe w swojej aplikacji, ponieważ pozwala to uniknąć użycia Procesora CPU kompilacji JIT kodu aplikacji.  
+ Aby poprawić ciepły czas uruchamiania, należy zawsze używać Ngen.exe w aplikacji, ponieważ pozwala to uniknąć kosztu procesora kompilacji JIT kodu aplikacji.  
   
- W niektórych scenariuszach podczas zimnego uruchamiania przy użyciu Ngen.exe może być również przydatne. Jest to spowodowane kompilator JIT (mscorjit.dll) nie będzie musiał zostać załadowany.  
+ W niektórych scenariuszach zimnego uruchamiania pomocne może być również użycie pliku Ngen.exe. Dzieje się tak, ponieważ kompilator JIT (mscorjit.dll) nie musi być ładowany.  
   
- Moduły Ngen i JIT może mieć wpływ najgorszy. Jest to spowodowane mscorjit.dll muszą zostać załadowane, a gdy kompilator JIT pracuje nad kodem, liczbę stron w obrazów Ngen muszą być dostępne, gdy kompilator JIT czyta metadane zestawów.  
+ Posiadanie modułów Ngen i JIT może mieć najgorszy efekt. Jest to spowodowane mscorjit.dll musi być załadowany, a gdy kompilator JIT działa na kod, wiele stron w obrazach Ngen musi być dostępny, gdy kompilator JIT odczytuje metadane zestawów.  
   
-### <a name="ngen-and-clickonce"></a>Ngen i technologii ClickOnce  
- Sposób, którą chcesz wdrożyć aplikację można również ustawić różnica w czasie ładowania. Wdrażanie aplikacji ClickOnce nie obsługuje polecenia Ngen. Jeśli zdecydujesz się użyć Ngen.exe dla aplikacji, należy użyć innego mechanizmu wdrażania, takich jak Instalator Windows.  
+### <a name="ngen-and-clickonce"></a>Ngen i ClickOnce  
+ Sposób planowania wdrażania aplikacji może również mieć wpływ na czas ładowania. ClickOnce wdrożenie aplikacji nie obsługuje Ngen. Jeśli zdecydujesz się użyć programu Ngen.exe dla aplikacji, należy użyć innego mechanizmu wdrażania, takiego jak Instalator Windows.  
   
- Aby uzyskać więcej informacji, zobacz [Ngen.exe (Generator obrazu natywnego)](../../tools/ngen-exe-native-image-generator.md).  
+ Aby uzyskać więcej informacji, zobacz [Ngen.exe (Native Image Generator)](../../tools/ngen-exe-native-image-generator.md).  
   
-### <a name="rebasing-and-dll-address-collisions"></a>Rebasing i konflikty adresów biblioteki DLL  
- Użycie Ngen.exe, należy pamiętać, że zmienianie bazy może wystąpić, gdy obrazy natywne są ładowane do pamięci. Jeśli biblioteka DLL nie jest ładowany w swoim preferowanym adresem bazowym, ponieważ ten zakres adresów jest już przydzielony, moduł ładujący Windows załaduje go na inny adres, który może być czasochłonna operacja.  
+### <a name="rebasing-and-dll-address-collisions"></a>Ponowne uszowanie bazy i kolizje adresów DLL  
+ Jeśli używasz programu Ngen.exe, należy pamiętać, że ponowne tworzenie bazy może wystąpić, gdy obrazy natywne są ładowane do pamięci. Jeśli biblioteka DLL nie jest ładowana pod preferowanym adresem podstawowym, ponieważ ten zakres adresów jest już przydzielony, program ładujący systemu Windows załaduje go pod innym adresem, co może być czasochłonną operacją.  
   
- Aby sprawdzić, czy istnieją moduły, w których wszystkie strony są prywatne, można użyć narzędzia wirtualnego adresu zrzutu (Vadump.exe). Jeśli jest to możliwe, moduł może została zmieniona na inny adres. W związku z tym nie można współużytkować jego stron.  
+ Za pomocą narzędzia Vadump.exe) można użyć narzędzia Vadump.exe, aby sprawdzić, czy istnieją moduły, w których wszystkie strony są prywatne. W takim przypadku moduł mógł zostać ponownie oparty na innym adresie. W związku z tym jego strony nie mogą być udostępniane.  
   
- Aby uzyskać więcej informacji o tym, jak ustawić adres podstawowy, zobacz [Ngen.exe (Generator obrazu natywnego)](../../tools/ngen-exe-native-image-generator.md).  
+ Aby uzyskać więcej informacji na temat ustawiania adresu bazowego, zobacz [Ngen.exe (Generator obrazu natywnego).](../../tools/ngen-exe-native-image-generator.md)  
   
-## <a name="optimize-authenticode"></a>Optymalizowanie Authenticode  
- Weryfikacja Authenticode dodaje do czasu uruchamiania. Zestawy z podpisem Authenticode trzeba można sprawdzić przy użyciu urzędu certyfikacji (CA). Ta weryfikacja może być czasochłonne, ponieważ może wymagać, nawiązywanie połączenia z siecią kilka razy pobieranie bieżącej listy odwołania certyfikatów. Zapewnia się także pewność, że pełny łańcuch prawidłowe certyfikaty na ścieżce zaufany główny urząd certyfikacji. To może dokonywać translacji na kilka sekund opóźnienia podczas ładowania zestawu.  
+## <a name="optimize-authenticode"></a>Optymalizacja autentycznegoode  
+ Weryfikacja authenticode dodaje czas uruchamiania. Zestawy podpisane z uwierzytelnie muszą zostać zweryfikowane za pomocą urzędu certyfikacji(CA). Ta weryfikacja może być czasochłonna, ponieważ może wymagać kilkukrotnego połączenia z siecią w celu pobrania bieżących list odwołania certyfikatów. Zapewnia również, że istnieje pełny łańcuch prawidłowych certyfikatów na ścieżce do zaufanego katalogu głównego. Może to przełożyć się na kilka sekund opóźnienia podczas ładowania zestawu.  
   
- Należy rozważyć zainstalowanie certyfikatu urzędu certyfikacji na komputerze klienckim lub Unikaj używania Authenticode, gdy jest to możliwe. Jeśli wiesz, aplikacja nie wymaga dowód wydawcy, nie trzeba naliczana jest opłata za weryfikacji podpisu.  
+ Należy rozważyć zainstalowanie certyfikatu urzędu certyfikacji na komputerze klienckim lub unikać używania authenticode, gdy jest to możliwe. Jeśli wiesz, że aplikacja nie potrzebuje dowodów wydawcy, nie musisz płacić kosztów weryfikacji podpisu.  
   
- Począwszy od programu .NET Framework 3.5, ma opcji konfiguracji, która umożliwia weryfikacji Authenticode do obejścia. Aby to zrobić, Dodaj następujące ustawienie do pliku app.exe.config:  
+ Począwszy od programu .NET Framework 3.5, istnieje opcja konfiguracji, która umożliwia weryfikację Authenticode, aby pominąć. Aby to zrobić, dodaj następujące ustawienie do pliku app.exe.config:  
   
 ```xml  
 <configuration>  
     <runtime>  
-        <generatePublisherEvidence enabled="false"/>   
+        <generatePublisherEvidence enabled="false"/>
     </runtime>  
 </configuration>  
 ```  
   
- Aby uzyskać więcej informacji, zobacz [ \<generatePublisherEvidence > Element](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md).  
+ Aby uzyskać więcej informacji, zobacz [ \<generatePublisherEvidence> Element](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md).  
   
 ## <a name="compare-performance-on-windows-vista"></a>Porównanie wydajności w systemie Windows Vista  
- Menedżer pamięci w Windows Vista ma technologia o nazwie wstępne ładowanie do pamięci. Wstępne ładowanie do pamięci analizuje wzorce użycia pamięci wraz z upływem czasu, aby określić zawartość pamięci optymalne dla określonego użytkownika. Działa ona nieprzerwanie do obsługi tej zawartości przez cały czas.  
+ Menedżer pamięci w systemie Windows Vista ma technologię o nazwie SuperFetch. SuperFetch analizuje wzorce użycia pamięci w czasie, aby określić optymalną zawartość pamięci dla określonego użytkownika. Działa w sposób ciągły, aby utrzymać tę zawartość przez cały czas.  
   
- To podejście różni się od pobierania wstępnego zastosowanych w Windows XP wstępnie ładuje dane do pamięci bez analizowanie wzorców użycia. Wraz z upływem czasu Jeśli użytkownik używa aplikacji środowiska WPF często w Windows Vista, zwiększyć czas podczas zimnego uruchamiania aplikacji.  
+ Takie podejście różni się od techniki pobierania wstępnego używanej w systemie Windows XP, która wstępnie ładuje dane do pamięci bez analizowania wzorców użycia. Z biegiem czasu, jeśli użytkownik często używa aplikacji WPF w systemie Windows Vista, czas zimnego uruchamiania aplikacji może ulec poprawie.  
   
-## <a name="use-appdomains-efficiently"></a>Efektywnie wykorzystać domen aplikacji  
- Jeśli to możliwe ładowanie zestawów do obszaru kodu neutralnego względem domeny, aby upewnić się, że obrazu natywnego, jeśli istnieje, jest stosowana w wszystkich domen aplikacji utworzonych w aplikacji.  
+## <a name="use-appdomains-efficiently"></a>Efektywne korzystanie z aplikacji AppDomains  
+ Jeśli to możliwe, należy załadować zestawy do obszaru kodu neutralnego dla domeny, aby upewnić się, że obraz macierzysty, jeśli istnieje, jest używany we wszystkich AppDomains utworzonych w aplikacji.  
   
- Aby uzyskać najlepszą wydajność wymusić sprawną komunikację między domenami, zmniejszając wywołania między domenami. Jeśli to możliwe, należy użyć wywołania bez argumentów lub z argumentami typu pierwotnego.  
+ Aby uzyskać najlepszą wydajność, wymusz wydajną komunikację między domenami, zmniejszając liczbę połączeń między domenami. Jeśli to możliwe, należy używać wywołań bez argumentów lub z argumentami typu pierwotnego.  
   
 ## <a name="use-the-neutralresourceslanguage-attribute"></a>Użyj atrybutu NeutralResourcesLanguage  
- Użyj <xref:System.Resources.NeutralResourcesLanguageAttribute> do określenia kultury neutralnej dla <xref:System.Resources.ResourceManager>. W tym podejściu unika zestawu niepomyślnych wyszukiwań.  
+ Użyj, <xref:System.Resources.NeutralResourcesLanguageAttribute> aby określić kultury <xref:System.Resources.ResourceManager>neutralnej dla . Takie podejście pozwala uniknąć nieudanych odnośów zestawu.  
   
-## <a name="use-the-binaryformatter-class-for-serialization"></a>Korzystanie z klasy elementu do serializacji  
- Jeśli musisz użyć serializacji, należy użyć <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> klasy zamiast <xref:System.Xml.Serialization.XmlSerializer> klasy. <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> Klasy jest zaimplementowana w Biblioteka klasy podstawowej (BCL) w zestawie biblioteki mscorlib.dll. <xref:System.Xml.Serialization.XmlSerializer> Jest zaimplementowana w zestawie System.Xml.dll, która może być dodatkowe biblioteki DLL do załadowania.  
+## <a name="use-the-binaryformatter-class-for-serialization"></a>Użyj klasy BinaryFormatter do serializacji  
+ Jeśli należy użyć serializacji, <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> należy użyć <xref:System.Xml.Serialization.XmlSerializer> klasy zamiast klasy. Klasa <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> jest implementowana w bibliotece klas podstawowych (BCL) w zestawie mscorlib.dll. Jest <xref:System.Xml.Serialization.XmlSerializer> zaimplementowana w zestawie System.Xml.dll, który może być dodatkową biblioteką DLL do załadowania.  
   
- Jeśli musisz użyć <xref:System.Xml.Serialization.XmlSerializer> klasy, można osiągnąć lepszą wydajność w przypadku wstępnie wygenerować zestawu serializacji.  
+ Jeśli należy użyć <xref:System.Xml.Serialization.XmlSerializer> klasy, można osiągnąć lepszą wydajność, jeśli wstępnie wygenerować zestaw serializacji.  
   
-## <a name="configure-clickonce-to-check-for-updates-after-startup"></a>Konfigurowanie ClickOnce, aby sprawdzić aktualizacje po uruchomieniu  
- Jeśli aplikacja korzysta z technologii ClickOnce, należy unikać dostępu do sieci podczas uruchamiania, konfigurując ClickOnce, aby sprawdzić lokacji wdrożenia aktualizacji po uruchomieniu aplikacji.  
+## <a name="configure-clickonce-to-check-for-updates-after-startup"></a>Konfigurowanie ClickOnce do sprawdzania dostępności aktualizacji po uruchomieniu  
+ Jeśli aplikacja używa ClickOnce, należy unikać dostępu do sieci podczas uruchamiania, konfigurując ClickOnce, aby sprawdzić witrynę wdrażania pod kątem aktualizacji po uruchomieniu aplikacji.  
   
- Jeśli używasz modelu (XBAP) aplikacji przeglądarki XAML, należy pamiętać o tym, ClickOnce sprawdza lokacji wdrożenia aktualizacji, nawet jeśli XBAP jest już w pamięci podręcznej funkcji ClickOnce. Aby uzyskać więcej informacji, zobacz [wdrażania i zabezpieczeń ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment).  
+ Jeśli używasz modelu aplikacji przeglądarki XAML (XBAP), należy pamiętać, że ClickOnce sprawdza witrynę wdrażania pod kątem aktualizacji, nawet jeśli XBAP jest już w pamięci podręcznej ClickOnce. Aby uzyskać więcej informacji, zobacz [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment).  
   
-## <a name="configure-the-presentationfontcache-service-to-start-automatically"></a>Automatycznie skonfigurować usługę PresentationFontCache do ekranu startowego  
- Do uruchomienia po ponownym uruchomieniu pierwszej aplikacji WPF to usługa PresentationFontCache. Usługa przechowuje czcionki systemowe, zwiększa czcionki dostęp i zwiększa ogólną wydajność. Występuje obciążenie podczas uruchamiania usługi, a w niektórych środowiskach kontrolowanego, rozważ skonfigurowanie usługi do automatycznego uruchamiania, po ponownym rozruchu systemu.  
+## <a name="configure-the-presentationfontcache-service-to-start-automatically"></a>Konfigurowanie usługi PresentationFontCache do automatycznego uruchamiania  
+ Pierwszą aplikacją WPF do uruchomienia po ponownym uruchomieniu jest PresentationFontCache usługi. Usługa buforuje czcionki systemowe, poprawia dostęp do czcionek i zwiększa ogólną wydajność. Istnieje obciążenie podczas uruchamiania usługi, a w niektórych kontrolowanych środowiskach należy rozważyć skonfigurowanie usługi do automatycznego uruchamiania po ponownym uruchomieniu systemu.  
   
-## <a name="set-data-binding-programmatically"></a>Ustaw programowo powiązania danych  
- Zamiast przy użyciu XAML, aby ustawić <xref:System.Windows.FrameworkElement.DataContext%2A> deklaratywnie w głównym oknie, warto ustawić programowo w <xref:System.Windows.Application.OnActivated%2A> metody.  
+## <a name="set-data-binding-programmatically"></a>Programowo ustawianie powiązania danych  
+ Zamiast używać XAML, aby <xref:System.Windows.FrameworkElement.DataContext%2A> ustawić deklaratywnie dla okna głównego, <xref:System.Windows.Application.OnActivated%2A> należy rozważyć ustawienie go programowo w metodzie.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Windows.SplashScreen>
 - <xref:System.AppDomain>
 - <xref:System.Resources.NeutralResourcesLanguageAttribute>
 - <xref:System.Resources.ResourceManager>
-- [Dodawanie ekranu powitalnego do aplikacji WPF](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)
-- [Ngen.exe (generator obrazu natywnego)](../../tools/ngen-exe-native-image-generator.md)
+- [Dodaj ekran powitalny do aplikacji WPF](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)
+- [Ngen.exe (Generator obrazu natywnego)](../../tools/ngen-exe-native-image-generator.md)
 - [\<generatePublisherEvidence> Element](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md)

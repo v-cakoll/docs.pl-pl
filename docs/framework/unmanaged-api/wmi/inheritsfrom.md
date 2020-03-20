@@ -1,6 +1,6 @@
 ---
-title: InheritsFrom — funkcja (niezarządzana dokumentacja interfejsu API)
-description: Funkcja InheritsFrom określa, czy Klasa lub wystąpienie pochodzi od określonej klasy nadrzędnej.
+title: InheritsFrom, funkcja (odwołanie do interfejsu API niezarządzanego)
+description: InheritsFrom Funkcja określa, czy klasa lub wystąpienie pochodzi z określonej klasy nadrzędnej.
 ms.date: 11/06/2017
 api_name:
 - InheritsFrom
@@ -14,60 +14,60 @@ helpviewer_keywords:
 - InheritsFrom function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 6bda63377251e3a208dfb1620896535ccdf8ccd8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c735c01c45beda8a1ba988a5c580e6b04ae46312
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127432"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174943"
 ---
 # <a name="inheritsfrom-function"></a>InheritsFrom, funkcja
-Określa, czy bieżąca Klasa lub wystąpienie pochodzi z określonej klasy nadrzędnej.
+Określa, czy bieżąca klasa lub wystąpienie pochodzi od określonej klasy nadrzędnej.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-    
+
 ## <a name="syntax"></a>Składnia  
   
 ```cpp
 HRESULT InheritsFrom (
-   [in] int               vFunc, 
-   [in] IWbemClassObject* ptr, 
-   [in] LPCWSTR           wszAncestor 
-); 
+   [in] int               vFunc,
+   [in] IWbemClassObject* ptr,
+   [in] LPCWSTR           wszAncestor
+);
 ```  
 
 ## <a name="parameters"></a>Parametry
 
 `vFunc`  
-podczas Ten parametr jest nieużywany.
+[w] Ten parametr jest nieużywane.
 
 `ptr`  
-podczas Wskaźnik do wystąpienia [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
+[w] Wskaźnik do wystąpienia [IWbemClassObject.](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)
 
 `wszAncestor`  
-podczas Nazwa klasy. `wszAncestor` musi wskazywać prawidłowy `LPCWSTR`.
+[w] Nazwa klasy. `wszAncestor`musi wskazywać prawidłowe `LPCWSTR`.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Następujące wartości zwracane przez tę funkcję są zdefiniowane w pliku nagłówkowym *WbemCli. h* lub można je definiować jako stałe w kodzie:
+Następujące wartości zwracane przez tę funkcję są zdefiniowane w pliku nagłówka *WbemCli.h* lub można zdefiniować je jako stałe w kodzie:
 
-|Stała  |Wartość  |Opis  |
+|Stały  |Wartość  |Opis  |
 |---------|---------|---------|
-| `WBEM_S_NO_ERROR` | 0 | Bieżący obiekt dziedziczy z `wszAncestor`.  |
-| `WBEM_S_FALSE` | 1 | Bieżący obiekt nie dziedziczy po `wszAncestor`. |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszAncestor` jest `null`. |
+| `WBEM_S_NO_ERROR` | 0 | Bieżący obiekt dziedziczy z pliku `wszAncestor`.  |
+| `WBEM_S_FALSE` | 1 | Bieżący obiekt nie `wszAncestor`dziedziczy po pliku . |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametr `wszAncestor` ma wartość `null`. |
   
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja otacza wywołanie metody [IWbemClassObject:: InheritsFrom](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom) .
+Ta funkcja zawija wywołanie [metody IWbemClassObject::InheritsFrom.](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom)
 
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** WMINet_Utils. idl  
+ **Nagłówek:** WMINet_Utils.idl  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [WMI i liczniki wydajności (niezarządzana dokumentacja interfejsu API)](index.md)
+- [Liczniki wydajności WMI i (niezarządzane odwołanie interfejsu API)](index.md)

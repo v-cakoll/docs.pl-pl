@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: dodawanie przycisków do kontrolki ToolBar'
+title: 'Porady: dodawanie przycisków do formantu ToolBar'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,31 +12,31 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: 78a58a8d-1041-4e38-9219-4096fa6a5c5c
-ms.openlocfilehash: 8ab1fa8fc163ed50e51801769d40e61483e8ed5b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1bb6de58010e70a4edafacafe3dc00b511fc63de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912628"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182339"
 ---
-# <a name="how-to-add-buttons-to-a-toolbar-control"></a>Instrukcje: dodawanie przycisków do kontrolki ToolBar
+# <a name="how-to-add-buttons-to-a-toolbar-control"></a>Porady: dodawanie przycisków do formantu ToolBar
 > [!NOTE]
-> Formant zastępuje i dodaje funkcję <xref:System.Windows.Forms.ToolBar> do <xref:System.Windows.Forms.ToolBar> kontrolki; jednak kontrolka jest zachowywana w celu zapewnienia zgodności z poprzednimi wersjami i w przyszłości, jeśli wybierzesz opcję. <xref:System.Windows.Forms.ToolStrip>  
+> Formant <xref:System.Windows.Forms.ToolStrip> zastępuje i dodaje funkcjonalność <xref:System.Windows.Forms.ToolBar> do formantu; jednak <xref:System.Windows.Forms.ToolBar> formant jest zachowywany zarówno dla zgodności z powrotem i przyszłego użycia, jeśli wybierzesz.  
   
- Integralną częścią <xref:System.Windows.Forms.ToolBar> kontrolki są przyciski dodawane do niego. Mogą one służyć do zapewnienia łatwego dostępu do poleceń menu lub, Alternatywnie, można umieścić w innym obszarze interfejsu użytkownika aplikacji, aby udostępnić użytkownikom polecenia, które nie są dostępne w strukturze menu.  
+ Integralną częścią <xref:System.Windows.Forms.ToolBar> formantu są przyciski dodawany do niego. Mogą one służyć do zapewnienia łatwego dostępu do poleceń menu lub, alternatywnie, mogą być umieszczone w innym obszarze interfejsu użytkownika aplikacji, aby udostępnić polecenia użytkownikom, które nie są dostępne w strukturze menu.  
   
- W poniższych przykładach przyjęto <xref:System.Windows.Forms.ToolBar> założenie, że formant został dodany do formularza`Form1`systemu Windows ().  
+ Poniższe przykłady zakładają, że <xref:System.Windows.Forms.ToolBar> formant został`Form1`dodany do formularza systemu Windows ( ).  
   
 ### <a name="to-add-buttons-programmatically"></a>Aby programowo dodać przyciski  
   
-1. W procedurze Utwórz przyciski paska narzędzi, dodając je do <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> kolekcji.  
+1. W procedurze utwórz przyciski paska <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> narzędzi, dodając je do kolekcji.  
   
-2. Określ ustawienia właściwości dla pojedynczego przycisku, przekazując indeks przycisku za pośrednictwem <xref:System.Windows.Forms.ToolBar.Buttons%2A> właściwości.  
+2. Określ ustawienia właściwości dla pojedynczego przycisku, <xref:System.Windows.Forms.ToolBar.Buttons%2A> przekazując indeks przycisku za pośrednictwem właściwości.  
   
-     W poniższym przykładzie założono, że formularz <xref:System.Windows.Forms.ToolBar> z kontrolką został już dodany.  
+     Poniższy przykład zakłada formularz <xref:System.Windows.Forms.ToolBar> z formantu już dodane.  
   
     > [!NOTE]
-    > <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> Kolekcja jest kolekcją różną od zera, więc kod powinien być odpowiednio odpowiedni.  
+    > Kolekcja <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> jest kolekcją opartą na wartości zero, więc kod powinien postępować odpowiednio.  
   
     ```vb  
     Public Sub CreateToolBarButtons()  
@@ -90,7 +90,7 @@ ms.locfileid: "69912628"
        toolBar1.Buttons[2].PartialPush = true;  
   
        // Instantiate a ContextMenu component and menu items.  
-       // Set the DropDownButton's DropDownMenu property to   
+       // Set the DropDownButton's DropDownMenu property to
        // the context menu.  
        ContextMenu cm = new ContextMenu();  
        MenuItem miOne = new MenuItem("One");  
@@ -129,7 +129,7 @@ ms.locfileid: "69912628"
           toolBar1->Buttons[2]->PartialPush = true;  
   
           // Instantiate a ContextMenu component and menu items.  
-          // Set the DropDownButton's DropDownMenu property to   
+          // Set the DropDownButton's DropDownMenu property to
           // the context menu.  
           System::Windows::Forms::ContextMenu^ cm = gcnew System::Windows::Forms::ContextMenu;  
           MenuItem^ miOne = gcnew MenuItem( "One" );  
@@ -148,10 +148,10 @@ ms.locfileid: "69912628"
        }  
     ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Windows.Forms.ToolBar>
-- [Instrukcje: Zdefiniuj ikonę dla przycisku paska narzędzi](how-to-define-an-icon-for-a-toolbar-button.md)
-- [Instrukcje: Zdarzenia menu wyzwalacza dla przycisków paska narzędzi](how-to-trigger-menu-events-for-toolbar-buttons.md)
-- [ToolBar, kontrolka — omówienie](toolbar-control-overview-windows-forms.md)
-- [ToolBar, kontrolka](toolbar-control-windows-forms.md)
+- [Instrukcje: określanie ikony dla przycisku kontrolki ToolBar](how-to-define-an-icon-for-a-toolbar-button.md)
+- [Instrukcje: zdarzenia wyzwalaczy menu dla przycisków kontrolki Toolbar](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [ToolBar — Informacje o formancie](toolbar-control-overview-windows-forms.md)
+- [ToolBar — Formant](toolbar-control-windows-forms.md)

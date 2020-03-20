@@ -15,42 +15,42 @@ helpviewer_keywords:
 ms.assetid: ecd786e8-f9a4-4190-a6ef-af18e8c6d654
 topic_type:
 - apiref
-ms.openlocfilehash: b5da781f148c23efcc909ad65e198e4f3c6fe5b5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7e8376f3a029b0e3ec51a1e7587dd14b3e7530ee
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447873"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177424"
 ---
 # <a name="imetadataemit2savedeltatostream-method"></a>IMetaDataEmit2::SaveDeltaToStream — Metoda
-Zapisuje zmiany z bieżącej sesji Edit-and-Continue do określonego strumienia.  
+Zapisuje zmiany z bieżącej sesji edycji i kontynuowania do określonego strumienia.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
 HRESULT SaveDeltaToStream (  
-    [in] IStream     *pIStream,   
+    [in] IStream     *pIStream,
     [in] DWORD       dwSaveFlags  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `pIStream`  
- podczas Wskaźnik interfejsu do zapisywalnego strumienia, do którego mają zostać zapisane zmiany.  
+ [w] Wskaźnik interfejsu do zapisywalny strumień, do którego można zapisać zmiany.  
   
  `dwSaveFlags`  
- podczas Rezerwacj. Ta wartość musi być równa zero.  
+ [w] Zastrzeżone. Ta wartość musi wynosić zero.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

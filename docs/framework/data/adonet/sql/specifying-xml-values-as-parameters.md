@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
-ms.openlocfilehash: 8e57bfe23a80bf3913cd7fb8b96527870259e77a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: acb94efd8b6b6b66d0cc84309c2d68ad692b08d3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780875"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174501"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>Określanie wartości XML jako parametrów
-Jeśli zapytanie wymaga parametru, którego wartość jest ciągiem XML, deweloperzy mogą podać tę wartość przy użyciu wystąpienia typu danych **SQLXML** . Naprawdę nie ma żadnych lew; Kolumny XML w SQL Server akceptują wartości parametrów w taki sam sposób jak inne typy danych.  
+Jeśli kwerenda wymaga parametru, którego wartość jest ciągiem XML, deweloperzy mogą podać tę wartość przy użyciu wystąpienia typu danych **SqlXml.** Naprawdę nie ma żadnych sztuczek; Kolumny XML w programie SQL Server akceptują wartości parametrów w taki sam sposób, jak inne typy danych.  
   
 ## <a name="example"></a>Przykład  
- Następująca aplikacja konsolowa tworzy nową tabelę w bazie danych **AdventureWorks** . Nowa tabela zawiera kolumnę o nazwie **SalesId** i kolumnę XML o nazwie **SalesInfo**.  
+ Następująca aplikacja konsoli tworzy nową tabelę w bazie danych **AdventureWorks.** Nowa tabela zawiera kolumnę o nazwie **SalesID** i kolumnę XML o nazwie **SalesInfo**.  
   
 > [!NOTE]
-> Przykładowa baza danych **AdventureWorks** nie jest instalowana domyślnie podczas instalowania SQL Server. Można go zainstalować, uruchamiając Instalatora SQL Server.  
+> Przykładowa baza danych **AdventureWorks** nie jest domyślnie instalowana podczas instalowania programu SQL Server. Można go zainstalować, uruchamiając instalator programu SQL Server.  
   
- Przykład przygotowuje <xref:System.Data.SqlClient.SqlCommand> obiekt do wstawienia wiersza w nowej tabeli. Zapisany plik zawiera dane XML, które są zbędne dla kolumny **SalesInfo** .  
+ W przykładzie <xref:System.Data.SqlClient.SqlCommand> przygotowuje obiekt do wstawienia wiersza w nowej tabeli. Zapisany plik zawiera dane XML potrzebne dla kolumny **SalesInfo.**  
   
- Aby utworzyć plik wymagany do uruchomienia przykładu, Utwórz nowy plik tekstowy w tym samym folderze co projekt. Nazwij plik MyTestStoreData. XML. Otwórz plik w programie Notepad i skopiuj i wklej następujący tekst:  
+ Aby utworzyć plik potrzebny do uruchomienia przykładu, utwórz nowy plik tekstowy w tym samym folderze co projekt. Nazwij plik MyTestStoreData.xml. Otwórz plik w Notatniku i skopiuj i wklej następujący tekst:  
   
 ```xml  
 <StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
@@ -74,7 +74,7 @@ Module Module1
   
         Dim command As New SqlCommand(commandText, connection)  
   
-        ' Read the saved XML document as a   
+        ' Read the saved XML document as a
         ' SqlXml-data typed variable.  
         Dim newXml As SqlXml = _  
          New SqlXml(New XmlTextReader("MyTestStoreData.xml"))  
@@ -90,8 +90,8 @@ Module Module1
 End Sub  
   
     Private Function GetConnectionString() As String  
-        ' To avoid storing the connection string in your code,              
-        ' you can retrieve it from a configuration file.   
+        ' To avoid storing the connection string in your code,
+        ' you can retrieve it from a configuration file.
         Return "Data Source=(local);Integrated Security=SSPI;" & _  
           "Initial Catalog=AdventureWorks"  
     End Function  
@@ -115,28 +115,28 @@ class Class1
         //  Create a sample table (dropping first if it already  
         //  exists.)  
   
-        string commandNewTable =   
-            "IF EXISTS (SELECT * FROM dbo.sysobjects " +   
+        string commandNewTable =
+            "IF EXISTS (SELECT * FROM dbo.sysobjects " +
             "WHERE id = " +  
-                  "object_id(N'[dbo].[XmlDataTypeSample]') " +   
-            "AND OBJECTPROPERTY(id, N'IsUserTable') = 1) " +   
-            "DROP TABLE [dbo].[XmlDataTypeSample];" +   
-            "CREATE TABLE [dbo].[XmlDataTypeSample](" +   
-            "[SalesID] [int] IDENTITY(1,1) NOT NULL, " +   
+                  "object_id(N'[dbo].[XmlDataTypeSample]') " +
+            "AND OBJECTPROPERTY(id, N'IsUserTable') = 1) " +
+            "DROP TABLE [dbo].[XmlDataTypeSample];" +
+            "CREATE TABLE [dbo].[XmlDataTypeSample](" +
+            "[SalesID] [int] IDENTITY(1,1) NOT NULL, " +
             "[SalesInfo] [xml])";  
-        SqlCommand commandAdd =   
+        SqlCommand commandAdd =
                    new SqlCommand(commandNewTable, connection);  
         commandAdd.ExecuteNonQuery();  
-        string commandText =   
-            "INSERT INTO [dbo].[XmlDataTypeSample] " +   
-            "([SalesInfo] ) " +   
+        string commandText =
+            "INSERT INTO [dbo].[XmlDataTypeSample] " +
+            "([SalesInfo] ) " +
             "VALUES(@xmlParameter )";  
-        SqlCommand command =   
+        SqlCommand command =
                   new SqlCommand(commandText, connection);  
   
-        //  Read the saved XML document as a   
+        //  Read the saved XML document as a
         //  SqlXml-data typed variable.  
-        SqlXml newXml =   
+        SqlXml newXml =
             new SqlXml(new XmlTextReader("MyTestStoreData.xml"));  
   
         //  Supply the SqlXml value for the value of the parameter.  
@@ -151,15 +151,15 @@ class Class1
   
     private static string GetConnectionString()  
     {  
-        // To avoid storing the connection string in your code,              
-        // you can retrieve it from a configuration file.   
+        // To avoid storing the connection string in your code,
+        // you can retrieve it from a configuration file.
         return "Data Source=(local);Integrated Security=true;" +  
         "Initial Catalog=AdventureWorks; ";  
     }  
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Data.SqlTypes.SqlXml>
 - [Dane XML w programie SQL Server](xml-data-in-sql-server.md)

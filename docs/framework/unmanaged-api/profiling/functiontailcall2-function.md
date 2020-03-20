@@ -14,22 +14,22 @@ helpviewer_keywords:
 ms.assetid: 249f9892-b5a9-41e1-b329-28a925904df6
 topic_type:
 - apiref
-ms.openlocfilehash: 2d99c6d8bd2af02456c6a90143b524c337483868
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 60276327617ae24e9bdcebf958613c21d3808429
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866898"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175190"
 ---
 # <a name="functiontailcall2-function"></a>FunctionTailcall2 — Funkcja
-Powiadamia profiler, że aktualnie wykonywana funkcja ma wykonać wywołanie tail do innej funkcji i zawiera informacje na temat ramki stosu.  
+Powiadamia profiler, że funkcja aktualnie wykonywania ma zamiar wykonać wywołanie ogona do innej funkcji i zawiera informacje o ramce stosu.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp
 void __stdcall FunctionTailcall2 (  
-    [in] FunctionID         funcId,   
-    [in] UINT_PTR           clientData,   
+    [in] FunctionID         funcId,
+    [in] UINT_PTR           clientData,
     [in] COR_PRF_FRAME_INFO func  
 );  
 ```  
@@ -38,47 +38,47 @@ void __stdcall FunctionTailcall2 (
 
 - `funcId`
 
-  \[in) identyfikator aktualnie wykonywanej funkcji, która ma na celu wykonanie wywołania tail.
+  \[w] Identyfikator aktualnie wykonywanej funkcji, która ma na celu wywołanie ogona.
 
 - `clientData`
 
-  \[w] ponownie mapowany identyfikator funkcji, który Profiler wcześniej określił za pośrednictwem [FunctionIDMapper](functionidmapper-function.md), obecnie wykonywanej funkcji, która ma na celu wykonanie wywołania tail.
+  \[w] Reemapped identyfikator funkcji, który profiler wcześniej określone za pośrednictwem [FunctionIDMapper](functionidmapper-function.md), funkcji aktualnie wykonywania, który ma zamiar dokonać wywołania ogona.
   
 - `func`
 
-  \[w] `COR_PRF_FRAME_INFO` wartość, która wskazuje na informacje o ramce stosu.
+  \[w] `COR_PRF_FRAME_INFO` Wartość, która wskazuje informacje o ramce stosu.
 
-  Profiler powinien być traktowany jako nieprzezroczysty uchwyt, który można przesłać z powrotem do aparatu wykonywania w metodzie [ICorProfilerInfo2:: GetFunctionInfo2 —](icorprofilerinfo2-getfunctioninfo2-method.md) .
+  Profiler należy traktować to jako nieprzezroczysty dojście, które mogą być przekazywane z powrotem do aparatu wykonywania w [ICorProfilerInfo2::GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) metody.
 
 ## <a name="remarks"></a>Uwagi  
- Funkcja Target wywołania tail będzie używać bieżącej ramki stosu i zwróci się bezpośrednio do obiektu wywołującego funkcji, która wykonał wywołanie tail. Oznacza to, że wywołanie zwrotne [FunctionLeave2](functionleave2-function.md) nie zostanie wygenerowane dla funkcji, która jest elementem docelowym wywołania tail.  
+ Funkcja docelowa wywołania ogona użyje bieżącej ramki stosu i powróci bezpośrednio do obiektu wywołującego funkcji, która wykonała wywołanie ogona. Oznacza to, że [FunctionLeave2](functionleave2-function.md) wywołania zwrotnego nie zostaną wystawione dla funkcji, która jest celem wywołania ogona.  
   
- Wartość parametru `func` jest nieprawidłowa po powrocie funkcji `FunctionTailcall2`, ponieważ wartość może ulec zmianie lub zostać zniszczona.  
+ Wartość parametru `func` nie jest prawidłowa po powrocie `FunctionTailcall2` funkcji, ponieważ wartość może ulec zmianie lub zostać zniszczona.  
   
- Funkcja `FunctionTailcall2` jest wywołaniem zwrotnym; należy zaimplementować go. Implementacja musi używać atrybutu klasy magazynu `__declspec`(`naked`).  
+ Funkcja `FunctionTailcall2` jest wywołaniem zwrotnym; należy go zaimplementować. Implementacja musi `__declspec`używać`naked`atrybutu () klasy magazynu.  
   
  Aparat wykonywania nie zapisuje żadnych rejestrów przed wywołaniem tej funkcji.  
   
-- We wpisie należy zapisać wszystkie używane rejestry, w tym te w jednostce zmiennoprzecinkowej (FPU).  
+- Przy wprowadzaniu należy zapisać wszystkie używane rejestry, w tym rejestry w jednostce zmiennoprzecinkowej (FPU).  
   
-- Po zakończeniu należy przywrócić stos, usuwanie wyłączyć wszystkie parametry, które zostały wypchnięte przez jego obiekt wywołujący.  
+- Po wyjściu należy przywrócić stosu przez popping off wszystkie parametry, które zostały wypchnięte przez jego wywołującego.  
   
- Implementacja `FunctionTailcall2` nie powinna być blokowana, ponieważ spowoduje opóźnienie wyrzucania elementów bezużytecznych. Implementacja nie powinna podejmować próby wyrzucania elementów bezużytecznych, ponieważ stos może nie znajdować się w stanie przyjaznym do wyrzucania elementów bezużytecznych. Jeśli zostanie podjęta próba wyrzucania elementów bezużytecznych, środowisko uruchomieniowe zostanie zablokowane do momentu, `FunctionTailcall2` zwraca.  
+ Implementacja `FunctionTailcall2` nie należy blokować, ponieważ opóźni wyrzucanie elementów bezużytecznych. Implementacja nie powinna podejmować próby wyrzucania elementów bezużytecznych, ponieważ stos może nie być w stanie przyjaznym dla wyrzucania elementów bezużytecznych. Jeśli zostanie podjęta próba wyrzucania elementów `FunctionTailcall2` bezużytecznych, środowisko uruchomieniowe zostanie zablokowane, dopóki nie zwróci.  
   
- Ponadto funkcja `FunctionTailcall2` nie może wywoływać w kodzie zarządzanym lub w jakikolwiek sposób spowodować alokację pamięci zarządzanej.  
+ Ponadto `FunctionTailcall2` funkcja nie może wywoływać kodu zarządzanego lub w jakikolwiek sposób powodować alokacji pamięci zarządzanej.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf. idl  
+ **Nagłówek:** CorProf.idl  
   
- **Biblioteka:** CorGuids. lib  
+ **Biblioteka:** CorGuids.lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [FunctionEnter2, funkcja](functionenter2-function.md)
-- [FunctionLeave2, funkcja](functionleave2-function.md)
+- [FunctionLeave2 — Funkcja](functionleave2-function.md)
 - [SetEnterLeaveFunctionHooks2, metoda](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
 - [Profilowanie statycznych funkcji globalnych](profiling-global-static-functions.md)

@@ -15,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: 542c7c65-dd56-4651-b76f-5db2465e4a15
 topic_type:
 - apiref
-ms.openlocfilehash: 55411f187e2ef73997633d94b37a7d5d2cfd74c9
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 50d16b8036144d6ede349149fa4ae37344064d8b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868567"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177023"
 ---
 # <a name="icorprofilerinfo3getfunctionenter3info-method"></a>ICorProfilerInfo3::GetFunctionEnter3Info — Metoda
-Dostarcza ramkę stosu i informacje o argumentach funkcji raportowanej do profilera przez funkcję [FunctionEnter3WithInfo](functionenter3withinfo-function.md) . Tę metodę można wywołać tylko w trakcie wywołania zwrotnego `FunctionEnter3WithInfo`.  
+Zawiera ramki stosu i argument informacji funkcji, która jest zgłaszana do profilera przez [FunctionEnter3WithInfo](functionenter3withinfo-function.md) funkcji. Tę metodę można wywołać `FunctionEnter3WithInfo` tylko podczas wywołania zwrotnego.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
 HRESULT GetFunctionEnter3Info(  
-            [in]  FunctionID functionId,   
+            [in]  FunctionID functionId,
             [in]  COR_PRF_ELT_INFO eltInfo,  
             [out] COR_PRF_FRAME_INFO *pFrameInfo,  
             [in, out] ULONG *pcbArgumentInfo,  
@@ -39,37 +39,37 @@ HRESULT GetFunctionEnter3Info(
   
 ## <a name="parameters"></a>Parametry  
  `functionId`  
- podczas `FunctionID` funkcji, która jest wprowadzana.  
+ [w] Funkcja, `FunctionID` która jest wprowadzana.  
   
  `eltInfo`  
- podczas Nieprzezroczyste dojście, które reprezentuje informacje o danej klatce stosu. Profiler powinien podać ten sam `eltInfo`, który został podany przez funkcję [FunctionEnter3WithInfo](functionenter3withinfo-function.md) .  
+ [w] Nieprzezroczysty uchwyt, który reprezentuje informacje o danej ramce stosu. Profiler powinien zapewnić `eltInfo` taki sam, że został podany przez [FunctionEnter3WithInfo](functionenter3withinfo-function.md) funkcji.  
   
  `pFrameInfo`  
- określoną Nieprzezroczyste dojście reprezentujące ogólne informacje dotyczące danej ramki stosu. To dojście jest prawidłowe tylko w trakcie wywołania zwrotnego `FunctionEnter3WithInfo`, w którym Profiler nazywa metodę `GetFunctionEnter3Info`.  
+ [na zewnątrz] Nieprzezroczysty dojście reprezentujące ogólne informacje o danej ramce stosu. Ten dojście jest `FunctionEnter3WithInfo` prawidłowy tylko podczas wywołania zwrotnego, w którym profiler o nazwie `GetFunctionEnter3Info` metody.  
   
  `pcbArgumentInfo`  
- [in. out] Wskaźnik do łącznego rozmiaru (w bajtach) struktury [COR_PRF_FUNCTION_ARGUMENT_INFO](cor-prf-function-argument-info-structure.md) (oraz wszelkich dodatkowych struktur [COR_PRF_FUNCTION_ARGUMENT_RANGE](cor-prf-function-argument-range-structure.md) dla zakresów argumentów wskazywanych przez `pArgumentInfo`). Jeśli określony rozmiar jest za mały, ERROR_INSUFFICIENT_BUFFER jest zwracany, a oczekiwany rozmiar jest przechowywany w `pcbArgumentInfo`. Aby wywołać `GetFunctionEnter3Info` tylko w celu pobrania oczekiwanej wartości dla `*pcbArgumentInfo`, ustaw `*pcbArgumentInfo`= 0 i `pArgumentInfo`= NULL.  
+ [w, na zewnątrz] Wskaźnik do całkowitego rozmiaru , w bajtach, [COR_PRF_FUNCTION_ARGUMENT_INFO](cor-prf-function-argument-info-structure.md) struktury (plus wszelkie dodatkowe [struktury COR_PRF_FUNCTION_ARGUMENT_RANGE](cor-prf-function-argument-range-structure.md) dla zakresów argumentów wskazanych przez `pArgumentInfo`). Jeśli określony rozmiar nie wystarczy, ERROR_INSUFFICIENT_BUFFER jest zwracany, a `pcbArgumentInfo`oczekiwany rozmiar jest przechowywany w pliku . Aby `GetFunctionEnter3Info` wywołać tylko pobrać oczekiwaną wartość dla `*pcbArgumentInfo`, set `*pcbArgumentInfo`=0 i `pArgumentInfo`=NULL.  
   
  `pArgumentInfo`  
- określoną Wskaźnik do struktury [COR_PRF_FUNCTION_ARGUMENT_INFO](cor-prf-function-argument-info-structure.md) , który opisuje lokalizacje argumentów funkcji w pamięci, w kolejności od lewej do prawej.  
+ [na zewnątrz] Wskaźnik do [struktury COR_PRF_FUNCTION_ARGUMENT_INFO,](cor-prf-function-argument-info-structure.md) który opisuje lokalizacje argumentów funkcji w pamięci, w kolejności od lewej do prawej.  
   
 ## <a name="remarks"></a>Uwagi  
- Profiler musi przydzielić wystarczającą ilość miejsca dla struktury `COR_PRF_FUNCTION_ARGUMENT_INFO` funkcji, która jest sprawdzana, i musi wskazywać rozmiar w parametrze `pcbArgumentInfo`.  
+ Profiler musi przydzielić wystarczającą `COR_PRF_FUNCTION_ARGUMENT_INFO` ilość miejsca dla struktury funkcji, która jest `pcbArgumentInfo` kontrolowana i musi wskazywać rozmiar w parametrze.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf. idl, CorProf. h  
+ **Nagłówek:** CorProf.idl, CorProf.h  
   
- **Biblioteka:** CorGuids. lib  
+ **Biblioteka:** CorGuids.lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [FunctionEnter3WithInfo](functionenter3withinfo-function.md)
-- [FunctionLeave3WithInfo](functionleave3withinfo-function.md)
-- [FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md)
+- [Functionenter3withinfo](functionenter3withinfo-function.md)
+- [Functionleave3withinfo](functionleave3withinfo-function.md)
+- [FunkcjaTailcall3WithInfo](functiontailcall3withinfo-function.md)
 - [ICorProfilerInfo3, interfejs](icorprofilerinfo3-interface.md)
 - [Interfejsy profilowania](profiling-interfaces.md)
-- [Profilowanie](index.md)
+- [Profilowania](index.md)

@@ -15,42 +15,42 @@ helpviewer_keywords:
 ms.assetid: 4bc82d9b-9544-4be3-ba51-a2d4d806158a
 topic_type:
 - apiref
-ms.openlocfilehash: b8755629cca27784609de8166dddf44ed1c82bdc
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7ed7770f26ea4620d79f3be3f67e72f73c75057d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432535"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175632"
 ---
 # <a name="imetadataemitsetmethodimplflags-method"></a>IMetaDataEmit::SetMethodImplFlags — Metoda
-Ustawia lub aktualizuje sygnaturę metadanych dziedziczonej metody, do której odwołuje się określony token.  
+Ustawia lub aktualizuje podpis metadanych implementacji metody dziedziczonej, do którego odwołuje się określony token.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
-HRESULT SetMethodImplFlags (   
-    [in]  mdMethodDef   md,   
-    [in]  DWORD         dwImplFlags   
+HRESULT SetMethodImplFlags (
+    [in]  mdMethodDef   md,
+    [in]  DWORD         dwImplFlags
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `md`  
- podczas Token dla metody, która ma zostać zmieniona.  
+ [w] Token dla metody, która ma zostać zmieniona.  
   
  `dwImplFlags`  
- podczas Kombinacja wartości wyliczenia [CorMethodImpl —](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) , która określa funkcje implementacji metody.  
+ [w] Kombinacja wartości wyliczenia [CorMethodImpl,](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) która określa funkcje implementacji metody.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
+ **Biblioteka:** Używany jako zasób w pliku MSCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

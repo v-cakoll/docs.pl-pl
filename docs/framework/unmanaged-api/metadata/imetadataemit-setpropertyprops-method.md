@@ -15,66 +15,66 @@ helpviewer_keywords:
 ms.assetid: e2501fc8-b2bc-4dcc-9205-e3acd5a53ffe
 topic_type:
 - apiref
-ms.openlocfilehash: 0fdec87324d6efa0f911e37573093c19b93c0349
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: dc6375f3e2cff1a744a8ff2e6a6adab27bbf8af3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440547"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177475"
 ---
 # <a name="imetadataemitsetpropertyprops-method"></a>IMetaDataEmit::SetPropertyProps — Metoda
-Ustawia funkcje przechowywane w metadanych dla właściwości zdefiniowanej przez poprzednie wywołanie [metody DefineProperty —](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).  
+Ustawia obiekty przechowywane w metadanych dla właściwości zdefiniowanej przez wcześniejsze [wywołanie metody DefineProperty](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
-HRESULT SetPropertyProps (   
-    [in]  mdProperty      pr,   
-    [in]  DWORD           dwPropFlags,   
-    [in]  DWORD           dwCPlusTypeFlag,   
-    [in]  void const      *pValue,   
-    [in]  ULONG           cchValue,   
-    [in]  mdMethodDef     mdSetter,   
-    [in]  mdMethodDef     mdGetter,   
-    [in]  mdMethodDef     rmdOtherMethods[]   
+HRESULT SetPropertyProps (
+    [in]  mdProperty      pr,
+    [in]  DWORD           dwPropFlags,
+    [in]  DWORD           dwCPlusTypeFlag,
+    [in]  void const      *pValue,
+    [in]  ULONG           cchValue,
+    [in]  mdMethodDef     mdSetter,
+    [in]  mdMethodDef     mdGetter,
+    [in]  mdMethodDef     rmdOtherMethods[]
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `pr`  
- podczas Token dla właściwości, która ma zostać zmieniona.  
+ [w] Token dla właściwości, która ma zostać zmieniona  
   
  `dwPropFlags`  
- podczas Flagi właściwości.  
+ [w] Flagi właściwości.  
   
  `dwCPlusTypeFlag`  
- podczas Typ wartości domyślnej właściwości.  
+ [w] Typ wartości domyślnej właściwości.  
   
  `pValue`  
- podczas Wartość domyślna właściwości.  
+ [w] Wartość domyślna właściwości.  
   
  `cchValue`  
- podczas Liczba znaków (Unicode) w `pValue`.  
+ [w] Liczba znaków (Unicode) `pValue`w pliku .  
   
  `mdSetter`  
- podczas Metoda, która ustawia wartość właściwości.  
+ [w] Metoda, która ustawia wartość właściwości.  
   
  `mdGetter`  
- podczas Metoda, która pobiera wartość właściwości.  
+ [w] Metoda, która pobiera wartość właściwości.  
   
  `rmdOtherMethods[]`  
- podczas Tablica innych metod skojarzonych z właściwością. Przerwij tę tablicę z tokenem `mdTokenNil`.  
+ [w] Tablica innych metod skojarzonych z właściwością. Zakończ tę tablicę `mdTokenNil` za pomocą tokenu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
+ **Biblioteka:** Używany jako zasób w pliku MSCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -15,50 +15,50 @@ helpviewer_keywords:
 ms.assetid: c6bfd574-1da3-4ba7-82f2-46ca5efcbaba
 topic_type:
 - apiref
-ms.openlocfilehash: 4e2a78e2d049e952aa1be0b3a8fd640eb18d0320
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 4c68754bc44fe035fd8e7143c52895928beae395
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440571"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175593"
 ---
 # <a name="imetadataemitsetpinvokemap-method"></a>IMetaDataEmit::SetPinvokeMap — Metoda
-Ustawia lub zmienia funkcje podpisu PInvoke metody, zgodnie z definicją w poprzednim wywołaniu [IMetaDataEmit::D efinepinvokemap](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepinvokemap-method.md).  
+Ustawia lub zmienia funkcje podpisu PInvoke metody, zgodnie z definicją wcześniejszego wywołania [IMetaDataEmit::DefinePinvokeMap](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepinvokemap-method.md).  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
-HRESULT SetPinvokeMap (   
-    [in]  mdToken      tk,   
+HRESULT SetPinvokeMap (
+    [in]  mdToken      tk,
     [in]  DWORD        dwMappingFlags,  
-    [in]  LPCWSTR      szImportName,   
-    [in]  mdModuleRef  mrImportDLL   
+    [in]  LPCWSTR      szImportName,
+    [in]  mdModuleRef  mrImportDLL
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `tk`  
- podczas `mdToken`, do którego mają zastosowanie informacje dotyczące mapowania.  
+ [w] Informacje `mdToken` o mapowaniu.  
   
  `dwMappingFlags`  
- podczas Flagi używane przez funkcję PInvoke do wykonania mapowania. To jest maska bitów wartości `CorPinvokeMap`.  
+ [w] Flagi używane przez PInvoke do mapowania. Jest to maska `CorPinvokeMap` bitowa wartości.  
   
  `szImportName`  
- podczas Nazwa docelowego eksportu w natywnej bibliotece DLL.  
+ [w] Nazwa docelowego eksportu w macierzystej biblioteki DLL.  
   
  `mrImportDLL`  
- podczas Token `mdModuleRef` dla docelowej niezarządzanej biblioteki DLL.  
+ [w] Token `mdModuleRef` dla docelowej biblioteki DLL niezarządzanej.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
+ **Biblioteka:** Używany jako zasób w pliku MSCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

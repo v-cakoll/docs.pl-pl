@@ -15,21 +15,21 @@ topic_type:
 - apiref
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 3b4f85072b9dcf87d696b979fa6cbf4e59393f82
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 8fc5f1a488826d8adc6aecb8ef122609bebbe813
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77453042"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177102"
 ---
 # <a name="cor_prf_rejit_flags-enumeration"></a>COR_PRF_REJIT_FLAGS — Wyliczenie
-Zawiera wartości wskazujące, jak działa interfejs API [ICorProfilerInfo10:: RequestReJITWithInliners](icorprofilerinfo10-requestrejitwithinliners-method.md) .  
+Zawiera wartości, które wskazują, jak [ICorProfilerInfo10::RequestReJITWithInliners](icorprofilerinfo10-requestrejitwithinliners-method.md) api powinien zachowywać.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
 typedef enum  
-{      
+{
     COR_PRF_REJIT_BLOCK_INLINING = 0x1,
     COR_PRF_REJIT_INLINING_CALLBACKS    = 0x2
 } COR_PRF_REJIT_FLAGS;  
@@ -39,17 +39,17 @@ typedef enum
   
 |Członek|Opis|  
 |------------|-----------------|  
-|`COR_PRF_REJIT_BLOCK_INLINING`| Metody ReJITted będą blokowane przed zapisaniem ich w innych metodach. |  
-|`COR_PRF_REJIT_INLINING_CALLBACKS`| Odbieraj `GetFunctionParameters` wywołania zwrotne dla każdej metody, która w sposób zażądała metody ReJITted. |  
+|`COR_PRF_REJIT_BLOCK_INLINING`| Metody ReJITted zostaną zablokowane przed inlined w innych metodach. |  
+|`COR_PRF_REJIT_INLINING_CALLBACKS`| Odbieranie `GetFunctionParameters` wywołań zwrotnych dla wszelkich metod, które wbudowane metody wymagane do ReJITted. |  
 
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [obsługiwane systemy operacyjne .NET Core](../../../core/install/dependencies.md?pivots=os-windows).  
+ **Platformy:** Zobacz [.NET Core obsługiwane systemy operacyjne](../../../core/install/dependencies.md?pivots=os-windows).  
   
- **Nagłówek:** CorProf. idl, CorProf. h  
+ **Nagłówek:** CorProf.idl, CorProf.h  
   
- **Biblioteka:** CorGuids. lib  
+ **Biblioteka:** CorGuids.lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)] 
+ **Wersje programu .NET Framework:**[!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
   
 ## <a name="see-also"></a>Zobacz też
 

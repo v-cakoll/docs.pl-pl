@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: określanie ikony dla przycisku ToolBar'
+title: 'Porady: określanie ikony dla przycisku ToolBar'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,30 +13,30 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: 84db98b4-8566-49ce-b2c8-1fd66a5eb3a0
-ms.openlocfilehash: 2b85f734a5f8b31531cfe48f87681d98304db09b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 84c67c7d2584390ba3e48cb83820c65c6bb45d1f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929630"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182214"
 ---
-# <a name="how-to-define-an-icon-for-a-toolbar-button"></a>Instrukcje: określanie ikony dla przycisku ToolBar
+# <a name="how-to-define-an-icon-for-a-toolbar-button"></a>Porady: określanie ikony dla przycisku ToolBar
 > [!NOTE]
-> Formant zastępuje i dodaje funkcję <xref:System.Windows.Forms.ToolBar> do <xref:System.Windows.Forms.ToolBar> kontrolki; jednak kontrolka jest zachowywana w celu zapewnienia zgodności z poprzednimi wersjami i w przyszłości, jeśli wybierzesz opcję. <xref:System.Windows.Forms.ToolStrip>  
+> Formant <xref:System.Windows.Forms.ToolStrip> zastępuje i dodaje funkcjonalność <xref:System.Windows.Forms.ToolBar> do formantu; jednak <xref:System.Windows.Forms.ToolBar> formant jest zachowywany zarówno dla zgodności z powrotem i przyszłego użycia, jeśli wybierzesz.  
   
- <xref:System.Windows.Forms.ToolBar>przyciski mogą wyświetlać w nich ikony umożliwiające łatwą identyfikację użytkowników. Jest to realizowane poprzez dodanie obrazów do składnika [składnika ImageList](imagelist-component-windows-forms.md) , a następnie skojarzenie <xref:System.Windows.Forms.ImageList> składnika z <xref:System.Windows.Forms.ToolBar> kontrolką.  
+ <xref:System.Windows.Forms.ToolBar>przyciski są w stanie wyświetlać ikony w nich w celu łatwej identyfikacji przez użytkowników. Osiąga się to poprzez dodanie obrazów do [składnika ImageList składnika,](imagelist-component-windows-forms.md) a następnie skojarzenie składnika <xref:System.Windows.Forms.ImageList> z formantem. <xref:System.Windows.Forms.ToolBar>  
   
-### <a name="to-set-an-icon-for-a-toolbar-button-programmatically"></a>Aby programowo ustawić ikonę dla przycisku paska narzędzi  
+### <a name="to-set-an-icon-for-a-toolbar-button-programmatically"></a>Aby zaprogramować ikonę przycisku paska narzędzi  
   
-1. W procedurze Utwórz wystąpienie <xref:System.Windows.Forms.ImageList> składnika <xref:System.Windows.Forms.ToolBar> i kontrolki.  
+1. W procedurze wystąpienia składnika <xref:System.Windows.Forms.ImageList> i <xref:System.Windows.Forms.ToolBar> formantu.  
   
-2. W tej samej procedurze Przypisz obraz do <xref:System.Windows.Forms.ImageList> składnika.  
+2. W tej samej procedurze <xref:System.Windows.Forms.ImageList> przypisz obraz do komponentu.  
   
-3. W tej samej procedurze Przypisz <xref:System.Windows.Forms.ImageList> formant <xref:System.Windows.Forms.ToolBar> do kontrolki i przypisz <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> Właściwość poszczególnych przycisków paska narzędzi.  
+3. W tej samej <xref:System.Windows.Forms.ImageList> procedurze <xref:System.Windows.Forms.ToolBar> przypisz formant do formantu i przypisz <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> właściwość poszczególnych przycisków paska narzędzi.  
   
-     W poniższym przykładzie kodu ścieżką ustawioną dla lokalizacji obrazu jest folder **Moje dokumenty** . Dzieje się tak, ponieważ można założyć, że większość komputerów z systemem operacyjnym Windows będzie zawierać ten katalog. Pozwala to również użytkownikom z minimalnymi poziomami dostępu do systemu w celu bezpiecznego uruchomienia aplikacji. W poniższym przykładzie założono, że formularz <xref:System.Windows.Forms.PictureBox> z kontrolką został już dodany.  
+     W poniższym przykładzie kodu ścieżka ustawiona dla lokalizacji obrazu jest **folder moje dokumenty.** Odbywa się to, ponieważ można założyć, że większość komputerów z systemem operacyjnym Windows będzie zawierać ten katalog. Umożliwia to również użytkownikom z minimalnymi poziomami dostępu do systemu bezpieczne uruchamianie aplikacji. Poniższy przykład zakłada formularz <xref:System.Windows.Forms.PictureBox> z formantu już dodane.  
   
-     Wykonując powyższe kroki, należy napisać kod podobny do przedstawionego poniżej.  
+     Wykonując powyższe kroki, powinieneś napisać kod podobny do tego wyświetlanego poniżej.  
   
     ```vb  
     Public Sub InitializeMyToolBar()  
@@ -46,7 +46,7 @@ ms.locfileid: "69929630"
     ' Assign an image to the ImageList component.  
     ' You should replace the bold image  
     ' in the sample below with an icon of your own choosing.  
-       Dim myImage As System.Drawing.Image = _   
+       Dim myImage As System.Drawing.Image = _
           Image.FromFile Image.FromFile _  
           (System.Environment.GetFolderPath _  
           (System.Environment.SpecialFolder.Personal) _  
@@ -67,10 +67,10 @@ ms.locfileid: "69929630"
     public void InitializeMyToolBar()  
     {  
        // Instantiate an ImageList component and a ToolBar control.  
-       ToolBar toolBar1 = new  ToolBar();   
+       ToolBar toolBar1 = new  ToolBar();
        ImageList imageList1 = new ImageList();  
        // Assign an image to the ImageList component.  
-       // You should replace the bold image   
+       // You should replace the bold image
        // in the sample below with an icon of your own choosing.  
        // Note the escape character used (@) when specifying the path.  
        Image myImage = Image.FromFile  
@@ -94,10 +94,10 @@ ms.locfileid: "69929630"
        void InitializeMyToolBar()  
        {  
           // Instantiate an ImageList component and a ToolBar control.  
-          ToolBar ^ toolBar1 = gcnew  ToolBar();   
+          ToolBar ^ toolBar1 = gcnew  ToolBar();
           ImageList ^ imageList1 = gcnew ImageList();  
           // Assign an image to the ImageList component.  
-          // You should replace the bold image   
+          // You should replace the bold image
           // in the sample below with an icon of your own choosing.  
           Image ^ myImage = Image::FromFile(String::Concat  
              (System::Environment::GetFolderPath  
@@ -115,9 +115,9 @@ ms.locfileid: "69929630"
        }  
     ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Windows.Forms.ToolBar>
-- [Instrukcje: Zdarzenia menu wyzwalacza dla przycisków paska narzędzi](how-to-trigger-menu-events-for-toolbar-buttons.md)
-- [ToolBar, kontrolka](toolbar-control-windows-forms.md)
+- [Instrukcje: zdarzenia wyzwalaczy menu dla przycisków kontrolki Toolbar](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [ToolBar — Formant](toolbar-control-windows-forms.md)
 - [ImageList, składnik](imagelist-component-windows-forms.md)

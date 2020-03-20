@@ -2,23 +2,23 @@
 title: <commonParameters>
 ms.date: 03/30/2017
 ms.assetid: ffc20832-34d6-4622-8174-81924fd53514
-ms.openlocfilehash: ab21be7b5e2738ac6a7c9bea676d8180c69d1afd
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 73d8549f68e8ca77115619431c857c4a2aac3fdf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73968564"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153025"
 ---
-# <a name="commonparameters"></a>\<parametry >
-Reprezentuje kolekcję parametrów, które są globalnie używane w wielu usługach. Ta kolekcja zazwyczaj obejmuje parametry połączenia z bazą danych, które mogą być współużytkowane przez trwałe usługi.  
+# <a name="commonparameters"></a>\<commonParameters>
+Reprezentuje kolekcję parametrów, które są używane globalnie w wielu usługach. Ta kolekcja zazwyczaj będzie zawierać parametry połączenia bazy danych, które mogą być współużytkowane przez usługi trwałe.  
   
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
-&nbsp;&nbsp;&nbsp;&nbsp;[**zachowania\<** ](behaviors.md) >
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**serviceBehaviors**](servicebehaviors.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<zachowanie**](behavior-of-servicebehaviors.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<workflowRuntime**](workflowruntime.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<parametry >**  
+[**\<>konfiguracyjne**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<zachowania>**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<usługiZachowady>**](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<>zachowania**](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<>przepływu pracy**](workflowruntime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<commonParameters>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,27 +41,27 @@ Reprezentuje kolekcję parametrów, które są globalnie używane w wielu usług
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Dodaj >](add-of-commonparameters.md)|Dodaje parę nazwa-wartość wspólnych parametrów używanych przez usługi do kolekcji.|  
+|[\<dodaj>](add-of-commonparameters.md)|Dodaje parę nazwa wartość wspólnych parametrów używanych przez usługi do kolekcji.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<> workflowRuntime](workflowruntime.md)|Określa ustawienia dla wystąpienia <xref:System.Workflow.Runtime.WorkflowRuntime> do hostowania usług Windows Communication Foundation opartych na przepływie pracy (WCF).|  
+|[\<>przepływu pracy](workflowruntime.md)|Określa ustawienia wystąpienia dla <xref:System.Workflow.Runtime.WorkflowRuntime> hostingu usług Windows Communication Foundation (WCF) opartych na przepływie pracy.|  
   
 ## <a name="remarks"></a>Uwagi  
- Element `<commonParameters>` definiuje wszystkie parametry, które są używane globalnie w wielu usługach, na przykład `ConnectionString` przy użyciu <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>.  
+ Element `<commonParameters>` definiuje wszelkie parametry, które są używane globalnie w wielu usługach, na przykład `ConnectionString` podczas korzystania z <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>.  
   
 > [!NOTE]
-> Usługa śledzenia SQL nie używa spójnej wartości `ConnectionString`, jeśli została określona w sekcji `<commonParameters>`. Niektóre jego operacje, takie jak pobranie właściwości `StateMachineWorkflowInstance.StateHistory`, mogą zakończyć się niepowodzeniem. Aby to obejść, określ atrybut `ConnectionString` w sekcji konfiguracji dla dostawcy śledzenia, jak pokazano w poniższym przykładzie.  
+> Usługa śledzenia SQL nie konsekwentnie `ConnectionString` używa wartości, jeśli `<commonParameters>` jest określona w sekcji. Niektóre z jego operacji, `StateMachineWorkflowInstance.StateHistory` takich jak pobieranie właściwości może zakończyć się niepowodzeniem. Aby obejść ten problem, należy określić `ConnectionString` atrybut w sekcji konfiguracji dla dostawcy śledzenia, jak wskazano w poniższym przykładzie.  
 
 ```xml  
 <add
-type="System.Workflow.Runtime.Tracking.SqlTrackingService, System.Workflow.Runtime, Version=3.0.00000.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" 
+type="System.Workflow.Runtime.Tracking.SqlTrackingService, System.Workflow.Runtime, Version=3.0.00000.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
 ConnectionString="Data Source=localhost;Initial Catalog=Partner20WFTP;Integrated Security=True;" />
 ```  
   
- W przypadku usług, które zatwierdzają partie pracy do magazynów trwałości, takich jak <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService> i <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>, można umożliwić im ponawianie transakcji przy użyciu parametru `EnableRetries`, jak pokazano w następującym przykładzie:  
+ Dla usług, które zatwierdzają partii pracy <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService> <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>do magazynów trwałości, takich jak `EnableRetries` i , można włączyć je ponowić próbę ich transakcji przy użyciu parametru, jak pokazano w poniższym przykładzie:  
   
 ```xml  
 <workflowRuntime name="SampleApplication"
@@ -80,9 +80,9 @@ ConnectionString="Data Source=localhost;Initial Catalog=Partner20WFTP;Integrated
 </workflowRuntime>
 ```  
   
- Należy zauważyć, że parametr `EnableRetries` można ustawić na poziomie globalnym (jak pokazano w sekcji *Parametry* ) lub dla poszczególnych usług, które obsługują `EnableRetries` (jak pokazano w sekcji *usługi* ).  
+ Należy zauważyć, `EnableRetries` że parametr można ustawić na poziomie globalnym (jak pokazano w *commonparameters* sekcji) lub dla poszczególnych usług, które obsługują `EnableRetries` (jak pokazano w sekcji *Usługi).*  
   
- Poniższy przykładowy kod pokazuje, jak zmienić wspólne parametry programowo:
+ Poniższy przykładowy kod pokazuje, jak programowo zmieniać typowe parametry:
   
 ```csharp  
 Configuration config = WebConfigurationManager.OpenWebConfiguration("/Workflow", "Default Web Site", null, "localhost");
@@ -92,7 +92,7 @@ commonParameters["ConnectionString"].Value="another connection string";
 config.Save();  
 ```  
   
- Aby uzyskać więcej informacji o korzystaniu z pliku konfiguracji w celu sterowania zachowaniem obiektu <xref:System.Workflow.Runtime.WorkflowRuntime> aplikacji hosta Windows Workflow Foundation, zobacz [pliki konfiguracji przepływu pracy](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90)).  
+ Aby uzyskać więcej informacji na temat używania <xref:System.Workflow.Runtime.WorkflowRuntime> pliku konfiguracyjnego do kontrolowania zachowania obiektu aplikacji hosta Fundacji przepływu pracy systemu Windows, zobacz [Pliki konfiguracyjne przepływu pracy](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90)).  
   
 ## <a name="example"></a>Przykład  
   
@@ -105,7 +105,7 @@ config.Save();
 </commonParameters>
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.ServiceModel.Configuration.WorkflowRuntimeElement>
 - <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>
@@ -113,4 +113,4 @@ config.Save();
 - <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService>
 - <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>
 - [Pliki konfiguracji przepływu pracy](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))
-- [\<Dodaj >](add-of-commonparameters.md)
+- [\<dodaj>](add-of-commonparameters.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 36cffbf7-82ca-4cf9-bf60-50ab491ac2d9
 topic_type:
 - apiref
-ms.openlocfilehash: 4e11a52c977de7796043868e80c147d8cfd1f506
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a0fd3fdb6dde9fd6b88ea6c64ed907c8a3e9e46d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431575"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175801"
 ---
 # <a name="imetadataemitdefinepermissionset-method"></a>IMetaDataEmit::DefinePermissionSet — Metoda
 Tworzy definicję zestawu uprawnień z określonym podpisem metadanych i pobiera token do tej definicji zestawu uprawnień.  
@@ -29,40 +29,40 @@ Tworzy definicję zestawu uprawnień z określonym podpisem metadanych i pobiera
   
 ```cpp  
 HRESULT DefinePermissionSet (  
-    [in]  mdToken        tk,   
-    [in]  DWORD          dwAction,   
-    [in]  void const     *pvPermission,   
-    [in]  ULONG          cbPermission,   
-    [out] mdPermission   *ppm   
+    [in]  mdToken        tk,
+    [in]  DWORD          dwAction,
+    [in]  void const     *pvPermission,
+    [in]  ULONG          cbPermission,
+    [out] mdPermission   *ppm
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `tk`  
- podczas Obiekt, który ma być dekoracyjny.  
+ [w] Obiekt, który ma być ozdobiony.  
   
  `dwAction`  
- podczas Wartość [CorDeclSecurity —](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) , która określa typ zabezpieczenia deklaracyjnego do użycia.  
+ [w] Wartość [CorDeclSecurity,](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) która określa typ zabezpieczeń deklaratywnych, które mają być używane.  
   
  `pvPermission`  
- podczas Obiekt BLOB uprawnień.  
+ [w] Obiekt BLOB uprawnień.  
   
  `cbPermission`  
- podczas Rozmiar w bajtach `pvPermission`.  
+ [w] Rozmiar w bajtach `pvPermission`.  
   
  `ppm`  
- określoną Zwrócony token uprawnienia.  
+ [na zewnątrz] Token zwróconego uprawnienia.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
+ **Biblioteka:** Używany jako zasób w pliku MSCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

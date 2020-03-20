@@ -31,60 +31,60 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-ms.openlocfilehash: 7084c4579dd5fca0075c7516754195f7cea9e27c
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f5be5d8e14d7aa2d98009fc10c9cce314e745ed1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458039"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180871"
 ---
 # <a name="handling-errors"></a>Obsługa błędów
 
-Klasy <xref:System.Net.WebRequest> i <xref:System.Net.WebResponse> zgłaszają zarówno wyjątki systemowe (takie jak <xref:System.ArgumentException>), jak i specyficzne dla sieci Web wyjątki (które są <xref:System.Net.WebException> zgłaszane przez metodę <xref:System.Net.WebRequest.GetResponse%2A>).  
+Klasy <xref:System.Net.WebRequest> <xref:System.Net.WebResponse> i zgłaszać zarówno wyjątki <xref:System.ArgumentException>systemowe (takie jak ) <xref:System.Net.WebException> i <xref:System.Net.WebRequest.GetResponse%2A> wyjątki specyficzne dla sieci Web (które są generowane przez metodę).  
   
-Każdy element **WebException** zawiera właściwość <xref:System.Net.WebException.Status%2A>, która zawiera wartość z wyliczenia <xref:System.Net.WebExceptionStatus>. Można sprawdzić Właściwość **status** , aby określić błąd, który wystąpił, i podjąć odpowiednie kroki, aby rozwiązać ten problem.  
+Każdy **WebException** <xref:System.Net.WebException.Status%2A> zawiera właściwość, która <xref:System.Net.WebExceptionStatus> zawiera wartość z wyliczenia. Można zbadać **Status** właściwości, aby określić błąd, który wystąpił i podjąć odpowiednie kroki, aby rozwiązać błąd.  
   
-W poniższej tabeli opisano możliwe wartości właściwości **stan** .  
+W poniższej tabeli opisano możliwe wartości właściwości **Status.**  
   
 |Stan|Opis|  
 |------------|-----------------|  
-|ConnectFailure|Nie można skontaktować się z usługą zdalną na poziomie transportu.|  
-|ConnectionClosed|Połączenie zostało przedwcześnie zakończone.|  
-|KeepAliveFailure|Serwer zamknął połączenie wykonane z zestawem nagłówkowym Keep-Alive.|  
-|NameResolutionFailure|Usługa nazw nie może rozpoznać nazwy hosta.|  
-|ProtocolError|Odpowiedź odebrana z serwera została ukończona, ale wykazała błąd na poziomie protokołu.|  
-|ReceiveFailure|Nie odebrano kompletnej odpowiedzi z serwera zdalnego.|  
-|RequestCanceled|Żądanie zostało anulowane.|  
-|SecureChannelFailure|Wystąpił błąd w łącznym kanale bezpiecznego kanału.|  
-|SendFailure|Nie można wysłać kompletnego żądania do serwera zdalnego.|  
-|ServerProtocolViolation|Odpowiedź serwera nie jest prawidłową odpowiedzią HTTP.|  
-|Powodzenie|Nie wystąpił błąd.|  
-|limit czasu|Nie odebrano odpowiedzi w określonym limicie czasu dla żądania.|  
-|TrustFailure|Nie można zweryfikować certyfikatu serwera.|  
-|MessageLengthLimitExceeded|Odebrano komunikat, który przekroczył określony limit podczas wysyłania żądania lub odebrania odpowiedzi z serwera.|  
-|Podjęcia|Wewnętrzne asynchroniczne żądanie jest w stanie oczekiwania.|  
-|PipelineFailure|Ta wartość obsługuje infrastrukturę .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie.|  
+|ConnectFailure (Połączenie)|Nie można skontaktować się z usługą zdalną na poziomie transportu.|  
+|ConnectionClosed (Zamknięte połączenie)|Połączenie zostało zamknięte przedwcześnie.|  
+|KeepAliveWłasna|Serwer zamknął połączenie nawiązanym z zestawem nagłówków Keep-alive.|  
+|NazwaResolutionFailure|Usługa nazw nie może rozpoznać nazwy hosta.|  
+|ProtokółError|Odpowiedź otrzymana z serwera została ukończona, ale wskazywała błąd na poziomie protokołu.|  
+|ReceiveFailure (Nieujmowie)|Pełna odpowiedź nie została odebrana z serwera zdalnego.|  
+|RequestCanceled (Wyliczył)|Żądanie zostało anulowane.|  
+|SecureChannelWładnia|Wystąpił błąd w łączu bezpiecznego kanału.|  
+|SendFailure (Niebezpieczeństwo wyślij)|Nie można wysłać kompletnego żądania do serwera zdalnego.|  
+|ServerProtocolViolation (Proces serweraProtocolViolation)|Odpowiedź serwera nie była prawidłową odpowiedzią HTTP.|  
+|Powodzenie|Nie wystąpił żaden błąd.|  
+|Limit czasu|W terminie wyznaczonym dla wniosku nie otrzymano odpowiedzi.|  
+|ZaufanieWłasność|Nie można zweryfikować certyfikatu serwera.|  
+|WiadomośćLengthLimitExceeded|Odebrano wiadomość, która przekroczyła określony limit podczas wysyłania żądania lub odbierania odpowiedzi z serwera.|  
+|Oczekujące|Oczekuje na wewnętrzne żądanie asynchroniczne.|  
+|Awaria rurociągu|Ta wartość obsługuje infrastrukturę .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie.|  
 |ProxyNameResolutionFailure|Usługa rozpoznawania nazw nie może rozpoznać nazwy hosta serwera proxy.|  
-|UnknownError|Wystąpił wyjątek nieznanego typu.|  
+|NieznanyError|Wystąpił wyjątek nieznanego typu.|  
   
-Gdy właściwość **status** ma wartość **WebExceptionStatus. ProtocolError**, dostępna jest **WebResponse** , która zawiera odpowiedź z serwera. Tę odpowiedź można sprawdzić w celu ustalenia rzeczywistego źródła błędu protokołu.  
+Gdy **właściwość Status** jest **WebExceptionStatus.ProtocolError**, **WebResponse,** który zawiera odpowiedź z serwera jest dostępna. Można sprawdzić tę odpowiedź, aby określić rzeczywiste źródło błędu protokołu.  
   
-Poniższy przykład przedstawia sposób przechwytywania **wyjątku WebException**.  
+W poniższym przykładzie pokazano, jak złapać **WebException**.  
   
 ```csharp  
-try   
+try
 {  
     // Create a request instance.  
-    WebRequest myRequest =   
+    WebRequest myRequest =
     WebRequest.Create("http://www.contoso.com");  
     // Get the response.  
     WebResponse myResponse = myRequest.GetResponse();  
-    //Get a readable stream from the server.   
+    //Get a readable stream from the server.
     Stream sr = myResponse.GetResponseStream();  
   
     //Read from the stream and write any data to the console.  
     bytesread = sr.Read( myBuffer, 0, length);  
-    while( bytesread > 0 )   
+    while( bytesread > 0 )
     {  
         for (int i=0; i<bytesread; i++) {  
             Console.Write( "{0}", myBuffer[i]);  
@@ -95,7 +95,7 @@ try
     sr.Close();  
     myResponse.Close();  
 }  
-catch (WebException webExcp)   
+catch (WebException webExcp)
 {  
     // If you reach this point, an exception has been caught.  
     Console.WriteLine("A WebException has been caught.");  
@@ -103,8 +103,8 @@ catch (WebException webExcp)
     Console.WriteLine(webExcp.ToString());  
     // Get the WebException status code.  
     WebExceptionStatus status =  webExcp.Status;  
-    // If status is WebExceptionStatus.ProtocolError,   
-    //   there has been a protocol error and a WebResponse   
+    // If status is WebExceptionStatus.ProtocolError,
+    //   there has been a protocol error and a WebResponse
     //   should exist. Display the protocol error.  
     if (status == WebExceptionStatus.ProtocolError) {  
         Console.Write("The server returned protocol error ");  
@@ -114,7 +114,7 @@ catch (WebException webExcp)
            + httpResponse.StatusCode);  
     }  
 }  
-catch (Exception e)   
+catch (Exception e)
 {  
     // Code to catch other exceptions goes here.  
 }  
@@ -126,10 +126,10 @@ Try
     Dim myRequest As WebRequest = WebRequest.Create("http://www.contoso.com")  
     ' Get the response.  
     Dim myResponse As WebResponse = myRequest.GetResponse()  
-    'Get a readable stream from the server.   
+    'Get a readable stream from the server.
     Dim sr As Stream = myResponse.GetResponseStream()  
   
-    Dim i As Integer      
+    Dim i As Integer
     'Read from the stream and write any data to the console.  
     bytesread = sr.Read(myBuffer, 0, length)  
     While bytesread > 0  
@@ -148,8 +148,8 @@ Catch webExcp As WebException
     Console.WriteLine(webExcp.ToString())  
     ' Get the WebException status code.  
     Dim status As WebExceptionStatus = webExcp.Status  
-    ' If status is WebExceptionStatus.ProtocolError,   
-    '   there has been a protocol error and a WebResponse   
+    ' If status is WebExceptionStatus.ProtocolError,
+    '   there has been a protocol error and a WebResponse
     '   should exist. Display the protocol error.  
     If status = WebExceptionStatus.ProtocolError Then  
         Console.Write("The server returned protocol error ")  
@@ -164,11 +164,11 @@ Catch e As Exception
 End Try  
 ```  
   
-Aplikacje korzystające z klasy <xref:System.Net.Sockets.Socket> generują <xref:System.Net.Sockets.SocketException> w przypadku wystąpienia błędów w gnieździe Windows. Klasy <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener>i <xref:System.Net.Sockets.UdpClient> są zbudowane na podstawie klasy **Socket** i generują **SocketExceptions** .  
+Aplikacje, <xref:System.Net.Sockets.Socket> które <xref:System.Net.Sockets.SocketException> używają rzutu klasy, gdy wystąpią błędy w gnieździe systemu Windows. <xref:System.Net.Sockets.TcpListener> <xref:System.Net.Sockets.UdpClient> , <xref:System.Net.Sockets.TcpClient>i klasy są zbudowane na górze **Socket** klasy i rzucać **SocketExceptions,** jak również.  
   
-Gdy zostanie zgłoszony obiekt **SocketException** , Klasa **SocketException** ustawia właściwość <xref:System.Net.Sockets.SocketException.ErrorCode%2A> na ostatni błąd gniazda systemu operacyjnego, który wystąpił. Aby uzyskać więcej informacji na temat kodów błędów gniazda, zobacz dokumentację kodu błędu interfejsu API Winsock 2,0 w witrynie MSDN.  
+Po uruchomieniu **SocketException,** **SocketException** klasa <xref:System.Net.Sockets.SocketException.ErrorCode%2A> ustawia właściwość do ostatniego błędu gniazda systemu operacyjnego, który wystąpił. Aby uzyskać więcej informacji na temat kodów błędów gniazda, zobacz dokumentację kodu błędu interfejsu API Winsock 2.0 w sieci MSDN.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Obsługa i zgłaszanie wyjątków w programie .NET](../../standard/exceptions/index.md)
+- [Obsługa i zgłaszanie wyjątków w .NET](../../standard/exceptions/index.md)
 - [Żądanie danych](requesting-data.md)

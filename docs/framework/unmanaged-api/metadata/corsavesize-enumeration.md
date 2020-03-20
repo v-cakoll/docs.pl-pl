@@ -14,43 +14,43 @@ helpviewer_keywords:
 ms.assetid: eb95ce39-5688-43c1-a34d-578794b32faa
 topic_type:
 - apiref
-ms.openlocfilehash: 0f870d9d7d1bc292b213d690df508a6c28bac2ab
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 13a4364244f7d0076d77d14c3e3ef161e3872bcb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450100"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176139"
 ---
 # <a name="corsavesize-enumeration"></a>CorSaveSize — Wyliczenie
-Zawiera wartości wskazujące poziom dokładności wymagany podczas wykonywania zapytania o rozmiar operacji zapisywania.  
+Zawiera wartości wskazujące poziom precyzji wymagany podczas wykonywania zapytań o rozmiar operacji zapisywania.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
 typedef enum CorSaveSize {  
-    cssAccurate                = 0x0000,   
-    cssQuick                   = 0x0001,   
+    cssAccurate                = 0x0000,
+    cssQuick                   = 0x0001,
     cssDiscardTransientCAs     = 0x0002  
 } CorSaveSize;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Elementy członkowskie  
   
-|Element członkowski|Opis|  
+|Członek|Opis|  
 |------------|-----------------|  
 |`cssAccurate`|Określa, że wartość zwracana powinna być dokładna.|  
-|`cssQuick`|Określa, że należy oszacować wartość zwracaną.|  
-|`cssDiscardTransientCAs`|Określa, że typy, które mają być odrzucane, powinny być usuwane.|  
+|`cssQuick`|Określa, że wartość zwracana powinna być szacowana.|  
+|`cssDiscardTransientCAs`|Określa, że typy podlegające odrzuceniu powinny zostać usunięte.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorHdr. h  
+ **Nagłówek:** CorHdr.h  
   
- **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7de6447a-a751-49d8-87e2-951cee77b536
 topic_type:
 - apiref
-ms.openlocfilehash: 6e73160fb1927560ad381dbb85d03796296ba9a4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8c609d730297881c0ac20dca8569f0e9492638e9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74434292"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175723"
 ---
 # <a name="imetadataemitgettokenfromtypespec-method"></a>IMetaDataEmit::GetTokenFromTypeSpec — Metoda
 Pobiera token metadanych dla typu z określonym podpisem metadanych.  
@@ -28,33 +28,33 @@ Pobiera token metadanych dla typu z określonym podpisem metadanych.
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
-HRESULT GetTokenFromTypeSpec (   
-    [in]  PCCOR_SIGNATURE       pvSig,   
-    [in]  ULONG                 cbSig,   
-    [out] mdTypeSpec            *ptypespec   
+HRESULT GetTokenFromTypeSpec (
+    [in]  PCCOR_SIGNATURE       pvSig,
+    [in]  ULONG                 cbSig,
+    [out] mdTypeSpec            *ptypespec
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `pvSig`  
- podczas Zdefiniowany podpis.  
+ [w] Podpis jest zdefiniowany.  
   
  `cbSig`  
- podczas Liczba bajtów w `pvSig`.  
+ [w] Liczba bajtów `pvSig`w pliku .  
   
  `ptypespec`  
- określoną Przypisany token `mdTypeSpec`.  
+ [na zewnątrz] Token `mdTypeSpec` przypisany.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
+ **Biblioteka:** Używany jako zasób w pliku MSCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

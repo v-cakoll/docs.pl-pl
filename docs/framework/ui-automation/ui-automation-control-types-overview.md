@@ -5,36 +5,36 @@ helpviewer_keywords:
 - UI Automation, control types
 - control types, UI Automation
 ms.assetid: 75159ef8-bd43-4d13-acb7-1f1fe9253160
-ms.openlocfilehash: ec2dd3635f09144985df278be1d53ead675d3080
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 643c89e8f6c5e34aa1fb3c5c7c6c750c72046277
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442625"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179937"
 ---
 # <a name="ui-automation-control-types-overview"></a>Typy formantów automatyzacji interfejsu użytkownika — omówienie
 > [!NOTE]
-> Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych klas [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zdefiniowanych w przestrzeni nazw <xref:System.Windows.Automation>. Aby uzyskać najnowsze informacje na temat [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [interfejs API usługi Windows Automation: Automatyzacja interfejsu użytkownika](/windows/win32/winauto/entry-uiauto-win32).  
+> Ta dokumentacja jest przeznaczona dla deweloperów [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] programu .NET <xref:System.Windows.Automation> Framework, którzy chcą używać klas zarządzanych zdefiniowanych w obszarze nazw. Aby uzyskać najnowsze [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]informacje na temat interfejsu [API automatyzacji systemu Windows: Automatyzacja interfejsu użytkownika](/windows/win32/winauto/entry-uiauto-win32).  
   
- typy kontrolek [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] są dobrze znane identyfikatory, których można użyć do wskazania rodzaju kontrolki, która reprezentuje określony element, na przykład pole kombi lub przycisk.  
+ [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]typy formantu są dobrze znane identyfikatory, które mogą służyć do wskazania, jaki rodzaj kontroli reprezentuje określonego elementu, takich jak pole kombi lub przycisk.  
   
- Dobrze znany identyfikator ułatwia urządzeniom technologii pomocniczych określenie, jakie typy kontrolek są dostępne w [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] i sposób korzystania z tych kontrolek.  
+ Posiadanie dobrze znanego identyfikatora ułatwia urządzeniom technologii ułatwionych określenie, jakie typy [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] formantów są dostępne w formancie i jak wchodzić w interakcje z formantami.  
   
-<a name="UI_Automation_Control_Type_Requisites"></a>   
-## <a name="ui-automation-control-type-requisites"></a>Wymagania dotyczące typów formantów automatyzacji interfejsu użytkownika  
- typy kontrolek [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] zawierają zestaw warunków, które muszą spełniać dostawcy. Po spełnieniu tych warunków formant może używać konkretnej nazwy typu formantu. Każdy typ formantu ma następujące warunki:  
+<a name="UI_Automation_Control_Type_Requisites"></a>
+## <a name="ui-automation-control-type-requisites"></a>Wymagania typu kontroli automatyzacji interfejsu użytkownika  
+ [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]typy kontroli zapewniają zestaw warunków, które dostawcy muszą spełniać. Po spełnieniu tych warunków formant może użyć nazwy określonego typu formantu. Każdy typ formantu ma warunki dla następujących:  
   
-- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] wzorców kontroli — które wzorce kontroli muszą być obsługiwane, które wzorce kontroli są opcjonalne i które wzorce kontroli nie mogą być obsługiwane przez formant.  
+- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]wzorce sterowania — które wzorce sterowania muszą być obsługiwane, które wzorce sterowania są opcjonalne i które wzorce sterowania nie mogą być obsługiwane przez formant.  
   
-- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] wartości właściwości — wartości właściwości są obsługiwane.  
+- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]wartości właściwości — które wartości właściwości są obsługiwane.  
   
-- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] strukturę drzewa — wymagana [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] struktura drzewa dla kontrolki.  
+- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]struktura drzewa — [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] wymagana struktura drzewa dla formantu.  
   
- Gdy kontrolka spełnia warunki określonego typu formantu, wartość właściwości <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ControlType%2A> będzie wskazywać ten typ formantu.  
+ Gdy formant spełnia warunki dla określonego <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ControlType%2A> typu formantu, wartość właściwości wskazuje ten typ formantu.  
   
-<a name="Current_UI_Automation_Control_Types"></a>   
-## <a name="current-ui-automation-control-types"></a>Bieżące typy kontrolek automatyzacji interfejsu użytkownika  
- Poniższa lista zawiera bieżący zestaw typów kontrolek [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]:  
+<a name="Current_UI_Automation_Control_Types"></a>
+## <a name="current-ui-automation-control-types"></a>Bieżące typy sterowania automatyzacją interfejsu użytkownika  
+ Poniższa lista zawiera bieżący zestaw typów formantów: [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]  
   
 - [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu Button](ui-automation-support-for-the-button-control-type.md)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "74442625"
   
 - [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu ComboBox](ui-automation-support-for-the-combobox-control-type.md)  
   
-- [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu DataGrid](ui-automation-support-for-the-datagrid-control-type.md)  
+- [Obsługa automatyzacji interfejsu użytkownika dla typu formantu DataGrid](ui-automation-support-for-the-datagrid-control-type.md)  
   
 - [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu DataItem](ui-automation-support-for-the-dataitem-control-type.md)  
   
@@ -62,9 +62,9 @@ ms.locfileid: "74442625"
   
 - [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu Image](ui-automation-support-for-the-image-control-type.md)  
   
-- [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu List](ui-automation-support-for-the-list-control-type.md)  
+- [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu lista](ui-automation-support-for-the-list-control-type.md)  
   
-- [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu ListItem](ui-automation-support-for-the-listitem-control-type.md)  
+- [Obsługa automatyzacji interfejsu użytkownika dla typu formantu ListItem](ui-automation-support-for-the-listitem-control-type.md)  
   
 - [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu Menu](ui-automation-support-for-the-menu-control-type.md)  
   
@@ -80,7 +80,7 @@ ms.locfileid: "74442625"
   
 - [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu ScrollBar](ui-automation-support-for-the-scrollbar-control-type.md)  
   
-- [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu Separator](ui-automation-support-for-the-separator-control-type.md)  
+- [Obsługa automatyzacji interfejsu użytkownika dla formantów typu separator](ui-automation-support-for-the-separator-control-type.md)  
   
 - [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu Suwak](ui-automation-support-for-the-slider-control-type.md)  
   
@@ -108,10 +108,10 @@ ms.locfileid: "74442625"
   
 - [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu Tree](ui-automation-support-for-the-tree-control-type.md)  
   
-- [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu TreeItem](ui-automation-support-for-the-treeitem-control-type.md)  
+- [Obsługa automatyzacji interfejsu użytkownika dla typu kontrolki TreeItem](ui-automation-support-for-the-treeitem-control-type.md)  
   
 - [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu Window](ui-automation-support-for-the-window-control-type.md)  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Windows.Automation.ControlType>

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c5e6216f-ae3d-4697-9688-66b69c1251ec
 topic_type:
 - apiref
-ms.openlocfilehash: beb697d80417b937876a0887e4376341185a47d9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: dae4a36537eeac58ffb17ebc1b78d935ec807cd8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447210"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175983"
 ---
 # <a name="imetadataassemblyimportgetfileprops-method"></a>IMetaDataAssemblyImport::GetFileProps — Metoda
 Pobiera właściwości pliku z określonym podpisem metadanych.  
@@ -29,47 +29,47 @@ Pobiera właściwości pliku z określonym podpisem metadanych.
   
 ```cpp  
 HRESULT GetFileProps (  
-    [in]  mdFile      mdf,   
-    [out] LPWSTR      szName,   
-    [in]  ULONG       cchName,   
-    [out] ULONG       *pchName,   
-    [out] const void  **ppbHashValue,   
-    [out] ULONG       *pcbHashValue,   
+    [in]  mdFile      mdf,
+    [out] LPWSTR      szName,
+    [in]  ULONG       cchName,
+    [out] ULONG       *pchName,
+    [out] const void  **ppbHashValue,
+    [out] ULONG       *pcbHashValue,
     [out] DWORD       *pdwFileFlags  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `mdf`  
- podczas `mdFile` token metadanych reprezentujący plik, dla którego mają zostać pobrane właściwości.  
+ [w] Token `mdFile` metadanych, który reprezentuje plik, dla którego można uzyskać właściwości.  
   
  `szName`  
- określoną Prosta nazwa pliku.  
+ [na zewnątrz] Prosta nazwa pliku.  
   
  `cchName`  
- podczas Rozmiar, w postaci szerokich znaków, `szName`.  
+ [w] Rozmiar, w szerokich znaków, z `szName`.  
   
  `pchName`  
- określoną Liczba znaków dwubajtowych faktycznie zwracanych w `szName`.  
+ [na zewnątrz] Liczba szerokich znaków rzeczywiście `szName`zwrócona w .  
   
  `ppbHashValue`  
- określoną Wskaźnik do wartości skrótu. Jest to skrót, przy użyciu algorytmu SHA-1 pliku.  
+ [na zewnątrz] Wskaźnik do wartości skrótu. Jest to skrót, przy użyciu algorytmu SHA-1, pliku.  
   
  `pcbHashValue`  
- określoną Liczba znaków dwubajtowych w zwracanej wartości skrótu.  
+ [na zewnątrz] Liczba znaków szerokich w zwróconej wartości skrótu.  
   
  `pdwFileFlags`  
- określoną Wskaźnik do flag, które opisują metadane zastosowane do pliku. Wartość flags jest kombinacją co najmniej jednej wartości [CorFileFlags —](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) .  
+ [na zewnątrz] Wskaźnik do flag, które opisują metadane zastosowane do pliku. Wartość flag jest kombinacją co najmniej jednej wartości [CorFileFlags.](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md)  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforma:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforma:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataAssemblyImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [IMetaDataAssemblyImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

@@ -6,50 +6,50 @@ helpviewer_keywords:
 - fonts [WPF], OpenType font pack
 - typography [WPF], OpenType font pack
 ms.assetid: 56b46fa1-a44e-419b-8f14-25ad51c715c3
-ms.openlocfilehash: be9bc6e0cddc0581b9acb319f7d1fc1c81dae268
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 30cb69fcf05108822e8f3e2d45c9e79dbced26ca
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77095115"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181911"
 ---
 # <a name="sample-opentype-font-pack"></a>Przykład pakietu czcionek OpenType
-Ten temat zawiera omówienie przykładowych czcionek OpenType, które są dystrybuowane z Windows SDK. Przykładowe czcionki obsługują rozszerzone funkcje OpenType, które mogą być używane przez aplikacje [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
+Ten temat zawiera omówienie przykładowych czcionek OpenType, które są dystrybuowane z zestawem Windows SDK. Przykładowe czcionki obsługują rozszerzone funkcje OpenType, które mogą być używane przez [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacje.  
 
-<a name="overview"></a>   
+<a name="overview"></a>
 ## <a name="fonts-in-the-opentype-font-pack"></a>Czcionki w pakiecie czcionek OpenType  
- Windows SDK zawiera zestaw przykładowych czcionek OpenType, których można użyć podczas tworzenia aplikacji [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Przykładowe czcionki są dostarczane w ramach licencji od firmy Ascend Corporation. Te czcionki implementują tylko podzestaw całkowitej liczby funkcji zdefiniowanych przez format OpenType. W poniższej tabeli wymieniono nazwy przykładowych czcionek OpenType.  
+ Zestaw Windows SDK zawiera zestaw przykładowych czcionek OpenType, których można używać podczas tworzenia [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji. Przykładowe czcionki są dostarczane na licencji firmy Ascender Corporation. Czcionki te implementują tylko podzbiór całkowitych funkcji zdefiniowanych przez format OpenType. W poniższej tabeli wymieniono nazwy przykładowych czcionek OpenType.  
   
 |**Nazwa**|**Plik**|  
 |--------------|--------------|  
-|Kootenay|Kooten.ttf|  
+|Okręg wyborczy Kootenay|Kooten.ttf|  
 |Lindsey|Linds.ttf|  
 |Miramonte|Miramo.ttf|  
-|Pogrubienie Miramonte|Miramob.ttf|  
-|Pericles|Peric.ttf|  
-|Pericles|Pericl.ttf|  
+|Miramonte Bold|Miramob.ttf|  
+|Perykles|Peric.ttf|  
+|Światło peryklesowe|Pericl.ttf|  
 |Pescadero|Pesca.ttf|  
-|Pogrubienie Pescadero|Pescab.ttf|  
+|Pescadero Pogrubienie|Pescab.ttf|  
   
  Na poniższej ilustracji przedstawiono, jak wyglądają przykładowe czcionki OpenType.  
   
  ![Lista nazw czcionek w przykładowym pakiecie czcionek](./media/sample-opentype-font-pack/font-names-sample-pack.gif)  
   
- Przykładowe czcionki są dostarczane w ramach licencji od firmy Ascend Corporation. Ascender to dostawca zaawansowanych produktów czcionek. Aby uzyskać licencję na rozszerzoną lub niestandardową wersję przykładowych czcionek, zobacz [witrynę sieci Web firmy Ascender](https://www.monotype.com/).  
+ Przykładowe czcionki są dostarczane na licencji firmy Ascender Corporation. Ascender jest dostawcą zaawansowanych produktów czcionek. Aby uzyskać licencję na rozszerzone lub niestandardowe wersje przykładowych czcionek, zobacz [witrynę firmy Ascender Corporation w sieci Web](https://www.monotype.com/).  
   
 > [!NOTE]
-> Deweloperem jest odpowiedzialność za upewnienie się, że masz wymagane prawa licencji dla dowolnej czcionki osadzonej w aplikacji lub w inny sposób.  
+> Jako programista użytkownik jest odpowiedzialny za zapewnienie wymaganych praw licencyjnych dla dowolnej czcionki, którą osadzasz w aplikacji lub w inny sposób redystrybuujesz.  
   
-<a name="installing_the_fonts"></a>   
+<a name="installing_the_fonts"></a>
 ## <a name="installing-the-fonts"></a>Instalowanie czcionek  
- Możesz zainstalować przykładowe czcionki OpenType w domyślnym katalogu czcionek systemu Windows, **\Windows\Fonts**. Za pomocą panelu sterowania czcionki Zainstaluj czcionki. Gdy te czcionki znajdują się na komputerze, są dostępne dla wszystkich aplikacji, które odwołują się do domyślnych czcionek systemu Windows. Można wyświetlić reprezentatywny zestaw znaków w kilku rozmiarach czcionek, podwajając kliknięcie pliku z czcionką. Poniższy zrzut ekranu przedstawia plik z czcionką Lindsey, Linds. ttf.  
+ Można zainstalować przykładowe czcionki OpenType w domyślnym katalogu Czcionek systemu Windows **\WINDOWS\Fonts**. Użyj panelu sterowania Czcionki, aby zainstalować czcionki. Gdy te czcionki znajdują się na komputerze, są dostępne dla wszystkich aplikacji, które odwołują się do domyślnych czcionek systemu Windows. Można wyświetlić reprezentatywny zestaw znaków w kilku rozmiarach czcionek, podwajając klikanie pliku czcionki. Poniższy zrzut ekranu przedstawia plik czcionki Lindsey, Linds.ttf.  
   
- ![Czcionka &#40;Lindsey OpenType&#41;](./media/typographyinwpf-04.png "TypographyInWPF_04")  
+ ![Czcionka Lindsey &#40;&#41;OpenType](./media/typographyinwpf-04.png "TypographyInWPF_04")  
 Wyświetlanie czcionki Lindsey  
   
-<a name="using_the_fonts"></a>   
-## <a name="using-the-fonts"></a>Używanie czcionek  
- Istnieją dwa sposoby używania czcionek w aplikacji. Możesz dodać czcionki do aplikacji jako elementy zawartości projektu, które nie są osadzane jako zasoby w ramach zestawu. Alternatywnie możesz dodać czcionki do aplikacji jako elementy zasobów projektu, które są osadzone w plikach zestawu aplikacji. Aby uzyskać więcej informacji, zobacz [pakowanie czcionek z aplikacjami](packaging-fonts-with-applications.md).  
+<a name="using_the_fonts"></a>
+## <a name="using-the-fonts"></a>Korzystanie z czcionek  
+ Istnieją dwa sposoby używania czcionek w aplikacji. Czcionki można dodawać do aplikacji jako elementy zawartości projektu, które nie są osadzone jako zasoby w zestawie. Alternatywnie można dodać czcionki do aplikacji jako elementy zasobów projektu, które są osadzone w plikach zestawu aplikacji. Aby uzyskać więcej informacji, zobacz [Pakowanie czcionek za pomocą aplikacji](packaging-fonts-with-applications.md).  
   
 ## <a name="see-also"></a>Zobacz też
 

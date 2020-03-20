@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Wysyłanie danych do Active MDI Child'
+title: 'Porady: wysyłanie danych do Active MDI Child'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,25 +10,25 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], pasting
 - Clipboard [Windows Forms], getting data from
 ms.assetid: 1047d2fe-1235-46db-aad9-563aea1d743b
-ms.openlocfilehash: 0a7a2475891488d1fdd60f0db4a483c144a73f0d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 563be8494cb84dc74b45985d3ba74e4b6a07eb8a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69947844"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182494"
 ---
-# <a name="how-to-send-data-to-the-active-mdi-child"></a>Instrukcje: Wysyłanie danych do Active MDI Child
-Często w kontekście [aplikacji interfejsu wielu dokumentów (MDI)](multiple-document-interface-mdi-applications.md)należy wysłać dane do aktywnego okna podrzędnego, na przykład gdy użytkownik wklei dane ze schowka do aplikacji MDI.  
+# <a name="how-to-send-data-to-the-active-mdi-child"></a>Porady: wysyłanie danych do Active MDI Child
+Często w kontekście [aplikacji interfejsu wielokadowniczego (MDI)](multiple-document-interface-mdi-applications.md)należy wysłać dane do aktywnego okna podrzędnego, na przykład gdy użytkownik wkleja dane ze Schowka do aplikacji MDI.  
   
 > [!NOTE]
-> Aby uzyskać informacje o sprawdzaniu, które okno potomne ma fokus i wysyła jego zawartość do schowka, zobacz [Określanie aktywnego elementu podrzędnego MDI](how-to-determine-the-active-mdi-child.md).  
+> Aby uzyskać informacje dotyczące sprawdzania fokusu w oknie podrzędnym i wysyłania jego zawartości do Schowka, zobacz [Określanie aktywnego dziecka MDI](how-to-determine-the-active-mdi-child.md).  
   
-### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a>Aby wysłać dane do aktywnego okna podrzędnego MDI ze schowka  
+### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a>Aby wysłać dane do aktywnego okna podrzędnego MDI ze Schowka  
   
-1. W ramach metody skopiuj tekst ze schowka do aktywnej kontrolki aktywnego formularza podrzędnego.  
+1. W ramach metody skopiuj tekst w Schowku do aktywnego formantu aktywnego formularza podrzędnego.  
   
     > [!NOTE]
-    > W tym przykładzie założono, że istnieje formularz nadrzędny`Form1`MDI (), który ma co najmniej jeden Windows podrzędny <xref:System.Windows.Forms.RichTextBox> MDI zawierający formant. Aby uzyskać więcej informacji, zobacz [Tworzenie formularzy nadrzędnych MDI](how-to-create-mdi-parent-forms.md).  
+    > W tym przykładzie przyjęto założenie,`Form1`że istnieje formularz nadrzędny MDI <xref:System.Windows.Forms.RichTextBox> ( ), który ma co najmniej jedno podrzędne okna MDI zawierające formant. Aby uzyskać więcej informacji, zobacz [Tworzenie formularzy nadrzędnych MDI](how-to-create-mdi-parent-forms.md).  
   
     ```vb  
     Public Sub mniPaste_Click(ByVal sender As Object, _  
@@ -45,7 +45,7 @@ Często w kontekście [aplikacji interfejsu wielu dokumentów (MDI)](multiple-do
              If (Not theBox Is Nothing) Then  
                 ' Create a new instance of the DataObject interface.  
                 Dim data As IDataObject = Clipboard.GetDataObject()  
-                ' If the data is text, then set the text of the   
+                ' If the data is text, then set the text of the
                 ' RichTextBox to the text in the clipboard.  
                 If (data.GetDataPresent(DataFormats.Text)) Then  
                    theBox.SelectedText = data.GetData(DataFormats.Text).ToString()  
@@ -68,22 +68,22 @@ Często w kontekście [aplikacji interfejsu wielu dokumentów (MDI)](multiple-do
        // in this example should be a RichTextBox.  
        if (activeChild != null)  
        {  
-          try   
+          try
           {  
              RichTextBox theBox = (RichTextBox)activeChild.ActiveControl;  
              if (theBox != null)  
              {  
                 // Create a new instance of the DataObject interface.  
                 IDataObject data = Clipboard.GetDataObject();  
-                // If the data is text, then set the text of the   
+                // If the data is text, then set the text of the
                 // RichTextBox to the text in the clipboard.  
                 if (data.GetDataPresent(DataFormats.Text))  
                 {  
-                   theBox.SelectedText = data.GetData(DataFormats.Text).ToString();                 
+                   theBox.SelectedText = data.GetData(DataFormats.Text).ToString();
                 }  
              }  
           }  
-          catch   
+          catch
           {  
              MessageBox.Show("You need to select a RichTextBox.");  
           }  
@@ -91,10 +91,10 @@ Często w kontekście [aplikacji interfejsu wielu dokumentów (MDI)](multiple-do
     }  
     ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Aplikacje interfejsu wielu dokumentów (MDI)](multiple-document-interface-mdi-applications.md)
-- [Instrukcje: Tworzenie formularzy nadrzędnych MDI](how-to-create-mdi-parent-forms.md)
-- [Instrukcje: Tworzenie formularzy podrzędnych MDI](how-to-create-mdi-child-forms.md)
-- [Instrukcje: Określanie aktywnego elementu podrzędnego MDI](how-to-determine-the-active-mdi-child.md)
-- [Instrukcje: Rozmieść formularze podrzędne MDI](how-to-arrange-mdi-child-forms.md)
+- [Porady: tworzenie formularzy nadrzędnych MDI](how-to-create-mdi-parent-forms.md)
+- [Porady: tworzenie formularzy podrzędnych MDI](how-to-create-mdi-child-forms.md)
+- [Instrukcje: określanie elementu podrzędnego MDI Active](how-to-determine-the-active-mdi-child.md)
+- [Porady: aranżowanie formularzy podrzędnych MDI](how-to-arrange-mdi-child-forms.md)

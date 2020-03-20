@@ -15,42 +15,42 @@ helpviewer_keywords:
 ms.assetid: b95739fe-d2fa-4776-ae0d-31d9707ef799
 topic_type:
 - apiref
-ms.openlocfilehash: afb0c09c09236267be2a999ce5c130feebb52b6f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0ebcab7a759b64bfbb254df1c1aa339cde77d054
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447905"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175567"
 ---
 # <a name="imetadataemit2savedelta-method"></a>IMetaDataEmit2::SaveDelta — Metoda
-Zapisuje zmiany z bieżącej sesji Edit-and-Continue do określonego pliku.  
+Zapisuje zmiany z bieżącej sesji edycji i kontynuowania do określonego pliku.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
 HRESULT SaveDelta (  
-    [in] LPCWSTR     szFile,   
+    [in] LPCWSTR     szFile,
     [in] DWORD       dwSaveFlags  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `szFile`  
- podczas Nazwa pliku, w którym mają zostać zapisane zmiany.  
+ [w] Nazwa pliku, pod którą ma być zapisywana zmiany.  
   
  `dwSaveFlags`  
- podczas Rezerwacj. Musi być równa zero.  
+ [w] Zastrzeżone. Musi być zero.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

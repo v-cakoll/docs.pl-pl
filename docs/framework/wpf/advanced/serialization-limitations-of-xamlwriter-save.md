@@ -6,38 +6,38 @@ helpviewer_keywords:
 - limitations of XamlWriter.Save
 - serialization limitations of XamlWriter.Save
 ms.assetid: f86acc91-2b67-4039-8555-505734491d36
-ms.openlocfilehash: 5b9141d5df40d74c4682f418a8fb089fddcfcaa9
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 96e917898320fb5d49f4e7dfc27daa7750af9d41
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740740"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174371"
 ---
 # <a name="serialization-limitations-of-xamlwritersave"></a>Ograniczenia serializacji XamlWriter.Save
-<xref:System.Windows.Markup.XamlWriter.Save%2A> interfejsu API może służyć do serializacji zawartości [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji jako pliku [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Istnieją jednak pewne istotne ograniczenia w dokładnie tym, co jest serializowane. Te ograniczenia i niektóre ogólne zagadnienia zostały udokumentowane w tym temacie.  
+Interfejs <xref:System.Windows.Markup.XamlWriter.Save%2A> API może służyć do serializacji [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zawartości [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] aplikacji jako pliku. Istnieją jednak pewne znaczące ograniczenia w dokładnie to, co jest serializowane. Te ograniczenia i niektóre ogólne zagadnienia są udokumentowane w tym temacie.  
 
-<a name="Run_Time__Not_Design_Time_Representation"></a>   
-## <a name="run-time-not-design-time-representation"></a>Reprezentacja czasu wykonywania, nie projektowania  
- Podstawowa stawka co jest serializowana przez wywołanie <xref:System.Windows.Markup.XamlWriter.Save%2A> polega na tym, że wynik będzie reprezentacją serializowanego obiektu w czasie wykonywania. Wiele właściwości czasu projektowania oryginalnego pliku [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] można już zoptymalizować lub stracić przez czas, w którym [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] jest załadowana jako obiekty w pamięci, i nie są zachowywane po wywołaniu <xref:System.Windows.Markup.XamlWriter.Save%2A> do serializacji. Serializowany wynik jest efektywną reprezentacją skonstruowanego drzewa logicznego aplikacji, ale niekoniecznie oryginalny [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], który go wygenerował. Te problemy utrudniają używanie serializacji <xref:System.Windows.Markup.XamlWriter.Save%2A> w ramach rozbudowanej [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] powierzchni projektowej.  
+<a name="Run_Time__Not_Design_Time_Representation"></a>
+## <a name="run-time-not-design-time-representation"></a>Reprezentacja w czasie wykonywania, a nie reprezentacja czasu projektowania  
+ Podstawową filozofią tego, co jest <xref:System.Windows.Markup.XamlWriter.Save%2A> serializowane przez wywołanie jest to, że wynik będzie reprezentacja obiektu serializowane, w czasie wykonywania. Wiele właściwości czasu projektowania [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] oryginalnego pliku może być już zoptymalizowane [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] lub utracone przez czas, który jest ładowany jako obiekty w pamięci i nie są zachowywane podczas wywoływania <xref:System.Windows.Markup.XamlWriter.Save%2A> serializacji. Wynik serializowany jest skuteczną reprezentacją skonstruowanego drzewa logicznego aplikacji, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ale niekoniecznie oryginalnego, który ją wyprodukował. Te problemy sprawiają, że <xref:System.Windows.Markup.XamlWriter.Save%2A> bardzo trudno jest używać [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] serializacji jako części obszernej powierzchni projektowej.  
   
-<a name="Serialization_is_Self_Contained"></a>   
+<a name="Serialization_is_Self_Contained"></a>
 ## <a name="serialization-is-self-contained"></a>Serializacja jest niezależna  
- Serializowane dane wyjściowe <xref:System.Windows.Markup.XamlWriter.Save%2A> są samodzielne; wszystko, co jest serializowane, znajduje się w obrębie [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pojedynczej strony, z pojedynczym elementem głównym, i nie zawiera odwołań zewnętrznych innych niż identyfikatory URI. Na przykład, jeśli strona odwołuje się do zasobów z zasobów aplikacji, pojawi się tak, jakby były składnikiem serializowanej strony.  
+ Serializowane dane <xref:System.Windows.Markup.XamlWriter.Save%2A> wyjściowe są samodzielne; wszystko, co jest serializowane [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] jest zawarte wewnątrz jednej strony, z jednym elementem głównym i nie ma odniesień zewnętrznych innych niż identyfikatory URI. Na przykład jeśli strona odwołuje się do zasobów z zasobów aplikacji, będą one wyświetlane tak, jakby były one składnikiem strony serializowane.  
   
-<a name="Extension_References_are_Dereferenced"></a>   
-## <a name="extension-references-are-dereferenced"></a>Odwołania do rozszerzeń są odwołujące się  
- Typowe odwołania do obiektów wykonywanych przez różne formaty rozszerzeń znaczników, takie jak `StaticResource` lub `Binding`, zostaną wydzielone przez proces serializacji. Zostały one już wykorzystane w chwili, gdy obiekty w pamięci zostały utworzone przez środowisko uruchomieniowe aplikacji, a logika <xref:System.Windows.Markup.XamlWriter.Save%2A> nie odwiedza oryginalny [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] w celu przywrócenia takich odwołań do serializowanych danych wyjściowych. Może to spowodować, że wszystkie wartości związane z danymi lub zasobami uzyskanymi jako wartość ostatnio używane przez reprezentację w czasie wykonywania, z ograniczoną lub pośrednią możliwością odróżnienia takiej wartości od innych ustawionych wartości. Obrazy są również serializowane jako odwołania do obiektów do obrazów, ponieważ istnieją w projekcie, a nie jako pierwotne odwołania do źródła, tracąc niezależnie do tego odwołanie do nazwy pliku lub identyfikatora URI. Nawet zasoby zadeklarowane na tej samej stronie są wyświetlane jako serializacji do punktu, w którym zostały przywołane, a nie zachowywane jako klucz kolekcji zasobów.  
+<a name="Extension_References_are_Dereferenced"></a>
+## <a name="extension-references-are-dereferenced"></a>Odwołania do rozszerzenia są wyłuskiwane  
+ Typowe odwołania do obiektów dokonywanych przez różne formaty rozszerzeń znaczników, takie jak `StaticResource` lub `Binding`, będą wyłuskiwane przez proces serializacji. Zostały one już wyłuskiwane w czasie, gdy obiekty w pamięci <xref:System.Windows.Markup.XamlWriter.Save%2A> zostały utworzone przez [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] środowisko wykonawcze aplikacji, a logika nie ponownie oryginał, aby przywrócić takie odwołania do danych wyjściowych serializowanych. To potencjalnie zawiesza wszelkie databound lub zasób uzyskana wartość jest wartość ostatnio używana przez reprezentację w czasie wykonywania, tylko ograniczoną lub pośrednią możliwość odróżnienia takiej wartości od innych wartości ustawionych lokalnie. Obrazy są również serializowane jako odwołania do obiektów do obrazów, które istnieją w projekcie, a nie jako oryginalne odwołania źródłowe, tracąc dowolną nazwę pliku lub identyfikator URI pierwotnie odwołuje. Nawet zasoby zadeklarowane w tej samej stronie są postrzegane serializowane do punktu, do którego się odwoływano, a nie są zachowywane jako klucz kolekcji zasobów.  
   
-<a name="Event_Handling_is_Not_Preserved"></a>   
+<a name="Event_Handling_is_Not_Preserved"></a>
 ## <a name="event-handling-is-not-preserved"></a>Obsługa zdarzeń nie jest zachowywana  
- Gdy programy obsługi zdarzeń dodawane za poorednictwem [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] są serializowane, nie są zachowywane. nie ma żadnego sposobu serializacji logiki proceduralnej środowiska uruchomieniowego, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] bez kodu (i bez powiązanego mechanizmu x:Code). Ponieważ Serializacja jest samodzielna i ograniczona do drzewa logicznego, nie ma możliwości przechowywania obsługi zdarzeń. W związku z tym atrybuty programu obsługi zdarzeń, zarówno sam atrybut, jak i wartość ciągu, która nazywają procedurę obsługi, są usuwane z [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]danych wyjściowych.  
+ Gdy programy obsługi zdarzeń, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] które są dodawane za pośrednictwem są serializowane, nie są zachowywane. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]bez kodu w tyle (a także bez powiązanego mechanizmu x:Code) nie ma możliwości serializacji logiki proceduralnej środowiska uruchomieniowego. Ponieważ serializacja jest niezależna i ograniczona do drzewa logicznego, nie ma możliwości przechowywania programów obsługi zdarzeń. W rezultacie atrybuty obsługi zdarzeń, zarówno sam atrybut, jak i wartość ciągu, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]który nazywa program obsługi, są usuwane z danych wyjściowych.  
   
-<a name="Realistic_Scenarios_for_Use_of_XAMLWriter_Save"></a>   
-## <a name="realistic-scenarios-for-use-of-xamlwritersave"></a>Realistyczne scenariusze korzystania z XAMLWriter. Save  
- Chociaż ograniczenia wymienione w tym miejscu są dość znaczące, nadal istnieje kilka odpowiednich scenariuszy dla serializacji <xref:System.Windows.Markup.XamlWriter.Save%2A>.  
+<a name="Realistic_Scenarios_for_Use_of_XAMLWriter_Save"></a>
+## <a name="realistic-scenarios-for-use-of-xamlwritersave"></a>Realistyczne scenariusze użycia XAMLWriter.Save  
+ Chociaż ograniczenia wymienione w tym miejscu są dość istotne, <xref:System.Windows.Markup.XamlWriter.Save%2A> nadal istnieje kilka odpowiednich scenariuszy do użycia do serializacji.  
   
-- Wektor lub graficzne wyjście: dane wyjściowe renderowanego obszaru mogą być używane do odtwarzania tego samego wektora lub grafiki po ponownym załadowaniu.  
+- Dane wyjściowe wektorowe lub graficzne: Dane wyjściowe renderowanego obszaru mogą być używane do odtworzenia tego samego wektora lub grafiki po ponownym załadowaniu.  
   
-- Teksty tekstu sformatowanego i przepływu: tekst i wszystkie elementy formatowania elementów i zawartych w nim elementów są zachowywane w danych wyjściowych. Może to być przydatne w przypadku mechanizmów, które mają przybliżoną funkcjonalność Schowka.  
+- Tekst sformatowy i dokumenty przepływu: Formatowanie tekstu i całego elementu oraz hermetyzacja elementów w nim są zachowywane w danych wyjściowych. Może to być przydatne w przypadku mechanizmów przybliżać funkcjonalność schowka.  
   
-- Zachowywanie danych obiektu biznesowego: Jeśli dane są przechowywane w niestandardowych elementach, takich jak dane XML, tak długo, jak obiekty biznesowe są zgodne z podstawowymi [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] regułami, takimi jak udostępnianie niestandardowych konstruktorów i konwersja na wartości właściwości przez odwołanie, te firmy obiekty mogą być perpetuated przez serializację.
+- Zachowywanie danych obiektów biznesowych: Jeśli dane są przechowywane w elementach niestandardowych, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] takich jak dane XML, o ile obiekty biznesowe są zgodne z podstawowymi regułami, takimi jak dostarczanie konstruktorów niestandardowych i konwersja dla wartości właściwości według odwołań, te obiekty biznesowe mogą być utrwalane przez serializację.

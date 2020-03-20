@@ -15,45 +15,45 @@ helpviewer_keywords:
 ms.assetid: d1de53ad-9435-4b5f-9df7-07f21210e5b5
 topic_type:
 - apiref
-ms.openlocfilehash: 0c78ce8192d6456dd1b1be990d87b9209b028e09
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b780ca513d8a0b4f88e66594e86e9ff8290f6523
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440359"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177364"
 ---
 # <a name="imetadataimportcountenum-method"></a>IMetaDataImport::CountEnum — Metoda
-Pobiera liczbę elementów w wyliczeniu, która została pobrana przez określony moduł wyliczający.  
+Pobiera liczbę elementów w wyliczenia, który został pobrany przez określonego wylicznika.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
 HRESULT CountEnum (  
-   [in]  HCORENUM    hEnum,   
+   [in]  HCORENUM    hEnum,
    [out] ULONG       *pulCount  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `hEnum`  
- podczas Uchwyt dla modułu wyliczającego.  
+ [w] Dojście do wyliczacza.  
   
  `pulCount`  
- określoną Liczba wyliczonych elementów.  
+ [na zewnątrz] Liczba wyliczonych elementów.  
   
 ## <a name="remarks"></a>Uwagi  
- Dojście określone przez `hEnum` jest uzyskiwane z poprzedniego wywołania *nazwy* `Enum`(na przykład [IMetaDataImport:: EnumTypeDefs —](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).  
+ Dojście `hEnum` określone przez jest `Enum`otrzymywany z poprzedniego *wywołania Name* (na przykład [IMetaDataImport::EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Uwzględnione jako zasób w pliku MsCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

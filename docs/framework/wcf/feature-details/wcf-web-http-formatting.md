@@ -1,32 +1,32 @@
 ---
-title: Formatowanie kodu HTTP dla sieci Web WCF
+title: Formatowanie HTTP w sieci Web WCF
 ms.date: 03/30/2017
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
-ms.openlocfilehash: 884193dc26794be5e8a3c95e05be2ca43a90f6e2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b6c9728fe40e26977366b73337e72b1514a12a19
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643472"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184198"
 ---
-# <a name="wcf-web-http-formatting"></a>Formatowanie kodu HTTP dla sieci Web WCF
-Model programowania protokołu HTTP sieci Web WCF umożliwia dynamiczne określanie najlepszy format dla operacji usługi do zwrócenia w odpowiedzi. Obsługiwane są dwie metody, określając odpowiedni format: automatyczne i jawne.  
+# <a name="wcf-web-http-formatting"></a>Formatowanie HTTP w sieci Web WCF
+Model programowania HTTP w sieci Web WCF umożliwia dynamiczne określenie najlepszego formatu operacji usługi w celu zwrócenia odpowiedzi. Obsługiwane są dwie metody określania odpowiedniego formatu: automatyczne i jawne.  
   
-## <a name="automatic-formatting"></a>Formatowanie automatyczne  
- Po włączeniu automatycznego formatowania wybiera najlepszy format, w której ma zostać zwrócone w odpowiedzi. Określa najlepszy format, sprawdzając poniższe czynności:  
+## <a name="automatic-formatting"></a>Automatyczne formatowanie  
+ Po włączeniu automatyczne formatowanie wybiera najlepszy format, w którym ma być zwracana odpowiedź. Określa najlepszy format, sprawdzając następujące, w kolejności:  
   
-1. Do typów nośników w nagłówku Accept komunikatu żądania.  
+1. Typy nośników w nagłówku Akceptuj komunikat żądania.  
   
 2. Typ zawartości komunikatu żądania.  
   
-3. Domyślny format ustawienie w operacji.  
+3. Domyślne ustawienie formatu w operacji.  
   
-4. Domyślny format w WebHttpBehavior.  
+4. Domyślne ustawienie formatu w programie WebHttpBehavior.  
   
- Wiadomość dotycząca żądania zawiera nagłówek Accept infrastruktury usług Windows Communication Foundation (WCF) wyszukuje typ, który ją obsługuje. Jeśli `Accept` nagłówek określa priorytety dla jego typów nośników, są uwzględniane. Jeśli nie formatu odpowiedniego znajduje się w `Accept` nagłówka typu zawartości komunikatu żądania jest używana. Jeśli nie odpowiednie content-type jest określona, jest używany domyślny format ustawienie dla tej operacji. Domyślny format została ustawiona za pomocą `ResponseFormat` parametru <xref:System.ServiceModel.Web.WebGetAttribute> i <xref:System.ServiceModel.Web.WebInvokeAttribute> atrybutów. Jeśli nie domyślny format jest określona w operacji, wartość <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A> właściwość jest używana. Automatyczne formatowanie opiera się na <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A> właściwości. Jeśli ta właściwość jest równa `true`, infrastruktura WCF Określa format najlepszy do użycia. Automatyczne wybieranie formatu jest domyślnie wyłączona dla zapewnienia zgodności. Można włączyć automatyczne wybieranie formatu programowo lub za pomocą konfiguracji. Poniższy przykład pokazuje, jak włączyć automatyczne wybieranie formatu w kodzie.  
+ Jeśli komunikat żądania zawiera nagłówek Akceptuj, infrastruktura Programu Windows Communication Foundation (WCF) wyszukuje typ, który obsługuje. Jeśli `Accept` nagłówek określa priorytety dla swoich typów nośników, są one honorowane. Jeśli w nagłówku `Accept` nie zostanie znaleziony odpowiedni format, używany jest typ zawartości komunikatu żądania. Jeśli nie określono odpowiedniego typu zawartości, używane jest domyślne ustawienie formatu operacji. Domyślny format jest `ResponseFormat` ustawiany <xref:System.ServiceModel.Web.WebGetAttribute> z <xref:System.ServiceModel.Web.WebInvokeAttribute> parametrem i atrybutami. Jeśli w operacji nie określono formatu domyślnego, używana jest wartość <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A> właściwości. Automatyczne formatowanie zależy <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A> od właściwości. Gdy ta właściwość `true`jest ustawiona na , WCF infrastruktury określa najlepszy format do użycia. Automatyczne zaznaczanie formatu jest domyślnie wyłączone ze zgodnych z przeszywem. Automatyczny wybór formatu można włączyć programowo lub za pomocą konfiguracji. W poniższym przykładzie pokazano, jak włączyć automatyczne zaznaczanie formatu w kodzie.  
   
 ```csharp
-// This code assumes the service name is MyService and the service contract is IMyContract     
+// This code assumes the service name is MyService and the service contract is IMyContract
 Uri baseAddress = new Uri("http://localhost:8000");  
   
 WebServiceHost host = new WebServiceHost(typeof(MyService), baseAddress)  
@@ -47,7 +47,7 @@ try
       sep.Behaviors.Add(webBehavior);  
    }  
          // Open host to start listening for messages  
-   host.Open();        
+   host.Open();
   
   // ...  
 }  
@@ -57,7 +57,7 @@ try
   }  
 ```  
   
- Automatyczne formatowanie można również włączyć za pomocą konfiguracji. Możesz ustawić <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A> bezpośrednio na właściwość <xref:System.ServiceModel.Description.WebHttpBehavior> lub za pomocą <xref:System.ServiceModel.Description.WebHttpEndpoint>. Poniższy przykład pokazuje, jak włączyć automatyczne wybieranie formatu <xref:System.ServiceModel.Description.WebHttpBehavior>.  
+ Automatyczne formatowanie można również włączyć za pomocą konfiguracji. Właściwość <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A> można ustawić bezpośrednio <xref:System.ServiceModel.Description.WebHttpBehavior> na stronie <xref:System.ServiceModel.Description.WebHttpEndpoint>lub za pomocą pliku . W poniższym przykładzie pokazano, jak <xref:System.ServiceModel.Description.WebHttpBehavior>włączyć automatyczne zaznaczanie formatu w pliku .  
   
 ```xml  
 <system.serviceModel>  
@@ -77,7 +77,7 @@ try
 </system.serviceModel>  
 ```  
   
- Poniższy przykład pokazuje, jak włączyć automatyczne formatowanie zaznaczenie przy użyciu <xref:System.ServiceModel.Description.WebHttpEndpoint>.  
+ W poniższym przykładzie pokazano, <xref:System.ServiceModel.Description.WebHttpEndpoint>jak włączyć automatyczne zaznaczanie formatu za pomocą programu .  
   
 ```xml  
 <system.serviceModel>  
@@ -90,10 +90,10 @@ try
   </system.serviceModel>  
 ```  
   
-## <a name="explicit-formatting"></a>Jawne, formatowanie  
- Jak wskazuje nazwa, Deweloper w formatowaniu jawne Określa format najlepszy do użycia w kodzie operacji. W przypadku najlepszym formacie XML lub JSON Deweloper ustawia <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> do jednej <xref:System.ServiceModel.Web.WebMessageFormat.Xml> lub <xref:System.ServiceModel.Web.WebMessageFormat.Json>. Jeśli <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> właściwość nie została jawnie ustawiona, a następnie jest używany format domyślny wykonać operację.  
+## <a name="explicit-formatting"></a>Jawne formatowanie  
+ Jak sama nazwa wskazuje, w jawnym formatowaniu deweloper określa najlepszy format do użycia w kodzie operacji. Jeśli najlepszym formatem jest XML lub <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> JSON, deweloper ustawia na jeden <xref:System.ServiceModel.Web.WebMessageFormat.Xml> lub <xref:System.ServiceModel.Web.WebMessageFormat.Json>. Jeśli <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> właściwość nie jest jawnie ustawiona, używany jest domyślny format operacji.  
   
- Poniższy przykład sprawdza, czy format parametru ciągu zapytania dla formatu do użycia. Jeśli została określona, ustawia operacji formatowania, przy użyciu <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A>.  
+ Poniższy przykład sprawdza parametr ciągu kwerendy formatu dla formatu do użycia. Jeśli został określony, ustawia format operacji za <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A>pomocą .  
   
 ```csharp
 public class Service : IService  
@@ -123,7 +123,7 @@ public class Service : IService
     }  
 ```  
   
- Jeśli potrzebujesz do obsługi formatów innych niż JSON lub XML, zdefiniuj operacji ma typ zwracany <xref:System.ServiceModel.Channels.Message>. W kodzie operacji ustala odpowiedni format można użyć, a następnie utwórz <xref:System.ServiceModel.Channels.Message> obiektu przy użyciu jednej z następujących metod:  
+ Jeśli chcesz obsługiwać formaty inne niż XML lub JSON, zdefiniuj operację, aby mieć typ zwracany <xref:System.ServiceModel.Channels.Message>. W kodzie operacji określ odpowiedni format do <xref:System.ServiceModel.Channels.Message> użycia, a następnie utwórz obiekt przy użyciu jednej z następujących metod:  
   
 - `WebOperationContext.CreateAtom10Response`  
   
@@ -135,7 +135,7 @@ public class Service : IService
   
 - `WebOperationContext.CreateXmlResponse`  
   
- Każda z tych metod przyjmuje zawartości i tworzy komunikat z odpowiednim formacie. `WebOperationContext.Current.IncomingRequest.GetAcceptHeaderElements` Metoda może służyć do uzyskania listy formatów preferowane przez klienta w kolejności malejących preferencji. Poniższy przykład pokazuje, jak używać `WebOperationContext.Current.IncomingRequest.GetAcceptHeaderElements` do określenia formatu do użycia, a następnie używa odpowiednie utworzyć metodę odpowiedzi w celu utworzenia komunikatu odpowiedzi.  
+ Każda z tych metod pobiera zawartość i tworzy komunikat o odpowiednim formacie. Metoda `WebOperationContext.Current.IncomingRequest.GetAcceptHeaderElements` ta może służyć do uzyskania listy formatów preferowanych przez klienta w kolejności malejącej preferencji. W poniższym przykładzie `WebOperationContext.Current.IncomingRequest.GetAcceptHeaderElements` pokazano, jak użyć do określenia formatu do użycia, a następnie używa odpowiedniej metody tworzenia odpowiedzi do utworzenia komunikatu odpowiedzi.  
   
 ```csharp
 public class Service : IService  
@@ -163,7 +163,7 @@ public class Service : IService
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.UriTemplate>
 - <xref:System.UriTemplateMatch>

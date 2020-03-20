@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: 512fdd00-262a-4456-a075-365ef4133c4d
 topic_type:
 - apiref
-ms.openlocfilehash: 81d11c87c9bc970dd5b5c9010023610cea7c0e72
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: be257930ca0fad658afa75d6efa4573d4f888a2b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76865197"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177081"
 ---
 # <a name="icorprofilercallback4rejitcompilationstarted-method"></a>ICorProfilerCallback4::ReJITCompilationStarted — Metoda
-Powiadamia profiler, że został uruchomiony kompilator just-in-Time (JIT), aby ponownie skompilować funkcję.  
+Powiadamia profiler, że kompilator just-in-time (JIT) rozpoczął ponowne kompilowanie funkcji.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
-HRESULT ReJITCompilationStarted(   
+HRESULT ReJITCompilationStarted(
     [in] FunctionID functionId,  
     [in] ReJITID    rejitId,  
     [in] BOOL       fIsSafeToBlock);  
@@ -36,31 +36,31 @@ HRESULT ReJITCompilationStarted(
   
 ## <a name="parameters"></a>Parametry  
  `functionId`  
- podczas Identyfikator funkcji, którą rozpoczęło ponowne kompilowanie kompilatora JIT.  
+ [w] Identyfikator funkcji, którą kompilator JIT zaczął ponownie kompilować.  
   
  `rejitId`  
- podczas Identyfikator ponownej kompilacji nowej wersji funkcji.  
+ [w] Identyfikator ponownej kompilacji nowej wersji funkcji.  
   
  `fIsSafeToBlock`  
- [in] `true` wskazujący, że blokowanie może spowodować, że środowisko uruchomieniowe poczeka na zwrócenie przez wątek wywołujący z tego wywołania zwrotnego; `false` wskazujący, że blokowanie nie ma wpływu na działanie środowiska uruchomieniowego. Wartość `true` nie jest szkodliwe dla środowiska uruchomieniowego, ale może mieć wpływ na wyniki profilowania.  
+ [w] `true` aby wskazać, że blokowanie może spowodować, że środowisko uruchomieniowe czekać na wątek wywołujący do powrotu z tego wywołania zwrotnego; `false` , aby wskazać, że blokowanie nie wpłynie na działanie środowiska wykonawczego. Wartość `true` nie szkodzi środowiska wykonawczego, ale może mieć wpływ na wyniki profilowania.  
   
 ## <a name="remarks"></a>Uwagi  
- Istnieje możliwość otrzymywania więcej niż jednej pary `ReJITCompilationStarted` i wywołań metod [ReJITCompilationFinished —](icorprofilercallback4-rejitcompilationfinished-method.md) dla każdej funkcji ze względu na sposób, w jaki środowisko uruchomieniowe obsługuje konstruktory klas. Na przykład środowisko uruchomieniowe zaczyna ponownie kompilować metodę A, ale Konstruktor klasy dla klasy B musi być uruchomiony. W związku z tym środowisko uruchomieniowe ponownie kompiluje Konstruktor dla klasy B i uruchamia go. Gdy Konstruktor jest uruchomiony, wywołuje metodę A, która powoduje ponowne skompilowanie metody A. W tym scenariuszu pierwsza ponowna kompilacja metody A jest zatrzymywana. Jednak obie próby rekompilacji metody A są raportowane przy użyciu zdarzeń ponownej kompilacji JIT.  
+ Istnieje możliwość odbierania więcej niż `ReJITCompilationStarted` jedną parę i [ReJITCompilationFinished](icorprofilercallback4-rejitcompilationfinished-method.md) metoda wywołuje dla każdej funkcji ze względu na sposób, w jaki środowisko uruchomieniowe obsługuje konstruktorów klas. Na przykład środowisko wykonawcze rozpoczyna ponowne kompilowanie metody A, ale konstruktor klasy dla klasy B musi zostać uruchomiony. W związku z tym środowisko wykonawcze ponownie kompiluje konstruktora dla klasy B i uruchamia go. Gdy konstruktor jest uruchomiony, wywołuje metodę A, co powoduje, że metoda A ma zostać ponownie skompilowana. W tym scenariuszu pierwsza ponowna kompilacja metody A jest zatrzymana. Jednak obie próby ponownej kompilacji metody A są zgłaszane ze zdarzeniami ponownej kompilacji JIT.  
   
- Profilowani muszą obsługiwać sekwencję wywołań zwrotnych ponownej kompilacji JIT w przypadkach, gdy dwa wątki jednocześnie wydają wywołania zwrotne. Na przykład wątek A wywołuje `ReJITCompilationStarted`; Jednak przed wywołaniem wątku A [ReJITCompilationFinished —](icorprofilercallback4-rejitcompilationfinished-method.md)wątek B wywołuje [ICorProfilerCallback:: ExceptionSearchFunctionEnter —](icorprofilercallback-exceptionsearchfunctionenter-method.md) z identyfikatorem funkcji z wywołania zwrotnego `ReJITCompilationStarted` dla wątku A. Może się wydawać, że identyfikator funkcji nie powinien jeszcze być prawidłowy, ponieważ wywołanie [ReJITCompilationFinished —](icorprofilercallback4-rejitcompilationfinished-method.md) nie zostało jeszcze odebrane przez profiler. Jednak w tym przypadku identyfikator funkcji jest prawidłowy.  
+ Profilerzy muszą obsługiwać sekwencję wywołań zwrotnych ponownej kompilacji JIT w przypadkach, gdy dwa wątki są jednocześnie wykonywanie wywołań zwrotnych. Na przykład wątek A wywołuje `ReJITCompilationStarted`; jednak przed wątkiem A wywołuje [ReJITCompilationFinished](icorprofilercallback4-rejitcompilationfinished-method.md), wątek B wywołuje [ICorProfilerCallback::ExceptionSearchFunctionEnter](icorprofilercallback-exceptionsearchfunctionenter-method.md) z funkcją ID z wywołania zwrotnego `ReJITCompilationStarted` dla wątku A. Może się wydawać, że identyfikator funkcji nie powinien być jeszcze prawidłowy, ponieważ wywołanie [ReJITCompilationFinished](icorprofilercallback4-rejitcompilationfinished-method.md) nie zostało jeszcze odebrane przez profiler. Jednak w tym przypadku identyfikator funkcji jest prawidłowy.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf. idl, CorProf. h  
+ **Nagłówek:** CorProf.idl, CorProf.h  
   
- **Biblioteka:** CorGuids. lib  
+ **Biblioteka:** CorGuids.lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [ICorProfilerCallback, interfejs](icorprofilercallback-interface.md)
+- [ICorProfilerCallback — Interfejs](icorprofilercallback-interface.md)
 - [ICorProfilerCallback4, interfejs](icorprofilercallback4-interface.md)
 - [JITCompilationFinished, metoda](icorprofilercallback-jitcompilationfinished-method.md)
 - [ReJITCompilationFinished, metoda](icorprofilercallback4-rejitcompilationfinished-method.md)

@@ -2,146 +2,146 @@
 title: Protokoły transakcji
 ms.date: 03/30/2017
 ms.assetid: 2820b0ec-2f32-430c-b299-1f0e95e1f2dc
-ms.openlocfilehash: 32c5da24eb7b23145d79c33a9ca1f5e5bcc22c06
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 5ae8aa5112f737d3000e221d0a199c3ee36eac46
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742728"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184364"
 ---
 # <a name="transaction-protocols"></a>Protokoły transakcji
-Windows Communication Foundation (WCF) implementuje transakcję WS-i protokoły koordynujące WS-i.  
+Windows Communication Foundation (WCF) implementuje WS-Atomic transaction i WS-Koordynacja protokołów.  
   
-|Specyfikacja/dokument|Wersja|Łącze|  
+|Specyfikacja/dokument|Wersja|Link|  
 |-----------------------------|-------------|----------|  
-|WS-Coordination|1.0<br /><br /> 1.1|<http://schemas.xmlsoap.org/ws/2004/10/wscoor/><br /><br /> <https://docs.oasis-open.org/ws-tx/wscoor/2006/06>|  
-|Protokół WS-AtomicTransaction|1.0<br /><br /> 1.1|<http://schemas.xmlsoap.org/ws/2004/10/wsat/><br /><br /> <https://docs.oasis-open.org/ws-tx/wsat/2006/06>|  
+|Koordynacja WS|1.0<br /><br /> 1.1|<http://schemas.xmlsoap.org/ws/2004/10/wscoor/><br /><br /> <https://docs.oasis-open.org/ws-tx/wscoor/2006/06>|  
+|WS-AtomicTransakcja|1.0<br /><br /> 1.1|<http://schemas.xmlsoap.org/ws/2004/10/wsat/><br /><br /> <https://docs.oasis-open.org/ws-tx/wsat/2006/06>|  
   
- Współdziałanie z tymi specyfikacjami protokołu jest wymagane na dwóch poziomach: między aplikacjami i menedżerami transakcji (patrz poniższy rysunek). Specyfikacja zawiera szczegółowe informacje o formatach komunikatów i wymianie komunikatów dla obu poziomów współdziałania. Niektóre zabezpieczenia, niezawodność i kodowanie dla wymiany między aplikacjami mają zastosowanie w przypadku regularnego wymiany aplikacji. Jednak pomyślne współdziałanie między menedżerami transakcji wymaga zawarcia umowy w ramach określonego powiązania, ponieważ zazwyczaj nie jest ona konfigurowana przez użytkownika.  
+ Interoperacyjność tych specyfikacji protokołu jest wymagana na dwóch poziomach: między aplikacjami i między menedżerami transakcji (patrz poniższy rysunek). Specyfikacje opisują bardzo szczegółowo formaty wiadomości i wymiany wiadomości dla obu poziomów interoperacyjności. Niektóre zabezpieczenia, niezawodność i kodowania dla wymiany aplikacji do aplikacji mają zastosowanie, jak to zrobić dla regularnej wymiany aplikacji. Jednak pomyślna interoperacyjność między menedżerami transakcji wymaga porozumienia w sprawie określonego powiązania, ponieważ zwykle nie jest skonfigurowany przez użytkownika.  
   
- W tym temacie opisano kompozycję specyfikacji transakcji WS-AT (WS-AT) z zabezpieczeniami i opisano bezpieczne powiązanie używane do komunikacji między menedżerami transakcji. Podejście opisane w tym dokumencie zostało pomyślnie przetestowane z innymi implementacjami WS-AT i WS-koordynacyjnych, w tym IBM, IONA, Sun Microsystems i innych.  
+ W tym temacie opisano skład specyfikacji transakcji WS-Atomic (WS-AT) z zabezpieczeniami i opisano bezpieczne powiązanie używane do komunikacji między menedżerami transakcji. Podejście opisane w tym dokumencie zostało pomyślnie przetestowane z innymi implementacjami WS-AT i WS-Coordination, w tym IBM, IONA, Sun Microsystems i innymi.  
   
- Na poniższej ilustracji przedstawiono współdziałanie między dwoma menedżerami transakcji, menedżerem transakcji 1 i menedżerem transakcji 2 oraz dwiema aplikacjami, aplikacjami 1 i aplikacją 2:  
+ Poniższy rysunek przedstawia interoperacyjność między dwoma menedżerami transakcji, Menedżer transakcji 1 i Menedżer transakcji 2, i dwie aplikacje, Application 1 i Application 2:  
   
  ![Zrzut ekranu przedstawiający interakcję między menedżerami transakcji.](./media/transaction-protocols/transaction-managers-flow.gif)  
   
- Rozważmy typowy scenariusz transakcji WS-koordynacyjny/WS-Atomowej z jednym inicjatorem (I) i jednym uczestnikiem (P). Inicjator i uczestnik mają menedżerów transakcji (odpowiednio ITM i PTM). Dwufazowe zatwierdzanie jest określane jako 2PC w tym temacie.  
+ Należy wziąć pod uwagę typowy scenariusz WS-Koordynacja/WS-Atomic transaction z jednym inicjatorem (I) i jeden uczestnik (P). Zarówno inicjator, jak i uczestnik mają menedżerów transakcji (odpowiednio ITM i PTM). Zatwierdzanie dwufazowe jest określane jako 2PC w tym temacie.  
   
 |||  
 |-|-|  
-|1. CreateCoordinationContext|12. odpowiedź na komunikat aplikacji|  
-|2. CreateCoordinationContextResponse|13. zatwierdzenie (zakończenie)|  
-|3. Rejestr (uzupełnianie)|14. Przygotuj (2PC)|  
-|4. RegisterResponse|15. Prepare (2PC)|  
-|5. komunikat aplikacji|16. przygotowane (2PC)|  
-|6. CreateCoordinationContext z kontekstem|17. przygotowane (2PC)|  
-|7. Zarejestruj (trwałe)|18. zatwierdzone (zakończenie)|  
-|8. RegisterResponse|19. zatwierdzenie (2PC)|  
-|9. CreateCoordinationContextResponse|20. Zatwierdzanie (2PC)|  
-|10. Rejestr (trwałe)|21. zatwierdzone (2PC)|  
-|11. RegisterResponse|22. zatwierdzone (2PC)|  
+|1. CreateCoordinationContext|12. Odpowiedź na wiadomość aplikacji|  
+|2. CreateCoordinationContextResponse|13. Zatwierdzenie (zakończenie)|  
+|3. Zarejestruj się (Zakończenie)|14. Przygotowanie (2PC)|  
+|4. RegisterResponse|15. Przygotowanie (2PC)|  
+|5. Komunikat aplikacji|16. Przygotowane (2PC)|  
+|6. CreateCoordinationContext z kontekstem|17. Przygotowane (2PC)|  
+|7. Zarejestruj się (trwały)|18. Popełnione (Zakończenie)|  
+|8. RegisterResponse|19. Zatwierdzenie (2PC)|  
+|9. CreateCoordinationContextResponse|20. Zatwierdzenie (2PC)|  
+|10. Zarejestruj się (trwały)|21. Popełnione (2PC)|  
+|11. RejestracjaOdpowiedzialność|22. Popełnione (2PC)|  
   
- W tym dokumencie opisano kompozycję specyfikacji WS-AtomicTransaction z zabezpieczeniami i opisano bezpieczne powiązanie używane do komunikacji między menedżerami transakcji. Podejście opisane w tym dokumencie zostało pomyślnie przetestowane z innymi implementacjami WS-AT i WS-koordynacyjnych.  
+ W tym dokumencie opisano skład specyfikacji WS-AtomicTransaction z zabezpieczeniami i opisano bezpieczne powiązanie używane do komunikacji między menedżerami transakcji. Podejście opisane w tym dokumencie zostało pomyślnie przetestowane z innymi implementacjami WS-AT i WS-Coordination.  
   
- Ilustracja i tabela przedstawiają cztery klasy komunikatów z punktu widzenia zabezpieczeń:  
+ Rysunek i tabela ilustrują cztery klasy wiadomości z punktu widzenia zabezpieczeń:  
   
 - Komunikaty aktywacji (CreateCoordinationContext i CreateCoordinationContextResponse).  
   
-- Wiadomości rejestracyjne (Register i RegisterResponse)  
+- Komunikaty rejestracyjne (Zarejestruj się i ZarejestrujOdpowiedzialność)  
   
-- Komunikaty protokołu (przygotowanie, wycofanie, zatwierdzenie, przerwane itd.).  
+- Komunikaty protokołu (Przygotowanie, Wycofywanie, Zatwierdzanie, Przerwane i tak dalej).  
   
 - Komunikaty aplikacji.  
   
- Pierwsze trzy klasy komunikatów są uznawane za komunikaty Menedżera transakcji, a ich konfiguracja powiązań została opisana w sekcji "Wymiana komunikatów aplikacji" w dalszej części tego tematu. Czwarta klasa komunikatu to aplikacja do komunikatów aplikacji i została opisana w sekcji "Przykłady komunikatów" w dalszej części tego tematu. W tej sekcji opisano powiązania protokołów używane dla każdej z tych klas przez funkcję WCF.  
+ Pierwsze trzy klasy wiadomości są uważane za komunikaty Menedżera transakcji, a ich konfiguracja powiązania jest opisana w "Application Message Exchange" w dalszej części tego tematu. Czwarta klasa wiadomości jest aplikacją do komunikatów aplikacji i jest opisana w sekcji "Przykłady wiadomości" w dalszej części tego tematu. W tej sekcji opisano powiązania protokołu używane dla każdej z tych klas przez WCF.  
   
- W tym dokumencie są używane następujące przestrzenie nazw XML i skojarzone prefiksy.  
+ W całym tym dokumencie używane są następujące obszary nazw XML i skojarzone z nimi prefiksy.  
   
-|Prefiks|Wersja|Identyfikator URI przestrzeni nazw|  
+|Prefiks|Wersja|Identyfikator URI obszaru nazw|  
 |------------|-------------|-------------------|  
 |s11||<https://schemas.xmlsoap.org/soap/envelope/>|  
-|WSA|Pre-1,0<br /><br /> 1.0|`http://www.w3.org/2004/08/addressing`<br /><br /> <https://www.w3.org/2005/08/addressing/>|  
+|Wsa|Przed 1,0<br /><br /> 1.0|`http://www.w3.org/2004/08/addressing`<br /><br /> <https://www.w3.org/2005/08/addressing/>|  
 |wscoor|1.0<br /><br /> 1.1|<http://schemas.xmlsoap.org/ws/2004/10/wscoor/><br /><br /> <https://docs.oasis-open.org/ws-tx/wscoor/2006/06>|  
-|WSAT|1.0<br /><br /> 1.1|<http://schemas.xmlsoap.org/ws/2004/10/wsat/><br /><br /> <https://docs.oasis-open.org/ws-tx/wsat/2006/06>|  
-|t|Pre-1,3<br /><br /> 1.3|<http://schemas.xmlsoap.org/ws/2005/02/trust/><br /><br /> <https://docs.oasis-open.org/ws-sx/ws-trust/200512>|  
+|wsat|1.0<br /><br /> 1.1|<http://schemas.xmlsoap.org/ws/2004/10/wsat/><br /><br /> <https://docs.oasis-open.org/ws-tx/wsat/2006/06>|  
+|t|Przed 1,3<br /><br /> 1.3|<http://schemas.xmlsoap.org/ws/2005/02/trust/><br /><br /> <https://docs.oasis-open.org/ws-sx/ws-trust/200512>|  
 |o||<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd>|  
-|XSD||<https://www.w3.org/2001/XMLSchema>|  
+|Xsd||<https://www.w3.org/2001/XMLSchema>|  
   
-## <a name="transaction-manager-bindings"></a>Powiązania Menedżera transakcji  
- R1001: menedżerowie transakcji uczestniczący w transakcji WS-AT 1,0 muszą używać protokołu SOAP 1,1 i WS-Addressing 2004/08 dla transakcji WS-i wymiany komunikatów z obsługą protokołu WS-AT.  
+## <a name="transaction-manager-bindings"></a>Powiązania menedżera transakcji  
+ R1001: Menedżerowie transakcji uczestniczący w transakcji WS-AT 1.0 muszą używać protokołu SOAP 1.1 i WS-Addressing 2004/08 dla wymiany komunikatów WS-Atomic i WS-Coordination.  
   
- R1002: menedżerowie transakcji uczestniczący w transakcji WS-AT 1,1 muszą używać protokołu SOAP 1,1 i WS-Addressing 2005/08 dla transakcji WS-i wymiany komunikatów z obsługą protokołu WS-AT.  
+ R1002: Menedżerowie transakcji uczestniczący w transakcji WS-AT 1.1 muszą używać protokołu SOAP 1.1 i WS-Addressing 2005/08 dla wymiany komunikatów WS-Atomic i WS-Coordination.  
   
- Komunikaty aplikacji nie są ograniczone do tych powiązań i są opisane w dalszej części.  
+ Komunikaty aplikacji nie są ograniczone do tych powiązań i są opisane później.  
   
-### <a name="transaction-manager-https-binding"></a>Powiązanie HTTPS Menedżera transakcji  
- Powiązanie HTTPS Menedżera transakcji polega wyłącznie na zabezpieczeniach transportu, aby zapewnić bezpieczeństwo i ustanowić relację zaufania między każdą parę nadawcy-odbiornik w drzewie transakcji.  
-  
-#### <a name="https-transport-configuration"></a>Konfiguracja transportu HTTPS  
- Certyfikaty X. 509 są używane do ustanowienia tożsamości Menedżera transakcji. Wymagane jest uwierzytelnianie klient/serwer, a autoryzacja klienta/serwera jest pozostawiana jako szczegóły implementacji:  
-  
-- R1111: certyfikat X. 509 przedstawiony w sieci musi mieć nazwę podmiotu zgodną z w pełni kwalifikowaną nazwą domeny (FQDN) maszyny źródłowej.  
-  
-- B1112: usługa DNS musi być funkcjonalna między poszczególnymi parami nadawcy a odbiornikiem w systemie dla nazwy podmiotu X. 509.  
-  
-#### <a name="activation-and-registration-binding-configuration"></a>Konfiguracja powiązania aktywacji i rejestracji  
- Funkcja WCF wymaga powiązania dwustronnego żądania/odpowiedzi z korelacją za pośrednictwem protokołu HTTPS. (Aby uzyskać więcej informacji na temat korelacji i opisów wzorców wymiany komunikatów żądania/odpowiedzi, zobacz temat transakcja WS-niepodzielna, sekcja 8.)  
-  
-#### <a name="2pc-protocol-binding-configuration"></a>Konfiguracja powiązania protokołu 2PC  
- Usługa WCF obsługuje jednokierunkowe komunikaty (Datagram) za pośrednictwem protokołu HTTPS. Korelacja wśród komunikatów jest pozostawiana jako szczegóły implementacji.  
-  
- B1131: implementacje muszą obsługiwać `wsa:ReferenceParameters` zgodnie z opisem w WS-Addressing w celu osiągnięcia korelacji komunikatów 2PC w programie WCF.  
-  
-### <a name="transaction-manager-mixed-security-binding"></a>Mieszane powiązanie zabezpieczeń programu Transaction Manager  
- Jest to alternatywne powiązanie (w trybie mieszanym), które korzysta z zabezpieczeń transportu połączonej z modelem tokenów wystawionych przez usługę WS-koordynacyjny do celów ustanowienia tożsamości. Aktywacja i rejestracja są jedynymi elementami, które różnią się między dwoma powiązaniami.  
+### <a name="transaction-manager-https-binding"></a>Powiązanie HTTPS menedżera transakcji  
+ Powiązanie HTTPS menedżera transakcji opiera się wyłącznie na zabezpieczeniach transportu, aby osiągnąć bezpieczeństwo i ustanowić zaufanie między każdą parą nadawca-odbiorca w drzewie transakcji.  
   
 #### <a name="https-transport-configuration"></a>Konfiguracja transportu HTTPS  
- Certyfikaty X. 509 są używane do ustanowienia tożsamości Menedżera transakcji. Wymagane jest uwierzytelnianie klient/serwer, a autoryzacja klienta/serwera jest pozostawiana jako szczegóły implementacji.  
+ Certyfikaty X.509 są używane do ustanawiania tożsamości Menedżera transakcji. Uwierzytelnianie klient/serwer jest wymagane, a autoryzacja klient/serwer pozostaje jako szczegóły implementacji:  
   
-#### <a name="activation-message-binding-configuration"></a>Konfiguracja powiązania komunikatów aktywacji  
- Komunikaty o aktywacji zwykle nie uczestniczą w współdziałaniu, ponieważ zazwyczaj występują między aplikacją a jej lokalnym menedżerem transakcji.  
+- R1111: Certyfikaty X.509 prezentowane za jego przewodowo muszą mieć nazwę podmiotu odpowiadającą w pełni kwalifikowanej nazwie domeny (FQDN) komputera źródłowego.  
   
- B1221: WCF używa dupleksowego powiązania HTTPS (opisanego w [protokole obsługi komunikatów](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)) dla komunikatów aktywacji. Komunikaty Request i reply są skorelowane przy użyciu protokołu WS-Addressing 2004/08 dla WS-AT 1,0 i WS-Addressing 2005/08 for WS-AT 1,1.  
+- B1112: System DNS musi działać między każdą parą nadawca-odbiorca w systemie, aby sprawdzanie nazwy podmiotu X.509 zakończyło się pomyślnie.  
   
- Specyfikacja transakcji WS-niepodzielna, sekcja 8, opis dalszych szczegółowych informacji o korelacji i wzorcach wymiany komunikatów.  
+#### <a name="activation-and-registration-binding-configuration"></a>Konfiguracja wiązania aktywacji i rejestracji  
+ WCF wymaga żądania/odpowiedzi powiązania dupleksu z korelacji za pośrednictwem protokołu HTTPS. (Aby uzyskać więcej informacji na temat korelacji i opisów wzorców wymiany komunikatów żądania/odpowiedzi, zobacz WS-Atomic Transaction, sekcja 8.)  
   
-- R1222: po odebraniu `CreateCoordinationContext`koordynator musi wydać `SecurityContextToken` ze skojarzonym `STx`tajnym. Ten token jest zwracany w nagłówku `t:IssuedTokens` po specyfikacji WS-Trust.  
+#### <a name="2pc-protocol-binding-configuration"></a>Konfiguracja wiązania protokołu 2PC  
+ WCF obsługuje komunikaty jednokierunkowe (datagram) za pośrednictwem protokołu HTTPS. Korelacja między wiadomościami pozostaje jako szczegóły implementacji.  
   
-- R1223: Jeśli aktywacja odbywa się w istniejącym kontekście koordynacji, nagłówek `t:IssuedTokens` z `SecurityContextToken` skojarzony z istniejącym kontekstem musi przepływać w komunikacie `CreateCoordinationContext`.  
+ B1131: Implementacje `wsa:ReferenceParameters` muszą obsługiwać zgodnie z opisem w WS-Addressing, aby osiągnąć korelację komunikatów 2PC WCF.  
   
- Nowy nagłówek `t:IssuedTokens` powinien zostać wygenerowany w celu dołączenia do wiadomości wychodzącej `wscoor:CreateCoordinationContextResponse`.  
+### <a name="transaction-manager-mixed-security-binding"></a>Mieszane powiązanie zabezpieczeń menedżera transakcji  
+ Jest to powiązanie alternatywne (tryb mieszany), który używa zabezpieczeń transportu w połączeniu z modelem tokenu wystawionego przez ws-koordynacji dla celów ustanowienia tożsamości. Aktywacja i rejestracja są tylko elementy, które różnią się między dwoma powiązaniami.  
   
-#### <a name="registration-message-binding-configuration"></a>Konfiguracja powiązania komunikatu rejestracji  
- B1231: WCF używa dupleksowego powiązania HTTPS (opisanego w [protokole obsługi komunikatów](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)). Komunikaty Request i reply są skorelowane przy użyciu protokołu WS-Addressing 2004/08 dla WS-AT 1,0 i WS-Addressing 2005/08 for WS-AT 1,1.  
+#### <a name="https-transport-configuration"></a>Konfiguracja transportu HTTPS  
+ Certyfikaty X.509 są używane do ustanawiania tożsamości Menedżera transakcji. Uwierzytelnianie klient/serwer jest wymagane, a autoryzacja klient/serwer pozostaje jako szczegóły implementacji.  
   
- WS-AtomicTransaction, sekcja 8, zawiera szczegółowe informacje o korelacji i opisach wzorców wymiany komunikatów.  
+#### <a name="activation-message-binding-configuration"></a>Konfiguracja wiązania komunikatu aktywacji  
+ Komunikaty aktywacji zwykle nie uczestniczą w współdziałania, ponieważ zazwyczaj występują między aplikacją a jej lokalnym Menedżerem transakcji.  
   
- R1232: komunikaty wychodzące `wscoor:Register` muszą używać trybu uwierzytelniania `IssuedTokenOverTransport` opisanego w [protokole zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-protocols.md).  
+ B1221: WCF używa dupleksu powiązania HTTPS (opisane w [protokołach wiadomości)](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)dla komunikatów aktywacji. Żądania i odpowiedzi wiadomości są skorelowane przy użyciu WS-Addressing 2004/08 dla WS-AT 1.0 i WS-Addressing 2005/08 dla WS-AT 1.1.  
   
- Element `wsse:Timestamp` musi być podpisany przy użyciu wystawionego `SecurityContextToken STx`. Podpis jest dowodem posiadania tokenu powiązanego z określoną transakcją i jest używany do uwierzytelniania uczestnika rejestracji w transakcji. Wiadomość RegistrationResponse jest wysyłana z powrotem za pośrednictwem protokołu HTTPS.  
+ Specyfikacja transakcji WS-Atomic, sekcja 8, opisuje dalsze szczegóły dotyczące korelacji i wzorców wymiany komunikatów.  
   
-#### <a name="2pc-protocol-binding-configuration"></a>Konfiguracja powiązania protokołu 2PC  
- Usługa WCF obsługuje jednokierunkowe komunikaty (Datagram) za pośrednictwem protokołu HTTPS. Korelacja wśród komunikatów jest pozostawiana jako szczegóły implementacji.  
+- R1222: Po otrzymaniu `CreateCoordinationContext`, koordynator musi `SecurityContextToken` wydać z `STx`powiązanym kluczem tajemnicy . Ten token jest `t:IssuedTokens` zwracany wewnątrz nagłówka zgodnie ze specyfikacją WS-Trust.  
   
- B1241: implementacje muszą obsługiwać `wsa:ReferenceParameters` zgodnie z opisem w WS-Addressing w celu osiągnięcia korelacji komunikatów 2PC w programie WCF.  
+- R1223: Jeśli aktywacja występuje w `t:IssuedTokens` istniejącym `SecurityContextToken` kontekście koordynacji, nagłówek `CreateCoordinationContext` z skojarzonym z istniejącym kontekstem musi przepływać w wiadomości.  
+  
+ Nowy `t:IssuedTokens` nagłówek powinien zostać wygenerowany do `wscoor:CreateCoordinationContextResponse` dołączania do wiadomości wychodzącej.  
+  
+#### <a name="registration-message-binding-configuration"></a>Konfiguracja powiązania wiadomości rejestracji  
+ B1231: WCF używa powiązania HTTPS dwustronnego (opisanego w [protokołach wiadomości).](../../../../docs/framework/wcf/feature-details/messaging-protocols.md) Żądania i odpowiedzi wiadomości są skorelowane przy użyciu WS-Addressing 2004/08 dla WS-AT 1.0 i WS-Addressing 2005/08 dla WS-AT 1.1.  
+  
+ WS-AtomicTransaction, Sekcja 8, opisuje dalsze szczegóły dotyczące korelacji i opisy wzorców wymiany komunikatów.  
+  
+ R1232: `wscoor:Register` Wiadomości wychodzące `IssuedTokenOverTransport` muszą korzystać z trybu uwierzytelniania opisanego w [protokołach zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-protocols.md).  
+  
+ Element `wsse:Timestamp` musi być podpisany `SecurityContextToken STx` przy użyciu wystawione. Ten podpis jest dowodem posiadania tokenu skojarzonego z określoną transakcją i jest używany do uwierzytelniania uczestnika rejestrowania w transakcji. Komunikat RegistrationResponse jest wysyłany z powrotem za pośrednictwem protokołu HTTPS.  
+  
+#### <a name="2pc-protocol-binding-configuration"></a>Konfiguracja wiązania protokołu 2PC  
+ WCF obsługuje komunikaty jednokierunkowe (datagram) za pośrednictwem protokołu HTTPS. Korelacja między wiadomościami pozostaje jako szczegóły implementacji.  
+  
+ B1241: Implementacje `wsa:ReferenceParameters` muszą obsługiwać zgodnie z opisem w WS-Addressing, aby osiągnąć korelację komunikatów 2PC WCF.  
   
 ## <a name="application-message-exchange"></a>Wymiana komunikatów aplikacji  
- Aplikacje mogą korzystać z dowolnego określonego powiązania dla komunikatów aplikacji do aplikacji, o ile powiązanie spełnia następujące wymagania dotyczące zabezpieczeń:  
+ Aplikacje mogą używać dowolnego szczególnego powiązania dla komunikatów aplikacji do aplikacji, o ile powiązanie spełnia następujące wymagania dotyczące zabezpieczeń:  
   
-- R2001: komunikaty aplikacji do aplikacji muszą przepływać nagłówka `t:IssuedTokens` wraz z `CoordinationContext` w nagłówku wiadomości.  
+- R2001: Komunikaty aplikacji do aplikacji `t:IssuedTokens` muszą przepływać nagłówek wraz z `CoordinationContext` nagłówkiem wiadomości.  
   
-- R2002: należy podać integralność i poufność `t:IssuedToken`.  
+- R2002: Należy zapewnić `t:IssuedToken` integralność i poufność.  
   
- Nagłówek `CoordinationContext` zawiera `wscoor:Identifier`. Chociaż definicja `xsd:AnyURI` umożliwia użycie zarówno bezwzględnych, jak i względnych identyfikatorów URI, WCF obsługuje tylko `wscoor:Identifiers`, które są bezwzględnymi identyfikatorami URI.  
+ Nagłówek `CoordinationContext` zawiera `wscoor:Identifier`plik . Podczas gdy `xsd:AnyURI` definicja pozwala na użycie zarówno bezwzględnych, jak `wscoor:Identifiers`i względnych identyfikatorów URI, WCF obsługuje tylko , które są bezwzględnymi identyfikatorami URI.  
   
- B2003: Jeśli `wscoor:Identifier` `wscoor:CoordinationContext` jest względnym identyfikatorem URI, błędy zostaną zwrócone z transakcyjnych usług WCF.  
+ B2003: Jeśli `wscoor:Identifier` `wscoor:CoordinationContext` jest względny identyfikator URI, błędy zostaną zwrócone z usług transakcyjnych WCF.  
   
-## <a name="message-examples"></a>Przykłady komunikatów  
+## <a name="message-examples"></a>Przykłady wiadomości  
   
-### <a name="createcoordinationcontext-requestresponse-messages"></a>Komunikaty żądania/odpowiedzi CreateCoordinationContext  
- Poniższe komunikaty obserwują wzorzec żądania/odpowiedzi.  
+### <a name="createcoordinationcontext-requestresponse-messages"></a>CreateCoordinationContext Wiadomości żądania/odpowiedzi  
+ Następujące komunikaty wykonaj wzorzec żądania/odpowiedzi.  
   
-#### <a name="createcoordinationcontext-with-wscoor-10"></a>CreateCoordinationContext z WSCoor 1,0  
+#### <a name="createcoordinationcontext-with-wscoor-10"></a>CreateCoordinationContext z WSCoor 1.0  
   
 ```xml  
 <s:Envelope>  
@@ -167,24 +167,24 @@ Windows Communication Foundation (WCF) implementuje transakcję WS-i protokoły 
 </s11:Envelope>  
 ```  
   
-#### <a name="createcoordinationcontext-with-wscoor-11"></a>CreateCoordinationContext z WSCoor 1,1  
+#### <a name="createcoordinationcontext-with-wscoor-11"></a>CreateCoordinationContext z wscoorem 1.1  
   
 ```xml  
-<s:Envelope>   
+<s:Envelope>
 <s:Header>  
 <a:Action>http://docs.oasis-open.org/ws-tx/wscoor/2006/06/CreateCoordinationContext</Action>  
 <a:MessageID>urn:uuid:069f5104-fd88-4264-9f99-60032a82854e</MessageID>  
-<a:ReplyTo>   
-<Address>https://...</a:Address>   
-</a:ReplyTo>   
-<a:To>https://...</a:To>   
+<a:ReplyTo>
+<Address>https://...</a:Address>
+</a:ReplyTo>
+<a:To>https://...</a:To>
 <wsse:Security>  
  <u:Timestamp>  
 <wsu:Created>2005-12-15T23:36:09.921Z</u:Created>  
 <wsu:Expires>2005-12-15T23:41:09.921Z</u:Expires>  
-</u:Timestamp>   
-</wsse:Security>   
-</s:Header>   
+</u:Timestamp>
+</wsse:Security>
+</s:Header>
 <s:Body xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">  
 <wscoor:CreateCoordinationContext>  
 <wscoor:CoordinationType>...</wscoor:CoordinationType>  
@@ -193,7 +193,7 @@ Windows Communication Foundation (WCF) implementuje transakcję WS-i protokoły 
 </s11:Envelope>  
 ```  
   
-#### <a name="createcoordinationcontextresponse-with-trust-pre-13-and-wscoor-10"></a>CreateCoordinationContextResponse z zaufaniem sprzed 1,3 i WSCoor 1,0  
+#### <a name="createcoordinationcontextresponse-with-trust-pre-13-and-wscoor-10"></a>CreateCoordinationContextResponse with Trust Pre-1.3 i WSCoor 1.0 CreateCoordinationContextReponse with Trust Pre-1.3 and WSCoor 1.0 CreateCoordinationContextReponse with Trust Pre-1.3 and WSCoor 1.0 CreateCo  
   
 ```xml  
 <s:Envelope>  
@@ -204,9 +204,9 @@ Windows Communication Foundation (WCF) implementuje transakcję WS-i protokoły 
     <a:RelatesTo>urn:uuid:069f5104-fd88-4264-9f99-60032a82854e</a:RelatesTo>  
     <a:To s:mustUnderstand="1">https://... </a:To>  
     <t:IssuedTokens>  
- <wst:RequestSecurityTokenResponse     
+ <wst:RequestSecurityTokenResponse
     xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"  
-    xmlns:wssu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"   
+    xmlns:wssu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
     xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust"  
     xmlns:wsc="http://schemas.xmlsoap.org/ws/2005/02/sc"  
     xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">  
@@ -216,27 +216,27 @@ Windows Communication Foundation (WCF) implementuje transakcję WS-i protokoły 
         <wssu:Identifier>  
           http://fabrikam123.com/SCTi  
         </wssu:Identifier>  
-      </wsc:SecurityContextToken>   
+      </wsc:SecurityContextToken>
     </wst:RequestedSecurityToken>  
     <wsp:AppliesTo>  
         http://fabrikam123.com/CCi  
-    </wsp:AppliesTo>    
+    </wsp:AppliesTo>
     <wst:RequestedAttachedReference>  
       <wsse:SecurityTokenReference >  
-        <wsse:Reference   
+        <wsse:Reference
            ValueType="http://schemas.xmlsoap.org/ws/2005/02/sc/sct"  
            URI="http://fabrikam123.com/SCTi"/>  
       </wsse:SecurityTokenReference>  
     </wst:RequestedAttachedReference>  
     <wst:RequestedUnattachedReference>  
       <wsse:SecurityTokenReference>  
-        <wsse:Reference   
+        <wsse:Reference
           ValueType="http://schemas.xmlsoap.org/ws/2005/02/sc/sct"  
           URI="http://fabrikam123.com/SCTi"/>  
       </wsse:SecurityTokenReference>  
     </wst:RequestedUnattachedReference>  
     <wst:RequestedProofToken>  
-      <wst:BinarySecret   
+      <wst:BinarySecret
         Type="http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey">  
         <!-- base64 encoded value -->  
       </wst:BinarySecret>  
@@ -275,86 +275,86 @@ Windows Communication Foundation (WCF) implementuje transakcję WS-i protokoły 
 </s:Envelope>  
 ```  
   
-#### <a name="createcoordinationcontextresponse-with-trust-13-and-wscoor-11"></a>CreateCoordinationContextResponse z zaufaniem 1,3 i WSCoor 1,1  
+#### <a name="createcoordinationcontextresponse-with-trust-13-and-wscoor-11"></a>CreateCoordinationContextResponse with Trust 1.3 i WSCoor 1.1 CreateCoordinationContextReponse with Trust 1.3 and WSCoor 1.1 CreateCoordinationContextReponse with Trust 1.3 and WSCoor 1.1 CreateCo  
   
 ```xml  
 <s:Envelope>  
-<!-- Data below is shown in the clear for illustration purposes only. -->   
-<s:Header>   
+<!-- Data below is shown in the clear for illustration purposes only. -->
+<s:Header>
 <a:Action>http://docs.oasis-open.org/ws-tx/wscoor/2006/06/CreateCoordinationContextResponse </a:Action>  
 <a:RelatesTo>urn:uuid:069f5104-fd88-4264-9f99-60032a82854e</a:RelatesTo>  
-<a:To s:mustUnderstand="1">https://... </a:To>   
-<t:IssuedTokens>   
-<wst:RequestSecurityTokenResponse   
-xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"   
-xmlns:wssu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"   
+<a:To s:mustUnderstand="1">https://... </a:To>
+<t:IssuedTokens>
+<wst:RequestSecurityTokenResponse
+xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+xmlns:wssu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
 xmlns:wst="http://docs.oasis-open.org/ws-sx/ws-trust/200512"  
 xmlns:wsc="http://schemas.xmlsoap.org/ws/2005/02/sc"  
 xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">  
 <wst:TokenType>http://schemas.xmlsoap.org/ws/2005/02/sc/sct</wst:TokenType>  
-<wst:RequestedSecurityToken>   
-<wsc:SecurityContextToken>   
+<wst:RequestedSecurityToken>
+<wsc:SecurityContextToken>
 <wssu:Identifier> http://fabrikam123.com/SCTi  
-</wssu:Identifier>   
-</wsc:SecurityContextToken>   
-</wst:RequestedSecurityToken>   
+</wssu:Identifier>
+</wsc:SecurityContextToken>
+</wst:RequestedSecurityToken>
 <wsp:AppliesTo> http://fabrikam123.com/CCi </wsp:AppliesTo>  
-<wst:RequestedAttachedReference>   
-<wsse:SecurityTokenReference >   
+<wst:RequestedAttachedReference>
+<wsse:SecurityTokenReference >
 <wsse:Reference  
   ValueType="http://schemas.xmlsoap.org/ws/2005/02/sc/sct"  
   URI="http://fabrikam123.com/SCTi"/>  
-</wsse:SecurityTokenReference>   
-</wst:RequestedAttachedReference>   
-<wst:RequestedUnattachedReference>   
-<wsse:SecurityTokenReference>   
+</wsse:SecurityTokenReference>
+</wst:RequestedAttachedReference>
+<wst:RequestedUnattachedReference>
+<wsse:SecurityTokenReference>
 <wsse:Reference  
  ValueType="http://schemas.xmlsoap.org/ws/2005/02/sc/sct"  
  URI="http://fabrikam123.com/SCTi"/>  
-</wsse:SecurityTokenReference>   
-</wst:RequestedUnattachedReference>   
-<wst:RequestedProofToken>   
+</wsse:SecurityTokenReference>
+</wst:RequestedUnattachedReference>
+<wst:RequestedProofToken>
 <wst:BinarySecret  
   Type="http://docs.oasis-open.org/ws-sx/ws-trust/200512/SymmetricKey">  
-  <!-- base64 encoded value -->   
-</wst:BinarySecret>   
-</wst:RequestedProofToken>   
-<wst:Lifetime>   
+  <!-- base64 encoded value -->
+</wst:BinarySecret>
+</wst:RequestedProofToken>
+<wst:Lifetime>
 <wssu:Created>2005-10-24T20:19:26.526Z</wssu:Created>  
 <wssu:Expires>2005-10-25T06:24:26.526Z</wssu:Expires>  
-</wst:Lifetime>   
-<wst:KeySize>256</wst:KeySize>   
-</wst:RequestSecurityTokenResponse>   
-</t:IssuedTokens>   
-<o:Security xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">   
-<u:Timestamp u:Id="_0">   
-<u:Created>2005-12-15T23:36:12.015Z</u:Created>   
-<u:Expires>2005-12-15T23:41:12.015Z</u:Expires>   
-</u:Timestamp>   
-</o:Security>   
-</s:Header>   
-<s:Body>   
-<wscoor:CreateCoordinationContextResponse>   
-<wscoor:CoordinationContext>   
+</wst:Lifetime>
+<wst:KeySize>256</wst:KeySize>
+</wst:RequestSecurityTokenResponse>
+</t:IssuedTokens>
+<o:Security xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+<u:Timestamp u:Id="_0">
+<u:Created>2005-12-15T23:36:12.015Z</u:Created>
+<u:Expires>2005-12-15T23:41:12.015Z</u:Expires>
+</u:Timestamp>
+</o:Security>
+</s:Header>
+<s:Body>
+<wscoor:CreateCoordinationContextResponse>
+<wscoor:CoordinationContext>
 <wscoor:Identifier> http://fabrikam123.com/CCi  
-</wscoor:Identifier>   
+</wscoor:Identifier>
 <wscoor:Expires>...</wscoor:Expires>  
 <wscoor:CoordinationType>...</wscoor:CoordinationType>  
-<wscoor:RegistrationService>   
+<wscoor:RegistrationService>
 <a:Address>https://...</a:Address>  
 <a:ReferenceParameters> ...  
 </a:ReferenceParameters>  
-</wscoor:RegistrationService>   
-</wscoor:CoordinationContext>   
-</wscoor:CreateCoordinationContextResponse>   
-</s:Body>   
+</wscoor:RegistrationService>
+</wscoor:CoordinationContext>
+</wscoor:CreateCoordinationContextResponse>
+</s:Body>
 </s:Envelope>  
 ```  
   
-### <a name="registration-messages"></a>Komunikaty rejestracji  
- Następujące komunikaty są komunikatami rejestracji.  
+### <a name="registration-messages"></a>Komunikaty rejestracyjne  
+ Następujące komunikaty są komunikaty rejestracyjne.  
   
-#### <a name="register-with-wscoor-10"></a>Zarejestruj się w usłudze WSCoor 1,0  
+#### <a name="register-with-wscoor-10"></a>Zarejestruj się w WSCoor 1.0  
   
 ```xml  
 <s:Envelope>  
@@ -362,11 +362,11 @@ xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
     <a:Action>http://schemas.xmlsoap.org/ws/2004/10/wscoor/Register</a:Action>  
     <a:MessageID>urn:uuid:ed418b86-a75e-4aea-9d4e-a5d0cb5c088e</a:MessageID>  
     <a:ReplyTo>  
-      <a:Address>https://...</a:Address>        
+      <a:Address>https://...</a:Address>
     </a:ReplyTo>  
     <a:To>https://...</a:To>  
-    <wsse:Security   
-      s:mustUnderstand="1"   
+    <wsse:Security
+      s:mustUnderstand="1"
       xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"  
       xmlns:wssu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">  
       <wssu:Timestamp wssu:Id="_0" >  
@@ -397,7 +397,7 @@ xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
         <ds:KeyInfo>  
           <wsse:SecurityTokenReference  
             xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">  
-            <wsse:Reference   
+            <wsse:Reference
               URI="http://fabrikam123.com/SCTi"/>  
           </wsse:SecurityTokenReference>  
         </ds:KeyInfo>  
@@ -415,66 +415,66 @@ xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
 </s:Envelope>  
 ```  
   
-#### <a name="register-with-wscoor-11"></a>Zarejestruj się w usłudze WSCoor 1,1  
+#### <a name="register-with-wscoor-11"></a>Zarejestruj się w WSCoor 1.1  
   
 ```xml  
 <s:Envelope>  
-<s:Header>   
-<a:Action>http://docs.oasis-open.org/ws-tx/wscoor/2006/06/Register</a:Action>   
+<s:Header>
+<a:Action>http://docs.oasis-open.org/ws-tx/wscoor/2006/06/Register</a:Action>
 <a:MessageID>urn:uuid:ed418b86-a75e-4aea-9d4e-a5d0cb5c088e</a:MessageID>  
-<a:ReplyTo>   
-<a:Address>https://...</a:Address>   
+<a:ReplyTo>
+<a:Address>https://...</a:Address>
 </a:ReplyTo>  
-<a:To>https://...</a:To>   
-<wsse:Security   
-s:mustUnderstand="1"   
-xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"   
+<a:To>https://...</a:To>
+<wsse:Security
+s:mustUnderstand="1"
+xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
 xmlns:wssu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">  
-<wssu:Timestamp wssu:Id="_0" >   
+<wssu:Timestamp wssu:Id="_0" >
 <wssu:Created>2005-12-15T23:36:13.827Z</wssu:Created>  
 <wssu:Expires>2005-12-15T23:41:13.827Z</wssu:Expires>  
-</wssu:Timestamp>   
-<wsc:SecurityContextToken>   
+</wssu:Timestamp>
+<wsc:SecurityContextToken>
 <wssu:Identifier> http://fabrikam123.com/SCTi  
-</wssu:Identifier>   
-</wsc:SecurityContextToken>   
+</wssu:Identifier>
+</wsc:SecurityContextToken>
 <!-- supporting signature over the timestamp -->  
 <wsse:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">  
-<ds:SignedInfo>   
-<ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>   
-<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#hmac-sha1"/>   
-<ds:Reference URI="#_0">   
-<ds:Transforms>   
-<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>   
-</ds:Transforms>   
+<ds:SignedInfo>
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#hmac-sha1"/>
+<ds:Reference URI="#_0">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+</ds:Transforms>
 <ds:DigestMethod  
-Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>   
+Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
 <ds:DigestValue> alRzyhjLgoUOYoh8cx4n75eTcUk=  
-</ds:DigestValue>   
-</ds:Reference>   
+</ds:DigestValue>
+</ds:Reference>
 </ds:SignedInfo>  
 <ds:SignatureValue>YZYjnVvSOVasAQqQxaaviTSWtqI=  
 </ds:SignatureValue>  
-<ds:KeyInfo>   
+<ds:KeyInfo>
 <wsse:SecurityTokenReference xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">  
   <wsse:Reference URI="http://fabrikam123.com/SCTi"/>  
-</wsse:SecurityTokenReference>   
-</ds:KeyInfo>   
-</wsse:Signature>   
-</wsse:Security>   
-</s:Header>   
-<s:Body xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">   
-<wscoor:Register>   
+</wsse:SecurityTokenReference>
+</ds:KeyInfo>
+</wsse:Signature>
+</wsse:Security>
+</s:Header>
+<s:Body xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+<wscoor:Register>
 <wscoor:ProtocolIdentifier>...</wscoor:ProtocolIdentifier>  
-<wscoor:ParticipantProtocolService>   
+<wscoor:ParticipantProtocolService>
 <a:Address>https://... </a:Address>  
-</wscoor:ParticipantProtocolService>   
-</wscoor:Register>   
-</s:Body>   
+</wscoor:ParticipantProtocolService>
+</wscoor:Register>
+</s:Body>
 </s:Envelope>  
 ```  
   
-#### <a name="register-response-with-wscoor-10"></a>Rejestrowanie odpowiedzi w programie WSCoor 1,0  
+#### <a name="register-response-with-wscoor-10"></a>Zarejestruj odpowiedź za pomocą WSCoor 1.0  
   
 ```xml  
 <s:Envelope>  
@@ -484,11 +484,11 @@ Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
     </a:Action>  
     <a:MessageID>urn:uuid:ed418b86-a75e-4aea-9d4e-a5d0cb5c088d</a:MessageID>  
     <a:RelatesTo>  
-      urn:uuid:ed418b86-a75e-4aea-9d4e-a5d0cb5c088e        
+      urn:uuid:ed418b86-a75e-4aea-9d4e-a5d0cb5c088e
     </a:RelatesTo>  
     <a:To>https://...</a:To>  
-    <wsse:Security   
-      s:mustUnderstand="1"   
+    <wsse:Security
+      s:mustUnderstand="1"
       xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"  
       xmlns:wssu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">  
       <wssu:Timestamp>  
@@ -510,49 +510,49 @@ Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
 </s:Envelope>  
 ```  
   
-#### <a name="register-response-with-wscoor-11"></a>Rejestrowanie odpowiedzi w programie WSCoor 1,1  
+#### <a name="register-response-with-wscoor-11"></a>Zarejestruj odpowiedź za pomocą WSCoor 1.1  
   
 ```xml  
 <s:Envelope>  
-<s:Header>   
+<s:Header>
 <a:Action> http://docs.oasis-open.org/ws-tx/wscoor/2006/06/RegisterResponse  
-</a:Action>   
+</a:Action>
 <a:MessageID>urn:uuid:ed418b86-a75e-4aea-9d4e-a5d0cb5c088d</a:MessageID>  
 <a:RelatesTo> urn:uuid:ed418b86-a75e-4aea-9d4e-a5d0cb5c088e </a:RelatesTo>  
-<a:To>https://...</a:To>   
-<wsse:Security   
-s:mustUnderstand="1"   
-xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"   
-xmlns:wssu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">   
-<wssu:Timestamp>   
+<a:To>https://...</a:To>
+<wsse:Security
+s:mustUnderstand="1"
+xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+xmlns:wssu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+<wssu:Timestamp>
 <wssu:Created>2005-12-15T23:36:13.827Z</wssu:Created>  
 <wssu:Expires>2005-12-15T23:41:13.827Z</wssu:Expires>  
-</wssu:Timestamp>   
-</wsse:Security>   
-</s:Header>   
-<s:Body xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">   
-<wscoor:RegisterResponse>   
+</wssu:Timestamp>
+</wsse:Security>
+</s:Header>
+<s:Body xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+<wscoor:RegisterResponse>
 <wscoor:CoordinatorProtocolService>  
 <a:Address>https://...</a:Address>  
 <a:ReferenceParameters> ... </a:ReferenceParameters>  
-</wscoor:CoordinatorProtocolService>   
-</wscoor:RegisterResponse>   
-</s:Body>   
+</wscoor:CoordinatorProtocolService>
+</wscoor:RegisterResponse>
+</s:Body>
 </s:Envelope>  
 ```  
   
-### <a name="two-phase-commit-protocol-messages"></a>Komunikaty protokołu zatwierdzania dwóch faz  
- Następujący komunikat odnosi się do protokołu zatwierdzania dwufazowego (2PC).  
+### <a name="two-phase-commit-protocol-messages"></a>Komunikaty protokołu zatwierdzania dwufazowego  
+ Poniższy komunikat odnosi się do protokołu zatwierdzania dwufazowego (2PC).  
   
-#### <a name="commit-with-wsat-10"></a>Zatwierdź z WSAT 1,0  
+#### <a name="commit-with-wsat-10"></a>Zatwierdzę za pomocą WSAT 1.0  
   
 ```xml  
 <s:Envelope>  
   <s:Header>  
     <a:Action>http://.../ws/2004/10/wsat/Commit</a:Action>  
     <a:To>https://...</a:To>  
-    <wsse:Security   
-      s:mustUnderstand="1"   
+    <wsse:Security
+      s:mustUnderstand="1"
       xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"  
       xmlns:wssu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">  
       <wssu:Timestamp wssu:Id="_0" >  
@@ -567,51 +567,51 @@ xmlns:wssu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-u
 </s:Envelope>  
 ```  
   
-#### <a name="commit-with-wsat-11"></a>Zatwierdź z WSAT 1,1  
+#### <a name="commit-with-wsat-11"></a>Zatwierdzę za pomocą WSAT 1.1  
   
 ```xml  
 <s:Envelope>  
-<s:Header>   
+<s:Header>
 <a:Action>http://docs.oasis-open.org/ws-tx/wsat/2006/06</a:Action>  
-<a:To>https://...</a:To>   
-<wsse:Security   
-s:mustUnderstand="1"   
-xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"   
-xmlns:wssu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">   
-<wssu:Timestamp wssu:Id="_0" >   
+<a:To>https://...</a:To>
+<wsse:Security
+s:mustUnderstand="1"
+xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+xmlns:wssu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+<wssu:Timestamp wssu:Id="_0" >
 <wssu:Created>2005-12-15T23:36:13.827Z</wssu:Created>  
 <wssu:Expires>2005-12-15T23:41:13.827Z</wssu:Expires>  
-</wssu:Timestamp>   
-</wsse:Security>   
-</s:Header>   
-<s:Body xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">   
-<wsat:Commit />   
-</s:Body>   
+</wssu:Timestamp>
+</wsse:Security>
+</s:Header>
+<s:Body xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+<wsat:Commit />
+</s:Body>
 </s:Envelope>  
 ```  
   
 ### <a name="application-messages"></a>Komunikaty aplikacji  
- Następujące komunikaty są komunikatami aplikacji.  
+ Następujące komunikaty są komunikaty aplikacji.  
   
-#### <a name="application-message-request"></a>Komunikat aplikacji — żądanie  
+#### <a name="application-message-request"></a>Żądanie komunikatu aplikacji  
   
 ```xml  
 <s:Envelope>  
   <s:Header>  
 <!-- Addressing headers, all signed-->  
     <wsse:Security s:mustUnderstand="1">  
-      <wssu:Timestamp wssu:Id="timestamp">   
+      <wssu:Timestamp wssu:Id="timestamp">
         <wssu:Created>2005-10-25T06:29:18.703Z</wssu:Created>  
         <wssu:Expires>2005-10-25T06:34:18.703Z</wssu:Expires>  
       </wssu:Timestamp>  
-      <wsse:BinarySecurityToken   
-          wssu:Id="IA_Certificate"   
-          ValueType="...#X509v3"   
+      <wsse:BinarySecurityToken
+          wssu:Id="IA_Certificate"
+          ValueType="...#X509v3"
           EncodingType="...#Base64Binary">  
         <!-- IA certificate -->  
       </wsse:BinarySecurityToken>  
       <e:EncryptedKey Id="encrypted_key">  
-            <!-- ephemeral key encrypted for PA certificate -->    
+            <!-- ephemeral key encrypted for PA certificate -->
         <e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#">  
           <e:DataReference URI="#encrypted_body"/>  
           <e:DataReference URI="#encrypted_CCi"/>  
@@ -625,15 +625,15 @@ xmlns:wssu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-u
     <wsse11:EncryptedHeader >  
      <!-- encrypted wscoor:CoordinationContext header containing CCi -->  
     </wsse11:EncryptedHeader>  
-    <wsse11:EncryptedHeader   
+    <wsse11:EncryptedHeader
       <!-- encrypted wst:IssuedTokens header containing SCTi -->  
       <!-- wst:IssuedTokens header is taken verbatim from message #2 above, omitted for brevity -->  
     </wsse11:EncryptedHeader>  
   </s:Header>  
   <s:Body wssu:Id="body">  
-    <!-- encrypted content of the Body element of the application message -->      
-    <e:EncryptedData Id="encrypted_body"   
-           Type="http://www.w3.org/2001/04/xmlenc#Content"   
+    <!-- encrypted content of the Body element of the application message -->
+    <e:EncryptedData Id="encrypted_body"
+           Type="http://www.w3.org/2001/04/xmlenc#Content"
            xmlns:e="http://www.w3.org/2001/04/xmlenc#">  
 ...  
     </e:EncryptedData>  

@@ -15,77 +15,77 @@ helpviewer_keywords:
 ms.assetid: c7dd94c6-335b-46ff-9dfe-505056db5673
 topic_type:
 - apiref
-ms.openlocfilehash: 75711b3d87699ff5db21a04351ff0acaccabb5aa
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a7449ffc8a8ccf2db62ab3cff2f9cfaffd0c72a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431856"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175866"
 ---
 # <a name="imetadataemitdefineimportmember-method"></a>IMetaDataEmit::DefineImportMember — Metoda
-Tworzy odwołanie do określonego elementu członkowskiego typu lub modułu, który jest zdefiniowany poza bieżącym zakresem, i definiuje token dla tego odwołania.  
+Tworzy odwołanie do określonego elementu członkowskiego typu lub modułu, który jest zdefiniowany poza bieżącym zakresem i definiuje token dla tego odwołania.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
-HRESULT DefineImportMember (   
-    [in]  IMetaDataAssemblyImport  *pAssemImport,   
-    [in]  const void               *pbHashValue,   
+HRESULT DefineImportMember (
+    [in]  IMetaDataAssemblyImport  *pAssemImport,
+    [in]  const void               *pbHashValue,
     [in]  ULONG                    cbHashValue,  
-    [in]  IMetaDataImport          *pImport,   
-    [in]  mdToken                  mbMember,   
-    [in]  IMetaDataAssemblyEmit    *pAssemEmit,   
-    [in]  mdToken                  tkParent,   
-    [out] mdMemberRef              *pmr   
+    [in]  IMetaDataImport          *pImport,
+    [in]  mdToken                  mbMember,
+    [in]  IMetaDataAssemblyEmit    *pAssemEmit,
+    [in]  mdToken                  tkParent,
+    [out] mdMemberRef              *pmr
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `pAssemImport`  
- podczas Interfejs [IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) , który reprezentuje zestaw, z którego zostanie zaimportowany członek docelowy.  
+ [w] [Interfejs IMetaDataAssemblyImport,](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) który reprezentuje zestaw, z którego jest importowany element członkowski obiektu docelowego.  
   
  `pbHashValue`  
- podczas Tablica, która zawiera skrót dla zestawu określonego przez `pAssemImport`.  
+ [w] Tablica zawierająca skrót dla zestawu `pAssemImport`określonego przez program .  
   
  `cbHashValue`  
- podczas Liczba bajtów w tablicy `pbHashValue`.  
+ [w] Liczba bajtów w `pbHashValue` tablicy.  
   
  `pImport`  
- podczas Interfejs [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) reprezentujący zakres metadanych, z którego zaimportowano element docelowy.  
+ [w] Interfejs [IMetaDataImport reprezentujący](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) zakres metadanych, z którego jest importowany element członkowski obiektu docelowego.  
   
  `mbMember`  
- podczas Token metadanych określający docelowy element członkowski. Token może być `mdMethodDef` (dla metody członkowskiej), `mdProperty` (dla właściwości elementu członkowskiego) lub `mdFieldDef` (dla pola elementu członkowskiego).  
+ [w] Token metadanych, który określa docelowy element członkowski. Token może być `mdMethodDef` tokenem (dla `mdProperty` metody elementu członkowskiego) `mdFieldDef` (dla właściwości elementu członkowskiego) lub (dla pola członkowskiego).  
   
  `pAssemEmit`  
- podczas Interfejs [IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md) , który reprezentuje zestaw, do którego zaimportowany jest docelowy element członkowski.  
+ [w] [Interfejs IMetaDataAssemblyEmit,](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md) który reprezentuje zestaw, do którego importowany jest element docelowy.  
   
  `tkParent`  
- podczas Token `mdTypeRef` lub `mdModuleRef` dla typu lub modułu, który jest właścicielem docelowego elementu członkowskiego.  
+ [w] Lub `mdTypeRef` `mdModuleRef` token dla typu lub modułu, odpowiednio, który jest właścicielem elementu członkowskiego docelowego.  
   
  `pmr`  
- określoną Token `mdMemberRef`, który jest zdefiniowany w bieżącym zakresie dla odwołania do elementu członkowskiego.  
+ [na zewnątrz] Token, `mdMemberRef` który jest zdefiniowany w bieżącym zakresie odwołania elementu członkowskiego.  
   
 ## <a name="remarks"></a>Uwagi  
- Metoda `DefineImportMember` wyszukuje element członkowski, określony przez `mbMember`, który jest zdefiniowany w innym zakresie, określonym przez `pImport`i pobiera jego właściwości. Używa tych informacji do wywołania metody [IMetaDataEmit::D efinememberref](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md) w bieżącym zakresie w celu utworzenia odwołania do elementu członkowskiego.  
+ Metoda `DefineImportMember` wyszukuje element `mbMember`członkowski, określony przez , `pImport`który jest zdefiniowany w innym zakresie, określonym przez program , i pobiera jego właściwości. Używa tych informacji do wywołania [IMetaDataEmit::DefineMemberRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md) metody w bieżącym zakresie, aby utworzyć odwołanie do elementu członkowskiego.  
   
- Ogólnie rzecz biorąc, przed użyciem metody `DefineImportMember` należy utworzyć, w bieżącym zakresie, odwołanie do typu lub odwołanie do modułu dla klasy nadrzędnej, interfejsu lub modułu członkowskiego elementu docelowego. Token metadanych dla tego odwołania jest następnie przesyłany w `tkParent` argument. Nie trzeba tworzyć odwołania do elementu nadrzędnego elementu członkowskiego docelowej, jeśli zostanie on rozwiązany później przez kompilator lub konsolidator. Aby podsumować:  
+ Ogólnie rzecz biorąc przed `DefineImportMember` użyciem metody, należy utworzyć w bieżącym zakresie odwołanie do typu lub odwołanie do modułu dla docelowego elementu nadrzędnego klasy, interfejsu lub modułu. Token metadanych dla tego odwołania `tkParent` jest następnie przekazywany w argumie. Nie trzeba tworzyć odwołanie do elementu nadrzędnego elementu docelowego, jeśli zostanie rozwiązany później przez kompilator lub konsolidator. Podsumowując:  
   
-- Jeśli docelowa składowa jest polem lub metodą, użyj metody [IMetaDataEmit::D efinetyperefbyname](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) lub [IMetaDataEmit::D efineimporttype](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md) , aby utworzyć odwołanie do typu w bieżącym zakresie dla klasy nadrzędnej lub interfejsu nadrzędnego elementu członkowskiego.  
+- Jeśli element członkowski obiektu docelowego jest polem lub metodą, należy użyć [metody IMetaDataEmit::DefineTypeRefByName](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) lub [metody IMetaDataEmit::DefineImportType,](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md) aby utworzyć odwołanie do typu w bieżącym zakresie dla klasy nadrzędnej lub interfejsu nadrzędnego elementu członkowskiego.  
   
-- Jeśli element członkowski docelowa to zmienna globalna lub funkcja globalna (to nie jest element członkowski klasy lub interfejsu), użyj metody [IMetaDataEmit::D efinemoduleref](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md) , aby utworzyć odwołanie do modułu w bieżącym zakresie dla modułu nadrzędnego elementu członkowskiego.  
+- Jeśli element członkowski obiektu docelowego jest zmienną globalną lub funkcją globalną (czyli nie jest członkiem klasy lub interfejsu), użyj metody [IMetaDataEmit::DefineModuleRef,](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md) aby utworzyć odwołanie do modułu w bieżącym zakresie dla modułu nadrzędnego elementu członkowskiego.  
   
-- Jeśli element nadrzędny elementu członkowskiego docelowej zostanie rozwiązany później przez kompilator lub konsolidator, Przekaż `mdTokenNil` w `tkParent`. Jedyny scenariusz, w którym dotyczy to, gdy globalna funkcja lub zmienna globalna jest importowana z pliku. obj, który ostatecznie zostanie połączony z bieżącym modułem i scalone metadane.  
+- Jeśli element nadrzędny elementu docelowego zostanie później rozwiązany przez kompilator lub konsolidator, a następnie przekaż `mdTokenNil` . `tkParent` Jedynym scenariuszem, w którym ma to zastosowanie, jest, gdy funkcja globalna lub zmienna globalna jest importowana z pliku obj, który ostatecznie zostanie połączony z bieżącym modułem i scalonymi metadanymi.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
+ **Biblioteka:** Używany jako zasób w pliku MSCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

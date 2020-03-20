@@ -9,24 +9,24 @@ helpviewer_keywords:
 - secure coding, exception handling
 - exception handling, security
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
-ms.openlocfilehash: e0465f2eb6be61e161f5e6b8cadf629a53f11906
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: ad27e62197f6fdaa6b5e706f4ae02c03fecae9f1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215784"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181139"
 ---
 # <a name="securing-exception-handling"></a>Zabezpieczanie obsługi wyjątków
-W wizualizacjach C++ i Visual Basic, wyrażenie filtru uzupełnia stos działa przed jakąkolwiek instrukcją **finally** . Blok **catch** skojarzony z tym filtrem jest uruchamiany po instrukcji **finally** . Aby uzyskać więcej informacji, zobacz [Używanie wyjątków filtrowanych przez użytkownika](../../standard/exceptions/using-user-filtered-exception-handlers.md). Ta sekcja analizuje implikacje związane z bezpieczeństwem tej kolejności. Rozważmy następujący przykład pseudokodzie, który ilustruje kolejność, w której są uruchamiane instrukcje filtru i **finally** .  
+W językach Visual C++ i Visual Basic wyrażenie filtru dalej w górę stosu jest uruchamiane przed dowolną **instrukcją finally.** Blok **catch** skojarzony z tym filtrem jest uruchamiany po instrukcji **finally.** Aby uzyskać więcej informacji, zobacz [Korzystanie z wyjątków filtrowanych przez użytkownika](../../standard/exceptions/using-user-filtered-exception-handlers.md). W tej sekcji przeanalizowano implikacje dla bezpieczeństwa tej kolejności. Należy wziąć pod uwagę następujący przykład pseudokodu, który ilustruje kolejność uruchamiania instrukcji filtrowania i instrukcji **finally.**  
   
 ```cpp  
-void Main()   
+void Main()
 {  
-    try   
+    try
     {  
         Sub();  
-    }   
-    except (Filter())   
+    }
+    except (Filter())
     {  
         Console.WriteLine("catch");  
     }  
@@ -35,21 +35,21 @@ bool Filter () {
     Console.WriteLine("filter");  
     return true;  
 }  
-void Sub()   
+void Sub()
 {  
-    try   
+    try
     {  
         Console.WriteLine("throw");  
         throw new Exception();  
-    }   
-    finally   
+    }
+    finally
     {  
         Console.WriteLine("finally");  
     }  
-}                        
+}
 ```  
   
- Ten kod drukuje następujące elementy:  
+ Ten kod drukuje następujące.  
   
 ```output
 Throw  
@@ -58,26 +58,26 @@ Finally
 Catch  
 ```  
   
- Filtr jest uruchamiany przed instrukcją **finally** , więc problemy z zabezpieczeniami mogą być wprowadzane przez wszystkie elementy, które wprowadzają zmianę stanu, w którym może zostać wykorzystana funkcja innego kodu. Na przykład:  
+ Filtr jest uruchamiany przed **instrukcją finally,** więc problemy z zabezpieczeniami mogą być wprowadzane przez wszystko, co powoduje zmianę stanu, w którym wykonanie innego kodu może skorzystać. Przykład:  
   
 ```cpp  
-try   
+try
 {  
     Alter_Security_State();  
     // This means changing anything (state variables,  
-    // switching unmanaged context, impersonation, and   
-    // so on) that could be exploited if malicious   
+    // switching unmanaged context, impersonation, and
+    // so on) that could be exploited if malicious
     // code ran before state is restored.  
     Do_some_work();  
-}   
-finally   
+}
+finally
 {  
     Restore_Security_State();  
     // This simply restores the state change above.  
 }  
 ```  
   
- Ta pseudokodzie umożliwia filtrowi zwiększenie poziomu stosu do uruchamiania dowolnego kodu. Inne przykłady operacji, które byłyby podobne, są tymczasowym personifikacją innej tożsamości, ustawiając wewnętrzną flagę, która pomija pewne sprawdzanie zabezpieczeń lub zmieniając kulturę skojarzoną z wątkiem. Zalecanym rozwiązaniem jest wprowadzenie procedury obsługi wyjątków w celu odizolowania zmian kodu stanu wątku z bloków filtrów wywołujących. Należy jednak pamiętać, że program obsługi wyjątków został poprawnie wprowadzony lub ten problem nie zostanie rozwiązany. Poniższy przykład przełącza kulturę interfejsu użytkownika, ale każdy rodzaj zmiany stanu wątku może być podobnie narażony.  
+ Ten pseudokod umożliwia filtr wyżej stosu, aby uruchomić dowolny kod. Inne przykłady operacji, które mogłyby mieć podobny efekt, to tymczasowe personifikacja innej tożsamości, ustawienie flagi wewnętrznej, która omija niektóre sprawdzanie zabezpieczeń lub zmiana kultury skojarzonej z wątkiem. Zalecane rozwiązanie jest wprowadzenie obsługi wyjątków do izolowania zmian kodu do stanu wątku z bloków filtrów wywołujących. Jednak ważne jest, aby program obsługi wyjątków został prawidłowo wprowadzony lub ten problem nie zostanie rozwiązany. W poniższym przykładzie przełącza kultury interfejsu użytkownika, ale wszelkiego rodzaju zmiany stanu wątku może być podobnie widoczne.  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -101,7 +101,7 @@ Public Class UserCode
          obj.YourMethod()  
       Catch e As Exception When FilterFunc  
          Console.WriteLine("An error occurred: '{0}'", e)  
-         Console.WriteLine("Current Culture: {0}",   
+         Console.WriteLine("Current Culture: {0}",
 Thread.CurrentThread.CurrentUICulture)  
       End Try  
    End Sub  
@@ -114,42 +114,42 @@ Thread.CurrentThread.CurrentUICulture)
 End Class  
 ```  
   
- Poprawna poprawka w tym przypadku polega na zawijaniu istniejących bloków **try**/**finally** w bloku **try**/**catch** . Po prostu wprowadzamy klauzulę **catch-throw** do istniejącej instrukcji **try**/blok **finally** nie rozwiąże problemu, jak pokazano w poniższym przykładzie.  
+ Poprawną poprawką w tym przypadku jest zawijanie istniejącej **próby**/**ostatecznie** bloku w bloku catch **try.**/**catch** Po prostu wprowadzenie **catch-throw** klauzuli do istniejącej **try**/**finally** bloku nie rozwiązuje problemu, jak pokazano w poniższym przykładzie.  
   
 ```cpp  
 YourObject.YourMethod()  
 {  
     CultureInfo saveCulture = Thread.CurrentThread.CurrentUICulture;  
   
-    try   
+    try
     {  
         Thread.CurrentThread.CurrentUICulture = new CultureInfo("de-DE");  
         // Do something that throws an exception.  
     }  
     catch { throw; }  
-    finally   
+    finally
     {  
         Thread.CurrentThread.CurrentUICulture = saveCulture;  
     }  
 }  
 ```  
   
- Nie rozwiąże to problemu, ponieważ instrukcja **finally** nie została uruchomiona przed pobraniem kontroli przez `FilterFunc`.  
+ To nie rozwiązuje problemu, ponieważ **instrukcja finally** nie została uruchomiony przed `FilterFunc` pobiera kontroli.  
   
- Poniższy przykład rozwiązuje problem, upewniając się, że klauzula **finally** została wykonana przed wystąpieniem wyjątku filtru wyjątków wywołań.  
+ Poniższy przykład rozwiązuje problem, upewniając się, że **finally** klauzula została wykonana przed oferowaniem wyjątku się bloków filtru wyjątków wywołujących.  
   
 ```cpp  
 YourObject.YourMethod()  
 {  
     CultureInfo saveCulture = Thread.CurrentThread.CurrentUICulture;  
-    try    
+    try
     {  
-        try   
+        try
         {  
             Thread.CurrentThread.CurrentUICulture = new CultureInfo("de-DE");  
             // Do something that throws an exception.  
         }  
-        finally   
+        finally
         {  
             Thread.CurrentThread.CurrentUICulture = saveCulture;  
         }  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2b94bda7-09ee-435d-91b9-c4e31af1896c
 topic_type:
 - apiref
-ms.openlocfilehash: c4b01b2c346d3173b2a5ecc144474d7fb1e6dce5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e23133176cbd703a58c92f9bf1ead530b0bbb8a8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138971"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178500"
 ---
 # <a name="icordebugstringvaluegetstring-method"></a>ICorDebugStringValue::GetString — Metoda
-Pobiera ciąg, do którego odwołuje się ten ICorDebugStringValue.  
+Pobiera ciąg odwołuje się przez ten ICorDebugStringValue.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -31,26 +31,26 @@ Pobiera ciąg, do którego odwołuje się ten ICorDebugStringValue.
 HRESULT GetString (  
     [in] ULONG32    cchString,  
     [out] ULONG32   *pcchString,  
-    [out, size_is(cchString), length_is(*pcchString)]   
+    [out, size_is(cchString), length_is(*pcchString)]
         WCHAR       szString[]  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `cchString`  
- podczas Rozmiar tablicy `szString`.  
+ [w] Rozmiar tablicy. `szString`  
   
  `pcchString`  
- określoną Wskaźnik do liczby znaków zwróconych w tablicy `szString`.  
+ [na zewnątrz] Wskaźnik do liczby znaków zwróconych `szString` w tablicy.  
   
  `szString`  
- określoną Tablica, w której jest przechowywany pobrany ciąg.  
+ [na zewnątrz] Tablica, która przechowuje pobrany ciąg.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug. idl, CorDebug. h  
+ **Nagłówek:** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids. lib  
+ **Biblioteka:** CorGuids.lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

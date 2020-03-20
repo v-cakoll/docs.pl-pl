@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 42145e8d-000f-4d0b-ae43-c08201190fa2
 topic_type:
 - apiref
-ms.openlocfilehash: b240be3e5b0127de42cea43dd8e89a2cc656b28e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: bb8b531a884c9d3c2f33aa4aec5c4dbeaafe2b66
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449509"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177343"
 ---
 # <a name="imetadataimportenumfieldswithname-method"></a>IMetaDataImport::EnumFieldsWithName — Metoda
 Wylicza tokeny FieldDef określonego typu o określonej nazwie.  
@@ -29,54 +29,54 @@ Wylicza tokeny FieldDef określonego typu o określonej nazwie.
   
 ```cpp  
 HRESULT EnumFieldsWithName (  
-   [in, out] HCORENUM    *phEnum,   
-   [in]  mdTypeDef       cl,   
-   [in]  LPCWSTR         szName,   
-   [out] mdFieldDef      rFields[],   
-   [in]  ULONG           cMax,   
-   [out] ULONG           *pcTokens   
+   [in, out] HCORENUM    *phEnum,
+   [in]  mdTypeDef       cl,
+   [in]  LPCWSTR         szName,
+   [out] mdFieldDef      rFields[],
+   [in]  ULONG           cMax,
+   [out] ULONG           *pcTokens
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [in. out] Wskaźnik do modułu wyliczającego.  
+ [w, na zewnątrz] Wskaźnik do wyliczacza.  
   
  `cl`  
- podczas Token typu, którego pola mają zostać wyliczone.  
+ [w] Token typu, którego pola mają być wyliczone.  
   
  `szName`  
- podczas Nazwa pola, która ogranicza zakres wyliczania.  
+ [w] Nazwa pola, która ogranicza zakres wyliczenia.  
   
  `rFields`  
- określoną Tablica służąca do przechowywania tokenów FieldDef.  
+ [na zewnątrz] Tablica używana do przechowywania tokenów FieldDef.  
   
  `cMax`  
- podczas Maksymalny rozmiar tablicy `rFields`.  
+ [w] Maksymalny rozmiar `rFields` tablicy.  
   
  `pcTokens`  
- określoną Rzeczywista liczba tokenów FieldDef zwróconych w `rFields`.  
+ [na zewnątrz] Rzeczywista liczba tokenów FieldDef `rFields`zwrócona w .  
   
 ## <a name="remarks"></a>Uwagi  
- W przeciwieństwie do [IMetaDataImport:: EnumFields —](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumfields-method.md), `EnumFieldsWithName` odrzuca wszystkie tokeny pól, które nie mają określonej nazwy.  
+ W przeciwieństwie do [IMetaDataImport::EnumFields,](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumfields-method.md) `EnumFieldsWithName` odrzuca wszystkie tokeny pól, które nie mają określonej nazwy.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFieldsWithName` pomyślnie zwrócone.|  
-|`S_FALSE`|Brak pól do wyliczenia. W takim przypadku `pcTokens` wynosi zero.|  
+|`S_OK`|`EnumFieldsWithName`zwrócono pomyślnie.|  
+|`S_FALSE`|Nie ma żadnych pól do wyliczenia. W takim `pcTokens` przypadku wynosi zero.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Uwzględnione jako zasób w pliku MsCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

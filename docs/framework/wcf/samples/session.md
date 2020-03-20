@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Sessions
 ms.assetid: 36e1db50-008c-4b32-8d09-b56e790b8417
-ms.openlocfilehash: e364b539e355f669037983813f9e6d1e0371da1f
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 85f1034999fc4cd36075c49bd8f4631bbd283679
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715087"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183361"
 ---
 # <a name="session"></a>Sesja
-Przykład sesji demonstruje sposób implementacji kontraktu wymagającego sesji. Sesja zawiera kontekst do wykonywania wielu operacji. Umożliwia to usłudze kojarzenie stanu z daną sesją, tak aby kolejne operacje mogły korzystać z stanu poprzedniej operacji. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), który implementuje usługę kalkulatora. Kontrakt `ICalculator` został zmodyfikowany w taki sposób, aby zezwalał na wykonywanie zestawu operacji arytmetycznych przy zachowaniu uruchomionego wyniku. Ta funkcja jest definiowana przez kontrakt `ICalculatorSession`. Usługa zachowuje stan klienta w miarę wywoływania wielu operacji usługi, aby wykonać obliczenia. Klient może pobrać bieżący wynik, wywołując `Result()` i czyszcząc wynik do zera, wywołując `Clear()`.  
+Przykład sesji pokazuje, jak zaimplementować kontrakt, który wymaga sesji. Sesja zawiera kontekst do wykonywania wielu operacji. Dzięki temu usługa do skojarzenia stanu z danej sesji, tak, że kolejne operacje można użyć stanu poprzedniej operacji. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), który implementuje usługę kalkulatora. Kontrakt `ICalculator` został zmodyfikowany, aby umożliwić zestaw operacji arytmetycznych do wykonania, przy zachowaniu wyniku bieżącego. Ta funkcja jest zdefiniowana `ICalculatorSession` przez kontrakt. Usługa utrzymuje stan dla klienta, jak wiele operacji usługi są wywoływane do wykonywania obliczeń. Klient może pobrać bieżący wynik, wywołując `Result()` i wyczyścić `Clear()`wynik do zera, wywołując .  
   
- W tym przykładzie klient jest aplikacją konsolową (. exe), a usługa jest hostowana przez Internet Information Services (IIS).  
+ W tym przykładzie klient jest aplikacją konsoli (.exe), a usługa jest obsługiwana przez internetowe usługi informacyjne (IIS).  
   
 > [!NOTE]
-> Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
+> Procedura konfiguracji i instrukcje kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
- Ustawienie <xref:System.ServiceModel.SessionMode> kontraktu na `Required` gwarantuje, że gdy kontrakt zostanie ujawniony za pośrednictwem określonego powiązania, powiązanie obsługuje sesje. Jeśli powiązanie nie obsługuje sesji, zgłaszany jest wyjątek. Interfejs `ICalculatorSession` jest zdefiniowany w taki sposób, że można wywołać co najmniej jedną operację, która modyfikuje uruchomiony wynik, jak pokazano w poniższym przykładowym kodzie.  
+ <xref:System.ServiceModel.SessionMode> Ustawienie umowy, `Required` aby upewnić się, że gdy umowa jest narażona na określone powiązanie, powiązanie obsługuje sesje. Jeśli powiązanie nie obsługuje sesji wyjątek. Interfejs `ICalculatorSession` jest zdefiniowany w taki sposób, że można wywołać jedną lub więcej operacji, co modyfikuje wynik uruchomiony, jak pokazano w poniższym przykładowym kodzie.  
   
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples", SessionMode=SessionMode.Required)]  
@@ -40,7 +40,7 @@ public interface ICalculatorSession
 }  
 ```  
   
- Usługa używa <xref:System.ServiceModel.InstanceContextMode> <xref:System.ServiceModel.InstanceContextMode.PerSession> do powiązania danego kontekstu wystąpienia usługi z każdą sesją przychodzącą. Dzięki temu usługa może zachować wynik działania dla każdej sesji w lokalnej zmiennej członkowskiej.  
+ Usługa używa a <xref:System.ServiceModel.InstanceContextMode> <xref:System.ServiceModel.InstanceContextMode.PerSession> do powiązania kontekstu wystąpienia danej usługi do każdej sesji przychodzącej. Dzięki temu usługa do utrzymania bieżącego wyniku dla każdej sesji w zmiennej lokalnego elementu członkowskiego.  
   
 ```csharp
 [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)]  
@@ -68,26 +68,26 @@ public class CalculatorService : ICalculatorSession
 }  
 ```  
   
- Po uruchomieniu przykładu klient wysyła kilka żądań do serwera i żąda wyniku, który następnie jest wyświetlany w oknie konsoli klienta. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta programu.  
+ Po uruchomieniu próbki klient wysunie kilka żądań do serwera i żąda wyniku, który następnie wyświetla w oknie konsoli klienta. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta.  
   
 ```console  
 (((0 + 100) - 50) * 17.65) / 2 = 441.25  
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić próbkę  
   
-1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że wykonano [procedurę jednorazowej instalacji dla przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Aby utworzyć wersję C# lub Visual Basic .NET rozwiązania, postępuj zgodnie z instrukcjami w [tworzenie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Aby uruchomić próbkę w konfiguracji z jednym lub krzyżowym komputerem, postępuj zgodnie z instrukcjami w [programie Uruchamianie przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
-> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
->   
+> Próbki mogą być już zainstalowane na komputerze. Przed kontynuowaniem sprawdź następujący (domyślny) katalog.  
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
->   
+>
+> Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) Przykłady dla platformy .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Session`  

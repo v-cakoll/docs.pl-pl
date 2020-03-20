@@ -15,46 +15,46 @@ helpviewer_keywords:
 ms.assetid: d9e0f3b6-e106-4820-bada-5bfba34ce360
 topic_type:
 - apiref
-ms.openlocfilehash: da9a13a3dea34f6681f47e95c5b352a710d7458b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fb673666543bea3df44005ee3b20d311524f51d0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431214"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175918"
 ---
 # <a name="imetadatadispenserexgetcorsystemdirectory-method"></a>IMetaDataDispenserEx::GetCORSystemDirectory — Metoda
-Pobiera katalog, który przechowuje bieżące środowisko uruchomieniowe języka wspólnego (CLR). Ta metoda jest obsługiwana tylko dla debugerów out-of-process. Jeśli wywoływana z innego składnika, zwróci E_NOTIMPL.  
+Pobiera katalog, który przechowuje bieżący środowiska wykonawczego języka wspólnego (CLR). Ta metoda jest obsługiwana tylko do użytku przez debugery poza procesem. Jeśli zostanie wywołana z innego składnika, zwróci E_NOTIMPL.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
 HRESULT GetCORSystemDirectory (  
-    [out] LPWSTR      szBuffer,   
-    [in]  DWORD       cchBuffer,   
+    [out] LPWSTR      szBuffer,
+    [in]  DWORD       cchBuffer,
     [out] DWORD*      pchBuffer  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `szBuffer`  
- określoną Bufor, w którym ma zostać odebrana nazwa katalogu.  
+ [na zewnątrz] Bufor do odbierania nazwy katalogu.  
   
  `cchBuffer`  
- podczas Rozmiar w bajtach `szBuffer`.  
+ [w] Rozmiar w bajtach `szBuffer`.  
   
  `pchBuffer`  
- określoną Liczba bajtów w rzeczywistości zwracanych w `szBuffer`.  
+ [na zewnątrz] Liczba bajtów faktycznie `szBuffer`zwróconych w .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforma:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforma:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [IMetaDataDispenserEx, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
-- [IMetaDataDispenser, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
+- [IMetaDataDispenser — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)

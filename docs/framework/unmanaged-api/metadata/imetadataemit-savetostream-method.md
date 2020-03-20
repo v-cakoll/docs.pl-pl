@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: e0290a49-3818-4a43-ad46-3014faa34f97
 topic_type:
 - apiref
-ms.openlocfilehash: 23f6186b2561cbcd52db767616d986084f33860b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7db27670b72a5018a03d4614b69486f67bcef155
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74435931"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175684"
 ---
 # <a name="imetadataemitsavetostream-method"></a>IMetaDataEmit::SaveToStream — Metoda
-Zapisuje wszystkie metadane w bieżącym zakresie do określonego `IStream`.  
+Zapisuje wszystkie metadane w bieżącym `IStream`zakresie do określonego .  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
-HRESULT SaveToStream (   
+HRESULT SaveToStream (
     [in]  IStream     *pIStream,  
     [in]  DWORD       dwSaveFlags  
 );  
@@ -36,21 +36,21 @@ HRESULT SaveToStream (
   
 ## <a name="parameters"></a>Parametry  
  `pIStream`  
- podczas Zapisywalny strumień do zapisu.  
+ [w] Zapisywalny strumień do zapisania.  
   
  `dwSaveFlags`  
- podczas Rezerwacj. Musi być równa zero.  
+ [w] Zastrzeżone. Musi być zero.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
+ **Biblioteka:** Używany jako zasób w pliku MSCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

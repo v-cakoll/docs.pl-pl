@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - UI Automation
 ms.assetid: e7ec856e-41ee-47b1-9d57-b75a3dad088c
-ms.openlocfilehash: 7305258570ad853afa88a231592fd4b6cd2dd74e
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 49d2988cbad33497f2214098bcde68f7d5434b5e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965870"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180025"
 ---
 # <a name="microsoft-ui-automation"></a>Automatyzacja interfejsu użytkownika w oprogramowaniu firmy Microsoft
 
 > [!NOTE]
-> Ta dokumentacja jest przeznaczona dla deweloperów platformy .NET, którzy chcą używać klas automatyzacji zarządzanych interfejsów użytkownika zdefiniowanych w przestrzeni nazw <xref:System.Windows.Automation>. Najnowsze informacje o automatyzacji interfejsu użytkownika znajdują się w temacie [Windows Automation API: Automatyzacja interfejsu użytkownika](/windows/win32/winauto/entry-uiauto-win32).
+> Ta dokumentacja jest przeznaczona dla deweloperów platformy .NET, <xref:System.Windows.Automation> którzy chcą używać klas automatyzacji zarządzanych interfejsu użytkownika zdefiniowanych w obszarze nazw. Aby uzyskać najnowsze informacje na temat automatyzacji interfejsu użytkownika, zobacz [Interfejs API automatyzacji systemu Windows: Automatyzacja interfejsu użytkownika](/windows/win32/winauto/entry-uiauto-win32).
 
- Automatyzacja interfejsu użytkownika firmy Microsoft to struktura ułatwień dostępu dla systemu Microsoft Windows. Dotyczy to potrzeb produktów technologii pomocniczych i zautomatyzowanych platform testowych, zapewniając programistyczny dostęp do informacji o interfejsie użytkownika (UI). Ponadto Automatyzacja interfejsu użytkownika umożliwia deweloperom kontroli i aplikacji udostępnianie ich produktów.
+ Automatyzacja interfejsu użytkownika firmy Microsoft jest platformą ułatwień dostępu dla systemu Microsoft Windows. Odpowiada na potrzeby produktów technologii wspomagających i zautomatyzowanych struktur testowych, zapewniając programowy dostęp do informacji o interfejsie użytkownika.It addresses the needs of assistive technology products and automated test frameworks by providing programmatic access to information about the user interface (UI). Ponadto automatyzacja interfejsu użytkownika umożliwia deweloperom kontroli i aplikacji, aby ich produkty były dostępne.
 
- W tej dokumentacji opisano interfejs API automatyzacji interfejsu użytkownika dla kodu zarządzanego. Aby uzyskać informacje na temat programowania automatyzacji interfejsu C++użytkownika w programie, zobacz [Automatyzacja interfejsu użytkownika dla aplikacji Win32](/windows/desktop/winauto/windows-automation-api-portal).
+ W tej dokumentacji opisano interfejs API automatyzacji interfejsu użytkownika dla kodu zarządzanego. Aby uzyskać informacje na temat programowania automatyzacji interfejsu użytkownika w języku C++, zobacz [Automatyzacja interfejsu użytkownika dla aplikacji Win32](/windows/desktop/winauto/windows-automation-api-portal).
 
 ## <a name="in-this-section"></a>W tej sekcji
 
@@ -32,6 +32,6 @@ ms.locfileid: "76965870"
 - [Wzorzec tekstu automatyzacji interfejsu użytkownika](ui-automation-text-pattern.md)
 - [Typy kontrolek automatyzacji interfejsu użytkownika](ui-automation-control-types.md)
 
-## <a name="related-sections"></a>Sekcje pokrewne
+## <a name="related-sections"></a>Powiązane sekcje
 
-- [Przykłady ułatwień dostępu](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility) 
+- [Przykłady ułatwień dostępu](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 21b5bcb8-ea75-4962-8acc-ad17584061e5
 topic_type:
 - apiref
-ms.openlocfilehash: 696389b51328e167212fb2292a873c34b9263811
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e371330336002c673f2c54d882e70dbed41b743c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431819"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175840"
 ---
 # <a name="imetadataemitdefinememberref-method"></a>IMetaDataEmit::DefineMemberRef — Metoda
 Definiuje odwołanie do elementu członkowskiego modułu poza bieżącym zakresem i pobiera token do tej definicji odwołania.  
@@ -28,41 +28,41 @@ Definiuje odwołanie do elementu członkowskiego modułu poza bieżącym zakrese
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
-HRESULT DefineMemberRef (   
-    [in]  mdToken           tkImport,   
-    [in]  LPCWSTR           szName,   
-    [in]  PCCOR_SIGNATURE   pvSigBlob,   
-    [in]  ULONG             cbSigBlob,   
-    [out] mdMemberRef       *pmr   
+HRESULT DefineMemberRef (
+    [in]  mdToken           tkImport,
+    [in]  LPCWSTR           szName,
+    [in]  PCCOR_SIGNATURE   pvSigBlob,
+    [in]  ULONG             cbSigBlob,
+    [out] mdMemberRef       *pmr
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `tkImport`  
- podczas Token klasy lub interfejsu docelowej składowej, jeśli element członkowski nie jest globalny; Jeśli element członkowski jest globalny, token `mdModuleRef` dla tego innego pliku.  
+ [w] Token dla klasy lub interfejsu docelowego elementu członkowskiego, jeśli element członkowski nie jest globalny; jeśli element członkowski `mdModuleRef` jest globalny, token dla tego innego pliku.  
   
  `szName`  
- podczas Nazwa docelowego elementu członkowskiego.  
+ [w] Nazwa elementu docelowego.  
   
  `pvSigBlob`  
- podczas Sygnatura docelowego elementu członkowskiego.  
+ [w] Podpis elementu członkowskiego docelowego.  
   
  `cbSigBlob`  
- podczas Liczba bajtów w `pvSigBlob`.  
+ [w] Liczba bajtów `pvSigBlob`w pliku .  
   
  `pmr`  
- określoną Przypisany token `mdMemberRef`.  
+ [na zewnątrz] Token `mdMemberRef` przypisany.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
+ **Biblioteka:** Używany jako zasób w pliku MSCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -10,27 +10,27 @@ helpviewer_keywords:
 - data buffering problems
 - streamWriterBufferedDataLost MDA
 ms.assetid: 6e5c07be-bc5b-437a-8398-8779e23126ab
-ms.openlocfilehash: 82940b40b302f4a928547f2e6a0c285727e13934
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 18b2a5a95756ed125d26b2846c0b1ddc320463ea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216103"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181741"
 ---
 # <a name="streamwriterbuffereddatalost-mda"></a>streamWriterBufferedDataLost MDA
-Asystent debugowania zarządzanego `streamWriterBufferedDataLost` (MDA) jest uaktywniany, gdy <xref:System.IO.StreamWriter> jest zapisywana w, ale metoda <xref:System.IO.StreamWriter.Flush%2A> lub <xref:System.IO.StreamWriter.Close%2A> nie jest następnie wywoływana przed zniszczeniem wystąpienia <xref:System.IO.StreamWriter>. Po włączeniu tego MDA środowisko uruchomieniowe określa, czy wszystkie dane buforowane nadal istnieją w <xref:System.IO.StreamWriter>. Jeśli istnieją dane buforowane, zdarzenie MDA zostanie aktywowane. Wywoływanie metod <xref:System.GC.Collect%2A> i <xref:System.GC.WaitForPendingFinalizers%2A> może wymusić uruchomienie finalizatorów. Finalizatory będą działać w sposób pozornie dowolnie dowolną liczbę razy, a nawet w przypadku zakończenia procesu. Jawne uruchamianie finalizatorów z włączonym zdarzeniem MDA pomoże bardziej niezawodne odtwarzanie tego typu problemu.  
+Asystent `streamWriterBufferedDataLost` debugowania zarządzanego (MDA) jest <xref:System.IO.StreamWriter> aktywowany, gdy <xref:System.IO.StreamWriter.Flush%2A> jest <xref:System.IO.StreamWriter.Close%2A> zapisywany, ale lub metoda <xref:System.IO.StreamWriter> nie jest następnie wywoływana przed wystąpieniem jest niszczony. Gdy to mda jest włączone, środowisko wykonawcze określa, czy buforowane dane nadal istnieją w ramach <xref:System.IO.StreamWriter>. Jeśli istnieją buforowane dane, mda jest aktywowany. Wywołanie <xref:System.GC.Collect%2A> <xref:System.GC.WaitForPendingFinalizers%2A> i metody może wymusić finalizatorów do uruchomienia. Finalizatory będą w przeciwnym razie uruchamiane w pozornie arbitralnych czasach i być może w ogóle nie przy wyjściu z procesu. Jawnie uruchomione finalizatory z włączoną funkcją MDA pomogą bardziej niezawodnie odtworzyć ten typ problemu.  
   
 ## <a name="symptoms"></a>Objawy  
- <xref:System.IO.StreamWriter> nie zapisuje ostatnich 1 – 4 KB danych do pliku.  
+ A <xref:System.IO.StreamWriter> nie zapisuje ostatnich 1–4 KB danych do pliku.  
   
 ## <a name="cause"></a>Przyczyna  
- <xref:System.IO.StreamWriter> buforuje dane wewnętrznie, co wymaga wywołania metody <xref:System.IO.StreamWriter.Close%2A> lub <xref:System.IO.StreamWriter.Flush%2A> w celu zapisania danych buforowanych w źródłowym magazynie danych. Jeśli <xref:System.IO.StreamWriter.Close%2A> lub <xref:System.IO.StreamWriter.Flush%2A> nie jest odpowiednio wywoływana, dane buforowane w wystąpieniu <xref:System.IO.StreamWriter> mogą nie być zapisywane zgodnie z oczekiwaniami.  
+ Bufory <xref:System.IO.StreamWriter> danych wewnętrznie, co wymaga, aby <xref:System.IO.StreamWriter.Close%2A> lub <xref:System.IO.StreamWriter.Flush%2A> metoda zostanie wywołana do zapisu buforowanych danych do magazynu danych źródłowych. Jeśli <xref:System.IO.StreamWriter.Close%2A> <xref:System.IO.StreamWriter.Flush%2A> lub nie jest odpowiednio wywoływane, <xref:System.IO.StreamWriter> dane buforowane w wystąpieniu może nie być zapisywane zgodnie z oczekiwaniami.  
   
- Poniżej przedstawiono przykładowy kod, który ma być przechwytywany przez to zdarzenie MDA.  
+ Poniżej przedstawiono przykład źle napisanego kodu, który ten MDA powinien złapać.  
   
 ```csharp  
 // Poorly written code.  
-void Write()   
+void Write()
 {  
     StreamWriter sw = new StreamWriter("file.txt");  
     sw.WriteLine("Data");  
@@ -38,7 +38,7 @@ void Write()
 }  
 ```  
   
- Poprzedni kod aktywuje ten obiekt MDA bardziej niezawodnie, jeśli wyrzucanie elementów bezużytecznych zostanie wyzwolone, a następnie zawieszone do momentu zakończenia finalizatorów. Aby śledzić ten typ problemu, można dodać poniższy kod na końcu poprzedniej metody w kompilacji debugowania. Pomoże to w niezawodnym aktywowaniu MDA, ale nie rozwiąże to przyczyny problemu.  
+ Poprzedni kod aktywuje ten MDA bardziej niezawodnie, jeśli wyrzucanie elementów bezużytecznych jest wyzwalane, a następnie zawieszone do zakończenia finalizatorów. Aby wyśledzić ten typ problemu, można dodać następujący kod na końcu poprzedniej metody w kompilacji debugowania. Pomoże to niezawodnie aktywować MDA, ale oczywiście nie naprawi przyczyny problemu.  
   
 ```csharp
 GC.Collect();  
@@ -46,37 +46,37 @@ GC.WaitForPendingFinalizers();
 ```  
   
 ## <a name="resolution"></a>Rozwiązanie  
- Przed zamknięciem aplikacji lub dowolnego bloku kodu, który ma wystąpienie <xref:System.IO.StreamWriter>, należy się upewnić, że jest wywoływana <xref:System.IO.StreamWriter.Close%2A> lub <xref:System.IO.StreamWriter> <xref:System.IO.StreamWriter.Flush%2A>. Jednym z najlepszych mechanizmów do osiągnięcia tego jest utworzenie wystąpienia z blokiem C# `using` (`Using` w Visual Basic), które zapewni wywołanie metody <xref:System.IO.StreamWriter.Dispose%2A> dla składnika zapisywania, co spowoduje, że wystąpienie jest prawidłowo zamknięte.  
+ Upewnij się, <xref:System.IO.StreamWriter.Close%2A> <xref:System.IO.StreamWriter.Flush%2A> że <xref:System.IO.StreamWriter> dzwonisz lub na przed zamknięciem aplikacji <xref:System.IO.StreamWriter>lub dowolnego bloku kodu, który ma wystąpienie . Jednym z najlepszych mechanizmów do osiągnięcia tego jest `using` tworzenie`Using` wystąpienia z bloku C# <xref:System.IO.StreamWriter.Dispose%2A> (w języku Visual Basic), który zapewni, że metoda modułu zapisującego jest wywoływana, w wyniku wystąpienia jest poprawnie zamknięty.  
   
 ```csharp
-using(StreamWriter sw = new StreamWriter("file.txt"))   
+using(StreamWriter sw = new StreamWriter("file.txt"))
 {  
     sw.WriteLine("Data");  
 }  
 ```  
   
- Poniższy kod przedstawia to samo rozwiązanie przy użyciu `try/finally`, a nie `using`.  
+ Poniższy kod przedstawia to `try/finally` samo rozwiązanie, używając zamiast `using`.  
   
 ```csharp
 StreamWriter sw;  
-try   
+try
 {  
     sw = new StreamWriter("file.txt"));  
     sw.WriteLine("Data");  
 }  
-finally   
+finally
 {  
     if (sw != null)  
         sw.Close();  
 }  
 ```  
   
- Jeśli żadne z tych rozwiązań nie mogą być używane (na przykład, jeśli <xref:System.IO.StreamWriter> jest przechowywany w zmiennej statycznej i nie można łatwo uruchomić kodu na końcu jego okresu istnienia), należy wywołać <xref:System.IO.StreamWriter.Flush%2A> na <xref:System.IO.StreamWriter> po jego ostatnim użyciu lub ustawić właściwość <xref:System.IO.StreamWriter.AutoFlush%2A> na `true` przed pierwszym użyciem powinien uniknąć tego problemu.  
+ Jeśli żadne z tych rozwiązań nie może być <xref:System.IO.StreamWriter> używany (na przykład, jeśli jest przechowywany w zmiennej statycznej <xref:System.IO.StreamWriter.Flush%2A> i <xref:System.IO.StreamWriter> nie można łatwo <xref:System.IO.StreamWriter.AutoFlush%2A> uruchomić `true` kod na koniec jego istnienia), a następnie wywołanie po jego ostatnim użyciu lub ustawienie właściwości przed pierwszym użyciem należy uniknąć tego problemu.  
   
 ```csharp
 private static StreamWriter log;  
 // static class constructor.  
-static WriteToFile()   
+static WriteToFile()
 {  
     StreamWriter sw = new StreamWriter("log.txt");  
     sw.AutoFlush = true;  
@@ -86,13 +86,13 @@ static WriteToFile()
 }  
 ```  
   
-## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
- To zdarzenie MDA nie ma wpływu na środowisko uruchomieniowe.  
+## <a name="effect-on-the-runtime"></a>Wpływ na czas działania  
+ To narzędzie MDA nie ma wpływu na środowisko wykonawcze.  
   
 ## <a name="output"></a>Dane wyjściowe  
- Komunikat informujący o tym, że wystąpiło naruszenie.  
+ Komunikat informujący, że wystąpiło to naruszenie.  
   
-## <a name="configuration"></a>Konfiguracja  
+## <a name="configuration"></a>Konfigurowanie  
   
 ```xml  
 <mdaConfig>  

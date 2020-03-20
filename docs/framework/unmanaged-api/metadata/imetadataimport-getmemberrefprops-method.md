@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0ea73055-ece0-4151-a094-414c88ef8941
 topic_type:
 - apiref
-ms.openlocfilehash: 1d6d66ea62cbf679f722f830b3638455001aedd6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a61254ba751e47b0089a3f7528aca337a32e2db3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437492"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175372"
 ---
 # <a name="imetadataimportgetmemberrefprops-method"></a>IMetaDataImport::GetMemberRefProps — Metoda
 Pobiera metadane skojarzone z elementem członkowskim, do którego odwołuje się określony token.  
@@ -29,48 +29,48 @@ Pobiera metadane skojarzone z elementem członkowskim, do którego odwołuje si�
   
 ```cpp  
 HRESULT GetMemberRefProps (  
-   [in]  mdMemberRef       mr,   
-   [out] mdToken           *ptk,   
-   [out] LPWSTR            szMember,   
-   [in]  ULONG             cchMember,   
-   [out] ULONG             *pchMember,   
-   [out] PCCOR_SIGNATURE   *ppvSigBlob,   
-   [out] ULONG             *pbSig   
+   [in]  mdMemberRef       mr,
+   [out] mdToken           *ptk,
+   [out] LPWSTR            szMember,
+   [in]  ULONG             cchMember,
+   [out] ULONG             *pchMember,
+   [out] PCCOR_SIGNATURE   *ppvSigBlob,
+   [out] ULONG             *pbSig
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `mr`  
- podczas Token elementu MemberRef do zwrócenia skojarzonych metadanych.  
+ [w] Token MemberRef do zwrócenia skojarzonych metadanych.  
   
  `ptk`  
- określoną Element TypeDef lub TypeRef albo token elementu TypeSpec reprezentujący klasę, która deklaruje element członkowski lub token elementu ModuleRef reprezentujący klasę modułu, która deklaruje element członkowski, lub element MethodDef reprezentujący element członkowski.  
+ [na zewnątrz] A TypeDef lub TypeRef lub TypeSpec token, który reprezentuje klasę, która deklaruje element członkowski lub ModułRef token, który reprezentuje klasę modułu, który deklaruje element członkowski lub MethodDef, który reprezentuje element członkowski.  
   
  `szMember`  
- określoną Bufor ciągu dla nazwy elementu członkowskiego.  
+ [na zewnątrz] Bufor ciągu dla nazwy członka.  
   
  `cchMember`  
- podczas Żądany rozmiar w szerokich znakach `szMember`.  
+ [w] Żądany rozmiar w szerokich znakach `szMember`.  
   
  `pchMember`  
- określoną Zwrócony rozmiar w szerokich znakach `szMember`.  
+ [na zewnątrz] Zwrócony rozmiar w `szMember`szerokich znakach .  
   
  `ppvSibBlob`  
- określoną Wskaźnik do binarnego podpisu metadanych dla elementu członkowskiego.  
+ [na zewnątrz] Wskaźnik do podpisu binarnych metadanych dla członka.  
   
  `pbSig`  
- określoną Rozmiar w bajtach `ppvSigBlob`.  
+ [na zewnątrz] Rozmiar w bajtach . `ppvSigBlob`  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Uwzględnione jako zasób w pliku MsCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -5,38 +5,38 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 885037f7-1c2b-4d7a-90d9-06b89be172f2
-ms.openlocfilehash: ef41514a57d08d66fcba2dbaeb8c8d88cdcf3875
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 245fe50ed5a80c51163652defb642cebefd55dbd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040710"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184030"
 ---
 # <a name="how-to-specify-a-service-binding-in-configuration"></a>Instrukcje: Określanie wiązania usługi w konfiguracji
-W tym przykładzie kontrakt `ICalculator` został zdefiniowany dla podstawowej usługi kalkulatora, usługa jest zaimplementowana w klasie `CalculatorService`, a następnie jej punkt końcowy jest skonfigurowany w pliku Web. config, gdzie zostanie określony, że usługa używa <xref:System.ServiceModel.BasicHttpBinding>. Opis sposobu konfigurowania tej usługi przy użyciu kodu zamiast konfiguracji można znaleźć [w temacie How to: Określanie powiązania usługi w kodzie](how-to-specify-a-service-binding-in-code.md).  
+W tym przykładzie `ICalculator` kontrakt jest zdefiniowany dla podstawowej usługi kalkulatora, usługa jest implementowana w `CalculatorService` klasie, a następnie jej punkt końcowy jest konfigurowany w pliku Web.config, gdzie określono, że usługa używa <xref:System.ServiceModel.BasicHttpBinding>. . Aby uzyskać opis sposobu konfigurowania tej usługi przy użyciu kodu zamiast konfiguracji, zobacz [Jak: Określanie powiązania usługi w kodzie](how-to-specify-a-service-binding-in-code.md).  
   
- Zazwyczaj najlepszym rozwiązaniem jest określenie informacji o powiązaniach i adresie w konfiguracji, a nie w sposób konieczny w kodzie. Definiowanie punktów końcowych w kodzie zazwyczaj nie jest praktyczne, ponieważ powiązania i adresy dla wdrożonej usługi są zwykle inne niż te używane podczas tworzenia usługi. Ogólnie rzecz biorąc, przechowywanie informacji o powiązaniach i adresach poza kodem pozwala na ich zmianę bez konieczności ponownego kompilowania lub wdrażania aplikacji.  
+ Zazwyczaj jest najlepszym rozwiązaniem, aby określić informacje dotyczące powiązania i adresu deklaratywnie w konfiguracji, a nie bezwzględnie w kodzie. Definiowanie punktów końcowych w kodzie zwykle nie jest praktyczne, ponieważ powiązania i adresy dla wdrożonej usługi zazwyczaj różnią się od tych używanych podczas opracowywania usługi. Bardziej ogólnie, utrzymywanie powiązanie i adresowanie informacji z kodu pozwala na ich zmiany bez konieczności ponownego kompilowania lub ponownego rozmieszczenia aplikacji.  
   
- Wszystkie poniższe kroki konfiguracji można wykonać za pomocą [Narzędzia Edytora konfiguracji (SvcConfigEditor. exe)](configuration-editor-tool-svcconfigeditor-exe.md).  
+ Wszystkie następujące kroki konfiguracji można wykonać za pomocą [narzędzia Edytor konfiguracji (SvcConfigEditor.exe).](configuration-editor-tool-svcconfigeditor-exe.md)  
   
- Aby uzyskać kopię źródła tego przykładu, zobacz temat [BasicBinding](./samples/basicbinding.md).  
+ Aby zapoznać się z kopią źródłową tego przykładu, zobacz [BasicBinding](./samples/basicbinding.md).  
   
-## <a name="to-specify-the-basichttpbinding-to-use-to-configure-the-service"></a>Aby określić BasicHttpBinding do użycia w celu skonfigurowania usługi  
+## <a name="to-specify-the-basichttpbinding-to-use-to-configure-the-service"></a>Aby określić podstawowe powiązaniehttpa, które ma być używane do konfigurowania usługi  
   
-1. Zdefiniuj kontrakt usługi dla typu usługi.  
+1. Zdefiniuj umowę serwisową dla typu usługi.  
   
      [!code-csharp[C_HowTo_ConfigureServiceBinding#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureservicebinding/cs/source.cs#1)]
      [!code-vb[C_HowTo_ConfigureServiceBinding#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_configureservicebinding/vb/source.vb#1)]  
   
-2. Zaimplementuj kontrakt usługi w klasie usługi.  
+2. Zaimplementuj umowę serwisową w klasie usługi.  
   
      [!code-csharp[C_HowTo_ConfigureServiceBinding#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureservicebinding/cs/source.cs#2)]
      [!code-vb[C_HowTo_ConfigureServiceBinding#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_configureservicebinding/vb/source.vb#2)]  
   
     > [!NOTE]
-    > Nie określono informacji o adresie lub powiązaniu w implementacji usługi. Ponadto kod nie musi być zapisany, aby można było pobrać te informacje z pliku konfiguracyjnego.  
+    > Adres lub wiążące informacje nie jest określony wewnątrz implementacji usługi. Ponadto kod nie musi być zapisywany, aby pobrać te informacje z pliku konfiguracji.  
   
-3. Utwórz plik Web. config, aby skonfigurować punkt końcowy dla `CalculatorService`, który używa <xref:System.ServiceModel.WSHttpBinding>.  
+3. Utwórz plik Web.config, aby skonfigurować `CalculatorService` punkt końcowy <xref:System.ServiceModel.WSHttpBinding>dla punktu, który używa pliku .  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -44,7 +44,7 @@ W tym przykładzie kontrakt `ICalculator` został zdefiniowany dla podstawowej u
       <system.serviceModel>  
         <services>  
           <service name=" CalculatorService" >  
-            
+
             <!-- Leave the address blank to be populated by default -->
             <!-- from the hosting environment,in this case IIS, so -->
             <!-- the address will just be that of the IIS Virtual -->
@@ -55,8 +55,8 @@ W tym przykładzie kontrakt `ICalculator` został zdefiniowany dla podstawowej u
             <!-- want to modify the properties of the binding. -->
             <!-- The bindingConfiguration name Binding1 is defined -->
             <!-- below in the bindings element. -->
-            <endpoint   
-                address=""   
+            <endpoint
+                address=""
                 binding="wsHttpBinding"  
                 bindingConfiguration="Binding1"  
                 contract="ICalculator" />  
@@ -74,15 +74,15 @@ W tym przykładzie kontrakt `ICalculator` został zdefiniowany dla podstawowej u
     </configuration>  
     ```  
   
-4. Utwórz plik Service. svc zawierający poniższy wiersz i umieść go w katalogu wirtualnym Internet Information Services (IIS).  
+4. Utwórz plik Service.svc zawierający następujący wiersz i umieść go w katalogu wirtualnym internetowych usług informacyjnych (IIS).  
   
     ```  
-    <%@ServiceHost language=c# Service="CalculatorService" %>   
+    <%@ServiceHost language=c# Service="CalculatorService" %>
     ```  
   
-## <a name="to-modify-the-default-values-of-the-binding-properties"></a>Aby zmodyfikować wartości domyślne właściwości powiązania  
+## <a name="to-modify-the-default-values-of-the-binding-properties"></a>Aby zmodyfikować wartości domyślne właściwości wiązania  
   
-1. Aby zmodyfikować jedną z domyślnych wartości właściwości <xref:System.ServiceModel.WSHttpBinding>, Utwórz nową nazwę konfiguracji powiązania — `<binding name="Binding1">` — w ramach elementu [\<wsHttpBinding >](../configure-apps/file-schema/wcf/wshttpbinding.md) i Ustaw nowe wartości atrybutów powiązania w tym elemencie powiązania. Na przykład aby zmienić domyślne wartości limitu czasu otwierania i zamykania z 1 minuty na 2 minuty, Dodaj następujący kod do pliku konfiguracji.  
+1. Aby zmodyfikować jedną z domyślnych wartości właściwości <xref:System.ServiceModel.WSHttpBinding>, `<binding name="Binding1">` utwórz nową nazwę konfiguracji powiązania - — w ramach [ \<wsHttpBinding>](../configure-apps/file-schema/wcf/wshttpbinding.md) element i ustawić nowe wartości dla atrybutów powiązania w tym elemencie wiązania. Na przykład, aby zmienić domyślne wartości limitu czasu otwarcia i zamknięcia od 1 minuty do 2 minut, dodaj następujące wartości do pliku konfiguracji.  
   
     ```xml  
     <wsHttpBinding>  
@@ -93,7 +93,7 @@ W tym przykładzie kontrakt `ICalculator` został zdefiniowany dla podstawowej u
     </wsHttpBinding>  
     ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Konfigurowanie usług i klientów za pomocą powiązań](using-bindings-to-configure-services-and-clients.md)
 - [Określanie adresu punktu końcowego](specifying-an-endpoint-address.md)

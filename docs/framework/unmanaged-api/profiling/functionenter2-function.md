@@ -14,23 +14,23 @@ helpviewer_keywords:
 ms.assetid: ce7a21f9-0ca3-4b92-bc4b-bb803cae3f51
 topic_type:
 - apiref
-ms.openlocfilehash: 6cd35c180b8a322b3402b050c6d6840073010b1f
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 9aeb7a294beb10f9c2968e6161c72fdc362c4991
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866986"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177062"
 ---
 # <a name="functionenter2-function"></a>FunctionEnter2 — Funkcja
-Powiadamia profiler, że sterowanie jest przesyłane do funkcji i zawiera informacje na temat ramki stosu i argumentów funkcji. Ta funkcja zastępuje funkcję [FunctionEnter —](functionenter-function.md) .  
+Powiadamia profiler, że formant jest przekazywany do funkcji i zawiera informacje o ramce stosu i argumenty funkcji. Ta funkcja zastępuje [functionenter](functionenter-function.md) funkcji.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
 void __stdcall FunctionEnter2 (  
-    [in]  FunctionID                       funcId,   
-    [in]  UINT_PTR                         clientData,   
-    [in]  COR_PRF_FRAME_INFO               func,   
+    [in]  FunctionID                       funcId,
+    [in]  UINT_PTR                         clientData,
+    [in]  COR_PRF_FRAME_INFO               func,
     [in]  COR_PRF_FUNCTION_ARGUMENT_INFO  *argumentInfo  
 );  
 ```  
@@ -39,51 +39,51 @@ void __stdcall FunctionEnter2 (
 
 - `funcId`
 
-  \[in) identyfikator funkcji, do której jest przenoszona kontrola.
+  \[w] Identyfikator funkcji, do której formant jest przekazywany.
 
 - `clientData`
 
-  \[w] ponownie mapowany identyfikator funkcji, który został wcześniej określony przez profiler przy użyciu funkcji [FunctionIDMapper](functionidmapper-function.md) .
+  \[w] Semmapowany identyfikator funkcji, który profiler wcześniej określony za pomocą [functionidmapper](functionidmapper-function.md) funkcji.
   
 - `func`
 
-  \[w] `COR_PRF_FRAME_INFO` wartość, która wskazuje na informacje o ramce stosu.
+  \[w] `COR_PRF_FRAME_INFO` Wartość, która wskazuje informacje o ramce stosu.
   
-  Profiler powinien być traktowany jako nieprzezroczysty uchwyt, który można przesłać z powrotem do aparatu wykonywania w metodzie [ICorProfilerInfo2:: GetFunctionInfo2 —](icorprofilerinfo2-getfunctioninfo2-method.md) .  
+  Profiler należy traktować to jako nieprzezroczysty dojście, które mogą być przekazywane z powrotem do aparatu wykonywania w [ICorProfilerInfo2::GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) metody.  
   
 - `argumentInfo`
 
-  \[w] wskaźnik do struktury [COR_PRF_FUNCTION_ARGUMENT_INFO](cor-prf-function-argument-info-structure.md) , która określa lokalizacje w pamięci argumentów funkcji.
+  \[w] Wskaźnik do [struktury COR_PRF_FUNCTION_ARGUMENT_INFO,](cor-prf-function-argument-info-structure.md) który określa lokalizacje w pamięci argumentów funkcji.
 
-  Aby można było uzyskać dostęp do informacji o argumencie, należy ustawić flagę `COR_PRF_ENABLE_FUNCTION_ARGS`. Profiler może użyć metody [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) , aby ustawić flagi zdarzeń.
+  Aby uzyskać dostęp do `COR_PRF_ENABLE_FUNCTION_ARGS` informacji o argudze, należy ustawić flagę. Profiler można użyć [ICorProfilerInfo::SetEventMask](icorprofilerinfo-seteventmask-method.md) metody, aby ustawić flagi zdarzeń.
 
 ## <a name="remarks"></a>Uwagi  
- Wartości parametrów `func` i `argumentInfo` są nieprawidłowe po powrocie funkcji `FunctionEnter2`, ponieważ wartości mogą ulec zmianie lub zostać zniszczone.  
+ Wartości `func` i `argumentInfo` parametry nie są prawidłowe po zwraca `FunctionEnter2` funkcję, ponieważ wartości mogą ulec zmianie lub zostać zniszczone.  
   
- Funkcja `FunctionEnter2` jest wywołaniem zwrotnym; należy zaimplementować go. Implementacja musi używać atrybutu klasy magazynu `__declspec`(`naked`).  
+ Funkcja `FunctionEnter2` jest wywołaniem zwrotnym; należy go zaimplementować. Implementacja musi `__declspec`używać`naked`atrybutu () klasy magazynu.  
   
  Aparat wykonywania nie zapisuje żadnych rejestrów przed wywołaniem tej funkcji.  
   
-- We wpisie należy zapisać wszystkie używane rejestry, w tym te w jednostce zmiennoprzecinkowej (FPU).  
+- Przy wprowadzaniu należy zapisać wszystkie używane rejestry, w tym rejestry w jednostce zmiennoprzecinkowej (FPU).  
   
-- Po zakończeniu należy przywrócić stos, usuwanie wyłączyć wszystkie parametry, które zostały wypchnięte przez jego obiekt wywołujący.  
+- Po wyjściu należy przywrócić stosu przez popping off wszystkie parametry, które zostały wypchnięte przez jego wywołującego.  
   
- Implementacja `FunctionEnter2` nie powinna być blokowana, ponieważ spowoduje opóźnienie wyrzucania elementów bezużytecznych. Implementacja nie powinna podejmować próby wyrzucania elementów bezużytecznych, ponieważ stos może nie znajdować się w stanie przyjaznym do wyrzucania elementów bezużytecznych. Jeśli zostanie podjęta próba wyrzucania elementów bezużytecznych, środowisko uruchomieniowe zostanie zablokowane do momentu, `FunctionEnter2` zwraca.  
+ Implementacja `FunctionEnter2` nie należy blokować, ponieważ opóźni wyrzucanie elementów bezużytecznych. Implementacja nie powinna podejmować próby wyrzucania elementów bezużytecznych, ponieważ stos może nie być w stanie przyjaznym dla wyrzucania elementów bezużytecznych. Jeśli zostanie podjęta próba wyrzucania elementów `FunctionEnter2` bezużytecznych, środowisko uruchomieniowe zostanie zablokowane, dopóki nie zwróci.  
   
- Ponadto funkcja `FunctionEnter2` nie może wywoływać w kodzie zarządzanym lub w jakikolwiek sposób spowodować alokację pamięci zarządzanej.  
+ Ponadto `FunctionEnter2` funkcja nie może wywoływać kodu zarządzanego lub w jakikolwiek sposób powodować alokacji pamięci zarządzanej.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf. idl  
+ **Nagłówek:** CorProf.idl  
   
- **Biblioteka:** CorGuids. lib  
+ **Biblioteka:** CorGuids.lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [FunctionLeave2, funkcja](functionleave2-function.md)
+- [FunctionLeave2 — Funkcja](functionleave2-function.md)
 - [FunctionTailcall2, funkcja](functiontailcall2-function.md)
 - [SetEnterLeaveFunctionHooks2, metoda](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
 - [Profilowanie statycznych funkcji globalnych](profiling-global-static-functions.md)

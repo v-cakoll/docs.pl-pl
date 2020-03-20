@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8cc3b0c3-d97d-4f71-9e7d-ef2a92b4959a
 topic_type:
 - apiref
-ms.openlocfilehash: 8e9e08ac903423b2e121f22cc9e43a660ccfac7b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 218b65b5899692774c434ae136a3976ecb97ea2f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450086"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177310"
 ---
 # <a name="imetadataimportenummethods-method"></a>IMetaDataImport::EnumMethods — Metoda
 Wylicza tokeny MethodDef reprezentujące metody określonego typu.  
@@ -29,47 +29,47 @@ Wylicza tokeny MethodDef reprezentujące metody określonego typu.
   
 ```cpp  
 HRESULT EnumMethods (  
-   [in, out] HCORENUM   *phEnum,   
-   [in]  mdTypeDef      cl,   
-   [out] mdMethodDef    rMethods[],   
-   [in]  ULONG          cMax,   
+   [in, out] HCORENUM   *phEnum,
+   [in]  mdTypeDef      cl,
+   [out] mdMethodDef    rMethods[],
+   [in]  ULONG          cMax,
    [out] ULONG          *pcTokens  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [in. out] Wskaźnik do modułu wyliczającego. Musi ona mieć wartość NULL dla pierwszego wywołania tej metody.  
+ [w, na zewnątrz] Wskaźnik do wyliczacza. Musi to być null dla pierwszego wywołania tej metody.  
   
  `cl`  
- podczas Token TypeDef reprezentujący typ z metodami do wyliczenia.  
+ [w] A TypeDef token reprezentujący typ z metodami do wyliczenia.  
   
  `rMethods`  
- określoną Tablica do przechowywania tokenów MethodDef.  
+ [na zewnątrz] Tablica do przechowywania tokenów MethodDef.  
   
  `cMax`  
- podczas Maksymalny rozmiar tablicy `rMethods` MethodDef.  
+ [w] Maksymalny rozmiar methoddef `rMethods` tablicy.  
   
  `pcTokens`  
- określoną Liczba tokenów MethodDef zwróconych w `rMethods`.  
+ [na zewnątrz] Liczba tokenów MethodDef zwrócona w `rMethods`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethods` pomyślnie zwrócone.|  
-|`S_FALSE`|Brak tokenów MethodDef do wyliczenia. W takim przypadku `pcTokens` wynosi zero.|  
+|`S_OK`|`EnumMethods`zwrócono pomyślnie.|  
+|`S_FALSE`|Nie ma żadnych tokenów MethodDef do wyliczenia. W takim `pcTokens` przypadku wynosi zero.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Uwzględnione jako zasób w pliku MsCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

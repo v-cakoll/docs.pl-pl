@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net Profile Named Pipe
 ms.assetid: e78e845f-c325-46e2-927d-81616f97f7d5
-ms.openlocfilehash: 5904a5b61c0cc472c40eb2b4967815d5e6add195
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: da54a835fd32efe4f53a80701465d2d7d8adba7e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714672"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183462"
 ---
 # <a name="netnamedpipebinding"></a>NetNamedPipeBinding
-Ten przykład ilustruje powiązanie `netNamedPipeBinding`, które zapewnia komunikację między procesami na tym samym komputerze. Nazwane potoki nie działają między maszynami. Ten przykład jest oparty na usłudze kalkulatora [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) .  
+W tym przykładzie pokazano `netNamedPipeBinding` powiązania, który zapewnia komunikację między procesami na tym samym komputerze. Nazwane potoki nie działają na różnych komputerach. Ten przykład jest oparty na usłudze kalkulatora [wprowadzenie.](../../../../docs/framework/wcf/samples/getting-started-sample.md)  
   
- W tym przykładzie usługa jest samodzielna. Klientem i usługą są aplikacje konsolowe.  
+ W tym przykładzie usługa jest hostowana samodzielnie. Zarówno klient, jak i usługa są aplikacjami konsoli.  
   
 > [!NOTE]
-> Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
+> Procedura konfiguracji i instrukcje kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
- Powiązanie jest określone w plikach konfiguracji klienta i usługi. Typ powiązania jest określony w atrybucie `binding` [punktu końcowego\<](../../configure-apps/file-schema/wcf/endpoint-element.md) lub [\<punktu końcowego >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) elementu \<> klienta, jak pokazano w poniższej konfiguracji przykładowej:  
+ Powiązanie jest określone w plikach konfiguracyjnych dla klienta i usługi. Typ powiązania jest określony `binding` w atrybucie [ \<>punktu końcowego](../../configure-apps/file-schema/wcf/endpoint-element.md) lub [ \< \<> punktu końcowego](../../configure-apps/file-schema/wcf/endpoint-of-client.md) elementu>klienta, jak pokazano w następującej konfiguracji przykładowej:  
   
 ```xml  
 <endpoint address="net.pipe://localhost/ServiceModelSamples/service"  
@@ -27,16 +27,16 @@ Ten przykład ilustruje powiązanie `netNamedPipeBinding`, które zapewnia komun
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- Poprzedni przykład pokazuje, jak skonfigurować punkt końcowy do używania powiązania `netNamedPipeBinding` z ustawieniami domyślnymi. Aby skonfigurować powiązanie `netNamedPipeBinding` i zmienić niektóre z jego ustawień, należy zdefiniować konfigurację powiązania. Punkt końcowy musi odwoływać się do konfiguracji powiązania za pomocą nazwy z atrybutem `bindingConfiguration`.  
+ W poprzednim przykładzie pokazano, jak skonfigurować `netNamedPipeBinding` punkt końcowy do używania powiązania z ustawieniami domyślnymi. Jeśli chcesz skonfigurować `netNamedPipeBinding` powiązanie i zmienić niektóre jego ustawienia, należy zdefiniować konfigurację powiązania. Punkt końcowy musi odwoływać się do `bindingConfiguration` konfiguracji powiązania za pomocą nazwy z atrybutem.  
   
 ```xml  
 <endpoint address="net.pipe://localhost/ServiceModelSamples/service"  
           binding="netNamedPipeBinding"  
-          bindingConfiguration="Binding1"   
+          bindingConfiguration="Binding1"
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- W tym przykładzie Konfiguracja powiązania ma nazwę `Binding1` i ma następującą definicję:  
+ W tym przykładzie konfiguracja `Binding1` wiązania ma nazwę i ma następującą definicję:  
   
 ```xml  
 <bindings>  
@@ -45,18 +45,18 @@ Ten przykład ilustruje powiązanie `netNamedPipeBinding`, które zapewnia komun
         Each property is configured with the default value.  
      -->  
   <netNamedPipeBinding>  
-    <binding name="Binding1"   
+    <binding name="Binding1"
              closeTimeout="00:01:00"  
-             openTimeout="00:01:00"   
-             receiveTimeout="00:10:00"   
+             openTimeout="00:01:00"
+             receiveTimeout="00:10:00"
              sendTimeout="00:01:00"  
-             transactionFlow="false"   
-             transferMode="Buffered"   
+             transactionFlow="false"
+             transferMode="Buffered"
              transactionProtocol="OleTransactions"  
-             hostNameComparisonMode="StrongWildcard"   
+             hostNameComparisonMode="StrongWildcard"
              maxBufferPoolSize="524288"  
-             maxBufferSize="65536"   
-             maxConnections="10"   
+             maxBufferSize="65536"
+             maxConnections="10"
              maxReceivedMessageSize="65536">  
       <security mode="Transport">  
         <transport protectionLevel="EncryptAndSign" />  
@@ -66,7 +66,7 @@ Ten przykład ilustruje powiązanie `netNamedPipeBinding`, które zapewnia komun
 </bindings>  
 ```  
   
- Po uruchomieniu przykładu żądania operacji i odpowiedzi są wyświetlane w oknie konsoli klienta. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta programu.  
+ Po uruchomieniu próbki żądania operacji i odpowiedzi są wyświetlane w oknie konsoli klienta. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta.  
   
 ```console  
 Add(100,15.99) = 115.99  
@@ -77,19 +77,19 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić próbkę  
   
-1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że wykonano [procedurę jednorazowej instalacji dla przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Aby utworzyć wersję C# lub Visual Basic .NET rozwiązania, postępuj zgodnie z instrukcjami w [tworzenie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Aby uruchomić przykład w konfiguracji pojedynczej maszyny, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Aby uruchomić przykład w konfiguracji pojedynczego komputera, postępuj zgodnie z instrukcjami w [uruchamianiu przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
-> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
->   
+> Próbki mogą być już zainstalowane na komputerze. Przed kontynuowaniem sprawdź następujący (domyślny) katalog.  
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
->   
+>
+> Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) Przykłady dla platformy .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\NamedPipe`  

@@ -2,42 +2,42 @@
 title: Konfiguracja — przykład
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-ms.openlocfilehash: eb02b5d01b3f95ef741aa689cc66616fd598577b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 5ac72db1fce0862381cd614499b5db4b9d95b2d0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741959"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183915"
 ---
 # <a name="configuration-sample"></a>Konfiguracja — przykład
-Ten przykład ilustruje użycie pliku konfiguracji w celu odnalezienia usługi.  
+W tym przykładzie pokazano użycie pliku konfiguracji, aby usługa wykrywalne.  
   
 > [!NOTE]
-> Ten przykład implementuje odnajdywanie w konfiguracji. Przykład, który implementuje odnajdywanie w kodzie, znajduje się w temacie [Basic](../../../../docs/framework/wcf/samples/basic-sample.md).  
+> Ten przykład implementuje odnajdowanie w konfiguracji. Aby uzyskać przykład implementujący odnajdowanie w kodzie, zobacz [Podstawowe](../../../../docs/framework/wcf/samples/basic-sample.md).  
   
 > [!IMPORTANT]
-> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
->   
+> Próbki mogą być już zainstalowane na komputerze. Przed kontynuowaniem sprawdź następujący (domyślny) katalog.  
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
->   
+>
+> Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) Przykłady dla platformy .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Configuration`  
   
 ## <a name="service-configuration"></a>Konfiguracja usługi  
- Plik konfiguracji w tym przykładzie ilustruje dwie funkcje:  
+ Plik konfiguracyjny w tym przykładzie pokazuje dwie funkcje:  
   
-- Umożliwienie odnajdywania usługi w standardowym <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.  
+- Uczynienie usługi wykrywalną w <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>standardzie.  
   
-- Dostosowanie informacji dotyczących odnajdywania dla punktu końcowego aplikacji usługi i dostosowanie niektórych ustawień związanych z odnajdywaniem w standardowym punkcie końcowym.  
+- Dostosowywanie informacji związanych z odnajdywaniem dla punktu końcowego aplikacji usługi i dostosowywanie niektórych ustawień związanych z odnajdywaniem w standardowym punkcie końcowym.  
   
- Aby włączyć odnajdywanie, należy wprowadzić kilka zmian w pliku konfiguracyjnym aplikacji dla usługi:  
+ Aby włączyć odnajdowanie, należy wnieść kilka zmian w pliku konfiguracji aplikacji dla usługi:  
   
-- Do elementu `<service>` należy dodać punkt końcowy odnajdywania. Jest to standardowy punkt końcowy <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>. Jest to systemowy punkt końcowy, który jest skojarzony ze środowiskiem uruchomieniowym z usługą odnajdywania. Usługa odnajdywania nasłuchuje komunikatów w tym punkcie końcowym.  
+- Punkt końcowy odnajdywania musi zostać dodany do `<service>` elementu. Jest to <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> standardowy punkt końcowy. Jest to punkt końcowy systemu, który środowisko wykonawcze kojarzy z usługą odnajdywania. Usługa odnajdowania nasłuchuje wiadomości w tym punkcie końcowym.  
   
-- Do sekcji `<serviceBehaviors>` zostanie dodane zachowanie `<serviceDiscovery>`. Pozwala to na odnalezienie usługi w czasie wykonywania i użycie punktu końcowego odnajdywania wspomnianego wcześniej do nasłuchiwania `Probe` i `Resolve` komunikatów. Za pomocą tych dwóch dodatków usługa jest wykrywalna w określonym punkcie końcowym odnajdywania.  
+- Zachowanie `<serviceDiscovery>` zostanie dodane `<serviceBehaviors>` do sekcji. Dzięki temu usługa ma zostać wykryta w czasie wykonywania i używa punktu końcowego odnajdywania wymienionych wcześniej do nasłuchiwania odnajdywania `Probe` i `Resolve` wiadomości. Z tych dwóch dodatków usługa jest wykrywalny w punkcie końcowym odnajdywania określonych.  
   
- Poniższy fragment konfiguracji przedstawia usługę z punktem końcowym aplikacji oraz zdefiniowanym punktem końcowym odnajdywania:  
+ Następujący fragment kodu konfiguracji przedstawia usługę z punktem końcowym aplikacji i zdefiniowanym punktem końcowym odnajdywania:  
   
 ```xml
 <services>  
@@ -47,13 +47,13 @@ Ten przykład ilustruje użycie pliku konfiguracji w celu odnalezienia usługi.
                     binding="wsHttpBinding"  
                     contract="Microsoft.Samples.Discovery.ICalculatorService"  
                     behaviorConfiguration="endpointBehaviorConfiguration" />  
-          <endpoint name="udpDiscovery"   
-                    kind="udpDiscoveryEndpoint"   
+          <endpoint name="udpDiscovery"
+                    kind="udpDiscoveryEndpoint"
                 endpointConfiguration="adhocDiscoveryEndpointConfiguration"/>        </service>  
       </services>  
 ```  
   
- Aby skorzystać z anonsów, musisz dodać punkt końcowy anonsu. W tym celu należy zmodyfikować plik konfiguracji, jak pokazano w poniższym kodzie.  
+ Aby skorzystać z anonsów, należy dodać punkt końcowy anonsu. Aby to zrobić, zmodyfikuj plik konfiguracyjny, jak pokazano w poniższym kodzie.  
   
 ```xml  
 <serviceDiscovery>  
@@ -63,13 +63,13 @@ Ten przykład ilustruje użycie pliku konfiguracji w celu odnalezienia usługi.
           </serviceDiscovery>  
 ```  
   
- Dodanie punktu końcowego anonsu do zachowania usługi odnajdywania powoduje utworzenie domyślnego klienta anonsu dla usługi. Gwarantuje to, że usługa wyśle powiadomienie online i offline, gdy usługa zostanie odpowiednio otwarta i ZAMKNIĘTA.  
+ Dodanie punktu końcowego anonsu do zachowania usługi odnajdywania tworzy domyślnego klienta anonsu dla usługi. Gwarantuje to, że usługa wyśle ogłoszenie online i offline, gdy usługa zostanie otwarta i zamknięta odpowiednio.  
   
- Ten plik konfiguracji wykracza poza tylko te proste kroki poprzez modyfikację dodatkowych zachowań. Można kontrolować informacje związane z odnajdywaniem za pomocą określonych punktów końcowych. Oznacza to, że użytkownik może kontrolować, czy można odnaleźć punkt końcowy, a użytkownik może również oznaczyć ten punkt końcowy przy użyciu <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Scopes%2A> i niestandardowych metadanych XML. W tym celu użytkownik musi dodać właściwość `behaviorConfiguration` do punktu końcowego aplikacji. W takim przypadku następująca właściwość jest dodawana do punktu końcowego aplikacji.  
+ Ten plik konfiguracyjny wykracza poza te proste kroki, modyfikując dodatkowe zachowania. Możliwe jest kontrolowanie informacji związanych z odnajdywania przy użyciu określonych punktów końcowych. Oznacza to, że użytkownik może kontrolować, czy punkt końcowy można odnajdować, a użytkownik może również oznaczyć ten punkt końcowy za pomocą <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Scopes%2A> i niestandardowych metadanych XML. Aby to zrobić, użytkownik `behaviorConfiguration` musi dodać właściwość do punktu końcowego aplikacji. W takim przypadku następująca właściwość jest dodawana do punktu końcowego aplikacji.  
   
 `behaviorConfiguration="endpointBehaviorConfiguration"`  
   
- Teraz za pomocą elementu konfiguracja zachowania można kontrolować atrybuty związane z odnajdywaniem. W takim przypadku dwa zakresy są dodawane do punktu końcowego aplikacji.  
+ Teraz za pośrednictwem elementu konfiguracji zachowania można kontrolować atrybuty związane z odnajdywania. W takim przypadku dwa zakresy są dodawane do punktu końcowego aplikacji.  
   
 ```xml  
 <endpointBehaviors>  
@@ -81,23 +81,23 @@ Ten przykład ilustruje użycie pliku konfiguracji w celu odnalezienia usługi.
               </scopes>  
             </endpointDiscovery>  
   
-          </behavior>            
+          </behavior>
         </endpointBehaviors>  
 ```  
   
- Aby uzyskać więcej informacji na temat zakresów, zobacz [odnajdywanie Znajdź i kryteria znajdowania](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md).  
+ Aby uzyskać więcej informacji na temat zakresów, zobacz [Odnajdowanie i Znajdźkryterię](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md).  
   
- Można również kontrolować konkretne szczegóły punktu końcowego odnajdywania. Odbywa się to za pomocą <xref:System.ServiceModel.Configuration.StandardEndpointsSection>. W tym przykładzie użyta wersja protokołu jest modyfikowana, a także dodawanie `maxResponseDelay` atrybutu, jak pokazano w poniższym przykładzie kodu.  
+ Można również kontrolować szczegółowe informacje o punkcie końcowym odnajdywania. Odbywa się to <xref:System.ServiceModel.Configuration.StandardEndpointsSection>za pośrednictwem . W tym przykładzie wersja używanego protokołu jest modyfikowana, a także dodawanie atrybutu, `maxResponseDelay` jak pokazano w poniższym przykładzie kodu.  
   
 ```xml  
 <standardEndpoints>  
    <udpDiscoveryEndpoint>  
-      <standardEndpoint name="adhocDiscoveryEndpointConfiguration" discoveryVersion="WSDiscovery11" maxResponseDelay="00:00:00.600" />    
+      <standardEndpoint name="adhocDiscoveryEndpointConfiguration" discoveryVersion="WSDiscovery11" maxResponseDelay="00:00:00.600" />
    </udpDiscoveryEndpoint>  
 </standardEndpoints>  
 ```  
   
- Poniżej znajduje się kompletny plik konfiguracji, który jest używany w tym przykładzie:  
+ Poniżej przedstawiono kompletny plik konfiguracyjny użyty w tym przykładzie:  
   
 ```xml  
 <configuration>  
@@ -110,7 +110,7 @@ Ten przykład ilustruje użycie pliku konfiguracji w celu odnalezienia usługi.
                     binding="wsHttpBinding"  
                     contract="Microsoft.Samples.Discovery.ICalculatorService"  
                     behaviorConfiguration="endpointBehaviorConfiguration" />  
-         <!-- Define the discovery endpoint -->            
+         <!-- Define the discovery endpoint -->
 <endpoint name="udpDiscovery" kind="udpDiscoveryEndpoint" endpointConfiguration="adhocDiscoveryEndpointConfiguration"/>        </service>  
       </services>  
   
@@ -138,7 +138,7 @@ Ten przykład ilustruje użycie pliku konfiguracji w celu odnalezienia usługi.
               </scopes>  
             </endpointDiscovery>  
   
-          </behavior>            
+          </behavior>
         </endpointBehaviors>  
   
       </behaviors>  
@@ -146,7 +146,7 @@ Ten przykład ilustruje użycie pliku konfiguracji w celu odnalezienia usługi.
       <standardEndpoints>  
         <udpDiscoveryEndpoint>  
          <!-- Configure the UDP discovery endpoint -->  
-          <standardEndpoint name="adhocDiscoveryEndpointConfiguration" discoveryVersion="WSDiscovery11" maxResponseDelay="00:00:00.600" />    
+          <standardEndpoint name="adhocDiscoveryEndpointConfiguration" discoveryVersion="WSDiscovery11" maxResponseDelay="00:00:00.600" />
         </udpDiscoveryEndpoint>  
       </standardEndpoints>  
   
@@ -155,7 +155,7 @@ Ten przykład ilustruje użycie pliku konfiguracji w celu odnalezienia usługi.
 ```  
   
 ## <a name="client-configuration"></a>Konfiguracja klienta  
- W pliku konfiguracyjnym aplikacji dla klienta `standardEndpoint` typu `dynamicEndpoint` służy do korzystania z odnajdywania, jak pokazano w poniższym fragmencie kodu.  
+ W pliku konfiguracji aplikacji dla `standardEndpoint` klienta `dynamicEndpoint` typu jest używany do wykorzystania odnajdywania, jak pokazano w poniższym fragmentie konfiguratu.  
   
 ```xml  
 <client>  
@@ -169,7 +169,7 @@ Ten przykład ilustruje użycie pliku konfiguracji w celu odnalezienia usługi.
 </client>  
 ```  
   
- Gdy klient używa `dynamicEndpoint`, środowisko uruchomieniowe automatycznie wykonuje odnajdywanie. Podczas odnajdywania są używane różne ustawienia, takie jak te zdefiniowane w sekcji `discoveryClientSettings`, która określa typ punktu końcowego odnajdywania do użycia:  
+ Gdy klient używa `dynamicEndpoint`, środowisko wykonawcze wykonuje odnajdowanie automatycznie. Podczas odnajdowania są używane różne `discoveryClientSettings` ustawienia, takie jak te zdefiniowane w sekcji, która określa typ punktu końcowego odnajdywania, którego należy użyć:  
   
 ```xml  
 <endpoint kind="udpDiscoveryEndpoint" endpointConfiguration="adhocDiscoveryEndpointConfiguration" />  
@@ -190,21 +190,21 @@ Ten przykład ilustruje użycie pliku konfiguracji w celu odnalezienia usługi.
 </findCriteria>  
 ```  
   
- Ten przykład rozszerza tę funkcję i modyfikuje <xref:System.ServiceModel.Discovery.FindCriteria> używany przez klienta, a także kilka właściwości standardowego `updDiscoveryEndpoint` używany do odnajdywania. <xref:System.ServiceModel.Discovery.FindCriteria> są modyfikowane w celu korzystania z zakresu i określonego algorytmu `scopeMatchBy`, a także niestandardowych kryteriów zakończenia. Ponadto przykład pokazuje również, jak klient może wysyłać elementy XML przy użyciu komunikatów `Probe`. Na koniec niektóre zmiany są wprowadzane do <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, takich jak wersja używanego protokołu i ustawienia specyficzne dla UDP, jak pokazano w następującym pliku konfiguracyjnym.  
+ Ten przykład rozszerza tę funkcję <xref:System.ServiceModel.Discovery.FindCriteria> i modyfikuje używane przez klienta, a `updDiscoveryEndpoint` także niektóre właściwości standardu używanego do odnajdowania. Są <xref:System.ServiceModel.Discovery.FindCriteria> modyfikowane w celu użycia `scopeMatchBy` zakresu i określonego algorytmu, a także kryteria zakończenia niestandardowego. Ponadto w przykładzie pokazano również, jak klient `Probe` może wysyłać elementy XML przy użyciu wiadomości. Wreszcie, niektóre zmiany są <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>wprowadzane do , takich jak wersja używanego protokołu i ustawienia specyficzne dla UDP, jak pokazano w poniższym pliku konfiguracyjnym.  
   
 ```xml  
-<udpDiscoveryEndpoint>    
-        <!-- Specify the discovery protocol version and UDP transport settings. -->   
+<udpDiscoveryEndpoint>
+        <!-- Specify the discovery protocol version and UDP transport settings. -->
         <standardEndpoint name="adhocDiscoveryEndpointConfiguration" discoveryVersion="WSDiscovery11">  
           <transportSettings duplicateMessageHistoryLength="2048"  
                              maxPendingMessageCount="5"  
                              maxReceivedMessageSize="8192"  
                              maxBufferPoolSize="262144"/>  
-        </standardEndpoint>        
+        </standardEndpoint>
       </udpDiscoveryEndpoint>  
 ```  
   
- Poniżej znajduje się kompletna konfiguracja klienta użyta w przykładzie.  
+ Poniżej przedstawiono pełną konfigurację klienta używaną w przykładzie.  
   
 ```xml  
 <configuration>  
@@ -222,7 +222,7 @@ Ten przykład ilustruje użycie pliku konfiguracji w celu odnalezienia usługi.
   
     <standardEndpoints>  
   
-      <dynamicEndpoint>        
+      <dynamicEndpoint>
         <standardEndpoint name="dynamicEndpointConfiguration">  
           <discoveryClientSettings>  
             <!-- Controls where the discovery happens. In this case, Probe message is sent over UdpDiscoveryEndpoint. -->  
@@ -239,17 +239,17 @@ Ten przykład ilustruje użycie pliku konfiguracji w celu odnalezienia usługi.
               </extensions>  
             </findCriteria>  
           </discoveryClientSettings>  
-        </standardEndpoint>     
+        </standardEndpoint>
       </dynamicEndpoint>  
   
-      <udpDiscoveryEndpoint>    
-        <!-- Specify the discovery protocol version and UDP transport settings. -->   
+      <udpDiscoveryEndpoint>
+        <!-- Specify the discovery protocol version and UDP transport settings. -->
         <standardEndpoint name="adhocDiscoveryEndpointConfiguration" discoveryVersion="WSDiscovery11">  
           <transportSettings duplicateMessageHistoryLength="2048"  
                              maxPendingMessageCount="5"  
                              maxReceivedMessageSize="8192"  
                              maxBufferPoolSize="262144"/>  
-        </standardEndpoint>        
+        </standardEndpoint>
       </udpDiscoveryEndpoint>  
   
     </standardEndpoints>  
@@ -257,12 +257,12 @@ Ten przykład ilustruje użycie pliku konfiguracji w celu odnalezienia usługi.
   </system.serviceModel>  
 ```  
   
-#### <a name="to-use-this-sample"></a>Aby użyć tego przykładu  
+#### <a name="to-use-this-sample"></a>Aby użyć tej próbki  
   
-1. Ten przykład korzysta z punktów końcowych HTTP i do uruchomienia tego przykładu należy dodać prawidłowe listy ACL adresów URL. Aby uzyskać więcej informacji, zobacz [Konfigurowanie protokołów HTTP i https](../feature-details/configuring-http-and-https.md). Wykonanie następującego polecenia z podwyższonym poziomem uprawnień powinno spowodować dodanie odpowiednich list ACL. Można zastąpić domenę i nazwę użytkownika dla następujących argumentów, jeśli polecenie nie działa zgodnie z oczekiwaniami. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. W tym przykładzie użyto punktów końcowych HTTP i do uruchomienia tego przykładu należy dodać odpowiednie listy ACL adresów URL. Aby uzyskać więcej informacji, zobacz [Konfigurowanie protokołu HTTP i HTTPS](../feature-details/configuring-http-and-https.md). Wykonywanie następującego polecenia z podwyższonym poziomem uprawnień należy dodać odpowiednie listy ACL. Jeśli polecenie nie działa zgodnie z oczekiwaniami, można zastąpić domenę i nazwę użytkownika następującymi argumentami. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
 2. Skompiluj rozwiązanie.  
   
 3. Uruchom plik wykonywalny usługi z katalogu kompilacji.  
   
-4. Uruchom plik wykonywalny klienta. Należy pamiętać, że klient może zlokalizować usługę.  
+4. Uruchom plik wykonywalny klienta. Należy zauważyć, że klient jest w stanie zlokalizować usługę.  

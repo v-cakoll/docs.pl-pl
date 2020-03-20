@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f0d721e2-b946-426d-8e20-9124bd04e4cb
 topic_type:
 - apiref
-ms.openlocfilehash: e4549789ea1af584c0850a535d9f6bb54f844ce0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 70f76318f51047cb81262f744a6fbed5fe401692
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443545"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177815"
 ---
 # <a name="imetadataassemblyimportenumfiles-method"></a>IMetaDataAssemblyImport::EnumFiles — Metoda
 Wylicza pliki, do których odwołuje się bieżący manifest zestawu.  
@@ -29,42 +29,42 @@ Wylicza pliki, do których odwołuje się bieżący manifest zestawu.
   
 ```cpp  
 HRESULT EnumFiles (  
-    [in, out] HCORENUM    *phEnum,   
-    [out] mdFile          rFiles[],   
-    [in]  ULONG           cMax,   
+    [in, out] HCORENUM    *phEnum,
+    [out] mdFile          rFiles[],
+    [in]  ULONG           cMax,
     [out] ULONG           *pcTokens  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [in. out] Wskaźnik do modułu wyliczającego. Musi to być wartość null dla pierwszego wywołania tej metody.  
+ [w, na zewnątrz] Wskaźnik do wyliczacza. Musi to być wartość null dla pierwszego wywołania tej metody.  
   
  `rFiles`  
- określoną Tablica służąca do przechowywania tokenów metadanych `mdFile`.  
+ [na zewnątrz] Tablica używana do `mdFile` przechowywania tokenów metadanych.  
   
  `cMax`  
- podczas Maksymalna liczba tokenów `mdFile`, które można umieścić w `rFiles`.  
+ [w] Maksymalna liczba `mdFile` tokenów, które `rFiles`można umieścić w .  
   
  `pcTokens`  
- określoną Liczba tokenów `mdFile` faktycznie umieszczonych w `rFiles`.  
+ [na zewnątrz] Liczba tokenów `mdFile` faktycznie umieszczonych w `rFiles`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFiles` pomyślnie zwrócone.|  
-|`S_FALSE`|Brak tokenów do wyliczenia. W tym przypadku `pcTokens` jest ustawiona na zero.|  
+|`S_OK`|`EnumFiles`zwrócono pomyślnie.|  
+|`S_FALSE`|Nie ma żadnych tokenów do wyliczenia. W takim `pcTokens` przypadku jest ustawiona na zero.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataAssemblyImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [IMetaDataAssemblyImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

@@ -15,66 +15,66 @@ helpviewer_keywords:
 ms.assetid: 3fb8e178-342b-4c89-9bcf-f7f834e6cb77
 topic_type:
 - apiref
-ms.openlocfilehash: acb772a64c8f13405f2836bb5f4f308986dce414
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 20c7a90f27defa18a5ef311d1f3a549b81fc5c40
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447654"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175489"
 ---
 # <a name="imetadataimportenummembers-method"></a>IMetaDataImport::EnumMembers — Metoda
-Wylicza tokeny MemberDef reprezentujące składowe określonego typu.  
+Wylicza tokeny MemberDef reprezentujące członków określonego typu.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
-HRESULT EnumMembers (   
-   [in, out]  HCORENUM    *phEnum,   
-   [in]  mdTypeDef   cl,   
-   [out] mdToken     rMembers[],   
-   [in]  ULONG       cMax,   
+HRESULT EnumMembers (
+   [in, out]  HCORENUM    *phEnum,
+   [in]  mdTypeDef   cl,
+   [out] mdToken     rMembers[],
+   [in]  ULONG       cMax,
    [out] ULONG       *pcTokens  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [in. out] Wskaźnik do modułu wyliczającego.  
+ [w, na zewnątrz] Wskaźnik do wyliczacza.  
   
  `cl`  
- podczas Token TypeDef reprezentujący typ, którego składowe mają zostać wyliczone.  
+ [w] A TypeDef token reprezentujący typ, którego elementy członkowskie mają być wyliczone.  
   
  `rMembers`  
- określoną Tablica użyta do przechowywania tokenów MemberDef.  
+ [na zewnątrz] Tablica używana do przechowywania tokenów MemberDef.  
   
  `cMax`  
- podczas Maksymalny rozmiar tablicy `rMembers`.  
+ [w] Maksymalny rozmiar `rMembers` tablicy.  
   
  `pcTokens`  
- określoną Rzeczywista liczba tokenów MemberDef zwróconych w `rMembers`.  
+ [na zewnątrz] Rzeczywista liczba tokenów MemberDef `rMembers`zwrócona w .  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMembers` pomyślnie zwrócone.|  
-|`S_FALSE`|Brak tokenów MemberDef do wyliczenia. W takim przypadku `pcTokens` wynosi zero.|  
+|`S_OK`|`EnumMembers`zwrócono pomyślnie.|  
+|`S_FALSE`|Nie ma żadnych tokenów MemberDef do wyliczenia. W takim `pcTokens` przypadku wynosi zero.|  
   
 ## <a name="remarks"></a>Uwagi  
- Podczas wyliczania kolekcji elementów członkowskich klasy `EnumMembers` zwraca tylko elementy członkowskie (pola i metody, ale **nie** właściwości ani zdarzenia) zdefiniowane bezpośrednio w klasie. Nie zwraca żadnych elementów członkowskich, które dziedziczy Klasa, nawet jeśli Klasa dostarcza implementację dla tych dziedziczonych elementów członkowskich. Aby wyliczyć dziedziczone elementy członkowskie, obiekt wywołujący musi jawnie przeprowadzić łańcuch dziedziczenia. Należy zauważyć, że reguły dla łańcucha dziedziczenia mogą się różnić w zależności od języka lub kompilatora, który emituje oryginalne metadane.
- 
- Właściwości i zdarzenia nie są wyliczane przez `EnumMembers`. Aby wyliczyć te, użyj [EnumProperties —](imetadataimport-enumproperties-method.md) lub [EnumEvents —](imetadataimport-enumevents-method.md).
+ Podczas wyliczania kolekcji członków dla `EnumMembers` klasy zwraca tylko elementy członkowskie (pola i metody, ale **nie** właściwości lub zdarzenia) zdefiniowane bezpośrednio w klasie. Nie zwraca żadnych elementów członkowskich, które dziedziczy klasa, nawet jeśli klasa zapewnia implementację dla tych członków dziedziczone. Aby wyliczyć odziedziczone elementy członkowskie, obiektu wywołującego należy jawnie chodzić łańcucha dziedziczenia. Należy zauważyć, że reguły dla łańcucha dziedziczenia mogą się różnić w zależności od języka lub kompilatora, który emitował oryginalne metadane.
+
+ Właściwości i zdarzenia nie są wyliczone przez `EnumMembers`. Aby je wyliczyć, należy użyć [właściwości EnumProperties](imetadataimport-enumproperties-method.md) lub [EnumEvents](imetadataimport-enumevents-method.md).
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Uwzględnione jako zasób w pliku MsCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -5,104 +5,104 @@ helpviewer_keywords:
 - UI Automation caching in clients
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
-ms.openlocfilehash: 5c0c92f40ae60785f780cb573bb7faa77a31f273
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 186ed77594aadab9e3f49ef30e559e159aee1b60
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741778"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180286"
 ---
 # <a name="caching-in-ui-automation-clients"></a>Buforowanie w klientach automatyzacji interfejsu użytkownika
 > [!NOTE]
-> Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych klas [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zdefiniowanych w przestrzeni nazw <xref:System.Windows.Automation>. Aby uzyskać najnowsze informacje na temat [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [interfejs API usługi Windows Automation: Automatyzacja interfejsu użytkownika](/windows/win32/winauto/entry-uiauto-win32).  
+> Ta dokumentacja jest przeznaczona dla deweloperów [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] programu .NET <xref:System.Windows.Automation> Framework, którzy chcą używać klas zarządzanych zdefiniowanych w obszarze nazw. Aby uzyskać najnowsze [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]informacje na temat interfejsu [API automatyzacji systemu Windows: Automatyzacja interfejsu użytkownika](/windows/win32/winauto/entry-uiauto-win32).  
   
- W tym temacie przedstawiono buforowanie właściwości [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] i wzorców kontrolek.  
+ W tym temacie przedstawiono [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] buforowanie właściwości i wzorców kontroli.  
   
- W [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]buforowanie oznacza wstępne pobranie danych. Następnie można uzyskać dostęp do danych bez dalszej komunikacji między procesami. Buforowanie jest zwykle używane przez aplikacje klienckie automatyzacji interfejsu użytkownika do pobierania zbiorczych właściwości i wzorców kontrolek. Informacje są następnie pobierane z pamięci podręcznej w razie konieczności. Aplikacja okresowo aktualizuje pamięć podręczną, zazwyczaj w odpowiedzi na zdarzenia, co oznacza, że coś w [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] uległo zmianie.  
+ W [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], buforowanie oznacza wstępne pobieranie danych. Dostęp do danych można następnie uzyskać bez dalszej komunikacji między procesami. Buforowanie jest zwykle używany przez aplikacje klienckie automatyzacji interfejsu użytkownika do pobierania właściwości i wzorców kontroli zbiorczo. Informacje są następnie pobierane z pamięci podręcznej w razie potrzeby. Aplikacja aktualizuje pamięć podręczną okresowo, zwykle w odpowiedzi [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] na zdarzenia oznaczające, że coś w zmienił.  
   
- Zalety buforowania są najbardziej zauważalne w przypadku formantów Windows Presentation Foundation (WPF) i kontrolek niestandardowych z dostawcami automatyzacji interfejsu użytkownika po stronie serwera. Dostęp do dostawców po stronie klienta, takich jak domyślny dostawcy dla formantów Win32, ma mniejsze korzyści.  
+ Korzyści z buforowania są najbardziej zauważalne za pomocą formantów Windows Presentation Foundation (WPF) i formantów niestandardowych, które mają dostawców automatyzacji interfejsu użytkownika po stronie serwera. Jest mniej korzyści podczas uzyskiwania dostępu do dostawców po stronie klienta, takich jak domyślni dostawcy formanty Win32.  
   
- Buforowanie występuje, gdy aplikacja aktywuje <xref:System.Windows.Automation.CacheRequest> a następnie używa dowolnej metody lub właściwości, która zwraca <xref:System.Windows.Automation.AutomationElement>; na przykład <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>, <xref:System.Windows.Automation.AutomationElement.FindAll%2A>. Metody klasy <xref:System.Windows.Automation.TreeWalker> są wyjątkiem; buforowanie jest wykonywane tylko wtedy, gdy <xref:System.Windows.Automation.CacheRequest> jest określony jako parametr (na przykład <xref:System.Windows.Automation.TreeWalker.GetFirstChild%28System.Windows.Automation.AutomationElement%2CSystem.Windows.Automation.CacheRequest%29?displayProperty=nameWithType>.  
+ Buforowanie występuje, gdy aplikacja <xref:System.Windows.Automation.CacheRequest> aktywuje a, a następnie używa <xref:System.Windows.Automation.AutomationElement>dowolnej metody lub właściwości, która zwraca ; na przykład <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> <xref:System.Windows.Automation.AutomationElement.FindAll%2A>, . Metody <xref:System.Windows.Automation.TreeWalker> klasy są wyjątkiem; buforowanie odbywa się tylko <xref:System.Windows.Automation.CacheRequest> wtedy, <xref:System.Windows.Automation.TreeWalker.GetFirstChild%28System.Windows.Automation.AutomationElement%2CSystem.Windows.Automation.CacheRequest%29?displayProperty=nameWithType>gdy parametr jest określony jako parametr (na przykład .  
   
- Buforowanie występuje również w przypadku zasubskrybowania zdarzenia, gdy <xref:System.Windows.Automation.CacheRequest> jest aktywny. <xref:System.Windows.Automation.AutomationElement> przeszedł do programu obsługi zdarzeń, ponieważ Źródło zdarzenia zawiera buforowane właściwości i wzorce określone przez oryginalny <xref:System.Windows.Automation.CacheRequest>. Wszelkie zmiany wprowadzone w <xref:System.Windows.Automation.CacheRequest> po zasubskrybowaniu zdarzenia nie mają żadnego skutku.  
+ Buforowanie występuje również podczas subskrybowania zdarzenia, gdy <xref:System.Windows.Automation.CacheRequest> jest aktywny. Przekazany <xref:System.Windows.Automation.AutomationElement> do programu obsługi zdarzeń jako źródło zdarzenia zawiera buforowane właściwości i <xref:System.Windows.Automation.CacheRequest>wzorce określone przez oryginalny . Wszelkie zmiany wprowadzone <xref:System.Windows.Automation.CacheRequest> po subskrybowaniu zdarzenia nie mają wpływu.  
   
- Właściwości [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] i wzorce kontrolek elementu mogą być buforowane.  
+ Właściwości [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] i wzorce kontroli elementu mogą być buforowane.  
   
-<a name="Options_for_Caching"></a>   
+<a name="Options_for_Caching"></a>
 ## <a name="options-for-caching"></a>Opcje buforowania  
- <xref:System.Windows.Automation.CacheRequest> określa następujące opcje buforowania.  
+ Określa <xref:System.Windows.Automation.CacheRequest> następujące opcje buforowania.  
   
-<a name="Properties_to_Cache"></a>   
-### <a name="properties-to-cache"></a>Właściwości do buforowania  
- Możesz określić właściwości do buforowania, wywołując <xref:System.Windows.Automation.CacheRequest.Add%28System.Windows.Automation.AutomationProperty%29> dla każdej właściwości przed aktywowaniem żądania.  
+<a name="Properties_to_Cache"></a>
+### <a name="properties-to-cache"></a>Właściwości do pamięci podręcznej  
+ Można określić właściwości do <xref:System.Windows.Automation.CacheRequest.Add%28System.Windows.Automation.AutomationProperty%29> pamięci podręcznej, wywołując dla każdej właściwości przed aktywacją żądania.  
   
-<a name="Control_Patterns_to_Cache"></a>   
-### <a name="control-patterns-to-cache"></a>Wzorce kontroli do pamięci podręcznej  
- Możesz określić wzorce kontroli do buforowania, wywołując <xref:System.Windows.Automation.CacheRequest.Add%28System.Windows.Automation.AutomationPattern%29> dla każdego wzorca przed aktywowaniem żądania. Gdy wzorzec jest buforowany, jego właściwości nie są automatycznie buforowane; należy określić właściwości, które mają być buforowane przy użyciu <xref:System.Windows.Automation.CacheRequest.Add%2A?displayProperty=nameWithType>.  
+<a name="Control_Patterns_to_Cache"></a>
+### <a name="control-patterns-to-cache"></a>Steruj wzorcami do pamięci podręcznej  
+ Można określić wzorce kontroli <xref:System.Windows.Automation.CacheRequest.Add%28System.Windows.Automation.AutomationPattern%29> do pamięci podręcznej, wywołując dla każdego wzorca przed aktywacją żądania. Gdy wzorzec jest buforowany, jego właściwości nie są automatycznie buforowane; należy określić właściwości, które mają <xref:System.Windows.Automation.CacheRequest.Add%2A?displayProperty=nameWithType>być buforowane za pomocą programu .  
   
-<a name="Scope_of_the_Caching"></a>   
-### <a name="scope-and-filtering-of-caching"></a>Zakres i filtrowanie pamięci podręcznej  
- Można określić elementy, których właściwości i wzorce mają być buforowane przez ustawienie właściwości <xref:System.Windows.Automation.CacheRequest.TreeScope%2A?displayProperty=nameWithType> przed aktywowaniem żądania. Zakres jest względny dla elementów, które są pobierane, gdy żądanie jest aktywne. Na przykład jeśli ustawisz tylko <xref:System.Windows.Automation.TreeScope.Children>, a następnie pobierzesz <xref:System.Windows.Automation.AutomationElement>, właściwości i wzorce elementów podrzędnych tego elementu są buforowane, ale nie są to elementy samego elementu. Aby upewnić się, że buforowanie jest wykonywane dla pobranego elementu, należy uwzględnić <xref:System.Windows.Automation.TreeScope.Element> we właściwości <xref:System.Windows.Automation.CacheRequest.TreeScope%2A>. Nie można ustawić zakresu <xref:System.Windows.Automation.TreeScope.Parent> ani <xref:System.Windows.Automation.TreeScope.Ancestors>. Jednak element nadrzędny może być buforowany, gdy element podrzędny jest buforowany; Zobacz Pobieranie buforowanych elementów podrzędnych i elementów nadrzędnych w tym temacie.  
+<a name="Scope_of_the_Caching"></a>
+### <a name="scope-and-filtering-of-caching"></a>Zakres i filtrowanie buforowania  
+ Można określić elementy, których właściwości i wzorce chcesz <xref:System.Windows.Automation.CacheRequest.TreeScope%2A?displayProperty=nameWithType> buforować, ustawiając właściwość przed aktywacją żądania. Zakres jest względem elementów, które są pobierane, gdy żądanie jest aktywne. Na przykład jeśli ustawisz tylko <xref:System.Windows.Automation.TreeScope.Children>, <xref:System.Windows.Automation.AutomationElement>a następnie pobrać , właściwości i wzorce elementów podrzędnych tego elementu są buforowane, ale nie te samego elementu. Aby upewnić się, że buforowanie odbywa się dla <xref:System.Windows.Automation.TreeScope.Element> samego <xref:System.Windows.Automation.CacheRequest.TreeScope%2A> pobranego elementu, należy uwzględnić we właściwości. Nie jest możliwe ustawienie zakresu <xref:System.Windows.Automation.TreeScope.Parent> <xref:System.Windows.Automation.TreeScope.Ancestors>na lub . Jednak element nadrzędny może być buforowany, gdy element podrzędny jest buforowany; zobacz Pobieranie buforowanych dzieci i rodziców w tym temacie.  
   
- Właściwość <xref:System.Windows.Automation.CacheRequest.TreeFilter%2A?displayProperty=nameWithType> ma także wpływ na zakres buforowania. Domyślnie buforowanie jest wykonywane tylko dla elementów, które są wyświetlane w widoku kontrolki drzewa [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Można jednak zmienić tę właściwość, aby zastosować buforowanie do wszystkich elementów lub tylko do elementów, które są wyświetlane w widoku zawartości.  
+ Na zakres buforowania ma również wpływ <xref:System.Windows.Automation.CacheRequest.TreeFilter%2A?displayProperty=nameWithType> nieruchomość. Domyślnie buforowanie jest wykonywane tylko dla elementów, które [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] pojawiają się w widoku kontrolnym drzewa. Można jednak zmienić tę właściwość, aby zastosować buforowanie do wszystkich elementów lub tylko do elementów, które pojawiają się w widoku zawartości.  
   
-<a name="Strength_of_the_Element_References"></a>   
-### <a name="strength-of-the-element-references"></a>Siła odwołań do elementów  
- Gdy pobierasz <xref:System.Windows.Automation.AutomationElement>, domyślnie masz dostęp do wszystkich właściwości i wzorców tego elementu, w tym tych, które nie zostały w pamięci podręcznej. Jednak w celu zapewnienia większej wydajności można określić, że odwołanie do elementu odnosi się tylko do danych w pamięci podręcznej, ustawiając właściwość <xref:System.Windows.Automation.CacheRequest.AutomationElementMode%2A> <xref:System.Windows.Automation.CacheRequest> do <xref:System.Windows.Automation.AutomationElementMode.None>. W takim przypadku nie masz dostępu do żadnych niebuforowanych właściwości i wzorców pobranych elementów. Oznacza to, że nie można uzyskać dostępu do żadnych właściwości za pośrednictwem <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> lub właściwości `Current` <xref:System.Windows.Automation.AutomationElement> lub żadnego wzorca kontrolki; nie można też pobrać wzorca przy użyciu <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> lub <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A>. W przypadku wzorców w pamięci podręcznej można wywoływać metody, które pobierają właściwości tablicy, takie jak <xref:System.Windows.Automation.SelectionPattern.SelectionPatternInformation.GetSelection%2A?displayProperty=nameWithType>, ale nie wszystkie te, które wykonują działania w formancie, takie jak <xref:System.Windows.Automation.InvokePattern.Invoke%2A?displayProperty=nameWithType>.  
+<a name="Strength_of_the_Element_References"></a>
+### <a name="strength-of-the-element-references"></a>Siła odniesień do elementów  
+ Podczas pobierania programu <xref:System.Windows.Automation.AutomationElement>, domyślnie masz dostęp do wszystkich właściwości i wzorców tego elementu, w tym tych, które nie zostały zapisane w pamięci podręcznej. Jednak dla większej wydajności można określić, że odwołanie do elementu odnosi się <xref:System.Windows.Automation.CacheRequest.AutomationElementMode%2A> tylko do <xref:System.Windows.Automation.CacheRequest> <xref:System.Windows.Automation.AutomationElementMode.None>danych buforowanych, ustawiając właściwość do . W takim przypadku nie masz dostępu do żadnych właściwości nie buforowane i wzorce pobranych elementów. Oznacza to, że nie można <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> uzyskać `Current` dostępu <xref:System.Windows.Automation.AutomationElement> do żadnych właściwości za pośrednictwem lub właściwości lub wzorca kontroli; ani nie można pobrać wzorzec za pomocą <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> lub <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A>. W przypadku wzorców buforowanych można wywoływać metody pobierające <xref:System.Windows.Automation.SelectionPattern.SelectionPatternInformation.GetSelection%2A?displayProperty=nameWithType>właściwości tablicy, takie jak , ale <xref:System.Windows.Automation.InvokePattern.Invoke%2A?displayProperty=nameWithType>nie wszystkie, które wykonują akcje na formancie, takie jak .  
   
- Przykładem aplikacji, która może nie wymagać pełnych odwołań do obiektów, jest czytnik ekranu, który pobiera <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A> i <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ControlType%2A> właściwości elementów w oknie, ale nie potrzebuje <xref:System.Windows.Automation.AutomationElement> obiektów.  
+ Przykładem aplikacji, która może nie wymagać pełnych odwołań do obiektów, <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A> jest <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ControlType%2A> czytnik ekranu, który wstępnie wciągałby i właściwości elementów w oknie, ale nie potrzebowałby <xref:System.Windows.Automation.AutomationElement> samych obiektów.  
   
-<a name="Activating_the_CacheRequest"></a>   
-## <a name="activating-the-cacherequest"></a>Aktywowanie CacheRequest  
- Buforowanie jest wykonywane tylko wtedy, gdy <xref:System.Windows.Automation.AutomationElement> obiekty są pobierane, gdy <xref:System.Windows.Automation.CacheRequest> jest aktywny dla bieżącego wątku. Istnieją dwa sposoby aktywowania <xref:System.Windows.Automation.CacheRequest>.  
+<a name="Activating_the_CacheRequest"></a>
+## <a name="activating-the-cacherequest"></a>Aktywowanie cacherequest  
+ Buforowanie jest wykonywane <xref:System.Windows.Automation.AutomationElement> tylko wtedy, gdy <xref:System.Windows.Automation.CacheRequest> obiekty są pobierane, gdy jest aktywny dla bieżącego wątku. Istnieją dwa sposoby <xref:System.Windows.Automation.CacheRequest>aktywowania pliku .  
   
- Typowym sposobem jest wywołanie <xref:System.Windows.Automation.CacheRequest.Activate%2A>. Ta metoda zwraca obiekt, który implementuje <xref:System.IDisposable>. Żądanie pozostaje aktywne, o ile istnieje obiekt <xref:System.IDisposable>. Najprostszym sposobem na sterowanie okresem istnienia obiektu jest ujęcie wywołania w bloku `using` (C#) lub `Using` (Visual Basic). Dzięki temu żądanie zostanie zdjęte ze stosu, nawet jeśli zostanie zgłoszony wyjątek.  
+ Typowym sposobem jest <xref:System.Windows.Automation.CacheRequest.Activate%2A>wywołanie . Ta metoda zwraca obiekt, <xref:System.IDisposable>który implementuje . Żądanie pozostaje aktywne tak długo, <xref:System.IDisposable> jak obiekt istnieje. Najprostszym sposobem kontrolowania okresu istnienia obiektu jest ująć `using` wywołanie w `Using` bloku (C#) lub (Visual Basic). Gwarantuje to, że żądanie zostanie wyświetlenie z stosu, nawet jeśli wyjątek jest wywoływany.  
   
- Inny sposób, który jest przydatny w przypadku zagnieżdżania żądań pamięci podręcznej, to wywołanie <xref:System.Windows.Automation.CacheRequest.Push%2A>. Spowoduje to umieszczenie żądania na stosie i jego aktywowanie. Żądanie pozostanie aktywne, dopóki nie zostanie usunięte ze stosu przez <xref:System.Windows.Automation.CacheRequest.Pop%2A>. Żądanie stanie się tymczasowo nieaktywne, jeśli na stosie zostanie wypchnięte inne żądanie. aktywne jest tylko żądanie najwyższego poziomu na stosie.  
+ Innym sposobem, który jest przydatny, gdy chcesz zagnieżdżać żądania pamięci podręcznej, jest wywołanie <xref:System.Windows.Automation.CacheRequest.Push%2A>. Spowoduje to, że żądanie na stosie i aktywuje go. Żądanie pozostaje aktywne, dopóki nie zostanie <xref:System.Windows.Automation.CacheRequest.Pop%2A>usunięte ze stosu przez . Żądanie staje się tymczasowo nieaktywne, jeśli inne żądanie jest wypychane na stosie; tylko górne żądanie na stosie jest aktywne.  
   
-<a name="Retrieving_Cached_Properties"></a>   
-## <a name="retrieving-cached-properties"></a>Pobieranie właściwości pamięci podręcznej  
- Można pobrać zbuforowane właściwości elementu za pomocą następujących metod i właściwości.  
+<a name="Retrieving_Cached_Properties"></a>
+## <a name="retrieving-cached-properties"></a>Pobieranie właściwości buforowanych  
+ Można pobrać buforowane właściwości elementu za pomocą następujących metod i właściwości.  
   
 - <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>  
   
 - <xref:System.Windows.Automation.AutomationElement.Cached%2A>  
   
- Wyjątek jest zgłaszany, jeśli żądana właściwość nie znajduje się w pamięci podręcznej.  
+ Wyjątek jest wywoływany, jeśli żądana właściwość nie znajduje się w pamięci podręcznej.  
   
- <xref:System.Windows.Automation.AutomationElement.Cached%2A>, jak <xref:System.Windows.Automation.AutomationElement.Current%2A>, uwidacznia poszczególne właściwości jako elementy członkowskie struktury. Nie trzeba jednak pobierać tej struktury; dostęp do poszczególnych właściwości można uzyskać bezpośrednio. Na przykład właściwość <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A> można uzyskać z `element.Cached.Name`, gdzie `element` jest <xref:System.Windows.Automation.AutomationElement>.  
+ <xref:System.Windows.Automation.AutomationElement.Cached%2A>, <xref:System.Windows.Automation.AutomationElement.Current%2A>na przykład, udostępnia poszczególne właściwości jako elementy członkowskie konstrukcji. Jednak nie trzeba pobierać tej struktury; można uzyskać dostęp do poszczególnych właściwości bezpośrednio. Na przykład <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A> właściwość można `element.Cached.Name`uzyskać `element` z <xref:System.Windows.Automation.AutomationElement>, gdzie jest .  
   
-<a name="Retrieving_Cached_Control_Patterns"></a>   
-## <a name="retrieving-cached-control-patterns"></a>Pobieranie wzorców formantów w pamięci podręcznej  
- Można pobrać zbuforowane Wzorce formantów elementu przy użyciu poniższych metod.  
+<a name="Retrieving_Cached_Control_Patterns"></a>
+## <a name="retrieving-cached-control-patterns"></a>Pobieranie wzorców kontroli w pamięci podręcznej  
+ Można pobrać wzorce kontroli buforowane elementu za pomocą następujących metod.  
   
 - <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A>  
   
 - <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A>  
   
- Jeśli wzorzec nie znajduje się w pamięci podręcznej, <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> zgłasza wyjątek, a <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A> zwraca `false`.  
+ Jeśli wzorzec nie znajduje <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> się w pamięci <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A> `false`podręcznej, zgłasza wyjątek i zwraca .  
   
- Można pobrać zbuforowane właściwości wzorca kontrolki za pomocą właściwości `Cached` obiektu wzorca. Możesz również pobrać bieżące wartości za pomocą właściwości `Current`, ale tylko wtedy, gdy <xref:System.Windows.Automation.AutomationElementMode.None> nie została określona podczas pobierania <xref:System.Windows.Automation.AutomationElement>. (<xref:System.Windows.Automation.AutomationElementMode.Full> jest wartością domyślną i umożliwia dostęp do bieżących wartości).  
+ Można pobrać buforowane właściwości wzorca formantu `Cached` przy użyciu właściwości obiektu wzorca. Można również pobrać bieżące wartości `Current` za pośrednictwem <xref:System.Windows.Automation.AutomationElementMode.None> właściwości, ale <xref:System.Windows.Automation.AutomationElement> tylko wtedy, gdy nie został określony, gdy został pobrany. (<xref:System.Windows.Automation.AutomationElementMode.Full> jest wartością domyślną, która umożliwia dostęp do bieżących wartości.)  
   
-<a name="Retrieving_Cached_Children_and_Parents"></a>   
-## <a name="retrieving-cached-children-and-parents"></a>Pobieranie buforowanych elementów podrzędnych i elementów nadrzędnych  
- Po pobraniu <xref:System.Windows.Automation.AutomationElement> i buforowania żądań dla elementów podrzędnych tego elementu za pośrednictwem właściwości <xref:System.Windows.Automation.CacheRequest.TreeScope%2A> żądania można pobrać elementy podrzędne z właściwości <xref:System.Windows.Automation.AutomationElement.CachedChildren%2A> elementu, który został pobrany.  
+<a name="Retrieving_Cached_Children_and_Parents"></a>
+## <a name="retrieving-cached-children-and-parents"></a>Pobieranie buforowanych dzieci i rodziców  
+ Podczas pobierania <xref:System.Windows.Automation.AutomationElement> i żądania buforowania dla elementów podrzędnych tego elementu za pośrednictwem <xref:System.Windows.Automation.CacheRequest.TreeScope%2A> właściwości żądania, jest <xref:System.Windows.Automation.AutomationElement.CachedChildren%2A> następnie możliwe, aby uzyskać elementy podrzędne z właściwości pobranego elementu.  
   
- Jeśli <xref:System.Windows.Automation.TreeScope.Element> został uwzględniony w zakresie żądania pamięci podręcznej, element główny żądania jest następnie dostępny z właściwości <xref:System.Windows.Automation.AutomationElement.CachedParent%2A> dowolnego elementu podrzędnego.  
+ Jeśli <xref:System.Windows.Automation.TreeScope.Element> został uwzględniony w zakresie żądania pamięci podręcznej, główny element żądania <xref:System.Windows.Automation.AutomationElement.CachedParent%2A> jest następnie dostępny z właściwości dowolnego elementu podrzędnego.  
   
 > [!NOTE]
-> Nie można buforować obiektów nadrzędnych ani elementów nadrzędnych elementu głównego żądania.  
+> Nie można buforować elementów nadrzędnych lub elementów nadrzędnych elementu głównego żądania.  
   
-<a name="Updating_the_Cache"></a>   
+<a name="Updating_the_Cache"></a>
 ## <a name="updating-the-cache"></a>Aktualizowanie pamięci podręcznej  
- Pamięć podręczna jest prawidłowa tylko pod warunkiem, że nie ma żadnych zmian w [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Aplikacja jest odpowiedzialna za aktualizowanie pamięci podręcznej, zazwyczaj w odpowiedzi na zdarzenia.  
+ Pamięć podręczna jest prawidłowa tylko [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]tak długo, jak nic się nie zmieni w pliku . Aplikacja jest odpowiedzialna za aktualizowanie pamięci podręcznej, zazwyczaj w odpowiedzi na zdarzenia.  
   
- Jeśli subskrybujesz zdarzenie, gdy <xref:System.Windows.Automation.CacheRequest> jest aktywny, uzyskujesz <xref:System.Windows.Automation.AutomationElement> ze zaktualizowaną pamięcią podręczną jako źródłem zdarzenia za każdym razem, gdy obiekt delegowany obsługi zdarzeń zostanie wywołany. Możesz również zaktualizować informacje w pamięci podręcznej dla elementu, wywołując <xref:System.Windows.Automation.AutomationElement.GetUpdatedCache%2A>. Możesz przekazać oryginalny <xref:System.Windows.Automation.CacheRequest>, aby zaktualizować wszystkie informacje, które były wcześniej buforowane.  
+ Jeśli subskrybujesz zdarzenie, <xref:System.Windows.Automation.CacheRequest> gdy a jest <xref:System.Windows.Automation.AutomationElement> aktywny, można uzyskać z zaktualizowaną pamięcią podręczną jako źródło zdarzenia, gdy jest wywoływana delegat obsługi zdarzeń. Można również zaktualizować buforowane informacje dla <xref:System.Windows.Automation.AutomationElement.GetUpdatedCache%2A>elementu, wywołując . Można przekazać w <xref:System.Windows.Automation.CacheRequest> oryginale, aby zaktualizować wszystkie informacje, które wcześniej były buforowane.  
   
- Aktualizacja pamięci podręcznej nie powoduje zmiany właściwości istniejących odwołań <xref:System.Windows.Automation.AutomationElement>.  
+ Aktualizowanie pamięci podręcznej nie zmienia właściwości <xref:System.Windows.Automation.AutomationElement> żadnych istniejących odwołań.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Właściwości zdarzeń automatyzacji interfejsu użytkownika dla klientów](ui-automation-events-for-clients.md)
 - [Używanie buforowania w automatyzacji interfejsu użytkownika](use-caching-in-ui-automation.md)
-- [Przykład FetchTimer](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771456(v=vs.90))
+- [Próbka ściągacza](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771456(v=vs.90))

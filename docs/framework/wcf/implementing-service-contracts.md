@@ -4,25 +4,25 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - implementing service contracts [WCF]
 ms.assetid: aefb6f56-47e3-4f24-ab0a-9bc07bf9885f
-ms.openlocfilehash: ac27329278edc2b9ca693aa15bcc5bb58edffe05
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: aefe146a8941d98d7d9138e4ece83c330c967034
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320160"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184003"
 ---
 # <a name="implementing-service-contracts"></a>Implementowanie kontraktów usług
-Usługa jest klasą, która udostępnia klientom funkcje dostępne dla klientów w co najmniej jednym punkcie końcowym. Aby utworzyć usługę, napisz klasę implementującą kontrakt Windows Communication Foundation (WCF). Można to zrobić na jeden z dwóch sposobów. Kontrakt można zdefiniować oddzielnie jako interfejs, a następnie utworzyć klasę, która implementuje ten interfejs. Alternatywnie można utworzyć klasę i umowę bezpośrednio przez umieszczenie atrybutu <xref:System.ServiceModel.ServiceContractAttribute> w samej klasie i atrybutu <xref:System.ServiceModel.OperationContractAttribute> w metodach dostępnych dla klientów usługi.  
+Usługa jest klasą, która udostępnia funkcje dostępne dla klientów w jednym lub więcej punktów końcowych. Aby utworzyć usługę, napisz klasę, która implementuje kontrakt programu Windows Communication Foundation (WCF). Możesz to zrobić na dwa sposoby. Kontrakt można zdefiniować oddzielnie jako interfejs, a następnie utworzyć klasę, która implementuje ten interfejs. Alternatywnie można utworzyć klasę i kontrakt bezpośrednio, <xref:System.ServiceModel.ServiceContractAttribute> umieszczając atrybut na samej klasie i <xref:System.ServiceModel.OperationContractAttribute> atrybut na metody dostępne dla klientów usługi.  
   
 ## <a name="creating-a-service-class"></a>Tworzenie klasy usługi  
- Poniżej znajduje się przykład usługi implementującej kontrakt `IMath`, który został zdefiniowany osobno.  
+ Poniżej przedstawiono przykład usługi, która `IMath` implementuje kontrakt, który został zdefiniowany oddzielnie.  
   
 ```csharp  
 // Define the IMath contract.  
 [ServiceContract]  
 public interface IMath  
 {  
-    [OperationContract]   
+    [OperationContract]
     double Add(double A, double B);  
   
     [OperationContract]  
@@ -37,7 +37,7 @@ public class MathService : IMath
 }  
 ```  
   
- Alternatywnie usługa może bezpośrednio uwidocznić umowę. Poniżej znajduje się przykład klasy usługi, która definiuje i implementuje kontrakt `MathService`.  
+ Alternatywnie usługa może ujawnić umowy bezpośrednio. Poniżej przedstawiono przykład klasy usługi, która definiuje `MathService` i implementuje kontrakt.  
   
 ```csharp  
 // Define the MathService contract directly on the service class.  
@@ -51,15 +51,15 @@ class MathService
 }  
 ```  
   
- Należy pamiętać, że poprzednie usługi uwidaczniają różne kontrakty, ponieważ nazwy kontraktów są różne. W pierwszym przypadku umowa o nazwie "`IMath`" występuje w drugim przypadku kontraktu o nazwie "`MathService`".  
+ Należy zauważyć, że poprzednie usługi uwidaczniają różne kontrakty, ponieważ nazwy kontraktów są różne. W pierwszym przypadku wystawiona umowa`IMath`nosi nazwę " ", podczas gdy`MathService`w drugim przypadku umowa nosi nazwę " ".  
   
- Można ustawić kilka rzeczy na poziomach implementacji usługi i operacji, takich jak współbieżność i Tworzenie wystąpień. Aby uzyskać więcej informacji, zobacz [projektowanie i implementowanie usług](designing-and-implementing-services.md).  
+ Można ustawić kilka rzeczy na poziomie wykonania usługi i operacji, takich jak współbieżność i instancing. Aby uzyskać więcej informacji, zobacz [Projektowanie i wdrażanie usług](designing-and-implementing-services.md).  
   
- Po wdrożeniu kontraktu usługi należy utworzyć co najmniej jeden punkt końcowy dla usługi. Aby uzyskać więcej informacji, zobacz [Omówienie tworzenia punktów końcowych](endpoint-creation-overview.md). Aby uzyskać więcej informacji na temat sposobu uruchamiania usługi, zobacz [usługi hostingu](hosting-services.md).  
+ Po zaimplementowanie umowy serwisowej należy utworzyć jeden lub więcej punktów końcowych dla usługi. Aby uzyskać więcej informacji, zobacz [Omówienie tworzenia punktu końcowego](endpoint-creation-overview.md). Aby uzyskać więcej informacji na temat uruchamiania usługi, zobacz [Usługi hostingowe](hosting-services.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Projektowanie i implementowanie usług](designing-and-implementing-services.md)
 - [Instrukcje: tworzenie usługi za pomocą klasy kontraktu](./feature-details/how-to-create-a-wcf-contract-with-a-class.md)
-- [Instrukcje: tworzenie usługi przy użyciu interfejsu kontraktu](./feature-details/how-to-create-a-service-with-a-contract-interface.md)
+- [Instrukcje: Tworzenie usługi przy użyciu interfejsu kontraktu](./feature-details/how-to-create-a-service-with-a-contract-interface.md)
 - [Określanie zachowania środowiska uruchomieniowego usługi](specifying-service-run-time-behavior.md)

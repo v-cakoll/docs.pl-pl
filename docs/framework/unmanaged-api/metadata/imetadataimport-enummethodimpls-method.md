@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e0f865d-88b5-44bd-be35-492622e5e08e
 topic_type:
 - apiref
-ms.openlocfilehash: 193e8788d5a1b28f43f2fb0d4d935a18542dd923
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e766cec8fd84713e12c43cd1095650ed5b757bcb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427491"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175476"
 ---
 # <a name="imetadataimportenummethodimpls-method"></a>IMetaDataImport::EnumMethodImpls — Metoda
 Wylicza tokeny MethodBody i MethodDeclaration reprezentujące metody określonego typu.  
@@ -29,51 +29,51 @@ Wylicza tokeny MethodBody i MethodDeclaration reprezentujące metody określoneg
   
 ```cpp  
 HRESULT EnumMethodImpls (  
-   [in, out] HCORENUM    *phEnum,   
-   [in]      mdTypeDef   td,   
-   [out]     mdToken     rMethodBody[],   
-   [out]     mdToken     rMethodDecl[],   
-   [in]      ULONG       cMax,   
+   [in, out] HCORENUM    *phEnum,
+   [in]      mdTypeDef   td,
+   [out]     mdToken     rMethodBody[],
+   [out]     mdToken     rMethodDecl[],
+   [in]      ULONG       cMax,
    [in]      ULONG       *pcTokens  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [in. out] Wskaźnik do modułu wyliczającego. Musi ona mieć wartość NULL dla pierwszego wywołania tej metody.  
+ [w, na zewnątrz] Wskaźnik do wyliczacza. Musi to być null dla pierwszego wywołania tej metody.  
   
  `td`  
- podczas Token TypeDef dla typu, którego implementacje metod mają zostać wyliczone.  
+ [w] A TypeDef token dla typu, którego implementacje metody do wyliczenia.  
   
  `rMethodBody`  
- określoną Tablica do przechowywania tokenów MethodBody.  
+ [na zewnątrz] Tablica do przechowywania tokenów MethodBody.  
   
  `rMethodDecl`  
- określoną Tablica do przechowywania tokenów MethodDeclaration.  
+ [na zewnątrz] Tablica do przechowywania tokenów MethodDeclaration.  
   
  `cMax`  
- podczas Maksymalny rozmiar tablic `rMethodBody` i `rMethodDecl`.  
+ [w] Maksymalny rozmiar `rMethodBody` tablic `rMethodDecl` i tablic.  
   
  `pcTokens`  
- podczas Rzeczywista liczba metod zwróconych w `rMethodBody` i `rMethodDecl`.  
+ [w] Rzeczywista liczba metod `rMethodBody` zwróconych w i `rMethodDecl`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodImpls` pomyślnie zwrócone.|  
-|`S_FALSE`|Brak tokenów metody do wyliczenia. W takim przypadku `pcTokens` wynosi zero.|  
+|`S_OK`|`EnumMethodImpls`zwrócono pomyślnie.|  
+|`S_FALSE`|Nie ma żadnych tokenów metody do wyliczenia. W takim `pcTokens` przypadku wynosi zero.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Uwzględnione jako zasób w pliku MsCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

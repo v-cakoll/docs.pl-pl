@@ -6,77 +6,77 @@ helpviewer_keywords:
 - control types, Menu Bar
 - Menu Bar control type
 ms.assetid: c1202b21-c1f0-4560-853c-7b99bd73ad97
-ms.openlocfilehash: a6727b298c6289297fe049ffa4e64623bc9b711a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: c50c5abb450ae44fcc08507354ea73f3a780afdf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76778442"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179647"
 ---
 # <a name="ui-automation-support-for-the-menubar-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla typu formantu MenuBar
 > [!NOTE]
-> Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych klas [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zdefiniowanych w przestrzeni nazw <xref:System.Windows.Automation>. Aby uzyskać najnowsze informacje na temat [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [interfejs API usługi Windows Automation: Automatyzacja interfejsu użytkownika](/windows/win32/winauto/entry-uiauto-win32).  
+> Ta dokumentacja jest przeznaczona dla deweloperów [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] programu .NET <xref:System.Windows.Automation> Framework, którzy chcą używać klas zarządzanych zdefiniowanych w obszarze nazw. Aby uzyskać najnowsze [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]informacje na temat interfejsu [API automatyzacji systemu Windows: Automatyzacja interfejsu użytkownika](/windows/win32/winauto/entry-uiauto-win32).  
   
- Ten temat zawiera informacje na temat obsługi [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] dla typu formantu <xref:System.Windows.Automation.ControlType.MenuBar>. W [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]typ formantu to zestaw warunków, które formant musi spełniać, aby można było użyć właściwości <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty>. Warunki obejmują określone wytyczne dotyczące struktury drzewa [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], wartości właściwości [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] i wzorców formantów.  
+ Ten temat zawiera [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] informacje <xref:System.Windows.Automation.ControlType.MenuBar> na temat obsługi typu formantu. W [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], typ formantu jest zestawem warunków, które <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> formant musi spełniać w celu użycia właściwości. Warunki obejmują szczegółowe [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] wytyczne dotyczące [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] struktury drzewa, wartości właściwości i wzorców kontroli.  
   
- Kontrolki paska menu to przykład formantów, które implementują typ formantu MenuBar. Paski menu zapewniają użytkownikom możliwość aktywowania poleceń i opcji zawartych w aplikacji.  
+ Kontrolki paska menu są przykładem formantów, które implementują typ formantu MenuBar. Paski menu umożliwiają użytkownikom aktywowanie poleceń i opcji zawartych w aplikacji.  
   
- Poniższe sekcje definiują wymaganą strukturę drzewa [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], właściwości, wzorce formantów i zdarzenia dla typu formantu MenuBar. Wymagania [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] są stosowane do wszystkich kontrolek listy, czy [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 czy Windows Forms.  
+ Poniższe sekcje definiują wymaganą [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] strukturę drzewa, właściwości, wzorce kontroli i zdarzenia dla typu formantu MenuBar. Wymagania [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] dotyczą wszystkich formantów [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]listy, niezależnie od tego, czy , Win32 lub Windows Forms.  
   
-<a name="Required_UI_Automation_Tree_Structure"></a>   
+<a name="Required_UI_Automation_Tree_Structure"></a>
 ## <a name="required-ui-automation-tree-structure"></a>Wymagana struktura drzewa automatyzacji interfejsu użytkownika  
- W poniższej tabeli przedstawiono widok kontrolki i widok zawartości drzewa [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], które odnoszą się do kontrolek paska menu i opisano, co może być zawarte w poszczególnych widokach. Aby uzyskać więcej informacji na temat drzewa [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Omówienie drzewa automatyzacji interfejsu użytkownika](ui-automation-tree-overview.md).  
+ W poniższej tabeli przedstawiono widok formantu i widok zawartości [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa, który odnosi się do formantów paska menu i opisuje, co może być zawarte w każdym widoku. Aby uzyskać więcej [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] informacji na temat drzewa, zobacz [Omówienie drzewa automatyzacji interfejsu użytkownika](ui-automation-tree-overview.md).  
   
-|Widok kontrolki|Widok zawartości|  
+|Widok sterowania|Widok zawartości|  
 |------------------|------------------|  
-|Paska menu<br /><br /> -MenuItem (1 lub więcej)<br />-Inne kontrolki (0 lub wiele)|Paska menu<br /><br /> -MenuItem (1 lub więcej)<br />-Inne kontrolki (0 lub wiele)|  
+|Menubar<br /><br /> - MenuItem (1 lub więcej)<br />- Inne elementy sterujące (0 lub wiele)|Menubar<br /><br /> - MenuItem (1 lub więcej)<br />- Inne elementy sterujące (0 lub wiele)|  
   
- Kontrolki paska menu mogą zawierać inne kontrolki, takie jak kontrolki edycji i pola kombi w obrębie swojej struktury. Te dodatkowe kontrolki odnoszą się do "innych kontrolek" wymienionych powyżej w widokach kontrolki i zawartości.  
+ Kontrolki paska menu mogą zawierać inne formanty, takie jak kontrolki edycji i pola kombi w jego strukturze. Te dodatkowe formanty odpowiadają "inne formanty" wymienione powyżej w widokach formantu i zawartości.  
   
-<a name="Required_UI_Automation_Properties"></a>   
+<a name="Required_UI_Automation_Properties"></a>
 ## <a name="required-ui-automation-properties"></a>Wymagane właściwości automatyzacji interfejsu użytkownika  
- W poniższej tabeli wymieniono [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] właściwości, których wartość lub definicja jest szczególnie istotna dla formantów paska menu. Aby uzyskać więcej informacji na temat właściwości [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [właściwości automatyzacji interfejsu użytkownika dla klientów](ui-automation-properties-for-clients.md).  
+ W poniższej [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tabeli wymieniono właściwości, których wartość lub definicja jest szczególnie istotne dla formantów paska menu. Aby uzyskać [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] więcej informacji na temat właściwości, zobacz [Właściwości automatyzacji interfejsu użytkownika dla klientów](ui-automation-properties-for-clients.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Właściwość|Wartość|Uwagi|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]Właściwość|Wartość|Uwagi|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Zobacz uwagi.|Wartość udostępniona przez tę właściwość musi zawierać wszystkie zawarte w niej kontrolki.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Zobacz uwagi.|Formant paska menu nie wymaga nazwy, chyba że aplikacja ma więcej niż jeden pasek menu. Jeśli w aplikacji znajduje się więcej niż jeden pasek menu, ta właściwość powinna być używana do ujawniania nazw wyróżniających, takich jak "formatowanie" lub "Konspekt".|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Zobacz notatki.|Wartość widoczna przez tę właściwość musi zawierać wszystkie formanty zawarte w niej.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Zobacz notatki.|Formant paska menu nie wymaga nazwy, chyba że aplikacja ma więcej niż jeden pasek menu. Jeśli w aplikacji znajduje się więcej niż jeden pasek menu, ta właściwość powinna być używana do udostępniania nazw wyróżniających, takich jak "Formatowanie" lub "Tworzenie wartości przesuwu".|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`|Kontrolki paska menu nigdy nie mają etykiety.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Paska menu|Ta wartość jest taka sama dla wszystkich platform interfejsu użytkownika.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Menubar|Ta wartość jest taka sama dla wszystkich struktur interfejsu użytkownika.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"pasek menu"|Zlokalizowany ciąg odpowiadający typowi formantu MenuBar.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|Prawda|Formant pasek menu jest zawsze zawarty w widoku zawartości drzewa [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|Prawda|Kontrolka pasek menu jest zawsze zawarta w widoku kontrolki drzewa [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>|Zobacz uwagi.|Wartość tej właściwości zależy od tego, czy kontrolka jest widoczna na ekranie.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.OrientationProperty>|Zależy od|Ta właściwość uwidacznia, czy formant paska menu jest poziomy, czy pionowy.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|Prawda|Kontrolki paska menu są skoncentrowane na klawiaturze, ponieważ zawarte w nich kontrolki mogą mieć fokus klawiatury.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>|Zobacz uwagi.|Brak scenariuszy dla, gdy tekst pomocy jest wymagany dla kontrolki paska menu.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AcceleratorKeyProperty>|`Null`|Paski menu nigdy nie mają klawiszy skrótów.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AccessKeyProperty>|+|Naciśnięcie klawisza ALT powinno zawsze przenieść fokus na pasek menu w aplikacji.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|Formant paska menu jest zawsze uwzględniony [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] w widoku zawartości drzewa.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Formant paska menu jest zawsze uwzględniony [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] w widoku sterującym drzewa.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>|Zobacz notatki.|Wartość tej właściwości zależy od tego, czy formant jest widoczny na ekranie.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.OrientationProperty>|Zależy|Ta właściwość ujawnia, czy formant paska menu jest poziomy czy pionowy.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|True|Kontrolki paska menu są fokusem klawiatury, ponieważ formanty, które zawierają, mogą fokus klawiatury.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>|Zobacz notatki.|Brak scenariuszy, gdy tekst Pomocy jest wymagany dla formantu paska menu.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AcceleratorKeyProperty>|`Null`|Paski menu nigdy nie mają klawiszy akceleratora.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AccessKeyProperty>|"ALT"|Naciśnięcie klawisza ALT powinno zawsze skupić się na pasku menu w aplikacji.|  
   
-<a name="Required_UI_Automation_Control_Patterns"></a>   
-## <a name="required-ui-automation-control-patterns"></a>Wymagane wzorce kontrolek automatyzacji interfejsu użytkownika  
- Poniższa tabela zawiera listę wzorców formantów [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] wymaganych do obsługi przez kontrolki paska menu. Aby uzyskać więcej informacji na temat wzorców kontroli, zobacz [Wzorce formantów automatyzacji interfejsu użytkownika — omówienie](ui-automation-control-patterns-overview.md).  
+<a name="Required_UI_Automation_Control_Patterns"></a>
+## <a name="required-ui-automation-control-patterns"></a>Wymagane wzorce sterowania automatyzacją interfejsu użytkownika  
+ W poniższej [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tabeli wymieniono wzorce formantów, które muszą być obsługiwane przez kontrolki paska menu. Aby uzyskać więcej informacji na temat wzorców sterowania, zobacz [Omówienie wzorców sterowania automatyzacją interfejsu użytkownika](ui-automation-control-patterns-overview.md).  
   
-|Wzorzec kontrolki|Obsługa|Uwagi|  
+|Wzór sterowania|Pomoc techniczna|Uwagi|  
 |---------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Zależy od|Jeśli formant może być rozwinięty lub zwinięty, należy zaimplementować <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>.|  
-|<xref:System.Windows.Automation.Provider.IDockProvider>|Zależy od|Jeśli formant można zadokować do różnych części ekranu, zaimplementuj <xref:System.Windows.Automation.Provider.IDockProvider>.|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider>|Zależy od|Jeśli rozmiar formantu można zmienić, obracany lub przenoszony, musi on implementować <xref:System.Windows.Automation.Provider.ITransformProvider>.|  
+|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Zależy|Jeśli formant można rozwinąć lub <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>zwinąć, zaimplementuj .|  
+|<xref:System.Windows.Automation.Provider.IDockProvider>|Zależy|Jeśli formant można zadokować do różnych <xref:System.Windows.Automation.Provider.IDockProvider>części ekranu, zaimplementuj .|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider>|Zależy|Jeśli formant można zwymiarować, obrócić <xref:System.Windows.Automation.Provider.ITransformProvider>lub przenieść, musi on implementować .|  
   
-<a name="Required_UI_Automation_Events"></a>   
+<a name="Required_UI_Automation_Events"></a>
 ## <a name="required-ui-automation-events"></a>Wymagane zdarzenia automatyzacji interfejsu użytkownika  
- Poniższa tabela zawiera listę zdarzeń [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], które są wymagane do obsługi przez wszystkie kontrolki paska menu. Aby uzyskać więcej informacji na temat zdarzeń, zobacz [Omówienie zdarzeń automatyzacji interfejsu użytkownika](ui-automation-events-overview.md).  
+ W poniższej [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tabeli wymieniono zdarzenia, które muszą być obsługiwane przez wszystkie kontrolki paska menu. Aby uzyskać więcej informacji na temat zdarzeń, zobacz [Omówienie zdarzeń automatyzacji interfejsu użytkownika](ui-automation-events-overview.md).  
   
-|Zdarzenie [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Obsługa/wartość|Uwagi|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]Zdarzenie|Wsparcie/wartość|Uwagi|  
 |---------------------------------------------------------------------------------|--------------------|-----------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> zdarzenie zmiany właściwości.|Wymagane|Brak|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> zdarzenie zmiany właściwości.|Wymagane|Brak|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> zdarzenie zmiany właściwości.|Wymagane|Brak|  
-|<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> zdarzenie zmiany właściwości.|Zależy od|Brak|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Wymagane|Brak|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Wymagane|Brak|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>zdarzenie, które uległo zmianie właściwości.|Wymagany|Brak|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>zdarzenie, które uległo zmianie właściwości.|Wymagany|Brak|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty>zdarzenie, które uległo zmianie właściwości.|Wymagany|Brak|  
+|<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty>zdarzenie, które uległo zmianie właściwości.|Zależy|Brak|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Wymagany|Brak|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Wymagany|Brak|  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Windows.Automation.ControlType.MenuBar>
 - [Typy kontrolek automatyzacji interfejsu użytkownika — omówienie](ui-automation-control-types-overview.md)

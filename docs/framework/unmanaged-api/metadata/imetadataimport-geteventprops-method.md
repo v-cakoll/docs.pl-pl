@@ -15,31 +15,31 @@ helpviewer_keywords:
 ms.assetid: 5eaf3b4a-92b7-4d5b-97e0-1e83721e0052
 topic_type:
 - apiref
-ms.openlocfilehash: 18fe0c834506d0ac4cd15fd7af4c4f15904b0f81
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 306c1748b4997309ee15fb7751bc818b0287aaf0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437583"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177269"
 ---
 # <a name="imetadataimportgeteventprops-method"></a>IMetaDataImport::GetEventProps — Metoda
-Pobiera informacje o metadanych dla zdarzenia reprezentowanego przez określony token zdarzenia, w tym typ deklarujący, metody dodawania i usuwania dla delegatów oraz wszelkie flagi i inne skojarzone dane.  
+Pobiera informacje o metadanych dla zdarzenia reprezentowane przez token określonego zdarzenia, w tym typ deklarowania, dodawanie i usuwanie metod delegatów i wszelkie flagi i inne skojarzone dane.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
 HRESULT GetEventProps (  
    [in]  mdEvent       ev,  
-   [out] mdTypeDef     *pClass,   
-   [out] LPCWSTR       szEvent,   
-   [in]  ULONG         cchEvent,   
-   [out] ULONG         *pchEvent,   
+   [out] mdTypeDef     *pClass,
+   [out] LPCWSTR       szEvent,
+   [in]  ULONG         cchEvent,
+   [out] ULONG         *pchEvent,
    [out] DWORD         *pdwEventFlags,  
    [out] mdToken       *ptkEventType,  
-   [out] mdMethodDef   *pmdAddOn,   
-   [out] mdMethodDef   *pmdRemoveOn,   
-   [out] mdMethodDef   *pmdFire,   
-   [out] mdMethodDef   rmdOtherMethod[],   
+   [out] mdMethodDef   *pmdAddOn,
+   [out] mdMethodDef   *pmdRemoveOn,
+   [out] mdMethodDef   *pmdFire,
+   [out] mdMethodDef   rmdOtherMethod[],
    [in]  ULONG         cMax,  
    [out] ULONG         *pcOtherMethod  
 );  
@@ -47,51 +47,51 @@ HRESULT GetEventProps (
   
 ## <a name="parameters"></a>Parametry  
  `ev`  
- podczas Token metadanych zdarzenia, który reprezentuje zdarzenie, dla którego mają zostać pobrane metadane.  
+ [w] Token metadanych zdarzenia reprezentujący zdarzenie, dla które można uzyskać metadane.  
   
  `pClass`  
- określoną Wskaźnik do tokenu TypeDef reprezentujący klasę, która deklaruje zdarzenie.  
+ [na zewnątrz] Wskaźnik do TypeDef token reprezentujący klasę, która deklaruje zdarzenie.  
   
  `szEvent`  
- określoną Nazwa zdarzenia, do którego odwołuje się `ev`.  
+ [na zewnątrz] Nazwa zdarzenia, do którego `ev`odwołuje się .  
   
  `pchEvent`  
- podczas Wymagana długość w szerokich znakach `szEvent`.  
+ [w] Żądana długość w szerokich znakach `szEvent`.  
   
  `pdwEventFlags`  
- określoną Długość zwrócona w postaci znaków dwubajtowych `szEvent`.  
+ [na zewnątrz] Zwrócona długość w `szEvent`szerokich znakach .  
   
  `ptkEventType`  
- określoną Wskaźnik do tokenu metadanych elementu TypeRef lub TypeDef reprezentujący typ <xref:System.Delegate> zdarzenia.  
+ [na zewnątrz] Wskaźnik do typeref lub TypeDef token metadanych reprezentujących <xref:System.Delegate> typ zdarzenia.  
   
  `pmdAddOn`  
- określoną Wskaźnik do tokenu metadanych reprezentującej metodę, która dodaje procedury obsługi dla zdarzenia.  
+ [na zewnątrz] Wskaźnik do tokenu metadanych reprezentujący metodę, która dodaje programy obsługi dla zdarzenia.  
   
  `pmdRemoveOn`  
- określoną Wskaźnik do tokenu metadanych reprezentująca metodę, która usuwa procedury obsługi dla zdarzenia.  
+ [na zewnątrz] Wskaźnik do tokenu metadanych reprezentujący metodę, która usuwa programy obsługi dla zdarzenia.  
   
  `pmdFire`  
- określoną Wskaźnik do tokenu metadanych reprezentująca metodę, która wywołuje zdarzenie.  
+ [na zewnątrz] Wskaźnik do tokenu metadanych reprezentujący metodę, która wywołuje zdarzenie.  
   
  `rmdOtherMethod`  
- określoną Tablica wskaźników tokenów z innymi metodami skojarzonymi ze zdarzeniem.  
+ [na zewnątrz] Tablica wskaźników tokenu do innych metod skojarzonych ze zdarzeniem.  
   
  `cMax`  
- podczas Maksymalny rozmiar tablicy `rmdOtherMethod`.  
+ [w] Maksymalny rozmiar `rmdOtherMethod` tablicy.  
   
  `pcOtherMethod`  
- określoną Liczba tokenów zwróconych w `rmdOtherMethod`.  
+ [na zewnątrz] Liczba tokenów zwróconych `rmdOtherMethod`w .  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Uwzględnione jako zasób w pliku MsCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -6,86 +6,86 @@ helpviewer_keywords:
 - UI Automation, Text control type
 - control types, Text
 ms.assetid: ab0d0ada-8a71-4547-9c03-aadf675938f2
-ms.openlocfilehash: 857606bd0b759bd1283b5abcb3f70914a48014a7
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 7fcfd783f4e6aa755d9c10f4a27296db548fd1df
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76785849"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179517"
 ---
 # <a name="ui-automation-support-for-the-text-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu tekst
 > [!NOTE]
-> Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych klas [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zdefiniowanych w przestrzeni nazw <xref:System.Windows.Automation>. Aby uzyskać najnowsze informacje na temat [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [interfejs API usługi Windows Automation: Automatyzacja interfejsu użytkownika](/windows/win32/winauto/entry-uiauto-win32).  
+> Ta dokumentacja jest przeznaczona dla deweloperów [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] programu .NET <xref:System.Windows.Automation> Framework, którzy chcą używać klas zarządzanych zdefiniowanych w obszarze nazw. Aby uzyskać najnowsze [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]informacje na temat interfejsu [API automatyzacji systemu Windows: Automatyzacja interfejsu użytkownika](/windows/win32/winauto/entry-uiauto-win32).  
   
- Ten temat zawiera informacje na temat obsługi [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] dla typu formantu Text. W [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]typ formantu to zestaw warunków, które formant musi spełniać, aby można było użyć właściwości <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty>. Warunki obejmują określone wytyczne dotyczące struktury drzewa [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], wartości właściwości [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] i wzorców formantów.  
+ Ten temat zawiera [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] informacje dotyczące obsługi typu formantu Tekst. W [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], typ formantu jest zestawem warunków, które <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> formant musi spełniać w celu użycia właściwości. Warunki obejmują szczegółowe [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] wytyczne dotyczące [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] struktury drzewa, wartości właściwości i wzorców kontroli.  
   
- Kontrolki tekstu to podstawowy element interfejsu użytkownika, który reprezentuje fragment tekstu na ekranie.  
+ Formanty tekstu są podstawowym elementem interfejsu użytkownika, który reprezentuje fragment tekstu na ekranie.  
   
- Poniższe sekcje definiują wymaganą strukturę drzewa [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], właściwości, wzorce formantów i zdarzenia dla typu formantu Text. Wymagania [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] są stosowane do wszystkich kontrolek tekstu, czy [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 czy Windows Forms.  
+ Poniższe sekcje definiują wymaganą [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] strukturę drzewa, właściwości, wzorce kontroli i zdarzenia dla typu formantu Tekst. Wymagania [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] dotyczą wszystkich formantów [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]tekstu, niezależnie od tego, czy , Win32 lub Windows Forms.  
   
-<a name="Required_UI_Automation_Tree_Structure"></a>   
+<a name="Required_UI_Automation_Tree_Structure"></a>
 ## <a name="required-ui-automation-tree-structure"></a>Wymagana struktura drzewa automatyzacji interfejsu użytkownika  
- W poniższej tabeli przedstawiono widok kontrolki i widok zawartości drzewa [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], które odnoszą się do kontrolek tekstowych i opisano, co może być zawarte w poszczególnych widokach. Aby uzyskać więcej informacji na temat drzewa [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Omówienie drzewa automatyzacji interfejsu użytkownika](ui-automation-tree-overview.md).  
+ W poniższej tabeli przedstawiono widok formantu i widok zawartości [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa, który odnosi się do formantów tekstu i opisuje, co może być zawarte w każdym widoku. Aby uzyskać więcej [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] informacji na temat drzewa, zobacz [Omówienie drzewa automatyzacji interfejsu użytkownika](ui-automation-tree-overview.md).  
   
-|Widok kontrolki|Widok zawartości|  
+|Widok sterowania|Widok zawartości|  
 |------------------|------------------|  
-|Tekst|Tekst (Jeśli zawartość)|  
+|Tekst|Tekst (jeśli treść)|  
   
- Kontrolka tekst może być używana jako etykieta lub jako tekst statyczny w formularzu. Może być również zawarty w strukturze:  
+ Formant tekstu może być używany samodzielnie jako etykieta lub jako tekst statyczny w formularzu. Może być również zawarty w strukturze:  
   
-- ListItem  
+- Listitem  
   
-- TreeItem  
+- Treeitem  
   
-- Elementu  
+- Dataitem  
   
- Kontrolki tekstu nie mogą znajdować się w widoku zawartości drzewa [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], ponieważ tekst jest często wyświetlany przez `NameProperty` innej kontrolki. Na przykład tekst, który jest używany do etykietowania kontrolki pola kombi, jest udostępniany przez wartość `NameProperty` formantu. Ponieważ kontrolka pola kombi znajduje się w widoku zawartości drzewa automatyzacji interfejsu użytkownika, nie jest to konieczne, aby kontrolka tekst była w tym miejscu. Kontrolki tekstu zawsze mają 0 elementów podrzędnych w widoku zawartości  
+ Formanty tekstu mogą nie znajdować [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] się w widoku zawartości `NameProperty` drzewa, ponieważ tekst jest często wyświetlany za pośrednictwem innego formantu. Na przykład tekst, który jest używany do etykiety kontrolki `NameProperty` Combo Box jest narażony za pośrednictwem wartości formantu. Ponieważ formant Combo Box znajduje się w widoku zawartości drzewa automatyzacji interfejsu użytkownika, nie jest konieczne, aby formant tekstu tam był. Formanty tekstu mają zawsze 0 elementów podrzędnych w widoku zawartości  
   
-<a name="Required_UI_Automation_Properties"></a>   
+<a name="Required_UI_Automation_Properties"></a>
 ## <a name="required-ui-automation-properties"></a>Wymagane właściwości automatyzacji interfejsu użytkownika  
- W poniższej tabeli wymieniono [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] właściwości, których wartość lub definicja jest szczególnie istotna dla formantów tekstowych. Aby uzyskać więcej informacji na temat właściwości [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [właściwości automatyzacji interfejsu użytkownika dla klientów](ui-automation-properties-for-clients.md).  
+ W poniższej [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tabeli wymieniono właściwości, których wartość lub definicja jest szczególnie istotne dla formantów tekstu. Aby uzyskać [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] więcej informacji na temat właściwości, zobacz [Właściwości automatyzacji interfejsu użytkownika dla klientów](ui-automation-properties-for-clients.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Właściwość|Wartość|Uwagi|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]Właściwość|Wartość|Uwagi|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Zobacz uwagi.|Wartość tej właściwości musi być unikatowa dla wszystkich kontrolek w aplikacji.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Zobacz uwagi.|Najbardziej zewnętrzny prostokąt, który zawiera cały formant.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|Zobacz uwagi.|Obsługiwane, jeśli istnieje prostokąt ograniczający. Jeśli nie każdy punkt wewnątrz prostokąta ograniczenia jest klikany, a będziesz wykonywał wyspecjalizowane Testy trafień, a następnie przesłonić i udostępnić punkt kliknięcia.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|Zobacz uwagi.|Jeśli formant może odbierać fokus klawiatury, musi obsługiwać tę właściwość.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Zobacz uwagi.|Nazwa kontrolki paska tekstu jest zawsze wyświetlana w polu txt.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`|Kontrolki tekstu nie mają statycznej etykiety tekstowej.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Tekst|Ta wartość jest taka sama dla wszystkich platform interfejsu użytkownika.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|Opis|Zlokalizowany ciąg odpowiadający typowi kontrolce Text.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|Zależy od|Kontrolka tekstowa będzie zawartością, jeśli zawiera informacje, które nie są uwidocznione w NameProperty innego formantu.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|Prawda|Kontrolka tekstowa musi być zawsze kontrolką.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Zobacz notatki.|Wartość tej właściwości musi być unikatowa we wszystkich formantów w aplikacji.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Zobacz notatki.|Najbardziej zewnętrzny prostokąt, który zawiera cały formant.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|Zobacz notatki.|Obsługiwane, jeśli istnieje prostokąt ograniczający. Jeśli nie każdy punkt w prostokątze ograniczającym jest klikalny i wykonujesz specjalistyczne testowanie trafień, a następnie zastądaj i podaj klikalny punkt.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|Zobacz notatki.|Jeśli formant może odbierać fokus klawiatury, musi obsługiwać tę właściwość.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Zobacz notatki.|Nazwa formantu paska tekstu jest zawsze txt, który wyświetla.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`|Formanty tekstu nie mają statycznej etykiety tekstowej.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Tekst|Ta wartość jest taka sama dla wszystkich struktur interfejsu użytkownika.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"tekst"|Zlokalizowany ciąg odpowiadający typowi formantu tekstu.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|Zależy|Formant tekstu będzie zawartość, jeśli zawiera informacje nie są udostępniane w nameproperty innego formantu.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Formant tekstu musi być zawsze formantem.|  
   
-<a name="Required_UI_Automation_Control_Patterns"></a>   
-## <a name="required-ui-automation-control-patterns"></a>Wymagane wzorce kontrolek automatyzacji interfejsu użytkownika  
- Poniższa tabela zawiera listę wzorców formantów [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] wymaganych do obsługi przez kontrolki tekstu. Aby uzyskać więcej informacji na temat wzorców kontroli, zobacz [Wzorce formantów automatyzacji interfejsu użytkownika — omówienie](ui-automation-control-patterns-overview.md).  
+<a name="Required_UI_Automation_Control_Patterns"></a>
+## <a name="required-ui-automation-control-patterns"></a>Wymagane wzorce sterowania automatyzacją interfejsu użytkownika  
+ W poniższej [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tabeli wymieniono wzorce kontroli, które muszą być obsługiwane przez formanty tekstu. Aby uzyskać więcej informacji na temat wzorców sterowania, zobacz [Omówienie wzorców sterowania automatyzacją interfejsu użytkownika](ui-automation-control-patterns-overview.md).  
   
-|Wzorzec kontrolki|Obsługa|Uwagi|  
+|Wzór sterowania|Pomoc techniczna|Uwagi|  
 |---------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IValueProvider>|nigdy nie|Tekst nigdy nie obsługuje ValuePattern. Jeśli tekst jest edytowalny, jest to typ kontrolki Edycja.|  
-|<xref:System.Windows.Automation.Provider.ITextProvider>|Zależy od|Tekst powinien obsługiwać wzorzec kontrolki tekstu w celu lepszego ułatwienia dostępu; nie jest to jednak wymagane. Wzorzec kontrolki tekstu jest przydatny, gdy tekst ma bogaty styl i atrybuty (na przykład kolor, pogrubienie i kursywa). Zależy od platformy.|  
-|<xref:System.Windows.Automation.Provider.ITableItemProvider>|Zależy od|Jeśli element tekstowy jest zawarty w kontrolce tabeli, musi to być obsługiwane.|  
-|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|Zależy od|Jeśli element tekstowy jest zawarty w kontrolce tabeli, musi to być obsługiwane.|  
+|<xref:System.Windows.Automation.Provider.IValueProvider>|Nigdy|Tekst nigdy nie obsługuje ValuePattern. Jeśli tekst można edytować, jest to typ formantu Edytuj.|  
+|<xref:System.Windows.Automation.Provider.ITextProvider>|Zależy|Tekst powinien obsługiwać wzorzec kontroli tekstu w celu lepszej dostępności; jednak nie jest to wymagane. Wzorzec formantu Tekst jest przydatny, gdy tekst ma styl i atrybuty (na przykład kolor, pogrubienie i kursywę). Zależy od struktury.|  
+|<xref:System.Windows.Automation.Provider.ITableItemProvider>|Zależy|Jeśli element tekstowy znajduje się w table control, musi być obsługiwany.|  
+|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|Zależy|Jeśli element tekstowy znajduje się w formancie tabeli, musi być obsługiwany.|  
   
-<a name="Required_UI_Automation_Events"></a>   
+<a name="Required_UI_Automation_Events"></a>
 ## <a name="required-ui-automation-events"></a>Wymagane zdarzenia automatyzacji interfejsu użytkownika  
- Poniższa tabela zawiera listę zdarzeń [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], które są wymagane do obsługi przez wszystkie kontrolki tekstu. Aby uzyskać więcej informacji na temat zdarzeń, zobacz [Omówienie zdarzeń automatyzacji interfejsu użytkownika](ui-automation-events-overview.md).  
+ W poniższej [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tabeli wymieniono zdarzenia, które muszą być obsługiwane przez wszystkie formanty tekstu. Aby uzyskać więcej informacji o zdarzeniach, zobacz [Omówienie zdarzeń automatyzacji interfejsu użytkownika](ui-automation-events-overview.md).  
   
-|Zdarzenie [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Obsługa|Uwagi|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]Zdarzenie|Pomoc techniczna|Uwagi|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.TextPatternIdentifiers.TextSelectionChangedEvent>|Wymagane|Brak|  
-|<xref:System.Windows.Automation.TextPatternIdentifiers.TextChangedEvent>|Wymagane|Brak|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> zdarzenie zmiany właściwości.|Wymagane|Brak|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> zdarzenie zmiany właściwości.|Wymagane|Brak|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> zdarzenie zmiany właściwości.|Wymagane|Brak|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> zdarzenie zmiany właściwości.|Wymagane|Brak|  
-|<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> zdarzenie zmiany właściwości.|nigdy nie|Brak|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Wymagane|Brak|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Wymagane|Brak|  
+|<xref:System.Windows.Automation.TextPatternIdentifiers.TextSelectionChangedEvent>|Wymagany|Brak|  
+|<xref:System.Windows.Automation.TextPatternIdentifiers.TextChangedEvent>|Wymagany|Brak|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>zdarzenie, które uległo zmianie właściwości.|Wymagany|Brak|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>zdarzenie, które uległo zmianie właściwości.|Wymagany|Brak|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty>zdarzenie, które uległo zmianie właściwości.|Wymagany|Brak|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>zdarzenie, które uległo zmianie właściwości.|Wymagany|Brak|  
+|<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty>zdarzenie, które uległo zmianie właściwości.|Nigdy|Brak|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Wymagany|Brak|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Wymagany|Brak|  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Windows.Automation.ControlType.Text>
 - [Typy kontrolek automatyzacji interfejsu użytkownika — omówienie](ui-automation-control-types-overview.md)

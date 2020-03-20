@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e60f542f-6271-495b-a9e4-48553481c2a3
-ms.openlocfilehash: 0291b6684092ec15fc672c39c909caf7781194e3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: bedeb4e9c510a3feeedc038e9c4cef6c4721e345
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783256"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149248"
 ---
 # <a name="performing-catalog-operations"></a>Wykonywanie operacji katalogu
-Aby wykonać polecenie modyfikacji bazy danych lub wykazu, takie jak CREATE TABLE lub CREATE PROCEDURe, Utwórz obiekt **Command** przy użyciu odpowiednich instrukcji SQL i obiektu **Connection** . Wykonaj polecenie za pomocą metody **ExecuteNonQuery** obiektu **Command** .  
+Aby wykonać polecenie zmodyfikowania bazy danych lub katalogu, takiego jak instrukcja CREATE TABLE lub CREATE PROCEDURE, utwórz obiekt **Command** przy użyciu odpowiednich instrukcji SQL i obiektu **Connection.** Wykonaj polecenie metodą **ExecuteNonQuery** obiektu **Command.**  
   
- Poniższy przykład kodu tworzy procedurę przechowywaną w bazie danych Microsoft SQL Server.  
+ Poniższy przykład kodu tworzy procedurę składowaną w bazie danych programu Microsoft SQL Server.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -33,11 +33,11 @@ command.ExecuteNonQuery()
   
 ```csharp  
 // Assumes connection is a valid SqlConnection.  
-string queryString = "CREATE PROCEDURE InsertCategory  " +   
+string queryString = "CREATE PROCEDURE InsertCategory  " +
     "@CategoryName nchar(15), " +  
     "@Identity int OUT " +  
-    "AS " +   
-    "INSERT INTO Categories (CategoryName) VALUES(@CategoryName) " +   
+    "AS " +
+    "INSERT INTO Categories (CategoryName) VALUES(@CategoryName) " +
     "SET @Identity = @@Identity " +  
     "RETURN @@ROWCOUNT";  
   
@@ -45,7 +45,7 @@ SqlCommand command = new SqlCommand(queryString, connection);
 command.ExecuteNonQuery();  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Używanie poleceń do modyfikacji danych](using-commands-to-modify-data.md)
 - [Polecenia i parametry](commands-and-parameters.md)

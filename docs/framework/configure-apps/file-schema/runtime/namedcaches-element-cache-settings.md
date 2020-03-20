@@ -6,26 +6,26 @@ helpviewer_keywords:
 - caching [.NET Framework], configuration
 - <namedCaches> element
 ms.assetid: 6bd4fbc5-55a6-4dc4-998b-cdcc7e023330
-ms.openlocfilehash: 4587234ad91fa3b1abbb376bd7ae517d5abea6c3
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: e0640ca18d386141f3c03135019eb4fe959b5bf8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252462"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153961"
 ---
-# <a name="namedcaches-element-cache-settings"></a>\<namedCaches >, element (ustawienia pamięci podręcznej)
-Określa kolekcję ustawień konfiguracji dla nazwanych <xref:System.Runtime.Caching.MemoryCache> wystąpień. Właściwość odwołuje się do kolekcji ustawień konfiguracji z co najmniej jednego `namedCaches` elementu pliku konfiguracji. <xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A>  
+# <a name="namedcaches-element-cache-settings"></a>\<namedCaches> Element (Ustawienia pamięci podręcznej)
+Określa zbiór ustawień konfiguracji dla <xref:System.Runtime.Caching.MemoryCache> nazwanych wystąpień. Właściwość <xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A> odwołuje się do kolekcji ustawień `namedCaches` konfiguracji z jednego lub więcej elementów pliku konfiguracji.  
   
-[ **\<> konfiguracji**](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. Runtime. buforowanie >** ](system-runtime-caching-element-cache-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Elemencie MemoryCache >** ](memorycache-element-cache-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<namedCaches >**  
+[**\<>konfiguracyjne**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<>system.runtime.caching**](system-runtime-caching-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<>memoryCache**](memorycache-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<nazwaneCaches>**  
   
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
 <namedCaches>  
-  <add name="default"/>   
+  <add name="default"/>
 </namedCaches>  
 ```  
   
@@ -39,38 +39,38 @@ Określa kolekcję ustawień konfiguracji dla nazwanych <xref:System.Runtime.Cac
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`cacheMemoryLimitMegabytes`|Wartość całkowita, która określa maksymalny dopuszczalny rozmiar (w megabajtach), do którego wystąpienie <xref:System.Runtime.Caching.MemoryCache> może się rozwijać. Wartość domyślna to 0, co oznacza, że algorytmy heurystyczne <xref:System.Runtime.Caching.MemoryCache> autozmiany rozmiarów klasy są używane domyślnie.|  
+|`cacheMemoryLimitMegabytes`|Wartość całkowita określająca maksymalny dopuszczalny rozmiar w megabajtach, <xref:System.Runtime.Caching.MemoryCache> do której może rosnąć wystąpienie. Wartość domyślna to 0, co oznacza, że heurystyka automatycznego <xref:System.Runtime.Caching.MemoryCache> rozmiaru klasy jest używana domyślnie.|  
 |`name`|Nazwa pamięci podręcznej.|  
-|`physicalMemoryLimitPercentage`|Wartość całkowita z zakresu od 0 do 100, która określa maksymalną wartość procentową fizycznie zainstalowanej pamięci komputera, która może być używana przez pamięć podręczną. Wartość domyślna to 0, co oznacza, że algorytmy heurystyczne <xref:System.Runtime.Caching.MemoryCache> autozmiany rozmiarów klasy są używane domyślnie.|  
-|`pollingInterval`|Wartość, która wskazuje przedział czasu, po upływie którego implementacja pamięci podręcznej porównuje bieżące obciążenie pamięci z limitami pamięci bezwzględnej i procentową ustawioną dla wystąpienia pamięci podręcznej. Ta wartość jest wprowadzana w formacie "gg: MM: SS".|  
+|`physicalMemoryLimitPercentage`|Wartość całkowita z przedziału od 0 do 100, która określa maksymalny procent fizycznie zainstalowanej pamięci komputera, która może być zużywana przez pamięć podręczną. Wartość domyślna to 0, co oznacza, że heurystyka automatycznego <xref:System.Runtime.Caching.MemoryCache> rozmiaru klasy jest używana domyślnie.|  
+|`pollingInterval`|Wartość, która wskazuje przedział czasu, po którym implementacja pamięci podręcznej porównuje bieżące obciążenie pamięci względem bezwzględnych i procentowych limitów pamięci, które są ustawione dla wystąpienia pamięci podręcznej. Ta wartość jest wprowadzana w formacie "HH:MM:SS".|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<add>](add-element-for-namedcaches.md)|Dodaje nazwaną pamięć podręczną `namedCaches` do kolekcji dla pamięci podręcznej pamięci.|  
-|[\<Wyczyść >](clear-element-for-namedcaches.md)|`namedCaches` Czyści kolekcję dla pamięci podręcznej pamięci.|  
-|[\<remove>](remove-element-for-namedcaches.md)|Usuwa wpis nazwanej pamięci podręcznej z `namedCaches` kolekcji dla pamięci podręcznej.|  
+|[\<dodaj>](add-element-for-namedcaches.md)|Dodaje nazwaną pamięć `namedCaches` podręczną do kolekcji dla pamięci podręcznej.|  
+|[\<wyraźne>](clear-element-for-namedcaches.md)|Czyści `namedCaches` kolekcję dla pamięci podręcznej.|  
+|[\<usuń>](remove-element-for-namedcaches.md)|Usuwa wpis nazwanej pamięci `namedCaches` podręcznej z kolekcji dla pamięci podręcznej.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<> konfiguracji](../configuration-element.md)|Określa element główny w każdym pliku konfiguracji, który jest używany przez środowisko uruchomieniowe języka wspólnego i aplikacje .NET Framework.|  
-|[\<memoryCache>](memorycache-element-cache-settings.md)|Definiuje element, który jest używany do konfigurowania pamięci podręcznej opartej na <xref:System.Runtime.Caching.MemoryCache> klasie.|  
-|[\<system.runtime.caching>](system-runtime-caching-element-cache-settings.md)|Zawiera typy, które umożliwiają zaimplementowanie buforowania danych wyjściowych w aplikacjach wbudowanych w .NET Framework.|  
+|[\<>konfiguracyjne](../configuration-element.md)|Określa element główny w każdym pliku konfiguracyjnym używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje .NET Framework.|  
+|[\<>memoryCache](memorycache-element-cache-settings.md)|Definiuje element, który jest używany do konfigurowania pamięci <xref:System.Runtime.Caching.MemoryCache> podręcznej, która jest oparta na klasie.|  
+|[\<>system.runtime.caching](system-runtime-caching-element-cache-settings.md)|Zawiera typy, które umożliwiają implementowanie buforowania danych wyjściowych w aplikacjach wbudowanych w program .NET Framework.|  
   
 ## <a name="remarks"></a>Uwagi  
- Sekcja konfiguracja pamięci podręcznej pamięci w pliku Web. config może `add`zawierać `remove`atrybuty dla `clear` `namedCaches` kolekcji, i. Każdy `namedCaches` wpis jest jednoznacznie identyfikowany `name` przez atrybut.  
+ Sekcja konfiguracji pamięci podręcznej pliku Web.config `remove`może `clear` zawierać `add` `namedCaches` i atrybuty kolekcji. Każdy `namedCaches` wpis jest jednoznacznie `name` identyfikowany przez atrybut.  
   
- Wystąpienia wpisów pamięci podręcznej pamięci można pobrać, odwołując się do informacji w plikach konfiguracji aplikacji. Domyślnie tylko domyślne wystąpienie pamięci podręcznej ma wpis w pliku konfiguracji. Domyślne wystąpienie pamięci podręcznej jest wystąpieniem zwracanym z <xref:System.Runtime.Caching.MemoryCache.Default%2A> właściwości.  
+ Można pobrać wystąpienia wpisów pamięci podręcznej, odwołując się do informacji w plikach konfiguracji aplikacji. Domyślnie tylko domyślne wystąpienie pamięci podręcznej ma wpis w pliku konfiguracyjnym. Domyślne wystąpienie pamięci podręcznej jest <xref:System.Runtime.Caching.MemoryCache.Default%2A> wystąpienie, które jest zwracane z właściwości.  
   
  Jeśli ustawisz atrybut name na "default", element używa domyślnego wystąpienia pamięci podręcznej.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak ustawić nazwę pamięci podręcznej na domyślną nazwę wpisu pamięci podręcznej przez ustawienie `name` atrybutu na wartość "domyślny".  
+ W poniższym przykładzie pokazano, jak ustawić nazwę pamięci podręcznej `name` na domyślną nazwę wpisu pamięci podręcznej, ustawiając atrybut na "domyślny".  
   
- `cacheMemoryLimitMegabytes` Atrybut`physicalMemoryPercentage` i atrybut są ustawione na zero. Ustawienie tych atrybutów na zero oznacza, że używane są heurystyke <xref:System.Runtime.Caching.MemoryCache> autowymiarowania klasy. Implementacja pamięci podręcznej porównuje bieżące obciążenie pamięci dla limitów pamięci bezwzględnej i wartości procentowej co dwie minuty.  
+ Atrybut `cacheMemoryLimitMegabytes` i `physicalMemoryPercentage` atrybut są ustawione na zero. Ustawienie tych atrybutów na zero oznacza, że używane <xref:System.Runtime.Caching.MemoryCache> są heurystyki autosizing klasy. Implementacja pamięci podręcznej porównuje bieżące obciążenie pamięci względem bezwzględnych i procentowych limitów pamięci co dwie minuty.  
   
 ```xml  
 <configuration>  
@@ -78,8 +78,8 @@ Określa kolekcję ustawień konfiguracji dla nazwanych <xref:System.Runtime.Cac
   <system.runtime.caching>  
     <memoryCache>  
       <namedCaches>  
-          <add name="default"   
-               cacheMemoryLimitMegabytes="0"   
+          <add name="default"
+               cacheMemoryLimitMegabytes="0"
                physicalMemoryLimitPercentage="0"  
                pollingInterval="00:02:00" />  
       </namedCaches>  
@@ -89,6 +89,6 @@ Określa kolekcję ustawień konfiguracji dla nazwanych <xref:System.Runtime.Cac
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [\<Elemencie MemoryCache >, element (ustawienia pamięci podręcznej)](memorycache-element-cache-settings.md)
+- [\<MemoryCache> Element (ustawienia pamięci podręcznej)](memorycache-element-cache-settings.md)

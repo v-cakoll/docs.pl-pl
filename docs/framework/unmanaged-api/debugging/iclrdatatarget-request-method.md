@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4723bd1c-eddb-4ed2-897a-010024a47e01
 topic_type:
 - apiref
-ms.openlocfilehash: 0a7e764d89dd42bcaf81da5cf6a16991b6b8a16e
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 336ba38bc80fcb2649a12c78691e52c5e4d70bfe
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793705"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179114"
 ---
 # <a name="iclrdatatargetrequest-method"></a>ICLRDataTarget::Request — Metoda
-Wywoływane przez usługi dostępu do danych środowiska uruchomieniowego języka wspólnego (CLR) do żądania operacji zgodnie z definicją w implementacji.  
+Wywoływane przez usługi dostępu do danych środowiska wykonawczego języka wspólnego (CLR) do żądania operacji, zgodnie z definicją implementacji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -31,29 +31,29 @@ Wywoływane przez usługi dostępu do danych środowiska uruchomieniowego język
 HRESULT Request (  
     [in] ULONG32            reqCode,  
     [in] ULONG32            inBufferSize,  
-    [in, size_is(inBufferSize)]   
+    [in, size_is(inBufferSize)]
         BYTE                *inBuffer,  
     [in] ULONG32            outBufferSize,  
-    [out, size_is(outBufferSize)]   
+    [out, size_is(outBufferSize)]
         BYTE                *outBuffer  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `reqCode`  
- podczas Zdefiniowane przez użytkownika.  
+ [w] Zdefiniowane przez użytkownika.  
   
  `inBufferSize`  
- podczas Rozmiar buforu wejściowego, który jest używany w żądaniu przychodzącym.  
+ [w] Rozmiar buforu wejściowego, który jest używany dla żądania przychodzącego.  
   
  `inBuffer`  
- podczas Bufor zawierający żądanie.  
+ [w] Bufor zawierający żądanie.  
   
  `outBufferSize`  
- podczas Rozmiar buforu wyjściowego, który jest używany na potrzeby odpowiedzi.  
+ [w] Rozmiar buforu wyjściowego, który jest używany dla odpowiedzi.  
   
  `outBuffer`  
- określoną Bufor zawierający odpowiedź.  
+ [na zewnątrz] Bufor zawierający odpowiedź.  
   
 ## <a name="remarks"></a>Uwagi  
  Metoda `Request` ułatwia dodawanie nieokreślonych operacji niestandardowych. Oznacza to, że ta metoda zapewnia rozszerzalność bez konieczności zmiany definicji interfejsu.  
@@ -61,14 +61,14 @@ HRESULT Request (
  Ta metoda jest implementowana przez moduł zapisujący aplikacji debugowania.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** ClrData. idl, ClrData. h  
+ **Nagłówek:** ClrData.idl, ClrData.h  
   
- **Biblioteka:** CorGuids. lib  
+ **Biblioteka:** CorGuids.lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [ICLRDataTarget, interfejs](iclrdatatarget-interface.md)

@@ -8,17 +8,17 @@ helpviewer_keywords:
 - graphics [Windows Forms], managing state
 - graphics [Windows Forms], clipping
 ms.assetid: 6207cad1-7a34-4bd6-bfc1-db823ca7a73e
-ms.openlocfilehash: ce645133af35271fe1de969621907c53183d9a54
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: d1e7e6eac775ca779fb68605adcc9bc2b9915e49
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67505593"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182451"
 ---
 # <a name="managing-the-state-of-a-graphics-object"></a>Zarządzanie stanem obiektu graficznego
-<xref:System.Drawing.Graphics> Klasy jest sercem GDI +. Aby narysować niczego, należy uzyskać <xref:System.Drawing.Graphics> obiektu, ustaw jej właściwości i wywołać jego metody <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, <xref:System.Drawing.Graphics.DrawString%2A>i tym podobne).  
+Klasa <xref:System.Drawing.Graphics> znajduje się w samym sercu GDI+. Aby narysować cokolwiek, można <xref:System.Drawing.Graphics> uzyskać obiekt, ustawić <xref:System.Drawing.Graphics.DrawLine%2A>jego <xref:System.Drawing.Graphics.DrawImage%2A> <xref:System.Drawing.Graphics.DrawString%2A>właściwości i wywołać jego metody , , i tym podobne).  
   
- Poniższy przykład wywołuje <xref:System.Drawing.Graphics.DrawRectangle%2A> metody <xref:System.Drawing.Graphics> obiektu. Pierwszy argument przekazany do <xref:System.Drawing.Graphics.DrawRectangle%2A> metodą jest <xref:System.Drawing.Pen> obiektu.  
+ Poniższy przykład <xref:System.Drawing.Graphics.DrawRectangle%2A> wywołuje metodę <xref:System.Drawing.Graphics> obiektu. Pierwszy argument przekazany <xref:System.Drawing.Graphics.DrawRectangle%2A> do metody <xref:System.Drawing.Pen> jest obiektem.  
   
 ```vb  
 Dim graphics As Graphics = e.Graphics  
@@ -33,7 +33,7 @@ graphics.DrawRectangle(pen, 10, 10, 200, 100);
 ```  
   
 ## <a name="graphics-state"></a>Stan grafiki  
- A <xref:System.Drawing.Graphics> obiektu więcej niż zapewnia rysowania metod, takich jak <xref:System.Drawing.Graphics.DrawLine%2A> i <xref:System.Drawing.Graphics.DrawRectangle%2A>. A <xref:System.Drawing.Graphics> obiekt przechowuje również stanu grafiki, które można podzielić na następujące kategorie:  
+ Obiekt <xref:System.Drawing.Graphics> nie tylko zapewnia metody rysowania, takie jak <xref:System.Drawing.Graphics.DrawLine%2A> i <xref:System.Drawing.Graphics.DrawRectangle%2A>. Obiekt <xref:System.Drawing.Graphics> zachowuje również stan grafiki, który można podzielić na następujące kategorie:  
   
 - Ustawienia jakości  
   
@@ -42,9 +42,9 @@ graphics.DrawRectangle(pen, 10, 10, 200, 100);
 - Obszar przycinania  
   
 ### <a name="quality-settings"></a>Ustawienia jakości  
- A <xref:System.Drawing.Graphics> obiekt ma kilka właściwości, które mają wpływ na jakość elementy, które są rysowane. Na przykład można ustawić <xref:System.Drawing.Graphics.TextRenderingHint%2A> właściwości w celu określenia typu antialiasingu (jeśli istnieje) zastosowane do tekstu. Inne właściwości, które mają wpływ na jakość są <xref:System.Drawing.Graphics.SmoothingMode%2A>, <xref:System.Drawing.Graphics.CompositingMode%2A>, <xref:System.Drawing.Graphics.CompositingQuality%2A>, i <xref:System.Drawing.Graphics.InterpolationMode%2A>.  
+ Obiekt <xref:System.Drawing.Graphics> ma kilka właściwości, które wpływają na jakość elementów, które są rysowane. Na przykład można ustawić <xref:System.Drawing.Graphics.TextRenderingHint%2A> właściwość, aby określić typ antialiasing (jeśli istnieje) stosowane do tekstu. Inne właściwości wpływające <xref:System.Drawing.Graphics.SmoothingMode%2A>na <xref:System.Drawing.Graphics.CompositingMode%2A> <xref:System.Drawing.Graphics.CompositingQuality%2A>jakość <xref:System.Drawing.Graphics.InterpolationMode%2A>to , , i .  
   
- Poniższy przykładowy kod rysuje dwa elipsy, jeden z tryb wygładzania równa <xref:System.Drawing.Drawing2D.SmoothingMode.AntiAlias> i jeden z tryb wygładzania równa <xref:System.Drawing.Drawing2D.SmoothingMode.HighSpeed>:  
+ Poniższy przykład rysuje dwie elipsy, jedną z <xref:System.Drawing.Drawing2D.SmoothingMode.AntiAlias> ustawionym trybem wygładzania, a druga z trybem wygładzania ustawionym na: <xref:System.Drawing.Drawing2D.SmoothingMode.HighSpeed>  
   
 ```vb  
 Dim graphics As Graphics = e.Graphics  
@@ -67,9 +67,9 @@ graphics.DrawEllipse(pen, 0, 150, 200, 100);
 ```  
   
 ### <a name="transformations"></a>Przekształcenia  
- A <xref:System.Drawing.Graphics> obiekt przechowuje dwa przekształceń (świecie i strony), które są stosowane do wszystkich elementów rysowane przez to <xref:System.Drawing.Graphics> obiektu. Dowolnego affine — przekształcenia mogą być przechowywane w transformacji świata. Affine — przekształcenia obejmują skalowanie, obracanie, odzwierciedlanie, pochylanie i tłumaczenia. Przekształcenie strony może służyć skalowanie oraz zmiany jednostki (na przykład, w pikselach cm). Aby uzyskać więcej informacji, zobacz [systemy i przekształcenia współrzędnych](coordinate-systems-and-transformations.md).  
+ Obiekt <xref:System.Drawing.Graphics> zachowuje dwa przekształcenia (świat i strona), które są <xref:System.Drawing.Graphics> stosowane do wszystkich elementów rysowanych przez ten obiekt. Wszelkie transformacji affine mogą być przechowywane w transformacji świata. Przekształcenia afiniowe obejmują skalowanie, obracanie, odbijanie, pochylanie i tłumaczenie. Transformacja strony może służyć do skalowania i zmiany jednostek (na przykład pikseli na cale). Aby uzyskać więcej informacji, zobacz [Systemy współrzędnych i przekształcenia](coordinate-systems-and-transformations.md).  
   
- W poniższym przykładzie ustawiono Przekształcanie świata i strony <xref:System.Drawing.Graphics> obiektu. Transformacja świata jest ustawiona na 30 stopni. Przekształcenie strony jest ustawiony tak, aby współrzędne przekazany do drugiego <xref:System.Drawing.Graphics.DrawEllipse%2A> będzie traktowane jako milimetry zamiast pikseli. Kod sprawia, że dwa identyczne wywołania <xref:System.Drawing.Graphics.DrawEllipse%2A> metody. Transformacja świata jest stosowana do pierwszego <xref:System.Drawing.Graphics.DrawEllipse%2A> wywołania i zarówno przekształcenia (świecie i strony), które są stosowane do drugiego <xref:System.Drawing.Graphics.DrawEllipse%2A> wywołania.  
+ Poniższy przykład ustawia przekształcenia świata <xref:System.Drawing.Graphics> i strony obiektu. Transformacja świata jest ustawiona na obrót o 30 stopni. Transformacja strony jest ustawiona tak, aby <xref:System.Drawing.Graphics.DrawEllipse%2A> współrzędne przekazane do drugiego były traktowane jako milimetry zamiast pikseli. Kod sprawia, że dwa <xref:System.Drawing.Graphics.DrawEllipse%2A> identyczne wywołania metody. Transformacja świata jest stosowana <xref:System.Drawing.Graphics.DrawEllipse%2A> do pierwszego wywołania, a oba przekształcenia (świat i strona) są stosowane do drugiego <xref:System.Drawing.Graphics.DrawEllipse%2A> wywołania.  
   
 ```vb  
 Dim graphics As Graphics = e.Graphics  
@@ -84,7 +84,7 @@ graphics.DrawEllipse(pen, 0, 0, 100, 50)
   
 ```csharp  
 Graphics graphics = e.Graphics;  
-Pen pen = new Pen(Color.Red);   
+Pen pen = new Pen(Color.Red);
   
 graphics.ResetTransform();  
 graphics.RotateTransform(30);                    // world transformation  
@@ -93,14 +93,14 @@ graphics.PageUnit = GraphicsUnit.Millimeter;     // page transformation
 graphics.DrawEllipse(pen, 0, 0, 100, 50);  
 ```  
   
- Poniższa ilustracja przedstawia dwie elipsy. Należy pamiętać, że 30 stopni o pochodzenia w układzie współrzędnych (lewym górnym rogu obszaru klienta), nie o centra wielokropek. Należy również zauważyć, że szerokość pióra 1 oznacza, że 1 piksel w pierwszym elipsy i 1 milimetra drugi elipsy.  
+ Na poniższej ilustracji przedstawiono dwie elipsy. Należy zauważyć, że obrót o 30 stopni dotyczy początku układu współrzędnych (lewego górnego rogu obszaru klienta), a nie środkami elips. Należy również zauważyć, że szerokość pióra 1 oznacza 1 piksel dla pierwszej elipsy i 1 milimetr dla drugiej elipsy.  
   
- ![Ilustracja przedstawiająca dwie elipsy: szerokość rotacji i Pióro.](./media/managing-the-state-of-a-graphics-object/set-rotation-pen-width-drawellipse-method.png)  
+ ![Ilustracja przedstawiająca dwie elipsy: obrót i szerokość pióra.](./media/managing-the-state-of-a-graphics-object/set-rotation-pen-width-drawellipse-method.png)  
   
-### <a name="clipping-region"></a>Obszar przycinania  
- A <xref:System.Drawing.Graphics> obiekt zachowuje obszaru przycinania, która ma zastosowanie do wszystkich elementów rysowane przez to <xref:System.Drawing.Graphics> obiektu. Możesz ustawić obszaru przycinania, wywołując <xref:System.Drawing.Graphics.SetClip%2A> metody.  
+### <a name="clipping-region"></a>Region przycinania  
+ Obiekt <xref:System.Drawing.Graphics> zachowuje region przycinania, który ma zastosowanie <xref:System.Drawing.Graphics> do wszystkich elementów rysowanych przez ten obiekt. Region przycinania można ustawić, <xref:System.Drawing.Graphics.SetClip%2A> wywołując metodę.  
   
- Poniższy przykład tworzy obszar ukształtowane plus tworzymy sumę dwóch prostokątów. Ten region jest wyznaczony jako region wycinka <xref:System.Drawing.Graphics> obiektu. Następnie kod rysuje dwa wiersze, które są ograniczone do wewnętrznego obszaru przycinania.  
+ Poniższy przykład tworzy region w kształcie plus, tworząc jedność dwóch prostokątów. Ten region jest wyznaczony jako obszar <xref:System.Drawing.Graphics> przycinania obiektu. Następnie kod rysuje dwie linie, które są ograniczone do wnętrza regionu przycinania.  
   
 ```vb  
 Dim graphics As Graphics = e.Graphics  
@@ -128,10 +128,10 @@ graphics.DrawLine(pen, 40, 20, 190, 150)
 Graphics graphics = e.Graphics;  
   
 // Opaque red, width 5  
-Pen pen = new Pen(Color.Red, 5);    
+Pen pen = new Pen(Color.Red, 5);
   
 // Opaque aqua  
-SolidBrush brush = new SolidBrush(Color.FromArgb(255, 180, 255, 255));    
+SolidBrush brush = new SolidBrush(Color.FromArgb(255, 180, 255, 255));
   
 // Create a plus-shaped region by forming the union of two rectangles.  
 Region region = new Region(new Rectangle(50, 0, 50, 150));  
@@ -146,11 +146,11 @@ graphics.DrawLine(pen, 0, 30, 150, 160);
 graphics.DrawLine(pen, 40, 20, 190, 150);  
 ```  
   
- Poniższa ilustracja przedstawia obciętych wiersze:  
+ Na poniższej ilustracji przedstawiono przycięte linie:  
   
- ![Diagram przedstawiający ograniczony obszar przycinania.](./media/managing-the-state-of-a-graphics-object/set-clipping-region-setclip-method.png)  
+ ![Diagram przedstawiający ograniczony region klipu.](./media/managing-the-state-of-a-graphics-object/set-clipping-region-setclip-method.png)  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Grafika i rysowanie w formularzach Windows Forms](graphics-and-drawing-in-windows-forms.md)
 - [Używanie zagnieżdżonych kontenerów grafiki](using-nested-graphics-containers.md)

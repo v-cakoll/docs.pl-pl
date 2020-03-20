@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7b0e9b10-8cef-4ba6-8432-40bf63e65ab1
 topic_type:
 - apiref
-ms.openlocfilehash: 462512fd2c2b33905b45bb67599b23b301fc71f7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8c3f98a124dbbcae3b0500932a2357ed1757951f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437996"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177247"
 ---
 # <a name="imetadataimportgetfieldprops-method"></a>IMetaDataImport::GetFieldProps — Metoda
 Pobiera metadane skojarzone z polem, do którego odwołuje się określony token FieldDef.  
@@ -29,15 +29,15 @@ Pobiera metadane skojarzone z polem, do którego odwołuje się określony token
   
 ```cpp  
 HRESULT GetFieldProps (  
-   [in]  mdFieldDef        mb,   
+   [in]  mdFieldDef        mb,
    [out] mdTypeDef         *pClass,  
    [out] LPWSTR            szField,  
-   [in]  ULONG             cchField,   
+   [in]  ULONG             cchField,
    [out] ULONG             *pchField,  
    [out] DWORD             *pdwAttr,  
-   [in]  PCCOR_SIGNATURE   *ppvSigBlob,   
-   [out] ULONG             *pcbSigBlob,   
-   [out] DWORD             *pdwCPlusTypeFlag,   
+   [in]  PCCOR_SIGNATURE   *ppvSigBlob,
+   [out] ULONG             *pcbSigBlob,
+   [out] DWORD             *pdwCPlusTypeFlag,
    [out] UVCP_CONSTANT     *ppValue,  
    [out] ULONG             *pcchValue  
 );  
@@ -45,48 +45,48 @@ HRESULT GetFieldProps (
   
 ## <a name="parameters"></a>Parametry  
  `mb`  
- podczas Token FieldDef reprezentujący pole, dla którego mają zostać pobrane powiązane metadane.  
+ [w] A FieldDef token, który reprezentuje pole, aby uzyskać skojarzone metadane dla.  
   
  `pClass`  
- określoną Wskaźnik do tokenu TypeDef, który reprezentuje typ klasy, do której należy pole.  
+ [na zewnątrz] Wskaźnik do Tokenu TypeDef, który reprezentuje typ klasy, do której należy pole.  
   
  `szField`  
- określoną Nazwa pola.  
+ [na zewnątrz] Nazwa pola.  
   
  `cchField`  
- podczas Rozmiar w postaci znaków dwubajtowych buforu dla *szField*.  
+ [w] Rozmiar w szerokich znaków buforu dla *szField*.  
   
  `pchField`  
- określoną Rzeczywisty rozmiar zwróconego buforu.  
+ [na zewnątrz] Rzeczywisty rozmiar zwróconego buforu.  
   
  `pdwAttr`  
- określoną Flagi skojarzone z metadanymi pola.  
+ [na zewnątrz] Flagi skojarzone z metadanymi pola.  
   
  `ppvSigBlob`  
- podczas Wskaźnik do wartości metadanych Binary opisującej pole.  
+ [w] Wskaźnik do wartości metadanych binarnych, który opisuje pole.  
   
  `pcbSigBlob`  
- określoną Rozmiar w bajtach `ppvSigBlob`.  
+ [na zewnątrz] Rozmiar w bajtach . `ppvSigBlob`  
   
  `pdwCPlusTypeFlag`  
- określoną Flaga określająca typ wartości pola.  
+ [na zewnątrz] Flaga określająca typ wartości pola.  
   
  `ppValue`  
- określoną Stała wartość pola.  
+ [na zewnątrz] Stała wartość pola.  
   
  `pcchValue`  
- określoną Rozmiar w znakach `ppValue`lub zero, jeśli nie istnieje żaden ciąg.  
+ [na zewnątrz] Rozmiar w znakach `ppValue`, lub zero, jeśli nie istnieje ciąg.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Uwzględnione jako zasób w pliku MsCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

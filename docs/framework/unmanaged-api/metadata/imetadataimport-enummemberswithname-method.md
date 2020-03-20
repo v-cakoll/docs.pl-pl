@@ -15,68 +15,68 @@ helpviewer_keywords:
 ms.assetid: 7c9e9120-3104-42f0-86ce-19a025f20dcc
 topic_type:
 - apiref
-ms.openlocfilehash: ed193aab8beb0de1321aa1d52ec9f963b08b316c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7410f91a853f3a677a105dc2e12a86d723c9fad6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441662"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177320"
 ---
 # <a name="imetadataimportenummemberswithname-method"></a>IMetaDataImport::EnumMembersWithName — Metoda
-Wylicza tokeny MemberDef reprezentujące elementy członkowskie określonego typu o określonej nazwie.  
+Wylicza tokeny MemberDef reprezentujące członków określonego typu o określonej nazwie.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
 HRESULT EnumMembersWithName (  
-   [in, out] HCORENUM    *phEnum,   
-   [in]      mdTypeDef   cl,   
-   [in]      LPCWSTR     szName,   
-   [out]     mdToken     rMembers[],   
-   [in]      ULONG       cMax,   
+   [in, out] HCORENUM    *phEnum,
+   [in]      mdTypeDef   cl,
+   [in]      LPCWSTR     szName,
+   [out]     mdToken     rMembers[],
+   [in]      ULONG       cMax,
    [out]     ULONG       *pcTokens  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [in. out] Wskaźnik do modułu wyliczającego.  
+ [w, na zewnątrz] Wskaźnik do wyliczacza.  
   
  `cl`  
- podczas Token TypeDef reprezentujący typ z elementami członkowskimi do wyliczenia.  
+ [w] Token TypeDef reprezentujący typ z członkami do wyliczenia.  
   
  `szName`  
- podczas Nazwa elementu członkowskiego, który ogranicza zakres modułu wyliczającego.  
+ [w] Nazwa elementu członkowskiego, która ogranicza zakres wyliczacza.  
   
  `rMembers`  
- określoną Tablica służąca do przechowywania tokenów MemberDef.  
+ [na zewnątrz] Tablica używana do przechowywania tokenów MemberDef.  
   
  `cMax`  
- podczas Maksymalny rozmiar tablicy `rMembers`.  
+ [w] Maksymalny rozmiar `rMembers` tablicy.  
   
  `pcTokens`  
- określoną Rzeczywista liczba tokenów MemberDef zwróconych w `rMembers`.  
+ [na zewnątrz] Rzeczywista liczba tokenów MemberDef `rMembers`zwrócona w .  
   
 ## <a name="remarks"></a>Uwagi  
- Ta metoda wylicza pola i metody, ale nie właściwości ani zdarzenia. W przeciwieństwie do [IMetaDataImport:: EnumMembers —](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummembers-method.md), `EnumMembersWithName` odrzuca wszystkie tokeny pola i elementu członkowskiego, które nie mają określonej nazwy.  
+ Ta metoda wylicza pola i metody, ale nie właściwości lub zdarzenia. W przeciwieństwie do [IMetaDataImport::EnumMembers,](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummembers-method.md) `EnumMembersWithName` odrzuca wszystkie tokeny pól i elementów członkowskich, które nie mają określonej nazwy.  
   
-## <a name="return-value"></a>Wartość zwrócona  
+## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeDefs` pomyślnie zwrócone.|  
-|`S_FALSE`|Brak tokenów MemberDef do wyliczenia. W takim przypadku `pcTokens` wynosi zero.|  
+|`S_OK`|`EnumTypeDefs`zwrócono pomyślnie.|  
+|`S_FALSE`|Nie ma żadnych tokenów MemberDef do wyliczenia. W takim `pcTokens` przypadku wynosi zero.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Uwzględnione jako zasób w pliku MsCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

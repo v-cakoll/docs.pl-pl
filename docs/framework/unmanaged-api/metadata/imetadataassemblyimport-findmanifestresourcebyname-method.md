@@ -15,45 +15,45 @@ helpviewer_keywords:
 ms.assetid: 7b72fa11-3866-402b-bdea-2b966b77cfe0
 topic_type:
 - apiref
-ms.openlocfilehash: f0c390509a698fdc4682ba81182d4b407d8718c9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ae9097725aecd21e910e49a78d81951df39e9b2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448256"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177776"
 ---
 # <a name="imetadataassemblyimportfindmanifestresourcebyname-method"></a>IMetaDataAssemblyImport::FindManifestResourceByName — Metoda
-Pobiera wskaźnik do zasobu manifestu o podanej nazwie.  
+Pobiera wskaźnik do zasobu manifestu o określonej nazwie.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp
 HRESULT FindManifestResourceByName (  
-    [in]  LPCWSTR                szName,   
+    [in]  LPCWSTR                szName,
     [out] mdManifestResource     *ptkManifestResource  
-);   
+);
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `szName`  
- podczas Nazwa zasobu.  
+ [w] Nazwa zasobu.  
   
  `ptkManifestResource`  
- określoną Tablica służąca do przechowywania tokenów metadanych `mdManifestResource`, z których każdy reprezentuje zasób manifestu.  
+ [na zewnątrz] Tablica używana do `mdManifestResource` przechowywania tokenów metadanych, z których każdy reprezentuje zasób manifestu.  
   
 ## <a name="remarks"></a>Uwagi  
  Metoda `FindManifestResourceByName` używa standardowych reguł używanych przez środowisko uruchomieniowe języka wspólnego do rozpoznawania odwołań.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforma:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforma:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataAssemblyImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [IMetaDataAssemblyImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
 - [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

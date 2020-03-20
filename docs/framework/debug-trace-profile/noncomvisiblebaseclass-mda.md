@@ -9,40 +9,40 @@ helpviewer_keywords:
 - QueryInterface call failures
 - MDAs (managed debugging assistants), COM visible classes
 ms.assetid: 9ec1af27-604b-477e-9ee2-e833eb10d3ce
-ms.openlocfilehash: b46d5c6ffbf12efbae113a95bbfccd5742ec9ec9
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 4c16432df201d19b65c91206ec529d07605e979a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217304"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181788"
 ---
 # <a name="noncomvisiblebaseclass-mda"></a>nonComVisibleBaseClass MDA
-Asystent debugowania zarządzanego `nonComVisibleBaseClass` (MDA) jest uaktywniany, gdy wywołanie `QueryInterface` odbywa się przy użyciu kodu natywnego lub niezarządzanego w przypadku niewidocznej otoki COM (CCW) klasy zarządzanej w modelu COM, która dziedziczy z klasy podstawowej, która nie jest widoczna dla modelu COM.  Wywołanie `QueryInterface` powoduje aktywację elementu MDA tylko w przypadkach, gdy wywołania żądają interfejsu klasy lub domyślnej `IDispatch` klasy zarządzanej widocznej dla modelu COM.  Zdarzenie MDA nie jest aktywowane, gdy `QueryInterface` dotyczy jawnego interfejsu, do którego zastosowano atrybut <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> i jest on jawnie zaimplementowany przez klasę widoczną dla modelu COM.  
+Zarządzany `nonComVisibleBaseClass` asystent debugowania (MDA) jest `QueryInterface` aktywowany, gdy wywołanie jest nawiązywane przez kod macierzysty lub niezarządzany na otoce (CCW) wywoływanej przez COM klasy zarządzanej, która wywodzi się z klasy podstawowej, która nie jest widoczna dla modelu COM.  Wywołanie `QueryInterface` powoduje, że MDA, aby aktywować tylko `IDispatch` w przypadkach, gdy wywołania żąda interfejsu klasy lub domyślnie klasy zarządzanej widoczne com.  MDA nie jest aktywowany, gdy `QueryInterface` jest dla <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> jawnego interfejsu, który ma atrybut stosowane i jest jawnie implementowane przez klasę widoczne COM.  
   
 ## <a name="symptoms"></a>Objawy  
- Wywołanie `QueryInterface` wykonane z kodu natywnego, który kończy się niepowodzeniem z COR_E_INVALIDOPERATION HRESULT.  WYNIK HRESULT może być spowodowany tym, że środowisko uruchomieniowe nie zezwoli na `QueryInterface` wywołań, które mogłyby spowodować aktywację tego elementu MDA.  
+ Wywołanie `QueryInterface` wykonane z kodu macierzystego, który kończy się niepowodzeniem z COR_E_INVALIDOPERATION HRESULT.  HRESULT może być ze względu na czas `QueryInterface` wykonywania nie zezwalając na wywołania, które mogłyby spowodować aktywację tego MDA.  
   
 ## <a name="cause"></a>Przyczyna  
- Środowisko wykonawcze nie może zezwalać na `QueryInterface` wywołań interfejsu klasy ani domyślnego interfejsu `IDispatch` klasy widocznej dla modelu COM, która dziedziczy z klasy, która nie jest widoczna dla modelu COM ze względu na potencjalne problemy z wersjami.  Na przykład, jeśli jakikolwiek publiczny element członkowski został dodany do klasy podstawowej, która nie jest widoczna dla modelu COM, istniejący klienci COM korzystający z klasy pochodnej mogą potencjalnie przerwać, ponieważ tablice metod pochodnych klasy pochodnej, która zawiera składowe klasy bazowej, zostałyby zmienione przez takie stąp.  Jawne interfejsy uwidocznione dla modelu COM nie mają tego problemu, ponieważ nie obejmują podstawowych elementów członkowskich interfejsów w tablicy bazowej.  
+ Środowisko wykonawcze `QueryInterface` nie może zezwolić `IDispatch` na wywołania interfejsu klasy lub domyślnego interfejsu klasy widocznej w trybie COM, która pochodzi z klasy, która nie jest widoczna dla środowiska COM z powodu potencjalnych problemów z przechowywaniem wersji.  Na przykład jeśli wszystkie elementy publiczne zostały dodane do klasy podstawowej, która nie jest widoczna dla com, istniejących klientów COM przy użyciu klasy pochodnej może potencjalnie przerwać, ponieważ vtable klasy pochodnej, która zawiera elementy członkowskie klasy podstawowej, zostaną zmienione przez takie a Zmienić.  Jawne interfejsy narażone na COM nie mają tego problemu, ponieważ nie zawierają podstawowych elementów członkowskich interfejsów w vtable.  
   
 ## <a name="resolution"></a>Rozwiązanie  
- Nie ujawniaj interfejsu klasy. Zdefiniuj jawny interfejs i Zastosuj do niego atrybut <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>.  
+ Nie należy udostępniać interfejsu klasy. Zdefiniuj jawny interfejs i zastosuj do niego <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> atrybut.  
   
-## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
- To zdarzenie MDA nie ma wpływu na środowisko CLR.  
+## <a name="effect-on-the-runtime"></a>Wpływ na czas działania  
+ To MDA nie ma wpływu na CLR.  
   
 ## <a name="output"></a>Dane wyjściowe  
- Poniżej znajduje się przykładowy komunikat dla wywołania `QueryInterface` na klasie widocznej dla modelu COM `Derived`, który pochodzi z klasy niewidocznej dla modelu COM, `Base`.  
+ Poniżej przedstawiono przykładową `QueryInterface` wiadomość dla wywołania `Derived` klasy widocznej w trybie COM, `Base`która wywodzi się z klasy niewidocznej dla com.  
   
 ```output
-A QueryInterface call was made requesting the class interface of COM   
-visible managed class 'Derived'. However since this class derives from   
-non COM visible class 'Base', the QueryInterface call will fail. This   
-is done to prevent the non COM visible base class from being   
-constrained by the COM versioning rules.   
+A QueryInterface call was made requesting the class interface of COM
+visible managed class 'Derived'. However since this class derives from
+non COM visible class 'Base', the QueryInterface call will fail. This
+is done to prevent the non COM visible base class from being
+constrained by the COM versioning rules.
 ```  
   
-## <a name="configuration"></a>Konfiguracja  
+## <a name="configuration"></a>Konfigurowanie  
   
 ```xml  
 <mdaConfig>  
@@ -56,4 +56,4 @@ constrained by the COM versioning rules.
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshaling międzyoperacyjny](../interop/interop-marshaling.md)
+- [Organizowanie międzyoperacyjne](../interop/interop-marshaling.md)

@@ -15,38 +15,38 @@ helpviewer_keywords:
 ms.assetid: 3c4f6b54-5ce7-4a2a-83e1-6dec16441f50
 topic_type:
 - apiref
-ms.openlocfilehash: 1621e955795fcdbb651114c60eb6a1126a23d037
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 45f40dcd419e8e2fdf8a3349ccc9461854ad9aaf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74434362"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175736"
 ---
 # <a name="imetadataemitdeletepinvokemap-method"></a>IMetaDataEmit::DeletePinvokeMap — Metoda
-Niszczy metadane mapowania PInvoke dla obiektu, do którego odwołuje się określony token.  
+Niszczy PInvoke mapowania metadanych dla obiektu, do którego odwołuje się określony token.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
-HRESULT DeletePinvokeMap (   
-    [in]  mdToken     tk   
+HRESULT DeletePinvokeMap (
+    [in]  mdToken     tk
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `tk`  
- podczas Token `mdFieldDef` lub `mdMethodDef` reprezentujący obiekt, dla którego mają zostać usunięte metadane mapowania funkcji PInvoke.  
+ [w] Lub `mdFieldDef` `mdMethodDef` token, który reprezentuje obiekt, dla którego należy usunąć metadane mapowania PInvoke.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
+ **Biblioteka:** Używany jako zasób w pliku MSCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

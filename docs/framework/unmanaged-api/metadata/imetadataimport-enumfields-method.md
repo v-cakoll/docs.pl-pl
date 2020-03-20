@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1d23247e-c58c-45db-afd8-83aa89cde18e
 topic_type:
 - apiref
-ms.openlocfilehash: 2d32dc8ae59fc1a4a189d849437cc95ea3b94a4d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: be2845d1d660d86447cfbb6f2845a8e68b727e66
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449540"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175515"
 ---
 # <a name="imetadataimportenumfields-method"></a>IMetaDataImport::EnumFields — Metoda
 Wylicza tokeny FieldDef dla typu, do którego odwołuje się określony token TypeDef.  
@@ -28,48 +28,48 @@ Wylicza tokeny FieldDef dla typu, do którego odwołuje się określony token Ty
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
-HRESULT EnumFields (   
-   [in, out] HCORENUM    *phEnum,   
-   [in]      mdTypeDef   cl,   
-   [out]     mdFieldDef  rFields[],   
-   [in]      ULONG       cMax,   
+HRESULT EnumFields (
+   [in, out] HCORENUM    *phEnum,
+   [in]      mdTypeDef   cl,
+   [out]     mdFieldDef  rFields[],
+   [in]      ULONG       cMax,
    [out]     ULONG       *pcTokens  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [in. out] Wskaźnik do modułu wyliczającego.  
+ [w, na zewnątrz] Wskaźnik do wyliczacza.  
   
  `cl`  
- podczas Token TypeDef klasy, której pola mają zostać wyliczone.  
+ [w] TypeDef token klasy, których pola mają być wyliczone.  
   
  `rFields`  
- określoną Lista tokenów FieldDef.  
+ [na zewnątrz] Lista tokenów FieldDef.  
   
  `cMax`  
- podczas Maksymalny rozmiar tablicy `rFields`.  
+ [w] Maksymalny rozmiar `rFields` tablicy.  
   
  `pcTokens`  
- określoną Rzeczywista liczba tokenów FieldDef zwróconych w `rFields`.  
+ [na zewnątrz] Rzeczywista liczba tokenów FieldDef `rFields`zwrócona w .  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFields` pomyślnie zwrócone.|  
-|`S_FALSE`|Brak pól do wyliczenia. W takim przypadku `pcTokens` wynosi zero.|  
+|`S_OK`|`EnumFields`zwrócono pomyślnie.|  
+|`S_FALSE`|Nie ma żadnych pól do wyliczenia. W takim `pcTokens` przypadku wynosi zero.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Uwzględnione jako zasób w pliku MsCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

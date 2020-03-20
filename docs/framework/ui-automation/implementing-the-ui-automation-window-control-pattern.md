@@ -6,38 +6,38 @@ helpviewer_keywords:
 - UI Automation, Window control pattern
 - Window control pattern
 ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
-ms.openlocfilehash: d8afaa13bd4eca9f9fcd4c8ed26c09c62ad74931
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: dd677ca9f610d463acc7c69f99767bd7b8781589
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447032"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180030"
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>Implementacja wzorca kontrolki okna automatyzacji interfejsu użytkownika
 > [!NOTE]
-> Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych klas [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zdefiniowanych w przestrzeni nazw <xref:System.Windows.Automation>. Aby uzyskać najnowsze informacje na temat [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [interfejs API usługi Windows Automation: Automatyzacja interfejsu użytkownika](/windows/win32/winauto/entry-uiauto-win32).  
+> Ta dokumentacja jest przeznaczona dla deweloperów [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] programu .NET <xref:System.Windows.Automation> Framework, którzy chcą używać klas zarządzanych zdefiniowanych w obszarze nazw. Aby uzyskać najnowsze [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]informacje na temat interfejsu [API automatyzacji systemu Windows: Automatyzacja interfejsu użytkownika](/windows/win32/winauto/entry-uiauto-win32).  
   
- W tym temacie przedstawiono wytyczne i konwencje dotyczące implementowania <xref:System.Windows.Automation.Provider.IWindowProvider>, w tym informacje dotyczące <xref:System.Windows.Automation.WindowPattern> właściwości, metod i zdarzeń. Linki do dodatkowych odwołań znajdują się na końcu tematu.  
+ W tym temacie przedstawiono wytyczne <xref:System.Windows.Automation.Provider.IWindowProvider>i konwencje <xref:System.Windows.Automation.WindowPattern> dotyczące implementacji, w tym informacje o właściwościach, metodach i zdarzeniach. Łącza do dodatkowych odwołań są wyświetlane na końcu tematu.  
   
- <xref:System.Windows.Automation.WindowPattern> wzorzec kontroli służy do obsługi kontrolek, które zapewniają podstawowe funkcje oparte na oknach w tradycyjnym graficznym interfejsie użytkownika (GUI). Przykłady kontrolek, które muszą implementować ten wzorzec kontrolki obejmują okna aplikacji najwyższego poziomu, okna podrzędne interfejsu wielu dokumentów (MDI), okna dialogowe podziału o zmiennym rozmiarze, modalnych okien dialogowych i okien pomocy dymków.  
+ Wzorzec <xref:System.Windows.Automation.WindowPattern> formantu służy do obsługi formantów, które zapewniają podstawowe funkcje oparte na oknach w tradycyjnym graficznym interfejsie użytkownika (GUI). Przykłady formantów, które muszą implementować ten wzorzec sterowania obejmują okna aplikacji najwyższego poziomu, okna podrzędne interfejsu wielu dokumentów (MDI), kontrolki okienka podziału o zmiennym rozmiarze, okna dialogowe modalne i okna pomocy odnośnika.  
   
-<a name="Implementation_Guidelines_and_Conventions"></a>   
-## <a name="implementation-guidelines-and-conventions"></a>Wytyczne i konwencje dotyczące implementacji  
- Podczas implementowania wzorca kontroli okna należy zwrócić uwagę na następujące wytyczne i konwencje:  
+<a name="Implementation_Guidelines_and_Conventions"></a>
+## <a name="implementation-guidelines-and-conventions"></a>Wytyczne i konwencje dotyczące wdrażania  
+ Podczas implementowania wzorca kontroli okna, należy zwrócić uwagę na następujące wskazówki i konwencje:  
   
-- Aby zapewnić możliwość modyfikowania rozmiaru okna i położenia ekranu przy użyciu automatyzacji interfejsu użytkownika, formant musi implementować <xref:System.Windows.Automation.Provider.ITransformProvider> oprócz <xref:System.Windows.Automation.Provider.IWindowProvider>.  
+- Aby obsługiwać możliwość modyfikowania zarówno rozmiaru okna, jak i <xref:System.Windows.Automation.Provider.ITransformProvider> położenia ekranu za pomocą automatyzacji interfejsu użytkownika, formant musi implementować oprócz <xref:System.Windows.Automation.Provider.IWindowProvider>.  
   
-- Formanty, które zawierają paski tytułu i elementy paska tytułu, które umożliwiają przenoszenie formantu, jego rozmiar, zmaksymalizowany, zminimalizowany lub zamknięty są zwykle wymagane do zaimplementowania <xref:System.Windows.Automation.Provider.IWindowProvider>.  
+- Formanty zawierające paski tytułu i elementy paska tytułu, które umożliwiają przenoszenie, rozmiar, maksymalizację, <xref:System.Windows.Automation.Provider.IWindowProvider>minimalizację lub zamykanie formantu, są zazwyczaj wymagane do zaimplementowania .  
   
-- Kontrolki, takie jak okienka wyskakujące etykietki narzędzi i pola kombi lub menu rozwijane, nie zazwyczaj implementują <xref:System.Windows.Automation.Provider.IWindowProvider>.  
+- Formanty, takie jak wyskakujące okienka etykietek narzędzi i <xref:System.Windows.Automation.Provider.IWindowProvider>listy rozwijane pola kombi lub menu, zazwyczaj nie implementują .  
   
-- Okna pomocy w dymkach są odróżniane od podstawowych wyskakujących etykietek narzędzi przez udostępnienie przycisku Zamknij podobne do okna.  
+- Okna pomocy odnośnika różnią się od podstawowych wyskakujących okienek przez udostępnienie przycisku Zamknij w kształcie okna.  
   
-- Tryb pełnoekranowy nie jest obsługiwany przez program IWindowProvider, ponieważ jest on specyficzny dla aplikacji i nie jest typowym zachowaniem okna.  
+- Tryb pełnoekranowy nie jest obsługiwany przez IWindowProvider, ponieważ jest specyficzny dla aplikacji i nie jest typowym zachowaniem okna.  
   
-<a name="Required_Members_for_IWindowProvider"></a>   
-## <a name="required-members-for-iwindowprovider"></a>Wymagane elementy członkowskie dla IWindowProvider  
- Dla interfejsu IWindowProvider są wymagane następujące właściwości, metody i zdarzenia.  
+<a name="Required_Members_for_IWindowProvider"></a>
+## <a name="required-members-for-iwindowprovider"></a>Wymaganych członków dla iwindowProvider  
+ Następujące właściwości, metody i zdarzenia są wymagane dla interfejsu IWindowProvider.  
   
 |Wymagany element członkowski|Typ elementu członkowskiego|Uwagi|  
 |---------------------|-----------------|-----------|  
@@ -50,23 +50,23 @@ ms.locfileid: "74447032"
 |<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|Metoda|Brak|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|Metoda|Brak|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|Metoda|Brak|  
-|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|Zdarzenie|Brak|  
-|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|Zdarzenie|Brak|  
-|<xref:System.Windows.Automation.WindowInteractionState>|Zdarzenie|Nie jest gwarantowane <xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
+|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|Wydarzenie|Brak|  
+|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|Wydarzenie|Brak|  
+|<xref:System.Windows.Automation.WindowInteractionState>|Wydarzenie|Nie gwarantuje się, że<xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
   
-<a name="Exceptions"></a>   
+<a name="Exceptions"></a>
 ## <a name="exceptions"></a>Wyjątki  
- Dostawcy muszą zgłosić następujące wyjątki.  
+ Dostawcy muszą zgłaszać następujące wyjątki.  
   
 |Typ wyjątku|Warunek|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A><br /><br /> — Gdy kontrolka nie obsługuje żądanego zachowania.|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A><br /><br /> -Jeśli parametr nie jest prawidłową liczbą.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A><br /><br /> - Gdy formant nie obsługuje żądanego zachowania.|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A><br /><br /> - Gdy parametr nie jest prawidłową liczbą.|  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Wzorce kontrolek automatyzacji interfejsu użytkownika — omówienie](ui-automation-control-patterns-overview.md)
-- [Obsługa wzorców kontrolek dostawcy automatyzacji interfejsu użytkownika](support-control-patterns-in-a-ui-automation-provider.md)
+- [Obsługa wzorców formantów dostawcy automatyzacji interfejsu użytkownika](support-control-patterns-in-a-ui-automation-provider.md)
 - [Wzorce kontrolek automatyzacji interfejsu użytkownika dla klientów](ui-automation-control-patterns-for-clients.md)
 - [Przegląd drzewa automatyzacji interfejsu użytkownika](ui-automation-tree-overview.md)
 - [Używanie buforowania w automatyzacji interfejsu użytkownika](use-caching-in-ui-automation.md)

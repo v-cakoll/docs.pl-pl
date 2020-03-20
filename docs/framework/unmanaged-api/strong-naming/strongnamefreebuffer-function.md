@@ -18,40 +18,40 @@ helpviewer_keywords:
 ms.assetid: eda21ecf-4734-4f92-aaba-9f34884385db
 topic_type:
 - apiref
-ms.openlocfilehash: 11821acbeeb04ae09464eb0e032b9bf387914168
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 50e3cc6e677de45be9256a2a818ebd6ed7d8b843
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73095049"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176919"
 ---
 # <a name="strongnamefreebuffer-function"></a>StrongNameFreeBuffer — Funkcja
-Zwalnia pamięć, która została przypisana przy użyciu poprzedniego wywołania funkcji silnej nazwy, takiej jak [StrongNameGetPublicKey —](strongnamegetpublickey-function.md), [StrongNameTokenFromPublicKey —](strongnametokenfrompublickey-function.md)lub [StrongNameSignatureGeneration —](strongnamesignaturegeneration-function.md).  
+Zwalnia pamięć, która została przydzielona przy poprzednim wywołaniu funkcji silnej nazwy, takiej jak [StrongNameGetPublicKey](strongnamegetpublickey-function.md), [StrongNameTokenFromPublicKey](strongnametokenfrompublickey-function.md)lub [StrongNameSignatureGeneration](strongnamesignaturegeneration-function.md).  
   
- Ta funkcja jest przestarzała. Zamiast tego użyj metody [ICLRStrongName:: StrongNameFreeBuffer —](../hosting/iclrstrongname-strongnamefreebuffer-method.md) .  
+ Ta funkcja została przestarzała. Zamiast tego należy użyć metody [ICLRStrongName::StrongNameFreeBuffer.](../hosting/iclrstrongname-strongnamefreebuffer-method.md)  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
-VOID StrongNameFreeBuffer (   
+VOID StrongNameFreeBuffer (
    [in] BYTE   *pbMemory  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `pbMemory`  
- podczas Wskaźnik do pamięci do zwolnienia.  
+ [w] Wskaźnik do pamięci, aby zwolnić.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** StrongName. h  
+ **Nagłówek:** StrongName.h (Nazwa siła)-h  
   
- **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Uwzględnione jako zasób w pliku MsCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [StrongNameFreeBuffer, metoda](../hosting/iclrstrongname-strongnamefreebuffer-method.md)
 - [ICLRStrongName, interfejs](../hosting/iclrstrongname-interface.md)

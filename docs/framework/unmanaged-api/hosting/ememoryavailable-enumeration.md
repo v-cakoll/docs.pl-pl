@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 38e72a06-dbed-473b-a59b-7e0b3ea4f2af
 topic_type:
 - apiref
-ms.openlocfilehash: aec3c5f140df7eab10ea2bfa33634a4d853adcb0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0073a532f680d8764ec9e76ea22326a630457043
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134290"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176438"
 ---
 # <a name="ememoryavailable-enumeration"></a>EMemoryAvailable — Wyliczenie
-Zawiera wartości wskazujące ilość wolnej pamięci fizycznej na komputerze. Te wartości logicznie mapują do zdarzeń związanych z wysoką i niską ilością pamięci zwracaną z funkcji `CreateMemoryResourceNotification` w interfejsie API systemu Windows.  
+Zawiera wartości wskazujące ilość wolnej pamięci fizycznej na komputerze. Wartości te logicznie mapują zdarzenia dla wysokiej `CreateMemoryResourceNotification` i małej ilości pamięci zwróconej z funkcji w interfejsie API systemu Windows.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -30,30 +30,30 @@ Zawiera wartości wskazujące ilość wolnej pamięci fizycznej na komputerze. T
 typedef enum {  
     eMemoryAvailableLow     = 1,  
     eMemoryAvailableNeutral = 2,  
-    eMemoryAvailableHigh    = 3   
+    eMemoryAvailableHigh    = 3
 } EMemoryAvailable;  
 ```  
   
 ## <a name="members"></a>Elementy członkowskie  
   
-|Element członkowski|Opis|  
+|Członek|Opis|  
 |------------|-----------------|  
-|`eMemoryAvailableHigh`|Dostępna jest duża ilość pamięci fizycznej.|  
-|`eMemoryAvailableLow`|Dostępna jest bardzo mała ilość pamięci fizycznej.|  
+|`eMemoryAvailableHigh`|Dostępnych jest mnóstwo pamięci fizycznej.|  
+|`eMemoryAvailableLow`|Dostępna jest bardzo mała pamięć fizyczna.|  
 |`eMemoryAvailableNeutral`|Dostępna pamięć fizyczna jest neutralna.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ta wartość jest przesyłana przez hosta do środowiska uruchomieniowego języka wspólnego (CLR) za pomocą wywołania metody [ICLRMemoryNotificationCallback:: OnMemoryNotification —](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-onmemorynotification-method.md) .  
+ Ta wartość jest przekazywana przez hosta do środowiska wykonawczego języka wspólnego (CLR) przy użyciu wywołania [metody ICLRMemoryNotificationCallback::OnMemoryNotification.](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-onmemorynotification-method.md)  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE. h  
+ **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** MSCorEE. dll  
+ **Biblioteka:** Mscoree.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Hosting — wyliczenia](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [Hosting — Wyliczenia](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a0637d66-74bf-4f2d-8137-9ff838bccece
 topic_type:
 - apiref
-ms.openlocfilehash: 20628e708261076c6e172ff30c366a0d69c2e0f2
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 14bd352099890e4ca36321d550b8e982d4373231
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432121"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177889"
 ---
 # <a name="imetadataassemblyemitdefineassembly-method"></a>IMetaDataAssemblyEmit::DefineAssembly — Metoda
-Tworzy strukturę `Assembly` zawierającą metadane dla określonego zestawu i zwraca skojarzony token metadanych.  
+Tworzy `Assembly` strukturę zawierającą metadane dla określonego zestawu i zwraca skojarzony token metadanych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -32,7 +32,7 @@ HRESULT DefineAssembly (
     [in]  void                 *pbPublicKey,  
     [in]  ULONG                cbPublicKey,  
     [in]  ULONG                uHashAlgId,  
-    [in]  LPCWSTR              szName,   
+    [in]  LPCWSTR              szName,
     [in]  ASSEMBLYMETADATA     *pMetaData,  
     [in]  DWORD                dwAssemblyFlags,  
     [out] mdAssembly           *pmda  
@@ -41,38 +41,38 @@ HRESULT DefineAssembly (
   
 ## <a name="parameters"></a>Parametry  
  `pbPublicKey`  
- podczas Klucz publiczny, który identyfikuje wydawcę zestawu lub wartość NULL, jeśli zestaw nie ma silnej nazwy.  
+ [w] Klucz publiczny, który identyfikuje wydawcy zestawu lub NULL, jeśli zestaw nie jest silnie nazwany.  
   
  `cbPublicKey`  
- podczas Rozmiar w bajtach `pbPublicKey`.  
+ [w] Rozmiar w bajtach . `pbPublicKey`  
   
  `uHashAlgId`  
- podczas Identyfikator algorytmu wyznaczania wartości skrótu, który ma być używany do szyfrowania plików w zestawie, lub wartość NULL, aby określić algorytm SHA-1.  
+ [w] Identyfikator algorytmu mieszania do szyfrowania plików w zestawie lub NULL, aby określić algorytm SHA-1.  
   
  `szName`  
- podczas Nazwa tekstu do odczytania przez człowieka. Ta wartość nie może przekraczać 1024 znaków.  
+ [w] Nazwa tekstowa zestawu czytelna dla człowieka. Ta wartość nie może przekraczać 1024 znaków.  
   
  `pMetaData`  
- podczas Wskaźnik do wystąpienia ASSEMBLYMETADATA, który zawiera wersję, platformę i informacje o ustawieniach regionalnych dla zestawu.  
+ [w] Wskaźnik do assemblymetadata wystąpienie, który zawiera informacje o wersji, platformy i ustawień regionalnych dla zestawu.  
   
  `dwAssemblyFlags`  
- podczas Kombinacja wartości [CorAssemblyFlags —](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) , które opisują funkcje zestawu.  
+ [w] Kombinacja [Wartości CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) opisujące operacje złożenia.  
   
  `pmda`  
- określoną Wskaźnik do tokenu metadanych.  
+ [na zewnątrz] Wskaźnik do tokenu metadanych.  
   
 ## <a name="remarks"></a>Uwagi  
- W manifeście można zdefiniować tylko jedną strukturę metadanych `Assembly`.  
+ Tylko `Assembly` jedna struktura metadanych można zdefiniować w manifeście.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Uwzględnione jako zasób w pliku MsCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataAssemblyEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

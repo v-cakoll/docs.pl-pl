@@ -1,22 +1,22 @@
 ---
-title: Element <Namespace> (.NET Native)
+title: <Namespace>Element (natywny.NET)
 ms.date: 03/30/2017
 ms.assetid: 57c614e5-18a9-4e87-bfd5-d0fe3396a192
-ms.openlocfilehash: b6d7a45de14d0fb8eb2e27a02c86510f630be9e1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 06d88a7b0f95c7c1dbe98818b847c92e08a57a19
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128264"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180955"
 ---
-# <a name="namespace-element-net-native"></a>\<> elementu przestrzeni nazw (.NET Native)
+# <a name="namespace-element-net-native"></a>\<Obszar nazw> element (natywny.NET)
 Stosuje zasady odbicia środowiska uruchomieniowego do wszystkich typów w określonym obszarze nazw.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<Namespace Name="namespace_name"   
-           Activate="policy_type"   
+<Namespace Name="namespace_name"
+           Activate="policy_type"
            Browse="policy_type"  
            Dynamic="policy_setting"  
            Serialize="policy_setting"  
@@ -36,52 +36,52 @@ Stosuje zasady odbicia środowiska uruchomieniowego do wszystkich typów w okre�
 |Atrybut|Typ atrybutu|Opis|  
 |---------------|--------------------|-----------------|  
 |`Name`|Ogólne|Atrybut wymagany. Określa nazwę przestrzeni nazw.|  
-|`Activate`|Odbicie|Atrybut opcjonalny. Kontroluje dostęp środowiska uruchomieniowego do konstruktorów, aby umożliwić aktywację wystąpień.|  
-|`Browse`|Odbicie|Atrybut opcjonalny. Steruje wykonywaniem zapytań dotyczących informacji o elementach programu, ale nie umożliwia dostępu do środowiska uruchomieniowego.|  
-|`Dynamic`|Odbicie|Atrybut opcjonalny. Kontroluje dostęp środowiska uruchomieniowego do wszystkich elementów członkowskich typu, takich jak konstruktory, metody, pola, właściwości i zdarzenia, aby umożliwić programowanie dynamiczne.|  
-|`Serialize`|Serializacja|Atrybut opcjonalny. Kontroluje dostęp środowiska uruchomieniowego do konstruktorów, pól i właściwości, aby umożliwić Serializowanie i deserializacja wystąpień typów przez biblioteki, takie jak serializator JSON Newtonsoft.|  
-|`DataContractSerializer`|Serializacja|Atrybut opcjonalny. Kontroluje zasady dla serializacji korzystającej z klasy <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.|  
-|`DataContractJsonSerializer`|Serializacja|Atrybut opcjonalny. Kontroluje zasady dla serializacji JSON korzystającej z klasy <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType>.|  
-|`XmlSerializer`|Serializacja|Atrybut opcjonalny. Kontroluje zasady dla serializacji XML, która używa klasy <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>.|  
-|`MarshalObject`|Interop|Atrybut opcjonalny. Kontroluje zasady dotyczące organizowania typów odwołań do środowisko wykonawcze systemu Windows i COM.|  
-|`MarshalDelegate`|Interop|Atrybut opcjonalny. Steruje zasadami organizowania typów delegatów jako wskaźników funkcji do kodu natywnego.|  
-|`MarshalStructure`|Interop|Atrybut opcjonalny. Steruje zasadami organizowania struktur w kodzie natywnym.|  
+|`Activate`|Odbicie|Atrybut opcjonalny. Steruje dostępem środowiska wykonawczego do konstruktorów, aby włączyć aktywację wystąpień.|  
+|`Browse`|Odbicie|Atrybut opcjonalny. Steruje wykonywaniem zapytań o informacje o elementach programu, ale nie włącza dostępu do środowiska uruchomieniowego.|  
+|`Dynamic`|Odbicie|Atrybut opcjonalny. Steruje dostępem środowiska uruchomieniowego do wszystkich elementów członkowskich typu, w tym konstruktorów, metod, pól, właściwości i zdarzeń, aby włączyć programowanie dynamiczne.|  
+|`Serialize`|Serializacja|Atrybut opcjonalny. Steruje dostępem środowiska wykonawczego do konstruktorów, pól i właściwości, aby umożliwić serializowanie i deserializacji wystąpień typu przez biblioteki, takie jak serializator JSON firmy Newtonsoft.|  
+|`DataContractSerializer`|Serializacja|Atrybut opcjonalny. Steruje zasadami serializacji, <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> która używa klasy.|  
+|`DataContractJsonSerializer`|Serializacja|Atrybut opcjonalny. Steruje zasadami serializacji JSON, która używa <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType> klasy.|  
+|`XmlSerializer`|Serializacja|Atrybut opcjonalny. Steruje zasadami serializacji XML, która używa <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> tej klasy.|  
+|`MarshalObject`|Interop|Atrybut opcjonalny. Steruje zasadami organizowania typów odwołań do środowiska wykonawczego systemu Windows i środowiska COM.|  
+|`MarshalDelegate`|Interop|Atrybut opcjonalny. Steruje zasadami organizowania typów delegatów jako wskaźników funkcji do kodu macierzystego.|  
+|`MarshalStructure`|Interop|Atrybut opcjonalny. Steruje zasadami organizowania struktur do kodu macierzystego.|  
   
-## <a name="name-attribute"></a>Atrybut nazwy  
+## <a name="name-attribute"></a>Atrybut Nazwa  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|*namespace_name*|Nazwa przestrzeni nazw. Jeśli element > \<przestrzeń nazw jest elementem podrzędnym [\<aplikacji >](application-element-net-native.md), [\<biblioteki](library-element-net-native.md)> lub [\<zestawu](assembly-element-net-native.md) >, *namespace_name* musi być w pełni kwalifikowaną nazwą przestrzeni nazw. Jeśli \<przestrzeni nazw > element jest elementem podrzędnym innego \<przestrzeni nazw > elementu, *namespace_name* musi być względną nazwą przestrzeni nazw.|  
+|*namespace_name*|Nazwa obszaru nazw. \<Jeśli element> obszaru nazw jest elementem podrzędnym [ \<>aplikacji, ](application-element-net-native.md) [ \<biblioteki>](library-element-net-native.md)lub *namespace_name* [ \<](assembly-element-net-native.md) elementu>zestawu, namespace_name musi być w pełni kwalifikowaną nazwą obszaru nazw. \<Jeśli element> obszaru nazw jest elementem \<podrzędnym innego elementu> obszaru nazw, *namespace_name* musi być nazwą względnego obszaru nazw.|  
   
 ## <a name="all-other-attributes"></a>Wszystkie inne atrybuty  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|*policy_setting*|Ustawienie, które ma zostać zastosowane do tego typu zasad dla wszystkich typów w przestrzeni nazw. Możliwe wartości to `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal`i `Required All`. Aby uzyskać więcej informacji, zobacz [Ustawienia zasad dyrektywy środowiska uruchomieniowego](runtime-directive-policy-settings.md).|  
+|*policy_setting*|Ustawienie, które ma zastosowanie do tego typu zasad dla wszystkich typów w obszarze nazw. Możliwe wartości `All` `Auto`to `Excluded` `Public`, `PublicAndInternal` `Required Public`, `Required PublicAndInternal`, `Required All`, , , i . Aby uzyskać więcej informacji, zobacz [Ustawienia zasad dyrektywy środowiska wykonawczego](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|`<Namespace>`|Stosuje zasady odbicia środowiska uruchomieniowego do wszystkich typów w nadrzędnej przestrzeni nazw.|  
-|[Typ\<](type-element-net-native.md)|Stosuje zasady odbicia do typu.|  
-|[\<TypeInstantiation >](typeinstantiation-element-net-native.md)|Stosuje zasady odbicia do skonstruowanego typu ogólnego.|  
+|`<Namespace>`|Stosuje zasady odbicie środowiska uruchomieniowego do wszystkich typów w nadrzędnej przestrzeni nazw.|  
+|[\<Typ>](type-element-net-native.md)|Stosuje zasady odbicia do typu.|  
+|[\<>typu>](typeinstantiation-element-net-native.md)|Stosuje zasady odbicia do skonstruowanego typu ogólnego.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<> aplikacji](application-element-net-native.md)|Służy jako kontener dla typów i składowych dla całej aplikacji, których metadane są dostępne do odbicia w czasie wykonywania. Element [\<> aplikacji](application-element-net-native.md) może mieć zero, jeden lub więcej\<elementów [> zestawu](assembly-element-net-native.md) .|  
-|[\<zestawu >](assembly-element-net-native.md)|Stosuje zasady odbicia środowiska uruchomieniowego do wszystkich typów w określonym zestawie.|  
-|[Biblioteka \<](library-element-net-native.md)|Definiuje zestaw zawierający typy i elementy członkowskie typu, których metadane są dostępne do odbicia w czasie wykonywania. [Biblioteka\<](library-element-net-native.md) element może mieć zero lub jeden element [> zestawu\<](assembly-element-net-native.md) .|  
+|[\<>aplikacji](application-element-net-native.md)|Służy jako kontener dla typów całej aplikacji i członków typu, których metadane są dostępne do odbicia w czasie wykonywania. [ \<Element>aplikacji](application-element-net-native.md) może mieć zero, jeden lub więcej [ \<elementów>zestawu.](assembly-element-net-native.md)|  
+|[\<>montażowe](assembly-element-net-native.md)|Stosuje zasady odbicia środowiska uruchomieniowego do wszystkich typów w określonym zestawie.|  
+|[\<>biblioteczna](library-element-net-native.md)|Definiuje zestaw, który zawiera typy i elementy członkowskie typu, których metadane są dostępne do odbicia w czasie wykonywania. [ \<Element>biblioteki](library-element-net-native.md) może mieć zero lub jeden [ \<](assembly-element-net-native.md) element zestawu>.|  
 |`<Namespace>`|Stosuje zasady odbicia do wszystkich typów w nadrzędnej przestrzeni nazw.|  
   
 ## <a name="remarks"></a>Uwagi  
- Atrybuty `Activate`, `Browse`, `Dynamic`i `Serialize` są opcjonalne. Jeśli żaden nie istnieje, element `<Namespace>` służy tylko jako kontener dla elementów podrzędnych. Jeśli są obecne, element `<Namespace>` stosuje zasady odbicia środowiska uruchomieniowego do wszystkich typów w określonej przestrzeni nazw.  
+ `Activate`Atrybuty `Browse` `Dynamic`, `Serialize` i atrybuty są opcjonalne. Jeśli żaden z `<Namespace>` nich nie są obecne, element służy tylko jako kontener dla elementów podrzędnych. Jeśli są one `<Namespace>` obecne, element stosuje zasady odbicia środowiska uruchomieniowego do wszystkich typów w określonym obszarze nazw.  
   
- Gdy jest elementem podrzędnym [\<zestawu >](assembly-element-net-native.md) , element `<Namespace>` zastępuje zasady odbicia środowiska uruchomieniowego zdefiniowane przez [\<zestawu >](assembly-element-net-native.md) .  
+ Gdy jest elementem podrzędnym [ \<elementu Assembly>,](assembly-element-net-native.md) `<Namespace>` element zastępuje zasady odbicia środowiska wykonawczego zdefiniowane [ \<](assembly-element-net-native.md) przez element Zestawu>.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Ustawienia zasad dyrektyw środowiska uruchomieniowego](runtime-directive-policy-settings.md)
 - [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)

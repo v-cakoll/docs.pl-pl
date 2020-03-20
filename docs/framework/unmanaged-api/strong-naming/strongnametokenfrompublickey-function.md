@@ -18,22 +18,22 @@ helpviewer_keywords:
 ms.assetid: 997e9e57-abb2-4217-bf20-1df621a75add
 topic_type:
 - apiref
-ms.openlocfilehash: b95c96efeb666f25d04118aa8cb9b0da3a2e7924
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 20be3114908ef78966eead05ae8ba6333a491404
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73104163"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175060"
 ---
 # <a name="strongnametokenfrompublickey-function"></a>StrongNameTokenFromPublicKey — Funkcja
-Pobiera token reprezentujący klucz publiczny. Token silnej nazwy to skrócona postać klucza publicznego.  
+Pobiera token reprezentujący klucz publiczny. Token silnej nazwy jest skróconą formą klucza publicznego.  
   
- Ta funkcja jest przestarzała. Zamiast tego użyj metody [ICLRStrongName:: StrongNameTokenFromPublicKey —](../hosting/iclrstrongname-strongnametokenfrompublickey-method.md) .  
+ Ta funkcja została przestarzała. Zamiast tego należy użyć metody [ICLRStrongName::StrongNameTokenFromPublicKey.](../hosting/iclrstrongname-strongnametokenfrompublickey-method.md)  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
-BOOLEANStrongNameTokenFromPublicKey (   
+BOOLEANStrongNameTokenFromPublicKey (
     [in]  BYTE    *pbPublicKeyBlob,  
     [in]  ULONG   cbPublicKeyBlob,  
     [out] BYTE    **ppbStrongNameToken,  
@@ -43,36 +43,36 @@ BOOLEANStrongNameTokenFromPublicKey (
   
 ## <a name="parameters"></a>Parametry  
  `pbPublicKeyBlob`  
- podczas Struktura typu [PublicKeyBlob —](publickeyblob-structure.md) , która zawiera publiczną część pary kluczy używanej do generowania podpisu silnej nazwy.  
+ [w] Struktura typu [PublicKeyBlob,](publickeyblob-structure.md) który zawiera część publiczną pary kluczy używane do generowania podpisu silnej nazwy.  
   
  `cbPublicKeyBlob`  
- podczas Rozmiar w bajtach `pbPublicKeyBlob`.  
+ [w] Rozmiar w bajtach `pbPublicKeyBlob`.  
   
  `ppbStrongNameToken`  
- określoną Token silnej nazwy odpowiadający kluczowi przesłanemu `pbPublicKeyBlob`. Środowisko uruchomieniowe języka wspólnego przydziela pamięć, w której ma zostać zwrócony token. Obiekt wywołujący musi zwolnić tę pamięć przy użyciu funkcji [StrongNameFreeBuffer —](strongnamefreebuffer-function.md) .  
+ [na zewnątrz] Token silnej nazwy odpowiadający `pbPublicKeyBlob`kluczowi przekazanym w . Środowisko wykonawcze języka wspólnego przydziela pamięć, w której do zwrócenia tokenu. Wywołujący należy zwolnić tę pamięć przy użyciu [Funkcji StrongNameFreeBuffer.](strongnamefreebuffer-function.md)  
   
  `pcbStrongNameToken`  
- określoną Rozmiar (w bajtach) zwracanego tokenu silnej nazwy.  
+ [na zewnątrz] Rozmiar w bajtach zwróconego tokenu silnej nazwy.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `true` po pomyślnym zakończeniu; w przeciwnym razie `false`.  
+ `true`po pomyślnym zakończeniu; w `false`przeciwnym razie , .  
   
 ## <a name="remarks"></a>Uwagi  
- Token silnej nazwy to Skrócona forma klucza publicznego służąca do oszczędzania miejsca podczas przechowywania informacji o kluczu w metadanych. W odniesieniu do zestawu zależnego w odwołaniach do zestawów są używane tokeny silnej nazwy.  
+ Token silnej nazwy to skrócona forma klucza publicznego używana do zapisywania miejsca podczas przechowywania kluczowych informacji w metadanych. W szczególności tokeny silnej nazwy są używane w odwołaniach do zestawu w celu odwoływania się do zestawu zależnego.  
   
- Jeśli funkcja `StrongNameTokenFromPublicKey` nie zakończy się pomyślnie, wywołaj funkcję [StrongNameErrorInfo —](strongnameerrorinfo-function.md) w celu pobrania ostatniego wygenerowanego błędu.  
+ Jeśli `StrongNameTokenFromPublicKey` funkcja nie zakończy się pomyślnie, wywołaj funkcję [StrongNameErrorInfo,](strongnameerrorinfo-function.md) aby pobrać ostatni wygenerowany błąd.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** StrongName. h  
+ **Nagłówek:** StrongName.h (Nazwa siła)-h  
   
- **Biblioteka:** Uwzględnione jako zasób w bibliotece mscoree. dll  
+ **Biblioteka:** Uwzględnione jako zasób w pliku mscoree.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [StrongNameTokenFromPublicKey, metoda](../hosting/iclrstrongname-strongnametokenfrompublickey-method.md)
 - [StrongNameGetPublicKey, metoda](../hosting/iclrstrongname-strongnamegetpublickey-method.md)
-- [PublicKeyBlob, struktura](publickeyblob-structure.md)
+- [PublicKeyBlob — Struktura](publickeyblob-structure.md)

@@ -15,60 +15,60 @@ helpviewer_keywords:
 ms.assetid: 9e50480a-8ada-4044-b2a5-97bb14ed3525
 topic_type:
 - apiref
-ms.openlocfilehash: 9561d383e7c134230b8664329b59aec23e487124
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: ed735c3d7830551581df35793f3f6fdc4953dc8c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899582"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178072"
 ---
 # <a name="iclrstrongnamegethashfromfile-method"></a>ICLRStrongName::GetHashFromFile — Metoda
-Generuje skrót do zawartości określonego pliku.  
+Generuje skrót nad zawartością określonego pliku.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
 HRESULT GetHashFromFile (  
     [in]  LPCSTR   szFilePath,  
-    [in, out] unsigned int   *piHashAlg,   
-    [out] BYTE     *pbHash,      
-    [in]  DWORD    cchHash,      
+    [in, out] unsigned int   *piHashAlg,
+    [out] BYTE     *pbHash,
+    [in]  DWORD    cchHash,
     [out] DWORD    *pchHash  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `szFilePath`  
- podczas Nazwa pliku do skrótu.  
+ [w] Nazwa pliku do mieszania.  
   
  `piHashAlg`  
- [in. out] Algorytm, który ma być używany podczas generowania skrótu. Prawidłowymi algorytmami są te zdefiniowane przez interfejs CryptoAPI Win32. Jeśli wartość `piHashAlg` jest równa 0, używany jest algorytm domyślny CALG_SHA-1.  
+ [w, na zewnątrz] Algorytm do użycia podczas generowania skrótu. Prawidłowe algorytmy są zdefiniowane przez Win32 CryptoAPI. Jeśli `piHashAlg` jest ustawiona na 0, używany jest domyślny algorytm CALG_SHA-1.  
   
  `pbHash`  
- określoną Tablica bajtowa zawierająca wygenerowany skrót.  
+ [na zewnątrz] Tablica bajtów zawierająca wygenerowany skrót.  
   
  `cchHash`  
- podczas Maksymalny rozmiar buforu, do którego `pbHash` wskazuje.  
+ [w] Maksymalny rozmiar buforu, który `pbHash` wskazuje.  
   
  `pchHash`  
- określoną Rozmiar w bajtach zwracanej `pbHash`.  
+ [na zewnątrz] Rozmiar (w bajtach) `pbHash`zwracanego .  
   
-## <a name="return-value"></a>Wartość zwrócona  
- `S_OK`, jeśli metoda została ukończona pomyślnie; w przeciwnym razie wartość HRESULT wskazująca niepowodzenie (zobacz [typowe wartości HRESULT](/windows/win32/seccrypto/common-hresult-values) dla listy).  
+## <a name="return-value"></a>Wartość zwracana  
+ `S_OK`jeśli metoda została pomyślnie ukończona; w przeciwnym razie wartość HRESULT wskazująca błąd (zobacz [typowe wartości HRESULT](/windows/win32/seccrypto/common-hresult-values) dla listy).  
   
 ## <a name="remarks"></a>Uwagi  
- Ta metoda jest taka sama jak Metoda [ICLRStrongName:: GetHashFromFileW —](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md) , z tą różnicą, że Specyfikacja nazwy pliku jest ANSI zamiast Unicode.  
+ Ta metoda jest taka sama jak [ICLRStrongName::GetHashFromFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md) metody, z tą różnicą, że specyfikacja nazwy pliku jest ANSI zamiast Unicode.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Obiekt ServiceHost. h  
+ **Nagłówek:** MetaHost.h  
   
- **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
+ **Biblioteka:** Uwzględnione jako zasób w pliku MSCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [GetHashFromFileW, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md)
 - [ICLRStrongName, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

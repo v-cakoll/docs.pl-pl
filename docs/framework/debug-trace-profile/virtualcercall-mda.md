@@ -9,27 +9,27 @@ helpviewer_keywords:
 - CER calls
 - managed debugging assistants (MDAs), CER calls
 ms.assetid: 1eb18c7a-f5e0-443f-80fb-67bfbb047da2
-ms.openlocfilehash: 49ba4e7ca0b8ed2e433053130bc9ca2742c72ec9
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: a2112baed863b1035cbee4e956c1b6e271ff6e3c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217193"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181711"
 ---
 # <a name="virtualcercall-mda"></a>virtualCERCall MDA
-`virtualCERCall` zarządzanego asystenta debugowania (MDA) jest uaktywniana jako ostrzeżenie wskazujące, że lokacja wywołania w ramach wykresu wywołania ograniczonego wykonania (CER) odnosi się do wirtualnego elementu docelowego, czyli wywołania wirtualnego do niekońcowej metody wirtualnej lub wywołania przy użyciu interfejsu. Środowisko uruchomieniowe języka wspólnego (CLR) nie może przewidzieć metody docelowej tych wywołań z poziomu języka pośredniego i analizy metadanych. W związku z tym drzewo wywołań nie może zostać przygotowane jako część wykresu CER, a przerwania wątku w tym poddrzewie nie mogą zostać automatycznie zablokowane. To zdarzenie powoduje ostrzeganie o przypadkach, w których może być konieczne rozszerzenie CER, za pomocą jawnych wywołań metody <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>, gdy dodatkowe informacje wymagane do obliczenia obiektu docelowego wywołania są znane w czasie wykonywania.  
+Zarządzany `virtualCERCall` asystent debugowania (MDA) jest aktywowany jako ostrzeżenie wskazujące, że lokacja wywołania w ramach wykresu wywołania regionu ograniczonego wykonywania (CER) odnosi się do wirtualnego obiektu docelowego, czyli wirtualnego wywołania niekonfekcyjnej metody wirtualnej lub wywołania przy użyciu interfejsu. Środowisko wykonawcze języka wspólnego (CLR) nie można przewidzieć metody docelowej tych wywołań z pośredniego języka i analizy metadanych sam. W rezultacie drzewa wywołań nie można przygotować jako część wykresu CER i przerywanie wątku w tym poddrzewie nie może być automatycznie blokowane. Ten obiekt MDA ostrzega o przypadkach, w których cer może <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> wymagać rozszerzenia przy użyciu jawnych wywołań metody, gdy dodatkowe informacje wymagane do obliczenia obiektu docelowego wywołania są znane w czasie wykonywania.  
   
 ## <a name="symptoms"></a>Objawy  
- CERs, które nie są uruchamiane, gdy wątek zostanie przerwany lub domena aplikacji jest zwolniona.  
+ CeRs, które nie są uruchamiane, gdy wątek zostanie przerwany lub domena aplikacji zostanie zwolniona.  
   
 ## <a name="cause"></a>Przyczyna  
- CER zawiera wywołanie metody wirtualnej, która nie może zostać przygotowana automatycznie.  
+ Cer zawiera wywołanie metody wirtualnej, która nie może być przygotowana automatycznie.  
   
 ## <a name="resolution"></a>Rozwiązanie  
- Wywołaj <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> dla metody wirtualnej.  
+ Zadzwoń <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> do metody wirtualnej.  
   
-## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
- To zdarzenie MDA nie ma wpływu na środowisko CLR.  
+## <a name="effect-on-the-runtime"></a>Wpływ na czas działania  
+ To MDA nie ma wpływu na CLR.  
   
 ## <a name="output"></a>Dane wyjściowe  
   
@@ -44,7 +44,7 @@ declaringType name="VirtualCERCall+MyClass"
     callsite name="MethodWithCer" offset="0x0024"  
 ```  
   
-## <a name="configuration"></a>Konfiguracja  
+## <a name="configuration"></a>Konfigurowanie  
   
 ```xml  
 <mdaConfig>  
@@ -87,7 +87,7 @@ void MethodWithCer(MyClass object)
         // Start of the CER.  
   
         // Cannot tell at analysis time whether object is a MyClass  
-        // or a MyDerivedClass, so we do not know which version of   
+        // or a MyDerivedClass, so we do not know which version of
         // VirtualMethod we are going to call.  
         object.VirtualMethod();  
     }  
@@ -98,4 +98,4 @@ void MethodWithCer(MyClass object)
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshaling międzyoperacyjny](../interop/interop-marshaling.md)
+- [Organizowanie międzyoperacyjne](../interop/interop-marshaling.md)

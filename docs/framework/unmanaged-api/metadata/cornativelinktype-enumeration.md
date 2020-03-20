@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 4f86ff37-2dab-4e64-819a-76b3bfe828ff
 topic_type:
 - apiref
-ms.openlocfilehash: 718e41e16c07265d8a36b8f6124d99cd3490f7be
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0b613ebacdff82a29fdbc3f4caa0f2b8bb5d3f6a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436614"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176165"
 ---
 # <a name="cornativelinktype-enumeration"></a>CorNativeLinkType — Wyliczenie
-Dostarcza wartości, które wskazują typ połączony w kodzie natywnym.  
+Zawiera wartości wskazujące typ połączony w kodzie macierzystym.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
-typedef enum   
+typedef enum
 {  
     nltNone       = 1,  
     nltAnsi       = 2,  
@@ -38,26 +38,26 @@ typedef enum
 } CorNativeLinkType;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Elementy członkowskie  
   
-|Element członkowski|Opis|  
+|Członek|Opis|  
 |------------|-----------------|  
-|`nltNone`|Wskazuje, że nie określono żadnego ze słów kluczowych.|  
-|`nltAnsi`|Wskazuje, że jest określone słowo kluczowe ANSI.|  
+|`nltNone`|Wskazuje, że żadne ze słów kluczowych nie są określone.|  
+|`nltAnsi`|Wskazuje, że określono słowo kluczowe ANSI.|  
 |`nltUnicode`|Wskazuje, że określono słowo kluczowe Unicode|  
-|`nltAuto`|Wskazuje, że jest określone słowo kluczowe New.|  
+|`nltAuto`|Wskazuje, że określono automatyczne słowo kluczowe.|  
 |`nltOle`|Wskazuje, że określono słowo kluczowe OLE.|  
-|`nltMaxValue`|Nie jest używany.|  
+|`nltMaxValue`|Nie używany.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Uwzględnione jako zasób w pliku MsCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

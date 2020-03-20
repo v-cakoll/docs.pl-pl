@@ -15,24 +15,24 @@ helpviewer_keywords:
 ms.assetid: 798513a0-68b1-4d04-bc5b-782a4445ea68
 topic_type:
 - apiref
-ms.openlocfilehash: a43c1883038e41cac1b58c78bc26f20d436ebbd1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 61b5678a546bdbadbcc6d8ee86447cb17ce72b99
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440239"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175528"
 ---
 # <a name="imetadataimportenumcustomattributes-method"></a>IMetaDataImport::EnumCustomAttributes — Metoda
-Wylicza niestandardowe tokeny definicji atrybutów skojarzone z określonym typem lub członkiem.  
+Wylicza tokeny niestandardowej definicji atrybutów skojarzone z określonym typem lub elementem członkowskim.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
-HRESULT EnumCustomAttributes (   
+HRESULT EnumCustomAttributes (
    [in, out] HCORENUM      *phEnum,  
-   [in]  mdToken            tk,   
-   [in]  mdToken            tkType,   
-   [out] mdCustomAttribute  rCustomAttributes[],   
+   [in]  mdToken            tk,
+   [in]  mdToken            tkType,
+   [out] mdCustomAttribute  rCustomAttributes[],
    [in]  ULONG              cMax,  
    [out, optional] ULONG   *pcCustomAttributes  
 );  
@@ -40,40 +40,40 @@ HRESULT EnumCustomAttributes (
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [in. out] Wskaźnik do zwróconego modułu wyliczającego.  
+ [w, na zewnątrz] Wskaźnik do zwróconego wylicznika.  
   
  `tk`  
- podczas Token dla zakresu wyliczenia lub zero dla wszystkich atrybutów niestandardowych.  
+ [w] Token dla zakresu wyliczenia lub zero dla wszystkich atrybutów niestandardowych.  
   
  `tkType`  
- podczas Token dla konstruktora typu atrybutów do wyliczenia lub `null` dla wszystkich typów.  
+ [w] Token dla konstruktora typu atrybutów, które mają być `null` wyliczone lub dla wszystkich typów.  
   
  `rCustomAttributes`  
- określoną Tablica tokenów atrybutów niestandardowych.  
+ [na zewnątrz] Tablica niestandardowych tokenów atrybutów.  
   
  `cMax`  
- podczas Maksymalny rozmiar tablicy `rCustomAttributes`.  
+ [w] Maksymalny rozmiar `rCustomAttributes` tablicy.  
   
  `pcCustomAttributes`  
- [out, opcjonalne] Rzeczywista liczba wartości tokenów zwróconych w `rCustomAttributes`.  
+ [out, opcjonalnie] Rzeczywista liczba wartości tokenów zwrócona w `rCustomAttributes`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumCustomAttributes` pomyślnie zwrócone.|  
-|`S_FALSE`|Brak atrybutów niestandardowych do wyliczenia. W takim przypadku `pcCustomAttributes` wynosi zero.|  
+|`S_OK`|`EnumCustomAttributes`zwrócono pomyślnie.|  
+|`S_FALSE`|Nie ma żadnych atrybutów niestandardowych do wyliczenia. W takim `pcCustomAttributes` przypadku wynosi zero.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Uwzględnione jako zasób w pliku MsCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

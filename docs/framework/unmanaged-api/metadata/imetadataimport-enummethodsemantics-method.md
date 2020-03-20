@@ -15,22 +15,22 @@ helpviewer_keywords:
 ms.assetid: e7e3c630-9691-46d6-94df-b5593a7bb08a
 topic_type:
 - apiref
-ms.openlocfilehash: ff6932b6040a19e0ccda2f8d2140fa131cdd9224
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f20652a7f86576e64646a1f63c3e2c48b55cf811
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450078"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175463"
 ---
 # <a name="imetadataimportenummethodsemantics-method"></a>IMetaDataImport::EnumMethodSemantics — Metoda
-Wylicza właściwości i zdarzenia zmiany właściwości, z którymi powiązana jest określona metoda.  
+Wylicza właściwości i zdarzenia zmiany właściwości, z którymi jest powiązana określona metoda.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
 HRESULT EnumMethodSemantics (  
    [in, out] HCORENUM    *phEnum,  
-   [in]  mdMethodDef     mb,   
+   [in]  mdMethodDef     mb,
    [out] mdToken         rEventProp[],  
    [in]  ULONG           cMax,  
    [out] ULONG           *pcEventProp  
@@ -39,40 +39,40 @@ HRESULT EnumMethodSemantics (
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [in. out] Wskaźnik do modułu wyliczającego. Musi ona mieć wartość NULL dla pierwszego wywołania tej metody.  
+ [w, na zewnątrz] Wskaźnik do wyliczacza. Musi to być null dla pierwszego wywołania tej metody.  
   
  `mb`  
- podczas Token MethodDef, który ogranicza zakres wyliczania.  
+ [w] Token MethodDef, który ogranicza zakres wyliczenia.  
   
  `rEventProp`  
- określoną Tablica służąca do przechowywania zdarzeń lub właściwości.  
+ [na zewnątrz] Tablica używana do przechowywania zdarzeń lub właściwości.  
   
  `cMax`  
- podczas Maksymalny rozmiar tablicy `rEventProp`.  
+ [w] Maksymalny rozmiar `rEventProp` tablicy.  
   
  `pcEventProp`  
- określoną Liczba zdarzeń lub właściwości zwróconych w `rEventProp`.  
+ [na zewnątrz] Liczba zdarzeń lub właściwości zwróconych w `rEventProp`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodSemantics` pomyślnie zwrócone.|  
-|`S_FALSE`|Brak zdarzeń lub właściwości do wyliczenia. W takim przypadku `pcEventProp` wynosi zero.|  
+|`S_OK`|`EnumMethodSemantics`zwrócono pomyślnie.|  
+|`S_FALSE`|Nie ma żadnych zdarzeń lub właściwości do wyliczenia. W takim `pcEventProp` przypadku wynosi zero.|  
   
 ## <a name="remarks"></a>Uwagi  
- Wiele typów środowiska uruchomieniowego języka *wspólnego definiuje`Changed`* zdarzeń i *Właściwości* `On``Changed` metod związanych z ich właściwościami. Na przykład typ <xref:System.Windows.Forms.Control?displayProperty=nameWithType> definiuje Właściwość <xref:System.Windows.Forms.Control.Font%2A>, zdarzenie <xref:System.Windows.Forms.Control.FontChanged> i metodę <xref:System.Windows.Forms.Control.OnFontChanged%2A>. Metoda metody dostępu set właściwości <xref:System.Windows.Forms.Control.Font%2A> wywołuje metodę <xref:System.Windows.Forms.Control.OnFontChanged%2A>, która z kolei podnosi zdarzenie <xref:System.Windows.Forms.Control.FontChanged>. Należy wywołać `EnumMethodSemantics` przy użyciu elementu MethodDef dla <xref:System.Windows.Forms.Control.OnFontChanged%2A>, aby uzyskać odwołania do właściwości <xref:System.Windows.Forms.Control.Font%2A> i zdarzenia <xref:System.Windows.Forms.Control.FontChanged>.  
+ Wiele typowych typów środowiska uruchomieniowego języka *zdefiniować zdarzenia właściwości* `Changed` i `On`metody *właściwości* `Changed` związane z ich właściwości. Na przykład <xref:System.Windows.Forms.Control?displayProperty=nameWithType> typ definiuje <xref:System.Windows.Forms.Control.Font%2A> właściwość, <xref:System.Windows.Forms.Control.FontChanged> zdarzenie i <xref:System.Windows.Forms.Control.OnFontChanged%2A> metodę. Set metody <xref:System.Windows.Forms.Control.Font%2A> akcesora <xref:System.Windows.Forms.Control.OnFontChanged%2A> właściwości wywołuje metodę, <xref:System.Windows.Forms.Control.FontChanged> która z kolei wywołuje zdarzenie. Wywołanie `EnumMethodSemantics` przy użyciu MethodDef, <xref:System.Windows.Forms.Control.OnFontChanged%2A> aby uzyskać <xref:System.Windows.Forms.Control.Font%2A> odwołania <xref:System.Windows.Forms.Control.FontChanged> do właściwości i zdarzenia.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Uwzględnione jako zasób w pliku MsCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

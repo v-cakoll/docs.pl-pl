@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fab037cb-fda6-40fb-9367-921e435dd5a0
 topic_type:
 - apiref
-ms.openlocfilehash: 828e4dc67cb93d0a35879e94b54c9fac6e5bda16
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7a35ce025360e0ec8b7085d68e54548026b7c7fc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124082"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178910"
 ---
 # <a name="icordebugframegetstackrange-method"></a>ICorDebugFrame::GetStackRange — Metoda
 Pobiera bezwzględny zakres adresów tej ramki stosu.  
@@ -29,26 +29,26 @@ Pobiera bezwzględny zakres adresów tej ramki stosu.
   
 ```cpp  
 HRESULT GetStackRange (  
-    [out] CORDB_ADDRESS      *pStart,   
+    [out] CORDB_ADDRESS      *pStart,
     [out] CORDB_ADDRESS      *pEnd  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `pStart`  
- określoną Wskaźnik do `CORDB_ADDRESS`, który określa adres początkowy ramki stosu reprezentowanej przez ten obiekt `ICorDebugFrame`.  
+ [na zewnątrz] Wskaźnik do, `CORDB_ADDRESS` który określa adres początkowy ramki stosu `ICorDebugFrame` reprezentowanej przez ten obiekt.  
   
  `pEnd`  
- określoną Wskaźnik do `CORDB_ADDRESS`, który określa adres końcowy ramki stosu reprezentowanej przez ten obiekt `ICorDebugFrame`.  
+ [na zewnątrz] Wskaźnik do, `CORDB_ADDRESS` który określa adres końcowy ramki stosu `ICorDebugFrame` reprezentowanej przez ten obiekt.  
   
 ## <a name="remarks"></a>Uwagi  
- Zakres adresów stosu jest przydatny do zszywania razem z przeplotem śladów stosu zebranych z wielu aparatów debugowania. Zakres liczbowy nie zawiera żadnych informacji o zawartości ramki stosu. Jest to zrozumiałe tylko dla porównania lokalizacji ramek stosu.  
+ Zakres adresów stosu jest przydatne do piecing razem przeplotem ślady stosu zebrane z wielu aparatów debugowania. Zakres liczbowy nie zawiera żadnych informacji o zawartości ramki stosu. Ma znaczenie tylko dla porównania lokalizacji ramki stosu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug. idl, CorDebug. h  
+ **Nagłówek:** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids. lib  
+ **Biblioteka:** CorGuids.lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -15,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: ba6e178f-128b-4e47-a13c-b4be73eb106c
 topic_type:
 - apiref
-ms.openlocfilehash: ef7057ad19fd34750bd15d358e9c1ebb1289cd44
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: b535fdd5027a26cc4dd0eafec9883f0186773dd1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75338064"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175502"
 ---
 # <a name="imetadataimportenuminterfaceimpls-method"></a>IMetaDataImport::EnumInterfaceImpls — Metoda
-Wylicza wszystkie interfejsy zaimplementowane przez określony `TypeDef`. 
+Wylicza wszystkie interfejsy zaimplementowane przez określony `TypeDef`plik .
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
 HRESULT EnumInterfaceImpls (  
-   [in, out]  HCORENUM       *phEnum,   
+   [in, out]  HCORENUM       *phEnum,
    [in]   mdTypeDef          td,  
-   [out]  mdInterfaceImpl    rImpls[],   
+   [out]  mdInterfaceImpl    rImpls[],
    [in]   ULONG              cMax,  
    [out]  ULONG*             pcImpls  
 );  
@@ -39,41 +39,41 @@ HRESULT EnumInterfaceImpls (
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [in. out] Wskaźnik do modułu wyliczającego.  
+ [w, na zewnątrz] Wskaźnik do wyliczacza.  
   
  `td`  
- podczas Token elementu TypeDef, którego tokeny MethodDef reprezentują implementacje interfejsów, mają zostać wyliczone.  
+ [w] Token TypeDef, którego tokeny MethodDef reprezentujące implementacje interfejsu mają być wyliczone.  
   
  `rImpls`  
- określoną Tablica służąca do przechowywania tokenów MethodDef.  
+ [na zewnątrz] Tablica używana do przechowywania tokenów MethodDef.  
   
  `cMax`  
- podczas Maksymalna długość tablicy `rImpls`.  
+ [w] Maksymalna długość `rImpls` tablicy.  
   
  `pcImpls`  
- określoną Rzeczywista liczba tokenów zwróconych w `rImpls`.  
+ [na zewnątrz] Rzeczywista liczba tokenów `rImpls`zwróconych w .  
   
-## <a name="return-value"></a>Wartość zwrócona  
+## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumInterfaceImpls` pomyślnie zwrócone.|  
-|`S_FALSE`|Brak tokenów MethodDef do wyliczenia. W takim przypadku `pcImpls` jest ustawiona na zero.|  
+|`S_OK`|`EnumInterfaceImpls`zwrócono pomyślnie.|  
+|`S_FALSE`|Nie ma żadnych tokenów MethodDef do wyliczenia. W takim `pcImpls` przypadku jest ustawiona na zero.|  
 
 ## <a name="remarks"></a>Uwagi
 
-Wyliczenie zwraca kolekcję tokenów `mdInterfaceImpl` dla każdego interfejsu zaimplementowanego przez określony `TypeDef`. Tokeny interfejsu są zwracane w kolejności, w jakiej interfejsy zostały określone (za pomocą `DefineTypeDef` lub `SetTypeDefProps`). Do właściwości zwracanych tokenów `mdInterfaceImpl` można wykonywać zapytania przy użyciu [GetInterfaceImplProps —](imetadataimport-getinterfaceimplprops-method.md).
+Wyliczenie zwraca kolekcję `mdInterfaceImpl` tokenów dla każdego interfejsu `TypeDef`zaimplementowanego przez określony . Tokeny interfejsu są zwracane w kolejności, `DefineTypeDef` w `SetTypeDefProps`interfejsy zostały określone (za pośrednictwem lub ). Właściwości zwróconych `mdInterfaceImpl` tokenów można wyszukiwać za pomocą [GetInterfaceImplProps](imetadataimport-getinterfaceimplprops-method.md).
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Uwzględnione jako zasób w pliku MsCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

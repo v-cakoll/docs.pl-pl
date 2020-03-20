@@ -15,64 +15,64 @@ helpviewer_keywords:
 ms.assetid: ad32fb84-c2b6-41cd-888d-787ff3a90449
 topic_type:
 - apiref
-ms.openlocfilehash: 7a46fa5319a1badc0cf28dcdbf535a6ed017c9c9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: dab155b82d87609b3d3f390133e6490502a43518
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437913"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177283"
 ---
 # <a name="imetadataimportfindmember-method"></a>IMetaDataImport::FindMember — Metoda
-Pobiera wskaźnik do tokenu MemberDef dla pola lub metody, która jest ujęta w określony <xref:System.Type> i ma określoną nazwę i sygnaturę metadanych.  
+Pobiera wskaźnik do MemberDef token dla pola lub metody, <xref:System.Type> która jest ujęta przez określony i który ma określoną nazwę i podpis metadanych.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
 HRESULT FindMember (  
    [in]  mdTypeDef         td,  
-   [in]  LPCWSTR           szName,   
-   [in]  PCCOR_SIGNATURE   pvSigBlob,   
-   [in]  ULONG             cbSigBlob,   
+   [in]  LPCWSTR           szName,
+   [in]  PCCOR_SIGNATURE   pvSigBlob,
+   [in]  ULONG             cbSigBlob,
    [out] mdToken           *pmb  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `td`  
- podczas Token TypeDef dla klasy lub interfejsu, który obejmuje element członkowski do wyszukania. Jeśli ta wartość jest `mdTokenNil`, wyszukiwanie jest wykonywane dla zmiennej globalnej lub funkcji globalnej.  
+ [w] TypeDef token dla klasy lub interfejsu, który otacza element członkowski do wyszukania. Jeśli ta `mdTokenNil`wartość jest , wyszukiwanie jest wykonywane dla zmiennej globalnej lub funkcji globalnej.  
   
  `szName`  
- podczas Nazwa elementu członkowskiego do wyszukania.  
+ [w] Nazwa członka do wyszukania.  
   
  `pvSigBlob`  
- podczas Wskaźnik do binarnego podpisu metadanych elementu członkowskiego.  
+ [w] Wskaźnik do podpisu binarnych metadanych członka.  
   
  `cbSigBlob`  
- podczas Rozmiar w bajtach `pvSigBlob`.  
+ [w] Rozmiar w bajtach . `pvSigBlob`  
   
  `pmb`  
- określoną Wskaźnik do zgodnego tokenu MemberDef.  
+ [na zewnątrz] Wskaźnik do pasującego tokenu MemberDef.  
   
 ## <a name="remarks"></a>Uwagi  
- Należy określić składową przy użyciu jej klasy lub interfejsu (`td`), jej nazwy (`szName`) i opcjonalnie jej sygnatury (`pvSigBlob`). Może istnieć wiele elementów członkowskich o tej samej nazwie w klasie lub interfejsie. W takim przypadku Przekaż podpis elementu członkowskiego, aby znaleźć unikatowe dopasowanie.  
+ Element członkowski można określić za`td`pomocą otaczającej`szName`go klasy lub`pvSigBlob`interfejsu ( ), jego nazwy ( i opcjonalnie jego podpisu ( ). Może istnieć wiele elementów członkowskich o tej samej nazwie w klasie lub interfejsie. W takim przypadku przekaż podpis członka, aby znaleźć unikatowe dopasowanie.  
   
- Sygnatura przeniesiona do `FindMember` musi być wygenerowana w bieżącym zakresie, ponieważ sygnatury są powiązane z konkretnym zakresem. Podpis może osadzić token, który identyfikuje otaczającą klasę lub typ wartości. Token jest indeksem tabeli lokalnych TypeDef. Nie można utworzyć podpisu w czasie wykonywania poza kontekstem bieżącego zakresu i użyć tej sygnatury jako danych wejściowych do `FindMember`.  
+ Podpis przekazany `FindMember` do musi zostały wygenerowane w bieżącym zakresie, ponieważ podpisy są powiązane z określonym zakresem. Podpis można osadzić token, który identyfikuje otaczającą klasę lub typ wartości. Token jest indeksem do lokalnej tabeli TypeDef. Nie można utworzyć podpisu w czasie wykonywania poza kontekstem bieżącego zakresu `FindMember`i użyć tego podpisu jako danych wejściowych do .  
   
- `FindMember` znajduje tylko elementy członkowskie, które zostały zdefiniowane bezpośrednio w klasie lub interfejsie; nie znajduje dziedziczonych elementów członkowskich.  
+ `FindMember`znajduje tylko elementy członkowskie, które zostały zdefiniowane bezpośrednio w klasie lub interfejsie; nie znajduje odziedziczonych członków.  
   
 > [!NOTE]
-> `FindMember` to metoda pomocnika. Wywołuje [IMetaDataImport:: FindMethod —](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findmethod-method.md); Jeśli to wywołanie nie znajdzie dopasowania, `FindMember` następnie wywołuje [IMetaDataImport:: FindField —](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findfield-method.md).  
+> `FindMember`jest metodą pomocniczą. Wywołuje [IMetaDataImport::FindMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findmethod-method.md); jeśli to wywołanie nie `FindMember` znajdzie dopasowania, wywoła [iMetaDataImport::FindField](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findfield-method.md).  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Uwzględnione jako zasób w pliku MsCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

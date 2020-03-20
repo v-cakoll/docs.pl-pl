@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e1efedcb-3dd7-42ae-a399-21c24728aec5
 topic_type:
 - apiref
-ms.openlocfilehash: 4faf8646b81f92ddf65eff15fdc610d275b37864
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: bd50d63b1f7080f510c29f90979b7b36242af1c0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440006"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177371"
 ---
 # <a name="imetadataimportenumevents-method"></a>IMetaDataImport::EnumEvents — Metoda
 Wylicza tokeny definicji zdarzeń dla określonego tokenu TypeDef.  
@@ -28,10 +28,10 @@ Wylicza tokeny definicji zdarzeń dla określonego tokenu TypeDef.
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
-HRESULT EnumEvents (   
-   [in, out] HCORENUM    *phEnum,   
-   [in]      mdTypeDef   td,   
-   [out]     mdEvent     rEvents[],   
+HRESULT EnumEvents (
+   [in, out] HCORENUM    *phEnum,
+   [in]      mdTypeDef   td,
+   [out]     mdEvent     rEvents[],
    [in]      ULONG       cMax,  
    [out]    ULONG        *pcEvents  
 );  
@@ -39,37 +39,37 @@ HRESULT EnumEvents (
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [in. out] Wskaźnik do modułu wyliczającego.  
+ [w, na zewnątrz] Wskaźnik do wyliczacza.  
   
  `td`  
- podczas Token TypeDef, którego definicje zdarzeń mają zostać wyliczone.  
+ [w] TypeDef token, którego definicje zdarzeń mają być wyliczone.  
   
  `rEvents`  
- określoną Tablica zwracanych zdarzeń.  
+ [na zewnątrz] Tablica zwróconych zdarzeń.  
   
  `cMax`  
- podczas Maksymalny rozmiar tablicy `rEvents`.  
+ [w] Maksymalny rozmiar `rEvents` tablicy.  
   
  `pcEvents`  
- określoną Rzeczywista liczba zdarzeń zwróconych w `rEvents`.  
+ [na zewnątrz] Rzeczywista liczba zdarzeń `rEvents`zwróconych w .  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumEvents` pomyślnie zwrócone.|  
-|`S_FALSE`|Brak zdarzeń do wyliczenia. W takim przypadku `pcEvents` wynosi zero.|  
+|`S_OK`|`EnumEvents`zwrócono pomyślnie.|  
+|`S_FALSE`|Nie ma żadnych zdarzeń do wyliczenia. W takim `pcEvents` przypadku wynosi zero.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Uwzględnione jako zasób w pliku MsCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

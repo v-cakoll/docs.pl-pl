@@ -2,24 +2,24 @@
 title: Rozszerzanie kontroli obsługi i raportowania błędów
 ms.date: 03/30/2017
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
-ms.openlocfilehash: b7a3e0fa9b0799d98ea3df8df760e26851febf90
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 68f3381e8db9d7c0222720dda335b47e30f57ac7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716409"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183681"
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>Rozszerzanie kontroli obsługi i raportowania błędów
-Ten przykład pokazuje, jak zwiększyć kontrolę nad obsługą błędów i raportowaniem błędów w usłudze Windows Communication Foundation (WCF) przy użyciu interfejsu <xref:System.ServiceModel.Dispatcher.IErrorHandler>. Przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) z dodatkowym kodem dodanym do usługi w celu obsługi błędów. Klient wymusza kilka warunków błędu. Usługa przechwytuje błędy i rejestruje je w pliku.  
+W tym przykładzie pokazano, jak rozszerzyć kontrolę nad obsługą błędów i raportowania <xref:System.ServiceModel.Dispatcher.IErrorHandler> błędów w usłudze Windows Communication Foundation (WCF) przy użyciu interfejsu. Przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) z niektórych dodatkowy kod dodany do usługi do obsługi błędów. Klient wymusza kilka warunków błędu. Usługa przechwytuje błędy i rejestruje je w pliku.  
   
 > [!NOTE]
-> Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
+> Procedura konfiguracji i instrukcje kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
- Usługi mogą przechwycić błędy, przetwarzać i wpływać na błędy raportowane przy użyciu interfejsu <xref:System.ServiceModel.Dispatcher.IErrorHandler>. Interfejs ma dwie metody, które mogą być zaimplementowane: <xref:System.ServiceModel.Dispatcher.IErrorHandler.ProvideFault%28System.Exception%2CSystem.ServiceModel.Channels.MessageVersion%2CSystem.ServiceModel.Channels.Message%40%29> i <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A>. Metoda <xref:System.ServiceModel.Dispatcher.IErrorHandler.ProvideFault%28System.Exception%2CSystem.ServiceModel.Channels.MessageVersion%2CSystem.ServiceModel.Channels.Message%40%29> pozwala dodawać, modyfikować lub pomijać komunikat o błędzie generowany w odpowiedzi na wyjątek. Metoda <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> umożliwia przetwarzanie błędów w przypadku błędu i kontroluje, czy można uruchomić dodatkową obsługę błędów.  
+ Usługi mogą przechwytywać błędy, wykonywać przetwarzanie i wpływać <xref:System.ServiceModel.Dispatcher.IErrorHandler> na sposób zgłaszania błędów za pomocą interfejsu. Interfejs ma dwie metody, które <xref:System.ServiceModel.Dispatcher.IErrorHandler.ProvideFault%28System.Exception%2CSystem.ServiceModel.Channels.MessageVersion%2CSystem.ServiceModel.Channels.Message%40%29> można <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A>zaimplementować: i . Metoda <xref:System.ServiceModel.Dispatcher.IErrorHandler.ProvideFault%28System.Exception%2CSystem.ServiceModel.Channels.MessageVersion%2CSystem.ServiceModel.Channels.Message%40%29> umożliwia dodawanie, modyfikowanie lub pomijanie komunikatu o błędzie, który jest generowany w odpowiedzi na wyjątek. Metoda <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> umożliwia przetwarzanie błędów odbywa się w przypadku błędu i kontroluje, czy można uruchomić obsługę dodatkowych błędów.  
   
- W tym przykładzie typ `CalculatorErrorHandler` implementuje interfejs <xref:System.ServiceModel.Dispatcher.IErrorHandler>. Z  
+ W tym przykładzie `CalculatorErrorHandler` typ <xref:System.ServiceModel.Dispatcher.IErrorHandler> implementuje interfejs. W  
   
- <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> Metoda `CalculatorErrorHandler` zapisuje dziennik błędu w pliku tekstowym Error. txt w c:\LOGS. Należy zauważyć, że przykład rejestruje błąd i nie pomija go, co umożliwia jego raportowanie z powrotem do klienta programu.  
+ <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A>metoda, `CalculatorErrorHandler` zapisuje dziennik błędu do pliku tekstowego Error.txt w c:\logs. Należy zauważyć, że przykład rejestruje błąd i nie pomija go, dzięki czemu mają być zgłaszane z powrotem do klienta.  
   
 ```csharp
 public class CalculatorErrorHandler : IErrorHandler
@@ -49,7 +49,7 @@ public class CalculatorErrorHandler : IErrorHandler
 }  
 ```  
   
- `ErrorBehaviorAttribute` istnieje jako mechanizm rejestrowania programu obsługi błędów w usłudze. Ten atrybut przyjmuje jeden parametr typu. Ten typ powinien implementować interfejs <xref:System.ServiceModel.Dispatcher.IErrorHandler> i powinien mieć publicznego, pustego konstruktora. Ten atrybut następnie tworzy wystąpienie tego typu programu obsługi błędów i instaluje go w usłudze. Robi to przez implementację interfejsu <xref:System.ServiceModel.Description.IServiceBehavior>, a następnie użycie metody <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>, aby dodać wystąpienia programu obsługi błędów do usługi.  
+ Istnieje `ErrorBehaviorAttribute` jako mechanizm do rejestrowania obsługi błędów w usłudze. Ten atrybut przyjmuje parametr pojedynczego typu. Ten typ powinien <xref:System.ServiceModel.Dispatcher.IErrorHandler> implementować interfejs i powinien mieć publiczny, pusty konstruktor. Atrybut następnie wystąpienia tego typu obsługi błędów i instaluje go w usłudze. Robi to implementując <xref:System.ServiceModel.Description.IServiceBehavior> interfejs, a <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A> następnie za pomocą metody, aby dodać wystąpienia programu obsługi błędów do usługi.  
   
 ```csharp
 // This attribute can be used to install a custom error handler for a service.  
@@ -91,12 +91,12 @@ public class ErrorBehaviorAttribute : Attribute, IServiceBehavior
         {  
             ChannelDispatcher channelDispatcher = channelDispatcherBase as ChannelDispatcher;  
             channelDispatcher.ErrorHandlers.Add(errorHandler);  
-        }                                                  
+        }
     }  
 }  
 ```  
   
- Przykład implementuje usługę kalkulatora. Klient świadomie powoduje wystąpienie dwóch błędów w usłudze, dostarczając parametry z niedozwolonymi wartościami. `CalculatorErrorHandler` używa interfejsu <xref:System.ServiceModel.Dispatcher.IErrorHandler> do rejestrowania błędów w pliku lokalnym, a następnie umożliwia ich raportowanie z powrotem do klienta programu. Klient wymusza dzielenie przez zero i warunku argumentu-poza zakresem.  
+ Przykład implementuje usługę kalkulatora. Klient celowo powoduje dwa błędy występują w usłudze, podając parametry z wartościami niedozwolone. Interfejs `CalculatorErrorHandler` służy <xref:System.ServiceModel.Dispatcher.IErrorHandler> do rejestrowania błędów w pliku lokalnym, a następnie umożliwia ich zgłaszanie z powrotem do klienta. Klient wymusza dzielenie przez zero i warunek argumentu poza zakresem.  
   
 ```csharp
 try
@@ -118,7 +118,7 @@ catch (Exception e)
 }  
 ```  
   
- Po uruchomieniu przykładu żądania operacji i odpowiedzi są wyświetlane w oknie konsoli klienta. Zobaczysz dzielenie przez zero i Stany argumentów poza zakresem raportowane jako błędy. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta programu.  
+ Po uruchomieniu próbki żądania operacji i odpowiedzi są wyświetlane w oknie konsoli klienta. Zobaczysz podział przez zero i argument-out-of-range warunki zgłaszane jako błędy. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta.  
   
 ```console  
 Add(15,3) = 18  
@@ -132,28 +132,28 @@ FaultException: FaultException - Invalid Argument: The argument must be greater 
 Press <ENTER> to terminate client.  
 ```  
   
- Plik c:\logs\errors.txt zawiera rejestrowane informacje o błędach przez usługę. Należy pamiętać, że aby usługa mogła zapisywać w katalogu, należy się upewnić, że proces, w którym jest uruchomiona usługa (zazwyczaj ASP.NET lub usługa sieciowa), ma uprawnienia do zapisu w katalogu.  
+ Plik c:\logs\errors.txt zawiera informacje zarejestrowane o błędach przez usługę. Należy zauważyć, że aby usługa zapisywała w katalogu, należy upewnić się, że proces, w którym usługa jest uruchomiona (zazwyczaj ASP.NET lub usługa sieciowa) ma uprawnienia do zapisu w katalogu.  
   
 ```txt
 Fault: Reason = Invalid Argument: The second argument must not be zero.  
 Fault: Reason = Invalid Argument: The argument must be greater than zero.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić próbkę  
   
-1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że wykonano [procedurę jednorazowej instalacji dla przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Aby utworzyć rozwiązanie, postępuj zgodnie z instrukcjami w [tworzeniu przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Upewnij się, że utworzono katalog c:\LOGS dla pliku Error. txt. Lub zmodyfikuj nazwę pliku używaną w `CalculatorErrorHandler.HandleError`.  
+3. Upewnij się, że utworzono katalog c:\logs dla pliku error.txt. Lub zmodyfikuj nazwę pliku używanego w pliku `CalculatorErrorHandler.HandleError`.  
   
-4. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Aby uruchomić próbkę w konfiguracji z jednym lub krzyżowym komputerem, postępuj zgodnie z instrukcjami w [programie Uruchamianie przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
-> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
->   
+> Próbki mogą być już zainstalowane na komputerze. Przed kontynuowaniem sprawdź następujący (domyślny) katalog.  
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
->   
+>
+> Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) Przykłady dla platformy .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\ErrorHandling`  

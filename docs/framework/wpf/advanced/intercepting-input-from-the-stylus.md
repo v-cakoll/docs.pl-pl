@@ -10,67 +10,67 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 791bb2f0-4e5c-4569-ac3c-211996808d44
-ms.openlocfilehash: 7629843730a82584e94448ceac1ea574906876c9
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 17cf42a9d6d94d6ea12399561af5647df3b4d8c2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77095141"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181915"
 ---
 # <a name="intercepting-input-from-the-stylus"></a>Przechwycenie danych z pisaka
-Architektura <xref:System.Windows.Input.StylusPlugIns> zapewnia mechanizm implementowania kontroli niskiego poziomu na <xref:System.Windows.Input.Stylus> danych wejściowych i tworzenia cyfrowych obiektów <xref:System.Windows.Ink.Stroke> Ink. Klasa <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> udostępnia mechanizm umożliwiający wdrożenie zachowania niestandardowego i zastosowanie go do strumienia danych pochodzących z urządzenia pióra w celu uzyskania optymalnej wydajności.  
+Architektura <xref:System.Windows.Input.StylusPlugIns> zapewnia mechanizm implementacji niskiego <xref:System.Windows.Input.Stylus> poziomu kontroli nad wejściem <xref:System.Windows.Ink.Stroke> i tworzenia obiektów atramentu cyfrowego. Klasa <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> zapewnia mechanizm do zaimplementowania zachowania niestandardowego i zastosować go do strumienia danych pochodzących z urządzenia pióra dla optymalnej wydajności.  
   
  Ten temat zawiera następujące podsekcje:  
   
 - [Architektura](#Architecture)  
   
-- [Implementowanie wtyczek pióra](#ImplementingStylusPlugins)  
+- [Implementowanie wtyczek rysika](#ImplementingStylusPlugins)  
   
-- [Dodawanie wtyczki do InkCanvas](#AddingYourPluginToAnInkCanvas)  
+- [Dodawanie wtyczki do urządzenia InkCanvas](#AddingYourPluginToAnInkCanvas)  
   
 - [Podsumowanie](#Conclusion)  
   
-<a name="Architecture"></a>   
+<a name="Architecture"></a>
 ## <a name="architecture"></a>Architektura  
- <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> to ewolucja interfejsów API [StylusInput](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms574861(v=vs.90)) , opisana w temacie [Uzyskiwanie dostępu do danych wejściowych pióra i manipulowanie nimi](https://docs.microsoft.com/previous-versions/ms818317(v%3dmsdn.10)).  
+ Jest <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> to ewolucja interfejsów API [StylusInput,](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms574861(v=vs.90)) opisane w [uzyskiwaniu dostępu i manipulowania pen input](https://docs.microsoft.com/previous-versions/ms818317(v%3dmsdn.10)).  
   
- Każda <xref:System.Windows.UIElement> ma właściwość <xref:System.Windows.UIElement.StylusPlugIns%2A>, która jest <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>. Można dodać <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> do właściwości <xref:System.Windows.UIElement.StylusPlugIns%2A> elementu, aby manipulować danymi <xref:System.Windows.Input.StylusPoint> w miarę ich generowania. <xref:System.Windows.Input.StylusPoint> dane składają się ze wszystkich właściwości obsługiwanych przez dyskretyzatora systemu cyfrowego, w tym dane <xref:System.Windows.Input.StylusPoint.X%2A> i <xref:System.Windows.Input.StylusPoint.Y%2A> punktów, a także dane <xref:System.Windows.Input.StylusPoint.PressureFactor%2A>.  
+ Każdy <xref:System.Windows.UIElement> ma <xref:System.Windows.UIElement.StylusPlugIns%2A> właściwość, <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>która jest . Można dodać <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> a do właściwości <xref:System.Windows.UIElement.StylusPlugIns%2A> elementu do <xref:System.Windows.Input.StylusPoint> manipulowania danymi, jak jest generowany. <xref:System.Windows.Input.StylusPoint>dane składają się ze wszystkich właściwości obsługiwanych przez <xref:System.Windows.Input.StylusPoint.X%2A> digitizer systemu, w tym danych i <xref:System.Windows.Input.StylusPoint.Y%2A> punktów, a także <xref:System.Windows.Input.StylusPoint.PressureFactor%2A> danych.  
   
- Obiekty <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> są wstawiane bezpośrednio do strumienia danych pochodzących z urządzenia <xref:System.Windows.Input.Stylus> po dodaniu <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> do właściwości <xref:System.Windows.UIElement.StylusPlugIns%2A>. Kolejność, w jakiej wtyczki są dodawane do kolekcji <xref:System.Windows.UIElement.StylusPlugIns%2A>, wymusza kolejność, w jakiej będą otrzymywać <xref:System.Windows.Input.StylusPoint> dane. Na przykład jeśli dodasz wtyczkę filtru, która ogranicza dane wejściowe do określonego regionu, a następnie dodasz wtyczkę, która rozpoznaje gesty podczas pisania, wtyczka, która rozpoznaje gesty, otrzyma filtrowane <xref:System.Windows.Input.StylusPoint> dane.  
+ Obiekty <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> są wstawiane bezpośrednio do strumienia <xref:System.Windows.Input.Stylus> danych pochodzących <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> z <xref:System.Windows.UIElement.StylusPlugIns%2A> urządzenia po dodaniu do właściwości. Kolejność, w jakiej wtyczki są <xref:System.Windows.UIElement.StylusPlugIns%2A> dodawane do kolekcji, <xref:System.Windows.Input.StylusPoint> decyduje o kolejności, w jakiej będą odbierać dane. Na przykład jeśli dodasz wtyczkę filtru, która ogranicza dane wejściowe do określonego regionu, a następnie dodasz wtyczkę, która rozpoznaje gesty <xref:System.Windows.Input.StylusPoint> podczas ich pisania, wtyczka rozpoznana gesty otrzyma filtrowane dane.  
   
-<a name="ImplementingStylusPlugins"></a>   
-## <a name="implementing-stylus-plug-ins"></a>Implementowanie wtyczek pióra  
- Aby zaimplementować wtyczkę, należy utworzyć klasę z <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>. Ta klasa jest stosowana o strumieniu danych, w jakiej się znajduje w <xref:System.Windows.Input.Stylus>. W tej klasie można modyfikować wartości <xref:System.Windows.Input.StylusPoint> danych.  
+<a name="ImplementingStylusPlugins"></a>
+## <a name="implementing-stylus-plug-ins"></a>Implementowanie wtyczek rysika  
+ Aby zaimplementować wtyczkę, <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>należy wyprowadzić klasę z . Ta klasa jest stosowana o strumień danych, jak <xref:System.Windows.Input.Stylus>pochodzi z . W tej klasie można zmodyfikować <xref:System.Windows.Input.StylusPoint> wartości danych.  
   
 > [!CAUTION]
-> Jeśli <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> zgłasza lub powoduje wyjątek, aplikacja zostanie zamknięta. Należy dokładnie przetestować kontrolki, które zużywają <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> i korzystać z kontrolki tylko wtedy, gdy masz pewność, że <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> nie zgłosi wyjątku.  
+> Jeśli <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> zgłasza lub powoduje wyjątek, aplikacja zostanie zamknięta. Należy dokładnie przetestować formanty, które zużywają <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> i <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> używać tylko formantu, jeśli masz pewność, że nie będzie zgłaszać wyjątek.  
   
- Poniższy przykład ilustruje wtyczkę, która ogranicza wprowadzanie piórem przez modyfikację wartości <xref:System.Windows.Input.StylusPoint.X%2A> i <xref:System.Windows.Input.StylusPoint.Y%2A> w <xref:System.Windows.Input.StylusPoint> danych, jak pochodzą one z urządzenia <xref:System.Windows.Input.Stylus>.  
+ W poniższym przykładzie pokazano wtyczkę, która ogranicza dane <xref:System.Windows.Input.StylusPoint.X%2A> wejściowe pisaka, modyfikując wartości i <xref:System.Windows.Input.StylusPoint.Y%2A> wartości w <xref:System.Windows.Input.StylusPoint> danych, które pochodzą z <xref:System.Windows.Input.Stylus> urządzenia.  
   
  [!code-csharp[AdvancedInkTopicsSamples#19](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
  [!code-vb[AdvancedInkTopicsSamples#19](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
 [!code-csharp[AdvancedInkTopicsSamples#3](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#3)]
 [!code-vb[AdvancedInkTopicsSamples#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#3)]  
   
-<a name="AddingYourPluginToAnInkCanvas"></a>   
-## <a name="adding-your-plug-in-to-an-inkcanvas"></a>Dodawanie wtyczki do InkCanvas  
- Najprostszym sposobem użycia wtyczki niestandardowej jest zaimplementowanie klasy, która pochodzi od InkCanvas i dodanie jej do właściwości <xref:System.Windows.UIElement.StylusPlugIns%2A>.  
+<a name="AddingYourPluginToAnInkCanvas"></a>
+## <a name="adding-your-plug-in-to-an-inkcanvas"></a>Dodawanie wtyczki do urządzenia InkCanvas  
+ Najprostszym sposobem użycia niestandardowej wtyczki jest zaimplementowanie klasy, która wywodzi <xref:System.Windows.UIElement.StylusPlugIns%2A> się z InkCanvas i dodać ją do właściwości.  
   
- Poniższy przykład ilustruje niestandardowy <xref:System.Windows.Controls.InkCanvas>, który filtruje atrament.  
+ W poniższym przykładzie <xref:System.Windows.Controls.InkCanvas> pokazano niestandardowe, które filtruje atrament.  
   
  [!code-csharp[AdvancedInkTopicsSamples#4](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#4)]  
   
- Jeśli dodasz `FilterInkCanvas` do aplikacji i uruchomisz ją, zobaczysz, że atrament nie jest ograniczony do regionu, dopóki użytkownik nie ukończy pociągnięć. Dzieje się tak, ponieważ <xref:System.Windows.Controls.InkCanvas> ma właściwość <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A>, która jest <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> i jest już elementem członkowskim kolekcji <xref:System.Windows.UIElement.StylusPlugIns%2A>. Niestandardowa <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> dodana do kolekcji <xref:System.Windows.UIElement.StylusPlugIns%2A> otrzymuje <xref:System.Windows.Input.StylusPoint> dane po <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> odbiera dane. W związku z tym dane <xref:System.Windows.Input.StylusPoint> nie będą filtrowane do momentu, gdy użytkownik wykryje pióro, aby zakończyć pociągnięcie. Aby odfiltrować atrament podczas jego rysowania, należy wstawić `FilterPlugin` przed <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>.  
+ Jeśli dodasz `FilterInkCanvas` do aplikacji i uruchomisz ją, można zauważyć, że atrament nie jest ograniczony do regionu, dopóki użytkownik nie zakończy obrysu. Jest to <xref:System.Windows.Controls.InkCanvas> spowodowane <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A> ma właściwość, <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> która jest i <xref:System.Windows.UIElement.StylusPlugIns%2A> jest już członkiem kolekcji. Niestandardowe <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> dodane do <xref:System.Windows.UIElement.StylusPlugIns%2A> kolekcji <xref:System.Windows.Input.StylusPoint> odbiera <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> dane po otrzymaniu danych. W rezultacie <xref:System.Windows.Input.StylusPoint> dane nie zostaną odfiltrowane, dopóki użytkownik nie podniesie pióra, aby zakończyć obrys. Aby filtrować atrament podczas losowania go przez `FilterPlugin` użytkownika, należy wstawić przed <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>.  
   
- Poniższy C# kod ilustruje niestandardowy <xref:System.Windows.Controls.InkCanvas>, który filtruje atrament w trakcie rysowania.  
+ Poniższy kod Języka C# <xref:System.Windows.Controls.InkCanvas> demonstruje niestandardowe, które filtruje atrament, jak jest rysowany.  
   
  [!code-csharp[AdvancedInkTopicsSamples#5](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#5)]  
   
-<a name="Conclusion"></a>   
+<a name="Conclusion"></a>
 ## <a name="conclusion"></a>Podsumowanie  
- Dzięki wykorzystaniu własnych klas <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> i wstawieniu ich do kolekcji <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> można znacznie ulepszyć zachowanie cyfrowego atramentu. Masz dostęp do danych <xref:System.Windows.Input.StylusPoint> w miarę ich generowania, co daje możliwość dostosowania <xref:System.Windows.Input.Stylus> danych wejściowych. Ponieważ masz taki dostęp do danych <xref:System.Windows.Input.StylusPoint>, można zaimplementować zbieranie i renderowanie farbą z optymalną wydajnością aplikacji.  
+ Poprzez wyprowadzanie <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> własnych klas i <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> wstawianie ich do kolekcji, można znacznie poprawić zachowanie atramentu cyfrowego. Masz dostęp do <xref:System.Windows.Input.StylusPoint> danych, jak to jest generowane, co <xref:System.Windows.Input.Stylus> daje możliwość dostosowania danych wejściowych. Ponieważ masz taki niski poziom <xref:System.Windows.Input.StylusPoint> dostępu do danych, można zaimplementować zbieranie i renderowanie pisma odurzającego z optymalną wydajnością dla aplikacji.  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Zaawansowana obsługa pisma odręcznego](advanced-ink-handling.md)
+- [Zaawansowana obsługa atramentu](advanced-ink-handling.md)
 - [Uzyskiwanie dostępu do danych wejściowych pióra i manipulowanie nimi](https://docs.microsoft.com/previous-versions/ms818317(v%3dmsdn.10))

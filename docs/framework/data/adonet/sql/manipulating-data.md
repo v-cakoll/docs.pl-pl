@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 51096a2e-8b38-4c4d-a523-799bfdb7ec69
-ms.openlocfilehash: a84f74bde8da9ca7e40184b76efe51cea129b66a
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 70ee6041b14feb298d93ab452e16ee23607b3fcc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451853"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174293"
 ---
 # <a name="manipulating-data"></a>Manipulowanie danymi
-Przed wprowadzeniem wielu aktywnych zestawów wyników (MARS) deweloperzy musieli użyć wielu połączeń lub kursorów po stronie serwera, aby rozwiązać niektóre scenariusze. Ponadto, jeśli w sytuacji transakcyjnej użyto wielu połączeń, wymagane są połączenia powiązane (z **sp_getbindtoken** i **sp_bindsession**). W poniższych scenariuszach pokazano, jak używać połączenia z obsługą MARS zamiast wielu połączeń.  
+Przed wprowadzeniem wielu aktywnych zestawów wyników (MARS) deweloperzy musieli używać wielu połączeń lub kursorów po stronie serwera, aby rozwiązać niektóre scenariusze. Ponadto, gdy w sytuacji transakcyjnej używano wielu połączeń, wymagane były połączenia powiązane (z **sp_getbindtoken** i **sp_bindsession).** W poniższych scenariuszach pokazano, jak używać połączenia z obsługą mars zamiast wielu połączeń.  
   
-## <a name="using-multiple-commands-with-mars"></a>Używanie wielu poleceń z usługą MARS  
- W poniższej aplikacji konsolowej pokazano, jak używać dwóch <xref:System.Data.SqlClient.SqlDataReader> obiektów z dwoma obiektami <xref:System.Data.SqlClient.SqlCommand> i pojedynczym obiektem <xref:System.Data.SqlClient.SqlConnection> z włączonym MARS.  
+## <a name="using-multiple-commands-with-mars"></a>Korzystanie z wielu poleceń z marsjańskim  
+ Poniższa aplikacja console pokazuje, <xref:System.Data.SqlClient.SqlDataReader> jak używać <xref:System.Data.SqlClient.SqlCommand> dwóch obiektów <xref:System.Data.SqlClient.SqlConnection> z dwoma obiektami i pojedynczym obiektem z włączoną funkcją MARS.  
   
 ### <a name="example"></a>Przykład  
- Przykład otwiera pojedyncze połączenie z bazą danych **AdventureWorks** . Przy użyciu <xref:System.Data.SqlClient.SqlCommand> obiektu tworzony jest <xref:System.Data.SqlClient.SqlDataReader>. Gdy czytnik jest używany, zostanie otwarta druga <xref:System.Data.SqlClient.SqlDataReader>, przy użyciu danych z pierwszej <xref:System.Data.SqlClient.SqlDataReader> jako dane wejściowe do klauzuli WHERE dla drugiego czytnika.  
+ W przykładzie otwiera jedno połączenie z bazą danych **AdventureWorks.** Za <xref:System.Data.SqlClient.SqlCommand> pomocą obiektu <xref:System.Data.SqlClient.SqlDataReader> tworzony jest a. Jako czytnik jest używany, <xref:System.Data.SqlClient.SqlDataReader> drugi jest otwierany, <xref:System.Data.SqlClient.SqlDataReader> przy użyciu danych z pierwszego jako dane wejściowe do klauzuli WHERE dla drugiego czytnika.  
   
 > [!NOTE]
-> Poniższy przykład używa przykładowej bazy danych **AdventureWorks** dołączonej do SQL Server. Parametry połączenia podane w przykładowym kodzie założono, że baza danych jest zainstalowana i dostępna na komputerze lokalnym. Zmodyfikuj parametry połączenia jako niezbędne dla danego środowiska.  
+> W poniższym przykładzie użyto przykładowej bazy danych **AdventureWorks** dołączonej do programu SQL Server. Parametry połączenia podane w przykładowym kodzie zakładają, że baza danych jest zainstalowana i dostępna na komputerze lokalnym. Zmodyfikuj parametry połączenia zgodnie z oczekiwaniami środowiska.  
   
 ```vb  
 Option Strict On  
@@ -44,7 +44,7 @@ Module Module1
     Dim productCmd As SqlCommand  
     Dim productReader As SqlDataReader  
   
-    Dim vendorSQL As String = & _   
+    Dim vendorSQL As String = & _
       "SELECT VendorId, Name FROM Purchasing.Vendor"  
     Dim productSQL As String = _  
         "SELECT Production.Product.Name FROM Production.Product " & _  
@@ -108,20 +108,20 @@ static void Main()
   
   int vendorID;  
   SqlDataReader productReader = null;  
-  string vendorSQL =   
+  string vendorSQL =
     "SELECT VendorId, Name FROM Purchasing.Vendor";  
-  string productSQL =   
+  string productSQL =
     "SELECT Production.Product.Name FROM Production.Product " +  
     "INNER JOIN Purchasing.ProductVendor " +  
-    "ON Production.Product.ProductID = " +   
+    "ON Production.Product.ProductID = " +
     "Purchasing.ProductVendor.ProductID " +  
     "WHERE Purchasing.ProductVendor.VendorID = @VendorId";  
   
-  using (SqlConnection awConnection =   
+  using (SqlConnection awConnection =
     new SqlConnection(connectionString))  
   {  
     SqlCommand vendorCmd = new SqlCommand(vendorSQL, awConnection);  
-    SqlCommand productCmd =   
+    SqlCommand productCmd =
       new SqlCommand(productSQL, awConnection);  
   
     productCmd.Parameters.Add("@VendorId", SqlDbType.Int);  
@@ -157,20 +157,20 @@ static void Main()
   {  
     // To avoid storing the connection string in your code,  
     // you can retrieve it from a configuration file.  
-    return "Data Source=(local);Integrated Security=SSPI;" +   
+    return "Data Source=(local);Integrated Security=SSPI;" +
       "Initial Catalog=AdventureWorks;MultipleActiveResultSets=True";  
   }  
 }  
 ```  
   
-## <a name="reading-and-updating-data-with-mars"></a>Odczytywanie i aktualizowanie danych za pomocą MARS  
- Usługa MARS pozwala na używanie połączenia zarówno dla operacji odczytu, jak i języka manipulowania danymi (DML) z więcej niż jedną oczekującą operacją. Ta funkcja eliminuje konieczność, aby aplikacja mogła zająć się błędami zajętymi w połączeniu. Ponadto usługa MARS może zastąpić użycie kursorów po stronie serwera, co zazwyczaj zużywa więcej zasobów. Na koniec, ponieważ wiele operacji może działać na jednym połączeniu, mogą współużytkować ten sam kontekst transakcji, eliminując konieczność używania **sp_getbindtoken** i **sp_bindsession** procedur składowanych w systemie.  
+## <a name="reading-and-updating-data-with-mars"></a>Odczytywanie i aktualizowanie danych za pomocą marsjańskiej  
+ MARS umożliwia połączenie do użycia zarówno operacji odczytu i operacji języka manipulowania danymi (DML) z więcej niż jedną oczekującą operacją. Ta funkcja eliminuje potrzebę aplikacji do czynienia z błędami zajęty połączenia. Ponadto mars można zastąpić użycie kursorów po stronie serwera, które zazwyczaj zużywają więcej zasobów. Na koniec, ponieważ wiele operacji może działać na jednym połączeniu, mogą współużytkować ten sam kontekst transakcji, eliminując konieczność **używania sp_getbindtoken** i **sp_bindsession** systemowych procedur przechowywanych.  
   
 ### <a name="example"></a>Przykład  
- W poniższej aplikacji konsolowej pokazano, jak używać dwóch <xref:System.Data.SqlClient.SqlDataReader> obiektów z trzema obiektami <xref:System.Data.SqlClient.SqlCommand> i pojedynczym obiektem <xref:System.Data.SqlClient.SqlConnection> z włączonym usługą MARS. Pierwszy obiekt polecenia pobiera listę dostawców, których ocena kredytowa wynosi 5. Drugi obiekt polecenia używa identyfikatora dostawcy podanego w <xref:System.Data.SqlClient.SqlDataReader> do załadowania drugiej <xref:System.Data.SqlClient.SqlDataReader> wszystkich produktów dla danego dostawcy. Każdy rekord produktu jest odwiedzany przez drugi <xref:System.Data.SqlClient.SqlDataReader>. Obliczenia są wykonywane w celu określenia, co powinno być nowe **OnOrderQty** . Trzeci obiekt polecenia służy następnie do aktualizowania tabeli **ProductVendor** przy użyciu nowej wartości. Cały proces odbywa się w ramach jednej transakcji, która jest wycofywana na końcu.  
+ Poniższa aplikacja konsoli pokazuje, <xref:System.Data.SqlClient.SqlDataReader> jak używać <xref:System.Data.SqlClient.SqlCommand> dwóch obiektów <xref:System.Data.SqlClient.SqlConnection> z trzema obiektami i pojedynczym obiektem z włączoną funkcją MARS. Pierwszy obiekt polecenia pobiera listę dostawców, których ocena kredytowa wynosi 5. Drugi obiekt polecenia używa identyfikatora dostawcy <xref:System.Data.SqlClient.SqlDataReader> dostarczonego z <xref:System.Data.SqlClient.SqlDataReader> a, aby załadować drugi ze wszystkimi produktami dla określonego dostawcy. Każdy rekord produktu jest <xref:System.Data.SqlClient.SqlDataReader>odwiedzany przez drugi . Obliczenia są wykonywane w celu określenia, co nowe **OnOrderQty** powinno być. Trzeci obiekt polecenia jest następnie używany do aktualizacji tabeli **ProductVendor** o nową wartość. Cały ten proces odbywa się w ramach pojedynczej transakcji, która jest przywracana na końcu.  
   
 > [!NOTE]
-> Poniższy przykład używa przykładowej bazy danych **AdventureWorks** dołączonej do SQL Server. Parametry połączenia podane w przykładowym kodzie założono, że baza danych jest zainstalowana i dostępna na komputerze lokalnym. Zmodyfikuj parametry połączenia jako niezbędne dla danego środowiska.  
+> W poniższym przykładzie użyto przykładowej bazy danych **AdventureWorks** dołączonej do programu SQL Server. Parametry połączenia podane w przykładowym kodzie zakładają, że baza danych jest zainstalowana i dostępna na komputerze lokalnym. Zmodyfikuj parametry połączenia zgodnie z oczekiwaniami środowiska.  
   
 ```vb  
 Option Strict On  
@@ -211,7 +211,7 @@ Module Module1
         "FROM Purchasing.ProductVendor " & _  
         "WHERE VendorID = @VendorID"  
     Dim updateSQL As String = _  
-        "UPDATE Purchasing.ProductVendor " & _   
+        "UPDATE Purchasing.ProductVendor " & _
         "SET OnOrderQty = @OrderQty " & _  
         "WHERE ProductID = @ProductID AND VendorID = @VendorID"  
   
@@ -263,7 +263,7 @@ Module Module1
         End While  
       End Using  
   
-      Console.WriteLine("Total Records Updated: " & _   
+      Console.WriteLine("Total Records Updated: " & _
         CStr(totalRecordsUpdated))  
       updateTx.Rollback()  
       Console.WriteLine("Transaction Rolled Back")  
@@ -315,18 +315,18 @@ static void Main()
   int totalRecordsUpdated = 0;  
   
   string vendorSQL =  
-      "SELECT VendorID, Name FROM Purchasing.Vendor " +   
+      "SELECT VendorID, Name FROM Purchasing.Vendor " +
       "WHERE CreditRating = 5";  
   string prodVendSQL =  
       "SELECT ProductID, MaxOrderQty, MinOrderQty, OnOrderQty " +  
-      "FROM Purchasing.ProductVendor " +   
+      "FROM Purchasing.ProductVendor " +
       "WHERE VendorID = @VendorID";  
   string updateSQL =  
-      "UPDATE Purchasing.ProductVendor " +   
+      "UPDATE Purchasing.ProductVendor " +
       "SET OnOrderQty = @OrderQty " +  
       "WHERE ProductID = @ProductID AND VendorID = @VendorID";  
   
-  using (SqlConnection awConnection =   
+  using (SqlConnection awConnection =
     new SqlConnection(connectionString))  
   {  
     awConnection.Open();  
@@ -382,7 +382,7 @@ static void Main()
         }  
       }  
     }  
-    Console.WriteLine("Total Records Updated: " +   
+    Console.WriteLine("Total Records Updated: " +
       totalRecordsUpdated.ToString());  
     updateTx.Rollback();  
     Console.WriteLine("Transaction Rolled Back");  
@@ -395,8 +395,8 @@ private static string GetConnectionString()
 {  
   // To avoid storing the connection string in your code,  
   // you can retrieve it from a configuration file.  
-  return "Data Source=(local);Integrated Security=SSPI;" +   
-    "Initial Catalog=AdventureWorks;" +   
+  return "Data Source=(local);Integrated Security=SSPI;" +
+    "Initial Catalog=AdventureWorks;" +
     "MultipleActiveResultSets=True";  
   }  
 }  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e508711-da92-4381-aaf8-6803075cdaa2
 topic_type:
 - apiref
-ms.openlocfilehash: 3854cb4aa3d229c87466c0a35a72447ceb235624
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2d6e86a7f5a93b900e79907f8ee0762869d7f737
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449992"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177296"
 ---
 # <a name="imetadataimportenumtypedefs-method"></a>IMetaDataImport::EnumTypeDefs — Metoda
 Wylicza tokeny TypeDef reprezentujące wszystkie typy w bieżącym zakresie.  
@@ -29,46 +29,46 @@ Wylicza tokeny TypeDef reprezentujące wszystkie typy w bieżącym zakresie.
   
 ```cpp  
 HRESULT EnumTypeDefs (  
-   [out] HCORENUM   *phEnum,   
+   [out] HCORENUM   *phEnum,
    [in]  mdTypeDef  rTypeDefs[],  
-   [in]  ULONG      cMax,   
+   [in]  ULONG      cMax,
    [out] ULONG      *pcTypeDefs  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- określoną Wskaźnik do nowego modułu wyliczającego. Musi ona mieć wartość NULL dla pierwszego wywołania tej metody.  
+ [na zewnątrz] Wskaźnik do nowego wyliczacza. Musi to być null dla pierwszego wywołania tej metody.  
   
  `rTypeDefs`  
- podczas Tablica służąca do przechowywania tokenów TypeDef.  
+ [w] Tablica używana do przechowywania tokenów TypeDef.  
   
  `cMax`  
- podczas Maksymalny rozmiar tablicy `rTypeDefs`.  
+ [w] Maksymalny rozmiar `rTypeDefs` tablicy.  
   
  `pcTypeDefs`  
- określoną Liczba tokenów TypeDef zwróconych w `rTypeDefs`.  
+ [na zewnątrz] Liczba tokenów TypeDef zwrócona w `rTypeDefs`.  
   
-## <a name="return-value"></a>Wartość zwrócona  
+## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeDefs` pomyślnie zwrócone.|  
-|`S_FALSE`|Brak tokenów do wyliczenia. W takim przypadku `pcTypeDefs` wynosi zero.|  
+|`S_OK`|`EnumTypeDefs`zwrócono pomyślnie.|  
+|`S_FALSE`|Nie ma żadnych tokenów do wyliczenia. W takim `pcTypeDefs` przypadku wynosi zero.|  
   
 ## <a name="remarks"></a>Uwagi  
- Token TypeDef reprezentuje typ, taki jak Klasa lub interfejs, a także dowolny typ dodany za pomocą mechanizmu rozszerzalności.  
+ TypeDef token reprezentuje typ, takich jak klasa lub interfejs, a także dowolny typ dodany za pośrednictwem mechanizmu rozszerzalności.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Uwzględnione jako zasób w pliku MsCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

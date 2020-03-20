@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 00be4789-ac63-4397-b2ec-1629a5c5a585
 topic_type:
 - apiref
-ms.openlocfilehash: c1792ed0f15f8cfb62567593c9694453650f0bb9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d87d0d46ede65cf44c84edba92fe246174088a4e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436319"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177663"
 ---
 # <a name="imetadataassemblyimportgetmanifestresourceprops-method"></a>IMetaDataAssemblyImport::GetManifestResourceProps — Metoda
 Pobiera zestaw właściwości zasobu manifestu z określonym podpisem metadanych.  
@@ -29,47 +29,47 @@ Pobiera zestaw właściwości zasobu manifestu z określonym podpisem metadanych
   
 ```cpp  
 HRESULT GetManifestResourceProps (  
-    [in]  mdManifestResource   mdmr,   
-    [out] LPWSTR               szName,   
-    [in]  ULONG                cchName,   
-    [out] ULONG                *pchName,   
-    [out] mdToken              *ptkImplementation,   
-    [out] DWORD                *pdwOffset,   
+    [in]  mdManifestResource   mdmr,
+    [out] LPWSTR               szName,
+    [in]  ULONG                cchName,
+    [out] ULONG                *pchName,
+    [out] mdToken              *ptkImplementation,
+    [out] DWORD                *pdwOffset,
     [out] DWORD                *pdwResourceFlags  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `mdmr`  
- podczas Token `mdManifestResource` reprezentujący zasób, dla którego mają zostać pobrane właściwości.  
+ [w] Token, `mdManifestResource` który reprezentuje zasób, dla którego można uzyskać właściwości.  
   
  `szName`  
- określoną Nazwa zasobu.  
+ [na zewnątrz] Nazwa zasobu.  
   
  `cchName`  
- podczas Rozmiar, w postaci szerokich znaków, `szName`.  
+ [w] Rozmiar, w szerokich znaków, z `szName`.  
   
  `pchName`  
- określoną Wskaźnik do liczby znaków dwubajtowych faktycznie zwróconych w `szName`.  
+ [na zewnątrz] Wskaźnik do liczby szerokich znaków rzeczywiście `szName`zwrócony w .  
   
  `ptkImplementation`  
- określoną Wskaźnik do tokenu `mdFile` lub token `mdAssemblyRef`, który reprezentuje odpowiednio plik lub zestaw, który zawiera zasób.  
+ [na zewnątrz] Wskaźnik do `mdFile` tokenu `mdAssemblyRef` lub tokenu, który reprezentuje plik lub zestaw, odpowiednio, który zawiera zasób.  
   
  `pdwOffset`  
- określoną Wskaźnik do wartości, która określa przesunięcie do początku zasobu w pliku.  
+ [na zewnątrz] Wskaźnik do wartości, która określa przesunięcie na początku zasobu w pliku.  
   
  `pdwResourceFlags`  
- określoną Wskaźnik do flag, które opisują metadane zastosowane do zasobu. Wartość flags jest kombinacją co najmniej jednej wartości [CorManifestResourceFlags —](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md) .  
+ [na zewnątrz] Wskaźnik do flag, które opisują metadane zastosowane do zasobu. Wartość flag jest kombinacją co najmniej jednej wartości [CorManifestResourceFlags.](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md)  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataAssemblyImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [IMetaDataAssemblyImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

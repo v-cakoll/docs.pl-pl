@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4ff084d5-5956-4db1-8e18-c5a66b000882
-ms.openlocfilehash: 5b21b2bdf3447e3a61c8fff0a311b4144ecaecb2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0cefca33bde94855a2bb20a6404dfd4e75a954c2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791920"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174527"
 ---
 # <a name="polling-in-console-applications"></a>Sondowanie aplikacji konsoli
-Operacje asynchroniczne w programie ADO.NET umożliwiają inicjowanie czasochłonnych operacji bazy danych w jednym wątku podczas wykonywania innych zadań w innym wątku. Jednak w większości przypadków dojdziesz do punktu, w którym aplikacja nie powinna być kontynuowana do momentu zakończenia operacji bazy danych. W takich przypadkach przydatne jest sondowanie operacji asynchronicznej w celu ustalenia, czy operacja została ukończona.  
+Operacje asynchroniczne w ADO.NET umożliwiają inicjowanie czasochłonnych operacji bazy danych w jednym wątku podczas wykonywania innych zadań w innym wątku. W większości scenariuszy jednak ostatecznie osiągnie punkt, w którym aplikacja nie powinna być kontynuowana, dopóki operacja bazy danych nie zostanie zakończona. W takich przypadkach warto sondować operację asynchroniczną, aby ustalić, czy operacja została ukończona, czy nie.  
   
- Możesz użyć <xref:System.IAsyncResult.IsCompleted%2A> właściwości, aby dowiedzieć się, czy operacja została ukończona.  
+ Można użyć <xref:System.IAsyncResult.IsCompleted%2A> właściwości, aby dowiedzieć się, czy operacja została zakończona.  
   
 ## <a name="example"></a>Przykład  
- Poniższa Aplikacja konsolowa aktualizuje dane z przykładowej bazy danych **AdventureWorks** , wykonując swoją działania asynchronicznie. W celu emulowania długotrwałego procesu, w tym przykładzie wstawia instrukcję WAITFOR do tekstu polecenia. Zwykle nie jest podejmowana próba wolniejszego uruchamiania poleceń, ale w takim przypadku ułatwia to zaprezentowanie zachowań asynchronicznych.  
+ Następująca aplikacja konsoli aktualizuje dane w przykładowej bazie danych **AdventureWorks,** wykonując swoją pracę asynchronicznie. Aby emulować długotrwały proces, w tym przykładzie wstawia instrukcję WAITFOR w tekście polecenia. Normalnie nie należy próbować, aby polecenia działały wolniej, ale w tym przypadku ułatwia demonstrowanie zachowania asynchronicznie.  
   
 ```vb  
 Imports System  
@@ -27,7 +27,7 @@ Imports System.Data.SqlClient
 Module Module1  
   
     Sub Main()  
-        ' The WAITFOR statement simply adds enough time to prove the   
+        ' The WAITFOR statement simply adds enough time to prove the
         ' asynchronous nature of the command.  
         Dim commandText As String = _  
          "UPDATE Production.Product " & _  
@@ -47,10 +47,10 @@ Module Module1
     Private Sub RunCommandAsynchronously( _  
      ByVal commandText As String, ByVal connectionString As String)  
   
-        ' Given command text and connection string, asynchronously   
-        ' execute the specified command against the connection. For   
-        ' this example, the code displays an indicator as it's working,   
-        ' verifying the asynchronous behavior.   
+        ' Given command text and connection string, asynchronously
+        ' execute the specified command against the connection. For
+        ' this example, the code displays an indicator as it's working,
+        ' verifying the asynchronous behavior.
         Using connection As New SqlConnection(connectionString)  
             Try  
                 Dim count As Integer = 0  
@@ -61,7 +61,7 @@ Module Module1
                 While Not result.IsCompleted  
                     Console.WriteLine("Waiting ({0})", count)  
                     ' Wait for 1/10 second, so the counter  
-                    ' doesn't consume all available resources   
+                    ' doesn't consume all available resources
                     ' on the main thread.  
                     Threading.Thread.Sleep(100)  
                     count += 1  
@@ -83,17 +83,17 @@ Module Module1
     End Sub  
   
     Private Function GetConnectionString() As String  
-        ' To avoid storing the connection string in your code,              
-        ' you can retrieve it from a configuration file.   
+        ' To avoid storing the connection string in your code,
+        ' you can retrieve it from a configuration file.
   
-        ' If you have not included "Asynchronous Processing=true"   
+        ' If you have not included "Asynchronous Processing=true"
         ' in the connection string, the command will not be able  
         ' to execute asynchronously.  
         Return "Data Source=(local);Integrated Security=SSPI;" & _  
           "Initial Catalog=AdventureWorks; " & _  
           "Asynchronous Processing=true"  
     End Function  
-End Module   
+End Module
 ```  
   
 ```csharp  
@@ -106,7 +106,7 @@ class Class1
     [STAThread]  
     static void Main()  
     {  
-        // The WAITFOR statement simply adds enough time to   
+        // The WAITFOR statement simply adds enough time to
         // prove the asynchronous nature of the command.  
   
         string commandText =  
@@ -129,27 +129,27 @@ class Class1
       string commandText, string connectionString)  
     {  
         // Given command text and connection string, asynchronously  
-        // execute the specified command against the connection.   
-        // For this example, the code displays an indicator as it's   
-        // working, verifying the asynchronous behavior.   
+        // execute the specified command against the connection.
+        // For this example, the code displays an indicator as it's
+        // working, verifying the asynchronous behavior.
         using (SqlConnection connection =  
           new SqlConnection(connectionString))  
         {  
             try  
             {  
                 int count = 0;  
-                SqlCommand command =   
+                SqlCommand command =
                     new SqlCommand(commandText, connection);  
                 connection.Open();  
   
-                IAsyncResult result =   
+                IAsyncResult result =
                     command.BeginExecuteNonQuery();  
                 while (!result.IsCompleted)  
                 {  
                     Console.WriteLine(  
                                     "Waiting ({0})", count++);  
                     // Wait for 1/10 second, so the counter  
-                    // doesn't consume all available   
+                    // doesn't consume all available
                     // resources on the main thread.  
                     System.Threading.Thread.Sleep(100);  
                 }  
@@ -159,7 +159,7 @@ class Class1
             }  
             catch (SqlException ex)  
             {  
-                Console.WriteLine("Error ({0}): {1}",   
+                Console.WriteLine("Error ({0}): {1}",
                     ex.Number, ex.Message);  
             }  
             catch (InvalidOperationException ex)  
@@ -177,20 +177,20 @@ class Class1
   
     private static string GetConnectionString()  
     {  
-        // To avoid storing the connection string in your code,              
-        // you can retrieve it from a configuration file.   
+        // To avoid storing the connection string in your code,
+        // you can retrieve it from a configuration file.
   
         // If you have not included "Asynchronous Processing=true"  
         // in the connection string, the command will not be able  
         // to execute asynchronously.  
         return "Data Source=(local);Integrated Security=SSPI;" +  
-        "Initial Catalog=AdventureWorks; " +   
+        "Initial Catalog=AdventureWorks; " +
         "Asynchronous Processing=true";  
     }  
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Operacje asynchroniczne](asynchronous-operations.md)
 - [Omówienie ADO.NET](../ado-net-overview.md)

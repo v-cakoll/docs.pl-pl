@@ -2,32 +2,32 @@
 title: Obsługa błędów w działaniach asynchronicznych
 ms.date: 03/30/2017
 ms.assetid: e8f8ce2b-50c9-4e44-b187-030e0cf30a5d
-ms.openlocfilehash: 7a1db144e4738870d3ff5fe68df11b2fb06ef3d7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c63ce231687b03bdba57edd38c32270eabeff834
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64640959"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182953"
 ---
 # <a name="error-handling-in-asynchronous-activities"></a>Obsługa błędów w działaniach asynchronicznych
-Zapewnianie obsługi błędów w <xref:System.Activities.AsyncCodeActivity> obejmuje routingu błąd za pośrednictwem systemu wywołania zwrotnego tego działania. W tym temacie opisano sposób wystąpi błąd, który jest generowany w operacji asynchronicznej powrotem do hosta przy użyciu przykładu działanie SendMail.  
+Dostarczanie obsługi błędów w obejmuje <xref:System.Activities.AsyncCodeActivity> routingu błędu za pośrednictwem systemu wywołania zwrotnego działania. W tym temacie opisano sposób uzyskania błędu, który jest generowany w operacji asynchronicznie z powrotem do hosta, przy użyciu sendmail próbki działania.  
   
-## <a name="returning-an-error-thrown-in-an-asynchronous-activity-back-to-the-host"></a>Zwraca błąd zgłoszony w działaniu asynchronicznego powrotem do hosta  
- Routing błąd w operacji asynchronicznej do hosta w przykładzie działanie SendMail obejmuje następujące czynności:  
+## <a name="returning-an-error-thrown-in-an-asynchronous-activity-back-to-the-host"></a>Zwracanie błędu wyrzuconego w działaniu asynchronistym z powrotem do hosta  
+ Routing błąd w operacji asynchroniiowej z powrotem do hosta w przykładzie działania SendMail obejmuje następujące kroki:  
   
-- Dodaj właściwość wyjątku do `SendMailAsyncResult` klasy.  
+- Dodaj właściwość Exception `SendMailAsyncResult` do klasy.  
   
-- Skopiuj zgłoszonego błędu do tej właściwości w `SendCompleted` programu obsługi zdarzeń.  
+- Skopiuj zgłoszony błąd `SendCompleted` do tej właściwości w programie obsługi zdarzeń.  
   
-- Zgłoszenie wyjątku `EndExecute` programu obsługi zdarzeń.  
+- Zgłosić wyjątek `EndExecute` w programie obsługi zdarzeń.  
   
- Następnie kod wynikowy jest w następujący sposób.  
+ Wynikowy kod jest następujący.  
   
 ```csharp  
 class SendMailAsyncResult : IAsyncResult  
         {  
             …  
-            public Exception Error { get; set; }   
+            public Exception Error { get; set; }
             …  
             void SendCompleted(object sender, AsyncCompletedEventArgs e)  
             {  
@@ -44,7 +44,7 @@ class SendMailAsyncResult : IAsyncResult
         {  
             SendMailAsyncResult sendMailResult = result as SendMailAsyncResult;  
             if (sendMailResult != null && sendMailResult.Error != null)  
-                throw sendMailResult.Error;   
+                throw sendMailResult.Error;
         }  
     }  
 ```

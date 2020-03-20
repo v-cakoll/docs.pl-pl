@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 8d3080ee-39fe-4c57-8950-51323632d045
 topic_type:
 - apiref
-ms.openlocfilehash: 79a9e4513a98a29edc11cc76c599f03c9c3a72b4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8fe6216e11a64ea182d796247d888b862b1e8377
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450113"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177926"
 ---
 # <a name="corregflags-enumeration"></a>CorRegFlags — Wyliczenie
-Dostarcza wartości flag używanych do rejestracji podczas instalacji modułu lub obrazu złożonego.  
+Zawiera wartości flag używane do rejestracji podczas instalowania modułu lub obrazu złożonego.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
-typedef enum   
+typedef enum
 {  
     regNoCopy  = 0x00000001,  
     regConfig  = 0x00000002,  
@@ -35,23 +35,23 @@ typedef enum
 } CorRegFlags;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Elementy członkowskie  
   
-|Element członkowski|Opis|  
+|Członek|Opis|  
 |------------|-----------------|  
-|`regNoCopy`|Określa, że pliki nie powinny być kopiowane do lokalizacji docelowej.|  
+|`regNoCopy`|Określa, że pliki nie powinny być kopiowane do miejsca docelowego.|  
 |`regConfig`|Określa, że moduł lub kompozyt jest konfiguracją.|  
-|`regHasRefs`|Określa, że moduł lub kompozyt zawiera odwołania do klas.|  
+|`regHasRefs`|Określa, że moduł lub kompozyt ma odwołania do klasy.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Uwzględnione jako zasób w pliku MsCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

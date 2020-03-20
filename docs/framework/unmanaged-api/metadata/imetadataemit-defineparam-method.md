@@ -15,69 +15,69 @@ helpviewer_keywords:
 ms.assetid: d86a3d14-4796-4909-9591-dfafe3de5ce4
 topic_type:
 - apiref
-ms.openlocfilehash: 5c81bc82e19bce658336e4860a61f2721e17423d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2807458549db02598ba05f2aa80fa6ea6fbc5a13
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431690"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177690"
 ---
 # <a name="imetadataemitdefineparam-method"></a>IMetaDataEmit::DefineParam — Metoda
-Tworzy definicję parametru z określonym podpisem dla metody przywoływanej przez określony token i pobiera token dla tej definicji parametru.  
+Tworzy definicję parametru z określonym podpisem dla metody, do którego odwołuje się określony token i pobiera token dla tej definicji parametru.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
 HRESULT DefineParam (  
-    [in]  mdMethodDef md,   
-    [in]  ULONG       ulParamSeq,   
-    [in]  LPCWSTR     szName,   
-    [in]  DWORD       dwParamFlags,   
-    [in]  DWORD       dwCPlusTypeFlag,   
+    [in]  mdMethodDef md,
+    [in]  ULONG       ulParamSeq,
+    [in]  LPCWSTR     szName,
+    [in]  DWORD       dwParamFlags,
+    [in]  DWORD       dwCPlusTypeFlag,
     [in]  void const  *pValue,  
-    [in]  ULONG       cchValue,   
-    [out] mdParamDef  *ppd   
+    [in]  ULONG       cchValue,
+    [out] mdParamDef  *ppd
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `md`  
- podczas Token dla metody, której parametr jest definiowany.  
+ [w] Token dla metody, której parametr jest definiowany.  
   
  `ulParamSeq`  
- podczas Numer sekwencyjny parametru.  
+ [w] Numer sekwencyjny parametru.  
   
  `szName`  
- podczas Nazwa parametru w formacie Unicode.  
+ [w] Nazwa parametru w Unicode.  
   
  `dwParamFlags`  
- podczas Flagi dla parametru. To jest maska bitów wartości `CorParamAttr`.  
+ [w] Flagi dla parametru. Jest to maska `CorParamAttr` bitowa wartości.  
   
  `dwCPlusTypeFlag`  
- [in] `ELEMENT_TYPE_` *\** dla wartości stałej.  
+ [w] `ELEMENT_TYPE_` dla wartości stałej. *\**  
   
  `pValue`  
- podczas Stała wartość parametru.  
+ [w] Stała wartość parametru.  
   
  `cchValue`  
- podczas Rozmiar w znakach Unicode `pValue`.  
+ [w] Rozmiar w znakach Unicode `pValue`.  
   
  `ppd`  
- określoną Przypisany token `mdParamDef`.  
+ [na zewnątrz] Token `mdParamDef` przypisany.  
   
 ## <a name="remarks"></a>Uwagi  
- Wartości sekwencji w `ulParamSeq` zaczynają się od 1 dla parametrów. Wartość zwracana ma numer sekwencyjny równy 0.  
+ Wartości sekwencji `ulParamSeq` na początku od 1 dla parametrów. Zwracana wartość ma numer sekwencyjny 0.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
+ **Biblioteka:** Używany jako zasób w pliku MSCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

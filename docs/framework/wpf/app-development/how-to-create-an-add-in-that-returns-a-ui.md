@@ -9,86 +9,86 @@ helpviewer_keywords:
 - implementing add-in pipeline segments [WPF]
 - add-in [WPF], returns a UI
 ms.assetid: 57f274b7-4c66-4b72-92eb-81939a393776
-ms.openlocfilehash: d799c91b9abdf7882a0fcd3f0b656eac553b188c
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f8323fe35555a56d39c1efed649c2aa3fcf17e43
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460144"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174592"
 ---
 # <a name="how-to-create-an-add-in-that-returns-a-ui"></a>Jak utworzyć dodatek, który zwraca interfejs użytkownika
-Ten przykład pokazuje, jak utworzyć dodatek, który zwraca Windows Presentation Foundation (WPF) do aplikacji autonomicznej WPF hosta.  
+W tym przykładzie pokazano, jak utworzyć dodatek, który zwraca Windows Presentation Foundation (WPF) do hosta WPF autonomicznej aplikacji.  
   
- Dodatek zwraca interfejs użytkownika, który jest formantem użytkownika WPF. Zawartość kontrolki użytkownika to pojedynczy przycisk, który po kliknięciu wyświetla okno komunikatu. Aplikacja autonomiczna WPF obsługuje dodatek i wyświetla kontrolkę użytkownika (zwracaną przez dodatek) jako zawartość głównego okna aplikacji.  
+ Dodatek zwraca interfejs użytkownika, który jest formantem użytkownika WPF. Zawartość formantu użytkownika jest pojedynczym przyciskiem, który po kliknięciu wyświetla okno komunikatu. Aplikacja autonomiczna WPF obsługuje dodatek i wyświetla formant użytkownika (zwracany przez dodatek) jako zawartość głównego okna aplikacji.  
   
  **Wymagania wstępne**  
   
- W tym przykładzie wyróżniono rozszerzenia WPF do modelu dodatku .NET Framework, który umożliwia ten scenariusz, i przyjmuje następujące elementy:  
+ W tym przykładzie wyróżniono rozszerzenia WPF do modelu dodatku .NET Framework, który włącza ten scenariusz i zakłada, że:  
   
-- Znajomość modelu dodatku .NET Framework, w tym potoku, dodatku i opracowywania hosta. Jeśli nie znasz tych pojęć, zobacz [Dodatki i rozszerzalność](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Samouczek przedstawiający implementację potoku, dodatek i aplikację hosta zawiera [Przewodnik: Tworzenie aplikacji rozszerzalnej](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100)).  
+- Znajomość modelu dodatku .NET Framework, w tym potoku, dodatku i rozwoju hosta. Jeśli nie znasz tych pojęć, zobacz [Dodatki i rozszerzalność](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Aby zapoznać się z samouczkiem przedstawiającym implementację potoku, dodatku i aplikacji hosta, zobacz [Przewodnik: Tworzenie aplikacji rozszerzalnej](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100)).  
   
-- Znajomość rozszerzeń WPF do modelu dodatku .NET Framework, który można znaleźć tutaj: [Omówienie dodatków WPF](wpf-add-ins-overview.md).  
+- Znajomość rozszerzeń WPF do modelu dodatku .NET Framework, który można znaleźć tutaj: [Przegląd dodatków WPF](wpf-add-ins-overview.md).  
   
 ## <a name="example"></a>Przykład  
- Aby utworzyć dodatek, który zwraca interfejs użytkownika WPF, wymaga określonego kodu dla każdego segmentu potoku, dodatku i aplikacji hosta.  
+ Aby utworzyć dodatek, który zwraca interfejs użytkownika WPF wymaga określonego kodu dla każdego segmentu potoku, dodatku i aplikacji hosta.  
 
-<a name="Contract"></a>   
-## <a name="implementing-the-contract-pipeline-segment"></a>Implementowanie segmentu potoku kontraktu  
- Metoda musi być zdefiniowana przez umowę zwracającą interfejs użytkownika, a jej wartość zwracana musi być typu <xref:System.AddIn.Contract.INativeHandleContract>. Jest to zademonstrowane przez metodę `GetAddInUI` kontraktu `IWPFAddInContract` w poniższym kodzie.  
+<a name="Contract"></a>
+## <a name="implementing-the-contract-pipeline-segment"></a>Wdrażanie segmentu rurociągu kontraktowego  
+ Metoda musi być zdefiniowana przez kontrakt dla zwrócenia interfejsu użytkownika, a <xref:System.AddIn.Contract.INativeHandleContract>jego wartość zwracana musi być typu . Jest to wykazane `GetAddInUI` przez `IWPFAddInContract` metodę umowy w poniższym kodzie.  
   
  [!code-csharp[SimpleAddInReturnsAUISample#ContractCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/Contracts/IWPFAddInContract.cs#contractcode)]
  [!code-vb[SimpleAddInReturnsAUISample#ContractCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/Contracts/IWPFAddInContract.vb#contractcode)]  
   
-<a name="AddInView"></a>   
+<a name="AddInView"></a>
 ## <a name="implementing-the-add-in-view-pipeline-segment"></a>Implementowanie segmentu potoku widoku dodatku  
- Ponieważ dodatek implementuje interfejsów użytkownika, który zapewnia jako podklasy <xref:System.Windows.FrameworkElement>, metoda w widoku dodatku, która jest skorelowane do `IWPFAddInView.GetAddInUI` musi zwracać wartość typu <xref:System.Windows.FrameworkElement>. Poniższy kod przedstawia widok dodatku kontraktu wdrożony jako interfejs.  
+ Ponieważ dodatek implementuje interfejsów użytkownika, które udostępnia jako <xref:System.Windows.FrameworkElement>podklasy , metoda w widoku `IWPFAddInView.GetAddInUI` dodatku, która <xref:System.Windows.FrameworkElement>koreluje z musi zwracać wartość typu . Poniższy kod przedstawia dodatek w widoku umowy, zaimplementowane jako interfejs.  
   
  [!code-csharp[SimpleAddInReturnsAUISample#AddInViewCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/AddInViews/IWPFAddInView.cs#addinviewcode)]
  [!code-vb[SimpleAddInReturnsAUISample#AddInViewCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/AddInViews/IWPFAddInView.vb#addinviewcode)]  
   
-<a name="AddInSideAdapter"></a>   
-## <a name="implementing-the-add-in-side-adapter-pipeline-segment"></a>Implementowanie segmentu potoku karty dodatku  
- Metoda Contract zwraca <xref:System.AddIn.Contract.INativeHandleContract>, ale dodatek zwraca <xref:System.Windows.FrameworkElement> (zgodnie z opisem w widoku dodatku). W związku z tym <xref:System.Windows.FrameworkElement> należy przekonwertować na <xref:System.AddIn.Contract.INativeHandleContract> przed przekroczeniem granicy izolacji. Ta operacja jest wykonywana przez adapter dodatku, wywołując <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>, jak pokazano w poniższym kodzie.  
+<a name="AddInSideAdapter"></a>
+## <a name="implementing-the-add-in-side-adapter-pipeline-segment"></a>Implementowanie segmentu potoku adaptera dodatku  
+ Metoda kontraktu zwraca <xref:System.AddIn.Contract.INativeHandleContract>, ale dodatek zwraca <xref:System.Windows.FrameworkElement> (zgodnie z podglądem dodatku). W związku <xref:System.Windows.FrameworkElement> z tym musi <xref:System.AddIn.Contract.INativeHandleContract> być przekształcony w przed przekroczeniem granicy izolacji. Ta praca jest wykonywana przez kartę dodatku <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>przez wywołanie, jak pokazano w poniższym kodzie.  
   
  [!code-csharp[SimpleAddInReturnsAUISample#AddInSideAdapterCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.cs#addinsideadaptercode)]
  [!code-vb[SimpleAddInReturnsAUISample#AddInSideAdapterCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.vb#addinsideadaptercode)]  
   
-<a name="HostView"></a>   
+<a name="HostView"></a>
 ## <a name="implementing-the-host-view-pipeline-segment"></a>Implementowanie segmentu potoku widoku hosta  
- Ponieważ aplikacja hosta będzie wyświetlała <xref:System.Windows.FrameworkElement>, metoda w widoku hosta, która jest skorelowane do `IWPFAddInHostView.GetAddInUI` musi zwracać wartość typu <xref:System.Windows.FrameworkElement>. Poniższy kod przedstawia widok hosta kontraktu wdrożony jako interfejs.  
+ Ponieważ aplikacja hosta <xref:System.Windows.FrameworkElement>wyświetli , metoda w widoku hosta, który koreluje musi `IWPFAddInHostView.GetAddInUI` zwrócić wartość typu <xref:System.Windows.FrameworkElement>. Poniższy kod przedstawia widok hosta umowy, zaimplementowany jako interfejs.  
   
  [!code-csharp[SimpleAddInReturnsAUISample#HostViewCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/HostViews/IWPFAddInHostView.cs#hostviewcode)]
  [!code-vb[SimpleAddInReturnsAUISample#HostViewCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/HostViews/IWPFAddInHostView.vb#hostviewcode)]  
   
-<a name="HostSideAdapter"></a>   
+<a name="HostSideAdapter"></a>
 ## <a name="implementing-the-host-side-adapter-pipeline-segment"></a>Implementowanie segmentu potoku karty po stronie hosta  
- Metoda Contract zwraca <xref:System.AddIn.Contract.INativeHandleContract>, ale aplikacja hosta oczekuje <xref:System.Windows.FrameworkElement> (określony przez widok hosta). W związku z tym <xref:System.AddIn.Contract.INativeHandleContract> musi być konwertowana na <xref:System.Windows.FrameworkElement> po przekroczeniu granicy izolacji. Ta operacja jest wykonywana przez adapter po stronie hosta przez wywołanie <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>, jak pokazano w poniższym kodzie.  
+ Metoda kontraktu zwraca <xref:System.AddIn.Contract.INativeHandleContract>, ale aplikacja hosta <xref:System.Windows.FrameworkElement> oczekuje (zgodnie z określonymi przez widok hosta). W związku <xref:System.AddIn.Contract.INativeHandleContract> z tym musi <xref:System.Windows.FrameworkElement> być przekształcony na po przekroczeniu granicy izolacji. Ta praca jest wykonywana przez kartę <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>po stronie hosta przez wywołanie, jak pokazano w poniższym kodzie.  
   
  [!code-csharp[SimpleAddInReturnsAUISample#HostSideAdapterCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/HostSideAdapters/WPFAddIn_ContractToViewHostSideAdapter.cs#hostsideadaptercode)]
  [!code-vb[SimpleAddInReturnsAUISample#HostSideAdapterCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/HostSideAdapters/WPFAddIn_ContractToViewHostSideAdapter.vb#hostsideadaptercode)]  
   
-<a name="AddIn"></a>   
+<a name="AddIn"></a>
 ## <a name="implementing-the-add-in"></a>Implementowanie dodatku  
- Po utworzeniu wbudowanej karty sieciowej i dodatku dodatek (`WPFAddIn1.AddIn`) musi zaimplementować metodę `IWPFAddInView.GetAddInUI` w celu zwrócenia obiektu <xref:System.Windows.FrameworkElement> (w tym przykładzie <xref:System.Windows.Controls.UserControl>). Implementacja <xref:System.Windows.Controls.UserControl>, `AddInUI` jest pokazana przez następujący kod.  
+ Po utworzeniu karty dodatku i widoku dodatku dodatek (`WPFAddIn1.AddIn`) musi `IWPFAddInView.GetAddInUI` zaimplementować metodę zwracania <xref:System.Windows.FrameworkElement> obiektu (a <xref:System.Windows.Controls.UserControl> w tym przykładzie). Implementacja <xref:System.Windows.Controls.UserControl>, `AddInUI`, jest pokazana przez poniższy kod.  
   
  [!code-xaml[SimpleAddInReturnsAUISample#AddInUIMarkup](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/WPFAddIn1/AddInUI.xaml#addinuimarkup)]  
   
  [!code-csharp[SimpleAddInReturnsAUISample#AddInUICodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/WPFAddIn1/AddInUI.xaml.cs#addinuicodebehind)]
  [!code-vb[SimpleAddInReturnsAUISample#AddInUICodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/WPFAddIn1/AddInUI.xaml.vb#addinuicodebehind)]  
   
- Implementacja `IWPFAddInView.GetAddInUI` przez dodatek po prostu musi zwrócić nowe wystąpienie `AddInUI`, jak pokazano w poniższym kodzie.  
+ Implementacja `IWPFAddInView.GetAddInUI` przez dodatek po prostu musi zwrócić nowe `AddInUI`wystąpienie , jak pokazano w poniższym kodzie.  
   
  [!code-csharp[SimpleAddInReturnsAUISample#AddInCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/WPFAddIn1/AddIn.cs#addincode)]
  [!code-vb[SimpleAddInReturnsAUISample#AddInCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/WPFAddIn1/AddIn.vb#addincode)]  
   
-<a name="App"></a>   
+<a name="App"></a>
 ## <a name="implementing-the-host-application"></a>Implementowanie aplikacji hosta  
- Po utworzeniu karty sieciowej i widoku hosta po stronie hosta aplikacja hosta może użyć modelu dodatku .NET Framework, aby otworzyć potok, uzyskać widok hosta dodatku i wywołać metodę `IWPFAddInHostView.GetAddInUI`. Te kroki przedstawiono w poniższym kodzie.  
+ Po utworzeniu karty po stronie hosta i widoku hosta aplikacja hosta może użyć modelu dodatku .NET Framework, aby `IWPFAddInHostView.GetAddInUI` otworzyć potok, uzyskać widok hosta dodatku i wywołać metodę. Te kroki są pokazane w poniższym kodzie.  
   
  [!code-csharp[SimpleAddInReturnsAUISample#GetUICode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/Host/MainWindow.xaml.cs#getuicode)]
  [!code-vb[SimpleAddInReturnsAUISample#GetUICode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/Host/MainWindow.xaml.vb#getuicode)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Dodatki i rozszerzalność](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [Dodatki WPF — omówienie](wpf-add-ins-overview.md)

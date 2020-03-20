@@ -1,5 +1,5 @@
 ---
-title: Metoda IXCLRDataModule::GetMethodDefinitionByToken
+title: IXCLRDataModule::Metoda GetMethodDefinitionByToken
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataModule::GetMethodDefinitionByToken Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 2c0cf56f108396226b7c7399f6da75e5f47d36f3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 294c5340caf2217f9337d654a11a63a43d46febd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744673"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176672"
 ---
-# <a name="ixclrdatamodulegetmethoddefinitionbytoken-method"></a>Metoda IXCLRDataModule::GetMethodDefinitionByToken
+# <a name="ixclrdatamodulegetmethoddefinitionbytoken-method"></a>IXCLRDataModule::Metoda GetMethodDefinitionByToken
 
-Pobiera definicję metody odpowiadającej token określonych metadanych.
+Pobiera definicję metody odpowiadającą tokenowi metadanych.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -40,23 +40,23 @@ HRESULT GetMethodDefinitionByToken(
 ## <a name="parameters"></a>Parametry
 
 `token`\
-[in] Token metody.
+[w] Token metody.
 
 `methodDefinition`\
-[out] Definicję metody.
+[na zewnątrz] Definicja metody.
 
 ## <a name="remarks"></a>Uwagi
 
-Podana metoda jest częścią `IXCLRDataModule` interfejs i odnosi się do 25 gniazda tabeli metod wirtualnych.
+Podana metoda jest `IXCLRDataModule` częścią interfejsu i odpowiada 25-sze gniazdo tabeli metody wirtualnej.
 
 ## <a name="requirements"></a>Wymagania
 
-**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+**Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
 **Nagłówek:** Brak  
 **Biblioteka:** Brak  
-**Wersje programu .NET framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
- 
-## <a name="see-also"></a>Zobacz także
+**Wersje programu .NET Framework:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-- [Debugowanie](index.md)
-- [Interfejs IXCLRDataModule](ixclrdatamodule-interface.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Debugging](index.md)
+- [IXCLRDataModule, interfejs](ixclrdatamodule-interface.md)

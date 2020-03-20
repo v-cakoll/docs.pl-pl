@@ -6,36 +6,35 @@ helpviewer_keywords:
 - Windows Forms, adjusting size
 - Windows Forms, changing scale
 ms.assetid: a014d2b3-3273-4521-95e1-00171033bf58
-ms.openlocfilehash: db82e290de93fb24ccd4f3a504fe8fdfba3b2e1b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: cc77c271e52149c3cc0f42f969030478b72cf8d1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76739793"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182649"
 ---
-# <a name="adjusting-the-size-and-scale-of-windows-forms"></a>Dopasowanie rozmiaru i skali Windows Forms
-Ten temat zawiera linki do informacji o zmianie rozmiarów Windows Forms.  
+# <a name="adjusting-the-size-and-scale-of-windows-forms"></a>Dostosowywanie rozmiaru i skali formularzy systemu Windows
+Ten temat zawiera łącza do informacji dotyczących zmiany rozmiaru formularzy systemu Windows.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Instrukcje: zmienianie rozmiarów formularzy Windows Forms](how-to-resize-windows-forms.md)  
- Zawiera instrukcje dotyczące określania rozmiaru Windows Forms.  
+ Zawiera instrukcje dotyczące określania rozmiaru formularzy systemu Windows.  
   
  [Automatyczne skalowanie w formularzach Windows Forms](automatic-scaling-in-windows-forms.md)  
- W tym artykule omówiono, jak automatyczne skalowanie umożliwia wyświetlanie formularzy i kontrolek w odpowiedniej postaci między maszynami.  
+ W tym artykule omówiono sposób automatycznego skalowania umożliwia formularz i jego formantów, które mają być wyświetlane odpowiednio między komputerami.  
   
- [Obsługa wysokiej rozdzielczości DPI w Windows Forms](high-dpi-support-in-windows-forms.md)    
- W tym artykule omówiono obsługę Windows Forms w przypadku skalowania wysokiej rozdzielczości DPI i dynamicznego. 
+ [Obsługa wysokiej rozdzielczości DPI w formularzach systemu Windows](high-dpi-support-in-windows-forms.md) W tym artykule omówiono obsługę formularzy systemu Windows dla wysokiej rozdzielczości DPI i skalowania dynamicznego.
   
-## <a name="reference"></a>Tematy pomocy  
+## <a name="reference"></a>Dokumentacja  
  <xref:System.Drawing.Size>  
- Opisuje tę klasę i zawiera linki do wszystkich jej elementów członkowskich.  
+ Opisuje tę klasę i zawiera łącza do wszystkich jej członków.  
   
  <xref:System.Windows.Forms.TableLayoutPanel>  
- Opisuje tę klasę i zawiera linki do wszystkich jej elementów członkowskich.  
+ Opisuje tę klasę i zawiera łącza do wszystkich jej członków.  
   
  <xref:System.Windows.Forms.FlowLayoutPanel>  
- Opisuje tę klasę i zawiera linki do wszystkich jej elementów członkowskich.  
+ Opisuje tę klasę i zawiera łącza do wszystkich jej członków.  
   
-## <a name="related-sections"></a>Sekcje pokrewne  
- [Zmiana wyglądu Windows Forms](changing-the-appearance-of-windows-forms.md)  
- Zawiera łącza do tematów opisujących inne sposoby zmiany wyglądu Windows Forms.
+## <a name="related-sections"></a>Powiązane sekcje  
+ [Zmiana wyglądu formularzy systemu Windows](changing-the-appearance-of-windows-forms.md)  
+ Zawiera łącza do tematów opisujących inne sposoby zmiany wyglądu formularzy systemu Windows.

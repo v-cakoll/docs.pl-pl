@@ -15,37 +15,37 @@ helpviewer_keywords:
 ms.assetid: 20bdf8ff-2d15-4c64-8950-6888f642d6c0
 topic_type:
 - apiref
-ms.openlocfilehash: f25150d037a2f6fabb700f2c4bf2191e8e402a8e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6904271ed90cf733b9221178927bc680d76b58a6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446209"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176581"
 ---
 # <a name="isymunmanagedsourceservermodulegetsourceserverdata-method"></a>ISymUnmanagedSourceServerModule::GetSourceServerData — Metoda
-Zwraca dane serwera źródłowego dla modułu. Obiekt wywołujący musi zwolnić zasoby przy użyciu `CoTaskMemFree`.  
+Zwraca dane serwera źródłowego dla modułu. Rozmówca musi zwolnić zasoby `CoTaskMemFree`za pomocą programu .  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
 HRESULT GetSourceServerData(  
-    [out] ULONG* pDataByteCount,   
+    [out] ULONG* pDataByteCount,
     [out, size_is (, *pDataByteCount)] BYTE** ppData);  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `pDataByteCount`  
- określoną Wskaźnik do `ULONG32`, który odbiera rozmiar (w bajtach) danych serwera źródłowego.  
+ [na zewnątrz] Wskaźnik `ULONG32` do, który odbiera rozmiar w bajtach danych serwera źródłowego.  
   
  `ppData`  
- określoną Wskaźnik do zwracanej wartości `pDataByteCount`.  
+ [na zewnątrz] Wskaźnik do zwróconej `pDataByteCount` wartości.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.  
+ S_OK, jeśli metoda powiedzie się; w przeciwnym razie E_FAIL lub inny kod błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** CorSym. idl, CorSym. h  
+ **Nagłówek:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [ISymUnmanagedSourceServerModule, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsourceservermodule-interface.md)
+- [ISymUnmanagedSourceServerModule — Interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsourceservermodule-interface.md)

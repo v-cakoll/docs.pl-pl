@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 27064ca2-4186-4433-90a7-3b297785e891
 topic_type:
 - apiref
-ms.openlocfilehash: b98fab6c6127c3f78151d3b84160d4ca0434b6cd
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fadd1974cd4fa8a51a06700835f46df24e37d7fd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428249"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175775"
 ---
 # <a name="imetadataemitdefinesecurityattributeset-method"></a>IMetaDataEmit::DefineSecurityAttributeSet — Metoda
 Tworzy zestaw uprawnień zabezpieczeń do dołączenia do obiektu, do którego odwołuje się określony token.  
@@ -28,37 +28,37 @@ Tworzy zestaw uprawnień zabezpieczeń do dołączenia do obiektu, do którego o
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
-HRESULT DefineSecurityAttributeSet (   
-    [in]  mdToken       tkObj,   
-    [in]  COR_SECATTR   rSecAttrs[],   
-    [in]  ULONG         cSecAttrs,   
-    [out] ULONG         *pulErrorAttr   
+HRESULT DefineSecurityAttributeSet (
+    [in]  mdToken       tkObj,
+    [in]  COR_SECATTR   rSecAttrs[],
+    [in]  ULONG         cSecAttrs,
+    [out] ULONG         *pulErrorAttr
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `tkObj`  
- podczas Token, do którego są dołączone informacje o zabezpieczeniach.  
+ [w] Token, do którego dołączone są informacje o zabezpieczeniach.  
   
  `rSecAttrs`  
- podczas Tablica struktur `COR_SECATTR`.  
+ [w] Tablica `COR_SECATTR` struktur.  
   
  `cSecAttrs`  
- podczas Liczba elementów w `rSecAttrs`.  
+ [w] Liczba elementów `rSecAttrs`w programie .  
   
  `pulErrorAttr`  
- określoną Jeśli metoda zakończy się niepowodzeniem, określa indeks `rSecAttrs` elementu, który spowodował problem.  
+ [na zewnątrz] Jeśli metoda nie powiedzie się, określa indeks w `rSecAttrs` elemencie, który spowodował problem.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
+ **Biblioteka:** Używany jako zasób w pliku MSCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

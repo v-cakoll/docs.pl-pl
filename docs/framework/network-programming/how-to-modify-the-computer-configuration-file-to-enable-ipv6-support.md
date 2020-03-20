@@ -1,25 +1,25 @@
 ---
-title: 'Instrukcje: Modyfikowanie pliku konfiguracji komputera w celu włączenia obsługi protokołu IPv6'
+title: 'Instrukcje: modyfikowanie pliku konfiguracji komputera w celu włączenia obsługi protokołu IPv6'
 ms.date: 03/30/2017
 ms.assetid: 5611b677-b9cc-43b8-a434-60e18d89aada
-ms.openlocfilehash: 98fb57abfff985ab96cb5139f15ae4c29c986a18
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 73408afe9fcb35daa898c08b087a3411a6cb342b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040621"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180805"
 ---
-# <a name="how-to-modify-the-computer-configuration-file-to-enable-ipv6-support"></a>Instrukcje: Modyfikowanie pliku konfiguracji komputera w celu włączenia obsługi protokołu IPv6
-Poniższy przykład kodu pokazuje, jak zmodyfikować plik konfiguracji komputera, *Machine. config*, aby umożliwić obsługę protokołu IPv6. Plik *Machine. config* jest przechowywany w folderze *%windir%\Microsoft.NET\Framework* w katalogu, w którym zainstalowano system Windows. W folderach w obszarze *%windir%\Microsoft.NET\Framework* istnieje osobny plik *Machine. config* dla każdej wersji .NET Framework zainstalowanej na komputerze (na przykład *C:\Windows\Microsoft.NET\Framework\v2.0.50727\ Machine. config*).  
+# <a name="how-to-modify-the-computer-configuration-file-to-enable-ipv6-support"></a>Instrukcje: modyfikowanie pliku konfiguracji komputera w celu włączenia obsługi protokołu IPv6
+W poniższym przykładzie kodu pokazano, jak zmodyfikować plik konfiguracji komputera, *machine.config*, aby włączyć obsługę IPv6. Plik *machine.config* jest przechowywany w folderze *%Windir%\Microsoft.NET\Framework* w katalogu, w którym zainstalowano system Windows. W folderach w obszarze *%Windir%\Microsoft.NET\Framework* znajduje się oddzielny plik *machine.config* dla każdej wersji programu .NET Framework zainstalowanej na komputerze (na przykład *C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config*).  
   
  Ustawienia te można również wprowadzić w pliku konfiguracyjnym aplikacji. Ma on priorytet nad plikiem konfiguracyjnym komputera.  
   
- W przypadku .NET Framework w wersji 1,1 i wcześniejszych wartość przełącznika konfiguracja **obsługująca protokół IPv6** określa, czy elementy członkowskie klasy <xref:System.Net.Dns?displayProperty=nameWithType> zwracają adresy IPv6.  
+ W przypadku programu .NET Framework w wersji 1.1 i wcześniejszych wartość przełącznika <xref:System.Net.Dns?displayProperty=nameWithType> konfiguracji **obsługującego protokół ipv6** określa, czy członkowie klasy zwracają adresy IPv6.  
   
- W przypadku .NET Framework w wersji 2,0 lub nowszej, jeśli system Windows obsługuje protokół IPv6, wszystkie elementy członkowskie klasy <xref:System.Net.Dns?displayProperty=nameWithType> (na przykład Metoda <xref:System.Net.Dns.GetHostEntry%2A?displayProperty=nameWithType>) będą zwracać adresy IPv6 z jednym ograniczeniem. Przestarzałe elementy członkowskie klasy <xref:System.Net.Dns?displayProperty=nameWithType> (na przykład Metoda <xref:System.Net.Dns.Resolve%2A?displayProperty=nameWithType>) odczyta i rozpoznają wartość w pliku konfiguracji.  
+ W przypadku programu .NET Framework w wersji 2.0 lub nowszej, jeśli system Windows obsługuje protokół IPv6, wszyscy członkowie <xref:System.Net.Dns?displayProperty=nameWithType> klasy (na przykład <xref:System.Net.Dns.GetHostEntry%2A?displayProperty=nameWithType> metoda) zwracają adresy IPv6 z jednym ograniczeniem. Przestarzałe <xref:System.Net.Dns?displayProperty=nameWithType> elementy członkowskie klasy <xref:System.Net.Dns.Resolve%2A?displayProperty=nameWithType> (na przykład metoda) będą odczytywać i rozpoznawać wartość w pliku konfiguracyjnym.  
   
 > [!NOTE]
-> W przypadku .NET Framework w wersji 2,0 lub nowszej protokół IPv6 jest domyślnie włączony. W przypadku .NET Framework w wersji 1,1 lub starszej protokół IPv6 jest domyślnie wyłączony.  
+> W przypadku programu .NET Framework w wersji 2.0 i nowszej protokół IPv6 jest domyślnie włączony. W przypadku programu .NET Framework w wersji 1.1 i wcześniejszych domyślnie jest wyłączona iPv6.  
   
 ## <a name="example"></a>Przykład  
   
@@ -28,15 +28,15 @@ Poniższy przykład kodu pokazuje, jak zmodyfikować plik konfiguracji komputera
     …………  
     <settings>  
         …………  
-        <ipv6 enabled="true"/>   
+        <ipv6 enabled="true"/>
     ……………  
     </settings>  
     ………………  
 </system.net>  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Adresowanie IPv6](ipv6-addressing.md)
 - [Schemat ustawień sieci](../configure-apps/file-schema/network/index.md)
-- [\<> IPv6, element (Ustawienia sieci)](../configure-apps/file-schema/network/ipv6-element-network-settings.md)
+- [\<element> ipv6 (ustawienia sieciowe)](../configure-apps/file-schema/network/ipv6-element-network-settings.md)

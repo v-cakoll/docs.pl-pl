@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Drukowanie grafiki'
+title: 'Jak: Drukowanie grafiki'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - graphics [Windows Forms], printing
 - printing [Windows Forms], graphics
 ms.assetid: 32b891e6-52ff-4fea-a9ff-2ce5db20a4c6
-ms.openlocfilehash: 2435b3bc14747a00d2a0fc03a9ebd21ae43c5369
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 15f3a507839430ce058302e7f5abd317ef84626f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76740643"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182536"
 ---
 # <a name="how-to-print-graphics-in-windows-forms"></a>Porady: drukowanie grafiki w formularzach systemu Windows
-Często chcesz wydrukować grafikę w aplikacji opartej na systemie Windows. Klasa <xref:System.Drawing.Graphics> zapewnia metody rysowania obiektów na urządzeniu, takie jak ekran lub drukarka.  
+Często należy drukować grafiki w aplikacji systemu Windows. Klasa <xref:System.Drawing.Graphics> udostępnia metody rysowania obiektów do urządzenia, takich jak ekran lub drukarka.  
   
 ### <a name="to-print-graphics"></a>Aby wydrukować grafikę  
   
-1. Dodaj składnik <xref:System.Drawing.Printing.PrintDocument> do formularza.  
+1. Dodaj <xref:System.Drawing.Printing.PrintDocument> składnik do formularza.  
   
-2. W obsłudze zdarzeń <xref:System.Drawing.Printing.PrintDocument.PrintPage> Użyj właściwości <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> klasy <xref:System.Drawing.Printing.PrintPageEventArgs>, aby poinstruować drukarkę, jakiego rodzaju grafika ma drukować.  
+2. W <xref:System.Drawing.Printing.PrintDocument.PrintPage> programie obsługi zdarzeń <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> użyj <xref:System.Drawing.Printing.PrintPageEventArgs> właściwości klasy, aby poinstruować drukarkę o rodzaju grafiki do wydrukowania.  
   
-     Poniższy przykład kodu pokazuje procedurę obsługi zdarzeń użytą do utworzenia niebieską elipsę w obrębie prostokąta ograniczenia. Prostokąt ma następującą lokalizację i wymiary: od 100 do 150 z szerokością 250 i wysokością 250.  
+     Poniższy przykład kodu pokazuje program obsługi zdarzeń używany do tworzenia niebieskiej elipsy w prostokątze ograniczającym. Prostokąt ma następującą lokalizację i wymiary: zaczynając od 100, 150 o szerokości 250 i wysokości 250.  
   
     ```vb  
     Private Sub PrintDocument1_PrintPage(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage  
@@ -34,10 +34,10 @@ Często chcesz wydrukować grafikę w aplikacji opartej na systemie Windows. Kla
     ```  
   
     ```csharp  
-    private void printDocument1_PrintPage(object sender,   
+    private void printDocument1_PrintPage(object sender,
     System.Drawing.Printing.PrintPageEventArgs e)  
     {  
-       e.Graphics.FillRectangle(Brushes.Blue,   
+       e.Graphics.FillRectangle(Brushes.Blue,
          new Rectangle(100, 150, 250, 250));  
     }  
     ```  
@@ -52,7 +52,7 @@ Często chcesz wydrukować grafikę w aplikacji opartej na systemie Windows. Kla
        }  
     ```  
   
-     (Wizualizacje C# i C++wizualizacje) Umieść poniższy kod w Konstruktorze formularza, aby zarejestrować procedurę obsługi zdarzeń.  
+     (Visual C# i Visual C++) Umieść następujący kod w konstruktorze formularza, aby zarejestrować program obsługi zdarzeń.  
   
     ```csharp  
     this.printDocument1.PrintPage += new  
@@ -66,8 +66,8 @@ Często chcesz wydrukować grafikę w aplikacji opartej na systemie Windows. Kla
        (this, &Form1::printDocument1_PrintPage);  
     ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Drawing.Graphics>
 - <xref:System.Drawing.Brush>
-- [Obsługa drukowania w formularzach Windows Forms](windows-forms-print-support.md)
+- [Obsługa drukowania w formularzach systemu Windows](windows-forms-print-support.md)

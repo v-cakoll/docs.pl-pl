@@ -1,5 +1,5 @@
 ---
-title: CLRDATA_IL_ADDRESS_MAP Structure
+title: CLRDATA_IL_ADDRESS_MAP, struktura
 ms.date: 01/16/2019
 api.name:
 - CLRDATA_IL_ADDRESS_MAP Structure
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 3f6928832d822422177ebd7def142422953468a0
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: e680a7a0dc3209d1988f6c84be0864572a74b3a4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274294"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179378"
 ---
-# <a name="clrdata_il_address_map-structure"></a>CLRDATA_IL_ADDRESS_MAP Structure
+# <a name="clrdata_il_address_map-structure"></a>CLRDATA_IL_ADDRESS_MAP, struktura
 
-Definiuje mapowanie IL to Address.
+Definiuje mapowanie IL do adresów.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -42,26 +42,25 @@ typedef struct
 
 ## <a name="members"></a>Elementy członkowskie
 
-| Element członkowski         | Opis                                            |
+| Członek         | Opis                                            |
 | -------------- | ------------------------------------------------------ |
-| `ilOffset`     | Przesunięcie IL dla zawartego zakresu adresów              |
+| `ilOffset`     | Przesunięcie IL dla zamkniętego zakresu adresów              |
 | `startAddress` | Adres początkowy zakresu.                        |
 | `endAddress`   | Adres końcowy zakresu.                          |
 | `type`         | Typ danych. Ta wartość nie jest obecnie używana |
 
 ## <a name="remarks"></a>Uwagi
 
-Ta struktura jest w czasie wykonywania i nie jest udostępniana za pomocą żadnych plików nagłówkowych ani bibliotek. Aby go użyć, Zdefiniuj strukturę jak określono powyżej, gdzie `CLRDATA_ADDRESS` jest 64-bitową liczbą całkowitą bez znaku.
+Ta struktura znajduje się wewnątrz środowiska wykonawczego i nie jest narażona za pośrednictwem żadnych nagłówków lub plików biblioteki. Aby go użyć, zdefiniuj `CLRDATA_ADDRESS` strukturę określoną powyżej, gdzie jest 64-bitową niepodpisaną całkowitej liczby.
 
 ## <a name="requirements"></a>Wymagania
 
-**Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
-**Nagłówki** Brak  
-**Biblioteki** Brak   
-**.NET Framework wersje:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Platformy:** Zobacz [Wymagania systemowe](../../get-started/system-requirements.md).  
+**Nagłówek:** Brak  
+**Biblioteka:** Brak **wersji programu .NET Framework:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [CLRDataSourceType, Wyliczenie](clrdatasourcetype-enumeration.md)
-- [Debugowanie](index.md)
+- [Wyliczanie CLRDataSourceType](clrdatasourcetype-enumeration.md)
+- [Debugging](index.md)
 - [Struktury debugowania](debugging-structures.md)

@@ -15,65 +15,65 @@ helpviewer_keywords:
 ms.assetid: 1c8d9959-95b5-4131-be4a-556d97774014
 topic_type:
 - apiref
-ms.openlocfilehash: f9d6c4f01b01944c885190f90e2195c3a308490a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 645b64c8b536029663c350bdcde9a716a715aab3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141207"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178082"
 ---
 # <a name="iclrgcmanagersetgcstartuplimits-method"></a>ICLRGCManager::SetGCStartupLimits — Metoda
-Ustawia rozmiar segmentu wyrzucania elementów bezużytecznych i maksymalny rozmiar generacji 0 systemu odzyskiwania pamięci.  
+Ustawia rozmiar segmentu wyrzucania elementów bezużytecznych i maksymalny rozmiar generacji 0 systemu wyrzucania elementów bezużytecznych.  
   
 > [!IMPORTANT]
-> Począwszy od .NET Framework 4,5, można ustawić rozmiar segmentu i rozmiar maksymalnej generacji 0 na wartość większą niż `DWORD` przy użyciu metody [ICLRGCManager2:: SetGCStartupLimitsEx —](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-setgcstartuplimitsex-method.md) .  
+> Począwszy od .NET Framework 4.5, można ustawić rozmiar segmentu i `DWORD` maksymalny rozmiar generacji 0 do wartości większych niż przy użyciu [metody ICLRGCManager2::SetGCStartupLimitsEx.](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-setgcstartuplimitsex-method.md)  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
 HRESULT SetGCStartupLimits (  
-    [in] DWORD SegmentSize,   
+    [in] DWORD SegmentSize,
     [in] DWORD MaxGen0Size  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `SegmentSize`  
- podczas Określony rozmiar segmentu odzyskiwania pamięci.  
+ [w] Określony rozmiar segmentu wyrzucania elementów bezużytecznych.  
   
- Minimalny rozmiar segmentu to 4 MB. Segmenty można zwiększyć z przyrostem wynoszącym 1 MB lub większą.  
+ Minimalny rozmiar segmentu to 4 MB. Segmenty można zwiększać w przyrostach co 1 MB lub większych.  
   
  `MaxGen0Size`  
- podczas Określony maksymalny rozmiar dla generacji 0.  
+ [w] Określony maksymalny rozmiar dla generacji 0.  
   
- Minimalna wielkość generacji 0 to 64 KB.  
+ Minimalna generacja 0 rozmiar jest 64 KB.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`SetGCStartupLimits` pomyślnie zwrócone.|  
-|HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie zostało załadowane do procesu lub środowisko CLR znajduje się w stanie, w którym nie można uruchomić kodu zarządzanego lub przetworzyć wywołania pomyślnie.|  
-|HOST_E_TIMEOUT|Upłynął limit czasu połączenia.|  
-|HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właocicielem blokady.|  
-|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas oczekiwania na niego zablokowanego wątku lub włókna.|  
-|E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwraca wartość E_FAIL, środowisko CLR nie będzie już można używać w procesie. Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
+|S_OK|`SetGCStartupLimits`zwrócono pomyślnie.|  
+|HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie został załadowany do procesu lub CLR jest w stanie, w którym nie można uruchomić kod zarządzany lub proces wywołania pomyślnie.|  
+|HOST_E_TIMEOUT|Limit czasu połączenia.|  
+|HOST_E_NOT_OWNER|Wywołujący nie jest właścicielem blokady.|  
+|HOST_E_ABANDONED|Zdarzenie zostało anulowane, gdy czekał na niego zablokowany wątek lub włókno.|  
+|E_fail|Doszło do nieznanej katastrofalnej awarii. Po metoda zwraca E_FAIL, CLR nie jest już użyteczny w procesie. Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Uwagi  
- Wartości, które `SetGCStartupLimits` zestawy, można określić tylko raz. Późniejsze wywołania `SetGCStartupLimits` są ignorowane.  
+ Wartości, `SetGCStartupLimits` które ustawia można określić tylko raz. Późniejsze `SetGCStartupLimits` wywołania są ignorowane.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE. h  
+ **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
+ **Biblioteka:** Uwzględnione jako zasób w pliku MSCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Automatyczne zarządzanie pamięcią](../../../standard/automatic-memory-management.md)
 - [Odzyskiwanie pamięci](../../../standard/garbage-collection/index.md)
-- [ICLRControl, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
+- [ICLRControl — Interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
 - [ICLRGCManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md)

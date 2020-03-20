@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: 025e358c-448f-4423-a2f2-57acf437c8a5
 topic_type:
 - apiref
-ms.openlocfilehash: 3a628aec0823c5db07d31d33813a020606906163
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0c112819ef3bc4f9a7146ee80f55202ff89d689a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74438126"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178317"
 ---
 # <a name="isymunmanagedwriter3openmethod2-method"></a>ISymUnmanagedWriter3::OpenMethod2 — Metoda
-Otwiera metodę i udostępnia jej rzeczywiste przesunięcie sekcji w obrazie.  
+Otwiera metodę i zapewnia jej rzeczywiste przesunięcie przekroju na obrazie.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
-HRESULT OpenMethod2(   
+HRESULT OpenMethod2(
     [in] mdMethodDef method,  
     [in] ULONG32 isect,  
     [in] ULONG32 offset);  
@@ -36,21 +36,21 @@ HRESULT OpenMethod2(
   
 ## <a name="parameters"></a>Parametry  
  `method`  
- podczas Token metadanych dla metody, która ma zostać otwarta.  
+ [w] Token metadanych dla metody, która ma zostać otwarta.  
   
  `isect`  
- podczas Przesunięcie sekcji na obrazie.  
+ [w] Przesunięcie sekcji na obrazie.  
   
  `offset`  
- podczas Przesunięcie na obrazie.  
+ [w] Przesunięcie obrazu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub inny kod błędu.  
+ S_OK, jeśli metoda powiedzie się; w przeciwnym razie E_FAIL lub inny kod błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** CorSym. idl, CorSym. h  
+ **Nagłówek:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [ISymUnmanagedWriter3, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)
+- [ISymUnmanagedWriter3 — Interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)
 - [OpenMethod, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)

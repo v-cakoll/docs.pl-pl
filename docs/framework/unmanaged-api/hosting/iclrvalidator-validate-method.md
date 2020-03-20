@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0b1b432a-d234-4002-839b-81366c3a8bdc
 topic_type:
 - apiref
-ms.openlocfilehash: 497a115b980bb58a3906fda68d7ff564efe78089
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 427895ffea94e6c657d775ebdeb8571070a61c6e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127830"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178061"
 ---
 # <a name="iclrvalidatorvalidate-method"></a>ICLRValidator::Validate — Metoda
 Sprawdza poprawność przenośnego pliku wykonywalnego (PE) lub języka pośredniego firmy Microsoft (MSIL) w określonym pliku.  
@@ -37,54 +37,54 @@ HRESULT Validate (
     [in] LPWSTR             fileName,  
     [in, size_is(ulSize)] BYTE *pe,  
     [in] unsigned long      ulSize  
-);      
+);
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `veh`  
- podczas Wskaźnik do wystąpienia `IVEHandler`, które obsługuje błędy walidacji.  
+ [w] Wskaźnik do `IVEHandler` wystąpienia, który obsługuje błędy sprawdzania poprawności.  
   
  `ulAppDomainId`  
- podczas Identyfikator bieżącego <xref:System.AppDomain>.  
+ [w] Identyfikator bieżącego <xref:System.AppDomain>.  
   
  `ulFlags`  
- podczas Kombinacja wartości [ValidatorFlags —](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) wskazujących rodzaj walidacji, który powinien zostać wykonany.  
+ [w] Kombinacja [Wartości ValidatorFlags,](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) wskazując rodzaj sprawdzania poprawności, które należy wykonać.  
   
  `ulMaxError`  
- podczas Maksymalna liczba błędów, które należy pozostawić przed wyjściem z walidacji.  
+ [w] Maksymalna liczba błędów, które należy zezwolić przed zamknięciem sprawdzania poprawności.  
   
  `token`  
- podczas Przestrzeń.  
+ [w] Nieużywane.  
   
  `fileName`  
- podczas Nazwa pliku do zweryfikowania.  
+ [w] Nazwa pliku, który ma zostać zweryfikowany.  
   
  `pe`  
- podczas Wskaźnik do buforu pliku.  
+ [w] Wskaźnik do buforu plików.  
   
  `ulSize`  
- podczas Rozmiar pliku, który ma być zweryfikowany w bajtach.  
+ [w] Rozmiar w bajtach pliku, który ma zostać zweryfikowany.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`Validate` pomyślnie zwrócone.|  
-|HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie zostało załadowane do procesu lub środowisko CLR znajduje się w stanie, w którym nie można uruchomić kodu zarządzanego lub przetworzyć wywołania pomyślnie.|  
-|HOST_E_TIMEOUT|Upłynął limit czasu połączenia.|  
-|HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właocicielem blokady.|  
-|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas oczekiwania na niego zablokowanego wątku lub włókna.|  
-|E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwraca wartość E_FAIL, środowisko CLR nie jest już możliwe do użycia w procesie. Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
+|S_OK|`Validate`zwrócono pomyślnie.|  
+|HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie został załadowany do procesu lub CLR jest w stanie, w którym nie można uruchomić kod zarządzany lub proces wywołania pomyślnie.|  
+|HOST_E_TIMEOUT|Limit czasu połączenia.|  
+|HOST_E_NOT_OWNER|Wywołujący nie jest właścicielem blokady.|  
+|HOST_E_ABANDONED|Zdarzenie zostało anulowane, gdy czekał na niego zablokowany wątek lub włókno.|  
+|E_fail|Doszło do nieznanej katastrofalnej awarii. Gdy metoda zwraca E_FAIL, CLR nie jest już użyteczny w ramach procesu. Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** IValidator. idl, IValidator. h  
+ **Nagłówek:** IValidator.idl, IValidator.h  
   
- **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
+ **Biblioteka:** Uwzględnione jako zasób w pliku MSCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [ICLRValidator, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)

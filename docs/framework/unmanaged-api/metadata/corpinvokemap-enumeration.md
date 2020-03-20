@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f14f986e-f6ce-42bc-aa23-18150c46d28c
 topic_type:
 - apiref
-ms.openlocfilehash: 17b7af7016cf88fd3ae263dd952502d515b0c833
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8216dc3030b18428ab52fbf8385d392f81057aa0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441562"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176152"
 ---
 # <a name="corpinvokemap-enumeration"></a>CorPinvokeMap — Wyliczenie
 Określa opcje wywołania PInvoke.  
@@ -47,7 +47,7 @@ typedef enum  CorPinvokeMap {
     pmThrowOnUnmappableCharDisabled   = 0x2000,  
     pmThrowOnUnmappableCharMask       = 0x3000,  
   
-    pmSupportsLastError = 0x0040,   
+    pmSupportsLastError = 0x0040,
   
     pmCallConvMask      = 0x0700,  
     pmCallConvWinapi    = 0x0100,  
@@ -61,40 +61,40 @@ typedef enum  CorPinvokeMap {
 } CorPinvokeMap;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Elementy członkowskie  
   
-|Element członkowski|Opis|  
+|Członek|Opis|  
 |------------|-----------------|  
-|`pmNoMangle`|Użyj każdej nazwy elementu członkowskiego w określony sposób.|  
-|`pmCharSetMask`|Rezerwacj.|  
-|`pmCharSetNotSpec`|Rezerwacj.|  
-|`pmCharSetAnsi`|Kierowanie ciągów jako ciągów znaków wielobajtowych.|  
-|`pmCharSetUnicode`|Kierowanie ciągów jako znaków Unicode 2-bajtowych.|  
-|`pmCharSetAuto`|Automatyczne kierowanie ciągów odpowiednio dla docelowego systemu operacyjnego. Wartość domyślna to Unicode w systemie Windows NT, Windows 2000, Windows XP i rodziny Windows Server 2003. wartość domyślna to ANSI w systemach Windows 98 i Windows Me.|  
-|`pmBestFitUseAssem`|Rezerwacj.|  
-|`pmBestFitEnabled`|Wykonaj najlepiej dopasowane mapowanie znaków Unicode, które nie mają dokładnego dopasowania w zestawie znaków ANSI.|  
-|`pmBestFitDisabled`|Nie wykonuj najlepszego mapowania znaków Unicode. W takim przypadku wszystkie znaki napotkano zostaną zastąpione "?".|  
-|`pmBestFitMask`|Rezerwacj.|  
-|`pmThrowOnUnmappableCharUseAssem`|Rezerwacj.|  
-|`pmThrowOnUnmappableCharEnabled`|Zgłoś wyjątek, gdy organizator międzyoperacyjny napotka znak napotkano.|  
-|`pmThrowOnUnmappableCharDisabled`|Nie zgłaszaj wyjątku, gdy organizator międzyoperacyjny napotka znak napotkano.|  
-|`pmThrowOnUnmappableCharMask`|Zarezerwowany|  
-|`pmSupportsLastError`|Zezwalaj wywołującemu na wywoływanie funkcji Win32 `SetLastError` przed powrotem z metody z atrybutem.|  
-|`pmCallConvMask`|Zarezerwowany|  
-|`pmCallConvWinapi`|Użyj domyślnej konwencji wywoływania platformy. Na przykład w systemie Windows wartość domyślna to `StdCall` i Windows CE .NET `Cdecl`.|  
-|`pmCallConvCdecl`|Użyj konwencji wywoływania `Cdecl`. W takim przypadku wywołujący czyści stos. Umożliwia to wywoływanie funkcji z `varargs` (to jest funkcja, która akceptuje zmienną liczbę parametrów).|  
-|`pmCallConvStdcall`|Użyj konwencji wywoływania `StdCall`. W takim przypadku wywoływany czyści stos. Jest to domyślna konwencja wywoływania funkcji niezarządzanych przy użyciu wywołania platformy.|  
-|`pmCallConvThiscall`|Użyj konwencji wywoływania `ThisCall`. W tym przypadku pierwszy parametr jest `this` wskaźnikiem i jest przechowywany w rejestrze ECX. Inne parametry są wypychane na stosie. Konwencja wywoływania `ThisCall` jest używana do wywoływania metod w klasach wyeksportowanych z niezarządzanej biblioteki DLL.|  
-|`pmCallConvFastcall`|Rezerwacj.|  
-|`pmMaxValue`|Rezerwacj.|  
+|`pmNoMangle`|Użyj każdej nazwy elementu członkowskiego, jak określono.|  
+|`pmCharSetMask`|Zarezerwowany.|  
+|`pmCharSetNotSpec`|Zarezerwowany.|  
+|`pmCharSetAnsi`|Ciągi marshal jako ciągi znaków wielo bajtów.|  
+|`pmCharSetUnicode`|Ciągi marshaljako 2-bajtowe znaki Unicode.|  
+|`pmCharSetAuto`|Automatycznie marshal ciągi odpowiednio dla docelowego systemu operacyjnego. Domyślnie jest to Unicode w systemach Windows NT, Windows 2000, Windows XP i Windows Server 2003; domyślnie jest ANSI w systemie Windows 98 i Windows Me.|  
+|`pmBestFitUseAssem`|Zarezerwowany.|  
+|`pmBestFitEnabled`|Wykonaj najlepsze mapowanie znaków Unicode, które nie mają dokładnego dopasowania w zestawie znaków ANSI.|  
+|`pmBestFitDisabled`|Nie należy wykonywać najkosztowanego mapowania znaków Unicode. W takim przypadku wszystkie znaki, które nie można zastosować, zostaną zastąpione przez '?'.|  
+|`pmBestFitMask`|Zarezerwowany.|  
+|`pmThrowOnUnmappableCharUseAssem`|Zarezerwowany.|  
+|`pmThrowOnUnmappableCharEnabled`|Zgłosić wyjątek, gdy organizator międzyoperacyjny napotka znak niezadający do aplikacji.|  
+|`pmThrowOnUnmappableCharDisabled`|Nie zgłaszaj wyjątku, gdy organizator międzyoperacyjny napotka znak niemożna zastosować.|  
+|`pmThrowOnUnmappableCharMask`|Zarezerwowano|  
+|`pmSupportsLastError`|Zezwalaj wywołującemu na wywołanie `SetLastError` funkcji Win32 przed zwróceniem z przypisanej metody.|  
+|`pmCallConvMask`|Zarezerwowano|  
+|`pmCallConvWinapi`|Użyj domyślnej konwencji wywoływania platformy. Na przykład w systemie `StdCall` Windows domyślny jest i `Cdecl`w systemie Windows CE .NET jest .|  
+|`pmCallConvCdecl`|Użyj `Cdecl` konwencji wywoływania. W takim przypadku obiektu wywołującego czyści stosu. Umożliwia to wywoływanie funkcji z `varargs` (czyli funkcje, które akceptują zmienną liczbę parametrów).|  
+|`pmCallConvStdcall`|Użyj `StdCall` konwencji wywoływania. W takim przypadku wywoływany czyści stosu. Jest to domyślna konwencja wywoływania niezarządzanych funkcji za pomocą wywołania platformy.|  
+|`pmCallConvThiscall`|Użyj `ThisCall` konwencji wywoływania. W takim przypadku pierwszym parametrem `this` jest wskaźnik i jest przechowywany w rejestrze ECX. Inne parametry są wypychane na stosie. Konwencja wywołująca `ThisCall` jest używana do wywoływania metod na klasy eksportowane z biblioteki DLL niezarządzanej.|  
+|`pmCallConvFastcall`|Zarezerwowany.|  
+|`pmMaxValue`|Zarezerwowany.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorHdr. h  
+ **Nagłówek:** CorHdr.h  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

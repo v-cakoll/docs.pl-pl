@@ -14,42 +14,42 @@ helpviewer_keywords:
 ms.assetid: c42baa79-f469-4330-95a2-baf7f021c2fc
 topic_type:
 - apiref
-ms.openlocfilehash: 57054bdb7e3b991bc81985c02ec72a4110f31d60
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e5cbd8c5b1bb048088fe137b1359d0bb9e29af20
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436437"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176126"
 ---
 # <a name="couninitiee-enumeration"></a>COUNINITIEE — Wyliczenie
-Określa stałe używane przez [CoUninitializeEE —](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) podczas inicjowania środowiska uruchomieniowego języka wspólnego.  
+Określa stałe używane przez [CoUninitializeEEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) podczas inicjowania środowiska wykonawczego języka wspólnego.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
 typedef enum tagCOUNINITEE  
 {  
-    COUNINITEE_DEFAULT  = 0x0,   
+    COUNINITEE_DEFAULT  = 0x0,
     COUNINITEE_DLL      = 0x1  
 } COUNINITIEE;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Elementy członkowskie  
   
-|Element członkowski|Opis|  
+|Członek|Opis|  
 |------------|-----------------|  
-|`COUNINITEE_DEFAULT`|Wskazuje domyślny tryb uninicjującym.|  
-|`COUNINITEE_DLL`|Wskazuje tryb odinicjowania w przypadku zwalniania zestawu.|  
+|`COUNINITEE_DEFAULT`|Wskazuje domyślny tryb niezainicjowania.|  
+|`COUNINITEE_DLL`|Wskazuje tryb niezainicjowania dla zwalniania złożenia.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Uwzględnione jako zasób w pliku MsCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

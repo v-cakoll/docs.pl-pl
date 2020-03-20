@@ -2,25 +2,25 @@
 title: Wiele kontraktów
 ms.date: 03/30/2017
 ms.assetid: 2bef319b-fe9c-4d49-ac6c-dfb23eb35099
-ms.openlocfilehash: d8e86682e18d0319476d33c16d3caa5a4337f983
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: ed59803b867dfe7994aceea010aa656c53927a0c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714744"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79144347"
 ---
 # <a name="multiple-contracts"></a>Wiele kontraktów
-Przykład wielu kontraktów pokazuje, jak zaimplementować więcej niż jeden kontrakt w usłudze i jak skonfigurować punkty końcowe do komunikowania się z każdą z zaimplementowanych kontraktów. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md). Usługa została zmodyfikowana w celu zdefiniowania dwóch kontraktów, kontraktu `ICalculator` i kontraktu `ICalculatorSession`.  
+Przykład wielu kontraktów pokazuje, jak zaimplementować więcej niż jedną umowę w usłudze i jak skonfigurować punkty końcowe do komunikowania się z każdym z zaimplementowanych kontraktów. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md). Usługa została zmodyfikowana w celu zdefiniowania dwóch umów, `ICalculator` umowy i `ICalculatorSession` umowy.  
   
 > [!NOTE]
-> Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
+> Procedura konfiguracji i instrukcje kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
- Klasa usługi implementuje zarówno kontrakt `ICalculator`, jak i `ICalculatorSession`. Ponieważ jeden z kontraktów wymaga sesji, usługa używa trybu wystąpienia <xref:System.ServiceModel.InstanceContextMode.PerSession>, aby zachować stan w okresie istnienia sesji.  
+ Klasa usługi implementuje `ICalculator` zarówno `ICalculatorSession` i kontrakty. Ponieważ jedna z umów wymaga sesji, usługa <xref:System.ServiceModel.InstanceContextMode.PerSession> używa trybu wystąpienia, aby utrzymać stan przez cały okres istnienia sesji.  
   
- Konfiguracja usługi została zmodyfikowana w celu zdefiniowania dwóch punktów końcowych, aby uwidocznić każdy kontrakt. Punkt końcowy `ICalculator` jest uwidoczniony pod adresem podstawowym przy użyciu `basicHttpBinding`. Punkt końcowy `ICalculatorSession` jest udostępniany w BaseAddress/sesji przy użyciu `wsHttpBinding` z atrybutem `bindingConfiguration` ustawionym na `BindingWithSession`, jak pokazano w poniższej konfiguracji przykładowej.  
+ Konfiguracja usługi została zmodyfikowana w celu zdefiniowania dwóch punktów końcowych, aby udostępnić każdy kontrakt. Punkt `ICalculator` końcowy jest narażony na `basicHttpBinding`adres podstawowy przy użyciu pliku . Punkt `ICalculatorSession` końcowy jest narażony na adres podstawowy/sesję `bindingConfiguration` przy użyciu `BindingWithSession` `wsHttpBinding` atrybutu ustawionego na , jak pokazano w poniższej konfiguracji przykładowej.  
   
 ```xml  
-<service   
+<service
     name="Microsoft.ServiceModel.Samples.CalculatorService"  
     behaviorConfiguration="CalculatorServiceBehavior">  
   <!-- ICalculator endpoint is exposed using BasicBinding at the base  
@@ -34,31 +34,31 @@ Przykład wielu kontraktów pokazuje, jak zaimplementować więcej niż jeden ko
        http://localhost/servicemodelsamples/service.svc/session -->  
   <endpoint address="session"  
             binding="wsHttpBinding"  
-            bindingConfiguration="BindingWithSession"   
+            bindingConfiguration="BindingWithSession"
            contract="Microsoft.ServiceModel.Samples.ICalculatorSession" />  
   ...  
 </service>  
 ```  
   
- Wygenerowany kod klienta zawiera teraz klasę klienta zarówno dla oryginalnego kontraktu `ICalculator`, jak i nowego kontraktu `ICalculatorSession`. Konfiguracja i kod klienta zostały zmodyfikowane w celu komunikowania się z każdą umową w odpowiednim punkcie końcowym usługi.  
+ Wygenerowany kod klienta zawiera teraz klasę `ICalculator` klienta dla `ICalculatorSession` oryginalnego kontraktu i nowego kontraktu. Konfiguracja klienta i kod zostały zmodyfikowane w celu komunikowania się z każdą umową w odpowiednim punkcie końcowym usługi.  
   
- Klient jest aplikacją dla systemu Windows (exe). Usługa jest hostowana przez Internet Information Services (IIS).  
+ Klient jest aplikacją konsoli systemu Windows (.exe). Usługa jest obsługiwana przez internetowe usługi informacyjne (IIS).  
   
- W oknie konsoli klienta są wyświetlane operacje wysyłane do poszczególnych punktów końcowych, pierwszy punkt końcowy podstawowego, a następnie bezpieczny punkt końcowy.  
+ Okno konsoli klienta wyświetla operacje wysyłane do każdego z punktów końcowych, najpierw podstawowy punkt końcowy, a następnie bezpieczny punkt końcowy.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić próbkę  
   
-1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że wykonano [procedurę jednorazowej instalacji dla przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Aby utworzyć wersję C# lub Visual Basic .NET rozwiązania, postępuj zgodnie z instrukcjami w [tworzenie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Aby uruchomić próbkę w konfiguracji z jednym lub krzyżowym komputerem, postępuj zgodnie z instrukcjami w [programie Uruchamianie przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
-> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
->   
+> Próbki mogą być już zainstalowane na komputerze. Przed kontynuowaniem sprawdź następujący (domyślny) katalog.  
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
->   
+>
+> Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) Przykłady dla platformy .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\MultipleContracts`  

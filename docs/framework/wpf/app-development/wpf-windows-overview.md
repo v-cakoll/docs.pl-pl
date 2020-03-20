@@ -1,5 +1,5 @@
 ---
-title: Przegląd systemu Windows
+title: Omówienie systemu Windows
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -28,28 +28,28 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: 17582192fabf85777bba250f6f53047a84f264b9
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: b06afb56f43a874815cf9f679f1f7fefbdfd4565
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742360"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79145543"
 ---
 # <a name="wpf-windows-overview"></a>Przegląd Okna WPF
-Użytkownicy pracują z autonomicznymi aplikacjami Windows Presentation Foundation (WPF) za pomocą systemu Windows. Głównym celem okna jest hostowanie zawartości, która wizualizuje dane i umożliwia użytkownikom współdziałanie z danymi. Autonomiczne aplikacje WPF zapewniają własne okna przy użyciu klasy <xref:System.Windows.Window>. Ten temat zawiera wprowadzenie <xref:System.Windows.Window> przed rozpoczęciem omawiania podstaw tworzenia i zarządzania oknami w aplikacjach autonomicznych.  
+Użytkownicy wchodzą w interakcje z autonomicznymi aplikacjami Programu Windows Presentation Foundation (WPF) za pośrednictwem systemu Windows. Głównym celem okna jest hostowanie zawartości, która wizualizuje dane i umożliwia użytkownikom interakcję z danymi. Autonomiczne aplikacje WPF zapewniają własne <xref:System.Windows.Window> okna przy użyciu klasy. W tym <xref:System.Windows.Window> temacie przedstawiono przed pokryciem podstaw tworzenia okien i zarządzania nimi w aplikacjach autonomicznych.  
   
 > [!NOTE]
-> Hostowane w przeglądarce aplikacje WPF, w tym aplikacje przeglądarki XAML (XBAP) i luźno [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] strony, nie zapewniają własnych okien. Zamiast tego są one hostowane w systemie Windows udostępnianym przez program Windows Internet Explorer. Zobacz [Omówienie aplikacji przeglądarki XAML w języku WPF](wpf-xaml-browser-applications-overview.md).  
+> Aplikacje WPF hostowane przez przeglądarkę, w tym aplikacje [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] przeglądarki XAML (XBAPs) i luźne strony, nie udostępniają własnych okien. Zamiast tego są one hostowane w oknach dostarczonych przez program Windows Internet Explorer. Zobacz [Przegląd aplikacji przeglądarki WPF XAML](wpf-xaml-browser-applications-overview.md).  
 
-<a name="TheWindowClass"></a>   
-## <a name="the-window-class"></a>Klasa okna  
- Na poniższej ilustracji przedstawiono części składowe okna:  
+<a name="TheWindowClass"></a>
+## <a name="the-window-class"></a>Klasa Window  
+ Poniższy rysunek ilustruje części składowe okna:  
   
- ![Zrzut ekranu pokazujący elementy okna.](./media/wpf-windows-overview/window-constituent-elements.png)  
+ ![Zrzut ekranu przedstawiający elementy okna.](./media/wpf-windows-overview/window-constituent-elements.png)  
   
  Okno jest podzielone na dwa obszary: obszar niebędący klientem i obszar klienta.  
   
- *Obszar niebędący klientem* okna jest implementowany przez WPF i zawiera części okna, które są wspólne dla większości systemu Windows, w tym:  
+ *Obszar niebędący klientem* okna jest implementowany przez WPF I zawiera części okna, które są wspólne dla większości okien, w tym następujące:  
   
 - Obramowanie.  
   
@@ -57,62 +57,62 @@ Użytkownicy pracują z autonomicznymi aplikacjami Windows Presentation Foundati
   
 - Ikona.  
   
-- Przyciski Minimalizuj, Maksymalizuj i Przywróć.  
+- Minimalizuj, maksymalizuj i przywracaj przyciski.  
   
 - Przycisk Zamknij.  
   
-- Menu systemowe z elementami menu, które umożliwiają użytkownikom minimalizowanie, maksymalizowanie, przywracanie, przenoszenie, zmienianie rozmiaru i zamykanie okna.  
+- Menu System z elementami menu, które umożliwiają użytkownikom minimalizowanie, maksymalizację, przywracanie, przenoszenie, przenoszenie rozmiaru i zamykanie okna.  
   
- *Obszar klienta* okna to obszar w obszarze nieklienckim okna, który jest używany przez deweloperów do dodawania zawartości specyficznej dla aplikacji, takiej jak paski menu, paski narzędzi i formanty.  
+ *Obszar klienta* okna jest obszarem w obszarze nienależącym do okna i jest używany przez deweloperów do dodawania zawartości specyficznej dla aplikacji, takich jak paski menu, paski narzędzi i formanty.  
   
- W WPF, okno jest hermetyzowane przez klasę <xref:System.Windows.Window>, która służy do wykonywania następujących czynności:  
+ W WPF WPF okno jest hermetyzowany przez <xref:System.Windows.Window> klasę, która służy do wykonywania następujących czynności:  
   
 - Wyświetl okno.  
   
 - Skonfiguruj rozmiar, położenie i wygląd okna.  
   
-- Hostowanie zawartości specyficznej dla aplikacji.  
+- Hostuj zawartość specyficzną dla aplikacji.  
   
 - Zarządzanie okresem istnienia okna.  
   
-<a name="DefiningAWindow"></a>   
+<a name="DefiningAWindow"></a>
 ## <a name="implementing-a-window"></a>Implementowanie okna  
- Implementacja typowego okna składa się zarówno z wyglądu, jak i zachowania, w którym *wygląd* okna jest przeszukiwany użytkownikom i *zachowanie* definiuje sposób, w jaki okno działa jak użytkownicy. W WPF można zaimplementować wygląd i zachowanie okna przy użyciu kodu lub [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] znaczników.  
+ Implementacja okna typowe obejmuje zarówno wygląd i zachowanie, gdzie *wygląd* definiuje, jak okno wygląda dla użytkowników i *zachowanie* definiuje sposób, w jaki okno działa, jak użytkownicy wchodzą z nim interakcji. W WPF WPF, można zaimplementować wygląd [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] i zachowanie okna przy użyciu kodu lub znaczników.  
   
- Ogólnie rzecz biorąc, wygląd okna jest implementowany przy użyciu znaczników [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], a jego zachowanie jest implementowane za pomocą kodu, jak pokazano w poniższym przykładzie.  
+ Ogólnie rzecz biorąc jednak wygląd okna jest [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] implementowany przy użyciu znaczników, a jego zachowanie jest implementowane przy użyciu kodu, jak pokazano w poniższym przykładzie.  
   
  [!code-xaml[WindowsOverviewSnippets#MarkupAndCodeBehindWindowMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/MarkupAndCodeBehindWindow.xaml#markupandcodebehindwindowmarkup)]  
   
  [!code-csharp[WindowsOverviewSnippets#MarkupAndCodeBehindWindowCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/MarkupAndCodeBehindWindow.xaml.cs#markupandcodebehindwindowcodebehind)]
  [!code-vb[WindowsOverviewSnippets#MarkupAndCodeBehindWindowCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowsOverviewSnippets/VisualBasic/MarkupAndCodeBehindWindow.xaml.vb#markupandcodebehindwindowcodebehind)]  
   
- Aby umożliwić współdziałanie pliku znaczników [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] i pliku związanego z kodem, wymagane są następujące elementy:  
+ Aby włączyć [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] do współpracy plik znaczników i plik związany z kodem, wymagane są następujące czynności:  
   
-- W znaczniku element `Window` musi zawierać atrybut `x:Class`. Po skompilowaniu aplikacji istnienie `x:Class` w pliku znaczników powoduje, że program Microsoft Build Engine (MSBuild) tworzy klasę `partial`, która pochodzi od <xref:System.Windows.Window> i ma nazwę określoną przez atrybut `x:Class`. Wymaga to dodania deklaracji przestrzeni nazw XML dla schematu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] (`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`). Wygenerowana Klasa `partial` implementuje metodę `InitializeComponent`, która jest wywoływana, aby zarejestrować zdarzenia i ustawić właściwości zaimplementowane w znaczniku.  
+- W znacznikach `Window` element musi `x:Class` zawierać atrybut. Po utworzeniu aplikacji, istnienie `x:Class` w pliku znaczników powoduje, że aparat kompilacji `partial` firmy Microsoft (MSBuild) do utworzenia klasy, która pochodzi od <xref:System.Windows.Window> i ma nazwę, która jest określona przez `x:Class` atrybut. Wymaga to dodania deklaracji obszaru nazw [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] XML `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` dla schematu ( ). Wygenerowana `partial` klasa implementuje `InitializeComponent` metodę, która jest wywoływana do rejestrowania zdarzeń i ustawiania właściwości, które są implementowane w znacznikach.  
   
-- W kodzie, Klasa musi być klasą `partial` o tej samej nazwie, która jest określona przez atrybut `x:Class` w znaczniku i musi pochodzić od <xref:System.Windows.Window>. Pozwala to skojarzyć plik związany z kodem z klasą `partial` generowaną dla pliku znaczników podczas kompilowania aplikacji (zobacz [Kompilowanie aplikacji WPF](building-a-wpf-application-wpf.md)).  
+- W kodzie po zakoduje `partial` się klasa musi być klasą o tej samej nazwie, która jest określona przez `x:Class` atrybut w znacznikach i musi pochodzić od <xref:System.Windows.Window>. Dzięki temu plik związany z kodem `partial` ma być skojarzony z klasą, która jest generowana dla pliku znaczników podczas tworzenia aplikacji (zobacz [Tworzenie aplikacji WPF](building-a-wpf-application-wpf.md)).  
   
-- W kodzie, Klasa <xref:System.Windows.Window> musi implementować konstruktora, który wywołuje metodę `InitializeComponent`. `InitializeComponent` jest implementowana przez wygenerowaną klasę `partial` pliku znaczników w celu rejestrowania zdarzeń i ustawiania właściwości, które są zdefiniowane w znaczniku.  
+- W przypadku kodu <xref:System.Windows.Window> po zakodowaniu klasa musi `InitializeComponent` implementować konstruktora, który wywołuje metodę. `InitializeComponent`jest implementowana przez klasę wygenerowaną `partial` pliku znaczników, aby zarejestrować zdarzenia i ustawić właściwości, które są zdefiniowane w znacznikach.  
   
 > [!NOTE]
-> Po dodaniu nowego <xref:System.Windows.Window> do projektu przy użyciu programu Visual Studio, <xref:System.Windows.Window> jest implementowane przy użyciu znaczników i kodu, i zawiera konfigurację niezbędną do utworzenia skojarzenia między plikami znaczników i kodu, zgodnie z opisem w tym miejscu.  
+> Po dodaniu <xref:System.Windows.Window> nowego do projektu przy użyciu <xref:System.Windows.Window> programu Visual Studio, jest zaimplementowana przy użyciu znaczników i związanych z kodem i zawiera konfigurację niezbędną do utworzenia skojarzenia między znaczników i plików związanych z kodem, jak opisano poniżej.  
   
- W przypadku tej konfiguracji można skupić się na definiowaniu wyglądu okna w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] znacznika i implementacji jego zachowania w kodzie. W poniższym przykładzie pokazano okno z przyciskiem, zaimplementowane w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Markup i program obsługi zdarzeń dla zdarzenia <xref:System.Windows.Controls.Primitives.ButtonBase.Click> przycisku zaimplementowanego w kodzie.  
+ Z tej konfiguracji w miejscu, można skupić się [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] na definiowaniu wygląd okna w znacznikach i implementacji jego zachowanie w kodzie. Poniższy przykład pokazuje okno z przyciskiem, zaimplementowane w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] znacznikach <xref:System.Windows.Controls.Primitives.ButtonBase.Click> i program obsługi zdarzeń dla zdarzenia przycisku, zaimplementowane w kodzie.  
   
  [!code-xaml[WindowsOverviewWindowWithButtonSnippets#MarkupAndCodeBehindWindowMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewWindowWithButtonSnippets/CSharp/MarkupAndCodeBehindWindow.xaml#markupandcodebehindwindowmarkup)]  
   
  [!code-csharp[WindowsOverviewWindowWithButtonSnippets#MarkupAndCodeBehindWindowCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewWindowWithButtonSnippets/CSharp/MarkupAndCodeBehindWindow.xaml.cs#markupandcodebehindwindowcodebehind)]
  [!code-vb[WindowsOverviewWindowWithButtonSnippets#MarkupAndCodeBehindWindowCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowsOverviewWindowWithButtonSnippets/VisualBasic/MarkupAndCodeBehindWindow.xaml.vb#markupandcodebehindwindowcodebehind)]  
   
-<a name="ConfiguringWindowForMSBuild"></a>   
-## <a name="configuring-a-window-definition-for-msbuild"></a>Konfigurowanie definicji okna dla programu MSBuild  
- Sposób implementacji okna decyduje o sposobie jego konfiguracji dla programu MSBuild. Dla okna, które jest zdefiniowane przy użyciu zarówno [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] znaczników, jak i kodu:  
+<a name="ConfiguringWindowForMSBuild"></a>
+## <a name="configuring-a-window-definition-for-msbuild"></a>Konfigurowanie definicji okna dla usługi MSBuild  
+ Sposób implementowania okna określa, jak jest skonfigurowany dla MSBuild. Dla okna, które jest [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] zdefiniowane przy użyciu znaczników i związanych z kodem:  
   
-- Pliki znaczników XAML są konfigurowane jako elementy `Page` programu MSBuild.  
+- Pliki znaczników XAML są skonfigurowane `Page` jako elementy MSBuild.  
   
-- Pliki związane z kodem są konfigurowane jako elementy `Compile` programu MSBuild.  
+- Pliki związane z kodem są skonfigurowane jako elementy MSBuild. `Compile`  
   
- Jest to pokazane w następującym pliku projektu programu MSBuild.  
+ Jest to pokazane w następującym pliku projektu MSBuild.  
   
 ```xml  
 <Project ...  
@@ -124,227 +124,227 @@ Użytkownicy pracują z autonomicznymi aplikacjami Windows Presentation Foundati
 </Project>  
 ```  
   
- Aby uzyskać informacje na temat tworzenia aplikacji WPF, zobacz [Kompilowanie aplikacji WPF](building-a-wpf-application-wpf.md).  
+ Aby uzyskać informacje na temat tworzenia aplikacji WPF, zobacz [Tworzenie aplikacji WPF](building-a-wpf-application-wpf.md).  
   
-<a name="WindowLifetime"></a>   
+<a name="WindowLifetime"></a>
 ## <a name="window-lifetime"></a>Okres istnienia okna  
- Podobnie jak w przypadku każdej klasy, okno ma okres istnienia rozpoczynający się po pierwszym utworzeniu wystąpienia, po którym jest otwierane, uaktywniane i dezaktywowane i ostatecznie zamknięte.  
+ Podobnie jak w przypadku każdej klasy, okno ma okres istnienia, który rozpoczyna się, gdy jest po raz pierwszy wystąpienia, po czym jest otwierany, aktywowany i dezaktywowany, a ostatecznie zamknięty.  
 
-<a name="Opening_a_Window"></a>   
+<a name="Opening_a_Window"></a>
 ### <a name="opening-a-window"></a>Otwieranie okna  
- Aby otworzyć okno, należy najpierw utworzyć jego wystąpienie, które jest zademonstrowane w poniższym przykładzie.  
+ Aby otworzyć okno, należy najpierw utworzyć jego wystąpienie, co zostanie zademonstrowane w poniższym przykładzie.  
   
  [!code-xaml[WindowsOverviewStartupEventSnippets#AppMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewStartupEventSnippets/CSharp/App.xaml#appmarkup)]  
   
  [!code-csharp[WindowsOverviewStartupEventSnippets#AppCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewStartupEventSnippets/CSharp/App.xaml.cs#appcodebehind)]  
   
- W tym przykładzie `MarkupAndCodeBehindWindow` jest tworzone podczas uruchamiania aplikacji, która występuje, gdy zdarzenie <xref:System.Windows.Application.Startup> zostanie zgłoszone.  
+ W tym przykładzie `MarkupAndCodeBehindWindow` jest tworzone podczas uruchamiania aplikacji, <xref:System.Windows.Application.Startup> która występuje, gdy zdarzenie jest wywoływane.  
   
- Po utworzeniu wystąpienia okna odwołanie do niego jest automatycznie dodawane do listy systemu Windows, która jest zarządzana przez obiekt <xref:System.Windows.Application> (zobacz <xref:System.Windows.Application.Windows%2A?displayProperty=nameWithType>). Ponadto pierwsze okno, które ma zostać utworzone, jest domyślnie ustawiane przez <xref:System.Windows.Application> jako główne okno aplikacji (zobacz <xref:System.Windows.Application.MainWindow%2A?displayProperty=nameWithType>).  
+ Po wystąpieniu okna odwołanie do niego jest automatycznie dodawane do listy okien <xref:System.Windows.Application> zarządzanych <xref:System.Windows.Application.Windows%2A?displayProperty=nameWithType>przez obiekt (patrz ). Ponadto pierwsze okno, które ma zostać utworzone, jest <xref:System.Windows.Application> domyślnie ustawione jako <xref:System.Windows.Application.MainWindow%2A?displayProperty=nameWithType>główne okno aplikacji (patrz ).  
   
- Okno jest ostatecznie otwarte przez wywołanie metody <xref:System.Windows.Window.Show%2A>; wyniki są pokazane na poniższym rysunku.  
+ Okno jest ostatecznie otwierane <xref:System.Windows.Window.Show%2A> przez wywołanie metody; wynik jest pokazany na poniższym rysunku.  
   
- ![Okno otwarte przez wywołanie okna. show](./media/wpf-windows-overview//window-opened-show-method.png)  
+ ![Okno otwarte przez wywołanie Window.Show](./media/wpf-windows-overview//window-opened-show-method.png)  
   
- Okno otwierane przez wywołanie <xref:System.Windows.Window.Show%2A> jest oknem niemodalnym, co oznacza, że aplikacja działa w trybie, który umożliwia użytkownikom aktywowanie innych okien w tej samej aplikacji.  
+ Okno, które jest <xref:System.Windows.Window.Show%2A> otwierane przez wywołanie jest niemodne okno, co oznacza, że aplikacja działa w trybie, który umożliwia użytkownikom aktywowanie innych okien w tej samej aplikacji.  
   
 > [!NOTE]
-> <xref:System.Windows.Window.ShowDialog%2A> jest wywoływana, aby otwierać okna, takie jak okna dialogowe modalnie. Aby uzyskać więcej informacji, zobacz [Omówienie okien](dialog-boxes-overview.md) dialogowych.  
+> <xref:System.Windows.Window.ShowDialog%2A>jest wywoływana do otwierania okien, takich jak okna dialogowe modnie. Zobacz [omówienie okien dialogowych, aby](dialog-boxes-overview.md) uzyskać więcej informacji.  
   
- Gdy <xref:System.Windows.Window.Show%2A> jest wywoływana, okno wykonuje działanie inicjalizacji przed wyświetleniem infrastruktury, która pozwala na odbieranie danych przez użytkownika. Po zainicjowaniu okna zdarzenie <xref:System.Windows.Window.SourceInitialized> jest wywoływane i wyświetlane jest okno.  
+ Po <xref:System.Windows.Window.Show%2A> wywołaniu okno wykonuje pracę inicjowania, zanim zostanie wyświetlone do ustanowienia infrastruktury, która umożliwia odbieranie danych wejściowych użytkownika. Po zainicjowaniu okna <xref:System.Windows.Window.SourceInitialized> zdarzenie jest wywoływane i wyświetlane jest okno.  
   
- Jako skrót <xref:System.Windows.Application.StartupUri%2A> można ustawić, aby określić pierwsze okno, które jest otwierane automatycznie podczas uruchamiania aplikacji.  
+ Jako skrót <xref:System.Windows.Application.StartupUri%2A> można ustawić, aby określić pierwsze okno, które jest otwierane automatycznie po uruchomieniu aplikacji.  
   
  [!code-xaml[WindowsOverviewSnippets#ApplicationStartupUriMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/App.xaml#applicationstartupurimarkup)]  
   
- Po uruchomieniu aplikacji okno określone przez wartość <xref:System.Windows.Application.StartupUri%2A> jest otwierane niemodalnie; wewnętrznie okno jest otwierane przez wywołanie jego metody <xref:System.Windows.Window.Show%2A>.  
+ Po uruchomieniu aplikacji okno określone przez wartość <xref:System.Windows.Application.StartupUri%2A> jest otwierane bez trybu; wewnętrznie okno jest otwierane przez <xref:System.Windows.Window.Show%2A> wywołanie jego metody.  
   
-<a name="Ownership"></a>   
+<a name="Ownership"></a>
 #### <a name="window-ownership"></a>Własność okna  
- Okno otwierane za pomocą metody <xref:System.Windows.Window.Show%2A> nie ma niejawnej relacji z oknem, które je utworzyło; Użytkownicy mogą korzystać z dowolnego okna niezależnie od siebie, co oznacza, że oba okna mogą wykonać następujące czynności:  
+ Okno, które jest otwierane przy użyciu <xref:System.Windows.Window.Show%2A> metody nie ma niejawnej relacji z oknem, które go utworzyło; użytkownicy mogą wchodzić w interakcje z każdym z okien niezależnie od drugiego, co oznacza, że w każdym oknie można wykonać następujące czynności:  
   
-- Należy pokryć drugą (chyba że jeden z okien ma właściwość <xref:System.Windows.Window.Topmost%2A> ustawioną na `true`).  
+- Zakryj drugi (chyba że <xref:System.Windows.Window.Topmost%2A> jedno z `true`okien ma ustawioną właściwość).  
   
-- Być zminimalizowane, zmaksymalizowane i przywrócone bez wpływu na pozostałe.  
+- Być zminimalizowane, zmaksymalizowane i przywrócone bez wpływu na inne.  
   
- Niektóre okna wymagają relacji z oknem, które je otwiera. Na przykład aplikacja zintegrowanego środowiska programistycznego (IDE) może otworzyć okno właściwości i okna narzędzi, których typowe zachowanie dotyczy tworzonego okna. Ponadto takie okna powinny zawsze zamykać, minimalizować, maksymalizować i przywracać w połączeniu z oknem, które je utworzyło. Tę relację można ustalić przez utworzenie jednego *okna innego i jest ono realizowane* przez ustawienie właściwości <xref:System.Windows.Window.Owner%2A> *należącego do okna* z odwołaniem do *okna właściciela*. Pokazano to w poniższym przykładzie.  
+ Niektóre okna wymagają relacji z oknem, które je otwiera. Na przykład aplikacja ide (Integrated Development Environment) może otworzyć okna właściwości i okna narzędzi, których typowym zachowaniem jest pokrycie okna, które je tworzy. Ponadto takie okna powinny zawsze zamykać, minimalizować, maksymalizować i przywracać w porozumieniu z utworzonym ich oknem. Taki związek można ustanowić, tworząc jedno okno *własne* drugie i <xref:System.Windows.Window.Owner%2A> uzyskuje się poprzez ustawienie właściwości *okna należącego* do właściciela z odniesieniem do *okna właściciela*. Jest to pokazane w poniższym przykładzie.  
   
  [!code-csharp[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/CSharp/MainWindow.xaml.cs#setwindowownercode)]
  [!code-vb[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/visualbasic/mainwindow.xaml.vb#setwindowownercode)]  
   
  Po ustanowieniu własności:  
   
-- Posiadane okno może odwoływać się do swojego okna właściciela, sprawdzając wartość jego właściwości <xref:System.Windows.Window.Owner%2A>.  
+- Okno należące do właściciela może odwoływać się <xref:System.Windows.Window.Owner%2A> do okna właściciela, sprawdzając wartość jego właściwości.  
   
-- Okno właściciela może odnaleźć wszystkie okna, do których należy, sprawdzając wartość właściwości <xref:System.Windows.Window.OwnedWindows%2A>.  
+- Okno właściciela może odnajdować wszystkie okna, <xref:System.Windows.Window.OwnedWindows%2A> które posiada, sprawdzając wartość jego właściwości.  
   
-<a name="Preventing"></a>   
+<a name="Preventing"></a>
 #### <a name="preventing-window-activation"></a>Zapobieganie aktywacji okna  
- Istnieją scenariusze, w których nie należy aktywować systemu Windows, na przykład w oknach konwersacji w aplikacji w stylu programu Messenger lub oknach powiadomień aplikacji poczty e-mail.  
+ Istnieją scenariusze, w których okna nie powinny być aktywowane, gdy są wyświetlane, takie jak okna konwersacji aplikacji w stylu komunikatora internetowego lub okna powiadomień aplikacji poczty e-mail.  
   
- Jeśli aplikacja zawiera okno, które nie powinno być aktywowane, gdy jest wyświetlany, można ustawić jego właściwość <xref:System.Windows.Window.ShowActivated%2A> na `false` przed wywołaniem <xref:System.Windows.Window.Show%2A> metody po raz pierwszy. W związku z tym:  
+ Jeśli aplikacja ma okno, które nie powinny być aktywowane, <xref:System.Windows.Window.ShowActivated%2A> gdy `false` jest <xref:System.Windows.Window.Show%2A> wyświetlany, można ustawić jego właściwości przed wywołaniem metody po raz pierwszy. W konsekwencji:  
   
-- Okno nie zostało aktywowane.  
+- Okno nie jest aktywowane.  
   
-- Zdarzenie <xref:System.Windows.Window.Activated> okna nie zostało zgłoszone.  
+- <xref:System.Windows.Window.Activated> Zdarzenie okna nie jest wywoływane.  
   
-- Uaktywnione okno zostanie uaktywnione.  
+- Aktualnie aktywowane okno pozostaje aktywowane.  
   
- Okno zostanie aktywowane, jednak natychmiast po jego aktywowaniu przez kliknięcie w obszarze klienta lub nieklienckiego. W takim przypadku:  
+ Okno zostanie aktywowane, jednak, jak tylko użytkownik aktywuje go, klikając albo klienta lub obszaru nie-klienta. W takim przypadku:  
   
-- Okno zostało aktywowane.  
+- Okno jest aktywne.  
   
-- Zdarzenie <xref:System.Windows.Window.Activated> okna zostało zgłoszone.  
+- <xref:System.Windows.Window.Activated> Zdarzenie okna jest wywoływane.  
   
-- Poprzednio aktywowane okno zostało zdezaktywowane.  
+- Wcześniej aktywowane okno zostanie wyłączone.  
   
-- Zdarzenia <xref:System.Windows.Window.Deactivated> i <xref:System.Windows.Window.Activated> okna są następnie podnoszone zgodnie z oczekiwaniami w odpowiedzi na akcje użytkownika.  
+- Okna <xref:System.Windows.Window.Deactivated> i <xref:System.Windows.Window.Activated> zdarzenia są następnie wywoływane zgodnie z oczekiwaniami w odpowiedzi na akcje użytkownika.  
   
-<a name="Window_Activation"></a>   
+<a name="Window_Activation"></a>
 ### <a name="window-activation"></a>Aktywacja okna  
- Gdy okno jest otwierane po raz pierwszy, przechodzi do aktywnego okna (chyba że jest wyświetlane z <xref:System.Windows.Window.ShowActivated%2A> ustawionym na `false`). *Aktywne okno* to okno, które aktualnie przechwytywa dane wprowadzane przez użytkownika, takie jak naciśnięcia klawiszy i kliknięć myszą. Gdy okno zostanie uaktywnione, wywołuje zdarzenie <xref:System.Windows.Window.Activated>.  
+ Po pierwszym otwarciu okna staje się ono aktywnym <xref:System.Windows.Window.ShowActivated%2A> oknem (chyba że jest wyświetlane z ustawionym na `false`). *Aktywne okno* jest oknem, które aktualnie przechwytuje dane wejściowe użytkownika, takie jak naciśnięcia klawiszy i kliknięcia myszą. Gdy okno staje się aktywne, <xref:System.Windows.Window.Activated> wywołuje zdarzenie.  
   
 > [!NOTE]
-> Po pierwszym otwarciu okna zdarzenia <xref:System.Windows.FrameworkElement.Loaded> i <xref:System.Windows.Window.ContentRendered> są wywoływane dopiero po podniesieniu zdarzenia <xref:System.Windows.Window.Activated>. Z tego względu okno może być efektywnie uważane za otwarte, gdy zostanie zgłoszone <xref:System.Windows.Window.ContentRendered>.  
+> Po pierwszym otwarciu okna <xref:System.Windows.FrameworkElement.Loaded> <xref:System.Windows.Window.ContentRendered> i zdarzenia są <xref:System.Windows.Window.Activated> wywoływane tylko po wywoływaniu zdarzenia. Mając to na uwadze, okno można <xref:System.Windows.Window.ContentRendered> skutecznie uznać za otwarte, gdy jest podnoszone.  
   
- Gdy okno zostanie uaktywnione, użytkownik może aktywować inne okno w tej samej aplikacji lub aktywować inną aplikację. W takim przypadku aktywne okno zostanie zdezaktywowane i wygeneruje zdarzenie <xref:System.Windows.Window.Deactivated>. Podobnie, gdy użytkownik wybierze aktualnie dezaktywowane okno, okno zostanie ponownie aktywowane i zostanie zgłoszone <xref:System.Windows.Window.Activated>.  
+ Gdy okno stanie się aktywne, użytkownik może aktywować inne okno w tej samej aplikacji lub aktywować inną aplikację. W takim przypadku aktualnie aktywne okno zostanie dezaktywowane i wywołuje <xref:System.Windows.Window.Deactivated> zdarzenie. Podobnie, gdy użytkownik wybierze aktualnie dezaktywowane okno, <xref:System.Windows.Window.Activated> okno staje się aktywne ponownie i jest wywoływane.  
   
- Jednym z typowych przyczyn obsługi <xref:System.Windows.Window.Activated> i <xref:System.Windows.Window.Deactivated> jest włączenie i wyłączenie funkcji, która może być uruchamiana tylko wtedy, gdy okno jest aktywne. Na przykład niektóre okna wyświetlają zawartość interaktywną, która wymaga stałego wprowadzania danych przez użytkownika lub uwagi, w tym gier i odtwarzaczy wideo. Poniższy przykład to uproszczony odtwarzacz wideo, który pokazuje, jak obsłużyć <xref:System.Windows.Window.Activated> i <xref:System.Windows.Window.Deactivated>, aby zaimplementować to zachowanie.  
+ Jednym z typowych powodów do obsługi <xref:System.Windows.Window.Activated> i <xref:System.Windows.Window.Deactivated> jest włączenie i wyłączenie funkcji, które można uruchomić tylko wtedy, gdy okno jest aktywne. Na przykład niektóre systemy Windows wyświetlają interaktywną zawartość, która wymaga stałego wprowadzania danych przez użytkownika lub uwagi, w tym gier i odtwarzaczy wideo. Poniższy przykład jest uproszczony odtwarzacz wideo, <xref:System.Windows.Window.Activated> który <xref:System.Windows.Window.Deactivated> pokazuje, jak obsługiwać i zaimplementować to zachowanie.  
   
  [!code-xaml[WindowsOverviewSnippets#ActivationDeactivationMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/CustomMediaPlayerWindow.xaml#activationdeactivationmarkup)]  
   
  [!code-csharp[WindowsOverviewSnippets#ActivationDeactivationCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/CustomMediaPlayerWindow.xaml.cs#activationdeactivationcodebehind)]
  [!code-vb[WindowsOverviewSnippets#ActivationDeactivationCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowsOverviewSnippets/VisualBasic/CustomMediaPlayerWindow.xaml.vb#activationdeactivationcodebehind)]  
   
- Inne typy aplikacji mogą nadal uruchamiać kod w tle, gdy okno zostanie zdezaktywowane. Na przykład klient poczty e-mail może kontynuować sondowanie serwera poczty, gdy użytkownik korzysta z innych aplikacji. Aplikacje takie jak często zapewniają różne lub dodatkowe zachowanie podczas dezaktywacji okna głównego. W odniesieniu do programu poczty może to oznaczać zarówno dodanie nowego elementu poczty do skrzynki odbiorczej, jak i dodanie ikony powiadomienia do paska zadań. Ikona powiadomienia musi być wyświetlana tylko wtedy, gdy okno poczty nie jest aktywne, które można określić, sprawdzając Właściwość <xref:System.Windows.Window.IsActive%2A>.  
+ Inne typy aplikacji mogą nadal uruchamiać kod w tle, gdy okno jest dezaktywowane. Na przykład klient poczty może kontynuować sondowanie serwera poczty, gdy użytkownik korzysta z innych aplikacji. Aplikacje takie jak te często zapewniają różne lub dodatkowe zachowanie, gdy okno główne jest dezaktywowane. W odniesieniu do programu pocztowego może to oznaczać zarówno dodanie nowego elementu poczty do skrzynki odbiorczej, jak i dodanie ikony powiadomień do zasobnika systemowego. Ikona powiadomień musi być wyświetlana tylko wtedy, gdy okno poczty nie <xref:System.Windows.Window.IsActive%2A> jest aktywne, co można określić, sprawdzając właściwość.  
   
- Jeśli zadanie w tle zakończy pracę, okno może chcieć pilnie powiadomić użytkownika przez wywołanie metody <xref:System.Windows.Window.Activate%2A>. Jeśli użytkownik korzysta z innej aplikacji aktywowanej po wywołaniu <xref:System.Windows.Window.Activate%2A>, zostanie uaktywniony przycisk paska zadań okna. Jeśli użytkownik korzysta z bieżącej aplikacji, wywołanie <xref:System.Windows.Window.Activate%2A> spowoduje przełączenie okna do pierwszego planu.  
+ Jeśli zadanie w tle zostanie ukończone, okno może chcieć <xref:System.Windows.Window.Activate%2A> powiadomić użytkownika pilniej, wywołując metodę. Jeśli użytkownik wchodzi w interakcję z <xref:System.Windows.Window.Activate%2A> inną aplikacją aktywowany, gdy jest wywoływana, przycisk paska zadań okna miga. Jeśli użytkownik wchodzi w interakcję z <xref:System.Windows.Window.Activate%2A> bieżącą aplikacją, wywołanie spowoduje wyświetlenie okna na pierwszym planie.  
   
 > [!NOTE]
-> Aktywację zakresu aplikacji można obsługiwać przy użyciu zdarzeń <xref:System.Windows.Application.Activated?displayProperty=nameWithType> i <xref:System.Windows.Application.Deactivated?displayProperty=nameWithType>.  
+> Można obsługiwać aktywacji zakresu <xref:System.Windows.Application.Activated?displayProperty=nameWithType> <xref:System.Windows.Application.Deactivated?displayProperty=nameWithType> aplikacji przy użyciu i zdarzeń.  
   
-<a name="Closing_a_Window"></a>   
+<a name="Closing_a_Window"></a>
 ### <a name="closing-a-window"></a>Zamykanie okna  
- Okres istnienia okna przechodzi do końca, gdy użytkownik go zamknie. Okno może być zamknięte przy użyciu elementów w obszarze nieklienckim, w tym:  
+ Życie okna zaczyna się kończyć, gdy użytkownik go zamknie. Okno można zamknąć przy użyciu elementów w obszarze nienakładowym, w tym następujących:  
   
-- Element **zamknięcia** menu **systemowego** .  
+- Pozycja **Zamknij** menu **System.**  
   
-- Naciśnij klawisze ALT + F4.  
+- Naciśnięcie klawisza ALT+F4.  
   
-- Naciśnij przycisk **Zamknij** .  
+- Naciśnięcie przycisku **Zamknij.**  
   
- Do obszaru klienckiego można zapewnić dodatkowe mechanizmy zamykania okna, tym częściej są następujące:  
+ Można podać dodatkowe mechanizmy do obszaru klienta, aby zamknąć okno, z których bardziej powszechne są następujące:  
   
-- Element **wyjścia** w menu **plik** , zazwyczaj dla głównych okien aplikacji.  
+- Element **Zakończ** w menu **Plik,** zazwyczaj dla okien aplikacji głównej.  
   
-- **Zamknij** element w menu **plik** , zazwyczaj w oknie aplikacji dodatkowej.  
+- A **Zamknij** element w **menu Plik,** zazwyczaj w oknie aplikacji pomocniczej.  
   
-- Przycisk **Anuluj** , zazwyczaj na modalnym oknie dialogowym.  
+- Przycisk **Anuluj,** zazwyczaj w oknie dialogowym modalnego.  
   
-- Przycisk **Zamknij** , zazwyczaj w niemodalnym oknie dialogowym.  
+- Przycisk **Zamknij,** zazwyczaj w niemodytnym oknie dialogowym.  
   
- Aby zamknąć okno w odpowiedzi na jeden z tych niestandardowych mechanizmów, należy wywołać metodę <xref:System.Windows.Window.Close%2A>. W poniższym przykładzie jest implementowana możliwość zamykania okna przez wybranie polecenia **Wyjdź** z menu **plik** .  
+ Aby zamknąć okno w odpowiedzi na jeden z tych <xref:System.Windows.Window.Close%2A> mechanizmów niestandardowych, należy wywołać metodę. Poniższy przykład implementuje możliwość zamknięcia okna, wybierając **Exit** w **menu Plik.**  
   
  [!code-xaml[WindowsOverviewSnippets#WindowWithFileExitMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowWithFileExit.xaml#windowwithfileexitmarkup)]  
   
  [!code-csharp[WindowsOverviewSnippets#WindowWithFileExitCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowWithFileExit.xaml.cs#windowwithfileexitcodebehind)]
  [!code-vb[WindowsOverviewSnippets#WindowWithFileExitCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowsOverviewSnippets/VisualBasic/WindowWithFileExit.xaml.vb#windowwithfileexitcodebehind)]  
   
- Gdy okno zostanie zamknięte, wywołuje dwa zdarzenia: <xref:System.Windows.Window.Closing> i <xref:System.Windows.Window.Closed>.  
+ Po zamknięciu okna wywołuje dwa <xref:System.Windows.Window.Closing> zdarzenia: <xref:System.Windows.Window.Closed>i .  
   
- <xref:System.Windows.Window.Closing> jest wywoływane przed zamknięciem okna i udostępnia mechanizm, za pomocą którego można zablokować zamknięcie okna. Jednym z najczęstszych powodów, aby uniknąć zamykania okna, jest to, że zawartość okna zawiera zmodyfikowane dane. W takiej sytuacji można obsłużyć zdarzenie <xref:System.Windows.Window.Closing>, aby określić, czy dane są zanieczyszczone, a jeśli tak, to w celu poproszenia użytkownika o kontynuowanie zamykania okna bez zapisywania danych lub anulowania zamknięcia okna. W poniższym przykładzie przedstawiono kluczowe aspekty obsługi <xref:System.Windows.Window.Closing>.  
+ <xref:System.Windows.Window.Closing>jest podniesiona przed zamknięciem okna i zapewnia mechanizm, za pomocą którego można zapobiec zamknięciu okna. Częstym powodem, aby zapobiec zamknięciu okna jest, jeśli zawartość okna zawiera zmodyfikowane dane. W tej sytuacji <xref:System.Windows.Window.Closing> zdarzenie może być obsługiwane w celu ustalenia, czy dane są zabrudzone, a jeśli tak, aby zapytać użytkownika, czy kontynuować zamykanie okna bez zapisywania danych lub anulować zamknięcie okna. W poniższym przykładzie przedstawiono kluczowe aspekty obsługi <xref:System.Windows.Window.Closing>.  
   
  [!code-csharp[WindowClosingSnippets](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowClosingSnippets/CSharp/DataWindow.xaml.cs)]
  [!code-vb[WindowClosingSnippets](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowClosingSnippets/visualbasic/datawindow.xaml.vb)]  
 
- Procedura obsługi zdarzeń <xref:System.Windows.Window.Closing> została przeniesiona <xref:System.ComponentModel.CancelEventArgs>, która implementuje Właściwość `Boolean`<xref:System.ComponentModel.CancelEventArgs.Cancel%2A> ustawioną na `true`, aby zapobiec zamykaniu okna.  
+ Program <xref:System.Windows.Window.Closing> obsługi zdarzeń <xref:System.ComponentModel.CancelEventArgs>jest przekazywany `Boolean` <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> a , `true` który implementuje właściwość, która jest ustawiona, aby zapobiec zamknięciu okna.  
   
- Jeśli <xref:System.Windows.Window.Closing> nie jest obsługiwana lub jest obsługiwana, ale nie została anulowana, okno zostanie zamknięte. Tuż przed faktycznym zamknięciem okna zostanie zgłoszone <xref:System.Windows.Window.Closed>. W tym momencie nie można uniemożliwić zamykania okna.  
-  
-> [!NOTE]
-> Aplikację można skonfigurować tak, aby była automatycznie zamykana podczas zamykania okna aplikacji głównej (zobacz <xref:System.Windows.Application.MainWindow%2A>) lub ostatniego zamknięcia okna. Aby uzyskać szczegółowe informacje, zobacz <xref:System.Windows.Application.ShutdownMode%2A>.  
-  
- Okno może być jawnie zamykane za pomocą mechanizmów dostępnych w obszarach nieklienta i klienta, a okno może być również niejawnie zamknięte w wyniku zachowania w innych częściach aplikacji lub systemu Windows, w tym:  
-  
-- Użytkownik wylogowuje się lub zamknie system Windows.  
-  
-- Zamknięcie właściciela okna (zobacz <xref:System.Windows.Window.Owner%2A>).  
-  
-- Okno aplikacji głównej jest zamknięte, a <xref:System.Windows.Application.ShutdownMode%2A> jest <xref:System.Windows.ShutdownMode.OnMainWindowClose>.  
-  
-- <xref:System.Windows.Application.Shutdown%2A> jest wywoływana.  
+ Jeśli <xref:System.Windows.Window.Closing> nie jest obsługiwany lub jest obsługiwany, ale nie został anulowany, okno zostanie zamknięte. Tuż przed zamknięciem okna, <xref:System.Windows.Window.Closed> jest podniesiony. W tym momencie nie można zapobiec zamknięciu okna.  
   
 > [!NOTE]
-> Nie można otworzyć ponownie okna po jego zamknięciu.  
+> Aplikację można skonfigurować tak, aby zamykała się automatycznie po zamknięciu głównego okna aplikacji (patrz) <xref:System.Windows.Application.MainWindow%2A>lub zamknięciu ostatniego okna. Aby uzyskać szczegółowe informacje, zobacz <xref:System.Windows.Application.ShutdownMode%2A>.  
   
-<a name="Window_Lifetime_Events"></a>   
+ Podczas gdy okno może być jawnie zamknięte za pomocą mechanizmów podanych w obszarach innych niż klient i klient, okno może być również niejawnie zamknięte w wyniku zachowania w innych częściach aplikacji lub systemu Windows, w tym następujące:  
+  
+- Użytkownik wylogowuje się lub wyłącza system Windows.  
+  
+- Właściciel okna zamyka (patrz <xref:System.Windows.Window.Owner%2A>).  
+  
+- Główne okno aplikacji jest <xref:System.Windows.Application.ShutdownMode%2A> <xref:System.Windows.ShutdownMode.OnMainWindowClose>zamknięte i jest .  
+  
+- <xref:System.Windows.Application.Shutdown%2A>nazywa się.  
+  
+> [!NOTE]
+> Nie można ponownie otworzyć okna po jego zamknięciu.  
+  
+<a name="Window_Lifetime_Events"></a>
 ### <a name="window-lifetime-events"></a>Zdarzenia okresu istnienia okna  
- Na poniższej ilustracji przedstawiono sekwencję zdarzeń głównych w okresie istnienia okna:  
+ Na poniższej ilustracji przedstawiono sekwencję głównych zdarzeń w okresie istnienia okna:  
   
- ![Diagram przedstawiający zdarzenia w okresie istnienia okna.](./media/wpf-windows-overview/window-lifetime-events.png)  
+ ![Diagram, który pokazuje zdarzenia w okresie istnienia okna.](./media/wpf-windows-overview/window-lifetime-events.png)  
   
- Poniższa ilustracja przedstawia sekwencję zdarzeń głównych w okresie istnienia okna, które jest wyświetlane bez aktywacji (<xref:System.Windows.Window.ShowActivated%2A> jest ustawiona na `false` przed wyświetleniem okna):  
+ Na poniższej ilustracji przedstawiono sekwencję głównych zdarzeń w okresie<xref:System.Windows.Window.ShowActivated%2A> istnienia okna, które jest wyświetlane bez aktywacji ( jest ustawiona na `false` przed wyświetleniem okna):  
   
- ![Diagram przedstawiający zdarzenia w okresie istnienia bez aktywacji.](./media/wpf-windows-overview/window-lifetime-no-activation.png)  
+ ![Diagram, który pokazuje zdarzenia w okresie istnienia okna bez aktywacji.](./media/wpf-windows-overview/window-lifetime-no-activation.png)  
   
-<a name="WindowLocation"></a>   
+<a name="WindowLocation"></a>
 ## <a name="window-location"></a>Lokalizacja okna  
- Gdy okno jest otwarte, ma miejsce w wymiarach x i y względem pulpitu. Tę lokalizację można określić, sprawdzając odpowiednio <xref:System.Windows.Window.Left%2A> i <xref:System.Windows.Window.Top%2A> właściwości. Można ustawić te właściwości, aby zmienić lokalizację okna.  
+ Gdy okno jest otwarte, ma lokalizację w wymiarach x i y względem pulpitu. Lokalizację tę można określić, <xref:System.Windows.Window.Left%2A> <xref:System.Windows.Window.Top%2A> sprawdzając odpowiednio właściwości i. Można ustawić te właściwości, aby zmienić lokalizację okna.  
   
- Możesz również określić początkową lokalizację <xref:System.Windows.Window>, gdy po raz pierwszy pojawia się, ustawiając właściwość <xref:System.Windows.Window.WindowStartupLocation%2A> z jedną z następujących <xref:System.Windows.WindowStartupLocation> wartości wyliczenia:  
+ Można również określić początkową <xref:System.Windows.Window> lokalizację, kiedy pojawia <xref:System.Windows.Window.WindowStartupLocation%2A> się po raz <xref:System.Windows.WindowStartupLocation> pierwszy, ustawiając właściwość z jedną z następujących wartości wyliczenia:  
   
-- <xref:System.Windows.WindowStartupLocation.CenterOwner> (wartość domyślna)  
+- <xref:System.Windows.WindowStartupLocation.CenterOwner>(domyślnie)  
   
 - <xref:System.Windows.WindowStartupLocation.CenterScreen>  
   
 - <xref:System.Windows.WindowStartupLocation.Manual>  
   
- Jeśli lokalizacja początkowa jest określona jako <xref:System.Windows.WindowStartupLocation.Manual>, a właściwości <xref:System.Windows.Window.Left%2A> i <xref:System.Windows.Window.Top%2A> nie zostały ustawione, <xref:System.Windows.Window> zostanie poproszony o podanie systemu Windows o lokalizację, w której ma się pojawić.  
+ Jeśli lokalizacja uruchamiania <xref:System.Windows.WindowStartupLocation.Manual>jest określona <xref:System.Windows.Window.Top%2A> jako , a <xref:System.Windows.Window> <xref:System.Windows.Window.Left%2A> właściwości i właściwości nie zostały ustawione, poprosi system Windows o wyświetlenie lokalizacji.  
   
-<a name="Topmost_Windows_and_Z_Order"></a>   
-### <a name="topmost-windows-and-z-order"></a>System Windows i porządek Z góry  
- Poza lokalizacją x i y okno zawiera również lokalizację w wymiarze z, która określa położenie w pionie w odniesieniu do innych okien. Jest to znane jako porządek osi z okna, a istnieją dwa typy: normalna kolejność z i kolejność z góry. Lokalizacja okna w *normalnej kolejności z* jest określana na podstawie tego, czy jest ona obecnie aktywna, czy nie. Domyślnie okno znajduje się w normalnej kolejności z. Lokalizacja okna w *górnym porządku osi z* jest również określana na podstawie tego, czy jest ona obecnie aktywna, czy nie. Co więcej, okna w najwyższej kolejności z są zawsze zlokalizowane powyżej systemu Windows w normalnej kolejności z. Okno znajduje się w najwyższym porządku osi z, ustawiając właściwość <xref:System.Windows.Window.Topmost%2A> na `true`.  
+<a name="Topmost_Windows_and_Z_Order"></a>
+### <a name="topmost-windows-and-z-order"></a>Najwyższa część systemu Windows i z-order  
+ Oprócz lokalizacji x i y, okno ma również lokalizację w wymiarze z, która określa jego pionową pozycję względem innych okien. Jest to znane jako okno z-order i istnieją dwa typy: normalny z-order i najwyższej kolejności z. Lokalizacja okna w *normalnej kolejności z* zależy od tego, czy jest ono aktualnie aktywne, czy nie. Domyślnie okno znajduje się w normalnej kolejności z. Lokalizacja okna w *najwyższej kolejności z* zależy również od tego, czy jest ono aktualnie aktywne, czy nie. Ponadto okna w najwyższej kolejności z zawsze znajdują się nad oknami w normalnej kolejności z. Okno znajduje się w najwyższej kolejności z, ustawiając jego <xref:System.Windows.Window.Topmost%2A> właściwość na `true`.  
   
  [!code-xaml[WindowsOverviewSnippets#TopmostWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TopmostWindow.xaml#topmostwindowmarkup1)]  
   
- W każdym porządku osi z aktywne okno jest wyświetlane nad wszystkimi innymi oknami w tej samej kolejności z.  
+ W ramach każdego zamówienia z aktualnie aktywne okno pojawia się nad wszystkimi innymi oknami w tej samej kolejności z.  
   
-<a name="WindowSize"></a>   
+<a name="WindowSize"></a>
 ## <a name="window-size"></a>Rozmiar okna  
- Poza lokalizacją pulpitu okno ma rozmiar, który jest określany przez kilka właściwości, w tym różne właściwości width i height oraz <xref:System.Windows.Window.SizeToContent%2A>.  
+ Oprócz lokalizacji pulpitu, okno ma rozmiar, który jest określany przez kilka właściwości, <xref:System.Windows.Window.SizeToContent%2A>w tym różne właściwości szerokości i wysokości i .  
   
- <xref:System.Windows.FrameworkElement.MinWidth%2A>, <xref:System.Windows.FrameworkElement.Width%2A>i <xref:System.Windows.FrameworkElement.MaxWidth%2A> są używane do zarządzania zakresem szerokości, które okno może mieć w okresie istnienia, i są skonfigurowane tak, jak pokazano w poniższym przykładzie.  
+ <xref:System.Windows.FrameworkElement.MinWidth%2A>, <xref:System.Windows.FrameworkElement.Width%2A>i <xref:System.Windows.FrameworkElement.MaxWidth%2A> są używane do zarządzania zakresem szerokości, które okno może mieć w okresie jego istnienia i są skonfigurowane w sposób pokazany w poniższym przykładzie.  
   
  [!code-xaml[WindowsOverviewSnippets#WidthWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WidthWindow.xaml#widthwindowmarkup1)]  
   
- Wysokość okna jest zarządzana przez <xref:System.Windows.FrameworkElement.MinHeight%2A>, <xref:System.Windows.FrameworkElement.Height%2A>i <xref:System.Windows.FrameworkElement.MaxHeight%2A>i są skonfigurowane, jak pokazano w poniższym przykładzie.  
+ Wysokość okna jest <xref:System.Windows.FrameworkElement.MinHeight%2A> <xref:System.Windows.FrameworkElement.Height%2A>zarządzana <xref:System.Windows.FrameworkElement.MaxHeight%2A>przez program , i , i są skonfigurowane w sposób pokazany w poniższym przykładzie.  
   
  [!code-xaml[WindowsOverviewSnippets#HeightWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/HeightWindow.xaml#heightwindowmarkup1)]  
   
- Ponieważ różne wartości szerokości i wysokości określają zakres, możliwe jest, aby szerokość i wysokość okna o zmiennym rozmiarze znajdować się w dowolnym miejscu w określonym zakresie dla odpowiedniego wymiaru. Aby wykryć bieżącą szerokość i wysokość, należy odpowiednio zbadać <xref:System.Windows.FrameworkElement.ActualWidth%2A> i <xref:System.Windows.FrameworkElement.ActualHeight%2A>.  
+ Ponieważ różne wartości szerokości i wartości wysokości określają zakres, możliwe jest, aby szerokość i wysokość okna o zmiennym rozmiarze były dostępne w dowolnym miejscu w określonym zakresie dla odpowiedniego wymiaru. Aby wykryć jego aktualną szerokość i wysokość, należy sprawdzić <xref:System.Windows.FrameworkElement.ActualWidth%2A> i <xref:System.Windows.FrameworkElement.ActualHeight%2A>, odpowiednio.  
   
- Jeśli chcesz, aby szerokość i wysokość okna miały rozmiar, który pasuje do rozmiaru zawartości okna, możesz użyć właściwości <xref:System.Windows.Window.SizeToContent%2A>, która ma następujące wartości:  
+ Jeśli chcesz, aby szerokość i wysokość okna miały rozmiar, który pasuje do rozmiaru zawartości okna, <xref:System.Windows.Window.SizeToContent%2A> możesz użyć właściwości, która ma następujące wartości:  
   
-- <xref:System.Windows.SizeToContent.Manual>., Brak efektu (wartość domyślna).  
+- <xref:System.Windows.SizeToContent.Manual>. Brak efektu (domyślnie).  
   
-- <xref:System.Windows.SizeToContent.Width>., Dopasuj do szerokości zawartości, która ma taki sam efekt jak ustawienie zarówno <xref:System.Windows.FrameworkElement.MinWidth%2A>, jak i <xref:System.Windows.FrameworkElement.MaxWidth%2A> do szerokości zawartości.  
+- <xref:System.Windows.SizeToContent.Width>. Dopasuj do szerokości zawartości, która <xref:System.Windows.FrameworkElement.MinWidth%2A> <xref:System.Windows.FrameworkElement.MaxWidth%2A> ma taki sam efekt jak ustawienie zarówno do szerokości zawartości.  
   
-- <xref:System.Windows.SizeToContent.Height>., Dopasuj do wysokości zawartości, która ma taki sam efekt jak ustawienie zarówno <xref:System.Windows.FrameworkElement.MinHeight%2A>, jak i <xref:System.Windows.FrameworkElement.MaxHeight%2A> do wysokości zawartości.  
+- <xref:System.Windows.SizeToContent.Height>. Dopasuj do wysokości zawartości, która <xref:System.Windows.FrameworkElement.MinHeight%2A> <xref:System.Windows.FrameworkElement.MaxHeight%2A> ma taki sam efekt jak ustawienie zarówno na wysokości zawartości.  
   
-- <xref:System.Windows.SizeToContent.WidthAndHeight>., Dopasuj do szerokości i wysokości zawartości, która ma taki sam skutek jak ustawienie zarówno <xref:System.Windows.FrameworkElement.MinHeight%2A>, jak i <xref:System.Windows.FrameworkElement.MaxHeight%2A> do wysokości zawartości, i Ustawianie zarówno <xref:System.Windows.FrameworkElement.MinWidth%2A>, jak i <xref:System.Windows.FrameworkElement.MaxWidth%2A> do szerokości zawartości.  
+- <xref:System.Windows.SizeToContent.WidthAndHeight>. Dopasuj do szerokości i wysokości zawartości, <xref:System.Windows.FrameworkElement.MinHeight%2A> <xref:System.Windows.FrameworkElement.MaxHeight%2A> która ma taki sam efekt <xref:System.Windows.FrameworkElement.MinWidth%2A> jak <xref:System.Windows.FrameworkElement.MaxWidth%2A> ustawienie zarówno na wysokości zawartości, jak i ustawienie zarówno szerokości, jak i szerokości zawartości.  
   
- W poniższym przykładzie pokazano okno, które automatycznie dopasowuje rozmiar do jego zawartości, zarówno w pionie, jak i w poziomie.  
+ W poniższym przykładzie przedstawiono okno, które automatycznie rozmiary, aby dopasować jego zawartość, zarówno w pionie, jak i w poziomie, po raz pierwszy pokazano.  
   
  [!code-xaml[WindowsOverviewSnippets#SizeToContentWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/SizeToContentWindow.xaml#sizetocontentwindowmarkup1)]  
   
- Poniższy przykład pokazuje, jak ustawić właściwość <xref:System.Windows.Window.SizeToContent%2A> w kodzie, aby określić, jak zmienia się rozmiar okna w celu dopasowania do jego zawartości.
+ W poniższym przykładzie <xref:System.Windows.Window.SizeToContent%2A> pokazano, jak ustawić właściwość w kodzie, aby określić, jak okno jest resizes, aby dopasować jego zawartość .
   
  [!code-csharp[HOWTOWindowManagementSnippets#SetWindowSizeToContentPropertyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOWindowManagementSnippets/CSharp/MainWindow.xaml.cs#setwindowsizetocontentpropertycode)]
  [!code-vb[HOWTOWindowManagementSnippets#SetWindowSizeToContentPropertyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOWindowManagementSnippets/visualbasic/mainwindow.xaml.vb#setwindowsizetocontentpropertycode)]  
   
-<a name="OrderOfPrecedence"></a>   
-## <a name="order-of-precedence-for-sizing-properties"></a>Kolejność pierwszeństwa we właściwościach ustalania wielkości  
- Zasadniczo różne rozmiary okna łączą się, aby zdefiniować zakres szerokości i wysokości okna o zmiennym rozmiarze. Aby zapewnić zachowanie prawidłowego zakresu, <xref:System.Windows.Window> oblicza wartości właściwości rozmiaru przy użyciu następujących kolejności pierwszeństwa.  
+<a name="OrderOfPrecedence"></a>
+## <a name="order-of-precedence-for-sizing-properties"></a>Kolejność pierwszeństwa dla właściwości zmiany rozmiaru  
+ Zasadniczo różne rozmiary właściwości okna łączą się w celu zdefiniowania zakresu szerokości i wysokości dla okna o zmiennym rozmiarze. Aby upewnić się, <xref:System.Windows.Window> że prawidłowy zakres jest utrzymywany, ocenia wartości właściwości rozmiaru przy użyciu następujących zamówień pierwszeństwa.  
   
  **Dla właściwości wysokości:**  
   
@@ -356,7 +356,7 @@ Użytkownicy pracują z autonomicznymi aplikacjami Windows Presentation Foundati
   
 4. <xref:System.Windows.FrameworkElement.Height%2A?displayProperty=nameWithType>  
   
- **Dla właściwości width:**  
+ **W przypadku właściwości szerokości:**  
   
 1. <xref:System.Windows.FrameworkElement.MinWidth%2A?displayProperty=nameWithType>
   
@@ -366,120 +366,120 @@ Użytkownicy pracują z autonomicznymi aplikacjami Windows Presentation Foundati
   
 4. <xref:System.Windows.FrameworkElement.Width%2A?displayProperty=nameWithType>  
   
- Kolejność pierwszeństwa może również określać rozmiar okna, gdy jest zmaksymalizowane, które jest zarządzane za pomocą właściwości <xref:System.Windows.Window.WindowState%2A>.  
+ Kolejność pierwszeństwa można również określić rozmiar okna, gdy jest zmaksymalizowane, <xref:System.Windows.Window.WindowState%2A> który jest zarządzany z właściwością.  
   
-<a name="WindowState"></a>   
+<a name="WindowState"></a>
 ## <a name="window-state"></a>Stan okna  
- W okresie istnienia okna o zmiennym rozmiarze może istnieć trzy stany: normalny, zminimalizowany i zmaksymalizowany. Okno z *normalnym* stanem jest domyślnym stanem okna. Okno z tym stanem umożliwia użytkownikowi przeniesienie i zmianę jego rozmiaru przy użyciu uchwytu zmiany rozmiaru lub obramowania, jeśli zostanie on zmieniony.  
+ W okresie istnienia okna o zmiennym rozmiarze może mieć trzy stany: normalny, zminimalizowany i zmaksymalizowany. Okno o stanie *normalnym* jest domyślnym stanem okna. Okno z tym stanem umożliwia użytkownikowi przenoszenie i zmienianie jego rozmiaru za pomocą uchwytu o rozmiarze lub obramowania, jeśli można go zmienić rozmiar.  
   
- Okno ze *zminimalizowanym* stanem jest zwijane do jego przycisku paska zadań, jeśli <xref:System.Windows.Window.ShowInTaskbar%2A> jest ustawiony na `true`; w przeciwnym razie zwija do najmniejszego możliwego rozmiaru, który może być i odszukany w lewym dolnym rogu pulpitu. Nie można zmienić rozmiaru okna zminimalizowanego za pomocą obramowania ani uchwytu zmiany rozmiaru, chociaż zminimalizowane okno, które nie jest wyświetlane na pasku zadań, może być przeciągane wokół pulpitu.  
+ Okno z *zminimalizowanym* stanem zwija się <xref:System.Windows.Window.ShowInTaskbar%2A> do przycisku paska zadań, jeśli jest ustawione na `true`; w przeciwnym razie zwija się do najmniejszego możliwego rozmiaru i przenosi się do lewego dolnego rogu pulpitu. Żaden typ zminimalizowanego okna nie może być przesunięty za pomocą obramowania lub uchwytu o rozmiarze, chociaż zminimalizowane okno, które nie jest wyświetlane na pasku zadań, można przeciągać wokół pulpitu.  
   
- Okno z *zmaksymalizowanym* stanem rozwija się do maksymalnego rozmiaru, który może być, co będzie tak duże, jak <xref:System.Windows.FrameworkElement.MaxWidth%2A>, <xref:System.Windows.FrameworkElement.MaxHeight%2A>i <xref:System.Windows.Window.SizeToContent%2A> właściwości. Jak okno zminimalizowane, nie można zmienić rozmiaru zmaksymalizowanego okna przy użyciu uchwytu zmiany rozmiaru lub przeciągając obramowanie.  
+ Okno o *stanie zmaksymalizowanym* rozszerza się do maksymalnego rozmiaru, który może <xref:System.Windows.FrameworkElement.MaxWidth%2A>być, który będzie tylko tak duży, jak jego , <xref:System.Windows.FrameworkElement.MaxHeight%2A>i <xref:System.Windows.Window.SizeToContent%2A> właściwości dyktować. Podobnie jak zminimalizowane okno, zmaksymalizowanego okna nie można zmienić rozmiaru za pomocą uchwytu zmienić rozmiar lub przeciągając obramowanie.  
   
 > [!NOTE]
-> Wartości właściwości <xref:System.Windows.Window.Top%2A>, <xref:System.Windows.Window.Left%2A>, <xref:System.Windows.FrameworkElement.Width%2A>i <xref:System.Windows.FrameworkElement.Height%2A> okna zawsze reprezentują wartości dla normalnego stanu, nawet gdy okno jest obecnie zmaksymalizowane lub zminimalizowane.  
+> Wartości <xref:System.Windows.Window.Top%2A>, <xref:System.Windows.Window.Left%2A>, <xref:System.Windows.FrameworkElement.Width%2A>i <xref:System.Windows.FrameworkElement.Height%2A> właściwości okna zawsze reprezentują wartości dla stanu normalnego, nawet wtedy, gdy okno jest obecnie zmaksymalizowane lub zminimalizowane.  
   
- Stan okna można skonfigurować przez ustawienie jego właściwości <xref:System.Windows.Window.WindowState%2A>, która może mieć jedną z następujących <xref:System.Windows.WindowState> wartości wyliczenia:  
+ Stan okna można skonfigurować, ustawiając <xref:System.Windows.Window.WindowState%2A> jego właściwość, która <xref:System.Windows.WindowState> może mieć jedną z następujących wartości wyliczenia:  
   
-- <xref:System.Windows.WindowState.Normal> (wartość domyślna)  
+- <xref:System.Windows.WindowState.Normal>(domyślnie)  
   
 - <xref:System.Windows.WindowState.Maximized>  
   
 - <xref:System.Windows.WindowState.Minimized>  
   
- Poniższy przykład pokazuje, jak utworzyć okno, które jest wyświetlane jako zmaksymalizowane, gdy zostanie otwarte.  
+ W poniższym przykładzie pokazano, jak utworzyć okno, które jest wyświetlane jako zmaksymalizowane po otwarciu.  
   
  [!code-xaml[WindowsOverviewSnippets#WindowStateWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStateWindow.xaml#windowstatewindowmarkup1)]  
   
- Ogólnie rzecz biorąc, należy ustawić <xref:System.Windows.Window.WindowState%2A>, aby skonfigurować stan początkowy okna. Po pobraniu okna o zmiennym rozmiarze użytkownicy mogą nacisnąć przyciski Minimalizuj, Maksymalizuj i Przywróć na pasku tytułu okna, aby zmienić stan okna.  
+ Ogólnie rzecz biorąc <xref:System.Windows.Window.WindowState%2A> należy ustawić, aby skonfigurować stan początkowy okna. Po wyświetleniu okna o zmiennym rozmiarze użytkownicy mogą nacisnąć przyciski minimalizowanie, maksymalizacja i przywracanie na pasku tytułu okna, aby zmienić stan okna.  
   
-<a name="WindowAppearance"></a>   
+<a name="WindowAppearance"></a>
 ## <a name="window-appearance"></a>Wygląd okna  
- Aby zmienić wygląd obszaru klienta okna, można dodać do niego zawartość specyficzną dla okna, taką jak przyciski, etykiety i pola tekstowe. Aby skonfigurować obszar niebędący klientem, <xref:System.Windows.Window> zawiera kilka właściwości, które obejmują <xref:System.Windows.Window.Icon%2A> do ustawiania ikony okna i <xref:System.Windows.Window.Title%2A> w celu ustawienia jej tytułu.  
+ Wygląd obszaru klienta okna można zmienić, dodając do niego zawartość specyficzną dla okien, taką jak przyciski, etykiety i pola tekstowe. Aby skonfigurować obszar nie-klient, <xref:System.Windows.Window> zawiera kilka <xref:System.Windows.Window.Icon%2A> właściwości, które obejmują, <xref:System.Windows.Window.Title%2A> aby ustawić ikonę okna i ustawić jego tytuł.  
   
- Możesz również zmienić wygląd i zachowanie obramowania obszaru nieklienckiego, konfigurując tryb zmiany rozmiaru okna, styl okna i czy jest on wyświetlany jako przycisk na pasku zadań pulpitu.  
+ Można również zmienić wygląd i zachowanie obramowania obszaru nienaksingowego, konfigurując tryb zmiany rozmiaru okna, styl okna i to, czy jest on wyświetlany jako przycisk na pasku zadań pulpitu.  
 
-<a name="Resize_Mode"></a>   
-### <a name="resize-mode"></a>Tryb zmiany rozmiaru  
- W zależności od właściwości <xref:System.Windows.Window.WindowStyle%2A> można kontrolować sposób, w jaki użytkownicy mogą zmieniać rozmiar okna. Wybór stylu okna ma wpływ na to, czy użytkownik może zmienić rozmiar okna, przeciągając jego obramowanie przy użyciu myszy, czy przyciski **Minimalizuj**, **Maksymalizuj**i **Zmień rozmiar** pojawiają się w obszarze nieklienckim i, jeśli są wyświetlane, niezależnie od tego, czy są włączone.  
+<a name="Resize_Mode"></a>
+### <a name="resize-mode"></a>Tryb ponownego rozmiaru  
+ W zależności <xref:System.Windows.Window.WindowStyle%2A> od właściwości można kontrolować, jak (i czy) użytkownicy mogą zmienić rozmiar okna. Wybór stylu okna wpływa na to, czy użytkownik może zmienić rozmiar okna, przeciągając jego obramowanie za pomocą myszy, czy przyciski **Minimalizuj**, **Maksymalizuj**i **Zmienić rozmiar** są wyświetlane w obszarze nienawidalnym, a jeśli są wyświetlane, czy są włączone.  
   
- Można skonfigurować sposób zmiany rozmiaru okna przez ustawienie jego właściwości <xref:System.Windows.Window.ResizeMode%2A>, która może być jedną z następujących <xref:System.Windows.ResizeMode> wartości wyliczenia:  
+ Można skonfigurować sposób ponownego rozmiaru okna, <xref:System.Windows.Window.ResizeMode%2A> ustawiając jego właściwość, <xref:System.Windows.ResizeMode> która może być jedną z następujących wartości wyliczenia:  
   
 - <xref:System.Windows.ResizeMode.NoResize>  
   
 - <xref:System.Windows.ResizeMode.CanMinimize>  
   
-- <xref:System.Windows.ResizeMode.CanResize> (wartość domyślna)  
+- <xref:System.Windows.ResizeMode.CanResize>(domyślnie)  
   
 - <xref:System.Windows.ResizeMode.CanResizeWithGrip>  
   
- Podobnie jak w przypadku <xref:System.Windows.Window.WindowStyle%2A>, tryb zmiany rozmiaru okna jest mało prawdopodobne, aby można go było zmienić w okresie istnienia, co oznacza, że najprawdopodobniej ustawisz go z [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] znaczników.  
+ Podobnie <xref:System.Windows.Window.WindowStyle%2A>jak w przypadku trybu zmiany rozmiaru okna jest mało prawdopodobne, aby zmienić w okresie [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] jego istnienia, co oznacza, że najprawdopodobniej ustawić go z znaczników.  
   
  [!code-xaml[WindowsOverviewSnippets#ResizeModeWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ResizeModeWindow.xaml#resizemodewindowmarkup1)]  
   
- Należy zauważyć, że można wykryć, czy okno jest zmaksymalizowane, zminimalizowane lub przywrócone, sprawdzając Właściwość <xref:System.Windows.Window.WindowState%2A>.  
+ Należy zauważyć, że można wykryć, czy okno jest zmaksymalizowane, zminimalizowane lub przywrócone przez sprawdzenie <xref:System.Windows.Window.WindowState%2A> właściwości.  
   
-<a name="Window_Style"></a>   
+<a name="Window_Style"></a>
 ### <a name="window-style"></a>Styl okna  
- Obramowanie, które jest widoczne z obszaru nieklienckiego okna, jest odpowiednie dla większości aplikacji. Istnieją jednak sytuacje, w których są zbędne różne typy obramowań lub nie są w ogóle stosowane żadne obramowania, w zależności od typu okna.  
+ Obramowanie, które jest widoczne z obszaru nie-klienta okna jest odpowiedni dla większości aplikacji. Istnieją jednak okoliczności, w których potrzebne są różne rodzaje granic lub w ogóle nie są potrzebne granice, w zależności od rodzaju okna.  
   
- Aby sterować typem obramowania pobieranym przez okno, ustaw jej Właściwość <xref:System.Windows.Window.WindowStyle%2A> na jedną z następujących wartości wyliczenia <xref:System.Windows.WindowStyle>:  
+ Aby kontrolować typ obramowania okna, <xref:System.Windows.Window.WindowStyle%2A> należy ustawić jego właściwość <xref:System.Windows.WindowStyle> z jedną z następujących wartości wyliczenia:  
   
 - <xref:System.Windows.WindowStyle.None>  
   
-- <xref:System.Windows.WindowStyle.SingleBorderWindow> (wartość domyślna)  
+- <xref:System.Windows.WindowStyle.SingleBorderWindow>(domyślnie)  
   
 - <xref:System.Windows.WindowStyle.ThreeDBorderWindow>  
   
 - <xref:System.Windows.WindowStyle.ToolWindow>  
   
- Efekt tych stylów okna przedstawiono na poniższej ilustracji:  
+ Efekt tych stylów okien są zilustrowane na poniższym rysunku:  
   
- ![Ilustracja stylów obramowania okna.](./media/wpf-windows-overview/window-border-styles.png)  
+ ![Ilustracja stylów obramowania okien.](./media/wpf-windows-overview/window-border-styles.png)  
   
- Można ustawić <xref:System.Windows.Window.WindowStyle%2A> przy użyciu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] znaczników lub kodu; ponieważ nie można jej zmienić w okresie istnienia okna, najprawdopodobniej skonfigurujesz go przy użyciu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] znaczników.  
+ Można ustawić <xref:System.Windows.Window.WindowStyle%2A> za [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pomocą znaczników lub kodu; ponieważ jest mało prawdopodobne, aby zmienić w okresie istnienia okna, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] najprawdopodobniej skonfigurujesz go przy użyciu znaczników.  
   
  [!code-xaml[WindowsOverviewSnippets#WindowStyleWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStyleWindow.xaml#windowstylewindowmarkup1)]  
   
-#### <a name="non-rectangular-window-style"></a>Styl okna bez prostokąta  
- Istnieją również sytuacje, w których style obramowania, które <xref:System.Windows.Window.WindowStyle%2A> mogą być niewystarczające. Na przykład możesz chcieć utworzyć aplikację z nieprostokątnym obramowaniem, np. Microsoft Windows Media Player.  
+#### <a name="non-rectangular-window-style"></a>Styl okna niekularnego  
+ Istnieją również sytuacje, w <xref:System.Windows.Window.WindowStyle%2A> których style obramowania, które pozwala mieć nie są wystarczające. Na przykład można utworzyć aplikację z niesektorycznym obramowaniem, na przykład używa microsoft Windows Media Player.  
   
- Rozważmy na przykład okno dymek mowy pokazane na poniższym rysunku:  
+ Rozważmy na przykład okno dymka pokazane na poniższym rysunku:  
   
- ![Okno bąbelka mowy z tekstem przeciągnij mnie.](./media/wpf-windows-overview/non-rectangular-window-figure.png)  
+ ![Okno dymne z napisem Przeciągnij mnie.](./media/wpf-windows-overview/non-rectangular-window-figure.png)  
   
- Ten typ okna można utworzyć, ustawiając właściwość <xref:System.Windows.Window.WindowStyle%2A> na <xref:System.Windows.WindowStyle.None>i używając specjalnej pomocy technicznej, która <xref:System.Windows.Window> ma dla przezroczystości.  
+ Ten typ okna można utworzyć, <xref:System.Windows.Window.WindowStyle%2A> ustawiając właściwość na <xref:System.Windows.WindowStyle.None> <xref:System.Windows.Window> , i używając specjalnej obsługi, która ma przezroczystość.  
   
  [!code-xaml[WindowsOverviewSnippets#TransparentWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TransparentWindow.xaml#transparentwindowmarkup1)]  
   
- Ta kombinacja wartości powoduje, że okno jest renderowane całkowicie przezroczyste. W tym stanie nie można używać modułów definiowania układu nieklienckiego (zamknięcie menu, minimalizowania, maksymalizowania i przywracania). W związku z tym należy podać własny.  
+ Ta kombinacja wartości nakazuje okno do renderowania całkowicie przezroczyste. W tym stanie nie można używać ozdób obszaru nienakładowego okna (menu Zamknij, Minimalizuj, Maksymalizuj i Przywróć i przywróć) itd.In this state the window's non-client area adornments (the Close menu, Minimize, Maximize, and Restore buttons, and so on) cannot be used. W związku z tym, trzeba podać własne.  
   
-<a name="Task_Bar_Presence"></a>   
+<a name="Task_Bar_Presence"></a>
 ### <a name="task-bar-presence"></a>Obecność paska zadań  
 
-Domyślny wygląd okna zawiera przycisk paska zadań, tak jak pokazano na poniższym rysunku:
+Domyślny wygląd okna zawiera przycisk paska zadań, taki jak pokazany na poniższym rysunku:
 
- ![Zrzut ekranu pokazujący okno z przyciskiem paska zadań.](./media/wpf-windows-overview/window-taskbar-button.png)  
+ ![Zrzut ekranu przedstawiający okno z przyciskiem paska zadań.](./media/wpf-windows-overview/window-taskbar-button.png)  
   
- Niektóre typy okien nie mają przycisku paska zadań, takiego jak okna dialogowe komunikatów i okien dialogowych (zobacz [okna dialogowe — Omówienie](dialog-boxes-overview.md)). Można kontrolować, czy przycisk paska zadań dla okna jest pokazywany przez ustawienie właściwości <xref:System.Windows.Window.ShowInTaskbar%2A> (domyślnie`true`).  
+ Niektóre typy okien nie mają przycisku paska zadań, na przykład okien komunikatów i okien dialogowych (zobacz [Omówienie okien dialogowych](dialog-boxes-overview.md)). Można kontrolować, czy przycisk paska zadań dla <xref:System.Windows.Window.ShowInTaskbar%2A> okna`true` jest wyświetlany, ustawiając właściwość (domyślnie).  
   
  [!code-xaml[WindowsOverviewSnippets#ShowInTaskbarWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ShowInTaskbarWindow.xaml#showintaskbarwindowmarkup1)]  
   
-<a name="SecurityConsiderations"></a>   
-## <a name="security-considerations"></a>Zagadnienia dotyczące zabezpieczeń  
- <xref:System.Windows.Window> wymaga uprawnień zabezpieczeń `UnmanagedCode`, aby można było utworzyć wystąpienie. W przypadku aplikacji zainstalowanych na komputerze lokalnym i uruchamianych z niej jest to zestaw uprawnień, które są przyznawane aplikacji.  
+<a name="SecurityConsiderations"></a>
+## <a name="security-considerations"></a>Zagadnienia związane z zabezpieczeniami  
+ <xref:System.Windows.Window>wymaga `UnmanagedCode` uzyskania uprawnień zabezpieczających do wystąpienia. W przypadku aplikacji zainstalowanych i uruchomionych z komputera lokalnego mieszczą się w zestawie uprawnień przyznanych aplikacji.  
   
- Jednak jest to poza zestawem uprawnień przyznanym aplikacjom, które są uruchamiane z Internetu lub lokalnej strefy intranetowej przy użyciu technologii ClickOnce. W związku z tym użytkownicy otrzymają ostrzeżenie o zabezpieczeniach technologii ClickOnce i będą musieli podnieść poziom uprawnień dla aplikacji do pełnego zaufania.  
+ Jednak nie mieści się to w zestawie uprawnień przyznanych aplikacjom uruchamianym z Internetu lub lokalnej strefy intranetu przy użyciu ClickOnce. W związku z tym użytkownicy otrzymają ostrzeżenie zabezpieczeń ClickOnce i będzie musiał podnieść zestaw uprawnień dla aplikacji do pełnego zaufania.  
   
- Ponadto aplikacje XBAP nie mogą domyślnie wyświetlać okien ani okna dialogowego. Aby zapoznać się z zagadnieniami dotyczącymi zabezpieczeń aplikacji autonomicznych, zobacz [strategia zabezpieczeń WPF — zabezpieczenia platformy](../wpf-security-strategy-platform-security.md).  
+ Ponadto xbaps nie może domyślnie wyświetlać okien ani okien dialogowych. Aby zapoznać się z omówieniem zagadnień dotyczących bezpieczeństwa aplikacji autonomicznych, zobacz [Strategia zabezpieczeń WPF — Zabezpieczenia platformy](../wpf-security-strategy-platform-security.md).  
   
-<a name="Other_Types_of_Windows"></a>   
-## <a name="other-types-of-windows"></a>Inne typy okien  
- <xref:System.Windows.Navigation.NavigationWindow> to okno, które jest przeznaczone do hostowania zawartości nawigacji. Aby uzyskać więcej informacji, zobacz [Omówienie nawigacji](navigation-overview.md)).  
+<a name="Other_Types_of_Windows"></a>
+## <a name="other-types-of-windows"></a>Inne typy systemu Windows  
+ <xref:System.Windows.Navigation.NavigationWindow>to okno przeznaczone do obsługi zawartości żeglownej. Aby uzyskać więcej informacji, zobacz [Omówienie nawigacji](navigation-overview.md)).  
   
- Okna dialogowe to okna, które są często używane do zbierania informacji od użytkownika w celu ukończenia funkcji. Na przykład, gdy użytkownik chce otworzyć plik, okno dialogowe **Otwórz plik** jest zwykle wyświetlane przez aplikację w celu uzyskania nazwy pliku od użytkownika. Aby uzyskać więcej informacji, zobacz [okna dialogowe przegląd](dialog-boxes-overview.md).  
+ Okna dialogowe są okna, które są często używane do zbierania informacji od użytkownika, aby zakończyć funkcję. Na przykład, gdy użytkownik chce otworzyć plik, okno dialogowe **Otwórz plik** jest zwykle wyświetlane przez aplikację, aby uzyskać nazwę pliku od użytkownika. Aby uzyskać więcej informacji, zobacz [Omówienie okien dialogowych](dialog-boxes-overview.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Windows.Window>
 - <xref:System.Windows.MessageBox>

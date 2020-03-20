@@ -15,49 +15,49 @@ helpviewer_keywords:
 ms.assetid: ee518bda-3296-482e-a7b7-e9d51dd1a181
 topic_type:
 - apiref
-ms.openlocfilehash: 3ab24ab869e1f2cff9beafe50e6982ba2e7cf0aa
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 34b7cebfa063a3ad077b74a753fd37ba67ff53a5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436694"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175320"
 ---
 # <a name="imetadataimportgettypespecfromtoken-method"></a>IMetaDataImport::GetTypeSpecFromToken — Metoda
-Pobiera binarny podpis metadanych specyfikacji typu reprezentowanej przez określony token.  
+Pobiera podpis metadanych binarnych specyfikacji typu reprezentowane przez określony token.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
-HRESULT GetTypeSpecFromToken (   
-   [in]  mdTypeSpec            typespec,   
-   [out] PCCOR_SIGNATURE       *ppvSig,   
+HRESULT GetTypeSpecFromToken (
+   [in]  mdTypeSpec            typespec,
+   [out] PCCOR_SIGNATURE       *ppvSig,
    [out] ULONG                 *pcbSig  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `typespec`  
- podczas Token elementu TypeSpec skojarzony z żądanym podpisem metadanych.  
+ [w] Token TypeSpec skojarzony z żądanym podpisem metadanych.  
   
  `ppvSig`  
- określoną Wskaźnik do podpisu metadanych binarnych.  
+ [na zewnątrz] Wskaźnik do podpisu metadanych binarnych.  
   
  `pcbSig`  
- określoną Rozmiar sygnatury metadanych w bajtach.  
+ [na zewnątrz] Rozmiar w bajtach podpisu metadanych.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- WYNIK HRESULT wskazujący powodzenie lub niepowodzenie. Błędy można testować za pomocą makra zakończonego niepowodzeniem.  
+ HRESULT, który wskazuje na sukces lub porażkę. Błędy można przetestować za pomocą makra FAILED.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Uwzględnione jako zasób w pliku MsCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

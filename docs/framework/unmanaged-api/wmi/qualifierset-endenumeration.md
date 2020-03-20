@@ -1,6 +1,6 @@
 ---
-title: QualifierSet_EndEnumeration — funkcja (niezarządzana dokumentacja interfejsu API)
-description: Funkcja QualifierSet_EndEnumeration kończy Wyliczenie.
+title: funkcja QualifierSet_EndEnumeration (odwołanie do interfejsu API niezarządzanego)
+description: Funkcja QualifierSet_EndEnumeration kończy wyliczenie.
 ms.date: 11/06/2017
 api_name:
 - QualifierSet_EndEnumeration
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - QualifierSet_EndEnumeration function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 82627fa416f71e123ed2c03bae4584e4433310eb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c606580ff2e02c5659c14b134b1a17a65651952b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127288"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176750"
 ---
-# <a name="qualifierset_endenumeration-function"></a>QualifierSet_EndEnumeration, funkcja
-Kończy Wyliczenie rozpoczęte z wywołaniem funkcji [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) .  
+# <a name="qualifierset_endenumeration-function"></a>QualifierSet_EndEnumeration funkcja
+Kończy wyliczenie rozpoczęte wywołaniem funkcji [QualifierSet_BeginEnumeration.](qualifierset-beginenumeration.md)  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -30,41 +30,40 @@ Kończy Wyliczenie rozpoczęte z wywołaniem funkcji [QualifierSet_BeginEnumerat
   
 ```cpp  
 HRESULT QualifierSet_EndEnumeration (
-   [in] int                  vFunc, 
+   [in] int                  vFunc,
    [in] IWbemQualifierSet*   ptr
-); 
+);
 ```  
 
 ## <a name="parameters"></a>Parametry
 
 `vFunc`  
-podczas Ten parametr jest nieużywany.
+[w] Ten parametr jest nieużywane.
 
-`ptr`   
-podczas Wskaźnik do wystąpienia [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) .
+`ptr`[w] Wskaźnik do [wystąpienia IWbemQualifierSet.](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Następująca wartość zwrócona przez tę funkcję jest zdefiniowana w pliku nagłówkowym *WbemCli. h* lub można ją zdefiniować jako stałą w kodzie:
+Następująca wartość zwracana przez tę funkcję jest zdefiniowana w pliku nagłówkowym *WbemCli.h* lub można zdefiniować ją jako stałą w kodzie:
 
-|Stała  |Wartość  |Opis  |
+|Stały  |Wartość  |Opis  |
 |---------|---------|---------|
 |`WBEM_S_NO_ERROR` | 0 | Wywołanie funkcji zakończyło się pomyślnie.  |
   
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja otacza wywołanie metody [IWbemQualifierSet:: EndEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-endenumeration) .
+Ta funkcja zawija wywołanie [metody IWbemQualifierSet::EndEnumeration.](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-endenumeration)
 
 To wywołanie jest zalecane, ale nie jest wymagane. Natychmiast zwalnia zasoby skojarzone z wyliczeniem.
 
 ## <a name="requirements"></a>Wymagania  
 
-**Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+**Platformy:** Zobacz [Wymagania systemowe](../../get-started/system-requirements.md).  
   
-**Nagłówek:** WMINet_Utils. idl  
+**Nagłówek:** WMINet_Utils.idl  
   
-**Wersje .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+**Wersje programu .NET Framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [WMI i liczniki wydajności (niezarządzana dokumentacja interfejsu API)](index.md)
+- [Liczniki wydajności WMI i (niezarządzane odwołanie interfejsu API)](index.md)

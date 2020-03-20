@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d9720428-c353-4f07-a7e8-899e106a1b37
 topic_type:
 - apiref
-ms.openlocfilehash: 8d25f178a3c5e160e78e042d5016bb93aabf3e2d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a1cd932051a9ed90a29ff5eeaa818a67104192bb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443446"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175255"
 ---
 # <a name="imetadatatablesgetnextstring-method"></a>IMetaDataTables::GetNextString — Metoda
 Pobiera indeks następnego ciągu w bieżącej kolumnie tabeli.  
@@ -28,7 +28,7 @@ Pobiera indeks następnego ciągu w bieżącej kolumnie tabeli.
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
-HRESULT GetNextString (   
+HRESULT GetNextString (
     [in]  ULONG   ixString,  
     [out] ULONG   *pNext  
 );  
@@ -36,21 +36,21 @@ HRESULT GetNextString (
   
 ## <a name="parameters"></a>Parametry  
  `ixString`  
- podczas Wartość indeksu z kolumny tabeli ciągów.  
+ [w] Wartość indeksu z kolumny tabeli ciągów.  
   
  `pNext`  
- określoną Wskaźnik do indeksu następnego ciągu w kolumnie.  
+ [na zewnątrz] Wskaźnik do indeksu następnego ciągu w kolumnie.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [IMetaDataTables, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [IMetaDataTables2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [IMetaDataTables2 — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

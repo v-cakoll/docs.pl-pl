@@ -15,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: fdf91864-48ea-4aa6-b70c-361b7a3184c7
 topic_type:
 - apiref
-ms.openlocfilehash: 737993ac80b26d490915af3e97fd6a9552246aee
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 32e899622b9c649a08e3bca1b6645f70dcbcbb19
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792117"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178543"
 ---
 # <a name="icordebugregistersetgetregisters-method"></a>ICorDebugRegisterSet::GetRegisters — Metoda
-Pobiera wartość każdego rejestru (na komputerze, który aktualnie wykonuje kod), który jest określony przez maskę bitową.  
+Pobiera wartość każdego rejestru (na komputerze, który jest aktualnie wykonywany kod), który jest określony przez maskę bitową.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
 HRESULT GetRegisters (  
-    [in] ULONG64       mask,   
+    [in] ULONG64       mask,
     [in] ULONG32       regCount,  
     [out, size_is(regCount), length_is(regCount)]  
         CORDB_REGISTER regBuffer[]  
@@ -38,29 +38,29 @@ HRESULT GetRegisters (
   
 ## <a name="parameters"></a>Parametry  
  `mask`  
- podczas Maska bitów określająca, które wartości rejestru mają być pobierane. Każdy bit odnosi się do rejestru. Jeśli bit jest ustawiony na jeden, zostanie pobrana wartość rejestru. w przeciwnym razie wartość rejestru nie zostanie pobrana.  
+ [w] Maska bitowa określająca, które wartości rejestru mają zostać pobrane. Każdy bit odpowiada rejestrowi. Jeśli bit jest ustawiony na jeden, wartość rejestru jest pobierana; w przeciwnym razie wartość rejestru nie jest pobierana.  
   
  `regCount`  
- podczas Liczba wartości rejestru do pobrania.  
+ [w] Liczba wartości rejestru do pobrania.  
   
  `regBuffer`  
- określoną Tablica obiektów `CORDB_REGISTER`, z których każdy otrzymuje wartość rejestru.  
+ [na zewnątrz] Tablica `CORDB_REGISTER` obiektów, z których każdy otrzymuje wartość rejestru.  
   
 ## <a name="remarks"></a>Uwagi  
- Rozmiar tablicy musi być równy liczbie bitów ustawionych dla jednej w masce bitów. `regCount` parametr określa liczbę elementów w buforze, które będą otrzymywać wartości rejestru. Jeśli wartość `regCount` jest za mała dla liczby rejestrów wskazanych przez maskę, te rejestry o wyższych numerach zostaną obcięte z zestawu. Jeśli wartość `regCount` jest zbyt duża, nieużywane elementy `regBuffer` będą niemodyfikowane.  
+ Rozmiar tablicy powinien być równy liczbie bitów ustawionych na jeden w masce bitowej. Parametr `regCount` określa liczbę elementów w buforze, które otrzymają wartości rejestru. Jeśli `regCount` wartość jest zbyt mała dla liczby rejestrów wskazanych przez maskę, wyższe numerowane rejestry zostaną obcięty z zestawu. Jeśli `regCount` wartość jest zbyt duża, `regBuffer` nieużywane elementy będą niezmodyfikowane.  
   
- Jeśli Maska bitów określa rejestr, który jest niedostępny, `GetRegisters` zwraca nieokreśloną wartość dla tego rejestru.  
+ Jeśli maska bitowa określa rejestr, `GetRegisters` który jest niedostępny, zwraca nieokreśloną wartość dla tego rejestru.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug. idl, CorDebug. h  
+ **Nagłówek:** CorDebug.idl, CorDebug.h  
   
- **Biblioteka:** CorGuids. lib  
+ **Biblioteka:** CorGuids.lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [ICorDebugRegisterSet, interfejs](icordebugregisterset-interface.md)
-- [ICorDebugRegisterSet2, interfejs](icordebugregisterset2-interface.md)
+- [ICorDebugRegisterSet — Interfejs](icordebugregisterset-interface.md)
+- [ICorDebugRegisterSet2 — Interfejs](icordebugregisterset2-interface.md)

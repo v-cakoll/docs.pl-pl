@@ -15,61 +15,61 @@ helpviewer_keywords:
 ms.assetid: 25ca7623-5a55-4f09-b44a-36b03d142278
 topic_type:
 - apiref
-ms.openlocfilehash: 82302124828a2dab73b445128d7d847e112edd36
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 15b58e01d4ce99f19f510c760819471b84380b45
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448216"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177756"
 ---
 # <a name="imetadataassemblyimportgetexportedtypeprops-method"></a>IMetaDataAssemblyImport::GetExportedTypeProps — Metoda
-Pobiera zestaw właściwości wyeksportowanego typu z określonym podpisem metadanych.  
+Pobiera zestaw właściwości eksportowanego typu z określonym podpisem metadanych.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
 HRESULT GetExportedTypeProps (  
-    [in]  mdExportedType    mdct,   
-    [out] LPWSTR            szName,   
-    [in]  ULONG             cchName,   
-    [out] ULONG             *pchName,   
-    [out] mdToken           *ptkImplementation,   
-    [out] mdTypeDef         *ptkTypeDef,   
+    [in]  mdExportedType    mdct,
+    [out] LPWSTR            szName,
+    [in]  ULONG             cchName,
+    [out] ULONG             *pchName,
+    [out] mdToken           *ptkImplementation,
+    [out] mdTypeDef         *ptkTypeDef,
     [out] DWORD             *pdwExportedTypeFlags  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `mdct`  
- podczas `mdExportedType` token metadanych reprezentujący wyeksportowany typ.  
+ [w] Token `mdExportedType` metadanych reprezentujący eksportowany typ.  
   
  `szName`  
- określoną Nazwa wyeksportowanego typu.  
+ [na zewnątrz] Nazwa wyeksportowanego typu.  
   
  `cchName`  
- podczas Rozmiar, w postaci znaków dwubajtowych, `szName`.  
+ [w] Rozmiar, w szerokich `szName`znaków, z .  
   
  `pchName`  
- określoną Liczba znaków dwubajtowych w rzeczywistości zwracanych w `szName`  
+ [na zewnątrz] Liczba szerokich znaków rzeczywiście zwróconych w`szName`  
   
  `ptkImplementation`  
- określoną `mdFile`, `mdAssemblyRef`lub `mdExportedType` token metadanych, który zawiera lub zezwala na dostęp do właściwości wyeksportowanego typu.  
+ [na zewnątrz] Token `mdFile` `mdAssemblyRef`, `mdExportedType` lub metadanych, który zawiera lub umożliwia dostęp do właściwości eksportowanego typu.  
   
  `ptkTypeDef`  
- określoną Wskaźnik do tokenu `mdTypeDef`, który reprezentuje typ w pliku.  
+ [na zewnątrz] Wskaźnik do `mdTypeDef` tokenu, który reprezentuje typ w pliku.  
   
  `pdwExportedTypeFlags`  
- określoną Wskaźnik do flag opisujących metadane zastosowane do wyeksportowanego typu. Wartość flag może być jedną lub większą liczbą wartości [CorTypeAttr —](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) .  
+ [na zewnątrz] Wskaźnik do flag, które opisują metadane zastosowane do eksportowanego typu. Wartość flag może być jedną lub kilkoma [wartościami CorTypeAttr.](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md)  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataAssemblyImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [IMetaDataAssemblyImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

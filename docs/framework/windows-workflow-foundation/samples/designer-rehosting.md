@@ -2,28 +2,28 @@
 title: Rehostowanie projektanta
 ms.date: 03/30/2017
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
-ms.openlocfilehash: f98b1823c74471c96f6d4b67ec47637bb0785d8f
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: b72e3450799db40988c8b99e4db3707de330d8ad
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715236"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182823"
 ---
 # <a name="designer-rehosting"></a>Rehostowanie projektanta
-Rehostowanie projektanta jest typowym scenariuszem, który odnosi się do hostingu kanwy projektowania przepływu pracy w aplikacji niestandardowej. Aplikacja hostingu większość osób zna program Visual Studio, jednak istnieje kilka scenariuszy, w których wyświetlanie projektanta przepływu pracy w aplikacji może być przydatne:  
+Ponowne hostowanie projektanta jest typowym scenariuszem, który odnosi się do hostowania kanwy projektu przepływu pracy wewnątrz aplikacji niestandardowej. Aplikacja hostingowa, z której większość osób jest zaznajomiona z programem Visual Studio, jednak istnieje wiele scenariuszy, w których wyświetlanie projektanta przepływu pracy w aplikacji może być przydatne:  
   
-- Monitorowanie aplikacji (umożliwienie użytkownikowi końcowemu wizualizacji procesu, a także danych środowiska uruchomieniowego dotyczących procesu, takich jak aktualnie aktywny stan, zagregowane dane czasu wykonywania lub inne informacje o wystąpieniu przepływu pracy).  
+- Monitorowanie aplikacji (umożliwiając użytkownikowi końcowemu wizualizowanie procesu, a także dane środowiska wykonawczego o procesie, takie jak aktualnie aktywny stan, zagregowane dane czasu wykonywania lub inne informacje o wystąpieniu przepływu pracy).  
   
-- Aplikacje, które umożliwiają użytkownikowi dostosowanie procesu przy użyciu ograniczonego zestawu działań.  
+- Aplikacje, które umożliwiają użytkownikowi dostosowanie procesu za pomocą ograniczonego zestawu działań.  
   
- Aby zapewnić obsługę tych typów aplikacji, Projektant przepływów pracy jest dostarczany wewnątrz .NET Framework i może być hostowany w aplikacji WPF lub w aplikacji WinForms z odpowiednim kodem hostingu WPF. Ten przykład ilustruje:  
+ Do obsługi tego typu aplikacji, projektant przepływu pracy jest dostarczany wewnątrz .NET Framework i może być obsługiwany wewnątrz aplikacji WPF lub w aplikacji WinForms z odpowiednim kodem hostingu WPF. W tym przykładzie pokazano:  
   
-- Rehostowanie projektanta WF.  
+- Ponowne hostowanie projektanta WF.  
   
-- Również przy użyciu narzędzia Hostowanie i siatki właściwości.  
+- Za pomocą rehosted przybornik i siatki właściwości, jak również.  
   
-## <a name="rehosting-the-designer"></a>Hostowanie projektanta  
- Ten przykład pokazuje, jak utworzyć układ WPF, aby zawierał projektanta, widoczny w poniższym układzie siatki (kod przybornika został pominięty w przypadku problemów z miejscem). Zwróć uwagę na nazwy obramowań zawierające projektanta i siatkę właściwości.  
+## <a name="rehosting-the-designer"></a>Ponowne hostowanie projektanta  
+ W tym przykładzie pokazano, jak utworzyć układ WPF zawierają projektanta, widoczne w następującym układzie siatki (kod przybornika pominięte dla kwestii miejsca). Zwróć uwagę na nazewnictwo obramowań, które zawierają siatkę projektanta i właściwości.  
   
 ```xaml  
 <Grid>  
@@ -40,7 +40,7 @@ Rehostowanie projektanta jest typowym scenariuszem, który odnosi się do hostin
 </Grid>  
 ```  
   
- Następnie przykład tworzy projektanta i kojarzy jego podstawową <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> i <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> z odpowiednim kontenerem w interfejsie użytkownika. W poniższym przykładzie znajduje się kilka dodatkowych wierszy kodu, które stanowią objaśnienie niektórych wyjaśnień. Wywołanie <xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A> jest wymagane do skojarzenia domyślnego projektanta działań dla działań dostarczonych z .NET Framework. <xref:System.Activities.Presentation.WorkflowDesigner.Load%2A> jest wywoływana, aby przekazać element WF do edycji. Na koniec <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> (główna Kanwa) i <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> (siatka właściwości) są umieszczane na powierzchni interfejsu użytkownika.  
+ Następnie przykład tworzy projektanta i kojarzy jego podstawowy <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> i <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> z odpowiednim kontenerem w interfejsie użytkownika. Istnieje kilka dodatkowych wierszy kodu w poniższym przykładzie, które zasługują na pewne wyjaśnienie. Wywołanie <xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A> jest wymagane do skojarzenia domyślnych projektantów działań dla działań dostarczanych z programem .NET Framework. <xref:System.Activities.Presentation.WorkflowDesigner.Load%2A>jest wywoływana do przekazania w elemencie WF do edycji. Na koniec <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> (podstawowa kanwa) i <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> (siatka właściwości) są umieszczane na powierzchni interfejsu użytkownika.  
   
 ```csharp  
 protected override void OnInitialized(EventArgs e)  
@@ -57,8 +57,8 @@ protected override void OnInitialized(EventArgs e)
 }  
 ```  
   
-## <a name="using-the-rehosted-toolbox"></a>Korzystanie z przybornika przehostowanego  
- Ten przykład używa wbudowanej kontrolki przybornika w języku XAML. Należy zauważyć, że w kodzie, jeden może przekazać typ do konstruktora <xref:System.Activities.Presentation.Toolbox.ToolboxItemWrapper>.  
+## <a name="using-the-rehosted-toolbox"></a>Korzystanie z przybornika hostowanego ponownie  
+ W tym przykładzie użyto kontroli zestawu narzędzi rehosted deklaratywnie w języku XAML. Należy zauważyć, że w kodzie <xref:System.Activities.Presentation.Toolbox.ToolboxItemWrapper> można przekazać typ do konstruktora.  
   
 ```xaml  
 <!-- Copyright (c) Microsoft Corporation. All rights reserved-->  
@@ -112,19 +112,19 @@ protected override void OnInitialized(EventArgs e)
 </Window>  
 ```  
   
-#### <a name="using-the-sample"></a>Korzystanie z przykładu  
+#### <a name="using-the-sample"></a>Korzystanie z próbki  
   
-1. Otwórz rozwiązanie DesignerRehosting. sln w programie Visual Studio 2010.  
+1. Otwórz rozwiązanie DesignerRehosting.sln w programie Visual Studio 2010.  
   
 2. Naciśnij klawisz F5, aby skompilować i uruchomić aplikację.  
   
-3. Aplikacja WPF zaczyna się od zahostowanego projektanta.  
+3. Aplikacja WPF rozpoczyna się od projektanta rehosted.  
   
 > [!IMPORTANT]
-> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
->   
+> Próbki mogą być już zainstalowane na komputerze. Przed kontynuowaniem sprawdź następujący (domyślny) katalog.  
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
->   
+>
+> Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) Przykłady dla platformy .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\DesignerRehosting\Basic`

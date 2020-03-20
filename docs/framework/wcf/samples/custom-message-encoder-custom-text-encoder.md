@@ -2,57 +2,57 @@
 title: 'Niestandardowy koder komunikatów: Niestandardowy koder tekstu'
 ms.date: 03/30/2017
 ms.assetid: 68ff5c74-3d33-4b44-bcae-e1d2f5dea0de
-ms.openlocfilehash: ae9d7f3d24e70c5cc74378eaaaa224910ada8d25
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 88aeeb4f1d09795b768441d2a572d959f27e0226
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347943"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79145114"
 ---
 # <a name="custom-message-encoder-custom-text-encoder"></a>Niestandardowy koder komunikatów: Niestandardowy koder tekstu
 
-W tym przykładzie przedstawiono sposób implementacji niestandardowego kodera komunikatów tekstowych przy użyciu Windows Communication Foundation (WCF).
+W tym przykładzie pokazano, jak zaimplementować niestandardowy koder wiadomości tekstowych przy użyciu programu Windows Communication Foundation (WCF).
 
 > [!WARNING]
-> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).
-> 
+> Próbki mogą być już zainstalowane na komputerze. Przed kontynuowaniem sprawdź następujący (domyślny) katalog.
+>
 > `<InstallDrive>:\WF_WCF_Samples`
-> 
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.
-> 
+>
+> Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) Przykłady dla platformy .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Text`
 
-<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> WCF obsługuje tylko kodowania Unicode UTF-8, UTF-16 i big-endian. Koder niestandardowej wiadomości tekstowej w tym przykładzie obsługuje wszystkie kodowania znaków obsługiwane przez platformę, które mogą być wymagane w celu współdziałania. Przykład składa się z programu konsoli klienta (exe), biblioteki usług (. dll) hostowanej przez Internet Information Services (IIS) i biblioteki kodera wiadomości tekstowych (. dll). Usługa implementuje kontrakt definiujący wzorzec komunikacji żądanie-odpowiedź. Kontrakt jest definiowany przez interfejs `ICalculator`, który udostępnia operacje matematyczne (Dodawanie, odejmowanie, mnożenie i dzielenie). Klient wykonuje synchroniczne żądania do danej operacji matematycznej, a usługa zwraca wynik. Zarówno klient, jak i usługa używają `CustomTextMessageEncoder` zamiast domyślnej <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>.
+WCF <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> obsługuje tylko kodowania UTF-8, UTF-16 i big-endian Unicode. Koder niestandardowych wiadomości tekstowych w tym przykładzie obsługuje wszystkie kodowania znaków obsługiwanych przez platformę, które mogą być wymagane do współdziałania. Przykład składa się z programu konsoli klienta (exe), biblioteki usług (dll) hostowanego przez internetowe usługi informacyjne (IIS) oraz biblioteki kodera wiadomości tekstowych (.dll). Usługa implementuje kontrakt, który definiuje wzorzec komunikacji żądanie odpowiedź. Kontrakt jest zdefiniowany `ICalculator` przez interfejs, który udostępnia operacje matematyczne (Dodaj, Odejmij, Mnądko i Podziel). Klient sprawia, że synchroniczne żądania do danej operacji matematycznej i odpowiedzi usługi z wynikiem. Zarówno klient, jak `CustomTextMessageEncoder` i usługa używają <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>zamiast domyślnego .
 
-Implementacja kodera niestandardowego składa się z fabryki kodera komunikatów, kodera komunikatów, elementu powiązania kodowania komunikatów i programu obsługi konfiguracji, a następnie ilustruje następujące kwestie:
+Implementacja niestandardowego kodera składa się z fabryki kodera wiadomości, kodera wiadomości, elementu wiązania kodującego wiadomości i programu obsługi konfiguracji i pokazuje, co następuje:
 
-- Kompilowanie kodera niestandardowego i fabryki kodera.
+- Tworzenie niestandardowego znaudera i fabryki kodera.
 
-- Tworzenie elementu powiązania dla kodera niestandardowego.
+- Tworzenie elementu wiązania dla kodera niestandardowego.
 
-- Używanie konfiguracji niestandardowego powiązania do integrowania niestandardowych elementów powiązania.
+- Przy użyciu konfiguracji wiązania niestandardowego do integracji elementów wiązania niestandardowego.
 
-- Opracowywanie niestandardowego programu obsługi konfiguracji w celu zezwolenia na konfigurację pliku niestandardowego powiązania.
+- Tworzenie niestandardowego programu obsługi konfiguracji, aby umożliwić konfigurację pliku niestandardowego elementu wiązania.
 
-## <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład
+## <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić próbkę
 
-1. Zainstaluj ASP.NET 4,0 przy użyciu następującego polecenia.
+1. Zainstaluj ASP.NET 4.0 za pomocą następującego polecenia.
 
     ```console
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable
     ```
 
-2. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+2. Upewnij się, że wykonano [procedurę jednorazowej instalacji dla przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
-3. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+3. Aby utworzyć rozwiązanie, postępuj zgodnie z instrukcjami w [tworzeniu przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
-4. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+4. Aby uruchomić próbkę w konfiguracji z jednym lub krzyżowym komputerem, postępuj zgodnie z instrukcjami w [programie Uruchamianie przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
-## <a name="message-encoder-factory-and-the-message-encoder"></a>Fabryka koderów komunikatów i koder komunikatów
+## <a name="message-encoder-factory-and-the-message-encoder"></a>Fabryka kodera wiadomości i koder wiadomości
 
-Gdy zostanie otwarty <xref:System.ServiceModel.ServiceHost> lub kanał klienta, składnik czasu projektowania `CustomTextMessageBindingElement` tworzy `CustomTextMessageEncoderFactory`. Fabryka tworzy `CustomTextMessageEncoder`. Koder komunikatów działa zarówno w trybie przesyłania strumieniowego, jak i w trybie buforowanym. Używa <xref:System.Xml.XmlReader> i <xref:System.Xml.XmlWriter> do odczytu i zapisu wiadomości odpowiednio. W przeciwieństwie do zoptymalizowanych czytników XML i autorów programu WCF, które obsługują tylko UTF-8, UTF-16 i big-endian Unicode, te czytelnicy i autorzy obsługują wszystkie kodowanie obsługiwane przez platformę.
+Po <xref:System.ServiceModel.ServiceHost> otwarciu kanału klienta składnik czasu `CustomTextMessageBindingElement` projektowania `CustomTextMessageEncoderFactory`tworzy plik . Fabryka tworzy `CustomTextMessageEncoder`plik . Koder wiadomości działa zarówno w trybie przesyłania strumieniowego, jak i w trybie buforowanym. Używa <xref:System.Xml.XmlReader> i <xref:System.Xml.XmlWriter> do odczytu i zapisu wiadomości odpowiednio. W przeciwieństwie do zoptymalizowanych czytników XML i modułów zapisujących WCF, które obsługują tylko UTF-8, UTF-16 i big-endian Unicode, te czytniki i moduły zapisujące obsługują wszystkie kodowania obsługiwane przez platformę.
 
-Poniższy przykład kodu przedstawia CustomTextMessageEncoder.
+Poniższy przykład kodu pokazuje Koder CustomTextMessageEn.
 
 ```csharp
 public class CustomTextMessageEncoder : MessageEncoder
@@ -80,7 +80,7 @@ public class CustomTextMessageEncoder : MessageEncoder
 
     public override string MediaType
     {
-        get 
+        get
         {
             return factory.MediaType;
         }
@@ -88,14 +88,14 @@ public class CustomTextMessageEncoder : MessageEncoder
 
     public override MessageVersion MessageVersion
     {
-        get 
+        get
         {
             return this.factory.MessageVersion;
         }
     }
 
     public override Message ReadMessage(ArraySegment<byte> buffer, BufferManager bufferManager, string contentType)
-    {   
+    {
         byte[] msgContents = new byte[buffer.Count];
         Array.Copy(buffer.Array, buffer.Offset, msgContents, 0, msgContents.Length);
         bufferManager.ReturnBuffer(buffer.Array);
@@ -138,7 +138,7 @@ public class CustomTextMessageEncoder : MessageEncoder
 }
 ```
 
-Poniższy przykład kodu pokazuje, jak utworzyć fabrykę kodera komunikatów.
+W poniższym przykładzie kodu pokazano, jak utworzyć fabrykę kodera wiadomości.
 
 ```csharp
 public class CustomTextMessageEncoderFactory : MessageEncoderFactory
@@ -159,16 +159,16 @@ public class CustomTextMessageEncoderFactory : MessageEncoderFactory
 
     public override MessageEncoder Encoder
     {
-        get 
-        { 
+        get
+        {
             return this.encoder;
         }
     }
 
     public override MessageVersion MessageVersion
     {
-        get 
-        { 
+        get
+        {
             return this.version;
         }
     }
@@ -191,15 +191,15 @@ public class CustomTextMessageEncoderFactory : MessageEncoderFactory
 }
 ```
 
-## <a name="message-encoding-binding-element"></a>Element powiązania kodowania komunikatów
+## <a name="message-encoding-binding-element"></a>Element wiązania kodowania wiadomości
 
-Elementy powiązania umożliwiają konfigurację stosu wykonawczego programu WCF. Aby użyć niestandardowego kodera komunikatów w aplikacji WCF, wymagany jest element powiązania, który tworzy fabrykę kodera komunikatów z odpowiednimi ustawieniami na odpowiednim poziomie w stosie czasu wykonywania.
+Elementy wiązania umożliwiają konfigurację stosu w czasie wykonywania WCF. Aby użyć kodera wiadomości niestandardowe w aplikacji WCF, element wiązania jest wymagane, który tworzy fabrykę kodera wiadomości z odpowiednimi ustawieniami na odpowiednim poziomie w stosie w czasie wykonywania.
 
-`CustomTextMessageBindingElement` pochodzi od klasy bazowej <xref:System.ServiceModel.Channels.BindingElement> i dziedziczy z klasy <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>. Dzięki temu inne składniki usługi WCF mogą rozpoznać ten element powiązania jako element powiązania kodowania komunikatów. Implementacja <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A> zwraca wystąpienie pasującej fabryki kodera komunikatów z odpowiednimi ustawieniami.
+Pochodzi `CustomTextMessageBindingElement` z klasy <xref:System.ServiceModel.Channels.BindingElement> podstawowej i dziedziczy z <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> klasy. Dzięki temu inne składniki WCF rozpoznać ten element wiązania jako element wiązania kodowania wiadomości. Implementacja <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A> zwraca wystąpienie pasujące fabryki kodera komunikatów z odpowiednimi ustawieniami.
 
-`CustomTextMessageBindingElement` uwidacznia ustawienia dla `MessageVersion`, `ContentType`i `Encoding` przez właściwości. Koder obsługuje zarówno wersje Soap11Addressing, jak i Soap12Addressing1. Wartość domyślna to Soap11Addressing1. Wartość domyślna `ContentType` to "text/xml". Właściwość `Encoding` umożliwia ustawienie wartości żądanego kodowania znaków. Przykładowy klient i usługa używają kodowania znaków ISO-8859-1 (Latin1), które nie jest obsługiwane przez <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> WCF.
+Udostępnia `CustomTextMessageBindingElement` ustawienia dla `MessageVersion` `ContentType`, `Encoding` i za pośrednictwem właściwości. Koder obsługuje zarówno soap11Addressing i Soap12Addressing1 wersje. Wartość domyślna to Soap11Addressing1. Domyślną wartością `ContentType` jest "text/xml". Właściwość `Encoding` umożliwia ustawienie wartości kodowania żądanych znaków. Przykładowy klient i usługa używa kodowania znaków ISO-8859-1 (Latin1), które <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> nie jest obsługiwane przez WCF.
 
-Poniższy kod pokazuje, jak programowo utworzyć powiązanie przy użyciu niestandardowego kodera wiadomości tekstowych.
+Poniższy kod pokazuje, jak programowo utworzyć powiązanie przy użyciu kodera niestandardowych wiadomości tekstowych.
 
 ```csharp
 ICollection<BindingElement> bindingElements = new List<BindingElement>();
@@ -210,32 +210,32 @@ bindingElements.Add(httpBindingElement);
 CustomBinding binding = new CustomBinding(bindingElements);
 ```
 
-## <a name="adding-metadata-support-to-the-message-encoding-binding-element"></a>Dodawanie obsługi metadanych do elementu powiązania kodowania komunikatu
+## <a name="adding-metadata-support-to-the-message-encoding-binding-element"></a>Dodawanie obsługi metadanych do elementu wiązania kodowania wiadomości
 
-Każdy typ, który pochodzi od <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> jest odpowiedzialny za aktualizowanie wersji powiązania protokołu SOAP w dokumencie WSDL wygenerowanym dla usługi. Jest to realizowane przez implementację metody `ExportEndpoint` w interfejsie <xref:System.ServiceModel.Description.IWsdlExportExtension>, a następnie zmodyfikowanie wygenerowanego WSDL. W tym przykładzie `CustomTextMessageBindingElement` używa logiki eksportu WSDL z `TextMessageEncodingBindingElement`.
+Każdy typ, który <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> pochodzi od jest odpowiedzialny za aktualizowanie wersji powiązania PROTOKOŁU SOAP w dokumencie WSDL wygenerowanym dla usługi. Odbywa się to przez `ExportEndpoint` implementowanie <xref:System.ServiceModel.Description.IWsdlExportExtension> metody w interfejsie, a następnie modyfikowanie wygenerowanego WSDL. W tym przykładzie `CustomTextMessageBindingElement` używa logiki eksportu WSDL z . `TextMessageEncodingBindingElement`
 
-W tym przykładzie konfiguracja klienta jest konfigurowana ręcznie. Nie można użyć Svcutil. exe do wygenerowania konfiguracji klienta, ponieważ `CustomTextMessageBindingElement` nie eksportuje potwierdzenia zasad, aby opisać jego zachowanie. Należy zwykle zaimplementować interfejs <xref:System.ServiceModel.Description.IPolicyExportExtension> w elemencie powiązania niestandardowego, aby wyeksportować potwierdzenie zasad niestandardowych, który opisuje zachowanie lub możliwość implementowaną przez element powiązania. Aby zapoznać się z przykładem sposobu eksportowania potwierdzenia zasad dla elementu niestandardowego powiązania, zapoznaj się z przykładem [transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) .
+W tym przykładzie konfiguracja klienta jest ręcznie skonfigurowana. Nie można użyć programu Svcutil.exe do `CustomTextMessageBindingElement` wygenerowania konfiguracji klienta, ponieważ nie eksportuje potwierdzenia zasad w celu opisania jego zachowania. Ogólnie należy zaimplementować <xref:System.ServiceModel.Description.IPolicyExportExtension> interfejs na niestandardowy element wiązania do eksportu potwierdzenia zasad niestandardowych, który opisuje zachowanie lub możliwości zaimplementowane przez element wiązania. Na przykład jak wyeksportować asercja zasad dla niestandardowego elementu wiązania, zobacz [Transport: Przykład UDP.](../../../../docs/framework/wcf/samples/transport-udp.md)
 
-## <a name="message-encoding-binding-configuration-handler"></a>Procedura obsługi konfiguracji powiązania kodowania komunikatów
-W poprzedniej sekcji pokazano, jak programowo używać niestandardowego kodera wiadomości tekstowych. `CustomTextMessageEncodingBindingSection` implementuje procedurę obsługi konfiguracji, która pozwala określić użycie niestandardowego kodera komunikatów tekstowych w pliku konfiguracji. Klasa `CustomTextMessageEncodingBindingSection` dziedziczy z klasy <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. Właściwość `BindingElementType` informuje system konfiguracji typu elementu powiązania, który ma zostać utworzony dla tej sekcji.
+## <a name="message-encoding-binding-configuration-handler"></a>Program obsługi konfiguracji powiązania kodowania komunikatów
+W poprzedniej sekcji pokazano, jak programowo używać niestandardowego kodera wiadomości tekstowych. Implementuje `CustomTextMessageEncodingBindingSection` program obsługi konfiguracji, który pozwala określić użycie kodera niestandardowych wiadomości tekstowych w pliku konfiguracji. Klasa `CustomTextMessageEncodingBindingSection` pochodzi od <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> klasy. Właściwość `BindingElementType` informuje system konfiguracji typu elementu wiązania do utworzenia dla tej sekcji.
 
-Wszystkie ustawienia zdefiniowane przez `CustomTextMessageBindingElement` są uwidocznione jako właściwości w `CustomTextMessageEncodingBindingSection`. <xref:System.Configuration.ConfigurationPropertyAttribute> pomaga w mapowaniu atrybutów elementu konfiguracji do właściwości i ustawiania wartości domyślnych, jeśli atrybut nie jest ustawiony. Po załadowaniu wartości z konfiguracji i zastosowaniu ich do właściwości typu, wywoływana jest metoda <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A>, która konwertuje właściwości na konkretne wystąpienie elementu powiązania.
+Wszystkie ustawienia zdefiniowane `CustomTextMessageBindingElement` przez są widoczne jako `CustomTextMessageEncodingBindingSection`właściwości w . Asysty <xref:System.Configuration.ConfigurationPropertyAttribute> w mapowaniu atrybutów elementu konfiguracji do właściwości i ustawiania wartości domyślnych, jeśli atrybut nie jest ustawiony. Po wartości z konfiguracji są ładowane i stosowane do <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A> właściwości typu, metoda jest wywoływana, która konwertuje właściwości na konkretne wystąpienie elementu wiązania.
 
-Ta procedura obsługi konfiguracji mapuje do następującej reprezentacji w pliku App. config lub Web. config dla usługi lub klienta.
+Ten program obsługi konfiguracji mapuje do następującej reprezentacji w app.config lub Web.config dla usługi lub klienta.
 
 ```xml
 <customTextMessageEncoding encoding="utf-8" contentType="text/xml" messageVersion="Soap11Addressing1" />
 ```
 
-Przykład używa kodowania ISO-8859-1.
+W przykładzie użyto kodowania ISO-8859-1.
 
-Aby użyć tego programu obsługi konfiguracji, należy go zarejestrować przy użyciu następującego elementu konfiguracji.
+Aby użyć tego programu obsługi konfiguracji musi być zarejestrowany przy użyciu następującego elementu konfiguracji.
 
 ```xml
 <extensions>
     <bindingElementExtensions>
-        <add name="customTextMessageEncoding" type=" 
-Microsoft.ServiceModel.Samples.CustomTextMessageEncodingBindingSection, 
+        <add name="customTextMessageEncoding" type="
+Microsoft.ServiceModel.Samples.CustomTextMessageEncodingBindingSection,
                   CustomTextMessageEncoder" />
     </bindingElementExtensions>
 </extensions>

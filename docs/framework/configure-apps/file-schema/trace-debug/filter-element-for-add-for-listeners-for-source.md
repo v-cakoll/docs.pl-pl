@@ -1,5 +1,5 @@
 ---
-title: Element <filter> dla <add> <listeners> dla <source>
+title: <filter>Element <add> dla <listeners> dla<source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#filter
@@ -9,29 +9,29 @@ helpviewer_keywords:
 - <filter> element for <add> for <listeners> for <source>
 - filter element for <add> for <listeners> for <source>
 ms.assetid: 15808b80-4579-4c25-b385-178cfdf154ba
-ms.openlocfilehash: 766088b8a26ce3218031df74b193658ba8024280
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 0cb668782de263d5f784691f46cb8b74541d942b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088910"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153519"
 ---
-# <a name="filter-element-for-add-for-listeners-for-source"></a>\<> filtru elementu \<Dodaj > dla odbiorników \<> źródła \<
-Dodaje filtr do odbiornika w kolekcji `Listeners` dla źródła śledzenia.  
+# <a name="filter-element-for-add-for-listeners-for-source"></a>\<filtr> Element \<dodawania> dla \<> dla> \<źródłowych
+Dodaje filtr do odbiornika `Listeners` w kolekcji dla źródła śledzenia.  
 
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp;&nbsp;[ **\<system. diagnostics >** ](system-diagnostics-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<sources**](sources-element.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**Source**](source-element.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<odbiorników**](listeners-element-for-source.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<dodaj >** ](add-element-for-listeners-for-source.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<filter >**
+[**\<>konfiguracyjne**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<>system.diagnostics**](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<źródeł>**](sources-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<>źródłowe**](source-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<słuchacze>**](listeners-element-for-source.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<dodaj>**](add-element-for-listeners-for-source.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<>filtra**
 
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<filter   
-  type="traceFilterClassName"   
+<filter
+  type="traceFilterClassName"
   initializeData="data" />  
 ```  
   
@@ -42,8 +42,8 @@ Dodaje filtr do odbiornika w kolekcji `Listeners` dla źródła śledzenia.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`type`|Atrybut wymagany.<br /><br /> Określa typ filtru, który powinien dziedziczyć z klasy <xref:System.Diagnostics.TraceFilter>. Można użyć kwalifikowanej przestrzeni nazw typu, który odpowiada właściwości <xref:System.Type.FullName%2A> typu, lub można użyć w pełni kwalifikowanej nazwy typu, w tym informacji o zestawie, która odpowiada właściwości <xref:System.Type.AssemblyQualifiedName%2A>. Aby uzyskać informacje na temat w pełni kwalifikowanych nazw typów, zobacz [Określanie w pełni kwalifikowanych nazw typów](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
-|`initializeData`|Atrybut opcjonalny.<br /><br /> Ciąg przesłany do konstruktora dla określonej klasy filtru.|  
+|`type`|Atrybut wymagany.<br /><br /> Określa typ filtru, który powinien dziedziczyć z <xref:System.Diagnostics.TraceFilter> klasy. Można użyć nazwy kwalifikowanej obszaru nazw typu, która odpowiada <xref:System.Type.FullName%2A> właściwości typu, lub można użyć w pełni kwalifikowanej nazwy typu, <xref:System.Type.AssemblyQualifiedName%2A> w tym informacji o zestawie, która odpowiada właściwości. Aby uzyskać informacje o w pełni kwalifikowanych nazwach typów, zobacz [Określanie w pełni kwalifikowanych nazw typów](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|`initializeData`|Atrybut opcjonalny.<br /><br /> Ciąg przekazany do konstruktora dla określonej klasy filtru.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -53,30 +53,30 @@ Dodaje filtr do odbiornika w kolekcji `Listeners` dla źródła śledzenia.
 |Element|Opis|  
 |-------------|-----------------|  
 |`configuration`|Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.|  
-|`system.diagnostics`|Określa detektory śledzenia, które zbierają, przechowują i rozsyłają komunikaty oraz poziom, w którym ustawiono przełącznik śledzenia.|  
+|`system.diagnostics`|Określa odbiorniki śledzenia, które zbierają, przechowują i rozsyłają komunikaty oraz poziom, na którym ustawiony jest przełącznik śledzenia.|  
 |`sources`|Zawiera źródła śledzenia, które inicjują komunikaty śledzenia.|  
-|`source`|Określa źródło śledzenia, które inicjuje komunikaty śledzenia.|  
-|`listeners`|Zawiera detektory, które zbierają, przechowują i rozsyłają komunikaty. Odbiorniki kierują dane wyjściowe śledzenia do odpowiedniego obiektu docelowego.|  
-|`add`|Dodaje odbiornik do kolekcji `Listeners` dla źródła śledzenia.|  
+|`source`|Określa źródło śledzenia, które inicjuje śledzenie komunikatów.|  
+|`listeners`|Zawiera odbiorniki, które zbierają, przechowują i rozsyłają wiadomości. Detektory kierują dane wyjściowe śledzenia do odpowiedniego obiektu docelowego.|  
+|`add`|Dodaje odbiornik do `Listeners` kolekcji dla źródła śledzenia.|  
   
 ## <a name="remarks"></a>Uwagi  
- Element `<filter>` musi być zawarty w elemencie `<add>` dla odbiornika źródła śledzenia, który określa typ odbiornika, a nie tylko nazwę odbiornika zdefiniowanego w [\<> sharedListeners](sharedlisteners-element.md). Jeśli odbiornik jest zdefiniowany w [\<sharedListeners >](sharedlisteners-element.md), filtr dla tego odbiornika musi być zdefiniowany w tym elemencie.  
+ Element `<filter>` musi być zawarty `<add>` w elemencie dla odbiornika źródła śledzenia, który określa typ odbiornika, a nie tylko nazwę odbiornika zdefiniowaną [ \<w sharedListeners>](sharedlisteners-element.md). Jeśli odbiornik jest zdefiniowany w [ \<sharedListeners>, ](sharedlisteners-element.md)filtr dla tego odbiornika musi być zdefiniowany w tym elemencie.  
   
- Ten element może być używany w pliku konfiguracji komputera (Machine. config) i w pliku konfiguracji aplikacji.  
+ Ten element może być używany w pliku konfiguracyjnym komputera (Machine.config) i pliku konfiguracji aplikacji.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak używać elementu `<filter>`, aby dodać filtr do `console` odbiornika w kolekcji `Listeners` dla `myTraceSource`źródła śledzenia, określając poziom zdarzeń filtru jako `Error`.  
+ W poniższym przykładzie `<filter>` pokazano, jak użyć elementu, `console` aby `Listeners` dodać filtr `myTraceSource`do odbiornika w kolekcji dla źródła śledzenia, określając poziom zdarzenia filtru jako `Error`.  
   
 ```xml  
 <configuration>  
   <system.diagnostics>  
     <sources>  
-      <source name="myTraceSource" switchName="SourceSwitch"   
+      <source name="myTraceSource" switchName="SourceSwitch"
         switchType="System.Diagnostics.SourceSwitch"  >  
         <listeners>  
-          <add name="console"   
+          <add name="console"
             type="System.Diagnostics.ConsoleTraceListener" >  
-            <filter type="System.Diagnostics.EventTypeFilter"   
+            <filter type="System.Diagnostics.EventTypeFilter"
               initializeData="Error" />  
           </add>  
           <remove name="Default" />  
@@ -90,7 +90,7 @@ Dodaje filtr do odbiornika w kolekcji `Listeners` dla źródła śledzenia.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TraceListener>

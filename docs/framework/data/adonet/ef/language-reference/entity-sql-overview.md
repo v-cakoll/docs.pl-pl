@@ -2,26 +2,26 @@
 title: Przegląd języka Entity SQL
 ms.date: 03/30/2017
 ms.assetid: f0bb8120-e709-40a3-ac1e-5520dc47477d
-ms.openlocfilehash: e0f154ab2d9db1a1fdbaba8c72bc7e43ad71ee0b
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 880b81f2b6d4c4b893d28c919490f88dfb2a42e8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738487"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150379"
 ---
 # <a name="entity-sql-overview"></a>Przegląd języka Entity SQL
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] to język przypominający SQL, który umożliwia wykonywanie zapytań względem modeli koncepcyjnych w Entity Framework. Modele koncepcyjne reprezentują dane jako jednostki i relacje, a [!INCLUDE[esql](../../../../../../includes/esql-md.md)] umożliwiają wykonywanie zapytań dotyczących tych jednostek i relacji w formacie, który jest znany dla osób, które używały języka SQL.  
-      
- Entity Framework współpracuje z dostawcami danych specyficznymi dla magazynu w celu tłumaczenia ogólnych [!INCLUDE[esql](../../../../../../includes/esql-md.md)] na zapytania specyficzne dla magazynu. Dostawca EntityClient umożliwia wykonywanie polecenia [!INCLUDE[esql](../../../../../../includes/esql-md.md)] względem modelu jednostki i zwracanie bogatych typów danych, takich jak wyniki skalarne, zestawy wyników i wykresy obiektów. Podczas konstruowania obiektów <xref:System.Data.EntityClient.EntityCommand> można określić nazwę procedury składowanej lub tekst zapytania, przypisując [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ciąg zapytania do jego właściwości <xref:System.Data.EntityClient.EntityCommand.CommandText%2A?displayProperty=nameWithType>. <xref:System.Data.EntityClient.EntityDataReader> prezentuje wyniki wykonywania <xref:System.Data.EntityClient.EntityCommand> dla modelu EDM. Aby wykonać polecenie, które zwraca <xref:System.Data.EntityClient.EntityDataReader>, wywołaj <xref:System.Data.EntityClient.EntityCommand.ExecuteReader%2A>.  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)]jest językiem sql-like, który umożliwia wykonywanie zapytań o modele koncepcyjne w ramach encji. Modele koncepcyjne reprezentują dane jako jednostki i relacje i [!INCLUDE[esql](../../../../../../includes/esql-md.md)] umożliwia wykonywanie zapytań o te jednostki i relacje w formacie znanym osobom, które korzystały z języka SQL.  
+
+ Entity Framework współpracuje z dostawcami danych [!INCLUDE[esql](../../../../../../includes/esql-md.md)] specyficznych dla magazynu, aby przetłumaczyć ogólne na zapytania specyficzne dla magazynu. Dostawca EntityClient dostarcza sposób wykonania [!INCLUDE[esql](../../../../../../includes/esql-md.md)] polecenia względem modelu jednostki i zwraca bogate typy danych, w tym wyniki skalarne, zestawy wyników i wykresy obiektów. Podczas konstruowania <xref:System.Data.EntityClient.EntityCommand> obiektów można określić nazwę procedury składowanej lub [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tekst kwerendy, przypisując ciąg zapytania do jego <xref:System.Data.EntityClient.EntityCommand.CommandText%2A?displayProperty=nameWithType> właściwości. Ujawnia <xref:System.Data.EntityClient.EntityDataReader> wyniki wykonywania <xref:System.Data.EntityClient.EntityCommand> przeciwko EDM. Aby wykonać polecenie, <xref:System.Data.EntityClient.EntityDataReader>które <xref:System.Data.EntityClient.EntityCommand.ExecuteReader%2A>zwraca polecenie , call .  
   
- Oprócz dostawcy EntityClient Entity Framework umożliwia korzystanie z [!INCLUDE[esql](../../../../../../includes/esql-md.md)] do wykonywania zapytań względem modelu koncepcyjnego i zwracania danych jako obiektów CLR z silną typem, które są wystąpieniami typów jednostek. Aby uzyskać więcej informacji, zobacz [Praca z obiektami](../working-with-objects.md).  
+ Oprócz dostawcy EntityClient entity Framework umożliwia wykonywanie [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zapytań względem modelu koncepcyjnego i zwracanie danych jako silnie typizowane obiekty CLR, które są wystąpieniami typów jednostek. Aby uzyskać więcej informacji, zobacz [Praca z obiektami](../working-with-objects.md).  
   
- Ta sekcja zawiera informacje o pojęciach dotyczących [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
+ Ta sekcja zawiera informacje [!INCLUDE[esql](../../../../../../includes/esql-md.md)]koncepcyjne na temat .  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Jak jednostka SQL różni się od języka Transact-SQL](how-entity-sql-differs-from-transact-sql.md)  
+ [Czym język Entity SQL różni się od języka Transact-SQL](how-entity-sql-differs-from-transact-sql.md)  
   
- [Szybkie odwołanie do jednostki SQL](entity-sql-quick-reference.md)  
+ [Szybkie odwołanie do języka Entity SQL](entity-sql-quick-reference.md)  
   
  [System typów](type-system-entity-sql.md)  
   
@@ -57,11 +57,11 @@ ms.locfileid: "73738487"
   
  [Semantyka porównania](comparison-semantics-entity-sql.md)  
   
- [Tworzenie zagnieżdżonych zapytań jednostki SQL](composing-nested-entity-sql-queries.md)  
+ [Tworzenie zagnieżdżonych zapytań w języku Entity SQL](composing-nested-entity-sql-queries.md)  
   
  [Typy strukturalne dopuszczające wartości Null](nullable-structured-types-entity-sql.md)  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Odwołanie do jednostki SQL](entity-sql-reference.md)
 - [Jednostki języka SQL](entity-sql-language.md)

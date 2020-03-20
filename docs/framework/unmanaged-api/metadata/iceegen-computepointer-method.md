@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b6b95c04-0f2c-4fcc-a8bc-3b1dcbdba731
 topic_type:
 - apiref
-ms.openlocfilehash: 01be6c30e16e4abdd6002fc8207b33a9c76a2eef
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9587bbe8f087fd9a51bba67492af1d5acb53ae4a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448745"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176100"
 ---
 # <a name="iceegencomputepointer-method"></a>ICeeGen::ComputePointer — Metoda
 Określa bufor dla określonej sekcji kodu.  
@@ -32,30 +32,30 @@ Określa bufor dla określonej sekcji kodu.
 ```cpp  
 HRESULT ComputePointer (  
     [in]  HCEESECTION  section,  
-    [in]  ULONG        RVA,   
+    [in]  ULONG        RVA,
     [out] UCHAR        **lpBuffer  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `section`  
- podczas Sekcja kodu, dla której ma zostać zwrócony bufor.  
+ [w] Sekcja kodu, dla której ma być zwracany bufor.  
   
  `RVA`  
- podczas Względny adres wirtualny metody, dla której ma zostać pobrany wskaźnik.  
+ [w] Względny adres wirtualny metody, dla której można uzyskać wskaźnik.  
   
  `lpBuffer`  
- określoną Wskaźnik do zwróconego buforu.  
+ [na zewnątrz] Wskaźnik do zwróconego buforu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [ICeeGen, interfejs](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [ICeeGen — Interfejs](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

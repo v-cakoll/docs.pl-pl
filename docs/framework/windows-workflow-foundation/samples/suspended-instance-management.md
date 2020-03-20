@@ -2,85 +2,85 @@
 title: Zarządzanie wstrzymanymi wystąpieniami
 ms.date: 03/30/2017
 ms.assetid: f5ca3faa-ba1f-4857-b92c-d927e4b29598
-ms.openlocfilehash: 3f1f4f8edcbe0e05067d3ca739ef3d5f4fe4d798
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 784ec3cdda8eedb188c3c776ed412ea40baf37ea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715943"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182788"
 ---
 # <a name="suspended-instance-management"></a>Zarządzanie wstrzymanymi wystąpieniami
-Ten przykład pokazuje, jak zarządzać wystąpieniami przepływów pracy, które zostały zawieszone.  Domyślna akcja dla <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> jest `AbandonAndSuspend`. Oznacza to, że domyślnie Nieobsłużone wyjątki zgłaszane z wystąpienia przepływu pracy hostowanego w <xref:System.ServiceModel.WorkflowServiceHost> spowodują, że wystąpienie zostanie usunięte z pamięci (porzucone) i trwałe/utrwalone wersje wystąpienia zostanie oznaczone jako wstrzymane. Nie będzie można uruchomić wstrzymanego wystąpienia przepływu pracy, dopóki nie zostanie ono zawieszone.
+W tym przykładzie pokazano, jak zarządzać wystąpień przepływu pracy, które zostały zawieszone.  Domyślną <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> akcją `AbandonAndSuspend`jest . Oznacza to, że domyślnie nieobsługiwane wyjątki generowane <xref:System.ServiceModel.WorkflowServiceHost> z wystąpienia przepływu pracy hostowane w spowoduje wystąpienie, które mają być usuwane z pamięci (porzucone) i trwałe/utrwalone wersji wystąpienia, które mają być oznaczone jako zawieszone. Wystąpienie zawieszonego przepływu pracy nie będzie można uruchomić, dopóki nie zostanie wstrzymane.
 
- Przykład pokazuje, jak można zaimplementować narzędzie wiersza polecenia, aby wykonać zapytanie o wstrzymane wystąpienia oraz jak dać użytkownikowi możliwość wznowienia lub zakończenia wystąpienia. W tym przykładzie usługa przepływu pracy celowo zgłasza wyjątek, powodując jego zawieszenie. Narzędzia wiersza polecenia można następnie użyć, aby wykonać zapytanie dotyczące wystąpienia, a następnie wznowić lub przerwać wystąpienie.
+ Przykład pokazuje, jak narzędzie wiersza polecenia można zaimplementować do wykonywania zapytań o zawieszone wystąpienia i jak dać użytkownikowi możliwość wznowienia lub zakończenia wystąpienia. W tym przykładzie usługa przepływu pracy celowo zgłasza wyjątek, powodując, że zostanie zawieszony. Narzędzie wiersza polecenia może następnie służyć do wykonywania kwerend dla wystąpienia, a następnie wznawiania lub zakończenia wystąpienia.
 
-## <a name="demonstrates"></a>Przedstawia
- <xref:System.ServiceModel.WorkflowServiceHost> z <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> i <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> w Windows Workflow Foundation (WF).
+## <a name="demonstrates"></a>Demonstracje
+ <xref:System.ServiceModel.WorkflowServiceHost>z <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> i w Windows Workflow Foundation (WF).
 
 ## <a name="discussion"></a>Dyskusji
- Narzędzie wiersza polecenia zaimplementowane w tym przykładzie jest specyficzne dla implementacji magazynu wystąpień SQL, która jest dostarczana w [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Jeśli masz niestandardową implementację magazynu wystąpień, możesz dostosować to narzędzie, zastępując implementacje `WorkflowInstanceCommand` w przykładzie z implementacjami specyficznymi dla Twojego magazynu wystąpień.
+ Narzędzie wiersza polecenia zaimplementowane w tym przykładzie jest [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]specyficzne dla implementacji magazynu wystąpień SQL, która jest dostarczana w programie . Jeśli masz niestandardową implementację magazynu wystąpień, możesz dostosować `WorkflowInstanceCommand` to narzędzie, zastępując implementacje w przykładzie implementacjami specyficznymi dla magazynu wystąpień.
 
- Podana implementacja uruchamia polecenia SQL względem magazynu wystąpień SQL bezpośrednio w celu wyświetlenia listy wstrzymanych wystąpień i opiera się na <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> dodane do <xref:System.ServiceModel.WorkflowServiceHost> w celu wznowienia lub zakończenia wystąpień.
+ Podana implementacja uruchamia polecenia SQL względem magazynu wystąpień SQL bezpośrednio do <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> listy zawieszonych wystąpień i opiera się na dodane <xref:System.ServiceModel.WorkflowServiceHost> do w celu wznowienia lub zakończenia wystąpień.
 
-#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład
+#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić próbkę
 
-1. Ten przykład wymaga włączenia następujących składników systemu Windows:
+1. W tym przykładzie wymaga włączenia następujących składników systemu Windows:
 
-    1. Serwer usługi kolejkowania komunikatów (MSMQ) firmy Microsoft
+    1. Serwer kolejek komunikatów firmy Microsoft (MSMQ)
 
     2. SQL Server Express
 
-2. Skonfiguruj bazę danych SQL Server.
+2. Konfigurowanie bazy danych programu SQL Server.
 
-    1. W wierszu polecenia programu Visual Studio 2010 Uruchom polecenie "Setup. cmd" z przykładowego katalogu SuspendedInstanceManagement, który wykonuje następujące czynności:
+    1. Z wiersza polecenia programu Visual Studio 2010 uruchom polecenie "setup.cmd" z przykładowego katalogu SuspendedInstanceManagement, który wykonuje następujące czynności:
 
-        1. Tworzy bazę danych trwałości przy użyciu SQL Server Express. Jeśli baza danych trwałości już istnieje, zostanie usunięta i ponownie utworzona
+        1. Tworzy bazę danych trwałości przy użyciu programu SQL Server Express. Jeśli baza danych trwałości już istnieje, zostanie ona porzucona i ponownie utworzona
 
-        2. Konfiguruje bazę danych do trwałości.
+        2. Konfiguruje bazę danych dla trwałości.
 
-        3. Dodaje usługi IIS APPPOOL\DefaultAppPool i NT AUTHORITY\Network do roli InstanceStoreUsers, która została zdefiniowana podczas konfigurowania bazy danych do trwałości.
+        3. Dodaje usługi IIS APPPOOL\DefaultAppPool i NT AUTHORITY\Network Service do roli InstanceStoreUsers, która została zdefiniowana podczas konfigurowania bazy danych pod kątem trwałości.
 
 3. Skonfiguruj kolejkę usługi.
 
-    1. W programie Visual Studio 2010 kliknij prawym przyciskiem myszy projekt **SampleWorkflowApp** , a następnie kliknij pozycję **Ustaw jako projekt startowy**.
+    1. W programie Visual Studio 2010 kliknij prawym przyciskiem myszy projekt **SampleWorkflowApp** i kliknij polecenie **Ustaw jako projekt startowy**.
 
-    2. Kompiluj i uruchamiaj SampleWorkflowApp, naciskając klawisz **F5**. Spowoduje to utworzenie wymaganej kolejki.
+    2. Skompiluj i uruchom SampleWorkflowApp, naciskając **klawisz F5**. Spowoduje to utworzenie wymaganej kolejki.
 
-    3. Naciśnij klawisz **Enter** , aby zatrzymać SampleWorkflowApp.
+    3. Naciśnij **klawisz Enter,** aby zatrzymać plik SampleWorkflowApp.
 
-    4. Otwórz konsolę zarządzania komputerem, uruchamiając polecenie compmgmt. msc z poziomu wiersza polecenia.
+    4. Otwórz konsolę Zarządzanie komputerem, uruchamiając plik Compmgmt.msc w wierszu polecenia.
 
-    5. Rozwiń węzeł **usługi i aplikacje**, kolejkowanie **komunikatów**, **kolejki prywatne**.
+    5. Rozwiń **węzeł Usługi i aplikacje**, **Kolejkowanie wiadomości,** **Kolejki prywatne**.
 
-    6. Kliknij prawym przyciskiem myszy kolejkę **ReceiveTx** i wybierz pozycję **Właściwości**.
+    6. Kliknij prawym przyciskiem myszy kolejkę **ReceiveTx** i wybierz polecenie **Właściwości**.
 
-    7. Wybierz kartę **zabezpieczenia** i zezwól **wszystkim** na posiadanie uprawnień do **odbierania wiadomości**, **wglądu wiadomości**i **wysyłania wiadomości**.
+    7. Wybierz kartę **Zabezpieczenia** i **zezwalaj wszystkim** na uprawnienia do **odbierania wiadomości,** **wglądu**do wiadomości i **wysyłania wiadomości**.
 
-4. Teraz uruchom przykład.
+4. Teraz uruchom próbkę.
 
-    1. W programie Visual Studio 2010 ponownie uruchom projekt SampleWorkflowApp bez debugowania przez naciśnięcie **klawiszy CTRL + F5**. Dwa adresy punktów końcowych będą drukowane w oknie konsoli: jeden dla punktu końcowego aplikacji, a następnie inny z <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>. Tworzone jest wystąpienie przepływu pracy, a śledzenie rekordów dla tego wystąpienia pojawi się w oknie konsoli. Wystąpienie przepływu pracy spowoduje zgłoszenie wyjątku powodującego zawieszenie i przerwanie wystąpienia.
+    1. W programie Visual Studio 2010 uruchom ponownie projekt SampleWorkflowApp bez debugowania, naciskając **klawisze Ctrl+F5**. W oknie konsoli zostaną wydrukowane dwa adresy punktów końcowych: jeden dla <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>punktu końcowego aplikacji, a drugi z pliku . Następnie zostanie utworzone wystąpienie przepływu pracy, a rekordy śledzenia dla tego wystąpienia pojawią się w oknie konsoli. Wystąpienie przepływu pracy zda wyjątek powodujący zawieszenie i przerwanie wystąpienia.
 
-    2. Narzędzia wiersza polecenia można następnie użyć do wykonania dalszych czynności na każdym z tych wystąpień. Składnia argumentów wiersza polecenia jest następująca::
+    2. Narzędzie wiersza polecenia może następnie służyć do podejmowania dalszych działań na każdym z tych wystąpień. Składnia argumentów wiersza polecenia jest następująca::
 
          `SuspendedInstanceManagement -Command:[CommandName] -Server:[ServerName] -Database:[DatabaseName] -InstanceId:[InstanceId]`
 
-         Obsługiwane polecenia to: `Query`, `Resume`i `Terminate`.  Przełącznik InstanceId jest wymagany tylko w przypadku operacji `Resume` i `Terminate`.
+         Obsługiwane polecenia to: `Query`, `Resume`, `Terminate`i .  Przełącznik InstanceId jest wymagany `Resume` tylko `Terminate` dla i operacji.
 
-#### <a name="to-cleanup-optional"></a>Aby oczyścić (opcjonalnie)
+#### <a name="to-cleanup-optional"></a>Aby wyczyścić (opcjonalnie)
 
-1. Otwórz konsolę zarządzania komputerem, uruchamiając polecenie compmgmt. msc z wiersza polecenia `vs2010`.
+1. Otwórz konsolę Zarządzanie komputerem, uruchamiając plik `vs2010` Compmgmt.msc w wierszu polecenia.
 
-2. Rozwiń węzeł **usługi i aplikacje**, kolejkowanie **komunikatów**, **kolejki prywatne**.
+2. Rozwiń **węzeł Usługi i aplikacje**, **Kolejkowanie wiadomości,** **Kolejki prywatne**.
 
-3. Usuń kolejkę **ReceiveTx** .
+3. Usuń kolejkę **ReceiveTx.**
 
-4. Aby usunąć bazę danych trwałości, uruchom polecenie Oczyść. cmd.
+4. Aby usunąć bazę danych trwałości, uruchom cleanup.cmd.
 
 > [!IMPORTANT]
-> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
->   
+> Próbki mogą być już zainstalowane na komputerze. Przed kontynuowaniem sprawdź następujący (domyślny) katalog.  
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
->   
+>
+> Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) Przykłady dla platformy .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WF\Application\SuspendedInstanceManagement`

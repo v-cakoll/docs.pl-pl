@@ -15,47 +15,47 @@ helpviewer_keywords:
 ms.assetid: 2f09cd37-bf3a-4cc5-87b0-adc42a7eed31
 topic_type:
 - apiref
-ms.openlocfilehash: 1283abaf6b08af1d842d8fe4469f7f6c15e38ec5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1f40f27651d2d75cf2c3e4d7d1c21e1f47d402af
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136419"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178190"
 ---
 # <a name="getcorversion-function"></a>GetCORVersion — Funkcja
-Zwraca numer wersji środowiska uruchomieniowego języka wspólnego (CLR), który jest uruchomiony w bieżącym procesie.  
+Zwraca numer wersji środowiska wykonawczego języka wspólnego (CLR), który jest uruchomiony w bieżącym procesie.  
   
- Ta funkcja jest przestarzała w .NET Framework 4.  
+ Ta funkcja została przestarzała w .NET Framework 4.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
 HRESULT GetCORVersion (  
     [in] LPWSTR  pbuffer,  
-    [in]  DWORD   cchBuffer,   
+    [in]  DWORD   cchBuffer,
     [out] DWORD*  dwlength  
-);   
+);
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `pbuffer`  
- Wskaźnik do buforu, w którym środowisko CLR zwraca ciąg określający wersję środowiska uruchomieniowego, która jest aktualnie załadowana do procesu. Zwrócony ciąg przyjmuje ten sam formularz, co ciągi przesłane do [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md), na przykład "v 1.0.1216". Jeśli środowisko uruchomieniowe nie zostało jeszcze załadowane do procesu, funkcja zwróci odpowiednie informacje dotyczące katalogu dla najnowszej wersji środowiska uruchomieniowego zainstalowanej na komputerze.  
+ Wskaźnik do buforu, w którym CLR zwraca ciąg określający wersję środowiska wykonawczego, który jest aktualnie ładowany do procesu. Zwracany ciąg ma taką samą formę jak ciągi przekazywane do [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md), na przykład "v1.0.1216". Jeśli środowisko wykonawcze nie zostało jeszcze załadowane do procesu, funkcja zwraca odpowiednie informacje o katalogu dla najnowszej wersji środowiska wykonawczego zainstalowanego na komputerze.  
   
  `cchBuffer`  
- Liczba znaków (`WCHAR`s), które mogą być przechowywane w `pbuffer`.  
+ Liczba znaków (`WCHAR`s), które mogą `pbuffer`być przechowywane w .  
   
  `dwLength`  
- Wskaźnik do liczby znaków faktycznie zwróconych w `pbuffer`. Jeśli `pbuffer` jest wskaźnikiem typu null, środowisko uruchomieniowe zwraca E_POINTER. Jeśli liczba znaków jest większa niż długość `pbuffer`, środowisko uruchomieniowe zwróci wartość ERROR_INSUFFICIENT_BUFFER.  
+ Wskaźnik do liczby znaków faktycznie `pbuffer`zwróconych w . Jeśli `pbuffer` jest wskaźnikiem zerowym, środowisko wykonawcze zwraca E_POINTER. Jeśli liczba znaków jest większa niż `pbuffer` długość , środowisko wykonawcze zwraca ERROR_INSUFFICIENT_BUFFER.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE. h  
+ **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** MSCorEE. dll  
+ **Biblioteka:** Mscoree.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

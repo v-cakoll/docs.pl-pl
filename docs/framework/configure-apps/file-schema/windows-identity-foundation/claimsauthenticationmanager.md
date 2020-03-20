@@ -3,20 +3,20 @@ title: <claimsAuthenticationManager>
 ms.date: 03/30/2017
 ms.assetid: 6d30a450-6d13-4671-81a8-77e0204500c5
 author: BrucePerlerMS
-ms.openlocfilehash: c901daf4d442a206345301795c7a4bdc076329cd
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: a54fc2cea84bb9d08a9725d846fe38efd7b5475a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252088"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79152752"
 ---
 # <a name="claimsauthenticationmanager"></a>\<claimsAuthenticationManager>
-Rejestruje Menedżera uwierzytelniania oświadczeń dla oświadczeń przychodzących.  
+Rejestruje menedżera uwierzytelniania oświadczeń dla oświadczeń przychodzących.  
   
-[ **\<> konfiguracji**](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. identityModel**](system-identitymodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<identityConfiguration >** ](identityconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<claimsAuthenticationManager >**  
+[**\<>konfiguracyjne**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<>konfiguracji tożsamości**](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<claimsAuthenticationManager>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,28 +37,28 @@ Rejestruje Menedżera uwierzytelniania oświadczeń dla oświadczeń przychodzą
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|— typ|Określa typ niestandardowy, który pochodzi od <xref:System.Security.Claims.ClaimsAuthenticationManager> klasy. Aby uzyskać więcej informacji na temat sposobu określania `type` atrybutu, zobacz [odwołania do typów niestandardowych].|  
+|type|Określa typ niestandardowy, który <xref:System.Security.Claims.ClaimsAuthenticationManager> pochodzi z klasy. Aby uzyskać więcej informacji `type` na temat określania atrybutu, zobacz [Odwołania do typów niestandardowych].|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
- Jeśli `type` nie ma atrybutu lub <xref:System.Security.Claims.ClaimsAuthenticationManager> `type` Jeśli atrybut `<claimsAuthenticationManager>` odwołuje się do klasy, element nie przyjmuje elementów podrzędnych, jednak klasy pochodne <xref:System.Security.Claims.ClaimsAuthenticationManager> mogą definiować podrzędne elementy konfiguracji.  
+ Jeśli nie `type` ma żadnego atrybutu `type` lub jeśli <xref:System.Security.Claims.ClaimsAuthenticationManager> atrybut `<claimsAuthenticationManager>` odwołuje się do klasy, element nie przyjmuje elementów podrzędnych; jednak klasy uzyskane <xref:System.Security.Claims.ClaimsAuthenticationManager> z można zdefiniować elementy konfiguracji podrzędnej.  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<identityConfiguration>](identityconfiguration.md)|Określa ustawienia tożsamości na poziomie usług.|  
+|[\<>konfiguracji tożsamości](identityconfiguration.md)|Określa ustawienia tożsamości na poziomie usługi.|  
   
 ## <a name="remarks"></a>Uwagi  
- Domyślne zachowanie udostępniane przez <xref:System.Security.Claims.ClaimsAuthenticationManager> klasę zwraca oświadczenia przychodzące. Jeśli nie `type` określono atrybutu lub `type` Jeśli atrybut `<claimsAuthenticationManager>` określa <xref:System.Security.Claims.ClaimsAuthenticationManager> klasę, element nie przyjmuje elementów podrzędnych. Możesz określić atrybut, `type` aby zarejestrować typ pochodny klasy, <xref:System.Security.Claims.ClaimsAuthenticationManager> aby zaimplementować zachowanie niestandardowe. Klasy pochodne mogą obsługiwać konfigurację za pomocą elementów `<claimsAuthenticationManager>` podrzędnych elementu przez <xref:System.Security.Claims.ClaimsAuthenticationManager.LoadCustomConfiguration%2A> zastąpienie metody do obsługi tych elementów. Schemat zdefiniowany dla elementów podrzędnych jest projektantem klasy.  
+ Domyślne zachowanie dostarczone <xref:System.Security.Claims.ClaimsAuthenticationManager> za pośrednictwem klasy odzwierciedla oświadczenia przychodzące. Jeśli `type` nie atrybut jest określony `type` lub jeśli <xref:System.Security.Claims.ClaimsAuthenticationManager> atrybut określa `<claimsAuthenticationManager>` klasę, element nie przyjmuje elementów podrzędnych. Można określić `type` atrybut, aby zarejestrować typ <xref:System.Security.Claims.ClaimsAuthenticationManager> pochodzący z klasy, aby zaimplementować zachowanie niestandardowe. Klasy pochodne mogą obsługiwać konfigurację za pośrednictwem elementów podrzędnych `<claimsAuthenticationManager>` elementu, zastępując <xref:System.Security.Claims.ClaimsAuthenticationManager.LoadCustomConfiguration%2A> metodę obsługi tych elementów. Schemat zdefiniowany dla elementów podrzędnych jest do projektanta klasy.  
   
- `<claimsAuthenticationManager>` Element<xref:System.IdentityModel.Configuration.IdentityConfiguration.ClaimsAuthenticationManager%2A?displayProperty=nameWithType> ustawia właściwość.  
+ Element `<claimsAuthenticationManager>` ustawia <xref:System.IdentityModel.Configuration.IdentityConfiguration.ClaimsAuthenticationManager%2A?displayProperty=nameWithType> właściwość.  
   
 ## <a name="example"></a>Przykład  
   
 ```xml  
 <system.identityModel>  
     <identityConfiguration name="MyIdentity">  
-      <claimsAuthenticationManager type="MyNamespace.CustomClaimsAuthenticationManager, MyAssembly"/>          
+      <claimsAuthenticationManager type="MyNamespace.CustomClaimsAuthenticationManager, MyAssembly"/>
     </identityConfiguration>  
 </system.identityModel>  
 ```

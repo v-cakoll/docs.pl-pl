@@ -9,47 +9,47 @@ helpviewer_keywords:
 - styles [WPF], GroupBox
 - templates [WPF], GroupBox
 ms.assetid: 33df7037-0a1b-476f-b9d0-41566a777699
-ms.openlocfilehash: e5befffc86f26176da4accfc01239a08d4978713
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 474cda0abc6a18c015836c749c78f4d33aa5abd8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283761"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79187481"
 ---
 # <a name="groupbox-styles-and-templates"></a>GroupBox — Style i szablony
-<a name="introduction"></a>W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Controls.GroupBox>. Możesz zmodyfikować domyślne <xref:System.Windows.Controls.ControlTemplate>, aby nadać formantowi unikatowy wygląd. Aby uzyskać więcej informacji, zobacz [Tworzenie szablonu dla kontrolki](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
+<a name="introduction"></a>W tym temacie opisano style <xref:System.Windows.Controls.GroupBox> i szablony formantu. Można zmodyfikować <xref:System.Windows.Controls.ControlTemplate> wartość domyślną, aby nadać formancie unikatowy wygląd. Aby uzyskać więcej informacji, zobacz [Tworzenie szablonu formantu](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
   
-<a name="groupbox_parts"></a>   
-## <a name="groupbox-parts"></a>Części grupy  
- Formant <xref:System.Windows.Controls.GroupBox> nie zawiera żadnych nazwanych części.  
+<a name="groupbox_parts"></a>
+## <a name="groupbox-parts"></a>Części GroupBox  
+ Formant <xref:System.Windows.Controls.GroupBox> nie ma żadnych nazwanych części.  
   
-<a name="groupbox_states"></a>   
-## <a name="groupbox-states"></a>Stany grupy  
- Poniższa tabela zawiera listę stanów wizualnych dla kontrolki <xref:System.Windows.Controls.GroupBox>.  
+<a name="groupbox_states"></a>
+## <a name="groupbox-states"></a>Stany GroupBox  
+ W poniższej tabeli wymieniono stany wizualne formantu. <xref:System.Windows.Controls.GroupBox>  
   
-|Nazwa stanu wizualnego|Nazwa element VisualStateGroup|Opis|  
+|Nazwa visualstate|Nazwa grupy programu VisualStateGroup|Opis|  
 |-|-|-|  
-|Prawidłowe|ValidationStates|Kontrolka używa klasy <xref:System.Windows.Controls.Validation> i <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> dołączonej właściwości jest `false`.|  
-|InvalidFocused|ValidationStates|Właściwość dołączona <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> jest `true` ma fokus.|  
-|InvalidUnfocused|ValidationStates|Dołączona właściwość <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> jest `true`, która nie ma fokusu.|  
+|Prawidłowe|Stan sprawdzania poprawności|Formant używa <xref:System.Windows.Controls.Validation> klasy i <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> dołączonej `false`właściwości jest .|  
+|Nieprawidłowo skupiony|Stan sprawdzania poprawności|Dołączona <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> właściwość `true` ma formant ma fokus.|  
+|Nieprawidłowy Nieskoncentrowany|Stan sprawdzania poprawności|Dołączona <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> właściwość `true` ma formant nie ma fokusu.|  
   
-<a name="groupbox_controltemplate_example"></a>   
-## <a name="groupbox-controltemplate-example"></a>Przykład ControlTemplate grupy  
- Poniższy przykład pokazuje, jak zdefiniować <xref:System.Windows.Controls.ControlTemplate> dla kontrolki <xref:System.Windows.Controls.GroupBox>.  
+<a name="groupbox_controltemplate_example"></a>
+## <a name="groupbox-controltemplate-example"></a>Przykład controltemplate skrzynki grupowej  
+ W poniższym <xref:System.Windows.Controls.ControlTemplate> przykładzie pokazano, <xref:System.Windows.Controls.GroupBox> jak zdefiniować formantu.  
   
  [!code-xaml[ControlTemplateExamples#GroupBox](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/groupbox.xaml#groupbox)]  
   
- <xref:System.Windows.Controls.ControlTemplate> używa co najmniej jednego z następujących zasobów.  
+ Używa <xref:System.Windows.Controls.ControlTemplate> co najmniej jednego z następujących zasobów.  
   
  [!code-xaml[ControlTemplateExamples#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- Aby uzyskać pełny przykład, zobacz [Style z przykładem elementy ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
+ Aby uzyskać pełną próbkę, zobacz [Stylowanie za pomocą próbki ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Style i szablony kontrolek](control-styles-and-templates.md)
 - [Niestandardowe dostosowywanie kontrolki](control-customization.md)
 - [Tworzenie szablonów i stylów](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Tworzenie szablonu dla kontrolki](../../../desktop-wpf/themes/how-to-create-apply-template.md)
+- [Tworzenie szablonu formantu](../../../desktop-wpf/themes/how-to-create-apply-template.md)

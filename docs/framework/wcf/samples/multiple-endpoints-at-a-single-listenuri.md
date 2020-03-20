@@ -2,51 +2,51 @@
 title: Wiele punktów końcowych w pojedynczym identyfikatorze ListenUri
 ms.date: 03/30/2017
 ms.assetid: 911ffad4-4d47-4430-b7c2-79192ce6bcbd
-ms.openlocfilehash: ef4212fa0989f80393f62119d9b2b6cda370ef94
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 8e26cc18ed35c446dda120c678dd7e879c756c0f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714734"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183487"
 ---
 # <a name="multiple-endpoints-at-a-single-listenuri"></a>Wiele punktów końcowych w pojedynczym identyfikatorze ListenUri
-Ten przykład pokazuje usługę, która hostuje wiele punktów końcowych w jednym `ListenUri`. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) , który implementuje usługę kalkulatora.  
+W tym przykładzie pokazano usługę, która obsługuje `ListenUri`wiele punktów końcowych w jednym . Ten przykład jest oparty na [wprowadzenie,](../../../../docs/framework/wcf/samples/getting-started-sample.md) który implementuje usługę kalkulatora.  
   
 > [!NOTE]
-> Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
+> Procedura konfiguracji i instrukcje kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
- Jak pokazano w przykładzie [wielu punktów końcowych](../../../../docs/framework/wcf/samples/multiple-endpoints.md) , usługa może obsługiwać wiele punktów końcowych, z których każdy ma różne adresy, a także inne powiązania. Ten przykład pokazuje, że możliwe jest hostowanie wielu punktów końcowych o tym samym adresie. Ten przykład ilustruje także różnice między dwoma rodzajami adresów, które ma punkt końcowy usługi: `EndpointAddress` i `ListenUri`.  
+ Jak pokazano w próbce [wiele punktów końcowych,](../../../../docs/framework/wcf/samples/multiple-endpoints.md) usługa może obsługiwać wiele punktów końcowych, każdy z różnych adresów i ewentualnie również różne powiązania. W tym przykładzie pokazano, że jest możliwe hostowanie wielu punktów końcowych pod tym samym adresem. W tym przykładzie pokazano również różnice między dwoma rodzajami `EndpointAddress` adresów, które ma punkt końcowy usługi: i `ListenUri`.  
   
- `EndpointAddress` jest adresem logicznym usługi. Jest to adres, na który są adresowane komunikaty protokołu SOAP. `ListenUri` jest adresem fizycznym usługi. Zawiera informacje o porcie i adresie, w których punkt końcowy usługi faktycznie nasłuchuje komunikatów na bieżącym komputerze. W większości przypadków nie ma potrzeby, aby te adresy różniły się; gdy `ListenUri` nie jest jawnie określona, domyślnie jest identyfikator URI `EndpointAddress` punktu końcowego. W kilku przypadkach warto je rozróżnić, na przykład podczas konfigurowania routera, który może akceptować komunikaty rozkierowane do wielu różnych usług.  
+ Jest `EndpointAddress` to logiczny adres usługi. Jest to adres, do którego adresowane są komunikaty SOAP. Jest `ListenUri` to adres fizyczny usługi. Ma informacje o porcie i adresie, w którym punkt końcowy usługi faktycznie nasłuchuje wiadomości na bieżącym komputerze. W większości przypadków nie ma potrzeby, aby te adresy się różniły; gdy `ListenUri` nie jest jawnie określony, domyślnie do `EndpointAddress` identyfikatora URI punktu końcowego. W kilku przypadkach warto je odróżnić, na przykład podczas konfigurowania routera, który może akceptować wiadomości zaadresowane do wielu różnych usług.  
   
-## <a name="service"></a>NDES  
- Usługa w tym przykładzie ma dwie umowy, `ICalculator` i `IEcho`. Oprócz niestandardowego punktu końcowego `IMetadataExchange`, istnieją trzy punkty końcowe aplikacji, jak pokazano w poniższym kodzie.  
+## <a name="service"></a>Usługa  
+ Usługa w tym przykładzie `ICalculator` ma `IEcho`dwie umowy i . Oprócz niestandardowego punktu `IMetadataExchange` końcowego istnieją trzy punkty końcowe aplikacji, jak pokazano w poniższym kodzie.  
   
 ```xml  
 <endpoint address="urn:Stuff"  
         binding="wsHttpBinding"  
-        contract="Microsoft.ServiceModel.Samples.ICalculator"   
+        contract="Microsoft.ServiceModel.Samples.ICalculator"
         listenUri="http://localhost/servicemodelsamples/service.svc" />  
 <endpoint address="urn:Stuff"  
         binding="wsHttpBinding"  
-        contract="Microsoft.ServiceModel.Samples.IEcho"   
+        contract="Microsoft.ServiceModel.Samples.IEcho"
         listenUri="http://localhost/servicemodelsamples/service.svc" />  
 <endpoint address="urn:OtherEcho"  
         binding="wsHttpBinding"  
-        contract="Microsoft.ServiceModel.Samples.IEcho"   
+        contract="Microsoft.ServiceModel.Samples.IEcho"
         listenUri="http://localhost/servicemodelsamples/service.svc" />  
 ```  
   
- Wszystkie trzy punkty końcowe są hostowane w tym samym `ListenUri` i używają tych samych `binding` punktów końcowych, które znajdują się na tym samym `ListenUri`, ponieważ udostępniają one jeden stos, który nasłuchuje komunikatów na tym adresie fizycznym na komputerze. `address` każdego punktu końcowego jest URN; Chociaż zazwyczaj adresy reprezentują lokalizacje fizyczne, w rzeczywistości adres może być dowolnym rodzajem identyfikatora URI, ponieważ adres jest używany do dopasowywania i filtrowania, jak pokazano w tym przykładzie.  
+ Wszystkie trzy punkty końcowe są `ListenUri` hostowane w `binding` tym samym czasie `ListenUri` i używają tego samego — punkty końcowe w tym samym musi mieć to samo powiązanie, ponieważ są one udostępnianie stosu pojedynczego kanału, który nasłuchuje wiadomości pod tym adresem fizycznym na komputerze. Każdy `address` punkt końcowy jest URN; chociaż zazwyczaj adresy reprezentują lokalizacje fizyczne, w rzeczywistości adres może być dowolnego rodzaju identyfikatora URI, ponieważ adres jest używany do dopasowywania i filtrowania celów, jak pokazano w tym przykładzie.  
   
- Ponieważ wszystkie trzy punkty końcowe współdzielą ten sam `ListenUri`, po nadejściu komunikatu Windows Communication Foundation (WCF) musi zdecydować, który punkt końcowy jest przeznaczony dla wiadomości. Każdy punkt końcowy ma filtr komunikatów składający się z dwóch części: filtr adresów i filtr kontraktu. Filtr adresów dopasowuje `To` komunikatu protokołu SOAP do adresu punktu końcowego usługi. Na przykład tylko komunikaty rozkierowane `To "Urn:OtherEcho"` są kandydatami dla trzeciego punktu końcowego tej usługi. Filtr kontraktu jest zgodny z akcjami związanymi z operacjami określonego kontraktu. Na przykład komunikaty z akcją `IEcho`. `Echo` dopasowuje filtry umów zarówno dla drugiego, jak i trzeciego punktu końcowego tej usługi, ponieważ oba te punkty końcowe obsługują umowę `IEcho`.  
+ Ponieważ wszystkie trzy punkty końcowe współużytkują to samo `ListenUri`, gdy pojawi się tam komunikat, Windows Communication Foundation (WCF) musi zdecydować, do którego punktu końcowego jest przeznaczona wiadomość. Każdy punkt końcowy ma filtr wiadomości, który składa się z dwóch części: filtr adresu i filtr kontraktu. Filtr adresu jest `To` zgodny z komunikatem SOAP na adres punktu końcowego usługi. Na przykład tylko `To "Urn:OtherEcho"` komunikaty adresowane są kandydatami do trzeciego punktu końcowego tej usługi. Filtr kontraktu jest zgodny z akcjami skojarzonymi z operacjami określonego kontraktu. Na przykład wiadomości z `IEcho`działaniem . `Echo`dopasowuje filtry kontraktu zarówno drugiego, jak i trzeciego punktu końcowego tej `IEcho` usługi, ponieważ oba te punkty końcowe obsługują kontrakt.  
   
- W ten sposób kombinacja filtru adresów i filtru umów umożliwia kierowanie poszczególnych komunikatów, które docierają do `ListenUri` tej usługi do właściwego punktu końcowego. Trzeci punkt końcowy jest zróżnicowany od innych, ponieważ akceptuje komunikaty wysyłane na inny adres z innych punktów końcowych. Pierwszy i drugi punkt końcowy różnią się od siebie w zależności od ich umów (Akcja komunikatu przychodzącego).  
+ W ten sposób połączenie filtru adresów i filtru kontraktu umożliwia `ListenUri` kierowanie każdej wiadomości, która dociera do tej usługi do prawidłowego punktu końcowego. Trzeci punkt końcowy różni się od pozostałych dwóch, ponieważ akceptuje wiadomości wysyłane na inny adres niż inne punkty końcowe. Pierwszy i drugi punkty końcowe różnią się od siebie na podstawie ich umów (Akcja wiadomości przychodzącej).  
   
 ## <a name="client"></a>Klient  
- Podobnie jak punkty końcowe na serwerze mają dwa różne adresy, punkty końcowe klienta mają również dwa adresy. Na serwerze i kliencie adres logiczny nosi nazwę `EndpointAddress`. Chociaż adres fizyczny jest nazywany `ListenUri` na serwerze, adres fizyczny jest nazywany `Via`em.  
+ Podobnie jak punkty końcowe na serwerze mają dwa różne adresy, punkty końcowe klienta mają również dwa adresy. Zarówno na serwerze, jak i `EndpointAddress`na kliencie adres logiczny jest nazywany . Ale podczas gdy adres fizyczny jest nazywany `ListenUri` na serwerze, na `Via`kliencie adres fizyczny jest nazywany .  
   
- Tak jak na serwerze, domyślnie te dwa adresy są takie same. Aby określić `Via` na kliencie, który różni się od adresu punktu końcowego, `ClientViaBehavior` jest używany:  
+ Podobnie jak na serwerze, domyślnie te dwa adresy są takie same. Aby określić `Via` na kliencie, który różni się `ClientViaBehavior` od adresu punktu końcowego, jest używany:  
   
 ```csharp  
 Uri via = new Uri("http://localhost/ServiceModelSamples/service.svc");  
@@ -55,26 +55,26 @@ calcClient.ChannelFactory.Endpoint.Behaviors.Add(
         new ClientViaBehavior(via));  
 ```  
   
- Jak zwykle, adres pochodzi z pliku konfiguracji klienta, który został wygenerowany przez Svcutil. exe. `Via` (która odnosi się do `ListenUri` usługi) nie pojawia się w metadanych usługi i dlatego te informacje muszą być przekazywane do klienta poza pasmem (podobnie jak w przypadku adresu metadanych usługi).  
+ Jak zwykle adres pochodzi z pliku konfiguracji klienta, który został wygenerowany przez Svcutil.exe. (który `Via` odpowiada `ListenUri` usługi) nie pojawia się w metadanych usługi, a więc te informacje muszą być przekazywane do klienta poza pasmem (podobnie jak adres metadanych usługi).  
   
- Klient w tym przykładzie wysyła komunikaty do każdego z trzech punktów końcowych aplikacji serwera, aby wykazać, że może komunikować się z (i odróżnić) wszystkie trzy punkty końcowe, nawet jeśli wszystkie te same `Via`.  
+ Klient w tym przykładzie wysyła komunikaty do każdego z trzech punktów końcowych aplikacji serwera, aby wykazać, że może komunikować się (i odróżniać) wszystkie trzy punkty końcowe, nawet jeśli wszystkie mają takie same `Via`.  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić próbkę  
   
-1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że wykonano [procedurę jednorazowej instalacji dla przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Aby utworzyć wersję C# lub Visual Basic .NET rozwiązania, postępuj zgodnie z instrukcjami w [tworzenie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Aby uruchomić próbkę w konfiguracji z jednym lub krzyżowym komputerem, postępuj zgodnie z instrukcjami w [programie Uruchamianie przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!NOTE]
-    > Dla wielu maszyn należy zastąpić localhost w pliku Client.cs nazwą komputera usługi.  
+    > W przypadku komputera między komputerem należy zastąpić hosta lokalnego w pliku Client.cs nazwą komputera serwisowego.  
   
 > [!IMPORTANT]
-> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
->   
+> Próbki mogą być już zainstalowane na komputerze. Przed kontynuowaniem sprawdź następujący (domyślny) katalog.  
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
->   
+>
+> Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) Przykłady dla platformy .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\MultipleEndpointsSingleUri`  

@@ -15,59 +15,59 @@ helpviewer_keywords:
 ms.assetid: 2576c449-388d-4434-a0e1-9f53991e11b6
 topic_type:
 - apiref
-ms.openlocfilehash: 5214298c6ad9594548ab45ed583cb5b14ce1f30d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e855868d18fc6cffdd5d92cfa401606caf45b76c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441764"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177562"
 ---
 # <a name="imetadataemitsetclasslayout-method"></a>IMetaDataEmit::SetClassLayout — Metoda
-Uzupełnia układ pól dla klasy, która została zdefiniowana przez poprzednie wywołanie [metody DefineTypeDef —](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
+Kończy układ pól dla klasy, która została zdefiniowana przez wcześniejsze wywołanie [metody DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
 HRESULT SetClassLayout (  
-    [in]  mdTypeDef           td,   
-    [in]  DWORD               dwPackSize,   
-    [in]  COR_FIELD_OFFSET    rFieldOffsets[],   
-    [in]  ULONG               ulClassSize   
+    [in]  mdTypeDef           td,
+    [in]  DWORD               dwPackSize,
+    [in]  COR_FIELD_OFFSET    rFieldOffsets[],
+    [in]  ULONG               ulClassSize
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `td`  
- podczas Token `mdTypeDef` określający klasę, która ma zostać ustanowiona.  
+ [w] Token, `mdTypeDef` który określa klasę, która ma zostać rozmieszczona.  
   
  `dwPackSize`  
- podczas Rozmiar pakowania: 1, 2, 4, 8 lub 16 bajtów. Rozmiar pakowania to liczba bajtów między sąsiednimi polami.  
+ [w] Rozmiar opakowania: 1, 2, 4, 8 lub 16 bajtów. Rozmiar opakowania to liczba bajtów między przyległymi polami.  
   
  `rFieldOffsets`  
- podczas Tablica struktur [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) , z których każdy określa pole klasy i przesunięcie pola w klasie. Przerwij tablicę, używając `mdTokenNil`.  
+ [w] Tablica [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) struktur, z których każda określa pole klasy i przesunięcie pola w klasie. Zakończ tablicę `mdTokenNil`za pomocą pliku .  
   
  `ulClassSize`  
- podczas Rozmiar klasy w bajtach.  
+ [w] Rozmiar w bajtach klasy.  
   
 ## <a name="remarks"></a>Uwagi  
- Klasa jest początkowo definiowana przez wywołanie metody [IMetaDataEmit::D efinetypedef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md) i określenie jednego z trzech układów dla pól klasy: automatyczne, sekwencyjne lub jawne. Zwykle należy używać automatycznego układu i pozwolić, aby środowisko uruchomieniowe było najlepszym sposobem ułożenia pól.  
+ Klasa jest początkowo zdefiniowana przez [wywołanie metody IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md) i określenie jednego z trzech układów dla pól klasy: automatycznego, sekwencyjnego lub jawnego. Zwykle można użyć układu automatycznego i niech środowisko uruchomieniowe wybrać najlepszy sposób rozmieszczenia pól.  
   
- Jednakże można chcieć, aby pola zostały określone zgodnie z rozmieszczeniem, które jest używane w kodzie niezarządzanym. W takim przypadku wybierz Układ sekwencyjny lub jawny i Wywołaj `SetClassLayout`, aby zakończyć układ pól:  
+ Jednak może chcesz pola określone zgodnie z układem, który używa kodu niezarządzanego. W takim przypadku wybierz układ sekwencyjny lub `SetClassLayout` jawny i wywołaj, aby ukończyć układ pól:  
   
-- Układ sekwencyjny: Określ rozmiar pakowania. Pole jest wyrównane do rozmiaru naturalnego lub rozmiaru pakowania, w zależności od tego, czy jest to mniejsze przesunięcie pola. Ustaw `rFieldOffsets` i `ulClassSize` na zero.  
+- Układ sekwencyjny: Określ rozmiar opakowania. Pole jest wyrównane zgodnie z jego naturalnym rozmiarem lub rozmiarem opakowania, w zależności od tego, co skutkuje mniejszym przesunięciem pola. Ustaw `rFieldOffsets` `ulClassSize` i na zero.  
   
-- Układ jawny: Określ przesunięcie każdego pola lub Określ rozmiar klasy oraz rozmiar pakowania.  
+- Jawny układ: Określ przesunięcie każdego pola lub określ rozmiar klasy i rozmiar opakowania.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
+ **Biblioteka:** Używany jako zasób w pliku MSCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

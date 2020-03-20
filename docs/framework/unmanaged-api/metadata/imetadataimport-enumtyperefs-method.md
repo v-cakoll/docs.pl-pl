@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b4896b8f-8e97-469c-8089-e72a025661b5
 topic_type:
 - apiref
-ms.openlocfilehash: 778ebf1d4fad0c8703964be88fdc3ff8c033bc28
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e5d4ddd43b27d733a63c2e0dc5e92ffd2ba94a7f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449984"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175437"
 ---
 # <a name="imetadataimportenumtyperefs-method"></a>IMetaDataImport::EnumTypeRefs — Metoda
 Wylicza tokeny TypeRef zdefiniowane w bieżącym zakresie metadanych.  
@@ -29,46 +29,46 @@ Wylicza tokeny TypeRef zdefiniowane w bieżącym zakresie metadanych.
   
 ```cpp  
 HRESULT EnumTypeRefs (  
-   [in, out] HCORENUM    *phEnum,   
+   [in, out] HCORENUM    *phEnum,
    [out] mdTypeRef       rTypeRefs[],  
-   [in]  ULONG           cMax,   
+   [in]  ULONG           cMax,
    [out] ULONG           *pcTypeRefs  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [in. out] Wskaźnik do modułu wyliczającego. Musi ona mieć wartość NULL dla pierwszego wywołania tej metody.  
+ [w, na zewnątrz] Wskaźnik do wyliczacza. Musi to być null dla pierwszego wywołania tej metody.  
   
  `rTypeRefs`  
- określoną Tablica służąca do przechowywania tokenów elementu TypeRef.  
+ [na zewnątrz] Tablica używana do przechowywania tokenów TypeRef.  
   
  `cMax`  
- podczas Maksymalny rozmiar tablicy `rTypeRefs`.  
+ [w] Maksymalny rozmiar `rTypeRefs` tablicy.  
   
  `pcTypeRefs`  
- określoną Wskaźnik do liczby tokenów TypeRef zwróconych w `rTypeRefs`.  
+ [na zewnątrz] Wskaźnik do liczby tokenów TypeRef `rTypeRefs`zwróconych w .  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeRefs` pomyślnie zwrócone.|  
-|`S_FALSE`|Brak tokenów do wyliczenia. W takim przypadku `pcTypeRefs` wynosi zero.|  
+|`S_OK`|`EnumTypeRefs`zwrócono pomyślnie.|  
+|`S_FALSE`|Nie ma żadnych tokenów do wyliczenia. W takim `pcTypeRefs` przypadku wynosi zero.|  
   
 ## <a name="remarks"></a>Uwagi  
  Token TypeRef reprezentuje odwołanie do typu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Uwzględnione jako zasób w pliku MsCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.openlocfilehash: fd0ffb982c22b0a8b6cb5dd677faafb9921bf5d9
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 39a14a3df5059cc47cd4879e4d4ba351cc7b655b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741020"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79156119"
 ---
 # <a name="coreresponsedata-class"></a>CoreResponseData, klasa
 
-Klasa `CoreResponseData` reprezentuje analizę nagłówków HTTP i treść odpowiedzi.
+Klasa `CoreResponseData` reprezentuje analizowanie nagłówków HTTP i treści odpowiedzi.
 
 ## <a name="syntax"></a>Składnia
   
@@ -28,14 +28,14 @@ internal class CoreResponseData
 ```
 
 > [!WARNING]
-> Ten interfejs API jest wewnętrzny i nie jest przeznaczony do użycia bezpośrednio w kodzie. Zamiast tego należy użyć <xref:System.Diagnostics.DiagnosticSource>, aby podłączyć kod sieciowy. Zobacz [Podręcznik użytkownika DiagnosticSource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
-> 
-> Firma Microsoft nie obsługuje korzystania z tej klasy w aplikacji produkcyjnej w żadnej sytuacji.
+> Ten interfejs API jest wewnętrzny i nie jest przeznaczony do użycia bezpośrednio w kodzie. Zamiast tego należy użyć <xref:System.Diagnostics.DiagnosticSource> do hakowania kodu sieciowego. Zobacz [DiagnosticSource Podręcznik użytkownika](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
+>
+> Firma Microsoft nie obsługuje użycia tej klasy w aplikacji produkcyjnej w żadnych okolicznościach.
 
 ## <a name="requirements"></a>Wymagania
 
-**Przestrzeń nazw:** <xref:System.Net>
+**Obszar nazw:**<xref:System.Net>
 
-**Zestaw:** System (w pliku System. dll)
+**Montaż:** System (w pliku System.dll)
 
-**.NET Framework wersje:** Dostępne od 2,0.
+**Wersje programu .NET Framework:** Dostępne od 2.0.

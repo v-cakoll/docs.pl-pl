@@ -1,5 +1,5 @@
 ---
-title: <ThrowUnobservedTaskExceptions> Element
+title: <ThrowUnobservedTaskExceptions>, element
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - ThrowUnobservedTaskExceptions element
 - <ThrowUnobservedTaskExceptions> element
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
-ms.openlocfilehash: 99eef6b8c264e21df7f4ecf9fc79dc607d484a0a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: de5a686bcbd88fc52173b488103f033575623d62
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73115417"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153818"
 ---
-# <a name="throwunobservedtaskexceptions-element"></a>\<element > ThrowUnobservedTaskExceptions
-Określa, czy Nieobsłużone wyjątki zadań powinny kończyć uruchomiony proces.  
+# <a name="throwunobservedtaskexceptions-element"></a>\<ThrowUnobservedZamykacień> element
+Określa, czy nieobsługiwalne wyjątki zadań powinny zakończyć uruchomiony proces.  
   
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp;&nbsp;[ **\<środowiska uruchomieniowego >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<ThrowUnobservedTaskExceptions >**  
+[**\<>konfiguracyjne**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<>czasu wykonywania**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<ThrowUnobservedZadkustawy>**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,14 +36,14 @@ Określa, czy Nieobsłużone wyjątki zadań powinny kończyć uruchomiony proce
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`enabled`|Atrybut wymagany.<br /><br /> Określa, czy Nieobsłużone wyjątki zadań powinny kończyć uruchomiony proces.|  
+|`enabled`|Atrybut wymagany.<br /><br /> Określa, czy nieobsługiwalne wyjątki zadań powinny zakończyć uruchomiony proces.|  
   
 ## <a name="enabled-attribute"></a>Atrybut włączony  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|`false`|Nie przerywa uruchomionego procesu dla nieobsłużonego wyjątku zadania. Domyślnie włączone.|  
-|`true`|Kończy uruchomiony proces dla nieobsłużonego wyjątku zadania.|  
+|`false`|Nie kończy uruchomionego procesu dla nieobsługiwał wyjątku zadania. Domyślnie włączone.|  
+|`true`|Kończy uruchomiony proces dla nieobsługiwał wyjątku zadania.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -57,38 +57,38 @@ Określa, czy Nieobsłużone wyjątki zadań powinny kończyć uruchomiony proce
 |||  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli nie zaobserwowano wyjątku, który jest skojarzony z <xref:System.Threading.Tasks.Task>, nie ma <xref:System.Threading.Tasks.Task.Wait%2A> operacji, element nadrzędny nie jest dołączony i Właściwość <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> nie została odczytana, ponieważ wyjątek zadania jest traktowany jako niezauważalny.  
+ Jeśli wyjątek, który jest <xref:System.Threading.Tasks.Task> skojarzony z a <xref:System.Threading.Tasks.Task.Wait%2A> nie została zaobserwowana, nie ma <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> operacji, nadrzędny nie jest dołączony, a właściwość nie została odczytana wyjątek zadania jest uważany za niezaobserwowany.  
   
- W .NET Framework 4 domyślnie, jeśli <xref:System.Threading.Tasks.Task>, który ma niezauważalny wyjątek jest wyrzucany przez elementy bezużyteczne, finalizator zgłasza wyjątek i kończy proces. Zakończenie procesu zależy od chronometrażu wyrzucania elementów bezużytecznych i finalizacji.  
+ W .NET Framework 4, domyślnie, <xref:System.Threading.Tasks.Task> jeśli, który ma niezaobserwowany wyjątek jest zbierane śmieci, finalizatora zgłasza wyjątek i kończy proces. Zakończenie procesu zależy od czasu wyrzucania elementów bezużytecznych i finalizacji.  
   
- Aby ułatwić deweloperom pisanie kodu asynchronicznego na podstawie zadań, .NET Framework 4,5 zmienia to zachowanie domyślne dla nieobserwowanych wyjątków. Niezauważalne wyjątki nadal powodują podniesienie poziomu zdarzenia <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException>, ale domyślnie proces nie kończy się. Zamiast tego wyjątek jest ignorowany po wywołaniu zdarzenia, niezależnie od tego, czy program obsługi zdarzeń obserwuje wyjątek.  
+ Aby ułatwić deweloperom pisanie kodu asynchronicznego na podstawie zadań, program .NET Framework 4.5 zmienia to domyślne zachowanie dla niezaobserwowanych wyjątków. Niezaobserwowane wyjątki nadal powodują, że <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> zdarzenie ma zostać zwodowane, ale domyślnie proces nie kończy się. Zamiast tego wyjątek jest ignorowany po zdarzenia jest wywoływana, niezależnie od tego, czy program obsługi zdarzeń przestrzega wyjątku.  
   
- W .NET Framework 4,5 można użyć [elementu\<ThrowUnobservedTaskExceptions >](throwunobservedtaskexceptions-element.md) w pliku konfiguracyjnym aplikacji, aby włączyć .NET Framework zachowanie, które zgłasza wyjątek.  
+ W .NET Framework 4.5 można użyć [ \<ThrowUnobservedTaskExceptions> element](throwunobservedtaskexceptions-element.md) w pliku konfiguracji aplikacji, aby włączyć zachowanie .NET Framework 4 zgłaszania wyjątku.  
   
- Możesz również określić zachowanie wyjątku w jeden z następujących sposobów:  
+ Zachowanie wyjątku można również określić w jeden z następujących sposobów:  
   
-- Ustawienie zmiennej środowiskowej `COMPlus_ThrowUnobservedTaskExceptions` (`set COMPlus_ThrowUnobservedTaskExceptions=1`).  
+- Ustawiając zmienną `COMPlus_ThrowUnobservedTaskExceptions` `set COMPlus_ThrowUnobservedTaskExceptions=1`środowiskową ( ).  
   
-- Ustawiając wartość DWORD rejestru ThrowUnobservedTaskExceptions = 1 w HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. Klucz NETFramework.  
+- Ustawiając wartość rejestru DWORD ThrowUnobservedTaskExceptions = 1 w HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. NETFramework.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak włączyć zgłaszanie wyjątków w zadaniach przy użyciu pliku konfiguracji aplikacji.  
+ W poniższym przykładzie pokazano, jak włączyć zgłaszanie wyjątków w zadaniach przy użyciu pliku konfiguracji aplikacji.  
   
 ```xml  
-<configuration>   
-    <runtime>   
-        <ThrowUnobservedTaskExceptions enabled="true"/>   
-    </runtime>   
+<configuration>
+    <runtime>
+        <ThrowUnobservedTaskExceptions enabled="true"/>
+    </runtime>
 </configuration>  
 ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład demonstruje, jak wyjątek niezauważalny jest generowany z zadania. Aby program działał prawidłowo, kod musi być uruchomiony.  
+ W poniższym przykładzie pokazano, jak nieobserwowany wyjątek jest generowany z zadania. Kod musi być uruchomiony jako zwolniony program, aby działał poprawnie.  
   
  [!code-csharp[ThrowUnobservedTaskExceptions#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/throwunobservedtaskexceptions/cs/program.cs#1)]
  [!code-vb[ThrowUnobservedTaskExceptions#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/throwunobservedtaskexceptions/vb/program.vb#1)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Schemat ustawień środowiska uruchomieniowego](index.md)
 - [Schemat pliku konfiguracji](../index.md)

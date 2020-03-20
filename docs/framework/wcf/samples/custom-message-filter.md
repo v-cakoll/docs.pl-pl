@@ -2,26 +2,26 @@
 title: Niestandardowy filtr komunikatów
 ms.date: 03/30/2017
 ms.assetid: 98dd0af8-fce6-4255-ac32-42eb547eea67
-ms.openlocfilehash: 79edba14eff5403591cf43592415d923dbd321be
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 896407a218073eba53676baa4bcbd125593c80ca
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716827"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183889"
 ---
 # <a name="custom-message-filter"></a>Niestandardowy filtr komunikatów
-Ten przykład pokazuje, jak zastąpić filtry komunikatów, które są używane przez Windows Communication Foundation (WCF) do wysyłania wiadomości do punktów końcowych.  
+W tym przykładzie pokazano, jak zastąpić filtry wiadomości, które program Windows Communication Foundation (WCF) używa do wysyłania wiadomości do punktów końcowych.  
   
 > [!NOTE]
-> Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
+> Procedura konfiguracji i instrukcje kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
- Gdy pierwsza wiadomość w kanale dociera do serwera, serwer musi określić, który (Jeśli którykolwiek) punktów końcowych skojarzonych z tym identyfikatorem URI powinien odebrać komunikat. Ten proces jest kontrolowany przez <xref:System.ServiceModel.Dispatcher.MessageFilter> obiekty dołączone do <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>.  
+ Gdy pierwszy komunikat na kanale dociera do serwera, serwer musi określić, które (jeśli istnieją) punktów końcowych skojarzonych z tym identyfikatorem URI powinien otrzymać komunikat. Proces ten jest <xref:System.ServiceModel.Dispatcher.MessageFilter> kontrolowany przez <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>obiekty dołączone do pliku .  
   
- Każdy punkt końcowy usługi ma jeden <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>. <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> ma zarówno <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>, jak i <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A>. W związku z tymi dwoma filtrami jest stosowany filtr komunikatów dla tego punktu końcowego.  
+ Każdy punkt końcowy usługi ma <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>jeden . Ma <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> zarówno <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> i <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A>. Unia tych dwóch filtrów jest filtr komunikat używany dla tego punktu końcowego.  
   
- Domyślnie <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> dla punktu końcowego dopasowuje dowolny komunikat, który jest rozkierowany na adres pasujący do <xref:System.ServiceModel.EndpointAddress>punktu końcowego usługi. Domyślnie <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> dla punktu końcowego sprawdza działanie komunikatu przychodzącego i dopasowuje komunikat z akcją odpowiadającą jednej z akcji związanych z operacjami kontraktu punktu końcowego usługi (tylko `IsInitiating`=akcjami `true`). W związku z tym domyślnie filtr dla punktu końcowego dopasowuje się tylko wtedy, gdy zarówno komunikat do nagłówka jest <xref:System.ServiceModel.EndpointAddress> punktu końcowego, a akcja komunikatu jest zgodna z jedną z akcji punktu końcowego.  
+ Domyślnie <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> dla punktu końcowego pasuje do każdej wiadomości, która jest skierowana <xref:System.ServiceModel.EndpointAddress>do adresu, który pasuje do punktu końcowego usługi . <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> Domyślnie dla punktu końcowego sprawdza akcję wiadomości przychodzącej i dopasowuje dowolną wiadomość z akcji, która odpowiada jednej z `IsInitiating` = `true` akcji operacji umowy punktu końcowego usługi (tylko akcje są brane pod uwagę). W rezultacie domyślnie filtr dla punktu końcowego jest zgodny tylko wtedy, <xref:System.ServiceModel.EndpointAddress> gdy zarówno nagłówek do wiadomości jest punktem końcowym, a akcja wiadomości odpowiada jednej z akcji operacji punktu końcowego.  
   
- Te filtry można zmienić przy użyciu zachowania. W przykładzie usługa tworzy <xref:System.ServiceModel.Description.IEndpointBehavior>, który zastępuje <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> i <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> na <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>:  
+ Filtry te można zmienić za pomocą zachowania. W próbce <xref:System.ServiceModel.Description.IEndpointBehavior> usługa tworzy, który <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> zastępuje <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> i <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>na:  
   
 ```csharp
 class FilteringEndpointBehavior : IEndpointBehavior
@@ -39,13 +39,13 @@ class MatchEAddressFilter : MessageFilter { }
 class MatchNoEAddressFilter : MessageFilter { }  
 ```  
   
- `FilteringEndpointBehavior` można konfigurować i umożliwiać korzystanie z dwóch różnych odmian.  
+ Jest `FilteringEndpointBehavior` konfigurowalny i pozwala na dwie różne odmiany.  
   
 ```csharp
 public class FilteringEndpointBehaviorExtension : BehaviorExtensionElement { }
 ```  
   
- Odmiana 1 dopasowuje tylko adresy, które zawierają "e" (ale z jakąkolwiek akcją), natomiast odmiana 2 dopasowuje tylko adresy, które nie mają "e":  
+ Odmiana 1 pasuje tylko do adresów, które zawierają "e" (ale które mają jakąkolwiek akcję), podczas gdy Odmiana 2 pasuje tylko do adresów, które nie mają "e":  
   
 ```csharp
 if (Variation == 1)  
@@ -56,17 +56,17 @@ else
         new MatchNoEAddressFilter(), new MatchAllMessageFilter());  
 ```  
   
- W pliku konfiguracji Usługa rejestruje nowe zachowanie:  
+ W pliku konfiguracyjnym usługa rejestruje nowe zachowanie:  
   
 ```xml  
 <extensions>  
     <behaviorExtensions>  
         <add name="filteringEndpointBehavior" type="Microsoft.ServiceModel.Samples.FilteringEndpointBehaviorExtension, service" />  
     </behaviorExtensions>  
-</extensions>      
+</extensions>
 ```  
   
- Następnie usługa tworzy `endpointBehavior` konfiguracje dla każdej odmiany:  
+ Następnie usługa `endpointBehavior` tworzy konfiguracje dla każdej odmiany:  
   
 ```xml  
 <endpointBehaviors>  
@@ -79,18 +79,18 @@ else
 </endpointBehaviors>  
 ```  
   
- Na koniec punkt końcowy usługi odwołuje się do jednej z `behaviorConfigurations`:  
+ Na koniec punkt końcowy usługi odwołuje się `behaviorConfigurations`do jednego z:  
   
 ```xml  
 <endpoint address=""  
         bindingConfiguration="ws"  
-        listenUri=""   
+        listenUri=""
         binding="wsHttpBinding"  
-        contract="Microsoft.ServiceModel.Samples.IHello"   
+        contract="Microsoft.ServiceModel.Samples.IHello"
         behaviorConfiguration="endpoint2" />  
 ```  
   
- Implementacja aplikacji klienckiej jest prosta; tworzy dwa kanały dla identyfikatora URI usługi (przez przekazanie tej wartości jako drugi parametr (`via`) do <xref:System.ServiceModel.Channels.IChannelFactory%601.CreateChannel%28System.ServiceModel.EndpointAddress%29> i wysyła pojedynczą wiadomość w każdym kanale, ale używa różnych adresów punktów końcowych dla każdego z nich. W związku z tym komunikaty wychodzące od klienta różnią się w zależności od tego, a serwer odpowiada zgodnie z danymi wyjściowymi klienta:  
+ Implementacja aplikacji klienckiej jest prosta; tworzy dwa kanały do identyfikatora URI usługi (przekazując`via`tę wartość <xref:System.ServiceModel.Channels.IChannelFactory%601.CreateChannel%28System.ServiceModel.EndpointAddress%29> jako drugi ( ) parametr do i wysyła pojedynczą wiadomość na każdym kanale, ale używa różnych adresów punktów końcowych dla każdego. W rezultacie wychodzące wiadomości od klienta mają różne oznaczenia Do, a serwer odpowiednio odpowiada, jak wynika z danych wyjściowych klienta:  
   
 ```console  
 Sending message to urn:e...  
@@ -100,39 +100,39 @@ Sending message to urn:a...
 Hello  
 ```  
   
- Przełączenie zmian w pliku konfiguracji serwera powoduje zamianę filtru, a klient zobaczy zachowanie odwrotne (komunikat, że `urn:e` się powiedzie, podczas gdy komunikat `urn:a` się niepowodzeniem).  
+ Przełączanie zmiany w pliku konfiguracyjnym serwera powoduje, że filtr ma zostać zamieniony, a klient widzi odwrotne zachowanie (komunikat `urn:e` zakończy się pomyślnie, podczas gdy komunikat kończy się `urn:a` niepowodzeniem).  
   
 ```xml  
 <endpoint address=""  
           bindingConfiguration="ws"  
-          listenUri=""   
+          listenUri=""
           binding="wsHttpBinding"  
-          contract="Microsoft.ServiceModel.Samples.IHello"   
+          contract="Microsoft.ServiceModel.Samples.IHello"
           behaviorConfiguration="endpoint1" />  
 ```  
   
 > [!IMPORTANT]
-> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
->   
+> Próbki mogą być już zainstalowane na komputerze. Przed kontynuowaniem sprawdź następujący (domyślny) katalog.  
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
->   
+>
+> Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) Przykłady dla platformy .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageFilter`  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić próbkę  
   
-1. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1. Aby utworzyć rozwiązanie, postępuj zgodnie z instrukcjami w [tworzeniu przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-2. Aby uruchomić przykład w konfiguracji pojedynczej maszyny, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+2. Aby uruchomić przykład w konfiguracji z jednym komputerem, postępuj zgodnie z instrukcjami w [uruchamianiu przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-3. Aby uruchomić przykład w konfiguracji między maszynami, postępuj zgodnie z instrukcjami w temacie [uruchamianie Windows Communication Foundation próbek](../../../../docs/framework/wcf/samples/running-the-samples.md) i zmień następujący wiersz w Client.cs.  
+3. Aby uruchomić przykład w konfiguracji między komputerami, postępuj zgodnie z instrukcjami w [uruchamianiu przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/running-the-samples.md) i zmień następujący wiersz w Client.cs.  
   
     ```csharp
     Uri serviceVia = new Uri("http://localhost/ServiceModelSamples/service.svc");  
     ```  
   
-     Zastąp wartość localhost nazwą serwera.  
+     Zastąp hosta lokalnego nazwą serwera.  
   
     ```csharp
     Uri serviceVia = new Uri("http://servermachinename/ServiceModelSamples/service.svc");  

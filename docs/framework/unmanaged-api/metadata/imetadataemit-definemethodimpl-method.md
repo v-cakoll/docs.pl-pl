@@ -15,46 +15,46 @@ helpviewer_keywords:
 ms.assetid: 9dcc8b3d-33ee-4c7c-8d6f-322c57b94a0f
 topic_type:
 - apiref
-ms.openlocfilehash: 99f529a151a42cf4a9ee1f74bd3a76a5b6b1b35f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 64d76efa8c2f29fda559e5c84217b865540027ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445262"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175827"
 ---
 # <a name="imetadataemitdefinemethodimpl-method"></a>IMetaDataEmit::DefineMethodImpl — Metoda
-Tworzy definicję dla implementacji metody dziedziczonej z interfejsu i zwraca token do tej definicji implementacji metody.  
+Tworzy definicję implementacji metody dziedziczonej z interfejsu i zwraca token do tej definicji implementacji metody.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
-HRESULT DefineMethodImpl (   
-    [in]  mdTypeDef         td,   
-    [in]  mdToken           tkBody,   
+HRESULT DefineMethodImpl (
+    [in]  mdTypeDef         td,
+    [in]  mdToken           tkBody,
     [in]  mdToken           tkDecl  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `td`  
- podczas Token `mdTypedef` implementującej klasy.  
+ [w] Token `mdTypedef` klasy implementującej.  
   
  `tkBody`  
- podczas Token `mdMethodDef` lub `mdMemberRef` treści kodu.  
+ [w] `mdMethodDef` Lub `mdMemberRef` token treści kodu.  
   
  `tkDecl`  
- podczas Token `mdMethodDef` lub `mdMemberRef` zaimplementowanej metody interfejsu.  
+ [w] Lub `mdMethodDef` `mdMemberRef` token metody interfejsu implementowane.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Używany jako zasób w bibliotece MSCorEE. dll  
+ **Biblioteka:** Używany jako zasób w pliku MSCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

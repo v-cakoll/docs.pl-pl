@@ -1,16 +1,16 @@
 ---
-title: Semantyka porównania (Entity SQL)
+title: Semantyka porównania (entity SQL)
 ms.date: 03/30/2017
 ms.assetid: b36ce28a-2fe4-4236-b782-e5f7c054deae
-ms.openlocfilehash: 8d7868b0166f0a18824ec25e6cdf639deec665ac
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 57d81d4b581df76a4382ad5e1d72fe8250b10d43
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833945"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150457"
 ---
-# <a name="comparison-semantics-entity-sql"></a>Semantyka porównania (Entity SQL)
-Wykonanie dowolnego z następujących operatorów [!INCLUDE[esql](../../../../../../includes/esql-md.md)] obejmuje porównanie wystąpień typu:  
+# <a name="comparison-semantics-entity-sql"></a>Semantyka porównania (entity SQL)
+Wykonywanie dowolnego z [!INCLUDE[esql](../../../../../../includes/esql-md.md)] następujących operatorów obejmuje porównanie wystąpień typu:  
   
 ## <a name="explicit-comparison"></a>Jawne porównanie  
  Operacje równości:  
@@ -19,7 +19,7 @@ Wykonanie dowolnego z następujących operatorów [!INCLUDE[esql](../../../../..
   
 - !=  
   
- Operacje porządkowania:  
+ Operacje zamawiania:  
   
 - <  
   
@@ -29,20 +29,20 @@ Wykonanie dowolnego z następujących operatorów [!INCLUDE[esql](../../../../..
   
 - \>=  
   
- Operacje dopuszczania wartości null:  
+ Operacje anulowania:  
   
 - MA WARTOŚĆ NULL  
   
 - NIE MA WARTOŚCI NULL  
   
-## <a name="explicit-distinction"></a>Jawne rozróżnienie  
+## <a name="explicit-distinction"></a>Wyraźne rozróżnienie  
  Rozróżnienie równości:  
   
-- ITP  
+- DISTINCT  
   
 - GROUP BY  
   
- Kolejność rozróżniania:  
+ Wyróżnienie zamawiania:  
   
 - ORDER BY  
   
@@ -59,49 +59,49 @@ Wykonanie dowolnego z następujących operatorów [!INCLUDE[esql](../../../../..
   
 - OVERLAPS  
   
- Predykaty elementów (równość):  
+ Predykaty pozycji (równość):  
   
 - IN  
   
 ## <a name="supported-combinations"></a>Obsługiwane kombinacje  
  W poniższej tabeli przedstawiono wszystkie obsługiwane kombinacje operatorów porównania dla każdego rodzaju typu:  
   
-|**Wprowadź**|**=**<br /><br /> **!=**|**GROUP BY**<br /><br /> **ITP**|**UNION**<br /><br /> **INTERSECT**<br /><br /> **EXCEPT**<br /><br /> **SET**<br /><br /> **OVERLAPS**|**IN**|**< < =**<br /><br /> **> > =**|**ORDER BY**|**MA WARTOŚĆ NULL**<br /><br /> **NIE MA WARTOŚCI NULL**|  
+|**Typ**|**=**<br /><br /> **!=**|**GROUP BY**<br /><br /> **Odrębne**|**Unii**<br /><br /> **INTERSECT**<br /><br /> **EXCEPT**<br /><br /> **Ustawić**<br /><br /> **OVERLAPS**|**IN**|**< <=**<br /><br /> **> >=**|**ORDER BY**|**MA WARTOŚĆ NULL**<br /><br /> **NIE MA WARTOŚCI NULL**|  
 |-|-|-|-|-|-|-|-|  
-|Typ jednostki|Odwołanie<sup>1</sup>|Wszystkie właściwości<sup>2</sup>|Wszystkie właściwości<sup>2</sup>|Wszystkie właściwości<sup>2</sup>|Zgłoś<sup>3</sup>|Zgłoś<sup>3</sup>|Odwołanie<sup>1</sup>|  
-|typ złożony|Zgłoś<sup>3</sup>|Zgłoś<sup>3</sup>|Zgłoś<sup>3</sup>|Zgłoś<sup>3</sup>|Zgłoś<sup>3</sup>|Zgłoś<sup>3</sup>|Zgłoś<sup>3</sup>|  
-|Wiersza|Wszystkie właściwości<sup>4</sup>|Wszystkie właściwości<sup>4</sup>|Wszystkie właściwości<sup>4</sup>|Zgłoś<sup>3</sup>|Zgłoś<sup>3</sup>|Wszystkie właściwości<sup>4</sup>|Zgłoś<sup>3</sup>|  
+|Typ jednostki|Ref<sup>1</sup>|Wszystkie właściwości<sup>2</sup>|Wszystkie właściwości<sup>2</sup>|Wszystkie właściwości<sup>2</sup>|Rzut<sup>3</sup>|Rzut<sup>3</sup>|Ref<sup>1</sup>|  
+|Typ złożony|Rzut<sup>3</sup>|Rzut<sup>3</sup>|Rzut<sup>3</sup>|Rzut<sup>3</sup>|Rzut<sup>3</sup>|Rzut<sup>3</sup>|Rzut<sup>3</sup>|  
+|Wiersz|Wszystkie właściwości<sup>4</sup>|Wszystkie właściwości<sup>4</sup>|Wszystkie właściwości<sup>4</sup>|Rzut<sup>3</sup>|Rzut<sup>3</sup>|Wszystkie właściwości<sup>4</sup>|Rzut<sup>3</sup>|  
 |Typ pierwotny|Specyficzne dla dostawcy|Specyficzne dla dostawcy|Specyficzne dla dostawcy|Specyficzne dla dostawcy|Specyficzne dla dostawcy|Specyficzne dla dostawcy|Specyficzne dla dostawcy|  
-|Multiset|Zgłoś<sup>3</sup>|Zgłoś<sup>3</sup>|Zgłoś<sup>3</sup>|Zgłoś<sup>3</sup>|Zgłoś<sup>3</sup>|Zgłoś<sup>3</sup>|Zgłoś<sup>3</sup>|  
-|umieszczone|Tak<sup>5</sup>|Tak<sup>5</sup>|Tak<sup>5</sup>|Tak<sup>5</sup>|Throw|Throw|Tak<sup>5</sup>|  
-|Skojarzenie<br /><br /> — typ|Zgłoś<sup>3</sup>|Throw|Throw|Throw|Zgłoś<sup>3</sup>|Zgłoś<sup>3</sup>|Zgłoś<sup>3</sup>|  
+|Zestaw wielokrotny|Rzut<sup>3</sup>|Rzut<sup>3</sup>|Rzut<sup>3</sup>|Rzut<sup>3</sup>|Rzut<sup>3</sup>|Rzut<sup>3</sup>|Rzut<sup>3</sup>|  
+|Ref|Tak<sup>5</sup>|Tak<sup>5</sup>|Tak<sup>5</sup>|Tak<sup>5</sup>|Throw|Throw|Tak<sup>5</sup>|  
+|Stowarzyszenia<br /><br /> type|Rzut<sup>3</sup>|Throw|Throw|Throw|Rzut<sup>3</sup>|Rzut<sup>3</sup>|Rzut<sup>3</sup>|  
   
- <sup>1</sup> Odwołania do danego wystąpienia typu jednostki są niejawnie porównywane, jak pokazano w następującym przykładzie:  
+ <sup>1.</sup> Odwołania do wystąpienia danego typu jednostki są niejawnie porównywane, jak pokazano w poniższym przykładzie:  
   
 ```sql  
-SELECT p1, p2   
-FROM AdventureWorksEntities.Product AS p1   
-     JOIN AdventureWorksEntities.Product AS p2   
+SELECT p1, p2
+FROM AdventureWorksEntities.Product AS p1
+     JOIN AdventureWorksEntities.Product AS p2
 WHERE p1 != p2 OR p1 IS NULL  
 ```  
   
- Nie można porównać wystąpienia jednostki z jawnym odwołaniem. Jeśli zostanie podjęta taka próba, zostanie zgłoszony wyjątek. Na przykład następujące zapytanie spowoduje zgłoszenie wyjątku:  
+ Nie można porównać wystąpienia jednostki z jawnym odwołaniem. W przypadku podjęcia tej próby zostanie zgłoszony wyjątek. Na przykład następująca kwerenda zda wyjątek:  
   
 ```sql  
-SELECT p1, p2   
-FROM AdventureWorksEntities.Product AS p1   
-     JOIN AdventureWorksEntities.Product AS p2   
+SELECT p1, p2
+FROM AdventureWorksEntities.Product AS p1
+     JOIN AdventureWorksEntities.Product AS p2
 WHERE p1 != REF(p2)  
 ```  
   
- <sup>2</sup> Właściwości typów złożonych są spłaszczane przed wysłaniem do magazynu, dzięki czemu stają się one porównywalne (o ile wszystkie ich właściwości są porównywalne). Zobacz też <sup>4.</sup>  
+ <sup>2.</sup> Właściwości typów złożonych są spłaszczane przed wysłaniem do magazynu, więc stają się porównywalne (o ile wszystkie ich właściwości są porównywalne). Zobacz także <sup>4.</sup>  
   
- <sup>3</sup> Środowisko uruchomieniowe Entity Framework wykrywa nieobsługiwany przypadek i zgłasza znaczący wyjątek bez angażowania dostawcy/magazynu.  
+ <sup>3</sup> Środowisko uruchomieniowe entity framework wykrywa nieobsługiwał przypadek i zgłasza znaczący wyjątek bez angażowania dostawcy/magazynu.  
   
- <sup>4</sup> Podjęto próbę porównania wszystkich właściwości. Jeśli istnieje właściwość, której typ nie jest porównywalny, taki jak text, ntext lub Image, może zostać zgłoszony wyjątek serwera.  
+ <sup>4</sup> Podejmowana jest próba porównania wszystkich właściwości. Jeśli istnieje właściwość, która jest typu niesymady, takich jak tekst, ntext lub obraz, może zostać zgłoszony wyjątek serwera.  
   
- <sup>5</sup> Wszystkie poszczególne elementy odwołań są porównywane (obejmuje to nazwę zestawu jednostek i wszystkie właściwości klucza typu jednostki).  
+ <sup>5</sup> Wszystkie poszczególne elementy odwołań są porównywane (obejmuje to nazwę zestawu jednostek i wszystkie kluczowe właściwości typu jednostki).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Omówienie jednostki SQL](entity-sql-overview.md)

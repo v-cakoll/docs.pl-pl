@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fa360c46-e5f8-411e-a711-46997771133d
-ms.openlocfilehash: 1dbaa159314bf7bb05ff75287f601f619834fd7c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 2e7fb97e5c0cb42deff43c411f47e8d30e2257ef
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794611"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149391"
 ---
 # <a name="paging-through-a-query-result"></a>Stronicowanie za pośrednictwem wyniku zapytania
-Stronicowanie za pomocą wyniku zapytania jest procesem zwracającym wyniki zapytania w mniejszych podzestawach danych lub stronach. Jest to typowa metoda wyświetlania wyników dla użytkownika w małych i łatwych do zarządzania fragmentach.  
+Stronicowanie za pośrednictwem wyniku kwerendy jest procesem zwracania wyników kwerendy w mniejszych podzbiorach danych lub stron. Jest to powszechna praktyka wyświetlania wyników użytkownikowi w małych, łatwych w zarządzaniu fragmentów.  
   
- Obiekt **DataAdapter** udostępnia funkcję do zwracania tylko strony danych, przez przeciążenia metody **Fill** . Jednak może to nie być najlepszym wyborem w przypadku stronicowania za pomocą dużych wyników zapytania, ponieważ, chociaż element **DataAdapter** wypełnia <xref:System.Data.DataTable> obiekt <xref:System.Data.DataSet> docelowy lub tylko z żądanymi rekordami, zasoby, które mają zwrócić całe zapytanie, są nadal używane . Aby zwrócić stronę danych ze źródła danych bez użycia zasobów do zwrócenia całego zapytania, należy określić dodatkowe kryteria dla zapytania, które zmniejszają liczbę zwracanych wierszy tylko do wymaganych.  
+ **DataAdapter** zapewnia możliwość zwracania tylko strony danych, za pośrednictwem przeciążenia **Fill** metody. Jednak może to nie być najlepszym wyborem dla stronicowania za pośrednictwem wyników dużych <xref:System.Data.DataTable> <xref:System.Data.DataSet> kwerend, ponieważ mimo **dataAdapter** wypełnia miejsce docelowe lub tylko żądane rekordy, zasoby do zwrócenia całej kwerendy są nadal używane. Aby zwrócić stronę danych ze źródła danych bez użycia zasobów do zwrócenia całej kwerendy, należy określić dodatkowe kryteria dla kwerendy, które zmniejszają wiersze zwracane tylko do tych wymaganych.  
   
- Aby użyć metody **Fill** do zwrócenia strony danych, należy określić parametr **startRecord** dla pierwszego rekordu na stronie danych oraz parametr **MaxRecords** , dla liczby rekordów na stronie danych.  
+ Aby użyć **Fill** metody zwracać stronę danych, należy określić **startRecord** parametru dla pierwszego rekordu na stronie danych i **maxRecords** parametr, dla liczby rekordów na stronie danych.  
   
- Poniższy przykład kodu pokazuje, jak używać metody **Fill** do zwrócenia pierwszej strony wyniku zapytania, gdzie rozmiar strony jest pięcioma rekordami.  
+ Poniższy przykład kodu pokazuje, jak użyć **Fill** metody zwracania pierwszej strony wynik kwerendy, gdzie rozmiar strony jest pięć rekordów.  
   
 ```vb  
 Dim currentIndex As Integer = 0  
@@ -46,7 +46,7 @@ DataSet dataSet = new DataSet();
 adapter.Fill(dataSet, currentIndex, pageSize, "Orders");  
 ```  
   
- W poprzednim przykładzie **zestaw danych** zawiera tylko pięć rekordów, ale zwracana jest cała tabela **Orders** . Aby wypełnić **zestaw danych** tymi samymi pięcioma rekordami, ale zwróć tylko pięć rekordów, użyj klauzul Top i WHERE w instrukcji języka SQL, jak w poniższym przykładzie kodu.  
+ W poprzednim przykładzie **Zestaw danych** jest wypełniony tylko pięcioma rekordami, ale zwracana jest cała **tabela Zamówienia.** Aby wypełnić **Zestaw danych** tymi samymi pięcioma rekordami, ale zwracaj tylko pięć rekordów, użyj klauzul TOP i WHERE w instrukcji SQL, jak w poniższym przykładzie kodu.  
   
 ```vb  
 Dim pageSize As Integer = 5  
@@ -57,13 +57,13 @@ Dim adapter As SqlDataAdapter = _
   New SqlDataAdapter(orderSQL, connection)  
   
 Dim dataSet As DataSet = New DataSet()  
-adapter.Fill(dataSet, "Orders")   
+adapter.Fill(dataSet, "Orders")
 ```  
   
 ```csharp  
 int pageSize = 5;  
   
-string orderSQL = "SELECT TOP " + pageSize +   
+string orderSQL = "SELECT TOP " + pageSize +
   " * FROM Orders ORDER BY OrderID";  
 SqlDataAdapter adapter = new SqlDataAdapter(orderSQL, connection);  
   
@@ -71,7 +71,7 @@ DataSet dataSet = new DataSet();
 adapter.Fill(dataSet, "Orders");  
 ```  
   
- Należy pamiętać, że podczas tworzenia stronicowania w wyniku zapytania w ten sposób należy zachować unikatowy identyfikator, który porządkuje wiersze, aby przekazać unikatowy identyfikator do polecenia w celu zwrócenia następnej strony rekordów, jak pokazano w poniższym przykładzie kodu.  
+ Należy zauważyć, że podczas stronicowania za pośrednictwem wyników kwerendy w ten sposób, należy zachować unikatowy identyfikator, który zamawia wiersze, w celu przekazania unikatowego identyfikatora do polecenia, aby zwrócić następną stronę rekordów, jak pokazano w poniższym przykładzie kodu.  
   
 ```vb  
 Dim lastRecord As String = _  
@@ -79,11 +79,11 @@ Dim lastRecord As String = _
 ```  
   
 ```csharp  
-string lastRecord =   
+string lastRecord =
   dataSet.Tables["Orders"].Rows[pageSize - 1]["OrderID"].ToString();  
 ```  
   
- Aby zwrócić następną stronę rekordów przy użyciu przeciążenia metody **Fill** , która przyjmuje parametry **startRecord** i **MaxRecords** , zwiększ bieżący indeks rekordu przez rozmiar strony i wypełnij tabelę. Należy pamiętać, że serwer bazy danych zwraca całe wyniki zapytania, nawet wtedy, gdy tylko jedna strona rekordów jest dodawana do **zestawu danych**. W poniższym przykładzie kodu wiersze tabeli są czyszczone, zanim zostaną wypełnione następną stroną danych. Możesz chcieć zachować określoną liczbę zwracanych wierszy w lokalnej pamięci podręcznej, aby zredukować podróże do serwera bazy danych.  
+ Aby zwrócić następną stronę rekordów przy użyciu przeciążenia **Fill** metody, która przyjmuje **startRecord** i **maxRecords** parametry, przyrost bieżącego indeksu rekordu o rozmiar strony i wypełnić tabelę. Należy pamiętać, że serwer bazy danych zwraca wyniki całej kwerendy, nawet jeśli tylko jedna strona rekordów jest dodawana do **zestawu danych**. W poniższym przykładzie kodu wiersze tabeli są czyszczone przed ich wypełnieniem następnej strony danych. Można zachować pewną liczbę zwróconych wierszy w lokalnej pamięci podręcznej, aby zmniejszyć liczbę podróży do serwera bazy danych.  
   
 ```vb  
 currentIndex = currentIndex + pageSize  
@@ -101,7 +101,7 @@ dataSet.Tables["Orders"].Rows.Clear();
 adapter.Fill(dataSet, currentIndex, pageSize, "Orders");  
 ```  
   
- Aby zwrócić następną stronę rekordów bez konieczności zwrócenia przez serwer bazy danych całego zapytania, określ kryteria ograniczające do instrukcji SELECT. Ponieważ w powyższym przykładzie zachowano ostatni zwrócony rekord, można go użyć w klauzuli WHERE, aby określić punkt początkowy zapytania, jak pokazano w poniższym przykładzie kodu.  
+ Aby zwrócić następną stronę rekordów bez zwracania całej kwerendy przez serwer bazy danych, należy określić restrykcyjne kryteria instrukcji SELECT. Ponieważ w poprzednim przykładzie zachowane ostatni rekord zwrócony, można go użyć w klauzuli WHERE, aby określić punkt początkowy dla kwerendy, jak pokazano w poniższym przykładzie kodu.  
   
 ```vb  
 orderSQL = "SELECT TOP " & pageSize & _  
@@ -114,7 +114,7 @@ adapter.Fill(dataSet, "Orders")
 ```  
   
 ```csharp  
-orderSQL = "SELECT TOP " + pageSize +   
+orderSQL = "SELECT TOP " + pageSize +
   " * FROM Orders WHERE OrderID > " + lastRecord + " ORDER BY OrderID";  
 adapter.SelectCommand.CommandText = orderSQL;  
   
@@ -123,7 +123,7 @@ dataSet.Tables["Orders"].Rows.Clear();
 adapter.Fill(dataSet, "Orders");  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Elementy DataAdapter i DataReaders](dataadapters-and-datareaders.md)
+- [Elementy DataAdapter i DataReader](dataadapters-and-datareaders.md)
 - [Omówienie ADO.NET](ado-net-overview.md)

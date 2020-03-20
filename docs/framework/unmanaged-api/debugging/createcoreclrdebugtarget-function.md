@@ -16,47 +16,47 @@ helpviewer_keywords:
 ms.assetid: 1cf4ca8e-d9bb-4633-9adf-5e24315bf87a
 topic_type:
 - apiref
-ms.openlocfilehash: a7fed8cb70785f0ccfcadf1e16181db303ac98e0
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 0b210f105495fa3f5595adbcb0805e1d1fb62310
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789192"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179218"
 ---
 # <a name="createcoreclrdebugtarget-function"></a>CreateCoreClrDebugTarget — Funkcja
-Tworzy połączenie z serwerem proxy debugera, który jest uruchomiony na komputerze zdalnym i zwraca obiekt [ICoreClrDebugTarget](icoreclrdebugtarget-interface.md) , który może służyć do wykonywania zapytań dotyczących uruchomionych procesów i załadowanych środowiska uruchomieniowego na komputerze zdalnym.  
+Tworzy połączenie z serwerem proxy debugera, który jest uruchomiony na komputerze zdalnym i zwraca [ICoreClrDebugTarget](icoreclrdebugtarget-interface.md) obiektu, który może służyć do wykonywania zapytań uruchomionych procesów i załadowanych runtimes na komputerze zdalnym.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
 HRESULT CreateCoreClrDebugTarget (  
-       [in]  DWORD    dwAddress,   
+       [in]  DWORD    dwAddress,
        [out] ICoreClrDebugTarget**     ppTarget  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `dwAddress`  
- podczas Adres IPv4 zdalnej maszyny docelowej.  
+ [w] adres IPv4 zdalnego komputera docelowego.  
   
  `ppTarget`  
- określoną Wskaźnik do wskaźnika do obiektu [ICoreClrDebugTarget](icoreclrdebugtarget-interface.md) , który zostanie utworzony.  
+ [na zewnątrz] Wskaźnik do wskaźnika do [obiektu ICoreClrDebugTarget,](icoreclrdebugtarget-interface.md) który zostanie utworzony.  
   
-## <a name="return-value"></a>Wartość zwrócona  
+## <a name="return-value"></a>Wartość zwracana  
  S_OK  
- Liczba CLRs w procesie została pomyślnie określona, a odpowiednie tablice uchwytów i ścieżek zostały prawidłowo wypełnione.  
+ Liczba clr w procesie została pomyślnie określona, a odpowiednie tablice dojścia i ścieżki zostały poprawnie wypełnione.  
   
- E_OUTOFMEMORY  
- Nie można przydzielić wystarczającej ilości pamięci dla `ppTarget`.  
+ E_outofmemory  
+ Nie można przydzielić `ppTarget`wystarczającej ilości pamięci dla pliku .  
   
- E_FAIL (lub inne kody powrotne E_)  
- Inne błędy.  
+ E_FAIL (lub inne E_ kody zwrotne)  
+ Inne awarie.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CoreClrRemoteDebuggingInterfaces. h  
+ **Nagłówek:** CoreClrRemoteDebuggingInterfaces.h  
   
- **Library:** mscordbi_macx86.dll  
+ **Biblioteka:** mscordbi_macx86.dll  
   
- **.NET Framework wersje:** 3,5 SP1
+ **Wersje .NET Framework:** 3.5 SP1

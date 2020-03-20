@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0eaa4aa9-9441-444a-920c-e4b2a2db899e
 topic_type:
 - apiref
-ms.openlocfilehash: c3c57074ae53e2e1d8d41aa04cb6eb6089db58b5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: dfa900e2184a8c415d75f5702c572b14c4018749
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449441"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177790"
 ---
 # <a name="imetadataassemblyimportgetassemblyprops-method"></a>IMetaDataAssemblyImport::GetAssemblyProps — Metoda
 Pobiera zestaw właściwości dla zestawu z określonym podpisem metadanych.  
@@ -30,7 +30,7 @@ Pobiera zestaw właściwości dla zestawu z określonym podpisem metadanych.
 ```cpp  
 HRESULT GetAssemblyProps (  
     [in]  mdAssembly          mda,  
-    [out] const void          **ppbPublicKey,   
+    [out] const void          **ppbPublicKey,
     [out] ULONG               *pcbPublicKey,  
     [out] ULONG               *pulHashAlgId,  
     [out] LPWSTR              szName,  
@@ -43,41 +43,41 @@ HRESULT GetAssemblyProps (
   
 ## <a name="parameters"></a>Parametry  
  `mda`  
- [in]. `mdAssembly` token metadanych reprezentujący zestaw, dla którego mają zostać pobrane właściwości.  
+ [w]. Token `mdAssembly` metadanych, który reprezentuje zestaw, dla którego mają zostać właściwości.  
   
  `ppbPublicKey`  
- określoną Wskaźnik do klucza publicznego lub tokenu metadanych.  
+ [na zewnątrz] Wskaźnik do klucza publicznego lub tokenu metadanych.  
   
  `pcbPublicKey`  
- określoną Liczba bajtów w zwróconym kluczu publicznym.  
+ [na zewnątrz] Liczba bajtów w zwróconym kluczu publicznym.  
   
  `pulHashAlgId`  
- określoną Wskaźnik do algorytmu używany do mieszania plików w zestawie.  
+ [na zewnątrz] Wskaźnik do algorytmu używanego do mieszania plików w zestawie.  
   
  `szName`  
- określoną Prosta nazwa zestawu.  
+ [na zewnątrz] Prosta nazwa zestawu.  
   
  `cchName`  
- podczas Rozmiar, w postaci szerokich znaków, `szName`.  
+ [w] Rozmiar, w szerokich znaków, z `szName`.  
   
  `pchName`  
- określoną Liczba znaków dwubajtowych faktycznie zwracanych w `szName`.  
+ [na zewnątrz] Liczba szerokich znaków rzeczywiście `szName`zwrócona w .  
   
  `pMetaData`  
- określoną Wskaźnik do struktury ASSEMBLYMETADATA, która zawiera metadane zestawu.  
+ [na zewnątrz] Wskaźnik do ASSEMBLYMETADATA struktury, która zawiera metadane zestawu.  
   
  `pdwAssemblyFlags`  
- określoną Flagi opisujące metadane zastosowane do zestawu. Ta wartość jest kombinacją co najmniej jednej wartości [CorAssemblyFlags —](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) .  
+ [na zewnątrz] Flagi opisujące metadane zastosowane do zestawu. Ta wartość jest kombinacją jednej lub więcej wartości [CorAssemblyFlags.](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md)  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataAssemblyImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [IMetaDataAssemblyImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

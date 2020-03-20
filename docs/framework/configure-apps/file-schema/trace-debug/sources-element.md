@@ -1,5 +1,5 @@
 ---
-title: <sources> Element
+title: <sources>, element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - trace sources
 - <sources> element
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
-ms.openlocfilehash: a903d009f2056e65414c1792494fbbd20e224413
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 2a76816ee73f516b3c7544877a77531acaa8e09c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088816"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153272"
 ---
-# <a name="sources-element"></a>\<źródła > elementu
+# <a name="sources-element"></a>\<źródła> Element
 Określa źródła śledzenia, które inicjują komunikaty śledzenia.  
 
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp;&nbsp;[ **\<system. diagnostics >** ](system-diagnostics-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<źródła >**
+[**\<>konfiguracyjne**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<>system.diagnostics**](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<źródeł>**
 
 ## <a name="syntax"></a>Składnia  
   
@@ -41,31 +41,31 @@ Określa źródła śledzenia, które inicjują komunikaty śledzenia.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[> źródłowe \<](source-element.md)|Element wymagany.<br /><br /> Określa źródło śledzenia, które inicjuje komunikaty śledzenia.|  
+|[\<>źródłowe](source-element.md)|Element wymagany.<br /><br /> Określa źródło śledzenia, które inicjuje śledzenie komunikatów.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
 |`configuration`|Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.|  
-|`system.diagnostics`|Określa detektory śledzenia, które zbierają, przechowują i rozsyłają komunikaty oraz poziom, w którym ustawiono przełącznik śledzenia.|  
+|`system.diagnostics`|Określa odbiorniki śledzenia, które zbierają, przechowują i rozsyłają komunikaty oraz poziom, na którym ustawiony jest przełącznik śledzenia.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ten element może być używany w pliku konfiguracji komputera (Machine. config) i w pliku konfiguracji aplikacji.  
+ Ten element może być używany w pliku konfiguracyjnym komputera (Machine.config) i pliku konfiguracji aplikacji.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak użyć elementu `<sources>`, aby dodać `mySource` źródła śledzenia i ustawić poziom dla przełącznika źródła o nazwie `sourceSwitch`. Dodano odbiornik śledzenia konsoli, który zapisuje informacje o śledzeniu do konsoli.  
+ W poniższym przykładzie `<sources>` pokazano, jak użyć `mySource` elementu, aby dodać źródło `sourceSwitch`śledzenia i ustawić poziom dla przełącznika źródłowego o nazwie . Dodano odbiornik śledzenia konsoli, który zapisuje informacje śledzenia do konsoli.  
   
 ```xml  
 <configuration>  
    <system.diagnostics>  
       <sources>  
-         <source name="mySource" switchName="sourceSwitch"   
+         <source name="mySource" switchName="sourceSwitch"
             switchType="System.Diagnostics.SourceSwitch"  >  
             <listeners>  
-               <add name="console"   
+               <add name="console"
                   type="System.Diagnostics.ConsoleTraceListener" >  
-                  <filter type="System.Diagnostics.EventTypeFilter"   
+                  <filter type="System.Diagnostics.EventTypeFilter"
                      initializeData="Error" />  
                </add>  
                <remove name="Default" />  
@@ -74,12 +74,12 @@ Określa źródła śledzenia, które inicjują komunikaty śledzenia.
       </sources>  
       <switches>  
          <add name="sourceSwitch" value="Warning" />  
-      </switches>    
-   </system.diagnostics>   
+      </switches>
+   </system.diagnostics>
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.DefaultTraceListener>
@@ -88,4 +88,4 @@ Określa źródła śledzenia, które inicjują komunikaty śledzenia.
 - <xref:System.Diagnostics.EventLogTraceListener>
 - <xref:System.Diagnostics.XmlWriterTraceListener>
 - [Schemat ustawień śledzenia i debugowania](index.md)
-- [> źródłowe \<](source-element.md)
+- [\<>źródłowe](source-element.md)

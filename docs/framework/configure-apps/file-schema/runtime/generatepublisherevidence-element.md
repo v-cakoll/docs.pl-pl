@@ -1,28 +1,28 @@
 ---
-title: <generatePublisherEvidence> Element
+title: <generatePublisherEvidence>, element
 ms.date: 03/30/2017
 helpviewer_keywords:
 - generatePublisherEvidence element
 - <generatePublisherEvidence> element
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
-ms.openlocfilehash: b04ef53d6e9c3d954b0925ea8634b3d220b36af7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 24a5ea02992a5bce681b5bab4fb7f75505bd225d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73116578"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154117"
 ---
-# <a name="generatepublisherevidence-element"></a>\<element > generatePublisherEvidence
-Określa, czy środowisko uruchomieniowe tworzy <xref:System.Security.Policy.Publisher> dowody dla zabezpieczeń dostępu kodu (CAS).  
+# <a name="generatepublisherevidence-element"></a>\<generatePublisherEvidence> Element
+Określa, czy środowisko <xref:System.Security.Policy.Publisher> wykonawcze tworzy dowody zabezpieczeń dostępu do kodu (CAS).  
   
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp;&nbsp;[ **\<środowiska uruchomieniowego >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<generatePublisherEvidence >**  
+[**\<>konfiguracyjne**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<>czasu wykonywania**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<generatePublisherEvidence>**  
   
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<generatePublisherEvidence    
+<generatePublisherEvidence
    enabled="true|false"/>  
 ```  
   
@@ -33,14 +33,14 @@ Określa, czy środowisko uruchomieniowe tworzy <xref:System.Security.Policy.Pub
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`enabled`|Atrybut wymagany.<br /><br /> Określa, czy środowisko uruchomieniowe tworzy <xref:System.Security.Policy.Publisher> dowód.|  
+|`enabled`|Atrybut wymagany.<br /><br /> Określa, czy środowisko <xref:System.Security.Policy.Publisher> wykonawcze tworzy dowody.|  
   
 ## <a name="enabled-attribute"></a>Atrybut włączony  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|`false`|Nie tworzy <xref:System.Security.Policy.Publisher> dowód.|  
-|`true`|Tworzy <xref:System.Security.Policy.Publisher> dowód. Domyślnie włączone.|  
+|`false`|Nie tworzy <xref:System.Security.Policy.Publisher> dowodów.|  
+|`true`|Tworzy <xref:System.Security.Policy.Publisher> dowody. Domyślnie włączone.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -55,18 +55,18 @@ Określa, czy środowisko uruchomieniowe tworzy <xref:System.Security.Policy.Pub
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
-> W .NET Framework 4 i nowszych ten element nie ma wpływu na czasy ładowania zestawu. Aby uzyskać więcej informacji, zobacz sekcję "uproszczenie zasad zabezpieczeń" w temacie [zmiany zabezpieczeń](../../../security/security-changes.md).  
+> W programie .NET Framework 4 i nowszych element ten nie ma wpływu na czasy ładowania zestawu. Aby uzyskać więcej informacji, zobacz sekcję "Uproszczenie zasad zabezpieczeń" w sekcji [Zmiany zabezpieczeń](../../../security/security-changes.md).  
   
- Środowisko uruchomieniowe języka wspólnego (CLR) próbuje zweryfikować podpis Authenticode w czasie ładowania, aby utworzyć <xref:System.Security.Policy.Publisher> dowód dla zestawu. Jednak domyślnie większość aplikacji nie potrzebuje <xref:System.Security.Policy.Publisher> dowodu. Standardowe zasady CAS nie bazują na <xref:System.Security.Policy.PublisherMembershipCondition>. Należy unikać niepotrzebnego kosztu uruchomienia związanego z weryfikacją podpisu wydawcy, chyba że aplikacja jest wykonywana na komputerze z niestandardowymi zasadami CAS lub ma zamiarować wymagania dotyczące <xref:System.Security.Permissions.PublisherIdentityPermission> w środowisku częściowego zaufania. (Wymagania dotyczące uprawnień tożsamości zawsze powiodło się w środowisku pełnego zaufania).  
+ Środowisko wykonawcze języka wspólnego (CLR) próbuje zweryfikować authenticode <xref:System.Security.Policy.Publisher> podpisu w czasie ładowania, aby utworzyć dowody dla zestawu. Jednak domyślnie większość aplikacji nie <xref:System.Security.Policy.Publisher> potrzebuje dowodów. Standardowe zasady CAS nie <xref:System.Security.Policy.PublisherMembershipCondition>opierają się na . Należy unikać niepotrzebnych kosztów uruchamiania skojarzonych z weryfikacją podpisu wydawcy, chyba że aplikacja jest wykonywana <xref:System.Security.Permissions.PublisherIdentityPermission> na komputerze z niestandardowymi zasadami CAS lub zamierza zaspokoić wymagania w środowisku częściowego zaufania. (Wymagania dotyczące uprawnień tożsamości zawsze odnoszą sukces w środowisku pełnego zaufania).  
   
 > [!NOTE]
-> Zalecamy, aby usługi używały elementu `<generatePublisherEvidence>`, aby zwiększyć wydajność uruchamiania.  Za pomocą tego elementu można także uniknąć opóźnień, które mogą spowodować przekroczenie limitu czasu i anulowanie uruchamiania usługi.  
+> Zaleca się, że `<generatePublisherEvidence>` usługi używają tego elementu w celu zwiększenia wydajności uruchamiania.  Za pomocą tego elementu może również pomóc uniknąć opóźnień, które mogą spowodować limit czasu i anulowanie uruchamiania usługi.  
   
 ## <a name="configuration-file"></a>Plik konfiguracji  
- Tego elementu można używać tylko w pliku konfiguracji aplikacji.  
+ Ten element może być używany tylko w pliku konfiguracji aplikacji.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak używać elementu `<generatePublisherEvidence>`, aby wyłączyć sprawdzanie zasad wydawcy CAS dla aplikacji.  
+ W poniższym przykładzie `<generatePublisherEvidence>` pokazano, jak użyć elementu, aby wyłączyć sprawdzanie zasad wydawcy CAS dla aplikacji.  
   
 ```xml  
 <configuration>  
@@ -76,7 +76,7 @@ Określa, czy środowisko uruchomieniowe tworzy <xref:System.Security.Policy.Pub
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Schemat ustawień środowiska uruchomieniowego](index.md)
 - [Schemat pliku konfiguracji](../index.md)

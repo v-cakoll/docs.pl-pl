@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8844d0dd-730e-4592-8a7b-c1462d312c70
 topic_type:
 - apiref
-ms.openlocfilehash: 06b81615565a04db7d6cfef4da9b5372a85afd68
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6a4489d094974eb872b39824ceb185b0cbe48625
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450349"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177829"
 ---
 # <a name="imetadataassemblyimportenumassemblyrefs-method"></a>IMetaDataAssemblyImport::EnumAssemblyRefs — Metoda
 Wylicza `mdAssemblyRef` wystąpienia, które są zdefiniowane w manifeście zestawu.  
@@ -29,42 +29,42 @@ Wylicza `mdAssemblyRef` wystąpienia, które są zdefiniowane w manifeście zest
   
 ```cpp  
 HRESULT EnumAssemblyRefs (  
-    [in, out] HCORENUM        *phEnum,   
-    [out]     mdAssemblyRef   rAssemblyRefs[],   
-    [in]      ULONG           cMax,   
+    [in, out] HCORENUM        *phEnum,
+    [out]     mdAssemblyRef   rAssemblyRefs[],
+    [in]      ULONG           cMax,
     [out]     ULONG           *pcTokens  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [in. out] Wskaźnik do modułu wyliczającego. Ta wartość musi być wartością null, gdy metoda `EnumAssemblyRefs` jest wywoływana po raz pierwszy.  
+ [w, na zewnątrz] Wskaźnik do wyliczacza. Musi to być wartość `EnumAssemblyRefs` null, gdy metoda jest wywoływana po raz pierwszy.  
   
  `rAssemblyRefs`  
- określoną Wyliczanie tokenów metadanych `mdAssemblyRef`.  
+ [na zewnątrz] Wyliczenie tokenów `mdAssemblyRef` metadanych.  
   
  `cMax`  
- podczas Maksymalna liczba tokenów, które mogą być umieszczone w tablicy `rAssemblyRefs`.  
+ [w] Maksymalna liczba tokenów, które mogą `rAssemblyRefs` być umieszczone w tablicy.  
   
  `pcTokens`  
- określoną Liczba tokenów faktycznie umieszczonych w `rAssemblyRefs`.  
+ [na zewnątrz] Liczba tokenów faktycznie umieszczonych w `rAssemblyRefs`.  
   
-## <a name="return-value"></a>Wartość zwrócona  
+## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumAssemblyRefs` pomyślnie zwrócone.|  
-|`S_FALSE`|Brak tokenów do wyliczenia. W tym przypadku `pcTokens` jest ustawiona na zero.|  
+|`S_OK`|`EnumAssemblyRefs`zwrócono pomyślnie.|  
+|`S_FALSE`|Nie ma żadnych tokenów do wyliczenia. W takim `pcTokens` przypadku jest ustawiona na zero.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataAssemblyImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [IMetaDataAssemblyImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

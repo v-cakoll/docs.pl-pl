@@ -6,143 +6,143 @@ helpviewer_keywords:
 - unmanaged enumerations [.NET Framework], debugging
 - enumerations [.NET Framework debugging]
 ms.assetid: 3af9f584-f1b4-4154-aeaa-8fce7c9f8b50
-ms.openlocfilehash: a83b1aa0b2cc068ed2f73dca04083b1085d45201
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: c37b6ff42b428184d301d63b6dbbd9d80a72bf3f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789160"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179138"
 ---
 # <a name="debugging-enumerations"></a>Debugowanie — wyliczenia
-W tej sekcji opisano niezarządzane wyliczenia używane przez interfejs API debugowania.  
+W tej sekcji opisano niezarządzane wyliczenia używane przez debugowanie interfejsu API.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [CLR_DEBUGGING_PROCESS_FLAGS, wyliczenie](clr-debugging-process-flags-enumeration.md)  
- Dostarcza wartości, które są używane przez metodę [ICLRDebugging:: OpenVirtualProcess —](iclrdebugging-openvirtualprocess-method.md) .  
+ Zawiera wartości, które są używane przez [metodę ICLRDebugging::OpenVirtualProcess.](iclrdebugging-openvirtualprocess-method.md)  
   
- [CLRDataEnumMemoryFlags, wyliczenie](clrdataenummemoryflags-enumeration.md)  
- Wskazuje, które regiony pamięci są wywoływane przez wywołanie metody [ICLRDataEnumMemoryRegions:: EnumMemoryRegions —](iclrdataenummemoryregions-enummemoryregions-method.md) .  
+ [CLRDataEnumMemoryFlags — Wyliczenie](clrdataenummemoryflags-enumeration.md)  
+ Wskazuje, które regiony pamięci wywołać [ICLRDataEnumMemoryRegions::EnumMemoryRegions](iclrdataenummemoryregions-enummemoryregions-method.md) metoda powinna zawierać.  
   
  [COR_PUB_ENUMPROCESS, wyliczenie](cor-pub-enumprocess-enumeration.md)  
- Identyfikuje typ procesu do wyliczenia.  
+ Identyfikuje typ procesu, który ma być wyliczony.  
   
  [CorDebugBlockingReason, wyliczenie](cordebugblockingreason-enumeration.md)  
- Określa przyczyny, dla których wątek może zostać zablokowany dla danego obiektu.  
+ Określa powody, dla których wątek może zostać zablokowany na danym obiekcie.  
   
  CorDebugChainReason  
- Wskazuje przyczynę lub przyczyny inicjacji łańcucha wywołań.  
+ Wskazuje przyczynę lub przyczyny rozpoczęcia łańcucha wywołań.  
   
- [CorDebugCodeInvokeKind, wyliczenie](cordebugcodeinvokekind-enumeration.md)  
- Opisuje sposób, w jaki wyeksportowana funkcja wywołuje kod zarządzany.  
+ [Wyliczenie CorDebugCodeInvokeKind](cordebugcodeinvokekind-enumeration.md)  
+ W tym artykule opisano, jak wyeksportowana funkcja wywołuje kod zarządzany.  
   
  [CorDebugCodeInvokePurpose, wyliczenie](cordebugcodeinvokepurpose-enumeration.md)  
  Opisuje, dlaczego wyeksportowana funkcja wywołuje kod zarządzany.  
   
  CorDebugCreateProcessFlags  
- Zapewnia dodatkowe opcje debugowania, których można użyć w wywołaniu metody [ICorDebug:: CreateProcess](icordebug-createprocess-method.md) .  
+ Udostępnia dodatkowe opcje debugowania, które mogą być używane w wywołaniu [metody ICorDebug::CreateProcess.](icordebug-createprocess-method.md)  
   
  [CorDebugDebugEventKind, wyliczenie](cordebugdebugeventkind-enumeration.md)  
- Wskazuje typ zdarzenia, którego informacje są dekodowane przez metodę [DecodeEvent](icordebugprocess6-decodeevent-method.md) .  
+ Wskazuje typ zdarzenia, którego informacje są dekodowane przez [DecodeEvent](icordebugprocess6-decodeevent-method.md) metody.  
   
- [CorDebugDecodeEventFlagsWindows, wyliczenie](cordebugdecodeeventflagswindows-enumeration.md)  
- Zawiera dodatkowe informacje na temat zdarzeń debugowania na platformie Windows.  
+ [Wyliczenie CorDebugDecodeEventFlagsWindows](cordebugdecodeeventflagswindows-enumeration.md)  
+ Zawiera dodatkowe informacje dotyczące zdarzeń debugowania na platformie Windows.  
   
  CorDebugExceptionCallbackType  
- Wskazuje typ wywołania zwrotnego, które jest wykonywane z [ICorDebugManagedCallback2:: Exception](icordebugmanagedcallback2-exception-method.md) zdarzenia.  
+ Wskazuje typ wywołania zwrotnego, który jest wykonany ze zdarzenia [ICorDebugManagedCallback2::Exception.](icordebugmanagedcallback2-exception-method.md)  
   
- [CorDebugExceptionFlags, wyliczenie](cordebugexceptionflags-enumeration.md)  
+ [CorDebugExceptionFlags — Wyliczenie](cordebugexceptionflags-enumeration.md)  
  Zawiera dodatkowe informacje o wyjątku.  
   
  CorDebugExceptionUnwindCallbackType  
- Wskazuje zdarzenie, które jest sygnalizowane przez wywołanie zwrotne w fazie unwind.  
+ Wskazuje zdarzenie, które jest sygnalizowane przez wywołanie zwrotne podczas fazy unwind.  
   
  [CorDebugGCType, wyliczenie](cordebuggctype-enumeration.md)  
- Wskazuje, czy moduł wyrzucania elementów bezużytecznych jest uruchomiony na stacji roboczej lub na serwerze.  
+ Wskazuje, czy moduł zbierający elementy bezużyteczne jest uruchomiony na stacji roboczej lub serwera.  
   
  [CorDebugGenerationTypes, wyliczenie](cordebuggenerationtypes-enumeration.md)  
  Określa generowanie regionu pamięci na zarządzanym stosie.  
   
  CorDebugHandleType  
- Wskazuje typ dojścia.  
+ Wskazuje typ uchwytu.  
   
  [CorDebugIlToNativeMappingTypes, wyliczenie](cordebugiltonativemappingtypes-enumeration.md)  
- Wskazuje, czy konkretny zakres instrukcji macierzystych odpowiada specjalnemu regionowi kodu.  
+ Wskazuje, czy określony zakres instrukcji natywnych odpowiada specjalnemu regionowi kodu.  
   
  CorDebugIntercept  
- Wskazuje typy kodu, do którego można wykonać te działania.  
+ Wskazuje typy kodu, do których można wejść.  
   
  [CorDebugInterfaceVersion, wyliczenie](cordebuginterfaceversion-enumeration.md)  
- Określa wersję .NET Framework lub wersję .NET Framework, w której został wprowadzony interfejs.  
+ Określa wersję programu .NET Framework lub wersję programu .NET Framework, w której wprowadzono interfejs.  
   
  CorDebugInternalFrameType  
  Identyfikuje typ ramki stosu.  
   
  [CorDebugJITCompilerFlags, wyliczenie](cordebugjitcompilerflags-enumeration.md)  
- Zawiera wartości wpływające na zachowanie kompilatora zarządzanego (just-in-Time).  
+ Zawiera wartości, które wpływają na zachowanie kompilatora zarządzanego just-in-time (JIT).  
   
  [CorDebugJITCompilerFlagsDeprecated, wyliczenie](cordebugjitcompilerflagsdeprecated-enumeration.md)  
- {1&gt;Nieaktualne.&lt;1} Zamiast tego użyj `CORDEBUG_JIT_DEFAULT` elementu członkowskiego wyliczenia [CorDebugJITCompilerFlags —](cordebugjitcompilerflags-enumeration.md) .  
+ Nieaktualne. Zamiast `CORDEBUG_JIT_DEFAULT` tego należy użyć elementu członkowskiego [wyliczenia CorDebugJITCompilerFlags.](cordebugjitcompilerflags-enumeration.md)  
   
  CorDebugMappingResult  
- Zawiera szczegółowe informacje o sposobie uzyskiwania wartości wskaźnika instrukcji (IP).  
+ Zawiera szczegółowe informacje o tym, jak uzyskano wartość wskaźnika instrukcji (IP).  
   
- [CorDebugMDAFlags, wyliczenie](cordebugmdaflags-enumeration.md)  
- Określa stan wątku, w którym jest uruchamiany Asystent debugowania zarządzanego (MDA).  
+ [CorDebugMDAFlags — Wyliczenie](cordebugmdaflags-enumeration.md)  
+ Określa stan wątku, na którym jest uruchamiany asystent debugowania zarządzanego (MDA).  
   
  [CorDebugNGenPolicy, wyliczenie](cordebugngenpolicy-enumeration.md)  
- Zapewnia wartość określającą, czy debuger ładuje obrazy natywne (NGen) z pamięci podręcznej obrazów natywnych.  
+ Zapewnia wartość, która określa, czy debuger ładuje natywne obrazy (NGen) z pamięci podręcznej obrazu macierzystego.  
   
  [CorDebugPlatform, wyliczenie](cordebugplatform-enumeration.md)  
- Zapewnia wartości platformy docelowej, które są używane przez metodę [ICorDebugDataTarget:: GetPlatform](icordebugdatatarget-getplatform-method.md) .  
+ Zawiera wartości platformy docelowej, które są używane przez [ICorDebugDataTarget::GetPlatform](icordebugdatatarget-getplatform-method.md) metody.  
   
- [CorDebugRecordFormat, wyliczenie](cordebugrecordformat-enumeration.md)  
- Opisuje format danych w tablicy bajtów, który zawiera informacje na temat natywnego zdarzenia debugowania wyjątku.  
+ [Wyliczenie CorDebugRecordFormat](cordebugrecordformat-enumeration.md)  
+ Opisuje format danych w tablicy bajtów, który zawiera informacje o zdarzeniu debugowania wyjątków natywnych.  
   
- CorDebugRegister  
+ Rejestr CorDebug  
  Określa rejestry skojarzone z daną architekturą procesora.  
   
  [CorDebugSetContextFlag, wyliczenie](cordebugsetcontextflag-enumeration.md)  
- Wskazuje, czy kontekst pochodzi z aktywnej ramki (lub liściowej) na stosie czy został obliczony przez odróżnienie od innej ramki.  
+ Wskazuje, czy kontekst pochodzi z aktywnej (lub liścia) ramki na stosie lub został obliczony przez odwijanie z innej ramki.  
   
  [CorDebugStateChange, wyliczenie](cordebugstatechange-enumeration.md)  
- Opisuje ilość danych buforowanych, które muszą zostać odrzucone na podstawie zmian w procesie.  
+ W tym artykule opisano ilość danych w pamięci podręcznej, które muszą zostać odrzucone na podstawie zmian w procesie.  
   
  CorDebugStepReason  
  Wskazuje wynik pojedynczego kroku.  
   
- CorDebugThreadState  
+ CorDebugStan  
  Określa stan wątku do debugowania.  
   
  \>CorDebugUnmappedStop  
  Określa typ niezamapowanego kodu, który może wyzwolić zatrzymanie w wykonaniu kodu przez stepper.  
   
- CorDebugUserState  
+ Stan CorDebugUser  
  Wskazuje stan użytkownika wątku.  
   
  [CorGCReferenceType, wyliczenie](corgcreferencetype-enumeration.md)  
- Określa źródło obiektu, które ma zostać pobrane jako elementy bezużyteczne.  
+ Identyfikuje źródło obiektu, który ma być zbierany z modułem.  
   
  [ILCodeKind, wyliczenie](ilcodekind-enumeration.md)  
- Zawiera wartości, które określają, czy debuger może uzyskać dostęp do zmiennych lokalnych lub kodu dodanego w instrumentacji profilera ReJIT.  
+ Zawiera wartości, które określają, czy debuger jest w stanie uzyskać dostęp do zmiennych lokalnych lub kodu dodanego w profiler Instrumentacji ReJIT.  
   
- [LoggingLevelEnum, wyliczenie](logginglevelenum-enumeration.md)  
- Wskazuje poziom ważności komunikatu opisowego, który jest zapisywana w dzienniku zdarzeń, gdy zarządzany wątek rejestruje zdarzenie.  
+ [LoggingLevelEnum — Wyliczenie](logginglevelenum-enumeration.md)  
+ Wskazuje poziom ważności opisowego komunikatu, który jest zapisywany w dzienniku zdarzeń, gdy zarządzany wątek rejestruje zdarzenie.  
   
  [LogSwitchCallReason, wyliczenie](logswitchcallreason-enumeration.md)  
- Wskazuje operację wykonywaną na przełączniku debugowania/śledzenia.  
+ Wskazuje operację, która została wykonana na debugowania/śledzenia przełącznika.  
   
  [VariableLocationType, wyliczenie](variablelocationtype-enumeration.md)  
- Wskazuje typ lokalizacji natywnej zmiennej.  
+ Wskazuje natywny typ lokalizacji zmiennej.  
   
- [WriteableMetadataUpdateMode, wyliczenie](writeablemetadataupdatemode-enumeration.md)  
- Zawiera wartości, które określają, czy aktualizacje w pamięci mają być widoczne dla debugera. 
+ [Wyliczenie WriteableMetadataUpdateMode](writeablemetadataupdatemode-enumeration.md)  
+ Zawiera wartości, które określają, czy aktualizacje metadane w pamięci są widoczne dla debugera.
 
- [ClrDataSourceType, Wyliczenie](clrdatasourcetype-enumeration.md) Dostarcza wartości, które są używane przez strukturę CLRDATA_IL_ADDRESS_MAP.
+ [Wyliczanie clrDataSourceType](clrdatasourcetype-enumeration.md) Zawiera wartości, które są używane przez CLRDATA_IL_ADDRESS_MAP struktury.
 
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Klasy coclass debugowania](debugging-coclasses.md)  
   
- [Debugowanie, interfejsy](debugging-interfaces.md)  
+ [Debugowanie — Interfejsy](debugging-interfaces.md)  
   
  [Debugowanie statycznych funkcji globalnych](debugging-global-static-functions.md)  
   

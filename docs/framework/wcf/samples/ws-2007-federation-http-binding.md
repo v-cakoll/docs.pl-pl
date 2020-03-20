@@ -2,23 +2,23 @@
 title: Powiązanie HTTP w standardzie WS 2007 Federation
 ms.date: 03/30/2017
 ms.assetid: 91c1b477-a96e-4bf5-9330-5e9312113371
-ms.openlocfilehash: 74f21494c08f33a61eb1e1b0a102638cff59a970
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: bf61e64733859d96adf42fbacf08266eca1f5b45
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960190"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183186"
 ---
 # <a name="ws-2007-federation-http-binding"></a>Powiązanie HTTP w standardzie WS 2007 Federation
 
-Ten przykład ilustruje użycie <xref:System.ServiceModel.WS2007FederationHttpBinding>, standardowego powiązania, którego można użyć do kompilowania scenariuszy federacyjnych, które obsługują wersję 1,3 specyfikacji WS-Trust.
+W tym przykładzie <xref:System.ServiceModel.WS2007FederationHttpBinding>pokazano użycie , standardowe powiązanie, które można użyć do tworzenia scenariuszy federacyjne, które obsługują wersję 1.3 specyfikacji WS-Trust.
 
 > [!NOTE]
-> Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.
+> Procedura konfiguracji i instrukcje kompilacji dla tego przykładu znajdują się na końcu tego tematu.
 
-Przykład składa się z programu klienckiego opartego na konsoli (*Client. exe*), programu usługi tokenu zabezpieczającego opartego na konsoli (*SecurityTokenService. exe*) i programu usług opartego na konsoli (*Service. exe*). Usługa implementuje kontrakt definiujący wzorzec komunikacji żądania/odpowiedzi. Umowa jest definiowana przez interfejs `ICalculator`, który uwidacznia operacje matematyczne (`Add`, `Subtract`, `Multiply`i `Divide`). Klient uzyskuje token zabezpieczający z usługi tokenu zabezpieczającego (STS) i wysyła synchroniczne żądania do usługi dla danej operacji matematycznej. Następnie usługa wysyła odpowiedzi z wynikiem. Aktywność klienta jest widoczna w oknie konsoli.
+Przykład składa się z programu klienckiego opartego na konsoli (*Client.exe*), programu usługi tokenu zabezpieczającego opartego na konsoli *(Securitytokenservice.exe)* i programu usługi opartego na konsoli (*Service.exe*). Usługa implementuje kontrakt, który definiuje wzorzec komunikacji żądanie/odpowiedź. Kontrakt jest definiowany `ICalculator` przez interfejs, który`Add`udostępnia `Subtract` `Multiply`operacje `Divide`matematyczne ( , , , i ). Klient uzyskuje token zabezpieczający z usługi tokenu zabezpieczającego (STS) i sprawia, że synchroniczne żądania do usługi dla danej operacji matematycznej. Następnie usługa odpowiada z wynikiem. Aktywność klienta jest widoczna w oknie konsoli.
 
-Przykład umożliwia udostępnienie `ICalculator` kontraktu przy użyciu elementu `ws2007FederationHttpBinding`. Konfiguracja tego powiązania na kliencie jest pokazana w poniższym kodzie:
+Próbka udostępnia `ICalculator` kontrakt przy `ws2007FederationHttpBinding` użyciu elementu. Konfiguracja tego powiązania na kliencie jest pokazana w następującym kodzie:
 
 ```xml
 <bindings>
@@ -37,9 +37,9 @@ Przykład umożliwia udostępnienie `ICalculator` kontraktu przy użyciu element
 </bindings>
 ```
 
-Na [> zabezpieczeń\<](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)wartość `security` określa tryb zabezpieczeń, który ma być używany. W tym przykładzie użyto `message` zabezpieczeń, co oznacza, że [> komunikat\<](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) został określony w [\<> zabezpieczeń](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md). [\<wystawca >](../../configure-apps/file-schema/wcf/issuer.md) element wewnątrz [wiadomości\<](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) określa adres i powiązanie dla usługi STS, która wystawia token zabezpieczający dla klienta, aby klient mógł uwierzytelnić się w usłudze `ICalculator`.
+W [ \<>zabezpieczeń ](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md) `security` wartość określa, który tryb zabezpieczeń ma być używany. W tym `message` przykładzie jest używany zabezpieczeń, dlatego [ \<komunikat>](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) jest określony wewnątrz [ \<>zabezpieczeń ](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md). [ \<Wystawca>](../../configure-apps/file-schema/wcf/issuer.md) element wewnątrz [ \<komunikatu>](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) określa adres i powiązanie dla STS, który wystawia token zabezpieczający do klienta, dzięki czemu klient może uwierzytelnić się w `ICalculator` usłudze.
   
-Konfiguracja tego powiązania w usłudze jest pokazana w poniższym kodzie:
+Konfiguracja tego powiązania w usłudze jest wyświetlana w następującym kodzie:
 
 ```xml
 <bindings>
@@ -64,7 +64,7 @@ Konfiguracja tego powiązania w usłudze jest pokazana w poniższym kodzie:
 </bindings>
 ```
 
-Na [> zabezpieczeń\<](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)wartość `security` określa tryb zabezpieczeń, który ma być używany. W tym przykładzie użyto `message` zabezpieczeń, co oznacza, że [> komunikat\<](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) został określony w [\<> zabezpieczeń](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md). [\<issuerMetadata >](../../configure-apps/file-schema/wcf/issuermetadata.md) element `ws2007FederationHttpBinding` w [\<komunikat >](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) określa adres i tożsamość punktu końcowego, którego można użyć do pobrania metadanych dla usługi STS.
+W [ \<>zabezpieczeń ](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md) `security` wartość określa, który tryb zabezpieczeń ma być używany. W tym `message` przykładzie jest używany zabezpieczeń, dlatego [ \<komunikat>](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) jest określony wewnątrz [ \<>zabezpieczeń ](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md). [ \<IssuerMetadata>](../../configure-apps/file-schema/wcf/issuermetadata.md) element `ws2007FederationHttpBinding` wewnątrz [ \<komunikatu>](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) określa adres i tożsamość punktu końcowego, który może służyć do pobierania metadanych dla STS.
 
 Zachowanie usługi jest pokazane w następującym kodzie:
 
@@ -93,11 +93,11 @@ Zachowanie usługi jest pokazane w następującym kodzie:
 </behaviors>
 ```
   
-[\<issuedTokenAuthentication >](../../configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md)> umożliwia usłudze określenie ograniczeń dotyczących tokenów, które umożliwiają klientom prezentowanie podczas uwierzytelniania. Ta konfiguracja określa, że tokeny podpisane przez certyfikat, którego nazwa podmiotu to CN = STS, są akceptowane przez usługę.
+[ \<IssuedTokenAuthentication>](../../configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md)> umożliwia usłudze określenie ograniczeń tokenów, które umożliwia klientom prezentowanie podczas uwierzytelniania. Ta konfiguracja określa, że tokeny podpisane certyfikatem, którego nazwa podmiotu jest CN = STS są akceptowane przez usługę.
 
-Usługa STS udostępnia jeden punkt końcowy przy użyciu standardowej <xref:System.ServiceModel.WS2007HttpBinding>. Usługa odpowiada na żądania od klientów tokenów. Jeśli klient jest uwierzytelniany przy użyciu konta systemu Windows, usługa wystawia token, który zawiera nazwę użytkownika klienta jako rolę żądania. W ramach tworzenia tokenu usługa STS podpisuje token przy użyciu klucza prywatnego skojarzonego z certyfikatem usługi STS. Ponadto tworzy klucz symetryczny i szyfruje go przy użyciu klucza publicznego skojarzonego z certyfikatem CN = localhost. W przypadku zwracania tokenu do klienta usługa STS zwraca również klucz symetryczny. Klient przedstawia wystawiony token usłudze `ICalculator` i potwierdza, że zna klucz symetryczny, podpisując komunikat przy użyciu tego klucza.
+STS udostępnia pojedynczy punkt końcowy <xref:System.ServiceModel.WS2007HttpBinding>przy użyciu standardowego . Usługa odpowiada na żądania od klientów tokenów. Jeśli klient jest uwierzytelniony przy użyciu konta systemu Windows, usługa wystawia token, który zawiera nazwę użytkownika klienta jako oświadczenie. W ramach tworzenia tokenu STS podpisuje token przy użyciu klucza prywatnego skojarzonego z certyfikatem CN=STS. Ponadto tworzy klucz symetryczny i szyfruje go przy użyciu klucza publicznego skojarzonego z certyfikatem CN=localhost. W powrocie tokenu do klienta STS zwraca również klucz symetryczny. Klient przedstawia wystawiony token do `ICalculator` usługi i udowadnia, że zna klucz symetryczny, podpisując wiadomość za pomocą tego klucza.
 
-Po uruchomieniu przykładu żądanie tokenu zabezpieczającego jest wyświetlane w oknie konsoli STS. Żądania i odpowiedzi operacji są wyświetlane w oknach konsoli klienta i usługi. Naciśnij klawisz ENTER w dowolnym systemie Windows Console, aby zamknąć aplikację.
+Po uruchomieniu przykładu żądanie tokenu zabezpieczającego jest wyświetlane w oknie konsoli STS. Żądania i odpowiedzi operacji są wyświetlane w oknach konsoli klienta i usługi. Naciśnij klawisz ENTER w dowolnym okienku konsoli, aby wyłączyć aplikację.
 
 ```console
 Add(100,15.99) = 115.99
@@ -107,25 +107,25 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.
 ```
 
-Plik *Setup. bat* dołączony do tego przykładu umożliwia skonfigurowanie serwera i usługi STS z odpowiednimi certyfikatami w celu uruchomienia aplikacji samohostowanej. Plik wsadowy tworzy dwa certyfikaty w magazynie certyfikatów LocalMachine/TrustedPeople. Pierwszy certyfikat ma nazwę podmiotu CN = STS i jest używany przez usługę STS do podpisywania tokenów zabezpieczających, które wystąpiły dla klienta. Drugi certyfikat ma nazwę podmiotu CN = localhost i jest używany przez usługę STS do szyfrowania klucza w sposób, w jaki usługa może odszyfrować.
+Plik *Setup.bat* dołączony do tego przykładu umożliwia skonfigurowanie serwera i systemu STS z odpowiednimi certyfikatami do uruchamiania aplikacji hostowanej samodzielnie. Plik wsadowy tworzy dwa certyfikaty w magazynie certyfikatów LocalMachine/TrustedPeople. Pierwszy certyfikat ma nazwę podmiotu CN = STS i jest używany przez STS do podpisywania tokenów zabezpieczających, które wystawia klientowi. Drugi certyfikat ma nazwę podmiotu CN = localhost i jest używany przez STS do szyfrowania klucza w sposób, który usługa może odszyfrować.
 
-## <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład
+## <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić próbkę
   
-1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
+1. Upewnij się, że wykonano [procedurę jednorazowej instalacji dla przykładów fundacji komunikacji systemu Windows](one-time-setup-procedure-for-the-wcf-samples.md).
 
-2. Otwórz wiersz polecenia dla deweloperów programu Visual Studio z uprawnieniami administratora i uruchom plik Setup. bat, aby utworzyć wymagane certyfikaty.
+2. Otwórz wiersz polecenia dewelopera dla programu Visual Studio z uprawnieniami administratora i uruchom plik Setup.bat, aby utworzyć wymagane certyfikaty.
 
- Ten plik wsadowy używa *certmgr. exe* i Makecert. exe, które są dystrybuowane z Windows SDK. Należy jednak uruchomić *Setup. bat* z poziomu wiersza polecenia programu Visual Studio, aby umożliwić skryptowi znalezienie tych narzędzi.
+ Ten plik wsadowy używa *programów Certmgr.exe* i Makecert.exe, które są dystrybuowane za pomocą programu Windows SDK. Jednak należy uruchomić *Setup.bat* z poziomu wiersza polecenia programu Visual Studio, aby włączyć skrypt, aby znaleźć te narzędzia.
 
-1. Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](building-the-samples.md).
+1. Aby utworzyć wersję C# lub Visual Basic .NET rozwiązania, postępuj zgodnie z instrukcjami w [tworzenie przykładów programu Windows Communication Foundation](building-the-samples.md).
 
-2. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](running-the-samples.md). W przypadku korzystania z systemu Windows Vista należy uruchomić program *Service. exe*, *Client. exe*i *SecurityTokenService. exe* z podwyższonym poziomem uprawnień (kliknij pliki prawym przyciskiem myszy, a następnie kliknij polecenie **Uruchom jako administrator**).
+2. Aby uruchomić próbkę w konfiguracji jedno- lub międzykomputerowej, postępuj zgodnie z instrukcjami w [przypadku uruchamiania przykładów fundacji komunikacji systemu Windows](running-the-samples.md). Jeśli używasz systemu Windows Vista, należy uruchomić *program Service.exe*, *Client.exe*i *SecurityTokenService.exe* z podwyższonymi uprawnieniami (kliknij prawym przyciskiem myszy pliki, a następnie kliknij polecenie **Uruchom jako administrator**).
 
 > [!IMPORTANT]
-> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny):
-> 
+> Próbki mogą być już zainstalowane na komputerze. Przed kontynuowaniem sprawdź następujący (domyślny) katalog:
+>
 > `<InstallDrive>:\WF_WCF_Samples`
-> 
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu:
-> 
+>
+> Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) Przykłady dla platformy .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu:
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\WS2007FederationHttp`

@@ -1,23 +1,23 @@
 ---
-title: '&amp;&amp; (i) (Entity SQL)'
+title: '&amp;&amp;(I) (Jednostka SQL)'
 ms.date: 03/30/2017
 ms.assetid: e7d24213-471d-4807-b85e-570375df89b5
-ms.openlocfilehash: be6e7120e6c19714f151aa38a8b9a1355de29d1a
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: eccad616de287a39c42e986cea84dc22feec7f70
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039951"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150517"
 ---
-# <a name="ampamp-and-entity-sql"></a>&amp;&amp; (i) (Entity SQL)
-Zwraca `true`, jeśli oba wyrażenia są `true`; w przeciwnym razie `false` lub `NULL`.  
+# <a name="ampamp-and-entity-sql"></a>&amp;&amp;(I) (Jednostka SQL)
+Zwraca, `true` jeśli oba `true`wyrażenia są ; w `false` inny `NULL`sposób, lub .  
   
 ## <a name="syntax"></a>Składnia  
   
 ```csharp  
 boolean_expression AND boolean_expression
 ```
- 
+
 lub  
 
 ```csharp
@@ -26,28 +26,28 @@ boolean_expression && boolean_expression
   
 ## <a name="arguments"></a>Argumenty  
  `boolean_expression`  
- Dowolne prawidłowe wyrażenie zwracające wartość logiczną.  
+ Dowolne prawidłowe wyrażenie, które zwraca wartość logiczną.  
   
 ## <a name="remarks"></a>Uwagi  
- Podwójne znaki "(& &) mają takie same funkcje jak operator i.  
+ Podwójne ampersandy (&&) mają taką samą funkcjonalność jak operator AND.  
   
  W poniższej tabeli przedstawiono możliwe wartości wejściowe i typy zwracane.  
   
 ||`TRUE`|`FALSE`|`NULL`|  
 |-|------------|-------------|------------|  
-|`TRUE`|OZNACZA|FAŁSZ|NULL|  
+|`TRUE`|Prawda|FAŁSZ|NULL|  
 |`FALSE`|FAŁSZ|FAŁSZ|FAŁSZ|  
 |`NULL`|NULL|FAŁSZ|NULL|  
   
 ## <a name="example"></a>Przykład  
- W poniższym zapytaniu Entity SQL pokazano, jak używać operatora i. Zapytanie jest oparte na modelu sprzedaży AdventureWorks. Aby skompilować i uruchomić to zapytanie, wykonaj następujące kroki:  
+ Następujące zapytanie SQL jednostki pokazuje, jak używać operatora AND. Kwerenda jest oparta na modelu sprzedaży AdventureWorks. Aby skompilować i uruchomić tę kwerendę, wykonaj następujące kroki:  
   
-1. Postępuj zgodnie z procedurą w temacie [How to: Execute a Query zwracającej wyniki StructuralType](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Postępuj zgodnie z procedurą [w : Jak: Wykonać kwerendę, która zwraca wyniki structuraltype](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
-2. Przekaż następujące zapytanie jako argument do metody `ExecuteStructuralTypeQuery`:  
+2. Przekaż następującą kwerendę jako `ExecuteStructuralTypeQuery` argument do metody:  
   
  [!code-csharp[DP EntityServices Concepts 2#AND](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#and)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Odwołanie do jednostki SQL](entity-sql-reference.md)

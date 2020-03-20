@@ -2,48 +2,48 @@
 title: Komunikacja asynchroniczna
 ms.date: 03/30/2017
 ms.assetid: 128dc092-9eb2-4e33-9470-9a7f62b60df6
-ms.openlocfilehash: 28b325a6bd870282577a2989b616628d52262deb
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: e1bc63b5d3178b8e98350dedd8eb0791e0e35589
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711860"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142879"
 ---
 # <a name="asynchronous-communication"></a>Komunikacja asynchroniczna
-W tym przykładzie pokazano, jak komunikacja między dwiema różnymi usługami Windows Workflow Foundation (WF) odbywa się domyślnie asynchronicznie.  
+W tym przykładzie pokazano, jak komunikacja między dwoma różnymi usługami Windows Workflow Foundation (WF) jest domyślnie wykonywana asynchronicznie.  
   
-## <a name="demonstrates"></a>Przedstawia  
- Asynchroniczna komunikacja między usługami [!INCLUDE[wf1](../../../../includes/wf1-md.md)].  
+## <a name="demonstrates"></a>Demonstracje  
+ Komunikacja asynchronizacjowa między usługami. [!INCLUDE[wf1](../../../../includes/wf1-md.md)]  
   
 ## <a name="discussion"></a>Dyskusji  
- Ten przykład pokazuje, jak komunikacja między [!INCLUDE[wf1](../../../../includes/wf1-md.md)] aplikacjami odbywa się asynchronicznie przy użyciu działań dotyczących komunikatów dostarczonych przez .NET Framework.  
+ W tym przykładzie [!INCLUDE[wf1](../../../../includes/wf1-md.md)] pokazano, jak komunikacja między aplikacjami odbywa się asynchronicznie przy użyciu działań obsługi wiadomości dostarczonych przez program .NET Framework.  
   
- Ten przykład składa się z trzech następujących projektów.  
+ Ten przykład składa się z następujących trzech projektów.  
   
- CreditCheckService  
- Ta usługa otrzymuje wynik kredytowy określonej osoby lub wartość elementu do pobrania, a następnie decyduje o tym, czy kredyt został udzielony.  
+ Usługa CreditCheckService  
+ Usługa ta otrzymuje ocenę kredytową konkretnej osoby lub wartość przedmiotu do nabycia, a następnie decyduje, czy kredyt jest przyznawany osobie.  
   
- RentalApprovalService  
- Ta usługa otrzymuje aplikację od osoby, która jest w trakcie pewnego kredytu. Ta usługa komunikuje się asynchronicznie z `CreditCheckService`, aby zdecydować, czy aplikacja kredytowa jest prawidłowa.  
+ RentalApprovalService (Usługa zdatna do wypożyczania)  
+ Usługa ta otrzymuje wniosek od osoby, która potrzebuje jakiegoś kredytu. Ta usługa komunikuje się asynchronicznie `CreditCheckService` z, aby zdecydować, czy wniosek o kredyt jest prawidłowy.  
   
  Klient  
- Klient komunikuje się synchronicznie z `RentalApprovalService`, aby dowiedzieć się, czy kredyt został zatwierdzony.  
+ Klient komunikuje się synchronicznie `RentalApprovalService` z, aby wiedzieć, czy kredyt został zatwierdzony.  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić próbkę  
   
-1. Kliknij prawym przyciskiem myszy rozwiązanie **AsynchronousCommunication** i wybierz polecenie **Właściwości**.  
+1. Kliknij prawym przyciskiem myszy rozwiązanie **komunikacji asynchroniiowej** i wybierz polecenie **Właściwości**.  
   
-2. W obszarze **wspólne właściwości**wybierz pozycję **projekt startowy**, a następnie wybierz opcję **wiele projektów startowych**.  
+2. W **obszarze Właściwości wspólne**wybierz pozycję Projekt **uruchamiania**i wybierz pozycję Wiele projektów **uruchamiania**.  
   
-3. Przenieś **RentalApprovalService** do pierwszej pozycji na liście, a następnie **CreditCheckService**, po którym następuje **Klient**. Ustaw akcję **startową** dla wszystkich trzech projektów.  
+3. Przenieś **RentalApprovalService** na pierwszą pozycję na liście, a następnie **CreditCheckService**, a następnie **klient**. Ustaw akcję **Start** dla wszystkich trzech projektów.  
   
-4. Kliknij przycisk **OK**, a następnie naciśnij klawisz F5, aby uruchomić przykład.  
+4. Kliknij **przycisk OK**i naciśnij klawisz F5, aby uruchomić próbkę.  
   
 > [!IMPORTANT]
-> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
->   
+> Próbki mogą być już zainstalowane na komputerze. Przed kontynuowaniem sprawdź następujący (domyślny) katalog.  
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
->   
+>
+> Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) Przykłady dla platformy .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Services\AsynchronousCommunication`

@@ -2,30 +2,30 @@
 title: Oczekiwane wyjątki
 ms.date: 03/30/2017
 ms.assetid: 299a6987-ae6b-43c6-987f-12b034b583ae
-ms.openlocfilehash: 24bb9b483a3f26241f895d68b763a1974b02151b
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: f250e526b528adf0b67365ceb07f13e4087d773d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716451"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79144712"
 ---
 # <a name="expected-exceptions"></a>Oczekiwane wyjątki
-Ten przykład pokazuje, jak przechwytywać oczekiwane wyjątki przy użyciu klienta z określonym typem. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) , który implementuje usługę kalkulatora. W tym przykładzie klient jest aplikacją konsolową (. exe), a usługa jest hostowana przez Internet Information Services (IIS).  
+W tym przykładzie pokazano, jak przechwytywać oczekiwane wyjątki podczas korzystania z wpisanego klienta. Ten przykład jest oparty na [wprowadzenie,](../../../../docs/framework/wcf/samples/getting-started-sample.md) który implementuje usługę kalkulatora. W tym przykładzie klient jest aplikacją konsoli (.exe), a usługa jest obsługiwana przez internetowe usługi informacyjne (IIS).  
   
 > [!NOTE]
-> Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
+> Procedura konfiguracji i instrukcje kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
   
- W tym przykładzie pokazano, jak przechwytywać i obsługiwać dwa oczekiwane typy wyjątków, które muszą być obsługiwane przez poprawne programy: `TimeoutException` i `CommunicationException`.  
+ W tym przykładzie pokazano, że wyłapywanie i `TimeoutException` `CommunicationException`obsługa dwóch oczekiwanych typów wyjątków, które muszą obsługiwać poprawne programy: i .  
   
- Wyjątki generowane przez metody komunikacji na kliencie Windows Communication Foundation (WCF) są oczekiwane lub nieoczekiwane. Nieoczekiwane wyjątki obejmują błędy katastrofalne, takie jak `OutOfMemoryException` i programowanie błędów, takich jak `ArgumentNullException` lub `InvalidOperationException`. Zazwyczaj nie istnieje użyteczny sposób obsługi nieoczekiwanych błędów, więc zazwyczaj nie należy ich przechwytywać podczas wywoływania metody komunikacji z klientem WCF.  
+ Wyjątki, które są generowane z metod komunikacji na kliencie Programu Windows Communication Foundation (WCF) są oczekiwane lub nieoczekiwane. Nieoczekiwane wyjątki obejmują `OutOfMemoryException` katastrofalne błędy, `ArgumentNullException` `InvalidOperationException`takie jak i błędy programowania, takie jak lub . Zazwyczaj nie ma użytecznego sposobu obsługi nieoczekiwanych błędów, więc zazwyczaj nie należy ich przechwytywać podczas wywoływania metody komunikacji klienta WCF.  
   
- Oczekiwane wyjątki od metod komunikacji na kliencie programu WCF obejmują `TimeoutException`, `CommunicationException`i dowolną klasę pochodną `CommunicationException`. Wskazuje to na problem podczas komunikacji, która może być bezpiecznie obsługiwana przez przerwanie działania klienta programu WCF i Raportowanie błędu komunikacji. Ze względu na to, że zewnętrzne czynniki mogą spowodować te błędy w dowolnej aplikacji, poprawne aplikacje muszą przechwycić te wyjątki i odzyskać je po wystąpieniu.  
+ Oczekiwane wyjątki od metod komunikacji na `TimeoutException` `CommunicationException`kliencie WCF `CommunicationException`obejmują , i dowolną klasę pochodną . Wskazują one na problem podczas komunikacji, które mogą być bezpiecznie obsługiwane przez przerwanie klienta WCF i raportowania awarii komunikacji. Ponieważ czynniki zewnętrzne mogą powodować te błędy w dowolnej aplikacji, poprawne aplikacje muszą przechwytywać te wyjątki i odzyskać, gdy wystąpią.  
   
- Istnieje kilka klas pochodnych `CommunicationException`, które klient może zgłosić. W niektórych przypadkach aplikacje przechwytuje niektóre z nich w celu przeprowadzenia specjalnej obsługi, ale pozwól, aby inne były obsługiwane jako `CommunicationException`. Można to osiągnąć przez przechwycenie najpierw określonego typu wyjątku, a następnie przechwycenie `CommunicationException` w późniejszej klauzuli catch.  
+ Istnieje kilka klas pochodnych, `CommunicationException` które klient może wrzucić. W niektórych przypadkach aplikacje również złapać niektóre z nich do specjalnej `CommunicationException`obsługi, ale niech inne być traktowane jako . Można to osiągnąć, przechwytywając najpierw bardziej `CommunicationException` szczegółowy typ wyjątku, a następnie przechwytywając w późniejszej klauzuli catch.This can be accomplished by catching the more specific exception type first and then catching in a later catch-clause.  
   
- Kod, który wywołuje metodę komunikacji klienta, musi przechwycić `TimeoutException` i `CommunicationException`. Jednym ze sposobów obsługi takich błędów jest przerwanie działania klienta i zgłaszanie błędu komunikacji.  
+ Kod, który wywołuje metodę komunikacji `TimeoutException` `CommunicationException`klienta musi przechwytyć i . Jednym ze sposobów obsługi takich błędów jest przerwanie klienta i zgłoszenie awarii komunikacji.  
   
-```csharp   
+```csharp
 try  
 {  
     ...  
@@ -45,14 +45,14 @@ catch (CommunicationException exception)
 }  
 ```  
   
- Jeśli wystąpi oczekiwany wyjątek, klient może lub nie może być później używany. Aby określić, czy klient jest nadal zdatny do użytku, sprawdź, czy właściwość `State` jest `CommunicationState`. Otworzyć. Jeśli nadal jest otwarty, nadal będzie można go użyć. W przeciwnym razie należy przerwać klienta i zwolnić wszystkie odwołania do niego.  
+ Jeśli wystąpi oczekiwany wyjątek, klient może lub nie może być użyteczny później. Aby ustalić, czy klient jest nadal `State` użyteczny, sprawdź, czy właściwość jest `CommunicationState`. Otwarte. Jeśli jest nadal otwarty, to nadal nadaje się do użyteczności. W przeciwnym razie należy przerwać klienta i zwolnić wszystkie odwołania do niego.  
   
 > [!CAUTION]
-> Można zauważyć, że klienci, którzy mają sesję, często nie mogą już korzystać z programu po wystąpieniu wyjątku, a klienci, którzy nie mają sesji, często nadal mogą korzystać po wystąpieniu wyjątku. Jednak żadna z nich nie jest gwarantowana, więc jeśli chcesz spróbować kontynuować korzystanie z klienta po wystąpieniu wyjątku, aplikacja powinna sprawdzić Właściwość `State`, aby sprawdzić, czy klient jest nadal otwarty.  
+> Można zaobserwować, że klienci, którzy mają sesję często nie są już użyteczne po wyjątku i klientów, którzy nie mają sesji są często nadal użyteczne po wyjątku. Jednak żadna z nich nie jest gwarantowana, więc jeśli chcesz spróbować kontynuować `State` korzystanie z klienta po wyjątku aplikacja powinna sprawdzić właściwość, aby sprawdzić, czy klient jest nadal otwarty.  
   
  Po uruchomieniu przykładu odpowiedzi operacji i wyjątki są wyświetlane w oknie konsoli klienta.  
   
- Proces klienta uruchamia dwa scenariusze, z których każdy próbuje wywołać `Add` a następnie `Divide`. Pierwszy scenariusz symuluje problem z siecią, przerywając działanie klienta przed wywołaniem `Divide`. Drugi scenariusz powoduje przekroczenie limitu czasu przez ustawienie przekroczenia limitu czasu, aby można było ukończyć metodę. Oczekiwane dane wyjściowe procesu klienta to:  
+ Proces klienta uruchamia dwa scenariusze, z `Add` których `Divide`każdy próbuje wywołać, a następnie . Pierwszy scenariusz symuluje problem z siecią, przerywając `Divide`klienta przed wykonaniem połączenia z programem . Drugi scenariusz powoduje warunek limitu czasu, ustawiając limit czasu zbyt krótki dla metody, aby zakończyć. Oczekiwane dane wyjściowe z procesu klienta są następujące:  
   
 ```output
 Add(100,15.99) = 115.99  
@@ -63,19 +63,19 @@ Set timeout too short for method to complete...
 Got System.TimeoutException  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić próbkę  
   
-1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że wykonano [procedurę jednorazowej instalacji dla przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Aby utworzyć wersję C# lub Visual Basic .NET rozwiązania, postępuj zgodnie z instrukcjami w [tworzenie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Aby uruchomić próbkę w konfiguracji z jednym lub krzyżowym komputerem, postępuj zgodnie z instrukcjami w [programie Uruchamianie przykładów fundacji komunikacji systemu Windows](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
-> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).  
->   
+> Próbki mogą być już zainstalowane na komputerze. Przed kontynuowaniem sprawdź następujący (domyślny) katalog.  
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
->   
+>
+> Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) Przykłady dla platformy .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\ExpectedExceptions`  

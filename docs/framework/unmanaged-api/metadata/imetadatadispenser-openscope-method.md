@@ -15,67 +15,67 @@ helpviewer_keywords:
 ms.assetid: 65063ad5-e0d9-4c01-8f8b-9a5950109fa6
 topic_type:
 - apiref
-ms.openlocfilehash: 5ce1af82631531f8f7105fbf92ba78db3cca437b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5185fb6663910c85ce5dae1225b9b10c5dd8bb28
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442330"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175944"
 ---
 # <a name="imetadatadispenseropenscope-method"></a>IMetaDataDispenser::OpenScope — Metoda
-Otwiera istniejący plik na dysku i mapuje jego metadane do pamięci.  
+Otwiera istniejący plik na dysku i mapuje jego metadane w pamięci.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```cpp  
 HRESULT OpenScope (  
-    [in]  LPCWSTR     szScope,   
-    [in]  DWORD       dwOpenFlags,   
-    [in]  REFIID      riid,   
+    [in]  LPCWSTR     szScope,
+    [in]  DWORD       dwOpenFlags,
+    [in]  REFIID      riid,
     [out] IUnknown    **ppIUnk  
 );  
 ```  
   
 ## <a name="parameters"></a>Parametry  
  `szScope`  
- podczas Nazwa pliku, który ma zostać otwarty. Plik musi zawierać metadane środowiska uruchomieniowego języka wspólnego (CLR).  
+ [w] Nazwa pliku, który ma zostać otwarty. Plik musi zawierać metadane wspólnego środowiska wykonawczego języka (CLR).  
   
  `dwOpenFlags`  
- podczas Wartość wyliczenia [CorOpenFlags —](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) w celu określenia trybu (odczyt, zapis itd.) do otwarcia.  
+ [w] Wartość [wyliczenia CorOpenFlags,](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) aby określić tryb (odczyt, zapis i tak dalej) do otwarcia.  
   
  `riid`  
- podczas Identyfikator IID żądanego interfejsu metadanych do zwrócenia; Obiekt wywołujący będzie używać interfejsu do importowania metadanych (odczytu) lub emisji (zapisu).  
+ [w] Identyfikator żądanego interfejsu metadanych do zwrócona; wywołujący użyje interfejsu do importowania (odczytu) lub emitowania (zapisu) metadanych.  
   
- Wartość `riid` musi określać jeden z interfejsów "Import" lub "Emituj". Prawidłowe wartości to IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2 lub IID_IMetaDataImport2.  
+ Wartość `riid` musi określać jeden z interfejsów "import" lub "emituj". Prawidłowe wartości to IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2 lub IID_IMetaDataImport2.  
   
  `ppIUnk`  
- określoną Wskaźnik do zwracanego interfejsu.  
+ [na zewnątrz] Wskaźnik do zwróconego interfejsu.  
   
 ## <a name="remarks"></a>Uwagi  
- Kopię metadanych w pamięci można zbadać przy użyciu metod z jednego z interfejsów "Import" lub dodać do metod przy użyciu metody z jednego z interfejsów "Emituj".  
+ Kopię metadanych w pamięci można zbadać przy użyciu metod z jednego z interfejsów "importuj" lub dodać do przy użyciu metod z jednego z interfejsów "emituj".  
   
- Jeśli plik docelowy nie zawiera metadanych CLR, Metoda `OpenScope` zakończy się niepowodzeniem.  
+ Jeśli plik docelowy nie zawiera metadanych CLR, metoda zakończy się niepowodzeniem. `OpenScope`  
   
- W .NET Framework w wersji 1,0 i 1,1, jeśli zakres jest otwarty z `dwOpenFlags` ustawiony na ofRead, kwalifikuje się do udostępniania. Oznacza to, że jeśli kolejne wywołania `OpenScope` przekażą nazwę wcześniej otwartego pliku, istniejący zakres jest ponownie używany i nie zostanie utworzony nowy zestaw struktur danych. Problemy mogą jednak wystąpić z powodu tego udostępniania.  
+ W .NET Framework w wersji 1.0 i wersji 1.1, jeśli zakres jest otwarty z `dwOpenFlags` zestawem doread, kwalifikuje się do udostępniania. Oznacza to, że `OpenScope` jeśli kolejne wywołania przekazania w nazwie pliku, który został wcześniej otwarty, istniejący zakres jest ponownie i nowy zestaw struktur danych nie jest tworzony. Jednak problemy mogą pojawić się z powodu tego udostępniania.  
   
- W .NET Framework w wersji 2,0 zakresy otwarte przy użyciu `dwOpenFlags` ustawione na ofRead nie są już udostępniane. Użyj wartości ofReadOnly, aby zezwolić na udostępnianie zakresu. Po udostępnieniu zakresu zapytania, które używają interfejsów metadanych "Odczyt/zapis", zakończą się niepowodzeniem.  
+ W .NET Framework w wersji 2.0 `dwOpenFlags` zakresy otwarte z zestawem doread nie są już współużytkowane. Użyj ofReadOnly wartość, aby umożliwić zakres do udostępnienia. Gdy zakres jest współużytkowany, kwerendy, które używają interfejsów metadanych "odczyt/zapis" zakończy się niepowodzeniem.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor. h  
+ **Nagłówek:** Okręg wyborczy Cor.h  
   
- **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Używany jako zasób w pliku MsCorEE.dll  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET Framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [IMetaDataDispenser, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
+- [IMetaDataDispenser — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
 - [IMetaDataDispenserEx, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
-- [IMetaDataAssemblyEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
-- [IMetaDataAssemblyImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
-- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataAssemblyEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [IMetaDataEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09f2e4ee-1d08-4ba8-8936-83394fee319d
-ms.openlocfilehash: 2641637d176b411108aeb2fa00ef4268584e9cb3
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 3f066f29b99ade6e92a263110fed8079208567b5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834271"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151497"
 ---
 # <a name="applying-an-xslt-transform-to-a-dataset"></a>Stosowanie transformacji XSLT do elementu DataSet
 
-@No__t Metoda **WriteXml** -1 umożliwia zapisanie zawartości **zestawu** danych jako danych XML. Typowym zadaniem jest następnie przekształcenie tego pliku XML do innego formatu przy użyciu transformacji XSL (XSLT). Jednak synchronizowanie **zestawu danych** z <xref:System.Xml.XmlDataDocument> umożliwia zastosowanie arkusza stylów XSLT do zawartości **zestawu danych** bez konieczności uprzedniego zapisania zawartości **zestawu danych** jako danych XML przy użyciu **WriteXml**.  
+**Metoda WriteXml** <xref:System.Data.DataSet> umożliwia zapisanie zawartości zestawu **danych** jako danych XML. Typowym zadaniem jest przekształcenie tego pliku XML w inny format przy użyciu przekształceń XSL (XSLT). Jednak synchronizacja **zestawu danych** <xref:System.Xml.XmlDataDocument> z elementem umożliwia zastosowanie arkusza stylów XSLT do zawartości **zestawu danych** bez konieczności uprzedniego zapisania zawartości **zestawu danych** jako danych XML przy użyciu **pliku WriteXml**.  
   
- Poniższy przykład wypełnia **zestaw danych** z tabelami i relacjami, synchronizuje **zestaw danych** z **XmlDataDocument**i zapisuje część **zestawu danych** jako plik HTML przy użyciu arkusza stylów XSLT. Poniżej znajduje się zawartość arkusza stylów XSLT:
+ Poniższy przykład wypełnia **zestaw danych** tabelami i relacjami, synchronizuje **zestaw danych** z **dokumentem XmlDataDocument**i zapisuje część **zestawu danych** jako plik HTML przy użyciu arkusza stylów XSLT. Poniżej przedstawiono zawartość arkusza stylów XSLT:
   
 ```xml  
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">  
@@ -60,7 +60,7 @@ ms.locfileid: "71834271"
  Poniższy kod wypełnia **zestaw danych** i stosuje arkusz stylów XSLT.  
   
 > [!NOTE]
-> Jeśli stosujesz arkusz stylów XSLT do **zestawu danych** , który zawiera relacje, osiągasz najlepszą wydajność, jeśli ustawisz właściwość **zagnieżdżoną** <xref:System.Data.DataRelation> na **true** dla każdej zagnieżdżonej relacji. Pozwala to na korzystanie z arkuszy stylów XSLT, które implementują naturalne przetwarzanie w dół w celu nawigowania po hierarchii i przekształcania danych, w przeciwieństwie do korzystania z osi lokalizacji XPath intensywnie korzystających z wydajności (na przykład poprzedzający element równorzędny i następujący element w stylu wyrażenia testowe węzła arkusza) do nawigowania. Aby uzyskać więcej informacji na temat relacji zagnieżdżonych, zobacz [zagnieżdżanie relacji](nesting-datarelations.md)danych.  
+> Jeśli stosujesz arkusz stylów XSLT do **zestawu danych** zawierającego relacje, uzyskasz najlepszą wydajność, jeśli ustawisz właściwość **Zagnieżdżona** <xref:System.Data.DataRelation> na **true** dla każdej relacji zagnieżdżonej. Dzięki temu można używać arkuszy stylów XSLT, które implementują naturalne przetwarzanie od góry do do dolnych, aby poruszać się po hierarchii i przekształcać dane, w przeciwieństwie do używania osi lokalizacji XPath o dużej wydajności (na przykład poprzedniego rodzeństwa i następującego rodzeństwa w stylu wyrażenia testowe węzła arkusza), aby poruszać się po nim. Aby uzyskać więcej informacji na temat zagnieżdżonych relacji, zobacz [Zagnieżdżanie danych .](nesting-datarelations.md)  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -80,7 +80,7 @@ dataSet.Relations.Add("CustOrders", _
 dataSet.Tables("Customers").Columns("CustomerID"), _  
 dataSet.Tables("Orders").Columns("CustomerID")).Nested = true  
   
-Dim xmlDoc As XmlDataDocument = New XmlDataDocument(dataSet)   
+Dim xmlDoc As XmlDataDocument = New XmlDataDocument(dataSet)
   
 Dim xslTran As XslTransform = New XslTransform  
 xslTran.Load("transform.xsl")  
@@ -112,19 +112,19 @@ custDS.Relations.Add("CustOrders",
   custDS.Tables["Customers"].Columns["CustomerID"],  
                      custDS.Tables["Orders"].Columns["CustomerID"]).Nested = true;  
   
-XmlDataDocument xmlDoc = new XmlDataDocument(custDS);   
+XmlDataDocument xmlDoc = new XmlDataDocument(custDS);
   
 XslTransform xslTran = new XslTransform();  
 xslTran.Load("transform.xsl");  
   
-XmlTextWriter writer = new XmlTextWriter("xslt_output.html",   
+XmlTextWriter writer = new XmlTextWriter("xslt_output.html",
   System.Text.Encoding.UTF8);  
   
 xslTran.Transform(xmlDoc, null, writer);  
 writer.Close();  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Synchronizacja elementów DataSet i XmlDataDocument](dataset-and-xmldatadocument-synchronization.md)
 - [Omówienie ADO.NET](../ado-net-overview.md)

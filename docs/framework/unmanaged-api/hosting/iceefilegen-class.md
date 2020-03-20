@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 90368606-506e-40df-be1f-8d595159203f
 topic_type:
 - apiref
-ms.openlocfilehash: 6914437b9b238c1d82cf4cc8a480a15dd8dda7ad
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8f9761cc8bc881cd694f5d9620e5c4ab5987a2ed
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126805"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176399"
 ---
 # <a name="iceefilegen-class"></a>ICeeFileGen — Klasa
-Oferuje funkcje tworzenia natywnego przenośnego pliku wykonywalnego (PE). Interfejs jest zwykle używany przez kompilatory do generowania skompilowanego wyjściowego pliku wykonywalnego.  
+Udostępnia funkcje tworzenia natywnego przenośnego pliku wykonywalnego (PE). Interfejs będzie zazwyczaj używany przez kompilatory do generowania ich skompilowany plik wykonywalny danych wyjściowych.  
   
 > [!NOTE]
-> `ICeeFileGen` obsługuje infrastrukturę .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
+> `ICeeFileGen`obsługuje infrastrukturę .NET Framework i nie jest przeznaczony do użycia bezpośrednio z kodu.  
   
- Ten interfejs jest przestarzały i zostanie usunięty w przyszłej wersji.  
+ Ten interfejs został przestarzały i zostanie usunięty w przyszłej wersji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -149,7 +149,7 @@ public:
         HCEESECTION section, ULONG num, ULONG size, ULONG offset = 0);  
   
     virtual HRESULT EmitMetaDataEx (HCEEFILE ceeFile,  
-        IMetaDataEmit *emitter);   
+        IMetaDataEmit *emitter);
   
     virtual HRESULT EmitLibraryNameEx (HCEEFILE ceeFile,  
         IMetaDataEmit *emitter);  
@@ -235,12 +235,12 @@ public:
 ```  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** ICeeFileGen. h  
+ **Nagłówek:** ICeeFileGen.h  
   
- **Wersja .NET Framework:** 1,0  
+ **Wersja .NET Framework:** 1.0  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Hosting, interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

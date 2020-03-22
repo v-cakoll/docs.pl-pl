@@ -5,55 +5,55 @@ helpviewer_keywords:
 - files [Visual Basic], moving
 ms.assetid: 53a7457b-5815-41ad-b37d-28537c1fb77a
 ms.openlocfilehash: 29c64a7a81028d47bf489212e6d8faec5e8dda75
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74335360"
 ---
 # <a name="how-to-move-a-file-in-visual-basic"></a>Porady: przenoszenie pliku w Visual Basic
 
-Metoda `My.Computer.FileSystem.MoveFile` może służyć do przenoszenia pliku do innego folderu. Jeśli struktura docelowa nie istnieje, zostanie utworzona.  
+Metoda `My.Computer.FileSystem.MoveFile` ta może służyć do przenoszenia pliku do innego folderu. Jeśli struktura docelowa nie istnieje, zostanie utworzona.  
   
 ### <a name="to-move-a-file"></a>Aby przenieść plik  
   
-- Użyj metody `MoveFile`, aby przenieść plik, określając nazwę pliku i lokalizację zarówno dla pliku źródłowego, jak i pliku docelowego. Ten przykład przenosi plik o nazwie `test.txt` z `TestDir1` do `TestDir2`. Należy pamiętać, że nazwa pliku docelowego jest określona, mimo że jest taka sama jak nazwa pliku źródłowego.  
+- Użyj `MoveFile` metody przenoszenia pliku, określając nazwę pliku i lokalizację zarówno dla pliku źródłowego, jak i pliku docelowego. W tym przykładzie `test.txt` `TestDir1` przenosi `TestDir2`plik o nazwie z do . Należy zauważyć, że nazwa pliku docelowego jest określona, mimo że jest taka sama jak nazwa pliku źródłowego.  
   
      [!code-vb[VbVbcnMyFileSystem#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#24)]  
   
 ### <a name="to-move-a-file-and-rename-it"></a>Aby przenieść plik i zmienić jego nazwę  
   
-- Użyj metody `MoveFile`, aby przenieść plik, określić nazwę i lokalizację pliku źródłowego, lokalizację docelową oraz nową nazwę w lokalizacji docelowej. Ten przykład przenosi plik o nazwie `test.txt` z `TestDir1` do `TestDir2` i zmienia nazwę `nexttest.txt`.  
+- Użyj `MoveFile` metody, aby przenieść plik, określając nazwę i lokalizację pliku źródłowego, lokalizację docelową i nową nazwę w lokalizacji docelowej. W tym przykładzie `test.txt` `TestDir1` przenosi `TestDir2` nazwany plik `nexttest.txt`z do i zmienia jego nazwę .  
   
      [!code-vb[VbVbcnMyFileSystem#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#25)]  
   
-## <a name="robust-programming"></a>Skuteczne programowanie  
+## <a name="robust-programming"></a>Niezawodne programowanie  
 
  Następujące warunki mogą spowodować wyjątek:  
   
-- Ścieżka jest nieprawidłowa z jednego z następujących powodów: jest ciągiem o zerowej długości, zawiera tylko biały znak, zawiera nieprawidłowe znaki lub jest ścieżką urządzenia (rozpoczyna się od \\\\.\\) (<xref:System.ArgumentException>).  
+- Ścieżka nie jest prawidłowa z jednego z następujących powodów: jest ciągiem o zerowej długości, zawiera tylko biały znak, \\ \\\\zawiera nieprawidłowe znaki lub jest ścieżką urządzenia (zaczyna się od . ) (<xref:System.ArgumentException>).  
   
-- Ścieżka jest nieprawidłowa, ponieważ jest `Nothing` (<xref:System.ArgumentNullException>).  
+- Ścieżka jest nieprawidłowa, `Nothing` ponieważ<xref:System.ArgumentNullException>jest ( ).  
   
-- `destinationFileName` jest `Nothing` lub jest pustym ciągiem (<xref:System.ArgumentNullException>).  
+- `destinationFileName`lub `Nothing` pusty ciąg<xref:System.ArgumentNullException>( ).  
   
-- Plik źródłowy jest nieprawidłowy lub nie istnieje (<xref:System.IO.FileNotFoundException>).  
+- Plik źródłowy jest nieprawidłowy lub<xref:System.IO.FileNotFoundException>nie istnieje ( ).  
   
-- Połączona ścieżka wskazuje istniejący katalog, plik docelowy istnieje, a `overwrite` jest ustawiony na `False`, plik w katalogu docelowym o tej samej nazwie jest używany lub użytkownik nie ma wystarczających uprawnień dostępu do pliku (<xref:System.IO.IOException>).  
+- Połączona ścieżka wskazuje istniejący katalog, plik docelowy istnieje i `overwrite` jest ustawiony na `False`, plik w katalogu docelowym o tej samej nazwie jest<xref:System.IO.IOException>w użyciu lub użytkownik nie ma wystarczających uprawnień dostępu do pliku ( ).  
   
-- Nazwa pliku lub katalogu w ścieżce zawiera dwukropek (:) lub ma nieprawidłowy format (<xref:System.NotSupportedException>).  
+- Nazwa pliku lub katalogu w ścieżce zawiera dwukropek (:) lub jest w nieprawidłowym formacie (<xref:System.NotSupportedException>).  
   
-- `showUI` jest ustawiona na `True`, `onUserCancel` jest ustawiona na `ThrowException`, a użytkownik anulował operację lub Wystąpił nieokreślony błąd we/wy (<xref:System.OperationCanceledException>).  
+- `showUI`jest `True`ustawiona `onUserCancel` na `ThrowException`, i albo użytkownik anulował operację lub występuje nieokreślony błąd we/wy (<xref:System.OperationCanceledException>).  
   
-- Ścieżka przekracza maksymalną długość zdefiniowaną przez system (<xref:System.IO.PathTooLongException>).  
+- Ścieżka przekracza zdefiniowaną przez system<xref:System.IO.PathTooLongException>maksymalną długość ( ).  
   
-- Użytkownik nie ma wystarczających uprawnień do wyświetlania ścieżki (<xref:System.Security.SecurityException>).  
+- Użytkownik nie ma niezbędnych uprawnień do<xref:System.Security.SecurityException>wyświetlania ścieżki ( ).  
   
-- Użytkownik nie ma wymaganego uprawnienia (<xref:System.UnauthorizedAccessException>).  
+- Użytkownik nie ma wymaganych<xref:System.UnauthorizedAccessException>uprawnień ( ).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.MoveFile%2A>
-- [Instrukcje: zmienianie nazwy pliku](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)
+- [Porady: zmienianie nazwy pliku](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)
 - [Instrukcje: tworzenie kopii pliku w innym katalogu](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)
-- [Instrukcje: analizowanie ścieżek plików](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+- [Porady: analizowanie ścieżek pliku](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)

@@ -2,22 +2,22 @@
 title: Refaktoryzacja przy użyciu czystej funkcji
 ms.date: 07/20/2015
 ms.assetid: af0ea62f-4f57-4868-b624-a85524055935
-ms.openlocfilehash: ce07622a030f291bbbee54dc342562ffecd3258c
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 3a0365c79b8283fef242ecf8f2b68ea4de780049
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75341659"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78266940"
 ---
-# <a name="refactoring-using-a-pure-function-visual-basic"></a>Refaktoryzacja przy użyciu czystej funkcji (Visual Basic)
-Poniższy przykład refaktoryzacji w poprzednim przykładzie, [refaktoryzacji przy użyciu metody rozszerzającej (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), aby używać czystej funkcji w tym przykładzie, kod, aby znaleźć tekst akapitu, jest przenoszony do czystego statycznej metody `ParagraphText`.  
+# <a name="refactoring-using-a-pure-function-visual-basic"></a>Refaktoryzowanie przy użyciu czystej funkcji (Visual Basic)
+Poniższy przykład refaktoryzuje poprzedni przykład [Refaktoryzacji Przy użyciu metody rozszerzenia (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), aby użyć czystej funkcji W tym `ParagraphText`przykładzie kod, aby znaleźć tekst akapitu jest przenoszony do czystej metody statycznej .  
   
 ## <a name="example"></a>Przykład  
- Ten przykład przetwarza dokument WordprocessingML, pobierając węzły akapitu z dokumentu WordprocessingML. Identyfikuje także styl każdego akapitu. Ten przykład kompiluje się zgodnie z poprzednimi przykładami w tym samouczku. Kod refaktoryzacji jest wywoływany w komentarzach w kodzie poniżej.  
+ W tym przykładzie przetwarza dokument WordprocessingML, pobierając węzły akapitu z dokumentu WordprocessingML. Identyfikuje również styl każdego akapitu. W tym przykładzie opiera się na poprzednich przykładach w tym samouczku. Refaktoryzowany kod jest wywoływany w komentarzach w poniższym kodzie.  
   
- Aby uzyskać instrukcje dotyczące tworzenia dokumentu źródłowego dla tego przykładu, zobacz [Tworzenie źródłowego dokumentu Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Aby uzyskać instrukcje dotyczące tworzenia dokumentu źródłowego w tym przykładzie, zobacz [Tworzenie źródłowego dokumentu XML open office (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
- W tym przykładzie zastosowano klasy z zestawu 'Windowsbase. Używa typów w przestrzeni nazw <xref:System.IO.Packaging?displayProperty=nameWithType>.  
+ W tym przykładzie użyto klas z zestawu WindowsBase. Używa typów w <xref:System.IO.Packaging?displayProperty=nameWithType> obszarze nazw.  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -144,10 +144,10 @@ Module Module1
             Console.WriteLine("StyleName:{0} >{1}<", p.StyleName, p.Text)  
         Next  
     End Sub  
-End Module   
+End Module
 ```  
   
- Ten przykład generuje te same dane wyjściowe, co przed refaktoryzacją:  
+ W tym przykładzie daje takie same dane wyjściowe jak przed refaktoryzacji:  
   
 ```console  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -168,12 +168,12 @@ StyleName:Code >Hello World<
 ```  
   
 ### <a name="next-steps"></a>Następne kroki  
- W następnym przykładzie pokazano, jak projektować XML w innym kształcie:  
+ W następnym przykładzie pokazano, jak projektować kod XML w inny kształt:  
   
-- [Projekcja XML w innym kształcie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
+- [Projekcja xml w innym kształcie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Samouczek: manipulowanie zawartością w dokumencie WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
-- [Refaktoryzacja przy użyciu metody rozszerzającej (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)
-- [Refaktoryzacja do czystych funkcji (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [Samouczek: Manipulowanie zawartością w dokumencie WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Refaktoryzowanie przy użyciu metody rozszerzenia (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)
+- [Refaktoryzowanie do czystych funkcji (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

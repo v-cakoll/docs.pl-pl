@@ -8,27 +8,27 @@ helpviewer_keywords:
 - connection status [Visual Basic]
 ms.assetid: 4d9ee8ab-9a6f-4279-ace4-b75afc976a74
 ms.openlocfilehash: 89ef431759dac25bd213fd954db0712ad95434b0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74345880"
 ---
 # <a name="how-to-check-connection-status-in-visual-basic"></a>Porady: sprawdzanie stanu połączenia w Visual Basic
 
-Właściwość <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable> może służyć do określenia, czy komputer ma działającą sieć czy połączenie internetowe.  
+Właściwości <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable> można użyć do określenia, czy komputer ma działającą sieć lub połączenie z Internetem.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-check-whether-a-computer-has-a-working-connection"></a>Aby sprawdzić, czy komputer ma działające połączenie  
+### <a name="to-check-whether-a-computer-has-a-working-connection"></a>Aby sprawdzić, czy komputer ma połączenie robocze  
   
-- Ustal, czy właściwość `IsAvailable` jest `True` czy `False`. Poniższy kod sprawdza stan właściwości i raportuje:  
+- Określ, `IsAvailable` czy `True` `False`właściwość jest lub . Poniższy kod sprawdza stan właściwości i zgłasza go:  
   
      [!code-vb[VbResourceTasks#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#3)]  
   
-     Ten przykład kodu jest również dostępny jako fragment kodu IntelliSense. W selektorze fragmentów kodu znajdują się one w obszarze **łączności i sieci**. Aby uzyskać więcej informacji, zobacz [fragmenty kodu](/visualstudio/ide/code-snippets).  
+     W tym przykładzie kodu jest również dostępny jako fragment kodu IntelliSense. W selektorze fragmentów kodu znajduje się w **sekcji Łączność i sieć**. Aby uzyskać więcej informacji, zobacz [Fragmenty kodu](/visualstudio/ide/code-snippets).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:Microsoft.VisualBasic.Devices.Network?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable>

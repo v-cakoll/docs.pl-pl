@@ -8,56 +8,56 @@ helpviewer_keywords:
 - examples [Visual Basic], text files
 ms.assetid: 304956eb-530d-4df7-b48f-9b4d1f2581a0
 ms.openlocfilehash: ce1ee59ba71af6bb13e05a5bce37a2f7eee37712
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74334472"
 ---
 # <a name="how-to-write-text-to-files-in-visual-basic"></a>Porady: zapisywanie tekstu do plików w Visual Basic
 
-Metoda <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> może służyć do zapisywania tekstu do plików. Jeśli określony plik nie istnieje, zostanie utworzony.  
+Metoda <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> może służyć do pisania tekstu do plików. Jeśli określony plik nie istnieje, jest tworzony.  
   
 ## <a name="procedure"></a>Procedura  
   
-#### <a name="to-write-text-to-a-file"></a>Aby zapisać tekst do pliku  
+#### <a name="to-write-text-to-a-file"></a>Aby napisać tekst do pliku  
   
-- Użyj metody `WriteAllText`, aby zapisać tekst do pliku, określając plik i tekst do zapisania. Ten przykład zapisuje wiersz `"This is new text."` do pliku o nazwie `test.txt`, dołączając tekst do dowolnego istniejącego tekstu w pliku.  
+- Użyj `WriteAllText` metody do pisania tekstu do pliku, określając plik i tekst do zapisania. W tym przykładzie `"This is new text."` zapisuje `test.txt`wiersz do pliku o nazwie , dołączając tekst do dowolnego istniejącego tekstu w pliku.  
   
      [!code-vb[VbFileIOWrite#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOWrite/VB/Class1.vb#3)]  
   
 #### <a name="to-write-a-series-of-strings-to-a-file"></a>Aby napisać serię ciągów do pliku  
   
-- Pętla w kolekcji ciągów. Użyj metody `WriteAllText`, aby zapisać tekst do pliku, określając docelowy plik i ciąg, który ma zostać dodany, i ustaw `append` do `True`.  
+- Pętla za pośrednictwem kolekcji ciągów. Użyj `WriteAllText` metody do pisania tekstu do pliku, określając plik docelowy `append` i `True`ciąg do dodania i ustawienie .  
   
-     Ten przykład zapisuje nazwy plików w katalogu `Documents and Settings`, aby `FileList.txt`, wstawiając znak powrotu karetki między nimi w celu zwiększenia czytelności.  
+     W tym przykładzie zapisuje nazwy `Documents and Settings` plików `FileList.txt`w katalogu do , wstawiając powrót karetki między każdym dla lepszej czytelności.  
   
      [!code-vb[VbFileIOWrite#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOWrite/VB/Class1.vb#4)]  
   
-## <a name="robust-programming"></a>Skuteczne programowanie  
+## <a name="robust-programming"></a>Niezawodne programowanie  
 
  Następujące warunki mogą spowodować wyjątek:  
   
-- Ścieżka jest nieprawidłowa z jednego z następujących powodów: jest ciągiem o zerowej długości, zawiera tylko biały znak, zawiera nieprawidłowe znaki lub jest ścieżką urządzenia (rozpoczyna się od \\\\.\\) (<xref:System.ArgumentException>).  
+- Ścieżka nie jest prawidłowa z jednego z następujących powodów: jest ciągiem o zerowej długości, zawiera tylko biały znak, \\ \\\\zawiera nieprawidłowe znaki lub jest ścieżką urządzenia (zaczyna się od . ) (<xref:System.ArgumentException>).  
   
-- Ścieżka jest nieprawidłowa, ponieważ jest `Nothing` (<xref:System.ArgumentNullException>).  
+- Ścieżka jest nieprawidłowa, `Nothing` ponieważ<xref:System.ArgumentNullException>jest ( ).  
   
-- `File` wskazuje ścieżkę, która nie istnieje (<xref:System.IO.FileNotFoundException> lub <xref:System.IO.DirectoryNotFoundException>).  
+- `File`wskazuje ścieżkę, która nie<xref:System.IO.FileNotFoundException> <xref:System.IO.DirectoryNotFoundException>istnieje ( lub ).  
   
-- Plik jest używany przez inny proces lub wystąpił błąd we/wy (<xref:System.IO.IOException>).  
+- Plik jest używany przez inny proces lub występuje błąd<xref:System.IO.IOException>we/wy ( ).  
   
-- Ścieżka przekracza maksymalną długość zdefiniowaną przez system (<xref:System.IO.PathTooLongException>).  
+- Ścieżka przekracza zdefiniowaną przez system<xref:System.IO.PathTooLongException>maksymalną długość ( ).  
   
-- Nazwa pliku lub katalogu w ścieżce zawiera dwukropek (:) lub ma nieprawidłowy format (<xref:System.NotSupportedException>).  
+- Nazwa pliku lub katalogu w ścieżce zawiera dwukropek (:) lub jest w nieprawidłowym formacie (<xref:System.NotSupportedException>).  
   
-- Użytkownik nie ma wystarczających uprawnień do wyświetlania ścieżki (<xref:System.Security.SecurityException>).  
+- Użytkownik nie ma niezbędnych uprawnień do<xref:System.Security.SecurityException>wyświetlania ścieżki ( ).  
   
-- Dysk jest zapełniony i wywołanie `WriteAllText` nie powiedzie się (<xref:System.IO.IOException>).  
+- Dysk jest zapełniony, `WriteAllText` a<xref:System.IO.IOException>wywołanie nie powiedzie się ( ).  
   
- Jeśli używasz w kontekście częściowego zaufania, kod może zgłosić wyjątek z powodu niewystarczających uprawnień. Aby uzyskać więcej informacji, zobacz podstawowe informacje o [zabezpieczeniach dostępu kodu](../../../../framework/misc/code-access-security-basics.md).  
+ Jeśli używasz w kontekście częściowego zaufania, kod może zgłosić wyjątek z powodu niewystarczających uprawnień. Aby uzyskać więcej informacji, zobacz [Podstawy zabezpieczeń dostępu do kodu](../../../../framework/misc/code-access-security-basics.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>
-- [Instrukcje: odczyt z plików tekstowych](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)
+- [Jak: Odczyt z plików tekstowych](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)

@@ -12,21 +12,21 @@ helpviewer_keywords:
 - examples [Visual Basic], registry
 ms.assetid: ab9aca0e-42b0-4ff7-8ff9-845a4bfdf9f2
 ms.openlocfilehash: f38301a3a717a35b98e55804d6435d046bbbbab4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74345656"
 ---
 # <a name="how-to-delete-a-registry-key-in-visual-basic"></a>Porady: usuwanie klucza rejestru w Visual Basic
 
-Metody <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> i <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> mogą służyć do usuwania kluczy rejestru.  
+I <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> metody mogą być używane do usuwania kluczy rejestru.  
   
 ## <a name="procedure"></a>Procedura  
   
 #### <a name="to-delete-a-registry-key"></a>Aby usunąć klucz rejestru  
   
-- Użyj metody `DeleteSubKey`, aby usunąć klucz rejestru. Ten przykład usuwa klucz oprogramowanie/TestApp w gałęzi CurrentUser. Można zmienić tę wartość w kodzie na odpowiedni ciąg lub na podstawie informacji podawanych przez użytkownika.  
+- Użyj `DeleteSubKey` tej metody, aby usunąć klucz rejestru. W tym przykładzie usuwa klucz Software/TestApp w currentuser hive. Można to zmienić w kodzie na odpowiedni ciąg lub polegać na informacjach dostarczonych przez użytkownika.  
   
      [!code-vb[VbResourceTasks#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#19)]  
   
@@ -36,19 +36,19 @@ Metody <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> i <xre
   
  Następujące warunki mogą spowodować wyjątek:  
   
-- Nazwa klucza jest `Nothing` (<xref:System.ArgumentNullException>).  
+- Nazwa klucza jest `Nothing` <xref:System.ArgumentNullException>( ).  
   
 - Użytkownik nie ma uprawnień do usuwania kluczy rejestru (<xref:System.Security.SecurityException>).  
   
-- Nazwa klucza przekracza limit 255 znaków (<xref:System.ArgumentException>).  
+- Nazwa klucza przekracza limit 255<xref:System.ArgumentException>znaków ( ).  
   
-- Klucz rejestru jest tylko do odczytu (<xref:System.UnauthorizedAccessException>).  
+- Klucz rejestru jest tylko<xref:System.UnauthorizedAccessException>do odczytu ( ).  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
 
- Wywołania rejestru kończą się niepowodzeniem, jeśli nie przyznano wystarczających uprawnień w czasie wykonywania (<xref:System.Security.Permissions.RegistryPermission>) lub jeśli użytkownik nie ma poprawnego dostępu (zgodnie z listą ACL) w celu utworzenia lub zapisania ustawień. Na przykład aplikacja lokalna, która ma uprawnienie zabezpieczeń dostępu kodu, może nie mieć uprawnień systemu operacyjnego.  
+ Wywołania rejestru nie powiedzie się, jeśli nie<xref:System.Security.Permissions.RegistryPermission>udzielono wystarczających uprawnień w czasie wykonywania ( ) lub jeśli użytkownik nie ma poprawnego dostępu (określonego przez listy ACL) do tworzenia lub zapisywania w ustawieniach. Na przykład aplikacja lokalna, która ma uprawnienie zabezpieczeń dostępu do kodu, może nie mieć uprawnień systemu operacyjnego.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>
 - <xref:Microsoft.Win32.RegistryKey>

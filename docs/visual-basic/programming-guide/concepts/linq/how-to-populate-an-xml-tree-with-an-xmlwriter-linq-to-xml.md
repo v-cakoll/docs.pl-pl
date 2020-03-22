@@ -1,25 +1,25 @@
 ---
-title: 'Instrukcje: wypełnianie drzewa XML elementem XmlWriter (LINQ to XML)'
+title: 'Jak: Wypełnić drzewo XML za pomocą XmlWriter (LINQ do XML)'
 ms.date: 07/20/2015
 ms.assetid: 5792a0eb-94ee-440d-b601-58cca8c0ee0b
-ms.openlocfilehash: ec44f6e21453a1333f842030bae0c4f80dedb9c3
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: fecf57eac570a9ca57dd1fe2f7a0b54cd78c33b5
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74333768"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78267005"
 ---
-# <a name="how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml-visual-basic"></a>Instrukcje: wypełnianie drzewa XML elementem XmlWriter (LINQ to XML) (Visual Basic)
-Jednym ze sposobów wypełnienia drzewa XML jest użycie <xref:System.Xml.Linq.XContainer.CreateWriter%2A> do utworzenia <xref:System.Xml.XmlWriter>, a następnie zapisanie w <xref:System.Xml.XmlWriter>. Drzewo XML jest wypełniane wszystkimi węzłami, które są zapisywane w <xref:System.Xml.XmlWriter>.  
+# <a name="how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml-visual-basic"></a>Jak: Wypełnić drzewo XML za pomocą XmlWriter (LINQ do XML) (Visual Basic)
+Jednym ze sposobów zapełnienia drzewa XML jest użycie <xref:System.Xml.Linq.XContainer.CreateWriter%2A> do utworzenia <xref:System.Xml.XmlWriter>programu , a następnie zapisania w pliku <xref:System.Xml.XmlWriter>. Drzewo XML jest wypełniane wszystkimi węzłami, <xref:System.Xml.XmlWriter>które są zapisywane w pliku .  
   
- Ta metoda jest zwykle używana w przypadku używania [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] z inną klasą, która oczekuje zapisu w <xref:System.Xml.XmlWriter>, na przykład <xref:System.Xml.Xsl.XslCompiledTransform>.  
+ Zazwyczaj tej metody należy używać [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] podczas korzystania z innej klasy, <xref:System.Xml.XmlWriter>która <xref:System.Xml.Xsl.XslCompiledTransform>spodziewa się napisać do , takich jak .  
   
 ## <a name="example"></a>Przykład  
- Jedynym możliwym zastosowaniem <xref:System.Xml.Linq.XContainer.CreateWriter%2A> jest wywołanie transformacji XSLT. Ten przykład tworzy drzewo XML, tworzy <xref:System.Xml.XmlReader> z drzewa XML, tworzy nowy dokument, a następnie tworzy <xref:System.Xml.XmlWriter> do zapisu w nowym dokumencie. Następnie wywołuje transformację XSLT, przekazując <xref:System.Xml.XmlReader> i <xref:System.Xml.XmlWriter>. Po pomyślnym zakończeniu przekształcenia nowe drzewo XML zostanie wypełnione wynikami transformacji.  
+ Jednym z <xref:System.Xml.Linq.XContainer.CreateWriter%2A> możliwych zastosowań jest podczas wywoływania transformacji XSLT. W tym przykładzie tworzy drzewo <xref:System.Xml.XmlReader> XML, tworzy z drzewa XML, <xref:System.Xml.XmlWriter> tworzy nowy dokument, a następnie tworzy do zapisu w nowym dokumencie. Następnie wywołuje transformację XSLT, <xref:System.Xml.XmlReader> przekazywanie i <xref:System.Xml.XmlWriter>. Po pomyślnym zakończeniu transformacji nowe drzewo XML jest wypełniane wynikami transformacji.  
   
 ```vb  
 Dim xslMarkup As XDocument = _  
-    <?xml version='1.0'?>   
+    <?xml version='1.0'?>
     <xsl:stylesheet xmlns:xsl='http://www.w3.org/1999/XSL/Transform' version='1.0'>  
         <xsl:template match='/Parent'>  
             <Root>  
@@ -62,7 +62,7 @@ Console.WriteLine(newTree)
 </Root>  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Xml.Linq.XContainer.CreateWriter%2A>
 - <xref:System.Xml.XmlWriter>

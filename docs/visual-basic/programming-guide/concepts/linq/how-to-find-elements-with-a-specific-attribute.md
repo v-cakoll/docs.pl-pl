@@ -1,26 +1,26 @@
 ---
-title: 'Instrukcje: Znajdowanie elementów z określonym atrybutem (XPath-LINQ to XML)'
+title: 'Instrukcje: znajdowanie elementów o określonym atrybucie (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 4bb38d2c-bc7c-4196-8909-aaf41fb86b28
-ms.openlocfilehash: ef8dd26d40f15d3d5a27f0ca5d62f7337f2054ca
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 36f725a7684dc009dbfb956a1584fd6ca5e487b0
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343686"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78267044"
 ---
-# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-visual-basic"></a>Instrukcje: Znajdowanie elementów z określonym atrybutem (XPath-LINQ to XML) (Visual Basic)
-Czasami chcesz znaleźć wszystkie elementy, które mają określony atrybut. Nie dotyczy zawartości atrybutu. Zamiast tego należy wybrać opcję na podstawie istnienia atrybutu.  
+# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-visual-basic"></a>Jak: Znajdowanie elementów z określonym atrybutem (XPath-LINQ do XML) (Visual Basic)
+Czasami chcesz znaleźć wszystkie elementy, które mają określony atrybut. Nie martwisz się o zawartość atrybutu. Zamiast tego chcesz wybrać na podstawie istnienia atrybutu.  
   
- Wyrażenie XPath:  
+ Wyrażenie XPath jest:  
   
  `./*[@Select]`  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod wybiera tylko elementy, które mają atrybut `Select`.  
+ Poniższy kod wybiera tylko elementy, `Select` które mają atrybut.  
   
 ```vb  
-Dim doc As XElement = _   
+Dim doc As XElement = _
     <Root>  
         <Child1>1</Child1>  
         <Child2 Select='true'>2</Child2>  
@@ -59,6 +59,6 @@ Results are identical
 <Child4 Select="true">4</Child4>  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [LINQ to XML dla użytkowników XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ do XML dla użytkowników XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

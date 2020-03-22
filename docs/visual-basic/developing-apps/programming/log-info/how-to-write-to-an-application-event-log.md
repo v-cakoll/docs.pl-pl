@@ -8,47 +8,47 @@ helpviewer_keywords:
 - event logs, writing to
 ms.assetid: cadbc8c1-87af-4746-934e-55b79a4f6e2b
 ms.openlocfilehash: 511bb8fb16851872c1a16ae7627ed0fc6594337c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74352047"
 ---
 # <a name="how-to-write-to-an-application-event-log-visual-basic"></a>Porady: zapisywanie w rejestrze zdarzeń aplikacji (Visual Basic)
 
-Za pomocą obiektów `My.Application.Log` i `My.Log` można zapisywać informacje o zdarzeniach występujących w aplikacji. Ten przykład pokazuje, jak skonfigurować odbiornik dziennika zdarzeń, aby `My.Application.Log` zapisywał informacje o śledzeniu w dzienniku zdarzeń aplikacji.
+Za pomocą `My.Application.Log` obiektów `My.Log` i do zapisywania informacji o zdarzeniach występujących w aplikacji. W tym przykładzie pokazano, jak skonfigurować odbiornik dziennika zdarzeń, więc `My.Application.Log` zapisuje informacje śledzenia w dzienniku zdarzeń aplikacji.
 
-Nie można zapisać w dzienniku zabezpieczeń. Aby można było zapisywać dane w dzienniku systemu, musisz być członkiem konta LocalSystem lub administratora.
+Nie można zapisać w dzienniku zabezpieczeń. Aby zapisać w dzienniku systemowym, użytkownik musi być członkiem konta LocalSystem lub Administrator.
 
-Aby wyświetlić dziennik zdarzeń, można użyć **Eksplorator serwera** lub **Podgląd zdarzeń systemu Windows**. Aby uzyskać więcej informacji, zobacz [zdarzenia ETW w .NET Framework](../../../../framework/performance/etw-events.md).
+Aby wyświetlić dziennik zdarzeń, można użyć **Eksploratora serwera** lub **Podglądu zdarzeń systemu Windows**. Aby uzyskać więcej informacji, zobacz [Zdarzenia ETW w .NET Framework](../../../../framework/performance/etw-events.md).
 
-## <a name="to-add-and-configure-the-event-log-listener"></a>Aby dodać i skonfigurować odbiornik dziennika zdarzeń
+## <a name="to-add-and-configure-the-event-log-listener"></a>Aby dodać i skonfigurować detektor dziennika zdarzeń
 
-1. Kliknij prawym przyciskiem myszy plik App. config w **Eksplorator rozwiązań** i wybierz polecenie **Otwórz**.
+1. Kliknij prawym przyciskiem myszy app.config w **Eksploratorze rozwiązań** i wybierz polecenie **Otwórz**.
 
-    \- lub-
+    \-lub -
 
-    Jeśli nie ma pliku App. config,
+    Jeśli nie ma pliku app.config,
 
-    1. W menu **projekt** wybierz polecenie **Dodaj nowy element**.
+    1. W menu **Projekt** wybierz polecenie **Dodaj nowy element**.
 
-    2. W oknie dialogowym **Dodaj nowy element** wybierz pozycję **plik konfiguracji aplikacji**.
+    2. W oknie dialogowym **Dodawanie nowego elementu** wybierz pozycję Plik konfiguracji **aplikacji**.
 
     3. Kliknij przycisk **Dodaj**.
 
-2. Znajdź sekcję `<listeners>` w pliku konfiguracyjnym aplikacji.
+2. Zlokalizuj sekcję `<listeners>` w pliku konfiguracji aplikacji.
 
-    Sekcja `<listeners>` znajduje się w sekcji `<source>` z atrybutem Name "DefaultSource", który jest zagnieżdżony w sekcji `<system.diagnostics>`, która jest zagnieżdżona w sekcji `<configuration>` najwyższego poziomu.
+    `<listeners>` Sekcja znajduje się w `<source>` sekcji z atrybutem nazwa "DefaultSource", który `<system.diagnostics>` jest zagnieżdżony w `<configuration>` sekcji, która jest zagnieżdżona w sekcji najwyższego poziomu.
 
-3. Dodaj ten element do `<listeners>` sekcji:
+3. Dodaj ten element `<listeners>` do tej sekcji:
 
     ```xml
     <add name="EventLog"/>
     ```
 
-4. Znajdź sekcję `<sharedListeners>` w sekcji `<system.diagnostics>` w sekcji `<configuration>` najwyższego poziomu.
+4. Zlokalizuj `<sharedListeners>` `<system.diagnostics>` sekcję w sekcji `<configuration>` w sekcji najwyższego poziomu.
 
-5. Dodaj ten element do `<sharedListeners>` sekcji:
+5. Dodaj ten element `<sharedListeners>` do tej sekcji:
 
     ```xml
     <add name="EventLog"
@@ -56,22 +56,22 @@ Aby wyświetlić dziennik zdarzeń, można użyć **Eksplorator serwera** lub **
          initializeData="APPLICATION_NAME"/>
     ```
 
-    Zastąp `APPLICATION_NAME` nazwą aplikacji.
+    Zamień `APPLICATION_NAME` na nazwę aplikacji.
 
     > [!NOTE]
-    > Zazwyczaj aplikacja zapisuje tylko błędy w dzienniku zdarzeń. Aby uzyskać informacje o filtrowaniu danych wyjściowych dziennika, zobacz [Przewodnik: filtrowanie danych wyjściowych my. Application. log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).
+    > Zazwyczaj aplikacja zapisuje tylko błędy w dzienniku zdarzeń. Aby uzyskać informacje na temat filtrowania danych wyjściowych dziennika, zobacz [Instruktaż: Filtrowanie danych wyjściowych My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).
 
 ## <a name="to-write-event-information-to-the-event-log"></a>Aby zapisać informacje o zdarzeniach w dzienniku zdarzeń
 
-Użyj metody `My.Application.Log.WriteEntry` lub `My.Application.Log.WriteException` w celu zapisania informacji w dzienniku zdarzeń. Aby uzyskać więcej informacji, zobacz [How to: Write log messages](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) and [How to: log Exceptions](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).
+Użyj `My.Application.Log.WriteEntry` metody `My.Application.Log.WriteException` lub do zapisywania informacji w dzienniku zdarzeń. Aby uzyskać więcej informacji, zobacz [Jak: Pisanie komunikatów dziennika](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) i [jak: Rejestrowanie wyjątków](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).
 
-Po skonfigurowaniu odbiornika dziennika zdarzeń dla zestawu otrzymuje on wszystkie komunikaty, które `My.Application.Log` zapisu z tego zestawu.
+Po skonfigurowaniu odbiornika dziennika zdarzeń dla zestawu, odbiera `My.Application.Log` wszystkie komunikaty, które zapisuje z tego zestawu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
 - [Praca z dziennikami aplikacji](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [Instrukcje: wyjątki dziennika](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
-- [Przewodnik: ustalanie, gdzie My.Application.Log zapisuje informacje](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
+- [Porady: wyjątki rejestru](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
+- [Wskazówki: ustalanie, gdzie My.Application.Log zapisuje informacje](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)

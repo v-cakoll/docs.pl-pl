@@ -16,143 +16,143 @@ helpviewer_keywords:
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
 ms.openlocfilehash: 02cdbcc59e8817ff4ec06c2f78f835cad77b10f2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74333787"
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>Wskazówki: manipulowanie plikami za pomocą metod .NET Framework (Visual Basic)
 
-W tym instruktażu pokazano, jak otworzyć i odczytać plik przy użyciu klasy <xref:System.IO.StreamReader>, sprawdzić, czy dostęp do pliku jest uzyskiwany, wyszukaj ciąg w pliku jako odczytany z wystąpieniem klasy <xref:System.IO.StreamReader> i Zapisz w pliku przy użyciu klasy <xref:System.IO.StreamWriter>.
+W tym przewodniku pokazano, jak otworzyć i <xref:System.IO.StreamReader> odczytać plik przy użyciu klasy, sprawdź, czy plik jest dostępny, wyszukaj ciąg w pliku odczytanego z wystąpieniem <xref:System.IO.StreamReader> klasy i zapisu do pliku przy użyciu <xref:System.IO.StreamWriter> klasy.
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
 ## <a name="creating-the-application"></a>Tworzenie aplikacji
 
-Uruchom program Visual Studio i Rozpocznij projekt, tworząc formularz, którego użytkownik może użyć do zapisu w wytworzonym pliku.
+Uruchom program Visual Studio i rozpocznij projekt, tworząc formularz, którego użytkownik może użyć do zapisania w wyznaczonym pliku.
 
 ### <a name="to-create-the-project"></a>Aby utworzyć projekt
 
-1. W menu **plik** wybierz pozycję **Nowy projekt**.
+1. W menu **Plik** wybierz polecenie **Nowy projekt**.
 
-2. W okienku **Nowy projekt** kliknij pozycję **aplikacja systemu Windows**.
+2. W okienku **Nowy projekt** kliknij pozycję Aplikacja **systemu Windows**.
 
-3. W polu **Nazwa** wpisz `MyDiary` i kliknij przycisk **OK**.
+3. W **Name** polu Nazwa `MyDiary` wpisz i kliknij przycisk **OK**.
 
-     Program Visual Studio dodaje projekt do **Eksplorator rozwiązań**, a **Projektant formularzy systemu Windows** zostanie otwarty.
+     Program Visual Studio dodaje projekt do **Eksploratora rozwiązań**i zostanie otwarty **projektant formularzy systemu Windows.**
 
-4. Dodaj kontrolki w poniższej tabeli do formularza i ustaw odpowiednie wartości dla ich właściwości.
+4. Dodaj formanty w poniższej tabeli do formularza i ustaw odpowiednie wartości dla ich właściwości.
 
-|**Stream**|**Właściwości**|**Wartość**|
+|**Obiektu**|**Właściwości**|**Wartość**|
 |---|---|---|
 |<xref:System.Windows.Forms.Button>|**Nazwa**<br /><br /> **Tekst**|`Submit`<br /><br /> **Prześlij wpis**|
 |<xref:System.Windows.Forms.Button>|**Nazwa**<br /><br /> **Tekst**|`Clear`<br /><br /> **Wyczyść wpis**|
-|<xref:System.Windows.Forms.TextBox>|**Nazwa**<br /><br /> **Tekst**<br /><br /> **Multiline**|`Entry`<br /><br /> **Wprowadź coś.**<br /><br /> `False`|
+|<xref:System.Windows.Forms.TextBox>|**Nazwa**<br /><br /> **Tekst**<br /><br /> **Multiline**|`Entry`<br /><br /> **Proszę coś wpisać.**<br /><br /> `False`|
 
-## <a name="writing-to-the-file"></a>Zapisywanie w pliku
+## <a name="writing-to-the-file"></a>Zapisywanie do pliku
 
-Aby dodać możliwość zapisu do pliku za pośrednictwem aplikacji, należy użyć klasy <xref:System.IO.StreamWriter>. <xref:System.IO.StreamWriter> jest przeznaczony do znakowania danych wyjściowych w określonym kodowaniu, podczas gdy Klasa <xref:System.IO.Stream> jest zaprojektowana dla danych wejściowych i wyjściowych bajtów. Użyj <xref:System.IO.StreamWriter> do zapisywania wierszy informacji w standardowym pliku tekstowym. Aby uzyskać więcej informacji na temat klasy <xref:System.IO.StreamWriter>, zobacz <xref:System.IO.StreamWriter>.
+Aby dodać możliwość zapisu do pliku za <xref:System.IO.StreamWriter> pośrednictwem aplikacji, należy użyć klasy. <xref:System.IO.StreamWriter>jest przeznaczony do wyjścia znaków w określonym <xref:System.IO.Stream> kodowaniu, podczas gdy klasa jest przeznaczona dla wejścia i wyjścia bajtów. Służy <xref:System.IO.StreamWriter> do zapisywania wierszy informacji do standardowego pliku tekstowego. Aby uzyskać więcej <xref:System.IO.StreamWriter> informacji <xref:System.IO.StreamWriter>na temat klasy, zobacz .
 
 ### <a name="to-add-writing-functionality"></a>Aby dodać funkcje pisania
 
-1. Z menu **Widok** wybierz polecenie **kod** , aby otworzyć Edytor kodu.
+1. Z menu **Widok** wybierz pozycję **Kod,** aby otworzyć Edytor kodu.
 
-2. Ponieważ aplikacja odwołuje się do przestrzeni nazw <xref:System.IO>, należy dodać następujące instrukcje na początku kodu przed deklaracją klasy dla formularza, która rozpoczyna się `Public Class Form1`.
+2. Ponieważ aplikacja odwołuje <xref:System.IO> się do obszaru nazw, dodaj następujące instrukcje na samym początku kodu, `Public Class Form1`przed deklaracją klasy dla formularza, który rozpoczyna się.
 
      [!code-vb[VbVbcnMyFileSystem#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#35)]
 
-     Przed zapisaniem w pliku należy utworzyć wystąpienie klasy <xref:System.IO.StreamWriter>.
+     Przed zapisaniem do pliku należy utworzyć <xref:System.IO.StreamWriter> wystąpienie klasy.
 
-3. Z menu **Widok** wybierz polecenie **Projektant** , aby powrócić do **Projektant formularzy systemu Windows**. Kliknij dwukrotnie przycisk `Submit`, aby utworzyć procedurę obsługi zdarzeń <xref:System.Windows.Forms.Control.Click> dla przycisku, a następnie Dodaj następujący kod.
+3. Z menu **Widok** wybierz polecenie **Projektant,** aby powrócić do **projektanta formularzy systemu Windows**. Kliknij dwukrotnie `Submit` przycisk, aby <xref:System.Windows.Forms.Control.Click> utworzyć program obsługi zdarzeń dla przycisku, a następnie dodaj następujący kod.
 
      [!code-vb[VbVbcnMyFileSystem#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#36)]
 
 > [!NOTE]
-> Zintegrowane środowisko programistyczne (IDE) programu Visual Studio powróci do edytora kodu i ustawi punkt wstawiania w ramach procedury obsługi zdarzeń, gdzie należy dodać kod.
+> Visual Studio zintegrowane środowisko programistyczne (IDE) powróci do Edytora kodu i umieść punkt wstawiania w programie obsługi zdarzeń, gdzie należy dodać kod.
 
-1. Aby zapisać w pliku, użyj metody <xref:System.IO.StreamWriter.Write%2A> klasy <xref:System.IO.StreamWriter>. Dodaj poniższy kod bezpośrednio po `Dim fw As StreamWriter`. Nie musisz martwić się o wyjątek, który zostanie wygenerowany, jeśli plik nie zostanie znaleziony, ponieważ zostanie utworzony, jeśli jeszcze nie istnieje.
+1. Aby zapisać do pliku, <xref:System.IO.StreamWriter.Write%2A> należy <xref:System.IO.StreamWriter> użyć metody klasy. Dodaj następujący kod bezpośrednio `Dim fw As StreamWriter`po . Nie musisz się martwić, że wyjątek zostanie zgłoszony, jeśli plik nie zostanie znaleziony, ponieważ zostanie utworzony, jeśli jeszcze nie istnieje.
 
      [!code-vb[VbVbcnMyFileSystem#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#37)]
 
-2. Upewnij się, że użytkownik nie może przesłać pustego wpisu, dodając Poniższy kod bezpośrednio po `Dim ReadString As String`.
+2. Upewnij się, że użytkownik nie może przesłać pustego `Dim ReadString As String`wpisu, dodając następujący kod bezpośrednio po .
 
      [!code-vb[VbVbcnMyFileSystem#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#38)]
 
-3. Ponieważ jest to Diary, użytkownik będzie chciał przypisać datę do każdego wpisu. Wstaw poniższy kod po `fw = New StreamWriter("C:\MyDiary.txt", True)`, aby ustawić zmienną `Today` do bieżącej daty.
+3. Ponieważ jest to dziennik, użytkownik będzie chciał przypisać datę do każdego wpisu. Wstaw następujący `fw = New StreamWriter("C:\MyDiary.txt", True)` kod po, `Today` aby ustawić zmienną na bieżącą datę.
 
      [!code-vb[VbVbcnMyFileSystem#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#39)]
 
-4. Na koniec Dołącz kod, aby wyczyścić <xref:System.Windows.Forms.TextBox>. Dodaj następujący kod do zdarzenia <xref:System.Windows.Forms.Control.Click> `Clear` przycisku.
+4. Na koniec dołącz kod, <xref:System.Windows.Forms.TextBox>aby wyczyścić plik . Dodaj następujący kod `Clear` do zdarzenia <xref:System.Windows.Forms.Control.Click> przycisku.
 
      [!code-vb[VbVbcnMyFileSystem#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#40)]
 
-## <a name="adding-display-features-to-the-diary"></a>Dodawanie funkcji wyświetlania do Diary
+## <a name="adding-display-features-to-the-diary"></a>Dodawanie funkcji wyświetlania do dziennika
 
-W tej sekcji dodasz funkcję, która wyświetla najnowszy wpis w <xref:System.Windows.Forms.TextBox>`DisplayEntry`. Możesz również dodać <xref:System.Windows.Forms.ComboBox>, w którym są wyświetlane różne wpisy, z których użytkownik może wybrać wpis, który ma być wyświetlany w <xref:System.Windows.Forms.TextBox>`DisplayEntry`. Wystąpienie klasy <xref:System.IO.StreamReader> odczytuje z `MyDiary.txt`. Podobnie jak Klasa <xref:System.IO.StreamWriter>, <xref:System.IO.StreamReader> jest przeznaczona do użycia z plikami tekstowymi.
+W tej sekcji należy dodać funkcję, która `DisplayEntry` <xref:System.Windows.Forms.TextBox>wyświetla najnowszy wpis w pliku . Można również dodać, <xref:System.Windows.Forms.ComboBox> który wyświetla różne wpisy i z którego użytkownik `DisplayEntry` <xref:System.Windows.Forms.TextBox>może wybrać wpis do wyświetlenia w pliku . Wystąpienie <xref:System.IO.StreamReader> klasy odczytuje `MyDiary.txt`z . Podobnie <xref:System.IO.StreamWriter> jak <xref:System.IO.StreamReader> klasa, jest przeznaczony do użytku z plikami tekstowymi.
 
-W tej części przewodnika Dodaj kontrolki z poniższej tabeli do formularza i ustaw odpowiednie wartości dla ich właściwości.
+W tej sekcji instruktażu dodaj formanty w poniższej tabeli do formularza i ustaw odpowiednie wartości dla ich właściwości.
 
-|Formant|Właściwości|Wartości|
+|Kontrola|Właściwości|Wartości|
 |-------------|----------------|------------|
-|<xref:System.Windows.Forms.TextBox>|**Nazwa**<br /><br /> **Widać**<br /><br /> **Zmienia**<br /><br /> **Multiline**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|
-|<xref:System.Windows.Forms.Button>|**Nazwa**<br /><br /> **Tekst**|`Display`<br /><br /> **Wyświetlany**|
+|<xref:System.Windows.Forms.TextBox>|**Nazwa**<br /><br /> **Widoczne**<br /><br /> **Rozmiar**<br /><br /> **Multiline**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|
+|<xref:System.Windows.Forms.Button>|**Nazwa**<br /><br /> **Tekst**|`Display`<br /><br /> **Wyświetlanie**|
 |<xref:System.Windows.Forms.Button>|**Nazwa**<br /><br /> **Tekst**|`GetEntries`<br /><br /> **Pobierz wpisy**|
-|<xref:System.Windows.Forms.ComboBox>|**Nazwa**<br /><br /> **Tekst**<br /><br /> **Dostępny**|`PickEntries`<br /><br /> **Wybierz wpis**<br /><br /> `False`|
+|<xref:System.Windows.Forms.ComboBox>|**Nazwa**<br /><br /> **Tekst**<br /><br /> **Enabled (Włączony)**|`PickEntries`<br /><br /> **Wybieranie wpisu**<br /><br /> `False`|
 
 ### <a name="to-populate-the-combo-box"></a>Aby wypełnić pole kombi
 
-1. `PickEntries`<xref:System.Windows.Forms.ComboBox> służy do wyświetlania dat, w których użytkownik przesyła każdy wpis, więc użytkownik może wybrać wpis z określonej daty. Utwórz procedurę obsługi zdarzeń <xref:System.Windows.Forms.Control.Click> do przycisku `GetEntries` i Dodaj następujący kod.
+1. Jest `PickEntries` <xref:System.Windows.Forms.ComboBox> używany do wyświetlania dat, w których użytkownik przesyła każdy wpis, dzięki czemu użytkownik może wybrać wpis z określonej daty. Utwórz <xref:System.Windows.Forms.Control.Click> program obsługi `GetEntries` zdarzeń do przycisku i dodaj następujący kod.
 
      [!code-vb[VbVbcnMyFileSystem#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#41)]
 
-2. Aby przetestować kod, naciśnij klawisz F5, aby skompilować aplikację, a następnie kliknij pozycję **Pobierz wpisy**. Kliknij strzałkę listy rozwijanej w <xref:System.Windows.Forms.ComboBox>, aby wyświetlić daty wejścia.
+2. Aby przetestować kod, naciśnij klawisz F5, aby skompilować aplikację, a następnie kliknij przycisk **Pobierz wpisy**. Kliknij strzałkę listy rozwijanej w celu <xref:System.Windows.Forms.ComboBox> wyświetlenia dat wejścia.
 
 ### <a name="to-choose-and-display-individual-entries"></a>Aby wybrać i wyświetlić poszczególne wpisy
 
-1. Utwórz procedurę obsługi zdarzeń <xref:System.Windows.Forms.Control.Click> dla przycisku `Display` i Dodaj następujący kod.
+1. Utwórz <xref:System.Windows.Forms.Control.Click> program obsługi `Display` zdarzeń dla przycisku i dodaj następujący kod.
 
      [!code-vb[VbVbcnMyFileSystem#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#42)]
 
-2. Aby przetestować kod, naciśnij klawisz F5, aby skompilować aplikację, a następnie prześlij wpis. Kliknij pozycję **Pobierz wpisy**, wybierz pozycję z <xref:System.Windows.Forms.ComboBox>, a następnie kliknij pozycję **Wyświetl**. Zawartość wybranego wpisu pojawia się w <xref:System.Windows.Forms.TextBox>`DisplayEntry`.
+2. Aby przetestować kod, naciśnij klawisz F5, aby skompilować aplikację, a następnie prześlij wpis. Kliknij **pozycję Pobierz wpisy**, <xref:System.Windows.Forms.ComboBox>wybierz wpis z przycisku , a następnie kliknij przycisk **Wyświetl**. Zawartość wybranego wpisu pojawi `DisplayEntry` <xref:System.Windows.Forms.TextBox>się w pliku .
 
-## <a name="enabling-users-to-delete-or-modify-entries"></a>Umożliwienie użytkownikom usuwania lub modyfikowania wpisów
+## <a name="enabling-users-to-delete-or-modify-entries"></a>Włączanie użytkownikom usuwania lub modyfikowania wpisów
 
-Na koniec możesz dołączyć dodatkowe funkcje, które umożliwiają użytkownikom usuwanie i modyfikowanie wpisów przy użyciu przycisków `DeleteEntry` i `EditEntry`. Oba przyciski pozostają wyłączone, chyba że zostanie wyświetlony wpis.
+Na koniec można dołączyć dodatkowe funkcje umożliwia użytkownikom, aby `DeleteEntry` `EditEntry` usunąć lub zmodyfikować wpis za pomocą i przycisków. Oba przyciski pozostają wyłączone, chyba że zostanie wyświetlony wpis.
 
-Dodaj kontrolki w poniższej tabeli do formularza i ustaw odpowiednie wartości dla ich właściwości.
+Dodaj formanty w poniższej tabeli do formularza i ustaw odpowiednie wartości dla ich właściwości.
 
-|Formant|Właściwości|Wartości|
+|Kontrola|Właściwości|Wartości|
 |-------------|----------------|------------|
-|<xref:System.Windows.Forms.Button>|**Nazwa**<br /><br /> **Tekst**<br /><br /> **Dostępny**|`DeleteEntry`<br /><br /> **Usuń wpis**<br /><br /> `False`|
-|<xref:System.Windows.Forms.Button>|**Nazwa**<br /><br /> **Tekst**<br /><br /> **Dostępny**|`EditEntry`<br /><br /> **Edytuj wpis**<br /><br /> `False`|
-|<xref:System.Windows.Forms.Button>|**Nazwa**<br /><br /> **Tekst**<br /><br /> **Dostępny**|`SubmitEdit`<br /><br /> **Prześlij edycję**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**Nazwa**<br /><br /> **Tekst**<br /><br /> **Enabled (Włączony)**|`DeleteEntry`<br /><br /> **Usuń wpis**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**Nazwa**<br /><br /> **Tekst**<br /><br /> **Enabled (Włączony)**|`EditEntry`<br /><br /> **Edytuj wpis**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**Nazwa**<br /><br /> **Tekst**<br /><br /> **Enabled (Włączony)**|`SubmitEdit`<br /><br /> **Prześlij edytuj**<br /><br /> `False`|
 
 ### <a name="to-enable-deletion-and-modification-of-entries"></a>Aby włączyć usuwanie i modyfikowanie wpisów
 
-1. Po `DisplayEntry.Text = ReadString`należy dodać następujący kod do zdarzenia <xref:System.Windows.Forms.Control.Click> `Display` przycisku.
+1. Dodaj następujący kod `Display` do <xref:System.Windows.Forms.Control.Click> zdarzenia przycisku, po . `DisplayEntry.Text = ReadString`
 
      [!code-vb[VbVbcnMyFileSystem#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#43)]
 
-2. Utwórz procedurę obsługi zdarzeń <xref:System.Windows.Forms.Control.Click> dla przycisku `DeleteEntry` i Dodaj następujący kod.
+2. Utwórz <xref:System.Windows.Forms.Control.Click> program obsługi `DeleteEntry` zdarzeń dla przycisku i dodaj następujący kod.
 
      [!code-vb[VbVbcnMyFileSystem#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#44)]
 
-3. Gdy użytkownik wyświetla wpis, przycisk `EditEntry` zostanie włączony. Dodaj następujący kod do zdarzenia <xref:System.Windows.Forms.Control.Click> przycisku `Display` po `DisplayEntry.Text = ReadString`.
+3. Gdy użytkownik wyświetli wpis, `EditEntry` przycisk staje się włączony. Dodaj następujący kod <xref:System.Windows.Forms.Control.Click> do zdarzenia `Display` przycisku po `DisplayEntry.Text = ReadString`.
 
      [!code-vb[VbVbcnMyFileSystem#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#45)]
 
-4. Utwórz procedurę obsługi zdarzeń <xref:System.Windows.Forms.Control.Click> dla przycisku `EditEntry` i Dodaj następujący kod.
+4. Utwórz <xref:System.Windows.Forms.Control.Click> program obsługi `EditEntry` zdarzeń dla przycisku i dodaj następujący kod.
 
      [!code-vb[VbVbcnMyFileSystem#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#46)]
 
-5. Utwórz procedurę obsługi zdarzeń <xref:System.Windows.Forms.Control.Click> dla przycisku `SubmitEdit` i Dodaj następujący kod
+5. Utwórz <xref:System.Windows.Forms.Control.Click> program obsługi `SubmitEdit` zdarzeń dla przycisku i dodaj następujący kod
 
      [!code-vb[VbVbcnMyFileSystem#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#47)]
 
-Aby przetestować kod, naciśnij klawisz F5, aby skompilować aplikację. Kliknij pozycję **Pobierz wpisy**, wybierz pozycję, a następnie kliknij pozycję **Wyświetl**. Wpis zostanie wyświetlony w <xref:System.Windows.Forms.TextBox>`DisplayEntry`. Kliknij pozycję **Edytuj wpis**. Wpis zostanie wyświetlony w <xref:System.Windows.Forms.TextBox>`Entry`. Edytuj wpis w <xref:System.Windows.Forms.TextBox> `Entry`i kliknij przycisk **Prześlij Edytuj**. Otwórz plik `MyDiary.txt`, aby potwierdzić korektę. Teraz wybierz wpis, a następnie kliknij pozycję **Usuń wpis**. Po potwierdzeniu <xref:System.Windows.Forms.MessageBox> żądania kliknij przycisk **OK**. Zamknij aplikację i Otwórz `MyDiary.txt`, aby potwierdzić usunięcie.
+Aby przetestować kod, naciśnij klawisz F5, aby skompilować aplikację. Kliknij pozycję **Pobierz wpisy**, zaznacz wpis, a następnie kliknij pozycję **Wyświetl**. Wpis pojawi się `DisplayEntry` <xref:System.Windows.Forms.TextBox>w pliku . Kliknij **pozycję Edytuj wpis**. Wpis pojawi się `Entry` <xref:System.Windows.Forms.TextBox>w pliku . Edytuj wpis w `Entry` <xref:System.Windows.Forms.TextBox> i kliknij przycisk **Prześlij edytuj**. Otwórz `MyDiary.txt` plik, aby potwierdzić poprawek. Teraz wybierz wpis i kliknij przycisk **Usuń wpis**. Po <xref:System.Windows.Forms.MessageBox> potwierdzeniu żądań kliknij przycisk **OK**. Zamknij aplikację i `MyDiary.txt` otwórz, aby potwierdzić usunięcie.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.IO.StreamReader>
 - <xref:System.IO.StreamWriter>

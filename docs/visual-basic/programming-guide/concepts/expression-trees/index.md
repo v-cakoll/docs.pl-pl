@@ -2,28 +2,28 @@
 title: Drzewa wyrażeń
 ms.date: 07/20/2015
 ms.assetid: 8bbbb02d-7ffc-476b-8c25-118d82bf5d46
-ms.openlocfilehash: 4ca3b56f48368e465560fc5edd60c0df8dd4e1c0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b2266cbae0a9a8a07c2a3569efa33d162ffedd1d
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344704"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78266420"
 ---
 # <a name="expression-trees-visual-basic"></a>Drzewa wyrażeń (Visual Basic)
-Drzewa wyrażeń reprezentują kod w strukturze danych przypominającej drzewo, gdzie każdy węzeł jest wyrażeniem, na przykład wywołaniem metody lub operacją binarną, taką jak `x < y`.  
+Drzewa wyrażeń reprezentują kod w strukturze danych podobnej do drzewa, gdzie każdy węzeł jest `x < y`wyrażeniem, na przykład wywołaniem metody lub operacją binarną, taką jak .  
   
- Można skompilować i uruchomić kod reprezentowany przez drzewa wyrażeń. Umożliwia to dynamiczną modyfikację kodu wykonywalnego, wykonywanie zapytań LINQ w różnych bazach danych i tworzenie zapytań dynamicznych. Aby uzyskać więcej informacji na temat drzew wyrażeń w LINQ, zobacz [jak: używanie drzew wyrażeń do kompilowania zapytań dynamicznych (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md).  
+ Można skompilować i uruchomić kod reprezentowany przez drzewa wyrażeń. Umożliwia to dynamiczną modyfikację kodu wykonywalnego, wykonywanie zapytań LINQ w różnych bazach danych i tworzenie zapytań dynamicznych. Aby uzyskać więcej informacji na temat drzew wyrażeń w LINQ, zobacz [Jak: Używanie drzew wyrażeń do tworzenia zapytań dynamicznych (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md).  
   
- Drzewa wyrażeń są również używane w środowisku uruchomieniowym języka dynamicznego (DLR) w celu zapewnienia współdziałania między językami dynamicznymi i .NET Framework i umożliwiają autorom kompilatora emitowanie drzew wyrażeń zamiast języka pośredniego firmy Microsoft (MSIL). Aby uzyskać więcej informacji na temat DLR, zobacz [Omówienie środowiska uruchomieniowego języka dynamicznego](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md).  
+ Drzewa wyrażeń są również używane w dynamicznym czasie wykonywania języka (DLR), aby zapewnić współdziałanie między językami dynamicznymi a programem .NET Framework i umożliwić modułom zbierającym kompilatora emitowanie drzew wyrażeń zamiast języka pośredniego firmy Microsoft (MSIL). Aby uzyskać więcej informacji na temat biblioteki DLR, zobacz [Omówienie dynamicznego środowiska wykonawczego języka](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md).  
   
- Można utworzyć drzewo wyrażenia C# lub Visual Basic w oparciu o anonimowe wyrażenie lambda lub można utworzyć drzewa wyrażeń ręcznie przy użyciu przestrzeni nazw <xref:System.Linq.Expressions>.  
+ Kompilator języka C# lub Visual Basic może utworzyć dla Ciebie drzewo wyrażeń na podstawie anonimowego wyrażenia <xref:System.Linq.Expressions> lambda lub można ręcznie utworzyć drzewa wyrażeń przy użyciu obszaru nazw.  
   
-## <a name="creating-expression-trees-from-lambda-expressions"></a>Tworzenie drzew wyrażeń na podstawie wyrażeń lambda  
- Gdy wyrażenie lambda jest przypisane do zmiennej typu <xref:System.Linq.Expressions.Expression%601>, kompilator emituje kod w celu skompilowania drzewa wyrażenia, które reprezentuje wyrażenie lambda.  
+## <a name="creating-expression-trees-from-lambda-expressions"></a>Tworzenie drzew wyrażeń z wyrażeń Lambda  
+ Gdy wyrażenie lambda jest przypisane do <xref:System.Linq.Expressions.Expression%601>zmiennej typu, kompilator emituje kod do tworzenia drzewa wyrażeń, który reprezentuje wyrażenie lambda.  
   
- Kompilator Visual Basic może generować drzewa wyrażeń tylko z wyrażeń lambda (lub jednowierszowych wyrażeń lambda). Nie można analizować instrukcji lambda (lub wielowierszowych wyrażeń lambda). Aby uzyskać więcej informacji na temat wyrażeń lambda w Visual Basic, zobacz [lambda Expressions](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
+ Kompilator języka Visual Basic może generować drzewa wyrażeń tylko z wyrażenie lambdas (lub lambdas jednowierszowe). Nie można przeanalizować instrukcji lambdas (lub lambdas wieloliniowych). Aby uzyskać więcej informacji na temat wyrażeń lambda w języku Visual Basic, zobacz [Wyrażenia Lambda](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
- Poniższy przykład kodu przedstawia sposób, w jaki kompilator Visual Basic tworzy drzewo wyrażenia, które reprezentuje `Function(num) num < 5`wyrażenie lambda.  
+ Poniższe przykłady kodu pokazują, jak kompilator języka Visual Basic utworzył `Function(num) num < 5`drzewo wyrażeń, które reprezentuje wyrażenie lambda.  
   
 ```vb  
 Dim lambda As Expression(Of Func(Of Integer, Boolean)) =  
@@ -31,9 +31,9 @@ Dim lambda As Expression(Of Func(Of Integer, Boolean)) =
 ```  
   
 ## <a name="creating-expression-trees-by-using-the-api"></a>Tworzenie drzew wyrażeń przy użyciu interfejsu API  
- Aby utworzyć drzewa wyrażeń przy użyciu interfejsu API, użyj klasy <xref:System.Linq.Expressions.Expression>. Ta klasa zawiera statyczne metody fabryki, które tworzą węzły drzewa wyrażeń określonych typów, na przykład <xref:System.Linq.Expressions.ParameterExpression>, która reprezentuje zmienną lub parametr lub <xref:System.Linq.Expressions.MethodCallExpression>, która reprezentuje wywołanie metody. <xref:System.Linq.Expressions.ParameterExpression>, <xref:System.Linq.Expressions.MethodCallExpression>i inne typy specyficzne dla wyrażenia są również zdefiniowane w przestrzeni nazw <xref:System.Linq.Expressions>. Te typy pochodzą z typu abstrakcyjnego <xref:System.Linq.Expressions.Expression>.  
+ Aby utworzyć drzewa wyrażeń przy <xref:System.Linq.Expressions.Expression> użyciu interfejsu API, należy użyć klasy. Ta klasa zawiera statyczne metody fabryczne, które tworzą węzły drzewa wyrażeń określonych typów, na przykład , <xref:System.Linq.Expressions.ParameterExpression>który reprezentuje zmienną lub parametr lub <xref:System.Linq.Expressions.MethodCallExpression>, który reprezentuje wywołanie metody. <xref:System.Linq.Expressions.ParameterExpression>, <xref:System.Linq.Expressions.MethodCallExpression>a inne typy specyficzne dla wyrażenia <xref:System.Linq.Expressions> są również zdefiniowane w obszarze nazw. Te typy pochodzą od <xref:System.Linq.Expressions.Expression>typu abstrakcyjnego .  
   
- Poniższy przykład kodu ilustruje sposób tworzenia drzewa wyrażenia, które reprezentuje wyrażenie lambda `Function(num) num < 5` przy użyciu interfejsu API.  
+ Poniższy przykład kodu pokazuje, jak utworzyć drzewo wyrażeń, który reprezentuje wyrażenie `Function(num) num < 5` lambda przy użyciu interfejsu API.  
   
 ```vb  
 ' Import the following namespace to your project: System.Linq.Expressions  
@@ -48,14 +48,14 @@ Dim lambda1 As Expression(Of Func(Of Integer, Boolean)) =
         New ParameterExpression() {numParam})  
 ```  
   
- W .NET Framework 4 lub nowszych interfejs API drzew wyrażeń obsługuje również przypisania i wyrażenia przepływu sterowania, takie jak pętle, Bloki warunkowe i bloki `try-catch`. Za pomocą interfejsu API można utworzyć drzewa wyrażeń, które są bardziej złożone niż te, które mogą być tworzone na podstawie wyrażeń lambda przez kompilator Visual Basic. Poniższy przykład ilustruje sposób tworzenia drzewa wyrażenia, które oblicza silnię liczby.  
+ W .NET Framework 4 lub nowszym interfejs API drzew wyrażeń obsługuje również przypisania `try-catch` i sterowanie wyrażeniami przepływu, takimi jak pętle, bloki warunkowe i bloki. Za pomocą interfejsu API, można utworzyć drzewa wyrażeń, które są bardziej złożone niż te, które mogą być tworzone z wyrażeń lambda przez kompilator języka Visual Basic. W poniższym przykładzie pokazano, jak utworzyć drzewo wyrażeń, które oblicza argument liczbowy liczby.  
   
 ```vb  
 ' Creating a parameter expression.  
 Dim value As ParameterExpression =  
     Expression.Parameter(GetType(Integer), "value")  
   
-' Creating an expression to hold a local variable.   
+' Creating an expression to hold a local variable.
 Dim result As ParameterExpression =  
     Expression.Parameter(GetType(Integer), "result")  
   
@@ -85,10 +85,10 @@ Console.WriteLine(factorial)
 ' Prints 120.  
 ```
 
-Aby uzyskać więcej informacji, zobacz [generowanie metod dynamicznych z drzewami wyrażeń w programie Visual Studio 2010](https://devblogs.microsoft.com/csharpfaq/generating-dynamic-methods-with-expression-trees-in-visual-studio-2010/), które mają zastosowanie również do nowszych wersji programu Visual Studio.
+Aby uzyskać więcej informacji, zobacz [Generowanie metod dynamicznych za pomocą drzew wyrażeń w programie Visual Studio 2010](https://devblogs.microsoft.com/csharpfaq/generating-dynamic-methods-with-expression-trees-in-visual-studio-2010/), który ma również zastosowanie do nowszych wersji programu Visual Studio.
   
 ## <a name="parsing-expression-trees"></a>Analizowanie drzew wyrażeń  
- Poniższy przykład kodu demonstruje, jak drzewo wyrażenia reprezentujące wyrażenie lambda `Function(num) num < 5` może być rozłożone na jego części.  
+ Poniższy przykład kodu pokazuje, jak drzewo wyrażeń, który reprezentuje wyrażenie `Function(num) num < 5` lambda mogą być rozłożone na jego części.  
   
 ```vb  
 ' Import the following namespace to your project: System.Linq.Expressions  
@@ -110,13 +110,13 @@ Console.WriteLine(String.Format("Decomposed expression: {0} => {1} {2} {3}",
 ' Decomposed expression: num => num LessThan 5  
 ```  
   
-## <a name="immutability-of-expression-trees"></a>Niezmienności drzew wyrażeń  
- Drzewa wyrażeń powinny być niezmienne. Oznacza to, że jeśli chcesz zmodyfikować drzewo wyrażenia, należy utworzyć nowe drzewo wyrażeń przez skopiowanie istniejącego i zastępowanie węzłów w tym elemencie. Możesz użyć odwiedzania drzewa wyrażenia, aby przejść do istniejącego drzewa wyrażenia. Aby uzyskać więcej informacji, zobacz [How to: Modify Expression Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md).  
+## <a name="immutability-of-expression-trees"></a>Niezmienność drzew wyrażeń  
+ Drzewa wyrażeń powinny być niezmienne. Oznacza to, że jeśli chcesz zmodyfikować drzewo wyrażeń, należy utworzyć nowe drzewo wyrażeń, kopiując istniejący i zastępując węzły w nim. Można użyć odwiedzającego drzewa wyrażeń, aby przejść przez istniejące drzewo wyrażeń. Aby uzyskać więcej informacji, zobacz [Jak: Modyfikowanie drzew wyrażeń (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md).  
   
 ## <a name="compiling-expression-trees"></a>Kompilowanie drzew wyrażeń  
- Typ <xref:System.Linq.Expressions.Expression%601> zapewnia metodę <xref:System.Linq.Expressions.Expression%601.Compile%2A>, która kompiluje kod reprezentowany przez drzewo wyrażenia w delegatze pliku wykonywalnego.  
+ Typ <xref:System.Linq.Expressions.Expression%601> zawiera <xref:System.Linq.Expressions.Expression%601.Compile%2A> metodę, która kompiluje kod reprezentowany przez drzewo wyrażeń do delegata wykonywalnego.  
   
- Poniższy przykład kodu demonstruje sposób kompilowania drzewa wyrażenia i uruchamiania wyniku.  
+ Poniższy przykład kodu pokazuje, jak skompilować drzewo wyrażeń i uruchomić wynikowy kod.  
   
 ```vb  
 ' Creating an expression tree.  
@@ -139,13 +139,13 @@ Console.WriteLine(expr.Compile()(4))
 ' Also prints True.  
 ```  
   
- Aby uzyskać więcej informacji, zobacz [jak: wykonywanie drzew wyrażeń (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md).  
+ Aby uzyskać więcej informacji, zobacz [Jak: Wykonywanie drzew wyrażeń (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Linq.Expressions>
-- [Instrukcje: wykonywanie drzew wyrażeń (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
-- [Instrukcje: modyfikowanie drzew wyrażeń (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
-- [Wyrażenia lambda](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
-- [Przegląd środowiska uruchomieniowego języka dynamicznego](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)
-- [Koncepcje programowania (Visual Basic)](../../../../visual-basic/programming-guide/concepts/index.md)
+- [Jak: Wykonywanie drzew wyrażeń (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
+- [Jak: Modyfikowanie drzew wyrażeń (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
+- [Wyrażenia Lambda](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [Omówienie dynamicznego środowiska wykonawczego języka](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)
+- [Pojęcia programistyczne (Visual Basic)](../../../../visual-basic/programming-guide/concepts/index.md)

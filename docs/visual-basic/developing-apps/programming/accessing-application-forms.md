@@ -9,27 +9,27 @@ helpviewer_keywords:
 - forms [Visual Basic], accessing all open
 ms.assetid: 9aaf5aaf-2012-4f97-89c7-6e62b9d17863
 ms.openlocfilehash: 332b6a7563160528b6c17210170af0db6e9bc0e7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74349244"
 ---
 # <a name="accessing-application-forms-visual-basic"></a>Uzyskiwanie dostępu do formularzy aplikacji (Visual Basic)
 
-Obiekt `My.Forms` zapewnia łatwy sposób uzyskiwania dostępu do wystąpienia każdego formularza systemu Windows zadeklarowanego w projekcie aplikacji. Możesz również użyć właściwości obiektu `My.Application`, aby uzyskać dostęp do ekranu powitalnego i formularza głównego aplikacji oraz uzyskać listę otwartych formularzy aplikacji.  
+Obiekt `My.Forms` zapewnia łatwy sposób dostępu do wystąpienia każdego formularza systemu Windows zadeklarowanego w projekcie aplikacji. Można również użyć właściwości `My.Application` obiektu, aby uzyskać dostęp do ekranu powitalnego aplikacji i formularza głównego i uzyskać listę otwartych formularzy aplikacji.  
   
 ## <a name="tasks"></a>Zadania  
 
- W poniższej tabeli przedstawiono przykłady pokazujące, jak uzyskać dostęp do formularzy aplikacji.  
+ W poniższej tabeli wymieniono przykłady przedstawiające sposób uzyskiwania dostępu do formularzy aplikacji.  
   
 |Do|Zobacz|  
 |---|---|  
 |Dostęp do jednego formularza z innego formularza w aplikacji.|[My.Forms, obiekt](../../../visual-basic/language-reference/objects/my-forms-object.md)|  
-|Wyświetla tytuły wszystkich otwartych formularzy aplikacji.|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>|  
-|Zaktualizuj ekran powitalny informacjami o stanie podczas uruchamiania aplikacji.|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>|  
+|Wyświetl tytuły wszystkich otwartych formularzy aplikacji.|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>|  
+|Zaktualizuj ekran powitalny z informacjami o stanie podczas uruchamiania aplikacji.|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>|  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>

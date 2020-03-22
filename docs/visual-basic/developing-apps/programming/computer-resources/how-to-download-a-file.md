@@ -9,55 +9,55 @@ helpviewer_keywords:
 - files [Visual Basic], transferring
 ms.assetid: ac479f81-c0e2-4b99-af73-217f446b73da
 ms.openlocfilehash: 4923feb46ff638de9514a4d70fc00367491a6f44
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74345622"
 ---
 # <a name="how-to-download-a-file-in-visual-basic"></a>Porady: pobieranie pliku w Visual Basic
 
-Za pomocą metody <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A> można pobrać plik zdalny i zapisać go w określonej lokalizacji. Jeśli parametr `ShowUI` ma wartość `True`, zostanie wyświetlone okno dialogowe pokazujące postęp pobierania i Zezwalanie użytkownikom na anulowanie operacji. Domyślnie istniejące pliki o tej samej nazwie nie są zastępowane. Jeśli chcesz zastąpić istniejące pliki, ustaw parametr `overwrite` na `True`.
+Metoda <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A> ta może służyć do pobierania pliku zdalnego i przechowywania go w określonej lokalizacji. Jeśli `ShowUI` parametr jest `True`ustawiony na , zostanie wyświetlone okno dialogowe pokazujące postęp pobierania i umożliwiające użytkownikom anulowanie operacji. Domyślnie istniejące pliki o tej samej nazwie nie są zastępowane; jeśli chcesz zastąpić istniejące pliki, ustaw `overwrite` parametr `True`na .
 
 Następujące warunki mogą spowodować wyjątek:
 
-- Nieprawidłowa nazwa dysku (<xref:System.ArgumentException>).
+- Nazwa dysku jest<xref:System.ArgumentException>nieprawidłowa ( ).
 
-- Nie podano niezbędnego uwierzytelniania (<xref:System.UnauthorizedAccessException> lub <xref:System.Security.SecurityException>).
+- Nie dostarczono niezbędnego<xref:System.UnauthorizedAccessException> <xref:System.Security.SecurityException>uwierzytelnienia ( lub ).
 
-- Serwer nie odpowiada w określonym `connectionTimeout` (<xref:System.TimeoutException>).
+- Serwer nie odpowiada w `connectionTimeout` ramach<xref:System.TimeoutException>określonego ( ).
 
-- Żądanie jest odrzucane przez witrynę sieci Web (<xref:System.Net.WebException>).
+- Żądanie jest odrzucane przez<xref:System.Net.WebException>witrynę sieci Web ( ).
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
 > [!IMPORTANT]
-> Nie należy podejmować decyzji dotyczących zawartości pliku na podstawie rozszerzenia nazwy pliku. Na przykład plik Form1. vb nie może być plikiem źródłowym Visual Basic. Sprawdź wszystkie dane wejściowe, zanim użyjesz danych w aplikacji. Zawartość pliku może się różnić od oczekiwanej i metody odczytu z pliku nie zadziałają.
+> Nie należy podejmować decyzji dotyczących zawartości pliku na podstawie rozszerzenia nazwy pliku. Na przykład plik Form1.vb może nie być plikiem źródłowym języka Visual Basic. Sprawdź wszystkie dane wejściowe, zanim użyjesz danych w aplikacji. Zawartość pliku może się różnić od oczekiwanej i metody odczytu z pliku nie zadziałają.
 
 ### <a name="to-download-a-file"></a>Aby pobrać plik
 
-- Użyj metody `DownloadFile`, aby pobrać plik, określając lokalizację pliku docelowego jako ciąg lub identyfikator URI i określając lokalizację, w której ma zostać zapisany plik. Ten przykład pobiera plik `WineList.txt` z `http://www.cohowinery.com/downloads` i zapisuje go w `C:\Documents and Settings\All Users\Documents`:
+- Użyj `DownloadFile` metody, aby pobrać plik, określając lokalizację pliku docelowego jako ciąg lub identyfikator URI i określając lokalizację, w której ma być przechowywany plik. W tym przykładzie `WineList.txt` `http://www.cohowinery.com/downloads` plik jest pobierany i zapisywany w: `C:\Documents and Settings\All Users\Documents`
 
   [!code-vb[VbResourceTasks#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#9)]
 
-### <a name="to-download-a-file-specifying-a-time-out-interval"></a>Aby pobrać plik, określając interwał limitu czasu
+### <a name="to-download-a-file-specifying-a-time-out-interval"></a>Aby pobrać plik, określanie przedziału przesuwu
 
-- Użyj metody `DownloadFile`, aby pobrać plik, określić lokalizację pliku docelowego jako ciąg lub identyfikator URI, określić lokalizację, w której ma zostać zapisany plik, i określić interwał limitu czasu w milisekundach (wartość domyślna to 1000). Ten przykład pobiera plik `WineList.txt` z `http://www.cohowinery.com/downloads` i zapisuje go w `C:\Documents and Settings\All Users\Documents`, określając limit czasu wynoszący 500 milisekund:
+- Użyj `DownloadFile` metody, aby pobrać plik, określając lokalizację pliku docelowego jako ciąg lub identyfikator URI, określając lokalizację, w której plik ma być przechowywany, i określając przedział limitów czasu w milisekundach (wartość domyślna to 1000). W tym przykładzie `WineList.txt` `http://www.cohowinery.com/downloads` pobiera plik i `C:\Documents and Settings\All Users\Documents`zapisuje go do , określając przedział limit czasu 500 milisekund:
 
   [!code-vb[VbResourceTasks#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#10)]
 
-### <a name="to-download-a-file-supplying-a-user-name-and-password"></a>Aby pobrać plik, podaj nazwę użytkownika i hasło
+### <a name="to-download-a-file-supplying-a-user-name-and-password"></a>Aby pobrać plik, podając nazwę użytkownika i hasło
 
-- Użyj metody `DownLoadFile`, aby pobrać plik, określić lokalizację pliku docelowego jako ciąg lub identyfikator URI oraz określić lokalizację, w której ma zostać zapisany plik, nazwę użytkownika i hasło. Ten przykład umożliwia pobranie pliku `WineList.txt` z `http://www.cohowinery.com/downloads` i zapisanie go w `C:\Documents and Settings\All Users\Documents`, przy użyciu nazwy użytkownika `anonymous` i pustego hasła.
+- Użyj `DownLoadFile` metody, aby pobrać plik, określając lokalizację pliku docelowego jako ciąg lub identyfikator URI i określając lokalizację, w której ma być przechowywany plik, nazwę użytkownika i hasło. W tym przykładzie `WineList.txt` `http://www.cohowinery.com/downloads` pobiera plik i `C:\Documents and Settings\All Users\Documents`zapisuje go `anonymous` do , z nazwą użytkownika i pustym hasłem.
 
   [!code-vb[VbResourceTasks#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#11)]
 
   > [!IMPORTANT]
-  > Protokół FTP używany przez metodę `DownLoadFile` wysyła informacje, w tym hasła, w postaci zwykłego tekstu i nie powinien być używany do przekazywania poufnych informacji.
+  > Protokół FTP stosowany `DownLoadFile` w tej metodzie wysyła informacje, w tym hasła, w postaci zwykłego tekstu i nie powinien być używany do przekazywania informacji poufnych.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:Microsoft.VisualBasic.Devices.Network>
 - <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A>
 - [Instrukcje: przekazywanie pliku](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)
-- [Instrukcje: analizowanie ścieżek plików](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+- [Porady: analizowanie ścieżek pliku](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)

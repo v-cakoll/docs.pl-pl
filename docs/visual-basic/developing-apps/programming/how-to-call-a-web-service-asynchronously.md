@@ -6,32 +6,32 @@ helpviewer_keywords:
 - Web services [Visual Basic], accessing
 ms.assetid: ff8046f4-f1f2-4d8b-90b7-95e3f7415418
 ms.openlocfilehash: d288cc1f2991a8f504dc9f1b206bba76fa378b75
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76794563"
 ---
 # <a name="how-to-call-a-web-service-asynchronously-visual-basic"></a>Porady: asynchroniczne wywoływanie usługi sieci Web (Visual Basic)
 
-Ten przykład dołącza procedurę obsługi do zdarzenia asynchronicznej procedury obsługi usługi sieci Web, aby można było pobrać wynik wywołania metody asynchronicznej. W tym przykładzie użyto usługi sieci Web DemoTemperatureService w `http://www.xmethods.net`.
+W tym przykładzie dołącza program obsługi do zdarzenia asynchroniczne obsługi usługi sieci Web, dzięki czemu można pobrać wynik wywołania metody asynchroniczne. W tym przykładzie użyto usługi sieci `http://www.xmethods.net`Web Usługi DemoTemperature w .
 
-Gdy odwołujesz się do usługi sieci Web w projekcie w zintegrowanym środowisku programistycznym (IDE) programu Visual Studio, jest on dodawany do obiektu `My.WebServices`, a IDE generuje klasę proxy klienta w celu uzyskania dostępu do określonej usługi sieci Web
+Podczas odwoływania się do usługi sieci Web w projekcie w programie Visual `My.WebServices` Studio Integrated Development Environment (IDE) jest ona dodawana do obiektu, a IDE generuje klasę serwera proxy klienta w celu uzyskania dostępu do określonej usługi sieci Web
 
-Klasa proxy umożliwia synchroniczną wywoływanie metod usługi sieci Web, w których aplikacja czeka na zakończenie działania. Ponadto serwer proxy tworzy dodatkowe elementy członkowskie, aby pomóc w asynchronicznym wywołaniu metody. Dla każdej funkcji usługi sieci Web *NameOfWebServiceFunction*, serwer proxy tworzy podprocedurę *NameOfWebServiceFunction*`Async`, zdarzenie *NameOfWebServiceFunction*`Completed` i klasę`CompletedEventArgs` *NameOfWebServiceFunction* . Ten przykład ilustruje sposób używania asynchronicznych elementów członkowskich do uzyskiwania dostępu do funkcji `getTemp` usługi sieci Web DemoTemperatureService.
+Klasa serwera proxy umożliwia synchronicznie wywoływanie metod usługi sieci Web, gdzie aplikacja czeka na zakończenie funkcji. Ponadto serwer proxy tworzy dodatkowe elementy członkowskie, aby ułatwić wywołanie metody asynchronicznie. Dla każdej funkcji usługi sieci Web *NameOfWebServiceFunction*serwer proxy tworzy podprocedura *NameOfWebServiceFunction,* `Async` zdarzenie *NameOfWebServiceFunction* `Completed` i klasę *NameOfWebServiceFunction.* `CompletedEventArgs` W tym przykładzie pokazano, jak używać asynchronicznych elementów członkowskich, aby uzyskać dostęp do `getTemp` funkcji usługi sieci Web DemoTemperatureService.
 
 > [!NOTE]
-> Ten kod nie działa w aplikacjach sieci Web, ponieważ ASP.NET nie obsługuje obiektu `My.WebServices`.
+> Ten kod nie działa w aplikacjach sieci Web, `My.WebServices` ponieważ ASP.NET nie obsługuje obiektu.
 
-## <a name="call-a-web-service-asynchronously"></a>Asynchroniczne wywoływanie usługi sieci Web
+## <a name="call-a-web-service-asynchronously"></a>Wywoływanie usługi sieci Web asynchronicznie
 
-1. Odwołuje się do usługi sieci Web DemoTemperatureService w `http://www.xmethods.net`. Adres to
+1. Odwołanie się do usługi sieci Web `http://www.xmethods.net`Usługi DemoTemperature w . Adres jest
 
     ```http
     http://www.xmethods.net/sd/2001/DemoTemperatureService.wsdl
     ```
 
-2. Dodaj program obsługi zdarzeń dla zdarzenia `getTempCompleted`:
+2. Dodaj program obsługi `getTempCompleted` zdarzeń dla zdarzenia:
 
     ```vb
     Private Sub getTempCompletedHandler(ByVal sender As Object,
@@ -42,15 +42,15 @@ Klasa proxy umożliwia synchroniczną wywoływanie metod usługi sieci Web, w kt
     ```
 
     > [!NOTE]
-    > Nie można użyć instrukcji `Handles`, aby skojarzyć procedurę obsługi zdarzeń ze zdarzeniami obiektu `My.WebServices`.
+    > Nie można `Handles` użyć instrukcji do skojarzenia `My.WebServices` programu obsługi zdarzeń ze zdarzeniami obiektu.
 
-3. Dodaj pole do śledzenia, jeśli program obsługi zdarzeń został dodany do zdarzenia `getTempCompleted`:
+3. Dodaj pole do śledzenia, jeśli program obsługi `getTempCompleted` zdarzeń został dodany do zdarzenia:
 
     ```vb
     Private handlerAttached As Boolean = False
     ```
 
-4. Dodaj metodę, aby dodać procedurę obsługi zdarzeń do zdarzenia `getTempCompleted`, w razie potrzeby, i wywołać metodę `getTempAsync`:
+4. Dodaj metodę, aby dodać program `getTempCompleted` obsługi zdarzeń do zdarzenia, `getTempAsync` jeśli to konieczne, i wywołać metodę:
 
     ```vb
     Sub CallGetTempAsync(ByVal zipCode As Integer)
@@ -64,9 +64,9 @@ Klasa proxy umożliwia synchroniczną wywoływanie metod usługi sieci Web, w kt
     End Sub
     ```
 
-    Aby wywołać metodę sieci Web `getTemp` asynchronicznie, wywołaj metodę `CallGetTempAsync`. Po zakończeniu metody sieci Web jej wartość zwracana jest przenoszona do procedury obsługi zdarzeń `getTempCompletedHandler`.
+    Aby wywołać `getTemp` metodę sieci Web asynchronicznie, należy wywołać `CallGetTempAsync` metodę. Po zakończeniu metody sieci Web, jego zwracana wartość jest przekazywana do programu obsługi `getTempCompletedHandler` zdarzeń.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Uzyskiwanie dostępu do usług sieci Web aplikacji](accessing-application-web-services.md)
 - [My.WebServices, obiekt](../../language-reference/objects/my-webservices-object.md)

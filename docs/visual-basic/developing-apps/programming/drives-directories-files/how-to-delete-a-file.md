@@ -8,62 +8,62 @@ helpviewer_keywords:
 - File object
 ms.assetid: 4b721769-3e45-4be7-b7fe-b08dc4141b44
 ms.openlocfilehash: 57182f1a1d92b7fe954fd26b32c5e4b1107823ee
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348777"
 ---
 # <a name="how-to-delete-a-file-in-visual-basic"></a>Porady: usuwanie pliku w Visual Basic
 
-Metoda `DeleteFile` obiektu `My.Computer.FileSystem` umożliwia usunięcie pliku. Wśród opcji, które oferuje: czy wysłać usunięty plik do **kosza**, czy należy polecić użytkownikowi potwierdzenie, że plik powinien zostać usunięty, i co należy zrobić, gdy użytkownik anuluje operację.  
+Metoda `DeleteFile` `My.Computer.FileSystem` obiektu umożliwia usunięcie pliku. Wśród opcji, które oferuje to: czy wysłać usunięty plik do **Kosza**, czy poprosić użytkownika o potwierdzenie, że plik powinien zostać usunięty, i co zrobić, gdy użytkownik anuluje operację.  
   
 ### <a name="to-delete-a-text-file"></a>Aby usunąć plik tekstowy  
   
-- Użyj metody `DeleteFile`, aby usunąć plik. Poniższy kod ilustruje sposób usuwania pliku o nazwie `test.txt`.  
+- Użyj `DeleteFile` metody, aby usunąć plik. Poniższy kod pokazuje, jak usunąć `test.txt`plik o nazwie .  
   
      [!code-vb[VbVbcnMyFileSystem#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#22)]  
   
-### <a name="to-delete-a-text-file-and-ask-the-user-to-confirm-that-the-file-should-be-deleted"></a>Aby usunąć plik tekstowy i polecić użytkownikowi potwierdzenie, że plik powinien zostać usunięty  
+### <a name="to-delete-a-text-file-and-ask-the-user-to-confirm-that-the-file-should-be-deleted"></a>Aby usunąć plik tekstowy i poprosić użytkownika o potwierdzenie, że plik powinien zostać usunięty  
   
-- Użyj metody `DeleteFile`, aby usunąć plik, lub ustaw `showUI` do `AllDialogs`. Poniższy kod ilustruje sposób usuwania pliku o nazwie `test.txt` i zezwala użytkownikowi na potwierdzenie, że plik powinien zostać usunięty.  
+- Użyj `DeleteFile` metody, aby usunąć `showUI` plik, ustawiając na `AllDialogs`. Poniższy kod pokazuje, jak usunąć `test.txt` plik o nazwie i umożliwić użytkownikowi potwierdzenie, że plik powinien zostać usunięty.  
   
      [!code-vb[VbFileIOMisc#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#9)]  
   
-### <a name="to-delete-a-text-file-and-send-it-to-the-recycle-bin"></a>Aby usunąć plik tekstowy i wysłać go do kosza  
+### <a name="to-delete-a-text-file-and-send-it-to-the-recycle-bin"></a>Aby usunąć plik tekstowy i wysłać go do Kosza  
   
-- Użyj metody `DeleteFile`, aby usunąć plik, określając `SendToRecycleBin` parametru `recycle`. Poniższy kod ilustruje sposób usuwania pliku o nazwie `test.txt` i wysyłania go do **kosza**.  
+- Użyj `DeleteFile` metody, aby usunąć plik, określając `SendToRecycleBin` dla parametru. `recycle` Poniższy kod pokazuje, jak usunąć `test.txt` nazwany plik i wysłać go do **Kosza**.  
   
      [!code-vb[VbFileIOMisc#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#10)]  
   
-## <a name="robust-programming"></a>Skuteczne programowanie  
+## <a name="robust-programming"></a>Niezawodne programowanie  
 
  Następujące warunki mogą spowodować wyjątek:  
   
-- Ścieżka jest nieprawidłowa z jednego z następujących powodów: jest ciągiem o zerowej długości, zawiera tylko biały znak, zawiera nieprawidłowe znaki lub jest ścieżką urządzenia (rozpoczyna się od \\\\.\\) (<xref:System.ArgumentException>).  
+- Ścieżka nie jest prawidłowa z jednego z następujących powodów: jest ciągiem o zerowej długości, zawiera tylko biały znak, \\ \\\\zawiera nieprawidłowe znaki lub jest ścieżką urządzenia (zaczyna się od . ) (<xref:System.ArgumentException>).  
   
-- Ścieżka jest nieprawidłowa, ponieważ jest `Nothing` (<xref:System.ArgumentNullException>).  
+- Ścieżka jest nieprawidłowa, `Nothing` ponieważ<xref:System.ArgumentNullException>jest ( ).  
   
-- Ścieżka przekracza maksymalną długość zdefiniowaną przez system (<xref:System.IO.PathTooLongException>).  
+- Ścieżka przekracza zdefiniowaną przez system<xref:System.IO.PathTooLongException>maksymalną długość ( ).  
   
-- Nazwa pliku lub folderu w ścieżce zawiera dwukropek (:) lub ma nieprawidłowy format (<xref:System.NotSupportedException>).  
+- Nazwa pliku lub folderu w ścieżce zawiera dwukropek (:) lub jest w nieprawidłowym formacie (<xref:System.NotSupportedException>).  
   
-- Plik jest używany (<xref:System.IO.IOException>).  
+- Plik jest używany<xref:System.IO.IOException>( ).  
   
-- Użytkownik nie ma wystarczających uprawnień do wyświetlania ścieżki (<xref:System.Security.SecurityException>).  
+- Użytkownik nie ma niezbędnych uprawnień do<xref:System.Security.SecurityException>wyświetlania ścieżki ( ).  
   
-- Plik nie istnieje (<xref:System.IO.FileNotFoundException>).  
+- Plik nie istnieje<xref:System.IO.FileNotFoundException>( ).  
   
-- Użytkownik nie ma uprawnień do usunięcia pliku lub plik jest tylko do odczytu (<xref:System.UnauthorizedAccessException>).  
+- Użytkownik nie ma uprawnień do usunięcia pliku lub plik<xref:System.UnauthorizedAccessException>jest tylko do odczytu ( ).  
   
-- Istnieje sytuacja częściowej relacji zaufania, w której użytkownik nie ma wystarczających uprawnień (<xref:System.Security.SecurityException>).  
+- Istnieje sytuacja częściowego zaufania, w której użytkownik nie<xref:System.Security.SecurityException>ma wystarczających uprawnień ( ).  
   
-- Użytkownik anulował operację, a `onUserCancel` jest ustawiona na `ThrowException` (<xref:System.OperationCanceledException>).  
+- Użytkownik anulował operację `onUserCancel` i jest `ThrowException` <xref:System.OperationCanceledException>ustawiony na ( ).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:Microsoft.VisualBasic.FileIO.UICancelOption>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.UIOption>
 - <xref:Microsoft.VisualBasic.FileIO.RecycleOption>
-- [Instrukcje: pobieranie kolekcji plików z katalogu](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
+- [Porady: pobieranie kolekcji plików z katalogu w Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)

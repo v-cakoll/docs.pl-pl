@@ -7,43 +7,43 @@ helpviewer_keywords:
 - My.Resources object
 ms.assetid: 8371ce2c-e1c7-476b-a86d-9afc2614b6b7
 ms.openlocfilehash: afd19877d053cb414f08761cda4e461d88f9e21c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74345595"
 ---
 # <a name="how-to-receive-strings-from-serial-ports-in-visual-basic"></a>Porady: odbieranie ciągów z portów seryjnych w Visual Basic
 
-W tym temacie opisano, jak za pomocą `My.Computer.Ports` odbierać ciągi z portów szeregowych komputera w Visual Basic.  
+W tym temacie `My.Computer.Ports` opisano sposób odbierania ciągów z portów szeregowych komputera w języku Visual Basic.  
   
 ### <a name="to-receive-strings-from-the-serial-port"></a>Aby odbierać ciągi z portu szeregowego  
   
-1. Zainicjuj ciąg Return.  
+1. Zainicjować ciąg zwrotny.  
   
      [!code-vb[VbVbalrMyComputer#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#38)]  
   
-2. Ustal, który port szeregowy powinien dostarczać ciągi. W tym przykładzie założono, że jest `COM1`.  
+2. Określ, który port szeregowy powinien dostarczać ciągi. W tym przykładzie `COM1`przyjęto założenie, że jest .  
   
-3. Użyj metody `My.Computer.Ports.OpenSerialPort`, aby uzyskać odwołanie do portu. Aby uzyskać więcej informacji, zobacz temat <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
+3. Użyj `My.Computer.Ports.OpenSerialPort` metody, aby uzyskać odwołanie do portu. Aby uzyskać więcej informacji, zobacz <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
   
-     Blok `Try...Catch...Finally` umożliwia aplikacji zamknięcie portu szeregowego, nawet jeśli generuje wyjątek. Cały kod, który operuje na porcie seryjnym, powinien pojawić się w tym bloku.  
+     Blok `Try...Catch...Finally` umożliwia aplikacji, aby zamknąć port szeregowy, nawet jeśli generuje wyjątek. Cały kod, który manipuluje portem szeregowym powinny pojawić się w tym bloku.  
   
      [!code-vb[VbVbalrMyComputer#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#39)]  
   
-4. Utwórz pętlę `Do` do odczytywania wierszy tekstu, dopóki nie będzie dostępnych więcej wierszy.  
+4. Utwórz `Do` pętlę do czytania wierszy tekstu, dopóki nie będzie dostępnych więcej wierszy.  
   
      [!code-vb[VbVbalrMyComputer#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#40)]  
   
-5. Użyj metody <xref:System.IO.Ports.SerialPort.ReadLine>, aby odczytać następny dostępny wiersz tekstu z portu szeregowego.  
+5. Użyj <xref:System.IO.Ports.SerialPort.ReadLine> tej metody, aby odczytać następny dostępny wiersz tekstu z portu szeregowego.  
   
      [!code-vb[VbVbalrMyComputer#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#41)]  
   
-6. Użyj instrukcji `If`, aby określić, czy metoda <xref:System.IO.Ports.SerialPort.ReadLine> zwróci `Nothing` (co oznacza, że nie jest dostępny żaden tekst). Jeśli jest zwracana `Nothing`, należy zamknąć pętlę `Do`.  
+6. Użyj `If` instrukcji, aby <xref:System.IO.Ports.SerialPort.ReadLine> ustalić, `Nothing` czy metoda zwraca (co oznacza, że nie ma więcej tekstu). Jeśli `Nothing`powróci, wyjdź z `Do` pętli.  
   
      [!code-vb[VbVbalrMyComputer#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#42)]  
   
-7. Dodaj blok `Else` do instrukcji `If`, aby obsłużyć przypadek, jeśli ciąg został faktycznie odczytany. Blok dołącza ciąg z portu szeregowego do zwracanego ciągu.  
+7. Dodaj `Else` blok do `If` instrukcji do obsługi sprawy, jeśli ciąg jest rzeczywiście odczytywany. Blok dołącza ciąg z portu szeregowego do ciągu zwracany.  
   
      [!code-vb[VbVbalrMyComputer#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#43)]  
   
@@ -55,19 +55,19 @@ W tym temacie opisano, jak za pomocą `My.Computer.Ports` odbierać ciągi z por
 
  [!code-vb[VbVbalrMyComputer#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#37)]  
   
- Ten przykład kodu jest również dostępny jako fragment kodu IntelliSense. W selektorze fragmentów kodu znajdują się one w obszarze **łączności i sieci**. Aby uzyskać więcej informacji, zobacz [fragmenty kodu](/visualstudio/ide/code-snippets).  
+ W tym przykładzie kodu jest również dostępny jako fragment kodu IntelliSense. W selektorze fragmentów kodu znajduje się w **sekcji Łączność i sieć**. Aby uzyskać więcej informacji, zobacz [Fragmenty kodu](/visualstudio/ide/code-snippets).  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
 
- W tym przykładzie przyjęto założenie, że komputer używa `COM1`.  
+ W tym przykładzie przyjęto założenie, że komputer jest używany `COM1`.  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
 
- W tym przykładzie przyjęto założenie, że komputer używa `COM1`. Aby zapewnić większą elastyczność, kod powinien zezwalać użytkownikowi na wybranie żądanego portu szeregowego z listy dostępnych portów. Aby uzyskać więcej informacji, zobacz [jak: pokazać dostępne porty szeregowe](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md).  
+ W tym przykładzie przyjęto założenie, że komputer jest używany `COM1`. Aby uzyskać większą elastyczność, kod powinien umożliwić użytkownikowi wybranie żądanego portu szeregowego z listy dostępnych portów. Aby uzyskać więcej informacji, zobacz [Jak: Pokaż dostępne porty szeregowe](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md).  
   
- W tym przykładzie używa bloku `Try...Catch...Finally`, aby upewnić się, że aplikacja zamknie port i przechwytuje wszystkie wyjątki limitów czasu. Aby uzyskać więcej informacji, zobacz [try... Catch... Finally — instrukcja](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
+ W tym przykładzie `Try...Catch...Finally` użyto bloku, aby upewnić się, że aplikacja zamyka port i przechwytują wszelkie wyjątki limitu czasu. Aby uzyskać więcej informacji, zobacz [Try... Złapać... Wreszcie Oświadczenie](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:Microsoft.VisualBasic.Devices.Ports>
 - <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>

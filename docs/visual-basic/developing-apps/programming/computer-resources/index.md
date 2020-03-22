@@ -7,15 +7,15 @@ helpviewer_keywords:
 - computer resources [Visual Basic], accessing
 ms.assetid: 75b81c88-f7c0-46e0-95c8-0c006d2120f9
 ms.openlocfilehash: 27310a50289b9b2c315f52ad471da1f32ef0721a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74345535"
 ---
-# <a name="accessing-computer-resources-visual-basic"></a>Uzyskiwanie dostępu do zasobów komputera (Visual Basic)
+# <a name="accessing-computer-resources-visual-basic"></a>Uzyskiwanie dostępu do zasobów komputera (visual basic)
 
-Obiekt `My.Computer` jest jednym z trzech centralnych obiektów w `My`, zapewniając dostęp do informacji i często używanych funkcji. `My.Computer` udostępnia metody, właściwości i zdarzenia w celu uzyskania dostępu do komputera, na którym działa aplikacja. Jego obiekty obejmują:
+Obiekt `My.Computer` jest jednym z trzech `My`obiektów centralnych w , zapewniając dostęp do informacji i powszechnie używanych funkcji. `My.Computer`udostępnia metody, właściwości i zdarzenia dostępu do komputera, na którym aplikacja jest uruchomiona. Jego obiekty obejmują:
 
 - <xref:Microsoft.VisualBasic.Devices.Audio>
 - Schowek (<xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>)
@@ -26,30 +26,30 @@ Obiekt `My.Computer` jest jednym z trzech centralnych obiektów w `My`, zapewnia
 - <xref:Microsoft.VisualBasic.Devices.Mouse>
 - <xref:Microsoft.VisualBasic.Devices.Network>
 - <xref:Microsoft.VisualBasic.Devices.Ports>
-- Rejestr (<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>)
+- Rejestr<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>( )
 
 ## <a name="in-this-section"></a>W tej sekcji
 
 [Odtwarzanie dźwięków](../../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md)  
-Wyświetla listę zadań skojarzonych z `My.Computer.Audio`, takich jak odtwarzanie dźwięku w tle.
+Wyświetla listę zadań `My.Computer.Audio`skojarzonych z programem , takich jak odtwarzanie dźwięku w tle.
 
 [Zapisywanie danych w schowku i odczytywanie ich z niego](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)  
-Wyświetla listę zadań skojarzonych z `My.Computer.Clipboard`, takich jak odczytywanie danych z lub zapisywanie danych w Schowku.
+Wyświetla listę zadań `My.Computer.Clipboard`skojarzonych z , takich jak odczytywanie danych lub zapisywanie danych w Schowku.
 
 [Pobieranie informacji na temat komputera](../../../../visual-basic/developing-apps/programming/computer-resources/getting-information-about-the-computer.md)  
-Wyświetla listę zadań skojarzonych z `My.Computer.Info`, takich jak określanie pełnych nazw lub adresów IP komputera.
+Wyświetla listę zadań `My.Computer.Info`skojarzonych z , takich jak określenie pełnej nazwy komputera lub adresów IP.
 
 [Uzyskiwanie dostępu do klawiatury](../../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md)  
-Wyświetla listę zadań skojarzonych z `My.Computer.Keyboard`, takich jak określenie, czy Caps Lock jest włączona.
+Wyświetla listę zadań `My.Computer.Keyboard`skojarzonych z , takich jak określenie, czy caps lock jest włączony.
 
 [Uzyskiwanie dostępu do myszy](../../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md)  
-Wyświetla listę zadań skojarzonych z `My.Computer.Mouse`, takich jak określenie, czy mysz jest obecna.
+Wyświetla listę zadań `My.Computer.Mouse`skojarzonych z , takich jak określenie, czy mysz jest obecny.
 
 [Przeprowadzanie operacji sieciowych](../../../../visual-basic/developing-apps/programming/computer-resources/performing-network-operations.md)  
-Wyświetla listę zadań skojarzonych z `My.Computer.Network`, takich jak przekazywanie lub pobieranie plików.
+Wyświetla listę zadań `My.Computer.Network`skojarzonych z plikami, takich jak przekazywanie lub pobieranie plików.
 
 [Uzyskiwanie dostępu do portów komputera](../../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md)  
-Wyświetla listę zadań skojarzonych z `My.Computer.Ports`, takich jak wyświetlanie dostępnych portów seryjnych lub wysyłanie ciągów do portów seryjnych.
+Wyświetla listę zadań `My.Computer.Ports`skojarzonych z , takich jak pokazywanie dostępnych portów szeregowych lub wysyłanie ciągów do portów szeregowych.
 
 [Odczytywanie z rejestru i zapisywanie w nim](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)  
-Wyświetla listę zadań skojarzonych z `My.Computer.Registry`, takich jak odczytywanie danych z lub zapisywanie danych w kluczach rejestru.
+Wyświetla listę zadań `My.Computer.Registry`skojarzonych z , takich jak odczytywanie danych z kluczy rejestru lub zapisywanie ich.

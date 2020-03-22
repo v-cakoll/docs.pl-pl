@@ -10,57 +10,57 @@ helpviewer_keywords:
 - My.Log object, logging
 ms.assetid: 67624d05-cddf-48b7-8c36-5c99baa4c621
 ms.openlocfilehash: 5a4ef3888ba8371d26204c3569b5fb9bae1f15f2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74352097"
 ---
 # <a name="how-to-log-messages-when-the-application-starts-or-shuts-down-visual-basic"></a>Porady: rejestrowanie wiadomości podczas uruchamiania lub wyłączania aplikacji (Visual Basic)
 
-Za pomocą obiektów `My.Application.Log` i `My.Log` można rejestrować informacje o zdarzeniach występujących w aplikacji. Ten przykład pokazuje, jak używać metody `My.Application.Log.WriteEntry` ze zdarzeniami `Startup` i `Shutdown` do zapisywania informacji o śledzeniu.  
+Można użyć `My.Application.Log` i `My.Log` obiektów do rejestrowania informacji o zdarzeniach występujących w aplikacji. W tym przykładzie `My.Application.Log.WriteEntry` pokazano, `Startup` jak `Shutdown` używać metody z i zdarzeń do zapisu informacji śledzenia.  
   
-### <a name="to-access-the-applications-event-handler-code"></a>Aby uzyskać dostęp do kodu programu obsługi zdarzeń aplikacji  
+### <a name="to-access-the-applications-event-handler-code"></a>Aby uzyskać dostęp do kodu obsługi zdarzeń aplikacji  
   
-1. Zaznaczono projekt w **Eksplorator rozwiązań**. W menu **projekt** wybierz polecenie **Właściwości**.  
+1. Wybierz projekt w **Eksploratorze rozwiązań**. W menu **Projekt** wybierz polecenie **Właściwości**.  
   
-2. Kliknij kartę **aplikacja** .  
+2. Kliknij kartę **Aplikacja.**  
   
-3. Kliknij przycisk **Wyświetl zdarzenia aplikacji** , aby otworzyć Edytor kodu.  
+3. Kliknij przycisk **Wyświetl zdarzenia aplikacji,** aby otworzyć Edytor kodu.  
   
-     Spowoduje to otwarcie pliku ApplicationEvents. vb.  
+     Spowoduje to otwarcie pliku ApplicationEvents.vb.  
   
-### <a name="to-log-messages-when-the-application-starts"></a>Aby rejestrować komunikaty podczas uruchamiania aplikacji  
+### <a name="to-log-messages-when-the-application-starts"></a>Aby rejestrować komunikaty po uruchomieniu aplikacji  
   
-1. Plik ApplicationEvents. vb jest otwarty w edytorze kodu. W menu **Ogólne** wybierz pozycję **zdarzenia aplikacji**.  
+1. Otwórz plik ApplicationEvents.vb w Edytorze kodu. W menu **Ogólne** wybierz polecenie **MyApplication Events**.  
   
-2. W menu **deklaracje** wybierz pozycję **Uruchamianie**.  
+2. W menu **Deklaracje** wybierz polecenie **Uruchamianie**.  
   
-     Aplikacja zgłasza zdarzenie <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> przed uruchomieniem aplikacji głównej.  
+     Aplikacja wywołuje <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> zdarzenie przed uruchomieniu aplikacji głównej.  
   
-3. Dodaj metodę `My.Application.Log.WriteEntry` do procedury obsługi zdarzeń `Startup`.  
+3. Dodaj `My.Application.Log.WriteEntry` metodę do `Startup` programu obsługi zdarzeń.  
   
      [!code-vb[VbVbalrMyApplicationLog#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/MyEventsFake.vb#1)]  
   
-### <a name="to-log-messages-when-the-application-shuts-down"></a>Aby rejestrować komunikaty podczas zamykania aplikacji  
+### <a name="to-log-messages-when-the-application-shuts-down"></a>Aby rejestrować komunikaty po zamknięciu aplikacji  
   
-1. Plik ApplicationEvents. vb jest otwarty w edytorze kodu. W menu **Ogólne** wybierz pozycję **zdarzenia aplikacji**.  
+1. Otwórz plik ApplicationEvents.vb w Edytorze kodu. W menu **Ogólne** wybierz polecenie **MyApplication Events**.  
   
-2. W menu **deklaracje** wybierz pozycję **Zamknij**.  
+2. W menu **Deklaracje** wybierz polecenie **Zamknięcie**.  
   
-     Aplikacja zgłasza zdarzenie <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> po uruchomieniu aplikacji głównej, ale przed jej zamknięciem.  
+     Aplikacja wywołuje <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> zdarzenie po uruchomieniu głównej aplikacji, ale przed zamknięciem.  
   
-3. Dodaj metodę `My.Application.Log.WriteEntry` do procedury obsługi zdarzeń `Shutdown`.  
+3. Dodaj `My.Application.Log.WriteEntry` metodę do `Shutdown` programu obsługi zdarzeń.  
   
      [!code-vb[VbVbalrMyApplicationLog#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/MyEventsFake.vb#2)]  
   
 ## <a name="example"></a>Przykład  
 
- Możesz użyć **projektanta projektu** , aby uzyskać dostęp do zdarzeń aplikacji w edytorze kodu. Aby uzyskać więcej informacji, zobacz [Strona aplikacji, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
+ **Projektantprojektu** można użyć, aby uzyskać dostęp do zdarzeń aplikacji w Edytorze kodu. Aby uzyskać więcej informacji, zobacz [Strona aplikacji, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
   
  [!code-vb[VbVbalrMyApplicationLog#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/MyEventsFake.vb#3)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>

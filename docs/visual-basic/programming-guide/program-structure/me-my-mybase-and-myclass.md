@@ -22,19 +22,19 @@ helpviewer_keywords:
 - MyBase keyword [Visual Basic], relationship to similar programming elements
 ms.assetid: f8e241ae-b1ed-4886-9aa0-08c632154029
 ms.openlocfilehash: a21dfeb12e8d99f5f8b8afede084846711c299ab
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347336"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79400849"
 ---
 # <a name="me-my-mybase-and-myclass-in-visual-basic"></a>Me, My, MyBase, i MyClass w Visual Basic
-`Me`, `My`, `MyBase`i `MyClass` w Visual Basic mają podobne nazwy, ale inne cele. W tym temacie opisano każdy z tych obiektów w celu ich rozróżnienia.  
+`Me`, `My` `MyBase`, `MyClass` i visual basic mają podobne nazwy, ale różne cele. W tym temacie opisano każdą z tych jednostek w celu ich odróżnienia.  
   
-## <a name="me"></a>Mnie  
- Słowo kluczowe `Me` zapewnia sposób odwoływania się do określonego wystąpienia klasy lub struktury, w której kod jest aktualnie wykonywany. `Me` zachowuje się jak zmienna obiektu lub zmienna struktury odwołująca się do bieżącego wystąpienia. Używanie `Me` jest szczególnie przydatne do przekazywania informacji o aktualnie wykonywanym wystąpieniu klasy lub struktury do procedury w innej klasie, strukturze lub module.  
+## <a name="me"></a>Ja  
+ Słowo `Me` kluczowe umożliwia odwoływanie się do określonego wystąpienia klasy lub struktury, w której kod jest obecnie wykonywany. `Me`zachowuje się jak zmienna obiektu lub zmienna struktury odnosząca się do bieżącego wystąpienia. Używanie `Me` jest szczególnie przydatne do przekazywania informacji o aktualnie wykonywanym wystąpieniu klasy lub struktury do procedury w innej klasie, strukturze lub module.  
   
- Załóżmy na przykład, że masz w module następującą procedurę.  
+ Załóżmy na przykład, że w module jest niżej niżej sześc.  
   
 ```vb  
 Sub ChangeFormColor(FormName As Form)  
@@ -43,21 +43,21 @@ Sub ChangeFormColor(FormName As Form)
 End Sub  
 ```  
   
- Można wywołać tę procedurę i przekazać bieżące wystąpienie klasy <xref:System.Windows.Forms.Form> jako argument przy użyciu następującej instrukcji.  
+ Można wywołać tę procedurę i przekazać <xref:System.Windows.Forms.Form> bieżące wystąpienie klasy jako argument przy użyciu następującej instrukcji.  
   
 ```vb  
 ChangeFormColor(Me)  
 ```  
   
 ## <a name="my"></a>Moje  
- Funkcja `My` zapewnia łatwy i intuicyjny dostęp do kilku klas .NET Framework, umożliwiając Visual Basic użytkownikowi korzystanie z komputera, aplikacji, ustawień, zasobów i tak dalej.  
+ Funkcja `My` ta zapewnia łatwy i intuicyjny dostęp do wielu klas programu .NET Framework, umożliwiając użytkownikowi języka Visual Basic interakcję z komputerem, aplikacją, ustawieniami, zasobami i tak dalej.  
   
-## <a name="mybase"></a>MyBase  
- Słowo kluczowe `MyBase` zachowuje się jak zmienna obiektu odwołująca się do klasy podstawowej bieżącego wystąpienia klasy. `MyBase` jest często używany do uzyskiwania dostępu do składowych klasy bazowej, które są zastępowane lub zasłonięte w klasie pochodnej. `MyBase.New` jest używany do jawnego wywoływania konstruktora klasy bazowej z konstruktora klasy pochodnej.  
+## <a name="mybase"></a>Mybase  
+ Słowo `MyBase` kluczowe zachowuje się jak zmienna obiektowa odnosząca się do klasy podstawowej bieżącego wystąpienia klasy. `MyBase`jest powszechnie używany do uzyskiwania dostępu do elementów członkowskich klasy podstawowej, które są zastępowane lub cieniowane w klasie pochodnej. `MyBase.New`jest używany do jawnego wywołania konstruktora klasy podstawowej z konstruktora klas pochodnych.  
   
-## <a name="myclass"></a>MyClass  
- Słowo kluczowe `MyClass` zachowuje się jak zmienna obiektu odwołująca się do bieżącego wystąpienia klasy jako pierwotnie zaimplementowane. `MyClass` jest podobna do `Me`, ale wszystkie wywołania metod są traktowane jak w przypadku, gdy metoda została `NotOverridable`.  
+## <a name="myclass"></a>Myclass  
+ Słowo `MyClass` kluczowe zachowuje się jak zmienna obiektowa odnosząca się do bieżącego wystąpienia klasy, jak pierwotnie zaimplementowano. `MyClass`jest podobny `Me`do , ale wszystkie wywołania metody na `NotOverridable`to są traktowane tak, jakby metoda była .  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Podstawowe informacje o dziedziczeniu](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

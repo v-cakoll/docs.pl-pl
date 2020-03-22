@@ -7,43 +7,43 @@ helpviewer_keywords:
 - binary files [Visual Basic], writing in Visual Basic
 ms.assetid: 59fae125-de5b-4c96-883c-209f4a55112c
 ms.openlocfilehash: 72d019f5f49868bd84d0507535e8ebc547b50e25
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74334428"
 ---
 # <a name="how-to-write-to-binary-files-in-visual-basic"></a>Porady: zapis w plikach binarnych w Visual Basic
 
-Metoda <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A> zapisuje dane do pliku binarnego. Jeśli parametr `append` jest `True`, spowoduje to dołączenie danych do pliku; w przeciwnym razie dane w pliku są zastępowane.
+Metoda <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A> zapisuje dane do pliku binarnego. Jeśli `append` parametr `True`jest , dołączy dane do pliku; w przeciwnym razie dane w pliku są zastępowane.
 
-Jeśli określona ścieżka wykluczająca nazwę pliku jest nieprawidłowa, zostanie zgłoszony wyjątek <xref:System.IO.DirectoryNotFoundException>. Jeśli ścieżka jest prawidłowa, ale plik nie istnieje, plik zostanie utworzony.
+Jeśli określona ścieżka z wyłączeniem nazwy pliku <xref:System.IO.DirectoryNotFoundException> jest nieprawidłowa, zostanie zgłoszony wyjątek. Jeśli ścieżka jest prawidłowa, ale plik nie istnieje, zostanie utworzony plik.
 
-## <a name="to-write-to-a-binary-file"></a>Aby zapisać w pliku binarnym
+## <a name="to-write-to-a-binary-file"></a>Aby zapisać do pliku binarnego
 
-Użyj metody `WriteAllBytes`, podając ścieżkę i nazwę pliku oraz liczbę bajtów do zapisania. Ten przykład dołącza tablicę danych `CustomerData` do pliku o nazwie `CollectedData.dat`.
+Użyj `WriteAllBytes` tej metody, podając ścieżkę pliku i nazwę oraz bajty, które mają zostać zapisane. W tym przykładzie dołącza `CustomerData` tablicę `CollectedData.dat`danych do pliku o nazwie .
 
 [!code-vb[VbVbcnMyFileSystem#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#27)]
 
-## <a name="robust-programming"></a>Skuteczne programowanie
+## <a name="robust-programming"></a>Niezawodne programowanie
 
-Następujące warunki mogą utworzyć wyjątek:
+Następujące warunki mogą powodować wyjątek:
 
-- Ścieżka jest nieprawidłowa z jednego z następujących powodów: jest to ciąg o zerowej długości; zawiera tylko białe znaki; lub zawiera nieprawidłowe znaki. (<xref:System.ArgumentException>).
+- Ścieżka nie jest prawidłowa z jednego z następujących powodów: jest ciągiem o zerowej długości; zawiera tylko biały znak; lub zawiera nieprawidłowe znaki. (<xref:System.ArgumentException>).
 
-- Ścieżka jest nieprawidłowa, ponieważ jest `Nothing` (<xref:System.ArgumentNullException>).
+- Ścieżka jest nieprawidłowa, `Nothing` ponieważ<xref:System.ArgumentNullException>jest ( ).
 
-- `File` wskazuje ścieżkę, która nie istnieje (<xref:System.IO.FileNotFoundException> lub <xref:System.IO.DirectoryNotFoundException>).
+- `File`wskazuje ścieżkę, która nie<xref:System.IO.FileNotFoundException> <xref:System.IO.DirectoryNotFoundException>istnieje ( lub ).
 
-- Plik jest używany przez inny proces lub wystąpił błąd we/wy (<xref:System.IO.IOException>).
+- Plik jest używany przez inny proces lub występuje błąd<xref:System.IO.IOException>we/wy ( ).
 
-- Ścieżka przekracza maksymalną długość zdefiniowaną przez system (<xref:System.IO.PathTooLongException>).
+- Ścieżka przekracza zdefiniowaną przez system<xref:System.IO.PathTooLongException>maksymalną długość ( ).
 
-- Nazwa pliku lub katalogu w ścieżce zawiera dwukropek (:) lub ma nieprawidłowy format (<xref:System.NotSupportedException>).
+- Nazwa pliku lub katalogu w ścieżce zawiera dwukropek (:) lub jest w nieprawidłowym formacie (<xref:System.NotSupportedException>).
 
-- Użytkownik nie ma wystarczających uprawnień do wyświetlania ścieżki (<xref:System.Security.SecurityException>).
+- Użytkownik nie ma niezbędnych uprawnień do<xref:System.Security.SecurityException>wyświetlania ścieżki ( ).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A>
 - [Instrukcje: zapisywanie tekstu w plikach](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files.md)

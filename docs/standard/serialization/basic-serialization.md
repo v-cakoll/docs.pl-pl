@@ -1,5 +1,5 @@
 ---
-title: Serializacja podstawowa
+title: Podstawowa serializacja
 ms.date: 03/30/2017
 helpviewer_keywords:
 - binary serialization, basic serialization
@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: d899d43c-335a-433e-a589-cd187192984f
 dev_langs:
 - CSharp
-ms.openlocfilehash: a2dde9f795dfe31ff6ef821272a0d5e8d20e8b2f
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: ce86f7897c5c117c4fd6f1eabc4c8b802103261c
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159952"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80248033"
 ---
-# <a name="basic-serialization"></a>Serializacja podstawowa
+# <a name="basic-serialization"></a>Podstawowa serializacja
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
 
-Najprostszym sposobem, aby można było serializować klasę, jest oznaczenie jej <xref:System.SerializableAttribute> w następujący sposób.  
+Najprostszym sposobem, aby klasa serializable jest oznaczyć go w <xref:System.SerializableAttribute> następujący sposób.  
   
 ```csharp  
 [Serializable]  
@@ -42,9 +42,9 @@ formatter.Serialize(stream, obj);
 stream.Close();  
 ```  
   
-W tym przykładzie zastosowano binarny plik formatujący do serializacji. Wszystko, co należy zrobić, to utworzenie wystąpienia strumienia i programu formatującego, którego zamierzasz użyć, a następnie Wywołaj metodę **serializacji** w programie formatującego. Strumień i do serializacji obiektu są dostarczane jako parametry do tego połączenia. Chociaż nie jest to jawnie zademonstrowane w tym przykładzie, wszystkie zmienne składowe klasy będą serializowane — nawet zmienne oznaczone jako prywatne. W tym aspekcie Serializacja binarna różni się od klasy <xref:System.Xml.Serialization.XmlSerializer>, która tylko serializować pola publiczne. Aby uzyskać informacje na temat wykluczania zmiennych członkowskich z serializacji binarnej, zobacz [selektywne serializacji](selective-serialization.md).  
+W tym przykładzie użyto formatera binarnego do serializacji. Wszystko, co musisz zrobić, to utworzyć wystąpienie strumienia i formatera, którego zamierzasz użyć, a następnie **wywołać metodę Serialize** na programie formatu. Strumień i do serializacji obiektu są dostarczane jako parametry do tego połączenia. Chociaż nie jest jawnie wykazane w tym przykładzie, wszystkie zmienne członkowskie klasy będą serializowane, nawet zmienne oznaczone jako prywatne. W tym aspekcie serializacji <xref:System.Xml.Serialization.XmlSerializer> binarnej różni się od klasy, która tylko serializuje pola publiczne. Aby uzyskać informacje na temat wykluczania zmiennych członkowskich z serializacji binarnej, zobacz [Serializacja selektywna](selective-serialization.md).  
   
-Przywracanie poprzedni stan obiektu jest równie proste. Najpierw utwórz strumień do odczytu i <xref:System.Runtime.Serialization.Formatter>, a następnie nakazuje programowi formatującego deserializacji obiektu. W poniższym przykładzie kodu pokazano, jak to zrobić.  
+Przywracanie poprzedni stan obiektu jest równie proste. Najpierw utwórz strumień do <xref:System.Runtime.Serialization.Formatter>odczytu i , a następnie poinstruuj formatera, aby deserializacji obiektu. Poniższy przykład kodu pokazuje, jak to zrobić.  
   
 ```csharp  
 IFormatter formatter = new BinaryFormatter();  
@@ -58,9 +58,9 @@ Console.WriteLine("n2: {0}", obj.n2);
 Console.WriteLine("str: {0}", obj.str);  
 ```  
   
-Użyte powyżej <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> są bardzo wydajne i tworzą strumień bajtów kompaktowych. Dla wszystkich obiektów z tego programu formatującego również może być zdeserializowany z nim, dzięki czemu idealne narzędzie serializacji obiektów, które zostanie przeprowadzona na programie .NET Framework. Należy pamiętać, że konstruktorów nie są wywoływane, gdy deserializowany jest obiekt. To ograniczenie jest umieszczane na deserializacji ze względu na wydajność. Jednak narusza niektórych zwykłym umów przez środowisko uruchomieniowe z modułu zapisywania obiektu i deweloperów należy upewnić się, że zrozumieć zagadnienia, kiedy oznaczanie jako możliwy do serializacji obiektu.  
+Zastosowane <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> powyżej jest bardzo wydajne i wytwarza kompaktowy strumień bajtów. Dla wszystkich obiektów z tego programu formatującego również może być zdeserializowany z nim, dzięki czemu idealne narzędzie serializacji obiektów, które zostanie przeprowadzona na programie .NET Framework. Należy pamiętać, że konstruktorów nie są wywoływane, gdy deserializowany jest obiekt. To ograniczenie jest umieszczane na deserializacji ze względu na wydajność. Jednak narusza niektórych zwykłym umów przez środowisko uruchomieniowe z modułu zapisywania obiektu i deweloperów należy upewnić się, że zrozumieć zagadnienia, kiedy oznaczanie jako możliwy do serializacji obiektu.  
   
-Jeśli przenośność jest wymagana, użyj <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> zamiast tego. Po prostu Zastąp **BinaryFormatter** w powyższym kodzie z **SoapFormatter,** a następnie Wywołaj **Serializacja** i **deserializacja** jako poprzednio. Ten program formatujący tworzy następujące dane wyjściowe dla przykładu użytego powyżej.  
+Jeśli przenośność jest wymagana, <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> użyj zamiast tego. Wystarczy zastąpić **BinaryFormatter** w kodzie powyżej **soapformatter** i **wywołać Serialize** i **Deserialize** jak poprzednio. Ten formater tworzy następujące dane wyjściowe dla przykładu użytego powyżej.  
   
 ```xml  
 <SOAP-ENV:Envelope  
@@ -68,9 +68,7 @@ Jeśli przenośność jest wymagana, użyj <xref:System.Runtime.Serialization.Fo
   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
   xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"  
   xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"  
-  SOAP-ENV:encodingStyle=  
-  "http://schemas.microsoft.com/soap/encoding/clr/1.0"  
-  "http://schemas.xmlsoap.org/soap/encoding/"  
+  SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"  
   xmlns:a1="http://schemas.microsoft.com/clr/assem/ToFile">  
   
   <SOAP-ENV:Body>  
@@ -83,7 +81,7 @@ Jeśli przenośność jest wymagana, użyj <xref:System.Runtime.Serialization.Fo
 </SOAP-ENV:Envelope>  
 ```  
   
-Należy pamiętać, że atrybut możliwy do [serializacji](xref:System.SerializableAttribute) nie może być dziedziczony. Jeśli klasa nowe z `MyObject`, Nowa klasa musi być oznaczona atrybutem także lub nie może być serializowany. Na przykład podczas próby serializacji wystąpienia klasy poniżej uzyskasz <xref:System.Runtime.Serialization.SerializationException> informujący o tym, że typ `MyStuff` nie jest oznaczony jako możliwy do serializacji.  
+Należy pamiętać, że nie można dziedziczyć atrybutu [Serializable.](xref:System.SerializableAttribute) Jeśli klasa nowe z `MyObject`, Nowa klasa musi być oznaczona atrybutem także lub nie może być serializowany. Na przykład podczas próby serializacji wystąpienia klasy poniżej, otrzymasz <xref:System.Runtime.Serialization.SerializationException> informację, `MyStuff` że typ nie jest oznaczony jako serializowalny.  
   
 ```csharp  
 public class MyStuff : MyObject
@@ -92,7 +90,7 @@ public class MyStuff : MyObject
 }  
 ```  
   
- Użycie atrybutu [Serializable](xref:System.SerializableAttribute) jest wygodne, ale ma ograniczenia, jak poprzednio pokazano. Zapoznaj się z [wytycznymi serializacji](serialization-guidelines.md) , aby uzyskać informacje o tym, kiedy należy oznaczyć klasę do serializacji. Serializacja nie może zostać dodana do klasy, gdy została skompilowana.  
+ Korzystanie z [atrybutu Serializable](xref:System.SerializableAttribute) jest wygodne, ale ma ograniczenia, jak wcześniej wykazano. Zapoznaj się z [wytycznymi serializacji,](serialization-guidelines.md) aby uzyskać informacje o tym, kiedy należy oznaczyć klasę do serializacji. Serializacji nie można dodać do klasy po jej skompilowaniu.  
   
 ## <a name="see-also"></a>Zobacz też
 

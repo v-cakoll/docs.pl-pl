@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: e3326f654e05ef7d487a76f076f8ad0da3637096
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 88efab8adf36989938ba5aa887a28b41eb8820f3
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187245"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291621"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>Wskazówki: Hosting złożonego formantu WPF w Windows Forms
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]zapewnia bogate środowisko do tworzenia aplikacji. Jednak jeśli masz znaczne inwestycje w kod formularzy systemu Windows, może być [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bardziej skuteczne rozszerzenie istniejącej aplikacji Windows Forms, a nie przepisać go od podstaw. Typowym scenariuszem jest, gdy chcesz osadzić jeden [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] lub więcej formantów zaimplementowanych w aplikacji Windows Forms. Aby uzyskać więcej informacji na temat dostosowywania formantów WPF, zobacz [Dostosowywanie sterowania](../controls/control-customization.md).  
@@ -185,7 +185,7 @@ namespace MyControls
 
 Na poniższej ilustracji przedstawiono formant złożony WPF hostowany w aplikacji Windows Forms"  
 
- ![Scteenshot, który pokazuje formę Hostingu formularzy systemu Windows Avalon.](./media/walkthrough-hosting-a-wpf-composite-control-in-windows-forms/windows-form-hosting-avalon-control.png)  
+ ![Zrzut ekranu przedstawiający kontrolkę Avalon hostingu formularzy systemu Windows.](./media/walkthrough-hosting-a-wpf-composite-control-in-windows-forms/windows-form-hosting-avalon-control.png)  
   
 ### <a name="creating-the-project"></a>Tworzenie projektu  
  Aby rozpocząć projekt:  
@@ -329,4 +329,4 @@ Na poniższej ilustracji przedstawiono formant złożony WPF hostowany w aplikac
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Projektowanie XAML w programie Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
 - [Przewodnik: hosting złożonej kontrolki Windows Forms w WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [Wskazówki: Hosting złożonego formantu 3D WPF w Windows Forms](walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)
+- [Przewodnik: Hostowanie kontrolki złożonej 3D WPF w formularzach systemu Windows](walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)

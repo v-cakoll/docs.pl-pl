@@ -2,12 +2,12 @@
 title: Samodzielna serializacja JSON przy użyciu funkcji DataContractJsonSerializer
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-ms.openlocfilehash: 36945f2d42f22ef3aa4f27bcbe403466f124a279
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 614776a905ec319624f76876762c25bfca15a357
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184420"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249451"
 ---
 # <a name="stand-alone-json-serialization-using-datacontractjsonserializer"></a>Samodzielna serializacja JSON przy użyciu funkcji DataContractJsonSerializer
 
@@ -42,7 +42,7 @@ W poniższej tabeli przedstawiono zgodność między typami .NET i typami JSON/J
 |Kolekcje, słowniki i tablice|Tablica|Zobacz kolekcje, słowniki i tablice sekcji tego tematu.|
 |Typy złożone <xref:System.Runtime.Serialization.DataContractAttribute> (z lub <xref:System.SerializableAttribute> stosowane)|Typ złożony|Elementy członkowskie danych stają się członkami typu złożonego JavaScript.|
 |Typy złożone <xref:System.Runtime.Serialization.ISerializable> implementujące interfejs)|Typ złożony|Tak samo jak inne <xref:System.Runtime.Serialization.ISerializable> typy złożone, ale niektóre typy nie są obsługiwane — zobacz część pomocy technicznej iserializable sekcji Informacje zaawansowane w tym temacie.|
-|`Null`wartość dla każdego typu|Null|Typy nullable są również obsługiwane i mapować do JSON w taki sam sposób jak typy nienastępne do wartości null.|
+|`Null`wartość dla każdego typu|Null|Typy wartości nullable są również obsługiwane i mapować do JSON w taki sam sposób jak typy wartości nienastępalnych.|
 
 ### <a name="enumerations-and-json"></a>Wyliczenia i JSON
 
@@ -117,7 +117,7 @@ Podczas pracy z własną bazą i <xref:System.Runtime.Serialization.KnownTypeAtt
 
 Aby uzyskać szczegółowe informacje na temat działania serializacji polimorficznej i omówienie niektórych ograniczeń, które muszą być przestrzegane podczas korzystania z niej, zobacz sekcję Informacje zaawansowane w dalszej części tego tematu.
 
-### <a name="versioning"></a>Obsługa wersji
+### <a name="versioning"></a>Przechowywanie wersji
 
 Funkcje przechowywania wersji kontraktu <xref:System.Runtime.Serialization.IExtensibleDataObject> danych, w tym interfejs, są w pełni obsługiwane w JSON. Ponadto w większości przypadków możliwe jest deserializacja typu w jednym formacie (na przykład XML), a następnie serializowanie go w innym <xref:System.Runtime.Serialization.IExtensibleDataObject>formacie (na przykład JSON) i zachowanie danych w pliku . Aby uzyskać więcej informacji, zobacz [Forward-Compatible Data Contracts](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md). Należy pamiętać, że JSON jest nieuisorowany, więc wszelkie informacje o zamówieniu są tracone. Ponadto JSON nie obsługuje wielu par klucz/wartość o tej samej nazwie klucza. Na koniec wszystkie <xref:System.Runtime.Serialization.IExtensibleDataObject> operacje na są z natury polimorficzne — to <xref:System.Object>jest ich typ pochodny są przypisane do , typ podstawowy dla wszystkich typów.
 

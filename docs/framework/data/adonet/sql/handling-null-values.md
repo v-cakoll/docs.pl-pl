@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: c64f11c00174981925342f1493ef0b809a57ecb0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c45c6672983866df6c47ec84981cc7bd11637c0c
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148650"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249080"
 ---
 # <a name="handling-null-values"></a>Obsługa wartości Null
 Wartość null w relacyjnej bazie danych jest używana, gdy wartość w kolumnie jest nieznana lub brakuje. Wartość null nie jest pustym ciągiem (dla typów danych znaku lub datetime) ani wartością zerową (dla typów danych liczbowych). Specyfikacja ANSI SQL-92 stwierdza, że wartość null musi być taka sama dla wszystkich typów danych, tak aby wszystkie wartości null były obsługiwane spójnie. Obszar <xref:System.Data.SqlTypes> nazw udostępnia semantyki null <xref:System.Data.SqlTypes.INullable> implementując interfejs. Każdy z typów <xref:System.Data.SqlTypes> danych w `IsNull` ma `Null` własną właściwość i wartość, która może być przypisana do wystąpienia tego typu danych.  
   
 > [!NOTE]
-> W programie .NET Framework w wersji 2.0 wprowadzono obsługę typów z możliwością dopuszczania dopuszczania dopuszczania wartości null, które umożliwiają programistom rozszerzenie typu wartości w celu reprezentowania wszystkich wartości typu bazowego. Te typy clr nullable <xref:System.Nullable> reprezentują wystąpienie struktury. Ta funkcja jest szczególnie przydatna, gdy typy wartości są zapakowane i unboxed, zapewniając lepszą zgodność z typami obiektów. Clr null typy nie są przeznaczone do przechowywania wartości null bazy danych, ponieważ `null` ansi `Nothing` SQL null nie zachowuje się tak samo jak odwołanie (lub w języku Visual Basic). Do pracy z wartościami null SQL <xref:System.Data.SqlTypes> bazy danych <xref:System.Nullable>ANSI należy użyć wartości null, a nie . Aby uzyskać więcej informacji na temat pracy z typami nullable CLR w języku Visual Basic, zobacz [Typy wartości null,](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)a w przypadku języka C# zobacz [Typy wartości możliwe do wartości null.](../../../../csharp/language-reference/builtin-types/nullable-value-types.md)  
+> W programie .NET Framework w wersji 2.0 wprowadzono obsługę typów wartości z możliwością wartości null, które umożliwiają programistom rozszerzenie typu wartości w celu reprezentowania wszystkich wartości typu bazowego. Te typy wartości clr nullable <xref:System.Nullable> reprezentują wystąpienie struktury. Ta funkcja jest szczególnie przydatna, gdy typy wartości są zapakowane i unboxed, zapewniając lepszą zgodność z typami obiektów. Clr nullable typy wartości nie są przeznaczone do przechowywania wartości null bazy danych, `null` ponieważ ansi SQL null nie zachowuje się tak samo jak odwołanie (lub `Nothing` w języku Visual Basic). Do pracy z wartościami null SQL <xref:System.Data.SqlTypes> bazy danych <xref:System.Nullable>ANSI należy użyć wartości null, a nie . Aby uzyskać więcej informacji na temat pracy z typami nullable clr w języku Visual Basic, zobacz [Typy wartości nullable](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md), a w przypadku języka C# zobacz [Typy wartości nullable](../../../../csharp/language-reference/builtin-types/nullable-value-types.md).  
   
 ## <a name="nulls-and-three-valued-logic"></a>Wartości null i logika trójwartościowa  
  Zezwalając na wartości null w definicjach kolumn wprowadza logikę trójwartościową do aplikacji. Porównanie można ocenić do jednego z trzech warunków:  

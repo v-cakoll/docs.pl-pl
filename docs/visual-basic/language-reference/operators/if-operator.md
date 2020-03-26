@@ -11,16 +11,16 @@ helpviewer_keywords:
 - conditional operator [Visual Basic]
 - If Operator [Visual Basic]
 ms.assetid: dd56c9df-7cd4-442c-9ba6-20c70ee44c8f
-ms.openlocfilehash: 6d25519dac31dc91f8560fd3252ba3e2622de370
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3b45a5afe331bd00c2b92f8c305351b77bc319cf
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74331016"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249490"
 ---
 # <a name="if-operator-visual-basic"></a>If — Operator (Visual Basic)
 
-Używa oceny krótkiego obwodu do warunkowego zwrócenia jednej z dwóch wartości. Operatora `If` można wywołać z trzema argumentami lub z dwoma argumentami.
+Używa oceny zwarcia, aby warunkowo zwrócić jedną z dwóch wartości. Operator `If` można wywołać z trzema argumentami lub z dwoma argumentami.
 
 ## <a name="syntax"></a>Składnia
 
@@ -28,43 +28,43 @@ Używa oceny krótkiego obwodu do warunkowego zwrócenia jednej z dwóch wartoś
 If( [argument1,] argument2, argument3 )
 ```
 
-## <a name="if-operator-called-with-three-arguments"></a>Operator if wywoływany z trzema argumentami
+## <a name="if-operator-called-with-three-arguments"></a>Jeśli operator wywołany z trzema argumentami
 
-Gdy `If` jest wywoływana przy użyciu trzech argumentów, pierwszy argument musi być obliczany do wartości, która może być rzutowana jako `Boolean`. Ta `Boolean` wartość określi, które z pozostałych dwóch argumentów są oceniane i zwracane. Poniższa lista ma zastosowanie tylko wtedy, gdy operator `If` jest wywoływany przy użyciu trzech argumentów.
+Gdy `If` jest wywoływana przy użyciu trzech argumentów, pierwszy argument musi `Boolean`ocenić wartość, która może być rzutować jako . Ta `Boolean` wartość określi, który z pozostałych dwóch argumentów jest oceniany i zwracany. Poniższa lista ma zastosowanie `If` tylko wtedy, gdy operator jest wywoływany przy użyciu trzech argumentów.
 
 ### <a name="parts"></a>Części
 
 |Termin|Definicja|
 |---|---|
-|`argument1`|Wymagany. `Boolean`., Określa, które z innych argumentów należy obliczyć i zwrócić.|
-|`argument2`|Wymagany. `Object`., Obliczany i zwracany, jeśli `argument1` oblicza `True`.|
-|`argument3`|Wymagany. `Object`., Obliczany i zwracany, jeśli `argument1` oblicza do `False` lub jeśli `argument1` jest zmienną`Boolean` [dopuszczającą wartość null](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) , która nie jest równa [Nothing](../../../visual-basic/language-reference/nothing.md).|
+|`argument1`|Wymagany. `Boolean`. Określa, które z innych argumentów do oceny i zwrotu.|
+|`argument2`|Wymagany. `Object`. Oceniane i `argument1` zwracane, `True`jeśli ocenia .|
+|`argument3`|Wymagany. `Object`. Oceniane i `argument1` zwracane, `False` jeśli `argument1` ocenia lub jeśli jest [nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean` zmiennej, która ocenia [nic](../../../visual-basic/language-reference/nothing.md).|
 
-Operator `If`, który jest wywoływany z trzema argumentami, działa jak funkcja `IIf`, z tą różnicą, że używa oceny krótkiego obwodu. Funkcja `IIf` zawsze oblicza wszystkie trzy z jej argumentów, podczas gdy operator `If`, który ma trzy argumenty, szacuje tylko dwa z nich. Pierwszy `If` argument jest obliczany, a wynik jest rzutowany jako wartość `Boolean`, `True` lub `False`. Jeśli wartość jest `True`, `argument2` jest obliczana, a jej wartość jest zwracana, ale `argument3` nie jest szacowana. Jeśli wartość wyrażenia `Boolean` jest `False`, `argument3` jest oceniana i zwracana jest jego wartość, ale `argument2` nie jest szacowana. Poniższe przykłady ilustrują użycie `If`, gdy są używane trzy argumenty:
+Operator, `If` który jest wywoływany z `IIf` trzema argumentami działa jak funkcja, z tą różnicą, że używa oceny zwarcia. Funkcja `IIf` zawsze ocenia wszystkie trzy jego argumenty, `If` podczas gdy operator, który ma trzy argumenty ocenia tylko dwa z nich. Pierwszy `If` argument jest oceniany, a `Boolean` wynik `True` jest `False`rzutowy jako wartość lub . Jeśli wartość `True`jest `argument2` , jest obliczana i `argument3` jego wartość jest zwracana, ale nie jest obliczana. Jeśli `Boolean` wartość wyrażenia jest `False` `argument3` , jest oceniane i jego `argument2` wartość jest zwracana, ale nie jest oceniane. Poniższe przykłady ilustrują `If` użycie, gdy są używane trzy argumenty:
 
 [!code-vb[VbVbalrOperators#100](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class4.vb#100)]
 
-Poniższy przykład ilustruje wartość oceny krótkiego obwodu. Przykład pokazuje dwie próby podzielenia zmiennej `number` przez zmienną `divisor` z wyjątkiem przypadków, gdy `divisor` ma wartość zero. W takim przypadku należy zwrócić wartość 0 i nie należy podejmować żadnych prób w celu przeprowadzenia podziału, ponieważ może to wynikać z błędu w czasie wykonywania. Ponieważ wyrażenie `If` używa oceny krótkiego obwodu, ocenia drugi lub trzeci argument, w zależności od wartości pierwszego argumentu. Jeśli pierwszy argument ma wartość true, dzielnik nie jest zerem i jest bezpiecznie do obliczenia drugiego argumentu i przeprowadzenia dzielenia. Jeśli pierwszy argument ma wartość false, oceniany jest tylko trzeci argument i zwracana jest wartość 0. W związku z tym, gdy dzielnik ma wartość 0, nie jest podejmowana żadna próba wykonania dzielenia i brak wyników błędu. Ponieważ jednak `IIf` nie używa oceny krótkiego obwodu, drugi argument jest oceniany nawet wtedy, gdy pierwszy argument ma wartość false. Powoduje to błąd dzielenia przez zero w czasie wykonywania.
+Poniższy przykład ilustruje wartość oceny zwarcia. W przykładzie przedstawiono `number` dwie `divisor` próby `divisor` dzielenia zmiennej przez zmienną, z wyjątkiem sytuacji, gdy jest zero. W takim przypadku 0 powinny być zwracane i nie należy podejmować próby wykonania podziału, ponieważ spowoduje to błąd w czasie wykonywania. Ponieważ `If` wyrażenie używa oceny zwarcia, ocenia drugi lub trzeci argument, w zależności od wartości pierwszego argumentu. Jeśli pierwszy argument jest true, dzielnik nie jest zero i jest bezpieczne, aby ocenić drugi argument i wykonać podział. Jeśli pierwszy argument jest false, tylko trzeci argument jest oceniany i 0 jest zwracany. W związku z tym gdy dzielnik jest 0, nie jest podejmowana próba wykonania podziału i nie ma wyników błędów. Jednak ponieważ `IIf` nie używa oceny zwarcia, drugi argument jest oceniany nawet wtedy, gdy pierwszy argument jest false. Powoduje to błąd podziału przez zero w czasie wykonywania.
 
 [!code-vb[VbVbalrOperators#101](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class4.vb#101)]
 
-## <a name="if-operator-called-with-two-arguments"></a>Operator if wywoływany z dwoma argumentami
+## <a name="if-operator-called-with-two-arguments"></a>Jeśli operator wywołany z dwoma argumentami
 
-Pierwszy argument `If` może zostać pominięty. Umożliwia to wywoływanie operatora przy użyciu tylko dwóch argumentów. Poniższa lista ma zastosowanie tylko wtedy, gdy operator `If` jest wywoływany z dwoma argumentami.
+Pierwszy argument, `If` który należy pominąć. Dzięki temu operator ma być wywoływany przy użyciu tylko dwa argumenty. Poniższa lista ma zastosowanie `If` tylko wtedy, gdy operator jest wywoływany z dwoma argumentami.
 
 ### <a name="parts"></a>Części
 
 |Termin|Definicja|
 |---|---|
-|`argument2`|Wymagany. `Object`., Musi być typem referencyjnym lub dopuszczającym wartość null. Obliczany i zwracany, gdy jest on obliczany do elementów innych niż `Nothing`.|
-|`argument3`|Wymagany. `Object`., Obliczany i zwracany, jeśli `argument2` oblicza `Nothing`.|
+|`argument2`|Wymagany. `Object`. Musi być odwołanie lub nullable typ wartości. Oceniane i zwracane, gdy ocenia `Nothing`do niczego innego niż .|
+|`argument3`|Wymagany. `Object`. Oceniane i `argument2` zwracane, `Nothing`jeśli ocenia .|
 
-Gdy argument `Boolean` zostanie pominięty, pierwszy argument musi być odwołaniem lub typem dopuszczającym wartość null. Jeśli pierwszy argument oblicza `Nothing`, zwracana jest wartość drugiego argumentu. We wszystkich innych przypadkach zwracana jest wartość pierwszego argumentu. Poniższy przykład ilustruje sposób działania tej oceny:
+Po `Boolean` pominięciu argumentu pierwszy argument musi być odwołaniem lub typem wartości nullable. Jeśli zwracany jest `Nothing`pierwszy argument, zwracana jest wartość drugiego argumentu. We wszystkich innych przypadkach zwracana jest wartość pierwszego argumentu. Poniższy przykład ilustruje, jak działa ta ocena:
 
 [!code-vb[VbVbalrOperators#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class4.vb#102)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:Microsoft.VisualBasic.Interaction.IIf%2A>
-- [Typy wartości dopuszczających wartości null](../../programming-guide/language-features/data-types/nullable-value-types.md)
-- [Nothing](../nothing.md)
+- [Typy o wartości zerowalnej](../../programming-guide/language-features/data-types/nullable-value-types.md)
+- [Nic](../nothing.md)

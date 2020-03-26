@@ -1,5 +1,5 @@
 ---
-title: async — odwołanie do języka C#
+title: asynchronizowania — odwołanie do języka C#
 ms.date: 05/22/2017
 f1_keywords:
 - async_CSharpKeyword
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: 92e94d6fe1c07ab5cd8f29d040401a737a1db78e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 89133339a75c70e3ac86d627065e78d555bff71d
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173656"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507207"
 ---
 # <a name="async-c-reference"></a>async (odwołanie w C#)
 
-Użyj `async` modyfikatora, aby określić, że metoda, [wyrażenie lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md)lub [metoda anonimowa](../operators/delegate-operator.md) jest asynchroniczna. Jeśli używasz tego modyfikatora w metodzie lub wyrażeniu, jest on określany jako *metoda asynchroniczna*. W poniższym przykładzie zdefiniowano `ExampleMethodAsync`metodę asynchronia o nazwie:
+Użyj `async` modyfikatora, aby określić, że metoda, [wyrażenie lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md)lub [metoda anonimowa](../operators/delegate-operator.md) jest asynchroniczne. Jeśli używasz tego modyfikatora w metodzie lub wyrażeniu, jest on określany jako *metoda asynchroniowa*. Poniższy przykład definiuje metodę asynchronizową o nazwie: `ExampleMethodAsync`
   
 ```csharp  
 public async Task<int> ExampleMethodAsync()  
@@ -26,22 +26,22 @@ public async Task<int> ExampleMethodAsync()
 }  
 ```  
 
-Jeśli jesteś nowy w programowaniu asynchronicznym lub nie rozumiesz, jak metoda asynchroniczna używa [ `await` operatora](../operators/await.md) do wykonywania potencjalnie długotrwałej pracy bez blokowania wątku wywołującego, przeczytaj wprowadzenie w [programowaniu asynchronicznym z async i czekam .](../../programming-guide/concepts/async/index.md) Następujący kod znajduje się wewnątrz metody asynchronicznej i wywołuje <xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=nameWithType> metodę:
+Jeśli jesteś nowy w programowaniu asynchroniczne lub nie rozumiem, jak metoda asynchroniza [ `await` operatora](../operators/await.md) do potencjalnie długotrwałej pracy bez blokowania wątku wywołującego, przeczytaj wprowadzenie w [programowaniu asynchroniczne z asynchnc i await](../../programming-guide/concepts/async/index.md). Następujący kod znajduje się wewnątrz metody asynchroniiowej i wywołuje <xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=nameWithType> metodę:
   
 ```csharp  
 string contents = await httpClient.GetStringAsync(requestUrl);  
 ```  
   
-Metoda asynchroniczna jest uruchamiana synchronicznie, dopóki nie osiągnie swojego pierwszego `await` wyrażenia, w którym to momencie metoda jest zawieszona do momentu zakończenia oczekiwanego zadania. W międzyczasie sterowanie jest przekazywane do obiektu wywołującego metody, tak jak pokazano w przykładzie w następnej sekcji.  
+Metoda asynchronicznego działa synchronicznie, dopóki `await` nie osiągnie pierwszego wyrażenia, w którym to momencie metoda jest zawieszona do czasu zakończenia oczekiwanego zadania. W międzyczasie sterowanie jest przekazywane do obiektu wywołującego metody, tak jak pokazano w przykładzie w następnej sekcji.  
   
-Jeśli metoda, `async` która modyfikuje słowo kluczowe `await` nie zawiera wyrażenia lub instrukcji, metoda jest wykonywana synchronicznie. Ostrzeżenie kompilatora ostrzega o wszelkich metodach asynchronicznych, które nie zawierają `await` instrukcji, ponieważ ta sytuacja może wskazywać na błąd. Zobacz [Ostrzeżenie o kompilatorze (poziom 1) CS4014](../compiler-messages/cs4014.md).  
+Jeśli metoda modyfikuje `async` słowa kluczowego `await` nie zawiera wyrażenia lub instrukcji, metoda jest wykonywana synchronicznie. Ostrzeżenie kompilatora ostrzega o wszelkich metodach asynchronizacyjnych, które nie zawierają `await` instrukcji, ponieważ ta sytuacja może wskazywać na błąd. Zobacz [Ostrzeżenie kompilatora (poziom 1) CS4014](../compiler-messages/cs4014.md).  
   
  Słowo `async` kluczowe jest kontekstowe, ponieważ jest słowem kluczowym tylko wtedy, gdy modyfikuje metodę, wyrażenie lambda lub metodę anonimową. W innych kontekstach jest interpretowane jako identyfikator.  
   
 ## <a name="example"></a>Przykład  
-W poniższym przykładzie przedstawiono strukturę i przepływ kontroli `StartButton_Click`między programem obsługi `ExampleMethodAsync`zdarzeń asynchronicznych , a metodą asynchronicznej . Wynikiem metody asynchronicznej jest liczba znaków strony sieci Web. Kod jest odpowiedni dla aplikacji Windows Presentation Foundation (WPF) lub aplikacji ze Sklepu Windows utworzonej w programie Visual Studio; zobacz komentarze do kodu dotyczące konfigurowania aplikacji.  
+Poniższy przykład przedstawia strukturę i przepływ kontroli między `StartButton_Click`programem obsługi zdarzeń asynchronicznych i metodą asynchronizną. `ExampleMethodAsync` Wynikiem metody asynchronizowej jest liczba znaków strony sieci web. Kod jest odpowiedni dla aplikacji Windows Presentation Foundation (WPF) lub aplikacji ze Sklepu Windows, którą tworzysz w programie Visual Studio; zobacz komentarze do kodu do skonfigurowania aplikacji.  
 
-Ten kod można uruchomić w programie Visual Studio jako aplikacja ZPF (Windows Presentation Foundation) lub aplikacja ze Sklepu Windows. Potrzebujesz kontrolki Button `StartButton` o nazwie i `ResultsTextBox`kontrolki Textbox o nazwie . Pamiętaj, aby ustawić nazwy i program obsługi, aby mieć coś takiego:  
+Ten kod można uruchomić w programie Visual Studio jako aplikacja Windows Presentation Foundation (WPF) lub w aplikacji ze Sklepu Windows. Potrzebny jest kontrolka Button o `StartButton` `ResultsTextBox`nazwie i kontrolka Textbox o nazwie . Pamiętaj, aby ustawić nazwy i program obsługi, tak aby mieć coś takiego:  
 
 ```xaml
 <Button Content="Button" HorizontalAlignment="Left" Margin="88,77,0,0" VerticalAlignment="Top" Width="75"  
@@ -53,7 +53,7 @@ Ten kod można uruchomić w programie Visual Studio jako aplikacja ZPF (Windows 
 Aby uruchomić kod jako aplikację WPF:  
 
 - Wklej ten kod `MainWindow` do klasy w MainWindow.xaml.cs.  
-- Dodaj odwołanie do System.Net.Http.  
+- Dodaj odwołanie do pliku System.Net.http.  
 - Dodaj `using` dyrektywę dla System.Net.Http.  
   
 Aby uruchomić kod jako aplikację ze Sklepu Windows:  
@@ -64,23 +64,23 @@ Aby uruchomić kod jako aplikację ze Sklepu Windows:
 [!code-csharp[wpf-async](../../../../samples/snippets/csharp/language-reference/keywords/async/wpf/mainwindow.xaml.cs#1)]
   
 > [!IMPORTANT]
-> Aby uzyskać więcej informacji na temat zadań i kodu, który jest wykonywany podczas oczekiwania na zadanie, zobacz [Programowanie asynchroniczne z async i oczekują .](../../programming-guide/concepts/async/index.md) Aby uzyskać pełny przykład WPF, który używa podobnych elementów, zobacz [Instruktaż: Uzyskiwanie dostępu do sieci Web przy użyciu asynchronii i await](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
+> Aby uzyskać więcej informacji o zadaniach i kodzie, który jest wykonywany podczas oczekiwania na zadanie, zobacz [Programowanie asynchroniczne za pomocą asynchronicznego i oczekiwania.](../../programming-guide/concepts/async/index.md) Aby uzyskać pełny przykład WPF, który używa podobnych elementów, zobacz [Przewodnik: Uzyskiwanie dostępu do sieci Web przy użyciu async i await](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
 ## <a name="return-types"></a>Typy zwracane  
-Metoda asynchroniczna może mieć następujące typy zwracane:
+Metoda asynchroniowa może mieć następujące typy zwracane:
 
 - <xref:System.Threading.Tasks.Task>
 - <xref:System.Threading.Tasks.Task%601>
-- [nieważne](../builtin-types/void.md). `async void`metody są zazwyczaj odradzane dla kodu innego niż programy `await` obsługi zdarzeń, ponieważ obiekty wywołujące nie mogą tych metod i musi zaimplementować inny mechanizm zgłaszania pomyślnego zakończenia lub warunków błędu.
-- Począwszy od języka C# 7.0, `GetAwaiter` dowolnego typu, który ma metodę dostępną. Typ `System.Threading.Tasks.ValueTask<TResult>` jest jedną z takich implementacji. Jest on dostępny przez dodanie `System.Threading.Tasks.Extensions`pakietu NuGet .
+- [void](../builtin-types/void.md). `async void`metody są zazwyczaj odradzane dla kodu innego `await` niż programy obsługi zdarzeń, ponieważ wywołania nie można tych metod i musi zaimplementować inny mechanizm do zgłaszania pomyślnego zakończenia lub warunków błędu.
+- Począwszy od języka C# 7.0, `GetAwaiter` dowolnego typu, który ma metodę dostępną. Typ `System.Threading.Tasks.ValueTask<TResult>` jest jednym z takich implementacji. Jest on dostępny przez dodanie `System.Threading.Tasks.Extensions`pakietu NuGet .
 
-Metoda asynchroniczna nie może zadeklarować żadnych parametrów [in,](./in-parameter-modifier.md) [ref](./ref.md) lub [out,](./out-parameter-modifier.md) ani nie może mieć [wartości zwracanej odwołania,](../../programming-guide/classes-and-structs/ref-returns.md)ale może wywoływać metody, które mają takie parametry.  
+Metoda asynchronizowana nie może deklarować żadnych parametrów [in](./in-parameter-modifier.md), [ref](./ref.md) lub [out,](./out-parameter-modifier.md) ani nie może mieć [referencyjnej wartości zwracanej,](../../programming-guide/classes-and-structs/ref-returns.md)ale może wywoływać metody, które mają takie parametry.  
   
-Jako `Task<TResult>` typ zwracany metody asynchronicznej można określić, jeśli instrukcja [return](./return.md) metody określa argument typu `TResult`. Można `Task` użyć, jeśli po zakończeniu metody zwracana jest żadna znacząca wartość. Oznacza to, że wywołanie `Task`metody zwraca `Task` , ale po `await` zakończeniu, każde wyrażenie, które oczekuje na `Task` ocenę . `void`  
+Jako `Task<TResult>` typ zwracany metody asynchronizowej należy określić, jeśli instrukcja `TResult` [zwracana](./return.md) metody określa argument typu . Użyj, `Task` jeśli nie znaczące wartości są zwracane po zakończeniu metody. Oznacza to, że wywołanie `Task`metody zwraca `Task` , ale `await` po zakończeniu, każde `Task` wyrażenie, `void`które oczekuje na ocenę .  
   
-Typ zwracany `void` służy przede wszystkim do definiowania programów obsługi zdarzeń, które wymagają tego typu zwracania. Obiekt wywołujący `void`-zwracanie metody asynchronicznej nie może oczekiwać na to i nie można przechwycić wyjątki, które zgłasza metoda.  
+Typ zwracany `void` służy przede wszystkim do definiowania programów obsługi zdarzeń, które wymagają tego typu zwracania. Wywołujący `void`metodę asynchronii zwracaną nie może na nią czekać i nie można złapać wyjątków, które zgłasza metoda.  
 
-Począwszy od języka C# 7.0, zwracasz inny typ, zazwyczaj typ wartości, który ma metodę minimalizującą `GetAwaiter` alokacje pamięci w sekcjach kodu o krytycznym znaczeniu dla wydajności.
+Począwszy od języka C# 7.0, zwracasz inny typ, `GetAwaiter` zazwyczaj typ wartości, który ma metodę minimalizowania alokacji pamięci w sekcjach krytycznych dla wydajności kodu.
 
 Aby uzyskać więcej informacji i przykładów, zobacz [Async Return Types](../../programming-guide/concepts/async/async-return-types.md).  
   
@@ -88,5 +88,5 @@ Aby uzyskać więcej informacji i przykładów, zobacz [Async Return Types](../.
 
 - <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>
 - [await](../operators/await.md)
-- [Instruktaż: Uzyskiwanie dostępu do sieci Web przy użyciu asynchronii i oczekiwanie](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Asynchroniczne programowanie z async i czekają](../../programming-guide/concepts/async/index.md)
+- [Przewodnik: Uzyskiwanie dostępu do sieci Web przy użyciu asynchronii i oczekiwania](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Programowanie asynchroniczne z asynnc i czekają](../../programming-guide/concepts/async/index.md)

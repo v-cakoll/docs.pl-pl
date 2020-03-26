@@ -5,24 +5,24 @@ helpviewer_keywords:
 - graphics [WPF], spinning elements
 - spinning elements [WPF]
 ms.assetid: 1f011976-8b07-4c31-9faf-019e0ddaa24c
-ms.openlocfilehash: 2e72389a11e48629c2763fcbd9f7b1945ffff5dd
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: a1b515822391de08ec8ed8ff0ff1f0086874dc02
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452795"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112079"
 ---
 # <a name="how-to-make-an-element-spin-in-place"></a>Jak obrócić element w miejscu
-Ten przykład pokazuje, jak utworzyć element pokrętła przy użyciu <xref:System.Windows.Media.RotateTransform> i <xref:System.Windows.Media.Animation.DoubleAnimation>.  
+W tym przykładzie pokazano, jak <xref:System.Windows.Media.RotateTransform> dokonać <xref:System.Windows.Media.Animation.DoubleAnimation>spin elementu przy użyciu a i a .  
   
- Poniższy przykład stosuje <xref:System.Windows.Media.RotateTransform> do właściwości <xref:System.Windows.UIElement.RenderTransform%2A> elementu. W przykładzie zastosowano <xref:System.Windows.Media.Animation.DoubleAnimation>, aby animować <xref:System.Windows.Media.RotateTransform.Angle%2A> <xref:System.Windows.Media.RotateTransform>. Aby można było obrócić element, przykład ustawia właściwość <xref:System.Windows.UIElement.RenderTransformOrigin%2A> elementu na punkt (0,5, 0,5).  
+ Poniższy przykład stosuje <xref:System.Windows.Media.RotateTransform> do <xref:System.Windows.UIElement.RenderTransform%2A> właściwości elementu. W przykładzie <xref:System.Windows.Media.Animation.DoubleAnimation> użyto a <xref:System.Windows.Media.RotateTransform.Angle%2A> do <xref:System.Windows.Media.RotateTransform>animowania pliku . Aby element obracać w miejscu, <xref:System.Windows.UIElement.RenderTransformOrigin%2A> w przykładzie ustawia właściwość elementu do punktu (0,5, 0,5).  
   
 ## <a name="example"></a>Przykład  
  [!code-xaml[transformanimations_snip#11](~/samples/snippets/xaml/VS_Snippets_Wpf/transformanimations_snip/XAML/RotateAboutCenterExample.xaml#11)]  
   
- Aby uzyskać pełną próbkę, która zawiera więcej przykładów transformacji, zobacz przykład przekształceń [2-D](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms).  
+ Aby uzyskać pełną próbkę, która zawiera więcej przykładów transformacji, zobacz [Przykład przekształcania 2D](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms).  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Animacja — przegląd](animation-overview.md)
+- [Przegląd Animacja](animation-overview.md)
 - [Przekształcenia — przegląd](transforms-overview.md)

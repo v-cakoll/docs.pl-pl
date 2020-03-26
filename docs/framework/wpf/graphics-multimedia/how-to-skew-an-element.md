@@ -6,15 +6,15 @@ helpviewer_keywords:
 - graphics [WPF], skewing elements
 - classes [WPF], SkewTransform
 ms.assetid: 56b65f2f-dc6e-4238-923f-ca44ec53c52f
-ms.openlocfilehash: 370ac28b07427345b52822133b5414b45d4462eb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 10b00044c1c518641281e2e72cdb5a68474b5170
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187659"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112027"
 ---
 # <a name="how-to-skew-an-element"></a>Jak pochylić element
-W tym przykładzie <xref:System.Windows.Media.SkewTransform> pokazano, jak użyć a pochylić element. Pochylenie, które jest również znane jako ścinanie, jest transformacją, która rozciąga przestrzeń współrzędnych w sposób nieujemny. Jednym z typowych zastosowań <xref:System.Windows.Media.SkewTransform> a jest symulowanie głębokości 3-W w obiektach 2-W.  
+W tym przykładzie <xref:System.Windows.Media.SkewTransform> pokazano, jak użyć a pochylić element. Pochylenie, które jest również znane jako ścinanie, jest transformacją, która rozciąga przestrzeń współrzędnych w sposób nieujemny. Jednym z typowych zastosowań <xref:System.Windows.Media.SkewTransform> jest symulowanie głębi 3D w obiektach 2D.  
   
  Użyj <xref:System.Windows.Media.SkewTransform.CenterX%2A> właściwości <xref:System.Windows.Media.SkewTransform.CenterY%2A> i, aby określić <xref:System.Windows.Media.SkewTransform>punkt środkowy .  
   
@@ -40,7 +40,7 @@ W tym przykładzie <xref:System.Windows.Media.SkewTransform> pokazano, jak uży�
  ![Przykłady skewTransform](./media/img-wcpsdk-graphicsmm-skewtransformexample.gif "img_wcpsdk_graphicsmm_skewtransformexample")  
 Trzy przykłady SkewTransform zilustrowane  
   
- Aby uzyskać pełną próbkę, zobacz [przykład przekształca 2-W](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms).  
+ Aby uzyskać pełną próbkę, zobacz [Przykład przekształca 2D](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms).  
   
 ## <a name="see-also"></a>Zobacz też
 

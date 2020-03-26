@@ -1,0 +1,130 @@
+### YamlMime:Landing
+title: Dokumentacja programu .NET Framework
+summary: Dowiedz się więcej o platformie .NET Framework, platformie programistycznej do tworzenia aplikacji dla sieci Web, systemu Windows i platformy Microsoft Azure.
+metadata:
+  title: Dokumentacja programu .NET Framework
+  description: Znajdź informacje o platformie .NET Framework, platformie programistycznej do tworzenia aplikacji dla sieci Web, systemu Windows i platformy Microsoft Azure.
+  ms.topic: landing-page
+  ms.custom: updateeachrelease
+  f1_keywords:
+  - f61f02f2-2f20-483d-8f56-a9c8f3a54986
+  helpviewer_keywords:
+  - .NET Framework guide
+  ms.date: 03/23/2020
+  ms.openlocfilehash: 5f362cff359800b0bffd2283819824b8660cfa24
+  ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
+  ms.translationtype: MT
+  ms.contentlocale: pl-PL
+  ms.lasthandoff: 03/24/2020
+  ms.locfileid: "80229288"
+landingContent:
+- title: Dowiedz się więcej o platformie .NET Framework
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Omówienie programu .NET Framework
+      url: get-started/overview.md
+    - text: Wymagania systemowe
+      url: get-started/system-requirements.md
+  - linkListType: concept
+    links:
+    - text: Starsze wersje programu .NET Framework
+      url: /previous-versions/dotnet/
+  - linkListType: deploy
+    links:
+    - text: Przewodnik wdrażania dla deweloperów
+      url: deployment/deployment-guide-for-developers.md
+- title: Zainstalować program .NET Framework
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Przewodnik instalacji
+      url: install/index.md
+  - linkListType: concept
+    links:
+    - text: Program .NET Framework & wersji systemu operacyjnego Windows
+      url: migration-guide/versions-and-dependencies.md
+  - linkListType: how-to-guide
+    links:
+    - text: Określanie, które wersje są zainstalowane
+      url: migration-guide/how-to-determine-which-versions-are-installed.md
+    - text: Instalowanie programu .NET Framework w systemie Windows 10
+      url: install/on-windows-10.md
+    - text: Instalowanie programu .NET Framework 3.5
+      url: install/dotnet-35-windows-10.md
+    - text: Instalowanie pakietu deweloperskiego lub redystrybucyjnego
+      url: install/guide-for-developers.md
+    - text: Rozwiązywanie problemów z zablokowanymi instalacjami
+      url: install/troubleshoot-blocked-installations-and-uninstallations.md
+- title: Tworzenie aplikacji usługi systemu Windows
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Wprowadzenie do aplikacji usługi systemu Windows
+      url: windows-services/introduction-to-windows-service-applications.md
+  - linkListType: tutorial
+    links:
+    - text: Tworzenie aplikacji usługi systemu Windows
+      url: windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md
+  - linkListType: how-to-guide
+    links:
+    - text: Instalowanie i odinstalowywanie usług systemu Windows
+      url: windows-services/how-to-install-and-uninstall-services.md
+- title: Tworzenie aplikacji formularzy systemu Windows
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Omówienie formularzy systemu Windows
+      url: winforms/index.md
+  - linkListType: tutorial
+    links:
+    - text: Wprowadzenie do Projektanta formularzy systemu Windows
+      url: /visualstudio/designers/walkthrough-windows-forms-designer
+    - text: Tworzenie aplikacji Windows Forms z wiersza polecenia
+      url: winforms/how-to-create-a-windows-forms-application-from-the-command-line.md
+  - linkListType: how-to-guide
+    links:
+    - text: Dodawanie i usuwanie elementów z formantów ComboBox, ListBox i CheckedListBox
+      url: winforms/controls/add-and-remove-items-from-a-wf-combobox.md
+    - text: Wykonywanie połączeń z elementami sterującymi bezpiecznymi wątkami
+      url: winforms/controls/how-to-make-thread-safe-calls-to-windows-forms-controls.md
+- title: Tworzenie aplikacji WPF
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Przegląd WPF
+      url: wpf/index.md
+  - linkListType: tutorial
+    links:
+    - text: Tworzenie pierwszej aplikacji WPF w programie Visual Studio
+      url: wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md
+- title: Praca z danymi przy użyciu ADO.NET
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Przegląd ADO.NET
+      url: data/adonet/ado-net-overview.md
+  - linkListType: tutorial
+    links:
+    - text: Rozwój oparty na modelu przy użyciu entity framework
+      url: /ef/ef6/modeling/designer/workflows/model-first
+    - text: Tworzenie bazy danych przy użyciu entity framework
+      url: /ef/ef6/modeling/designer/workflows/database-first
+  - linkListType: concept
+    links:
+    - text: Parametry połączenia i pliki konfiguracyjne
+      url: data/adonet/connection-strings-and-configuration-files.md
+    - text: Buforowanie połączeń programu SQL Server
+      url: data/adonet/sql-server-connection-pooling.md
+  - linkListType: how-to-guide
+    links:
+    - text: Pobieranie danych przy użyciu czytnika danych
+      url: data/adonet/retrieving-data-using-a-datareader.md
+    - text: Dodawanie danych do tabeli datatable
+      url: data/adonet/dataset-datatable-dataview/adding-data-to-a-datatable.md
+  - linkListType: reference
+    links:
+    - text: Składnia ciągu połączenia
+      url: data/adonet/connection-string-syntax.md
+    - text: Przykładowe bazy danych programu SQL Server
+      url: data/adonet/sql/linq/downloading-sample-databases.md

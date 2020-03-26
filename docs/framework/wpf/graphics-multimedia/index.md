@@ -12,12 +12,12 @@ helpviewer_keywords:
 - graphics features [WPF]
 - transition effects [WPF]
 ms.assetid: 1817d9dc-3d6c-46cb-afc8-63b0bae35e37
-ms.openlocfilehash: 56a69c10a420e399478a0d617d30380ff5217e9c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8636afcc5b63b71dc729812a7f3eb4945ba49494
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186728"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112040"
 ---
 # <a name="graphics-and-multimedia"></a>Grafika i multimedia
 
@@ -55,11 +55,11 @@ Wprowadzono kilka zmian związanych z grafiką i animacjami.
 
 ## <a name="graphics-and-rendering"></a>Grafika i renderowanie
 
-WPF WPF obejmuje obsługę wysokiej jakości grafiki 2-W. Funkcja obejmuje pędzle, geometrie, obrazy, kształty i przekształcenia. Aby uzyskać więcej informacji, zobacz [Grafika](graphics.md). Renderowanie elementów graficznych opiera <xref:System.Windows.Media.Visual> się na klasie. Struktura obiektów wizualnych na ekranie jest opisana przez drzewo wizualne. Aby uzyskać więcej informacji, zobacz [Omówienie renderowania grafiki WPF](wpf-graphics-rendering-overview.md).
+WPF WPF obejmuje obsługę wysokiej jakości grafiki 2D. Funkcja obejmuje pędzle, geometrie, obrazy, kształty i przekształcenia. Aby uzyskać więcej informacji, zobacz [Grafika](graphics.md). Renderowanie elementów graficznych opiera <xref:System.Windows.Media.Visual> się na klasie. Struktura obiektów wizualnych na ekranie jest opisana przez drzewo wizualne. Aby uzyskać więcej informacji, zobacz [Omówienie renderowania grafiki WPF](wpf-graphics-rendering-overview.md).
 
-### <a name="2-d-shapes"></a>Kształty 2-W
+### <a name="2d-shapes"></a>Kształty 2D
 
-WPF WPF udostępnia bibliotekę powszechnie używanych, wektor rysowane kształty 2-W, takich jak prostokąty i elipsy, które pokazano na poniższej ilustracji.
+WPF WPF udostępnia bibliotekę powszechnie używanych, wektorowych kształtów 2D, takich jak prostokąty i elipsy, które pokazano na poniższej ilustracji.
 
 ![Diagram przedstawiający elipsy i prostokąty.](./media/index/two-deminsional-shapes-ellipses-rectangles.png)
 
@@ -99,17 +99,17 @@ Na poniższej ilustracji przedstawiono [!INCLUDE[TLA2#tla_xaml](../../../../incl
 
 Aby uzyskać więcej informacji, zobacz [Kształty i rysunek podstawowy w przeglądzie WPF](shapes-and-basic-drawing-in-wpf-overview.md). Aby zapoznać się z przykładem wprowadzającym, zobacz [Przykład elementów kształtu](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/ShapeElements).
 
-### <a name="2-d-geometries"></a>Geometrie 2-W
+### <a name="2d-geometries"></a>Geometrie 2D
 
-Gdy kształty 2-W, które zapewnia WPF nie są wystarczające, można użyć WPF obsługi geometrii i ścieżek do tworzenia własnych. Na poniższej ilustracji pokazano, jak można używać geometrii do tworzenia kształtów jako pędzla rysunku i do przycinania innych elementów WPF.
+Gdy kształty 2D, które zapewnia WPF nie są wystarczające, można użyć WPF obsługi geometrii i ścieżek do tworzenia własnych. Na poniższej ilustracji pokazano, jak można używać geometrii do tworzenia kształtów jako pędzla rysunku i do przycinania innych elementów WPF.
 
 ![Zrzut ekranu przedstawiający sposób tworzenia kształtów za pomocą geometrii.](./media/index/use-geometries-create-shapes.png)
 
 Aby uzyskać więcej informacji, zobacz [Omówienie geometrii](geometry-overview.md). Aby zapoznać się z próbką wprowadzającą, zobacz [Przykład geometrii](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/Geometry).
 
-### <a name="2-d-effects"></a>Efekty 2-W
+### <a name="2d-effects"></a>Efekty 2D
 
-WPF WPF udostępnia bibliotekę klas 2-W, których można użyć do tworzenia różnych efektów. Funkcja renderowania 2-W WPF umożliwia malowanie [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementów, które mają gradienty, mapy bitowe, rysunki i klipy wideo; i manipulować nimi za pomocą obrotu, skalowania i pochylania. Poniższa ilustracja podaje przykład wielu efektów, które można osiągnąć przy użyciu pędzli WPF.
+WPF WPF udostępnia bibliotekę klas 2D, których można użyć do tworzenia różnych efektów. Funkcja renderowania 2D WPF WPF umożliwia [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] malowanie elementów, które mają gradienty, mapy bitowe, rysunki i klipy wideo; i manipulować nimi za pomocą obrotu, skalowania i pochylania. Poniższa ilustracja podaje przykład wielu efektów, które można osiągnąć przy użyciu pędzli WPF.
 
 ![Ilustracja przedstawiająca różne pędzle WPF i elementy malowania.](./media/index/brushes-paint-elements.png)
 
@@ -117,13 +117,13 @@ Aby uzyskać więcej informacji, zobacz [WPF Brushes Overview](wpf-brushes-overv
 
 <a name="rendering"></a>
 
-## <a name="3-d-rendering"></a>Renderowanie 3-W
+## <a name="3d-rendering"></a>Renderowanie 3D
 
-WPF WPF zapewnia zestaw możliwości renderowania 3-W, które integrują się z obsługą grafiki 2-W w WPF w celu utworzenia bardziej ekscytującego układu [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]i wizualizacji danych. Na jednym końcu spektrum WPF WPF umożliwia renderowanie obrazów 2-W na powierzchniach kształtów 3-W, co pokazuje poniższa ilustracja.
+WPF WPF zapewnia zestaw możliwości renderowania 3D, które integrują się z obsługą grafiki [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]2D w WPF w celu utworzenia bardziej ekscytującego układu i wizualizacji danych. Na jednym końcu spektrum WPF WPF umożliwia renderowanie obrazów 2D na powierzchniach kształtów 3D, co pokazuje poniższa ilustracja.
 
-![Zrzut ekranu przedstawiający przykład przedstawiający kształty 3-W o różnych teksturach.](./media/index/visual-three-dimensional-shape.png)
+![Zrzut ekranu przedstawiający przykład przedstawiający kształty 3D o różnych teksturach.](./media/index/visual-three-dimensional-shape.png)
 
-Aby uzyskać więcej informacji, zobacz [Omówienie grafiki 3-W](3-d-graphics-overview.md). Aby uzyskać próbkę wprowadzającą, zobacz [próbka brył 3-W](https://go.microsoft.com/fwlink/?LinkID=159964).
+Aby uzyskać więcej informacji, zobacz [Omówienie grafiki 3D](3-d-graphics-overview.md). Aby zapoznać się z przykładem wprowadzającym, zobacz [Przykład bryły 3D](https://go.microsoft.com/fwlink/?LinkID=159964).
 
 <a name="animation"></a>
 
@@ -171,5 +171,5 @@ Aby uzyskać więcej informacji, zobacz [Przegląd multimediów](multimedia-over
 - [Przegląd Malowanie jednolitymi kolorami i gradientami](painting-with-solid-colors-and-gradients-overview.md)
 - [Malowanie przy użyciu obrazów, rysowania i wizualizacji](painting-with-images-drawings-and-visuals.md)
 - [Animacja i chronometraż Tematy porad](animation-and-timing-how-to-topics.md)
-- [Grafika 3D — przegląd](3-d-graphics-overview.md)
+- [Omówienie grafiki 3D](3-d-graphics-overview.md)
 - [Multimedia — przegląd](multimedia-overview.md)

@@ -1,52 +1,52 @@
 ---
-title: Migrowanie z formularzy sieci Web ASP.NET do Blazor
-description: Dowiedz się, jak podejście do migracji istniejącej aplikacji ASP.NET Web Forms do Blazor.
+title: Migracja z ASP.NET formularzy sieci Web do blazora
+description: Dowiedz się, jak podejść do migracji istniejącej aplikacji ASP.NET Formularzy sieci Web do blazora.
 author: twsouthwick
 ms.author: tasou
 ms.date: 09/19/2019
-ms.openlocfilehash: 52f463c66c2980d59a93f3210b3cfd825bec33da
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 0a10a9a3d5ab32e16cb59a68da57116e20c53e49
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337451"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134089"
 ---
-# <a name="migrate-from-aspnet-web-forms-to-blazor"></a>Migrowanie z formularzy sieci Web ASP.NET do Blazor
+# <a name="migrate-from-aspnet-web-forms-to-blazor"></a>Migracja z ASP.NET formularzy sieci Web do blazora
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Migrowanie bazy kodu z formularzy sieci Web ASP.NET do Blazor to czasochłonne zadanie, które wymaga planowania. W tym rozdziale opisano proces. Oto, co może ułatwić przejście aplikacji do architektury *N-warstwowej* , co w przypadku, gdy model aplikacji (w tym przypadku formularzy sieci Web) jest oddzielony od logiki biznesowej. To logiczne rozdzielenie warstw sprawia, że musi on zostać przeniesiony do platformy .NET Core i Blazor.
+Migrowanie bazy kodu z ASP.NET formularzy sieci Web do blazora jest czasochłonnym zadaniem, które wymaga planowania. W tym rozdziale przedstawiono ten proces. Coś, co może ułatwić przejście jest zapewnienie, że aplikacja jest zgodna z architekturą *n-warstwy,* w którym model aplikacji (w tym przypadku formularze sieci Web) jest oddzielony od logiki biznesowej. Ta logiczna separacja warstw wyjaśnia, co należy przenieść do .NET Core i Blazor.
 
-W tym przykładzie jest używana aplikacja eShop dostępna w witrynie [GitHub](https://github.com/dotnet-architecture/eShopOnBlazor) . eShop to usługa wykazu, która zapewnia możliwości CRUD za pośrednictwem wpisów i walidacji formularza.
+W tym przykładzie używana jest aplikacja eShop dostępna w [usłudze GitHub.](https://github.com/dotnet-architecture/eShopOnBlazor) eShop to usługa katalogowa, która zapewnia możliwości CRUD poprzez wprowadzanie i walidację formularza.
 
-Dlaczego należy zmigrować działającą aplikację do Blazor? Wiele razy nie jest potrzebne. Formularze sieci Web ASP.NET będą nadal obsługiwane przez wiele lat. Jednak wiele funkcji oferowanych przez program Blazor jest obsługiwanych tylko w zmigrowanej aplikacji. Takie funkcje obejmują:
+Dlaczego działająca aplikacja powinna zostać przeniesiona do Blazora? Wiele razy, nie ma potrzeby. ASP.NET formularzy sieci Web będą nadal wspierane przez wiele lat. Jednak wiele funkcji, które zapewnia Blazor, jest obsługiwanych tylko w zmigrowanym aplikacji. Takie funkcje obejmują:
 
-- Ulepszenia wydajności w strukturze, takie jak `Span<T>`
-- Możliwość uruchamiania jako zestaw webassembly
+- Poprawa wydajności w takich ramach, jak`Span<T>`
+- Możliwość uruchamiania jako WebAssembly
 - Obsługa wielu platform dla systemów Linux i macOS
-- Wdrożenie lokalne aplikacji lub wdrożenie platformy udostępnionej bez wpływu na inne aplikacje
+- Wdrożenie lokalne aplikacji lub wdrożenie współużytkowane framework bez wpływu na inne aplikacje
 
-Jeśli te lub inne nowe funkcje są wystarczająco atrakcyjne, może wystąpić wartość migrowania aplikacji. Migracja może mieć różne kształty; może to być cała aplikacja lub tylko niektóre punkty końcowe, które wymagają wprowadzenia zmian. Decyzja o migracji jest ostatecznie oparta na problemach z firmą, które mają zostać rozwiązane przez dewelopera.
+Jeśli te lub inne nowe funkcje są wystarczająco atrakcyjne, może być wartość w migracji aplikacji. Migracja może mieć różne kształty; może to być cała aplikacja lub tylko niektóre punkty końcowe, które wymagają zmian. Decyzja o migracji jest ostatecznie oparta na problemach biznesowych, które mają zostać rozwiązane przez dewelopera.
 
-## <a name="server-side-versus-client-side-hosting"></a>Klient po stronie serwera a hosting po stronie klienta
+## <a name="server-side-versus-client-side-hosting"></a>Hosting po stronie serwera i po stronie klienta
 
-Zgodnie z opisem w rozdziale [hosting modeli hostingu](hosting-models.md) aplikacja Blazor może być hostowana na dwa różne sposoby: po stronie serwera i po stronie klienta. Model po stronie serwera korzysta z połączeń ASP.NET Core sygnalizujących, aby zarządzać aktualizacjami modelu DOM podczas uruchamiania dowolnego rzeczywistego kodu na serwerze. Model po stronie klienta jest uruchamiany jako zestaw webassembly w przeglądarce i nie wymaga połączenia z serwerem. Istnieje wiele różnic, które mogą mieć wpływ na to, co jest najlepsze dla określonej aplikacji:
+Jak opisano w rozdziale [modeli hostingu,](hosting-models.md) aplikacja Blazor może być hostowana na dwa różne sposoby: po stronie serwera i po stronie klienta. Model po stronie serwera używa połączeń ASP.NET Core SignalR do zarządzania aktualizacjami DOM podczas uruchamiania dowolnego rzeczywistego kodu na serwerze. Model po stronie klienta działa jako WebAssembly w przeglądarce i nie wymaga żadnych połączeń z serwerem. Istnieje wiele różnic, które mogą mieć wpływ, co jest najlepsze dla konkretnej aplikacji:
 
-- Uruchamianie jako zestaw webassembly nadal trwa opracowywanie i może nie obsługiwać wszystkich funkcji (takich jak wątkowość) w bieżącym czasie
-- Komunikacja między klientem a serwerem może powodować problemy z opóźnieniami w trybie po stronie serwera
-- Dostęp do baz danych i wewnętrznych lub chronionych usług wymaga oddzielnej usługi z hostingiem po stronie klienta
+- Uruchamianie jako WebAssembly jest nadal w fazie rozwoju i może nie obsługiwać wszystkich funkcji (takich jak wątki) w bieżącym czasie
+- Chatty komunikacji między klientem a serwerem może powodować problemy z opóźnieniem w trybie po stronie serwera
+- Dostęp do baz danych i usług wewnętrznych lub chronionych wymaga oddzielnej usługi z hostingiem po stronie klienta
 
-W momencie pisania model po stronie serwera bardziej przypomina formularze sieci Web. Większość tego rozdziału koncentruje się na modelu hostingu po stronie serwera, ponieważ jest on gotowy do produkcji.
+W momencie pisania model po stronie serwera bardziej przypomina formularze sieci Web. Większość tego rozdziału koncentruje się na modelu hostingu po stronie serwera, ponieważ jest gotowy do produkcji.
 
 ## <a name="create-a-new-project"></a>Tworzenie nowego projektu
 
-Ten krok początkowej migracji polega na utworzeniu nowego projektu. Ten typ projektu jest oparty na projektach w stylu zestawu SDK platformy .NET Core i upraszcza wiele standardowych, które były używane w poprzednich formatach projektu. Aby uzyskać więcej informacji, zobacz rozdział dotyczący [struktury projektu](project-structure.md).
+Ten początkowy krok migracji polega na utworzeniu nowego projektu. Ten typ projektu jest oparty na projektach stylu SDK .NET Core i upraszcza wiele standardowego, który był używany w poprzednich formatach projektu. Aby uzyskać więcej informacji, zapoznaj się z rozdziałem [struktury projektu](project-structure.md).
 
-Po utworzeniu projektu Zainstaluj biblioteki, które były używane w poprzednim projekcie. W starszych projektach formularzy sieci Web może zostać użyty plik *Packages. config* w celu wyświetlenia listy wymaganych pakietów NuGet. W nowym projekcie w stylu zestawu SDK *pakiet Packages. config* został zastąpiony `<PackageReference>` elementami w pliku projektu. Zaletą tego podejścia jest to, że wszystkie zależności są instalowane w sposób przechodni. Można wyświetlić tylko te zależności najwyższego poziomu.
+Po utworzeniu projektu zainstaluj biblioteki, które były używane w poprzednim projekcie. W starszych projektach formularzy sieci Web być może użyto pliku *packages.config* do listy wymaganych pakietów NuGet. W nowym projekcie w stylu SDK *packages.config* został zastąpiony elementami `<PackageReference>` w pliku projektu. Zaletą tego podejścia jest, że wszystkie zależności są instalowane przechodnie. Możesz wyświetlić tylko zależności najwyższego poziomu, na których Ci zależy.
 
-Wiele zależności, z których korzystasz, jest dostępnych dla platformy .NET Core, w tym Entity Framework 6 i log4net. W przypadku braku dostępnej wersji programu .NET Core lub .NET Standard wersja .NET Framework może być często używana. Przebieg może się różnić. Każdy używany interfejs API, który nie jest dostępny w środowisku .NET Core powoduje błąd czasu wykonywania. Program Visual Studio powiadamia o takich pakietach. Żółta ikona pojawia się w węźle **odwołania** projektu w **Eksplorator rozwiązań**.
+Wiele zależności, których używasz, jest dostępnych dla platformy .NET Core, w tym entity framework 6 i log4net. Jeśli nie ma dostępnej wersji .NET Core lub .NET Standard, często można użyć wersji .NET Framework. Przebieg może się różnić. Każdy interfejs API używany, który nie jest dostępny w .NET Core powoduje błąd środowiska uruchomieniowego. Visual Studio powiadamia o takich pakietach. W węźle **Odwołania** projektu pojawi się żółta ikona **.**
 
-W projekcie eShop opartym na Blazor można zobaczyć zainstalowane pakiety. Wcześniej plik *Packages. config* został wymieniony w każdym pakiecie używanym w projekcie, co spowodowało niemal 50 wierszy. Fragment kodu *Package. config* jest następujący:
+W projekcie eShop opartym na Blazorie możesz zobaczyć pakiety, które są zainstalowane. Wcześniej plik *packages.config* wymieniał każdy pakiet używany w projekcie, w wyniku czego plik o długości prawie 50 wierszy. Fragment kodu *packages.config* to:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -72,9 +72,9 @@ W projekcie eShop opartym na Blazor można zobaczyć zainstalowane pakiety. Wcze
 </packages>
 ```
 
-Element `<packages>` zawiera wszystkie wymagane zależności. Trudno jest zidentyfikować, które z tych pakietów są uwzględniane, ponieważ są one wymagane. Niektóre elementy `<package>` są wyświetlane po prostu do zaspokajania potrzeb wymaganych zależności.
+Element `<packages>` zawiera wszystkie niezbędne zależności. Trudno jest zidentyfikować, które z tych pakietów są uwzględniane, ponieważ są one potrzebne. Niektóre `<package>` elementy są wymienione po prostu w celu zaspokojenia potrzeb zależności, których potrzebujesz.
 
-Projekt Blazor zawiera listę zależności, które są wymagane w ramach elementu `<ItemGroup>` w pliku projektu:
+Projekt Blazor wyświetla listę zależności wymaganych w elemencie `<ItemGroup>` w pliku projektu:
 
 ```xml
 <ItemGroup>
@@ -84,15 +84,15 @@ Projekt Blazor zawiera listę zależności, które są wymagane w ramach element
 </ItemGroup>
 ```
 
-Jednym pakietem NuGet, który upraszcza życie deweloperów formularzy sieci Web, jest [pakiet zgodności systemu Windows](../../core/porting/windows-compat-pack.md). Mimo że platforma .NET Core jest międzyplatformowa, niektóre funkcje są dostępne tylko w systemie Windows. Funkcje specyficzne dla systemu Windows są udostępniane przez zainstalowanie pakietu zgodności. Przykłady takich funkcji obejmują rejestr, WMI i usługi katalogowe. Pakiet dodaje około 20 000 interfejsów API i aktywuje wiele usług, za pomocą których użytkownik może już znać. Projekt eShop nie wymaga pakietu zgodności. ale jeśli projekty korzystają z funkcji specyficznych dla systemu Windows, pakiet ułatwia pracę z migracją.
+Jednym z pakietów NuGet, który upraszcza życie programistów formularzy sieci Web, jest [pakiet zgodności systemu Windows](../../core/porting/windows-compat-pack.md). Chociaż program .NET Core jest wieloplatformowy, niektóre funkcje są dostępne tylko w systemie Windows. Funkcje specyficzne dla systemu Windows są udostępniane przez zainstalowanie pakietu zgodności. Przykładami takich funkcji są usługi rejestru, usługi WMI i usługi katalogowe. Pakiet dodaje około 20 000 interfejsów API i aktywuje wiele usług, z którymi możesz być już zaznajomiony. Projekt eShop nie wymaga pakietu zgodności; ale jeśli projekty korzystają z funkcji specyficznych dla systemu Windows, pakiet ułatwia wysiłki na rzecz migracji.
 
 ## <a name="enable-startup-process"></a>Włącz proces uruchamiania
 
-Proces uruchamiania programu Blazor został zmieniony z formularzy sieci Web i wygląda podobnie jak w przypadku innych usług ASP.NET Core. Po stronie serwera składniki Blazor są uruchamiane w ramach normalnej aplikacji ASP.NET Core. W przypadku hostowania w przeglądarce z zestawem webassembly składniki Blazor używają podobnego modelu hostingu. Różnica polega na tym, że składniki są uruchamiane jako osobna usługa z dowolnego procesu zaplecza. W obu przypadkach uruchamianie jest podobne.
+Proces uruchamiania blazora zmienił się z formularzy sieci Web i następuje podobna konfiguracja dla innych usług ASP.NET Core. Po hostowane po stronie serwera, składniki Blazor są uruchamiane jako część normalnej aplikacji ASP.NET Core. Gdy hostowane w przeglądarce z WebAssembly, składniki Blazor użyć podobnego modelu hostingu. Różnica polega na tym, że składniki są uruchamiane jako oddzielna usługa od dowolnego z procesów wewnętrznej bazy danych. Tak czy inaczej, uruchamianie jest podobne.
 
-Plik *Global.asax.cs* jest domyślną stroną startową dla projektów formularzy sieci Web. W projekcie eShop ten plik konfiguruje kontener Inversion of Control (IoC) i obsługuje różne zdarzenia cyklu życia aplikacji lub żądania. Niektóre z tych zdarzeń są obsługiwane za pomocą oprogramowania pośredniczącego (takiego jak `Application_BeginRequest`). Inne zdarzenia wymagają zastąpienia określonych usług za pośrednictwem iniekcji zależności (DI).
+Plik *Global.asax.cs* jest domyślną stroną startową dla projektów formularzy sieci Web. W projekcie eShop ten plik konfiguruje kontener Inwersji kontroli (IoC) i obsługuje różne zdarzenia cyklu życia aplikacji lub żądania. Niektóre z tych zdarzeń są obsługiwane za `Application_BeginRequest`pomocą oprogramowania pośredniczącego (np. ). Inne zdarzenia wymagają zastąpienia określonych usług za pomocą iniekcji zależności (DI).
 
-Na przykład plik *Global.asax.cs* dla eshop zawiera następujący kod:
+Na przykład plik *Global.asax.cs* dla sklepu eShop zawiera następujący kod:
 
 ```csharp
 public class Global : HttpApplication, IContainerProviderAccessor
@@ -159,7 +159,7 @@ public class Global : HttpApplication, IContainerProviderAccessor
 }
 ```
 
-Poprzedni plik stał się klasą `Startup` w Blazor po stronie serwera:
+Poprzedni plik staje `Startup` się klasą w blazorze po stronie serwera:
 
 ```csharp
 public class Startup
@@ -244,23 +244,23 @@ public class Startup
 }
 ```
 
-Jedną z znaczących zmian, które można zauważyć w formularzach sieci Web, jest wyeksponowanie DI. DI ma regułę identyfikatora GUID w projekcie ASP.NET Core. Obsługuje on dostosowanie niemal wszystkich aspektów ASP.NET Core Framework. Istnieje nawet wbudowany dostawca usług, który może być używany w wielu scenariuszach. Jeśli wymagane jest dalsze dostosowanie, może ono być obsługiwane przez wiele projektów społeczności. Na przykład możesz przenieść swoją inwestycję w inną firmę.
+Jedną z istotnych zmian, które można zauważyć w formularzach sieci Web jest znaczenie DI. DI jest wiodącą zasadą w projekcie ASP.NET Core. Obsługuje dostosowywanie prawie wszystkich aspektów ASP.NET core framework. Istnieje nawet wbudowany dostawca usług, który może być używany w wielu scenariuszach. Jeśli wymagane jest więcej dostosowywania, może być obsługiwany przez wiele projektów społeczności. Na przykład można przenieść inwestycję biblioteki DI innej firmy.
 
-W oryginalnej aplikacji eShop istnieje pewna Konfiguracja zarządzania sesją. Ponieważ Blazor po stronie serwera używa sygnałów ASP.NET Core do komunikacji, stan sesji nie jest obsługiwany, ponieważ połączenia mogą wystąpić niezależnie od kontekstu HTTP. Aplikacja, która używa stanu sesji, wymaga ponownej architektury przed uruchomieniem aplikacji Blazor.
+W oryginalnej aplikacji eShop istnieje pewna konfiguracja do zarządzania sesjami. Ponieważ blazor po stronie serwera używa ASP.NET Core SignalR do komunikacji, stan sesji nie jest obsługiwany, ponieważ połączenia mogą wystąpić niezależnie od kontekstu HTTP. Aplikacja, która używa stanu sesji wymaga rearchitecting przed uruchomieniem jako aplikacji Blazor.
 
-Aby uzyskać więcej informacji o uruchamianiu aplikacji, zobacz [Uruchamianie aplikacji](app-startup.md).
+Aby uzyskać więcej informacji na temat uruchamiania aplikacji, zobacz [Uruchamianie aplikacji](app-startup.md).
 
 ## <a name="migrate-http-modules-and-handlers-to-middleware"></a>Migrowanie modułów i programów obsługi HTTP do oprogramowania pośredniczącego
 
-Moduły i programy obsługi HTTP są typowymi wzorcami w formularzach sieci Web w celu kontrolowania potoku żądań HTTP. Klasy implementujące `IHttpModule` lub `IHttpHandler` można rejestrować i przetwarzać żądania przychodzące. Formularze sieci Web konfigurują moduły i programy obsługi w pliku *Web. config* . Formularze sieci Web są również intensywnie oparte na obsłudze zdarzeń cyklu życia aplikacji. ASP.NET Core zamiast tego używa oprogramowania pośredniczącego. Oprogramowanie pośredniczące jest zarejestrowane w metodzie `Configure` klasy `Startup`. Kolejność wykonywania oprogramowania pośredniczącego zależy od kolejności rejestracji.
+Moduły i programy obsługi HTTP są typowe wzorce w formularzach sieci Web do kontrolowania potoku żądania HTTP. Klasy, `IHttpModule` które `IHttpHandler` implementują lub mogą być zarejestrowane i przetwarzają przychodzące żądania. Formularze sieci Web konfiguruje moduły i programy obsługi w pliku *web.config.* Formularze sieci Web jest również w dużym stopniu oparte na obsłudze zdarzeń cyklu życia aplikacji. ASP.NET Core używa oprogramowania pośredniczącego. Oprogramowanie pośredniczące `Configure` jest zarejestrowane w metodzie `Startup` klasy. Zlecenie wykonania oprogramowania pośredniczącego jest określane przez kolejność rejestracji.
 
-W sekcji [Włączanie procesu uruchamiania](#enable-startup-process) zdarzenie cyklu życia zostało zgłoszone przez formularze sieci Web jako metodę `Application_BeginRequest`. To zdarzenie nie jest dostępne w ASP.NET Core. Jednym ze sposobów osiągnięcia tego zachowania jest wdrożenie oprogramowania pośredniczącego, jak pokazano w przykładzie pliku *Startup.cs* . To oprogramowanie pośredniczące wykonuje tę samą logikę, a następnie przekazuje kontrolę do kolejnej procedury obsługi w potoku programu pośredniczącego.
+W sekcji [Włącz proces uruchamiania](#enable-startup-process) zdarzenie cyklu życia zostało `Application_BeginRequest` podniesione przez formularze sieci Web jako metodę. To zdarzenie nie jest dostępne w ASP.NET Core. Jednym ze sposobów osiągnięcia tego zachowania jest zaimplementowanie oprogramowania pośredniczącego, jak pokazano w przykładzie pliku *Startup.cs.* To oprogramowanie pośredniczące wykonuje tę samą logikę, a następnie przenosi kontrolę do następnego programu obsługi w potoku oprogramowania pośredniczącego.
 
-Aby uzyskać więcej informacji na temat migrowania modułów i programów obsługi, zobacz [Migrowanie programów obsługi i modułów HTTP w celu ASP.NET Core oprogramowania pośredniczącego](/aspnet/core/migration/http-modules).
+Aby uzyskać więcej informacji na temat migrowania modułów i programów obsługi, zobacz [Migrowanie programów obsługi i modułów HTTP w celu ASP.NET oprogramowania pośredniczącego Core](/aspnet/core/migration/http-modules).
 
 ## <a name="migrate-static-files"></a>Migrowanie plików statycznych
 
-Aby można było obsługiwać pliki statyczne (na przykład HTML, CSS, obrazy i JavaScript), pliki muszą być udostępniane przez oprogramowanie pośredniczące. Wywołanie metody `UseStaticFiles` umożliwia obsługę plików statycznych z ścieżki katalogu głównego sieci Web. Domyślny katalog główny sieci Web to *wwwroot*, ale można go dostosować. Jak zawarta w metodzie `Configure` klasy `Startup` eShop:
+Aby pliki statyczne były eksponowane (na przykład HTML, CSS, obrazy i javascript), pliki muszą być udostępniane przez oprogramowanie pośredniczące. Wywołanie `UseStaticFiles` metody umożliwia wyświetlanie plików statycznych ze ścieżki głównej sieci web. Domyślny katalog główny sieci web jest *wwwroot*, ale można go dostosować. Zgodnie z `Configure` metodą `Startup` klasy eShop:
 
 ```csharp
 public void Configure(IApplicationBuilder app)
@@ -273,19 +273,19 @@ public void Configure(IApplicationBuilder app)
 }
 ```
 
-Projekt eShop umożliwia dostęp do podstawowego pliku statycznego. Istnieje wiele dostosowań dostępnych w przypadku dostępu do pliku statycznego. Aby uzyskać informacje na temat włączania plików domyślnych lub przeglądarki plików, zobacz [pliki statyczne w ASP.NET Core](/aspnet/core/fundamentals/static-files).
+Projekt eShop umożliwia podstawowy statyczny dostęp do plików. Istnieje wiele dostosowań dostępnych dla statycznego dostępu do plików. Aby uzyskać informacje na temat włączania plików domyślnych lub przeglądarki plików, zobacz [Pliki statyczne w ASP.NET Core](/aspnet/core/fundamentals/static-files).
 
-## <a name="migrate-runtime-bundling-and-minification-setup"></a>Migruj konfigurację i minifikacja środowiska uruchomieniowego
+## <a name="migrate-runtime-bundling-and-minification-setup"></a>Konfiguracja tworzenia pakietów i minyfikacji środowiska uruchomieniowego migrowania
 
-Tworzenie i minifikacja to techniki optymalizacji wydajności umożliwiające zmniejszenie liczby i rozmiaru żądań serwera w celu pobrania określonych typów plików. JavaScript i CSS są często poddawane pewnej formie minifikacja przed wysłaniem do klienta. W programie ASP.NET Web Forms te optymalizacje są obsługiwane w czasie wykonywania. Konwencje optymalizacji są zdefiniowane *App_Start pliku/bundleconfig.cs* . W ASP.NET Core zostanie przyjęte bardziej deklaracyjne podejście. Plik zawiera listę plików, które mają być zminimalizowanego, oraz określonych ustawień minifikacja.
+Łączenie i wydobywanie to techniki optymalizacji wydajności w celu zmniejszenia liczby i rozmiaru żądań serwera w celu pobrania niektórych typów plików. JavaScript i CSS często przechodzą jakąś formę łączenia lub minigyfikacji przed wysłaniem do klienta. W ASP.NET formularzy sieci Web te optymalizacje są obsługiwane w czasie wykonywania. Konwencje optymalizacji są definiowane *App_Start/BundleConfig.cs* pliku. W ASP.NET Core przyjęto bardziej deklaratywne podejście. Plik zawiera listę plików, które mają zostać zmętnione, wraz z określonymi ustawieniami łączenia.
 
-Aby uzyskać więcej informacji na temat grupowania i minifikacja, zobacz [zestawy i zminifikować zasobów statycznych w ASP.NET Core](/aspnet/core/client-side/bundling-and-minification).
+Aby uzyskać więcej informacji na temat sprzedaży pakietowej i miniefikacji, zobacz [Pakiet i minify statycznych aktywów w ASP.NET Core](/aspnet/core/client-side/bundling-and-minification).
 
 ## <a name="migrate-aspx-pages"></a>Migrowanie stron ASPX
 
-Strona w aplikacji formularzy sieci Web jest plikiem z rozszerzeniem *. aspx* . Strona formularzy sieci Web może być często mapowana na składnik programu Blazor. Składnik Blazor jest tworzony w pliku z rozszerzeniem *. Razor* . W przypadku projektu eShop pięć stron jest konwertowanych na stronę Razor.
+Strona w aplikacji Formularze sieci Web to plik z rozszerzeniem *.aspx.* Strona Formularzy sieci Web często może być mapowana na składnik w blazorze. Składnik Blazor jest autorstwa w pliku z rozszerzeniem *.brzytwa.* W przypadku projektu eShop pięć stron jest konwertowanych na stronę Razor.
 
-Na przykład widok szczegółów składa się z trzech plików w projekcie formularzy sieci Web: *details. aspx*, *details.aspx.cs*i *details.aspx.Designer.cs*. Podczas konwertowania na Blazor, kod źródłowy i znaczniki są łączone w *szczegóły. Razor*. Kompilacja Razor (równoważna z plikami *Designer.cs* ) jest przechowywana w katalogu *obj* i nie jest domyślnie wyświetlana w **Eksplorator rozwiązań**. Strona formularzy sieci Web składa się z następujących oznaczeń:
+Na przykład widok szczegółów składa się z trzech plików w projekcie formularzy sieci Web: *Details.aspx*, *Details.aspx.cs*i *Details.aspx.designer.cs*. Podczas konwersji na Blazor, kod i znaczników są łączone w *Details.brzytwa*. Kompilacja brzytwy (odpowiednik tego, co znajduje się w plikach *.designer.cs)* jest przechowywana w katalogu *obj* i domyślnie nie jest chlubna w **Eksploratorze rozwiązań.** Strona Formularze sieci Web składa się z następujących znaczników:
 
 ```aspx-csharp
 <%@ Page Title="Details" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Details.aspx.cs" Inherits="eShopLegacyWebForms.Catalog.Details" %>
@@ -374,7 +374,7 @@ Na przykład widok szczegółów składa się z trzech plików w projekcie formu
 </asp:Content>
 ```
 
-Poprzedzający kod znacznika zawiera następujący kod:
+Poprzedni znaczników związanych z kodem zawiera następujący kod:
 
 ```csharp
 using eShopLegacyWebForms.Models;
@@ -405,7 +405,7 @@ namespace eShopLegacyWebForms.Catalog
 }
 ```
 
-W przypadku przekonwertowania na Blazor Strona formularzy sieci Web tłumaczy do następującego kodu:
+Po przekonwertowaniu na blazor strona Formularze sieci Web tłumaczy się na następujący kod:
 
 ```razor
 @page "/Catalog/Details/{id:int}"
@@ -520,13 +520,13 @@ W przypadku przekonwertowania na Blazor Strona formularzy sieci Web tłumaczy do
 }
 ```
 
-Zauważ, że kod i znaczniki są w tym samym pliku. Wszystkie wymagane usługi są udostępniane z atrybutem `@inject`. Za dyrektywę `@page` można uzyskać dostęp do tej strony przy użyciu trasy `Catalog/Details/{id}`. Wartość symbolu zastępczego `{id}` trasy została ograniczona do liczby całkowitej. Zgodnie z opisem w sekcji [Routing](pages-routing-layouts.md) , w przeciwieństwie do formularzy sieci Web, składnik Razor jawnie określa swoją trasę i wszystkie parametry, które są zawarte. Wiele kontrolek formularzy sieci Web może nie mieć dokładnych odpowiedników w Blazor. Często istnieje odpowiednik fragmentu kodu HTML, który będzie służyć do tego samego celu. Na przykład formant `<asp:Label />` można zamienić na element HTML `<label>`.
+Należy zauważyć, że kod i znaczniki znajdują się w tym samym pliku. Wszystkie wymagane usługi są dostępne `@inject` za pomocą atrybutu. Zgodnie `@page` z dyrektywą ta strona jest `Catalog/Details/{id}` dostępna na trasie. Wartość symbolu zastępczego `{id}` trasy została powiązana z całkowitej liczby. Zgodnie z opisem w sekcji [routingu,](pages-routing-layouts.md) w przeciwieństwie do formularzy sieci Web składnik Razor jawnie określa jego trasy i wszystkie parametry, które są uwzględnione. Wiele formantów formularzy sieci Web może nie mieć dokładnych odpowiedników w blazorze. Często istnieje równoważny fragment kodu HTML, który będzie służył temu sameu celowi. Na przykład `<asp:Label />` formant można zastąpić `<label>` elementem HTML.
 
-### <a name="model-validation-in-blazor"></a>Walidacja modelu w Blazor
+### <a name="model-validation-in-blazor"></a>Walidacja modelu w blazorze
 
-Jeśli kod formularzy sieci Web zawiera walidację, można przekazać wiele z nich, aby nie było zmian. Zaletą działania w programie Blazor jest możliwość uruchamiania tej samej logiki walidacji bez potrzeby korzystania z niestandardowego języka JavaScript. Adnotacje danych umożliwiają łatwe sprawdzanie poprawności modeli.
+Jeśli kod formularzy sieci Web zawiera sprawdzanie poprawności, można przenieść wiele z tego, co masz z niewiele do żadnych zmian. Zaletą uruchamiania w Blazor jest to, że ta sama logika sprawdzania poprawności może być uruchamiana bez konieczności niestandardowego javascriptu. Adnotacje danych umożliwiają łatwe sprawdzanie poprawności modelu.
 
-Na przykład strona *Create. aspx* zawiera formularz wprowadzania danych z walidacją. Przykładowy fragment będzie wyglądać następująco:
+Na przykład *create.aspx* strona ma formularz wprowadzania danych z sprawdzania poprawności. Przykładowy fragment kodu będzie wyglądał następująco:
 
 ```aspx
 <div class="form-group">
@@ -539,7 +539,7 @@ Na przykład strona *Create. aspx* zawiera formularz wprowadzania danych z walid
 </div>
 ```
 
-W Blazor odpowiednik znacznika jest dostarczany w pliku *Create. Razor* :
+W blazorze równoważne znaczniki znajdują się w pliku *Create.brzytwa:*
 
 ```razor
 <EditForm Model="_item" OnValidSubmit="@...">
@@ -557,19 +557,19 @@ W Blazor odpowiednik znacznika jest dostarczany w pliku *Create. Razor* :
 </EditForm>
 ```
 
-Kontekst `EditForm` obejmuje obsługę walidacji i może być zawijany wokół danych wejściowych. Adnotacje danych są typowym sposobem dodawania walidacji. Takie wsparcie sprawdzania poprawności można dodać za pośrednictwem składnika `DataAnnotationsValidator`. Aby uzyskać więcej informacji na temat tego mechanizmu, zobacz [ASP.NET Core Blazor formularzy i walidacji](/aspnet/core/blazor/forms-validation).
+Kontekst `EditForm` obejmuje obsługę sprawdzania poprawności i mogą być zawijane wokół danych wejściowych. Adnotacje danych są typowym sposobem dodawania sprawdzania poprawności. Takie wsparcie sprawdzania poprawności `DataAnnotationsValidator` można dodać za pośrednictwem składnika. Aby uzyskać więcej informacji na temat tego mechanizmu, zobacz [ASP.NET podstawowe formularze Blazora i walidację](/aspnet/core/blazor/forms-validation).
 
 ## <a name="migrate-built-in-web-forms-controls"></a>Migrowanie wbudowanych formantów formularzy sieci Web
 
-*Ta zawartość zostanie wkrótce udostępniona.*
+*Ta zawartość jest już wkrótce.*
 
-## <a name="migrate-configuration"></a>Migruj konfigurację
+## <a name="migrate-configuration"></a>Migrowanie konfiguracji
 
-W projekcie formularzy sieci Web dane konfiguracyjne są najczęściej przechowywane w pliku *Web. config* . Do danych konfiguracyjnych uzyskuje się dostęp przy użyciu `ConfigurationManager`. Usługi były często wymagane do analizowania obiektów. Dzięki .NET Framework 4.7.2 można redagować do konfiguracji za pośrednictwem `ConfigurationBuilders`. Ci deweloperzy mogą dodawać różne źródła do konfiguracji, która następnie została złożona w czasie wykonywania w celu pobrania niezbędnych wartości.
+W projekcie formularzy sieci Web dane konfiguracji są najczęściej przechowywane w pliku *web.config.* Dostęp do danych konfiguracyjnych można uzyskać za pomocą pliku `ConfigurationManager`. Usługi były często wymagane do analizowania obiektów. Z .NET Framework 4.7.2, możliwość komponowania został dodany do konfiguracji za pośrednictwem `ConfigurationBuilders`. Konstruktorzy ci zezwolili deweloperom na dodawanie różnych źródeł konfiguracji, które następnie zostały skomponowane w czasie wykonywania w celu pobrania niezbędnych wartości.
 
-ASP.NET Core wprowadzono elastyczny system konfiguracji, który pozwala zdefiniować źródło lub źródła konfiguracji używane przez aplikację i wdrożenie. Infrastruktura `ConfigurationBuilder`, która może być używana w aplikacji formularzy sieci Web, została modelowana po pojęciach używanych w systemie ASP.NET Core Configuration.
+ASP.NET Core wprowadził elastyczny system konfiguracji, który umożliwia zdefiniowanie źródła konfiguracji lub źródeł używanych przez aplikację i wdrożenie. Infrastruktura, `ConfigurationBuilder` której możesz używać w aplikacji Formularze sieci Web, została modelowana na podstawie pojęć używanych w systemie konfiguracji ASP.NET Core.
 
-W poniższym fragmencie kodu pokazano, jak projekt Web Forms eShop używa *pliku Web. config* do przechowywania wartości konfiguracyjnych:
+Poniższy fragment kodu pokazuje, jak projekt web forms eShop używa *web.config* do przechowywania wartości konfiguracji:
 
 ```xml
 <configuration>
@@ -583,9 +583,10 @@ W poniższym fragmencie kodu pokazano, jak projekt Web Forms eShop używa *pliku
     <add key="UseMockData" value="true" />
     <add key="UseCustomizationData" value="false" />
   </appSettings>
+</configuration>
 ```
 
-Jest ona wspólna dla wpisów tajnych, takich jak parametry połączenia bazy danych, które mają być przechowywane w *pliku Web. config*. Wpisy tajne są bezwątpliwie utrwalane w niezabezpieczonych lokalizacjach, takich jak kontrola źródła. W przypadku Blazor na ASP.NET Core wcześniejsza Konfiguracja oparta na języku XML jest zastępowana następującym kodem JSON:
+Często wpisy tajne, takie jak parametry połączenia bazy danych, są przechowywane w *pliku web.config*. Wpisy tajne są nieuchronnie utrwalone w niezabezpieczonych lokalizacjach, takich jak kontrola źródła. W ASP.NET Core w udlać się blazor, poprzednia konfiguracja oparta na języku XML jest zastępowana następującym JSON:
 
 ```json
 {
@@ -597,9 +598,9 @@ Jest ona wspólna dla wpisów tajnych, takich jak parametry połączenia bazy da
 }
 ```
 
-Format JSON jest domyślnym formatem konfiguracji; jednak ASP.NET Core obsługuje wiele innych formatów, w tym XML. Istnieje również kilka formatów obsługiwanych przez społeczność.
+JSON jest domyślnym formatem konfiguracji; jednak ASP.NET Core obsługuje wiele innych formatów, w tym XML. Istnieje również kilka formatów obsługiwanych przez społeczność.
 
-Konstruktor w klasie `Startup` projektu Blazor akceptuje wystąpienie `IConfiguration` za pomocą techniki DI znanego jako iniekcja konstruktora:
+Konstruktor w `Startup` klasie projektu Blazor akceptuje `IConfiguration` wystąpienie za pomocą techniki DI znanej jako iniekcja konstruktora:
 
 ```csharp
 public class Startup
@@ -614,43 +615,43 @@ public class Startup
 }
 ```
 
-Domyślnie zmienne środowiskowe, pliki JSON (*appSettings. JSON* i *appSettings. { Environment}. JSON*), a opcje wiersza polecenia są rejestrowane jako prawidłowe źródła konfiguracji w obiekcie Configuration. Dostęp do źródeł konfiguracji można uzyskać za pośrednictwem `Configuration[key]`. Bardziej zaawansowaną techniką jest powiązanie danych konfiguracji z obiektami przy użyciu wzorca opcji. Aby uzyskać więcej informacji na temat konfiguracji i wzorca opcji, zobacz odpowiednio [Konfiguracja w ASP.NET Core](/aspnet/core/fundamentals/configuration/) i [wzorzec opcji w ASP.NET Core](/aspnet/core/fundamentals/configuration/options).
+Domyślnie zmienne środowiskowe, pliki JSON (*appsettings.json* i *appsettings.{ Środowisko}.json*), a opcje wiersza polecenia są rejestrowane jako prawidłowe źródła konfiguracji w obiekcie konfiguracji. Dostęp do źródeł konfiguracji można `Configuration[key]`uzyskać za pośrednictwem programu . Bardziej zaawansowaną techniką jest powiązanie danych konfiguracji z obiektami przy użyciu wzorca opcji. Aby uzyskać więcej informacji na temat konfiguracji i wzorca opcji, zobacz [Konfiguracja w ASP.NET](/aspnet/core/fundamentals/configuration/) [wzorzec rdzenia](/aspnet/core/fundamentals/configuration/options)i opcje odpowiednio w ASP.NET Core.
 
 ## <a name="migrate-data-access"></a>Migrowanie dostępu do danych
 
-Dostęp do danych jest ważnym aspektem każdej aplikacji. Projekt eShop przechowuje informacje o katalogu w bazie danych i pobiera dane z Entity Framework (EF) 6. Ponieważ program Dr 6 jest obsługiwany w środowisku .NET Core 3,0, nadal można z niego korzystać.
+Dostęp do danych jest ważnym aspektem każdej aplikacji. Projekt eShop przechowuje informacje o katalogu w bazie danych i pobiera dane z Entity Framework (EF) 6. Ponieważ EF 6 jest obsługiwany w programie .NET Core 3.0, projekt może nadal go używać.
 
-Następujące zmiany związane z EF były niezbędne do eShop:
+W sklepie internetowym konieczne były następujące zmiany związane z EF:
 
-- W .NET Framework obiekt `DbContext` akceptuje ciąg *nazwa formularza = ConnectionString* i używa parametrów połączenia z `ConfigurationManager.AppSettings[ConnectionString]` do nawiązania połączenia. W programie .NET Core nie jest to obsługiwane. Należy podać parametry połączenia.
-- Dostęp do bazy danych odbywa się synchronicznie. To działanie może mieć wpływ na skalowalność. Ta logika powinna zostać przeniesiona do wzorca asynchronicznego.
+- W .NET Framework `DbContext` obiekt akceptuje ciąg *formularza name=ConnectionString* i używa ciągu `ConfigurationManager.AppSettings[ConnectionString]` połączenia do połączenia. W .NET Core nie jest to obsługiwane. Należy podać parametry połączenia.
+- Dostęp do bazy danych był dostępny w sposób synchroniczne. Chociaż to działa, skalowalność może ucierpieć. Ta logika powinna zostać przeniesiona do wzorca asynchroniowego.
 
-Chociaż nie ma tej samej natywnej obsługi powiązań zestawu danych, Blazor zapewnia elastyczność i moc z C# obsługą na stronie Razor. Na przykład można wykonać obliczenia i wyświetlić wynik. Aby uzyskać więcej informacji na temat wzorców danych w programie Blazor, zobacz rozdział [dostępu do danych](data.md) .
+Chociaż nie ma tej samej natywnej obsługi powiązania zestawu danych, Blazor zapewnia elastyczność i moc dzięki obsłudze języka C# na stronie Razor. Na przykład można wykonywać obliczenia i wyświetlać wynik. Aby uzyskać więcej informacji na temat wzorców danych w blazor, zobacz rozdział [Dostęp do danych.](data.md)
 
 ## <a name="architectural-changes"></a>Zmiany w architekturze
 
-Na koniec należy wziąć pod uwagę pewne istotne różnice w architekturze podczas migracji do Blazor. Wiele z tych zmian ma zastosowanie do wszystkich elementów opartych na platformie .NET Core lub ASP.NET Core.
+Wreszcie, istnieją pewne ważne różnice architektoniczne do rozważenia podczas migracji do Blazor. Wiele z tych zmian ma zastosowanie do czegokolwiek opartego na programie .NET Core lub ASP.NET Core.
 
-Ponieważ Blazor jest oparty na oprogramowaniu .NET Core, istnieją zagadnienia dotyczące zapewniania pomocy technicznej na platformie .NET Core. Niektóre istotne zmiany obejmują usunięcie następujących funkcji:
+Ponieważ Blazor jest zbudowany na .NET Core, istnieją kwestie dotyczące zapewnienia obsługi w programie .NET Core. Niektóre z głównych zmian obejmują usunięcie następujących funkcji:
 
-- Wiele domen aplikacji
-- Komunikacji zdalnej
+- Wiele appdomains
+- Usług zdalnych
 - Zabezpieczenia dostępu kodu (CAS)
 - Przejrzystość zabezpieczeń
 
-Aby uzyskać więcej informacji na temat technik umożliwiających identyfikację niezbędnych zmian w celu obsługi programu .NET Core, zobacz [Porting Code from .NET Framework to .NET Core](/dotnet/core/porting).
+Aby uzyskać więcej informacji na temat technik umożliwiających identyfikację niezbędnych zmian do obsługi uruchomionych w programie .NET Core, zobacz [Port kodu z programu .NET Framework do platformy .NET Core](/dotnet/core/porting).
 
-ASP.NET Core jest reobrazną wersją ASP.NET i zawiera pewne zmiany, które mogą nie być początkowo oczywiste. Główne zmiany są następujące:
+ASP.NET Core jest przeprojektowaną wersją ASP.NET i ma pewne zmiany, które początkowo mogą nie wydawać się oczywiste. Główne zmiany to:
 
-- Brak kontekstu synchronizacji, co oznacza, że nie ma `HttpContext.Current`, `Thread.CurrentPrincipal`ani innych metod dostępu statycznego
+- Brak kontekstu synchronizacji, co `HttpContext.Current`oznacza, że nie ma `Thread.CurrentPrincipal`, lub innych statycznych akcesorów
 - Brak kopiowania w tle
 - Brak kolejki żądań
 
-Wiele operacji w ASP.NET Core jest asynchronicznych, co umożliwia łatwiejsze ładowanie zadań związanych z operacjami we/wy. Ważne jest, aby nigdy nie blokować przy użyciu `Task.Wait()` lub `Task.GetResult()`, co może szybko wyczerpać zasoby puli wątków.
+Wiele operacji w ASP.NET Core są asynchroniczne, co umożliwia łatwiejsze odciążanie zadań związanych we/wy. Ważne jest, aby nigdy `Task.Wait()` nie `Task.GetResult()`blokować przy użyciu lub , które mogą szybko wyczerpywać zasoby puli wątków.
 
-## <a name="migration-conclusion"></a>Wniosek o migrację
+## <a name="migration-conclusion"></a>Wniosek dotyczący migracji
 
-W tym momencie widzisz wiele przykładów potrzebnych do przeniesienia projektu formularzy sieci Web do Blazor. Pełny przykład można znaleźć w projekcie [eShopOnBlazor](https://github.com/dotnet-architecture/eShopOnBlazor) .
+W tym momencie widzieliście wiele przykładów tego, czego potrzeba, aby przenieść projekt formularzy sieci Web do Blazora. Pełny przykład można znaleźć w projekcie [eShopOnBlazor.](https://github.com/dotnet-architecture/eShopOnBlazor)
 
 >[!div class="step-by-step"]
->[Poprzednie](security-authentication-authorization.md)
+>[Wstecz](security-authentication-authorization.md)

@@ -2,26 +2,26 @@
 title: Uproszczona konfiguracja
 ms.date: 03/30/2017
 ms.assetid: dcbe1f84-437c-495f-9324-2bc09fd79ea9
-ms.openlocfilehash: 3bed6fe961712c976d5e1446ace43e7073036697
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 4e316290c045b75896c61e36c1646440c18678e2
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423711"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249633"
 ---
 # <a name="simplified-configuration"></a>Uproszczona konfiguracja
-Konfigurowanie usług Windows Communication Foundation (WCF) może być złożonym zadaniem. Istnieje wiele różnych opcji i nie zawsze można łatwo określić, które ustawienia są wymagane. Pliki konfiguracji zwiększają elastyczność usług WCF, ale również są źródłem wielu trudno znaleźć problemy. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] rozwiązuje te problemy i zapewnia sposób zmniejszenia rozmiaru i złożoności konfiguracji usługi.  
+Konfigurowanie usług Windows Communication Foundation (WCF) może być złożonym zadaniem. Istnieje wiele różnych opcji i nie zawsze jest łatwo określić, jakie ustawienia są wymagane. Podczas gdy pliki konfiguracyjne zwiększają elastyczność usług WCF, są one również źródłem wielu trudnych do znalezienia problemów. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]rozwiązuje te problemy i zapewnia sposób zmniejszenia rozmiaru i złożoności konfiguracji usługi.  
   
 ## <a name="simplified-configuration"></a>Uproszczona konfiguracja  
- W pliku konfiguracji usługi WCF sekcja < `system.serviceModel` > zawiera < `service` > elementu dla każdej usługi hostowanej. Element < `service` > zawiera kolekcję < `endpoint` > elementy, które określają punkty końcowe uwidocznione dla każdej usługi i opcjonalnie zestaw zachowań usługi. Elementy > < `endpoint` określają adres, powiązanie i kontrakt udostępniane przez punkt końcowy oraz opcjonalnie powiązania konfiguracji i punktu końcowego. Sekcja < `system.serviceModel` > zawiera również < `behaviors` > elementu, który umożliwia określenie zachowań usługi lub punktów końcowych. Poniższy przykład przedstawia sekcję < `system.serviceModel` > pliku konfiguracyjnego.  
+ W plikach konfiguracyjnych usługi WCF sekcja <`system.serviceModel`> zawiera <`service`> element dla każdej hostowanej usługi. <`service`> element zawiera kolekcję <`endpoint`> elementów, które określają punkty końcowe udostępniane dla każdej usługi i opcjonalnie zestaw zachowań usługi. Elementy <`endpoint`> określają adres, powiązanie i kontrakt udostępniane przez punkt końcowy oraz opcjonalnie powiązanie zachowań konfiguracji i punktu końcowego. Sekcja `system.serviceModel` <> zawiera również element `behaviors`> <, który umożliwia określenie zachowań usługi lub punktu końcowego. W poniższym przykładzie przedstawiono sekcję `system.serviceModel`> <pliku konfiguracyjnego.  
   
 ```xml  
 <system.serviceModel>  
   <behaviors>  
     <serviceBehaviors>  
       <behavior name="MyServiceBehavior">  
-        <serviceMetadata httpGetEnabled="true">  
-        <serviceDebug includeExceptionDetailInFaults="false">  
+        <serviceMetadata httpGetEnabled="true" />  
+        <serviceDebug includeExceptionDetailInFaults="false" />  
       </behavior>  
     </serviceBehaviors>  
   </behaviors>  
@@ -46,13 +46,13 @@ Konfigurowanie usług Windows Communication Foundation (WCF) może być złożon
 </system.serviceModel>  
 ```  
   
- [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] ułatwia skonfigurowanie usługi WCF poprzez usunięcie wymagania dotyczącego elementu <`service`>. Jeśli nie dodasz < `service` > lub dodasz punkty końcowe w < `service` >, a Twoja usługa nie określi programowo żadnych punktów końcowych, zestaw domyślnych punktów końcowych zostanie automatycznie dodany do usługi, po jednej dla każdego adresu podstawowego usługi i dla każdego kontraktu zaimplementowanego przez usługę. W każdym z tych punktów końcowych adres punktu końcowego odpowiada adresowi bazowemu, powiązanie jest określane przez schemat adresów bazowych, a kontrakt jest zaimplementowany przez usługę. Jeśli nie musisz określać żadnych punktów końcowych lub zachowań usług lub wprowadzić żadnych zmian w ustawieniach powiązania, nie musisz określać w ogóle pliku konfiguracji usługi. Jeśli usługa implementuje dwie kontrakty, a host włącza transporty HTTP i TCP hosta usługi, program tworzy cztery domyślne punkty końcowe, po jednym dla każdego kontraktu przy użyciu poszczególnych transportów. Aby utworzyć domyślne punkty końcowe, Host usługi musi wiedzieć, jakie powiązania mają być używane. Te ustawienia są określone w sekcji < `protocolMappings` > w sekcji < `system.serviceModel` >. Sekcja < `protocolMappings` > zawiera listę schematów protokołu transportowego mapowanych na typy powiązań. Host usługi korzysta z adresów bazowych, które są do niego przesyłane, aby określić, które powiązanie ma być używane. Poniższy przykład używa < `protocolMappings` > elementu.  
+ [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]ułatwia konfigurowanie usługi WCF przez usunięcie wymagań dotyczących elementu `service` <>. Jeśli nie dodasz <`service` sekcji> lub nie dodasz żadnych punktów końcowych `service` w sekcji <>, a usługa nie definiuje programowo żadnych punktów końcowych, zestaw domyślnych punktów końcowych zostanie automatycznie dodany do usługi, po jednym dla każdego adresu podstawowego usługi i dla każdej umowy zaimplementowanej przez usługę. W każdym z tych punktów końcowych adres punktu końcowego odpowiada adres podstawowy, powiązanie jest określana przez schemat adresów podstawowych i umowy jest zaimplementowane przez usługę. Jeśli nie trzeba określić żadnych punktów końcowych lub zachowań usługi lub wprowadzić żadnych zmian ustawień powiązania, nie trzeba w ogóle określić plik konfiguracji usługi. Jeśli usługa implementuje dwa kontrakty i hosta włącza transporty HTTP i TCP hosta usługi tworzy cztery domyślne punkty końcowe, po jednym dla każdego kontraktu przy użyciu każdego transportu. Aby utworzyć domyślne punkty końcowe hosta usługi musi wiedzieć, jakie powiązania do użycia. Te ustawienia są określone w `protocolMappings` sekcji> <w sekcji `system.serviceModel` <>. Sekcja <`protocolMappings`> zawiera listę schematów protokołu transportu mapowanych na typy powiązań. Host usługi używa adresów podstawowych przekazanych do niego, aby określić, które powiązanie do użycia. W poniższym przykładzie użyto <`protocolMappings`> elementu.  
   
 > [!WARNING]
-> Zmiana domyślnych elementów konfiguracji, takich jak powiązania lub zachowania, może mieć wpływ na usługi zdefiniowane na niższych poziomach w hierarchii konfiguracji, ponieważ mogą one korzystać z tych domyślnych powiązań i zachowań. Z tego względu, inne zmiany powiązań domyślnych i zachowań muszą mieć świadomość, że te zmiany mogą wpływać na inne usługi w hierarchii.  
+> Zmiana domyślnych elementów konfiguracji, takich jak powiązania lub zachowania, może mieć wpływ na usługi zdefiniowane na niższych poziomach hierarchii konfiguracji, ponieważ mogą one używać tych domyślnych powiązań i zachowań. W związku z tym kto zmienia domyślne powiązania i zachowania musi mieć świadomość, że te zmiany mogą mieć wpływ na inne usługi w hierarchii.  
   
 > [!NOTE]
-> Usługi hostowane w usłudze Internet Information Services (IIS) lub Windows Process Activation Service (WAS) używają katalogu wirtualnego jako adresu podstawowego.  
+> Usługi hostowane w ramach internetowych usług informacyjnych (IIS) lub usługi aktywacji procesów systemu Windows (WAS) używają katalogu wirtualnego jako adresu podstawowego.  
   
 ```xml  
 <protocolMapping>  
@@ -63,11 +63,11 @@ Konfigurowanie usług Windows Communication Foundation (WCF) może być złożon
 </protocolMapping>  
 ```  
   
- W poprzednim przykładzie punkt końcowy o adresie podstawowym rozpoczynającym się od schematu "http" używa <xref:System.ServiceModel.BasicHttpBinding>. Punkt końcowy o adresie podstawowym rozpoczynającym się od schematu "net. TCP" używa <xref:System.ServiceModel.NetTcpBinding>. Możesz przesłonić ustawienia w lokalnym pliku App. config lub Web. config.  
+ W poprzednim przykładzie punkt końcowy z adresem podstawowym, który rozpoczyna się <xref:System.ServiceModel.BasicHttpBinding>od schematu "http", używa programu . Punkt końcowy z adresem podstawowym rozpoczynającym się od schematu "net.tcp" używa schematu <xref:System.ServiceModel.NetTcpBinding>. Ustawienia można zastąpić w lokalnym pliku App.config lub Web.config.  
   
- Każdy element w sekcji < `protocolMappings` > musi określać schemat i powiązanie. Opcjonalnie można określić atrybut `bindingConfiguration` określający konfigurację powiązania w sekcji < `bindings` > pliku konfiguracji. Jeśli nie określono `bindingConfiguration`, zostanie użyta Konfiguracja powiązania anonimowego dla odpowiedniego typu powiązania.  
+ Każdy element w sekcji `protocolMappings` <> musi określać schemat i powiązanie. Opcjonalnie można określić `bindingConfiguration` atrybut, który określa konfigurację powiązania `bindings` w <> sekcji pliku konfiguracji. Jeśli `bindingConfiguration` nie jest określony, używana jest konfiguracja powiązania anonimowego odpowiedniego typu powiązania.  
   
- Zachowania usługi są skonfigurowane dla domyślnych punktów końcowych przy użyciu opcji anonimowe < `behavior` > w sekcjach < `serviceBehaviors` >. Do konfigurowania zachowań usługi są używane wszystkie nienazwane elementy < `behavior` > w < `serviceBehaviors` >. Na przykład następujący plik konfiguracji umożliwia Publikowanie metadanych usługi dla wszystkich usług na hoście.  
+ Zachowania usługi są konfigurowane dla domyślnych punktów końcowych `behavior` przy użyciu anonimowych <sekcji `serviceBehaviors`> w <> sekcjach. Wszystkie nienazwane <`behavior`> elementy w <`serviceBehaviors`> są używane do konfigurowania zachowań usługi. Na przykład następujący plik konfiguracji umożliwia publikowanie metadanych usługi dla wszystkich usług w hoście.  
   
 ```xml  
 <system.serviceModel>  
@@ -82,9 +82,9 @@ Konfigurowanie usług Windows Communication Foundation (WCF) może być złożon
  </system.serviceModel>  
 ```  
   
- Zachowania punktu końcowego są konfigurowane przy użyciu < anonimowe `behavior` > sekcjach w < `serviceBehaviors` > sekcjach.  
+ Zachowania punktów końcowych są konfigurowane przy `behavior` użyciu anonimowych <> sekcje `serviceBehaviors` w <> sekcjach.  
   
- Poniższy przykład to plik konfiguracji odpowiadający pierwszemu na początku tego tematu, który korzysta z uproszczonego modelu konfiguracji.  
+ Poniższy przykład jest plikiem konfiguracji równoważnym z plikiem na początku tego tematu, który używa uproszczonego modelu konfiguracji.  
   
 ```xml  
 <system.serviceModel>
@@ -111,9 +111,9 @@ Konfigurowanie usług Windows Communication Foundation (WCF) może być złożon
 ```  
   
 > [!IMPORTANT]
-> Ta funkcja odnosi się tylko do konfiguracji usługi WCF, a nie konfiguracji klienta. W większości przypadków konfiguracja klienta WCF zostanie wygenerowana za pomocą narzędzia, takiego jak Svcutil. exe, lub dodania odwołania do usługi z programu Visual Studio. W przypadku ręcznego konfigurowania klienta WCF należy dodać do konfiguracji element \<client > i określić wszystkie punkty końcowe, które chcesz wywołać.  
+> Ta funkcja dotyczy tylko konfiguracji usługi WCF, a nie konfiguracji klienta. W większości razy konfiguracja klienta WCF zostanie wygenerowana przez narzędzie, takie jak svcutil.exe lub dodanie odwołania do usługi z programu Visual Studio. Jeśli ręcznie konfigurujesz klienta WCF, musisz dodać \<element> klienta do konfiguracji i określić wszystkie punkty końcowe, które chcesz wywołać.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Konfigurowanie usług za pomocą plików konfiguracji](configuring-services-using-configuration-files.md)
 - [Konfigurowanie powiązań dla usług](configuring-bindings-for-wcf-services.md)

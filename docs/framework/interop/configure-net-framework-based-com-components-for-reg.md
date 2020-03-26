@@ -8,12 +8,12 @@ helpviewer_keywords:
 - registration-free COM interop, configuring .NET-based components
 - activation, registration-free
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
-ms.openlocfilehash: dedf5ab51ab5cf9befb5bd183968388406df4e5b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9e273bd3e4bf2bb6945fe48c850783a54fa9a869
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181460"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291754"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Poradnik: Konfigurowanie aktywacji bez rejestracji składników COM opartych na platformie .NET Framework
 Aktywacja bez rejestracji dla składników opartych na platformie .NET Framework jest tylko nieco bardziej skomplikowana niż w przypadku składników COM. Konfiguracja wymaga dwóch manifestów:  
@@ -24,7 +24,7 @@ Aktywacja bez rejestracji dla składników opartych na platformie .NET Framework
   
  W tym temacie opisano sposób skojarzenia manifestu aplikacji z aplikacją; skojarzyć manifest komponentu ze składnikiem; i osadź manifest komponentu w złożeniu.  
   
-### <a name="to-create-an-application-manifest"></a>Aby utworzyć manifest aplikacji  
+## <a name="create-an-application-manifest"></a>Tworzenie manifestu aplikacji  
   
 1. Za pomocą edytora XML utwórz (lub zmodyfikuj) manifest aplikacji należący do aplikacji COM, który współpracuje z co najmniej jednym składnikiem zarządzanym.  
   
@@ -32,7 +32,8 @@ Aktywacja bez rejestracji dla składników opartych na platformie .NET Framework
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
-    <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
+    <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+    </assembly>
     ```  
   
      Aby uzyskać informacje o elementach manifestu i ich [atrybutach,](/windows/desktop/SbsCs/application-manifests)zobacz Manifesty aplikacji .  
@@ -46,7 +47,8 @@ Aktywacja bez rejestracji dla składników opartych na platformie .NET Framework
                         name="myOrganization.myDivision.myComApp"
                         version="1.0.0.0"
                         processorArchitecture="msil"
-      />  
+      />
+    </assembly>  
     ```  
   
 4. Identyfikowanie zestawów zależnych. W poniższym `myComApp` przykładzie `myManagedComp`zależy od .  
@@ -75,9 +77,9 @@ Aktywacja bez rejestracji dla składników opartych na platformie .NET Framework
   
 5. Zapisz i nazwij plik manifestu. Nazwa manifestu aplikacji jest nazwą pliku wykonywalnego zestawu, po którym następuje rozszerzenie .manifest. Na przykład nazwa pliku manifestu aplikacji dla myComApp.exe to myComApp.exe.manifest.  
   
- Manifest aplikacji można zainstalować w tym samym katalogu co aplikacja COM. Alternatywnie można dodać go jako zasób do pliku .exe aplikacji. Aby uzyskać dodatkowe informacje, Aby uzyskać więcej informacji, zobacz [Informacje o złożeniach obok siebie](/windows/desktop/SbsCs/about-side-by-side-assemblies-).  
+Manifest aplikacji można zainstalować w tym samym katalogu co aplikacja COM. Alternatywnie można dodać go jako zasób do pliku .exe aplikacji. Aby uzyskać więcej informacji, zobacz [Temat Zespołów side-by-side](/windows/desktop/SbsCs/about-side-by-side-assemblies-).  
   
-#### <a name="to-create-a-component-manifest"></a>Aby utworzyć manifest komponentu  
+## <a name="create-a-component-manifest"></a>Tworzenie manifestu komponentu  
   
 1. Za pomocą edytora XML utwórz manifest składnika, aby opisać zarządzany zestaw.  
   
@@ -85,7 +87,8 @@ Aktywacja bez rejestracji dla składników opartych na platformie .NET Framework
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
-    <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
+    <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+    </assembly>
     ```  
   
 3. Zidentyfikuj właściciela pliku. Element `<assemblyIdentity>` `<dependentAssembly>` elementu w pliku manifestu aplikacji musi być zgodny z elementem manifestu składnika. W poniższym `myManagedComp` przykładzie wersja 1.2.3.4 jest właścicielem pliku manifestu.  
@@ -98,7 +101,8 @@ Aktywacja bez rejestracji dla składników opartych na platformie .NET Framework
                         version="1.2.3.4"  
                         publicKeyToken="8275b28176rcbbef"  
                         processorArchitecture="msil"  
-           />  
+           />
+    </assembly>
     ```  
   
 4. Zidentyfikuj każdą klasę w zestawie. Użyj `<clrClass>` elementu, aby jednoznacznie zidentyfikować każdą klasę w zestawie zarządzanym. Element, który jest podśrodkiem `<assembly>` elementu, ma atrybuty opisane w poniższej tabeli.  

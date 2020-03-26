@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: 85e32c99674cc95f670a4cb483b55865b996cb31
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 642dfdd784af4b85672cf5b0c8e60079763f4c47
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186422"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112287"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Ustawienie rejestru renderowania grafiki
 W tym temacie przedstawiono omówienie ustawień rejestru renderowania [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] grafiki, które mają wpływ na [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacje.  
@@ -33,7 +33,7 @@ W tym temacie przedstawiono omówienie ustawień rejestru renderowania [!INCLUDE
 |Ustawienie|Opis|  
 |-------------|-----------------|  
 |**Wyłącz opcję przyspieszenia sprzętowego**|Określa, czy ma być włączone przyspieszanie sprzętowe.|  
-|**Maksymalna wartość multipróbki**|Określa stopień wielowymirzalania dla antyaliasing 3-W zawartości.|  
+|**Maksymalna wartość multipróbki**|Określa stopień wielowymirzania dla antyaliasing zawartości 3D.|  
 |**Wymagane ustawienie daty sterownika wideo**|Określa, czy system wyłącza akcelerację sprzętową dla sterowników wydanych przed listopadem 2004 r.|  
 |**Użyj opcji rasteryzatora referencyjnego**|Określa, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] czy należy używać rasteryzatora referencyjnego.|  
   
@@ -57,9 +57,9 @@ W tym temacie przedstawiono omówienie ustawień rejestru renderowania [!INCLUDE
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\MaxMultisampleType`|DWORD|  
   
- **Maksymalna wartość multisample** umożliwia dostosowanie maksymalnej ilości antyaliasingu zawartości 3-W. Użyj tego poziomu, aby wyłączyć antyaliasing 3-D w systemie Windows Vista.  
+ **Maksymalna wartość multisample** umożliwia dostosowanie maksymalnej ilości antyaliasingu zawartości 3D. Użyj tego poziomu, aby wyłączyć antyaliasing 3D w systemie Windows Vista.  
   
- **Maksymalna wartość multisample** jest wartość DWORD, która waha się od 0 do 16. Wartość 0 określa, że multisample antialiasing zawartości 3-W powinny być wyłączone, a wartość 16 będzie próbował użyć do 16x multisample antialiasing, jeśli jest obsługiwany przez kartę graficzną. Uważaj, że ustawienie tej wartości klucza rejestru na komputerach przy użyciu sterowników XPDM spowoduje, że aplikacje będą korzystać z dużej ilości dodatkowej pamięci wideo, zmniejszyć wydajność renderowania 3-W i może potencjalnie wprowadzić błędy renderowania i stabilność Problemy.  
+ **Maksymalna wartość multisample** jest wartość DWORD, która waha się od 0 do 16. Wartość 0 określa, że multisample antialiasing zawartości 3D powinny być wyłączone, a wartość 16 będzie próbował użyć do 16x multisample antialiasing, jeśli jest obsługiwany przez kartę wideo. Uważaj, że ustawienie tej wartości klucza rejestru na komputerach przy użyciu sterowników XPDM spowoduje, że aplikacje będą korzystać z dużej ilości dodatkowej pamięci wideo, zmniejszyć wydajność renderowania 3D i może potencjalnie wprowadzić błędy renderowania i stabilność Problemy.  
   
  Jeśli ten klucz rejestru [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nie jest ustawiony, domyślnie 0 dla sterowników XPDM i 4 dla sterowników WDDM.  
   

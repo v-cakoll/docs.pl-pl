@@ -6,19 +6,19 @@ helpviewer_keywords:
 - .NET Framework, getting started
 - getting started [.NET Framework]
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
-ms.openlocfilehash: 0fffbb2f1b58d8ba65d9c5ca8b7c8edc583af2da
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cd27f2fb893def9e186504cc9973bae71473f005
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79400016"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80248911"
 ---
 # <a name="get-started-with-net-framework"></a>Wprowadzenie do programu .NET Framework
 
 .NET Framework to środowisko wykonywania w czasie wykonywania, które zarządza aplikacjami docelowymi .NET Framework. Składa się ze wspólnego środowiska wykonawczego języka, który zapewnia zarządzanie pamięcią i inne usługi systemowe oraz obszerną bibliotekę klas, która umożliwia programistom korzystanie z niezawodnego, niezawodnego kodu dla wszystkich głównych obszarów tworzenia aplikacji.
 
 > [!NOTE]
-> Program .NET Framework jest dostępny tylko w systemach Windows. Za pomocą platformy [.NET Core](../../core/index.md) można uruchamiać aplikacje w systemach Windows, MacOS i Linux.
+> Program .NET Framework jest dostępny tylko w systemach Windows. Za pomocą [platformy .NET Core](../../core/index.md) można tworzyć i uruchamiać aplikacje w systemach Windows, MacOS i Linux.
 
 ## <a name="what-is-net-framework"></a>Co to jest .NET Framework?
 
@@ -76,7 +76,7 @@ Aby uzyskać więcej informacji na temat tworzenia aplikacji przeznaczonych dla 
 | Tytuł | Opis |
 | ----- |------------ |
 | [Przegląd](overview.md) | Zawiera szczegółowe informacje dla deweloperów, którzy budują aplikacje docelowe .NET Framework. |
-| [Instrukcja instalacji](../install/index.md) | Zawiera informacje dotyczące instalowania programu .NET Framework. |  
+| [Przewodnik instalacji](../install/index.md) | Zawiera informacje dotyczące instalowania programu .NET Framework. |  
 | [Wersje .NET Framework i Out-of-Band](the-net-framework-and-out-of-band-releases.md) | W tym artykule opisano wersje poza pasmem .NET Framework i sposób ich używania w aplikacji. |
 | [Wymagania systemowe](system-requirements.md) | Wyświetla listę wymagań sprzętowych i programowych dotyczących uruchamiania programu .NET Framework. |
 | [Oprogramowanie .NET Core i Open-Source](net-core-and-open-source.md) | W tym artykule opisano program .NET Core w odniesieniu do programu .NET Framework i sposobu uzyskiwania dostępu do projektów typu open source .NET Core. |
@@ -85,7 +85,7 @@ Aby uzyskać więcej informacji na temat tworzenia aplikacji przeznaczonych dla 
 
 ## <a name="see-also"></a>Zobacz też
 
-- [.NET framework — przewodnik](../index.md)
+- [Przewodnik po platformie .NET Framework](../index.yml)
 - [Co nowego](../whats-new/index.md)
-- [Przeglądarka interfejsu API .NET](../../../api/index.md)
-- [Podręcznik programowania](../development-guide.md)
+- [Przeglądarka interfejsów API na platformie .NET](../../../api/index.md)
+- [Przewodnik po rozwoju](../development-guide.md)

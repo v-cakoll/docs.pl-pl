@@ -7,12 +7,12 @@ ms.assetid: b8d7cf43-d1f2-4f3d-adb0-4f3a6428edc0
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 511ea04a522804b4b2ea2ff173d6cdd738e5c7bc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 759c1ca20ac139ef856df08ec42fb259fc3920d1
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186218"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112014"
 ---
 # <a name="wpf-overview"></a>Omówienie podsystemu WPF
 
@@ -141,7 +141,7 @@ Na poniższej ilustracji przedstawiono wynik po kliknięciu przycisku:
 
 ![Skrzynka z wiadomościami](media/introduction-to-wpf/wpfintrofigure25.png)
 
-## <a name="controls"></a>Kontrolki
+## <a name="controls"></a>Formanty
 
 Środowiska użytkownika, które są dostarczane przez model aplikacji są skonstruowane formanty. W WPF WPF *formantu* jest terminem parasola, który ma zastosowanie do kategorii klas WPF, które są hostowane w oknie lub na stronie, mają interfejs użytkownika i implementują pewne zachowanie.
 
@@ -309,7 +309,7 @@ Aby uzyskać więcej informacji, zobacz [omówienie pędzli WPF](graphics-multim
 
 ### <a name="3d-rendering"></a>Renderowanie 3D
 
-WPF WPF zawiera również funkcje renderowania 3D, które integrują się z grafiką 2-w, aby umożliwić tworzenie bardziej ekscytujących i interesujących interfejsów użytkownika. Na przykład na poniższej ilustracji przedstawiono obrazy 2D renderowane na kształtach 3D:
+WPF WPF zawiera również funkcje renderowania 3D, które integrują się z grafiką 2D, aby umożliwić tworzenie bardziej ekscytujących i interesujących interfejsów użytkownika. Na przykład na poniższej ilustracji przedstawiono obrazy 2D renderowane na kształtach 3D:
 
 ![Zrzut ekranu przykładowy Visual3D](media/introduction-to-wpf/wpfintrofigure13.png)
 
@@ -543,7 +543,7 @@ Ponieważ ten styl <xref:System.Windows.Controls.Button> jest przeznaczony dla w
 
 Aby uzyskać więcej informacji, zobacz [Style i szablony](../../desktop-wpf/fundamentals/styles-templates-overview.md).
 
-### <a name="resources"></a>Zasoby
+### <a name="resources"></a>Resources
 
 Formanty w aplikacji powinny mieć ten sam wygląd, który może zawierać wszystko, od czcionek i kolorów tła do sterowania szablonami, szablonami danych i stylami. Można użyć obsługi WPF dla zasobów interfejsu użytkownika do hermetyzacji tych zasobów w jednej lokalizacji do ponownego użycia.
 

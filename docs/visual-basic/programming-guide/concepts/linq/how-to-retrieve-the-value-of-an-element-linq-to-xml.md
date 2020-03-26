@@ -1,21 +1,21 @@
 ---
-title: 'Instrukcje: pobieranie wartości elementu (LINQ to XML)'
+title: 'Jak: Pobieranie wartości elementu (LINQ do XML)'
 ms.date: 07/20/2015
 ms.assetid: 76b9b2a5-b3ba-49da-ba74-82100e1bd21c
-ms.openlocfilehash: cc0ddb9c4fc6364d4b10ebac378ab47cc38e508f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b1a61091dc59b403c5d967609e8870492c24347f
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352423"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80248937"
 ---
-# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-visual-basic"></a>Instrukcje: pobieranie wartości elementu (LINQ to XML) (Visual Basic)
-W tym temacie pokazano, jak uzyskać wartość elementów. Istnieją dwa podstawowe sposoby wykonania tej czynności. Jednym ze sposobów jest rzutowanie <xref:System.Xml.Linq.XElement> lub <xref:System.Xml.Linq.XAttribute> na żądany typ. Operator jawnej konwersji konwertuje zawartość elementu lub atrybutu do określonego typu i przypisuje go do zmiennej. Alternatywnie można użyć właściwości <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> lub właściwości <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType>.  
+# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-visual-basic"></a>Jak: Pobieranie wartości elementu (LINQ do XML) (Visual Basic)
+W tym temacie pokazano, jak uzyskać wartość elementów. Istnieją dwa główne sposoby, aby to zrobić. Jednym ze sposobów <xref:System.Xml.Linq.XElement> jest <xref:System.Xml.Linq.XAttribute> rzucenie lub do żądanego typu. Operator konwersji jawne następnie konwertuje zawartość elementu lub atrybutu do określonego typu i przypisuje go do zmiennej. Goście mogą również skorzystać <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> z <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> obiektu lub obiektu.  
   
- W przypadku Visual Basic najlepszym podejściem jest użycie właściwości <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType>.  
+ W języku Visual Basic najlepszym rozwiązaniem <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> jest użycie właściwości.  
   
 ## <a name="example"></a>Przykład  
- Aby pobrać wartość elementu, należy po prostu rzutować obiekt <xref:System.Xml.Linq.XElement> na żądany typ. Można zawsze rzutować element na ciąg w następujący sposób:  
+ Aby pobrać wartość elementu, wystarczy rzutować <xref:System.Xml.Linq.XElement> obiekt do żądanego typu. Zawsze można rzutować element do ciągu, w następujący sposób:  
   
 ```vb  
 Dim e As XElement = <StringElement>abcde</StringElement>  
@@ -31,7 +31,7 @@ Value of e:abcde
 ```  
   
 ## <a name="example"></a>Przykład  
- Można również rzutować elementy do typów innych niż ciąg. Na przykład jeśli masz element zawierający liczbę całkowitą, możesz rzutować go na `int`, jak pokazano w poniższym kodzie:  
+ Można również rzutować elementy do typów innych niż ciąg. Na przykład jeśli masz element, który zawiera całkowitą, można `int`go przerzucić na , jak pokazano w poniższym kodzie:  
   
 ```vb  
 Dim e As XElement = <Age>44</Age>  
@@ -46,12 +46,12 @@ Console.WriteLine("Value of e:" & CInt(e))
 Value of e:44  
 ```  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zapewnia jawne Operatory rzutowania dla następujących typów danych: `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?`, `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID`i `GUID?`.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]zapewnia operatory jawnego rzutu `string` `bool`dla `bool?` `int`następujących `int?` `uint`typów `uint?` `long`danych: , , , , , , `GUID`, `GUID?` `decimal` `decimal?` `DateTime` `DateTime?` `TimeSpan` `TimeSpan?` `long?` `ulong` `ulong?` `float`, , , `float?`, , `double`, `double?`, , , , , , , , , , i .  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zapewnia te same Operatory rzutowania dla obiektów <xref:System.Xml.Linq.XAttribute>.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]zapewnia te same <xref:System.Xml.Linq.XAttribute> operatory rzutowania dla obiektów.  
   
 ## <a name="example"></a>Przykład  
- Za pomocą właściwości <xref:System.Xml.Linq.XElement.Value%2A> można pobrać zawartość elementu:  
+ Można użyć <xref:System.Xml.Linq.XElement.Value%2A> właściwości, aby pobrać zawartość elementu:  
   
 ```vb  
 Dim e As XElement = <StringElement>abcde</StringElement>  
@@ -67,7 +67,7 @@ Value of e:abcde
 ```  
   
 ## <a name="example"></a>Przykład  
- Czasami próbujesz pobrać wartość elementu, chociaż nie masz pewności, że istnieje. W tym przypadku, gdy przypiszesz element rzutowany do typu dopuszczającego wartość null (albo `string` lub jeden z typów dopuszczających wartość null w .NET Framework), jeśli element nie istnieje, przypisana zmienna jest po prostu ustawiona na `Nothing`. Poniższy kod pokazuje, że gdy element może lub nie istnieje, łatwiej jest użyć rzutowania, aby użyć właściwości <xref:System.Xml.Linq.XElement.Value%2A>.  
+ Czasami spróbuj pobrać wartość elementu, nawet jeśli nie masz pewności, że istnieje. W takim przypadku po przypisaniu elementu rzutowanego do typu `string` możliwego do wartości null (jednego lub jednego z typów wartości nullable w `Nothing`.NET Framework), jeśli element nie istnieje, przypisana zmienna jest po prostu ustawiona na . Poniższy kod pokazuje, że gdy element może lub nie może istnieć, <xref:System.Xml.Linq.XElement.Value%2A> jest łatwiejsze w użyciu rzutowania niż do korzystania z właściwości.  
   
 ```vb  
 Dim root As XElement = <Root>  
@@ -147,8 +147,8 @@ v3:element does not exist
 v4:element does not exist  
 ```  
   
- Ogólnie rzecz biorąc, można napisać łatwiejszy kod podczas używania rzutowania do pobrania zawartości elementów i atrybutów.  
+ Ogólnie rzecz biorąc można napisać prostszy kod podczas korzystania z rzutowania do pobierania zawartości elementów i atrybutów.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Osie LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+- [Osie LINQ do XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

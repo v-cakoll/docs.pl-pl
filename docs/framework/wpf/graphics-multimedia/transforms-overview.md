@@ -3,24 +3,24 @@ title: Przegląd Przekształcenia
 ms.date: 03/30/2017
 helpviewer_keywords:
 - transformations [WPF], about transformations
-- classes [WPF], 2-D transform
-- transform classes [WPF], 2-D
-- 2-D transform classes
+- classes [WPF], 2D transform
+- transform classes [WPF], 2D
+- 2D transform classes
 - FrameworkElement objects [WPF], rotating
 - FrameworkElement objects [WPF], skewing
 - FrameworkElement objects [WPF], translating
 - Transforms [WPF], about Transforms
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
-ms.openlocfilehash: 49fb0109e1d7db065f7e241955f30cb038699020
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c5f29404a301eb023ff24b2890531dede6440ec4
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187466"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111962"
 ---
 # <a name="transforms-overview"></a>Przegląd Przekształcenia
-W tym temacie opisano sposób używania klas 2-W <xref:System.Windows.Media.Transform> do obracania, skalowania, przenoszenia (tłumaczenia) i pochylania <xref:System.Windows.FrameworkElement> obiektów.  
+W tym temacie opisano sposób <xref:System.Windows.Media.Transform> używania klas 2D do obracania, skalowania, przenoszenia (tłumaczenia) i pochylania <xref:System.Windows.FrameworkElement> obiektów.  
 
 <a name="whatIsATransformSection"></a>
 ## <a name="what-is-a-transform"></a>Co to jest transformacja?  
@@ -31,7 +31,7 @@ W tym temacie opisano sposób używania klas 2-W <xref:System.Windows.Media.Tran
   
  W poniższej tabeli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] przedstawiono strukturę macierzy.  
   
-### <a name="a-2-d-transformation-matrix"></a>Macierz transformacji 2-W  
+### <a name="a-2d-transformation-matrix"></a>Macierz transformacji 2D  
   
 ||||  
 |-|-|-|  
@@ -45,7 +45,7 @@ W tym temacie opisano sposób używania klas 2-W <xref:System.Windows.Media.Tran
   
 <a name="transformClassesSection"></a>
 ## <a name="transform-classes"></a>Przekształcanie klas  
- Windows Presentation Foundation (WPF) udostępnia następujące <xref:System.Windows.Media.Transform> klasy 2-W dla typowych operacji transformacji:  
+ Windows Presentation Foundation (WPF) udostępnia <xref:System.Windows.Media.Transform> następujące klasy 2D dla typowych operacji transformacji:  
   
 |Klasa|Opis|Przykład|Ilustracji|  
 |-----------|-----------------|-------------|------------------|  
@@ -61,7 +61,7 @@ W tym temacie opisano sposób używania klas 2-W <xref:System.Windows.Media.Tran
 |<xref:System.Windows.Media.TransformGroup>|Grupuje <xref:System.Windows.Media.TransformGroup> wiele obiektów <xref:System.Windows.Media.Transform> w jeden, który można następnie zastosować do właściwości przekształcania.|[Stosowanie wielu przekształceń do obiektu](how-to-apply-multiple-transforms-to-an-object.md)|  
 |<xref:System.Windows.Media.MatrixTransform>|Tworzy niestandardowe przekształcenia, które <xref:System.Windows.Media.Transform> nie są dostarczane przez inne klasy. Podczas korzystania <xref:System.Windows.Media.MatrixTransform>z programu , można manipulować Macierzy bezpośrednio.|[Tworzenie niestandardowych przekształceń przy użyciu elementu MatrixTransform](how-to-use-a-matrixtransform-to-create-custom-transforms.md)|  
   
- Windows Presentation Foundation (WPF) zapewnia również przekształcenia 3-W. Aby uzyskać więcej <xref:System.Windows.Media.Media3D.Transform3D> informacji, zobacz klasę.  
+ Windows Presentation Foundation (WPF) zapewnia również przekształcenia 3D. Aby uzyskać więcej <xref:System.Windows.Media.Media3D.Transform3D> informacji, zobacz klasę.  
   
 <a name="transformationproperties"></a>
 ## <a name="common-transformation-properties"></a>Typowe właściwości transformacji  
@@ -142,7 +142,7 @@ UkładTransform używany do obracania przycisku
   
  [!code-xaml[Transforms_snip#GraphicsMMAnimatedRotateButtonExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonAnimatedRotateTransformExample.xaml#graphicsmmanimatedrotatebuttonexamplewholepage)]  
   
- Aby uzyskać pełną próbkę, zobacz [przykład przekształca 2-W](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms). Aby uzyskać więcej informacji na temat animacji, zobacz [Omówienie animacji](animation-overview.md).  
+ Aby uzyskać pełną próbkę, zobacz [Przykład przekształca 2D](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms). Aby uzyskać więcej informacji na temat animacji, zobacz [Omówienie animacji](animation-overview.md).  
   
 <a name="freezable_features"></a>
 ## <a name="freezable-features"></a>Freezable Funkcje  
@@ -153,4 +153,4 @@ UkładTransform używany do obracania przycisku
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.Matrix>
 - [Tematy in jakże](transformations-how-to-topics.md)
-- [Próbka transformacji 2-W](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)
+- [Przykład transformacji 2D](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)

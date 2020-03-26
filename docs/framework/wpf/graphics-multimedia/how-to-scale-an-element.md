@@ -5,12 +5,12 @@ helpviewer_keywords:
 - scaling [WPF], elements
 - graphics [WPF], scaling elements
 ms.assetid: 18158d94-bbe7-4f6a-814e-84d27fa748bf
-ms.openlocfilehash: a383ad84f1db4d937469943092a03517f68777ec
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 34d954f68747be9eedc0ef71634e0c18b411d260
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187435"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112053"
 ---
 # <a name="how-to-scale-an-element"></a>Jak skalować element
 W tym przykładzie <xref:System.Windows.Media.ScaleTransform> pokazano, jak użyć a do skalowania elementu.  
@@ -35,7 +35,7 @@ W tym przykładzie <xref:System.Windows.Media.ScaleTransform> pokazano, jak uży
  ![2x wagi z różnymi punktami środkowymi](./media/wcpsdk-graphicsmm-scalecenter.gif "wcpsdk_graphicsmm_scalecenter")  
 Dwie operacje ScaleTransform z identycznymi wartościami ScaleX i ScaleY, ale z różnymi centrami  
   
- Aby uzyskać pełną próbkę, zobacz [przykład przekształca 2-W](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms).  
+ Aby uzyskać pełną próbkę, zobacz [Przykład przekształca 2D](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms).  
   
 ## <a name="see-also"></a>Zobacz też
 

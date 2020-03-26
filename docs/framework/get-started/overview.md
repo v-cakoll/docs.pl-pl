@@ -7,12 +7,12 @@ helpviewer_keywords:
 - common language runtime, about
 - common language runtime, overview
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
-ms.openlocfilehash: de9cbdab5d5786b9d59d23ba675fa3f78f807716
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ace42738118cde4bcda4b78607d7bdb045d3501e
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181590"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80248924"
 ---
 # <a name="overview-of-net-framework"></a>Omówienie programu .NET Framework
 
@@ -31,7 +31,7 @@ Program .NET Framework to technologia, która obsługuje tworzenie i uruchamiani
 - Aby utworzyć całą komunikację na standardach branżowych, aby upewnić się, że kod oparty na programie .NET Framework integruje się z dowolnym innym kodem.
 
 > [!NOTE]
-> Aby uzyskać ogólne wprowadzenie do programu .NET Framework zarówno dla użytkowników, jak i deweloperów, zobacz [Wprowadzenie](index.md).
+> Aby zapoznać się z ogólnym wprowadzeniem do programu .NET Framework zarówno dla użytkowników, jak i deweloperów, zobacz [Wprowadzenie.](index.md)
 
 Program .NET Framework składa się ze środowiska wykonawczego języka wspólnego (CLR) i biblioteki klas programu .NET Framework. Środowisko wykonawcze języka wspólnego jest podstawą programu .NET Framework. Pomyśl o czasie wykonywania jako agent, który zarządza kodem w czasie wykonywania, zapewniając podstawowe usługi, takie jak zarządzanie pamięcią, zarządzanie wątkami i komunikacji zdalnej, a także wymuszanie ścisłego bezpieczeństwa typu i innych form dokładności kodu, które promują bezpieczeństwo i niezawodność. W rzeczywistości pojęcie zarządzania kodem jest podstawową zasadą środowiska wykonawczego. Kod, który jest przeznaczony dla środowiska wykonawczego jest znany jako kod zarządzany, podczas gdy kod, który nie jest przeznaczony dla środowiska wykonawczego jest znany jako kod niezarządzany. Biblioteka klas to kompleksowa, obiektowa kolekcja typów wielokrotnego użytku, których używasz do tworzenia aplikacji, od tradycyjnych aplikacji wiersza polecenia lub graficznego interfejsu użytkownika (GUI) po aplikacje oparte na najnowszych innowacjach dostarczanych przez ASP.NET, takich jak Web Formularze i usługi sieci Web XML.
 
@@ -71,7 +71,7 @@ Biblioteka klas .NET Framework jest zbiorem typów wielokrotnegoużytnia, które
 
 Na przykład klasy zbierania .NET Framework implementują zestaw interfejsów do tworzenia własnych klas kolekcji. Klasy kolekcji płynnie łączą się z klasami w .NET Framework.
 
-Zgodnie z oczekiwaniami z biblioteki klas obiektowych typy .NET Framework umożliwiają wykonywanie szeregu typowych zadań programowania, w tym zadań, takich jak zarządzanie ciągami, zbieranie danych, łączność z bazą danych i dostęp do plików. Oprócz tych typowych zadań biblioteka klas zawiera typy, które obsługują różne scenariusze rozwoju specjalistycznego. Użyj programu .NET Framework do tworzenia następujących typów aplikacji i usług:
+Zgodnie z oczekiwaniami z biblioteki klas obiektowych typy .NET Framework umożliwiają wykonywanie szeregu typowych zadań programowania, w tym zarządzania ciągami, zbierania danych, łączności bazy danych i dostępu do plików. Oprócz tych typowych zadań biblioteka klas zawiera typy, które obsługują różne scenariusze rozwoju specjalistycznego. Program .NET Framework służy do tworzenia następujących typów aplikacji i usług:
 
 - Aplikacje konsoli. Zobacz [Tworzenie aplikacji konsoli](../../standard/building-console-apps.md).
 
@@ -92,8 +92,8 @@ Klasy Formularze systemu Windows to kompleksowy zestaw typów wielokrotnego poż
 ## <a name="see-also"></a>Zobacz też
 
 - [Wymagania systemowe](system-requirements.md)
-- [Instrukcja instalacji](../install/index.md)
-- [Podręcznik programowania](../development-guide.md)
-- [narzędzia](../tools/index.md)
+- [Przewodnik instalacji](../install/index.md)
+- [Przewodnik po rozwoju](../development-guide.md)
+- [Narzędzia](../tools/index.md)
 - [Przykłady i samouczki platformy .NET](../../samples-and-tutorials/index.md)
-- [Przeglądarka interfejsu API platformy .NET](../../../api/index.md)
+- [Przeglądarka interfejsów API na platformie .NET](../../../api/index.md)

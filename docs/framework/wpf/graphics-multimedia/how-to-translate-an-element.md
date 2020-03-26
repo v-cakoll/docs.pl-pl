@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [WPF], translations
 ms.assetid: 461c8273-15df-42f6-8672-89ba22887cc0
-ms.openlocfilehash: ba6bda09a4ee189cdd1a32eed8f65b32d1a9abe4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: addff0e22fb3f27ea924887809c0635aeb3ad67d
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187305"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111975"
 ---
 # <a name="how-to-translate-an-element"></a>Jak przesunąć element
 W tym przykładzie pokazano, jak przetłumaczyć (przenieść) element za pomocą . <xref:System.Windows.Media.TranslateTransform>  
@@ -23,7 +23,7 @@ W tym przykładzie pokazano, jak przetłumaczyć (przenieść) element za pomoc�
 ## <a name="example"></a>Przykład  
  [!code-xaml[transformsSample#53](~/samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/TranslateTransformExample.xaml#53)]  
   
- Aby uzyskać pełną próbkę, zobacz [przykład przekształca 2-W](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms).  
+ Aby uzyskać pełną próbkę, zobacz [Przykład przekształca 2D](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms).  
   
 ## <a name="see-also"></a>Zobacz też
 

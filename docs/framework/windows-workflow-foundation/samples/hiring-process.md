@@ -2,12 +2,12 @@
 title: Proces zatrudniania
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-ms.openlocfilehash: c7e99d41d009ee9ab9ccf322f082d3e253ca03ce
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ade72422d29d170e9c80f602f151ce765a1a00f7
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182828"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291688"
 ---
 # <a name="hiring-process"></a>Proces zatrudniania
 W tym przykładzie pokazano, jak zaimplementować proces biznesowy przy użyciu działań obsługi wiadomości i dwa przepływy pracy hostowane jako usługi przepływu pracy. Te przepływy pracy są częścią infrastruktury IT fikcyjnej firmy o nazwie Contoso, Inc.  
@@ -122,7 +122,7 @@ W tym przykładzie pokazano, jak zaimplementować proces biznesowy przy użyciu 
 |Działania równoległe|-   <xref:System.Activities.Statements.ParallelForEach%601>służy do równoległej rejestracji w skrzynce odbiorczej dyrektora generalnego i menedżerów HR (oczekiwanie na krok zatwierdzania dwóch menedżerów HR).<br />-   <xref:System.Activities.Statements.Parallel>służy do wykonywania niektórych zadań oczyszczania w krokach Zakończone i Odrzucone|Usługa HiringRequestService|  
 |Anulowanie modelu|Schemat blokowy używa <xref:System.Activities.Statements.CancellationScope> do tworzenia zachowania anulowania (w tym przypadku wykonuje pewne oczyszczanie.)|Usługa HiringRequestService|  
 |Uczestnik trwałości klienta|`HiringRequestPersistenceParticipant`zapisuje dane ze zmiennej przepływu pracy do tabeli przechowywanej w bazie danych contoso HR.|Usługa HiringRequestService|  
-|Usługi przepływu pracy|`ResumeRequestService`jest implementowana przy użyciu usług przepływu pracy. Definicja przepływu pracy i informacje o usłudze znajdują się w pliku ResumeRequestService.xamlx. Usługa jest skonfigurowana do używania trwałości i śledzenia.|Usługa cvrequestservice|  
+|Usługi przepływu pracy|`ResumeRequestService`jest implementowana przy użyciu usług przepływu pracy. Definicja przepływu pracy i informacje o usłudze są zawarte w pliku ResumeRequestService.xamlx. Usługa jest skonfigurowana do używania trwałości i śledzenia.|Usługa cvrequestservice|  
 |Trwałe zegary|`ResumeRequestService`używa trwałych czasomierzy do zdefiniowania czasu trwania stanowiska pracy (po upływie określonego czasu księgowanie zlecenia jest zamykany).|Usługa cvrequestservice|  
 |Transakcje|<xref:System.Activities.Statements.TransactionScope>służy do zapewnienia spójności danych w ramach wykonywania kilku działań (po odebraniu nowego życiorysu).|Usługa cvrequestservice|  
 |Transakcje|Uczestnik trwałości niestandardowej (`HiringRequestPersistenceParticipant`)`HistoryFileTrackingParticipant`i niestandardowy uczestnik śledzenia ( ) używają tej samej transakcji.|Usługa HiringRequestService|  

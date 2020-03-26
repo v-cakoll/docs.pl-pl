@@ -1,23 +1,23 @@
 ---
-title: Aplikacje gRPC hostowane samodzielnie - gRPC dla programistów WCF
-description: Wdrażanie ASP.NET aplikacji Core gRPC jako usług hostowanych samodzielnie.
+title: Samodzielne aplikacje gRPC - gRPC dla programistów WCF
+description: Wdrażanie ASP.NET podstawowych aplikacji gRPC jako usług hostowanych samodzielnie.
 ms.date: 09/02/2019
-ms.openlocfilehash: 00fb1453e19a02469f80af79672e0c1f72c7280f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 69f70e4077247fd07eba7abeee82f257dd1f4f90
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79147805"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80110909"
 ---
-# <a name="self-hosted-grpc-applications"></a>Aplikacje gRPC hostowane samodzielnie
+# <a name="self-hosted-grpc-applications"></a>Samodzielne aplikacje gRPC
 
-Chociaż ASP.NET aplikacje Core 3.0 mogą być hostowane w usługach IIS w systemie Windows Server, obecnie nie jest możliwe hosta aplikacji gRPC w usługach IIS, ponieważ niektóre funkcje HTTP/2 nie są obsługiwane. Ta funkcja jest celem przyszłej aktualizacji systemu Windows Server.
+Chociaż aplikacje ASP.NET Core 3.0 mogą być hostowane w usługach IIS w systemie Windows Server, obecnie nie można hostować aplikacji gRPC w usługach IIS, ponieważ niektóre funkcje HTTP/2 nie są obsługiwane. Ta funkcja jest celem przyszłej aktualizacji systemu Windows Server.
 
-Aplikację można uruchomić jako usługę systemu Windows. Lub można go uruchomić jako usługę Linux kontrolowane przez [systemd](https://en.wikipedia.org/wiki/Systemd), ze względu na nowe funkcje w .NET Core 3.0 hosting rozszerzeń.
+Aplikację można uruchomić jako usługę systemu Windows. Możesz też uruchomić go jako usługę Linux kontrolowaną przez [systemd](https://en.wikipedia.org/wiki/Systemd), ze względu na nowe funkcje w rozszerzeniach hostingu .NET Core 3.0.
 
 ## <a name="run-your-app-as-a-windows-service"></a>Uruchamianie aplikacji jako usługi systemu Windows
 
-Aby skonfigurować aplikację ASP.NET Core do uruchamiania jako usługa systemu Windows, zainstaluj pakiet [Microsoft.Extensions.Hosting.WindowsServices](https://www.nuget.org/packages/Microsoft.Extensions.Hosting.WindowsServices) z NuGet. Następnie dodaj wywołanie `UseWindowsService` `CreateHostBuilder` do `Program.cs`metody w pliku .
+Aby skonfigurować aplikację ASP.NET Core do uruchamiania jako usługa systemu Windows, zainstaluj pakiet [Microsoft.Extensions.Hosting.WindowsServices](https://www.nuget.org/packages/Microsoft.Extensions.Hosting.WindowsServices) z nuget. Następnie dodaj wywołanie `UseWindowsService` `CreateHostBuilder` do `Program.cs`metody w pliku .
 
 ```csharp
 public static IHostBuilder CreateHostBuilder(string[] args) =>
@@ -30,44 +30,44 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 ```
 
 > [!NOTE]
-> Jeśli aplikacja nie jest uruchomiona jako `UseWindowsService` usługa systemu Windows, metoda nic nie robi.
+> Jeśli aplikacja nie jest uruchomiona jako usługa `UseWindowsService` systemu Windows, metoda nie robi nic.
 
 Teraz opublikuj aplikację przy użyciu jednej z następujących metod:
 
-* W programie Visual Studio kliknij prawym przyciskiem myszy projekt i wybierając polecenie **Publikuj** w menu skrótów.
-* Z .NET Core CLI.
+* W programie Visual Studio, klikając prawym przyciskiem myszy projekt i wybierając **polecenie Publikuj** w menu skrótów.
+* Z interfejsu wiersza polecenia .NET Core.
 
-Podczas publikowania aplikacji .NET Core można utworzyć wdrożenie *zależne od struktury* lub wdrożenie *niezależne.* Wdrożenia zależne od struktury wymagają zainstalowania udostępnionego serwera .NET Core na hoście, na którym są uruchamiane. Niezależne wdrożenia są publikowane z pełną kopią programu runtime i struktury programu .NET Core i można je uruchamiać na dowolnym hoście. Aby uzyskać więcej informacji, w tym zalety i wady każdego podejścia, zobacz .NET Core dokumentacji [wdrażania aplikacji.](../../core/deploying/index.md)
+Podczas publikowania aplikacji .NET Core można utworzyć wdrożenie *zależne od struktury* lub *samodzielne* wdrożenie. Wdrożenia zależne od struktury wymagają instalowany współdzielony czas wykonywania .NET Core na hoście, na którym są uruchamiane. Samodzielne wdrożenia są publikowane z pełną kopią środowiska uruchomieniowego i struktury .NET Core i mogą być uruchamiane na dowolnym hoście. Aby uzyskać więcej informacji, w tym zalety i wady każdego podejścia, zobacz dokumentację [wdrażania aplikacji .NET Core.](../../core/deploying/index.md)
 
-Aby opublikować niezależną kompilację aplikacji, która nie wymaga zainstalowania programu .NET Core 3.0 na hoście, należy określić czas uruchomieniowy, który ma zostać dołączony do aplikacji. Użyj `-r` flagi `--runtime`(lub ) .
+Aby opublikować niezależną kompilację aplikacji, która nie wymaga zainstalowania środowiska uruchomieniowego .NET Core 3.0 na hoście, należy określić środowisko wykonawcze, które ma zostać dołączone do aplikacji. Użyj `-r` flagi `--runtime`(lub).
 
 ```dotnetcli
 dotnet publish -c Release -r win-x64 -o ./publish
 ```
 
-Aby opublikować kompilacji zależnej `-r` od struktury, pominąć flagę.
+Aby opublikować kompilację zależną `-r` od struktury, pomiń flagę.
 
 ```dotnetcli
 dotnet publish -c Release -o ./publish
 ```
 
-Skopiuj pełną `publish` zawartość katalogu do folderu instalacyjnego. Następnie użyj [narzędzia sc,](/windows/desktop/services/controlling-a-service-using-sc) aby utworzyć usługę systemu Windows dla pliku wykonywalnego.
+Skopiuj `publish` pełną zawartość katalogu do folderu instalacyjnego. Następnie użyj [narzędzia sc,](/windows/desktop/services/controlling-a-service-using-sc) aby utworzyć usługę systemu Windows dla pliku wykonywalnego.
 
 ```console
 sc create MyService binPath=C:\MyService\MyService.exe
 ```
 
-### <a name="log-to-the-windows-event-log"></a>Rejestrowanie w dzienniku zdarzeń systemu Windows
+### <a name="log-to-the-windows-event-log"></a>Logowanie do dziennika zdarzeń systemu Windows
 
-Metoda `UseWindowsService` automatycznie dodaje dostawcę [rejestrowania,](/aspnet/core/fundamentals/logging/) który zapisuje komunikaty dziennika do dziennika zdarzeń systemu Windows. Rejestrowanie dla tego dostawcy można `EventLog` skonfigurować, `Logging` dodając `appsettings.json` wpis do sekcji lub innego źródła konfiguracji.
+Metoda `UseWindowsService` automatycznie dodaje dostawcę [rejestrowania,](/aspnet/core/fundamentals/logging/) który zapisuje komunikaty dziennika do dziennika zdarzeń systemu Windows. Rejestrowanie dla tego dostawcy można skonfigurować, dodając `EventLog` wpis do `Logging` sekcji `appsettings.json` lub innego źródła konfiguracji.
 
-Można zastąpić nazwę źródłową używaną w dzienniku zdarzeń, ustawiając `SourceName` właściwość w tych ustawieniach. Jeśli nie określisz nazwy, zostanie użyta domyślna nazwa aplikacji (zwykle nazwa zestawu wykonywalnego).
+Nazwę źródła używaną w dzienniku zdarzeń można `SourceName` zastąpić, ustawiając właściwość w tych ustawieniach. Jeśli nie określisz nazwy, zostanie użyta domyślna nazwa aplikacji (zwykle nazwa zestawu wykonywalnego).
 
 Więcej informacji na temat rejestrowania znajduje się na końcu tego rozdziału.
 
-## <a name="run-your-app-as-a-linux-service-with-systemd"></a>Uruchom aplikację jako usługę Linux z systememd
+## <a name="run-your-app-as-a-linux-service-with-systemd"></a>Uruchamianie aplikacji jako usługi Linux za pomocą systemu
 
-Aby skonfigurować aplikację ASP.NET Core do uruchamiania jako usługa Systemu Linux (lub *daemon* w żargonie systemu Linux), zainstaluj pakiet [Microsoft.Extensions.Hosting.Systemd](https://www.nuget.org/packages/Microsoft.Extensions.Hosting.Systemd) z NuGet. Następnie dodaj wywołanie `UseSystemd` `CreateHostBuilder` do `Program.cs`metody w pliku .
+Aby skonfigurować aplikację ASP.NET Core do uruchamiania jako usługa Linux (lub *demona* w żargonie systemu Linux), zainstaluj pakiet [Microsoft.Extensions.Hosting.Systemd](https://www.nuget.org/packages/Microsoft.Extensions.Hosting.Systemd) z NuGet. Następnie dodaj wywołanie `UseSystemd` `CreateHostBuilder` do `Program.cs`metody w pliku .
 
 ```csharp
 public static IHostBuilder CreateHostBuilder(string[] args) =>
@@ -80,18 +80,18 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 ```
 
 > [!NOTE]
-> Jeśli aplikacja nie jest uruchomiona jako `UseSystemd` usługa Systemu Linux, metoda nic nie robi.
+> Jeśli aplikacja nie jest uruchomiona jako usługa `UseSystemd` Linux, metoda nie robi nic.
 
-Teraz opublikuj aplikację. Aplikacja może być zależna od struktury lub niezależna dla odpowiedniego uruchomienia `linux-x64`systemu Linux (na przykład). Można opublikować przy użyciu jednej z następujących metod:
+Teraz opublikuj aplikację. Aplikacja może być zależna od struktury lub niezależna dla odpowiedniego środowiska `linux-x64`wykonawczego systemu Linux (na przykład ). Można publikować przy użyciu jednej z następujących metod:
 
-* W programie Visual Studio kliknij prawym przyciskiem myszy projekt i wybierając polecenie **Publikuj** w menu skrótów.
-* Z polecenia CLI .NET Core przy użyciu następującego polecenia:
+* W programie Visual Studio, klikając prawym przyciskiem myszy projekt i wybierając **polecenie Publikuj** w menu skrótów.
+* Z interfejsu wiersza polecenia .NET Core, za pomocą następującego polecenia:
 
   ```dotnetcli
   dotnet publish -c Release -r linux-x64 -o ./publish
   ```
   
-Skopiuj pełną `publish` zawartość katalogu do folderu instalacyjnego na hoście systemu Linux. Rejestracja usługi wymaga specjalnego pliku, zwanego *plikiem jednostki,* który ma zostać dodany do `/etc/systemd/system` katalogu. Do utworzenia pliku w tym folderze potrzebne jest uprawnienie administratora. Nazwij plik identyfikatorem, `systemd` którego chcesz `.service` użyć, i rozszerzeniem. Użyj na przykład nazwy `/etc/systemd/system/myapp.service`.
+Skopiuj `publish` pełną zawartość katalogu do folderu instalacyjnego na hoście systemu Linux. Rejestracja usługi wymaga specjalnego pliku, zwanego *plikiem jednostkowym,* który ma zostać dodany do `/etc/systemd/system` katalogu. Aby utworzyć plik w tym folderze, musisz mieć uprawnienia administratora. Nazwij plik identyfikatorem, `systemd` którego chcesz `.service` użyć, i rozszerzeniem. Użyj na przykład nazwy `/etc/systemd/system/myapp.service`.
 
 Plik usługi używa formatu INI, jak pokazano w tym przykładzie:
 
@@ -107,9 +107,9 @@ ExecStart=/usr/sbin/myapp
 WantedBy=multi-user.target
 ```
 
-Właściwość `Type=notify` informuje, `systemd` że aplikacja powiadomi go podczas uruchamiania i zamykania. Ustawienie `WantedBy=multi-user.target` spowoduje uruchomienie usługi, gdy system Linux osiągnie "poziom uruchamiania 2", co oznacza, że niegraficzna powłoka dla wielu użytkowników jest aktywna.
+Właściwość `Type=notify` `systemd` informuje, że aplikacja powiadomi go podczas uruchamiania i zamykania. Ustawienie `WantedBy=multi-user.target` spowoduje uruchomienie usługi, gdy system Linux osiągnie "runlevel 2", co oznacza, że aktywna jest powłoka niegraficzną, wielouchwytowa.
 
-Zanim `systemd` rozpozna usługę, musi ponownie załadować jej konfigurację. Kontroluj `systemd` za `systemctl` pomocą polecenia. Po ponownym załadowaniu `status` użyj podpolecenia, aby potwierdzić, że aplikacja została pomyślnie zarejestrowana.
+Zanim `systemd` rozpozna usługę, musi ponownie załadować jej konfigurację. Można `systemd` kontrolować za `systemctl` pomocą polecenia. Po ponownym załadowaniu `status` użyj podpokazu, aby potwierdzić, że aplikacja została pomyślnie zarejestrowana.
 
 ```console
 sudo systemctl daemon-reload
@@ -131,45 +131,45 @@ sudo systemctl start myapp.service
 ```
 
 > [!TIP]
-> Rozszerzenie `.service` jest opcjonalne, gdy `systemctl start`używasz .
+> Rozszerzenie `.service` jest opcjonalne podczas `systemctl start`korzystania z programu .
 
-Aby `systemd` poinformować, aby uruchomić usługę automatycznie `enable` podczas uruchamiania systemu, użyj polecenia.
+Aby `systemd` poinformować o automatycznym uruchomieniu usługi `enable` podczas uruchamiania systemu, użyj polecenia.
 
 ```console
 sudo systemctl enable myapp
 ```
 
-### <a name="log-to-journald"></a>Rejestrowanie do dziennika
+### <a name="log-to-journald"></a>Zaloguj się do dziennika
 
-Linux odpowiednik dziennika zdarzeń `journald`systemu Windows jest , ustrukturyzowanej usługi systemu rejestrowania, który jest częścią `systemd`. Wiadomości dziennika zapisane do standardowego wyjścia przez daemon `journald`Linux są automatycznie zapisywane do . Aby skonfigurować poziomy rejestrowania, należy użyć `Console` sekcji konfiguracji rejestrowania. Metoda `UseSystemd` konstruktora hostów automatycznie konfiguruje format wyjściowy konsoli do obsługi arkusza.
+Linux odpowiednik dziennika zdarzeń systemu `journald`Windows jest, ustrukturyzowała usługa `systemd`systemu rejestrowania, który jest częścią . Komunikaty dziennika zapisane na standardowym wyjściu przez demona `journald`Linuksa są automatycznie zapisywane na . Aby skonfigurować poziomy rejestrowania, należy użyć `Console` sekcji konfiguracji rejestrowania. Metoda `UseSystemd` konstruktora hostów automatycznie konfiguruje format wyjściowy konsoli do arkusza.
 
-Ponieważ `journald` jest to standard dla dzienników Linuksa, różne narzędzia integrują się z nim. Dzienniki można łatwo `journald` kierować z ewnętrznego systemu rejestrowania. Pracując lokalnie na hoście, `journalctl` można użyć polecenia do wyświetlania dzienników z wiersza polecenia.
+Ponieważ `journald` jest to standard dla dzienników Linuksa, wiele narzędzi integruje się z nim. Dzienniki można łatwo `journald` rozsyłać z zewnętrznego systemu rejestrowania. Pracując lokalnie na hoście, `journalctl` można użyć polecenia do wyświetlania dzienników z wiersza polecenia.
 
 ```console
 sudo journalctl -u myapp
 ```
 
 > [!TIP]
-> Jeśli masz środowisko graficzne dostępne na hoście, dla systemu Linux dostępnych jest kilka graficznych dzienników, takich jak *QJournalctl* i *gnome-logi.*
+> Jeśli masz środowisko GUI dostępne na swoim hoście, kilka graficznych widzów dziennika są dostępne dla Linuksa, takich jak *QJournalctl* i *gnome-logs*.
 
-Aby dowiedzieć się więcej `systemd` o śledzeniu `journalctl`dziennika z wiersza polecenia za pomocą , zobacz [strony osoby .](https://manpages.debian.org/buster/systemd/journalctl.1)
+Aby dowiedzieć się `systemd` więcej na temat wykonywania `journalctl`zapytań do arkusza z wiersza polecenia za pomocą programu , zobacz [strony manpages](https://manpages.debian.org/buster/systemd/journalctl.1).
 
 ## <a name="https-certificates-for-self-hosted-applications"></a>Certyfikaty HTTPS dla aplikacji hostowanych samodzielnie
 
-Podczas uruchamiania aplikacji gRPC w środowisku produkcyjnym należy użyć certyfikatu TLS z zaufanego urzędu certyfikacji (CA). Ten urząd certyfikacji może być publicznym urządem certyfikacji lub wewnętrznym urządem certyfikacji organizacji.
+Podczas uruchamiania aplikacji gRPC w produkcji należy użyć certyfikatu TLS z zaufanego urzędu certyfikacji (CA). Ten urząd certyfikacji może być urzędem certyfikacji lub wewnętrznym urzędem certyfikacji dla organizacji.
 
-Na hostach systemu Windows certyfikat można załadować z <xref:System.Security.Cryptography.X509Certificates.X509Store> bezpiecznego [magazynu certyfikatów](/windows/win32/seccrypto/managing-certificates-with-certificate-stores) przy użyciu tej klasy. Można również użyć `X509Store` klasy z magazynu kluczy OpenSSL na niektórych hostach systemu Linux.
+Na hostach systemu Windows można załadować certyfikat z <xref:System.Security.Cryptography.X509Certificates.X509Store> bezpiecznego magazynu [certyfikatów](/windows/win32/seccrypto/managing-certificates-with-certificate-stores) przy użyciu klasy. Można również użyć `X509Store` klasy z magazynu kluczy OpenSSL na niektórych hostach systemu Linux.
 
-Certyfikaty można również tworzyć przy użyciu jednego z [konstruktorów X509Certificate2,](xref:System.Security.Cryptography.X509Certificates.X509Certificate2.%23ctor%2A)z jednego z:
+Certyfikaty można również tworzyć przy użyciu jednego z [konstruktorów X509Certificate2](xref:System.Security.Cryptography.X509Certificates.X509Certificate2.%23ctor%2A), z:
 
 * Plik, taki jak `.pfx` plik chroniony silnym hasłem
-* Dane binarne pobrane z bezpiecznej usługi magazynu, takiej jak [Usługa Azure Key Vault](https://azure.microsoft.com/services/key-vault/)
+* Dane binarne pobrane z bezpiecznej usługi pamięci masowej, takiej jak [Usługa Azure Key Vault](https://azure.microsoft.com/services/key-vault/)
 
-Kestrel można skonfigurować tak, aby używał certyfikatu na dwa sposoby: od konfiguracji lub w kodzie.
+Kestrel można skonfigurować tak, aby używała certyfikatu na dwa sposoby: z konfiguracji lub kodu.
 
 ### <a name="set-https-certificates-by-using-configuration"></a>Ustawianie certyfikatów HTTPS przy użyciu konfiguracji
 
-Podejście konfiguracyjne wymaga ustawienia `.pfx` ścieżki do pliku certyfikatu i hasła w sekcji konfiguracji kestrel. W `appsettings.json`, że będzie wyglądać tak:
+Podejście konfiguracji wymaga ustawienia ścieżki `.pfx` do pliku certyfikatu i hasła w sekcji konfiguracji Pustułka. W `appsettings.json`, które wyglądają tak:
 
 ```json
 {
@@ -184,14 +184,14 @@ Podejście konfiguracyjne wymaga ustawienia `.pfx` ścieżki do pliku certyfikat
 }
 ```
 
-Podaj hasło przy użyciu bezpiecznego źródła konfiguracji, takiego jak Usługa Azure Key Vault lub Hashicorp Vault.
+Podaj hasło przy użyciu bezpiecznego źródła konfiguracji, takiego jak Azure Key Vault lub Hashicorp Vault.
 
 > [!IMPORTANT]
 > Nie przechowuj niezaszyfrowanych haseł w plikach konfiguracyjnych.
 
 ### <a name="set-https-certificates-in-code"></a>Ustawianie certyfikatów HTTPS w kodzie
 
-Aby skonfigurować protokół HTTPS na kestrel `IWebHostBuilder` w `Program` kodzie, należy użyć `ConfigureKestrel` metody w klasie.
+Aby skonfigurować https na Kestrel `ConfigureKestrel` w `IWebHostBuilder` kodzie, należy użyć metody w `Program` klasie.
 
 ```csharp
 public static IHostBuilder CreateHostBuilder(string[] args) =>
@@ -209,7 +209,7 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
         });
 ```
 
-Ponownie pamiętaj, aby zapisać hasło `.pfx` do pliku i pobrać go z bezpiecznego źródła konfiguracji.
+Ponownie należy zapisać hasło `.pfx` do pliku i pobrać je z bezpiecznego źródła konfiguracji.
 
 >[!div class="step-by-step"]
 >[Poprzedni](grpc-in-production.md)

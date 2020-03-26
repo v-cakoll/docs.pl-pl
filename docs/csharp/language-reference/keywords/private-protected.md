@@ -1,28 +1,26 @@
 ---
-title: chronione prywatne — odwołanie do języka C#
+title: private protected - C# Reference
 ms.date: 11/15/2017
 author: sputier
-ms.openlocfilehash: a73d61712075cf24d2b94c505104df1fade629e9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 01a8b716ce87a63a50a92a25b2842f7bb12d4c9f
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713212"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134365"
 ---
-# <a name="private-protected-c-reference"></a>chronione prywatne (odwołanie do języka C#)
+# <a name="private-protected-c-reference"></a>private protected (c# Reference)
 
-Kombinacja `private protected` słów kluczowych jest modyfikatorem dostępu do elementów członkowskich. Prywatny chroniony element członkowski jest dostępny przez typy pochodzące z klasy zawierającej, ale tylko w jego zestawie zawierającym. Aby porównać `private protected` inne modyfikatory dostępu, zobacz [Poziomy ułatwień dostępu](accessibility-levels.md).
+Kombinacja `private protected` słów kluczowych jest modyfikatorem dostępu do członków. Prywatny chroniony element członkowski jest dostępny dla typów pochodzących z klasy zawierającej, ale tylko w ramach jego zestawu zawierającego. Aby zapoznać `private protected` się z innymi modyfikatorami dostępu, zobacz [Poziomy ułatwień dostępu](accessibility-levels.md).
 
 > [!NOTE]
-> Modyfikator `private protected` dostępu jest prawidłowy w wersji C# 7.2 i nowszych.
+> Modyfikator `private protected` dostępu jest prawidłowy w języku C# w wersji 7.2 i nowszych.
 
 ## <a name="example"></a>Przykład
 
-Prywatny chroniony element członkowski klasy podstawowej jest dostępny z typów pochodnych w jego zestawie zawierającym tylko wtedy, gdy typ statyczny zmiennej jest typem klasy pochodnej. Rozważmy na przykład następujący segment kodu:  
+Prywatny chroniony element członkowski klasy podstawowej jest dostępny z typów pochodnych w zestawie zawierającym tylko wtedy, gdy typ statyczny zmiennej jest typem klasy pochodnej. Rozważmy na przykład następujący segment kodu:  
 
 ```csharp
-// Assembly1.cs  
-// Compile with: /target:library  
 public class BaseClass
 {
     private protected int myValue = 0;
@@ -58,11 +56,11 @@ class DerivedClass2 : BaseClass
 }
 ```
 
-W tym przykładzie `Assembly1.cs` znajdują `Assembly2.cs`się dwa pliki i .
-Pierwszy plik zawiera publiczną `BaseClass`klasę podstawową i typ `DerivedClass1`pochodzący z niej. `BaseClass`jest właścicielem prywatnego `myValue`chronionego `DerivedClass1` elementu członkowskiego, który próbuje uzyskać dostęp na dwa sposoby. Pierwsza próba dostępu `myValue` za pośrednictwem wystąpienia `BaseClass` spowoduje błąd. Jednak próba użycia go jako dziedziczonego `DerivedClass1` elementu członkowskiego w zakończy się pomyślnie.
-W drugim pliku próba dostępu `myValue` jako dziedziczony element członkowski `DerivedClass2` spowoduje błąd, ponieważ jest dostępny tylko przez typy pochodne w Assembly1.
+W tym przykładzie `Assembly1.cs` `Assembly2.cs`znajdują się dwa pliki i .
+Pierwszy plik zawiera publiczną `BaseClass`klasę podstawową i typ `DerivedClass1`pochodną. `BaseClass`jest właścicielem prywatnego chronionego `myValue` `DerivedClass1` członka, który próbuje uzyskać dostęp na dwa sposoby. Pierwsza próba uzyskania `myValue` dostępu za `BaseClass` pośrednictwem wystąpienia spowoduje błąd. Jednak próba użycia go jako dziedziczonego `DerivedClass1` elementu członkowskiego w zakończy się pomyślnie.
+W drugim pliku próba dostępu `myValue` jako dziedziczony `DerivedClass2` element członkowski spowoduje błąd, ponieważ jest dostępny tylko dla typów pochodnych w Assembly1.
 
-Elementy członkowskie struktury `private protected` nie mogą być, ponieważ struktura nie może być dziedziczona.  
+Struct elementów `private protected` członkowskich nie może być, ponieważ struktura nie może być dziedziczona.  
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
@@ -71,12 +69,12 @@ Elementy członkowskie struktury `private protected` nie mogą być, ponieważ s
 ## <a name="see-also"></a>Zobacz też
 
 - [Odwołanie do języka C#](../index.md)
-- [Przewodnik programowania języka C#](../../programming-guide/index.md)
-- [Słowa kluczowe języka C#](index.md)
+- [C# Przewodnik programowania](../../programming-guide/index.md)
+- [C# Słowa kluczowe](index.md)
 - [Modyfikatory dostępu](access-modifiers.md)
 - [Poziomy ułatwień dostępu](accessibility-levels.md)
 - [Modyfikatory](index.md)
 - [Publicznego](public.md)
 - [Prywatny](private.md)
 - [Wewnętrznego](internal.md)
-- [Obawy dotyczące zabezpieczeń wewnętrznych wirtualnych słów kluczowych](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100))
+- [Kwestie bezpieczeństwa wewnętrznych wirtualnych słów kluczowych](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100))

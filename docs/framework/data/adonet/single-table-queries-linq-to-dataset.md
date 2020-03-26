@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b74bcf8-3f87-449f-bff7-6bcb0d69d212
-ms.openlocfilehash: 7bb8d8e19ac9cf36eabc061ceba9c649b8a4cc00
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 89c90fd217285fac449aba40682aa947fcfb3a07
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148975"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249093"
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>Kwerendy jednostołowe (LINQ do DataSet)
 Zapytania zintegrowane z językiem (LINQ) działają na <xref:System.Collections.Generic.IEnumerable%601> źródłach <xref:System.Linq.IQueryable%601> danych, które implementują interfejs lub interfejs. Klasa <xref:System.Data.DataTable> nie implementuje żadnego interfejsu, więc <xref:System.Data.DataTableExtensions.AsEnumerable%2A> należy wywołać metodę, jeśli chcesz użyć <xref:System.Data.DataTable> jako źródło w `From` klauzuli kwerendy LINQ.  
@@ -26,7 +26,7 @@ Zapytania zintegrowane z językiem (LINQ) działają na <xref:System.Collections
   
  Pętla `foreach` następnie wylicza wyliczany `Select` obiekt wyliczany przez i daje wyniki kwerendy. Ponieważ kwerenda <xref:System.Linq.Enumerable> jest typem, który implementuje, <xref:System.Collections.Generic.IEnumerable%601>ocena kwerendy jest odroczona, dopóki `foreach` zmienna kwerendy nie zostanie przesuń iterowana przy użyciu pętli. Odroczona ocena kwerendy umożliwia kwerendy, które mają być przechowywane jako wartości, które mogą być oceniane wiele razy, za każdym razem dając potencjalnie różne wyniki.  
   
- Metoda <xref:System.Data.DataRowExtensions.Field%2A> zapewnia dostęp do wartości <xref:System.Data.DataRow> kolumn <xref:System.Data.DataRowExtensions.SetField%2A> a i (nie pokazano w poprzednim <xref:System.Data.DataRow>przykładzie) ustawia wartości kolumn w . Zarówno <xref:System.Data.DataRowExtensions.Field%2A> metoda, <xref:System.Data.DataRowExtensions.SetField%2A> jak i metoda obsługują typy nullable, więc nie trzeba jawnie sprawdzić wartości null. Obie metody są również metody ogólne, co oznacza, że nie trzeba rzutować typu zwracany. Można użyć istniejącego akcesora kolumny <xref:System.Data.DataRow> `o["OrderDate"]`w (na przykład ), ale w ten sposób wymagałoby to rzutowania obiektu zwracany do odpowiedniego typu.  Jeśli kolumna jest nullable trzeba sprawdzić, czy wartość <xref:System.Data.DataRow.IsNull%2A> jest null przy użyciu metody. Aby uzyskać więcej informacji, zobacz [Ogólne pola i Metody Pola Zestawu](generic-field-and-setfield-methods-linq-to-dataset.md).  
+ Metoda <xref:System.Data.DataRowExtensions.Field%2A> zapewnia dostęp do wartości <xref:System.Data.DataRow> kolumn <xref:System.Data.DataRowExtensions.SetField%2A> a i (nie pokazano w poprzednim <xref:System.Data.DataRow>przykładzie) ustawia wartości kolumn w . Zarówno <xref:System.Data.DataRowExtensions.Field%2A> metoda, <xref:System.Data.DataRowExtensions.SetField%2A> jak i metoda obsługują typy wartości nullable, więc nie trzeba jawnie sprawdzić wartości null. Obie metody są również metody ogólne, co oznacza, że nie trzeba rzutować typu zwracany. Można użyć istniejącego akcesora kolumny <xref:System.Data.DataRow> `o["OrderDate"]`w (na przykład ), ale w ten sposób wymagałoby to rzutowania obiektu zwracany do odpowiedniego typu.  Jeśli kolumna jest typu wartości nullable trzeba sprawdzić, czy <xref:System.Data.DataRow.IsNull%2A> wartość jest null przy użyciu metody. Aby uzyskać więcej informacji, zobacz [Ogólne pola i Metody Pola Zestawu](generic-field-and-setfield-methods-linq-to-dataset.md).  
   
  Należy zauważyć, że typ danych `T` określony <xref:System.Data.DataRowExtensions.Field%2A> w <xref:System.Data.DataRowExtensions.SetField%2A> parametrze ogólnym metody i metody <xref:System.InvalidCastException> musi odpowiadać typowi wartości podstawowej lub zostanie zgłoszony. Określona nazwa kolumny musi również odpowiadać <xref:System.Data.DataSet> nazwie <xref:System.ArgumentException> kolumny w lub zostanie rzucona. W obu przypadkach wyjątek jest generowany w czasie wykonywania wyliczenia danych podczas wykonywania kwerendy.  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: 3c21ae3d00aa9f1b48a89650430b89ceccb2a1b7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 05847271cf82739a6a0b609771043c02a7ffc0e9
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186015"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291588"
 ---
 # <a name="graphics-rendering-tiers"></a>Poziomy zmiany grafiki
 Warstwa renderowania definiuje poziom możliwości sprzętu graficznego i wydajności [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dla urządzenia, które uruchamia aplikację.  
@@ -45,7 +45,7 @@ Warstwa renderowania definiuje poziom możliwości sprzętu graficznego i wydajn
 ### <a name="rendering-tier-0"></a>Renderowanie poziomu 0  
  Wartość warstwy renderowania 0 oznacza, że nie ma żadnych akceleracji sprzętu graficznego dostępne dla aplikacji na urządzeniu. Na tym poziomie warstwy należy założyć, że wszystkie grafiki będą renderowane przez oprogramowanie bez przyspieszenia sprzętowego. Funkcjonalność tej warstwy odpowiada wersji DirectX, która jest mniejsza niż 9.0.  
   
-### <a name="rendering-tier-1-and-rendering-tier-2"></a>Renderowanie warstwy 1 i renderowania poziomu 2  
+### <a name="rendering-tier-1-and-rendering-tier-2"></a>Renderowanie warstwy 1 i renderowania poziomu 2
   
 > [!NOTE]
 > Począwszy od programu .NET Framework 4 renderowanie warstwy 1 zostało ponownie zdefiniowane, aby uwzględnić tylko sprzęt graficzny obsługujący technologię DirectX 9.0 lub większą. Sprzęt graficzny obsługujący technologię DirectX 7 lub 8 jest teraz definiowany jako renderowanie w warstwie 0.  
@@ -57,7 +57,7 @@ Warstwa renderowania definiuje poziom możliwości sprzętu graficznego i wydajn
 |Funkcja|Warstwa 1|Warstwa 2|  
 |-------------|------------|------------|  
 |Wersja DirectX|Musi być większa lub równa 9.0.|Musi być większa lub równa 9.0.|  
-|Pamięć RAM wideo|Musi być większa lub równa 60MB.|Musi być większa lub równa 120MB.|  
+|Pamięć RAM wideo|Musi być większa lub równa 60 MB.|Musi być większa lub równa 120 MB.|  
 |Moduł cieniujący pikseli|Poziom wersji musi być większy lub równy 2.0.|Poziom wersji musi być większy lub równy 2.0.|  
 |Moduł cieniujący wierzchołków|Bez wymogu.|Poziom wersji musi być większy lub równy 2.0.|  
 |Jednostki multiteksturowe|Bez wymogu.|Liczba jednostek musi być większa lub równa 4.|  
@@ -72,7 +72,7 @@ Warstwa renderowania definiuje poziom możliwości sprzętu graficznego i wydajn
 |Mapowanie 3D MIP|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]podczas renderowania zawartości 3D. Mapowanie MIP poprawia jakość renderowania tekstur, gdy tekstura zajmuje <xref:System.Windows.Controls.Viewport3D>mniejsze pole widzenia w pliku .|  
 |Gradienty promieniowe|Podczas gdy obsługiwane, należy <xref:System.Windows.Media.RadialGradientBrush> unikać używania na dużych obiektów.|  
 |Obliczenia oświetlenia 3D|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]wykonuje oświetlenie na wierzchołek, co oznacza, że natężenie światła musi być obliczone na każdym wierzchołku dla każdego materiału zastosowanego do siatki.|  
-|Renderowanie tekstu|Renderowanie czcionek subpikseli wykorzystuje dostępne moduły cieniujące piksele na sprzęcie graficznym.|  
+|Renderowanie tekstu|Renderowanie czcionek subpikselowych wykorzystuje dostępne moduły cieniujące piksele na sprzęcie graficznym.|  
   
  Następujące funkcje i możliwości są przyspieszane sprzętowo tylko do renderowania warstwy 2:  
   
@@ -101,7 +101,7 @@ Warstwa renderowania definiuje poziom możliwości sprzętu graficznego i wydajn
 |Ustawienie|Opis|  
 |-------------|-----------------|  
 |**Wyłącz opcję przyspieszenia sprzętowego**|Określa, czy ma być włączone przyspieszanie sprzętowe.|  
-|**Maksymalna wartość multipróbki**|Określa stopień wielowymirzalania dla antyaliasing 3-W zawartości.|  
+|**Maksymalna wartość multipróbki**|Określa stopień wielowymirzania dla antyaliasing zawartości 3D.|  
 |**Wymagane ustawienie daty sterownika wideo**|Określa, czy system wyłącza akcelerację sprzętową dla sterowników wydanych przed listopadem 2004 r.|  
 |**Użyj opcji rasteryzatora referencyjnego**|Określa, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] czy należy używać rasteryzatora referencyjnego.|  
   
@@ -124,7 +124,7 @@ Warstwa renderowania definiuje poziom możliwości sprzętu graficznego i wydajn
   
  Po uruchomieniu narzędzia diagnostycznego DirectX okno główne zawiera zestaw kart umożliwiających wyświetlanie i diagnozowanie informacji związanych z funkcją DirectX. Na przykład karta **System** zawiera informacje o systemie o komputerze i określa wersję programu DirectX zainstalowaną na komputerze.  
   
- ![Screenhot: Narzędzie diagnostyczne DirectX](./media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
+ ![Zrzut ekranu: Narzędzie diagnostyczne DirectX](./media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
 Okno główne narzędzia diagnostycznego DirectX  
   
 ## <a name="see-also"></a>Zobacz też

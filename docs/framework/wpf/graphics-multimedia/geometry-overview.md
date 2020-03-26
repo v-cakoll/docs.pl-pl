@@ -8,19 +8,19 @@ helpviewer_keywords:
 - geometry classes [WPF]
 - graphics [WPF], geometry classes
 ms.assetid: 9fba8934-98b7-4af6-82f6-f4ef887f963a
-ms.openlocfilehash: 1329f26e588b90fcd25052fb805058915b8825e3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ff42e59edd9d98b0b52dc3bdd3ace0c35df60878
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186473"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112378"
 ---
 # <a name="geometry-overview"></a>Przegląd Geometria
 W tym przeglądzie [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Media.Geometry> opisano sposób używania klas do opisywania kształtów. W tym temacie kontrastuje <xref:System.Windows.Media.Geometry> również <xref:System.Windows.Shapes.Shape> różnice między obiektami i elementami.  
 
 <a name="wcpsdk_graphics_geometry_introduction"></a>
 ## <a name="what-is-a-geometry"></a>Co to jest geometria?  
- Klasa <xref:System.Windows.Media.Geometry> i klasy, które się z <xref:System.Windows.Media.EllipseGeometry>niej <xref:System.Windows.Media.PathGeometry>wywodzą, takie jak , i <xref:System.Windows.Media.CombinedGeometry>, umożliwiają opisanie geometrii kształtu 2-W. Te geometryczne opisy mają wiele zastosowań, takich jak definiowanie kształtu do malowania na ekranie lub definiowanie regionów testu trafień i klipów. Można nawet użyć geometrii do zdefiniowania ścieżki animacji.  
+ Klasa <xref:System.Windows.Media.Geometry> i klasy, które się z <xref:System.Windows.Media.EllipseGeometry>niej <xref:System.Windows.Media.PathGeometry>wywodzą, takie jak , i <xref:System.Windows.Media.CombinedGeometry>, umożliwiają opisanie geometrii kształtu 2D. Te geometryczne opisy mają wiele zastosowań, takich jak definiowanie kształtu do malowania na ekranie lub definiowanie regionów testu trafień i klipów. Można nawet użyć geometrii do zdefiniowania ścieżki animacji.  
   
  <xref:System.Windows.Media.Geometry>obiekty mogą być proste, takie jak prostokąty i okręgi, lub kompozytowe, utworzone z dwóch lub więcej obiektów geometrii.  Bardziej złożone geometrie można tworzyć <xref:System.Windows.Media.PathGeometry> <xref:System.Windows.Media.StreamGeometry> przy użyciu klas i, które umożliwiają opisywanie łuków i krzywych.  
   
@@ -28,11 +28,11 @@ W tym przeglądzie [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla
   
 <a name="wcpsdk_graphics_geometry_geometryandshapes"></a>
 ## <a name="geometries-vs-shapes"></a>Geometrie a kształty  
- Klasy <xref:System.Windows.Media.Geometry> <xref:System.Windows.Shapes.Shape> i klasy wydają się podobne, ponieważ oba opisują kształty 2-W (porównaj <xref:System.Windows.Media.EllipseGeometry> i <xref:System.Windows.Shapes.Ellipse> na przykład), ale istnieją istotne różnice.  
+ Klasy <xref:System.Windows.Media.Geometry> <xref:System.Windows.Shapes.Shape> i klasy wydają się podobne, ponieważ oba <xref:System.Windows.Media.EllipseGeometry> opisują kształty 2D (porównaj i <xref:System.Windows.Shapes.Ellipse> na przykład), ale istnieją istotne różnice.  
   
  Po pierwsze, <xref:System.Windows.Media.Geometry> klasa dziedziczy <xref:System.Windows.Freezable> z <xref:System.Windows.Shapes.Shape> klasy, podczas <xref:System.Windows.FrameworkElement>gdy klasa dziedziczy z . Ponieważ są one <xref:System.Windows.Shapes.Shape> elementami, obiekty mogą renderować <xref:System.Windows.Media.Geometry> się i uczestniczyć w systemie układu, podczas gdy obiekty nie mogą.  
   
- Chociaż <xref:System.Windows.Shapes.Shape> obiekty są łatwiej dostępne <xref:System.Windows.Media.Geometry> do <xref:System.Windows.Media.Geometry> użytku niż obiekty, obiekty są bardziej wszechstronne. Podczas <xref:System.Windows.Shapes.Shape> gdy obiekt jest używany do renderowania <xref:System.Windows.Media.Geometry> grafiki 2-W, obiekt może służyć do definiowania regionu geometrycznego dla grafiki 2-W, definiowania regionu do przycinania lub definiowania regionu do testowania trafień, na przykład.  
+ Chociaż <xref:System.Windows.Shapes.Shape> obiekty są łatwiej dostępne <xref:System.Windows.Media.Geometry> do <xref:System.Windows.Media.Geometry> użytku niż obiekty, obiekty są bardziej wszechstronne. Podczas <xref:System.Windows.Shapes.Shape> gdy obiekt jest używany do renderowania grafiki 2D, <xref:System.Windows.Media.Geometry> obiekt może służyć do definiowania regionu geometrycznego dla grafiki 2D, definiowania regionu do przycinania lub definiowania regionu do testowania trafień, na przykład.  
   
 ### <a name="the-path-shape"></a>Kształt Ścieżka  
  Jeden <xref:System.Windows.Shapes.Shape>, <xref:System.Windows.Shapes.Path> klasa, faktycznie <xref:System.Windows.Media.Geometry> używa a do opisania jego zawartości. <xref:System.Windows.Shapes.Path.Data%2A> Ustawiając właściwość <xref:System.Windows.Shapes.Path> z <xref:System.Windows.Media.Geometry> a i <xref:System.Windows.Shapes.Shape.Fill%2A> <xref:System.Windows.Shapes.Shape.Stroke%2A> ustawiając jego i <xref:System.Windows.Media.Geometry>właściwości, można renderować program .  

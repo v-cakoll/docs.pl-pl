@@ -1,56 +1,56 @@
 ---
 title: Analizowanie tonacji przy użyciu interfejsu wiersza polecenia platformy ML.NET
-description: Automatyczne generowanie modelu ML i powiązanego kodu C# z przykładowego zestawu danych
+description: Automatyczne generowanie modelu ml i powiązanego kodu C# z przykładowego zestawu danych
 author: cesardl
 ms.author: cesardl
 ms.date: 12/23/2019
-ms.custom: mvc
-ms.topic: tutorial,mlnet-tooling
-ms.openlocfilehash: d817e173239d2848fb16e94cca8ead563bc900a5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.custom: mvc,mlnet-tooling
+ms.topic: tutorial
+ms.openlocfilehash: 2243aad0e787a3a594bde3dfa9884f104eab74e8
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79187622"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79546695"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>Analizowanie tonacji przy użyciu interfejsu wiersza polecenia platformy ML.NET
 
-Dowiedz się, jak używać ML.NET cli do automatycznego generowania modelu ML.NET i kodu c#. Zestaw danych i zadanie uczenia maszynowego, które chcesz zaimplementować, udostępniaj zestaw danych, a identyfikator CLI używa aparatu AutoML do tworzenia kodu źródłowego generacji i wdrażania modelu, a także modelu binarnego.
+Dowiedz się, jak używać ML.NET interfejsu wiersza polecenia do automatycznego generowania ML.NET modelu i podstawowego kodu języka C#. Należy podać zestaw danych i zadanie uczenia maszynowego, które chcesz zaimplementować, a cli używa aparatu AutoML do tworzenia generowania modelu i wdrażania kodu źródłowego, a także modelu binarnego.
 
-W tym samouczku wykonajnastępujące kroki:
+W tym samouczku wykonaj następujące czynności:
 > [!div class="checklist"]
 >
 > - Przygotowywanie danych do wybranego zadania uczenia maszynowego
-> - Uruchom polecenie "mlnet auto-train" z cli
-> - Przeglądanie wyników metryk jakości
-> - Zrozumienie wygenerowanego kodu C# do używania modelu w aplikacji
-> - Eksploruj wygenerowany kod Języka C#, który został użyty do nauczenia modelu
+> - Uruchom polecenie 'mlnet auto-train' z interfejsu wiersza polecenia
+> - Przejrzyj wyniki metryki jakości
+> - Zrozumienie wygenerowanego kodu języka C# w celu użycia modelu w aplikacji
+> - Eksploruj wygenerowany kod języka C#, który został użyty do przeszkolenia modelu
 
 > [!NOTE]
-> Ten temat odnosi się do narzędzia ML.NET CLI, które jest obecnie w wersji zapoznawczej, a materiał może ulec zmianie. Aby uzyskać więcej informacji, odwiedź stronę [ML.NET.](https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet)
+> Ten temat odnosi się do narzędzia ML.NET interfejsu wiersza polecenia, który jest obecnie w wersji zapoznawczej, a materiał może ulec zmianie. Aby uzyskać więcej informacji, odwiedź stronę [ML.NET.](https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet)
 
-ML.NET CLI jest częścią ML.NET, a jego głównym celem jest "demokratyzacji" ML.NET dla deweloperów .NET podczas uczenia się ML.NET więc nie trzeba kod od podstaw, aby rozpocząć.
+ML.NET interfejsu wiersza polecenia jest częścią ML.NET a jego głównym celem jest "demokratyzacja" ML.NET dla programistów platformy .NET podczas uczenia się ML.NET, więc nie trzeba kodować od podstaw, aby rozpocząć.
 
-Polecenia ML.NET wiersza polecenia można uruchomić na dowolnym wierszu polecenia (Windows, Mac lub Linux), aby wygenerować dobrej jakości modele ML.NET i kod źródłowy na podstawie podanych zestawów danych szkoleniowych.
+Interfejs wiersza polecenia ML.NET można uruchomić w dowolnym wierszu polecenia (Windows, Mac lub Linux), aby wygenerować dobrej jakości modele ML.NET i kod źródłowy na podstawie podanych zestawów danych szkoleniowych.
 
 ## <a name="pre-requisites"></a>Wymagania wstępne
 
-- [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2) lub nowszy
+- [Net Core 2.2 SDK lub nowszy](https://dotnet.microsoft.com/download/dotnet-core/2.2)
 - (Opcjonalnie) [Visual Studio 2017 lub 2019](https://visualstudio.microsoft.com/vs/)
 - [Interfejs wiersza polecenia struktury ML.NET](../how-to-guides/install-ml-net-cli.md)
 
-Można uruchomić wygenerowane projekty kodu C# z `dotnet run` programu Visual Studio lub (.NET Core CLI).
+Można uruchomić wygenerowane projekty kodu Języka C# `dotnet run` z programu Visual Studio lub z (.NET Core CLI).
 
 ## <a name="prepare-your-data"></a>Przygotowywanie danych
 
-Użyjemy istniejącego zestawu danych używanego w scenariuszu "Analiza tonacji", który jest zadaniem uczenia maszynowego klasyfikacji binarnej. Można użyć własnego zestawu danych w podobny sposób, a model i kod zostaną wygenerowane dla Ciebie.
+Będziemy używać istniejącego zestawu danych używanego w scenariuszu "Analiza tonacji", który jest zadaniem uczenia maszynowego klasyfikacji binarnej. Można użyć własnego zestawu danych w podobny sposób, a model i kod zostaną wygenerowane dla Ciebie.
 
-1. Pobierz [plik zip zestawu danych zestawu danych UCI Sentiment Labeled Sentences (zobacz cytaty w poniższej uwadze)](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)i rozpakuj go w dowolnym wybranym folderze.
+1. Pobierz [plik zip zestawu danych UCI Sentiment Labeled Sentences (patrz cytaty w poniższej notatce)](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)i rozpatruj go w dowolnym folderze.
 
     > [!NOTE]
-    > Zestawy danych w tym samouczku używa zestawu danych z "Od grupy do pojedynczych etykiet przy użyciu funkcji głębokich", Kotzias et al.The datasets this tutorial uses a dataset from the 'From Group to Individual Labels using Deep Features', Kotzias et al.The datasets this tutorial uses a dataset from the 'From Group to Individual Labels using Deep Features', Kotzias et al.The datasets this KDD 2015 i gościł w UCI Machine Learning Repozytorium - Dua, D. i Karra Taniskidou, E. (2017). Repozytorium uczenia maszynowegohttp://archive.ics.uci.edu/mlUCI [ ]. Irvine, Kalifornia: Uniwersytet Kalifornijski, Szkoła Informacji i Informatyki.
+    > Zestawy danych w tym samouczku używa zestawu danych z "Od grupy do poszczególnych etykiet przy użyciu funkcji głębokich", Kotzias et al.The datasets this tutorial uses a dataset from the 'From Group to Individual Labels using Deep Features', Kotzias et al,. KDD 2015 i gościł w repozytorium uczenia maszynowego UCI - Dua, D. i Karra Taniskidou, E. (2017). Repozytorium uczenia maszynowego UCI [ ].http://archive.ics.uci.edu/ml Irvine, CA: Uniwersytet Kalifornijski, Szkoła Informatyki i Informatyki.
 
-2. Skopiuj `yelp_labelled.txt` plik do dowolnego utworzonego wcześniej folderu `/cli-test`(np.
+2. Skopiuj `yelp_labelled.txt` plik do dowolnego folderu, który został wcześniej utworzony `/cli-test`(np.
 
 3. Otwórz preferowany wiersz polecenia i przejdź do folderu, w którym skopiowano plik zestawu danych. Przykład:
 
@@ -58,100 +58,100 @@ Użyjemy istniejącego zestawu danych używanego w scenariuszu "Analiza tonacji"
     cd /cli-test
     ```
 
-    Za pomocą dowolnego edytora tekstu, takiego jak Visual `yelp_labelled.txt` Studio Code, można otworzyć i eksplorować plik zestawu danych. Widać, że struktura jest:
+    Za pomocą dowolnego edytora tekstu, takich jak Visual `yelp_labelled.txt` Studio Code, można otworzyć i eksplorować plik zestawu danych. Widać, że struktura jest:
 
     - Plik nie ma nagłówka. Użyjesz indeksu kolumny.
 
     - Istnieją tylko dwie kolumny:
 
-        | Tekst (indeks kolumnowy 0) | Etykieta (indeks kolumnowy 1)|
+        | Tekst (indeks kolumny 0) | Etykieta (indeks kolumny 1)|
         |--------------------------|-------|
-        | Wow... Uwielbiałem to miejsce. | 1 |
+        | Wow... Bardzo dobre miejsce na życie. | 1 |
         | Skorupa nie jest dobra. | 0 |
-        | Nie smaczne, a tekstura była po prostu paskudna. | 0 |
-        | ... O WIELE WIĘCEJ WIERSZY TEKSTOWYCH... | ... (1 lub 0)... |
+        | Nie smaczne i tekstury był po prostu paskudny. | 0 |
+        | ... WIELE WIĘCEJ WIERSZY TEKSTU... | ... (1 lub 0)... |
 
     Upewnij się, że plik zestawu danych został zamknięty z edytora.
 
-    Teraz można przystąpić do rozpoczęcia korzystania z identyfikatora CLI dla tego scenariusza "Analiza tonacji".
+    Teraz można przystąpić do rozpoczęcia korzystania z interfejsu wiersza polecenia dla tego scenariusza "Analiza tonacji".
 
     > [!NOTE]
-    > Po zakończeniu tego samouczka można również spróbować z własnych zestawów danych, tak długo, jak są one gotowe do użycia dla dowolnego z zadań ml obecnie obsługiwane przez ML.NET cli podglądu, które są *"Klasyfikacja binarna", "Klasyfikacja wieloklasowa" i "Regresja").*
+    > Po zakończeniu tego samouczka można również spróbować z własnych zestawów danych, tak długo, jak są one gotowe do użycia dla każdego z zadań ML obecnie obsługiwane przez ML.NET podglądu interfejsu wiersza polecenia, które są *"Klasyfikacja binarna", "Klasyfikacja wieloklasowa" i "Regresja").*
 
-## <a name="run-the-mlnet-auto-train-command"></a>Uruchom polecenie "mlnet auto-train"
+## <a name="run-the-mlnet-auto-train-command"></a>Uruchom polecenie 'mlnet auto-train'
 
-1. Uruchom następujące polecenie ML.NET cli:
+1. Uruchom następujące polecenie ML.NET interfejsu wiersza polecenia:
 
     ```console
     mlnet auto-train --task binary-classification --dataset "yelp_labelled.txt" --label-column-index 1 --has-header false --max-exploration-time 10
     ```
 
     To polecenie uruchamia ** `mlnet auto-train` polecenie:**
-    - dla **zadania ML** typu**`binary-classification`**
-    - używa **pliku `yelp_labelled.txt` zestawu danych** jako szkolenia i testowania zestawu danych (wewnętrznie cli będzie używać krzyżowego sprawdzania poprawności lub podzielić go na dwa zestawy danych, jeden do szkolenia i jeden do testowania)
-    - gdzie **kolumna cel/cel,** którą chcesz przewidzieć (powszechnie nazywana **"etykietą")** jest **kolumną z indeksem 1** (czyli drugą kolumną, ponieważ indeks jest oparty na zeru)
-    - **nie używa nagłówka pliku** z nazwami kolumn, ponieważ ten plik określonego zestawu danych nie ma nagłówka
+    - dla **zadania typu ML****`binary-classification`**
+    - używa **pliku zestawu `yelp_labelled.txt` danych** jako zestawu danych szkoleniowych i testowych (wewnętrznie cli użyje weryfikacji krzyżowej lub podzieli go na dwa zestawy danych, jeden do szkolenia i jeden do testowania)
+    - gdzie **kolumna celu/docelowa,** którą chcesz przewidzieć (powszechnie nazywana **"etykietą"**) jest **kolumną z indeksem 1** (czyli drugą kolumną, ponieważ indeks jest oparty na wartości zero)
+    - **nie używa nagłówka pliku** z nazwami kolumn, ponieważ ten konkretny plik zestawu danych nie ma nagłówka
     - **docelowy czas eksploracji** eksperymentu wynosi **10 sekund**
 
-    Zobaczysz dane wyjściowe z cli, podobne do:
+    Zobaczysz dane wyjściowe z interfejsu wiersza polecenia, podobne do:
 
     <!-- markdownlint-disable MD023 MD025 -->
 
     # <a name="windows"></a>[Windows](#tab/windows)
 
-    ![ML.NET automatyczneszkolenie CLI w programie PowerShell](./media/mlnet-cli/mlnet-auto-train-binary-classification-powershell.gif)
+    ![ML.NET cli auto-train na PowerShell](./media/mlnet-cli/mlnet-auto-train-binary-classification-powershell.gif)
 
-    # <a name="macos-bash"></a>[MacOS Bash](#tab/macosbash)
+    # <a name="macos-bash"></a>[MacOS Bash (macOS Bash)](#tab/macosbash)
 
-    ![ML.NET automatyczneszkolenie CLI w programie PowerShell](./media/mlnet-cli/mlnet-auto-train-binary-classification-bash.gif)
+    ![ML.NET cli auto-train na PowerShell](./media/mlnet-cli/mlnet-auto-train-binary-classification-bash.gif)
 
-    W tym konkretnym przypadku, w ciągu zaledwie 10 sekund i z małym zestawem danych, narzędzie CLI było w stanie uruchomić sporo iteracji, co oznacza, że szkolenia wiele razy w oparciu o różne kombinacje algorytmów/konfiguracji z różnymi przekształceniami danych wewnętrznych i hiperparametrami algorytmu.
+    W tym konkretnym przypadku, w ciągu zaledwie 10 sekund i z małym zestawem danych, narzędzie CLI było w stanie uruchomić sporo iteracji, co oznacza szkolenie wiele razy w oparciu o różne kombinacje algorytmów / konfiguracji z różnymi wewnętrznymi przekształceniami danych i hiperwymiętami algorytmu.
 
-    Na koniec model "najlepszej jakości" znaleziony w ciągu 10 sekund jest modelem korzystającym z określonego trenera/algorytmu z dowolną określoną konfiguracją. W zależności od czasu eksploracji polecenie może przynieść inny wynik. Wybór jest oparty na wielu wyświetlanych `Accuracy`metrykach, takich jak .
+    Wreszcie, "najlepszej jakości" model znaleziony w 10 sekund jest model przy użyciu konkretnego trenera / algorytm z dowolnej konkretnej konfiguracji. W zależności od czasu eksploracji polecenie może uzyskać inny wynik. Zaznaczenie jest oparte na wielu pokazanych `Accuracy`metrykach, takich jak .
 
-    **Zrozumienie wskaźników jakości modelu**
+    **Opis wskaźników jakości modelu**
 
     Pierwszą i najłatwiejszą metryką do oceny modelu klasyfikacji binarnej jest dokładność, która jest prosta do zrozumienia. "Dokładność jest proporcją prawidłowych prognoz z zestawem danych testowych.". Im bliżej 100% (1,00), tym lepiej.
 
-    Istnieją jednak przypadki, w których tylko pomiar z metryki dokładność nie wystarczy, zwłaszcza, gdy etykieta (0 i 1 w tym przypadku) jest niezrównoważony w zestawie danych testowych.
+    Jednak zdążyń, w których tylko pomiar z metryki dokładność nie wystarczy, zwłaszcza gdy etykieta (0 i 1 w tym przypadku) jest niezrównoważony w zestawie danych testowych.
 
-    Aby uzyskać dodatkowe metryki i bardziej **szczegółowe informacje na temat metryk,** takich jak Dokładność, AUC, AUCPR i F1-score używane do oceny różnych modeli, zobacz Opis [metryk ML.NET](../resources/metrics.md).
+    Aby uzyskać dodatkowe metryki i bardziej **szczegółowe informacje na temat metryk,** takich jak dokładność, AUC, AUCPR i F1-score używane do oceny różnych modeli, zobacz Opis [metryk ML.NET](../resources/metrics.md).
 
     > [!NOTE]
-    > Możesz wypróbować ten sam zestaw danych i `--max-exploration-time` określić kilka minut (na przykład trzy minuty, aby określić 180 sekund), który znajdzie lepszy "najlepszy model" dla Ciebie z inną konfiguracją potoku szkolenia dla tego zestawu danych (który jest dość mały, 1000 wierszy).
+    > Możesz wypróbować ten sam zestaw danych i `--max-exploration-time` określić kilka minut dla (na przykład trzy minuty, aby określić 180 sekund), który znajdzie lepszy "najlepszy model" dla Ciebie z inną konfiguracją potoku szkoleniowego dla tego zestawu danych (który jest dość mały, 1000 wierszy).
 
-    Aby znaleźć model "najlepszej/dobrej jakości", który jest "modelem gotowym do produkcji", przeznaczonym dla większych zestawów danych, należy przeprowadzać eksperymenty z identyfikatorem CLI, zwykle określając znacznie więcej czasu eksploracji w zależności od rozmiaru zestawu danych. W rzeczywistości w wielu przypadkach może wymagać wielu godzin czasu eksploracji, zwłaszcza jeśli zestaw danych jest duży w wierszach i kolumnach.
+    Aby znaleźć model "najlepszej/dobrej jakości", który jest "modelem gotowym do produkcji" skierowanym na większe zestawy danych, należy wykonać eksperymenty z wierszem polecenia, zwykle określając znacznie więcej czasu eksploracji w zależności od rozmiaru zestawu danych. W rzeczywistości w wielu przypadkach może wymagać wielu godzin czasu eksploracji, zwłaszcza jeśli zestaw danych jest duży w wierszach i kolumnach.
 
 1. Poprzednie wykonanie polecenia wygenerowało następujące zasoby:
 
     - Serializowany model .zip ("najlepszy model") gotowy do użycia.
-    - Kod języka C# do uruchamiania/oceniania, który wygenerował model (Aby prognozować w aplikacjach użytkownika końcowego z tego modelu).
-    - C# kod szkolenia używany do generowania tego modelu (Learning purposes).
-    - Plik dziennika ze wszystkimi iteracjami eksplorowane o szczegółowe informacje o każdym algorytmie próbował z jego kombinacji hiper-parametrów i przekształceń danych.
+    - Kod C# do uruchamiania/oceniania, który wygenerował model (Aby prognozować w aplikacjach użytkownika końcowego z tym modelem).
+    - Kod szkoleniowy języka C# używany do generowania tego modelu (cele uczenia się).
+    - Plik dziennika ze wszystkimi iteracjami zbadane o określonych szczegółowych informacji o każdym algorytm wypróbowany z jego kombinacji hiper-parametrów i przekształceń danych.
 
-    Pierwsze dwa aktywa (. Model pliku ZIP i kod C# do uruchomienia tego modelu) mogą być używane bezpośrednio w aplikacjach użytkownika końcowego (ASP.NET core aplikacji sieci web, usług, aplikacji klasycznej, itp.) do prognozowania z tego wygenerowanego modelu ML.
+    Pierwsze dwa aktywa (. Model pliku ZIP i kod C#, aby uruchomić ten model) mogą być bezpośrednio używane w aplikacjach użytkownika końcowego (ASP.NET core aplikacji sieci web, usług, aplikacji klasycznej itp.), aby prognozowania z tego modelu uczenia maszynowego generowane.
 
-    Trzeci zasób, kod szkolenia, pokazuje, co ML.NET kod interfejsu API został użyty przez interfejs ze strony interfejsu i zeznania do nauczenia wygenerowanego modelu, dzięki czemu można zbadać, jakie specyficzne trener/algorytm i hiper-parametry zostały wybrane przez interfejs poszczególnych interfejsów firm.
+    Trzeci zasób, kod szkolenia, pokazuje, co ML.NET kod interfejsu API został użyty przez interfejs wiersza polecenia do szkolenia wygenerowanego modelu, dzięki czemu można zbadać, jakie konkretne trenera/algorytmu i hiper-parametrów zostały wybrane przez interfejs wiersza polecenia.
 
-Te wyliczone zasoby są wyjaśnione w następujących krokach samouczka.
+Te wyliczone zasoby są wyjaśnione w poniższych krokach samouczka.
 
-## <a name="explore-the-generated-c-code-to-use-for-running-the-model-to-make-predictions"></a>Eksploruj wygenerowany kod Języka C# do użycia do uruchamiania modelu do tworzenia prognoz
+## <a name="explore-the-generated-c-code-to-use-for-running-the-model-to-make-predictions"></a>Eksploruj wygenerowany kod języka C#, który ma być używany do uruchamiania modelu w celu tworzenia prognoz
 
-1. W programie Visual Studio (2017 lub 2019) otwórz `SampleBinaryClassification` rozwiązanie wygenerowane w folderze `/cli-test`o nazwie w oryginalnym folderze docelowym (w samouczku został nazwany ). Powinieneś zobaczyć rozwiązanie podobne do:
+1. W programie Visual Studio (2017 lub 2019) `SampleBinaryClassification` otwórz rozwiązanie wygenerowane w folderze `/cli-test`o nazwie w oryginalnym folderze docelowym (w samouczku został nazwany ). Powinien zostać wyświetlony rozwiązanie podobne do:
 
     > [!NOTE]
-    > W samouczku sugerujemy użycie programu Visual Studio, ale można również eksplorować wygenerowany kod Języka C# `dotnet CLI` (dwa projekty) za pomocą dowolnego edytora tekstu i uruchomić wygenerowaną aplikację konsoli z systemem macOS, Linux lub Windows.
+    > W samouczku sugerujemy użycie programu Visual Studio, ale można również eksplorować wygenerowany kod C# (dwa projekty) za pomocą dowolnego edytora tekstu i uruchomić wygenerowaną aplikację konsoli `dotnet CLI` na komputerze macOS, Linux lub Windows.
 
-    ![Rozwiązanie VS wygenerowane przez CLI](./media/mlnet-cli/generated-csharp-solution-detailed.png)
+    ![Rozwiązanie VS generowane przez interfejs wiersza polecenia](./media/mlnet-cli/generated-csharp-solution-detailed.png)
 
-    - Wygenerowana **biblioteka klas** zawierająca serializowany model ML (plik zip) i klasy danych (modele danych) jest czymś, czego można bezpośrednio użyć w aplikacji użytkownika końcowego, nawet bezpośrednio odwołując się do tej biblioteki klas (lub przenosząc kod, jak wolisz).
-    - Wygenerowana **aplikacja konsoli** zawiera kod wykonania, który należy przejrzeć, a następnie zwykle ponownie użyć "kod oceniania" (kod, który uruchamia model ML do prognozowania), przenosząc ten prosty kod (tylko kilka wierszy) do aplikacji użytkownika końcowego, gdzie chcesz dokonać prognoz.
+    - Wygenerowana **biblioteka klas** zawierająca serializowany model ML (plik zip) i klasy danych (modele danych) jest czymś, czego można bezpośrednio używać w aplikacji użytkownika końcowego, nawet bezpośrednio odwołując się do tej biblioteki klas (lub przenosząc kod, jak wolisz).
+    - Wygenerowana **aplikacja konsoli** zawiera kod wykonania, który należy przejrzeć, a następnie zwykle ponownie użyć "kod oceniania" (kod, który uruchamia model ML, aby przewidywanie) przez przeniesienie tego prostego kodu (tylko kilka wierszy) do aplikacji użytkownika końcowego, gdzie chcesz dokonać prognoz.
 
-1. Otwórz **ModelInput.cs** i **ModelOutput.cs** plików klas w projekcie biblioteki klas. Zobaczysz, że te klasy są "klasy danych" lub KLASY POCO używane do przechowywania danych. Jest to "standardowy kod", ale przydatne, aby go wygenerować, jeśli zestaw danych ma dziesiątki lub nawet setki kolumn.
+1. Otwórz **pliki ModelInput.cs** i **ModelOutput.cs** klas w projekcie biblioteki klas. Zobaczysz, że te klasy są "klasy danych" lub POCO używane do przechowywania danych. Jest to "kod standardowy", ale przydatne, aby go wygenerowane, jeśli zestaw danych ma dziesiątki lub nawet setki kolumn.
     - Klasa `ModelInput` jest używana podczas odczytywania danych z zestawu danych.
-    - Klasa `ModelOutput` jest używana do uzyskania wyniku przewidywania (dane przewidywania).
+    - Klasa `ModelOutput` jest używana do uzyskania wyniku prognozowania (dane przewidywania).
 
-1. Otwórz plik Program.cs i eksploruj kod. W zaledwie kilku wierszach można uruchomić model i dokonać przykładowego przewidywania.
+1. Otwórz plik Program.cs i eksploruj kod. W zaledwie kilku wierszach można uruchomić model i dokonać prognozowania próbki.
 
     ```csharp
     static void Main(string[] args)
@@ -174,15 +174,15 @@ Te wyliczone zasoby są wyjaśnione w następujących krokach samouczka.
     }
     ```
 
-    - Pierwszy wiersz kodu po `MLContext` prostu tworzy obiekt potrzebny po uruchomieniu ML.NET kodu.
+    - Pierwszy wiersz kodu po `MLContext` prostu tworzy obiekt potrzebny przy każdym uruchomieniu kodu ML.NET.
 
-    - Drugi wiersz kodu jest komentowany, ponieważ nie trzeba szkolić modelu, ponieważ został już przeszkolony przez narzędzie cli i zapisane w modelu serializacji . ZIP. Ale jeśli chcesz zobaczyć *"jak model został przeszkolony"* przez wiersz wiersza, można odkomentować ten wiersz i uruchom/debugować kod szkolenia używany dla tego konkretnego modelu ML.
+    - Drugi wiersz kodu jest komentowany, ponieważ nie trzeba trenować modelu, ponieważ został już przeszkolony dla Ciebie przez narzędzie CLI i zapisane w modelu serializowane . zip. Ale jeśli chcesz zobaczyć *"jak model został przeszkolony"* przez interfejsu wiersza polecenia, można odkomentować tej linii i uruchomić/debug kod szkolenia używany dla danego modelu ml.
 
-    - W trzecim wierszu kodu należy załadować model z modelu serializowanego . ZIP z `mlContext.Model.Load()` interfejsem API, udostępniając ścieżkę do tego modelu . ZIP.
+    - W trzecim wierszu kodu należy załadować model z modelem serializowanym . zip z `mlContext.Model.Load()` interfejsem API, udostępniając ścieżkę do tego modelu . zip.
 
-    - W czwartym wierszu ładowanego `PredictionEngine` kodu utwórz obiekt za pomocą interfejsu `mlContext.Model.CreatePredictionEngine<TSrc,TDst>(ITransformer mlModel)` API. Potrzebny jest `PredictionEngine` obiekt, gdy chcesz dokonać prognozowania kierowania pojedynczej próbki danych (W tym przypadku pojedynczy fragment tekstu, aby przewidzieć jego tonacji).
+    - W czwartym wierszu kodu można `PredictionEngine` załadować `mlContext.Model.CreatePredictionEngine<TSrc,TDst>(ITransformer mlModel)` utworzyć obiekt z interfejsem API. Obiekt jest `PredictionEngine` potrzebny za każdym razem, gdy chcesz dokonać prognozowania kierowanego na pojedynczą próbkę danych (W tym przypadku pojedynczy fragment tekstu do przewidzenia jego tonacji).
 
-    - Piąty wiersz kodu jest, gdzie można utworzyć te *pojedyncze przykładowe dane,* które mają być używane do przewidywania przez wywołanie funkcji `CreateSingleDataSample()`. Ponieważ narzędzie CLI nie wie, jakiego rodzaju przykładowych danych użyć, w ramach tej funkcji ładuje pierwszy wiersz zestawu danych. Jednak w tym przypadku można również utworzyć własne "zakodowane" dane zamiast `CreateSingleDataSample()` bieżącej implementacji funkcji, aktualizując ten prostszy kod implementując tę funkcję:
+    - Piąty wiersz kodu jest, gdzie można utworzyć, że *pojedyncze przykładowe dane,* które mają być używane do przewidywania przez wywołanie funkcji `CreateSingleDataSample()`. Ponieważ narzędzie cli nie wie, jakiego rodzaju przykładowych danych do użycia, w ramach tej funkcji jest ładowanie pierwszego wiersza zestawu danych. Jednak w tym przypadku można również utworzyć własne "zakodowane" dane zamiast `CreateSingleDataSample()` bieżącej implementacji funkcji, aktualizując ten prostszy kod implementując tę funkcję:
 
         ```csharp
         private static ModelInput CreateSingleDataSample()
@@ -192,15 +192,15 @@ Te wyliczone zasoby są wyjaśnione w następujących krokach samouczka.
         }
         ```
 
-1. Uruchom projekt, używając oryginalnych przykładowych danych załadowanych z pierwszego wiersza zestawu danych lub podając własne niestandardowe, zakodowane przykładowe dane. Powinieneś uzyskać prognozę porównywalną do:
+1. Uruchom projekt przy użyciu oryginalnych przykładowych danych załadowanych z pierwszego wiersza zestawu danych lub przez podanie własnych niestandardowych danych przykładowych zakodowanych na własne zamówienie. Powinieneś uzyskać prognozę porównywalną do:
 
     # <a name="windows"></a>[Windows](#tab/windows)
 
-    Uruchom aplikację konsoli z programu Visual Studio, naciskając przycisk F5 (Play):
+    Uruchom aplikację konsoli z programu Visual Studio, naciskając klawisz F5 (przycisk Odtwórz):
 
-    ![ML.NET automatyczneszkolenie CLI w programie PowerShell](./media/mlnet-cli/sample-cli-prediction-execution.png))
+    ![ML.NET cli auto-train na PowerShell](./media/mlnet-cli/sample-cli-prediction-execution.png))
 
-    # <a name="macos-bash"></a>[MacOS Bash](#tab/macosbash)
+    # <a name="macos-bash"></a>[MacOS Bash (macOS Bash)](#tab/macosbash)
 
     Uruchom aplikację konsoli z wiersza polecenia, wpisując następujące polecenia:
 
@@ -211,56 +211,56 @@ Te wyliczone zasoby są wyjaśnione w następujących krokach samouczka.
     dotnet run
     ```
 
-    ![ML.NET automatyczneszkolenie CLI w programie PowerShell](./media/mlnet-cli/sample-cli-prediction-execution-bash.png))
+    ![ML.NET cli auto-train na PowerShell](./media/mlnet-cli/sample-cli-prediction-execution-bash.png))
 
     ---
 
-1. Spróbuj zmienić zakodowane przykładowe dane na inne zdania o różnym nastroju i zobacz, jak model przewiduje pozytywne lub negatywne nastroje.
+1. Spróbuj zmienić zakodowane dane przykładowe na inne zdania o różnych tonacji i zobacz, jak model przewiduje pozytywne lub negatywne nastroje.
 
-## <a name="infuse-your-end-user-applications-with-ml-model-predictions"></a>Napełniaj aplikacje użytkowników końcowych prognozami modelu ML
+## <a name="infuse-your-end-user-applications-with-ml-model-predictions"></a>Napełnij aplikacje użytkowników końcowych prognozami modelu ML
 
-Podobne "MODEL ML kod oceniania", aby uruchomić model w aplikacji użytkownika końcowego i dokonać prognoz.
+Można użyć podobnego "kod oceniania modelu ML", aby uruchomić model w aplikacji użytkownika końcowego i dokonać prognoz.
 
-Na przykład można bezpośrednio przenieść ten kod do dowolnej aplikacji klasycznej systemu Windows, takich jak **WPF** i **WinForms** i uruchomić model w taki sam sposób, jak to miało miejsce w aplikacji konsoli.
+Na przykład można bezpośrednio przenieść ten kod do dowolnej aplikacji klasycznej systemu Windows, takich jak **WPF** I **WinForms** i uruchomić model w taki sam sposób, jak to zostało zrobione w aplikacji konsoli.
 
-Jednak sposób implementowania tych wierszy kodu do uruchamiania modelu ML powinny być zoptymalizowane (to znaczy, buforowanie modelu .zip pliku i załadować go raz) i obiektów singleton zamiast tworzenia ich na każde żądanie, zwłaszcza jeśli aplikacja musi być skalowalne, takie jak aplikacji internetowej lub usługi rozproszonej, jak wyjaśniono w poniższej sekcji.
+Jednak sposób zaimplementowania tych wierszy kodu do uruchomienia modelu ML powinny być zoptymalizowane (to znaczy, buforowanie pliku .zip modelu i załadować go raz) i mieć obiekty singleton zamiast tworzenia ich na każde żądanie, zwłaszcza jeśli aplikacja musi być skalowalne, takich jak aplikacji internetowej lub usługi rozproszonej, jak wyjaśniono w poniższej sekcji.
 
-### <a name="running-mlnet-models-in-scalable-aspnet-core-web-apps-and-services-multi-threaded-apps"></a>Uruchamianie modeli ML.NET w skalowalnych ASP.NET podstawowych aplikacji i usług sieci Web (aplikacje wielowątkowe)
+### <a name="running-mlnet-models-in-scalable-aspnet-core-web-apps-and-services-multi-threaded-apps"></a>Uruchamianie modeli ML.NET w skalowalnych ASP.NET core aplikacji i usług internetowych (aplikacje wielowątkowe)
 
-Utworzenie obiektu modelu (załadowanego`ITransformer` z pliku zip modelu) `PredictionEngine` i obiektu powinno być zoptymalizowane szczególnie podczas uruchamiania na skalowalnych aplikacjach sieci Web i usługach rozproszonych. W pierwszym przypadku obiekt modelu`ITransformer`( ) optymalizacja jest prosta. Ponieważ `ITransformer` obiekt jest bezpieczny dla wątków, można buforować obiekt jako pojedynczy lub statyczny obiekt, aby załadować model raz.
+Tworzenie obiektu modelu (załadowany`ITransformer` z pliku zip modelu) `PredictionEngine` i obiekt powinien być zoptymalizowany szczególnie podczas uruchamiania w skalowalnych aplikacji sieci web i usług rozproszonych. W pierwszym przypadku obiekt modelu`ITransformer`( ) optymalizacja jest prosta. Ponieważ `ITransformer` obiekt jest bezpieczny dla wątków, można buforować obiekt jako obiekt singleton lub statyczny, dzięki czemu można załadować model raz.
 
-Dla drugiego obiektu `PredictionEngine` obiektu, nie jest tak `PredictionEngine` łatwe, ponieważ obiekt nie jest bezpieczny dla wątków, dlatego nie można utworzyć wystąpienia tego obiektu jako pojedynczy lub statyczny obiekt w aplikacji ASP.NET Core. Ten problem bezpieczne wątku i skalowalności jest głęboko omówione w tym [blogu .](https://devblogs.microsoft.com/cesardelatorre/how-to-optimize-and-run-ml-net-models-on-scalable-asp-net-core-webapis-or-web-apps/)
+Dla drugiego `PredictionEngine` obiektu, obiektu nie jest tak `PredictionEngine` łatwe, ponieważ obiekt nie jest bezpieczny dla wątków, w związku z tym nie można utworzyć wystąpienia tego obiektu jako obiektu singleton lub statycznego w aplikacji ASP.NET Core. Ten problem bezpieczny dla wątków i skalowalności jest głęboko omówiony w tym [blogu](https://devblogs.microsoft.com/cesardelatorre/how-to-optimize-and-run-ml-net-models-on-scalable-asp-net-core-webapis-or-web-apps/).
 
-Jednak sprawy stały się dla Ciebie o wiele łatwiejsze niż to, co zostało wyjaśnione w tym wpisie na blogu. Pracowaliśmy nad prostszym podejściem dla Ciebie i stworzyliśmy ładny **".NET Core Integration Package",** którego można łatwo używać w ASP.NET podstawowych aplikacji i usług, rejestrując go w usługach DI aplikacji (usługi wtrysku zależności), a następnie bezpośrednio użyć go z kodu. Sprawdź poniższy samouczek i przykład, aby to zrobić:
+Jednak rzeczy zrobiły ci o wiele łatwiej niż to, co zostało wyjaśnione w tym poście na blogu. Pracowaliśmy nad prostszym podejściem dla Ciebie i stworzyliśmy ładny **pakiet integracji ".NET Core Integration Package",** którego można łatwo używać w swoich ASP.NET podstawowych aplikacji i usług, rejestrując je w usługach DI aplikacji (usługi iniekcji zależności), a następnie bezpośrednio z kodu. Sprawdź następujący samouczek i przykład, aby to zrobić:
 
-- [Samouczek: uruchamianie modeli ML.NET na skalowalnych aplikacjach sieci Web ASP.NET core i interfejsach WebAPI](https://aka.ms/mlnet-tutorial-netcoreintegrationpkg)
-- [Przykład: Skalowalny model ML.NET na ASP.NET Core WebAPI](https://aka.ms/mlnet-sample-netcoreintegrationpkg)
+- [Samouczek: Uruchamianie modeli ML.NET skalowalnych aplikacji internetowych ASP.NET Core i webapi](https://aka.ms/mlnet-tutorial-netcoreintegrationpkg)
+- [Przykład: Skalowalny model ML.NET w ASP.NET Core WebAPI](https://aka.ms/mlnet-sample-netcoreintegrationpkg)
 
-## <a name="explore-the-generated-c-code-that-was-used-to-train-the-best-quality-model"></a>Poznaj wygenerowany kod Języka C#, który został użyty do nauczenia modelu "najlepszej jakości"
+## <a name="explore-the-generated-c-code-that-was-used-to-train-the-best-quality-model"></a>Zapoznaj się z wygenerowanym kodem języka C#, który został użyty do szkolenia modelu "najlepszej jakości"
 
-Dla bardziej zaawansowanych celów uczenia się można również eksplorować wygenerowany kod Języka C#, który był używany przez narzędzie CLI do uczenia wygenerowanego modelu.
+Aby uzyskać bardziej zaawansowane cele uczenia się, można również eksplorować wygenerowany kod Języka C#, który został użyty przez narzędzie interfejsu wiersza polecenia do uczenia wygenerowanego modelu.
 
-Ten "kod modelu szkolenia" jest obecnie generowany w `ModelBuilder` klasie niestandardowej generowane o nazwie, dzięki czemu można zbadać, że kod szkolenia.
+Ten "kod modelu szkolenia" jest obecnie generowany `ModelBuilder` w klasie niestandardowej o nazwie, dzięki czemu można zbadać ten kod szkolenia.
 
-Co ważniejsze, dla tego konkretnego scenariusza (model analizy tonacji) można również porównać, że wygenerowany kod szkolenia z kodem wyjaśnione w poniższym samouczku:
+Co ważniejsze, w tym konkretnym scenariuszu (model analizy tonacji) można również porównać wygenerowany kod szkolenia z kodem wyjaśnionym w poniższym samouczku:
 
 - Porównaj: [Samouczek: Użyj ML.NET w scenariuszu klasyfikacji binarnej analizy tonacji](sentiment-analysis.md).
 
-Interesujące jest porównanie wybranego algorytmu i konfiguracji potoku w samouczku z kodem wygenerowanym przez narzędzie CLI. W zależności od tego, ile czasu spędzasz iteracji i wyszukiwania lepszych modeli, wybrany algorytm może być inny wraz z jego szczególnych hiperparametrów i konfiguracji potoku.
+Interesujące jest porównanie wybranego algorytmu i konfiguracji potoku w samouczku z kodem wygenerowanym przez narzędzie CLI. W zależności od tego, ile czasu spędzasz iteracji i poszukiwania lepszych modeli, wybrany algorytm może być różny wraz z jego poszczególnych hiper-parametrów i konfiguracji potoku.
 
 W niniejszym samouczku zawarto informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]
 >
-> - Przygotuj dane do wybranego zadania ML (problem do rozwiązania)
-> - Uruchom polecenie "mlnet auto-train" w narzędziu CLI
-> - Przeglądanie wyników metryk jakości
-> - Zrozumienie wygenerowanego kodu C# do uruchomienia modelu (kod do użycia w aplikacji użytkownika końcowego)
-> - Eksploruj wygenerowany kod Języka C#, który został użyty do nauczenia modelu "najlepszej jakości" (cele uczenia się)
+> - Przygotowanie danych do wybranego zadania uczenia maszynowego (problem do rozwiązania)
+> - Uruchom polecenie 'mlnet auto-train' w narzędziu CLI
+> - Przejrzyj wyniki metryki jakości
+> - Zrozumieć wygenerowany kod języka C#, aby uruchomić model (Kod do użycia w aplikacji użytkownika końcowego)
+> - Poznaj wygenerowany kod C#, który został użyty do uczenia modelu "najlepszej jakości" (cele szkoleniowe)
 
 ## <a name="see-also"></a>Zobacz też
 
-- [Automatyzacja szkolenia modelu z ML.NET CLI](../automate-training-with-cli.md)
-- [Samouczek: uruchamianie modeli ML.NET na skalowalnych aplikacjach sieci Web ASP.NET core i interfejsach WebAPI](https://aka.ms/mlnet-tutorial-netcoreintegrationpkg)
-- [Przykład: Skalowalny model ML.NET na ASP.NET Core WebAPI](https://aka.ms/mlnet-sample-netcoreintegrationpkg)
-- [ML.NET przewodnik po polecenia automatycznego pociągu cli](../reference/ml-net-cli-reference.md)
-- [Telemetria w ML.NET CLI](../resources/ml-net-cli-telemetry.md)
+- [Automatyzacja treningu modelu za pomocą ML.NET interfejsu wiersza polecenia](../automate-training-with-cli.md)
+- [Samouczek: Uruchamianie modeli ML.NET skalowalnych aplikacji internetowych ASP.NET Core i webapi](https://aka.ms/mlnet-tutorial-netcoreintegrationpkg)
+- [Przykład: Skalowalny model ML.NET w ASP.NET Core WebAPI](https://aka.ms/mlnet-sample-netcoreintegrationpkg)
+- [ML.NET przewodnik po poleceniach automatycznego pociągu CLI](../reference/ml-net-cli-reference.md)
+- [Telemetria w ML.NET interfejsu wiersza polecenia](../resources/ml-net-cli-telemetry.md)

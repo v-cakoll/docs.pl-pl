@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ink [WPF], custom-rendering
 - classes [WPF], InkCanvas
 ms.assetid: 65c978a7-0ee0-454f-ac7f-b1bd2efecac5
-ms.openlocfilehash: 3cf0d98c40e71a380b218c76d6e52d00cdd05342
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0ceb831057a9a92aa7319d2004f04d7cf5ac820e
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186349"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111832"
 ---
 # <a name="custom-rendering-ink"></a>Niestandardowy atrament renderowania
 Właściwość <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> obrysu umożliwia określenie wyglądu obrysu, takiego jak jego rozmiar, kolor i kształt, ale mogą <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> wystąpić czasy, w których chcesz dostosować wygląd poza to, co pozwala. Można dostosować wygląd pisma odcowego, renderując wygląd pędzla powietrznego, farby olejnej i wielu innych efektów. Windows Presentation Foundation (WPF) umożliwia niestandardowe renderowania pisma <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> <xref:System.Windows.Ink.Stroke> od ink przez implementowanie niestandardowe i obiektu.  
@@ -62,7 +62,7 @@ Właściwość <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> obrysu umo�
   
  Klasa <xref:System.Windows.Ink.Stroke> może również wykonać testy trafień. Można również zaimplementować własny algorytm <xref:System.Windows.Ink.Stroke.HitTest%2A> testowania trafień, zastępując metodę w bieżącej klasie.  
   
- Poniższy kod Języka C# <xref:System.Windows.Ink.Stroke> demonstruje <xref:System.Windows.Input.StylusPoint> klasę niestandardową, która renderuje dane jako obrys 3-W.  
+ Poniższy kod języka C# <xref:System.Windows.Ink.Stroke> demonstruje <xref:System.Windows.Input.StylusPoint> klasę niestandardową, która renderuje dane jako obrys 3D.  
   
  [!code-csharp[AdvancedInkTopicsSamples#19](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
  [!code-vb[AdvancedInkTopicsSamples#19](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  

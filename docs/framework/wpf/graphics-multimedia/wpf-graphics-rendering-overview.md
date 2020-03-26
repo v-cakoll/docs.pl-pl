@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
-ms.openlocfilehash: c82b2c4599f14f55b51587407a7d96b3e2be9d5f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9d58aa973f7de6c073611e13f2889913ff26dd55
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186605"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111923"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>Przegląd Renderowanie grafiki WPF
 Ten temat zawiera omówienie warstwy wizualnej. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Koncentruje się na roli <xref:System.Windows.Media.Visual> klasy do renderowania [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] obsługi w modelu.  
@@ -54,7 +54,7 @@ Ten temat zawiera omówienie warstwy wizualnej. [!INCLUDE[TLA2#tla_winclient](..
  Jest <xref:System.Windows.Media.DrawingVisual> to lekka klasa rysunku używana do renderowania kształtów, obrazów lub tekstu. Ta klasa jest uważana za lekką, ponieważ nie zapewnia obsługi układu lub zdarzeń, co zwiększa jej wydajność środowiska uruchomieniowego. Z tego powodu rysunki są idealne dla tła i obiektów clipart. Może <xref:System.Windows.Media.DrawingVisual> służyć do tworzenia niestandardowego obiektu wizualnego. Aby uzyskać więcej informacji, zobacz [Korzystanie z drawingvisual Objects](using-drawingvisual-objects.md).  
   
 ### <a name="viewport3dvisual-class"></a>Viewport3DKlasa wizualna  
- Zapewnia <xref:System.Windows.Media.Media3D.Viewport3DVisual> most między <xref:System.Windows.Media.Visual> 2D <xref:System.Windows.Media.Media3D.Visual3D> i obiektów. Klasa <xref:System.Windows.Media.Media3D.Visual3D> jest klasą podstawową dla wszystkich elementów wizualnych 3D. Wymaga <xref:System.Windows.Media.Media3D.Viewport3DVisual> zdefiniowania <xref:System.Windows.Media.Media3D.Viewport3DVisual.Camera%2A> wartości i <xref:System.Windows.Media.Media3D.Viewport3DVisual.Viewport%2A> wartości. Kamera umożliwia wyświetlanie sceny. Rzutnia określa, gdzie rzutowanie jest mapowana na powierzchnię 2D. Aby uzyskać więcej informacji [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]na temat 3D in , zobacz [Przegląd grafiki 3-W](3-d-graphics-overview.md).  
+ Zapewnia <xref:System.Windows.Media.Media3D.Viewport3DVisual> most między <xref:System.Windows.Media.Visual> 2D <xref:System.Windows.Media.Media3D.Visual3D> i obiektów. Klasa <xref:System.Windows.Media.Media3D.Visual3D> jest klasą podstawową dla wszystkich elementów wizualnych 3D. Wymaga <xref:System.Windows.Media.Media3D.Viewport3DVisual> zdefiniowania <xref:System.Windows.Media.Media3D.Viewport3DVisual.Camera%2A> wartości i <xref:System.Windows.Media.Media3D.Viewport3DVisual.Viewport%2A> wartości. Kamera umożliwia wyświetlanie sceny. Rzutnia określa, gdzie rzutowanie jest mapowana na powierzchnię 2D. Aby uzyskać więcej informacji [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]na temat 3D in , zobacz [Omówienie grafiki 3D](3-d-graphics-overview.md).  
   
 ### <a name="containervisual-class"></a>Klasa ContainerVisual  
  Klasa <xref:System.Windows.Media.ContainerVisual> jest używana jako kontener dla <xref:System.Windows.Media.Visual> kolekcji obiektów. Klasa <xref:System.Windows.Media.DrawingVisual> pochodzi od <xref:System.Windows.Media.ContainerVisual> klasy, dzięki czemu zawiera kolekcję obiektów wizualnych.  

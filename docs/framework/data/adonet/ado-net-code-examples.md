@@ -5,15 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: 8a0a7c6166bb4cfc8064faa20056fda16b593e81
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6e0c34e1db50030c78db295f26fcc25b431d3dde
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151770"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111806"
 ---
 # <a name="adonet-code-examples"></a>ADO.NET przykłady kodu
-Lista kodów w tym temacie pokazuje, jak pobierać dane z bazy danych przy użyciu następujących technologii ADO.NET:
+
+Lista kodów na tej stronie pokazuje, jak pobierać dane z bazy danych przy użyciu następujących technologii ADO.NET:
 
 - ADO.NET dostawców danych:
 
@@ -33,7 +34,7 @@ Lista kodów w tym temacie pokazuje, jak pobierać dane z bazy danych przy użyc
 
   - [EntityClient](#entityclient) `System.Data.EntityClient`( )
 
-- [LINQ to SQL](#linq-to-sql)
+- [LINQ do SQL](#linq-to-sql)
 
 ## <a name="adonet-data-provider-examples"></a>ADO.NET przykłady dostawców danych
 Poniższe listy kodów pokazują, jak pobierać dane z bazy danych przy użyciu ADO.NET dostawców danych. Dane są zwracane `DataReader`w pliku . Aby uzyskać więcej informacji, zobacz [Pobieranie danych przy użyciu czytnika danych](retrieving-data-using-a-datareader.md).
@@ -267,7 +268,7 @@ Class EntityClientSample
 End Class
 ```
 
-## <a name="linq-to-sql"></a>LINQ to SQL
+## <a name="linq-to-sql"></a>LINQ do SQL
 Kod w tym przykładzie używa kwerendy LINQ do zwracania danych jako obiekty kategorie, które są rzutowane jako typ anonimowy, który zawiera tylko CategoryID i CategoryName właściwości. W tym przykładzie jest oparty na kontekście danych Northwind. Aby uzyskać więcej informacji, zobacz [Wprowadzenie](./sql/linq/getting-started.md).
 
 ```csharp

@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: fa7138127379b069b646c4b2488d1973a3ddd628
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d5657f4081577b2a27bc3c2f6880784015c56060
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79143320"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249698"
 ---
 # <a name="whats-new-in-net-framework"></a>Co nowego w platformie .NET Framework
 
@@ -201,7 +201,7 @@ Program .NET Framework 4.7.2 zawiera nowe funkcje w następujących obszarach:
 
 - [Klasy podstawowe](#core-472)
 - [ASP.NET](#asp-net472)
-- [Sieci](#net472)
+- [Obsługa sieci](#net472)
 - [SQL](#sql472)
 - [WPF](#wpf472)
 - [ClickOnce](#clickonce)
@@ -427,14 +427,14 @@ Możesz dodać SameSite <xref:System.Web.Security.FormsAuthentication> <xref:Sys
       <forms cookieSameSite="Lax">
          <!-- ...   -->
       </forms>
-   <authentication />
+   </authentication>
    <sessionState cookieSameSite="Lax"></sessionState>
 </system.web>
 ```
 
 <a name="net472" />
 
-#### <a name="networking"></a>Networking
+#### <a name="networking"></a>Obsługa sieci
 
 **Implementacja właściwości HttpClientHandler**
 
@@ -500,7 +500,7 @@ Podstawowy przepływ oparte na enklawie zawsze szyfrowane jest:
 Począwszy od programu .NET Framework 4.7.2, asystent diagnostyczny można <xref:System.Windows.Xps.Packaging.IXpsFixedPageReader.ResourceDictionaries> zlokalizować, które zostały utworzone z danego źródła Uri.(Ta funkcja jest używana przez asystentów diagnostycznych, a nie przez aplikacje produkcyjne). Asystent diagnostyczny, takich jak Visual Studio "Edit-and-Continue" obiekt umożliwia jego użytkownika edytować ResourceDictionary z zamiarem, że zmiany mają być stosowane do uruchomionej aplikacji. Jednym z kroków w osiągnięciu tego jest znalezienie wszystkich ResourceDictionaries, że uruchomiona aplikacja została utworzona ze słownika, który jest edytowany. Na przykład aplikacja może zadeklarować ResourceDictionary, którego zawartość jest kopiowana z danego źródła identyfikatora URI:
 
 ```xml
-<ResourceDictionary Source="MyRD.xaml">
+<ResourceDictionary Source="MyRD.xaml" />
 ```
 
 Asystent diagnostyczny, który edytuje oryginalny znacznik w *myRD.xaml,* może użyć nowej funkcji, aby zlokalizować słownik.Funkcja jest implementowana przez nową metodę <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetResourceDictionariesForSource%2A?displayProperty=nameWithType>statyczną, . Asystent diagnostyczny wywołuje nową metodę przy użyciu bezwzględnego identyfikatora Uri, który identyfikuje oryginalne znaczniki, jak pokazano w poniższym kodzie:
@@ -589,7 +589,7 @@ Program .NET Framework 4.7.1 zawiera nowe funkcje w następujących obszarach:
 
 - [Klasy podstawowe](#core471)
 - [Środowisko uruchomieniowe języka wspólnego (CLR)](#clr)
-- [Sieci](#net471)
+- [Obsługa sieci](#net471)
 - [ASP.NET](#asp-net471)
 
 Ponadto głównym celem w .NET Framework 4.7.1 jest poprawa dostępności, co pozwala aplikacji, aby zapewnić odpowiednie środowisko dla użytkowników technologii ułatwień dostępu. Aby uzyskać informacje na temat ulepszeń ułatwień dostępu w programie .NET Framework 4.7.1, zobacz [Co nowego w ułatwieniach dostępu w programie .NET Framework](whats-new-in-accessibility.md).
@@ -630,7 +630,7 @@ Zmiany w wyrzucaniu elementów bezużytecznych (GC) w .NET Framework 4.7.1 zwię
 
 <a name="net471"/>
 
-#### <a name="networking"></a>Networking
+#### <a name="networking"></a>Obsługa sieci
 
 **Obsługa sha-2 dla Message.HashAlgorithm**
 
@@ -671,7 +671,7 @@ W programie .NET Framework 4.7 i wcześniejszych wersjach ASP.NET umożliwiał d
 Program .NET Framework 4.7 zawiera nowe funkcje w następujących obszarach:
 
 - [Klasy podstawowe](#Core47)
-- [Sieci](#net47)
+- [Obsługa sieci](#net47)
 - [ASP.NET](#ASP-NET47)
 - [Windows Communication Foundation (WCF)](#wcf47)
 - [Windows Forms](#wf47)
@@ -699,7 +699,7 @@ W .NET Framework 4.7 <xref:System.Runtime.Serialization.Json.DataContractJsonSer
 
 <a name="net47" />
 
-#### <a name="networking"></a>Networking
+#### <a name="networking"></a>Obsługa sieci
 
 Program .NET Framework 4.7 dodaje następującą funkcję związaną z siecią:
 
@@ -1256,7 +1256,7 @@ Program .NET Framework 4.6.1 zawiera nowe funkcje w następujących obszarach:
 
 - [Windows Workflow Foundation](#WWF461)
 
-- [Profilowania](#Profile461)
+- [Profilowanie](#Profile461)
 
 - [Ngen](#NGEN461)
 
@@ -1709,7 +1709,7 @@ Program .NET 2015 wprowadza programy .NET Framework 4.6 i .NET Core. Niektóre n
 
   Wartością domyślną jest `false`.
 
-- **Sieci**
+- **Obsługa sieci**
 
   - **Ponowne użycie gniazda**
 
@@ -1954,7 +1954,7 @@ W programie .NET Framework 4.5 nowe funkcje asynchroniczne zostały dodane do j�
 
 <a name="tools" />
 
-### <a name="tools"></a>narzędzia
+### <a name="tools"></a>Narzędzia
 
 W programie .NET Framework 4.5 generator plików zasobów (Resgen.exe) umożliwia utworzenie pliku resw do użytku w aplikacjach ze Sklepu Windows 8.x z pliku .resources osadzonego w zestawie programu .NET Framework. Aby uzyskać więcej informacji, zobacz [Resgen.exe (Resource File Generator)](../tools/resgen-exe-resource-file-generator.md).
 

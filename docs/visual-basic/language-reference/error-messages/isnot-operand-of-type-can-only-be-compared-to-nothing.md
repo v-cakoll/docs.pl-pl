@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - BC32128
 ms.assetid: 1155b23a-ad75-4bab-b9da-73f35c767a36
-ms.openlocfilehash: 06dc6f1532fecefba4e507bd0cc24aadc936d137
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 1660971e2a1a11d7a2d14f222cd149edf4aa4c7b
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524372"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249516"
 ---
 # <a name="isnot-operand-of-type-typename-can-only-be-compared-to-nothing-because-typename-is-a-nullable-type"></a>Operand 'IsNot' typu „typename” można porównać tylko z elementem „Nothing”, ponieważ typ „typename” jest typem zerowalnym
 
-Zmienna zadeklarowana jako Nullable została porównana z wyrażeniem innym niż `Nothing` przy użyciu operatora `IsNot`.
+Zmienna zadeklarowana jako typ wartości nullable została `Nothing` porównana `IsNot` z wyrażeniem innym niż operator.
 
-**Identyfikator błędu:** BC32128
+**Identyfikator błędu:** Bc32128
 
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd
 
-Aby porównać typ dopuszczający wartość null z wyrażeniem innym niż `Nothing` przy użyciu operatora `IsNot`, wywołaj metodę `GetType` dla typu dopuszczającego wartość null i porównaj wynik z wyrażeniem, jak pokazano w poniższym przykładzie.
+Aby porównać typ nullable do `Nothing` wyrażenia `IsNot` innego niż `GetType` przy użyciu operatora, wywołać metodę na typ nullable i porównać wynik do wyrażenia, jak pokazano w poniższym przykładzie.
 
 ```vb
 Dim number? As Integer = 5
@@ -34,7 +34,7 @@ If number IsNot Nothing Then
 End If
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Typy wartości dopuszczających wartości null](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [Typy o wartości zerowalnej](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
 - [IsNot, operator](../../../visual-basic/language-reference/operators/isnot-operator.md)

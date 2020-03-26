@@ -7,6 +7,8 @@
 - name: Według wersji
   expanded: true
   items:
+    - name: Z wersji 3.1 do 5.0
+      href: 3.1-5.0.md
     - name: Z wersji 3.0 do 3.1
       href: 3.0-3.1.md
     - name: Z wersji 2.2 do 3.1

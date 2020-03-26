@@ -1,0 +1,19 @@
+- name: Zestaw Azure SDK dla platformy .NET
+  href: index.yml
+  items:
+    - name: Pojęcia
+      expanded: true
+      items:
+        - name: Uwierzytelnianie
+          href: authentication.md
+        - name: Rejestrowanie
+          href: logging.md
+    - name: Pliki do pobrania
+      expanded: true
+      items:
+        - name: Pakiety
+          href: 'https://www.nuget.org/packages?q=windowsazureofficial'
+        - name: Narzędzia
+          href: tools.md
+    - name: Odwołanie API
+      href: 'https://docs.microsoft.com/dotnet/api/overview/azure/?view=azure-dotnet'

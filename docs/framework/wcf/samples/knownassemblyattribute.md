@@ -2,12 +2,12 @@
 title: KnownAssemblyAttribute
 ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
-ms.openlocfilehash: 1a94acde3d0726808deebcae1437e7318f5392df
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3aacc7c73167771a632bb31164f2c551d60ce8f0
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183560"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345236"
 ---
 # <a name="knownassemblyattribute"></a>KnownAssemblyAttribute
 W tym przykładzie pokazano, jak procesy serializacji i <xref:System.Runtime.Serialization.DataContractResolver> deserializacji można dostosować przy użyciu klasy. W tym przykładzie pokazano, jak dynamicznie dodawać znane typy podczas serializacji i deserializacji.  
@@ -356,11 +356,11 @@ Lists combined:
   
 5. Jeśli aplikacja nie działa poprawnie, wykonaj następujące kroki, aby upewnić się, że środowisko zostało poprawnie skonfigurowane:  
   
-6. Upewnij się, że wykonano [procedurę jednorazowej konfiguracji dla przykładów fundacji komunikacji systemu Windows](https://go.microsoft.com/fwlink/?LinkId=150774).  
+6. Upewnij się, że wykonano [procedurę jednorazowej konfiguracji dla przykładów fundacji komunikacji systemu Windows](https://docs.microsoft.com/dotnet/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples).  
   
-7. Aby utworzyć rozwiązanie, postępuj zgodnie z instrukcjami w [tworzeniu przykładu fundacji komunikacji systemu Windows](https://go.microsoft.com/fwlink/?LinkId=150775).  
+7. Aby utworzyć rozwiązanie, postępuj zgodnie z instrukcjami w [tworzeniu przykładu fundacji komunikacji systemu Windows](https://docs.microsoft.com/dotnet/framework/wcf/samples/building-the-samples).  
   
-8. Aby uruchomić próbkę w konfiguracji z jednym lub krzyżowym komputerem, postępuj zgodnie z instrukcjami w [programie Uruchamianie przykładów fundacji komunikacji systemu Windows](https://go.microsoft.com/fwlink/?LinkId=150776).  
+8. Aby uruchomić próbkę w konfiguracji z jednym lub krzyżowym komputerem, postępuj zgodnie z instrukcjami w [programie Uruchamianie przykładów fundacji komunikacji systemu Windows](https://docs.microsoft.com/dotnet/framework/wcf/samples/running-the-samples).  
   
 > [!IMPORTANT]
 > Próbki mogą być już zainstalowane na komputerze. Przed kontynuowaniem sprawdź następujący (domyślny) katalog.  

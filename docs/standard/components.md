@@ -4,12 +4,12 @@ description: W tym artykule opisano składniki architektury platformy .NET, taki
 author: cartermp
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 4329830d6cec5032517ea3fa02cb24dd7322e23f
-ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
+ms.openlocfilehash: 027fdb4cec47550f88f6930a4bbdff4ab5cdfb36
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80291784"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344167"
 ---
 # <a name="net-architectural-components"></a>Składniki architektury .NET
 
@@ -38,7 +38,7 @@ Istnieją cztery podstawowe implementacje platformy .NET, które firma Microsoft
 
 .NET Core to wieloplatformowa implementacja platformy .NET, zaprojektowana do obsługi obciążeń serwerowych i chmurowych na dużą skalę. Działa w systemach Windows, macOS i Linux. Implementuje standard .NET, więc kod, który jest przeznaczony dla standardu .NET można uruchomić na .NET Core. [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core), [Windows Forms](../framework/winforms/windows-forms-overview.md)i [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) są uruchamiane na programie .NET Core.
 
-Aby dowiedzieć się więcej o platformie .NET Core, zobacz [Przewodnik po rdzeniu .NET](../core/index.md) i [wybieranie między programem .NET Core a platformą .NET Framework dla aplikacji serwera](choosing-core-framework-server.md).
+Aby dowiedzieć się więcej o platformie .NET Core, zobacz [Przewodnik po rdzeniu .NET](../core/index.yml) i [wybieranie między programem .NET Core a platformą .NET Framework dla aplikacji serwera](choosing-core-framework-server.md).
 
 ### <a name="net-framework"></a>.NET Framework
 
@@ -107,8 +107,8 @@ Oficjalne dokumenty ISO/IEC są dostępne na stronie NORMY [PUBLICZNE](https://s
 
 - [Wybieranie między programami .NET Core i .NET Framework na potrzeby aplikacji serwerowych](choosing-core-framework-server.md)
 - [.NET Standard](net-standard.md)
-- [Przewodnik po rdzeniu .NET](../core/index.md)
-- [.NET framework — przewodnik](../framework/index.yml)
+- [Przewodnik po rdzeniu .NET](../core/index.yml)
+- [Przewodnik po platformach .NET Framework](../framework/index.yml)
 - [C# Przewodnik](../csharp/index.yml)
 - [F# Przewodnik](../fsharp/index.yml)
 - [Przewodnik po podstawowych języka Visual](../visual-basic/index.yml)

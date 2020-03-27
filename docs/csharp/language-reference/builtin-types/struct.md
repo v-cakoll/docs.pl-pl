@@ -1,6 +1,6 @@
 ---
 title: Typy struktury — odwołanie do języka C#
-ms.date: 02/24/2020
+ms.date: 03/26/2020
 f1_keywords:
 - struct_CSharpKeyword
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: b126706ff9c881e5c2d5cc7ee4833ac8896e3fcc
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 6a2c97b93a8f6d1d62bd8a96865a4fe6587f55d3
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507246"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345132"
 ---
 # <a name="structure-types-c-reference"></a>Typy struktury (odwołanie do języka C#)
 
@@ -24,6 +24,24 @@ ms.locfileid: "79507246"
 Typy struktur mają *semantykę wartości*. Oznacza to, że zmienna typu struktury zawiera wystąpienie typu. Domyślnie wartości zmiennych są kopiowane przy przypisywaniu, przekazywaniu argumentu do metody i zwracaniu wyniku metody. W przypadku zmiennej typu struktury kopiowane jest wystąpienie typu. Aby uzyskać więcej informacji, zobacz [Typy wartości](value-types.md).
 
 Zazwyczaj typy struktury służy do projektowania małych typów zorientowanych na dane, które zapewniają niewielkie lub żadne zachowanie. Na przykład .NET używa typów struktury do reprezentowania liczby [(zarówno liczby całkowitej,](integral-numeric-types.md) jak i [rzeczywistej),](floating-point-numeric-types.md) [wartości logicznej,](bool.md) [znaku Unicode,](char.md) [wystąpienia czasu](xref:System.DateTime). Jeśli koncentrujesz się na zachowaniu typu, rozważ zdefiniowanie [klasy](../keywords/class.md). Typy klas mają *semantykę odwołań*. Oznacza to, że zmienna typu klasy zawiera odwołanie do wystąpienia typu, a nie samego wystąpienia.
+
+Ponieważ typy struktur mają semantykę wartości, zaleca się definiowanie typów struktur *niezmiennych.*
+
+## <a name="readonly-struct"></a>`readonly`Struct
+
+Począwszy od języka C# 7.2, można użyć `readonly` modyfikatora, aby zadeklarować, że typ struktury jest niezmienne:
+
+[!code-csharp[readonly struct](snippets/StructType.cs#ReadonlyStruct)]
+
+Wszystkie elementy członkowskie `readonly` danych struktury muszą być tylko do odczytu w następujący sposób:
+
+- Każda deklaracja pola musi mieć [ `readonly` modyfikator](../keywords/readonly.md)
+- Wszelkie właściwości, w tym te zaimplementowane automatycznie, muszą być
+
+Gwarantuje to, że `readonly` żaden element członkowski struktury modyfikuje stan struktury.
+
+> [!NOTE]
+> `readonly` W strukturze element członkowski danych typu odwołania modyfikowalne nadal można mutować swój własny stan. Na przykład nie można <xref:System.Collections.Generic.List%601> zastąpić wystąpienia, ale można dodać do niego nowe elementy.
 
 ## <a name="limitations-with-the-design-of-a-structure-type"></a>Ograniczenia związane z projektowaniem typu konstrukcji
 
@@ -62,6 +80,8 @@ Dla każdego typu struktury istnieją [konwersje boksu i rozpakowywania](../../p
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
 Aby uzyskać więcej informacji, zobacz sekcję [Struktury](~/_csharplang/spec/structs.md) [specyfikacji języka języka języka C#.](~/_csharplang/spec/introduction.md)
+
+Aby uzyskać `readonly` więcej informacji na temat struktur, zobacz [notatkę dotyczącą propozycji funkcji](~/_csharplang/proposals/csharp-7.2/readonly-ref.md#readonly-structs).
 
 ## <a name="see-also"></a>Zobacz też
 

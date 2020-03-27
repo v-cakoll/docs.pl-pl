@@ -2,15 +2,15 @@
 title: 'Instrukcje: Programowe dodawanie możliwości odnajdywania do usługi i klienta WCF'
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: dd96bc168413eef99260a5251e74971aa1309ff4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf89c793cbd72a0a3980e6ec8e42c688dcedec26
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184887"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344980"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Instrukcje: Programowe dodawanie możliwości odnajdywania do usługi i klienta WCF
-W tym temacie wyjaśniono, jak sprawić, aby usługa Windows Communication Foundation (WCF) była wykrywalna. Jest on oparty na przykładzie [self-host.](https://go.microsoft.com/fwlink/?LinkId=145523)  
+W tym temacie wyjaśniono, jak sprawić, aby usługa Windows Communication Foundation (WCF) była wykrywalna. Jest on oparty na przykładzie [self-host.](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host)  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>Aby skonfigurować istniejący przykład usługi hosta samodzielnego dla odnajdywania  
   
@@ -124,7 +124,7 @@ W tym temacie wyjaśniono, jak sprawić, aby usługa Windows Communication Found
   
      Ta metoda używa adresu punktu `FindCalculatorServiceAddress` końcowego zwróconego z wywołania usługi kalkulatora.  
   
-11. Wewnątrz `InvokeCalculatorService` metody utwórz wystąpienie `CalculatorServiceClient` klasy. Ta klasa jest zdefiniowana przez [przykład hosta własnego.](https://go.microsoft.com/fwlink/?LinkId=145523) Został wygenerowany przy użyciu pliku Svcutil.exe.  
+11. Wewnątrz `InvokeCalculatorService` metody utwórz wystąpienie `CalculatorServiceClient` klasy. Ta klasa jest zdefiniowana przez [przykład hosta własnego.](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host) Został wygenerowany przy użyciu pliku Svcutil.exe.  
   
     ```csharp  
     // Create a client  
@@ -220,7 +220,7 @@ W tym temacie wyjaśniono, jak sprawić, aby usługa Windows Communication Found
     ```  
   
 ## <a name="example"></a>Przykład  
- Poniżej znajduje się lista kodu dla tego przykładu. Ponieważ ten kod jest oparty na przykładzie [self-host,](https://go.microsoft.com/fwlink/?LinkId=145523) tylko te pliki, które zostały zmienione są wymienione. Aby uzyskać więcej informacji na temat przykładu hosta samodzielnego, zobacz [Instrukcje instalacji](https://go.microsoft.com/fwlink/?LinkId=145522).  
+ Poniżej znajduje się lista kodu dla tego przykładu. Ponieważ ten kod jest oparty na przykładzie [self-host,](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host) tylko te pliki, które zostały zmienione są wymienione. Aby uzyskać więcej informacji na temat przykładu hosta samodzielnego, zobacz [Instrukcje instalacji](https://docs.microsoft.com/dotnet/framework/wcf/samples/set-up-instructions).  
   
 ```csharp  
 // Service.cs  

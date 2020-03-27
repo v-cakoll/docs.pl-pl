@@ -1,144 +1,139 @@
 ---
-title: Co to jest Model Builder i jak działa?
-description: Jak używać ML.NET Model Builder do automatycznego uczenia modelu uczenia maszynowego
-ms.date: 01/07/2020
+title: Co to jest Kreator modeli i jak działa?
+description: Jak automatycznie szkolić model uczenia maszynowego za pomocą ML.NET Programu Model Builder
+ms.date: 03/25/2020
 ms.custom: overview, mlnet-tooling
-ms.openlocfilehash: cff4601843ec9ca7201ea7dbdbfbcfa18f50e46e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9cf66455109908ebd9fc10e62cf4f067609b57d9
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79399225"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344768"
 ---
-# <a name="what-is-model-builder-and-how-does-it-work"></a>Co to jest Model Builder i jak działa?
+# <a name="what-is-model-builder-and-how-does-it-work"></a>Co to jest Kreator modeli i jak działa?
 
-ML.NET Model Builder to intuicyjne graficzne rozszerzenie programu Visual Studio do tworzenia, uczenia i wdrażania niestandardowych modeli uczenia maszynowego.
+ML.NET Model Builder to intuicyjne graficzne rozszerzenie programu Visual Studio do tworzenia, szkolenia i wdrażania niestandardowych modeli uczenia maszynowego.
 
-Program Model Builder używa automatycznego uczenia maszynowego (AutoML) do eksplorowania różnych algorytmów i ustawień uczenia maszynowego, aby ułatwić znalezienie tego, który najlepiej pasuje do twojego scenariusza.
+Kreator modeli używa automatycznego uczenia maszynowego (AutoML) do eksplorowania różnych algorytmów i ustawień uczenia maszynowego, aby ułatwić znalezienie tego, który najlepiej odpowiada twojemu scenariuszowi.
 
-Nie potrzebujesz wiedzy o uczeniu maszynowym, aby korzystać z modelu Konstruktora. Wszystko, czego potrzebujesz, to niektóre dane i problem do rozwiązania. Konstruktor modeli generuje kod, aby dodać model do aplikacji .NET.
+Nie potrzebujesz wiedzy specjalistycznej w zakresie uczenia maszynowego, aby korzystać z kreatora modeli. Wszystko, czego potrzebujesz, to dane i problem do rozwiązania. Kreator modeli generuje kod, aby dodać model do aplikacji .NET.
 
-![Animacja interfejsu użytkownika rozszerzenia programu Model Builder Visual Studio](media/ml-dotnet-model-builder.gif)
+![Animacja interfejsu użytkownika rozszerzenia programu Visual Studio programu Model Builder](media/ml-dotnet-model-builder.gif)
 
 > [!NOTE]
-> Konstruktor modeli jest obecnie w wersji zapoznawczej.
+> Kreator modeli jest obecnie w wersji zapoznawczej.
 
-## <a name="scenarios"></a>Scenariusze
+## <a name="scenario"></a>Scenariusz
 
-Można przynieść wiele różnych scenariuszy do konstruktora modeli, aby wygenerować model uczenia maszynowego dla aplikacji.
+Można przynieść wiele różnych scenariuszy do konstruktora modelu, aby wygenerować model uczenia maszynowego dla aplikacji.
 
-Scenariusz jest opistypu przewidywania, które chcesz zrobić przy użyciu danych. Przykład:
+Scenariusz to opis typu prognozowania, które chcesz wprowadzić przy użyciu danych. Przykład:
 
-- przewidywanie przyszłej wielkości sprzedaży produktów na podstawie historycznych danych sprzedaży
-- klasyfikować nastroje jako pozytywne lub negatywne na podstawie opinii klientów
-- wykryć, czy transakcja bankowa jest oszukańcza
-- kierowanie problemów z opiniami klientów do właściwego zespołu w twojej firmie
+- przewidywanie przyszłej wielkości sprzedaży produktu na podstawie historycznych danych o sprzedaży
+- klasyfikowanie nastrojów jako pozytywnych lub negatywnych na podstawie opinii klientów
+- wykrywanie, czy transakcja bankowa jest oszukańcza
+- rozsyłanie problemów z opiniami klientów do właściwego zespołu w firmie
 
 ### <a name="which-machine-learning-scenario-is-right-for-me"></a>Który scenariusz uczenia maszynowego jest dla mnie odpowiedni?
 
-W Konstruktorze modeli należy wybrać scenariusz. Typ scenariusza zależy od typu przewidywania, który próbujesz zrobić.
+W Kreatorze modeli należy wybrać scenariusz. Typ scenariusza zależy od tego, jaki typ prognozowania próbujesz zrobić.
 
-#### <a name="predict-a-category-when-there-are-only-two-categories"></a>Przewidywanie kategorii (gdy istnieją tylko dwie kategorie)
+#### <a name="text-classification"></a>Klasyfikacja tekstu
 
-Klasyfikacja binarna służy do kategoryzowania danych na dwie kategorie (tak/nie; pass/fail; true/false; positive/negative).
+Klasyfikacja służy do kategoryzowanie danych na kategorie.
 
-![Diagram przedstawiający przykłady klasyfikacji binarnej, w tym wykrywanie oszustw, ograniczanie ryzyka i sprawdzanie aplikacji](media/binary-classification-examples.png)
+![Diagram przedstawiający przykłady klasyfikacji binarnej, w tym wykrywanie oszustw, ograniczanie ryzyka i monitorowanie aplikacji](media/binary-classification-examples.png)
 
-Analiza tonacji może służyć do przewidywania pozytywnych lub negatywnych nastrojów opinii klientów. Jest to przykład zadania uczenia maszynowego klasyfikacji binarnej.
+![Przykłady klasyfikacji wieloklasowej, w tym klasyfikacja dokumentów i produktów, routing biletów pomocy technicznej i ustalanie priorytetów problemów klientów](media/multiclass-classification-examples.png)
 
-Jeśli scenariusz wymaga klasyfikacji na dwie kategorie, można użyć tego szablonu z własnym zestawem danych.
+#### <a name="value-prediction"></a>Przewidywanie wartości
 
-#### <a name="predict-a-category-when-there-are-three-or-more-categories"></a>Przewidywanie kategorii (gdy istnieją trzy lub więcej kategorii)
-
-Klasyfikacja wieloklasowa może służyć do kategoryzowania danych na trzy lub więcej klas.
-
-![Przykłady klasyfikacji wieloklasowej, w tym klasyfikacji dokumentów i produktów, routingu biletów pomocy technicznej i priorytetyzacji problemów klienta](media/multiclass-classification-examples.png)
-
-Klasyfikacja problemów może służyć do kategoryzowania opinii klientów (na przykład w usłudze GitHub) problemów przy użyciu tytułu i opisu problemu. Jest to przykład wieloklasowego zadania uczenia maszynowego klasyfikacji.
-
-Szablon klasyfikacji problemów dla scenariusza można użyć, jeśli chcesz podzielić dane na trzy lub więcej kategorii.
-
-#### <a name="predict-a-number"></a>Przewidywanie liczby
-
-Regresja służy do przewidywania liczb.
+Regresja jest używana do przewidywania liczb.
 
 ![Diagram przedstawiający przykłady regresji, takie jak przewidywanie cen, prognozowanie sprzedaży i konserwacja predykcyjna](media/regression-examples.png)
 
-Przewidywanie cen może służyć do przewidywania cen domów za pomocą lokalizacji, wielkości i innych cech domu. Jest to przykład zadania uczenia maszynowego regresji.
-
-Można użyć szablonu prognozowania cen dla scenariusza, jeśli chcesz przewidzieć wartość liczbową z własnego zestawu danych.
-
-#### <a name="classify-images-into-categories"></a>Klasyfikowanie obrazów na kategorie
-
-Ten scenariusz jest szczególnym przypadkiem klasyfikacji wieloklasowej, gdzie dane wejściowe, które mają być kategoryzowane jest zestaw obrazów.
+#### <a name="image-classification"></a>Klasyfikacja obrazów
 
 Klasyfikacja obrazów może służyć do identyfikowania obrazów różnych kategorii. Na przykład różne rodzaje terenu lub zwierząt lub wady produkcyjne.
 
-Można użyć szablonu klasyfikacji obrazów dla scenariusza, jeśli masz zestaw obrazów i chcesz sklasyfikować obrazy na różne kategorie.
+Można użyć scenariusza klasyfikacji obrazów, jeśli masz zestaw obrazów i chcesz sklasyfikować obrazy do różnych kategorii.
 
-#### <a name="custom-scenario"></a>Scenariusz niestandardowy
+#### <a name="recommendation"></a>Zalecenie
 
-Scenariusz niestandardowy umożliwia ręczne wybranie scenariusza.
+Scenariusz rekomendacji przewiduje listę sugerowanych elementów dla określonego użytkownika, na podstawie tego, jak podobne są ich polubienia i antypatie do innych użytkowników".
+
+Możesz użyć scenariusza rekomendacji, gdy masz zestaw użytkowników i zestaw "produktów", takich jak produkty do zakupu, filmy, książki lub programy telewizyjne, wraz z zestawem "ocen" tych produktów przez użytkowników.
+
+## <a name="environment"></a>Środowisko
+
+Model uczenia maszynowego można trenować lokalnie na komputerze lub w chmurze na platformie Azure.
+
+Podczas szkolenia lokalnego, pracujesz w ramach ograniczeń zasobów komputera (procesora CPU, pamięci i dysku). Podczas szkolenia w chmurze, można skalować zasoby w górę, aby spełnić wymagania scenariusza, szczególnie dla dużych zestawów danych.
+
+Szkolenie lokalne jest obsługiwane dla wszystkich scenariuszy.
+
+Szkolenie platformy Azure jest obsługiwane dla klasyfikacji obrazów.
 
 ## <a name="data"></a>Dane
 
-Po wybraniu scenariusza Konstruktor modeli prosi o podanie zestawu danych. Dane są używane do uczenia, oceny i wybrać najlepszy model dla scenariusza.
+Po wybraniu scenariusza Kreator modelu prosi o podanie zestawu danych. Dane są używane do szkolenia, oceny i wybierz najlepszy model dla scenariusza.
 
-![Diagram przedstawiający kroki konstruktora modeli](media/model-builder-steps.png)
+![Diagram przedstawiający kroki Konstruktora modeli](media/model-builder-steps.png)
 
-Program Model Builder obsługuje zestawy danych w formatach .tsv, csv, .txt, a także w formacie bazy danych SQL. Jeśli masz plik txt, kolumny powinny `,`być `;` `/t` oddzielone , a plik musi mieć wiersz nagłówka.
+Program Model Builder obsługuje zestawy danych w formatach .tsv, csv, .txt, a także w formacie bazy danych SQL. Jeśli masz plik txt, kolumny powinny być `,`oddzielone `/t` lub, `;` a plik musi mieć wiersz nagłówka.
 
 Jeśli zestaw danych składa się z obrazów, obsługiwane `.jpg` `.png`typy plików są i .
 
-Aby uzyskać więcej informacji, zobacz [Ładowanie danych szkoleniowych do konstruktora modeli](how-to-guides/load-data-model-builder.md).
+Aby uzyskać więcej informacji, zobacz [Ładowanie danych szkoleniowych do kreatora modeli](how-to-guides/load-data-model-builder.md).
 
 ### <a name="choose-the-output-to-predict-label"></a>Wybierz dane wyjściowe do przewidzenia (etykieta)
 
-Zestaw danych to tabela wierszy przykładów szkoleniowych i kolumn atrybutów. Każdy wiersz ma:
+Zestaw danych to tabela wierszy przykładów treningu i kolumn atrybutów. Każdy wiersz ma:
 
 - **etykieta** (atrybut, który chcesz przewidzieć)
-- **(atrybuty,** które są używane jako dane wejściowe do przewidywania etykiety).
+- **funkcje** (atrybuty, które są używane jako dane wejściowe do przewidywania etykiety).
 
-W scenariuszu prognozowania ceny domu funkcje mogą być następujące:
+W przypadku scenariusza przewidywania ceny domu funkcje mogą być:
 
-- kwadratowy materiał filmowy domu
+- kwadratowy materiał z domu
 - liczba sypialni i łazienek
 - kod pocztowy
 
-Etykieta jest historyczna cena domu dla tego rzędu kwadratowych materiału, sypialni i wartości łazienki i kodu pocztowego.
+Etykieta jest historyczną ceną domu dla tego rzędu kwadratowych materiałów, sypialni i wartości łazienki i kodu pocztowego.
 
-![Tabela przedstawiająca wiersze i kolumny danych o cenach domów z funkcjami składającymi się z kodu pocztowego pokoi i etykiety cenowej](media/model-builder-data.png)
+![Tabela przedstawiająca wiersze i kolumny danych o cenie domu z funkcjami składającymi się z kodu pocztowego pokoi wielkości i etykiety cenowej](media/model-builder-data.png)
 
 ### <a name="example-datasets"></a>Przykładowe zestawy danych
 
 Jeśli nie masz jeszcze własnych danych, wypróbuj jeden z następujących zestawów danych:
 
-|Scenariusz|Zadanie ML|Dane|Label|Funkcje|
+|Scenariusz|Przykład|Dane|Label|Funkcje|
 |-|-|-|-|-|
-|Przewidywanie cen|Regresji|[dane dotyczące opłat za przejazd taksówką](https://github.com/dotnet/machinelearning-samples/blob/master/datasets/taxi-fare-train.csv)|Taryfy|Czas podróży, odległość|
-|Wykrywanie anomalii|klasyfikacja binarna|[dane o sprzedaży produktów](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|Sprzedaż produktów|Month|
-|Analiza tonacji|klasyfikacja binarna|[dane komentarza strony internetowej](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|Etykieta (0, gdy negatywne nastroje, 1, gdy dodatnie)|Komentarz, Rok|
-|Wykrywanie oszustw|klasyfikacja binarna|[dane karty kredytowej](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|Klasa (1 w przypadku oszustwa, 0 w przeciwnym razie)|Kwota, V1-V28 (funkcje zanonimizowane)|
-|Klasyfikacja tekstu|klasyfikacja wieloklasowa|[Dane o problemach usługi GitHub](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|Obszar|Tytuł, Opis|
-|Klasyfikacja obrazów|klasyfikacja wieloklasowa|[Kwiaty obrazy](http://download.tensorflow.org/example_images/flower_photos.tgz)|Rodzaj kwiatu: stokrotka, mniszek lekarski, róże, słoneczniki, tulipany|Same dane obrazu|
+|Klasyfikacja|Przewidywanie anomalii sprzedaży|[dane dotyczące sprzedaży produktów](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|Sprzedaż produktów|Month|
+||Przewidywanie nastrojów komentarzy na stronie internetowej|[dane dotyczące komentarzy do witryny](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|Etykieta (0, gdy negatywne nastroje, 1, gdy dodatnie)|Komentarz, Rok|
+||Przewidywanie nieuczciwych transakcji kartą kredytową|[dane karty kredytowej](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|Klasa (1, gdy oszukańcze, 0 w przeciwnym razie)|Kwota, V1-V28 (funkcje zanonimizowane)|
+||Przewidywanie typu problemu w repozytorium Usługi GitHub|[Dane o problemie z githubem](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|Obszar|Tytuł, Opis|
+|Przewidywanie wartości|Przewiduj cenę taryfy taksówek|[dane dotyczące taryfy taksówek](https://github.com/dotnet/machinelearning-samples/blob/master/datasets/taxi-fare-train.csv)|Taryfy|Czas podróży, odległość|
+|Klasyfikacja obrazów|Przewidywanie kategorii problemu|[obrazy kwiatów](http://download.tensorflow.org/example_images/flower_photos.tgz)|Rodzaj kwiatu: stokrotka, mniszek lekarski, róże, słoneczniki, tulipany|Same dane obrazu|
+|Zalecenie|Przewiduj filmy, które komuś się spodobają|[oceny filmów](http://files.grouplens.org/datasets/movielens/ml-latest-small.zip)|Użytkownicy, Filmy|Klasyfikacje|
 
 ## <a name="train"></a>Szkolenie
 
-Po wybraniu scenariusza, danych i etykiety Konstruktor modeli szkoli model.
+Po wybraniu scenariusza, danych i etykiety, Model Builder trenuje modelu.
 
 ### <a name="what-is-training"></a>Co to jest szkolenie?
 
-Szkolenie to automatyczny proces, za pomocą którego model Konstruktor nauczy model, jak odpowiadać na pytania dotyczące scenariusza. Po przeszkoleniu model może przewidywać dane wejściowe, których wcześniej nie widział. Na przykład, jeśli przewidujesz ceny domów i nowy dom wchodzi na rynek, możesz przewidzieć jego cenę sprzedaży.
+Szkolenie to automatyczny proces, w którym kreator modelu uczy modelu, jak odpowiedzieć na pytania dotyczące scenariusza. Po przeszkoleniu modelu można dokonać prognoz z danych wejściowych, które nie widział wcześniej. Na przykład, jeśli przewidujesz ceny domów i nowy dom pojawia się na rynku, możesz przewidzieć jego cenę sprzedaży.
 
-Ponieważ Model Konstruktor używa automatycznego uczenia maszynowego (AutoML), nie wymaga żadnych danych wejściowych ani strojenia od ciebie podczas szkolenia.
+Ponieważ program Model Builder używa automatycznego uczenia maszynowego (AutoML), nie wymaga żadnych danych wejściowych ani dostrajania od ciebie podczas szkolenia.
 
 ### <a name="how-long-should-i-train-for"></a>Jak długo powinienem trenować?
 
-Model Konstruktor używa automl do eksplorowania wielu modeli, aby znaleźć najlepszy model.
+Kreator modeli używa automl do eksplorowania wielu modeli, aby znaleźć model o najlepszej wydajności.
 
 Dłuższe okresy treningowe umożliwiają automl eksplorowanie większej liczby modeli z szerszym zakresem ustawień.
 
-W poniższej tabeli podsumowano średni czas, który został umówiony na uzyskanie dobrej wydajności dla zestawu przykładowych zestawów danych na komputerze lokalnym.
+W poniższej tabeli podsumowano średni czas wykonania pakietu przykładowych zestawów danych na komputerze lokalnym.
 
 |Rozmiar zestawu danych|Średni czas szkolenia|
 |------------|---------------------|
@@ -148,45 +143,45 @@ W poniższej tabeli podsumowano średni czas, który został umówiony na uzyska
 |500 - 1 GB|60 min.|
 |1 GB+|3+ godzin|
 
-Liczby te są tylko przewodnikiem. Dokładna długość szkolenia zależy od:
+Te liczby są tylko przewodnikiem. Dokładna długość szkolenia zależy od:
 
 - liczba obiektów (kolumn) używanych jako dane wejściowe do modelu
 - typ kolumn
 - zadanie ML
-- wydajność procesora, dysku i pamięci urządzenia używanego do szkolenia
+- wydajność procesora, dysku i pamięci urządzenia używanego do treningu
 
 ## <a name="evaluate"></a>Evaluate
 
-Ocena to proces pomiaru, jak dobry jest twój model. Konstruktor modeli używa uczonego modelu do tworzenia prognoz z nowymi danymi testowymi, a następnie mierzy, jak dobre są prognozy.
+Ocena to proces pomiaru, jak dobry jest Twój model. Kreator modeli używa uczonego modelu do tworzenia prognoz z nowymi danymi testowymi, a następnie mierzy, jak dobre są prognozy.
 
-Konstruktor modeli dzieli dane szkoleniowe na zestaw szkoleniowy i zestaw testów. Dane szkoleniowe (80%) służy do szkolenia modelu i danych testowych (20%) jest wstrzymywana do oceny modelu.
+Kreator modeli dzieli dane szkoleniowe na zestaw szkoleniowy i zestaw testów. Dane szkoleniowe (80%) służy do szkolenia modelu i danych testowych (20%) zostanie wstrzymana w celu oceny modelu.
 
 ### <a name="how-do-i-understand-my-model-performance"></a>Jak zrozumieć wydajność modelu?
 
-Scenariusz jest mapowany do zadania uczenia maszynowego. Każde zadanie ml ma swój własny zestaw metryk oceny.
+Scenariusz mapuje zadanie uczenia maszynowego. Każde zadanie uczenia maszynowego ma swój własny zestaw metryk oceny.
 
-#### <a name="regression-for-example-price-prediction"></a>Regresja (na przykład przewidywanie cen)
+#### <a name="value-prediction"></a>Przewidywanie wartości
 
-Domyślną metryką dla problemów z regresją jest RSquared, wartość RSquared waha się od 0 do 1. 1 jest najlepszą możliwą wartością lub innymi słowy, im bliżej wartości RSquared do 1, tym lepiej radzi sobie twój model.
+Domyślną metryką problemów z przewidywaniem wartości jest RSquared, wartość RSquared waha się od 0 do 1. 1 jest najlepszą możliwą wartością lub innymi słowy im bliżej wartości RSquared do 1, tym lepszy model wykonuje.
 
-Inne metryki zgłaszane, takie jak strata bezwzględna, kwadratowa strata i strata rms są dodatkowe metryki, które mogą służyć do zrozumienia, jak model działa i porównanie go z innymi modelami regresji.
+Inne metryki zgłaszane, takie jak bezwzględna strata, strata kwadratowa i strata usługi RMS to dodatkowe metryki, których można użyć do zrozumienia działania modelu i porównania go z innymi modelami przewidywania wartości.
 
-#### <a name="binary-classification-for-example-sentiment-analysis"></a>Klasyfikacja binarna (na przykład analiza tonacji)
+#### <a name="classification-2-categories"></a>Klasyfikacja (2 kategorie)
 
-Domyślną metryką problemów z klasyfikacją jest dokładność. Dokładność definiuje proporcję poprawnych prognoz modelu jest wykonywanie za pomocą zestawu danych testowych. Im bliżej 100% lub 1,0, tym lepiej.
+Domyślną metryką problemów z klasyfikacją jest dokładność. Dokładność definiuje proporcję poprawnych prognoz, które model tworzy za pomocą zestawu danych testowych. Im bliżej 100% lub 1,0 tym lepiej.
 
-Inne zgłoszone wskaźniki, takie jak AUC (Obszar pod krzywą), który mierzy rzeczywistą dodatnią szybkość w porównaniu z fałszywie dodatnim wskaźnikiem, powinny być większe niż 0,50, aby modele były akceptowalne.
+Inne zgłaszane wskaźniki, takie jak AUC (Obszar pod krzywą), który mierzy rzeczywistą dodatnią stopę w porównaniu z fałszywie dodatnim wskaźnikiem powinny być większe niż 0,50 dla modeli, które mają być dopuszczalne.
 
-Dodatkowe metryki, takie jak wynik F1 może służyć do kontrolowania równowagi między precyzji i odwołania.
+Dodatkowe metryki, takie jak wynik F1 może służyć do kontrolowania równowagi między Precision i Recall.
 
-#### <a name="multi-class-classification-for-example-issue-classification-image-classification"></a>Klasyfikacja wieloklasowa (na przykład klasyfikacja wydania, klasyfikacja obrazów)
+#### <a name="classification-3-categories"></a>Klasyfikacja (3+ kategorie)
 
-Domyślną metryką dla klasyfikacji wieloklasowej jest Mikrodokładność. Im bliżej Mikro dokładności do 100% lub 1,0, tym lepiej.
+Domyślną metryką dla klasyfikacji wieloklasowej jest mikrodyskość. Im bliżej mikrodemy do 100% lub 1,0, tym lepiej.
 
-Inną ważną metryką dla klasyfikacji wieloklasowej jest dokładność makro, podobna do mikrodokładności im bliżej 1.0, tym lepiej. Dobrym sposobem myślenia o tych dwóch rodzajach dokładności jest:
+Inną ważną metryką dla klasyfikacji wieloklasowej jest dokładność makro, podobna do mikrodyskności im bliżej 1.0, tym lepiej. Dobrym sposobem na zastanowienie się nad tymi dwoma typami dokładności jest:
 
-- Mikrodokładność: Jak często bilet przychodzący jest klasyfikowany do właściwego zespołu?
-- Makrodokładność: Jak często bilet przychodzący jest prawidłowy dla ich drużyny?
+- Mikrodyskłańca: Jak często przychodzący bilet jest klasyfikowany do właściwego zespołu?
+- Makrodność: Jak często bilet przychodzący jest poprawny dla swojej drużyny?
 
 ### <a name="more-information-on-evaluation-metrics"></a>Więcej informacji na temat wskaźników oceny
 
@@ -196,20 +191,20 @@ Aby uzyskać więcej informacji, zobacz [metryki oceny modelu](resources/metrics
 
 Jeśli wynik wydajności modelu nie jest tak dobry, jak chcesz, możesz:
 
-- Trenuj przez dłuższy czas. Z więcej czasu, aparat automatycznego uczenia maszynowego, aby wypróbować więcej algorytmów i ustawień.
+- Trenuj przez dłuższy czas. Z więcej czasu, zautomatyzowany aparat uczenia maszynowego eksperymenty z więcej algorytmów i ustawień.
 
-- Dodaj więcej danych. Czasami ilość danych nie jest wystarczająca do nauczenia modelu uczenia maszynowego wysokiej jakości.
+- Dodaj więcej danych. Czasami ilość danych nie jest wystarczająca do przeszkolenia modelu uczenia maszynowego wysokiej jakości.
 
-- Zrównoważ swoje dane. W przypadku zadań klasyfikacji upewnij się, że zestaw szkoleniowy jest zrównoważony w różnych kategoriach. Na przykład jeśli masz cztery klasy na 100 przykładów szkolenia, a dwie pierwsze klasy (tag1 i tag2) są używane dla 90 rekordów, ale pozostałe dwie (tag3 i tag4) są używane tylko w pozostałych 10 rekordach, brak zrównoważonych danych może spowodować, że model będzie miał problemy z poprawnie przewidzieć tag3 lub tag4.
+- Zrównoważyć swoje dane. W przypadku zadań klasyfikacji upewnij się, że zestaw szkoleniowy jest zrównoważony między kategoriami. Na przykład, jeśli masz cztery klasy dla 100 przykładów treningu, a dwie pierwsze klasy (tag1 i tag2) są używane dla 90 rekordów, ale pozostałe dwie (tag3 i tag4) są używane tylko w pozostałych 10 rekordach, brak zrównoważonych danych może spowodować, że model będzie miał problemy z poprawnie przewidzieć tag3 lub tag4.
 
 ## <a name="code"></a>Code
 
-Po fazie oceny Konstruktor modeli generuje plik modelu i kod, którego można użyć do dodania modelu do aplikacji. ML.NET modele są zapisywane jako plik zip. Kod do załadowania i używania modelu jest dodawany jako nowy projekt w rozwiązaniu. Konstruktor modeli dodaje również przykładową aplikację konsoli, którą można uruchomić, aby zobaczyć model w działaniu.
+Po fazie oceny Program Model Builder wyprowadza plik modelu i kod, którego można użyć do dodania modelu do aplikacji. ML.NET modele są zapisywane jako plik zip. Kod do ładowania i używania modelu jest dodawany jako nowy projekt w rozwiązaniu. Kreator modeli dodaje również przykładową aplikację konsoli, którą można uruchomić, aby wyświetlić model w działaniu.
 
-Ponadto Konstruktor modeli generuje kod, który wygenerował model, dzięki czemu można zrozumieć kroki używane do generowania modelu. Można również użyć kodu szkolenia modelu do ponownego uczenia modelu z nowymi danymi.
+Ponadto Program Model Builder wyprowadza kod, który wygenerował model, dzięki czemu można zrozumieć kroki używane do generowania modelu. Można również użyć kodu szkolenia modelu do ponownego przeszkolenia modelu z nowymi danymi.
 
 ## <a name="whats-next"></a>Co dalej?
 
-[Instalowanie](how-to-guides/install-model-builder.md) rozszerzenia programu Visual Studio dla konstruktora modeli
+[Instalowanie](how-to-guides/install-model-builder.md) rozszerzenia programu Visual Studio programu Builder
 
-[Wypróbuj prognozę cen lub scenariusz regresji](tutorials/predict-prices-with-model-builder.md)
+Wypróbuj [przewidywanie cen lub dowolny scenariusz regresji](tutorials/predict-prices-with-model-builder.md)

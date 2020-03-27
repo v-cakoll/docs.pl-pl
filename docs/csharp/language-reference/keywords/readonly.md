@@ -1,46 +1,46 @@
 ---
-title: słowo kluczowe tylko do odczytu — odwołanie do języka C#
-ms.date: 06/21/2018
+title: readonly keyword - C# Reference
+ms.date: 03/26/2020
 f1_keywords:
 - readonly_CSharpKeyword
 - readonly
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: 165b6287e1610e013b289601e1535a08fdd3b5c9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 344d5e54fcd500e283c52fa7953c6366823f13f0
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399358"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345149"
 ---
 # <a name="readonly-c-reference"></a>readonly (odwołanie w C#)
 
 Słowo `readonly` kluczowe jest modyfikatorem, który może być używany w czterech kontekstach:
 
-- W [deklaracji](#readonly-field-example)pola `readonly` wskazuje, że przypisanie do pola może wystąpić tylko jako część deklaracji lub w konstruktorze w tej samej klasie. Pole tylko do odczytu można przypisać i przypisać je wielokrotnie w ramach deklaracji pola i konstruktora.
+- W [deklaracji](#readonly-field-example)pola `readonly` wskazuje, że przypisanie do pola może nastąpić tylko jako część deklaracji lub w konstruktorze w tej samej klasie. Pole tylko do odczytu można przypisać i przypisać ponownie wiele razy w deklaracji pola i konstruktora.
   
-  Nie `readonly` można przypisać pola po wyjściu konstruktora. Ta reguła ma różne implikacje dla typów wartości i typów odwołań:
+  Nie `readonly` można przypisać pola po zamknięciu konstruktora. Ta reguła ma różne implikacje dla typów wartości i typów odwołań:
   
-  - Ponieważ typy wartości bezpośrednio zawierają ich dane, pole, które jest typem `readonly` wartości jest niezmienne.
-  - Ponieważ typy odwołań zawierają odwołanie do ich `readonly` danych, pole, które jest typem odwołania, musi zawsze odwoływać się do tego samego obiektu. Ten obiekt nie jest niezmienny. Modyfikator `readonly` zapobiega zastępowaniu pola innym wystąpieniem typu odwołania. Jednak modyfikator nie uniemożliwia modyfikowania danych wystąpienia pola za pomocą pola tylko do odczytu.
+  - Ponieważ typy wartości bezpośrednio zawierają ich dane, pole, które jest typem `readonly` wartości, jest niezmienne.
+  - Ponieważ typy odwołań zawierają odwołanie do ich `readonly` danych, pole, które jest typem odwołania, musi zawsze odwoływać się do tego samego obiektu. Ten obiekt nie jest niezmienny. Modyfikator `readonly` zapobiega zastępowaniu pola przez inne wystąpienie typu odwołania. Jednak modyfikator nie zapobiega modyfikowaniu danych wystąpienia pola za pomocą pola tylko do odczytu.
 
   > [!WARNING]
-  > Typ widoczny zewnętrznie, który zawiera widoczne z zewnątrz pole tylko do odczytu, które jest typu odwołanie mofntabela może być luka w zabezpieczeniach i może wyzwolić ostrzeżenie [CA2104:](/visualstudio/code-quality/ca2104) "Nie deklarują tylko do odczytu typy odwołań tylko do odczytu."
+  > Zewnętrznie widoczny typ, który zawiera zewnętrznie widoczne pole tylko do odczytu, które jest modyfikowalnym typem odwołania, może być luką w zabezpieczeniach i może wywołać ostrzeżenie [CA2104](/visualstudio/code-quality/ca2104) : "Nie zgłaszaj tylko do odczytu typów odwołań modyfikowalnych."
 
-- W [ `readonly struct` definicji](#readonly-struct-example) `readonly` wskazuje, `struct` że jest niezmienny.
-- W [ `readonly` definicji elementu członkowskiego](#readonly-member-examples)wskazuje, `struct` `readonly` że element członkowski nie mutuje stanu wewnętrznego struktury.
-- W [ `ref readonly` zwracanej metodzie](#ref-readonly-return-example) `readonly` modyfikator wskazuje, że metoda zwraca odwołanie i zapisuje nie są dozwolone do tego odwołania.
+- W `readonly struct` definicji `readonly` typu wskazuje, że typ struktury jest niezmienny. Aby uzyskać więcej [ `readonly` ](../builtin-types/struct.md#readonly-struct) informacji, zobacz sekcję struktury [struktury struktury typów](../builtin-types/struct.md) artykułu.
+- W [ `readonly` definicji](#readonly-member-examples) `readonly` elementu członkowskiego wskazuje, `struct` że element członkowski a nie mutuje stan wewnętrzny struktury.
+- W [ `ref readonly` powrocie](#ref-readonly-return-example)metody `readonly` modyfikator wskazuje, że metoda zwraca odwołanie i zapisy nie są dozwolone do tego odwołania.
 
-I `readonly struct` `ref readonly` konteksty zostały dodane w języku C# 7.2. `readonly`elementy składek zostały dodane w języku C# 8.0
+`readonly struct` Konteksty `ref readonly` i zostały dodane w języku C# 7.2. `readonly`elementy strukturyzowania zostały dodane w języku C# 8.0
 
 ## <a name="readonly-field-example"></a>Przykład pola tylko do odczytu
 
-W tym przykładzie wartość pola `year` nie można zmienić w `ChangeYear`metodzie, mimo że jest przypisana wartość w konstruktorze klasy:
+W tym przykładzie nie `year` można zmienić wartości pola `ChangeYear`w metodzie, nawet jeśli jest przypisana wartość w konstruktorze klasy:
 
 [!code-csharp[Readonly Field example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyField)]
 
-Wartość można przypisać do `readonly` pola tylko w następujących kontekstach:
+Wartość do `readonly` pola można przypisać tylko w następujących kontekstach:
 
 - Gdy zmienna jest inicjowana w deklaracji, na przykład:
 
@@ -48,13 +48,13 @@ Wartość można przypisać do `readonly` pola tylko w następujących konteksta
   public readonly int y = 5;
   ```
 
-- W konstruktora wystąpienia klasy, która zawiera deklarację pola wystąpienia.
-- W konstruktorze statycznym klasy, która zawiera deklarację pola statycznego.
+- W konstruktorze instancji klasy, która zawiera deklarację pola wystąpienia.
+- W statycznym konstruktorze klasy, która zawiera deklarację pola statycznego.
 
-Te konstruktory konteksty są również tylko konteksty, `readonly` w których jest prawidłowy przekazać pole jako [out](out-parameter-modifier.md) lub [ref](ref.md) parametru.
+Te konteksty konstruktora są również tylko konteksty, `readonly` w których jest prawidłowy, aby przekazać pole jako [out](out-parameter-modifier.md) lub [ref](ref.md) parametru.
 
 > [!NOTE]
-> Słowo `readonly` kluczowe różni się od słowa kluczowego [const.](const.md) Pole `const` można zainicjować tylko w deklaracji pola. Pole `readonly` można przypisać wiele razy w deklaracji pola i w dowolnym konstruktorze. W `readonly` związku z tym pola mogą mieć różne wartości w zależności od konstruktora używane. Ponadto, gdy `const` pole jest stałą w `readonly` czasie kompilacji, pole może służyć do stałych w czasie wykonywania, jak w poniższym przykładzie:
+> Słowo `readonly` kluczowe różni się od słowa kluczowego [const.](const.md) Pole `const` można zainicjować tylko w deklaracji pola. Pole `readonly` można przypisać wiele razy w deklaracji pola i w dowolnym konstruktorze. W związku `readonly` z tym pola mogą mieć różne wartości w zależności od używanego konstruktora. Ponadto, podczas `const` gdy pole jest stałą `readonly` w czasie kompilacji, pole może być używane dla stałych w czasie wykonywania, jak w poniższym przykładzie:
 >
 > ```csharp
 > public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;
@@ -62,50 +62,28 @@ Te konstruktory konteksty są również tylko konteksty, `readonly` w których j
 
 [!code-csharp[Initialize readonly Field example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#InitReadonlyField)]
 
-W poprzednim przykładzie, jeśli używasz instrukcji, takich jak w poniższym przykładzie:
+W poprzednim przykładzie, jeśli używasz instrukcji, jak w poniższym przykładzie:
 
 ```csharp
 p2.y = 66;        // Error
 ```
 
-pojawi się komunikat o błędzie kompilatora:
+zostanie wyświetlony komunikat o błędzie kompilatora:
 
-**Nie można przypisać pola tylko do odczytu (z wyjątkiem konstruktora lub inicjatora zmiennego)**
+**Nie można przypisać pola tylko do odczytu (z wyjątkiem konstruktora lub inicjatora zmiennej)**
 
-## <a name="readonly-struct-example"></a>Przykład struktury tylko do odczytu
+## <a name="readonly-member-examples"></a>Readonly przykłady członków
 
-Modyfikator `readonly` `struct` definicji deklaruje, że struktura jest **niezmienna**. Każde pole wystąpienia `struct` musi `readonly`być oznaczone, jak pokazano w poniższym przykładzie:
+Innym razem można utworzyć strukturę, która obsługuje mutację. W takich przypadkach kilka członków wystąpienia prawdopodobnie nie będzie modyfikować stan wewnętrzny struktury. Można zadeklarować te elementy `readonly` członkowskie wystąpienia za pomocą modyfikatora. Kompilator wymusza intencji. Jeśli ten element członkowski modyfikuje stan bezpośrednio lub uzyskuje `readonly` dostęp do elementu członkowskiego, który nie jest również zadeklarowany za pomocą modyfikatora, wynikiem jest błąd w czasie kompilacji. Modyfikator `readonly` jest `struct` prawidłowy `class` w `interface` deklaracjach elementów członkowskich, nie lub członkowskich.
 
-[!code-csharp[readonly struct example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyStruct)]
+Zyskujesz dwie zalety, `readonly` stosując modyfikator do odpowiednich `struct` metod. Co najważniejsze kompilator wymusza intencji. Kod, który modyfikuje stan `readonly` nie jest prawidłowy w metodzie. Kompilator może również korzystać z modyfikatora, `readonly` aby włączyć optymalizacje wydajności. Gdy `struct` duże typy `in` są przekazywane przez odwołanie, kompilator musi wygenerować kopię obronną, jeśli stan struktury może być modyfikowany. Jeśli `readonly` tylko elementy członkowskie są dostępne, kompilator nie może utworzyć kopii obronnej.
 
-W poprzednim przykładzie używa [właściwości auto tylko do odczytu,](../../properties.md#read-only) aby zadeklarować jego magazyn. Który instruuje kompilator, aby utworzyć `readonly` pola zapasowe dla tych właściwości. Można również `readonly` zadeklarować pola bezpośrednio:
+Modyfikator `readonly` jest prawidłowy dla `struct`większości elementów członkowskich , <xref:System.Object?displayProperty=nameWithType>w tym metod, które zastępują metody zadeklarowane w . Istnieją pewne ograniczenia:
 
-```csharp
-public readonly struct Point
-{
-    public readonly double X;
-    public readonly double Y;
-
-    public Point(double x, double y) => (X, Y) = (x, y);
-
-    public override string ToString() => $"({X}, {Y})";
-}
-```
-
-Dodanie pola nie `readonly` oznaczonego generuje `CS8340`błąd kompilatora: "Pola wystąpienia struktur tylko do odczytu muszą być tylko do odczytu".
-
-## <a name="readonly-member-examples"></a>Przykłady członków tylko do odczytu
-
-Innym razem, można utworzyć strukturę, która obsługuje mutacji. W takich przypadkach kilka elementów członkowskich wystąpienia prawdopodobnie nie zmodyfikuje stan wewnętrzny struktury. Można zadeklarować tych elementów `readonly` członkowskich wystąpienia z modyfikatorem. Kompilator wymusza intencji. Jeśli ten element członkowski modyfikuje stan bezpośrednio lub uzyskuje dostęp do elementu członkowskiego, który nie jest również zadeklarowany za pomocą `readonly` modyfikatora, wynik jest błąd w czasie kompilacji. Modyfikator `readonly` jest `struct` prawidłowy `class` `interface` na członków, nie lub deklaracji elementów członkowskich.
-
-Zyskujesz dwie zalety, `readonly` stosując `struct` modyfikator do odpowiednich metod. Co najważniejsze kompilator wymusza intencji. Kod, który modyfikuje stan nie `readonly` jest prawidłowy w metodzie. Kompilator może również `readonly` korzystać z modyfikatora, aby włączyć optymalizacje wydajności. Gdy `struct` duże typy `in` są przekazywane przez odwołanie, kompilator musi wygenerować kopię obronną, jeśli stan struktury może zostać zmodyfikowany. Jeśli `readonly` dostęp są tylko elementy członkowskie, kompilator nie może utworzyć kopię obronną.
-
-Modyfikator `readonly` jest prawidłowy `struct`dla większości elementów członkowskich , w <xref:System.Object?displayProperty=nameWithType>tym metody, które zastępują metody zadeklarowane w . Istnieją pewne ograniczenia:
-
-- Nie można zadeklarować `readonly` metod ani właściwości statycznych.
+- Nie można zadeklarować `readonly` metod statycznych lub właściwości.
 - Nie można zadeklarować `readonly` konstruktorów.
 
-`readonly` Modyfikator można dodać do deklaracji właściwości lub indeksatora:
+`readonly` Modyfikator można dodać do właściwości lub deklaracji indeksatora:
 
 ```csharp
 readonly public int Counter
@@ -115,7 +93,7 @@ readonly public int Counter
 }
 ```
 
-Można również dodać `readonly` modyfikator do poszczególnych `get` lub `set` akcesorów właściwości lub indeksatora:
+Modyfikator można również dodać `get` `set` do poszczególnych lub akcesorów właściwości lub indeksatora: `readonly`
 
 ```csharp
 public int Counter
@@ -126,9 +104,9 @@ public int Counter
 int _counter;
 ```
 
-Nie można dodać `readonly` modyfikatora do właściwości i jeden lub więcej akcesorów tej samej właściwości. To samo ograniczenie dotyczy indeksatorów.
+Nie można dodać `readonly` modyfikatora do właściwości i co najmniej jednego z akcesorów tej samej właściwości. To samo ograniczenie dotyczy indeksatorów.
 
-Kompilator niejawnie `readonly` stosuje modyfikator do właściwości implementowane automatycznie, gdzie kompilator zaimplementowany kod nie modyfikuje stan. Jest to równoważne z następującymi deklaracjami:
+Kompilator niejawnie `readonly` stosuje modyfikator do właściwości automatycznie implementowane, gdzie kompilator zaimplementowany kod nie modyfikuje stanu. Jest to równoważne z następującymi deklaracjami:
 
 ```csharp
 public readonly int Index { get; }
@@ -137,29 +115,30 @@ public int Number { readonly get; }
 public string Message { readonly get; set; }
 ```
 
-Możesz dodać `readonly` modyfikator w tych lokalizacjach, ale nie będzie miał znaczącego wpływu. `readonly` Modyfikator nie może być dodawany do automatycznie implementowane go właściwości ustawiające właściwości lub do odczytu/zapisu właściwości autoimplementowane.
+`readonly` Modyfikator można dodać w tych lokalizacjach, ale nie będzie miał znaczącego wpływu. `readonly` Modyfikator nie może być dodawany do zestawu właściwości zaimplementowanych automatycznie ani do właściwości automatycznie implementowanych odczytu/zapisu.
 
-## <a name="ref-readonly-return-example"></a>Przykład zwrotu tylko do odczytu ref
+## <a name="ref-readonly-return-example"></a>Ref readonly return example (Przykład zwrotu tylko w celu odesłania)
 
-Modyfikator `readonly` `ref return` na wskazuje, że zwrócone odwołanie nie można modyfikować. Poniższy przykład zwraca odwołanie do początku. Używa modyfikatora, `readonly` aby wskazać, że obiekty wywołujące nie można modyfikować pochodzenia:
+Modyfikator `readonly` na `ref return` wskazuje, że zwracanego odwołania nie można zmodyfikować. Poniższy przykład zwraca odwołanie do pochodzenia. Używa modyfikatora, `readonly` aby wskazać, że wywołujący nie można zmodyfikować pochodzenia:
 
 [!code-csharp[readonly struct example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyReturn)]
-Zwracany typ nie musi być `readonly struct`. Każdy typ, który może `ref` zostać zwrócony `ref readonly`przez mogą być zwracane przez .
+
+Zwracany typ nie musi być `readonly struct`. Każdy typ, który `ref` może zostać `ref readonly`zwrócony przez może być zwrócony przez .
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-Możesz również zobaczyć propozycje specyfikacji języka:
+Można również zobaczyć propozycje specyfikacji języka:
 
 - [readonly ref i readonly struct](~/_csharplang/proposals/csharp-7.2/readonly-ref.md)
-- [tylko do odczytu elementy składowe](~/_csharplang/proposals/csharp-8.0/readonly-instance-members.md)
+- [readonly strumyk elementów członkowskich](~/_csharplang/proposals/csharp-8.0/readonly-instance-members.md)
 
 ## <a name="see-also"></a>Zobacz też
 
 - [Odwołanie do języka C#](../index.md)
-- [Przewodnik programowania języka C#](../../programming-guide/index.md)
-- [Słowa kluczowe języka C#](index.md)
+- [C# Przewodnik programowania](../../programming-guide/index.md)
+- [C# Słowa kluczowe](index.md)
 - [Modyfikatory](index.md)
 - [const](const.md)
 - [Pola](../../programming-guide/classes-and-structs/fields.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Animowanie punktu przy użyciu klatek kluczowych'
+title: Jak animować punkt z wykorzystaniem klatek kluczowych
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,37 +9,37 @@ helpviewer_keywords:
 - Points [WPF], animating with key frames
 - animation [WPF], Points with key frames
 ms.assetid: d2e2ef10-0773-4133-856e-d41c09f60ded
-ms.openlocfilehash: b706568a0e8221aac737780592882f728f0f9e9c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: edcba36644cf78d6e98f934d9bd8b593af38b328
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010166"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344881"
 ---
-# <a name="how-to-animate-a-point-by-using-key-frames"></a>Instrukcje: Animowanie punktu przy użyciu klatek kluczowych
-W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames> klasy, aby animować <xref:System.Windows.Point>.  
+# <a name="how-to-animate-a-point-by-using-key-frames"></a>Jak animować punkt z wykorzystaniem klatek kluczowych
+W tym przykładzie <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames> pokazano, jak <xref:System.Windows.Point>używać klasy do animowania programu .  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład powoduje przeniesienie elipsę trójkątna ścieżce. W przykładzie użyto <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames> klasy, aby animować <xref:System.Windows.Media.EllipseGeometry.Center%2A> właściwość <xref:System.Windows.Media.EllipseGeometry>. Ta animacja używa trzech ramek kluczowych w następujący sposób:  
+ Poniższy przykład przenosi elipsę wzdłuż trójkątnej ścieżki. W przykładzie <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames> użyto klasy <xref:System.Windows.Media.EllipseGeometry.Center%2A> do animowania właściwości . <xref:System.Windows.Media.EllipseGeometry>. Ta animacja wykorzystuje trzy klatki kluczowe w następujący sposób:  
   
-1. Podczas pierwszego pół sekundy, używa wystąpienia <xref:System.Windows.Media.Animation.LinearPointKeyFrame> klasy, aby przenieść elipsy na ścieżce według stałej stawki z pozycji początkowej. Liniowy klatek kluczowych, takich jak <xref:System.Windows.Media.Animation.LinearPointKeyFrame> utworzyć płynne interpolacji liniowej między wartościami.  
+1. W pierwszej połowie drugiej, używa wystąpienia <xref:System.Windows.Media.Animation.LinearPointKeyFrame> klasy, aby przenieść elipsy wzdłuż ścieżki w stałym tempie od pozycji wyjściowej. Liniowe klatki <xref:System.Windows.Media.Animation.LinearPointKeyFrame> kluczowe, takie jak tworzenie płynnej interpolacji liniowej między wartościami.  
   
-2. Podczas koniec następnego pół sekundy używa wystąpienia <xref:System.Windows.Media.Animation.DiscretePointKeyFrame> klasy nagle przenieść elipsy wzdłuż ścieżki do następnego położenia. Dyskretne klatek kluczowych, takich jak <xref:System.Windows.Media.Animation.DiscretePointKeyFrame> tworzenie nagłe skoki między wartościami.  
+2. Pod koniec następnej połowy sekundy, używa <xref:System.Windows.Media.Animation.DiscretePointKeyFrame> wystąpienia klasy, aby nagle przenieść elipsy wzdłuż ścieżki do następnej pozycji. Dyskretne klatki <xref:System.Windows.Media.Animation.DiscretePointKeyFrame> kluczowe, takie jak tworzenie nagłych przeskoków między wartościami.  
   
-3. Podczas końcowego dwie sekundy, używa wystąpienia <xref:System.Windows.Media.Animation.SplinePointKeyFrame> klasy, aby przenieść elipsę z powrotem do jego pozycja początkowa. Ramek kluczowych krzywej składanej, takich jak <xref:System.Windows.Media.Animation.SplinePointKeyFrame> Tworzenie zmiennej przejścia między wartościami zgodnie z wartościami <xref:System.Windows.Media.Animation.SplinePointKeyFrame.KeySpline%2A> właściwości. W tym przykładzie animacji rozpocznie się powoli i przyspiesza wykładniczo w kierunku końca odcinka czasu.  
+3. W ciągu ostatnich dwóch sekund używa <xref:System.Windows.Media.Animation.SplinePointKeyFrame> wystąpienia klasy, aby przenieść elipsę z powrotem do pozycji wyjściowej. Klatki kluczowe splajnu, takie jak <xref:System.Windows.Media.Animation.SplinePointKeyFrame> tworzenie <xref:System.Windows.Media.Animation.SplinePointKeyFrame.KeySpline%2A> zmiennego przejścia między wartościami zgodnie z wartościami właściwości. W tym przykładzie animacja rozpoczyna się powoli i przyspiesza wykładniczo pod koniec segmentu czasu.  
   
  [!code-csharp[keyframes_snip#PointAnimationUsingKeyFramesWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/PointAnimationUsingKeyFramesExample.cs#pointanimationusingkeyframeswholepage)]
  [!code-vb[keyframes_snip#PointAnimationUsingKeyFramesWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/pointanimationusingkeyframesexample.vb#pointanimationusingkeyframeswholepage)]
  [!code-xaml[keyframes_snip#PointAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/PointAnimationUsingKeyFramesExample.xaml#pointanimationusingkeyframeswholepage)]  
   
- Aby uzyskać pełny przykład, zobacz [przykład animacji ramki kluczowej](https://go.microsoft.com/fwlink/?LinkID=160012).  
+ Aby uzyskać pełną próbkę, zobacz [Przykład animacji klatki kluczowej](https://github.com/microsoft/WPF-Samples/tree/master/Animation/KeyFrameAnimation).  
   
- Aby zachować spójność z innymi przykładami animacji, użyj wersji kodu w tym przykładzie <xref:System.Windows.Media.Animation.Storyboard> obiekt, aby zastosować <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>. Jednak podczas stosowania pojedynczej animacji w kodzie, jest łatwiejszy w obsłudze <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> metody zamiast <xref:System.Windows.Media.Animation.Storyboard>. Aby uzyskać przykład, zobacz [animować właściwości bez użycia scenorysu](how-to-animate-a-property-without-using-a-storyboard.md).  
+ Aby uzyskać spójność z innymi przykładami animacji, wersje kodu w tym przykładzie <xref:System.Windows.Media.Animation.Storyboard> używają obiektu do zastosowania pliku <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>. Jednak podczas stosowania pojedynczej animacji w kodzie łatwiej <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> jest użyć metody <xref:System.Windows.Media.Animation.Storyboard>zamiast używać . Na przykład zobacz [Animowanie właściwości bez użycia scenorysu](how-to-animate-a-property-without-using-a-storyboard.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>
 - <xref:System.Windows.Media.EllipseGeometry.Center%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Media.EllipseGeometry>
-- [Animacje kluczowych klatek — przegląd](key-frame-animations-overview.md)
+- [Przegląd Animacja kluczowych klatek](key-frame-animations-overview.md)
 - [Klatki kluczowe — tematy z instrukcjami](key-frame-animation-how-to-topics.md)

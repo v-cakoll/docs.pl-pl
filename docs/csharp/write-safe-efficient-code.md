@@ -4,12 +4,12 @@ description: Ostatnie ulepszenia języka C# umożliwiają pisanie weryfikowalny 
 ms.date: 10/23/2018
 ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: bb53264f61192c042da469ba687da6c472e8c6d4
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 365320fef5a2f9cd123086c1baed9a786ede9f05
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79506986"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345078"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Pisanie bezpiecznego i wydajnego kodu C#
 
@@ -21,7 +21,7 @@ W tym artykule skupiono się na technikach efektywnego zarządzania zasobami. Je
 
 W tym artykule skupiono się na następujących technikach zarządzania zasobami:
 
-- Zadeklaruj, [`readonly struct`](language-reference/keywords/readonly.md#readonly-struct-example) aby wyrazić, że typ jest **niezmienny** [`in`](language-reference/keywords/in-parameter-modifier.md) i umożliwia kompilatorowi zapisywanie kopii podczas korzystania z parametrów.
+- Zadeklaruj a [`readonly struct`](language-reference/builtin-types/struct.md#readonly-struct) wyrazić, że typ jest **niezmienny**. Dzięki temu kompilator może zapisywać [`in`](language-reference/keywords/in-parameter-modifier.md) kopie obronne podczas korzystania z parametrów.
 - Jeśli typ nie może być niezmienne, zadeklarować `struct` członków, `readonly` aby wskazać, że element członkowski nie modyfikuje stanu.
 - Użyj [`ref readonly`](language-reference/keywords/ref.md#reference-return-values) zwracanego, gdy zwracana wartość jest `struct` większa niż <xref:System.IntPtr.Size?displayProperty=nameWithType> i okres istnienia magazynu jest większy niż metoda zwracająca wartość.
 - Gdy rozmiar a `readonly struct` jest <xref:System.IntPtr.Size?displayProperty=nameWithType>większy niż , należy `in` przekazać go jako parametr ze względu na wydajność.

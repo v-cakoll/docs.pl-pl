@@ -1,34 +1,34 @@
 ---
-title: 'Wskazówki: tworzenie niestandardowego klienta i poświadczeń usługi'
+title: 'Wskazówki: Tworzenie niestandardowego klienta i poświadczeń usługi'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
-ms.openlocfilehash: d49df909521b3b5e5cf509c1367821856e91e30b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ddd9f03e26f7a8345f1070715e4877c533c361fb
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795472"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345267"
 ---
-# <a name="walkthrough-creating-custom-client-and-service-credentials"></a>Przewodnik: tworzenie niestandardowego klienta i poświadczeń usługi
+# <a name="walkthrough-creating-custom-client-and-service-credentials"></a>Wskazówki: Tworzenie niestandardowego klienta i poświadczeń usługi
 
-W tym temacie pokazano, jak zaimplementować niestandardowe poświadczenia klienta i usługi oraz jak używać poświadczeń niestandardowych z kodu aplikacji.
+W tym temacie pokazano, jak zaimplementować niestandardowe poświadczenia klienta i usługi oraz jak używać niestandardowych poświadczeń z kodu aplikacji.
 
 ## <a name="credentials-extensibility-classes"></a>Klasy rozszerzalności poświadczeń
 
-Klasy <xref:System.ServiceModel.Description.ClientCredentials> i<xref:System.ServiceModel.Description.ServiceCredentials> są głównym punktem wejścia dla rozszerzalności zabezpieczeń Windows Communication Foundation (WCF). Te klasy poświadczeń zapewniają interfejsy API, które umożliwiają kodowi aplikacji Ustawianie informacji o poświadczeniach i konwertowanie typów poświadczeń na tokeny zabezpieczające. (*Tokeny zabezpieczające* są formularzem używanym do przesyłania informacji o poświadczeniach wewnątrz komunikatów SOAP). Obowiązki tych klas poświadczeń można podzielić na dwa obszary:
+I <xref:System.ServiceModel.Description.ClientCredentials> <xref:System.ServiceModel.Description.ServiceCredentials> klasy są głównymi punktami wejścia do rozszerzalności zabezpieczeń Programu Windows Communication Foundation (WCF). Te klasy poświadczeń zapewniają interfejsy API, które umożliwiają kod aplikacji, aby ustawić informacje o poświadczeniach i przekonwertować typy poświadczeń na tokeny zabezpieczające. *(Tokeny zabezpieczające* są formularzem używanym do przesyłania informacji o poświadczeniach w komunikatach PROTOKOŁU SOAP). Obowiązki tych klas poświadczeń można podzielić na dwa obszary:
 
 - Podaj interfejsy API dla aplikacji, aby ustawić informacje o poświadczeniach.
 
-- Wykonaj jako fabrykę dla <xref:System.IdentityModel.Selectors.SecurityTokenManager> implementacji.
+- Wykonaj jako fabryka dla <xref:System.IdentityModel.Selectors.SecurityTokenManager> implementacji.
 
-Domyślne implementacje w programie WCF obsługują typy poświadczeń udostępniane przez system i tworzą Menedżera tokenów zabezpieczających, który może obsługiwać te typy poświadczeń.
+Domyślne implementacje podane w WCF obsługują typy poświadczeń dostarczonych przez system i tworzą menedżera tokenu zabezpieczającego, który jest w stanie obsługiwać te typy poświadczeń.
 
-## <a name="reasons-to-customize"></a>Przyczyny dostosowywania
+## <a name="reasons-to-customize"></a>Powody, dla których warto dostosować
 
-Istnieje wiele powodów, dla których należy dostosować klienta lub klasy poświadczeń usług. Przede wszystkim jest wymagana zmiana domyślnego zachowania zabezpieczeń WCF w odniesieniu do obsługi typów poświadczeń dostarczonych przez system, szczególnie z następujących powodów:
+Istnieje wiele powodów, dla dostosowywania klas poświadczeń klienta lub usługi. Przede wszystkim jest wymaganie, aby zmienić domyślne zachowanie zabezpieczeń WCF w odniesieniu do obsługi typów poświadczeń dostarczonych przez system, szczególnie z następujących powodów:
 
 - Zmiany, które nie są możliwe przy użyciu innych punktów rozszerzalności.
 
@@ -36,88 +36,88 @@ Istnieje wiele powodów, dla których należy dostosować klienta lub klasy poś
 
 - Dodawanie nowych niestandardowych typów tokenów zabezpieczających.
 
-W tym temacie opisano sposób implementowania niestandardowych poświadczeń klienta i usługi oraz sposób ich używania z kodu aplikacji.
+W tym temacie opisano sposób implementowania niestandardowych poświadczeń klienta i usługi oraz sposobu ich używania z kodu aplikacji.
 
 ## <a name="first-in-a-series"></a>Pierwszy w serii
 
-Tworzenie klasy poświadczeń niestandardowych jest tylko pierwszym krokiem, ponieważ powodem dostosowywania poświadczeń jest zmiana zachowania WCF dotyczącego aprowizacji poświadczeń, serializacji tokenu zabezpieczeń lub uwierzytelniania. W innych tematach w tej sekcji opisano sposób tworzenia niestandardowych serializatorów i wystawców uwierzytelniania. W tym przypadku Tworzenie klasy poświadczeń niestandardowych jest pierwszym tematem w serii. Kolejne akcje (Tworzenie serializatorów niestandardowych i wystawców) można wykonać tylko po utworzeniu poświadczeń niestandardowych. Dodatkowe tematy, które zostały skompilowane w tym temacie, to m.in.:
+Tworzenie klasy poświadczeń niestandardowych jest tylko pierwszym krokiem, ponieważ powodem dostosowywania poświadczeń jest zmiana zachowania WCF dotyczące inicjowania obsługi administracyjnej poświadczeń, serializacji tokenu zabezpieczającego lub uwierzytelniania. Inne tematy w tej sekcji opisano sposób tworzenia niestandardowych serializatorów i wystaw uwierzytelnienia. W związku z tym tworzenie klasy niestandardowych poświadczeń jest pierwszym tematem w serii. Kolejne akcje (tworzenie niestandardowych serializatorów i wystawców uwierzytelniających) można wykonać tylko po utworzeniu niestandardowych poświadczeń. Dodatkowe tematy, które opierają się na tym temacie obejmują:
 
-- [Instrukcje: Tworzenie niestandardowego dostawcy tokenów zabezpieczeń](how-to-create-a-custom-security-token-provider.md)
+- [Instrukcje: tworzenie niestandardowego dostawcy tokenów zabezpieczeń](how-to-create-a-custom-security-token-provider.md)
 
 - [Instrukcje: Tworzenie niestandardowego wystawcy uwierzytelniania tokenu zabezpieczeń](how-to-create-a-custom-security-token-authenticator.md)
 
-- [Instrukcje: Utwórz token](how-to-create-a-custom-token.md)niestandardowy.
+- [Jak: Tworzenie tokenu niestandardowego](how-to-create-a-custom-token.md).
 
 ## <a name="procedures"></a>Procedury
 
 #### <a name="to-implement-custom-client-credentials"></a>Aby zaimplementować niestandardowe poświadczenia klienta
 
-1. Zdefiniuj nową klasę pochodną <xref:System.ServiceModel.Description.ClientCredentials> klasy.
+1. Zdefiniuj nową <xref:System.ServiceModel.Description.ClientCredentials> klasę pochodną klasy.
 
-2. Opcjonalny. Dodaj nowe metody lub właściwości dla nowych typów poświadczeń. Jeśli nie dodasz nowych typów poświadczeń, Pomiń ten krok. Poniższy przykład dodaje `CreditCardNumber` właściwość.
+2. Element opcjonalny. Dodaj nowe metody lub właściwości dla nowych typów poświadczeń. Jeśli nie dodasz nowych typów poświadczeń, pomiń ten krok. Poniższy przykład `CreditCardNumber` dodaje właściwość.
 
-3. Zastąp <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> metody. Ta metoda jest automatycznie wywoływana przez infrastrukturę zabezpieczeń WCF, gdy jest używane niestandardowe poświadczenie klienta. Ta metoda jest odpowiedzialna za utworzenie i zwrócenie wystąpienia implementacji <xref:System.IdentityModel.Selectors.SecurityTokenManager> klasy.
+3. Zastąd <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> w tej metodzie. Ta metoda jest automatycznie wywoływana przez infrastrukturę zabezpieczeń WCF, gdy używane jest niestandardowe poświadczenia klienta. Ta metoda jest odpowiedzialny za tworzenie i zwracanie <xref:System.IdentityModel.Selectors.SecurityTokenManager> wystąpienia implementacji klasy.
 
     > [!IMPORTANT]
-    > Należy pamiętać, że <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> Metoda jest zastępowana, aby utworzyć niestandardowy Menedżer tokenów zabezpieczających. Menedżer tokenów zabezpieczających, pochodzący z <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>, musi zwrócić niestandardowego dostawcę tokenów zabezpieczających, który pochodzi od <xref:System.IdentityModel.Selectors.SecurityTokenProvider>, aby utworzyć rzeczywisty token zabezpieczający. Jeśli nie korzystasz z tego wzorca do tworzenia tokenów zabezpieczających, aplikacja może działać nieprawidłowo <xref:System.ServiceModel.ChannelFactory> , gdy obiekty są buforowane (to jest domyślne zachowanie dla serwerów proxy klienta WCF), co może spowodować podniesienie uprawnień. Obiekt poświadczeń niestandardowych jest buforowany w ramach elementu <xref:System.ServiceModel.ChannelFactory>. Jednak niestandardowy <xref:System.IdentityModel.Selectors.SecurityTokenManager> jest tworzony przy każdym wywołaniu, co zmniejsza zagrożenie bezpieczeństwa, o ile logika tworzenia tokenów została umieszczona <xref:System.IdentityModel.Selectors.SecurityTokenManager>w.
+    > Należy pamiętać, że <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> metoda jest zastępowana w celu utworzenia niestandardowego menedżera tokenów zabezpieczających. Menedżer tokenów zabezpieczających, <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>pochodzący z , musi zwrócić niestandardowego dostawcy tokenu zabezpieczającego, pochodzi od <xref:System.IdentityModel.Selectors.SecurityTokenProvider>, aby utworzyć rzeczywisty token zabezpieczający. Jeśli nie zastosujesz się do tego wzorca do tworzenia <xref:System.ServiceModel.ChannelFactory> tokenów zabezpieczających, aplikacja może działać niepoprawnie, gdy obiekty są buforowane (co jest domyślnym zachowaniem dla serwerów proxy klienta WCF), co może spowodować podniesienie uprawnień ataku. Obiekt poświadczeń niestandardowych <xref:System.ServiceModel.ChannelFactory>jest buforowany jako część pliku . Jednak niestandardowe <xref:System.IdentityModel.Selectors.SecurityTokenManager> jest tworzony przy każdym wywołaniu, co zmniejsza zagrożenie bezpieczeństwa, tak <xref:System.IdentityModel.Selectors.SecurityTokenManager>długo, jak logika tworzenia tokenu jest umieszczana w .
 
-4. Zastąp <xref:System.ServiceModel.Description.ClientCredentials.CloneCore%2A> metody.
+4. Zastąd <xref:System.ServiceModel.Description.ClientCredentials.CloneCore%2A> w tej metodzie.
 
     [!code-csharp[c_CustomCredentials#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#1)]
     [!code-vb[c_CustomCredentials#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/client/client.vb#1)]
 
-#### <a name="to-implement-a-custom-client-security-token-manager"></a>Aby zaimplementować niestandardowego menedżera tokenów zabezpieczeń klienta
+#### <a name="to-implement-a-custom-client-security-token-manager"></a>Aby zaimplementować niestandardowy menedżer tokenów zabezpieczeń klienta
 
-1. Zdefiniuj nową klasę pochodną <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>.
+1. Zdefiniuj nową <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>klasę pochodną .
 
-2. Opcjonalny. Zastąp <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> metodę, jeśli należy <xref:System.IdentityModel.Selectors.SecurityTokenProvider> utworzyć implementację niestandardową. Aby uzyskać więcej informacji o dostawcach niestandardowych tokenów [zabezpieczających, zobacz How to: Utwórz niestandardowego dostawcę](how-to-create-a-custom-security-token-provider.md)tokenów zabezpieczających.
+2. Element opcjonalny. Zastąd <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> w przypadku <xref:System.IdentityModel.Selectors.SecurityTokenProvider> utworzenia implementacji niestandardowej należy zastąpić metodę. Aby uzyskać więcej informacji na temat niestandardowych dostawców tokenów zabezpieczających, zobacz [Jak: Tworzenie niestandardowego dostawcy tokenów zabezpieczających](how-to-create-a-custom-security-token-provider.md).
 
-3. Opcjonalny. Zastąp <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%28System.IdentityModel.Selectors.SecurityTokenRequirement%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%40%29> metodę, jeśli należy <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> utworzyć implementację niestandardową. Aby uzyskać więcej informacji na temat wystawców niestandardowych tokenów [zabezpieczających, zobacz How to: Tworzenie niestandardowego wystawcy uwierzytelnienia](how-to-create-a-custom-security-token-authenticator.md)tokenu zabezpieczeń.
+3. Element opcjonalny. Zastąd <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%28System.IdentityModel.Selectors.SecurityTokenRequirement%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%40%29> w przypadku <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> utworzenia implementacji niestandardowej należy zastąpić metodę. Aby uzyskać więcej informacji na temat niestandardowych tokenów zabezpieczających, zobacz [Jak: Tworzenie niestandardowego tokenu zabezpieczającego.](how-to-create-a-custom-security-token-authenticator.md)
 
-4. Opcjonalna. Zastąp <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%2A> metodę, jeśli należy <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> utworzyć niestandardowy. Aby uzyskać więcej informacji na temat niestandardowych tokenów zabezpieczających i serializatorów niestandardowych [tokenów zabezpieczających, zobacz How to: Utwórz token](how-to-create-a-custom-token.md)niestandardowy.
+4. Element opcjonalny. Zastąd <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%2A> w przypadku <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> konieczności utworzenia metody niestandardowej należy zastąpić metodę niestandardową. Aby uzyskać więcej informacji na temat niestandardowych tokenów zabezpieczających i niestandardowych serializatorów tokenów zabezpieczających, zobacz [Jak: Tworzenie tokenu niestandardowego](how-to-create-a-custom-token.md).
 
     [!code-csharp[c_CustomCredentials#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#2)]
     [!code-vb[c_CustomCredentials#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/client/client.vb#2)]
 
 #### <a name="to-use-a-custom-client-credentials-from-application-code"></a>Aby użyć niestandardowych poświadczeń klienta z kodu aplikacji
 
-1. Utwórz wystąpienie wygenerowanego klienta, które reprezentuje interfejs usługi, lub Utwórz wystąpienie <xref:System.ServiceModel.ChannelFactory> wskazujące usługę, z którą chcesz się komunikować.
+1. Utwórz wystąpienie wygenerowanego klienta, który reprezentuje interfejs usługi, <xref:System.ServiceModel.ChannelFactory> lub utworzyć wystąpienie wskazujące na usługę, z którą chcesz się komunikować.
 
-2. Usuń zachowanie poświadczeń klienta dostarczone przez system z <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> kolekcji, do której można uzyskać dostęp <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> za pośrednictwem właściwości.
+2. Usuń zachowanie poświadczeń klienta <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> dostarczonych przez system z <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> kolekcji, które są dostępne za pośrednictwem właściwości.
 
-3. Utwórz nowe wystąpienie niestandardowej klasy poświadczeń klienta i Dodaj je do <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> kolekcji, do której można uzyskać dostęp <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> za pomocą właściwości.
+3. Utwórz nowe wystąpienie klasy poświadczeń <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> klienta niestandardowego i dodaj <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> ją do kolekcji, do której można uzyskać dostęp za pośrednictwem właściwości.
 
     [!code-csharp[c_CustomCredentials#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#3)]
     [!code-vb[c_CustomCredentials#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/client/client.vb#3)]
 
-Poprzednia procedura pokazuje, jak używać poświadczeń klienta z kodu aplikacji. Poświadczenia usługi WCF można także skonfigurować przy użyciu pliku konfiguracji aplikacji. Korzystanie z konfiguracji aplikacji jest często lepszym kodowaniem, ponieważ umożliwia modyfikowanie parametrów aplikacji bez konieczności modyfikowania źródła, ponownej kompilacji i ponownego wdrożenia.
+Poprzednia procedura pokazuje, jak używać poświadczeń klienta z kodu aplikacji. Poświadczenia WCF można również skonfigurować przy użyciu pliku konfiguracji aplikacji. Korzystanie z konfiguracji aplikacji jest często lepsze niż kodowanie na twardo, ponieważ umożliwia modyfikację parametrów aplikacji bez konieczności modyfikowania źródła, ponownego komppilowania i ponownego rozmieszczania.
 
-W następnej procedurze opisano, jak zapewnić obsługę konfiguracji poświadczeń niestandardowych.
+W następnej procedurze opisano sposób zapewnienia obsługi konfiguracji poświadczeń niestandardowych.
 
 #### <a name="creating-a-configuration-handler-for-custom-client-credentials"></a>Tworzenie programu obsługi konfiguracji dla niestandardowych poświadczeń klienta
 
-1. Zdefiniuj nową klasę pochodną <xref:System.ServiceModel.Configuration.ClientCredentialsElement>.
+1. Zdefiniuj nową <xref:System.ServiceModel.Configuration.ClientCredentialsElement>klasę pochodną .
 
-2. Opcjonalny. Dodaj właściwości dla wszystkich dodatkowych parametrów konfiguracji, które chcesz uwidocznić za poorednictwem konfiguracji aplikacji. W poniższym przykładzie dodano jedną właściwość o `CreditCardNumber`nazwie.
+2. Element opcjonalny. Dodaj właściwości dla wszystkich dodatkowych parametrów konfiguracji, które chcesz udostępnić za pośrednictwem konfiguracji aplikacji. W poniższym przykładzie `CreditCardNumber`dodano jedną właściwość o nazwie .
 
-3. Zastąp <xref:System.ServiceModel.Configuration.BehaviorExtensionElement.BehaviorType%2A> właściwość w celu zwrócenia typu niestandardowej klasy poświadczeń klienta utworzonej za pomocą elementu konfiguracji.
+3. Zastąpuj właściwość, <xref:System.ServiceModel.Configuration.BehaviorExtensionElement.BehaviorType%2A> aby zwrócić typ niestandardowej klasy poświadczeń klienta utworzonej za pomocą elementu konfiguracji.
 
-4. Zastąp <xref:System.ServiceModel.Configuration.BehaviorExtensionElement.CreateBehavior%2A> metody. Metoda jest odpowiedzialna za utworzenie i zwrócenie wystąpienia niestandardowej klasy poświadczeń na podstawie ustawień załadowanych z pliku konfiguracji. Wywołaj metodę <xref:System.ServiceModel.Configuration.ClientCredentialsElement.ApplyConfiguration%28System.ServiceModel.Description.ClientCredentials%29> podstawową z tej metody, aby pobrać ustawienia poświadczeń dostarczonych przez system do niestandardowego wystąpienia poświadczeń klienta.
+4. Zastąd <xref:System.ServiceModel.Configuration.BehaviorExtensionElement.CreateBehavior%2A> w tej metodzie. Metoda jest odpowiedzialna za tworzenie i zwracanie wystąpienia niestandardowej klasy poświadczeń na podstawie ustawień załadowanych z pliku konfiguracji. Wywołanie <xref:System.ServiceModel.Configuration.ClientCredentialsElement.ApplyConfiguration%28System.ServiceModel.Description.ClientCredentials%29> metody podstawowej z tej metody, aby pobrać ustawienia poświadczeń dostarczonych przez system załadowany do wystąpienia poświadczeń klienta niestandardowego.
 
-5. Opcjonalny. Jeśli dodano dodatkowe właściwości w kroku 2, należy zastąpić <xref:System.Configuration.ConfigurationElement.Properties%2A> właściwość w celu zarejestrowania dodatkowych ustawień konfiguracji dla platformy konfiguracji w celu ich rozpoznania. Połącz właściwości z właściwościami klasy bazowej, aby zezwolić na skonfigurowanie ustawień dostarczonych przez system za pomocą tego niestandardowego elementu konfiguracji poświadczeń klienta.
+5. Element opcjonalny. Jeśli dodano dodatkowe właściwości w kroku 2, należy <xref:System.Configuration.ConfigurationElement.Properties%2A> zastąpić właściwość w celu zarejestrowania dodatkowych ustawień konfiguracji dla struktury konfiguracji, aby je rozpoznać. Połącz swoje właściwości z właściwości klasy podstawowej, aby umożliwić ustawienia dostarczone przez system, które mają być skonfigurowane za pośrednictwem tego elementu konfiguracji poświadczeń klienta niestandardowego.
 
     [!code-csharp[c_CustomCredentials#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#7)]
     [!code-vb[c_CustomCredentials#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#7)]
 
-Po utworzeniu klasy programu obsługi konfiguracji można ją zintegrować z platformą konfiguracji WCF. Pozwala to na użycie niestandardowych poświadczeń klienta w elementach zachowania punktu końcowego klienta, jak pokazano w następnej procedurze.
+Po uzyskaniu klasy obsługi konfiguracji można zintegrować z platformą konfiguracji WCF. Dzięki temu niestandardowe poświadczenia klienta mają być używane w elementach zachowania punktu końcowego klienta, jak pokazano w następnej procedurze.
 
-#### <a name="to-register-and-use-a-custom-client-credentials-configuration-handler-in-the-application-configuration"></a>Rejestrowanie i używanie niestandardowej procedury obsługi konfiguracji poświadczeń klienta w konfiguracji aplikacji
+#### <a name="to-register-and-use-a-custom-client-credentials-configuration-handler-in-the-application-configuration"></a>Aby zarejestrować i używać niestandardowego programu obsługi konfiguracji poświadczeń klienta w konfiguracji aplikacji
 
-1. Dodaj element >`extensions`< i <`behaviorExtensions`elementu > do pliku konfiguracji.
+1. Dodaj element `extensions`> <i <`behaviorExtensions`> element do pliku konfiguracyjnego.
 
-2. Dodaj element >`add`< do elementu <`behaviorExtensions` `name` > i ustaw odpowiednią wartość atrybutu.
+2. Dodaj element `add`> <do <`behaviorExtensions`> element i ustaw atrybut na `name` odpowiednią wartość.
 
-3. `type` Ustaw atrybut na w pełni kwalifikowaną nazwę typu. Należy również uwzględnić nazwę zestawu i inne atrybuty zestawu.
+3. Ustaw `type` atrybut na w pełni kwalifikowaną nazwę typu. Należy również uwzględnić nazwę zestawu i inne atrybuty zestawu.
 
     ```xml
     <system.serviceModel>
@@ -126,10 +126,10 @@ Po utworzeniu klasy programu obsługi konfiguracji można ją zintegrować z pla
           <add name="myClientCredentials" type="Microsoft.ServiceModel.Samples.MyClientCredentialsConfigHandler, CustomCredentials, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
         </behaviorExtensions>
       </extensions>
-    <system.serviceModel>
+    </system.serviceModel>
     ```
 
-4. Po zarejestrowaniu programu obsługi konfiguracji element poświadczeń niestandardowych może być używany w tym samym pliku konfiguracji, a nie w > <ego`clientCredentials`elementu. Można użyć zarówno właściwości dostarczonych przez system, jak i nowych właściwości, które zostały dodane do implementacji programu obsługi konfiguracji. Poniższy przykład ustawia wartość właściwości niestandardowej przy użyciu `creditCardNumber` atrybutu.
+4. Po zarejestrowaniu programu obsługi konfiguracji, niestandardowy element poświadczeń może być używany wewnątrz `clientCredentials` tego samego pliku konfiguracji zamiast <> elementu dostarczonego przez system. Można użyć zarówno właściwości dostarczonych przez system, jak i wszystkie nowe właściwości dodane do implementacji programu obsługi konfiguracji. W poniższym przykładzie ustawia wartość `creditCardNumber` właściwości niestandardowej przy użyciu atrybutu.
 
     ```xml
     <behaviors>
@@ -141,46 +141,46 @@ Po utworzeniu klasy programu obsługi konfiguracji można ją zintegrować z pla
     </behaviors>
     ```
 
-#### <a name="to-implement-custom-service-credentials"></a>Aby zaimplementować niestandardowe poświadczenia usługi
+#### <a name="to-implement-custom-service-credentials"></a>Aby zaimplementować poświadczenia usługi niestandardowej
 
-1. Zdefiniuj nową klasę pochodną <xref:System.ServiceModel.Description.ServiceCredentials>.
+1. Zdefiniuj nową <xref:System.ServiceModel.Description.ServiceCredentials>klasę pochodną .
 
-2. Opcjonalna. Dodaj nowe właściwości, aby udostępnić interfejsy API dla nowych wartości poświadczeń, które są dodawane. Jeśli nie dodasz nowych wartości poświadczeń, Pomiń ten krok. Poniższy przykład dodaje `AdditionalCertificate` właściwość.
+2. Element opcjonalny. Dodaj nowe właściwości, aby zapewnić interfejsy API dla nowych wartości poświadczeń, które są dodawane. Jeśli nie dodasz nowych wartości poświadczeń, pomiń ten krok. Poniższy przykład `AdditionalCertificate` dodaje właściwość.
 
-3. Zastąp <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> metody. Ta metoda jest automatycznie wywoływana przez infrastrukturę WCF, gdy jest używane niestandardowe poświadczenie klienta. Metoda jest odpowiedzialna za utworzenie i zwrócenie wystąpienia implementacji <xref:System.IdentityModel.Selectors.SecurityTokenManager> klasy (opisany w następnej procedurze).
+3. Zastąd <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> w tej metodzie. Ta metoda jest automatycznie wywoływana przez infrastrukturę WCF, gdy używane jest niestandardowe poświadczenia klienta. Metoda jest odpowiedzialna za tworzenie i zwracanie wystąpienia <xref:System.IdentityModel.Selectors.SecurityTokenManager> implementacji klasy (opisane w następnej procedurze).
 
-4. Opcjonalna. Zastąp <xref:System.ServiceModel.Description.ServiceCredentials.CloneCore%2A> metody. Jest to wymagane tylko wtedy, gdy dodajesz nowe właściwości lub pola wewnętrzne do niestandardowej implementacji poświadczeń klienta.
+4. Element opcjonalny. Zastąd <xref:System.ServiceModel.Description.ServiceCredentials.CloneCore%2A> w tej metodzie. Jest to wymagane tylko wtedy, gdy dodawanie nowych właściwości lub pól wewnętrznych do implementacji poświadczeń klienta niestandardowego.
 
     [!code-csharp[c_CustomCredentials#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#4)]
     [!code-vb[c_CustomCredentials#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#4)]
 
-#### <a name="to-implement-a-custom-service-security-token-manager"></a>Aby zaimplementować niestandardowego menedżera tokenów zabezpieczeń usługi
+#### <a name="to-implement-a-custom-service-security-token-manager"></a>Aby zaimplementować menedżera tokenów zabezpieczeń usługi niestandardowej
 
-1. Zdefiniuj nową klasę pochodną <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> klasy.
+1. Zdefiniuj nową <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> klasę pochodną klasy.
 
-2. Opcjonalny. Zastąp <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%2A> metodę, jeśli należy <xref:System.IdentityModel.Selectors.SecurityTokenProvider> utworzyć implementację niestandardową. Aby uzyskać więcej informacji o dostawcach niestandardowych tokenów [zabezpieczających, zobacz How to: Utwórz niestandardowego dostawcę](how-to-create-a-custom-security-token-provider.md)tokenów zabezpieczających.
+2. Element opcjonalny. Zastąd <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%2A> w przypadku <xref:System.IdentityModel.Selectors.SecurityTokenProvider> utworzenia implementacji niestandardowej należy zastąpić metodę. Aby uzyskać więcej informacji na temat niestandardowych dostawców tokenów zabezpieczających, zobacz [Jak: Tworzenie niestandardowego dostawcy tokenów zabezpieczających](how-to-create-a-custom-security-token-provider.md).
 
-3. Opcjonalny. Zastąp <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> metodę, jeśli należy <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> utworzyć implementację niestandardową. Aby uzyskać więcej informacji na temat wystawców niestandardowych tokenów [zabezpieczających, zobacz How to: Tworzenie niestandardowego tematu wystawcy](how-to-create-a-custom-security-token-authenticator.md) uwierzytelnienia tokenu zabezpieczeń.
+3. Element opcjonalny. Zastąd <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> w przypadku <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> utworzenia implementacji niestandardowej należy zastąpić metodę. Aby uzyskać więcej informacji na temat niestandardowych tokenów zabezpieczających, zobacz [Jak: Tworzenie tematu Uwierzytelniającego niestandardowego tokenu zabezpieczającego.](how-to-create-a-custom-security-token-authenticator.md)
 
-4. Opcjonalny. Zastąp <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%28System.IdentityModel.Selectors.SecurityTokenVersion%29> metodę, jeśli należy <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> utworzyć niestandardowy. Aby uzyskać więcej informacji na temat niestandardowych tokenów zabezpieczających i serializatorów niestandardowych [tokenów zabezpieczających, zobacz How to: Utwórz token](how-to-create-a-custom-token.md)niestandardowy.
+4. Element opcjonalny. Zastąd <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%28System.IdentityModel.Selectors.SecurityTokenVersion%29> w przypadku <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> konieczności utworzenia metody niestandardowej należy zastąpić metodę niestandardową. Aby uzyskać więcej informacji na temat niestandardowych tokenów zabezpieczających i niestandardowych serializatorów tokenów zabezpieczających, zobacz [Jak: Tworzenie tokenu niestandardowego](how-to-create-a-custom-token.md).
 
     [!code-csharp[c_CustomCredentials#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#5)]
     [!code-vb[c_CustomCredentials#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#5)]
 
 #### <a name="to-use-custom-service-credentials-from-application-code"></a>Aby użyć niestandardowych poświadczeń usługi z kodu aplikacji
 
-1. Utwórz wystąpienie <xref:System.ServiceModel.ServiceHost>obiektu.
+1. Utwórz wystąpienie elementu <xref:System.ServiceModel.ServiceHost>.
 
-2. Usuń zachowanie poświadczeń usługi dostarczone przez system z <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> kolekcji.
+2. Usuń zachowanie poświadczeń usługi <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> dostarczone przez system z kolekcji.
 
-3. Utwórz nowe wystąpienie klasy poświadczeń usługi niestandardowej i Dodaj je do <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> kolekcji.
+3. Utwórz nowe wystąpienie klasy poświadczeń <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> usługi niestandardowej i dodaj ją do kolekcji.
 
     [!code-csharp[c_CustomCredentials#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#6)]
     [!code-vb[c_CustomCredentials#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#6)]
 
-Dodaj obsługę konfiguracji, wykonując czynności opisane wcześniej w procedurach "`To create a configuration handler for custom client credentials`" i "`To register and use a custom client credentials configuration handler in the application configuration`." Jedyną różnicą jest użycie <xref:System.ServiceModel.Configuration.ServiceCredentialsElement> klasy zamiast <xref:System.ServiceModel.Configuration.ClientCredentialsElement> klasy jako klasy bazowej dla programu obsługi konfiguracji. Elementu niestandardowego poświadczenia usługi można użyć wszędzie tam, gdzie jest używany element udostępniony `<serviceCredentials>` przez system.
+Dodaj obsługę konfiguracji, wykonując kroki opisane wcześniej`To create a configuration handler for custom client credentials`w procedurach " " i "."`To register and use a custom client credentials configuration handler in the application configuration` Jedyną różnicą jest <xref:System.ServiceModel.Configuration.ServiceCredentialsElement> użycie klasy <xref:System.ServiceModel.Configuration.ClientCredentialsElement> zamiast klasy jako klasy podstawowej dla programu obsługi konfiguracji. Element poświadczeń usługi niestandardowej może `<serviceCredentials>` być następnie używany wszędzie tam, gdzie używany jest element dostarczony przez system.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.ServiceModel.Description.ClientCredentials>
 - <xref:System.ServiceModel.Description.ServiceCredentials>
@@ -188,6 +188,6 @@ Dodaj obsługę konfiguracji, wykonując czynności opisane wcześniej w procedu
 - <xref:System.IdentityModel.Selectors.SecurityTokenManager>
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Configuration.ServiceCredentialsElement>
-- [Instrukcje: Tworzenie niestandardowego dostawcy tokenów zabezpieczeń](how-to-create-a-custom-security-token-provider.md)
+- [Instrukcje: tworzenie niestandardowego dostawcy tokenów zabezpieczeń](how-to-create-a-custom-security-token-provider.md)
 - [Instrukcje: Tworzenie niestandardowego wystawcy uwierzytelniania tokenu zabezpieczeń](how-to-create-a-custom-security-token-authenticator.md)
-- [Instrukcje: Tworzenie niestandardowego tokenu](how-to-create-a-custom-token.md)
+- [Instrukcje: tworzenie tokenu niestandardowego](how-to-create-a-custom-token.md)

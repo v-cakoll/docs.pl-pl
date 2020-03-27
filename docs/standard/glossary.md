@@ -3,12 +3,12 @@ title: Słownik platformy .NET
 description: Poznaj znaczenie wybranych terminów używanych w dokumentacji platformy .NET.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 590d44ac64bc2b86ed0a082ae5185cf60b28c36c
-ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
+ms.openlocfilehash: ed4dceed1a3f39c5c4ce7a278efc37bb38ed0d94
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80291564"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344204"
 ---
 # <a name="net-glossary"></a>Słownik platformy .NET
 
@@ -161,7 +161,7 @@ Zobacz [przewodnik po sieci .NET](index.md)
 
 Wieloplatformowa, wydajna implementacja open source platformy .NET. Zawiera core common language runtime (CoreCLR), Core AOT Runtime (CoreRT, w rozwoju), podstawową bibliotekę klas podstawowych i core SDK.
 
-Zobacz [.NET Core](../core/index.md).
+Zobacz [.NET Core](../core/index.yml).
 
 ## <a name="net-core-cli"></a>Interfejs wiersza polecenia platformy .NET Core
 
@@ -274,7 +274,7 @@ Implementacja platformy .NET, która służy do tworzenia nowoczesnych aplikacji
 ## <a name="see-also"></a>Zobacz też
 
 - [Przewodnik po sieci .NET](index.md)
-- [.NET framework — przewodnik](../framework/index.yml)
-- [.NET Core](../core/index.md)
+- [Przewodnik po platformach .NET Framework](../framework/index.yml)
+- [.NET Core](../core/index.yml)
 - [ASP.NET Przegląd](/aspnet/index#pivot=aspnet)
 - [ASP.NET rdzeń](/aspnet/index#pivot=core)

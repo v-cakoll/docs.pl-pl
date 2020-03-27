@@ -2,46 +2,46 @@
 title: Wybieranie kodera komunikatów
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
-ms.openlocfilehash: 93024258ddcf76444d48a19c071b0a18248ea46b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a306896af7a73d43956638981908c12d86126a9f
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645453"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345256"
 ---
 # <a name="choosing-a-message-encoder"></a>Wybieranie kodera komunikatów
-W tym temacie omówiono kryteria wybierania koderów wiadomości, które znajdują się w Windows Communication Foundation (WCF): plik binarny, tekst i komunikat transmisji optymalizacji mechanizm (MTOM).  
+W tym temacie omówiono kryteria wyboru spośród koderów wiadomości, które są zawarte w Programie Windows Communication Foundation (WCF): mechanizm binarny, tekst i mechanizm optymalizacji transmisji wiadomości (MTOM).  
   
- W programie WCF, możesz określić sposób transferu danych za pośrednictwem sieci między punktami końcowymi przez *powiązania*, która składa się z sekwencji *elementów wiązania*. Koder komunikatów jest reprezentowany przez element powiązania w stosie powiązania kodowania komunikatu. Powiązanie zawiera elementy powiązania protokołu opcjonalne, przykład elementu powiązania zabezpieczeń lub niezawodnej obsługi komunikatów elementu powiązania, wiadomość wymagane kodowanie elementu powiązania, a element powiązania transportu wymagane.  
+ W WCF można określić sposób przesyłania danych przez sieć między punktami końcowymi za pomocą *powiązania,* które składa się z sekwencji *elementów wiązania.* Koder wiadomości jest reprezentowany przez element wiązania kodowania wiadomości w stosie wiązania. Powiązanie zawiera opcjonalne elementy wiązania protokołu, takie jak element wiązania zabezpieczeń lub element wiązania niezawodnej obsługi wiadomości, wymagany element wiązania kodowania komunikatów i wymagany element wiązania transportu.  
   
- Element powiązania z kodowania komunikatu znajduje się poniżej elementy powiązania protokołu opcjonalne i powyżej elementu powiązania transportu wymagane. Po stronie wychodzących kodera komunikatów serializuje wychodzącej <xref:System.ServiceModel.Channels.Message> i przekazuje je do transportu. Po stronie przychodzących kodera komunikatów odbiera serializowane postaci <xref:System.ServiceModel.Channels.Message> z transportu i przekazuje go do protokół wyższej warstwy, jeśli jest obecny, lub do aplikacji, w przeciwnym razie.  
+ Element wiązania kodowania komunikatów znajduje się poniżej elementów wiązania protokołu opcjonalnego i powyżej wymaganego elementu wiązania transportu. Po stronie wychodzącej koder wiadomości serializuje <xref:System.ServiceModel.Channels.Message> wychodzących i przekazuje go do transportu. Po stronie przychodzącej koder wiadomości odbiera serializowany formularz a <xref:System.ServiceModel.Channels.Message> z transportu i przekazuje go do wyższej warstwy protokołu, jeśli jest obecny, lub do aplikacji, jeśli nie.  
   
- Podczas łączenia z istniejącego klienta lub serwera, możesz nie mieć wyboru — informacje przy użyciu kodowania określoną wiadomość, ponieważ należy do zakodowania wiadomości w taki sposób, że oczekiwana druga strona. Jednak jeśli piszesz usługi WCF można ujawnić usługi za pomocą wielu punktów końcowych, każdy przy użyciu kodowania inny komunikat. Dzięki temu klienci wybrać optymalne kodowanie dla komunikować się z usługą za pośrednictwem punktu końcowego, który sprawdza się najlepiej w ich, zapewniając klientom swobodę wybierz metodę kodowania, która sprawdza się najlepiej w nich. Za pomocą wielu punktów końcowych również pozwala połączyć zalety kodowania inny komunikat z innymi elementami powiązania.  
+ Podczas łączenia się z istniejącym klientem lub serwerem może nie mieć wyboru dotyczące używania kodowania określonej wiadomości, ponieważ należy zakodować wiadomości w sposób oczekiwany przez drugą stronę. Jednak jeśli piszesz usługę WCF, można udostępnić usługi za pośrednictwem wielu punktów końcowych, każdy przy użyciu innego kodowania wiadomości. Dzięki temu klienci mogą wybrać najlepsze kodowanie do rozmowy z usługą za pomocą punktu końcowego, który jest dla nich najlepszy, a także daje klientom elastyczność wyboru kodowania, które jest dla nich najlepsze. Za pomocą wielu punktów końcowych umożliwia również łączenie zalet kodowania różnych komunikatów z innymi elementami wiązania.  
   
-## <a name="system-provided-encoders"></a>Kodery dostarczane przez system  
- Usługi WCF zawiera trzy koderów wiadomości, które są reprezentowane przez następujące trzy klasy:  
+## <a name="system-provided-encoders"></a>Enkodery dostarczane przez system  
+ WCF zawiera trzy kodery komunikatów, które są reprezentowane przez następujące trzy klasy:  
   
-- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>, tekst koder komunikatów, obsługuje zarówno zwykłe Kodowanie XML i kodowaniem SOAP. Zwykły tryb kodowania XML koder komunikatu tekstowego nosi nazwę "zwykłe stare XML" (POX), w odróżnieniu od kodowania SOAP opartego na tekst. Aby włączyć POX, ustaw <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement.MessageVersion%2A> właściwość <xref:System.ServiceModel.Channels.MessageVersion.None%2A>. Użyj koder komunikatów tekstu pod kątem współdziałania z punktami końcowymi WCF nie.  
+- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>, koder wiadomości tekstowych obsługuje zarówno zwykłe kodowanie XML, jak i kodowanie protokołu SOAP. Zwykły tryb kodowania XML kodera wiadomości tekstowych jest nazywany "zwykłym starym XML" (POX), aby odróżnić go od kodowania protokołu SOAP opartego na tekście. Aby włączyć pox, <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement.MessageVersion%2A> ustaw <xref:System.ServiceModel.Channels.MessageVersion.None%2A>właściwość na . Użyj kodera wiadomości tekstowych, aby współpracować z punktami końcowymi innych niż WCF.  
   
-- <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>, koder komunikatu binarnego używa compact format binarny jest zoptymalizowany pod kątem usługi WCF do komunikacji WCF i dlatego nie jest międzyoperacyjnych. Dotyczy to również większość kodera wydajne wszystkich koderów udostępnia usługi WCF.  
+- <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>, koder wiadomości binarnych, używa kompaktowego formatu binarnego i jest zoptymalizowany pod kątem komunikacji WCF do WCF, a zatem nie jest interoperacyjny. Jest to również najbardziej wydajny koder wszystkich koderów WCF zapewnia.  
   
-- <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>, element powiązania określa znak kodowanie i wersjonowanie wiadomości dla wiadomości przy użyciu kodowanie MTOM. MTOM to technologia wydajne przekazywania danych binarnych w wiadomościach WCF. Koder MTOM podejmuje próbę utworzenia równowagi między współdziałania i wydajność. Kodowanie MTOM przesyła większość kodu XML w postaci tekstowej, ale optymalizuje dużych bloków danych binarnych, przekazywania ich jako — jest bez konwersji na tekst. Pod względem wydajności między koderów, który udostępnia usługi WCF MTOM jest wewnętrzne tekstu (najwolniejsze) i plik binarny (najszybciej).  
+- <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>, element wiązania, określa kodowanie znaków i przechowywanie wersji wiadomości dla wiadomości przy użyciu kodowania MTOM. MTOM to wydajna technologia przesyłania danych binarnych w wiadomościach WCF. Koder MTOM próbuje stworzyć równowagę między wydajnością a interoperacyjnością. Kodowanie MTOM przesyła większość XML w formie tekstowej, ale optymalizuje duże bloki danych binarnych, przesyłając je w stanie, w jakim są, bez konwersji na tekst. Pod względem wydajności, wśród koderów WCF zapewnia, MTOM jest pomiędzy tekstem (najwolniejszy) i binarny (najszybszy).  
   
-## <a name="how-to-choose-a-message-encoder"></a>Wybieranie kodera komunikatów  
- W poniższej tabeli opisano typowe czynniki, które umożliwiają wybieranie kodera komunikatów. Ustaw priorytet czynników, które są ważne w przypadku aplikacji, a następnie najlepiej wybierz koderów komunikat współpracujące z tych czynników. Należy wziąć pod uwagę czynników dodatkowe niewymienionych w tej tabeli oraz wszelkie koderów niestandardowy komunikat, które mogą być wymagane w aplikacji.  
+## <a name="how-to-choose-a-message-encoder"></a>Jak wybrać koder wiadomości  
+ W poniższej tabeli opisano typowe czynniki używane do wybierania kodera wiadomości. Ustalanie priorytetów czynników, które są ważne dla aplikacji, a następnie wybierz kodery komunikatów, które najlepiej współpracują z tymi czynnikami. Należy wziąć pod uwagę wszelkie dodatkowe czynniki niewymienione w tej tabeli i wszelkie niestandardowe kodery komunikatów, które mogą być wymagane w aplikacji.  
   
-|współczynnik|Opis|Kodery, które obsługują ten współczynnik|  
+|Czynnikiem|Opis|Kodery obsługujące ten czynnik|  
 |------------|-----------------|---------------------------------------|  
-|Obsługiwanych zestawów znaków|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> i <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> obsługuje tylko UTF8 i UTF16 Unicode (*big-endian* i *little-endian*) kodowania. Jeśli inne kodowanie są wymagane, na przykład UTF7 lub ASCII, należy użyć niestandardowego kodera. Aby uzyskać przykład niestandardowego kodera, zobacz [niestandardowy koder komunikatów](https://go.microsoft.com/fwlink/?LinkId=119857).|Tekst|  
-|Inspekcja|Inspekcja jest możliwość zbadania komunikatów podczas transmisji. Kodowania tekstu, z lub bez użycia protokołu SOAP, zezwalania na komunikaty inspekcji i analizowane przez wiele aplikacji bez użycia specjalistycznych narzędzi. Należy pamiętać, że użycie bezpieczeństwie transferu, na poziomie komunikatu lub transportu, ma wpływ na możliwość kontroli wiadomości. Poufność ochronę komunikat sprawdzane i integralność chroni komunikatu przed modyfikacją.|Tekst|  
-|Niezawodność|Niezawodność jest odporność koder błędy transmisji. Niezawodność, może być również dostarczona w wiadomości, transportu lub warstwie aplikacji. Wszystkie standardowe koderów WCF przyjęto założenie, że kolejna warstwa jest zapewnienie niezawodności. Koder zdolność nieco odzyskać sprawność po błędzie transmisji.|Brak|  
-|Prostota|Prostota reprezentuje łatwe za pomocą którego można utworzyć kodeków dla specyfikację kodowania. Kodowania tekstu jest szczególnie korzystne dla uproszczenia i kodowanie tekstu POX ma dodatkową zaletą nie wymagających obsługi przetwarzania protokołu SOAP.|Tekst (POX)|  
-|Rozmiar|Kodowanie określa Obciążenie nałożone na zawartość. Rozmiar zakodowany wiadomości jest bezpośrednio związana maksymalną przepływność operacji usługi. Kody binarne są zazwyczaj mniejszych niż kodowania tekstu. Jeśli rozmiar komunikatu wynosi premium, należy wziąć pod uwagę także kompresja treści komunikatu podczas kodowania. Jednak kompresji zwiększa koszty przetwarzania dla odbiorcy i nadawcy wiadomości.|plików binarnych|  
-|Przesyłanie strumieniowe|Przesyłanie strumieniowe umożliwia aplikacjom rozpoczęcie przetwarzania komunikatu, zanim dotarła cały komunikat. Skutecznie przy użyciu przesyłania strumieniowego wymaga ważnych danych komunikatu dostępną na początku komunikatu tak, aby aplikacja odbierająca nie jest wymagane poczekaj na jego dostarczenie. Ponadto aplikacje, które używają przesyłane strumieniowo transferu musi organizowania danych w komunikacie przyrostowo tak, aby zawartość nie ma zależności skierowane w przód. W wielu przypadkach można naruszyć bezpieczeństwo między przesyłanie strumieniowe zawartości oraz o najmniejszego możliwego rozmiaru możliwe transferu tej zawartości.|Brak|  
-|3 Obsługa narzędzia innych firm|Obszary pomocy technicznej w zakresie kodowania obejmują rozwoju i diagnostyki. Deweloperzy innych firm wprowadzono dużych inwestycji w bibliotekach i narzędziach programistycznych obsługi wiadomości zakodowane w formacie POX.|Tekst (POX)|  
-|Współdziałanie|Ten współczynnik odnosi się do możliwości kodera WCF do współdziałania z usługami innych WCF.|Tekst<br /><br /> MTOM (częściowa Obsługa)|  
+|Obsługiwane zestawy znaków|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>i <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> obsługuje tylko kodowania UTF8 i UTF16 Unicode *(big-endian* i *little-endian).* Jeśli wymagane są inne kodowania, takie jak UTF7 lub ASCII, należy użyć niestandardowego kodera. Aby uzyskać przykładowy koder niestandardowy, zobacz [Koder wiadomości niestandardowych](https://docs.microsoft.com/dotnet/framework/wcf/samples/custom-message-encoder-custom-text-encoder).|Tekst|  
+|Kontroli|Inspekcja to możliwość sprawdzania wiadomości podczas transmisji. Kodowanie tekstu, z lub bez użycia protokołu SOAP, umożliwiają sprawdzanie i analizowanie wiadomości przez wiele aplikacji bez użycia specjalistycznych narzędzi. Należy zauważyć, że użycie zabezpieczeń transferu, na poziomie wiadomości lub transportu, wpływa na możliwość sprawdzania wiadomości. Poufność chroni wiadomość przed badaniem, a integralność chroni wiadomość przed modyfikacją.|Tekst|  
+|Niezawodność|Niezawodność to odporność kodera na błędy transmisji. Niezawodność można również zapewnić w warstwie wiadomości, transportu lub aplikacji. Wszystkie standardowe kodery WCF zakładają, że inna warstwa zapewnia niezawodność. Koder ma niewielką możliwość odzyskania po błędzie transmisji.|Brak|  
+|Prostota|Prostota reprezentuje łatwość, z jaką można tworzyć kodery i dekodery dla specyfikacji kodowania. Kodowanie tekstu są szczególnie korzystne dla prostoty, a kodowanie tekstu POX ma dodatkową zaletę, że nie wymaga obsługi przetwarzania protokołu SOAP.|Tekst (POX)|  
+|Rozmiar|Kodowanie określa ilość narzutów nałożonych na zawartość. Rozmiar zakodowanych komunikatów jest bezpośrednio związany z maksymalną przepływnością operacji serwisowych. Kodowania binarne są na ogół bardziej kompaktowe niż kodowania tekstu. Gdy rozmiar wiadomości jest na premię, należy również rozważyć kompresji zawartości wiadomości podczas kodowania. Jednak kompresja dodaje koszty przetwarzania zarówno dla nadawcy wiadomości, jak i odbiorcy.|plików binarnych|  
+|Przesyłanie strumieniowe|Przesyłanie strumieniowe umożliwia aplikacjom rozpoczęcie przetwarzania wiadomości przed nadejdą całej wiadomości. Skutecznie przy użyciu przesyłania strumieniowego wymaga, aby ważne dane dla wiadomości być dostępne na początku wiadomości, tak aby aplikacja odbierająca nie jest wymagane czekać na jej przybycie. Ponadto aplikacje korzystające z przesyłania strumieniowego muszą organizować dane w wiadomości przyrostowo, aby zawartość nie miała zależności do przodu. W wielu przypadkach należy naruszyć problem między zawartością przesyłania strumieniowego a posiadaniem najmniejszego możliwego rozmiaru transferu dla tej zawartości.|Brak|  
+|Obsługa narzędzi innych firm|Obszary pomocy technicznej dotyczące kodowania obejmują rozwój i diagnostykę. Deweloperzy innych firm poczynili duże inwestycje w biblioteki i zestawy narzędzi do obsługi wiadomości zakodowanych w formacie POX.|Tekst (POX)|  
+|Współdziałanie|Ten czynnik odnosi się do zdolności kodera WCF do współpracy z usługami innych niż WCF.|Tekst<br /><br /> MTOM (częściowy)|  
   
-Uwaga: Korzystając z kodera binarnego, przy użyciu ustawienia IgnoreWhitespace, tworząc element XMLReader odniesie żadnego skutku.  Na przykład, jeśli wykonasz następujące czynności w operacji usługi:  
+Uwaga: Podczas korzystania z binarnego kodera, przy użyciu IgnoreWhitespace ustawienie podczas tworzenia XMLReader nie będzie miało wpływu.  Na przykład, jeśli wykonasz następujące czynności wewnątrz operacji usługi:  
 
 ```csharp
 public void OperationContract(XElement input)
@@ -59,17 +59,17 @@ public void OperationContract(XElement input)
 }
 ```  
   
-Ustawienie IgnoreWhitespace zostanie zignorowane.  
+Ustawienie IgnoreWhitespace jest ignorowane.  
   
-## <a name="compression-and-the-binary-encoder"></a>Kompresja i kodera binarnego
+## <a name="compression-and-the-binary-encoder"></a>Kompresja i koder binarny
 
-Począwszy od programu WCF 4.5 kodera binarnego WCF dodaje obsługę kompresji. To pozwala na użycie algorytmu gzip nebo deflate do wysyłania wiadomości skompresowany z klienta programu WCF i odpowiada także skompresowane komunikaty o z obsługiwanej samodzielnie usługi WCF. Ta funkcja umożliwia kompresję transportu HTTP i TCP. Usługi WCF hostowanej w programie IIS zawsze być włączona usługa wysyłania skompresowane odpowiedzi, konfigurując serwer hosta usług IIS. Typ kompresji jest skonfigurowany przy użyciu <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A?displayProperty=nameWithType> właściwości. Ta właściwość jest ustawiona na jedną z <xref:System.ServiceModel.Channels.CompressionFormat?displayProperty=nameWithType> wartości wyliczenia:
+Począwszy od WCF 4.5 koder binarny WCF dodaje obsługę kompresji. Dzięki temu można używać algorytmu gzip/deflate do wysyłania skompresowanych wiadomości z klienta WCF, a także odpowiadać za pomocą skompresowanych wiadomości z usługi WCF hostowanej samodzielnie. Ta funkcja umożliwia kompresję zarówno na transportach HTTP i TCP. Usługę WCF hostowanych usług usług IIS zawsze można włączyć do wysyłania skompresowanych odpowiedzi, konfigurując serwer hosta usług IIS. Typ kompresji jest skonfigurowany <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A?displayProperty=nameWithType> z właściwością. Ta właściwość jest ustawiona na jedną z wartości wyliczenia: <xref:System.ServiceModel.Channels.CompressionFormat?displayProperty=nameWithType>
 
 - <xref:System.ServiceModel.Channels.CompressionFormat.Deflate>
 - <xref:System.ServiceModel.Channels.CompressionFormat.GZip>
 - <xref:System.ServiceModel.Channels.CompressionFormat.None>
   
-Ponieważ ta właściwość jest dostępne tylko BinaryMessageEncodingBindingElement, należy utworzyć niestandardowego powiązania podobnie do poniższego, aby użyć tej funkcji:
+Ponieważ ta właściwość jest dostępna tylko na binaryMessageEncodingBindingElement, należy utworzyć niestandardowe powiązanie, takie jak następujące, aby użyć tej funkcji:
 
  ```xml
  <customBinding>
@@ -80,8 +80,8 @@ Ponieważ ta właściwość jest dostępne tylko BinaryMessageEncodingBindingEle
 </customBinding>
  ```
 
-Zarówno klient, jak i usługi muszą wyrazić zgodę na wysyłanie i odbieranie komunikatów skompresowane i w związku z tym należy skonfigurować właściwości compressionFormat w elemencie binaryMessageEncoding zarówno klient, jak i usługi. Protocolexception — jest generowany, jeśli usługi lub klienta nie jest skonfigurowany dla kompresji, ale jest drugiej strony. Włączanie kompresji powinien zostać starannie przemyślany. Kompresja przede wszystkim jest przydatne, jeśli przepustowość sieci jest "wąskie gardło". W przypadku, gdy Procesor jest wąskie gardło Kompresja zmniejsza się przepływności. Odpowiednie testy musi odbywać się w środowisku symulowanym, aby dowiedzieć się, jeśli jest to korzystne dla aplikacji  
+Zarówno klient, jak i usługa muszą wyrazić zgodę na wysyłanie i odbieranie skompresowanych komunikatów i dlatego właściwość compressionFormat musi być skonfigurowana na elemencie binaryMessageEncoding na kliencie i usłudze. A ProtocolException jest zgłaszany, jeśli usługa lub klient nie jest skonfigurowany do kompresji, ale druga strona jest. Włączenie kompresji należy dokładnie rozważyć. Kompresja jest najczęściej przydatna, jeśli przepustowość sieci jest wąskim gardłem. W przypadku, gdy procesor jest wąskim gardłem, kompresja zmniejszy przepustowość. Należy przeprowadzić odpowiednie badania w symulowanym środowisku, aby dowiedzieć się, czy jest to korzystne dla aplikacji  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Powiązania](../../../../docs/framework/wcf/feature-details/bindings.md)

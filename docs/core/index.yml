@@ -1,0 +1,125 @@
+### YamlMime:Landing
+title: Dokumentacja .NET Core
+summary: Dowiedz się więcej o .NET Core, platformie programistycznej typu open source, o ogólnym przeznaczenia do tworzenia aplikacji wieloplatformowych.
+metadata:
+  title: Dokumentacja .NET Core
+  description: .NET Core to platforma programowa typu open source, ogólnego przeznaczenia do tworzenia aplikacji wieloplatformowych.
+  ms.topic: landing-page
+  ms.date: 03/25/2020
+  ms.openlocfilehash: b11a41587e2b9eba2df744da3d8c19baa0936fb2
+  ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+  ms.translationtype: MT
+  ms.contentlocale: pl-PL
+  ms.lasthandoff: 03/27/2020
+  ms.locfileid: "80351709"
+landingContent:
+- title: Informacje o platformie .NET Core
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Wprowadzenie do platformy .NET Core
+      url: introduction.md
+    - text: Omówienie platformy .NET Core
+      url: about.md
+    - text: Omówienie zestawu .NET Core SDK
+      url: sdk.md
+  - linkListType: get-started
+    links:
+    - text: Wprowadzenie do platformy .NET Core
+      url: get-started.md
+  - linkListType: concept
+    links:
+    - text: Podstawowe zasady pomocy technicznej platformy .NET
+      url: https://dotnet.microsoft.com/platform/support/policy/dotnet-core
+  - linkListType: whats-new
+    links:
+    - text: Co nowego w programie .NET Core 3.1
+      url: whats-new/dotnet-core-3-1.md
+    - text: Co nowego w programie .NET Core 3.0
+      url: whats-new/dotnet-core-3-0.md
+- title: Instalowanie programu .NET Core
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Wybierz wersję .NET Core, której chcesz użyć
+      url: versions/selection.md
+  - linkListType: download
+    links:
+    - text: Pliki do pobrania .NET Core
+      url: https://dotnet.microsoft.com/download/dotnet-core
+  - linkListType: how-to-guide
+    links:
+    - text: Instalowanie pakietu SDK core platformy .NET
+      url: install/sdk.md
+    - text: Instalowanie środowiska uruchomieniowego .NET Core
+      url: install/runtime.md
+    - text: Instalowanie za pomocą menedżera pakietów systemu Linux
+      url: install/linux-package-manager-ubuntu-1904.md
+    - text: Sprawdź zainstalowane wersje
+      url: install/how-to-detect-installed-versions.md
+  - linkListType: reference
+    links:
+    - text: Zależności core sdk i środowiska uruchomieniowego platformy .NET
+      url: install/dependencies.md
+- title: Wprowadzenie do platformy .NET Core
+  linkLists:
+  - linkListType: video
+    links:
+    - text: 'Poradnik: Hello World w 10 minut'
+      url: https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro
+  - linkListType: tutorial
+    links:
+    - text: Tworzenie aplikacji Hello World w programie Visual Studio Code
+      url: tutorials/with-visual-studio-code.md
+    - text: Tworzenie aplikacji Hello World w programie Visual Studio
+      url: tutorials/with-visual-studio.md
+    - text: Konteneryzowanie aplikacji .NET Core
+      url: docker/build-container.md
+  - linkListType: deploy
+    links:
+    - text: Publikowanie aplikacji
+      url: deploying/index.md
+- title: Migrowanie z programu .NET Framework
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Przenoszenie z programu .NET Framework na platformę .NET Core
+      url: porting/index.md
+- title: Użyj programu .NET Core z wiersza polecenia
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Interfejs wiersza polecenia platformy .NET Core
+      url: tools/index.md
+  - linkListType: tutorial
+    links:
+    - text: Rozpoczynanie korzystania z interfejsu wiersza polecenia
+      url: tutorials/cli-create-console-app.md
+  - linkListType: deploy
+    links:
+    - text: Publikowanie aplikacji
+      url: deploying/deploy-with-cli.md
+  - linkListType: reference
+    links:
+    - text: dotnet new
+      url: tools/dotnet-new.md
+    - text: dotnet publish
+      url: tools/dotnet-publish.md
+- title: Test jednostkowy z rdzeniem .NET
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Testowanie jednostkowe w programach .NET Core i .NET Standard
+      url: testing/index.md
+  - linkListType: tutorial
+    links:
+    - text: Test kodu C# przy użyciu testu dotnet i xUnit
+      url: testing/unit-testing-with-dotnet-test.md
+    - text: Test jednostkowy z NUnit
+      url: testing/unit-testing-with-nunit.md
+    - text: Test jednostkowy z MSTest
+      url: testing/unit-testing-with-mstest.md
+  - linkListType: concept
+    links:
+    - text: Najważniejsze wskazówki dotyczące pisania testów jednostkowych
+      url: testing/unit-testing-best-practices.md

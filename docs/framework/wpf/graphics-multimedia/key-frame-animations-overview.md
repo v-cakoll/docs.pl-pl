@@ -6,12 +6,12 @@ helpviewer_keywords:
 - key frames [WPF], about key-frame animations
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-ms.openlocfilehash: be815ca522cf18ea2403ea7af5549ceaf922854e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8eb590b07eae3b76b3a206b9731997a6bc2c90d7
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186681"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344909"
 ---
 # <a name="key-frame-animations-overview"></a>Przegląd Animacja kluczowych klatek
 W tym temacie przedstawiono animacje klatek kluczowych. Animacje klatek kluczowych umożliwiają animowanie przy użyciu więcej niż dwóch wartości docelowych i sterowanie metodą interpolacji animacji.  
@@ -289,7 +289,7 @@ Kluczowy splajn z punktami kontrolnymi (0,25, 0,5) i (0,75, 1,0)
 - <xref:System.Windows.Media.Animation.KeySpline>
 - <xref:System.Windows.Media.Animation.Timeline>
 - [Przykład animacji splajnu](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/KeySplineAnimations)
-- [Przykład animacji klatki kluczowej](https://go.microsoft.com/fwlink/?LinkID=160012)
+- [Przykład animacji klatki kluczowej](https://github.com/microsoft/WPF-Samples/tree/master/Animation/KeyFrameAnimation)
 - [Przegląd Animacja](animation-overview.md)
 - [Przegląd Scenorysy](storyboards-overview.md)
 - [Klatki kluczowe — tematy z instrukcjami](key-frame-animation-how-to-topics.md)

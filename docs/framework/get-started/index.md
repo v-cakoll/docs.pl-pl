@@ -6,19 +6,19 @@ helpviewer_keywords:
 - .NET Framework, getting started
 - getting started [.NET Framework]
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
-ms.openlocfilehash: cd27f2fb893def9e186504cc9973bae71473f005
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 8708fbd21967c5acb548e0e77ba5d9e060336c50
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80248911"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345050"
 ---
 # <a name="get-started-with-net-framework"></a>Wprowadzenie do programu .NET Framework
 
 .NET Framework to środowisko wykonywania w czasie wykonywania, które zarządza aplikacjami docelowymi .NET Framework. Składa się ze wspólnego środowiska wykonawczego języka, który zapewnia zarządzanie pamięcią i inne usługi systemowe oraz obszerną bibliotekę klas, która umożliwia programistom korzystanie z niezawodnego, niezawodnego kodu dla wszystkich głównych obszarów tworzenia aplikacji.
 
 > [!NOTE]
-> Program .NET Framework jest dostępny tylko w systemach Windows. Za pomocą [platformy .NET Core](../../core/index.md) można tworzyć i uruchamiać aplikacje w systemach Windows, MacOS i Linux.
+> Program .NET Framework jest dostępny tylko w systemach Windows. Za pomocą [platformy .NET Core](../../core/index.yml) można tworzyć i uruchamiać aplikacje w systemach Windows, MacOS i Linux.
 
 ## <a name="what-is-net-framework"></a>Co to jest .NET Framework?
 
@@ -80,12 +80,12 @@ Aby uzyskać więcej informacji na temat tworzenia aplikacji przeznaczonych dla 
 | [Wersje .NET Framework i Out-of-Band](the-net-framework-and-out-of-band-releases.md) | W tym artykule opisano wersje poza pasmem .NET Framework i sposób ich używania w aplikacji. |
 | [Wymagania systemowe](system-requirements.md) | Wyświetla listę wymagań sprzętowych i programowych dotyczących uruchamiania programu .NET Framework. |
 | [Oprogramowanie .NET Core i Open-Source](net-core-and-open-source.md) | W tym artykule opisano program .NET Core w odniesieniu do programu .NET Framework i sposobu uzyskiwania dostępu do projektów typu open source .NET Core. |
-| [Dokumentacja .NET Core](../../core/index.md) | Zawiera dokumentację referencyjną koncepcyjnej i interfejsu API dla platformy .NET Core. |
+| [Dokumentacja .NET Core](../../core/index.yml) | Zawiera dokumentację referencyjną koncepcyjnej i interfejsu API dla platformy .NET Core. |
 | [.NET Standard](../../standard/net-standard.md) | W tym artykule omówiono .NET Standard, specyfikacji wersji, że poszczególne implementacje platformy .NET obsługuje, aby zagwarantować, że spójny zestaw interfejsów API jest dostępny na wielu platformach.
 
 ## <a name="see-also"></a>Zobacz też
 
-- [Przewodnik po platformie .NET Framework](../index.yml)
+- [.NET framework — przewodnik](../index.yml)
 - [Co nowego](../whats-new/index.md)
 - [Przeglądarka interfejsów API na platformie .NET](../../../api/index.md)
-- [Przewodnik po rozwoju](../development-guide.md)
+- [Podręcznik programowania](../development-guide.md)

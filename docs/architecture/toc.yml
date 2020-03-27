@@ -11,7 +11,7 @@
       href: modernize-with-azure-containers/
     - name: Cykl życia konteneryzowanych aplikacji platformy Docker korzystających z platformy i narzędzi firmy Microsoft
       href: containerized-lifecycle/
-    - name: 'Mikrousługi .NET: architektura konteneryzowanych aplikacji .NET'
+    - name: 'Mikrousługi .NET: Architektura konteneryzowanych aplikacji .NET'
       href: microservices/
     - name: 'Aplikacje bezserwerowe: architektura, wzorce i implementacja platformy Azure'
       href: serverless/

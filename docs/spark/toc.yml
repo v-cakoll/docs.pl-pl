@@ -35,6 +35,8 @@
       href: how-to-guides/ubuntu-instructions.md
     - name: Tworzenie aplikacji w systemie Windows
       href: how-to-guides/windows-instructions.md
+    - name: Instalowanie interakcyjnych notesów w usłudze Azure HDInsight
+      href: how-to-guides/hdinsight-notebook-installation.md
 - name: Tematy pomocy
   items:
     - name: Odwołanie do biblioteki API

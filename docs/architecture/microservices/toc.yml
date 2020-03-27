@@ -10,7 +10,7 @@
           href: container-docker-introduction/docker-terminology.md
         - name: 'Kontenery, obrazy i rejestry platformy Docker'
           href: container-docker-introduction/docker-containers-images-registries.md
-    - name: Wybieranie między programami .NET Core i .NET Framework na potrzeby tworzenia kontenerów Docker
+    - name: Wybieranie między platformami .NET Core i .NET Framework na potrzeby kontenerów platformy Docker
       href: net-core-net-framework-containers/index.md
       items:
         - name: Wskazówki ogólne
@@ -65,7 +65,7 @@
       items:
         - name: Przepływ pracy tworzenia oprogramowania dla aplikacji platformy Docker
           href: docker-application-development-process/docker-app-development-workflow.md
-    - name: Projektowanie i tworzenie aplikacji .NET opartych na wielu kontenerach i mikrousługach
+    - name: Projektowanie i opracowywanie aplikacji .NET opartych na wielu mikrokontenerach i mikrousługach
       href: multi-container-microservice-net-applications/index.md
       items:
         - name: Projektowanie aplikacji opartej na mikrousługach
@@ -125,7 +125,7 @@
           href: microservice-ddd-cqrs-patterns/microservice-application-layer-web-api-design.md
         - name: Implementowanie warstwy aplikacji mikrousług za pomocą internetowego interfejsu API
           href: microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md
-    - name: Implementowanie aplikacji odpornych na błędy
+    - name: Implementowanie odpornych aplikacji
       href: implement-resilient-applications/index.md
       items:
         - name: Obsługa częściowych niepowodzeń
@@ -144,7 +144,7 @@
           href: implement-resilient-applications/implement-circuit-breaker-pattern.md
         - name: Monitorowanie kondycji
           href: implement-resilient-applications/monitor-app-health.md
-    - name: Zabezpieczanie mikrousług .NET i aplikacji internetowych
+    - name: Zabezpieczanie mikrousług i aplikacji internetowych .NET
       href: secure-net-microservices-web-applications/index.md
       items:
         - name: Informacje o autoryzacji w mikrousługach .NET i aplikacjach internetowych

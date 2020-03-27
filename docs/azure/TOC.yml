@@ -1,0 +1,16 @@
+- name: Platforma Azure dla deweloperów platformy .NET
+  href: index.yml
+  items:
+    - name: Wprowadzenie do platform Azure i .NET
+      href: intro.md
+    - name: Migracja na platformę Azure
+      expanded: true
+      items:
+        - name: Wybieranie opcji hostingu platformy Azure
+          href: ./migration/choose.md
+        - name: Migrowanie usługi lub aplikacji internetowej .NET do usługi Azure App Service
+          href: ./migration/app-service.md
+        - name: Migrowanie aplikacji ASP.NET na maszynę wirtualną platformy Azure
+          href: ./migration/vm.md
+        - name: Migrowanie bazy danych programu SQL Server na platformę Azure
+          href: ./migration/sql.md

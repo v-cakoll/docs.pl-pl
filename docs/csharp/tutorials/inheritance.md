@@ -1,66 +1,66 @@
 ---
 title: 'Dziedziczenie w C #'
-description: Dowiedz się, jak używać dziedziczenia w bibliotekach i aplikacjach języka C#.
+description: Naucz się używać dziedziczenia w bibliotekach i aplikacjach języka C#.
 ms.date: 07/05/2018
 ms.technology: csharp-fundamentals
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: b72badb7833e018dfcbf5d2583b17f17c800c382
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 78833110db0e4f0382e5c0c6de7c6c8be9a16c8d
+ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156756"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80391152"
 ---
 # <a name="inheritance-in-c-and-net"></a>Dziedziczenie w języku C# i .NET
 
-Ten samouczek wprowadza do dziedziczenia w języku C#. Dziedziczenie jest cechą języków programowania zorientowanych obiektowo, która umożliwia zdefiniowanie klasy podstawowej, która zapewnia określone funkcje (dane i zachowanie) oraz definiowanie klas pochodnych, które dziedziczą lub zastępują tę funkcję.
+W tym samouczku przedstawiono dziedziczenie w języku C#. Dziedziczenie jest funkcją zorientowanych obiektowo języków programowania, która pozwala zdefiniować klasę podstawową, która zapewnia określone funkcje (dane i zachowanie) i zdefiniować klasy pochodne, które dziedziczą lub zastępują tę funkcjonalność.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-W tym samouczku przyjęto założenie, że zainstalowano zestaw SDK .NET Core. Odwiedź stronę [pobierania .NET Core,](https://dotnet.microsoft.com/download) aby ją pobrać. Potrzebny jest również edytor kodu. Ten samouczek używa [kodu programu Visual Studio](https://code.visualstudio.com), chociaż można użyć dowolnego edytora kodu do wyboru.
+W tym samouczku przyjęto założenie, że zainstalowano pakiet SDK .NET Core. Odwiedź stronę [pobierania rdzenia .NET,](https://dotnet.microsoft.com/download) aby ją pobrać. Potrzebny jest również edytor kodu. W tym samouczku użyto [programu Visual Studio Code](https://code.visualstudio.com), chociaż można użyć dowolnego edytora kodu do wyboru.
 
 ## <a name="running-the-examples"></a>Uruchamianie przykładów
 
 Aby utworzyć i uruchomić przykłady w tym samouczku, należy użyć narzędzia [dotnet](../../core/tools/dotnet.md) z wiersza polecenia. Wykonaj następujące kroki dla każdego przykładu:
 
 1. Utwórz katalog do przechowywania przykładu.
-1. Wprowadź polecenie [dotnet new console](../../core/tools/dotnet-new.md) w wierszu polecenia, aby utworzyć nowy projekt .NET Core.
-1. Skopiuj i wklej kod z przykładu do edytora kodu.
-1. Wprowadź polecenie [przywracania dotnetzwy](../../core/tools/dotnet-restore.md) z wiersza polecenia, aby załadować lub przywrócić zależności projektu.
+1. Wprowadź polecenie [dotnet nowej konsoli](../../core/tools/dotnet-new.md) w wierszu polecenia, aby utworzyć nowy projekt .NET Core.
+1. Kopiowanie i wklejenie kodu z przykładu do edytora kodu.
+1. Wprowadź polecenie [przywracania dotnet](../../core/tools/dotnet-restore.md) z wiersza polecenia, aby załadować lub przywrócić zależności projektu.
 
-  [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+   [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 1. Wprowadź polecenie [dotnet run,](../../core/tools/dotnet-run.md) aby skompilować i wykonać przykład.
 
 ## <a name="background-what-is-inheritance"></a>Tło: Co to jest dziedziczenie?
 
-*Dziedziczenie* jest jednym z podstawowych atrybutów programowania obiektowego. Umożliwia zdefiniowanie klasy podrzędnej, która używa ponownie (dziedziczy), rozszerza lub modyfikuje zachowanie klasy nadrzędnej. Klasa, której elementy członkowskie są dziedziczone jest nazywany *klasy podstawowej*. Klasa, która dziedziczy członków klasy podstawowej jest nazywany *klasy pochodnej*.
+*Dziedziczenie* jest jednym z podstawowych atrybutów programowania obiektowego. Umożliwia zdefiniowanie klasy podrzędnej, która ponownie używa (dziedziczy), rozszerza lub modyfikuje zachowanie klasy nadrzędnej. Klasa, której członkowie są dziedziczone, jest nazywana *klasą podstawową*. Klasa, która dziedziczy członków klasy podstawowej, jest *nazywana klasą pochodną*.
 
-C# i .NET obsługują tylko *pojedyncze dziedziczenie.* Oznacza to, że klasa może dziedziczyć tylko z jednej klasy. Dziedziczenie jest jednak przechodnie, co umożliwia zdefiniowanie hierarchii dziedziczenia dla zestawu typów. Innymi słowy, `D` typ może `C`dziedziczyć z `B`typu , który dziedziczy z typu , który dziedziczy z typu `A`klasy podstawowej . Ponieważ dziedziczenie jest przechodnie, `A` elementy członkowskie `D`typu są dostępne do typu .
+C# i .NET obsługują tylko *pojedyncze dziedziczenie.* Oznacza to, że klasa może dziedziczyć tylko z jednej klasy. Jednak dziedziczenie jest przechodnie, co pozwala na zdefiniowanie hierarchii dziedziczenia dla zestawu typów. Innymi słowy, `D` typ może `C`dziedziczyć z `B`typu , który dziedziczy `A`po typie , który dziedziczy z typu klasy podstawowej . Ponieważ dziedziczenie jest przechodnie, `A` elementy członkowskie `D`typu są dostępne do wpisywać .
 
 Nie wszystkie elementy członkowskie klasy podstawowej są dziedziczone przez klasy pochodne. Następujące elementy członkowskie nie są dziedziczone:
 
 - [Konstruktory statyczne](../programming-guide/classes-and-structs/static-constructors.md), które inicjują dane statyczne klasy.
 
-- [Konstruktory wystąpienia](../programming-guide/classes-and-structs/constructors.md), które można wywołać, aby utworzyć nowe wystąpienie klasy. Każda klasa musi zdefiniować własne konstruktory.
+- [Konstruktory instancji](../programming-guide/classes-and-structs/constructors.md), które można wywołać, aby utworzyć nowe wystąpienie klasy. Każda klasa musi zdefiniować własne konstruktory.
 
-- [Finalizatory](../programming-guide/classes-and-structs/destructors.md), które są wywoływane przez moduł zbierający elementy bezużyteczne w czasie wykonywania, aby zniszczyć wystąpienia klasy.
+- [Finalizatory](../programming-guide/classes-and-structs/destructors.md), które są wywoływane przez moduł zbierający elementy bezużyteczne środowiska wykonawczego, aby zniszczyć wystąpienia klasy.
 
 Podczas gdy wszystkie inne elementy członkowskie klasy podstawowej są dziedziczone przez klasy pochodne, czy są one widoczne, czy nie zależy od ich dostępności. Dostępność elementu członkowskiego wpływa na jego widoczność dla klas pochodnych w następujący sposób:
 
-- [Elementy członkowskie prywatne](../language-reference/keywords/private.md) są widoczne tylko w klasach pochodnych, które są zagnieżdżone w ich klasie podstawowej. W przeciwnym razie nie są one widoczne w klasach pochodnych. W poniższym `A.B` przykładzie jest zagnieżdżona `C` klasa, `A`która pochodzi od `A`i pochodzi od . Pole `A.value` prywatne jest widoczne w polu A.B. Jeśli jednak usuniesz `C.GetValue` komentarze z metody i spróbujesz skompilować przykład, utworzy błąd kompilatora CS0122: "A.value" jest niedostępny ze względu na poziom ochrony."
+- [Prywatne](../language-reference/keywords/private.md) elementy członkowskie są widoczne tylko w klasach pochodnych, które są zagnieżdżone w ich klasie podstawowej. W przeciwnym razie nie są one widoczne w klasach pochodnych. W poniższym `A.B` przykładzie jest klasą zagnieżdżoną, która wywodzi się z `A`i `C` wywodzi się z `A`. Pole `A.value` prywatne jest widoczne w trybie A.B. Jednak jeśli usuniesz `C.GetValue` komentarze z metody i spróbujesz skompilować przykład, generuje błąd kompilatora CS0122: "'A.value' jest niedostępny ze względu na jego poziom ochrony."
 
   [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/private.cs#1)]
 
-- [Chronione](../language-reference/keywords/protected.md) elementy członkowskie są widoczne tylko w klasach pochodnych.
+- [Chronione elementy](../language-reference/keywords/protected.md) członkowskie są widoczne tylko w klasach pochodnych.
 
-- [Elementy członkowskie wewnętrzne](../language-reference/keywords/internal.md) są widoczne tylko w klasach pochodnych, które znajdują się w tym samym zestawie co klasa podstawowa. Nie są one widoczne w klasach pochodnych znajdujących się w innym zestawie niż klasa podstawowa.
+- [Elementy wewnętrzne](../language-reference/keywords/internal.md) są widoczne tylko w klasach pochodnych, które znajdują się w tym samym zestawie co klasa podstawowa. Nie są one widoczne w klasach pochodnych znajdujących się w innym zestawie niż klasa podstawowa.
 
-- [Elementy akcyjne](../language-reference/keywords/public.md) są widoczne w klasach pochodnych i są częścią interfejsu publicznego klasy pochodnej. Publiczne dziedziczone elementy członkowskie można wywołać tak, jakby były zdefiniowane w klasie pochodnej. W poniższym przykładzie `A` klasa definiuje `Method1`metodę o `B` nazwie , `A`a klasa dziedziczy z klasy . Przykład następnie `Method1` wywołuje tak, jakby była `B`to metoda instancji na .
+- [Elementy](../language-reference/keywords/public.md) publiczne są widoczne w klasach pochodnych i są częścią interfejsu publicznego klasy pochodnej. Publiczne dziedziczone elementy członkowskie mogą być wywoływane tak, jakby były zdefiniowane w klasie pochodnej. W poniższym przykładzie `A` klasa definiuje `Method1`metodę `B` o nazwie `A`, a klasa dziedziczy z klasy . W przykładzie `Method1` następnie wywołuje tak, `B`jakby była to metoda wystąpienia na .
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
 
-Klasy pochodne można również *zastąpić* dziedziczone elementy członkowskie, zapewniając implementację alternatywną. Aby można było zastąpić element członkowski, element członkowski w klasie podstawowej musi być oznaczony [wirtualnym](../language-reference/keywords/virtual.md) słowem kluczowym. Domyślnie elementy członkowskie klasy podstawowej nie są oznaczone jako `virtual` i nie można ich zastąpić. Próba zastąpienia elementu członkowskiego niewirtualnego, jak w poniższym przykładzie, generuje błąd kompilatora CS0506: "\<element członkowski> nie może zastąpić dziedziczonego członka elementu członkowskiego \<> ponieważ nie jest oznaczony jako wirtualny, abstrakcyjny lub zastępowany.
+Klasy *pochodne* mogą również zastąpić odziedziczone elementy członkowskie, zapewniając alternatywną implementację. Aby można było zastąpić element członkowski, element członkowski w klasie podstawowej musi być oznaczony [wirtualnym](../language-reference/keywords/virtual.md) słowem kluczowym. Domyślnie elementy członkowskie klasy podstawowej nie są oznaczone jako `virtual` i nie mogą zostać zastąpione. Próba zastąpienia elementu członkowskiego niebędącego wirtualnym, zgodnie z poniższym przykładem, generuje błąd\<kompilatora CS0506: \<" element członkowski> nie może zastąpić dziedziczonego elementu członkowskiego>, ponieważ nie jest oznaczony jako wirtualny, abstrakcyjny lub zastąpiony.
 
 ```csharp
 public class A
@@ -80,7 +80,7 @@ public class B : A
 }
 ```
 
-W niektórych przypadkach klasa pochodna *musi* zastąpić implementacji klasy podstawowej. Członkowie klasy podstawowej oznaczone [abstrakcyjne](../language-reference/keywords/abstract.md) słowo kluczowe wymagają, że klasy pochodne zastąpić je. Próba skompilowania w poniższym przykładzie generuje błąd kompilatora CS0534, "&lt;klasa&gt; nie implementuje dziedziczonego abstrakcyjnego elementu członkowskiego &lt;&gt;", ponieważ klasa `B` nie zapewnia implementacji dla `A.Method1`.
+W niektórych przypadkach klasa pochodna *musi* zastąpić implementacji klasy podstawowej. Elementy członkowskie klasy podstawowej oznaczone [abstrakcyjnym](../language-reference/keywords/abstract.md) słowem kluczowym wymagają, aby klasy pochodne je zastępować. Próba skompilowania poniższego przykładu generuje błąd kompilatora&gt; CS0534, &lt;&gt;"&lt;klasa `B` nie implementuje dziedziczonego abstrakcyjnego elementu członkowskiego ", ponieważ klasa nie zapewnia implementacji dla `A.Method1`.
 
 ```csharp
 public abstract class A
@@ -97,7 +97,7 @@ public class B : A // Generates CS0534.
 }
 ```
 
-Dziedziczenie ma zastosowanie tylko do klas i interfejsów. Inne kategorie typów (struktury, delegatów i wyliczenia) nie obsługują dziedziczenia. Ze względu na te reguły, próbując skompilować kod, jak w poniższym przykładzie tworzy błąd kompilatora CS0527: "Typ 'ValueType' na liście interfejsu nie jest interfejsem." Komunikat o błędzie wskazuje, że chociaż można zdefiniować interfejsy, które implementuje struktury, dziedziczenie nie jest obsługiwane.
+Dziedziczenie dotyczy tylko klas i interfejsów. Inne kategorie typów (struktury, delegatów i wyliczenia) nie obsługują dziedziczenia. Z powodu tych reguł próba skompilowania kodu, podobnie jak w poniższym przykładzie, powoduje błąd kompilatora CS0527: "Typ 'ValueType' na liście interfejsów nie jest interfejsem." Komunikat o błędzie wskazuje, że chociaż można zdefiniować interfejsy, które implementuje struktury, dziedziczenie nie jest obsługiwane.
 
 ```csharp
 using System;
@@ -109,37 +109,37 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 ## <a name="implicit-inheritance"></a>Dziedziczenie niejawne
 
-Oprócz wszelkich typów, które mogą dziedziczyć z za pośrednictwem pojedynczego dziedziczenia, wszystkie typy w systemie typu .NET niejawnie dziedziczą lub <xref:System.Object> typu pochodzącego z niego. Wspólna funkcjonalność <xref:System.Object> jest dostępna dla każdego typu.
+Oprócz typów, które mogą dziedziczyć za pośrednictwem pojedynczego dziedziczenia, <xref:System.Object> wszystkie typy w systemie typu .NET niejawnie dziedziczą lub typu pochodnego z niego. Wspólna funkcjonalność <xref:System.Object> jest dostępna dla każdego typu.
 
-Aby zobaczyć, co oznacza niejawne dziedziczenie, zdefiniujmy nową klasę, `SimpleClass`która jest po prostu pustą definicją klasy:
+Aby zobaczyć, co oznacza dziedziczenie niejawne, zdefiniujmy nową klasę, `SimpleClass`czyli po prostu pustą definicję klasy:
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#1)]
 
-Następnie można użyć odbicia (który pozwala sprawdzić metadane typu, aby uzyskać informacje o tym typie), `SimpleClass` aby uzyskać listę elementów członkowskich, które należą do typu. Mimo że nie zdefiniowano żadnych `SimpleClass` elementów członkowskich w klasie, dane wyjściowe z przykładu wskazuje, że faktycznie ma dziewięć elementów członkowskich. Jeden z tych elementów członkowskich jest konstruktorem bezparametrów (lub domyślnym), który jest automatycznie dostarczany dla `SimpleClass` typu przez kompilator C#. Pozostałe osiem są <xref:System.Object>członkami , typ, z którego wszystkie klasy i interfejsy w systemie typu .NET ostatecznie niejawnie dziedziczą.
+Następnie można użyć odbicia (co pozwala sprawdzić metadane typu, aby uzyskać informacje o tym typie), aby uzyskać listę elementów członkowskich, które należą do `SimpleClass` typu. Mimo że nie zdefiniowano żadnych `SimpleClass` elementów członkowskich w klasie, dane wyjściowe z przykładu wskazuje, że faktycznie ma dziewięć elementów członkowskich. Jeden z tych elementów członkowskich jest konstruktorem bez parametrów (lub domyślnym), który jest automatycznie dostarczany dla `SimpleClass` typu przez kompilator języka C#. Pozostałe osiem to <xref:System.Object>członkowie , typ, z którego wszystkie klasy i interfejsy w systemie typu .NET ostatecznie niejawnie dziedziczą.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#2)]
 
-Niejawne <xref:System.Object> dziedziczenie z klasy `SimpleClass` udostępnia te metody klasie:
+Niejawne <xref:System.Object> dziedziczenie z klasy `SimpleClass` udostępnia te metody do klasy:
 
-- Metoda `ToString` publiczna, która konwertuje `SimpleClass` obiekt na jego reprezentację ciągu, zwraca w pełni kwalifikowaną nazwę typu. W takim przypadku `ToString` metoda zwraca ciąg "SimpleClass".
+- Metoda `ToString` publiczna, która `SimpleClass` konwertuje obiekt na jego reprezentację ciągu, zwraca w pełni kwalifikowaną nazwę typu. W takim przypadku `ToString` metoda zwraca ciąg "SimpleClass".
 
-- Trzy metody, które testują na równość `Equals(Object)` dwóch obiektów: `Equals(Object, Object)` metoda wystąpienia publicznego, publiczna metoda statyczna i publiczna metoda statyczna. `ReferenceEquals(Object, Object)` Domyślnie te metody testują równość odniesienia; oznacza to, że aby być równym, dwie zmienne obiektowe muszą odwoływać się do tego samego obiektu.
+- Trzy metody, które testują równość `Equals(Object)` dwóch obiektów: metodę `Equals(Object, Object)` wystąpienia publicznego, `ReferenceEquals(Object, Object)` publiczną metodę statyczną i publiczną metodę statyczną. Domyślnie te metody testują równość odniesienia; oznacza to, że aby być równe, dwie zmienne obiektu muszą odwoływać się do tego samego obiektu.
 
-- Metoda `GetHashCode` publiczna, która oblicza wartość, która umożliwia wystąpienie typu, który ma być używany w kolekcjach haszhed.
+- Metoda `GetHashCode` publiczna, która oblicza wartość, która umożliwia wystąpienie typu, które mają być używane w kolekcjach mieszanych.
 
-- Metoda `GetType` publiczna, która <xref:System.Type> zwraca obiekt, `SimpleClass` który reprezentuje typ.
+- Metoda `GetType` publiczna, która <xref:System.Type> zwraca obiekt, który reprezentuje `SimpleClass` typ.
 
-- Metoda <xref:System.Object.Finalize%2A> chroniona, która jest przeznaczona do zwalniania zasobów niezarządzanych, zanim pamięć obiektu zostanie odzyskana przez moduł zbierający elementy bezużyteczne.
+- Metoda chroniona, <xref:System.Object.Finalize%2A> która jest przeznaczona do zwalniania zasobów niezarządzanych, zanim pamięć obiektu zostanie odzyskana przez moduł zbierający elementy bezużyteczne.
 
-- Metoda <xref:System.Object.MemberwiseClone%2A> chroniona, która tworzy płytki klon bieżącego obiektu.
+- Metoda chroniona, <xref:System.Object.MemberwiseClone%2A> która tworzy płytki klon bieżącego obiektu.
 
-Ze względu na niejawne dziedziczenie, `SimpleClass` można wywołać dowolnego dziedziczonego elementu `SimpleClass` członkowskiego z obiektu, tak jakby był rzeczywiście element członkowski zdefiniowany w klasie. Na przykład poniższy przykład `SimpleClass.ToString` wywołuje metodę, `SimpleClass` która <xref:System.Object>dziedziczy z .
+Z powodu niejawnego dziedziczenia można `SimpleClass` wywołać dowolny odziedziczony element członkowski `SimpleClass` z obiektu tak, jakby był faktycznie członkiem zdefiniowanym w klasie. Na przykład w poniższym `SimpleClass.ToString` przykładzie `SimpleClass` wywołuje <xref:System.Object>metodę, która dziedziczy po .
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass2.cs#1)]
 
-W poniższej tabeli wymieniono kategorie typów, które można utworzyć w języku C# i typy, z których niejawnie dziedziczą. Każdy typ podstawowy udostępnia inny zestaw elementów członkowskich za pośrednictwem dziedziczenia do typów niejawnie pochodnych.
+W poniższej tabeli wymieniono kategorie typów, które można utworzyć w języku C# i typy, z których niejawnie dziedziczą. Każdy typ podstawowy sprawia, że inny zestaw elementów członkowskich dostępnych za pośrednictwem dziedziczenia do niejawnie pochodnych typów.
 
-| Kategoria typu | Niejawnie dziedziczy z                                                      |
+| Kategoria typu | Niejawnie dziedziczy po                                                      |
 | ------------- | ----------------------------------------------------------------------------- |
 | class         | <xref:System.Object>                                                          |
 | struktura         | <xref:System.ValueType>, <xref:System.Object>                                 |
@@ -148,56 +148,56 @@ W poniższej tabeli wymieniono kategorie typów, które można utworzyć w języ
 
 ## <a name="inheritance-and-an-is-a-relationship"></a>Dziedziczenie i relacja "jest"
 
-Zwykle dziedziczenie służy do wyrażania relacji "jest" między klasą podstawową a jedną lub większą liczbą klas pochodnych, gdzie klasy pochodne są wyspecjalizowanymi wersjami klasy podstawowej; klasa pochodna jest typem klasy podstawowej. Na przykład `Publication` klasa reprezentuje publikację dowolnego rodzaju, `Book` `Magazine` a i klasy reprezentują określone typy publikacji.
+Zwykle dziedziczenie jest używane do wyrażania relacji "jest" między klasą podstawową a jedną lub kilkoma klasami pochodnymi, gdzie klasy pochodne są wyspecjalizowanymi wersjami klasy podstawowej; klasa pochodna jest typem klasy podstawowej. Na przykład `Publication` klasa reprezentuje publikację dowolnego rodzaju, a `Book` i `Magazine` klasy reprezentują określone typy publikacji.
 
 > [!NOTE]
-> Klasa lub struktura może zaimplementować jeden lub więcej interfejsów. Podczas gdy implementacja interfejsu jest często przedstawiana jako obejście dla pojedynczego dziedziczenia lub jako sposób używania dziedziczenia z strukturami, ma na celu wyrażenie innej relacji (relacji "można zrobić") między interfejsem a jego typem implementującym niż Dziedziczenia. Interfejs definiuje podzbiór funkcji (takich jak możliwość testowania równości, porównywania lub sortowania obiektów lub obsługi analizowania i formatowania zależnego od kultury), które interfejs udostępnia swoim typom implementacji.
+> Klasa lub struktura można zaimplementować jeden lub więcej interfejsów. Chociaż implementacja interfejsu jest często przedstawiana jako obejście pojedynczego dziedziczenia lub jako sposób używania dziedziczenia za pomocą struktur, ma na celu wyrażenie innej relacji (relacji "może zrobić") między interfejsem a jego typem implementacmentu niż Dziedziczenia. Interfejs definiuje podzbiór funkcji (takich jak możliwość testowania równości, do porównywania lub sortowania obiektów lub do obsługi analizowania i formatowania zależne od kultury), które interfejs udostępnia do jego typów implementujących.
 
-Należy zauważyć, że "is a" wyraża również relację między typem a określonym wystąpienia tego typu. W poniższym `Automobile` przykładzie jest to klasa, która ma `Make`trzy unikalne właściwości tylko do odczytu: , producent samochodu; `Model`, rodzaj samochodu; i `Year`, rok produkcji. Klasa `Automobile` ma również konstruktora, którego argumenty są przypisane do <xref:System.Object.ToString%2A?displayProperty=nameWithType> wartości właściwości i zastępuje metodę `Automobile` do tworzenia `Automobile` ciągu, który jednoznacznie identyfikuje wystąpienie, a nie klasy.
+Należy zauważyć, że "jest" wyraża również relację między typem a określonym wystąpieniem tego typu. W poniższym `Automobile` przykładzie jest klasą, która ma `Make`trzy unikatowe właściwości tylko do odczytu: , producenta samochodu; `Model`, rodzaj samochodu; i `Year`, jego rok produkcji. Klasa `Automobile` ma również konstruktora, którego argumenty są przypisane do <xref:System.Object.ToString%2A?displayProperty=nameWithType> wartości właściwości i zastępuje metodę tworzenia `Automobile` ciągu, `Automobile` który jednoznacznie identyfikuje wystąpienie, a nie klasy.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#1)]
 
-W takim przypadku nie należy polegać na dziedziczeniu do reprezentowania konkretnych marek samochodów i modeli. Na przykład nie trzeba definiować typu reprezentującego `Packard` samochody produkowane przez Firmę Motorową Packard. Zamiast tego można je reprezentować, tworząc `Automobile` obiekt z odpowiednimi wartościami przekazanymi do jego konstruktora klasy, tak jak w poniższym przykładzie.
+W takim przypadku nie należy polegać na dziedziczeniu do reprezentowania określonych samochodów sprawia i modeli. Na przykład nie trzeba definiować `Packard` typu reprezentującego samochody produkowane przez Firmę Samochodów Packard. Zamiast tego można je reprezentować, `Automobile` tworząc obiekt z odpowiednimi wartościami przekazanymi do konstruktora klasy, tak jak w poniższym przykładzie.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#2)]
 
-Relacja jest oparta na dziedziczeniu najlepiej jest stosowana do klasy podstawowej i klas pochodnych, które dodają dodatkowe elementy członkowskie do klasy podstawowej lub które wymagają dodatkowych funkcji nieobecnych w klasie podstawowej.
+Relacja is-a oparta na dziedziczeniu jest najlepiej stosowana do klasy podstawowej i klas pochodnych, które dodają dodatkowe elementy członkowskie do klasy podstawowej lub które wymagają dodatkowych funkcji, które nie są obecne w klasie podstawowej.
 
 ## <a name="designing-the-base-class-and-derived-classes"></a>Projektowanie klasy podstawowej i klas pochodnych
 
-Przyjrzyjmy się procesowi projektowania klasy podstawowej i jej klas pochodnych. W tej sekcji zdefiniujesz klasę `Publication`podstawową, która reprezentuje wszelkiego rodzaju publikacje, takie jak książka, czasopismo, gazeta, czasopismo, artykuł itp. Zdefiniujesz również `Book` klasę, która `Publication`wywodzi się z . Można łatwo rozszerzyć przykład, aby zdefiniować inne `Magazine`klasy `Journal` `Newspaper`pochodne, takie jak , , , i `Article`.
+Przyjrzyjmy się procesowi projektowania klasy podstawowej i jej klas pochodnych. W tej sekcji zdefiniujesz klasę `Publication`podstawową, która reprezentuje wszelkiego rodzaju publikację, taką jak książka, czasopismo, gazeta, czasopismo, artykuł itp. Zdefiniujesz również `Book` klasę, która `Publication`wywodzi się z . Przykład można łatwo rozszerzyć, aby zdefiniować inne `Magazine` `Journal`klasy `Newspaper`pochodne, takie jak , , i `Article`.
 
-### <a name="the-base-publication-class"></a>Podstawowa klasa publikacji
+### <a name="the-base-publication-class"></a>Podstawowa klasa Publikacja
 
 Projektując swoją `Publication` klasę, musisz podjąć kilka decyzji projektowych:
 
-- Jakie elementy członkowskie do `Publication` uwzględnienia w `Publication` klasie podstawowej i `Publication` czy członkowie zapewniają implementacje metody lub czy jest abstrakcyjną klasą podstawową, która służy jako szablon dla jego klas pochodnych.
+- Jakie elementy członkowskie do `Publication` uwzględnienia w `Publication` klasie podstawowej i `Publication` czy członkowie zapewniają implementacje metody lub czy jest abstrakcyjną klasą podstawową, która służy jako szablon dla klas pochodnych.
 
-  W takim przypadku `Publication` klasa zapewni implementacje metody. [Projektowanie abstrakcyjnych klas podstawowych i ich klasy pochodne](#abstract) sekcja zawiera przykład, który używa abstrakcyjnej klasy podstawowej do definiowania metod, które klasy pochodne należy zastąpić. Klasy pochodne mogą zapewnić dowolną implementację, która jest odpowiednia dla typu pochodnego.
+  W takim przypadku `Publication` klasa zapewni implementacje metody. [Projektowanie abstrakcyjnych klas podstawowych i ich klas pochodnych](#abstract) sekcja zawiera przykład, który używa abstrakcyjnej klasy podstawowej do definiowania metod, które klasy pochodne muszą zastąpić. Klasy pochodne są wolne do zapewnienia dowolnej implementacji, która jest odpowiednia dla typu pochodnego.
 
-  Możliwość ponownego użycia kodu (czyli wiele klas pochodnych współużytkują deklarację i implementację metod klasy podstawowej i nie muszą je zastępować) jest zaletą nieabstrakcyjnych klas podstawowych. W związku z tym `Publication` należy dodać członków, jeśli ich kod `Publication` może być współużytkowany przez niektóre lub najbardziej wyspecjalizowanych typów. Jeśli nie uda ci się zapewnić implementacje klasy podstawowej wydajnie, będziesz musiał podać w dużej mierze identyczne implementacje elementów członkowskich w klasach pochodnych, a pojedynczą implementację w klasie podstawowej. Konieczność utrzymywania zduplikowanego kodu w wielu lokalizacjach jest potencjalnym źródłem błędów.
+  Możliwość ponownego użycia kodu (oznacza to, że wiele klas pochodnych współużytkuje deklarację i implementację metod klasy podstawowej i nie trzeba ich zastępować) jest zaletą nieabstrakcyjnych klas podstawowych. W związku z tym `Publication` należy dodać członków, jeśli ich kod `Publication` może być współużytkowany przez niektóre lub najbardziej wyspecjalizowane typy. Jeśli nie uda się zapewnić implementacji klasy podstawowej skutecznie, skończysz z koniecznością zapewnienia implementacji w dużej mierze identyczne element członkowski w klasach pochodnych, a pojedyncza implementacja w klasie podstawowej. Konieczność obsługi zduplikowanego kodu w wielu lokalizacjach jest potencjalnym źródłem błędów.
 
-  Zarówno w celu zmaksymalizowania ponownego użycia kodu, jak i do utworzenia logicznej i intuicyjnej hierarchii dziedziczenia, należy mieć pewność, że w `Publication` klasie są uwzględniane tylko dane i funkcje, które są wspólne dla wszystkich lub dla większości publikacji. Klasy pochodne następnie implementują elementy członkowskie, które są unikatowe dla określonych rodzajów publikacji, które reprezentują.
+  Zarówno w celu zmaksymalizowania ponownego użycia kodu i utworzenia logicznej i intuicyjnej hierarchii dziedziczenia, należy mieć pewność, że w `Publication` klasie uwzględnisz tylko dane i funkcje, które są wspólne dla wszystkich lub większości publikacji. Klasy pochodne następnie implementują elementy członkowskie, które są unikatowe dla określonych rodzajów publikacji, które reprezentują.
 
-- Jak daleko rozszerzyć hierarchię klas. Czy chcesz opracować hierarchię trzech lub więcej klas, a nie tylko klasy podstawowej i jednej lub więcej klas pochodnych? Na przykład `Publication` może być klasą `Periodical`podstawową , która `Magazine`z `Journal` `Newspaper`kolei jest klasą podstawową , i .
+- Jak daleko rozszerzyć hierarchię klas. Czy chcesz opracować hierarchię trzech lub więcej klas, a nie tylko klasę podstawową i jedną lub więcej klas pochodnych? Na przykład `Publication` może być klasą podstawową , która `Periodical`z kolei jest klasą podstawową `Magazine`, `Journal` i `Newspaper`.
 
-  W przykładzie użyjesz małej hierarchii `Publication` klasy i pojedynczej `Book`klasy pochodnej. Można łatwo rozszerzyć przykład, aby utworzyć szereg dodatkowych `Publication`klas, `Magazine` które `Article`pochodzą z , takich jak i .
+  W przykładzie użyjesz małej hierarchii `Publication` klasy i pojedynczej klasy `Book`pochodnej. Można łatwo rozszerzyć przykład, aby utworzyć szereg dodatkowych `Publication`klas, `Magazine` które `Article`wynikają z , takich jak i .
 
-- Czy ma sens tworzenie wystąpienia klasy podstawowej. Jeśli nie, należy zastosować [abstrakcyjne](../language-reference/keywords/abstract.md) słowo kluczowe do klasy. W przeciwnym `Publication` razie klasy można utworzyć wystąpienia przez wywołanie jego konstruktora klasy. Jeśli zostanie podjęta próba utworzenia wystąpienia klasy oznaczonej `abstract` słowem kluczowym przez bezpośrednie wywołanie jego konstruktora klasy, kompilator C# generuje błąd CS0144, "Nie można utworzyć wystąpienia klasy abstrakcyjnej lub interfejsu." Jeśli zostanie podjęta próba wystąpienia klasy przy użyciu odbicia, metoda odbicia <xref:System.MemberAccessException>wyrzuci .
+- Czy ma sens tworzenie wystąpienia klasy podstawowej. Jeśli tak nie jest, należy zastosować [abstrakcyjne](../language-reference/keywords/abstract.md) słowo kluczowe do klasy. W przeciwnym `Publication` razie można utworzyć wystąpienia klasy, wywołując jego konstruktora klasy. Jeśli zostanie podjęta próba wystąpienia klasy `abstract` oznaczonej słowem kluczowym przez bezpośrednie wywołanie konstruktora klasy, kompilator języka C# generuje błąd CS0144, "Nie można utworzyć wystąpienia klasy abstrakcyjnej lub interfejsu". Jeśli zostanie podjęta próba wystąpienia klasy przy użyciu odbicia, metoda <xref:System.MemberAccessException>odbicia rzuca .
 
-  Domyślnie klasy podstawowej można utworzyć wystąpienia przez wywołanie jego konstruktora klasy. Nie trzeba jawnie zdefiniować konstruktora klasy. Jeśli nie jest obecny w kodzie źródłowym klasy podstawowej, kompilator C# automatycznie udostępnia domyślny (bezparametrowy) konstruktor.
+  Domyślnie można utworzyć wystąpienie klasy podstawowej, wywołując jego konstruktora klas. Nie trzeba jawnie definiować konstruktora klasy. Jeśli jeden nie jest obecny w kodzie źródłowym klasy podstawowej, kompilator Języka C# automatycznie zapewnia domyślny (bez parametrów) konstruktora.
 
-  W przykładzie oznaczysz `Publication` klasę jako [abstrakcyjną,](../language-reference/keywords/abstract.md) aby nie można było jej utworzyć.  Klasa `abstract` bez `abstract` żadnych metod wskazuje, że ta klasa reprezentuje abstrakcyjną koncepcję, `Book` `Journal`która jest współużytkowana przez kilka konkretnych klas (takich jak , ).
+  W przykładzie zaznaczysz `Publication` klasę jako [abstrakcyjną,](../language-reference/keywords/abstract.md) aby nie można było utworzyć wystąpienia.  Klasa `abstract` bez `abstract` żadnych metod wskazuje, że ta klasa reprezentuje abstrakcyjną koncepcję, która jest współużytkowana przez kilka konkretnych klas (takich jak `Book`, `Journal`).
 
-- Czy klasy pochodne muszą dziedziczyć implementacji klasy podstawowej określonych elementów członkowskich, czy mają możliwość zastąpienia implementacji klasy podstawowej lub czy muszą one zapewnić implementację. Użyj [abstrakcyjne](../language-reference/keywords/abstract.md) słowo kluczowe wymusić klasy pochodne, aby zapewnić implementację. Słowo kluczowe [virtual](../language-reference/keywords/virtual.md) umożliwia klasy pochodne, aby zastąpić metodę klasy podstawowej. Domyślnie metody zdefiniowane w klasie podstawowej *nie* są nadawalne.
+- Czy klasy pochodne muszą dziedziczyć implementacji klasy podstawowej określonych elementów członkowskich, czy mają możliwość zastąpienia implementacji klasy podstawowej lub czy muszą zapewnić implementację. Użycie [abstrakcyjnego](../language-reference/keywords/abstract.md) słowa kluczowego, aby wymusić klasy pochodne, aby zapewnić implementację. Wirtualne [virtual](../language-reference/keywords/virtual.md) słowo kluczowe służy do zezwalania klas pochodnych zastąpić metody klasy podstawowej. Domyślnie metody zdefiniowane w klasie podstawowej *nie* są nadpisywalne.
 
- Klasa `Publication` nie ma `abstract` żadnych metod, ale sama `abstract`klasa jest .
+ Klasa `Publication` nie ma `abstract` żadnych metod, ale `abstract`sama klasa jest .
 
-- Czy klasa pochodna reprezentuje ostateczną klasę w hierarchii dziedziczenia i sama nie może być używana jako klasa podstawowa dla dodatkowych klas pochodnych. Domyślnie każda klasa może służyć jako klasa podstawowa. Można zastosować [zapieczętowane](../language-reference/keywords/sealed.md) słowo kluczowe, aby wskazać, że klasa nie może służyć jako klasa podstawowa dla żadnych dodatkowych klas. Próbując wyprowadzić z zapieczętowanej klasy wygenerowany błąd kompilatora CS0509, "nie może pochodzić z typu zapieczętowanego \<typem>".
+- Czy klasa pochodna reprezentuje klasę końcową w hierarchii dziedziczenia i nie może sama być używana jako klasa podstawowa dla dodatkowych klas pochodnych. Domyślnie każda klasa może służyć jako klasa podstawowa. [Zapieczętowane](../language-reference/keywords/sealed.md) słowo kluczowe można zastosować, aby wskazać, że klasa nie może służyć jako klasa podstawowa dla żadnych dodatkowych klas. Próba wyprowadzenia z zapieczętowanego błędu kompilatora wygenerowanego \<klasy CS0509 ,,nie może pochodzić z zapieczętowanego typu typeName>".
 
-  Na przykład oznaczysz klasę pochodną `sealed`jako .
+  W twoim przykładzie oznaczysz klasę `sealed`pochodną jako .
 
-W poniższym przykładzie przedstawiono `Publication` kod źródłowy `PublicationType` dla klasy, a także `Publication.PublicationType` wyliczenie, które jest zwracane przez właściwość. Oprócz elementów członkowskich, które dziedziczy z <xref:System.Object>, `Publication` klasa definiuje następujące unikatowe elementy członkowskie i zastąpienia elementów członkowskich:
+Poniższy przykład przedstawia kod `Publication` źródłowy dla klasy, a także wyliczenie, `PublicationType` które jest zwracane przez `Publication.PublicationType` właściwość. Oprócz elementów członkowskich, które <xref:System.Object>dziedziczy `Publication` z , klasa definiuje następujące unikatowe elementy członkowskie i elementy członkowskie zastępuje:
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/base-and-derived.cs#1)]
 
@@ -210,88 +210,88 @@ W poniższym przykładzie przedstawiono `Publication` kod źródłowy `Publicati
                                     PublicationType.Book);
   ```
 
-  Jednak jego konstruktor wystąpienia można wywołać bezpośrednio z pochodnych konstruktorów klas, jak pokazuje kod źródłowy `Book` dla klasy.
+  Jednak jego konstruktora wystąpienia można wywołać bezpośrednio z konstruktorów `Book` klas pochodnych, jak pokazuje kod źródłowy dla klasy.
 
 - Dwie właściwości związane z publikacją
 
-  `Title`jest właściwością <xref:System.String> tylko do odczytu, której `Publication` wartość jest dostarczana przez wywołanie konstruktora.
+  `Title`jest właściwością <xref:System.String> tylko do odczytu, `Publication` której wartość jest dostarczana przez wywołanie konstruktora.
 
-  `Pages`jest właściwością <xref:System.Int32> odczytu i zapisu, która wskazuje, ile całkowita liczba stron publikacji ma. Wartość jest przechowywana w `totalPages`polu prywatnym o nazwie . Musi to być liczba <xref:System.ArgumentOutOfRangeException> dodatnia lub wyrzucona.
+  `Pages`jest właściwością <xref:System.Int32> odczytu i zapisu, która wskazuje, ile wszystkich stron ma publikacja. Wartość jest przechowywana w `totalPages`prywatnym polu o nazwie . Musi to być liczba <xref:System.ArgumentOutOfRangeException> dodatnia lub jest wyrzucana.
 
 - Członkowie związani z wydawcą
 
-  Dwie właściwości tylko do `Publisher` `Type`odczytu i . Wartości są pierwotnie dostarczane przez wywołanie konstruktora `Publication` klasy.
+  Dwie właściwości tylko do `Publisher` `Type`odczytu i . Wartości są pierwotnie dostarczane przez wywołanie do konstruktora `Publication` klasy.
 
 - Członkowie związani z publikowaniem
 
-  Dwie metody `Publish` i `GetPublicationDate`, ustawić i zwrócić datę publikacji. Metoda `Publish` ustawia flagę `published` prywatną, gdy `true` jest wywoływana i przypisuje datę `datePublished` przekazaną do niej jako argument do pola prywatnego. Metoda `GetPublicationDate` zwraca ciąg "NYP", `published` jeśli `false`flaga jest , `datePublished` a wartość `true`pola, jeśli jest .
+  Dwie metody `Publish` `GetPublicationDate`i , ustawić i zwrócić datę publikacji. Metoda `Publish` ustawia prywatną `published` `true` flagę, gdy jest wywoływana i przypisuje datę przekazywaną do niej jako argument do pola prywatnego. `datePublished` Metoda `GetPublicationDate` zwraca ciąg "NYP", `published` jeśli `false`flaga jest , `datePublished` a wartość `true`pola, jeśli jest .
 
 - Członkowie związani z prawami autorskimi
 
-  Metoda `Copyright` przyjmuje nazwę posiadacza praw autorskich i rok praw autorskich `CopyrightName` jako `CopyrightDate` argumenty i przypisuje je do i właściwości.
+  Metoda `Copyright` przyjmuje nazwę posiadacza praw autorskich i rok praw autorskich jako `CopyrightName` argumenty `CopyrightDate` i przypisuje je do i właściwości.
 
 - Zastąpienie `ToString` metody
 
-  Jeśli typ nie zastępuje <xref:System.Object.ToString%2A?displayProperty=nameWithType> metody, zwraca w pełni kwalifikowaną nazwę typu, która jest mało użyteczna w odróżnianiu jednego wystąpienia od innego. Klasa `Publication` zastępuje <xref:System.Object.ToString%2A?displayProperty=nameWithType> zwracać wartość `Title` właściwości.
+  Jeśli typ nie zastępuje <xref:System.Object.ToString%2A?displayProperty=nameWithType> metody, zwraca w pełni kwalifikowaną nazwę typu, który ma niewielkie zastosowanie w odróżnianiu jednego wystąpienia od innego. Klasa `Publication` zastępuje <xref:System.Object.ToString%2A?displayProperty=nameWithType> zwracać wartość `Title` właściwości.
 
-Na poniższej ilustracji przedstawiono `Publication` relację między klasą <xref:System.Object> podstawową a jej niejawnie dziedziczoną klasą.
+Poniższy rysunek ilustruje `Publication` relację między klasą <xref:System.Object> podstawową a jej niejawnie dziedziczoną klasą.
 
-![Klasy Obiekt i publikacja](media/publication-class.jpg)
+![Klasa Obiekt i publikacja](media/publication-class.jpg)
 
 ### <a name="the-book-class"></a>Klasa `Book`
 
-Klasa `Book` reprezentuje książkę jako wyspecjalizowany typ publikacji. W poniższym przykładzie przedstawiono `Book` kod źródłowy dla klasy.
+Klasa `Book` reprezentuje książkę jako wyspecjalizowany typ publikacji. Poniższy przykład pokazuje kod `Book` źródłowy dla klasy.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/base-and-derived.cs#2)]
 
-Oprócz elementów członkowskich, które dziedziczy z `Publication`, `Book` klasa definiuje następujące unikatowe elementy członkowskie i zastąpienia elementów członkowskich:
+Oprócz elementów członkowskich, które `Publication`dziedziczy `Book` z , klasa definiuje następujące unikatowe elementy członkowskie i elementy członkowskie zastępuje:
 
 - Dwa konstruktory
 
-  Dwa `Book` konstruktory mają trzy wspólne parametry. Dwa, *tytuł* i *wydawca*, `Publication` odpowiadają parametrom konstruktora. Trzeci to *autor*, który jest przechowywany `Author` w publicznej nieruchomości niezmiennej. Jeden konstruktor zawiera parametr *isbn,* który jest przechowywany w `ISBN` auto-właściwości.
+  Dwa `Book` konstruktory mają trzy wspólne parametry. Dwa, *tytuł* i *wydawca*, `Publication` odpowiadają parametrom konstruktora. Trzeci to *autor*, który jest przechowywany `Author` w publicznej właściwości niezmienne. Jeden konstruktor zawiera parametr *isbn,* `ISBN` który jest przechowywany we właściwości auto.
 
-  Pierwszy konstruktor używa [tego](../language-reference/keywords/this.md) słowa kluczowego do wywołania innego konstruktora. Łańcuchkonstruktora jest typowym wzorcem w definiowaniu konstruktorów. Konstruktorzy z mniejszą liczbą parametrów zapewniają wartości domyślne podczas wywoływania konstruktora z największą liczbą parametrów.
+  Pierwszy konstruktor używa [tego](../language-reference/keywords/this.md) słowa kluczowego, aby wywołać inny konstruktora. Tworzenie łańcucha konstruktora jest typowym wzorcem w definiowaniu konstruktorów. Konstruktory z mniejszą liczbą parametrów zapewniają wartości domyślne podczas wywoływania konstruktora z największą liczbą parametrów.
 
-  Drugi konstruktor używa [podstawowego](../language-reference/keywords/base.md) słowa kluczowego, aby przekazać tytuł i nazwę wydawcy do konstruktora klasy podstawowej. Jeśli nie wygłoszą jawne wywołanie konstruktora klasy podstawowej w kodzie źródłowym, kompilator C# automatycznie dostarcza wywołanie domyślnego lub parametrnego konstruktora klasy podstawowej.
+  Drugi konstruktor używa podstawowego słowa [kluczowego,](../language-reference/keywords/base.md) aby przekazać nazwę tytułu i wydawcy do konstruktora klasy podstawowej. Jeśli nie dokonać jawnego wywołania konstruktora klasy podstawowej w kodzie źródłowym, kompilator Języka C# automatycznie dostarcza wywołanie domyślnego lub bez parametrowego konstruktora klasy podstawowej.
 
-- Właściwość tylko `ISBN` do odczytu, `Book` która zwraca obiektinternational standard book number, unikatowy numer 10- lub 13-cyfrowy. NUMER ISBN jest dostarczany jako argument `Book` do jednego z konstruktorów. Numer ISBN jest przechowywany w prywatnym polu zapasowym, które jest automatycznie generowane przez kompilator.
+- Właściwość tylko `ISBN` do odczytu, `Book` która zwraca międzynarodowy standardowy numer książki obiektu, unikatowy numer 10- lub 13-cyfrowy. Numer ISBN jest dostarczany jako argument `Book` do jednego z konstruktorów. Numer ISBN jest przechowywany w prywatnym polu zapasowym, które jest generowane automatycznie przez kompilator.
 
-- Właściwość tylko `Author` do odczytu. Nazwa autora jest dostarczana jako `Book` argument do obu konstruktorów i jest przechowywana we właściwości.
+- Właściwość tylko `Author` do odczytu. Nazwa autora jest dostarczana `Book` jako argument do obu konstruktorów i jest przechowywana we właściwości.
 
-- Dwie właściwości związane z ceną `Price` tylko `Currency`do odczytu i . Ich wartości są dostarczane `SetPrice` jako argumenty w wywołaniu metody. Właściwość `Currency` jest trzycyfrowym symbolem waluty ISO (na przykład USD za dolara amerykańskiego). Symbole waluty ISO można pobrać <xref:System.Globalization.RegionInfo.ISOCurrencySymbol%2A> z obiektu. Obie te właściwości są zewnętrznie tylko do odczytu, ale `Book` oba mogą być ustawione przez kod w klasie.
+- Dwie właściwości związane tylko z `Price` ceną do odczytu i `Currency`. Ich wartości są dostarczane `SetPrice` jako argumenty w wywołaniu metody. Właściwość `Currency` jest trzycyfrowym symbolem waluty ISO (na przykład USD dla dolara amerykańskiego). Symbole waluty ISO można pobrać <xref:System.Globalization.RegionInfo.ISOCurrencySymbol%2A> z właściwości. Obie te właściwości są tylko do odczytu zewnętrznie, ale `Book` oba mogą być ustawione przez kod w klasie.
 
 - Metoda, `SetPrice` która ustawia wartości `Price` i `Currency` właściwości. Te wartości są zwracane przez te same właściwości.
 
-- Zastępuje `ToString` metodę (dziedziczoną `Publication` <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> z ) <xref:System.Object.GetHashCode%2A> i i metody <xref:System.Object>(dziedziczone z ).
+- `ToString` Zastępuje metodę (dziedziczoną z `Publication`) <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> oraz <xref:System.Object.GetHashCode%2A> metody i <xref:System.Object>metody (dziedziczone po ).
 
-  Chyba że jest zastąpiona, <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> metoda testuje dla równości referencyjnej. Oznacza to, że dwie zmienne obiektowe są uważane za równe, jeśli odnoszą się do tego samego obiektu. W `Book` klasie, z drugiej strony, dwa `Book` obiekty powinny być równe, jeśli mają ten sam ISBN.
+  Chyba że jest zastępowane, testy <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> metody równości odwołania. Oznacza to, że dwie zmienne obiektu są uważane za równe, jeśli odnoszą się do tego samego obiektu. W `Book` klasie, z drugiej strony, dwa `Book` obiekty powinny być równe, jeśli mają ten sam numer ISBN.
 
-  Podczas zastępowania <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> metody, należy również <xref:System.Object.GetHashCode%2A> zastąpić metodę, która zwraca wartość, która jest używana do przechowywania elementów w kolekcjach haszhed dla wydajnego pobierania. Kod skrótu powinien zwracać wartość, która jest zgodna z testem równości. Ponieważ zostały zastąpione <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> do `true` zwrócenia, jeśli isbn `Book` właściwości dwóch obiektów są równe, należy zwrócić <xref:System.String.GetHashCode%2A> kod skrótu obliczone `ISBN` przez wywołanie metody ciągu zwrócone przez właściwość.
+  Po zastąpieniu <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> metody, należy również zastąpić <xref:System.Object.GetHashCode%2A> metodę, która zwraca wartość, która używa środowiska wykonawczego do przechowywania elementów w kolekcji mieszania dla skutecznego pobierania. Kod mieszania powinien zwracać wartość, która jest zgodna z testem równości. Ponieważ <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> zostały zastąpione do `true` zwrócenia, jeśli właściwości ISBN dwóch `Book` obiektów są równe, zwracasz kod <xref:System.String.GetHashCode%2A> skrótu obliczony `ISBN` przez wywołanie metody ciągu zwróconego przez właściwość.
 
-Na poniższej ilustracji przedstawiono `Book` relację między klasą a `Publication`jej klasą podstawową.
+Poniższy rysunek ilustruje `Book` relację między klasą i `Publication`, jej klasą podstawową.
 
-![Zajęcia z publikacji i książek](media/book-class.jpg)
+![Klasy publikacji i książek](media/book-class.jpg)
 
-Teraz można utworzyć wystąpienia `Book` obiektu, wywołać zarówno jego unikatowe i dziedziczone elementy członkowskie i przekazać `Publication` go jako `Book`argument do metody, która oczekuje parametr typu lub typu , jak pokazano w poniższym przykładzie.
+Teraz można utworzyć wystąpienie `Book` obiektu, wywołać zarówno jego unikatowe i dziedziczone elementy członkowskie i przekazać `Publication` go jako `Book`argument do metody, która oczekuje parametru typu lub typu, jak pokazano w poniższym przykładzie.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/use-publication.cs#1)]
 
 ## <a name="designing-abstract-base-classes-and-their-derived-classes"></a>Projektowanie abstrakcyjnych klas podstawowych i ich klas pochodnych
 <a name="abstract"></a>
 
-W poprzednim przykładzie zdefiniowano klasę podstawową, która dostarczyła implementację dla wielu metod, aby umożliwić klasy pochodne do udostępniania kodu. W wielu przypadkach jednak klasa podstawowa nie oczekuje się, aby zapewnić implementację. Zamiast tego klasa podstawowa jest *klasą abstrakcyjną,* która deklaruje *metody abstrakcyjne;* służy jako szablon, który definiuje elementy członkowskie, które każda klasa pochodna musi zaimplementować. Zazwyczaj w abstrakcyjnej klasie podstawowej implementacja każdego typu pochodnego jest unikatowa dla tego typu. Oznaczyłeś klasę abstrakcyjnym słowem kluczowym, ponieważ nie `Publication` ma sensu utworzyć wystąpienia obiektu, mimo że klasa dostarczyła implementacji funkcji wspólnych dla publikacji.
+W poprzednim przykładzie zdefiniowano klasę podstawową, która dostarczyła implementację dla wielu metod, aby umożliwić klasom pochodnym udostępnianie kodu. W wielu przypadkach jednak klasa podstawowa nie oczekuje się implementacji. Zamiast tego klasa podstawowa jest *klasą abstrakcyjną,* która deklaruje *metody abstrakcyjne;* służy jako szablon, który definiuje elementy członkowskie, które każda klasa pochodna musi zaimplementować. Zazwyczaj w abstrakcyjnej klasie podstawowej implementacja każdego typu pochodnego jest unikatowa dla tego typu. Oznaczone klasy z abstrakcyjne słowa kluczowego, ponieważ nie `Publication` ma sensu do tworzenia wystąpienia obiektu, chociaż klasa nie zapewniają implementacji funkcji wspólnych dla publikacji.
 
-Na przykład każdy zamknięty dwuwymiarowy kształt geometryczny zawiera dwie właściwości: obszar, wewnętrzny zakres kształtu; obwodu lub odległości wzdłuż krawędzi kształtu. Sposób obliczania tych właściwości zależy jednak całkowicie od konkretnego kształtu. Formuła obliczania obwodu (lub obwodu) okręgu różni się na przykład od wzoru trójkąta. Klasa `Shape` jest `abstract` klasą `abstract` z metodami. Oznacza to, że klasy pochodne mają te same funkcje, ale te klasy pochodne implementują tę funkcję inaczej.
+Na przykład każdy zamknięty dwuwymiarowy kształt geometryczny zawiera dwie właściwości: obszar, wewnętrzny zasięg kształtu; i obwodu lub odległości wzdłuż krawędzi kształtu. Sposób obliczania tych właściwości zależy jednak całkowicie od konkretnego kształtu. Wzór do obliczania obwodu (lub obwodu) okręgu, na przykład, różni się od trójkąta. Klasa `Shape` jest `abstract` klasą `abstract` z metodami. Oznacza to, że klasy pochodne współużytkują te same funkcje, ale te klasy pochodne implementują tę funkcjonalność inaczej.
 
-W poniższym przykładzie zdefiniowano `Shape` abstrakcyjną klasę podstawową o nazwie, która definiuje dwie właściwości: `Area` i `Perimeter`. Oprócz oznaczania klasy za pomocą [abstrakcyjnego](../language-reference/keywords/abstract.md) słowa kluczowego każdy element członkowski wystąpienia jest również oznaczony [abstrakcyjnym](../language-reference/keywords/abstract.md) słowem kluczowym. W takim `Shape` przypadku zastępuje <xref:System.Object.ToString%2A?displayProperty=nameWithType> również metodę zwracania nazwy typu, a nie jego w pełni kwalifikowaną nazwę. Definiuje dwa statyczne elementy `GetArea` członkowskie `GetPerimeter`i , które umożliwiają wywołującym łatwo pobrać obszar i obwód wystąpienia dowolnej klasy pochodnej. Po przekazaniu wystąpienia klasy pochodnej do jednej z tych metod, czas wykonywania wywołuje zastąpienie metody klasy pochodnej.
+Poniższy przykład definiuje abstrakcyjną `Shape` klasę podstawową o `Area` nazwie, która definiuje dwie właściwości: i `Perimeter`. Oprócz oznaczania klasy słowem kluczowym [abstrakcyjnym,](../language-reference/keywords/abstract.md) każdy element członkowski wystąpienia jest również oznaczony [abstrakcyjnym](../language-reference/keywords/abstract.md) słowem kluczowym. W takim `Shape` przypadku również zastępuje <xref:System.Object.ToString%2A?displayProperty=nameWithType> metodę zwracania nazwy typu, a nie jego w pełni kwalifikowaną nazwę. I definiuje dwa statyczne `GetArea` elementy `GetPerimeter`członkowskie i , które umożliwiają wywołującym łatwo pobrać obszar i obwód wystąpienia dowolnej klasy pochodnej. Po przełknięciu wystąpienia klasy pochodnej do jednej z tych metod środowisko uruchomieniowe wywołuje zastąpienie metody klasy pochodnej.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#1)]
 
-Następnie można wyprowadzić `Shape` niektóre klasy z tych reprezentujących określone kształty. Poniższy przykład definiuje trzy `Triangle`klasy, `Rectangle` `Circle`, , i . Każdy używa formuły unikatowej dla danego kształtu do obliczania obszaru i obwodu. Niektóre klasy pochodne również zdefiniować właściwości, `Rectangle.Diagonal` `Circle.Diameter`takie jak i , które są unikatowe dla kształtu, który reprezentują.
+Następnie można wyprowadzić niektóre `Shape` klasy z tych reprezentują określone kształty. Poniższy przykład definiuje trzy `Triangle` `Rectangle`klasy, `Circle`, i . Każdy używa formuły unikatowej dla tego konkretnego kształtu do obliczenia obszaru i obwodu. Niektóre klasy pochodne również zdefiniować właściwości, takie jak `Rectangle.Diagonal` i `Circle.Diameter`, które są unikatowe dla kształtu, który reprezentują.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#2)]
 
-W poniższym przykładzie użyto obiektów pochodzących z `Shape`. Tworzy tablicę obiektów pochodzących z `Shape` i wywołuje metody statyczne `Shape` klasy, która otacza `Shape` zwraca wartości właściwości. Czas wykonywania pobiera wartości z przesłoniętych właściwości typów pochodnych. Przykład również rzutuje `Shape` każdy obiekt w tablicy do jego typu pochodnego i, jeśli rzutowany `Shape`zakończy się pomyślnie, pobiera właściwości tej określonej podklasy .
+W poniższym przykładzie użyto obiektów pochodzących z `Shape`programu . Wywołuje tablicę obiektów pochodzących z `Shape` i wywołuje metody statyczne `Shape` klasy, która `Shape` zawija zwraca wartości właściwości. Środowisko wykonawcze pobiera wartości z nadpisanych właściwości typów pochodnych. W przykładzie rzutuje również każdy `Shape` obiekt w tablicy na jego typ pochodny i, jeśli `Shape`rzutowania powiedzie się, pobiera właściwości tej konkretnej podklasy .
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
 

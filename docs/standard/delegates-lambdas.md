@@ -1,21 +1,21 @@
 ---
 title: Delegaci i wyrażenia lambda
-description: Dowiedz się, jak delegaci definiują typ, które określają podpis określonej metody, który może być wywoływany bezpośrednio lub przekazywany do innej metody i wywoływany.
+description: Dowiedz się, jak delegaci definiują typ, który określa podpis określonej metody, który może być wywoływany bezpośrednio lub przekazywany do innej metody i wywoływany.
 author: richlander
 ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-ms.openlocfilehash: 0abcc73e31eab89c422513acf778bc8bd092e788
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 34bfa4c6007ec771f784e927675f4e24d52e194f
+ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75345550"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80391237"
 ---
 # <a name="delegates-and-lambdas"></a>Delegaci i wyrażenia lambda
 
-Delegaci definiują typ, który określa podpis określonej metody. Metoda (statyczna lub wystąpienie), która spełnia ten podpis, może być przypisana do zmiennej tego typu, a następnie wywoływana bezpośrednio (z odpowiednimi argumentami) lub przekazywana jako sam argument do innej metody, a następnie wywoływana. W poniższym przykładzie przedstawiono użycie delegata.
+Delegaci definiują typ, który określa podpis określonej metody. Metodę (statyczną lub wystąpienie), która spełnia ten podpis można przypisać do zmiennej tego typu, a następnie wywoływane bezpośrednio (z odpowiednimi argumentami) lub przekazywane jako argument się do innej metody, a następnie wywołane. W poniższym przykładzie pokazano delegowania wykorzystania.
 
 ```csharp
 using System;
@@ -39,18 +39,18 @@ public class Program
 }
 ```
 
-* Wiersz `public delegate string Reverse(string s);` tworzy typ delegata określonego podpisu, w tym przypadku metoda, która przyjmuje parametr ciągu, a następnie zwraca parametr ciągu.
-* Metoda, `static string ReverseString(string s)` która ma dokładnie taki sam podpis jak zdefiniowany typ delegata, implementuje delegata.
-* W `Reverse rev = ReverseString;` wierszu pokazano, że można przypisać metodę do zmiennej odpowiedniego typu pełnomocnika.
-* Wiersz `Console.WriteLine(rev("a string"));` pokazuje, jak używać zmiennej typu delegata do wywoływania delegata.
+* Wiersz `public delegate string Reverse(string s);` tworzy typ delegata określonego podpisu, w tym przypadku metodę, która przyjmuje parametr ciągu, a następnie zwraca parametr ciągu.
+* Metoda, `static string ReverseString(string s)` która ma dokładnie taki sam podpis jak zdefiniowany typ delegata, implementuje pełnomocnika.
+* Wiersz `Reverse rev = ReverseString;` pokazuje, że można przypisać metodę do zmiennej odpowiedniego typu delegata.
+* Wiersz `Console.WriteLine(rev("a string"));` pokazuje, jak używać zmiennej typu delegata do wywoływania pełnomocnika.
 
-Aby usprawnić proces tworzenia, program .NET zawiera zestaw typów delegatów, których programiści mogą ponownie używać i nie muszą tworzyć nowych typów. Są `Func<>`to `Action<>` `Predicate<>`i , i mogą być używane w różnych miejscach w całej interfejsów API .NET bez konieczności definiowania nowych typów delegatów. Oczywiście, istnieją pewne różnice między trzema, jak widać w ich podpisów, które w większości mają do czynienia ze sposobem, w jaki miały być używane:
+Aby usprawnić proces programowania, .NET zawiera zestaw typów delegatów, które programiści mogą ponownie używać i nie trzeba tworzyć nowe typy. Są `Func<>`to `Action<>` `Predicate<>`, i , i mogą być używane w różnych miejscach w interfejsach API platformy .NET bez konieczności definiowania nowych typów delegatów. Oczywiście, istnieją pewne różnice między tymi trzema, jak widać w ich podpisów, które w większości mają do czynienia ze sposobem, w jaki miały być używane:
 
-* `Action<>`jest używany, gdy istnieje potrzeba wykonania akcji przy użyciu argumentów pełnomocnika.
-* `Func<>`jest zwykle używany, gdy masz transformację pod ręką, oznacza to, że należy przekształcić argumenty delegata w inny wynik. Projekcje są tego doskonałym przykładem.
-* `Predicate<>`jest używany, gdy trzeba określić, czy argument spełnia warunek delegata. Może być również napisany `Func<T, bool>`jako .
+* `Action<>`jest używany, gdy istnieje potrzeba wykonania akcji przy użyciu argumentów delegata. Metoda, która hermetyzuje nie zwraca wartości.
+* `Func<>`jest używany zwykle, gdy masz transformację pod ręką, to znaczy, że należy przekształcić argumenty delegata w inny wynik. Prognozy są tego najlepszym przykładem. Metoda, która hermetyzuje zwraca określoną wartość.
+* `Predicate<>`jest używany, gdy trzeba ustalić, czy argument spełnia warunek delegata. Może być również zapisywany `Func<T, bool>`jako , co oznacza, że metoda zwraca wartość logiczną.
 
-Możemy teraz wziąć nasz przykład powyżej i `Func<>` przepisać go za pomocą delegata zamiast typu niestandardowego. Program będzie nadal działać dokładnie tak samo.
+Możemy teraz wziąć nasz przykład powyżej i `Func<>` przepisać go przy użyciu pełnomocnika zamiast typu niestandardowego. Program będzie nadal działać dokładnie tak samo.
 
 ```csharp
 using System;
@@ -72,9 +72,9 @@ public class Program
 }
 ```
 
-W tym prostym przykładzie posiadanie metody zdefiniowanej poza `Main` metodą wydaje się nieco zbędne. To z tego powodu .NET Framework 2.0 wprowadził pojęcie **anonimowych delegatów**. Dzięki ich wsparciu można tworzyć delegatów "inline" bez konieczności określania dodatkowego typu lub metody. Wystarczy wcielić w swoje miejsce definicję pełnomocnika tam, gdzie jest on potrzebny.
+W tym prostym przykładzie o metody `Main` zdefiniowane poza metodą wydaje się nieco zbędne. To z tego powodu .NET Framework 2.0 wprowadził pojęcie **anonimowych delegatów**. Dzięki ich wsparciu możesz tworzyć delegatów "wbudowanych" bez konieczności określania dodatkowego typu lub metody. Po prostu wbudowana definicja delegata tam, gdzie jej potrzebujesz.
 
-Na przykład zamierzamy go przełączyć i użyć naszego anonimowego pełnomocnika, aby odfiltrować listę tylko liczb parzystych, a następnie wydrukować je na konsoli.
+Na przykład przełączymy go i użyjemy naszego anonimowego delegata, aby odfiltrować listę tylko parzystych liczb, a następnie wydrukować je na konsoli.
 
 ```csharp
 using System;
@@ -106,13 +106,13 @@ public class Program
 }
 ```
 
-Jak widać, treść delegata jest tylko zestaw wyrażeń, jak każdy inny delegata. Ale zamiast być oddzielną definicją, wprowadziliśmy ją _ad_ <xref:System.Collections.Generic.List%601.FindAll%2A?displayProperty=nameWithType> hoc w naszym wezwaniu do metody.
+Jak widać, treść delegata jest tylko zestaw wyrażeń, jak każdy inny delegata. Ale zamiast oddzielnej definicji, wprowadziliśmy ją _ad hoc_ w <xref:System.Collections.Generic.List%601.FindAll%2A?displayProperty=nameWithType> naszym wezwaniu do metody.
 
 Jednak nawet przy takim podejściu nadal istnieje wiele kodu, który możemy wyrzucić. To jest, gdy **wyrażenia lambda** wchodzą w grę.
 
-Wyrażenia Lambda lub po prostu "lambdas" w skrócie, zostały wprowadzone najpierw w języku C# 3.0, jako jeden z podstawowych bloków konstrukcyjnych Language Integrated Query (LINQ). Są one po prostu wygodniejsze składni za pomocą delegatów. Deklarują podpis i treść metody, ale nie mają własnej tożsamości formalnej, chyba że są przypisane do pełnomocnika. W przeciwieństwie do delegatów mogą być bezpośrednio przypisane jako po lewej stronie rejestracji zdarzeń lub w różnych LINQ klauzule i metody.
+Wyrażenia Lambda, lub po prostu "lambdas" w skrócie, zostały wprowadzone najpierw w języku C# 3.0, jako jeden z podstawowych bloków konstrukcyjnych języka zintegrowane zapytanie (LINQ). Są one po prostu bardziej wygodną składnią przy użyciu delegatów. Deklarują podpis i treść metody, ale nie mają formalnej tożsamości, chyba że są przypisane do delegata. W przeciwieństwie do delegatów, mogą być bezpośrednio przypisane jako po lewej stronie rejestracji zdarzeń lub w różnych klauzul linq i metod.
 
-Ponieważ wyrażenie lambda jest tylko inny sposób określania delegata, powinniśmy być w stanie przepisać powyższy przykład, aby użyć wyrażenia lambda zamiast anonimowego delegata.
+Ponieważ wyrażenie lambda jest tylko inny sposób określania delegata, powinniśmy być w stanie przepisać powyższe próbki do użycia wyrażenia lambda zamiast anonimowego delegata.
 
 ```csharp
 using System;
@@ -139,9 +139,9 @@ public class Program
 }
 ```
 
-W poprzednim przykładzie użyte wyrażenie lambda `i => i % 2 == 0`jest . Ponownie jest to po prostu **bardzo** wygodna składnia do używania delegatów, więc to, co dzieje się pod okładkami, jest podobne do tego, co dzieje się z anonimowym pełnomocnikiem.
+W poprzednim przykładzie użytym wyrażeniem `i => i % 2 == 0`lambda jest . Ponownie jest to po prostu **bardzo** wygodna składnia do korzystania z delegatów, więc to, co dzieje się w ramach okładek jest podobne do tego, co dzieje się z anonimowym pełnomocnikiem.
 
-Ponownie lambdas są tylko delegatów, co oznacza, że mogą być używane jako program obsługi zdarzeń bez żadnych problemów, jak pokazano poniższy fragment kodu.
+Ponownie lambdas są tylko delegatów, co oznacza, że mogą być używane jako program obsługi zdarzeń bez żadnych problemów, jak pokazuje poniższy fragment kodu.
 
 ```csharp
 public MainWindow()
@@ -155,9 +155,9 @@ public MainWindow()
 }
 ```
 
-Operator `+=` w tym kontekście jest używany do subskrybowania [zdarzenia](../../docs/csharp/language-reference/keywords/event.md). Aby uzyskać więcej informacji, zobacz [Jak subskrybować wydarzenia i zniej subskrybować je.](../../docs/csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)
+Operator `+=` w tym kontekście służy do subskrybowania [zdarzenia](../../docs/csharp/language-reference/keywords/event.md). Aby uzyskać więcej informacji, zobacz [Jak subskrybować wydarzenia i anulować subskrypcję .](../../docs/csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)
 
-## <a name="further-reading-and-resources"></a>Dalsza lektura i zasoby
+## <a name="further-reading-and-resources"></a>Dalsze czytanie i zasoby
 
 * [Delegaty](../../docs/csharp/programming-guide/delegates/index.md)
 * [Funkcje anonimowe](../../docs/csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)

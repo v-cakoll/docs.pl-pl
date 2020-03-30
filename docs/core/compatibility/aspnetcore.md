@@ -2,15 +2,15 @@
 title: ASP.NET Kluczowe zmiany w zerwaniu
 titleSuffix: ''
 description: Wyświetla listę przełomowych zmian w ASP.NET Core.
-ms.date: 03/26/2020
+ms.date: 03/27/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 05272032f2b93c8ae89377a20e6fdafc2ff0eb7b
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 95057425614d7c717154ecfb687db2b9a6ca4a18
+ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345327"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80391250"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Kluczowe zmiany w zerwaniu
 
@@ -71,6 +71,7 @@ Na tej stronie są udokumentowane następujące zmiany podziału:
 - [SignalR: UseSignalR i UseConnections metody usunięte](#signalr-usesignalr-and-useconnections-methods-removed)
 - [OSO: SpaServices i NodeServices logger rezerwowy domyślnej zmiany](#spas-spaservices-and-nodeservices-no-longer-fall-back-to-console-logger)
 - [OSO: Usługi Spaservices i NodeServices oznaczone jako przestarzałe](#spas-spaservices-and-nodeservices-marked-obsolete)
+- [Pliki statyczne: typ zawartości CSV zmieniony na zgodny ze standardami](#static-files-csv-content-type-changed-to-standards-compliant)
 - [Struktura docelowa: .NET Framework nie jest obsługiwana](#target-framework-net-framework-support-dropped)
 
 ## <a name="aspnet-core-50"></a>ASP.NET Core 5.0
@@ -84,6 +85,10 @@ Na tej stronie są udokumentowane następujące zmiany podziału:
 ***
 
 [!INCLUDE[SignalR: UseSignalR and UseConnections methods removed](~/includes/core-changes/aspnetcore/5.0/signalr-usesignalr-useconnections-removed.md)]
+
+***
+
+[!INCLUDE[Static files: CSV content type changed to standards-compliant](~/includes/core-changes/aspnetcore/5.0/static-files-csv-content-type-changed.md)]
 
 ***
 

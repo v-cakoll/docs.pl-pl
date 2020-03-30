@@ -1,6 +1,8 @@
-- name: Przewodnik platformy .NET Core
-  href: index.md
-- name: Informacje o platformie .NET Core
+- name: Dokumentacja platformy .NET Core
+  href: index.yml
+- name: Wprowadzenie do platformy .NET Core
+  href: introduction.md
+- name: Omówienie platformy .NET Core
   href: about.md
 - name: Zainstaluj
   items:

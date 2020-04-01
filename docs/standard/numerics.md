@@ -11,20 +11,20 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-ms.openlocfilehash: e5815058898cac165e7a47d761ee86bb9c4cb940
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 89d3eb709bb22913b9539d6ad384384ee701385f
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73091592"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523288"
 ---
 # <a name="numerics-in-net"></a>Wartości numeryczne na platformie .NET
 
-.NET udostępnia zakres liczbowych liczbowych liczbowych i zmiennoprzecinkowych elementów pierwotnych, a także <xref:System.Numerics.BigInteger?displayProperty=nameWithType>typ <xref:System.Numerics.Complex?displayProperty=nameWithType>integralny bez teoretycznej górnej lub dolnej granicy, <xref:System.Numerics> która reprezentuje liczby zespolone, oraz zestaw typów z obsługą karty SIMD w obszarze nazw.
+.NET zapewnia zakres liczbowych liczbowych liczb i elementów ekscytacji zmiennoprzecinkowych, a <xref:System.Numerics.BigInteger?displayProperty=nameWithType>także <xref:System.Numerics.Complex?displayProperty=nameWithType>, który jest typem integralnym bez teoretycznej górnej <xref:System.Numerics> lub dolnej granicy, która reprezentuje liczby złożone, oraz zestaw typów obsługujących kartę SIMD w obszarze nazw.
   
 ## <a name="integer-types"></a>Typy całkowite
 
-.NET obsługuje zarówno podpisane, jak i niepodpisane typy 8-, 16-, 32- i 64-bitowe liczby całkowite, które są wymienione w poniższej tabeli:
+Program .NET obsługuje zarówno podpisane, jak i niepodpisane typy całkowitej 8-, 16-, 32- i 64-bitowe, które są wymienione w poniższej tabeli:
   
 |Typ|Podpisane/niepodpisane|Rozmiar (w bajtach)|Wartość minimalna|Wartość maksymalna|  
 |----------|----------------------|--------------------|-------------------|-------------------|  
@@ -42,15 +42,15 @@ Każdy typ liczby całkowitej obsługuje zestaw standardowych operatorów arytme
 Można również pracować z poszczególnych bitów w wartości <xref:System.BitConverter?displayProperty=nameWithType> całkowitej przy użyciu klasy.  
 
 > [!NOTE]  
-> Niepodpisane typy liczb całkowitych nie są zgodne ze specyfikacją CLS. Aby uzyskać więcej informacji, zobacz [Niezależność od języka i składniki niezależne od języka](language-independence-and-language-independent-components.md).
+> Niepodpisane typy całkowite nie są zgodne ze specyfikacją CLS. Aby uzyskać więcej informacji, zobacz [Niezależność języka i składniki niezależne od języka](language-independence-and-language-independent-components.md).
 
 ## <a name="biginteger"></a>BigInteger
 
-Struktura <xref:System.Numerics.BigInteger?displayProperty=nameWithType> jest niezmiennytyp, który reprezentuje arbitralnie dużą liczbę całkowitą, której wartość w teorii nie ma górnej lub dolnej granicy. Metody <xref:System.Numerics.BigInteger> typu ściśle równolegle do innych typów całki.
+Struktura <xref:System.Numerics.BigInteger?displayProperty=nameWithType> jest typu niezmienne, który reprezentuje dowolnie dużą liczbę całkowitą, której wartość w teorii nie ma górnej lub dolnej granicy. Metody <xref:System.Numerics.BigInteger> typu ściśle równoległe do innych typów całkowitych.
   
-## <a name="floating-point-types"></a>Typy zmiennoprzecinkowe
+## <a name="floating-point-types"></a>Typy zmiennoprzecinowe
 
-.NET zawiera trzy pierwotne typy zmiennoprzecinkowe, które są wymienione w poniższej tabeli:
+Program .NET zawiera trzy prymitywne typy zmiennoprzecinkowe, które są wymienione w poniższej tabeli:
   
 |Typ|Rozmiar (w bajtach)|Przybliżony zakres|Dokładność|  
 |----------|--------|---------------------|--------------------|  
@@ -58,42 +58,41 @@ Struktura <xref:System.Numerics.BigInteger?displayProperty=nameWithType> jest ni
 |<xref:System.Double?displayProperty=nameWithType>|8|±5,0 × 10<sup>−324</sup> do ±1,7 × 10<sup>308</sup>|~15-17 cyfr|  
 |<xref:System.Decimal?displayProperty=nameWithType>|16|±1,0 x 10<sup>-28</sup> do ±7,9228 x 10<sup>28</sup>|28-29 cyfr|  
   
-Oba <xref:System.Single> <xref:System.Double> i typy obsługują specjalne wartości, które reprezentują nie-liczba i nieskończoność. Na przykład <xref:System.Double> typ zawiera następujące <xref:System.Double.NaN?displayProperty=nameWithType>wartości: <xref:System.Double.NegativeInfinity?displayProperty=nameWithType> <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>, , i . Używasz <xref:System.Double.IsNaN%2A?displayProperty=nameWithType>, <xref:System.Double.IsInfinity%2A?displayProperty=nameWithType>, <xref:System.Double.IsPositiveInfinity%2A?displayProperty=nameWithType>i <xref:System.Double.IsNegativeInfinity%2A?displayProperty=nameWithType> metody do testowania tych wartości specjalnych.
+Oba <xref:System.Single> <xref:System.Double> i typy obsługują wartości specjalne, które reprezentują nie-liczba i nieskończoności. Na przykład <xref:System.Double> typ zawiera następujące <xref:System.Double.NaN?displayProperty=nameWithType>wartości: <xref:System.Double.NegativeInfinity?displayProperty=nameWithType> <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>, , i . Użyj , <xref:System.Double.IsNaN%2A?displayProperty=nameWithType> <xref:System.Double.IsInfinity%2A?displayProperty=nameWithType>, <xref:System.Double.IsPositiveInfinity%2A?displayProperty=nameWithType>i <xref:System.Double.IsNegativeInfinity%2A?displayProperty=nameWithType> metody, aby przetestować dla tych specjalnych wartości.
 
-Każdy typ zmiennoprzecinkowy obsługuje zestaw standardowych operatorów arytmetycznych. Klasa <xref:System.Math?displayProperty=nameWithType> zawiera metody dla szerszego zestawu funkcji matematycznych. .NET Core 2.0 i <xref:System.MathF?displayProperty=nameWithType> nowsze zawiera klasę, <xref:System.Single> która zawiera metody, które akceptują argumenty typu.
+Każdy typ zmiennoprzecinowy obsługuje zestaw standardowych operatorów arytmetycznych. Klasa <xref:System.Math?displayProperty=nameWithType> zawiera metody dla szerszego zestawu funkcji matematycznych. .NET Core 2.0 i <xref:System.MathF?displayProperty=nameWithType> nowsze zawiera klasę, <xref:System.Single> która udostępnia metody, które akceptują argumenty typu.
 
-Można również pracować z poszczególnych <xref:System.Double> <xref:System.Single> bitów i <xref:System.BitConverter?displayProperty=nameWithType> wartości przy użyciu klasy. Struktura <xref:System.Decimal?displayProperty=nameWithType> ma swoje własne <xref:System.Decimal.GetBits%2A?displayProperty=nameWithType> metody <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29?displayProperty=nameWithType>i , do pracy z wartości dziesiętnej poszczególnych bitów, jak również własny zestaw metod wykonywania niektórych dodatkowych operacji matematycznych.
+Można również pracować z poszczególnych <xref:System.Double> <xref:System.Single> bitów i <xref:System.BitConverter?displayProperty=nameWithType> wartości przy użyciu klasy. Struktura <xref:System.Decimal?displayProperty=nameWithType> ma swoje własne <xref:System.Decimal.GetBits%2A?displayProperty=nameWithType> <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29?displayProperty=nameWithType>metody i , do pracy z wartością dziesiętną poszczególnych bitów, jak również własny zestaw metod wykonywania niektórych dodatkowych operacji matematycznych.
   
-I <xref:System.Double> <xref:System.Single> typy są przeznaczone do użycia dla wartości, które ze swej natury są nieprecyzyjne (na przykład odległość między dwiema gwiazdami) oraz dla zastosowań, w których nie jest wymagany wysoki stopień precyzji i mały błąd zaokrąglania. Należy użyć <xref:System.Decimal?displayProperty=nameWithType> tego typu dla przypadków, w których wymagana jest większa precyzja i błędy zaokrąglania powinny być zminimalizowane.
+<xref:System.Double> Typy <xref:System.Single> i typy są przeznaczone do użycia dla wartości, które ze względu na swój charakter są nieprecyzyjne (na przykład odległość między dwiema gwiazdami) oraz dla zastosowań, w których nie jest wymagany wysoki stopień precyzji i mały błąd zaokrąglania. Należy użyć <xref:System.Decimal?displayProperty=nameWithType> typu w przypadkach, w których wymagana jest większa precyzja i błędy zaokrąglania powinny być zminimalizowane.
 
 > [!NOTE]
-> Typ <xref:System.Decimal> nie eliminuje potrzeby zaokrąglania. Zamiast tego minimalizuje błędy z powodu zaokrąglania.
+> Typ <xref:System.Decimal> nie eliminuje potrzeby zaokrąglania. Raczej minimalizuje błędy spowodowane zaokrąglaniem.
   
 ## <a name="complex"></a>Complex
 
-Struktura <xref:System.Numerics.Complex?displayProperty=nameWithType> reprezentuje liczbę zespoloną, czyli liczbę z częścią liczbą rzeczywistą i wyimaginowaną częścią liczbową. Obsługuje standardowy zestaw metod arytmetycznych, porównawczych, równości, jawnych i niejawnych konwersji, a także metod matematycznych, algebraicznych i trygonometrycznych.  
+Struktura <xref:System.Numerics.Complex?displayProperty=nameWithType> reprezentuje liczbę zespoloną, czyli liczbę z częścią liczbową rzeczywistą i wyimaginowaną częścią liczbową. Obsługuje standardowy zestaw operatorów konwersji arytmetycznych, porównawczych, równości, jawnych i niejawnych, a także metod matematycznych, algebraicznych i trygonometrycznych.  
   
-## <a name="simd-enabled-types"></a>Typy z obsługą karty SIMD
+## <a name="simd-enabled-types"></a>Typy obsługujące kartę SIMD
 
-Obszar <xref:System.Numerics> nazw zawiera zestaw typów obsługujących kartę .NET simd. Operacje SIMD (Single Instruction Multiple Data) mogą być równoległe na poziomie sprzętu. Zwiększa to przepływwę obliczeń wektorowanych, które są wspólne w aplikacjach matematycznych, naukowych i graficznych.
+Obszar <xref:System.Numerics> nazw zawiera zestaw typów obsługujących kartę .NET SIMD. Operacje SIMD (Single Instruction Multiple Data) można zrównoleglić na poziomie sprzętu. Zwiększa to przepływność obliczeń wektoryzowanych, które są powszechne w aplikacjach matematycznych, naukowych i graficznych.
   
-Typy z obsługą karty .NET SIMD są następujące:
+Typy obsługujące kartę .NET SIMD są następujące:
 
-- , <xref:System.Numerics.Vector2> <xref:System.Numerics.Vector3>i <xref:System.Numerics.Vector4> typy, które reprezentują wektory z <xref:System.Single> wartościami 2, 3 i 4.
+- <xref:System.Numerics.Vector3>, <xref:System.Numerics.Vector2>i <xref:System.Numerics.Vector4> typów, które reprezentują wektory z 2, <xref:System.Single> 3 i 4 wartości.
 
-- Dwa typy <xref:System.Numerics.Matrix3x2>macierzy , , który reprezentuje <xref:System.Numerics.Matrix4x4>macierz 3x2 i , który reprezentuje macierz 4x4.
+- Dwa typy <xref:System.Numerics.Matrix3x2>macierzy, , który reprezentuje <xref:System.Numerics.Matrix4x4>macierz 3x2 i , który reprezentuje macierz 4x4.
 
 - Typ, <xref:System.Numerics.Plane> który reprezentuje płaszczyznę w przestrzeni trójwymiarowej.
 
-- Typ, <xref:System.Numerics.Quaternion> który reprezentuje wektor, który jest używany do kodowania trójwymiarowych obrótów fizycznych.
+- Typ, <xref:System.Numerics.Quaternion> który reprezentuje wektor, który jest używany do kodowania trójwymiarowych obrotów fizycznych.
 
-- Typ, <xref:System.Numerics.Vector%601> który reprezentuje wektor określonego typu liczbowego i zapewnia szeroki zestaw operatorów, które korzystają z obsługi karty SIMD. Liczba <xref:System.Numerics.Vector%601> wystąpienia jest stała, ale <xref:System.Numerics.Vector%601.Count%2A?displayProperty=nameWithType> jego wartość zależy od procesora CPU komputera, na którym kod jest wykonywany.
+- Typ, <xref:System.Numerics.Vector%601> który reprezentuje wektor określonego typu numerycznego i zapewnia szeroki zestaw operatorów, które korzystają z obsługi SIMD. Liczba <xref:System.Numerics.Vector%601> wystąpienia jest stała, ale <xref:System.Numerics.Vector%601.Count%2A?displayProperty=nameWithType> jego wartość zależy od procesora CPU komputera, na którym kod jest wykonywany.
   > [!NOTE]
-  > Typ <xref:System.Numerics.Vector%601> nie jest uwzględniony w platformie .NET Framework. Aby uzyskać dostęp do tego typu, należy zainstalować pakiet [System.Numerics.Vectors](https://www.nuget.org/packages/System.Numerics.Vectors) NuGet.
+  > Typ <xref:System.Numerics.Vector%601> nie jest uwzględniony w .NET Framework. Aby uzyskać dostęp do tego typu, należy zainstalować pakiet [System.Numerics.Vectors](https://www.nuget.org/packages/System.Numerics.Vectors) NuGet.
   
-Typy z obsługą karty SIMD są implementowane w taki sposób, że mogą być używane ze sprzętem nieobsługującym karty SIMD lub kompilatorami JIT. Aby korzystać z instrukcji SIMD, aplikacje 64-bitowe muszą być uruchamiane przez program runtime, który używa kompilatora RyuJIT, który znajduje się w .NET Core i .NET Framework 4.6 i nowszych wersjach. Dodaje obsługę karty SIMD podczas kierowania na procesory 64-bitowe.
+Typy obsługujące kartę SIMD są implementowane w taki sposób, że mogą być używane ze sprzętem nieobjętym kartą SIMD lub kompilatorami JIT. Aby skorzystać z instrukcji SIMD, aplikacje 64-bitowe muszą być uruchamiane przez środowisko wykonawcze korzystające z kompilatora RyuJIT, który znajduje się w .NET Core i w wersjach .NET Framework 4.6 i nowszych. Dodaje obsługę SIMD podczas kierowania procesorów 64-bitowych.
 
 ## <a name="see-also"></a>Zobacz też
 
-- [Podstawy aplikacji](application-essentials.md)
 - [Standardowe ciągi formatujące liczby](base-types/standard-numeric-format-strings.md)

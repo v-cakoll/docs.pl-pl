@@ -1,24 +1,24 @@
 ---
 title: Trenowanie i ocenianie modelu
-description: Dowiedz się, jak tworzyć modele uczenia maszynowego, zbierać metryki i mierzyć wydajność za pomocą ML.NET. Model uczenia maszynowego identyfikuje wzorce w danych szkoleniowych, aby przewidywać przy użyciu nowych danych.
-ms.date: 08/29/2019
+description: Dowiedz się, jak tworzyć modele uczenia maszynowego, zbierać metryki i mierzyć wydajność za pomocą ML.NET. Model uczenia maszynowego identyfikuje wzorce w danych szkoleniowych, aby prognozowania przy użyciu nowych danych.
+ms.date: 03/31/2020
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: 0e0f43225b9bf243c31b3095817bdcbdb3123012
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 51499f2c0ece615a99740bd9b27f99d4b5ed1d01
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73976760"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523858"
 ---
 # <a name="train-and-evaluate-a-model"></a>Trenowanie i ocenianie modelu
 
-Dowiedz się, jak tworzyć modele uczenia maszynowego, zbierać metryki i mierzyć wydajność za pomocą ML.NET. Mimo że ten przykład pociągów modelu regresji, pojęcia mają zastosowanie w większości innych algorytmów.
+Dowiedz się, jak tworzyć modele uczenia maszynowego, zbierać metryki i mierzyć wydajność za pomocą ML.NET. Mimo że w tym przykładzie trenuje model regresji, pojęcia mają zastosowanie w większości innych algorytmów.
 
-## <a name="split-data-for-training-and-testing"></a>Dzielenie danych na potrzeby szkoleń i testowania
+## <a name="split-data-for-training-and-testing"></a>Dzielenie danych do treningów i testów
 
-Celem modelu uczenia maszynowego jest zidentyfikowanie wzorców w danych szkoleniowych. Te wzorce są używane do prognozowania przy użyciu nowych danych.
+Celem modelu uczenia maszynowego jest zidentyfikowanie wzorców w danych szkoleniowych. Te wzorce są używane do prognoz przy użyciu nowych danych.
 
 Dane mogą być modelowane przez `HousingData`klasę, taką jak .
 
@@ -38,7 +38,7 @@ public class HousingData
 }
 ```
 
-Biorąc pod uwagę następujące dane, które są ładowane do pliku [`IDataView`](xref:Microsoft.ML.IDataView).
+Biorąc pod uwagę następujące dane, które są ładowane do . [`IDataView`](xref:Microsoft.ML.IDataView)
 
 ```csharp
 HousingData[] housingData = new HousingData[]
@@ -82,7 +82,7 @@ HousingData[] housingData = new HousingData[]
 };
 ```
 
-Użyj [`TrainTestSplit`](xref:Microsoft.ML.DataOperationsCatalog.TrainTestSplit*) metody, aby podzielić dane na zestawy pociągów i testów. Wynik będzie obiekt, [`TrainTestData`](xref:Microsoft.ML.DataOperationsCatalog.TrainTestData) który [`IDataView`](xref:Microsoft.ML.IDataView) zawiera dwa elementy członkowskie, jeden dla zestawu pociągów, a drugi dla zestawu testowego. Procent podziału danych jest `testFraction` określana przez parametr. Poniższy fragment kodu zawiera 20 procent oryginalnych danych dla zestawu testów.
+Użyj [`TrainTestSplit`](xref:Microsoft.ML.DataOperationsCatalog.TrainTestSplit%2A) metody, aby podzielić dane na zestawy pociągów i testów. Wynikiem będzie obiekt, [`TrainTestData`](xref:Microsoft.ML.DataOperationsCatalog.TrainTestData) który [`IDataView`](xref:Microsoft.ML.IDataView) zawiera dwa elementy członkowskie, jeden dla zestawu pociągów, a drugi dla zestawu testów. Procent podziału danych jest `testFraction` określany przez parametr. Poniższy fragment kodu wytrzymuje 20 procent oryginalnych danych dla zestawu testów.
 
 ```csharp
 DataOperationsCatalog.TrainTestData dataSplit = mlContext.Data.TrainTestSplit(data, testFraction: 0.2);
@@ -92,17 +92,17 @@ IDataView testData = dataSplit.TestSet;
 
 ## <a name="prepare-the-data"></a>Przygotowywanie danych
 
-Dane muszą być wstępnie przetworzone przed szkoleniem modelu uczenia maszynowego. Więcej informacji na temat przygotowania danych można znaleźć na [temat przygotowania danych do artykułu inspedycyjnego,](prepare-data-ml-net.md) a także . [`transforms page`](../resources/transforms.md)
+Dane muszą być wstępnie przetworzone przed szkoleniem modelu uczenia maszynowego. Więcej informacji na temat przygotowania danych można znaleźć na stronie [`transforms page`](../resources/transforms.md)do [przygotowywania danych,](prepare-data-ml-net.md) a także na stronie .
 
 ML.NET algorytmy mają ograniczenia dotyczące typów kolumn wejściowych. Ponadto wartości domyślne są używane dla nazw kolumn wejściowych i wyjściowych, gdy nie określono żadnych wartości.
 
 ### <a name="working-with-expected-column-types"></a>Praca z oczekiwanymi typami kolumn
 
-Algorytmy uczenia maszynowego w ML.NET oczekiwać wektor float o znanym rozmiarze jako dane wejściowe. Zastosuj [`VectorType`](xref:Microsoft.ML.Data.VectorTypeAttribute) atrybut do modelu danych, gdy wszystkie dane są już w formacie liczbowym i są przeznaczone do przetwarzania razem (tj. pikseli obrazu).
+Algorytmy uczenia maszynowego w ML.NET oczekiwać wektora float o znanym rozmiarze jako dane wejściowe. Zastosuj [`VectorType`](xref:Microsoft.ML.Data.VectorTypeAttribute) atrybut do modelu danych, gdy wszystkie dane są już w formacie liczbowym i są przeznaczone do wspólnego przetwarzania (tj. pikseli obrazu).
 
-Jeśli dane nie są wszystkie liczbowe i chcesz zastosować różne przekształcenia danych [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*) w każdej z kolumn indywidualnie, należy użyć metody po przetworzeniu wszystkich kolumn, aby połączyć wszystkie poszczególne kolumny w jeden wektor operacji, który jest wyprowadzany do nowej kolumny.
+Jeśli dane nie są wszystkie numeryczne i chcesz zastosować różne przekształcenia danych [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate%2A) w każdej kolumnie indywidualnie, użyj metody po przetworzeniu wszystkich kolumn, aby połączyć wszystkie poszczególne kolumny w jeden wektor operacji, który jest wyprowadzany do nowej kolumny.
 
-Poniższy fragment kodu łączy `Size` kolumny `HistoricalPrices` i kolumny w jeden wektor operacji, który jest wyprowadzany do nowej kolumny o nazwie `Features`. Ponieważ istnieje różnica w skalach, [`NormalizeMinMax`](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax*) jest `Features` stosowany do kolumny do normalizacji danych.
+Poniższy fragment kodu łączy `Size` kolumny `HistoricalPrices` i kolumny w jeden wektor operacji, który `Features`jest wyprowadzany do nowej kolumny o nazwie . Ponieważ istnieje różnica w skalach, [`NormalizeMinMax`](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax%2A) jest `Features` stosowany do kolumny do normalizacji danych.
 
 ```csharp
 // Define Data Prep Estimator
@@ -121,19 +121,39 @@ IDataView transformedTrainingData = dataPrepTransformer.Transform(trainData);
 
 ### <a name="working-with-default-column-names"></a>Praca z domyślnymi nazwami kolumn
 
-ML.NET algorytmy używają domyślnych nazw kolumn, gdy nie określono żadnych. Wszyscy trenerzy `featureColumnName` mają parametr wywoływany dla danych wejściowych algorytmu i w `labelColumnName`stosownych przypadkach mają również parametr dla oczekiwanej wartości o nazwie . Domyślnie te `Features` wartości `Label` są i odpowiednio.
+ML.NET algorytmy używają domyślnych nazw kolumn, gdy nie są określone. Wszyscy trenerzy mają `featureColumnName` parametr wywoływany dla danych wejściowych algorytmu i w stosownych przypadkach mają również parametr dla oczekiwanej wartości o nazwie `labelColumnName`. Domyślnie te `Features` wartości `Label` są i odpowiednio.
 
-Za pomocą [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*) metody podczas przetwarzania wstępnego, `Features`aby utworzyć nową kolumnę o nazwie , nie ma potrzeby, aby określić nazwę `IDataView`kolumny funkcji w parametrach algorytmu, ponieważ już istnieje w wstępnie przetworzonej . Kolumna etykiety jest `CurrentPrice` [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) , ale ponieważ atrybut jest używany `CurrentPrice` w `Label` modelu danych, ML.NET zmienia `labelColumnName` nazwę kolumny, do której usuwa potrzebę dostarczenia parametru do estymatora algorytmu uczenia maszynowego.
+Za pomocą [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate%2A) metody podczas przetwarzania wstępnego, `Features`aby utworzyć nową kolumnę o nazwie , nie ma potrzeby, aby określić nazwę `IDataView`kolumny funkcji w parametrach algorytmu, ponieważ już istnieje w wstępnie przetworzonych . Kolumna etykiety `CurrentPrice`jest , [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) ale ponieważ atrybut jest używany w modelu `CurrentPrice` danych, `Label` ML.NET zmienia nazwę kolumny, do której usuwa konieczność dostarczenia parametru `labelColumnName` do estymatora algorytmu uczenia maszynowego.
 
-Jeśli nie chcesz używać domyślnych nazw kolumn, przekaż nazwy kolumn funkcji i etykiet jako parametry podczas definiowania estymatora algorytmu uczenia maszynowego, jak pokazano w kolejnym fragmencie kodu:
+Jeśli nie chcesz używać domyślnych nazw kolumn, przekaż nazwy kolumn funkcji i etykiet jako parametry podczas definiowania estymatora algorytmu uczenia maszynowego, jak pokazano w kolejnym urywek:
 
 ```csharp
 var UserDefinedColumnSdcaEstimator = mlContext.Regression.Trainers.Sdca(labelColumnName: "MyLabelColumnName", featureColumnName: "MyFeatureColumnName");
 ```
 
+## <a name="caching-data"></a>Buforowanie danych
+
+Domyślnie podczas przetwarzania danych jest leniwie ładowany lub przesyłany strumieniowo, co oznacza, że trenerzy mogą ładować dane z dysku i iterować nad nim wiele razy podczas treningu. W związku z tym buforowanie jest zalecane dla zestawów danych, które pasują do pamięci, aby zmniejszyć liczbę razy dane są ładowane z dysku. Buforowanie odbywa się w [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) ramach [`AppendCacheCheckpoint`](xref:Microsoft.ML.Data.EstimatorChain%601.AppendCacheCheckpoint%2A)za pomocą .
+
+Zaleca się stosowanie [`AppendCacheCheckpoint`](xref:Microsoft.ML.Data.EstimatorChain%601.AppendCacheCheckpoint%2A) przed trenerów w przygotowaniu.
+
+Korzystając z [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601)poniższego , dodając [`AppendCacheCheckpoint`](xref:Microsoft.ML.Data.EstimatorChain%601.AppendCacheCheckpoint%2A) przed trenerem [`StochasticDualCoordinateAscent`](xref:Microsoft.ML.Trainers.SdcaRegressionTrainer) buforuje wyniki poprzednich estymatorów do późniejszego wykorzystania przez trenera.
+
+```csharp
+// 1. Concatenate Size and Historical into a single feature vector output to a new column called Features
+// 2. Normalize Features vector
+// 3. Cache prepared data
+// 4. Use Sdca trainer to train the model
+IEstimator<ITransformer> dataPrepEstimator =
+    mlContext.Transforms.Concatenate("Features", "Size", "HistoricalPrices")
+        .Append(mlContext.Transforms.NormalizeMinMax("Features"))
+        .AppendCacheCheckpoint(mlContext);
+        .Append(mlContext.Regression.Trainers.Sdca());
+```
+
 ## <a name="train-the-machine-learning-model"></a>Szkolenie modelu uczenia maszynowego
 
-Po przetworzeniu danych jest wstępnie [`Fit`](xref:Microsoft.ML.Trainers.TrainerEstimatorBase`2.Fit*) przetworzone, należy użyć metody [`StochasticDualCoordinateAscent`](xref:Microsoft.ML.Trainers.SdcaRegressionTrainer) do uczenia modelu uczenia maszynowego za pomocą algorytmu regresji.
+Gdy dane są wstępnie przetwarzane, [`Fit`](xref:Microsoft.ML.Trainers.TrainerEstimatorBase%602.Fit%2A) użyj metody do uczenia modelu [`StochasticDualCoordinateAscent`](xref:Microsoft.ML.Trainers.SdcaRegressionTrainer) uczenia maszynowego za pomocą algorytmu regresji.
 
 ```csharp
 // Define StochasticDualCoordinateAscent regression algorithm estimator
@@ -145,21 +165,21 @@ var trainedModel = sdcaEstimator.Fit(transformedTrainingData);
 
 ## <a name="extract-model-parameters"></a>Wyodrębnianie parametrów modelu
 
-Po przeszkoloniu modelu [`ModelParameters`](xref:Microsoft.ML.Trainers.ModelParametersBase%601) wyodrębnij wyuczone do kontroli lub ponownego przeszkolenia. Zapewniają [`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters) błędy i wyuczonych współczynników lub wagi przeszkolonego modelu.
+Po przeszkoleniu modelu wyodrębnić wyuczonych [`ModelParameters`](xref:Microsoft.ML.Trainers.ModelParametersBase%601) do kontroli lub przekwalifikowania. Podać [`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters) stronniczość i wyuczone współczynniki lub obciążenia wyszkolonego modelu.
 
 ```csharp
 var trainedModelParameters = trainedModel.Model as LinearRegressionModelParameters;
 ```
 
 > [!NOTE]
-> Inne modele mają parametry, które są specyficzne dla ich zadań. Na przykład [algorytm K-Means](xref:Microsoft.ML.Trainers.KMeansTrainer) umieszcza dane w klastrze [`KMeansModelParameters`](xref:Microsoft.ML.Trainers.KMeansModelParameters) na podstawie centroidów i zawiera właściwość, która przechowuje te wyuczone centroidy. Aby dowiedzieć się więcej, odwiedź [ `Microsoft.ML.Trainers` dokumentację interfejsu API](xref:Microsoft.ML.Trainers) i poszukaj klas, które zawierają `ModelParameters` ich nazwy.
+> Inne modele mają parametry, które są specyficzne dla ich zadań. Na przykład [algorytm K-Means](xref:Microsoft.ML.Trainers.KMeansTrainer) umieszcza dane w klastrze [`KMeansModelParameters`](xref:Microsoft.ML.Trainers.KMeansModelParameters) na podstawie centroidów i zawiera właściwość, która przechowuje te nauczyły centroidów. Aby dowiedzieć się więcej, odwiedź [ `Microsoft.ML.Trainers` dokumentację interfejsu API](xref:Microsoft.ML.Trainers) i poszukaj klas, które zawierają `ModelParameters` w ich nazwie.
 
 ## <a name="evaluate-model-quality"></a>Ocena jakości modelu
 
-Aby ułatwić wybór modelu o najlepszej wydajności, należy ocenić jego wydajność na danych testowych. Użyj [`Evaluate`](xref:Microsoft.ML.RegressionCatalog.Evaluate*) metody, aby zmierzyć różne metryki dla uczonego modelu.
+Aby ułatwić wybór modelu o najwyższej wydajności, należy ocenić jego wydajność na danych testowych. Użyj [`Evaluate`](xref:Microsoft.ML.RegressionCatalog.Evaluate%2A) metody, aby zmierzyć różne metryki dla przeszkolonego modelu.
 
 > [!NOTE]
-> Metoda `Evaluate` tworzy różne metryki w zależności od tego, które zadanie uczenia maszynowego zostało wykonane. Aby uzyskać więcej informacji, odwiedź [ `Microsoft.ML.Data` dokumentację interfejsu API](xref:Microsoft.ML.Data) i poszukaj klas, które zawierają `Metrics` w ich imieniu.
+> Metoda `Evaluate` tworzy różne metryki w zależności od tego, które zadanie uczenia maszynowego zostało wykonane. Aby uzyskać więcej informacji, odwiedź [ `Microsoft.ML.Data` dokumentację](xref:Microsoft.ML.Data) `Metrics` interfejsu API i poszukaj klas, które zawierają w ich nazwie.
 
 ```csharp
 // Measure trained model performance
@@ -177,8 +197,8 @@ double rSquared = trainedModelMetrics.RSquared;
 W poprzednim przykładzie kodu:
 
 1. Zestaw danych testowych jest wstępnie przetwarzany przy użyciu przekształceń przygotowania danych wcześniej zdefiniowanych.
-2. Uczonego modelu uczenia maszynowego służy do prognozowania danych testowych.
-3. W `Evaluate` metodzie wartości w `CurrentPrice` kolumnie zestawu danych testowych `Score` są porównywane z kolumną prognoz nowo wyjściowych w celu obliczenia metryk dla modelu regresji, z których jeden R-Kwadrat jest przechowywany w zmiennej. `rSquared`
+2. Przeszkolony model uczenia maszynowego jest używany do przewidywania danych testowych.
+3. W `Evaluate` metodzie wartości w `CurrentPrice` kolumnie zestawu danych testowych `Score` są porównywane z kolumną prognozy nowo danych wyjściowych, aby obliczyć metryki `rSquared` dla modelu regresji, z których jeden, R-Squared jest przechowywany w zmiennej.
 
 > [!NOTE]
-> W tym małym przykładzie R-Squared jest liczbą nie w zakresie 0-1 ze względu na ograniczony rozmiar danych. W scenariuszu rzeczywistym należy oczekiwać, aby zobaczyć wartość z wartością z wartością z wartością od 0 do 1.
+> W tym małym przykładzie R-Squared jest liczbą nie w zakresie 0-1 ze względu na ograniczony rozmiar danych. W scenariuszu rzeczywistym należy oczekiwać, aby zobaczyć wartość między 0 i 1.

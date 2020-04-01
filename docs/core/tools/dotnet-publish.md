@@ -2,12 +2,12 @@
 title: polecenie publikowania dotnetu
 description: Polecenie publikowania dotnet publikuje projekt .NET Core lub rozwiązanie do katalogu.
 ms.date: 02/24/2020
-ms.openlocfilehash: ed5b87b3343210ca81486ef4b9a9d70d1b534464
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: 7e57a7b3cfe72653cc64c90055735795e4616260
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80110974"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523767"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -94,9 +94,21 @@ Dane `dotnet publish` wyjściowe polecenia są gotowe do wdrożenia w systemie h
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  Określa ścieżkę dla katalogu wyjściowego. Jeśli nie zostanie określony, domyślnie ma *wartość ./bin/[configuration]/[framework]/publish/* dla plików binarnych wykonywalnych zależnych od środowiska uruchomieniowego i między platformami. Domyślnie wartość *./bin/[configuration]/[framework]/[runtime]/publish/* dla samodzielnego pliku wykonywalnego.
+  Określa ścieżkę dla katalogu wyjściowego.
+  
+  Jeśli nie zostanie określony, domyślnie *[project_file_folder]./bin/[konfiguracja]/[framework]/publish/* dla plików binarnych wykonywalnych zależnych od środowiska uruchomieniowego i między platformami. Domyślnie *[project_file_folder]/bin/[konfiguracja]/[framework]/[runtime]/publish/* dla samodzielnego pliku wykonywalnego.
 
-  Jeśli ścieżka jest względna, wygenerowany katalog wyjściowy jest względem lokalizacji pliku projektu, a nie do bieżącego katalogu roboczego.
+  - .NET Core 3.x SDK i nowsze
+  
+    Jeśli ścieżka względna jest określona podczas publikowania projektu, wygenerowany katalog wyjściowy jest względem bieżącego katalogu roboczego, a nie do lokalizacji pliku projektu.
+
+    Jeśli ścieżka względna jest określona podczas publikowania rozwiązania, wszystkie dane wyjściowe dla wszystkich projektów przechodzą do określonego folderu względem bieżącego katalogu roboczego. Aby dane wyjściowe publikowania przejść do oddzielnych folderów dla każdego projektu, należy określić ścieżkę względną przy użyciu msbuild `PublishDir` właściwości zamiast `--output` opcji. Na przykład `dotnet publish -p:PublishDir=.\publish` wysyła dane wyjściowe `publish` publikowania dla każdego projektu do folderu w folderze, który zawiera plik projektu.
+
+  - .NET Core 2.x SDK
+  
+    Jeśli ścieżka względna jest określona podczas publikowania projektu, wygenerowany katalog wyjściowy jest względem lokalizacji pliku projektu, a nie do bieżącego katalogu roboczego.
+
+    Jeśli ścieżka względna jest określona podczas publikowania rozwiązania, dane wyjściowe każdego projektu przechodzi do oddzielnego folderu względem lokalizacji pliku projektu. Jeśli ścieżka bezwzględna jest określona podczas publikowania rozwiązania, wszystkie dane wyjściowe publikowania dla wszystkich projektów przechodzi do określonego folderu.
 
 - **`--self-contained [true|false]`**
 

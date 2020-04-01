@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 61ee0e320f85925e4d804a6032e01c0485a31451
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 8d04f888befae2cad815c88a0d27bd836f458c63
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249334"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523775"
 ---
 # <a name="ref-c-reference"></a>ref (odwołanie w C#)
 
@@ -25,7 +25,7 @@ Słowo `ref` kluczowe wskazuje wartość, która jest przekazywana przez odwoła
 
 ## <a name="passing-an-argument-by-reference"></a>Przekazywanie argumentu przez odwołanie
 
-Gdy jest używany na liście parametrów metody, `ref` słowo kluczowe wskazuje, że argument jest przekazywany przez odwołanie, a nie przez wartość. Słowo `ref` kluczowe sprawia, że parametr formalny alias dla argumentu, który musi być zmienną. Innymi słowy, każda operacja na parametr jest na argument. Na przykład jeśli obiekt wywołujący przekazuje wyrażenie zmiennej lokalnej lub wyrażenie dostępu do elementu tablicy, a wywoływana metoda zastępuje obiekt, do którego odwołuje się parametr ref, zmienna lokalna wywołującego lub element tablicy odwołuje się teraz do nowego obiektu, gdy metoda zwraca.
+Gdy jest używany na liście parametrów metody, `ref` słowo kluczowe wskazuje, że argument jest przekazywany przez odwołanie, a nie przez wartość. Słowo `ref` kluczowe sprawia, że parametr formalny alias dla argumentu, który musi być zmienną. Innymi słowy, każda operacja na parametr jest na argument. Na przykład jeśli obiekt wywołujący przekazuje wyrażenie zmiennej lokalnej lub wyrażenie dostępu do elementu tablicy, a wywołana metoda zastępuje obiekt, do którego odwołuje się parametr ref, zmienna lokalna wywołującego lub element tablicy odwołuje się teraz do nowego obiektu, gdy metoda zwraca.
 
 > [!NOTE]
 > Nie należy mylić pojęcia przekazywania przez odniesienie z pojęciem typów odwołań. Te dwie koncepcje nie są takie same. Parametr metody można modyfikować, `ref` niezależnie od tego, czy jest to typ wartości, czy typ odwołania. Nie ma boksu typu wartości, gdy jest przekazywany przez odwołanie.  
@@ -63,7 +63,7 @@ Jednak metody mogą być przeciążone, `ref`gdy `in`jedna `out` metoda ma , lub
 
 Ponadto [metody rozszerzenia](../../programming-guide/classes-and-structs/extension-methods.md) mają następujące ograniczenia:
 
-- Nie `out` można użyć klucza klucza w pierwszym argumencie metody rozszerzenia.
+- Nie `out` można użyć słowa kluczowego w pierwszym argumie metody rozszerzenia.
 - Nie `ref` można użyć słowa kluczowego w pierwszym argumie metody rozszerzenia, gdy argument nie jest strukturą lub typem rodzajowym, który nie jest ograniczony do struktury.
 - Nie `in` można użyć słowa kluczowego, chyba że pierwszy argument jest strukturą. Słowo `in` kluczowe nie może być używane dla dowolnego typu rodzajowego, nawet jeśli jest ograniczona do struktury.
 

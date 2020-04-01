@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 12/27/2019
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: f6496ae38827da5d00c8b278011a9c373afe0e76
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 6cca7330c10317129072b94c3973f5dec575363a
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80344083"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523893"
 ---
 # <a name="net-guide"></a>.NET — przewodnik
 
@@ -46,7 +46,6 @@ Aby uzyskać więcej informacji na temat głównych pojęć platformy .NET, zoba
 * [.NET Standard](net-standard.md)
 * [Współdziałanie natywne](native-interop/index.md)
 * [Wyrzucanie elementów bezużytecznych](garbage-collection/index.md)
-* [Typy podstawowe w sieci .NET](base-types/index.md)
 * [Kolekcje](collections/index.md)
 * [Daty, godziny i strefy czasowe](datetime/index.md)
 * [Programowanie asynchroniczne](async.md)
@@ -57,6 +56,6 @@ Aby uzyskać informacje na temat trzech głównych języków platformy .NET, zob
 * [Podręcznik języka F#](../fsharp/index.yml)
 * [Przewodnik po języku Visual Basic](../visual-basic/index.yml)
 
-## <a name="api-reference"></a>Odwołanie API
+## <a name="api-reference"></a>Dokumentacja interfejsu API
 
 Aby uzyskać szczegółowe informacje na temat wszystkich interfejsów API dostępnych w sieci .NET, zobacz [.NET API reference](../../api/index.md). NET .

@@ -1,9 +1,0 @@
-- name: Atrybuty
-  href: index.md
-  items:
-    - name: Stosowanie atrybutów
-      href: applying-attributes.md
-    - name: Wpisywanie atrybutów niestandardowych
-      href: writing-custom-attributes.md
-    - name: Pobieranie informacji przechowywanych w atrybutach
-      href: retrieving-information-stored-in-attributes.md

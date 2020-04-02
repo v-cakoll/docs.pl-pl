@@ -14,22 +14,22 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 9bf0b168633bbf9f56694e79cf81f8051f9b8ac0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1df75814c45a6f1c245d43e2390b8a6ce692a779
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186382"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80587809"
 ---
 # <a name="dependency-properties-overview"></a>Omówienie właściwości zależności
 
-Windows Presentation Foundation (WPF) udostępnia zestaw usług, które mogą służyć do rozszerzenia funkcjonalności [właściwości](../../../standard/base-types/common-type-system.md#Properties)typu . Łącznie te usługi są zazwyczaj określane jako system właściwości WPF. Właściwość, która jest wspierana przez system właściwości WPF jest znany jako właściwość zależności. W tym przeglądzie opisano system właściwości WPF i możliwości właściwości zależności. Obejmuje to, jak używać istniejących właściwości zależności w XAML i w kodzie. W tym przeglądzie przedstawiono również specjalistyczne aspekty właściwości zależności, takie jak metadane właściwości zależności i jak utworzyć własną właściwość zależności w klasie niestandardowej.
+Windows Presentation Foundation (WPF) udostępnia zestaw usług, które mogą służyć do rozszerzenia funkcjonalności [właściwości](../../../standard/base-types/common-type-system.md#properties)typu . Łącznie te usługi są zazwyczaj określane jako system właściwości WPF. Właściwość, która jest wspierana przez system właściwości WPF jest znany jako właściwość zależności. W tym przeglądzie opisano system właściwości WPF i możliwości właściwości zależności. Obejmuje to, jak używać istniejących właściwości zależności w XAML i w kodzie. W tym przeglądzie przedstawiono również specjalistyczne aspekty właściwości zależności, takie jak metadane właściwości zależności i jak utworzyć własną właściwość zależności w klasie niestandardowej.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 W tym temacie założono, że masz podstawową wiedzę na temat systemu typu .NET i programowania obiektowego. Aby postępować zgodnie z przykładami w tym temacie, należy również zrozumieć XAML i wiedzieć, jak pisać aplikacje WPF. Aby uzyskać więcej informacji, zobacz [Przewodnik: Moja pierwsza aplikacja komputerowa WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
 ## <a name="dependency-properties-and-clr-properties"></a>Właściwości zależności i właściwości CLR
- W WPF WPF właściwości są zazwyczaj udostępniane jako standardowe [właściwości](../../../standard/base-types/common-type-system.md#Properties).NET . Na poziomie podstawowym można wchodzić w interakcje z tymi właściwościami bezpośrednio i nigdy nie wiedzieć, że są one implementowane jako właściwość zależności. Jednak należy zapoznać się z niektórych lub wszystkich funkcji systemu właściwości WPF, dzięki czemu można skorzystać z tych funkcji.
+ W WPF WPF właściwości są zazwyczaj udostępniane jako standardowe [właściwości](../../../standard/base-types/common-type-system.md#properties).NET . Na poziomie podstawowym można wchodzić w interakcje z tymi właściwościami bezpośrednio i nigdy nie wiedzieć, że są one implementowane jako właściwość zależności. Jednak należy zapoznać się z niektórych lub wszystkich funkcji systemu właściwości WPF, dzięki czemu można skorzystać z tych funkcji.
 
 Celem właściwości zależności jest zapewnienie sposobu obliczania wartości właściwości na podstawie wartości innych danych wejściowych. Te inne dane wejściowe mogą obejmować właściwości systemu, takie jak motywy i preferencje użytkownika, mechanizmy określania właściwości just-in-time, takie jak powiązanie danych i animacje/scenorysy, szablony wielokrotnego użytku, takie jak zasoby i style, lub wartości znane za pośrednictwem relacji nadrzędny podrzędny z innymi elementami w drzewie elementów. Ponadto właściwość zależności może być zaimplementowana w celu zapewnienia niezależnej weryfikacji, wartości domyślnych, wywołań zwrotnych, które monitorują zmiany w innych właściwościach, oraz systemu, który może wymuszać wartości właściwości na podstawie potencjalnie informacji o czasie wykonywania. Klasy pochodne można również zmienić niektóre specyficzne cechy istniejącej właściwości przez zastąpienie metadanych właściwości zależności, zamiast zastępowania rzeczywistej implementacji istniejących właściwości lub tworzenia nowych właściwości.
 
@@ -99,7 +99,7 @@ Właściwość zależności zapewnia funkcjonalność, która rozszerza funkcjon
 
 - [Integracja z projektantem WPF](#wpf-designer-integration)
 
-### <a name="resources"></a>Zasoby
+### <a name="resources"></a>Resources
 Wartość właściwości zależności można ustawić, odwołując się do zasobu. Zasoby są zazwyczaj określone `Resources` jako wartość właściwości elementu głównego strony lub aplikacji (te lokalizacje umożliwiają najwygodniejszy dostęp do zasobu). W poniższym przykładzie <xref:System.Windows.Media.SolidColorBrush> pokazano, jak zdefiniować zasób.
 
 [!code-xaml[PropertiesOvwSupport#ResourcesResource](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page2.xaml#resourcesresource)]
@@ -186,7 +186,7 @@ Zasadniczo dla pierwszego przycisku właściwość jest ustawiona dwa razy, ale 
 Zazwyczaj nie chcesz, aby style zawsze były stosowane i zasłaniały nawet lokalnie ustawioną wartość pojedynczego elementu (w przeciwnym razie użycie stylów lub elementów w ogóle byłoby bardzo trudne). W związku z tym wartości, które pochodzą ze stylów działają z niższym precedensem niż wartość ustawiona lokalnie. Aby uzyskać dokładniejszą listę właściwości zależności i skąd może pochodzić wartość efektywna właściwości zależności, zobacz [Pierwszeństwo wartości właściwości zależności.](dependency-property-value-precedence.md)
 
 > [!NOTE]
-> Istnieje wiele właściwości zdefiniowane na WPF elementów, które nie są właściwości zależności. Ogólnie rzecz biorąc, właściwości zostały zaimplementowane jako właściwości zależności tylko wtedy, gdy potrzebne były potrzeby obsługi co najmniej jednego ze scenariuszy włączonych przez system właściwości: wiązanie danych, stylowanie, animacja, domyślna obsługa wartości, dziedziczenie, dołączone właściwości lub Unieważnienie.
+> Istnieje wiele właściwości zdefiniowane na WPF elementów, które nie są właściwości zależności. Ogólnie rzecz biorąc właściwości zostały zaimplementowane jako właściwości zależności tylko wtedy, gdy potrzebne do obsługi co najmniej jeden ze scenariuszy włączonych przez system właściwości: powiązanie danych, stylizacja, animacja, domyślna obsługa wartości, dziedziczenie, dołączone właściwości lub unieważnienie.
 
 ## <a name="learning-more-about-dependency-properties"></a>Dowiedz się więcej o właściwościach zależności  
 
@@ -200,5 +200,5 @@ Zazwyczaj nie chcesz, aby style zawsze były stosowane i zasłaniały nawet loka
 
 - [Niestandardowe właściwości zależności](custom-dependency-properties.md)
 - [Właściwości zależności tylko do odczytu](read-only-dependency-properties.md)
-- [Przegląd XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
+- [Omówienie XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [Architektura WPF](wpf-architecture.md)

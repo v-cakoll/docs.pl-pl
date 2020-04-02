@@ -9,84 +9,24 @@ helpviewer_keywords:
 - XML serialization
 - serialization
 ms.assetid: 832ac524-21bc-419a-a27b-ca8bfc45840f
-ms.openlocfilehash: d9dc68d8e7eced031af404aaec20784573c9930a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dcb2ed1703473be582a12f430d2e051d8a420230
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62028242"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588377"
 ---
 # <a name="xml-and-soap-serialization"></a>Serializacja XML i SOAP
 
-Konwertuje serializacji XML (serializuje) pola publiczne i właściwości obiektu, lub parametry i wartości zwracane metod do strumień XML, który odpowiada określony dokument języka (XSD) definicji schematu XML. Powoduje serializacji XML w silnie typizowanej klasy z właściwości publiczne i pola, które są konwertowane na format seryjny (w tym przypadku XML) do przechowywania lub transportu.
+Serializacja XML konwertuje (serializuje) pola publiczne i właściwości obiektu oraz parametry i wartości zwracane metod na strumień XML zgodny z określonym dokumentem języka XSD (XSD). Powoduje serializacji XML w silnie typizowanej klasy z właściwości publiczne i pola, które są konwertowane na format seryjny (w tym przypadku XML) do przechowywania lub transportu.
 
-Ponieważ kod XML jest otwarty standard, strumień XML mogą być przetwarzane przez dowolną aplikację, zgodnie z potrzebami, niezależnie od platformy. Na przykład usług sieci Web XML utworzone za pomocą programu ASP.NET, użyj <xref:System.Xml.Serialization.XmlSerializer> klasy w celu utworzenia strumieni XML, które przekazują dane między aplikacjami usług XML sieci Web w Internecie lub intranecie. Z kolei deserializacji pobiera strumień XML i rekonstruuje obiektu.
+Ponieważ XML jest otwartym standardem, strumień XML może być przetwarzany przez dowolną aplikację, w razie potrzeby, niezależnie od platformy. Na przykład usługi sieci Web XML utworzone <xref:System.Xml.Serialization.XmlSerializer> przy użyciu ASP.NET używają tej klasy do tworzenia strumieni XML przekazywalanych danych między aplikacjami usługi sieci Web XML w internecie lub w intranetach. Z kolei deserializacji pobiera strumień XML i rekonstruuje obiektu.
 
 Umożliwia także serializacji XML można serializować obiektów do strumieni XML, które są zgodne ze specyfikacją protokołu SOAP. Protokołu SOAP to protokół oparte na języku XML, zaprojektowany specjalnie w celu transportu wywołań procedur za pomocą języka XML.
 
 Do serializacji lub deserializacji obiekty, użyj <xref:System.Xml.Serialization.XmlSerializer> klasy. Aby utworzyć klasy serializacji, należy użyć narzędzia definicji schematu XML.
 
-## <a name="in-this-section"></a>W tej sekcji
-
-[Wprowadzenie do serializacji XML](introducing-xml-serialization.md)  
-Udostępnia ogólne definicji serializacji, zwłaszcza serializacji XML.
-
-[Instrukcje: Serializacja obiektu](how-to-serialize-an-object.md)  
-Instrukcje krok po kroku dotyczący dla serializacji obiektu.
-
-[Instrukcje: Deserializacji obiektu](how-to-deserialize-an-object.md)  
-Instrukcje krok po kroku deserializacji obiektu.
-
-[Przykłady serializacji XML](examples-of-xml-serialization.md)  
-Zawiera przykłady demonstrujące podstawy serializacji XML.
-
-[Narzędzie definicji schematu XML i serializacja XML](the-xml-schema-definition-tool-and-xml-serialization.md)  
-Opisuje sposób można utworzyć klasy, które będą zgodne z określonym schematem języka (XSD) definicji schematu XML lub do generowania schematu XML z PLiku dll za pomocą narzędzia definicji schematu XML.
-
-[Kontrolowanie serializacji XML przy użyciu atrybutów](controlling-xml-serialization-using-attributes.md)  
-Opisuje sposób kontroluje serializacji przy użyciu atrybutów.
-
-[Atrybuty kontrolujące serializację XML](attributes-that-control-xml-serialization.md)  
-Wyświetla listę atrybutów, które są używane do kontrolowania serializacji XML.
-
-[Instrukcje: Określ nazwę elementu alternatywny Stream XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
-Przedstawia informacje o zaawansowanym scenariuszu prezentujący do generowania wielu strumieni XML przez zastąpienie serializacji.
-
-[Instrukcje: Kontrola serializacji w klasach pochodnych](how-to-control-serialization-of-derived-classes.md)  
-Zawiera przykładowy sposób kontroluje serializacji w klasach pochodnych.
-
-[Instrukcje: Kwalifikowanie elementu XML i nazw atrybutów XML](how-to-qualify-xml-element-and-xml-attribute-names.md)  
-Opisuje sposób definiowania i kontrolować sposób, w których XML obszary nazw są używane w strumieniu XML.
-
-[Serializacja XML z usługami internetowymi XML](xml-serialization-with-xml-web-services.md)  
-W tym artykule wyjaśniono, jak serializacji XML jest używany w usługach sieci Web XML.
-
-[Instrukcje: Serializacja obiektu jako Stream XML kodowany w formacie protokołu SOAP](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)  
-Opisuje sposób używania <xref:System.Xml.Serialization.XmlSerializer> klasy w celu utworzenia zakodowany strumieni XML protokołu SOAP, które są zgodne z części 5 dokumentu World Wide Web Consortium (W3C) [proste obiektu dostępu protokołu (protokołu SOAP) 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/).
-
-[Instrukcje: Zastąp zakodowanego protokołu SOAP serializacji XML](how-to-override-encoded-soap-xml-serialization.md)  
-Opisuje proces zastępowanie serializacji obiektów XML jako komunikaty protokołu SOAP.
-
-[Atrybuty kontrolujące zakodowaną serializację SOAP](attributes-that-control-encoded-soap-serialization.md)  
-Wyświetla listę atrybutów, które są używane do kontrolowania serializacji kodowany w formacie protokołu SOAP.
-
-[\<system.xml.serialization> Element](system-xml-serialization-element.md)  
-Element konfiguracji najwyższego poziomu do sterowania serializacji XML.
-
-[\<dateTimeSerialization> Element](datetimeserialization-element.md)  
-Określa tryb serializacji <xref:System.DateTime> obiektów.
-
-[\<schemaImporterExtensions> Element](schemaimporterextensions-element.md)  
-Zawiera typy, które są używane przez <xref:System.Xml.Serialization.XmlSchemaImporter> klasy.
-
-[\<add> Element for \<schemaImporterExtensions>](add-element-for-schemaimporterextensions.md)  
-Dodaje typy, które są używane przez <xref:System.Xml.Serialization.XmlSchemaImporter> klasy.
-
-## <a name="related-sections"></a>Sekcje pokrewne
-
-[Usługi sieci Web XML utworzone za pomocą platformy ASP.NET i klientów usługi sieci Web XML](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))  
-Zawiera tematy, które opisują, a wyjaśniają, jak program usług XML sieci Web za pomocą programu ASP.NET.
-
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Serializacja binarna](binary-serialization.md)
+- [Usługi sieci Web XML utworzone przy użyciu ASP.NET i klientów usługi sieci Web XML](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))

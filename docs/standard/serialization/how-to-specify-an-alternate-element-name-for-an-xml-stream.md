@@ -12,16 +12,16 @@ helpviewer_keywords:
 - classes, overriding
 - overriding classes
 ms.assetid: 5cc1c0b0-f94b-4525-9a41-88a582cd6668
-ms.openlocfilehash: 6aaff20e2955fc9f121b3e60b14c0bbcf7515660
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 2dc1110b858f639624e05382a67ddccf3ea1b047
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159861"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588470"
 ---
 # <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>Instrukcje: Określanie alternatywnej nazwy elementu dla strumienia XML
   
-Przy użyciu <xref:System.Xml.Serialization.XmlSerializer>, można wygenerować więcej niż jeden strumień XML z tym samym zestawem klas. Można to zrobić, ponieważ na tym samym podstawowe informacje o różnice tylko nieznaczne wymaga dwóch różnych usług sieci Web XML. Załóżmy na przykład, że istnieją dwie usługi sieci Web XML, które przetwarzają zamówienia dla książek, a tym samym wymagają numerów ISBN. Jedna usługa używa znacznika \<ISBN > podczas gdy drugi używa znacznika \<BookID >. Masz klasę o nazwie `Book` zawiera pole o nazwie `ISBN`. Jeśli wystąpienie `Book` klasy jest serializowane, będzie domyślnie używać nazwy składowej (ISBN) jako nazwy elementu tag. W przypadku pierwszego usługi sieci Web XML jest zgodnie z oczekiwaniami. Ale wysyłania strumień XML do drugiego usługi sieci Web XML, konieczne jest przesłonięcie serializacji tak, aby nazwy elementu znacznika `BookID`.  
+Przy użyciu <xref:System.Xml.Serialization.XmlSerializer>, można wygenerować więcej niż jeden strumień XML z tym samym zestawem klas. Można to zrobić, ponieważ na tym samym podstawowe informacje o różnice tylko nieznaczne wymaga dwóch różnych usług sieci Web XML. Załóżmy na przykład dwie usługi sieci Web XML, które przetwarzają zamówienia dla książek, a zatem oba wymagają numerów ISBN. Jedna usługa używa \<tagu ISBN>, podczas gdy \<druga używa tagu BookID>. Masz klasę o nazwie `Book` zawiera pole o nazwie `ISBN`. Jeśli wystąpienie `Book` klasy jest serializowane, będzie domyślnie używać nazwy składowej (ISBN) jako nazwy elementu tag. W przypadku pierwszego usługi sieci Web XML jest zgodnie z oczekiwaniami. Ale wysyłania strumień XML do drugiego usługi sieci Web XML, konieczne jest przesłonięcie serializacji tak, aby nazwy elementu znacznika `BookID`.  
   
 ## <a name="to-create-an-xml-stream-with-an-alternate-element-name"></a>Aby utworzyć strumień XML zawierających nazwę elementu alternatywny  
   
@@ -44,7 +44,7 @@ Przy użyciu <xref:System.Xml.Serialization.XmlSerializer>, można wygenerować 
 ## <a name="example"></a>Przykład  
   
 ```vb  
-Public Class SerializeOverride()  
+Public Function SerializeOverride()  
     ' Creates an XmlElementAttribute with the alternate name.  
     Dim myElementAttribute As XmlElementAttribute = _  
     New XmlElementAttribute()  
@@ -64,7 +64,7 @@ End Class
 ```  
   
 ```csharp  
-public class SerializeOverride()  
+public void SerializeOverride()  
 {  
     // Creates an XmlElementAttribute with the alternate name.  
     XmlElementAttribute myElementAttribute = new XmlElementAttribute();  

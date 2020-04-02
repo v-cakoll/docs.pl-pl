@@ -1,27 +1,27 @@
 ---
-title: Ogólny omówienie typów ogólnych (ogólnych)
-description: Dowiedz się, jak leki ogólne działają jako szablony kodu, które umożliwiają definiowanie struktur danych bezpiecznych dla typu bez zatwierdzania rzeczywistego typu danych.
+title: Omówienie typów ogólnych (generycznych)
+description: Dowiedz się, jak ogólne działają jako szablony kodu, które umożliwiają definiowanie struktur danych bezpiecznych dla typu bez powiązania rzeczywistego typu danych.
 author: kuhlenh
 ms.author: wiwagn
 ms.date: 10/09/2018
-ms.openlocfilehash: 3c1181f5be717f328ae906c6009fc8a34b904c89
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0188e620a45462e7cc31391406ade9d57b1b0220
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "61923854"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588479"
 ---
 # <a name="generic-types-overview"></a>Omówienie typów ogólnych
 
-Deweloperzy używają typów ogólnych przez cały czas w .NET, czy niejawnie lub jawnie. Czy podczas korzystania z linq w .NET kiedykolwiek zauważyłeś, że pracujesz z <xref:System.Collections.Generic.IEnumerable%601>? Lub jeśli kiedykolwiek widziałeś online próbki "ogólne repozytorium" do rozmowy z bazami danych przy użyciu entity\<framework, czy widzisz, że większość metod zwraca IQueryable T>? Być może zastanawialiście się, co **T** jest w tych przykładach i dlaczego tam jest.
+Deweloperzy używają generycznych cały czas w .NET, czy niejawnie lub jawnie. Kiedy używasz LINQ w .NET, czy kiedykolwiek zauważyłeś, że pracujesz z? <xref:System.Collections.Generic.IEnumerable%601> Lub jeśli kiedykolwiek widziałeś online próbki "ogólnego repozytorium" do rozmowy z bazami danych `IQueryable<T>`za pomocą Entity Framework, czy widzisz, że większość metod powrót? Być może zastanawialiście się, co **T** jest w tych przykładach i dlaczego tam jest.
 
-Po raz pierwszy wprowadzony w .NET Framework 2.0, **generyki** są zasadniczo "szablon kodu", który umożliwia deweloperom definiowanie struktur danych [bezpieczne dla typu](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hbzz1a9a(v=vs.100)) bez zatwierdzania do rzeczywistego typu danych. Na przykład <xref:System.Collections.Generic.List%601> jest [zbiorem ogólnym,](xref:System.Collections.Generic) który może być zadeklarowany i używany z dowolnym typem, takim jak `List<int>`, `List<string>`lub `List<Person>`.
+Po raz pierwszy wprowadzone w .NET Framework 2.0, ogólne są zasadniczo "szablon kodu", który pozwala deweloperom zdefiniować struktury danych [bezpieczne dla typu](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hbzz1a9a(v=vs.100)) bez pojmowania rzeczywistego typu danych. Na przykład <xref:System.Collections.Generic.List%601> jest [ogólną kolekcją,](xref:System.Collections.Generic) która może być `List<int>`zadeklarowana i używana z dowolnym typem, takim jak , `List<string>`lub `List<Person>`.
 
-Aby zrozumieć, dlaczego leki ogólne są przydatne, przyjrzyjmy się określonej <xref:System.Collections.ArrayList>klasie przed i po dodaniu leków generycznych: . W programie .NET Framework `ArrayList` 1.0 <xref:System.Object>elementy były typu . Oznaczało to, że każdy dodany `Object`element został po cichu przekształcony w plik . To samo stanie się podczas odczytywania elementów z listy. Proces ten jest znany jako [boks i rozpakowywanie](../csharp/programming-guide/types/boxing-and-unboxing.md), i to wpływa na wydajność. Co więcej, jednak nie ma sposobu, aby określić typ danych na liście w czasie kompilacji. To sprawia, że niektóre kruche kodu. Rodzajowe rozwiązać ten problem, definiując typ danych każde wystąpienie listy będzie zawierać. Na przykład można dodawać tylko liczby `List<int>` całkowite do i `List<Person>`dodawać tylko osoby do .
+Aby zrozumieć, dlaczego leki generyczne są przydatne, przyjrzyjmy <xref:System.Collections.ArrayList>się określonej klasie przed i po dodaniu leków generycznych: . W programie .NET Framework 1.0 `ArrayList` <xref:System.Object>elementy były typu . Oznaczało to, że każdy dodany element `Object`został po cichu przekształcony w . To samo miałoby miejsce podczas czytania elementów z listy. Proces ten jest znany jako [boks i unboxing](../csharp/programming-guide/types/boxing-and-unboxing.md), i to wpływa na wydajność. Co więcej, jednak nie ma sposobu, aby określić typ danych na liście w czasie kompilacji. To sprawia, że dla niektórych delikatny kod. Ogólne rozwiązać ten problem, definiując typ danych każde wystąpienie listy będzie zawierać. Na przykład można dodawać liczby całkowite `List<int>` tylko do i `List<Person>`tylko dodawać osoby do .
 
-Rodzajowe są również dostępne w czasie wykonywania. Oznacza to, że czas wykonywania wie, jakiego typu struktury danych używasz i można przechowywać go w pamięci bardziej efektywnie.
+Generyki są również dostępne w czasie wykonywania. Oznacza to, że środowisko wykonawcze wie, jakiego typu struktury danych używasz i można przechowywać go w pamięci bardziej efektywnie.
 
-W poniższym przykładzie przedstawiono mały program, który ilustruje wydajność znajomości typu struktury danych w czasie wykonywania:
+Poniższy przykład jest mały program, który ilustruje wydajność znając typ struktury danych w czasie wykonywania:
 
 ```csharp
   using System;
@@ -62,10 +62,10 @@ Non-Generic Sort: System.Collections.ArrayList
  Time taken: 0.2592ms
 ```
 
-Pierwszą rzeczą, którą można zauważyć w tym miejscu jest to, że sortowanie listy ogólnej jest znacznie szybsze niż sortowanie listy nierodzajowej. Można również zauważyć, że typ dla listy ogólnej jest odrębny ([System.Int32]), podczas gdy typ dla listy nierodzajowej jest uogólniony. Ponieważ czas wykonywania `List<int>` wie, <xref:System.Int32>że rodzajowy jest typu , można przechowywać elementy listy w `ArrayList` podstawowej tablicy całkowitej w pamięci, podczas gdy nierodzajowy musi oddać każdy element listy do obiektu. Jak pokazano w tym przykładzie, dodatkowe rzuty zajmują czas i spowalniają sortowanie listy.
+Pierwszą rzeczą, którą można zauważyć w tym miejscu jest to, że sortowanie listy rodzajowej jest znacznie szybsze niż sortowanie listy nierodzgonej. Można również zauważyć, że typ dla listy rodzajowej jest odrębny ([System.Int32]), podczas gdy typ listy nieogólnej jest uogólniony. Ponieważ środowisko wykonawcze `List<int>` wie, <xref:System.Int32>że rodzajowy jest typu, może przechowywać elementy listy w podstawowej tablicy liczby całkowitej w pamięci, podczas gdy niegeneryczne `ArrayList` musi rzutować każdy element listy do obiektu. Jak pokazano w tym przykładzie, dodatkowe rzutowania zajmują czas i spowalniają sortowanie listy.
 
-Dodatkową zaletą środowiska uruchomieniowego znając typ ogólnego jest lepsze środowisko debugowania. Podczas debugowania ogólne w języku C#, wiesz, jaki typ każdego elementu jest w strukturze danych. Bez leków ogólnych, nie masz pojęcia, jaki typ był każdy element.
+Dodatkową zaletą środowiska wykonawczego znając typ ogólnego jest lepsze środowisko debugowania. Podczas debugowania ogólnego w języku C#, wiesz, jaki typ każdego elementu jest w strukturze danych. Bez generycznych, nie masz pojęcia, jaki typ każdego elementu był.
 
 ## <a name="see-also"></a>Zobacz też
 
-- [Przewodnik programowania Języka C# — leki ogólne](../../docs/csharp/programming-guide/generics/index.md)
+- [C# Przewodnik programowania - Generyki](../../docs/csharp/programming-guide/generics/index.md)

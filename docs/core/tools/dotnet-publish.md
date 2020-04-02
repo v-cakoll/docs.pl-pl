@@ -2,12 +2,12 @@
 title: polecenie publikowania dotnetu
 description: Polecenie publikowania dotnet publikuje projekt .NET Core lub rozwiązanie do katalogu.
 ms.date: 02/24/2020
-ms.openlocfilehash: 7e57a7b3cfe72653cc64c90055735795e4616260
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 0e18220443f3713c86c257fcf401b98ddd716ebc
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523767"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588265"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -38,7 +38,23 @@ dotnet publish [-h|--help]
 - Plik *.runtimeconfig.json,* który określa udostępnione środowisko uruchomieniowe, które oczekuje aplikacja, a także inne opcje konfiguracji dla środowiska wykonawczego (na przykład typ wyrzucania elementów bezużytecznych).
 - Zależności aplikacji, które są kopiowane z pamięci podręcznej NuGet do folderu wyjściowego.
 
-Dane `dotnet publish` wyjściowe polecenia są gotowe do wdrożenia w systemie hostingowym (na przykład serwerze, komputerze PC, Mac, laptopie) do wykonania. Jest to jedyny oficjalnie obsługiwany sposób przygotowania aplikacji do wdrożenia. W zależności od typu wdrożenia, który określa projekt, system hostingu może lub nie może mieć .NET Core udostępnionego środowiska uruchomieniowego zainstalowanego na nim.
+Dane `dotnet publish` wyjściowe polecenia są gotowe do wdrożenia w systemie hostingowym (na przykład serwerze, komputerze PC, Mac, laptopie) do wykonania. Jest to jedyny oficjalnie obsługiwany sposób przygotowania aplikacji do wdrożenia. W zależności od typu wdrożenia, który określa projekt, system hostingu może lub nie może mieć .NET Core udostępnionego środowiska uruchomieniowego zainstalowanego na nim. Aby uzyskać więcej informacji, zobacz [Publikowanie aplikacji .NET Core za pomocą interfejsu wiersza polecenia .NET Core](../deploying/deploy-with-cli.md).
+
+### <a name="msbuild"></a>MSBuild
+
+Polecenie `dotnet publish` wywołuje MSBuild, który `Publish` wywołuje obiekt docelowy. Wszystkie parametry `dotnet publish` przekazywane do są przekazywane do MSBuild. I `-c` `-o` parametry mapują odpowiednio właściwości `Configuration` i `OutputPath` MSBuild.
+
+Polecenie `dotnet publish` akceptuje opcje MSBuild, `-p` takie jak ustawienie `-l` właściwości i zdefiniowanie rejestratora. Na przykład można ustawić właściwość MSBuild przy `-p:<NAME>=<VALUE>`użyciu formatu: . Można również ustawić właściwości związane z publikowanie, odwołując się do pliku *pubxml,* na przykład:
+
+```dotnetcli
+dotnet publish -p:PublishProfile=Properties\PublishProfiles\FolderProfile.pubxml
+```
+
+Więcej informacji zawierają następujące zasoby:
+
+- [Odwołanie do wiersza polecenia MSBuild](/visualstudio/msbuild/msbuild-command-line-reference)
+- [Profile publikowania w programie Visual Studio (pubxml) dla ASP.NET wdrożenia aplikacji Core](/aspnet/core/host-and-deploy/visual-studio-publish-profiles)
+- [dotnet msbuild](dotnet-msbuild.md)
 
 ## <a name="arguments"></a>Argumenty
 
@@ -112,7 +128,9 @@ Dane `dotnet publish` wyjściowe polecenia są gotowe do wdrożenia w systemie h
 
 - **`--self-contained [true|false]`**
 
-  Publikuje środowisko uruchomieniowe .NET Core z aplikacją, więc środowisko wykonawcze nie musi być instalowane na komputerze docelowym. Wartość `true` domyślna to ustawienie, jeśli określono identyfikator środowiska uruchomieniowego. Aby uzyskać więcej informacji, zobacz [.NET Core application publishing](../deploying/index.md) and [Publish .NET Core apps with the .NET Core CLI](../deploying/deploy-with-cli.md).
+  Publikuje środowisko uruchomieniowe .NET Core z aplikacją, więc środowisko wykonawcze nie musi być instalowane na komputerze docelowym. Wartość `true` domyślna to pozycja, w przypadku gdy określono identyfikator środowiska uruchomieniowego, a projekt jest projektem wykonywalnym (a nie projektem biblioteki). Aby uzyskać więcej informacji, zobacz [.NET Core application publishing](../deploying/index.md) and [Publish .NET Core apps with the .NET Core CLI](../deploying/deploy-with-cli.md).
+
+  Jeśli ta opcja jest `true` używana `false`bez określania lub , domyślnie jest `true`. W takim przypadku nie należy umieszczać rozwiązania `--self-contained`lub `true` argumentu projektu natychmiast po , ponieważ lub `false` oczekuje się w tej pozycji.
 
 - **`--no-self-contained`**
 
@@ -182,3 +200,6 @@ Dane `dotnet publish` wyjściowe polecenia są gotowe do wdrożenia w systemie h
 - [Katalog identyfikatorów IDentifier (RID)](../rid-catalog.md)
 - [Praca z macOS Catalina Notarization](../install/macos-notarization-issues.md)
 - [Struktura katalogów opublikowanej aplikacji](/aspnet/core/hosting/directory-structure)
+- [Odwołanie do wiersza polecenia MSBuild](/visualstudio/msbuild/msbuild-command-line-reference)
+- [Profile publikowania w programie Visual Studio (pubxml) dla ASP.NET wdrożenia aplikacji Core](/aspnet/core/host-and-deploy/visual-studio-publish-profiles)
+- [dotnet msbuild](dotnet-msbuild.md)

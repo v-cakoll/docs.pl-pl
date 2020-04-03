@@ -14,12 +14,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 1df75814c45a6f1c245d43e2390b8a6ce692a779
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 542e0a84e4c5cfc3750c33fe29cb40d3643e91e3
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80587809"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80636027"
 ---
 # <a name="dependency-properties-overview"></a>Omówienie właściwości zależności
 
@@ -99,7 +99,7 @@ Właściwość zależności zapewnia funkcjonalność, która rozszerza funkcjon
 
 - [Integracja z projektantem WPF](#wpf-designer-integration)
 
-### <a name="resources"></a>Resources
+### <a name="resources"></a>Zasoby
 Wartość właściwości zależności można ustawić, odwołując się do zasobu. Zasoby są zazwyczaj określone `Resources` jako wartość właściwości elementu głównego strony lub aplikacji (te lokalizacje umożliwiają najwygodniejszy dostęp do zasobu). W poniższym przykładzie <xref:System.Windows.Media.SolidColorBrush> pokazano, jak zdefiniować zasób.
 
 [!code-xaml[PropertiesOvwSupport#ResourcesResource](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page2.xaml#resourcesresource)]
@@ -128,7 +128,7 @@ Właściwości zależności lub <xref:System.Windows.DependencyObject> klasy nie
 ### <a name="styles"></a>Style
 Style i szablony są dwa główne scenariusze motywujące do korzystania z właściwości zależności. Style są szczególnie przydatne do ustawiania [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]właściwości definiujących aplikację . Style są zazwyczaj definiowane jako zasoby w języku XAML. Style współdziałają z systemem właściwości, ponieważ zazwyczaj zawierają "setters" dla określonych właściwości, a także "wyzwalacze", które zmieniają wartość właściwości na podstawie wartości w czasie rzeczywistym dla innej właściwości.
 
-Poniższy przykład tworzy bardzo prosty styl (który <xref:System.Windows.FrameworkElement.Resources%2A> byłby zdefiniowany wewnątrz słownika, nie pokazano), a następnie stosuje ten styl bezpośrednio do <xref:System.Windows.FrameworkElement.Style%2A> właściwości dla <xref:System.Windows.Controls.Button>. Ustawiacz w stylu ustawia <xref:System.Windows.Controls.Control.Background%2A> właściwość dla <xref:System.Windows.Controls.Button> stylu na zielony.
+Poniższy przykład tworzy prosty styl (który <xref:System.Windows.FrameworkElement.Resources%2A> byłby zdefiniowany wewnątrz słownika, nie pokazano), <xref:System.Windows.FrameworkElement.Style%2A> a <xref:System.Windows.Controls.Button>następnie stosuje ten styl bezpośrednio do właściwości dla . Ustawiacz w stylu ustawia <xref:System.Windows.Controls.Control.Background%2A> właściwość dla <xref:System.Windows.Controls.Button> stylu na zielony.
 
 [!code-xaml[PropertiesOvwSupport#SimpleStyleDef](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#simplestyledef)]
 
@@ -146,7 +146,7 @@ Poniższy <xref:System.Windows.Controls.Control.Background%2A> przykład animuje
 Aby uzyskać więcej informacji na temat animowania właściwości, zobacz [Omówienie animacji](../graphics-multimedia/animation-overview.md) i [Omówienie scenochorystur](../graphics-multimedia/storyboards-overview.md).
 
 ### <a name="metadata-overrides"></a>Zastąpienia metadanych
-Można zmienić niektóre zachowania właściwości zależności, zastępując metadane dla tej właściwości, gdy pochodzisz z klasy, która pierwotnie rejestruje właściwość zależności. Zastępowanie metadanych zależy <xref:System.Windows.DependencyProperty> od identyfikatora. Nadrzędne metadane nie wymaga ponownego zaimplementowania właściwości. Zmiana metadanych jest obsługiwana natywnie przez system właściwości; każda klasa potencjalnie przechowuje indywidualne metadane dla wszystkich właściwości, które są dziedziczone z klas podstawowych, na podstawie typu.
+Można zmienić niektóre zachowania właściwości zależności, zastępując metadane dla tej właściwości, gdy pochodzisz z klasy, która pierwotnie rejestruje właściwość zależności. Zastępowanie metadanych zależy <xref:System.Windows.DependencyProperty> od identyfikatora. Nadrzędne metadane nie wymaga ponownego implementacji właściwości. Zmiana metadanych jest obsługiwana natywnie przez system właściwości; każda klasa potencjalnie przechowuje indywidualne metadane dla wszystkich właściwości, które są dziedziczone z klas podstawowych, na podstawie typu.
 
 Poniższy przykład zastępuje metadane właściwości <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>zależności . Zastępowanie tego metadanych właściwości określonej zależności jest częścią wzorca implementacji, który tworzy formanty, które mogą używać domyślnych stylów z motywów.
 
@@ -183,7 +183,7 @@ Zasadniczo dla pierwszego przycisku właściwość jest ustawiona dwa razy, ale 
 [!code-xaml[PropertiesOvwSupport#MiniPrecedence](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#miniprecedence)]  
 
 ### <a name="why-does-dependency-property-precedence-exist"></a>Dlaczego istnieje pierwszeństwo właściwości zależności?
-Zazwyczaj nie chcesz, aby style zawsze były stosowane i zasłaniały nawet lokalnie ustawioną wartość pojedynczego elementu (w przeciwnym razie użycie stylów lub elementów w ogóle byłoby bardzo trudne). W związku z tym wartości, które pochodzą ze stylów działają z niższym precedensem niż wartość ustawiona lokalnie. Aby uzyskać dokładniejszą listę właściwości zależności i skąd może pochodzić wartość efektywna właściwości zależności, zobacz [Pierwszeństwo wartości właściwości zależności.](dependency-property-value-precedence.md)
+Zazwyczaj nie chcesz, aby style były zawsze stosowane i zasłaniały nawet lokalnie ustawioną wartość pojedynczego elementu (w przeciwnym razie trudno byłoby użyć stylów lub elementów w ogóle). W związku z tym wartości, które pochodzą ze stylów działają z niższym precedensem niż wartość ustawiona lokalnie. Aby uzyskać dokładniejszą listę właściwości zależności i skąd może pochodzić wartość efektywna właściwości zależności, zobacz [Pierwszeństwo wartości właściwości zależności.](dependency-property-value-precedence.md)
 
 > [!NOTE]
 > Istnieje wiele właściwości zdefiniowane na WPF elementów, które nie są właściwości zależności. Ogólnie rzecz biorąc właściwości zostały zaimplementowane jako właściwości zależności tylko wtedy, gdy potrzebne do obsługi co najmniej jeden ze scenariuszy włączonych przez system właściwości: powiązanie danych, stylizacja, animacja, domyślna obsługa wartości, dziedziczenie, dołączone właściwości lub unieważnienie.
@@ -194,7 +194,7 @@ Zazwyczaj nie chcesz, aby style zawsze były stosowane i zasłaniały nawet loka
 
 - Deweloperzy składników lub deweloperzy aplikacji mogą chcieć utworzyć własną właściwość zależności, aby włączyć możliwości, takie jak powiązanie danych lub obsługa stylów, lub obsługę unieważnienia i przymusu wartości. Aby uzyskać szczegółowe informacje, zobacz [Właściwości zależności niestandardowej](custom-dependency-properties.md).
 
-- Właściwości zależności należy ogólnie uznać za właściwości publiczne, dostępne lub przynajmniej wykrywalne przez dowolnego obiekt wywołujący, który ma dostęp do wystąpienia. Aby uzyskać więcej informacji, zobacz [Bezpieczeństwo właściwości zależności](dependency-property-security.md).
+- Należy wziąć pod uwagę właściwości zależności jako właściwości publicznych, dostępne lub przynajmniej wykrywalne przez dowolnego obiektu wywołującego, który ma dostęp do wystąpienia. Aby uzyskać więcej informacji, zobacz [Bezpieczeństwo właściwości zależności](dependency-property-security.md).
 
 ## <a name="see-also"></a>Zobacz też
 

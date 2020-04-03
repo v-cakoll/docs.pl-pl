@@ -1,17 +1,17 @@
 ---
 title: Delegaci i wyrażenia lambda
-description: Dowiedz się, jak delegaci definiują typ, który określa podpis określonej metody, który może być wywoływany bezpośrednio lub przekazywany do innej metody i wywoływany.
+description: Dowiedz się, jak delegaci, które definiują typ, który określa podpis określonej metody, mogą być wywoływane bezpośrednio lub przekazywane do innej metody i wywoływane.
 author: richlander
 ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-ms.openlocfilehash: 34bfa4c6007ec771f784e927675f4e24d52e194f
-ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
+ms.openlocfilehash: a9ca935814d1a7f77ded5f371ccd496c3859c523
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80391237"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635930"
 ---
 # <a name="delegates-and-lambdas"></a>Delegaci i wyrażenia lambda
 
@@ -44,10 +44,10 @@ public class Program
 * Wiersz `Reverse rev = ReverseString;` pokazuje, że można przypisać metodę do zmiennej odpowiedniego typu delegata.
 * Wiersz `Console.WriteLine(rev("a string"));` pokazuje, jak używać zmiennej typu delegata do wywoływania pełnomocnika.
 
-Aby usprawnić proces programowania, .NET zawiera zestaw typów delegatów, które programiści mogą ponownie używać i nie trzeba tworzyć nowe typy. Są `Func<>`to `Action<>` `Predicate<>`, i , i mogą być używane w różnych miejscach w interfejsach API platformy .NET bez konieczności definiowania nowych typów delegatów. Oczywiście, istnieją pewne różnice między tymi trzema, jak widać w ich podpisów, które w większości mają do czynienia ze sposobem, w jaki miały być używane:
+Aby usprawnić proces programowania, .NET zawiera zestaw typów delegatów, które programiści mogą ponownie używać i nie trzeba tworzyć nowe typy. Te typy `Action<>` `Predicate<>`są `Func<>`i , i mogą być używane bez konieczności definiowania nowych typów delegatów. Istnieją pewne różnice między trzema typami, które mają do czynienia ze sposobem, w jaki były przeznaczone do użycia:
 
 * `Action<>`jest używany, gdy istnieje potrzeba wykonania akcji przy użyciu argumentów delegata. Metoda, która hermetyzuje nie zwraca wartości.
-* `Func<>`jest używany zwykle, gdy masz transformację pod ręką, to znaczy, że należy przekształcić argumenty delegata w inny wynik. Prognozy są tego najlepszym przykładem. Metoda, która hermetyzuje zwraca określoną wartość.
+* `Func<>`jest używany zwykle, gdy masz transformację pod ręką, to znaczy, że należy przekształcić argumenty delegata w inny wynik. Projekcje są dobrym przykładem. Metoda, która hermetyzuje zwraca określoną wartość.
 * `Predicate<>`jest używany, gdy trzeba ustalić, czy argument spełnia warunek delegata. Może być również zapisywany `Func<T, bool>`jako , co oznacza, że metoda zwraca wartość logiczną.
 
 Możemy teraz wziąć nasz przykład powyżej i `Func<>` przepisać go przy użyciu pełnomocnika zamiast typu niestandardowego. Program będzie nadal działać dokładnie tak samo.
@@ -72,9 +72,9 @@ public class Program
 }
 ```
 
-W tym prostym przykładzie o metody `Main` zdefiniowane poza metodą wydaje się nieco zbędne. To z tego powodu .NET Framework 2.0 wprowadził pojęcie **anonimowych delegatów**. Dzięki ich wsparciu możesz tworzyć delegatów "wbudowanych" bez konieczności określania dodatkowego typu lub metody. Po prostu wbudowana definicja delegata tam, gdzie jej potrzebujesz.
+W tym prostym przykładzie o metody `Main` zdefiniowane poza metodą wydaje się nieco zbędne. .NET Framework 2.0 wprowadził pojęcie *anonimowych delegatów,* które umożliwiają tworzenie delegatów "wbudowanych" bez konieczności określania dodatkowego typu lub metody.
 
-Na przykład przełączymy go i użyjemy naszego anonimowego delegata, aby odfiltrować listę tylko parzystych liczb, a następnie wydrukować je na konsoli.
+W poniższym przykładzie anonimowy delegat filtruje listę tylko do parzystych liczb, a następnie drukuje je na konsoli.
 
 ```csharp
 using System;
@@ -108,9 +108,7 @@ public class Program
 
 Jak widać, treść delegata jest tylko zestaw wyrażeń, jak każdy inny delegata. Ale zamiast oddzielnej definicji, wprowadziliśmy ją _ad hoc_ w <xref:System.Collections.Generic.List%601.FindAll%2A?displayProperty=nameWithType> naszym wezwaniu do metody.
 
-Jednak nawet przy takim podejściu nadal istnieje wiele kodu, który możemy wyrzucić. To jest, gdy **wyrażenia lambda** wchodzą w grę.
-
-Wyrażenia Lambda, lub po prostu "lambdas" w skrócie, zostały wprowadzone najpierw w języku C# 3.0, jako jeden z podstawowych bloków konstrukcyjnych języka zintegrowane zapytanie (LINQ). Są one po prostu bardziej wygodną składnią przy użyciu delegatów. Deklarują podpis i treść metody, ale nie mają formalnej tożsamości, chyba że są przypisane do delegata. W przeciwieństwie do delegatów, mogą być bezpośrednio przypisane jako po lewej stronie rejestracji zdarzeń lub w różnych klauzul linq i metod.
+Jednak nawet przy takim podejściu nadal istnieje wiele kodu, który możemy wyrzucić. To jest, gdy *wyrażenia lambda* wchodzą w grę. Wyrażenia Lambda, lub po prostu "lambdas" w skrócie, zostały wprowadzone w języku C# 3.0 jako jeden z podstawowych bloków konstrukcyjnych języka zintegrowane zapytanie (LINQ). Są one po prostu bardziej wygodną składnią przy użyciu delegatów. Deklarują podpis i treść metody, ale nie mają formalnej tożsamości, chyba że są przypisane do delegata. W przeciwieństwie do delegatów, mogą być bezpośrednio przypisane jako po lewej stronie rejestracji zdarzeń lub w różnych klauzul linq i metod.
 
 Ponieważ wyrażenie lambda jest tylko inny sposób określania delegata, powinniśmy być w stanie przepisać powyższe próbki do użycia wyrażenia lambda zamiast anonimowego delegata.
 
@@ -139,7 +137,7 @@ public class Program
 }
 ```
 
-W poprzednim przykładzie użytym wyrażeniem `i => i % 2 == 0`lambda jest . Ponownie jest to po prostu **bardzo** wygodna składnia do korzystania z delegatów, więc to, co dzieje się w ramach okładek jest podobne do tego, co dzieje się z anonimowym pełnomocnikiem.
+W poprzednim przykładzie użytym wyrażeniem `i => i % 2 == 0`lambda jest . Ponownie jest to tylko wygodna składnia do korzystania z delegatów. To, co dzieje się w ramach okładek, jest podobne do tego, co dzieje się z anonimowym pełnomocnikiem.
 
 Ponownie lambdas są tylko delegatów, co oznacza, że mogą być używane jako program obsługi zdarzeń bez żadnych problemów, jak pokazuje poniższy fragment kodu.
 

@@ -2,15 +2,16 @@
 title: Wybieranie kodera komunikatów
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
-ms.openlocfilehash: a306896af7a73d43956638981908c12d86126a9f
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: d93d7039d034262cd47edd437d5d7d8d63890f02
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345256"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635777"
 ---
-# <a name="choosing-a-message-encoder"></a>Wybieranie kodera komunikatów
-W tym temacie omówiono kryteria wyboru spośród koderów wiadomości, które są zawarte w Programie Windows Communication Foundation (WCF): mechanizm binarny, tekst i mechanizm optymalizacji transmisji wiadomości (MTOM).  
+# <a name="choose-a-message-encoder"></a>Wybieranie kodera wiadomości
+
+W tym artykule omówiono kryteria wyboru wśród koderów wiadomości, które są zawarte w Programie Windows Communication Foundation (WCF): mechanizm binarny, tekst i mechanizm optymalizacji transmisji wiadomości (MTOM).  
   
  W WCF można określić sposób przesyłania danych przez sieć między punktami końcowymi za pomocą *powiązania,* które składa się z sekwencji *elementów wiązania.* Koder wiadomości jest reprezentowany przez element wiązania kodowania wiadomości w stosie wiązania. Powiązanie zawiera opcjonalne elementy wiązania protokołu, takie jak element wiązania zabezpieczeń lub element wiązania niezawodnej obsługi wiadomości, wymagany element wiązania kodowania komunikatów i wymagany element wiązania transportu.  
   
@@ -33,7 +34,7 @@ W tym temacie omówiono kryteria wyboru spośród koderów wiadomości, które s
 |Czynnikiem|Opis|Kodery obsługujące ten czynnik|  
 |------------|-----------------|---------------------------------------|  
 |Obsługiwane zestawy znaków|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>i <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> obsługuje tylko kodowania UTF8 i UTF16 Unicode *(big-endian* i *little-endian).* Jeśli wymagane są inne kodowania, takie jak UTF7 lub ASCII, należy użyć niestandardowego kodera. Aby uzyskać przykładowy koder niestandardowy, zobacz [Koder wiadomości niestandardowych](https://docs.microsoft.com/dotnet/framework/wcf/samples/custom-message-encoder-custom-text-encoder).|Tekst|  
-|Kontroli|Inspekcja to możliwość sprawdzania wiadomości podczas transmisji. Kodowanie tekstu, z lub bez użycia protokołu SOAP, umożliwiają sprawdzanie i analizowanie wiadomości przez wiele aplikacji bez użycia specjalistycznych narzędzi. Należy zauważyć, że użycie zabezpieczeń transferu, na poziomie wiadomości lub transportu, wpływa na możliwość sprawdzania wiadomości. Poufność chroni wiadomość przed badaniem, a integralność chroni wiadomość przed modyfikacją.|Tekst|  
+|Kontroli|Inspekcja to możliwość sprawdzania wiadomości podczas transmisji. Kodowanie tekstu, z lub bez użycia protokołu SOAP, umożliwiają sprawdzanie i analizowanie wiadomości przez wiele aplikacji bez użycia specjalistycznych narzędzi. Użycie zabezpieczeń transferu na poziomie wiadomości lub transportu wpływa na możliwość sprawdzania wiadomości. Poufność chroni wiadomość przed badaniem, a integralność chroni wiadomość przed modyfikacją.|Tekst|  
 |Niezawodność|Niezawodność to odporność kodera na błędy transmisji. Niezawodność można również zapewnić w warstwie wiadomości, transportu lub aplikacji. Wszystkie standardowe kodery WCF zakładają, że inna warstwa zapewnia niezawodność. Koder ma niewielką możliwość odzyskania po błędzie transmisji.|Brak|  
 |Prostota|Prostota reprezentuje łatwość, z jaką można tworzyć kodery i dekodery dla specyfikacji kodowania. Kodowanie tekstu są szczególnie korzystne dla prostoty, a kodowanie tekstu POX ma dodatkową zaletę, że nie wymaga obsługi przetwarzania protokołu SOAP.|Tekst (POX)|  
 |Rozmiar|Kodowanie określa ilość narzutów nałożonych na zawartość. Rozmiar zakodowanych komunikatów jest bezpośrednio związany z maksymalną przepływnością operacji serwisowych. Kodowania binarne są na ogół bardziej kompaktowe niż kodowania tekstu. Gdy rozmiar wiadomości jest na premię, należy również rozważyć kompresji zawartości wiadomości podczas kodowania. Jednak kompresja dodaje koszty przetwarzania zarówno dla nadawcy wiadomości, jak i odbiorcy.|plików binarnych|  

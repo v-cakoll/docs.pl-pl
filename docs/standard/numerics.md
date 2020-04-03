@@ -11,12 +11,12 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-ms.openlocfilehash: 89d3eb709bb22913b9539d6ad384384ee701385f
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 3e9c817006930a36ebdce5c5965d78f1721c7056
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523288"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635152"
 ---
 # <a name="numerics-in-net"></a>Wartości numeryczne na platformie .NET
 
@@ -60,11 +60,11 @@ Program .NET zawiera trzy prymitywne typy zmiennoprzecinkowe, które są wymieni
   
 Oba <xref:System.Single> <xref:System.Double> i typy obsługują wartości specjalne, które reprezentują nie-liczba i nieskończoności. Na przykład <xref:System.Double> typ zawiera następujące <xref:System.Double.NaN?displayProperty=nameWithType>wartości: <xref:System.Double.NegativeInfinity?displayProperty=nameWithType> <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>, , i . Użyj , <xref:System.Double.IsNaN%2A?displayProperty=nameWithType> <xref:System.Double.IsInfinity%2A?displayProperty=nameWithType>, <xref:System.Double.IsPositiveInfinity%2A?displayProperty=nameWithType>i <xref:System.Double.IsNegativeInfinity%2A?displayProperty=nameWithType> metody, aby przetestować dla tych specjalnych wartości.
 
-Każdy typ zmiennoprzecinowy obsługuje zestaw standardowych operatorów arytmetycznych. Klasa <xref:System.Math?displayProperty=nameWithType> zawiera metody dla szerszego zestawu funkcji matematycznych. .NET Core 2.0 i <xref:System.MathF?displayProperty=nameWithType> nowsze zawiera klasę, <xref:System.Single> która udostępnia metody, które akceptują argumenty typu.
+Każdy typ zmiennoprzecinowy obsługuje zestaw standardowych operatorów arytmetycznych. Klasa <xref:System.Math?displayProperty=nameWithType> zawiera metody dla szerszego zestawu funkcji matematycznych. .NET Core 2.0 i <xref:System.MathF?displayProperty=nameWithType> nowsze zawiera klasę, <xref:System.Single> która zawiera metody, które akceptują argumenty typu.
 
 Można również pracować z poszczególnych <xref:System.Double> <xref:System.Single> bitów i <xref:System.BitConverter?displayProperty=nameWithType> wartości przy użyciu klasy. Struktura <xref:System.Decimal?displayProperty=nameWithType> ma swoje własne <xref:System.Decimal.GetBits%2A?displayProperty=nameWithType> <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29?displayProperty=nameWithType>metody i , do pracy z wartością dziesiętną poszczególnych bitów, jak również własny zestaw metod wykonywania niektórych dodatkowych operacji matematycznych.
   
-<xref:System.Double> Typy <xref:System.Single> i typy są przeznaczone do użycia dla wartości, które ze względu na swój charakter są nieprecyzyjne (na przykład odległość między dwiema gwiazdami) oraz dla zastosowań, w których nie jest wymagany wysoki stopień precyzji i mały błąd zaokrąglania. Należy użyć <xref:System.Decimal?displayProperty=nameWithType> typu w przypadkach, w których wymagana jest większa precyzja i błędy zaokrąglania powinny być zminimalizowane.
+<xref:System.Double> Typy <xref:System.Single> i typy są przeznaczone do użycia dla wartości, które ze względu na swój charakter są nieprecyzyjne (na przykład odległość między dwiema gwiazdami) oraz dla zastosowań, w których nie jest wymagany wysoki stopień precyzji i mały błąd zaokrąglania. Użyj <xref:System.Decimal?displayProperty=nameWithType> typu w przypadkach, w których wymagana jest większa precyzja i błędy zaokrąglania powinny być zminimalizowane.
 
 > [!NOTE]
 > Typ <xref:System.Decimal> nie eliminuje potrzeby zaokrąglania. Raczej minimalizuje błędy spowodowane zaokrąglaniem.

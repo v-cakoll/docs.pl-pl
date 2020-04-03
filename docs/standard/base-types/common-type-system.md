@@ -16,12 +16,12 @@ helpviewer_keywords:
 - namespaces [.NET Framework], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-ms.openlocfilehash: ec078ea89befedd26ce205c724193935dd08b82a
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: f079613f790121c000a312132e7135121ca721a6
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523955"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635906"
 ---
 # <a name="common-type-system"></a>System typów wspólnych
 
@@ -78,7 +78,7 @@ System typu typ typ definiuje, jak typy są deklarowane, używane i zarządzane 
   
 ### <a name="structures"></a>Struktury
 
- Struktura jest typem wartości, który <xref:System.ValueType?displayProperty=nameWithType>wywodzi się niejawnie z , który z kolei pochodzi od <xref:System.Object?displayProperty=nameWithType>. Struktura jest bardzo przydatna do reprezentowania wartości, których wymagania dotyczące pamięci są małe, oraz do przekazywania wartości jako parametrów według wartości do metod, które mają silnie wpisane parametry. W .NET wszystkie pierwotne typy <xref:System.Char>danych <xref:System.DateTime> <xref:System.Decimal>( <xref:System.Double><xref:System.Boolean> <xref:System.Byte>, <xref:System.Int32> <xref:System.Int64>, <xref:System.SByte> <xref:System.Single>, <xref:System.UInt16> <xref:System.UInt32>, <xref:System.UInt64>, , <xref:System.Int16>, , , , , , , , , i ) są definiowane jako struktury.  
+ Struktura jest typem wartości, który <xref:System.ValueType?displayProperty=nameWithType>wywodzi się niejawnie z , który z kolei pochodzi od <xref:System.Object?displayProperty=nameWithType>. Struktura jest przydatna do reprezentowania wartości, których wymagania dotyczące pamięci są małe, oraz do przekazywania wartości jako parametrów według wartości do metod, które mają silnie wpisane parametry. W .NET wszystkie pierwotne typy <xref:System.Char>danych <xref:System.DateTime> <xref:System.Decimal>( <xref:System.Double><xref:System.Boolean> <xref:System.Byte>, <xref:System.Int32> <xref:System.Int64>, <xref:System.SByte> <xref:System.Single>, <xref:System.UInt16> <xref:System.UInt32>, <xref:System.UInt64>, , <xref:System.Int16>, , , , , , , , , i ) są definiowane jako struktury.  
   
  Podobnie jak klasy, struktury definiują zarówno dane (pola struktury), jak i operacje, które mogą być wykonywane na tych danych (metody struktury). Oznacza to, że można wywołać metody na strukturach, w tym wirtualne metody zdefiniowane na <xref:System.Object?displayProperty=nameWithType> i <xref:System.ValueType?displayProperty=nameWithType> klasy i wszelkie metody zdefiniowane na sam typ wartości. Innymi słowy struktury mogą mieć pola, właściwości i zdarzenia, a także metody statyczne i niestatyczne. Można tworzyć wystąpienia struktur, przekazywać je jako parametry, przechowywać je jako zmienne lokalne lub przechowywać je w polu innego typu wartości lub typu odwołania. Struktury można również implementować interfejsy.  
   

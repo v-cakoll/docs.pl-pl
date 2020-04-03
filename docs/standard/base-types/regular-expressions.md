@@ -20,12 +20,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions
 - strings [.NET Framework], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
-ms.openlocfilehash: 99a70fa1b56a45087ee380d063c66326976f5b41
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 819310891192833f0c71d0104fceec11b1b25375
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523794"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635722"
 ---
 # <a name="net-regular-expressions"></a>Wyrażenia regularne platformy .NET
 
@@ -99,7 +99,7 @@ Klasa <xref:System.String> zawiera szereg metod wyszukiwania ciągów i zastępo
   
  Metoda <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> jest wywoływana z opcjami wyrażenia regularnego ustawionymi na <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>. W związku z tym operacja dopasowania jest bez uwzględniania wielkości liter, a przykład identyfikuje podciąg "To to" jako powielania.  
   
- Należy zauważyć, że ciąg wejściowy zawiera podciąg "to? To". Jednakże ze względu na interpunkcyjny znak interpunkcyjny nie jest on określany jako powielanie.  
+ Ciąg wejściowy zawiera podciąg "to? To". Jednakże ze względu na interpunkcyjny znak interpunkcyjny nie jest on określany jako powielanie.  
   
 ### <a name="example-3-dynamically-build-a-culture-sensitive-regular-expression"></a>Przykład 3: Dynamicznie budujemy wyrażenie regularne uwzględniające kulturę  
 
@@ -134,7 +134,7 @@ Klasa <xref:System.String> zawiera szereg metod wyszukiwania ciągów i zastępo
 |[Szczegóły zachowania dotyczącego wyrażeń regularnych](details-of-regular-expression-behavior.md)|Zawiera informacje o możliwościach i zachowaniu wyrażeń regularnych platformy .NET.|
 |[Używanie wyrażeń regularnych w programie Visual Studio](/visualstudio/ide/using-regular-expressions-in-visual-studio)||
   
-## <a name="reference"></a>Tematy pomocy  
+## <a name="reference"></a>Dokumentacja  
 
 - <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  
 - <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>  

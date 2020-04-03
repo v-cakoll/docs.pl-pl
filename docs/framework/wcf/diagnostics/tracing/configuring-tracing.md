@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: aca3b5c54bff9c2b4c5380c04dd0da162215b088
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: c5079237ff4c97dd9ef164061dc5e7499c1d6e38
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523313"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80636001"
 ---
 # <a name="configuring-tracing"></a>Konfigurowanie śledzenia
 W tym temacie opisano, jak włączyć śledzenie, skonfigurować źródła śledzenia do emitowania śladów i ustawić poziomy śledzenia, ustawić śledzenie aktywności i propagację do obsługi korelacji śledzenia end-to-end i ustawić detektory śledzenia, aby uzyskać dostęp do śledzenia.  

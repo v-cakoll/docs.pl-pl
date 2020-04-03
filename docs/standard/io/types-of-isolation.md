@@ -18,12 +18,12 @@ helpviewer_keywords:
 - isolated storage, types
 - user authentication, isolated storage
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
-ms.openlocfilehash: d85625b99603c0bd81346cf2076b8efe0e1bba42
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 9bbd2c3cdca9b2eaee268738bf99189b0be78eba
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523888"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635731"
 ---
 # <a name="types-of-isolation"></a>Typy izolacji
 Dostęp do izolowanego magazynu jest zawsze ograniczony do użytkownika, który go utworzył. Aby zaimplementować ten typ izolacji, środowisko uruchomieniowe języka wspólnego używa tego samego pojęcia tożsamości użytkownika, które rozpoznaje system operacyjny, który jest tożsamością skojarzoną z procesem, w którym kod jest uruchomiony po otwarciu magazynu. Ta tożsamość jest uwierzytelnioną tożsamością użytkownika, ale personifikacja może spowodować dynamiczną zmianę tożsamości bieżącego użytkownika.  
@@ -48,7 +48,7 @@ Dostęp do izolowanego magazynu jest zawsze ograniczony do użytkownika, który 
   
  ![Diagram, który pokazuje izolację według użytkownika i zestawu.](./media/types-of-isolation/isolated-storage-types.gif)  
   
- Należy zauważyć, że z wyjątkiem magazynów mobilnych izolowane magazynu jest zawsze niejawnie izolowane przez komputer, ponieważ używa obiektów magazynu, które są lokalne dla danego komputera.  
+ Z wyjątkiem magazynów mobilnych izolowane magazynu jest zawsze niejawnie izolowane przez komputer, ponieważ używa obiektów magazynu, które są lokalne dla danego komputera.  
   
 > [!IMPORTANT]
 > Magazyn izolowany nie jest dostępny dla aplikacji ze Sklepu Windows 8.x. Zamiast tego należy użyć klas `Windows.Storage` danych aplikacji w obszarach nazw zawartych w interfejsie API środowiska wykonawczego systemu Windows do przechowywania danych i plików lokalnych. Aby uzyskać więcej informacji, zobacz [Dane aplikacji](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) w Centrum deweloperów systemu Windows.  

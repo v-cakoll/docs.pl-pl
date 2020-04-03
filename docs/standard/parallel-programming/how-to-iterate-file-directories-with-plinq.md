@@ -5,28 +5,31 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - PLINQ queries, how to iterate directories
 ms.assetid: 354e8ce3-35c4-431c-99ca-7661d1f3901b
-ms.openlocfilehash: de33561e2ef8e8fe62e8179272abe8adfffecd6f
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 208076cb9b7b56ab13458fa0dd4d92f2023106b9
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80587762"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635843"
 ---
 # <a name="how-to-iterate-file-directories-with-plinq"></a>Porady: Iteracja po katalogach plików z wykorzystaniem technologii PLINQ
-W tym przykładzie przedstawiono dwa proste sposoby równoległości operacji w katalogach plików. Pierwsza kwerenda używa <xref:System.IO.Directory.GetFiles%2A> tej metody do wypełniania tablicy nazw plików w katalogu i wszystkich podkatalogach. Ta metoda nie zwraca, dopóki cała tablica jest wypełniona i dlatego może wprowadzić opóźnienie na początku operacji. Jednak po wypełnieniu tablicy PLINQ może przetwarzać ją równolegle bardzo szybko.  
+
+W tym artykule przedstawiono dwa sposoby równoległości operacji w katalogach plików. Pierwsza kwerenda używa <xref:System.IO.Directory.GetFiles%2A> tej metody do wypełniania tablicy nazw plików w katalogu i wszystkich podkatalogach. Ta metoda może wprowadzić opóźnienie na początku operacji, ponieważ nie zwraca, dopóki cała tablica jest wypełniona. Jednak po wypełnieniu tablicy PLINQ może szybko przetwarzać ją równolegle.  
   
- Druga kwerenda używa <xref:System.IO.Directory.EnumerateDirectories%2A> statyczne <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> i metody, które zaczynają zwracać wyniki natychmiast. Takie podejście może być szybsze, gdy iteracji przez drzewa dużych katalogów, chociaż czas przetwarzania w porównaniu do pierwszego przykładu może zależeć od wielu czynników.  
+Druga kwerenda używa <xref:System.IO.Directory.EnumerateDirectories%2A> statyczne <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> i metody, które zaczynają zwracać wyniki natychmiast. Takie podejście może być szybsze, gdy iteracji przez dużych drzew katalogów, ale czas przetwarzania w porównaniu do pierwszego przykładu zależy od wielu czynników.  
   
-> [!WARNING]
+> [!NOTE]
 > Te przykłady są przeznaczone do wykazania użycia i nie może działać szybciej niż równoważne sekwencyjne LINQ do kwerendy obiektów. Aby uzyskać więcej informacji na temat przyspieszenia, zobacz [Opis przyspieszania w PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
   
-## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak iterować za pomocą katalogów plików w prostych scenariuszach, gdy masz dostęp do wszystkich katalogów w drzewie, rozmiary plików nie są bardzo duże, a czasy dostępu nie są znaczące. Takie podejście obejmuje okres opóźnienia na początku, podczas gdy tablica nazw plików jest konstruowany.  
+## <a name="getfiles-example"></a>Przykład GetFiles
+
+ W tym przykładzie pokazano, jak iterować za pomocą katalogów plików w prostych scenariuszach, gdy masz dostęp do wszystkich katalogów w drzewie, rozmiary plików nie są duże, a czasy dostępu nie są znaczące. Takie podejście obejmuje okres opóźnienia na początku, podczas gdy tablica nazw plików jest konstruowany.  
   
  [!code-csharp[PLINQ#33](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqfileiteration.cs#33)]  
   
-## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak iterować za pomocą katalogów plików w prostych scenariuszach, gdy masz dostęp do wszystkich katalogów w drzewie, rozmiary plików nie są bardzo duże, a czasy dostępu nie są znaczące. Takie podejście rozpoczyna tworzenie wyników szybciej niż w poprzednim przykładzie.  
+## <a name="enumeratefiles-example"></a>Przykład pliku wyliczawy
+
+ W tym przykładzie pokazano, jak iterować za pomocą katalogów plików w prostych scenariuszach, gdy masz dostęp do wszystkich katalogów w drzewie, rozmiary plików nie są duże, a czasy dostępu nie są znaczące. Takie podejście rozpoczyna tworzenie wyników szybciej niż w poprzednim przykładzie.  
   
  [!code-csharp[PLINQ#34](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqfileiteration.cs#34)]  
   

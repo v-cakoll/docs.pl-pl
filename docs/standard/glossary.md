@@ -3,12 +3,12 @@ title: Słownik platformy .NET
 description: Poznaj znaczenie wybranych terminów używanych w dokumentacji platformy .NET.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: ed4dceed1a3f39c5c4ce7a278efc37bb38ed0d94
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: d8f16579ea4dcbc9260aac83e16d3fbd30db519c
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80344204"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635583"
 ---
 # <a name="net-glossary"></a>Słownik platformy .NET
 
@@ -155,7 +155,7 @@ Aby dowiedzieć się więcej o mono, zobacz [dokumentację mono](https://www.mon
 
 Termin parasolowy dla [platformy .NET Standard](#net-standard) i wszystkich implementacji i obciążeń [platformy .NET.](#implementation-of-net) Zawsze w pełni skapitalizowane, nigdy ".Net".
 
-Zobacz [przewodnik po sieci .NET](index.md)
+Zobacz [przewodnik po sieci .NET](index.yml)
 
 ## <a name="net-core"></a>.NET Core
 
@@ -273,7 +273,7 @@ Implementacja platformy .NET, która służy do tworzenia nowoczesnych aplikacji
 
 ## <a name="see-also"></a>Zobacz też
 
-- [Przewodnik po sieci .NET](index.md)
+- [Przewodnik po sieci .NET](index.yml)
 - [Przewodnik po platformach .NET Framework](../framework/index.yml)
 - [.NET Core](../core/index.yml)
 - [ASP.NET Przegląd](/aspnet/index#pivot=aspnet)

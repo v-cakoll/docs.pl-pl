@@ -9,12 +9,12 @@ helpviewer_keywords:
 - regular expressions, behavior
 - .NET Framework regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-ms.openlocfilehash: 288bf4256670d34c600e23618b62ad81866daadf
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 0273d16028315452e35f83086dbc134d6fcb66c6
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523847"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635987"
 ---
 # <a name="details-of-regular-expression-behavior"></a>Szczegóły zachowania wyrażenia regularnego
 
@@ -71,7 +71,7 @@ Aparat wyrażeń regularnych .NET Framework jest backtracking matcher wyrażenia
 
      Aby uzyskać więcej informacji na temat pozytywnych potwierdzeń wyczekiwania, zobacz [Grupowanie konstrukcji](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
 
-- Negatywne wysuw: `(?!` *subexpression*`)`. Ta funkcja dodaje możliwość dopasowania wyrażenia tylko wtedy, gdy wyrażenie podrzędne nie powiedzie się. Jest to szczególnie istotne dla przycinania wyszukiwania, ponieważ często łatwiej jest zapewnić wyrażenie dla sprawy, która powinna zostać wyeliminowana niż wyrażenie dla przypadków, które muszą zostać uwzględnione. Na przykład trudno jest napisać wyrażenie dla słów, które nie zaczynają się od "non". W poniższym przykładzie użyto negatywnego wysuwu, aby je wykluczyć.
+- Negatywne wysuw: `(?!` *subexpression*`)`. Ta funkcja dodaje możliwość dopasowania wyrażenia tylko wtedy, gdy wyrażenie podrzędne nie powiedzie się. Jest to zaawansowane do przycinania wyszukiwania, ponieważ często jest prostsze, aby zapewnić wyrażenie dla sprawy, które powinny zostać wyeliminowane niż wyrażenie dla przypadków, które muszą być uwzględnione. Na przykład trudno jest napisać wyrażenie dla słów, które nie zaczynają się od "non". W poniższym przykładzie użyto negatywnego wysuwu, aby je wykluczyć.
 
      [!code-csharp[Conceptual.RegularExpressions.Design#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookahead2.cs#3)]
      [!code-vb[Conceptual.RegularExpressions.Design#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookahead2.vb#3)]
@@ -153,6 +153,6 @@ Aparat wyrażeń regularnych .NET Framework jest backtracking matcher wyrażenia
 |[Model obiektów wyrażeń regularnych](../../../docs/standard/base-types/the-regular-expression-object-model.md)|Zawiera informacje i przykłady kodu ilustrujące sposób używania klas wyrażeń regularnych.|
 |[Język wyrażeń regularnych — podręczny wykaz](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|Zawiera informacje o zestawie znaków, operatorów i konstrukcji, których można użyć do definiowania wyrażeń regularnych.|
 
-## <a name="reference"></a>Tematy pomocy
+## <a name="reference"></a>Dokumentacja
 
 - <xref:System.Text.RegularExpressions?displayProperty=nameWithType>

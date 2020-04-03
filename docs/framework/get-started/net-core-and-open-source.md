@@ -2,12 +2,12 @@
 title: Oprogramowanie .NET Core i Open-Source
 ms.date: 03/30/2017
 ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
-ms.openlocfilehash: a8f44eedddc4424b39f7aedceb4bb8f02c6feb42
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: bed5bb6aad5f3e651f7c4c0651a2365f17eb8a0b
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345029"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635294"
 ---
 # <a name="net-core-and-open-source"></a>Platforma .NET Core i oprogramowanie open source
 
@@ -25,9 +25,9 @@ Główne cechy .NET Core to:
   
 - **Open source:** .NET Core jest jednym z wielu projektów pod kierownictwem [.NET Foundation](https://www.dotnetfoundation.org/) i jest dostępny na [GitHub](https://github.com/).  Posiadanie .NET Core jako projektu open source promuje bardziej przejrzysty proces rozwoju i promuje aktywną i zaangażowaną społeczność.  
   
-- **Elastyczne wdrażanie:** istnieją dwa główne sposoby wdrażania aplikacji: wdrożenie zależne od struktury lub samodzielne wdrożenie. W ramach wdrożenia zależnego od struktury są zainstalowane tylko zależności aplikacji i innych firm, a aplikacja zależy od wersji systemu .NET Core, która ma być obecna.  W przypadku samodzielnego wdrażania wersja .NET Core używana do tworzenia aplikacji jest również wdrażana wraz z zależnościami aplikacji i innych firm i może działać obok innych wersji.    Aby uzyskać więcej informacji, zobacz [.NET Core Application Deployment](../../core/deploying/index.md).
+- **Elastyczne wdrażanie:** istnieją dwa główne sposoby wdrażania aplikacji: wdrożenie zależne od struktury lub samodzielne wdrożenie. W ramach wdrożenia zależnego od struktury są zainstalowane tylko zależności aplikacji i innych firm, a aplikacja zależy od wersji systemu .NET Core, która ma być obecna. W przypadku samodzielnego wdrażania wersja .NET Core używana do tworzenia aplikacji jest również wdrażana wraz z zależnościami aplikacji i innych firm i może działać obok innych wersji. Aby uzyskać więcej informacji, zobacz [.NET Core Application Deployment](../../core/deploying/index.md).
 
-- **Modułowy:** .NET Core jest modułowy, ponieważ jest wydany przez NuGet w mniejszych pakietach montażowych. Zamiast jednego dużego zestawu, który zawiera większość podstawowych funkcji, .NET Core jest dostępny jako mniejsze pakiety zorientowane na funkcje. Dzięki temu bardziej elastyczny model programowania dla nas i pozwala zoptymalizować aplikację, aby uwzględnić tylko pakiety NuGet, których potrzebujesz. Korzyści wynikające z mniejszej powierzchni aplikacji obejmują ściślejsze zabezpieczenia, zmniejszoną obsługę, lepszą wydajność i niższe koszty w modelu płatności za to, co używasz.  
+- **Modułowy:** .NET Core jest modułowy, ponieważ jest wydany przez NuGet w mniejszych pakietach montażowych. Zamiast jednego dużego zestawu, który zawiera większość podstawowych funkcji, .NET Core jest dostępny jako mniejsze, zorientowane na funkcje pakiety. Ta modułowość umożliwia bardziej elastyczny model programowania dla nas i pozwala zoptymalizować aplikację, aby uwzględnić tylko pakiety NuGet, których potrzebujesz. Korzyści wynikające z mniejszej powierzchni aplikacji obejmują ściślejsze zabezpieczenia, zmniejszoną obsługę, lepszą wydajność i niższe koszty w modelu płatności za to, co używasz.  
   
 ## <a name="the-net-core-platform"></a>Platforma .NET Core
   

@@ -3,12 +3,12 @@ title: Witamy w .NET
 description: Wprowadzenie do rodziny technologii .NET.
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: f5673f91545b98fb706d8f1cc03ef7746f1b19b8
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: ecdbdf13aa64de0f07b09eb73953e64d66755bb0
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345306"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635960"
 ---
 # <a name="welcome-to-net"></a>Witamy w .NET
 
@@ -42,7 +42,7 @@ Aby uzyskać informacje na temat najnowszych funkcji dodanych do implementacji p
 
 Ta dokumentacja obejmuje szerokość platformy .NET na różnych platformach i językach. Możesz rozpocząć korzystanie z platformy .NET i jej języków w dowolnej z następujących sekcji:
 
-- [Przewodnik po sieci .NET](standard/index.md)
+- [Przewodnik po sieci .NET](standard/index.yml)
 - [Przewodnik po rdzeniu .NET](core/index.yml)
 - [Przewodnik po platformach .NET Framework](framework/index.yml)
 - [C# Przewodnik](csharp/index.yml)

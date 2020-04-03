@@ -1,7 +1,7 @@
 ---
 title: Operatory i wyrażenia dostępu do elementów członkowskich — odwołanie do języka C#
 description: Dowiedz się więcej o operatorach języka C#, których można użyć do uzyskania dostępu do elementów członkowskich typu.
-ms.date: 09/18/2019
+ms.date: 03/31/2020
 author: pkulikov
 f1_keywords:
 - ._CSharpKeyword
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: da2ca4517bd007678d74ae9b76e10cad4c2696b4
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: a132e527deadcffb4826c1965987fc09da470a09
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79546643"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635303"
 ---
 # <a name="member-access-operators-and-expressions-c-reference"></a>Operatory i wyrażenia dostępu do elementów członkowskich (odwołanie do języka C#)
 
@@ -130,6 +130,12 @@ Poniższy przykład pokazuje użycie `?.` i `?[]` operatorów:
 
 W poprzednim przykładzie użyto również [operatora `??` scalania null,](null-coalescing-operator.md) aby określić alternatywne wyrażenie do oceny `null`w przypadku, gdy wynikiem operacji warunkowej zerowej jest .
 
+Jeśli `a.x` `a[x]` lub ma typ `T`wartości nienastępnej wartości `a?.x` null lub `a?[x]` ma odpowiedni typ `T?`wartości [nullable](../builtin-types/nullable-value-types.md) . Jeśli potrzebne jest wyrażenie `T`typu, zastosuj operatora `??` scalania null do wyrażenia warunkowego null, jak pokazano w poniższym przykładzie:
+
+[!code-csharp-interactive[null-conditional with null-coalescing](snippets/MemberAccessOperators.cs#NullConditionalWithNullCoalescing)]
+
+W poprzednim `??` przykładzie, jeśli nie używasz `numbers?.Length < 2` operatora, `false` ocenia, kiedy `numbers` jest `null`.
+
 Operator `?.` dostępu warunkowego null jest również znany jako operator Elvis.
 
 ### <a name="thread-safe-delegate-invocation"></a>Wywołanie delegata bezpieczne dla wątków
@@ -214,4 +220,4 @@ Aby uzyskać więcej informacji na temat indeksów i zakresów, zobacz [notatkę
 - [Dokumentacja języka C#](../index.md)
 - [Operatory języka C#](index.md)
 - [?? (operator zrzekania się wartości null)](null-coalescing-operator.md)
-- [:: operator](namespace-alias-qualifier.md)
+- [:: — Operator](namespace-alias-qualifier.md)

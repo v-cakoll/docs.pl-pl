@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Regasm.exe
 - registering assemblies
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
-ms.openlocfilehash: 0a1658e57f4a236e4bdd29c3ca224275c25ea727
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 5eeed43f3d60bd5e443226a16963557546d81e7c
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345007"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635406"
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (Narzędzie rejestracji zestawów)
 
@@ -36,7 +36,7 @@ regasm assemblyFile [options]
 
 |Opcja|Opis|
 |------------|-----------------|
-|**/codebase**|Tworzy wpis Codebase w rejestrze. Wpis Codebase określa ścieżkę pliku dla zestawu, który nie jest zainstalowany w globalnej pamięci podręcznej zestawów. Nie należy określać tej opcji, jeśli później instalowany będzie zestaw, który jest rejestrowany w globalnej pamięci podręcznej zestawów. Argument *assemblyFile,* który określisz za pomocą opcji **/codebase,** musi być [zestawem o silnej nazwie.](../../standard/assembly/strong-named.md)|
+|**/codebase**|Tworzy wpis Codebase w rejestrze. Wpis Codebase określa ścieżkę pliku dla zestawu, który nie jest zainstalowany w globalnej pamięci podręcznej zestawów. Nie należy określać tej opcji, jeśli następnie zainstalujesz zestaw, który rejestrujesz się w globalnej pamięci podręcznej zestawów. Argument *assemblyFile,* który określisz za pomocą opcji **/codebase,** musi być [zestawem o silnej nazwie.](../../standard/assembly/strong-named.md)|
 |**/zarejestrowany**|Określa, że narzędzie będzie odnosić się tylko do bibliotek typów, które zostały już zarejestrowane.|
 |**/asmpath:katalog**|Określa katalog zawierający odwołania do zestawów. Musi być używany z opcją **/regfile.**|
 |**/nologo**|Pomija wyświetlanie transparentu startowego firmy Microsoft.|
@@ -52,11 +52,11 @@ regasm assemblyFile [options]
 
 ## <a name="remarks"></a>Uwagi
 
-Za pomocą opcji **/regfile** można wygenerować plik reg zawierający wpisy rejestru zamiast wszudowywszuchek do rejestru. Można zaktualizować rejestr na komputerze przez zaimportowanie pliku reg za pomocą narzędzia Edytora rejestru (Regedit.exe). Należy zauważyć, że plik reg nie zawiera żadnych aktualizacji rejestru, które mogą być wykonane przez funkcje rejestru zdefiniowane przez użytkownika.  Należy zauważyć, że opcja **/regfile** emituje tylko wpisy rejestru dla klas zarządzanych.  Ta opcja nie emituje `TypeLibID`wpisów dla s lub `InterfaceID`s.
+Za pomocą opcji **/regfile** można wygenerować plik reg zawierający wpisy rejestru zamiast wszudowywszuchek do rejestru. Można zaktualizować rejestr na komputerze przez zaimportowanie pliku reg za pomocą narzędzia Edytora rejestru (Regedit.exe). Plik reg nie zawiera żadnych aktualizacji rejestru, które mogą być wykonane przez funkcje rejestru zdefiniowane przez użytkownika. Opcja **/regfile** emituje tylko wpisy rejestru dla klas zarządzanych. Ta opcja nie emituje `TypeLibID`wpisów dla s lub `InterfaceID`s.
 
-Po określeniu opcji **/tlb** program Regasm.exe generuje i rejestruje bibliotekę typów opisującą typy znalezione w zestawie. Regasm.exe umieszcza wygenerowane biblioteki typów w bieżącym katalogu roboczym lub katalogu określonym dla pliku wyjściowego. Generowanie biblioteki typów dla zestawu, który odwołuje się do innych zestawów może spowodować, że zostanie wygenerowanych kilka bibliotek typów na raz. Biblioteka typów służy do dostarczania informacji o typie do narzędzi programistycznych, takich jak Visual Studio. Nie należy używać opcji **/tlb,** jeśli zarejestrowany zestaw został wyprodukowany przez importera biblioteki typów ([Tlbimp.exe](tlbimp-exe-type-library-importer.md)). Nie można wyeksportować biblioteki typów z zestawu, który został zaimportowany z biblioteki typów. Użycie opcji **/tlb** ma taki sam efekt jak przy użyciu programu Type Library Exporter ([Tlbexp.exe](tlbexp-exe-type-library-exporter.md)) i Regasm.exe, z wyjątkiem tego, że program Tlbexp.exe nie rejestruje biblioteki typów, którą tworzy.  Jeśli używasz **opcji /tlb** do zarejestrowania biblioteki typów, możesz użyć opcji **/tlb** z opcją **/wyrejestrować,** aby wyrejestrować bibliotekę typów. Użycie obu tych opcji razem wyrejestruje bibliotekę typów i wpisy interfejsu, co może znacznie oczyścić rejestr.
+Po określeniu opcji **/tlb** program Regasm.exe generuje i rejestruje bibliotekę typów opisującą typy znalezione w zestawie. Regasm.exe umieszcza wygenerowane biblioteki typów w bieżącym katalogu roboczym lub katalogu określonym dla pliku wyjściowego. Generowanie biblioteki typów dla zestawu, który odwołuje się do innych zestawów może spowodować, że zostanie wygenerowanych kilka bibliotek typów na raz. Biblioteka typów służy do dostarczania informacji o typie do narzędzi programistycznych, takich jak Visual Studio. Nie używaj opcji **/tlb,** jeśli zarejestrowany zestaw został wyprodukowany przez importera biblioteki typów ([Tlbimp.exe](tlbimp-exe-type-library-importer.md)). Nie można wyeksportować biblioteki typów z zestawu, który został zaimportowany z biblioteki typów. Użycie opcji **/tlb** ma taki sam efekt jak przy użyciu programu Type Library Exporter ([Tlbexp.exe](tlbexp-exe-type-library-exporter.md)) i Regasm.exe, z wyjątkiem tego, że program Tlbexp.exe nie rejestruje biblioteki typów, którą tworzy.  Jeśli używasz **opcji /tlb** do zarejestrowania biblioteki typów, możesz użyć opcji **/tlb** z opcją **/wyrejestrować,** aby wyrejestrować bibliotekę typów. Użycie obu tych opcji razem wyrejestruje bibliotekę typów i wpisy interfejsu, co może znacznie oczyścić rejestr.
 
-Po zarejestrowaniu zestawu do użycia przez model COM, Regasm.exe dodaje wpisy do rejestru komputera lokalnego. Dokładniej, tworzy zależne od wersji klucze rejestru, które umożliwiają równoległe uruchomienie na komputerze wielu wersji tego samego zestawu. Gdy zestaw jest rejestrowany po raz pierwszy, tworzony jest jeden klucz najwyższego poziomu dla zestawu i unikatowy podklucz dla określonej wersji. Za każdym razem, gdy rejestrowana jest nowa wersja zestawu, Regasm.exe tworzy podklucz dla nowej wersji.
+Po zarejestrowaniu zestawu do użycia przez model COM, Regasm.exe dodaje wpisy do rejestru komputera lokalnego. Dokładniej, tworzy zależne od wersji klucze rejestru, które umożliwiają równoległe uruchomienie na komputerze wielu wersji tego samego zestawu. Przy pierwszym zarejestrowaniu zestawu dla zestawu tworzony jest jeden klucz najwyższego poziomu, a dla określonej wersji tworzony jest unikatowy podklucz. Za każdym razem, gdy rejestrowana jest nowa wersja zestawu, Regasm.exe tworzy podklucz dla nowej wersji.
 
 Na przykład rozważmy scenariusz, w którym rejestrujemy składnik zarządzany myComp.dll w wersji 1.0.0.0 do użycia przez model COM. Później można zarejestrować myComp.dll w wersji 2.0.0.0. Należy określić, że wszystkie aplikacje klienckie modelu COM na komputerze używają myComp.dll w wersji 2.0.0.0 i użytkownik decyduje się wyrejestrować myComponent.dll w wersji 1.0.0.0. Schemat rejestru umożliwia wyrejestrowanie myComp.dll w wersji 1.0.0.0, ponieważ jest usuwany tylko podklucz wersji 1.0.0.0.
 

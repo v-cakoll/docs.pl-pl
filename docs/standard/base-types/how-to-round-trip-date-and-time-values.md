@@ -12,16 +12,16 @@ helpviewer_keywords:
 - time [.NET Framework], round-trip values
 - formatting strings [.NET Framework], round-trip values
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
-ms.openlocfilehash: 4fc38b6b852f8a7b8f268fd9e8624bdf350744c8
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 3aa615dc7d7d1d49dce4897f8508b5210b364fc0
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523817"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635137"
 ---
 # <a name="how-to-round-trip-date-and-time-values"></a>Instrukcje: Obustronne wartości daty i godziny
 
-W wielu aplikacjach wartość daty i godziny jest przeznaczona do jednoznacznego identyfikowania pojedynczego punktu w czasie. W tym temacie pokazano, <xref:System.DateTime> jak zapisać <xref:System.DateTimeOffset> i przywrócić wartość, wartość oraz wartość daty i godziny z informacjami o strefie czasowej, tak aby przywrócona wartość określała ten sam czas co zapisana wartość.
+W wielu aplikacjach wartość daty i godziny jest przeznaczona do jednoznacznego identyfikowania pojedynczego punktu w czasie. W tym artykule pokazano, <xref:System.DateTime> jak <xref:System.DateTimeOffset> zapisać i przywrócić wartość, wartość oraz wartość daty i godziny z informacjami o strefie czasowej, tak aby przywrócona wartość określała ten sam czas co zapisana wartość.
 
 ## <a name="round-trip-a-datetime-value"></a>W obie strony wartość DateTime
 
@@ -38,7 +38,7 @@ Poniższy przykład ilustruje sposób <xref:System.DateTime> w obie strony warto
 [!code-csharp[Formatting.HowTo.RoundTrip#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/cs/RoundTrip.cs#1)]
 [!code-vb[Formatting.HowTo.RoundTrip#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/vb/RoundTrip.vb#1)]
 
-Podczas zaokrąglania <xref:System.DateTime> wartości ta technika z powodzeniem zachowuje czas dla wszystkich czasów lokalnych i uniwersalnych. Jeśli na przykład <xref:System.DateTime> wartość lokalna jest zapisywana w systemie w standardowej strefie czasowej stanów Pacyfiku stanów Zjednoczonych i przywracana w systemie w centralnej standardowej strefie czasowej STANÓW Zjednoczonych, przywrócona data i godzina będą dwie godziny później niż pierwotny czas, co odzwierciedla różnicę czasu między dwiema strefami czasowymi. Jednak ta technika nie musi być dokładna dla nieokreślonych czasów. Wszystkie <xref:System.DateTime> wartości, <xref:System.DateTime.Kind%2A> <xref:System.DateTimeKind.Unspecified> których właściwość jest traktowana tak, jakby były one czas lokalny. Jeśli tak nie jest, <xref:System.DateTime> nie będzie pomyślnie zidentyfikować prawidłowy punkt w czasie. Obejście tego ograniczenia polega na ścisłym połączeniu wartości daty i godziny ze strefą czasową dla operacji zapisywania i przywracania.
+Podczas zaokrąglania <xref:System.DateTime> wartości ta technika z powodzeniem zachowuje czas dla wszystkich czasów lokalnych i uniwersalnych. Jeśli na przykład <xref:System.DateTime> wartość lokalna jest zapisywana w systemie w standardowej strefie czasowej stanów Pacyfiku stanów Zjednoczonych i przywracana w systemie w centralnej standardowej strefie czasowej STANÓW Zjednoczonych, przywrócona data i godzina będą dwie godziny później niż pierwotny czas, co odzwierciedla różnicę czasu między dwiema strefami czasowymi. Jednak ta technika nie musi być dokładna dla nieokreślonych czasów. Wszystkie <xref:System.DateTime> wartości, <xref:System.DateTime.Kind%2A> <xref:System.DateTimeKind.Unspecified> których właściwość jest traktowana tak, jakby były one czas lokalny. Jeśli nie jest to czas <xref:System.DateTime> lokalny, nie pomyślnie zidentyfikować prawidłowy punkt w czasie. Obejście tego ograniczenia polega na ścisłym połączeniu wartości daty i godziny ze strefą czasową dla operacji zapisywania i przywracania.
 
 ## <a name="round-trip-a-datetimeoffset-value"></a>W obie strony wartość DateTimeOffset
 
@@ -72,7 +72,7 @@ Ta technika zawsze jednoznacznie identyfikuje <xref:System.DateTimeOffset> warto
 
 5. Rzutowanie (w języku C#) lub konwersji (w języku Visual Basic) deserialized obiektu do obiektu odpowiedniego typu.
 
-Poniższy przykład ilustruje sposób w obie strony obiektu, który przechowuje informacje o dacie i godzinie i strefie czasowej.
+Poniższy przykład ilustruje sposób w obie strony obiektu, który przechowuje zarówno strefy czasowej i informacji o dacie i godzinie.
 
 [!code-csharp[Formatting.HowTo.RoundTrip#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/cs/RoundTrip.cs#4)]
 [!code-vb[Formatting.HowTo.RoundTrip#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/vb/RoundTrip.vb#4)]

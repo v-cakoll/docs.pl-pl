@@ -9,12 +9,12 @@ helpviewer_keywords:
 - PLINQ queries, how to cancel
 - cancellation, PLINQ
 ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
-ms.openlocfilehash: 1b34f0c1785c1a1c007db97f04c799a4b4bd0f8f
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 312c71b787ac7b4aa092f1517d2ed5af314a22e4
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588574"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635878"
 ---
 # <a name="how-to-cancel-a-plinq-query"></a>Porady: anulowanie zapytania PLINQ
 Poniższe przykłady pokazują dwa sposoby anulowania kwerendy PLINQ. W pierwszym przykładzie pokazano, jak anulować kwerendę, która składa się głównie z przechodzenia danych. W drugim przykładzie pokazano, jak anulować kwerendę, która zawiera funkcję użytkownika, która jest kosztowna pod względem obliczeniowym.
@@ -33,9 +33,9 @@ Struktura PLINQ nie toczy <xref:System.OperationCanceledException> ani <xref:Sys
 
 Ogólne wytyczne dotyczące anulowania są następujące:
 
-1. W przypadku anulowania delegowania użytkownika należy poinformować <xref:System.Threading.CancellationToken> PLINQ o zewnętrznej i rzucać <xref:System.OperationCanceledException>(externalCT).
+1. W przypadku anulowania delegowania użytkownika należy poinformować <xref:System.Threading.CancellationToken> PLINQ <xref:System.OperationCanceledException>o zewnętrznym i wrzucić (externalCT).
 
-2. Jeśli nastąpi anulowanie i nie są zgłaszane żadne <xref:System.OperationCanceledException> inne <xref:System.AggregateException>wyjątki, należy obsłużyć zamiast .
+2. Jeśli nastąpi anulowanie i nie są zgłaszane <xref:System.OperationCanceledException> żadne <xref:System.AggregateException>inne wyjątki, a następnie obsłużyć zamiast .
 
 ## <a name="example"></a>Przykład
 
@@ -44,7 +44,7 @@ W poniższym przykładzie pokazano, jak obsługiwać anulowanie, gdy masz funkcj
 [!code-csharp[PLINQ#17](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#17)]
 [!code-vb[PLINQ#17](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#17)]
 
-Podczas obsługi anulowania w kodzie użytkownika, <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> nie trzeba używać w definicji kwerendy. Jednak zaleca się, aby <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> to zrobić, ponieważ nie ma wpływu na wydajność kwerendy i umożliwia anulowanie do obsługi przez operatorów zapytań i kodu użytkownika.
+Podczas obsługi anulowania w kodzie użytkownika, <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> nie trzeba używać w definicji kwerendy. Jednak zaleca się, aby <xref:System.Linq.ParallelEnumerable.WithCancellation%2A>użyć <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> , ponieważ nie ma wpływu na wydajność kwerendy i umożliwia anulowanie być obsługiwane przez operatorów zapytań i kodu użytkownika.
 
 Aby zapewnić szybkość reakcji systemu, zaleca się sprawdzenie, czy anulowanie jest około raz na milisekundę; jednak każdy okres do 10 milisekund jest uważany za dopuszczalny. Ta częstotliwość nie powinna mieć negatywnego wpływu na wydajność kodu.
 

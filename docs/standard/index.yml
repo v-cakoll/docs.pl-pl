@@ -1,0 +1,159 @@
+### YamlMime:Landing
+title: Dokumentacja platformy .NET
+summary: Dowiedz się więcej o .NET, platformie dewelopera typu open source do tworzenia wielu różnych typów aplikacji.
+metadata:
+  title: Dokumentacja platformy .NET
+  description: Dowiedz się więcej o .NET, platformie dewelopera typu open source do tworzenia wielu różnych typów aplikacji.
+  ms.topic: landing-page
+  ms.date: 03/27/2020
+  ms.openlocfilehash: 5984996b59cfb89e5f165bf966722093c0992eea
+  ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+  ms.translationtype: MT
+  ms.contentlocale: pl-PL
+  ms.lasthandoff: 04/03/2020
+  ms.locfileid: "80636081"
+landingContent:
+- title: Dowiedz się więcej o sieci .NET
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Przewodnik po środowisku .NET
+      url: tour.md
+    - text: Co to jest platforma .NET?
+      url: https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet
+  - linkListType: concept
+    links:
+    - text: .NET Standard
+      url: net-standard.md
+    - text: .NET Core
+      url: ../core/about.md
+    - text: Platformy docelowe
+      url: frameworks.md
+    - text: Środowisko uruchomieniowe języka wspólnego (CLR)
+      url: clr.md
+    - text: Wybierz między programem .NET Core a platformą .NET Framework dla aplikacji serwerowych
+      url: choosing-core-framework-server.md
+  - linkListType: whats-new
+    links:
+    - text: Co nowego w umyka . NET Standard
+      url: whats-new/whats-new-in-dotnet-standard.md
+    - text: Co nowego w programie .NET Core
+      url: ../core/whats-new/dotnet-core-3-1.md
+- title: Serializacja danych
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Serializowanie i deserializacja JSON
+      url: serialization/system-text-json-overview.md
+  - linkListType: how-to-guide
+    links:
+    - text: 'Serializować i deserializować JSON przy użyciu języka C #'
+      url: serialization/system-text-json-how-to.md
+    - text: Migrowanie z newtonsoft.json do System.Text.Json
+      url: serialization/system-text-json-migrate-from-newtonsoft-how-to.md
+    - text: Zapisywanie konwerterów niestandardowych dla serializacji JSON
+      url: serialization/system-text-json-converters-how-to.md
+  - linkListType: sample
+    links:
+    - text: Przykłady serializacji XML
+      url: serialization/examples-of-xml-serialization.md
+- title: Formatowanie i konwertowanie dat, liczb i ciągów
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Ciągi formatu numerycznego
+      url: base-types/standard-numeric-format-strings.md
+    - text: Ciągi formatu daty i godziny
+      url: base-types/standard-date-and-time-format-strings.md
+    - text: Formatowanie kompozytowe
+      url: base-types/composite-formatting.md
+    - text: Konwertowanie czasów między strefami czasowymi
+      url: datetime/converting-between-time-zones.md
+    - text: Przycinanie i usuwanie znaków z ciągów
+      url: base-types/trimming.md
+    - text: Wyrażenia regularne w sieci .NET
+      url: base-types/regular-expressions.md
+  - linkListType: how-to-guide
+    links:
+    - text: Konwertowanie ciągów na DateTime
+      url: base-types/parsing-datetime.md
+    - text: Pad liczbę z zerami wiodącymi
+      url: base-types/how-to-pad-a-number-with-leading-zeros.md
+    - text: Wyświetlanie milisekund w wartościach daty i godziny
+      url: base-types/how-to-display-milliseconds-in-date-and-time-values.md
+  - linkListType: reference
+    links:
+    - text: Język wyrażenia regularnego
+      url: base-types/regular-expression-language-quick-reference.md
+- title: Klasy projektowania i biblioteki
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Wskazówki dotyczące projektowania
+      url: design-guidelines/index.md
+  - linkListType: concept
+    links:
+    - text: Konwencje nazewnictwa
+      url: design-guidelines/general-naming-conventions.md
+    - text: Konwencje kapitalizacji
+      url: design-guidelines/capitalization-conventions.md
+- title: Używanie zdarzeń i wyjątków
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Najważniejsze wskazówki dotyczące wyjątków
+      url: exceptions/best-practices-for-exceptions.md
+    - text: Obsługa i zgłaszanie zdarzeń
+      url: events/index.md
+  - linkListType: how-to-guide
+    links:
+    - text: Używanie bloku try-catch do wychwytu wyjątków
+      url: exceptions/how-to-use-the-try-catch-block-to-catch-exceptions.md
+    - text: Podnoszenie i używanie zdarzeń
+      url: events/how-to-raise-and-consume-events.md
+- title: We/wy plików i strumieni
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: We/wy plików i strumieni
+      url: io/index.md
+    - text: Formaty ścieżek plików w systemie Windows
+      url: io/file-path-formats.md
+  - linkListType: how-to-guide
+    links:
+    - text: Pisanie tekstu do pliku
+      url: io/how-to-write-text-to-a-file.md
+    - text: Odczytywanie tekstu z pliku
+      url: io/how-to-read-text-from-a-file.md
+    - text: Kompresowanie i wyodrębnianie plików
+      url: io/how-to-compress-and-extract-files.md
+    - text: Otwieranie i dołączanie do pliku dziennika
+      url: io/how-to-open-and-append-to-a-log-file.md
+- title: Zarządzanie korzystaniem z pamięci
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Podstawowe elementy bezużyteczne
+      url: garbage-collection/fundamentals.md
+    - text: Implementowanie metody dispose
+      url: garbage-collection/implementing-dispose.md
+- title: Dowiedz się więcej o programowaniu równoległym
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Programowanie równoległe w .NET
+      url: parallel-programming/index.md
+  - linkListType: concept
+    links:
+    - text: Biblioteka zadań równoległych (TPL)
+      url: parallel-programming/task-parallel-library-tpl.md
+    - text: Programowanie asynchroniczne oparte na zadaniach
+      url: parallel-programming/task-based-asynchronous-programming.md
+    - text: Anulowanie zadania
+      url: parallel-programming/task-cancellation.md
+  - linkListType: how-to-guide
+    links:
+    - text: Napisz prosty program równoległy za pomocą Parallel.ForEach
+      url: parallel-programming/how-to-write-a-simple-parallel-foreach-loop.md
+    - text: Zwracanie wartości z zadania
+      url: parallel-programming/how-to-return-a-value-from-a-task.md

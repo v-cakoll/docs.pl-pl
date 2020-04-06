@@ -290,6 +290,8 @@
       href: deploying/creating-nuget-packages.md
     - name: Przenoszenie do przodu w czasie samodzielnego środowiska uruchomieniowego wdrożenia
       href: deploying/runtime-patch-selection.md
+    - name: Przycinanie samodzielnych wdrożeń i plików wykonywalnych
+      href: deploying/trim-self-contained.md
     - name: Magazyn pakietu środowiska uruchomieniowego
       href: deploying/runtime-store.md
 - name: Docker

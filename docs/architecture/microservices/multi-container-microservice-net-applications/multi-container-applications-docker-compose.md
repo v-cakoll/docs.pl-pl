@@ -2,12 +2,12 @@
 title: Definiowanie aplikacji z wieloma kontenerami za pomocą pliku docker-compose.yml
 description: Jak określić kompozycję mikrousług dla aplikacji wielokontenerowej z docker-compose.yml.
 ms.date: 01/30/2020
-ms.openlocfilehash: 9143801fbbffbdc5b795a232b3333edf71f05c7c
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 66775b573c46041475e9cddc622bbde78ae44bc4
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523649"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805606"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definiowanie aplikacji z wieloma kontenerami za pomocą pliku docker-compose.yml
 
@@ -177,7 +177,7 @@ Można użyć pojedynczego pliku docker-compose.yml, jak w uproszczonych przykł
 
 Domyślnie Compose odczytuje dwa pliki: plik docker-compose.yml i opcjonalny plik docker-compose.override.yml. Jak pokazano na rysunku 6-11, podczas korzystania z programu Visual Studio i włączania obsługi platformy Docker, Visual Studio tworzy również dodatkowy plik docker-compose.vs.debug.g.yml do debugowania aplikacji, można spojrzeć na ten plik w folderze obj\\Docker\\ w głównym folderze rozwiązania.
 
-![Zrzut ekranu przedstawiający pliki w projekcie tworzenia kompozycji docker.](./media/multi-container-applications-docker-compose/docker-compose-file-visual-studio.png)
+![Pliki w projekcie tworzenia docker.](./media/multi-container-applications-docker-compose/docker-compose-file-visual-studio.png)
 
 **Rysunek 6-11**. pliki docker-compose w programie Visual Studio 2019
 
@@ -448,22 +448,22 @@ ENTRYPOINT ["dotnet", "run"]
 
 Dockerfile tak będzie działać. Można jednak znacznie zoptymalizować obrazy, zwłaszcza obrazy produkcyjne.
 
-W modelu kontenera i mikrousług stale uruchamiasz kontenery. Typowy sposób używania kontenerów nie uruchamia ponownie kontenera sypialnego, ponieważ kontener jest jednorazowy. Orchestrators (jak Kubernetes i usługi Azure Service Fabric) po prostu utworzyć nowe wystąpienia obrazów. Oznacza to, że należy zoptymalizować przez wstępne komppilowanie aplikacji, gdy jest on zbudowany, więc proces tworzenia wystąpienia będzie szybszy. Po uruchomieniu kontenera powinien być gotowy do uruchomienia. Nie należy przywracać i kompilować `dotnet restore` `dotnet build` w czasie wykonywania, przy użyciu i poleceń z dotnet CLI, które, jak widać w wielu blogach o .NET Core i Docker.
+W modelu kontenera i mikrousług stale uruchamiasz kontenery. Typowy sposób używania kontenerów nie uruchamia ponownie kontenera sypialnego, ponieważ kontener jest jednorazowy. Orchestrators (jak Kubernetes i usługi Azure Service Fabric) po prostu utworzyć nowe wystąpienia obrazów. Oznacza to, że należy zoptymalizować przez wstępne komppilowanie aplikacji, gdy jest on zbudowany, więc proces tworzenia wystąpienia będzie szybszy. Po uruchomieniu kontenera powinien być gotowy do uruchomienia. Nie przywracaj i kompiluj `dotnet restore` w `dotnet build` czasie wykonywania przy użyciu poleceń i interfejsu wiersza polecenia, jak można zobaczyć w wpisach w blogu o .NET Core i Docker.
 
 Zespół platformy .NET wykonuje ważną pracę, aby uczynić program .NET Core i ASP.NET Core platformą zoptymalizowaną pod kątem kontenera. Nie tylko .NET Core jest lekka struktura z niewielkim rozmiarze pamięci; zespół skupił się na zoptymalizowanych obrazach platformy Docker dla trzech głównych scenariuszy i opublikował je w rejestrze Docker Hub w *dotnet/core,* począwszy od wersji 2.1:
 
-1. **Rozwój**: Gdzie priorytetem jest możliwość szybkiego iteracji i debugowania zmian i gdzie rozmiar jest drugorzędny.
+1. **Rozwój**: Priorytetem jest możliwość szybkiego iteracji i debugowania zmian, a rozmiar jest drugorzędny.
 
-2. **Kompilacja:** Priorytet jest kompilowanie aplikacji i zawiera pliki binarne i inne zależności w celu optymalizacji plików binarnych.
+2. **Kompilacja:** Priorytetem jest kompilowanie aplikacji, a obraz zawiera pliki binarne i inne zależności w celu optymalizacji plików binarnych.
 
-3. **Produkcja:** Gdzie fokus jest szybkie wdrażanie i uruchamianie kontenerów, więc te obrazy są ograniczone do plików binarnych i zawartości potrzebnej do uruchomienia aplikacji.
+3. **Produkcja:** Fokus jest szybkie wdrażanie i uruchamianie kontenerów, więc te obrazy są ograniczone do plików binarnych i zawartości potrzebnej do uruchomienia aplikacji.
 
-Aby to osiągnąć, zespół platformy .NET udostępnia cztery podstawowe warianty w [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/) (w centrum platformy Docker Hub):
+Zespół platformy .NET udostępnia cztery podstawowe warianty w [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/) (w centrum docker):
 
 1. **sdk**: dla scenariuszy rozwoju i budowania
 1. **aspnet**: dla ASP.NET scenariuszy produkcji
 1. **środowisko uruchomieniowe:** dla scenariuszy produkcji .NET
-1. **runtime-deps**: dla scenariuszy produkcyjnych [samodzielnych aplikacji](../../../core/deploying/index.md#publish-self-contained).
+1. **identyfikatory wykonawcze:** dla scenariuszy produkcyjnych [samodzielnych aplikacji](../../../core/deploying/index.md#publish-self-contained)
 
 W celu szybszego uruchamiania obrazy środowiska uruchomieniowego automatycznie ustawiają adresy URL aspnetcore\_na port 80 i używają Ngen do tworzenia natywnej pamięci podręcznej obrazów zestawów.
 

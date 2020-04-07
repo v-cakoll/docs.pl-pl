@@ -2,12 +2,12 @@
 title: Implementowanie obiektów wartości
 description: Architektura mikrousług platformy .NET dla konteneryzowanych aplikacji .NET | Zapoznaj się ze szczegółami i opcjami implementowania obiektów wartości przy użyciu nowych funkcji programu Entity Framework.
 ms.date: 01/30/2020
-ms.openlocfilehash: 919b23f7c1a0cd0aec8c4417f3af98469a0743dd
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 4a8a92a8dabcf09654ecd0e5dea2a7df25d7abf7
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249425"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805737"
 ---
 # <a name="implement-value-objects"></a>Implementowanie obiektów wartości
 
@@ -133,7 +133,7 @@ Można zobaczyć, jak ta implementacja obiektu wartości Address nie ma tożsamo
 
 Brak pola identyfikatora w klasie, która ma być używana przez entity framework (EF) nie było możliwe, dopóki EF Core 2.0, co znacznie pomaga zaimplementować obiekty o lepszej wartości bez identyfikatora. To jest właśnie wyjaśnienie następnej sekcji.
 
-Można argumentować, że obiekty wartości, są niezmienne, powinny być tylko do odczytu (to znaczy, mają właściwości tylko do uzyskania), i to rzeczywiście prawda. Jednak obiekty wartości są zwykle serializowane i deserializowane, aby przejść przez kolejki komunikatów, a tylko do odczytu zatrzymuje deserializatora przed przypisywaniem wartości, więc po prostu pozostawiamy je jako zestaw prywatny, który jest wystarczająco czytelny, aby być praktycznym.
+Można argumentować, że obiekty wartości, są niezmienne, powinny być tylko do odczytu (to znaczy, mają właściwości tylko do uzyskania), i to rzeczywiście prawda. Jednak obiekty wartości są zwykle serializowane i deserializowane, aby przejść przez kolejki komunikatów, a tylko do odczytu `private set`zatrzymuje deserializatora przed przypisywaniem wartości, więc po prostu pozostawiamy je jako , które są wystarczająco czytelne, aby były praktyczne.
 
 ## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20-and-later"></a>Jak utrwalić obiekty wartości w bazie danych za pomocą EF Core 2.0 i nowszych
 
@@ -186,7 +186,7 @@ Zgodnie z konwencją klucz podstawowy w tle jest tworzony dla typu należącego 
 
 Należy pamiętać, że typy należące nigdy nie są odnajdywana przez konwencję w EF Core, więc należy zadeklarować je jawnie.
 
-W eShopOnContainers, w OrderingContext.cs, w ramach OnModelCreating() metody, istnieje wiele konfiguracji infrastruktury są stosowane. Jeden z nich jest związany z jednostką Zakonu.
+W eShopOnContainers w pliku OrderingContext.cs w `OnModelCreating()` ramach metody stosuje się wiele konfiguracji infrastruktury. Jeden z nich jest związany z jednostką Zakonu.
 
 ```csharp
 // Part of the OrderingContext.cs class at the Ordering.Infrastructure project
@@ -226,7 +226,7 @@ public void Configure(EntityTypeBuilder<Order> orderConfiguration)
 
 W poprzednim kodzie `orderConfiguration.OwnsOne(o => o.Address)` metoda określa, `Address` że właściwość jest `Order` własnością jednostki typu.
 
-Domyślnie konwencje EF Core nazywają kolumny bazy danych właściwościami typu `EntityProperty_OwnedEntityProperty`jednostki należącej do państwa jako . W związku z tym `Address` wewnętrzne właściwości `Orders` pojawią się `Address_Street` `Address_City` w tabeli `State`z `Country` `ZipCode`nazwami , (i tak dalej dla , i ).
+Domyślnie konwencje EF Core nazywają kolumny bazy danych właściwościami typu `EntityProperty_OwnedEntityProperty`jednostki należącej do państwa jako . W związku z tym `Address` wewnętrzne właściwości `Orders` pojawią się `Address_Street` `Address_City` w tabeli `State`z `Country`nazwami , (i tak dalej dla , i `ZipCode`).
 
 Można dołączyć `Property().HasColumnName()` fluent metody, aby zmienić nazwę tych kolumn. W przypadku, `Address` gdy jest własnością publiczną, mapowania będą podobne do następujących:
 
@@ -281,7 +281,7 @@ public class Address
 
 - Można mapować ten sam typ CLR jako różne typy własnością w tej samej jednostce właściciela za pomocą oddzielnych właściwości nawigacji.
 
-- Dzielenie tabel jest konfigurowane według konwencji, ale można zrezygnować, mapując typ należący do innej tabeli przy użyciu tabeli ToTable.
+- Dzielenie tabel jest skonfigurowane przez konwencję, ale można zrezygnować, mapując typ należący do innej tabeli przy użyciu tabeli ToTable.
 
 - Wczesne ładowanie jest wykonywane automatycznie na typy należące do `.Include()` firmy, oznacza to, że nie ma potrzeby wywoływania kwerendy.
 

@@ -3,16 +3,16 @@ title: Uaktualnianie interfejsów API dla typów odwołań z wartościami nullab
 description: Naucz się używać atrybutów opisowych AllowNull, DisallowNull, MaybeNull, NotNull i innych, aby w pełni opisać stan zerowy interfejsów API.
 ms.technology: csharp-null-safety
 ms.date: 07/31/2019
-ms.openlocfilehash: ca04db800271b9b01b5b9f1482dd5a0db2cc1c35
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 5d7a864ba1b66ad6b4ae7b0391d170a29147c537
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249245"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805843"
 ---
 # <a name="update-libraries-to-use-nullable-reference-types-and-communicate-nullable-rules-to-callers"></a>Aktualizowanie bibliotek w celu używania typów odwołań z regułami zbędnymi wartościami null i przekazywanie reguł nullable wywołującym
 
-Dodanie [typów odwołań nullable](nullable-references.md) oznacza, że `null` można zadeklarować, czy wartość jest dozwolona lub oczekiwana dla każdej zmiennej. Ponadto można zastosować liczbę atrybutów: `AllowNull` `DisallowNull`, `MaybeNull` `NotNull`, `NotNullWhen` `MaybeNullWhen`, `NotNullWhenNotNull` , , i całkowicie opisać null stany argumentów i zwracanych wartości. Zapewnia to wspaniałe doświadczenie podczas pisania kodu. Otrzymasz ostrzeżenia, jeśli zmienna nienastępna null może być ustawiona na `null`. Otrzymasz ostrzeżenia, jeśli zmienna nullable nie jest zaznaczona zerem przed wyłuskaniem go. Aktualizowanie bibliotek może zająć trochę czasu, ale wypłaty są tego warte. Im więcej informacji, które podasz `null` kompilatorowi o *tym, kiedy* wartość jest dozwolona lub zabroniona, otrzymają lepsze ostrzeżenia, które otrzymają użytkownicy interfejsu API. Zacznijmy od znanego przykładu. Wyobraź sobie, że biblioteka ma następujący interfejs API do pobierania ciągu zasobu:
+Dodanie [typów odwołań nullable](nullable-references.md) oznacza, że `null` można zadeklarować, czy wartość jest dozwolona lub oczekiwana dla każdej zmiennej. Ponadto można zastosować liczbę atrybutów: `AllowNull` `DisallowNull`, `MaybeNull` `NotNull`, `NotNullWhen` `MaybeNullWhen`, `NotNullIfNotNull` , , i całkowicie opisać null stany argumentów i zwracanych wartości. Zapewnia to wspaniałe doświadczenie podczas pisania kodu. Otrzymasz ostrzeżenia, jeśli zmienna nienastępna null może być ustawiona na `null`. Otrzymasz ostrzeżenia, jeśli zmienna nullable nie jest zaznaczona zerem przed wyłuskaniem go. Aktualizowanie bibliotek może zająć trochę czasu, ale wypłaty są tego warte. Im więcej informacji, które podasz `null` kompilatorowi o *tym, kiedy* wartość jest dozwolona lub zabroniona, otrzymają lepsze ostrzeżenia, które otrzymają użytkownicy interfejsu API. Zacznijmy od znanego przykładu. Wyobraź sobie, że biblioteka ma następujący interfejs API do pobierania ciągu zasobu:
 
 ```csharp
 bool TryGetMessage(string key, out string message)

@@ -2,12 +2,12 @@
 title: Subskrybowanie zdarzeń
 description: Architektura mikrousług platformy .NET dla konteneryzowanych aplikacji .NET | Poznaj szczegóły publikowania i subskrypcji zdarzeń integracji.
 ms.date: 01/30/2020
-ms.openlocfilehash: 3bfcdb1766a15b1a8e8deab46055f14e1791c2cc
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 7e78970933fdad27d2be74e7d498b0797fc09bc0
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523597"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805497"
 ---
 # <a name="subscribing-to-events"></a>Subskrybowanie zdarzeń
 
@@ -95,9 +95,9 @@ Podczas publikowania zdarzeń integracji za pośrednictwem rozproszonego systemu
 
 Zasadniczo mikrousług używasz do tworzenia skalowalnych i wysoce dostępnych systemów. Upraszczając nieco, zasadokrwowe CAP mówi, że nie można zbudować (rozproszone) bazy danych (lub mikrousługi, która jest właścicielem modelu), który jest stale dostępny, silnie spójne *i* tolerancyjne dla każdej partycji. Należy wybrać dwie z tych trzech właściwości.
 
-W architekturach opartych na mikrousługach należy wybrać dostępność i tolerancję i należy uznać silną spójność. W związku z tym w większości nowoczesnych aplikacji opartych na mikrousługach zwykle nie chcesz używać transakcji rozproszonych w wiadomościach, tak jak podczas implementowania [transakcji rozproszonych](https://docs.microsoft.com/previous-versions/windows/desktop/ms681205(v=vs.85)) na podstawie koordynatora transakcji rozproszonych systemu Windows (DTC) z [usługą MSMQ](https://msdn.microsoft.com/library/windows/desktop/ms711472(v=vs.85).aspx).
+W architekturach opartych na mikrousługach należy wybrać dostępność i tolerancję i należy odwkreślić silną spójność. W związku z tym w większości nowoczesnych aplikacji opartych na mikrousługach zwykle nie chcesz używać transakcji rozproszonych w wiadomościach, tak jak podczas implementowania [transakcji rozproszonych](https://docs.microsoft.com/previous-versions/windows/desktop/ms681205(v=vs.85)) na podstawie koordynatora transakcji rozproszonych systemu Windows (DTC) z [usługą MSMQ](https://msdn.microsoft.com/library/windows/desktop/ms711472(v=vs.85).aspx).
 
-Wróćmy do początkowego problemu i jego przykładu. Jeśli usługa ulegnie awarii po zaktualizowaniu bazy danych (w tym przypadku zaraz po wierszu kodu z kontekstem. \_ SaveChangesAsync()), ale przed opublikowaniem zdarzenia integracji ogólny system może stać się niespójny. Może to być kluczowe dla firmy, w zależności od konkretnej operacji biznesowej, z którą masz do czynienia.
+Wróćmy do początkowego problemu i jego przykładu. Jeśli usługa ulegnie awarii po zaktualizowaniu bazy danych (w tym przypadku zaraz po wierszu kodu z `_context.SaveChangesAsync()`), ale przed opublikowaniem zdarzenia integracji ogólny system może stać się niespójny. Może to być kluczowe dla firmy, w zależności od konkretnej operacji biznesowej, z którą masz do czynienia.
 
 Jak wspomniano wcześniej w sekcji architektury, można mieć kilka podejść do radzenia sobie z tym problemem:
 
@@ -109,7 +109,7 @@ Jak wspomniano wcześniej w sekcji architektury, można mieć kilka podejść do
 
 W tym scenariuszu przy użyciu pełnego źródła zdarzeń (ES) wzorzec jest jednym z najlepszych podejść, jeśli *nie* najlepsze. Jednak w wielu scenariuszach aplikacji może nie być w stanie zaimplementować pełnego systemu ES. ES oznacza przechowywanie tylko zdarzeń domeny w transakcyjnej bazie danych, zamiast przechowywania bieżących danych o stanie. Przechowywanie tylko zdarzeń domeny może mieć wielkie korzyści, takie jak dostępność historii systemu i możliwość określenia stanu systemu w dowolnym momencie w przeszłości. Jednak wdrożenie pełnego systemu ES wymaga ponownego prześledu większości systemu i wprowadza wiele innych zawiłości i wymagań. Na przykład należy użyć bazy danych specjalnie dla pozyskiwania zdarzeń, takich jak [Event Store](https://eventstore.org/)lub bazy danych zorientowanych na dokumenty, takich jak Azure Cosmos DB, MongoDB, Cassandra, CouchDB lub RavenDB. ES to świetne podejście do tego problemu, ale nie jest to najłatwiejsze rozwiązanie, chyba że jesteś już zaznajomiony z pozyskiwaniem zdarzeń.
 
-Opcja użycia wyszukiwania dziennika transakcji początkowo wygląda bardzo przezroczyste. Jednak aby użyć tego podejścia, mikrousługi musi być sprzężona z dziennikiem transakcji RDBMS, takich jak dziennik transakcji programu SQL Server. To prawdopodobnie nie jest pożądane. Inną wadą jest to, że aktualizacje niskiego poziomu rejestrowane w dzienniku transakcji może nie być na tym samym poziomie co zdarzenia integracji wysokiego poziomu. Jeśli tak, proces inżynierii odwrotnej tych operacji dziennika transakcji może być trudne.
+Opcja użycia wyszukiwania dziennika transakcji początkowo wygląda na przezroczystą. Jednak aby użyć tego podejścia, mikrousługi musi być sprzężona z dziennikiem transakcji RDBMS, takich jak dziennik transakcji programu SQL Server. To prawdopodobnie nie jest pożądane. Inną wadą jest to, że aktualizacje niskiego poziomu rejestrowane w dzienniku transakcji może nie być na tym samym poziomie co zdarzenia integracji wysokiego poziomu. Jeśli tak, proces inżynierii odwrotnej tych operacji dziennika transakcji może być trudne.
 
 Zrównoważone podejście jest połączeniem tabeli transakcyjnej bazy danych i uproszczonego wzorca ES. Można użyć stanu, takiego jak "gotowe do opublikowania zdarzenia", który można ustawić w oryginalnym zdarzeniu podczas zatwierdzania go do tabeli zdarzeń integracji. Następnie spróbuj opublikować zdarzenie w magistrali zdarzeń. Jeśli akcja publikowania zdarzenia powiedzie się, należy uruchomić inną transakcję w usłudze pochodzenia i przenieść stan z "gotowe do opublikowania zdarzenia" do "zdarzenia już opublikowane."
 
@@ -157,9 +157,9 @@ Dla uproszczenia przykład eShopOnContainers używa pierwszego podejścia (bez d
 
 Poniższy kod pokazuje, jak można utworzyć pojedynczą transakcję obejmującą wiele obiektów DbContext — jeden kontekst związany z oryginalnymi danymi aktualizowanymi, a drugi kontekst związany z integrationeventlog tabeli.
 
-Należy zauważyć, że transakcja w poniższym przykładowym kodzie nie będzie odporna, jeśli połączenia z bazą danych mają jakikolwiek problem w czasie, gdy kod jest uruchomiony. Może się to zdarzyć w systemach opartych na chmurze, takich jak Azure SQL DB, które mogą przenosić bazy danych na serwerach. Aby zaimplementować transakcje odporne w wielu kontekstach, zobacz [Implementing resilient Entity Framework Core połączeń SQL](../implement-resilient-applications/implement-resilient-entity-framework-core-sql-connections.md) w dalszej części tego przewodnika.
+Transakcja w poniższym przykładowym kodzie nie będzie odporna, jeśli połączenia z bazą danych mają jakikolwiek problem w czasie, gdy kod jest uruchomiony. Może się to zdarzyć w systemach opartych na chmurze, takich jak Azure SQL DB, które mogą przenosić bazy danych na serwerach. Aby zaimplementować transakcje odporne w wielu kontekstach, zobacz [Implementing resilient Entity Framework Core połączeń SQL](../implement-resilient-applications/implement-resilient-entity-framework-core-sql-connections.md) w dalszej części tego przewodnika.
 
-Dla jasności w poniższym przykładzie przedstawiono cały proces w jednym kawałku kodu. Jednak implementacja eShopOnContainers jest faktycznie refaktoryzowana i podzielić tę logikę na wiele klas, dzięki czemu jest łatwiejsze do utrzymania.
+Dla jasności w poniższym przykładzie przedstawiono cały proces w jednym kawałku kodu. Jednak implementacja eShopOnContainers jest refaktoryzowana i dzieli tę logikę na wiele klas, dzięki czemu jest łatwiejsza do utrzymania.
 
 ```csharp
 // Update Product from the Catalog microservice
@@ -285,7 +285,7 @@ Program obsługi zdarzeń musi sprawdzić, czy produkt istnieje w dowolnym wyst�
 
 ## <a name="idempotency-in-update-message-events"></a>Idempotency w zdarzeniach wiadomości aktualizacji
 
-Ważnym aspektem zdarzeń wiadomości aktualizacji jest, że błąd w dowolnym momencie komunikacji powinien spowodować ponowione próby wiadomości. W przeciwnym razie zadanie w tle może próbować opublikować zdarzenie, które zostało już opublikowane, tworząc warunek wyścigu. Należy upewnić się, że aktualizacje są idempotentności lub że zawierają wystarczające informacje, aby upewnić się, że można wykryć duplikat, odrzucić go i wysłać z powrotem tylko jedną odpowiedź.
+Ważnym aspektem zdarzeń wiadomości aktualizacji jest, że błąd w dowolnym momencie komunikacji powinien spowodować ponowione próby wiadomości. W przeciwnym razie zadanie w tle może próbować opublikować zdarzenie, które zostało już opublikowane, tworząc warunek wyścigu. Upewnij się, że aktualizacje są idempotentności lub że zawierają wystarczające informacje, aby upewnić się, że można wykryć duplikat, odrzucić go i wysłać z powrotem tylko jedną odpowiedź.
 
 Jak wspomniano wcześniej, idempotency oznacza, że operacja może być wykonywana wiele razy bez zmiany wyniku. W środowisku obsługi wiadomości, jak podczas komunikowania się zdarzeń, zdarzenie jest idempotentne, jeśli może być dostarczone wiele razy bez zmiany wyniku dla mikrousługi odbiornika. Może to być konieczne ze względu na charakter samego zdarzenia lub ze względu na sposób, w jaki system obsługuje zdarzenie. Idempotency wiadomości jest ważne w każdej aplikacji, która używa wiadomości, nie tylko w aplikacjach, które implementują wzorzec magistrali zdarzeń.
 

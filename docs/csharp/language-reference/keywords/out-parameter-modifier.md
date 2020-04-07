@@ -4,14 +4,15 @@ ms.date: 03/19/2020
 helpviewer_keywords:
 - parameters [C#], out
 - out parameters [C#]
-ms.openlocfilehash: c713aa929673e51e8e9986c536bae782121c7756
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 57308992268e1285cfeb82b28e2abf213e7a831b
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249347"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805860"
 ---
 # <a name="out-parameter-modifier-c-reference"></a>out — Modyfikator parametrów (odwołanie w C#)
+
 Słowo `out` kluczowe powoduje, że argumenty mają być przekazywane przez odwołanie. Sprawia, że parametr formalny alias dla argumentu, który musi być zmienną. Innymi słowy, każda operacja na parametr jest na argument. Jest jak [ref](ref.md) słowa kluczowego, z tą różnicą, że `ref` wymaga, aby zmienna została zainicjowana przed przekazaniem. Jest również jak [w](in-parameter-modifier.md) słowa `in` kluczowego, z tą różnicą, że nie zezwala na wywołaną metodę, aby zmodyfikować wartość argumentu. Aby użyć `out` parametru, zarówno definicja metody, jak `out` i metoda wywołująca należy jawnie użyć słowa kluczowego. Przykład:  
   
 [!code-csharp-interactive[cs-out-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/OutParameterModifier.cs#1)]  
@@ -49,13 +50,13 @@ Nie można użyć `in`programu `ref`, `out` i słów kluczowych dla następując
 
 Ponadto [metody rozszerzenia](../../programming-guide/classes-and-structs/extension-methods.md) mają następujące ograniczenia:
 
-- Nie `out` można użyć klucza klucza w pierwszym argumencie metody rozszerzenia.
+- Nie `out` można użyć słowa kluczowego w pierwszym argumie metody rozszerzenia.
 - Nie `ref` można użyć słowa kluczowego w pierwszym argumie metody rozszerzenia, gdy argument nie jest strukturą lub typem rodzajowym, który nie jest ograniczony do struktury.
 - Nie `in` można użyć słowa kluczowego, chyba że pierwszy argument jest strukturą. Słowo `in` kluczowe nie może być używane dla dowolnego typu rodzajowego, nawet jeśli jest ograniczona do struktury.
 
 ## <a name="declaring-out-parameters"></a>Deklarowanie `out` parametrów
 
-Deklarowanie metody `out` z argumentami jest klasycznym obejściem, aby zwrócić wiele wartości. Począwszy od języka C# 7.0, należy wziąć pod uwagę [krotek](../../tuples.md) dla podobnych scenariuszy. Poniższy przykład `out` służy do zwrócenia trzech zmiennych za pomocą wywołania pojedynczej metody. Należy zauważyć, że trzeci argument jest przypisany do wartości null. Dzięki temu metody do zwracania wartości opcjonalnie.  
+Deklarowanie metody `out` z argumentami jest klasycznym obejściem, aby zwrócić wiele wartości. Począwszy od języka C# 7.0, należy wziąć pod uwagę [krotek](../../tuples.md) dla podobnych scenariuszy. Poniższy przykład `out` służy do zwrócenia trzech zmiennych za pomocą wywołania pojedynczej metody. Trzeci argument jest przypisany do null. Dzięki temu metody do zwracania wartości opcjonalnie.  
   
 [!code-csharp-interactive[cs-out-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/OutParameterModifier.cs#3)]  
 

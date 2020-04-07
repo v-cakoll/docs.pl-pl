@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 8d04f888befae2cad815c88a0d27bd836f458c63
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: d54d932ca96f1966ecc05a532a2468b7e16fac46
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523775"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805846"
 ---
 # <a name="ref-c-reference"></a>ref (odwołanie w C#)
 
@@ -101,7 +101,7 @@ Na przykład zobacz [A ref zwraca i ref locals przykład](#a-ref-returns-and-ref
 
 ## <a name="ref-locals"></a>Ref miejscowi
 
-Zmienna lokalna ref jest używana `return ref`do odwoływania się do wartości zwracanych przy użyciu . Zmiennej lokalnej ref nie można zainicjować do wartości zwracanej non-ref. Innymi słowy, po prawej stronie inicjowania musi być odwołanie. Wszelkie modyfikacje wartości ref local są odzwierciedlane w stanie obiektu, którego metoda zwróciła wartość przez odwołanie.
+Zmienna lokalna ref jest używana `return ref`do odwoływania się do wartości zwracanych przy użyciu . Zmiennej lokalnej ref nie można zainicjować do wartości zwracanej non-ref. Innymi słowy po prawej stronie inicjowania musi być odwołanie. Wszelkie modyfikacje wartości ref local są odzwierciedlane w stanie obiektu, którego metoda zwróciła wartość przez odwołanie.
 
 Można zdefiniować ref lokalnych `ref` przy użyciu słowa kluczowego przed deklaracją zmiennej, a także bezpośrednio przed wywołaniem metody, która zwraca wartość przez odwołanie.
 
@@ -117,7 +117,7 @@ Można uzyskać dostęp do wartości przez odwołanie w ten sam sposób. W niekt
 ref VeryLargeStruct reflocal = ref veryLargeStruct;
 ```
 
-Należy zauważyć, że `ref` w obu przykładach słowo kluczowe musi być używane w obu miejscach lub kompilator generuje błąd CS8172, "Nie można zainicjować zmiennej by-reference z wartością."
+W obu przykładach `ref` słowo kluczowe musi być używane w obu miejscach lub kompilator generuje błąd CS8172, "Nie można zainicjować zmiennej by-reference z wartością."
 
 Począwszy od C# 7.3, zmienną `foreach` iteracji instrukcji może być ref zmiennej lokalnej lub ref readonly zmiennej lokalnej. Aby uzyskać więcej informacji, zobacz artykuł [instrukcji foreach.](foreach-in.md)
 
@@ -145,8 +145,8 @@ Celem zachowania `ref struct` typu jako zmiennej przydzielonej do stosu wprowadz
 
 - Nie można pole `ref struct`. Nie można `ref struct` przypisać typu do `object`zmiennej typu `dynamic`lub dowolnego typu interfejsu.
 - `ref struct`typy nie można zaimplementować interfejsów.
-- Nie można zadeklarować `ref struct` jako członka pola klasy lub normalnej struktury. Obejmuje to deklarowanie właściwości zaimplementowane automatycznie, która tworzy pole zapasowe wygenerowane przez kompilator.
-- Nie można zadeklarować zmiennych lokalnych, które są `ref struct` typami w metodach asynchronizacyjnych. Można zadeklarować je w metodach <xref:System.Threading.Tasks.Task>synchronicznych, które zwracają lub <xref:System.Threading.Tasks.Task%601> `Task`-like typów.
+- Nie można zadeklarować `ref struct` jako członka pola klasy lub normalnej struktury. Obejmuje to deklarowanie właściwości zaimplementowane automatycznie, która tworzy pole zapasowe generowane przez kompilator.
+- Nie można zadeklarować zmiennych lokalnych, które są `ref struct` typami w metodach asynchronizacyjnych. Można zadeklarować je w metodach <xref:System.Threading.Tasks.Task>synchronicznych, które zwracają , <xref:System.Threading.Tasks.Task%601>lub `Task`-like typów.
 - Nie można `ref struct` zadeklarować zmiennych lokalnych w iteratorach.
 - Nie można `ref struct` przechwycić zmiennych w wyrażeniach lambda lub funkcji lokalnych.
 

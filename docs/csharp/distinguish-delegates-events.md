@@ -1,21 +1,21 @@
 ---
-title: Wyróżniające się obiekty delegowane i zdarzenia
+title: Pełnomocnicy a zdarzenia
 description: Dowiedz się, jak różnica między delegatami a zdarzeniami i kiedy korzystać z każdej z tych funkcji .NET Core.
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 0fdc8629-2fdb-4a7c-a433-5b9d04eaf911
-ms.openlocfilehash: 4179330fe5e88da5d5034a150a057f63e31b178b
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 51d982c9b5b16a5fc28ede5f0318bc100bb33b68
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588257"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805770"
 ---
 # <a name="distinguishing-delegates-and-events"></a>Wyróżniające się obiekty delegowane i zdarzenia
 
 [Wstecz](modern-events.md)
 
-Deweloperzy, którzy są nowicjuszami w platformie .NET `delegates` Core, często `events`mają trudności z podejmowaniem decyzji między projektem opartym na projekcie a projektem opartym na . Jest to trudna koncepcja, ponieważ dwie funkcje językowe są bardzo podobne. Zdarzenia są nawet tworzone przy użyciu obsługi języka dla delegatów.
+Deweloperzy, którzy są nowicjuszami w platformie .NET `delegates` Core, często `events`mają trudności z podejmowaniem decyzji między projektem opartym na projekcie a projektem opartym na . Wybór delegatów lub zdarzeń jest często trudne, ponieważ dwie funkcje języka są podobne. Zdarzenia są nawet tworzone przy użyciu obsługi języka dla delegatów.
 
 Obie oferują scenariusz późnego wiązania: umożliwiają one scenariusze, w których składnik komunikuje się, wywołując metodę, która jest znana tylko w czasie wykonywania. Obsługują one zarówno pojedyncze, jak i wiele metod subskrybenta. Może się okazać, że jest to określane jako obsługa pojedynczej emisji i multiemisji. Obie obsługują podobną składnię do dodawania i usuwania programów obsługi. Na koniec wywoływanie zdarzenia i wywoływanie delegata używa dokładnie tej samej składni wywołania metody. Nawet obie obsługują `Invoke()` tę samą składnię `?.` metody do użytku z operatorem.
 
@@ -45,7 +45,7 @@ Dla porównania delegatów są często przekazywane jako parametry i przechowywa
 
 ## <a name="event-listeners-often-have-longer-lifetimes"></a>Detektory zdarzeń często mają dłuższe okresy istnienia
 
-Jest to nieco słabsze uzasadnienie. Jednak może się okazać, że projekty oparte na zdarzeniach są bardziej naturalne, gdy źródło zdarzeń będzie wywoływać zdarzenia przez długi okres czasu. Można zobaczyć przykłady tego dla formantów ux w wielu systemach. Po zasubskrybowaniu zdarzenia źródło zdarzeń może zgłaszać zdarzenia przez cały okres istnienia programu.
+To, że detektory zdarzeń mają dłuższe okresy istnienia, jest nieco słabszym uzasadnieniem. Jednak może się okazać, że projekty oparte na zdarzeniach są bardziej naturalne, gdy źródło zdarzeń będzie wywoływać zdarzenia przez długi okres czasu. Można zobaczyć przykłady projektowania opartego na zdarzeniach dla formantów ux w wielu systemach. Po zasubskrybowaniu zdarzenia źródło zdarzeń może zgłaszać zdarzenia przez cały okres istnienia programu.
 (Możesz zrezygnować z subskrypcji wydarzeń, gdy nie są już potrzebne).
 
 Kontrast, że z wielu projektów opartych na pełnomocnika, gdzie delegat jest używany jako argument do metody, a delegat nie jest używany po tej metody zwraca.

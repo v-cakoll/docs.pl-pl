@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: 828543b95ed82f465c92212748c6250b7fc84051
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 9feca97b141b08d418f6833374cbe3c7a0c26d66
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249386"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805773"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>Wprowadzenie do języka C# i programu .NET Framework
 
@@ -22,7 +22,7 @@ C# to elegancki i bezpieczny dla typu język obiektowy, który umożliwia dewelo
   
 ## <a name="c-language"></a>C# — język
 
-Składnia C# jest bardzo wyrazisty, ale jest również proste i łatwe do nauczenia. Kręcona składnia języka C# będzie natychmiast rozpoznawalna dla wszystkich osób zaznajomionych z C, C++ lub Java. Deweloperzy, którzy znają którykolwiek z tych języków są zazwyczaj w stanie rozpocząć pracę wydajnie w języku C# w bardzo krótkim czasie. Składnia języka C# upraszcza wiele złożoności języka C++ i udostępnia zaawansowane funkcje, takie jak typy nullable, wyliczenia, delegatów, wyrażenia lambda i bezpośredni dostęp do pamięci. C# obsługuje ogólne metody i typy, które zapewniają zwiększone bezpieczeństwo i wydajność typu i iteratory, które umożliwiają realizatorom klas kolekcji definiowanie niestandardowych zachowań iteracji, które są proste w użyciu przez kod klienta. Wyrażenia linq (Language-Integrated Query) sprawiają, że silnie typizowana kwerenda jest konstrukcją języka pierwszej klasy.  
+Składnia C# jest bardzo wyrazisty, ale jest również proste i łatwe do nauczenia. Kręcona składnia języka C# będzie natychmiast rozpoznawalna dla wszystkich osób zaznajomionych z C, C++ lub Java. Deweloperzy, którzy znają którykolwiek z tych języków są zazwyczaj w stanie rozpocząć pracę wydajnie w języku C# w krótkim czasie. Składnia języka C# upraszcza wiele złożoności języka C++ i udostępnia zaawansowane funkcje, takie jak typy nullable, wyliczenia, delegatów, wyrażenia lambda i bezpośredni dostęp do pamięci. C# obsługuje ogólne metody i typy, które zapewniają zwiększone bezpieczeństwo i wydajność typu i iteratory, które umożliwiają realizatorom klas kolekcji definiowanie niestandardowych zachowań iteracji, które są proste w użyciu przez kod klienta. Wyrażenia linq (Language-Integrated Query) sprawiają, że silnie typizowana kwerenda jest konstrukcją języka pierwszej klasy.  
   
  Jako język obiektowy C# obsługuje pojęcia hermetyzacji, dziedziczenia i polimorfizmu. Wszystkie zmienne i metody, w tym `Main` metoda, punkt wejścia aplikacji, są hermetyzowane w definicjach klas. Klasa może dziedziczyć bezpośrednio z jednej klasy nadrzędnej, ale może implementować dowolną liczbę interfejsów. Metody, które zastępują metody wirtualne `override` w klasie nadrzędnej wymagają słowa kluczowego jako sposobu uniknięcia przypadkowego ponownego zdefiniowania. W języku C#, struktura jest jak lekka klasa; jest to typ przydzielony do stosu, który może implementować interfejsy, ale nie obsługuje dziedziczenia.  
   
@@ -62,7 +62,7 @@ Składnia C# jest bardzo wyrazisty, ale jest również proste i łatwe do naucze
   
  Współdziałanie języka jest kluczową cechą programu .NET Framework. Ponieważ kod IL wyprodukowany przez kompilator języka C# jest zgodny ze specyfikacją wspólnego typu (CTS), kod IL wygenerowany z języka C# może wchodzić w interakcje z kodem wygenerowanym z wersji .NET języka Visual Basic, Visual C++ lub dowolnego z więcej niż 20 innych języków zgodnych z cts. Pojedynczy zestaw może zawierać wiele modułów napisanych w różnych językach .NET, a typy mogą odwoływać się do siebie tak, jakby zostały napisane w tym samym języku.  
   
- Oprócz usług czasu wykonywania program .NET Framework zawiera również obszerną bibliotekę ponad 4000 klas zorganizowanych w przestrzenie nazw, które zapewniają szeroką gamę przydatnych funkcji dla wszystkiego, od wprowadzania i danych wyjściowych plików po manipulowanie ciągami do XML analizowanie, do formantów windows forms. Typowa aplikacja języka C# używa biblioteki klas .NET Framework intensywnie do obsługi typowych zadań "instalacyjnych".  
+ Oprócz usług czasu wykonywania .NET Framework zawiera również obszerną bibliotekę ponad 4000 klas zorganizowanych w przestrzenie nazw, które zapewniają szeroką gamę przydatnych funkcji dla wszystkich, od wprowadzania i danych wyjściowych plików do manipulowania ciągami do analizowania XML, do formantów Windows Forms. Typowa aplikacja języka C# używa biblioteki klas .NET Framework intensywnie do obsługi typowych zadań "instalacyjnych".  
   
  Aby uzyskać więcej informacji na temat programu .NET Framework, zobacz [Omówienie programu Microsoft .NET Framework](../../framework/get-started/overview.md).  
   

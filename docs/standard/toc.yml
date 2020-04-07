@@ -1,62 +1,267 @@
-- name: Przewodnik po środowisku .NET Standard
-  href: index.md
+- name: Dokumentacja platformy .NET
+  href: index.yml
 - name: Wprowadzenie do platformy .NET
   href: get-started.md
 - name: Przewodnik po środowisku .NET
   href: tour.md
 - name: Składniki architektury .NET
   href: components.md
-- name: .NET Standard
+- name: Omówienie platformy .NET Standard
   href: net-standard.md
-  items:
-    - name: Co nowego w programie .NET Standard
-      href: whats-new/whats-new-in-dotnet-standard.md
+- name: Co nowego na platformie .NET Standard
+  href: whats-new/whats-new-in-dotnet-standard.md
 - name: Platformy docelowe
   href: frameworks.md
 - name: Słownik platformy .NET
   href: glossary.md
-- name: Wskazówki dotyczące biblioteki typu open source
+- name: Wskazówki dotyczące biblioteki typu open-source
   href: library-guidance/
 - name: Wybieranie między programami .NET Core i .NET Framework na potrzeby aplikacji serwerowych
   href: choosing-core-framework-server.md
-- name: Co to jest „kod zarządzany”?
-  href: managed-code.md
+- name: Kod zarządzany
   items:
+    - name: Co to jest „kod zarządzany”?
+      href: managed-code.md
     - name: Automatyczne zarządzanie pamięcią
       href: automatic-memory-management.md
 - name: Środowisko uruchomieniowe języka wspólnego (CLR)
   href: clr.md
 - name: Niezależność od języka
-  href: language-independence.md
   items:
-    - name: Niezależność od języka i elementy niezależne od języka
+    - name: Omówienie
+      href: language-independence.md
+    - name: Składniki niezależne od języka
       href: language-independence-and-language-independent-components.md
 - name: Biblioteki platformy
-  href: framework-libraries.md
   items:
-    - name: Przegląd biblioteki klas
+    - name: Omówienie
+      href: framework-libraries.md
+    - name: Omówienie biblioteki klas
       href: class-library-overview.md
-    - name: Typy podstawowe
-      href: base-types/
+    - name: Praca z typami podstawowymi
+      items:
+        - name: System typu wspólnego
+          href: base-types/common-type-system.md
+        - name: Konwersja typów w programie .NET
+          href: base-types/type-conversion.md
+        - name: Tabele konwersji typów
+          href: base-types/conversion-tables.md
+        - name: 'Formatowanie liczb, dat i innych typów'
+          items:
+            - name: Omówienie
+              href: base-types/formatting-types.md
+            - name: Standardowe ciągi formatujące liczby
+              href: base-types/standard-numeric-format-strings.md
+            - name: Niestandardowe ciągi formatujące liczby
+              href: base-types/custom-numeric-format-strings.md
+            - name: Standardowe ciągi formatujące datę i godzinę
+              href: base-types/standard-date-and-time-format-strings.md
+            - name: Niestandardowe ciągi formatujące datę i godzinę
+              href: base-types/custom-date-and-time-format-strings.md
+            - name: Standardowe ciągi formatujące TimeSpan
+              href: base-types/standard-timespan-format-strings.md
+            - name: Niestandardowe ciągi formatujące TimeSpan
+              href: base-types/custom-timespan-format-strings.md
+            - name: Wyliczanie ciągów formatujących
+              href: base-types/enumeration-format-strings.md
+            - name: Złożone formatowanie
+              href: base-types/composite-formatting.md
+            - name: Instrukcje
+              items:
+                - name: Uzupełnianie liczby zerami wiodącymi
+                  href: base-types/how-to-pad-a-number-with-leading-zeros.md
+                - name: Wyodrębnianie dnia tygodnia z daty
+                  href: base-types/how-to-extract-the-day-of-the-week-from-a-specific-date.md
+                - name: Używanie niestandardowych dostawców formatu liczbowego
+                  href: base-types/how-to-define-and-use-custom-numeric-format-providers.md
+                - name: Obustronne wartości daty i godziny
+                  href: base-types/how-to-round-trip-date-and-time-values.md
+                - name: Wyświetlanie liczby milisekund w wartościach daty i godziny
+                  href: base-types/how-to-display-milliseconds-in-date-and-time-values.md
+                - name: Wyświetlanie dat w kalendarzach innych niż gregoriański
+                  href: base-types/how-to-display-dates-in-non-gregorian-calendars.md
+        - name: Manipulowanie ciągami
+          items:
+            - name: Najlepsze rozwiązania dotyczące używania ciągów
+              href: base-types/best-practices-strings.md
+            - name: Podstawowe operacje na ciągach
+              items:
+                - name: Omówienie
+                  href: base-types/basic-string-operations.md
+                  displayName: string operations
+                - name: Tworzenie nowych ciągów
+                  href: base-types/creating-new.md
+                - name: Przycinanie i usuwanie znaków
+                  href: base-types/trimming.md
+                - name: Uzupełnianie ciągów
+                  href: base-types/padding.md
+                - name: Porównywanie ciągów
+                  href: base-types/comparing.md
+                - name: Zmiana wielkości liter
+                  href: base-types/changing-case.md
+                - name: Używanie klasy StringBuilder
+                  href: base-types/stringbuilder.md
+                - name: 'Instrukcje: Wykonywanie podstawowych działań na ciągach'
+                  href: base-types/basic-manipulations.md
+            - name: Wyrażenia regularne w programie .NET
+              items:
+                - name: Omówienie
+                  href: base-types/regular-expressions.md
+                  displayName: regular expressions
+                - name: Dokumentacja języka
+                  items:
+                    - name: Omówienie
+                      href: base-types/regular-expression-language-quick-reference.md
+                    - name: Sekwencje ucieczki dla znaków
+                      href: base-types/character-escapes-in-regular-expressions.md
+                    - name: Klasy znaków
+                      href: base-types/character-classes-in-regular-expressions.md
+                    - name: Kotwice
+                      href: base-types/anchors-in-regular-expressions.md
+                    - name: Konstrukcje grupujące
+                      href: base-types/grouping-constructs-in-regular-expressions.md
+                    - name: Kwantyfikatory
+                      href: base-types/quantifiers-in-regular-expressions.md
+                    - name: Konstrukcje odwołań wstecznych
+                      href: base-types/backreference-constructs-in-regular-expressions.md
+                    - name: Konstrukcje warunkowe
+                      href: base-types/alternation-constructs-in-regular-expressions.md
+                    - name: Zastępstwa
+                      href: base-types/substitutions-in-regular-expressions.md
+                    - name: Opcje wyrażeń regularnych
+                      href: base-types/regular-expression-options.md
+                    - name: Inne konstrukcje
+                      href: base-types/miscellaneous-constructs-in-regular-expressions.md
+                - name: Najlepsze rozwiązania dotyczące wyrażeń regularnych
+                  href: base-types/best-practices.md
+                - name: Model obiektów wyrażeń regularnych
+                  href: base-types/the-regular-expression-object-model.md
+                - name: Zachowanie wyrażeń regularnych
+                  items:
+                    - name: Omówienie
+                      href: base-types/details-of-regular-expression-behavior.md
+                    - name: Nawracanie
+                      href: base-types/backtracking-in-regular-expressions.md
+                    - name: Kompilacja i ponowne użycie
+                      href: base-types/compilation-and-reuse-in-regular-expressions.md
+                    - name: Bezpieczeństwo wątkowe
+                      href: base-types/thread-safety-in-regular-expressions.md
+                - name: Przykłady
+                  items:
+                    - name: Skanowanie pod kątem odwołań HREF
+                      href: base-types/regular-expression-example-scanning-for-hrefs.md
+                    - name: Zmiana formatów dat
+                      href: base-types/regular-expression-example-changing-date-formats.md
+                    - name: Wyodrębnianie protokołu i numeru portu z adresu URL
+                      href: base-types/how-to-extract-a-protocol-and-port-number-from-a-url.md
+                    - name: Usuwanie nieprawidłowych znaków z ciągu
+                      href: base-types/how-to-strip-invalid-characters-from-a-string.md
+                    - name: 'Sprawdzanie, czy ciągi mają prawidłowy format poczty e-mail'
+                      href: base-types/how-to-verify-that-strings-are-in-valid-email-format.md
+        - name: Kodowanie znaków na platformie .NET
+          href: base-types/character-encoding-introduction.md
+        - name: Jak używać klas kodowania znaków
+          href: base-types/character-encoding.md
+        - name: Analizowanie ciągów
+          items:
+            - name: Omówienie
+              href: base-types/parsing-strings.md
+            - name: Analizowanie ciągów liczbowych
+              href: base-types/parsing-numeric.md
+            - name: Analizowanie ciągów daty i godziny
+              href: base-types/parsing-datetime.md
+            - name: Analizowanie innych ciągów
+              href: base-types/parsing-other.md
 - name: Biblioteki klas .NET
   href: class-libraries.md
 - name: Analizatory
-  href: analyzers/index.md
   items:
+    - name: Omówienie
+      href: analyzers/index.md
+      displayName: analyzers
     - name: Analizator interfejsu API
       href: analyzers/api-analyzer.md
     - name: Analizator przenośności
       href: analyzers/portability-analyzer.md
     - name: Analizator struktury
       href: analyzers/framework-analyzer.md
-- name: Obsługa i zgłaszanie wyjątków
-  href: exceptions/
+- name: Obsługa wyjątków
+  items:
+    - name: Omówienie
+      href: exceptions/index.md
+      displayName: exceptions
+    - name: Właściwości i klasy wyjątków
+      href: exceptions/exception-class-and-properties.md
+    - name: Instrukcje
+      items:
+        - name: Używanie bloku try/catch do przechwytywania wyjątków
+          href: exceptions/how-to-use-the-try-catch-block-to-catch-exceptions.md
+        - name: Używanie określonych wyjątków w bloku catch
+          href: exceptions/how-to-use-specific-exceptions-in-a-catch-block.md
+        - name: Jawne zgłaszanie wyjątków
+          href: exceptions/how-to-explicitly-throw-exceptions.md
+        - name: Tworzenie wyjątków zdefiniowanych przez użytkownika
+          href: exceptions/how-to-create-user-defined-exceptions.md
+        - name: Tworzenie wyjątków zdefiniowanych przez użytkownika z zastosowaniem zlokalizowanych komunikatów o wyjątkach
+          href: exceptions/how-to-create-localized-exception-messages.md
+        - name: Używanie bloków finally
+          href: exceptions/how-to-use-finally-blocks.md
+    - name: Używanie obsługi wyjątków filtrowanej przez użytkownika
+      href: exceptions/using-user-filtered-exception-handlers.md
+    - name: Obsługa wyjątków usługi międzyoperacyjnej modelu COM
+      href: exceptions/handling-com-interop-exceptions.md
+    - name: Najlepsze rozwiązania
+      href: exceptions/best-practices-for-exceptions.md
 - name: Zestawy w środowisku .NET
   href: assembly/
-- name: Odzyskiwanie pamięci
-  href: garbage-collection/
+- name: Zarządzanie pamięcią
+  items:
+    - name: Oczyszczanie zasobów niezarządzanych
+      items:
+        - name: Omówienie
+          href: garbage-collection/unmanaged.md
+          displayName: 'unmanaged resources, memory management'
+        - name: Implementacja metody Dispose
+          href: garbage-collection/implementing-dispose.md
+        - name: Używanie obiektów implementujących interfejs IDisposable
+          href: garbage-collection/using-objects.md
+    - name: Wyrzucanie elementów bezużytecznych
+      items:
+        - name: Omówienie
+          href: garbage-collection/index.md
+          displayName: garbage collection
+        - name: Podstawy
+          href: garbage-collection/fundamentals.md
+        - name: Sterta obiektów wielkich
+          href: garbage-collection/large-object-heap.md
+        - name: Odzyskiwanie pamięci i wydajność
+          href: garbage-collection/performance.md
+        - name: Wywołane kolekcje
+          href: garbage-collection/induced.md
+        - name: Tryby opóźnienia
+          href: garbage-collection/latency.md
+        - name: Optymalizacja udostępnionej usługi hostingu internetowego
+          href: garbage-collection/optimization-for-shared-web-hosting.md
+        - name: Powiadomienia dotyczące odzyskiwania pamięci
+          href: garbage-collection/notifications.md
+        - name: Monitorowanie zasobów domen aplikacji
+          href: garbage-collection/app-domain-resource-monitoring.md
+        - name: Słabe odwołania
+          href: garbage-collection/weak-references.md
 - name: Typy ogólne
-  href: generics.md
+  items:
+    - name: Omówienie
+      href: generics/index.md
+    - name: Wprowadzenie do typów ogólnych
+      href: generics.md
+    - name: Kolekcje ogólne na platformie .NET
+      href: generics/collections.md
+    - name: Delegowanie ogólne w celu manipulowania tablicami i listami
+      href: generics/delegates-for-manipulating-arrays-and-lists.md
+    - name: Interfejsy ogólne
+      href: generics/interfaces.md
+    - name: Kowariancja i kontrawariancja
+      href: generics/covariance-and-contravariance.md
 - name: Delegaci i wyrażenia lambda
   href: delegates-lambdas.md
 - name: LINQ
@@ -64,27 +269,169 @@
 - name: System typu wspólnego i specyfikacja języka wspólnego
   href: common-type-system.md
 - name: 'Przetwarzanie równoległe, współbieżność i asynchroniczność'
-  href: parallel-processing-and-concurrency.md
   items:
+    - name: Omówienie
+      href: parallel-processing-and-concurrency.md
+      displayName: 'Parallel processing, concurrency, async'
     - name: Programowanie asynchroniczne
-      href: async.md
       items:
+        - name: Omówienie
+          href: async.md
         - name: Programowanie asynchroniczne — omówienie szczegółowe
           href: async-in-depth.md
         - name: Wzorce programowania asynchronicznego
           href: asynchronous-programming-patterns/
     - name: Programowanie równoległe
-      href: parallel-programming/
+      items:
+        - name: Omówienie
+          href: parallel-programming/index.md
+        - name: Biblioteka zadań równoległych (TPL)
+          href: parallel-programming/task-parallel-library-tpl.md
+          items:
+            - name: Równoległość danych
+              href: parallel-programming/data-parallelism-task-parallel-library.md
+              items:
+                - name: 'Instrukcje: Zapisywanie prostej pętli Parallel.For'
+                  href: parallel-programming/how-to-write-a-simple-parallel-for-loop.md
+                - name: 'Instrukcje: Zapisywanie prostej pętli Parallel.ForEach'
+                  href: parallel-programming/how-to-write-a-simple-parallel-foreach-loop.md
+                - name: 'Instrukcje: Zapisywanie pętli Parallel.For ze zmiennymi lokalnymi wątku'
+                  href: parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md
+                - name: 'Instrukcje: Zapisywanie pętli Parallel.ForEach ze zmiennymi lokalnymi partycji'
+                  href: parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md
+                - name: 'Instrukcje: Anulowanie pętli Parallel.For lub ForEach'
+                  href: parallel-programming/how-to-cancel-a-parallel-for-or-foreach-loop.md
+                - name: 'Instrukcje: Obsługa wyjątków w pętlach równoległych'
+                  href: parallel-programming/how-to-handle-exceptions-in-parallel-loops.md
+                - name: 'Instrukcje: Przyspieszanie małych jednostek pętli'
+                  href: parallel-programming/how-to-speed-up-small-loop-bodies.md
+                - name: 'Instrukcje: Iteracja katalogów plików przy użyciu klas równoległych'
+                  href: parallel-programming/how-to-iterate-file-directories-with-the-parallel-class.md
+            - name: Programowanie asynchroniczne oparte na zadaniach
+              href: parallel-programming/task-based-asynchronous-programming.md
+              items:
+                - name: Tworzenie łańcuchów zadań przy użyciu zadań kontynuacji
+                  href: parallel-programming/chaining-tasks-by-using-continuation-tasks.md
+                - name: Dołączone i odłączone zadania podrzędne
+                  href: parallel-programming/attached-and-detached-child-tasks.md
+                - name: Anulowanie zadania
+                  href: parallel-programming/task-cancellation.md
+                - name: Obsługa wyjątków
+                  href: parallel-programming/exception-handling-task-parallel-library.md
+                - name: 'Instrukcje: Wykonywanie operacji równoległych za pomocą elementu Parallel.Invoke'
+                  href: parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md
+                - name: 'Instrukcje: Zwracanie wartości z zadania'
+                  href: parallel-programming/how-to-return-a-value-from-a-task.md
+                - name: 'Instrukcje: Anulowanie zadania i jego elementów podrzędnych'
+                  href: parallel-programming/how-to-cancel-a-task-and-its-children.md
+                - name: 'Instrukcje: Tworzenie wstępnie obliczonych zadań'
+                  href: parallel-programming/how-to-create-pre-computed-tasks.md
+                - name: 'Instrukcje: Przenoszenie drzewa binarnego z zadaniami równoległymi'
+                  href: parallel-programming/how-to-traverse-a-binary-tree-with-parallel-tasks.md
+                - name: 'Instrukcje: Odpakowywanie zadania zagnieżdżonego'
+                  href: parallel-programming/how-to-unwrap-a-nested-task.md
+                - name: 'Instrukcje: Zapobieganie łączeniu zadania podrzędnego z odpowiadającym mu zadaniem nadrzędnym'
+                  href: parallel-programming/how-to-prevent-a-child-task-from-attaching-to-its-parent.md
+            - name: Przepływ danych
+              href: parallel-programming/dataflow-task-parallel-library.md
+              items:
+                - name: 'Instrukcje: Zapisywanie komunikatów w bloku przepływu danych i odczytywanie ich z tego bloku'
+                  href: parallel-programming/how-to-write-messages-to-and-read-messages-from-a-dataflow-block.md
+                - name: 'Instrukcje: Implementowanie wzorca przepływu danych producent — konsument'
+                  href: parallel-programming/how-to-implement-a-producer-consumer-dataflow-pattern.md
+                - name: 'Instrukcje: Wykonywanie akcji w przypadku odebrania danych przez blok przepływu danych'
+                  href: parallel-programming/how-to-perform-action-when-a-dataflow-block-receives-data.md
+                - name: 'Przewodnik: Tworzenie potoku przepływu danych'
+                  href: parallel-programming/walkthrough-creating-a-dataflow-pipeline.md
+                - name: 'Instrukcje: Rozłączanie bloków przepływu danych'
+                  href: parallel-programming/how-to-unlink-dataflow-blocks.md
+                - name: 'Przewodnik: Korzystanie z przepływu danych w aplikacji Windows Forms'
+                  href: parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md
+                - name: 'Instrukcje: Anulowanie bloku przepływu danych'
+                  href: parallel-programming/how-to-cancel-a-dataflow-block.md
+                - name: 'Przewodnik: Tworzenie niestandardowego typu bloku przepływu danych'
+                  href: parallel-programming/walkthrough-creating-a-custom-dataflow-block-type.md
+                - name: 'Instrukcje: Korzystanie z klasy JoinBlock do odczytywania danych z wielu źródeł'
+                  href: parallel-programming/how-to-use-joinblock-to-read-data-from-multiple-sources.md
+                - name: 'Instrukcje: Określanie stopnia równoległości w bloku przepływu danych'
+                  href: parallel-programming/how-to-specify-the-degree-of-parallelism-in-a-dataflow-block.md
+                - name: 'Instrukcje: Określanie harmonogramu zadań w bloku przepływu danych'
+                  href: parallel-programming/how-to-specify-a-task-scheduler-in-a-dataflow-block.md
+                - name: 'Przewodnik: Poprawa wydajności przy użyciu klas BatchBlock i BatchedJoinBlock'
+                  href: parallel-programming/walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency.md
+            - name: Korzystanie z modelu TPL z innymi wzorami asynchronicznymi
+              href: parallel-programming/using-tpl-with-other-asynchronous-patterns.md
+              items:
+                - name: Programowanie asynchroniczne w TPL i standardowym .NET Framework
+                  href: parallel-programming/tpl-and-traditional-async-programming.md
+                - name: 'Instrukcje: Opakowywanie wzorców EAP w zadaniu'
+                  href: parallel-programming/how-to-wrap-eap-patterns-in-a-task.md
+            - name: Potencjalne pułapki związane z równoległością danych i zadań
+              href: parallel-programming/potential-pitfalls-in-data-and-task-parallelism.md
+        - name: Równoległe LINQ (PLINQ)
+          items:
+            - name: Wprowadzenie do PLINQ
+              href: parallel-programming/introduction-to-plinq.md
+            - name: Ogólne informacje o przyspieszeniach w PLINQ
+              href: parallel-programming/understanding-speedup-in-plinq.md
+            - name: Zamawianie zachowywania w PLINQ
+              href: parallel-programming/order-preservation-in-plinq.md
+            - name: Opcje scalania w PLINQ
+              href: parallel-programming/merge-options-in-plinq.md
+            - name: Potencjalne pułapki związane z PLINQ
+              href: parallel-programming/potential-pitfalls-with-plinq.md
+            - name: 'Instrukcje: Tworzenie i wykonywanie prostego zapytania PLINQ'
+              href: parallel-programming/how-to-create-and-execute-a-simple-plinq-query.md
+            - name: 'Instrukcje: Sterowanie szeregowaniem w zapytaniu PLINQ'
+              href: parallel-programming/how-to-control-ordering-in-a-plinq-query.md
+            - name: 'Instrukcje: Łączenie równoległych i sekwencyjnych zapytań LINQ'
+              href: parallel-programming/how-to-combine-parallel-and-sequential-linq-queries.md
+            - name: 'Instrukcje: Obsługa wyjątków w zapytaniu PLINQ'
+              href: parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md
+            - name: 'Instrukcje: Anulowanie zapytania PLINQ'
+              href: parallel-programming/how-to-cancel-a-plinq-query.md
+            - name: 'Instrukcje: Pisanie niestandardowej funkcji agregowania w PLINQ'
+              href: parallel-programming/how-to-write-a-custom-plinq-aggregate-function.md
+            - name: 'Instrukcje: Określanie trybu wykonywania w PLINQ'
+              href: parallel-programming/how-to-specify-the-execution-mode-in-plinq.md
+            - name: 'Instrukcje: Określanie opcji scalania w PLINQ'
+              href: parallel-programming/how-to-specify-merge-options-in-plinq.md
+            - name: 'Instrukcje: Iteracja katalogów plików przy użyciu technologii PLINQ'
+              href: parallel-programming/how-to-iterate-file-directories-with-plinq.md
+            - name: 'Instrukcje: Mierzenie wydajności zapytań PLINQ'
+              href: parallel-programming/how-to-measure-plinq-query-performance.md
+            - name: Próbka danych PLINQ
+              href: parallel-programming/plinq-data-sample.md
+        - name: Struktury danych dla programowania równoległego
+          href: parallel-programming/data-structures-for-parallel-programming.md
+        - name: Równoległe narzędzia diagnostyczne
+          href: parallel-programming/parallel-diagnostic-tools.md
+        - name: Niestandardowe partycjonery dla PLINQ i TPL
+          items:
+            - name: Omówienie
+              href: parallel-programming/custom-partitioners-for-plinq-and-tpl.md
+              displayName: custom partitioners
+            - name: 'Instrukcje: Implementowanie partycji dynamicznych'
+              href: parallel-programming/how-to-implement-dynamic-partitions.md
+            - name: 'Instrukcje: Implementowanie partycjonera dla partycjonowania statycznego'
+              href: parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md
+        - name: Wyrażenia lambda w PLINQ i TPL
+          href: parallel-programming/lambda-expressions-in-plinq-and-tpl.md
+        - name: Dodatkowe informacje
+          href: parallel-programming/for-further-reading-parallel-programming.md
     - name: Wątkowość
       href: threading/
 - name: Pamięć i typy związane z zakresem
-  href: memory-and-spans/index.md
   items:
+    - name: Omówienie
+      href: memory-and-spans/index.md
     - name: Wytyczne dotyczące użycia struktur Memory<T> i Span<T>
       href: memory-and-spans/memory-t-usage-guidelines.md
 - name: Współdziałanie natywne
-  href: native-interop/index.md
   items:
+    - name: Omówienie
+      href: native-interop/index.md
+      displayName: Native interop
     - name: P/Invoke
       href: native-interop/pinvoke.md
     - name: Marshaling typów
@@ -97,12 +444,16 @@
       href: native-interop/best-practices.md
     - name: Zestawy znaków i marshaling
       href: native-interop/charset.md
-    - name: COM Interop
-      href: native-interop/cominterop.md
+    - name: COM interop
       items:
+        - name: Omówienie
+          href: native-interop/cominterop.md
+          displayName: COM interop
         - name: Otoki COM
-          href: native-interop/com-wrappers.md
           items:
+            - name: Omówienie
+              href: native-interop/com-wrappers.md
+              displayName: COM wrappers
             - name: Wywoływana otoka środowiska uruchomieniowego
               href: native-interop/runtime-callable-wrapper.md
             - name: Wywoływana otoka COM
@@ -114,29 +465,245 @@
     - name: Wyjątki
       href: native-interop/exceptions-interoperability.md
 - name: Kolekcje i struktury danych
-  href: collections/
+  items:
+    - name: Omówienie
+      href: collections/index.md
+      displayName: 'collections, data structures'
+    - name: Wybieranie klasy kolekcji
+      href: collections/selecting-a-collection-class.md
+    - name: Często używane typy kolekcji
+      href: collections/commonly-used-collection-types.md
+    - name: Kiedy należy używać kolekcji ogólnych
+      href: collections/when-to-use-generic-collections.md
+    - name: Porównywanie i sortowanie w kolekcjach
+      href: collections/comparisons-and-sorts-within-collections.md
+    - name: Sortowane typy kolekcji
+      href: collections/sorted-collection-types.md
+    - name: Typy tablicy skrótów i słownika
+      href: collections/hashtable-and-dictionary-collection-types.md
+    - name: Kolekcje bezpieczne wątkowo
+      href: collections/thread-safe/
 - name: Wartości numeryczne na platformie .NET
   href: numerics.md
 - name: 'Daty, godziny i strefy czasowe'
   href: datetime/
 - name: Zdarzenia
-  href: events/
+  items:
+    - name: Omówienie
+      href: events/index.md
+      displayName: events
+    - name: Wywoływanie zdarzeń i korzystanie z nich
+      href: events/how-to-raise-and-consume-events.md
+    - name: Obsługa wielu zdarzeń przy użyciu właściwości zdarzenia
+      href: events/how-to-handle-multiple-events-using-event-properties.md
+    - name: Korzystanie ze zdarzeń w aplikacjach Web Forms
+      href: events/how-to-consume-events-in-a-web-forms-application.md
+    - name: Wzorzec projektowy obserwatora
+      items:
+        - name: Omówienie
+          href: events/observer-design-pattern.md
+          displayName: Observer design pattern
+        - name: Najlepsze rozwiązania
+          href: events/observer-design-pattern-best-practices.md
+        - name: 'Instrukcje: Implementowanie dostawcy'
+          href: events/how-to-implement-a-provider.md
+        - name: 'Instrukcje: Implementowanie obserwatora'
+          href: events/how-to-implement-an-observer.md
 - name: Proces zarządzanego wykonania
   href: managed-execution-process.md
 - name: Składniki samoopisujące się i metadane
   href: metadata-and-self-describing-components.md
 - name: Tworzenie aplikacji konsolowych
   href: building-console-apps.md
-- name: Podstawy aplikacji
-  href: application-essentials.md
-- name: We/Wy plików i strumieni
-  href: io/index.md
-- name: Lokalizacja i globalizacja
+- name: We/wy plików i strumieni
+  items:
+    - name: Omówienie
+      href: io/index.md
+    - name: Formaty ścieżek plików w systemie Windows
+      href: io/file-path-formats.md
+    - name: Typowe zadania we/wy
+      href: io/common-i-o-tasks.md
+      items:
+        - name: 'Instrukcje: Kopiowanie katalogów'
+          href: io/how-to-copy-directories.md
+        - name: 'Instrukcje: Wyliczanie katalogów i plików'
+          href: io/how-to-enumerate-directories-and-files.md
+        - name: 'Instrukcje: Odczyt i zapis we właśnie utworzonym pliku danych'
+          href: io/how-to-read-and-write-to-a-newly-created-data-file.md
+        - name: 'Instrukcje: Otwieranie pliku dziennika i dołączanie do niego'
+          href: io/how-to-open-and-append-to-a-log-file.md
+        - name: 'Instrukcje: Zapisywanie tekstu w pliku'
+          href: io/how-to-write-text-to-a-file.md
+        - name: 'Instrukcje: Odczytywanie tekstu z pliku'
+          href: io/how-to-read-text-from-a-file.md
+        - name: 'Instrukcje: Odczytywanie znaków z ciągu'
+          href: io/how-to-read-characters-from-a-string.md
+        - name: 'Instrukcje: Zapisywanie znaków w ciągu'
+          href: io/how-to-write-characters-to-a-string.md
+        - name: 'Instrukcje: Dodawanie lub usuwanie pozycji listy kontroli dostępu'
+          href: io/how-to-add-or-remove-access-control-list-entries.md
+        - name: 'Instrukcje: Kompresowanie i wyodrębnianie plików'
+          href: io/how-to-compress-and-extract-files.md
+        - name: Tworzenie strumieni
+          href: io/composing-streams.md
+        - name: 'Instrukcje: Konwersja strumieni platformy .NET Framework i strumieni środowiska wykonawczego systemu Windows'
+          href: io/how-to-convert-between-dotnet-streams-and-winrt-streams.md
+    - name: Asynchroniczne operacje we/wy pliku
+      href: io/asynchronous-file-i-o.md
+    - name: Obsługa błędów operacji we/wy
+      href: io/handling-io-errors.md
+    - name: Wydzielona pamięć masowa
+      href: io/isolated-storage.md
+      items:
+        - name: Typy izolacji
+          href: io/types-of-isolation.md
+        - name: 'Instrukcje: Uzyskiwanie magazynów dla izolowanego magazynu'
+          href: io/how-to-obtain-stores-for-isolated-storage.md
+        - name: 'Instrukcje: Wykazywanie magazynów dla izolowanego magazynu'
+          href: io/how-to-enumerate-stores-for-isolated-storage.md
+        - name: 'Instrukcje: Usuwanie danych z izolowanego magazynu'
+          href: io/how-to-delete-stores-in-isolated-storage.md
+        - name: 'Instrukcje: Przewidywanie warunków braku miejsca w izolowanym magazynie'
+          href: io/how-to-anticipate-out-of-space-conditions-with-isolated-storage.md
+        - name: 'Instrukcje: Tworzenie plików i katalogów w izolowanym magazynie'
+          href: io/how-to-create-files-and-directories-in-isolated-storage.md
+        - name: 'Instrukcje: Wyszukiwanie istniejących plików i katalogów w izolowanym magazynie'
+          href: io/how-to-find-existing-files-and-directories-in-isolated-storage.md
+        - name: 'Instrukcje: Odczyt i zapis w plikach w izolowanym magazynie'
+          href: io/how-to-read-and-write-to-files-in-isolated-storage.md
+        - name: 'Instrukcje: Usuwanie plików i katalogów w izolowanym magazynie'
+          href: io/how-to-delete-files-and-directories-in-isolated-storage.md
+    - name: Potoki
+      href: io/pipe-operations.md
+      items:
+        - name: 'Instrukcje: Stosowanie anonimowych potoków do lokalnej komunikacji międzyprocesowej'
+          href: io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md
+        - name: 'Instrukcje: Stosowanie nazwanych potoków do sieciowej komunikacji międzyprocesowej'
+          href: io/how-to-use-named-pipes-for-network-interprocess-communication.md
+    - name: Potoki
+      href: io/pipelines.md
+    - name: Praca z buforami
+      href: io/buffers.md
+    - name: Pliki mapowane w pamięci
+      href: io/memory-mapped-files.md
+- name: Globalizacja i lokalizacja
   href: globalization-localization/
 - name: Atrybuty
-  href: attributes/
+  items:
+    - name: Omówienie
+      href: attributes/index.md
+      displayName: attributes
+    - name: Stosowanie atrybutów
+      href: attributes/applying-attributes.md
+    - name: Pisanie atrybutów niestandardowych
+      href: attributes/writing-custom-attributes.md
+    - name: Pobieranie informacji przechowywanych w atrybutach
+      href: attributes/retrieving-information-stored-in-attributes.md
 - name: Framework — zalecenia dotyczące projektowania
-  href: design-guidelines/
+  items:
+    - name: Omówienie
+      href: design-guidelines/index.md
+    - name: Wskazówki dotyczące nazewnictwa
+      href: design-guidelines/naming-guidelines.md
+      items:
+        - name: Konwencje dotyczące wielkości liter
+          href: design-guidelines/capitalization-conventions.md
+        - name: Ogólne konwencje nazewnictwa
+          href: design-guidelines/general-naming-conventions.md
+        - name: Nazwy zestawów i bibliotek DLL
+          href: design-guidelines/names-of-assemblies-and-dlls.md
+        - name: Nazwy przestrzeni nazw
+          href: design-guidelines/names-of-namespaces.md
+        - name: 'Nazwy klas, struktur i interfejsów'
+          href: design-guidelines/names-of-classes-structs-and-interfaces.md
+        - name: Nazwy składowych typu
+          href: design-guidelines/names-of-type-members.md
+        - name: Nazewnictwo parametrów
+          href: design-guidelines/naming-parameters.md
+        - name: Nazewnictwo zasobów
+          href: design-guidelines/naming-resources.md
+    - name: Typy — zalecenia dotyczące projektowania
+      href: design-guidelines/type.md
+      items:
+        - name: Wybieranie między klasą i strukturą
+          href: design-guidelines/choosing-between-class-and-struct.md
+        - name: Projekt klasy abstrakcyjnej
+          href: design-guidelines/abstract-class.md
+        - name: Projekt klasy statycznej
+          href: design-guidelines/static-class.md
+        - name: Projekt interfejsu
+          href: design-guidelines/interface.md
+        - name: Projekt struktury
+          href: design-guidelines/struct.md
+        - name: Projekt wyliczeń
+          href: design-guidelines/enum.md
+        - name: Zagnieżdżone typy
+          href: design-guidelines/nested-types.md
+    - name: Składowa — zalecenia dotyczące projektowania
+      href: design-guidelines/member.md
+      items:
+        - name: Przeciążanie składowej
+          href: design-guidelines/member-overloading.md
+        - name: Projekt właściwości
+          href: design-guidelines/property.md
+        - name: Projekt konstruktora
+          href: design-guidelines/constructor.md
+        - name: Projekt zdarzenia
+          href: design-guidelines/event.md
+        - name: Projekt pola
+          href: design-guidelines/field.md
+        - name: Metody rozszerzeń
+          href: design-guidelines/extension-methods.md
+        - name: Przeciążenia operatorów
+          href: design-guidelines/operator-overloads.md
+        - name: Projekt parametrów
+          href: design-guidelines/parameter-design.md
+    - name: Projektowanie pod kątem rozszerzalności
+      href: design-guidelines/designing-for-extensibility.md
+      items:
+        - name: Niezapieczętowane klasy
+          href: design-guidelines/unsealed-classes.md
+        - name: Chronione składowe
+          href: design-guidelines/protected-members.md
+        - name: Zdarzenia i wywołania zwrotne
+          href: design-guidelines/events-and-callbacks.md
+        - name: Wirtualne składowe
+          href: design-guidelines/virtual-members.md
+        - name: Abstrakcje (typy abstrakcyjne i interfejsy)
+          href: design-guidelines/abstractions-abstract-types-and-interfaces.md
+        - name: Klasy bazowe na potrzeby implementowania abstrakcji
+          href: design-guidelines/base-classes-for-implementing-abstractions.md
+        - name: Pieczętowanie
+          href: design-guidelines/sealing.md
+    - name: Wskazówki dotyczące projektowania wyjątków
+      href: design-guidelines/exceptions.md
+      items:
+        - name: Zgłaszanie wyjątku
+          href: design-guidelines/exception-throwing.md
+        - name: Używanie standardowych typów wyjątków
+          href: design-guidelines/using-standard-exception-types.md
+        - name: Wyjątki i wydajność
+          href: design-guidelines/exceptions-and-performance.md
+    - name: Zalecenia dotyczące użycia
+      href: design-guidelines/usage-guidelines.md
+      items:
+        - name: Tablice
+          href: design-guidelines/arrays.md
+        - name: Atrybuty
+          href: design-guidelines/attributes.md
+        - name: Kolekcje
+          href: design-guidelines/guidelines-for-collections.md
+        - name: Serializacja
+          href: design-guidelines/serialization.md
+        - name: Użycie zestawu System.Xml
+          href: design-guidelines/system-xml-usage.md
+        - name: Operatory równości
+          href: design-guidelines/equality-operators.md
+    - name: Często używane wzorce projektowe
+      href: design-guidelines/common-design-patterns.md
+      items:
+        - name: Właściwości zależności
+          href: design-guidelines/dependency-properties.md
 - name: Microsoft.Data.Sqlite
   href: data/sqlite/
 - name: Dokumenty i dane XML
@@ -144,6 +711,113 @@
 - name: Zabezpieczenia
   href: security/
 - name: Serializacja
-  href: serialization/
+  items:
+    - name: Omówienie
+      href: serialization/index.md
+    - name: Serializacja JSON
+      items:
+        - name: Omówienie
+          href: serialization/system-text-json-overview.md
+          displayName: json serialization
+        - name: Jak serializować i deserializować dane JSON
+          href: serialization/system-text-json-how-to.md
+        - name: Jak pisać konwertery niestandardowe
+          href: serialization/system-text-json-converters-how-to.md
+        - name: Jak przeprowadzić migrację z pliku Newtonsoft.Json
+          href: serialization/system-text-json-migrate-from-newtonsoft-how-to.md
+    - name: Serializacja binarna
+      items:
+        - name: Omówienie
+          href: serialization/binary-serialization.md
+          displayName: binary serialization
+        - name: Koncepcje z zakresu serializacji
+          href: serialization/serialization-concepts.md
+        - name: Serializacja podstawowa
+          href: serialization/basic-serialization.md
+        - name: Serializacja selektywna
+          href: serialization/selective-serialization.md
+        - name: Serializacja niestandardowa
+          href: serialization/custom-serialization.md
+        - name: Kroki procesu serializacji
+          href: serialization/steps-in-the-serialization-process.md
+        - name: Serializacja z tolerancją dla wersji
+          href: serialization/version-tolerant-serialization.md
+        - name: Wskazówki dotyczące serializacji
+          href: serialization/serialization-guidelines.md
+        - name: 'Instrukcje: Dzielenie danych serializowanych na fragmenty'
+          href: serialization/how-to-chunk-serialized-data.md
+        - name: 'Instrukcje: ustalanie, czy obiekt standardowy .NET można poddać serializacji'
+          href: serialization/how-to-determine-if-netstandard-object-is-serializable.md
+        - name: Przykłady
+          href: serialization/samples-binary.md
+    - name: Serializacja XML i SOAP
+      items:
+        - name: Omówienie
+          href: serialization/xml-and-soap-serialization.md
+        - name: Szczegółowe informacje o serializacji XML
+          href: serialization/introducing-xml-serialization.md
+        - name: Przykłady
+          href: serialization/examples-of-xml-serialization.md
+        - name: Narzędzie definicji schematu XML
+          href: serialization/the-xml-schema-definition-tool-and-xml-serialization.md
+        - name: Kontrolowanie serializacji XML przy użyciu atrybutów
+          href: serialization/controlling-xml-serialization-using-attributes.md
+        - name: Atrybuty kontrolujące serializację XML
+          href: serialization/attributes-that-control-xml-serialization.md
+        - name: Serializacja XML z usługami internetowymi XML
+          href: serialization/xml-serialization-with-xml-web-services.md
+        - name: Atrybuty kontrolujące zakodowaną serializację SOAP
+          href: serialization/attributes-that-control-encoded-soap-serialization.md
+        - name: Instrukcje
+          items:
+            - name: Serializowanie obiektu
+              href: serialization/how-to-serialize-an-object.md
+            - name: Deserializowanie obiektu
+              href: serialization/how-to-deserialize-an-object.md
+            - name: Generowanie klas i dokumentów schematu XML przy użyciu narzędzia definicji schematu XML
+              href: serialization/xml-schema-def-tool-gen.md
+            - name: Kontrola serializacji klas pochodnych
+              href: serialization/how-to-control-serialization-of-derived-classes.md
+            - name: Określanie alternatywnej nazwy elementu dla strumienia XML
+              href: serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md
+            - name: Kwalifikowanie elementu XML i nazw atrybutów XML
+              href: serialization/how-to-qualify-xml-element-and-xml-attribute-names.md
+            - name: Serializowanie obiektu jako strumienia XML kodowanego w formacie protokołu SOAP
+              href: serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md
+            - name: Zastępowanie zakodowanej serializacji XML protokołu SOAP
+              href: serialization/how-to-override-encoded-soap-xml-serialization.md
+        - name: Elementy serializacji XML
+          items:
+            - name: System.XML.serialization
+              href: serialization/system-xml-serialization-element.md
+            - name: dateTimeSerialization
+              href: serialization/datetimeserialization-element.md
+            - name: schemaImporterExtensions
+              href: serialization/schemaimporterextensions-element.md
+            - name: Dodawanie elementu dla właściwości schemaImporterExtensions
+              href: serialization/add-element-for-schemaimporterextensions.md
+            - name: xmlSerializer
+              href: serialization/xmlserializer-element.md
+        - name: Narzędzia
+          items:
+            - name: Narzędzie generatora serializatora XML (Sgen.exe)
+              href: serialization/xml-serializer-generator-tool-sgen-exe.md
+            - name: Narzędzie definicji schematu XML (Xsd.exe)
+              href: serialization/xml-schema-definition-tool-xsd-exe.md
+        - name: Przykłady
+          href: serialization/samples-xml.md
 - name: Tworzenie aplikacji dla wielu platform
-  href: cross-platform/
+  items:
+    - name: Omówienie
+      href: cross-platform/index.md
+      displayName: cross platform
+    - name: Biblioteka klas przenośnych
+      href: cross-platform/cross-platform-development-with-the-portable-class-library.md
+    - name: Korzystanie z przenośnej biblioteki klas z modelem MVVM
+      href: cross-platform/using-portable-class-library-with-model-view-view-model.md
+    - name: Zasoby aplikacji dla bibliotek przeznaczonych dla wielu platform
+      href: cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md
+    - name: Obsługa programu .NET Framework dla aplikacji ze sklepu Microsoft Store i środowiska wykonawczego systemu Windows
+      href: cross-platform/support-for-windows-store-apps-and-windows-runtime.md
+    - name: Przekazywanie identyfikatora URI do środowiska wykonawczego systemu Windows
+      href: cross-platform/passing-a-uri-to-the-windows-runtime.md

@@ -2,12 +2,12 @@
 title: Subskrybowanie zdarzeń
 description: Architektura mikrousług platformy .NET dla konteneryzowanych aplikacji .NET | Poznaj szczegóły publikowania i subskrypcji zdarzeń integracji.
 ms.date: 01/30/2020
-ms.openlocfilehash: 7e78970933fdad27d2be74e7d498b0797fc09bc0
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.openlocfilehash: 426dcebe175e9db9a02bcdb2f21ad039154a7bda
+ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805497"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80888218"
 ---
 # <a name="subscribing-to-events"></a>Subskrybowanie zdarzeń
 
@@ -151,7 +151,7 @@ O drugim podejściu: używasz EventLog tabeli jako kolejki i zawsze używać mik
 
 **Rysunek 6-23**. Niepodzielność podczas publikowania zdarzeń w magistrali zdarzeń za pomocą mikrousług procesu roboczego
 
-Dla uproszczenia przykład eShopOnContainers używa pierwszego podejścia (bez dodatkowych procesów lub mikrousług sprawdzania) plus magistrali zdarzeń. Jednak eShopOnContainers nie obsługuje wszystkich możliwych przypadków awarii. W rzeczywistej aplikacji wdrożonej w chmurze, należy ogarnąć fakt, że problemy pojawią się w końcu i należy zaimplementować, że logika sprawdzania i ponownego wysłania. Korzystanie z tabeli jako kolejki może być bardziej skuteczne niż pierwsze podejście, jeśli masz tę tabelę jako pojedyncze źródło zdarzeń podczas publikowania ich (z pracownikiem) za pośrednictwem magistrali zdarzeń.
+Dla uproszczenia przykład eShopOnContainers używa pierwszego podejścia (bez dodatkowych procesów lub mikrousług sprawdzania) plus magistrali zdarzeń. Jednak przykład eShopOnContainers nie obsługuje wszystkich możliwych przypadków awarii. W rzeczywistej aplikacji wdrożonej w chmurze, należy ogarnąć fakt, że problemy pojawią się w końcu i należy zaimplementować, że logika sprawdzania i ponownego wysłania. Korzystanie z tabeli jako kolejki może być bardziej skuteczne niż pierwsze podejście, jeśli masz tę tabelę jako pojedyncze źródło zdarzeń podczas publikowania ich (z pracownikiem) za pośrednictwem magistrali zdarzeń.
 
 ### <a name="implementing-atomicity-when-publishing-integration-events-through-the-event-bus"></a>Implementowanie niepodzielności podczas publikowania zdarzeń integracji za pośrednictwem magistrali zdarzeń
 
@@ -293,7 +293,7 @@ Przykładem operacji idempotentna jest instrukcja SQL, która wstawia dane do ta
 
 Możliwe jest projektowanie idempotentne wiadomości. Na przykład możesz utworzyć zdarzenie z napisem "ustaw cenę produktu na 25 USD" zamiast "dodaj 5 USD do ceny produktu". Można bezpiecznie przetworzyć pierwszą wiadomość dowolną liczbę razy, a wynik będzie taki sam. To nie jest prawda w przypadku drugiego przesłania. Ale nawet w pierwszym przypadku możesz nie chcieć przetworzyć pierwszego zdarzenia, ponieważ system mógł również wysłać nowsze zdarzenie zmiany ceny i nadpisujesz nową cenę.
 
-Innym przykładem może być zdarzenie zakończone zamówienie propagowane do wielu subskrybentów. Ważne jest, aby informacje o kolejności były aktualizowane w innych systemach tylko raz, nawet jeśli istnieją zduplikowane zdarzenia wiadomości dla tego samego zdarzenia zakończonego zamówienia.
+Innym przykładem może być zdarzenie zakończone zamówieniem, które jest propagowane do wielu subskrybentów. Aplikacja musi upewnić się, że informacje o zamówieniu są aktualizowane w innych systemach tylko raz, nawet jeśli istnieją zduplikowane zdarzenia wiadomości dla tego samego zdarzenia zakończonego zamówienia.
 
 Jest to wygodne, aby mieć pewnego rodzaju tożsamości na zdarzenie, dzięki czemu można utworzyć logikę, która wymusza, że każde zdarzenie jest przetwarzane tylko raz na odbiornik.
 
@@ -310,7 +310,7 @@ Możesz się upewnić, że zdarzenia wiadomości są wysyłane i przetwarzane ty
 
 ### <a name="deduplicating-message-events-at-the-eventhandler-level"></a>Deduplikowanie zdarzeń wiadomości na poziomie EventHandler
 
-Jednym ze sposobów, aby upewnić się, że zdarzenie jest przetwarzane tylko raz przez dowolnego odbiorcy jest implementowanie pewnej logiki podczas przetwarzania zdarzeń wiadomości w programach obsługi zdarzeń. Na przykład jest to podejście używane w aplikacji eShopOnContainers, jak widać w [kodzie źródłowym userCheckoutAcceptedIntegrationEventHandler klasy](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs) po odebraniu userCheckoutAcceptedIntegrationEvent zdarzenia. (W takim przypadku zawijamy CreateOrderCommand z IdentifiedCommand, przy użyciu eventMsg.RequestId jako identyfikator, przed wysłaniem go do programu obsługi polecenia).
+Jednym ze sposobów, aby upewnić się, że zdarzenie jest przetwarzane tylko raz przez dowolnego odbiorcy jest implementowanie pewnej logiki podczas przetwarzania zdarzeń wiadomości w programach obsługi zdarzeń. Na przykład jest to podejście używane w aplikacji eShopOnContainers, jak widać w [kodzie źródłowym UserCheckoutAcceptedIntegrationEventHandler klasy](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs) po odebraniu `UserCheckoutAcceptedIntegrationEvent` zdarzenia integracji. (W takim przypadku `CreateOrderCommand` jest zawijany `IdentifiedCommand` `eventMsg.RequestId` z , przy użyciu jako identyfikator, przed wysłaniem go do programu obsługi polecenia).
 
 ### <a name="deduplicating-messages-when-using-rabbitmq"></a>Deduplikowanie wiadomości podczas korzystania z RabbitMQ
 

@@ -2,12 +2,12 @@
 title: Definiowanie aplikacji z wieloma kontenerami za pomocą pliku docker-compose.yml
 description: Jak określić kompozycję mikrousług dla aplikacji wielokontenerowej z docker-compose.yml.
 ms.date: 01/30/2020
-ms.openlocfilehash: 66775b573c46041475e9cddc622bbde78ae44bc4
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.openlocfilehash: 029fad8bb912457872dd5817a2f76aed57dc53c6
+ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805606"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80888231"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definiowanie aplikacji z wieloma kontenerami za pomocą pliku docker-compose.yml
 
@@ -201,7 +201,7 @@ Typowym przypadkiem użycia jest zdefiniowanie wielu plików redagowania, dzięk
 
 **Rysunek 6-12**. Wiele plików docker-redpose nadrzędnych wartości w podstawowym pliku docker-compose.yml
 
-Można połączyć wiele plików docker-compose*.yml w celu obsługi różnych środowisk. Zacznij od podstawowego pliku docker-compose.yml. Ten plik podstawowy musi zawierać podstawowe lub statyczne ustawienia konfiguracji, które nie zmieniają się w zależności od środowiska. Na przykład eShopOnContainers ma następujący plik docker-compose.yml (uproszczony z mniejszą liczbą usług) jako plik podstawowy.
+Można połączyć wiele plików docker-compose*.yml w celu obsługi różnych środowisk. Zacznij od podstawowego pliku docker-compose.yml. Ten plik podstawowy zawiera podstawowe lub statyczne ustawienia konfiguracji, które nie zmieniają się w zależności od środowiska. Na przykład aplikacja eShopOnContainers ma następujący plik docker-compose.yml (uproszczony z mniejszą liczbą usług) jako plik podstawowy.
 
 ```yml
 #docker-compose.yml (Base)

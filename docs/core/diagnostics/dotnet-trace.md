@@ -2,18 +2,18 @@
 title: narzędzie dotnet-trace - .NET Core
 description: Instalowanie i używanie narzędzia wiersza polecenia dotnet-trace.
 ms.date: 11/21/2019
-ms.openlocfilehash: b19b159636fbf57fa2d461b398fcf9234aab491c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6880c3721e4cab12677bd02c82ca944cc9812670
+ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76737647"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80888088"
 ---
-# <a name="dotnet-trace-performance-analysis-utility"></a>narzędzie dotnet-trace performance analysis utility
+# <a name="dotnet-trace-performance-analysis-utility"></a>narzędzie do analizy wydajności śledzenia dotnet
 
-**Ten artykuł dotyczy:** ✔️ .NET Core 3.0 SDK i nowszych wersji
+**Ten artykuł dotyczy:** ✔️.NET Core 3.0 SDK i nowszych wersjach
 
-## <a name="install-dotnet-trace"></a>Instalowanie śledzenia dotnet
+## <a name="install-dotnet-trace"></a>Instalowanie dotnet-trace
 
 Zainstaluj `dotnet-trace` [pakiet NuGet](https://www.nuget.org/packages/dotnet-trace) za pomocą polecenia [instalacji narzędzia dotnet:](../tools/dotnet-tool-install.md)
 
@@ -31,16 +31,16 @@ dotnet-trace [-h, --help] [--version] <command>
 
 Narzędzie: `dotnet-trace`
 
-* Jest narzędziem .NET Core dla wielu platform.
-* Włącza kolekcję .NET Core ślady uruchomionego procesu bez profilera macierzystego.
-* Jest zbudowany wokół technologii `EventPipe` wieloplatformowej w czasie wykonywania .NET Core.
-* Zapewnia takie samo środowisko w systemie Windows, Linux lub macOS.
+* Jest wieloplatformowym narzędziem .NET Core.
+* Umożliwia zbieranie śladów .NET Core uruchomionego procesu bez natywnego profilera.
+* Jest zbudowany wokół technologii `EventPipe` międzyplatformowej środowiska uruchomieniowego .NET Core.
+* Zapewnia takie samo środowisko w systemach Windows, Linux lub macOS.
 
 ## <a name="options"></a>Opcje
 
 - **`--version`**
 
-  Wyświetla wersję narzędzia dotnet-counters.
+  Wyświetla wersję narzędzia dotnet-trace.
 
 - **`-h|--help`**
 
@@ -50,12 +50,12 @@ Narzędzie: `dotnet-trace`
 
 | Polecenie                                                     |
 | ----------------------------------------------------------- |
-| [dotnet-trace zbierać](#dotnet-trace-collect)               |
-| [konwersja dotnet-trace](#dotnet-trace-convert)               |
+| [zbieranie śladów dotnet](#dotnet-trace-collect)               |
+| [konwersja śledzenia dotnet](#dotnet-trace-convert)               |
 | [dotnet-trace ps](#dotnet-trace-ps) |
-| [profile listy śladów dotnet](#dotnet-trace-list-profiles)   |
+| [profile list śledzenia dotnet](#dotnet-trace-list-profiles)   |
 
-## <a name="dotnet-trace-collect"></a>dotnet-trace zbierać
+## <a name="dotnet-trace-collect"></a>zbieranie śladów dotnet
 
 Zbiera śledzenia diagnostycznego z uruchomionego procesu.
 
@@ -70,7 +70,7 @@ dotnet-trace collect [-h|--help] [-p|--process-id] [--buffersize <size>] [-o|--o
 
 - **`-p|--process-id <PID>`**
 
-  Proces zbierania śladu z.
+  Proces zbierania śledzenia z.
 
 - **`--buffersize <size>`**
 
@@ -78,11 +78,11 @@ dotnet-trace collect [-h|--help] [-p|--process-id] [--buffersize <size>] [-o|--o
 
 - **`-o|--output <trace-file-path>`**
 
-  Ścieżka danych wyjściowych dla zebranych danych śledzenia. Jeśli nie określono, domyślnie . `trace.nettrace`
+  Ścieżka wyjściowa dla zebranych danych śledzenia. Jeśli nie określono, `trace.nettrace`domyślnie jest to .
 
 - **`--providers <list-of-comma-separated-providers>`**
 
-  Lista `EventPipe` dostawców oddzielonych przecinkami, która ma być włączona. Dostawcy ci uzupełniają dostawców `--profile <profile-name>`dorozumianych przez . Jeśli istnieje jakakolwiek niespójność dla określonego dostawcy, ta konfiguracja ma pierwszeństwo przed niejawną konfiguracją z profilu.
+  Lista dostawców oddzielona `EventPipe` przecinkami ma być włączona. Dostawcy ci uzupełniają `--profile <profile-name>`wszelkie dostawców dorozumianych przez . Jeśli istnieje jakakolwiek niespójność dla określonego dostawcy, ta konfiguracja ma pierwszeństwo przed niejawną konfiguracją z profilu.
 
   Ta lista dostawców jest w formie:
 
@@ -96,11 +96,11 @@ dotnet-trace collect [-h|--help] [-p|--process-id] [--buffersize <size>] [-o|--o
 
 - **`--format {NetTrace|Speedscope}`**
 
-  Ustawia format wyjściowy konwersji pliku śledzenia. Wartość domyślna to `NetTrace`.
+  Ustawia format danych wyjściowych dla konwersji pliku śledzenia. Wartość domyślna to `NetTrace`.
 
-## <a name="dotnet-trace-convert"></a>konwersja dotnet-trace
+## <a name="dotnet-trace-convert"></a>konwersja śledzenia dotnet
 
-Konwertuje `nettrace` ślady na alternatywne formaty do użytku z alternatywnymi narzędziami do analizy śladów.
+Konwertuje ślady `nettrace` na alternatywne formaty do użycia z alternatywnymi narzędziami analizy śledzenia.
 
 ### <a name="synopsis"></a>Streszczenie
 
@@ -112,17 +112,17 @@ dotnet-trace convert [<input-filename>] [-h|--help] [--format] [-o|--output]
 
 - **`<input-filename>`**
 
-  Wejściowy plik śledzenia do przekonwertowania. Domyślnie *trace.nettrace*.
+  Wejściowy plik śledzenia do konwersji. Wartość domyślna *trace.nettrace*.
 
 ### <a name="options"></a>Opcje
 
 - **`--format <NetTrace|Speedscope>`**
 
-  Ustawia format wyjściowy konwersji pliku śledzenia.
+  Ustawia format danych wyjściowych dla konwersji pliku śledzenia.
 
 - **`-o|--output <output-filename>`**
 
-  Nazwa pliku wyjściowego. Zostanie dodane rozszerzenie formatu docelowego.
+  Wyjściowa nazwa pliku. Zostanie dodane rozszerzenie formatu docelowego.
 
 ## <a name="dotnet-trace-ps"></a>dotnet-trace ps
 
@@ -134,7 +134,7 @@ Wyświetla listę procesów dotnet, do których można dołączyć.
 dotnet-trace ps [-h|--help]
 ```
 
-## <a name="dotnet-trace-list-profiles"></a>profile listy śladów dotnet
+## <a name="dotnet-trace-list-profiles"></a>profile list śledzenia dotnet
 
 Wyświetla listę wstępnie utworzonych profili śledzenia z opisem dostawców i filtrów w każdym profilu.
 
@@ -144,11 +144,11 @@ Wyświetla listę wstępnie utworzonych profili śledzenia z opisem dostawców i
 dotnet-trace list-profiles [-h|--help]
 ```
 
-## <a name="collect-a-trace-with-dotnet-trace"></a>Zbieranie śladu za pomocą śladu dotnet
+## <a name="collect-a-trace-with-dotnet-trace"></a>Zbieranie śladu za pomocą śledzenia dotnet
 
 Aby zebrać `dotnet-trace`ślady za pomocą:
 
-- Pobierz identyfikator procesu (PID) aplikacji .NET Core, aby zbierać ślady.
+- Pobierz identyfikator procesu (PID) aplikacji .NET Core do zbierania śladów.
 
   - W systemie Windows można na `tasklist` przykład użyć Menedżera zadań lub polecenia.
   - Na przykład w `ps` systemie Linux polecenie.
@@ -172,44 +172,44 @@ Aby zebrać `dotnet-trace`ślady za pomocą:
 
 - Zatrzymaj zbieranie, `<Enter>` naciskając klawisz. `dotnet-trace`zakończy rejestrowanie zdarzeń do pliku *trace.nettrace.*
 
-## <a name="view-the-trace-captured-from-dotnet-trace"></a>Wyświetlanie śledzenia przechwyconego ze śledzenia dotnetu
+## <a name="view-the-trace-captured-from-dotnet-trace"></a>Wyświetlanie śladu przechwyconego z dotnet-trace
 
-W systemie Windows pliki *.nettrace* można przeglądać na [PerfView](https://github.com/microsoft/perfview) do analizy: W przypadku śladów zebranych na innych platformach plik śledzenia można przenieść na komputer z systemem Windows, który ma być oglądany na PerfView.
+W systemie Windows pliki *.nettrace* można wyświetlać na [PerfView](https://github.com/microsoft/perfview) do analizy: W przypadku śladów zebranych na innych platformach plik śledzenia można przenieść do komputera z systemem Windows, który ma być oglądany na PerfView.
 
-W systemie Linux śledzenie można wyświetlić, zmieniając `dotnet-trace` `speedscope`format wyjściowy na . Format pliku wyjściowego można `-f|--format` zmienić `-f speedscope` za `dotnet-trace` pomocą `speedscope` opcji - spowoduje, że stworzy plik. Możesz wybrać `nettrace` między (opcja domyślna) i `speedscope`. `Speedscope`pliki można otworzyć <https://www.speedscope.app>w .
+W systemie Linux można wyświetlić śledzenie, zmieniając `dotnet-trace` `speedscope`format wyjściowy na . Format pliku wyjściowego można `-f|--format` zmienić `-f speedscope` za `dotnet-trace` pomocą `speedscope` opcji - spowoduje, że plik zostanie wyprodukowany. Można wybrać `nettrace` opcję (opcja domyślna) i `speedscope`. `Speedscope`można otworzyć w <https://www.speedscope.app>pliku .
 
 > [!NOTE]
-> Program runtime .NET Core generuje `nettrace` ślady w formacie. Ślady są konwertowane na speedscope (jeśli określono) po zakończeniu śledzenia. Ponieważ niektóre konwersje mogą spowodować utratę `nettrace` danych, oryginalny plik jest zachowywany obok przekonwertowanego pliku.
+> Środowisko uruchomieniowe .NET Core generuje `nettrace` ślady w formacie. Ślady są konwertowane na speedscope (jeśli określono) po zakończeniu śledzenia. Ponieważ niektóre konwersje mogą spowodować utratę `nettrace` danych, oryginalny plik jest zachowywany obok przekonwertowanego pliku.
 
-## <a name="use-dotnet-trace-to-collect-counter-values-over-time"></a>Użyj śledzenia dotnetdo zbierania wartości liczników w czasie
+## <a name="use-dotnet-trace-to-collect-counter-values-over-time"></a>Zbieranie wartości liczników za pomocą śledzenia dotnetu w czasie
 
 `dotnet-trace`Cna:
 
 * Służy `EventCounter` do podstawowego monitorowania kondycji w środowiskach wrażliwych na wydajność. Na przykład w produkcji.
-* Zbieraj ślady, aby nie były oglądane w czasie rzeczywistym.
+* Zbieraj ślady, aby nie trzeba było ich oglądać w czasie rzeczywistym.
 
-Na przykład, aby zbierać wartości licznika wydajności czasu wykonywania, użyj następującego polecenia:
+Na przykład, aby zebrać wartości licznika wydajności środowiska uruchomieniowego, należy użyć następującego polecenia:
 
 ```console
 dotnet-trace collect --process-id <PID> --providers System.Runtime:0:1:EventCounterIntervalSec=1
 ```
 
-Poprzednie polecenie informuje liczniki czasu wykonywania do raportowania raz na sekundę do monitorowania kondycji lekki. Zastąpienie `EventCounterIntervalSec=1` wyższą wartością (na przykład 60) umożliwia zbieranie mniejszego śledzenia o mniejszej szczegółowości w danych licznika.
+Poprzednie polecenie informuje liczniki środowiska wykonawczego do raportowania raz na sekundę dla monitorowania kondycji w stanie lekkim. Zastąpienie `EventCounterIntervalSec=1` wyższą wartością (na przykład 60) umożliwia zbieranie mniejszego śledzenia o mniejszej szczegółowości w danych licznika.
 
-Następujące polecenie zmniejsza obciążenie i rozmiar śledzenia większy niż poprzedni:
+Następujące polecenie zmniejsza obciążenie i rozmiar śledzenia więcej niż poprzedni:
 
 ```console
 dotnet-trace collect --process-id <PID> --providers System.Runtime:0:1:EventCounterIntervalSec=1,Microsoft-Windows-DotNETRuntime:0:1,Microsoft-DotNETCore-SampleProfiler:0:1
 ```
 
-Poprzednie polecenie wyłącza zdarzenia w czasie wykonywania i zarządzany profiler stosu.
+Poprzednie polecenie wyłącza zdarzenia środowiska uruchomieniowego i profiler zarządzanego stosu.
 
-## <a name="net-providers"></a>Dostawcy .NET
+## <a name="net-providers"></a>Dostawcy platformy .NET
 
-Program runtime .NET Core obsługuje następujących dostawców .NET. .NET Core używa tych samych `Event Tracing for Windows (ETW)` `EventPipe` słów kluczowych, aby włączyć zarówno i śledzenia.
+Środowisko uruchomieniowe .NET Core obsługuje następujących dostawców platformy .NET. .NET Core używa tych samych `Event Tracing for Windows (ETW)` słów `EventPipe` kluczowych, aby włączyć zarówno i ślady.
 
 | Nazwa dostawcy                            | Informacje |
 |------------------------------------------|-------------|
-| `Microsoft-Windows-DotNETRuntime`        | [Dostawca czasu wykonywania](../../framework/performance/clr-etw-providers.md#the-runtime-provider)<br>[Słowa kluczowe w czasie wykonywania CLR](../../framework/performance/clr-etw-keywords-and-levels.md#runtime) |
-| `Microsoft-Windows-DotNETRuntimeRundown` | [Dostawca wybiegu](../../framework/performance/clr-etw-providers.md#the-rundown-provider)<br>[Słowa kluczowe rozkładu CLR](../../framework/performance/clr-etw-keywords-and-levels.md#rundown) |
+| `Microsoft-Windows-DotNETRuntime`        | [Dostawca środowiska wykonawczego](../../framework/performance/clr-etw-providers.md#the-runtime-provider)<br>[Słowa kluczowe środowiska wykonawczego CLR](../../framework/performance/clr-etw-keywords-and-levels.md#runtime) |
+| `Microsoft-Windows-DotNETRuntimeRundown` | [Dostawca wybiegiem](../../framework/performance/clr-etw-providers.md#the-rundown-provider)<br>[Clr Rundown Słowa kluczowe](../../framework/performance/clr-etw-keywords-and-levels.md#rundown) |
 | `Microsoft-DotNETCore-SampleProfiler`    | Włącza profiler próbki. |

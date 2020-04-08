@@ -1,34 +1,34 @@
 ---
-ms.openlocfilehash: 24141f4b95cda2ae382a923da034e75c329b8555
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 645df8080abd21e4db95903a301a36b79a698858
+ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74643964"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80888138"
 ---
-### <a name="modernization-of-the-folderbrowserdialog"></a>Modernizacja folderuOkno przeglądarki
+### <a name="modernization-of-the-folderbrowserdialog"></a>Modernizacja folderuBrowserDialog
 
-Formant <xref:System.Windows.Forms.FolderBrowserDialog> został zmieniony w aplikacjach formularzy systemu Windows dla .NET Core.
+Formant <xref:System.Windows.Forms.FolderBrowserDialog> został zmieniony w aplikacjach Windows Forms dla platformy .NET Core.
 
 #### <a name="change-description"></a>Zmień opis
 
-W programie .NET Framework formularze systemu <xref:System.Windows.Forms.FolderBrowserDialog> Windows używają następującego okna dialogowego dla formantu:
+W programie .NET Framework formularze systemu Windows <xref:System.Windows.Forms.FolderBrowserDialog> używają następującego okna dialogowego dla formantu:
 
-![Formant FolderBrowserDialogControl w ramach .NET](~/docs/images/core-changes/windowsforms/modernized-folderbrowserdialog/folderdlg-framework.png)
+![FolderBrowserDialogControl w .NET Framework](~/docs/images/core-changes/windowsforms/modernized-folderbrowserdialog/folderdlg-framework.png)
 
-W programie .NET Core 3.0 użytkownicy formularzy systemu Windows mają nowszą kontrolę opartą na komisie, która została wprowadzona w systemie Windows Vista:
+W programie .NET Core 3.0 użytkownicy formularzy systemu Windows nowszą formantem opartym na komisacie, który został wprowadzony w systemie Windows Vista:
 
-![Kontrola folderuDialogControl w rdzeniu .NET](~/docs/images/core-changes/windowsforms/modernized-folderbrowserdialog/folderdlg-core.png)
+![FolderBrowserDialogControl w rdzeniu .NET](~/docs/images/core-changes/windowsforms/modernized-folderbrowserdialog/folderdlg-core.png)
 
-#### <a name="version-introduced"></a>Wprowadzona wersja
+#### <a name="version-introduced"></a>Wprowadzono wersję
 
 3.0
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Okno dialogowe zostanie automatycznie uaktualnione.
+Okno dialogowe zostanie uaktualnione automatycznie.
 
-Jeśli chcesz zachować oryginalne okno dialogowe, ustaw <xref:System.Windows.Forms.FolderBrowserDialog.AutoUpgradeEnabled?displayProperty=nameWithType> właściwość przed `false` wyświetleniem okna dialogowego, jak pokazano w następującym fragmencie kodu:
+Jeśli chcesz zachować oryginalne okno <xref:System.Windows.Forms.FolderBrowserDialog.AutoUpgradeEnabled?displayProperty=nameWithType> dialogowe, ustaw właściwość `false` przed wyświetleniem okna dialogowego, jak pokazano w następującym fragmencie kodu:
 
 ```csharp
 var dialog = new FolderBrowserDialog();
@@ -48,6 +48,6 @@ Windows Forms
 
 ### Affected APIs
 
-- `System.Windows.Forms.FolderBrowserDialog`
+- `T:System.Windows.Forms.FolderBrowserDialog`
 
 -->

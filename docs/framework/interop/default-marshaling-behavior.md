@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, marshaling
 - marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
-ms.openlocfilehash: 18282d14540027e4fae4fe152d3867ad8c223c37
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f7df323dacfbee3361fe75d831f1e87df328b194
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181478"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989223"
 ---
 # <a name="default-marshaling-behavior"></a>Domyślne zachowanie marshalingu
 Międzyoperacyjne organizowanie działa na reguły, które określają, jak dane skojarzone z parametrami metody zachowuje się, jak przechodzi między pamięcią zarządzaną i niezarządzaną. Te wbudowane reguły kontrolują takie działania organizowania jak przekształcenia typu danych, czy wywoływany może zmieniać dane przekazywane do niego i zwracać te zmiany do obiektu wywołującego i w jakich okolicznościach organizator zapewnia optymalizacje wydajności.  
@@ -172,7 +172,7 @@ internal class DelegateTest {
   
  Sformatowany typ jest typem złożonym, który zawiera informacje, które jawnie kontroluje układ jego członków w pamięci. Informacje o układzie elementu <xref:System.Runtime.InteropServices.StructLayoutAttribute> członkowskiego są dostarczane przy użyciu atrybutu. Układ może być jedną <xref:System.Runtime.InteropServices.LayoutKind> z następujących wartości wyliczenia:  
   
-- **LayoutKind.Automatic**  
+- **UkładKind.Auto**  
   
      Wskazuje, że środowisko uruchomieniowe języka wspólnego jest wolne do ponownego zamówenia elementów członkowskich typu dla wydajności. Jednak gdy typ wartości jest przekazywany do kodu niezarządzanego, układ elementów członkowskich jest przewidywalny. Próba zorganizowania takiej struktury automatycznie powoduje wyjątek.  
   

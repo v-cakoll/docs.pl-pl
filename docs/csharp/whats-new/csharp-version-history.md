@@ -1,40 +1,40 @@
 ---
-title: Historia języka C# — Przewodnik po językach C#
+title: Historia przewodnika C# - C#
 description: Jak wyglądał język w jego najwcześniejszych wersjach i jak ewoluował od tego czasu?
 author: erikdietrich
-ms.date: 09/20/2017
-ms.openlocfilehash: 9114395a5c6cfd8df5da18024921c35828947e0b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/08/2020
+ms.openlocfilehash: d9f50a7df7966f81366acb706d719cbdd40a45fa
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399687"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989197"
 ---
 # <a name="the-history-of-c"></a>Historia C\#
 
-Ten artykuł zawiera historię każdej głównej wersji języka Języka C#. Zespół Języka C# kontynuuje wprowadzanie innowacji i dodawanie nowych funkcji. Szczegółowy stan funkcji języka, w tym funkcje uwzględniane w nadchodzących wersjach, można znaleźć [w repozytorium dotnet/roslyn](https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md) w githubie.
+Ten artykuł zawiera historię każdej głównej wersji języka C#. Zespół języka C# kontynuuje wprowadzanie innowacji i dodawanie nowych funkcji. Szczegółowy stan funkcji języka, w tym funkcje rozważane dla nadchodzących wydań można znaleźć [w repozytorium dotnet/roslyn](https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md) na GitHub.
 
 > [!IMPORTANT]
-> Język C# opiera się na typy i metody w co specyfikacja Języka C# definiuje jako *standardowebiblioteki* dla niektórych funkcji. Platforma .NET dostarcza te typy i metody w wielu pakietach. Jednym z przykładów jest przetwarzanie wyjątków. Każda `throw` instrukcja lub wyrażenie jest zaznaczone, aby <xref:System.Exception>upewnić się, że obiekt jest generowany pochodzi od . Podobnie każdy `catch` jest sprawdzany w celu upewnienia się, <xref:System.Exception>że typ złowionych pochodzi z . Każda wersja może dodać nowe wymagania. Aby korzystać z najnowszych funkcji języka w starszych środowiskach, może być konieczne zainstalowanie określonych bibliotek. Te zależności są udokumentowane na stronie dla każdej określonej wersji. Możesz dowiedzieć się więcej o [relacjach między językiem a biblioteką](relationships-between-language-and-library.md) w tle tej zależności.
+> Język C# opiera się na typy i metody, w jakiej specyfikacji Języka C# definiuje jako *standardową bibliotekę* dla niektórych funkcji. Platforma .NET dostarcza te typy i metody w wielu pakietach. Jednym z przykładów jest przetwarzanie wyjątków. Każda `throw` instrukcja lub wyrażenie jest sprawdzana, aby <xref:System.Exception>upewnić się, że obiekt jest generowany z . Podobnie każdy `catch` jest sprawdzany, aby upewnić się, <xref:System.Exception>że typ złowionych pochodzi od . Każda wersja może dodać nowe wymagania. Aby korzystać z najnowszych funkcji językowych w starszych środowiskach, może być konieczne zainstalowanie określonych bibliotek. Te zależności są udokumentowane na stronie dla każdej określonej wersji. Możesz dowiedzieć się więcej o [relacjach między językiem i biblioteką](relationships-between-language-and-library.md) w tle tej zależności.
 
-Narzędzia kompilacji języka C# należy wziąć pod uwagę najnowszą wersję języka głównego domyślną wersję językową. Między głównymi wersjami mogą występować wersje punktowe, wyszczególnione w innych artykułach w tej sekcji. Aby korzystać z najnowszych funkcji w wersji punktowej, należy [skonfigurować wersję języka kompilatora](../language-reference/configure-language-version.md) i wybrać wersję. Od języka C# 7.0 wprowadzono trzy wydania punktowe:
+Narzędzia kompilacji języka C# uwzględnić najnowszą wersję języka głównego domyślnej wersji językowej. Mogą istnieć wersje punktowe między głównymi wersjami, szczegółowo opisane w innych artykułach w tej sekcji. Aby korzystać z najnowszych funkcji w wersji punktowej, należy [skonfigurować wersję językową kompilatora](../language-reference/configure-language-version.md) i wybrać wersję. Od c# 7.0 zostały wydania trzech punktów:
 
 - [C# 7.3](csharp-7-3.md):
-  - C# 7.3 jest dostępny począwszy od [programu Visual Studio 2017 w wersji 15.7](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) i [.NET Core 2.1 SDK](../../core/whats-new/dotnet-core-2-1.md).
+  - C# 7.3 jest dostępny począwszy od [visual studio 2017 w wersji 15.7](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) i [.NET Core 2.1 SDK](../../core/whats-new/dotnet-core-2-1.md).
 - [C# 7.2](csharp-7-2.md):
-  - C# 7.2 jest dostępny począwszy od [programu Visual Studio 2017 w wersji 15.5](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) i [.NET Core 2.0 SDK](../../core/whats-new/dotnet-core-2-0.md).
+  - C# 7.2 jest dostępny począwszy od [visual studio 2017 w wersji 15.5](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) i [.NET Core 2.0 SDK](../../core/whats-new/dotnet-core-2-0.md).
 - [C# 7.1](csharp-7-1.md):
-  - C# 7.1 jest dostępny począwszy od [programu Visual Studio 2017 w wersji 15.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) i [.NET Core 2.0 SDK](../../core/whats-new/dotnet-core-2-0.md).
+  - C# 7.1 jest dostępny począwszy od [visual studio 2017 w wersji 15.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) i [.NET Core 2.0 SDK](../../core/whats-new/dotnet-core-2-0.md).
 
-## <a name="c-version-10"></a>C# w wersji 1.0
+## <a name="c-version-10"></a>C# wersja 1.0
 
-Gdy wrócisz i spojrzeć, C# w wersji 1.0, wydany z Visual Studio .NET 2002, wyglądał podobnie jak Java. W [ramach swoich celów projektowych dla ECMA](https://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html), starał się być "prosty, nowoczesny, ogólnego przeznaczenia języka obiektowego."  W tym czasie, wyglądając jak Java oznaczało to, że osiągnąć te wczesne cele projektowe.
+Po powrocie i spojrzeniu, C# wersja 1.0, wydany z visual studio .NET 2002, wyglądał a lot like Java. W [ramach swoich deklarowanych celów projektowych dla ECMA](https://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html), starał się być "prosty, nowoczesny, ogólnego przeznaczenia zorientowany na język."  W tym czasie, patrząc jak Java oznaczało, że osiągnąć te wczesne cele projektowe.
 
-Ale jeśli spojrzysz wstecz na C # 1.0 teraz, można znaleźć się trochę zawroty. Brakowało wbudowanych możliwości asynchronicznych i niektórych funkcji zręcznych wokół leków generycznych, które bierzesz za pewnik. W rzeczywistości, brakowało leków generycznych w ogóle.  I [LINQ](../linq/index.md)? Nie dostępne jeszcze. Te dodatki zajęłoby kilka lat, aby wyjść.
+Ale jeśli spojrzeć wstecz na C # 1.0 teraz, można znaleźć się trochę zawroty głowy. Brakowało wbudowanych możliwości async i niektóre zręczny funkcjonalność wokół generycznych wziąć za pewnik. W rzeczywistości, brakowało leków generycznych w ogóle.  I [LINQ](../linq/index.md)? Jeszcze niedostępne. Te dodatki zajęłoby kilka lat, aby wyjść.
 
-C# wersja 1.0 spojrzał pozbawiony funkcji, w porównaniu do dzisiaj. Można znaleźć się na piśmie jakiś pełny kod. Ale jednak musisz zacząć gdzieś. C# w wersji 1.0 był realną alternatywą dla Java na platformie Windows.
+C# wersja 1.0 wyglądała pozbawione funkcji, w porównaniu do dzisiaj. Można znaleźć się pisanie jakiegoś szczegółowego kodu. Ale jednak musisz gdzieś zacząć. C# w wersji 1.0 był realną alternatywą dla Java na platformie Windows.
 
-Główne cechy Języka C# 1.0 obejmowały:
+Główne cechy C# 1.0 zawarte:
 
 - [Klasy](../programming-guide/classes-and-structs/classes.md)
 - [Struktury](../language-reference/builtin-types/struct.md)
@@ -46,41 +46,41 @@ Główne cechy Języka C# 1.0 obejmowały:
 - [Instrukcje](../programming-guide/statements-expressions-operators/statements.md)
 - [Atrybuty](../programming-guide/concepts/attributes/index.md)
 
-## <a name="c-version-12"></a>C# w wersji 1.2
+## <a name="c-version-12"></a>C# wersja 1.2
 
-C# w wersji 1.2 dostarczane z programu Visual Studio .NET 2003. Zawierał kilka drobnych ulepszeń języka. Najbardziej godne uwagi jest to, że począwszy `foreach` od <xref:System.IDisposable.Dispose%2A> tej <xref:System.Collections.IEnumerator> wersji, kod wygenerowany w pętli o nazwie, gdy, że <xref:System.Collections.IEnumerator> zaimplementowane <xref:System.IDisposable>.
+C# w wersji 1.2 dostarczane z programem Visual Studio .NET 2003. Zawierał kilka drobnych ulepszeń języka. Najbardziej godne uwagi jest to, że począwszy od tej <xref:System.Collections.IEnumerator> wersji, <xref:System.IDisposable>kod generowany w `foreach` pętli wywoływanej <xref:System.IDisposable.Dispose%2A> <xref:System.Collections.IEnumerator> na kiedy to zaimplementowane .
 
-## <a name="c-version-20"></a>C# w wersji 2.0
+## <a name="c-version-20"></a>C# wersja 2.0
 
-Teraz sprawy zaczynają się interesować. Przyjrzyjmy się niektórym głównym funkcjom języka C# 2.0, wydanemu w 2005 roku, wraz z programiem Visual Studio 2005:
+Teraz wszystko zaczyna się ciekawie. Ramięć spojrzeć na niektóre główne funkcje C# 2.0, wydany w 2005 r., wraz z Visual Studio 2005:
 
 - [Typy ogólne](../programming-guide/generics/index.md)
 - [Typy częściowe](../programming-guide/classes-and-structs/partial-classes-and-methods.md#partial-classes)
 - [Metody anonimowe](../language-reference/operators/delegate-operator.md)
-- [Typy wartości z możliwością null](../language-reference/builtin-types/nullable-value-types.md)
+- [Typy wartości dopuszczające wartość null](../language-reference/builtin-types/nullable-value-types.md)
 - [Iteratory](../programming-guide/concepts/iterators.md)
 - [Kowariancja i kontrawariancja](../programming-guide/concepts/covariance-contravariance/index.md)
 
-Inne funkcje języka C# 2.0 dodano możliwości do istniejących funkcji:
+Inne funkcje języka C# 2.0 dodały możliwości do istniejących funkcji:
 
-- Getter/setter oddzielna dostępność
-- Konwersje grupy metod (pełnomocnicy)
+- Rozdzielacza/ustawiacza oddzielna dostępność
+- Konwersje grup metod (delegaci)
 - Klasy statyczne
-- Wnioskowanie o delegowaniu
+- Wnioskowanie delegowania
 
-Podczas gdy C# może zostały uruchomione jako ogólny język zorientowanych obiektowo (OO), C# w wersji 2.0 zmienił, że w pośpiechu. Gdy mieli nogi pod nimi, poszli po kilka poważnych punktów bólu dewelopera. I poszli za nimi w znaczący sposób.
+Podczas C# może zostały uruchomione jako ogólny język obiektowy (OO), C# wersja 2.0 zmienił, że w pośpiechu. Gdy mieli pod sobą nogi, poszli po kilka poważnych punktów bólu dewelopera. I poszli za nimi w znaczący sposób.
 
-Z generycznych typów i metod może działać na dowolny typ przy zachowaniu bezpieczeństwa typów. Na przykład o <xref:System.Collections.Generic.List%601> pozwala `List<string>` mieć `List<int>` lub wykonywać operacje bezpieczne dla typu na tych ciągów lub liczb całkowitych podczas itetencji za ich pośrednictwem. Za pomocą typów ogólnych jest lepszy niż tworzenie, `ListInt` które pochodzi od `ArrayList` lub rzutowania z `Object` dla każdej operacji.
+W przypadku leków generycznych typy i metody mogą działać na dowolnym typie, zachowując jednocześnie bezpieczeństwo typu. Na przykład o <xref:System.Collections.Generic.List%601> pozwala `List<string>` mieć `List<int>` lub i wykonywać operacje bezpieczne dla typu na tych ciągów lub liczby całkowite podczas iteracji za ich pośrednictwem. Korzystanie z generycznych `ListInt` jest lepsze `ArrayList` niż `Object` tworzenie, które pochodzi z lub rzutowania z każdej operacji.
 
-C# wersja 2.0 przyniósł iteratory. Mówiąc zwięźle, iteratory umożliwiają zbadanie wszystkich elementów w `List` (lub innych typach wyliczalnych) za pomocą `foreach` pętli. O iteratory jako pierwszej klasy część języka znacznie zwiększona czytelność języka i zdolność ludzi do rozumu o kodzie.
+C# wersja 2.0 przyniósł iteratory. Mówiąc zwięźle, iteratory umożliwiają zbadanie wszystkich elementów w `List` (lub innych typów `foreach` wyliczalnych) za pomocą pętli. Posiadanie iteratorów jako pierwszej klasy części języka znacznie zwiększyło czytelność języka i zdolność ludzi do rozumowania kodu.
 
-A jednak, C# nadal grać trochę nadrabiania zaległości z Java. Java wydała już wersje, które zawierały generyki i iteratory. Ale to się wkrótce zmieni, gdy języki nadal ewoluowały.
+A jednak, C# nadal grać trochę dogonić Java. Java wydała już wersje, które zawierały leki generyczne i iteratory. Ale to wkrótce się zmieni, ponieważ języki nadal ewoluują od siebie.
 
-## <a name="c-version-30"></a>C# w wersji 3.0
+## <a name="c-version-30"></a>C# wersja 3.0
 
-C# wersja 3.0 przyszedł pod koniec 2007 r., wraz z Visual Studio 2008, choć pełna łódź funkcji językowych będzie rzeczywiście pochodzić z .NET Framework w wersji 3.5. Ta wersja oznaczała poważną zmianę w rozwoju języka C#. Ustanowiono C# jako naprawdę groźny język programowania. Przyjrzyjmy się kilku głównym funkcjom w tej wersji:
+C# wersja 3.0 przyszedł pod koniec 2007 r., wraz z visual studio 2008, choć pełna łódź funkcji języka rzeczywiście pochodzą z .NET Framework w wersji 3.5. Ta wersja oznaczała istotną zmianę w rozwoju języka C#. Ustanowiła C# jako naprawdę groźny język programowania. Rów cie zajrzyjmy do kilku głównych funkcji w tej wersji:
 
-- [Właściwości implementowane automatycznie](../programming-guide/classes-and-structs/auto-implemented-properties.md)
+- [Automatycznie implementowane właściwości](../programming-guide/classes-and-structs/auto-implemented-properties.md)
 - [Typy anonimowe](../programming-guide/classes-and-structs/anonymous-types.md)
 - [Wyrażenia kwerendy](../linq/query-expression-basics.md)
 - [Wyrażenia lambda](../programming-guide/statements-expressions-operators/lambda-expressions.md)
@@ -90,87 +90,168 @@ C# wersja 3.0 przyszedł pod koniec 2007 r., wraz z Visual Studio 2008, choć pe
 - [Metody częściowe](../language-reference/keywords/partial-method.md)
 - [Inicjatory obiektów i kolekcji](../programming-guide/classes-and-structs/object-and-collection-initializers.md)
 
-Z perspektywy czasu wiele z tych cech wydaje się zarówno nieuniknione, jak i nierozłączne. Wszystkie pasują do siebie strategicznie. Ogólnie uważa się, że funkcja zabójcza wersji C# była wyrażeniem zapytania, znanym również jako zapytanie zintegrowane z językiem (LINQ).
+Z perspektywy czasu wiele z tych funkcji wydaje się zarówno nieuniknione, jak i nierozłączne. Wszystkie pasują do siebie strategicznie. Ogólnie uważa się, że funkcja zabójcy wersji C# była wyrażeniem zapytania, znanym również jako zapytanie zintegrowane z językiem (LINQ).
 
-Bardziej zniuansowany widok sprawdza drzewa wyrażeń, wyrażenia lambda i typy anonimowe jako podstawę, na której jest konstruowany LINQ. Ale w obu przypadkach C# 3.0 przedstawił rewolucyjną koncepcję. C# 3.0 zaczął położyć podwaliny dla przekształcania Języka C# w hybrydowy język obiektowy / funkcjonalny.
+Widok bardziej zniuansowany analizuje drzewa wyrażeń, wyrażenia lambda i typy anonimowe jako fundament, na którym linq jest konstruowany. Ale w obu przypadkach C# 3.0 przedstawił rewolucyjną koncepcję. C# 3.0 zaczął kłaść podwaliny pod przekształcanie języka C# w hybrydowy język obiektowy / funkcjonalny.
 
-W szczególności można teraz napisać SQL stylu, deklaratywne zapytania do wykonywania operacji na kolekcje, między innymi. Zamiast pisać `for` pętlę do obliczania średniej listy liczb całkowitych, można to zrobić `list.Average()`tak prosto, jak . Kombinacja wyrażeń zapytań i metod rozszerzenia sprawiła, że wyglądało to tak, jakby ta lista liczb całkowitych stała się o wiele inteligentniejsza.
+W szczególności można teraz napisać w stylu SQL, kwerendy deklaratywne do wykonywania operacji w kolekcjach, między innymi. Zamiast pisać pętlę, `for` aby obliczyć średnią listy liczby całkowitej, można teraz `list.Average()`zrobić to tak po prostu, jak . Połączenie wyrażeń zapytań i metod rozszerzenia sprawiło, że wyglądało to tak, jakby ta lista liczby całkowitych stała się o wiele mądrzejsza.
 
-Potrzeba było czasu, aby ludzie naprawdę zrozumieli i zintegrowali tę koncepcję, ale stopniowo to robili. A teraz, po latach, kod jest znacznie bardziej zwięzły, prosty i funkcjonalny.
+Potrzeba było czasu, aby ludzie naprawdę zrozumieć i zintegrować koncepcję, ale stopniowo. A teraz, po latach, kod jest o wiele bardziej zwięzły, prosty i funkcjonalny.
 
-## <a name="c-version-40"></a>C# w wersji 4.0
+## <a name="c-version-40"></a>C# wersja 4.0
 
-C# wersja 4.0, wydany z Visual Studio 2010, miałby trudny czas życia do przełomowego stanu wersji 3.0. W wersji 3.0, C# przeniósł język mocno z cienia Java i do wyeksponowania. Język szybko stał się elegancki.
+C# wersja 4.0, wydany z Visual Studio 2010, miałby trudności z przeżywanie stanu przełomowy wersji 3.0. W wersji 3.0, C# przeniósł język mocno z cienia Java i do wyeksponowania. Język szybko stał się elegancki.
 
-Kolejna wersja wprowadziła kilka ciekawych nowych funkcji:
+W następnej wersji wprowadzono kilka ciekawych nowych funkcji:
 
 - [Wiązanie dynamiczne](../language-reference/builtin-types/reference-types.md)
 - [Argumenty nazwane/opcjonalne](../programming-guide/classes-and-structs/named-and-optional-arguments.md)
 - [Ogólny kowariant i kontrawariant](../../standard/generics/covariance-and-contravariance.md)
-- [Wbudowane typy współoperacji](../../framework/interop/type-equivalence-and-embedded-interop-types.md)
+- [Osadzone typy międzyoperacyjne](../../framework/interop/type-equivalence-and-embedded-interop-types.md)
 
-Wbudowane typy interop złagodziły ból wdrożenia. Ogólne kowariancja i kontrawariancja dają więcej mocy do używania leków generycznych, ale są one nieco akademickie i prawdopodobnie najbardziej cenione przez autorów ram i bibliotek. Nazwane i opcjonalne parametry pozwalają wyeliminować wiele przeciążeń metody i zapewnić wygodę. Ale żadna z tych funkcji nie zmienia dokładnie paradygmatu.
+Osadzone typy międzypionowe złagodziły ból związany z wdrażaniem. Generyczna kowariancja i kontrawarancja dają więcej mocy do używania generycznych, ale są nieco akademickie i prawdopodobnie najbardziej cenione przez autorów frameworków i bibliotek. Nazwane i opcjonalne parametry pozwalają wyeliminować wiele przeciążeń metody i zapewnić wygodę. Ale żadna z tych funkcji nie zmienia dokładnie paradygmatu.
 
-Główną cechą było wprowadzenie `dynamic` słowa kluczowego. Słowo `dynamic` kluczowe wprowadzone do c# w wersji 4.0 możliwość zastąpienia kompilatora na typowanie w czasie kompilacji. Za pomocą dynamicznego słowa kluczowego można tworzyć konstrukcje podobne do dynamicznie wpisywanych języków, takich jak JavaScript. Można utworzyć, `dynamic x = "a string"` a następnie dodać sześć do niego, pozostawiając go do czasu wykonywania, aby uporządkować, co powinno się zdarzyć dalej.
+Główną cechą było `dynamic` wprowadzenie słowa kluczowego. Słowo `dynamic` kluczowe wprowadzone do wersji C# 4.0 możliwość zastąpienia kompilatora na wpisywanie w czasie kompilacji. Za pomocą dynamicznego słowa kluczowego można tworzyć konstrukcje podobne do dynamicznie wpisywanych języków, takich jak JavaScript. Można utworzyć, `dynamic x = "a string"` a następnie dodać sześć do niego, pozostawiając go do środowiska wykonawczego, aby uporządkować, co powinno się zdarzyć dalej.
 
-Dynamiczne powiązanie daje możliwość błędów, ale także dużą moc w języku.
+Dynamiczne powiązanie daje możliwość błędów, ale także wielką moc w języku.
 
-## <a name="c-version-50"></a>C# w wersji 5.0
+## <a name="c-version-50"></a>C# wersja 5.0
 
-C# wersja 5.0, wydana w programie Visual Studio 2012, była skupiona wersja języka. Prawie cały wysiłek dla tej wersji poszedł do innego `async` `await` przełomowego pojęcia języka: i model programowania asynchronicznego.  Oto lista głównych funkcji:
+C# wersja 5.0, wydany z Visual Studio 2012, była skoncentrowana wersja języka. Prawie cały wysiłek dla tej wersji poszedł do `async` innej `await` przełomowej koncepcji językowej: i model programowania asynchronicznego.  Oto lista głównych funkcji:
 
 - [Członkowie asynchroniczne](../async.md)
-- [Atrybuty informacji o obiekcie wywołującym](../programming-guide/concepts/caller-information.md)
+- [Atrybuty informacji o dzwoniącym](../programming-guide/concepts/caller-information.md)
 
 ### <a name="see-also"></a>Zobacz też
 
-- [Projekt kodu: Atrybuty informacji o obiekcie wywołującym w języku C# 5.0](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
+- [Projekt kodu: atrybuty informacji o wywołaniu w języku C# 5.0](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 
-Atrybut informacji o obiekcie wywołującym umożliwia łatwe pobieranie informacji o kontekście, w którym pracujesz bez uciekania się do tony standardowego kodu odbicia. Ma wiele zastosowań w diagnostyce i rejestrowania zadań.
+Atrybut informacji o wywołującym umożliwia łatwe pobieranie informacji o kontekście, w którym jest uruchomiony bez uciekania się do tony kodu odbicia standardowego. Ma wiele zastosowań w diagnostyce i rejestrowaniu zadań.
 
-Ale `async` `await` i są prawdziwymi gwiazdami tego wydania. Kiedy te funkcje pojawiły się w 2012, C# ponownie zmienił grę, upieczając asynchrony w języku jako uczestnik pierwszej klasy. Jeśli kiedykolwiek zajmowałeś się długotrwałymi operacjami i implementacją sieci wywołań wywołań odgłosowych, prawdopodobnie pokochałeś tę funkcję języka.
+Ale `async` `await` i są prawdziwe gwiazdy tego wydania. Kiedy te funkcje pojawiły się w 2012 roku, C# ponownie zmienił grę, piekąc asynchrony na język jako uczestnik pierwszej klasy. Jeśli kiedykolwiek zajmowałeś się długotrwałymi operacjami i implementacją sieci wywołań zwrotnych, prawdopodobnie pokochałeś tę funkcję językową.
 
-## <a name="c-version-60"></a>C# w wersji 6.0
+## <a name="c-version-60"></a>C# wersja 6.0
 
-W wersjach 3.0 i 5.0 c# dodał główne nowe funkcje w języku obiektowym. W wersji 6.0, wydanej w programie Visual Studio 2015, odejdą od wykonywania dominującej funkcji zabójcy i zamiast tego wydać wiele mniejszych funkcji, które sprawiły, że programowanie C# stało się bardziej produktywne. Oto niektóre z nich:
+W wersjach 3.0 i 5.0 c# dodał główne nowe funkcje w języku obiektowym. W wersji 6.0, wydany z Visual Studio 2015, to odejść od wykonywania dominującej funkcji zabójcy i zamiast zwolnić wiele mniejszych funkcji, które uczyniły programowania C# bardziej wydajne. Oto niektóre z nich:
 
 - [Import statyczny](./csharp-6.md#using-static)
 - [Filtry wyjątków](./csharp-6.md#exception-filters)
 - [Inicjatory właściwości automatycznych](./csharp-6.md#auto-property-initializers)
-- [Wyrażenie zabudowanych członków](./csharp-6.md#expression-bodied-function-members)
+- [Wyrazy zabudowane elementy członkowskie](./csharp-6.md#expression-bodied-function-members)
 - [Propagator zerowy](./csharp-6.md#null-conditional-operators)
 - [Interpolacja ciągów](./csharp-6.md#string-interpolation)
 - [nameof, operator](./csharp-6.md#the-nameof-expression)
-- [Inicjatory indeksu](csharp-6.md#extension-add-methods-in-collection-initializers)
+- [Inicjalizatory indeksu](csharp-6.md#extension-add-methods-in-collection-initializers)
 
 Inne nowe funkcje obejmują:
 
 - Czekaj w blokach catch/finally
-- Wartości domyślne dla właściwości tylko do gettera
+- Wartości domyślne dla właściwości tylko dla gettera
 
-Każda z tych funkcji jest interesująca sama w sobie. Ale jeśli spojrzycie na nie w ogóle, zobaczycie ciekawy wzór. W tej wersji C# wyeliminowane języka standardowego, aby kod bardziej zwięzłe i czytelne. Więc dla fanów czystego, prostego kodu, ta wersja językowa była ogromną wygraną.
+Każda z tych funkcji jest interesująca sama w sobie. Ale jeśli spojrzycie na nie w ogóle, zobaczycie ciekawy wzór. W tej wersji języka C# wyeliminowane języka boilerplate, aby kod bardziej zwięzłe i czytelne. Więc dla fanów czystego, prostego kodu, ta wersja językowa była ogromną wygraną.
 
-Zrobili jeszcze jedną rzecz wraz z tą wersją, choć nie jest to tradycyjna funkcja językowa sama w sobie. Wydali [Roslyn kompilator jako usługę](https://github.com/dotnet/roslyn). Kompilator Języka C# jest teraz napisany w języku C#i można użyć kompilatora jako część wysiłków programowania.
+Zrobili jeszcze jedną rzecz wraz z tą wersją, choć nie jest to tradycyjna funkcja językowa sama w sobie. Wydali [Roslyn kompilator jako usługa](https://github.com/dotnet/roslyn). Kompilator języka C# jest teraz napisany w języku C#i można użyć kompilatora jako część wysiłków programowania.
 
-## <a name="c-version-70"></a>C# w wersji 7.0
+## <a name="c-version-70"></a>C# wersja 7.0
 
-Najnowsza wersja główna to C# wersja 7.0, wydana w programie Visual Studio 2017. Ta wersja ma pewne ewolucyjne i fajne rzeczy w duchu C# 6.0, ale bez kompilatora jako usługi. Oto niektóre z nowych funkcji:
+C# wersja 7.0 został wydany z Visual Studio 2017. Ta wersja ma pewne ewolucyjne i fajne rzeczy w duchu C# 6.0, ale bez kompilatora jako usługi. Oto niektóre z nowych funkcji:
 
 - [Zmienne out](./csharp-7.md#out-variables)
 - [Krotek i dekonstrukcji](./csharp-7.md#tuples)
-- [Dopasowanie do wzorca](./csharp-7.md#pattern-matching)
+- [Dopasowywanie wzoru](./csharp-7.md#pattern-matching)
 - [Funkcje lokalne](./csharp-7.md#local-functions)
-- [Rozszerzone elementy członkowskie zabudowane wyrażeniem](./csharp-7.md#more-expression-bodied-members)
+- [Rozwinięte wyrazy zabudowane elementy członkowskie](./csharp-7.md#more-expression-bodied-members)
 - [Ref mieszkańców i zwraca](./csharp-7.md#ref-locals-and-returns)
 
-Inne funkcje obejmowały:
+Inne funkcje obejmują:
 
 - [Odrzucenia](./csharp-7.md#discards)
 - [Literały binarne i separatory cyfr](./csharp-7.md#numeric-literal-syntax-improvements)
 - [Wyrażenia throw](./csharp-7.md#throw-expressions)
 
-Wszystkie te funkcje oferują fajne nowe możliwości dla programistów i możliwość napisania jeszcze czystszego kodu niż kiedykolwiek. Wyróżnienie jest skraplania deklaracji `out` zmiennych do użycia ze słowem kluczowym i poprzez umożliwienie wielu zwracanych wartości za pośrednictwem krotki.
+Wszystkie te funkcje oferują fajne nowe możliwości dla programistów i możliwość pisania jeszcze czystszego kodu niż kiedykolwiek. Podświetlenie jest kondensowanie deklaracji zmiennych do użycia ze `out` słowem kluczowym i zezwalając na wiele zwracanych wartości za pośrednictwem krotki.
 
-Ale C# jest wprowadzane do coraz szerszego użytku. .NET Core jest teraz przeznaczony dla każdego systemu operacyjnego i ma oczy mocno na chmurze i przenośności.  Te nowe możliwości z pewnością zajmują myśli i czas projektantów języka, oprócz wymyślania nowych funkcji.
+Ale C# jest wprowadzane do coraz szerszego wykorzystania. .NET Core jest teraz przeznaczony dla każdego systemu operacyjnego i ma oczy mocno na chmurze i na przenośność.  Te nowe możliwości z pewnością zajmują myśli i czas projektantów języka, oprócz wymyślania nowych funkcji.
 
-_Artykuł_ [_pierwotnie opublikowany na blogu NDepend,_](https://blog.ndepend.com/c-versions-look-language-history/)dzięki uprzejmości Erik_Dietrich i Patrick Smacchia._
+## <a name="c-version-71"></a>C# wersja 7.1
+
+C# rozpoczął zwalnianie *wydania punktu* z C# 7.1. Ta wersja dodała element konfiguracji [wyboru wersji języka,](../language-reference/configure-language-version.md) trzy nowe funkcje języka i nowe zachowanie kompilatora.
+
+Nowe funkcje językowe w tej wersji to:
+
+- [`async``Main` metoda](./csharp-7-1.md#async-main)
+  - Punkt wejścia dla aplikacji może `async` mieć modyfikator.
+- [`default`wyrażenia dosłowne](./csharp-7-1.md#default-literal-expressions)
+  - Domyślnych wyrażeń literału można używać w wyrażeniach wartości domyślnej, gdy można wywnioskować typ docelowy.
+- [Wywnioskowane nazwy elementów krotki](./csharp-7-1.md#inferred-tuple-element-names)
+  - Nazwy elementów krotki można wywnioskować z inicjowania krotki w wielu przypadkach.
+- [Dopasowywanie wzorca w parametrach typu ogólnego](./csharp-7-1.md#pattern-matching-on-generic-type-parameters)
+  - Można użyć wyrażeń dopasowania wzorca dla zmiennych, których typ jest parametrem typu ogólnego.
+
+Na koniec kompilator ma `-refout` `-refonly` dwie opcje i [tego generowania zestawu odwołania](./csharp-7-1.md#reference-assembly-generation)kontroli .
+
+## <a name="c-version-72"></a>C# wersja 7.2
+
+W języku C# 7.2 dodano kilka małych funkcji językowych:
+
+- [Techniki pisania bezpiecznego wydajnego kodu](./csharp-7-2.md#safe-efficient-code-enhancements)
+  - Kombinacja ulepszeń składni, które umożliwiają pracę z typami wartości przy użyciu semantyki odwołań.
+- [Argumenty nazwane inne niż końcowe](./csharp-7-2.md#non-trailing-named-arguments)
+  - Nazwane argumenty mogą być następują po argumentach pozycyjnych.
+- [Podkreślenia wiodące w literałach liczbowych](./csharp-7-2.md#leading-underscores-in-numeric-literals)
+  - Literały liczbowe mogą teraz mieć wiodące podkreślenia przed wydrukowanymi cyframi.
+- [`private protected`modyfikator dostępu](./csharp-7-2.md#private-protected-access-modifier)
+  - Modyfikator `private protected` dostępu umożliwia dostęp dla klas pochodnych w tym samym zestawie.
+- [Wyrażenia `ref` warunkowe](./csharp-7-2.md#conditional-ref-expressions)
+  - Wynikiem wyrażenia warunkowego (`?:`) może być teraz odwołanie.
+
+## <a name="c-version-73"></a>C# wersja 7.3
+
+Istnieją dwa główne motywy do wersji C# 7.3. Jeden motyw zawiera funkcje, które umożliwiają bezpieczny kod, aby być równie wydajny jak niebezpieczny kod. Drugi motyw zawiera przyrostowe ulepszenia istniejących funkcji. Ponadto w tej wersji dodano nowe opcje kompilatora.
+
+Następujące nowe funkcje obsługują temat lepszej wydajności dla bezpiecznego kodu:
+
+- [Dostęp do stałych pól można uzyskać bez przypinania.](csharp-7-3.md#indexing-fixed-fields-does-not-require-pinning)
+- [Można ponownie przypisać `ref` zmienne lokalne.](csharp-7-3.md#ref-local-variables-may-be-reassigned)
+- [Inicjatorów można używać `stackalloc` w tablicach.](csharp-7-3.md#stackalloc-arrays-support-initializers)
+- [Można użyć `fixed` instrukcji z dowolnego typu, który obsługuje wzorzec.](csharp-7-3.md#more-types-support-the-fixed-statement)
+- [Można użyć dodatkowych ograniczeń ogólnych.](csharp-7-3.md#enhanced-generic-constraints)
+
+Wprowadzono następujące ulepszenia istniejących funkcji:
+
+- [Można `==` przetestować `!=` i z typów krotki.](csharp-7-3.md#tuples-support--and-)
+- [Zmiennych wyrażenia można używać w większej liczbie lokalizacji.](csharp-7-3.md#extend-expression-variables-in-initializers)
+- [Atrybuty można dołączyć do pola zapasowego właściwości automatycznie zaimplementowanych.](csharp-7-3.md#attach-attributes-to-the-backing-fields-for-auto-implemented-properties)
+- [Poprawiono rozpoznawanie `in` metody, gdy argumenty różnią się w zależności od tego.](csharp-7-3.md#in-method-overload-resolution-tiebreaker)
+- [Rozdzielczość przeciążenia ma teraz mniej niejednoznacznych przypadków.](csharp-7-3.md#improved-overload-candidates)
+
+Nowe opcje kompilatora to:
+
+- [`-publicsign`, aby włączyć podpisywanie zestawów oprogramowaniem open source (OSS).](csharp-7-3.md#public-or-open-source-signing)
+- [`-pathmap`, aby zapewnić mapowanie katalogów źródłowych.](csharp-7-3.md#pathmap)
+
+## <a name="c-version-80"></a>C# wersja 8.0
+
+C# 8.0 jest pierwszą główną wersją języka C#, która w szczególności jest przeznaczona dla .NET Core. Niektóre funkcje opierają się na nowych możliwościach CLR, inne na typach bibliotek dodawanych tylko w programie .NET Core. C# 8.0 dodaje następujące funkcje i ulepszenia do języka C#:
+
+- [Czytaj tylko członków](./csharp-8.md#readonly-members)
+- [Domyślne metody interfejsu](./csharp-8.md#default-interface-methods)
+- [Ulepszenia dopasowywania wzorców:](./csharp-8.md#more-patterns-in-more-places)
+  - [Przełączanie wyrażeń](./csharp-8.md#switch-expressions)
+  - [Wzorce właściwości](./csharp-8.md#property-patterns)
+  - [Wzory krotki](./csharp-8.md#tuple-patterns)
+  - [Wzory pozycyjne](./csharp-8.md#positional-patterns)
+- [Używanie deklaracji](./csharp-8.md#using-declarations)
+- [Statyczne funkcje lokalne](./csharp-8.md#static-local-functions)
+- [Jednorazowe struktury ref](./csharp-8.md#disposable-ref-structs)
+- [Typy referencyjne dopuszczające wartość null](../language-reference/builtin-types/nullable-reference-types.md)
+- [Strumienie asynchroniczne](./csharp-8.md#asynchronous-streams)
+- [Indeksy i zakresy](./csharp-8.md#indices-and-ranges)
+- [Przypisanie scalania wartości null](./csharp-8.md#null-coalescing-assignment)
+- [Niezarządzane typy skonstruowane](./csharp-8.md#unmanaged-constructed-types)
+- [Stackalloc w wyrażeniach zagnieżdżonych](./csharp-8.md#stackalloc-in-nested-expressions)
+- [Wzmocnienie interpolowanych ciągów dosłownie](./csharp-8.md#enhancement-of-interpolated-verbatim-strings)
+
+Domyślne elementy członkowskie interfejsu wymagają ulepszeń w programie CLR. Te funkcje zostały dodane w programie CLR dla platformy .NET Core 3.0. Zakresy i indeksy oraz strumienie asynchroniczne wymagają nowych typów w bibliotekach .NET Core 3.0. Nullable typy odwołań, podczas gdy zaimplementowane w kompilatorze, jest znacznie bardziej przydatne, gdy biblioteki są adnotacjami, aby zapewnić informacje semantyczne dotyczące stanu null argumentów i zwraca wartości. Te adnotacje są dodawane w bibliotekach .NET Core.
+
+_Artykuł_ [_pierwotnie opublikowane na blogu NDepend_](https://blog.ndepend.com/c-versions-look-language-history/), dzięki uprzejmości Erik_Dietrich i Patrick Smacchia._

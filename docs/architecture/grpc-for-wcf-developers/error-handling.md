@@ -1,33 +1,33 @@
 ---
-title: Obsługa błędów — gRPC dla deweloperów WCF
-description: Tematy dotyczące obsługi błędów w gRPC. Zawiera tabelę zawierającą najczęściej używane kody stanu.
+title: Obsługa błędów - gRPC dla programistów WCF
+description: Tematy związane z obsługą błędów w gRPC. Zawiera tabelę najczęściej używanych kodów stanu.
 ms.date: 09/02/2019
-ms.openlocfilehash: c380c651f854adc97e8b2ead36d30c3b83662aac
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 64a2355a8bd608c074f9bc420312b23aba0c1fb2
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77542796"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988950"
 ---
 # <a name="error-handling"></a>Obsługa błędów
 
-Windows Communication Foundation (WCF) używa <xref:System.ServiceModel.FaultException%601> i [FaultContract](xref:System.ServiceModel.FaultContractAttribute) w celu zapewnienia szczegółowych informacji o błędzie, w tym obsługi standardu SOAP Fault.
+Windows Communication Foundation (WCF) używa i <xref:System.ServiceModel.FaultException%601> [FaultContract](xref:System.ServiceModel.FaultContractAttribute) do dostarczania szczegółowych informacji o błędach, w tym obsługi standardu błędu SOAP.
 
-Niestety, bieżąca wersja gRPC nie ma złożoności znalezionej w programie WCF i ma ograniczoną wbudowaną obsługę błędów na podstawie prostych kodów stanu i metadanych. Poniższa tabela zawiera krótki przewodnik po najczęściej używanych kodach stanu:
+Niestety, w obecnej wersji gRPC brakuje wyrafinowania znalezionego w WCF i ma tylko ograniczoną wbudowaną obsługę błędów w oparciu o proste kody stanu i metadane. Poniższa tabela zawiera krótki przewodnik po najczęściej używanych kodach stanu:
 
 | Kod stanu | Problem |
 | ----------- | ------- |
-| `GRPC_STATUS_UNIMPLEMENTED` | Metoda nie została zapisywana. |
+| `GRPC_STATUS_UNIMPLEMENTED` | Metoda nie została napisana. |
 | `GRPC_STATUS_UNAVAILABLE` | Problem z całą usługą. |
 | `GRPC_STATUS_UNKNOWN` | Nieprawidłowa odpowiedź. |
 | `GRPC_STATUS_INTERNAL` | Problem z kodowaniem/dekodowaniem. |
 | `GRPC_STATUS_UNAUTHENTICATED` | Uwierzytelnianie nie powiodło się. |
 | `GRPC_STATUS_PERMISSION_DENIED` | Autoryzacja nie powiodła się. |
-| `GRPC_STATUS_CANCELLED` | Wywołanie zostało anulowane, zazwyczaj przez wywołującego. |
+| `GRPC_STATUS_CANCELLED` | Połączenie zostało anulowane, zwykle przez rozmówcę. |
 
-## <a name="raise-errors-in-aspnet-core-grpc"></a>Zgłoś błędy w ASP.NET Core gRPC
+## <a name="raise-errors-in-aspnet-core-grpc"></a>Zwiększanie liczby błędów w ASP.NET Core gRPC
 
-Usługa ASP.NET Core gRPC może wysłać odpowiedź z błędami, zgłaszając `RpcException`, które mogą zostać przechwycone przez klienta tak, jakby były w tym samym procesie. `RpcException` musi zawierać kod stanu i opis, a opcjonalnie może zawierać metadane i dłuższy komunikat wyjątku. Metadane mogą służyć do wysyłania danych pomocniczych, podobnie jak obiekty `FaultContract` mogą przenosić dodatkowe dane dla błędów WCF.
+Usługa gRPC ASP.NET Core może wysłać odpowiedź na `RpcException`błąd, rzucając , które mogą zostać przechwycone przez klienta, tak jakby były w tym samym procesie. Musi `RpcException` zawierać kod stanu i opis i opcjonalnie może zawierać metadane i dłuższy komunikat wyjątku. Metadane mogą służyć do wysyłania danych `FaultContract` pomocniczych, podobnie jak obiekty mogą przenosić dodatkowe dane dla błędów WCF.
 
 ```csharp
 public async Task<GetPortfolioResponse> GetPortfolio(GetPortfolioRequest request, ServerCallContext context)
@@ -44,9 +44,9 @@ public async Task<GetPortfolioResponse> GetPortfolio(GetPortfolioRequest request
 }
 ```
 
-## <a name="catch-errors-in-grpc-clients"></a>Błędy przechwytywania w klientach gRPC
+## <a name="catch-errors-in-grpc-clients"></a>Błędy catch u klientów gRPC
 
-Podobnie jak klienci WCF mogą przechwytywać <xref:System.ServiceModel.FaultException%601> błędów, klient gRPC może przechwycić `RpcException`, aby obsłużyć błędy. Ponieważ `RpcException` nie jest typem ogólnym, nie można przechwytywać różnych typów błędów w różnych blokach. Można jednak użyć C#funkcji *filtry wyjątków* , aby zadeklarować oddzielne bloki `catch` dla różnych kodów stanu, jak pokazano w następującym przykładzie:
+Podobnie jak klienci WCF można złapać <xref:System.ServiceModel.FaultException%601> błędy, klient `RpcException` gRPC można złapać do obsługi błędów. Ponieważ `RpcException` nie jest typem rodzajowym, nie można złapać różnych typów błędów w różnych blokach. Ale można użyć funkcji *filtrów wyjątków* języka `catch` C#do deklarowania oddzielnych bloków dla różnych kodów stanu, jak pokazano w poniższym przykładzie:
 
 ```csharp
 try
@@ -65,12 +65,12 @@ catch (RpcException)
 ```
 
 > [!IMPORTANT]
-> Gdy podajesz dodatkowe metadane dla błędów, pamiętaj, aby udokumentować odpowiednie klucze i wartości w dokumentacji interfejsu API lub w komentarzach w pliku `.proto`.
+> Po podaniu dodatkowych metadanych dla błędów, należy udokumentować odpowiednie klucze i `.proto` wartości w dokumentacji interfejsu API lub w komentarzach w pliku.
 
-## <a name="grpc-richer-error-model"></a>gRPC bogatszy model błędów
+## <a name="grpc-richer-error-model"></a>Bogatszy model błędu gRPC
 
-Firma Google opracowała [bogatszy model błędów](https://cloud.google.com/apis/design/errors#error_model) , który jest bardziej podobny do [FaultContract](xref:System.ServiceModel.FaultContractAttribute)WCF, ale ten model nie jest C# jeszcze obsługiwany. Obecnie jest ona dostępna tylko dla języka go, Java, Python i C++.
+Google opracowała [bogatszy model błędów,](https://cloud.google.com/apis/design/errors#error_model) który jest bardziej podobny do [FaultContract](xref:System.ServiceModel.FaultContractAttribute)WCF, ale ten model nie jest jeszcze obsługiwany w języku C#. Obecnie jest dostępna tylko dla go, Java, Python i C++.
 
 >[!div class="step-by-step"]
->[Poprzednie](metadata.md)
->[dalej](ws-protocols.md)
+>[Poprzedni](metadata.md)
+>[następny](ws-protocols.md)

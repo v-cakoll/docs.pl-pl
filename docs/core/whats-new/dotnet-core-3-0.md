@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: 7e879a44bd8056ac8753c1e86464fe14fd6b9e50
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: be5c26c81480dc2854b849dd7f2b1c46ee3e526a
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523578"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989171"
 ---
 # <a name="whats-new-in-net-core-30"></a>Co nowego w programie .NET Core 3.0
 
@@ -140,7 +140,7 @@ Aby uzyskać więcej informacji na temat narzędzia IL Linker, zobacz [dokumenta
 
 ### <a name="tiered-compilation"></a>Kompilacja warstwowa
 
-[Kompilacja warstwowa](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation-guide.md) (TC) jest domyślnie włączona z .NET Core 3.0. Ta funkcja umożliwia środowisko wykonawcze bardziej adaptacyjnie używać kompilatora just-in-time (JIT), aby osiągnąć lepszą wydajność.
+[Kompilacja warstwowa](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation.md) (TC) jest domyślnie włączona z .NET Core 3.0. Ta funkcja umożliwia środowisko wykonawcze bardziej adaptacyjnie używać kompilatora just-in-time (JIT), aby osiągnąć lepszą wydajność.
 
 Główną zaletą kompilacji warstwowej jest zapewnienie dwóch sposobów jitting metody: w niższej jakości, ale szybciej warstwy lub wyższej jakości, ale wolniej warstwy. Jakość odnosi się do tego, jak dobrze metoda jest zoptymalizowana. TC pomaga poprawić wydajność aplikacji, ponieważ przechodzi przez różne etapy wykonywania, od uruchamiania do stanu ustalonego. Gdy kompilacja warstwowa jest wyłączona, każda metoda jest kompilowana w jeden sposób, który jest stronniczy do wydajności w stanie ustalonym w porównaniu z wydajnością uruchamiania.
 
@@ -506,7 +506,7 @@ Dodano interfejsy API, które umożliwiają dostęp do niektórych instrukcji pr
 
 W stosownych przypadkach biblioteki platformy .NET zaczęły używać tych instrukcji w celu zwiększenia wydajności.
 
-Aby uzyskać więcej informacji, zobacz [.NET Platform Dependent Intrinsics](https://github.com/dotnet/designs/blob/master/accepted/platform-intrinsics.md).
+Aby uzyskać więcej informacji, zobacz [.NET Platform-Dependent Intrinsics](https://github.com/dotnet/designs/blob/master/accepted/2018/platform-intrinsics.md).
 
 ### <a name="improved-net-core-version-apis"></a>Ulepszone interfejsy API wersji .NET Core
 

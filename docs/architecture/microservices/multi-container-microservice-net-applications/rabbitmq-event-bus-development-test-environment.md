@@ -1,27 +1,27 @@
 ---
 title: Implementowanie magistrali zdarzeń z oprogramowaniem RabbitMQ na potrzeby środowisk testowych lub deweloperskich
-description: Architektura mikrousług .NET dla konteneryzowanych aplikacji .NET | Użyj RabbitMQ do zaimplementowania komunikatów magistrali zdarzeń dla zdarzeń integracji dla środowiska deweloperów lub testów.
+description: Architektura mikrousług platformy .NET dla konteneryzowanych aplikacji .NET | Użyj RabbitMQ do zaimplementowania komunikatów magistrali zdarzeń dla zdarzeń integracji dla środowisk deweloperskich lub testowych.
 ms.date: 10/02/2018
-ms.openlocfilehash: ba1cea9384893955ae0743ac8d6a34c350224cd5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 12e37fabfe915b4d2089d27f7852528a9a037d3c
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74711195"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988300"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>Implementowanie magistrali zdarzeń z oprogramowaniem RabbitMQ na potrzeby środowisk testowych lub deweloperskich
 
-Należy rozpocząć od mówiąc, że jeśli utworzysz niestandardowej magistrali zdarzeń na podstawie RabbitMQ uruchomiony w kontenerze, jak aplikacja eShopOnContainers nie, powinien być używany tylko dla środowiska rozwoju i testowania. Nie należy go używać w środowisku produkcyjnym, chyba że budujesz go jako część magistrali usług gotowych do produkcji. Prosty niestandardowy magistrali zdarzeń może brakować wielu gotowych do produkcji krytycznych funkcji, które ma komercyjna magistrala usług.
+Należy rozpocząć od stwierdzenia, że jeśli utworzysz niestandardowy magistrala zdarzeń na podstawie RabbitMQ uruchomionego w kontenerze, tak jak robi to aplikacja eShopOnContainers, powinna być używana tylko w środowiskach deweloperskich i testowych. Nie należy go używać w środowisku produkcyjnym, chyba że budujesz go jako część magistrali serwisowej gotowej do produkcji. W prostej niestandardowej magistrali zdarzeń może brakować wielu krytycznych funkcji gotowych do produkcji, które ma komercyjna magistrala usług.
 
-Jedną z implementacji niestandardowej magistrali zdarzeń w eShopOnContainers jest w zasadzie biblioteki przy użyciu interfejsu API RabbitMQ (Istnieje inna implementacja oparta na usłudze Azure Service Bus).
+Jednym z niestandardowych implementacji magistrali zdarzeń w eShopOnContainers jest w zasadzie biblioteka przy użyciu interfejsu API RabbitMQ. (Istnieje inna implementacja oparta na usłudze Azure Service Bus).
 
-Implementacja magistrali zdarzeń z RabbitMQ umożliwia mikrousługom subskrybowanie zdarzeń, publikowanie zdarzeń i odbieranie zdarzeń, jak pokazano na rysunku 6-21.
+Implementacja magistrali zdarzeń z RabbitMQ umożliwia mikrousługpodsoby subskrybować zdarzenia, publikować zdarzenia i odbierać zdarzenia, jak pokazano na rysunku 6-21.
 
 ![Diagram przedstawiający RabbitMQ między nadawcą wiadomości a odbiorcą wiadomości.](./media/rabbitmq-event-bus-development-test-environment/rabbitmq-implementation.png)
 
-**Rysunek 6-21.** Wykonanie autobusu imprezowego RabbitMQ
+**Rysunek 6-21.** RabbitMQ implementacja magistrali zdarzeń
 
-RabbitMQ działa jako pośrednik między wydawcą wiadomości a subskrybentami, do obsługi dystrybucji. W kodzie EventBusRabbitMQ klasa implementuje ogólny interfejs IEventBus. Jest to oparte na iniekcji zależności, dzięki czemu można zamienić z tej wersji dev/test do wersji produkcyjnej.
+RabbitMQ działa jako pośrednik między wydawcą wiadomości a subskrybentami, do obsługi dystrybucji. W kodzie EventBusRabbitMQ klasa implementuje ogólny interfejs IEventBus. Jest to oparte na iniekcji zależności, dzięki czemu można zamienić z tej wersji deweloperskiej/testowej na wersję produkcyjną.
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable
@@ -31,11 +31,11 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 }
 ```
 
-Implementacja RabbitMQ przykładowej magistrali zdarzeń deweloperskich/testowych jest kodem systemowym. Musi obsługiwać połączenie z serwerem RabbitMQ i podać kod do publikowania zdarzenia wiadomości do kolejek. Musi również zaimplementować słownik kolekcji obsługi zdarzeń integracji dla każdego typu zdarzenia; te typy zdarzeń mogą mieć różne wystąpienia i różnych subskrypcji dla każdej mikrousługi odbiornika, jak pokazano na rysunku 6-21.
+RabbitMQ implementacji przykładowej magistrali zdarzeń deweloperskich/testowych jest kodem współpłytowym. Musi obsługiwać połączenie z serwerem RabbitMQ i podać kod do publikowania zdarzenia wiadomości do kolejek. Ma również do zaimplementowania słownika kolekcji programów obsługi zdarzeń integracji dla każdego typu zdarzenia; te typy zdarzeń może mieć różne wystąpienia i różnych subskrypcji dla każdego mikrousługi odbiornika, jak pokazano na rysunku 6-21.
 
 ## <a name="implementing-a-simple-publish-method-with-rabbitmq"></a>Implementowanie prostej metody publikowania za pomocą RabbitMQ
 
-Poniższy kod jest ***uproszczoną*** wersją implementacji magistrali zdarzeń dla RabbitMQ, aby zaprezentować cały scenariusz. Tak naprawdę nie obsługujesz połączenia w ten sposób. Aby wyświetlić pełną implementację, zobacz rzeczywisty kod w repozytorium [dotnet-architecture/eShopOnContainers.](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs)
+Poniższy kod jest ***uproszczoną*** wersją implementacji magistrali zdarzeń dla RabbitMQ, aby zaprezentować cały scenariusz. Tak naprawdę nie obsługuje połączenia w ten sposób. Aby zobaczyć pełną implementację, zobacz rzeczywisty kod w repozytorium [dotnet-architecture/eShopOnContainers.](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs)
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable
@@ -63,13 +63,13 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 }
 ```
 
-[Rzeczywisty kod](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) Publish metody w aplikacji eShopOnContainers jest ulepszony przy użyciu zasad ponawiania [Polly,](https://github.com/App-vNext/Polly) który ponawia próbę zadania określoną liczbę razy w przypadku kontenera RabbitMQ nie jest gotowy. Taka sytuacja może wystąpić, gdy docker-compose uruchamia kontenery; na przykład kontener RabbitMQ może rozpoczynać się wolniej niż inne kontenery.
+[Rzeczywisty kod](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) Publish metody w aplikacji eShopOnContainers jest lepsza przy użyciu zasad ponawiania [prób Polly,](https://github.com/App-vNext/Polly) która ponawia zadanie określoną liczbę razy w przypadku, gdy rabbitmq kontenera nie jest gotowy. Może to nastąpić, gdy docker-compose uruchamia kontenery; na przykład RabbitMQ kontenera może rozpocząć się wolniej niż inne kontenery.
 
 Jak wspomniano wcześniej, istnieje wiele możliwych konfiguracji w RabbitMQ, więc ten kod powinien być używany tylko dla środowisk deweloperskich/testowych.
 
 ## <a name="implementing-the-subscription-code-with-the-rabbitmq-api"></a>Implementowanie kodu subskrypcji za pomocą interfejsu API RabbitMQ
 
-Podobnie jak w przypadku kodu publikowania, poniższy kod jest uproszczenie części implementacji magistrali zdarzeń dla RabbitMQ. Ponownie, zwykle nie trzeba go zmieniać, chyba że go poprawiasz.
+Podobnie jak w przypadku kodu publikowania, poniższy kod jest uproszczeniem części implementacji magistrali zdarzeń dla RabbitMQ. Ponownie, zwykle nie trzeba go zmieniać, chyba że poprawiasz go.
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable
@@ -106,22 +106,22 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 
 Każdy typ zdarzenia ma powiązany kanał, aby uzyskać zdarzenia z RabbitMQ. Następnie można mieć dowolną liczbę programów obsługi zdarzeń na kanał i typ zdarzenia, zgodnie z potrzebami.
 
-Subscribe Metoda akceptuje IIntegrationEventHandler obiektu, który jest jak metoda wywołania wywołania w bieżącej mikrousługi, a także jego powiązany IntegrEvent obiektu. Następnie kod dodaje, że program obsługi zdarzeń do listy programów obsługi zdarzeń, które każdy typ zdarzenia integracji może mieć na mikrousługi klienta. Jeśli kod klienta nie został jeszcze subskrybowany zdarzenia, kod tworzy kanał dla typu zdarzenia, dzięki czemu może odbierać zdarzenia w stylu wypychania z RabbitMQ, gdy to zdarzenie jest publikowane z innej usługi.
+Subscribe Metoda akceptuje IIntegrationEventHandler obiektu, który jest jak metoda wywołania zwrotnego w bieżącej mikrousługi, a także jego powiązanych IntegrationEvent obiektu. Kod następnie dodaje, że program obsługi zdarzeń do listy programów obsługi zdarzeń, które każdy typ zdarzenia integracji może mieć na mikrousługi klienta. Jeśli kod klienta nie został jeszcze subskrybowany do zdarzenia, kod tworzy kanał dla typu zdarzenia, dzięki czemu może odbierać zdarzenia w stylu wypychania z RabbitMQ, gdy to zdarzenie jest publikowane z dowolnej innej usługi.
 
-Jak wspomniano powyżej, magistrala zdarzeń zaimplementowana w eShopOnContainers ma tylko i cel edukacyjny, ponieważ obsługuje tylko główne scenariusze, więc nie jest gotowy do produkcji.
+Jak wspomniano powyżej, magistrala zdarzeń zaimplementowana w eShopOnContainers ma tylko cel edukacyjny i edukacyjny, ponieważ obsługuje tylko główne scenariusze, więc nie jest gotowy do produkcji.
 
-W przypadku scenariuszy produkcyjnych sprawdź dodatkowe zasoby poniżej, specyficzne dla RabbitMQ i [implementowanie komunikacji opartej na zdarzeniach między mikrousług](./integration-event-based-microservice-communications.md#additional-resources) sekcji.
+W scenariuszach produkcyjnych sprawdź dodatkowe zasoby poniżej, specyficzne dla RabbitMQ i [implementacji komunikacji opartej na zdarzeniach między mikrousługami](./integration-event-based-microservice-communications.md#additional-resources) sekcji.
 
 ## <a name="additional-resources"></a>Zasoby dodatkowe
 
-Gotowe do produkcji rozwiązania ze wsparciem dla RabbitMQ.
+Gotowe do produkcji rozwiązania z obsługą RabbitMQ.
 
-- **EasyNetQ** - Klient interfejsu API open source .NET dla RabbitMQ \
+- **EasyNetQ** - Open Source .NET API client for RabbitMQ \ EasyNetQ - Open Source .NET API client for RabbitMQ \ EasyNetQ - Open Source .NET API client for RabbitMQ \ EasyNet
   <http://easynetq.com/>
 
-- **Transport masowy** \
+- **MassTransit (MassTransit)** \
   <https://masstransit-project.com/>
   
->[!div class="step-by-step"]
->[Poprzedni](integration-event-based-microservice-communications.md)
->[następny](subscribe-events.md)
+> [!div class="step-by-step"]
+> [Poprzedni](integration-event-based-microservice-communications.md)
+> [następny](subscribe-events.md)

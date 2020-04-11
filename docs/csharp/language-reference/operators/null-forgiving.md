@@ -6,51 +6,51 @@ f1_keywords:
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: 36bfa46cebd2b35c4985dfc23dbe84f8f5dc9201
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 658043f8d5e149064f6da328657b2ccef9b5da94
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78846324"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121440"
 ---
-# <a name="-null-forgiving-operator-c-reference"></a>! operator (wyrozumiały null) (odwołanie do języka C#)
+# <a name="-null-forgiving-operator-c-reference"></a>! (zero-wyrozumiały) operator (odwołanie C#)
 
-Dostępne w języku C# 8.0 i `!` nowszych, operator unary postfix jest operatorem wyrozumiały mównika. W włączonym [kontekście adnotacji nullable](../../nullable-references.md#nullable-annotation-context), należy użyć null-wyrozumiały operator zadeklarować, że wyrażenie `x` typu odwołania nie `null`jest : `x!`. Operator prefiksu `!` unary jest [operatorem negacji logicznej](boolean-logical-operators.md#logical-negation-operator-).
+Dostępne w języku C# 8.0 i `!` nowszych, operator poprawek bezwysyłkowych jest operatorem wyrozumiałości zerowej. W włączonym [kontekście adnotacji z możliwością null,](../../nullable-references.md#nullable-annotation-context)operator wyrozumiały o wartości null, aby zadeklarować, że wyrażenie `x` typu odwołania nie `null`jest : `x!`. Operator prefiksu dwuobrodczego `!` jest [operatorem logicznego negacji](boolean-logical-operators.md#logical-negation-operator-).
 
-Operator wyrozumiały nie ma wpływu w czasie wykonywania. Ma to wpływ tylko na analizę przepływu statycznego kompilatora, zmieniając stan zerowy wyrażenia. W czasie wykonywania wyrażenie `x!` oblicza wynik wyrażenia `x`źródłowego .
+Operator wyrozumiały null nie ma wpływu w czasie wykonywania. Wpływa tylko na analizę przepływu statycznego kompilatora, zmieniając stan zerowy wyrażenia. W czasie wykonywania `x!` wyrażenie ocenia wynik wyrażenia `x`źródłowego .
 
-Aby uzyskać więcej informacji na temat funkcji typów odwołań z możliwością null, zobacz [Typy odwołań nullable](../../nullable-references.md).
+Aby uzyskać więcej informacji na temat funkcji typy odwołań z dopuszczalną wartością null, zobacz [Typy odwołań możliwe do wartości null](../builtin-types/nullable-reference-types.md).
 
 ## <a name="examples"></a>Przykłady
 
-Jednym z przypadków użycia operatora wyrozumiałego jest testowanie logiki sprawdzania poprawności argumentu. Rozważmy na przykład następującą klasę:
+Jednym z przypadków użycia operatora null-forgiving jest w testowaniu logiki sprawdzania poprawności argumentu. Rozważmy na przykład następującą klasę:
 
 [!code-csharp[Person class](snippets/NullForgivingOperator.cs#PersonClass)]
 
-Za pomocą [struktury testów MSTest](../../../core/testing/unit-testing-with-mstest.md)można utworzyć następujący test dla logiki sprawdzania poprawności w konstruktorze:
+Za pomocą [mstest test framework](../../../core/testing/unit-testing-with-mstest.md), można utworzyć następujący test dla logiki sprawdzania poprawności w konstruktorze:
 
 [!code-csharp[Person test](snippets/NullForgivingOperator.cs#TestPerson)]
 
-Bez operatora wyrozumiałego dla wartości null kompilator generuje `Warning CS8625: Cannot convert null literal to non-nullable reference type`następujące ostrzeżenie dla poprzedniego kodu: . Za pomocą operatora wyrozumiały null, informujesz kompilator, że przekazywanie `null` jest oczekiwane i nie powinien być ostrzeżony.
+Bez operatora wyrozumiałości zerowej kompilator generuje następujące `Warning CS8625: Cannot convert null literal to non-nullable reference type`ostrzeżenie dla poprzedniego kodu: . Za pomocą operatora null-wyrozumiały, `null` informujesz kompilator, że przekazywanie jest oczekiwane i nie powinny być ostrzegane o.
 
-Można również użyć null-wyrozumiały operator, gdy na `null` pewno wiesz, że wyrażenie nie może być, ale kompilator nie udaje się rozpoznać, że. W poniższym przykładzie, `IsValid` jeśli `true`metoda zwraca, `null` jej argument nie jest i można bezpiecznie wyłuskać go:
+Można również użyć operatora wyrozumiałości zerowej, `null` gdy na pewno wiesz, że wyrażenie nie może być, ale kompilator nie zarządza rozpoznać. W poniższym przykładzie, jeśli `IsValid` metoda zwraca `true`, jej argument nie `null` jest i można bezpiecznie wyłuskać go:
 
 [!code-csharp[Use null-forgiving operator](snippets/NullForgivingOperator.cs#UseNullForgiving)]
 
-Bez operatora wyrozumiałego null kompilator generuje `p.Name` następujące `Warning CS8602: Dereference of a possibly null reference`ostrzeżenie dla kodu: .
+Bez operatora wyrozumiałości zerowej kompilator `p.Name` generuje `Warning CS8602: Dereference of a possibly null reference`następujące ostrzeżenie dla kodu: .
 
-Jeśli można zmodyfikować `IsValid` metodę, można użyć [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute) atrybut poinformować kompilator, że argument `IsValid` metody nie może być, `null` gdy metoda zwraca: `true`
+Jeśli można `IsValid` zmodyfikować metodę, można użyć [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute) atrybut poinformować kompilator, że argument `IsValid` metody nie może być, `null` gdy metoda zwraca: `true`
 
 [!code-csharp[Use an attribute](snippets/NullForgivingOperator.cs#UseAttribute)]
 
-W poprzednim przykładzie nie trzeba używać null-wyrozumiały operator, ponieważ kompilator ma `p` wystarczająco `null` dużo `if` informacji, aby dowiedzieć się, że nie może być wewnątrz instrukcji. Aby uzyskać więcej informacji na temat atrybutów, które umożliwiają podanie dodatkowych informacji o stanie zerowym zmiennej, zobacz [Uaktualnianie interfejsów API z atrybutami definiującymi oczekiwania null](../../nullable-attributes.md).
+W poprzednim przykładzie nie trzeba używać operatora wyrozumiałości zerowej, ponieważ kompilator ma wystarczająco dużo informacji, aby dowiedzieć się, że `p` nie może znajdować `null` się wewnątrz `if` instrukcji. Aby uzyskać więcej informacji na temat atrybutów, które umożliwiają dostarczenie dodatkowych informacji o stanie zerowym zmiennej, zobacz [Uaktualnianie interfejsów API z atrybutami definiuuuujymicy oczekiwania zerowe](../../nullable-attributes.md).
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
-Aby uzyskać więcej informacji, zobacz [null-wyrozumiały operator](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md#the-null-forgiving-operator) sekcji [wersji roboczej specyfikacji typów odwołań nullable](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md).
+Aby uzyskać więcej informacji, zobacz [sekcję operatora z wyrozumiałym o wartości null](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md#the-null-forgiving-operator) [w wersji roboczej specyfikacji typów odwołań, których nie można unieważnić.](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md)
 
 ## <a name="see-also"></a>Zobacz też
 
 - [Dokumentacja języka C#](../index.md)
 - [Operatory języka C#](index.md)
-- [Samouczek: Projektowanie z typami odwołań z wartościami null](../../tutorials/nullable-reference-types.md)
+- [Samouczek: Projektowanie z typami odwołań z dopuszczalnymi do wartości null](../../tutorials/nullable-reference-types.md)

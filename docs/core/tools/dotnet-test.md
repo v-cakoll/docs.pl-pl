@@ -2,12 +2,12 @@
 title: polecenie testu dotnet
 description: Polecenie testu dotnet służy do wykonywania testów jednostkowych w danym projekcie.
 ms.date: 02/27/2020
-ms.openlocfilehash: a11814f9fdc6326e681a09d7d2654b968014f318
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 359e4522b26e2b59092d55eea3fca575d2afaf1f
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507311"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121040"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -85,7 +85,7 @@ Projekty testowe określają wynik `<PackageReference>` testu przy użyciu zwyk�
 
 - **`l|--logger <LoggerUri/FriendlyName>`**
 
-  Określa rejestrator dla wyników testów.
+  Określa rejestrator dla wyników testów. W przeciwieństwie do MSBuild, test dotnet nie akceptuje `-l "console;v=d"` skrótów: zamiast używać `-l "console;verbosity=detailed"`.
 
 - **`--no-build`**
 
@@ -121,7 +121,7 @@ Projekty testowe określają wynik `<PackageReference>` testu przy użyciu zwyk�
 
 - **`-v|--verbosity <LEVEL>`**
 
-  Ustawia poziom szczegółowości polecenia. Dozwolone wartości `q[uiet]`to `m[inimal]` `n[ormal]`, `d[etailed]`, `diag[nostic]`, i .
+  Ustawia poziom szczegółowości polecenia. Dozwolone wartości `q[uiet]`to `m[inimal]` `n[ormal]`, `d[etailed]`, `diag[nostic]`, i . Wartość domyślna to `minimal`. Aby uzyskać więcej informacji, zobacz <xref:Microsoft.Build.Framework.LoggerVerbosity>.
 
 - `RunSettings`Argumenty
 
@@ -149,6 +149,12 @@ Projekty testowe określają wynik `<PackageReference>` testu przy użyciu zwyk�
 
   ```dotnetcli
   dotnet test --logger trx
+  ```
+
+- Uruchom testy w projekcie w bieżącym katalogu i zaloguj ze szczegółową szczegółowością do konsoli:
+
+  ```dotnetcli
+  dotnet test --logger "console;verbosity=detailed"
   ```
 
 ## <a name="filter-option-details"></a>Szczegóły opcji filtrowania
@@ -192,3 +198,4 @@ Aby uzyskać więcej informacji i przykładów dotyczących używania selektywne
 
 - [Ramy i cele](../../standard/frameworks.md)
 - [Katalog identyfikatora IDentifier (RID) programu .NET Core](../rid-catalog.md)
+- [Przekazywanie argumentów runsettings za pomocą polecenia](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)

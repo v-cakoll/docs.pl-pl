@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: a132e527deadcffb4826c1965987fc09da470a09
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: 90066b1e9c219f66fc0c76423679e81aa3fa6770
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635303"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81120981"
 ---
 # <a name="member-access-operators-and-expressions-c-reference"></a>Operatory i wyrażenia dostępu do elementów członkowskich (odwołanie do języka C#)
 
@@ -170,7 +170,7 @@ Nawiasy są również używane podczas wywoływania [konstruktora](../../program
 
 Nawiasy są również używane do dostosowywania kolejności, w jakiej mają być oceniane operacje w wyrażeniu. Aby uzyskać więcej informacji, zobacz [operatory języka C#.](index.md)
 
-[Wyrażenia rzutowe,](type-testing-and-cast.md#cast-operator-)które wykonują jawne konwersje typu, również używają nawiasów.
+[Wyrażenia rzutowe,](type-testing-and-cast.md#cast-expression)które wykonują jawne konwersje typu, również używają nawiasów.
 
 ## <a name="index-from-end-operator-"></a>Indeks od operatora końcowego ^
 

@@ -1,5 +1,5 @@
 ---
-title: Operatory testowania i rzutowanie typu — odwołanie do języka C#
+title: Operatory testowania typów i wyrażenie rzutowanie — odwołanie do języka C#
 description: Dowiedz się więcej o operatorach języka C#, których można użyć do sprawdzenia typu wyniku wyrażenia i przekonwertowania go na inny typ, jeśli to konieczne.
 ms.date: 06/21/2019
 author: pkulikov
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: 2dc215a91c55be15e8eee488f0030f41e3492af5
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 5a4f1d4c0c2ddd0d3967e15090d8f8c1ac42f83e
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507090"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121419"
 ---
-# <a name="type-testing-and-cast-operators-c-reference"></a>Operatory testowania i rzutowanie typu (odwołanie do języka C#)
+# <a name="type-testing-operators-and-cast-expression-c-reference"></a>Operatory testowania typów i wyrażenie rzutowanie (odwołanie do języka C#)
 
-Do sprawdzania typu lub konwersji typu można użyć następujących operatorów:
+Do sprawdzania typu lub konwersji typu można użyć następujących operatorów i wyrażeń:
 
 - [operator :](#is-operator)aby sprawdzić, czy typ środowiska wykonawczego wyrażenia jest zgodny z danym typem
 - [jako operator](#as-operator): jawnie przekonwertować wyrażenie na dany typ, jeśli jego typ środowiska uruchomieniowego jest zgodny z tym typem
-- [operator cast ()](#cast-operator-): w celu przeprowadzenia jawnej konwersji
+- [wyrażenie rzutowe](#cast-expression): aby wykonać jawną konwersję
 - [typeof operator](#typeof-operator): <xref:System.Type?displayProperty=nameWithType> aby uzyskać wystąpienie dla typu
 
 ## <a name="is-operator"></a>jest operatorem
@@ -76,7 +76,7 @@ Aby uzyskać więcej informacji na temat wzorca typu i innych obsługiwanych wzo
 
 ## <a name="as-operator"></a>jako operator
 
-Operator `as` jawnie konwertuje wynik wyrażenia na dane odwołanie lub typ wartości nullable. Jeśli konwersja nie jest `as` możliwa, operator zwraca . `null` W przeciwieństwie do operatora `as` [rzutowego (),](#cast-operator-)operator nigdy nie zgłasza wyjątku.
+Operator `as` jawnie konwertuje wynik wyrażenia na dane odwołanie lub typ wartości nullable. Jeśli konwersja nie jest `as` możliwa, operator zwraca . `null` W przeciwieństwie do `as` [wyrażenia rzutowego](#cast-expression)operator nigdy nie zgłasza wyjątku.
 
 Wyrażenie formularza
 
@@ -92,7 +92,7 @@ E is T ? (T)(E) : (T)null
 
 z `E` tą różnicą, że jest oceniana tylko raz.
 
-Operator `as` bierze pod uwagę tylko odwołania, nullable, boks i unboxing konwersji. Nie można `as` użyć operatora do wykonania konwersji zdefiniowanej przez użytkownika. Aby to zrobić, należy użyć [operatora rzutu ()](#cast-operator-).
+Operator `as` bierze pod uwagę tylko odwołania, nullable, boks i unboxing konwersji. Nie można `as` użyć operatora do wykonania konwersji zdefiniowanej przez użytkownika. Aby to zrobić, należy użyć [wyrażenia rzutowego](#cast-expression).
 
 Poniższy przykład pokazuje użycie `as` operatora:
 
@@ -101,7 +101,7 @@ Poniższy przykład pokazuje użycie `as` operatora:
 > [!NOTE]
 > Jak pokazano w poprzednim przykładzie, należy porównać wynik `as` wyrażenia z, `null` aby sprawdzić, czy konwersja zakończy się pomyślnie. Począwszy od języka C# 7.0, można użyć [is operatora](#type-testing-with-pattern-matching) zarówno do testowania, jeśli konwersja powiedzie się i, jeśli zakończy się pomyślnie, przypisać jej wynik do nowej zmiennej.
 
-## <a name="cast-operator-"></a>Operator odlewu ()
+## <a name="cast-expression"></a>Wyrażenie rzutowe
 
 Wyrażenie rzutowania formularza `(T)E` wykonuje jawną konwersję wyniku `E` wyrażenia `T`na typ . Jeśli nie istnieje jawna konwersja od typu `E` do typu, `T`występuje błąd w czasie kompilacji. W czasie wykonywania jawne konwersji może nie zakończyć się pomyślnie i wyrażenie rzutu może zgłosić wyjątek.
 

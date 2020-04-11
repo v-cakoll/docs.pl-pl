@@ -2,12 +2,12 @@
 title: Używanie Instrumentacji zarządzania Windows na potrzeby diagnostyki
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: 0c803e3988f7a63980d991190db87c263c992b80
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b14f9401266bdf7edccd7dca12cb818cdd2cb348
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185673"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121545"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Używanie Instrumentacji zarządzania Windows na potrzeby diagnostyki
 Windows Communication Foundation (WCF) udostępnia dane inspekcji usługi w czasie wykonywania za pośrednictwem dostawcy WCF Windows Instrumentation (WMI) dostawcy.  
@@ -152,10 +152,11 @@ Whoami /user
 ## <a name="accessing-remote-wmi-object-instances"></a>Uzyskiwanie dostępu do zdalnych wystąpień obiektów usługi WMI  
  Jeśli chcesz uzyskać dostęp do wystąpień WCF WMI na komputerze zdalnym, należy włączyć prywatność pakietów na narzędziach, które są używane do uzyskiwania dostępu. W poniższej sekcji opisano sposób ich osiągnięcia przy użyciu programu WMI CIM Studio, testera instrumentacji zarządzania windowsem oraz narzędzia .NET SDK 2.0.  
   
-### <a name="wmi-cim-studio"></a>WMI CIM Studio  
- Jeśli zainstalowano [narzędzia administracyjne WMI,](https://go.microsoft.com/fwlink/?LinkId=95185)można użyć programu WMI CIM Studio, aby uzyskać dostęp do wystąpień usługi WMI. Narzędzia znajdują się w następującym folderze  
+### <a name="wmi-cim-studio"></a>WMI CIM Studio
+
+Jeśli zainstalowano narzędzia administracyjne WMI, można użyć programu WMI CIM Studio, aby uzyskać dostęp do wystąpień usługi WMI. Narzędzia znajdują się w następującym folderze:
   
- **%windir%\Pliki programów\Narzędzia WMI\\**  
+*%windir%\Pliki programów\Narzędzia WMI\\*
   
 1. W oknie **Połącz z obszarem nazw wpisz** **root\ServiceModel** i kliknij przycisk **OK.**  
   

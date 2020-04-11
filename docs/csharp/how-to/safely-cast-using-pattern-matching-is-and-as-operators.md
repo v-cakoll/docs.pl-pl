@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: 34c34865a2feece5fe037daeb035292aafd015b9
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 60e69a8ef55484e3b04f1674c35a1c5dadfa3b7c
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249360"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81120995"
 ---
 # <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>Jak bezpiecznie rzucać za pomocą dopasowywania wzorców i jest i jako operatorzy
 
@@ -37,4 +37,4 @@ Jeśli chcesz przetestować, czy zmienna jest danym typem, ale nie przypisać `i
 
 Jak widać, porównując ten kod z kodem dopasowania wzorca, składnia pasująca do wzorca zapewnia bardziej niezawodne funkcje, łącząc test i przypisanie w jednej instrukcji. W miarę możliwości należy używać składni dopasowywania wzorca.
 
-Możesz wypróbować te przykłady, patrząc na kod w naszym [repozytorium GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/safelycast). Możesz też pobrać próbki [jako plik zip](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/safelycast.zip).
+Możesz wypróbować te przykłady, patrząc na kod w naszym [repozytorium GitHub](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/safelycast). Możesz też pobrać próbki [jako plik zip](../../../samples/snippets/csharp/how-to/safelycast.zip).

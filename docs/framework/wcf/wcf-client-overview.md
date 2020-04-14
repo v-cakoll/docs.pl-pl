@@ -7,18 +7,19 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: 7905d540e0f06dd2863cf80381210307e3021918
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c12579062b04cfb46e14d5c3d734a7c155f8d654
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183060"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278889"
 ---
-# <a name="wcf-client-overview"></a>Przegląd klienta programu WCF
+# <a name="wcf-client-overview"></a>Omówienie klienta WCF
+
 W tej sekcji opisano, co robią aplikacje klienckie, jak skonfigurować, utworzyć i używać klienta Programu Windows Communication Foundation (WCF) oraz jak zabezpieczyć aplikacje klienckie.  
   
 ## <a name="using-wcf-client-objects"></a>Korzystanie z obiektów klienta WCF  
- Aplikacja kliencka jest aplikacją zarządzaną, która używa klienta WCF do komunikowania się z inną aplikacją. Aby utworzyć aplikację kliencką dla usługi WCF wymaga następujących kroków:  
+ Aplikacja kliencka jest aplikacją zarządzaną, która używa klienta WCF do komunikowania się z inną aplikacją. Tworzenie aplikacji klienckiej dla usługi WCF wymaga następujących kroków:  
   
 1. Uzyskaj umowę serwisową, powiązania i informacje adresowe dla punktu końcowego usługi.  
   
@@ -28,7 +29,7 @@ W tej sekcji opisano, co robią aplikacje klienckie, jak skonfigurować, utworzy
   
 4. Zamknij obiekt klienta WCF.  
   
- W poniższych sekcjach omówiono te kroki i przedstawiono krótkie wprowadzenie do następujących problemów:  
+W poniższych sekcjach omówiono te kroki i przedstawiono krótkie wprowadzenie do następujących problemów:  
   
 - Obsługa błędów.  
   
@@ -79,7 +80,7 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
   
  [!code-xml[C_GeneratedCodeFiles#19](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/common/client.exe.config#19)]  
   
- Ten plik konfiguracyjny określa `<client>` docelowy punkt końcowy w elemencie. Aby uzyskać więcej informacji na temat korzystania <xref:System.ServiceModel.ClientBase%601.%23ctor%2A?displayProperty=nameWithType> z <xref:System.ServiceModel.ChannelFactory%601.%23ctor%2A?displayProperty=nameWithType> wielu punktów końcowych docelowych, zobacz lub konstruktorów.  
+ Ten plik konfiguracyjny określa `<client>` docelowy punkt końcowy w elemencie. Aby uzyskać więcej informacji na temat korzystania <xref:System.ServiceModel.ClientBase%601.%23ctor%2A> z <xref:System.ServiceModel.ChannelFactory%601.%23ctor%2A> wielu punktów końcowych docelowych, zobacz lub konstruktorów.  
   
 ## <a name="calling-operations"></a>Operacje wywoływania  
  Po utworzeniu i skonfigurowaniu obiektu klienta utwórz blok try/catch, wywołaj operacje w taki sam sposób, jak w przypadku obiektu lokalnego, i zamknij obiekt klienta WCF. Gdy aplikacja kliencka wywołuje pierwszą operację, WCF automatycznie otwiera podstawowy kanał, a kanał bazowy jest zamykany, gdy obiekt jest odtworzeny. (Alternatywnie można również jawnie otworzyć i zamknąć kanał przed lub po wywołaniu innych operacji).  
@@ -127,7 +128,7 @@ Namespace Microsoft.ServiceModel.Samples
 End Interface  
 ```  
   
- Operacje można wywołać, tworząc obiekt klienta WCF i wywołując jego metody, jak pokazano w poniższym przykładzie kodu. Należy zauważyć, że otwieranie, wywoływanie i zamykanie obiektu klienta WCF występuje w ramach jednego bloku try/catch. Aby uzyskać więcej informacji, zobacz [Uzyskiwanie dostępu do usług przy użyciu klienta WCF](./feature-details/accessing-services-using-a-client.md) i [użyj zamknij i przerwij, aby zwolnić zasoby klienta WCF](./samples/use-close-abort-release-wcf-client-resources.md).  
+ Operacje można wywołać, tworząc obiekt klienta WCF i wywołując jego metody, jak pokazano w poniższym przykładzie kodu. Otwieranie, wywoływanie i zamykanie obiektu klienta WCF występuje w ramach jednego bloku try/catch. Aby uzyskać więcej informacji, zobacz [Uzyskiwanie dostępu do usług przy użyciu klienta WCF](./feature-details/accessing-services-using-a-client.md) i [użyj zamknij i przerwij, aby zwolnić zasoby klienta WCF](./samples/use-close-abort-release-wcf-client-resources.md).  
   
  [!code-csharp[C_GeneratedCodeFiles#20](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#20)]  
   

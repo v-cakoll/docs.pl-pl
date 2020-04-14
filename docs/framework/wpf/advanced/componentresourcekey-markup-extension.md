@@ -8,35 +8,35 @@ helpviewer_keywords:
 - ComponentResourceKey markup extension [WPF]
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
-ms.openlocfilehash: 2ccc4f3154996a4e442a4092833f5c9ed9c8938a
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 4cdba2a61be4e9686cd2120fd90a213534c222c8
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559464"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243365"
 ---
 # <a name="componentresourcekey-markup-extension"></a>ComponentResourceKey — Rozszerzenie znaczników
-Definiuje i odwołuje się do kluczy dla zasobów, które są ładowane z zestawów zewnętrznych. Dzięki temu Wyszukiwanie zasobów pozwala określić typ docelowy w zestawie, a nie jawny słownik zasobów w zestawie lub w klasie.  
+Definiuje i odwołuje się do kluczy dla zasobów, które są ładowane z zestawów zewnętrznych. Dzięki temu wyszukiwanie zasobów, aby określić typ obiektu docelowego w zestawie, a nie jawny słownik zasobów w zestawie lub w klasie.  
   
-## <a name="xaml-attribute-usage-setting-key-compact"></a>Użycie atrybutu języka XAML (ustawienie klucza, Compact)  
+## <a name="xaml-attribute-usage-setting-key-compact"></a>Użycie atrybutu XAML (klucz ustawień, kompaktowy)  
   
 ```xml  
 <object x:Key="{ComponentResourceKey {x:Type targetTypeName}, targetID}" .../>  
 ```  
   
-## <a name="xaml-attribute-usage-setting-key-verbose"></a>Użycie atrybutu języka XAML (klucz ustawienia, pełne)  
+## <a name="xaml-attribute-usage-setting-key-verbose"></a>Użycie atrybutu XAML (klucz ustawień, pełne)  
   
 ```xml  
 <object x:Key="{ComponentResourceKey TypeInTargetAssembly={x:Type targetTypeName}, ResourceID=targetID}" .../>  
 ```  
   
-## <a name="xaml-attribute-usage-requesting-resource-compact"></a>Użycie atrybutu języka XAML (żądanie zasobu, Compact)  
+## <a name="xaml-attribute-usage-requesting-resource-compact"></a>Użycie atrybutu XAML (żądanie zasobu, kompaktowy)  
   
 ```xml  
 <object property="{DynamicResource {ComponentResourceKey {x:Type targetTypeName}, targetID}}" .../>  
 ```  
   
-## <a name="xaml-attribute-usage-requesting-resource-verbose"></a>Użycie atrybutu języka XAML (żądanie zasobu, pełne)  
+## <a name="xaml-attribute-usage-requesting-resource-verbose"></a>Użycie atrybutu XAML (żądanie zasobu, pełne)  
   
 ```xml  
 <object property="{DynamicResource {ComponentResourceKey TypeInTargetAssembly={x:Type targetTypeName}, ResourceID=targetID}}" .../>  
@@ -46,38 +46,38 @@ Definiuje i odwołuje się do kluczy dla zasobów, które są ładowane z zestaw
   
 |||  
 |-|-|  
-|`targetTypeName`|Nazwa typu publicznego środowiska uruchomieniowego języka wspólnego (CLR), który jest zdefiniowany w zestawie zasobów.|  
-|`targetID`|Klucz zasobu. Podczas wyszukiwania zasobów `targetID` będą analogiczne do [dyrektywy x:Key](../../../desktop-wpf/xaml-services/xkey-directive.md) zasobu.|  
+|`targetTypeName`|Nazwa typu środowiska wykonawczego języka powszechnego (CLR), który jest zdefiniowany w zestawie zasobów.|  
+|`targetID`|Klucz dla zasobu. Gdy zasoby są wyszukane, `targetID` będzie analogiczna do [x:Key dyrektywy](../../../desktop-wpf/xaml-services/xkey-directive.md) zasobu.|  
   
 ## <a name="remarks"></a>Uwagi  
- Jak pokazano powyżej, użycie rozszerzenia znacznika {`ComponentResourceKey`} zostało znalezione w dwóch miejscach:  
+ Jak widać w powyższych zastosowaniach, użycie rozszerzenia znaczników {`ComponentResourceKey`} znajduje się w dwóch miejscach:  
   
-- Definicja klucza w słowniku zasobów motywu zgodnie z opisem autora kontrolki.  
+- Definicja klucza w słowniku zasobów motywu, dostarczone przez autora kontroli.  
   
-- Uzyskiwanie dostępu do zasobu motywu z zestawu, gdy retemplating formant, ale chcą używać wartości właściwości, które pochodzą z zasobów udostępnianych przez motywy formantu.  
+- Uzyskiwanie dostępu do zasobu motywu z zestawu, gdy są retemplating formantu, ale chcesz użyć wartości właściwości, które pochodzą z zasobów dostarczonych przez formantu tematów.  
   
- W przypadku odwołujących się do zasobów składników, które pochodzą z motywów, zazwyczaj zaleca się używanie `{DynamicResource}`, a nie `{StaticResource}`. Ta wartość jest wyświetlana w obszarze użycia. `{DynamicResource}` jest zalecana, ponieważ sama kompozycja może zostać zmieniona przez użytkownika. Jeśli chcesz, aby zasób składnika był najlepiej zgodny z intencją autora kontrolki do obsługi motywu, należy włączyć także odwołanie do zasobu składnika jako dynamiczne.  
+ W przypadku odwoływania się do zasobów składowych pochodzących `{DynamicResource}` z `{StaticResource}`motywów zaleca się użycie, a nie użycie . Jest to pokazane w użyciach. `{DynamicResource}`jest zalecane, ponieważ sam motyw może być zmieniony przez użytkownika. Jeśli chcesz, aby zasób składnika, który najbardziej odpowiada intencji autora formantu do obsługi motywu, należy włączyć odwołanie do zasobu składnika być dynamiczne również.  
   
- <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> identyfikuje typ, który istnieje w zestawie docelowym, gdzie zasób jest w rzeczywistości zdefiniowany. `ComponentResourceKey` może być zdefiniowana i używana niezależnie do znajomości dokładnego miejsca, w którym zdefiniowano <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A>, ale ostatecznie musi rozpoznać typ za pomocą przywoływanych zestawów.  
+ Identyfikuje <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> typ, który istnieje w zestawie docelowym, gdzie zasób jest faktycznie zdefiniowany. A `ComponentResourceKey` mogą być definiowane i używane niezależnie <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> od wiedząc dokładnie, gdzie jest zdefiniowany, ale ostatecznie musi rozwiązać typ za pomocą zestawów, do których istnieje odwołanie.  
   
- Typowym zastosowaniem <xref:System.Windows.ComponentResourceKey> jest definiowanie kluczy, które są następnie udostępniane jako elementy członkowskie klasy. Do tego użycia należy użyć konstruktora klasy <xref:System.Windows.ComponentResourceKey>, a nie rozszerzenia znacznika. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.ComponentResourceKey>lub sekcję "Definiowanie i odwoływanie się do kluczy dla zasobów motywów" w temacie [Omówienie tworzenia kontrolek](../controls/control-authoring-overview.md)tematu.  
+ Typowym zastosowaniem <xref:System.Windows.ComponentResourceKey> jest zdefiniowanie kluczy, które są następnie udostępniane jako członkowie klasy. W tym celu należy <xref:System.Windows.ComponentResourceKey> użyć konstruktora klasy, a nie rozszerzenia znaczników. Aby uzyskać więcej <xref:System.Windows.ComponentResourceKey>informacji, zobacz sekcję "Definiowanie i odwoływanie się do kluczy dla zasobów motywu" w temacie [Omówienie tworzenia formantu](../controls/control-authoring-overview.md).  
   
- W przypadku ustanawiania kluczy i odwoływania się do przywołujących się do nich, składnia atrybutu jest często używana dla rozszerzenia znaczników `ComponentResourceKey`.  
+ W przypadku zarówno ustanawiania kluczy, jak i odwoływania się `ComponentResourceKey` do zasobów z kluczami składnia atrybutów jest często używana dla rozszerzenia znaczników.  
   
- Pokazana składnia Compact opiera się na sygnaturze konstruktora <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType> i użyciu parametru pozycyjnego dla rozszerzenia znaczników. Kolejność, w której są określone `targetTypeName` i `targetID`, jest ważna. Składnia verbose opiera się na konstruktorze bez parametrów <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType>, a następnie ustawia <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> i <xref:System.Windows.ComponentResourceKey.ResourceId%2A> w taki sposób, który jest analogiczny do prawdziwej składni atrybutu w elemencie obiektu. W pełnej składni kolejność, w jakiej są ustawiane właściwości, nie jest ważna. Relacje i mechanizmy tych dwóch alternatyw (Compact i verbose) są opisane bardziej szczegółowo w tematach [rozszerzeń znaczników tematu i języka XAML WPF](markup-extensions-and-wpf-xaml.md).  
+ Przedstawiona składnia kompaktowa <xref:System.Windows.ComponentResourceKey.%23ctor%2A> opiera się na użyciu sygnatury konstruktora i parametru pozycyjnego rozszerzenia znaczników. Ważna jest kolejność, w jakiej `targetTypeName` i `targetID` są podane. Składnia pełnej opiera się na <xref:System.Windows.ComponentResourceKey.%23ctor%2A> konstruktorze bez parametrów, a następnie ustawia <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> i <xref:System.Windows.ComponentResourceKey.ResourceId%2A> w sposób, który jest analogiczny do składni atrybutu true na element obiektu. W składni pełnej kolejność, w której właściwości są ustawione nie jest ważne. Relacja i mechanizmy tych dwóch alternatyw (kompaktowych i pełnych) opisano bardziej szczegółowo w temacie [Rozszerzenia znaczników i WPF XAML](markup-extensions-and-wpf-xaml.md).  
   
- Technicznie wartość `targetID` może być dowolnym obiektem, nie musi być ciągiem. Jednak najbardziej typowym sposobem użycia w platformie WPF jest wyrównanie `targetID` wartości za pomocą ciągów, które są ciągami i gdzie takie ciągi są prawidłowe w [gramatyki XamlName](../../../desktop-wpf/xaml-services/xamlname-grammar.md).  
+ Technicznie wartość dla `targetID` może być dowolny obiekt, nie musi być ciąg. Jednak najczęstszym zastosowaniem w WPF `targetID` WPF jest wyrównanie wartości z formularzami, które są ciągami znaków i gdzie takie ciągi są prawidłowe w [XamlName Grammar](../../../desktop-wpf/xaml-services/xamlname-grammar.md).  
   
- `ComponentResourceKey` można używać w składni elementu obiektu. W takim przypadku określenie wartości właściwości <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> i <xref:System.Windows.ComponentResourceKey.ResourceId%2A> jest wymagane do prawidłowego zainicjowania rozszerzenia.  
+ `ComponentResourceKey`może być stosowany w składni elementu obiektu. W takim przypadku określenie wartości <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> i <xref:System.Windows.ComponentResourceKey.ResourceId%2A> właściwości jest wymagane do prawidłowego zainicjowania rozszerzenia.  
   
- W implementacji czytnika [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], obsługa dla tego rozszerzenia znacznika jest definiowana przez klasę <xref:System.Windows.ComponentResourceKey>.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] W implementacji czytnika obsługi dla tego rozszerzenia <xref:System.Windows.ComponentResourceKey> znaczników jest zdefiniowany przez klasę.  
   
- `ComponentResourceKey` to rozszerzenie znaczników. Rozszerzenia znaczników są zazwyczaj implementowane w sytuacji, gdy istnieje wymóg, aby wartości atrybutów były wyprowadzane w postaci innej niż wartości literałów lub nazwy programów obsługi, a wymóg ma charakter bardziej globalny niż zwykłe umieszczenie konwerterów typów w niektórych typach lub właściwościach. Wszystkie rozszerzenia znaczników w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] używają znaków {i} w ich składni atrybutów, która jest konwencją, za pomocą której procesor [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] rozpoznaje, że rozszerzenie znacznika musi przetworzyć atrybut. Aby uzyskać więcej informacji, zobacz [rozszerzenia znaczników i XAML WPF](markup-extensions-and-wpf-xaml.md).  
+ `ComponentResourceKey`jest rozszerzeniem znaczników. Rozszerzenia znaczników są zazwyczaj implementowane w sytuacji, gdy istnieje wymóg, aby wartości atrybutów były wyprowadzane w postaci innej niż wartości literałów lub nazwy programów obsługi, a wymóg ma charakter bardziej globalny niż zwykłe umieszczenie konwerterów typów w niektórych typach lub właściwościach. Wszystkie rozszerzenia znaczników [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] w użyciu { i } znaków w składni atrybutu, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] który jest konwencją, za pomocą której procesor rozpoznaje, że rozszerzenie znaczników musi przetwarzać atrybut. Aby uzyskać więcej informacji, zobacz [Rozszerzenia znaczników i WPF XAML](markup-extensions-and-wpf-xaml.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Windows.ComponentResourceKey>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Tworzenie kontrolek — omówienie](../controls/control-authoring-overview.md)
-- [Przegląd XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
-- [Rozszerzenia znaczników i WPF XAML](markup-extensions-and-wpf-xaml.md)
+- [Omówienie XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
+- [Rozszerzenia znacznikowania i WPF XAML](markup-extensions-and-wpf-xaml.md)

@@ -2,12 +2,12 @@
 title: Sortowanie
 ms.date: 12/13/2019
 description: Dowiedz się, jak utworzyć niestandardową sekwencję sortowania.
-ms.openlocfilehash: b93c82a4ace154b8293b05effa8f9e9294fa7708
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 9879846cc191a62c4cb47a0fbaa47c59153ba61c
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79506544"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242975"
 ---
 # <a name="collation"></a>Sortowanie
 
@@ -21,7 +21,7 @@ Sekwencje sortowania są używane przez SQLite podczas porównywania wartości T
 
 ## <a name="custom-collation"></a>Sortowanie niestandardowe
 
-Można również zdefiniować własne sekwencje sortowania lub zastąpić wbudowane za pomocą programu <xref:Microsoft.Data.Sqlite.SqliteConnection.CreateCollation%2A>. Poniższy przykład przedstawia zastępowanie sortowania NOCASE do obsługi znaków Unicode. [Pełny przykładowy kod](https://github.com/dotnet/samples/blob/master/snippets/standard/data/sqlite/CollationSample/Program.cs) jest dostępny w usłudze GitHub.
+Można również zdefiniować własne sekwencje sortowania lub zastąpić wbudowane za pomocą programu <xref:Microsoft.Data.Sqlite.SqliteConnection.CreateCollation%2A>. Poniższy przykład przedstawia zastępowanie sortowania NOCASE do obsługi znaków Unicode. [Pełny przykładowy kod](https://github.com/dotnet/docs/blob/master/samples/snippets/standard/data/sqlite/CollationSample/Program.cs) jest dostępny w usłudze GitHub.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/CollationSample/Program.cs?name=snippet_Collation)]
 

@@ -6,12 +6,12 @@ author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc,mlnet-tooling
-ms.openlocfilehash: 98c9f28ca4ce6365ed4cf4ff1566a33dbe8f35ca
-ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
+ms.openlocfilehash: 7761240055c90ae9c713b1c460e9e83316d256f9
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80438227"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278954"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>Samouczek: Analizowanie tonacji komentarzy witryn sieci Web w aplikacji internetowej przy użyciu ML.NET Kreatora modeli
 
@@ -19,7 +19,7 @@ Dowiedz się, jak analizować tonację z komentarzy w czasie rzeczywistym wewną
 
 W tym samouczku pokazano, jak utworzyć aplikację ASP.NET Core Razor Pages, która klasyfikuje tonację z komentarzy witryny w czasie rzeczywistym.
 
-Niniejszy samouczek zawiera informacje na temat wykonywania następujących czynności:
+Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
 
 > [!div class="checklist"]
 >
@@ -103,7 +103,7 @@ Czas wymagany do szkolenia modelu jest proporcjonalny do ilości danych. Kreator
 
 ## <a name="evaluate-the-model"></a>Ocena modelu
 
-Wynikiem etapu szkolenia będzie jeden model, który miał najlepsze wyniki. W kroku oceny narzędzia Model Builder, sekcja wyjściowa, będzie zawierać algorytm używany przez model o najwyższej wydajności we wpisie **Najlepszy model** wraz z metrykami w **sekcji Najlepsza dokładność modelu**. Ponadto tabela podsumowania zawierająca pięć najlepszych modeli i ich metryki.
+Wynikiem etapu szkolenia będzie jeden model, który ma najlepszą wydajność. W kroku oceny narzędzia Model Builder sekcja wyjściowa będzie zawierać algorytm używany przez model o najlepszej wydajności we wpisie **Najlepszy model** wraz z metrykami w **sekcji Najlepsza dokładność modelu**. Ponadto wyświetlana jest tabela podsumowania zawierająca pięć najlepszych modeli i ich metryki.
 
 Jeśli nie jesteś zadowolony z metryk dokładności, niektóre proste sposoby, aby spróbować poprawić dokładność modelu są zwiększenie czasu na szkolenie modelu lub użyć więcej danych. W przeciwnym razie wybierz łącze **kodu,** aby przejść do ostatniego kroku w narzędziu Konstruktor modelu.
 
@@ -124,7 +124,7 @@ W wyniku procesu szkolenia zostaną utworzone dwa projekty.
 
 ### <a name="configure-the-predictionengine-pool"></a>Konfigurowanie puli predictionengine
 
-Aby dokonać pojedynczego przewidywania, należy [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)utworzyć plik . [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)nie jest bezpieczny dla wątków. Ponadto należy utworzyć wystąpienie go wszędzie tam, gdzie jest to potrzebne w aplikacji. W miarę rozwoju aplikacji proces ten może stać się nie do opanowania. Aby zwiększyć wydajność i bezpieczeństwo wątków, należy `PredictionEnginePool` użyć kombinacji iniekcji zależności i usługi, która tworzy [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) obiekty [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) do użycia w całej aplikacji.
+Aby dokonać pojedynczego przewidywania, należy <xref:Microsoft.ML.PredictionEngine%602>utworzyć plik . <xref:Microsoft.ML.PredictionEngine%602>nie jest bezpieczny dla wątków. Ponadto należy utworzyć wystąpienie wszędzie tam, gdzie jest to potrzebne w aplikacji. W miarę rozwoju aplikacji proces ten może stać się nie do opanowania. Aby zwiększyć wydajność i bezpieczeństwo wątków, należy `PredictionEnginePool` użyć kombinacji iniekcji zależności i usługi, która tworzy <xref:Microsoft.Extensions.ObjectPool.ObjectPool%601> obiekty <xref:Microsoft.ML.PredictionEngine%602> do użycia w całej aplikacji.
 
 1. Zainstaluj pakiet *Microsoft.Extensions.ML* NuGet:
 

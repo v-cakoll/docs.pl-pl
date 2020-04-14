@@ -2,12 +2,12 @@
 title: 'Transport: Współdziałanie protokołu TCP z usługami WSE 3.0'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: 55c59fe3a677d3aea8de62ae714e1007cfcbb86a
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: f799f3b6968f31472acc7752846bab34351648db
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121284"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278902"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Transport: Współdziałanie protokołu TCP z usługami WSE 3.0
 Przykład transportu interoperacyjności protokołu WSE 3.0 TCP pokazuje, jak zaimplementować sesję dupleksu TCP jako niestandardowy transport programu Windows Communication Foundation (WCF). Pokazano również, jak można użyć rozszerzalności warstwy kanału do interfejsu przez przewod z istniejącymi wdrożonymi systemami. Poniższe kroki pokazują, jak utworzyć ten niestandardowy transport WCF:  
@@ -39,7 +39,7 @@ Przykład transportu interoperacyjności protokołu WSE 3.0 TCP pokazuje, jak za
   
  Gdy <xref:System.ServiceModel.Channels.Message> jest zakodowany w bajtach, musi być przesyłany na przewodach. Wymaga to systemu do definiowania granic wiadomości. WSE 3.0 używa wersji [DIME](https://docs.microsoft.com/archive/msdn-magazine/2002/december/sending-files-attachments-and-soap-messages-via-dime) jako protokołu kadrowania. `WriteData`hermetyzuje logikę kadrowania, aby zawinąć bajt[] w zestaw rekordów DIME.  
   
- Logika odbierania wiadomości jest bardzo podobna. Główną złożonością jest obsługa faktu, że odczyt gniazda może zwrócić mniej bajtów niż zostały wymagane. Aby otrzymać wiadomość, `WseTcpDuplexSessionChannel` odczytuje bajty z przewodu, dekoduje kadrowanie DIME, a następnie używa <xref:System.ServiceModel.Channels.Message> <xref:System.ServiceModel.Channels.MessageEncoder> do przekształcania bajtu[] w plik .  
+ Logika odbierania wiadomości jest podobna. Główną złożonością jest obsługa faktu, że odczyt gniazda może zwrócić mniej bajtów niż zostały wymagane. Aby otrzymać wiadomość, `WseTcpDuplexSessionChannel` odczytuje bajty z przewodu, dekoduje kadrowanie DIME, a następnie używa <xref:System.ServiceModel.Channels.Message> <xref:System.ServiceModel.Channels.MessageEncoder> do przekształcania bajtu[] w plik .  
   
  Podstawa `WseTcpDuplexSessionChannel` zakłada, że odbiera podłączone gniazdo. Klasa podstawowa obsługuje zamknięcie gniazda. Istnieją trzy miejsca, które interfejs z zamknięciem gniazda:  
   
@@ -47,7 +47,7 @@ Przykład transportu interoperacyjności protokołu WSE 3.0 TCP pokazuje, jak za
   
 - On[Begin]Close -- zamknij gniazdo bezpiecznie (miękkie zamknięcie).  
   
-- Sesji. CloseOutputSession - zamknięcie wychodzącego strumienia danych (połowa zamknięcia).  
+- Sesji. CloseOutputSession - zamknij strumień danych wychodzących (połowa zamknięcia).  
   
 ## <a name="channel-factory"></a>Fabryka kanałów  
  Następnym krokiem w pisaniu transportu TCP <xref:System.ServiceModel.Channels.IChannelFactory> jest utworzenie implementacji dla kanałów klienta.  
@@ -170,7 +170,7 @@ Symbols:
         CONTOSO  
 ```  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić próbkę  
+## <a name="set-up-build-and-run-the-sample"></a>Konfigurowanie, tworzenie i uruchamianie próbki  
   
 1. Aby uruchomić ten przykład, musisz mieć [ulepszenia usług sieci Web (GPSE) 3.0 dla firmy Microsoft .NET](https://www.microsoft.com/download/details.aspx?id=14089) i `TcpSyncStockService` zainstalowano przykład gpw.
   
@@ -179,9 +179,9 @@ Symbols:
   
 1. Po zainstalowaniu `TcpSyncStockService` próbki wykonaj następujące czynności:  
   
-    1. Otwórz `TcpSyncStockService` w programie Visual Studio (Należy zauważyć, że TcpSyncStockService próbki jest zainstalowany z WSE 3.0. Nie jest częścią kodu tego przykładu).  
+    1. Otwórz `TcpSyncStockService` program Visual Studio. (Próbka TcpSyncStockService jest zainstalowana z gpw 3.0. Nie jest częścią kodu tego przykładu.)  
   
-    2. Ustaw projekt StockService jako projekt rozruchowy.  
+    2. Ustaw projekt StockService jako projekt startowy.  
   
     3. Otwórz StockService.cs w projekcie StockService i skomentuj atrybut `StockService` [Zasady] w klasie. Spowoduje to wyłączenie zabezpieczeń z przykładu. Podczas WCF można współpracować z gpw 3.0 bezpiecznych punktów końcowych, zabezpieczenia jest wyłączona, aby utrzymać ten przykład koncentruje się na niestandardowy transport TCP.  
   

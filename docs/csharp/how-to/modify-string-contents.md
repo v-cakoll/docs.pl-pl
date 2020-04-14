@@ -3,12 +3,12 @@ title: Jak zmodyfikować zawartość ciągu — Przewodnik języka C#
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 260e4022c514db0cee3c1459b9d746a1c8e2addd
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: f31fa94501ac2120e22e229dfc11babb8b8cc0f3
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121127"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242858"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>Jak zmodyfikować zawartość ciągu w języku C\#
 
@@ -58,7 +58,7 @@ Metoda <xref:System.Text.StringBuilder.ToString%2A?displayProperty=nameWithType>
 
 Można utworzyć tablicę znaków z ciągu, zmodyfikować zawartość tablicy, a następnie utworzyć nowy ciąg ze zmodyfikowanej zawartości tablicy.
 
-W poniższym przykładzie pokazano, jak zastąpić zestaw znaków w ciągu. Po pierwsze używa <xref:System.String.ToCharArray?displayProperty=nameWithName> metody do tworzenia tablicy znaków. Używa tej <xref:System.String.IndexOf%2A> metody, aby znaleźć indeks początkowy słowa "lis". Następne trzy znaki zostaną zastąpione innym słowem. Na koniec nowy ciąg jest konstruowany z tablicy zaktualizowanych znaków.
+W poniższym przykładzie pokazano, jak zastąpić zestaw znaków w ciągu. Po pierwsze używa <xref:System.String.ToCharArray?displayProperty=nameWithType> metody do tworzenia tablicy znaków. Używa tej <xref:System.String.IndexOf%2A> metody, aby znaleźć indeks początkowy słowa "lis". Następne trzy znaki zostaną zastąpione innym słowem. Na koniec nowy ciąg jest konstruowany z tablicy zaktualizowanych znaków.
 
 [!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#6)]
 

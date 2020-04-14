@@ -10,12 +10,12 @@ helpviewer_keywords:
 - custom controls [WPF], improving accessibility
 - UI Automation [WPF], using with custom controls
 ms.assetid: 47b310fc-fbd5-4ce2-a606-22d04c6d4911
-ms.openlocfilehash: 9c33d0e5da70820041ba2a2881082d9f7d179fc5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 97db94215220ac2a68e0395bd63b7a874a745a48
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187507"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243248"
 ---
 # <a name="ui-automation-of-a-wpf-custom-control"></a>Automatyzacja interfejsu użytkownika formantu niestandardowego WPF
 [!INCLUDE[TLA#tla_uiautomation](../../../../includes/tlasharptla-uiautomation-md.md)]zapewnia jeden, uogólniony interfejs, który klienci automatyzacji można użyć do badania lub obsługi interfejsów użytkownika różnych platform i struktur. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)]umożliwia zarówno kod zapewnienia jakości (test) i aplikacje ułatwień dostępu, takie jak czytniki ekranu, aby zbadać elementy interfejsu użytkownika i symulować interakcję użytkownika z nimi z innego kodu. Aby uzyskać [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] informacje na temat wszystkich platform, zobacz ułatwienia dostępu.  
@@ -144,7 +144,7 @@ Public Class RangePeer2
 End Class  
 ```  
   
-Na przykład implementacji zobacz kod źródłowy [języka C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp) lub [Visual Basic,](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic) który implementuje i zużywa formant niestandardowy NumericUpDown.  
+Na przykład implementacji zobacz kod źródłowy [języka C#](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp) lub [Visual Basic,](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic) który implementuje i zużywa formant niestandardowy NumericUpDown.  
   
 ### <a name="raise-events"></a>Podnieść wydarzenia  
  Klienci automatyzacji mogą subskrybować zdarzenia automatyzacji. Formanty niestandardowe muszą zgłaszać <xref:System.Windows.Automation.Peers.AutomationPeer.RaiseAutomationEvent%2A> zmiany w celu kontrolowania stanu, wywołując metodę. Podobnie, gdy zmienia się wartość <xref:System.Windows.Automation.Peers.AutomationPeer.RaisePropertyChangedEvent%2A> właściwości, wywołaj metodę. Poniższy kod pokazuje, jak uzyskać obiekt równorzędny z wewnątrz kodu kontrolnego i wywołać metodę, aby podnieść zdarzenie. Jako optymalizacja kod określa, czy istnieją detektory dla tego typu zdarzenia. Wywoływanie zdarzenia tylko wtedy, gdy istnieją detektory unika niepotrzebnych narzutów i pomaga kontroli pozostają elastyczne.  
@@ -156,5 +156,5 @@ Na przykład implementacji zobacz kod źródłowy [języka C#](https://github.co
 
 - [Przegląd automatyzacji interfejsu użytkownika](../../ui-automation/ui-automation-overview.md)
 - [Implementacja dostawcy automatyzacji interfejsu użytkownika po stronie serwera](../../ui-automation/server-side-ui-automation-provider-implementation.md)
-- [Kontrola niestandardowa NumericUpDown (C#) w usłudze GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp)  
-- [Kontrola niestandardowa NumericUpDown (Visual Basic) w usłudze GitHub](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic)
+- [Kontrola niestandardowa NumericUpDown (C#) w usłudze GitHub](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp)  
+- [Kontrola niestandardowa NumericUpDown (Visual Basic) w usłudze GitHub](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic)

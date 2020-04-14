@@ -8,14 +8,14 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: d5dd2d962c554b860fb6f68110945d56c4ee03ab
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2326520039085beb5f5294e23db67b67f9d7d7da
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400156"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243274"
 ---
-# <a name="control-authoring-overview"></a>Przegląd Autorstwo formantów
+# <a name="control-authoring-overview"></a>Omówienie tworzenia formantu
 
 Rozszerzalność modelu [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sterowania znacznie zmniejsza potrzebę tworzenia nowego formantu. Jednak w niektórych przypadkach może być nadal konieczne utworzenie formantu niestandardowego. W tym temacie omówiono funkcje, które minimalizują potrzebę tworzenia formantu [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]niestandardowego i różnych modeli tworzenia formantów w pliku . W tym temacie pokazano również, jak utworzyć nowy formant.
 
@@ -264,7 +264,7 @@ Zasoby, które są specyficzne dla motywu są przechowywane w słowniku zasobów
 
 Nie trzeba definiować zasobu dla każdego motywu. Jeśli zasób nie jest zdefiniowany dla `Classic.xaml` określonego motywu, wówczas formant sprawdza zasób. Jeśli zasób nie jest zdefiniowany w pliku odpowiadającym bieżącemu motywowi lub w `Classic.xaml`, formant używa `generic.xaml`zasobu ogólnego, który znajduje się w pliku słownika zasobów o nazwie .  Plik `generic.xaml` znajduje się w tym samym folderze co pliki słownika zasobów specyficzne dla motywu. Chociaż `generic.xaml` nie odpowiada określonej kompozycji systemu Windows, nadal jest to słownik na poziomie motywu.
 
-Formant niestandardowy [C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp) lub [Visual Basic](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic) NumericUpDown z przykładem obsługi `NumericUpDown` interfejsu użytkownika i automatyzacji interfejsu użytkownika zawiera dwa słowniki zasobów dla formantu: jeden znajduje się w pliku generic.xaml, a drugi w pliku Luna.NormalColor.xaml.
+Formant niestandardowy [C#](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp) lub [Visual Basic](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic) NumericUpDown z przykładem obsługi `NumericUpDown` interfejsu użytkownika i automatyzacji interfejsu użytkownika zawiera dwa słowniki zasobów dla formantu: jeden znajduje się w pliku generic.xaml, a drugi w pliku Luna.NormalColor.xaml.
 
 Po umieszczeniu <xref:System.Windows.Controls.ControlTemplate> w dowolnym pliku słownika zasobów specyficzne dla motywu, należy utworzyć konstruktora statycznego dla formantu i wywołać <xref:System.Windows.DependencyProperty.OverrideMetadata%28System.Type%2CSystem.Windows.PropertyMetadata%29> metodę na <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>, jak pokazano w poniższym przykładzie.
 

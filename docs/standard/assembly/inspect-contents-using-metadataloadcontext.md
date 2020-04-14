@@ -4,12 +4,12 @@ description: Dowiedz się, jak używać MetadataLoadContext, który jest interfe
 author: MSDN-WhiteKnight
 ms.date: 03/10/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: a782b2db4fb62cfaedaa6768e2131bda6bec864c
-ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
+ms.openlocfilehash: d2589d51a6e0611504c0133d293d3fdfae32553c
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80229302"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242663"
 ---
 # <a name="how-to-inspect-assembly-contents-using-metadataloadcontext"></a>Jak: Sprawdzanie zawartości zestawu przy użyciu metadataLoadContext
 
@@ -41,4 +41,4 @@ Następujący przykład kodu <xref:System.Reflection.MetadataLoadContext>tworzy,
 
 ## <a name="example"></a>Przykład
 
-W przykładzie pełnego kodu zobacz [Inspekcja zawartości zestawu przy użyciu MetadataLoadContext](https://docs.microsoft.com/samples/dotnet/samples/inspect-assembly-contents-using-metadataloadcontext/).
+W przykładzie pełnego kodu zobacz [Inspekcja zawartości zestawu przy użyciu próbki MetadataLoadContext](https://github.com/dotnet/samples/tree/master/core/assembly/MetadataLoadContext).

@@ -1,5 +1,5 @@
 ---
-title: Niestandardowe ciągi formatu liczbowego
+title: Niestandardowe ciągi formatujące liczby
 ms.date: 06/25/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,35 +16,35 @@ helpviewer_keywords:
 - formatting numbers [.NET Framework]
 - format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
-ms.openlocfilehash: 1eb9c3c189d7bba3a12fdcd0c3d600a66bf819ca
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5961cce4601a89b34708b7090207edfed63b5b08
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75348308"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242988"
 ---
-# <a name="custom-numeric-format-strings"></a>Niestandardowe ciągi formatu liczbowego
+# <a name="custom-numeric-format-strings"></a>Niestandardowe ciągi formatujące liczby
 
-Można utworzyć ciąg niestandardowego formatu liczb, który składa się z jednego lub większej liczby niestandardowych specyfikatorów liczbowych, aby zdefiniować sposób formatowania danych liczbowych. Niestandardowy ciąg formatu numerycznego to dowolny ciąg formatu, który nie jest [standardowym ciągiem formatu numerycznego.](../../../docs/standard/base-types/standard-numeric-format-strings.md)
+Można utworzyć ciąg niestandardowego formatu liczb, który składa się z jednego lub większej liczby niestandardowych specyfikatorów liczbowych, aby zdefiniować sposób formatowania danych liczbowych. Niestandardowy ciąg formatu liczbowego to dowolny ciąg formatu, który nie jest [standardowym ciągiem formatu numerycznego](../../../docs/standard/base-types/standard-numeric-format-strings.md).
 
-Niestandardowe ciągi formatu liczbowego są obsługiwane `ToString` przez niektóre przeciążenia metody wszystkich typów liczbowych. Na przykład można podać ciąg formatu <xref:System.Int32.ToString%28System.String%29> numerycznego do <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> <xref:System.Int32> i metod tego typu. Niestandardowe ciągi formatu liczbowego są również obsługiwane przez [funkcję formatowania złożonego](../../../docs/standard/base-types/composite-formatting.md).NET <xref:System.Console> , <xref:System.IO.StreamWriter> która <xref:System.String.Format%2A?displayProperty=nameWithType> jest używana <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> przez niektóre `Write` i `WriteLine` metody i klas, metody i metody. Funkcja [interpolacji ciągów](../../csharp/language-reference/tokens/interpolated.md) obsługuje również niestandardowe ciągi formatu numerycznego.
+Niestandardowe ciągi formatu numerycznego są obsługiwane `ToString` przez niektóre przeciążenia metody wszystkich typów numerycznych. Na przykład można podać ciąg formatu <xref:System.Int32.ToString%28System.String%29> liczbowego do i <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> metod <xref:System.Int32> typu. Niestandardowe ciągi formatu numerycznego są również obsługiwane przez [funkcję formatowania złożonego](../../../docs/standard/base-types/composite-formatting.md) `Write` `WriteLine` <xref:System.String.Format%2A?displayProperty=nameWithType> <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> <xref:System.Console> .NET, która jest używana przez niektóre i metody klas i <xref:System.IO.StreamWriter> klas, metody i metody. Funkcja [interpolacji ciągów](../../csharp/language-reference/tokens/interpolated.md) obsługuje również niestandardowe ciągi formatu numerycznego.
 
 > [!TIP]
-> Można pobrać **narzędzie formatowania**, aplikację .NET Core Windows Forms, która umożliwia stosowanie ciągów formatu do wartości liczbowych lub daty i godziny i wyświetla ciąg wynikowy. Kod źródłowy jest dostępny dla [języka C#](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs) i [Visual Basic.](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb)
+> Można pobrać **narzędzie formatowania**, aplikację .NET Core Windows Forms, która umożliwia stosowanie ciągów formatu do wartości liczbowych lub wartości daty i godziny oraz wyświetla ciąg wynikowy. Kod źródłowy jest dostępny dla [języka C#](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs) i [Visual Basic](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb).
 
-<a name="table"></a>W poniższej tabeli opisano niestandardowe specyfikatory formatu numerycznego i wyświetla przykładowe dane wyjściowe wytwarzane przez każdy specyfikator formatu. Zobacz [sekcję Uwagi,](#NotesCustomFormatting) aby uzyskać dodatkowe informacje na temat używania niestandardowych ciągów formatu numerycznego, oraz [sekcję Przykład,](#example) aby uzyskać kompleksową ilustrację ich użycia.
+<a name="table"></a>W poniższej tabeli opisano niestandardowe specyfikatory formatu liczbowego i są wyświetlane przykładowe dane wyjściowe wytwarzane przez każdy specyfikator formatu. Zobacz sekcję [Uwagi,](#NotesCustomFormatting) aby uzyskać dodatkowe informacje na temat używania niestandardowych ciągów formatu numerycznego, a także sekcję [Przykład,](#example) aby uzyskać wyczerpującą ilustrację ich użycia.
 
 |Specyfikator formatu|Nazwa|Opis|Przykłady|
 |----------------------|----------|-----------------|--------------|
-|„0”|Symbol zastępczy zero|Zamienia zero na odpowiednią cyfrę, jeżeli jest ona obecna. W przeciwnym wypadku zero występuje w ciągu wynikowym.<br /><br /> Więcej informacji: [Specyfikator niestandardowy "0"](#Specifier0).|1234.5678 ("00000") -> 01235<br /><br /> 0.45678 ("0.00", en-US) -> 0.46<br /><br /> 0.45678 ("0.00", fr-FR) -> 0,46|
-|"#"|Symbol zastępczy cyfry|Zamienia symbol „#” na odpowiednią cyfrę, jeżeli jest ona obecna. W przeciwnym wypadku żadna cyfra nie występuje w ciągu wynikowym.<br /><br /> Należy zauważyć, że żadna cyfra nie pojawia się w ciągu wyników, jeśli odpowiednia cyfra w ciągu wejściowym jest nieznaczące 0. Na przykład 0003 ("####") -> 3.<br /><br /> Więcej informacji: [Specyfikator niestandardowy "#"](#SpecifierD).|1234.5678 ("####") -> 1235<br /><br /> 0.45678 ("#.##, en-US) -> .46<br /><br /> 0.45678 ("#.##, fr-FR) -> ,46|
-|"."|Punkt dziesiętny|Określa lokalizację separatora dziesiętnego w ciągu wynikowym.<br /><br /> Więcej informacji: [". Specyfikator niestandardowy](#SpecifierPt).|0.45678 ("0.00", en-US) -> 0.46<br /><br /> 0.45678 ("0.00", fr-FR) -> 0,46|
-|","|Separator grup i skalowania liczby|Jest używany zarówno jako separator grup, jak i specyfikator skalowania liczby. Jako separator grup wstawia zlokalizowany znak separatora grup między grupami. Jako specyfikator skalowania liczb dzieli liczbę przez 1000 dla każdej liczby z określonym przecinkiem.<br /><br /> Więcej informacji: ["," Specyfikator niestandardowy](#SpecifierTh).|Specyfikator separatora grup:<br /><br /> 2147483647 ("##,#, en-US) -> 2 147 483 647<br /><br /> 2147483647 ("##,#, es-ES) -> 2.147.483.647<br /><br /> Specyfikator skalowania:<br /><br /> 2147483647 ("#,#,,", en-US) -> 2 147<br /><br /> 2147483647 ("#,#,,", es-ES) -> 2,147|
-|"%"|Symbol zastępczy procentu|Mnoży liczbę przez 100 i wstawia zlokalizowany symbol procentu do ciągu wynikowego.<br /><br /> Więcej informacji: [Specyfikator niestandardowy "%"](#SpecifierPct).|0,3697 ("%#0,00", w iw) -> %36,97<br /><br /> 0,3697 ("%#0,00", el-GR) -> %36,97<br /><br /> 0,3697 ("##.0 %", en-US) -> 37,0 %<br /><br /> 0,3697 ("##.0 %", el-GR) -> 37,0 %|
+|„0”|Symbol zastępczy zero|Zamienia zero na odpowiednią cyfrę, jeżeli jest ona obecna. W przeciwnym wypadku zero występuje w ciągu wynikowym.<br /><br /> Więcej informacji: [Specyfikator niestandardowy "0"](#Specifier0).|1234.5678 ("00000") -> 01235<br /><br /> 0,45678 ("0,00", en-US) -> 0,46<br /><br /> 0,45678 ("0,00", fr-FR) -> 0,46|
+|"#"|Symbol zastępczy cyfry|Zamienia symbol „#” na odpowiednią cyfrę, jeżeli jest ona obecna. W przeciwnym wypadku żadna cyfra nie występuje w ciągu wynikowym.<br /><br /> Należy zauważyć, że żadna cyfra nie pojawia się w ciągu wynikowym, jeśli odpowiednia cyfra w ciągu wejściowym jest nieistotna 0. Na przykład 0003 ("####") -> 3.<br /><br /> Więcej informacji: [Specyfikator niestandardowy "#"](#SpecifierD).|1234.5678 ("#####") -> 1235<br /><br /> 0.45678 ("#.##", en-US) -> .46<br /><br /> 0.45678 ("#.##", fr-FR) -> ,46|
+|"."|Punkt dziesiętny|Określa lokalizację separatora dziesiętnego w ciągu wynikowym.<br /><br /> Więcej informacji: ["." Niestandardowy specyfikator](#SpecifierPt).|0,45678 ("0,00", en-US) -> 0,46<br /><br /> 0,45678 ("0,00", fr-FR) -> 0,46|
+|","|Separator grup i skalowania liczby|Jest używany zarówno jako separator grup, jak i specyfikator skalowania liczby. Jako separator grup wstawia zlokalizowany znak separatora grup między grupami. Jako specyfikator skalowania liczb dzieli liczbę przez 1000 dla każdej liczby z określonym przecinkiem.<br /><br /> Więcej informacji: ["," Custom Specifier](#SpecifierTh).|Specyfikator separatora grup:<br /><br /> 2147483647 ("##,#", en-US) -> 2 147 483 647<br /><br /> 2147483647 ("##,#", es-ES) -> 2.147.483.647<br /><br /> Specyfikator skalowania:<br /><br /> 2147483647 ("#,#,,", en-US) -> 2147<br /><br /> 2147483647 ("#,#,,", es-ES) -> 2.147|
+|"%"|Symbol zastępczy procentu|Mnoży liczbę przez 100 i wstawia zlokalizowany symbol procentu do ciągu wynikowego.<br /><br /> Więcej informacji: [Specyfikator niestandardowy "%"](#SpecifierPct).|0,3697 ("%#0.00", en-US) -> %36.97<br /><br /> 0,3697 ("%#0,00", el-GR) -> %36,97<br /><br /> 0,3697 ("##.0 %", en-US) -> 37,0 %<br /><br /> 0,3697 ("##.0 %", el-GR) -> 37,0 %|
 |"‰"|Symbol zastępczy promil|Mnoży liczbę przez 1000 i wstawia zlokalizowany symbol promila do ciągu wynikowego.<br /><br /> Więcej informacji: [Specyfikator niestandardowy "‰"](#SpecifierPerMille).|0.03697 ("#0.00‰", en-US) -> 36.97‰<br /><br /> 0.03697 ("#0.00‰", ru-RU) -> 36,97‰|
-|„E0”<br /><br /> „E+0”<br /><br /> „E-0”<br /><br /> „e0”<br /><br /> „e+0”<br /><br /> „e-0”|Notacja wykładnicza|Jeżeli występuje po nim przynajmniej jedno 0 (zero), formatuje wynik za pomocą notacji wykładniczej. Wielkość litery „E” lub „e” wskazuje wielkość symbolu wykładnika w ciągu wynikowym. Liczba zer po znaku „E” lub „e” określa minimalną liczbę cyfr wykładnika. Znak plus (+) wskazuje, że znak zawsze poprzedza wykładnik potęgi. Znak minus (-) wskazuje, że znak poprzedza tylko ujemny wykładnik potęgi.<br /><br /> Więcej informacji: [Specyfikatory niestandardowe "E" i "e".](#SpecifierExponent)|987654 ("#0.0e0") -> 98,8e4<br /><br /> 1503.92311 ("0.0##e+00") -> 1.504e+03<br /><br /> 1.8901385E-16 ("0.0e+00") -> 1.9e-16|
-|"\\"|Znak ucieczki|Powoduje, że następny znak należy interpretować jako literał, a nie jako specyfikator formatu niestandardowego.<br /><br /> Więcej informacji: ["\\" Escape Character](#SpecifierEscape).|987654 ("\\###00\\#") -> #987654 #|
-|'*ciąg*'<br /><br /> "*ciąg*"|Ogranicznik ciągu literału|Wskazuje, że znaki w cudzysłowie powinny zostać skopiowane do ciągu wynikowego bez zmian.<br/><br/>Więcej informacji: [Literały znaków](#character-literals).|68 ("# 'stopnie')) -> 68 stopni<br /><br /> 68 ("#' stopni") -> 68 stopni|
+|„E0”<br /><br /> „E+0”<br /><br /> „E-0”<br /><br /> „e0”<br /><br /> „e+0”<br /><br /> „e-0”|Notacja wykładnicza|Jeżeli występuje po nim przynajmniej jedno 0 (zero), formatuje wynik za pomocą notacji wykładniczej. Wielkość litery „E” lub „e” wskazuje wielkość symbolu wykładnika w ciągu wynikowym. Liczba zer po znaku „E” lub „e” określa minimalną liczbę cyfr wykładnika. Znak plus (+) wskazuje, że znak zawsze poprzedza wykładnik potęgi. Znak minus (-) wskazuje, że znak poprzedza tylko ujemny wykładnik potęgi.<br /><br /> Więcej informacji: [Niestandardowe specyfikatory "E" i "e"](#SpecifierExponent).|987654 ("#0.0e0") -> 98.8e4<br /><br /> 1503.92311 ("0.0##e+00") -> 1.504e+03<br /><br /> 1.8901385E-16 ("0.0e+00") -> 1.9e-16|
+|"\\"|Znak ucieczki|Powoduje, że następny znak należy interpretować jako literał, a nie jako specyfikator formatu niestandardowego.<br /><br /> Więcej informacji: [Znak ucieczki "\\"](#SpecifierEscape).|987654 ("\\###00\\#") -> #987654 #|
+|'*ciąg*'<br /><br /> "*string*"|Ogranicznik ciągu literału|Wskazuje, że znaki w cudzysłowie powinny zostać skopiowane do ciągu wynikowego bez zmian.<br/><br/>Więcej informacji: [Literały znaków](#character-literals).|68 ("# 'degrees'") -> 68 stopni<br /><br /> 68 ("#' stopnie") -> 68 stopni|
 |;|Separator sekcji|Definiuje sekcje z oddzielnymi ciągami formatu dla liczb dodatnich, ujemnych i dla zera.<br /><br /> Więcej informacji: [";" Separator sekcji](#SectionSeparator).|12.345 ("#0.0#;(#0.0#);-\0-") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#);-\0-") -> -0-<br /><br /> -12.345 ("#0.0#;(#0.0#);-\0-") -> (12.35)<br /><br /> 12.345 ("#0.0#;(#0.0#)") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#)") -> 0.0<br /><br /> -12.345 ("#0.0#;(#0.0#)") -> (12.35)|
 |Inne|Wszystkie inne znaki|Znak jest kopiowany do ciągu wynikowego bez zmian.<br/><br/>Więcej informacji: [Literały znaków](#character-literals).|68 ("# °") -> 68 °|
 
@@ -84,7 +84,7 @@ W poniższym przykładzie pokazano kilka wartości formatowanych za pomocą cią
 [!code-csharp[Formatting.Numeric.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#2)]
 [!code-vb[Formatting.Numeric.Custom#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#2)]
 
-Aby zwrócić ciąg wyniku, w którym nieobecne cyfry lub zera wiodące są zastępowane spacjami, należy użyć [funkcji formatowania złożonego](../../../docs/standard/base-types/composite-formatting.md) i określić szerokość pola, jak pokazano w poniższym przykładzie.
+Aby zwrócić ciąg wynikowy, w którym cyfry nieobecne lub zera wiodące są zastępowane spaniami, użyj [operacji formatowania złożonego](../../../docs/standard/base-types/composite-formatting.md) i określ szerokość pola, jak pokazano w poniższym przykładzie.
 
 [!code-cpp[Formatting.Numeric.Custom#12](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/SpaceOrDigit1.cpp#12)]
 [!code-csharp[Formatting.Numeric.Custom#12](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/SpaceOrDigit1.cs#12)]
@@ -94,11 +94,11 @@ Aby zwrócić ciąg wyniku, w którym nieobecne cyfry lub zera wiodące są zast
 
 <a name="SpecifierPt"></a>
 
-## <a name="the--custom-specifier"></a>Specyfikator niestandardowy ".
+## <a name="the--custom-specifier"></a>Specyfikator niestandardowy "."
 
 Niestandardowy specyfikator formatu „.” wstawia zlokalizowany separator dziesiętny do ciągu wynikowego. Pierwszy kropka w ciągu formatu określa lokalizację separatora dziesiętnego w sformatowanej wartości. Wszelkie dodatkowe kropki są ignorowane.
 
-Znak, który jest używany jako separator dziesiętny w ciągu wynikowym nie zawsze jest kropką; jest określana <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> przez właściwość <xref:System.Globalization.NumberFormatInfo> obiektu, który steruje formatowaniem.
+Znak, który jest używany jako separator dziesiętny w ciągu wynik nie zawsze jest kropka; jest określana <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> przez właściwość obiektu, <xref:System.Globalization.NumberFormatInfo> który steruje formatowaniem.
 
 W poniższym przykładzie użyto specyfikatora formatu „.” aby zdefiniować lokalizację punktu dziesiętnego w kilku ciągach wynikowych.
 
@@ -116,7 +116,7 @@ Znak „,” jest używany zarówno jako separator grup, jak i specyfikator skal
 
 - Separator grup: jeśli jeden lub więcej przecinków jest określonych między dwoma symbolami zastępczymi cyfr (0 lub #), które formatują całkowite cyfry danej liczby, znak separatora grupy jest wstawiany między poszczególne grupy liczby w całkowitej części wyniku.
 
-  Właściwości <xref:System.Globalization.NumberFormatInfo.NumberGroupSeparator%2A> <xref:System.Globalization.NumberFormatInfo.NumberGroupSizes%2A> bieżącego <xref:System.Globalization.NumberFormatInfo> obiektu określają znak używany jako separator grupy numerów i rozmiar każdej grupy liczb. Na przykład jeśli ciąg „#,#” i niezmienna kultura są użyte do formatowania liczby 1000, wynikiem będzie „1 000”.
+  Właściwości <xref:System.Globalization.NumberFormatInfo.NumberGroupSeparator%2A> <xref:System.Globalization.NumberFormatInfo.NumberGroupSizes%2A> bieżącego <xref:System.Globalization.NumberFormatInfo> obiektu określają znak używany jako separator grupy numerów i rozmiar każdej grupy numeracji. Na przykład jeśli ciąg „#,#” i niezmienna kultura są użyte do formatowania liczby 1000, wynikiem będzie „1 000”.
 
 - Specyfikator skalowania liczb: jeśli jeden lub większa liczba przecinków jest określonych natychmiast z lewej strony jawnego lub niejawnego punktu dziesiętnego, formatowana liczba jest dzielona przez 1000 dla każdego przecinka. Na przykład jeśli ciąg „0,,” jest używany do formatowania liczby 100 milionów, wynikiem jest „100”.
 
@@ -140,7 +140,7 @@ W poniższym przykładzie pokazano użycie przecinka jako specyfikatora skalowan
 
 ## <a name="the--custom-specifier"></a>Specyfikator niestandardowy "%"
 
-Znak procentu (%) w ciągu formatu powoduje pomnożenie liczby przez 100 przed formatowaniem. Zlokalizowany symbol procentu jest wstawiany do liczby, w lokalizacji, na której znak % znajduje się w ciągu formatu. Użyty znak procentowy jest <xref:System.Globalization.NumberFormatInfo.PercentSymbol%2A> definiowany przez <xref:System.Globalization.NumberFormatInfo> właściwość bieżącego obiektu.
+Znak procentu (%) w ciągu formatu powoduje pomnożenie liczby przez 100 przed formatowaniem. Zlokalizowany symbol procentu jest wstawiany do liczby, w lokalizacji, na której znak % znajduje się w ciągu formatu. Używany znak procentu jest <xref:System.Globalization.NumberFormatInfo.PercentSymbol%2A> definiowany <xref:System.Globalization.NumberFormatInfo> przez właściwość bieżącego obiektu.
 
 W poniższym przykładzie zdefiniowano kilka ciągów formatu niestandardowego, które zawierają niestandardowy specyfikator „%”.
 
@@ -152,9 +152,9 @@ W poniższym przykładzie zdefiniowano kilka ciągów formatu niestandardowego, 
 
 <a name="SpecifierPerMille"></a>
 
-## <a name="the--custom-specifier"></a>Niestandardowy specyfikator "‰"
+## <a name="the--custom-specifier"></a>Specyfikator niestandardowy "‰"
 
-Znak promila (‰ lub \u2030) w ciągu formatu powoduje pomnożenie liczby przez 1000 przed formatowaniem. Odpowiedni symbol promila jest wstawiony w zwracanym ciągu w lokalizacji, w której symbol ‰ pojawia się w ciągu formatu. Używany znak na promil jest <xref:System.Globalization.NumberFormatInfo.PerMilleSymbol%2A?displayProperty=nameWithType> definiowany przez właściwość obiektu, który zawiera informacje o formatowaniu specyficznym dla kultury.
+Znak promila (‰ lub \u2030) w ciągu formatu powoduje pomnożenie liczby przez 1000 przed formatowaniem. Odpowiedni symbol promila jest wstawiony w zwracanym ciągu w lokalizacji, w której symbol ‰ pojawia się w ciągu formatu. Używany znak na milisel <xref:System.Globalization.NumberFormatInfo.PerMilleSymbol%2A?displayProperty=nameWithType> jest zdefiniowany przez właściwość obiektu, który zawiera informacje o formatowaniu specyficzne dla kultury.
 
 W poniższym przykładzie zdefiniowano ciąg formatu niestandardowego, który zawiera niestandardowy specyfikator „‰”.
 
@@ -166,7 +166,7 @@ W poniższym przykładzie zdefiniowano ciąg formatu niestandardowego, który za
 
 <a name="SpecifierExponent"></a>
 
-## <a name="the-e-and-e-custom-specifiers"></a>Niestandardowe specyfikatory "E" i "e"
+## <a name="the-e-and-e-custom-specifiers"></a>Specyfikatory niestandardowe "E" i "e"
 
 Jeśli którykolwiek z ciągów „E”, „E+”, „E-”, „e”, „e+” lub „e-” jest obecny w ciągu formatu i natychmiast po nim następuje co najmniej jedno zero, liczba jest formatowana przy użyciu notacji wykładniczej z symbolem „E” lub „e” wstawionym między liczbą a wykładnikiem potęgi. Liczba zer po wskaźniku notacji wykładniczej określa minimalną liczbę cyfr wykładnika potęgi. Formaty „E+” i „e+” wskazują, że znak plus lub znak minus powinien zawsze poprzedzać wykładnik potęgi. Formaty „E”, „E-”, „e” i „e-” wskazują, że znak powinien poprzedzać tylko ujemne wykładniki potęgi.
 
@@ -180,18 +180,18 @@ W poniższym przykładzie sformatowano kilka wartości liczbowych przy użyciu s
 
 <a name="SpecifierEscape"></a>
 
-## <a name="the--escape-character"></a>"\\" escape character
+## <a name="the--escape-character"></a>Znak\\ucieczki " " "
 
 Symbole „#”, „0”, „.”, „,”, „%” i „‰” w ciągu formatu są interpretowane jako specyfikatory formatu, a nie jako znaki literału. W zależności od ich pozycji w ciągu formatu niestandardowego, wielkie i małe litery „E” oraz symbole + i - także mogą być interpretowane jako specyfikatory formatu.
 
 Aby zapobiec interpretacji znaku jako specyfikatora formatu, można poprzedzić go ukośnikiem odwrotnym, który jest znakiem ucieczki. Znak ucieczki oznacza, że następnym znakiem jest znak literału, który należy bez zmian umieścić w ciągu wynikowym.
 
-Aby uwzględnić ukośnik odwrotny w ciągu wynikowym,`\\`należy go uniknąć za pomocą innego ukośnika odwrotnego ( ).
+Aby uwzględnić ukośnik odwrotny w ciągu wynikowym,`\\`należy uciec od niego innym ukośnikiem odwrotnym ( ).
 
 > [!NOTE]
 > Niektóre kompilatory, takie jak kompilatory języków C++ i C#, mogą również interpretować pojedynczy ukośnik odwrotny jako znak ucieczki. Aby zapewnić poprawną interpretację ciągu podczas formatowania, można użyć dosłownego znaku literału ciągu (znaku @) przed ciągiem w języku C# lub dodać inny znak ukośnika odwrotnego przed każdym ukośnikiem odwrotnym w ciągu w językach C# i C++. W poniższym przykładzie dla języka C# pokazano oba podejścia.
 
-W poniższym przykładzie użyto znaku ucieczki, aby zapobiec operacji formatowania interpretacji znaków "#", "0" i "\\" jako znaków ucieczki lub specyfikatorów formatu. W przykładach w języku C# są używane dodatkowe ukośniki odwrotne w celu zagwarantowania, że ukośnik odwrotny będzie interpretowany jako znak literału.
+W poniższym przykładzie użyto znaku ucieczki, aby zapobiec interpretacji znaków "#", "0" i "\\jako znaków ucieczki lub specyfikatorów formatu. W przykładach w języku C# są używane dodatkowe ukośniki odwrotne w celu zagwarantowania, że ukośnik odwrotny będzie interpretowany jako znak literału.
 
 [!code-cpp[Formatting.Numeric.Custom#11](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/escape1.cpp#11)]
 [!code-csharp-interactive[Formatting.Numeric.Custom#11](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/escape1.cs#11)]
@@ -223,7 +223,7 @@ W poniższym przykładzie użyto specyfikatora formatu „;”, aby inaczej form
 
 ## <a name="character-literals"></a>Literały znaków
 
-Specyfikatory formatu wyświetlane w niestandardowym ciągu formatu numerycznego są zawsze interpretowane jako znaki formatowania i nigdy nie jako znaki literału. Obejmuje to następujące znaki:
+Specyfikatory formatów, które pojawiają się w niestandardowym ciągu formatu liczbowego, są zawsze interpretowane jako znaki formatowania i nigdy jako znaki dosłowne. Obejmuje to następujące znaki:
 
 - [0](#Specifier0)
 - [\#](#SpecifierD)
@@ -235,20 +235,20 @@ Specyfikatory formatu wyświetlane w niestandardowym ciągu formatu numerycznego
 - [,](#SpecifierTh)
 - [E lub e](#SpecifierExponent), w zależności od jego położenia w ciągu formatu.
 
-Wszystkie inne znaki są zawsze interpretowane jako literały znaków i w operacji formatowania są uwzględniane w ciągu wyników bez zmian.  W operacji analizy muszą dokładnie odpowiadać znakom w ciągu wejściowym; w porównaniu jest rozróżniana wielkość liter.
+Wszystkie inne znaki są zawsze interpretowane jako literały znaków i, w operacji formatowania, są uwzględniane w ciągu wynik bez zmian.  W operacji analizowania muszą dokładnie odpowiadać znakom w ciągu wejściowym; w porównaniu jest rozróżniana wielkość liter.
 
-Poniższy przykład ilustruje jedno typowe użycie jednostek znaków literału (w tym przypadku tysiące):
+Poniższy przykład ilustruje jedno typowe użycie jednostek znaków literału (w tym przypadku tysięcy):
 
 [!code-csharp-interactive[literal characters](~/samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/literal2.cs#1)]
 [!code-vb[literal characters](~/samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/literal2.vb#1)]
 
-Istnieją dwa sposoby wskazania, że znaki mają być interpretowane jako znaki literału, a nie jako znaki formatowania, dzięki czemu mogą być zawarte w ciągu wyników lub pomyślnie przeanalizowane w ciągu wejściowym:
+Istnieją dwa sposoby, aby wskazać, że znaki mają być interpretowane jako znaki literałowe, a nie jako znaki formatowania, dzięki czemu mogą być zawarte w ciągu wynik lub pomyślnie analizowane w ciągu wejściowym:
 
-- Przez ucieczkę znaku formatowania. Aby uzyskać więcej informacji, zobacz [znak "\\escape](#SpecifierEscape).
+- Poprzez ucieczkę znaku formatowania. Aby uzyskać więcej informacji, zobacz [znak ucieczki "\\.](#SpecifierEscape)
 
-- Poprzez załączanie całego ciągu dosłownego w apostrofach cudzysłowu.
+- Załączając cały ciąg literału w apostrofach cudzysłowu.
 
-W poniższym przykładzie użyto obu metod do uwzględnienia znaków zarezerwowanych w ciągu niestandardowego formatu numerycznego.
+W poniższym przykładzie użyto obu podejść do uwzględnienia znaków zastrzeżonych w niestandardowym ciągu formatu liczbowego.
 
 [!code-csharp-interactive[including reserved characters](~/samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/literal1.cs#1)]
 [!code-vb[including reserved characters](~/samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/literal1.vb#1)]
@@ -257,15 +257,15 @@ W poniższym przykładzie użyto obu metod do uwzględnienia znaków zarezerwowa
 
 ## <a name="notes"></a>Uwagi
 
-### <a name="floating-point-infinities-and-nan"></a>Bezkońcyki zmiennoprzecinkowe i NaN
+### <a name="floating-point-infinities-and-nan"></a>Bezokojowe bezokołowe i NaN
 
-Niezależnie od ciągu formatu, jeśli <xref:System.Single> wartość <xref:System.Double> typu typu zmiennoprzecinkowego jest nieskończoność dodatnia, ujemna nieskończoność, <xref:System.Globalization.NumberFormatInfo.PositiveInfinitySymbol%2A> <xref:System.Globalization.NumberFormatInfo.NegativeInfinitySymbol%2A>czy <xref:System.Globalization.NumberFormatInfo.NaNSymbol%2A> nie liczba (NaN), sformatowany ciąg jest wartością odpowiedniego , lub właściwością określoną przez aktualnie obowiązujący <xref:System.Globalization.NumberFormatInfo> obiekt.
+Niezależnie od ciągu formatu, jeśli <xref:System.Single> wartość <xref:System.Double> typu zmiennoprzecinkowego lub zmiennoprzecinkowego jest dodatnia nieskończoność, ujemna nieskończoność lub nie liczba (NaN), sformatowany ciąg jest wartością <xref:System.Globalization.NumberFormatInfo.PositiveInfinitySymbol%2A>odpowiedniego <xref:System.Globalization.NumberFormatInfo.NegativeInfinitySymbol%2A>, lub <xref:System.Globalization.NumberFormatInfo.NaNSymbol%2A> właściwością określoną przez aktualnie stosowany <xref:System.Globalization.NumberFormatInfo> obiekt.
 
 ### <a name="control-panel-settings"></a>Ustawienia Panelu sterowania
 
-Ustawienia w pozycji **Opcje regionalne i językowe** w Panelu sterowania mają wpływ na ciąg wynikowy powodowy wytworzony przez operację formatowania. Te ustawienia są używane do <xref:System.Globalization.NumberFormatInfo> inicjowania obiektu skojarzonego z bieżącą kulturą wątku, a bieżąca kultura wątku zawiera wartości używane do zarządzania formatowaniem. Na komputerach, na których są używane różne ustawienia, są generowane różne ciągi wynikowe.
+Ustawienia w elemencie **Opcje regionalne i językowe** w Panelu sterowania mają wpływ na ciąg wynikowy wytwarzany przez operację formatowania. Te ustawienia są używane <xref:System.Globalization.NumberFormatInfo> do inicjowania obiektu skojarzonego z bieżącą kulturą wątku, a bieżąca kultura wątku zawiera wartości używane do regulowania formatowania. Na komputerach, na których są używane różne ustawienia, są generowane różne ciągi wynikowe.
 
-Ponadto <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> jeśli używasz konstruktora do tworzenia wystąpienia <xref:System.Globalization.CultureInfo> nowy obiekt, który reprezentuje tę samą kulturę jak bieżąca kultura systemu, wszelkie dostosowania ustanowione przez **regionalnyi i język opcje** element w Panelu sterowania zostaną zastosowane do nowego <xref:System.Globalization.CultureInfo> obiektu. Konstruktora <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> można użyć <xref:System.Globalization.CultureInfo> do utworzenia obiektu, który nie odzwierciedla dostosowania systemu.
+Ponadto jeśli używasz <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29> konstruktora do tworzenia <xref:System.Globalization.CultureInfo> wystąpienia nowego obiektu, który reprezentuje tę samą kulturę co bieżąca kultura systemowa, wszystkie dostosowania <xref:System.Globalization.CultureInfo> ustanowione przez element Opcje regionalne i **językowe** w Panelu sterowania zostaną zastosowane do nowego obiektu. Konstruktora <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29> służy do <xref:System.Globalization.CultureInfo> tworzenia obiektu, który nie odzwierciedla dostosowania systemu.
 
 ### <a name="rounding-and-fixed-point-format-strings"></a>Ciągi zaokrąglania i formatu stałego
 
@@ -277,7 +277,7 @@ Dla ciągów formatu stałoprzecinkowego (czyli ciągów formatu, które nie zaw
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano dwa ciągi niestandardowego formatu liczb. W obu przypadkach symbol zastępczy`#`cyfry ( ) wyświetla dane liczbowe, a wszystkie inne znaki są kopiowane do ciągu wynikowego.
+W poniższym przykładzie pokazano dwa ciągi niestandardowego formatu liczb. W obu przypadkach symbol zastępczy cyfry (`#`) wyświetla dane liczbowe, a wszystkie inne znaki są kopiowane do ciągu wynikowego.
 
 [!code-cpp[Formatting.Numeric.Custom#10](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/example1.cpp#10)]
 [!code-csharp-interactive[Formatting.Numeric.Custom#10](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/example1.cs#10)]
@@ -289,7 +289,7 @@ W poniższym przykładzie pokazano dwa ciągi niestandardowego formatu liczb. W 
 
 - <xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>
 - [Formatowanie typów](../../../docs/standard/base-types/formatting-types.md)
-- [Standardowe ciągi formatujące liczby](../../../docs/standard/base-types/standard-numeric-format-strings.md)
+- [Standardowe ciągi formatu numerycznego](../../../docs/standard/base-types/standard-numeric-format-strings.md)
 - [Instrukcje: Uzupełnianie liczby zerami wiodącymi](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)
-- [Przykład: Narzędzie formatowania formularzy WinForms w ustonach .NET Core (C#)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs)
-- [Przykład: Narzędzie formatowania formularzy WinForms w programie .NET Core (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb)
+- [Przykład: narzędzie do formatowania .NET Core WinForms (C#)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs)
+- [Przykład: narzędzie do formatowania .NET Core WinForms (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb)

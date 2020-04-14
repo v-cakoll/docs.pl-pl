@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 12/23/2019
 ms.custom: mvc,mlnet-tooling
 ms.topic: tutorial
-ms.openlocfilehash: 2243aad0e787a3a594bde3dfa9884f104eab74e8
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: 832124e6d027b240c4d06692ee87c84f57b982d3
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79546695"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243339"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>Analizowanie tonacji przy użyciu interfejsu wiersza polecenia platformy ML.NET
 
@@ -45,7 +45,7 @@ Można uruchomić wygenerowane projekty kodu Języka C# `dotnet run` z programu 
 
 Będziemy używać istniejącego zestawu danych używanego w scenariuszu "Analiza tonacji", który jest zadaniem uczenia maszynowego klasyfikacji binarnej. Można użyć własnego zestawu danych w podobny sposób, a model i kod zostaną wygenerowane dla Ciebie.
 
-1. Pobierz [plik zip zestawu danych UCI Sentiment Labeled Sentences (patrz cytaty w poniższej notatce)](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)i rozpatruj go w dowolnym folderze.
+1. Pobierz [plik zip zestawu danych UCI Sentiment Labeled Sentences (patrz cytaty w poniższej notatce)](http://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)i rozpatruj go w dowolnym folderze.
 
     > [!NOTE]
     > Zestawy danych w tym samouczku używa zestawu danych z "Od grupy do poszczególnych etykiet przy użyciu funkcji głębokich", Kotzias et al.The datasets this tutorial uses a dataset from the 'From Group to Individual Labels using Deep Features', Kotzias et al,. KDD 2015 i gościł w repozytorium uczenia maszynowego UCI - Dua, D. i Karra Taniskidou, E. (2017). Repozytorium uczenia maszynowego UCI [ ].http://archive.ics.uci.edu/ml Irvine, CA: Uniwersytet Kalifornijski, Szkoła Informatyki i Informatyki.
@@ -223,7 +223,7 @@ Można użyć podobnego "kod oceniania modelu ML", aby uruchomić model w aplika
 
 Na przykład można bezpośrednio przenieść ten kod do dowolnej aplikacji klasycznej systemu Windows, takich jak **WPF** I **WinForms** i uruchomić model w taki sam sposób, jak to zostało zrobione w aplikacji konsoli.
 
-Jednak sposób zaimplementowania tych wierszy kodu do uruchomienia modelu ML powinny być zoptymalizowane (to znaczy, buforowanie pliku .zip modelu i załadować go raz) i mieć obiekty singleton zamiast tworzenia ich na każde żądanie, zwłaszcza jeśli aplikacja musi być skalowalne, takich jak aplikacji internetowej lub usługi rozproszonej, jak wyjaśniono w poniższej sekcji.
+Jednak sposób zaimplementowania tych wierszy kodu do uruchomienia modelu ml powinny być zoptymalizowane (czyli pamięci podręcznej pliku .zip modelu i załadować go raz) i mają singleton obiektów zamiast tworzenia ich na każde żądanie, zwłaszcza jeśli aplikacja musi być skalowalne, takie jak aplikacja sieci web lub usługi rozproszonej, jak wyjaśniono w poniższej sekcji.
 
 ### <a name="running-mlnet-models-in-scalable-aspnet-core-web-apps-and-services-multi-threaded-apps"></a>Uruchamianie modeli ML.NET w skalowalnych ASP.NET core aplikacji i usług internetowych (aplikacje wielowątkowe)
 

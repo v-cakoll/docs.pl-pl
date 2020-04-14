@@ -1,5 +1,5 @@
 ---
-title: Standardowe ciągi formatu daty i godziny
+title: Standardowe ciągi formatujące datę i godzinę
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
-ms.openlocfilehash: 5a3ba2838458d6e6833035186dfd69b34c780317
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 5db29046bfe67c530fe3a613c126c3841e6402e1
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80248137"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242754"
 ---
-# <a name="standard-date-and-time-format-strings"></a>Standardowe ciągi formatu daty i godziny
+# <a name="standard-date-and-time-format-strings"></a>Standardowe ciągi formatujące datę i godzinę
 
 W ciągu standardowego formatu daty i godziny pojedynczy specyfikator formatu jest używany do definiowania tekstowej reprezentacji wartości daty i godziny. Dowolny ciąg formatu daty i godziny, który zawiera więcej niż jeden znak, w tym biały znak, jest interpretowany jako niestandardowy ciąg formatu daty i godziny; Aby uzyskać więcej informacji, zobacz [Niestandardowe ciągi formatu daty i godziny](../../../docs/standard/base-types/custom-date-and-time-format-strings.md). Ciągu formatu standardowego lub niestandardowego można używać na dwa sposoby:
 
@@ -440,7 +440,7 @@ W poniższym przykładzie użyto specyfikatora formatu „y”, aby wyświetlić
 
 Ustawienia w elemencie **Opcje regionalne i językowe** w Panelu sterowania mają wpływ na ciąg wynikowy wytwarzany przez operację formatowania. Te ustawienia są używane <xref:System.Globalization.DateTimeFormatInfo> do inicjowania obiektu skojarzonego z bieżącą kulturą wątku, która zawiera wartości używane do regulowania formatowania. Na komputerach, na których są używane różne ustawienia, są generowane różne ciągi wynikowe.
 
-Ponadto jeśli używasz <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> konstruktora do tworzenia <xref:System.Globalization.CultureInfo> wystąpienia nowego obiektu, który reprezentuje tę samą kulturę co bieżąca kultura systemowa, wszystkie dostosowania <xref:System.Globalization.CultureInfo> ustanowione przez element Opcje regionalne i **językowe** w Panelu sterowania zostaną zastosowane do nowego obiektu. Konstruktora <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> służy do <xref:System.Globalization.CultureInfo> tworzenia obiektu, który nie odzwierciedla dostosowania systemu.
+Ponadto jeśli używasz <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29> konstruktora do tworzenia <xref:System.Globalization.CultureInfo> wystąpienia nowego obiektu, który reprezentuje tę samą kulturę co bieżąca kultura systemowa, wszystkie dostosowania <xref:System.Globalization.CultureInfo> ustanowione przez element Opcje regionalne i **językowe** w Panelu sterowania zostaną zastosowane do nowego obiektu. Konstruktora <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29> służy do <xref:System.Globalization.CultureInfo> tworzenia obiektu, który nie odzwierciedla dostosowania systemu.
 
 ### <a name="datetimeformatinfo-properties"></a>Właściwości obiektu DateTimeFormatInfo
 
@@ -451,6 +451,6 @@ Formatowanie zależy od właściwości bieżącego <xref:System.Globalization.Da
 - <xref:System.DateTime?displayProperty=nameWithType>
 - <xref:System.DateTimeOffset?displayProperty=nameWithType>
 - [Formatowanie typów](../../../docs/standard/base-types/formatting-types.md)
-- [Niestandardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [Niestandardowe ciągi formatu daty i godziny](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
 - [Przykład: narzędzie do formatowania .NET Core WinForms (C#)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs)
 - [Przykład: narzędzie do formatowania .NET Core WinForms (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb)

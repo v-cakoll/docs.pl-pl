@@ -11,15 +11,16 @@ helpviewer_keywords:
 - linear gradient brush [WPF]
 - typography [WPF], outline effects
 ms.assetid: 4aa3cf6e-1953-4f26-8230-7c1409e5f28d
-ms.openlocfilehash: d0ce46b9895589fd4635b567136204368a6431ad
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 86bfa396a2aa44eb511c014687501d60e170a396
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186856"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278928"
 ---
-# <a name="how-to-create-outlined-text"></a>Jak utworzyć schemat tekstu
-W większości przypadków podczas dodawania ornamentacji do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ciągów tekstowych w aplikacji, używasz tekstu pod względem kolekcji znaków dyskretnych lub glifów. Na przykład można utworzyć pędzel gradientu liniowego <xref:System.Windows.Controls.Control.Foreground%2A> i <xref:System.Windows.Controls.TextBox> zastosować go do właściwości obiektu. Podczas wyświetlania lub edytowania pola tekstowego liniowy pędzel gradientowy jest automatycznie stosowany do bieżącego zestawu znaków w ciągu tekstowym.  
+# <a name="how-to-create-outlined-text"></a>Jak: Tworzenie tekstu konspektów
+
+W większości przypadków podczas dodawania ornamentacji do ciągów tekstowych w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji, używasz tekstu pod względem kolekcji znaków dyskretnych lub glifów. Na przykład można utworzyć pędzel gradientu liniowego <xref:System.Windows.Controls.Control.Foreground%2A> i <xref:System.Windows.Controls.TextBox> zastosować go do właściwości obiektu. Podczas wyświetlania lub edytowania pola tekstowego liniowy pędzel gradientowy jest automatycznie stosowany do bieżącego zestawu znaków w ciągu tekstowym.  
   
  ![Tekst wyświetlany za pomocą liniowego pędzla gradientowego](./media/how-to-create-outlined-text/text-linear-gradient.jpg)
   
@@ -45,14 +46,14 @@ W większości przypadków podczas dodawania ornamentacji do [!INCLUDE[TLA#tla_w
  [!code-csharp[OutlineTextControlViewer#CreateText](~/samples/snippets/csharp/VS_Snippets_Wpf/OutlineTextControlViewer/CSharp/OutlineTextControl.cs#createtext)]
  [!code-vb[OutlineTextControlViewer#CreateText](~/samples/snippets/visualbasic/VS_Snippets_Wpf/OutlineTextControlViewer/visualbasic/outlinetextcontrol.vb#createtext)]  
   
- Aby wyświetlić pobrane <xref:System.Windows.Media.Geometry> obiekty, należy uzyskać <xref:System.Windows.Media.DrawingContext> dostęp do obiektu, który wyświetla przekonwertowany tekst. W tych przykładach kodu odbywa się to przez utworzenie niestandardowego obiektu kontrolnego, który jest pochodną klasy, która obsługuje renderowanie zdefiniowane przez użytkownika.  
+ Aby wyświetlić pobrane <xref:System.Windows.Media.Geometry> obiekty, należy uzyskać <xref:System.Windows.Media.DrawingContext> dostęp do obiektu, który wyświetla przekonwertowany tekst. W tych przykładach kodu ten dostęp uzyskuje się przez utworzenie niestandardowego obiektu kontrolnego, który jest pochodną klasy, która obsługuje renderowanie zdefiniowane przez użytkownika.  
   
  Aby <xref:System.Windows.Media.Geometry> wyświetlić obiekty w formancie niestandardowym, podaj zastąpienie <xref:System.Windows.UIElement.OnRender%2A> metody. Nadpisana metoda powinna <xref:System.Windows.Media.DrawingContext.DrawGeometry%2A> używać metody <xref:System.Windows.Media.Geometry> do rysowania obiektów.  
   
  [!code-csharp[OutlineTextControlViewer#OnRender](~/samples/snippets/csharp/VS_Snippets_Wpf/OutlineTextControlViewer/CSharp/OutlineTextControl.cs#onrender)]
  [!code-vb[OutlineTextControlViewer#OnRender](~/samples/snippets/visualbasic/VS_Snippets_Wpf/OutlineTextControlViewer/visualbasic/outlinetextcontrol.vb#onrender)]  
   
-  Źródło przykładowego obiektu sterującego użytkownika niestandardowego można znaleźć [w OutlineTextControl.cs dla języka C#](https://github.com/dotnet/samples/blob/master/snippets/csharp/VS_Snippets_Wpf/OutlineTextControlViewer/CSharp/OutlineTextControl.cs) i [OutlineTextControl.vb dla języka Visual Basic](https://github.com/dotnet/samples/blob/master/snippets/visualbasic/VS_Snippets_Wpf/OutlineTextControlViewer/visualbasic/outlinetextcontrol.vb).
+  Źródło przykładowego obiektu sterującego użytkownika niestandardowego można znaleźć [w OutlineTextControl.cs dla języka C#](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/VS_Snippets_Wpf/OutlineTextControlViewer/CSharp/OutlineTextControl.cs) i [OutlineTextControl.vb dla języka Visual Basic](https://github.com/dotnet/docs/blob/master/samples/snippets/visualbasic/VS_Snippets_Wpf/OutlineTextControlViewer/visualbasic/outlinetextcontrol.vb).
   
 ## <a name="see-also"></a>Zobacz też
 

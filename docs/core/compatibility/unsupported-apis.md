@@ -1,25 +1,25 @@
 ---
-title: Nieobsługiwane interfejsy API w usłudze .NET Core
+title: Nieobsługiwały interfejsy API w programie .NET Core
 titleSuffix: ''
-description: Dowiedz się, które interfejsy API z platformy .NET Framework, które zawsze zgłaszają wyjątek w .NET Core.
+description: Dowiedz się, które interfejsy API z platformy .NET Framework, które zawsze zgłaszają wyjątek w programie .NET Core.
 ms.date: 12/23/2019
-ms.openlocfilehash: c4b94321d30cacd90d5c2ee23c258681683a6faa
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bd3516d9480ef42b6ea89825ba64867a3ca104e3
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77092970"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242949"
 ---
-# <a name="apis-that-always-throw-exceptions-on-net-core"></a>Interfejsy API, które zawsze zgłaszają wyjątki w uspolonym .NET Core
+# <a name="apis-that-always-throw-exceptions-on-net-core"></a>Interfejsy API, które zawsze zgłaszają wyjątki w programie .NET Core
 
-Następujące interfejsy API <xref:System.PlatformNotSupportedException> zawsze będą zgłaszać na .NET Core na wszystkich lub podzbiór platform.
+Następujące interfejsy API zawsze <xref:System.PlatformNotSupportedException> będą rzucać na .NET Core na wszystkich lub podzbiór platform.
 
-W tym artykule organizatorzy organizują elementy członkowskie interfejsu API, których dotyczy problem, według obszaru nazw.
+W tym artykule organizuje dotkniętych członków interfejsu API według obszaru nazw.
 
 > [!NOTE]
 >
-> - Ten artykuł jest w toku. Nie jest to pełna lista interfejsów API, które zgłaszają wyjątki w .NET Core.
-> - Ten artykuł nie zawiera jawnych implementacji interfejsu dla serializacji binarnej, które wyrzucając na .NET Core. Aby uzyskać więcej informacji, zobacz [Serializacja binarna w .NET Core](../../standard/serialization/binary-serialization.md#net-core).
+> - Ten artykuł jest w toku. Nie jest to pełna lista interfejsów API, które zgłaszają wyjątki w programie .NET Core.
+> - Ten artykuł nie zawiera jawnych implementacji interfejsu dla serializacji binarnej, które są wrzucane na .NET Core. Aby uzyskać więcej informacji, zobacz [Serializacja binarna w .NET Core](../../standard/serialization/binary-serialization.md#net-core).
 
 ## <a name="system"></a>System
 
@@ -36,7 +36,7 @@ W tym artykule organizatorzy organizują elementy członkowskie interfejsu API, 
 | <xref:System.OperatingSystem.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Wszystkie |
 | <xref:System.Type.ReflectionOnlyGetType(System.String,System.Boolean,System.Boolean)?displayProperty=nameWithType> | Wszystkie |
 
-## <a name="systemcodedomcompiler"></a>System.CodeDom.Kompilator
+## <a name="systemcodedomcompiler"></a>System.CodeDom.Compiler
 
 | Członek | Platformy, które rzucają |
 | - | - |
@@ -48,7 +48,7 @@ W tym artykule organizatorzy organizują elementy członkowskie interfejsu API, 
 
 | Członek | Platformy, które rzucają |
 | - | - |
-| <xref:System.Collections.Specialized.NameObjectCollectionBase.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Wszystkie |
+| <xref:System.Collections.Specialized.NameObjectCollectionBase.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | Wszystkie |
 | <xref:System.Collections.Specialized.NameObjectCollectionBase.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Wszystkie |
 | <xref:System.Collections.Specialized.NameObjectCollectionBase.OnDeserialization(System.Object)?displayProperty=nameWithType> | Wszystkie |
 
@@ -76,13 +76,13 @@ W tym artykule organizatorzy organizują elementy członkowskie interfejsu API, 
 | <xref:System.Console.WindowTop?displayProperty=nameWithType>(tylko zestaw) | Linux i macOS |
 | <xref:System.Console.WindowWidth?displayProperty=nameWithType>(tylko zestaw) | Linux i macOS |
 
-## <a name="systemdatacommon"></a>System.Data.Common (System.Data.Common)
+## <a name="systemdatacommon"></a>System.Data.Common
 
 | Członek | Platformy, które rzucają |
 | - | - |
 | <xref:System.Data.Common.DbDataReader.GetSchemaTable%2A?displayProperty=nameWithType>(rzuty) <xref:System.NotSupportedException> | Wszystkie |
 
-## <a name="systemdiagnosticsprocess"></a>System.Diagnostics.Process (Diagnostyka.Proces)
+## <a name="systemdiagnosticsprocess"></a>System.Diagnostics.Process
 
 | Członek | Platformy, które rzucają |
 | - | - |
@@ -103,7 +103,7 @@ W tym artykule organizatorzy organizują elementy członkowskie interfejsu API, 
 
 | Członek | Platformy, które rzucają |
 | - | - |
-| <xref:System.IO.FileSystemInfo.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Wszystkie |
+| <xref:System.IO.FileSystemInfo.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | Wszystkie |
 | <xref:System.IO.FileSystemInfo.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Wszystkie |
 
 ## <a name="systemiopipes"></a>System.IO.Rury
@@ -117,11 +117,11 @@ W tym artykule organizatorzy organizują elementy członkowskie interfejsu API, 
 | <xref:System.IO.Pipes.PipeStream.ReadMode?displayProperty=nameWithType>(tylko zestaw) | Linux i macOS |
 | <xref:System.IO.Pipes.PipeStream.WaitForPipeDrain?displayProperty=nameWithType> | Linux i macOS |
 
-## <a name="systemmedia"></a>System.Media (System.Media)
+## <a name="systemmedia"></a>System.Media
 
 | Członek | Platformy, które rzucają |
 | - | - |
-| <xref:System.Media.SoundPlayer.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Wszystkie |
+| <xref:System.Media.SoundPlayer.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | Wszystkie |
 
 ## <a name="systemnet"></a>System.Net
 
@@ -129,23 +129,23 @@ W tym artykule organizatorzy organizują elementy członkowskie interfejsu API, 
 | - | - |
 | <xref:System.Net.AuthenticationManager.Authenticate(System.String,System.Net.WebRequest,System.Net.ICredentials)?displayProperty=nameWithType> | Wszystkie |
 | <xref:System.Net.AuthenticationManager.PreAuthenticate(System.Net.WebRequest,System.Net.ICredentials)?displayProperty=nameWithType> | Wszystkie |
-| <xref:System.Net.FileWebRequest.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Wszystkie |
+| <xref:System.Net.FileWebRequest.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | Wszystkie |
 | <xref:System.Net.FileWebRequest.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Wszystkie |
-| <xref:System.Net.FileWebResponse.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Wszystkie |
+| <xref:System.Net.FileWebResponse.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | Wszystkie |
 | <xref:System.Net.FileWebResponse.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Wszystkie |
-| <xref:System.Net.HttpWebRequest.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Wszystkie |
+| <xref:System.Net.HttpWebRequest.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | Wszystkie |
 | <xref:System.Net.HttpWebRequest.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Wszystkie |
-| <xref:System.Net.HttpWebResponse.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Wszystkie |
+| <xref:System.Net.HttpWebResponse.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | Wszystkie |
 | <xref:System.Net.HttpWebResponse.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Wszystkie |
-| <xref:System.Net.WebProxy.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Wszystkie |
+| <xref:System.Net.WebProxy.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | Wszystkie |
 | <xref:System.Net.WebProxy.GetDefaultProxy?displayProperty=nameWithType> | Wszystkie |
 | <xref:System.Net.WebProxy.GetObjectData%2A?displayProperty=nameWithType> | Wszystkie |
-| <xref:System.Net.WebRequest.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Wszystkie |
+| <xref:System.Net.WebRequest.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | Wszystkie |
 | <xref:System.Net.WebRequest.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Wszystkie |
-| <xref:System.Net.WebResponse.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Wszystkie |
+| <xref:System.Net.WebResponse.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | Wszystkie |
 | <xref:System.Net.WebResponse.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Wszystkie |
 
-## <a name="systemnetnetworkinformation"></a>System.Net.NetworkInformacje
+## <a name="systemnetnetworkinformation"></a>Informacje systemowe.net.networkInformacja
 
 | Członek | Platformy, które rzucają |
 | - | - |
@@ -155,10 +155,10 @@ W tym artykule organizatorzy organizują elementy członkowskie interfejsu API, 
 
 | Członek | Platformy, które rzucają |
 | - | - |
-| <xref:System.Net.Sockets.Socket.%23ctor(System.Net.Sockets.SocketInformation)?displayProperty=nameWithType> | Wszystkie |
+| <xref:System.Net.Sockets.Socket.%23ctor(System.Net.Sockets.SocketInformation)> | Wszystkie |
 | <xref:System.Net.Sockets.Socket.DuplicateAndClose(System.Int32)?displayProperty=nameWithType> | Wszystkie |
 
-## <a name="systemnetwebsockets"></a>System.Net.WebSockets
+## <a name="systemnetwebsockets"></a>Zestawy systemowe system.net.websockets
 
 | Członek | Platformy, które rzucają |
 | - | - |
@@ -172,8 +172,8 @@ W tym artykule organizatorzy organizują elementy członkowskie interfejsu API, 
 | <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom(System.String)?displayProperty=nameWithType> | Wszystkie |
 | <xref:System.Reflection.AssemblyName.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Wszystkie |
 | <xref:System.Reflection.AssemblyName.OnDeserialization(System.Object)?displayProperty=nameWithType> | Wszystkie |
-| <xref:System.Reflection.StrongNameKeyPair.%23ctor(System.String)?displayProperty=nameWithType> | Wszystkie |
-| <xref:System.Reflection.StrongNameKeyPair.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Wszystkie |
+| <xref:System.Reflection.StrongNameKeyPair.%23ctor(System.String)> | Wszystkie |
+| <xref:System.Reflection.StrongNameKeyPair.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | Wszystkie |
 | <xref:System.Reflection.StrongNameKeyPair.PublicKey?displayProperty=nameWithType> | Wszystkie |
 
 ## <a name="systemruntimecompilerservices"></a>System.runtime.compilerservices
@@ -223,10 +223,10 @@ W tym artykule organizatorzy organizują elementy członkowskie interfejsu API, 
 
 | Członek | Platformy, które rzucają |
 | - | - |
-| <xref:System.Security.Claims.ClaimsPrincipal.%23ctor?displayProperty=nameWithType> | Wszystkie |
+| <xref:System.Security.Claims.ClaimsPrincipal.%23ctor> | Wszystkie |
 | <xref:System.Security.Claims.ClaimsPrincipal.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Wszystkie |
-| <xref:System.Security.Claims.ClaimsIdentity.%23ctor(System.Runtime.Serialization.SerializationInfo)?displayProperty=nameWithType> | Wszystkie |
-| <xref:System.Security.Claims.ClaimsIdentity.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Wszystkie |
+| <xref:System.Security.Claims.ClaimsIdentity.%23ctor(System.Runtime.Serialization.SerializationInfo)> | Wszystkie |
+| <xref:System.Security.Claims.ClaimsIdentity.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | Wszystkie |
 | <xref:System.Security.Claims.ClaimsIdentity.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Wszystkie |
 
 ## <a name="systemsecuritycryptography"></a>System.security.cryptography
@@ -234,7 +234,7 @@ W tym artykule organizatorzy organizują elementy członkowskie interfejsu API, 
 | Członek | Platformy, które rzucają |
 | - | - |
 | <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create(System.String)?displayProperty=nameWithType> | Wszystkie |
-| <xref:System.Security.Cryptography.CspKeyContainerInfo.%23ctor%2A?displayProperty=nameWithType> | Linux i macOS |
+| <xref:System.Security.Cryptography.CspKeyContainerInfo.%23ctor%2A> | Linux i macOS |
 | <xref:System.Security.Cryptography.CspKeyContainerInfo.Accessible?displayProperty=nameWithType> | Linux i macOS |
 | <xref:System.Security.Cryptography.CspKeyContainerInfo.Exportable?displayProperty=nameWithType> | Linux i macOS |
 | <xref:System.Security.Cryptography.CspKeyContainerInfo.HardwareDevice?displayProperty=nameWithType> | Linux i macOS |
@@ -266,36 +266,36 @@ W tym artykule organizatorzy organizują elementy członkowskie interfejsu API, 
 
 | Członek | Platformy, które rzucają |
 | - | - |
-| <xref:System.Security.Cryptography.Pkcs.CmsSigner.%23ctor(System.Security.Cryptography.CspParameters)?displayProperty=nameWithType> | Wszystkie |
+| <xref:System.Security.Cryptography.Pkcs.CmsSigner.%23ctor(System.Security.Cryptography.CspParameters)> | Wszystkie |
 | <xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType> | Wszystkie |
 | <xref:System.Security.Cryptography.Pkcs.SignerInfo.ComputeCounterSignature?displayProperty=nameWithType> | Wszystkie |
 
-## <a name="systemsecuritycryptographyx509certificates"></a>Certyfikaty System.Security.Cryptography.X509
+## <a name="systemsecuritycryptographyx509certificates"></a>Certyfikaty systemowe.Security.Cryptography.X509Certificates
 
 | Członek | Platformy, które rzucają |
 | - | - |
-| <xref:System.Security.Cryptography.X509Certificates.X509Certificate.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Wszystkie |
+| <xref:System.Security.Cryptography.X509Certificates.X509Certificate.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | Wszystkie |
 | <xref:System.Security.Cryptography.X509Certificates.X509Certificate.Import%2A?displayProperty=nameWithType> | Wszystkie |
-| <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Wszystkie |
+| <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | Wszystkie |
 | <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.PrivateKey?displayProperty=nameWithType>(tylko zestaw) | Wszystkie |
 
 ## <a name="systemsecurityauthenticationextendedprotection"></a>System.Security.Authentication.ExtendedProtection
 
 | Członek | Platformy, które rzucają |
 | - | - |
-| <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Wszystkie |
+| <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | Wszystkie |
 
-## <a name="systemsecuritypolicy"></a>System.Security.Policy (System.Security.Policy)
+## <a name="systemsecuritypolicy"></a>System.Security.Policy
 
 | Członek | Platformy, które rzucają |
 | - | - |
 | <xref:System.Security.Policy.Hash.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Wszystkie |
 
-## <a name="systemserviceprocessservicecontroller"></a>Kontroler system.ServiceProcess.ServiceController
+## <a name="systemserviceprocessservicecontroller"></a>System.ServiceProcess.ServiceKontroler
 
 | Członek | Platformy, które rzucają |
 | - | - |
-| <xref:System.ServiceProcess.TimeoutException.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Wszystkie |
+| <xref:System.ServiceProcess.TimeoutException.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | Wszystkie |
 
 ## <a name="systemtextregularexpressions"></a>System.Text.RegularExpressions
 
@@ -324,6 +324,6 @@ W tym artykule organizatorzy organizują elementy członkowskie interfejsu API, 
 
 ## <a name="see-also"></a>Zobacz też
 
-- [Przełomowe zmiany migracji z platformy .NET Framework do programu .NET Core](../compatibility/fx-core.md)
-- [Serializacja binarna w ustom .NET Core](../../standard/serialization/binary-serialization.md#net-core)
-- [Analizator przenoszenia .NET](../../standard/analyzers/portability-analyzer.md)
+- [Przerywanie zmian migracji z programu .NET Framework do programu .NET Core](../compatibility/fx-core.md)
+- [Serializacja binarna w rdzeniu .NET](../../standard/serialization/binary-serialization.md#net-core)
+- [Analizator przenośności .NET](../../standard/analyzers/portability-analyzer.md)

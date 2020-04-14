@@ -2,74 +2,74 @@
 title: Serializacja i metadane
 ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
-ms.openlocfilehash: 1805b6ca06d584237303d1366222419da3e8b9ef
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7c6fe241fbf92f52abfa0eb66c37bff4d227b4e5
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128122"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81241922"
 ---
 # <a name="serialization-and-metadata"></a>Serializacja i metadane
 
-Jeśli aplikacja serializować i deserializacji obiektów, może być konieczne dodanie wpisów do pliku dyrektywy środowiska uruchomieniowego (. Rd. xml) w celu upewnienia się, że niezbędne metadane są obecne w czasie wykonywania. Istnieją dwie kategorie serializatorów, a każdy z nich wymaga innej obsługi w pliku dyrektywy środowiska uruchomieniowego:  
+Jeśli aplikacja serializuje i deserializes obiektów, może być konieczne dodanie wpisów do pliku dyrektywy środowiska uruchomieniowego (.rd.xml), aby upewnić się, że niezbędne metadane są obecne w czasie wykonywania. Istnieją dwie kategorie serializatorów, a każda z nich wymaga innej obsługi w pliku dyrektyw środowiska wykonawczego:  
   
-- Serializatory innych firm oparte na odbiciu. Wymagają one modyfikacji pliku dyrektywy środowiska uruchomieniowego i zostały omówione w następnej sekcji.  
+- Serializatory innych firm oparte na odbiciach. Wymagają one modyfikacji pliku dyrektyw środowiska wykonawczego i zostały omówione w następnej sekcji.  
   
-- W bibliotece klas .NET Framework nie znaleziono serializatorów opartych na nieodbiciach. Mogą one wymagać modyfikacji pliku dyrektywy środowiska uruchomieniowego i zostały omówione w sekcji [serializatory firmy Microsoft](#Microsoft) .  
+- Serializatory oparte na braku odbicia znalezione w bibliotece klas .NET Framework. Mogą one wymagać modyfikacji pliku dyrektyw środowiska wykonawczego i są omówione w sekcji [serializatory firmy Microsoft.](#Microsoft)  
   
 <a name="ThirdParty"></a>
 ## <a name="third-party-serializers"></a>Serializatory innych firm
 
- Serializatory innych firm, w tym Newtonsoft. JSON, zazwyczaj są oparte na odbiciach. Przy użyciu binarnego dużego obiektu (BLOB) danych serializowanych pola w danych są przypisywane do konkretnego typu przez wyszukanie pól typu docelowego według nazwy. Co najmniej przy użyciu tych bibliotek powoduje wyjątki [MissingMetadataException](missingmetadataexception-class-net-native.md) dla każdego obiektu <xref:System.Type>, który próbujesz serializować lub deserializować w kolekcji `List<Type>`.  
+ Serializatory trzeciej części, w tym Newtonsoft.JSON, zazwyczaj są oparte na refleksji. Biorąc pod uwagę binarny duży obiekt (BLOB) z serializowanych danych, pola w danych są przypisywane do typu betonowego, wyszukując pola typu docelowego według nazwy. Co najmniej przy użyciu tych bibliotek powoduje [MissingMetadataException](missingmetadataexception-class-net-native.md) wyjątki dla każdego <xref:System.Type> obiektu, który `List<Type>` próbujesz serializować lub deserialize w kolekcji.  
   
- Najprostszym sposobem rozwiązania problemów spowodowanych brakiem metadanych dla tych serializatorów jest zbieranie typów, które będą używane w serializacji w ramach pojedynczej przestrzeni nazw (na przykład `App.Models`), i zastosowanie dyrektywy metadanych `Serialize`:  
+ Najprostszym sposobem rozwiązania problemów spowodowanych brakującymi metadanymi dla tych serializatorów jest zbieranie typów, które `App.Models`będą używane `Serialize` w serializacji w ramach pojedynczego obszaru nazw (na przykład) i stosowanie do niej dyrektywy metadanych:  
   
 ```xml  
 <Namespace Name="App.Models" Serialize="Required PublicAndInternal" />  
 ```  
   
- Aby uzyskać informacje o składni używanej w przykładzie, zobacz [\<Namespace > element](namespace-element-net-native.md).  
+ Aby uzyskać informacje na temat składni [ \<](namespace-element-net-native.md)używanej w przykładzie, zobacz Obszar nazw> element .  
   
 <a name="Microsoft"></a>
 ## <a name="microsoft-serializers"></a>Serializatory firmy Microsoft
 
- Mimo że klasy <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>i <xref:System.Xml.Serialization.XmlSerializer> nie polegają na odbiciu, wymagają generowania kodu na podstawie obiektu do serializacji lub deserializacji. Przeciążone konstruktory dla każdego serializatora zawierają parametr <xref:System.Type>, który określa typ do serializacji lub deserializacji. Sposób określenia tego typu w kodzie definiuje działanie, które należy wykonać, zgodnie z opisem w dwóch następnych sekcjach.  
+ Chociaż <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>i <xref:System.Xml.Serialization.XmlSerializer> klasy nie opierają się na odbicie, wymagają kodu do wygenerowania na podstawie obiektu, który ma być serializowany lub deserializacji. Przeciążonych konstruktorów dla każdego <xref:System.Type> serializatora zawierają parametr, który określa typ, który ma być serializowany lub deserialized. Sposób określenia tego typu w kodzie definiuje akcję, którą należy podjąć, jak opisano w następnych dwóch sekcjach.  
   
-### <a name="typeof-used-in-the-constructor"></a>wartość typeof użyta w konstruktorze
+### <a name="typeof-used-in-the-constructor"></a>typeof używane w konstruktorze
 
- W przypadku wywołania konstruktora tych klas serializacji i dołączenia C# operatora [typeof](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator) w wywołaniu metody **nie trzeba wykonywać żadnych dodatkowych czynności**. Na przykład w każdym z następujących wywołań konstruktora klasy serializacji słowo kluczowe `typeof` jest używane jako część wyrażenia przesłanego do konstruktora.  
+ Jeśli wywołasz konstruktor tych klas serializacji i uwzględnisz operator [typu](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator) C# w wywołaniu metody, **nie musisz wykonywać żadnej dodatkowej pracy.** Na przykład w każdym z następujących wywołań do konstruktora klasy `typeof` serializacji, słowo kluczowe jest używane jako część wyrażenia przekazywane do konstruktora.  
   
  [!code-csharp[ProjectN#5](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#5)]  
   
- Kompilator .NET Native automatycznie obsłuży ten kod.  
+ Kompilator natywny platformy .NET automatycznie obsłuży ten kod.  
   
-### <a name="typeof-used-outside-the-constructor"></a>wartość typeof użyta poza konstruktorem
+### <a name="typeof-used-outside-the-constructor"></a>typeof używane poza konstruktorem
 
- Jeśli wywołasz konstruktora tych klas serializacji i użyjesz C# operatora [typeof](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator) poza wyrażeniem dostarczonym do parametru <xref:System.Type> konstruktora, jak w poniższym kodzie, kompilator .NET Native nie może rozpoznać typu:  
+ Jeśli wywołasz konstruktor tych klas serializacji i użyjesz operatora [typu](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator) C# <xref:System.Type> poza wyrażeniem dostarczonym do parametru konstruktora, jak w poniższym kodzie, kompilator .NET Native nie może rozwiązać tego typu:  
   
  [!code-csharp[ProjectN#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#6)]  
   
- W takim przypadku należy określić typ w pliku dyrektywy środowiska uruchomieniowego, dodając wpis podobny do tego:  
+ W takim przypadku należy określić typ w pliku dyrektyw środowiska wykonawczego, dodając wpis w ten sposób:  
   
 ```xml  
 <Type Name="DataSet" Browse="Required Public" />  
 ```  
   
- Podobnie, jeśli wywołasz konstruktora, takiego jak <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType> i dostarczysz tablicę dodatkowych obiektów <xref:System.Type> do serializacji, jak w poniższym kodzie, kompilator .NET Native nie będzie mógł rozpoznać tych typów.  
+ Podobnie jeśli wywołasz konstruktora, takich jak <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29> <xref:System.Type> i podać tablicę dodatkowych obiektów do serializacji, jak w poniższym kodzie, .NET natywnego kompilatora nie może rozwiązać tych typów.  
   
  [!code-csharp[ProjectN#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#7)]  
   
- Należy dodać następujące wpisy dla każdego typu do pliku dyrektywy środowiska uruchomieniowego:  
+ Do pliku dyrektyw środowiska wykonawczego należy dodać wpisy, takie jak następujące:  
   
 ```xml  
 <Type Name="t" Browse="Required Public" />  
 ```  
   
- Aby uzyskać informacje o składni używanej w tym przykładzie, zobacz [\<Type > elementu](type-element-net-native.md).  
+ Aby uzyskać informacje na temat składni [ \<](type-element-net-native.md)używanej w przykładzie, zobacz Typ> Element .  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementy dyrektyw środowiska uruchomieniowego](runtime-directive-elements.md)
-- [Typ\<> element](type-element-net-native.md)
-- [\<> elementu przestrzeni nazw](namespace-element-net-native.md)
+- [\<Wpisz element>](type-element-net-native.md)
+- [\<Element> przestrzeni nazw](namespace-element-net-native.md)

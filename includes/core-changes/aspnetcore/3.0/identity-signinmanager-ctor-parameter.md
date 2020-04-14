@@ -1,26 +1,26 @@
 ---
-ms.openlocfilehash: 6f8e6d2786d20e055c9bef63891db4d6f88bc64b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ed5a90063b8963d79f412ec1c5c0b9030f980f83
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75901712"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81275310"
 ---
 ### <a name="identity-signinmanager-constructor-accepts-new-parameter"></a>Tożsamość: Konstruktor SignInManager akceptuje nowy parametr
 
-Począwszy od ASP.NET Core 3.0, `IUserConfirmation<TUser>` nowy `SignInManager` parametr został dodany do konstruktora. Aby uzyskać więcej informacji, zobacz [dotnet/aspnetcore#8356](https://github.com/dotnet/aspnetcore/issues/8356).
+Począwszy od ASP.NET Core 3.0, `IUserConfirmation<TUser>` nowy parametr `SignInManager` został dodany do konstruktora. Aby uzyskać więcej informacji, zobacz [dotnet/aspnetcore#8356](https://github.com/dotnet/aspnetcore/issues/8356).
 
-#### <a name="version-introduced"></a>Wprowadzona wersja
+#### <a name="version-introduced"></a>Wprowadzono wersję
 
 3.0
 
-#### <a name="reason-for-change"></a>Przyczyna zmiany
+#### <a name="reason-for-change"></a>Powód zmiany
 
-Motywacją do zmiany było dodanie obsługi nowych przepływów e-mail / potwierdzenie w tożsamości.
+Motywacją do zmiany było dodanie wsparcia dla nowych przepływów e-mail / potwierdzenia w tożsamości.
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Jeśli ręcznie konstruowanie `SignInManager`, należy `IUserConfirmation` podać implementację lub pobrać jeden z iniekcji zależności, aby zapewnić.
+Jeśli ręcznie konstruowania `SignInManager`, zapewnić `IUserConfirmation` implementację lub pobrać jeden z iniekcji zależności, aby zapewnić.
 
 #### <a name="category"></a>Kategoria
 
@@ -28,7 +28,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>Dotyczy interfejsów API
 
-<xref:Microsoft.AspNetCore.Identity.SignInManager%601.%23ctor%2A?displayProperty=nameWithType>
+<xref:Microsoft.AspNetCore.Identity.SignInManager%601.%23ctor%2A>
 
 <!--
 

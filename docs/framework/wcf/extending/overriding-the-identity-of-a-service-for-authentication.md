@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-ms.openlocfilehash: e7273c1e140e52eb37a30b6cabeb9e9a83a6fa2d
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 5649ef4cc05c9c16b1f8f626ba5e2e584b0e52eb
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121560"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278915"
 ---
 # <a name="override-the-identity-of-a-service-for-authentication"></a>Zastępowanie tożsamości usługi do uwierzytelniania
 
@@ -47,13 +47,13 @@ Zazwyczaj nie trzeba ustawiać tożsamości w usłudze, ponieważ wybór typu po
   
 - Jeśli używasz protokołu Kerberos direct (znanego również jako "one-shot"), uwierzytelnianie kończy się niepowodzeniem.  
   
-### <a name="using-the-identity-element-in-configuration"></a>Korzystanie \<z elementu> tożsamości w konfiguracji  
- Jeśli zmienisz typ poświadczeń klienta`,` w powiązaniu wcześniej pokazanym certyfikatowi, wygenerowany WSDL zawiera szeregowany certyfikat X.509 base64 dla wartości tożsamości, jak pokazano w poniższym kodzie. Jest to wartość domyślna dla wszystkich typów poświadczeń klienta innych niż Windows.  
+### <a name="use-the-identity-element-in-configuration"></a>Użyj \<elementu> tożsamości w konfiguracji  
+ Jeśli zmienisz typ poświadczeń klienta `Certificate`w powiązaniu wcześniej pokazanym , wygenerowany WSDL zawiera certyfikat X.509 seryjny Base64 dla wartości tożsamości, jak pokazano w poniższym kodzie. Jest to wartość domyślna dla wszystkich typów poświadczeń klienta innych niż Windows.  
 
  Można zmienić wartość domyślnej tożsamości usługi lub zmienić typ tożsamości przy `identity` użyciu <> element w konfiguracji lub ustawiając tożsamość w kodzie. Poniższy kod konfiguracji ustawia tożsamość systemu nazw `contoso.com`domen (DNS) z wartością .  
 
-### <a name="setting-identity-programmatically"></a>Programowo ustawianie tożsamości  
- Usługa nie musi jawnie określić tożsamość, ponieważ WCF automatycznie określa go. Jednak WCF umożliwia określenie tożsamości w punkcie końcowym, jeśli jest to wymagane. Poniższy kod dodaje nowy punkt końcowy usługi z określoną tożsamością DNS.  
+### <a name="set-identity-programmatically"></a>Programowo ustawianie tożsamości  
+ Usługa nie musi jawnie określić tożsamość, ponieważ WCF automatycznie określa go. Jednak WCF umożliwia określenie tożsamości w punkcie końcowym, jeśli to konieczne. Poniższy kod dodaje nowy punkt końcowy usługi z określoną tożsamością DNS.  
   
  [!code-csharp[C_Identity#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#5)]
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  

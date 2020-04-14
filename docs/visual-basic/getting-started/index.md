@@ -5,12 +5,12 @@ helpviewer_keywords:
 - get started, Visual Basic
 - Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
-ms.openlocfilehash: 0221889f6d736b41546b564273ebb41d49dfb039
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f52432bde84ab7c1ec30ff4033ce95c80606636e
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75559888"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243196"
 ---
 # <a name="get-started-with-visual-basic"></a>Wprowadzenie do języka Visual Basic
 
@@ -30,11 +30,11 @@ Ta sekcja dokumentacji ułatwia rozpoczęcie pracy z programem Visual Basic.
 
 ## <a name="see-also"></a>Zobacz też
 
-- [Pobierz visual basic](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) Zawiera łącza do pobrania dla wersji programu Visual Studio, które zawierają pomoc techniczną języka Visual Basic, w tym bezpłatne wersje.
+- [Pobierz visual basic](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) Zawiera łącza do pobrania dla wersji programu Visual Studio, które są wyposażone w pomoc techniczną języka Visual Basic, w tym bezpłatne wersje.
 
 - [Programowanie obiektowe](../programming-guide/concepts/object-oriented-programming.md) Zawiera łącza do stron, które wprowadzają programowanie obiektowe i opisują sposób tworzenia własnych obiektów i jak używać obiektów w celu uproszczenia kodowania.
 
-- [Próbki](https://github.com/dotnet/samples/tree/master/snippets/visualbasic) Zawiera łącza do przykładowego kodu w języku Visual Basic.
+- [Próbki](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic) Zawiera łącza do przykładowego kodu w języku Visual Basic.
 
 - [Wskazówki](../walkthroughs.md) Zawiera listę stron Pomocy, które pokazują aspekty języka Języka Visual Basic.
 

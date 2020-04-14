@@ -2,12 +2,12 @@
 title: Sesje, tworzenie wystąpień i współbieżność
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-ms.openlocfilehash: a7466d819e15f3bfe8def2d9407dcf2c6e0c7346
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 19dedddadad2f27acdeeaceb2c186a731fa79c32
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184444"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243118"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Sesje, tworzenie wystąpień i współbieżność
 *Sesja* jest korelacja wszystkich wiadomości wysyłanych między dwoma punktami końcowymi. *Instancing* odnosi się do kontrolowania okresu istnienia obiektów <xref:System.ServiceModel.InstanceContext> usługi zdefiniowanych przez użytkownika i ich powiązanych obiektów. *Współbieżność* jest terminem nadanym kontroli liczby wątków wykonywanych w <xref:System.ServiceModel.InstanceContext> tym samym czasie.  
@@ -63,7 +63,7 @@ public class CalculatorService : ICalculatorInstance
 ### <a name="well-known-singleton-services"></a>Dobrze znane usługi Singleton  
  Jedna odmiana obiektów usługi pojedynczego wystąpienia jest czasami przydatna: można utworzyć obiekt usługi samodzielnie i utworzyć hosta usługi przy użyciu tego obiektu. Aby to zrobić, należy <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> również <xref:System.ServiceModel.InstanceContextMode.Single> ustawić właściwość lub wyjątek jest zgłaszany po otwarciu hosta usługi.  
   
- Użyj <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType> konstruktora, aby utworzyć taką usługę. Stanowi alternatywę dla implementowania <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> niestandardowego, gdy chcesz podać wystąpienie określonego obiektu do użycia przez usługę singleton. Można użyć tego przeciążenia, gdy typ implementacji usługi jest trudne do skonstruowania (na przykład, jeśli nie implementuje bezwametrycznego konstruktora publicznego).  
+ Użyj <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29> konstruktora, aby utworzyć taką usługę. Stanowi alternatywę dla implementowania <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> niestandardowego, gdy chcesz podać wystąpienie określonego obiektu do użycia przez usługę singleton. Można użyć tego przeciążenia, gdy typ implementacji usługi jest trudne do skonstruowania (na przykład, jeśli nie implementuje bezwametrycznego konstruktora publicznego).  
   
  Należy zauważyć, że gdy obiekt jest dostarczany do tego konstruktora, niektóre funkcje związane z Windows Communication Foundation (WCF) zachowanie instancing działać inaczej. Na przykład <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> wywołanie nie ma wpływu, gdy jest podana wystąpienie obiektu pojedynczego. Podobnie każdy inny mechanizm zwalniania wystąpienia jest ignorowany. Zawsze <xref:System.ServiceModel.ServiceHost> zachowuje się tak, jakby <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> właściwość jest ustawiona dla wszystkich operacji.  
   

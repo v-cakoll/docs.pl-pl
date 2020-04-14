@@ -2,12 +2,12 @@
 title: polecenie publikowania dotnetu
 description: Polecenie publikowania dotnet publikuje projekt .NET Core lub rozwiązanie do katalogu.
 ms.date: 02/24/2020
-ms.openlocfilehash: 0e18220443f3713c86c257fcf401b98ddd716ebc
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 26dda33d04f3f7a23805627708b55233ef4e87ef
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588265"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242845"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -23,7 +23,8 @@ ms.locfileid: "80588265"
 dotnet publish [<PROJECT>|<SOLUTION>] [-c|--configuration]
     [-f|--framework] [--force] [--interactive] [--manifest]
     [--no-build] [--no-dependencies] [--no-restore] [--nologo]
-    [-o|--output] [-r|--runtime] [--self-contained]
+    [-o|--output] [-p:PublishReadyToRun] [-p:PublishSingleFile]
+    [-p:PublishTrimmed] [-r|--runtime] [--self-contained]
     [--no-self-contained] [-v|--verbosity] [--version-suffix]
 
 dotnet publish [-h|--help]
@@ -114,6 +115,12 @@ Więcej informacji zawierają następujące zasoby:
   
   Jeśli nie zostanie określony, domyślnie *[project_file_folder]./bin/[konfiguracja]/[framework]/publish/* dla plików binarnych wykonywalnych zależnych od środowiska uruchomieniowego i między platformami. Domyślnie *[project_file_folder]/bin/[konfiguracja]/[framework]/[runtime]/publish/* dla samodzielnego pliku wykonywalnego.
 
+  W projekcie sieci web, jeśli folder wyjściowy `dotnet publish` znajduje się w folderze projektu, kolejne polecenia powodują zagnieżdżone foldery wyjściowe. Na przykład, jeśli folder projektu jest *myproject*, a folder wyjścia publikowania jest `dotnet publish` *myproject/publish*, a zostanie uruchomiony dwa razy, drugie uruchomienie umieszcza pliki zawartości, takie jak *.config* i *.json* plików w *myproject/publish/publish*. Aby uniknąć zagnieżdżania folderów publikowania, należy określić folder publikowania, który nie znajduje się bezpośrednio w folderze projektu, lub wykluczyć folder publikowania z projektu. Aby wykluczyć folder publikowania o nazwie *publishoutput,* dodaj następujący element do `PropertyGroup` elementu w pliku *csproj:*
+
+  ```xml
+  <DefaultItemExcludes>$(DefaultItemExcludes);publishoutput**</DefaultItemExcludes>
+  ```
+
   - .NET Core 3.x SDK i nowsze
   
     Jeśli ścieżka względna jest określona podczas publikowania projektu, wygenerowany katalog wyjściowy jest względem bieżącego katalogu roboczego, a nie do lokalizacji pliku projektu.
@@ -125,6 +132,26 @@ Więcej informacji zawierają następujące zasoby:
     Jeśli ścieżka względna jest określona podczas publikowania projektu, wygenerowany katalog wyjściowy jest względem lokalizacji pliku projektu, a nie do bieżącego katalogu roboczego.
 
     Jeśli ścieżka względna jest określona podczas publikowania rozwiązania, dane wyjściowe każdego projektu przechodzi do oddzielnego folderu względem lokalizacji pliku projektu. Jeśli ścieżka bezwzględna jest określona podczas publikowania rozwiązania, wszystkie dane wyjściowe publikowania dla wszystkich projektów przechodzi do określonego folderu.
+
+- **`-p:PublishReadyToRun`**
+
+  Kompiluje zestawy aplikacji w formacie ReadyToRun (R2R). R2R jest formą kompilacji z wyprzedzeniem (AOT). Aby uzyskać więcej informacji, zobacz [Obrazy ReadyToRun](../whats-new/dotnet-core-3-0.md#readytorun-images). Dostępne od .NET Core 3.0 SDK.
+
+  Zaleca się określenie tej opcji w profilu publikowania, a nie w wierszu polecenia. Aby uzyskać więcej informacji, zobacz [MSBuild](#msbuild).
+
+- **`-p:PublishSingleFile`**
+
+  Pakuje aplikację do pliku wykonywalnego z pojedynczym plikiem specyficznym dla platformy. Plik wykonywalny jest samorozwiązywania i zawiera wszystkie zależności (w tym natywnych), które są wymagane do uruchomienia aplikacji. Po pierwszym uruchomieniu aplikacji jest wyodrębniany do katalogu na podstawie nazwy aplikacji i identyfikator kompilacji. Uruchamianie jest szybsze, gdy aplikacja jest uruchamiana ponownie. Aplikacja nie musi wyodrębniać się po raz drugi, chyba że zostanie użyta nowa wersja. Dostępne od .NET Core 3.0 SDK.
+
+  Aby uzyskać więcej informacji na temat publikowania pojedynczego pliku, zobacz [dokument projektowy pakietu z pojedynczym plikiem](https://github.com/dotnet/designs/blob/master/accepted/2020/single-file/design.md).
+
+  Zaleca się określenie tej opcji w profilu publikowania, a nie w wierszu polecenia. Aby uzyskać więcej informacji, zobacz [MSBuild](#msbuild).
+
+- **`-p:PublishTrimmed`**
+
+  Przycina nieużywane biblioteki, aby zmniejszyć rozmiar wdrożenia aplikacji podczas publikowania samodzielnego pliku wykonywalnego. Aby uzyskać więcej informacji, zobacz [Przycinanie samodzielnych wdrożeń i plików wykonywalnych](../deploying/trim-self-contained.md). Dostępne od .NET Core 3.0 SDK.
+
+  Zaleca się określenie tej opcji w profilu publikowania, a nie w wierszu polecenia. Aby uzyskać więcej informacji, zobacz [MSBuild](#msbuild).
 
 - **`--self-contained [true|false]`**
 
@@ -203,3 +230,4 @@ Więcej informacji zawierają następujące zasoby:
 - [Odwołanie do wiersza polecenia MSBuild](/visualstudio/msbuild/msbuild-command-line-reference)
 - [Profile publikowania w programie Visual Studio (pubxml) dla ASP.NET wdrożenia aplikacji Core](/aspnet/core/host-and-deploy/visual-studio-publish-profiles)
 - [dotnet msbuild](dotnet-msbuild.md)
+- [ILLInk.Zadania](https://aka.ms/dotnet-illink)

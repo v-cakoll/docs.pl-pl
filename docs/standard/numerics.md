@@ -11,12 +11,12 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-ms.openlocfilehash: 3e9c817006930a36ebdce5c5965d78f1721c7056
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: ec5d4c088d3a954a4670891e3bb115c73e6cfdcf
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635152"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242767"
 ---
 # <a name="numerics-in-net"></a>Wartości numeryczne na platformie .NET
 
@@ -62,7 +62,7 @@ Oba <xref:System.Single> <xref:System.Double> i typy obsługują wartości specj
 
 Każdy typ zmiennoprzecinowy obsługuje zestaw standardowych operatorów arytmetycznych. Klasa <xref:System.Math?displayProperty=nameWithType> zawiera metody dla szerszego zestawu funkcji matematycznych. .NET Core 2.0 i <xref:System.MathF?displayProperty=nameWithType> nowsze zawiera klasę, <xref:System.Single> która zawiera metody, które akceptują argumenty typu.
 
-Można również pracować z poszczególnych <xref:System.Double> <xref:System.Single> bitów i <xref:System.BitConverter?displayProperty=nameWithType> wartości przy użyciu klasy. Struktura <xref:System.Decimal?displayProperty=nameWithType> ma swoje własne <xref:System.Decimal.GetBits%2A?displayProperty=nameWithType> <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29?displayProperty=nameWithType>metody i , do pracy z wartością dziesiętną poszczególnych bitów, jak również własny zestaw metod wykonywania niektórych dodatkowych operacji matematycznych.
+Można również pracować z poszczególnych <xref:System.Double> <xref:System.Single> bitów i <xref:System.BitConverter?displayProperty=nameWithType> wartości przy użyciu klasy. Struktura <xref:System.Decimal?displayProperty=nameWithType> ma swoje własne <xref:System.Decimal.GetBits%2A?displayProperty=nameWithType> <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29>metody i , do pracy z wartością dziesiętną poszczególnych bitów, jak również własny zestaw metod wykonywania niektórych dodatkowych operacji matematycznych.
   
 <xref:System.Double> Typy <xref:System.Single> i typy są przeznaczone do użycia dla wartości, które ze względu na swój charakter są nieprecyzyjne (na przykład odległość między dwiema gwiazdami) oraz dla zastosowań, w których nie jest wymagany wysoki stopień precyzji i mały błąd zaokrąglania. Użyj <xref:System.Decimal?displayProperty=nameWithType> typu w przypadkach, w których wymagana jest większa precyzja i błędy zaokrąglania powinny być zminimalizowane.
 
@@ -95,4 +95,4 @@ Typy obsługujące kartę SIMD są implementowane w taki sposób, że mogą być
 
 ## <a name="see-also"></a>Zobacz też
 
-- [Standardowe ciągi formatujące liczby](base-types/standard-numeric-format-strings.md)
+- [Standardowe ciągi formatu numerycznego](base-types/standard-numeric-format-strings.md)

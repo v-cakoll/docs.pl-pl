@@ -80,8 +80,6 @@
       href: how-to-clear-bindings.md
     - name: Znajdowanie elementów wygenerowanych przez szablon DataTemplate
       href: how-to-find-datatemplate-generated-elements.md
-    - name: Wiązanie z usługą internetową
-      href: how-to-bind-to-a-web-service.md
 - name: Powiązanie danych za pomocą interfejsu LINQ to XML
   items:
     - name: Omówienie

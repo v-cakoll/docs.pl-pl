@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: wywoływanie powiadomień o zmianie za pomocą składnika BindingSource i interfejsu INotifyPropertyChanged'
+title: 'Porady: wywoływanie powiadomień o zmianie za pomocą składnika BindingSource i interfejsu INotifyPropertyChanged'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,23 +13,23 @@ helpviewer_keywords:
 - INotifyPropertyChanged interface [Windows Forms], using with BindingSource
 - BindingSource component [Windows Forms], examples
 ms.assetid: 7fa2cf51-c09f-4375-adf0-e36c5617f099
-ms.openlocfilehash: 7dc640f272226da650a63b1a3434822d21053b48
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 07248ec0b8ac4f2356d9c9915b6a904dfad30cb2
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968284"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388979"
 ---
-# <a name="how-to-raise-change-notifications-using-a-bindingsource-and-the-inotifypropertychanged-interface"></a>Instrukcje: wywoływanie powiadomień o zmianie za pomocą składnika BindingSource i interfejsu INotifyPropertyChanged
-Składnik automatycznie wykryje zmiany w źródle danych, gdy typ zawarty w źródle danych <xref:System.ComponentModel.INotifyPropertyChanged> implementuje interfejs i zgłasza <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> zdarzenia, gdy wartość właściwości zostanie zmieniona. <xref:System.Windows.Forms.BindingSource> Jest to przydatne, ponieważ formanty powiązane z <xref:System.Windows.Forms.BindingSource> , zostaną następnie automatycznie zaktualizowane w miarę zmiany wartości źródła danych.  
+# <a name="how-to-raise-change-notifications-using-a-bindingsource-and-the-inotifypropertychanged-interface"></a>Porady: wywoływanie powiadomień o zmianie za pomocą składnika BindingSource i interfejsu INotifyPropertyChanged
+Składnik <xref:System.Windows.Forms.BindingSource> automatycznie wykryje zmiany w źródle danych, gdy typ zawarty <xref:System.ComponentModel.INotifyPropertyChanged> w źródle <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> danych implementuje interfejs i wywołuje zdarzenia po zmianie wartości właściwości. Jest to przydatne, ponieważ <xref:System.Windows.Forms.BindingSource> formanty powiązane z będzie następnie automatycznie aktualizować w miarę zmiany wartości źródła danych.  
   
 > [!NOTE]
-> Jeśli źródło danych implementuje <xref:System.ComponentModel.INotifyPropertyChanged> i wykonujesz operacje asynchroniczne, nie należy wprowadzać zmian w źródle danych w wątku w tle. Zamiast tego należy odczytywać dane w wątku w tle i scalać dane do listy w wątku interfejsu użytkownika.  
+> Jeśli źródło danych <xref:System.ComponentModel.INotifyPropertyChanged> implementuje i wykonujesz operacje asynchroniczne, nie należy wprowadzać zmian w źródle danych w wątku w tle. Zamiast tego należy odczytać dane w wątku w tle i scalić dane do listy w wątku interfejsu użytkownika.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu demonstruje prostą implementację <xref:System.ComponentModel.INotifyPropertyChanged> interfejsu. Pokazuje również, <xref:System.Windows.Forms.BindingSource> jak automatycznie przekazuje źródło danych do kontrolki powiązanej, <xref:System.Windows.Forms.BindingSource> gdy jest powiązany <xref:System.ComponentModel.INotifyPropertyChanged> z listą typu.  
+ Poniższy przykład kodu pokazuje prostą <xref:System.ComponentModel.INotifyPropertyChanged> implementację interfejsu. Pokazuje również, <xref:System.Windows.Forms.BindingSource> jak automatycznie przekazuje zmiany źródła danych do <xref:System.Windows.Forms.BindingSource> kontroli powiązanej, <xref:System.ComponentModel.INotifyPropertyChanged> gdy jest powiązany z listą typu.  
   
- Jeśli używasz `CallerMemberName` atrybutu, wywołania `NotifyPropertyChanged` do metody nie muszą określać nazwy właściwości jako argumentu ciągu. Aby uzyskać więcej informacji, zobacz [Informacje oC#wywołującym ()](../../../csharp/programming-guide/concepts/caller-information.md) lub [Informacje o wywołującym (Visual Basic)](../../../visual-basic/programming-guide/concepts/caller-information.md).  
+ Jeśli używasz `CallerMemberName` atrybutu, wywołania `NotifyPropertyChanged` metody nie trzeba określać nazwę właściwości jako argument ciągu. Aby uzyskać więcej informacji, zobacz [Informacje o dzwoniącym (C#)](../../../csharp/language-reference/attributes/caller-information.md) lub [Informacje o dzwoniącym (Visual Basic)](../../../visual-basic/programming-guide/concepts/caller-information.md).  
   
  [!code-csharp[System.ComponentModel.IPropertyChangeExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.IPropertyChangeExample/CS/Form1.cs#1)]
  [!code-vb[System.ComponentModel.IPropertyChangeExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.IPropertyChangeExample/VB/Form1.vb#1)]  
@@ -37,10 +37,10 @@ Składnik automatycznie wykryje zmiany w źródle danych, gdy typ zawarty w źr�
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
-- Odwołania do zestawów system, system. Data, system. Drawing i system. Windows. Forms.  
+- Odwołania do zestawów System, System.Data, System.Drawing i System.Windows.Forms.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.ComponentModel.INotifyPropertyChanged>
 - [BindingSource, składnik](bindingsource-component.md)
-- [Instrukcje: Zgłoś powiadomienia o zmianie za pomocą metody BindingSource ResetItem](how-to-raise-change-notifications-using-the-bindingsource-resetitem-method.md)
+- [Instrukcje: wywoływanie powiadomień o zmianie za pomocą metody BindingSource ResetItem](how-to-raise-change-notifications-using-the-bindingsource-resetitem-method.md)

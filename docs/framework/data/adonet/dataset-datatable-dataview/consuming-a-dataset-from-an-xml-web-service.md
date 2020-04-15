@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: d835ffe7a10492ee731de8e5301e6d34545f9c32
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d7328949e3eb4822b1a645bb5f0c1866f01ecb0a
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151393"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389752"
 ---
-# <a name="consuming-a-dataset-from-an-xml-web-service"></a>Korzystanie z elementu DataSet w usłudze internetowej XML
+# <a name="consume-a-dataset-from-an-xml-web-service"></a>Korzystanie z zestawu danych z usługi sieci web XML
+
 Został <xref:System.Data.DataSet> zaprojektowany z odłączony projekt, w części w celu ułatwienia wygodnego transportu danych przez Internet. **Zestaw danych** jest "serializowalny", ponieważ można go określić jako dane wejściowe lub wyjściowe z usług sieci Web XML bez dodatkowego kodowania wymaganego do przesyłania strumieniowego zawartości **zestawu danych** z usługi sieci Web XML do klienta i z powrotem. **Zestaw danych** jest niejawnie konwertowany na strumień XML przy użyciu formatu DiffGram, wysyłany przez sieć, a następnie rekonstruowany ze strumienia XML jako **zestaw danych** na końcu odbierania. Zapewnia to bardzo prostą i elastyczną metodę przesyłania i zwracania relacyjnych danych przy użyciu usług sieci Web XML. Aby uzyskać więcej informacji na temat formatu DiffGram, zobacz [DiffGrams](diffgrams.md).  
   
  W poniższym przykładzie pokazano, jak utworzyć usługę sieci Web XML i klienta, które używają **zestawu danych** do transportu danych relacyjnych (w tym zmodyfikowanych danych) i rozwiązywania wszelkich aktualizacji z powrotem do oryginalnego źródła danych.  
@@ -20,7 +21,7 @@ Został <xref:System.Data.DataSet> zaprojektowany z odłączony projekt, w czę�
 > [!NOTE]
 > Podczas tworzenia usługi sieci Web XML zaleca się zawsze uwzględnianie implikacji dla bezpieczeństwa. Aby uzyskać informacje dotyczące zabezpieczania usługi sieci Web XML, zobacz [Zabezpieczanie usług sieci Web XML utworzonych przy użyciu ASP.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100)).  
   
-### <a name="to-create-an-xml-web-service-that-returns-and-consumes-a-dataset"></a>Aby utworzyć usługę sieci Web XML, która zwraca i zużywa zestaw danych  
+## <a name="create-an-xml-web-service"></a>Tworzenie usługi sieci web XML
   
 1. Utwórz usługę sieci Web XML.  
   
@@ -189,9 +190,11 @@ Został <xref:System.Data.DataSet> zaprojektowany z odłączony projekt, w czę�
   
 3. Utwórz klienta usługi sieci Web XML.  
   
-     Jeśli chcesz, aby program Visual Studio wygenerował dla Ciebie klasę serwera proxy usługi sieci Web, po prostu utwórz projekt klienta, a w oknie Eksplorator rozwiązań kliknij prawym przyciskiem myszy projekt, kliknij polecenie **Dodaj odwołanie do sieci Web**i wybierz usługę sieci Web z listy dostępnych usług sieci Web (może to wymagać podania adresu punktu końcowego usługi sieci Web, jeśli usługa sieci Web nie jest dostępna w bieżącym rozwiązaniu lub na bieżącym komputerze). Jeśli serwer proxy usługi sieci Web XML zostanie utworzony samodzielnie (zgodnie z opisem w poprzednim kroku), można zaimportować go do kodu klienta i korzystać z metod usługi sieci Web XML. Poniższy przykładowy kod importuje bibliotekę proxy, wywołuje **GetCustomers,** aby uzyskać listę klientów, dodaje nowego klienta, a następnie zwraca **zestaw danych** z aktualizacjami **do UpdateCustomers**.  
+     Jeśli chcesz, aby program Visual Studio wygenerował klasę serwera proxy usługi sieci Web, po prostu utwórz projekt klienta, a w oknie Eksplorator rozwiązań kliknij prawym przyciskiem myszy projekt, a następnie wybierz polecenie **Dodaj** > **odwołanie do usługi**. W oknie dialogowym **Dodawanie odwołania do usługi** wybierz pozycję **Zaawansowane**, a następnie wybierz pozycję Dodaj odwołanie do **sieci Web**. Wybierz usługę sieci Web z listy dostępnych usług sieci Web (może to wymagać podania adresu punktu końcowego usługi sieci Web, jeśli usługa sieci Web nie jest dostępna w bieżącym rozwiązaniu lub na bieżącym komputerze). Jeśli serwer proxy usługi sieci Web XML zostanie utworzony samodzielnie (zgodnie z opisem w poprzednim kroku), można zaimportować go do kodu klienta i korzystać z metod usługi sieci Web XML.
+
+     Poniższy przykładowy kod importuje bibliotekę proxy, wywołuje **GetCustomers,** aby uzyskać listę klientów, dodaje nowego klienta, a następnie zwraca **zestaw danych** z aktualizacjami **do UpdateCustomers**.  
   
-     Należy zauważyć, że w przykładzie przekazuje **DataSet** zwracany przez **DataSet.GetChanges** do **UpdateCustomers,** ponieważ tylko zmodyfikowane wiersze muszą być przekazywane do **UpdateCustomers**. **UpdateCustomers** zwraca rozwiązany **DataSet**, który można następnie **scalić** do istniejącego **zestawu danych,** aby uwzględnić rozwiązane zmiany i wszelkie informacje o błędzie wiersza z aktualizacji. Poniższy kod zakłada, że program Visual Studio został użyty do utworzenia odwołania do sieci Web i że w oknie dialogowym Dodawanie odwołania do **sieci Web** zmieniono nazwę odwołania do sieci Web na dsSample.  
+     Przykład przekazuje **DataSet** zwracany przez **DataSet.GetChanges** do **UpdateCustomers,** ponieważ tylko zmodyfikowane wiersze muszą być przekazywane do **UpdateCustomers**. **UpdateCustomers** zwraca rozwiązany **DataSet**, który można następnie **scalić** do istniejącego **zestawu danych,** aby uwzględnić rozwiązane zmiany i wszelkie informacje o błędzie wiersza z aktualizacji. Poniższy kod zakłada, że program Visual Studio został użyty do utworzenia odwołania do sieci Web i że w oknie dialogowym Dodawanie odwołania do **sieci Web** zmieniono nazwę odwołania do sieci Web na dsSample.  
   
     ```vb  
     Imports System  

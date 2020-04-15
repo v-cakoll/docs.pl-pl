@@ -2,12 +2,12 @@
 title: Co nowego w C# 8.0 - C# Przewodnik
 description: Zapoznaj się z omówieniem nowych funkcji dostępnych w języku C# 8.0.
 ms.date: 04/07/2020
-ms.openlocfilehash: 1a005750751129969f2d1e9caf156330dbe61cb2
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 2998beb378c68bead7f34e2a0963c40cf610a442
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989210"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389091"
 ---
 # <a name="whats-new-in-c-80"></a>Co nowego w języku C# 8.0
 
@@ -76,7 +76,7 @@ Kompilator ostrzega, gdy trzeba utworzyć kopię obronną.  Właściwość `Dist
 public readonly double Distance => Math.Sqrt(X * X + Y * Y);
 ```
 
-Należy zauważyć, że `readonly` modyfikator jest konieczne we właściwości tylko do odczytu. Kompilator nie zakłada, że `get` akcesory nie modyfikują stanu; należy zadeklarować `readonly` jawnie. Automatycznie implementowane właściwości są wyjątkiem; kompilator będzie traktować wszystkie automatycznie implementowane getters jako readonly, więc `readonly` w tym `X` miejscu `Y` nie ma potrzeby, aby dodać modyfikator do i właściwości.
+Należy zauważyć, że `readonly` modyfikator jest konieczne we właściwości tylko do odczytu. Kompilator nie zakłada, że `get` akcesory nie modyfikują stanu; należy zadeklarować `readonly` jawnie. Automatycznie implementowane właściwości są wyjątkiem; kompilator będzie traktować wszystkie automatycznie implementowane `readonly`getters jako , więc `readonly` tutaj nie `X` ma `Y` potrzeby, aby dodać modyfikator do i właściwości.
 
 Kompilator wymusza `readonly` regułę, że członkowie nie modyfikują stanu. Następująca metoda nie zostanie skompilowana, chyba że usuniesz `readonly` modyfikator:
 
@@ -88,7 +88,9 @@ public readonly void Translate(int xOffset, int yOffset)
 }
 ```
 
-Ta funkcja umożliwia określenie intencji projektu, dzięki czemu kompilator może wymusić go i dokonać optymalizacji na podstawie tej intencji. Możesz dowiedzieć się więcej o readonly [`readonly`](../language-reference/keywords/readonly.md#readonly-member-examples)członków w artykule referencyjnym języka na .
+Ta funkcja umożliwia określenie intencji projektu, dzięki czemu kompilator może wymusić go i dokonać optymalizacji na podstawie tej intencji.
+
+Aby uzyskać więcej [ `readonly` ](../language-reference/builtin-types/struct.md#readonly-instance-members) informacji, zobacz sekcję członków wystąpienia w artykule [Typy struktury.](../language-reference/builtin-types/struct.md)
 
 ## <a name="default-interface-methods"></a>Domyślne metody interfejsu
 

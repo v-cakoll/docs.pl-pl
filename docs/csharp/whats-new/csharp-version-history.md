@@ -3,12 +3,12 @@ title: Historia przewodnika C# - C#
 description: Jak wyglądał język w jego najwcześniejszych wersjach i jak ewoluował od tego czasu?
 author: erikdietrich
 ms.date: 04/08/2020
-ms.openlocfilehash: d9f50a7df7966f81366acb706d719cbdd40a45fa
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: f321b9c742fed6fb1efaf8fbb1914c203dd6391b
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989197"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389107"
 ---
 # <a name="the-history-of-c"></a>Historia C\#
 
@@ -120,7 +120,7 @@ Dynamiczne powiązanie daje możliwość błędów, ale także wielką moc w ję
 C# wersja 5.0, wydany z Visual Studio 2012, była skoncentrowana wersja języka. Prawie cały wysiłek dla tej wersji poszedł do `async` innej `await` przełomowej koncepcji językowej: i model programowania asynchronicznego.  Oto lista głównych funkcji:
 
 - [Członkowie asynchroniczne](../async.md)
-- [Atrybuty informacji o dzwoniącym](../programming-guide/concepts/caller-information.md)
+- [Atrybuty informacji o dzwoniącym](../language-reference/attributes/caller-information.md)
 
 ### <a name="see-also"></a>Zobacz też
 

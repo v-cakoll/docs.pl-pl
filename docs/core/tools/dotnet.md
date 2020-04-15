@@ -2,12 +2,12 @@
 title: dotnet, polecenie
 description: Dowiedz się więcej o poleceniu dotnet (ogólnym sterowniku interfejsu wiersza polecenia .NET Core) i jego użyciu.
 ms.date: 02/13/2020
-ms.openlocfilehash: 8692d419afd528bf49e1dc7dc1a7a5fd698b363b
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 9446808d7f23d762c7a3c8a58252664fc5dade5b
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134074"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389598"
 ---
 # <a name="dotnet-command"></a>dotnet, polecenie
 
@@ -57,7 +57,7 @@ Polecenie `dotnet` ma dwie funkcje:
 
 - Uruchamia aplikacje .NET Core.
 
-  Można określić ścieżkę `.dll` do pliku aplikacji, aby uruchomić aplikację. Na przykład `dotnet myapp.dll` uruchamia `myapp` aplikację. Zobacz [wdrożenie aplikacji .NET Core,](../deploying/index.md) aby dowiedzieć się więcej o opcjach wdrażania.
+  Można określić ścieżkę `.dll` do pliku aplikacji, aby uruchomić aplikację.  Aby uruchomić aplikację oznacza, aby znaleźć i wykonać punkt wejścia, `Main` który w przypadku aplikacji konsoli jest metodą. Na przykład `dotnet myapp.dll` uruchamia `myapp` aplikację. Zobacz [wdrożenie aplikacji .NET Core,](../deploying/index.md) aby dowiedzieć się więcej o opcjach wdrażania.
 
 ## <a name="options"></a>Opcje
 
@@ -77,7 +77,7 @@ Następujące opcje są `dotnet` dla siebie. Na przykład `dotnet --info`. Druku
 
 - **`--list-runtimes`**
 
-  Drukuje listę zainstalowanych runtimes .NET Core.
+  Drukuje listę zainstalowanych runtimes .NET Core. Wersja x86 SDK zawiera tylko środowiska wykonawcze x86, a wersja x64 SDK wyświetla tylko środowiska wykonawcze x64.
 
 - **`--list-sdks`**
 
@@ -195,12 +195,12 @@ Polecenie | Funkcja
 [dotnet nuget delete](dotnet-nuget-delete.md) | Usuwa lub usuwa listę pakiet z serwera.
 [dotnet nuget push](dotnet-nuget-push.md) | Wypycha pakiet do serwera i publikuje go.
 [dotnet nuget locals](dotnet-nuget-locals.md) | Czyści lub wyświetla lokalne zasoby NuGet, takie jak pamięć podręczna żądań http, tymczasowa pamięć podręczna lub folder pakietów globalnych dla całej maszyny.
-[dotnet nuget dodać źródło](dotnet-nuget-add-source.md) | Dodaje źródło NuGet.
-[dotnet nuget wyłącz źródło](dotnet-nuget-disable-source.md) | Wyłącza źródło NuGet.
-[dotnet nuget włączyć źródło](dotnet-nuget-enable-source.md) | Włącza źródło NuGet.
-[źródło listy dotnet nuget](dotnet-nuget-list-source.md) | Wyświetla listę wszystkich skonfigurowanych źródeł NuGet.
-[dotnet nuget usunąć źródło](dotnet-nuget-remove-source.md) | Usuwa źródło NuGet.
-[źródło aktualizacji dotnet nuget](dotnet-nuget-update-source.md) | Aktualizuje źródło NuGet.
+[dotnet nuget add source](dotnet-nuget-add-source.md) | Dodaje źródło NuGet.
+[dotnet nuget disable source](dotnet-nuget-disable-source.md) | Wyłącza źródło NuGet.
+[dotnet nuget enable source](dotnet-nuget-enable-source.md) | Włącza źródło NuGet.
+[dotnet nuget list source](dotnet-nuget-list-source.md) | Wyświetla listę wszystkich skonfigurowanych źródeł NuGet.
+[dotnet nuget remove source](dotnet-nuget-remove-source.md) | Usuwa źródło NuGet.
+[dotnet nuget update source](dotnet-nuget-update-source.md) | Aktualizuje źródło NuGet.
 
 ### <a name="global-tool-path-and-local-tools-commands"></a>Polecenia narzędzi globalnych, ścieżki narzędzi i narzędzi lokalnych
 

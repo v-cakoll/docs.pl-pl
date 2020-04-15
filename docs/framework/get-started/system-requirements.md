@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operating systems supported
 - hardware requirements
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
-ms.openlocfilehash: 6f67d01b4af4a72fb09e5f2aa225e226e268eee2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 571075f7d0f330cf88ac9618376876b4f72e75ed
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181587"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389476"
 ---
 # <a name="net-framework-system-requirements"></a>Wymagania systemowe programu .NET Framework
 
@@ -54,14 +54,14 @@ Aby uzyskać informacje na temat cyklu pomocy technicznej w wersjach programu .N
 
 | System operacyjny | Obsługiwane wersje | Preinstalowany z systemem operacyjnym | Instalowalne oddzielnie |
 | ---------------- | ------------------ | ------------------------ | ---------------------- |
-| Aktualizacja systemu Windows 10 maja 2019 | 32-bitowe i 64-bitowe |  .NET Framework 4.8 | -- |
-| Aktualizacja systemu Windows 10 z października 2018 r. | 32-bitowe i 64-bitowe |  .NET Framework 4.7.2 |  .NET Framework 4.8 |
-| Aktualizacja systemu Windows 10 z kwietnia 2018 r. | 32-bitowe i 64-bitowe |  .NET Framework 4.7.2 | .NET Framework 4.8|
-| Windows 10 Fall Creators Update | 32-bitowe i 64-bitowe | .NET Framework 4.7.1 |  .NET Framework 4.7.2<br/><br/> .NET Framework 4.8 |
-| Aktualizacja Windows 10 Creators | 32-bitowe i 64-bitowe | .NET Framework 4.7 | .NET Framework 4.7.1<br/><br/> .NET Framework 4.7.2<br/><br/> .NET Framework 4.8 |
-| Aktualizacja Windows 10 Anniversary Update | 32-bitowe i 64-bitowe | .NET Framework 4.6.2 |.NET Framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/> .NET Framework 4.7.2<br/><br/> .NET Framework 4.8  |
-| Windows 10 Listopadowa aktualizacja | 32-bitowe i 64-bitowe | .NET Framework 4.6.1 | .NET Framework 4.6.2 |
-| Windows 10 | 32-bitowe i 64-bitowe | Program .NET Framework 4.6 | .NET Framework 4.6.1 <br/><br/> .NET Framework 4.6.2 |
+| Aktualizacja systemu Windows 10 maja 2019<br/> (wersja 1903) | 32-bitowe i 64-bitowe |  .NET Framework 4.8 | -- |
+| Aktualizacja systemu Windows 10 z października 2018 r.<br/> (wersja 1809) | 32-bitowe i 64-bitowe |  .NET Framework 4.7.2 |  .NET Framework 4.8 |
+| Aktualizacja systemu Windows 10 z kwietnia 2018 r.<br/> (wersja 1803) | 32-bitowe i 64-bitowe |  .NET Framework 4.7.2 | .NET Framework 4.8|
+| Windows 10 Fall Creators Update<br/> (wersja 1709) | 32-bitowe i 64-bitowe | .NET Framework 4.7.1 |  .NET Framework 4.7.2<br/><br/> .NET Framework 4.8 |
+| Aktualizacja Windows 10 Creators<br/> (wersja 1703) | 32-bitowe i 64-bitowe | .NET Framework 4.7 | .NET Framework 4.7.1<br/><br/> .NET Framework 4.7.2<br/><br/> .NET Framework 4.8 |
+| Aktualizacja Windows 10 Anniversary Update<br/> (wersja 1607) | 32-bitowe i 64-bitowe | .NET Framework 4.6.2 |.NET Framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/> .NET Framework 4.7.2<br/><br/> .NET Framework 4.8  |
+| Windows 10 Listopadowa aktualizacja<br/> (wersja 1511) | 32-bitowe i 64-bitowe | .NET Framework 4.6.1 | .NET Framework 4.6.2 |
+| Windows 10<br/> (wersja 1507) | 32-bitowe i 64-bitowe | Program .NET Framework 4.6 | .NET Framework 4.6.1 <br/><br/> .NET Framework 4.6.2 |
 | Windows 8.1 | 32-bitowe, 64-bitowe i ARM | .NET Framework 4.5.1 | .NET Framework 4.5.2<br /><br /> Program .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br />.NET Framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/> .NET Framework 4.7.2<br/><br/> .NET Framework 4.8 |
 | Windows 8 | 32-bitowe, 64-bitowe i ARM | .NET Framework 4.5 | .NET Framework 4.5.1<br /><br />.NET Framework 4.5.2<br /><br /> Program .NET Framework 4.6<br /><br /> .NET Framework 4.6.1 |
 | Windows 7 z dodatkiem SP1|32-bitowe i 64-bitowe | -- | Program .NET Framework 4<br /><br /> .NET Framework 4.5<br /><br /> .NET Framework 4.5.1<br /><br /> .NET Framework 4.5.2<br /><br /> Program .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br />.NET Framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/> .NET Framework 4.7.2<br/><br/> .NET Framework 4.8 |
@@ -110,6 +110,6 @@ Aby uzyskać informacje na temat cyklu pomocy technicznej w wersjach programu .N
 
 ## <a name="see-also"></a>Zobacz też
 
-- [Przewodnik instalacji](../install/index.md)
+- [Instrukcja instalacji](../install/index.md)
 - [Wprowadzenie](index.md)
 - [Rozwiązywanie problemów z zablokowaną instalacją i odinstalowywaniem programu .NET Framework](../install/troubleshoot-blocked-installations-and-uninstallations.md)

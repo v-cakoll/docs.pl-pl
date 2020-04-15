@@ -2,16 +2,19 @@
 title: Narzędzie definicji schematu XML (Xsd.exe)
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: cd017eb1866fff2ce8fd7a858b184351ef13e815
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 6ec99e77db4215184547ea2bbbe0d1ff8ad3c286
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588347"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389773"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>Narzędzie definicji schematu XML (Xsd.exe)
 
 Narzędzie definicji schematu XML (Xsd.exe) generuje schemat XML lub wspólnej klasy środowiska wykonawczego języka z PLików XDR, XML i XSD lub klasy w zestawie czasu wykonywania.
+
+Narzędzie XML Schema definition (Xsd.exe) zwykle można znaleźć w następującej ścieżce:\
+_C:\\Pliki programów\\(x86)\\Zestaw\\Microsoft\\SDK Windows {version} bin\\NETFX {version} Narzędzia\\_
 
 ## <a name="syntax"></a>Składnia
 
@@ -229,7 +232,7 @@ xsd myAssembly.dll
 
 - <xref:System.Data.DataSet>
 - <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>
-- [narzędzia](../../../docs/framework/tools/index.md)
+- [Narzędzia](../../../docs/framework/tools/index.md)
 - [Wiersze poleceń](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
 - [Omówienie LINQ to DataSet](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)
 - [Wykonywanie zapytania do typizowanych zestawów danych](../../../docs/framework/data/adonet/querying-typed-datasets.md)

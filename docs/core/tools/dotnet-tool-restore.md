@@ -1,21 +1,21 @@
 ---
-title: polecenie przywracania narzędzia dotnet
-description: Polecenie przywracania narzędzia dotnet instaluje na komputerze narzędzia lokalne .NET Core, które znajdują się w zakresie bieżącego katalogu.
+title: Polecenie przywracanie narzędzia dotnet
+description: Polecenie przywracania narzędzia dotnet instaluje na komputerze narzędzia lokalne .NET Core, które są w zakresie dla bieżącego katalogu.
 ms.date: 02/14/2020
-ms.openlocfilehash: cb46f70afb58e482b6aedfddfbf5f3a0c40674f4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0d1e67ec809ddd725721698cc741f9acc99e1ce7
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146440"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389616"
 ---
 # <a name="dotnet-tool-restore"></a>dotnet tool restore
 
-**Ten artykuł dotyczy:** ✔️ .NET Core 3.0 SDK i nowszych wersji
+**Ten artykuł dotyczy:** ✔️.NET Core 3.0 SDK i nowszych wersjach
 
 ## <a name="name"></a>Nazwa
 
-`dotnet tool restore`- Instaluje na komputerze narzędzia lokalne .NET Core, które są w zakresie bieżącego katalogu.
+`dotnet tool restore`- Instaluje na komputerze narzędzia lokalne .NET Core, które są w zakresie dla bieżącego katalogu.
 
 ## <a name="synopsis"></a>Streszczenie
 
@@ -23,7 +23,7 @@ ms.locfileid: "79146440"
 dotnet tool restore <PACKAGE_NAME>
     [--configfile] [--add-source] [tool-manifest]
     [--disable-parallel] [--ignore-failed-sources]
-    [--no-cache] [-interactive] [-v|--verbosity]
+    [--no-cache] [--interactive] [-v|--verbosity]
 
 dotnet tool restore <-h|--help>
 ```
@@ -42,7 +42,7 @@ Nazwa/identyfikator pakietu NuGet, który zawiera narzędzie .NET Core do zainst
 
 - **`--configfile <FILE>`**
 
-  Plik konfiguracji NuGet *(nuget.config)* do użycia.
+  Plik konfiguracji NuGet (*nuget.config*).
 
 - **`--add-source <SOURCE>`**
 
@@ -66,7 +66,7 @@ Nazwa/identyfikator pakietu NuGet, który zawiera narzędzie .NET Core do zainst
 
 - **`--interactive`**
 
-  Umożliwia polecenie, aby zatrzymać i czekać na dane wejściowe użytkownika lub akcji (na przykład, aby zakończyć uwierzytelnianie).
+  Umożliwia zatrzymywania polecenia i oczekiwania na dane wejściowe lub akcję użytkownika (na przykład w celu ukończenia uwierzytelniania).
 
 - **`-h|--help`**
 
@@ -74,7 +74,7 @@ Nazwa/identyfikator pakietu NuGet, który zawiera narzędzie .NET Core do zainst
 
 - **`-v|--verbosity <LEVEL>`**
 
-  Ustawia poziom szczegółowości polecenia. Dozwolone wartości `q[uiet]` `m[inimal]`to `n[ormal]` `d[etailed]`, `diag[nostic]`, , i .
+  Ustawia poziom szczegółowości polecenia. Dozwolone wartości `q[uiet]`to `m[inimal]` `n[ormal]`, `d[etailed]`, `diag[nostic]`, i .
 
 ## <a name="example"></a>Przykład
 
@@ -85,4 +85,4 @@ Nazwa/identyfikator pakietu NuGet, który zawiera narzędzie .NET Core do zainst
 ## <a name="see-also"></a>Zobacz też
 
 - [Narzędzia .NET Core](global-tools.md)
-- [Samouczek: Instalowanie i używanie lokalnego narzędzia .NET Core przy użyciu procesora CLI .NET Core](local-tools-how-to-use.md)
+- [Samouczek: Instalowanie i używanie narzędzia lokalnego .NET Core przy użyciu interfejsu wiersza polecenia .NET Core](local-tools-how-to-use.md)

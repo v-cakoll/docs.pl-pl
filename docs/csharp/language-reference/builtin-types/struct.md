@@ -1,6 +1,6 @@
 ---
 title: Typy struktury — odwołanie do języka C#
-ms.date: 03/26/2020
+ms.date: 04/14/2020
 f1_keywords:
 - struct_CSharpKeyword
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 6a2c97b93a8f6d1d62bd8a96865a4fe6587f55d3
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 8013aab5580ac007875debc78208532a2d0ad1dc
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345132"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388989"
 ---
 # <a name="structure-types-c-reference"></a>Typy struktury (odwołanie do języka C#)
 
@@ -42,6 +42,35 @@ Gwarantuje to, że `readonly` żaden element członkowski struktury modyfikuje s
 
 > [!NOTE]
 > `readonly` W strukturze element członkowski danych typu odwołania modyfikowalne nadal można mutować swój własny stan. Na przykład nie można <xref:System.Collections.Generic.List%601> zastąpić wystąpienia, ale można dodać do niego nowe elementy.
+
+## <a name="readonly-instance-members"></a>`readonly`elementy członkowskie wystąpienia
+
+Począwszy od języka C# 8.0, można również użyć `readonly` modyfikatora do deklarowania, że element członkowski wystąpienia nie modyfikuje stanu struktury. Jeśli nie można zadeklarować `readonly`cały typ `readonly` struktury jako , użyj modyfikatora, aby oznaczyć elementy członkowskie wystąpienia, które nie modyfikują stan struktury. W `readonly` strukturze każdy element członkowski `readonly`instancji jest niejawnie .
+
+W `readonly` obrębie elementu członkowskiego wystąpienia nie można przypisać do pól wystąpienia struktury. Jednak `readonly` członek może wywołać`readonly` non-element członkowski. W takim przypadku kompilator tworzy kopię wystąpienia struktury`readonly` i wywołuje non-element członkowski na tej kopii. W rezultacie oryginalne wystąpienie struktury nie jest modyfikowany.
+
+Zazwyczaj `readonly` modyfikator jest stosowany do następujących rodzajów elementów członkowskich wystąpienia:
+
+- Metody:
+
+  [!code-csharp[readonly method](snippets/StructType.cs#ReadonlyMethod)]
+
+  `readonly` Modyfikator można również zastosować do metod, które <xref:System.Object?displayProperty=nameWithType>zastępują metody zadeklarowane w:
+
+  [!code-csharp[readonly override](snippets/StructType.cs#ReadonlyOverride)]
+
+- właściwości i indeksatory:
+
+  [!code-csharp[readonly property get](snippets/StructType.cs#ReadonlyProperty)]
+
+  Jeśli musisz zastosować `readonly` modyfikator do obu akcesorów właściwości lub indeksatora, zastosuj go w oświadczeniu właściwości lub indeksatora.
+
+  > [!NOTE]
+  > Kompilator deklaruje `get` akcesor [właściwości automatycznie implementowane](../../programming-guide/classes-and-structs/auto-implemented-properties.md) jako `readonly`, `readonly` niezależnie od obecności modyfikatora w deklaracji właściwości.
+
+`readonly` Modyfikator nie może zastosować do statycznych elementów członkowskich typu struktury.
+
+Kompilator może korzystać `readonly` z modyfikatora do optymalizacji wydajności. Aby uzyskać więcej informacji, zobacz [Pisanie bezpiecznego i wydajnego kodu języka C#.](../../write-safe-efficient-code.md)
 
 ## <a name="limitations-with-the-design-of-a-structure-type"></a>Ograniczenia związane z projektowaniem typu konstrukcji
 
@@ -81,7 +110,10 @@ Dla każdego typu struktury istnieją [konwersje boksu i rozpakowywania](../../p
 
 Aby uzyskać więcej informacji, zobacz sekcję [Struktury](~/_csharplang/spec/structs.md) [specyfikacji języka języka języka C#.](~/_csharplang/spec/introduction.md)
 
-Aby uzyskać `readonly` więcej informacji na temat struktur, zobacz [notatkę dotyczącą propozycji funkcji](~/_csharplang/proposals/csharp-7.2/readonly-ref.md#readonly-structs).
+Aby uzyskać więcej informacji na temat funkcji wprowadzonych w języku C# 7.2 i nowszych, zobacz następujące uwagi dotyczące propozycji funkcji:
+
+- [Tylko do odczytywanie struktur](~/_csharplang/proposals/csharp-7.2/readonly-ref.md#readonly-structs)
+- [Elementy członkowskie wystąpień tylko do odczytu](~/_csharplang/proposals/csharp-8.0/readonly-instance-members.md)
 
 ## <a name="see-also"></a>Zobacz też
 

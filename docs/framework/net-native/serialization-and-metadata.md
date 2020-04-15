@@ -2,12 +2,12 @@
 title: Serializacja i metadane
 ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
-ms.openlocfilehash: 7c6fe241fbf92f52abfa0eb66c37bff4d227b4e5
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: cc9adf0e6627ef3190e74fea5d4f0f3afd581811
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81241922"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389219"
 ---
 # <a name="serialization-and-metadata"></a>Serializacja i metadane
 
@@ -15,7 +15,7 @@ Jeśli aplikacja serializuje i deserializes obiektów, może być konieczne doda
   
 - Serializatory innych firm oparte na odbiciach. Wymagają one modyfikacji pliku dyrektyw środowiska wykonawczego i zostały omówione w następnej sekcji.  
   
-- Serializatory oparte na braku odbicia znalezione w bibliotece klas .NET Framework. Mogą one wymagać modyfikacji pliku dyrektyw środowiska wykonawczego i są omówione w sekcji [serializatory firmy Microsoft.](#Microsoft)  
+- Serializatory nieoparte na odbiciach znalezione w bibliotece klas .NET Framework. Mogą one wymagać modyfikacji pliku dyrektyw środowiska wykonawczego i są omówione w sekcji [serializatory firmy Microsoft.](#Microsoft)  
   
 <a name="ThirdParty"></a>
 ## <a name="third-party-serializers"></a>Serializatory innych firm
@@ -59,13 +59,13 @@ Jeśli aplikacja serializuje i deserializes obiektów, może być konieczne doda
   
  [!code-csharp[ProjectN#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#7)]  
   
- Do pliku dyrektyw środowiska wykonawczego należy dodać wpisy, takie jak następujące:  
+Dodaj wpisy, takie jak następujące dla każdego typu do pliku dyrektyw środowiska wykonawczego:  
   
 ```xml  
 <Type Name="t" Browse="Required Public" />  
 ```  
   
- Aby uzyskać informacje na temat składni [ \<](type-element-net-native.md)używanej w przykładzie, zobacz Typ> Element .  
+Aby uzyskać informacje na temat składni [ \<](type-element-net-native.md)używanej w przykładzie, zobacz Typ> Element .  
   
 ## <a name="see-also"></a>Zobacz też
 

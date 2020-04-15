@@ -7,12 +7,12 @@ helpviewer_keywords:
 - concatenating strings [C#]
 - strings [C#], concatenation
 ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
-ms.openlocfilehash: 87ec5104f36d0c6cce12037e70dacf2752ef5e62
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: bbdeba4ee3526140de29ac0d7c97e9a593729d47
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121052"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389536"
 ---
 # <a name="how-to-concatenate-multiple-strings-c-guide"></a>Jak połączyć wiele ciągów (Przewodnik języka C#)
 
@@ -37,13 +37,13 @@ W niektórych wyrażeniach łatwiej jest łączyć ciągi za pomocą interpolacj
 
 Inną metodą łączenia ciągów jest <xref:System.String.Format%2A?displayProperty=nameWithType>. Ta metoda działa dobrze podczas tworzenia ciągu z niewielkiej liczby ciągów składników.
 
-W innych przypadkach może być łączenie ciągów w pętli, gdzie nie wiesz, ile ciągów źródłowych łączysz, a rzeczywista liczba ciągów źródłowych może być dość duża. Klasa <xref:System.Text.StringBuilder> została zaprojektowana dla tych scenariuszy. Poniższy kod używa <xref:System.Text.StringBuilder.Append%2A> metody <xref:System.Text.StringBuilder> klasy do łączenia ciągów.  
+W innych przypadkach może być łączenie ciągów w pętli, gdzie nie wiesz, ile ciągów źródłowych łączysz, a rzeczywista liczba ciągów źródłowych może być duża. Klasa <xref:System.Text.StringBuilder> została zaprojektowana dla tych scenariuszy. Poniższy kod używa <xref:System.Text.StringBuilder.Append%2A> metody <xref:System.Text.StringBuilder> klasy do łączenia ciągów.  
   
 [!code-csharp-interactive[string concatenation using string builder](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#4)]  
 
 Możesz przeczytać więcej o [powodach, dla których `StringBuilder` warto wybrać łączenie ciągów lub klasę](xref:System.Text.StringBuilder#StringAndSB).
 
-Inną opcją łączenia ciągów z <xref:System.String.Concat%2A?displayProperty=nameWithType> kolekcji jest użycie metody. Użyj <xref:System.String.Join%2A?displayProperty=nameWithType> metody, jeśli ciągi źródłowe powinny być oddzielone delimeter. Poniższy kod łączy tablicę słów przy użyciu obu metod:
+Inną opcją łączenia ciągów z <xref:System.String.Concat%2A?displayProperty=nameWithType> kolekcji jest użycie metody. Użyj <xref:System.String.Join%2A?displayProperty=nameWithType> metody, jeśli ciągi źródłowe powinny być oddzielone ogranicznikiem. Poniższy kod łączy tablicę słów przy użyciu obu metod:
 
 [!code-csharp-interactive[concatenation of string collection](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#5)]
 

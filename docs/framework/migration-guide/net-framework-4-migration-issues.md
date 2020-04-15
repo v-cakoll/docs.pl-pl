@@ -5,33 +5,35 @@ helpviewer_keywords:
 - .NET Framework 4, migration
 - application compatibility
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
-ms.openlocfilehash: 0045d2cc0c53d17b07502948088ceec009baba5b
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 200acea81b9f00c659ddceae011430983e2b5f5b
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121518"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389721"
 ---
 # <a name="net-framework-4-migration-issues"></a>Problemy podczas migracji programu .NET Framework 4
 
-W tym temacie opisano problemy z migracją między programem .NET Framework w wersji 3.5 z dodatkiem Service Pack 1 a programem .NET Framework w wersji 4, w tym poprawki, zmiany dotyczące zgodności ze standardami i zabezpieczeń oraz zmiany oparte na opiniach klientów. Większość tych zmian nie wymaga żadnych modyfikacji programistycznych w aplikacjach. Dla tych, które mogą obejmować modyfikacje, zobacz zalecane zmiany kolumny tabeli. Znaczące zmiany są podzielone według obszaru, na przykład ASP.NET i Windows Presentation Foundation (WPF).
+W tym artykule opisano problemy z migracją między programami .NET Framework w wersji 3.5 z dodatkiem Service Pack 1 i .NET Framework w wersji 4, w tym poprawki, zmiany dotyczące zgodności ze standardami i zabezpieczeń oraz zmiany oparte na opiniach klientów. Większość tych zmian nie wymaga żadnych modyfikacji programistycznych w aplikacjach. Dla tych, które mogą obejmować modyfikacje, zobacz **zalecane zmiany** kolumny tabeli. Znaczące zmiany są podzielone według obszaru, na przykład ASP.NET i Windows Presentation Foundation (WPF).
 
-Aby zapoznać się z omówieniem zagadnień na wyższym poziomie w tym temacie, zobacz [Przewodnik po migracji do programu .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ff657133%28v=vs.100%29).
+Aby zapoznać się z omówieniem problemów wyższego poziomu w tym artykule, zobacz [Przewodnik po migracji do programu .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ff657133%28v=vs.100%29).
 
-Aby uzyskać informacje o nowych funkcjach, zobacz [Co nowego w .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms171868%28v=vs.100%29).
+Aby uzyskać informacje o nowych funkcjach, zobacz [Co nowego w programach .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms171868%28v=vs.100%29).
 
 ## <a name="aspnet-and-web"></a>ASP.NET i Internet
 
-Przestrzenie <xref:System.Web>nazw: <xref:System.Web.Mobile> <xref:System.Web.Security>, <xref:System.Web.UI.WebControls>, , ; assembly: System.Web (w pliku System.Web.dll)
+Przestrzenie <xref:System.Web>nazw: <xref:System.Web.Mobile> <xref:System.Web.Security>, , ,<xref:System.Web.UI.WebControls>
 
-| Funkcja | Różnice od 3,5 SP1 | Zalecane zmiany |
-| ------- | ------------------------ | ------------------- |
+Montaż: System.Web (w pliku System.Web.dll)
+
+| Funkcja  | Różnice od 3,5 SP1 | Zalecane zmiany |
+| -------- | ------------------------ | ------------------- |
 | **Pliki definicji przeglądarki** | Pliki definicji przeglądarki zostały zaktualizowane w celu uwzględnienia informacji o nowych i zaktualizowanych przeglądarkach i urządzeniach. Starsze przeglądarki i urządzenia, takie jak Netscape Navigator, zostały usunięte, a nowsze przeglądarki i urządzenia, takie jak Google Chrome i Apple iPhone zostały dodane.<br><br>Jeśli aplikacja zawiera niestandardowe definicje przeglądarki, które dziedziczą z jednej z definicji przeglądarki, które zostały usunięte, zostanie wyświetlony błąd.<br><br>Obiekt <xref:System.Web.HttpBrowserCapabilities> (który jest narażony `Request.Browse` przez page's property) jest napędzany przez pliki definicji przeglądarki. W związku z tym informacje, które są zwracane przez dostęp do właściwości tego obiektu w ASP.NET 4 może być inny niż informacje, które zostały zwrócone we wcześniejszej wersji ASP.NET. | Jeśli aplikacja opiera się na starych plikach definicji przeglądarki, można je skopiować z następującego folderu:<br><br>*Windows\\\\Microsoft.NET\\Framework w wersji 2.0.50727\\Przeglądarki CONFIG\\*<br><br>Skopiuj * \\\\* pliki do odpowiedniego folderu przeglądarki CONFIG dla ASP.NET 4. Po skopiowaniu plików uruchom narzędzie wiersza polecenia [Aspnet_regbrowsers.exe.](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms229858(v=vs.90)) Aby uzyskać więcej [https://www.asp.net/mobile](/aspnet/mobile/overview) informacji, zobacz witrynę sieci Web. |
 | **Aplikacje podrzędne działające w mieszanych wersjach ASP.NET** | ASP.NET 4 aplikacje, które są skonfigurowane jako elementy podrzędne aplikacji, które uruchamiają starsze wersje ASP.NET może nie zostać uruchomiony z powodu błędów konfiguracji lub kompilacji. Określony błąd, który występuje zależy od tego, czy aplikacja działa w ramach usług IIS 6.0 lub w ramach usług IIS 7 lub IIS 7.5. | Można wprowadzić zmiany w plikach konfiguracyjnych aplikacji, których dotyczy problem, tak aby system konfiguracji poprawnie rozpoznał aplikację ASP.NET 4. Aby uzyskać informacje na temat zmian, które należy wprowadzić, zobacz sekcję "ASP.NET 4 Aplikacje podrzędne nie można uruchomić, gdy w obszarze ASP.NET 2.0 lub ASP.NET 3.5 Aplikacje" w dokumencie [ASP.NET 4 Przełomowe zmiany](/aspnet/whitepapers/aspnet4/breaking-changes) w witrynie sieci Web ASP.NET. |
-| **Zmiany identyfikatora klienta** | Nowe `clientIDMode` ustawienie w ASP.NET 4 umożliwia określenie sposobu generowania `id` atrybutu dla elementów HTML przez ASP.NET. W poprzednich wersjach ASP.NET domyślne zachowanie było `AutoID` równoważne `clientIDMode`z ustawieniem programu . Ustawieniem domyślnym `Predictable`jest teraz . Aby uzyskać więcej informacji, zobacz [ASP.NET identyfikację sterowania serwerem sieci Web](https://docs.microsoft.com/previous-versions/aspnet/1d04y8ss%28v=vs.100%29). | Jeśli program Visual Studio jest używany do uaktualniania aplikacji z ASP.NET 2.0 lub ASP.NET 3.5, narzędzie automatycznie dodaje ustawienie do pliku Web.config, który zachowuje zachowanie wcześniejszych wersji programu .NET Framework. Jednak jeśli uaktualnienie aplikacji przez zmianę puli aplikacji w usługach IIS do celu .NET Framework 4, ASP.NET domyślnie używa nowego trybu. Aby wyłączyć nowy tryb identyfikatora klienta, dodaj następujące ustawienie do pliku Web.config:<br><br>`<pages clientIDMode="AutoID" />` |
+| **Zmiany identyfikatora klienta** | Nowe `clientIDMode` ustawienie w ASP.NET 4 umożliwia określenie sposobu generowania `id` atrybutu dla elementów HTML przez ASP.NET. W poprzednich wersjach ASP.NET domyślne zachowanie było `AutoID` równoważne `clientIDMode`z ustawieniem programu . Ustawieniem domyślnym `Predictable`jest teraz . Aby uzyskać więcej informacji, zobacz [ASP.NET identyfikację sterowania serwerem sieci Web](https://docs.microsoft.com/previous-versions/aspnet/1d04y8ss%28v=vs.100%29). | Jeśli program Visual Studio jest używany do uaktualniania aplikacji z ASP.NET 2.0 lub ASP.NET 3.5, narzędzie automatycznie dodaje ustawienie do pliku Web.config, które zachowuje zachowanie wcześniejszych wersji programu .NET Framework. Jednak jeśli uaktualnienie aplikacji przez zmianę puli aplikacji w usługach IIS do docelowego .NET Framework 4, ASP.NET domyślnie używa nowego trybu. Aby wyłączyć nowy tryb identyfikatora klienta, dodaj następujące ustawienie do pliku Web.config:<br><br>`<pages clientIDMode="AutoID" />` |
 | **Zabezpieczenia dostępu do kodu (CAS)** | ASP.NET 2.0 NET funkcje, które zostały dodane w ASP.NET 3.5 używać .NET Framework 1.1 i .NET Framework 2.0 kod zabezpieczeń (CAS) modelu. Jednakże wdrożenie CAS w ASP.NET 4 zostało gruntownie zmienione. W rezultacie częściowe zaufanie ASP.NET aplikacje, które opierają się na zaufanym kodzie uruchomionym w globalnej pamięci podręcznej zestawów, mogą zakończyć się niepowodzeniem z różnymi wyjątkami zabezpieczeń. Aplikacje częściowe zaufanie, które opierają się na rozległe modyfikacje do zasad CAS komputera może również zakończyć się niepowodzeniem i zgłaszać wyjątki zabezpieczeń. | Można przywrócić częściowe zaufanie ASP.NET 4 aplikacji do zachowania ASP.NET 1.1 i 2.0 `legacyCasModel` przy użyciu `trust` nowego atrybutu w elemencie konfiguracji, jak pokazano w poniższym przykładzie:<br><br>`<trust level= "Medium" legacyCasModel="true" />`<br><br>Ważne: Powrót do starszego modelu CAS może reprezentować zmniejszone zabezpieczenia.<br><br>Aby uzyskać więcej informacji na temat nowego modelu zabezpieczeń dostępu do kodu ASP.NET 4, zobacz [Zabezpieczenia dostępu do kodu w ASP.NET 4 aplikacje](https://docs.microsoft.com/previous-versions/dd984947(v=vs.100)). |
-| **Pliki konfiguracyjne** | Główne pliki konfiguracyjne (plik machine.config i główny plik Web.config) dla programu .NET Framework i ASP.NET 4 zostały zaktualizowane w celu uwzględnienia większości informacji konfiguracyjnych, które zostały znalezione w aplikacji Web.config plików w ASP.NET 3.5. Ze względu na złożoność zarządzanych systemów konfiguracyjnych usług IIS 7 i IIS 7.5 uruchamianie aplikacji ASP.NET 3.5 w ramach ASP.NET 4 i 7 i IIS 7.5 może powodować błędy ASP.NET lub błędy usług IIS. | Uaktualnij ASP.NET 3.5 aplikacji do ASP.NET 4 przy użyciu narzędzi uaktualniania projektu w programie Visual Studio. Visual Studio 2010 automatycznie modyfikuje plik Web.config aplikacji ASP.NET 3.5, aby zawierał odpowiednie ustawienia dla ASP.NET 4.<br><br>Można jednak uruchomić aplikacje ASP.NET 3.5 przy użyciu programu .NET Framework 4 bez ponownej kompilacji. W takim przypadku może być ręczna modyfikacja pliku Web.config aplikacji przed uruchomieniem aplikacji w ramach programu .NET Framework 4 i w ramach usług IIS 7 lub IIS 7.5. Konkretne zmiany, które należy wprowadzić, zależą od kombinacji oprogramowania, z którego pracujesz, w tym wersji dodatku Service Pack (SP). Aby uzyskać informacje na temat możliwych kombinacji oprogramowania, których dotyczy ta zmiana, oraz sposobu rozwiązywania problemów z określonymi kombinacjami, zobacz sekcję "Błędy konfiguracji związane z konfiguracją nowego ASP.NET 4 root" w dokumencie [ASP.NET 4 Przełomowe zmiany](/aspnet/whitepapers/aspnet4/breaking-changes) w witrynie sieci Web ASP.NET. |
-| **Sterowanie renderowaniem** | W poprzednich wersjach ASP.NET niektóre formanty emitowane znaczników, które nie można wyłączyć. Domyślnie ten typ znaczników nie jest już generowany w ASP.NET 4. Zmiany renderowania mają wpływ na następujące formanty:<br><br>* `Image` I `ImageButton` formanty `border="0"` nie są już renderowane atrybut.<br>* `BaseValidator` Klasy i sprawdzania poprawności formanty, które pochodzą z niego nie renderowania czerwony tekst domyślnie.<br>* `HtmlForm` Formant nie `name` renderuje atrybutu.<br>* `Table` Formant nie renderuje już atrybutu. `border="0"`<br><br>Formanty, które nie są przeznaczone `Label` do wprowadzania danych `disabled="disabled"` przez użytkownika `Enabled` (na `false` przykład formant) nie są już renderowane atrybut, jeśli ich właściwość jest ustawiona na (lub jeśli dziedziczą to ustawienie z formantu kontenera). | Jeśli program Visual Studio jest używany do uaktualniania aplikacji z ASP.NET 2.0 lub ASP.NET 3.5, narzędzie automatycznie dodaje ustawienie do pliku Web.config, który zachowuje renderowania starszego. Jednak jeśli uaktualnienie aplikacji przez zmianę puli aplikacji w usługach IIS do celu .NET Framework 4, ASP.NET domyślnie używa nowego trybu renderowania. Aby wyłączyć nowy tryb renderowania, dodaj następujące ustawienie do pliku Web.config:<br><br>`<pages controlRenderingCompatibilityVersion="3.5" />` |
+| **Pliki konfiguracyjne** | Główne pliki konfiguracyjne (plik machine.config i główny plik Web.config) dla platformy .NET Framework i ASP.NET 4 zostały zaktualizowane w celu uwzględnienia większości informacji konfiguracyjnych, które zostały znalezione w plikach Web.config aplikacji w ASP.NET 3.5. Ze względu na złożoność zarządzanych systemów konfiguracyjnych usług IIS 7 i IIS 7.5 uruchamianie aplikacji ASP.NET 3.5 w ramach ASP.NET 4 i 7 i IIS 7.5 może powodować błędy ASP.NET lub błędy usług IIS. | Uaktualnij ASP.NET 3.5 aplikacji do ASP.NET 4 przy użyciu narzędzi uaktualniania projektu w programie Visual Studio. Visual Studio 2010 automatycznie modyfikuje plik Web.config aplikacji ASP.NET 3.5, aby zawierał odpowiednie ustawienia dla ASP.NET 4.<br><br>Można jednak uruchomić ASP.NET 3.5 aplikacji przy użyciu programu .NET Framework 4 bez ponownej kompilacji. W takim przypadku może być ręczna modyfikacja pliku Web.config aplikacji przed uruchomieniem aplikacji w ramach programu .NET Framework 4 i usług IIS 7 lub IIS 7.5. Konkretne zmiany, które należy wprowadzić, zależą od kombinacji oprogramowania, z którego pracujesz, w tym wersji dodatku Service Pack (SP). Aby uzyskać informacje na temat możliwych kombinacji oprogramowania, których dotyczy ta zmiana, oraz sposobu rozwiązywania problemów z określonymi kombinacjami, zobacz sekcję "Błędy konfiguracji związane z konfiguracją nowego ASP.NET 4 root" w dokumencie [ASP.NET 4 Przełomowe zmiany](/aspnet/whitepapers/aspnet4/breaking-changes) w witrynie sieci Web ASP.NET. |
+| **Sterowanie renderowaniem** | W poprzednich wersjach ASP.NET niektóre formanty emitowane znaczników, które nie można wyłączyć. Domyślnie ten typ znaczników nie jest już generowany w ASP.NET 4. Zmiany renderowania mają wpływ na następujące formanty:<br><br>* `Image` I `ImageButton` formanty `border="0"` nie są już renderowane atrybut.<br>* `BaseValidator` Klasy i sprawdzania poprawności formanty, które pochodzą z niego nie renderowania czerwony tekst domyślnie.<br>* `HtmlForm` Formant nie `name` renderuje atrybutu.<br>* `Table` Formant nie renderuje już atrybutu. `border="0"`<br><br>Formanty, które nie są przeznaczone `Label` do wprowadzania danych `disabled="disabled"` przez użytkownika `Enabled` (na `false` przykład formant) nie są już renderowane atrybut, jeśli ich właściwość jest ustawiona na (lub jeśli dziedziczą to ustawienie z formantu kontenera). | Jeśli program Visual Studio jest używany do uaktualniania aplikacji z ASP.NET 2.0 lub ASP.NET 3.5, narzędzie automatycznie dodaje ustawienie do pliku Web.config, który zachowuje renderowania starszego. Jednak jeśli uaktualnienie aplikacji przez zmianę puli aplikacji w usługach IIS do docelowego .NET Framework 4, ASP.NET domyślnie używa nowego trybu renderowania. Aby wyłączyć nowy tryb renderowania, dodaj następujące ustawienie do pliku Web.config:<br><br>`<pages controlRenderingCompatibilityVersion="3.5" />` |
 | **Programy obsługi zdarzeń w dokumentach domyślnych** | ASP.NET 4 renderuje wartość `form` `action` atrybutu elementu HTML jako pusty ciąg, gdy żądanie jest składane do adresu URL bez rozszerzenia, który ma domyślny dokument mapowany do niego. We wcześniejszych wersjach ASP.NET żądanie `http://contoso.com` spowodowałoby żądanie default.aspx. W tym dokumencie `form` znacznik otwierający będzie renderowany tak, jak w poniższym przykładzie:<br><br>`<form action="Default.aspx" />`<br><br>W ASP.NET 4 żądanie `http://contoso.com` również powoduje żądanie default.aspx, ale ASP.NET teraz renderuje tag `form` otwierający HTML, jak w poniższym przykładzie:<br><br>`<form action="" />`<br><br>Gdy `action` atrybut jest pustym ciągiem, `DefaultDocumentModule` obiekt IIS tworzy żądanie podrzędne do pliku Default.aspx. W większości warunków to żądanie podrzędne jest niewidoczny do kodu aplikacji, a default.aspx strona działa normalnie. Jednak potencjalna interakcja między kodem zarządzanym a trybem zintegrowanym usług IIS 7 lub IIS 7.5 może spowodować, że zarządzane strony .aspx przestaną działać poprawnie podczas żądania podrzędnego. Jeśli wystąpią następujące warunki, żądanie podrzędne do domyślnego dokumentu .aspx spowoduje błąd lub nieoczekiwane zachowanie:<br><br>* Strona .aspx jest wysyłana `form` do przeglądarki `action` z atrybutem elementu ustawionym na "".<br>* Formularz jest księgowane z powrotem do ASP.NET.<br>* Zarządzany moduł HTTP odczytuje część treści `Request.Form` jednostki, na przykład lub `Request.Params`. Powoduje to, że treść jednostki żądania POST do odczytu w pamięci zarządzanej. W rezultacie treść jednostki nie jest już dostępna dla wszystkich modułów kodu macierzystego, które są uruchomione w trybie zintegrowanym IIS 7 lub IIS 7.5.<br>* Obiekt IIS `DefaultDocumentModule` po pewnym czasie uruchamia i tworzy żądanie podrzędne do dokumentu Default.aspx. Jednak ponieważ treść jednostki została już odczytana przez fragment kodu zarządzanego, nie ma żadnej jednostki dostępnej do wysłania do żądania podrzędnego.<br>* Gdy potok HTTP jest uruchamiany dla żądania podrzędnego, program obsługi plików .aspx jest uruchamiany podczas fazy wykonywania programu handler.*<br><br>Ponieważ nie ma treści jednostki, nie ma żadnych zmiennych formularza i nie ma stanu widoku. W związku z tym nie ma żadnych informacji dostępnych dla .aspx obsługi strony, aby określić, jakie zdarzenie (jeśli istnieje) powinny być wywoływane. W rezultacie żaden z programów obsługi zdarzeń postback dla strony .aspx, którego dotyczy problem, jest uruchamiany. | Aby uzyskać informacje na temat sposobów obejścia problemów, które mogą pojawić się w wyniku tej zmiany, zobacz "Programy obsługi zdarzeń nie mogą być wywoływane w dokumencie domyślnym w trybie zintegrowanym usług IIS 7 lub IIS 7.5" w dokumencie [ASP.NET 4 przełomowe zmiany](/aspnet/whitepapers/aspnet4/breaking-changes) w ASP.NET witrynie sieci Web. |
 | **Algorytm mieszania** | ASP.NET używa algorytmów szyfrowania i mieszania, aby zabezpieczyć dane, takie jak pliki cookie uwierzytelniania formularzy i stan wyświetlania. Domyślnie ASP.NET 4 używa algorytmu <xref:System.Security.Cryptography.HMACSHA256> dla operacji mieszania w plikach cookie i stanu widoku. Starsze wersje ASP.NET używane starszy <xref:System.Security.Cryptography.HMACSHA1> algorytm. | Jeśli uruchamiasz aplikacje, które łączą ASP.NET 2.0 i ASP.NET 4, gdzie dane, takie jak pliki cookie uwierzytelniania formularzy, muszą działać <xref:System.Security.Cryptography.HMACSHA1> w wersjach programu .NET Framework, skonfiguruj aplikację sieci Web ASP.NET 4, aby używała starszego algorytmu, dodając następujące ustawienie w pliku Web.config:<br><br>`<machineKey validation="SHA1" />` |
 | **Kontrolki hostingu w programie Internet Explorer** | Formanty formularzy systemu Windows nie mogą być już hostować w programie Internet Explorer, ponieważ istnieją lepsze rozwiązania dla formantów hostingu w sieci Web. W związku z tym zestawy IEHost.dll i IEExec.exe zostały usunięte z programu .NET Framework. | Do tworzenia formantów niestandardowych w aplikacjach sieci Web można używać następujących technologii:<br><br>* Można utworzyć aplikację Silverlight i skonfigurować ją tak, aby działała poza przeglądarką. Aby uzyskać więcej informacji, zobacz [Obsługa poza przeglądarką](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/dd550721%28v=vs.95%29).<br>* Można utworzyć aplikację przeglądarki XAML (XBAP), aby skorzystać z możliwości WPF (wymaga .NET Framework na komputerach klienckich). Aby uzyskać więcej informacji, zobacz [Omówienie aplikacji przeglądarki WPF XAML](../wpf/app-development/wpf-xaml-browser-applications-overview.md). |
@@ -42,7 +44,7 @@ Przestrzenie <xref:System.Web>nazw: <xref:System.Web.Mobile> <xref:System.Web.Se
 | **Zestaw mobilny w pliku Web.config** | W poprzednich wersjach ASP.NET odwołanie do zestawu System.Web.Mobile.dll zostało zawarte w głównym pliku `assemblies` Web.config w sekcji w obszarze `system.web` / `compilation`. Aby zwiększyć wydajność, odwołanie do tego zestawu zostało usunięte.<br><br>Uwaga: Zestaw System.Web.Mobile.dll i ASP.NET kontrolki mobilne są zawarte w ASP.NET 4, ale są przestarzałe. | Jeśli chcesz używać typów z tego zestawu, dodaj odwołanie do zestawu w głównym pliku Web.config lub w pliku Web.config aplikacji. |
 | **Buforowanie danych wyjściowych** | W ASP.NET 1.0 błąd spowodował buforowane strony, które określono `Location="ServerAndClient"` jako wyjściowe&euro;"ustawienie pamięci podręcznej do emitowania nagłówka `Vary:*` HTTP w odpowiedzi. Miało to wpływ na poinformowanie przeglądarek klienckich, aby nigdy nie buforować strony lokalnie. W ASP.NET 1.1 dodano <xref:System.Web.HttpCachePolicy.SetOmitVaryStar%2A> metodę, która może być wywoływana `Vary:*` w celu wygaszenia nagłówka. Jednak raporty o błędach sugerują, `SetOmitVaryStar` że deweloperzy nie są świadomi istniejącego zachowania.<br><br>W ASP.NET 4 nagłówek `Vary:*` HTTP nie jest już emitowany z odpowiedzi, które określają następującą dyrektywę:<br><br>`<%@ OutputCache Location="ServerAndClient" %>`<br><br>W rezultacie <xref:System.Web.HttpCachePolicy.SetOmitVaryStar%2A> metoda nie jest już potrzebna `Vary:*` w celu wygaszenia nagłówka. W aplikacjach, które określają "ServerAndClient" dla atrybutu, `Location` strony będą buforowane <xref:System.Web.HttpCachePolicy.SetOmitVaryStar%2A>w przeglądarce bez konieczności wywoływania . | Jeśli strony w aplikacji `Vary:*`muszą <xref:System.Web.HttpResponse.AppendHeader%2A> emitować, wywołaj metodę, jak pokazano w poniższym przykładzie:<br><br>`System.Web.HttpResponse.AppendHeader("Vary","*");`<br><br>Alternatywnie można zmienić wartość wyjściowego atrybutu buforowania `Location` na "Serwer". |
 | **Analizowanie stron** | Analizator stron dla ASP.NET stron sieci Web (pliki aspx) i formantów użytkownika (pliki ascx) jest bardziej rygorystyczny w ASP.NET 4 niż we wcześniejszych wersjach ASP.NET i oznacza więcej znaczników jako nieprawidłowych niż we wcześniejszych wersjach. | Sprawdź komunikaty o błędach, które są tworzone podczas pracy strony i naprawić błędy, które wynikają z nieprawidłowego znaczników. |
-| **Typy paszportów** | Obsługa usługi Passport wbudowana w ASP.NET 2.0 jest przestarzała i nie jest obsługiwana ze względu na zmiany w ucho. W rezultacie typy związane z <xref:System.Web.Security> passport in `ObsoleteAttribute` są teraz oznaczone atrybutem. | Zmień dowolny kod, który używa typów <xref:System.Web.Security> usługi Passport w <xref:System.Web.Security.PassportIdentity>obszarze nazw (na przykład ) do używania sdk windows live IDK. |
+| **Typy paszportów** | Obsługa usługi Passport wbudowana w ASP.NET 2.0 jest przestarzała i nie jest obsługiwana ze względu na zmiany w ucho. W rezultacie typy związane z <xref:System.Web.Security> passport in `ObsoleteAttribute` są teraz oznaczone atrybutem. | Zmień dowolny kod, który używa <xref:System.Web.Security> typów usługi Passport <xref:System.Web.Security.PassportIdentity>w obszarze nazw (na przykład ) do używania sdk windows live IDK. |
 | **Informacje PathInfo we właściwości FilePath** | ASP.NET 4 nie zawiera `PathInfo` już wartości zwracanej z właściwości <xref:System.Web.HttpRequest.FilePath> <xref:System.Web.HttpRequest.AppRelativeCurrentExecutionFilePath>takich <xref:System.Web.HttpRequest.CurrentExecutionFilePath>jak , i . Zamiast tego `PathInfo` informacje są <xref:System.Web.HttpRequest.PathInfo>dostępne w pliku . Załóżmy na przykład następujący fragment adresu URL:<br><br>`/testapp/Action.mvc/SomeAction`<br><br>We wcześniejszych wersjach ASP.NET <xref:System.Web.HttpRequest> właściwości mają następujące wartości:<br><br>* <xref:System.Web.HttpRequest.FilePath>: `/testapp/Action.mvc/SomeAction`<br>* <xref:System.Web.HttpRequest.PathInfo>: (pusty)<br><br>W ASP.NET 4 <xref:System.Web.HttpRequest> właściwości mają zamiast tego następujące wartości:<br><br>* <xref:System.Web.HttpRequest.FilePath>: `/testapp/Action.mvc`<br>* <xref:System.Web.HttpRequest.PathInfo>: `SomeAction` | Sprawdź swój kod dla miejsc, w <xref:System.Web.HttpRequest> których można polegać na właściwości klasy, aby zwrócić informacje o ścieżce; zmienić kod, aby odzwierciedlić zmiany w sposobie zwracania informacji o ścieżce. |
 | **Sprawdzanie poprawności żądania** | Aby poprawić sprawdzanie poprawności żądania, sprawdzanie poprawności żądania ASP.NET jest wywoływana wcześniej w cyklu życia żądania. W rezultacie sprawdzanie poprawności żądań jest uruchamiane dla żądań, które nie są dla plików .aspx, takich jak wywołania usługi sieci Web i niestandardowych programów obsługi. Sprawdzanie poprawności żądania będzie również aktywne, gdy niestandardowe moduły HTTP są uruchomione w potoku przetwarzania żądań.<br><br>W wyniku tej zmiany żądania dotyczące zasobów innych niż pliki aspx mogą powodować błędy sprawdzania poprawności żądania. Kod niestandardowy, który działa w potoku żądań (na przykład niestandardowe moduły HTTP) może również zgłaszać błędy sprawdzania poprawności żądania. | W razie potrzeby można przywrócić stare zachowanie, że tylko strony .aspx wyzwalają sprawdzanie poprawności żądania, używając następującego ustawienia w pliku konfiguracji sieci Web:<br><br>`<httpRuntime requestValidationMode="2.0" />`<br><br>Ostrzeżenie: Jeśli powrócisz do starego zachowania, upewnij się, że cały kod w istniejących programach obsługi, modułów i innego kodu niestandardowego wykonuje kontrole potencjalnie niebezpiecznych danych wejściowych HTTP, które mogą być wektorami ataku XSS. |
 | **Routing** | Jeśli w programie Visual Studio 2010 utworzysz witrynę sieci Web systemu plików, a witryna sieci Web znajduje się w folderze zawierającym kropkę (.) w nazwie folderu, routing adresów URL nie będzie działać niezawodnie. Błąd HTTP 404 jest zwracany z niektórych ścieżek wirtualnych. Dzieje się tak, ponieważ program Visual Studio 2010 uruchamia program Visual Studio Development Server przy użyciu niepoprawnej ścieżki dla głównego katalogu wirtualnego. | * Na stronie **Właściwości witryny** sieci Web opartej na plikach zmień atrybut **Ścieżka wirtualna** na "/".<br><br>— lub —<br><br>* Utwórz projekt aplikacji sieci Web zamiast projektu witryny sieci Web. Projekty aplikacji sieci Web nie mają tego problemu, a routing adresów URL działa, nawet jeśli folder projektu ma kropkę w nazwie.<br><br>— lub —<br><br>* Utwórz witrynę sieci Web opartą na protokoście z protokołem HTTP, która jest hostowana w serwisach IIS. Witryny sieci Web hostowane przez usługi IIS mogą mieć kropki w ścieżce wirtualnej, a także w folderze plików projektu. |
@@ -56,14 +58,16 @@ Przestrzenie <xref:System.Web>nazw: <xref:System.Web.Mobile> <xref:System.Web.Se
 | Funkcja | Różnice od 3,5 SP1 | Zalecane zmiany |
 | ------- | ------------------------ | ------------------- |
 | **CardSpace** | Program Windows CardSpace nie jest już uwzględniony w programie .NET Framework; jest dostarczany oddzielnie. | Pobierz program Windows CardSpace z [Centrum pobierania Microsoft](https://go.microsoft.com/fwlink/?LinkId=199868). |
-| **Pliki konfiguracyjne** | Wprowadzono poprawki w sposobie uzyskiwania dostępu do plików konfiguracyjnych aplikacji przez platformę .NET Framework. | Jeśli plik konfiguracji aplikacji nosi nazwę *application-name.config*, zmień jego nazwę na *application-name.exe.config*. Na przykład zmień nazwę *myapp.config* na *MyApp.exe.config*. |
+| **Pliki konfiguracyjne** | Wprowadzono poprawki w sposobie uzyskiwania dostępu do plików konfiguracyjnych aplikacji przez program .NET Framework. | Jeśli plik konfiguracji aplikacji nosi nazwę *application-name.config*, zmień jego nazwę na *application-name.exe.config*. Na przykład zmień nazwę *myapp.config* na *MyApp.exe.config*. |
 | **Kompilator kodu języka C#** | Klasy `Compiler` `CompilerError`, `ErrorLevel` i klasy, <xref:Microsoft.CSharp> które znajdowały się w obszarze nazw, nie są już dostępne, a ich zestaw (cscompmgd.dll) nie jest już uwzględniony w programie .NET Framework. | Użyj <xref:System.CodeDom.Compiler.CodeDomProvider> klasy i innych <xref:System.CodeDom.Compiler> klas w obszarze nazw. Aby uzyskać więcej informacji, zobacz [Korzystanie z codedom](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/y2k85ax6%28v=vs.100%29). |
 | **Hosting** (niezarządzany interfejs API) | Aby poprawić możliwości hostingu, niektóre interfejsy API aktywacji hostingu zostały przestarzałe. Funkcje wykonywania w trakcie procesu umożliwiają aplikacji ładowanie i uruchamianie wielu wersji programu .NET Framework w tym samym procesie. Na przykład można uruchamiać aplikacje, które ładują dodatki (lub składniki), które są oparte na .NET Framework 2.0 SP1 i dodatki, które są oparte na programie .NET Framework 4 w tym samym procesie. Starsze składniki nadal używają starszej wersji programu .NET Framework, a nowe składniki używają nowej wersji programu .NET Framework. | Użyj konfiguracji opisanych [w wykonaniu w procesie side-by-side](../deployment/in-process-side-by-side-execution.md). |
 | **Nowy model zabezpieczeń** | Zasady zabezpieczeń dostępu do kodu (CAS) zostały wyłączone i zastąpione uproszczonym modelem, zgodnie z opisem w [obszarze Zmiany zabezpieczeń w programie .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd233103%28v=vs.100%29). | Modyfikacje mogą być wymagane, jeśli zależy od cas w aplikacjach. Aby uzyskać więcej informacji, zobacz [Zgodność zasad zabezpieczeń dostępu do kodu i migracja](../misc/code-access-security-policy-compatibility-and-migration.md). |
 
 ### <a name="date-and-time"></a>Data i godzina
 
-Przestrzeń nazw: <xref:System>; montaż: mscorlib (w mscorlib.dll)
+Namespace:<xref:System>
+
+Montaż: mscorlib (w mscorlib.dll)
 
 | Funkcja | Różnice od 3,5 SP1 | Zalecane zmiany |
 | ------- | ------------------------ | ------------------- |
@@ -74,19 +78,23 @@ Przestrzeń nazw: <xref:System>; montaż: mscorlib (w mscorlib.dll)
 
 Aby uzyskać listę nowych neutralnych i konkretnych kultur, zobacz [Co nowego w globalizacji i lokalizacji](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd997383%28v=vs.100%29).
 
-Przestrzeń nazw: <xref:System.Globalization>; montaż: mscorlib (w mscorlib.dll)
+Namespace:<xref:System.Globalization>
+
+Montaż: mscorlib (w mscorlib.dll)
 
 | Funkcja | Różnice od 3,5 SP1 | Zalecane zmiany |
 | ------- | ------------------------ | ------------------- |
-| **Nazwy kultury** | Następujące zmiany nazwy wpływają na kultury niemieckie, Divehi i afryki:<br><br>* <xref:System.Globalization.CultureAndRegionInfoBuilder.CurrencyEnglishName>: Nazwa waluty kultury niemieckiej (Switizerland) (de-CH) zmieniła się z "sFr". "Fr.".<br>* <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern>: Długi wzór daty dla kultury Divehi (Malediwy) (dv-MV) zmienił się z "dd/MMMM/yyyy" na "dd/MM/yyyy".<br>* <xref:System.Globalization.DateTimeFormatInfo.PMDesignator>: P.M. projektator afrikaans (Republika Południowej Afryki) (af-ZA) kultury zmienił się z "nm" na "PM". | Uwaga zmiany nazwy kultury. |
+| **Nazwy kultury** | Następujące zmiany nazwy wpływają na kultury niemieckie, Divehi i afryki:<br><br>* <xref:System.Globalization.CultureAndRegionInfoBuilder.CurrencyEnglishName>: Nazwa waluty kultury niemieckiej (Szwajcaria) (de-CH) zmieniła się z "sFr". "Fr.".<br>* <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern>: Długi wzór daty dla kultury Divehi (Malediwy) (dv-MV) zmienił się z "dd/MMMM/yyyy" na "dd/MM/yyyy".<br>* <xref:System.Globalization.DateTimeFormatInfo.PMDesignator>: P.M. projektator afrikaans (Republika Południowej Afryki) (af-ZA) kultury zmienił się z "nm" na "PM". | Uwaga zmiany nazwy kultury. |
 | **Parametr LCID** | Aby być zgodne z oczekiwanym zachowaniem w ustawieniach serwera automatyzacji, CLR nie przekazuje bieżącej kultury dla parametru `LCID` do niezarządzanych aplikacji opartych na COM. Zamiast tego przechodzi 1033 (en-us) dla kultury. | Nie konieczne modyfikacje z wyjątkiem aplikacji natywnych, które wymagają określonej kultury. |
 | **Przestarzałe typy kultury** | <xref:System.Globalization.CultureTypes> Typy <xref:System.Globalization.CultureTypes> i kultury są teraz przestarzałe.<br><br>W celu zapewnienia zgodności <xref:System.Globalization.CultureTypes> z poprzednimi wersjami, teraz zwraca neutralne i <xref:System.Globalization.CultureTypes> określone kultury, które zostały uwzględnione w poprzednim .NET Framework, a teraz zwraca pustą listę. | Użyj innych wartości <xref:System.Globalization.CultureTypes> wyliczenia. |
 | **Pobieranie kultury** | Począwszy od systemu Windows 7, .NET Framework 4 pobiera informacje o kulturze z systemu operacyjnego zamiast przechowywania danych. Ponadto program .NET Framework synchronizuje się z systemem Windows w celu sortowania i tworzenia danych dotyczących wielkości liter. | Brak. |
-| **Standardy Unicode 5.1** | .NET Framework obsługuje teraz wszystkie znaki Unicode 5.1 — dodanie około 1400 znaków. Dodatkowe znaki obejmują nowe symbole, strzałki, znaki diakrytyczne, znaki interpunkcyjne, symbole matematyczne, obrysy i ideografy CJK, dodatkowe znaki liczbowe malajalam i telugu oraz różne znaki birmańskie, łacińskie, arabskie, greckie, mongolskie i cyrylicy. Następujące nowe skrypty są obsługiwane przez Unicode 5.1: Sundanese, Lepcha, Ol Chiki, Vai, Saurashtra, Kayah Li, Rejang, Gurmukhi, Odia, Tamil, Telugu i Malayalam znaków i Cham. | Brak. |
+| **Standardy Unicode 5.1** | Program .NET Framework obsługuje teraz wszystkie znaki Unicode 5.1 — dodanie około 1400 znaków. Dodatkowe znaki obejmują nowe symbole, strzałki, znaki diakrytyczne, znaki interpunkcyjne, symbole matematyczne, obrysy i ideografy CJK, dodatkowe znaki liczbowe malajalam i telugu oraz różne znaki birmańskie, łacińskie, arabskie, greckie, mongolskie i cyrylicy. Następujące nowe skrypty są obsługiwane przez Unicode 5.1: Sundanese, Lepcha, Ol Chiki, Vai, Saurashtra, Kayah Li, Rejang, Gurmukhi, Odia, Tamil, Telugu i Malayalam znaków i Cham. | Brak. |
 
 ### <a name="exceptions"></a>Wyjątki
 
-Przestrzenie <xref:System>nazw: <xref:System.Runtime.ExceptionServices>, ; montaż: mscorlib (w mscorlib.dll)
+Przestrzenie nazw: <xref:System>,<xref:System.Runtime.ExceptionServices>
+
+Montaż: mscorlib (w mscorlib.dll)
 
 | Funkcja | Różnice od 3,5 SP1 | Zalecane zmiany |
 | ------- | ------------------------ | ------------------- |
@@ -95,7 +103,9 @@ Przestrzenie <xref:System>nazw: <xref:System.Runtime.ExceptionServices>, ; monta
 
 ### <a name="reflection"></a>Odbicie
 
-Przestrzeń nazw: <xref:System.Reflection>; montaż: mscorlib (w mscorlib.dll)
+Namespace:<xref:System.Reflection>
+
+Montaż: mscorlib (w mscorlib.dll)
 
 | Funkcja | Różnice od 3,5 SP1 | Zalecane zmiany |
 | ------- | ------------------------ | ------------------- |
@@ -108,7 +118,9 @@ Przestrzeń nazw: <xref:System.Reflection>; montaż: mscorlib (w mscorlib.dll)
 
 ### <a name="interoperability"></a>Współdziałanie
 
-Przestrzeń nazw: <xref:System.Runtime.InteropServices>; montaż: mscorlib (w mscorlib.dll)
+Namespace:<xref:System.Runtime.InteropServices>
+
+Montaż: mscorlib (w mscorlib.dll)
 
 | Funkcja | Różnice od 3,5 SP1 | Zalecane zmiany |
 | ------- | ------------------------ | ------------------- |
@@ -125,7 +137,9 @@ W tej sekcji opisano problemy z migracją przy użyciu zestawów danych i klient
 
 W poniższej tabeli opisano ulepszenia funkcji, które wcześniej miały ograniczenia lub inne problemy.
 
-Przestrzenie <xref:System.Data>nazw: <xref:System.Data.Objects.DataClasses> <xref:System.Data.SqlClient>, , ; zestawy: System.Data (w System.Data.dll), System.Data.Entity (w System.Data.Entity.dll)
+Przestrzenie <xref:System.Data>nazw: <xref:System.Data.Objects.DataClasses>, ,<xref:System.Data.SqlClient>
+
+Zestawy: System.Data (w System.Data.dll), System.Data.Entity (w System.Data.Entity.dll)
 
 | Funkcja | Różnice od 3,5 SP1 |
 | ------- | ------------------------ |
@@ -140,7 +154,9 @@ Przestrzenie <xref:System.Data>nazw: <xref:System.Data.Objects.DataClasses> <xre
 
 W poniższej tabeli opisano ulepszenia funkcji, które wcześniej miały ograniczenia lub inne problemy.
 
-Przestrzenie <xref:System.Data>nazw: <xref:System.Data.Objects> <xref:System.Data.Objects.DataClasses>, , ; assembly: System.Data.Entity (w system.Data.Entity.dll)
+Przestrzenie <xref:System.Data>nazw: <xref:System.Data.Objects>, ,<xref:System.Data.Objects.DataClasses>
+
+Zestawy: System.Data.Entity (w system.data.entity.dll)
 
 | Funkcja | Różnice od 3,5 SP1 |
 | ------- | ------------------------ |
@@ -153,18 +169,22 @@ Przestrzenie <xref:System.Data>nazw: <xref:System.Data.Objects> <xref:System.Dat
 
 W poniższej tabeli opisano ulepszenia funkcji, które wcześniej miały ograniczenia lub inne problemy.
 
-Przestrzeń nazw: <xref:System.Data.Linq>; montaż: System.Data.Linq (w System.Data.Linq.dll)
+Namespace:<xref:System.Data.Linq>
+
+Montaż: System.Data.Linq (w System.Data.Linq.dll)
 
 | Funkcja | Różnice od 3,5 SP1 |
 | ------- | ------------------------ |
 | **Zdarzenia** | Kolekcja <xref:System.Data.Linq.EntitySet%601> teraz wywołuje <xref:System.Data.Linq.EntitySet%601.ListChanged> zdarzenie do dodawania i <xref:System.Data.Linq.EntitySet%601> usuwania operacji, jeśli jest zwolniony, oprócz podnoszenia zdarzenia podczas ładowania kolekcji. |
-| **Zapytania** | `Skip(0)`nie jest już ignorowana w LINQ do zapytań SQL. W rezultacie kwerendy, które mają tę metodę może zachowywać się inaczej. Na `OrderBy` przykład w niektórych przypadkach klauzula jest wymagana z `Skip(0)` <xref:System.NotSupportedException> , a `OrderBy` kwerenda będzie teraz zgłaszać wyjątek, jeśli klauzula nie została uwzględniona. |
+| **Zapytania** | `Skip(0)`nie jest już ignorowana w LINQ do zapytań SQL. W rezultacie kwerendy, które mają tę metodę może zachowywać się inaczej. Na przykład w niektórych `OrderBy` przypadkach klauzula `Skip(0)`jest wymagana z , <xref:System.NotSupportedException> a `OrderBy` kwerenda będzie teraz zgłaszać wyjątek, jeśli klauzula nie została uwzględniona. |
 
 ### <a name="wcf-data-services"></a>Usługi danych WCF
 
 W poniższej tabeli opisano ulepszenia funkcji, które wcześniej miały ograniczenia lub inne problemy.
 
-Przestrzenie <xref:System.Data.Services>nazw: <xref:System.Data.Services.Client> <xref:System.Data.Services.Common>, <xref:System.Data.Services.Providers>, , ; zespoły: System.Data.Services (w System.Data.Services.dll), System.Data.Services.Client (w System.Data.Services.Client.dll)
+Przestrzenie <xref:System.Data.Services>nazw: <xref:System.Data.Services.Client> <xref:System.Data.Services.Common>, , ,<xref:System.Data.Services.Providers>
+
+Zestawy: System.Data.Services (w System.Data.Services.dll), System.Data.Services.Client (w System.Data.Services.Client.dll)
 
 | Funkcja | Różnice od 3,5 SP1 |
 | ------- | ------------------------ |
@@ -191,13 +211,15 @@ W poniższej tabeli opisano ulepszenia funkcji, które wcześniej miały ogranic
 
 ### <a name="applications"></a>Aplikacje
 
-Przestrzenie <xref:System.Windows>nazw: <xref:System.Windows.Controls>, ; montaż: PresentationFramework (w PresentationFramework.dll)
+Przestrzenie nazw: <xref:System.Windows>,<xref:System.Windows.Controls>
+
+Zestawy: PresentationFramework (w presentationframework.dll)
 
 | Funkcja | Różnice od 3,5 SP1 | Zalecane zmiany |
 | ------- | ------------------------ | ------------------- |
 | **Obsługa wyjątków** | Aby włączyć błędy, które mają być wykryte <xref:System.Reflection.TargetInvocationException> wcześniej, <xref:System.Exception.InnerException> WPF zgłasza i <xref:System.NullReferenceException>ustawia <xref:System.OutOfMemoryException> <xref:System.StackOverflowException>właściwość <xref:System.Security.SecurityException>na wyjątki krytyczne, takie jak , , i , zamiast przechwytywania oryginalnego wyjątku. | Brak. |
 | **Połączone zasoby** | Aby ułatwić łączenie, pliki zasobów (takie jak obrazy), które znajdują się w lokalizacji innej niż struktura folderów projektu, użyj pełnej ścieżki pliku zasobów, a nie tylko jego nazwy pliku jako identyfikatora zasobu podczas tworzenia aplikacji. Aplikacja będzie mogła zlokalizować pliki w czasie wykonywania. | Brak. |
-| **Aplikacje częściowego zaufania** | Ze względów bezpieczeństwa aplikacje oparte na systemie <xref:System.Windows.Controls.WebBrowser> Windows, <xref:System.Windows.Controls.Frame> które są uruchamiane <xref:System.Security.SecurityException> w częściowym zaufaniu i zawierają formant lub formant zawierający kod HTML, będą zgłaszać podczas tworzenia formantu.<br><br>Aplikacje przeglądarki zda wyjątek i wyświetli komunikat, jeśli spełnione są wszystkie następujące warunki:<br><br>* Aplikacja działa w Firefoksie.<br>* Aplikacja działa w częściowym zaufaniu do strefy Internet z niezaufanych witryn.<br>* Aplikacja zawiera <xref:System.Windows.Controls.WebBrowser> formant <xref:System.Windows.Controls.Frame> lub formant, który zawiera kod HTML.<br><br>Należy zauważyć, że nie będzie to miało wpływu na aplikacje uruchamiane z zaufanych witryn lub ze strefy intranetu. | W aplikacjach przeglądarki można ułatwić tę zmianę, wykonując jedną z następujących czynności:<br><br>* Uruchom aplikację przeglądarki w pełnym zaufaniu.<br>* Niech klienci dodadzą witrynę aplikacji do strefy zaufanych witryn.<br>* Czy klienci uruchamiają aplikację w programie Internet Explorer. |
+| **Aplikacje częściowego zaufania** | Ze względów bezpieczeństwa aplikacje oparte na systemie <xref:System.Windows.Controls.WebBrowser> Windows, <xref:System.Windows.Controls.Frame> które są uruchamiane <xref:System.Security.SecurityException> w częściowym zaufaniu i zawierają formant lub formant zawierający kod HTML, będą zgłaszać podczas tworzenia formantu.<br><br>Aplikacje przeglądarki zda wyjątek i wyświetli komunikat, jeśli spełnione są wszystkie następujące warunki:<br><br>* Aplikacja działa w Firefoksie.<br>* Aplikacja działa w częściowym zaufaniu do strefy Internet z niezaufanych witryn.<br>* Aplikacja zawiera <xref:System.Windows.Controls.WebBrowser> formant <xref:System.Windows.Controls.Frame> lub formant, który zawiera kod HTML.<br><br>Nie będzie to miało wpływu na aplikacje uruchamiane z zaufanych witryn lub ze strefy intranetowej. | W aplikacjach przeglądarki można ułatwić tę zmianę, wykonując jedną z następujących czynności:<br><br>* Uruchom aplikację przeglądarki w pełnym zaufaniu.<br>* Niech klienci dodadzą witrynę aplikacji do strefy zaufanych witryn.<br>* Czy klienci uruchamiają aplikację w programie Internet Explorer. |
 | **Słowniki zasobów** | Aby poprawić słowniki zasobów na poziomie motywu i zapobiec ich zmianie, zasoby, które są zdefiniowane w słowniku zasobów i scalone w słownik na poziomie motywu, są teraz zawsze oznaczane jako zamrożone i niezmienne. Jest to oczekiwane zachowanie dla zasobów freezable. | Aplikacje modyfikując zasób, który jest zdefiniowany w słowniku scalonym na poziomie motywu należy sklonować zasób i zmodyfikować sklonowaną kopię. Alternatywnie zasób można `x:Shared="false"` oznaczyć tak, aby <xref:System.Windows.ResourceDictionary> tworzy nową kopię za każdym razem, gdy zasób jest wyszukiwany. |
 | **Windows 7** | Aby aplikacje WPF działały lepiej w systemie Windows 7, wprowadzono następujące ulepszenia w celu skorygowania zachowania okna:<br><br>* Stany dokującej i gestów działają teraz zgodnie z oczekiwaniami na podstawie interakcji użytkownika.<br>* Polecenia paska zadań **Kaskada okna, Pokaż okna ułożone**i **Pokaż okna obok siebie** mają teraz poprawne zachowanie i zaktualizować odpowiednie właściwości.<br>* `Top`Właściwości `Left` `Width` `Height` okna zmaksymalizowanego lub zminimalizowanego zawierają teraz prawidłową lokalizację przywracania okna zamiast innych wartości, w zależności od monitora. | Brak. |
 | **Styl i przezroczystość systemu Windows** | An <xref:System.InvalidOperationException> jest generowany, jeśli <xref:System.Windows.Window.WindowStyle> spróbujesz <xref:System.Windows.WindowStyle> ustawić <xref:System.Windows.Window.AllowsTransparency> `true` wartość <xref:System.Windows.WindowState> <xref:System.Windows.WindowState>inną niż kiedy jest i jest . | Jeśli musisz <xref:System.Windows.Window.WindowStyle> zmienić <xref:System.Windows.Window.AllowsTransparency> `true`kiedy jest , można `SetWindowLongPtr` wywołać funkcję Win32. |
@@ -205,7 +227,9 @@ Przestrzenie <xref:System.Windows>nazw: <xref:System.Windows.Controls>, ; monta�
 
 ### <a name="controls"></a>Formanty
 
-Przestrzenie <xref:System.Windows>nazw: <xref:System.Windows.Controls> <xref:System.Windows.Data>, <xref:System.Windows.Input>, , ; zestawy: PresentationFramework (w PresentationFramework.dll), PresentationCore (w PresentationCore.dll), WindowsBase (w pliku WindowsBase.dll)
+Przestrzenie <xref:System.Windows>nazw: <xref:System.Windows.Controls> <xref:System.Windows.Data>, , ,<xref:System.Windows.Input>
+
+Zestawy: PresentationFramework (w PresentationFramework.dll), PresentationCore (w PresentationCore.dll), WindowsBase (w pliku WindowsBase.dll)
 
 | Funkcja | Różnice od 3,5 SP1 | Zalecane zmiany |
 | ------- | ------------------------ | ------------------- |
@@ -221,7 +245,9 @@ Przestrzenie <xref:System.Windows>nazw: <xref:System.Windows.Controls> <xref:Sys
 
 ### <a name="graphics"></a>Grafika
 
-Przestrzenie <xref:System.Windows>nazw: <xref:System.Windows.Controls> <xref:System.Windows.Data>, <xref:System.Windows.Input> <xref:System.Windows.Media.Effects>, , , ; zestawy: PresentationFramework (w PresentationFramework.dll), PresentationCore (w PresentationCore.dll), WindowsBase (w pliku WindowsBase.dll)
+Przestrzenie <xref:System.Windows>nazw: <xref:System.Windows.Controls> <xref:System.Windows.Data>, <xref:System.Windows.Input>, , ,<xref:System.Windows.Media.Effects>
+
+Zestawy: PresentationFramework (w PresentationFramework.dll), PresentationCore (w PresentationCore.dll), WindowsBase (w pliku WindowsBase.dll)
 
 | Funkcja | Różnice od 3,5 SP1 | Zalecane zmiany |
 | ------- | ------------------------ | ------------------- |
@@ -231,7 +257,9 @@ Przestrzenie <xref:System.Windows>nazw: <xref:System.Windows.Controls> <xref:Sys
 
 ### <a name="input"></a>Dane wejściowe
 
-Przestrzenie <xref:System.Windows>nazw: <xref:System.Windows.Controls> <xref:System.Windows.Data>, <xref:System.Windows.Input>, , ; zestawy: PresentationFramework (w PresentationFramework.dll), PresentationCore (w PresentationCore.dll), WindowsBase (w pliku WindowsBase.dll)
+Przestrzenie <xref:System.Windows>nazw: <xref:System.Windows.Controls> <xref:System.Windows.Data>, , ,<xref:System.Windows.Input>
+
+Zestawy: PresentationFramework (w PresentationFramework.dll), PresentationCore (w PresentationCore.dll), WindowsBase (w pliku WindowsBase.dll)
 
 | Funkcja | Różnice od 3,5 SP1 | Zalecane zmiany |
 | ------- | ------------------------ | ------------------- |
@@ -242,7 +270,9 @@ Przestrzenie <xref:System.Windows>nazw: <xref:System.Windows.Controls> <xref:Sys
 
 ### <a name="ui-automation"></a>Automatyzacja interfejsu użytkownika
 
-Przestrzeń <xref:System.Windows>nazw: <xref:System.Windows.Automation.Peers> <xref:System.Windows.Automation.Provider>, <xref:System.Windows.Controls> <xref:System.Windows.Data>, <xref:System.Windows.Input>, , , ; zestawy: PresentationFramework (w PresentationFramework.dll), PresentationCore (w PresentationCore.dll), UIAutomationProvider (w UIAutomationProvider.dll), WindowsBase (w pliku WindowsBase.dll)
+<xref:System.Windows>Przestrzeń nazw: <xref:System.Windows.Automation.Peers> <xref:System.Windows.Automation.Provider>, <xref:System.Windows.Controls> <xref:System.Windows.Data>, , , ,<xref:System.Windows.Input>
+
+Zestawy: PresentationFramework (w PresentationFramework.dll), PresentationCore (w PresentationCore.dll), UIAutomationProvider (w UIAutomationProvider.dll), WindowsBase (w pliku WindowsBase.dll)
 
 | Funkcja | Różnice od 3,5 SP1 | Zalecane zmiany |
 | ------- | ------------------------ | ------------------- |
@@ -255,7 +285,9 @@ Przestrzeń <xref:System.Windows>nazw: <xref:System.Windows.Automation.Peers> <x
 
 ### <a name="xaml"></a>XAML
 
-Przestrzenie <xref:System.Windows>nazw: <xref:System.Windows.Controls> <xref:System.Windows.Data>, <xref:System.Windows.Input> <xref:System.Windows.Markup>, , , ; zestawy: PresentationFramework (w PresentationFramework.dll), PresentationCore (w PresentationCore.dll), WindowsBase (w pliku WindowsBase.dll)
+Przestrzenie <xref:System.Windows>nazw: <xref:System.Windows.Controls> <xref:System.Windows.Data>, <xref:System.Windows.Input>, , ,<xref:System.Windows.Markup>
+
+Zestawy: PresentationFramework (w PresentationFramework.dll), PresentationCore (w PresentationCore.dll), WindowsBase (w pliku WindowsBase.dll)
 
 | Funkcja | Różnice od 3,5 SP1 | Zalecane zmiany |
 | ------- | ------------------------ | ------------------- |
@@ -268,7 +300,9 @@ Wiersze w tej tabeli opisują ulepszenia funkcji, które wcześniej miały ogran
 
 ### <a name="schema-and-transforms"></a>Schemat i przekształcenia
 
-Przestrzenie nazw: <xref:System.Xml.Linq>; <xref:System.Xml.Schema>, <xref:System.Xml.XPath>; zestawy: System.Xml (w pliku System.Xml.dll), System.Xml.Linq (w pliku System.Xml.Linq.dll)
+Przestrzenie nazw: <xref:System.Xml.Linq>; <xref:System.Xml.Schema>,<xref:System.Xml.XPath>
+
+Zestawy: System.Xml (w pliku System.Xml.dll), System.Xml.Linq (w pliku System.Xml.Linq.dll)
 
 | Funkcja | Różnice od 3,5 SP1 |
 | ------- | ------------------------ |
@@ -282,7 +316,9 @@ Przestrzenie nazw: <xref:System.Xml.Linq>; <xref:System.Xml.Schema>, <xref:Syste
 
 ### <a name="validation"></a>Walidacja
 
-Przestrzenie nazw: <xref:System.Xml.Linq>; <xref:System.Xml.Schema>, <xref:System.Xml.XPath>; zestawy: System.Xml (w pliku System.Xml.dll), System.Xml.Linq (w pliku System.Xml.Linq.dll)
+Przestrzenie nazw: <xref:System.Xml.Linq>; <xref:System.Xml.Schema>,<xref:System.Xml.XPath>
+
+Zestawy: System.Xml (w pliku System.Xml.dll), System.Xml.Linq (w pliku System.Xml.Linq.dll)
 
 | Funkcja | Różnice od 3,5 SP1 |
 | ------- | ------------------------ |
@@ -291,7 +327,9 @@ Przestrzenie nazw: <xref:System.Xml.Linq>; <xref:System.Xml.Schema>, <xref:Syste
 
 ### <a name="writing"></a>Pisania
 
-Przestrzenie nazw: <xref:System.Xml.Linq>; <xref:System.Xml.Schema>, <xref:System.Xml.XPath>; zestawy: System.Xml (w pliku System.Xml.dll), System.Xml.Linq (w pliku System.Xml.Linq.dll)
+Przestrzenie nazw: <xref:System.Xml.Linq>; <xref:System.Xml.Schema>,<xref:System.Xml.XPath>
+
+Zestawy: System.Xml (w pliku System.Xml.dll), System.Xml.Linq (w pliku System.Xml.Linq.dll)
 
 | Funkcja | Różnice od 3,5 SP1 |
 | ------- | ------------------------ |
@@ -303,6 +341,6 @@ Przestrzenie nazw: <xref:System.Xml.Linq>; <xref:System.Xml.Schema>, <xref:Syste
 - [Nowe typy i elementy członkowskie w ramach .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ff641764%28v=vs.100%29)
 - [Przewodnik po migracji do programu .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ff657133%28v=vs.100%29)
 - [Co nowego w platformie .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms171868%28v=vs.100%29)
-- [Zgodność wersji w programie .NET Framework](version-compatibility.md)
-- [Migrowanie rozwiązań pakietu Office do programu .NET Framework 4](/visualstudio/vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later)
+- [Zgodność wersji w ramach .NET Framework](version-compatibility.md)
+- [Migrowanie rozwiązań pakietu Office do platformy .NET Framework 4](/visualstudio/vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later)
 - [Przestarzałe elementy w bibliotece klas programu .NET Framework](../whats-new/whats-obsolete.md)

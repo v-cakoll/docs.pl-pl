@@ -5,21 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 48e1cd90-de80-4d6c-846e-631878955762
-ms.openlocfilehash: 6a06e1983a54581cfb89f008e9f063a671e992c2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 22713aba4f86fe493ba3d16ef09c2a71b6d55fe0
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185353"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389782"
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>Instrukcje: Konfigurowanie usługi WCF na potrzeby współdziałania z klientami usługi ASP.NET w sieci Web
+
 Aby skonfigurować punkt końcowy usługi Windows Communication Foundation (WCF) jako interoperacyjny z <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> ASP.NET klientami usługi sieci Web, należy użyć tego typu jako typu powiązania dla punktu końcowego usługi.  
   
  Opcjonalnie można włączyć obsługę https i uwierzytelniania klienta na poziomie transportu na powiązanie. ASP.NET klienci usługi sieci Web nie obsługują kodowania <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> komunikatów MTOM, więc właściwość <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType>powinna być pozostawiona jako wartość domyślna, czyli . ASP.Net klienci usługi sieci Web nie obsługują usługi WS-Security, więc <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> należy ustawić na <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>.  
   
- Aby udostępnić metadane usługi WCF ASP.NET narzędzi generowania serwera proxy usługi sieci Web (czyli [narzędzia języka opisu usług sieci Web (Wsdl.exe),](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6(v%3dvs.100)) [narzędzia do odnajdowania usług sieci Web (Disco.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cy2a3ybs(v=vs.100))i funkcji Dodaj odwołanie do sieci Web w programie Visual Studio), należy udostępnić punkt końcowy metadanych HTTP/GET.  
+ Aby udostępnić metadane usługi WCF ASP.NET narzędzi generowania serwera proxy usługi sieci Web (czyli [narzędzia języka opisu usług sieci Web (Wsdl.exe),](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6(v%3dvs.100)) [narzędzia do odnajdowania usług sieci Web (Disco.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cy2a3ybs(v=vs.100))i funkcji Dodaj odwołanie do **sieci Web** w programie Visual Studio), należy udostępnić punkt końcowy metadanych HTTP/GET.  
   
-### <a name="to-add-a-wcf-endpoint-that-is-compatible-with-aspnet-web-service-clients-in-code"></a>Aby dodać punkt końcowy WCF, który jest zgodny z ASP.NET klientami usługi sieci Web w kodzie  
+## <a name="add-an-endpoint-in-code"></a>Dodawanie punktu końcowego w kodzie  
   
 1. Tworzenie nowego <xref:System.ServiceModel.BasicHttpBinding> wystąpienia  
   
@@ -29,7 +30,7 @@ Aby skonfigurować punkt końcowy usługi Windows Communication Foundation (WCF)
   
 4. Włącz punkt końcowy metadanych HTTP/GET dla usługi. Aby uzyskać szczegółowe informacje, zobacz [Jak: Publikowanie metadanych dla usługi przy użyciu kodu](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).  
   
-### <a name="to-add-a-wcf-endpoint-that-is-compatible-with-aspnet-web-service-clients-in-a-configuration-file"></a>Aby dodać punkt końcowy WCF zgodny z ASP.NET klientami usługi sieci Web w pliku konfiguracyjnym  
+## <a name="add-an-endpoint-in-a-configuration-file"></a>Dodawanie punktu końcowego w pliku konfiguracyjnym  
   
 1. Utwórz <xref:System.ServiceModel.BasicHttpBinding> nową konfigurację powiązania. Aby uzyskać szczegółowe informacje, zobacz [Jak: Określanie powiązania usługi w konfiguracji](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   

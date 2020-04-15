@@ -1,21 +1,21 @@
 ---
 title: dotnet sln, polecenie
-description: Polecenie dotnet-sln zapewnia wygodną opcję dodawania, usuwania i wystawiania projektów w pliku rozwiązania.
+description: Polecenie dotnet-sln zapewnia wygodną opcję dodawania, usuwania i listy projektów w pliku rozwiązania.
 ms.date: 02/14/2020
-ms.openlocfilehash: b2455c04a46b2a10b8142d8ddc2d8129f2154b27
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 615e25e30a63b6ca36d9898cfcde565053830572
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77543485"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389638"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
-**Ten artykuł dotyczy:** ✔️ .NET Core 2.x SDK i nowszych wersji
+**Ten artykuł dotyczy:** ✔️ .NET Core 2.x SDK i nowszych wersjach
 
 ## <a name="name"></a>Nazwa
 
-`dotnet sln`- Wyświetla listę lub modyfikuje projekty w pliku rozwiązania .NET Core.
+`dotnet sln`- Wyświetla lub modyfikuje projekty w pliku rozwiązania .NET Core.
 
 ## <a name="synopsis"></a>Streszczenie
 
@@ -25,9 +25,9 @@ dotnet sln [<SOLUTION_FILE>] [command] [-h|--help]
 
 ## <a name="description"></a>Opis
 
-Polecenie `dotnet sln` zapewnia wygodny sposób wystawiania i modyfikowania projektów w pliku rozwiązania.
+Polecenie `dotnet sln` zapewnia wygodny sposób listy i modyfikowania projektów w pliku rozwiązania.
 
-Aby użyć `dotnet sln` polecenia, plik rozwiązania musi już istnieć. Jeśli chcesz go utworzyć, użyj polecenia [dotnet new,](dotnet-new.md) jak w poniższym przykładzie:
+Aby użyć `dotnet sln` polecenia, plik rozwiązania musi już istnieć. Jeśli chcesz go utworzyć, użyj nowego polecenia [dotnet,](dotnet-new.md) jak w poniższym przykładzie:
 
 ```dotnetcli
 dotnet new sln
@@ -37,13 +37,13 @@ dotnet new sln
 
 - **`SOLUTION_FILE`**
 
-  Plik rozwiązania do użycia. Jeśli ten argument zostanie pominięty, polecenie przeszukuje bieżący katalog w poszukiwaniu jednego. Jeśli nie znajdzie żadnego pliku rozwiązania lub wielu plików rozwiązania, polecenie nie powiedzie się.
+  Plik rozwiązania do użycia. Jeśli ten argument zostanie pominięty, polecenie przeszukuje bieżący katalog dla jednego. Jeśli nie znajdzie żadnego pliku rozwiązania lub wielu plików rozwiązania, polecenie zakończy się niepowodzeniem.
 
 ## <a name="options"></a>Opcje
 
 - **`-h|--help`**
 
-  Drukuje opis sposobu używania polecenia.
+  Drukuje opis sposobu korzystania z polecenia.
 
 ## <a name="commands"></a>Polecenia
 
@@ -61,13 +61,13 @@ dotnet sln list [-h|--help]
 
 - **`SOLUTION_FILE`**
 
-  Plik rozwiązania do użycia. Jeśli ten argument zostanie pominięty, polecenie przeszukuje bieżący katalog w poszukiwaniu jednego. Jeśli nie znajdzie żadnego pliku rozwiązania lub wielu plików rozwiązania, polecenie nie powiedzie się.
+  Plik rozwiązania do użycia. Jeśli ten argument zostanie pominięty, polecenie przeszukuje bieżący katalog dla jednego. Jeśli nie znajdzie żadnego pliku rozwiązania lub wielu plików rozwiązania, polecenie zakończy się niepowodzeniem.
 
 #### <a name="options"></a>Opcje
 
 - **`-h|--help`**
 
-  Drukuje opis sposobu używania polecenia.
+  Drukuje opis sposobu korzystania z polecenia.
   
 ### `add`
 
@@ -84,25 +84,25 @@ dotnet sln add [-h|--help]
 
 - **`SOLUTION_FILE`**
 
-  Plik rozwiązania do użycia. Jeśli nie jest określony, polecenie przeszukuje bieżący katalog dla jednego i kończy się niepowodzeniem, jeśli istnieje wiele plików rozwiązania.
+  Plik rozwiązania do użycia. Jeśli jest nieokreślony, polecenie przeszukuje bieżący katalog dla jednego i kończy się niepowodzeniem, jeśli istnieje wiele plików rozwiązania.
 
 - **`PROJECT_PATH`**
 
-  Ścieżka do projektu lub projektów, aby dodać do rozwiązania. Rozszerzenia [wzorców globbing](https://en.wikipedia.org/wiki/Glob_(programming)) powłoki Unix/Linux są `dotnet sln` przetwarzane poprawnie przez polecenie.
+  Ścieżka do projektu lub projektów, aby dodać do rozwiązania. Rozszerzenia [wzorca skorupy](https://en.wikipedia.org/wiki/Glob_(programming)) Uniksa/Linuksa są `dotnet sln` przetwarzane poprawnie przez polecenie.
 
 #### <a name="options"></a>Opcje
 
 - **`-h|--help`**
 
-  Drukuje opis sposobu używania polecenia.
+  Drukuje opis sposobu korzystania z polecenia.
 
 - **`--in-root`**
 
-  Umieszcza projekty w katalogu głównym rozwiązania, zamiast tworzyć folder rozwiązania. Dostępne od sdk .NET Core 3.0.
+  Umieszcza projekty w katalogu głównym rozwiązania, zamiast tworzyć folder rozwiązania. Dostępne od .NET Core 3.0 SDK.
 
 - **`-s|--solution-folder`**
 
-  Ścieżka folderu rozwiązania docelowego, do którą chcesz dodać projekty. Dostępne od sdk .NET Core 3.0.
+  Ścieżka folderu rozwiązania docelowego, do aby dodać projekty. Dostępne od .NET Core 3.0 SDK.
 
 ### `remove`
 
@@ -119,21 +119,21 @@ dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
 
 - **`SOLUTION_FILE`**
 
-  Plik rozwiązania do użycia. Jeśli nie zostanie określony, polecenie przeszukuje bieżący katalog w poszukiwaniu jednego i nie powiedzie się, jeśli istnieje wiele plików rozwiązania.
+  Plik rozwiązania do użycia. Jeśli nie jest określony, polecenie przeszukuje bieżący katalog dla jednego i kończy się niepowodzeniem, jeśli istnieje wiele plików rozwiązania.
 
 - **`PROJECT_PATH`**
 
-  Ścieżka do projektu lub projektów, aby dodać do rozwiązania. Rozszerzenia [wzorców globbing](https://en.wikipedia.org/wiki/Glob_(programming)) powłoki Unix/Linux są `dotnet sln` przetwarzane poprawnie przez polecenie.
+  Ścieżka do projektu lub projektów, aby dodać do rozwiązania. Rozszerzenia [wzorca skorupy](https://en.wikipedia.org/wiki/Glob_(programming)) Uniksa/Linuksa są `dotnet sln` przetwarzane poprawnie przez polecenie.
 
 #### <a name="options"></a>Opcje
 
 - **`-h|--help`**
 
-  Drukuje opis sposobu używania polecenia.
+  Drukuje opis sposobu korzystania z polecenia.
 
 ## <a name="examples"></a>Przykłady
 
-- Lista projektów w rozwiązaniu:
+- Wymień projekty w rozwiązaniu:
 
   ```dotnetcli
   dotnet sln todo.sln list
@@ -169,14 +169,26 @@ dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
   dotnet sln todo.sln remove todo-app/todo-app.csproj back-end/back-end.csproj
   ```
 
-- Dodaj wiele projektów Języka C# do rozwiązania przy użyciu wzorca globbing (tylko Unix/Linux):
+- Dodaj wiele projektów języka C# do rozwiązania przy użyciu wzorca globbingu (tylko Unix/Linux):
 
   ```dotnetcli
   dotnet sln todo.sln add **/*.csproj
   ```
 
-- Usuń wiele projektów Języka C# z rozwiązania przy użyciu wzorca globbing (tylko Unix/Linux):
+- Dodaj wiele projektów języka C# do rozwiązania przy użyciu wzorca globbing (tylko program Windows PowerShell):
+
+  ```dotnetcli
+  dotnet sln todo.sln add (ls **/*.csproj)
+  ```
+
+- Usuń wiele projektów języka C# z rozwiązania przy użyciu wzorca globbingu (tylko Unix/Linux):
 
   ```dotnetcli
   dotnet sln todo.sln remove **/*.csproj
+  ```
+
+- Usuń wiele projektów języka C# z rozwiązania przy użyciu wzorca globbing (tylko program Windows PowerShell):
+
+  ```dotnetcli
+  dotnet sln todo.sln remove (ls **/*.csproj)
   ```

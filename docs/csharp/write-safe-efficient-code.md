@@ -1,15 +1,15 @@
 ---
 title: Pisanie bezpiecznego i wydajnego kodu C#
 description: Ostatnie ulepszenia języka C# umożliwiają pisanie weryfikowalny kod bezpieczny, który wydajność wcześniej skojarzone z niebezpiecznym kodem.
-ms.date: 10/23/2018
+ms.date: 03/17/2020
 ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: 365320fef5a2f9cd123086c1baed9a786ede9f05
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: dc697d822c4d471d2b67ce074ab9af8fc2724b23
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345078"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389679"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Pisanie bezpiecznego i wydajnego kodu C#
 
@@ -22,7 +22,7 @@ W tym artykule skupiono się na technikach efektywnego zarządzania zasobami. Je
 W tym artykule skupiono się na następujących technikach zarządzania zasobami:
 
 - Zadeklaruj a [`readonly struct`](language-reference/builtin-types/struct.md#readonly-struct) wyrazić, że typ jest **niezmienny**. Dzięki temu kompilator może zapisywać [`in`](language-reference/keywords/in-parameter-modifier.md) kopie obronne podczas korzystania z parametrów.
-- Jeśli typ nie może być niezmienne, zadeklarować `struct` członków, `readonly` aby wskazać, że element członkowski nie modyfikuje stanu.
+- Jeśli typ nie może być niezmienne, zadeklarować `struct` członków, [`readonly`](language-reference/builtin-types/struct.md#readonly-instance-members) aby wskazać, że element członkowski nie modyfikuje stanu.
 - Użyj [`ref readonly`](language-reference/keywords/ref.md#reference-return-values) zwracanego, gdy zwracana wartość jest `struct` większa niż <xref:System.IntPtr.Size?displayProperty=nameWithType> i okres istnienia magazynu jest większy niż metoda zwracająca wartość.
 - Gdy rozmiar a `readonly struct` jest <xref:System.IntPtr.Size?displayProperty=nameWithType>większy niż , należy `in` przekazać go jako parametr ze względu na wydajność.
 - Nigdy nie `struct` przekazuje `in` jako parametr, chyba `readonly` że jest zadeklarowany `readonly` za pomocą modyfikatora lub metoda wywołuje tylko członków struktury. Naruszenie tych wskazówek może negatywnie wpłynąć na wydajność i może prowadzić do niejasnego zachowania.
@@ -113,7 +113,7 @@ public struct Point3D
 
 W poprzednim przykładzie przedstawiono wiele lokalizacji, `readonly` w których można zastosować modyfikator: metody, właściwości i akcesory właściwości. Jeśli używasz właściwości automatycznie implementowane, kompilator dodaje `readonly` `get` modyfikator do akcesora dla właściwości odczytu i zapisu. Kompilator dodaje `readonly` modyfikator do automatycznie implementowanych deklaracji właściwości dla `get` właściwości tylko akcesor.
 
-Dodanie `readonly` modyfikatora do elementów członkowskich, które nie mutują stanu zapewnia dwie powiązane korzyści. Po pierwsze kompilator wymusza intencji. Ten element członkowski nie może mutować stanu struktury ani nie może uzyskać `readonly`dostępu do elementu członkowskiego, który nie jest również oznaczony. Po drugie kompilator nie utworzy `in` kopii obronnych `readonly` parametrów podczas uzyskiwania dostępu do elementu członkowskiego. Kompilator można dokonać tej optymalizacji bezpiecznie, ponieważ gwarantuje, że nie `struct` jest modyfikowany przez element członkowski. `readonly`
+Dodanie `readonly` modyfikatora do elementów członkowskich, które nie mutują stanu zapewnia dwie powiązane korzyści. Po pierwsze kompilator wymusza intencji. Ten element członkowski nie może mutować stanu struktury. Po drugie kompilator nie utworzy `in` kopii obronnych `readonly` parametrów podczas uzyskiwania dostępu do elementu członkowskiego. Kompilator można dokonać tej optymalizacji bezpiecznie, ponieważ gwarantuje, że nie `struct` jest modyfikowany przez element członkowski. `readonly`
 
 ## <a name="use-ref-readonly-return-statements-for-large-structures-when-possible"></a>Jeśli `ref readonly return` to możliwe, używaj instrukcji dla dużych struktur
 

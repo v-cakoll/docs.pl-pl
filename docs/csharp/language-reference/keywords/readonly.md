@@ -1,18 +1,18 @@
 ---
 title: readonly keyword - C# Reference
-ms.date: 03/26/2020
+ms.date: 04/14/2020
 f1_keywords:
 - readonly_CSharpKeyword
 - readonly
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: 344d5e54fcd500e283c52fa7953c6366823f13f0
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 03b0aa63eda3e7a9d8745baaa33479fd5e85b01b
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345149"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389054"
 ---
 # <a name="readonly-c-reference"></a>readonly (odwołanie w C#)
 
@@ -29,7 +29,7 @@ Słowo `readonly` kluczowe jest modyfikatorem, który może być używany w czte
   > Zewnętrznie widoczny typ, który zawiera zewnętrznie widoczne pole tylko do odczytu, które jest modyfikowalnym typem odwołania, może być luką w zabezpieczeniach i może wywołać ostrzeżenie [CA2104](/visualstudio/code-quality/ca2104) : "Nie zgłaszaj tylko do odczytu typów odwołań modyfikowalnych."
 
 - W `readonly struct` definicji `readonly` typu wskazuje, że typ struktury jest niezmienny. Aby uzyskać więcej [ `readonly` ](../builtin-types/struct.md#readonly-struct) informacji, zobacz sekcję struktury [struktury struktury typów](../builtin-types/struct.md) artykułu.
-- W [ `readonly` definicji](#readonly-member-examples) `readonly` elementu członkowskiego wskazuje, `struct` że element członkowski a nie mutuje stan wewnętrzny struktury.
+- W deklaracji elementu członkowskiego wystąpienia `readonly` w typie struktury wskazuje, że element członkowski wystąpienia nie modyfikuje stanu struktury. Aby uzyskać więcej [ `readonly` ](../builtin-types/struct.md#readonly-instance-members) informacji, zobacz sekcję członków wystąpienia w artykule [Typy struktury.](../builtin-types/struct.md)
 - W [ `ref readonly` powrocie](#ref-readonly-return-example)metody `readonly` modyfikator wskazuje, że metoda zwraca odwołanie i zapisy nie są dozwolone do tego odwołania.
 
 `readonly struct` Konteksty `ref readonly` i zostały dodane w języku C# 7.2. `readonly`elementy strukturyzowania zostały dodane w języku C# 8.0
@@ -72,56 +72,11 @@ zostanie wyświetlony komunikat o błędzie kompilatora:
 
 **Nie można przypisać pola tylko do odczytu (z wyjątkiem konstruktora lub inicjatora zmiennej)**
 
-## <a name="readonly-member-examples"></a>Readonly przykłady członków
-
-Innym razem można utworzyć strukturę, która obsługuje mutację. W takich przypadkach kilka członków wystąpienia prawdopodobnie nie będzie modyfikować stan wewnętrzny struktury. Można zadeklarować te elementy `readonly` członkowskie wystąpienia za pomocą modyfikatora. Kompilator wymusza intencji. Jeśli ten element członkowski modyfikuje stan bezpośrednio lub uzyskuje `readonly` dostęp do elementu członkowskiego, który nie jest również zadeklarowany za pomocą modyfikatora, wynikiem jest błąd w czasie kompilacji. Modyfikator `readonly` jest `struct` prawidłowy `class` w `interface` deklaracjach elementów członkowskich, nie lub członkowskich.
-
-Zyskujesz dwie zalety, `readonly` stosując modyfikator do odpowiednich `struct` metod. Co najważniejsze kompilator wymusza intencji. Kod, który modyfikuje stan `readonly` nie jest prawidłowy w metodzie. Kompilator może również korzystać z modyfikatora, `readonly` aby włączyć optymalizacje wydajności. Gdy `struct` duże typy `in` są przekazywane przez odwołanie, kompilator musi wygenerować kopię obronną, jeśli stan struktury może być modyfikowany. Jeśli `readonly` tylko elementy członkowskie są dostępne, kompilator nie może utworzyć kopii obronnej.
-
-Modyfikator `readonly` jest prawidłowy dla `struct`większości elementów członkowskich , <xref:System.Object?displayProperty=nameWithType>w tym metod, które zastępują metody zadeklarowane w . Istnieją pewne ograniczenia:
-
-- Nie można zadeklarować `readonly` metod statycznych lub właściwości.
-- Nie można zadeklarować `readonly` konstruktorów.
-
-`readonly` Modyfikator można dodać do właściwości lub deklaracji indeksatora:
-
-```csharp
-readonly public int Counter
-{
-  get { return 0; }
-  set {} // not useful, but legal
-}
-```
-
-Modyfikator można również dodać `get` `set` do poszczególnych lub akcesorów właściwości lub indeksatora: `readonly`
-
-```csharp
-public int Counter
-{
-  readonly get { return _counter; }
-  set { _counter = value; }
-}
-int _counter;
-```
-
-Nie można dodać `readonly` modyfikatora do właściwości i co najmniej jednego z akcesorów tej samej właściwości. To samo ograniczenie dotyczy indeksatorów.
-
-Kompilator niejawnie `readonly` stosuje modyfikator do właściwości automatycznie implementowane, gdzie kompilator zaimplementowany kod nie modyfikuje stanu. Jest to równoważne z następującymi deklaracjami:
-
-```csharp
-public readonly int Index { get; }
-// Or:
-public int Number { readonly get; }
-public string Message { readonly get; set; }
-```
-
-`readonly` Modyfikator można dodać w tych lokalizacjach, ale nie będzie miał znaczącego wpływu. `readonly` Modyfikator nie może być dodawany do zestawu właściwości zaimplementowanych automatycznie ani do właściwości automatycznie implementowanych odczytu/zapisu.
-
 ## <a name="ref-readonly-return-example"></a>Ref readonly return example (Przykład zwrotu tylko w celu odesłania)
 
 Modyfikator `readonly` na `ref return` wskazuje, że zwracanego odwołania nie można zmodyfikować. Poniższy przykład zwraca odwołanie do pochodzenia. Używa modyfikatora, `readonly` aby wskazać, że wywołujący nie można zmodyfikować pochodzenia:
 
-[!code-csharp[readonly struct example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyReturn)]
+[!code-csharp[readonly return example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyReturn)]
 
 Zwracany typ nie musi być `readonly struct`. Każdy typ, który `ref` może zostać `ref readonly`zwrócony przez może być zwrócony przez .
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: 61527e51ea4d28cfe4589f6bed32b3c505443c22
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 4591175da5078a194bfe69884701e5432a0c38a3
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121170"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389726"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Opracowywanie i wdrażanie usług danych WCF
 
@@ -42,7 +42,7 @@ Podczas tworzenia usługi danych WCF jako ASP.NET aplikacji lub ASP.NET witryny 
 
 1. **Lokalny serwer usług IIS**
 
-     Podczas tworzenia usługi danych, która jest ASP.NET aplikacji lub ASP.NET witryny sieci Web, która działa w internetowych usługach informacyjnych (IIS), zaleca się opracowanie i przetestowanie usługi danych przy użyciu usług IIS na komputerze lokalnym. Uruchamianie usługi danych na serwerze IIS ułatwia śledzenie żądań HTTP podczas debugowania. Pozwala również wstępnie określić niezbędne uprawnienia wymagane przez program IIS przy uzyskiwaniu dostępu do plików, baz danych i innych zasobów wymaganych przez usługę danych. Aby uruchomić usługę danych w usługach IIS, należy upewnić się, że zarówno usługi IIS, jak i Windows Communication Foundation (WCF) są poprawnie zainstalowane i skonfigurowane oraz zapewniają dostęp do kont usług IIS w systemie plików i bazach danych. Aby uzyskać więcej informacji, zobacz [Jak: Tworzenie usługi danych WCF uruchomionej na usługach IIS](how-to-develop-a-wcf-data-service-running-on-iis.md).
+     Podczas tworzenia usługi danych, która jest ASP.NET aplikacji lub ASP.NET witryny sieci Web, która działa w internetowych usługach informacyjnych (IIS), zaleca się opracowanie i przetestowanie usługi danych przy użyciu usług IIS na komputerze lokalnym. Uruchamianie usługi danych na serwerze IIS ułatwia śledzenie żądań HTTP podczas debugowania. Pozwala również wstępnie określić niezbędne uprawnienia wymagane przez program IIS przy uzyskiwaniu dostępu do plików, baz danych i innych zasobów wymaganych przez usługę danych. Aby uruchomić usługę danych w usługach IIS, upewnij się, że zarówno usługi IIS, jak i Windows Communication Foundation (WCF) są poprawnie zainstalowane i skonfigurowane, a także udziel dostępu do kont usług IIS w systemie plików i bazach danych. Aby uzyskać więcej informacji, zobacz [Jak: Tworzenie usługi danych WCF uruchomionej na usługach IIS](how-to-develop-a-wcf-data-service-running-on-iis.md).
 
     > [!NOTE]
     > Należy uruchomić program Visual Studio z uprawnieniami administratora, aby umożliwić środowisku programistycznemu konfigurowanie lokalnego serwera usług IIS.
@@ -61,7 +61,7 @@ Podczas tworzenia usługi danych WCF jako ASP.NET aplikacji lub ASP.NET witryny 
 
     - Ten serwer nie oferuje dodatkowych funkcji programu IIS, takich jak uwierzytelnianie.
 
-    - Ten serwer nie może obsługiwać fragmentarażowanych strumieni HTTP, które są wysyłane jako domyślne przez klienta usług danych WCF podczas uzyskiwania dostępu do dużych danych binarnych z usługi danych. Aby uzyskać więcej informacji, zobacz [Dostawca przesyłania strumieniowego](streaming-provider-wcf-data-services.md).
+    - Ten serwer nie może obsługiwać fragmentowanych strumieni HTTP, które są domyślnie wysyłane przez klienta usług danych WCF podczas uzyskiwania dostępu do dużych danych binarnych z usługi danych. Aby uzyskać więcej informacji, zobacz [Dostawca przesyłania strumieniowego](streaming-provider-wcf-data-services.md).
 
     - Ten serwer ma problemy z`.`przetwarzaniem znaku kropki ( ) w adresie URL, mimo że ten znak jest obsługiwany przez usługi danych WCF w wartościach klucza.
 
@@ -74,11 +74,11 @@ Podczas tworzenia usługi danych WCF jako ASP.NET aplikacji lub ASP.NET witryny 
 
 ### <a name="development-tips"></a>Porady dotyczące projektowania
 
-Podczas projektowania usługi danych należy wziąć pod uwagę następujące kwestie:
+Podczas tworzenia usługi danych należy wziąć pod uwagę następujące kwestie:
 
-- Określ wymagania zabezpieczeń usługi danych, jeśli planujesz uwierzytelnianie użytkowników lub ograniczenie dostępu w przypadku określonych użytkowników. Aby uzyskać więcej informacji, zobacz [zabezpieczanie usług danych WCF](securing-wcf-data-services.md).
+- Jeśli planujesz uwierzytelnić użytkowników lub ograniczyć dostęp dla określonych użytkowników, należy określić wymagania dotyczące zabezpieczeń usługi danych. Aby uzyskać więcej informacji, zobacz [zabezpieczanie usług danych WCF](securing-wcf-data-services.md).
 
-- Program inspekcji HTTP może być bardzo pomocny podczas debugowania usługi danych, umożliwiając inspekcję zawartości komunikatów żądań i odpowiedzi. Dowolnego analizatora pakietów sieciowych, który może wyświetlać pakiety nieprzetworzone, można używać do inspekcji żądań HTTP i odpowiedzi z usługi danych.
+- Program inspekcji HTTP może być przydatny podczas debugowania usługi danych, umożliwiając sprawdzanie zawartości komunikatów żądania i odpowiedzi. Dowolnego analizatora pakietów sieciowych, który może wyświetlać pakiety nieprzetworzone, można używać do inspekcji żądań HTTP i odpowiedzi z usługi danych.
 
 - Podczas debugowania usługi danych, można uzyskać więcej informacji o błędzie z usługi danych niż podczas normalnej operacji. Dodatkowe informacje o błędzie można uzyskać z <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> usługi <xref:System.Data.Services.DataServiceConfiguration> danych, ustawiając właściwość w do `true` i ustawiając <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> właściwość <xref:System.ServiceModel.Description.ServiceDebugBehavior> atrybutu w klasie usługi danych na . `true` Aby uzyskać więcej informacji, zobacz post [Debugowanie usług danych WCF](https://docs.microsoft.com/archive/blogs/phaniraj/debugging-wcf-data-services). Można również włączyć śledzenie w WCF, aby wyświetlić wyjątki wywoływane w warstwie wiadomości HTTP. Aby uzyskać więcej informacji, zobacz [Konfigurowanie śledzenia](../../wcf/diagnostics/tracing/configuring-tracing.md).
 

@@ -1,21 +1,21 @@
 ---
 title: Typy wbudowane — odwołanie do języka C#
-description: Naucz się wbudowanych typów wartości i odwołań języka C#
+description: Poznaj wbudowaną wartość i typy odwołań w języku C#
 ms.date: 02/04/2020
 helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: 4f748373350ed0596a5f1d595c273243ae3227c3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf8823c6674b1ff3f0028a50df8ce8d0f803cfc1
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77095310"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389491"
 ---
 # <a name="built-in-types-c-reference"></a>Typy wbudowane (odwołanie do języka C#)
 
-W poniższej tabeli wymieniono wbudowane typy [wartości](value-types.md) języka C#:
+W poniższej tabeli wymieniono wbudowane [typy wartości](value-types.md) języka C#:
 
 |Słowo kluczowe typu C#|Typ .NET|
 |--------------|-------------------------|
@@ -47,8 +47,10 @@ int a = 123;
 System.Int32 b = 123;
 ```
 
+Słowo [`void`](void.md) kluczowe reprezentuje brak typu. Używasz go jako typ zwracany metody, która nie zwraca wartości.
+
 ## <a name="see-also"></a>Zobacz też
 
 - [Dokumentacja języka C#](../index.md)
-- [Domyślne wartości typów Języka C#](default-values.md)
+- [Domyślne wartości typów języka C#](default-values.md)
 - [`dynamic`Słowa kluczowego](reference-types.md#the-dynamic-type)

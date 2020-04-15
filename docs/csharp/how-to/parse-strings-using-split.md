@@ -9,14 +9,14 @@ helpviewer_keywords:
 - parse strings
 ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 ms.custom: mvc
-ms.openlocfilehash: fb11ff59705188f9425beedfbbbf3c244d21f587
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: cf8307517213b54041b272843232eb595660b2e9
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121507"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389503"
 ---
-# <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>Jak przeanalizować ciągi przy użyciu String.Split (Przewodnik c#)
+# <a name="how-to-parse-strings-using-stringsplit-in-c"></a>Jak przeanalizować ciągi za pomocą String.Split w C\#
 
 Metoda <xref:System.String.Split%2A?displayProperty=nameWithType> tworzy tablicę podciągów przez podzielenie ciągu wejściowego na podstawie jednego lub więcej ograniczników. Często jest to najprostszy sposób na oddzielenie ciągu od granic wyrazu. Jest również używany do dzielenia ciągów na inne określone znaki lub ciągi.
 
@@ -26,11 +26,11 @@ Poniższy kod dzieli wspólną frazę na tablicę ciągów dla każdego wyrazu.
 
 [!code-csharp-interactive[split strings on word boundaries](../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs#1)]
 
-Każde wystąpienie znaku separatora tworzy wartość w zwróconej tablicy. Kolejne znaki separatora tworzą pusty ciąg jako wartość w zwróconej tablicy.  Można to zobaczyć w poniższym przykładzie, który używa spacji jako separatora:
+Każde wystąpienie znaku separatora tworzy wartość w zwróconej tablicy. Kolejne znaki separatora tworzą pusty ciąg jako wartość w zwróconej tablicy. Można zobaczyć, jak pusty ciąg jest tworzony w poniższym przykładzie, który używa znaku spacji jako separator.
 
 [!code-csharp-interactive[split strings with repeated separators](../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs#2)]
 
-To zachowanie ułatwia formatom, takim jak pliki wartości oddzielonych przecinkami (CSV) reprezentujące dane tabelaryczne. Kolejne przecinki reprezentują pustą kolumnę.
+To zachowanie ułatwia formatom, takim jak pliki csv (wartości oddzielone przecinkami) reprezentujące dane tabelaryczne. Kolejne przecinki reprezentują pustą kolumnę.
 
 Można przekazać parametr <xref:System.StringSplitOptions.RemoveEmptyEntries?displayProperty=nameWithType> opcjonalny, aby wykluczyć wszelkie puste ciągi w zwróconej tablicy. Dla bardziej skomplikowanego przetwarzania zwróconej kolekcji, można użyć [LINQ](../programming-guide/concepts/linq/index.md) do manipulowania sekwencji wyników.
 

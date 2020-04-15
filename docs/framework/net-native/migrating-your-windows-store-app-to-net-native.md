@@ -2,12 +2,12 @@
 title: Migrowanie aplikacji ze Sklepu Windows do architektury .NET Native
 ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-ms.openlocfilehash: 36f9ac4647b349ff379869f3415a5fb9e55228e3
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 987669fc51eeaf7e3bdef3e91a2f1ce23164a055
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81241948"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389701"
 ---
 # <a name="migrate-your-windows-store-app-to-net-native"></a>Migrowanie aplikacji ze Sklepu Windows do macierzystej platformy .NET
 
@@ -85,7 +85,7 @@ W .NET native:
 
 - <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType>i <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> dołączyć ukryte elementy członkowskie w klasach podstawowych i w związku z tym mogą być zastąpione bez jawnych zastąpienia. Dotyczy to również innych metod [RuntimeReflectionExtensions.GetRuntime*.](xref:System.Reflection.RuntimeReflectionExtensions)
 
-- <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType>i <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> nie zawiedziej podczas próby utworzenia pewnych kombinacji (na przykład tablicy byrefs).
+- <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType>i <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> nie zawiedziej podczas próby utworzenia pewnych kombinacji `byref` (na przykład tablicy obiektów).
 
 - Nie można użyć odbicia do wywoływania elementów członkowskich, które mają parametry wskaźnika.
 
@@ -117,7 +117,7 @@ W poniższych sekcjach lista nieobsługiwane scenariusze i interfejsy API dla og
 
 - Jeśli zastąpisz <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> i <xref:System.ValueType.GetHashCode%2A?displayProperty=nameWithType> metody dla typu wartości, nie należy wywoływać implementacji klasy podstawowej. W aplikacji .NET dla Sklepu Windows te metody opierają się na odbiciu. W czasie kompilacji .NET Native generuje implementację, która nie opiera się na odbicie środowiska uruchomieniowego. Oznacza to, że jeśli nie zastąpisz tych dwóch metod, będą działać zgodnie z oczekiwaniami, ponieważ .NET Native generuje implementację w czasie kompilacji. Jednak zastąpienie tych metod, ale wywołanie implementacji klasy podstawowej powoduje wyjątek.
 
-- Typy wartości większe niż jeden megabajt nie są obsługiwane.
+- Typy wartości większe niż 1 megabajt nie są obsługiwane.
 
 - Typy wartości nie mogą mieć konstruktora bez parametrów w .NET Native. (C# i Visual Basic zabraniają konstruktorów bez parametrów na typach wartości. Można je jednak utworzyć w IL.)
 
@@ -225,7 +225,7 @@ W .NET native:
 - <xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType>
 - <xref:System.Runtime.InteropServices.VarEnum?displayProperty=nameWithType>
 
- <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType>jest obsługiwany, ale zgłasza wyjątek w niektórych scenariuszach, takich jak gdy jest używany z [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) lub byref wariantów.
+ <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType>jest obsługiwany, ale zgłasza wyjątek w niektórych scenariuszach, takich jak gdy `byref` jest używany z [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) lub wariantów.
 
  Przestarzałe interfejsy API dla obsługi [funkcji IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) obejmują:
 
@@ -324,7 +324,7 @@ Jednak .NET Native nie obsługuje następujących czynności:
 
 - Implementowanie <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> interfejsu w typie zarządzanym
 
-- Implementowanie interfejsu [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) na typ <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType> zarządzany za pomocą atrybutu. Należy jednak pamiętać, że nie można `IDispatch`wywołać obiektów COM za `IDispatch`pośrednictwem obiektu, a obiekt zarządzany nie może zaimplementować .
+- Implementowanie interfejsu [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) na typ <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType> zarządzany za pomocą atrybutu. Nie można jednak wywołać obiektów `IDispatch`COM za pośrednictwem obiektu, `IDispatch`a obiekt zarządzany nie może zaimplementować.
 
 Za pomocą odbicia do wywołania platformy wywołać metodę nie jest obsługiwany. Można obejść to ograniczenie, zawijając wywołanie metody w innej metodzie i za pomocą odbicia, aby zamiast tego wywołać otokę.
 
@@ -332,7 +332,7 @@ Za pomocą odbicia do wywołania platformy wywołać metodę nie jest obsługiwa
 
 ### <a name="other-differences-from-net-apis-for-windows-store-apps"></a>Inne różnice w porównaniu z interfejsami API platformy .NET dla aplikacji ze Sklepu Windows
 
-W tej sekcji wymieniono pozostałe interfejsy API, które nie są obsługiwane w programie .NET Native. Największy zestaw nieobsługiwał interfejsów API są interfejsy API programu Windows Communication Foundation (WCF).
+W tej sekcji wymieniono pozostałe interfejsy API, które nie są obsługiwane w programie .NET Native. Największy zestaw nieobsługiwał interfejsów API jest Windows Communication Foundation (WCF) interfejsów API.
 
 **Usługi DataAnnotations (System.ComponentModel.DataAnnotations)**
 
@@ -396,7 +396,7 @@ Klasa `System.Net.Http.RtcRequestFactory` nie jest obsługiwana w .NET Native.
 
 **Windows Communication Foundation (WCF) (System.ServiceModel.\*)**
 
-Typy w [przestrzeniach nazw System.ServiceModel.*](xref:System.ServiceModel) nie są obsługiwane w obszarze .NET Native. Obejmują one następujące typy:
+Typy w [przestrzeniach nazw System.ServiceModel.*](xref:System.ServiceModel) nie są obsługiwane w obszarze .NET Native. Należą do nich następujące typy:
 
 - <xref:System.ServiceModel.ActionNotSupportedException?displayProperty=nameWithType>
 - <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>

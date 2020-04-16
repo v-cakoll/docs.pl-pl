@@ -119,7 +119,7 @@
       href: programming-guide/types/index.md
     - name: Typy referencyjne dopuszczające wartość null
       href: nullable-references.md
-    - name: Opisywanie interfejsów API dopuszczających wartość null przy użyciu atrybutów i ograniczeń
+    - name: Aktualizowanie podpisów interfejsu API na potrzeby odwołań dopuszczających wartość null
       href: nullable-attributes.md
     - name: Namespaces
       href: programming-guide/namespaces/index.md
@@ -355,16 +355,10 @@
               href: programming-guide/concepts/attributes/index.md
             - name: Tworzenie atrybutów niestandardowych
               href: programming-guide/concepts/attributes/creating-custom-attributes.md
-            - name: AttributeUsage
-              href: programming-guide/concepts/attributes/attributeusage.md
             - name: Dostęp do atrybutów przy użyciu odbicia
               href: programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md
             - name: Sposób tworzenia złożenia C/C++ za pomocą atrybutów
               href: programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md
-            - name: Atrybuty wspólne
-              href: programming-guide/concepts/attributes/common-attributes.md
-        - name: Informacje o wywołującym
-          href: programming-guide/concepts/caller-information.md
         - name: Kolekcje
           href: programming-guide/concepts/collections.md
         - name: Kowariancja i kontrawariancja
@@ -1664,6 +1658,19 @@
           href: language-reference/tokens/interpolated.md
         - name: '@ — identyfikator dosłownego wyrażenia'
           href: language-reference/tokens/verbatim.md
+    - name: Atrybuty odczytywane przez kompilator
+      items:
+        - name: Atrybuty globalne
+          displayName: 'AssemblyName, AssemblyVersion, AssemblyCulture, AssemblyFlags, AssemblyProduct, AssemblyTrademark, AssemblyInformationalVersion, AssemblyCompany, AssemblyCopyright, AssemblyFileVersion, CLSCompliant, AssemblyTitle, AssemblyDescription, AssemblyConfiguration, AssemblyDefaultAlias'
+        - name: Ogólne
+          displayName: 'Conditional, Obsolete, AttributeUsage'
+          href: language-reference/attributes/general.md
+        - name: Informacje o wywołującym
+          displayName: 'CallerFilePath, CallerLineNumber, CallerMemberName'
+          href: language-reference/attributes/caller-information.md
+        - name: Analiza statyczna dopuszczająca wartość null
+          displayName: 'AllowNull, DisallowNull, MaybeNull, NotNull, MaybeNullWhen, NotNullWhen, NotNullIfNotNull, DoesNotReturn, DoesNotReturnIf'
+          href: language-reference/attributes/nullable-analysis.md
     - name: 'Dyrektywy preprocesora języka C#'
       items:
         - name: Omówienie

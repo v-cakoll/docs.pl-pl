@@ -74,6 +74,8 @@
           href: ../../../../_csharplang/proposals/csharp-8.0/ranges.md
         - name: Instrukcja using oparta na wzorcach i jej deklaracje
           href: ../../../../_csharplang/proposals/csharp-8.0/using.md
+        - name: Statyczne funkcje lokalne
+          href: ../../../../_csharplang/proposals/csharp-8.0/static-local-functions.md
         - name: Przypisanie łączące o wartości null
           href: ../../../../_csharplang/proposals/csharp-8.0/null-coalescing-assignment.md
         - name: Elementy członkowskie wystąpień tylko do odczytu

@@ -2,14 +2,14 @@
 title: dotnet nuget enable source, polecenie
 description: Polecenie dotnet nuget enable source umożliwia istniejące źródło w plikach konfiguracyjnych NuGet.
 ms.date: 03/20/2020
-ms.openlocfilehash: 1f18e7db6a6c8631bb432676dd97dabfad5b0ab8
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 38fb5917361bd7952fef9c31ed897fb81f005155
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80148562"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463559"
 ---
-# <a name="dotnet-nuget-enable-source"></a>dotnet nuget włączyć źródło
+# <a name="dotnet-nuget-enable-source"></a>dotnet nuget enable source
 
 **Ten artykuł dotyczy:** ✔️.NET Core 3.1.200 SDK i nowszych wersjach
 
@@ -20,8 +20,9 @@ ms.locfileid: "80148562"
 ## <a name="synopsis"></a>Streszczenie
 
 ```dotnetcli
-dotnet nuget enable source <NAME> [--configfile]
-dotnet nuget enable source [-h|--help]
+dotnet nuget enable source <NAME> [--configfile <FILE>]
+
+dotnet nuget enable source -h|--help
 ```
 
 ## <a name="description"></a>Opis
@@ -36,7 +37,7 @@ Polecenie `dotnet nuget enable source` włącza istniejące źródło w plikach 
 
 ## <a name="options"></a>Opcje
 
-- **`--configfile`**
+- **`--configfile <FILE>`**
 
   Plik konfiguracyjny NuGet. Jeśli zostanie określony, będą używane tylko ustawienia z tego pliku. Jeśli nie zostanie określona, zostanie użyta hierarchia plików konfiguracyjnych z bieżącego katalogu. Aby uzyskać więcej informacji, zobacz [typowe konfiguracje NuGet](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior).
 

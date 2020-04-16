@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 640676b6-c75a-4ff7-aea4-b1a1524d71b2
-ms.openlocfilehash: 02e0403f9ae5bb437145fa3a015edc69b884c4d0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4e91580035d4de23ae90cd0d59a08f321ae70a1c
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185018"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464148"
 ---
 # <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>Instrukcje: Tworzenie tokenu kontekstu zabezpieczeń dla bezpiecznej sesji
 Za pomocą tokenu kontekstu zabezpieczeń stanowego (SCT) w bezpiecznej sesji, sesja może wytrzymać usługi są poddawane recyklingowi. Na przykład, gdy bezstanowy SCT jest używany w bezpiecznej sesji i internet information services (IIS) jest resetowany, a następnie dane sesji, który jest skojarzony z usługą jest tracona. Te dane sesji obejmują pamięć podręczną tokenów SCT. Tak więc następnym razem, gdy klient wysyła usługę bezstanowy SCT, zwracany jest błąd, ponieważ nie można pobrać klucza skojarzonego z SCT. Jeśli jednak używany jest stanowy SCT, klucz, który jest skojarzony z SCT jest zawarty w SCT. Ponieważ klucz jest zawarty w SCT i w związku z tym zawarte w wiadomości, bezpiecznej sesji nie ma wpływu na usługi są poddawane recyklingowi. Domyślnie Windows Communication Foundation (WCF) używa bezstanowych SCT w bezpiecznej sesji. W tym temacie szczegółowo opisano, jak używać stanowych SCT w bezpiecznej sesji.  
@@ -32,6 +32,7 @@ Za pomocą tokenu kontekstu zabezpieczeń stanowego (SCT) w bezpiecznej sesji, s
   
         ```xml  
         <customBinding>  
+        </customBinding>
         ```  
   
     2. Dodaj [ \<element](../../configure-apps/file-schema/wcf/bindings.md) podrzędny wiązania>do [ \<niestandardowego>. ](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
@@ -40,6 +41,7 @@ Za pomocą tokenu kontekstu zabezpieczeń stanowego (SCT) w bezpiecznej sesji, s
   
         ```xml  
         <binding name="StatefulSCTSecureSession">  
+        </binding>
         ```  
   
     3. Określ tryb uwierzytelniania wiadomości wysyłanych do i z tej usługi, dodając [ \<element podrzędny>zabezpieczeń](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) do [ \<niestandardowego>. ](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
@@ -48,7 +50,8 @@ Za pomocą tokenu kontekstu zabezpieczeń stanowego (SCT) w bezpiecznej sesji, s
   
         ```xml  
         <security authenticationMode="SecureConversation"  
-                  requireSecurityContextCancellation="false">  
+                  requireSecurityContextCancellation="false">
+        </security>
         ```  
   
     4. Określ sposób uwierzytelniania klienta podczas ustanawiania bezpiecznej sesji, dodając [ \<element podrzędny secureConversationBootstrap>](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) do [ \<>zabezpieczeń ](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md).  
@@ -103,7 +106,7 @@ Za pomocą tokenu kontekstu zabezpieczeń stanowego (SCT) w bezpiecznej sesji, s
         <security
             requireSecurityContextCancellation="false">  
               <secureConversationBootstrap />  
-      </security>  
+        </security>  
     <httpTransport />  
   </binding>  
 </customBinding>  

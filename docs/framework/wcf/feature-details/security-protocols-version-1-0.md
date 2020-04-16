@@ -2,12 +2,12 @@
 title: Protokoły zabezpieczeń wersja 1.0
 ms.date: 03/30/2017
 ms.assetid: ee3402d2-1076-410b-a3cb-fae0372bd7af
-ms.openlocfilehash: 2014e1f6f8fefa89ed44bd820c3712617ff51470
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0b86d870350d8728134cd2b42bbeb232183535bc
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184524"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463803"
 ---
 # <a name="security-protocols-version-10"></a>Protokoły zabezpieczeń wersja 1.0
 Protokoły zabezpieczeń usług sieci Web zapewniają mechanizmy zabezpieczeń usług sieci Web, które obejmują wszystkie istniejące wymagania dotyczące zabezpieczeń obsługi wiadomości w przedsiębiorstwie. W tej sekcji opisano szczegóły programu Windows Communication Foundation (WCF) <xref:System.ServiceModel.Channels.SecurityBindingElement>w wersji 1.0 (zaimplementowane w ) dla następujących protokołów zabezpieczeń usług sieci Web.  
@@ -62,7 +62,7 @@ Protokoły zabezpieczeń usług sieci Web zapewniają mechanizmy zabezpieczeń u
   
  WCF wykorzystuje WS-SecureConversation do zapewnienia bezpiecznej obsługi sesji w celu ochrony wymiany wielu komunikatów między aplikacjami.  Zobacz "Bezpieczne sesje" poniżej, aby uzyskać szczegółowe informacje na temat implementacji.  
   
- Oprócz trybów uwierzytelniania WCF udostępnia ustawienia do kontrolowania typowych mechanizmów ochrony, które mają zastosowanie do większości trybów uwierzytelniania opartych na zabezpieczeniach wiadomości, na przykład: kolejność podpisu i operacje szyfrowania, zestawy algorytmów, wyprowadzanie kluczy i potwierdzenie podpisu.  
+ Oprócz trybów uwierzytelniania WCF udostępnia ustawienia do kontrolowania typowych mechanizmów ochrony, które mają zastosowanie do większości trybów uwierzytelniania opartych na zabezpieczeniach wiadomości, na przykład: kolejność podpisu i operacji szyfrowania, zestawy algorytmów, wyprowadzanie kluczy i potwierdzenie podpisu.  
   
  W tym dokumencie są używane następujące prefiksy i przestrzenie nazw.  
   
@@ -137,7 +137,7 @@ Protokoły zabezpieczeń usług sieci Web zapewniają mechanizmy zabezpieczeń u
  Obecność sygnatury <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> czasowej <xref:System.ServiceModel.Channels.SecurityBindingElement> jest kontrolowana przy użyciu właściwości klasy. WCF zawsze serializuje wsse:TimeStamp z wsse:Created i wsse:Expires fields. Sygnatura czasowa wsse:Timestamp jest zawsze podpisywane podczas podpisywania jest używany.  
   
 ### <a name="22-protection-order"></a>2.2 Nakaz ochrony  
- WCF obsługuje kolejność ochrony wiadomości "Sign Before Encrypt" i "Encrypt Before Sign" (Zasady zabezpieczeń 1.1). "Sign Before Encrypt" jest zalecane z powodów takich jak: wiadomości chronione szyfruj przed podpisaniem są otwarte dla ataków substytucyjnych podpisu, chyba że używany jest mechanizm SignatureConfirmation w ramach WS-Security 1.1, a podpis za pomocą zaszyfrowanej zawartości tworzy audytu.  
+ WCF obsługuje kolejność ochrony wiadomości "Sign Before Encrypt" i "Encrypt Before Sign" (Zasady zabezpieczeń 1.1). "Sign Before Encrypt" jest zalecane z powodów, w tym: wiadomości chronione za pomocą szyfruj przed znakiem są otwarte dla ataków podstawienia podpisu, chyba że używany jest mechanizm SignatureConfirmation w ramach WS-Security 1.1, a podpis za pomocą zaszyfrowanej zawartości utrudnia inspekcję.  
   
 ### <a name="23-signature-protection"></a>2.3 Ochrona podpisu  
  Gdy encrypt before sign jest używany, zaleca się, aby chronić podpis, aby zapobiec atakom siłowych w celu odgadnięcia zaszyfrowanej zawartości lub klucza podpisywania (zwłaszcza gdy niestandardowy token jest używany ze słabym materiałem klucza).  
@@ -250,7 +250,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
   <wsu:Timestamp u:Id="_0">  
   ...  
   </wsu:Timestamp>  
-  <wsse:UsernameToken ... >  
+  <wsse:UsernameToken>  
   ...  
   </wsse:UsernameToken>  
 </wsse:Security>  
@@ -437,7 +437,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
   <wsu:Timestamp>  
   ...  
   </wsu:Timestamp>  
-  <saml:Assertion ...>  
+  <saml:Assertion>  
   ...  
   </saml:Assertion>  
   <ds:Signature>  
@@ -947,7 +947,7 @@ Ochrona tokenu: Fałsz
   
  Szyfruj podpis: True  
   
- Powyższe tryby uwierzytelniania różnią się tylko tokenami pomocniczymi, których używają. AnonymousForCertificate nie ma żadnych tokenów pomocniczych, MutualCertificate WSS 1.1 ma certyfikat X509 klienta jako tokeny wspierające, UserNameForCertificate ma token UserName jako podpisany token pomocniczy i IssuedTokenForCertificate ma wystawiony token jako token pomocniczy.  
+ Powyższe tryby uwierzytelniania różnią się tylko tokenami pomocniczymi, których używają. AnonymousForCertificate nie ma żadnych tokenów pomocniczych, MutualCertificate WSS 1.1 ma certyfikat X509 klienta jako tokeny pomocnicze, UserNameForCertificate ma token username jako podpisany token pomocniczy i IssuedTokenForCertificate ma wystawiony token jako token wspierający.  
   
  Zasady  
   
@@ -1856,7 +1856,7 @@ Ochrona tokenu: Fałsz
         <wsp:Policy>  
           <sp:ProtectionToken>  
             <wsp:Policy>  
-              <mssp:SslContextToken sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient' />  
+              <mssp:SslContextToken sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient'>  
                 <wsp:Policy>  
                   <sp:RequireDerivedKeys />
                 </wsp:Policy>  

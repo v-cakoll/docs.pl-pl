@@ -2,12 +2,12 @@
 title: 'Instrukcje: używanie filtrów'
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-ms.openlocfilehash: f99c2af623dacac3ebe46422815a7f42e2a4df2c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 34ea961b0ef5db51efcae0b86f2c06171d6d756c
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184816"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464101"
 ---
 # <a name="how-to-use-filters"></a>Instrukcje: używanie filtrów
 W tym temacie opisano podstawowe kroki wymagane do utworzenia konfiguracji routingu, która używa wielu filtrów. W tym przykładzie wiadomości są kierowane do dwóch implementacji usługi kalkulatora, regularCalc i roundingCalc. Obie implementacje obsługują te same operacje; jednak jedna usługa zaokrągla wszystkie obliczenia do najbliższej wartości całkowitej przed zwróceniem. Aplikacja kliencka musi być w stanie wskazać, czy ma być używana wersja zaokrąglania usługi; jeśli nie preferencje usługi jest wyrażona, a następnie komunikat jest równoważenie obciążenia między dwiema usługami. Operacje udostępniane przez obie usługi są następujące:  
@@ -24,7 +24,7 @@ W tym temacie opisano podstawowe kroki wymagane do utworzenia konfiguracji routi
   
 ### <a name="determine-unique-data"></a>Określanie unikatowych danych  
   
-1. Ponieważ obie implementacje usługi obsługują te same operacje i są zasadniczo identyczne inne niż dane, które zwracają, dane podstawowe zawarte w wiadomościach wysyłanych z aplikacji klienckich nie są wystarczająco unikatowe, aby umożliwić określenie sposobu rozsyłania Żądanie. Ale jeśli aplikacja kliencka dodaje unikatową wartość nagłówka do wiadomości, można użyć tej wartości, aby określić, jak wiadomość powinna być kierowana.  
+1. Ponieważ obie implementacje usługi obsługują te same operacje i są zasadniczo identyczne inne niż dane, które zwracają, dane podstawowe zawarte w komunikatach wysyłanych z aplikacji klienckich nie jest wystarczająco unikatowy, aby umożliwić określenie sposobu kierowania żądania. Ale jeśli aplikacja kliencka dodaje unikatową wartość nagłówka do wiadomości, można użyć tej wartości, aby określić, jak wiadomość powinna być kierowana.  
   
      W tym przykładzie, jeśli aplikacja kliencka wymaga, aby komunikat został przetworzony przez kalkulator zaokrąglania, dodaje niestandardowy nagłówek przy użyciu następującego kodu:  
   
@@ -35,7 +35,7 @@ W tym temacie opisano podstawowe kroki wymagane do utworzenia konfiguracji routi
   
      Teraz można użyć filtru XPath do sprawdzania wiadomości dla tego nagłówka i wysyłać komunikaty zawierające nagłówek do usługi roundCalc.  
   
-2. Ponadto usługa routingu udostępnia dwa wirtualne punkty końcowe usługi, które mogą być używane z filtrami EndpointName, EndpointAddress lub PrefixEndpointAddress, aby jednoznacznie kierować przychodzące wiadomości do określonej implementacji kalkulatora na podstawie punktu końcowego wniosek, do którego wniosek składa wniosek.  
+2. Ponadto usługa routingu udostępnia dwa punkty końcowe usługi wirtualnej, które mogą być używane z EndpointName, EndpointAddress lub PrefixEndpointAddress filtrów jednoznacznie trasy przychodzące wiadomości do implementacji określonego kalkulatora na podstawie punktu końcowego, do którego aplikacja kliencka przesyła żądanie.  
   
 ### <a name="define-endpoints"></a>Definiowanie punktów końcowych  
   
@@ -180,7 +180,7 @@ W tym temacie opisano podstawowe kroki wymagane do utworzenia konfiguracji routi
                 <add filterName="XPathFilter" endpointName="roundingCalcEndpoint" priority="2"/>  
               </entries>  
             </table>  
-          <filterTables>  
+          </filterTables>  
     </routing>  
     ```  
   

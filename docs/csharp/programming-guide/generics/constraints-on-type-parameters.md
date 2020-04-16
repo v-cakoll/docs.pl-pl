@@ -1,98 +1,103 @@
 ---
-title: Ograniczenia parametrów typu - Przewodnik programowania C#
+title: Ograniczenia dotyczące parametrów typu — Przewodnik programowania języka C#
 ms.date: 04/12/2018
 helpviewer_keywords:
 - generics [C#], type constraints
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 76cd00b9c84f128d2a181115293df910d8deb6cb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2962de53eab132ad02aaf679fdd6037bd24fa714
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399799"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463886"
 ---
-# <a name="constraints-on-type-parameters-c-programming-guide"></a>Ograniczenia parametrów typu (Przewodnik programowania C#)
+# <a name="constraints-on-type-parameters-c-programming-guide"></a>Ograniczenia dotyczące parametrów typu (Przewodnik programowania języka C#)
 
-Ograniczenia informują kompilator o możliwościach, które musi mieć argument typu. Bez żadnych ograniczeń argument typu może być dowolny typ. Kompilator może tylko <xref:System.Object?displayProperty=nameWithType>przyjąć członków , który jest ostateczną klasą podstawową dla dowolnego typu .NET. Aby uzyskać więcej informacji, zobacz [Dlaczego warto używać ograniczeń](#why-use-constraints). Jeśli kod klienta próbuje utworzyć wystąpienie klasy przy użyciu typu, który nie jest dozwolony przez ograniczenie, wynik jest błąd w czasie kompilacji. Ograniczenia są określane przy `where` użyciu kontekstowe słowo kluczowe. W poniższej tabeli wymieniono siedem typów ograniczeń:
+Ograniczenia informują kompilator o możliwościach, które musi mieć argument typu. Bez żadnych ograniczeń argument typu może być dowolnego typu. Kompilator może przyjąć tylko <xref:System.Object?displayProperty=nameWithType>członków , który jest ostateczną klasą podstawową dla dowolnego typu .NET. Aby uzyskać więcej informacji, zobacz [Dlaczego należy używać ograniczeń](#why-use-constraints). Jeśli kod klienta używa typu, który nie spełnia ograniczenia, kompilator generuje błąd. Ograniczenia są określone przy `where` użyciu kontekstowego słowa kluczowego. W poniższej tabeli wymieniono siedem typów ograniczeń:
 
 |Ograniczenie|Opis|
 |----------------|-----------------|
-|`where T : struct`|Argument typu musi być typem wartości niepodlegających wartości null. Aby uzyskać informacje o typach wartości nullable, zobacz [Typy wartości nullable](../../language-reference/builtin-types/nullable-value-types.md). Ponieważ wszystkie typy wartości mają dostępny konstruktor bezparametrów, `struct` ograniczenie implikuje `new()` ograniczenie i `new()` nie można połączyć z ograniczeniem. Nie można również `struct` połączyć ograniczenia `unmanaged` z ograniczeniem.|
-|`where T : class`|Argument typu musi być typem odwołania. To ograniczenie dotyczy również dowolnej klasy, interfejsu, delegata lub typu tablicy.|
-|`where T : notnull`|Argument typu musi być typem niepodlegającym null. Argument może być typem odwołania niedopuszczającym do wartości null w języku C# 8.0 lub nowszym lub typem wartości niepodlegających zerwaniu. To ograniczenie dotyczy również dowolnej klasy, interfejsu, delegata lub typu tablicy.|
-|`where T : unmanaged`|Argument typu musi być [typem niepodlegającym](../../language-reference/builtin-types/unmanaged-types.md)null. Ograniczenie `unmanaged` oznacza `struct` ograniczenie i nie można łączyć z `struct` lub `new()` ograniczenia.|
-|`where T : new()`|Argument typu musi mieć konstruktora public parameterless. W połączeniu `new()` z innymi ograniczeniami ograniczenie musi być określone jako ostatnie. Ograniczenia `new()` nie można łączyć z ograniczeniami `struct` `unmanaged` i.|
-|`where T :`*nazwa klasy podstawowej>\<*|Argument typu musi być lub pochodzić z określonej klasy podstawowej.|
-|`where T :`nazwa interfejsu>* \<*|Argument typu musi być lub zaimplementować określony interfejs. Można określić wiele ograniczeń interfejsu. Interfejs ograniczający może być również ogólny.|
-|`where T : U`|Argument typu podany dla T musi być lub pochodzić z argumentu dostarczonego dla U.|
+|`where T : struct`|Argument typu musi być typem wartości nienastępulnej. Aby uzyskać informacje o typach wartości, które można do wartości null, zobacz [Typy wartości możliwe do wartości null](../../language-reference/builtin-types/nullable-value-types.md). Ponieważ wszystkie typy wartości mają dostępne `struct` bez parametrów `new()` konstruktora, ograniczenie `new()` implikuje ograniczenie i nie można połączyć z ograniczeniem. Nie można również połączyć `struct` ograniczenia `unmanaged` z ograniczeniem.|
+|`where T : class`|Argument typu musi być typem odwołania. To ograniczenie dotyczy również dowolnej klasy, interfejsu, delegata lub typu tablicy. W kontekście nullable w języku C# 8.0 lub nowszym, `T` musi być typem odwołania niepodjętego do wartości null. |
+|`where T : class?`|Argument typu musi być typem odwołania, można anulować lub nie można anulować. To ograniczenie dotyczy również dowolnej klasy, interfejsu, delegata lub typu tablicy.|
+|`where T : notnull`|Argument typu musi być typem nienastępalnym. Argument może być typu odwołania niepodwymiernego w języku C# 8.0 lub nowszym lub typu wartości nienastępu. |
+|`where T : unmanaged`|Argument typu musi być [typem niezarządzanym](../../language-reference/builtin-types/unmanaged-types.md)bez wartości null. Ograniczenie `unmanaged` implikuje `struct` ograniczenie i nie można ich `struct` łączyć z ograniczeniami lub ograniczeniami. `new()`|
+|`where T : new()`|Argument typu musi mieć publiczny konstruktor bez parametrów. W połączeniu z innymi `new()` ograniczeniami, ograniczenie musi być określony jako ostatni. Ograniczenia `new()` nie można łączyć `struct` z `unmanaged` ograniczeniami i ograniczeniami.|
+|`where T :`*nazwa klasy podstawowej>\<*|Argument typu musi być lub pochodzić z określonej klasy podstawowej. W kontekście nullable w języku C# 8.0 i nowszych, `T` musi być typu odwołania nienastępne null pochodną określonej klasy podstawowej. |
+|`where T :`*nazwa klasy podstawowej>? \<*|Argument typu musi być lub pochodzić z określonej klasy podstawowej. W kontekście nullable w języku C# 8.0 i nowszych, `T` może być typu nullable lub niedopuszczania do null pochodzi od określonej klasy podstawowej. |
+|`where T :`>nazwa interfejsu * \<*|Argument typu musi być lub implementować określony interfejs. Można określić wiele ograniczeń interfejsu. Interfejs ograniczający może być również ogólny. W kontekście nullable w języku C# 8.0 i nowszych, musi być typu niedopuszczania do wartości null, `T` który implementuje określony interfejs.|
+|`where T :`nazwa interfejsu>? * \<*|Argument typu musi być lub implementować określony interfejs. Można określić wiele ograniczeń interfejsu. Interfejs ograniczający może być również ogólny. W kontekście nullable w języku C# `T` 8.0, może być typu odwołania nullable, typu odwołania niepodjętego do null lub typu wartości. `T`może nie być typem wartości możliwej do wartości null.|
+|`where T : U`|Podany argument `T` typu musi być lub pochodzić `U`z argumentu dostarczonego dla . W kontekście nullable, jeśli `U` jest typem `T` odwołania niepodjętego do wartości null, musi być typem odwołania niepodjętego do null. Jeśli `U` jest typem odwołania `T` do nullable, może być nullable lub nie nullable. |
 
-## <a name="why-use-constraints"></a>Dlaczego warto używać ograniczeń
+## <a name="why-use-constraints"></a>Dlaczego warto korzystać z ograniczeń
 
-Ograniczając parametr type, można zwiększyć liczbę dozwolonych operacji i wywołań metody do tych obsługiwanych przez typ ograniczający i wszystkie typy w hierarchii dziedziczenia. Podczas projektowania ogólnych klas lub metod, jeśli będziesz wykonywać dowolną operację na członków ogólnych <xref:System.Object?displayProperty=nameWithType>poza proste przypisania lub wywołanie jakichkolwiek metod nie obsługiwane przez , należy zastosować ograniczenia do parametru typu. Na przykład ograniczenie klasy podstawowej informuje kompilator, że tylko obiekty tego typu lub pochodzące z tego typu będą używane jako argumenty typu. Gdy kompilator ma tę gwarancję, może zezwolić na metody tego typu, które mają być wywoływane w klasie ogólnej. W poniższym przykładzie kodu przedstawiono funkcje, `GenericList<T>` które można dodać do klasy (w [wprowadzenie do ogólnych)](../../../standard/generics/index.md)przez zastosowanie ograniczenia klasy podstawowej.
+Ograniczenia określają możliwości i oczekiwania parametru typu. Deklarowanie tych ograniczeń oznacza, że można użyć operacji i wywołań metody typu ograniczającego. Jeśli klasa lub metoda rodzajowa używa dowolnej operacji na ogólne elementy członkowskie <xref:System.Object?displayProperty=nameWithType>poza proste przypisanie lub wywołanie żadnych metod nie jest obsługiwany przez , trzeba będzie zastosować ograniczenia do parametru typu. Na przykład ograniczenie klasy podstawowej informuje kompilator, że tylko obiekty tego typu lub pochodne tego typu będą używane jako argumenty typu. Gdy kompilator ma tę gwarancję, można zezwolić na metody tego typu, które mają być wywoływane w klasie rodzajowej. Poniższy przykład kodu pokazuje funkcje, które `GenericList<T>` można dodać do klasy (w [wprowadzenie do generics)](../../../standard/generics/index.md)stosując ograniczenie klasy podstawowej.
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#9)]
 
-Ograniczenie umożliwia klasy ogólnej do `Employee.Name` korzystania z właściwości. Ograniczenie określa, że wszystkie elementy `T` typu są gwarantowane jako `Employee` obiekt lub obiekt, `Employee`który dziedziczy z .
+Ograniczenie umożliwia klasy ogólnej do `Employee.Name` korzystania z właściwości. Ograniczenie określa, że wszystkie `T` elementy typu są gwarantowane jako `Employee` obiekt lub `Employee`obiekt, który dziedziczy z .
 
 Wiele ograniczeń można zastosować do tego samego parametru typu, a same ograniczenia mogą być typami ogólnymi w następujący sposób:
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#10)]
 
-Podczas stosowania `where T : class` ograniczenia, należy `==` unikać `!=` i operatorów na parametr typu, ponieważ te operatory będą testować tylko dla tożsamości odniesienia, a nie dla równości wartości. To zachowanie występuje, nawet jeśli te operatory są przeciążone w typie, który jest używany jako argument. Poniższy kod ilustruje ten punkt; dane wyjściowe jest false, mimo <xref:System.String> `==` że klasa przeciąża operatora.
+Podczas stosowania `where T : class` ograniczenia, należy `==` `!=` unikać i operatorów na parametr typu, ponieważ te operatory będą testować tylko tożsamości odwołania, a nie dla równości wartości. To zachowanie występuje, nawet jeśli te operatory są przeciążone w typie, który jest używany jako argument. Poniższy kod ilustruje ten punkt; dane wyjściowe jest <xref:System.String> false, mimo `==` że klasa przeciąża operatora.
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#11)]
 
-Kompilator wie `T` tylko, że jest typem odwołania w czasie kompilacji i musi używać domyślnych operatorów, które są prawidłowe dla wszystkich typów odwołań. Jeśli należy przetestować równości wartości, zalecanym sposobem `where T : IEquatable<T>` jest `where T : IComparable<T>` również zastosowanie lub ograniczenie i zaimplementować interfejs w dowolnej klasie, która będzie używana do konstruowania klasy ogólnej.
+Kompilator wie `T` tylko, że jest typem odwołania w czasie kompilacji i musi używać domyślnych operatorów, które są prawidłowe dla wszystkich typów odwołań. Jeśli należy przetestować pod kątem równości wartości, `where T : IEquatable<T>` zalecanym sposobem jest również zastosowanie lub `where T : IComparable<T>` ograniczenie i zaimplementowanie interfejsu w dowolnej klasie, która będzie używana do konstruowania klasy ogólnej.
 
 ## <a name="constraining-multiple-parameters"></a>Ograniczanie wielu parametrów
 
-Ograniczenia do wielu parametrów i wiele wiązań można zastosować do jednego parametru, jak pokazano w poniższym przykładzie:
+Ograniczenia można zastosować do wielu parametrów i wielu ograniczeń do pojedynczego parametru, jak pokazano w poniższym przykładzie:
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#12)]
 
-## <a name="unbounded-type-parameters"></a>Parametry typu niezwiązanego
+## <a name="unbounded-type-parameters"></a>Parametry typu bez ograniczeń
 
- Parametry typu, które nie mają żadnych ograniczeń, takie jak T w klasie `SampleClass<T>{}`publicznej, są nazywane parametrami typu niezwiązanego. Parametry typu niezwiązanego mają następujące reguły:
+ Parametry typu, które nie mają żadnych ograniczeń, takie jak T w klasie `SampleClass<T>{}`publicznej, są nazywane parametrami typu niezwiązanych. Parametry typu niezwiązany mają następujące reguły:
 
-- `!=` Operatory `==` i nie mogą być używane, ponieważ nie ma gwarancji, że konkretny argument typu będzie obsługiwać te operatory.
-- Można je konwertować na `System.Object` i z lub jawnie konwertowane na dowolny typ interfejsu.
-- Można porównać je z [wartością null](../../language-reference/keywords/null.md). Jeśli parametr niezwiązany jest `null`porównywany do , porównanie zawsze zwraca false, jeśli argument typu jest typem wartości.
+- I `!=` `==` operatorów nie można używać, ponieważ nie ma gwarancji, że argument typu betonu będzie obsługiwać tych operatorów.
+- Mogą one być konwertowane do i z `System.Object` lub jawnie konwertowane na dowolny typ interfejsu.
+- Można je porównać z [wartością null](../../language-reference/keywords/null.md). Jeśli parametr niezwiązany `null`jest porównywany do , porównanie zawsze zwróci false, jeśli argument typu jest typem wartości.
 
-## <a name="type-parameters-as-constraints"></a>Wpisywanie parametrów jako ograniczeń
+## <a name="type-parameters-as-constraints"></a>Parametry typu jako wiązania
 
-Użycie parametru typu ogólnego jako ograniczenia jest przydatne, gdy funkcja elementu członkowskiego z własnym parametrem type musi ograniczyć ten parametr do parametru typu typu zawierającego, jak pokazano w poniższym przykładzie:
+Użycie parametru typu ogólnego jako ograniczenia jest przydatne, gdy funkcja elementu członkowskiego z własnym parametrem typu musi ograniczyć ten parametr do parametru typu typu zawierającego, jak pokazano w poniższym przykładzie:
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#13)]
 
-W poprzednim przykładzie `T` jest ograniczenie typu w kontekście `Add` metody i parametr typu nieograniczonego w `List` kontekście klasy.
+W poprzednim przykładzie `T` jest ograniczenie typu w `Add` kontekście metody i parametr typu nieograniczonego `List` w kontekście klasy.
 
-Parametry typu mogą być również używane jako ograniczenia w ogólnych definicjach klas. Parametr typu musi być zadeklarowany w nawiasach kątowych wraz z innymi parametrami typu:
+Parametry typu mogą być również używane jako wiązania w definicjach klas ogólnych. Parametr typu musi być zadeklarowany w nawiasach kątowych wraz z innymi parametrami typu:
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#14)]
 
-Przydatność parametrów typu jako ograniczeń z klasami ogólnymi jest ograniczona, ponieważ kompilator nie może zakładać nic o parametrze typu, z wyjątkiem, że pochodzi z `System.Object`. Użyj parametrów typu jako ograniczeń dla klas ogólnych w scenariuszach, w których chcesz wymusić relację dziedziczenia między dwoma parametrami typu.
+Przydatność parametrów typu jako ograniczenia z klasami ogólnymi jest ograniczona, ponieważ kompilator `System.Object`nie może zakładać nic o parametrze typu, z wyjątkiem tego, że pochodzi on od . Użyj parametrów typu jako ograniczeń klas ogólnych w scenariuszach, w których chcesz wymusić relację dziedziczenia między dwoma parametrami typu.
 
 ## <a name="notnull-constraint"></a>Ograniczenie NotNull
 
-Począwszy od języka C# 8.0, można użyć `notnull` ograniczenia, aby określić, że argument typu musi być typem wartości niepodlegającym wartości null lub typem odwołania niepodlegającym zerowaniu. Ograniczenie `notnull` może być używane tylko `nullable enable` w kontekście. Kompilator generuje ostrzeżenie, jeśli `notnull` dodasz ograniczenie w kontekście nullable nieświadomych.
+Począwszy od języka C# 8.0 w kontekście nullable, można użyć `notnull` ograniczenia, aby określić, że argument typu musi być typu wartości nienastępujących do wartości null lub typu odwołania niepodjęwalnego. Ograniczenie `notnull` może być używane `nullable enable` tylko w kontekście. Kompilator generuje ostrzeżenie, jeśli `notnull` dodasz ograniczenie w kontekście nullable nieświadomy.
 
-W przeciwieństwie do innych ograniczeń, `notnull` gdy argument typu narusza ograniczenie, kompilator generuje `nullable enable` ostrzeżenie, gdy ten kod jest kompilowany w kontekście. Jeśli kod jest kompilowany w kontekście nullable nieświadomych, kompilator nie generuje żadnych ostrzeżeń lub błędów.
+W przeciwieństwie do innych ograniczeń, gdy `notnull` argument typu narusza ograniczenie, kompilator generuje ostrzeżenie, gdy ten kod jest kompilowany w `nullable enable` kontekście. Jeśli kod jest kompilowany w kontekście nullable nieświadomy, kompilator nie generuje żadnych ostrzeżeń lub błędów.
+
+Począwszy od języka C# 8.0 `class` w kontekście nullable, ograniczenie określa, że argument typu musi być typu odwołania nie można anulować. W kontekście nullable, gdy parametr typu jest typem odwołania do wartości null, kompilator generuje ostrzeżenie.
 
 ## <a name="unmanaged-constraint"></a>Ograniczenie niezarządzane
 
-Począwszy od języka C# 7.3, można użyć `unmanaged` ograniczenia, aby określić, że parametr type musi być [typem niepodlegającym](../../language-reference/builtin-types/unmanaged-types.md)null. Ograniczenie `unmanaged` umożliwia pisanie procedur wielokrotnego użytku do pracy z typami, które mogą być manipulowane jako bloki pamięci, jak pokazano w poniższym przykładzie:
+Począwszy od języka C# 7.3, można użyć `unmanaged` ograniczenia, aby określić, że parametr typu musi być [typem niezarządzanym bez](../../language-reference/builtin-types/unmanaged-types.md)wartości null. Ograniczenie `unmanaged` umożliwia pisanie procedur wielokrotnegoużytnia do pracy z typami, które mogą być manipulowane jako bloki pamięci, jak pokazano w poniższym przykładzie:
 
 [!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#15)]
 
-Powyższa metoda musi być skompilowana w `unsafe` `sizeof` kontekście, ponieważ używa operatora na typ nie wiadomo, że jest typem wbudowanym. Bez `unmanaged` ograniczenia `sizeof` operator jest niedostępny.
+Poprzednia metoda musi być skompilowana w `unsafe` `sizeof` kontekście, ponieważ używa operatora na typ nie wiadomo, że jest typem wbudowanym. Bez `unmanaged` ograniczenia `sizeof` operator jest niedostępny.
 
-Ograniczenie `unmanaged` oznacza `struct` ograniczenie i nie można z nim łączyć. Ponieważ `struct` ograniczenie implikuje `new()` ograniczenie, `unmanaged` ograniczenia nie można również łączyć z `new()` ograniczeniem.
+Ograniczenie `unmanaged` implikuje `struct` ograniczenie i nie można go połączyć. Ponieważ `struct` ograniczenie implikuje `new()` ograniczenie, `unmanaged` ograniczenia nie można `new()` również łączyć z ograniczeniem.
 
-## <a name="delegate-constraints"></a>Delegowanie ograniczeń
+## <a name="delegate-constraints"></a>Delegować ograniczenia
 
-Również począwszy od Języka C# <xref:System.Delegate?displayProperty=nameWithType> 7.3, można użyć lub <xref:System.MulticastDelegate?displayProperty=nameWithType> jako ograniczenie klasy podstawowej. CLR zawsze dozwolone to ograniczenie, ale język C# nie dozwolone. Ograniczenie `System.Delegate` umożliwia pisanie kodu, który działa z delegatów w sposób bezpieczny dla typu. Poniższy kod definiuje metodę rozszerzenia, która łączy dwóch delegatów, pod warunkiem, że są one tego samego typu:
+Również począwszy od C# 7.3, można użyć <xref:System.Delegate?displayProperty=nameWithType> lub <xref:System.MulticastDelegate?displayProperty=nameWithType> jako ograniczenie klasy podstawowej. Clr zawsze dozwolone tego ograniczenia, ale język C# nie zezwala na to. Ograniczenie `System.Delegate` umożliwia pisanie kodu, który współpracuje z delegatów w sposób bezpieczny dla typu. Poniższy kod definiuje metodę rozszerzenia, która łączy dwóch delegatów, pod warunkiem, że są tego samego typu:
 
 [!code-csharp[using the delegate constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#16)]
 
@@ -100,15 +105,15 @@ Powyższa metoda służy do łączenia delegatów, które są tego samego typu:
 
 [!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#17)]
 
-Jeśli odkomentujesz ostatni wiersz, nie zostanie on skompilowany. Oba `first` `test` typy i są delegowane, ale są to różne typy delegatów.
+Jeśli uncomment ostatni wiersz, nie będzie kompilować. Oba `first` `test` i są typy delegata, ale są one różne typy delegatów.
 
 ## <a name="enum-constraints"></a>Ograniczenia wyliczenia
 
-Począwszy od C# 7.3, <xref:System.Enum?displayProperty=nameWithType> można również określić typ jako ograniczenie klasy podstawowej. CLR zawsze dozwolone to ograniczenie, ale język C# nie dozwolone. Rodzajowe `System.Enum` przy użyciu zapewniają programowanie bezpieczne dla typu `System.Enum`do buforowania wyników przy użyciu metod statycznych w programie . Poniższy przykład znajduje wszystkie prawidłowe wartości dla typu wyliczenia, a następnie tworzy słownik, który mapuje te wartości na jego reprezentację ciągu.
+Począwszy od C# 7.3, <xref:System.Enum?displayProperty=nameWithType> można również określić typ jako ograniczenie klasy podstawowej. Clr zawsze dozwolone tego ograniczenia, ale język C# nie zezwala na to. Ogólne przy `System.Enum` użyciu zapewnienia bezpiecznego dla typu programowania do `System.Enum`pamięci podręcznej wyniki przy użyciu metod statycznych w . Poniższy przykład znajduje wszystkie prawidłowe wartości dla typu wyliczenia, a następnie tworzy słownik, który mapuje te wartości do jego reprezentacji ciągu.
 
 [!code-csharp[using the enum constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#18)]
 
-Metody używane do korzystania z odbicia, co ma wpływ na wydajność. Można wywołać tę metodę do tworzenia kolekcji, która jest buforowana i ponownie używane, a nie powtarzanie wywołań, które wymagają odbicia.
+Metody stosowane do korzystania z odbicia, co ma wpływ na wydajność. Można wywołać tę metodę, aby utworzyć kolekcję, która jest buforowana i ponownie, a nie powtarzanie wywołań, które wymagają odbicia.
 
 Można go użyć, jak pokazano w poniższym przykładzie, aby utworzyć wyliczenie i utworzyć słownik jego wartości i nazw:
 
@@ -119,7 +124,7 @@ Można go użyć, jak pokazano w poniższym przykładzie, aby utworzyć wyliczen
 ## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Collections.Generic>
-- [Przewodnik programowania języka C#](../index.md)
+- [C# Przewodnik programowania](../index.md)
 - [Wprowadzenie do typów ogólnych](./index.md)
 - [Klasy ogólne](./generic-classes.md)
 - [nowe ograniczenie](../../language-reference/keywords/new-constraint.md)

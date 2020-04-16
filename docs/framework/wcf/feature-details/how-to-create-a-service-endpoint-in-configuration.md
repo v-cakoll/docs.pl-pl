@@ -2,12 +2,12 @@
 title: 'Instrukcje: tworzenie punktu końcowego usługi w konfiguracji'
 ms.date: 06/16/2016
 ms.assetid: f474e25d-2a27-4f31-84c5-395c442b8e70
-ms.openlocfilehash: 9687d9537d6f166a02b79261743050168f677261
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5935f798004de3ec049b9c9f0300675e1660f462
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184998"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464128"
 ---
 # <a name="how-to-create-a-service-endpoint-in-configuration"></a>Instrukcje: tworzenie punktu końcowego usługi w konfiguracji
 Punkty końcowe zapewniają klientom dostęp do funkcji, które oferuje usługa Windows Communication Foundation (WCF). Można zdefiniować jeden lub więcej punktów końcowych dla usługi przy użyciu kombinacji względnych i bezwzględnych adresów końcowych lub jeśli nie zdefiniowano żadnych punktów końcowych usługi, środowisko wykonawcze zapewnia niektóre domyślnie dla Ciebie. W tym temacie pokazano, jak dodać punkty końcowe przy użyciu pliku konfiguracji, który zawiera adresy względne i bezwzględne.  
@@ -25,10 +25,8 @@ Punkty końcowe zapewniają klientom dostęp do funkcji, które oferuje usługa 
   
   <system.serviceModel>  
     <services>  
-    <!-- This section is optional with the default configuration introduced  
-         in .NET Framework 4. -->  
-      <service  
-          name="Microsoft.ServiceModel.Samples.CalculatorService">  
+    <!-- This section is optional with the default configuration introduced in .NET Framework 4. -->  
+      <service name="Microsoft.ServiceModel.Samples.CalculatorService">  
         <host>  
           <baseAddresses>  
             <add baseAddress="http://localhost:8000/ServiceModelSamples/service"/>  

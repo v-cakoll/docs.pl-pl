@@ -2,12 +2,12 @@
 title: dotnet sln, polecenie
 description: Polecenie dotnet-sln zapewnia wygodną opcję dodawania, usuwania i listy projektów w pliku rozwiązania.
 ms.date: 02/14/2020
-ms.openlocfilehash: 615e25e30a63b6ca36d9898cfcde565053830572
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 231287477d986f9ec4a5404cc5278e76c297faa4
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389638"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463396"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
@@ -20,7 +20,9 @@ ms.locfileid: "81389638"
 ## <a name="synopsis"></a>Streszczenie
 
 ```dotnetcli
-dotnet sln [<SOLUTION_FILE>] [command] [-h|--help]
+dotnet sln [<SOLUTION_FILE>] [command]
+
+dotnet sln [command] -h|--help
 ```
 
 ## <a name="description"></a>Opis
@@ -76,7 +78,7 @@ Dodaje jeden lub więcej projektów do pliku rozwiązania.
 #### <a name="synopsis"></a>Streszczenie
 
 ```dotnetcli
-dotnet sln [<SOLUTION_FILE>] add [--in-root] [-s|--solution-folder] <PROJECT_PATH> [<PROJECT_PATH>...]
+dotnet sln [<SOLUTION_FILE>] add [--in-root] [-s|--solution-folder <PATH>] <PROJECT_PATH> [<PROJECT_PATH>...]
 dotnet sln add [-h|--help]
 ```
 
@@ -100,7 +102,7 @@ dotnet sln add [-h|--help]
 
   Umieszcza projekty w katalogu głównym rozwiązania, zamiast tworzyć folder rozwiązania. Dostępne od .NET Core 3.0 SDK.
 
-- **`-s|--solution-folder`**
+- **`-s|--solution-folder <PATH>`**
 
   Ścieżka folderu rozwiązania docelowego, do aby dodać projekty. Dostępne od .NET Core 3.0 SDK.
 

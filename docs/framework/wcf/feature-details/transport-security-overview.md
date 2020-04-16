@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-ms.openlocfilehash: f30b2c587d7f9b21c1f19fa1c3943621fc2607cd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6796ca0b16e65a07735aec075d63b0cdfe38d080
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184340"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464013"
 ---
 # <a name="transport-security-overview"></a>Przegląd zabezpieczeń transportu
 Mechanizmy zabezpieczeń transportu w Programie Komunikacji systemu Windows (WCF) zależą od używanego powiązania i transportu. Na przykład podczas <xref:System.ServiceModel.WSHttpBinding> korzystania z klasy transport jest HTTP, a podstawowym mechanizmem zabezpieczania transportu jest secure Sockets Layer (SSL) za pośrednictwem protokołu HTTP, powszechnie nazywany HTTPS. W tym temacie omówiono główne mechanizmy zabezpieczeń transportu używane w powiązaniach dostarczonych przez system WCF.  
   
 > [!NOTE]
-> Gdy zabezpieczenia SSL są używane z programem .NET Framework 3.5 i nowszym, klient WCF używa zarówno certyfikatów pośrednich w magazynie certyfikatów, jak i certyfikatów pośrednich otrzymanych podczas negocjacji SSL w celu przeprowadzenia sprawdzania poprawności łańcucha certyfikatów w usłudze Certyfikat. Program .NET Framework 3.0 używa tylko certyfikatów pośrednich zainstalowanych w lokalnym magazynie certyfikatów.  
+> Gdy zabezpieczenia SSL są używane z programem .NET Framework 3.5, a później klient WCF używa zarówno certyfikatów pośrednich w magazynie certyfikatów, jak i certyfikatów pośrednich otrzymanych podczas negocjacji SSL w celu przeprowadzenia sprawdzania poprawności łańcucha certyfikatów na certyfikacie usługi. Program .NET Framework 3.0 używa tylko certyfikatów pośrednich zainstalowanych w lokalnym magazynie certyfikatów.  
   
 > [!WARNING]
 > W przypadku użycia zabezpieczeń <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> transportu właściwość może zostać zastąpiona. Aby temu zapobiec, <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A?displayProperty=nameWithType> ustaw <xref:System.ServiceModel.Description.PrincipalPermissionMode.None?displayProperty=nameWithType>na . <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>jest zachowaniem usługi, które można ustawić w opisie usługi.  
@@ -46,7 +46,7 @@ Mechanizmy zabezpieczeń transportu w Programie Komunikacji systemu Windows (WCF
   
  W poniższych sekcjach omówiono inne typy poświadczeń klienta.  
   
-#### <a name="basic"></a>Podstawowa (Basic)  
+#### <a name="basic"></a>Podstawowy  
  Odpowiada to metodzie uwierzytelniania podstawowego w uzywaczu IIS. W tym trybie serwer usług IIS musi być skonfigurowany z kontami użytkowników systemu Windows i odpowiednimi uprawnieniami systemu plików NTFS. Aby uzyskać więcej informacji na temat usługi IIS 6.0, zobacz [Włączanie uwierzytelniania podstawowego i konfigurowanie nazwy obszaru](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc785293(v=ws.10)). Aby uzyskać więcej informacji na temat usługi IIS 7.0, zobacz [Konfigurowanie uwierzytelniania podstawowego (IIS 7)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772009(v=ws.10)).  
   
 #### <a name="certificate"></a>Certyfikat  
@@ -101,7 +101,7 @@ Mechanizmy zabezpieczeń transportu w Programie Komunikacji systemu Windows (WCF
    <clientCredentials>  
      <clientCertificate findValue= "101010101010101010101010101010000000000"
       storeLocation="LocalMachine" storeName="My"
-      X509FindType="FindByThumbPrint"/>  
+      X509FindType="FindByThumbPrint">  
      </clientCertificate>  
    </clientCredentials>  
  </behavior>  

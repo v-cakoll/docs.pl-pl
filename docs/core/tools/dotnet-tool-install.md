@@ -1,17 +1,17 @@
 ---
-title: polecenie instalacji narzędzia dotnet
-description: Polecenie instalacji narzędzia dotnet instaluje określone narzędzie .NET Core na komputerze.
+title: Polecenie instalacji narzędzia dotnet
+description: Polecenie instalacji narzędzia dotnet instaluje na komputerze określone narzędzie .NET Core.
 ms.date: 02/14/2020
-ms.openlocfilehash: 1e142773d1f981a8dc3b552d5a23d2864cdd82c0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 723d25caa6009288dbb55d55f173b04d7b983450
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146466"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463365"
 ---
 # <a name="dotnet-tool-install"></a>dotnet tool install
 
-**Ten artykuł dotyczy:** ✔️ .NET Core 2.1 SDK i nowszych wersji
+**Ten artykuł dotyczy:** ✔️.NET Core 2.1 SDK i nowszych wersjach
 
 ## <a name="name"></a>Nazwa
 
@@ -20,19 +20,22 @@ ms.locfileid: "79146466"
 ## <a name="synopsis"></a>Streszczenie
 
 ```dotnetcli
-dotnet tool install <PACKAGE_NAME> <-g|--global>
-    [--add-source] [--configfile] [--framework]
-    [-v|--verbosity] [--version]
+dotnet tool install <PACKAGE_NAME> -g|--global
+    [--add-source <SOURCE>] [--configfile <FILE>]
+    [--framework <FRAMEWORK>] [-v|--verbosity <LEVEL>]
+    [--version <VERSION_NUMBER>]
 
-dotnet tool install <PACKAGE_NAME> <--tool-path>
-    [--add-source] [--configfile] [--framework]
-    [-v|--verbosity] [--version]
+dotnet tool install <PACKAGE_NAME> --tool-path <PATH>
+    [--add-source <SOURCE>] [--configfile <FILE>]
+    [--framework <FRAMEWORK>] [-v|--verbosity <LEVEL>]
+    [--version <VERSION_NUMBER>]
 
 dotnet tool install <PACKAGE_NAME>
-    [--add-source] [--configfile] [--framework]
-    [-v|--verbosity] [--version]
+    [--add-source <SOURCE>] [--configfile <FILE>]
+    [--framework <FRAMEWORK>] [-v|--verbosity <LEVEL>]
+    [--version <VERSION_NUMBER>]
 
-dotnet tool install <-h|--help>
+dotnet tool install -h|--help
 ```
 
 ## <a name="description"></a>Opis
@@ -41,9 +44,9 @@ Polecenie `dotnet tool install` umożliwia zainstalowanie narzędzi .NET Core na
 
 * Aby zainstalować narzędzie globalne w lokalizacji `--global` domyślnej, użyj tej opcji.
 * Aby zainstalować narzędzie globalne w lokalizacji `--tool-path` niestandardowej, użyj tej opcji.
-* Aby zainstalować narzędzie lokalne, `--global` `--tool-path` pomiń te opcje.
+* Aby zainstalować narzędzie lokalne, `--global` pomiń opcje i `--tool-path` opcje.
 
-**Lokalne narzędzia są dostępne począwszy od .NET Core SDK 3.0.**
+**Narzędzia lokalne są dostępne począwszy od .NET Core SDK 3.0.**
 
 Narzędzia globalne są domyślnie instalowane w `-g` następujących `--global` katalogach po określeniu lub opcji:
 
@@ -74,15 +77,15 @@ Aby uzyskać więcej informacji, zobacz [Instalowanie narzędzia lokalnego](glob
 
 - **`configfile <FILE>`**
 
-  Plik konfiguracji NuGet *(nuget.config)* do użycia.
+  Plik konfiguracji NuGet (*nuget.config*).
 
 - **`framework <FRAMEWORK>`**
 
-  Określa [platformę docelową,](../../standard/frameworks.md) dla dla za pomocą narzędzia. Domyślnie zestaw SDK .NET Core próbuje wybrać najbardziej odpowiednią strukturę docelową.
+  Specifies the [target framework](../../standard/frameworks.md) to install the tool for. Domyślnie .NET Core SDK próbuje wybrać najbardziej odpowiednią platformę docelową.
 
 - **`-g|--global`**
 
-  Określa, że instalacja jest szeroka dla użytkownika. Nie można połączyć z `--tool-path` tą opcją. Pominięcie obu `--global` `--tool-path` i określa instalację narzędzia lokalnego.
+  Określa, że instalacja jest ogólna. Nie można połączyć `--tool-path` z opcją. Pominięcie obu `--global` `--tool-path` i określa instalację narzędzia lokalnego.
 
 - **`-h|--help`**
 
@@ -90,15 +93,15 @@ Aby uzyskać więcej informacji, zobacz [Instalowanie narzędzia lokalnego](glob
 
 - **`tool-path <PATH>`**
 
-  Określa lokalizację instalacji narzędzia globalnego. PATH może być bezwzględny lub względny. Jeśli PATH nie istnieje, polecenie próbuje go utworzyć. Pominięcie obu `--global` `--tool-path` i określa instalację narzędzia lokalnego.
+  Określa lokalizację, w której należy zainstalować narzędzie globalne. ŚCIEŻKA może być bezwzględna lub względna. Jeśli PATH nie istnieje, polecenie próbuje go utworzyć. Pominięcie obu `--global` `--tool-path` i określa instalację narzędzia lokalnego.
 
 - **`-v|--verbosity <LEVEL>`**
 
-  Ustawia poziom szczegółowości polecenia. Dozwolone wartości `q[uiet]` `m[inimal]`to `n[ormal]` `d[etailed]`, `diag[nostic]`, , i .
+  Ustawia poziom szczegółowości polecenia. Dozwolone wartości `q[uiet]`to `m[inimal]` `n[ormal]`, `d[etailed]`, `diag[nostic]`, i .
 
 - **`--version <VERSION_NUMBER>`**
 
-  Wersja narzędzia do zainstalowania. Domyślnie zainstalowana jest najnowsza stabilna wersja pakietu. Użyj tej opcji, aby zainstalować podgląd lub starsze wersje narzędzia.
+  Wersja narzędzia do zainstalowania. Domyślnie jest zainstalowana najnowsza stabilna wersja pakietu. Użyj tej opcji, aby zainstalować wersje zapoznawczą lub starsze.
 
 ## <a name="examples"></a>Przykłady
 
@@ -112,7 +115,7 @@ Aby uzyskać więcej informacji, zobacz [Instalowanie narzędzia lokalnego](glob
 
 - **`dotnet tool install dotnetsay --tool-path ~/bin`**
 
-  Instaluje [dotnetsay](https://www.nuget.org/packages/dotnetsay/) jako narzędzie globalne w określonym katalogu Linux / macOS.
+  Instaluje [dotnetsay](https://www.nuget.org/packages/dotnetsay/) jako narzędzie globalne w określonym katalogu Linux/macOS.
 
 - **`dotnet tool install -g dotnetsay --version 2.0.0`**
 
@@ -125,5 +128,5 @@ Aby uzyskać więcej informacji, zobacz [Instalowanie narzędzia lokalnego](glob
 ## <a name="see-also"></a>Zobacz też
 
 - [Narzędzia .NET Core](global-tools.md)
-- [Samouczek: Instalowanie i używanie globalnego narzędzia .NET Core przy użyciu procesora CLI .NET Core](global-tools-how-to-use.md)
-- [Samouczek: Instalowanie i używanie lokalnego narzędzia .NET Core przy użyciu procesora CLI .NET Core](local-tools-how-to-use.md)
+- [Samouczek: Instalowanie i używanie globalnego narzędzia .NET Core przy użyciu interfejsu wiersza polecenia .NET Core](global-tools-how-to-use.md)
+- [Samouczek: Instalowanie i używanie narzędzia lokalnego .NET Core przy użyciu interfejsu wiersza polecenia .NET Core](local-tools-how-to-use.md)

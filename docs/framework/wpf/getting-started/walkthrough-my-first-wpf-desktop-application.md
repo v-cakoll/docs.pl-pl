@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 ms.topic: tutorial
 ms.custom: mvc,vs-dotnet
-ms.openlocfilehash: 65b6fe31e86380162e90820c2cf118a9d1b96b4a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: facb9ebebd9ce1904886a946277185ac2c2e4bc4
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186584"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463924"
 ---
 # <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>Samouczek: Tworzenie pierwszej aplikacji WPF w programie Visual Studio 2019
 
-W tym artykule pokazano, jak opracować aplikację klasyczną Windows Presentation Foundation (WPF), która zawiera elementy, które są wspólne dla większości aplikacji WPF: Extensible Application Markup Language (XAML) znaczników, code-behind, definicje aplikacji, formantów, układu, powiązania danych i stylów. Aby opracować aplikację, użyjesz programu Visual Studio.
+W tym artykule pokazano, jak opracować windows presentation foundation (WPF) aplikacji klasycznej, która zawiera elementy, które są wspólne dla większości aplikacji WPF: Extensible Application Markup Language (XAML) znaczników, związanych z kodem, definicje aplikacji, formanty, układ, powiązanie danych i style. Aby opracować aplikację, użyjesz programu Visual Studio.
 
-Niniejszy samouczek zawiera informacje na temat wykonywania następujących czynności:
+Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]
 >
 > - Tworzenie projektu WPF.
@@ -293,11 +293,11 @@ W tej sekcji zaktualizujesz interfejs użytkownika strony głównej o obraz i ty
 
 1. W *`ExpenseItHome.xaml`* obszarze dodaj kolejną kolumnę <xref:System.Windows.Controls.Grid.ColumnDefinitions%2A> do kolumny o stałej liczbie <xref:System.Windows.Controls.ColumnDefinition.Width%2A> 230 pikseli:
 
-    [!code-xaml[ExpenseIt#11](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseItHome.xaml?highlight=52-55)]
+    [!code-xaml[ExpenseIt#11](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseItHome.xaml?highlight=2#NewColumn)]
 
 2. Dodaj kolejny wiersz <xref:System.Windows.Controls.Grid.RowDefinitions%2A>do , w sumie cztery wiersze:
 
-    [!code-xaml[ExpenseIt#11b](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseItHome.xaml?highlight=57-62)]
+    [!code-xaml[ExpenseIt#11b](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseItHome.xaml?highlight=2#NewRows)]
 
 3. Przenieś formanty do drugiej <xref:System.Windows.Controls.Grid.Column%2A?displayProperty=nameWithType> kolumny, ustawiając właściwość na 1 w każdym z trzech formantów (Border, ListBox i Button).
 
@@ -487,9 +487,9 @@ W tym instruktażu można dowiedzieć się wiele technik tworzenia interfejsu u�
 
 Aby uzyskać więcej informacji na temat tworzenia aplikacji, zobacz następujące tematy:
 
-- [Tworzenie aplikacji](../app-development/index.md)
-- [Kontrolki](../controls/index.md)
-- [Omówienie powiązania danych](../../../desktop-wpf/data/data-binding-overview.md)
+- [Opracowywanie aplikacji](../app-development/index.md)
+- [Formanty](../controls/index.md)
+- [Omówienie powiązań danych](../../../desktop-wpf/data/data-binding-overview.md)
 - [Grafika i multimedia](../graphics-multimedia/index.md)
 - [Dokumenty w WPF](../advanced/documents-in-wpf.md)
 

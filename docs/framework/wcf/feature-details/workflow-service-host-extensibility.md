@@ -2,12 +2,12 @@
 title: Rozszerzalność hosta usługi przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: c0e8f7bb-cb13-49ec-852f-b85d7c23972f
-ms.openlocfilehash: 776fc78cd3f5b012dd40576fe56f71835e949708
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eb35b9211bc55ee66f5bb5600ef86f40d4145191
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184156"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464004"
 ---
 # <a name="workflow-service-host-extensibility"></a>Rozszerzalność hosta usługi przepływu pracy
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]zapewnia <xref:System.ServiceModel.Activities.WorkflowServiceHost> klasę hostingu usług przepływu pracy. Ta klasa jest używana, gdy samodzielnie hostujesz usługę przepływu pracy w aplikacji zarządzanej lub usłudze systemu Windows. Ta klasa jest również używana podczas hostowania usługi przepływu pracy za pomocą internetowych usług informacyjnych (IIS) lub usługi aktywacji procesów systemu Windows (WAS). Klasa <xref:System.ServiceModel.Activities.WorkflowServiceHost> udostępnia punkty rozszerzenia, które umożliwiają dodawanie rozszerzeń niestandardowych, zmienianie bezczynności i hostowanie przepływów pracy niezwiązanych z usługą (przepływów pracy, które nie używają działań związanych z wiadomością).  
@@ -43,6 +43,7 @@ host.Description.Behaviors.Add(new WorkflowUnhandledExceptionBehavior { Action =
           <workflowUnhandledExceptionBehavior action="Abandon" />
         </behavior>  
       </serviceBehaviors>  
+</behaviors>
 ```  
   
 ## <a name="hosting-non-service-workflows"></a>Hostowanie przepływów pracy niesłużących  

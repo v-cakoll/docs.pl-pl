@@ -2,14 +2,14 @@
 title: dotnet nuget dodaj polecenie źródło
 description: Polecenie dotnet nuget add source dodaje nowe źródło pakietu do plików konfiguracyjnych NuGet.
 ms.date: 03/20/2020
-ms.openlocfilehash: c1e398699c7482a69b750cde718e6f9178b5c4bd
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 319501e026f1c3102006b0be5357f127b8e366a7
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80148569"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463602"
 ---
-# <a name="dotnet-nuget-add-source"></a>dotnet nuget dodać źródło
+# <a name="dotnet-nuget-add-source"></a>dotnet nuget add source
 
 **Ten artykuł dotyczy:** ✔️.NET Core 3.1.200 SDK i nowszych wersjach
 
@@ -20,10 +20,11 @@ ms.locfileid: "80148569"
 ## <a name="synopsis"></a>Streszczenie
 
 ```dotnetcli
-dotnet nuget add source <PACKAGE_SOURCE_PATH> [--name] [--username]
-    [--password] [--store-password-in-clear-text] [--valid-authentication-types]
-    [--configfile]
-dotnet nuget add source [-h|--help]
+dotnet nuget add source <PACKAGE_SOURCE_PATH> [--name <SOURCE_NAME>] [--username <USER>]
+    [--password <PASSWORD>] [--store-password-in-clear-text]
+    [--valid-authentication-types <TYPES>] [--configfile <FILE>]
+
+dotnet nuget add source -h|--help
 ```
 
 ## <a name="description"></a>Opis
@@ -38,15 +39,15 @@ Polecenie `dotnet nuget add source` dodaje nowe źródło pakietu do plików kon
 
 ## <a name="options"></a>Opcje
 
-- **`--configfile`**
+- **`--configfile <FILE>`**
 
   Plik konfiguracyjny NuGet. Jeśli zostanie określony, będą używane tylko ustawienia z tego pliku. Jeśli nie zostanie określona, zostanie użyta hierarchia plików konfiguracyjnych z bieżącego katalogu. Aby uzyskać więcej informacji, zobacz [typowe konfiguracje NuGet](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior).
 
-- **`-n|--name`**
+- **`-n|--name <SOURCE_NAME>`**
 
   Nazwa źródła.
 
-- **`-p|--password`**
+- **`-p|--password <PASSWORD>`**
 
   Hasło, które ma być używane podczas łączenia się z uwierzytelnionym źródłem.
 
@@ -54,11 +55,11 @@ Polecenie `dotnet nuget add source` dodaje nowe źródło pakietu do plików kon
 
   Umożliwia przechowywanie poświadczeń źródła pakietu przenośnego przez wyłączenie szyfrowania haseł.
 
-- **`-u|--username`**
+- **`-u|--username <USER>`**
 
   Nazwa użytkownika, która ma być używana podczas łączenia się z uwierzytelnionym źródłem.
 
-- **`--valid-authentication-types`**
+- **`--valid-authentication-types <TYPES>`**
 
   Oddzielona przecinkami lista prawidłowych typów uwierzytelniania dla tego źródła. Ustaw to, `basic` jeśli serwer anonsuje NTLM lub Negocjuj, a poświadczenia muszą być wysyłane przy użyciu mechanizmu Basic, na przykład podczas korzystania z pat z lokalnym serwerem Azure DevOps Server. Inne prawidłowe `negotiate` `kerberos`wartości `ntlm`to `digest`, , i , ale te wartości są mało prawdopodobne, aby być przydatne.
 

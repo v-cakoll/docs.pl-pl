@@ -1,18 +1,18 @@
 ---
 title: polecenie dotnet nuget delete
-description: Polecenie dotnet-nuget-delete usuwa lub usuwa pakiet z serwera.
+description: Polecenie dotnet-nuget-delete usuwa lub usuwa listę pakiet z serwera.
 author: karann-msft
 ms.date: 06/26/2019
-ms.openlocfilehash: 0950f03c0986bde17ae3e2e7170d402ea8222853
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4fa4f24adba251d7872986de4a8b1a63203c36c3
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76733123"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463584"
 ---
 # <a name="dotnet-nuget-delete"></a>dotnet nuget delete
 
-**Ten artykuł dotyczy:** ✔️ .NET Core 1.x SDK i nowszych wersji
+**Ten artykuł dotyczy:** ✔️.NET Core 1.x SDK i nowszych wersjach
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
@@ -20,19 +20,21 @@ ms.locfileid: "76733123"
 
 ## <a name="name"></a>Nazwa
 
-`dotnet nuget delete`- Usuwa lub usuwa pakiet z serwera.
+`dotnet nuget delete`- Usuwa lub usuwa listę pakiet z serwera.
 
 ## <a name="synopsis"></a>Streszczenie
 
 ```dotnetcli
-dotnet nuget delete [<PACKAGE_NAME> <PACKAGE_VERSION>] [--force-english-output] [--interactive] [-k|--api-key] [--no-service-endpoint]
-    [--non-interactive] [-s|--source]
-dotnet nuget delete [-h|--help]
+dotnet nuget delete [<PACKAGE_NAME> <PACKAGE_VERSION>] [--force-english-output]
+    [--interactive] [-k|--api-key <API_KEY>] [--no-service-endpoint]
+    [--non-interactive] [-s|--source <SOURCE>]
+
+dotnet nuget delete -h|--help
 ```
 
 ## <a name="description"></a>Opis
 
-Polecenie `dotnet nuget delete` usuwa lub usuwa listę pakietu z serwera. W [przypadku nuget.org](https://www.nuget.org/)akcja polega na wykreślania pakietu z listy.
+Polecenie `dotnet nuget delete` usuwa lub usuwa listę pakiet z serwera. W [przypadku nuget.org](https://www.nuget.org/)akcja polega na odsuń pakiet do wykreślenia.
 
 ## <a name="arguments"></a>Argumenty
 
@@ -56,23 +58,23 @@ Polecenie `dotnet nuget delete` usuwa lub usuwa listę pakietu z serwera. W [prz
 
 * **`--interactive`**
 
-  Umożliwia blokowanie polecenia i wymaga ręcznego działania dla operacji, takich jak uwierzytelnianie. Opcja dostępna od sdk .NET Core 2.2.
+  Umożliwia zablokowanie polecenia i wymaga ręcznej akcji dla operacji, takich jak uwierzytelnianie. Opcja dostępna od pliku .NET Core 2.2 SDK.
 
 * **`-k|--api-key <API_KEY>`**
 
-  Klucz interfejsu API dla serwera.
+  Klucz interfejsu API serwera.
 
 * **`--no-service-endpoint`**
 
-  Nie dołącza "api/v2/package" do źródłowego adresu URL. Opcja dostępna od sdk .NET Core 2.1.
+  Nie dołącza "api/v2/package" do źródłowego adresu URL. Opcja dostępna od pliku .NET Core 2.1 SDK.
 
 * **`--non-interactive`**
 
-  Nie monituje o wprowadzenie danych przez użytkownika ani potwierdzenia.
+  Nie monituje o wprowadzenie danych przez użytkownika lub potwierdzenia.
 
 * **`-s|--source <SOURCE>`**
 
-  Określa adres URL serwera. Obsługiwane adresy URL dla `https://www.nuget.org` `https://www.nuget.org/api/v3`nuget.org `https://www.nuget.org/api/v2/package`obejmują , i . W przypadku prywatnych źródeł danych należy zastąpić `%hostname%/api/v3`nazwę hosta (na przykład).
+  Określa adres URL serwera. Obsługiwane adresy URL dla nuget.org `https://www.nuget.org` `https://www.nuget.org/api/v3`obejmują `https://www.nuget.org/api/v2/package`, i . W przypadku prywatnych kanałów informacyjnych `%hostname%/api/v3`zastąp nazwę hosta (na przykład ).
 
 ## <a name="examples"></a>Przykłady
 

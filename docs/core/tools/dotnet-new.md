@@ -2,12 +2,12 @@
 title: dotnet nowe polecenie
 description: Nowe polecenie dotnet tworzy nowe projekty .NET Core na podstawie określonego szablonu.
 ms.date: 04/10/2020
-ms.openlocfilehash: 1b1a6efa7bf2753b6c23cc7af1e26867f8632b96
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 4ad0d7e54f93582237ed9457b562957018916d36
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242884"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463613"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -20,10 +20,14 @@ ms.locfileid: "81242884"
 ## <a name="synopsis"></a>Streszczenie
 
 ```dotnetcli
-dotnet new <TEMPLATE> [--dry-run] [--force] [-i|--install] [-lang|--language] [-n|--name]
-    [--nuget-source] [-o|--output] [-u|--uninstall] [--update-apply] [--update-check] [Template options]
-dotnet new <TEMPLATE> [-l|--list] [--type]
-dotnet new [-h|--help]
+dotnet new <TEMPLATE> [--dry-run] [--force] [-i|--install {PATH|NUGET_ID}]
+    [-lang|--language {C#|F#|VB}] [-n|--name <OUTPUT_NAME>]
+    [--nuget-source <SOURCE>] [-o|--output <OUTPUT_DIRECTORY>]
+    [-u|--uninstall] [--update-apply] [--update-check] [Template options]
+
+dotnet new <TEMPLATE> [-l|--list] [--type <TYPE>]
+
+dotnet new -h|--help
 ```
 
 ## <a name="description"></a>Opis
@@ -121,7 +125,7 @@ Polecenie wywołuje [aparat szablonów,](https://github.com/dotnet/templating) a
 
   Nazwa utworzonego wyjścia. Jeśli nazwa nie zostanie określona, używana jest nazwa bieżącego katalogu.
 
-- **`--nuget-source`**
+- **`--nuget-source <SOURCE>`**
 
   Określa źródło NuGet, które ma być używane podczas instalacji. Dostępne od .NET Core 2.1 SDK.
 
@@ -129,9 +133,9 @@ Polecenie wywołuje [aparat szablonów,](https://github.com/dotnet/templating) a
 
   Lokalizacja, aby umieścić wygenerowane dane wyjściowe. Ustawieniem domyślnym jest bieżący katalog.
 
-- **`--type`**
+- **`--type <TYPE>`**
 
-  Filtruje szablony na podstawie dostępnych typów. Wstępnie zdefiniowane wartości to "projekt", "element" lub "inny".
+  Filtruje szablony na podstawie dostępnych typów. Wstępnie zdefiniowane wartości `project` `item`to `other`, lub .
 
 - **`-u|--uninstall [PATH|NUGET_ID]`**
 

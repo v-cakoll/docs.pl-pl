@@ -2,16 +2,16 @@
 title: dotnet msbuild, polecenie
 description: Polecenie dotnet msbuild zapewnia dostęp do wiersza polecenia MSBuild.
 ms.date: 02/14/2020
-ms.openlocfilehash: 28a32a460d644d3e22f16b5dd9416222ae466e2e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 88e85868e2d7de564b2e4c90ce6e78bde4cb350e
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503675"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463627"
 ---
 # <a name="dotnet-msbuild"></a>dotnet msbuild
 
-**Ten artykuł dotyczy:** ✔️ .NET Core 2.x SDK i nowszych wersji
+**Ten artykuł dotyczy:** ✔️ .NET Core 2.x SDK i nowszych wersjach
 
 ## <a name="name"></a>Nazwa
 
@@ -19,15 +19,19 @@ ms.locfileid: "77503675"
 
 ## <a name="synopsis"></a>Streszczenie
 
-`dotnet msbuild <msbuild_arguments> [-h]`
+```dotnetcli
+dotnet msbuild <MSBUILD_ARGUMENTS>
+
+dotnet msbuild -h
+```
 
 ## <a name="description"></a>Opis
 
-Polecenie `dotnet msbuild` umożliwia dostęp do w pełni funkcjonalnego MSBuild.
+Polecenie `dotnet msbuild` umożliwia dostęp do w pełni funkcjonalnego msbuild.
 
-Polecenie ma dokładnie takie same możliwości jak istniejący klient wiersza polecenia MSBuild tylko dla projektów w stylu SDK. Opcje są takie same. Aby uzyskać więcej informacji na temat dostępnych opcji, zobacz [odwołanie wiersza polecenia MSBuild](/visualstudio/msbuild/msbuild-command-line-reference).
+Polecenie ma dokładnie takie same możliwości jak istniejący klient wiersza polecenia MSBuild tylko dla projektów w stylu SDK. Opcje są takie same. Aby uzyskać więcej informacji na temat dostępnych opcji, zobacz [odwołanie do wiersza polecenia MSBuild](/visualstudio/msbuild/msbuild-command-line-reference).
 
-Polecenie [dotnet build](dotnet-build.md) jest `dotnet msbuild -restore -target:Build`równoważne . [dotnet kompilacji](dotnet-build.md) jest powszechnie używany do tworzenia projektów, ale ponieważ zawsze `dotnet msbuild` uruchamia cel kompilacji, można użyć, gdy nie chcesz budować projekt. Na przykład jeśli masz określony cel, który chcesz uruchomić `dotnet msbuild` bez tworzenia projektu, użyj i określ miejsce docelowe.
+Polecenie [dotnet build](dotnet-build.md) jest `dotnet msbuild -restore -target:Build`równoważne . [dotnet kompilacja](dotnet-build.md) jest powszechnie używany do tworzenia projektów, ale ponieważ zawsze `dotnet msbuild` uruchamia miejsce docelowe kompilacji, można użyć, gdy nie chcesz tworzyć projektu. Na przykład jeśli masz określony cel, który chcesz uruchomić `dotnet msbuild` bez tworzenia projektu, użyj i określ cel.
 
 ## <a name="examples"></a>Przykłady
 
@@ -37,19 +41,19 @@ Polecenie [dotnet build](dotnet-build.md) jest `dotnet msbuild -restore -target:
   dotnet msbuild
   ```
 
-- Tworzenie projektu i jego zależności przy użyciu konfiguracji wersji:
+- Tworzenie projektu i jego zależności przy użyciu konfiguracji wydania:
 
   ```dotnetcli
   dotnet msbuild -property:Configuration=Release
   ```
 
-- Uruchom obiekt docelowy publikowania `osx.10.11-x64` i opublikuj dla rid:
+- Uruchom cel publikowania i `osx.10.11-x64` opublikuj dla rid:
 
   ```dotnetcli
   dotnet msbuild -target:Publish -property:RuntimeIdentifiers=osx.10.11-x64
   ```
 
-- Zobacz cały projekt ze wszystkimi celami zawartymi w zestawie SDK:
+- Zobacz cały projekt ze wszystkimi celami zawartymi w SDK:
 
   ```dotnetcli
   dotnet msbuild -preprocess

@@ -2,12 +2,12 @@
 title: Konfigurowanie odnajdywania w pliku konfiguracji
 ms.date: 03/30/2017
 ms.assetid: b9884c11-8011-4763-bc2c-c526b80175d0
-ms.openlocfilehash: b2e604f6168e4adff36bfb0c22861124743b358d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 934b04b51b9954cf943f57f33250951048e5671b
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185329"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464206"
 ---
 # <a name="configuring-discovery-in-a-configuration-file"></a>Konfigurowanie odnajdywania w pliku konfiguracji
 Istnieją cztery główne grupy ustawień konfiguracji używane w odnajdowaniu. W tym temacie pokrótce opisano każdy z nich i pokazano przykłady sposobu ich konfigurowania. Po każdej sekcji będzie link do bardziej szczegółowej dokumentacji na temat każdego obszaru.  
@@ -26,6 +26,7 @@ Istnieją cztery główne grupy ustawień konfiguracji używane w odnajdowaniu. 
           </serviceDiscovery>  
         </behavior>  
       </serviceBehaviors>  
+</behaviors>  
 ```  
   
  Po określeniu zachowania, odwołaj się `service` do niego z <> elementu, jak pokazano w poniższym przykładzie.  
@@ -41,7 +42,8 @@ Istnieją cztery główne grupy ustawień konfiguracji używane w odnajdowaniu. 
          <!-- Discovery Endpoints -->  
          <endpoint kind="udpDiscoveryEndpoint" />  
         </service>  
-    </service>  
+    </services>  
+</system.serviceModel>  
 ```  
   
  Aby usługa była wykrywalna, należy również dodać punkt końcowy odnajdywania, powyższy przykład dodaje standardowy <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> punkt końcowy.  
@@ -62,6 +64,7 @@ Istnieją cztery główne grupy ustawień konfiguracji używane w odnajdowaniu. 
    <service name="AnnouncementListener">  
       <endpoint kind="udpAnnouncementEndpoint" />  
    </service>  
+</services>
 ```  
   
  Zachowanie <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> jest używane do włączania lub wyłączania odnajdowania określonego punktu końcowego.  Poniższy przykład konfiguruje usługę z dwoma punktami końcowymi aplikacji, jeden z włączoną odnajdą i jeden z wyłączonym odnajdywaniem. Dla każdego punktu <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> końcowego jest dodawane zachowanie.  
@@ -87,7 +90,7 @@ Istnieją cztery główne grupy ustawień konfiguracji używane w odnajdowaniu. 
         <endpoint kind="udpDiscoveryEndpoint" />  
       </service>  
    </services>  
-    <behaviors>  
+   <behaviors>  
       <serviceBehaviors>  
         <behavior name="helloWorldServiceBehavior">  
           <serviceDiscovery />  
@@ -102,6 +105,7 @@ Istnieją cztery główne grupy ustawień konfiguracji używane w odnajdowaniu. 
         </behavior>  
      </endpointBehaviors>  
    </behaviors>  
+</system.serviceModel>  
 ```  
   
  Zachowanie <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> może również służyć do dodawania niestandardowych metadanych do metadanych punktu końcowego zwracanych przez usługę. W przykładzie poniżej pokazano, jak to zrobić.  
@@ -163,7 +167,9 @@ Istnieją cztery główne grupy ustawień konfiguracji używane w odnajdowaniu. 
           </discoveryClient>  
           <textMessageEncoding messageVersion="Soap11"/>  
           <httpTransport />  
-        </binding>  
+      </binding>
+   </customBinding>
+</bindings>  
 ```  
   
  Ta niestandardowa konfiguracja powiązania musi się odwoływać za pomocą punktu końcowego klienta:  
@@ -174,7 +180,7 @@ Istnieją cztery główne grupy ustawień konfiguracji używane w odnajdowaniu. 
                 binding="customBinding"  
                 bindingConfiguration="discoBindingConfiguration"  
                 contract="IHelloWorldService" />  
-    </client>  
+</client>  
 ```  
   
  Aby uzyskać więcej informacji na temat znajdowania kryteriów, zobacz [Odnajdowanie i Znajdźkryterię](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md). Aby uzyskać więcej informacji na temat odnajdywania i elementów wiązania zobacz [WCF Discovery Overview](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
@@ -223,7 +229,8 @@ Istnieją cztery główne grupy ustawień konfiguracji używane w odnajdowaniu. 
             maxReceivedMessageSize="8192"  
             maxBufferPoolSize="262144"/>  
         </standardEndpoint>  
-      </udpDiscoveryEndpoint>  
+      </udpDiscoveryEndpoint>
+</standardEndpoints>
 ```  
   
  Po dodaniu konfiguracji standardowego punktu końcowego odwołaj się `endpoint` do konfiguracji w <> element dla każdego punktu końcowego, jak pokazano w poniższym przykładzie.  

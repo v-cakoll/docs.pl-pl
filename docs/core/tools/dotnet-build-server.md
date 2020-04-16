@@ -2,16 +2,16 @@
 title: polecenie dotnet build-server
 description: Polecenie dotnet build-server współdziała z serwerami uruchomionymi przez kompilację.
 ms.date: 02/14/2020
-ms.openlocfilehash: a6a9cd6de66371caef66d1101b3f844dffc771ef
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 882b697c07aac0e20266f3ad4e6c11888a0b7acc
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503778"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463727"
 ---
 # <a name="dotnet-build-server"></a>dotnet build-server
 
-**Ten artykuł dotyczy:** ✔️ .NET Core 2.1 SDK i nowszych wersji
+**Ten artykuł dotyczy:** ✔️.NET Core 2.1 SDK i nowszych wersjach
 
 ## <a name="name"></a>Nazwa
 
@@ -21,8 +21,10 @@ ms.locfileid: "77503778"
 
 ```dotnetcli
 dotnet build-server shutdown [--msbuild] [--razor] [--vbcscompiler]
-dotnet build-server shutdown [-h|--help]
-dotnet build-server [-h|--help]
+
+dotnet build-server shutdown -h|--help
+
+dotnet build-server -h|--help
 ```
 
 ## <a name="commands"></a>Polecenia
@@ -43,7 +45,7 @@ dotnet build-server [-h|--help]
 
 - **`--razor`**
 
-  Zamyka serwer kompilacji Razor.
+  Wyłącza serwer kompilacji Razor.
 
 - **`--vbcscompiler`**
 

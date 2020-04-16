@@ -2,12 +2,12 @@
 title: Protokoły obsługi komunikatów
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
-ms.openlocfilehash: d35cd496db32e1a2886f7ca06e7a3d0964f9c9b5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 814347c77b54c4450aabf0a4f3966df223360663
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184580"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463833"
 ---
 # <a name="messaging-protocols"></a>Protokoły obsługi komunikatów
 
@@ -25,7 +25,7 @@ W tym temacie opisano szczegóły implementacji WCF dla następujących protoko�
 
 Specyfikacja/dokument:
 
-- [Xml](https://www.w3.org/TR/REC-xml)
+- [XML](https://www.w3.org/TR/REC-xml)
 - [MYDŁO 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)
 - [MYDŁO 1.2 Rdzeń](https://www.w3.org/TR/soap12-part1/)
 - [Adresowanie WS 2004/08](https://www.w3.org/Submission/2004/SUBM-ws-addressing-20040810/)
@@ -283,7 +283,7 @@ Pełne twierdzenie zasad może wyglądać następująco:
 </wsam:Addressing>
 ```
 
-Użycie następującego twierdzenia, które ma temat zasad punktu końcowego [WS-PA] w punktach końcowych, które używają wsdl 1.1 POWIĄZAŃ PROTOKOŁU HTTP PROTOKOŁU SOAP 1.x, wymaga użycia dwóch oddzielnych połączeń HTTP dla wiadomości płynących z osoby żądającej do obiektu odpowiadającego i osoby odpowiadającej do osoby żądającej, Odpowiednio.
+Użycie następującego potwierdzenia, które ma temat zasad punktu końcowego [WS-PA] w punktach końcowych, które używają wsdl 1.1 SOAP 1.x powiązania HTTP wymaga dwóch oddzielnych połączeń HTTP odwrotnych do wiadomości płynących z żądającego do obiektu odpowiadającego i obiektu odpowiadającego do żądającego, odpowiednio.
 
 ```xml
 <cdp:CompositeDuplex/>
@@ -566,7 +566,7 @@ Punkt końcowy WCF skonfigurowany do używania MTOM zawsze będzie wysyłać wia
 WCF używa następującego potwierdzenia zasad, aby wskazać użycie MTOM według punktu końcowego:
 
 ```xml
-<wsoma:OptimizedMimeSerialization ... />
+<wsoma:OptimizedMimeSerialization />
 ```
 
 - R4211: Poprzednie twierdzenie zasad ma temat zasad punktu końcowego i określa, że wszystkie wiadomości wysyłane do punktu końcowego i odbierane z punktu końcowego muszą być zoptymalizowane przy użyciu programu MTOM.

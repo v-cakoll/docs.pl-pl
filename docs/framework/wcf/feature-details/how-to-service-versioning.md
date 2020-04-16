@@ -2,12 +2,12 @@
 title: 'Instrukcje: Przechowywanie wersji usługi'
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-ms.openlocfilehash: 3cd52e1f52a93e408ebed846894cc5686652cc91
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f1178a0bedfe8665d7b3ec463e99183809538c28
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184844"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464112"
 ---
 # <a name="how-to-service-versioning"></a>Instrukcje: Przechowywanie wersji usługi
 W tym temacie opisano podstawowe kroki wymagane do utworzenia konfiguracji routingu, która kieruje wiadomości do różnych wersji tej samej usługi. W tym przykładzie wiadomości są kierowane do dwóch `roundingCalc` różnych wersji usługi `regularCalc` kalkulatora (wersja 1) i (wersja 2). Obie implementacje obsługują te same operacje; jednak starsza `roundingCalc`usługa , zaokrągla wszystkie obliczenia do najbliższej wartości całkowitej przed zwróceniem. Aplikacja kliencka musi być w stanie `regularCalc` wskazać, czy ma być używana nowsza usługa.  
@@ -25,7 +25,7 @@ W tym temacie opisano podstawowe kroki wymagane do utworzenia konfiguracji routi
   
 - Dzielenie  
   
- Ponieważ obie implementacje usługi obsługują te same operacje i są zasadniczo identyczne inne niż dane, które zwracają, dane podstawowe zawarte w wiadomościach wysyłanych z aplikacji klienckich nie są wystarczająco unikatowe, aby umożliwić określenie sposobu rozsyłania Żądanie. Na przykład nie można użyć filtrów akcji, ponieważ akcje domyślne dla obu usług są takie same.  
+ Ponieważ obie implementacje usługi obsługują te same operacje i są zasadniczo identyczne inne niż dane, które zwracają, dane podstawowe zawarte w komunikatach wysyłanych z aplikacji klienckich nie jest wystarczająco unikatowy, aby umożliwić określenie sposobu kierowania żądania. Na przykład nie można użyć filtrów akcji, ponieważ akcje domyślne dla obu usług są takie same.  
   
  Można to rozwiązać na kilka sposobów, takich jak uwidacznianie określonego punktu końcowego na routerze dla każdej wersji usługi lub dodawanie niestandardowego elementu nagłówka do wiadomości w celu wskazania wersji usługi.  Każde z tych podejść umożliwia unikatowe kierowanie wiadomości przychodzących do określonej wersji usługi, ale korzystanie z unikatowej zawartości wiadomości jest preferowaną metodą rozróżniania żądań dla różnych wersji usługi.  
   
@@ -90,7 +90,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
            messages that do not contain the custom header-->  
        <filter name="XPathFilterNoHeader" filterType="XPath"  
                filterData="count(sm:header()/custom:CalcVer)=0"/>  
-    </filters  
+    </filters>
     ```  
   
     > [!NOTE]

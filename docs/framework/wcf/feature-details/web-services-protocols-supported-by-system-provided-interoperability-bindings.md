@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Web services protocols
 - Windows Communication Foundation, Web service protocols
 ms.assetid: 1f7fc4ff-30fe-4e46-adda-91caad3b06c6
-ms.openlocfilehash: a1e67401a09370a46bc7a3e8546c95467bc18b67
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 25efda74d205a36332a801e91ddc508796f7df5d
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184146"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463989"
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>Protokoły usług sieci Web obsługiwane przez wiązania współdziałania udostępnione przez system
 Windows Communication Foundation (WCF) jest zbudowany do współpracy z usługami sieci Web, które obsługują zestaw specyfikacji znanych jako specyfikacje usług sieci Web. Aby uprościć konfigurację usług w celu uzyskania najlepszych praktyk w zakresie interoperacyjności, WCF wprowadza trzy interoperacyjne powiązania dostarczane przez system: <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>, <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>, i <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>. W celu interoperacyjności z organizacją na rzecz rozwoju standardów strukturalnych standardów informacyjnych (OASIS) <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>WCF obejmuje jedno interoperacyjne wiążące dla systemu: . W przypadku publikacji metadanych WCF zawiera dwa interoperacyjne powiązania dostarczone przez system: [ \<mexHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) i [ \<mexHttpsBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md). W tym temacie wymieniono specyfikacje, które są obsługiwane przez interoperacyjne powiązania dostarczone przez system.  
@@ -76,7 +76,7 @@ Windows Communication Foundation (WCF) jest zbudowany do współpracy z usługam
        <message issuedKeyType="Symmetric"
                 issuedTokenType="http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1">  
          <issuerMetadata address =
-         'http://localhost/FederationSample/HomeRealmSTS/STS.svc/mex'>  
+         'http://localhost/FederationSample/HomeRealmSTS/STS.svc/mex'/>  
        </message>  
      </security>  
   </binding>  

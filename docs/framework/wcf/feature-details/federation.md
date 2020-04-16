@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-ms.openlocfilehash: 86c679af77f2b7b1960e7489e0e6e61b811e1bad
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9616a5afb88e46bb5d69f1cd253c854cc1684d9f
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185222"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464181"
 ---
 # <a name="federation"></a>Federacja
 Ten temat zawiera krótki przegląd pojęcia zabezpieczeń federacyjnej. Opisano w nim również obsługę programu Windows Communication Foundation (WCF) w zakresie wdrażania architektur zabezpieczeń federacyjnego. Aby zapoznać się z przykładową aplikacją, która demonstruje federację, zobacz [Próbka federacyjne](../../../../docs/framework/wcf/samples/federation-sample.md).  
@@ -58,7 +58,7 @@ Ten temat zawiera krótki przegląd pojęcia zabezpieczeń federacyjnej. Opisano
   
  Alternatywnym podejściem, które rozwiązuje wspomniane wcześniej wady, jest stosowanie zabezpieczeń federacyjnej. W tym podejściu organizacje A i B ustanawiają relację zaufania i wykorzystują usługę tokenu zabezpieczeń (STS), aby umożliwić pośrednictwo w ustalonym zaufaniu.  
   
- W architekturze zabezpieczeń federacyjnego użytkownicy z organizacji A wiedzą, że jeśli chcą uzyskać dostęp do usługi sieci Web w organizacji B, muszą przedstawić prawidłowy token zabezpieczający z STS w organizacji B, który uwierzytelnia i zezwala na ich dostęp do konkretnej usługi.  
+ W architekturze zabezpieczeń federacyjnego użytkownicy z organizacji A wiedzą, że jeśli chcą uzyskać dostęp do usługi sieci Web w organizacji B, muszą przedstawić prawidłowy token zabezpieczający z usługi STS w organizacji B, która uwierzytelnia i autoryzuje ich dostęp do określonej usługi.  
   
  Po skontaktowaniu się z STS B użytkownicy otrzymują inny poziom pośredni z zasad skojarzonych z STS. Muszą przedstawić prawidłowy token zabezpieczający z STS A (czyli sfery zaufania klienta), zanim usługa STS B może wydać im token zabezpieczający. Jest to następstwo relacji zaufania ustanowionej między dwiema organizacjami i oznacza, że organizacja B nie musi zarządzać tożsamościami użytkowników z organizacji A. W praktyce STS B zazwyczaj `issuerAddress` `issuerMetadataAddress`ma wartość null i . Aby uzyskać więcej informacji, zobacz [Jak: Konfigurowanie wystawcy lokalnego](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md). W takim przypadku klient konsultuje się z zasadami lokalnymi w celu zlokalizowania usługi STS A. Ta konfiguracja jest nazywana *federacją obszaru macierzystego* i jest skalowana lepiej, ponieważ STS B nie musi obsługiwać informacji o STS A.  
   
@@ -240,7 +240,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
                        storeLocation="LocalMachine"
                        storeName="My" />  
        </identity>  
-    <endpoint>  
+    </endpoint>  
   </service>  
 </services>  
   

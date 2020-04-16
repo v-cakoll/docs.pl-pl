@@ -2,12 +2,12 @@
 title: Zachowania zabezpieczeń w programie WCF
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-ms.openlocfilehash: f56bbd66aa61b8db9d6e720fb3a67ddbbf5e267e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9f96abac0f5f32279c5579dd01c3dd7f2dc1786c
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184537"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464046"
 ---
 # <a name="security-behaviors-in-wcf"></a>Zachowania zabezpieczeń w programie WCF
 W programie Windows Communication Foundation (WCF) zachowania modyfikują zachowanie w czasie wykonywania na poziomie usługi lub na poziomie punktu końcowego. (Aby uzyskać więcej informacji na temat zachowań w ogóle, zobacz [Określanie zachowania w czasie wykonywania usługi](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *Zachowania zabezpieczeń* umożliwiają kontrolę nad poświadczeniami, uwierzytelnianiem, autoryzacją i inspekcją dzienników. Zachowania można używać przez programowanie lub konfigurację. W tym temacie skupiono się na konfigurowaniu następujących zachowań związanych z funkcjami zabezpieczeń:  
@@ -112,6 +112,7 @@ W programie Windows Communication Foundation (WCF) zachowania modyfikują zachow
    </clientCredentials>  
   </behavior>  
  </endpointBehaviors>  
+</behaviors>  
 ```  
   
 #### <a name="clientcertificate-element"></a>\<clientCertificate> Element  
@@ -135,6 +136,9 @@ W programie Windows Communication Foundation (WCF) zachowania modyfikują zachow
       <issuerChannelBehaviors>  
          <add issuerAddress="http://www.contoso.com"  
                behaviorConfiguration="clientBehavior1" />
+      </issuerChannelBehaviors>  
+   </issuedToken>  
+</clientCredentials>
 ```  
   
 #### <a name="servicecertificate-element"></a>\<serviceCertyfikat> Element  
@@ -191,15 +195,15 @@ W programie Windows Communication Foundation (WCF) zachowania modyfikują zachow
  Użyj [ \<>serviceSecurityAudit,](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) aby określić dziennik zapisany do i jakie typy zdarzeń do zarejestrowania. Aby uzyskać więcej informacji, zobacz [Inspekcja](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ```xml  
-<system.serviceModel>  
-<serviceBehaviors>  
+<behaviors>
+ <serviceBehaviors>  
   <behavior name="NewBehavior">  
     <serviceSecurityAudit auditLogLocation="Application"
              suppressAuditFailure="true"  
              serviceAuthorizationAuditLevel="Success"
              messageAuthenticationAuditLevel="Success" />  
-    </behavior>  
-  </serviceBehaviors>  
+  </behavior>  
+ </serviceBehaviors>  
 </behaviors>  
 ```  
   

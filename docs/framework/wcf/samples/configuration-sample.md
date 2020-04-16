@@ -2,12 +2,12 @@
 title: Konfiguracja — przykład
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-ms.openlocfilehash: 5ac72db1fce0862381cd614499b5db4b9d95b2d0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 52747e6d964022d5028b0edb91dc8bc0ac0e82bc
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183915"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463959"
 ---
 # <a name="configuration-sample"></a>Konfiguracja — przykład
 W tym przykładzie pokazano użycie pliku konfiguracji, aby usługa wykrywalne.  
@@ -254,7 +254,8 @@ W tym przykładzie pokazano użycie pliku konfiguracji, aby usługa wykrywalne.
   
     </standardEndpoints>  
   
-  </system.serviceModel>  
+  </system.serviceModel>
+</configuration>
 ```  
   
 #### <a name="to-use-this-sample"></a>Aby użyć tej próbki  

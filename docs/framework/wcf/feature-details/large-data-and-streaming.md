@@ -2,12 +2,12 @@
 title: Duże ilości danych i przesyłanie strumieniowe
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: 91e53f66fb0f2f94a315c318eb0b203d78427bae
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4b6275a27fb1e09ecac1f8f00f56068a80a214ef
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184678"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464081"
 ---
 # <a name="large-data-and-streaming"></a>Duże ilości danych i przesyłanie strumieniowe
 
@@ -17,13 +17,13 @@ Windows Communication Foundation (WCF) to infrastruktura komunikacyjna oparta na
  Aby podać podstawowe informacje na temat następujących informacji dla WCF, w tej sekcji przedstawiono pewne ogólne problemy i zagadnienia dotyczące kodowania, danych binarnych i przesyłania strumieniowego, które zazwyczaj mają zastosowanie do infrastruktury połączonych systemów.  
   
 ### <a name="encoding-data-text-vs-binary"></a>Kodowanie danych: tekst a binarny  
- Powszechnie wyrażane obawy deweloperów obejmują przekonanie, że XML ma znaczne obciążenie w porównaniu do formatów binarnych ze względu na powtarzalny charakter tagów początkowych i końcowych, że kodowanie wartości liczbowych jest uważane za znacznie większe ponieważ są one wyrażone w wartościach tekstowych i że dane binarne nie mogą być wyrażone skutecznie, ponieważ muszą być specjalnie zakodowane do osadzania w formacie tekstowym.  
+ Powszechnie wyrażone obawy deweloperów obejmują przekonanie, że XML ma znaczne obciążenie w porównaniu do formatów binarnych ze względu na powtarzalny charakter tagów początkowych i tagów końcowych, że kodowanie wartości liczbowych jest uważane za znacznie większe, ponieważ są one wyrażone w wartościach tekstowych i że dane binarne nie mogą być wyrażone skutecznie, ponieważ muszą być specjalnie zakodowane do osadzania w formacie tekstowym.  
   
- Chociaż wiele z tych i podobnych problemów jest prawidłowych, rzeczywista różnica między wiadomościami zakodowanymi w tekście XML w środowisku usług sieci Web XML a wiadomościami zakodowanymi w formacie binarnym w środowisku starszego zdalnego wywołania procedury (RPC) jest często znacznie mniej istotna niż wstępnej analizy może sugerować.  
+ Chociaż wiele z tych i podobnych problemów jest prawidłowych, rzeczywista różnica między wiadomościami zakodowanymi w tekście XML w środowisku usług sieci Web XML a wiadomościami zakodowanymi w formacie binarnym w środowisku starszego zdalnego wywołania procedury (RPC) jest często znacznie mniej istotna niż może sugerować początkowa analiza.  
   
  Podczas gdy wiadomości zakodowane w tekście XML są przezroczyste i "czytelne dla człowieka", wiadomości binarne są często dość niejasne w porównaniu i trudne do dekodowania bez narzędzi. Ta różnica w czytelności prowadzi do przeoczenia, że wiadomości binarne często zawierają wbudowane metadane w ładunku, co zwiększa obciążenie, podobnie jak w przypadku wiadomości tekstowych XML. Jest to szczególnie prawdziwe dla formatów binarnych, które mają na celu zapewnienie możliwości luźnego sprzężenia i wywołania dynamicznego.  
   
- Jednak formaty binarne często zawierają takie opisowe informacje o metadanych w "nagłówku", który również deklaruje układ danych dla następujących rekordów danych. Ładunek następnie następuje tej deklaracji bloku metadanych wspólne przy minimalnym dalsze obciążenie. Z drugiej strony XML zawiera każdy element danych w elemencie lub atrybucie, dzięki czemu otaczające metadane są powtarzalnie uwzględniane dla każdego szeregowanego obiektu ładunku. W rezultacie rozmiar pojedynczego seryjnego obiektu ładunku jest podobny podczas porównywania tekstu z reprezentacjami binarnymi, ponieważ niektóre metadane opisowe muszą być wyrażone dla obu, ale format binarny korzysta z udostępnionego opisu metadanych z każdym dodatkowym obiekt ładunku, który jest przesyłany z powodu niższego ogólnego narzutu.  
+ Jednak formaty binarne często zawierają takie opisowe informacje o metadanych w "nagłówku", który również deklaruje układ danych dla następujących rekordów danych. Ładunek następnie następuje tej deklaracji bloku metadanych wspólne przy minimalnym dalsze obciążenie. Z drugiej strony XML zawiera każdy element danych w elemencie lub atrybucie, dzięki czemu otaczające metadane są powtarzalnie uwzględniane dla każdego szeregowanego obiektu ładunku. W rezultacie rozmiar pojedynczego seryjnego obiektu ładunku jest podobny podczas porównywania tekstu z reprezentacjami binarnymi, ponieważ niektóre metadane opisowe muszą być wyrażone dla obu, ale format binarny korzysta z udostępnionego opisu metadanych z każdym dodatkowym obiektem ładunku, który jest przesyłany z powodu niższego ogólnego obciążenia.  
   
  Mimo to dla niektórych typów danych, takich jak liczby, może być wadą przy użyciu stałego rozmiaru, binarne reprezentacje liczbowe, takie jak 128-bitowy typ dziesiętny zamiast zwykłego tekstu, jak zwykły tekst reprezentacji może być kilka bajtów mniejszych. Dane tekstowe mogą również mieć korzyści z rozmiaru z zazwyczaj bardziej elastycznych opcji kodowania tekstu XML, podczas gdy niektóre formaty binarne mogą domyślnie 16-bitowe lub nawet 32-bitowe Unicode, które nie ma zastosowania do formatu .NET Binary XML.  
   
@@ -32,7 +32,7 @@ Windows Communication Foundation (WCF) to infrastruktura komunikacyjna oparta na
  Wyraźną zaletą wiadomości tekstowych XML jest to, że są one oparte na standardach i oferują najszerszy wybór opcji interoperacyjności i obsługi platformy. Aby uzyskać więcej informacji, zobacz sekcję "Kodowanie" w dalszej części tego tematu.  
   
 ### <a name="binary-content"></a>Zawartość binarna  
- Jednym z obszarów, w którym kodowanie binarne jest lepsze od kodowania tekstowego pod względem rozmiaru wiadomości, są duże elementy danych binarnych, takie jak obrazy, filmy, klipy dźwiękowe lub jakakolwiek inna forma nieprzezroczystych, binarnych danych, które muszą być wymieniane między usługami i ich Konsumentów. Aby dopasować te typy danych do tekstu XML, typowym podejściem jest zakodowanie ich przy użyciu kodowania Base64.  
+ Jednym z obszarów, w którym kodowania binarne są lepsze od kodowania tekstowego pod względem wynikowego rozmiaru wiadomości są duże elementy danych binarnych, takie jak obrazy, filmy, klipy dźwiękowe lub jakakolwiek inna forma nieprzezroczystych, binarnych danych, które muszą być wymieniane między usługami i ich konsumentów. Aby dopasować te typy danych do tekstu XML, typowym podejściem jest zakodowanie ich przy użyciu kodowania Base64.  
   
  W ciągu zakodowanym w zasadach Base64 każdy znak reprezentuje 6 bitów oryginalnych danych 8-bitowych, co powoduje stosunek kodowania 4:3 dla Base64, nie licząc dodatkowych znaków formatowania (powrotu karetki/kanału informacyjnego wiersza), które są powszechnie dodawane przez konwencję. Podczas gdy znaczenie różnic między kodowaniem XML i binarnych zazwyczaj zależy od scenariusza, przyrost rozmiaru o więcej niż 33% podczas przesyłania ładunku 500 MB jest zwykle nie do przyjęcia.  
   
@@ -45,7 +45,7 @@ Windows Communication Foundation (WCF) to infrastruktura komunikacyjna oparta na
 ### <a name="large-data-content"></a>Duża zawartość danych  
  Wire-footprint na bok, wcześniej wspomniano 500-MB ładowność również stanowi wielkie lokalne wyzwanie dla usługi i klienta. Domyślnie WCF przetwarza wiadomości w *trybie buforowanym*. Oznacza to, że cała zawartość wiadomości jest obecna w pamięci przed wysłaniem lub po jej odebraniu. Chociaż jest to dobra strategia dla większości scenariuszy i niezbędna dla funkcji obsługi wiadomości, takich jak podpisy cyfrowe i niezawodne dostarczanie, duże komunikaty mogą wyczerpać zasoby systemu.  
   
- Strategia radzenia sobie z dużymi ładunkami jest streaming. Podczas gdy wiadomości, zwłaszcza te wyrażone w języku XML, są powszechnie uważane za stosunkowo kompaktowe pakiety danych, wiadomość może mieć rozmiar wielu gigabajtów i przypominać ciągły strumień danych bardziej niż pakiet danych. Gdy dane są przesyłane w trybie przesyłania strumieniowego zamiast w trybie buforowanym, nadawca udostępnia adresatowi zawartość treści wiadomości w postaci strumienia, a infrastruktura wiadomości stale przesyła dane z nadawcy do odbiorcy, gdy się pojawią. Dostępne.  
+ Strategia radzenia sobie z dużymi ładunkami jest streaming. Podczas gdy wiadomości, zwłaszcza te wyrażone w języku XML, są powszechnie uważane za stosunkowo kompaktowe pakiety danych, wiadomość może mieć rozmiar wielu gigabajtów i przypominać ciągły strumień danych bardziej niż pakiet danych. Gdy dane są przesyłane w trybie przesyłania strumieniowego zamiast trybu buforowanego, nadawca udostępnia adresatowi zawartość treści wiadomości w postaci strumienia, a infrastruktura wiadomości stale przesyła dane z nadawcy do odbiorcy, gdy staną się dostępne.  
   
  Najczęstszym scenariuszem, w którym takie transfery zawartości dużych danych występują są transfery obiektów danych binarnych, które:  
   
@@ -70,7 +70,7 @@ Windows Communication Foundation (WCF) to infrastruktura komunikacyjna oparta na
 |-----------------------------|-----------------|  
 |<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>|Koder wiadomości tekstowych jest domyślnym koderem dla wszystkich powiązań opartych na protoko> HTTP i odpowiednim wyborem dla wszystkich niestandardowych powiązań, w których współdziałanie jest największym problemem. Ten koder odczytuje i zapisuje standardowe wiadomości tekstowe SOAP 1.1/SOAP 1.2 bez specjalnej obsługi danych binarnych. Jeśli <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType> właściwość wiadomości jest <xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>ustawiona na , otoka koperty SOAP jest pomijana z danych wyjściowych i tylko zawartość treści wiadomości jest serializowana.|  
 |<xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>|Koder komunikatów MTOM jest koderem tekstu, który implementuje specjalną obsługę danych binarnych i nie jest domyślnie używany w żadnym ze standardowych powiązań, ponieważ jest to narzędzie do optymalizacji dla każdego przypadku. Jeśli komunikat zawiera dane binarne, który przekracza próg, w którym kodowanie MTOM daje korzyści, dane są zewnętrznie do części MIME po obwiedni wiadomości. Zobacz Włączanie MTOM w dalszej części tej sekcji.|  
-|<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>|Koder wiadomości binarnych jest domyślnym koderem dla powiązań Net* i odpowiednim wyborem, gdy obie strony komunikacji są oparte na WCF. Koder wiadomości binarnych używa formatu .NET Binary XML Format, specyficznego dla firmy Microsoft reprezentacji binarnej dla zestawów informacji XML (Zestawy informacji), która zazwyczaj daje mniejszy ślad niż odpowiednik reprezentacji XML 1.0 i koduje dane binarne jako bajt Strumienia.|  
+|<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>|Koder wiadomości binarnych jest domyślnym koderem dla powiązań Net* i odpowiednim wyborem, gdy obie strony komunikacji są oparte na WCF. Koder wiadomości binarnych używa formatu .NET Binary XML Format, specyficznego dla firmy Microsoft reprezentacji binarnej dla zestawów informacji XML (Zestawy informacji) , która zazwyczaj daje mniejszy ślad niż odpowiednik reprezentacji XML 1.0 i koduje dane binarne jako strumień bajtów.|  
   
  Kodowanie wiadomości tekstowych jest zazwyczaj najlepszym wyborem dla każdej ścieżki komunikacji, która wymaga współdziałania, podczas gdy kodowanie wiadomości binarnych jest najlepszym wyborem dla każdej innej ścieżki komunikacji. Kodowanie wiadomości binarnych zazwyczaj daje mniejsze rozmiary wiadomości w porównaniu do tekstu dla pojedynczej wiadomości i stopniowo nawet mniejsze rozmiary wiadomości w czasie trwania sesji komunikacyjnej. W przeciwieństwie do kodowania tekstu kodowanie binarne nie musi używać specjalnej obsługi danych binarnych, takich jak base64, ale reprezentuje bajty jako bajty.  
   
@@ -88,7 +88,7 @@ Windows Communication Foundation (WCF) to infrastruktura komunikacyjna oparta na
       </wsHttpBinding>  
     </bindings>  
      …  
-<system.serviceModel>  
+</system.serviceModel>  
 ```  
   
  Jak wspomniano wcześniej, decyzja o użyciu kodowania MTOM zależy od wysyłanego woluminu danych. Ponadto ponieważ MTOM jest włączona na poziomie powiązania, włączenie MTOM wpływa na wszystkie operacje w danym punkcie końcowym.  
@@ -134,7 +134,7 @@ class MyData
   
 - Szyfrowanie zależy od podpisów cyfrowych, aby sprawdzić, czy dane zostały poprawnie zrekonstruowane.  
   
-- Niezawodne sesje muszą buforować wysłane wiadomości na kliencie w celu ponownego dostarczenia, jeśli wiadomość zostanie utracona podczas transferu i musi zawierać wiadomości w usłudze przed przekazaniem ich do implementacji usługi, aby zachować kolejność wiadomości w przypadku odebrania wiadomości poza kolejnością.  
+- Niezawodne sesje muszą buforować wysłane wiadomości na kliencie w celu ponownego dostarczenia, jeśli wiadomość zostanie utracona w transferze i musi zawierać wiadomości w usłudze przed przekazaniem ich do implementacji usługi, aby zachować kolejność wiadomości w przypadku, gdy wiadomości są odbierane poza kolejnością.  
   
  Ze względu na te ograniczenia funkcjonalne można używać tylko opcji zabezpieczeń na poziomie transportu do przesyłania strumieniowego i nie można włączyć niezawodnych sesji. Przesyłanie strumieniowe jest dostępne tylko z następującymi powiązaniami zdefiniowanymi przez system:  
   
@@ -153,7 +153,7 @@ class MyData
  Przesyłanie strumieniowe jest również niedostępne podczas korzystania z <xref:System.ServiceModel.NetPeerTcpBinding>transportu kanału równorzędnego, więc nie jest dostępne z .  
   
 #### <a name="streaming-and-sessions"></a>Przesyłanie strumieniowe i sesje  
- Może wystąpić nieoczekiwane zachowanie podczas przesyłania strumieniowego wywołań z powiązaniem opartym na sesji. Wszystkie wywołania przesyłania strumieniowego są dokonywane za pośrednictwem jednego kanału (kanału datagram), który nie obsługuje sesji, nawet jeśli używane powiązanie jest skonfigurowane do używania sesji. Jeśli wielu klientów wywołuje przesyłanie strumieniowe do tego samego obiektu usługi za pośrednictwem powiązania opartego na sesji, a tryb współbieżności obiektu usługi jest ustawiony na pojedynczy, a jego tryb kontekstowy wystąpienia jest ustawiony na PerSession, wszystkie wywołania muszą przejść przez kanał datagramu, a więc tylko jeden połączenie jest przetwarzane w czasie. Jeden lub więcej klientów może następnie limit czasu. Można obejść ten problem, ustawiając tryb kontekstowy wystąpienia obiektu usługi na PerCall lub Współbieżność na wiele.  
+ Może wystąpić nieoczekiwane zachowanie podczas przesyłania strumieniowego wywołań z powiązaniem opartym na sesji. Wszystkie wywołania przesyłania strumieniowego są dokonywane za pośrednictwem jednego kanału (kanału datagram), który nie obsługuje sesji, nawet jeśli używane powiązanie jest skonfigurowane do używania sesji. Jeśli wielu klientów dokonuje wywołań przesyłania strumieniowego do tego samego obiektu usługi za pośrednictwem powiązania opartego na sesji, a tryb współbieżności obiektu usługi jest ustawiony na pojedynczy, a jego tryb kontekstowy wystąpienia jest ustawiony na PerSession, wszystkie wywołania muszą przejść przez kanał datagramu, a więc tylko jedno wywołanie jest przetwarzane w danym momencie. Jeden lub więcej klientów może następnie limit czasu. Można obejść ten problem, ustawiając tryb kontekstowy wystąpienia obiektu usługi na PerCall lub Współbieżność na wiele.  
   
 > [!NOTE]
 > MaxConcurrentSessions nie ma wpływu w tym przypadku, ponieważ istnieje tylko jedna "sesja" dostępne.  
@@ -178,7 +178,7 @@ class MyData
       </basicHttpBinding>  
     </bindings>  
      …  
-<system.serviceModel>  
+</system.serviceModel>  
 ```  
   
  Podczas tworzenia wystąpienia powiązania w kodzie, należy `TransferMode` ustawić odpowiednią właściwość powiązania (lub elementu wiązania transportu, jeśli są redagowanie powiązania niestandardowego) do jednej z wcześniej wymienionych wartości.  
@@ -225,7 +225,7 @@ public class UploadStreamMessage
   
  Podczas odbierania wiadomości WCF tworzy strumień za pośrednictwem zawartości treści wiadomości zakodowanej w systemie Base64 (lub odpowiedniej części MIME, jeśli używa mtom) i strumień osiągnie EOF po odczytaniu zawartości.  
   
- Przesyłanie strumieniowe na poziomie transportu działa również z dowolnym innym typem kontraktu wiadomości (listy parametrów, argumenty kontraktu danych i jawny kontrakt wiadomości), ale ponieważ serializacji i deserializacji takich wpisanych wiadomości wymaga buforowania przez serializatora , stosowanie takich wariantów umowy nie jest wskazane.  
+ Przesyłanie strumieniowe na poziomie transportu działa również z dowolnym innym typem kontraktu wiadomości (listy parametrów, argumenty kontraktu danych i jawny kontrakt wiadomości), ale ponieważ serializacji i deserializacji takich wpisanych komunikatów wymaga buforowania przez serializatora, przy użyciu takich wariantów umowy nie jest wskazane.  
   
 ### <a name="special-security-considerations-for-large-data"></a>Specjalne zagadnienia dotyczące zabezpieczeń dla dużych danych  
  Wszystkie powiązania umożliwiają ograniczenie rozmiaru wiadomości przychodzących, aby zapobiec atakom typu "odmowa usługi". Na <xref:System.ServiceModel.BasicHttpBinding>przykład udostępnia [System.ServiceModel.BasicHttpBinding.MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) właściwość, która ogranicza rozmiar wiadomości przychodzącej, a więc również ogranicza maksymalną ilość pamięci, która jest dostępna podczas przetwarzania wiadomości. Ta jednostka jest ustawiona w bajtach o domyślnej wartości 65 536 bajtów.  

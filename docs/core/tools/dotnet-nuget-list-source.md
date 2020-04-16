@@ -2,14 +2,14 @@
 title: polecenie źródło listy dotnet nuget
 description: Polecenie źródło listy nuget dotnet zawiera listę wszystkich istniejących źródeł z plików konfiguracyjnych NuGet.
 ms.date: 03/20/2020
-ms.openlocfilehash: 4d7bc3dbd3ab5eb14c1ebf592044b685d28355cd
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 8b14413949bd60ddeed977d19eec9bb99982da70
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80148576"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463543"
 ---
-# <a name="dotnet-nuget-list-source"></a>źródło listy dotnet nuget
+# <a name="dotnet-nuget-list-source"></a>dotnet nuget list source
 
 **Ten artykuł dotyczy:** ✔️.NET Core 3.1.200 SDK i nowszych wersjach
 
@@ -20,8 +20,9 @@ ms.locfileid: "80148576"
 ## <a name="synopsis"></a>Streszczenie
 
 ```dotnetcli
-dotnet nuget list source [--format] [--configfile]
-dotnet nuget list source [-h|--help]
+dotnet nuget list source [--format [Detailed|Short]] [--configfile <FILE>]
+
+dotnet nuget list source -h|--help
 ```
 
 ## <a name="description"></a>Opis
@@ -30,11 +31,11 @@ Polecenie `dotnet nuget list source` zawiera listę wszystkich istniejących źr
 
 ## <a name="options"></a>Opcje
 
-- **`--configfile`**
+- **`--configfile <FILE>`**
 
   Plik konfiguracyjny NuGet. Jeśli zostanie określony, będą używane tylko ustawienia z tego pliku. Jeśli nie zostanie określona, zostanie użyta hierarchia plików konfiguracyjnych z bieżącego katalogu. Aby uzyskać więcej informacji, zobacz [typowe konfiguracje NuGet](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior).
 
-- **`--format`**
+- **`--format [Detailed|Short]`**
 
   Format wyjścia polecenia listy: `Detailed` (domyślny) `Short`i .
 

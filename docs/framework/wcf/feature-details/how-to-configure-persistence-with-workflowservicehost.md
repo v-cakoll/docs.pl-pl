@@ -2,12 +2,12 @@
 title: 'Instrukcje: konfigurowanie trwałości za pomocą elementu WorkflowServiceHost'
 ms.date: 03/30/2017
 ms.assetid: e31cd4df-13a3-4a9a-9be8-5243e0055356
-ms.openlocfilehash: 2974b6bcbb94c5b54d91025aeabe7c2d2e94c7e8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4bfa66a895ae9af9cb87ff110dc82c8a8a922b49
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185054"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463848"
 ---
 # <a name="how-to-configure-persistence-with-workflowservicehost"></a>Instrukcje: konfigurowanie trwałości za pomocą elementu WorkflowServiceHost
 W tym temacie opisano sposób konfigurowania funkcji magazynu wystąpień przepływu pracy SQL, <xref:System.ServiceModel.Activities.WorkflowServiceHost> aby włączyć trwałość przepływów pracy hostowanych przy użyciu pliku konfiguracyjnego. Przed użyciem funkcji magazynu wystąpień przepływu pracy SQL należy utworzyć bazę danych SQL, która jest używana do utrwalania wystąpień przepływu pracy. Aby uzyskać więcej informacji, zobacz [Jak: Włączanie trwałości SQL dla przepływów pracy i usług przepływu pracy](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md).  
@@ -26,7 +26,7 @@ W tym temacie opisano sposób konfigurowania funkcji magazynu wystąpień przep�
                  instanceLockedExceptionAction="NoRetry | SimpleRetry | AggressiveRetry"  
                  hostLockRenewalPeriod="00:00:30"
                  runnableInstancesDetectionPeriod="00:00:05">  
-            <sqlWorkflowInstanceStore/>  
+            </sqlWorkflowInstanceStore>  
         </behavior>  
     </serviceBehaviors>  
     ```  

@@ -1,21 +1,17 @@
 ---
-title: polecenie dotnet add reference
+title: dotnet dodaj polecenie odwołania
 description: Polecenie dotnet add reference zapewnia wygodną opcję dodawania projektu do odwołań do projektu.
 ms.date: 02/14/2020
-ms.openlocfilehash: 84ea25e94efc8d84aebfeccf62c30a64551c5019
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f2bd67d181784c4858b8971d05053d196df7818e
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503788"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463744"
 ---
 # <a name="dotnet-add-reference"></a>dotnet add reference
 
-**Ten artykuł dotyczy:** ✔️ .NET Core 2.x SDK i nowszych wersji
-
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
+**Ten artykuł dotyczy:** ✔️ .NET Core 2.x SDK i nowszych wersjach
 
 ## <a name="name"></a>Nazwa
 
@@ -23,11 +19,16 @@ ms.locfileid: "77503788"
 
 ## <a name="synopsis"></a>Streszczenie
 
-`dotnet add [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--help] [--interactive]`
+```dotnetcli
+dotnet add [<PROJECT>] reference [-f|--framework <FRAMEWORK>]
+     [--interactive] <PROJECT_REFERENCES>
+
+dotnet add reference -h|--help
+```
 
 ## <a name="description"></a>Opis
 
-Polecenie `dotnet add reference` zapewnia wygodną opcję dodawania odwołań do projektu. Po uruchomieniu polecenia `<ProjectReference>` elementy są dodawane do pliku projektu.
+Polecenie `dotnet add reference` zapewnia wygodną opcję dodawania odwołań do projektu do projektu. Po uruchomieniu polecenia `<ProjectReference>` elementy są dodawane do pliku projektu.
 
 ```xml
 <ItemGroup>
@@ -41,25 +42,25 @@ Polecenie `dotnet add reference` zapewnia wygodną opcję dodawania odwołań do
 
 - **`PROJECT`**
 
-  Określa plik projektu. Jeśli nie zostanie określony, polecenie przeszukuje bieżący katalog w poszukiwaniu jednego.
+  Określa plik projektu. Jeśli nie zostanie określony, polecenie przeszukuje bieżący katalog dla jednego.
 
 - **`PROJECT_REFERENCES`**
 
-  Odwołania do projektu do projektu (P2P) do dodania. Określ jeden lub więcej projektów. [Wzorce Glob](https://en.wikipedia.org/wiki/Glob_(programming)) są obsługiwane w systemach unix/linux.
+  Odwołania do projektu do projektu (P2P) do dodania. Określ jeden lub więcej projektów. [Wzorce Glob](https://en.wikipedia.org/wiki/Glob_(programming)) są obsługiwane w systemach opartych na systemie Unix/Linux.
 
 ## <a name="options"></a>Opcje
+
+- **`-f|--framework <FRAMEWORK>`**
+
+  Dodaje odwołania do projektu tylko wtedy, gdy kierowanie na określoną [platformę](../../standard/frameworks.md).
 
 - **`-h|--help`**
 
   Drukuje krótką pomoc dla polecenia.
 
-- **`-f|--framework <FRAMEWORK>`**
-
-  Dodaje odwołania do projektu tylko wtedy, gdy jest przeznaczony dla określonej [struktury](../../standard/frameworks.md).
-
 - **`--interactive`**
 
-  Umożliwia polecenie, aby zatrzymać i czekać na dane wejściowe użytkownika lub akcji (na przykład, aby zakończyć uwierzytelnianie). Dostępne od sdk .NET Core 3.0.
+  Umożliwia zatrzymywania polecenia i oczekiwania na dane wejściowe lub akcję użytkownika (na przykład w celu ukończenia uwierzytelniania). Dostępne od .NET Core 3.0 SDK.
 
 ## <a name="examples"></a>Przykłady
 
@@ -75,7 +76,7 @@ Polecenie `dotnet add reference` zapewnia wygodną opcję dodawania odwołań do
   dotnet add reference lib1/lib1.csproj lib2/lib2.csproj
   ```
 
-- Dodaj wiele odwołań do projektu przy użyciu wzorca globbing w systemie Linux/Unix:
+- Dodaj wiele odwołań do projektu przy użyciu wzorca globbingu w systemie Linux/Unix:
 
   ```dotnetcli
   dotnet add app/app.csproj reference **/*.csproj

@@ -2,12 +2,12 @@
 title: Standardowe punkty końcowe
 ms.date: 03/30/2017
 ms.assetid: 3fcb4225-addc-44f2-935d-30e4943a8812
-ms.openlocfilehash: 880601664d7602e279c5d022fa37c44914a58772
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 48924e06457cf9f91ce4f900bb38de4d22bfc550
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184403"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463773"
 ---
 # <a name="standard-endpoints"></a>Standardowe punkty końcowe
 Punkty końcowe są definiowane przez określenie adresu, powiązania i umowy. Inne parametry, które mogą być ustawione w punkcie końcowym obejmują konfigurację zachowania, nagłówki i identyfikatory URI nasłuchi.  W przypadku niektórych typów punktów końcowych te wartości nie zmieniają się. Na przykład punkty końcowe wymiany metadanych zawsze używają <xref:System.ServiceModel.Description.IMetadataExchange> umowy. Inne punkty końcowe, <xref:System.ServiceModel.Description.WebHttpEndpoint> takie jak zawsze wymagają określonego zachowania punktu końcowego. Użyteczność punktu końcowego można poprawić, mając punkty końcowe z wartościami domyślnymi dla powszechnie używanych właściwości punktu końcowego. Standardowe punkty końcowe umożliwiają deweloperowi zdefiniowanie punktu końcowego, który ma wartości domyślne lub gdy co najmniej jedna z właściwości punktu końcowego nie ulegnie zmianie.  Te punkty końcowe umożliwiają korzystanie z takiego punktu końcowego bez konieczności określania informacji o charakterze statycznym. Standardowe punkty końcowe mogą być używane dla infrastruktury i punktów końcowych aplikacji.  
@@ -121,6 +121,8 @@ W poniższym przykładzie pokazano, jak zarejestrować standardowy punkt końcow
           name="customStandardEndpoint"  
           type="CustomEndpointCollectionElement, Example.dll,  
                 Version=1.0.0.0, Culture=neutral, PublicKeyToken=ffffffffffffffff"/>  
+      </standardEndpointExtensions>
+</extensions>  
 ```  
   
 ## <a name="configuring-a-standard-endpoint"></a>Konfigurowanie standardowego punktu końcowego  

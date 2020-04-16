@@ -2,12 +2,12 @@
 title: polecenie przywracanie dotnet
 description: Dowiedz się, jak przywrócić zależności i narzędzia specyficzne dla projektu za pomocą polecenia przywracania dotnet.
 ms.date: 02/27/2020
-ms.openlocfilehash: 3b336e1aa097f83280de6faeef51793345520530
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: f49f0cda4424a4cc54ab7d4d4c6f729919dc7e60
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389658"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463429"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -20,13 +20,14 @@ ms.locfileid: "81389658"
 ## <a name="synopsis"></a>Streszczenie
 
 ```dotnetcli
-dotnet restore [<ROOT>] [--configfile] [--disable-parallel]
+dotnet restore [<ROOT>] [--configfile <FILE>] [--disable-parallel]
     [-f|--force] [--force-evaluate] [--ignore-failed-sources]
-    [--interactive] [--lock-file-path] [--locked-mode]
-    [--no-cache] [--no-dependencies] [--packages] [-r|--runtime]
-    [-s|--source] [--use-lockfile] [-v|--verbosity]
+    [--interactive] [--lock-file-path <LOCK_FILE_PATH>] [--locked-mode]
+    [--no-cache] [--no-dependencies] [--packages <PACKAGES_DIRECTORY>]
+    [-r|--runtime <RUNTIME_IDENTIFIER>] [-s|--source <SOURCE>]
+    [--use-lockfile] [-v|--verbosity <LEVEL>]
 
-dotnet restore [-h|--help]
+dotnet restore -h|--help
 ```
 
 ## <a name="description"></a>Opis

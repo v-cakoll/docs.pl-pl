@@ -1,16 +1,16 @@
 ---
-title: Wybierz między programem .NET Core a platformą .NET Framework dla aplikacji serwerowych
+title: Wybieranie między programami .NET Core i .NET Framework na potrzeby aplikacji serwerowych
 description: Przewodnik, na którym implementacji platformy .NET należy wziąć pod uwagę podczas tworzenia aplikacji serwera w programie .NET.
 author: cartermp
 ms.date: 06/19/2018
-ms.openlocfilehash: 393d6d89fb299e87edf55cf50991537e8afe9753
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 885a7fb3419eafa5d88ef621cf6ad04a8d48bb59
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80344151"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607496"
 ---
-# <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Wybieranie między programami .NET Core i .NET Framework na potrzeby aplikacji serwerowych
+# <a name="choose-between-net-core-and-net-framework-for-server-apps"></a>Wybieranie między programami .NET Core i .NET Framework na potrzeby aplikacji serwerowych
 
 Istnieją dwie obsługiwane implementacje do tworzenia aplikacji po stronie serwera z .NET: .NET Framework i .NET Core. Oba współużytkować wiele tych samych składników i można udostępnić kod w dwóch. Istnieją jednak zasadnicze różnice między nimi i twój wybór zależy od tego, co chcesz osiągnąć.  Ten artykuł zawiera wskazówki dotyczące tego, kiedy należy używać każdego z nich.
 
@@ -47,7 +47,7 @@ Dostępnych jest wiele platform infrastrukturalnych. [Usługa Azure Service Fabr
 
 Aby uzyskać więcej informacji na temat architektury mikrousług, zobacz [.NET Microservices. Architektura konteneryzowanych aplikacji .NET](../architecture/microservices/index.md).
 
-### <a name="containers"></a>Kontenery
+### <a name="containers"></a>Containers
 
 Kontenery są powszechnie używane w połączeniu z architekturą mikrousług. Kontenery mogą również służyć do konteneryzacji aplikacji sieci web lub usług, które są zgodne z dowolnego wzorca architektury. Program .NET Framework może być używany w kontenerach systemu Windows, ale modułowość i lekki charakter programu .NET Core sprawiają, że jest to lepszy wybór dla kontenerów. Podczas tworzenia i wdrażania kontenera rozmiar jego obrazu jest znacznie mniejszy w przypadku programu .NET Core niż w przypadku programu .NET Framework. Ponieważ jest to międzyplatformowe, można wdrożyć aplikacje serwera do kontenerów platformy Docker systemu Linux, na przykład.
 
@@ -103,7 +103,7 @@ Niektóre platformy firmy Microsoft lub innych firm nie obsługują platformy .N
 ## <a name="see-also"></a>Zobacz też
 
 - [Wybierz między ASP.NET a ASP.NET Core](/aspnet/core/choose-aspnet-framework)
-- [Platforma ASP.NET Core ukierunkowana na platformę .NET Framework](/aspnet/core#aspnet-core-targeting-net-framework)
+- [Platforma ASP.NET Core ukierunkowana na platformę .NET Framework](/aspnet/core/introduction-to-aspnet-core#aspnet-core-targeting-net-framework)
 - [Platformy docelowe](frameworks.md)
 - [Przewodnik po rdzeniu .NET](../core/index.yml)
 - [Przenoszenie z programu .NET Framework do programu .NET Core](../core/porting/index.md)

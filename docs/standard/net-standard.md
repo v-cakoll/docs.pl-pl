@@ -5,12 +5,12 @@ ms.date: 02/13/2020
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: e6e573056132c25b912ff1eb76b9b055f6e47cfe
-ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
+ms.openlocfilehash: 34074b420547cff802f1835656540be7b8eb58b4
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80438217"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607483"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -112,7 +112,7 @@ Aby uzyskać więcej informacji, zobacz [tryb zgodności programu .NET Framework
 
 ## <a name="net-standard-libraries-and-visual-studio"></a>Biblioteki .NET Standard i visual studio
 
-Aby utworzyć biblioteki .NET Standard w programie Visual Studio, upewnij się, że program [Visual Studio 2017 jest zainstalowany w wersji 15.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) lub nowszej w systemie Windows lub [Visual Studio dla komputerów Mac w wersji 7.1](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) lub nowszej w systemie macOS.
+Aby utworzyć biblioteki .NET Standard w programie Visual Studio, upewnij się, że w systemie macOS zainstalowano [program Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) lub Visual Studio 2017 w wersji 15.3 lub nowszej. [Visual Studio for Mac version 7.1](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)
 
 Jeśli wystarczy używać bibliotek .NET Standard 2.0 w projektach, można to również zrobić w programie Visual Studio 2015. Jednak należy nuget klienta 3.6 lub nowsze zainstalowane. Klienta NuGet dla programu Visual Studio 2015 można pobrać ze strony [pobierania NuGet.](https://www.nuget.org/downloads)
 

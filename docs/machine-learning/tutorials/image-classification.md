@@ -1,25 +1,25 @@
 ---
-title: 'Samouczek: ML.NET model klasyfikacji obrazów firmy TensorFlow'
-description: Dowiedz się, jak przenieść wiedzę z istniejącego modelu TensorFlow do nowego modelu klasyfikacji obrazów ML.NET. Model TensorFlow został przeszkolony do klasyfikowania obrazów na tysiąc kategorii. Model ML.NET korzysta z uczenia się transferu do klasyfikowania obrazów w mniej szerszych kategoriach.
+title: 'Samouczek: ML.NET model klasyfikacji obrazów z TensorFlow'
+description: Dowiedz się, jak przenieść wiedzę z istniejącego modelu TensorFlow do nowego modelu klasyfikacji obrazu ML.NET. Model TensorFlow został przeszkolony do klasyfikowania obrazów do tysiąca kategorii. Model ML.NET korzysta z nauki transferu, aby klasyfikować obrazy do mniej szerszych kategorii.
 ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 1e5478f53c82f36ddafe19e3659e2234ff9687b4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: be21a94f571a1676d2a4bce2196dec34bf008121
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78241029"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607574"
 ---
-# <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>Samouczek: Generowanie modelu klasyfikacji obrazów ML.NET z wstępnie przeszkolonego modelu TensorFlow
+# <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>Samouczek: Generowanie modelu klasyfikacji obrazu ML.NET z wstępnie przeszkolonego modelu TensorFlow
 
-Dowiedz się, jak przenieść wiedzę z istniejącego modelu TensorFlow do nowego modelu klasyfikacji obrazów ML.NET.
+Dowiedz się, jak przenieść wiedzę z istniejącego modelu TensorFlow do nowego modelu klasyfikacji obrazu ML.NET.
 
-Model TensorFlow został przeszkolony do klasyfikowania obrazów na tysiąc kategorii. Model ML.NET korzysta z części modelu TensorFlow w swoim potoku do szkolenia modelu do klasyfikowania obrazów na 3 kategorie.
+Model TensorFlow został przeszkolony do klasyfikowania obrazów do tysiąca kategorii. Model ML.NET korzysta z części modelu TensorFlow w potoku do szkolenia modelu do klasyfikowania obrazów do 3 kategorii.
 
-Szkolenie modelu [klasyfikacji obrazów](https://en.wikipedia.org/wiki/Outline_of_object_recognition) od podstaw wymaga ustawienia milionów parametrów, mnóstwo oznaczonych danych szkoleniowych i ogromnej ilości zasobów obliczeniowych (setki godzin GPU). Chociaż nie jest tak skuteczny jak szkolenie niestandardowego modelu od podstaw, uczenie się transferu pozwala na skróty tego procesu, pracując z tysiącami obrazów w porównaniu z milionami oznaczonych obrazów i dość szybko zbudować dostosowany model (w ciągu godziny na komputerze bez GPU). Ten samouczek skaluje, że proces w dół jeszcze bardziej, przy użyciu tylko kilkanaście obrazów szkoleniowych.
+Szkolenie modelu [klasyfikacji obrazów](https://en.wikipedia.org/wiki/Outline_of_object_recognition) od podstaw wymaga ustawienia milionów parametrów, mnóstwa oznaczonych danych szkoleniowych i ogromnej ilości zasobów obliczeniowych (setki godzin gpu). Chociaż nie jest tak skuteczny jak szkolenie niestandardowego modelu od podstaw, uczenie się transferu pozwala na skróty tego procesu, pracując z tysiącami obrazów vs miliony obrazów etykietowanych i dość szybko zbudować dostosowany model (w ciągu godziny na komputerze bez gpu). Ten samouczek skaluje ten proces jeszcze bardziej, używając tylko kilkunastu obrazów szkoleniowych.
 
-Niniejszy samouczek zawiera informacje na temat wykonywania następujących czynności:
+Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]
 >
 > * Omówienie problemu
@@ -27,74 +27,74 @@ Niniejszy samouczek zawiera informacje na temat wykonywania następujących czyn
 > * Trenuj i oceniaj model ML.NET
 > * Klasyfikowanie obrazu testowego
 
-Kod źródłowy tego samouczka można znaleźć w repozytorium [dotnet/samples.](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TransferLearningTF) Należy zauważyć, że domyślnie konfiguracja projektu .NET dla tego samouczka jest przeznaczona dla .NET core 2.2.
+Kod źródłowy tego samouczka można znaleźć w repozytorium [dotnet/samples.](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TransferLearningTF) Należy zauważyć, że domyślnie konfiguracja projektu platformy .NET dla tego samouczka jest przeznaczona dla programu .NET core 2.2.
 
-## <a name="what-is-transfer-learning"></a>Co to jest uczenie się transferowe?
+## <a name="what-is-transfer-learning"></a>Co to jest uczenie się transferu?
 
-Transfer learning to proces wykorzystywania wiedzy zdobytej podczas rozwiązywania jednego problemu i stosowania go do innego, ale powiązanego problemu.
+Uczenie się transferowe to proces wykorzystania zdobytej wiedzy podczas rozwiązywania jednego problemu i stosowania go do innego, ale powiązanego problemu.
 
-W tym samouczku należy użyć części modelu TensorFlow - uczonego do klasyfikowania obrazów na tysiąc kategorii — w modelu ML.NET, który klasyfikuje obrazy na 3 kategorie.
+W tym samouczku należy użyć części modelu TensorFlow — przeszkolonego do klasyfikowania obrazów na tysiąc kategorii — w modelu ML.NET, który klasyfikuje obrazy do 3 kategorii.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-* [Visual Studio 2017 w wersji 15.6 lub nowszej](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) z zainstalowanym obciążeniem ".NET Core programistorna wieloplatformowa".
-* [Samouczek katalog zasobów . Plik ZIP](https://github.com/dotnet/samples/blob/master/machine-learning/tutorials/TransferLearningTF/image-classifier-assets.zip)
+* [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) lub nowsze lub Visual Studio 2017 w wersji 15.6 lub nowszej z zainstalowanym obciążeniem ".NET Core rozwoju między platformami".
+* [Katalog zasobów samouczka . Plik ZIP](https://github.com/dotnet/samples/blob/master/machine-learning/tutorials/TransferLearningTF/image-classifier-assets.zip)
 * [Model uczenia maszynowego InceptionV1](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)
 
-## <a name="select-the-right-machine-learning-task"></a>Wybierz odpowiednie zadanie uczenia maszynowego
+## <a name="select-the-right-machine-learning-task"></a>Wybieranie odpowiedniego zadania uczenia maszynowego
 
 ### <a name="deep-learning"></a>Uczenie głębokie
 
-[Uczenie głębokie](https://en.wikipedia.org/wiki/Deep_learning) to podzbiór uczenia maszynowego, który rewolucjonizuje obszary takie jak wzmożenie komputerowe i rozpoznawanie mowy.
+[Uczenie głębokie](https://en.wikipedia.org/wiki/Deep_learning) jest podzbiorem uczenia maszynowego, które rewolucjonizuje obszary takie jak widzenie komputerowe i rozpoznawanie mowy.
 
-Modele uczenia głębokiego są trenowane przy użyciu dużych zestawów [oznaczonych danych](https://en.wikipedia.org/wiki/Labeled_data) i [sieci neuronowych,](https://en.wikipedia.org/wiki/Artificial_neural_network) które zawierają wiele warstw uczenia się. Głębokie uczenie się:
+Modele uczenia głębokiego są szkolone przy użyciu dużych zestawów [danych etykietowanych](https://en.wikipedia.org/wiki/Labeled_data) i [sieci neuronowych,](https://en.wikipedia.org/wiki/Artificial_neural_network) które zawierają wiele warstw uczenia się. Głębokie uczenie się:
 
-* Działa lepiej w niektórych zadaniach, takich jak Wzmożenie komputera.
+* Lepiej wykonuje niektóre zadania, takie jak Wizja komputerowa.
 * Wymaga ogromnych ilości danych szkoleniowych.
 
-Klasyfikacja obrazów jest typowym zadaniem uczenia maszynowego, które pozwala nam automatycznie klasyfikować obrazy do kategorii, takich jak:
+Klasyfikacja obrazów to typowe zadanie uczenia maszynowego, które pozwala nam automatycznie klasyfikować obrazy do kategorii, takich jak:
 
 * Wykrywanie ludzkiej twarzy na obrazie, czy nie.
-* Wykrywanie kotów vs. psów.
+* Wykrywanie kotów kontra psy.
 
- Lub jak na poniższych obrazach, określenie, czy obraz jest a(n) jedzeniem, przekąską lub urządzeniem:
+ Lub jak na poniższych obrazach, określenie, czy obraz jest a(n) żywności, elementów dziejących lub urządzenia:
 
-![obraz](./media/image-classification/220px-Pepperoni_pizza.jpg)
-![pizzy](./media/image-classification/119px-Nalle_-_a_small_brown_teddy_bear.jpg)
-![obraz teddy misia obraz toster obrazu](./media/image-classification/193px-Broodrooster.jpg)
+![pizza](./media/image-classification/220px-Pepperoni_pizza.jpg)
+![obraz pluszowy miś obraz](./media/image-classification/119px-Nalle_-_a_small_brown_teddy_bear.jpg)
+![toster obrazu obrazu](./media/image-classification/193px-Broodrooster.jpg)
 
 >[!Note]
-> Powyższe obrazy należą do Wikimedia Commons i są przypisywane w następujący sposób:
+> Poprzednie obrazy należą do Wikimedia Commons i są przypisane w następujący sposób:
 >
-> * "220px-Pepperoni_pizza.jpg" Domena https://commons.wikimedia.org/w/index.php?curid=79505publiczna, ,
-> * "119px-Nalle_-_a_small_brown_teddy_bear.jpg" [Jonik](https://commons.wikimedia.org/wiki/User:Jonik) - Self-photographed, CC BY-SA https://commons.wikimedia.org/w/index.php?curid=481662.0, .
+> * "220px-Pepperoni_pizza.jpg" Domena publiczna, https://commons.wikimedia.org/w/index.php?curid=79505,
+> * "119px-Nalle_-_a_small_brown_teddy_bear.jpg" [Autor: Jonik](https://commons.wikimedia.org/wiki/User:Jonik) - Sfotografowany samodzielnie, CC BY-SA https://commons.wikimedia.org/w/index.php?curid=481662.0, .
 > * "193px-Broodrooster.jpg" [Autor: M.Minderhoud](https://nl.wikipedia.org/wiki/Gebruiker:Michiel1972) - Własna praca, CC BY-SA 3.0,https://commons.wikimedia.org/w/index.php?curid=27403
 
-Jest `Inception model` przeszkolony do klasyfikowania obrazów na tysiąc kategorii, ale w tym samouczku musisz sklasyfikować obrazy w mniejszym zestawie kategorii i tylko tych kategoriach. Wprowadź `transfer` część `transfer learning`pliku . Można przenieść `Inception model`zdolność rozpoznawania i klasyfikowania obrazów do nowych ograniczonych kategorii niestandardowego klasyfikatora obrazów.
+Jest `Inception model` przeszkolony do klasyfikowania obrazów do tysiąca kategorii, ale w tym samouczku należy sklasyfikować obrazy w mniejszym zestawie kategorii i tylko te kategorie. Wprowadź `transfer` część `transfer learning`pliku . Można przenieść `Inception model`możliwość rozpoznawania i klasyfikowania obrazów do nowych ograniczonych kategorii niestandardowego klasyfikatora obrazów.
 
 * Żywności
 * Zabawka
 * Urządzenia
 
-W tym samouczku [użyto](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip) modelu uczenia głębokiego modelu TensorFlow, `ImageNet` popularnego modelu rozpoznawania obrazów uczonego w zestawie danych. Model TensorFlow klasyfikuje całe obrazy na tysiąc klas, takich jak "Parasol", "Jersey" i "Zmywarka".
+W tym samouczku użyto modelu uczenia głębokiego TensorFlow [Inception,](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip) popularnego modelu rozpoznawania obrazów przeszkolonego `ImageNet` w zestawie danych. Model TensorFlow klasyfikuje całe obrazy na tysiąc klas, takich jak "Parasol", "Jersey" i "Zmywarka".
 
-Ponieważ `Inception model` został już wstępnie przeszkolony na tysiącach różnych obrazów, wewnętrznie zawiera [funkcje obrazu](https://en.wikipedia.org/wiki/Feature_(computer_vision)) potrzebne do identyfikacji obrazu. Możemy skorzystać z tych wewnętrznych funkcji obrazu w modelu, aby nabyć nowy model ze znacznie mniejszą liczbą klas.
+Ponieważ `Inception model` został już wstępnie przeszkolony na tysiącach różnych obrazów, wewnętrznie zawiera [funkcje obrazu](https://en.wikipedia.org/wiki/Feature_(computer_vision)) potrzebne do identyfikacji obrazu. Możemy skorzystać z tych wewnętrznych funkcji obrazu w modelu, aby trenować nowy model z dużo mniejszą liczbą klas.
 
-Jak pokazano na poniższym diagramie, należy dodać odwołanie do pakietów ML.NET NuGet w aplikacjach .NET Core lub .NET Framework. Pod okładkami ML.NET zawiera i `TensorFlow` odwołuje się do macierzystej biblioteki, `TensorFlow` która umożliwia pisanie kodu ładowanego istniejącego pliku uczonego modelu.
+Jak pokazano na poniższym diagramie, należy dodać odwołanie do ML.NET pakietów NuGet w aplikacjach .NET Core lub .NET Framework. W obszarze obejmuje ML.NET zawiera i odwołuje `TensorFlow` się do biblioteki macierzystej, która umożliwia `TensorFlow` pisanie kodu, który ładuje istniejący plik modelu przeszkolonego.
 
-![Diagram transformatorem TensorFlow ML.NET Arch](./media/image-classification/tensorflow-mlnet.png)
+![Diagram transformacji TensorFlow ML.NET łuku](./media/image-classification/tensorflow-mlnet.png)
 
 ### <a name="multiclass-classification"></a>Klasyfikacja wieloklasowa
 
-Po użyciu modelu powstania TensorFlow do wyodrębniania funkcji odpowiednich jako dane wejściowe dla klasycznego algorytmu uczenia maszynowego, dodajemy ML.NET [klasyfikatora wieloklasowego.](../resources/tasks.md#multiclass-classification)
+Po użyciu modelu incepcji TensorFlow do wyodrębnienia funkcji odpowiednich jako dane wejściowe dla klasycznego algorytmu uczenia maszynowego, dodajemy ML.NET [klasyfikatora wieloklasowego.](../resources/tasks.md#multiclass-classification)
 
-Specyficzny trener używany w tym przypadku jest [algorytm regresji logistycznej multinomial](https://en.wikipedia.org/wiki/Multinomial_logistic_regression).
+Specyficznym trenerem używanym w tym przypadku jest [wielomiliowy algorytm regresji logistycznej.](https://en.wikipedia.org/wiki/Multinomial_logistic_regression)
 
-Algorytm zaimplementowany przez tego trenera dobrze sprawdza problemy z dużą liczbą funkcji, co ma miejsce w przypadku modelu uczenia głębokiego działającego na danych obrazu.
+Algorytm zaimplementowany przez tego trenera sprawdza się na problemach z dużą liczbą funkcji, co ma miejsce w przypadku modelu uczenia głębokiego działającego na danych obrazu.
 
 ### <a name="data"></a>Dane
 
-Istnieją dwa źródła danych: `.tsv` plik i pliki obrazów.  Plik `tags.tsv` zawiera dwie kolumny: pierwsza z `ImagePath` nich jest zdefiniowana jako, a druga `Label` odpowiada obrazowi. Poniższy przykładowy plik nie ma wiersza nagłówka i wygląda następująco:
+Istnieją dwa źródła danych: `.tsv` plik i pliki obrazów.  Plik `tags.tsv` zawiera dwie kolumny: pierwsza jest `ImagePath` zdefiniowana jako, `Label` a druga odpowiada obrazowi. Poniższy przykładowy plik nie ma wiersza nagłówka i wygląda następująco:
 
 <!-- markdownlint-disable MD010 -->
 ```tsv
@@ -110,40 +110,40 @@ toaster2.png    appliance
 <!-- markdownlint-enable MD010 -->
 
 Obrazy szkoleniowe i testowe znajdują się w folderach zasobów, które zostaną pobrane w pliku zip. Te obrazy należą do Wikimedia Commons.
-> *[Wikimedia Commons](https://commons.wikimedia.org/w/index.php?title=Main_Page&oldid=313158208), repozytorium wolnych mediów.* Pobrane 10:48, 17 października 2018 od: https://commons.wikimedia.org/wiki/Pizza https://commons.wikimedia.org/wiki/Toasterhttps://commons.wikimedia.org/wiki/Teddy_bear
+> *[Wikimedia Commons](https://commons.wikimedia.org/w/index.php?title=Main_Page&oldid=313158208), repozytorium wolnych mediów.* Dostęp 10:48, 17 października 2018 https://commons.wikimedia.org/wiki/Pizza https://commons.wikimedia.org/wiki/Toaster od:https://commons.wikimedia.org/wiki/Teddy_bear
 
-## <a name="setup"></a>Konfiguracja
+## <a name="setup"></a>Konfigurowanie
 
 ### <a name="create-a-project"></a>Tworzenie projektu
 
-1. Utwórz **aplikację .NET Core Console** o nazwie "TransferLearningTF".
+1. Utwórz **aplikację konsoli .NET** Core o nazwie "TransferLearningTF".
 
-1. Zainstaluj **pakiet Microsoft.ML NuGet:**
+1. Zainstaluj **pakiet nuget Microsoft.ML:**
 
-    * W Eksploratorze rozwiązań kliknij prawym przyciskiem myszy projekt i wybierz **polecenie Zarządzaj pakietami NuGet**.
+    * W Eksploratorze rozwiązań kliknij prawym przyciskiem myszy projekt i wybierz pozycję **Zarządzaj pakietami NuGet**.
     * Wybierz "nuget.org" jako źródło pakietu, wybierz kartę Przeglądaj, wyszukaj **Microsoft.ML**.
     * Kliknij listę rozwijaną **Wersja,** wybierz pakiet **1.4.0** na liście i wybierz przycisk **Zainstaluj.**
     * Wybierz przycisk **OK** w oknie dialogowym **Podgląd zmian.**
-    * Wybierz przycisk **Akceptuję** w oknie dialogowym **Akceptacja licencji,** jeśli zgadzasz się z warunkami licencji dla wymienionych pakietów.
-    * Powtórz te kroki dla **firm Microsoft.ML.ImageAnalytics v1.4.0**, **SciSharp.TensorFlow.Redist v1.15.0** i **Microsoft.ML.TensorFlow v1.4.0**.
+    * Wybierz przycisk **Akceptuję** w oknie dialogowym **Akceptacja licencji,** jeśli zgadzasz się z postanowieniami licencyjnymi dotyczącymi wymienionych pakietów.
+    * Powtórz te kroki dla **microsoft.ml.ImageAnalytics v1.4.0**, **SciSharp.TensorFlow.Redist v1.15.0** i **Microsoft.ML.TensorFlow v1.4.0**.
 
 ### <a name="download-assets"></a>Pobieranie zasobów
 
 1. Pobierz [plik zip katalogu zasobów projektu](https://github.com/dotnet/samples/blob/master/machine-learning/tutorials/TransferLearningTF/image-classifier-assets.zip)i rozpakuj.
 
-1. Skopiuj `assets` katalog do katalogu projektów *TransferLearningTF.* Ten katalog i jego podkatalogi zawierają dane i pliki wsparcia (z wyjątkiem modelu Inception, który pobierzesz i dodasz w następnym kroku) potrzebnych do tego samouczka.
+1. Skopiuj `assets` katalog do katalogu projektu *TransferLearningTF.* Ten katalog i jego podkatalogi zawierają pliki danych i obsługi (z wyjątkiem modelu inception, który pobierzesz i dodasz w następnym kroku) potrzebne do tego samouczka.
 
-1. Pobierz [model Inception](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)i rozpakuj.
+1. Pobierz [model Inception](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)i rozpaj.
 
-1. Skopiuj `inception5h` zawartość katalogu po prostu rozpakowany `assets/inception` do katalogu projektu *TransferLearningTF.* Ten katalog zawiera model i dodatkowe pliki pomocy technicznej potrzebne w tym samouczku, jak pokazano na poniższym obrazku:
+1. Skopiuj `inception5h` zawartość katalogu po prostu rozpakowane do katalogu `assets/inception` projektu *TransferLearningTF.* Ten katalog zawiera model i dodatkowe pliki pomocy technicznej potrzebne dla tego samouczka, jak pokazano na poniższej ilustracji:
 
-   ![Zawartość katalogu początkowego](./media/image-classification/inception-files.png)
+   ![Zawartość katalogu incepcyjnego](./media/image-classification/inception-files.png)
 
-1. W Eksploratorze rozwiązań kliknij prawym przyciskiem myszy każdy z plików w katalogu i podkatalogach zasobów i wybierz polecenie **Właściwości**. W obszarze **Zaawansowane**zmień wartość **kopiuj do katalogu wyjściowego,** aby **skopiować, jeśli nowsza**.
+1. W Eksploratorze rozwiązań kliknij prawym przyciskiem myszy każdy z plików w katalogu i podkatalogach zasobów, a następnie wybierz polecenie **Właściwości**. W obszarze **Zaawansowane**zmień wartość **kopiuj na Katalog wyjściowy** na **Kopiuj, jeśli jest nowszy**.
 
 ### <a name="create-classes-and-define-paths"></a>Tworzenie klas i definiowanie ścieżek
 
-1. Dodaj następujące `using` dodatkowe instrukcje do górnej części pliku *Program.cs:*
+1. Dodaj następujące `using` dodatkowe instrukcje w górnej części pliku *Program.cs:*
 
     [!code-csharp[AddUsings](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#AddUsings)]
 
@@ -155,7 +155,7 @@ Obrazy szkoleniowe i testowe znajdują się w folderach zasobów, które zostan�
 
     [!code-csharp[DeclareImageData](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#DeclareImageData)]
 
-    `ImageData`jest klasą danych wejściowych <xref:System.String> obrazu i ma następujące pola:
+    `ImageData`jest klasą danych obrazu wejściowego i ma następujące <xref:System.String> pola:
 
     * `ImagePath`zawiera nazwę pliku obrazu.
     * `Label`zawiera wartość etykiety obrazu.
@@ -166,30 +166,30 @@ Obrazy szkoleniowe i testowe znajdują się w folderach zasobów, które zostan�
 
     `ImagePrediction`jest klasą przewidywania obrazu i ma następujące pola:
 
-    * `Score`zawiera procent ufności dla danej klasyfikacji obrazu.
+    * `Score`zawiera procent zaufania dla danej klasyfikacji obrazu.
     * `PredictedLabelValue`zawiera wartość dla etykiety klasyfikacji przewidywanego obrazu.
 
-    `ImagePrediction`jest klasą używaną do przewidywania po przeszkoloniu modelu. Ma `string` (`ImagePath`) dla ścieżki obrazu. Służy `Label` do ponownego użycia i przeszkolenia modelu. Jest `PredictedLabelValue` używany podczas przewidywania i oceny. Do oceny dane wejściowe z danymi treningowymi, przewidywane wartości i model są używane.
+    `ImagePrediction`jest klasą używaną do przewidywania po modelu został przeszkolony. Ma `string` (`ImagePath`) dla ścieżki obrazu. Jest `Label` używany do ponownego użycia i szkolenia modelu. Jest `PredictedLabelValue` używany podczas przewidywania i oceny. Do oceny są używane dane wejściowe z danymi szkoleniowymi, przewidywane wartości i model.
 
-### <a name="initialize-variables-in-main"></a>Inicjowanie zmiennych w main
+### <a name="initialize-variables-in-main"></a>Inicjowanie zmiennych w trybie Głównym
 
-1. Inicjuj zmienną `mlContext` z `MLContext`nowym wystąpieniem .  Zastąp `Console.WriteLine("Hello World!")` wiersz następującym `Main` kodem w metodzie:
+1. Zainicjować `mlContext` zmienną z nowym `MLContext`wystąpieniem .  Wymień `Console.WriteLine("Hello World!")` wiersz na następujący `Main` kod w metodzie:
 
     [!code-csharp[CreateMLContext](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#CreateMLContext)]
 
-    [Klasa MLContext](xref:Microsoft.ML.MLContext) jest punktem wyjścia dla wszystkich operacji `mlContext` ML.NET, a inicjowanie tworzy nowe środowisko ML.NET, które mogą być współużytkowane przez obiekty przepływu pracy tworzenia modelu. Jest to podobne, koncepcyjnie, `DBContext` do w ramach jednostki.
+    Klasa [MLContext](xref:Microsoft.ML.MLContext) jest punktem wyjścia dla wszystkich operacji ML.NET, a inicjowanie `mlContext` tworzy nowe środowisko ML.NET, które może być współużytkowane przez obiekty przepływu pracy tworzenia modelu. Jest podobny, koncepcyjnie, do `DBContext` w entity framework.
 
-### <a name="create-a-struct-for-inception-model-parameters"></a>Tworzenie struktury parametrów modelu początkowego
+### <a name="create-a-struct-for-inception-model-parameters"></a>Tworzenie struktury dla parametrów modelu incepcyjnego
 
-1. Model Inception ma kilka parametrów, które musisz przekazać. Utwórz strukturę, aby zamapować wartości parametrów na przyjazne `Main()` nazwy za pomocą następującego kodu, tuż po metodzie:
+1. Model inception ma kilka parametrów, które należy przekazać. Utwórz strukturę, aby mapować wartości parametrów na przyjazne `Main()` nazwy z następującym kodem, tuż po metodzie:
 
     [!code-csharp[InceptionSettings](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#InceptionSettings)]
 
 ### <a name="create-a-display-utility-method"></a>Tworzenie metody narzędzia wyświetlania
 
-Ponieważ dane obrazu i powiązane prognozy będą wyświetlane więcej niż jeden raz, utwórz metodę narzędzia wyświetlania do obsługi wyświetlania obrazu i wyników przewidywania.
+Ponieważ będą wyświetlane dane obrazu i związane z nimi prognozy więcej niż jeden raz, utwórz metodę narzędzia wyświetlania do obsługi wyświetlania obrazu i przewidywanie wyników.
 
-1. Utwórz `DisplayResults()` metodę, tuż `InceptionSettings` po strukturze, używając następującego kodu:
+1. Utwórz `DisplayResults()` metodę, zaraz `InceptionSettings` po strukturze, używając następującego kodu:
 
     ```csharp
     private static void DisplayResults(IEnumerable<ImagePrediction> imagePredictionData)
@@ -204,7 +204,7 @@ Ponieważ dane obrazu i powiązane prognozy będą wyświetlane więcej niż jed
 
 ### <a name="create-a-tsv-file-utility-method"></a>Tworzenie metody narzędzia pliku tsv
 
-1. Utwórz `ReadFromTsv()` metodę, tuż `DisplayResults()` po tej metodzie, używając następującego kodu:
+1. Utwórz `ReadFromTsv()` metodę, zaraz `DisplayResults()` po metodzie, używając następującego kodu:
 
     ```csharp
     public static IEnumerable<ImageData> ReadFromTsv(string file, string folder)
@@ -217,7 +217,7 @@ Ponieważ dane obrazu i powiązane prognozy będą wyświetlane więcej niż jed
 
     [!code-csharp[ReadFromTsv](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#ReadFromTsv)]
 
-    Kod analizuje za pośrednictwem `tags.tsv` pliku, aby dodać ścieżkę pliku `ImagePath` do nazwy pliku `Label` obrazu `ImageData` dla właściwości i załadować go i do obiektu.
+    Kod analizuje za pośrednictwem `tags.tsv` pliku, aby dodać ścieżkę pliku `ImagePath` do nazwy pliku `Label` obrazu `ImageData` właściwości i załadować go i do obiektu.
 
 ### <a name="create-a-method-to-make-a-prediction"></a>Tworzenie metody przewidywania
 
@@ -230,7 +230,7 @@ Ponieważ dane obrazu i powiązane prognozy będą wyświetlane więcej niż jed
     }
     ```
 
-1. Utwórz `ImageData` obiekt zawierający w pełni kwalifikowaną nazwę pliku `ImagePath`ścieżki i obrazu dla pojedynczego pliku . Dodaj następujący kod jako następne `ClassifySingleImage()` wiersze w metodzie:
+1. Utwórz `ImageData` obiekt zawierający w pełni kwalifikowaną ścieżkę i nazwę pliku obrazu dla pojedynczego `ImagePath`pliku . Dodaj następujący kod jako następne `ClassifySingleImage()` wiersze metody:
 
     [!code-csharp[LoadImageData](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#LoadImageData)]
 
@@ -238,7 +238,7 @@ Ponieważ dane obrazu i powiązane prognozy będą wyświetlane więcej niż jed
 
     [!code-csharp[PredictSingle](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#PredictSingle)]
 
-    Aby uzyskać przewidywanie, należy użyć [Predict()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) metody. [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) jest interfejs emanujący interfejsu API wygody, który umożliwia wykonywanie przewidywanie na pojedyncze wystąpienie danych. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)nie jest bezpieczny dla nici. Dopuszczalne jest stosowanie w środowiskach jednowątkowych lub prototypowych. Aby zwiększyć wydajność i bezpieczeństwo wątków `PredictionEnginePool` w środowiskach [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) produkcyjnych, należy użyć usługi, która tworzy obiektów [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) do użycia w całej aplikacji. Zobacz ten przewodnik, jak [ `PredictionEnginePool` używać w ASP.NET Core Web API](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application).
+    Aby uzyskać przewidywanie, należy użyć [Predict()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) metody. [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) jest interfejsem API wygody, który umożliwia wykonywanie prognozowania na jednym wystąpieniu danych. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)nie jest bezpieczny dla wątków. Jest dopuszczalne do użycia w środowiskach jednowątkowych lub prototypowych. Aby zwiększyć wydajność i bezpieczeństwo wątków `PredictionEnginePool` w środowiskach [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) produkcyjnych, należy użyć usługi, która tworzy obiekty [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) do użycia w całej aplikacji. Zobacz ten przewodnik dotyczący [używania `PredictionEnginePool` w ASP.NET Core Web API](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application).
 
     > [!NOTE]
     > `PredictionEnginePool`rozszerzenie usługi jest obecnie w wersji zapoznawczej.
@@ -249,13 +249,13 @@ Ponieważ dane obrazu i powiązane prognozy będą wyświetlane więcej niż jed
 
 ## <a name="construct-the-mlnet-model-pipeline"></a>Konstruowanie potoku modelu ML.NET
 
-Potok modelu ML.NET jest łańcuchem estymatorów. Należy zauważyć, że wykonanie nie dzieje się podczas budowy rurociągu. Obiekty estymatora są tworzone, ale nie są wykonywane.
+Potok ML.NET modelu to łańcuch estymatorów. Należy zauważyć, że wykonanie nie dzieje się podczas budowy potoku. Obiekty estymatora są tworzone, ale nie wykonywane.
 
 1. Dodawanie metody generowania modelu
 
-    Ta metoda jest sercem samouczka. Tworzy potok dla modelu i szkoli potoku do produkcji modelu ML.NET. Ocenia również model w stosunku do niektórych wcześniej niewidocznych danych testowych.
+    Ta metoda jest sercem samouczka. Tworzy potok dla modelu i trenuje potoku do produkcji ML.NET modelu. Ocenia również model względem niektórych wcześniej niewidocznych danych testowych.
 
-    Utwórz `GenerateModel()` metodę tuż `InceptionSettings` po strukturze i `DisplayResults()` tuż przed metodą, używając następującego kodu:
+    Utwórz `GenerateModel()` metodę, tuż `InceptionSettings` po strukturze i `DisplayResults()` tuż przed metodą, używając następującego kodu:
 
     ```csharp
     public static ITransformer GenerateModel(MLContext mlContext)
@@ -268,29 +268,29 @@ Potok modelu ML.NET jest łańcuchem estymatorów. Należy zauważyć, że wykon
 
     [!code-csharp[ImageTransforms](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#ImageTransforms)]
 
-    Dane obrazu muszą zostać przetworzone w formacie, który oczekuje model TensorFlow. W takim przypadku obrazy są ładowane do pamięci, zmieniane na spójny rozmiar, a piksele są wyodrębniane do wektora numerycznego.
+    Dane obrazu muszą być przetwarzane w formacie, który oczekuje modelu TensorFlow. W takim przypadku obrazy są ładowane do pamięci, przesunięty rozmiar do spójnego rozmiaru, a piksele są wyodrębniane do wektora numerycznego.
 
-1. Dodaj estymatora, aby załadować model TensorFlow i zdobądź go:
+1. Dodaj estymatora, aby załadować model TensorFlow i zdobyć go:
 
     [!code-csharp[ScoreTensorFlowModel](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#ScoreTensorFlowModel)]
 
-    Ten etap w potoku ładuje model TensorFlow do pamięci, a następnie przetwarza wektor wartości pikseli za pośrednictwem sieci modelu TensorFlow. Stosowanie danych wejściowych do modelu uczenia głębokiego i generowanie danych wyjściowych przy użyciu modelu jest określane jako **scoring**. Korzystając z modelu w całości, ocenianie sprawia, że wnioskowanie lub przewidywanie.
+    Ten etap w potoku ładuje model TensorFlow do pamięci, a następnie przetwarza wektor wartości pikseli za pośrednictwem sieci modelu TensorFlow. Stosowanie danych wejściowych do modelu uczenia głębokiego i generowanie danych wyjściowych przy użyciu modelu jest określane jako **punktowanie.** Podczas korzystania z modelu w całości, punktacji sprawia, że wnioskowanie lub przewidywanie.
 
-    W takim przypadku należy użyć wszystkich modelu TensorFlow z wyjątkiem ostatniej warstwy, która jest warstwą, która sprawia, że wnioskowanie. Dane wyjściowe przedostatniej warstwy są `softmax_2_preactivation`oznaczone . Dane wyjściowe tej warstwy są skutecznie wektorem obiektów charakteryzujących oryginalne obrazy wejściowe.
+    W takim przypadku należy użyć wszystkich tensorFlow modelu z wyjątkiem ostatniej warstwy, która jest warstwa, która sprawia, że wnioskowanie. Dane wyjściowe przedostatniej warstwy są oznaczone etykietą `softmax_2_preactivation`. Dane wyjściowe tej warstwy jest skutecznie wektor obiektów, które charakteryzują oryginalne obrazy wejściowe.
 
     Ten wektor funkcji generowany przez model TensorFlow będzie używany jako dane wejściowe do algorytmu szkolenia ML.NET.
 
-1. Dodaj estymator, aby zamapować etykiety ciągów w danych szkoleniowych na wartości klucza całkowitego:
+1. Dodaj estymatora, aby zamapować etykiety ciągów w danych szkolenia do wartości klucza całkowitej:
 
     [!code-csharp[MapValueToKey](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#MapValueToKey)]
 
-    Trener ML.NET, który jest dołączany dalej `key` wymaga jego etykiety być w formacie, a nie arbitralne ciągi. Klucz jest liczbą, która ma mapowanie jeden do jednego do wartości ciągu.
+    Trener ML.NET, który jest dołączany dalej, wymaga, `key` aby jego etykiety były w formacie, a nie w dowolnych ciągach. Klucz to liczba, która ma od jednego do jednego mapowanie do wartości ciągu.
 
 1. Dodaj algorytm szkolenia ML.NET:
 
     [!code-csharp[AddTrainer](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#AddTrainer)]
 
-1. Dodaj estymatora, aby odwzorować przewidywaną wartość klucza z powrotem na ciąg:
+1. Dodaj estymatora do mapowania przewidywanej wartości klucza z powrotem do ciągu:
 
     [!code-csharp[MapKeyToValue](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#MapKeyToValue)]
 
@@ -300,49 +300,49 @@ Potok modelu ML.NET jest łańcuchem estymatorów. Należy zauważyć, że wykon
 
     [!code-csharp[LoadData](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#LoadData "Load the data")]
 
-    Dane w ML.NET jest reprezentowana jako [klasa IDataView](xref:Microsoft.ML.IDataView). `IDataView`to elastyczny i skuteczny sposób opisywania danych tabelarycznych (numerycznych i tekstowych). Dane mogą być ładowane z pliku tekstowego lub w czasie rzeczywistym `IDataView` (na przykład bazy danych SQL lub plików dziennika) do obiektu.
+    Dane w ML.NET są reprezentowane jako [klasa IDataView](xref:Microsoft.ML.IDataView). `IDataView`jest elastycznym, skutecznym sposobem opisywania danych tabelaryjskich (liczbowych i tekstowych). Dane można ładować z pliku tekstowego lub w czasie rzeczywistym (na przykład bazy danych SQL lub plików dziennika) do obiektu. `IDataView`
 
-1. Przeszkolić model z danymi załadowanymi powyżej:
+1. Trenuj model z załadowanymi powyżej danymi:
 
     [!code-csharp[TrainModel](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#TrainModel)]
 
-    Metoda `Fit()` szkoli model, stosując zestaw danych szkolenia do potoku.
+    Metoda `Fit()` trenuje model, stosując zestaw danych szkolenia do potoku.
 
 ## <a name="evaluate-the-accuracy-of-the-model"></a>Ocena dokładności modelu
 
-1. Załaduj i przekształcaj dane testowe, dodając następujący `GenerateModel` kod do następnego wiersza metody:
+1. Załaduj i przekształć dane testowe, dodając następujący kod do następnego wiersza `GenerateModel` metody:
 
     [!code-csharp[LoadAndTransformTestData](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#LoadAndTransformTestData "Load and transform test data")]
 
-    Istnieje kilka przykładowych obrazów, których można użyć do oceny modelu. Podobnie jak dane szkoleniowe, muszą one `IDataView`zostać załadowane do , tak, że mogą być przekształcane przez model.
+    Istnieje kilka przykładowych obrazów, których można użyć do oceny modelu. Podobnie jak dane szkoleniowe, muszą `IDataView`one zostać załadowane do , aby mogły zostać przekształcone przez model.
 
 1. Dodaj następujący kod `GenerateModel()` do metody, aby ocenić model:
 
     [!code-csharp[Evaluate](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#Evaluate)]
 
-    Po ustawieniu przewidywania metoda [Evaluate():](xref:Microsoft.ML.RecommendationCatalog.Evaluate%2A)
+    Po ustawieniu prognozowania metoda [Evaluate():](xref:Microsoft.ML.RecommendationCatalog.Evaluate%2A)
 
     * Ocenia model (porównuje przewidywane wartości z testowym `labels`zestawem danych).
     * Zwraca metryki wydajności modelu.
 
-1. Wyświetlanie metryk dokładności modelu
+1. Wyświetlanie wskaźników dokładności modelu
 
-    Użyj następującego kodu, aby wyświetlić metryki, udostępnić wyniki, a następnie działać na nich:
+    Użyj następującego kodu, aby wyświetlić dane, udostępnić wyniki, a następnie działać na nich:
 
     [!code-csharp[DisplayMetrics](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#DisplayMetrics)]
 
-    Dla klasyfikacji obrazów oceniane są następujące metryki:
+    Następujące metryki są oceniane dla klasyfikacji obrazów:
 
-    * `Log-loss`- patrz [Utrata dziennika](../resources/glossary.md#log-loss). Chcesz, aby strata dziennika była jak najbardziej zbliżony do zera.
-    * `Per class Log-loss`. Chcesz, aby na klasę Strata dziennika była jak najbliżej zera, jak to możliwe.
+    * `Log-loss`- patrz [Utrata dziennika](../resources/glossary.md#log-loss). Chcesz Log-loss być jak najbliżej zera, jak to możliwe.
+    * `Per class Log-loss`. Chcesz, aby na klasę Log-loss być jak najbliżej zera, jak to możliwe.
 
-1. Dodaj następujący kod, aby zwrócić uczonego modelu jako następny wiersz:
+1. Dodaj następujący kod, aby zwrócić przeszkolony model jako następny wiersz:
 
     [!code-csharp[SaveModel](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#ReturnModel)]
 
 ## <a name="run-the-application"></a>Uruchom aplikację!
 
-1. Dodaj wywołanie `GenerateModel` w `Main` metodzie po utworzeniu mlcontext klasy:
+1. Dodaj wywołanie `GenerateModel` w `Main` metodzie po utworzeniu MLContext klasy:
 
     [!code-csharp[CallGenerateModel](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#CallGenerateModel)]
 
@@ -350,7 +350,7 @@ Potok modelu ML.NET jest łańcuchem estymatorów. Należy zauważyć, że wykon
 
     [!code-csharp[CallClassifySingleImage](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#CallClassifySingleImage)]
 
-1. Uruchom aplikację konsoli (Ctrl + F5). Wyniki powinny być podobne do następujących danych wyjściowych.  Mogą zostać wyświetlone ostrzeżenia lub wiadomości przetwarzania, ale te komunikaty zostały usunięte z następujących wyników dla jasności.
+1. Uruchamianie aplikacji konsoli (Ctrl + F5). Wyniki powinny być podobne do następujących danych wyjściowych.  Możesz zobaczyć ostrzeżenia lub przetwarzania wiadomości, ale te komunikaty zostały usunięte z następujących wyników dla jasności.
 
     ```console
     =============== Training classification model ===============
@@ -364,7 +364,7 @@ Potok modelu ML.NET jest łańcuchem estymatorów. Należy zauważyć, że wykon
     Image: toaster3.jpg predicted as: appliance with score: 0.9646884
     ```
 
-Gratulacje! Teraz pomyślnie skonstruowano model uczenia maszynowego dla klasyfikacji obrazów, stosując naukę transferu do `TensorFlow` modelu w ML.NET.
+Gratulacje! Pomyślnie zbudowano model uczenia maszynowego do klasyfikacji obrazów, stosując `TensorFlow` uczenie transferu do modelu w ML.NET.
 
 Kod źródłowy tego samouczka można znaleźć w repozytorium [dotnet/samples.](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TransferLearningTF)
 
@@ -376,6 +376,6 @@ W niniejszym samouczku zawarto informacje na temat wykonywania następujących c
 > * Trenuj i oceniaj model ML.NET
 > * Klasyfikowanie obrazu testowego
 
-Zapoznaj się z przykładów uczenia maszynowego Repozytorium GitHub do eksplorowania rozwiniętego przykładu klasyfikacji obrazów.
+Zapoznaj się z przykładami uczenia maszynowego repozytorium GitHub, aby zapoznać się z przykładem klasyfikacji obrazów rozszerzonych.
 > [!div class="nextstepaction"]
 > [dotnet/machinelearning-samples Repozytorium GitHub](https://github.com/dotnet/machinelearning-samples/)

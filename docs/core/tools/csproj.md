@@ -2,12 +2,12 @@
 title: Dodatki do formatu csproj dla .NET Core
 description: Dowiedz się więcej o różnicach między istniejącymi i net-core csproj plików
 ms.date: 04/08/2019
-ms.openlocfilehash: 9d9e212c9531828a8c2dd51fdd7488c17be41ba2
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: fadc6de43f522129970e48bc72914cf187fe3f82
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134068"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607709"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Dodatki do formatu csproj dla .NET Core
 
@@ -145,7 +145,7 @@ Element `<PackageReference>` elementu określa [zależność NuGet w projekcie](
 
 #### <a name="version"></a>Wersja
 
-Wymagany `Version` atrybut określa wersję pakietu do przywrócenia. Atrybut jest zgodny z regułami schematu [wersji NuGet.](/nuget/reference/package-versioning#version-ranges-and-wildcards) Domyślnym zachowaniem jest minimalna wersja, dopasowanie włącznie. Na przykład określenie `Version="1.2.3"` jest odpowiednikiem notacji `[1.2.3, )` NuGet i oznacza, że rozwiązany pakiet będzie miał wersję 1.2.3, jeśli jest dostępna lub większa w inny sposób.
+Wymagany `Version` atrybut określa wersję pakietu do przywrócenia. Atrybut jest zgodny z regułami schematu [zakresu wersji NuGet.](/nuget/concepts/package-versioning#version-ranges) Domyślnym zachowaniem jest minimalna wersja, dopasowanie włącznie. Na przykład określenie `Version="1.2.3"` jest odpowiednikiem notacji `[1.2.3, )` NuGet i oznacza, że rozwiązany pakiet będzie miał wersję 1.2.3, jeśli jest dostępna lub większa w inny sposób.
 
 #### <a name="includeassets-excludeassets-and-privateassets"></a>Zestawy includeAssets, ExcludeAssets i PrivateAssets
 

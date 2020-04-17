@@ -3,12 +3,12 @@ title: Pobieranie przykładowych baz danych programu SQL Server dla przykładów
 description: Pobierz przykładowe bazy danych programu SQL Server używane w przykładach kodu w dokumentacji ADO.NET, a także sql server i narzędzia do zarządzania
 ms.date: 01/11/2019
 ms.assetid: ef9d69a1-9461-43fe-94bb-7c836754bcb5
-ms.openlocfilehash: 19d659cbe8f39d27b71dc59c738355f12fce92a0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3449f502834f449f5023bd52457d45ffaf9b0fa1
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148390"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607987"
 ---
 # <a name="get-the-sample-databases-for-adonet-code-samples"></a>Pobieranie przykładowych baz danych dla przykładowych ADO.NET kodów
 
@@ -37,7 +37,7 @@ Przykładowa baza danych Northwind dla programu Microsoft Access nie jest dostę
 
 1. W nowym oknie w polu tekstowym **Nazwa pliku** podaj nazwę pliku dla kopii bazy danych Northwind.
 
-1. Wybierz **pozycję Utwórz**. Program Access pobiera bazę danych Northwind i przygotowuje plik.
+1. Wybierz pozycję **Utwórz**. Program Access pobiera bazę danych Northwind i przygotowuje plik.
 
 1. Po zakończeniu tego procesu baza danych zostanie otwarta z ekranem powitalnym.
 
@@ -54,7 +54,7 @@ Jeśli chcesz wyświetlić lub zmodyfikować pobraną bazę danych, możesz uży
 
 [Pobieranie programu SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms)
 
-Można również wyświetlać i zarządzać bazami danych w zintegrowanym środowisku programistycznym Visual Studio (IDE). W [programie Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)połącz się z bazą danych z **Eksploratora obiektów programu SQL Server**lub utwórz połączenie danych z bazą danych w **Eksploratorze serwera**. Otwórz te okienka eksploratora z menu **Widok.**
+Można również wyświetlać i zarządzać bazami danych w zintegrowanym środowisku programistycznym Visual Studio (IDE). W [programie Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019)połącz się z bazą danych z **Eksploratora obiektów programu SQL Server**lub utwórz połączenie danych z bazą danych w **Eksploratorze serwera**. Otwórz te okienka eksploratora z menu **Widok.**
 
 ## <a name="get-sql-server-express"></a><a name="get_sql"></a>Pobierz program SQL Server Express
 
@@ -62,7 +62,7 @@ SQL Server Express to bezpłatna, podstawowa wersja programu SQL Server, którą
   
 [SQL Server Express Edition](https://www.microsoft.com/sql-server/sql-server-editions-express)
 
-Jeśli używasz [programu Visual Studio,](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)sql Server Express LocalDB znajduje się w bezpłatnej wersji społeczności programu Visual Studio, a także w wersji Professional i wyższych.  
+Jeśli używasz [programu Visual Studio,](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019)sql Server Express LocalDB znajduje się w bezpłatnej wersji społeczności programu Visual Studio, a także w wersji Professional i wyższych.  
 
 ## <a name="see-also"></a>Zobacz też
 

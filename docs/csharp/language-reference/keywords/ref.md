@@ -1,18 +1,18 @@
 ---
 title: ref — słowo kluczowe — odwołanie do języka C#
-ms.date: 03/19/2020
+ms.date: 04/21/2020
 f1_keywords:
 - ref_CSharpKeyword
 - ref
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: d54d932ca96f1966ecc05a532a2468b7e16fac46
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.openlocfilehash: 494a46040d6cc33c5284449779fae89705fd29c2
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805846"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738823"
 ---
 # <a name="ref-c-reference"></a>ref (odwołanie w C#)
 
@@ -21,7 +21,7 @@ Słowo `ref` kluczowe wskazuje wartość, która jest przekazywana przez odwoła
 - W podpisie metody i w wywołaniu metody, aby przekazać argument do metody przez odwołanie. Aby uzyskać więcej informacji, zobacz [Przekazywanie argumentu przez odwołanie](#passing-an-argument-by-reference).
 - W podpisie metody, aby zwrócić wartość do wywołującego przez odwołanie. Aby uzyskać więcej informacji, zobacz [Odwołanie do wartości zwracanej](#reference-return-values).
 - W treści elementu członkowskiego, aby wskazać, że wartość zwracana odwołania jest przechowywana lokalnie jako odwołanie, które obiekt wywołujący zamierza zmodyfikować lub, ogólnie rzecz biorąc, zmienna lokalna uzyskuje dostęp do innej wartości przez odwołanie. Aby uzyskać więcej informacji, zobacz [Ref locals](#ref-locals).
-- W `struct` oświadczeniu o `ref struct` zadeklarowaniu a lub . `readonly ref struct` Aby uzyskać więcej informacji, zobacz [typy struktury ref](#ref-struct-types).
+- W `struct` oświadczeniu o `ref struct` zadeklarowaniu a lub . `readonly ref struct` Aby uzyskać więcej [ `ref` ](../builtin-types/struct.md#ref-struct) informacji, zobacz sekcję struktury [struktury struktury typów](../builtin-types/struct.md) artykułu.
 
 ## <a name="passing-an-argument-by-reference"></a>Przekazywanie argumentu przez odwołanie
 
@@ -136,23 +136,6 @@ Poniższy przykład definiuje `Book` klasę, <xref:System.String> która `Title`
 Gdy obiekt wywołujący przechowuje `GetBookByTitle` wartość zwróconą przez metodę jako ref local, zmiany, które `BookCollection` obiekt wywołujący sprawia, że do wartości zwracanej są odzwierciedlane w obiekcie, jak pokazano w poniższym przykładzie.
 
 [!code-csharp[csrefKeywordsMethodParams#6](~/samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#5)]
-
-## <a name="ref-struct-types"></a>Ref struct typów
-
-Dodanie `ref` modyfikatora `struct` do deklaracji definiuje, że wystąpienia tego typu muszą być przydzielone stos. Innymi słowy wystąpienia tych typów nigdy nie mogą być tworzone na stosie jako członek innej klasy. Główną motywacją dla <xref:System.Span%601> tej funkcji były i powiązane struktury.
-
-Celem zachowania `ref struct` typu jako zmiennej przydzielonej do stosu wprowadza kilka reguł, które kompilator wymusza dla wszystkich `ref struct` typów.
-
-- Nie można pole `ref struct`. Nie można `ref struct` przypisać typu do `object`zmiennej typu `dynamic`lub dowolnego typu interfejsu.
-- `ref struct`typy nie można zaimplementować interfejsów.
-- Nie można zadeklarować `ref struct` jako członka pola klasy lub normalnej struktury. Obejmuje to deklarowanie właściwości zaimplementowane automatycznie, która tworzy pole zapasowe generowane przez kompilator.
-- Nie można zadeklarować zmiennych lokalnych, które są `ref struct` typami w metodach asynchronizacyjnych. Można zadeklarować je w metodach <xref:System.Threading.Tasks.Task>synchronicznych, które zwracają , <xref:System.Threading.Tasks.Task%601>lub `Task`-like typów.
-- Nie można `ref struct` zadeklarować zmiennych lokalnych w iteratorach.
-- Nie można `ref struct` przechwycić zmiennych w wyrażeniach lambda lub funkcji lokalnych.
-
-Te ograniczenia upewnij się, że `ref struct` nie przypadkowo używać w sposób, który może promować go do zarządzanego stosu.
-
-Można połączyć modyfikatory, aby `readonly ref`zadeklarować strukturę jako . A `readonly ref struct` łączy korzyści i ograniczenia `ref struct` `readonly struct` i deklaracje.
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 

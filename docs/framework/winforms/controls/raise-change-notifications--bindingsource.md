@@ -13,15 +13,15 @@ helpviewer_keywords:
 - INotifyPropertyChanged interface [Windows Forms], using with BindingSource
 - BindingSource component [Windows Forms], examples
 ms.assetid: 7fa2cf51-c09f-4375-adf0-e36c5617f099
-ms.openlocfilehash: 07248ec0b8ac4f2356d9c9915b6a904dfad30cb2
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 2fe4458aa43144a9c29ed67fd7bee99a37fe1434
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81388979"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739684"
 ---
 # <a name="how-to-raise-change-notifications-using-a-bindingsource-and-the-inotifypropertychanged-interface"></a>Porady: wywoływanie powiadomień o zmianie za pomocą składnika BindingSource i interfejsu INotifyPropertyChanged
-Składnik <xref:System.Windows.Forms.BindingSource> automatycznie wykryje zmiany w źródle danych, gdy typ zawarty <xref:System.ComponentModel.INotifyPropertyChanged> w źródle <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> danych implementuje interfejs i wywołuje zdarzenia po zmianie wartości właściwości. Jest to przydatne, ponieważ <xref:System.Windows.Forms.BindingSource> formanty powiązane z będzie następnie automatycznie aktualizować w miarę zmiany wartości źródła danych.  
+Składnik <xref:System.Windows.Forms.BindingSource> automatycznie wykrywa zmiany w źródle danych, gdy typ zawarty w <xref:System.ComponentModel.INotifyPropertyChanged> źródle <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> danych implementuje i wywołuje zdarzenia po zmianie wartości właściwości. To wykrywanie zmian jest przydatne, ponieważ formanty powiązane z automatyczną aktualizacją <xref:System.Windows.Forms.BindingSource> w miarę zmiany wartości źródła danych.  
   
 > [!NOTE]
 > Jeśli źródło danych <xref:System.ComponentModel.INotifyPropertyChanged> implementuje i wykonujesz operacje asynchroniczne, nie należy wprowadzać zmian w źródle danych w wątku w tle. Zamiast tego należy odczytać dane w wątku w tle i scalić dane do listy w wątku interfejsu użytkownika.  

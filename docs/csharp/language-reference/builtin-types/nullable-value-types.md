@@ -4,12 +4,12 @@ description: Dowiedz się więcej o typach wartości nullable języka C# i o tym
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: c13ef6a091ec6aebd4608c5ed8d2c03b067c7312
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: fcd49d7d25b0ad23363db8cb61596004b2e87a8d
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888075"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738997"
 ---
 # <a name="nullable-value-types-c-reference"></a>Typy wartości możliwe do wartości null (odwołanie do języka C#)
 
@@ -58,7 +58,7 @@ Jeśli chcesz przypisać wartość typu wartości możliwej do wartości null do
 
 Jeśli chcesz użyć wartości [domyślnej](default-values.md) typu wartości podstawowej `null`zamiast <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType> , użyj metody.
 
-Można również jawnie rzutować typ wartości nullable do typu niedopuszczalny do wartości null, jak pokazano w poniższym przykładzie:
+Można również jawnie rzutować typ wartości nullable do typu niedopuszczalnyego do wartości null, jak pokazano w poniższym przykładzie:
 
 [!code-csharp[explicit cast](snippets/NullableValueTypes.cs#Cast)]
 

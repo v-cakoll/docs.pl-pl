@@ -4,12 +4,12 @@ description: Dowiedz się, jak używać ML.NET w scenariuszu klasyfikacji wielok
 ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: fc0e935a36c52627903dac2a7b29d6f534695ea0
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: f158b8dce81e00f652496cad4ec9217c516b3e9d
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81608065"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739711"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-mlnet"></a>Samouczek: Kategoryzuj problemy z pomocą pomocy technicznej przy użyciu klasyfikacji wieloklasowej z ML.NET
 
@@ -30,8 +30,8 @@ Kod źródłowy tego samouczka można znaleźć w repozytorium [dotnet/samples.]
 ## <a name="prerequisites"></a>Wymagania wstępne
 
 * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) lub nowsze lub Visual Studio 2017 w wersji 15.6 lub nowszej z zainstalowanym obciążeniem ".NET Core rozwoju między platformami".
-* [Github wystawia plik oddzielony (issues_train.tsv)](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_train.tsv).
-* [Github problemy test karty oddzielone pliku (issues_test.tsv)](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_test.tsv).
+* [GitHub wystawia plik oddzielony (issues_train.tsv)](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_train.tsv).
+* [GitHub problemy test karty oddzielone pliku (issues_test.tsv)](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_test.tsv).
 
 ## <a name="create-a-console-application"></a>Tworzenie aplikacji konsolowej
 
@@ -145,7 +145,7 @@ Jak chcesz przewidzieć `GitHubIssue`etykietę Area GitHub for a , użyj metody 
 
 [!code-csharp[MapValueToKey](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#MapValueToKey)]
 
-`mlContext.Transforms.Text.FeaturizeText` Następnie wywołanie, które przekształca`Title` `Description`tekst ( i ) kolumny do wektora numerycznego dla każdego wywoływanego `TitleFeaturized` i `DescriptionFeaturized`. Dołącz featurization dla obu kolumn do potoku z następującym kodem:
+Następnie `mlContext.Transforms.Text.FeaturizeText`wywołaj , który przekształca`Title` `Description`tekst ( i ) kolumny do wektora numerycznego dla każdego wywoływanego `TitleFeaturized` i `DescriptionFeaturized`. Dołącz featurization dla obu kolumn do potoku z następującym kodem:
 
 [!code-csharp[FeaturizeText](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#FeaturizeText)]
 

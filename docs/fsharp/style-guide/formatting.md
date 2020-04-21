@@ -2,19 +2,19 @@
 title: Wskazówki dotyczące formatowania kodu F#
 description: Poznaj wskazówki dotyczące formatowania kodu języka F#.
 ms.date: 11/04/2019
-ms.openlocfilehash: 2086b515b8ec9b69a44e2e65ca06fb320670dff2
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: b8be70dd29a04e71614308164e541b99a1724305
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278941"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739555"
 ---
 # <a name="f-code-formatting-guidelines"></a>Wskazówki dotyczące formatowania kodu F#
 
 Ten artykuł zawiera wskazówki dotyczące formatowania kodu, tak aby kod języka F# był:
 
-* Ogólnie postrzegane jako bardziej czytelne
-* Jest zgodny z konwencjami stosowanymi przez narzędzia formatowania w programie Visual Studio i innych edytorach
+* Bardziej czytelne
+* Zgodnie z konwencjami stosowanymi przez narzędzia formatowania w programie Visual Studio i innych edytorach
 * Podobne do innych kodów online
 
 Wytyczne te są oparte na [kompleksowym przewodniku po konwencjach formatowania F#](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md) [autorstwa Anh-Dung Phan](https://github.com/dungpa).
@@ -27,7 +27,7 @@ F# domyślnie używa znacznych odstępów. Poniższe wytyczne mają na celu zape
 
 Jeśli wymagane jest wcięcie, należy użyć spacji, a nie kart. Wymagana jest co najmniej jedna przestrzeń. Organizacja może tworzyć standardy kodowania, aby określić liczbę spacji do użycia do wcięci; dwie, trzy lub cztery spacje wcięci na każdym poziomie, na którym występuje wcięcie jest typowe.
 
-**Zalecamy 4 spacje na wcięcie.**
+**Zalecamy cztery spacje na wcięcie.**
 
 To powiedzia się, wcięcie programów jest kwestią subiektywną. Odmiany są OK, ale pierwszą zasadą, którą należy przestrzegać, jest *spójność wcięcia*. Wybierz ogólnie akceptowany styl wcięci i używaj go systematycznie w całej bazie kodu.
 
@@ -43,7 +43,7 @@ Zawsze używaj odstępu wokół binarnych wyrażeń arytmetycznych:
 let subtractThenAdd x = x - 1 + 3
 ```
 
-Operatory `-` dwuary powinny zawsze mieć wartość, którą negują natychmiast następują:
+Operatory `-` dwuary powinny być zawsze natychmiast następuje wartość, którą negują:
 
 ```fsharp
 // OK
@@ -100,7 +100,7 @@ let myFun (a: decimal) b c = a + b + c
 let myFunBad (a:decimal)(b)c = a + b + c
 ```
 
-### <a name="place-parameters-on-a-new-line-for-very-long-member-definitions"></a>Umieszczanie parametrów w nowym wierszu dla bardzo długich definicji elementów członkowskich
+### <a name="place-parameters-on-a-new-line-for-long-member-definitions"></a>Umieszczanie parametrów w nowym wierszu dla długich definicji elementów członkowskich
 
 Jeśli masz bardzo długą definicję elementu członkowskiego, umieść parametry w nowych wierszach i wcięj je jednym zakresem.
 
@@ -195,7 +195,7 @@ let addIAndJ I J = I+J
 let AddIAndJ i j = i + j
 ```
 
-Funkcje związane lokalnie w klasach należy również użyć camelCase.
+Lokalnie związane funkcje w klasach należy również użyć camelCase.
 
 ```fsharp
 type MyClass() =
@@ -287,7 +287,7 @@ Obszary nazw, wyjątki, zdarzenia i`.dll` nazwy projektu/ powinny również uży
 
 Historycznie niektóre biblioteki Języka F# używały podkreśleń w nazwach. Jednak nie jest to już powszechnie akceptowane, częściowo dlatego, że ściera się z konwencjami nazewnictwa .NET. To powiedziawia, że niektórzy programiści F# używają podkreśla mocno, częściowo ze względów historycznych, a tolerancja i szacunek jest ważne. Należy jednak pamiętać, że styl jest często nielubiany przez innych, którzy mają wybór, czy go używać.
 
-Niektóre wyjątki obejmują współdziałanie ze składnikami macierzystymi, gdzie podkreślenia są bardzo powszechne.
+Jeden wyjątek obejmuje współdziałanie ze składnikami macierzystymi, gdzie podkreślenia są wspólne.
 
 ### <a name="use-standard-f-operators"></a>Użyj standardowych operatorów Języka F#
 
@@ -325,7 +325,7 @@ W przypadku wszystkich innych typów należy użyć formularza prefiksu.
 
 ## <a name="formatting-tuples"></a>Krotek formatowania
 
-Wystąpienie krotki powinno być w nawiasie, a po rozdzielającym przecinkach w obrębie `(1, 2)` `(x, y, z)`powinno następować pojedyncza spacja, na przykład: , .
+Wystąpienie krotki powinno być w nawiasie, a po rozdzielającym przecinkach w nim `(1, 2)`powinno `(x, y, z)`następować pojedyncza spacja, na przykład: , .
 
 Jest powszechnie akceptowane pominąć nawiasy w dopasowywania wzorów krotek:
 
@@ -354,7 +354,7 @@ Podsumowując, preferuj nawiasy wystąpienia spójnej strony, ale podczas korzys
 
 ## <a name="formatting-discriminated-union-declarations"></a>Formatowanie dyskryminowanych deklaracji związków zawodowych
 
-Wcięcie `|` w definicji typu przez 4 spacje:
+Wcięcie `|` w definicji typu przez cztery spacje:
 
 ```fsharp
 // OK
@@ -393,7 +393,7 @@ let tree1 =
 
 ## <a name="formatting-record-declarations"></a>Formatowanie deklaracji rekordów
 
-Wcięcie `{` w definicji typu przez 4 spacje i rozpoczęcie listy pól w tym samym wierszu:
+Wcięcie `{` w definicji typu przez cztery spacje i rozpoczęcie listy pól w tym samym wierszu:
 
 ```fsharp
 // OK
@@ -508,7 +508,7 @@ let rainbow2 =
         Lackeys = ["Zippy"; "George"; "Bungle"] }
 ```
 
-Podobnie jak w przypadku wskazówek dotyczących rekordu, można poświęcić oddzielne wiersze dla nawiasów klamrowych i wcięcie jednego zakresu po prawej stronie za pomocą wyrażenia. Należy zauważyć, że w niektórych szczególnych przypadkach, takich jak zawijanie wartości z opcjonalnym bez nawiasów, może być konieczne utrzymanie nawiasu w jednym wierszu:
+Podobnie jak w przypadku wskazówek dotyczących rekordu, można poświęcić oddzielne wiersze dla nawiasów klamrowych i wcięcie jednego zakresu po prawej stronie za pomocą wyrażenia. W niektórych szczególnych przypadkach, takich jak zawijanie wartości z opcjonalnym bez nawiasów, może być konieczne utrzymanie nawiasu w jednym wierszu:
 
 ```fsharp
 type S = { F1: int; F2: string }
@@ -691,7 +691,7 @@ lambdaList
     | Var v -> 1)
 ```
 
-Dopasowanie wzorca w `let` `let rec` funkcjach zdefiniowanych przez lub powinno `let`być `function` wcięte 4 spacje po rozpoczęciu , nawet jeśli używane jest słowo kluczowe:
+Dopasowywanie wzorca `let rec` w funkcjach zdefiniowanych przez `let` `let` lub `function` powinny być wcięte cztery spacje po rozpoczęciu , nawet jeśli używane jest słowo kluczowe:
 
 ```fsharp
 let rec sizeLambda acc = function
@@ -824,7 +824,7 @@ module A2 =
 
 ### <a name="formatting-object-expressions-and-interfaces"></a>Formatowanie wyrażeń i interfejsów obiektów
 
-Wyrażenia i interfejsy obiektów powinny być wyrównane `member` w taki sam sposób, jak wcięcie po 4 spacjach.
+Wyrażenia i interfejsy obiektów powinny być wyrównane `member` w taki sam sposób, jak wcięcie po czterech spacjach.
 
 ```fsharp
 let comparer =

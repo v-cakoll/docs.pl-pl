@@ -6,12 +6,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 2962de53eab132ad02aaf679fdd6037bd24fa714
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 0035f7d8aa862b4bd1b09a6f122a89786a6e295b
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463886"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738250"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Ograniczenia dotyczące parametrów typu (Przewodnik programowania języka C#)
 
@@ -19,7 +19,7 @@ Ograniczenia informują kompilator o możliwościach, które musi mieć argument
 
 |Ograniczenie|Opis|
 |----------------|-----------------|
-|`where T : struct`|Argument typu musi być typem wartości nienastępulnej. Aby uzyskać informacje o typach wartości, które można do wartości null, zobacz [Typy wartości możliwe do wartości null](../../language-reference/builtin-types/nullable-value-types.md). Ponieważ wszystkie typy wartości mają dostępne `struct` bez parametrów `new()` konstruktora, ograniczenie `new()` implikuje ograniczenie i nie można połączyć z ograniczeniem. Nie można również połączyć `struct` ograniczenia `unmanaged` z ograniczeniem.|
+|`where T : struct`|Argument typu musi być typem wartości nienastępulnej. Aby uzyskać informacje o typach wartości, które można do wartości null, zobacz [Typy wartości możliwe do wartości null](../../language-reference/builtin-types/nullable-value-types.md). Ponieważ wszystkie typy wartości mają dostępne `struct` bez parametrów `new()` konstruktora, ograniczenie `new()` implikuje ograniczenie i nie można połączyć z ograniczeniem. Nie można połączyć `struct` ograniczenia `unmanaged` z ograniczeniem.|
 |`where T : class`|Argument typu musi być typem odwołania. To ograniczenie dotyczy również dowolnej klasy, interfejsu, delegata lub typu tablicy. W kontekście nullable w języku C# 8.0 lub nowszym, `T` musi być typem odwołania niepodjętego do wartości null. |
 |`where T : class?`|Argument typu musi być typem odwołania, można anulować lub nie można anulować. To ograniczenie dotyczy również dowolnej klasy, interfejsu, delegata lub typu tablicy.|
 |`where T : notnull`|Argument typu musi być typem nienastępalnym. Argument może być typu odwołania niepodwymiernego w języku C# 8.0 lub nowszym lub typu wartości nienastępu. |

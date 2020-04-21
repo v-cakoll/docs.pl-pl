@@ -2,12 +2,12 @@
 title: polecenie testu dotnet
 description: Polecenie testu dotnet służy do wykonywania testów jednostkowych w danym projekcie.
 ms.date: 02/27/2020
-ms.openlocfilehash: f9df03cda01bdaf649394a58e96903e764193338
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 2eebcbe2e4a1660da4ffa4ea9a68190c8443463a
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463374"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739103"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -51,7 +51,7 @@ Projekty testowe określają wynik `<PackageReference>` testu przy użyciu zwyk�
 
 ## <a name="options"></a>Opcje
 
-- **`a|--test-adapter-path <PATH_TO_ADAPTER>`**
+- **`-a|--test-adapter-path <PATH_TO_ADAPTER>`**
 
   Użyj niestandardowych kart testowych z określonej ścieżki w przebiegu testu.
 
@@ -59,19 +59,19 @@ Projekty testowe określają wynik `<PackageReference>` testu przy użyciu zwyk�
 
   Uruchamia testy w trybie winy. Ta opcja jest przydatna w izolowaniu problematycznych testów, które powodują awarię hosta testowego. Tworzy plik wyjściowy w bieżącym katalogu jako *Sequence.xml,* który przechwytuje kolejność wykonywania testów przed awarią.
 
-- **`c|--configuration <CONFIGURATION>`**
+- **`-c|--configuration <CONFIGURATION>`**
 
   Definiuje konfigurację kompilacji. Wartością domyślną jest `Debug`, ale konfiguracja projektu może zastąpić to domyślne ustawienie SDK.
 
-- **`-collect <DATA_COLLECTOR_FRIENDLY_NAME>`**
+- **`--collect <DATA_COLLECTOR_FRIENDLY_NAME>`**
 
   Włącza moduł zbierający dane dla przebiegu testowego. Aby uzyskać więcej informacji, zobacz [Monitorowanie i analizowanie przebiegu testowego](https://aka.ms/vstest-collect).
 
-- **`d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
+- **`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
 
   Włącza tryb diagnostyczny dla platformy testowej i zapisu komunikatów diagnostycznych do określonego pliku.
 
-- **`f|--framework <FRAMEWORK>`**
+- **`-f|--framework <FRAMEWORK>`**
 
   Wyszukuje pliki binarne testów dla określonej [struktury](../../standard/frameworks.md).
 
@@ -79,7 +79,7 @@ Projekty testowe określają wynik `<PackageReference>` testu przy użyciu zwyk�
 
   Odfiltrowywają testy w bieżącym projekcie przy użyciu danego wyrażenia. Aby uzyskać więcej informacji, zobacz sekcję [Szczegóły opcji filtru.](#filter-option-details) Aby uzyskać więcej informacji i przykładów dotyczących używania selektywnego filtrowania jednostek, zobacz [Uruchamianie testów jednostkowych selektywnych](../testing/selective-unit-tests.md).
 
-- **`h|--help`**
+- **`-h|--help`**
 
   Drukuje krótką pomoc dla polecenia.
 
@@ -87,7 +87,7 @@ Projekty testowe określają wynik `<PackageReference>` testu przy użyciu zwyk�
 
   Umożliwia zatrzymywania polecenia i oczekiwania na dane wejściowe lub akcję użytkownika. Na przykład, aby zakończyć uwierzytelnianie. Dostępne od .NET Core 3.0 SDK.
 
-- **`l|--logger <LOGGER_URI/FRIENDLY_NAME>`**
+- **`-l|--logger <LOGGER_URI/FRIENDLY_NAME>`**
 
   Określa rejestrator dla wyników testów. W przeciwieństwie do MSBuild, test dotnet nie akceptuje `-l "console;v=d"` skrótów: zamiast używać `-l "console;verbosity=detailed"`.
 

@@ -1,5 +1,5 @@
 ---
-title: LinkLabel — Informacje o formancie
+title: LinkLabel, kontrolka — omówienie
 ms.date: 03/30/2017
 f1_keywords:
 - LinkLabel
@@ -8,24 +8,24 @@ helpviewer_keywords:
 - Label control [Windows Forms], about Label control
 - LinkLabel control [Windows Forms], about LinkLabel control
 ms.assetid: 9e248549-10ca-43a3-bb5e-60f583d369f1
-ms.openlocfilehash: 9837902bf56a402d623adbcf41558dcc568b7105
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 3e8607644c858ae804e384c974b5e81c1786c6a1
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745227"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739520"
 ---
 # <a name="linklabel-control-overview-windows-forms"></a>LinkLabel — Informacje o formancie [Formularze systemu Windows]
-Kontrolka <xref:System.Windows.Forms.LinkLabel> Windows Forms pozwala dodawać linki w stylu sieci Web do aplikacji Windows Forms. Można użyć kontrolki <xref:System.Windows.Forms.LinkLabel> dla wszystkich elementów, których można użyć w kontrolce <xref:System.Windows.Forms.Label> dla programu; Możesz również ustawić część tekstu jako link do pliku, folderu lub strony sieci Web.  
+Formant <xref:System.Windows.Forms.LinkLabel> Formularze systemu Windows umożliwia dodawanie łączy w stylu sieci Web do aplikacji Windows Forms. Można użyć <xref:System.Windows.Forms.LinkLabel> formantu dla wszystkiego, <xref:System.Windows.Forms.Label> dla czego można użyć formantu; Można również ustawić część tekstu jako łącze do pliku, folderu lub strony sieci Web.  
   
-## <a name="what-you-can-do-with-the-linklabel-control"></a>Co możesz zrobić za pomocą kontrolki LinkLabel  
- Oprócz wszystkich właściwości, metod i zdarzeń formantu <xref:System.Windows.Forms.Label> kontrolka <xref:System.Windows.Forms.LinkLabel> ma właściwości dla hiperłączy i kolorów łączy. Właściwość <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> ustawia obszar tekstu, który aktywuje link. Właściwości <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>i <xref:System.Windows.Forms.LinkLabel.ActiveLinkColor%2A> ustawiają kolory łącza. Zdarzenie <xref:System.Windows.Forms.LinkLabel.LinkClicked> określa, co dzieje się po wybraniu tekstu linku.  
+## <a name="what-you-can-do-with-the-linklabel-control"></a>Co można zrobić z LinkLabel Control  
+ Oprócz wszystkich właściwości, metod i zdarzeń <xref:System.Windows.Forms.Label> formantu, <xref:System.Windows.Forms.LinkLabel> formant ma właściwości hiperłącza i kolorów łączy. Właściwość <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> ustawia obszar tekstu, który aktywuje łącze. Właściwości <xref:System.Windows.Forms.LinkLabel.LinkColor%2A> <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.ActiveLinkColor%2A> i właściwości ustawiają kolory łącza. Zdarzenie <xref:System.Windows.Forms.LinkLabel.LinkClicked> określa, co się stanie, gdy tekst łącza jest zaznaczony.  
   
- Najprostszym sposobem użycia formantu <xref:System.Windows.Forms.LinkLabel> jest wyświetlenie jednego linku przy użyciu właściwości <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>, ale można również wyświetlić wiele hiperlinków przy użyciu właściwości <xref:System.Windows.Forms.LinkLabel.Links%2A>. Właściwość <xref:System.Windows.Forms.LinkLabel.Links%2A> umożliwia dostęp do kolekcji linków. Możesz również określić dane we właściwości <xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A> każdego pojedynczego obiektu <xref:System.Windows.Forms.LinkLabel.Link>. Wartość właściwości <xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A> może służyć do przechowywania lokalizacji pliku do wyświetlenia lub adresu witryny sieci Web.  
+ Najprostszym zastosowaniem <xref:System.Windows.Forms.LinkLabel> formantu jest wyświetlanie pojedynczego łącza za pomocą <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> właściwości, ale <xref:System.Windows.Forms.LinkLabel.Links%2A> można również wyświetlić wiele hiperłączy przy użyciu właściwości. Właściwość <xref:System.Windows.Forms.LinkLabel.Links%2A> umożliwia dostęp do kolekcji łączy. Można również określić <xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A> dane we <xref:System.Windows.Forms.LinkLabel.Link> właściwości każdego obiektu. Wartość <xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A> właściwości może służyć do przechowywania lokalizacji pliku do wyświetlenia lub adresu witryny sieci Web.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Windows.Forms.LinkLabel>
-- [Label, kontrolka — omówienie](label-control-overview-windows-forms.md)
+- [Label — Informacje o formancie](label-control-overview-windows-forms.md)
 - [Instrukcje: łączenie z obiektem lub stroną internetową za pomocą kontrolki LinkLabel formularzy Windows Forms](link-to-an-object-or-web-page-with-wf-linklabel-control.md)
-- [Instrukcje: zmienianie wyglądu kontrolki LinkLabel formularzy Windows Forms](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)
+- [Porady: zmienianie wyglądu formantu LinkLabel formularzy systemu Windows](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)

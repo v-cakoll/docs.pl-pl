@@ -1,7 +1,7 @@
 ---
 title: Operatory i wyrażenia dostępu do elementów członkowskich — odwołanie do języka C#
 description: Dowiedz się więcej o operatorach języka C#, których można użyć do uzyskania dostępu do elementów członkowskich typu.
-ms.date: 03/31/2020
+ms.date: 04/17/2020
 author: pkulikov
 f1_keywords:
 - ._CSharpKeyword
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: 90066b1e9c219f66fc0c76423679e81aa3fa6770
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 4e213c92ae08edd8d537017e474c33200cb4c22c
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81120981"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738722"
 ---
 # <a name="member-access-operators-and-expressions-c-reference"></a>Operatory i wyrażenia dostępu do elementów członkowskich (odwołanie do języka C#)
 
@@ -156,6 +156,8 @@ if (handler != null)
 }
 ```
 
+Jest to sposób bezpieczne dla wątków, aby `handler` upewnić się, że tylko non-null jest wywoływana. Ponieważ wystąpienia delegata są niezmienne, żaden wątek `handler` nie może zmienić wartości, do których odwołuje się zmienna lokalna. W szczególności jeśli kod wykonywany przez inny wątek `PropertyChanged` wypisuje się ze `PropertyChanged` zdarzenia i staje się `null` przed `handler` wywoływane, wartość, do którego odwołuje się `handler` pozostaje nienaruszone. Operator `?.` ocenia jego po lewej stronie operand nie więcej niż jeden `null` raz, gwarantując, że nie można zmienić na po weryfikacji jako non-null.
+
 ## <a name="invocation-expression-"></a>Wyrażenie wywołania ()
 
 Użyj nawiasów, `()`, aby wywołać [metodę](../../programming-guide/classes-and-structs/methods.md) lub wywołać [pełnomocnika](../../programming-guide/delegates/index.md).
@@ -180,7 +182,7 @@ Dostępne w języku C# 8.0 i nowszych, `^` operator wskazuje położenie element
 
 Jak pokazano w poprzednim `^e` przykładzie, <xref:System.Index?displayProperty=nameWithType> wyrażenie jest typu. W `^e`wyrażeniu `e` wynik musi być `int`niejawnie wymienialny na .
 
-Operator z `^` [operatorem zakresu](#range-operator-) służy również do tworzenia zakresu indeksów. Aby uzyskać więcej informacji, zobacz [Indeksy i zakresy](../../tutorials/ranges-indexes.md).
+Można również użyć `^` operatora z [operatorem zakresu,](#range-operator-) aby utworzyć zakres indeksów. Aby uzyskać więcej informacji, zobacz [Indeksy i zakresy](../../tutorials/ranges-indexes.md).
 
 ## <a name="range-operator-"></a>Operator zasięgu ..
 

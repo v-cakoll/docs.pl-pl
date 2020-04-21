@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: 0947e597da93d6db1c5965b3685a509961778586
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: b4326be8c9e299a96477096ec21864ec69037abe
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507051"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738241"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>Korzystanie z obszarów nazw (Przewodnik programowania języka C#)
 
@@ -95,5 +95,5 @@ Przestrzenie nazw są intensywnie używane w programach Języka C# na dwa sposob
 - [C# Przewodnik programowania](../index.md)
 - [Namespaces](./index.md)
 - [Wyrażenie dostępu do elementu członkowskiego](../../language-reference/operators/member-access-operators.md#member-access-expression-)
-- [:: operator](../../language-reference/operators/namespace-alias-qualifier.md)
-- [extern alias](../../language-reference/keywords/extern-alias.md)
+- [:: — Operator](../../language-reference/operators/namespace-alias-qualifier.md)
+- [alias zewnętrzny](../../language-reference/keywords/extern-alias.md)

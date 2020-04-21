@@ -2,12 +2,12 @@
 title: Przepływ pracy wewnętrznej pętli tworzenia kodu dla aplikacji platformy Docker
 description: Dowiedz się, przepływ pracy "pętla wewnętrzna" do tworzenia aplikacji platformy Docker.
 ms.date: 02/15/2019
-ms.openlocfilehash: 615cfd08f46609c4e100ea3e72b541fe2c1ae62a
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: bce047bd5ba75f9ef652a294ff6a15656fc5ac34
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989015"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738409"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Przepływ pracy wewnętrznej pętli tworzenia kodu dla aplikacji platformy Docker
 
@@ -54,7 +54,7 @@ Dzięki najnowszym wersjom platformy Docker dla komputerów Mac i Windows tworze
 
 Ponadto potrzebny jest edytor kodu, dzięki czemu można faktycznie tworzyć aplikacji podczas korzystania z interfejsu wiersza polecenia platformy Docker.
 
-Firma Microsoft udostępnia program Visual Studio Code, który jest lekkim edytorem kodu obsługiwanym w [systemach](https://code.visualstudio.com/docs/languages/overview) Windows, Linux i macOS, i zapewnia intellisense obsługę wielu języków (JavaScript, .NET, Go, Java, Ruby, Python i większość nowoczesnych języków), [debugowanie,](https://code.visualstudio.com/Docs/editor/debugging) [integrację z obsługą Git](https://code.visualstudio.com/Docs/editor/versioncontrol) i [rozszerzenia .](https://code.visualstudio.com/docs/extensions/overview) Ten edytor doskonale pasuje do programistów macOS i Linux. W systemie Windows można również używać programu Visual Studio.
+Firma Microsoft udostępnia program Visual Studio Code, który jest lekkim edytorem kodu obsługiwanym w [systemach](https://code.visualstudio.com/docs/languages/overview) Windows, Linux i macOS, i zapewnia intellisense obsługę wielu języków (JavaScript, .NET, Go, Java, Ruby, Python i większość nowoczesnych języków), [debugowanie,](https://code.visualstudio.com/Docs/editor/debugging) [integrację z obsługą Git](https://code.visualstudio.com/Docs/editor/versioncontrol) i [rozszerzenia .](https://code.visualstudio.com/docs/extensions/overview) Ten edytor doskonale pasuje do programistów macOS i Linux. W systemie Windows można również użyć programu Visual Studio.
 
 > [!TIP]
 > Aby uzyskać instrukcje dotyczące instalowania programu Visual Studio Code <https://code.visualstudio.com/docs/setup/setup-overview/>dla systemów Windows, Linux lub macOS, przejdź do pliku .
@@ -263,7 +263,7 @@ Można to sprawdzić za pomocą CURL z terminala. W instalacji platformy Docker 
 
 Visual Studio Code obsługuje debugowanie platformy Docker, jeśli używasz Node.js i innych platform, takich jak kontenery .NET Core.
 
-Można również debugować .NET Core lub .NET Framework kontenerów w programie Docker podczas korzystania z programu Visual Studio dla systemu Windows lub Mac, zgodnie z opisem w następnej sekcji.
+Można również debugować kontenery .NET Core lub .NET Framework w programie Docker podczas korzystania z programu Visual Studio dla systemu Windows lub Mac, zgodnie z opisem w następnej sekcji.
 
 > [!TIP]
 > Aby dowiedzieć się więcej o debugowaniu kontenerów platformy Docker node.js, zobacz <https://blog.docker.com/2016/07/live-debugging-docker/> i <https://docs.microsoft.com/archive/blogs/user_ed/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more>.

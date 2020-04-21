@@ -1,18 +1,18 @@
 ---
 title: Kopiowanie i aktualizacja wyrażeń rekordów
-description: Dowiedz się, jak napisać "Copy and Update Expression", który kopiuje istniejący rekord lub rekord anonimowy, aktualizuje określone pola i zwraca zaktualizowany rekord lub rekord anonimowy.
+description: Dowiedz się, jak napisać wyrażenie "kopiuj i aktualizuj" kopiuje istniejący rekord lub rekord anonimowy, aktualizuje określone pola i zwraca zaktualizowany rekord lub rekord anonimowy.
 author: ChrSteinert
 ms.date: 06/12/2019
-ms.openlocfilehash: dfb20a6ff8282ae5988772cc0f0841db23aad942
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: bec3e0ac2fb34e358b199c509c4599b55d7bf35e
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630380"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739286"
 ---
 # <a name="copy-and-update-record-expressions"></a>Kopiowanie i aktualizacja wyrażeń rekordów
 
-*Wyrażenie Copy and Update Record* jest wyrażeniem, które kopiuje istniejący rekord, aktualizuje określone pola i zwraca zaktualizowany rekord.
+*Wyrażenie kopiowania i aktualizowania rekordu* jest wyrażeniem, które kopiuje istniejący rekord, aktualizuje określone pola i zwraca zaktualizowany rekord.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,20 +26,20 @@ ms.locfileid: "68630380"
 
 ## <a name="remarks"></a>Uwagi
 
-Rekordy i rekordy anonimowe są domyślnie niezmienne, dlatego nie ma możliwości aktualizacji istniejącego rekordu. Aby utworzyć zaktualizowany rekord, należy ponownie określić wszystkie pola rekordu. Aby uprościć to zadanie, można użyć *wyrażenia kopiowania i aktualizowania* . To wyrażenie przyjmuje istniejący rekord, tworzy nowy jeden z tego samego typu przy użyciu określonych pól z wyrażenia i brakującego pola określonego przez wyrażenie.
+Rekordy i rekordy anonimowe są domyślnie niezmienne, więc nie można zaktualizować istniejącego rekordu. Aby utworzyć zaktualizowany rekord, wszystkie pola rekordu musiałyby zostać ponownie określone. Aby uprościć to zadanie, można użyć *wyrażenia kopiowania i aktualizacji.* To wyrażenie przyjmuje istniejący rekord, tworzy nowy tego samego typu przy użyciu określonych pól z wyrażenia i brakujące pole określone przez wyrażenie.
 
-Może to być przydatne, gdy konieczne jest skopiowanie istniejącego rekordu i prawdopodobnie zmiana niektórych wartości pól.
+Może to być przydatne, gdy trzeba skopiować istniejący rekord i ewentualnie zmienić niektóre wartości pól.
 
-Zrób wystąpienie nowo utworzonego rekordu.
+Weźmy na przykład nowo utworzony rekord.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1905.fs)]
 
-Jeśli aktualizacja dotyczy tylko pola tego rekordu, można użyć *wyrażenia Kopiuj i Aktualizuj rekord* w następujący sposób:
+Aby zaktualizować tylko dwa pola w tym rekordzie, można użyć *wyrażenia rekordu kopiowania i aktualizowania:*
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1906.fs)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Rekordy](records.md)
 - [Rekordy anonimowe](anonymous-records.md)
-- [Dokumentacja języka F#](index.md)
+- [Odwołanie do języka F#](index.md)

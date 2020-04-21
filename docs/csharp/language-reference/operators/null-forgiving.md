@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: 658043f8d5e149064f6da328657b2ccef9b5da94
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: a8b47e83ce9e999ea2afe94db0a21725abc2d327
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121440"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738568"
 ---
 # <a name="-null-forgiving-operator-c-reference"></a>! (zero-wyrozumiały) operator (odwołanie C#)
 
@@ -33,7 +33,7 @@ Za pomocą [mstest test framework](../../../core/testing/unit-testing-with-mstes
 
 Bez operatora wyrozumiałości zerowej kompilator generuje następujące `Warning CS8625: Cannot convert null literal to non-nullable reference type`ostrzeżenie dla poprzedniego kodu: . Za pomocą operatora null-wyrozumiały, `null` informujesz kompilator, że przekazywanie jest oczekiwane i nie powinny być ostrzegane o.
 
-Można również użyć operatora wyrozumiałości zerowej, `null` gdy na pewno wiesz, że wyrażenie nie może być, ale kompilator nie zarządza rozpoznać. W poniższym przykładzie, jeśli `IsValid` metoda zwraca `true`, jej argument nie `null` jest i można bezpiecznie wyłuskać go:
+Można również użyć operatora wyrozumiałości zerowej, `null` gdy na pewno wiadomo, że wyrażenie nie może być, ale kompilator nie zarządza rozpoznać. W poniższym przykładzie, jeśli `IsValid` metoda zwraca `true`, jej argument nie `null` jest i można bezpiecznie wyłuskać go:
 
 [!code-csharp[Use null-forgiving operator](snippets/NullForgivingOperator.cs#UseNullForgiving)]
 

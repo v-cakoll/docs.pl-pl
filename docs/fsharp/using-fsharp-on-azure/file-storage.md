@@ -3,18 +3,18 @@ title: Rozpoczynanie pracy z usługą Azure File Storage przy użyciu języka F#
 description: Usługa Magazyn plików Azure umożliwia przechowywanie plików danych w chmurze oraz instalowanie udziału plików w chmurze z maszyny wirtualnej platformy Azure lub z aplikacji lokalnych działających w systemie Windows.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 2088442e05ba36b388a3324942ebbf8c7eb263dd
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 1b38ee53f2f73f7b7f4ee12f712f487cb726d41e
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607470"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739590"
 ---
 # <a name="get-started-with-azure-file-storage-using-f"></a>Wprowadzenie do usługi Azure File Storage przy użyciu języka F\#
 
 Azure File Storage to usługa, która umożliwia korzystanie z udziałów plików w chmurze przy użyciu standardowego [protokołu bloku komunikatów serwera (SMB)](https://msdn.microsoft.com/library/windows/desktop/aa365233.aspx). Obsługiwane są wersje 2.1 i 3.0 protokołu SMB. W usłudze Magazyn plików Azure można migrować starsze aplikacje korzystające z udziałów plików na platformę Azure szybko i bez kosztownych modyfikacji oprogramowania. Aplikacje uruchomione na maszynach wirtualnych lub w ramach usług w chmurze platformy Azure, a także na klientach lokalnych mogą instalować udziały plików w chmurze tak samo jak aplikacja na komputerze instalująca typowy udział SMB. Dowolna liczba składników aplikacji może następnie równocześnie zainstalować udział Magazynu plików i uzyskiwać do niego dostęp.
 
-Omówienie koncepcyjnego przechowywania plików można znaleźć [w przewodniku .NET dotyczących przechowywania plików](https://docs.microsoft.com/azure/storage/storage-dotnet-how-to-use-files).
+Aby uzyskać koncepcyjny przegląd przechowywania plików, zobacz [przewodnik .NET dotyczący przechowywania plików](https://docs.microsoft.com/azure/storage/storage-dotnet-how-to-use-files).
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -41,7 +41,7 @@ W samouczku wprowadzisz parametry połączenia w skrypcie, w ten sposób:
 
 [!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L11-L11)]
 
-Nie jest to jednak **zalecane** w przypadku rzeczywistych projektów. Klucz konta magazynu jest podobny do hasła głównego konta magazynu. Zawsze chroń klucz konta magazynu. Nie udostępniaj go innym użytkownikom, nie koduj go trwale ani nie zapisuj w zwykłym pliku tekstowym, do którego mają dostęp inne osoby. Można ponownie wygenerować klucz przy użyciu witryny Azure Portal, jeśli uważasz, że może to być zagrożone.
+Nie jest to jednak **zalecane** w przypadku rzeczywistych projektów. Klucz konta magazynu jest podobny do hasła głównego konta magazynu. Zawsze chroń klucz konta magazynu. Nie udostępniaj go innym użytkownikom, nie koduj go trwale ani nie zapisuj w zwykłym pliku tekstowym, do którego mają dostęp inne osoby. Można ponownie wygenerować klucz przy użyciu witryny Azure portal, jeśli uważasz, że może to być zagrożone.
 
 W przypadku rzeczywistych aplikacji najlepszym sposobem utrzymania ciągu połączenia magazynu jest plik konfiguracyjny. Aby pobrać ciąg połączenia z pliku konfiguracyjnego, można to zrobić:
 
@@ -73,7 +73,7 @@ W tym przykładzie pokazano, jak utworzyć udział plików, jeśli jeszcze nie i
 
 ## <a name="create-a-root-directory-and-a-subdirectory"></a>Tworzenie katalogu głównego i podkatalogu
 
-Tutaj otrzymasz katalog główny i otrzymujesz podkatasję katalogu głównego. Można utworzyć zarówno, jeśli jeszcze nie istnieją.
+W tym miejscu otrzymasz katalog główny i otrzymujesz podkatalog katalogu głównego. Można utworzyć zarówno, jeśli jeszcze nie istnieją.
 
 [!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L41-L43)]
 
@@ -127,13 +127,13 @@ W ten sam sposób można skopiować obiekt blob do pliku. Jeśli obiekt źródł
 
 Usługa Azure Storage Analytics obsługuje metryki magazynu plików. Dane metryk umożliwiają śledzenie żądań i diagnozowanie problemów.
 
-Można włączyć metryki magazynu plików z [witryny Azure Portal](https://portal.azure.com)lub można to zrobić z języka F# w ten sposób:
+Można włączyć metryki magazynu plików z [witryny Azure portal](https://portal.azure.com), lub można to zrobić z języka F# w ten sposób:
 
 [!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L126-L140)]
 
 ## <a name="next-steps"></a>Następne kroki
 
-Poniższe linki umożliwiają uzyskanie dodatkowych informacji na temat usługi Magazyn plików Azure.
+Aby uzyskać więcej informacji na temat usługi Azure File Storage, zobacz te łącza.
 
 ### <a name="conceptual-articles-and-videos"></a>Artykuły koncepcyjne i filmy
 
@@ -146,7 +146,7 @@ Poniższe linki umożliwiają uzyskanie dodatkowych informacji na temat usługi 
 - [How to use AzCopy with Microsoft Azure Storage (Jak używać narzędzia AzCopy z usługą Magazyn Microsoft Azure)](https://docs.microsoft.com/azure/storage/storage-use-azcopy)
 - [Tworzenie, pobieranie i wyświetlanie listy obiektów blob za pomocą interfejsu wiersza polecenia platformy Azure](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-cli#create-and-manage-file-shares)
 
-### <a name="reference"></a>Dokumentacja
+### <a name="reference"></a>Tematy pomocy
 
 - [Biblioteka klienta magazynu dla odwołania .NET](https://msdn.microsoft.com/library/azure/mt347887.aspx)
 - [Dokumentacja interfejsu API REST usługi plików](/rest/api/storageservices/fileservices/File-Service-REST-API)

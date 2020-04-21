@@ -3,12 +3,12 @@ title: Historia przewodnika C# - C#
 description: Jak wyglądał język w jego najwcześniejszych wersjach i jak ewoluował od tego czasu?
 author: erikdietrich
 ms.date: 04/08/2020
-ms.openlocfilehash: f321b9c742fed6fb1efaf8fbb1914c203dd6391b
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: ed9555bcef1c71964937c2bc18fedbc7da94f0db
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389107"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738153"
 ---
 # <a name="the-history-of-c"></a>Historia C\#
 
@@ -17,7 +17,7 @@ Ten artykuł zawiera historię każdej głównej wersji języka C#. Zespół ję
 > [!IMPORTANT]
 > Język C# opiera się na typy i metody, w jakiej specyfikacji Języka C# definiuje jako *standardową bibliotekę* dla niektórych funkcji. Platforma .NET dostarcza te typy i metody w wielu pakietach. Jednym z przykładów jest przetwarzanie wyjątków. Każda `throw` instrukcja lub wyrażenie jest sprawdzana, aby <xref:System.Exception>upewnić się, że obiekt jest generowany z . Podobnie każdy `catch` jest sprawdzany, aby upewnić się, <xref:System.Exception>że typ złowionych pochodzi od . Każda wersja może dodać nowe wymagania. Aby korzystać z najnowszych funkcji językowych w starszych środowiskach, może być konieczne zainstalowanie określonych bibliotek. Te zależności są udokumentowane na stronie dla każdej określonej wersji. Możesz dowiedzieć się więcej o [relacjach między językiem i biblioteką](relationships-between-language-and-library.md) w tle tej zależności.
 
-Narzędzia kompilacji języka C# uwzględnić najnowszą wersję języka głównego domyślnej wersji językowej. Mogą istnieć wersje punktowe między głównymi wersjami, szczegółowo opisane w innych artykułach w tej sekcji. Aby korzystać z najnowszych funkcji w wersji punktowej, należy [skonfigurować wersję językową kompilatora](../language-reference/configure-language-version.md) i wybrać wersję. Od c# 7.0 zostały wydania trzech punktów:
+Narzędzia kompilacji języka C# uwzględnić najnowszą wersję języka głównego domyślnej wersji językowej. Mogą istnieć wersje punktowe między głównymi wersjami, szczegółowo opisane w innych artykułach w tej sekcji. Aby korzystać z najnowszych funkcji w wersji punktowej, należy [skonfigurować wersję językową kompilatora](../language-reference/configure-language-version.md) i wybrać wersję. Od c# 7.0 nastąpiły trzypunktowe wydania:
 
 - [C# 7.3](csharp-7-3.md):
   - C# 7.3 jest dostępny począwszy od [visual studio 2017 w wersji 15.7](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) i [.NET Core 2.1 SDK](../../core/whats-new/dotnet-core-2-1.md).

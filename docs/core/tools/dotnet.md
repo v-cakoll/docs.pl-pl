@@ -2,12 +2,12 @@
 title: dotnet, polecenie
 description: Dowiedz się więcej o poleceniu dotnet (ogólnym sterowniku interfejsu wiersza polecenia .NET Core) i jego użyciu.
 ms.date: 02/13/2020
-ms.openlocfilehash: d700f35f3c977524ff3857da99519882eb0136e9
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 6a08297499d955db44e342dc82fed25b7b9b8171
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463273"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739080"
 ---
 # <a name="dotnet-command"></a>dotnet, polecenie
 
@@ -264,7 +264,7 @@ dotnet myapp.dll
 
 - `DOTNET_NOLOGO`
 
-  Określa, czy komunikaty powitalne .NET Core i telemetryczne są wyświetlane przy pierwszym uruchomieniu. Ustaw, `true` aby wyciszyć `true`te `1`komunikaty `yes` (wartości , `false` lub zaakceptowane) lub ustawić, aby zezwolić (wartości `false`, `0`, lub `no` akceptowane). Jeśli nie jest ustawiona, domyślna jest `false` i komunikaty będą wyświetlane przy pierwszym uruchomieniu. Należy zauważyć, że ta flaga `DOTNET_CLI_TELEMETRY_OPTOUT` nie ma wpływu na dane telemetryczne (zobacz rezygnacji z wysyłania danych telemetrycznych).
+  Określa, czy komunikaty powitalne .NET Core i telemetryczne są wyświetlane przy pierwszym uruchomieniu. Ustaw, `true` aby wyciszyć `true`te `1`komunikaty `yes` (wartości , `false` lub zaakceptowane) lub ustawić, aby zezwolić (wartości `false`, `0`, lub `no` akceptowane). Jeśli nie jest ustawiona, domyślna jest `false` i komunikaty będą wyświetlane przy pierwszym uruchomieniu. Ta flaga nie ma wpływu `DOTNET_CLI_TELEMETRY_OPTOUT` na dane telemetryczne (zobacz rezygnacji z wysyłania danych telemetrycznych).
 
 - `DOTNET_CLI_TELEMETRY_OPTOUT`
 

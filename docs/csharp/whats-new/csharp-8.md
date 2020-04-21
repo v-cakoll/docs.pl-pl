@@ -2,12 +2,12 @@
 title: Co nowego w C# 8.0 - C# Przewodnik
 description: Zapoznaj się z omówieniem nowych funkcji dostępnych w języku C# 8.0.
 ms.date: 04/07/2020
-ms.openlocfilehash: 2998beb378c68bead7f34e2a0963c40cf610a442
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: fcba0526fbcbe46a02cef167822c219f9db2eb63
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389091"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738165"
 ---
 # <a name="whats-new-in-c-80"></a>Co nowego w języku C# 8.0
 
@@ -472,7 +472,7 @@ Zakres może być następnie `[` używany `]` wewnątrz znaków i:
 var text = words[phrase];
 ```
 
-Nie tylko macierze obsługują indeksy i zakresy. Można również używać indeksów i zakresów <xref:System.Span%601>z <xref:System.ReadOnlySpan%601> [ciągiem](../language-reference/builtin-types/reference-types.md#the-string-type), lub . Aby uzyskać więcej informacji, zobacz [Obsługa typów indeksów i zakresów](../tutorials/ranges-indexes.md#type-support-for-indices-and-ranges).
+Nie tylko macierze obsługują indeksy i zakresy. Można również użyć indeksów i zakresów <xref:System.Span%601>z <xref:System.ReadOnlySpan%601> [ciągiem](../language-reference/builtin-types/reference-types.md#the-string-type), lub . Aby uzyskać więcej informacji, zobacz [Obsługa typów indeksów i zakresów](../tutorials/ranges-indexes.md#type-support-for-indices-and-ranges).
 
 Możesz dowiedzieć się więcej o indeksach i zakresach w samouczku na temat [indeksów i zakresów](../tutorials/ranges-indexes.md).
 

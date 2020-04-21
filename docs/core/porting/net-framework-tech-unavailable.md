@@ -4,12 +4,12 @@ titleSuffix: ''
 description: Dowiedz się więcej o technologiach platformy .NET Framework, które są niedostępne w programie .NET Core
 author: cartermp
 ms.date: 04/30/2019
-ms.openlocfilehash: 7dfec63870950f12ec933ebf09041b3c8ce2cbb5
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 65e465f78b55270b42532eb7e8803f48c048ec3c
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607800"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739140"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>Technologie .NET Framework są niedostępne w programie .NET Core
 
@@ -19,7 +19,7 @@ Tylko dlatego, że interfejs API lub technologii nie jest obecnie zaimplementowa
 
 ## <a name="appdomains"></a>AppDomains (Aplikacje)
 
-Domeny aplikacji (AppDomains) izolują aplikacje od siebie. AppDomains wymagają obsługi środowiska uruchomieniowego i są zazwyczaj dość drogie. Tworzenie dodatkowych domen aplikacji nie jest obsługiwane i nie ma żadnych planów, aby dodać tę funkcję w przyszłości. W przypadku izolacji kodu należy użyć oddzielnych procesów lub kontenerów jako alternatywy. Aby dynamicznie ładować <xref:System.Runtime.Loader.AssemblyLoadContext> złożenia, należy użyć klasy.
+Domeny aplikacji (AppDomains) izolują aplikacje od siebie. AppDomains wymagają obsługi środowiska uruchomieniowego i są zazwyczaj drogie. Tworzenie dodatkowych domen aplikacji nie jest obsługiwane i nie ma żadnych planów, aby dodać tę funkcję w przyszłości. W przypadku izolacji kodu należy użyć oddzielnych procesów lub kontenerów jako alternatywy. Aby dynamicznie ładować <xref:System.Runtime.Loader.AssemblyLoadContext> złożenia, należy użyć klasy.
 
 Aby ułatwić migrację kodu z platformy .NET Framework, <xref:System.AppDomain> program .NET Core udostępnia część powierzchni interfejsu API. <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>Niektóre interfejsy API działają normalnie (na przykład), niektórzy członkowie <xref:System.AppDomain.SetCachePath%2A>nic nie robią <xref:System.PlatformNotSupportedException> (na przykład), a niektórzy rzucają (na <xref:System.AppDomain.CreateDomain%2A>przykład). Sprawdź typy używane względem [ `System.AppDomain` źródła referencyjnego](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Private.CoreLib/src/System/AppDomain.cs) w [repozytorium github dotnet/runtime](https://github.com/dotnet/runtime). Upewnij się, aby wybrać gałąź, która pasuje do zaimplementowanej wersji.
 

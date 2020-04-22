@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: c12579062b04cfb46e14d5c3d734a7c155f8d654
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: b314b61584e45ac5e80a248e639bdac427ba4a57
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278889"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "82021726"
 ---
 # <a name="wcf-client-overview"></a>Omówienie klienta WCF
 
@@ -42,7 +42,7 @@ W poniższych sekcjach omówiono te kroki i przedstawiono krótkie wprowadzenie 
 - Wywoływanie usług przy użyciu kanałów klienta.  
   
 ## <a name="obtain-the-service-contract-bindings-and-addresses"></a>Uzyskiwanie umowy serwisowej, powiązań i adresów  
- W WCF usług i klientów modelu umów przy użyciu atrybutów zarządzanych, interfejsów i metod. Aby połączyć się z usługą w aplikacji klienckiej, należy uzyskać informacje o typie dla umowy serwisowej. Zazwyczaj można to zrobić za pomocą [ServiceModel Metadata Utility Tool (Svcutil.exe),](servicemodel-metadata-utility-tool-svcutil-exe.md)który pobiera metadane z usługi, konwertuje go do pliku kodu źródłowego zarządzanego w wybranym języku i tworzy plik konfiguracji aplikacji klienta, który służy do konfigurowania obiektu klienta WCF. Na przykład jeśli zamierzasz utworzyć obiekt klienta WCF `MyCalculatorService`do wywołania , i wiesz, że metadane dla tej usługi są publikowane w , a następnie poniższy `http://computerName/MyCalculatorService/Service.svc?wsdl`przykład kodu pokazuje, jak użyć Svcutil.exe, aby uzyskać `ClientCode.vb` plik, który zawiera umowę serwisową w kodzie zarządzanym.  
+ W WCF usług i klientów modelu umów przy użyciu atrybutów zarządzanych, interfejsów i metod. Aby połączyć się z usługą w aplikacji klienckiej, należy uzyskać informacje o typie dla umowy serwisowej. Zazwyczaj informacje o typie umowy serwisowej można uzyskać za pomocą [narzędzia narzędzia ServiceModel Metadata Utility Tool (Svcutil.exe).](servicemodel-metadata-utility-tool-svcutil-exe.md) Narzędzie pobiera metadane z usługi, konwertuje je na plik kodu źródłowego zarządzanego w wybranym języku i tworzy plik konfiguracji aplikacji klienckiej, którego można użyć do skonfigurowania obiektu klienta WCF. Na przykład jeśli zamierzasz utworzyć obiekt klienta WCF `MyCalculatorService`do wywołania , i wiesz, że metadane dla tej usługi są publikowane w , a następnie poniższy `http://computerName/MyCalculatorService/Service.svc?wsdl`przykład kodu pokazuje, jak użyć Svcutil.exe, aby uzyskać `ClientCode.vb` plik, który zawiera umowę serwisową w kodzie zarządzanym.  
   
 ```console  
 svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/MyCalculatorService/Service.svc?wsdl  

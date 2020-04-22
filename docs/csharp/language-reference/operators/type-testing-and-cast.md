@@ -18,12 +18,12 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: 5a4f1d4c0c2ddd0d3967e15090d8f8c1ac42f83e
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: bc293c359af5744eebc63c0d0f94b4cebe3d450a
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121419"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "82021241"
 ---
 # <a name="type-testing-operators-and-cast-expression-c-reference"></a>Operatory testowania typów i wyrażenie rzutowanie (odwołanie do języka C#)
 
@@ -74,7 +74,7 @@ Poniższy przykład pokazuje użycie `is` operatora z wzorcem typu:
 
 Aby uzyskać więcej informacji na temat wzorca typu i innych obsługiwanych wzorców, zobacz [Dopasowywanie wzorca z jest](../keywords/is.md#pattern-matching-with-is).
 
-## <a name="as-operator"></a>jako operator
+## <a name="as-operator"></a>operator as
 
 Operator `as` jawnie konwertuje wynik wyrażenia na dane odwołanie lub typ wartości nullable. Jeśli konwersja nie jest `as` możliwa, operator zwraca . `null` W przeciwieństwie do `as` [wyrażenia rzutowego](#cast-expression)operator nigdy nie zgłasza wyjątku.
 

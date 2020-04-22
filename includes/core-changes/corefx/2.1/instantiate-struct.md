@@ -1,20 +1,20 @@
 ---
-ms.openlocfilehash: 711b51c590be149545fda3130148e2bcaef8be4f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b55de00188d92623c493dfc5f9aca915890ae5df
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78261945"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021469"
 ---
-### <a name="private-fields-added-to-built-in-struct-types"></a>Pola prywatne dodane do wbudowanych typów struktur
+### <a name="private-fields-added-to-built-in-struct-types"></a>Pola prywatne dodane do wbudowanych typów obiektów
 
-Pola prywatne zostały dodane do [niektórych typów struktur](#affected-apis) w [złożeniach referencyjnych](../../../../docs/standard/assembly/reference-assemblies.md). W rezultacie w języku C#te typy struktur zawsze muszą być tworzone przy użyciu [nowego operatora](../../../../docs/csharp/language-reference/operators/new-operator.md) lub [domyślnego literału](../../../../docs/csharp/language-reference/operators/default.md#default-literal).
+Pola prywatne zostały dodane do [niektórych typów struktury](#affected-apis) w [zestawach referencyjnych](../../../../docs/standard/assembly/reference-assemblies.md). W rezultacie w języku C#te typy struktury muszą być zawsze tworzone przy użyciu [nowego operatora](../../../../docs/csharp/language-reference/operators/new-operator.md) lub [domyślnego literału](../../../../docs/csharp/language-reference/operators/default.md#default-literal).
 
 #### <a name="change-description"></a>Zmień opis
 
-W .NET Core 2.0 i poprzednich wersjach niektóre <xref:System.ConsoleKeyInfo>typy struktur, na przykład, `new` mogą być tworzone bez użycia operatora lub [domyślnego literału](../../../../docs/csharp/language-reference/operators/default.md#default-literal) w języku C#. Stało się tak, ponieważ [zestawy odwołań](../../../../docs/standard/assembly/reference-assemblies.md) używane przez kompilator C# nie zawierały pól prywatnych dla struktur. Wszystkie pola prywatne dla typów struktury .NET są dodawane do zestawów odwołań rozpoczynających się w .NET Core 2.1.
+W .NET Core 2.0 i poprzednich wersjach niektóre <xref:System.ConsoleKeyInfo>podane typy struktury, na `new` przykład, można utworzyć wystąpienia bez użycia operatora lub [domyślnego literału](../../../../docs/csharp/language-reference/operators/default.md#default-literal) w języku C#. Było to spowodowane [zestawów odwołań używanych](../../../../docs/standard/assembly/reference-assemblies.md) przez kompilator języka C# nie zawiera pól prywatnych dla struktur. Wszystkie pola prywatne dla typów struktury platformy .NET są dodawane do zestawów odwołań, począwszy od .NET Core 2.1.
 
-Na przykład następujący kod C# kompiluje się w .NET Core 2.0, ale nie w .NET Core 2.1:
+Na przykład następujący kod języka C# kompiluje się w .NET Core 2.0, ale nie w .NET Core 2.1:
 
 ```csharp
 ConsoleKeyInfo key;    // Struct type
@@ -25,9 +25,9 @@ if (key.ToString() == "y")
 }
 ```
 
-W .NET Core 2.1 poprzedni kod powoduje następujący błąd kompilatora: **CS0165 - Użycie nieprzypisanej zmiennej lokalnej 'key'**
+W .NET Core 2.1 poprzedni kod powoduje następujący błąd kompilatora: **CS0165 - Użycie nieprzypisanego zmiennej lokalnej "key"**
 
-#### <a name="version-introduced"></a>Wprowadzona wersja
+#### <a name="version-introduced"></a>Wprowadzono wersję
 
 2.1
 
@@ -53,7 +53,7 @@ if (key.ToString() == "y")
 
 #### <a name="category"></a>Kategoria
 
-CoreFx
+Podstawowe biblioteki .NET
 
 #### <a name="affected-apis"></a>Dotyczy interfejsów API
 

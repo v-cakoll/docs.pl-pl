@@ -2,12 +2,12 @@
 title: polecenie przywracanie dotnet
 description: Dowiedz się, jak przywrócić zależności i narzędzia specyficzne dla projektu za pomocą polecenia przywracania dotnet.
 ms.date: 02/27/2020
-ms.openlocfilehash: f49f0cda4424a4cc54ab7d4d4c6f729919dc7e60
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: c5cc9adf1d77b0ab03a61cc315d42c2f38362ad9
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463429"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021776"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -120,7 +120,7 @@ Czasami może być niewygodne do uruchomienia `dotnet restore` niejawnie. Na prz
 
 - **`--no-cache`**
 
-  Określa, że nie ma buforowania pakietów i żądań HTTP.
+  Określa, że nie buforuje żądań HTTP.
 
 - **`--no-dependencies`**
 

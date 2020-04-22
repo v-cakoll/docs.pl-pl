@@ -4,12 +4,12 @@ description: Ostatnie ulepszenia języka C# umożliwiają pisanie weryfikowalny 
 ms.date: 03/17/2020
 ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: dc697d822c4d471d2b67ce074ab9af8fc2724b23
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: c324f3603c69555b40efa56d8e26c046c28f3a7c
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389679"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "82021488"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Pisanie bezpiecznego i wydajnego kodu C#
 
@@ -26,7 +26,7 @@ W tym artykule skupiono się na następujących technikach zarządzania zasobami
 - Użyj [`ref readonly`](language-reference/keywords/ref.md#reference-return-values) zwracanego, gdy zwracana wartość jest `struct` większa niż <xref:System.IntPtr.Size?displayProperty=nameWithType> i okres istnienia magazynu jest większy niż metoda zwracająca wartość.
 - Gdy rozmiar a `readonly struct` jest <xref:System.IntPtr.Size?displayProperty=nameWithType>większy niż , należy `in` przekazać go jako parametr ze względu na wydajność.
 - Nigdy nie `struct` przekazuje `in` jako parametr, chyba `readonly` że jest zadeklarowany `readonly` za pomocą modyfikatora lub metoda wywołuje tylko członków struktury. Naruszenie tych wskazówek może negatywnie wpłynąć na wydajność i może prowadzić do niejasnego zachowania.
-- Użyj [`ref struct`](language-reference/keywords/ref.md#ref-struct-types), lub `readonly ref struct` takiego <xref:System.Span%601> <xref:System.ReadOnlySpan%601> typu lub do pracy z pamięcią jako sekwencji bajtów.
+- Użyj [`ref struct`](language-reference/builtin-types/struct.md#ref-struct), lub `readonly ref struct` takiego <xref:System.Span%601> <xref:System.ReadOnlySpan%601> typu lub do pracy z pamięcią jako sekwencji bajtów.
 
 Techniki te zmuszają do zrównoważenia dwóch konkurencyjnych celów w odniesieniu do **odniesień** i **wartości.** Zmienne, które są [typami odwołań,](programming-guide/types/index.md#reference-types) przechowują odwołanie do lokalizacji w pamięci. Zmienne, które są [typami wartości](programming-guide/types/index.md#value-types) bezpośrednio zawierają ich wartość. Różnice te podkreślają kluczowe różnice, które są ważne dla zarządzania zasobami pamięci. **Typy wartości** są zazwyczaj kopiowane po przekazaniu do metody lub zwrócone z metody. To zachowanie obejmuje kopiowanie `this` wartości podczas wywoływania elementów członkowskich typu wartości. Koszt kopii jest powiązany z rozmiarem typu. **Typy odwołań** są przydzielane na zarządzanym stosie. Każdy nowy obiekt wymaga nowej alokacji, a następnie musi zostać odzyskany. Obie te operacje zająć trochę czasu. Odwołanie jest kopiowane, gdy typ odwołania jest przekazywany jako argument do metody lub zwracany z metody.
 

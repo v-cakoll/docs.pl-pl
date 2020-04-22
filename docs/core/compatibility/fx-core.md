@@ -1,26 +1,26 @@
 ---
-title: Przełomowe zmiany — .NET Framework do .NET Core
+title: Łamanie zmian — program .NET Framework to .NET Core
 titleSuffix: ''
-description: Wyświetla listę zmian krytycznych z programu .NET Framework na program .NET Core.
+description: Wyświetla listę przełomowych zmian z programu .NET Framework na .NET Core.
 ms.date: 12/18/2019
-ms.openlocfilehash: f712be14d7debc4b3008f8459e6ee925754b25f0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ef16132c8dcffbe9bcfbe02834c9a78d6d0c33e4
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77449409"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021787"
 ---
-# <a name="breaking-changes-for-migration-from-net-framework-to-net-core"></a>Przełomowe zmiany migracji z platformy .NET Framework do programu .NET Core
+# <a name="breaking-changes-for-migration-from-net-framework-to-net-core"></a>Przerywanie zmian migracji z programu .NET Framework do programu .NET Core
 
-Jeśli przeprowadzasz migrację aplikacji z platformy .NET Framework do platformy .NET Core, mogą mieć wpływ na zmiany dotyczące łamania, które są wymienione w tym artykule. Zmiany krytyczne są pogrupowane według kategorii i w ramach tych kategorii według wersji programu .NET Core, w której zostały wprowadzone.
+Jeśli przeprowadzasz migrację aplikacji z programu .NET Framework do platformy .NET Core, zmiany dotyczące podziału wymienione w tym artykule mogą mieć wpływ na Ciebie. Zmiany podziału są pogrupowane według kategorii i w ramach tych kategorii, według wersji .NET Core, w której zostały wprowadzone.
 
 > [!NOTE]
-> Ten artykuł nie jest pełną listą zmian między programami .NET Framework a .NET Core. Najważniejsze przełomowe zmiany są dodawane tutaj, gdy dowiemy się o nich.
+> Ten artykuł nie jest pełną listą przełomowych zmian między programem .NET Framework a programem .NET Core. Najważniejsze przełomowe zmiany są dodawane tutaj, gdy stajemy się o nich świadomi.
 
-## <a name="corefx"></a>CoreFx
+## <a name="core-net-libraries"></a>Podstawowe biblioteki .NET
 
-- [Zmiana wartości domyślnej programu UseShellExecute](#change-in-default-value-of-useshellexecute)
-- [UnauthorizedAccessException zgłoszony przez FileSystemInfo.Attributes](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes)
+- [Zmiana wartości domyślnej UseShellExecute](#change-in-default-value-of-useshellexecute)
+- [NieautoryzowaneaccessException generowane przez FileSystemInfo.Attributes](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes)
 
 ### <a name="net-core-21"></a>.NET Core 2.1
 
@@ -28,7 +28,7 @@ Jeśli przeprowadzasz migrację aplikacji z platformy .NET Framework do platform
 
 ***
 
-### <a name="net-core-10"></a>.NET Core 1.0
+### <a name="net-core-10"></a>.NET Rdzeń 1.0
 
 [!INCLUDE [UnauthorizedAccessException thrown by FileSystemInfo.Attributes](~/includes/core-changes/corefx/1.0/filesysteminfo-attributes-exceptions.md)]
 
@@ -36,7 +36,7 @@ Jeśli przeprowadzasz migrację aplikacji z platformy .NET Framework do platform
 
 ## <a name="cryptography"></a>Kryptografia
 
-- [Przestrzegany jest parametr logiczny podpisu SignedCms.ComputeSignature](#boolean-parameter-of-signedcmscomputesignature-is-respected)
+- [Parametr logiczny signedcms.computesignature jest przestrzegany](#boolean-parameter-of-signedcmscomputesignature-is-respected)
 
 ### <a name="net-core-21"></a>.NET Core 2.1
 
@@ -46,25 +46,25 @@ Jeśli przeprowadzasz migrację aplikacji z platformy .NET Framework do platform
 
 ## <a name="windows-forms"></a>Windows Forms
 
-Obsługa formularzy systemu Windows została dodana do programu .NET Core w wersji 3.0. Jeśli przeprowadzasz migrację aplikacji Formularze systemu Windows z platformy .NET Framework do platformy .NET Core, zmiany powodujące następujące następujące zmiany mogą mieć wpływ na aplikację.
+Obsługa formularzy systemu Windows została dodana do platformy .NET Core w wersji 3.0. Jeśli przeprowadzasz migrację aplikacji Windows Forms z programu .NET Framework do platformy .NET Core, zmiany podziału wymienione w tym miejscu mogą mieć wpływ na aplikację.
 
-- [Usunięte formanty](#removed-controls)
+- [Usunięto kontrolki](#removed-controls)
 - [Zdarzenie CellFormatting nie jest wywoływane, jeśli wyświetlana jest etykietka narzędzia](#cellformatting-event-not-raised-if-tooltip-is-shown)
 - [Control.DefaultFont zmieniono na Segoe UI 9 pkt](#default-control-font-changed-to-segoe-ui-9-pt)
-- [Modernizacja folderuOkno przeglądarki](#modernization-of-the-folderbrowserdialog)
-- [SerializableAttribute usunięte z niektórych typów formularzy systemu Windows](#serializableattribute-removed-from-some-windows-forms-types)
-- [Przełącznik zgodności AllowUpdateChildControlForTabControl nie jest obsługiwany](#allowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported)
-- [Przełącznik zgodności DomainUpDown.UseLegacyScrolling nie jest obsługiwany](#domainupdownuselegacyscrolling-compatibility-switch-not-supported)
+- [Modernizacja folderuBrowserDialog](#modernization-of-the-folderbrowserdialog)
+- [SerializableAttribute usunięty z niektórych typów formularzy systemu Windows](#serializableattribute-removed-from-some-windows-forms-types)
+- [Przełącznik zgodności AllowUpdateChildControlIndexForTabControls nie jest obsługiwany](#allowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported)
+- [Przełącznik zgodności domainupdown.UseLegacyScrolling nie jest obsługiwany](#domainupdownuselegacyscrolling-compatibility-switch-not-supported)
 - [Przełącznik zgodności DoNotLoadLatestRichEditControl nie jest obsługiwany](#donotloadlatestricheditcontrol-compatibility-switch-not-supported)
 - [Przełącznik zgodności DoNotSupportSelectAllShortcutInMultilineTextBox nie jest obsługiwany](#donotsupportselectallshortcutinmultilinetextbox-compatibility-switch-not-supported)
 - [Przełącznik zgodności DontSupportReentrantFilterMessage nie jest obsługiwany](#dontsupportreentrantfiltermessage-compatibility-switch-not-supported)
 - [Przełącznik zgodności EnableVisualStyleValidation nie jest obsługiwany](#enablevisualstylevalidation-compatibility-switch-not-supported)
-- [UseLegacyContextMenuStripSourceControlValue przełącznik zgodności nie jest obsługiwany](#uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported)
+- [Przełącznik zgodności UseLegacyContextMenuStripSourceControlValue nie jest obsługiwany](#uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported)
 - [Przełącznik zgodności UseLegacyImages nie jest obsługiwany](#uselegacyimages-compatibility-switch-not-supported)
-- [Zmiana dostępu dla accessibleObject.RuntimeIDFirstItem](#change-of-access-for-accessibleobjectruntimeidfirstitem)
+- [Zmiana dostępu dla AccessibleObject.RuntimeIDFirstItem](#change-of-access-for-accessibleobjectruntimeidfirstitem)
 - [Zduplikowane interfejsy API usunięte z formularzy systemu Windows](#duplicated-apis-removed-from-windows-forms)
 
-### <a name="net-core-31"></a>.NET Core 3.1
+### <a name="net-core-31"></a>.NET Rdzeń 3.1
 
 [!INCLUDE[Removed controls](~/includes/core-changes/windowsforms/3.1/remove-controls-3.1.md)]
 
@@ -130,5 +130,5 @@ Obsługa formularzy systemu Windows została dodana do programu .NET Core w wers
 
 ## <a name="see-also"></a>Zobacz też
 
-- [Interfejsy API, które zawsze zgłaszają wyjątki w uspolonym .NET Core](unsupported-apis.md)
-- [Technologie .NET Framework niedostępne w platformie .NET Core](../porting/net-framework-tech-unavailable.md)
+- [Interfejsy API, które zawsze zgłaszają wyjątki w programie .NET Core](unsupported-apis.md)
+- [Technologie .NET Framework są niedostępne w programie .NET Core](../porting/net-framework-tech-unavailable.md)

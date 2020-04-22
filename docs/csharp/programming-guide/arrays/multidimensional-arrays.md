@@ -1,16 +1,16 @@
 ---
-title: Tablice wielowymiarowe — przewodnik programowania C#
+title: Tablice wielowymiarowe — przewodnik programowania języka C#
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arrays [C#], multidimensional
 - multidimensional arrays [C#]
 ms.assetid: 020ce02e-7dff-4273-8e53-bf0b33747232
-ms.openlocfilehash: eb49f4386b6106328f1613b5ec70794ac26fc9b7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ee5fae36ff844fadad7e1b6a766020319b67a83c
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75715038"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021754"
 ---
 # <a name="multidimensional-arrays-c-programming-guide"></a>Tablice wielowymiarowe (Przewodnik programowania w języku C#)
 
@@ -18,17 +18,17 @@ Tablice mogą mieć więcej niż jeden wymiar. Na przykład następująca deklar
   
  [!code-csharp[csProgGuideArrays#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#11)]  
   
- Następująca deklaracja tworzy tablicę trzech wymiarów, 4, 2 i 3.  
+ Poniższa deklaracja tworzy tablicę trzech wymiarów, 4, 2 i 3.  
   
  [!code-csharp[csProgGuideArrays#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#12)]  
   
 ## <a name="array-initialization"></a>Inicjowanie tablicy
 
- Tablicę można zainicjować przy deklaracji, jak pokazano w poniższym przykładzie.  
+ Tablicę można zainicjować na podstawie deklaracji, jak pokazano w poniższym przykładzie.  
   
  [!code-csharp[csProgGuideArrays#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#13)]  
   
- Tablica można również zainicjować bez określania rangi.  
+ Można również zainicjować tablicę bez określania rangi.  
   
  [!code-csharp[csProgGuideArrays#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#14)]  
   
@@ -50,7 +50,7 @@ Tablice mogą mieć więcej niż jeden wymiar. Na przykład następująca deklar
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Przewodnik programowania języka C#](../index.md)
+- [C# Przewodnik programowania](../index.md)
 - [Tablice](./index.md)
 - [Tablice jednowymiarowe](./single-dimensional-arrays.md)
 - [Tablice nieregularne](./jagged-arrays.md)

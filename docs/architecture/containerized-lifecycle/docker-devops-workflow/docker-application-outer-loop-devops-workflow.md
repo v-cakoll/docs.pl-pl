@@ -2,12 +2,12 @@
 title: Kroki przepływu pracy DevOps w zewnętrznej pętli dla aplikacji platformy Docker
 description: Zapoznaj się z instrukcjami "zewnętrznej pętli" przepływu pracy DevOps
 ms.date: 02/15/2019
-ms.openlocfilehash: fdda1b6a2deb08ed97867583fcc8048d4dba880c
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 44bd73bf88a743e5350e422d3ea000ca075f7383
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988976"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "82021299"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Kroki przepływu pracy DevOps w zewnętrznej pętli dla aplikacji platformy Docker
 
@@ -31,7 +31,7 @@ Mimo że kontrola kodu źródłowego (SCC) i zarządzanie kodem źródłowym mo�
 
 Obrazy lokalne, generowane przez deweloperów, powinny być używane przez nich podczas testowania w ramach własnych maszyn. Dlatego bardzo ważne jest, aby potok DevOps był aktywowany z kodu SCC.
 
-Usługi Azure DevOps i serwer Team Foundation obsługują kontrolę wersji git i team foundation. Można wybrać między nimi i używać go do kompleksowego środowiska firmy Microsoft. Jednak można również zarządzać kodem w zewnętrznych repozytoriach (takich jak GitHub, lokalne repozytoria Git lub Subversion) i nadal być w stanie połączyć się z nim i uzyskać kod jako punkt wyjścia dla potoku ciągłej ewidencji DevOps.
+Usługi Azure DevOps i serwer Team Foundation obsługują kontrolę wersji git i team foundation. Można wybrać między nimi i używać go do kompleksowego środowiska firmy Microsoft. Można jednak również zarządzać kodem w zewnętrznych repozytoriach (takich jak GitHub, lokalne repozytoria Git lub Subversion) i nadal można się z nim połączyć i uzyskać kod jako punkt wyjścia dla potoku ciągłej ewidencji DevOps.
 
 ## <a name="step-3-build-ci-integrate-and-test-with-azure-devops-services-and-docker"></a>Krok 3: Tworzenie, ci, integracja i testowanie za pomocą usług Azure DevOps i platformy Docker
 
@@ -184,7 +184,7 @@ Z punktu widzenia dysku CD, a usługi Azure DevOps w szczególności można uruc
 
 **Rysunek 5-9**. Wdrażanie aplikacji rozproszonych w usłudze kontenerowej
 
-Początkowo podczas wdrażania do niektórych klastrów lub koordynatorów, tradycyjnie należy użyć określonych skryptów wdrażania i mechanizmów na każdego koordynatora (czyli Kubernetes i sieci `docker-compose` szkieletowej usług `docker-compose.yml` mają różne mechanizmy wdrażania) zamiast prostszego i łatwego w użyciu narzędzia opartego na pliku definicji. Jednak dzięki zadaniu wdrażania platformy Azure DevOps Services, pokazanemu na rysunku 5-10, można teraz również `docker-compose.yml` wdrożyć w obsługiwanych koordynatorach, używając tylko `docker-compose.yml` znanego pliku, ponieważ narzędzie wykonuje to "tłumaczenie" dla Ciebie (z pliku do formatu wymaganego przez koordynatora).
+Początkowo podczas wdrażania do niektórych klastrów lub koordynatorów, tradycyjnie należy użyć określonych skryptów wdrażania i mechanizmów na każdego koordynatora (czyli Kubernetes i sieci `docker-compose` szkieletowej usług `docker-compose.yml` mają różne mechanizmy wdrażania) zamiast prostszego i łatwego w użyciu narzędzia opartego na pliku definicji. Jednak dzięki zadaniu wdrażania platformy Azure DevOps Services, pokazane na rysunku 5-10, teraz można również wdrożyć do obsługiwanych koordynatorów, po prostu przy użyciu znanego `docker-compose.yml` pliku, ponieważ narzędzie wykonuje to "tłumaczenie" dla Ciebie (z `docker-compose.yml` pliku do formatu wymaganego przez koordynatora).
 
 ![Zrzut ekranu przedstawiający zadanie Wdrażanie w uduśne.](./media/docker-application-outer-loop-devops-workflow/add-deploy-to-kubernetes-task.png)
 

@@ -2,12 +2,12 @@
 title: 'Atrybuty zastrzeżone języka C#: Warunkowe, Przestarzałe, AtrybutUsage'
 ms.date: 04/09/2020
 description: Te atrybuty są interpretowane przez kompilator w celu wpłyć na kod wygenerowany przez kompilator
-ms.openlocfilehash: ca3b76387de2a57380d6eb0848991d979a558662
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: c6d697dd08233ffc88900949998047137ee170a9
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389871"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021760"
 ---
 # <a name="reserved-attributes-conditionalattribute-obsoleteattribute-attributeusageattribute"></a>Atrybuty zastrzeżone: Atrybut warunkowyattribute, Przestarzały atrybut, AtrybutUsageAttribute
 
@@ -19,25 +19,25 @@ Atrybut `Conditional` sprawia, że wykonanie metody zależy od identyfikatora pr
 
 W poniższym `Conditional` przykładzie jest stosowany do metody, aby włączyć lub wyłączyć wyświetlanie informacji diagnostycznych specyficznych dla programu:
 
-::::::code language="csharp" source="snippets/trace.cs" interactive="try-dotnet" :::
+:::code language="csharp" source="snippets/trace.cs" interactive="try-dotnet" :::
 
 Jeśli `TRACE_ON` identyfikator nie jest zdefiniowany, dane wyjściowe śledzenia nie są wyświetlane. Poznaj się w interaktywnym oknie.
 
 Atrybut `Conditional` jest często używany `DEBUG` z identyfikatorem, aby włączyć śledzenie i rejestrowanie funkcji dla kompilacji debugowania, ale nie w kompilacjach wersji, jak pokazano w poniższym przykładzie:
 
-::::::code language="csharp" source="snippets/ConditionalExamples.cs" id="SnippetConditional" :::
+:::code language="csharp" source="snippets/ConditionalExamples.cs" id="SnippetConditional" :::
 
 Gdy wywoływana jest metoda oznaczona warunkowo, obecność lub brak określonego symbolu przetwarzania wstępnego określa, czy wywołanie zostało uwzględnione, czy pominięte. Jeśli symbol jest zdefiniowany, wywołanie jest włączone; w przeciwnym razie wywołanie zostanie pominięte. Metoda warunkowa musi być metodą w deklaracji klasy lub `void` struktury i musi mieć typ zwracany. Używanie `Conditional` jest czystsze, bardziej eleganckie i mniej `#if…#endif` podatne na błędy niż załączanie metod wewnątrz bloków.
 
 Jeśli metoda ma `Conditional` wiele atrybutów, wywołanie metody jest uwzględniane, jeśli w jednym lub więcej symboli warunkowych jest zdefiniowany (symbole są logicznie połączone ze sobą za pomocą operatora OR). W poniższym przykładzie obecność `A` albo `B` powoduje wywołanie metody:
 
-::::::code language="csharp" source="snippets/ConditionalExamples.cs" id="SnippetMultipleConditions" :::
+:::code language="csharp" source="snippets/ConditionalExamples.cs" id="SnippetMultipleConditions" :::
 
 ### <a name="using-conditional-with-attribute-classes"></a>Używanie `Conditional` z klasami atrybutów
 
 Atrybut `Conditional` można również zastosować do definicji klasy atrybutu. W poniższym przykładzie atrybut `Documentation` niestandardowy doda informacje do `DEBUG` metadanych tylko wtedy, gdy jest zdefiniowany.
 
-::::::code language="csharp" source="snippets/ConditionalExamples.cs" id="SnippetConditionalConditionalAttribute" :::
+:::code language="csharp" source="snippets/ConditionalExamples.cs" id="SnippetConditionalConditionalAttribute" :::
 
 ## <a name="obsolete-attribute"></a>Atrybut `Obsolete`
 
@@ -45,7 +45,7 @@ Atrybut `Obsolete` oznacza element kodu jako nie jest już zalecane do użycia. 
 
 W poniższym `Obsolete` przykładzie atrybut jest `A` stosowany do `B.OldMethod`klasy i metody . Ponieważ drugi argument konstruktora atrybutów `B.OldMethod` stosowane `true`do jest ustawiona na , ta metoda `A` spowoduje błąd kompilatora, natomiast przy użyciu klasy po prostu wywoła ostrzeżenie. Wywołanie `B.NewMethod`, jednak nie generuje żadnego ostrzeżenia lub błędu. Na przykład podczas korzystania z poprzednich definicji, następujący kod generuje dwa ostrzeżenia i jeden błąd:
 
-::::::code language="csharp" source="snippets/ObsoleteExample.cs" interactive="try-dotnet" :::
+:::code language="csharp" source="snippets/ObsoleteExample.cs" interactive="try-dotnet" :::
 
 Ciąg podany jako pierwszy argument do konstruktora atrybutów będą wyświetlane jako część ostrzeżenia lub błędu. Generowane są `A` dwa ostrzeżenia dla klasy: jeden dla deklaracji odwołania do klasy i jeden dla konstruktora klasy. Atrybut `Obsolete` może służyć bez argumentów, ale oprócz wyjaśnienia, co należy użyć zamiast tego jest zalecane.
 

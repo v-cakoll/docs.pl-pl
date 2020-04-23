@@ -8,12 +8,12 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-ms.openlocfilehash: 95ae438e9fb52cc584d18a981bffb66147eb4a77
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 8d5cd73bb9393533cb669581420e24297cb5ff71
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242819"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102934"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides> element
 
@@ -55,11 +55,11 @@ Definiuje jeden lub więcej przełączników <xref:System.AppContext> używanych
 |`runtime`|Zawiera informacje dotyczące opcji inicjowania środowiska uruchomieniowego.|
 
 ## <a name="remarks"></a>Uwagi
- Począwszy od programu .NET Framework 4.6, `<AppContextSwitchOverrides>` element w pliku konfiguracji umożliwia wywołującym interfejs API, aby ustalić, czy ich aplikacja może korzystać z nowych funkcji lub zachować zgodność z poprzednimi wersjami biblioteki. Na przykład jeśli zachowanie interfejsu API uległo zmianie między `<AppContextSwitchOverrides>` dwiema wersjami biblioteki, element umożliwia wywołującym tego interfejsu API zrezygnować z nowego zachowania w wersjach biblioteki, które obsługują nowe funkcje. W przypadku aplikacji, które wywołują `<AppContextSwitchOverrides>` interfejsy API w programie .NET Framework, element może również umożliwić obiektom wywołującym, których aplikacje są przeznaczone dla starszej wersji programu .NET Framework, wybranie nowych funkcji, jeśli ich aplikacja jest uruchomiona w wersji programu .NET Framework, która zawiera tę funkcję.
+ Począwszy od programu .NET Framework `<AppContextSwitchOverrides>` 4.6, element w pliku konfiguracyjnym umożliwia wywołującym interfejs API określenie, czy ich aplikacja może korzystać z nowych funkcji lub zachować zgodność z poprzednimi wersjami biblioteki. Na przykład jeśli zachowanie interfejsu API uległo zmianie między `<AppContextSwitchOverrides>` dwiema wersjami biblioteki, element umożliwia wywołującym tego interfejsu API zrezygnować z nowego zachowania w wersjach biblioteki, które obsługują nowe funkcje. W przypadku aplikacji, które wywołują `<AppContextSwitchOverrides>` interfejsy API w programie .NET Framework, element może również umożliwić obiektom wywołującym, których aplikacje są przeznaczone dla starszej wersji programu .NET Framework, wybranie nowych funkcji, jeśli ich aplikacja jest uruchomiona w wersji programu .NET Framework, która zawiera tę funkcję.
 
  Atrybut `value` `<AppContextSwitchOverrides>` elementu składa się z pojedynczego ciągu, który składa się z jednego lub więcej para nazw/wartości rozdzielanych średnikami.  Każda nazwa identyfikuje przełącznik zgodności, a jego odpowiednią wartością`true` `false`jest wartość logiczna ( lub ), która wskazuje, czy przełącznik jest ustawiony. Domyślnie przełącznik jest `false`, a biblioteki zapewniają nowe funkcje. Zapewniają one tylko poprzednie funkcje, jeśli przełącznik jest ustawiony `true`(to jest jego wartość jest ). Dzięki temu biblioteki, aby zapewnić nowe zachowanie dla istniejącego interfejsu API, umożliwiając jednocześnie wywołujących, którzy zależą od poprzedniego zachowania, aby zrezygnować z nowych funkcji.
 
- Program .NET Framework obsługuje następujące przełączniki:
+Program .NET Framework obsługuje następujące przełączniki:
 
 |Zmień nazwę|Opis|Wprowadzone|
 |-----------------|-----------------|----------------|
@@ -141,7 +141,7 @@ Definiuje jeden lub więcej przełączników <xref:System.AppContext> używanych
 
  Deweloperzy bibliotek mogą również definiować niestandardowe przełączniki, aby umożliwić wywołującym rezygnację ze zmienionych funkcji wprowadzonych w nowszych wersjach ich bibliotek. Aby uzyskać więcej <xref:System.AppContext> informacji, zobacz klasę.
 
-## <a name="switches-in-aspnet-applications"></a>Przełączniki w aplikacjach ASP.NET
+## <a name="switches-in-aspnet-apps"></a>Przełączanie w aplikacjach ASP.NET
 
 Aplikację ASP.NET można skonfigurować do używania ustawień zgodności, dodając element [ \<Dodaj>](../appsettings/add-element-for-appsettings.md) do sekcji [ \<appSettings>](../appsettings/index.md) pliku web.config.
 
@@ -179,6 +179,7 @@ W poniższym przykładzie `<add>` użyto elementu `<appSettings>` do dodania dw�
 
 ## <a name="see-also"></a>Zobacz też
 
+- [Ograniczanie nowych zachowań w programach .NET Framework 4.6 i nowszych](../../../migration-guide/mitigations.md)
 - <xref:System.AppContext?displayProperty=nameWithType>
 - [\<element> środowiska uruchomieniowego](runtime-element.md)
 - [\<element> konfiguracji](../configuration-element.md)

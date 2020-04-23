@@ -7,16 +7,16 @@ helpviewer_keywords:
 - .NET Framework, compatibility with earlier versions
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
-ms.openlocfilehash: e0de18b5a40875d1fec2633c16688111d8f4b9ee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2e268753bf5941e9d28ee2bdd82ce77016ddf01a
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73974956"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102986"
 ---
-# <a name="version-compatibility-in-the-net-framework"></a>Zgodność wersji w ramach .NET Framework
+# <a name="version-compatibility"></a>Zgodność wersji
 
-Zgodność wsteczna oznacza, że aplikacja, która została opracowana dla określonej wersji platformy będzie działać na nowszych wersjach tej platformy. Program .NET Framework próbuje zmaksymalizować zgodność z powrotem: kod źródłowy napisany dla jednej wersji programu .NET Framework powinien być kompilowany w nowszych wersjach programu .NET Framework, a pliki binarne uruchamiane w jednej wersji programu .NET Framework powinny zachowywać się identycznie na nowszych wersji programu .NET Framework.
+Zgodność wsteczna oznacza, że aplikacja, która została opracowana dla określonej wersji platformy będzie działać na nowszych wersjach tej platformy. Program .NET Framework próbuje zmaksymalizować zgodność z powrotem: kod źródłowy napisany dla jednej wersji programu .NET Framework powinien być kompilowany w nowszych wersjach programu .NET Framework, a pliki binarne uruchamiane w jednej wersji programu .NET Framework powinny zachowywać się identycznie w nowszych wersjach programu .NET Framework.
 
 ## <a name="version-compatibility-for-apps"></a><a name="Apps"></a>Zgodność wersji dla aplikacji
 
@@ -41,7 +41,7 @@ Aplikacja może kontrolować wersję programu .NET Framework, na której jest ur
 
 Z powodu tego ograniczenia gwarancje zgodności są szczególnie ważne dla składników. Począwszy od programu .NET Framework 4, można określić stopień, w jakim składnik <xref:System.Runtime.Versioning.ComponentGuaranteesAttribute?displayProperty=nameWithType> ma pozostać zgodny w wielu wersjach, stosując atrybut do tego składnika. Narzędzia mogą używać tego atrybutu do wykrywania potencjalnych naruszeń gwarancji zgodności w przyszłych wersjach składnika.
 
-## <a name="backward-compatibility-and-the-net-framework"></a>Zgodność z powrotem i program .NET Framework
+## <a name="backward-compatibility"></a>Zgodność ze starszymi wersjami
 
 .NET Framework 4.5 i nowsze wersje są wstecznie zgodne z aplikacjami, które zostały utworzone we wcześniejszych wersjach programu .NET Framework. Innymi słowy aplikacje i składniki utworzone z poprzednich wersji będzie działać bez modyfikacji w .NET Framework 4.5 i nowszych wersjach. Jednak domyślnie aplikacje są uruchamiane w wersji środowiska wykonawczego języka wspólnego, dla którego zostały opracowane, więc może być wymagane podanie pliku konfiguracji, aby umożliwić uruchamianie aplikacji w wersjach .NET Framework 4.5 lub nowszych. Aby uzyskać więcej informacji, zobacz [zgodność wersji dla aplikacji](#Apps) sekcji wcześniej w tym artykule.
 
@@ -63,9 +63,9 @@ Jeśli aplikacja lub składnik nie działa zgodnie z oczekiwaniami w programie .
 
 - Jeśli natkniesz się na problem, który nie jest udokumentowany, otwórz problem w [witrynie społeczności deweloperów dla platformy .NET](https://developercommunity.visualstudio.com/spaces/61/index.html) lub otwórz problem w [repozytorium Microsoft/dotnet GitHub](https://github.com/microsoft/dotnet/issues).
 
-## <a name="compatibility-and-side-by-side-execution"></a>Kompatybilność i wykonanie obok siebie
+## <a name="side-by-side-execution"></a>Wykonywanie równoczesne
 
-Jeśli nie możesz znaleźć odpowiedniego rozwiązania problemu, pamiętaj, że program .NET Framework 4.5 (lub jedna z jego wersji punktowych) jest uruchamiany obok wersji 1.1, 2.0 i 3.5 i jest aktualizacją w miejscu, która zastępuje wersję 4. W przypadku aplikacji docelowych w wersjach 1.1, 2.0 i 3.5 można zainstalować odpowiednią wersję programu .NET Framework na komputerze docelowym, aby uruchomić aplikację w najlepszym środowisku. Aby uzyskać więcej informacji na temat wykonywania obok siebie, zobacz [Wykonanie side-by-Side](../deployment/side-by-side-execution.md).
+Jeśli nie możesz znaleźć odpowiedniego rozwiązania problemu, pamiętaj, że .NET Framework 4.5 (lub jeden z jego wersji punktowych) jest uruchamiany obok wersji 1.1, 2.0 i 3.5 i jest aktualizacją w miejscu, która zastępuje wersję 4. W przypadku aplikacji docelowych w wersjach 1.1, 2.0 i 3.5 można zainstalować odpowiednią wersję programu .NET Framework na komputerze docelowym, aby uruchomić aplikację w najlepszym środowisku. Aby uzyskać więcej informacji na temat wykonywania obok siebie, zobacz [Wykonanie side-by-Side](../deployment/side-by-side-execution.md).
 
 ## <a name="see-also"></a>Zobacz też
 

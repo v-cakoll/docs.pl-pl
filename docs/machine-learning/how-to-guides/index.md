@@ -2,12 +2,12 @@
 title: ML.NET poradniki
 description: Dowiedz się, jak wykonywać określone zadania, aby ułatwić tworzenie niestandardowych rozwiązań AI i integrację z uczeniem maszynowym z aplikacjami platformy .NET.
 ms.date: 03/01/2019
-ms.openlocfilehash: 25c5cb6247c202e3ef51d0ed25b3b213fdca7a56
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: e83db6f1f754357b7e204485ea545feef9ad4a95
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607535"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102453"
 ---
 # <a name="net-machine-learning-how-to-guides"></a>Przewodniki po uczeniu maszynowym platformy .NET
 
@@ -27,15 +27,9 @@ W sekcji Jak znaleźć ML.NET Przewodniku po ML.NET, aby znaleźć szybkie odpow
 
 * [Trenuj model regresji, aby przewidzieć wartość przy użyciu ML.NET.](train-machine-learning-model-ml-net.md)
 
-### <a name="evaluate-the-model-quality"></a>Ocena jakości modelu
-
-* [Oblicz metryki, aby ocenić jakość modelu.](verify-model-quality-ml-net.md)
-
 ### <a name="model-explainability"></a>Wytłumaczenia modelu
 
 * [Określ znaczenie operacji modeli z znaczeniem funkcji permutacji.](explain-machine-learning-model-permutation-feature-importance-ml-net.md)
-
-* [Użyj uogólnionych modeli dodatków i funkcji kształtu, aby uzyskać możliwość wyjaśnienia modelu.](use-gams-for-model-explainability.md)
 
 ## <a name="run"></a>Run
 

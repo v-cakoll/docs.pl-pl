@@ -2,12 +2,12 @@
 title: Wskazówki dotyczące formatowania kodu F#
 description: Poznaj wskazówki dotyczące formatowania kodu języka F#.
 ms.date: 11/04/2019
-ms.openlocfilehash: b8be70dd29a04e71614308164e541b99a1724305
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: dd48380a90ee92b2c1edaaabc116fa1cd8010390
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739555"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102492"
 ---
 # <a name="f-code-formatting-guidelines"></a>Wskazówki dotyczące formatowania kodu F#
 
@@ -579,10 +579,10 @@ Podczas generowania tablic i list programowo `do ... yield` preferuj, `->` gdy z
 
 ```fsharp
 // Preferred
-let squares = [ for x in 1..10 -> x*x ]
+let squares = [ for x in 1..10 -> x * x ]
 
 // Not preferred
-let squares' = [ for x in 1..10 do yield x*x ]
+let squares' = [ for x in 1..10 do yield x * x ]
 ```
 
 Starsze wersje języka F# wymagane `yield` określania w sytuacjach, gdy dane mogą być generowane warunkowo lub mogą być kolejne wyrażenia do oceny. Preferuj pominięcie tych `yield` słów kluczowych, chyba że musisz skompilować ze starszą wersją języka F#:
@@ -816,10 +816,10 @@ let function1 a b = a - b * b
 ```fsharp
 // A1 and A2 are local modules.
 module A1 =
-    let function1 a b = a*a + b*b
+    let function1 a b = a * a + b * b
 
 module A2 =
-    let function2 a b = a*a - b*b
+    let function2 a b = a * a - b * b
 ```
 
 ### <a name="formatting-object-expressions-and-interfaces"></a>Formatowanie wyrażeń i interfejsów obiektów
@@ -878,7 +878,7 @@ type MyRecord =
 
 ### <a name="formatting-attributes-on-parameters"></a>Formatowanie atrybutów parametrów
 
-Atrybuty mogą być również miejsca na parametry. W takim przypadku umieść następnie w tym samym wierszu co parametr i przed nazwą:
+Atrybuty można również umieszczać na parametrach. W takim przypadku umieść następnie w tym samym wierszu co parametr i przed nazwą:
 
 ```fsharp
 // Defines a class that takes an optional value as input defaulting to false.

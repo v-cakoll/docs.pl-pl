@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 6850dc256a70e0c0343104b3904e9eda62d11e7e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4dbe6a2c295e5afae1b6761f0c7b695fdb906428
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179200"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102910"
 ---
 # <a name="dacpgetmoduleaddressrequest-method"></a>DacpGetModuleAddress::Metoda żądania
 
@@ -49,11 +49,12 @@ Ta struktura znajduje się wewnątrz środowiska wykonawczego i nie jest narażo
 
 ## <a name="requirements"></a>Wymagania
 
-**Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
-**Nagłówek:** Brak **biblioteki:** Brak  
-**Wersje programu .NET Framework:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Platformy:** Zobacz [Wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md)\
+**Nagłówek:** Brak\
+**Biblioteka:** Brak\
+**Wersje programu .NET Framework:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
 ## <a name="see-also"></a>Zobacz też
 
-- [Debugging](index.md)
-- [Interfejs DacpGetModuleAddress](dacpgetmoduleaddress-structure.md)
+- [Debugowanie](index.md)
+- [Struktura DacpGetModuleAddress](dacpgetmoduleaddress-structure.md)

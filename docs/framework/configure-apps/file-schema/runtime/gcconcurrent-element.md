@@ -9,12 +9,12 @@ helpviewer_keywords:
 - gcConcurrent element
 - <gcConcurrent> element
 ms.assetid: 503f55ba-26ed-45ac-a2ea-caf994da04cd
-ms.openlocfilehash: 5957337aa960a0d5f445249b410dbfaddb7b08e9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 249518ae7477d284d50f9010757db83b7752c657
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400044"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102921"
 ---
 # <a name="gcconcurrent-element"></a>\<gcWliczna> element
 
@@ -82,7 +82,7 @@ Następujący plik konfiguracyjny wyłącza wyrzucanie elementów bezużytecznyc
 
 Jeśli w pliku konfiguracji komputera znajduje się ustawienie **gcConcurrentSetting,** definiuje wartość domyślną dla wszystkich aplikacji .NET Framework. Ustawienie pliku konfiguracji komputera zastępuje ustawienie pliku konfiguracji aplikacji.
 
-Aby uzyskać więcej informacji na temat równoczesnych i tła wyrzucania elementów bezużytecznych, zobacz [równoczesnych wyrzucania elementów](../../../../standard/garbage-collection/fundamentals.md#concurrent-garbage-collection) [bezużytecznych, Tło wyrzucania elementów bezużytecznych stacji roboczej](../../../../standard/garbage-collection/fundamentals.md#background-workstation-garbage-collection)i [części wyrzucania elementów bezużytecznych serwera w](../../../../standard/garbage-collection/fundamentals.md#background-server-garbage-collection) sekcji Podstawy [wyrzucania elementów bezużytecznych](../../../../standard/garbage-collection/fundamentals.md) artykułu.
+Aby uzyskać więcej informacji na temat równoczesnych i tła wyrzucania elementów bezużytecznych, zobacz [Tło wyrzucania elementów bezużytecznych](../../../../standard/garbage-collection/background-gc.md).
 
 ## <a name="example"></a>Przykład
 

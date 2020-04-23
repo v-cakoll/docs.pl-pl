@@ -2,12 +2,12 @@
 title: polecenie kompilacji dotnet
 description: Polecenie kompilacji dotnet tworzy projekt i wszystkie jego zależności.
 ms.date: 02/14/2020
-ms.openlocfilehash: 27deca4ab1c12314db5214c73660862a8a57a398
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 1022df059493c7e045f81d4be93dff2fdab77eb1
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463708"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102843"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -43,9 +43,13 @@ W przypadku projektów wykonywalnych przeznaczonych dla wersji wcześniejszych n
 
 W przypadku projektów wykonywalnych przeznaczonych dla platformy .NET Core 3.0 lub nowszych zależności biblioteki są kopiowane do folderu wyjściowego. Oznacza to, że jeśli nie ma żadnej innej logiki specyficzne dla publikowania (takich jak projekty sieci Web), dane wyjściowe kompilacji powinny być wdrażalne.
 
-Tworzenie wymaga pliku *project.assets.json,* który zawiera listę zależności aplikacji. Plik jest tworzony [`dotnet restore`](dotnet-restore.md) podczas wykonywania. Bez pliku zasobów w miejscu narzędzia nie można rozpoznać zestawów odwołań, co powoduje błędy. W pliku .NET Core 1.x SDK `dotnet restore` konieczne `dotnet build`było jawne uruchomienie przed uruchomieniem . Począwszy od pliku .NET Core 2.0 SDK, `dotnet restore` działa niejawnie po uruchomieniu `dotnet build`. Jeśli chcesz wyłączyć niejawne przywracanie podczas uruchamiania `--no-restore` polecenia kompilacji, możesz przekazać tę opcję.
+### <a name="implicit-restore"></a>Niejawne przywracanie
+
+Tworzenie wymaga pliku *project.assets.json,* który zawiera listę zależności aplikacji. Plik jest tworzony [`dotnet restore`](dotnet-restore.md) podczas wykonywania. Bez pliku zasobów w miejscu narzędzia nie można rozpoznać zestawów odwołań, co powoduje błędy.
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
+
+### <a name="executable-or-library-output"></a>Dane wykonywalne lub dane wyjściowe biblioteki
 
 Określana przez `<OutputType>` właściwość w pliku projektu, czy projekt jest wykonywalny. W poniższym przykładzie pokazano projekt, który tworzy kod wykonywalny:
 

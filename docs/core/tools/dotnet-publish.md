@@ -2,12 +2,12 @@
 title: polecenie publikowania dotnetu
 description: Polecenie publikowania dotnet publikuje projekt .NET Core lub rozwiązanie do katalogu.
 ms.date: 02/24/2020
-ms.openlocfilehash: ca6b6bd0151674a81e0beee7798dc6bde9c088f0
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 78ed8098be1b6887fc6a2a647fd169e2bf7f7fd1
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463470"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102804"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -24,7 +24,7 @@ dotnet publish [<PROJECT>|<SOLUTION>] [-c|--configuration <CONFIGURATION>]
     [-f|--framework <FRAMEWORK>] [--force] [--interactive]
     [--manifest <PATH_TO_MANIFEST_FILE>] [--no-build] [--no-dependencies]
     [--no-restore] [--nologo] [-o|--output <OUTPUT_DIRECTORY>]
-    [-p:PublishReadyToRun] [-p:PublishSingleFile] [-p:PublishTrimmed]
+    [-p:PublishReadyToRun=true] [-p:PublishSingleFile=true] [-p:PublishTrimmed=true]
     [-r|--runtime <RUNTIME_IDENTIFIER>] [--self-contained [true|false]]
     [--no-self-contained] [-v|--verbosity <LEVEL>]
     [--version-suffix <VERSION_SUFFIX>]
@@ -42,6 +42,10 @@ dotnet publish -h|--help
 - Zależności aplikacji, które są kopiowane z pamięci podręcznej NuGet do folderu wyjściowego.
 
 Dane `dotnet publish` wyjściowe polecenia są gotowe do wdrożenia w systemie hostingowym (na przykład serwerze, komputerze PC, Mac, laptopie) do wykonania. Jest to jedyny oficjalnie obsługiwany sposób przygotowania aplikacji do wdrożenia. W zależności od typu wdrożenia, który określa projekt, system hostingu może lub nie może mieć .NET Core udostępnionego środowiska uruchomieniowego zainstalowanego na nim. Aby uzyskać więcej informacji, zobacz [Publikowanie aplikacji .NET Core za pomocą interfejsu wiersza polecenia .NET Core](../deploying/deploy-with-cli.md).
+
+### <a name="implicit-restore"></a>Niejawne przywracanie
+
+[!INCLUDE[dotnet restore note](~/includes/dotnet-restore-note.md)]
 
 ### <a name="msbuild"></a>MSBuild
 
@@ -127,7 +131,7 @@ Więcej informacji zawierają następujące zasoby:
   
     Jeśli ścieżka względna jest określona podczas publikowania projektu, wygenerowany katalog wyjściowy jest względem bieżącego katalogu roboczego, a nie do lokalizacji pliku projektu.
 
-    Jeśli ścieżka względna jest określona podczas publikowania rozwiązania, wszystkie dane wyjściowe dla wszystkich projektów przechodzą do określonego folderu względem bieżącego katalogu roboczego. Aby dane wyjściowe publikowania przejść do oddzielnych folderów dla każdego projektu, należy określić ścieżkę względną przy użyciu msbuild `PublishDir` właściwości zamiast `--output` opcji. Na przykład `dotnet publish -p:PublishDir=.\publish` wysyła dane wyjściowe `publish` publikowania dla każdego projektu do folderu w folderze, który zawiera plik projektu.
+    Jeśli ścieżka względna jest określona podczas publikowania rozwiązania, wszystkie dane wyjściowe dla wszystkich projektów przechodzi do określonego folderu względem bieżącego katalogu roboczego. Aby dane wyjściowe publikowania przejść do oddzielnych folderów dla każdego projektu, należy określić ścieżkę względną przy użyciu msbuild `PublishDir` właściwości zamiast `--output` opcji. Na przykład `dotnet publish -p:PublishDir=.\publish` wysyła dane wyjściowe `publish` publikowania dla każdego projektu do folderu w folderze, który zawiera plik projektu.
 
   - .NET Core 2.x SDK
   
@@ -135,13 +139,13 @@ Więcej informacji zawierają następujące zasoby:
 
     Jeśli ścieżka względna jest określona podczas publikowania rozwiązania, dane wyjściowe każdego projektu przechodzi do oddzielnego folderu względem lokalizacji pliku projektu. Jeśli ścieżka bezwzględna jest określona podczas publikowania rozwiązania, wszystkie dane wyjściowe publikowania dla wszystkich projektów przechodzi do określonego folderu.
 
-- **`-p:PublishReadyToRun`**
+- **`-p:PublishReadyToRun=true`**
 
   Kompiluje zestawy aplikacji w formacie ReadyToRun (R2R). R2R jest formą kompilacji z wyprzedzeniem (AOT). Aby uzyskać więcej informacji, zobacz [Obrazy ReadyToRun](../whats-new/dotnet-core-3-0.md#readytorun-images). Dostępne od .NET Core 3.0 SDK.
 
   Zaleca się określenie tej opcji w profilu publikowania, a nie w wierszu polecenia. Aby uzyskać więcej informacji, zobacz [MSBuild](#msbuild).
 
-- **`-p:PublishSingleFile`**
+- **`-p:PublishSingleFile=true`**
 
   Pakuje aplikację do pliku wykonywalnego z pojedynczym plikiem specyficznym dla platformy. Plik wykonywalny jest samorozwiązywania i zawiera wszystkie zależności (w tym natywnych), które są wymagane do uruchomienia aplikacji. Po pierwszym uruchomieniu aplikacji jest wyodrębniany do katalogu na podstawie nazwy aplikacji i identyfikator kompilacji. Uruchamianie jest szybsze, gdy aplikacja jest uruchamiana ponownie. Aplikacja nie musi wyodrębniać się po raz drugi, chyba że zostanie użyta nowa wersja. Dostępne od .NET Core 3.0 SDK.
 
@@ -149,7 +153,7 @@ Więcej informacji zawierają następujące zasoby:
 
   Zaleca się określenie tej opcji w profilu publikowania, a nie w wierszu polecenia. Aby uzyskać więcej informacji, zobacz [MSBuild](#msbuild).
 
-- **`-p:PublishTrimmed`**
+- **`-p:PublishTrimmed=true`**
 
   Przycina nieużywane biblioteki, aby zmniejszyć rozmiar wdrożenia aplikacji podczas publikowania samodzielnego pliku wykonywalnego. Aby uzyskać więcej informacji, zobacz [Przycinanie samodzielnych wdrożeń i plików wykonywalnych](../deploying/trim-self-contained.md). Dostępne od .NET Core 3.0 SDK.
 

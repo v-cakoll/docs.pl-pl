@@ -2,12 +2,12 @@
 title: polecenie testu dotnet
 description: Polecenie testu dotnet służy do wykonywania testów jednostkowych w danym projekcie.
 ms.date: 02/27/2020
-ms.openlocfilehash: 2eebcbe2e4a1660da4ffa4ea9a68190c8443463a
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 69b8101f9b1052f4726dce8a86234da99f5dc89c
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739103"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102749"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -43,6 +43,10 @@ Projekty testowe określają wynik `<PackageReference>` testu przy użyciu zwyk�
 
 [!code-xml[XUnit Basic Template](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
 
+### <a name="implicit-restore"></a>Niejawne przywracanie
+
+[!INCLUDE[dotnet restore note](~/includes/dotnet-restore-note.md)]
+
 ## <a name="arguments"></a>Argumenty
 
 - **`PROJECT | SOLUTION`**
@@ -69,7 +73,7 @@ Projekty testowe określają wynik `<PackageReference>` testu przy użyciu zwyk�
 
 - **`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
 
-  Włącza tryb diagnostyczny dla platformy testowej i zapisu komunikatów diagnostycznych do określonego pliku.
+  Włącza tryb diagnostyczny dla platformy testowej i zapisuje komunikaty diagnostyczne do określonego pliku.
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -105,11 +109,11 @@ Projekty testowe określają wynik `<PackageReference>` testu przy użyciu zwyk�
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  Katalog, w którym można znaleźć pliki binarne do uruchomienia.
+  Katalog, w którym można znaleźć pliki binarne do uruchomienia. Jeśli nie zostanie określona, domyślną ścieżką jest `./bin/<configuration>/<framework>/`.  W przypadku projektów z wieloma `TargetFrameworks` strukturami docelowymi (za pośrednictwem właściwości) należy również zdefiniować `--framework` podczas określania tej opcji.
 
 - **`-r|--results-directory <PATH>`**
 
-  Katalog, w którym zostaną umieszczone wyniki testów. Jeśli określony katalog nie istnieje, jest tworzony.
+  Katalog, w którym zostaną umieszczone wyniki testów. Jeśli określony katalog nie istnieje, jest tworzony. Wartość domyślna znajduje `TestResults` się w katalogu zawierającym plik projektu.
 
 - **`--runtime <RUNTIME_IDENTIFIER>`**
 
@@ -127,13 +131,13 @@ Projekty testowe określają wynik `<PackageReference>` testu przy użyciu zwyk�
 
   Ustawia poziom szczegółowości polecenia. Dozwolone wartości `q[uiet]`to `m[inimal]` `n[ormal]`, `d[etailed]`, `diag[nostic]`, i . Wartość domyślna to `minimal`. Aby uzyskać więcej informacji, zobacz <xref:Microsoft.Build.Framework.LoggerVerbosity>.
 
-- `RunSettings`Argumenty
+- **`RunSettings`** Argumenty
 
   Argumenty są `RunSettings` przekazywane jako konfiguracje dla testu. Argumenty są `[name]=[value]` określane jako pary po "-- " (zwróć uwagę na spację po --). Spacja służy do `[name]=[value]` oddzielania wielu par.
 
   Przykład: `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
 
-  Aby uzyskać więcej informacji, zobacz [vstest.console.exe: Passing RunSettings args](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md).
+  Aby uzyskać więcej informacji, zobacz [Przekazywanie argumentów RunSettings za pośrednictwem wiersza polecenia](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md).
 
 ## <a name="examples"></a>Przykłady
 

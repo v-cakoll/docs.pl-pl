@@ -6,18 +6,18 @@ helpviewer_keywords:
 - .NET Framework, migrating applications to
 - migration, .NET Framework
 ms.assetid: 02d55147-9b3a-4557-a45f-fa936fadae3b
-ms.openlocfilehash: 2fa992e1c0897d360f322581888c51dca8d8a734
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fbaee646f7adcfe1a53d4231790e4258fd95a892
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73974984"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102635"
 ---
-# <a name="migration-guide-to-the-net-framework-48-47-46-and-45"></a>Przewodnik po migracji do programu .NET Framework 4.8, 4.7, 4.6 i 4.5
+# <a name="migrate-to-net-framework-48-47-46-and-45"></a>Migracja do programu .NET Framework 4.8, 4.7, 4.6 i 4.5
 
-Jeśli aplikacja została utworzona przy użyciu starszej wersji programu .NET Framework, można ją ogólnie uaktualnić do platformy .NET Framework 4.5 i jej wersji punktowych (4.5.1 i 4.5.2), .NET Framework 4.6 i jej wersji punktowych (4.6.1 i 4.6.2), .NET Framework 4.7 i jego wydania punktowe ( 4.7.1 i 4.7.2) lub .NET Framework 4.8. Otwórz projekt w programie Visual Studio. Jeśli projekt został utworzony we wcześniejszej wersji programu Visual Studio, zostanie automatycznie otwarte okno dialogowe **Zgodność projektu.** Aby uzyskać więcej informacji na temat uaktualniania projektu w programie Visual Studio, zobacz [Port, Migrate i Upgrade Visual Studio Projects](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects) and Visual Studio [2019 Platform Targeting and Compatibility](/visualstudio/releases/2019/compatibility).
+Jeśli aplikacja została utworzona przy użyciu starszej wersji programu .NET Framework, można ją ogólnie uaktualnić do platformy .NET Framework 4.5 i jej wersji punktowych (4.5.1 i 4.5.2), .NET Framework 4.6 i jej punktu (4.6.1 i 4.6.2), .NET Framework 4.7 i jego wydania punktowe (4.7.1 i 4.7.2) lub .NET Framework 4.8 łatwo. Otwórz projekt w programie Visual Studio. Jeśli projekt został utworzony we wcześniejszej wersji programu Visual Studio, zostanie automatycznie otwarte okno dialogowe **Zgodność projektu.** Aby uzyskać więcej informacji na temat uaktualniania projektu w programie Visual Studio, zobacz [Port, Migrate i Upgrade Visual Studio Projects](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects) and Visual Studio [2019 Platform Targeting and Compatibility](/visualstudio/releases/2019/compatibility).
 
- Jednak niektóre zmiany w .NET Framework wymagają zmian w kodzie. Można również skorzystać z funkcji, które jest nowy w .NET Framework 4.5 i jego wydania punktowe, w .NET Framework 4.6 i jego wydania punktowe, w .NET Framework 4.7 i jego wydania punktowe lub w .NET Framework 4.8. Wprowadzanie tego typu zmian w aplikacji dla nowej wersji programu .NET Framework jest zwykle określane jako *migracja.* Jeśli aplikacja nie musi być migrowana, można ją uruchomić w systemie .NET Framework 4.5 lub nowszej wersji bez ponownego komppilowania.
+ Jednak niektóre zmiany w .NET Framework wymagają zmian w kodzie. Można również skorzystać z funkcji, które jest nowy w .NET Framework 4.5 i jego wydania punktowe, w .NET Framework 4.6 i jego wydania punktowe, w .NET Framework 4.7 i jego wydania punktowe lub w .NET Framework 4.8. Wprowadzanie tego typu zmian w aplikacji dla nowej wersji programu .NET Framework jest zwykle określane jako *migracja.* Jeśli aplikacja nie musi być migrowana, można ją uruchomić w systemie .NET Framework 4.5 lub nowszej wersji bez konieczności ponownego komppilowania.
 
 ## <a name="migration-resources"></a>Zasoby dotyczące migracji
 

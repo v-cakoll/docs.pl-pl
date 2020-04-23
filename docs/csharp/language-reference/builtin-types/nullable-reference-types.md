@@ -2,12 +2,12 @@
 title: Typy odwołań z dopuszczalną wartością null — odwołanie do języka C#
 description: Dowiedz się więcej o typach odwołań do wartości null w języku C# i o tym, jak z nich korzystać
 ms.date: 04/06/2020
-ms.openlocfilehash: cbc7397ac76b43b79a4168f4c61fe2c631b4a46b
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: cb61b162b06faa51faabbcdd91e55618cdeaca73
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888317"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102700"
 ---
 # <a name="nullable-reference-types-c-reference"></a>Typy odwołań z dopuszczalną wartości null (odwołanie do języka C#)
 
@@ -61,11 +61,11 @@ Poniższy fragment kodu pokazuje, gdzie kompilator emituje ostrzeżenia podczas 
 
 :::code language="csharp" source="snippets/NullableReferenceTypes.cs" id="SnippetLocalWarnings":::
 
-W poprzednich przykładach pokazano analizy statycznej kompilatora w celu określenia stanu null zmiennych referencyjnych. Kompilator stosuje reguły języka dla kontroli null i przypisań do informowania o swojej analizie.  Kompilator nie może tworzyć założeń dotyczących semantyki metod lub właściwości. Jeśli wywołasz metody, które wykonują kontrole null, kompilator nie może wiedzieć, te metody wpływają na stan null zmiennej. Istnieje wiele atrybutów, które można dodać do interfejsów API, aby poinformować kompilator o semantyki argumentów i zwracać wartości. Te atrybuty zostały zastosowane do wielu typowych interfejsów API w bibliotekach .NET Core. Na przykład <xref:System.String.IsNullOrEmpty%2A> został zaktualizowany, a kompilator poprawnie interpretuje tę metodę jako sprawdzenie wartości null. Aby uzyskać więcej informacji na temat atrybutów, które mają zastosowanie do analizy statycznej stanu null, zobacz artykuł o [atrybutach nullable](../../nullable-attributes.md).
+W poprzednich przykładach pokazano analizy statycznej kompilatora w celu określenia stanu null zmiennych referencyjnych. Kompilator stosuje reguły języka dla kontroli null i przypisań do informowania o swojej analizie.  Kompilator nie może tworzyć założeń dotyczących semantyki metod lub właściwości. Jeśli wywołasz metody, które wykonują kontrole null, kompilator nie może wiedzieć, te metody wpływają na stan null zmiennej. Istnieje wiele atrybutów, które można dodać do interfejsów API, aby poinformować kompilator o semantyki argumentów i zwracać wartości. Te atrybuty zostały zastosowane do wielu typowych interfejsów API w bibliotekach .NET Core. Na przykład <xref:System.String.IsNullOrEmpty%2A> został zaktualizowany, a kompilator poprawnie interpretuje tę metodę jako sprawdzenie wartości null. Aby uzyskać więcej informacji na temat atrybutów, które mają zastosowanie do analizy statycznej stanu null, zobacz artykuł o [atrybutach nullable](../attributes/nullable-analysis.md).
 
 ## <a name="setting-the-nullable-context"></a>Ustawianie kontekstu możliwego do przełowienia
 
-Istnieją dwa sposoby kontrolowania kontekstu możliwego do anulowania. Na poziomie projektu można dodać `<Nullable>enable</Nullable>` ustawienie projektu. W jednym pliku źródłowym języka C# można dodać `#nullable enable` pragma, aby włączyć kontekst nullable. Zobacz artykuł dotyczący [ustawiania strategii możliwej do anulowania](../../nullable-attributes.md).
+Istnieją dwa sposoby kontrolowania kontekstu możliwego do anulowania. Na poziomie projektu można dodać `<Nullable>enable</Nullable>` ustawienie projektu. W jednym pliku źródłowym języka C# można dodać `#nullable enable` pragma, aby włączyć kontekst nullable. Zobacz artykuł dotyczący [ustawiania strategii możliwej do anulowania](../../nullable-migration-strategies.md).
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 

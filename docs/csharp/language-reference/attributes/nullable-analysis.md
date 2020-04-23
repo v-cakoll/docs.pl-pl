@@ -2,12 +2,12 @@
 title: 'Atrybuty zastrzeżone języka C#: nullowa analiza statyczna'
 ms.date: 04/14/2020
 description: Te atrybuty są interpretowane przez kompilator, aby zapewnić lepszą analizę statyczną dla typów odwołań nullable i non-null.
-ms.openlocfilehash: 0315d78db7517541efe578d8675c0f2fe45f5aea
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 33521133a6a01196e6e1ab9c3cdc191a24f1ecf3
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389864"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102713"
 ---
 # <a name="reserved-attributes-contribute-to-the-compilers-null-state-static-analysis"></a>Atrybuty zastrzeżone przyczyniają się do analizy statycznej stanu zerowego kompilatora
 
@@ -129,7 +129,7 @@ public Customer FindCustomer(string lastName, string firstName)
 
 Prawdopodobnie napisałeś taką metodę, aby `null` powrócić, gdy poszukiwana nazwa nie została znaleziona. Wyraźnie `null` wskazuje, że rekord nie został znaleziony. W tym przykładzie prawdopodobnie zmienisz typ `Customer` `Customer?`zwracany z na . Deklarowanie wartości zwracanej jako typu odwołania powodującego wartość null określa intencję tego interfejsu API.
 
-Z przyczyn objętych [definicjami rodzajowymi i niemożnością użycia](../../nullable-attributes.md#generic-definitions-and-nullability) ta technika nie działa z metodami ogólnymi. Może być metoda rodzajowa, która następuje podobny wzorzec:
+Z przyczyn objętych [definicjami rodzajowymi i niemożnością użycia](../../nullable-migration-strategies.md#generic-definitions-and-nullability) ta technika nie działa z metodami ogólnymi. Może być metoda rodzajowa, która następuje podobny wzorzec:
 
 ```csharp
 public T Find<T>(IEnumerable<T> sequence, Func<T, bool> match)

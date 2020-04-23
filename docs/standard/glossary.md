@@ -3,12 +3,12 @@ title: Słownik platformy .NET
 description: Poznaj znaczenie wybranych terminów używanych w dokumentacji platformy .NET.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: d8f16579ea4dcbc9260aac83e16d3fbd30db519c
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: e7608ee7e68300d691df51aed923db0e8b518165
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635583"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102479"
 ---
 # <a name="net-glossary"></a>Słownik platformy .NET
 
@@ -54,9 +54,12 @@ Dokładne znaczenie zależy od kontekstu, ale środowisko uruchomieniowe języka
 
 Ten CLR jest zbudowany z tej samej bazy kodu co CLR. Pierwotnie CoreCLR był czasem wykonywania Silverlight i został zaprojektowany do pracy na wielu platformach, w szczególności Windows i OS X. CoreCLR jest teraz częścią .NET Core i reprezentuje uproszczoną wersję CLR. Nadal jest to środowisko uruchomieniowe [między platformami,](#cross-platform) teraz w tym obsługa wielu dystrybucji Linuksa. CoreCLR jest również maszyną wirtualną z możliwościami JIT i wykonywania kodu.
 
-## <a name="corefx"></a>CoreFX ( CoreFX )
+## <a name="corefx"></a>CoreFx
 
 Biblioteka klas podstawowych .NET Core (BCL)
+
+> [!TIP]
+> *Fx* oznacza *ramy*.
 
 Zestaw bibliotek, które składają się na System. \* (i w ograniczonym\*zakresie Microsoft. ) przestrzenie nazw. BCL jest ogólnego przeznaczenia, niższego poziomu struktury, które wyższego poziomu struktury aplikacji, takich jak ASP.NET Core, opierać się na. Kod źródłowy listy BCL .NET Core znajduje się w [repozytorium środowiska uruchomieniowego .NET Core](https://github.com/dotnet/runtime). Jednak większość interfejsów API .NET Core są również dostępne w .NET Framework, dzięki czemu można myśleć CoreFX jako rozwidlenia .NET Framework BCL.
 

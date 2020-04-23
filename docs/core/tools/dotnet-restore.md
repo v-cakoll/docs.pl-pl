@@ -2,12 +2,12 @@
 title: polecenie przywracanie dotnet
 description: Dowiedz się, jak przywrócić zależności i narzędzia specyficzne dla projektu za pomocą polecenia przywracania dotnet.
 ms.date: 02/27/2020
-ms.openlocfilehash: c5cc9adf1d77b0ab03a61cc315d42c2f38362ad9
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: 3deef68a9bcee389a52291c72e7e1a1019a739fd
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021776"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102791"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -34,9 +34,22 @@ dotnet restore -h|--help
 
 Polecenie `dotnet restore` używa NuGet do przywracania zależności, a także narzędzi specyficznych dla projektu, które są określone w pliku projektu. Domyślnie przywracanie zależności i narzędzia są wykonywane równolegle.
 
-Aby przywrócić zależności, NuGet potrzebuje źródeł danych, w których znajdują się pakiety. Kanały informacyjne są zwykle dostarczane za pośrednictwem pliku konfiguracyjnego *nuget.config.* Domyślny plik konfiguracyjny jest dostarczany po zainstalowaniu narzędzia .NET Core SDK. Dodatkowe źródła danych można określić, tworząc własny plik *nuget.config* w katalogu projektu. Można zastąpić *nuget.config* kanałów z - `-s` opcja.
+### <a name="specify-feeds"></a>Określanie kanałów informacyjnych
+
+Aby przywrócić zależności, NuGet potrzebuje źródeł danych, w których znajdują się pakiety. Kanały informacyjne są zwykle dostarczane za pośrednictwem pliku konfiguracyjnego *nuget.config.* Domyślny plik konfiguracyjny jest dostarczany po zainstalowaniu narzędzia .NET Core SDK. Aby określić dodatkowe źródła danych, wykonaj jedną z następujących czynności:
+
+- Utwórz własny plik *nuget.config* w katalogu projektu. Aby uzyskać więcej informacji, zobacz [typowe konfiguracje NuGet](/nuget/consume-packages/configuring-nuget-behavior) i [nuget.config różnice](#nugetconfig-differences) w dalszej części tego artykułu.
+- Użyj `dotnet nuget` poleceń, [`dotnet nuget add source`](dotnet-nuget-add-source.md)takich jak .
+
+Można zastąpić *nuget.config* kanałów z `-s` opcją.
+
+Aby uzyskać informacje dotyczące używania uwierzytelnionych kanałów informacyjnych, zobacz [Korzystanie z pakietów z uwierzytelnionych kanałów informacyjnych](/nuget/consume-packages/consuming-packages-authenticated-feeds).
+
+### <a name="package-cache"></a>Pamięć podręczna pakietów
 
 Dla zależności należy określić, gdzie przywrócone pakiety są `--packages` umieszczane podczas operacji przywracania przy użyciu argumentu. Jeśli nie zostanie określony, używana jest domyślna pamięć `.nuget/packages` podręczna pakietów NuGet, która znajduje się w katalogu w katalogu macierzystym użytkownika we wszystkich systemach operacyjnych. Na przykład */home/user1* w systemie Linux lub *C:\Users\user1* w systemie Windows.
+
+### <a name="project-specific-tooling"></a>Narzędzia specyficzne dla projektu
 
 W przypadku narzędzi specyficznych dla projektu najpierw przywraca pakiet, `dotnet restore` w którym narzędzie jest spakowane, a następnie przechodzi do przywracania zależności narzędzia, jak określono w jego pliku projektu.
 

@@ -3,12 +3,12 @@ title: Ustawienia konfiguracji modułu zbierającego elementy bezużyteczne
 description: Dowiedz się więcej o ustawieniach czasu wykonywania konfigurowania sposobu zarządzania pamięcią dla aplikacji .NET Core.
 ms.date: 01/09/2020
 ms.topic: reference
-ms.openlocfilehash: dfb641eeda03d1acaa4771bd6253fcb33c4082a6
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: ec575bdd17c8a7c290673b7085074bbba94cedef
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607813"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102869"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>Opcje konfiguracji w czasie wykonywania wyrzucania elementów bezużytecznych
 
@@ -24,7 +24,7 @@ Ustawienia są podzielone na grupy na tej stronie. Ustawienia w każdej grupie s
 
 ## <a name="flavors-of-garbage-collection"></a>Smaki wyrzucania elementów bezużytecznych
 
-Dwa główne smaki wyrzucania elementów bezużytecznych są gc stacji roboczej i serwera GC. Aby uzyskać więcej informacji na temat różnic między tymi dwoma, zobacz [Podstawy wyrzucania elementów bezużytecznych](../../standard/garbage-collection/fundamentals.md#workstation-and-server-garbage-collection).
+Dwa główne smaki wyrzucania elementów bezużytecznych są gc stacji roboczej i serwera GC. Aby uzyskać więcej informacji na temat różnic między nimi, zobacz [Stacja robocza i wyrzucanie elementów bezużytecznych serwera](../../standard/garbage-collection/workstation-server-gc.md).
 
 Podpochrozumia wyrzucania elementów bezużytecznych są tła i nie jednobieżne.
 
@@ -72,7 +72,7 @@ Plik projektu:
 
 - Konfiguruje, czy tło (równoczesnych) wyrzucanie elementów bezużytecznych jest włączone.
 - Domyślnie: Włączone`true`( ).
-- Aby uzyskać więcej informacji, zobacz [Tło wyrzucania elementów bezużytecznych](../../standard/garbage-collection/fundamentals.md#background-workstation-garbage-collection) i [wyrzucania elementów bezużytecznych serwera w tle](../../standard/garbage-collection/fundamentals.md#background-server-garbage-collection).
+- Aby uzyskać więcej informacji, zobacz [Tło wyrzucania elementów bezużytecznych](../../standard/garbage-collection/background-gc.md).
 
 | | Nazwa ustawienia | Wartości | Wprowadzono wersję |
 | - | - | - | - |
@@ -240,7 +240,7 @@ Przykład:
 
 - Określa maksymalny rozmiar zatwierdzenia w bajtach dla sterty GC i księgowego GC.
 - To ustawienie dotyczy tylko komputerów 64-bitowych.
-- Wartość domyślna, która ma zastosowanie tylko w niektórych przypadkach, jest mniejsza z 20 MB lub 75% limitu pamięci w kontenerze. Wartość domyślna ma zastosowanie, jeśli:
+- Wartość domyślna, która ma zastosowanie tylko w niektórych przypadkach, jest większa od 20 MB lub 75% limitu pamięci w kontenerze. Wartość domyślna ma zastosowanie, jeśli:
 
   - Proces jest uruchomiony wewnątrz kontenera, który ma określony limit pamięci.
   - [System.GC.HeapHardLimitPercent](#systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent) nie jest ustawiony.

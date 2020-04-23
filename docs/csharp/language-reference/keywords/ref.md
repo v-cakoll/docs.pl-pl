@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 494a46040d6cc33c5284449779fae89705fd29c2
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 07e1b49605c83908f7b9af25e0cb2599a97257c5
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738823"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102076"
 ---
 # <a name="ref-c-reference"></a>ref (odwołanie w C#)
 
@@ -77,7 +77,7 @@ Aby uzyskać więcej informacji na temat przekazywania typów odwołań według 
   
 ## <a name="reference-return-values"></a>Odwoływanie się do zwracanych wartości
 
-Odwołania zwraca wartości (lub ref zwraca) są wartości, które metoda zwraca przez odwołanie do wywołującego. Oznacza to, że obiekt wywołujący można zmodyfikować wartość zwróconą przez metodę, a ta zmiana jest odzwierciedlana w stanie obiektu, który zawiera metodę.
+Odwołania zwraca wartości (lub ref zwraca) są wartości, które metoda zwraca przez odwołanie do wywołującego. Oznacza to, że obiekt wywołujący można zmodyfikować wartość zwróconą przez metodę, a ta zmiana jest odzwierciedlana w stanie obiektu w metodzie wywołującej.
 
 Referencyjna wartość zwracana jest `ref` definiowana przy użyciu słowa kluczowego:
 
@@ -94,6 +94,10 @@ return ref DecimalArray[0];
 ```
 
 Aby obiekt wywołujący zmodyfikował stan obiektu, wartość zwracana odwołanie musi być przechowywana w zmiennej jawnie zdefiniowanej jako [ref local](#ref-locals).
+
+Oto bardziej kompletny przykład ref return, pokazujący zarówno podpis metody, jak i treść metody.
+
+[!code-csharp[FindReturningRef](~/samples/snippets/csharp/new-in-7/MatrixSearch.cs#FindReturningRef "Find returning by reference")]
 
 Wywołana metoda może również zadeklarować wartość zwracaną, `ref readonly` aby zwrócić wartość przez odwołanie i wymusić, że kod wywołujący nie może zmodyfikować zwróconą wartość. Wywołanie metoda można uniknąć kopiowania zwracane wartości przez przechowywanie wartości w lokalnym [ref tylko](#ref-readonly-locals) zmiennej.
 

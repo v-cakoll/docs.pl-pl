@@ -8,7 +8,7 @@
     - name: Tworzenie nowego formularza systemu Windows
       href: creating-a-new-windows-form.md
       items:
-        - name: 'Porady: tworzenie aplikacji Windows Forms z wiersza polecenia'
+        - name: 'Instrukcje: Tworzenie aplikacji Windows Forms z wiersza polecenia'
           href: how-to-create-a-windows-forms-application-from-the-command-line.md
         - name: Współrzędne formularzy systemu Windows
           href: windows-forms-coordinates.md
@@ -17,30 +17,30 @@
       items:
         - name: Przegląd zdarzeń
           href: events-overview-windows-forms.md
-        - name: Przegląd obsługi zdarzeń
+        - name: Przegląd programów obsługi zdarzeń
           href: event-handlers-overview-windows-forms.md
-        - name: 'Porady: tworzenie programów do obsługi zdarzeń w czasie wykonywania dla formularzy systemu Windows'
+        - name: 'Instrukcje: Tworzenie programów obsługi zdarzeń w czasie wykonywania dla formularzy Windows Forms'
           href: how-to-create-event-handlers-at-run-time-for-windows-forms.md
-        - name: 'Porady: łączenie wielu zdarzeń z jednym programem obsługi zdarzeń w formularzach systemu Windows'
+        - name: 'Instrukcje: Łączenie wielu zdarzeń z jednym programem obsługi zdarzeń w formularzach Windows Forms'
           href: how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md
         - name: Kolejność zdarzeń w formularzach systemu Windows
           href: order-of-events-in-windows-forms.md
-    - name: Dostosowywanie rozmiaru i skali formularzy systemu Windows
+    - name: Dostosowywanie rozmiaru i skali formularzy Windows Forms
       href: adjusting-the-size-and-scale-of-windows-forms.md
       items:
-        - name: 'Porady: zmienianie rozmiarów formularzy systemu Windows'
+        - name: 'Instrukcje: Zmienianie rozmiarów formularzy Windows Forms'
           href: how-to-resize-windows-forms.md
         - name: Automatyczne skalowanie w formularzach systemu Windows
           href: automatic-scaling-in-windows-forms.md
           items:
-            - name: 'Porady: reagowanie na zmiany schematu czcionek w aplikacji Windows Forms'
+            - name: 'Instrukcje: Reagowanie na zmiany schematu czcionek w aplikacji Windows Forms'
               href: how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md
         - name: Obsługa wysokiej rozdzielczości w formularzach Windows Forms
           href: high-dpi-support-in-windows-forms.md
     - name: Zmienianie wyglądu formularzy systemu Windows
       href: changing-the-appearance-of-windows-forms.md
       items:
-        - name: 'Porady: zmienianie granic formularzy systemu Windows'
+        - name: 'Instrukcje: Zmienianie granic formularzy Windows Forms'
           href: how-to-change-the-borders-of-windows-forms.md
     - name: Formanty formularzy systemu Windows
       href: ./controls/
@@ -56,11 +56,11 @@
               href: how-keyboard-input-works.md
             - name: Używanie zdarzeń klawiatury
               href: using-keyboard-events.md
-            - name: 'Porady: modyfikowanie sygnału z klawiatury do kontrolki standardowej'
+            - name: 'Instrukcje: Modyfikowanie sygnału z klawiatury do kontrolki standardowej'
               href: how-to-modify-keyboard-input-to-a-standard-control.md
-            - name: 'Porady: określanie, który klawisz modyfikujący został naciśnięty'
+            - name: 'Instrukcje: Określanie, który klawisz modyfikujący został naciśnięty'
               href: how-to-determine-which-modifier-key-was-pressed.md
-            - name: 'Porady: obsługa wprowadzania z klawiatury na poziomie formularza'
+            - name: 'Instrukcje: Obsługa wprowadzania z klawiatury na poziomie formularza'
               href: how-to-handle-keyboard-input-at-the-form-level.md
         - name: Wprowadzanie za pomocą myszy w aplikacjach Windows Forms
           href: mouse-input-in-a-windows-forms-application.md
@@ -69,7 +69,7 @@
               href: how-mouse-input-works-in-windows-forms.md
             - name: Zdarzenia myszy w formularzach systemu Windows
               href: mouse-events-in-windows-forms.md
-            - name: 'Porady: rozróżnianie między kliknięciami a dwukrotnymi kliknięciami'
+            - name: 'Instrukcje: Rozróżnianie między kliknięciami a dwukrotnymi kliknięciami'
               href: how-to-distinguish-between-clicks-and-double-clicks.md
             - name: Wskaźniki myszy w formularzach systemu Windows
               href: mouse-pointers-in-windows-forms.md
@@ -77,16 +77,16 @@
               href: mouse-capture-in-windows-forms.md
             - name: Funkcjonalność przeciągania i upuszczania w formularzach systemu Windows
               href: drag-and-drop-functionality-in-windows-forms.md
-        - name: 'Porady: symulowanie zdarzeń myszy i klawiatury w kodzie'
+        - name: 'Instrukcje: Symulowanie zdarzeń myszy i klawiatury w kodzie'
           href: how-to-simulate-mouse-and-keyboard-events-in-code.md
-        - name: 'Porady: obsługa zdarzeń związanych z danymi użytkownika w kontrolkach formularzy systemu Windows'
+        - name: 'Instrukcje: Obsługa zdarzeń związanych z danymi użytkownika w kontrolkach Windows Forms'
           href: how-to-handle-user-input-events-in-windows-forms-controls.md
         - name: Walidacja danych użytkownika w formularzach systemu Windows
           href: user-input-validation-in-windows-forms.md
     - name: Okna dialogowe w formularzach systemu Windows
       href: dialog-boxes-in-windows-forms.md
       items:
-        - name: 'Porady: wyświetlanie okien dialogowych formularzy systemu Windows'
+        - name: 'Instrukcje: Wyświetlanie okien dialogowych formularzy Windows Forms'
           href: how-to-display-dialog-boxes-for-windows-forms.md
     - name: Powiązywanie danych formularzy systemu Windows
       href: windows-forms-data-binding.md
@@ -99,23 +99,23 @@
           href: interfaces-related-to-data-binding.md
         - name: Powiadomienie o zmianie w powiązaniu danych w formularzach systemu Windows
           href: change-notification-in-windows-forms-data-binding.md
-        - name: 'Porady: stosowanie wzorca PropertyNameChanged'
+        - name: 'Instrukcje: Stosowanie wzorca PropertyNameChanged'
           href: how-to-apply-the-propertynamechanged-pattern.md
-        - name: 'Porady: tworzenie formantu powiązanego oraz formatowanie wyświetlanych danych'
+        - name: 'Instrukcje: Tworzenie kontrolki powiązanej oraz formatowanie wyświetlanych danych'
           href: how-to-create-a-bound-control-and-format-the-displayed-data.md
-        - name: 'Porady: tworzenie prostego formantu powiązanego na formularzu systemu Windows'
+        - name: 'Instrukcje: Tworzenie prostej kontrolki powiązanej na formularzu Windows Form'
           href: how-to-create-a-simple-bound-control-on-a-windows-form.md
-        - name: 'Porady: zapewnienie synchronizacji wiązania wielu kontrolek z jednym źródłem danych'
+        - name: 'Instrukcje: Zapewnienie synchronizacji wiązania wielu kontrolek z jednym źródłem danych'
           href: multiple-controls-bound-to-data-source-synchronized.md
-        - name: 'Porady: zapewnienie pozostawania wybranego wiersza w tabeli potomnej w prawidłowym położeniu'
+        - name: 'Instrukcje: Zapewnienie pozostawania wybranego wiersza w tabeli podrzędnej w prawidłowym położeniu'
           href: ensure-the-selected-row-in-a-child-table-correct.md
-        - name: 'Porady: implementowanie interfejsu IListSource'
+        - name: 'Instrukcje: Implementowanie interfejsu IListSource'
           href: how-to-implement-the-ilistsource-interface.md
-        - name: 'Porady: implementowanie interfejsu INotifyPropertyChanged'
+        - name: 'Instrukcje: Implementowanie interfejsu INotifyPropertyChanged'
           href: how-to-implement-the-inotifypropertychanged-interface.md
-        - name: 'Porady: implementowanie interfejsu ITypedList'
+        - name: 'Instrukcje: Implementowanie interfejsu ITypedList'
           href: how-to-implement-the-itypedlist-interface.md
-        - name: 'Porady: nawigowanie w danych w formularzach systemu Windows'
+        - name: 'Instrukcje: Nawigowanie po danych w formularzach Windows Forms'
           href: how-to-navigate-data-in-windows-forms.md
     - name: Zabezpieczenia formularzy systemu Windows
       href: windows-forms-security.md
@@ -130,7 +130,9 @@
           href: additional-security-considerations-in-windows-forms.md
     - name: Wdrożenie ClickOnce w przypadku formularzy systemu Windows
       href: clickonce-deployment-for-windows-forms.md
-    - name: 'Porady: uzyskiwanie dostępu do kolekcji z kluczami w formularzach systemu Windows'
+    - name: Ulepszenia ułatwień dostępu w przypadku platformy .NET Core 3.0
+      href: windows-forms-accessibility-improvements.md
+    - name: 'Instrukcje: Uzyskiwanie dostępu do kolekcji z kluczami w formularzach Windows Forms'
       href: how-to-access-keyed-collections-in-windows-forms.md
     - name: Rozszerzanie aplikacji Windows Forms
       href: ./advanced/

@@ -52,6 +52,6 @@ Niezależna od rejestracji międzyoperacyjność modelu COM aktywuje składnik b
     > [!NOTE]
     > Wykonywanie równoczesne jest funkcją .NET Framework, która umożliwia obsługę wielu wersji środowiska uruchomieniowego oraz wielu wersji aplikacji i składników, które używają wersji środowiska uruchomieniowego, do uruchamiania na tym samym komputerze w tym samym czasie. Wykonywanie równoczesne i zestawy równoległe są różnymi mechanizmami zapewniania funkcji równoległych.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Instrukcje: Konfigurowanie aktywacji bez rejestracji składników COM opartych na platformie .NET Framework](configure-net-framework-based-com-components-for-reg.md)

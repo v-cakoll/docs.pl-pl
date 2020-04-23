@@ -23,7 +23,7 @@ ms.locfileid: "73130034"
 ---
 # <a name="specifying-fully-qualified-type-names"></a>Określanie w pełni kwalifikowanych nazw typów
 
-Musisz określić nazwy typów, aby mieć prawidłowe dane wejściowe różnych operacji odbicia. W pełni kwalifikowana nazwa typu zawiera specyfikację nazwy zestawu, specyfikację przestrzeni nazw i nazwę typu. Specyfikacje nazw typów są używane przez metody, takie jak <xref:System.Type.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType>i <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>.
+Musisz określić nazwy typów, aby mieć prawidłowe dane wejściowe różnych operacji odbicia. W pełni kwalifikowana nazwa typu zawiera specyfikację nazwy zestawu, specyfikację przestrzeni nazw i nazwę typu. Specyfikacje nazw typów są używane przez metody takie jak <xref:System.Type.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType>, i <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>.
 
 ## <a name="grammar-for-type-names"></a>Gramatyka nazw typów
 
@@ -116,9 +116,9 @@ AssemblyProperty
 
 W nazwie typu identyfikator to dowolna prawidłowa nazwa określona przez reguły języka.
 
-Użyj ukośnika odwrotnego (\\) jako znaku ucieczki, aby oddzielić następujące tokeny, gdy są używane jako część identyfikatora.
+Użyj ukośnika odwrotnego\\() jako znaku ucieczki, aby oddzielić następujące tokeny, gdy są używane jako część identyfikatora.
 
-|Klucza|Znaczenie|
+|Token|Znaczenie|
 |-----------|-------------|
 |\\,|Separator zestawu.|
 |\\+|Zagnieżdżony Separator typu.|
@@ -126,16 +126,16 @@ Użyj ukośnika odwrotnego (\\) jako znaku ucieczki, aby oddzielić następując
 |\\*|Typ wskaźnika.|
 |\\[|Ogranicznik wymiaru tablicy.|
 |\\]|Ogranicznik wymiaru tablicy.|
-|\\.,|Użyj ukośnika odwrotnego przed kropką, tylko jeśli okres jest używany w specyfikacji tablicy. Okresy w NamespaceSpec nie przyjmują ukośnika odwrotnego.|
-|\\\|ukośnika odwrotnego, jeśli jest wymagany jako literał ciągu.|
+|\\.|Użyj ukośnika odwrotnego przed kropką, tylko jeśli okres jest używany w specyfikacji tablicy. Okresy w NamespaceSpec nie przyjmują ukośnika odwrotnego.|
+|\\\|Ukośnik odwrotny, gdy jest wymagany jako literał ciągu.|
 
 Należy pamiętać, że we wszystkich składnikach TypeSpec z wyjątkiem AssemblyNameSpec, spacje są istotne. W AssemblyNameSpec, spacje przed separatorem ', ' są istotne, ale spacje po separatorze ', ' są ignorowane.
 
-Klasy odbicia, takie jak <xref:System.Type.FullName%2A?displayProperty=nameWithType>, zwracają nazwę zniekształcona, aby można było użyć zwróconej nazwy w wywołaniu <xref:System.Type.GetType%2A>, jak w `MyType.GetType(myType.FullName)`.
+Klasy odbicia, takie <xref:System.Type.FullName%2A?displayProperty=nameWithType>jak, zwracają nazwę zniekształcona, aby można było użyć zwracanej nazwy w wywołaniu do <xref:System.Type.GetType%2A>, jako w. `MyType.GetType(myType.FullName)`
 
 Na przykład w pełni kwalifikowana nazwa dla typu może być `Ozzy.OutBack.Kangaroo+Wallaby,MyAssembly`.
 
-Jeśli przestrzeń nazw została `Ozzy.Out+Back`, znak plus musi być poprzedzony ukośnikiem odwrotnym. W przeciwnym razie Analizator interpretuje go jako separator zagnieżdżenia. Odbicie emituje ten ciąg jako `Ozzy.Out\+Back.Kangaroo+Wallaby,MyAssembly`.
+Jeśli przestrzeń nazw była `Ozzy.Out+Back`, znak plus musi być poprzedzony ukośnikiem odwrotnym. W przeciwnym razie Analizator interpretuje go jako separator zagnieżdżenia. Odbicie emituje ten ciąg `Ozzy.Out\+Back.Kangaroo+Wallaby,MyAssembly`jako.
 
 ## <a name="specifying-assembly-names"></a>Określanie nazw zestawów
 
@@ -187,7 +187,7 @@ com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,
 
 ## <a name="specifying-generic-types"></a>Określanie typów ogólnych
 
-SimpleTypeSpec\`numer reprezentuje otwarty typ ogólny z od 1 do *n* parametrów typu ogólnego. Aby na przykład uzyskać odwołanie do listy otwartych typów ogólnych\<T > lub zamkniętej listy typów ogólnych\<ciągu >, użyj ``Type.GetType("System.Collections.Generic.List`1")``, aby uzyskać odwołanie do słownika typu ogólnego\<TKey, TValue > , użyj ``Type.GetType("System.Collections.Generic.Dictionary`2")``.
+SimpleTypeSpec\`numer reprezentuje otwarty typ ogólny z od 1 do *n* parametrów typu ogólnego. Aby na przykład uzyskać odwołanie do\<listy otwartych typów ogólnych T> lub zamkniętego ciągu listy\<typów ogólnych>, użyj ``Type.GetType("System.Collections.Generic.List`1")`` , aby uzyskać odwołanie do słownika\<typu ogólnego TKey, TValue>, użyj. ``Type.GetType("System.Collections.Generic.Dictionary`2")``
 
 ## <a name="specifying-pointers"></a>Określanie wskaźników
 
@@ -199,22 +199,22 @@ SimpleTypeSpec & reprezentuje zarządzany wskaźnik lub odwołanie. Na przykład
 
 ## <a name="specifying-arrays"></a>Określanie tablic
 
-W BNF gramatyki ReflectionEmitDimension dotyczy tylko niekompletnych definicji typów pobranych przy użyciu <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType>. Niekompletne definicje typów są <xref:System.Reflection.Emit.TypeBuilder> obiektów zbudowanych przy użyciu <xref:System.Reflection.Emit?displayProperty=nameWithType>, ale na których <xref:System.Reflection.Emit.TypeBuilder.CreateType%2A?displayProperty=nameWithType> nie został wywołany. ReflectionDimension można użyć do pobrania dowolnej definicji typu, która została ukończona, czyli typu, który został załadowany.
+W BNF gramatyki ReflectionEmitDimension dotyczy tylko niekompletnych definicji typów pobranych przy <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType>użyciu. Niekompletne definicje typów <xref:System.Reflection.Emit.TypeBuilder> są obiektami zbudowanymi przy <xref:System.Reflection.Emit?displayProperty=nameWithType> użyciu <xref:System.Reflection.Emit.TypeBuilder.CreateType%2A?displayProperty=nameWithType> polecenia, ale nie zostały wywołane. ReflectionDimension można użyć do pobrania dowolnej definicji typu, która została ukończona, czyli typu, który został załadowany.
 
 Tablice są dostępne w odbiciu, określając rangę tablicy:
 
-- `Type.GetType("MyArray[]")` pobiera tablicę o pojedynczym wymiarze z dolną granicą 0.
+- `Type.GetType("MyArray[]")`Pobiera tablicę o pojedynczym wymiarze z dolną granicą 0.
 
-- `Type.GetType("MyArray[*]")` pobiera tablicę o pojedynczym wymiarze z nieznanym dolnym granicą.
-- `Type.GetType("MyArray[][]")` pobiera tablicę dwuwymiarową tablicy.
+- `Type.GetType("MyArray[*]")`Pobiera tablicę o pojedynczym wymiarze z nieznanym dolnym granicą.
+- `Type.GetType("MyArray[][]")`Pobiera tablicę dwuwymiarową tablicy.
 
-- `Type.GetType("MyArray[*,*]")` i `Type.GetType("MyArray[,]")` pobiera prostokątną dwuwymiarową tablicę z nieznanymi dolnymi granicami.
+- `Type.GetType("MyArray[*,*]")`i `Type.GetType("MyArray[,]")` pobiera prostokątną dwuwymiarową tablicę z nieznanymi dolnymi granicami.
 
-Należy pamiętać, że z punktu widzenia środowiska uruchomieniowego `MyArray[] != MyArray[*]`, ale dla tablic wielowymiarowych, dwie notacji są równoważne. Oznacza to, że `Type.GetType("MyArray [,]") == Type.GetType("MyArray[*,*]")` ma **wartość true**.
+Należy pamiętać, że z punktu `MyArray[] != MyArray[*]`widzenia środowiska uruchomieniowego, ale dla tablic wielowymiarowych, dwie notacji są równoważne. Oznacza to, `Type.GetType("MyArray [,]") == Type.GetType("MyArray[*,*]")` że program zwraca **wartość true**.
 
-W przypadku **ModuleBuilder. GetType**`MyArray[0..5]` wskazuje tablicę o pojedynczym wymiarze z rozmiarem 6, dolną granicą 0. `MyArray[4…]` wskazuje tablicę z jednym wymiarem o nieznanym rozmiarze i dolną granicę 4.
+Dla **ModuleBuilder. GetType** `MyArray[0..5]` wskazuje tablicę jednowymiarową z rozmiarem 6, dolną granicą 0. `MyArray[4…]`wskazuje tablicę z jednym wymiarem o nieznanym rozmiarze i dolną granicę 4.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Reflection.AssemblyName>
 - <xref:System.Reflection.Emit.ModuleBuilder>

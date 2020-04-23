@@ -17,40 +17,40 @@ Poniższe sekcje zawierają linki do wszystkich tematów, które znajdują się 
   
  **Domeny aplikacji**  
   
-- [Instrukcje: tworzenie domeny aplikacji](how-to-create-an-application-domain.md)  
+- [Porady: tworzenie domeny aplikacji](how-to-create-an-application-domain.md)  
   
-- [Instrukcje: zwolnienie domeny aplikacji](how-to-unload-an-application-domain.md)  
+- [Porady: zwolnienie domeny aplikacji](how-to-unload-an-application-domain.md)  
   
-- [Instrukcje: konfigurowanie domeny aplikacji](how-to-configure-an-application-domain.md)  
+- [Porady: konfigurowanie domeny aplikacji](how-to-configure-an-application-domain.md)  
   
 - [Instrukcje: ładowanie zestawów do domeny aplikacji](how-to-load-assemblies-into-an-application-domain.md)  
   
-- [Instrukcje: uzyskiwanie informacji dotyczących typów i elementów członkowskich z zestawu](../reflection-and-codedom/get-type-member-information.md)  
+- [Porady: uzyskiwanie informacji dotyczących typów i członków z zestawu](../reflection-and-codedom/get-type-member-information.md)  
   
  **Zestawy**  
   
-- [Instrukcje: określanie w pełni kwalifikowanej nazwy zestawu](../../standard/assembly/find-fully-qualified-name.md)  
+- [Porady: określanie w pełni kwalifikowanej nazwy zestawu](../../standard/assembly/find-fully-qualified-name.md)  
   
 - [Instrukcje: kompilacja zestawu jednoplikowego](build-single-file-assembly.md)  
   
-- [Instrukcje: kompilacja zestawów wieloplikowych](build-multifile-assembly.md)  
+- [Porady: kompilacja zestawów wieloplikowych](build-multifile-assembly.md)  
   
-- [Instrukcje: tworzenie pary kluczy publiczny-prywatny](../../standard/assembly/create-public-private-key-pair.md)  
+- [Instrukcje: Tworzenie pary kluczy publiczny-prywatny](../../standard/assembly/create-public-private-key-pair.md)  
   
 - [Instrukcje: podpisywanie zestawu silną nazwą](../../standard/assembly/sign-strong-name.md)  
   
-- [Instrukcje: odwołanie do zestawu o silnej nazwie](../../standard/assembly/reference-strong-named.md)  
+- [Porady: odwołanie do zestawu o silnej nazwie](../../standard/assembly/reference-strong-named.md)  
   
-- [Instrukcje: wyłączanie funkcji pomijania silnej nazwy](../../standard/assembly/disable-strong-name-bypass-feature.md)  
+- [Porady: wyłączanie funkcji pomijania silnej nazwy](../../standard/assembly/disable-strong-name-bypass-feature.md)  
   
-- [Instrukcje: instalowanie zestawu w pamięci Global Assembly Cache](install-assembly-into-gac.md)  
+- [Porady: instalowanie zestawu w globalnej pamięci podręcznej zestawów](install-assembly-into-gac.md)  
   
-- [Instrukcje: wyświetlanie zawartości pamięci Global Assembly Cache](how-to-view-the-contents-of-the-gac.md)  
+- [Porady: wyświetlanie zawartości globalnej pamięci podręcznej zestawów](how-to-view-the-contents-of-the-gac.md)  
   
-- [Instrukcje: usuwanie zestawu z pamięci Global Assembly Cache](how-to-remove-an-assembly-from-the-gac.md)  
+- [Porady: usuwanie zestawu z globalnej pamięci podręcznej zestawów](how-to-remove-an-assembly-from-the-gac.md)  
   
-- [Instrukcje: wyświetlanie zawartości zestawu](../../standard/assembly/view-contents.md)  
+- [Porady: wyświetlanie zawartości zestawu](../../standard/assembly/view-contents.md)  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Domeny aplikacji i zestawy](index.md)

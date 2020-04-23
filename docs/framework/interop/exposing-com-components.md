@@ -30,16 +30,16 @@ Ta sekcja podsumowuje proces, który jest wymagany, aby uwidocznić istniejący 
   
 3. [Kompiluj projekt międzyoperacyjności](compiling-an-interop-project.md).  
   
-     Windows SDK zapewnia kompilatory dla kilku języków zgodnych z Common Language Specification (CLS), w tym Visual Basic, C#i C++.  
+     Windows SDK zapewnia kompilatory dla kilku języków zgodnych z Common Language Specification (CLS), w tym Visual Basic, C# i C++.  
   
 4. [Wdróż aplikację międzyoperacyjną](deploying-an-interop-application.md).  
   
      Aplikacje międzyoperacyjności najlepiej wdrożyć jako podpisane zestawy [o silnych nazwach](../../standard/assembly/strong-named.md)w globalnej pamięci podręcznej zestawów.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Współdziałanie z kodem niezarządzanym](index.md)
 - [Zagadnienia dotyczące projektowania operacji międzyoperacyjnych](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))
-- [Przykład międzyoperacyjnego modelu COM: Klient modelu .NET i serwer COM](com-interop-sample-net-client-and-com-server.md)
+- [Przykład międzyoperacyjnego modelu COM: klient modelu COM i serwer COM](com-interop-sample-net-client-and-com-server.md)
 - [Niezależność od języka i składniki niezależne od języka](../../standard/language-independence-and-language-independent-components.md)
-- [Gacutil.exe (narzędzie Global Assembly Cache)](../tools/gacutil-exe-gac-tool.md)
+- [Gacutil. exe (Global Assembly Cache Tool)](../tools/gacutil-exe-gac-tool.md)

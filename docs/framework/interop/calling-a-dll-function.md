@@ -28,12 +28,12 @@ Chociaż wywoływanie niezarządzanych funkcji DLL jest niemal identyczne z wywo
  [Funkcje wywołania zwrotnego](callback-functions.md)  
  Zawiera podstawowe informacje na temat funkcji wywołania zwrotnego.  
   
- [Instrukcje: Implementowanie funkcji wywołania zwrotnego](how-to-implement-callback-functions.md)  
+ [Porady: implementowanie funkcji wywołania zwrotnego](how-to-implement-callback-functions.md)  
  Opisuje sposób implementowania funkcji wywołania zwrotnego w kodzie zarządzanym.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Wykorzystywanie niezarządzanych funkcji DLL](consuming-unmanaged-dll-functions.md)  
  Opisuje sposób wywoływania niezarządzanych funkcji DLL przy użyciu wywołania platformy.  
   
- [Marshaling danych w wywołaniu platformy](marshaling-data-with-platform-invoke.md)  
+ [Organizowanie danych w wywołaniu platformy](marshaling-data-with-platform-invoke.md)  
  Opisuje sposób deklarowania parametrów metody i przekazywania argumentów do funkcji wyeksportowanych przez niezarządzane biblioteki.

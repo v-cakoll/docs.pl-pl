@@ -30,16 +30,16 @@ Projekty międzyoperacyjności modelu COM, które odwołują się do co najmniej
 
  Osadzanie typów międzyoperacyjnych w programie Visual Studio jest zademonstrowane w [przewodniku: osadzanie typów z zestawów zarządzanych w programie Visual Studio](../../standard/assembly/embed-types-visual-studio.md).
 
- Aby odwołać się do zestawu międzyoperacyjnego przy użyciu kompilatora wiersza polecenia i informacje o typie osadzania w plikach wykonywalnych, użyj [łącza-link (C# opcje kompilatora)](../../csharp/language-reference/compiler-options/link-compiler-option.md) lub przełącznika [-link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) i określ nazwę zestawu międzyoperacyjnego.
+ Aby odwołać się do zestawu międzyoperacyjnego przy użyciu kompilatora wiersza polecenia i osadzić informacje o typie w plikach wykonywalnych, użyj [linku (opcje kompilatora C#)](../../csharp/language-reference/compiler-options/link-compiler-option.md) lub przełącznika [-link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) kompilatora i określ nazwę zestawu międzyoperacyjnego.
 
 > [!NOTE]
-> Aplikacje C++ wizualne nie mogą osadzić informacji o typie, ale mogą współdziałać z aplikacjami lub dodatkami, które wykonują operacje.
+> Aplikacje Visual C++ nie mogą osadzić informacji o typie, ale mogą współdziałać z aplikacjami lub dodatkami, które wykonują operacje.
 
  Aby skompilować aplikację, która zawiera podstawowy zestaw międzyoperacyjny podczas jego wdrażania, użyj przełącznika kompilatora **/Reference** i określ nazwę zestawu międzyoperacyjnego.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Udostępnianie składników COM programowi .NET Framework](exposing-com-components.md)
+- [Udostępnianie składników COM programowi.NET Framework](exposing-com-components.md)
 - [Niezależność od języka i składniki niezależne od języka](../../standard/language-independence-and-language-independent-components.md)
 - [Używanie typów COM w kodzie zarządzanym](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
 - [Przewodnik: osadzanie typów z zarządzanych zestawów w programie Visual Studio](../../standard/assembly/embed-types-visual-studio.md)

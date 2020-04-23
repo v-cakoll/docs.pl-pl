@@ -17,7 +17,7 @@ Większość typów danych ma wspólną reprezentację w pamięci zarządzanej i
   
  Struktury zwracane z wywołań wywołania platformy muszą być typami danych kopiowalnych. Wywołanie platformy nie obsługuje struktur innych niż danych kopiowalnych jako typów zwracanych.  
   
- Następujące typy z przestrzeni nazw <xref:System> są typami danych kopiowalnych:  
+ Następujące typy z <xref:System> przestrzeni nazw są typami danych kopiowalnych:  
   
 - <xref:System.Byte?displayProperty=nameWithType>  
   
@@ -51,26 +51,26 @@ Większość typów danych ma wspólną reprezentację w pamięci zarządzanej i
   
  Odwołania do obiektów nie są danych kopiowalnych. Obejmuje to tablicę odwołań do obiektów, które są danych kopiowalnych przez siebie. Na przykład można zdefiniować strukturę danych kopiowalnych, ale nie można zdefiniować typu danych kopiowalnych, który zawiera tablicę odwołań do tych struktur.  
   
- Jako Optymalizacja, tablice typów danych kopiowalnych i klas, które zawierają tylko składowe danych kopiowalnych, są [przypięte](copying-and-pinning.md) zamiast kopiowane podczas organizowania. Te typy mogą być organizowane jako parametry wejściowe/out, gdy wywołujący i wywoływany są w tym samym elemencie Apartment. Jednak te typy są faktycznie organizowane jako parametry i należy zastosować atrybuty <xref:System.Runtime.InteropServices.InAttribute> i <xref:System.Runtime.InteropServices.OutAttribute>, jeśli chcesz zorganizować argument jako parametr in/out.  
+ Jako Optymalizacja, tablice typów danych kopiowalnych i klas, które zawierają tylko składowe danych kopiowalnych, są [przypięte](copying-and-pinning.md) zamiast kopiowane podczas organizowania. Te typy mogą być organizowane jako parametry wejściowe/out, gdy wywołujący i wywoływany są w tym samym elemencie Apartment. Jednak te typy są faktycznie organizowane jako parametry i należy zastosować atrybuty <xref:System.Runtime.InteropServices.InAttribute> i <xref:System.Runtime.InteropServices.OutAttribute> , jeśli chcesz zorganizować argument jako parametr in/out.  
   
  Niektóre typy danych zarządzanych wymagają innej reprezentacji w niezarządzanym środowisku. Te typy danych inne niż danych kopiowalnych muszą zostać przekonwertowane na formularz, który może być zorganizowany. Na przykład, zarządzanymi ciągami są typy inne niż danych kopiowalnych, ponieważ muszą one być konwertowane do obiektów String, zanim będą mogły być organizowane.  
   
- Poniższa tabela zawiera listę typów innych niż danych kopiowalnych z przestrzeni nazw <xref:System>. [Delegaty](default-marshaling-behavior.md#default-marshaling-for-delegates), które są strukturami danych, które odwołują się do metody statycznej lub do wystąpienia klasy, również nie są danych kopiowalnych.  
+ Poniższa tabela zawiera listę typów innych niż danych kopiowalnych z <xref:System> przestrzeni nazw. [Delegaty](default-marshaling-behavior.md#default-marshaling-for-delegates), które są strukturami danych, które odwołują się do metody statycznej lub do wystąpienia klasy, również nie są danych kopiowalnych.  
   
 |Typ inny niż danych kopiowalnych|Opis|  
 |-------------------------|-----------------|  
 |[System. Array](default-marshaling-for-arrays.md)|Konwertuje na tablicę w stylu C lub `SAFEARRAY`.|  
-|[System. Boolean](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/t2t3725f(v=vs.100))|Konwertuje na wartość 1, 2 lub 4-bajtową `true` jako 1 lub-1.|  
+|[System. Boolean](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/t2t3725f(v=vs.100))|Konwertuje do wartości 1, 2 lub 4-bajtowej na wartość `true` 1 lub-1.|  
 |[System. Char](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/6tyybbf2(v=vs.100))|Konwertuje na znak Unicode lub ANSI.|  
 |[System. Class](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/s0968xy8(v=vs.100))|Konwertuje do interfejsu klasy.|  
-|[System. Object](default-marshaling-for-objects.md)|Konwertuje na wariant lub interfejs.|  
+|[System.Object](default-marshaling-for-objects.md)|Konwertuje na wariant lub interfejs.|  
 |[System. Mdarray](default-marshaling-for-arrays.md)|Konwertuje na tablicę w stylu C lub `SAFEARRAY`.|  
 |[System. String](default-marshaling-for-strings.md)|Konwertuje na ciąg kończący się w odwołaniu o wartości null lub w postaci BSTR.|  
 |[System. ValueType](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0t2cwe11(v=vs.100))|Konwertuje na strukturę ze stałym układem pamięci.|  
 |[System. Szarray](default-marshaling-for-arrays.md)|Konwertuje na tablicę w stylu C lub `SAFEARRAY`.|  
   
- Typy klas i obiektów są obsługiwane tylko przez międzyoperacyjność modelu COM. W przypadku odpowiednich typów w Visual Basic C#, i C++, zobacz [Omówienie biblioteki klas](../../standard/class-library-overview.md).  
+ Typy klas i obiektów są obsługiwane tylko przez międzyoperacyjność modelu COM. Aby uzyskać odpowiednie typy w Visual Basic, C# i C++, zobacz [Omówienie biblioteki klas](../../standard/class-library-overview.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Domyślne zachowanie marshalingu](default-marshaling-behavior.md)

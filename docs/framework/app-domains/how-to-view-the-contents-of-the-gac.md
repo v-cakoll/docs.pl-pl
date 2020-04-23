@@ -30,7 +30,7 @@ Aby wyświetlić listę zestawów w globalnej pamięci podręcznej zestawów, Ot
 gacutil -l
 ```
 
-—lub—
+— lub —
 
 ```shell
 gacutil /l
@@ -39,7 +39,7 @@ gacutil /l
 > [!NOTE]
 > We wcześniejszych wersjach .NET Framework rozszerzenie powłoki systemu Windows [Shfusion. dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/34149zk3(v=vs.100)) umożliwiło wyświetlanie globalnej pamięci podręcznej zestawów w Eksploratorze plików. Począwszy od .NET Framework 4 Shfusion. dll jest przestarzały.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Praca z zestawami i globalną pamięcią podręczną zestawów](working-with-assemblies-and-the-gac.md)
-- [Gacutil.exe (narzędzie Global Assembly Cache)](../tools/gacutil-exe-gac-tool.md)
+- [Gacutil. exe (Global Assembly Cache Tool)](../tools/gacutil-exe-gac-tool.md)

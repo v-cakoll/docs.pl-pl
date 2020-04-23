@@ -41,13 +41,13 @@ Użyj [narzędzia rejestracji zestawu (Regasm. exe)](../tools/regasm-exe-assembl
      W tym poleceniu *AssemblyName* jest nazwą pliku zestawu, który jest zarejestrowany. Regasm. exe dodaje wpis dla podstawowego zestawu międzyoperacyjnego w tym samym kluczu rejestru co oryginalna biblioteka typów.
 
 ## <a name="example"></a>Przykład
- Poniższy przykład rejestruje `CompanyA.UtilLib.dll` podstawowego zestawu międzyoperacyjnego.
+ Poniższy przykład rejestruje `CompanyA.UtilLib.dll` podstawowy zestaw międzyoperacyjny.
 
 ```console
 regasm CompanyA.UtilLib.dll
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Programowanie przy użyciu podstawowych zestawów międzyoperacyjnych](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/baxfadst(v=vs.100))
 - [Lokalizowanie podstawowych zestawów międzyoperacyjnych](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/y06sxw56(v=vs.100))

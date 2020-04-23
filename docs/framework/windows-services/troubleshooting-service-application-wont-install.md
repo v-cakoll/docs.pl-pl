@@ -1,5 +1,5 @@
 ---
-title: 'Rozwiązywanie problemów: Aplikacja usług nie instaluje się'
+title: 'Rozwiązywanie problemów: aplikacja usług nie instaluje się.'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - troubleshooting service applications
@@ -17,7 +17,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053535"
 ---
-# <a name="troubleshooting-service-application-wont-install"></a>Rozwiązywanie problemów: Aplikacja usług nie instaluje się
+# <a name="troubleshooting-service-application-wont-install"></a>Rozwiązywanie problemów: aplikacja usług nie instaluje się.
 Jeśli aplikacja usługi nie zostanie prawidłowo zainstalowana, upewnij się, że <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> właściwość klasy usługi jest ustawiona na taką samą wartość jak w instalatorze dla tej usługi. Wartość musi być taka sama w obu wystąpieniach, aby można było poprawnie zainstalować usługę.  
   
 > [!NOTE]
@@ -25,6 +25,6 @@ Jeśli aplikacja usługi nie zostanie prawidłowo zainstalowana, upewnij się, �
   
  Należy również sprawdzić, czy masz już zainstalowaną inną usługę o tej samej nazwie. Aby instalacja powiodła się, nazwy usług muszą być unikatowe.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Wprowadzenie do aplikacji usług systemu Windows](introduction-to-windows-service-applications.md)

@@ -71,7 +71,7 @@ Aby uzyskać instrukcje, zobacz [How to: embed Library Type librarys as Win32 Re
 
 ## <a name="typelibconverter-class"></a>Klasa TypeLibConverter
 
-Klasa <xref:System.Runtime.InteropServices.TypeLibConverter> znajdująca się w przestrzeni nazw **System. Runtime. Interop** konwertuje klasy i interfejsy zawarte w zestawie na bibliotekę typów com. Ten interfejs API tworzy takie same informacje o typie, jak Eksporter biblioteki typów, opisany w poprzedniej sekcji.
+<xref:System.Runtime.InteropServices.TypeLibConverter> Klasa znajdująca się w przestrzeni nazw **System. Runtime. Interop** konwertuje klasy i interfejsy zawarte w zestawie na bibliotekę typów com. Ten interfejs API tworzy takie same informacje o typie, jak Eksporter biblioteki typów, opisany w poprzedniej sekcji.
 
 **Klasa TypeLibConverter** implementuje <xref:System.Runtime.InteropServices.ITypeLibConverter>.
 
@@ -87,7 +87,7 @@ Klasa <xref:System.Runtime.InteropServices.TypeLibConverter> znajdująca się w 
 
 [Narzędzie instalacji usług .NET (Regsvcs. exe)](../tools/regsvcs-exe-net-services-installation-tool.md) dodaje klasy zarządzane do usług składowych systemu Windows 2000 i łączy kilka zadań w ramach jednego narzędzia. Oprócz ładowania i rejestrowania zestawu, Regsvcs. exe może generować, rejestrować i instalować bibliotekę typów w istniejącej aplikacji COM+ 1,0.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
 - <xref:System.Runtime.InteropServices.ITypeLibConverter>
@@ -95,6 +95,6 @@ Klasa <xref:System.Runtime.InteropServices.TypeLibConverter> znajdująca się w 
 - [Kwalifikowanie typów .NET do międzyoperacyjności](../../standard/native-interop/qualify-net-types-for-interoperation.md)
 - [Wprowadzenie do interfejsu klasy](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)
 - [Zagadnienia dotyczące zabezpieczeń zestawów](../../standard/assembly/security-considerations.md)
-- [Tlbexp.exe (eksporter biblioteki typów)](../tools/tlbexp-exe-type-library-exporter.md)
+- [Tlbexp. exe (Eksporter biblioteki typów)](../tools/tlbexp-exe-type-library-exporter.md)
 - [Rejestrowanie zestawów do użycia z modelem COM](registering-assemblies-with-com.md)
 - [Instrukcje: osadzanie bibliotek typów jako zasobów Win32 w aplikacjach](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))

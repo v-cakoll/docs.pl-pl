@@ -23,23 +23,23 @@ Wywołanie platformy kopiuje parametry ciągu, konwertując je z formatu .NET Fr
   
  W poniższej tabeli wymieniono opcje organizowania ciągów, opisuje ich użycie i zawiera link do odpowiedniego przykładu .NET Framework.  
   
-|String|Opis|Przykład|  
+|Ciąg|Opis|Przykład|  
 |------------|-----------------|------------|  
 |Według wartości.|Przekazuje ciągi jako parametry.|[MsgBox](msgbox-sample.md)|  
 |W wyniku.|Zwraca ciągi z kodu niezarządzanego.|[Ciągi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e765dyyy(v=vs.100))|  
-|Przez odwołanie.|Przekazuje ciągi jako parametry wejściowe/out przy użyciu <xref:System.Text.StringBuilder>.|[Ręczny](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x3txb6xc(v=vs.100))|  
+|Przez odwołanie.|Przekazuje ciągi jako parametry wejściowe/out przy <xref:System.Text.StringBuilder>użyciu polecenia.|[Ręczny](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x3txb6xc(v=vs.100))|  
 |W strukturze według wartości.|Przekazuje ciągi w strukturze, która jest parametrem in.|[Struktury](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/eadtsekz(v=vs.100))|  
-|W strukturze przez odwołanie **(char\*)** .|Przekazuje ciągi w strukturze, która jest parametrem in/out. Funkcja niezarządzana oczekuje wskaźnika do buforu znaków, a rozmiar buforu to element członkowski struktury.|[Ciągi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e765dyyy(v=vs.100))|  
-|W strukturze przez odwołanie **(Char [])** .|Przekazuje ciągi w strukturze, która jest parametrem in/out. Funkcja niezarządzana oczekuje osadzonego buforu znaków.|[OSInfo](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/795sy883(v=vs.100))|  
-|W klasie według wartości **(char\*)** .|Przekazuje ciągi w klasie (Klasa jest parametrem typu "in/out"). Funkcja niezarządzana oczekuje wskaźnika do buforu znaków.|[Openfiledlg —](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w5tyztk9(v=vs.100))|  
-|W klasie według wartości **(Char [])** .|Przekazuje ciągi w klasie (Klasa jest parametrem typu "in/out"). Funkcja niezarządzana oczekuje osadzonego buforu znaków.|[OSInfo](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/795sy883(v=vs.100))|  
+|W strukturze przez odwołanie **(Char\*)**.|Przekazuje ciągi w strukturze, która jest parametrem in/out. Funkcja niezarządzana oczekuje wskaźnika do buforu znaków, a rozmiar buforu to element członkowski struktury.|[Ciągi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e765dyyy(v=vs.100))|  
+|W strukturze przez odwołanie **(Char [])**.|Przekazuje ciągi w strukturze, która jest parametrem in/out. Funkcja niezarządzana oczekuje osadzonego buforu znaków.|[OSInfo](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/795sy883(v=vs.100))|  
+|W klasie według wartości **(Char\*)**.|Przekazuje ciągi w klasie (Klasa jest parametrem typu "in/out"). Funkcja niezarządzana oczekuje wskaźnika do buforu znaków.|[Openfiledlg —](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w5tyztk9(v=vs.100))|  
+|W klasie według wartości **(Char [])**.|Przekazuje ciągi w klasie (Klasa jest parametrem typu "in/out"). Funkcja niezarządzana oczekuje osadzonego buforu znaków.|[OSInfo](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/795sy883(v=vs.100))|  
 |Jako tablica ciągów według wartości.|Tworzy tablicę ciągów, która jest przenoszona przez wartość.|[Tablice](marshaling-different-types-of-arrays.md)|  
 |Jako tablicę struktur, które zawierają ciągi według wartości.|Tworzy tablicę struktur, które zawierają ciągi, a tablica jest przenoszona przez wartość.|[Tablice](marshaling-different-types-of-arrays.md)|  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Domyślny marshaling dla ciągów](default-marshaling-for-strings.md)
-- [Marshaling danych w wywołaniu platformy](marshaling-data-with-platform-invoke.md)
+- [Organizowanie domyślne dotyczące ciągów](default-marshaling-for-strings.md)
+- [Organizowanie danych w wywołaniu platformy](marshaling-data-with-platform-invoke.md)
 - [Marshaling klas, struktur i unii](marshaling-classes-structures-and-unions.md)
 - [Organizowanie różnych typów tablic](marshaling-different-types-of-arrays.md)
 - [Różne przykłady organizowania](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ss9sb93t(v=vs.100))

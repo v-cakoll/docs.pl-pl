@@ -22,12 +22,12 @@ ms.locfileid: "74281805"
   
 1. Użyj następującego polecenia:  
   
-     **tlbimp** \<*typ biblioteki*>  
+     **Tlbimp** \<— *typ biblioteki*>  
   
      Dodanie przełącznika **/out:** powoduje utworzenie zestawu międzyoperacyjnego o zmienionej nazwie, takiej jak LOANLib. dll. Zmiana nazwy zestawu międzyoperacyjnego może pomóc w odróżnieniu od oryginalnej biblioteki DLL modelu COM i zapobiec problemom, które mogą wystąpić w przypadku zduplikowanych nazw.  
   
 ## <a name="example"></a>Przykład  
- Następujące polecenie generuje zestaw LOANLib. dll w przestrzeni nazw `Loanlib`.  
+ Następujące polecenie generuje zestaw LOANLib. dll w `Loanlib` przestrzeni nazw.  
   
 ```console  
 tlbimp Loanlib.tlb  
@@ -39,7 +39,7 @@ tlbimp Loanlib.tlb
 tlbimp LoanLib.tlb /out: LOANLib.dll  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Importowanie biblioteki typów jako zestawu](importing-a-type-library-as-an-assembly.md)
-- [Udostępnianie składników COM programowi .NET Framework](exposing-com-components.md)
+- [Udostępnianie składników COM programowi.NET Framework](exposing-com-components.md)

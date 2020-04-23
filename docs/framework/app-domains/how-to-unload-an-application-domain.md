@@ -18,9 +18,9 @@ ms.lasthandoff: 10/30/2019
 ms.locfileid: "73119845"
 ---
 # <a name="how-to-unload-an-application-domain"></a>Porady: zwolnienie domeny aplikacji
-Po zakończeniu korzystania z domeny aplikacji zwolnij ją przy użyciu metody <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType>. Metoda **Unload** bezpiecznie zamyka określoną domenę aplikacji. W trakcie procesu zwalniania żadne nowe wątki nie mogą uzyskać dostępu do domeny aplikacji, a wszystkie struktury danych specyficzne dla domeny aplikacji są zwolnione.  
+Po zakończeniu korzystania z domeny aplikacji zwolnij ją przy użyciu <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> metody. Metoda **Unload** bezpiecznie zamyka określoną domenę aplikacji. W trakcie procesu zwalniania żadne nowe wątki nie mogą uzyskać dostępu do domeny aplikacji, a wszystkie struktury danych specyficzne dla domeny aplikacji są zwolnione.  
   
- Zestawy ładowane do domeny aplikacji są usuwane i nie są już dostępne. Jeśli zestaw w domenie aplikacji jest niezależny od domeny, dane dla zestawu pozostają w pamięci, dopóki cały proces nie zostanie zamknięty. Nie istnieje mechanizm zwalniania zestawu neutralnego z domeną poza zamknięciem całego procesu. Istnieją sytuacje, w których żądanie zwolnienia domeny aplikacji nie działa i skutkuje <xref:System.CannotUnloadAppDomainException>.  
+ Zestawy ładowane do domeny aplikacji są usuwane i nie są już dostępne. Jeśli zestaw w domenie aplikacji jest niezależny od domeny, dane dla zestawu pozostają w pamięci, dopóki cały proces nie zostanie zamknięty. Nie istnieje mechanizm zwalniania zestawu neutralnego z domeną poza zamknięciem całego procesu. Istnieją sytuacje, w których żądanie zwolnienia domeny aplikacji nie działa i daje w wyniku <xref:System.CannotUnloadAppDomainException>.  
   
  Poniższy przykład tworzy nową domenę aplikacji o nazwie `MyDomain`, drukuje pewne informacje w konsoli, a następnie zwalnia domenę aplikacji. Należy zauważyć, że kod próbuje wydrukować przyjazną nazwę nieładowanej domeny aplikacji do konsoli programu. Ta akcja generuje wyjątek, który jest obsługiwany przez instrukcje try/catch na końcu programu.  
   
@@ -29,8 +29,8 @@ Po zakończeniu korzystania z domeny aplikacji zwolnij ją przy użyciu metody <
  [!code-csharp[System.AppDomain.Load#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.load/cs/source3.cs#3)]
  [!code-vb[System.AppDomain.Load#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.load/vb/source3.vb#3)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Programowanie przy użyciu domen aplikacji](application-domains.md#programming-with-application-domains)
-- [Instrukcje: tworzenie domeny aplikacji](how-to-create-an-application-domain.md)
-- [Używanie domen aplikacji](use.md)
+- [Porady: tworzenie domeny aplikacji](how-to-create-an-application-domain.md)
+- [Używanie domeny aplikacji](use.md)

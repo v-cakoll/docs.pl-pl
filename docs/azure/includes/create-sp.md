@@ -9,15 +9,15 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/19/2020
 ms.locfileid: "82071984"
 ---
-Aplikacja .NET potrzebuje uprawnień do odczytu i tworzenia zasobów w ramach subskrypcji platformy Azure w celu użycia bibliotek zarządzania platformy Azure dla platformy .NET. Utwórz jednostkę usługi i skonfiguruj aplikację do uruchamiania z jej poświadczeniami, aby udzielić tego dostępu. Jednostki usługi oferują sposób tworzenia nieinterakcyjnego konta skojarzonego z tożsamością, któremu przyznawane są tylko uprawnienia wymagane do działania aplikacji.
+Aplikacja platformy .NET musi mieć uprawnienia do odczytu i tworzenia zasobów w ramach subskrypcji platformy Azure, aby można było korzystać z bibliotek zarządzania platformy Azure dla platformy .NET. Utwórz nazwę główną usługi i skonfiguruj aplikację do uruchamiania z poświadczeniami, aby udzielić dostępu. Jednostki usługi oferują sposób tworzenia nieinterakcyjnego konta skojarzonego z tożsamością, któremu przyznawane są tylko uprawnienia wymagane do działania aplikacji.
 
-Najpierw zaloguj się do [usługi Azure Cloud Shell](https://shell.azure.com/bash). Sprawdź, czy aktualnie używasz subskrypcji, w której ma zostać utworzona jednostka usługi.
+Najpierw Zaloguj się do [Azure Cloud Shell](https://shell.azure.com/bash). Sprawdź, czy korzystasz obecnie z subskrypcji, w której ma zostać utworzona nazwa główna usługi.
 
 ```azurecli-interactive
 az account show
 ```
 
-Wyświetlane są informacje o subskrypcji.
+Zostaną wyświetlone informacje o subskrypcji.
 
 ```json
 {
@@ -35,7 +35,7 @@ Wyświetlane są informacje o subskrypcji.
 }
 ```
 
-Jeśli nie jesteś zalogowany do właściwej subskrypcji, wybierz `az account set -s <name or ID of subscription>`właściwą, wpisując .
+Jeśli nie zalogowano się do poprawnej subskrypcji, wybierz odpowiednią wartość, wpisując `az account set -s <name or ID of subscription>`.
 
 Utwórz jednostkę usługi za pomocą następującego polecenia:
 
@@ -43,7 +43,7 @@ Utwórz jednostkę usługi za pomocą następującego polecenia:
 az ad sp create-for-rbac --sdk-auth
 ```
 
-Informacje o jednostki usługi są wyświetlane jako JSON.
+Informacje o jednostce usługi są wyświetlane jako dane JSON.
 
 ```json
 {
@@ -60,4 +60,4 @@ Informacje o jednostki usługi są wyświetlane jako JSON.
 }
 ```
 
-Kopiowanie i wklejanie danych wyjściowych JSON do edytora tekstu do późniejszego użycia.
+Skopiuj i wklej dane wyjściowe JSON do edytora tekstów w celu późniejszego użycia.

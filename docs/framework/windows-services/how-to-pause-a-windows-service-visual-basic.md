@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Wstrzymywanie usługi systemu Windows (Visual Basic)'
+title: 'Porady: wstrzymywanie usług systemu Windows (Visual Basic)'
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -17,7 +17,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053596"
 ---
-# <a name="how-to-pause-a-windows-service-visual-basic"></a>Instrukcje: Wstrzymywanie usługi systemu Windows (Visual Basic)
+# <a name="how-to-pause-a-windows-service-visual-basic"></a>Porady: wstrzymywanie usług systemu Windows (Visual Basic)
 Ten przykład używa <xref:System.ServiceProcess.ServiceController> składnika do wstrzymania usługi administratora usług IIS na komputerze lokalnym.  
   
 ## <a name="example"></a>Przykład  
@@ -31,10 +31,10 @@ Ten przykład używa <xref:System.ServiceProcess.ServiceController> składnika d
   
 - Odwołanie do projektu do System. ServiceProcess. dll.  
   
-- Dostęp do elementów członkowskich <xref:System.ServiceProcess> przestrzeni nazw. `Imports` Dodaj instrukcję, jeśli nie masz w pełni kwalifikowanej nazwy elementu członkowskiego w kodzie. Aby uzyskać więcej informacji, zobacz [Imports — Instrukcja (przestrzeń nazw i typ .NET)](../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
+- Dostęp do elementów członkowskich <xref:System.ServiceProcess> przestrzeni nazw. Dodaj `Imports` instrukcję, jeśli nie masz w pełni kwalifikowanej nazwy elementu członkowskiego w kodzie. Aby uzyskać więcej informacji, zobacz [Imports — Instrukcja (przestrzeń nazw i typ .NET)](../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
- <xref:System.ServiceProcess.ServiceController.MachineName%2A> Właściwość<xref:System.ServiceProcess.ServiceController> klasy jest domyślnie komputerem lokalnym. Aby odwoływać się do usług systemu Windows na innym <xref:System.ServiceProcess.ServiceController.MachineName%2A> komputerze, należy zmienić właściwość na nazwę tego komputera.  
+ <xref:System.ServiceProcess.ServiceController.MachineName%2A> Właściwość <xref:System.ServiceProcess.ServiceController> klasy jest domyślnie komputerem lokalnym. Aby odwoływać się do usług systemu Windows na innym <xref:System.ServiceProcess.ServiceController.MachineName%2A> komputerze, należy zmienić właściwość na nazwę tego komputera.  
   
  Następujące warunki mogą spowodować wyjątek:  
   
@@ -43,13 +43,13 @@ Ten przykład używa <xref:System.ServiceProcess.ServiceController> składnika d
 - Wystąpił błąd podczas uzyskiwania dostępu do interfejsu API systemu. (<xref:System.ComponentModel.Win32Exception>)  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
- Kontrolowanie usług na komputerze może być ograniczone przy użyciu <xref:System.ServiceProcess.ServiceControllerPermissionAccess> programu w celu ustawienia uprawnień <xref:System.ServiceProcess.ServiceControllerPermission>w.  
+ Kontrolowanie usług na komputerze może być ograniczone przy użyciu programu w <xref:System.ServiceProcess.ServiceControllerPermissionAccess> celu ustawienia uprawnień w <xref:System.ServiceProcess.ServiceControllerPermission>.  
   
- Dostęp do informacji o usłudze może być ograniczony przy użyciu <xref:System.Security.Permissions.PermissionState> do ustawiania uprawnień <xref:System.Security.Permissions.SecurityPermission>w.  
+ Dostęp do informacji o usłudze może być ograniczony przy użyciu <xref:System.Security.Permissions.PermissionState> do ustawiania uprawnień w <xref:System.Security.Permissions.SecurityPermission>.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.ServiceProcess.ServiceController>
 - <xref:System.ServiceProcess.ServiceControllerStatus>
 - <xref:System.ServiceProcess.ServiceController.WaitForStatus%2A>
-- [Instrukcje: Kontynuuj działanie usługi systemu Windows (Visual Basic)](how-to-continue-a-windows-service-visual-basic.md)
+- [Instrukcje: kontynuowanie usług systemu Windows (Visual Basic)](how-to-continue-a-windows-service-visual-basic.md)

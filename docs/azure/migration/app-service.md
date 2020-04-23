@@ -1,6 +1,6 @@
 ---
-title: Migrowanie aplikacji lub usługi sieci Web platformy .NET do usługi Azure App Service
-description: Dowiedz się więcej o migrowaniu aplikacji lub usługi sieci web platformy .NET z lokalnego do usługi Azure App Service.
+title: Migrowanie usługi lub aplikacji sieci Web platformy .NET do Azure App Service
+description: Dowiedz się więcej na temat migrowania usługi lub aplikacji sieci Web platformy .NET ze środowiska lokalnego do Azure App Service.
 ms.topic: conceptual
 ms.date: 08/11/2018
 ms.openlocfilehash: 57f3b981a1d94c2193160f55f9c8242da694c169
@@ -10,98 +10,98 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 04/17/2020
 ms.locfileid: "82072138"
 ---
-# <a name="migrate-your-net-web-app-or-service-to-azure-app-service"></a>Migrowanie aplikacji lub usługi sieci Web platformy .NET do usługi Azure App Service
+# <a name="migrate-your-net-web-app-or-service-to-azure-app-service"></a>Migrowanie usługi lub aplikacji sieci Web platformy .NET do Azure App Service
 
-[App Service](https://docs.microsoft.com/azure/app-service/overview) to w pełni zarządzana usługa platformy obliczeniowej zoptymalizowana pod kątem hostingu skalowalnych witryn sieci Web i aplikacji sieci Web. Ten artykuł zawiera informacje dotyczące sposobu podnoszenia i przenoszenia istniejącej aplikacji do usługi Azure App Service, modyfikacji do rozważenia i dodatkowych zasobów [do przenoszenia do chmury.](https://azure.microsoft.com/migration/web-applications/) Większość ASP.NET witrynach sieci Web (Webforms, MVC) i usług (Web API, WCF) można przejść bezpośrednio do usługi Azure App Service bez żadnych zmian. Niektóre mogą wymagać drobnych zmian, podczas gdy inne mogą wymagać refaktoryzacji.
+[App Service](https://docs.microsoft.com/azure/app-service/overview) to w pełni zarządzana usługa platformy obliczeniowej, zoptymalizowana pod kątem hostingu skalowalnych witryn internetowych i aplikacji sieci Web. Ten artykuł zawiera informacje na temat sposobu podnoszenia i przenoszenia istniejącej aplikacji do Azure App Service, modyfikacji i dodatkowych zasobów związanych z [przechodzeniem do chmury](https://azure.microsoft.com/migration/web-applications/). Większość ASP.NETych witryn internetowych (WebForms, MVC) i usług (Web API, WCF) można przenieść bezpośrednio do Azure App Service bez zmian. Niektóre mogą wymagać drobnych zmian, podczas gdy inne mogą wymagać refaktoryzacji.
 
-Chcesz zacząć? [Opublikuj swoją ASP.NET + aplikację SQL w usłudze Azure App Service](https://tutorials.visualstudio.com/azure-webapp-migrate/intro).
+Chcesz zacząć? [Opublikuj aplikację ASP.NET + SQL, aby Azure App Service](https://tutorials.visualstudio.com/azure-webapp-migrate/intro).
 
 ## <a name="considerations"></a>Zagadnienia do rozważenia
 
-### <a name="on-premises-resources-including-sql-server"></a>Zasoby lokalne (w tym program SQL Server)
+### <a name="on-premises-resources-including-sql-server"></a>Zasoby lokalne (w tym SQL Server)
 
-Sprawdź dostęp do zasobów lokalnych, ponieważ mogą one wymagać migracji lub zmiany. Poniżej przedstawiono opcje ograniczania dostępu do zasobów lokalnych:
+Sprawdź dostęp do zasobów lokalnych, ponieważ może być konieczne ich Migrowanie lub zmiana. Poniżej przedstawiono opcje ograniczania dostępu do zasobów lokalnych:
 
-* Utwórz usługę VPN łączącą usługę App Service z zasobami lokalnymi przy użyciu [sieci wirtualnych platformy Azure](https://docs.microsoft.com/azure/app-service/web-sites-integrate-with-vnet).
-* Bezpiecznie udostępniaj usługi lokalne w chmurze bez zmian zapory za pomocą [usługi Azure Relay](https://docs.microsoft.com/azure/service-bus-relay/relay-what-is-it).
-* Migrowanie zależności, takich jak [baza danych SQL](https://go.microsoft.com/fwlink/?linkid=863217) na platformę Azure.
-* Użyj oferty platformy jako usługi w chmurze, aby zmniejszyć zależności. Na przykład zamiast łączyć się z lokalnym serwerem poczty, należy rozważyć użycie [sendgrid](https://docs.microsoft.com/azure/sendgrid-dotnet-how-to-send-email).
+* Tworzenie sieci VPN łączącej App Service z zasobami lokalnymi przy użyciu [sieci wirtualnych platformy Azure](https://docs.microsoft.com/azure/app-service/web-sites-integrate-with-vnet).
+* Bezpieczne udostępnianie usług lokalnych w chmurze bez konieczności zmiany zapory przy użyciu [Azure Relay](https://docs.microsoft.com/azure/service-bus-relay/relay-what-is-it).
+* Migruj zależności, takie jak [baza danych SQL](https://go.microsoft.com/fwlink/?linkid=863217) , na platformę Azure.
+* Użyj ofert typu "platforma jako usługa" w chmurze, aby zmniejszyć zależności. Na przykład zamiast nawiązywać połączenia z lokalnym serwerem poczty należy rozważyć użycie [SendGrid](https://docs.microsoft.com/azure/sendgrid-dotnet-how-to-send-email).
 
 ### <a name="port-bindings"></a>Powiązania portów
 
-Usługa Azure App Service obsługuje port 80 dla protokołu HTTP i port 443 dla ruchu HTTPS.
+Azure App Service obsługuje port 80 dla protokołu HTTP i portu 443 dla ruchu HTTPS.
 
-Dla WCF obsługiwane są następujące powiązania:
+W przypadku programu WCF obsługiwane są następujące powiązania:
 
 Wiązanie | Uwagi
 --------|--------
-Podstawowehttp |
+BasicHttp |
 WSHttp |
-WSDualHttpBinowanie | [Obsługa gniazd internetowych](https://docs.microsoft.com/azure/app-service/web-sites-configure) musi być włączona.
-NetHttpBinding | [Obsługa gniazd sieci Web](https://docs.microsoft.com/azure/app-service/web-sites-configure) musi być włączona dla kontraktów dupleksowych.
-NetHttpsBinding (NetHttpsBinding) | [Obsługa gniazd sieci Web](https://docs.microsoft.com/azure/app-service/web-sites-configure) musi być włączona dla kontraktów dupleksowych.
-Podstawowe powiązaniehttpHttpContextBinding |
-Powiązaniehttpa sieci Web |
+WSDualHttpBinding | Należy włączyć [obsługę gniazda sieci Web](https://docs.microsoft.com/azure/app-service/web-sites-configure) .
+NetHttpBinding | [Obsługa gniazd sieci Web](https://docs.microsoft.com/azure/app-service/web-sites-configure) musi być włączona dla umów dupleksowych.
+Protokół Httpsbinding | [Obsługa gniazd sieci Web](https://docs.microsoft.com/azure/app-service/web-sites-configure) musi być włączona dla umów dupleksowych.
+BasicHttpContextBinding |
+WebHttpBinding |
 WSHttpContextBinding |
 
 ### <a name="authentication"></a>Authentication
 
-Usługa Azure App Service domyślnie obsługuje uwierzytelnianie anonimowe i uwierzytelnianie formularzy, gdy jest to zamierzone. Uwierzytelnianie systemu Windows może być używane tylko przez integrację z usługą Azure Active Directory i usługą ADFS. [Dowiedz się więcej o integrowanie katalogów lokalnych z usługą Azure Active Directory.](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect)
+Azure App Service domyślnie obsługuje uwierzytelnianie anonimowe i uwierzytelnianie formularzy, gdy zamierzone. Uwierzytelnianie systemu Windows może być używane przez integrację z usługami Azure Active Directory i ADFS. [Dowiedz się więcej na temat integrowania katalogów lokalnych z Azure Active Directory](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect).
 
 ### <a name="assemblies-in-the-gac-global-assembly-cache"></a>Zestawy w pamięci podręcznej GAC (globalna pamięć podręczna zestawów)
 
-Ta funkcja nie jest obsługiwana. Należy rozważyć skopiowanie wymaganych zestawów do folderu *\bin* aplikacji. Nie można używać niestandardowych plików *msi* zainstalowanych na serwerze (na przykład generatorów PDF).
+Ta funkcja nie jest obsługiwana. Rozważ skopiowanie wymaganych zestawów do folderu *\Bin* aplikacji. Nie można używać niestandardowych plików *. msi* zainstalowanych na serwerze (na przykład generatorów PDF).
 
-### <a name="iis-settings"></a>Ustawienia iis
-Wszystko tradycyjnie skonfigurowane za pośrednictwem aplikacjiHost.config w aplikacji można teraz skonfigurować za pośrednictwem witryny Azure portal. Dotyczy to bitupula apppool, enable/disable WebSockets, wersji zarządzanego potoku, wersji .NET Framework (2.0/4.0) i tak dalej. Aby zmodyfikować [ustawienia aplikacji,](https://docs.microsoft.com/azure/app-service/web-sites-configure)przejdź do [witryny Azure Portal](https://portal.azure.com), otwórz blok dla aplikacji sieci web, a następnie wybierz kartę Ustawienia **aplikacji.**
+### <a name="iis-settings"></a>Ustawienia usług IIS
+Wszystkie tradycyjnie skonfigurowane przy użyciu pliku applicationHost. config w aplikacji można teraz skonfigurować za pomocą Azure Portal. Dotyczy to puli aplikacji bitów, włączania/wyłączania obiektów WebSockets, zarządzanej wersji potoku, wersji .NET Framework (2.0/4.0) itd. Aby zmodyfikować [Ustawienia aplikacji](https://docs.microsoft.com/azure/app-service/web-sites-configure), przejdź do [Azure Portal](https://portal.azure.com), Otwórz blok aplikacji sieci Web, a następnie wybierz kartę **Ustawienia aplikacji** .
 
-#### <a name="iis5-compatibility-mode"></a>Tryb zgodności z programem IIS5
-Tryb zgodności iis5 nie jest obsługiwany. W usłudze Azure App Service każda aplikacja sieci Web i wszystkie aplikacje w ramach niej są uruchamiane w tym samym procesie roboczym z określonym zestawem [pul aplikacji.](https://technet.microsoft.com/library/cc735247(v=WS.10).aspx)
+#### <a name="iis5-compatibility-mode"></a>Tryb zgodności wersją IIS5
+Tryb zgodności wersją IIS5 nie jest obsługiwany. W Azure App Service każda aplikacja sieci Web i wszystkie znajdujące się w niej aplikacje działają w tym samym procesie roboczym z określonym zestawem [pul aplikacji](https://technet.microsoft.com/library/cc735247(v=WS.10).aspx).
 
-#### <a name="iis7-schema-compliance"></a>Zgodność schematu usług IIS7+  
-Niektóre elementy i atrybuty nie są zdefiniowane w schemacie usług IIS usługi Azure App Service. Jeśli wystąpią problemy, należy rozważyć użycie [XDT transformacji](https://azure.microsoft.com/documentation/articles/web-sites-transform-extend/).
+#### <a name="iis7-schema-compliance"></a>Zgodność schematu IIS7 +  
+Niektóre elementy i atrybuty nie są zdefiniowane w schemacie Azure App Service IIS. Jeśli wystąpią problemy, rozważ użycie [transformacji XDT](https://azure.microsoft.com/documentation/articles/web-sites-transform-extend/).
 
-#### <a name="single-application-pool-per-site"></a>Pula pojedynczych aplikacji na witrynę  
-W usłudze Azure App Service każda aplikacja sieci web i wszystkie aplikacje w obszarze niego są uruchamiane w tej samej puli aplikacji. Należy rozważyć ustanowienie puli pojedynczej aplikacji z typowymi ustawieniami lub utworzenie oddzielnej aplikacji sieci web dla każdej aplikacji.
+#### <a name="single-application-pool-per-site"></a>Jedna pula aplikacji na lokację  
+W Azure App Service każda aplikacja sieci Web i wszystkie znajdujące się w niej aplikacje są uruchamiane w tej samej puli aplikacji. Rozważ utworzenie jednej puli aplikacji z typowymi ustawieniami lub utworzenie oddzielnej aplikacji sieci Web dla każdej aplikacji.
 
-### <a name="com-and-com-components"></a>Komponenty COM i COM+  
-Usługa Azure App Service nie zezwala na rejestrację składników COM na platformie. Jeśli aplikacja korzysta z dowolnych składników COM, należy je przepisać w kodzie zarządzanym i wdrożyć w witrynie lub aplikacji.
+### <a name="com-and-com-components"></a>Składniki COM i COM+  
+Azure App Service nie zezwala na rejestrację składników COM na platformie. Jeśli aplikacja korzysta z dowolnego składnika modelu COM, muszą one być ponownie zapisywane w kodzie zarządzanym i wdrażane z witryną lub aplikacją.
 
 ### <a name="physical-directories"></a>Katalogi fizyczne
-Usługa Azure App Service nie zezwala na dostęp do dysków fizycznych. Może być konieczne użycie [usługi Azure Files,](https://docs.microsoft.com/azure/storage/files/storage-files-introduction) aby uzyskać dostęp do plików za pośrednictwem protokołu SMB. [Usługa Azure Blob Storage](https://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction) może przechowywać pliki w celu uzyskania dostępu za pośrednictwem protokołu HTTPS.
+Azure App Service nie zezwala na dostęp do dysku fizycznego. Może być konieczne użycie [Azure Files](https://docs.microsoft.com/azure/storage/files/storage-files-introduction) , aby uzyskać dostęp do plików za pośrednictwem protokołu SMB. [Usługa Azure Blob Storage](https://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction) może przechowywać pliki do dostępu za pośrednictwem protokołu HTTPS.
 
 ### <a name="isapi-filters"></a>Filtry ISAPI  
-Usługa Azure App Service może obsługiwać korzystanie z filtrów ISAPI, jednak biblioteka DLL ISAPI musi zostać wdrożona w witrynie i zarejestrowana za pośrednictwem witryny web.config.
+Azure App Service może obsługiwać korzystanie z filtrów ISAPI, jednak biblioteka ISAPI DLL musi być wdrożona z lokacją i zarejestrowana za pomocą pliku Web. config.
 
-### <a name="https-bindings-and-ssl"></a>Powiązania HTTPS i protokół SSL
-Powiązania HTTPS nie są migrowane ani certyfikaty SSL skojarzone z witrynami sieci web. [Certyfikaty SSL można](https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-custom-ssl) jednak ręcznie przekazać po zakończeniu migracji do witryny.
+### <a name="https-bindings-and-ssl"></a>Powiązania HTTPS i SSL
+Powiązania HTTPS nie są migrowane ani nie są skojarzone z witrynami sieci Web. Po zakończeniu migracji lokacji [można ręcznie przekazać certyfikaty SSL](https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-custom-ssl) .
 
-### <a name="sharepoint-and-frontpage"></a>Program SharePoint i program FrontPage
-Rozszerzenia programu SharePoint i programu FrontPage Server (FPSE) nie są obsługiwane.
+### <a name="sharepoint-and-frontpage"></a>SharePoint i FrontPage
+Programy SharePoint i rozszerzenia FrontPage Server Extensions (FPSE) nie są obsługiwane.
 
 ### <a name="web-site-size"></a>Rozmiar witryny sieci Web  
-Darmowe witryny mają limit rozmiaru 1 GB zawartości. Jeśli witryna jest większa niż 1 GB, należy uaktualnić do płatnej jednostki SKU. Zobacz [Ceny usługi App Service](https://azure.microsoft.com/pricing/details/app-service/windows/).
+Dla bezpłatnych witryn obowiązuje limit rozmiaru równy 1 GB. Jeśli witryna jest dłuższa niż 1 GB, należy przeprowadzić uaktualnienie do płatnej jednostki SKU. Zobacz [cennik App Service](https://azure.microsoft.com/pricing/details/app-service/windows/).
 
 ### <a name="database-size"></a>Rozmiar bazy danych  
-W przypadku baz danych programu SQL Server sprawdź aktualne [ceny bazy danych SQL](https://azure.microsoft.com/pricing/details/sql-database).
+W przypadku baz danych SQL Server Sprawdź bieżące [SQL Database cennika](https://azure.microsoft.com/pricing/details/sql-database).
 
 ### <a name="azure-active-directory-aad-integration"></a>Integracja z usługą Azure Active Directory (AAD)  
-AAD nie działa z darmowymi aplikacjami. Aby korzystać z funkcji AAD, należy uaktualnić jednostkę SKU aplikacji. Zobacz [Ceny usługi App Service](https://azure.microsoft.com/pricing/details/app-service/windows/).
+Usługa AAD nie współpracuje z bezpłatnymi aplikacjami. Aby korzystać z usługi AAD, należy uaktualnić jednostkę SKU aplikacji. Zobacz [cennik App Service](https://azure.microsoft.com/pricing/details/app-service/windows/).
 
 ### <a name="monitoring-and-diagnostics"></a>Monitorowanie i diagnostyka
-Bieżące rozwiązania lokalne do monitorowania i diagnostyki są mało prawdopodobne, aby działać w chmurze. Jednak platforma Azure udostępnia narzędzia do rejestrowania, monitorowania i diagnostyki, dzięki czemu można zidentyfikować i debugować problemy z aplikacjami sieci web. Można łatwo włączyć diagnostykę aplikacji sieci web w jej konfiguracji i można wyświetlić dzienniki zarejestrowane w usłudze Azure Application Insights. [Dowiedz się więcej o włączaniu rejestrowania diagnostyki dla aplikacji sieci Web](https://docs.microsoft.com/azure/app-service/web-sites-enable-diagnostic-log).
+Twoje bieżące rozwiązania lokalne na potrzeby monitorowania i diagnostyki prawdopodobnie nie będą działały w chmurze. Jednak platforma Azure oferuje narzędzia do rejestrowania, monitorowania i diagnostyki, dzięki czemu można identyfikować i debugować problemy z aplikacjami sieci Web. Możesz łatwo włączyć diagnostykę dla aplikacji sieci Web w swojej konfiguracji, a także wyświetlić dzienniki zarejestrowane w usłudze Azure Application Insights. [Dowiedz się więcej na temat włączania rejestrowania diagnostycznego dla aplikacji sieci Web](https://docs.microsoft.com/azure/app-service/web-sites-enable-diagnostic-log).
 
 ### <a name="connection-strings-and-application-settings"></a>Parametry połączenia i ustawienia aplikacji
-Należy rozważyć użycie [usługi Azure KeyVault](https://docs.microsoft.com/azure/key-vault/), usługi, która bezpiecznie przechowuje poufne informacje używane w aplikacji. Alternatywnie można przechowywać te dane jako ustawienie usługi app service.
+Rozważ użycie [magazynu kluczy platformy Azure](https://docs.microsoft.com/azure/key-vault/)— usługi, która bezpiecznie przechowuje poufne informacje używane w aplikacji. Alternatywnie można zapisać te dane jako ustawienie App Service.
 
 ### <a name="dns"></a>DNS
-Może być konieczne zaktualizowanie konfiguracji DNS na podstawie wymagań aplikacji. Te ustawienia DNS można skonfigurować w [niestandardowych ustawieniach domeny](https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-custom-domain)usługi App Service .
+Może być konieczne zaktualizowanie konfiguracji DNS na podstawie wymagań aplikacji. Te ustawienia DNS można skonfigurować w App Service [niestandardowych ustawień domeny](https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-custom-domain).
 
-## <a name="azure-app-service-with-windows-containers"></a>Usługa Azure App Service z kontenerami systemu Windows
-Jeśli aplikacji nie można przeprowadzić migracji bezpośrednio do usługi App Service, należy wziąć pod uwagę usługi App Service przy użyciu kontenerów systemu Windows, który umożliwia korzystanie z gac, składniki COM, MSI, pełny dostęp do interfejsów API .NET FX, DirectX i więcej.
+## <a name="azure-app-service-with-windows-containers"></a>Azure App Service z kontenerami systemu Windows
+Jeśli nie można migrować aplikacji bezpośrednio do App Service, należy rozważyć App Service przy użyciu kontenerów systemu Windows, które umożliwiają użycie GAC, składników COM, MSIs, pełny dostęp do interfejsów API programu .NET FX, DirectX i innych.
 
 ## <a name="see-also"></a>Zobacz też
 
-* [Jak ustalić, czy aplikacja kwalifikuje się do usługi App Service](https://appmigration.microsoft.com/)
-* [Przenoszenie bazy danych do chmury](https://go.microsoft.com/fwlink/?linkid=863217)
+* [Jak określić, czy aplikacja kwalifikuje się do App Service](https://appmigration.microsoft.com/)
+* [Przeniesienie bazy danych do chmury](https://go.microsoft.com/fwlink/?linkid=863217)
 * [Szczegóły i ograniczenia piaskownicy aplikacji sieci Web platformy Azure](https://github.com/projectkudu/kudu/wiki/Azure-Web-App-sandbox)

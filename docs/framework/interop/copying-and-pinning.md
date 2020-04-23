@@ -24,7 +24,7 @@ Argumenty metody przekazywane przez wartość są organizowane w kodzie niezarz�
 
 ![Diagram przedstawiający typy odwołań, które są przesyłane przez wartość i przez odwołanie.](./media/copying-and-pinning/interop-marshal-reference-pin.gif)
 
-Przypinanie tymczasowo powoduje tymczasowe zablokowanie danych w bieżącej lokalizacji pamięci, dzięki czemu nie należy ich przełączać przez moduł wyrzucania elementów bezużytecznych środowiska uruchomieniowego języka wspólnego. Organizator przypina dane, aby zmniejszyć koszty kopiowania i zwiększania wydajności. Typ danych określa, czy jest on kopiowany, czy przypięty podczas procesu organizowania.  Przypinanie jest wykonywane automatycznie podczas organizowania obiektów, takich jak <xref:System.String>, jednak można również ręcznie przypiąć pamięć przy użyciu klasy <xref:System.Runtime.InteropServices.GCHandle>.
+Przypinanie tymczasowo powoduje tymczasowe zablokowanie danych w bieżącej lokalizacji pamięci, dzięki czemu nie należy ich przełączać przez moduł wyrzucania elementów bezużytecznych środowiska uruchomieniowego języka wspólnego. Organizator przypina dane, aby zmniejszyć koszty kopiowania i zwiększania wydajności. Typ danych określa, czy jest on kopiowany, czy przypięty podczas procesu organizowania.  Przypinanie jest wykonywane automatycznie podczas organizowania obiektów, takich jak <xref:System.String>, można również ręcznie przypiąć pamięć przy użyciu <xref:System.Runtime.InteropServices.GCHandle> klasy.
 
 ## <a name="formatted-blittable-classes"></a>Sformatowane klasy danych kopiowalnych
 
@@ -41,9 +41,9 @@ Sformatowane klasy [inne niż danych kopiowalnych](blittable-and-non-blittable-t
 
 - Jeśli Klasa niedanych kopiowalnycha jest organizowana przez odwołanie, wywoływany otrzymuje wskaźnik do wskaźnika do kopii struktury danych.
 
-- Jeśli atrybut <xref:System.Runtime.InteropServices.InAttribute> jest ustawiony, ta kopia jest zawsze inicjowana przy użyciu stanu wystąpienia, kierując w razie potrzeby.
+- Jeśli <xref:System.Runtime.InteropServices.InAttribute> atrybut jest ustawiony, ta kopia jest zawsze inicjowana przy użyciu stanu wystąpienia, kierując w razie potrzeby.
 
-- Jeśli atrybut <xref:System.Runtime.InteropServices.OutAttribute> jest ustawiony, stan jest zawsze kopiowany z powrotem do wystąpienia w przypadku powrotu, organizowania w razie potrzeby.
+- Jeśli <xref:System.Runtime.InteropServices.OutAttribute> atrybut jest ustawiony, stan jest zawsze kopiowany z powrotem do wystąpienia w przypadku powrotu, organizowania w razie potrzeby.
 
 - Jeśli ustawiono zarówno **atrybut unattribute** , jak i **atrybut** , wymagane są obie kopie. Jeśli jeden atrybut zostanie pominięty, organizator może zoptymalizować, eliminując każdą kopię.
 
@@ -78,8 +78,8 @@ Gdy <xref:System.String?displayProperty=nameWithType> jest przekazywany przez od
 
 Gdy <xref:System.Text.StringBuilder?displayProperty=nameWithType> jest przekazywany przez wartość, organizator przekazuje odwołanie do wewnętrznego buforu **StringBuilder** bezpośrednio do obiektu wywołującego. Obiekt wywołujący i wywoływany muszą zgadzać się z rozmiarem buforu. Obiekt wywołujący jest odpowiedzialny za utworzenie elementu **StringBuilder** o odpowiedniej długości. Obiekt wywoływany musi wykonać odpowiednie środki ostrożności, aby upewnić się, że bufor nie zostanie przepełniony. **StringBuilder** jest wyjątkiem od reguły, której typy odwołań przesłane przez wartość są domyślnie przesyłane jako parametry w parametrach. Jest on zawsze przenoszona jako wynikowy.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Domyślne zachowanie marshalingu](default-marshaling-behavior.md)
 - [Atrybuty kierunkowe](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
-- [Marshaling międzyoperacyjny](interop-marshaling.md)
+- [Organizowanie międzyoperacyjne](interop-marshaling.md)

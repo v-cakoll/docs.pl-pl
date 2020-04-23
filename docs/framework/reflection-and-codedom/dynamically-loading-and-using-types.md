@@ -22,7 +22,7 @@ ms.locfileid: "73130267"
 # <a name="dynamically-loading-and-using-types"></a>Dynamiczne ładowanie i używanie typów
 Odbicie zapewnia infrastrukturę używaną przez kompilatory języka do implementowania niejawnego późnego wiązania. Powiązanie jest procesem lokalizowania deklaracji (czyli implementacji), która odnosi się do jednoznacznie określonego typu. Gdy ten proces wystąpi w czasie wykonywania, a nie w czasie kompilacji, jest nazywany późnym wiązaniem. Visual Basic umożliwia użycie niejawnego późnego wiązania w kodzie. Kompilator Visual Basic wywołuje metodę pomocnika, która używa odbicia w celu uzyskania typu obiektu. Argumenty przekazane do metody pomocnika powodują wywołanie odpowiedniej metody w czasie wykonywania. Te argumenty są wystąpieniem (obiektem), na którym należy wywołać metodę, nazwę wywołanej metody (ciąg) i argumenty przekazane do wywołanej metody (tablicę obiektów).  
   
- W poniższym przykładzie kompilator Visual Basic używa odbicia niejawnie do wywołania metody w obiekcie, którego typ nie jest znany w czasie kompilacji. Klasa **HelloWorld** ma metodę **PrintHello** , która drukuje "Hello World" połączone z tekstem, który jest przesyłany do metody **PrintHello** . Metoda **PrintHello** wywołana w tym przykładzie jest w rzeczywistości <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>; kod Visual Basic umożliwia wywoływanie metody **PrintHello** , tak jakby typ obiektu (helloObj) był znany w czasie kompilacji (wczesne wiązanie), a nie w czasie wykonywania (późne wiązanie).  
+ W poniższym przykładzie kompilator Visual Basic używa odbicia niejawnie do wywołania metody w obiekcie, którego typ nie jest znany w czasie kompilacji. Klasa **HelloWorld** ma metodę **PrintHello** , która drukuje "Hello World" połączone z tekstem, który jest przesyłany do metody **PrintHello** . Metoda **PrintHello** wywołana w tym przykładzie jest w rzeczywistości a <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>; kod Visual Basic umożliwia wywoływanie metody **PrintHello** , tak jakby typ obiektu (helloObj) był znany w czasie kompilacji (wczesne wiązanie), a nie w czasie wykonywania (późne wiązanie).  
   
 ```vb
 Module Hello  
@@ -41,18 +41,18 @@ End Module
 ## <a name="custom-binding"></a>Wiązanie niestandardowe  
  Oprócz użycia niejawnie przez kompilatory dla późnego wiązania, odbicie może być używane jawnie w kodzie do osiągnięcia późnego wiązania.  
   
- [Środowisko uruchomieniowe języka wspólnego](../../standard/clr.md) obsługuje wiele języków programowania, a reguły powiązań tych języków różnią się. W przypadku wczesnej ograniczonej wielkości generatory kodu mogą całkowicie kontrolować to powiązanie. Jednak w późnym łączeniu poprzez odbicie powiązanie musi być kontrolowane przez dostosowane powiązanie. Klasa <xref:System.Reflection.Binder> zawiera niestandardową kontrolkę wyboru elementu członkowskiego i wywołania.  
+ [Środowisko uruchomieniowe języka wspólnego](../../standard/clr.md) obsługuje wiele języków programowania, a reguły powiązań tych języków różnią się. W przypadku wczesnej ograniczonej wielkości generatory kodu mogą całkowicie kontrolować to powiązanie. Jednak w późnym łączeniu poprzez odbicie powiązanie musi być kontrolowane przez dostosowane powiązanie. <xref:System.Reflection.Binder> Klasa zawiera niestandardową kontrolkę wyboru elementu członkowskiego i wywołania.  
   
  Przy użyciu powiązania niestandardowego można załadować zestaw w czasie wykonywania, uzyskać informacje o typach w tym zestawie, określić typ, a następnie wywołać metody lub uzyskać dostęp do pól lub właściwości tego typu. Ta technika jest przydatna, jeśli nie znasz typu obiektu w czasie kompilacji, na przykład gdy typ obiektu jest zależny od danych wejściowych użytkownika.  
   
- Poniższy przykład ilustruje prosty niestandardowy spinacz, który nie zapewnia konwersji typu argumentu. Kod dla `Simple_Type.dll` poprzedza główny przykład. Należy pamiętać, aby skompilować `Simple_Type.dll` a następnie dołączyć odwołanie do niego w projekcie w czasie kompilacji.  
+ Poniższy przykład ilustruje prosty niestandardowy spinacz, który nie zapewnia konwersji typu argumentu. Kod `Simple_Type.dll` poprzedzający główny przykład. Pamiętaj, aby skompilować `Simple_Type.dll` , a następnie dołączyć odwołanie do niego w projekcie w czasie kompilacji.  
   
  [!code-cpp[Conceptual.Types.Dynamic#1](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.types.dynamic/cpp/source1.cpp#1)]
  [!code-csharp[Conceptual.Types.Dynamic#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.dynamic/cs/source1.cs#1)]
  [!code-vb[Conceptual.Types.Dynamic#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.dynamic/vb/source1.vb#1)]  
   
 ### <a name="invokemember-and-createinstance"></a>InvokeMember i CreateInstance  
- Użyj <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>, aby wywołać element członkowski typu. Metody **CreateInstance** różnych klas, takie jak <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> i <xref:System.Reflection.Assembly.CreateInstance%2A?displayProperty=nameWithType>, są wyspecjalizowanymi formami **InvokeMember** , które tworzą nowe wystąpienia określonego typu. Klasa **spinacza** jest używana na potrzeby rozpoznawania przeciążenia i przekształcania argumentów w tych metodach.  
+ Służy <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType> do wywoływania elementu członkowskiego typu. Metody **CreateInstance** różnych klas, takie jak <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> i <xref:System.Reflection.Assembly.CreateInstance%2A?displayProperty=nameWithType>, są wyspecjalizowanymi formami **InvokeMember** , które tworzą nowe wystąpienia określonego typu. Klasa **spinacza** jest używana na potrzeby rozpoznawania przeciążenia i przekształcania argumentów w tych metodach.  
   
  Poniższy przykład pokazuje trzy możliwe kombinacje przekształcenia argumentów (konwersja typu) i wybór elementu członkowskiego. W przypadku 1 nie jest wymagana Konwersja argumentów ani wybór elementu członkowskiego. W przypadku 2 wymagany jest tylko wybór elementu członkowskiego. W przypadku 3 jest wymagana tylko wymuszone przekształcenie argumentu.  
   
@@ -60,9 +60,9 @@ End Module
  [!code-csharp[Conceptual.Types.Dynamic#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.dynamic/cs/source2.cs#2)]
  [!code-vb[Conceptual.Types.Dynamic#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.dynamic/vb/source2.vb#2)]  
   
- Jeśli jest dostępny więcej niż jeden element członkowski o tej samej nazwie, jest wymagana rozdzielczość przeciążenia. Metody <xref:System.Reflection.Binder.BindToMethod%2A?displayProperty=nameWithType> i <xref:System.Reflection.Binder.BindToField%2A?displayProperty=nameWithType> są używane do rozpoznawania powiązań z pojedynczym elementem członkowskim. Obiekt **Binder. BindToMethod** udostępnia również rozpoznawanie właściwości poprzez metody dostępu do właściwości **Get** i **Set** .  
+ Jeśli jest dostępny więcej niż jeden element członkowski o tej samej nazwie, jest wymagana rozdzielczość przeciążenia. Metody <xref:System.Reflection.Binder.BindToMethod%2A?displayProperty=nameWithType> i <xref:System.Reflection.Binder.BindToField%2A?displayProperty=nameWithType> służą do rozpoznawania powiązań z pojedynczym elementem członkowskim. Obiekt **Binder. BindToMethod** udostępnia również rozpoznawanie właściwości poprzez metody dostępu do właściwości **Get** i **Set** .  
   
- **BindToMethod** zwraca <xref:System.Reflection.MethodBase> do wywołania lub odwołanie o wartości null (**Nothing** w Visual Basic), jeśli takie wywołanie nie jest możliwe. Wartość zwracana **element MethodBase** nie musi być jedną z tych zawartych w parametrze *Match* , chociaż jest to zwykły przypadek.  
+ **BindToMethod** zwraca element <xref:System.Reflection.MethodBase> do Invoke lub odwołanie o wartości null (**Nothing** w Visual Basic), jeśli takie wywołanie nie jest możliwe. Wartość zwracana **element MethodBase** nie musi być jedną z tych zawartych w parametrze *Match* , chociaż jest to zwykły przypadek.  
   
  Gdy są obecne argumenty ByRef, obiekt wywołujący może chcieć uzyskać zwrot. W związku z tym, **spinacz** umożliwia klientowi mapowanie tablicy argumentów z powrotem do oryginalnej postaci, jeśli **BindToMethod** operuje tablicą argumentów. Aby to zrobić, obiekt wywołujący musi mieć gwarancję, że kolejność argumentów nie jest zmieniana. Gdy argumenty są przekazane według nazwy, **spinacz** zmienia kolejność tablic argumentów i jest to, co obiekt wywołujący widzi. Aby uzyskać więcej informacji, zobacz <xref:System.Reflection.Binder.ReorderArgumentArray%2A?displayProperty=nameWithType>.  
   
@@ -72,7 +72,7 @@ End Module
   
  Jeśli istnieje więcej niż jeden element członkowski w dostępnym zestawie, wszystkie te metody są przesyłane do **BindToMethod**, co wybiera odpowiednią metodę i zwraca ją. W przypadku 2 przykładowego kodu istnieją dwie metody o nazwie **PrintValue**. Odpowiednia metoda jest wybierana przez wywołanie do **BindToMethod**.  
   
- <xref:System.Reflection.Binder.ChangeType%2A> wykonuje przekształcenie argumentu (konwersja typu), które konwertuje rzeczywiste argumenty na typ argumentów formalnych wybranej metody. **ChangeType** jest wywoływana dla każdego argumentu, nawet jeśli typy pasują dokładnie.  
+ <xref:System.Reflection.Binder.ChangeType%2A>wykonuje przekształcenie argumentu (konwersja typu), które konwertuje rzeczywiste argumenty na typ argumentów formalnych wybranej metody. **ChangeType** jest wywoływana dla każdego argumentu, nawet jeśli typy pasują dokładnie.  
   
  W przypadku 3 przykładu kodu rzeczywisty argument typu **String** o wartości "5,5" jest przenoszona do metody z formalnym argumentem typu **Double**. Aby wywołanie zakończyło się pomyślnie, wartość ciągu "5,5" musi być konwertowana na wartość typu Double. **ChangeType** wykonuje tę konwersję.  
   
@@ -92,13 +92,13 @@ End Module
 |UInt64|Pojedyncza, Podwójna|  
 |Int64|Pojedyncza, Podwójna|  
 |Single|Double|  
-|Typ niereferencyjny|typ referencyjny|  
+|Typ niereferencyjny|Typ referencyjny|  
   
- Klasa <xref:System.Type> ma metody **Get** , które używają parametrów typu **Binder** do rozpoznawania odwołań do określonego elementu członkowskiego. <xref:System.Type.GetConstructor%2A?displayProperty=nameWithType>, <xref:System.Type.GetMethod%2A?displayProperty=nameWithType>i <xref:System.Type.GetProperty%2A?displayProperty=nameWithType> wyszukiwanie określonego elementu członkowskiego bieżącego typu przez podanie informacji o sygnaturze dla tego elementu członkowskiego. <xref:System.Reflection.Binder.SelectMethod%2A?displayProperty=nameWithType> i <xref:System.Reflection.Binder.SelectProperty%2A?displayProperty=nameWithType> są wywoływane z powrotem do wybranych informacji o podpisie odpowiednich metod.  
+ <xref:System.Type> Klasa ma metody **Get** , które używają parametrów typu **spinacza** do rozpoznawania odwołań do określonego elementu członkowskiego. <xref:System.Type.GetConstructor%2A?displayProperty=nameWithType>, <xref:System.Type.GetMethod%2A?displayProperty=nameWithType>i <xref:System.Type.GetProperty%2A?displayProperty=nameWithType> wyszukiwanie określonego elementu członkowskiego bieżącego typu przez podanie informacji o sygnaturze dla tego elementu członkowskiego. <xref:System.Reflection.Binder.SelectMethod%2A?displayProperty=nameWithType>i <xref:System.Reflection.Binder.SelectProperty%2A?displayProperty=nameWithType> są wywoływane z powrotem w celu wybrania informacji o podpisie odpowiednich metod.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
 - [Wyświetlanie informacji o typie](viewing-type-information.md)
-- [Konwersja typu w .NET Framework](../../standard/base-types/type-conversion.md)
+- [Konwersja typów w programie .NET Framework](../../standard/base-types/type-conversion.md)

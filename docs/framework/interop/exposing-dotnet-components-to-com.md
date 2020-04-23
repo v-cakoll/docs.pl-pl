@@ -49,7 +49,7 @@ Pisanie typu .NET i używanie tego typu z kodu niezarządzanego to odrębne dzia
 
      Zestaw o silnej nazwie można zainstalować w globalnej pamięci podręcznej zestawów i wymaga podpisu od jego wydawcy. Zestawy, które nie mają silnej nazwy, muszą być zainstalowane w katalogu aplikacji klienta.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Współdziałanie z kodem niezarządzanym](index.md)
-- [Przykład międzyoperacyjnego modelu COM: Klient modelu COM i serwer .NET](com-interop-sample-com-client-and-net-server.md)
+- [Przykład międzyoperacyjnego modelu COM: klient modelu COM i serwer .NET](com-interop-sample-com-client-and-net-server.md)

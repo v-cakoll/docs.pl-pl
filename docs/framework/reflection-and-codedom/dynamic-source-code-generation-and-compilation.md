@@ -23,7 +23,7 @@ ms.locfileid: "75544982"
   
 Aby reprezentować kod źródłowy, elementy CodeDOM są połączone ze sobą, aby utworzyć strukturę danych znaną jako wykres CodeDOM, który modeluje strukturę pewnego kodu źródłowego.  
   
-Przestrzeń nazw <xref:System.CodeDom?displayProperty=fullName> definiuje typy, które mogą reprezentować logiczną strukturę kodu źródłowego niezależnie od określonego języka programowania. Przestrzeń nazw <xref:System.CodeDom.Compiler?displayProperty=fullName> definiuje typy do generowania kodu źródłowego z wykresów CodeDOM i zarządzania kompilacją kodu źródłowego w obsługiwanych językach. Dostawcy lub deweloperzy kompilatora mogą rozciągnąć zestaw obsługiwanych języków.  
+<xref:System.CodeDom?displayProperty=fullName> Przestrzeń nazw definiuje typy, które mogą reprezentować logiczną strukturę kodu źródłowego niezależnie od określonego języka programowania. <xref:System.CodeDom.Compiler?displayProperty=fullName> Przestrzeń nazw definiuje typy do generowania kodu źródłowego z wykresów CodeDOM i zarządzania kompilacją kodu źródłowego w obsługiwanych językach. Dostawcy lub deweloperzy kompilatora mogą rozciągnąć zestaw obsługiwanych języków.  
   
 Modelowanie kodu źródłowego niezależne od języka może być przydatne, gdy program musi wygenerować kod źródłowy dla modelu programu w wielu językach lub dla nieokreślonego języka docelowego. Na przykład niektórzy projektanci używają języka CodeDOM jako interfejsu abstrakcji języka do tworzenia kodu źródłowego w prawidłowym języku programowania, jeśli dostępna jest obsługa języka CodeDOM.  
   
@@ -37,7 +37,7 @@ Modelowanie kodu źródłowego niezależne od języka może być przydatne, gdy 
   
 - [Generowanie kodu źródłowego i kompilowanie programu z wykresu CodeDOM](generating-and-compiling-source-code-from-a-codedom-graph.md)  
 
-  Opisuje sposób generowania kodu źródłowego i kompilowania wygenerowanego kodu z kompilatorem zewnętrznym przy użyciu klas zdefiniowanych w przestrzeni nazw `System.CodeDom.Compiler`.  
+  Opisuje sposób generowania kodu źródłowego i kompilowania wygenerowanego kodu z kompilatorem zewnętrznym przy użyciu klas `System.CodeDom.Compiler` zdefiniowanych w przestrzeni nazw.  
   
 - [Instrukcje: tworzenie pliku dokumentacji XML przy użyciu modelu CodeDOM](how-to-create-an-xml-documentation-file-using-codedom.md)  
 
@@ -47,7 +47,7 @@ Modelowanie kodu źródłowego niezależne od języka może być przydatne, gdy 
 
   Opisuje, jak używać CodeDOM do wygenerowania klasy zawierającej pola, właściwości, metodę, Konstruktor i punkt wejścia.  
   
-## <a name="reference"></a>Tematy pomocy  
+## <a name="reference"></a>Dokumentacja  
 
 - <xref:System.CodeDom>  
 

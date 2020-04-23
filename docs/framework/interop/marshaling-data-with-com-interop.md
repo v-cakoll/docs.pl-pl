@@ -12,40 +12,40 @@ ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181371"
 ---
 # <a name="marshaling-data-with-com-interop"></a>Organizowanie danych za pomocą modelu COM
-Współdziałanie COM zapewnia obsługę zarówno przy użyciu obiektów COM z kodu zarządzanego, jak i uwidaczniania zarządzanych obiektów na platformie COM. Obsługa organizowania danych do i z COM jest obszerna i prawie zawsze zapewnia prawidłowe zachowanie organizowania.  
+Współdziałanie modelu COM zapewnia obsługę zarówno obiektów COM z kodu zarządzanego, jak i Uwidacznianie obiektów zarządzanych w modelu COM. Obsługa przekazywania danych do i z modelu COM jest obszerna i prawie zawsze zapewnia prawidłowe zachowanie organizowania.  
   
- Zestaw Windows SDK zawiera następujące narzędzia międzyoperacyjne COM:  
+ Windows SDK obejmuje następujące narzędzia międzyoperacyjności modelu COM:  
   
-- [Importer biblioteki typów (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md), który konwertuje bibliotekę typów COM na zestaw międzyoperacyjny. Z tego zestawu międzyoperacyjnej usługi organizowania generuje otoki, które wykonują rozrządzania danych między pamięcią zarządzaną i niezarządzaną.  
+- [Importer biblioteki typów (Tlbimp. exe)](../tools/tlbimp-exe-type-library-importer.md), który konwertuje bibliotekę typów com na zestaw międzyoperacyjny. Z tego zestawu usługa Marshaling Interop generuje otoki, które wykonują kierowanie danych między zarządzaną i niezarządzaną pamięcią.  
   
-- [Type Library Exporter (Tlbexp.exe)](../tools/tlbexp-exe-type-library-exporter.md), który tworzy bibliotekę typów COM z zestawu i generuje otokę, która wykonuje kierowanie podczas wywoływania metody.  
+- [Eksporter biblioteki typów (Tlbexp. exe)](../tools/tlbexp-exe-type-library-exporter.md), który tworzy bibliotekę typów com z zestawu i generuje otokę wykonującą operacje organizowania podczas wywołań metod.  
   
- W poniższych sekcjach łącze do tematów, które opisują procesy dostosowywania otoki międzyop, gdy można (lub musi) dostarczyć organizatora dodatkowe informacje o typie.  
+ W poniższych sekcjach znajdują się łącza do tematów opisujących procesy dostosowywania otok międzyoperacyjnych, gdy użytkownik może (lub musi) dostarczyć Organizatorowi dodatkowe informacje o typie.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
-[Jak: Ręczne tworzenie otoków](how-to-create-wrappers-manually.md) W tym artykule opisano sposób ręcznego tworzenia otoki COM w zarządzanym kodzie źródłowym.
+[Instrukcje: ręczne tworzenie otok](how-to-create-wrappers-manually.md) Opisuje sposób ręcznego tworzenia otoki COM w zarządzanym kodzie źródłowym.
 
  [Instrukcje: migrowanie zarządzanego kodu DCOM do WCF](how-to-migrate-managed-code-dcom-to-wcf.md)  
- W tym artykule opisano sposób migracji zarządzanego kodu DCOM do WCF dla najbardziej bezpiecznego rozwiązania.  
+ Opisuje sposób migrowania zarządzanego kodu DCOM do usługi WCF w celu zapewnienia najbezpieczniejszego rozwiązania.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Typy danych COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sak564ww(v=vs.100))  
- Zawiera odpowiednie typy danych zarządzanych i niezarządzanych.  
+ Zapewnia odpowiednie zarządzane i niezarządzane typy danych.  
   
- [Dostosowywanie otoki współusznezwalne COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3bwc828w(v=vs.100))  
- W tym artykule opisano, <xref:System.Runtime.InteropServices.MarshalAsAttribute> jak jawnie marshal typy danych przy użyciu atrybutu w czasie projektowania.  
+ [Dostosowywanie wywoływanych otok COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3bwc828w(v=vs.100))  
+ Opisuje, <xref:System.Runtime.InteropServices.MarshalAsAttribute> jak jawnie zorganizować typy danych przy użyciu atrybutu w czasie projektowania.  
   
- [Dostosowywanie otoki wywoławcze w czasie wykonywania](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100))  
- W tym artykule opisano, jak dostosować zachowanie organizowania typów w zestawie międzyoperacyjnym i jak zdefiniować typy COM ręcznie.  
+ [Dostosowywanie wywoływanych otok środowiska uruchomieniowego](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100))  
+ Opisuje sposób dostosowywania zachowania związanego z kierowaniem typów w zestawie międzyoperacyjnym i sposób ręcznego definiowania typów COM.  
   
- [Zaawansowana interoperacyjność COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))  
- Zawiera łącza do więcej informacji na temat dołączania składników COM do aplikacji .NET Framework.  
+ [Zaawansowana współdziałanie COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))  
+ Zawiera łącza do dodatkowych informacji na temat dołączania składników COM do aplikacji .NET Framework.  
   
- [Podsumowanie konwersji biblioteki zdań do biblioteki typów](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))  
- Opisuje zestaw do wpisywania procesu konwersji eksportu biblioteki.  
+ [Podsumowanie konwersji zestawu na bibliotekę typów](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))  
+ Opisuje zestaw do procesu konwersji eksportu biblioteki typów.  
   
- [Podsumowanie konwersji biblioteki typów na podsumowanie konwersji zestawu](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))  
- Zawiera opis biblioteki typów do procesu konwersji importu zestawu.  
+ [Podsumowanie dotyczące konwersji biblioteki typów na zestaw](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))  
+ Opisuje proces konwersji biblioteki typów na import zestawu.  
   
  [Współdziałanie przy użyciu typów ogólnych](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))  
- W tym artykule opisano, które akcje są obsługiwane podczas korzystania z typów ogólnych dla współdziałania COM.
+ Opisuje, które akcje są obsługiwane w przypadku używania typów ogólnych do współdziałania z modelem COM.

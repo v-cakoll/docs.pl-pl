@@ -40,7 +40,7 @@ Każdy komputer, na którym jest zainstalowany środowisko uruchomieniowe język
   
  Zestawy wdrożone w globalnej pamięci podręcznej zestawów muszą mieć silną nazwę. Po dodaniu zestawu do globalnej pamięci podręcznej zestawów sprawdzane są wszystkie pliki wchodzące w skład zestawu. Pamięć podręczna wykonuje te operacje sprawdzania integralności, aby upewnić się, że zestaw nie został naruszony, na przykład wtedy, gdy plik został zmieniony, ale manifest nie odzwierciedla zmiany.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Zestawy w środowisku .NET](../../standard/assembly/index.md)
 - [Praca z zestawami i globalną pamięcią podręczną zestawów](working-with-assemblies-and-the-gac.md)

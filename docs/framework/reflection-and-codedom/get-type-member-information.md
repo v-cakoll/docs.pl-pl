@@ -17,7 +17,7 @@ ms.lasthandoff: 10/30/2019
 ms.locfileid: "73130214"
 ---
 # <a name="how-to-get-type-and-member-information-by-using-reflection"></a>Instrukcje: uzyskiwanie informacji o typie i elemencie członkowskim za pomocą odbicia
-Przestrzeń nazw <xref:System.Reflection> zawiera wiele metod uzyskiwania informacji o typach i ich elementach członkowskich. W tym artykule przedstawiono jedną z tych metod, <xref:System.Type.GetMembers%2A?displayProperty=nameWithType>. Aby uzyskać dodatkowe informacje, zobacz [Omówienie odbicia](reflection.md).
+<xref:System.Reflection> Przestrzeń nazw zawiera wiele metod uzyskiwania informacji na temat typów i ich członków. W tym artykule przedstawiono jedną z tych metod <xref:System.Type.GetMembers%2A?displayProperty=nameWithType>. Aby uzyskać dodatkowe informacje, zobacz [Omówienie odbicia](reflection.md).
   
 ## <a name="example"></a>Przykład
 
@@ -27,7 +27,7 @@ Poniższy przykład pobiera informacje o typie i elemencie członkowskim za pomo
 [!code-csharp[Get type members](../../../samples/snippets/standard/reflection/memberinfo/gettypemembers.cs)]
 [!code-vb[Get type members](../../../samples/snippets/standard/reflection/memberinfo/gettypemembers.vb)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Program z domenami aplikacji](../app-domains/application-domains.md#programming-with-application-domains)
 - [Odbicie](reflection.md)

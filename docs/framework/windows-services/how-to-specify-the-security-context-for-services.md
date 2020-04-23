@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Określanie kontekstu zabezpieczeń dla usług'
+title: 'Porady: określanie kontekstu zabezpieczeń dla usług'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, security
@@ -18,7 +18,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053580"
 ---
-# <a name="how-to-specify-the-security-context-for-services"></a>Instrukcje: Określanie kontekstu zabezpieczeń dla usług
+# <a name="how-to-specify-the-security-context-for-services"></a>Porady: określanie kontekstu zabezpieczeń dla usług
 Domyślnie usługi są uruchamiane w innym kontekście zabezpieczeń niż zalogowany użytkownik. Usługi są uruchamiane w kontekście domyślnego konta systemowego o nazwie `LocalSystem`, które daje im różne uprawnienia dostępu do zasobów systemowych niż użytkownik. Możesz zmienić to zachowanie, aby określić inne konto użytkownika, w ramach którego ma zostać uruchomiona usługa.  
   
  Kontekst zabezpieczeń jest ustawiany przez manipulowanie <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> właściwością procesu, w którym działa usługa. Ta właściwość umożliwia ustawienie jednego z czterech typów kont:  
@@ -35,17 +35,17 @@ Domyślnie usługi są uruchamiane w innym kontekście zabezpieczeń niż zalogo
   
 ### <a name="to-specify-the-security-context-for-a-service"></a>Aby określić kontekst zabezpieczeń dla usługi  
   
-1. Po utworzeniu usługi należy dodać do niej niezbędne Instalatory. Aby uzyskać więcej informacji, zobacz [jak: Dodaj Instalatory do aplikacji](how-to-add-installers-to-your-service-application.md)usługi.  
+1. Po utworzeniu usługi należy dodać do niej niezbędne Instalatory. Aby uzyskać więcej informacji, zobacz [jak: Dodawanie instalatorów do aplikacji usługi](how-to-add-installers-to-your-service-application.md).  
   
-2. W projektancie uzyskaj dostęp `ProjectInstaller` do klasy i kliknij Instalatora procesów usługi dla usługi, z którą pracujesz.  
+2. W projektancie uzyskaj dostęp do `ProjectInstaller` klasy i kliknij Instalatora procesów usługi dla usługi, z którą pracujesz.  
   
     > [!NOTE]
     > Dla każdej aplikacji usługi w `ProjectInstaller` klasie istnieją co najmniej dwa składniki instalacyjne — jedną, która instaluje procesy dla wszystkich usług w projekcie, oraz jeden Instalator dla każdej usługi zawierającej daną aplikację. W tym przypadku należy wybrać opcję <xref:System.ServiceProcess.ServiceProcessInstaller>.  
   
 3. W oknie **Właściwości** Ustaw <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> odpowiednią wartość.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Wprowadzenie do aplikacji usług systemu Windows](introduction-to-windows-service-applications.md)
-- [Instrukcje: Dodawanie instalatorów do aplikacji usługi](how-to-add-installers-to-your-service-application.md)
-- [Instrukcje: Tworzenie usług systemu Windows](how-to-create-windows-services.md)
+- [Porady: dodawanie instalatorów od aplikacji usług](how-to-add-installers-to-your-service-application.md)
+- [Porady: tworzenie usług systemu Windows](how-to-create-windows-services.md)

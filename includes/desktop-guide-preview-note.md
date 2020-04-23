@@ -8,4 +8,4 @@ ms.locfileid: "82071046"
 ---
 
 > [!IMPORTANT]
-> Dokumentacja przewodnika dla komputerów stacjonarnych jest w trakcie budowy.
+> Dokumentacja przewodnika po pulpicie jest w przygotowaniu.

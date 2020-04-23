@@ -13,20 +13,20 @@ ms.lasthandoff: 03/15/2020
 ms.locfileid: "73130092"
 ---
 # <a name="dynamic-programming-in-the-net-framework"></a>Programowanie dynamiczne w .NET Framework
-Ta sekcja dokumentacji zawiera informacje na temat programowania dynamicznego w programie .NET Framework.  
+Ta sekcja dokumentacji zawiera informacje na temat programowania dynamicznego w .NET Framework.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Odbicie](reflection.md)  
- W tym artykule opisano, jak używać odbicia do pracy z obiektami w czasie wykonywania.  
+ Opisuje, jak używać odbicia do pracy z obiektami w czasie wykonywania.  
   
  [Emitowanie dynamicznych metod i zestawów](emitting-dynamic-methods-and-assemblies.md)  
- Opisuje sposób tworzenia metod i zestawów w czasie wykonywania przy użyciu Reflection.Emit.  
+ Opisuje sposób tworzenia metod i zestawów w czasie wykonywania przy użyciu odbicia. Emituj.  
   
- [Omówienie dynamicznego środowiska wykonawczego języka](dynamic-language-runtime-overview.md)  
- W tym artykule opisano funkcje dynamicznego środowiska wykonawczego języka.  
+ [Omówienie środowiska uruchomieniowego języka dynamicznego](dynamic-language-runtime-overview.md)  
+ Opisuje funkcje środowiska uruchomieniowego języka dynamicznego.  
   
- [Generowanie i kompilacja dynamicznego kodu źródłowego](dynamic-source-code-generation-and-compilation.md)  
- W tym artykule opisano sposób generowania i kompilowania dynamicznego kodu źródłowego.  
+ [Dynamiczne generowanie i kompilacja kodu źródłowego](dynamic-source-code-generation-and-compilation.md)  
+ Opisuje sposób generowania i kompilowania dynamicznego kodu źródłowego.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Podręcznik programowania](../development-guide.md)  
+ [Przewodnik programowania](../development-guide.md)  

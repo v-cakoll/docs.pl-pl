@@ -49,24 +49,24 @@ Możesz również otoczyć wiele wersji biblioteki typów. Aby uzyskać instrukc
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład importuje bibliotekę typów COM `LibUtil.tlb` i podpisuje `LibUtil.dll` zestawu silną nazwą przy użyciu pliku klucza `CompanyA.snk`. Pomijając konkretną nazwę przestrzeni nazw, ten przykład generuje domyślną przestrzeń nazw, `LibUtil`.
+Poniższy przykład importuje bibliotekę `LibUtil.tlb` typów com i podpisuje zestaw `LibUtil.dll` za pomocą silnej nazwy przy użyciu pliku `CompanyA.snk`klucza. Pomijając konkretną nazwę przestrzeni nazw, ten przykład tworzy domyślną przestrzeń nazw, `LibUtil`.
 
 ```console
 tlbimp LibUtil.tlb /primary /keyfile:CompanyA.snk /out:LibUtil.dll
 ```
 
-Aby uzyskać bardziej opisową nazwę (przy użyciu *NazwaDostawcy*. *LibraryName* nazewnictwo, w poniższym przykładzie zastępuje domyślną nazwę pliku zestawu i nazwę przestrzeni nazw.
+Aby uzyskać bardziej opisową nazwę (przy użyciu *NazwaDostawcy*.* LibraryName* nazewnictwo, w poniższym przykładzie zastępuje domyślną nazwę pliku zestawu i nazwę przestrzeni nazw.
 
 ```console
 tlbimp LibUtil.tlb /primary /keyfile:CompanyA.snk /namespace:CompanyA.LibUtil /out:CompanyA.LibUtil.dll
 ```
 
-Poniższy przykład importuje `MyLib.tlb`, który odwołuje się do `CompanyA.LibUtil.dll`i podpisuje zestaw `CompanyB.MyLib.dll` o silnej nazwie przy użyciu `CompanyB.snk`pliku klucza. Przestrzeń nazw `CompanyB.MyLib`, zastępuje domyślną nazwę przestrzeni nazw.
+Poniższy przykład importuje `MyLib.tlb`, który odwołuje `CompanyA.LibUtil.dll`się i podpisuje `CompanyB.MyLib.dll` zestaw silną nazwą przy użyciu pliku `CompanyB.snk`klucza. Przestrzeń nazw, `CompanyB.MyLib`zastępuje domyślną nazwę przestrzeni nazw.
 
 ```console
 tlbimp MyLib.tlb /primary /keyfile:CompanyB.snk /namespace:CompanyB.MyLib /reference:CompanyA.LibUtil.dll /out:CompanyB.MyLib.dll
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Instrukcje: Rejestrowanie podstawowych zestawów międzyoperacyjnych](how-to-register-primary-interop-assemblies.md)

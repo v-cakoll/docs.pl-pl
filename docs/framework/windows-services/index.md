@@ -18,37 +18,37 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/15/2020
 ms.locfileid: "71053540"
 ---
-# <a name="develop-windows-service-apps"></a>Tworzenie aplikacji usługowych systemu Windows
+# <a name="develop-windows-service-apps"></a>Opracowywanie aplikacji usługi systemu Windows
 
-Za pomocą programu Visual Studio lub .NET Framework SDK, można łatwo tworzyć usługi, tworząc aplikację, która jest zainstalowana jako usługa. Ten typ aplikacji jest nazywany usługą systemu Windows. Za pomocą funkcji struktury można tworzyć usługi, instalować je i uruchamiać, zatrzymywać i w inny sposób kontrolować ich zachowanie.
+Za pomocą programu Visual Studio lub zestawu SDK .NET Framework można łatwo tworzyć usługi, tworząc aplikację, która jest zainstalowana jako usługa. Ten typ aplikacji nazywa się usługą systemu Windows. Dzięki funkcjom platformy można tworzyć usługi, instalować je, uruchamiać, zatrzymywać i kontrolować ich zachowanie.
 
 > [!NOTE]
-> W programie Visual Studio można utworzyć usługę w kodzie zarządzanym w języku Visual C# lub Visual Basic, która może współpracować z istniejącym kodem języka C++, jeśli jest to wymagane. Można też utworzyć usługę systemu Windows w natywnym języku C++ za pomocą [Kreatora projektów ATL](/cpp/atl/reference/atl-project-wizard).
+> W programie Visual Studio można utworzyć usługę w kodzie zarządzanym w języku Visual C# lub Visual Basic, która może współdziałać z istniejącym kodem C++, jeśli jest to wymagane. Lub można utworzyć usługę systemu Windows w natywnym języku C++ przy użyciu [Kreatora projektu ATL](/cpp/atl/reference/atl-project-wizard).
 
 ## <a name="in-this-section"></a>W tej sekcji
 
 [Wprowadzenie do aplikacji usług systemu Windows](introduction-to-windows-service-applications.md)
 
-Zawiera omówienie aplikacji usługi systemu Windows, okres istnienia usługi i jak aplikacje usługi różnią się od innych typowych typów projektów.
+Zawiera omówienie aplikacji usług systemu Windows, okres istnienia usługi oraz sposób, w jaki aplikacje usług różnią się od innych typów projektów wspólnych.
 
 [Przewodnik: tworzenie aplikacji usługowej systemu Windows w Projektancie składników](walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
 
-Zawiera przykład tworzenia usługi w języku Visual Basic i Visual C#.
+Zawiera przykład tworzenia usługi w Visual Basic i Visual C#.
 
 [Architektura programowania aplikacji usług](service-application-programming-architecture.md)
 
-W tym artykule wyjaśniono elementy języka używane w programowaniu usług.
+Wyjaśnia elementy języka używane w programowaniu usług.
 
 [Porady: tworzenie usług systemu Windows](how-to-create-windows-services.md)
 
-W tym artykule opisano proces tworzenia i konfigurowania usług systemu Windows przy użyciu szablonu projektu usługi systemu Windows.
+Opisuje proces tworzenia i konfigurowania usług systemu Windows przy użyciu szablonu projektu usługi systemu Windows.
 
-## <a name="related-sections"></a>Powiązane sekcje
+## <a name="related-sections"></a>Sekcje pokrewne
 
-<xref:System.ServiceProcess.ServiceBase>- Opisuje główne cechy <xref:System.ServiceProcess.ServiceBase> klasy, który jest używany do tworzenia usług.
+<xref:System.ServiceProcess.ServiceBase>— Zawiera opis głównych funkcji <xref:System.ServiceProcess.ServiceBase> klasy, które są używane do tworzenia usług.
 
-<xref:System.ServiceProcess.ServiceProcessInstaller>- Opisuje funkcje <xref:System.ServiceProcess.ServiceProcessInstaller> klasy, który jest <xref:System.ServiceProcess.ServiceInstaller> używany wraz z klasy, aby zainstalować i odinstalować usługi.
+<xref:System.ServiceProcess.ServiceProcessInstaller>-Opisuje funkcje <xref:System.ServiceProcess.ServiceProcessInstaller> klasy, która jest używana razem z <xref:System.ServiceProcess.ServiceInstaller> klasą do instalowania i odinstalowywania usług.
 
-<xref:System.ServiceProcess.ServiceInstaller>- Opisuje funkcje <xref:System.ServiceProcess.ServiceInstaller> klasy, który jest <xref:System.ServiceProcess.ServiceProcessInstaller> używany wraz z klasy, aby zainstalować i odinstalować usługę.
+<xref:System.ServiceProcess.ServiceInstaller>-Opisuje funkcje <xref:System.ServiceProcess.ServiceInstaller> klasy, która jest używana razem z <xref:System.ServiceProcess.ServiceProcessInstaller> klasą do instalowania i odinstalowywania usługi.
 
-[Utwórz projekty z szablonów](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0fyc0azh(v=vs.120)) — opisuje typy projektów używane w tym rozdziale i jak wybrać między nimi.
+[Tworzenie projektów z szablonów](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0fyc0azh(v=vs.120)) — zawiera opis typów projektów używanych w tym rozdziale oraz sposób wybierania między nimi.

@@ -1,6 +1,6 @@
 ---
 title: Style i szablony
-description: Dowiedz się więcej o zasobach XAML w programie Windows Presentation Foundation (WPF) dla platformy .NET Core. Opis typów zasobów XAML związanych ze stylami i motywami.
+description: Dowiedz się więcej o zasobach XAML w Windows Presentation Foundation (WPF) dla platformy .NET Core. Informacje o typach zasobów XAML związanych ze stylami i motywami.
 author: thraka
 ms.author: adegeo
 ms.date: 09/09/2019
@@ -14,57 +14,57 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "82071886"
 ---
-# <a name="styles-and-templates-in-wpf"></a>Style i szablony w wytęzianych w filtrze WPF
+# <a name="styles-and-templates-in-wpf"></a>Style i szablony w WPF
 
-Styl i szablony programu Windows Presentation Foundation (WPF) odnoszą się do zestawu funkcji, które umożliwiają deweloperom i projektantom tworzenie atrakcyjnych wizualnie efektów i spójnego wyglądu produktu. Podczas dostosowywania wyglądu aplikacji, chcesz silny styl i szablonów modelu, który umożliwia utrzymanie i udostępnianie wyglądu w aplikacjach i między nimi. WPF WPF udostępnia tego modelu.
+Windows Presentation Foundation (WPF) style i tworzenia szablonów zapoznaj się z zestawem funkcji, które umożliwiają deweloperom i projektantom tworzenie atrakcyjnych wizualnie efektów i spójnego wyglądu ich produktów. Podczas dostosowywania wyglądu aplikacji należy użyć silnego stylu i modelu tworzenia szablonów, który umożliwia konserwację i udostępnianie wyglądu w ramach i między aplikacjami. WPF udostępnia ten model.
 
-Inną cechą modelu stylizacji WPF jest oddzielenie prezentacji i logiki. Projektanci mogą pracować nad wyglądem aplikacji przy użyciu tylko XAML w tym samym czasie, że deweloperzy pracują nad logiką programowania przy użyciu języka C# lub Visual Basic.
+Inną funkcją modelu stylów WPF jest separacja prezentacji i logiki. Projektanci mogą korzystać z wyglądu aplikacji, używając tylko języka XAML w tym samym czasie, gdy deweloperzy pracują na logice programowania przy użyciu języka C# lub Visual Basic.
 
-Ten przegląd koncentruje się na stylowanie i templating aspektów aplikacji i nie omawia żadnych pojęć wiązania danych. Aby uzyskać informacje na temat powiązania danych, zobacz [Omówienie powiązania danych](../data/data-binding-overview.md).
+To omówienie koncentruje się na stylu i tworzenia szablonów aspektach aplikacji i nie omawia żadnych koncepcji dotyczących powiązań danych. Aby uzyskać informacje o powiązaniu danych, zobacz temat [powiązanie danych — omówienie](../data/data-binding-overview.md).
 
-Ważne jest, aby zrozumieć zasoby, które umożliwiają ponowne korzystanie ze stylów i szablonów. Aby uzyskać więcej informacji o zasobach, zobacz [Zasoby XAML](xaml-resources-define.md).
+Ważne jest zapoznanie się z zasobami, które umożliwiają ponownie używanie stylów i szablonów. Aby uzyskać więcej informacji o zasobach, zobacz [zasoby XAML](xaml-resources-define.md).
 
 [!INCLUDE [desktop guide under construction](../../../includes/desktop-guide-preview-note.md)]
 
 ## <a name="sample"></a>Przykład
 
-Przykładowy kod podany w tym przeglądzie jest oparty na [prostej aplikacji do przeglądania zdjęć](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating) pokazanej na poniższej ilustracji.
+Przykładowy kod podany w tym omówieniu jest oparty na [prostej aplikacji do przeglądania zdjęć](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating) pokazanej na poniższej ilustracji.
 
-![Stylizowana lista Wyświetl](./media/styles-and-templates-overview/stylingintro-triggers.png "StylingIntro_triggers")
+![Styl elementu ListView](./media/styles-and-templates-overview/stylingintro-triggers.png "StylingIntro_triggers")
 
-Ta prosta próbka zdjęć wykorzystuje styl i szablony, aby stworzyć atrakcyjne wizualnie środowisko użytkownika. Przykład ma <xref:System.Windows.Controls.TextBlock> dwa elementy <xref:System.Windows.Controls.ListBox> i formant, który jest powiązany z listą obrazów.
+Ten prosty przykład fotografii używa stylów i tworzenia szablonów, aby utworzyć wizualnie atrakcyjny interfejs użytkownika. Przykład ma dwa <xref:System.Windows.Controls.TextBlock> elementy i <xref:System.Windows.Controls.ListBox> formant, który jest powiązany z listą obrazów.
 
-Aby uzyskać pełną próbkę, zobacz [Wprowadzenie do stylizowania i próbkowania szablonów](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).
+Pełny przykład można znaleźć w artykule [wprowadzenie do stylu i przykład tworzenia szablonów](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).
 
 ## <a name="styles"></a>Style
 
-Można myśleć <xref:System.Windows.Style> jako wygodny sposób, aby zastosować zestaw wartości właściwości do wielu elementów. Można użyć stylu na dowolnym elemencie, <xref:System.Windows.Window> który <xref:System.Windows.Controls.Button>wywodzi się z <xref:System.Windows.FrameworkElement> lub <xref:System.Windows.FrameworkContentElement> takiego jak lub .
+Można traktować <xref:System.Windows.Style> jako wygodny sposób zastosowania zestawu wartości właściwości do wielu elementów. Możesz użyć stylu dla dowolnego elementu, który pochodzi <xref:System.Windows.FrameworkElement> od lub <xref:System.Windows.FrameworkContentElement> takich jak <xref:System.Windows.Window> lub. <xref:System.Windows.Controls.Button>
 
-Najczęstszym sposobem deklarowania stylu jest jako `Resources` zasób w sekcji w pliku XAML. Ponieważ style są zasobami, są one zgodne z tymi samymi regułami zakresu, które mają zastosowanie do wszystkich zasobów. Mówiąc prościej, gdzie deklarujesz styl wpływa na to, gdzie można zastosować styl. Na przykład jeśli deklarujesz styl w elemencie głównym pliku XAML definicji aplikacji, styl może być używany w dowolnym miejscu w aplikacji.
+Najbardziej typowym sposobem deklarowania stylu jest jako zasób w `Resources` sekcji w pliku XAML. Ponieważ style są zasobami, przestrzegają one tych samych reguł określania zakresu, które mają zastosowanie do wszystkich zasobów. Umieść po prostu, gdzie deklarujesz styl, ma wpływ na miejsce, w którym można zastosować styl. Na przykład, Jeśli zadeklarujesz styl w głównym elemencie pliku XAML definicji aplikacji, styl może być używany w dowolnym miejscu w aplikacji.
 
-Na przykład następujący kod XAML deklaruje dwa `TextBlock`style dla , jeden `TextBlock` automatycznie stosowane do wszystkich elementów i inny, który musi być jawnie odwołuje.
+Na przykład poniższy kod XAML deklaruje dwa style dla `TextBlock`, jeden automatycznie zastosowany do wszystkich `TextBlock` elementów i inne, które muszą być jawnie przywoływane.
 
 [!code-xaml[SnippetDefaultTextBlockStyleBasedOn](~/samples/snippets/desktop-guide/wpf/styles-and-templates-intro/csharp/Window2.xaml#SnippetDefaultTextBlockStyleBasedOn)]
 
-Oto przykład stylów zadeklarowanych powyżej używane.
+Oto przykład stylów zadeklarowanych powyżej.
 
 [!code-xaml[SnippetTextBlocksExplicit](~/samples/snippets/desktop-guide/wpf/styles-and-templates-intro/csharp/Window2.xaml#SnippetTextBlocksExplicit)]
 
-![Stylizowane bloki tekstowe](./media/styles-and-templates-overview/stylingintro-textblocks.png)
+![Style — bloki tekstu](./media/styles-and-templates-overview/stylingintro-textblocks.png)
 
-Aby uzyskać więcej informacji, zobacz [Tworzenie stylu formantu](styles-templates-create-apply-style.md).
+Aby uzyskać więcej informacji, zobacz [Tworzenie stylu kontrolki](styles-templates-create-apply-style.md).
 
-## <a name="controltemplates"></a>Płyty sterujące
+## <a name="controltemplates"></a>Elementy ControlTemplates
 
-W WPF <xref:System.Windows.Controls.ControlTemplate> WPF formantu definiuje wygląd formantu. Można zmienić strukturę i wygląd formantu, definiując nowy <xref:System.Windows.Controls.ControlTemplate> i przypisując go do formantu. W wielu przypadkach szablony zapewniają wystarczającą elastyczność, dzięki czemu nie trzeba pisać własne formanty niestandardowe.
+W WPF <xref:System.Windows.Controls.ControlTemplate> formant definiuje wygląd formantu. Można zmienić strukturę i wygląd kontrolki, definiując nowe <xref:System.Windows.Controls.ControlTemplate> i przypisując je do kontrolki. W wielu przypadkach szablony zapewniają wystarczającą elastyczność, dzięki czemu nie trzeba pisać własnych formantów niestandardowych.
 
-Każdy formant ma domyślny szablon przypisany do [właściwości Control.Template.](xref:System.Windows.Controls.Control.Template) Szablon łączy wizualną prezentację formantu z możliwościami formantu. Ponieważ definiujesz szablon w XAML, można zmienić wygląd formantu bez pisania kodu. Każdy szablon jest przeznaczony dla określonego <xref:System.Windows.Controls.Button>formantu, takiego jak .
+Każdy formant ma przypisany do właściwości [Control. Template](xref:System.Windows.Controls.Control.Template) szablon domyślny. Szablon łączy wizualną prezentację formantu z możliwościami kontrolki. Ponieważ definiujesz szablon w języku XAML, można zmienić wygląd kontrolki bez pisania kodu. Każdy szablon jest przeznaczony dla konkretnej kontrolki, takiej jak <xref:System.Windows.Controls.Button>.
 
-Zazwyczaj deklarujesz szablon jako zasób w `Resources` sekcji pliku XAML. Podobnie jak w przypadku wszystkich zasobów, obowiązują reguły zakresu.
+Często deklarujesz szablon jako zasób w `Resources` sekcji pliku XAML. Podobnie jak w przypadku wszystkich zasobów, mają zastosowanie reguły określania zakresu.
 
-Szablony kontroli są o wiele bardziej zaangażowane niż styl. Dzieje się tak, ponieważ szablon formantu przepisuje wygląd całego formantu, podczas gdy styl po prostu stosuje zmiany właściwości do istniejącego formantu. Jednak ponieważ szablon formantu jest stosowany przez ustawienie [Control.Template](xref:System.Windows.Controls.Control.Template) właściwości, można użyć stylu do definiowania lub ustawiania szablonu.
+Szablony formantów są znacznie większe niż style. Wynika to z faktu, że szablon kontrolki ponownie zapisuje wygląd całej kontrolki, a styl po prostu stosuje zmiany właściwości do istniejącej kontrolki. Jednak ponieważ szablon kontrolki jest stosowany przez ustawienie właściwości [Control. Template](xref:System.Windows.Controls.Control.Template) , można użyć stylu do definiowania lub ustawiania szablonu.
 
-Projektanci zazwyczaj umożliwiają utworzenie kopii istniejącego szablonu i zmodyfikowanie go. Na przykład w projektancie WPF programu `CheckBox` Visual Studio wybierz formant, a następnie kliknij prawym przyciskiem myszy i wybierz polecenie **Edytuj szablon** > **Utwórz kopię**. To polecenie generuje *styl definiujący szablon*.
+Projektanci zwykle umożliwiają utworzenie kopii istniejącego szablonu i zmodyfikowanie go. Na przykład w projektancie programu Visual Studio `CheckBox` WPF zaznacz kontrolkę, a następnie kliknij prawym przyciskiem myszy i wybierz pozycję **Edytuj szablon** > **Utwórz kopię**. To polecenie generuje *styl definiujący szablon*.
 
 ```xaml
 <Style x:Key="CheckBoxStyle1" TargetType="{x:Type CheckBox}">
@@ -97,21 +97,21 @@ Projektanci zazwyczaj umożliwiają utworzenie kopii istniejącego szablonu i zm
 ... content removed to save space ...
 ```
 
-Edytowanie kopii szablonu to świetny sposób, aby dowiedzieć się, jak działają szablony. Zamiast tworzyć nowy pusty szablon, łatwiej jest edytować kopię i zmienić kilka aspektów prezentacji wizualnej.
+Edytowanie kopii szablonu to doskonały sposób, aby dowiedzieć się, jak działają szablony. Zamiast tworzyć nowy pusty szablon, można łatwiej edytować kopię i zmieniać kilka aspektów prezentacji wizualnej.
 
-Na przykład zobacz [Tworzenie szablonu formantu](../themes/how-to-create-apply-template.md).
+Aby zapoznać się z przykładem, zobacz [Tworzenie szablonu dla kontrolki](../themes/how-to-create-apply-template.md).
 
-### <a name="templatebinding"></a>Powiązanie szablonów
+### <a name="templatebinding"></a>TemplateBinding
 
-Być może zauważyłeś, że zasób szablonu zdefiniowany w poprzedniej sekcji używa [rozszerzenia znaczników TemplateBinding](../../framework/wpf/advanced/templatebinding-markup-extension.md). A `TemplateBinding` jest zoptymalizowaną formą powiązania dla scenariuszy szablonów, analogiczną do powiązania skonstruowanego za pomocą `{Binding RelativeSource={RelativeSource TemplatedParent}}`programu . `TemplateBinding`jest przydatne dla wiązań części szablonu do właściwości formantu. Na przykład każdy formant ma <xref:System.Windows.Controls.Control.BorderThickness> właściwość. Użyj `TemplateBinding` a, aby zarządzać, który element w szablonie ma wpływ na to ustawienie formantu.
+Być może zauważono, że zasób szablonu zdefiniowany w poprzedniej sekcji używa [rozszerzenia znaczników TemplateBinding](../../framework/wpf/advanced/templatebinding-markup-extension.md). A `TemplateBinding` to zoptymalizowana postać powiązania dla scenariuszy szablonów, analogiczne do powiązania złożonego z `{Binding RelativeSource={RelativeSource TemplatedParent}}`. `TemplateBinding`przydaje się do powiązania części szablonu z właściwościami formantu. Na przykład każda kontrolka ma <xref:System.Windows.Controls.Control.BorderThickness> właściwość. Użyj elementu `TemplateBinding` , aby określić, który element w szablonie ma wpływ to ustawienie kontroli.
 
-### <a name="contentcontrol-and-itemscontrol"></a>Kontrola zawartości i elementyControl
+### <a name="contentcontrol-and-itemscontrol"></a>Elementu ContentControl i ItemsControl
 
-Jeśli <xref:System.Windows.Controls.ContentPresenter> a jest <xref:System.Windows.Controls.ControlTemplate> zadeklarowany <xref:System.Windows.Controls.ContentControl>w <xref:System.Windows.Controls.ContentPresenter> of, będzie <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> automatycznie <xref:System.Windows.Controls.ContentControl.Content%2A> powiązać z i właściwości. Podobnie, który <xref:System.Windows.Controls.ItemsPresenter> znajduje się <xref:System.Windows.Controls.ControlTemplate> w <xref:System.Windows.Controls.ItemsControl> woli automatycznie powiązać z <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> i <xref:System.Windows.Controls.ItemsControl.Items%2A> właściwości.
+Jeśli obiekt <xref:System.Windows.Controls.ContentPresenter> jest zadeklarowany w <xref:System.Windows.Controls.ControlTemplate> <xref:System.Windows.Controls.ContentControl>, <xref:System.Windows.Controls.ContentPresenter> zostanie automatycznie powiązany z właściwościami <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> i. <xref:System.Windows.Controls.ContentControl.Content%2A> Analogicznie, <xref:System.Windows.Controls.ItemsPresenter> to jest w <xref:System.Windows.Controls.ControlTemplate> ramach programu, <xref:System.Windows.Controls.ItemsControl> zostanie automatycznie powiązane z właściwościami <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> i <xref:System.Windows.Controls.ItemsControl.Items%2A> .
 
-## <a name="datatemplates"></a>Tablice z danymi
+## <a name="datatemplates"></a>Szablony datatemplates
 
-W tej przykładowej aplikacji <xref:System.Windows.Controls.ListBox> istnieje formant, który jest powiązany z listą zdjęć.
+W tej przykładowej aplikacji istnieje <xref:System.Windows.Controls.ListBox> formant, który jest powiązany z listą zdjęć.
 
 [!code-xaml[ListBox](~/samples/snippets/desktop-guide/wpf/styles-and-templates-intro/csharp/Window3.xaml#SnippetListBox)]
 
@@ -119,75 +119,75 @@ Obecnie <xref:System.Windows.Controls.ListBox> wygląda to następująco.
 
 ![ListBox przed zastosowaniem szablonu](./media/styles-and-templates-overview/stylingintro-listboxbefore.png "StylingIntro_ListBoxBefore")
 
-Większość formantów ma jakiś typ zawartości, a zawartość często pochodzi z danych, które są wiązane. W tym przykładzie dane są listą zdjęć. W WPF, należy <xref:System.Windows.DataTemplate> użyć do zdefiniowania wizualnej reprezentacji danych. Zasadniczo to, co <xref:System.Windows.DataTemplate> można umieścić w określa, jak dane wyglądają w renderowanej aplikacji.
+Większość formantów ma pewien typ zawartości i ta zawartość często pochodzi z danych, do których są powiązane. W tym przykładzie dane są listą zdjęć. W programie WPF należy użyć <xref:System.Windows.DataTemplate> do zdefiniowania wizualnej reprezentacji danych. W zasadzie zawartość umieszczona w programie <xref:System.Windows.DataTemplate> decyduje o tym, jak wyglądają dane w renderowanej aplikacji.
 
-W naszej przykładowej `Photo` aplikacji każdy `Source` obiekt niestandardowy ma właściwość ciągu typu, która określa ścieżkę pliku obrazu. Obecnie obiekty zdjęć są wyświetlane jako ścieżki plików.
+W naszej przykładowej aplikacji każdy obiekt `Photo` niestandardowy ma `Source` właściwość String, która określa ścieżkę pliku obrazu. Obecnie obiekty fotograficzne są wyświetlane jako ścieżki plików.
 
 [!code-csharp[PhotoClass](~/samples/snippets/desktop-guide/wpf/styles-and-templates-intro/csharp/Photo.cs#PhotoClass)]
 [!code-vb[PhotoClass](~/samples/snippets/desktop-guide/wpf/styles-and-templates-intro/vb/Photo.vb#PhotoClass)]
 
-Aby zdjęcia były wyświetlane jako obrazy, tworzysz <xref:System.Windows.DataTemplate> jako zasób.
+Aby zdjęcia pojawiły się jako obrazy, tworzysz <xref:System.Windows.DataTemplate> jako zasób.
 
 [!code-xaml[DataTemplate](~/samples/snippets/desktop-guide/wpf/styles-and-templates-intro/csharp/Window4.xaml#SnippetDataTemplate)]
 
-Należy zauważyć, że <xref:System.Windows.DataTemplate.DataType%2A> nieruchomość <xref:System.Windows.Style.TargetType%2A> jest <xref:System.Windows.Style>podobna do właściwości . Jeśli <xref:System.Windows.DataTemplate> znajduje się w sekcji zasobów, <xref:System.Windows.DataTemplate.DataType%2A> po określeniu właściwości `x:Key`do <xref:System.Windows.DataTemplate> typu i pominąć , jest stosowany za każdym razem, gdy pojawi się ten typ. Zawsze masz możliwość przypisania <xref:System.Windows.DataTemplate> z `x:Key` an, a `StaticResource` następnie ustawić go <xref:System.Windows.DataTemplate> jako dla <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> właściwości, <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> które przyjmują typy, takie jak właściwość lub właściwość.
+Zauważ, że <xref:System.Windows.DataTemplate.DataType%2A> właściwość jest podobna do <xref:System.Windows.Style.TargetType%2A> właściwości. <xref:System.Windows.Style> Jeśli <xref:System.Windows.DataTemplate> znajduje się w sekcji Resources (zasoby), <xref:System.Windows.DataTemplate.DataType%2A> podczas określania właściwości do typu i pomijania `x:Key`, <xref:System.Windows.DataTemplate> zostanie zastosowana za każdym razem, gdy ten typ zostanie wyświetlony. Zawsze masz <xref:System.Windows.DataTemplate> opcję przypisywania za pomocą `x:Key` a, a następnie ustaw ją jako `StaticResource` dla właściwości, które przyjmują <xref:System.Windows.DataTemplate> typy, takich jak <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> właściwość lub <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> właściwość.
 
-Zasadniczo <xref:System.Windows.DataTemplate> w powyższym przykładzie definiuje się, `Photo` że gdy istnieje <xref:System.Windows.Controls.Image> obiekt, <xref:System.Windows.Controls.Border>powinien pojawić się jako wewnątrz . Dzięki <xref:System.Windows.DataTemplate>temu nasza aplikacja wygląda teraz tak.
+Zasadniczo, <xref:System.Windows.DataTemplate> w powyższym przykładzie definiuje, że za każdym razem `Photo` , gdy istnieje obiekt, powinien pojawić się jako <xref:System.Windows.Controls.Image> wewnątrz <xref:System.Windows.Controls.Border>. Dzięki temu <xref:System.Windows.DataTemplate>Nasza aplikacja wygląda teraz następująco.
 
-![Zdjęcie](./media/styles-and-templates-overview/stylingintro-photosasimages.png "StylingIntro_PhotosAsImages")
+![Obraz Zdjęcia](./media/styles-and-templates-overview/stylingintro-photosasimages.png "StylingIntro_PhotosAsImages")
 
-Model szablonów danych zawiera inne funkcje. Na przykład, jeśli są wyświetlane dane zbierania, <xref:System.Windows.Controls.HeaderedItemsControl> który zawiera <xref:System.Windows.Controls.Menu> inne <xref:System.Windows.Controls.TreeView>kolekcje przy <xref:System.Windows.HierarchicalDataTemplate>użyciu typu, takich jak a lub , istnieje . Inną funkcją tworzenia szablonów <xref:System.Windows.Controls.DataTemplateSelector>danych jest , <xref:System.Windows.DataTemplate> który pozwala wybrać do użycia w oparciu o niestandardową logikę. Aby uzyskać więcej informacji, zobacz [Omówienie tworzenia szablonów danych](../../framework/wpf/data/data-templating-overview.md), który zawiera bardziej szczegółowe omówienie różnych funkcji tworzenia szablonów danych.
+Model tworzenia szablonów danych udostępnia inne funkcje. Na przykład, Jeśli wyświetlasz dane kolekcji zawierające inne kolekcje przy <xref:System.Windows.Controls.HeaderedItemsControl> użyciu typu <xref:System.Windows.Controls.Menu> <xref:System.Windows.Controls.TreeView>, takiego jak lub, istnieje. <xref:System.Windows.HierarchicalDataTemplate> Inna funkcja tworzenia szablonów danych to <xref:System.Windows.Controls.DataTemplateSelector>, co umożliwia wybranie <xref:System.Windows.DataTemplate> użycia na podstawie logiki niestandardowej. Aby uzyskać więcej informacji, zobacz [Omówienie usługi Data tworzenia szablonów](../../framework/wpf/data/data-templating-overview.md), która zapewnia bardziej szczegółowe omówienie różnych funkcji tworzenia szablonów danych.
 
 ## <a name="triggers"></a>Wyzwalacze
 
-Wyzwalacz ustawia właściwości lub uruchamia akcje, takie jak animacja, gdy zmienia się wartość właściwości lub gdy zdarzenie jest wywoływane. <xref:System.Windows.Style>, <xref:System.Windows.Controls.ControlTemplate>a <xref:System.Windows.DataTemplate> wszystkie `Triggers` mają właściwość, która może zawierać zestaw wyzwalaczy. Istnieje kilka typów wyzwalaczy.
+Wyzwalacz ustawia właściwości lub uruchamia akcje, takie jak animacja, gdy zmienia się wartość właściwości lub gdy zdarzenie jest zgłaszane. <xref:System.Windows.Style>, <xref:System.Windows.Controls.ControlTemplate>, i <xref:System.Windows.DataTemplate> wszystkie mają `Triggers` właściwość, która może zawierać zestaw wyzwalaczy. Istnieje kilka typów wyzwalaczy.
 
-### <a name="propertytriggers"></a>WłaściwościTriggers
+### <a name="propertytriggers"></a>PropertyTriggers
 
-A, <xref:System.Windows.Trigger> który ustawia wartości właściwości lub uruchamia akcje na podstawie wartości właściwości jest nazywany wyzwalacz właściwości.
+A <xref:System.Windows.Trigger> , który ustawia wartości właściwości lub uruchamia akcje na podstawie wartości właściwości, jest nazywany wyzwalaczem właściwości.
 
-Aby zademonstrować sposób używania wyzwalaczy <xref:System.Windows.Controls.ListBoxItem> właściwości, można zrobić każdy częściowo przezroczysty, chyba że jest zaznaczone. Poniższy styl <xref:System.Windows.UIElement.Opacity%2A> ustawia wartość <xref:System.Windows.Controls.ListBoxItem> `0.5`a do . Gdy <xref:System.Windows.Controls.ListBoxItem.IsSelected%2A> właściwość `true`jest , <xref:System.Windows.UIElement.Opacity%2A> jednak `1.0`jest ustawiona na .
+Aby zademonstrować sposób używania wyzwalaczy właściwości, można wprowadzać każdy <xref:System.Windows.Controls.ListBoxItem> częściowo przezroczysty, chyba że jest zaznaczone. Następujący styl ustawia <xref:System.Windows.UIElement.Opacity%2A> wartość <xref:System.Windows.Controls.ListBoxItem> do. `0.5` Gdy <xref:System.Windows.Controls.ListBoxItem.IsSelected%2A> właściwość jest `true`, <xref:System.Windows.UIElement.Opacity%2A> jest ustawiona na. `1.0`
 
 [!code-xaml[PropertyTrigger](~/samples/snippets/desktop-guide/wpf/styles-and-templates-intro/csharp/Window5.xaml#SnippetPropertyTrigger)]
 
-W tym <xref:System.Windows.Trigger> przykładzie użyto do ustawiania <xref:System.Windows.Trigger> wartości właściwości, <xref:System.Windows.TriggerBase.EnterActions%2A> <xref:System.Windows.TriggerBase.ExitActions%2A> ale należy zauważyć, że klasa ma również właściwości i, które umożliwiają wyzwalacz do wykonywania akcji.
+W tym przykładzie używa <xref:System.Windows.Trigger> do ustawiania wartości właściwości, ale należy pamiętać, że <xref:System.Windows.Trigger> Klasa ma również właściwości <xref:System.Windows.TriggerBase.EnterActions%2A> i <xref:System.Windows.TriggerBase.ExitActions%2A> , które umożliwiają wyzwalaczowi wykonywanie akcji.
 
-Należy zauważyć, <xref:System.Windows.FrameworkElement.MaxHeight%2A> że <xref:System.Windows.Controls.ListBoxItem> właściwość `75`jest ustawiona na . Na poniższej ilustracji trzeci element jest zaznaczonym elementem.
+Zauważ, że <xref:System.Windows.FrameworkElement.MaxHeight%2A> Właściwość <xref:System.Windows.Controls.ListBoxItem> jest ustawiona na `75`. Na poniższej ilustracji trzeci element to wybrany element.
 
-![Stylizowana lista Wyświetl](./media/styles-and-templates-overview/stylingintro-triggers.png "StylingIntro_triggers")
+![Styl elementu ListView](./media/styles-and-templates-overview/stylingintro-triggers.png "StylingIntro_triggers")
 
-### <a name="eventtriggers-and-storyboards"></a>EventTriggers i scenorysy
+### <a name="eventtriggers-and-storyboards"></a>Eventtriggers i Scenorysy
 
-Innym typem <xref:System.Windows.EventTrigger>wyzwalacza jest , który uruchamia zestaw akcji na podstawie wystąpienia zdarzenia. Na przykład następujące <xref:System.Windows.EventTrigger> obiekty określają, że po <xref:System.Windows.Controls.ListBoxItem>wejściu <xref:System.Windows.FrameworkElement.MaxHeight%2A> wskaźnika myszy do `90` właściwości `0.2` animuje się do wartości z okresu ponad drugiego. Gdy mysz odchodzi od elementu, właściwość zwraca oryginalną `1` wartość w okresie sekundy. Należy zauważyć, jak nie <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> jest konieczne <xref:System.Windows.ContentElement.MouseLeave> określenie wartości animacji. Jest to spowodowane animacji jest w stanie śledzić oryginalną wartość.
+Inny typ wyzwalacza to <xref:System.Windows.EventTrigger>, który uruchamia zestaw akcji na podstawie wystąpienia zdarzenia. Na przykład <xref:System.Windows.EventTrigger> następujące obiekty określają, że gdy wskaźnik myszy zostanie przesunięty <xref:System.Windows.Controls.ListBoxItem>do, <xref:System.Windows.FrameworkElement.MaxHeight%2A> właściwość jest animowany do wartości `90` w ciągu `0.2` drugiego okresu. Gdy wskaźnik myszy zostanie przesunięty z elementu, właściwość wraca do oryginalnej wartości w ciągu `1` sekundy. Należy zauważyć, że nie jest konieczne określenie <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> wartości dla <xref:System.Windows.ContentElement.MouseLeave> animacji. Dzieje się tak, ponieważ animacja jest w stanie śledzić oryginalną wartość.
 
 [!code-xaml[StyleEventTriggers](~/samples/snippets/desktop-guide/wpf/styles-and-templates-intro/csharp/Window6.xaml#SnippetStyleEventTriggers)]
 
-Aby uzyskać więcej informacji, zobacz [omówienie scenoki](../../framework/wpf/graphics-multimedia/storyboards-overview.md).
+Aby uzyskać więcej informacji, zobacz [Omówienie scenorysów](../../framework/wpf/graphics-multimedia/storyboards-overview.md).
 
 Na poniższej ilustracji mysz wskazuje trzeci element.
 
-![Przykładowy zrzut ekranu przedstawiający styl](./media/styles-and-templates-overview/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")
+![Przykładowy zrzut ekranu z stylem](./media/styles-and-templates-overview/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")
 
-### <a name="multitriggers-datatriggers-and-multidatatriggers"></a>MultiTriggers, DataTriggers i MultiDataTriggers
+### <a name="multitriggers-datatriggers-and-multidatatriggers"></a>Wielowyzwalacze, DataTriggers i MultiDataTriggers
 
-Oprócz <xref:System.Windows.Trigger> i <xref:System.Windows.EventTrigger>, istnieją inne rodzaje wyzwalaczy. <xref:System.Windows.MultiTrigger>umożliwia ustawienie wartości właściwości na podstawie wielu warunków. Używasz <xref:System.Windows.DataTrigger> <xref:System.Windows.MultiDataTrigger> i gdy właściwość warunku jest powiązana z danymi.
+Oprócz <xref:System.Windows.Trigger> i <xref:System.Windows.EventTrigger>, istnieją inne typy wyzwalaczy. <xref:System.Windows.MultiTrigger>umożliwia ustawienie wartości właściwości na podstawie wielu warunków. Używasz <xref:System.Windows.DataTrigger> i <xref:System.Windows.MultiDataTrigger> gdy właściwość warunku jest powiązany z danymi.
 
 ## <a name="visual-states"></a>Stany wizualne
 
-Formanty są zawsze w określonym **stanie**. Na przykład, gdy mysz przesuwa się nad powierzchnią formantu, formant jest uważany za w stanie . `MouseOver` Formant bez określonego stanu jest uważany `Normal` za w stanie wspólnego. Państwa członkowskie są podzielone na grupy, a wcześniej wymienione `CommonStates`państwa są częścią grupy państwowej. Większość kontrole ma dwie `CommonStates` `FocusStates`grupy państw: i . Z każdej grupy stanów zastosowanej do formantu formant jest zawsze `CommonStates.MouseOver` `FocusStates.Unfocused`w jednym stanie każdej grupy, na przykład i . Jednak formant nie może znajdować się w dwóch różnych `CommonStates.Normal` stanach w tej samej grupie, takich jak i `CommonStates.Disabled`. Oto tabela stanów, które większość formantów rozpoznaje i używa.
+Kontrolki są zawsze w określonym **stanie**. Na przykład, gdy wskaźnik myszy przesuwa się nad powierzchnią kontrolki, formant jest uznawany za wspólny w stanie `MouseOver`. Kontrolka bez określonego stanu jest traktowana jako wspólna `Normal` . Stany są podzielone na grupy, a poprzednio wymienione Stany są częścią grupy `CommonStates`Stanów. Większość formantów ma dwie grupy Stanów `CommonStates` : `FocusStates`i. Dla każdej grupy Stanów zastosowanej do kontrolki zawsze w jednym stanie każdej grupy, takiej jak `CommonStates.MouseOver` i. `FocusStates.Unfocused` Jednak kontrolka nie może znajdować się w dwóch różnych stanach w ramach tej samej `CommonStates.Normal` grupy `CommonStates.Disabled`, takiej jak i. Poniżej znajduje się tabela Stanów, która rozpoznaje i używa.
 
-| Nazwa visualstate | Nazwa grupy programu VisualStateGroup | Opis |
+| Nazwa stanu wizualnego | Nazwa element VisualStateGroup | Opis |
 | ---------------- | --------------------- | ----------- |
-| Normalne           | CommonStates (CommonStates)          | Stan domyślny. |
-| Mouseover        | CommonStates (CommonStates)          | Wskaźnik myszy jest umieszczony nad formantem. |
-| Naciśnięte          | CommonStates (CommonStates)          | Formant jest wciśnięty. |
-| Disabled (Wyłączony)         | CommonStates (CommonStates)          | Formant jest wyłączony. |
-| Ustawiono fokus          | FocusStates (Stan ostrości)           | Formant ma fokus. |
-| Unfocused        | FocusStates (Stan ostrości)           | Formant nie ma fokusu. |
+| Normalne           | CommonStates          | Stan domyślny. |
+| MouseOver        | CommonStates          | Wskaźnik myszy znajduje się nad kontrolką. |
+| Naciśnięte          | CommonStates          | Kontrolka zostanie naciśnięty. |
+| Disabled (Wyłączony)         | CommonStates          | Kontrolka jest wyłączona. |
+| Ustawiono fokus          | FocusStates           | Kontrolka ma fokus. |
+| Bez fokusu        | FocusStates           | Kontrolka nie ma fokusu. |
 
-Definiując <xref:System.Windows.VisualStateManager?displayProperty=fullName> na element główny szablonu formantu, można wyzwolić animacje, gdy formant wejdzie w określony stan. Deklaruje, `VisualStateManager` które kombinacje <xref:System.Windows.VisualStateGroup> <xref:System.Windows.VisualState> i oglądać. Gdy formant wchodzi w stan obserwowanego, `VisaulStateManager` uruchamiana jest animacja zdefiniowana przez.
+Definiując a <xref:System.Windows.VisualStateManager?displayProperty=fullName> na element główny szablonu kontrolki, można wyzwolić animacje, gdy kontrolka przechodzi do określonego stanu. `VisualStateManager` Deklaruje, które kombinacje <xref:System.Windows.VisualState> <xref:System.Windows.VisualStateGroup> i do oglądania. Gdy kontrolka przejdzie do stanu czujka, animacja zdefiniowana przez `VisaulStateManager` jest uruchamiana.
 
-Na przykład następujący kod XAML `CommonStates.MouseOver` obserwuje stan, aby animować `backgroundElement`kolor wypełnienia elementu o nazwie . Gdy formant powraca `CommonStates.Normal` do stanu, kolor wypełnienia `backgroundElement` elementu o nazwie jest przywracany.
+Na przykład poniższy kod XAML przeczujuje `CommonStates.MouseOver` stan w celu animowania koloru wypełnienia elementu o nazwie. `backgroundElement` Gdy kontrolka powróci do `CommonStates.Normal` stanu, kolor wypełnienia elementu o nazwie `backgroundElement` zostanie przywrócony.
 
 ```xaml
 <ControlTemplate x:Key="roundbutton" TargetType="Button">
@@ -212,21 +212,21 @@ Na przykład następujący kod XAML `CommonStates.MouseOver` obserwuje stan, aby
         ...
 ```
 
-Aby uzyskać więcej informacji na temat scenochło posmówek, zobacz [Omówienie scenoki .](../../framework/wpf/graphics-multimedia/storyboards-overview.md)
+Aby uzyskać więcej informacji na temat scenorysów, zobacz [Omówienie scenorysów](../../framework/wpf/graphics-multimedia/storyboards-overview.md).
 
-## <a name="shared-resources-and-themes"></a>Zasoby udostępnione i motywy
+## <a name="shared-resources-and-themes"></a>Udostępnione zasoby i motywy
 
-Typowa aplikacja WPF może mieć wiele zasobów interfejsu użytkownika, które są stosowane w całej aplikacji. Łącznie ten zestaw zasobów można uznać za motyw dla aplikacji. WPF WPF zapewnia obsługę pakowania zasobów interfejsu użytkownika jako motyw przy użyciu <xref:System.Windows.ResourceDictionary> słownika zasobów, który jest hermetyzowany jako klasa.
+Typowa aplikacja WPF może mieć wiele zasobów interfejsu użytkownika, które są stosowane w całej aplikacji. Zbiorczo ten zestaw zasobów może być traktowany jako motyw aplikacji. WPF zapewnia obsługę zasobów interfejsu użytkownika pakietu jako motywu przy użyciu słownika zasobów, który jest hermetyzowany jako <xref:System.Windows.ResourceDictionary> Klasa.
 
-Motywy WPF są definiowane przy użyciu mechanizmu stylizowania i szablonów, który udostępnia WPF w celu dostosowania wizualizacji dowolnego elementu.
+Motywy WPF są definiowane przy użyciu stylu i mechanizmu tworzenia szablonów, który jest udostępniany przez WPF do dostosowywania wizualizacji dowolnego elementu.
 
-Zasoby motywu WPF są przechowywane w słownikach osadzonych zasobów. Te słowniki zasobów muszą być osadzone w zestawie podpisane i mogą być osadzone w tym samym zestawie co sam kod lub w zestawie side-by-side. W przypadku presentationframework.dll zestaw, który zawiera formanty WPF, zasoby motywu znajdują się w serii zestawów side-by-side.
+Zasoby motywów WPF są przechowywane w osadzonych słownikach zasobów. Te słowniki zasobów muszą być osadzone w podpisanym zestawie i mogą być osadzone w tym samym zestawie co sam kod lub w zestawie równoległym. Dla platformie docelowej. dll, zestaw, który zawiera formanty WPF, zasoby motywu znajdują się w szeregu równoległych zestawów.
 
-Motyw staje się ostatnim miejscem, w którym można szukać podczas wyszukiwania stylu elementu. Zazwyczaj wyszukiwanie rozpocznie się od przechodzenia w górę drzewa elementów w poszukiwaniu odpowiedniego zasobu, a następnie poszukaj w kolekcji zasobów aplikacji i wreszcie zapytanie systemu. Daje to deweloperom aplikacji możliwość ponownego zdefiniowania stylu dla dowolnego obiektu na poziomie drzewa lub aplikacji przed osiągnięciem motywu.
+Motyw jest ostatnim miejscem, aby wyglądać podczas wyszukiwania stylu elementu. Zazwyczaj wyszukiwanie rozpocznie się, przeszukiwanie drzewa elementów dla odpowiedniego zasobu, a następnie wyszukanie w kolekcji zasobów aplikacji i zakończenie zapytania do systemu. Dzięki temu deweloperzy aplikacji mogą ponownie zdefiniować styl dla każdego obiektu na poziomie drzewa lub aplikacji przed osiągnięciem motywu.
 
-Słowniki zasobów można zdefiniować jako pojedyncze pliki, które umożliwiają ponowne użycie motywu w wielu aplikacjach. Można również utworzyć wymienne motywy, definiując wiele słowników zasobów, które zapewniają te same typy zasobów, ale z różnymi wartościami. Ponowne zdefiniowanie tych stylów lub innych zasobów na poziomie aplikacji jest zalecane podejście do skórowania aplikacji.
+Słowniki zasobów można definiować jako pojedyncze pliki, które umożliwiają ponowne użycie motywu w wielu aplikacjach. Można również tworzyć motywy do wymiany przez definiowanie wielu słowników zasobów, które udostępniają te same typy zasobów, ale z różnymi wartościami. Zalecanym podejściem do nakładania się aplikacji jest ponowne zdefiniowanie tych stylów lub innych zasobów na poziomie aplikacji.
 
-Aby udostępnić zestaw zasobów, w tym style i szablony, między aplikacjami, <xref:System.Windows.ResourceDictionary> można utworzyć `shared.xaml` plik XAML i zdefiniować, który zawiera odwołanie do pliku.
+Aby udostępnić zestaw zasobów, w tym style i szablony, między aplikacjami, można utworzyć plik XAML i zdefiniować <xref:System.Windows.ResourceDictionary> zawierający odwołanie do `shared.xaml` pliku.
 
 ```xaml
 <ResourceDictionary.MergedDictionaries>
@@ -234,14 +234,14 @@ Aby udostępnić zestaw zasobów, w tym style i szablony, między aplikacjami, <
 </ResourceDictionary.MergedDictionaries>
 ```
 
-Jest to udostępnianie `shared.xaml`, który sam <xref:System.Windows.ResourceDictionary> definiuje, który zawiera zestaw zasobów stylu i pędzla, który umożliwia formantów w aplikacji, aby mieć spójny wygląd.
+Jest to współużytkowanie `shared.xaml`, które definiuje, <xref:System.Windows.ResourceDictionary> który zawiera zestaw stylów i zasobów pędzla, co umożliwia kontrolowanie spójnego wyglądu formantów w aplikacji.
 
-Aby uzyskać więcej informacji, zobacz [Scalone słowniki zasobów](../../framework/wpf/advanced/merged-resource-dictionaries.md).
+Aby uzyskać więcej informacji, zobacz [scalone słowniki zasobów](../../framework/wpf/advanced/merged-resource-dictionaries.md).
 
-Jeśli tworzysz motyw dla formantu niestandardowego, zobacz **Definiowanie zasobów w** sekcji poziom motywu w [przeglądzie tworzenia formantu](../../framework/wpf/controls/control-authoring-overview.md#defining-resources-at-the-theme-level).
+Jeśli tworzysz motyw dla kontrolki niestandardowej, zapoznaj się z sekcją **Definiowanie zasobów na poziomie motywu** w temacie [Omówienie tworzenia kontrolek](../../framework/wpf/controls/control-authoring-overview.md#defining-resources-at-the-theme-level).
 
 ## <a name="see-also"></a>Zobacz też
 
 - [Pakuj URI w WPF](../../framework/wpf/app-development/pack-uris-in-wpf.md)
 - [Instrukcje: znajdowanie elementów generowanych przez ControlTemplate](../../framework/wpf/controls/how-to-find-controltemplate-generated-elements.md)
-- [Znajdź elementy generowane przez tablicę danych](../../framework/wpf/data/how-to-find-datatemplate-generated-elements.md)
+- [Znajdowanie elementów generowanych przez szablon](../../framework/wpf/data/how-to-find-datatemplate-generated-elements.md)

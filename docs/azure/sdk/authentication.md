@@ -1,6 +1,6 @@
 ---
-title: Uwierzytelnij się za pomocą bibliotek platformy Azure dla platformy .NET
-description: Uwierzytelnij się w bibliotekach platformy Azure dla platformy .NET
+title: Uwierzytelnianie za pomocą bibliotek platformy Azure dla platformy .NET
+description: Uwierzytelnianie w bibliotekach platformy Azure dla platformy .NET
 ms.date: 08/22/2018
 ms.custom: azure-sdk-dotnet
 ms.openlocfilehash: f6af813cd1423be8784b769b272756b2c8258392
@@ -10,11 +10,11 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 04/17/2020
 ms.locfileid: "82072152"
 ---
-# <a name="authenticate-with-the-azure-libraries-for-net"></a>Uwierzytelnij się za pomocą bibliotek platformy Azure dla platformy .NET
+# <a name="authenticate-with-the-azure-libraries-for-net"></a>Uwierzytelnianie za pomocą bibliotek platformy Azure dla platformy .NET
 
 ## <a name="connect-to-services-with-connection-strings"></a>Łączenie się z usługami przy użyciu parametrów połączenia
 
-Większość bibliotek usług platformy Azure wymaga ciągu połączenia lub kluczy do uwierzytelniania. Na przykład baza danych SQL używa standardowego ciągu połączenia SQL:
+Większość bibliotek usługi platformy Azure wymaga parametrów połączenia lub kluczy do uwierzytelnienia. Na przykład SQL Database używa standardowych parametrów połączenia SQL:
 
 ```csharp
 var builder = new SqlConnectionStringBuilder();
@@ -45,9 +45,9 @@ var account = CloudStorageAccount.Parse(storageConnectionString);
 // Do things with the account here...
 ```
 
-Parametry połączenia usługi są używane w innych usługach platformy Azure, takich jak [CosmosDB](https://docs.microsoft.com/azure/cosmos-db/), [Azure Cache for Redis](https://docs.microsoft.com/azure/azure-cache-for-redis/cache-dotnet-how-to-use-azure-redis-cache)i [Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues). Te ciągi można uzyskać przy użyciu witryny Azure portal, interfejsu wiersza polecenia lub programu PowerShell. Można również użyć bibliotek zarządzania platformy Azure dla platformy .NET do wykonywania zapytań o zasoby do tworzenia ciągów połączeń w kodzie.
+Parametry połączenia usługi są używane w innych usługach platformy Azure, takich jak [CosmosDB](https://docs.microsoft.com/azure/cosmos-db/), [pamięć podręczna platformy Azure dla Redis](https://docs.microsoft.com/azure/azure-cache-for-redis/cache-dotnet-how-to-use-azure-redis-cache)i [Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues). Te ciągi można pobrać przy użyciu Azure Portal, interfejsu wiersza polecenia lub programu PowerShell. Za pomocą bibliotek zarządzania platformy Azure dla platformy .NET można także wysyłać zapytania do zasobów w celu tworzenia parametrów połączenia w kodzie.
 
-Ten fragment kodu używa bibliotek zarządzania do utworzenia ciągu połączenia konta magazynu:
+Ten fragment kodu używa bibliotek zarządzania do tworzenia parametrów połączenia konta magazynu:
 
 ```csharp
 // Get a storage account
@@ -70,22 +70,22 @@ var account = CloudStorageAccount.Parse(storageConnectionString);
 
 Inne biblioteki wymagają, aby aplikacja działała z [jednostką usługi](https://docs.microsoft.com/azure/active-directory/develop/active-directory-application-objects), która autoryzuje aplikację do działania z udzielonymi poświadczeniami. Ta konfiguracja jest podobna do kroków uwierzytelniania opartego na obiektach dla wymienionej poniżej biblioteki zarządzania.
 
-## <a name="azure-management-libraries-for-net-authentication"></a><a name="mgmt-auth"></a>Biblioteki zarządzania platformy Azure dla uwierzytelniania .NET
+## <a name="azure-management-libraries-for-net-authentication"></a><a name="mgmt-auth"></a>Biblioteki zarządzania platformy Azure dla uwierzytelniania platformy .NET
 
 [!include[Create service principal](../includes/create-sp.md)]
 
-Teraz, gdy podmiot zabezpieczeń usługi jest tworzony, dwie opcje są dostępne do uwierzytelniania do jednostki usługi do tworzenia zasobów i zarządzania nimi.
+Po utworzeniu jednostki usługi dostępne są dwie opcje uwierzytelniania dla jednostki usługi w celu utworzenia zasobów i zarządzania nimi.
 
-Dla obu opcji należy dodać następujące pakiety NuGet do projektu.
+W przypadku obu opcji należy dodać następujące pakiety NuGet do projektu.
 
 ```powershell
 Install-Package Microsoft.Azure.Management.Fluent
 Install-Package Microsoft.Azure.Management.ResourceManager.Fluent
 ```
 
-### <a name="authenticate-with-token-credentials"></a>Uwierzytelnij się przy użyciu poświadczeń tokenu
+### <a name="authenticate-with-token-credentials"></a>Uwierzytelnianie przy użyciu poświadczeń tokenu
 
-Pierwszą metodą jest tworzenie obiektu poświadczeń tokenu w kodzie. Poświadczenia należy bezpiecznie przechowywać w pliku konfiguracji, rejestrze lub usłudze Azure KeyVault.
+Pierwsza metoda polega na utworzeniu obiektu poświadczeń tokenu w kodzie. Poświadczenia powinny być bezpiecznie przechowywane w pliku konfiguracyjnym, rejestrze lub w magazynie kluczy platformy Azure.
 
 ```csharp
 var credentials = SdkContext.AzureCredentialsFactory
@@ -95,9 +95,9 @@ var credentials = SdkContext.AzureCredentialsFactory
     AzureEnvironment.AzureGlobalCloud);
 ```
 
-Użyj *clientId*, *clientSecret*i *tenantId* wartości z danych wyjściowych JSON podczas tworzenia jednostki usługi.
+Podczas tworzenia nazwy głównej usługi Użyj wartości *clientId*, *clientSecret*i *TENANTID* z danych wyjściowych JSON.
 
-Następnie utwórz `Azure` obiekt punktu wejścia, aby rozpocząć pracę z interfejsem API:
+Następnie Utwórz obiekt punktu `Azure` wejścia, aby rozpocząć pracę z interfejsem API:
 
 ```csharp
 var azure = Microsoft.Azure.Management.Fluent.Azure
@@ -108,11 +108,11 @@ var azure = Microsoft.Azure.Management.Fluent.Azure
 
 ### <a name="file-based-authentication"></a><a name="mgmt-file"></a>Uwierzytelnianie oparte na plikach
 
-Uwierzytelnianie oparte na plikach umożliwia umieszczenie poświadczeń jednostki usługi w pliku tekstowym i zabezpieczenie ich w systemie plików.
+Uwierzytelnianie oparte na plikach umożliwia umieszczenie poświadczeń jednostki usługi w zwykłym pliku tekstowym i zabezpieczenie go w systemie plików.
 
 [!include[File-based authentication](../includes/file-based-auth.md)]
 
-Przeczytaj zawartość pliku i utwórz `Azure` obiekt punktu wejścia, aby rozpocząć pracę z interfejsem API:
+Odczytaj zawartość pliku i Utwórz obiekt punktu `Azure` wejścia, aby rozpocząć pracę z interfejsem API:
 
 ```csharp
 // pull in the location of the authentication properties file from the environment

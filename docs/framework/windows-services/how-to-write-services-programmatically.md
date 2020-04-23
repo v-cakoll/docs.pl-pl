@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Programowane pisanie usług'
+title: 'Porady: programowane pisanie usług'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053560"
 ---
-# <a name="how-to-write-services-programmatically"></a>Instrukcje: Programowane pisanie usług
+# <a name="how-to-write-services-programmatically"></a>Porady: programowane pisanie usług
 Jeśli zdecydujesz się nie używać szablonu projektu usługi systemu Windows, możesz napisać własne usługi, konfigurując dziedziczenie i inne elementy infrastruktury samodzielnie. W przypadku programistycznego tworzenia usługi należy wykonać kilka czynności, dla których szablon mógłby obsłużyć:  
   
 - Należy skonfigurować klasę usługi, aby dziedziczyć z <xref:System.ServiceProcess.ServiceBase> klasy.  
   
-- Należy utworzyć `Main` metodę dla projektu usługi, który definiuje usługi do uruchomienia i <xref:System.ServiceProcess.ServiceBase.Run%2A> wywołuje metodę z nich.  
+- Należy utworzyć `Main` metodę dla projektu usługi, który definiuje usługi do uruchomienia i wywołuje <xref:System.ServiceProcess.ServiceBase.Run%2A> metodę z nich.  
   
-- Należy zastąpić <xref:System.ServiceProcess.ServiceBase.OnStart%2A> procedury i <xref:System.ServiceProcess.ServiceBase.OnStop%2A> wprowadzić dowolny kod, który ma zostać uruchomiony.  
+- Należy zastąpić procedury <xref:System.ServiceProcess.ServiceBase.OnStart%2A> i <xref:System.ServiceProcess.ServiceBase.OnStop%2A> wprowadzić dowolny kod, który ma zostać uruchomiony.  
   
 ### <a name="to-write-a-service-programmatically"></a>Aby programowo napisać usługę  
   
@@ -47,7 +47,7 @@ Jeśli zdecydujesz się nie używać szablonu projektu usługi systemu Windows, 
      [!code-csharp[VbRadconService#8](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#8)]
      [!code-vb[VbRadconService#8](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#8)]  
   
-4. `Main` Utwórz metodę dla klasy i użyj jej do zdefiniowania usługi, która będzie zawierać Klasa; `userService1` jest nazwą klasy:  
+4. Utwórz `Main` metodę dla klasy i użyj jej do zdefiniowania usługi, która będzie zawierać Klasa; `userService1` jest nazwą klasy:  
   
      [!code-csharp[VbRadconService#9](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#9)]
      [!code-vb[VbRadconService#9](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#9)]  
@@ -59,21 +59,21 @@ Jeśli zdecydujesz się nie używać szablonu projektu usługi systemu Windows, 
   
 6. Zastąp wszystkie inne metody, dla których chcesz zdefiniować niestandardowe przetwarzanie, i napisz kod, aby określić działania, które usługa powinna wykonać w każdym przypadku.  
   
-7. Dodanie niezbędnych instalatorów dla aplikacji usługi. Aby uzyskać więcej informacji, zobacz [jak: Dodaj Instalatory do aplikacji](how-to-add-installers-to-your-service-application.md)usługi.  
+7. Dodanie niezbędnych instalatorów dla aplikacji usługi. Aby uzyskać więcej informacji, zobacz [jak: Dodawanie instalatorów do aplikacji usługi](how-to-add-installers-to-your-service-application.md).  
   
 8. Skompiluj projekt, wybierając opcję **Kompiluj rozwiązanie** w menu **kompilacja** .  
   
     > [!NOTE]
     > Nie należy naciskać klawisza F5, aby uruchomić projekt — nie można uruchomić projektu usługi w ten sposób.  
   
-9. Utwórz projekt konfiguracji i akcje niestandardowe w celu zainstalowania usługi. Aby zapoznać się z przykładem, zobacz [Przewodnik: Tworzenie aplikacji usługi systemu Windows w projektancie](walkthrough-creating-a-windows-service-application-in-the-component-designer.md)składników.  
+9. Utwórz projekt konfiguracji i akcje niestandardowe w celu zainstalowania usługi. Aby zapoznać się z przykładem, zobacz [Przewodnik: Tworzenie aplikacji usługi systemu Windows w projektancie składników](walkthrough-creating-a-windows-service-application-in-the-component-designer.md).  
   
-10. Zainstaluj usługę. Aby uzyskać więcej informacji, zobacz [jak: Instalowanie i odinstalowywanie](how-to-install-and-uninstall-services.md)usług.  
+10. Zainstaluj usługę. Aby uzyskać więcej informacji, zobacz [jak: Instalowanie i odinstalowywanie usług](how-to-install-and-uninstall-services.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Wprowadzenie do aplikacji usług systemu Windows](introduction-to-windows-service-applications.md)
-- [Instrukcje: Tworzenie usług systemu Windows](how-to-create-windows-services.md)
-- [Instrukcje: Dodawanie instalatorów do aplikacji usługi](how-to-add-installers-to-your-service-application.md)
-- [Instrukcje: Rejestruj informacje o usługach](how-to-log-information-about-services.md)
-- [Przewodnik: Tworzenie aplikacji usługi systemu Windows w projektancie składników](walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+- [Porady: tworzenie usług systemu Windows](how-to-create-windows-services.md)
+- [Porady: dodawanie instalatorów od aplikacji usług](how-to-add-installers-to-your-service-application.md)
+- [Porady: rejestrowanie informacji o usługach](how-to-log-information-about-services.md)
+- [Przewodnik: tworzenie aplikacji usługowej systemu Windows w Projektancie składników](walkthrough-creating-a-windows-service-application-in-the-component-designer.md)

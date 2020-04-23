@@ -25,9 +25,9 @@ Tożsamość funkcji DLL składa się z następujących elementów:
   
 - Nazwa pliku DLL, w którym można znaleźć implementację  
   
- Na przykład określenie funkcji **MessageBox** w User32. dll identyfikuje funkcję (**MessageBox**) i jej lokalizację (User32. dll, User32 lub User32). Interfejs programowania aplikacji systemu Microsoft Windows (Windows API) może zawierać dwie wersje każdej funkcji, która obsługuje znaki i ciągi: 1-bajtowego znaku ANSI i 2-bajtowego znaku Unicode. Gdy nie zostanie określony, zestaw znaków reprezentowany przez pole <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> jest wartością domyślną ANSI. Niektóre funkcje mogą mieć więcej niż dwie wersje.  
+ Na przykład określenie funkcji **MessageBox** w User32. dll identyfikuje funkcję (**MessageBox**) i jej lokalizację (User32. dll, User32 lub User32). Interfejs programowania aplikacji systemu Microsoft Windows (Windows API) może zawierać dwie wersje każdej funkcji, która obsługuje znaki i ciągi: 1-bajtowego znaku ANSI i 2-bajtowego znaku Unicode. Gdy nie zostanie określony, zestaw znaków reprezentowany przez <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> pole jest wartością domyślną ANSI. Niektóre funkcje mogą mieć więcej niż dwie wersje.  
   
- **MessageBox** jest punktem wejścia ANSI dla funkcji **MessageBox** ; **MessageBoxW** to wersja Unicode. Nazwy funkcji dla określonej biblioteki DLL, takiej jak User32. dll, można wyświetlić, uruchamiając różne narzędzia wiersza polecenia. Na przykład można użyć `dumpbin /exports user32.dll` lub `link /dump /exports user32.dll` do uzyskania nazw funkcji.  
+ **MessageBox** jest punktem wejścia ANSI dla funkcji **MessageBox** ; **MessageBoxW** to wersja Unicode. Nazwy funkcji dla określonej biblioteki DLL, takiej jak User32. dll, można wyświetlić, uruchamiając różne narzędzia wiersza polecenia. Na przykład można użyć `dumpbin /exports user32.dll` lub `link /dump /exports user32.dll` , aby uzyskać nazwy funkcji.  
   
  Można zmienić nazwę funkcji niezarządzanej na dowolnie w kodzie, tak długo, jak mapowanie nowej nazwy do oryginalnego punktu wejścia w bibliotece DLL. Aby uzyskać instrukcje dotyczące zmiany nazwy niezarządzanej funkcji DLL w zarządzanym kodzie źródłowym, zobacz [Określanie punktu wejścia](specifying-an-entry-point.md).  
   
@@ -43,7 +43,7 @@ Tożsamość funkcji DLL składa się z następujących elementów:
   
  Aby uzyskać pełną dokumentację dotyczącą interfejsu API systemu Windows, zobacz zestaw SDK platformy. Przykłady, które demonstrują sposób konstruowania. Deklaracje oparte na sieci, które mają być używane z wywołaniem platformy, można znaleźć w temacie [kierowanie danych za pomocą wywołania platformy](marshaling-data-with-platform-invoke.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Wykorzystywanie niezarządzanych funkcji DLL](consuming-unmanaged-dll-functions.md)
 - [Określanie punktu wejścia](specifying-an-entry-point.md)

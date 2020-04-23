@@ -18,7 +18,7 @@ ms.locfileid: "73119884"
 # <a name="how-to-create-an-application-domain"></a>Porady: tworzenie domeny aplikacji
 Host środowiska uruchomieniowego języka wspólnego automatycznie tworzy domeny aplikacji, gdy są potrzebne. Można jednak tworzyć własne domeny aplikacji i ładować je do tych zestawów, które mają być zarządzane osobiście. Możesz również utworzyć domeny aplikacji, z których wykonywany jest kod.  
   
- Tworzysz nową domenę aplikacji przy użyciu jednej **z przeciążonych** metod w klasie <xref:System.AppDomain?displayProperty=nameWithType>. Możesz nadać domenie aplikacji nazwę i odwołać się do niej przy użyciu tej nazwy.  
+ Tworzysz nową domenę aplikacji przy użyciu jednej **z przeciążonych** metod w <xref:System.AppDomain?displayProperty=nameWithType> klasie. Możesz nadać domenie aplikacji nazwę i odwołać się do niej przy użyciu tej nazwy.  
   
  Poniższy przykład tworzy nową domenę aplikacji, przypisuje jej nazwę `MyDomain`, a następnie drukuje nazwę domeny hosta i nowo utworzoną domenę podrzędnej aplikacji do konsoli programu.  
   
@@ -27,7 +27,7 @@ Host środowiska uruchomieniowego języka wspólnego automatycznie tworzy domeny
  [!code-csharp[ADCreateDomain#2](../../../samples/snippets/csharp/VS_Snippets_CLR/ADCreateDomain/CS/source2.cs#2)]
  [!code-vb[ADCreateDomain#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/ADCreateDomain/VB/source2.vb#2)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Programowanie przy użyciu domen aplikacji](application-domains.md#programming-with-application-domains)
-- [Używanie domen aplikacji](use.md)
+- [Używanie domeny aplikacji](use.md)

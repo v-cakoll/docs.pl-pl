@@ -18,7 +18,7 @@ Jeśli zdecydujesz się zadeklarować typy modelu COM ręcznie, w zarządzanym k
   
 1. Zadeklaruj typy w języku, który jest zgodny z Common Language Specification (CLS) i skompiluj plik.  
   
-2. Wyeksportuj zestaw zawierający typy za pomocą [narzędzia Eksporter biblioteki typów (Tlbexp.exe).](../tools/tlbexp-exe-type-library-exporter.md)  
+2. Wyeksportuj zestaw zawierający typy z [eksporterem biblioteki typów (Tlbexp. exe)](../tools/tlbexp-exe-type-library-exporter.md).  
   
 3. Użyj wyeksportowanej biblioteki typów modelu COM jako podstawy do deklaracji typów zarządzanych zorientowanych na model COM.  
   
@@ -26,16 +26,16 @@ Jeśli zdecydujesz się zadeklarować typy modelu COM ręcznie, w zarządzanym k
   
 1. Zakładając, że posiadasz plik IDL lub plik biblioteki typów, musisz zdecydować, które klasy i interfejsy mają zostać dołączone do niestandardowej RCW. Możesz wykluczyć wszelkie typy, których nie zamierzasz używać w aplikacji bezpośrednio ani pośrednio.  
   
-2. Utwórz plik źródłowy w języku zgodnym ze specyfikacją CLS i zadeklaruj typy. Aby uzyskać pełny opis procesu konwersji importu, zobacz [Podsumowanie konwersji biblioteki typów](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100)) do zestawu. Skutecznie podczas tworzenia niestandardowego RCW, ręcznie wykonujesz działanie konwersji typu dostarczone przez [importera biblioteki typów (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md). W przykładzie znajdującym się w następnej sekcji pokazano typy w pliku IDL lub pliku biblioteki typów oraz odpowiadające typy w kodzie języka C#.  
+2. Utwórz plik źródłowy w języku zgodnym ze specyfikacją CLS i zadeklaruj typy. Aby uzyskać pełny opis procesu konwersji importu, zobacz [Podsumowanie konwersji typu Biblioteka na zestaw](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100)) . Efektywnie, podczas tworzenia niestandardowej OTOKi, ręcznie wykonujesz działanie konwersji typu dostarczone przez [importera biblioteki typów (Tlbimp. exe)](../tools/tlbimp-exe-type-library-importer.md). W przykładzie znajdującym się w następnej sekcji pokazano typy w pliku IDL lub pliku biblioteki typów oraz odpowiadające typy w kodzie języka C#.  
   
 3. Gdy deklaracje będą kompletne, skompiluj plik, tak jak kompilujesz dowolny plik z zarządzanym kodem źródłowym.  
   
-4. Podobnie jak w przypadku typów importowanych za pomocą narzędzia Tlbimp.exe, niektóre typy wymagają dodatkowych informacji, które możesz dodać bezpośrednio w kodzie. Aby uzyskać szczegółowe informacje, zobacz [Jak: Edytować zestawy Interop](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8zbc969t(v=vs.100)).  
+4. Podobnie jak w przypadku typów importowanych za pomocą narzędzia Tlbimp.exe, niektóre typy wymagają dodatkowych informacji, które możesz dodać bezpośrednio w kodzie. Aby uzyskać szczegółowe informacje, zobacz [jak: edytowanie zestawów międzyoperacyjnych](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8zbc969t(v=vs.100)).  
   
 ## <a name="example"></a>Przykład  
  W poniższym kodzie pokazano przykład interfejsu `ISATest` i klasy `SATest` napisane w języku IDL oraz odpowiadające typy w kodzie źródłowym języka C#.  
   
- **IDL lub plik biblioteki typu**  
+ **IDL lub plik biblioteki typów**  
   
 ```cpp
  [  
@@ -99,9 +99,9 @@ namespace SAServer
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Dostosowywanie otoki wywoławcze w czasie wykonywania](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100))
+- [Dostosowywanie wywoływanych otok środowiska uruchomieniowego](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100))
 - [Typy danych COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sak564ww(v=vs.100))
-- [Jak: Edycja zestawów Interop](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8zbc969t(v=vs.100))
-- [Podsumowanie konwersji biblioteki typów na podsumowanie konwersji zestawu](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
-- [Tlbimp.exe (importer biblioteki typów)](../tools/tlbimp-exe-type-library-importer.md)
-- [Tlbexp.exe (Eksporter biblioteki typów)](../tools/tlbexp-exe-type-library-exporter.md)
+- [Instrukcje: edytowanie zestawów międzyoperacyjnych](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8zbc969t(v=vs.100))
+- [Podsumowanie dotyczące konwersji biblioteki typów na zestaw](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
+- [Tlbimp. exe (Importer biblioteki typów)](../tools/tlbimp-exe-type-library-importer.md)
+- [Tlbexp. exe (Eksporter biblioteki typów)](../tools/tlbexp-exe-type-library-exporter.md)

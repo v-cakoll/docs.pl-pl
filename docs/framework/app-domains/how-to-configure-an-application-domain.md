@@ -17,7 +17,7 @@ ms.lasthandoff: 10/30/2019
 ms.locfileid: "73119906"
 ---
 # <a name="how-to-configure-an-application-domain"></a>Porady: konfigurowanie domeny aplikacji
-Możesz dostarczyć środowisko uruchomieniowe języka wspólnego z informacjami o konfiguracji dla nowej domeny aplikacji przy użyciu klasy <xref:System.AppDomainSetup>. W przypadku tworzenia własnych domen aplikacji najważniejszym właściwością jest <xref:System.AppDomainSetup.ApplicationBase%2A>. Inne właściwości **AppDomainSetup** są używane głównie przez hosty środowiska uruchomieniowego w celu skonfigurowania konkretnej domeny aplikacji.  
+Możesz dostarczyć środowisko uruchomieniowe języka wspólnego z informacjami o konfiguracji dla nowej domeny aplikacji przy użyciu <xref:System.AppDomainSetup> klasy. W przypadku tworzenia własnych domen aplikacji najważniejszym właściwość jest <xref:System.AppDomainSetup.ApplicationBase%2A>. Inne właściwości **AppDomainSetup** są używane głównie przez hosty środowiska uruchomieniowego w celu skonfigurowania konkretnej domeny aplikacji.  
   
  Właściwość **ApplicationBase** definiuje katalog główny aplikacji. Gdy środowisko uruchomieniowe musi spełniać żądanie typu, sondy dla zestawu zawierającego typ w katalogu określonym przez właściwość **ApplicationBase** .  
   
@@ -31,7 +31,7 @@ Możesz dostarczyć środowisko uruchomieniowe języka wspólnego z informacjami
  [!code-csharp[ADApplicationBase#2](../../../samples/snippets/csharp/VS_Snippets_CLR/ADApplicationBase/CS/source2.cs#2)]
  [!code-vb[ADApplicationBase#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/ADApplicationBase/VB/source2.vb#2)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Programowanie przy użyciu domen aplikacji](application-domains.md#programming-with-application-domains)
-- [Używanie domen aplikacji](use.md)
+- [Używanie domeny aplikacji](use.md)

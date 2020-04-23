@@ -42,12 +42,12 @@ Model COM ma również organizatora, który kierujący dane między modelami COM
 
 ### <a name="com-clients-and-managed-servers"></a>Klienci COM i serwery zarządzane
 
-Wyeksportowany serwer zarządzany z biblioteką typów zarejestrowanego przez [Regasm. exe (Narzędzie rejestracji zestawów)](../tools/regasm-exe-assembly-registration-tool.md) ma `ThreadingModel` wpis rejestru ustawiony na `Both`. Ta wartość wskazuje, że serwer można aktywować w komórce jednowątkowej (STA) lub w wielowątkowej komórce (MTA). Obiekt serwera jest tworzony w tej samej lokalu, co jego obiekt wywołujący, jak pokazano w poniższej tabeli:
+Wyeksportowany serwer zarządzany z biblioteką typów zarejestrowanego przez [Regasm. exe (Narzędzie rejestracji zestawów)](../tools/regasm-exe-assembly-registration-tool.md) ma wpis `ThreadingModel` rejestru ustawiony na `Both`. Ta wartość wskazuje, że serwer można aktywować w komórce jednowątkowej (STA) lub w wielowątkowej komórce (MTA). Obiekt serwera jest tworzony w tej samej lokalu, co jego obiekt wywołujący, jak pokazano w poniższej tabeli:
 
 |Klient COM|Serwer .NET|Wymagania dotyczące organizowania|
 |----------------|-----------------|-----------------------------|
-|STA|`Both` zmieni się na STA.|Kierowanie między komórkami.|
-|MTA|`Both` staną się MTA.|Kierowanie między komórkami.|
+|STA|`Both`zmieni się na STA.|Kierowanie między komórkami.|
+|MTA|`Both`przechodzi do MTA.|Kierowanie między komórkami.|
 
 Ponieważ klient i serwer znajdują się w tej samej apartamentie, usługa Marshaling Interop automatycznie obsługuje wszystkie kierowanie danych. Na poniższej ilustracji przedstawiono usługę Marshaling Interop działającą między stertami zarządzanymi i niezarządzanymi w ramach tego samego apartamentu COM.
 
@@ -57,7 +57,7 @@ Jeśli planujesz wyeksportować serwer zarządzany, należy pamiętać, że klie
 
 ### <a name="managed-clients-and-com-servers"></a>Zarządzani klienci i serwery COM
 
-Ustawieniem domyślnym dla zarządzanego klienta apartamentach jest MTA; Jednak typ aplikacji klienta .NET może zmienić ustawienie domyślne. Na przykład ustawienie Apartment Visual Basic Client to STA. Można użyć <xref:System.STAThreadAttribute?displayProperty=nameWithType>, <xref:System.MTAThreadAttribute?displayProperty=nameWithType>, właściwości <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> lub właściwości <xref:System.Web.UI.Page.AspCompatMode%2A?displayProperty=nameWithType> do sprawdzenia i zmiany ustawienia apartamentu zarządzanego klienta.
+Ustawieniem domyślnym dla zarządzanego klienta apartamentach jest MTA; Jednak typ aplikacji klienta .NET może zmienić ustawienie domyślne. Na przykład ustawienie Apartment Visual Basic Client to STA. Aby przejrzeć i zmienić <xref:System.STAThreadAttribute?displayProperty=nameWithType>ustawienie apartamentu zarządzanego klienta, <xref:System.MTAThreadAttribute?displayProperty=nameWithType> <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> można użyć <xref:System.Web.UI.Page.AspCompatMode%2A?displayProperty=nameWithType> właściwości,, lub właściwości.
 
 Autor składnika ustawia koligację wątku serwera COM. W poniższej tabeli przedstawiono kombinacje ustawień Apartment dla klientów .NET i serwerów COM. Przedstawiono w nim również wyniki związane z kierowaniem dla kombinacji.
 
@@ -73,16 +73,16 @@ Gdy zarządzany klient i serwer niezarządzany znajdują się w tym samym elemen
 W przypadku organizowania między komórkami można wykonać następujące czynności:
 
 - Zaakceptuj obciążenie związane z kierowaniem między komórkami, co jest zauważalne tylko wtedy, gdy na granicy występuje wiele wywołań. Należy zarejestrować bibliotekę typów składnika COM dla wywołań, aby pomyślnie przekroczyć granicę apartamentu.
-- Zmień główny wątek przez ustawienie wątku klienta na STA lub MTA. Na przykład jeśli C# klient wywołuje wiele składników com sta, można uniknąć organizowania między komórkami, ustawiając wątek główny na sta.
+- Zmień główny wątek przez ustawienie wątku klienta na STA lub MTA. Na przykład jeśli klient języka C# wywołuje wiele składników COM STA, można uniknąć organizowania między komórkami, ustawiając wątek główny na STA.
 
     > [!NOTE]
-    > Gdy wątek C# klienta ma ustawioną wartość sta, wywołania do składników com MTA będą wymagały organizowania między komórkami.
+    > Gdy wątek klienta C# jest ustawiony na STA, wywołania do składników COM MTA będą wymagały organizowania między komórkami.
 
 Aby uzyskać instrukcje dotyczące jawnego wybierania modelu Apartment, zobacz [wątki zarządzane i niezarządzane](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100)).
 
 ## <a name="marshaling-remote-calls"></a>Kierowanie zdalnych wywołań
 
-Podobnie jak w przypadku organizowania między komórkami, kierowanie odbywa się w każdym wywołaniu między kodem zarządzanym i niezarządzanym za każdym razem, gdy obiekty znajdują się w osobnych procesach. Na przykład:
+Podobnie jak w przypadku organizowania między komórkami, kierowanie odbywa się w każdym wywołaniu między kodem zarządzanym i niezarządzanym za każdym razem, gdy obiekty znajdują się w osobnych procesach. Przykład:
 
 - Klient COM, który wywołuje serwer zarządzany na hoście zdalnym, używa rozproszonego modelu COM (DCOM).
 - Zarządzany klient, który wywołuje serwer COM na hoście zdalnym, korzysta z modelu DCOM.
@@ -120,15 +120,15 @@ Niektóre niezarządzane wywołania można obsłużyć za pośrednictwem protoko
 |Tytuł|Opis|
 |-----------|-----------------|
 |[Domyślne zachowanie marshalingu](default-marshaling-behavior.md)|Opisuje reguły, których usługa Marshaling Interop używa do organizowania danych.|
-|[Marshaling danych w wywołaniu platformy](marshaling-data-with-platform-invoke.md)|Opisuje sposób deklarowania parametrów metody i przekazywania argumentów do funkcji wyeksportowanych przez niezarządzane biblioteki.|
+|[Organizowanie danych w wywołaniu platformy](marshaling-data-with-platform-invoke.md)|Opisuje sposób deklarowania parametrów metody i przekazywania argumentów do funkcji wyeksportowanych przez niezarządzane biblioteki.|
 |[Marshaling danych za pomocą modelu COM](marshaling-data-with-com-interop.md)|Opisuje sposób dostosowywania otok COM w celu zmiany sposobu organizowania zachowań.|
-|[Instrukcje: Migrowanie zarządzanego kodu DCOM do WCF](how-to-migrate-managed-code-dcom-to-wcf.md)|Opisuje sposób migrowania z modelu DCOM do programu WCF.|
-|[Instrukcje: Mapowanie wyników HRESULT i wyjątków](how-to-map-hresults-and-exceptions.md)|Opisuje sposób mapowania niestandardowych wyjątków na HRESULTs i zapewnia pełne mapowanie z każdego HRESULT do jego porównywalnej klasy wyjątku w .NET Framework.|
+|[Instrukcje: migrowanie zarządzanego kodu DCOM do WCF](how-to-migrate-managed-code-dcom-to-wcf.md)|Opisuje sposób migrowania z modelu DCOM do programu WCF.|
+|[Porady: mapowanie wyników HRESULT i wyjątków](how-to-map-hresults-and-exceptions.md)|Opisuje sposób mapowania niestandardowych wyjątków na HRESULTs i zapewnia pełne mapowanie z każdego HRESULT do jego porównywalnej klasy wyjątku w .NET Framework.|
 |[Współdziałanie przy użyciu typów ogólnych](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))|Opisuje, które akcje są obsługiwane w przypadku używania typów ogólnych do współdziałania z modelem COM.|
 |[Współdziałanie z kodem niezarządzanym](index.md)|Opisuje usługi współdziałania udostępniane przez środowisko uruchomieniowe języka wspólnego.|
 |[Zaawansowana współdziałanie COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|Zawiera łącza do dodatkowych informacji na temat dołączania składników COM do aplikacji .NET Framework.|
 |[Zagadnienia dotyczące projektowania operacji międzyoperacyjnych](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))|Zawiera wskazówki dotyczące pisania zintegrowanych składników COM.|
 
-## <a name="reference"></a>Tematy pomocy
+## <a name="reference"></a>Dokumentacja
 
 <xref:System.Runtime.InteropServices?displayProperty=nameWithType>

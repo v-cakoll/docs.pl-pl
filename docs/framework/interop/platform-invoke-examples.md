@@ -21,13 +21,13 @@ ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181318"
 ---
 # <a name="platform-invoke-examples"></a>Przykłady wywołań platformy
-Poniższe przykłady pokazują, jak zdefiniować i wywołać **messagebox** funkcji w User32.dll, przekazując prosty ciąg jako argument. W przykładach <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> pole jest ustawione na **Auto,** aby platforma docelowa określała szerokość znaku i kierowanie ciągiem.  
+W poniższych przykładach pokazano, jak definiować i wywoływać funkcję **MessageBox** w User32. dll, przekazując prosty ciąg jako argument. W przykładach <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> pole jest ustawione na wartość **automatycznie** , aby umożliwić platformie docelowej określenie szerokości znaków i organizowania ciągu.  
   
  [!code-cpp[Conceptual.Interop.PInvoke#1](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.Interop.PInvoke/cpp/Example.cpp#1)]
  [!code-csharp[Conceptual.Interop.PInvoke#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.Interop.PInvoke/cs/Example1.cs#1)]
  [!code-vb[Conceptual.Interop.PInvoke#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.Interop.PInvoke/vb/Example1.vb#1)]  
   
- Aby uzyskać dodatkowe przykłady, zobacz [Kierowanie danych z platformą Invoke](marshaling-data-with-platform-invoke.md).  
+ Aby uzyskać więcej przykładów, zobacz [kierowanie danych za pomocą wywołania platformy](marshaling-data-with-platform-invoke.md).  
   
 ## <a name="see-also"></a>Zobacz też
 

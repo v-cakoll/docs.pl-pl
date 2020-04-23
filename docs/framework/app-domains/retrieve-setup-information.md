@@ -18,7 +18,7 @@ ms.lasthandoff: 10/30/2019
 ms.locfileid: "73119735"
 ---
 # <a name="retrieving-setup-information-from-an-application-domain"></a>Pobieranie informacji o instalacji z domeny aplikacji
-Każde wystąpienie domeny aplikacji składa się z właściwości i <xref:System.AppDomainSetup> informacji. Informacje o instalacji z domeny aplikacji można pobrać przy użyciu klasy <xref:System.AppDomain?displayProperty=nameWithType>. Ta klasa udostępnia kilku członkom, którzy pobierają informacje o konfiguracji domeny aplikacji.  
+Każde wystąpienie domeny aplikacji składa się z właściwości i <xref:System.AppDomainSetup> informacji. Informacje o instalacji z domeny aplikacji można pobrać przy użyciu <xref:System.AppDomain?displayProperty=nameWithType> klasy. Ta klasa udostępnia kilku członkom, którzy pobierają informacje o konfiguracji domeny aplikacji.  
   
  Można także zbadać obiekt **AppDomainSetup** dla domeny aplikacji, aby uzyskać informacje o konfiguracji, które zostały przesłane do domeny podczas tworzenia.  
   
@@ -28,13 +28,13 @@ Każde wystąpienie domeny aplikacji składa się z właściwości i <xref:Syste
  [!code-csharp[AppDomain_Setup#2](../../../samples/snippets/csharp/VS_Snippets_CLR/AppDomain_Setup/CS/source2.cs#2)]
  [!code-vb[AppDomain_Setup#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AppDomain_Setup/VB/source2.vb#2)]  
   
- Poniższy przykład ustawia, a następnie pobiera informacje o konfiguracji dla domeny aplikacji. Należy pamiętać, że `AppDomain.SetupInformation.ApplicationBase` pobiera informacje o konfiguracji.  
+ Poniższy przykład ustawia, a następnie pobiera informacje o konfiguracji dla domeny aplikacji. Należy pamiętać `AppDomain.SetupInformation.ApplicationBase` , że pobiera informacje o konfiguracji.  
   
  [!code-cpp[AppDomain_Setup#3](../../../samples/snippets/cpp/VS_Snippets_CLR/AppDomain_Setup/CPP/source3.cpp#3)]
  [!code-csharp[AppDomain_Setup#3](../../../samples/snippets/csharp/VS_Snippets_CLR/AppDomain_Setup/CS/source3.cs#3)]
  [!code-vb[AppDomain_Setup#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AppDomain_Setup/VB/source3.vb#3)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Programowanie przy użyciu domen aplikacji](application-domains.md#programming-with-application-domains)
-- [Używanie domen aplikacji](use.md)
+- [Używanie domeny aplikacji](use.md)

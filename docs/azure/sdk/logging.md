@@ -1,6 +1,6 @@
 ---
-title: Rejestrowanie za pomocą zestawu SDK platformy Azure dla platformy .NET
-description: Dowiedz się, jak włączyć rejestrowanie za pomocą narzędzia Azure SDK dla bibliotek klienckich platformy .NET
+title: Rejestrowanie przy użyciu zestawu Azure SDK dla platformy .NET
+description: Dowiedz się, jak włączyć rejestrowanie przy użyciu bibliotek klienckich platformy Azure SDK dla platformy .NET
 ms.date: 03/20/2020
 ms.custom: azure-sdk-dotnet
 ms.author: casoper
@@ -12,65 +12,65 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/24/2020
 ms.locfileid: "82071991"
 ---
-# <a name="logging-with-the-azure-sdk-for-net"></a>Rejestrowanie za pomocą zestawu SDK platformy Azure dla platformy .NET
+# <a name="logging-with-the-azure-sdk-for-net"></a>Rejestrowanie przy użyciu zestawu Azure SDK dla platformy .NET
 
-Zestaw [SDK platformy Azure](https://azure.microsoft.com/downloads/) dla bibliotek klienckich platformy .NET zawiera możliwość rejestrowania operacji biblioteki klienta. Dzięki temu można monitorować żądania we/wy i odpowiedzi, które biblioteki klientów robią do usług platformy Azure. Zazwyczaj dzienniki są używane do debugowania lub diagnozowania problemów z komunikacją. W tym artykule opisano trzy podejścia umożliwiające rejestrowanie za pomocą narzędzia Azure SDK dla platformy .NET:
+Biblioteki klienckie [zestawu Azure SDK](https://azure.microsoft.com/downloads/) dla platformy .NET obejmują możliwość rejestrowania operacji biblioteki klienta. Pozwala to monitorować żądania we/wy i odpowiedzi, które biblioteki klienckie wprowadzają do usług platformy Azure. Zazwyczaj dzienniki są używane do debugowania lub diagnozowania problemów z komunikacją. W tym artykule opisano trzy podejścia do włączania rejestrowania za pomocą zestawu Azure SDK dla platformy .NET:
 
 - Logowanie do okna konsoli
-- Rejestrowanie śledzenia diagnostyki platformy .NET
+- Rejestruj w śladach diagnostyki .NET
 - Konfigurowanie rejestrowania niestandardowego
 
 > [!IMPORTANT]
-> Ten artykuł dotyczy bibliotek klienckich, które używają najnowszych wersji zestawu SDK platformy Azure dla platformy .NET. Aby sprawdzić, czy biblioteka jest obsługiwana, zapoznaj się z listą [najnowszych wersji zestawu SDK platformy Azure](https://azure.github.io/azure-sdk/releases/latest/index.html). Jeśli aplikacja używa starszej wersji bibliotek klienta usługi Azure SDK, zapoznaj się z określonymi instrukcjami w odpowiedniej dokumentacji usługi.
+> Ten artykuł dotyczy bibliotek klienckich, które korzystają z najnowszych wersji zestawu Azure SDK dla platformy .NET. Aby sprawdzić, czy biblioteka jest obsługiwana, zapoznaj się z listą [najnowszych wersji zestawu Azure SDK](https://azure.github.io/azure-sdk/releases/latest/index.html). Jeśli aplikacja używa starszej wersji bibliotek klienckich zestawu Azure SDK, zapoznaj się z określonymi instrukcjami w odpowiedniej dokumentacji usługi.
 
-## <a name="log-information"></a>Rejestrowanie informacji
+## <a name="log-information"></a>Informacje dziennika
 
-Zestaw SDK rejestruje następujące informacje, odkażanie kwerendy parametrycznej i wartości nagłówka w celu usunięcia danych osobowych.
+Zestaw SDK rejestruje następujące informacje, oczyszczanie zapytania parametrycznego i wartości nagłówka, aby usunąć dane osobowe.
 
 Wpis dziennika żądania HTTP:
 
 - Unikatowy identyfikator
 - Metoda HTTP
 - Identyfikator URI
-- Nagłówki żądań wychodzących
+- Wychodzące nagłówki żądań
 
 Wpis dziennika odpowiedzi HTTP:
 
-- Czas trwania operacji we/wy (czas, jaki upłynął)
+- Czas trwania operacji we/wy (czas, który upłynął)
 - Identyfikator żądania
 - Kod stanu HTTP
 - Fraza przyczyny HTTP
 - Nagłówki odpowiedzi
-- Informacje o błędzie, jeśli ma to zastosowanie
+- Informacje o błędzie, jeśli ma zastosowanie
 
-W przypadku treści z prośbą i odpowiedzią:
+W przypadku zawartości żądania i odpowiedzi:
 
-- Strumień zawartości jako tekst lub bajty w zależności od nagłówka Typ zawartości.
-     > [! UWAGA} Rejestrowanie zawartości jest domyślnie wyłączone. Aby ją włączyć, `true` `ClientOptions`ustaw `Diagnostics.IsLoggingContentEnabled` opcję w pliku .
+- Strumień zawartości jako tekst lub bajty w zależności od nagłówka Content-Type.
+     > [! Uwaga} rejestrowanie zawartości jest domyślnie wyłączone. Aby ją włączyć, ustaw `Diagnostics.IsLoggingContentEnabled` wartość `true` w `ClientOptions`.
 
-Dzienniki zdarzeń są dane wyjściowe zwykle na jednym z tych trzech poziomów:
+Dzienniki zdarzeń są zwykle na jednym z trzech poziomów:
 
-- Informacje dotyczące zdarzeń żądania i odpowiedzi
+- Informacje o zdarzeniach żądania i odpowiedzi
 - Ostrzeżenie o błędach
-- Szczegółowa szczegółowa treść wiadomości i rejestrowania zawartości
+- Pełne informacje szczegółowe dotyczące komunikatów i rejestrowania zawartości
 
 ## <a name="enable-logging-with-built-in-methods"></a>Włączanie rejestrowania za pomocą wbudowanych metod
 
-Zestaw Azure SDK dla bibliotek klienckich platformy .NET rejestrowa zdarzenia śledzenia zdarzeń dla systemu Windows (ETW) za pośrednictwem [ `EventSource` klasy,](/dotnet/api/system.diagnostics.tracing.eventsource)która jest typowa dla platformy .NET. Źródła zdarzeń umożliwiają korzystanie z rejestrowania strukturalnego w kodzie aplikacji przy minimalnym obciążeniu wydajności. Aby uzyskać dostęp do tych dzienników zdarzeń, należy zarejestrować detektory zdarzeń.
+Biblioteki klienckie zestawu Azure SDK dla platformy .NET rejestrują zdarzenia do śledzenia zdarzeń systemu Windows (ETW) za pośrednictwem [ `EventSource` klasy](/dotnet/api/system.diagnostics.tracing.eventsource), która jest typowa dla platformy .NET. Źródła zdarzeń umożliwiają używanie rejestrowania strukturalnego w kodzie aplikacji z minimalnym obciążeniem wydajności. Aby uzyskać dostęp do tych dzienników zdarzeń, należy zarejestrować detektory zdarzeń.
 
-Zestaw SDK `Azure.Core.Diagnostics.AzureEventSourceListener` zawiera klasę (zdefiniowaną w pakiecie Azure.Core NuGet), która zawiera dwie metody statyczne, które upraszczają kompleksowe rejestrowanie aplikacji .NET: `CreateConsoleLogger` i `CreateTraceLogger`. Metody te przyjmują parametr opcjonalny, który określa poziom dziennika.
+Zestaw SDK zawiera `Azure.Core.Diagnostics.AzureEventSourceListener` klasę (zdefiniowaną w pakiecie NuGet Azure. Core), która zawiera dwie metody statyczne, które upraszczają kompleksowe rejestrowanie dla aplikacji .NET: `CreateConsoleLogger` i `CreateTraceLogger`. Te metody przyjmują opcjonalny parametr, który określa poziom rejestrowania.
 
 ### <a name="log-to-the-console-window"></a>Logowanie do okna konsoli
 
-Podstawową zasadą zestawu SDK platformy Azure dla bibliotek klienckich platformy .NET jest uproszczenie możliwości wyświetlania kompleksowych dzienników w czasie rzeczywistym. Metoda `CreateConsoleLogger` umożliwia wysyłanie dzienników do okna konsoli za pomocą jednego wiersza kodu:
+Podstawowym cechą bibliotek klienckich platformy Azure SDK dla platformy .NET jest uproszczenie możliwości wyświetlania obszernych dzienników w czasie rzeczywistym. `CreateConsoleLogger` Metoda umożliwia wysyłanie dzienników do okna konsoli z pojedynczym wierszem kodu:
 
 ```csharp
 using AzureEventSourceListener listener = AzureEventSourceListener.CreateConsoleLogger();
 ```
 
-### <a name="log-to-diagnostic-traces"></a>Zaloguj się do śledzenia diagnostycznego
+### <a name="log-to-diagnostic-traces"></a>Rejestruj do śladów diagnostycznych
 
-Jeśli zaimplementujesz detektory `CreateTraceLogger` śledzenia, można użyć tej metody, aby[`System.Diagnostics.Tracing`](https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing)zalogować się do standardowego mechanizmu śledzenia zdarzeń .NET ( ). Aby uzyskać więcej informacji na temat śledzenia zdarzeń w .NET, zobacz [Śledzenie odbiorników](https://docs.microsoft.com/dotnet/framework/debug-trace-profile/trace-listeners). W tym przykładzie określa poziom dziennika pełne:
+W przypadku implementacji detektorów śledzenia można użyć `CreateTraceLogger` metody, aby zalogować się do standardowego mechanizmu śledzenia zdarzeń .NET ([`System.Diagnostics.Tracing`](https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing)). Aby uzyskać więcej informacji na temat śledzenia zdarzeń w programie .NET, zobacz [detektory śledzenia](https://docs.microsoft.com/dotnet/framework/debug-trace-profile/trace-listeners). Ten przykład określa poziom dziennika pełny:
 
 ```csharp
 using AzureEventSourceListener listener = AzureEventSourceListener.CreateTraceLogger(EventLevel.Verbose);
@@ -78,9 +78,9 @@ using AzureEventSourceListener listener = AzureEventSourceListener.CreateTraceLo
 
 ## <a name="configure-custom-logging"></a>Konfigurowanie rejestrowania niestandardowego
 
-Jak wspomniano powyżej, należy zarejestrować detektory zdarzeń, aby odbierać komunikaty dziennika z narzędzia Azure SDK dla platformy .NET. Jeśli nie chcesz zaimplementować kompleksowe rejestrowanie przy użyciu jednej z `AzureEventSourceListener` metod uproszczonych powyżej, można utworzyć wystąpienie klasy i przekazać mu funkcję wywołania zwrotnego, który piszesz. Ta metoda będzie odbierać komunikaty dziennika, które można przetwarzać jednak trzeba. Ponadto podczas konstruowania wystąpienia, można określić poziomy dziennika do uwzględnienia.
+Jak wspomniano powyżej, należy zarejestrować detektory zdarzeń do odbierania komunikatów dziennika z zestawu Azure SDK dla platformy .NET. Jeśli nie chcesz zaimplementować kompleksowego rejestrowania przy użyciu jednej z tych metod uproszczonych, możesz skonstruować wystąpienie `AzureEventSourceListener` klasy i przekazać ją do funkcji wywołania zwrotnego. Ta metoda będzie odbierać komunikaty dziennika, które można przetworzyć, ale jest to konieczne. Ponadto podczas konstruowania wystąpienia można określić poziomy dziennika do uwzględnienia.
 
-Poniższy przykład tworzy detektor zdarzeń, który rejestruje do konsoli z komunikatem niestandardowym i jest filtrowany do zdarzeń podstawowych platformy Azure na poziomie pełne.
+Poniższy przykład tworzy odbiornik zdarzeń, który loguje się do konsoli z niestandardowym komunikatem, i jest filtrowany do zdarzeń Azure Core na poziomie pełne.
 
 ```csharp
 using AzureEventSourceListener listener = new AzureEventSourceListener((e, message) =>
@@ -96,7 +96,7 @@ using AzureEventSourceListener listener = new AzureEventSourceListener((e, messa
 
 ## <a name="next-steps"></a>Następne kroki
 
-- [Włączanie rejestrowania diagnostyki dla aplikacji w usłudze Azure App Service](https://docs.microsoft.com/azure/app-service/troubleshoot-diagnostic-logs)
+- [Włączanie rejestrowania diagnostycznego dla aplikacji w Azure App Service](https://docs.microsoft.com/azure/app-service/troubleshoot-diagnostic-logs)
 - Przejrzyj opcje [rejestrowania i inspekcji zabezpieczeń platformy Azure](https://docs.microsoft.com/azure/security/fundamentals/log-audit)
-- Dowiedz się, jak pracować z [dziennikami platformy Azure](https://docs.microsoft.com/azure/azure-monitor/platform/platform-logs-overview)
-- Dowiedz się więcej o [rejestrowaniu i śledzeniu rdzenia .NET](https://docs.microsoft.com/dotnet/core/diagnostics/logging-tracing)
+- Dowiedz się, jak korzystać z [dzienników platformy Azure](https://docs.microsoft.com/azure/azure-monitor/platform/platform-logs-overview)
+- Przeczytaj więcej na temat [rejestrowania i śledzenia w programie .NET Core](https://docs.microsoft.com/dotnet/core/diagnostics/logging-tracing)

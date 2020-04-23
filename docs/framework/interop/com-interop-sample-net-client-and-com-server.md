@@ -17,9 +17,9 @@ ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181488"
 ---
 # <a name="com-interop-sample-net-client-and-com-server"></a>Przykład międzyoperacyjnego modelu COM: klient modelu COM i serwer COM
-W tym przykładzie pokazano, jak [klient .NET](#cpconcominteropsamplenetclientcomserveranchor1), zbudowany w celu uzyskania dostępu do [serwera COM,](#cpconcominteropsamplenetclientcomserveranchor2)tworzy wystąpienie współklasy COM i wywołuje członków klasy do wykonywania obliczeń hipotecznych.  
+Ten przykład pokazuje, jak [klient .NET](#cpconcominteropsamplenetclientcomserveranchor1), który został utworzony w celu uzyskania dostępu do [serwera com](#cpconcominteropsamplenetclientcomserveranchor2), tworzy wystąpienie klasy coclass modelu COM i wywołuje elementy członkowskie klasy do wykonywania obliczeń hipotecznych.  
   
- W tym przykładzie klient tworzy i wywołuje wystąpienie **Loan** coclass, przekazuje cztery argumenty (jeden z tych czterech jest równa zero) do wystąpienia i wyświetla obliczenia. Fragmenty kodu z tego przykładu pojawiają się w tej sekcji.  
+ W tym przykładzie klient tworzy i wywołuje wystąpienie klasy coclass **pożyczki** , przekazuje cztery argumenty (jeden z czterech równa zero) do wystąpienia i wyświetla obliczenia. Fragmenty kodu z tego przykładu pojawiają się w tej sekcji.  
   
 <a name="cpconcominteropsamplenetclientcomserveranchor1"></a>
 ## <a name="net-client"></a>Klient platformy .NET  

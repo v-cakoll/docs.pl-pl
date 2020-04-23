@@ -13,19 +13,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a6063221-43a5-4d3e-814c-288a4ec69aec
-ms.openlocfilehash: af1bfb89b01a316a858cbb45bf19a26a16d90016
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b7cb06da74a21dab6f60f0d4c3ac1748fcbe4526
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119948"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644301"
 ---
 # <a name="how-to-build-a-net-framework-single-file-assembly"></a>Instrukcje: kompilowanie zestawu .NET Framework jednego pliku
 
 Zestaw jednoplikowy, który jest najprostszym typem zestawu, zawiera informacje o typie i implementację, a także [manifest zestawu](../../standard/assembly/manifest.md). Można użyć kompilatorów wiersza polecenia lub programu Visual Studio, aby utworzyć zestaw jednoplikowy, który jest przeznaczony dla .NET Framework. Domyślnie kompilator tworzy plik zestawu z rozszerzeniem *. exe* .
 
 > [!NOTE]
-> Programu Visual Studio C# for i Visual Basic można używać tylko do tworzenia zestawów jednoplikowych. Jeśli chcesz utworzyć zestawy wieloplikowe, musisz użyć kompilatorów wiersza polecenia lub wizualizacji C++.
+> Program Visual Studio dla języka C# i Visual Basic może być używany tylko do tworzenia zestawów jednoplikowych. Jeśli chcesz utworzyć zestawy wieloplikowe, musisz użyć kompilatorów wiersza polecenia lub Visual C++.
 
 W poniższych procedurach pokazano, jak utworzyć zestawy Jednoplikowe za pomocą kompilatorów wiersza polecenia.
 
@@ -33,7 +33,7 @@ W poniższych procedurach pokazano, jak utworzyć zestawy Jednoplikowe za pomoc�
 
 W wierszu polecenia wpisz następujące polecenie:
 
-\<*polecenie kompilatora*> \<*Nazwa modułu*>
+\<*compiler command*> \<*Nazwa modułu* poleceń kompilatora>
 
 W tym poleceniu *kompilator* jest poleceniem kompilatora dla języka używanego w module kodu, a *Nazwa modułu* to nazwa modułu kodu do skompilowania do zestawu.
 
@@ -51,7 +51,7 @@ vbc myCode.vb
 
 W wierszu polecenia wpisz następujące polecenie:
 
-\<*polecenie kompilatora*>  **/out:** \<*nazwy pliku*> \<*Nazwa modułu*>
+\<*polecenie*> **kompilatora/out:**\<nazwa*pliku*> \<*Nazwa modułu*>
 
 W tym poleceniu *kompilator* jest poleceniem kompilatora dla języka używanego w module kodu, *Nazwa pliku* jest nazwą pliku wyjściowego, a *Nazwa modułu* to nazwa modułu kodu do skompilowania do zestawu.
 
@@ -70,7 +70,7 @@ vbc -out:myAssembly.exe myCode.vb
 
 Aby utworzyć zestaw biblioteki, w wierszu polecenia wpisz następujące polecenie:
 
-\<*polecenie kompilatora*>  **-t:Library** \<*Nazwa modułu*>
+\<*polecenie*> kompilatora **—** \< *Nazwa modułu* t:Library>
 
 W tym poleceniu *kompilator* jest poleceniem kompilatora dla języka używanego w module kodu, a *Nazwa modułu* to nazwa modułu kodu do skompilowania do zestawu. Można również użyć innych opcji kompilatora, takich jak opcja **-out:** .
 
@@ -84,9 +84,9 @@ csc -out:myCodeLibrary.dll -t:library myCode.cs
 vbc -out:myCodeLibrary.dll -t:library myCode.vb
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Tworzenie zestawów](../../standard/assembly/create.md)
 - [Zestawy wieloplikowe](multifile-assemblies.md)
 - [Instrukcje: kompilowanie zestawu wieloplikowego](build-multifile-assembly.md)
-- [Program z zestawami](../../standard/assembly/program.md)
+- [Programowanie przy użyciu zestawów](../../standard/assembly/index.md)

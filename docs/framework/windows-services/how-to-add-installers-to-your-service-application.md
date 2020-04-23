@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Dodawanie instalatorów od aplikacji usług'
+title: 'Porady: dodawanie instalatorów od aplikacji usług'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, deploying
@@ -18,7 +18,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053652"
 ---
-# <a name="how-to-add-installers-to-your-service-application"></a>Instrukcje: Dodawanie instalatorów od aplikacji usług
+# <a name="how-to-add-installers-to-your-service-application"></a>Porady: dodawanie instalatorów od aplikacji usług
 Program Visual Studio jest dostarczany ze składnikami instalacji, które mogą instalować zasoby skojarzone z aplikacjami usługi. Składniki instalacji rejestrują poszczególne usługi w systemie, w którym jest instalowana, i pozwalają menedżerowi sterowania usługami znać, że usługa istnieje. Podczas pracy z aplikacją usługi można wybrać łącze w okno Właściwości, aby automatycznie dodać odpowiednie Instalatory do projektu.  
   
 > [!NOTE]
@@ -29,7 +29,7 @@ Program Visual Studio jest dostarczany ze składnikami instalacji, które mogą 
  Nie trzeba wykonywać żadnych specjalnych kodowania w ramach instalatorów, aby zapewnić prawidłowe działanie usług. Jednak czasami trzeba zmodyfikować zawartość instalatorów, jeśli trzeba dodać specjalną funkcjonalność do procesu instalacji.  
   
 > [!NOTE]
-> Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
+> Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, wybierz **Importuj i Eksportuj ustawienia** w menu **Narzędzia** . Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-add-installers-to-your-service-application"></a>Aby dodać Instalatory do aplikacji usługi  
   
@@ -41,17 +41,17 @@ Program Visual Studio jest dostarczany ze składnikami instalacji, które mogą 
   
      Nowa klasa, `ProjectInstaller`i dwa składniki instalacyjne, <xref:System.ServiceProcess.ServiceProcessInstaller> i <xref:System.ServiceProcess.ServiceInstaller>, są dodawane do projektu, a wartości właściwości usługi są kopiowane do składników programu.  
   
-4. Kliknij składnik i sprawdź, czy wartość <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> właściwości jest ustawiona na taką samą wartość jak <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> właściwość w samej usłudze. <xref:System.ServiceProcess.ServiceInstaller>  
+4. Kliknij <xref:System.ServiceProcess.ServiceInstaller> składnik i sprawdź, czy wartość <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> właściwości jest ustawiona na taką samą wartość jak <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> właściwość w samej usłudze.  
   
-5. Aby określić, jak zostanie uruchomiona usługa, kliknij <xref:System.ServiceProcess.ServiceInstaller> składnik i <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> ustaw właściwość na odpowiednią wartość.  
+5. Aby określić, jak zostanie uruchomiona usługa, kliknij <xref:System.ServiceProcess.ServiceInstaller> składnik i ustaw <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> właściwość na odpowiednią wartość.  
   
     |Wartość|Wynik|  
     |-----------|------------|  
-    |<xref:System.ServiceProcess.ServiceStartMode.Manual>|Usługa musi zostać uruchomiona ręcznie po zakończeniu instalacji. Aby uzyskać więcej informacji, zobacz [jak: Uruchom usługi](how-to-start-services.md).|  
+    |<xref:System.ServiceProcess.ServiceStartMode.Manual>|Usługa musi zostać uruchomiona ręcznie po zakończeniu instalacji. Aby uzyskać więcej informacji, zobacz [How to: Start Services](how-to-start-services.md).|  
     |<xref:System.ServiceProcess.ServiceStartMode.Automatic>|Usługa rozpocznie się za każdym razem, gdy komputer zostanie uruchomiony ponownie.|  
     |<xref:System.ServiceProcess.ServiceStartMode.Disabled>|Nie można uruchomić usługi.|  
   
-6. Aby określić kontekst zabezpieczeń, w którym zostanie uruchomiona usługa, kliknij <xref:System.ServiceProcess.ServiceProcessInstaller> składnik i ustaw odpowiednie wartości właściwości. Aby uzyskać więcej informacji, zobacz [jak: Określ kontekst zabezpieczeń usług](how-to-specify-the-security-context-for-services.md).  
+6. Aby określić kontekst zabezpieczeń, w którym zostanie uruchomiona usługa, kliknij <xref:System.ServiceProcess.ServiceProcessInstaller> składnik i ustaw odpowiednie wartości właściwości. Aby uzyskać więcej informacji, zobacz [How to: określanie kontekstu zabezpieczeń dla usług](how-to-specify-the-security-context-for-services.md).  
   
 7. Zastąp wszystkie metody, dla których należy wykonać przetwarzanie niestandardowe.  
   
@@ -60,9 +60,9 @@ Program Visual Studio jest dostarczany ze składnikami instalacji, które mogą 
     > [!NOTE]
     > Dla każdej dodatkowej usługi w projekcie należy dodać dodatkowy <xref:System.ServiceProcess.ServiceInstaller> składnik do `ProjectInstaller` klasy projektu. <xref:System.ServiceProcess.ServiceProcessInstaller> Składnik dodany w kroku 3 współdziała ze wszystkimi instalacjami poszczególnych usług w projekcie.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Wprowadzenie do aplikacji usług systemu Windows](introduction-to-windows-service-applications.md)
-- [Instrukcje: Instalowanie i odinstalowywanie usług](how-to-install-and-uninstall-services.md)
-- [Instrukcje: Uruchom usługi](how-to-start-services.md)
-- [Instrukcje: Określanie kontekstu zabezpieczeń dla usług](how-to-specify-the-security-context-for-services.md)
+- [Instrukcje: instalowanie i odinstalowywanie usług](how-to-install-and-uninstall-services.md)
+- [Instrukcje: uruchamianie usług](how-to-start-services.md)
+- [Porady: określanie kontekstu zabezpieczeń dla usług](how-to-specify-the-security-context-for-services.md)

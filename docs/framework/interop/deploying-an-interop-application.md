@@ -43,9 +43,9 @@ Aplikacja międzyoperacyjna zwykle zawiera zestaw klienta .NET, co najmniej jede
 ### <a name="shared-assemblies"></a>Zestawy udostępnione  
  Zestawy, które są współużytkowane przez wiele aplikacji, powinny być zainstalowane w scentralizowanym repozytorium o nazwie globalna pamięć podręczna zestawów. Klienci platformy .NET mogą uzyskać dostęp do tej samej kopii zestawu międzyoperacyjnego, który jest podpisany i zainstalowany w globalnej pamięci podręcznej zestawów. Aby uzyskać więcej informacji na temat tworzenia i używania podstawowych zestawów międzyoperacyjnych, zobacz [podstawowe zestawy międzyoperacyjności](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Udostępnianie składników COM programowi .NET Framework](exposing-com-components.md)
+- [Udostępnianie składników COM programowi.NET Framework](exposing-com-components.md)
 - [Importowanie biblioteki typów jako zestawu](importing-a-type-library-as-an-assembly.md)
 - [Używanie typów COM w kodzie zarządzanym](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
 - [Kompilowanie projektu międzyoperacyjnego](compiling-an-interop-project.md)

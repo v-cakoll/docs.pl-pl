@@ -19,17 +19,17 @@ ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181404"
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>Porady: mapowanie wyników HRESULT i wyjątków
-Metody COM zgłaszają błędy, zwracając hresulty; metody .NET zgłaszają je, zgłaszając wyjątki. Środowisko wykonawcze obsługuje przejście między tymi dwoma. Każda klasa wyjątku w .NET Framework mapuje do HRESULT.  
+Metody COM zgłaszają błędy, zwracając wartości HRESULT; metody .NET raportują je przez wyrzucanie wyjątków. Środowisko uruchomieniowe obsługuje przejście między nimi. Każda Klasa wyjątków w .NET Framework jest mapowana na wartość HRESULT.  
   
- Klasy wyjątków zdefiniowane przez użytkownika można określić, co HRESULT jest odpowiedni. Te klasy wyjątków można dynamicznie zmienić HRESULT do zwrotu, gdy wyjątek jest generowany przez ustawienie **HResult** pole na obiekt wyjątku. Dodatkowe informacje o wyjątku są dostarczane do klienta za pośrednictwem interfejsu **IErrorInfo,** który jest implementowany w obiekcie .NET w procesie niezarządzanym.  
+ Klasy wyjątków zdefiniowane przez użytkownika mogą określać wszelkie wartości HRESULT są odpowiednie. Te klasy wyjątków mogą dynamicznie zmieniać wynik HRESULT, który ma zostać zwrócony, gdy wyjątek jest generowany przez ustawienie pola **HRESULT** dla obiektu Exception. Dodatkowe informacje o wyjątku są udostępniane klientowi za pomocą interfejsu **IErrorInfo** , który jest implementowany w obiekcie .NET w procesie niezarządzanym.  
   
- W przypadku utworzenia klasy rozszerza jące **system.exception**należy ustawić pole HRESULT podczas budowy. W przeciwnym razie klasa podstawowa przypisuje wartość HRESULT. Można mapować nowe klasy wyjątków do istniejącego HRESULT, podając wartość w konstruktorze wyjątku.  
+ W przypadku utworzenia klasy rozszerzającej **System. Exception**należy ustawić pole HRESULT podczas konstruowania. W przeciwnym razie Klasa bazowa przypisuje wartość HRESULT. Można mapować nowe klasy wyjątków do istniejącego HRESULT, dostarczając wartość w konstruktorze wyjątku.  
   
- Należy zauważyć, że środowisko `HRESULT` wykonawcze czasami ignoruje w przypadkach, gdy istnieje `IErrorInfo` obecny w wątku.  To zachowanie może wystąpić `HRESULT` w `IErrorInfo` przypadkach, gdy i nie reprezentują tego samego błędu.  
+ Należy pamiętać, że środowisko uruchomieniowe czasami `HRESULT` zignoruje w przypadkach, gdy `IErrorInfo` istnieje w wątku.  Takie zachowanie może wystąpić w przypadkach, gdy `HRESULT` i i `IErrorInfo` nie reprezentują tego samego błędu.  
   
-### <a name="to-create-a-new-exception-class-and-map-it-to-an-hresult"></a>Aby utworzyć nową klasę wyjątku i zamapować ją na hresult  
+### <a name="to-create-a-new-exception-class-and-map-it-to-an-hresult"></a>Aby utworzyć nową klasę wyjątku i zamapować ją na HRESULT  
   
-1. Użyj następującego kodu, aby utworzyć `NoAccessException` nową klasę wyjątku `E_ACCESSDENIED`o nazwie i zamapować go na HRESULT .  
+1. Użyj poniższego kodu, aby utworzyć nową klasę wyjątku o `NoAccessException` nazwie i zamapować ją na `E_ACCESSDENIED`wartość HRESULT.  
   
     ```cpp  
     Class NoAccessException : public ApplicationException  
@@ -44,7 +44,7 @@ Metody COM zgłaszają błędy, zwracając hresulty; metody .NET zgłaszają je,
     }  
     ```  
   
- Może wystąpić program (w dowolnym języku programowania), który używa zarówno kodu zarządzanego, jak i niezarządzanego w tym samym czasie. Na przykład niestandardowy organizator w poniższym przykładzie kodu używa **metody Marshal.ThrowExceptionForHR(int HResult),** aby zgłosić wyjątek o określonej wartości HRESULT. Metoda wyszukuje HRESULT i generuje odpowiedni typ wyjątku. Na przykład HRESULT w poniższym fragmencie kodu generuje **ArgumentException**.  
+ Może wystąpić program (w dowolnym języku programowania), który jednocześnie używa kodu zarządzanego i niezarządzanego. Na przykład niestandardowy Organizator w poniższym przykładzie kodu używa metody **Marshal. ThrowExceptionForHR (int HRESULT)** , aby zgłosić wyjątek z określoną wartością HRESULT. Metoda wyszukuje wynik HRESULT i generuje odpowiedni typ wyjątku. Na przykład wynik HRESULT w poniższym fragmencie kodu generuje **ArgumentException**.  
   
 ```cpp  
 CMyClass::MethodThatThrows  
@@ -53,94 +53,94 @@ CMyClass::MethodThatThrows
 }  
 ```  
   
- Poniższa tabela zawiera pełne mapowanie z każdego HRESULT do porównywalnej klasy wyjątków w .NET Framework.  
+ Poniższa tabela zawiera pełne mapowanie z każdego wyniku HRESULT do jego porównywalnej klasy wyjątku w .NET Framework.  
   
-|HRESULT|Wyjątek .NET|  
+|HRESULT|Wyjątek platformy .NET|  
 |-------------|--------------------|  
-|**MSEE_E_APPDOMAINUNLOADED**|**Appdomainunloadedexception**|  
-|**COR_E_APPLICATION**|**Applicationexception**|  
-|**COR_E_ARGUMENT lub E_INVALIDARG**|**Zeksuw argumentów**|  
-|**COR_E_ARGUMENTOUTOFRANGE**|**Kreślenie argumentów**|  
-|**COR_E_ARITHMETIC lub ERROR_ARITHMETIC_OVERFLOW**|**Arithmeticexception**|  
-|**COR_E_ARRAYTYPEMISMATCH**|**Arraytypemismatchexception**|  
-|**COR_E_BADIMAGEFORMAT lub ERROR_BAD_FORMAT**|**Badimageformatexception**|  
-|**COR_E_COMEMULATE_ERROR**|**ComEmulateException**|  
-|**COR_E_CONTEXTMARSHAL**|**Contextmarshalexception**|  
-|**COR_E_CORE**|**CoreException (Nieekceptiona)**|  
-|**NTE_FAIL**|**Cryptographicexception**|  
-|**COR_E_DIRECTORYNOTFOUND lub ERROR_PATH_NOT_FOUND**|**Directorynotfoundexception**|  
-|**COR_E_DIVIDEBYZERO**|**Dividebyzeroexception**|  
-|**COR_E_DUPLICATEWAITOBJECT**|**Duplicatewaitobjectexception**|  
-|**COR_E_ENDOFSTREAM**|**Endofstreamexception**|  
-|**COR_E_TYPELOAD**|**Entrypointnotfoundexception**|  
-|**Cor_e_exception**|**Wyjątek**|  
-|**COR_E_EXECUTIONENGINE**|**Executionengineexception**|  
-|**COR_E_FIELDACCESS**|**Fieldaccessexception**|  
-|**COR_E_FILENOTFOUND lub ERROR_FILE_NOT_FOUND**|**Filenotfoundexception**|  
-|**COR_E_FORMAT**|**Formatexception**|  
-|**COR_E_INDEXOUTOFRANGE**|**Indexoutofrangeexception**|  
-|**COR_E_INVALIDCAST lub E_NOINTERFACE**|**InwersjaException**|  
-|**COR_E_INVALIDCOMOBJECT**|**Invalidcomobjectexception**|  
-|**COR_E_INVALIDFILTERCRITERIA**|**Invalidfiltercriteriaexception**|  
-|**COR_E_INVALIDOLEVARIANTTYPE**|**Invalidolevarianttypeexception**|  
+|**MSEE_E_APPDOMAINUNLOADED**|**AppDomainUnloadedException —**|  
+|**COR_E_APPLICATION**|**ApplicationException**|  
+|**COR_E_ARGUMENT lub E_INVALIDARG**|**ArgumentException**|  
+|**COR_E_ARGUMENTOUTOFRANGE**|**Wyjątku ArgumentOutOfRangeException**|  
+|**COR_E_ARITHMETIC lub ERROR_ARITHMETIC_OVERFLOW**|**ArithmeticException —**|  
+|**COR_E_ARRAYTYPEMISMATCH**|**ArrayTypeMismatchException**|  
+|**COR_E_BADIMAGEFORMAT lub ERROR_BAD_FORMAT**|**BadImageFormatException**|  
+|**COR_E_COMEMULATE_ERROR**|**COMEmulateException**|  
+|**COR_E_CONTEXTMARSHAL**|**ContextMarshalException**|  
+|**COR_E_CORE**|**Rdzeńexception**|  
+|**NTE_FAIL**|**CryptographicException**|  
+|**COR_E_DIRECTORYNOTFOUND lub ERROR_PATH_NOT_FOUND**|**DirectoryNotFoundException**|  
+|**COR_E_DIVIDEBYZERO**|**DivideByZeroException**|  
+|**COR_E_DUPLICATEWAITOBJECT**|**DuplicateWaitObjectException**|  
+|**COR_E_ENDOFSTREAM**|**EndOfStreamException**|  
+|**COR_E_TYPELOAD**|**EntryPointNotFoundException —**|  
+|**COR_E_EXCEPTION**|**Wyjątek**|  
+|**COR_E_EXECUTIONENGINE**|**ExecutionEngineException**|  
+|**COR_E_FIELDACCESS**|**FieldAccessException**|  
+|**COR_E_FILENOTFOUND lub ERROR_FILE_NOT_FOUND**|**FileNotFoundException**|  
+|**COR_E_FORMAT**|**FormatException**|  
+|**COR_E_INDEXOUTOFRANGE**|**IndexOutOfRangeException**|  
+|**COR_E_INVALIDCAST lub E_NOINTERFACE**|**InvalidCastException**|  
+|**COR_E_INVALIDCOMOBJECT**|**InvalidComObjectException —**|  
+|**COR_E_INVALIDFILTERCRITERIA**|**InvalidFilterCriteriaException —**|  
+|**COR_E_INVALIDOLEVARIANTTYPE**|**InvalidOleVariantTypeException —**|  
 |**COR_E_INVALIDOPERATION**|**InvalidOperationException**|  
-|**COR_E_IO**|**Ioexception**|  
-|**COR_E_MEMBERACCESS**|**DostępException**|  
-|**COR_E_METHODACCESS**|**Methodaccessexception**|  
-|**COR_E_MISSINGFIELD**|**Missingfieldexception**|  
-|**COR_E_MISSINGMANIFESTRESOURCE**|**Missingmanifestresourceexception**|  
-|**COR_E_MISSINGMEMBER**|**Missingmemberexception**|  
-|**COR_E_MISSINGMETHOD**|**Missingmethodexception**|  
-|**COR_E_MULTICASTNOTSUPPORTED**|**Multicastnotsupportedexception**|  
-|**COR_E_NOTFINITENUMBER**|**Notfinitenumberexception**|  
-|**E_notimpl**|**Notimplementedexception**|  
-|**COR_E_NOTSUPPORTED**|**Notsupportedexception**|  
-|**COR_E_NULLREFERENCE orE_POINTER**|**Nullreferenceexception**|  
-|**COR_E_OUTOFMEMORY lub**<br /><br /> **E_outofmemory**|**Outofmemoryexception**|  
-|**COR_E_OVERFLOW**|**Nadmiernezamykanie**|  
-|**COR_E_PATHTOOLONG lub ERROR_FILENAME_EXCED_RANGE**|**Pathtoolongexception**|  
-|**COR_E_RANK**|**Rankexception**|  
-|**COR_E_REFLECTIONTYPELOAD**|**Reflectiontypeloadexception**|  
-|**COR_E_REMOTING**|**Remotingexception**|  
-|**COR_E_SAFEARRAYTYPEMISMATCH**|**Safearraytypemismatchexception**|  
-|**COR_E_SECURITY**|**Securityexception**|  
-|**COR_E_SERIALIZATION**|**Serializationexception**|  
-|**COR_E_STACKOVERFLOW orERROR_STACK_OVERFLOW**|**Stackoverflowexception**|  
-|**COR_E_SYNCHRONIZATIONLOCK**|**Synchronizationlockexception**|  
-|**COR_E_SYSTEM**|**Systemexception**|  
-|**COR_E_TARGET**|**Targetexception**|  
+|**COR_E_IO**|**IOException**|  
+|**COR_E_MEMBERACCESS**|**Accessexception**|  
+|**COR_E_METHODACCESS**|**MethodAccessException**|  
+|**COR_E_MISSINGFIELD**|**MissingFieldException**|  
+|**COR_E_MISSINGMANIFESTRESOURCE**|**MissingManifestResourceException**|  
+|**COR_E_MISSINGMEMBER**|**MissingMemberException**|  
+|**COR_E_MISSINGMETHOD**|**MissingMethodException**|  
+|**COR_E_MULTICASTNOTSUPPORTED**|**MulticastNotSupportedException —**|  
+|**COR_E_NOTFINITENUMBER**|**NotFiniteNumberException —**|  
+|**E_NOTIMPL**|**NotImplementedException**|  
+|**COR_E_NOTSUPPORTED**|**NotSupportedException**|  
+|**COR_E_NULLREFERENCE orE_POINTER**|**NullReferenceException**|  
+|**COR_E_OUTOFMEMORY lub**<br /><br /> **E_OUTOFMEMORY**|**OutOfMemoryException**|  
+|**COR_E_OVERFLOW**|**OverflowException**|  
+|**COR_E_PATHTOOLONG lub ERROR_FILENAME_EXCED_RANGE**|**PathTooLongException**|  
+|**COR_E_RANK**|**RankException**|  
+|**COR_E_REFLECTIONTYPELOAD**|**ReflectionTypeLoadException**|  
+|**COR_E_REMOTING**|**RemotingException —**|  
+|**COR_E_SAFEARRAYTYPEMISMATCH**|**SafeArrayTypeMismatchException —**|  
+|**COR_E_SECURITY**|**SecurityException**|  
+|**COR_E_SERIALIZATION**|**SerializationException**|  
+|**COR_E_STACKOVERFLOW orERROR_STACK_OVERFLOW**|**StackOverflowException**|  
+|**COR_E_SYNCHRONIZATIONLOCK**|**SynchronizationLockException —**|  
+|**COR_E_SYSTEM**|**SystemException**|  
+|**COR_E_TARGET**|**TargetException —**|  
 |**COR_E_TARGETINVOCATION**|**TargetInvocationException**|  
-|**COR_E_TARGETPARAMCOUNT**|**Targetparametercountexception**|  
-|**COR_E_THREADABORTED**|**Threadabortexception**|  
-|**COR_E_THREADINTERRUPTED**|**Threadinterruptedexception**|  
-|**COR_E_THREADSTATE**|**Threadstateexception**|  
-|**COR_E_THREADSTOP**|**ThreadStopException (Nieekception)**|  
-|**COR_E_TYPELOAD**|**Typeloadexception**|  
-|**COR_E_TYPEINITIALIZATION**|**Typeinitializationexception**|  
-|**COR_E_VERIFICATION**|**Verificationexception**|  
-|**COR_E_WEAKREFERENCE**|**Słabewystawianie odwołań**|  
+|**COR_E_TARGETPARAMCOUNT**|**TargetParameterCountException —**|  
+|**COR_E_THREADABORTED**|**ThreadAbortException**|  
+|**COR_E_THREADINTERRUPTED**|**ThreadInterruptedException —**|  
+|**COR_E_THREADSTATE**|**ThreadStateException —**|  
+|**COR_E_THREADSTOP**|**ThreadStopException**|  
+|**COR_E_TYPELOAD**|**TypeLoadException**|  
+|**COR_E_TYPEINITIALIZATION**|**TypeInitializationException**|  
+|**COR_E_VERIFICATION**|**VerificationException**|  
+|**COR_E_WEAKREFERENCE**|**WeakReferenceException**|  
 |**COR_E_VTABLECALLSNOTSUPPORTED**|**VTableCallsNotSupportedException**|  
-|**Wszystkie inne hresults**|**Comexception**|  
+|**Wszystkie inne HRESULT**|**COMException**|  
   
- Aby pobrać informacje o błąd rozszerzony, klient zarządzany musi zbadać pola obiektu wyjątku, który został wygenerowany. Aby obiekt wyjątku dostarczył przydatnych informacji o błędzie, obiekt COM musi implementować interfejs **IErrorInfo.** Środowisko wykonawcze używa informacji dostarczonych przez **IErrorInfo** do zainicjowania obiektu wyjątku.  
+ Aby pobrać rozszerzone informacje o błędzie, zarządzany klient musi przejrzeć pola wygenerowanego obiektu wyjątku. Aby obiekt wyjątku dostarczał przydatne informacje o błędzie, obiekt COM musi implementować interfejs **IErrorInfo** . Środowisko uruchomieniowe używa informacji dostarczonych przez **IErrorInfo** do zainicjowania obiektu wyjątku.  
   
- Jeśli obiekt COM nie obsługuje **iErrorInfo,** środowisko wykonawcze inicjuje obiekt wyjątku z wartościami domyślnymi. W poniższej tabeli wymieniono każde pole skojarzone z obiektem wyjątku i identyfikuje źródło informacji domyślnych, gdy obiekt COM obsługuje **program IErrorInfo**.  
+ Jeśli obiekt COM nie obsługuje **IErrorInfo**, środowisko uruchomieniowe inicjuje obiekt wyjątku z wartościami domyślnymi. Poniższa tabela zawiera listę wszystkich pól skojarzonych z obiektem wyjątku i identyfikuje źródło informacji domyślnych, gdy obiekt COM obsługuje **IErrorInfo**.  
   
- Należy zauważyć, że środowisko `HRESULT` wykonawcze czasami ignoruje w przypadkach, gdy istnieje `IErrorInfo` obecny w wątku.  To zachowanie może wystąpić `HRESULT` w `IErrorInfo` przypadkach, gdy i nie reprezentują tego samego błędu.  
+ Należy pamiętać, że środowisko uruchomieniowe czasami `HRESULT` zignoruje w przypadkach, gdy `IErrorInfo` istnieje w wątku.  Takie zachowanie może wystąpić w przypadkach, gdy `HRESULT` i i `IErrorInfo` nie reprezentują tego samego błędu.  
   
-|Pole wyjątku|Źródło informacji od COM|  
+|Pole wyjątku|Źródło informacji z modelu COM|  
 |---------------------|------------------------------------|  
-|**Errorcode**|HRESULT powrócił z połączenia.|  
-|**Helplink**|Jeśli **IErrorInfo->HelpContext** jest niezerowy, ciąg jest tworzony przez łączenie **IErrorInfo->GetHelpFile** i "#" i **IErrorInfo->GetHelpContext**. W przeciwnym razie ciąg jest zwracany z **IErrorInfo->GetHelpFile**.|  
-|**Innerexception**|Zawsze odwołanie null (**Nic** w języku Visual Basic).|  
+|**Kodzie**|WYNIK HRESULT został zwrócony z wywołania.|  
+|**HelpLink**|Jeśli **IErrorInfo->atrybut HelpContext** jest różna od zera, ciąg jest tworzony przez złączenie **IErrorInfo->GetHelpFile** i "#" oraz **IErrorInfo->GetHelpContext**. W przeciwnym razie ciąg jest zwracany z **IErrorInfo->GetHelpFile**.|  
+|**InnerException**|Zawsze ma odwołanie o wartości null (**Nothing** w Visual Basic).|  
 |**Komunikat**|Ciąg zwrócony z **IErrorInfo->GetDescription**.|  
-|**Źródła**|Ciąg zwrócony z **IErrorInfo->GetSource**.|  
-|**Stacktrace**|Ślad stosu.|  
-|**Targetsite**|Nazwa metody, która zwróciła niepowodzenie HRESULT.|  
+|**Element źródłowy**|Ciąg zwrócony z **IErrorInfo->GetSource**.|  
+|**Ślad stosu**|Ślad stosu.|  
+|**TargetSite**|Nazwa metody, która zwróciła błąd HRESULT.|  
   
- Pola wyjątków, takie jak **Message**, **Source**i **StackTrace,** nie są dostępne dla **stackoverflowException**.  
+ Pola wyjątków, takie jak **Message**, **Source**i **ślad stosu** , nie są dostępne dla **StackOverflowException**.  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Zaawansowana interoperacyjność COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
+- [Zaawansowana współdziałanie COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
 - [Wyjątki](../../standard/exceptions/index.md)

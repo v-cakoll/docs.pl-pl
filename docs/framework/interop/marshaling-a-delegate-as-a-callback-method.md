@@ -24,13 +24,13 @@ Ten przykład ilustruje sposób przekazywania delegatów do funkcji niezarządza
 
 Przykład wywołania zwrotnego używa następujących funkcji niezarządzanych, które są wyświetlane wraz z ich oryginalną deklaracją funkcji:
 
-- `TestCallBack` eksportowany z PinvokeLib. dll.
+- `TestCallBack`wyeksportowane z PinvokeLib. dll.
 
     ```cpp
     void TestCallBack(FPTR pf, int value);
     ```
 
-- `TestCallBack2` eksportowany z PinvokeLib. dll.
+- `TestCallBack2`wyeksportowane z PinvokeLib. dll.
 
     ```cpp
     void TestCallBack2(FPTR2 pf2, char* value);
@@ -38,7 +38,7 @@ Przykład wywołania zwrotnego używa następujących funkcji niezarządzanych, 
 
 [PinvokeLib. dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) to niestandardowa Biblioteka niezarządzana, która zawiera implementację wcześniej wymienionych funkcji.
 
-W tym przykładzie Klasa `NativeMethods` zawiera zarządzane prototypy dla metod `TestCallBack` i `TestCallBack2`. Obie metody przekażą delegata do funkcji wywołania zwrotnego jako parametr. Podpis delegata musi być zgodny z podpisem metody, do której się odwołuje. Na przykład `FPtr` i Delegaty `FPtr2` mają sygnatury identyczne z `DoSomething` i `DoSomething2` metodami.
+W tym przykładzie `NativeMethods` Klasa zawiera zarządzane prototypy dla metod `TestCallBack` i. `TestCallBack2` Obie metody przekażą delegata do funkcji wywołania zwrotnego jako parametr. Podpis delegata musi być zgodny z podpisem metody, do której się odwołuje. Na przykład Delegaty `FPtr` i `FPtr2` mają podpisy identyczne z metodami `DoSomething` i. `DoSomething2`
 
 ## <a name="declaring-prototypes"></a>Deklarowanie prototypów
 [!code-cpp[Conceptual.Interop.Marshaling#37](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/callback.cpp#37)]
@@ -50,7 +50,7 @@ W tym przykładzie Klasa `NativeMethods` zawiera zarządzane prototypy dla metod
 [!code-csharp[Conceptual.Interop.Marshaling#38](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/callback.cs#38)]
 [!code-vb[Conceptual.Interop.Marshaling#38](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/callback.vb#38)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Różne przykłady organizowania](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ss9sb93t(v=vs.100))
 - [Typy danych wywołania platformy](marshaling-data-with-platform-invoke.md#platform-invoke-data-types)

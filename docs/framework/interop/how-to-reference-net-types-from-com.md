@@ -22,26 +22,26 @@ ms.locfileid: "73124172"
 # <a name="how-to-reference-net-types-from-com"></a>Porady: odwołania do typów .NET z modelu COM
 Z punktu widzenia kodu klienta i serwera różnice między modelem COM i .NET Framework są bardzo niewidoczne. Klienci programu Microsoft Visual Basic mogą wyświetlać obiekt .NET w przeglądarce obiektów, która udostępnia metody obiektu i składnię, właściwości i pola dokładnie tak, jakby były dowolnym innym obiektem COM.  
   
- Proces importowania biblioteki typów jest nieco bardziej skomplikowany dla C++ klientów, chociaż te same narzędzia są używane do eksportowania metadanych do biblioteki typów com. Aby odwołać się do elementów członkowskich obiektu C++ platformy .NET z niezarządzanego klienta, należy odwołać się do pliku TLB (utworzonego za pomocą Tlbexp. exe) z dyrektywą **#import** . W przypadku odwoływania się do C++biblioteki typów z, należy określić opcję **raw_interfaces_only** lub zaimportować definicje w bibliotece klas podstawowych, mscorlib. tlb.  
+ Proces importowania biblioteki typów jest nieco bardziej skomplikowany dla klientów C++, chociaż te same narzędzia są używane do eksportowania metadanych do biblioteki typów COM. Aby odwołać się do elementów członkowskich obiektu platformy .NET z niezarządzanego klienta C++, odwołuje się do pliku TLB (utworzonego za pomocą Tlbexp. exe) z dyrektywą **#import** . W przypadku odwoływania się do biblioteki typów z C++ należy określić opcję **raw_interfaces_only** lub zaimportować definicje w bibliotece klas bazowych, mscorlib. tlb.  
   
 ### <a name="to-import-a-library"></a>Aby zaimportować bibliotekę  
   
-- Określ opcję **raw_interfaces_only** w dyrektywie **#import** . Na przykład:  
+- W dyrektywie **#import** określ opcję **raw_interfaces_only** . Przykład:  
   
     ```cpp  
     #import "..\LoanLib\LoanLib.tlb" raw_interfaces_only  
     ```  
   
-     —lub—  
+     — lub —  
   
-- Uwzględnij #import dyrektywę dla biblioteki mscorlib. tlb. Na przykład:  
+- Uwzględnij #import dyrektywę dla biblioteki mscorlib. tlb. Przykład:  
   
     ```cpp  
     #import "mscorlib.tlb"  
     #import "..\LoanLib\LoanLib.tlb"  
     ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Udostępnianie składników .NET Framework modelowi COM](exposing-dotnet-components-to-com.md)
 - [Rejestrowanie zestawów do użycia z modelem COM](registering-assemblies-with-com.md)

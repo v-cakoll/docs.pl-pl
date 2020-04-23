@@ -21,53 +21,53 @@ ms.lasthandoff: 03/14/2020
 ms.locfileid: "79399974"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>Wykorzystywanie niezarządzanych funkcji DLL
-Wywołanie platformy to usługa, która umożliwia kodowi zarządzanemu wywoływanie niezarządzanych funkcji zaimplementowanych w bibliotekach łączy dynamicznych (bibliotek dll), takich jak te w interfejsie API systemu Windows. Lokalizuje i wywołuje wyeksportowane funkcji i marshals jego argumenty (liczby całkowite, ciągi, tablice, struktury i tak dalej) w całej granicy współdziałania w razie potrzeby.  
+Wywołanie platformy to usługa, która umożliwia kodowi zarządzanemu wywoływanie funkcji niezarządzanych wdrożonych w bibliotekach dołączanych dynamicznie (dll), takich jak te w interfejsie API systemu Windows. Lokalizuje i wywołuje wyeksportowaną funkcję i kierującie jej argumentów (liczbami całkowitymi, ciągami, tablicami, strukturami itd.) w granicach międzyoperacyjnych, zgodnie z wymaganiami.  
   
- W tej sekcji przedstawiono zadania związane z korzystaniem z niezarządzanych funkcji DLL i zawiera więcej informacji na temat wywoływania platformy. Oprócz następujących zadań istnieją ogólne zagadnienia i łącze zawierające dodatkowe informacje i przykłady.  
+ W tej sekcji przedstawiono zadania związane z wykorzystywaniem niezarządzanych funkcji DLL i podano więcej informacji na temat wywołania platformy. Oprócz następujących zadań istnieją ogólne zagadnienia i link zawierający dodatkowe informacje i przykłady.  
   
-#### <a name="to-consume-exported-dll-functions"></a>Aby korzystać z eksportowanych funkcji biblioteki DLL  
+#### <a name="to-consume-exported-dll-functions"></a>Aby korzystać z wyeksportowanych funkcji DLL  
   
-1. [Identyfikowanie funkcji w bibliotekach DLL](identifying-functions-in-dlls.md).  
+1. [Zidentyfikuj funkcje w bibliotekach DLL](identifying-functions-in-dlls.md).  
   
-     Minimalnie należy określić nazwę funkcji i nazwę biblioteki DLL, która ją zawiera.  
+     W minimalnym stopniu należy określić nazwę funkcji i nazwy biblioteki DLL, która ją zawiera.  
   
-2. [Utwórz klasę do przechowywania funkcji DLL](creating-a-class-to-hold-dll-functions.md).  
+2. [Utwórz klasę, aby przechowywać funkcje DLL](creating-a-class-to-hold-dll-functions.md).  
   
-     Można użyć istniejącej klasy, utworzyć indywidualną klasę dla każdej funkcji niezarządzanej lub utworzyć jedną klasę zawierającą zestaw powiązanych funkcji niezarządzanych.  
+     Można użyć istniejącej klasy, utworzyć pojedynczą klasę dla każdej funkcji niezarządzanej lub utworzyć jedną klasę, która zawiera zestaw powiązanych funkcji niezarządzanych.  
   
 3. [Tworzenie prototypów w kodzie zarządzanym](creating-prototypes-in-managed-code.md).  
   
-     [Visual Basic] Użyj **Declare** instrukcji z **funkcji** i **Lib** słowa kluczowego. W niektórych rzadkich przypadkach można użyć **DllImportAttribute** z **shared function** słowa kluczowego. Przypadki te są wyjaśnione w dalszej części tej sekcji.  
+     [Visual Basic] Użyj instrukcji **DECLARE** ze słowami kluczowymi **funkcji** i **lib** . W niektórych rzadkich przypadkach można użyć **DllImportAttribute** ze słowami kluczowymi **funkcji udostępnionych** . Te przypadki zostały omówione w dalszej części tej sekcji.  
   
-     [C#] Użyj **DllImportAttribute** do identyfikowania biblioteki DLL i funkcji. Oznacz metodę za pomocą modyfikatorów **statycznych** i **extern.**  
+     Znajd Użyj parametru **DllImportAttribute** , aby zidentyfikować bibliotekę DLL i funkcję. Oznacz metodę za pomocą modyfikatorów **static** i **extern** .  
   
-     [C++] Użyj **DllImportAttribute** do identyfikowania biblioteki DLL i funkcji. Oznacz metodę otoki lub funkcję za pomocą **eksternu "C"**.  
+     Języków Użyj parametru **DllImportAttribute** , aby zidentyfikować bibliotekę DLL i funkcję. Oznacz metodę otoki lub funkcję **nieextern "C"**.  
   
-4. [Wywołanie funkcji DLL](calling-a-dll-function.md).  
+4. [Wywoływanie funkcji DLL](calling-a-dll-function.md).  
   
-     Wywołanie metody w klasie zarządzanej, jak każda inna metoda zarządzana. [Przekazywanie struktur](passing-structures.md) i [implementowanie funkcji wywołania zwrotnego](callback-functions.md) są szczególnymi przypadkami.  
+     Wywołaj metodę w klasie zarządzanej, tak jak każdą inną zarządzaną metodę. [Przekazywanie struktur](passing-structures.md) i [Implementowanie funkcji wywołania zwrotnego](callback-functions.md) to specjalne przypadki.  
   
- Przykłady, które pokazują, jak konstruować . Deklaracje oparte na sieci, które mają być używane z wywołaniem platformy, zobacz [Kierowanie danych za pomocą platformy Invoke](marshaling-data-with-platform-invoke.md).  
+ Przykłady, które demonstrują sposób konstruowania. Deklaracje oparte na sieci, które mają być używane z wywołaniem platformy, można znaleźć w temacie [kierowanie danych za pomocą wywołania platformy](marshaling-data-with-platform-invoke.md).  
   
-## <a name="a-closer-look-at-platform-invoke"></a>Bliższe spojrzenie na platformę wywołać  
- Wywołanie platformy opiera się na metadanych, aby zlokalizować eksportowane funkcje i marshal ich argumentów w czasie wykonywania. Ten proces przedstawiono na poniższej ilustracji.  
+## <a name="a-closer-look-at-platform-invoke"></a>Bliższe spojrzenie na wywołanie platformy  
+ Wywołanie platformy polega na metadanych, aby znaleźć eksportowane funkcje i zorganizować ich argumenty w czasie wykonywania. Ten proces przedstawiono na poniższej ilustracji.  
   
- ![Diagram, który pokazuje wywołanie wywołania platformy.](./media/consuming-unmanaged-dll-functions/platform-invoke-call.gif)  
+ ![Diagram przedstawiający wywołanie wywołania platformy.](./media/consuming-unmanaged-dll-functions/platform-invoke-call.gif)  
   
- Gdy platforma wywołać niezarządzaną funkcję, wykonuje następującą sekwencję akcji:  
+ Gdy wywołanie platformy wywołuje niezarządzaną funkcję, wykonuje następującą sekwencję akcji:  
   
 1. Lokalizuje bibliotekę DLL zawierającą funkcję.  
   
 2. Ładuje bibliotekę DLL do pamięci.  
   
-3. Lokalizuje adres funkcji w pamięci i wypycha jego argumenty na stosie, rozsyłania danych zgodnie z wymaganiami.  
+3. Lokalizuje adres funkcji w pamięci i wypychanie jej argumentów na stos, kierując dane zgodnie z potrzebami.  
   
     > [!NOTE]
-    > Lokalizowanie i ładowanie biblioteki DLL i lokalizowanie adresu funkcji w pamięci występuje tylko przy pierwszym wywołaniu funkcji.  
+    > Lokalizowanie i ładowanie biblioteki DLL oraz lokalizowanie adresu funkcji w pamięci występuje tylko po pierwszym wywołaniu funkcji.  
   
 4. Przenosi kontrolę do funkcji niezarządzanej.  
   
- Platforma wywołać zgłasza wyjątki generowane przez funkcję niezarządzane do zarządzanego wywołującego.
+ Wywołanie platformy zgłasza wyjątki wygenerowane przez niezarządzaną funkcję do zarządzanego obiektu wywołującego.
 
 ## <a name="see-also"></a>Zobacz też
 

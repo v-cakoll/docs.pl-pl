@@ -30,7 +30,7 @@ W tym temacie opisano, jak uzyskać dostęp do funkcji niezarządzanych i wprowa
  Aby można było uzyskać dostęp do niezarządzanej funkcji DLL z kodu zarządzanego, należy znać nazwę funkcji i nazwę biblioteki DLL, która go wyeksportuje. Korzystając z tych informacji, można rozpocząć pisanie zarządzanej definicji dla niezarządzanej funkcji, która jest zaimplementowana w bibliotece DLL. Ponadto można dostosować sposób, w jaki wywołanie platformy tworzy funkcję i kierowanie danych do i z funkcji.  
   
 > [!NOTE]
-> Funkcje interfejsu API systemu Windows, które przydzielą ciąg, umożliwiają zwolnienie ciągu przy użyciu metody, takiej jak `LocalFree`. Wywołanie platformy obsługuje takie parametry inaczej. W przypadku wywołań wywołania platformy należy sprawić, aby parametr `IntPtr` typ zamiast typu `String`. Użyj metod, które są dostarczane przez klasę <xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType>, aby ręcznie przekonwertować typ na ciąg i zwolnić go ręcznie.  
+> Funkcje interfejsu API systemu Windows, które przydzielą ciąg, umożliwiają zwolnienie ciągu przy użyciu metody takiej `LocalFree`jak. Wywołanie platformy obsługuje takie parametry inaczej. W przypadku wywołań wywołania platformy należy zamiast `IntPtr` `String` typu wprowadzić parametr. Użyj metod dostarczonych przez <xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType> klasę, aby ręcznie przekonwertować typ na ciąg i zwolnić go ręcznie.  
   
 ## <a name="declaration-basics"></a>Podstawowe informacje o deklaracji  
  Zarządzane definicje funkcji niezarządzanych są zależne od języka, co jest widoczne w poniższych przykładach. Aby zapoznać się z bardziej kompletnymi przykładami kodu, zobacz [przykładowe wywołania platformy](platform-invoke-examples.md).  
@@ -45,7 +45,7 @@ Friend Class NativeMethods
 End Class
 ```
   
- Aby zastosować pola <xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping?displayProperty=nameWithType>, <xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention?displayProperty=nameWithType>, <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=nameWithType>, <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig?displayProperty=nameWithType>, <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError?displayProperty=nameWithType>lub <xref:System.Runtime.InteropServices.DllImportAttribute.ThrowOnUnmappableChar?displayProperty=nameWithType> do deklaracji Visual Basic, należy użyć atrybutu <xref:System.Runtime.InteropServices.DllImportAttribute> zamiast instrukcji `Declare`.  
+ Aby zastosować pola <xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping?displayProperty=nameWithType>, <xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention?displayProperty=nameWithType>, <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=nameWithType>, <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig?displayProperty=nameWithType> <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError?displayProperty=nameWithType>, lub <xref:System.Runtime.InteropServices.DllImportAttribute.ThrowOnUnmappableChar?displayProperty=nameWithType> do deklaracji Visual Basic, należy użyć <xref:System.Runtime.InteropServices.DllImportAttribute> atrybutu zamiast `Declare` instrukcji.  
   
 ```vb
 Imports System.Runtime.InteropServices
@@ -83,30 +83,30 @@ extern "C" int MessageBox(
 ```
   
 ## <a name="adjusting-the-definition"></a>Dostosowywanie definicji  
- Niezależnie od tego, czy ustawisz je jawnie, czy nie, pola atrybutów są w pracy definiujące zachowanie kodu zarządzanego. Wywołanie platformy działa zgodnie z wartościami domyślnymi ustawionymi w różnych polach, które istnieją jako metadane w zestawie. To zachowanie domyślne można zmienić, dostosowując wartości jednego lub kilku pól. W wielu przypadkach do ustawienia wartości służy <xref:System.Runtime.InteropServices.DllImportAttribute>.  
+ Niezależnie od tego, czy ustawisz je jawnie, czy nie, pola atrybutów są w pracy definiujące zachowanie kodu zarządzanego. Wywołanie platformy działa zgodnie z wartościami domyślnymi ustawionymi w różnych polach, które istnieją jako metadane w zestawie. To zachowanie domyślne można zmienić, dostosowując wartości jednego lub kilku pól. W wielu przypadkach należy użyć, <xref:System.Runtime.InteropServices.DllImportAttribute> aby ustawić wartość.  
   
  W poniższej tabeli przedstawiono kompletny zestaw pól atrybutów odnoszących się do wywołania platformy. Dla każdego pola tabela zawiera wartość domyślną i link do informacji na temat sposobu użycia tych pól do definiowania niezarządzanych funkcji DLL.  
   
 |Pole|Opis|  
 |-----------|-----------------|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping>|Włącza lub wyłącza Mapowanie najlepszego dopasowania.|  
-|<xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention>|Określa konwencję wywoływania, która ma być używana podczas przekazywania argumentów metody. Wartość domyślna to `WinAPI`, która odnosi się do `__stdcall` dla 32-bitowych platform opartych na architekturze Intel.|  
+|<xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention>|Określa konwencję wywoływania, która ma być używana podczas przekazywania argumentów metody. Wartość domyślna to `WinAPI`, która odnosi się `__stdcall` do 32-bitowych platform opartych na procesorze Intel.|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>|Kontroluje nazwę dekorowanie i sposób, w jaki argumenty ciągów powinny być organizowane w funkcji. Wartość domyślna to `CharSet.Ansi`.|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>|Określa punkt wejścia biblioteki DLL, który ma zostać wywołany.|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>|Określa, czy punkt wejścia powinien zostać zmodyfikowany, aby odpowiadał zestawowi znaków. Wartość domyślna różni się w zależności od języka programowania.|  
-|<xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>|Określa, czy podpis metody zarządzanej powinien być przekształcony w niezarządzany podpis, który zwraca wynik HRESULT i ma dodatkowy argument [out, retval] dla wartości zwracanej.<br /><br /> Wartość domyślna to `true` (Sygnatura nie powinna być przekształcona).|  
-|<xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError>|Umożliwia wywołującemu użycie funkcji interfejsu API `Marshal.GetLastWin32Error`, aby określić, czy wystąpił błąd podczas wykonywania metody. W Visual Basic wartość domyślna to `true`; w C# i C++, wartość domyślna to `false`.|  
+|<xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>|Określa, czy podpis metody zarządzanej powinien być przekształcony w niezarządzany podpis, który zwraca wynik HRESULT i ma dodatkowy argument [out, retval] dla wartości zwracanej.<br /><br /> Wartość domyślna to `true` (podpis nie powinien być przekształcony).|  
+|<xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError>|Umożliwia wywołującemu użycie funkcji API `Marshal.GetLastWin32Error` do określenia, czy wystąpił błąd podczas wykonywania metody. W Visual Basic, wartość domyślna to `true`; w językach C# i C++ wartość domyślna to `false`.|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.ThrowOnUnmappableChar>|Kontroluje wyrzucanie wyjątków dla znaku Unicode napotkano, który jest konwertowany na znak ANSI "?".|  
   
- Aby uzyskać szczegółowe informacje referencyjne, zobacz <xref:System.Runtime.InteropServices.DllImportAttribute>.  
+ Aby uzyskać szczegółowe informacje referencyjne <xref:System.Runtime.InteropServices.DllImportAttribute>, zobacz.  
   
 ## <a name="platform-invoke-security-considerations"></a>Zagadnienia dotyczące zabezpieczeń wywołania platformy  
- `Assert`, `Deny`i `PermitOnly` elementy członkowskie wyliczenia <xref:System.Security.Permissions.SecurityAction> są określane jako *Modyfikatory*przeszukiwania stosu. Te elementy członkowskie są ignorowane, jeśli są używane jako atrybuty deklaracyjne w deklaracjach wywołania platformy i instrukcjach języka definicji interfejsu COM (IDL).  
+ `Assert` <xref:System.Security.Permissions.SecurityAction> Elementy członkowskie wyliczenia są określane jako modyfikatory przeszukiwania *stosu.* `Deny` `PermitOnly` Te elementy członkowskie są ignorowane, jeśli są używane jako atrybuty deklaracyjne w deklaracjach wywołania platformy i instrukcjach języka definicji interfejsu COM (IDL).  
   
 ### <a name="platform-invoke-examples"></a>Przykłady wywołań platformy  
- Przykłady wywołania platformy w tej sekcji ilustrują użycie atrybutu `RegistryPermission` z modyfikatorami przeszukiwania stosu.  
+ Przykłady wywołania platformy w tej sekcji ilustrują użycie `RegistryPermission` atrybutu za pomocą modyfikatorów przeszukiwania stosu.  
   
- W poniższym przykładzie Modyfikatory `Assert`<xref:System.Security.Permissions.SecurityAction>, `Deny`i `PermitOnly` są ignorowane.  
+ W <xref:System.Security.Permissions.SecurityAction> `Assert`poniższym przykładzie modyfikatory, `Deny`i `PermitOnly` są ignorowane.  
   
 ```csharp  
 [DllImport("MyClass.dll", EntryPoint = "CallRegistryPermission")]  
@@ -122,7 +122,7 @@ extern "C" int MessageBox(
     private static extern bool CallRegistryPermissionDeny();  
 ```  
   
- Jednak modyfikator `Demand` w poniższym przykładzie zostanie zaakceptowany.  
+ Jednak `Demand` modyfikator w poniższym przykładzie zostanie zaakceptowany.  
   
 ```csharp
 [DllImport("MyClass.dll", EntryPoint = "CallRegistryPermission")]  
@@ -130,7 +130,7 @@ extern "C" int MessageBox(
     private static extern bool CallRegistryPermissionDeny();  
 ```  
   
- Modyfikatory <xref:System.Security.Permissions.SecurityAction> działają poprawnie, jeśli są umieszczone na klasie, która zawiera (zawija) wywołanie wywołania platformy.  
+ <xref:System.Security.Permissions.SecurityAction>Modyfikatory działają poprawnie, jeśli są umieszczone na klasie, która zawiera (zawija) wywołanie wywołania platformy.  
   
 ```cpp  
       [RegistryPermission(SecurityAction.Demand, Unrestricted = true)]  
@@ -151,7 +151,7 @@ class PInvokeWrapper
 }  
 ```  
   
- Modyfikatory <xref:System.Security.Permissions.SecurityAction> również działają poprawnie w zagnieżdżonym scenariuszu, w którym są umieszczane na wywołującym wywołania wywołania platformy:  
+ <xref:System.Security.Permissions.SecurityAction>Modyfikatory działają również prawidłowo w zagnieżdżonym scenariuszu, w którym są umieszczane na wywołującym wywołania wywołania platformy:  
   
 ```cpp  
       {  
@@ -183,9 +183,9 @@ class PInvokeScenario
 ```  
   
 #### <a name="com-interop-examples"></a>Przykłady międzyoperacyjności modelu COM  
- Przykłady międzyoperacyjności modelu COM w tej sekcji ilustrują użycie atrybutu `RegistryPermission` z modyfikatorami przeszukiwania stosu.  
+ Przykłady międzyoperacyjności modelu COM w tej sekcji ilustrują użycie `RegistryPermission` atrybutu za pomocą modyfikatorów przeszukiwania stosu.  
   
- Poniższe deklaracje interfejsu COM międzyoperacyjnych ignorują Modyfikatory `Assert`, `Deny`i `PermitOnly`, podobnie jak w przypadku wywołania platformy w poprzedniej sekcji.  
+ Poniższe deklaracje interfejsu com międzyoperacyjnych `Assert`ignorują modyfikatory, `Deny`i `PermitOnly` , podobnie jak w przypadku wywołania platform w poprzedniej sekcji.  
   
 ```csharp
 [ComImport, Guid("12345678-43E6-43c9-9A13-47F40B338DE0")]  
@@ -216,7 +216,7 @@ interface IAssertStubsItf
 }  
 ```  
   
- Ponadto modyfikator `Demand` nie jest akceptowany w scenariuszach deklaracji interfejsu COM Interop, jak pokazano w poniższym przykładzie.  
+ Ponadto `Demand` modyfikator nie jest akceptowany w scenariuszach deklaracji interfejsu COM Interop, jak pokazano w poniższym przykładzie.  
   
 ```csharp  
 [ComImport, Guid("12345678-43E6-43c9-9A13-47F40B338DE0")]  
@@ -229,7 +229,7 @@ interface IDemandStubsItf
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Wykorzystywanie niezarządzanych funkcji DLL](consuming-unmanaged-dll-functions.md)
 - [Określanie punktu wejścia](specifying-an-entry-point.md)

@@ -16,7 +16,7 @@ ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181503"
 ---
 # <a name="com-interop-sample-com-client-and-net-server"></a>Przykład międzyoperacyjnego modelu COM: klient modelu COM i serwer .NET
-W tym przykładzie pokazano współdziałanie [klienta COM](#cpconcominteropsamplecomclientnetserveranchor1) i [.NET Server,](#cpconcominteropsamplecomclientnetserveranchor2) który wykonuje obliczenia kredytu hipotecznego. W tym przykładzie klient tworzy i wywołuje `Loan` wystąpienie klasy zarządzanej, przekazuje cztery argumenty (jeden z tych czterech jest równa zero) do wystąpienia i wyświetla obliczenia. Przykłady kodu z tego przykładu są wyświetlane w tej sekcji.  
+Ten przykład pokazuje międzyoperacyjność [klienta com](#cpconcominteropsamplecomclientnetserveranchor1) i [serwera .NET](#cpconcominteropsamplecomclientnetserveranchor2) , który wykonuje obliczenia hipoteczne. W tym przykładzie klient tworzy i wywołuje wystąpienie klasy zarządzanej `Loan` , przekazuje cztery argumenty (jeden z czterech równa zero) do wystąpienia i wyświetla obliczenia. Przykłady kodu z tego przykładu pojawiają się w tej sekcji.  
   
 <a name="cpconcominteropsamplecomclientnetserveranchor1"></a>
 ## <a name="com-client"></a>Klient COM  
@@ -86,7 +86,7 @@ int main(int argc, char* argv[])
 ```  
   
 <a name="cpconcominteropsamplecomclientnetserveranchor2"></a>
-## <a name="net-server"></a>Serwer NET  
+## <a name="net-server"></a>Serwer .NET  
   
 ```vb  
 Imports System  

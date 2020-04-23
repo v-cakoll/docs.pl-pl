@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Uruchamianie usług'
+title: 'Porady: uruchamianie usług'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, starting
@@ -13,22 +13,22 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053574"
 ---
-# <a name="how-to-start-services"></a>Instrukcje: Uruchamianie usług
+# <a name="how-to-start-services"></a>Porady: uruchamianie usług
 
-Po zainstalowaniu usługi należy ją uruchomić. Rozpoczęcie wywołuje <xref:System.ServiceProcess.ServiceBase.OnStart%2A> metodę w klasie usługi. <xref:System.ServiceProcess.ServiceBase.OnStart%2A> Zwykle Metoda definiuje przydatną służbę wykonywaną przez usługę. Po uruchomieniu usługa pozostaje aktywna, dopóki nie zostanie ręcznie wstrzymana lub zatrzymana.
+Po zainstalowaniu usługi należy ją uruchomić. Rozpoczęcie wywołuje <xref:System.ServiceProcess.ServiceBase.OnStart%2A> metodę w klasie usługi. Zwykle <xref:System.ServiceProcess.ServiceBase.OnStart%2A> Metoda definiuje przydatną służbę wykonywaną przez usługę. Po uruchomieniu usługa pozostaje aktywna, dopóki nie zostanie ręcznie wstrzymana lub zatrzymana.
 
 Usługi można skonfigurować do automatycznego uruchamiania lub ręcznie. Usługa uruchamiana automatycznie zostanie uruchomiona, gdy komputer, na którym jest zainstalowany, jest ponownie uruchamiana lub włączona. Użytkownik musi uruchomić usługę, która jest uruchamiana ręcznie.
 
 > [!NOTE]
 > Domyślnie usługi utworzone za pomocą programu Visual Studio są ustawiane jako uruchamiane ręcznie.
 
-Istnieje kilka sposobów, aby ręcznie uruchomić usługę — od **Eksplorator serwera**, z **Menedżera sterowania usługami**lub z kodu przy użyciu <xref:System.ServiceProcess.ServiceController>składnika o nazwie.
+Istnieje kilka sposobów, aby ręcznie uruchomić usługę — od **Eksplorator serwera**, z **Menedżera sterowania usługami**lub z kodu przy użyciu składnika o nazwie <xref:System.ServiceProcess.ServiceController>.
 
 Należy ustawić <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> właściwość w klasie, <xref:System.ServiceProcess.ServiceInstaller> aby określić, czy usługa powinna być uruchamiana ręcznie czy automatycznie.
 
 ### <a name="to-specify-how-a-service-should-start"></a>Aby określić sposób uruchamiania usługi
 
-1. Po utworzeniu usługi należy dodać do niej niezbędne Instalatory. Aby uzyskać więcej informacji, zobacz [jak: Dodaj Instalatory do aplikacji](how-to-add-installers-to-your-service-application.md)usługi.
+1. Po utworzeniu usługi należy dodać do niej niezbędne Instalatory. Aby uzyskać więcej informacji, zobacz [jak: Dodawanie instalatorów do aplikacji usługi](how-to-add-installers-to-your-service-application.md).
 
 2. W projektancie kliknij Instalatora usługi dla usługi, z którą pracujesz.
 
@@ -36,7 +36,7 @@ Należy ustawić <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> wła
 
     |Aby zainstalować usługę|Ustaw tę wartość|
     |----------------------------------|--------------------|
-    |Po ponownym uruchomieniu komputera|**Automatyczne**|
+    |Po ponownym uruchomieniu komputera|**Automatyczny**|
     |Po uruchomieniu przez jawną akcję użytkownika|**Ręcznie**|
 
     > [!TIP]
@@ -49,7 +49,7 @@ Należy ustawić <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> wła
 
 ### <a name="to-manually-start-a-service-from-server-explorer"></a>Aby ręcznie uruchomić usługę z Eksplorator serwera
 
-1. W **Eksplorator serwera**Dodaj serwer, którego chcesz użyć, jeśli nie jest jeszcze wymieniony. Aby uzyskać więcej informacji, zobacz How to: Dostęp i Inicjowanie Eksplorator serwera-Eksplorator bazy danych.
+1. W **Eksplorator serwera**Dodaj serwer, którego chcesz użyć, jeśli nie jest jeszcze wymieniony. Aby uzyskać więcej informacji, zobacz How to: Access and Initialize Eksplorator serwera-Eksplorator bazy danych.
 
 2. Rozwiń węzeł **usługi** , a następnie Znajdź usługę, którą chcesz uruchomić.
 
@@ -61,7 +61,7 @@ Należy ustawić <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> wła
 
     - W systemach Windows XP i 2000 Professional kliknij prawym przyciskiem myszy ikonę **mój komputer** na pulpicie, a następnie kliknij polecenie **Zarządzaj**. W wyświetlonym oknie dialogowym Rozwiń węzeł **usługi i aplikacje** .
 
-      \- lub —
+      \-oraz
 
     - W systemie Windows Server 2003 i Windows 2000 Server, kliknij przycisk **Start**, wskaż polecenie **programy**, kliknij polecenie **Narzędzia administracyjne**, a następnie kliknij pozycję **usługi**.
 
@@ -78,8 +78,8 @@ Należy ustawić <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> wła
 
 2. Wywołaj <xref:System.ServiceProcess.ServiceController.Start%2A> metodę, aby uruchomić usługę.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Wprowadzenie do aplikacji usług systemu Windows](introduction-to-windows-service-applications.md)
-- [Instrukcje: Tworzenie usług systemu Windows](how-to-create-windows-services.md)
-- [Instrukcje: Dodawanie instalatorów do aplikacji usługi](how-to-add-installers-to-your-service-application.md)
+- [Porady: tworzenie usług systemu Windows](how-to-create-windows-services.md)
+- [Porady: dodawanie instalatorów od aplikacji usług](how-to-add-installers-to-your-service-application.md)

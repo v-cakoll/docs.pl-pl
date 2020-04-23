@@ -34,7 +34,7 @@ Istnieją dwa sposoby, aby te informacje o typie były dostępne dla aplikacji:
 
 W przypadku korzystania z zestawów międzyoperacyjnych tylko do projektowania można osadzić informacje o typie z podstawowego zestawu międzyoperacyjnego opublikowanego przez autora składnika modelu COM. Nie trzeba jednak wdrażać podstawowego zestawu międzyoperacyjnego przy użyciu aplikacji.
 
-Używanie zestawów międzyoperacyjnych tylko do projektowania zmniejsza rozmiar aplikacji, ponieważ większość aplikacji nie korzysta ze wszystkich funkcji składnika COM. Kompilator jest bardzo wydajny, gdy osadza informacje o typie; Jeśli aplikacja używa tylko niektórych metod w interfejsie COM, kompilator nie osadza nieużywanych metod. Gdy aplikacja zawierająca informacje o typie osadzonym współdziała z inną aplikacją lub współdziała z aplikacją, która używa podstawowego zestawu międzyoperacyjnego, środowisko uruchomieniowe języka wspólnego używa reguł równoważności typu w celu określenia, czy dwa typy z Ta sama nazwa reprezentuje ten sam typ COM. Nie trzeba znać tych reguł, aby używać obiektów COM. Jednak jeśli interesuje Cię reguły, zobacz [typ równoważności i osadzone typy międzyoperacyjnych](type-equivalence-and-embedded-interop-types.md).
+Używanie zestawów międzyoperacyjnych tylko do projektowania zmniejsza rozmiar aplikacji, ponieważ większość aplikacji nie korzysta ze wszystkich funkcji składnika COM. Kompilator jest bardzo wydajny, gdy osadza informacje o typie; Jeśli aplikacja używa tylko niektórych metod w interfejsie COM, kompilator nie osadza nieużywanych metod. Gdy aplikacja zawierająca informacje o typie osadzonym współdziała z inną aplikacją lub współdziała z aplikacją, która używa podstawowego zestawu międzyoperacyjnego, środowisko uruchomieniowe języka wspólnego używa reguł równoważności typów do określenia, czy dwa typy o takiej samej nazwie reprezentują ten sam typ COM. Nie trzeba znać tych reguł, aby używać obiektów COM. Jednak jeśli interesuje Cię reguły, zobacz [typ równoważności i osadzone typy międzyoperacyjnych](type-equivalence-and-embedded-interop-types.md).
 
 ## <a name="generating-metadata"></a>Generowanie metadanych
 
@@ -52,7 +52,7 @@ Po znalezieniu biblioteki typów, która zawiera implementację docelowego typu 
 
 - Klasa <xref:System.Runtime.InteropServices.TypeLibConverter?displayProperty=nameWithType>
 
-  Ta klasa dostarcza metody do konwertowania klas i interfejsów w bibliotece typów na metadane w ramach zestawu. Generuje te same dane wyjściowe metadanych, co Tlbimp. exe. Jednak, w przeciwieństwie do Tlbimp. exe, Klasa <xref:System.Runtime.InteropServices.TypeLibConverter> może skonwertować bibliotekę typów w pamięci na metadane.
+  Ta klasa dostarcza metody do konwertowania klas i interfejsów w bibliotece typów na metadane w ramach zestawu. Generuje te same dane wyjściowe metadanych, co Tlbimp. exe. Jednak, w przeciwieństwie do Tlbimp. exe <xref:System.Runtime.InteropServices.TypeLibConverter> , Klasa może skonwertować bibliotekę typów w pamięci na metadane.
 
 - Otoki niestandardowe
 
@@ -62,7 +62,7 @@ Po znalezieniu biblioteki typów, która zawiera implementację docelowego typu 
 
   - Precyzyjne opisy klas i interfejsów, które są definiowane.
 
-  - Kompilator, taki jak C# kompilator, który może generować odpowiednie definicje klas .NET Framework.
+  - Kompilator, taki jak kompilator języka C#, który może generować odpowiednie definicje klas .NET Framework.
 
   - Znajomość reguł konwersji typu "Biblioteka na zestaw".
 
@@ -70,15 +70,15 @@ Po znalezieniu biblioteki typów, która zawiera implementację docelowego typu 
 
  Aby uzyskać więcej informacji na temat procesu importowania międzyoperacyjności modelu COM, zobacz [Podsumowanie konwersji typu Biblioteka na zestaw](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100)).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
-- [Udostępnianie składników COM programowi .NET Framework](exposing-com-components.md)
+- [Udostępnianie składników COM programowi.NET Framework](exposing-com-components.md)
 - [Podsumowanie dotyczące konwersji biblioteki typów na zestaw](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
-- [Tlbimp.exe (importer biblioteki typów)](../tools/tlbimp-exe-type-library-importer.md)
+- [Tlbimp. exe (Importer biblioteki typów)](../tools/tlbimp-exe-type-library-importer.md)
 - [Dostosowywanie otok standardowych](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100))
 - [Używanie typów COM w kodzie zarządzanym](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
 - [Kompilowanie projektu międzyoperacyjnego](compiling-an-interop-project.md)
 - [Wdrażanie aplikacji międzyoperacyjnych](deploying-an-interop-application.md)
-- [Instrukcje: Dodawanie odwołań do bibliotek typów](how-to-add-references-to-type-libraries.md)
-- [Instrukcje: Generowanie zestawów międzyoperacyjnych z bibliotek typów](how-to-generate-interop-assemblies-from-type-libraries.md)
+- [Porady: dodawanie odwołań do bibliotek typów](how-to-add-references-to-type-libraries.md)
+- [Porada: generowanie zestawów międzyoperacyjnych z bibliotek typów](how-to-generate-interop-assemblies-from-type-libraries.md)

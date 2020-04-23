@@ -31,7 +31,7 @@ Punkt wejścia określa lokalizację funkcji w bibliotece DLL. W obrębie zarzą
   
 ## <a name="renaming-a-function-in-visual-basic"></a>Zmiana nazwy funkcji w języku Visual Basic  
 
-Visual Basic używa **słowa kluczowego Function** w **Declare** instrukcji, aby ustawić <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> pole. Poniższy przykład pokazuje podstawową deklarację.  
+Visual Basic używa słowa kluczowego **Function** w instrukcji **DECLARE** do ustawienia <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> pola. Poniższy przykład pokazuje podstawową deklarację.  
   
 ```vb
 Friend Class NativeMethods
@@ -43,7 +43,7 @@ Friend Class NativeMethods
 End Class
 ```
   
-Punkt wejścia **MessageBox** można zastąpić **msgbox,** dołączając słowo kluczowe **Alias** do definicji, jak pokazano w poniższym przykładzie. W obu przykładach **auto** słowo kluczowe eliminuje konieczność określenia wersji zestawu znaków punktu wejścia. Aby uzyskać więcej informacji na temat wybierania zestawu znaków, zobacz [Określanie zestawu znaków](specifying-a-character-set.md).  
+Punkt wejścia **MessageBox** można zastąpić za pomocą **OknoKomunikatu** , dołączając słowo kluczowe **alias** w definicji, jak pokazano w poniższym przykładzie. W obu przykładach słowo kluczowe " **Autouzupełnianie** " eliminuje konieczność określenia wersji zestawu znaków punktu wejścia. Aby uzyskać więcej informacji na temat wybierania zestawu znaków, zobacz [Określanie zestawu znaków](specifying-a-character-set.md).  
   
 ```vb
 Friend Class NativeMethods
@@ -57,7 +57,7 @@ End Class
 ```
   
 ## <a name="renaming-a-function-in-c-and-c"></a>Zmiana nazwy funkcji w języku C# i C++  
- Można użyć pola <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType>, aby określić funkcję DLL po nazwie lub liczbie porządkowej. Jeśli nazwa funkcji w definicji metody jest taka sama jak punkt wejścia w dll, nie trzeba jawnie zidentyfikować funkcję z **entrypoint** pola. W innym wypadku, użyj jednego z poniższych form atrybutów, aby wskazać nazwę lub liczbę porządkową:  
+ Można użyć pola <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType>, aby określić funkcję DLL po nazwie lub liczbie porządkowej. Jeśli nazwa funkcji w definicji metody jest taka sama jak punkt wejścia w bibliotece DLL, nie trzeba jawnie identyfikować funkcji z polem **EntryPoint** . W innym wypadku, użyj jednego z poniższych form atrybutów, aby wskazać nazwę lub liczbę porządkową:  
   
 ```csharp
 [DllImport("DllName", EntryPoint = "Functionname")]
@@ -66,7 +66,7 @@ End Class
   
  Należy zauważyć, że liczba porządkowa musi być poprzedzona znakiem kratki (#).  
   
- W poniższym przykładzie pokazano, jak zastąpić **MessageBoxA** **msgbox** w kodzie przy użyciu **entrypoint** pola.  
+ W poniższym przykładzie pokazano, jak zastąpić element **MessageBox** w **kodzie** przy użyciu pola **EntryPoint** .  
   
 ```csharp
 using System;

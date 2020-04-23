@@ -9,9 +9,9 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/19/2020
 ms.locfileid: "82071935"
 ---
-<span data-ttu-id="b5dc0-101">Tworzenie pliku tekstowego o nazwie `azureauth.json`.</span><span class="sxs-lookup"><span data-stu-id="b5dc0-101">Create a text file named `azureauth.json`.</span></span> <span data-ttu-id="b5dc0-102">Wklej dane wyjściowe JSON z podczas tworzenia jednostki usługi.</span><span class="sxs-lookup"><span data-stu-id="b5dc0-102">Paste the JSON output from when you created the service principal.</span></span>
+<span data-ttu-id="88a66-101">Utwórz plik tekstowy o nazwie `azureauth.json`.</span><span class="sxs-lookup"><span data-stu-id="88a66-101">Create a text file named `azureauth.json`.</span></span> <span data-ttu-id="88a66-102">Wklej dane wyjściowe JSON z programu podczas tworzenia jednostki usługi.</span><span class="sxs-lookup"><span data-stu-id="88a66-102">Paste the JSON output from when you created the service principal.</span></span>
 
-<span data-ttu-id="b5dc0-103">Zapisz ten plik w bezpiecznej lokalizacji w systemie, w której kod może go odczytać.</span><span class="sxs-lookup"><span data-stu-id="b5dc0-103">Save this file in a secure location on your system where your code can read it.</span></span> <span data-ttu-id="b5dc0-104">Użyj programu PowerShell, aby `AZURE_AUTH_LOCATION` ustawić zmienną środowiskową o nazwie z pełną ścieżką do pliku, na przykład:</span><span class="sxs-lookup"><span data-stu-id="b5dc0-104">Use PowerShell to set an environment variable named `AZURE_AUTH_LOCATION` with the full path to the file, for example:</span></span>
+<span data-ttu-id="88a66-103">Zapisz ten plik w bezpiecznej lokalizacji w systemie, w której kod może go odczytać.</span><span class="sxs-lookup"><span data-stu-id="88a66-103">Save this file in a secure location on your system where your code can read it.</span></span> <span data-ttu-id="88a66-104">Użyj programu PowerShell, aby ustawić zmienną środowiskową o nazwie `AZURE_AUTH_LOCATION` z pełną ścieżką do pliku, na przykład:</span><span class="sxs-lookup"><span data-stu-id="88a66-104">Use PowerShell to set an environment variable named `AZURE_AUTH_LOCATION` with the full path to the file, for example:</span></span>
 
 ```powershell
 [Environment]::SetEnvironmentVariable("AZURE_AUTH_LOCATION", "C:\src\azureauth.json", "User")

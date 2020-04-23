@@ -16,13 +16,13 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181488"
 ---
-# <a name="com-interop-sample-net-client-and-com-server"></a><span data-ttu-id="398c5-102">Przykład międzyoperacyjnego modelu COM: klient modelu COM i serwer COM</span><span class="sxs-lookup"><span data-stu-id="398c5-102">COM Interop Sample: .NET Client and COM Server</span></span>
-<span data-ttu-id="398c5-103">W tym przykładzie pokazano, jak [klient .NET](#cpconcominteropsamplenetclientcomserveranchor1), zbudowany w celu uzyskania dostępu do [serwera COM,](#cpconcominteropsamplenetclientcomserveranchor2)tworzy wystąpienie współklasy COM i wywołuje członków klasy do wykonywania obliczeń hipotecznych.</span><span class="sxs-lookup"><span data-stu-id="398c5-103">This sample demonstrates how a [.NET client](#cpconcominteropsamplenetclientcomserveranchor1), built to access a [COM server](#cpconcominteropsamplenetclientcomserveranchor2), creates an instance of a COM coclass and calls class members to perform mortgage calculations.</span></span>  
+# <a name="com-interop-sample-net-client-and-com-server"></a><span data-ttu-id="7ff1d-102">Przykład międzyoperacyjnego modelu COM: klient modelu COM i serwer COM</span><span class="sxs-lookup"><span data-stu-id="7ff1d-102">COM Interop Sample: .NET Client and COM Server</span></span>
+<span data-ttu-id="7ff1d-103">Ten przykład pokazuje, jak [klient .NET](#cpconcominteropsamplenetclientcomserveranchor1), który został utworzony w celu uzyskania dostępu do [serwera com](#cpconcominteropsamplenetclientcomserveranchor2), tworzy wystąpienie klasy coclass modelu COM i wywołuje elementy członkowskie klasy do wykonywania obliczeń hipotecznych.</span><span class="sxs-lookup"><span data-stu-id="7ff1d-103">This sample demonstrates how a [.NET client](#cpconcominteropsamplenetclientcomserveranchor1), built to access a [COM server](#cpconcominteropsamplenetclientcomserveranchor2), creates an instance of a COM coclass and calls class members to perform mortgage calculations.</span></span>  
   
- <span data-ttu-id="398c5-104">W tym przykładzie klient tworzy i wywołuje wystąpienie **Loan** coclass, przekazuje cztery argumenty (jeden z tych czterech jest równa zero) do wystąpienia i wyświetla obliczenia.</span><span class="sxs-lookup"><span data-stu-id="398c5-104">In this example, the client creates and calls an instance of the **Loan** coclass, passes four arguments (one of those four being equal to zero) to the instance, and displays the computations.</span></span> <span data-ttu-id="398c5-105">Fragmenty kodu z tego przykładu pojawiają się w tej sekcji.</span><span class="sxs-lookup"><span data-stu-id="398c5-105">Code fragments from this sample appear throughout this section.</span></span>  
+ <span data-ttu-id="7ff1d-104">W tym przykładzie klient tworzy i wywołuje wystąpienie klasy coclass **pożyczki** , przekazuje cztery argumenty (jeden z czterech równa zero) do wystąpienia i wyświetla obliczenia.</span><span class="sxs-lookup"><span data-stu-id="7ff1d-104">In this example, the client creates and calls an instance of the **Loan** coclass, passes four arguments (one of those four being equal to zero) to the instance, and displays the computations.</span></span> <span data-ttu-id="7ff1d-105">Fragmenty kodu z tego przykładu pojawiają się w tej sekcji.</span><span class="sxs-lookup"><span data-stu-id="7ff1d-105">Code fragments from this sample appear throughout this section.</span></span>  
   
 <a name="cpconcominteropsamplenetclientcomserveranchor1"></a>
-## <a name="net-client"></a><span data-ttu-id="398c5-106">Klient platformy .NET</span><span class="sxs-lookup"><span data-stu-id="398c5-106">.NET Client</span></span>  
+## <a name="net-client"></a><span data-ttu-id="7ff1d-106">Klient platformy .NET</span><span class="sxs-lookup"><span data-stu-id="7ff1d-106">.NET Client</span></span>  
   
 ```vb  
 Imports System  
@@ -152,7 +152,7 @@ public class LoanApp {
 ```  
   
 <a name="cpconcominteropsamplenetclientcomserveranchor2"></a>
-## <a name="com-server"></a><span data-ttu-id="398c5-107">Serwer COM</span><span class="sxs-lookup"><span data-stu-id="398c5-107">COM Server</span></span>  
+## <a name="com-server"></a><span data-ttu-id="7ff1d-107">Serwer COM</span><span class="sxs-lookup"><span data-stu-id="7ff1d-107">COM Server</span></span>  
   
 ```cpp  
 // Loan.cpp : Implementation of CLoan  
@@ -297,6 +297,6 @@ static double Round(double value, short digits)
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="398c5-108">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="398c5-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7ff1d-108">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="7ff1d-108">See also</span></span>
 
-- [<span data-ttu-id="398c5-109">Udostępnianie składników COM programowi.NET Framework</span><span class="sxs-lookup"><span data-stu-id="398c5-109">Exposing COM Components to the .NET Framework</span></span>](exposing-com-components.md)
+- [<span data-ttu-id="7ff1d-109">Udostępnianie składników COM programowi.NET Framework</span><span class="sxs-lookup"><span data-stu-id="7ff1d-109">Exposing COM Components to the .NET Framework</span></span>](exposing-com-components.md)

@@ -1,0 +1,45 @@
+---
+title: x:Property — dyrektywa
+ms.date: 03/30/2017
+ms.assetid: 618555a8-c893-455c-810f-ac54cd24ef10
+ms.openlocfilehash: 2804ec935d0626cba9ef050f70a3266cf23bcce0
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "82071410"
+---
+# <a name="xproperty-directive"></a><span data-ttu-id="3bc3e-102">x:Property — dyrektywa</span><span class="sxs-lookup"><span data-stu-id="3bc3e-102">x:Property Directive</span></span>
+
+<span data-ttu-id="3bc3e-103">Deklaruje właściwość XAML w znacznikach.</span><span class="sxs-lookup"><span data-stu-id="3bc3e-103">Declares a XAML property in markup.</span></span>
+
+## <a name="xaml-object-element-usage"></a><span data-ttu-id="3bc3e-104">Użycie elementu obiektu języka XAML</span><span class="sxs-lookup"><span data-stu-id="3bc3e-104">XAML Object Element Usage</span></span>
+
+```xaml
+<object x:Class="className">
+  <x:Members>
+    <x:Property Name="propertyName" Type="propertyType"/>
+    additionalProperties
+  </x:Members>
+</object>
+```
+
+## <a name="xaml-values"></a><span data-ttu-id="3bc3e-105">Wartości XAML</span><span class="sxs-lookup"><span data-stu-id="3bc3e-105">XAML Values</span></span>
+
+|||
+|-|-|
+|`className`|<span data-ttu-id="3bc3e-106">Nazwa klasy zapasowej lub klasy częściowej dla produkcji XAML.</span><span class="sxs-lookup"><span data-stu-id="3bc3e-106">Name of the backing class or partial class for the XAML production.</span></span>|
+|`propertyName`|<span data-ttu-id="3bc3e-107">Nazwa elementu członkowskiego zdefiniowanej właściwości.</span><span class="sxs-lookup"><span data-stu-id="3bc3e-107">Member name of the property being defined.</span></span>|
+|`propertyType`|<span data-ttu-id="3bc3e-108">Nazwa typu (lub inny formularz ciągu, specyficzne dla struktury), który określa typ tej właściwości.</span><span class="sxs-lookup"><span data-stu-id="3bc3e-108">Type name (or other string form, framework-specific) that specifies the type of this property.</span></span>|
+
+## <a name="remarks"></a><span data-ttu-id="3bc3e-109">Uwagi</span><span class="sxs-lookup"><span data-stu-id="3bc3e-109">Remarks</span></span>
+
+<span data-ttu-id="3bc3e-110">W implementacji usług .NET XAML , .</span><span class="sxs-lookup"><span data-stu-id="3bc3e-110">In .NET XAML Services implementation, .</span></span> <span data-ttu-id="3bc3e-111">`x:Property`nie ma bezpośredniego wsparcia typu, ale jest <xref:System.Windows.Markup.PropertyDefinition> obsługiwany przez klasę.</span><span class="sxs-lookup"><span data-stu-id="3bc3e-111">`x:Property` does not have a direct type backing, but is supported by the <xref:System.Windows.Markup.PropertyDefinition> class.</span></span> <span data-ttu-id="3bc3e-112">W strumieniu węzła XAML element `x:Property` jest reprezentowany jako członek o nazwie `Property`, z obszaru nazw XAML języka XAML.</span><span class="sxs-lookup"><span data-stu-id="3bc3e-112">In a XAML node stream, an `x:Property` element is represented as a member named `Property`, from the XAML language XAML namespace.</span></span> <span data-ttu-id="3bc3e-113">Element `Property` członkowski przytrzymaj atrybuty zadeklarowane przez znaczniki.</span><span class="sxs-lookup"><span data-stu-id="3bc3e-113">The member `Property` hold attributes as declared by markup.</span></span>
+
+<span data-ttu-id="3bc3e-114">Znaczenie `Name` i `Type` nie są przypisane na poziomie usług .NET XAML Services.</span><span class="sxs-lookup"><span data-stu-id="3bc3e-114">The meaning of `Name` and `Type` are not assigned at .NET XAML Services level.</span></span> <span data-ttu-id="3bc3e-115">Są one przechowywane w początkowym strumieniu węzła XAML jako wartości ciągu, które mają być interpretowane później zgodnie z regułami, które mogą być nałożone przez określone struktury.</span><span class="sxs-lookup"><span data-stu-id="3bc3e-115">They are stored in the initial XAML node stream as string values, to be interpreted later under the rules that might be imposed by specific frameworks.</span></span> <span data-ttu-id="3bc3e-116">Znaczenie może być wyrównane do nazwy XAML i typu XAML znaczenie lub może być prawidłowy tylko w systemie typu kopii zapasowej, w zależności od implementacji.</span><span class="sxs-lookup"><span data-stu-id="3bc3e-116">The meaning might align to a XAML name and XAML type meaning, or might only be valid in a backing type system, depending on the implementation.</span></span>
+
+<span data-ttu-id="3bc3e-117">Aby obsługiwać praktyczne `x:Members` użycie jako środek do określenia definicji elementów członkowskich w znacznikach, elementy członkowskie muszą być skojarzone z klasą, która może być modyfikowana.</span><span class="sxs-lookup"><span data-stu-id="3bc3e-117">To support a practical usage of `x:Members` as a means to specify member definitions in markup, the members must be associated with a class that can be modified.</span></span> <span data-ttu-id="3bc3e-118">Zamierzony model `x:Members` jest, który istnieje jako element członkowski typu, który określa `x:Class`.</span><span class="sxs-lookup"><span data-stu-id="3bc3e-118">The intended model is that `x:Members` exists as a member of a type that specifies an `x:Class`.</span></span> <span data-ttu-id="3bc3e-119">Jednak mechanizm kojarzenia typów i elementów członkowskich lub tworzenia dynamicznych definicji elementów członkowskich nie jest obsługiwany na poziomie usług .NET XAML Services.</span><span class="sxs-lookup"><span data-stu-id="3bc3e-119">However, the mechanism for associating types and members or for producing dynamic member definitions is not supported at .NET XAML Services level.</span></span> <span data-ttu-id="3bc3e-120">Jest to pozostawione poszczególnych struktur, które mają modele aplikacji, które obsługują definicje elementów członkowskich z XAML.</span><span class="sxs-lookup"><span data-stu-id="3bc3e-120">This is left to individual frameworks that have application models that support member definitions from XAML.</span></span> <span data-ttu-id="3bc3e-121">Zazwyczaj MSBUILD akcji kompilacji, które znaczników kompilować XAML i zintegrować go z kodem lub produkcji czystych z XAML zestawy są potrzebne do obsługi tej funkcji.</span><span class="sxs-lookup"><span data-stu-id="3bc3e-121">Typically, MSBUILD build actions that markup-compile the XAML and either integrate it with code-behind or produce pure from-XAML assemblies are needed to support that feature.</span></span>
+
+## <a name="xproperty-for-windows-workflow-foundation"></a><span data-ttu-id="3bc3e-122">x:Właściwość dla fundacji przepływu pracy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="3bc3e-122">x:Property for Windows Workflow Foundation</span></span>
+
+<span data-ttu-id="3bc3e-123">W przypadku programu `x:Property` Windows Workflow Foundation definiuje elementy członkowskie działania niestandardowego składającego się w całości z XAML lub XAML — zdefiniowanych dynamicznych elementów członkowskich dla projektanta działań z kodem.</span><span class="sxs-lookup"><span data-stu-id="3bc3e-123">For Windows Workflow Foundation, `x:Property` defines the members of a custom activity composed entirely in XAML, or XAML –defined dynamic members for an activity designer with code-behind.</span></span> <span data-ttu-id="3bc3e-124">`x:Class`należy również określić w elemencie głównym produkcji XAML.</span><span class="sxs-lookup"><span data-stu-id="3bc3e-124">`x:Class` must also be specified on the root element of the XAML production.</span></span> <span data-ttu-id="3bc3e-125">Nie jest to wymagane na poziomie usług .NET XAML Services, ale staje się wymaganiem, gdy produkcja XAML jest ładowana przez akcje kompilacji MSBUILD, które obsługują działania niestandardowe i XAML XAML programu Windows Workflow Foundation w ogóle.</span><span class="sxs-lookup"><span data-stu-id="3bc3e-125">This is not a requirement at .NET XAML Services level, but becomes a requirement when the XAML production is loaded by the MSBUILD build actions that support custom activities and Windows Workflow Foundation XAML in general.</span></span> <span data-ttu-id="3bc3e-126">Windows Workflow Foundation nie używa czystej nazwy typu XAML `x:Property` `Type` jako jego zamierzonej wartości dla atrybutu, a zamiast tego używa konwencji, która nie jest opisana w tym miejscu.</span><span class="sxs-lookup"><span data-stu-id="3bc3e-126">Windows Workflow Foundation does not use the pure XAML type name as its intended value for the `x:Property` `Type` attribute, and instead uses a convention that is not documented here.</span></span> <span data-ttu-id="3bc3e-127">Aby uzyskać więcej informacji, zobacz [DynamicActivity Creation](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd807392(v=vs.100)).</span><span class="sxs-lookup"><span data-stu-id="3bc3e-127">For more information, see [DynamicActivity Creation](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd807392(v=vs.100)).</span></span>

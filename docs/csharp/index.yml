@@ -1,23 +1,23 @@
 ### YamlMime:Landing
 title: Dokumentacja języka C#
-summary: Dowiedz się, jak napisać dowolną aplikację przy użyciu języka programowania C# na platformie .NET.
+summary: Dowiedz się, jak napisać dowolną aplikację przy użyciu języka programowania Języka C# na platformie .NET.
 metadata:
-  title: Dokumenty języka C# — wprowadzenie, samouczki, odwołanie.
-  description: Dowiedz się programowania C# — dla początkujących deweloperów, deweloperów nowych c#i doświadczonych deweloperów C# / .NET
+  title: Dokumenty C# — wprowadzenie, samouczki, informacje.
+  description: Dowiedz się programowania C# - dla początkujących programistów, programistów nowych w języku C#i doświadczonych programistów C# / .NET
   ms.topic: landing-page
   ms.date: 11/19/2019
-  ms.openlocfilehash: 2bec49d0832a7d00d0fea247166a9ec073f37e11
-  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+  ms.openlocfilehash: a0de519e518cac70bac831cf689042e104cd1389
+  ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 03/15/2020
-  ms.locfileid: "75339168"
+  ms.lasthandoff: 04/23/2020
+  ms.locfileid: "82102726"
 landingContent:
-- title: 'Naucz się programować w C #'
+- title: 'Naucz się programować w języku C #'
   linkLists:
   - linkListType: get-started
     links:
-    - text: Online, interaktywny świat Hello
+    - text: Online, interaktywny Hello world
       url: tutorials/intro-to-csharp/hello-world.yml
     - text: 'Matematyka i liczby w C #'
       url: tutorials/intro-to-csharp/numbers-in-csharp.yml
@@ -29,17 +29,17 @@ landingContent:
     links:
     - text: Co to jest C#?
       url: https://channel9.msdn.com/Series/CSharp-101/What-is-C/player
-    - text: Seria filmów C# 101
+    - text: Seria wideo C# 101
       url: https://aka.ms/dotnet3-csharp
   - linkListType: download
     links:
-    - text: Pobierz zestaw SDK .NET Core
+    - text: Pobieranie zestawu .NET Core SDK
       url: https://dotnet.microsoft.com/download
 - title: Podstawy języka C#
   linkLists:
   - linkListType: overview
     links:
-    - text: 'Wycieczka po C #'
+    - text: 'Zwiedzanie C #'
       url: tour-of-csharp/index.md
     - text: Konstrukcja programu C#
       url: programming-guide/inside-a-program/index.md
@@ -51,13 +51,13 @@ landingContent:
       url: programming-guide/types/index.md
     - text: Language Integrated Query (LINQ)
       url: linq/index.md
-    - text: async i czekają
+    - text: asynchronii i czekają
       url: programming-guide/concepts/async/index.md
   - linkListType: tutorial
     links:
-    - text: Dziedziczenie zorientowane obiektem
+    - text: Dziedziczenie obiektowe
       url: tutorials/inheritance.md
-    - text: Za pomocą LINQ do wykonywania zapytań o dane
+    - text: Używanie linq do wykonywania zapytań o dane
       url: tutorials/working-with-linq.md
     - text: Formatowanie tekstu przy użyciu interpolacji ciągów
       url: tutorials/string-interpolation.md
@@ -77,27 +77,27 @@ landingContent:
       url: nullable-references.md
   - linkListType: concept
     links:
-    - text: API z adnotatorami dla nullability
-      url: nullable-attributes.md
+    - text: Wybieranie strategii migracji możliwej do unieważnienia
+      url: nullable-migration-strategies.md
   - linkListType: tutorial
     links:
-    - text: Zużywaj i generuj strumienie asynchroniczne
+    - text: Konsumowanie i generowanie strumieni asynchronii
       url: tutorials/generate-consume-asynchronous-stream.md
-    - text: Tworzenie z typami odwołań z wartością null
+    - text: Tworzenie z typami odwołań z wartościami nullable
       url: tutorials/nullable-reference-types.md
-    - text: Uaktualnianie istniejącego kodu w celu użycia typów odwołań z wartością null
+    - text: Uaktualnianie istniejącego kodu w celu użycia typów odwołań z dopuszczalną wartością null
       url: tutorials/upgrade-to-nullable-references.md
-    - text: Użyj dopasowywania wzorców dla bardziej wyrazistych algorytmów
+    - text: Używanie dopasowywania wzorców dla bardziej wyrazistych algorytmów
       url: tutorials/pattern-matching.md
-    - text: Bezpieczne interfejsy wersji z domyślnymi członkami interfejsu
+    - text: Bezpieczne interfejsy wersji z domyślnymi elementami elementów członkowskich interfejsu
       url: tutorials/default-interface-methods-versions.md
-    - text: Mieszanie funkcji z domyślnymi członkami interfejsu
+    - text: Mieszanie funkcji z domyślnymi elementami interfejsu
       url: tutorials/mixins-with-default-interface-methods.md
     - text: Praca z podzbiorami przy użyciu zakresów i indeksów
       url: tutorials/ranges-indexes.md
   - linkListType: reference
     links:
-    - text: Krytyczne zmiany w kompilatorze Języka C#
+    - text: Łamanie zmian w kompilatorze języka C#
       url: whats-new/breaking-changes.md
 - title: Dokumentacja języka C#
   linkLists:

@@ -1,0 +1,43 @@
+---
+title: x:Member — dyrektywa
+ms.date: 03/30/2017
+ms.assetid: 4d8394ef-644c-4331-b6c5-be855d392980
+ms.openlocfilehash: e82bb6397404ee466a12ab438585ae1898c34d1a
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "82071473"
+---
+# <a name="xmember-directive"></a><span data-ttu-id="3983c-102">x:Member — dyrektywa</span><span class="sxs-lookup"><span data-stu-id="3983c-102">x:Member Directive</span></span>
+<span data-ttu-id="3983c-103">Deklaruje element członkowski XAML w znacznikach.</span><span class="sxs-lookup"><span data-stu-id="3983c-103">Declares a XAML member in markup.</span></span>
+
+## <a name="xaml-object-element-usage"></a><span data-ttu-id="3983c-104">Użycie elementu obiektu języka XAML</span><span class="sxs-lookup"><span data-stu-id="3983c-104">XAML Object Element Usage</span></span>
+
+```xaml
+<object x:Class="className">
+  <x:Members>
+    <x:Member Name="propertyName"/>
+    additionalMembers
+  </x:Members>
+</object>
+```
+
+## <a name="xaml-values"></a><span data-ttu-id="3983c-105">Wartości XAML</span><span class="sxs-lookup"><span data-stu-id="3983c-105">XAML Values</span></span>
+
+|||
+|-|-|
+|`className`|<span data-ttu-id="3983c-106">Nazwa klasy zapasowej lub klasy częściowej dla produkcji XAML.</span><span class="sxs-lookup"><span data-stu-id="3983c-106">Name of the backing class or partial class for the XAML production.</span></span>|
+|`memberName`|<span data-ttu-id="3983c-107">Nazwa elementu członkowskiego zdefiniowanej właściwości.</span><span class="sxs-lookup"><span data-stu-id="3983c-107">Member name of the property being defined.</span></span>|
+
+## <a name="remarks"></a><span data-ttu-id="3983c-108">Uwagi</span><span class="sxs-lookup"><span data-stu-id="3983c-108">Remarks</span></span>
+
+<span data-ttu-id="3983c-109">W implementacji usług .NET XAML , .</span><span class="sxs-lookup"><span data-stu-id="3983c-109">In .NET XAML Services implementation, .</span></span> <span data-ttu-id="3983c-110">`x:Member`nie ma bezpośredniego wsparcia typu, ale jest <xref:System.Windows.Markup.MemberDefinition> obsługiwany przez klasę.</span><span class="sxs-lookup"><span data-stu-id="3983c-110">`x:Member` does not have a direct type backing, but is supported by the <xref:System.Windows.Markup.MemberDefinition> class.</span></span> <span data-ttu-id="3983c-111">W strumieniu węzła XAML element `x:Member` jest reprezentowany jako członek o nazwie `Member`, z obszaru nazw XAML języka XAML.</span><span class="sxs-lookup"><span data-stu-id="3983c-111">In a XAML node stream, an `x:Member` element is represented as a member named `Member`, from the XAML language XAML namespace.</span></span> <span data-ttu-id="3983c-112">Element `Member` członkowski przechowuje atrybuty zadeklarowane przez znaczniki.</span><span class="sxs-lookup"><span data-stu-id="3983c-112">The member `Member` holds attributes as declared by markup.</span></span>
+
+<span data-ttu-id="3983c-113">Znaczenie `Name` i `Type` nie są przypisane na poziomie usług .NET XAML Services.</span><span class="sxs-lookup"><span data-stu-id="3983c-113">The meaning of `Name` and `Type` are not assigned at .NET XAML Services level.</span></span> <span data-ttu-id="3983c-114">Są one przechowywane w początkowym strumieniu węzła XAML jako wartości ciągu, które mają być interpretowane później zgodnie z regułami, które mogą być nałożone przez określone struktury.</span><span class="sxs-lookup"><span data-stu-id="3983c-114">They are stored in the initial XAML node stream as string values, to be interpreted later under the rules that might be imposed by specific frameworks.</span></span> <span data-ttu-id="3983c-115">Znaczenie może być wyrównane do nazwy XAML i typu XAML znaczenie lub może być prawidłowy tylko w systemie typu kopii zapasowej, w zależności od implementacji.</span><span class="sxs-lookup"><span data-stu-id="3983c-115">The meaning might align to a XAML name and XAML type meaning, or might only be valid in a backing type system, depending on the implementation.</span></span>
+
+<span data-ttu-id="3983c-116">Aby obsługiwać praktyczne `x:Members` użycie jako środek do określenia definicji elementów członkowskich w znacznikach, elementy członkowskie muszą być skojarzone z klasą, która może być modyfikowana.</span><span class="sxs-lookup"><span data-stu-id="3983c-116">To support a practical usage of `x:Members` as a means to specify member definitions in markup, the members must be associated with a class that can be modified.</span></span> <span data-ttu-id="3983c-117">Zamierzony model `x:Members` jest, który istnieje jako element członkowski typu, który określa `x:Class`.</span><span class="sxs-lookup"><span data-stu-id="3983c-117">The intended model is that `x:Members` exists as a member of a type that specifies an `x:Class`.</span></span> <span data-ttu-id="3983c-118">Jednak mechanizm kojarzenia typów i elementów członkowskich lub tworzenia dynamicznych definicji elementów członkowskich nie jest obsługiwany na poziomie usług .NET XAML Services.</span><span class="sxs-lookup"><span data-stu-id="3983c-118">However, the mechanism for associating types and members or for producing dynamic member definitions is not supported at .NET XAML Services level.</span></span> <span data-ttu-id="3983c-119">Jest to pozostawione poszczególnych struktur, które mają modele aplikacji, które obsługują definicje elementów członkowskich z XAML.</span><span class="sxs-lookup"><span data-stu-id="3983c-119">This is left to individual frameworks that have application models that support member definitions from XAML.</span></span> <span data-ttu-id="3983c-120">Zazwyczaj MSBUILD akcji kompilacji, które znaczników kompilować XAML i zintegrować go z kodem lub produkcji czystych z XAML zestawy są potrzebne do obsługi tej funkcji.</span><span class="sxs-lookup"><span data-stu-id="3983c-120">Typically, MSBUILD build actions that markup-compile the XAML and either integrate it with code-behind or produce pure from-XAML assemblies are needed to support that feature.</span></span>
+
+## <a name="xproperty-for-windows-workflow-foundation"></a><span data-ttu-id="3983c-121">x:Właściwość dla fundacji przepływu pracy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="3983c-121">x:Property for Windows Workflow Foundation</span></span>
+
+<span data-ttu-id="3983c-122">W przypadku programu `x:Property` Windows Workflow Foundation definiuje elementy członkowskie działania niestandardowego składającego się w całości z XAML lub XAML — zdefiniowanych dynamicznych elementów członkowskich dla projektanta działań z kodem.</span><span class="sxs-lookup"><span data-stu-id="3983c-122">For Windows Workflow Foundation, `x:Property` defines the members of a custom activity composed entirely in XAML, or XAML –defined dynamic members for an activity designer with code-behind.</span></span> <span data-ttu-id="3983c-123">`x:Class`należy również określić w elemencie głównym produkcji XAML.</span><span class="sxs-lookup"><span data-stu-id="3983c-123">`x:Class` must also be specified on the root element of the XAML production.</span></span> <span data-ttu-id="3983c-124">Nie jest to wymagane na poziomie usług .NET XAML Services, ale staje się wymaganiem, gdy produkcja XAML jest ładowana przez akcje kompilacji MSBUILD, które obsługują działania niestandardowe i XAML XAML programu Windows Workflow Foundation w ogóle.</span><span class="sxs-lookup"><span data-stu-id="3983c-124">This is not a requirement at .NET XAML Services level, but becomes a requirement when the XAML production is loaded by the MSBUILD build actions that support custom activities and Windows Workflow Foundation XAML in general.</span></span> <span data-ttu-id="3983c-125">Windows Workflow Foundation nie używa czystej nazwy typu XAML `x:Property` `Type` jako jego zamierzonej wartości dla atrybutu, a zamiast tego używa konwencji, która nie jest opisana w tym miejscu.</span><span class="sxs-lookup"><span data-stu-id="3983c-125">Windows Workflow Foundation does not use the pure XAML type name as its intended value for the `x:Property` `Type` attribute, and instead uses a convention that is not documented here.</span></span> <span data-ttu-id="3983c-126">Aby uzyskać więcej informacji, zobacz [DynamicActivity Creation](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd807392(v=vs.100)).</span><span class="sxs-lookup"><span data-stu-id="3983c-126">For more information, see [DynamicActivity Creation](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd807392(v=vs.100)).</span></span>

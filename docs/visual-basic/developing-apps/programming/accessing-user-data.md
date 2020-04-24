@@ -18,20 +18,20 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/15/2020
 ms.locfileid: "74349215"
 ---
-# <a name="accessing-user-data-visual-basic"></a><span data-ttu-id="77a33-102">Uzyskiwanie dostępu do danych użytkownika (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="77a33-102">Accessing User Data (Visual Basic)</span></span>
+# <a name="accessing-user-data-visual-basic"></a><span data-ttu-id="03671-102">Uzyskiwanie dostępu do danych użytkownika (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="03671-102">Accessing User Data (Visual Basic)</span></span>
 
-<span data-ttu-id="77a33-103">Ta sekcja zawiera tematy `My.User` dotyczące obiektu i zadań, które można wykonać z nim.</span><span class="sxs-lookup"><span data-stu-id="77a33-103">This section contains topics dealing with the `My.User` object and tasks that you can accomplish with it.</span></span>  
+<span data-ttu-id="03671-103">Ta sekcja zawiera tematy dotyczące `My.User` obiektów i zadań, które można wykonać przy ich użyciu.</span><span class="sxs-lookup"><span data-stu-id="03671-103">This section contains topics dealing with the `My.User` object and tasks that you can accomplish with it.</span></span>  
   
- <span data-ttu-id="77a33-104">Obiekt `My.User` zapewnia dostęp do informacji o zalogowanym użytkowniku, zwracając obiekt, który implementuje <xref:System.Security.Principal.IPrincipal> interfejs.</span><span class="sxs-lookup"><span data-stu-id="77a33-104">The `My.User` object provides access to information about the logged-on user by returning an object that implements the <xref:System.Security.Principal.IPrincipal> interface.</span></span>  
+ <span data-ttu-id="03671-104">`My.User` Obiekt zapewnia dostęp do informacji o zalogowanym użytkowniku, zwracając obiekt implementujący <xref:System.Security.Principal.IPrincipal> interfejs.</span><span class="sxs-lookup"><span data-stu-id="03671-104">The `My.User` object provides access to information about the logged-on user by returning an object that implements the <xref:System.Security.Principal.IPrincipal> interface.</span></span>  
   
-## <a name="tasks"></a><span data-ttu-id="77a33-105">Zadania</span><span class="sxs-lookup"><span data-stu-id="77a33-105">Tasks</span></span>  
+## <a name="tasks"></a><span data-ttu-id="03671-105">Zadania</span><span class="sxs-lookup"><span data-stu-id="03671-105">Tasks</span></span>  
   
-|<span data-ttu-id="77a33-106">Do</span><span class="sxs-lookup"><span data-stu-id="77a33-106">To</span></span>|<span data-ttu-id="77a33-107">Zobacz</span><span class="sxs-lookup"><span data-stu-id="77a33-107">See</span></span>|  
+|<span data-ttu-id="03671-106">Do</span><span class="sxs-lookup"><span data-stu-id="03671-106">To</span></span>|<span data-ttu-id="03671-107">Zobacz</span><span class="sxs-lookup"><span data-stu-id="03671-107">See</span></span>|  
 |--------|---------|  
-|<span data-ttu-id="77a33-108">Uzyskaj nazwę logowania użytkownika</span><span class="sxs-lookup"><span data-stu-id="77a33-108">Get the user's login name</span></span>|<xref:Microsoft.VisualBasic.ApplicationServices.User.Name%2A>|  
-|<span data-ttu-id="77a33-109">Pobierz nazwę domeny użytkownika, jeśli aplikacja używa uwierzytelniania systemu Windows</span><span class="sxs-lookup"><span data-stu-id="77a33-109">Get the user's domain name, if the application uses Windows authentication</span></span>|<xref:Microsoft.VisualBasic.ApplicationServices.User.CurrentPrincipal>|  
-|<span data-ttu-id="77a33-110">Określanie roli użytkownika</span><span class="sxs-lookup"><span data-stu-id="77a33-110">Determine the user's role</span></span>|<xref:Microsoft.VisualBasic.ApplicationServices.User.IsInRole%2A>|  
+|<span data-ttu-id="03671-108">Pobierz nazwę logowania użytkownika</span><span class="sxs-lookup"><span data-stu-id="03671-108">Get the user's login name</span></span>|<xref:Microsoft.VisualBasic.ApplicationServices.User.Name%2A>|  
+|<span data-ttu-id="03671-109">Pobieranie nazwy domeny użytkownika, jeśli aplikacja używa uwierzytelniania systemu Windows</span><span class="sxs-lookup"><span data-stu-id="03671-109">Get the user's domain name, if the application uses Windows authentication</span></span>|<xref:Microsoft.VisualBasic.ApplicationServices.User.CurrentPrincipal>|  
+|<span data-ttu-id="03671-110">Określanie roli użytkownika</span><span class="sxs-lookup"><span data-stu-id="03671-110">Determine the user's role</span></span>|<xref:Microsoft.VisualBasic.ApplicationServices.User.IsInRole%2A>|  
   
-## <a name="see-also"></a><span data-ttu-id="77a33-111">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="77a33-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="03671-111">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="03671-111">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.ApplicationServices.User>

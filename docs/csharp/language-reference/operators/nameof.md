@@ -1,40 +1,44 @@
 ---
-title: nazwa wyrażenia — odwołanie do języka C#
-ms.date: 07/12/2019
+title: wyrażenie nameof — odwołanie w C#
+ms.date: 04/23/2020
 f1_keywords:
 - nameof_CSharpKeyword
 - nameof
 helpviewer_keywords:
 - nameof expression [C#]
 ms.assetid: 33601bf3-cc2c-4496-846d-f9679bccf2a7
-ms.openlocfilehash: 5a68161be7bb03122d2a63ccef4365c5853862b2
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: d71acf0cf7d5cdcfa5310455af2120fa1f82d567
+ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507142"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82135922"
 ---
-# <a name="nameof-expression-c-reference"></a><span data-ttu-id="2b0c4-102">nazwa wyrażenia (odwołanie do języka C#)</span><span class="sxs-lookup"><span data-stu-id="2b0c4-102">nameof expression (C# reference)</span></span>
+# <a name="nameof-expression-c-reference"></a><span data-ttu-id="e154f-102">wyrażenie nameof (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="e154f-102">nameof expression (C# reference)</span></span>
 
-<span data-ttu-id="2b0c4-103">Wyrażenie `nameof` tworzy nazwę zmiennej, typu lub elementu członkowskiego jako stałą ciągu:</span><span class="sxs-lookup"><span data-stu-id="2b0c4-103">A `nameof` expression produces the name of a variable, type, or member as the string constant:</span></span>
+<span data-ttu-id="e154f-103">`nameof` Wyrażenie tworzy nazwę zmiennej, typu lub składowej jako stałą typu String:</span><span class="sxs-lookup"><span data-stu-id="e154f-103">A `nameof` expression produces the name of a variable, type, or member as the string constant:</span></span>
 
 [!code-csharp-interactive[nameof expression](snippets/NameOfOperator.cs#Examples)]
 
-<span data-ttu-id="2b0c4-104">Jak pokazano w poprzednim przykładzie, w przypadku typu i obszaru nazw powstała nazwa zwykle nie jest [w pełni kwalifikowana.](~/_csharplang/spec/basic-concepts.md#fully-qualified-names)</span><span class="sxs-lookup"><span data-stu-id="2b0c4-104">As the preceding example shows, in the case of a type and a namespace, the produced name is usually not [fully qualified](~/_csharplang/spec/basic-concepts.md#fully-qualified-names).</span></span>
+<span data-ttu-id="e154f-104">Jak pokazano w powyższym przykładzie, w przypadku typu i przestrzeni nazw, wygenerowana nazwa zazwyczaj nie jest w [pełni kwalifikowana](~/_csharplang/spec/basic-concepts.md#fully-qualified-names).</span><span class="sxs-lookup"><span data-stu-id="e154f-104">As the preceding example shows, in the case of a type and a namespace, the produced name is usually not [fully qualified](~/_csharplang/spec/basic-concepts.md#fully-qualified-names).</span></span>
 
-<span data-ttu-id="2b0c4-105">Wyrażenie `nameof` jest oceniane w czasie kompilacji i nie ma wpływu w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="2b0c4-105">A `nameof` expression is evaluated at compile time and has no effect at run time.</span></span>
+<span data-ttu-id="e154f-105">W przypadku [identyfikatorów Verbatim](../tokens/verbatim.md) `@` znak nie jest częścią nazwy, jak pokazano w poniższym przykładzie:</span><span class="sxs-lookup"><span data-stu-id="e154f-105">In the case of [verbatim identifiers](../tokens/verbatim.md), the `@` character is not the part of a name, as the following example shows:</span></span>
 
-<span data-ttu-id="2b0c4-106">Można użyć `nameof` wyrażenia, aby kod sprawdzania argumentów był bardziej sprawny:</span><span class="sxs-lookup"><span data-stu-id="2b0c4-106">You can use a `nameof` expression to make the argument-checking code more maintainable:</span></span>
+[!code-csharp-interactive[nameof verbatim](snippets/NameOfOperator.cs#Verbatim)]
+
+<span data-ttu-id="e154f-106">`nameof` Wyrażenie jest oceniane w czasie kompilacji i nie ma wpływu na czas wykonywania.</span><span class="sxs-lookup"><span data-stu-id="e154f-106">A `nameof` expression is evaluated at compile time and has no effect at run time.</span></span>
+
+<span data-ttu-id="e154f-107">Możesz użyć `nameof` wyrażenia, aby zwiększyć łatwość obsługi kodu sprawdzania argumentów:</span><span class="sxs-lookup"><span data-stu-id="e154f-107">You can use a `nameof` expression to make the argument-checking code more maintainable:</span></span>
 
 [!code-csharp[nameof and argument check](snippets/NameOfOperator.cs#ExceptionMessage)]
 
-<span data-ttu-id="2b0c4-107">Wyrażenie `nameof` jest dostępne w języku C# 6 i nowszych.</span><span class="sxs-lookup"><span data-stu-id="2b0c4-107">A `nameof` expression is available in C# 6 and later.</span></span>
+<span data-ttu-id="e154f-108">`nameof` Wyrażenie jest dostępne w języku C# 6 i nowszych.</span><span class="sxs-lookup"><span data-stu-id="e154f-108">A `nameof` expression is available in C# 6 and later.</span></span>
 
-## <a name="c-language-specification"></a><span data-ttu-id="2b0c4-108">specyfikacja języka C#</span><span class="sxs-lookup"><span data-stu-id="2b0c4-108">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="e154f-109">specyfikacja języka C#</span><span class="sxs-lookup"><span data-stu-id="e154f-109">C# language specification</span></span>
 
-<span data-ttu-id="2b0c4-109">Aby uzyskać więcej informacji, zobacz sekcję [Nameof expressions](~/_csharplang/spec/expressions.md#nameof-expressions) [w specyfikacji języka C#](~/_csharplang/spec/introduction.md).</span><span class="sxs-lookup"><span data-stu-id="2b0c4-109">For more information, see the [Nameof expressions](~/_csharplang/spec/expressions.md#nameof-expressions) section of the [C# language specification](~/_csharplang/spec/introduction.md).</span></span>
+<span data-ttu-id="e154f-110">Aby uzyskać więcej informacji, zobacz sekcję [wyrażenia nameof](~/_csharplang/spec/expressions.md#nameof-expressions) w [specyfikacji języka C#](~/_csharplang/spec/introduction.md).</span><span class="sxs-lookup"><span data-stu-id="e154f-110">For more information, see the [Nameof expressions](~/_csharplang/spec/expressions.md#nameof-expressions) section of the [C# language specification](~/_csharplang/spec/introduction.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="2b0c4-110">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="2b0c4-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e154f-111">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="e154f-111">See also</span></span>
 
-- [<span data-ttu-id="2b0c4-111">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="2b0c4-111">C# reference</span></span>](../index.md)
-- [<span data-ttu-id="2b0c4-112">Operatory języka C#</span><span class="sxs-lookup"><span data-stu-id="2b0c4-112">C# operators</span></span>](index.md)
+- [<span data-ttu-id="e154f-112">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="e154f-112">C# reference</span></span>](../index.md)
+- [<span data-ttu-id="e154f-113">Operatory języka C#</span><span class="sxs-lookup"><span data-stu-id="e154f-113">C# operators</span></span>](index.md)

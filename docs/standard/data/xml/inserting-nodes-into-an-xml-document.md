@@ -13,6 +13,6 @@ ms.locfileid: "73130864"
 # <a name="inserting-nodes-into-an-xml-document"></a>Wstawianie węzłów do dokumentu XML
 Możesz zmodyfikować dokument, wstawiając nowe węzły. Węzły mogą być nowo tworzone, istniejące w tym samym dokumencie lub mogą być importowane z innego dokumentu. Aby uzyskać więcej informacji na temat tworzenia nowych węzłów, zobacz [Tworzenie nowych węzłów w modelu dom](../../../../docs/standard/data/xml/create-new-nodes-in-the-dom.md). Aby uzyskać więcej informacji na temat kopiowania istniejących węzłów, zobacz [Kopiowanie istniejących węzłów](../../../../docs/standard/data/xml/copy-existing-nodes.md), [Kopiowanie istniejących węzłów z jednego dokumentu do innego](../../../../docs/standard/data/xml/copying-existing-nodes-from-one-document-to-another.md)lub [Kopiowanie fragmentów dokumentów](../../../../docs/standard/data/xml/copying-document-fragments.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

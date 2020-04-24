@@ -23,7 +23,7 @@ Elementy docelowe Microsoft. Data. sqlite .NET Standard 2,0 i są obsługiwane w
 | **Xamarin.iOS** | ✔ |
 | **Xamarin.Mac** | ✔ |
 | **Xamarin. systemu TVOS** | ✔ |
-| **PLATFORMY UNIWERSALNEJ SYSTEMU WINDOWS** | — |
+| **UWP** | — |
 | &nbsp;&nbsp;&nbsp;&nbsp;`arm` | ✔ |
 | &nbsp;&nbsp;&nbsp;&nbsp;`arm64` | ✔ |
 | &nbsp;&nbsp;&nbsp;&nbsp;`x64` | ✔ |
@@ -33,7 +33,7 @@ Elementy docelowe Microsoft. Data. sqlite .NET Standard 2,0 i są obsługiwane w
 
 Firma Microsoft. Data. sqlite próbuje automatycznie zainicjować zbiory SQLitePCLRaw. Niestety, ze względu na ograniczenia w kompilacji z wyprzedzeniem (AOT) dla platformy Xamarin. iOS, próba nie powiedzie się i zostanie wyświetlony następujący błąd.
 
-> Musisz wywołać `SQLitePCL.raw.SetProvider()`. Jeśli korzystasz z pakietu pakietów, możesz to zrobić, wywołując `SQLitePCL.Batteries.Init()`.
+> Musisz wywołać `SQLitePCL.raw.SetProvider()`. Jeśli korzystasz z pakietu pakietów, możesz to zrobić, wywołując `SQLitePCL.Batteries.Init()`polecenie.
 
 Aby zainicjować pakiet, Dodaj następujący wiersz kodu do aplikacji przed użyciem Microsoft. Data. sqlite.
 
@@ -41,7 +41,7 @@ Aby zainicjować pakiet, Dodaj następujący wiersz kodu do aplikacji przed uży
 SQLitePCL.Batteries_V2.Init();
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 * [Ograniczenia asynchroniczne](async.md)
 * [Niestandardowe wersje programu SQLite](custom-versions.md)

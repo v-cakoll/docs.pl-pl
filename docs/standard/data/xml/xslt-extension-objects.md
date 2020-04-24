@@ -11,7 +11,7 @@ ms.lasthandoff: 01/07/2020
 ms.locfileid: "75709715"
 ---
 # <a name="xslt-extension-objects"></a>Obiekty rozszerzeń XSLT
-Obiekty rozszerzeń służą do rozszerzania funkcjonalności arkuszy stylów. Obiekty rozszerzeń są obsługiwane przez klasę <xref:System.Xml.Xsl.XsltArgumentList>.  
+Obiekty rozszerzeń służą do rozszerzania funkcjonalności arkuszy stylów. Obiekty rozszerzeń są obsługiwane przez <xref:System.Xml.Xsl.XsltArgumentList> klasę.  
   
  Poniżej przedstawiono zalety użycia obiektu rozszerzenia zamiast skryptu osadzonego:  
   
@@ -19,24 +19,24 @@ Obiekty rozszerzeń służą do rozszerzania funkcjonalności arkuszy stylów. O
   
 - Zezwala na mniejsze i łatwiejsze w obsłudze arkusze stylów.  
   
- Obiekty rozszerzeń XSLT są dodawane do obiektu <xref:System.Xml.Xsl.XsltArgumentList> przy użyciu metody <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>. Kwalifikowana nazwa i identyfikator URI przestrzeni nazw są skojarzone z obiektem rozszerzenia w tym czasie.  
+ Obiekty rozszerzeń XSLT są dodawane do <xref:System.Xml.Xsl.XsltArgumentList> obiektu za pomocą <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> metody. Kwalifikowana nazwa i identyfikator URI przestrzeni nazw są skojarzone z obiektem rozszerzenia w tym czasie.  
   
 > [!NOTE]
-> Aby wywołać metodę <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>, wymagany jest zestaw uprawnień FullTrust. Aby uzyskać więcej informacji, zobacz [zabezpieczenia dostępu kodu](../../../../docs/framework/misc/code-access-security.md) i [nazwane zestawy uprawnień](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)).  
+> Zestaw uprawnień FullTrust jest wymagany do wywołania <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> metody. Aby uzyskać więcej informacji, zobacz [zabezpieczenia dostępu kodu](../../../../docs/framework/misc/code-access-security.md) i [nazwane zestawy uprawnień](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)).  
   
- Typy danych zwracane z obiektów rozszerzeń to jeden z czterech podstawowych typów danych XPath `number`, `string`, `Boolean`i `node set`.  
+ Typy danych zwracane z obiektów rozszerzeń to jeden z czterech podstawowych typów danych `number`XPath, `string` `Boolean`,, i. `node set`  
   
- Dowolna metoda, która jest zdefiniowana za pomocą słowa kluczowego `params`, która umożliwia przekazanie nieokreślonej liczby parametrów, nie jest obecnie obsługiwana przez klasę <xref:System.Xml.Xsl.XslCompiledTransform>. Arkusze stylów XSLT używające dowolnej metody zdefiniowanej za pomocą słowa kluczowego `params` nie będą działały prawidłowo. Aby uzyskać szczegółowe informacje, zobacz [params](../../../csharp/language-reference/keywords/params.md).  
+ Każda metoda, która jest zdefiniowana za `params` pomocą słowa kluczowego, umożliwiająca nieokreśloną liczbę parametrów do przesłania, nie jest obecnie obsługiwana przez <xref:System.Xml.Xsl.XslCompiledTransform> klasę. Arkusze stylów XSLT używające dowolnej metody zdefiniowanej za `params` pomocą słowa kluczowego nie będą działały prawidłowo. Aby uzyskać szczegółowe informacje, zobacz [params](../../../csharp/language-reference/keywords/params.md).  
   
 ### <a name="to-use-an-xslt-extension-object"></a>Aby użyć obiektu rozszerzenia XSLT  
   
-1. Utwórz obiekt <xref:System.Xml.Xsl.XsltArgumentList> i Dodaj obiekt rozszerzenia przy użyciu metody <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>.  
+1. Utwórz <xref:System.Xml.Xsl.XsltArgumentList> obiekt i Dodaj obiekt rozszerzenia za pomocą <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> metody.  
   
 2. Wywołaj obiekt rozszerzenia z arkusza stylów.  
   
-3. Przekaż obiekt <xref:System.Xml.Xsl.XsltArgumentList> do metody <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  
+3. Przekaż <xref:System.Xml.Xsl.XsltArgumentList> obiekt do <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> metody.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Przekształcenia XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
 - [Zagadnienia dotyczące bezpieczeństwa danych XSLT](../../../../docs/standard/data/xml/xslt-security-considerations.md)

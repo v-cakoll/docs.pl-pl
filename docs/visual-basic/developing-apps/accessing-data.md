@@ -58,4 +58,4 @@ Dostarcza łącza do stron wyjaśniających jak wysyłać zaktualizowane dane z 
 Opisuje klasy ADO.NET, które ujawniają usługi dostępu do danych programiście .NET Framework.
 
 [Dane w rozwiązaniach pakietu Office](/visualstudio/vsto/data-in-office-solutions)  
-Zawiera łącza do stron, które wyjaśniają jak działają dane w rozwiązaniach pakietu Office oraz zawierają informacje dotyczące programowania schematycznego, buforowania danych i dostępu do danych po stronie serwera.
+Zawiera linki do stron, które wyjaśniają, jak dane działają w rozwiązaniach pakietu Office, w tym informacje o programowaniu zorientowanym na schematach, buforowaniu danych i dostępie do danych po stronie serwera.

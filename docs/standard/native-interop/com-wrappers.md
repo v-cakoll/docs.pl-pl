@@ -31,7 +31,7 @@ COM różni się od modelu obiektów środowiska uruchomieniowego .NET na kilka 
   
  W większości przypadków standardowa OTOKa lub CCW wygenerowane przez środowisko uruchomieniowe zapewniają odpowiednie kierowanie dla wywołań, które przecinają granicę między modelem COM a środowiskiem uruchomieniowym platformy .NET. Przy użyciu atrybutów niestandardowych można opcjonalnie dostosować sposób, w jaki środowisko uruchomieniowe reprezentuje kod zarządzany i niezarządzany.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Zaawansowane współdziałanie COM w .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
 - [Wywoływana otoka środowiska uruchomieniowego](runtime-callable-wrapper.md)

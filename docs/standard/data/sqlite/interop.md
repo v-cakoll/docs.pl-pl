@@ -13,11 +13,11 @@ ms.locfileid: "75447238"
 
 Microsoft. Data. sqlite używa SQLitePCLRaw do korzystania z natywnej biblioteki programu SQLite. SQLitePCLRaw udostępnia cienki interfejs API platformy .NET za pośrednictwem natywnego interfejsu API programu SQLite. SqliteConnection i SqliteDataReader zapewniają dostęp do podstawowych obiektów SQLitePCLRaw, które umożliwiają bezpośrednie wywoływanie tych interfejsów API.
 
-Poniższy przykład pokazuje, jak wywoływać `sqlite3_trace`, aby napisać wykonane instrukcje SQL do konsoli:
+Poniższy przykład pokazuje, jak wywołać `sqlite3_trace` , aby napisać wykonane instrukcje SQL do konsoli programu:
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/InteropSample/Program.cs?name=snippet_Trace)]
 
-W poniższym przykładzie pokazano wywoływanie `sqlite3_stmt_status`, aby sprawdzić, jak wiele maszyn wirtualnych z systemem SQLite ma wykonać instrukcję SQL skompilowaną w następujący sposób:
+Poniższy przykład pokazuje, jak wiele `sqlite3_stmt_status` maszyn wirtualnych z systemem SQLite ma wykonać instrukcję SQL skompilowaną do:
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/InteropSample/Program.cs?name=snippet_StatementStatus)]
 

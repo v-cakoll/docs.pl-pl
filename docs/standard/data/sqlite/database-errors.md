@@ -11,7 +11,7 @@ ms.locfileid: "75447273"
 ---
 # <a name="database-errors"></a>Błędy bazy danych
 
-<xref:Microsoft.Data.Sqlite.SqliteException> jest generowany w przypadku napotkania błędu oprogramowania SQLite. Komunikat jest dostarczany przez program SQLite. Właściwości `SqliteErrorCode` i `SqliteExtendedErrorCode` zawierają [kod wyniku](https://www.sqlite.org/rescode.html) programu SQLite błędu.
+<xref:Microsoft.Data.Sqlite.SqliteException>jest generowany w przypadku napotkania błędu oprogramowania SQLite. Komunikat jest dostarczany przez program SQLite. Właściwości `SqliteErrorCode` i `SqliteExtendedErrorCode` zawierają [kod wyniku](https://www.sqlite.org/rescode.html) programu SQLite błędu.
 
 Błędy mogą wystąpić w dowolnym momencie, gdy firma Microsoft. Data. sqlite współdziała z natywną biblioteką oprogramowania SQLite. Na poniższej liście przedstawiono typowe scenariusze, w których mogą wystąpić błędy:
 
@@ -28,21 +28,21 @@ W przypadku zablokowania tabel i plików bazy danych w programie SQLite jest agr
 
 Za każdym razem, gdy Microsoft. Data. sqlite napotka błąd zajęty lub zablokowany, nastąpi automatyczne ponowienie próby do momentu pomyślnego lub przekroczenie limitu czasu polecenia.
 
-Można zwiększyć limit czasu polecenia, ustawiając <xref:Microsoft.Data.Sqlite.SqliteCommand.CommandTimeout%2A>. Domyślny limit czasu wynosi 30 sekund. Wartość `0` oznacza brak limitu czasu.
+Można zwiększyć limit czasu polecenia według ustawienia <xref:Microsoft.Data.Sqlite.SqliteCommand.CommandTimeout%2A>. Domyślny limit czasu wynosi 30 sekund. Wartość `0` oznacza brak limitu czasu.
 
 ```csharp
 // Retry for 60 seconds while locked
 command.CommandTimeout = 60;
 ```
 
-Microsoft. Data. sqlite czasami musi utworzyć obiekt polecenia niejawnego. Na przykład podczas BeginTransaction. Aby ustawić limit czasu dla tych poleceń, użyj <xref:Microsoft.Data.Sqlite.SqliteConnection.DefaultTimeout%2A>.
+Microsoft. Data. sqlite czasami musi utworzyć obiekt polecenia niejawnego. Na przykład podczas BeginTransaction. Aby ustawić limit czasu dla tych poleceń, użyj <xref:Microsoft.Data.Sqlite.SqliteConnection.DefaultTimeout%2A>polecenia.
 
 ```csharp
 // Set the default timeout of all commands on this connection
 connection.DefaultTimeout = 60;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 * [Kody błędów oprogramowania SQLite](https://www.sqlite.org/rescode.html)
 * [Blokowanie plików w programie SQLite](https://www.sqlite.org/lockingv3.html)

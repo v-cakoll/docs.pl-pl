@@ -1,5 +1,5 @@
 ---
-title: 'Jak: Odczyt z plików tekstowych w wielu formatach'
+title: 'Instrukcje: odczyt z plików tekstowych z wieloma formatami'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - TextFieldParser object, reading from a file
@@ -18,13 +18,13 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/15/2020
 ms.locfileid: "74334574"
 ---
-# <a name="how-to-read-from-fext-files-with-multiple-formats-in-visual-basic"></a>Jak: Odczyt z plików fext z wieloma formatami w języku Visual Basic
+# <a name="how-to-read-from-fext-files-with-multiple-formats-in-visual-basic"></a>Instrukcje: odczyt z plików fext z wieloma formatami w Visual Basic
 
-Obiekt <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> umożliwia łatwą i wydajną analizowanie plików tekstowych strukturalnych, takich jak dzienniki. Plik z wieloma formatami można przetworzyć przy użyciu `PeekChars` metody określania formatu każdego wiersza podczas analizowania pliku.
+<xref:Microsoft.VisualBasic.FileIO.TextFieldParser> Obiekt umożliwia łatwe i wydajne analizowanie strukturalnych plików tekstowych, takich jak dzienniki. Można przetworzyć plik z wieloma formatami przy użyciu `PeekChars` metody, aby określić format każdego wiersza podczas analizowania przez plik.
   
 ### <a name="to-parse-a-text-file-with-multiple-formats"></a>Aby przeanalizować plik tekstowy z wieloma formatami
 
-1. Dodaj plik tekstowy o nazwie *testfile.txt* do projektu. Dodaj do pliku tekstowego następującą zawartość:
+1. Dodaj plik tekstowy o nazwie *TestFile. txt* do projektu. Dodaj następującą zawartość do pliku tekstowego:
 
     ```text
     Err  1001 Cannot access resource.
@@ -35,37 +35,37 @@ Obiekt <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> umożliwia łatwą i 
     Acc  10/04/2009User2      Standard user.
     ```
 
-2. Zdefiniuj oczekiwany format i format używany podczas zgłaszania błędu. Ostatni wpis w każdej tablicy jest -1, dlatego przyjmuje się, że ostatnie pole ma zmienną szerokość. Dzieje się tak, gdy ostatni wpis w tablicy jest mniejsza lub równa 0.
+2. Zdefiniuj oczekiwany format i format używany, gdy zostanie zgłoszony błąd. Ostatni wpis w każdej tablicy to-1, w związku z czym przyjmuje się, że ostatnie pole ma szerokość zmiennej. Dzieje się tak, gdy ostatni wpis w tablicy jest mniejszy lub równy 0.
 
      [!code-vb[VbFileIORead#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#4)]
 
-3. Utwórz <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> nowy obiekt, definiując szerokość i format.
+3. Utwórz nowy <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> obiekt definiujący szerokość i format.
 
      [!code-vb[VbFileIORead#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#5)]
 
-4. Pętla przez wiersze, testowanie formatu przed odczytem.
+4. Przechodzenie między wierszami, testowanie formatu przed odczytem.
 
      [!code-vb[VbFileIORead#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#6)]
 
-5. Zapis błędów na konsoli.
+5. Zapisuj błędy w konsoli.
 
      [!code-vb[VbFileIORead#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#7)]
 
 ## <a name="example"></a>Przykład
 
-Poniżej znajduje się pełny przykład, `testfile.txt`który odczytuje z pliku:
+Oto kompletny przykład, który odczytuje z pliku `testfile.txt`:
 
  [!code-vb[VbFileIORead#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#8)]
 
-## <a name="robust-programming"></a>Solidne programowanie
+## <a name="robust-programming"></a>Niezawodne programowanie
 
 Następujące warunki mogą spowodować wyjątek:  
   
-- Nie można przeanalizować wiersza przy<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>użyciu określonego formatu ( ). Komunikat o wyjątku określa wiersz powodujący <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> wyjątek, podczas gdy właściwość jest przypisana do tekstu zawartego w wierszu.
-- Określony plik nie istnieje<xref:System.IO.FileNotFoundException>( ).
-- Sytuacja częściowego zaufania, w której użytkownik nie ma wystarczających uprawnień dostępu do pliku. (<xref:System.Security.SecurityException>).
-- Ścieżka jest za<xref:System.IO.PathTooLongException>długa ( ).
-- Użytkownik nie ma wystarczających uprawnień dostępu<xref:System.UnauthorizedAccessException>do pliku ( ).
+- Nie można przeanalizować wiersza przy użyciu określonego formatu (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>). Komunikat o wyjątku określa wiersz powodujący wyjątek, podczas gdy <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> właściwość jest przypisana do tekstu zawartego w wierszu.
+- Określony plik nie istnieje (<xref:System.IO.FileNotFoundException>).
+- Sytuacja częściowej relacji zaufania, w której użytkownik nie ma wystarczających uprawnień dostępu do pliku. (<xref:System.Security.SecurityException>).
+- Ścieżka jest za długa (<xref:System.IO.PathTooLongException>).
+- Użytkownik nie ma wystarczających uprawnień dostępu do pliku (<xref:System.UnauthorizedAccessException>).
 
 ## <a name="see-also"></a>Zobacz też
 

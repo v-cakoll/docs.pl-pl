@@ -24,14 +24,14 @@ Powoduje, że kompilator akceptuje tylko składnię, która jest uwzględniona w
   
 ## <a name="arguments"></a>Argumenty  
  `version`  
- Wymagana. Wersja języka do użycia podczas kompilacji. Akceptowane wartości to `9`, `10`, `11`, `12`, `14`, `15`, `15.3`, `15.5`, `default` i `latest`.
+ Wymagany. Wersja języka do użycia podczas kompilacji. Akceptowane wartości to `9`, `10`, `11` `12` `14` `15`,,,, `15.3`, `15.5`, `default` i `latest`.
 
- Wszystkie liczby całkowite można także określić przy użyciu `.0` jako wersji pomocniczej, na przykład `11.0`.
+ Wszystkie liczby całkowite można także określić za pomocą `.0` jako wersji pomocniczej, na przykład. `11.0`
 
- Możesz wyświetlić listę wszystkich możliwych wartości, określając `-langversion:?` w wierszu polecenia.  
+ Listę wszystkich możliwych wartości można wyświetlić, określając `-langversion:?` w wierszu polecenia.  
   
 ## <a name="remarks"></a>Uwagi  
- Opcja `-langversion` określa składnię akceptowaną przez kompilator. Na przykład jeśli określisz, że wersja językowa to 9,0, kompilator generuje błędy dla składni, która jest prawidłowa tylko w wersji 10,0 lub nowszej.  
+ `-langversion` Opcja określa składnię akceptowaną przez kompilator. Na przykład jeśli określisz, że wersja językowa to 9,0, kompilator generuje błędy dla składni, która jest prawidłowa tylko w wersji 10,0 lub nowszej.  
   
  Tej opcji można użyć podczas tworzenia aplikacji przeznaczonych dla różnych wersji .NET Framework. Na przykład jeśli jesteś celem .NET Framework 3,5, możesz użyć tej opcji, aby upewnić się, że nie używasz składni z wersji językowej 10,0.  
   
@@ -44,8 +44,8 @@ Powoduje, że kompilator akceptuje tylko składnię, która jest uwzględniona w
 vbc -langversion:9.0 sample.vb  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Określanie konkretnej wersji programu .NET Framework jako docelowej](/visualstudio/ide/visual-studio-multi-targeting-overview)
+- [Tworzenie zawartości dla określonej wersji programu .NET Framework](/visualstudio/ide/visual-studio-multi-targeting-overview)

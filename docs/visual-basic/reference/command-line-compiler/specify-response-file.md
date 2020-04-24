@@ -24,7 +24,7 @@ Określa plik, który zawiera opcje kompilatora i pliki kodu źródłowego do sk
 ## <a name="arguments"></a>Argumenty
 
 `response_file`  
-Wymagana. Plik, który zawiera listę opcji kompilatora lub plików kodu źródłowego do skompilowania. Nazwa pliku należy ująć w cudzysłów (""), jeśli zawiera spację.
+Wymagany. Plik, który zawiera listę opcji kompilatora lub plików kodu źródłowego do skompilowania. Nazwa pliku należy ująć w cudzysłów (""), jeśli zawiera spację.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -36,14 +36,14 @@ Aby określić więcej niż jeden plik odpowiedzi w kompilacji, określ wiele op
 @file1.rsp @file2.rsp
 ```
 
-W pliku odpowiedzi w jednym wierszu mogą znajdować się wiele opcji kompilatora i plików kodu źródłowego. Pojedyncza Specyfikacja kompilatora-Option musi znajdować się w jednym wierszu (nie może obejmować wielu wierszy). Pliki odpowiedzi mogą mieć komentarze zaczynające się od symbolu `#`.
+W pliku odpowiedzi w jednym wierszu mogą znajdować się wiele opcji kompilatora i plików kodu źródłowego. Pojedyncza Specyfikacja kompilatora-Option musi znajdować się w jednym wierszu (nie może obejmować wielu wierszy). Pliki odpowiedzi mogą mieć komentarze zaczynające się od `#` symbolu.
 
 Opcje określone w wierszu polecenia można połączyć z opcjami określonymi w jednym lub kilku plikach odpowiedzi. Kompilator przetwarza opcje polecenia w miarę ich występowania. W związku z tym argumenty wiersza polecenia mogą przesłonić wcześniej wymienione opcje w plikach odpowiedzi. Z kolei opcje w pliku odpowiedzi opcje przesłaniają się wcześniej w wierszu polecenia lub w innych plikach odpowiedzi.
 
-Visual Basic udostępnia plik VBC. rsp, który znajduje się w tym samym katalogu, co plik VBC. exe. Plik VBC. rsp jest uwzględniany domyślnie, jeśli nie jest używana opcja `-noconfig`. Aby uzyskać więcej informacji, zobacz [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md).
+Visual Basic udostępnia plik VBC. rsp, który znajduje się w tym samym katalogu, co plik VBC. exe. Plik VBC. rsp jest uwzględniany domyślnie, jeśli `-noconfig` opcja jest używana. Aby uzyskać więcej informacji, zobacz [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md).
 
 > [!NOTE]
-> Opcja `@` nie jest dostępna w środowisku deweloperskim programu Visual Studio; jest on dostępny tylko w przypadku kompilowania z wiersza polecenia.
+> `@` Opcja jest niedostępna w środowisku deweloperskim programu Visual Studio; jest on dostępny tylko w przypadku kompilowania z wiersza polecenia.
 
 ## <a name="example"></a>Przykład
 
@@ -59,13 +59,13 @@ source2.vb
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład ilustruje sposób użycia opcji `@` z plikiem odpowiedzi o nazwie `File1.rsp`.
+W poniższym przykładzie pokazano, jak użyć `@` opcji z plikiem odpowiedzi o nazwie. `File1.rsp`
 
 ```console
 vbc @file1.rsp
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)

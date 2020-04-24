@@ -26,10 +26,10 @@ Pomija możliwość generowania ostrzeżeń przez kompilator.
   
 |Termin|Definicja|  
 |---|---|  
-|`numberList`|Opcjonalny. Rozdzielana przecinkami lista numerów IDENTYFIKACYJNych ostrzeżeń, które kompilator powinien pominąć. Jeśli nie określono identyfikatorów ostrzeżeń, wszystkie ostrzeżenia są pomijane.|  
+|`numberList`|Element opcjonalny. Rozdzielana przecinkami lista numerów IDENTYFIKACYJNych ostrzeżeń, które kompilator powinien pominąć. Jeśli nie określono identyfikatorów ostrzeżeń, wszystkie ostrzeżenia są pomijane.|  
   
 ## <a name="remarks"></a>Uwagi  
- Opcja `-nowarn` powoduje, że kompilator nie generuje ostrzeżeń. Aby pominąć pojedyncze ostrzeżenie, należy podać identyfikator ostrzeżenia dla opcji `-nowarn` po dwukropku. Oddziel wiele numerów ostrzeżeń przecinkami.  
+ `-nowarn` Opcja powoduje, że kompilator nie generuje ostrzeżeń. Aby pominąć pojedyncze ostrzeżenie, należy podać identyfikator ostrzeżenia dla `-nowarn` opcji po dwukropku. Oddziel wiele numerów ostrzeżeń przecinkami.  
   
  Należy określić tylko część liczbową identyfikatora ostrzeżenia. Na przykład jeśli chcesz pominąć BC42024, Ostrzeżenie dla nieużywanych zmiennych lokalnych, określ `-nowarn:42024`.  
   
@@ -37,7 +37,7 @@ Pomija możliwość generowania ostrzeżeń przez kompilator.
   
 |Aby ustawić-nowarn w zintegrowanym środowisku programistycznym programu Visual Studio|  
 |---|  
-|1. zaznaczono projekt w **Eksplorator rozwiązań**. W menu **projekt** kliknij polecenie **Właściwości**. <br />2. Kliknij kartę **kompilacja** .<br />3. Zaznacz pole wyboru **Wyłącz wszystkie ostrzeżenia** , aby wyłączyć wszystkie ostrzeżenia.<br />     oraz<br />     Aby wyłączyć określone ostrzeżenie, kliknij **Brak** z listy rozwijanej obok ostrzeżenia.|  
+|1. zaznaczono projekt w **Eksplorator rozwiązań**. W menu **projekt** kliknij polecenie **Właściwości**. <br />2. Kliknij kartę **kompilacja** .<br />3. Zaznacz pole wyboru **Wyłącz wszystkie ostrzeżenia** , aby wyłączyć wszystkie ostrzeżenia.<br />     — lub —<br />     Aby wyłączyć określone ostrzeżenie, kliknij **Brak** z listy rozwijanej obok ostrzeżenia.|  
   
 ## <a name="example"></a>Przykład  
  Poniższy kod kompiluje `T2.vb` i nie wyświetla żadnych ostrzeżeń.  
@@ -47,13 +47,13 @@ vbc -nowarn t2.vb
 ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod kompiluje `T2.vb` i nie wyświetla ostrzeżeń dla nieużywanych zmiennych lokalnych (42024).  
+ Poniższy kod kompiluje `T2.vb` i nie wyświetla ostrzeżeń dotyczących nieużywanych zmiennych lokalnych (42024).  
   
 ```console
 vbc -nowarn:42024 t2.vb  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

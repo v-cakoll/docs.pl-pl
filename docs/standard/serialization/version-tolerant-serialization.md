@@ -27,7 +27,7 @@ W wersji 1,0 i 1,1 .NET Framework, tworzenie możliwych do przetworzenia typów,
 - Starsze wersje aplikacji mogą generować wyjątki, gdy zostanie wyświetlony monit o deserializacja nowych wersji starego typu.
 - Nowsze wersje aplikacji spowodują wygenerowanie wyjątków podczas deserializacji starszych wersji typu z brakującymi danymi.
 
-Wersja na uszkodzenia serializacji (SRS) to zestaw funkcje wprowadzone w programie .NET Framework 2.0, który ułatwia, wraz z upływem czasu, aby zmodyfikować typów możliwych do serializacji. W szczególności funkcje SRS są włączone dla klas, do których zastosowano atrybut <xref:System.SerializableAttribute>, w tym typów ogólnych. SRS sprawia, że można dodać nowe pola do tych klas bez przerywania zgodność z innymi wersjami tego typu. Aby uzyskać działającą przykładową aplikację, zobacz [przykład technologii serializacji odpornej na wersje](version-tolerant-serialization-technology-sample.md).
+Wersja na uszkodzenia serializacji (SRS) to zestaw funkcje wprowadzone w programie .NET Framework 2.0, który ułatwia, wraz z upływem czasu, aby zmodyfikować typów możliwych do serializacji. W szczególności funkcje SRS są włączone dla klas, do których zastosowano <xref:System.SerializableAttribute> atrybut, w tym typów ogólnych. SRS sprawia, że można dodać nowe pola do tych klas bez przerywania zgodność z innymi wersjami tego typu. Aby uzyskać działającą przykładową aplikację, zobacz [przykład technologii serializacji odpornej na wersje](version-tolerant-serialization-technology-sample.md).
 
 Funkcje SRS są włączone, korzystając z <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Ponadto wszystkie funkcje, z wyjątkiem tolerancja nadmiarowe dane są również włączone podczas korzystania z <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>. Aby uzyskać więcej informacji o używaniu tych klas do serializacji, zobacz [Serializacja binarna](binary-serialization.md).
 
@@ -49,7 +49,7 @@ Te funkcje zostały omówione bardziej szczegółowo w poniższych sekcjach.
 
 W przeszłości podczas deserializacji wszelkie dane nadmiarowe lub nieoczekiwany spowodowane wyjątki zostanie wygenerowany. Z SRS w tej samej sytuacji, wszelkie dane nadmiarowe lub nieoczekiwany jest ignorowana zamiast powoduje wyjątki zostanie wygenerowany. Dzięki temu aplikacje używające nowszych wersji typu (czyli wersji zawierającej więcej pól) mogą wysyłać informacje do aplikacji, które oczekują starszych wersji tego samego typu.
 
-W poniższym przykładzie dodatkowe dane zawarte w `CountryField` wersji 2,0 klasy `Address` są ignorowane, gdy Starsza aplikacja deserializacji nowszą wersję.
+W poniższym przykładzie dodatkowe dane zawarte w `CountryField` wersji 2,0 `Address` klasy są ignorowane, gdy Starsza aplikacja deserializacji nowszą wersję.
 
 ```csharp  
 // Version 1 of the Address class.  
@@ -90,9 +90,9 @@ End Class
 
 ### <a name="tolerance-of-missing-data"></a>Tolerancja brakujących danych
 
-Pola mogą być oznaczane jako opcjonalne przez zastosowanie do nich atrybutu <xref:System.Runtime.Serialization.OptionalFieldAttribute>. Podczas deserializacji Jeśli brakuje danych opcjonalny mechanizm serializacji ignoruje braku i nie zgłoszony wyjątek. W ten sposób aplikacje, które oczekują starszych wersji typu, mogą wysyłać dane do aplikacji, które oczekują nowszych wersji tego samego typu.
+Pola mogą być oznaczane jako opcjonalne przez zastosowanie <xref:System.Runtime.Serialization.OptionalFieldAttribute> atrybutu do nich. Podczas deserializacji Jeśli brakuje danych opcjonalny mechanizm serializacji ignoruje braku i nie zgłoszony wyjątek. W ten sposób aplikacje, które oczekują starszych wersji typu, mogą wysyłać dane do aplikacji, które oczekują nowszych wersji tego samego typu.
 
-W poniższym przykładzie przedstawiono wersję 2,0 klasy `Address` z polem `CountryField` oznaczonym jako opcjonalna. Jeśli Starsza aplikacja wysyła wersję 1 do nowszej aplikacji, która oczekuje wersji 2,0, Brak danych zostanie zignorowany.
+W poniższym przykładzie przedstawiono wersję 2,0 `Address` klasy z `CountryField` polem oznaczonym jako opcjonalna. Jeśli Starsza aplikacja wysyła wersję 1 do nowszej aplikacji, która oczekuje wersji 2,0, Brak danych zostanie zignorowany.
 
 ```csharp
 [Serializable]
@@ -128,11 +128,11 @@ Serializacja wywołania zwrotne są mechanizm udostępniająca punkty zaczepieni
 |<xref:System.Runtime.Serialization.OnSerializingAttribute>|Przed serializacji.|Przygotowanie do serializacji. Na przykład utwórz opcjonalne struktury danych.|
 |<xref:System.Runtime.Serialization.OnSerializedAttribute>|Po serializacji.|Rejestrowanie zdarzeń serializacji.|
 
- \* to wywołanie zwrotne jest wywoływane przed konstruktorem deserializacji, jeśli taki istnieje.
+ \*To wywołanie zwrotne jest wywoływane przed konstruktorem deserializacji, jeśli taki istnieje.
 
 #### <a name="using-callbacks"></a>Używanie wywołań zwrotnych
 
-Aby użyć wywołania zwrotnego, Zastosuj odpowiedni atrybut do metody, która akceptuje parametr <xref:System.Runtime.Serialization.StreamingContext>. Może być oznaczony tylko jednej metody na klasy z każdym z tych atrybutów. Na przykład:
+Aby użyć wywołania zwrotnego, należy zastosować odpowiedni atrybut do metody, która akceptuje <xref:System.Runtime.Serialization.StreamingContext> parametr. Może być oznaczony tylko jednej metody na klasy z każdym z tych atrybutów. Przykład:
 
 ```csharp
 [OnDeserializing]
@@ -151,7 +151,7 @@ End Sub
 
 Przeznaczeniem z tych metod jest przechowywania wersji. Podczas deserializacji to opcjonalne pole może nie być poprawnie zainicjować w przypadku braku danych dla tego pola. Można to naprawić, tworząc metodę, która przypisuje poprawną wartość, a następnie stosując do metody atrybut **OnDeserializingAttribute** lub **OnDeserializedAttribute** .
 
-Poniższy przykład przedstawia metodę w kontekście typu. Jeśli wcześniejsza wersja aplikacji wysyła wystąpienie klasy `Address` do nowszej wersji aplikacji, Brak danych pola `CountryField`. Jednak po deserializacji pole zostanie ustawione na wartość domyślną "Japonia".
+Poniższy przykład przedstawia metodę w kontekście typu. Jeśli wcześniejsza wersja aplikacji wysyła wystąpienie `Address` klasy do nowszej wersji aplikacji, Brak danych `CountryField` pola. Jednak po deserializacji pole zostanie ustawione na wartość domyślną "Japonia".
 
 ```csharp
 [Serializable]
@@ -262,14 +262,14 @@ End Class
 
 ## <a name="serializationbinder"></a>SerializationBinder
 
-Niektórzy użytkownicy może być konieczne do kontrolowania której klasy do serializacji i deserializacji, ponieważ wymagana jest nieco innej klasy w serwera i klienta. <xref:System.Runtime.Serialization.SerializationBinder> jest klasą abstrakcyjną służącą do kontrolowania rzeczywistych typów używanych podczas serializacji i deserializacji. Aby użyć tej klasy, należy wyprowadzić klasę z <xref:System.Runtime.Serialization.SerializationBinder> i zastąpić <xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> i <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A> metody. Aby uzyskać więcej informacji, zobacz [Kontrolowanie serializacji i deserializacji z pomocą elementu SerializationBinder](../../framework/wcf/feature-details/controlling-serialization-and-deserialization-with-serializationbinder.md).
+Niektórzy użytkownicy może być konieczne do kontrolowania której klasy do serializacji i deserializacji, ponieważ wymagana jest nieco innej klasy w serwera i klienta. <xref:System.Runtime.Serialization.SerializationBinder>jest klasą abstrakcyjną służącą do kontrolowania rzeczywistych typów używanych podczas serializacji i deserializacji. Aby użyć tej klasy, należy wyprowadzić klasę z <xref:System.Runtime.Serialization.SerializationBinder> i zastąpić <xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> i <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A> metody. Aby uzyskać więcej informacji, zobacz [Kontrolowanie serializacji i deserializacji z pomocą elementu SerializationBinder](../../framework/wcf/feature-details/controlling-serialization-and-deserialization-with-serializationbinder.md).
 
 ## <a name="best-practices"></a>Najlepsze rozwiązania
 
 W celu zapewnienia zachowania właściwej wersji, modyfikując typu od wersji należy wykonać następujące czynności:
 
 - Nigdy nie należy usunąć pole serializacji.
-- Nie stosuj atrybutu <xref:System.NonSerializedAttribute> do pola, jeśli atrybut nie został zastosowany do pola w poprzedniej wersji.
+- Nigdy nie stosuj <xref:System.NonSerializedAttribute> atrybutu do pola, jeśli atrybut nie został zastosowany do pola w poprzedniej wersji.
 - Nigdy nie można zmienić nazwy lub typu serializacji pola.
 - Podczas dodawania nowego serializowanego pola, zastosuj atrybut **OptionalFieldAttribute** .
 - Podczas usuwania atrybutu **nieserializowanego** z pola (którego nie można serializować w poprzedniej wersji), należy zastosować atrybut **OptionalFieldAttribute** .
@@ -280,7 +280,7 @@ W celu zapewnienia, że typem będzie zgodna z aparatów przyszłych serializacj
 - Zawsze należy prawidłowo ustawić właściwość **VersionAdded** atrybutu **OptionalFieldAttribute** .
 - Unikaj rozgałęziony przechowywania wersji.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.SerializableAttribute>
 - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>

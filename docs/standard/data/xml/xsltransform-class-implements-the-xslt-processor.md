@@ -16,25 +16,25 @@ ms.locfileid: "75709611"
 # <a name="xsltransform-class-implements-the-xslt-processor"></a>Implementowanie procesora XSLT przy użyciu klasy XslTransform
 
 > [!NOTE]
-> Klasa <xref:System.Xml.Xsl.XslTransform> jest przestarzała w .NET Framework 2,0. Można wykonywać przekształcenia Extensible Stylesheet Language for Transformations (XSLT) przy użyciu klasy <xref:System.Xml.Xsl.XslCompiledTransform>. Aby uzyskać więcej informacji, zobacz [Używanie klasy XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) i [Migrowanie z klasy XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) .
+> <xref:System.Xml.Xsl.XslTransform> Klasa jest przestarzała w .NET Framework 2,0. Można wykonać przekształcenia Extensible Stylesheet Language for Transformations (XSLT) przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform> klasy. Aby uzyskać więcej informacji, zobacz [Używanie klasy XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) i [Migrowanie z klasy XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) .
 
-Klasa <xref:System.Xml.Xsl.XslTransform> to procesor XSLT implementujący zalecenia dotyczące wersji 1,0 przekształcenia XSL (XSLT). Metoda <xref:System.Xml.Xsl.XslTransform.Load%2A> lokalizuje i odczytuje arkusze stylów, a metoda <xref:System.Xml.Xsl.XslTransform.Transform%2A> przekształca dany dokument źródłowy. Dowolny magazyn, który implementuje interfejs <xref:System.Xml.XPath.IXPathNavigable>, może być używany jako dokument źródłowy dla <xref:System.Xml.Xsl.XslTransform>. .NET Framework obecnie implementuje interfejs <xref:System.Xml.XPath.IXPathNavigable> na <xref:System.Xml.XmlDocument>, <xref:System.Xml.XmlDataDocument>i <xref:System.Xml.XPath.XPathDocument>, dzięki czemu wszystkie te mogą być używane jako wejściowy dokument źródłowy do przekształcenia.
+<xref:System.Xml.Xsl.XslTransform> Klasa to procesor XSLT implementujący zalecenia dotyczące wersji 1,0 przekształcenia XSL (XSLT). <xref:System.Xml.Xsl.XslTransform.Load%2A> Metoda lokalizuje i odczytuje arkusze stylów, a <xref:System.Xml.Xsl.XslTransform.Transform%2A> Metoda przekształca dany dokument źródłowy. Dowolny magazyn, który implementuje <xref:System.Xml.XPath.IXPathNavigable> interfejs, może być używany jako dokument źródłowy dla <xref:System.Xml.Xsl.XslTransform>. <xref:System.Xml.XPath.IXPathNavigable> .NET Framework obecnie implementuje interfejs <xref:System.Xml.XmlDocument>w, <xref:System.Xml.XmlDataDocument>, i <xref:System.Xml.XPath.XPathDocument>, dlatego wszystkie z nich mogą być używane jako wejściowy dokument źródłowy do przekształcenia.
 
-Obiekt <xref:System.Xml.Xsl.XslTransform> w .NET Framework obsługuje specyfikację XSLT 1,0, zdefiniowaną za pomocą następującej przestrzeni nazw:
+<xref:System.Xml.Xsl.XslTransform> Obiekt w .NET Framework obsługuje specyfikację XSLT 1,0, zdefiniowaną za pomocą następującej przestrzeni nazw:
 
 ```xml
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 ```
 
-Arkusz stylów można załadować przy użyciu metody <xref:System.Xml.Xsl.XslTransform.Load%2A> z jednej z następujących klas:
+Arkusz stylów można załadować przy użyciu <xref:System.Xml.Xsl.XslTransform.Load%2A> metody z jednej z następujących klas:
 
 - Pustym XPathNavigator
 
-- XmlReader
+- Elementu
 
 - Ciąg reprezentujący adres URL
 
-Istnieje inna metoda <xref:System.Xml.Xsl.XslTransform.Load%2A> dla każdej z powyższych klas wejściowych. Niektóre metody przyjmują kombinację jednej z tych klas i klasy <xref:System.Xml.XmlResolver> jako argumenty. <xref:System.Xml.XmlResolver> lokalizuje zasoby, do których odwołuje się `<xsl:import>` lub `<xsl:include>` znalezionych w arkuszu stylów. Następujące metody pobierają ciąg, <xref:System.Xml.XmlReader>lub <xref:System.Xml.XPath.XPathNavigator> jako dane wejściowe.
+Istnieje inna <xref:System.Xml.Xsl.XslTransform.Load%2A> Metoda dla każdej z powyższych klas wejściowych. Niektóre metody przyjmują kombinację jednej z tych klas i <xref:System.Xml.XmlResolver> klasy jako argumenty. <xref:System.Xml.XmlResolver> Lokalizuje zasoby, do których `<xsl:import>` odwołuje się lub `<xsl:include>` które znajdują się w arkuszu stylów. Następujące metody przyjmują ciąg, <xref:System.Xml.XmlReader>lub <xref:System.Xml.XPath.XPathNavigator> jako dane wejściowe.
 
 ```vb
 Overloads Public Sub Load(String)
@@ -68,19 +68,19 @@ Overloads Public Sub Load(XPathNavigator, XmlResolver, Evidence)
 public void Load(XPathNavigator, XmlResolver, Evidence);
 ```
 
-Większość metod <xref:System.Xml.Xsl.XslTransform.Load%2A> pokazanych powyżej przyjmuje <xref:System.Xml.XmlResolver> jako parametr. <xref:System.Xml.XmlResolver> służy do ładowania arkusza stylów i wszystkich arkuszy stylów, do których odwołuje się element xsl: import i xsl: include.
+Większość <xref:System.Xml.Xsl.XslTransform.Load%2A> metod przedstawionych powyżej przyjmuje <xref:System.Xml.XmlResolver> jako parametr. <xref:System.Xml.XmlResolver> Służy do ładowania arkusza stylów i wszystkich arkuszy stylów, do których odwołuje się element xsl: import i xsl: include.
 
-Większość metod <xref:System.Xml.Xsl.XslTransform.Load%2A> przyjmuje również dowody jako parametr. Parametr zeznania to <xref:System.Security.Policy.Evidence>, która jest skojarzona z arkuszem stylów. Poziom zabezpieczeń arkusza stylów wpływa na poziom zabezpieczeń wszelkich kolejnych zasobów, do których się odwołuje, takich jak skrypt, który zawiera, wszelkie `document()` funkcje, których używa, oraz wszystkie obiekty rozszerzeń używane przez <xref:System.Xml.Xsl.XsltArgumentList>.
+Większość <xref:System.Xml.Xsl.XslTransform.Load%2A> metod przyjmuje również dowody jako parametr. Parametr zeznania jest <xref:System.Security.Policy.Evidence> skojarzony z arkuszem stylów. Poziom zabezpieczeń arkusza stylów wpływa na poziom zabezpieczeń wszelkich kolejnych zasobów, do których się odwołuje, takich jak skrypt, który zawiera, wszelkie `document()` używane przez niego funkcje i wszystkie obiekty rozszerzeń używane przez <xref:System.Xml.Xsl.XsltArgumentList>.
 
-Jeśli arkusz stylów jest ładowany przy użyciu metody <xref:System.Xml.Xsl.XslTransform.Load%2A>, która zawiera parametr adresu URL, a żadne dowody nie są dostarczane, dowód arkusza stylów jest obliczany przez połączenie podanego adresu URL ze swoją lokacją i strefą.
+Jeśli arkusz stylów jest ładowany przy użyciu <xref:System.Xml.Xsl.XslTransform.Load%2A> metody zawierającej parametr adresu URL, a żadne dowody nie są dostarczane, dowód arkusza stylów jest obliczany przez połączenie podanego adresu URL ze swoją lokacją i strefą.
 
-Jeśli nie podano żadnego identyfikatora URI lub dowodu, oznacza to, że dowody ustawione dla arkusza stylów są w pełni zaufane. Nie Ładuj arkuszy stylów z niezaufanych źródeł ani nie dodawaj niezaufanych obiektów rozszerzeń do <xref:System.Xml.Xsl.XsltArgumentList>.
+Jeśli nie podano żadnego identyfikatora URI lub dowodu, oznacza to, że dowody ustawione dla arkusza stylów są w pełni zaufane. Nie Ładuj arkuszy stylów z niezaufanych źródeł ani nie dodawaj niezaufanych obiektów rozszerzenia do <xref:System.Xml.Xsl.XsltArgumentList>.
 
-Aby uzyskać więcej informacji na temat poziomów zabezpieczeń i dowodów, jak ma to wpływ na skrypty, zobacz [XSLT stylesheet Scripting Using \<msxsl: script >](../../../../docs/standard/data/xml/xslt-stylesheet-scripting-using-msxsl-script.md). Aby uzyskać informacje na temat poziomów zabezpieczeń i dowodów, jak ma to wpływ na obiekty rozszerzeń, zobacz [XsltArgumentList for Style Sheet Parameters and Extension Objects](../../../../docs/standard/data/xml/xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md).
+Aby uzyskać więcej informacji na temat poziomów zabezpieczeń i dowodów, jak ma to wpływ na skrypty, zobacz [XSLT stylesheet Scripting using \<msxsl: Script>](../../../../docs/standard/data/xml/xslt-stylesheet-scripting-using-msxsl-script.md). Aby uzyskać informacje na temat poziomów zabezpieczeń i dowodów, jak ma to wpływ na obiekty rozszerzeń, zobacz [XsltArgumentList for Style Sheet Parameters and Extension Objects](../../../../docs/standard/data/xml/xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md).
 
-Aby uzyskać informacje na temat poziomów zabezpieczeń i dowodów, jak ma to wpływ na funkcję `document()`, zobacz [rozpoznawanie zewnętrznych arkuszy stylów XSLT i dokumentów](../../../../docs/standard/data/xml/resolving-external-xslt-style-sheets-and-documents.md).
+Aby uzyskać informacje na temat poziomów zabezpieczeń i dowodów, jak ma `document()` to wpływ na funkcję, zobacz [rozpoznawanie zewnętrznych arkuszy stylów XSLT i dokumentów](../../../../docs/standard/data/xml/resolving-external-xslt-style-sheets-and-documents.md).
 
-Arkusz stylów może być dostarczony z liczbą parametrów wejściowych. Arkusz stylów może również wywoływać funkcje dla obiektów rozszerzeń. Parametry i obiekty rozszerzeń są dostarczane do arkusza stylów przy użyciu klasy <xref:System.Xml.Xsl.XsltArgumentList>. Aby uzyskać więcej informacji na temat <xref:System.Xml.Xsl.XsltArgumentList>, zobacz <xref:System.Xml.Xsl.XsltArgumentList>.
+Arkusz stylów może być dostarczony z liczbą parametrów wejściowych. Arkusz stylów może również wywoływać funkcje dla obiektów rozszerzeń. Oba parametry i obiekty rozszerzeń są dostarczane do arkusza stylów przy użyciu <xref:System.Xml.Xsl.XsltArgumentList> klasy. Aby uzyskać więcej informacji na <xref:System.Xml.Xsl.XsltArgumentList>temat, <xref:System.Xml.Xsl.XsltArgumentList>Zobacz.
 
 ## <a name="recommended-secure-use-of-xsltransform-class"></a>Zalecane bezpieczne użycie klasy XslTransform
 
@@ -110,7 +110,7 @@ Uprawnienia zabezpieczeń arkusza stylów zależą od dostarczonych dowodów. Po
 
   - Ustaw dowód na `null`. Bloki skryptów nie są przetwarzane, funkcja XSLT `document()` nie jest obsługiwana, a uprzywilejowane obiekty rozszerzeń są niedozwolone.
 
-    Ponadto można również ustawić parametr `resolver`, aby `null` to gwarantuje, że elementy `xsl:import` i `xsl:include` nie są przetwarzane.
+    Ponadto można `resolver` również ustawić parametr na `null` to gwarantuje, że `xsl:import` elementy i `xsl:include` nie są przetwarzane.
 
 - Arkusz stylów XSLT pochodzi ze źródła zewnętrznego. Źródło źródła jest nieznane, ale wymagana jest obsługa skryptów.
 
@@ -118,7 +118,7 @@ Uprawnienia zabezpieczeń arkusza stylów zależą od dostarczonych dowodów. Po
 
 ## <a name="transformation-of-xml-data"></a>Przekształcanie danych XML
 
-Po załadowaniu arkusza stylów transformację zaczyna się od wywołania jednej z <xref:System.Xml.Xsl.XslTransform.Transform%2A> metod i dostarczenia wejściowego dokumentu źródłowego. Metoda <xref:System.Xml.Xsl.XslTransform.Transform%2A> jest przeciążona, aby zapewnić różne wyjścia transformacji. Transformacja może spowodować następujące formaty wyjściowe:
+Po załadowaniu arkusza stylów transformację rozpocznie się, wywołując jedną z <xref:System.Xml.Xsl.XslTransform.Transform%2A> metod i dostarczając wejściowy dokument źródłowy. <xref:System.Xml.Xsl.XslTransform.Transform%2A> Metoda jest przeciążona, aby zapewnić różne wyjścia transformacji. Transformacja może spowodować następujące formaty wyjściowe:
 
 - <xref:System.Xml.XmlReader>
 
@@ -130,7 +130,7 @@ Po załadowaniu arkusza stylów transformację zaczyna się od wywołania jednej
 
 - Adres URL ciągu pliku
 
-Ten ostatni format, adres URL ciągu, zapewnia często używany scenariusz do przekształcania dokumentu wejściowego znajdującego się w adresie URL i zapisywania dokumentu w wyjściowym adresie URL. Ta <xref:System.Xml.Xsl.XslTransform.Transform%2A> Metoda jest wygodną metodą ładowania dokumentu XML z pliku, wykonywania transformacji XSLT i zapisywania danych wyjściowych do pliku. Uniemożliwia to utworzenie i załadowanie wejściowego dokumentu źródłowego, a następnie zapisanie go w strumieniu pliku. Poniższy przykład kodu pokazuje użycie metody <xref:System.Xml.Xsl.XslTransform.Transform%2A> przy użyciu adresu URL ciągu jako danych wejściowych i wyjściowych:
+Ten ostatni format, adres URL ciągu, zapewnia często używany scenariusz do przekształcania dokumentu wejściowego znajdującego się w adresie URL i zapisywania dokumentu w wyjściowym adresie URL. Ta <xref:System.Xml.Xsl.XslTransform.Transform%2A> Metoda jest wygodną metodą ładowania dokumentu XML z pliku, wykonywania transformacji XSLT i zapisywania danych wyjściowych do pliku. Uniemożliwia to utworzenie i załadowanie wejściowego dokumentu źródłowego, a następnie zapisanie go w strumieniu pliku. Poniższy przykład kodu pokazuje użycie <xref:System.Xml.Xsl.XslTransform.Transform%2A> metody przy użyciu ciągu adresu URL jako dane wejściowe i wyjściowe:
 
 ```vb
 Dim xsltransform As XslTransform = New XslTransform()
@@ -146,7 +146,7 @@ xsltransform.Transform("MyDocument.xml", "TransformResult.xml", null);
 
 ## <a name="transforming-a-section-of-an-xml-document"></a>Przekształcanie sekcji dokumentu XML
 
-Przekształcenia są stosowane do dokumentu jako całości. Innymi słowy, jeśli przejdziesz do węzła innego niż węzeł główny dokumentu, nie uniemożliwi to proces przekształcania uzyskuje dostęp do wszystkich węzłów w załadowanym dokumencie. Aby przekształcić fragment drzewa wyników, należy utworzyć <xref:System.Xml.XmlDocument> zawierający tylko fragment drzewa wyników i przekazać ten <xref:System.Xml.XmlDocument> do metody <xref:System.Xml.Xsl.XslTransform.Transform%2A>. Poniższy przykład wykonuje transformację fragmentu drzewa wynik.
+Przekształcenia są stosowane do dokumentu jako całości. Innymi słowy, jeśli przejdziesz do węzła innego niż węzeł główny dokumentu, nie uniemożliwi to proces przekształcania uzyskuje dostęp do wszystkich węzłów w załadowanym dokumencie. Aby przekształcić fragment drzewa wyników, należy utworzyć <xref:System.Xml.XmlDocument> zawierający tylko fragment drzewa wynik i przekazać go <xref:System.Xml.XmlDocument> do <xref:System.Xml.Xsl.XslTransform.Transform%2A> metody. Poniższy przykład wykonuje transformację fragmentu drzewa wynik.
 
 ```vb
 Dim xslt As New XslTransform()
@@ -198,7 +198,7 @@ Library. XML
 </library>
 ```
 
-print_root.xsl
+print_root. xsl
 
 ```xml
 <stylesheet version="1.0" xmlns="http://www.w3.org/1999/XSL/Transform" >
@@ -211,7 +211,7 @@ print_root.xsl
 
 ## <a name="migration-of-xslt-from-net-framework-version-10-to-net-framework-version-11"></a>Migracja XSLT z .NET Framework wersja 1,0 do .NET Framework wersja 1,1
 
-W poniższej tabeli przedstawiono przestarzałe metody .NET Framework w wersji 1,0 oraz nowe metody .NET Framework w wersji 1,1 dla metody <xref:System.Xml.Xsl.XslTransform.Load%2A>. Nowe metody umożliwiają ograniczenie uprawnień arkusza stylów przez określenie dowodu.
+W poniższej tabeli przedstawiono przestarzałe metody .NET Framework w wersji 1,0 oraz nowe metody .NET Framework w wersji 1,1 <xref:System.Xml.Xsl.XslTransform.Load%2A> dla metody. Nowe metody umożliwiają ograniczenie uprawnień arkusza stylów przez określenie dowodu.
 
 |Przestarzałe metody ładowania .NET Framework w wersji 1,0|Zastępowanie metod ładowania .NET Framework w wersji 1,1|
 |------------------------------------------------------|---------------------------------------------------------|
@@ -219,7 +219,7 @@ W poniższej tabeli przedstawiono przestarzałe metody .NET Framework w wersji 1
 |Ładowanie (arkusz stylów IXPathNavigable);<br /><br /> Załaduj (IXPathNavigable StyleSheet, sqlresolverer);|Load (IXPathNavigable StyleSheet, procedura rozpoznawania nazw XmlResolver, dowód dowodu);|
 |Ładowanie (arkusz stylów XmlReader);<br /><br /> Załaduj (XmlReader StyleSheet, xmlresolverer);|Załaduj (XmlReader StyleSheet, XmlResolver, resolver, dowód potwierdzający);|
 
-W poniższej tabeli przedstawiono przestarzałe i nowe metody metody <xref:System.Xml.Xsl.XslTransform.Transform%2A>. Nowe metody pobierają <xref:System.Xml.XmlResolver> obiektu.
+W poniższej tabeli przedstawiono przestarzałe i nowe metody dla <xref:System.Xml.Xsl.XslTransform.Transform%2A> metody. Nowe metody przyjmują <xref:System.Xml.XmlResolver> obiekt.
 
 |Przestarzałe metody transformacji .NET Framework w wersji 1,0|Zastępowanie metod 1,1 .NET Framework wersja przekształcenia|
 |-----------------------------------------------------------|--------------------------------------------------------------|
@@ -233,9 +233,9 @@ W poniższej tabeli przedstawiono przestarzałe i nowe metody metody <xref:Syste
 |Void Transform (IXPathNavigable Input, XsltArgumentList args, strumień wyjściowy)|Void Transform (dane wejściowe IXPathNavigable, XsltArgumentList args, dane wyjściowe strumienia, mechanizm rozwiązywania konfliktów XmlResolver)|
 |Void Transform (ciąg wejściowy, ciąg wyjściowy);|Unieważnij transformację (dane wejściowe ciągów, ciągi danych wyjściowych, mechanizm rozwiązywania konfliktów XmlResolver);|
 
-Właściwość <xref:System.Xml.Xsl.XslTransform.XmlResolver%2A?displayProperty=nameWithType> jest przestarzała w .NET Framework wersji 1,1. Zamiast tego należy użyć nowych przeciążeń <xref:System.Xml.Xsl.XslTransform.Transform%2A>, które pobierają <xref:System.Xml.XmlResolver> obiektu.
+<xref:System.Xml.Xsl.XslTransform.XmlResolver%2A?displayProperty=nameWithType> Właściwość jest przestarzała w .NET Framework w wersji 1,1. Zamiast tego należy użyć nowych <xref:System.Xml.Xsl.XslTransform.Transform%2A> przeciążeń, <xref:System.Xml.XmlResolver> które pobierają obiekt.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Xml.Xsl.XslTransform>
 - [Przekształcenia XSLT przy użyciu klasy XslTransform](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)

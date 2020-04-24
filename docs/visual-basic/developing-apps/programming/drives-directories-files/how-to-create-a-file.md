@@ -14,7 +14,7 @@ ms.locfileid: "74348797"
 ---
 # <a name="how-to-create-a-file-in-visual-basic"></a>Porady: tworzenie pliku w Visual Basic
 
-W tym przykładzie tworzy pusty plik <xref:System.IO.File.Create%2A> tekstowy <xref:System.IO.File> w określonej ścieżce przy użyciu metody w klasie.  
+Ten przykład umożliwia utworzenie pustego pliku tekstowego w określonej ścieżce przy użyciu <xref:System.IO.File.Create%2A> metody w <xref:System.IO.File> klasie.  
   
 ## <a name="example"></a>Przykład  
 
@@ -22,7 +22,7 @@ W tym przykładzie tworzy pusty plik <xref:System.IO.File.Create%2A> tekstowy <x
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
 
- Użyj `file` zmiennej, aby zapisać do pliku.  
+ Użyj `file` zmiennej do zapisu w pliku.  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
 
@@ -30,25 +30,25 @@ W tym przykładzie tworzy pusty plik <xref:System.IO.File.Create%2A> tekstowy <x
   
  Następujące warunki mogą spowodować wyjątek:  
   
-- Nazwa ścieżki jest zniekształcona. Na przykład zawiera nielegalne znaki lub jest<xref:System.ArgumentException>tylko biały znak ( ).  
+- Nazwa ścieżki jest źle sformułowana. Na przykład zawiera niedozwolone znaki lub jest tylko białym znakiem (<xref:System.ArgumentException>).  
   
-- Ścieżka jest tylko do<xref:System.IO.IOException>odczytu ( ).  
+- Ścieżka jest tylko do odczytu (<xref:System.IO.IOException>).  
   
-- Nazwa ścieżki `Nothing` to<xref:System.ArgumentNullException>( ).  
+- Nazwa ścieżki to `Nothing` (<xref:System.ArgumentNullException>).  
   
-- Nazwa ścieżki jest za<xref:System.IO.PathTooLongException>długa ( ).  
+- Nazwa ścieżki jest za długa (<xref:System.IO.PathTooLongException>).  
   
 - Ścieżka jest nieprawidłowa (<xref:System.IO.DirectoryNotFoundException>).  
   
-- Ścieżka jest tylko dwukropek ":" (<xref:System.NotSupportedException>).  
+- Ścieżka ma tylko dwukropek ":" (<xref:System.NotSupportedException>).  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
 
- A <xref:System.Security.SecurityException> może być rzucony w środowiskach częściowego zaufania.  
+ <xref:System.Security.SecurityException> Może być zgłaszane w środowiskach częściowej relacji zaufania.  
   
  Wywołanie <xref:System.IO.File.Create%2A> metody wymaga <xref:System.Security.Permissions.FileIOPermission>.  
   
- Jest <xref:System.UnauthorizedAccessException> generowany, jeśli użytkownik nie ma uprawnień do tworzenia pliku.  
+ <xref:System.UnauthorizedAccessException> Jest zgłaszany, jeśli użytkownik nie ma uprawnienia do tworzenia pliku.  
   
 ## <a name="see-also"></a>Zobacz też
 

@@ -14,13 +14,13 @@ ms.locfileid: "74348774"
 ---
 # <a name="how-to-find-subdirectories-with-a-specific-pattern-in-visual-basic"></a>Porady: znajdowanie podkatalogów z określonym wzorcem w Visual Basic
 
-Metoda <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A> zwraca kolekcję tylko do odczytu ciągów reprezentujących nazwy ścieżek dla podkatalogów w katalogu. Za pomocą `wildCards` parametru można określić określony wzorzec. Jeśli chcesz uwzględnić zawartość podkatalogów w wyszukiwaniu, `SearchOption.SearchAllSubDirectories`ustaw parametr na `searchType` .
+<xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A> Metoda zwraca kolekcję ciągów, reprezentującą nazwy ścieżek podkatalogów w katalogu. Możesz użyć parametru, `wildCards` aby określić konkretny wzorzec. Jeśli chcesz uwzględnić zawartość podkatalogów w wyszukiwaniu, ustaw `searchType` parametr na. `SearchOption.SearchAllSubDirectories`
 
-Pusta kolekcja jest zwracana, jeśli nie zostaną znalezione katalogi pasujące do określonego wzorca.
+Po znalezieniu katalogów pasujących do określonego wzorca zwracana jest pusta kolekcja.
 
 ## <a name="to-find-subdirectories-with-a-specific-pattern"></a>Aby znaleźć podkatalogi z określonym wzorcem
 
-Użyj `GetDirectories` tej metody, podając nazwę i ścieżkę katalogu, który chcesz przeszukać. Poniższy przykład zwraca wszystkie katalogi w strukturze katalogów, które zawierają słowo "Dzienniki" w ich nazwie i dodaje je do `ListBox1`.
+Użyj `GetDirectories` metody, podając nazwę i ścieżkę do katalogu, który chcesz przeszukać. Poniższy przykład zwraca wszystkie katalogi w strukturze katalogów, które zawierają wyraz "Logs" w nazwie i dodaje je do `ListBox1`.
 
 [!code-vb[VbVbcnFileAccess#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnFileAccess/VB/Class1.vb#1)]
 
@@ -28,23 +28,23 @@ Użyj `GetDirectories` tej metody, podając nazwę i ścieżkę katalogu, który
 
 Następujące warunki mogą spowodować wyjątek:
 
-- Ścieżka nie jest prawidłowa z jednego z następujących powodów: jest ciągiem o zerowej długości, zawiera tylko biały znak, \\ \\\\zawiera nieprawidłowe znaki lub jest ścieżką urządzenia (zaczyna się od . ) (<xref:System.ArgumentException>).
+- Ścieżka jest nieprawidłowa z jednego z następujących powodów: jest ciągiem o zerowej długości, zawiera tylko biały znak, zawiera nieprawidłowe znaki lub jest ścieżką urządzenia (zaczyna się od \\ \\.\\) (<xref:System.ArgumentException>).
 
-- Ścieżka jest nieprawidłowa, `Nothing` ponieważ<xref:System.ArgumentNullException>jest ( ).
+- Ścieżka jest nieprawidłowa, ponieważ jest `Nothing` (<xref:System.ArgumentNullException>).
 
-- Jeden lub więcej określonych symboli `Nothing`wieloznacznych to , pusty<xref:System.ArgumentNullException>ciąg lub zawiera tylko spacje ( ).
+- Co najmniej jeden z określonych symboli wieloznacznych `Nothing`jest pustym ciągiem lub zawiera tylko spacje (<xref:System.ArgumentNullException>).
 
-- `directory`nie istnieje<xref:System.IO.DirectoryNotFoundException>( ).
+- `directory`nie istnieje (<xref:System.IO.DirectoryNotFoundException>).
 
-- `directory`wskazuje istniejący plik<xref:System.IO.IOException>( ).
+- `directory`wskazuje istniejący plik (<xref:System.IO.IOException>).
 
-- Ścieżka przekracza zdefiniowaną przez system<xref:System.IO.PathTooLongException>maksymalną długość ( ).
+- Ścieżka przekracza maksymalną długość zdefiniowaną przez system (<xref:System.IO.PathTooLongException>).
 
-- Nazwa pliku lub folderu w ścieżce zawiera dwukropek (:) lub jest w nieprawidłowym formacie (<xref:System.NotSupportedException>).
+- Nazwa pliku lub folderu w ścieżce zawiera dwukropek (:) lub ma nieprawidłowy format (<xref:System.NotSupportedException>).
 
-- Użytkownik nie ma niezbędnych uprawnień do<xref:System.Security.SecurityException>wyświetlania ścieżki ( ).
+- Użytkownik nie ma wystarczających uprawnień do wyświetlania ścieżki (<xref:System.Security.SecurityException>).
 
-- Użytkownik nie ma niezbędnych<xref:System.UnauthorizedAccessException>uprawnień ( ).
+- Użytkownik nie ma wymaganych uprawnień (<xref:System.UnauthorizedAccessException>).
 
 ## <a name="see-also"></a>Zobacz też
 

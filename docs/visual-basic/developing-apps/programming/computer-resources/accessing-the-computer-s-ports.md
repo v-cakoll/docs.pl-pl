@@ -14,12 +14,12 @@ ms.locfileid: "74329600"
 ---
 # <a name="accessing-the-computers-ports-visual-basic"></a>Uzyskiwanie dostępu do portów komputera (Visual Basic)
 
-Obiekt `My.Computer.Ports` udostępnia właściwość i metodę uzyskiwania dostępu do portów szeregowych komputera.  
+`My.Computer.Ports` Obiekt zawiera właściwość i metodę uzyskiwania dostępu do portów szeregowych komputera.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
 
  [Instrukcje: wyświetlanie dostępnych portów seryjnych](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)  
- Pokazuje, jak wyświetlić dostępne porty szeregowe.  
+ Demonstruje sposób wyświetlania dostępnych portów szeregowych.  
   
  [Instrukcje: modemy dostępowe powiązane z portami seryjnymi](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)  
  Pokazuje, jak wybrać modem podłączony do portu szeregowego komputera.  
@@ -28,23 +28,23 @@ Obiekt `My.Computer.Ports` udostępnia właściwość i metodę uzyskiwania dost
  Pokazuje, jak wysłać ciąg do portu szeregowego komputera.  
   
  [Instrukcje: odbieranie ciągów z portów seryjnych](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)  
- Pokazuje, jak odbierać ciąg z portu szeregowego komputera.  
+ Pokazuje, jak odebrać ciąg z portu szeregowego komputera.  
   
  [Operacje związane z portem w oprogramowaniu .NET Framework](../../../../visual-basic/developing-apps/programming/computer-resources/port-operations-in-the-net-framework.md)  
- W tym artykule opisano sposób używania programu .NET Framework podczas wykonywania operacji portów.  
+ Opisuje sposób używania .NET Framework podczas wykonywania operacji na portach.  
   
 ## <a name="reference"></a>Dokumentacja  
 
  <xref:Microsoft.VisualBasic.Devices.Ports>  
- Opisuje `My.Computer.Ports` obiekt i jego członków.  
+ Opisuje `My.Computer.Ports` obiekt i jego elementy członkowskie.  
   
  <xref:Microsoft.VisualBasic.Devices.Ports.SerialPortNames>  
  Opisuje `SerialPortNames` właściwość, która pobiera kolekcję nazw portów szeregowych na komputerze.  
   
  <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>  
- Opisuje `OpenSerialPort` metodę, która tworzy <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> i otwiera obiekt.  
+ Opisuje `OpenSerialPort` metodę, która tworzy i otwiera <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> obiekt.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
 
  <xref:System.IO.Ports.SerialPort>  
- W tym artykule opisano klasę .NET Framework. <xref:System.IO.Ports.SerialPort>
+ Opisuje klasę .NET Framework <xref:System.IO.Ports.SerialPort> .

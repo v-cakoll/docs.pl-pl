@@ -23,9 +23,9 @@ Ta lokacja zawiera [specyfikację Visual Basic 11](../../../../_vblang/spec/intr
 
 W repozytorium [dotnet/vblang](https://github.com/dotnet/vblang/issues) należy utworzyć problemy dotyczące specyfikacji. Lub, Jeśli interesuje Cię naprawianie wszelkich znalezionych błędów, możesz przesłać [żądanie ściągnięcia](https://github.com/dotnet/vblang/pulls) do tego samego repozytorium.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Dokumentacja języka Visual Basic](../../../visual-basic/language-reference/index.md)
 
 >[!div class="step-by-step"]
->[Next](../../../../_vblang/spec/introduction.md)
+>[Dalej](../../../../_vblang/spec/introduction.md)

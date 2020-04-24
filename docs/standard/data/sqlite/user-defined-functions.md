@@ -15,13 +15,13 @@ Większość baz danych ma dialekt proceduralny dotyczący języka SQL, którego
 
 ## <a name="scalar-functions"></a>Funkcje skalarne
 
-Funkcje skalarne zwracają pojedynczą wartość skalarną dla każdego wiersza w zapytaniu. Zdefiniuj nowe funkcje skalarne i zastąp wbudowane dla nich przy użyciu <xref:Microsoft.Data.Sqlite.SqliteConnection.CreateFunction%2A>.
+Funkcje skalarne zwracają pojedynczą wartość skalarną dla każdego wiersza w zapytaniu. Zdefiniuj nowe funkcje skalarne i zastąp wbudowane przy użyciu polecenia <xref:Microsoft.Data.Sqlite.SqliteConnection.CreateFunction%2A>.
 
-Zobacz [typy danych](types.md) , aby uzyskać listę obsługiwanych parametrów i zwracanych typów dla argumentu `func`.
+Zobacz [typy danych](types.md) , aby uzyskać listę obsługiwanych parametrów i zwracanych typów dla `func` tego argumentu.
 
-Określenie argumentu `state` przekaże tę wartość do każdego wywołania funkcji. Użyj tego, aby uniknąć zamykania.
+Określenie `state` argumentu spowoduje przekazanie tej wartości do każdego wywołania funkcji. Użyj tego, aby uniknąć zamykania.
 
-Określ `isDeterministic`, jeśli funkcja jest deterministyczna, aby umożliwić firmie SQLite Używanie dodatkowych optymalizacji podczas kompilowania zapytań.
+Określ `isDeterministic` , czy funkcja jest deterministyczna, aby umożliwić firmie SQLite Używanie dodatkowych optymalizacji podczas kompilowania zapytań.
 
 Poniższy przykład pokazuje, jak dodać funkcję skalarną, aby obliczyć promień cylindra.
 
@@ -45,35 +45,35 @@ Poniższy przykład pokazuje, jak zdefiniować funkcję RegExp w celu włączeni
 
 ## <a name="aggregate-functions"></a>Funkcje agregujące
 
-Funkcje agregujące zwracają pojedynczą, zagregowaną wartość dla wszystkich wierszy w zapytaniu. Zdefiniuj i Zastąp funkcje agregujące przy użyciu <xref:Microsoft.Data.Sqlite.SqliteConnection.CreateAggregate%2A>.
+Funkcje agregujące zwracają pojedynczą, zagregowaną wartość dla wszystkich wierszy w zapytaniu. Zdefiniuj i Przesłoń funkcje agregujące przy użyciu <xref:Microsoft.Data.Sqlite.SqliteConnection.CreateAggregate%2A>.
 
-Argument `seed` określa początkowy stan kontekstu. Użyj tego, aby uniknąć również zamknięć.
+`seed` Argument określa początkowy stan kontekstu. Użyj tego, aby uniknąć również zamknięć.
 
-`func` argument jest wywoływany raz w każdym wierszu. Użyj kontekstu, aby zbierać wynik końcowy. Zwróć kontekst. Ten wzorzec zezwala na kontekst jako typ wartości lub niezmienny.
+`func` Argument jest wywoływany raz w każdym wierszu. Użyj kontekstu, aby zbierać wynik końcowy. Zwróć kontekst. Ten wzorzec zezwala na kontekst jako typ wartości lub niezmienny.
 
-Jeśli żadna `resultSelector` nie jest określona, końcowym stanem kontekstu jest używany jako wynik. Może to uprościć definicje funkcji, takich jak sum i Count, które wymagają zwiększenia liczby tylko każdego wiersza i zwrócenia go.
+Jeśli nie `resultSelector` jest określony, ostatni stan kontekstu jest używany jako wynik. Może to uprościć definicje funkcji, takich jak sum i Count, które wymagają zwiększenia liczby tylko każdego wiersza i zwrócenia go.
 
-Określ `resultSelector`, aby obliczyć końcowy wynik z kontekstu po przeprowadzeniu iteracji we wszystkich wierszach.
+Określ `resultSelector` , aby obliczyć końcowy wynik z kontekstu po przeprowadzeniu iteracji we wszystkich wierszach.
 
-Zobacz [typy danych](types.md) , aby uzyskać listę obsługiwanych typów parametrów dla argumentu `func` i typów zwracanych dla `resultSelector`.
+Zobacz [typy danych](types.md) , aby uzyskać listę obsługiwanych typów parametrów dla `func` argumentu i typów zwracanych dla `resultSelector`.
 
-Jeśli funkcja jest deterministyczna, określ `isDeterministic`, aby umożliwić firmie SQLite Używanie dodatkowych optymalizacji podczas kompilowania zapytań.
+Jeśli funkcja jest deterministyczna, określ `isDeterministic` , czy program SQLite ma używać dodatkowych optymalizacji podczas kompilowania zapytań.
 
 W poniższym przykładzie zdefiniowano funkcję agregującą, aby obliczyć odchylenie standardowe kolumny.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/AggregateFunctionSample/Program.cs?name=snippet_CreateAggregate)]
 
-## <a name="errors"></a>błędy
+## <a name="errors"></a>Errors
 
 Jeśli funkcja zdefiniowana przez użytkownika zgłosi wyjątek, komunikat jest zwracany do oprogramowania SQLite. Oprogramowanie SQLite zgłosi błąd, a firma Microsoft. Data. sqlite zgłosi wyjątek Sqliteexception. Aby uzyskać więcej informacji, zobacz [Błędy bazy danych](database-errors.md).
 
-Domyślnie kod błędu programu SQLite zostanie zwrócony SQLITE_ERROR (lub 1). Można jednak go zmienić, zgłaszając <xref:Microsoft.Data.Sqlite.SqliteException> w funkcji o żądanym <xref:Microsoft.Data.Sqlite.SqliteException.SqliteErrorCode> określonym.
+Domyślnie kod błędu programu SQLite zostanie zwrócony SQLITE_ERROR (lub 1). Można jednak go zmienić, przerzucając <xref:Microsoft.Data.Sqlite.SqliteException> w funkcji funkcję z żądanym <xref:Microsoft.Data.Sqlite.SqliteException.SqliteErrorCode> określonym.
 
-## <a name="debugging"></a>debugowanie
+## <a name="debugging"></a>Debugowanie
 
 Technologia SQLite bezpośrednio wywołuje Twoją implementację. Dzięki temu można dodawać punkty przerwania wyzwalane podczas oceniania przez program SQLite zapytań. Dostępne jest pełne środowisko debugowania .NET, które ułatwia tworzenie funkcji zdefiniowanych przez użytkownika.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 * [Typy danych](types.md)
 * [Podstawowe funkcje oprogramowania SQLite](https://www.sqlite.org/lang_corefunc.html)

@@ -27,7 +27,7 @@ Instruuje kompilator, aby nie osadzał żadnego manifestu aplikacji w pliku wyko
   
  Aby uzyskać więcej informacji na temat tworzenia manifestu, zobacz [-WIN32MANIFEST (Visual Basic)](../../../visual-basic/reference/command-line-compiler/win32manifest.md).  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Strona aplikacji, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)

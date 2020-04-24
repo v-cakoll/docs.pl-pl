@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: zmiana ustawień użytkownika'
+title: 'Instrukcje: Zmiana ustawień użytkownika'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - user settings [Visual Basic], changing in Visual Basic
@@ -16,22 +16,22 @@ ms.locfileid: "74329628"
 ---
 # <a name="how-to-change-user-settings-in-visual-basic"></a>Porady: zmienianie ustawień użytkownika w Visual Basic
 
-Ustawienie użytkownika można zmienić, przypisując nową wartość do właściwości `My.Settings` ustawienia obiektu.  
+Ustawienie użytkownika można zmienić, przypisując nową wartość do właściwości ustawienia w `My.Settings` obiekcie.  
   
- Obiekt `My.Settings` udostępnia każde ustawienie jako właściwość. Nazwa właściwości jest taka sama jak nazwa ustawienia, a typ właściwości jest taki sam jak typ ustawienia. Ustawienie **Scope** określa, czy właściwość jest tylko do odczytu: **Właściwość**dla application -scope ustawienie jest tylko do odczytu, podczas gdy właściwość dla **użytkownika**-scope ustawienie jest odczytu i zapisu. Aby uzyskać więcej informacji, zobacz [Obiekt My.Settings](../../../../visual-basic/language-reference/objects/my-settings-object.md).  
+ `My.Settings` Obiekt uwidacznia każde ustawienie jako właściwość. Nazwa właściwości jest taka sama jak nazwa ustawienia, a typ właściwości jest taki sam jak typ ustawienia. **Zakres** ustawienia określa, czy właściwość jest tylko do odczytu: Właściwość ustawienia zakresu **aplikacji**jest tylko do odczytu, podczas gdy właściwość dla ustawienia zakresu **użytkownika**ma wartość odczyt-zapis. Aby uzyskać więcej informacji, zobacz [My. Settings Object](../../../../visual-basic/language-reference/objects/my-settings-object.md).  
   
 > [!NOTE]
-> Chociaż można zmienić i zapisać wartości ustawień zakresu użytkownika w czasie wykonywania, ustawienia zakresu aplikacji są tylko do odczytu i nie można zmienić programowo. Ustawienia zakresu aplikacji można zmienić podczas tworzenia aplikacji przy użyciu **projektanta projektu** lub edytując plik konfiguracyjny aplikacji. Aby uzyskać więcej informacji, zobacz [Zarządzanie ustawieniami aplikacji (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
+> Chociaż można zmienić i zapisać wartości ustawień zakresu użytkownika w czasie wykonywania, ustawienia zakresu aplikacji są tylko do odczytu i nie można ich programowo zmienić. Ustawienia zakresu aplikacji można zmienić podczas tworzenia aplikacji za pomocą **projektanta projektu** lub edytując plik konfiguracyjny aplikacji. Aby uzyskać więcej informacji, zobacz [Zarządzanie ustawieniami aplikacji (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
   
 ## <a name="example"></a>Przykład  
 
- W tym przykładzie `Nickname` zmienia wartość ustawienia użytkownika.  
+ Ten przykład zmienia wartość ustawienia `Nickname` użytkownika.  
   
  [!code-vb[VbVbalrMyResources#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#7)]  
   
- W tym przykładzie do pracy `Nickname` aplikacja musi mieć `String`ustawienie użytkownika, typu .  
+ Aby ten przykład działał, aplikacja musi mieć ustawienie `Nickname` użytkownika o typie. `String`  
   
- Aplikacja zapisuje ustawienia użytkownika po zamknięciu aplikacji. Aby natychmiast zapisać ustawienia, `My.Settings.Save` należy wywołać metodę. Aby uzyskać więcej informacji, zobacz [Jak: Utrwalanie ustawień użytkownika w języku Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md).  
+ Aplikacja zapisuje ustawienia użytkownika po zamknięciu aplikacji. Aby natychmiast zapisać ustawienia, wywołaj `My.Settings.Save` metodę. Aby uzyskać więcej informacji, zobacz [How to: utrwalanie ustawień użytkownika w Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md).  
   
 ## <a name="see-also"></a>Zobacz też
 

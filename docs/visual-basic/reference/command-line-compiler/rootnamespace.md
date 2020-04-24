@@ -32,7 +32,7 @@ Określa przestrzeń nazw dla wszystkich deklaracji typu.
 |`namespace`|Nazwa przestrzeni nazw, w której należy ująć wszystkie deklaracje typu dla bieżącego projektu.|  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli używasz pliku wykonywalnego programu Visual Studio (devenv. exe) do kompilowania projektu utworzonego w zintegrowanym środowisku programistycznym programu Visual Studio, użyj `-rootnamespace`, aby określić wartość właściwości <xref:VSLangProj80.VBProjectProperties3.RootNamespace%2A>. Zobacz [przełączniki wiersza polecenia devenv](/visualstudio/ide/reference/devenv-command-line-switches) , aby uzyskać więcej informacji.  
+ Jeśli używasz pliku wykonywalnego programu Visual Studio (devenv. exe) do kompilowania projektu utworzonego w zintegrowanym środowisku programistycznym programu Visual Studio `-rootnamespace` , użyj, aby określić wartość <xref:VSLangProj80.VBProjectProperties3.RootNamespace%2A> właściwości. Zobacz [przełączniki wiersza polecenia devenv](/visualstudio/ide/reference/devenv-command-line-switches) , aby uzyskać więcej informacji.  
   
  Użyj Dezasembler MSIL (`Ildasm.exe`) środowiska uruchomieniowego języka wspólnego, aby wyświetlić nazwy przestrzeni nazw w pliku wyjściowym.  
   
@@ -47,8 +47,8 @@ Określa przestrzeń nazw dla wszystkich deklaracji typu.
 vbc -rootnamespace:mynamespace in.vb  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Ildasm.exe (dezasembler IL)](../../../framework/tools/ildasm-exe-il-disassembler.md)
+- [Ildasm. exe (IL dezasembler)](../../../framework/tools/ildasm-exe-il-disassembler.md)
 - [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

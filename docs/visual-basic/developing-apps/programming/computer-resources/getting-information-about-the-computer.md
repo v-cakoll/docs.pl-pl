@@ -13,19 +13,19 @@ ms.locfileid: "74348122"
 ---
 # <a name="getting-information-about-the-computer-visual-basic"></a>Pobieranie informacji na temat komputera (Visual Basic)
 
-Obiekt `My.Computer.Info` udostępnia właściwości uzyskiwania informacji o pamięci komputera, załadowanych zestawach, nazwie i systemie operacyjnym.
+`My.Computer.Info` Obiekt zawiera właściwości służące do uzyskiwania informacji o pamięci komputera, załadowanych zestawach, nazwie i systemie operacyjnym.
 
 ## <a name="remarks"></a>Uwagi
 
-W tej tabeli wymieniono `My.Computer.Info` zadania często wykonywane za pośrednictwem obiektu i wskazuje tematy pokazujące sposób wykonywania każdego z nich.
+Ta tabela zawiera listę zadań, które są `My.Computer.Info` często wykonywane przez obiekt, i punkty do tematów przedstawiających sposób wykonywania każdej z nich.
 
 |Do|Zobacz|
 |---|---|
-|Określ, ile wirtualnej przestrzeni adresowej jest dostępne dla komputera, na którym jest zainstalowana aplikacja|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.TotalVirtualMemory%2A>|
-|Określ typ platformy komputera, na którym aplikacja jest uruchomiona|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSPlatform%2A>|
-|Określanie systemu operacyjnego komputera, na którym aplikacja jest uruchomiona|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSFullName%2A>|
+|Określ, ile wirtualnej przestrzeni adresowej jest dostępne na komputerze, na którym zainstalowano aplikację|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.TotalVirtualMemory%2A>|
+|Określ typ platformy komputera, na którym działa aplikacja|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSPlatform%2A>|
+|Określanie systemu operacyjnego komputera, na którym jest uruchomiona aplikacja|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSFullName%2A>|
 |Określanie, jakie dodatki Service Pack zostały zainstalowane na komputerze, na którym jest uruchomiona aplikacja|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSVersion%2A>|
-|Określ `UICulture` zainstalowany na komputerze, na którym aplikacja jest uruchomiona.|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.InstalledUICulture%2A>|
+|Określ zainstalowane `UICulture` na komputerze, na którym jest uruchomiona aplikacja.|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.InstalledUICulture%2A>|
 
 ## <a name="see-also"></a>Zobacz też
 

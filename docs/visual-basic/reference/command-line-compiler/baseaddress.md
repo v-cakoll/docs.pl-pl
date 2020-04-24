@@ -36,7 +36,7 @@ Określa domyślny adres podstawowy podczas tworzenia biblioteki DLL.
   
  Należy pamiętać, że w tym adresie znajduje się wyraz o niższej kolejności. Na przykład, jeśli określisz 0x11110001, zostanie zaokrąglona do 0x11110000.  
   
- Aby ukończyć proces podpisywania dla biblioteki DLL, użyj opcji `–R` narzędzia silnego nazewnictwa (SN. exe).  
+ Aby ukończyć proces podpisywania dla biblioteki DLL, użyj `–R` opcji narzędzia silnego nazewnictwa (SN. exe).  
   
  Ta opcja jest ignorowana, jeśli obiekt docelowy nie jest biblioteką DLL.  
   
@@ -44,7 +44,7 @@ Określa domyślny adres podstawowy podczas tworzenia biblioteki DLL.
 |---|  
 |1. zaznaczono projekt w **Eksplorator rozwiązań**. W menu **projekt** kliknij polecenie **Właściwości**. <br />2. Kliknij kartę **kompilacja** .<br />3. kliknij pozycję **Zaawansowane**.<br />4. Zmodyfikuj wartość w polu **adres podstawowy biblioteki dll:** . **Uwaga:**      **Adres podstawowy biblioteki dll:** pole jest tylko do odczytu, chyba że obiekt docelowy jest biblioteką DLL.|  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)

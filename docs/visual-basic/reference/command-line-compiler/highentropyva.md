@@ -22,15 +22,15 @@ Wskazuje, czy 64-bitowy plik wykonywalny lub plik wykonywalny, który jest oznac
 ```  
   
 ## <a name="arguments"></a>Argumenty  
- `+` &#124; `-`  
- Opcjonalna. Opcja jest domyślnie wyłączona lub jeśli określono `-highentropyva-`. Opcja jest włączona, jeśli określono `-highentropyva` lub `-highentropyva+`.  
+ `+`&#124;`-`  
+ Element opcjonalny. Opcja jest domyślnie wyłączona lub jeśli określono `-highentropyva-`. Opcja jest włączona, jeśli określono `-highentropyva` lub. `-highentropyva+`  
   
 ## <a name="remarks"></a>Uwagi  
  W przypadku wybrania tej opcji zgodne wersje jądra systemu Windows mogą używać wyższych stopni entropii, gdy jądro losowo rozmieszczenie przestrzeni adresowej procesu w ramach ASLR. Jeśli jądro używa wyższych stopni entropii, można przydzielać większą liczbę adresów do regionów pamięci, takich jak stosy i sterty. W związku z tym trudniejsze jest odpuszczenie lokalizacji określonego obszaru pamięci.  
   
  Gdy opcja jest włączona, docelowy plik wykonywalny i wszystkie moduły, od których zależy, muszą być w stanie obsłużyć wartości wskaźników, które są większe niż 4 gigabajty (GB), gdy te moduły działają jako procesy 64-bitowe.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

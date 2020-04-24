@@ -20,15 +20,15 @@ Obiekty [My. Forms](../../../visual-basic/language-reference/objects/my-forms-ob
   
 ## <a name="default-instances"></a>Wystąpienia domyślne  
 
- Wystąpienie domyślne to wystąpienie klasy dostarczonej przez środowisko uruchomieniowe, które nie musi być deklarowane i tworzone przy użyciu instrukcji `Dim` i `New`. Poniższy przykład demonstruje, jak zostało zadeklarowane i wystąpienie wystąpienia klasy <xref:System.Windows.Forms.Form> o nazwie `Form1`i jak teraz można uzyskać domyślne wystąpienie tej klasy <xref:System.Windows.Forms.Form> za pomocą `My.Forms`.  
+ Wystąpienie domyślne to wystąpienie klasy dostarczonej przez środowisko uruchomieniowe, które nie musi być zadeklarowane i tworzone przy użyciu instrukcji `Dim` i. `New` Poniższy przykład demonstruje, jak zostało zadeklarowane <xref:System.Windows.Forms.Form> i wystąpienie wystąpienia klasy o nazwie `Form1`i jak teraz można uzyskać domyślne wystąpienie tej <xref:System.Windows.Forms.Form> klasy przez. `My.Forms`  
   
  [!code-vb[VbVbcnMy#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#5)]  
   
  [!code-vb[VbVbcnMy#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#6)]  
   
- Obiekt `My.Forms` zwraca kolekcję wystąpień domyślnych dla każdej klasy `Form`, która istnieje w projekcie. Podobnie `My.WebServices` zapewnia domyślne wystąpienie klasy proxy dla każdej usługi sieci Web, w której utworzono odwołanie do aplikacji.  
+ `My.Forms` Obiekt zwraca kolekcję wystąpień domyślnych dla każdej `Form` klasy, która istnieje w projekcie. Podobnie, `My.WebServices` program udostępnia domyślne wystąpienie klasy proxy dla każdej usługi sieci Web, w której utworzono odwołanie do aplikacji.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [My.Forms, obiekt](../../../visual-basic/language-reference/objects/my-forms-object.md)
 - [My.WebServices, obiekt](../../../visual-basic/language-reference/objects/my-webservices-object.md)

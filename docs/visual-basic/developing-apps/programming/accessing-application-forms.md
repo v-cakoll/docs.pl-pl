@@ -17,17 +17,17 @@ ms.locfileid: "74349244"
 ---
 # <a name="accessing-application-forms-visual-basic"></a>Uzyskiwanie dostępu do formularzy aplikacji (Visual Basic)
 
-Obiekt `My.Forms` zapewnia łatwy sposób dostępu do wystąpienia każdego formularza systemu Windows zadeklarowanego w projekcie aplikacji. Można również użyć właściwości `My.Application` obiektu, aby uzyskać dostęp do ekranu powitalnego aplikacji i formularza głównego i uzyskać listę otwartych formularzy aplikacji.  
+`My.Forms` Obiekt zapewnia łatwy sposób uzyskiwania dostępu do wystąpienia każdego formularza systemu Windows zadeklarowanego w projekcie aplikacji. Możesz również użyć właściwości `My.Application` obiektu, aby uzyskać dostęp do ekranu powitalnego i formularza głównego aplikacji oraz uzyskać listę otwartych formularzy aplikacji.  
   
 ## <a name="tasks"></a>Zadania  
 
- W poniższej tabeli wymieniono przykłady przedstawiające sposób uzyskiwania dostępu do formularzy aplikacji.  
+ W poniższej tabeli przedstawiono przykłady pokazujące, jak uzyskać dostęp do formularzy aplikacji.  
   
 |Do|Zobacz|  
 |---|---|  
 |Dostęp do jednego formularza z innego formularza w aplikacji.|[My.Forms, obiekt](../../../visual-basic/language-reference/objects/my-forms-object.md)|  
-|Wyświetl tytuły wszystkich otwartych formularzy aplikacji.|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>|  
-|Zaktualizuj ekran powitalny z informacjami o stanie podczas uruchamiania aplikacji.|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>|  
+|Wyświetla tytuły wszystkich otwartych formularzy aplikacji.|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>|  
+|Zaktualizuj ekran powitalny informacjami o stanie podczas uruchamiania aplikacji.|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>|  
   
 ## <a name="see-also"></a>Zobacz też
 

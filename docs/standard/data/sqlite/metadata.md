@@ -15,30 +15,30 @@ Istnieją dwa interfejsy API do pobierania metadanych w ADO.NET. Jeden pobiera m
 
 ## <a name="query-result-metadata"></a>Metadane wyników zapytania
 
-Metadane dotyczące wyników zapytania można pobrać przy użyciu metody <xref:Microsoft.Data.Sqlite.SqliteDataReader.GetSchemaTable%2A> w `SqliteDataReader`. Zwrócony <xref:System.Data.DataTable> zawiera następujące kolumny:
+Metadane dotyczące wyników zapytania można pobrać przy użyciu <xref:Microsoft.Data.Sqlite.SqliteDataReader.GetSchemaTable%2A> metody w. `SqliteDataReader` Zwrócone <xref:System.Data.DataTable> elementy zawierają następujące kolumny:
 
 | Kolumna             | Typ    | Opis                                                               |
 | ------------------ | ------- | ------------------------------------------------------------------------- |
-| `AllowDBNull`      | Boolean | Prawda, jeśli kolumna pierwotna może mieć wartość NULL.                                    |
-| `BaseCatalogName`  | String  | Nazwa bazy danych kolumny źródłowej. Zawsze wartość NULL dla wyrażeń.    |
-| `BaseColumnName`   | String  | Niealiasowa nazwa kolumny źródła. Zawsze wartość NULL dla wyrażeń.    |
-| `BaseSchemaName`   | String  | Zawsze wartość NULL. SQLite nie obsługuje schematów.                              |
-| `BaseServerName`   | String  | Ścieżka do pliku bazy danych określona w parametrach połączenia.         |
-| `BaseTableName`    | String  | Nazwa tabeli kolumny pierwotnej. Zawsze wartość NULL dla wyrażeń.       |
-| `ColumnName`       | String  | Nazwa lub alias kolumny w zestawie wyników.                        |
+| `AllowDBNull`      | Wartość logiczna | Prawda, jeśli kolumna pierwotna może mieć wartość NULL.                                    |
+| `BaseCatalogName`  | Ciąg  | Nazwa bazy danych kolumny źródłowej. Zawsze wartość NULL dla wyrażeń.    |
+| `BaseColumnName`   | Ciąg  | Niealiasowa nazwa kolumny źródła. Zawsze wartość NULL dla wyrażeń.    |
+| `BaseSchemaName`   | Ciąg  | Zawsze wartość NULL. SQLite nie obsługuje schematów.                              |
+| `BaseServerName`   | Ciąg  | Ścieżka do pliku bazy danych określona w parametrach połączenia.         |
+| `BaseTableName`    | Ciąg  | Nazwa tabeli kolumny pierwotnej. Zawsze wartość NULL dla wyrażeń.       |
+| `ColumnName`       | Ciąg  | Nazwa lub alias kolumny w zestawie wyników.                        |
 | `ColumnOrdinal`    | Int32   | Numer porządkowy kolumny w zestawie wyników.                              |
-| `ColumnSize`       | Int32   | Zawsze-1. Może to ulec zmianie w przyszłych wersjach `Microsoft.Data.Sqlite`.   |
+| `ColumnSize`       | Int32   | Zawsze-1. Może to ulec zmianie w przyszłych wersjach `Microsoft.Data.Sqlite`programu.   |
 | `DataType`         | Typ    | Domyślny typ danych platformy .NET dla kolumny.                                 |
-| `DataTypeName`     | String  | Typ danych programu SQLite w kolumnie.                                       |
-| `IsAliased`        | Boolean | True, jeśli nazwa kolumny jest aliasem w zestawie wyników.                     |
-| `IsAutoIncrement`  | Boolean | Ma wartość true, jeśli kolumna pierwotna została utworzona za pomocą słowa kluczowego AUTOINCREMENT.     |
-| `IsExpression`     | Boolean | Wartość true, jeśli kolumna pochodzi z wyrażenia w zapytaniu.            |
-| `IsKey`            | Boolean | Wartość true, jeśli kolumna pierwotna jest częścią klucza podstawowego.                     |
-| `IsUnique`         | Boolean | Ma wartość true, jeśli kolumna pierwotna jest UNIKATOWa.                                      |
-| `NumericPrecision` | Int16   | Zawsze wartość NULL. Może to ulec zmianie w przyszłych wersjach `Microsoft.Data.Sqlite`. |
-| `NumericScale`     | Int16   | Zawsze wartość NULL. Może to ulec zmianie w przyszłych wersjach `Microsoft.Data.Sqlite`. |
+| `DataTypeName`     | Ciąg  | Typ danych programu SQLite w kolumnie.                                       |
+| `IsAliased`        | Wartość logiczna | True, jeśli nazwa kolumny jest aliasem w zestawie wyników.                     |
+| `IsAutoIncrement`  | Wartość logiczna | Ma wartość true, jeśli kolumna pierwotna została utworzona za pomocą słowa kluczowego AUTOINCREMENT.     |
+| `IsExpression`     | Wartość logiczna | Wartość true, jeśli kolumna pochodzi z wyrażenia w zapytaniu.            |
+| `IsKey`            | Wartość logiczna | Wartość true, jeśli kolumna pierwotna jest częścią klucza podstawowego.                     |
+| `IsUnique`         | Wartość logiczna | Ma wartość true, jeśli kolumna pierwotna jest UNIKATOWa.                                      |
+| `NumericPrecision` | Int16   | Zawsze wartość NULL. Może to ulec zmianie w przyszłych wersjach `Microsoft.Data.Sqlite`programu. |
+| `NumericScale`     | Int16   | Zawsze wartość NULL. Może to ulec zmianie w przyszłych wersjach `Microsoft.Data.Sqlite`programu. |
 
-Poniższy przykład pokazuje, jak za pomocą `GetSchemaTable` utworzyć ciąg debugowania, który pokazuje metadane dotyczące wyniku:
+Poniższy przykład pokazuje, jak używać `GetSchemaTable` do tworzenia ciągu debugowania, który pokazuje metadane dotyczące wyniku:
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/ResultMetadataSample/Program.cs?name=snippet_ResultMetadata)]
 
@@ -72,7 +72,7 @@ FROM sqlite_master AS t,
 WHERE t.type = 'table';
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 * [Magazyn SQL Database schematu](https://www.sqlite.org/fileformat.html#storage_of_the_sql_database_schema)
 * [PRAGMa — instrukcje](https://www.sqlite.org/pragma.html)

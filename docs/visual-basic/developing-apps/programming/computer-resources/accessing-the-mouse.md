@@ -14,17 +14,17 @@ ms.locfileid: "74347016"
 ---
 # <a name="accessing-the-mouse-visual-basic"></a>Uzyskiwanie dostępu do myszy (Visual Basic)
 
-Obiekt `My.Computer.Mouse` umożliwia znajdowanie informacji o myszy komputera, takich jak liczba myszy, liczba przycisków myszy i szczegóły dotyczące kółka myszy.  
+`My.Computer.Mouse` Obiekt umożliwia znalezienie informacji o myszy komputera, takich jak jeśli istnieje mysz, liczba przycisków myszy oraz szczegóły dotyczące kółka myszy.  
   
 ## <a name="remarks"></a>Uwagi  
 
- W tej tabeli wymieniono zadania skojarzone z obiektem `My.Computer.Mouse` i wskazano tematy pokazujące, jak wykonać każdy z nich.  
+ Ta tabela zawiera listę zadań skojarzonych z `My.Computer.Mouse` obiektem, a następnie wskazuje tematy przedstawiające, jak to zrobić.  
   
 |Do|Zobacz|  
 |--------|---------|  
 |Określ, czy mysz ma kółko przewijania.|<xref:Microsoft.VisualBasic.Devices.Mouse.WheelExists>|  
-|Określanie, czy lewe i prawe przyciski myszy zostały zamienione|<xref:Microsoft.VisualBasic.Devices.Mouse.ButtonsSwapped>|  
-|Ustaw, ile przewijać, gdy kółko myszy jest obrócony o jedno wycięcie.|<xref:Microsoft.VisualBasic.Devices.Mouse.WheelScrollLines>|  
+|Określanie, czy lewy i prawy przycisk myszy zostały zamienione|<xref:Microsoft.VisualBasic.Devices.Mouse.ButtonsSwapped>|  
+|Ustaw stopień przewijania, gdy kółko myszy zostanie obrócone o jedno nacięcie.|<xref:Microsoft.VisualBasic.Devices.Mouse.WheelScrollLines>|  
   
 ## <a name="see-also"></a>Zobacz też
 

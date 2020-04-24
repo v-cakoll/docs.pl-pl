@@ -28,13 +28,13 @@ Umożliwia korzystanie z wnioskowania o typie lokalnym w deklaracjach zmiennych.
   
 |Termin|Definicja|  
 |---|---|  
-|`+` &#124; `-`|Opcjonalny. Określ `-optioninfer+`, aby włączyć wnioskowanie o typie lokalnym lub `-optioninfer-`, aby go zablokować. Opcja `-optioninfer` bez określonej wartości jest taka sama jak wartość `-optioninfer+`. Wartość domyślna w przypadku nieobecności przełącznika `-optioninfer` jest również `-optioninfer+`. Wartość domyślna jest ustawiana w pliku odpowiedzi VBC. rsp.|  
+|`+`&#124;`-`|Element opcjonalny. Określ `-optioninfer+` , aby włączyć wnioskowanie o typie lokalnym `-optioninfer-` lub je zablokować. `-optioninfer` Opcja bez określonej wartości jest taka sama jak `-optioninfer+`. Wartość domyślna, gdy przełącznik `-optioninfer` nie jest obecny, jest również `-optioninfer+`. Wartość domyślna jest ustawiana w pliku odpowiedzi VBC. rsp.|  
   
 > [!NOTE]
-> Możesz użyć opcji `-noconfig`, aby zachować wewnętrzne wartości domyślne kompilatora zamiast opcji określonych w vbc. rsp. Wartość domyślna kompilatora dla tej opcji to `-optioninfer-`.  
+> Można użyć `-noconfig` opcji, aby zachować wewnętrzne wartości domyślne kompilatora zamiast opcji określonych w vbc. rsp. Wartość domyślna kompilatora dla tej opcji to `-optioninfer-`.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli plik kodu źródłowego zawiera [instrukcję opcji wnioskowania](../../../visual-basic/language-reference/statements/option-infer-statement.md), instrukcja zastępuje ustawienia kompilatora wiersza polecenia `-optioninfer`.  
+ Jeśli plik kodu źródłowego zawiera [instrukcję opcji wnioskowania](../../../visual-basic/language-reference/statements/option-infer-statement.md), instrukcja zastępuje ustawienie kompilatora wiersza `-optioninfer` polecenia.  
   
 ### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a>Aby ustawić-optioninfer w środowisku IDE programu Visual Studio  
   
@@ -49,7 +49,7 @@ Umożliwia korzystanie z wnioskowania o typie lokalnym w deklaracjach zmiennych.
 vbc -optioninfer+ test.vb  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)

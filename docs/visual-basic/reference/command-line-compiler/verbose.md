@@ -23,23 +23,23 @@ Powoduje, że kompilator tworzy pełny stan i komunikaty o błędach.
 ```  
   
 ## <a name="arguments"></a>Argumenty  
- `+` &#124; `-`  
- Opcjonalny. Określanie `-verbose` jest taka sama jak określanie `-verbose+`, co powoduje, że kompilator emituje pełne komunikaty. Wartość domyślna dla tej opcji to `-verbose-`.  
+ `+`&#124;`-`  
+ Element opcjonalny. Określanie `-verbose` jest takie samo jak określanie `-verbose+`, co powoduje, że kompilator emituje pełne komunikaty. Wartość domyślna dla tej opcji to `-verbose-`.  
   
 ## <a name="remarks"></a>Uwagi  
- Opcja `-verbose` wyświetla informacje o całkowitej liczbie błędów wydanych przez kompilator, raporty, które zestawy są ładowane przez moduł, i wyświetla pliki, które są obecnie kompilowane.  
+ `-verbose` Opcja wyświetla informacje o całkowitej liczbie błędów wydanych przez kompilator, raporty, które zestawy są ładowane przez moduł, i wyświetla pliki, które są obecnie kompilowane.  
   
 > [!NOTE]
-> Opcja `-verbose` nie jest dostępna w środowisku deweloperskim programu Visual Studio. jest on dostępny tylko w przypadku kompilowania z wiersza polecenia.  
+> `-verbose` Opcja jest niedostępna w środowisku deweloperskim programu Visual Studio; jest on dostępny tylko w przypadku kompilowania z wiersza polecenia.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod kompiluje `In.vb` i instruuje kompilator, aby wyświetlał pełne informacje o stanie.  
+ Poniższy kod kompiluje `In.vb` i kieruje kompilator, aby wyświetlić pełne informacje o stanie.  
   
 ```console  
 vbc -verbose in.vb  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

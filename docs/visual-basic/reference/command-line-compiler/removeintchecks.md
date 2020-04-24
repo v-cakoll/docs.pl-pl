@@ -29,20 +29,20 @@ Włącza lub wyłącza przepełnienie — sprawdzanie błędów dla operacji ca�
   
 |Termin|Definicja|  
 |---|---|  
-|`+` &#124; `-`|Opcjonalny. Opcja `-removeintchecks-` powoduje, że kompilator sprawdza wszystkie obliczenia całkowite dla błędów przepełnienia. Wartość domyślna to `-removeintchecks-`.<br /><br /> Określenie `-removeintchecks` lub `-removeintchecks+` zapobiega sprawdzaniu błędów i umożliwia szybsze Obliczanie liczb całkowitych. Jednak bez sprawdzania błędów, a w przypadku przepełnienia zdolności do typów danych można przechowywać nieprawidłowe wyniki bez zgłaszania błędu.|  
+|`+`&#124;`-`|Element opcjonalny. `-removeintchecks-` Opcja powoduje, że kompilator sprawdza wszystkie obliczenia całkowite dla błędów przepełnienia. Wartość domyślna to `-removeintchecks-`.<br /><br /> Określanie `-removeintchecks` lub `-removeintchecks+` zapobiega sprawdzaniu błędów i umożliwia szybsze Obliczanie liczb całkowitych. Jednak bez sprawdzania błędów, a w przypadku przepełnienia zdolności do typów danych można przechowywać nieprawidłowe wyniki bez zgłaszania błędu.|  
   
 |Aby ustawić-removeintchecks w zintegrowanym środowisku programistycznym programu Visual Studio|  
 |---|  
 |1. zaznaczono projekt w **Eksplorator rozwiązań**. W menu **projekt** kliknij polecenie **Właściwości**. <br />2. Kliknij kartę **kompilacja** .<br />3. kliknij przycisk **Zaawansowane** .<br />4. Zmodyfikuj wartość pola **sprawdzania przepełnienia liczby całkowitej** .|  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod kompiluje `Test.vb` i wyłącza przepełnienie liczby całkowitej — sprawdzanie błędów.  
+ Poniższy kod kompiluje `Test.vb` i wyłącza przepełnienie całkowite — sprawdzanie błędów.  
   
 ```console
 vbc -removeintchecks+ test.vb  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

@@ -25,16 +25,16 @@ Określa, czy zestaw zostanie podpisany całkowicie czy częściowo.
 
 ## <a name="arguments"></a>Argumenty
 
-`+` &#124; `-`  
-Opcjonalny. Użyj `-delaysign-`, jeśli chcesz użyć w pełni podpisanego zestawu. Użyj `-delaysign+`, jeśli chcesz umieścić klucz publiczny w zestawie i zarezerwować miejsce dla podpisanej wartości skrótu. Wartość domyślna to `-delaysign-`.
+`+`&#124;`-`  
+Element opcjonalny. Użyj `-delaysign-` , jeśli chcesz użyć w pełni podpisanego zestawu. Użyj `-delaysign+` , jeśli chcesz umieścić klucz publiczny w zestawie i zarezerwować miejsce dla podpisanej wartości skrótu. Wartość domyślna to `-delaysign-`.
 
 ## <a name="remarks"></a>Uwagi
 
-Opcja `-delaysign` nie ma żadnego efektu, chyba że zostanie użyta z opcją [-KeyFile](../../../visual-basic/reference/command-line-compiler/keyfile.md) lub [-containerer](../../../visual-basic/reference/command-line-compiler/keycontainer.md).
+Opcja `-delaysign` nie ma żadnego efektu, chyba że zostanie użyta z [-KeyFile](../../../visual-basic/reference/command-line-compiler/keyfile.md) lub [-containerer](../../../visual-basic/reference/command-line-compiler/keycontainer.md).
 
 Po zażądaniu w pełni podpisanego zestawu, kompilator skrótów pliku, który zawiera manifest (metadane zestawu) i podpisuje ten skrót z kluczem prywatnym. Wynikowy podpis cyfrowy jest przechowywany w pliku, który zawiera manifest. Gdy zestaw jest podpisany z opóźnieniem, kompilator nie oblicza i nie przechowuje podpisu, ale rezerwuje miejsce w pliku, aby podpis mógł zostać dodany później.
 
-Na przykład przy użyciu `-delaysign+` deweloper w organizacji może rozpowszechniać niepodpisane wersje testów zestawu, które testerzy mogą zarejestrować w globalnej pamięci podręcznej zestawów i używać. Po zakończeniu pracy z zestawem osoba odpowiedzialna za klucz prywatny organizacji może w pełni podpisać zestaw. Ta compartmentalization chroni klucz prywatny organizacji przed ujawnieniem, jednocześnie pozwalając wszystkim deweloperom na współdziałanie z zestawami.
+Na przykład przy użyciu `-delaysign+`, deweloper w organizacji może rozpowszechniać niepodpisane wersje testów zestawu, które testerzy mogą zarejestrować w globalnej pamięci podręcznej zestawów i używać. Po zakończeniu pracy z zestawem osoba odpowiedzialna za klucz prywatny organizacji może w pełni podpisać zestaw. Ta compartmentalization chroni klucz prywatny organizacji przed ujawnieniem, jednocześnie pozwalając wszystkim deweloperom na współdziałanie z zestawami.
 
 Zobacz [Tworzenie i używanie zestawów o silnych nazwach,](../../../standard/assembly/create-use-strong-named.md) Aby uzyskać więcej informacji na temat podpisywania zestawu.
 
@@ -46,7 +46,7 @@ Zobacz [Tworzenie i używanie zestawów o silnych nazwach,](../../../standard/as
 
 3. Ustaw wartość w polu **Opóźnij tylko znak** .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)

@@ -29,7 +29,7 @@ Wstawia plik. ico w pliku wyjściowym. Ten plik. ico reprezentuje plik wyjściow
 |`filename`|Plik. ico, który ma zostać dodany do pliku wyjściowego. Nazwa pliku należy ująć w cudzysłów (""), jeśli zawiera spację.|  
   
 ## <a name="remarks"></a>Uwagi  
- Plik. ico można utworzyć za pomocą kompilatora zasobów systemu Microsoft Windows (RC). Kompilator zasobów jest wywoływany podczas kompilowania programu Visual C++ ; plik. ico jest tworzony na podstawie pliku. rc. Opcje `-win32icon` i `-win32resource` wykluczają się wzajemnie.  
+ Plik. ico można utworzyć za pomocą kompilatora zasobów systemu Microsoft Windows (RC). Kompilator zasobów jest wywoływany podczas kompilowania programu Visual C++owego; plik. ico jest tworzony na podstawie pliku. rc. Opcje `-win32icon` i `-win32resource` wzajemnie się wykluczają.  
   
  Zobacz [-linkresource — (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) , aby odwołać się do .NET Framework pliku zasobów, lub [-Resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) , aby dołączyć plik zasobów .NET Framework. Aby zaimportować plik. res, zobacz temat [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) .  
   
@@ -38,13 +38,13 @@ Wstawia plik. ico w pliku wyjściowym. Ten plik. ico reprezentuje plik wyjściow
 |1. zaznaczono projekt w **Eksplorator rozwiązań**. W menu **projekt** kliknij polecenie **Właściwości**. <br />2. Kliknij kartę **aplikacja** .<br />3. Zmodyfikuj wartość w polu **ikony** .|  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod kompiluje `In.vb` i dołącza plik ICO, `Rf.ico`.  
+ Poniższy kod kompiluje `In.vb` i dołącza plik. ico, `Rf.ico`.  
   
 ```console
 vbc -win32icon:rf.ico in.vb  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

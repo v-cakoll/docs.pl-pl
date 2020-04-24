@@ -11,9 +11,9 @@ ms.locfileid: "71353142"
 ---
 # <a name="basic-serialization-technology-sample"></a>Przykład technologii serializacji podstawowej
 
-[Pobierz przykład](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)
+[Pobieranie próbki](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)
 
-Ten przykład pokazuje możliwości środowiska uruchomieniowego języka wspólnego do serializacji grafu obiektów w pamięci do strumienia. Ten przykład może używać <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> lub <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> do serializacji. Połączonej listy wypełniany danymi, jest serializacji lub deserializacji z strumienia PLiku lub. W obu przypadkach zostanie wyświetlona lista, aby zobaczyć wyniki. Połączona lista jest typu `LinkedList`, typu zdefiniowanego przez ten przykład.
+Ten przykład pokazuje możliwości środowiska uruchomieniowego języka wspólnego do serializacji grafu obiektów w pamięci do strumienia. Ten przykład może korzystać z <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> lub <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> do serializacji. Połączonej listy wypełniany danymi, jest serializacji lub deserializacji z strumienia PLiku lub. W obu przypadkach zostanie wyświetlona lista, aby zobaczyć wyniki. Połączona lista jest typu `LinkedList`, typu zdefiniowanego przez ten przykład.
 
 Komentarzy w PLikach źródłowych kodu i build.proj uzyskać więcej informacji o serializacji.
 
@@ -72,21 +72,21 @@ Poniższe punktory krótko opisują klasy i technologie używane w tym przykład
 
 - Środowisko wykonawcze serializacji
 
-  - <xref:System.Runtime.Serialization.IFormatter> służy do odwoływania się do <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> lub <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> obiektu.
+  - <xref:System.Runtime.Serialization.IFormatter>Służy do odwoływania się do <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> obiektu lub.
 
-  - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> służy do serializacji połączonej listy do strumienia w formacie binarnym. Binarny program formatujący używa formatu tylko <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> rozumie typu. Jednak dane są zwięzły.
+  - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>Służy do serializacji połączonej listy w strumieniu w formacie binarnym. Binarny program formatujący używa formatu tylko <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> rozumie typu. Jednak dane są zwięzły.
 
-  - <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> służy do serializacji połączonej listy do strumienia w formacie protokołu SOAP. Protokołu SOAP jest to standardowy format.
+  - <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>Służy do serializacji połączonej listy w strumieniu w formacie protokołu SOAP. Protokołu SOAP jest to standardowy format.
 
 - We/Wy strumienia
 
-  - <xref:System.IO.Stream>Służy do serializacji i deserializacji. Typem określonego strumienia użytym w tym przykładzie jest typ <xref:System.IO.FileStream>. Jednak można użyć serializacji z dowolnego typu opracowane na podstawie <xref:System.IO.Stream>.
+  - <xref:System.IO.Stream>Służy do serializacji i deserializacji. Typem określonego strumienia użytym w tym przykładzie jest <xref:System.IO.FileStream> typ. Jednak można użyć serializacji z dowolnego typu opracowane na podstawie <xref:System.IO.Stream>.
 
-  - <xref:System.IO.File> służy do tworzenia obiektów <xref:System.IO.FileStream> do odczytu i tworzenia plików na dysku.
+  - <xref:System.IO.File>Służy do tworzenia <xref:System.IO.FileStream> obiektów do odczytu i tworzenia plików na dysku.
 
-  - <xref:System.IO.FileStream> używany do serializacji i deserializacji połączonych list.
+  - <xref:System.IO.FileStream>Używane do serializacji i deserializacji połączonych list.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.IO>
 - <xref:System.IO.File>

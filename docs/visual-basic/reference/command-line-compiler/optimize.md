@@ -27,14 +27,14 @@ Włącza lub wyłącza optymalizacje kompilatora.
   
 |Termin|Definicja|  
 |---|---|  
-|`+` &#124; `-`|Opcjonalny. Opcja `-optimize-` wyłącza optymalizacje kompilatora. Opcja `-optimize+` umożliwia optymalizacje. Optymalizacje są domyślnie wyłączone.|  
+|`+`&#124;`-`|Element opcjonalny. `-optimize-` Opcja wyłącza optymalizacje kompilatora. `-optimize+` Opcja włącza optymalizacje. Optymalizacje są domyślnie wyłączone.|  
   
 ## <a name="remarks"></a>Uwagi  
- Optymalizacje kompilatora sprawiają, że plik wyjściowy jest mniejszy, szybszy i bardziej wydajny. Jednakże, ponieważ optymalizacje powodują zmianę układu kodu w pliku wyjściowym, `-optimize+` może utrudniać debugowanie.  
+ Optymalizacje kompilatora sprawiają, że plik wyjściowy jest mniejszy, szybszy i bardziej wydajny. Jednakże, ponieważ optymalizacje powodują przemieszczenie kodu w pliku wyjściowym, `-optimize+` może utrudniać debugowanie.  
   
- Wszystkie moduły wygenerowane z `-target:module` dla zestawu muszą używać tych samych ustawień `-optimize` jako zestawu. Aby uzyskać więcej informacji, zobacz [-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md).  
+ Wszystkie moduły wygenerowane `-target:module` dla zestawu muszą używać tych samych `-optimize` ustawień co zestaw. Aby uzyskać więcej informacji, zobacz [-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md).  
   
- Można połączyć opcje `-optimize` i `-debug`.  
+ Można połączyć opcje `-optimize` i `-debug` .  
   
 |Aby ustawić-optymalizować w zintegrowanym środowisku programistycznym programu Visual Studio|  
 |---|  
@@ -47,7 +47,7 @@ Włącza lub wyłącza optymalizacje kompilatora.
 vbc t2.vb -optimize  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-Debug (Visual Basic)](../../../visual-basic/reference/command-line-compiler/debug.md)

@@ -35,7 +35,7 @@ lub
  Jeśli ta opcja zostanie uwzględniona w kompilacji, żaden plik wyjściowy nie zostanie utworzony i nie będzie wykonywana żadna kompilacja.  
   
 > [!NOTE]
-> Opcja `-help` nie jest dostępna w środowisku deweloperskim programu Visual Studio; jest on dostępny tylko w przypadku kompilowania z wiersza polecenia.  
+> `-help` Opcja jest niedostępna w środowisku deweloperskim programu Visual Studio; jest on dostępny tylko w przypadku kompilowania z wiersza polecenia.  
   
 ## <a name="example"></a>Przykład  
  Poniższy kod wyświetla pomoc w wierszu polecenia.  
@@ -44,7 +44,7 @@ lub
 vbc -help  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

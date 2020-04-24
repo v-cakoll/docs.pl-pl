@@ -18,27 +18,27 @@ ms.locfileid: "74329579"
 ---
 # <a name="performing-tasks-with-myapplication-mycomputer-and-myuser-visual-basic"></a>Wykonywanie zadań z My.Application, My.Computer oraz My.User (Visual Basic)
 
-Trzy centralne obiekty `My`, które zapewniają dostęp do informacji i powszechnie używane funkcje są `My.Application` (<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>), `My.Computer` (<xref:Microsoft.VisualBasic.Devices.Computer>) i `My.User` (<xref:Microsoft.VisualBasic.ApplicationServices.User>). Za pomocą tych obiektów można uzyskać dostęp do informacji związanych z bieżącą aplikacją, komputerze, na którym aplikacja jest zainstalowana, lub bieżącego użytkownika aplikacji.  
+Trzy `My` centralne obiekty, które zapewniają dostęp do informacji i powszechnie używane funkcje to `My.Application` (<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>), `My.Computer` (<xref:Microsoft.VisualBasic.Devices.Computer>) i `My.User` (<xref:Microsoft.VisualBasic.ApplicationServices.User>). Za pomocą tych obiektów można uzyskać dostęp do informacji związanych z bieżącą aplikacją, komputerze, na którym aplikacja jest zainstalowana, lub bieżącego użytkownika aplikacji.  
   
 ## <a name="myapplication-mycomputer-and-myuser"></a>My. Application, my. Computer i my. User  
 
- W poniższych przykładach pokazano, jak można pobrać informacje przy użyciu `My`.  
+ W poniższych przykładach pokazano, jak można pobrać informacje `My`za pomocą polecenia.  
   
  [!code-vb[VbVbcnMy#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#1)]  
   
  [!code-vb[VbVbcnMy#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#2)]  
   
- Oprócz pobierania informacji, elementy udostępniane za pomocą tych trzech obiektów umożliwiają również wykonywanie metod związanych z tym obiektem. Na przykład możesz uzyskać dostęp do różnych metod, aby manipulować plikami lub aktualizować rejestr za pomocą `My.Computer`.  
+ Oprócz pobierania informacji, elementy udostępniane za pomocą tych trzech obiektów umożliwiają również wykonywanie metod związanych z tym obiektem. Na przykład możesz uzyskać dostęp do różnych metod, aby manipulować plikami lub aktualizować rejestr za pomocą `My.Computer`programu.  
   
- Operacje we/wy plików są znacznie łatwiejsze i szybsze dzięki `My`, które obejmują różne metody i właściwości służące do manipulowania plikami, katalogami i dyskami. Obiekt <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> umożliwia odczytywanie z dużych plików ze strukturą, które mają pola rozdzielone lub o stałej szerokości. Ten przykład otwiera `reader` `TextFieldParser` i używa go do odczytu z `C:\TestFolder1\test1.txt`.  
+ Operacje we/wy plików są znacznie łatwiejsze i szybsze `My`dzięki programowi, który obejmuje różne metody i właściwości służące do manipulowania plikami, katalogami i dyskami. <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> Obiekt umożliwia odczytywanie z dużych plików ze strukturą, które mają pola rozdzielone lub o stałej szerokości. Ten przykład otwiera `TextFieldParser` `reader` i używa go do odczytu z `C:\TestFolder1\test1.txt`.  
   
  [!code-vb[VbVbalrTextFieldParser#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTextFieldParser/VB/Class1.vb#23)]  
   
- `My.Application` pozwala zmienić kulturę dla aplikacji. Poniższy przykład ilustruje, jak ta metoda może być wywoływana.  
+ `My.Application`pozwala zmienić kulturę dla aplikacji. Poniższy przykład ilustruje, jak ta metoda może być wywoływana.  
   
  [!code-vb[VbVbcnMy#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#3)]  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>
 - <xref:Microsoft.VisualBasic.Devices.Computer>

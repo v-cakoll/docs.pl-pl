@@ -43,10 +43,10 @@ Zawiera listę przykładowych wierszy poleceń, które można modyfikować do w�
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
- \ [kompilator Visual Basic wiersza polecenia](../../../visual-basic/reference/command-line-compiler/index.md)
+[Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md) \
 Zawiera listy opcji kompilatora, zorganizowane w porządku alfabetycznym lub według przeznaczenie.
 
- \ [kompilacji warunkowej](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+[Kompilacja warunkowa](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md) \
 Opisuje sposób kompilowania określonych sekcji kodu.
 
 [Kompilowanie i czyszczenie projektów i rozwiązań w programie Visual Studio](/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio) \

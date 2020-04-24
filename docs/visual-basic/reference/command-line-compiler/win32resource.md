@@ -32,21 +32,21 @@ Wstawia plik zasobów Win32 do pliku wyjściowego.
 ## <a name="remarks"></a>Uwagi  
  Plik zasobów Win32 można utworzyć za pomocą kompilatora zasobów systemu Microsoft Windows (RC).  
   
- Zasób Win32 może zawierać informacje o wersji lub mapie bitowej (ikony), które ułatwiają identyfikację aplikacji w **Eksploratorze plików**. Jeśli nie określisz `-win32resource`, kompilator generuje informacje o wersji na podstawie wersji zestawu. Opcje `-win32resource` i `-win32icon` wykluczają się wzajemnie.  
+ Zasób Win32 może zawierać informacje o wersji lub mapie bitowej (ikony), które ułatwiają identyfikację aplikacji w **Eksploratorze plików**. Jeśli nie określisz `-win32resource`, kompilator generuje informacje o wersji na podstawie wersji zestawu. Opcje `-win32resource` i `-win32icon` wzajemnie się wykluczają.  
   
  Zobacz [-linkresource — (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) , aby odwołać się do .NET Framework pliku zasobów, lub [-Resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) , aby dołączyć plik zasobów .NET Framework.  
   
 > [!NOTE]
-> Opcja `-win32resource` nie jest dostępna w środowisku deweloperskim programu Visual Studio. jest on dostępny tylko w przypadku kompilowania z wiersza polecenia.  
+> `-win32resource` Opcja jest niedostępna w środowisku deweloperskim programu Visual Studio; jest on dostępny tylko w przypadku kompilowania z wiersza polecenia.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod kompiluje `In.vb` i dołącza plik zasobów Win32, `Rf.res`:  
+ Poniższy kod kompiluje `In.vb` i dołącza plik zasobów Win32 `Rf.res`:  
   
 ```console  
 vbc -win32resource:rf.res in.vb  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

@@ -14,15 +14,15 @@ ms.locfileid: "74345544"
 ---
 # <a name="performing-network-operations-visual-basic"></a>Przeprowadzanie operacji sieciowych (Visual Basic)
 
-W poniższych tabelach przedstawiono zadania skojarzone z obiektem. `My.Computer.Network`  
+W poniższej tabeli wymieniono zadania skojarzone z `My.Computer.Network` obiektem.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
 
  [Instrukcje: przekazywanie pliku](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)  
- Pokazuje, jak przekazać plik i zapisać go `My.Computer.Network`w lokalizacji zdalnej za pomocą programu .  
+ Pokazuje, jak przekazać plik i zapisać go w lokalizacji zdalnej przy użyciu programu `My.Computer.Network`.  
   
  [Instrukcje: pobieranie pliku](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)  
- Pokazuje, jak pobrać plik z lokalizacji `My.Computer.Network`zdalnej przy użyciu programu .  
+ Pokazuje, jak pobrać plik z lokalizacji zdalnej przy użyciu programu `My.Computer.Network`.  
   
  [Instrukcje: sprawdzanie stanu połączenia](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-check-connection-status.md)  
  Pokazuje, jak ustalić, czy komputer ma działające połączenie sieciowe.  
@@ -30,7 +30,7 @@ W poniższych tabelach przedstawiono zadania skojarzone z obiektem. `My.Computer
 ## <a name="reference"></a>Dokumentacja  
 
  <xref:Microsoft.VisualBasic.Devices.Network>  
- Wyświetla listę metod, właściwości i zdarzeń do pracy z siecią.  
+ Wyświetla listę metod, właściwości i zdarzeń związanych z pracą z siecią.  
   
  <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A>  
  Opisuje `DownloadFile` metodę.  

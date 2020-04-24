@@ -28,9 +28,9 @@ Zapobiega wyświetlaniu przez kompilator kodu dla błędów i ostrzeżeń związ
 
 ## <a name="remarks"></a>Uwagi
 
-Domyślnie `-quiet` nie jest włączona. Gdy kompilator zgłosi błąd lub ostrzeżenie związane z składnią, wyprowadza również wiersz z kodu źródłowego. W przypadku aplikacji, które analizują dane wyjściowe kompilatora, może być wygodniejszy, aby kompilator wyprowadził tylko tekst diagnostyki.
+Domyślnie program `-quiet` nie działa. Gdy kompilator zgłosi błąd lub ostrzeżenie związane z składnią, wyprowadza również wiersz z kodu źródłowego. W przypadku aplikacji, które analizują dane wyjściowe kompilatora, może być wygodniejszy, aby kompilator wyprowadził tylko tekst diagnostyki.
 
-W poniższym przykładzie `Module1` wyświetla błąd, który zawiera kod źródłowy podczas kompilowania bez `-quiet`.
+W poniższym przykładzie `Module1` generuje błąd, który zawiera kod źródłowy, gdy jest kompilowany bez `-quiet`.
 
 ```vb
 Module Module1
@@ -49,14 +49,14 @@ C:\projects\vb2.vb(3) : error BC30451: 'x' is not declared. It may be inaccessib
         ~
 ```
 
-Kompilacja z `-quiet`, kompilator generuje tylko następujące elementy:
+Skompilowany przy `-quiet`użyciu, kompilator wyprowadza tylko następujące elementy:
 
 ```console
 E:\test\t2.vb(3) : error BC30451: Name 'x' is not declared.
 ```
 
 > [!NOTE]
-> Opcja `-quiet` nie jest dostępna w środowisku deweloperskim programu Visual Studio. jest on dostępny tylko w przypadku kompilowania z wiersza polecenia.
+> `-quiet` Opcja jest niedostępna w środowisku deweloperskim programu Visual Studio; jest on dostępny tylko w przypadku kompilowania z wiersza polecenia.
 
 ## <a name="example"></a>Przykład
 
@@ -66,7 +66,7 @@ Poniższy kod kompiluje `T2.vb` i nie wyświetla kodu dla diagnostyki kompilator
 vbc -quiet t2.vb
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

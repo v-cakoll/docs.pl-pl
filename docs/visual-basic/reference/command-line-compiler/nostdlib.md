@@ -23,22 +23,22 @@ Powoduje, że kompilator nie będzie automatycznie odwoływać się do bibliotek
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Opcja `-nostdlib` usuwa automatyczne odwołanie do zestawu System. dll i uniemożliwia kompilatorowi odczytywanie pliku VBC. rsp. Plik VBC. rsp, który znajduje się w tym samym katalogu co plik VBC. exe, odwołuje się do najczęściej używanych zestawów .NET Framework i importuje przestrzenie nazw `System` i `Microsoft.VisualBasic`.  
+ `-nostdlib` Opcja usuwa automatyczne odwołanie do zestawu System. dll i uniemożliwia kompilatorowi odczytywanie pliku VBC. rsp. Plik VBC. rsp, który znajduje się w tym samym katalogu, co plik VBC. exe, odwołuje się do najczęściej używanych zestawów .NET Framework i `System` importuje `Microsoft.VisualBasic` przestrzenie nazw.  
   
 > [!NOTE]
 > Zestawy mscorlib. dll i Microsoft. VisualBasic. dll są zawsze wywoływane.  
   
 > [!NOTE]
-> Opcja `-nostdlib` nie jest dostępna w środowisku deweloperskim programu Visual Studio; jest on dostępny tylko w przypadku kompilowania z wiersza polecenia.  
+> `-nostdlib` Opcja jest niedostępna w środowisku deweloperskim programu Visual Studio; jest on dostępny tylko w przypadku kompilowania z wiersza polecenia.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod kompiluje `T2.vb` bez odwoływania się do bibliotek standardowych. Aby usunąć obiekt `My`, należy ustawić wartość `_MYTYPE` stałej kompilacji warunkowej na ciąg "Empty".  
+ Poniższy kod kompiluje się `T2.vb` bez odwoływania się do bibliotek standardowych. Aby usunąć `My` obiekt, `_MYTYPE` należy ustawić stałą dla kompilacji warunkowej na ciąg "Empty".  
   
 ```console
 vbc -nostdlib -define:_MYTYPE=\"Empty\" T2.vb  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
 - [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)

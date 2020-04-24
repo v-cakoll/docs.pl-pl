@@ -24,10 +24,10 @@ Pomija wyświetlanie transparentu praw autorskich i komunikatów informacyjnych 
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli określisz `-nologo`, kompilator nie będzie wyświetlał transparentu praw autorskich. Domyślnie `-nologo` nie jest włączona.  
+ Jeśli określisz `-nologo`, kompilator nie wyświetli transparentu praw autorskich. Domyślnie program `-nologo` nie działa.  
   
 > [!NOTE]
-> Opcja `-nologo` nie jest dostępna w środowisku deweloperskim programu Visual Studio; jest on dostępny tylko w przypadku kompilowania z wiersza polecenia.  
+> `-nologo` Opcja jest niedostępna w środowisku deweloperskim programu Visual Studio; jest on dostępny tylko w przypadku kompilowania z wiersza polecenia.  
   
 ## <a name="example"></a>Przykład  
  Poniższy kod kompiluje `T2.vb` i nie wyświetla transparentu praw autorskich.  
@@ -36,7 +36,7 @@ Pomija wyświetlanie transparentu praw autorskich i komunikatów informacyjnych 
 vbc -nologo t2.vb  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

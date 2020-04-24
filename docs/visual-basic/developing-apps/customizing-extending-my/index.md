@@ -1,5 +1,5 @@
 ---
-title: Dostosowywanie projektów i rozszerzanie My
+title: Dostosowywanie projektów i rozszerzanie moich
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My namespace [Visual Basic], customizing
@@ -15,32 +15,32 @@ ms.locfileid: "74330343"
 ---
 # <a name="customizing-projects-and-extending-my-with-visual-basic"></a>Dostosowywanie projektów i rozszerzanie My za pomocą Visual Basic
 
-Szablony projektów można dostosować w celu zapewnienia dodatkowych obiektów `My`. Ułatwia to innym deweloperom znajdowanie obiektów i korzystanie z nich.
+Szablony projektów można dostosować w celu zapewnienia dodatkowych `My` obiektów. Ułatwia to innym deweloperom znajdowanie obiektów i korzystanie z nich.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-- [Rozszerzanie przestrzeni nazw my w Visual Basic](extending-the-my-namespace.md)  
- Opisuje sposób dodawania niestandardowych elementów członkowskich i wartości do przestrzeni nazw `My` w Visual Basic.
+- [Rozszerzanie przestrzeni nazw My w Visual Basic](extending-the-my-namespace.md)  
+ Opisuje sposób dodawania niestandardowych elementów członkowskich i wartości do `My` przestrzeni nazw w Visual Basic.
 - [Pakowanie i wdrażanie niestandardowych rozszerzeń My](packaging-and-deploying-custom-my-extensions.md)  
- Opisuje sposób publikowania rozszerzeń niestandardowej przestrzeni nazw `My` przy użyciu szablonów programu Visual Studio.
+ Opisuje sposób publikowania rozszerzeń niestandardowych `My` przestrzeni nazw za pomocą szablonów programu Visual Studio.
 - [Rozszerzanie modelu aplikacji Visual Basic](extending-the-visual-basic-application-model.md)  
- Opisuje sposób określania własnych rozszerzeń modelu aplikacji przez zastępowanie elementów członkowskich klasy <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>.
+ Opisuje sposób określania własnych rozszerzeń modelu aplikacji przez zastępowanie elementów członkowskich <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> klasy.
 - [Dostosowywanie, które obiekty są dostępne w My](customizing-which-objects-are-available-in-my.md)  
- Opisuje, w jaki sposób kontrolować, które obiekty `My` są włączone, ustawiając stałą MYTYPE w projekcie \_.
+ Opisuje, jak kontrolować, `My` które obiekty są włączone przez ustawienie stałej kompilacji \_warunkowej MYTYPE projektu.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
 - [Rozwój za pomocą My](../development-with-my/index.md)  
- Opisuje, które obiekty `My` są domyślnie dostępne w różnych typach projektów.
+ Opisuje, `My` które obiekty są domyślnie dostępne w różnych typach projektów.
 - [Omówienie modelu aplikacji Visual Basic](../development-with-my/overview-of-the-visual-basic-application-model.md)  
  Opisuje model Visual Basic na potrzeby kontrolowania zachowania aplikacji Windows Forms.
 - [Jak My zależy od typu projektu](../development-with-my/how-my-depends-on-project-type.md)  
- Opisuje, które obiekty `My` są domyślnie dostępne w różnych typach projektów.
+ Opisuje, `My` które obiekty są domyślnie dostępne w różnych typach projektów.
 - [Kompilacja warunkowa](../../programming-guide/program-structure/conditional-compilation.md)  
  W tym artykule omówiono sposób użycia kompilacji warunkowej przez kompilator w celu wybrania określonych sekcji kodu do kompilowania i wykluczania innych sekcji.
 - <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
- Opisuje obiekt `My`, który dostarcza właściwości, metody i zdarzenia związane z bieżącą aplikacją.
+ Opisuje `My` obiekt, który dostarcza właściwości, metody i zdarzenia związane z bieżącą aplikacją.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Tworzenie aplikacji za pomocą Visual Basic](../index.md)

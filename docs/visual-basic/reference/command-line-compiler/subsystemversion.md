@@ -32,7 +32,7 @@ Określa minimalną wersję podsystemu, w którym można uruchomić wygenerowany
 
 Minimalna wymagana wersja podsystemu, wyrażona w notacji kropkowej dla wersji głównych i pomocniczych. Można na przykład określić, że aplikacja nie może działać w systemie operacyjnym starszym niż Windows 7, jeśli wartość tej opcji zostanie ustawiona na 6,01, jak w dalszej części tego tematu. Należy określić wartości dla `major` i `minor` jako liczby całkowite.
 
-Zera wiodące w wersji `minor` nie zmieniają wersji, ale końcowe zera to. Na przykład 6,1 i 6,01 odnoszą się do tej samej wersji, ale 6,10 odwołuje się do innej wersji. Zalecamy wyrażenie wersji pomocniczej jako dwóch cyfr, aby uniknąć pomyłek.
+Zera wiodące w `minor` wersji nie zmieniają wersji, ale końcowe zera to. Na przykład 6,1 i 6,01 odnoszą się do tej samej wersji, ale 6,10 odwołuje się do innej wersji. Zalecamy wyrażenie wersji pomocniczej jako dwóch cyfr, aby uniknąć pomyłek.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -40,13 +40,13 @@ W poniższej tabeli wymieniono typowe wersje podsystemów systemu Windows.
 
 |Wersja systemu Windows|Wersja podsystemu|
 |---------------------|-----------------------|
-|Windows 2000|5.00|
-|Windows XP|5.01|
-|Windows Server 2003|5.02|
-|Windows Vista|6.00|
-|Windows 7|6.01|
-|Windows Server 2008|6.01|
-|Windows 8|6.02|
+|Windows 2000|5,00|
+|Windows XP|5,01|
+|Windows Server 2003|5,02|
+|Windows Vista|6,00|
+|Windows 7|6,01|
+|Windows Server 2008|6,01|
+|Windows 8|6,02|
 
 ## <a name="default-values"></a>Wartości domyślne
 
@@ -66,9 +66,9 @@ Wartość domyślna opcji kompilatora **-subsystemversion** zależy od warunków
 
 ## <a name="setting-this-option"></a>Ustawienie tej opcji
 
-Aby ustawić opcję kompilatora **-subsystemversion** w programie Visual Studio, należy otworzyć plik. vbproj i określić wartość właściwości `SubsystemVersion` w pliku XML programu MSBuild. Nie można ustawić tej opcji w środowisku IDE programu Visual Studio. Aby uzyskać więcej informacji, zobacz "wartości domyślne" wcześniej w tym temacie lub [wspólnych właściwościach projektu MSBuild](/visualstudio/msbuild/common-msbuild-project-properties).
+Aby ustawić opcję kompilatora **-subsystemversion** w programie Visual Studio, należy otworzyć plik. vbproj i określić wartość `SubsystemVersion` właściwości w kodzie XML programu MSBuild. Nie można ustawić tej opcji w środowisku IDE programu Visual Studio. Aby uzyskać więcej informacji, zobacz "wartości domyślne" wcześniej w tym temacie lub [wspólnych właściwościach projektu MSBuild](/visualstudio/msbuild/common-msbuild-project-properties).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 

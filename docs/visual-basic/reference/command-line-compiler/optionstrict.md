@@ -28,17 +28,17 @@ Wymusza ścisłą semantykę typu w celu ograniczenia niejawnych konwersji typó
 
 ## <a name="arguments"></a>Argumenty
 
-`+` &#124; `-`  
-Opcjonalny. Opcja `-optionstrict+` ogranicza niejawną konwersję typu. Wartość domyślna dla tej opcji to `-optionstrict-`. Opcja `-optionstrict+` jest taka sama jak `-optionstrict`. Można użyć obu typów jako nieograniczającej semantyki typu.
+`+`&#124;`-`  
+Element opcjonalny. `-optionstrict+` Opcja ogranicza niejawną konwersję typu. Wartość domyślna dla tej opcji to `-optionstrict-`. `-optionstrict+` Opcja jest taka sama jak `-optionstrict`. Można użyć obu typów jako nieograniczającej semantyki typu.
 
 `custom`  
 Wymagany. Ostrzegaj w przypadku nieprzestrzegania ścisłej semantyki języka.
 
 ## <a name="remarks"></a>Uwagi
 
-Gdy `-optionstrict+`, tylko rozszerzone konwersje typów mogą być wykonywane niejawnie. Niejawne konwersje typów, takie jak przypisanie obiektu typu `Decimal` do obiektu typu Integer, są raportowane jako błędy.
+Gdy `-optionstrict+` to nastąpi, można niejawnie wprowadzać tylko konwersje typów rozszerzających. Niejawne konwersje typów, takie jak przypisanie obiektu `Decimal` typu do obiektu typu Integer, są raportowane jako błędy.
 
-Aby wygenerować ostrzeżenia dla niejawnych konwersji typów zawężających, użyj `-optionstrict:custom`. Użyj `-nowarn:numberlist` do ignorowania określonych ostrzeżeń i `-warnaserror:numberlist` do traktowania określonych ostrzeżeń jako błędów.
+Aby wygenerować ostrzeżenia dla niejawnych konwersji typów zawężania, użyj `-optionstrict:custom`. Służy `-nowarn:numberlist` do ignorowania określonych ostrzeżeń `-warnaserror:numberlist` i traktowania określonych ostrzeżeń jako błędów.
 
 ### <a name="to-set--optionstrict-in-the-visual-studio-ide"></a>Aby ustawić-optionstrict w środowisku IDE programu Visual Studio
 
@@ -60,7 +60,7 @@ Poniższy kod kompiluje `Test.vb` przy użyciu semantyki typu Strict.
 vbc -optionstrict+ test.vb
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
@@ -69,5 +69,5 @@ vbc -optionstrict+ test.vb
 - [-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md)
 - [-warnaserror — (Visual Basic)](../../../visual-basic/reference/command-line-compiler/warnaserror.md)
 - [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Option Strict, instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Option Strict — Instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [Domyślne ustawienia programu Visual Basic, Projekty, Opcje — okno dialogowe](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

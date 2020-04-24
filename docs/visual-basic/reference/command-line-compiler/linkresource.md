@@ -33,33 +33,33 @@ lub
   
 ## <a name="arguments"></a>Argumenty  
  `filename`  
- Wymagana. Plik zasobu, który ma zostać połączony z zestawem. Jeśli nazwa pliku zawiera spację, należy ująć ją w cudzysłów ("").  
+ Wymagany. Plik zasobu, który ma zostać połączony z zestawem. Jeśli nazwa pliku zawiera spację, należy ująć ją w cudzysłów ("").  
   
  `identifier`  
- Opcjonalna. Nazwa logiczna zasobu. Nazwa, która jest używana do ładowania zasobu. Wartość domyślna to nazwa pliku. Opcjonalnie można określić, czy plik jest publiczny, czy prywatny w manifeście zestawu, na przykład: `-linkres:filename.res,myname.res,public`. Domyślnie `filename` jest publiczna w zestawie.  
+ Element opcjonalny. Nazwa logiczna zasobu. Nazwa, która jest używana do ładowania zasobu. Wartość domyślna to nazwa pliku. Opcjonalnie można określić, czy plik jest publiczny, czy prywatny w manifeście zestawu, na przykład: `-linkres:filename.res,myname.res,public`. Domyślnie `filename` jest on publiczny w zestawie.  
   
 ## <a name="remarks"></a>Uwagi  
- Opcja `-linkresource` nie osadza pliku zasobów w pliku wyjściowym; Użyj opcji `-resource`, aby to zrobić.  
+ `-linkresource` Opcja nie osadza pliku zasobów w pliku wyjściowym; Użyj opcji `-resource` , aby to zrobić.  
   
- Opcja `-linkresource` wymaga jednej z opcji `-target` innych niż `-target:module`.  
+ `-linkresource` Opcja wymaga jednej z `-target` opcji innych niż `-target:module`.  
   
- Jeśli `filename` to .NET Framework utworzony plik zasobów, na przykład przez [Resgen. exe (Generator plików zasobów)](../../../framework/tools/resgen-exe-resource-file-generator.md) lub w środowisku deweloperskim, dostęp do niego można uzyskać za pomocą elementów członkowskich w <xref:System.Resources> przestrzeni nazw. (Aby uzyskać więcej informacji, zobacz <xref:System.Resources.ResourceManager>.) Aby uzyskać dostęp do wszystkich innych zasobów w czasie wykonywania, należy użyć metod, które zaczynają się od `GetManifestResource` w klasie <xref:System.Reflection.Assembly>.  
+ Jeśli `filename` jest .NET Framework utworzony plik zasobów, na przykład przez [Resgen. exe (Generator plików zasobów)](../../../framework/tools/resgen-exe-resource-file-generator.md) lub w środowisku deweloperskim, dostęp do niego można uzyskać za pomocą elementów członkowskich w <xref:System.Resources> przestrzeni nazw. (Aby uzyskać więcej informacji, <xref:System.Resources.ResourceManager>Zobacz.) Aby uzyskać dostęp do wszystkich innych zasobów w czasie wykonywania, należy użyć metod, `GetManifestResource` które zaczynają się od <xref:System.Reflection.Assembly> klasy.  
   
  Nazwa pliku może być dowolnym formatem pliku. Można na przykład utworzyć natywną bibliotekę DLL zestawu, tak aby można ją było zainstalować w globalnej pamięci podręcznej zestawów i uzyskać do niej dostęp z kodu zarządzanego w zestawie.  
   
- Krótka forma `-linkresource` jest `-linkres`.  
+ Krótka forma `-linkresource` to `-linkres`.  
   
 > [!NOTE]
-> Opcja `-linkresource` nie jest dostępna w środowisku deweloperskim programu Visual Studio; jest on dostępny tylko w przypadku kompilowania z wiersza polecenia.  
+> Ta `-linkresource` opcja jest niedostępna w środowisku programistycznym programu Visual Studio; jest on dostępny tylko w przypadku kompilowania z wiersza polecenia.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod kompiluje `in.vb` i linki do `rf.resource`pliku zasobów.  
+ Poniższy kod kompiluje `in.vb` i łączy się z plikiem `rf.resource`zasobów.  
   
 ```console  
 vbc -linkresource:rf.resource in.vb  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)

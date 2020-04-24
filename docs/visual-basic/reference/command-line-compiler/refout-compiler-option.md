@@ -29,17 +29,17 @@ Opcja **-opcji refout** określa ścieżkę pliku, w którym zestaw odniesienia 
 ## <a name="arguments"></a>Argumenty
 
 `filepath`  
-Ścieżka i nazwa pliku zestawu odwołania. Zwykle powinien znajdować się w podfolderze podstawowego zestawu. Zalecaną konwencją (używaną przez program MSBuild) jest umieszczenie zestawu odwołania w podfolderze "ref/" względem podstawowego zestawu. Wszystkie foldery w `filepath` muszą istnieć; Kompilator nie tworzy ich.
+Ścieżka i nazwa pliku zestawu odwołania. Zwykle powinien znajdować się w podfolderze podstawowego zestawu. Zalecaną konwencją (używaną przez program MSBuild) jest umieszczenie zestawu odwołania w podfolderze "ref/" względem podstawowego zestawu. Wszystkie foldery w `filepath` programie muszą istnieć; Kompilator nie tworzy ich.
 
 ## <a name="remarks"></a>Uwagi
 
-Visual Basic obsługuje przełącznik `-refout`, zaczynając od wersji 15,3.
+Visual Basic obsługuje `-refout` przełącznik zaczynający się od wersji 15,3.
 
 Zestawy referencyjne są specjalnym typem zestawu, który zawiera tylko minimalną ilość metadanych wymaganą do reprezentowania publicznej powierzchni interfejsu API biblioteki. Obejmują one deklaracje dla wszystkich elementów członkowskich, które są istotne w przypadku odwoływania się do zestawu w narzędziach kompilacji, ale wyklucza wszystkie implementacje składowych i deklaracje prywatnych członków, którzy nie mają zauważalnego wpływu na ich kontrakt interfejsu API. Aby uzyskać więcej informacji, zobacz [zestawy referencyjne](../../../standard/assembly/reference-assemblies.md) w przewodniku .NET.
 
-Opcje `-refout` i [`-refonly`](refonly-compiler-option.md) wykluczają się wzajemnie.
+Opcje `-refout` i [`-refonly`](refonly-compiler-option.md) wzajemnie się wykluczają.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [-refonly](refonly-compiler-option.md)
 - [Kompilator wiersza polecenia Visual Basic](index.md)

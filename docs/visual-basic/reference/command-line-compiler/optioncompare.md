@@ -28,7 +28,7 @@ Określa sposób, w jaki są wykonywane porównania ciągów.
 
 ## <a name="remarks"></a>Uwagi
 
-Można określić `-optioncompare` w jednej z dwóch form: `-optioncompare:binary`, aby użyć porównań ciągów binarnych i `-optioncompare:text` do użycia porównania ciągów tekstowych. Domyślnie kompilator używa `-optioncompare:binary`.
+Możesz określić `-optioncompare` jedną z dwóch form: `-optioncompare:binary` , aby użyć porównań ciągów binarnych i `-optioncompare:text` użyć porównania ciągów tekstowych. Domyślnie kompilator używa `-optioncompare:binary`programu.
 
 W systemie Microsoft Windows bieżąca strona kodowa Określa binarny porządek sortowania. Typowa binarna kolejność sortowania jest następująca:
 
@@ -58,7 +58,7 @@ Poniższy kod kompiluje `ProjFile.vb` i używa porównywania ciągów binarnych.
 vbc -optioncompare:binary projFile.vb
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)

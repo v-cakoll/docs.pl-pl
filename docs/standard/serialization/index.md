@@ -28,7 +28,7 @@ Platforma .NET oferuje następujące technologie serializacji:
   
 - [Serializacja kodu JSON](system-text-json-overview.md) wykonuje serializacji tylko właściwości publicznych i nie zachowuje wierności typów. JSON to otwarty standard, który jest atrakcyjnym wyborem w przypadku udostępniania danych w sieci Web.
 
-## <a name="reference"></a>Tematy pomocy
+## <a name="reference"></a>Dokumentacja
 
 <xref:System.Runtime.Serialization>  
 Zawiera klasy, które mogą być używane do serializacji i deserializacji obiektów.

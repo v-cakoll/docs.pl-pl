@@ -1,5 +1,5 @@
 ---
-title: 'Porady: tworzenie klucza rejestru i określanie jego wartości'
+title: 'Instrukcje: tworzenie klucza rejestru i określanie jego wartości'
 ms.date: 07/20/2015
 f1_keywords:
 - RegistryKey.CreateSubKey
@@ -20,59 +20,59 @@ ms.locfileid: "74349200"
 ---
 # <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>Porady: tworzenie klucza rejestru i określanie jego wartości w Visual Basic
 
-Metoda `CreateSubKey` `My.Computer.Registry` obiektu może służyć do tworzenia klucza rejestru.
+`CreateSubKey` Metoda `My.Computer.Registry` obiektu może służyć do tworzenia klucza rejestru.
 
 ## <a name="procedure"></a>Procedura
 
 ### <a name="to-create-a-registry-key"></a>Aby utworzyć klucz rejestru
 
-- Użyj `CreateSubKey` metody, określając, który gałąź umieścić klucz pod, jak również nazwę klucza. W `Subkey` przypadku przypadku przypadku nie jest rozróżniana wielkość liter. W tym przykładzie `MyTestKey` tworzy klucz rejestru w obszarze HKEY_CURRENT_USER.
+- Użyj `CreateSubKey` metody, określając gałąź, w której ma zostać umieszczony klucz, a także nazwę klucza. W parametrze `Subkey` nie jest rozróżniana wielkość liter. W tym przykładzie klucz `MyTestKey` rejestru jest tworzony w obszarze HKEY_CURRENT_USER.
 
     [!code-vb[VbResourceTasks#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#17)]
 
 ### <a name="to-create-a-registry-key-and-set-a-value-in-it"></a>Aby utworzyć klucz rejestru i ustawić w nim wartość
 
-1. Użyj `CreateSubkey` metody, określając, który gałąź umieścić klucz pod, jak również nazwę klucza. W tym przykładzie `MyTestKey` tworzy klucz rejestru w obszarze HKEY_CURRENT_USER.
+1. Użyj `CreateSubkey` metody, określając gałąź, w której ma zostać umieszczony klucz, a także nazwę klucza. W tym przykładzie klucz `MyTestKey` rejestru jest tworzony w obszarze HKEY_CURRENT_USER.
 
     [!code-vb[VbResourceTasks#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#17)]
 
-2. Ustaw wartość za `SetValue` pomocą metody. W tym przykładzie ustawia wartość ciągu. "MyTestKeyValue" do "Jest to wartość testowa".
+2. Ustaw wartość za pomocą `SetValue` metody. Ten przykład ustawia wartość ciągu. "MyTestKeyValue" do "jest to wartość testowa".
 
     [!code-vb[VbResourceTasks#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#14)]
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie `MyTestKey` utworzy klucz rejestru w obszarze `MyTestKeyValue` `This is a test value`HKEY_CURRENT_USER a następnie ustawi wartość ciągu na .
+W tym przykładzie klucz `MyTestKey` rejestru jest tworzony w obszarze HKEY_CURRENT_USER a następnie ustawia wartość `MyTestKeyValue` ciągu `This is a test value`na.
 
 [!code-vb[VbResourceTasks#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#15)]
 
 ## <a name="robust-programming"></a>Niezawodne programowanie
 
-Sprawdź strukturę rejestru, aby znaleźć odpowiednią lokalizację dla klucza. Na przykład można otworzyć klucz HKEY_CURRENT_USER\Oprogramowanie bieżącego użytkownika i utworzyć klucz o nazwie firmy. Następnie dodaj wartości rejestru do klucza firmy.
+Sprawdź strukturę rejestru, aby znaleźć odpowiednią lokalizację klucza. Na przykład możesz chcieć otworzyć HKEY_CURRENT_USER klucz \Software bieżącego użytkownika i utworzyć klucz z nazwą swojej firmy. Następnie Dodaj wartości rejestru do klucza firmy.
 
-Podczas odczytywania rejestru z aplikacji sieci Web bieżący użytkownik zależy od uwierzytelniania i personifikacji zaimplementowanych w aplikacji sieci Web.
+Podczas odczytywania rejestru z aplikacji sieci Web bieżący użytkownik zależy od uwierzytelniania i personifikacji zaimplementowanego w aplikacji sieci Web.
 
-Bezpieczniejsze jest zapisywanie danych w<xref:Microsoft.Win32.Registry.CurrentUser>folderze użytkownika ( )<xref:Microsoft.Win32.Registry.LocalMachine>zamiast do komputera lokalnego ( ).
+Bardziej bezpieczne jest zapisanie danych do folderu użytkownika (<xref:Microsoft.Win32.Registry.CurrentUser>), a nie na komputerze lokalnym (<xref:Microsoft.Win32.Registry.LocalMachine>).
 
-Podczas tworzenia wartości rejestru, należy zdecydować, co zrobić, jeśli ta wartość już istnieje. Inny proces, być może złośliwy, może już stworzył wartość i mieć do niej dostęp. Po umieszczeniu danych w wartości rejestru dane są dostępne dla innego procesu. Aby temu zapobiec, <xref:Microsoft.Win32.RegistryKey.GetValue%2A> użyj tej metody. `Nothing` Zwraca, jeśli klucz jeszcze nie istnieje.
+Podczas tworzenia wartości rejestru należy zdecydować, co należy zrobić, jeśli ta wartość już istnieje. Inny proces, prawdopodobnie złośliwy, mógł już utworzyć wartość i uzyskać do niej dostęp. Po umieszczeniu danych w wartości rejestru, dane są dostępne dla drugiego procesu. Aby tego uniknąć, należy użyć <xref:Microsoft.Win32.RegistryKey.GetValue%2A> metody. Zwraca `Nothing` , jeśli klucz jeszcze nie istnieje.
 
-Przechowywanie wpisów tajnych, takich jak hasła, w rejestrze jako zwykłego tekstu, nie jest bezpieczne, nawet jeśli klucz rejestru jest chroniony listami kontroli dostępu (listami kontroli dostępu).
+Nie jest bezpieczne przechowywanie wpisów tajnych, takich jak hasła, w rejestrze w postaci zwykłego tekstu, nawet jeśli klucz rejestru jest chroniony przez listy ACL (Access Control List).
 
 Następujące warunki mogą spowodować wyjątek:
 
-- Nazwa klucza jest `Nothing` <xref:System.ArgumentNullException>( ).
+- Nazwa klucza to `Nothing` (<xref:System.ArgumentNullException>).
 
-- Użytkownik nie ma uprawnień do tworzenia<xref:System.Security.SecurityException>kluczy rejestru ( ).
+- Użytkownik nie ma uprawnień do tworzenia kluczy rejestru (<xref:System.Security.SecurityException>).
 
-- Nazwa klucza przekracza limit 255<xref:System.ArgumentException>znaków ( ).
+- Nazwa klucza przekracza limit 255 znaków (<xref:System.ArgumentException>).
 
-- Klucz jest zamknięty<xref:System.IO.IOException>( ).
+- Klucz jest zamknięty (<xref:System.IO.IOException>).
 
-- Klucz rejestru jest tylko<xref:System.UnauthorizedAccessException>do odczytu ( ).
+- Klucz rejestru jest tylko do odczytu (<xref:System.UnauthorizedAccessException>).
 
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework
 
-Aby uruchomić ten proces, zestaw wymaga poziomu <xref:System.Security.Permissions.RegistryPermission> uprawnień przyznanego przez klasę. Jeśli używasz w kontekście częściowego zaufania, proces może zgłosić wyjątek z powodu niewystarczających uprawnień. Podobnie użytkownik musi mieć poprawne listy ACL do tworzenia lub zapisywania do ustawień. Na przykład aplikacja lokalna, która ma uprawnienie zabezpieczeń dostępu do kodu, może nie mieć uprawnień systemu operacyjnego. Aby uzyskać więcej informacji, zobacz [Podstawy zabezpieczeń dostępu do kodu](../../../../framework/misc/code-access-security-basics.md).
+Aby uruchomić ten proces, zestaw wymaga poziomu uprawnień przyznany przez <xref:System.Security.Permissions.RegistryPermission> klasę. Jeśli używasz w kontekście częściowego zaufania, proces może zgłosić wyjątek z powodu niewystarczających uprawnień. Analogicznie, użytkownik musi mieć poprawne listy ACL do tworzenia lub zapisywania w ustawieniach. Na przykład aplikacja lokalna, która ma uprawnienie zabezpieczeń dostępu kodu, może nie mieć uprawnień systemu operacyjnego. Aby uzyskać więcej informacji, zobacz podstawowe informacje o [zabezpieczeniach dostępu kodu](../../../../framework/misc/code-access-security-basics.md).
 
 ## <a name="see-also"></a>Zobacz też
 

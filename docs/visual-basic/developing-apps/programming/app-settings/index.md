@@ -14,23 +14,23 @@ ms.locfileid: "74353244"
 ---
 # <a name="accessing-application-settings-visual-basic"></a>Uzyskiwanie dostępu do ustawień aplikacji (Visual Basic)
 
-Ta sekcja zawiera tematy `My.Settings` opisujące obiekt i zadania, które umożliwia wykonanie.  
+Ta sekcja zawiera tematy opisujące `My.Settings` obiekt i zadania, które można wykonać.  
   
 ## <a name="mysettings"></a>My.Settings  
 
  Właściwości `My.Settings` obiektu zapewniają dostęp do ustawień aplikacji. Aby dodać lub usunąć ustawienia, użyj okienka **Ustawienia** **projektanta projektu**.  
   
- Metody `My.Settings` obiektu umożliwiają zapisanie bieżących ustawień użytkownika lub przywrócenie ustawień użytkownika do ostatnio zapisanych wartości.  
+ Metody `My.Settings` obiektu umożliwiają zapisanie bieżących ustawień użytkownika lub przywrócenie ustawień użytkownika do ostatnich zapisanych wartości.  
   
 ## <a name="tasks"></a>Zadania  
 
- W poniższej tabeli wymieniono przykłady przedstawiające sposób uzyskiwania dostępu do formularzy aplikacji.  
+ W poniższej tabeli przedstawiono przykłady pokazujące, jak uzyskać dostęp do formularzy aplikacji.  
   
 |Do|Zobacz|  
 |--------|---------|  
 |Aktualizowanie wartości ustawienia użytkownika|[Porady: zmienianie ustawień użytkownika w Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
 |Wyświetlanie ustawień aplikacji i użytkownika w siatce właściwości|[Porady: tworzenie siatek właściwości dla ustawień użytkownika w Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
-|Zapisywanie zaktualizowanych wartości ustawień użytkownika|[Porady: utrwalanie ustawień użytkownika w Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
+|Zapisz zaktualizowane wartości ustawień użytkownika|[Porady: utrwalanie ustawień użytkownika w Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
 |Określanie wartości ustawień użytkownika|[Porady: odczytywanie ustawień aplikacji w Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
   
 ## <a name="see-also"></a>Zobacz też

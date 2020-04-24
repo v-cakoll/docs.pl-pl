@@ -23,14 +23,14 @@ Wyświetla dane wyjściowe kompilatora przy użyciu kodowania UTF-8.
 ```  
   
 ## <a name="arguments"></a>Argumenty  
- `+` &#124; `-`  
- Opcjonalna. Wartość domyślna dla tej opcji to `-utf8output-`, co oznacza, że wyjście kompilatora nie używa kodowania UTF-8. Określanie `-utf8output` jest taka sama jak określanie `-utf8output+`.  
+ `+`&#124;`-`  
+ Element opcjonalny. Wartość domyślna dla tej opcji to `-utf8output-`, co oznacza, że wyjście kompilatora nie używa kodowania UTF-8. Określanie `-utf8output` jest takie samo jak określanie `-utf8output+`.  
   
 ## <a name="remarks"></a>Uwagi  
  W niektórych konfiguracjach międzynarodowych dane wyjściowe kompilatora nie mogą być prawidłowo wyświetlane w konsoli programu. W takich sytuacjach należy używać `-utf8output` i przekierować dane wyjściowe kompilatora do pliku.  
   
 > [!NOTE]
-> Opcja `-utf8output` nie jest dostępna w środowisku deweloperskim programu Visual Studio; jest on dostępny tylko w przypadku kompilowania z wiersza polecenia.  
+> `-utf8output` Opcja jest niedostępna w środowisku deweloperskim programu Visual Studio; jest on dostępny tylko w przypadku kompilowania z wiersza polecenia.  
   
 ## <a name="example"></a>Przykład  
  Poniższy kod kompiluje `In.vb` i kieruje kompilator do wyświetlania danych wyjściowych przy użyciu kodowania UTF-8.  
@@ -39,7 +39,7 @@ Wyświetla dane wyjściowe kompilatora przy użyciu kodowania UTF-8.
 vbc -utf8output in.vb  
 ```  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

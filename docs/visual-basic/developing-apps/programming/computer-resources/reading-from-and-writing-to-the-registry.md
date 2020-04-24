@@ -15,31 +15,31 @@ ms.locfileid: "74349762"
 ---
 # <a name="reading-from-and-writing-to-the-registry-visual-basic"></a>Odczytywanie z oraz zapisywanie do rejestru (Visual Basic)
 
-W tym temacie opisano zadania i tematy koncepcyjne, które są skojarzone z rejestrem.  
+W tym temacie opisano tematy dotyczące zadań i pojęć, które są skojarzone z rejestrem.  
   
- Podczas programowania w języku Visual Basic, można wybrać dostęp do rejestru za pomocą funkcji dostarczonych przez visual basic lub klas rejestru .NET Framework. Rejestr zawiera informacje z systemu operacyjnego, a także informacje z aplikacji hostowanych na komputerze. Praca z rejestrem może naruszyć bezpieczeństwo, umożliwiając nieodpowiedni dostęp do zasobów systemowych lub chronionych informacji.  
+ Podczas programowania w Visual Basic można wybrać dostęp do rejestru za pomocą funkcji udostępnianych przez Visual Basic lub klasy rejestru .NET Framework. Rejestr zawiera informacje z systemu operacyjnego oraz informacje z aplikacji hostowanych na komputerze. Praca z rejestrem może naruszyć bezpieczeństwo przez umożliwienie nieodpowiedniego dostępu do zasobów systemowych lub chronionych informacji.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
 
- [Porady: tworzenie klucza rejestru i określanie jego wartości](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-create-a-registry-key-and-set-its-value.md)  
- W tym artykule `SetValue` opisano `My.Computer.Registry` sposób używania `CreateSubKey` i metod obiektu do utworzenia klucza rejestru i ustawienia jego wartości.  
+ [Instrukcje: tworzenie klucza rejestru i określanie jego wartości](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-create-a-registry-key-and-set-its-value.md)  
+ Opisuje sposób użycia metod `CreateSubKey` i `SetValue` `My.Computer.Registry` obiektu do utworzenia klucza rejestru i ustawienia jego wartości.  
   
  [Instrukcje: odczytywanie wartości z klucza rejestru](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-read-a-value-from-a-registry-key.md)  
- W tym artykule opisano sposób używania `GetValue` metody `My.Computer.Registry` obiektu do odczytu wartości z klucza rejestru.  
+ Opisuje sposób użycia `GetValue` metody `My.Computer.Registry` obiektu do odczytania wartości z klucza rejestru.  
   
  [Instrukcje: usuwanie klucza rejestru](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-delete-a-registry-key.md)  
- W tym artykule opisano, jak użyć `DeleteSubKey` metody `My.Computer.Registry.CurrentUser` właściwości, aby usunąć klucz rejestru.  
+ Opisuje sposób użycia `DeleteSubKey` metody `My.Computer.Registry.CurrentUser` właściwości w celu usunięcia klucza rejestru.  
   
- [Odczytywanie z oraz zapisywanie do rejestru za pomocą przestrzeni nazw Microsoft.Win32](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace.md)  
- W tym artykule opisano sposób korzystania `Registry` z i `RegistryKey` klasy programu .NET Framework, aby uzyskać dostęp do rejestru.  
+ [Odczytywanie z rejestru i zapisywanie w nim za pomocą przestrzeni nazw Microsoft.Win32](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace.md)  
+ Opisuje sposób używania klas `Registry` i `RegistryKey` .NET Framework, aby uzyskać dostęp do rejestru.  
   
  [Bezpieczeństwo i rejestr](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)  
- W tym artykule omówiono kwestie zabezpieczeń dotyczące rejestru.  
+ Omawia problemy z zabezpieczeniami związane z rejestrem.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
 
  <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
- Wyświetla i wyjaśnia `My.Computer.Registry` członków obiektu.  
+ Wyświetla listę i objaśnia elementy członkowskie `My.Computer.Registry` obiektu.  
   
  <xref:Microsoft.Win32.Registry>  
- Przedstawia przegląd `Registry` klasy, wraz z łączami do poszczególnych kluczy i członków.
+ Przedstawia przegląd `Registry` klasy wraz z łączami do poszczególnych kluczy i członków.

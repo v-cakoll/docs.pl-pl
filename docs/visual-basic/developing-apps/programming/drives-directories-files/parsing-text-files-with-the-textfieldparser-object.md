@@ -15,25 +15,25 @@ ms.locfileid: "74333845"
 ---
 # <a name="parsing-text-files-with-the-textfieldparser-object-visual-basic"></a>Analizowanie plików tekstowych za pomocą obiektu TextFieldParser (Visual Basic)
 
-Obiekt `TextFieldParser` umożliwia analizowanie i przetwarzanie bardzo dużych plików, które są skonstruowane jako kolumny o rozdzielanej szerokości tekstu, takie jak pliki dziennika lub informacje o starszej bazie danych. Analizowanie pliku tekstowego `TextFieldParser` z jest podobny do iteracji nad plikiem tekstowym, podczas gdy metoda analizy wyodrębnić pola tekstu jest podobna do metod manipulowania ciągami używanych do tokenizacji ciągów rozdzielanych.  
+`TextFieldParser` Obiekt pozwala analizować i przetwarzać bardzo duży plik, który jest uporządkowany jako kolumny z rozdzielonymi szerokościami tekstu, takie jak pliki dziennika lub informacje o starszej bazie danych. Analizowanie pliku tekstowego za pomocą `TextFieldParser` przypomina iterację w pliku tekstowym, podczas gdy metoda Parse do wyodrębniania pól tekstu jest podobna do metod manipulowania ciągami używanymi do tokenize ciągów rozdzielanych.  
   
 ## <a name="parsing-different-types-of-text-files"></a>Analizowanie różnych typów plików tekstowych  
 
- Pliki tekstowe mogą mieć pola o różnej szerokości, rozdzielone znakiem, takim jak przecinek lub miejsce na tabulatorze. Zdefiniuj `TextFieldType` i ogranicznik, jak w `SetDelimiters` poniższym przykładzie, który używa metody do definiowania pliku tekstowego rozdzielanego tabulatora:  
+ Pliki tekstowe mogą mieć pola o różnej szerokości, rozdzielane znakami, takimi jak przecinki lub spacja tabulacji. Zdefiniuj `TextFieldType` i ogranicznik, jak w poniższym przykładzie, który używa `SetDelimiters` metody do definiowania pliku tekstowego rozdzielanego tabulatorami:  
   
  [!code-vb[VbVbalrTextFieldParser#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTextFieldParser/VB/Class1.vb#21)]  
   
- Inne pliki tekstowe mogą mieć szerokości pól, które są stałe. W takich przypadkach należy `TextFieldType` zdefiniować `FixedWidth` as i zdefiniować szerokości każdego pola, jak w poniższym przykładzie. W tym przykładzie użyto `SetFieldWidths` metody do definiowania kolumn tekstu: pierwsza kolumna ma szerokość 5 znaków, druga to 10, trzecia 11, a czwarta ma zmienną szerokość.  
+ Inne pliki tekstowe mogą mieć stałe szerokości pól. W takich przypadkach należy zdefiniować `TextFieldType` jako `FixedWidth` i zdefiniować szerokości poszczególnych pól, jak w poniższym przykładzie. W `SetFieldWidths` tym przykładzie używamy metody do definiowania kolumn tekstu: pierwsza kolumna ma szerokość 5 znaków, a druga — 10, trzeci to 11, a czwarta jest szerokość zmiennej.  
   
  [!code-vb[VbVbalrTextFieldParser#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTextFieldParser/VB/Class1.vb#22)]  
   
- Po zdefiniowaniu formatu można zapętlać `ReadFields` plik, używając metody przetwarzania każdego wiersza po kolei.  
+ Po zdefiniowaniu formatu można wykonać pętlę przez plik, używając `ReadFields` metody, aby przetwarzać każdy wiersz z kolei.  
   
- Jeśli pole nie jest zgodne z <xref:Microsoft.VisualBasic.FileIO.MalformedLineException> określonym formatem, zgłaszany jest wyjątek. Gdy takie wyjątki są `ErrorLine` `ErrorLineNumber` zgłaszane, i właściwości przechowywania tekstu powodując wyjątek i numer wiersza tego tekstu.  
+ Jeśli pole nie jest zgodne z określonym formatem, zgłaszany <xref:Microsoft.VisualBasic.FileIO.MalformedLineException> jest wyjątek. Gdy takie wyjątki są zgłaszane, właściwości `ErrorLine` i `ErrorLineNumber` przechowują tekst powodujący wyjątek i numer wiersza tego tekstu.  
   
-## <a name="parsing-files-with-multiple-formats"></a>Analizowanie plików w wielu formatach  
+## <a name="parsing-files-with-multiple-formats"></a>Analizowanie plików z wieloma formatami  
 
- Metoda `PeekChars` `TextFieldParser` obiektu może służyć do sprawdzania każdego pola przed jego odczytem, co pozwala na zdefiniowanie wielu formatów pól i odpowiednie reagowanie. Aby uzyskać więcej informacji, zobacz [Jak: Odczyt z plików tekstowych z wieloma formatami](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md).  
+ `PeekChars` Metoda `TextFieldParser` obiektu może służyć do sprawdzenia każdego pola przed jego odczytaniem, co pozwala na zdefiniowanie wielu formatów dla pól i odpowiednie reagowanie. Aby uzyskać więcej informacji, zobacz [jak: odczyt z plików tekstowych w wielu formatach](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md).  
   
 ## <a name="see-also"></a>Zobacz też
 

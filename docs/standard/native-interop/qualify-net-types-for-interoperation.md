@@ -23,7 +23,7 @@ Jeśli zamierzasz uwidocznić typy w zestawie w aplikacjach COM, weź pod uwagę
   
      Chociaż usługa międzyoperacyjna modelu COM zapewnia mechanizm automatycznego generowania interfejsu zawierającego wszystkie elementy członkowskie klasy i elementy członkowskie swojej klasy podstawowej, znacznie lepiej jest zapewnić jawne interfejsy. Wygenerowany automatycznie interfejs jest nazywany interfejsem klasy. Aby uzyskać wskazówki, zobacz [wprowadzenie do interfejsu klasy](com-callable-wrapper.md#introducing-the-class-interface).  
   
-     Można użyć Visual Basic, C#, i C++ , aby uwzględnić definicje interfejsu w kodzie, zamiast korzystać z języka definicji interfejsu (IDL) lub jego odpowiednika. Aby uzyskać szczegółowe informacje na temat składni, zobacz dokumentację języka.  
+     Można użyć Visual Basic, C# i C++ do dołączania definicji interfejsu w kodzie, zamiast konieczności używania języka definicji interfejsu (IDL) lub jego odpowiednika. Aby uzyskać szczegółowe informacje na temat składni, zobacz dokumentację języka.  
   
 - Typy zarządzane muszą być publiczne.  
   
@@ -33,7 +33,7 @@ Jeśli zamierzasz uwidocznić typy w zestawie w aplikacjach COM, weź pod uwagę
   
 - Metody, właściwości, pola i zdarzenia muszą być publiczne.  
   
-     Elementy członkowskie typów publicznych muszą być również publiczne, jeśli mają być widoczne dla modelu COM. Aby ograniczyć widoczność zestawu, typu publicznego lub publicznych członków typu publicznego, należy zastosować <xref:System.Runtime.InteropServices.ComVisibleAttribute>. Domyślnie wszystkie typy publiczne i członkowie są widoczne.  
+     Elementy członkowskie typów publicznych muszą być również publiczne, jeśli mają być widoczne dla modelu COM. Można ograniczyć widoczność zestawu, typu publicznego lub publicznych składowych typu publicznego przez zastosowanie <xref:System.Runtime.InteropServices.ComVisibleAttribute>. Domyślnie wszystkie typy publiczne i członkowie są widoczne.  
   
 - Typy muszą mieć publiczny Konstruktor bez parametrów, który ma być aktywowany z modelu COM.  
   
@@ -45,7 +45,7 @@ Jeśli zamierzasz uwidocznić typy w zestawie w aplikacjach COM, weź pod uwagę
   
  Po eksportowaniu do modelu COM Hierarchia dziedziczenia typu zarządzanego jest spłaszczona. Przechowywanie wersji różni się również między środowiskami zarządzanymi i niezarządzanymi. Typy ujawnione dla modelu COM nie mają takich samych cech wersji jak inne typy zarządzane.  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Runtime.InteropServices.ComVisibleAttribute>
 - [Udostępnianie składników .NET Framework modelowi COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)

@@ -15,7 +15,7 @@ ms.locfileid: "74334497"
 ---
 # <a name="how-to-write-text-to-files-with-a-streamwriter-in-visual-basic"></a>Porady: zapisywanie tekstu do plików za pomocą StreamWriter w Visual Basic
 
-W tym <xref:System.IO.StreamWriter> przykładzie `My.Computer.FileSystem.OpenTextFileWriter` otwiera obiekt z metodą i używa go <xref:System.IO.TextWriter.WriteLine%2A> do zapisu ciągu do pliku tekstowego z metodą <xref:System.IO.StreamWriter> klasy.  
+<xref:System.IO.StreamWriter> Ten przykład otwiera obiekt `My.Computer.FileSystem.OpenTextFileWriter` z metodą i używa go do pisania ciągu do pliku tekstowego z <xref:System.IO.TextWriter.WriteLine%2A> metodą <xref:System.IO.StreamWriter> klasy.  
   
 ## <a name="example"></a>Przykład  
 
@@ -25,19 +25,19 @@ W tym <xref:System.IO.StreamWriter> przykładzie `My.Computer.FileSystem.OpenTex
 
  Następujące warunki mogą spowodować wyjątek:  
   
-- Plik istnieje i jest tylko<xref:System.IO.IOException>do odczytu ( ).  
+- Plik istnieje i jest tylko do odczytu (<xref:System.IO.IOException>).  
   
-- Dysk jest zapełniony (<xref:System.IO.IOException>).  
+- Dysk jest pełny (<xref:System.IO.IOException>).  
   
-- Nazwa ścieżki jest za<xref:System.IO.PathTooLongException>długa ( ).  
+- Nazwa ścieżki jest za długa (<xref:System.IO.PathTooLongException>).  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
 
- W tym przykładzie tworzy nowy plik, jeśli plik jeszcze nie istnieje. Jeśli aplikacja musi utworzyć plik, ta `Create` aplikacja potrzebuje dostępu do folderu. Jeśli plik już istnieje, aplikacja `Write` potrzebuje tylko dostępu, mniejsze uprawnienia. Tam, gdzie to możliwe, jest bardziej bezpieczne, `Read` aby utworzyć plik podczas `Create` wdrażania i tylko udzielić dostępu do jednego pliku, a nie dostęp do folderu.  
+ Ten przykład tworzy nowy plik, jeśli plik jeszcze nie istnieje. Jeśli aplikacja musi utworzyć plik, aplikacja musi `Create` mieć dostęp do tego folderu. Jeśli plik już istnieje, aplikacja wymaga tylko `Write` dostępu, ale ma mniejsze uprawnienia. Jeśli to możliwe, bezpieczniejsze jest tworzenie pliku podczas wdrażania i udzielanie `Read` dostępu do pojedynczego pliku, a nie `Create` dostęp do folderu.  
   
 ## <a name="see-also"></a>Zobacz też
 
 - <xref:System.IO.StreamWriter>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileWriter%2A>
-- [Jak: Odczyt z plików tekstowych](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)
+- [Instrukcje: odczyt z plików tekstowych](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)
 - [Zapisywanie w plikach](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)

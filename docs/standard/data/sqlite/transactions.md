@@ -15,7 +15,7 @@ Transakcje umożliwiają grupowanie wielu instrukcji SQL w jednej jednostce prac
 
 ## <a name="concurrency"></a>Współbieżność
 
-W przypadku oprogramowania SQLite w danej chwili w bazie danych może istnieć tylko jedna transakcja oczekująca na zmianę. W związku z tym wywołania <xref:Microsoft.Data.Sqlite.SqliteConnection.BeginTransaction%2A> i metody `Execute` na <xref:Microsoft.Data.Sqlite.SqliteCommand> mogą przekroczyć limit czasu, jeśli wykonywanie innej transakcji trwa zbyt długo.
+W przypadku oprogramowania SQLite w danej chwili w bazie danych może istnieć tylko jedna transakcja oczekująca na zmianę. Z tego powodu wywołania <xref:Microsoft.Data.Sqlite.SqliteConnection.BeginTransaction%2A> i `Execute` metody w <xref:Microsoft.Data.Sqlite.SqliteCommand> programie mogą przekroczyć limit czasu, jeśli wykonywanie innej transakcji trwa zbyt długo.
 
 Aby uzyskać więcej informacji na temat blokowania, ponawiania prób i przekroczeń limitu czasu, zobacz [Błędy bazy danych](database-errors.md).
 
@@ -31,8 +31,8 @@ W przypadku korzystania z udostępnionej pamięci podręcznej program SQLite obs
 
 - *Fantomy* to wiersze, które są zmieniane lub dodawane, aby spełniały klauzulę WHERE zapytania podczas transakcji. Jeśli jest to dozwolone, to samo zapytanie może zwracać różne wiersze, gdy są wykonywane dwa razy w tej samej transakcji.
 
-Microsoft. Data. sqlite traktuje IsolationLevel, który przeszedł do <xref:Microsoft.Data.Sqlite.SqliteConnection.BeginTransaction%2A> jako poziom minimalny. Rzeczywisty poziom izolacji zostanie podwyższony do odczytu niezatwierdzonego lub możliwego do serializacji.
+Microsoft. Data. sqlite traktuje IsolationLevel <xref:Microsoft.Data.Sqlite.SqliteConnection.BeginTransaction%2A> jako poziom minimalny. Rzeczywisty poziom izolacji zostanie podwyższony do odczytu niezatwierdzonego lub możliwego do serializacji.
 
-Poniższy kod symuluje przeczytanie zanieczyszczone. Należy pamiętać, że parametry połączenia muszą zawierać `Cache=Shared`.
+Poniższy kod symuluje przeczytanie zanieczyszczone. Należy pamiętać, że parametry połączenia muszą `Cache=Shared`zawierać.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/DirtyReadSample/Program.cs?name=snippet_DirtyRead)]

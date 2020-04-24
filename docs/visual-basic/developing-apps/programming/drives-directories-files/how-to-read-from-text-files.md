@@ -17,22 +17,22 @@ ms.locfileid: "74334589"
 ---
 # <a name="how-to-read-from-text-files-in-visual-basic"></a>Porady: odczyt z plików testowych w Visual Basic
 
-Metoda <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.ReadAllText%2A> `My.Computer.FileSystem` obiektu umożliwia odczyt z pliku tekstowego. Kodowanie pliku może być określone, jeśli zawartość pliku używa kodowania, takiego jak ASCII lub UTF-8.
+<xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.ReadAllText%2A> Metoda `My.Computer.FileSystem` obiektu umożliwia odczytywanie z pliku tekstowego. Kodowanie pliku może być określone, jeśli zawartość pliku używa kodowania, takiego jak ASCII lub UTF-8.
 
 Podczas odczytu z pliku używającego znaków rozszerzonych, trzeba będzie określić kodowanie pliku.
 
 > [!NOTE]
-> Aby odczytać plik pojedynczy wiersz tekstu naraz, <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.OpenTextFileReader%2A> użyj `My.Computer.FileSystem` metody obiektu. Metoda `OpenTextFileReader` zwraca obiekt <xref:System.IO.StreamReader>. Można użyć <xref:System.IO.StreamReader.ReadLine%2A> metody obiektu, `StreamReader` aby odczytać plik po jednym wierszu naraz. Można przetestować na końcu pliku <xref:System.IO.StreamReader.EndOfStream%2A> przy użyciu `StreamReader` metody obiektu.
+> Aby odczytać plik pojedynczy wiersz tekstu, użyj <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.OpenTextFileReader%2A> metody `My.Computer.FileSystem` obiektu. Metoda `OpenTextFileReader` zwraca obiekt <xref:System.IO.StreamReader>. Można użyć <xref:System.IO.StreamReader.ReadLine%2A> metody `StreamReader` obiektu, aby odczytać plik jeden wiersz jednocześnie. Można testować pod kątem końca pliku przy użyciu <xref:System.IO.StreamReader.EndOfStream%2A> metody `StreamReader` obiektu.
 
 ## <a name="to-read-from-a-text-file"></a>Aby odczytać z pliku tekstowego
 
-Użyj `ReadAllText` metody obiektu, `My.Computer.FileSystem` aby odczytać zawartość pliku tekstowego w ciągu, podając ścieżkę. Poniższy przykład odczytuje zawartość test.txt jako ciąg i wyświetla go w oknie komunikatu.
+Użyj `ReadAllText` metody `My.Computer.FileSystem` obiektu, aby odczytać zawartość pliku tekstowego w ciągu, dostarczając ścieżkę. Poniższy przykład odczytuje zawartość test.txt jako ciąg i wyświetla go w oknie komunikatu.
 
 [!code-vb[VbFileIORead#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#2)]
 
 ### <a name="to-read-from-a-text-file-that-is-encoded"></a>Aby odczytać z pliku tekstowego, który jest kodowany
 
-Użyj `ReadAllText` metody `My.Computer.FileSystem` obiektu, aby odczytać zawartość pliku tekstowego do ciągu, podając ścieżkę i typ kodowania plików. Poniższy przykład odczytuje zawartość pliku z kodowaniem UTF32 test.txt jako ciąg i wyświetla go w oknie komunikatu.
+Użyj `ReadAllText` metody `My.Computer.FileSystem` obiektu, aby odczytać zawartość pliku tekstowego w ciągu, podając ścieżkę i typ kodowania pliku. Poniższy przykład odczytuje zawartość pliku z kodowaniem UTF32 test.txt jako ciąg i wyświetla go w oknie komunikatu.
 
 [!code-vb[VbFileIORead#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#3)]
 
@@ -40,23 +40,23 @@ Użyj `ReadAllText` metody `My.Computer.FileSystem` obiektu, aby odczytać zawar
 
 Następujące warunki mogą spowodować wyjątek:
 
-- Ścieżka nie jest prawidłowa z jednego z następujących powodów: jest ciągiem o zerowej długości, zawiera tylko biały<xref:System.ArgumentException>znak, zawiera nieprawidłowe znaki lub jest ścieżką urządzenia ( ).
+- Ścieżka jest nieprawidłowa z jednego z następujących powodów: jest ciągiem o zerowej długości, zawiera tylko biały znak, zawiera nieprawidłowe znaki lub jest ścieżką urządzenia (<xref:System.ArgumentException>).
 
-- Ścieżka jest nieprawidłowa, `Nothing` ponieważ<xref:System.ArgumentNullException>jest ( ).
+- Ścieżka jest nieprawidłowa, ponieważ jest `Nothing` (<xref:System.ArgumentNullException>).
 
-- Plik nie istnieje<xref:System.IO.FileNotFoundException>( ).
+- Plik nie istnieje (<xref:System.IO.FileNotFoundException>).
 
-- Plik jest używany przez inny proces lub występuje<xref:System.IO.IOException>błąd we/wy ( ).
+- Plik jest używany przez inny proces lub wystąpił błąd we/wy (<xref:System.IO.IOException>).
 
-- Ścieżka przekracza zdefiniowaną przez system<xref:System.IO.PathTooLongException>maksymalną długość ( ).
+- Ścieżka przekracza maksymalną długość zdefiniowaną przez system (<xref:System.IO.PathTooLongException>).
 
-- Nazwa pliku lub katalogu w ścieżce zawiera dwukropek (:) lub jest w nieprawidłowym formacie (<xref:System.NotSupportedException>).
+- Nazwa pliku lub katalogu w ścieżce zawiera dwukropek (:) lub ma nieprawidłowy format (<xref:System.NotSupportedException>).
 
-- Nie ma wystarczającej ilości pamięci,<xref:System.OutOfMemoryException>aby zapisać ciąg do bufora ( ).
+- Za mało pamięci, aby zapisać ciąg do bufora (<xref:System.OutOfMemoryException>).
 
-- Użytkownik nie ma niezbędnych uprawnień do<xref:System.Security.SecurityException>wyświetlania ścieżki ( ).
+- Użytkownik nie ma wystarczających uprawnień do wyświetlania ścieżki (<xref:System.Security.SecurityException>).
 
-Nie należy podejmować decyzji dotyczących zawartości pliku na podstawie rozszerzenia nazwy pliku. Na przykład plik Form1.vb może nie być plikiem źródłowym języka Visual Basic.
+Nie należy podejmować decyzji dotyczących zawartości pliku na podstawie rozszerzenia nazwy pliku. Na przykład plik Form1. vb nie może być plikiem źródłowym Visual Basic.
 
 Sprawdź wszystkie dane wejściowe, zanim użyjesz danych w aplikacji. Zawartość pliku może się różnić od oczekiwanej i metody odczytu z pliku nie zadziałają.
 

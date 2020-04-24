@@ -29,6 +29,6 @@ Opisuje Visual Basic kompilator wiersza polecenia, który jest dostarczany jako 
 [Opcje kompilatora Visual Basic w porządku alfabetycznym](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)  
 Wyświetla listę opcji kompilatora w tabeli alfabetycznej
 
-[Opcje kompilatora Visual Basic wymienione według kategorii](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)  
+[Opcje kompilatora Visual Basic według kategorii](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)  
 Przedstawia opcje kompilatora w grupach funkcjonalnych.
   

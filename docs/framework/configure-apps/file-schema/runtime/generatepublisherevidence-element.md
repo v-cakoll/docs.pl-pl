@@ -5,12 +5,12 @@ helpviewer_keywords:
 - generatePublisherEvidence element
 - <generatePublisherEvidence> element
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
-ms.openlocfilehash: 24a5ea02992a5bce681b5bab4fb7f75505bd225d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c2ba4a7244b7849e28eac38fb34a2cdd0d1f1048
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79154117"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645357"
 ---
 # <a name="generatepublisherevidence-element"></a>\<generatePublisherEvidence> Element
 Określa, czy środowisko <xref:System.Security.Policy.Publisher> wykonawcze tworzy dowody zabezpieczeń dostępu do kodu (CAS).  
@@ -55,7 +55,7 @@ Określa, czy środowisko <xref:System.Security.Policy.Publisher> wykonawcze two
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
-> W programie .NET Framework 4 i nowszych element ten nie ma wpływu na czasy ładowania zestawu. Aby uzyskać więcej informacji, zobacz sekcję "Uproszczenie zasad zabezpieczeń" w sekcji [Zmiany zabezpieczeń](../../../security/security-changes.md).  
+> W programie .NET Framework 4 i nowszych element ten nie ma wpływu na czasy ładowania zestawu. Aby uzyskać więcej informacji, zobacz sekcję "Uproszczenie zasad zabezpieczeń" w sekcji [Zmiany zabezpieczeń](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes).  
   
  Środowisko wykonawcze języka wspólnego (CLR) próbuje zweryfikować authenticode <xref:System.Security.Policy.Publisher> podpisu w czasie ładowania, aby utworzyć dowody dla zestawu. Jednak domyślnie większość aplikacji nie <xref:System.Security.Policy.Publisher> potrzebuje dowodów. Standardowe zasady CAS nie <xref:System.Security.Policy.PublisherMembershipCondition>opierają się na . Należy unikać niepotrzebnych kosztów uruchamiania skojarzonych z weryfikacją podpisu wydawcy, chyba że aplikacja jest wykonywana <xref:System.Security.Permissions.PublisherIdentityPermission> na komputerze z niestandardowymi zasadami CAS lub zamierza zaspokoić wymagania w środowisku częściowego zaufania. (Wymagania dotyczące uprawnień tożsamości zawsze odnoszą sukces w środowisku pełnego zaufania).  
   

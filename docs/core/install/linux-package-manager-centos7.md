@@ -4,12 +4,12 @@ description: Użyj menedżera pakietów, aby zainstalować pakiet .NET Core SDK 
 author: thraka
 ms.author: adegeo
 ms.date: 03/17/2020
-ms.openlocfilehash: d6cec51422dc59b7f667e36001b7db4742b53a6f
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: f8c4115b9d85edc36809f0daed5f6825149c8411
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134351"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645405"
 ---
 # <a name="centos-7-package-manager---install-net-core"></a>Menedżer pakietów CentOS 7 — instalowanie programu .NET Core
 
@@ -19,12 +19,12 @@ W tym artykule opisano sposób instalowania programu .NET Core w programie CentO
 
 [!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
-## <a name="register-microsoft-key-and-feed"></a>Rejestrowanie klucza firmy Microsoft i źródła danych
+## <a name="add-microsoft-repository-key-and-feed"></a>Dodawanie klucza repozytorium firmy Microsoft i kanału informacyjnego
 
 Przed zainstalowaniem platformy .NET należy:
 
-- Zarejestruj klucz firmy Microsoft.
-- Zarejestruj repozytorium produktów.
+- Dodaj klucz podpisywania pakietu firmy Microsoft do listy zaufanych kluczy.
+- Dodaj repozytorium do menedżera pakietów.
 - Zainstaluj wymagane zależności.
 
 Te operacje należy wykonać tylko jeden raz na każdej maszynie.

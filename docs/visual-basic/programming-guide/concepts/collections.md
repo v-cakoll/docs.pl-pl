@@ -2,12 +2,12 @@
 title: Kolekcje
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: ba16d04e781bcf69356b1f603d92e104816a0860
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 232b9ec7b5975092e73daf0a7384fa816f55f72f
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400828"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646345"
 ---
 # <a name="collections-visual-basic"></a>Kolekcje (Visual Basic)
 
@@ -570,12 +570,12 @@ End Function
 
 ## <a name="see-also"></a>Zobacz też
 
-- [Inicjatory kolekcji](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)
+- [Inicjalizatory kolekcji](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)
 - [Pojęcia programistyczne (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)
 - [Option Strict — Instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [LINQ do obiektów (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
-- [Równoległe LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)
+- [Równoległe LINQ (PLINQ)](../../../standard/parallel-programming/introduction-to-plinq.md)
 - [Kolekcje i struktury danych](../../../standard/collections/index.md)
 - [Wybieranie klasy kolekcji](../../../standard/collections/selecting-a-collection-class.md)
-- [Porównywanie i sortowanie w kolekcjach](../../../standard/collections/comparisons-and-sorts-within-collections.md)
-- [Kiedy należy używać kolekcji ogólnych](../../../standard/collections/when-to-use-generic-collections.md)
+- [Porównania i sortowanie w kolekcjach](../../../standard/collections/comparisons-and-sorts-within-collections.md)
+- [Kiedy używać kolekcji ogólnych](../../../standard/collections/when-to-use-generic-collections.md)

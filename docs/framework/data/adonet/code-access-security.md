@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: 6fc54bb9e38768e390201ea77243d3df4cd67f10
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7b0f269bd4dce8ddaaaa72c3760a4d7a0e3eb8b9
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151744"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646013"
 ---
 # <a name="code-access-security-and-adonet"></a>Zabezpieczenia dostępu kodu i ADO.NET
 Program .NET Framework oferuje zabezpieczenia oparte na rolach, a także zabezpieczenia dostępu do kodu (CAS), które są implementowane przy użyciu wspólnej infrastruktury dostarczanej przez środowisko wykonawcze języka wspólnego (CLR). W świecie kodu niezarządzanego większość aplikacji jest wykonywana z uprawnieniami użytkownika lub podmiotu. W rezultacie systemy komputerowe mogą zostać uszkodzone, a prywatne dane zagrożone, gdy złośliwe lub wypełnione błędami oprogramowanie jest uruchamiane przez użytkownika z podwyższonymi uprawnieniami.  
@@ -50,7 +50,7 @@ Program .NET Framework oferuje zabezpieczenia oparte na rolach, a także zabezpi
  W zależności od typu aplikacji, które są budowane, należy również rozważyć implementowanie uprawnień opartych na rolach w bazie danych. Aby uzyskać więcej informacji na temat zabezpieczeń opartych na rolach w programie SQL Server, zobacz [SQL Server Security](./sql/sql-server-security.md).  
   
 ## <a name="assemblies"></a>Zestawy  
- Zestawy tworzą podstawową jednostkę wdrażania, kontroli wersji, ponownego użycia, zakresu aktywacji i uprawnień zabezpieczeń dla aplikacji .NET Framework. Zestaw zawiera zbiór typów i zasobów, które są zbudowane do współpracy i tworzą logiczną jednostkę funkcjonalności. Do CLR typu nie istnieje poza kontekstem zestawu. Aby uzyskać więcej informacji na temat tworzenia i wdrażania zestawów, zobacz [Programowanie za pomocą zestawów](../../../standard/assembly/program.md).  
+ Zestawy tworzą podstawową jednostkę wdrażania, kontroli wersji, ponownego użycia, zakresu aktywacji i uprawnień zabezpieczeń dla aplikacji .NET Framework. Zestaw zawiera zbiór typów i zasobów, które są zbudowane do współpracy i tworzą logiczną jednostkę funkcjonalności. Do CLR typu nie istnieje poza kontekstem zestawu. Aby uzyskać więcej informacji na temat tworzenia i wdrażania zestawów, zobacz [Programowanie za pomocą zestawów](../../../standard/assembly/index.md).  
   
 ### <a name="strong-naming-assemblies"></a>Zestawy o silnym nazewnictwie  
  Silna nazwa lub podpis cyfrowy składa się z tożsamości zestawu, która zawiera jego prostą nazwę tekstową, numer wersji i informacje o kulturze (jeśli są dostarczane), a także klucz publiczny i podpis cyfrowy. Podpis cyfrowy jest generowany z pliku zestawu przy użyciu odpowiedniego klucza prywatnego. Plik zestawu zawiera manifest zestawu, który zawiera nazwy i skróty wszystkich plików, które tworzą zestaw.  

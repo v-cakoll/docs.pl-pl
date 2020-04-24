@@ -4,19 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework, development guide
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
-ms.openlocfilehash: 0500e11d2897cfa7392cc8280a0b69c5e2fc515f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 665c7843fc4a46348619bde46a8d527dfed321e4
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79181619"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645994"
 ---
-# <a name="net-framework-development-guide"></a>.NET Framework — podręcznik programowania
+# <a name="net-framework-development-guide"></a>Przewodnik po programach .NET Framework
+
 W tej sekcji wyjaśniono, jak tworzyć, konfigurować, debugować, zabezpieczać i wdrażać aplikacje .NET Framework. Sekcja zawiera również informacje na temat obszarów technologicznych, takich jak dynamiczne programowanie, interoperacyjność, rozszerzalność, zarządzanie pamięcią i wątki.  
   
-## <a name="in-this-section"></a>W tej sekcji  
- [Podstawy aplikacji](../standard/application-essentials.md)  
- Zawiera informacje o podstawowych zadaniach tworzenia aplikacji, takich jak programowanie z domenami aplikacji i zestawami, używanie atrybutów, formatowanie i analizowanie typów podstawowych, używanie kolekcji, obsługa zdarzeń i wyjątków, używanie plików i strumieni danych oraz używanie Generyczne.  
+## <a name="in-this-section"></a>W tej sekcji
   
  [Dane i modelowanie](./data/index.md)  
  Zawiera informacje dotyczące uzyskiwania dostępu do danych przy użyciu ADO.NET, zintegrowanej kwerendy językowej (LINQ), usług danych WCF i pliku XML.  

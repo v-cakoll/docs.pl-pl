@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: dbff4bed59c8d1e861555676578b52528e2aebbe
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5f8bb862ce443fd7397036b10f69cda65a6960bc
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186185"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646147"
 ---
 # <a name="xaml-syntax-in-detail"></a>Szczegóły składni XAML
 W tym temacie zdefiniowano terminy, które są używane do opisywania elementów składni XAML. Terminy te są często używane w pozostałej części tej dokumentacji, zarówno dla dokumentacji WPF w szczególności i dla innych struktur, które używają XAML lub podstawowe pojęcia XAML włączone przez obsługę języka XAML na poziomie System.Xaml. W tym temacie rozwija się podstawowa terminologia wprowadzona w temacie [Omówienie XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md).  
@@ -130,7 +130,7 @@ W tym temacie zdefiniowano terminy, które są używane do opisywania elementów
   
  Można również nazwać dowolne zdarzenie z dowolnego obiektu, który jest dostępny za pośrednictwem domyślnego obszaru nazw przy użyciu *typeName*. *zdarzenie* częściowo kwalifikowana nazwa; ta składnia obsługuje dołączanie programów obsługi dla kierowanych zdarzeń, gdzie program obsługi jest przeznaczony do obsługi routingu zdarzeń z elementów podrzędnych, ale element nadrzędny nie ma również tego zdarzenia w tabeli elementów członkowskich. Ta składnia przypomina składnię dołączonego zdarzenia, ale zdarzenie w tym miejscu nie jest zdarzeniem dołączonym do rzeczywistości. Zamiast tego odwołujesz się do zdarzenia o nazwie kwalifikowanej. Aby uzyskać więcej informacji, zobacz [Omówienie zdarzeń trasowych](routed-events-overview.md).  
   
- W niektórych scenariuszach nazwy właściwości są czasami dostarczane jako wartość atrybutu, a nie nazwę atrybutu. Ta nazwa właściwości może również zawierać kwalifikatory, takie jak właściwość określona w formularzu *ownerType*. *dependencyPropertyName*. Ten scenariusz jest typowy podczas pisania stylów lub szablonów w języku XAML. Reguły przetwarzania nazw właściwości podane jako wartość atrybutu są różne i są regulowane przez typ właściwości są ustawiane lub przez zachowania określonych podsystemów WPF. Aby uzyskać szczegółowe informacje, zobacz [Stylowanie i tworzenie szablonów](../controls/styling-and-templating.md).  
+ W niektórych scenariuszach nazwy właściwości są czasami dostarczane jako wartość atrybutu, a nie nazwę atrybutu. Ta nazwa właściwości może również zawierać kwalifikatory, takie jak właściwość określona w formularzu *ownerType*. *dependencyPropertyName*. Ten scenariusz jest typowy podczas pisania stylów lub szablonów w języku XAML. Reguły przetwarzania nazw właściwości podane jako wartość atrybutu są różne i są regulowane przez typ właściwości są ustawiane lub przez zachowania określonych podsystemów WPF. Aby uzyskać szczegółowe informacje, zobacz [Stylowanie i tworzenie szablonów](../../../desktop-wpf/fundamentals/styles-templates-overview.md).  
   
  Innym użyciem dla nazw właściwości jest, gdy wartość atrybutu opisuje relację właściwości-właściwości. Ta funkcja jest używana do wiązania danych i elementów <xref:System.Windows.PropertyPath> docelowych scenorysu i jest włączona przez klasę i jej konwerter typu. Aby uzyskać pełniejszy opis semantyki odnośnika, zobacz [Składnia XAML](propertypath-xaml-syntax.md)programu PropertyPath .  
   
@@ -173,7 +173,7 @@ W tym temacie zdefiniowano terminy, które są używane do opisywania elementów
   
  Na stronach .NET Reference dla typów kolekcji ta składnia z zamierzonym pominięciem elementu obiektu dla kolekcji jest od czasu do czasu zanotowywalna w sekcjach składni XAML jako składnia niejawnej kolekcji.  
   
- Z wyjątkiem elementu głównego, każdy element obiektu w pliku XAML, który jest zagnieżdżony jako element podrzędny innego elementu, jest naprawdę elementem, który jest jednym lub obydwoma z następujących przypadków: element członkowski właściwości niejawnej kolekcji jego elementu nadrzędnego lub element, który określa wartość właściwości zawartości XAML dla elementu nadrzędnego (właściwości zawartości XAML zostaną omówione w nadchodzącej sekcji). Innymi słowy relacja elementów nadrzędnych i elementów podrzędnych na stronie znaczników jest naprawdę pojedynczym obiektem w katalogu głównym, a każdy element obiektu pod katalogiem głównym jest pojedynczym wystąpieniem, które zapewnia wartość właściwości obiektu nadrzędnego, lub jednym z elementów w obrębie kolekcja, która jest również wartością właściwości typu kolekcji obiektu nadrzędnego. Ta koncepcja pojedynczego katalogu głównego jest wspólna dla xml i jest często wzmocniona zachowaniem interfejsów API, które ładują kod XAML, taki jak <xref:System.Windows.Markup.XamlReader.Load%2A>.  
+ Z wyjątkiem elementu głównego, każdy element obiektu w pliku XAML, który jest zagnieżdżony jako element podrzędny innego elementu jest naprawdę elementem, który jest jednym lub obu następujących przypadkach: element członkowski właściwości kolekcji niejawnej jego elementu nadrzędnego lub element, który określa wartość właściwości zawartości XAML dla elementu nadrzędnego (właściwości zawartości XAML zostaną omówione w nadchodzącej sekcji). Innymi słowy relacja elementów nadrzędnych i elementów podrzędnych na stronie znaczników jest naprawdę pojedynczy obiekt w katalogu głównym, a każdy element obiektu pod katalogiem głównym jest albo pojedyncze wystąpienie, które zapewnia wartość właściwości elementu nadrzędnego lub jeden z elementów w kolekcji, który jest również wartością właściwości typu kolekcji nadrzędnego. Ta koncepcja pojedynczego katalogu głównego jest wspólna dla xml i jest często wzmocniona zachowaniem interfejsów API, które ładują kod XAML, taki jak <xref:System.Windows.Markup.XamlReader.Load%2A>.  
   
  Poniższy przykład jest składnią z elementem<xref:System.Windows.Media.GradientStopCollection>obiektu dla kolekcji ( ) określonym jawnie.  
   
@@ -227,7 +227,7 @@ W tym temacie zdefiniowano terminy, które są używane do opisywania elementów
   
 <a name="content_properties_and_collection_syntax_combined"></a>
 ## <a name="content-properties-and-collection-syntax-combined"></a>Właściwości zawartości i składnia kolekcji połączone  
- Aby zaakceptować więcej niż jeden element obiektu jako zawartość, typ właściwości content musi być szczególnie typem kolekcji. Podobnie jak składnia elementu właściwości dla typów kolekcji, procesor XAML musi identyfikować typy, które są typami kolekcji. Jeśli element ma właściwość zawartości XAML, a typ właściwości zawartości XAML jest kolekcją, typ dorozumianej kolekcji nie musi być określony w znacznikach jako element obiektu, a właściwość zawartości XAML nie musi być określona jako właściwość Element. W związku z tym model zawartości widoczne w znacznikach może teraz mieć więcej niż jeden element podrzędny przypisany jako zawartość. Poniżej znajduje się składnia <xref:System.Windows.Controls.Panel> zawartości dla klasy pochodnej. Wszystkie <xref:System.Windows.Controls.Panel> klasy pochodne ustanawiają właściwość <xref:System.Windows.Controls.Panel.Children%2A>zawartości XAML <xref:System.Windows.Controls.UIElementCollection>jako , która wymaga wartości typu .  
+ Aby zaakceptować więcej niż jeden element obiektu jako zawartość, typ właściwości content musi być szczególnie typem kolekcji. Podobnie jak składnia elementu właściwości dla typów kolekcji, procesor XAML musi identyfikować typy, które są typami kolekcji. Jeśli element ma właściwość zawartości XAML i typ właściwości zawartości XAML jest kolekcją, typ dorozumianej kolekcji nie musi być określony w znacznikach jako element obiektu, a właściwość zawartości XAML nie musi być określona jako element właściwości. W związku z tym model zawartości widoczne w znacznikach może teraz mieć więcej niż jeden element podrzędny przypisany jako zawartość. Poniżej znajduje się składnia <xref:System.Windows.Controls.Panel> zawartości dla klasy pochodnej. Wszystkie <xref:System.Windows.Controls.Panel> klasy pochodne ustanawiają właściwość <xref:System.Windows.Controls.Panel.Children%2A>zawartości XAML <xref:System.Windows.Controls.UIElementCollection>jako , która wymaga wartości typu .  
   
  [!code-xaml[XAMLOvwSupport#SyntaxContent](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page5.xaml#syntaxcontent)]  
   
@@ -315,8 +315,8 @@ W tym temacie zdefiniowano terminy, które są używane do opisywania elementów
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Przegląd XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
-- [Przestrzeń nazwa (x:) XAML — Funkcje językowe](../../../desktop-wpf/xaml-services/namespace-language-features.md)
+- [Omówienie XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
+- [Przestrzeń nazw XAML (x:) Funkcje językowe](../../../desktop-wpf/xaml-services/namespace-language-features.md)
 - [Rozszerzenia WPF XAML](wpf-xaml-extensions.md)
 - [Przegląd Właściwości zależności](dependency-properties-overview.md)
 - [TypeConverters i XAML](typeconverters-and-xaml.md)

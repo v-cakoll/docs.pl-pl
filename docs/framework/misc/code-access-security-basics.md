@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [.NET Framework], code access security
 ms.assetid: 4eaa6535-d9fe-41a1-91d8-b437cfc16921
-ms.openlocfilehash: 08d708e8f98bd2fe06757df3033a512e2fe1f3c2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 352fa41cb9d3136f853b068d0101a6dcab5dfd7c
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400058"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645776"
 ---
 # <a name="code-access-security-basics"></a>Podstawy zabezpieczeń dostępu kodu
 
@@ -53,7 +53,7 @@ Zabezpieczenia dostępu do kodu nie eliminuje możliwość błędu ludzkiego w p
 Deklaratywna składnia zabezpieczeń używa [atrybutów](../../standard/attributes/index.md) do umieszczania informacji zabezpieczających w [metadanych](../../standard/metadata-and-self-describing-components.md) kodu. Atrybuty mogą być umieszczane na poziomie zestawu, klasy lub elementu członkowskiego, aby wskazać typ żądania, popytu lub zastąpienia, którego chcesz użyć. Żądania są używane w aplikacjach, które są przeznaczone dla środowiska wykonawczego języka wspólnego, aby poinformować system zabezpieczeń środowiska wykonawczego o uprawnieniach, które aplikacja potrzebuje lub nie chce. Żądania i zastąpienia są używane w bibliotekach, aby chronić zasoby przed wywoływaniami lub zastąpić domyślne zachowanie zabezpieczeń.
 
 > [!NOTE]
-> W .NET Framework 4 wprowadzono ważne zmiany w modelu zabezpieczeń i terminologii programu .NET Framework. Aby uzyskać więcej informacji na temat tych zmian, zobacz [Zmiany zabezpieczeń](../security/security-changes.md).
+> W .NET Framework 4 wprowadzono ważne zmiany w modelu zabezpieczeń i terminologii programu .NET Framework. Aby uzyskać więcej informacji na temat tych zmian, zobacz [Zmiany zabezpieczeń](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes).
 
 Aby użyć deklaratywnych wywołań zabezpieczeń, należy zainicjować dane o stanie obiektu uprawnień, tak aby przedstawiał określoną formę uprawnień, których potrzebujesz. Każde wbudowane uprawnienie ma atrybut, <xref:System.Security.Permissions.SecurityAction> który jest przekazywany wyliczenie do opisania typu operacji zabezpieczeń, które chcesz wykonać. Jednak uprawnienia również zaakceptować własne parametry, które są wyłącznie do nich.
 
@@ -166,4 +166,4 @@ Jeśli chcesz, aby aplikacja wykonać operację, która wymaga dostępu do kodu 
 - [Zabezpieczenia dostępu kodu](code-access-security.md)
 - [Podstawy zabezpieczeń dostępu kodu](code-access-security-basics.md)
 - [Atrybuty](../../standard/attributes/index.md)
-- [Składniki samoopisujące się i metadane](../../standard/metadata-and-self-describing-components.md)
+- [Metadane i składniki samookryjące](../../standard/metadata-and-self-describing-components.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 ms.topic: tutorial
 ms.custom: mvc,vs-dotnet
-ms.openlocfilehash: facb9ebebd9ce1904886a946277185ac2c2e4bc4
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 9381873faa8cca1accf95d823f5183a218d28813
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463924"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646415"
 ---
 # <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>Samouczek: Tworzenie pierwszej aplikacji WPF w programie Visual Studio 2019
 
@@ -358,7 +358,7 @@ Na poniższej ilustracji przedstawiono elementy interfejsu użytkownika dodane d
 
 ## <a name="style-controls"></a>Kontrolki stylu
 
-Wygląd różnych elementów jest często taka sama dla wszystkich elementów tego samego typu w interfejsie użytkownika. Interfejs użytkownika używa [stylów,](../controls/styling-and-templating.md) aby występy były wielokrotnego użytku w wielu elementach. Możliwość ponownego użycia stylów pomaga uprościć tworzenie xaml i zarządzanie. Ta sekcja zastępuje atrybuty dla elementu, które zostały zdefiniowane w poprzednich krokach stylami.
+Wygląd różnych elementów jest często taka sama dla wszystkich elementów tego samego typu w interfejsie użytkownika. Interfejs użytkownika używa [stylów,](../../../desktop-wpf/fundamentals/styles-templates-overview.md) aby występy były wielokrotnego użytku w wielu elementach. Możliwość ponownego użycia stylów pomaga uprościć tworzenie xaml i zarządzanie. Ta sekcja zastępuje atrybuty dla elementu, które zostały zdefiniowane w poprzednich krokach stylami.
 
 1. Otwórz *plik Application.xaml* lub *App.xaml*.
 
@@ -481,7 +481,7 @@ Na poniższej ilustracji `ExpenseIt` przedstawiono obie strony aplikacji z forma
 W tym instruktażu można dowiedzieć się wiele technik tworzenia interfejsu użytkownika przy użyciu programu Windows Presentation Foundation (WPF). Teraz powinieneś mieć podstawową wiedzę o blokach konstrukcyjnych aplikacji .NET powiązanej z danymi. Aby uzyskać więcej informacji na temat architektury WPF i modeli programowania, zobacz następujące tematy:
 
 - [Architektura WPF](../advanced/wpf-architecture.md)
-- [Omówienie XAML (WPF)](../advanced/xaml-overview-wpf.md)
+- [Omówienie XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [Omówienie właściwości zależności](../advanced/dependency-properties-overview.md)
 - [Układ](../advanced/layout.md)
 

@@ -7,38 +7,38 @@ helpviewer_keywords:
 - XAML [WPF]
 - Extensible Application Markup Language [WPF]
 ms.assetid: 5d858575-a83b-42df-ad3f-047ed2d6e3c8
-ms.openlocfilehash: 7b4811290d58b946bd9f115cb15d5eb0fda03b1d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 00525e8bd085126e15de9c80bdd5fc0106d565d6
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741879"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646162"
 ---
 # <a name="xaml-in-wpf"></a>XAML w WPF
 
-[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] jest językiem znaczników dla deklaratywnego programowania aplikacji. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] implementuje implementację procesora XAML i zapewnia obsługę języka XAML. Typy [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] są implementowane w taki sposób, że mogą zapewnić wymagany typ kopii zapasowej dla reprezentacji języka XAML. Ogólnie rzecz biorąc, można utworzyć większość [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] interfejsu użytkownika aplikacji w znacznikach XAML.  
+[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]jest językiem znaczników do deklaratywnych programów aplikacji. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]implementuje implementację procesora XAML i zapewnia obsługę języka XAML. Typy [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] są implementowane w taki sposób, że mogą zapewnić wymagane wsparcie typu dla reprezentacji XAML. Ogólnie rzecz biorąc można utworzyć [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] większość interfejsu użytkownika aplikacji w znacznikach XAML.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
 
-[Przegląd XAML (WPF)](xaml-overview-wpf.md)  
+[Omówienie XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)  
 [Szczegóły składni XAML](xaml-syntax-in-detail.md)  
-[Plik codebehind i XAML w WPF](code-behind-and-xaml-in-wpf.md)  
+[Związane z kodem i XAML w WPF](code-behind-and-xaml-in-wpf.md)  
 [Klasy XAML i niestandardowe dla WPF](xaml-and-custom-classes-for-wpf.md)  
-[Rozszerzenia znaczników i WPF XAML](markup-extensions-and-wpf-xaml.md)  
+[Rozszerzenia znacznikowania i WPF XAML](markup-extensions-and-wpf-xaml.md)  
 [Przestrzeń nazw XAML i mapowanie przestrzeni nazw dla WPF XAML](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)  
 [Zakresy nazw WPF XAML](wpf-xaml-namescopes.md)  
 [Style i szablony wbudowane](inline-styles-and-templates.md)  
-[Przetwarzanie białych miejsc w języku XAML](../../../desktop-wpf/xaml-services/white-space-processing.md)  
+[Przetwarzanie w odstępach w formacie XAML](../../../desktop-wpf/xaml-services/white-space-processing.md)  
 [TypeConverters i XAML](typeconverters-and-xaml.md)  
 [Jednostki znaków XML i XAML](../../../desktop-wpf/xaml-services/xml-character-entities.md)  
-[Przestrzeń nazw XAML (x:) — funkcje językowe](../../../desktop-wpf/xaml-services/namespace-language-features.md)  
+[Przestrzeń nazw XAML (x:) Funkcje językowe](../../../desktop-wpf/xaml-services/namespace-language-features.md)  
 [Rozszerzenia WPF XAML](wpf-xaml-extensions.md)  
-[Zgodność znaczników (mc:) — funkcje językowe](markup-compatibility-mc-language-features.md)  
+[Zgodność znaczników (mc:) Funkcje językowe](markup-compatibility-mc-language-features.md)  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
 
 [Architektura WPF](wpf-architecture.md)  
-[Elementy podstawowe](base-elements.md)  
+[Elementy bazy](base-elements.md)  
 [Drzewo elementów i serializacja](element-tree-and-serialization.md)  
 [Właściwości](properties-wpf.md)  
 [Zdarzenia](events-wpf.md)  

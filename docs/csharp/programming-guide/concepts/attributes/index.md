@@ -1,12 +1,12 @@
 ---
 title: Atrybuty (C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: 62424163303417746a67707d9ef34185954db316
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 0379bb76cf18ff836bd14aafb9cb97c30aee8ec7
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389538"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645485"
 ---
 # <a name="attributes-c"></a>Atrybuty (C#)
 
@@ -81,7 +81,7 @@ Lista możliwych `target` wartości jest przedstawiona w poniższej tabeli.
 
 Można określić `field` wartość docelową, aby zastosować atrybut do pola zapasowego utworzonego dla [właściwości automatycznie zaimplementowane](../../../properties.md).
 
-W poniższym przykładzie pokazano, jak zastosować atrybuty do zestawów i modułów. Aby uzyskać więcej informacji, zobacz [Wspólne atrybuty (C#)](common-attributes.md).
+W poniższym przykładzie pokazano, jak zastosować atrybuty do zestawów i modułów. Aby uzyskać więcej informacji, zobacz [Wspólne atrybuty (C#)](../../../language-reference/attributes/global.md).
 
 ```csharp
 using System;
@@ -120,7 +120,7 @@ Aby uzyskać więcej informacji, zobacz:
 - [Tworzenie atrybutów niestandardowych (C#)](creating-custom-attributes.md)  
 - [Uzyskiwanie dostępu do atrybutów przy użyciu odbicia (C#)](accessing-attributes-by-using-reflection.md)  
 - [Jak utworzyć unię C/C++ przy użyciu atrybutów (C#)](how-to-create-a-c-cpp-union-by-using-attributes.md)  
-- [Typowe atrybuty (C#)](common-attributes.md)  
+- [Typowe atrybuty (C#)](../../../language-reference/attributes/global.md)  
 - [Informacje o dzwoniącym (C#)](../../../language-reference/attributes/caller-information.md)  
 
 ## <a name="see-also"></a>Zobacz też

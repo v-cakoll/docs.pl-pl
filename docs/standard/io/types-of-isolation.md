@@ -18,12 +18,12 @@ helpviewer_keywords:
 - isolated storage, types
 - user authentication, isolated storage
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
-ms.openlocfilehash: 9bbd2c3cdca9b2eaee268738bf99189b0be78eba
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: 0e8be9b1d12d40f8135d21abe9dd6cb0b63bb2d8
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635731"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646391"
 ---
 # <a name="types-of-isolation"></a>Typy izolacji
 Dostęp do izolowanego magazynu jest zawsze ograniczony do użytkownika, który go utworzył. Aby zaimplementować ten typ izolacji, środowisko uruchomieniowe języka wspólnego używa tego samego pojęcia tożsamości użytkownika, które rozpoznaje system operacyjny, który jest tożsamością skojarzoną z procesem, w którym kod jest uruchomiony po otwarciu magazynu. Ta tożsamość jest uwierzytelnioną tożsamością użytkownika, ale personifikacja może spowodować dynamiczną zmianę tożsamości bieżącego użytkownika.  
@@ -32,7 +32,7 @@ Dostęp do izolowanego magazynu jest zawsze ograniczony do użytkownika, który 
   
 - Tożsamość domeny reprezentuje dowód aplikacji, która w przypadku aplikacji sieci web może być pełny adres URL. W przypadku kodu hostowanego w powłoki tożsamość domeny może być oparta na ścieżce katalogu aplikacji. Jeśli na przykład plik wykonywalny jest uruchamiany ze ścieżki C:\Office\MyApp.exe, tożsamością domeny będzie C:\Office\MyApp.exe.  
   
-- Tożsamość zestawu jest dowodem zestawu. Może to pochodzić z kryptograficznego podpisu cyfrowego, który może być [silną nazwą](../assembly/strong-named.md)zestawu, wydawcą oprogramowania zestawu lub jego tożsamością adresu URL. Jeśli zestaw ma zarówno silną nazwę, jak i tożsamość wydawcy oprogramowania, używana jest tożsamość wydawcy oprogramowania. Jeśli zestaw pochodzi z Internetu i jest niepodpisany, używana jest tożsamość adresu URL. Aby uzyskać więcej informacji na temat zestawów i silnych nazw, zobacz [Programowanie za pomocą zestawów](/dotnet/standard/assembly/index).  
+- Tożsamość zestawu jest dowodem zestawu. Może to pochodzić z kryptograficznego podpisu cyfrowego, który może być [silną nazwą](../assembly/strong-named.md)zestawu, wydawcą oprogramowania zestawu lub jego tożsamością adresu URL. Jeśli zestaw ma zarówno silną nazwę, jak i tożsamość wydawcy oprogramowania, używana jest tożsamość wydawcy oprogramowania. Jeśli zestaw pochodzi z Internetu i jest niepodpisany, używana jest tożsamość adresu URL. Aby uzyskać więcej informacji na temat zestawów i silnych nazw, zobacz [Programowanie za pomocą zestawów](../assembly/index.md).  
   
 - Mobilne sklepy są przesuwne z użytkownikiem, który ma mobilny profil użytkownika. Pliki są zapisywane w katalogu sieciowym i są pobierane na dowolny komputer, na który użytkownik się loguje. Aby uzyskać więcej informacji na <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Roaming?displayProperty=nameWithType>temat mobilnych profili użytkowników, zobacz .  
   
@@ -106,4 +106,4 @@ Dostęp do izolowanego magazynu jest zawsze ograniczony do użytkownika, który 
 ## <a name="see-also"></a>Zobacz też
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageScope>
-- [Izolowany magazyn](../../../docs/standard/io/isolated-storage.md)
+- [Pamięć masowa izolowana](../../../docs/standard/io/isolated-storage.md)

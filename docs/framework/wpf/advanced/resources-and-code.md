@@ -11,15 +11,15 @@ helpviewer_keywords:
 - procedural code [WPF], accessing resources from
 - resources [WPF], creating with procedural code
 ms.assetid: c1cfcddb-e39c-41c8-a7f3-60984914dfae
-ms.openlocfilehash: 2917c9d15a6195c2d67781d6b2cfb0a5f1c136d3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8074562ddb865b482cf123743796ac68bb529f85
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187172"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646242"
 ---
 # <a name="resources-and-code"></a>Zasoby i kod
-W tym przeglądzie [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] koncentruje się na jak zasoby [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] mogą być dostępne lub tworzone przy użyciu kodu, a nie składni. Aby uzyskać więcej informacji na temat [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ogólnego wykorzystania zasobów i zasobów z perspektywy składni, zobacz [Zasoby XAML](xaml-resources.md).  
+W tym przeglądzie [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] koncentruje się na jak zasoby [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] mogą być dostępne lub tworzone przy użyciu kodu, a nie składni. Aby uzyskać więcej informacji na temat [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ogólnego wykorzystania zasobów i zasobów z perspektywy składni, zobacz [Zasoby XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md).  
 
 <a name="accessing"></a>
 ## <a name="accessing-resources-from-code"></a>Uzyskiwanie dostępu do zasobów z kodu  
@@ -46,5 +46,5 @@ W tym przeglądzie [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Zasoby XAML](xaml-resources.md)
+- [Zasoby XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md)
 - [Tworzenie szablonów i stylów](../../../desktop-wpf/fundamentals/styles-templates-overview.md)

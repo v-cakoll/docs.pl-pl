@@ -3,12 +3,12 @@ title: Witamy w .NET
 description: Wprowadzenie do rodziny technologii .NET.
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: ecdbdf13aa64de0f07b09eb73953e64d66755bb0
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: 64b9b0402631d34adc7ebd3bf8f7bc13416026b0
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635960"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646290"
 ---
 # <a name="welcome-to-net"></a>Witamy w .NET
 
@@ -33,7 +33,7 @@ Aby uzyskać informacje o platformie .NET, sprawdź następujące blogi:
 
 Aby uzyskać informacje na temat najnowszych funkcji dodanych do implementacji platformy .NET i obsługiwanych języków, zobacz następujące artykuły:
 
-- [Co nowego w programie .NET Core](core/whats-new/index.md)
+- [Co nowego w programie .NET Core 3.1](core/whats-new/dotnet-core-3-1.md)
 - [Co nowego w programie .NET Framework](framework/whats-new/index.md)
 - [Co nowego w języku C#](csharp/whats-new/index.md)
 - [Co nowego w programie Visual Basic](visual-basic/getting-started/whats-new.md)
@@ -49,7 +49,7 @@ Ta dokumentacja obejmuje szerokość platformy .NET na różnych platformach i j
 - [F# Przewodnik](fsharp/index.yml)
 - [Przewodnik po podstawowych języka Visual](visual-basic/index.yml)
 - [ML.NET przewodnik](machine-learning/index.yml)
-- [Platforma .NET dla platformy Apache Spark](spark/index.yml)
+- [Platforma .NET for Apache Spark](spark/index.yml)
 - [Architektura aplikacji platformy .NET](architecture/index.yml)
 
 Ponadto można przeglądać [odwołanie do interfejsu API platformy .NET](/dotnet/api).

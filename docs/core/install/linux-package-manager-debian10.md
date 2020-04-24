@@ -4,12 +4,12 @@ description: Użyj menedżera pakietów, aby zainstalować .NET Core SDK i środ
 author: thraka
 ms.author: adegeo
 ms.date: 03/17/2020
-ms.openlocfilehash: fd6f42684aa9fb3ea9429b80f858459698a1b825
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: a312496ed9a26783198cdd038db7ffa2bdc7381e
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134325"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645291"
 ---
 # <a name="debian-10-package-manager---install-net-core"></a>Menedżer pakietów Debian 10 - Zainstaluj .NET Core
 
@@ -19,12 +19,12 @@ W tym artykule opisano, jak zainstalować program .NET Core w debianie 10 za pom
 
 [!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
-## <a name="register-microsoft-key-and-feed"></a>Rejestrowanie klucza firmy Microsoft i źródła danych
+## <a name="add-microsoft-repository-key-and-feed"></a>Dodawanie klucza repozytorium firmy Microsoft i kanału informacyjnego
 
 Przed zainstalowaniem platformy .NET należy:
 
-- Zarejestruj klucz firmy Microsoft.
-- Zarejestruj repozytorium produktów.
+- Dodaj klucz podpisywania pakietu firmy Microsoft do listy zaufanych kluczy.
+- Dodaj repozytorium do menedżera pakietów.
 - Zainstaluj wymagane zależności.
 
 Te operacje należy wykonać tylko jeden raz na każdej maszynie.

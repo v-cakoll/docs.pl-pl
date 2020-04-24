@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: d5657f4081577b2a27bc3c2f6880784015c56060
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: f56ba7d68be107e697d3f732767f0a5f11c1a622
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249698"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644229"
 ---
 # <a name="whats-new-in-net-framework"></a>Co nowego w platformie .NET Framework
 
@@ -201,7 +201,7 @@ Program .NET Framework 4.7.2 zawiera nowe funkcje w następujących obszarach:
 
 - [Klasy podstawowe](#core-472)
 - [ASP.NET](#asp-net472)
-- [Obsługa sieci](#net472)
+- [Networking](#net472)
 - [SQL](#sql472)
 - [WPF](#wpf472)
 - [ClickOnce](#clickonce)
@@ -434,7 +434,7 @@ Możesz dodać SameSite <xref:System.Web.Security.FormsAuthentication> <xref:Sys
 
 <a name="net472" />
 
-#### <a name="networking"></a>Obsługa sieci
+#### <a name="networking"></a>Networking
 
 **Implementacja właściwości HttpClientHandler**
 
@@ -588,8 +588,8 @@ W przypadku aplikacji Windows Forms poprzednie obejście ustawiania świadomośc
 Program .NET Framework 4.7.1 zawiera nowe funkcje w następujących obszarach:
 
 - [Klasy podstawowe](#core471)
-- [Środowisko uruchomieniowe języka wspólnego (CLR)](#clr)
-- [Obsługa sieci](#net471)
+- [Środowisko wykonawcze języka wspólnego (CLR)](#clr)
+- [Networking](#net471)
 - [ASP.NET](#asp-net471)
 
 Ponadto głównym celem w .NET Framework 4.7.1 jest poprawa dostępności, co pozwala aplikacji, aby zapewnić odpowiednie środowisko dla użytkowników technologii ułatwień dostępu. Aby uzyskać informacje na temat ulepszeń ułatwień dostępu w programie .NET Framework 4.7.1, zobacz [Co nowego w ułatwieniach dostępu w programie .NET Framework](whats-new-in-accessibility.md).
@@ -630,7 +630,7 @@ Zmiany w wyrzucaniu elementów bezużytecznych (GC) w .NET Framework 4.7.1 zwię
 
 <a name="net471"/>
 
-#### <a name="networking"></a>Obsługa sieci
+#### <a name="networking"></a>Networking
 
 **Obsługa sha-2 dla Message.HashAlgorithm**
 
@@ -671,7 +671,7 @@ W programie .NET Framework 4.7 i wcześniejszych wersjach ASP.NET umożliwiał d
 Program .NET Framework 4.7 zawiera nowe funkcje w następujących obszarach:
 
 - [Klasy podstawowe](#Core47)
-- [Obsługa sieci](#net47)
+- [Networking](#net47)
 - [ASP.NET](#ASP-NET47)
 - [Windows Communication Foundation (WCF)](#wcf47)
 - [Windows Forms](#wf47)
@@ -695,11 +695,11 @@ Można zobaczyć [przykład .NET Framework 4.7 ulepszenia kryptografii](https://
 
 **Lepsza obsługa znaków sterujących przez DataContractJsonSerializer**
 
-W .NET Framework 4.7 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> serializuje znaki sterujące zgodnie ze standardem ECMAScript 6. To zachowanie jest domyślnie włączone dla aplikacji docelowych .NET Framework 4.7 i jest funkcją opt-in dla aplikacji, które są uruchomione w ramach programu .NET Framework 4.7, ale są przeznaczone dla poprzedniej wersji programu .NET Framework. Aby uzyskać więcej informacji, zobacz [Retargeting Zmiany w .NET Framework 4.7](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md).
+W .NET Framework 4.7 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> klasa serializuje znaki sterujące zgodnie ze standardem ECMAScript 6. To zachowanie jest domyślnie włączone dla aplikacji docelowych .NET Framework 4.7 i jest funkcją opt-in dla aplikacji, które są uruchomione w ramach programu .NET Framework 4.7, ale są przeznaczone dla poprzedniej wersji programu .NET Framework. Aby uzyskać więcej informacji, zobacz sekcję [zgodności aplikacji.](../migration-guide/application-compatibility.md)
 
 <a name="net47" />
 
-#### <a name="networking"></a>Obsługa sieci
+#### <a name="networking"></a>Networking
 
 Program .NET Framework 4.7 dodaje następującą funkcję związaną z siecią:
 
@@ -768,11 +768,11 @@ W programie .NET Framework 4.7 WPF WPF zawiera następujące ulepszenia:
 
 **Obsługa stosu dotykowego/rysika opartego na wiadomościach WM_POINTER systemu Windows**
 
-Teraz masz możliwość korzystania z stosu dotykowego/rysika na podstawie [WM_POINTER wiadomości](https://docs.microsoft.com/previous-versions/windows/desktop/InputMsg/messages) zamiast platformy usług odużynych systemu Windows (WISP). Jest to funkcja opt-in w .NET Framework. Aby uzyskać więcej informacji, zobacz [Retargeting Zmiany w .NET Framework 4.7](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md).
+Teraz masz możliwość korzystania z stosu dotykowego/rysika na podstawie [WM_POINTER wiadomości](https://docs.microsoft.com/previous-versions/windows/desktop/InputMsg/messages) zamiast platformy usług odużynych systemu Windows (WISP). Jest to funkcja opt-in w .NET Framework. Aby uzyskać więcej informacji, zobacz sekcję [zgodności aplikacji.](../migration-guide/application-compatibility.md)
 
 **Nowa implementacja interfejsów API drukowania WPF**
 
-WPF WPF drukowania interfejsów API w <xref:System.Printing.PrintQueue?displayProperty=nameWithType> klasie wywołać interfejsu API pakietu dokumentów [drukowania](/windows/desktop/printdocs/tailored-app-printing-api) systemu Windows zamiast przestarzałe [XPS Print API](/windows/desktop/printdocs/xps-printing). Aby uzyskać wpływ tej zmiany na zgodność aplikacji, zobacz [Retargeting Zmiany w .NET Framework 4.7](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md).
+WPF WPF drukowania interfejsów API w <xref:System.Printing.PrintQueue?displayProperty=nameWithType> klasie wywołać interfejsu API pakietu dokumentów [drukowania](/windows/desktop/printdocs/tailored-app-printing-api) systemu Windows zamiast przestarzałe [XPS Print API](/windows/desktop/printdocs/xps-printing). Aby uzyskać wpływ tej zmiany na zgodność aplikacji, zobacz sekcję [Zgodność aplikacji.](../migration-guide/application-compatibility.md)
 
 <a name="v462" />
 
@@ -1343,7 +1343,7 @@ W poprzednich wersjach WPF słowniki niestandardowe nie rozpoznawały wykluczony
 > [!NOTE]
 > Te nowe formaty plików nie są bezpośrednio obsługiwane przez WPF sprawdzanie pisowni interfejsów API i słowniki niestandardowe dostarczane do WPF WPF w aplikacjach powinny nadal używać plików .lex.
 
-**Próbki**
+**Samples**
 
 Istnieje wiele przykładów WPF w repozytorium GitHub [Microsoft/WPF-Samples.](https://github.com/Microsoft/WPF-Samples) Pomóż nam ulepszyć nasze próbki, wysyłając nam prośbę o pobranie lub otwierając [problem z gitHubem.](https://github.com/Microsoft/WPF-Samples/issues)
 
@@ -1387,7 +1387,7 @@ Interfejs API profilowania bez mana został rozszerzony w następujący sposób:
 
 ### <a name="native-image-generator-ngen-pdbs"></a>Natywne kontrolery PDB generatora obrazów (NGEN)
 
-Śledzenie zdarzeń między komputerami umożliwia klientom profilowanie programu na komputerze A i przeglądanie danych profilowania za pomocą mapowania linii źródłowej na komputerze B. Korzystając z poprzednich wersji programu .NET Framework, użytkownik skopiowałby wszystkie moduły i obrazy natywne z profilowanego komputera analitycznego zawierającego bazę danych IL PDB w celu utworzenia mapowania źródłowego do natywnego. Chociaż ten proces może działać dobrze, gdy pliki są stosunkowo małe, na przykład dla aplikacji telefonicznych, pliki mogą być bardzo duże w systemach stacjonarnych i wymagają dużo czasu na kopiowanie.
+Śledzenie zdarzeń między komputerami umożliwia klientom profilowanie programu na komputerze A i przeglądanie danych profilowania z mapowaniem linii źródłowej na komputerze B. Przy użyciu poprzednich wersji programu .NET Framework użytkownik skopiowałby wszystkie moduły i obrazy natywne z profilowanego komputera do komputera analitycznego zawierającego bazę danych IL PDB w celu utworzenia mapowania źródłowego do natywnego. Chociaż ten proces może działać dobrze, gdy pliki są stosunkowo małe, na przykład dla aplikacji telefonicznych, pliki mogą być bardzo duże w systemach stacjonarnych i wymagają dużo czasu na kopiowanie.
 
 Dzięki kontrolerom PDBs Ngen NGen można utworzyć bazę danych PDB zawierającą mapowanie IL-to-native bez zależności od bazy danych IL PDB. W naszym scenariuszu śledzenia zdarzeń między komputerami wszystko, co jest potrzebne, to skopiować natywnego obrazu PDB, który jest generowany przez komputer A do komputera B i użyć interfejsów API dostępu do [interfejsu debugowania](/visualstudio/debugger/debug-interface-access/debug-interface-access-sdk-reference) do odczytu mapowania źródła do IL PDB i mapowania IL-to-native obrazu PDB. Połączenie obu mapowań zapewnia mapowanie od źródła do natywnego. Ponieważ natywny obraz PDB jest znacznie mniejszy niż wszystkie moduły i obrazy natywne, proces kopiowania z maszyny A do maszyny B jest znacznie szybszy.
 
@@ -1709,7 +1709,7 @@ Program .NET 2015 wprowadza programy .NET Framework 4.6 i .NET Core. Niektóre n
 
   Wartością domyślną jest `false`.
 
-- **Obsługa sieci**
+- **Networking**
 
   - **Ponowne użycie gniazda**
 
@@ -1890,7 +1890,7 @@ Ulepszenia podczas debugowania aplikacji .NET Framework w programie Visual Studi
 
 - Edytuj i kontynuuj dla aplikacji 64-bitowych. Program Visual Studio 2013 obsługuje funkcję Edycja i Kontynuuj dla 64-bitowych aplikacji zarządzanych na komputery, Sklep Windows i Windows Phone. Istniejące ograniczenia pozostają w mocy dla aplikacji 32-bitowych i 64-bitowych (zobacz ostatnią sekcję [artykułu Obsługiwane zmiany kodu (C#).](/visualstudio/debugger/supported-code-changes-csharp)
 
-- Debugowanie z uwzględnieniem asynchronii. Aby ułatwić debugowanie aplikacji asynchronicznych w programie Visual Studio 2013, stos wywołań ukrywa kod infrastruktury dostarczony przez kompilatory do obsługi programowania asynchronialnego, a także łańcuchy w logicznych ramkach nadrzędnych, dzięki czemu można śledzić logiczne wykonanie programu więcej Wyraźnie. Okno Zadania zastępuje okno Zadania równoległe i wyświetla zadania związane z określonym punktem przerwania, a także wyświetla wszystkie inne zadania, które są aktualnie aktywne lub zaplanowane w aplikacji. O tej funkcji można przeczytać w sekcji "Debugowanie z uwzględnieniem asynchronii" [w ogłoszeniu .NET Framework 4.5.1](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/).
+- Debugowanie z uwzględnieniem asynchronii. Aby ułatwić debugowanie aplikacji asynchronicznych w programie Visual Studio 2013, stos wywołań ukrywa kod infrastruktury dostarczony przez kompilatory do obsługi programowania asynchronialnego, a także łańcuchy w logicznych ramek nadrzędnych, dzięki czemu można wykonać logiczne wykonanie programu jaśniej. Okno Zadania zastępuje okno Zadania równoległe i wyświetla zadania związane z określonym punktem przerwania, a także wyświetla wszystkie inne zadania, które są aktualnie aktywne lub zaplanowane w aplikacji. O tej funkcji można przeczytać w sekcji "Debugowanie z uwzględnieniem asynchronii" [w ogłoszeniu .NET Framework 4.5.1](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/).
 
 - Lepsza obsługa wyjątków dla składników środowiska wykonawczego systemu Windows. W systemie Windows 8.1 wyjątki wynikające z aplikacji ze Sklepu Windows zachowują informacje o błędzie, który spowodował wyjątek, nawet w granicach języka. O tej funkcji można przeczytać w sekcji "Tworzenie aplikacji ze Sklepu Windows" [w ogłoszeniu .NET Framework 4.5.1](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/).
 
@@ -1954,7 +1954,7 @@ W programie .NET Framework 4.5 nowe funkcje asynchroniczne zostały dodane do j�
 
 <a name="tools" />
 
-### <a name="tools"></a>Narzędzia
+### <a name="tools"></a>narzędzia
 
 W programie .NET Framework 4.5 generator plików zasobów (Resgen.exe) umożliwia utworzenie pliku resw do użytku w aplikacjach ze Sklepu Windows 8.x z pliku .resources osadzonego w zestawie programu .NET Framework. Aby uzyskać więcej informacji, zobacz [Resgen.exe (Resource File Generator)](../tools/resgen-exe-resource-file-generator.md).
 
@@ -1968,7 +1968,7 @@ Optymalizacja z przewodnikiem profilu zarządzanego (Mpgo.exe) umożliwia skróc
 
 <a name="web" />
 
-### <a name="web"></a>sieć Web
+### <a name="web"></a>Sieć Web
 
 ASP.NET 4.5 i 4.5.1 dodać powiązanie modelu dla formularzy sieci Web, obsługa WebSocket, programy obsługi asynchronii, ulepszenia wydajności i wiele innych funkcji. Więcej informacji zawierają następujące zasoby:
 

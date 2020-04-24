@@ -14,12 +14,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 542e0a84e4c5cfc3750c33fe29cb40d3643e91e3
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: c73a61b8c251b12d5b3dac67535632322779a6af
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80636027"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644053"
 ---
 # <a name="dependency-properties-overview"></a>Omówienie właściwości zależności
 
@@ -123,7 +123,7 @@ W poniższym <xref:System.Windows.Controls.ContentControl.Content%2A> przykładz
 > [!NOTE]
 > Powiązania są traktowane jako wartość lokalna, co oznacza, że jeśli ustawisz inną wartość lokalną, wyeliminujesz powiązanie. Aby uzyskać szczegółowe informacje, zobacz [Pierwszeństwo wartości właściwości zależności](dependency-property-value-precedence.md).
 
-Właściwości zależności lub <xref:System.Windows.DependencyObject> klasy nie są natywnie obsługiwane <xref:System.ComponentModel.INotifyPropertyChanged> na potrzeby tworzenia <xref:System.Windows.DependencyObject> powiadomień o zmianach wartości właściwości źródłowej dla operacji wiązania danych. Aby uzyskać więcej informacji na temat tworzenia właściwości do użycia w powiązaniu danych, które mogą zgłaszać zmiany w docelowym powiązaniu danych, zobacz [Omówienie powiązania danych](../data/data-binding-overview.md).
+Właściwości zależności lub <xref:System.Windows.DependencyObject> klasy nie są natywnie obsługiwane <xref:System.ComponentModel.INotifyPropertyChanged> na potrzeby tworzenia <xref:System.Windows.DependencyObject> powiadomień o zmianach wartości właściwości źródłowej dla operacji wiązania danych. Aby uzyskać więcej informacji na temat tworzenia właściwości do użycia w powiązaniu danych, które mogą zgłaszać zmiany w docelowym powiązaniu danych, zobacz [Omówienie powiązania danych](../../../desktop-wpf/data/data-binding-overview.md).
 
 ### <a name="styles"></a>Style
 Style i szablony są dwa główne scenariusze motywujące do korzystania z właściwości zależności. Style są szczególnie przydatne do ustawiania [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]właściwości definiujących aplikację . Style są zazwyczaj definiowane jako zasoby w języku XAML. Style współdziałają z systemem właściwości, ponieważ zazwyczaj zawierają "setters" dla określonych właściwości, a także "wyzwalacze", które zmieniają wartość właściwości na podstawie wartości w czasie rzeczywistym dla innej właściwości.
@@ -134,7 +134,7 @@ Poniższy przykład tworzy prosty styl (który <xref:System.Windows.FrameworkEle
 
 [!code-xaml[PropertiesOvwSupport#SimpleStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#simplestyle)]
 
-Aby uzyskać więcej informacji, zobacz [Stylowanie i tworzenie szablonów](../controls/styling-and-templating.md).
+Aby uzyskać więcej informacji, zobacz [Stylowanie i tworzenie szablonów](../../../desktop-wpf/fundamentals/styles-templates-overview.md).
 
 ### <a name="animations"></a>Animacje
 Właściwości zależności mogą być animowane. Gdy animacja jest stosowana i jest uruchomiona, animowana wartość działa z wyższym priorytetem niż jakakolwiek wartość (na przykład wartość lokalna), która ma właściwość w przeciwnym razie.

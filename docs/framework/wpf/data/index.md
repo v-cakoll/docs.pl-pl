@@ -8,21 +8,21 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], data
 - data [WPF]
 ms.assetid: dea454e2-abd8-4c53-ba37-d3ed53187d64
-ms.openlocfilehash: aa8f872e807eccb81d0f1ca2c838485bb254c7c0
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: a1ea8e10225eb9a4dcd4f20a23820c3757445fbf
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460288"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646447"
 ---
 # <a name="data"></a>Dane
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] powiązania danych zapewnia prosty i spójny sposób, w jaki aplikacje mogą być obecne i współpracujące z danymi. Elementy mogą być powiązane z danymi z różnych źródeł danych w postaci obiektów środowiska uruchomieniowego języka wspólnego (CLR) i XML. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] udostępnia również mechanizm transferu danych za pomocą operacji przeciągania i upuszczania.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]Wiązanie danych zapewnia prosty i spójny sposób prezentowania danych i interakcji z nimi. Elementy mogą być powiązane z danymi z różnych źródeł danych w postaci obiektów środowiska wykonawczego języka wspólnego (CLR) i XML. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]zapewnia również mechanizm przesyłania danych za pośrednictwem operacji przeciągania i upuszczania.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Powiązanie danych](data-binding-wpf.md)  
- [Przeciąganie i upuszczanie](../advanced/drag-and-drop.md)  
+ [Powiązanie danych](../../../desktop-wpf/data/data-binding-overview.md)  
+ [Przeciągnij i opuść](../advanced/drag-and-drop.md)  
   
-## <a name="reference"></a>Tematy pomocy  
+## <a name="reference"></a>Dokumentacja  
  <xref:System.Windows.Data>  
   
  <xref:System.Windows.Data.Binding>  
@@ -32,13 +32,13 @@ ms.locfileid: "73460288"
  <xref:System.Windows.Controls.DataTemplateSelector>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Kontrolki](../controls/index.md)  
+ [Formanty](../controls/index.md)  
   
  [Tworzenie szablonów i stylów](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
   
  [Powiązanie danych](../advanced/optimizing-performance-data-binding.md)  
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Przewodnik: moja pierwsza aplikacja klasyczna WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [Instruktaż: Moja pierwsza aplikacja komputerowa WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
 - [Przewodnik: przechowywanie w pamięci podręcznej danych aplikacji w aplikacji WPF](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

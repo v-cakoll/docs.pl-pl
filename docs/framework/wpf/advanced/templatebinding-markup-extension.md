@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XAML [WPF], TemplateBinding markup extension
 - TemplateBinding markup extensions [WPF]
 ms.assetid: 1d25bbfc-dbc2-499d-9f12-419d23d4ac6a
-ms.openlocfilehash: 8cebbf717f66b072bc84b2068193ff2fe76ea87b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8c631a5a78db90187f0375181d4d4d1832159b7d
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187282"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646168"
 ---
 # <a name="templatebinding-markup-extension"></a>TemplateBinding — Rozszerzenie znaczników
 Łączy wartość właściwości w szablonie formantu w taki sposób, że staje się ona wartością innej właściwości w formancie z szablonem.  
@@ -64,8 +64,8 @@ ms.locfileid: "79187282"
 
 - <xref:System.Windows.Style>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [Tworzenie szablonów i stylów](../controls/styling-and-templating.md)
-- [Przegląd XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
+- [Tworzenie szablonów i stylów](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
+- [Omówienie XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [Rozszerzenia znacznikowania i WPF XAML](markup-extensions-and-wpf-xaml.md)
 - [RelativeSource MarkupExtension](relativesource-markupextension.md)
 - [Rozszerzenie znaczników powiązania](binding-markup-extension.md)

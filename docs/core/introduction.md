@@ -4,16 +4,16 @@ description: .NET Core to modułowa, wydajna implementacja platformy .NET do two
 author: richlander
 ms.date: 03/26/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: a20cdda5cbd366d04e7ee9e8df3d1b15d10c1f4a
-ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
+ms.openlocfilehash: f99b446bbd38b2b814c13afa13ab34cd5c9aa086
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80391161"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645525"
 ---
 # <a name="introduction-to-net-core"></a>Wprowadzenie do platformy .NET Core
 
-[.NET Core](about.md) jest platformą programową [typu open source](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT)i ogólnego przeznaczenia. Aplikacje .NET Core dla systemów Windows, macOS i Linux można tworzyć dla procesorów x64, x86, ARM32 i ARM64 w wielu językach programowania. Struktury i interfejsy API są dostarczane dla [chmury,](/aspnet/core/) [IoT](/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0), [interfejsu użytkownika klienta](/dotnet/desktop-wpf/overview/index)i uczenia [maszynowego.](/dotnet/machine-learning/)
+[.NET Core](about.md) jest platformą programową [typu open source](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT)i ogólnego przeznaczenia. Aplikacje .NET Core dla systemów Windows, macOS i Linux można tworzyć dla procesorów x64, x86, ARM32 i ARM64 w wielu językach programowania. Struktury i interfejsy API są dostarczane dla [chmury,](/aspnet/core/) [IoT](/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0), [interfejsu użytkownika klienta](../desktop-wpf/overview/index.md)i uczenia [maszynowego.](/dotnet/machine-learning/)
 
 [Pobierz podstawowy sdk .NET,](https://dotnet.microsoft.com/download) aby wypróbować program .NET Core na swoim komputerze. Najnowsza wersja to [.NET Core 3.1](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-1/).
 

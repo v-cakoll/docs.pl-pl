@@ -15,18 +15,18 @@ helpviewer_keywords:
 - security policy [.NET Framework], modifying
 - manually editing security configuration files
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
-ms.openlocfilehash: 792d89351b3759984b085fd8aee9c3ae8e012c09
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a5a4068d0bf6f6f158ea9b2880785e227f96243d
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180416"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645569"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (Narzędzie zasad zabezpieczeń dostępu kodu)
 Narzędzie (Caspol.exe) sprawdzania zabezpieczeń dostępu kodu (CAS) pozwala użytkownikom i administratorom na modyfikowanie zasad bezpieczeństwa na poziomie zasad komputera, na poziomie zasad użytkownika i na poziomie zasad przedsiębiorstwa.  
   
 > [!IMPORTANT]
-> Począwszy od programu .NET Framework 4, program Caspol.exe nie wpływa na zasady CAS, chyba że [ \<element> legacyCasPolicy](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) jest ustawiony na `true`. Wszelkie ustawienia pokazywane lub modyfikowane przez narzędzie CasPol.exe wpływają tylko na aplikacje, w których są stosowane zasady CAS. Aby uzyskać więcej informacji, zobacz [Zmiany zabezpieczeń](../security/security-changes.md).  
+> Począwszy od programu .NET Framework 4, program Caspol.exe nie wpływa na zasady CAS, chyba że [ \<element> legacyCasPolicy](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) jest ustawiony na `true`. Wszelkie ustawienia pokazywane lub modyfikowane przez narzędzie CasPol.exe wpływają tylko na aplikacje, w których są stosowane zasady CAS. Aby uzyskać więcej informacji, zobacz [Zmiany zabezpieczeń](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes).  
   
 > [!NOTE]
 > Na komputerach 64-bitowych dostępne są obie, 32-bitowa i 64-bitowa, wersje zasad zabezpieczeń. Aby upewnić się, że zmiany zasad mają zastosowanie do obu, 32-bitowych i 64-bitowych aplikacji, należy uruchomić obie, 32-bitową i 64-bitową, wersję Caspol.exe.  
@@ -54,7 +54,7 @@ caspol [options]
 |**-customall**  *ścieżka*<br /><br /> lub<br /><br /> **ścieżka -ca***path*  |Wskazuje, że wszystkie opcje następujące po niej, mają zastosowanie do zasad komputera, przedsiębiorstwa i określonych niestandardowych zasad użytkownika. Należy określić lokalizację pliku konfiguracji zabezpieczeń użytkownika niestandardowego za pomocą argumentu *path.*|  
 |**-cu**[**stomuser**] *ścieżka*|Umożliwia administrację niestandardowymi zasadami użytkownika, które nie należą do użytkownika, w którego imieniu program Caspol.exe jest aktualnie uruchomiony. Należy określić lokalizację pliku konfiguracji zabezpieczeń użytkownika niestandardowego za pomocą argumentu *path.*|  
 |**-przedsiębiorstwo**<br /><br /> lub<br /><br /> **-pl**|Wskazuje, że wszystkie opcje następujące po niej, mają zastosowanie do poziomu zasad przedsiębiorstwa. Użytkownicy, którzy nie są administratorami przedsiębiorstwa, nie posiadają wystarczających praw, aby modyfikować zasady przedsiębiorstwa, jednak mogą je wyświetlać. W scenariuszach bez przedsiębiorstwa zasady te domyślnie nie kolidują z zasadami komputera i użytkownika.|  
-|**-e**[**xecution**] {**na** &#124; **wyłączony }**|Włącza lub wyłącza mechanizm sprawdzający uprawnienia uruchamiania przed rozpoczęciem wykonywania kodu. **Uwaga:**  Ten przełącznik jest usuwany w .NET Framework 4 i nowszych wersjach. Aby uzyskać więcej informacji, zobacz [Zmiany zabezpieczeń](../security/security-changes.md).|  
+|**-e**[**xecution**] {**na** &#124; **wyłączony }**|Włącza lub wyłącza mechanizm sprawdzający uprawnienia uruchamiania przed rozpoczęciem wykonywania kodu. **Uwaga:**  Ten przełącznik jest usuwany w .NET Framework 4 i nowszych wersjach. Aby uzyskać więcej informacji, zobacz [Zmiany zabezpieczeń](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes).|  
 |**-f**[**orce**]|Pomija test samolikwidacji narzędzia i zmienia zasady określone przez użytkownika. Normalnie Caspol.exe sprawdza, czy dowolne zmiany zasad mogą uniemożliwić programowi Caspol.exe poprawne działanie; jeśli tak, Caspol.exe nie zapisze zmian zasad i wyświetli komunikat o błędzie. Aby wymusić na caspol.exe zmianę zasad, nawet jeśli uniemożliwia to uruchomienie caspol.exe, użyj opcji **-force.**|  
 |**-h**[**elp**]|Wyświetla składnię polecenia i opcje programu Caspol.exe.|  
 |**-l**[**ist**]|Wypisuje hierarchię grup kodu i zestawy uprawnień dla określonego komputera, użytkownika, przedsiębiorstwa lub wszystkich poziomów zasad. Caspol.exe wyświetla najpierw etykietę grupy kodu, następnie nazwę, jeśli nie jest pusta.|  
@@ -73,7 +73,7 @@ caspol [options]
 |**-resetlockdown**<br /><br /> lub<br /><br /> **-rsld**|Zwraca zasadę do bardziej restrykcyjnej wersji stanu domyślnego i utrzymuje ją na dysku; tworzy kopię zapasową poprzedniej zasady komputera i utrzymuje `security.config.bac`ją w pliku o nazwie .  Zablokowane zasady są podobne do zasad domyślnych, z tą różnicą, `Local Intranet` `Trusted Sites`że `Internet` zasada nie udziela uprawnień do kodu z , i stref i odpowiednich grup kodu nie mają grup kodów podrzędnych.|  
 |**-assembly_file grupy rozwiązywania** *assembly_file*<br /><br /> lub<br /><br /> **-rsg**  *assembly_file*|Pokazuje grupy kodów, do których należy określony zestaw (*assembly_file).* Domyślnie ta opcja wyświetla poziomy zasad komputera, użytkownika i przedsiębiorstwa, do których należy zestaw. Aby wyświetlić tylko jeden poziom zasad, użyj tej opcji z opcją **-machine**, **-user**lub **-enterprise.**|  
 |**-assembly_file assembly_file** *assembly_file*<br /><br /> lub<br /><br /> **-rsp** *assembly_file*|Wyświetla wszystkie uprawnienia, które zostaną przydzielone zestawowi, przez określony (lub domyślny) poziom zasad bezpieczeństwa, gdyby zestaw mógł być uruchomiony. *Argument assembly_file* określa zestaw. Jeśli określisz opcję **-all,** caspol.exe oblicza uprawnienia do zestawu na podstawie zasad użytkownika, komputera i przedsiębiorstwa; w przeciwnym razie obowiązują domyślne reguły zachowania.|  
-|**-s**[**ecurity**] {**na** &#124; **wyłączony }**|Włącza lub wyłącza zabezpieczenia dostępu kodu. Określenie opcji **-s off** nie powoduje wyłączenia zabezpieczeń opartych na rolach. **Uwaga:**  Ten przełącznik jest usuwany w .NET Framework 4 i nowszych wersjach. Aby uzyskać więcej informacji, zobacz [Zmiany zabezpieczeń](../security/security-changes.md). **Uwaga:**  Gdy zabezpieczenia dostępu do kodu są wyłączone, wszystkie żądania dostępu do kodu powiodą się. Wyłączenie zabezpieczeń dostępu kodu sprawia, że system staje się podatny na ataki złośliwego kodu, takiego jak wirusy i robaki. Wyłączenie zabezpieczeń wpływa na zwiększenie wydajności, ale powinno być stosowane tylko wtedy, gdy zastosowano wszelkie inne zabezpieczenia, aby zapewnić, że ogólne zabezpieczenia systemu nie zostały naruszone. Przykłady innych środków ostrożności to: odłączenie od sieci publicznych, fizyczne zabezpieczanie komputerów i tak dalej.|  
+|**-s**[**ecurity**] {**na** &#124; **wyłączony }**|Włącza lub wyłącza zabezpieczenia dostępu kodu. Określenie opcji **-s off** nie powoduje wyłączenia zabezpieczeń opartych na rolach. **Uwaga:**  Ten przełącznik jest usuwany w .NET Framework 4 i nowszych wersjach. Aby uzyskać więcej informacji, zobacz [Zmiany zabezpieczeń](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes). **Uwaga:**  Gdy zabezpieczenia dostępu do kodu są wyłączone, wszystkie żądania dostępu do kodu powiodą się. Wyłączenie zabezpieczeń dostępu kodu sprawia, że system staje się podatny na ataki złośliwego kodu, takiego jak wirusy i robaki. Wyłączenie zabezpieczeń wpływa na zwiększenie wydajności, ale powinno być stosowane tylko wtedy, gdy zastosowano wszelkie inne zabezpieczenia, aby zapewnić, że ogólne zabezpieczenia systemu nie zostały naruszone. Przykłady innych środków ostrożności to: odłączenie od sieci publicznych, fizyczne zabezpieczanie komputerów i tak dalej.|  
 |**-u**[**ser**]|Wskazuje, że wszystkie opcje następujące po niej, mają zastosowanie do poziomu zasad użytkownika, w którego imieniu Caspol.exe jest uruchomiony. Dla użytkowników nienadnadistracyjnych **- użytkownik** jest ustawieniem domyślnym.|  
 |**-?**|Wyświetla składnię polecenia i opcje programu Caspol.exe.|  
   
@@ -247,4 +247,4 @@ caspol -all -resolveperm testassembly
 ## <a name="see-also"></a>Zobacz też
 
 - [narzędzia](index.md)
-- [Wiersz polecenia](developer-command-prompt-for-vs.md)
+- [Wiersze poleceń](developer-command-prompt-for-vs.md)

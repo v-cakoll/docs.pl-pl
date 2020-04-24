@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 2c997092-72c6-4767-bc84-74267f4eee72
-ms.openlocfilehash: 7d52d951d4fa4df83bbcca6b4cb479e18e532d2a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f6519675ebf3624152e1077e7582f04e38b1dce9
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79141631"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644040"
 ---
 # <a name="base-elements-overview"></a>Przegląd Elementy bazy
 Wysoki procent klas [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] w są uzyskiwane z czterech klas, które są powszechnie określane w dokumentacji SDK jako klasy elementów podstawowych. Klasy te <xref:System.Windows.UIElement> <xref:System.Windows.FrameworkElement>są <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkContentElement>, i . Klasa <xref:System.Windows.DependencyObject> jest również powiązana, ponieważ jest to <xref:System.Windows.UIElement> wspólna klasa podstawowa zarówno<xref:System.Windows.ContentElement>  
@@ -47,7 +47,7 @@ Wysoki procent klas [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptl
   
 - Obsługa stylów i scenochłów. Aby uzyskać więcej <xref:System.Windows.Style> informacji, zobacz [omówienie scenochorystur](../graphics-multimedia/storyboards-overview.md).  
   
-- Obsługa powiązania danych. Aby uzyskać więcej informacji, zobacz [Omówienie powiązania danych](../data/data-binding-overview.md).  
+- Obsługa powiązania danych. Aby uzyskać więcej informacji, zobacz [Omówienie powiązania danych](../../../desktop-wpf/data/data-binding-overview.md).  
   
 - Obsługa dynamicznych odwołań do zasobów. Aby uzyskać więcej informacji, zobacz [Zasoby XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md).  
   
@@ -67,7 +67,7 @@ Wysoki procent klas [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptl
   
 - Obsługa stylów i scenochłów. Aby uzyskać więcej <xref:System.Windows.Style> informacji, zobacz [omówienie animacji](../graphics-multimedia/animation-overview.md).  
   
-- Obsługa powiązania danych. Aby uzyskać więcej informacji, zobacz [Omówienie powiązania danych](../data/data-binding-overview.md).  
+- Obsługa powiązania danych. Aby uzyskać więcej informacji, zobacz [Omówienie powiązania danych](../../../desktop-wpf/data/data-binding-overview.md).  
   
 - Obsługa dynamicznych odwołań do zasobów. Aby uzyskać więcej informacji, zobacz [Zasoby XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md).  
   

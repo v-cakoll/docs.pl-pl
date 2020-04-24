@@ -4,12 +4,12 @@ description: Użyj menedżera pakietów, aby zainstalować .NET Core SDK i środ
 author: thraka
 ms.author: adegeo
 ms.date: 03/17/2020
-ms.openlocfilehash: 9e99cd8649e907fbbf8ffac7bfc008610396a31c
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 13aa23cb82b2e135ea818aed8d2a7e0e25366afd
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134170"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645638"
 ---
 # <a name="ubuntu-1604-package-manager---install-net-core"></a>Ubuntu 16.04 Package Manager - Zainstaluj .NET Core
 
@@ -19,12 +19,12 @@ W tym artykule opisano, jak zainstalować program .NET Core na Ubuntu 16.04 za p
 
 [!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
-## <a name="register-microsoft-key-and-feed"></a>Rejestrowanie klucza firmy Microsoft i źródła danych
+## <a name="add-microsoft-repository-key-and-feed"></a>Dodawanie klucza repozytorium firmy Microsoft i kanału informacyjnego
 
 Przed zainstalowaniem platformy .NET należy:
 
-- Zarejestruj klucz firmy Microsoft.
-- Zarejestruj repozytorium produktów.
+- Dodaj klucz podpisywania pakietu firmy Microsoft do listy zaufanych kluczy.
+- Dodaj repozytorium do menedżera pakietów.
 - Zainstaluj wymagane zależności.
 
 Te operacje należy wykonać tylko jeden raz na każdej maszynie.

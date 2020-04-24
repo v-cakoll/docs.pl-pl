@@ -4,35 +4,35 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
-ms.openlocfilehash: 6738b9e66c1223ea4ec50c070a421d119fd30bc4
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: a8cc227703e81e5de9dea7e44e10dfecca2cd05c
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458691"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646468"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>Wskazówki: Tworzenie przycisku przy użyciu XAML
 
-Celem tego instruktażu jest nauczenie się, jak utworzyć animowany przycisk do użycia w aplikacji Windows Presentation Foundation (WPF). W tym instruktażu zastosowano style i szablon w celu utworzenia niestandardowego zasobu przycisku, który umożliwia ponowne użycie kodu i rozdzielenie logiki przycisku z deklaracji przycisku. Ten Instruktaż jest zapisywana w całości w [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].
+Celem tego przewodnika jest, aby dowiedzieć się, jak utworzyć przycisk animowany do użycia w aplikacji Windows Presentation Foundation (WPF). W tym instruktażu użyto stylów i szablonu do utworzenia dostosowanego zasobu przycisku, który umożliwia ponowne użycie kodu i oddzielenie logiki przycisku od deklaracji przycisków. Ten instruktaż jest napisany [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]w całości w .
 
 > [!IMPORTANT]
-> Ten przewodnik przeprowadzi Cię przez kroki tworzenia aplikacji przez wpisanie lub skopiowanie i wklejenie [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] do programu Visual Studio. Jeśli wolisz dowiedzieć się, jak używać projektanta do tworzenia tej samej aplikacji, zobacz [Tworzenie przycisku przy użyciu programu Microsoft Expression Blend](walkthrough-create-a-button-by-using-microsoft-expression-blend.md).
+> W tym przewodniku przedstawiono kroki tworzenia aplikacji przez wpisanie lub skopiowanie [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] i wklejenie do programu Visual Studio. Jeśli wolisz dowiedzieć się, jak utworzyć tę samą aplikację za pomocą [projektanta,](walkthrough-create-a-button-by-using-microsoft-expression-blend.md)zobacz Tworzenie przycisku przy użyciu programu Microsoft Expression Blend .
 
 Na poniższej ilustracji przedstawiono gotowe przyciski.
 
-![Przyciski niestandardowe, które zostały utworzone przy użyciu języka XAML](./media/custom-button-animatedbutton-5.gif "custom_button_AnimatedButton_5")
+![Przyciski niestandardowe utworzone przy użyciu języka XAML](./media/custom-button-animatedbutton-5.gif "custom_button_AnimatedButton_5")
 
-## <a name="create-basic-buttons"></a>Utwórz podstawowe przyciski
+## <a name="create-basic-buttons"></a>Tworzenie przycisków podstawowych
 
-Zacznijmy od utworzenia nowego projektu i dodania do okna kilku przycisków.
+Zacznijmy od utworzenia nowego projektu i dodania kilku przycisków do okna.
 
 ### <a name="to-create-a-new-wpf-project-and-add-buttons-to-the-window"></a>Aby utworzyć nowy projekt WPF i dodać przyciski do okna
 
 1. Uruchom program Visual Studio.
 
-2. **Utwórz nowy projekt WPF:** W menu **plik** wskaż polecenie **Nowy**, a następnie kliknij pozycję **projekt**. Znajdź szablon **aplikacji systemu Windows (WPF)** i Nadaj projektowi nazwę "AnimatedButton". Spowoduje to utworzenie szkieletu dla aplikacji.
+2. **Utwórz nowy projekt WPF:** W menu **Plik** wskaż polecenie **Nowy**, a następnie kliknij polecenie **Projekt**. Znajdź szablon **aplikacji systemu Windows (WPF)** i nazwij projekt "AnimatedButton". Spowoduje to utworzenie szkieletu dla aplikacji.
 
-3. **Dodaj podstawowe przyciski domyślne:** Wszystkie pliki potrzebne do tego przewodnika są udostępniane przez szablon. Otwórz plik window1. XAML, klikając go dwukrotnie w Eksplorator rozwiązań. Domyślnie w window1. XAML znajduje się element <xref:System.Windows.Controls.Grid>. Usuń <xref:System.Windows.Controls.Grid> element i Dodaj kilka przycisków do strony [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], wpisując lub kopiując i wklejając następujący wyróżniony kod do window1. XAML:
+3. **Dodaj podstawowe przyciski domyślne:** Wszystkie pliki potrzebne do tego przewodnika są dostarczane przez szablon. Otwórz plik Window1.xaml, klikając go dwukrotnie w Eksploratorze rozwiązań. Domyślnie istnieje <xref:System.Windows.Controls.Grid> element w window1.xaml. Usuń <xref:System.Windows.Controls.Grid> element i dodaj kilka [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] przycisków do strony, wpisując lub skopiując i wklejając następujący wyróżniony kod do pliku Window1.xaml:
 
     ```xaml
     <Window x:Class="AnimatedButton.Window1"
@@ -49,19 +49,19 @@ Zacznijmy od utworzenia nowego projektu i dodania do okna kilku przycisków.
     </Window>
     ```
 
-     Naciśnij klawisz F5, aby uruchomić aplikację. powinien pojawić się zestaw przycisków, które wyglądają jak na poniższej ilustracji.
+     Naciśnij klawisz F5, aby uruchomić aplikację; powinien zostać wyświetlony zestaw przycisków, który wygląda jak na poniższym rysunku.
 
      ![Trzy podstawowe przyciski](./media/custom-button-animatedbutton-1.gif "custom_button_AnimatedButton_1")
 
-     Teraz, gdy utworzono podstawowe przyciski, zakończysz pracę w pliku window1. XAML. Pozostała część przewodnika koncentruje się na pliku App. XAML, definiowaniu stylów i szablonie przycisków.
+     Po utworzeniu podstawowych przycisków zakończono pracę w pliku Window1.xaml. Pozostała część przewodnika koncentruje się na pliku app.xaml, definiując style i szablon przycisków.
 
-## <a name="set-basic-properties"></a>Ustaw właściwości podstawowe
+## <a name="set-basic-properties"></a>Ustawianie podstawowych właściwości
 
-Następnie Skonfigurujmy niektóre właściwości na tych przyciskach, aby kontrolować wygląd i układ przycisku. Zamiast ustawiania właściwości na przyciskach indywidualnie, użyjesz zasobów do definiowania właściwości przycisku dla całej aplikacji. Zasoby aplikacji są koncepcyjnie podobne do zewnętrznych kaskadowe arkusze stylów (CSS) dla stron sieci Web; jednak zasoby są znacznie bardziej wydajne niż kaskadowe arkusze stylów (CSS), jak widać na końcu tego instruktażu. Aby dowiedzieć się więcej o zasobach, zobacz [zasoby XAML](../advanced/xaml-resources.md).
+Następnie ustawmy niektóre właściwości na tych przyciskach, aby kontrolować wygląd i układ przycisków. Zamiast ustawiać właściwości na przyciskach indywidualnie, można użyć zasobów do definiowania właściwości przycisku dla całej aplikacji. Zasoby aplikacji są koncepcyjnie podobne do zewnętrznych kaskadowych arkuszy stylów (CSS) dla stron sieci Web; jednak zasoby są znacznie bardziej wydajne niż kaskadowe arkusze stylów (CSS), jak widać pod koniec tego przewodnika. Aby dowiedzieć się więcej o zasobach, zobacz [Zasoby XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md).
 
-### <a name="to-use-styles-to-set-basic-properties-on-the-buttons"></a>Aby użyć stylów do ustawiania podstawowych właściwości na przyciskach
+### <a name="to-use-styles-to-set-basic-properties-on-the-buttons"></a>Aby użyć stylów do ustawiania podstawowych właściwości przycisków
 
-1. **Zdefiniuj blok Application. Resources:** Otwórz plik App. XAML i Dodaj następujące wyróżnione znaczniki, jeśli jeszcze tego nie zrobiono:
+1. **Zdefiniuj blok Application.Resources:** Otwórz plik app.xaml i dodaj następujące wyróżnione znaczniki, jeśli jeszcze go tam nie ma:
 
     ```xaml
     <Application x:Class="AnimatedButton.App"
@@ -75,9 +75,9 @@ Następnie Skonfigurujmy niektóre właściwości na tych przyciskach, aby kontr
     </Application>
     ```
 
-     Zakres zasobów jest określany na podstawie tego, gdzie definiujesz zasób. Zdefiniowanie zasobów w `Application.Resources` w pliku App. XAML umożliwia użycie zasobu z dowolnego miejsca w aplikacji. Aby dowiedzieć się więcej o definiowaniu zakresu zasobów, zobacz [zasoby XAML](../advanced/xaml-resources.md).
+     Zakres zasobu jest określany przez miejsce definiowania zasobu. Definiowanie zasobów `Application.Resources` w pliku app.xaml umożliwia użycie zasobu z dowolnego miejsca w aplikacji. Aby dowiedzieć się więcej na temat definiowania zakresu zasobów, zobacz [Zasoby XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md).
 
-2. **Utwórz styl i Zdefiniuj dla niego podstawowe wartości właściwości:** Dodaj następujący znacznik do bloku `Application.Resources`. Ten znacznik tworzy <xref:System.Windows.Style>, które mają zastosowanie do wszystkich przycisków w aplikacji, ustawiając <xref:System.Windows.FrameworkElement.Width%2A> przycisków na 90 i <xref:System.Windows.FrameworkElement.Margin%2A> do 10:
+2. **Utwórz styl i zdefiniuj za nim podstawowe wartości właściwości:** Dodaj do bloku następujące `Application.Resources` znaczniki. Ten znacznik <xref:System.Windows.Style> tworzy, który ma zastosowanie do wszystkich <xref:System.Windows.FrameworkElement.Width%2A> przycisków w aplikacji, ustawienie <xref:System.Windows.FrameworkElement.Margin%2A> przycisków do 90 i do 10:
 
     ```xaml
     <Application.Resources>
@@ -88,13 +88,13 @@ Następnie Skonfigurujmy niektóre właściwości na tych przyciskach, aby kontr
     </Application.Resources>
     ```
 
-     Właściwość <xref:System.Windows.Style.TargetType%2A> określa, że styl dotyczy wszystkich obiektów typu <xref:System.Windows.Controls.Button>. Każda <xref:System.Windows.Setter> ustawia dla <xref:System.Windows.Style>inną wartość właściwości. W związku z tym, w tym momencie każdy przycisk w aplikacji ma szerokość 90 i margines 10.  Jeśli naciśniesz klawisz F5, aby uruchomić aplikację, zobaczysz następujące okno.
+     Właściwość <xref:System.Windows.Style.TargetType%2A> określa, że styl ma zastosowanie <xref:System.Windows.Controls.Button>do wszystkich obiektów typu . Każdy <xref:System.Windows.Setter> ustawia inną wartość <xref:System.Windows.Style>właściwości dla . W związku z tym w tym momencie każdy przycisk w aplikacji ma szerokość 90 i margines 10.  Jeśli naciśniesz klawisz F5, aby uruchomić aplikację, zostanie wyświetlenie następującego okna.
 
      ![Przyciski o szerokości 90 i marginesie 10](./media/custom-button-animatedbutton-2.gif "custom_button_AnimatedButton_2")
 
-     Istnieje dużo więcej możliwości z stylami, w tym różne sposoby dostosowania obiektów do celów, określania złożonych wartości właściwości, a nawet style jako dane wejściowe dla innych stylów. Aby uzyskać więcej informacji, zobacz [Style i tworzenia szablonów](../../../desktop-wpf/fundamentals/styles-templates-overview.md).
+     Istnieje znacznie więcej można zrobić ze stylami, w tym wiele sposobów, aby dostosować, jakie obiekty są kierowane, określając złożone wartości właściwości, a nawet przy użyciu stylów jako dane wejściowe dla innych stylów. Aby uzyskać więcej informacji, zobacz [Stylowanie i tworzenie szablonów](../../../desktop-wpf/fundamentals/styles-templates-overview.md).
 
-3. **Ustaw wartość właściwości styl na zasób:** Zasoby umożliwiają proste użycie często zdefiniowanych obiektów i wartości. Jest to szczególnie przydatne do definiowania złożonych wartości przy użyciu zasobów, aby kod był bardziej modularny. Dodaj następujące wyróżnione znaczniki do pliku App. XAML.
+3. **Ustaw wartość właściwości stylu na zasób:** Zasoby umożliwiają prosty sposób ponownego użycia powszechnie zdefiniowanych obiektów i wartości. Jest to szczególnie przydatne do definiowania złożonych wartości przy użyciu zasobów, aby kod bardziej modułowe. Dodaj następujące wyróżnione znaczniki do pliku app.xaml.
 
     ```xaml
     <Application.Resources>
@@ -111,21 +111,21 @@ Następnie Skonfigurujmy niektóre właściwości na tych przyciskach, aby kontr
     </Application.Resources>
     ```
 
-     Bezpośrednio w bloku `Application.Resources` został utworzony zasób o nazwie "GrayBlueGradientBrush". Ten zasób definiuje gradient poziomy. Tego zasobu można używać jako wartości właściwości z dowolnego miejsca w aplikacji, w tym do metody ustawiającej style przycisku dla właściwości <xref:System.Windows.Controls.Control.Background%2A>. Teraz wszystkie przyciski mają <xref:System.Windows.Controls.Control.Background%2A> wartość właściwości tego gradientu.
+     Bezpośrednio pod `Application.Resources` blokiem utworzono zasób o nazwie "GrayBlueGradientBrush". Ten zasób definiuje gradient poziomy. Ten zasób może służyć jako wartość właściwości z dowolnego miejsca w <xref:System.Windows.Controls.Control.Background%2A> aplikacji, w tym wewnątrz ustawiacza stylów przycisków dla właściwości. Teraz wszystkie przyciski <xref:System.Windows.Controls.Control.Background%2A> mają wartość właściwości tego gradientu.
 
-     Naciśnij klawisz F5, aby uruchomić aplikację. Powinien wyglądać podobnie do poniższego.
+     Naciśnij klawisz F5, aby uruchomić aplikację. Powinno to wyglądać następująco.
 
      ![Przyciski z tłem gradientowym](./media/custom-button-animatedbutton-3.gif "custom_button_AnimatedButton_3")
 
-## <a name="create-a-template-that-defines-the-look-of-the-button"></a>Utwórz szablon definiujący wygląd przycisku
+## <a name="create-a-template-that-defines-the-look-of-the-button"></a>Tworzenie szablonu definiujące wygląd przycisku
 
-W tej sekcji utworzysz szablon, który dostosowuje wygląd przycisku. Prezentacja przycisku składa się z kilku obiektów, w tym prostokątów i innych składników, aby nadać przyciskowi unikatowy wygląd.
+W tej sekcji należy utworzyć szablon, który dostosowuje wygląd (prezentację) przycisku. Prezentacja przycisków składa się z kilku obiektów, w tym prostokątów i innych składników, aby nadać przyciskowi niepowtarzalny wygląd.
 
-Do tej pory kontrolka wyglądu przycisków w aplikacji została ograniczona do zmiany właściwości przycisku. Co zrobić, jeśli chcesz wprowadzić bardziej podstawowe zmiany wyglądu przycisku? Szablony umożliwiają zaawansowaną kontrolę nad prezentacją obiektu. Ponieważ szablony mogą być używane w ramach stylów, można zastosować szablon do wszystkich obiektów, do których odnosi się ten styl (w tym instruktażu przycisk).
+Do tej pory kontrola wyglądu przycisków w aplikacji ograniczała się do zmiany właściwości przycisku. Co zrobić, jeśli chcesz wprowadzić bardziej radykalne zmiany w wyglądzie przycisku? Szablony umożliwiają zaawansowana kontrola nad prezentacją obiektu. Ponieważ szablony mogą być używane w stylach, można zastosować szablon do wszystkich obiektów, które stosuje się do (w tym instruktażu, przycisk).
 
-### <a name="to-use-the-template-to-define-the-look-of-the-button"></a>Aby użyć szablonu do zdefiniowania wyglądu przycisku
+### <a name="to-use-the-template-to-define-the-look-of-the-button"></a>Aby zdefiniować wygląd przycisku za pomocą szablonu
 
-1. **Skonfiguruj szablon:** Ponieważ kontrolki, takie jak <xref:System.Windows.Controls.Button>, mają właściwość <xref:System.Windows.Controls.Control.Template%2A>, można zdefiniować wartość właściwości szablonu, tak jak w przypadku innych wartości właściwości ustawionych w <xref:System.Windows.Style> przy użyciu <xref:System.Windows.Setter>. Dodaj następujący wyróżniony znacznik do stylu przycisku.
+1. **Skonfiguruj szablon:** Ponieważ <xref:System.Windows.Controls.Button> formanty <xref:System.Windows.Controls.Control.Template%2A> takie jak mają właściwość, można zdefiniować wartość właściwości <xref:System.Windows.Style> szablonu, podobnie jak inne wartości właściwości, które ustawiliśmy w pliku . <xref:System.Windows.Setter> Dodaj do swojego stylu styl przycisku następujące wyróżnione znaczniki.
 
     ```xaml
     <Application.Resources>
@@ -148,7 +148,7 @@ Do tej pory kontrolka wyglądu przycisków w aplikacji została ograniczona do z
     </Application.Resources>
     ```
 
-2. **Zmień prezentację przycisku:** W tym momencie należy zdefiniować szablon. Dodaj następujący wyróżniony znacznik. Ten znacznik określa dwa <xref:System.Windows.Shapes.Rectangle> elementy z zaokrąglonymi krawędziami, po których następuje <xref:System.Windows.Controls.DockPanel>. <xref:System.Windows.Controls.DockPanel> jest używana do hostowania <xref:System.Windows.Controls.ContentPresenter> przycisku. <xref:System.Windows.Controls.ContentPresenter> wyświetla zawartość przycisku. W tym instruktażu zawartość jest tekstem ("Button 1", "Button 2", "Button 3"). Wszystkie składniki szablonu (prostokąty i <xref:System.Windows.Controls.DockPanel>) są zawarte w <xref:System.Windows.Controls.Grid>.
+2. **Prezentacja przycisku Zmień:** W tym momencie należy zdefiniować szablon. Dodaj następujące wyróżnione znaczniki. Ten znacznik określa <xref:System.Windows.Shapes.Rectangle> dwa elementy z zaokrąglonymi krawędziami, po których następuje . <xref:System.Windows.Controls.DockPanel> Jest <xref:System.Windows.Controls.DockPanel> używany do <xref:System.Windows.Controls.ContentPresenter> hostowania przycisku. A <xref:System.Windows.Controls.ContentPresenter> wyświetla zawartość przycisku. W tym instruktażu zawartość jest tekstem ("Button 1", "Button 2", "Button 3"). Wszystkie składniki szablonu (prostokąty <xref:System.Windows.Controls.DockPanel>i) są rozmieszczone wewnątrz <xref:System.Windows.Controls.Grid>.
 
     ```xaml
     <Setter.Value>
@@ -167,11 +167,11 @@ Do tej pory kontrolka wyglądu przycisków w aplikacji została ograniczona do z
     </Setter.Value>
     ```
 
-     Naciśnij klawisz F5, aby uruchomić aplikację. Powinien wyglądać podobnie do poniższego.
+     Naciśnij klawisz F5, aby uruchomić aplikację. Powinno to wyglądać następująco.
 
      ![Okno z 3 przyciskami](./media/custom-button-animatedbutton-4.gif)
 
-3. **Dodaj GlassEffect do szablonu:** Następnie dodasz szklaną. Najpierw należy utworzyć zasoby, które tworzą efekt gradientu szkła. Dodaj te zasoby gradientowe w dowolnym miejscu w bloku `Application.Resources`:
+3. **Dodaj efekt szkła do szablonu:** Następnie dodasz szybę. Najpierw należy utworzyć pewne zasoby, które tworzą efekt gradientu szkła. Dodaj te zasoby gradientu w dowolnym miejscu w `Application.Resources` bloku:
 
     ```xaml
     <Application.Resources>
@@ -189,7 +189,7 @@ Do tej pory kontrolka wyglądu przycisków w aplikacji została ograniczona do z
     <!-- Styles and other resources below here. -->
     ```
 
-     Te zasoby są używane jako <xref:System.Windows.Shapes.Shape.Fill%2A> prostokąta, który został wstawiony do <xref:System.Windows.Controls.Grid> szablonu przycisku. Dodaj następujący wyróżniony znacznik do szablonu.
+     Zasoby te są <xref:System.Windows.Shapes.Shape.Fill%2A> używane jako dla prostokąta, <xref:System.Windows.Controls.Grid> który wstawiamy do szablonu przycisku. Dodaj do szablonu następujące wyróżnione znaczniki.
 
     ```xaml
     <Setter.Value>
@@ -246,19 +246,19 @@ Do tej pory kontrolka wyglądu przycisków w aplikacji została ograniczona do z
     </Setter.Value>
     ```
 
-     Zauważ, że <xref:System.Windows.UIElement.Opacity%2A> prostokąta z właściwością `x:Name` "glassCube" ma wartość 0, więc po uruchomieniu przykładu nie widzisz prostokąta szklanego, który jest przełożony na wierzchu. Dzieje się tak dlatego, że później dodamy wyzwalacze do szablonu, gdy użytkownik będzie współdziałać z przyciskiem. Można jednak zobaczyć, jak wygląda przycisk teraz, zmieniając wartość <xref:System.Windows.UIElement.Opacity%2A> na 1 i uruchamiając aplikację. Zapoznaj się z poniższym rysunkiem. Przed przejściem do następnego kroku Zmień <xref:System.Windows.UIElement.Opacity%2A> z powrotem na 0.
+     Należy zauważyć, że <xref:System.Windows.UIElement.Opacity%2A> prostokąt z `x:Name` właściwością "glassCube" wynosi 0, więc po uruchomieniu próbki nie widać szklanego prostokąta nałożonego na wierzchu. Dzieje się tak, ponieważ później dodamy wyzwalacze do szablonu, gdy użytkownik wchodzi w interakcję z przyciskiem. Jednak można zobaczyć, jak przycisk wygląda teraz, zmieniając <xref:System.Windows.UIElement.Opacity%2A> wartość na 1 i uruchomienie aplikacji. Zobacz poniższą ilustrację. Przed przejściem do następnego <xref:System.Windows.UIElement.Opacity%2A> kroku zmień z powrotem na 0.
 
-     ![Przyciski niestandardowe, które zostały utworzone przy użyciu języka XAML](./media/custom-button-animatedbutton-5.gif "custom_button_AnimatedButton_5")
+     ![Przyciski niestandardowe utworzone przy użyciu języka XAML](./media/custom-button-animatedbutton-5.gif "custom_button_AnimatedButton_5")
 
-## <a name="create-button-interactivity"></a>Utwórz interaktywny przycisk
+## <a name="create-button-interactivity"></a>Tworzenie interaktywności przycisków
 
-W tej sekcji utworzysz wyzwalacze właściwości i wyzwalacze zdarzeń, aby zmienić wartości właściwości i uruchamiać animacje w odpowiedzi na akcje użytkownika, takie jak przesuwanie wskaźnika myszy nad przyciskiem i klikanie.
+W tej sekcji utworzysz wyzwalacze właściwości i wyzwalacze zdarzeń, aby zmienić wartości właściwości i uruchomić animacje w odpowiedzi na akcje użytkownika, takie jak przesuwanie wskaźnika myszy nad przyciskiem i klikanie.
 
-Prosty sposób na dodanie interaktywności (przesuwanie myszą, wyjście myszy, kliknięcie itd.) polega na zdefiniowaniu wyzwalaczy w szablonie lub stylu. Aby utworzyć <xref:System.Windows.Trigger>, należy zdefiniować Właściwość "warunek", taką jak: wartość właściwości Button <xref:System.Windows.UIElement.IsMouseOver%2A> jest równa `true`. Następnie definiuje się metody ustawiające (akcje), które mają miejsce, gdy warunek wyzwalacza ma wartość true.
+Łatwym sposobem na dodanie interaktywności (najechanie myszą, pozostawienie myszy, kliknięcie itd.) jest zdefiniowanie wyzwalaczy w szablonie lub stylu. Aby utworzyć <xref:System.Windows.Trigger>, należy zdefiniować właściwość "warunek", takich jak: Wartość właściwości przycisku <xref:System.Windows.UIElement.IsMouseOver%2A> jest równa . `true` Następnie należy zdefiniować ustawiające (akcje), które mają miejsce, gdy warunek wyzwalacza jest spełniony.
 
-### <a name="to-create-button-interactivity"></a>Aby utworzyć interaktywny przycisk
+### <a name="to-create-button-interactivity"></a>Aby utworzyć interaktywność przycisków
 
-1. **Dodaj wyzwalacze szablonu:** Dodaj wyróżnione adiustacje do szablonu.
+1. **Dodaj wyzwalacze szablonów:** Dodaj wyróżniony znacznik do szablonu.
 
     ```xaml
     <Setter.Value>
@@ -323,7 +323,7 @@ Prosty sposób na dodanie interaktywności (przesuwanie myszą, wyjście myszy, 
     </Setter.Value>
     ```
 
-2. **Dodaj wyzwalacze właściwości:** Dodaj wyróżnione znaczniki do bloku `ControlTemplate.Triggers`:
+2. **Dodaj wyzwalacze właściwości:** Dodaj wyróżnione znaczniki `ControlTemplate.Triggers` do bloku:
 
     ```xaml
     <ControlTemplate.Triggers>
@@ -333,9 +333,9 @@ Prosty sposób na dodanie interaktywności (przesuwanie myszą, wyjście myszy, 
     <ControlTemplate.Triggers/>
     ```
 
-     Naciśnij klawisz F5, aby uruchomić aplikację i zobaczyć efekt podczas uruchamiania wskaźnika myszy nad przyciskami.
+     Naciśnij klawisz F5, aby uruchomić aplikację i zobaczyć efekt po uruchomieniu wskaźnika myszy nad przyciskami.
 
-3. **Dodaj wyzwalacz fokusu:** Następnie dodamy kilka podobnych metod ustawiających, aby obsłużyć przypadek, gdy przycisk ma fokus (na przykład po kliknięciu przez użytkownika).
+3. **Dodaj wyzwalacz fokusu:** Następnie dodamy kilka podobnych ustawiaczy do obsługi sprawy, gdy przycisk ma fokus (na przykład po kliknięciu go przez użytkownika).
 
     ```xaml
     <ControlTemplate.Triggers>
@@ -364,9 +364,9 @@ Prosty sposób na dodanie interaktywności (przesuwanie myszą, wyjście myszy, 
     </ControlTemplate.Triggers>
     ```
 
-     Naciśnij klawisz F5, aby uruchomić aplikację, a następnie kliknij jeden z przycisków. Zauważ, że przycisk pozostaje wyróżniony po kliknięciu go, ponieważ nadal ma fokus. Jeśli klikniesz inny przycisk, nowy przycisk stanie się fokusem, a ostatni z nich utraci.
+     Naciśnij klawisz F5, aby uruchomić aplikację i kliknij jeden z przycisków. Zwróć uwagę, że przycisk pozostaje podświetlony po kliknięciu, ponieważ nadal ma fokus. Jeśli klikniesz inny przycisk, nowy przycisk zyska fokus, podczas gdy ostatni go traci.
 
-4. **Dodaj animacje dla**  <xref:System.Windows.UIElement.MouseEnter> **i** <xref:System.Windows.UIElement.MouseLeave> **:** następne dodaliśmy pewne animacje do wyzwalaczy. Dodaj następujące znaczniki w dowolnym miejscu w bloku `ControlTemplate.Triggers`.
+4. **Dodaj animacje dla** <xref:System.Windows.UIElement.MouseEnter> **i** <xref:System.Windows.UIElement.MouseLeave> **:** Następnie dodajemy kilka animacji do wyzwalaczy.   Dodaj następujące znaczniki w `ControlTemplate.Triggers` dowolnym miejscu wewnątrz bloku.
 
     ```xaml
     <!-- Animations that start when mouse enters and leaves button. -->
@@ -397,13 +397,13 @@ Prosty sposób na dodanie interaktywności (przesuwanie myszą, wyjście myszy, 
     </EventTrigger>
     ```
 
-     Prostokąt szklany zmniejsza się, gdy wskaźnik myszy przesuwa się nad przycisk i wraca do normalnego rozmiaru przy opuszczaniu wskaźnika.
+     Prostokąt szkła zmniejsza się, gdy wskaźnik myszy przesuwa się nad przyciskiem i powraca do normalnego rozmiaru, gdy wskaźnik odchodzi.
 
-     Istnieją dwie animacje wyzwalane, gdy wskaźnik myszy znajduje się nad przyciskiem (<xref:System.Windows.UIElement.MouseEnter> zdarzenie jest zgłaszane). Te animacje zmniejszają prostokąt szklany wzdłuż osi X i Y. Zwróć uwagę na właściwości elementów <xref:System.Windows.Media.Animation.DoubleAnimation> — <xref:System.Windows.Media.Animation.Timeline.Duration%2A> i <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>. <xref:System.Windows.Media.Animation.Timeline.Duration%2A> określa, że animacja występuje w ciągu 10 sekund, a <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> określa, że szkło zmniejszy się o dziesięć%.
+     Istnieją dwie animacje, które są wyzwalane, gdy<xref:System.Windows.UIElement.MouseEnter> wskaźnik przechodzi przez przycisk (zdarzenie jest wywoływane). Animacje te zmniejszają szklany prostokąt wzdłuż osi X i Y. Zwróć uwagę na <xref:System.Windows.Media.Animation.DoubleAnimation> właściwości <xref:System.Windows.Media.Animation.Timeline.Duration%2A> elementów — i <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>. Określa, <xref:System.Windows.Media.Animation.Timeline.Duration%2A> że animacja występuje ponad pół <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> sekundy i określa, że szkło zmniejsza się o 10%.
 
-     Drugi wyzwalacz zdarzenia (<xref:System.Windows.UIElement.MouseLeave>) po prostu zatrzyma pierwszy z nich. Po zatrzymaniu <xref:System.Windows.Media.Animation.Storyboard>wszystkie animowane właściwości powrócą do ich wartości domyślnych. W związku z tym, gdy użytkownik przesuwa wskaźnik poza przycisk, po przesunięciu wskaźnika myszy nad przycisk przechodzi do końca. Aby uzyskać więcej informacji na temat animacji, zobacz [Omówienie animacji](../graphics-multimedia/animation-overview.md).
+     Drugi wyzwalacz<xref:System.Windows.UIElement.MouseLeave>zdarzenia ( ) po prostu zatrzymuje pierwszy. Po zatrzymaniu <xref:System.Windows.Media.Animation.Storyboard>, wszystkie animowane właściwości powrócić do wartości domyślnych. W związku z tym gdy użytkownik przesunie wskaźnik poza przycisk, przycisk wraca do sposobu, w jaki był przed wskaźnik myszy przeniósł się na przycisk. Aby uzyskać więcej informacji na temat animacji, zobacz [Omówienie animacji](../graphics-multimedia/animation-overview.md).
 
-5. **Dodaj animację dla momentu kliknięcia przycisku:** Ostatnim krokiem jest dodanie wyzwalacza, gdy użytkownik kliknie przycisk. Dodaj następujące znaczniki w dowolnym miejscu w bloku `ControlTemplate.Triggers`:
+5. **Dodaj animację po kliknięciu przycisku:** Ostatnim krokiem jest dodanie wyzwalacza, gdy użytkownik kliknie przycisk. Dodaj następujące znaczniki w `ControlTemplate.Triggers` dowolnym miejscu wewnątrz bloku:
 
     ```xaml
     <!-- Animation fires when button is clicked, causing glass to spin.  -->
@@ -421,25 +421,25 @@ Prosty sposób na dodanie interaktywności (przesuwanie myszą, wyjście myszy, 
     </EventTrigger>
     ```
 
-     Naciśnij klawisz F5, aby uruchomić aplikację, a następnie kliknij jeden z przycisków. Po kliknięciu przycisku, prostokąt szklany obraca się wokół siebie.
+     Naciśnij klawisz F5, aby uruchomić aplikację, a następnie kliknij jeden z przycisków. Po kliknięciu przycisku, prostokąt szkła obraca się wokół.
 
 ## <a name="summary"></a>Podsumowanie
- W tym instruktażu wykonasz następujące ćwiczenia:
+ W tym instruktażu wykonano następujące ćwiczenia:
 
-- Przekierować <xref:System.Windows.Style> do typu obiektu (<xref:System.Windows.Controls.Button>).
+- Celowane <xref:System.Windows.Style> a do<xref:System.Windows.Controls.Button>typu obiektu ( ).
 
-- Kontrolowane podstawowe właściwości przycisków w całej aplikacji przy użyciu <xref:System.Windows.Style>.
+- Kontrolowane podstawowe właściwości przycisków w całej <xref:System.Windows.Style>aplikacji za pomocą .
 
-- Utworzone zasoby, takie jak gradienty, które mają być używane dla wartości właściwości metod ustawiających <xref:System.Windows.Style>.
+- Utworzone zasoby, takie jak gradienty <xref:System.Windows.Style> do użycia dla wartości właściwości ustawianych.
 
-- Dostosowany wygląd przycisków w całej aplikacji przez zastosowanie szablonu do przycisków.
+- Dostosowano wygląd przycisków w całej aplikacji, stosując szablon do przycisków.
 
-- Dostosowane zachowanie przycisków w odpowiedzi na akcje użytkownika (takie jak <xref:System.Windows.UIElement.MouseEnter>, <xref:System.Windows.UIElement.MouseLeave>i <xref:System.Windows.Controls.Primitives.ButtonBase.Click>), które uwzględniają efekty animacji.
+- Dostosowane zachowanie przycisków w odpowiedzi na akcje <xref:System.Windows.UIElement.MouseEnter> <xref:System.Windows.UIElement.MouseLeave>użytkownika <xref:System.Windows.Controls.Primitives.ButtonBase.Click>(takie jak , i ), które zawierały efekty animacji.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Tworzenie przycisku przy użyciu programu Microsoft Expression Blend](walkthrough-create-a-button-by-using-microsoft-expression-blend.md)
 - [Tworzenie szablonów i stylów](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Animacja — przegląd](../graphics-multimedia/animation-overview.md)
-- [Malowanie jednolitymi kolorami i gradientami — przegląd](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
-- [Efekty mapy bitowej — przegląd](../graphics-multimedia/bitmap-effects-overview.md)
+- [Przegląd Animacja](../graphics-multimedia/animation-overview.md)
+- [Przegląd Malowanie jednolitymi kolorami i gradientami](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [Przegląd Efekty mapy bitowej](../graphics-multimedia/bitmap-effects-overview.md)

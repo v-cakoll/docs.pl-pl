@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: 2326520039085beb5f5294e23db67b67f9d7d7da
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: a6ab5463cc28aa590454ae1304714d3d12ee7c6b
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243274"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646134"
 ---
 # <a name="control-authoring-overview"></a>Omówienie tworzenia formantu
 
@@ -38,7 +38,7 @@ Historycznie, jeśli chcesz uzyskać dostosowane środowisko z istniejącego for
 
 - **Wyzwalaczy.** A <xref:System.Windows.Trigger> umożliwia dynamiczną zmianę wyglądu i zachowania formantu bez tworzenia nowego formantu. Załóżmy na przykład, że masz wiele <xref:System.Windows.Controls.ListBox> formantów w aplikacji i chcesz elementy w każdym z nich <xref:System.Windows.Controls.ListBox> być pogrubiony i czerwony, gdy są one zaznaczone. Pierwszym instynktem może być utworzenie klasy, <xref:System.Windows.Controls.ListBox> która dziedziczy <xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A> i zastępuje metodę zmiany wyglądu wybranego elementu, ale lepszym podejściem <xref:System.Windows.Controls.ListBoxItem> jest dodanie wyzwalacza do stylu a, który zmienia wygląd wybranego elementu. Wyzwalacz umożliwia zmianę wartości właściwości lub podejmowania akcji na podstawie wartości właściwości. An <xref:System.Windows.EventTrigger> umożliwia wykonywanie akcji w przypadku wystąpienia zdarzenia.
 
-Aby uzyskać więcej informacji o stylach, szablonach i wyzwalaczach, zobacz [Stylowanie i tworzenie szablonów](styling-and-templating.md).
+Aby uzyskać więcej informacji o stylach, szablonach i wyzwalaczach, zobacz [Stylowanie i tworzenie szablonów](../../../desktop-wpf/fundamentals/styles-templates-overview.md).
 
 Ogólnie rzecz biorąc, jeśli formant odzwierciedla funkcjonalność istniejącego formantu, ale chcesz, aby formant wyglądał inaczej, należy najpierw rozważyć, czy można użyć dowolnej z metod omówionych w tej sekcji, aby zmienić wygląd istniejącego formantu.
 

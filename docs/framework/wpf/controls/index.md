@@ -1,5 +1,5 @@
 ---
-title: Kontrolki
+title: Formanty
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
-ms.openlocfilehash: 2ec8c0a99f4e2431aed0d8c24168b7329de669f8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2aab0fc8adaf17a8e9820a6269a740ef09540cda
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187535"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646484"
 ---
-# <a name="controls"></a>Kontrolki
+# <a name="controls"></a>Formanty
 <a name="introduction"></a>
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]jest dostarczanych z wieloma typowymi składnikami interfejsu użytkownika, <xref:System.Windows.Controls.Button>które <xref:System.Windows.Controls.Label> <xref:System.Windows.Controls.TextBox>są <xref:System.Windows.Controls.Menu>używane w prawie każdej aplikacji systemu Windows, takich jak , , , i <xref:System.Windows.Controls.ListBox>. Historycznie te obiekty były określane jako formanty. Podczas [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] gdy SDK nadal używać terminu "control", aby luźno oznaczać dowolną klasę, która reprezentuje widoczny obiekt w aplikacji, należy <xref:System.Windows.Controls.Control> pamiętać, że klasa nie musi dziedziczyć z klasy, aby mieć widoczną obecność. Klasy, które <xref:System.Windows.Controls.Control> dziedziczą <xref:System.Windows.Controls.ControlTemplate>z klasy zawierają , co pozwala konsumentowi formantu radykalnie zmienić wygląd formantu bez konieczności tworzenia nowej podklasy.  W tym temacie omówiono, jak formanty (zarówno te, które dziedziczą z <xref:System.Windows.Controls.Control> klasy, jak i te, które nie) są powszechnie używane w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
 
@@ -54,7 +54,7 @@ ms.locfileid: "79187535"
   
  [!code-xaml[ControlsOverview#5](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml#5)]  
   
- Styl można również zastosować tylko do niektórych formantów określonego typu, przypisując klucz `Style` do stylu i określając ten klucz we właściwości formantu.  Aby uzyskać więcej informacji o stylach, zobacz [Stylowanie i tworzenie szablonów](styling-and-templating.md).  
+ Styl można również zastosować tylko do niektórych formantów określonego typu, przypisując klucz `Style` do stylu i określając ten klucz we właściwości formantu.  Aby uzyskać więcej informacji o stylach, zobacz [Stylowanie i tworzenie szablonów](../../../desktop-wpf/fundamentals/styles-templates-overview.md).  
   
 ### <a name="creating-a-controltemplate"></a>Tworzenie panelu sterowania  
  A <xref:System.Windows.Style> umożliwia ustawienie właściwości na wielu formantach naraz, ale czasami można <xref:System.Windows.Controls.Control> dostosować wygląd poza to, <xref:System.Windows.Style>co można zrobić, tworząc program . Klasy, które <xref:System.Windows.Controls.Control> dziedziczą <xref:System.Windows.Controls.ControlTemplate>z klasy mają , który <xref:System.Windows.Controls.Control>definiuje strukturę i wygląd . Właściwość <xref:System.Windows.Controls.Control.Template%2A> a <xref:System.Windows.Controls.Control> jest publiczna, dzięki <xref:System.Windows.Controls.Control> <xref:System.Windows.Controls.ControlTemplate> czemu można podać, że jest inny niż jego domyślny. Często można określić <xref:System.Windows.Controls.ControlTemplate> nowy <xref:System.Windows.Controls.Control> dla zamiast dziedziczenia z formantu, <xref:System.Windows.Controls.Control>aby dostosować wygląd .  
@@ -99,12 +99,12 @@ ms.locfileid: "79187535"
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Tworzenie szablonów i stylów](styling-and-templating.md)
+- [Tworzenie szablonów i stylów](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Kontrolki według kategorii](controls-by-category.md)
 - [Biblioteka formantów](control-library.md)
 - [Szablonowanie danych — omówienie](../data/data-templating-overview.md)
-- [Przegląd Wiązanie danych](../../../desktop-wpf/data/data-binding-overview.md)
-- [Wejście](../advanced/input-wpf.md)
+- [Omówienie powiązania danych](../../../desktop-wpf/data/data-binding-overview.md)
+- [Dane wejściowe](../advanced/input-wpf.md)
 - [Włączanie polecenia](../advanced/how-to-enable-a-command.md)
 - [Przewodnik: tworzenie niestandardowego przycisku animowanego](walkthroughs-create-a-custom-animated-button.md)
 - [Niestandardowe dostosowywanie kontrolki](control-customization.md)
